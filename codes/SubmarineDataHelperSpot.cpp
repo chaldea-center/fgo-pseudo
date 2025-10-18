@@ -5,16 +5,16 @@ SubmarineSpotInfo_o *SubmarineDataHelperSpot__CreateSubmarineSpotInfo(
 {
   EventPanelSpotEntity_o *v4; // x20
   _BOOL8 IsRandomSpot; // x0
-  UserEventSpotEntity_o *Entity_42967460; // x0
+  UserEventSpotEntity_o *Entity_43069328; // x0
   int32_t panelMapDetailId; // w21
   SubmarineSpotInfo_o *v8; // x22
   const MethodInfo *v9; // x4
 
   v4 = eventPanelSpotEntity;
-  if ( (byte_4C34325 & 1) == 0 )
+  if ( (byte_4C3F90F & 1) == 0 )
   {
-    eventPanelSpotEntity = (EventPanelSpotEntity_o *)sub_1C32C20(&SubmarineSpotInfo_TypeInfo);
-    byte_4C34325 = 1;
+    eventPanelSpotEntity = (EventPanelSpotEntity_o *)sub_1C37058(&SubmarineSpotInfo_TypeInfo);
+    byte_4C3F90F = 1;
   }
   if ( !v4 )
     goto LABEL_11;
@@ -27,18 +27,18 @@ SubmarineSpotInfo_o *SubmarineDataHelperSpot__CreateSubmarineSpotInfo(
   eventPanelSpotEntity = (EventPanelSpotEntity_o *)SubmarineDataHelperSpot__get_userEventSpotMaster((const MethodInfo *)IsRandomSpot);
   if ( !eventPanelSpotEntity )
 LABEL_11:
-    sub_1C32E7C(eventPanelSpotEntity);
-  Entity_42967460 = UserEventSpotMaster__GetEntity_42967460(
+    sub_1C372B4(eventPanelSpotEntity);
+  Entity_43069328 = UserEventSpotMaster__GetEntity_43069328(
                       (UserEventSpotMaster_o *)eventPanelSpotEntity,
                       v4->fields.eventId,
                       v4->fields.spotId,
                       0);
-  if ( Entity_42967460 )
-    panelMapDetailId = Entity_42967460->fields.value;
+  if ( Entity_43069328 )
+    panelMapDetailId = Entity_43069328->fields.value;
   else
     panelMapDetailId = 0;
 LABEL_10:
-  v8 = (SubmarineSpotInfo_o *)sub_1C32E6C(SubmarineSpotInfo_TypeInfo);
+  v8 = (SubmarineSpotInfo_o *)sub_1C372A4(SubmarineSpotInfo_TypeInfo);
   SubmarineSpotInfo___ctor(v8, spotEntity, v4, panelMapDetailId, v9);
   return v8;
 }
@@ -77,20 +77,20 @@ EventPanelSpotEntity_array *SubmarineDataHelperSpot__GetSpotsEnemyOccupied(
   __int64 size; // x10
   Il2CppClass **v33; // x0
 
-  if ( (byte_4C34327 & 1) == 0 )
+  if ( (byte_4C3F911 & 1) == 0 )
   {
-    sub_1C32C20(&Method_DataMasterBase_EventPanelMapDetailMaster__EventPanelMapDetailEntity__int__GetEntity__);
-    sub_1C32C20(&int___TypeInfo);
-    sub_1C32C20(&Method_System_Collections_Generic_List_EventPanelSpotEntity__Add__);
-    sub_1C32C20(&Method_System_Collections_Generic_List_EventPanelSpotEntity__ToArray__);
-    sub_1C32C20(&Method_System_Collections_Generic_List_EventPanelSpotEntity___ctor__);
-    sub_1C32C20(&System_Collections_Generic_List_EventPanelSpotEntity__TypeInfo);
-    byte_4C34327 = 1;
+    sub_1C37058(&Method_DataMasterBase_EventPanelMapDetailMaster__EventPanelMapDetailEntity__int__GetEntity__);
+    sub_1C37058(&int___TypeInfo);
+    sub_1C37058(&Method_System_Collections_Generic_List_EventPanelSpotEntity__Add__);
+    sub_1C37058(&Method_System_Collections_Generic_List_EventPanelSpotEntity__ToArray__);
+    sub_1C37058(&Method_System_Collections_Generic_List_EventPanelSpotEntity___ctor__);
+    sub_1C37058(&System_Collections_Generic_List_EventPanelSpotEntity__TypeInfo);
+    byte_4C3F911 = 1;
   }
-  v9 = (System_Collections_Generic_List_object__o *)sub_1C32E6C(System_Collections_Generic_List_EventPanelSpotEntity__TypeInfo);
+  v9 = (System_Collections_Generic_List_object__o *)sub_1C372A4(System_Collections_Generic_List_EventPanelSpotEntity__TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v9,
-    (const MethodInfo_3797F88 *)Method_System_Collections_Generic_List_EventPanelSpotEntity___ctor__);
+    (const MethodInfo_37A27F0 *)Method_System_Collections_Generic_List_EventPanelSpotEntity___ctor__);
   eventPanelSpotMaster = (__int64)SubmarineDataHelperSpot__get_eventPanelSpotMaster(v10);
   if ( !eventPanelSpotMaster )
     goto LABEL_39;
@@ -137,11 +137,11 @@ EventPanelSpotEntity_array *SubmarineDataHelperSpot__GetSpotsEnemyOccupied(
             eventPanelSpotMaster = (__int64)DataMasterBase_object__object__int___GetEntity(
                                               (DataMasterBase_TMaster__TEntity__PKType__o *)eventPanelSpotMaster,
                                               *(_DWORD *)(v18 + 32),
-                                              (const MethodInfo_3396838 *)Method_DataMasterBase_EventPanelMapDetailMaster__EventPanelMapDetailEntity__int__GetEntity__);
+                                              (const MethodInfo_33A10A0 *)Method_DataMasterBase_EventPanelMapDetailMaster__EventPanelMapDetailEntity__int__GetEntity__);
             if ( eventPanelSpotMaster )
             {
               v19 = eventPanelSpotMaster;
-              eventPanelSpotMaster = sub_1C32CC8(int___TypeInfo, 2);
+              eventPanelSpotMaster = sub_1C37100(int___TypeInfo, 2);
               if ( !eventPanelSpotMaster )
                 goto LABEL_39;
               v22 = *(_DWORD *)(eventPanelSpotMaster + 24);
@@ -193,14 +193,14 @@ EventPanelSpotEntity_array *SubmarineDataHelperSpot__GetSpotsEnemyOccupied(
                   System_Collections_Generic_List_object___AddWithResize(
                     v9,
                     (Il2CppObject *)v16,
-                    *(const MethodInfo_37987BC **)(*(_QWORD *)(v31[4] + 192LL) + 112LL));
+                    *(const MethodInfo_37A3024 **)(*(_QWORD *)(v31[4] + 192LL) + 112LL));
                 }
                 else
                 {
                   v33 = &items->obj.klass + size;
                   v9->fields._size = size + 1;
                   v33[4] = (Il2CppClass *)v16;
-                  sub_1C32BC4((CGThumbnailListItem_o *)(v33 + 4), v16, v20, v21);
+                  sub_1C36FFC((CGThumbnailListItem_o *)(v33 + 4), v16, v20, v21);
                 }
               }
             }
@@ -213,15 +213,15 @@ LABEL_35:
         goto LABEL_36;
     }
 LABEL_38:
-    sub_1C32E84(eventPanelSpotMaster);
+    sub_1C372BC(eventPanelSpotMaster);
   }
 LABEL_36:
   if ( !v9 )
 LABEL_39:
-    sub_1C32E7C(eventPanelSpotMaster);
+    sub_1C372B4(eventPanelSpotMaster);
   return (EventPanelSpotEntity_array *)System_Collections_Generic_List_object___ToArray(
                                          v9,
-                                         (const MethodInfo_379A314 *)Method_System_Collections_Generic_List_EventPanelSpotEntity__ToArray__);
+                                         (const MethodInfo_37A4B7C *)Method_System_Collections_Generic_List_EventPanelSpotEntity__ToArray__);
 }
 
 
@@ -239,11 +239,11 @@ SubmarineSpotInfo_o *SubmarineDataHelperSpot__GetSubmarineSpotInfo(
   Il2CppObject *entity; // [xsp+18h] [xbp-28h] BYREF
 
   v6 = spotId;
-  if ( (byte_4C34324 & 1) == 0 )
+  if ( (byte_4C3F90E & 1) == 0 )
   {
-    sub_1C32C20(&Method_DataMasterBase_SpotMaster__SpotEntity__int__TryGetEntity__);
-    *(_QWORD *)&spotId = sub_1C32C20(&Method_DataMasterBase_EventPanelSpotMaster__EventPanelSpotEntity__int__TryGetEntity__);
-    byte_4C34324 = 1;
+    sub_1C37058(&Method_DataMasterBase_SpotMaster__SpotEntity__int__TryGetEntity__);
+    *(_QWORD *)&spotId = sub_1C37058(&Method_DataMasterBase_EventPanelSpotMaster__EventPanelSpotEntity__int__TryGetEntity__);
+    byte_4C3F90E = 1;
   }
   entity = 0;
   v10 = 0;
@@ -254,7 +254,7 @@ SubmarineSpotInfo_o *SubmarineDataHelperSpot__GetSubmarineSpotInfo(
                                                                          eventPanelSpotMaster,
                                                                          &entity,
                                                                          v6,
-                                                                         (const MethodInfo_3396884 *)Method_DataMasterBase_EventPanelSpotMaster__EventPanelSpotEntity__int__TryGetEntity__);
+                                                                         (const MethodInfo_33A10EC *)Method_DataMasterBase_EventPanelSpotMaster__EventPanelSpotEntity__int__TryGetEntity__);
   if ( ((unsigned __int8)eventPanelSpotMaster & 1) == 0 )
     return 0;
   if ( !entity )
@@ -268,12 +268,12 @@ SubmarineSpotInfo_o *SubmarineDataHelperSpot__GetSubmarineSpotInfo(
                                                                          eventPanelSpotMaster,
                                                                          &v10,
                                                                          v6,
-                                                                         (const MethodInfo_3396884 *)Method_DataMasterBase_SpotMaster__SpotEntity__int__TryGetEntity__);
+                                                                         (const MethodInfo_33A10EC *)Method_DataMasterBase_SpotMaster__SpotEntity__int__TryGetEntity__);
   if ( ((unsigned __int8)eventPanelSpotMaster & 1) == 0 )
     return 0;
   if ( !v10 )
 LABEL_15:
-    sub_1C32E7C(eventPanelSpotMaster);
+    sub_1C372B4(eventPanelSpotMaster);
   if ( LODWORD(v10[1].monitor) == mapId )
     return SubmarineDataHelperSpot__CreateSubmarineSpotInfo((EventPanelSpotEntity_o *)entity, (SpotEntity_o *)v10, v8);
   return 0;
@@ -307,21 +307,21 @@ System_Collections_Generic_List_SubmarineSpotInfo__o *SubmarineDataHelperSpot__G
   Il2CppClass **v22; // x0
 
   v4 = eventId;
-  if ( (byte_4C34323 & 1) == 0 )
+  if ( (byte_4C3F90D & 1) == 0 )
   {
-    sub_1C32C20(&Method_System_Collections_Generic_List_SubmarineSpotInfo__Add__);
-    sub_1C32C20(&Method_System_Collections_Generic_List_SubmarineSpotInfo___ctor__);
-    *(_QWORD *)&eventId = sub_1C32C20(&System_Collections_Generic_List_SubmarineSpotInfo__TypeInfo);
-    byte_4C34323 = 1;
+    sub_1C37058(&Method_System_Collections_Generic_List_SubmarineSpotInfo__Add__);
+    sub_1C37058(&Method_System_Collections_Generic_List_SubmarineSpotInfo___ctor__);
+    *(_QWORD *)&eventId = sub_1C37058(&System_Collections_Generic_List_SubmarineSpotInfo__TypeInfo);
+    byte_4C3F90D = 1;
   }
   spotMaster = SubmarineDataHelperSpot__get_spotMaster(*(const MethodInfo **)&eventId);
   if ( !spotMaster )
     goto LABEL_25;
   List = SpotMaster__getList(spotMaster, mapId, 0);
-  v7 = (System_Collections_Generic_List_object__o *)sub_1C32E6C(System_Collections_Generic_List_SubmarineSpotInfo__TypeInfo);
+  v7 = (System_Collections_Generic_List_object__o *)sub_1C372A4(System_Collections_Generic_List_SubmarineSpotInfo__TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v7,
-    (const MethodInfo_3797F88 *)Method_System_Collections_Generic_List_SubmarineSpotInfo___ctor__);
+    (const MethodInfo_37A27F0 *)Method_System_Collections_Generic_List_SubmarineSpotInfo___ctor__);
   spotMaster = (SpotMaster_o *)SubmarineDataHelperSpot__get_eventPanelSpotMaster(v8);
   if ( !spotMaster )
     goto LABEL_25;
@@ -337,7 +337,7 @@ System_Collections_Generic_List_SubmarineSpotInfo__o *SubmarineDataHelperSpot__G
     {
       if ( v12 >= (unsigned int)MasterName_k__BackingField )
 LABEL_26:
-        sub_1C32E84(spotMaster);
+        sub_1C372BC(spotMaster);
       if ( !List )
         break;
       max_length = List->max_length;
@@ -375,14 +375,14 @@ LABEL_26:
           System_Collections_Generic_List_object___AddWithResize(
             v7,
             (Il2CppObject *)spotMaster,
-            *(const MethodInfo_37987BC **)(*(_QWORD *)(v19[4] + 192LL) + 112LL));
+            *(const MethodInfo_37A3024 **)(*(_QWORD *)(v19[4] + 192LL) + 112LL));
         }
         else
         {
           v22 = &items->obj.klass + size;
           v7->fields._size = size + 1;
           v22[4] = (Il2CppClass *)v21;
-          sub_1C32BC4((CGThumbnailListItem_o *)(v22 + 4), (int32_t)v21, v16, v17);
+          sub_1C36FFC((CGThumbnailListItem_o *)(v22 + 4), (int32_t)v21, v16, v17);
         }
       }
 LABEL_23:
@@ -391,7 +391,7 @@ LABEL_23:
         return (System_Collections_Generic_List_SubmarineSpotInfo__o *)v7;
     }
 LABEL_25:
-    sub_1C32E7C(spotMaster);
+    sub_1C372B4(spotMaster);
   }
   return (System_Collections_Generic_List_SubmarineSpotInfo__o *)v7;
 }
@@ -411,15 +411,15 @@ bool SubmarineDataHelperSpot__IsSpotBelowClosedPanel(
   SubmarineSpotInfo_o *v10; // x21
   _BOOL8 IsRandomSpot; // x0
   Il2CppObject *v14; // x21
-  UserEventMapEntity_o *Entity_42941800; // x0
+  UserEventMapEntity_o *Entity_43043668; // x0
   const MethodInfo *v16; // x3
 
   v4 = spotEntity;
-  if ( (byte_4C34326 & 1) == 0 )
+  if ( (byte_4C3F910 & 1) == 0 )
   {
-    sub_1C32C20(&Method_DataMasterBase_EventPanelMapMaster__EventPanelMapEntity__int__GetEntity__);
-    spotEntity = (SpotEntity_o *)sub_1C32C20(&Method_DataMasterBase_EventPanelMapDetailMaster__EventPanelMapDetailEntity__int__GetEntity__);
-    byte_4C34326 = 1;
+    sub_1C37058(&Method_DataMasterBase_EventPanelMapMaster__EventPanelMapEntity__int__GetEntity__);
+    spotEntity = (SpotEntity_o *)sub_1C37058(&Method_DataMasterBase_EventPanelMapDetailMaster__EventPanelMapDetailEntity__int__GetEntity__);
+    byte_4C3F910 = 1;
   }
   if ( !checkBeforeClearQuest )
     goto LABEL_8;
@@ -437,7 +437,7 @@ LABEL_8:
   Entity = DataMasterBase_object__object__int___GetEntity(
              (DataMasterBase_TMaster__TEntity__PKType__o *)spotEntity,
              v4->fields.mapId,
-             (const MethodInfo_3396838 *)Method_DataMasterBase_EventPanelMapMaster__EventPanelMapEntity__int__GetEntity__);
+             (const MethodInfo_33A10A0 *)Method_DataMasterBase_EventPanelMapMaster__EventPanelMapEntity__int__GetEntity__);
   if ( !Entity )
     return 0;
   v8 = Entity;
@@ -452,7 +452,7 @@ LABEL_8:
   spotEntity = (SpotEntity_o *)SubmarineSpotInfo->fields._EventPanelSpotEntity_k__BackingField;
   if ( !spotEntity )
 LABEL_24:
-    sub_1C32E7C(spotEntity);
+    sub_1C372B4(spotEntity);
   if ( !EventPanelSpotEntity__IsCrossLineSpot((EventPanelSpotEntity_o *)spotEntity, 0) )
   {
     spotEntity = (SpotEntity_o *)v10->fields._EventPanelSpotEntity_k__BackingField;
@@ -467,16 +467,16 @@ LABEL_24:
         v14 = DataMasterBase_object__object__int___GetEntity(
                 (DataMasterBase_TMaster__TEntity__PKType__o *)spotEntity,
                 v10->fields._PanelId_k__BackingField,
-                (const MethodInfo_3396838 *)Method_DataMasterBase_EventPanelMapDetailMaster__EventPanelMapDetailEntity__int__GetEntity__);
+                (const MethodInfo_33A10A0 *)Method_DataMasterBase_EventPanelMapDetailMaster__EventPanelMapDetailEntity__int__GetEntity__);
         spotEntity = (SpotEntity_o *)SubmarineDataHelperSpot__get_userEventMapMaster((const MethodInfo *)v14);
         if ( spotEntity )
         {
-          Entity_42941800 = UserEventMapMaster__GetEntity_42941800(
+          Entity_43043668 = UserEventMapMaster__GetEntity_43043668(
                               (UserEventMapMaster_o *)spotEntity,
                               HIDWORD(v8[1].klass),
                               (int32_t)v8[1].klass,
                               0);
-          return !SubmarineMapDataManager__IsOpenPanel(Entity_42941800, (EventPanelMapDetailEntity_o *)v14, id, v16);
+          return !SubmarineMapDataManager__IsOpenPanel(Entity_43043668, (EventPanelMapDetailEntity_o *)v14, id, v16);
         }
       }
     }
@@ -490,18 +490,18 @@ EventPanelMapDetailMaster_o *SubmarineDataHelperSpot__get_eventPanelMapDetailMas
 {
   Il2CppObject *Instance; // x0
 
-  if ( (byte_4C3431F & 1) == 0 )
+  if ( (byte_4C3F909 & 1) == 0 )
   {
-    sub_1C32C20(&Method_DataManager_GetMasterData_EventPanelMapDetailMaster___);
-    sub_1C32C20(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-    byte_4C3431F = 1;
+    sub_1C37058(&Method_DataManager_GetMasterData_EventPanelMapDetailMaster___);
+    sub_1C37058(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    byte_4C3F909 = 1;
   }
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39E2904 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39ED16C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance )
-    sub_1C32E7C(0);
+    sub_1C372B4(0);
   return (EventPanelMapDetailMaster_o *)DataManager__GetMasterData_object_(
                                           (DataManager_o *)Instance,
-                                          (const MethodInfo_30DD3F0 *)Method_DataManager_GetMasterData_EventPanelMapDetailMaster___);
+                                          (const MethodInfo_30E7C58 *)Method_DataManager_GetMasterData_EventPanelMapDetailMaster___);
 }
 
 
@@ -509,18 +509,18 @@ EventPanelMapMaster_o *SubmarineDataHelperSpot__get_eventPanelMapMaster(const Me
 {
   Il2CppObject *Instance; // x0
 
-  if ( (byte_4C3431E & 1) == 0 )
+  if ( (byte_4C3F908 & 1) == 0 )
   {
-    sub_1C32C20(&Method_DataManager_GetMasterData_EventPanelMapMaster___);
-    sub_1C32C20(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-    byte_4C3431E = 1;
+    sub_1C37058(&Method_DataManager_GetMasterData_EventPanelMapMaster___);
+    sub_1C37058(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    byte_4C3F908 = 1;
   }
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39E2904 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39ED16C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance )
-    sub_1C32E7C(0);
+    sub_1C372B4(0);
   return (EventPanelMapMaster_o *)DataManager__GetMasterData_object_(
                                     (DataManager_o *)Instance,
-                                    (const MethodInfo_30DD3F0 *)Method_DataManager_GetMasterData_EventPanelMapMaster___);
+                                    (const MethodInfo_30E7C58 *)Method_DataManager_GetMasterData_EventPanelMapMaster___);
 }
 
 
@@ -528,18 +528,18 @@ EventPanelSpotMaster_o *SubmarineDataHelperSpot__get_eventPanelSpotMaster(const 
 {
   Il2CppObject *Instance; // x0
 
-  if ( (byte_4C3431D & 1) == 0 )
+  if ( (byte_4C3F907 & 1) == 0 )
   {
-    sub_1C32C20(&Method_DataManager_GetMasterData_EventPanelSpotMaster___);
-    sub_1C32C20(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-    byte_4C3431D = 1;
+    sub_1C37058(&Method_DataManager_GetMasterData_EventPanelSpotMaster___);
+    sub_1C37058(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    byte_4C3F907 = 1;
   }
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39E2904 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39ED16C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance )
-    sub_1C32E7C(0);
+    sub_1C372B4(0);
   return (EventPanelSpotMaster_o *)DataManager__GetMasterData_object_(
                                      (DataManager_o *)Instance,
-                                     (const MethodInfo_30DD3F0 *)Method_DataManager_GetMasterData_EventPanelSpotMaster___);
+                                     (const MethodInfo_30E7C58 *)Method_DataManager_GetMasterData_EventPanelSpotMaster___);
 }
 
 
@@ -547,18 +547,18 @@ SpotMaster_o *SubmarineDataHelperSpot__get_spotMaster(const MethodInfo *method)
 {
   Il2CppObject *Instance; // x0
 
-  if ( (byte_4C34322 & 1) == 0 )
+  if ( (byte_4C3F90C & 1) == 0 )
   {
-    sub_1C32C20(&Method_DataManager_GetMasterData_SpotMaster___);
-    sub_1C32C20(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-    byte_4C34322 = 1;
+    sub_1C37058(&Method_DataManager_GetMasterData_SpotMaster___);
+    sub_1C37058(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    byte_4C3F90C = 1;
   }
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39E2904 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39ED16C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance )
-    sub_1C32E7C(0);
+    sub_1C372B4(0);
   return (SpotMaster_o *)DataManager__GetMasterData_object_(
                            (DataManager_o *)Instance,
-                           (const MethodInfo_30DD3F0 *)Method_DataManager_GetMasterData_SpotMaster___);
+                           (const MethodInfo_30E7C58 *)Method_DataManager_GetMasterData_SpotMaster___);
 }
 
 
@@ -566,18 +566,18 @@ UserEventMapMaster_o *SubmarineDataHelperSpot__get_userEventMapMaster(const Meth
 {
   Il2CppObject *Instance; // x0
 
-  if ( (byte_4C34320 & 1) == 0 )
+  if ( (byte_4C3F90A & 1) == 0 )
   {
-    sub_1C32C20(&Method_DataManager_GetMasterData_UserEventMapMaster___);
-    sub_1C32C20(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-    byte_4C34320 = 1;
+    sub_1C37058(&Method_DataManager_GetMasterData_UserEventMapMaster___);
+    sub_1C37058(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    byte_4C3F90A = 1;
   }
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39E2904 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39ED16C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance )
-    sub_1C32E7C(0);
+    sub_1C372B4(0);
   return (UserEventMapMaster_o *)DataManager__GetMasterData_object_(
                                    (DataManager_o *)Instance,
-                                   (const MethodInfo_30DD3F0 *)Method_DataManager_GetMasterData_UserEventMapMaster___);
+                                   (const MethodInfo_30E7C58 *)Method_DataManager_GetMasterData_UserEventMapMaster___);
 }
 
 
@@ -585,16 +585,16 @@ UserEventSpotMaster_o *SubmarineDataHelperSpot__get_userEventSpotMaster(const Me
 {
   Il2CppObject *Instance; // x0
 
-  if ( (byte_4C34321 & 1) == 0 )
+  if ( (byte_4C3F90B & 1) == 0 )
   {
-    sub_1C32C20(&Method_DataManager_GetMasterData_UserEventSpotMaster___);
-    sub_1C32C20(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-    byte_4C34321 = 1;
+    sub_1C37058(&Method_DataManager_GetMasterData_UserEventSpotMaster___);
+    sub_1C37058(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    byte_4C3F90B = 1;
   }
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39E2904 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39ED16C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance )
-    sub_1C32E7C(0);
+    sub_1C372B4(0);
   return (UserEventSpotMaster_o *)DataManager__GetMasterData_object_(
                                     (DataManager_o *)Instance,
-                                    (const MethodInfo_30DD3F0 *)Method_DataManager_GetMasterData_UserEventSpotMaster___);
+                                    (const MethodInfo_30E7C58 *)Method_DataManager_GetMasterData_UserEventSpotMaster___);
 }

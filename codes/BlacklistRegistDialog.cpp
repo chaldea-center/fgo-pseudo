@@ -27,19 +27,19 @@ void BlacklistRegistDialog__Open(
   UILabel_o *v25; // x20
   System_Action_o *v26; // x20
 
-  if ( (byte_4C32894 & 1) == 0 )
+  if ( (byte_4C3DE7E & 1) == 0 )
   {
-    sub_1C32C20(&System_Action_TypeInfo);
-    sub_1C32C20(&Method_CommonConfirmDialog_EndOpen__);
-    sub_1C32C20(&LocalizationManager_TypeInfo);
-    sub_1C32C20(&UnityEngine_Object_TypeInfo);
-    sub_1C32C20(&StringLiteral_3688/*"COMMON_CONFIRM_NO"*/);
-    sub_1C32C20(&StringLiteral_3693/*"COMMON_CONFIRM_YES"*/);
-    sub_1C32C20(&StringLiteral_1/*""*/);
-    byte_4C32894 = 1;
+    sub_1C37058(&System_Action_TypeInfo);
+    sub_1C37058(&Method_CommonConfirmDialog_EndOpen__);
+    sub_1C37058(&LocalizationManager_TypeInfo);
+    sub_1C37058(&UnityEngine_Object_TypeInfo);
+    sub_1C37058(&StringLiteral_3688/*"COMMON_CONFIRM_NO"*/);
+    sub_1C37058(&StringLiteral_3693/*"COMMON_CONFIRM_YES"*/);
+    sub_1C37058(&StringLiteral_1/*""*/);
+    byte_4C3DE7E = 1;
   }
   this->fields.clickFunc = func;
-  sub_1C32BC4(&this->fields.clickFunc, func);
+  sub_1C36FFC(&this->fields.clickFunc, func);
   titleLabel = (UnityEngine_Object_o *)this->fields.titleLabel;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
@@ -98,7 +98,7 @@ void BlacklistRegistDialog__Open(
       goto LABEL_33;
     }
 LABEL_48:
-    sub_1C32E7C(v16);
+    sub_1C372B4(v16);
   }
 LABEL_33:
   buttonDecideLabel = (UnityEngine_Object_o *)this->fields.buttonDecideLabel;
@@ -132,7 +132,7 @@ LABEL_33:
   }
 LABEL_47:
   *(_WORD *)&this->fields.isButtonEnable = 256;
-  v26 = (System_Action_o *)sub_1C32E6C(System_Action_TypeInfo);
+  v26 = (System_Action_o *)sub_1C372A4(System_Action_TypeInfo);
   System_Action___ctor(v26, (Il2CppObject *)this, Method_CommonConfirmDialog_EndOpen__, 0);
   BaseDialog__Open((BaseDialog_o *)this, v26, 0, 0, 0);
 }

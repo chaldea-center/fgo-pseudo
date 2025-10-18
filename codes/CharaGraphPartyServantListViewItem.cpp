@@ -13,11 +13,11 @@ void CharaGraphPartyServantListViewItem___ctor(
   CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_o v15; // [xsp+0h] [xbp-80h] BYREF
   CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_o v16; // [xsp+20h] [xbp-60h]
 
-  if ( (byte_4C36CA6 & 1) == 0 )
+  if ( (byte_4C42296 & 1) == 0 )
   {
-    sub_1C32C20(&Method_System_Array_IndexOf_long___);
-    sub_1C32C20(&CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo);
-    byte_4C36CA6 = 1;
+    sub_1C37058(&Method_System_Array_IndexOf_long___);
+    sub_1C37058(&CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo);
+    byte_4C42296 = 1;
   }
   CharaGraphServantListViewItem___ctor(
     (CharaGraphServantListViewItem_o *)this,
@@ -27,18 +27,18 @@ void CharaGraphPartyServantListViewItem___ctor(
     (const MethodInfo *)partyUserServantList);
   UserServantEntity_k__BackingField = this->fields._UserServantEntity_k__BackingField;
   if ( !UserServantEntity_k__BackingField )
-    sub_1C32E7C(v11);
+    sub_1C372B4(v11);
   v13 = *(_OWORD *)&UserServantEntity_k__BackingField->fields.id.fields.fakeValue;
   *(_OWORD *)&v16.fields.currentCryptoKey = *(_OWORD *)&UserServantEntity_k__BackingField->fields.id.fields.currentCryptoKey;
   *(_OWORD *)&v16.fields.fakeValue = v13;
   if ( !CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo);
   v15 = v16;
-  v14 = CodeStage_AntiCheat_ObscuredTypes_ObscuredLong__op_Implicit_48891308(&v15, 0);
+  v14 = CodeStage_AntiCheat_ObscuredTypes_ObscuredLong__op_Implicit_48934420(&v15, 0);
   this->fields._PartyIndex_k__BackingField = System_Array__IndexOf_long_(
                                                partyUserServantList,
                                                v14,
-                                               (const MethodInfo_31E4580 *)Method_System_Array_IndexOf_long___);
+                                               (const MethodInfo_31EEDE8 *)Method_System_Array_IndexOf_long___);
 }
 
 

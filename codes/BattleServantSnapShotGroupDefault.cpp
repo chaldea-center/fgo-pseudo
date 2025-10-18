@@ -21,13 +21,13 @@ void BattleServantSnapShotGroupDefault__MakeAndAppendSnapShot(
   const MethodInfo *v23; // x3
   int32_t uniqueId; // w8
 
-  if ( (byte_4C3A8C6 & 1) == 0 )
+  if ( (byte_4C45ED3 & 1) == 0 )
   {
-    sub_1C32C20(&BattleDataDefine_TypeInfo);
-    sub_1C32C20(&BattleServantSnapShot_TypeInfo);
-    sub_1C32C20(&BattleBuffData_CheckIndividualitiesData_TypeInfo);
-    sub_1C32C20(&Method_System_Collections_Generic_LinkedList_BattleServantSnapShot__AddLast__);
-    byte_4C3A8C6 = 1;
+    sub_1C37058(&BattleDataDefine_TypeInfo);
+    sub_1C37058(&BattleServantSnapShot_TypeInfo);
+    sub_1C37058(&BattleBuffData_CheckIndividualitiesData_TypeInfo);
+    sub_1C37058(&Method_System_Collections_Generic_LinkedList_BattleServantSnapShot__AddLast__);
+    byte_4C45ED3 = 1;
   }
   if ( opponentSvtData )
   {
@@ -38,7 +38,7 @@ void BattleServantSnapShotGroupDefault__MakeAndAppendSnapShot(
                                  0,
                                  1,
                                  0);
-    v12 = (BattleBuffData_CheckIndividualitiesData_o *)sub_1C32E6C(BattleBuffData_CheckIndividualitiesData_TypeInfo);
+    v12 = (BattleBuffData_CheckIndividualitiesData_o *)sub_1C372A4(BattleBuffData_CheckIndividualitiesData_TypeInfo);
     v13 = v12;
     v14 = baseSvtData;
     v15 = opponentSvtData;
@@ -53,29 +53,29 @@ void BattleServantSnapShotGroupDefault__MakeAndAppendSnapShot(
       v17 = BattleDataDefine_TypeInfo;
     }
     NO_INDIVIDUALITY_ARRAY = v17->static_fields->NO_INDIVIDUALITY_ARRAY;
-    v12 = (BattleBuffData_CheckIndividualitiesData_o *)sub_1C32E6C(BattleBuffData_CheckIndividualitiesData_TypeInfo);
+    v12 = (BattleBuffData_CheckIndividualitiesData_o *)sub_1C372A4(BattleBuffData_CheckIndividualitiesData_TypeInfo);
     v13 = v12;
     v14 = baseSvtData;
     v15 = 0;
     v16 = NO_INDIVIDUALITY_ARRAY;
   }
-  BattleBuffData_CheckIndividualitiesData___ctor_45712884(v12, v14, v15, 0, v16, 0, 0, 0);
+  BattleBuffData_CheckIndividualitiesData___ctor_45663080(v12, v14, v15, 0, v16, 0, 0, 0);
   SnapShotLinkedList_k__BackingField = (System_Collections_Generic_LinkedList_T__o *)this->fields._SnapShotLinkedList_k__BackingField;
-  v20 = sub_1C32E6C(BattleServantSnapShot_TypeInfo);
+  v20 = sub_1C372A4(BattleServantSnapShot_TypeInfo);
   System_Object___ctor((Il2CppObject *)v20, 0);
   if ( !baseSvtData
     || (uniqueId = baseSvtData->fields.uniqueId,
         *(_QWORD *)(v20 + 16) = v13,
         *(_DWORD *)(v20 + 24) = uniqueId,
-        sub_1C32BC4((CGThumbnailListItem_o *)(v20 + 16), (int32_t)v13, v22, v23),
+        sub_1C36FFC((CGThumbnailListItem_o *)(v20 + 16), (int32_t)v13, v22, v23),
         !SnapShotLinkedList_k__BackingField) )
   {
-    sub_1C32E7C(v21);
+    sub_1C372B4(v21);
   }
   System_Collections_Generic_LinkedList_object___AddLast(
     SnapShotLinkedList_k__BackingField,
     (Il2CppObject *)v20,
-    (const MethodInfo_36DC014 *)Method_System_Collections_Generic_LinkedList_BattleServantSnapShot__AddLast__);
+    (const MethodInfo_36E687C *)Method_System_Collections_Generic_LinkedList_BattleServantSnapShot__AddLast__);
 }
 
 
@@ -92,14 +92,14 @@ BattleBuffData_CheckIndividualitiesData_array *BattleServantSnapShotGroupDefault
   const MethodInfo *v9; // x3
   System_Collections_Generic_IEnumerable_TSource__o *v10; // x0
 
-  if ( (byte_4C3A8C7 & 1) == 0 )
+  if ( (byte_4C45ED4 & 1) == 0 )
   {
-    sub_1C32C20(&Method_System_Linq_Enumerable_Select_BattleServantSnapShot__BattleBuffData_CheckIndividualitiesData___);
-    sub_1C32C20(&Method_System_Linq_Enumerable_ToArray_BattleBuffData_CheckIndividualitiesData___);
-    sub_1C32C20(&System_Func_BattleServantSnapShot__BattleBuffData_CheckIndividualitiesData__TypeInfo);
-    sub_1C32C20(&Method_BattleServantSnapShotGroupDefault___c__get_CheckIndividualitiesDataArray_b__2_0__);
-    sub_1C32C20(&BattleServantSnapShotGroupDefault___c_TypeInfo);
-    byte_4C3A8C7 = 1;
+    sub_1C37058(&Method_System_Linq_Enumerable_Select_BattleServantSnapShot__BattleBuffData_CheckIndividualitiesData___);
+    sub_1C37058(&Method_System_Linq_Enumerable_ToArray_BattleBuffData_CheckIndividualitiesData___);
+    sub_1C37058(&System_Func_BattleServantSnapShot__BattleBuffData_CheckIndividualitiesData__TypeInfo);
+    sub_1C37058(&Method_BattleServantSnapShotGroupDefault___c__get_CheckIndividualitiesDataArray_b__2_0__);
+    sub_1C37058(&BattleServantSnapShotGroupDefault___c_TypeInfo);
+    byte_4C45ED4 = 1;
   }
   v3 = BattleServantSnapShotGroupDefault___c_TypeInfo;
   SnapShotLinkedList_k__BackingField = this->fields._SnapShotLinkedList_k__BackingField;
@@ -117,7 +117,7 @@ BattleBuffData_CheckIndividualitiesData_array *BattleServantSnapShotGroupDefault
       v3 = BattleServantSnapShotGroupDefault___c_TypeInfo;
     }
     v6 = (Il2CppObject *)v3->static_fields->__9;
-    _9__2_0 = (System_Func_object__object__o *)sub_1C32E6C(System_Func_BattleServantSnapShot__BattleBuffData_CheckIndividualitiesData__TypeInfo);
+    _9__2_0 = (System_Func_object__object__o *)sub_1C372A4(System_Func_BattleServantSnapShot__BattleBuffData_CheckIndividualitiesData__TypeInfo);
     System_Func_object__object____ctor(
       _9__2_0,
       v6,
@@ -125,15 +125,15 @@ BattleBuffData_CheckIndividualitiesData_array *BattleServantSnapShotGroupDefault
       0);
     static_fields = BattleServantSnapShotGroupDefault___c_TypeInfo->static_fields;
     static_fields->__9__2_0 = (struct System_Func_BattleServantSnapShot__BattleBuffData_CheckIndividualitiesData__o *)_9__2_0;
-    sub_1C32BC4((CGThumbnailListItem_o *)&static_fields->__9__2_0, (int32_t)_9__2_0, v8, v9);
+    sub_1C36FFC((CGThumbnailListItem_o *)&static_fields->__9__2_0, (int32_t)_9__2_0, v8, v9);
   }
   v10 = (System_Collections_Generic_IEnumerable_TSource__o *)System_Linq_Enumerable__Select_object__object_(
                                                                (System_Collections_Generic_IEnumerable_TSource__o *)SnapShotLinkedList_k__BackingField,
                                                                (System_Func_TSource__TResult__o *)_9__2_0,
-                                                               (const MethodInfo_3113ABC *)Method_System_Linq_Enumerable_Select_BattleServantSnapShot__BattleBuffData_CheckIndividualitiesData___);
+                                                               (const MethodInfo_311E324 *)Method_System_Linq_Enumerable_Select_BattleServantSnapShot__BattleBuffData_CheckIndividualitiesData___);
   return (BattleBuffData_CheckIndividualitiesData_array *)System_Linq_Enumerable__ToArray_object_(
                                                             v10,
-                                                            (const MethodInfo_311CA8C *)Method_System_Linq_Enumerable_ToArray_BattleBuffData_CheckIndividualitiesData___);
+                                                            (const MethodInfo_31272F4 *)Method_System_Linq_Enumerable_ToArray_BattleBuffData_CheckIndividualitiesData___);
 }
 
 
@@ -143,15 +143,15 @@ void BattleServantSnapShotGroupDefault___c___cctor(const MethodInfo *method)
   int32_t v2; // w2
   const MethodInfo *v3; // x3
 
-  if ( (byte_4C3A8C8 & 1) == 0 )
+  if ( (byte_4C45ED5 & 1) == 0 )
   {
-    sub_1C32C20(&BattleServantSnapShotGroupDefault___c_TypeInfo);
-    byte_4C3A8C8 = 1;
+    sub_1C37058(&BattleServantSnapShotGroupDefault___c_TypeInfo);
+    byte_4C45ED5 = 1;
   }
-  v1 = (Il2CppObject *)sub_1C32E6C(BattleServantSnapShotGroupDefault___c_TypeInfo);
+  v1 = (Il2CppObject *)sub_1C372A4(BattleServantSnapShotGroupDefault___c_TypeInfo);
   System_Object___ctor(v1, 0);
   BattleServantSnapShotGroupDefault___c_TypeInfo->static_fields->__9 = (struct BattleServantSnapShotGroupDefault___c_o *)v1;
-  sub_1C32BC4(
+  sub_1C36FFC(
     (CGThumbnailListItem_o *)BattleServantSnapShotGroupDefault___c_TypeInfo->static_fields,
     (int32_t)v1,
     v2,
@@ -173,6 +173,6 @@ BattleBuffData_CheckIndividualitiesData_o *BattleServantSnapShotGroupDefault___c
         const MethodInfo *method)
 {
   if ( !x )
-    sub_1C32E7C(this);
+    sub_1C372B4(this);
   return x->fields._CheckIndividualitiesData_k__BackingField;
 }

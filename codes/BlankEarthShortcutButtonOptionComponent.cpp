@@ -1,9 +1,9 @@
 void BlankEarthShortcutButtonOptionComponent___cctor(const MethodInfo *method)
 {
-  if ( (byte_4C3423E & 1) == 0 )
+  if ( (byte_4C3F828 & 1) == 0 )
   {
-    sub_1C32C20(&BlankEarthShortcutButtonOptionComponent_TypeInfo);
-    byte_4C3423E = 1;
+    sub_1C37058(&BlankEarthShortcutButtonOptionComponent_TypeInfo);
+    byte_4C3F828 = 1;
   }
   BlankEarthShortcutButtonOptionComponent_TypeInfo->static_fields->OPTION_COMPONENT_UPDATE_INTERVAL = 60;
 }
@@ -29,11 +29,11 @@ bool BlankEarthShortcutButtonOptionComponent__CheckUpdateText(
   int64_t v8; // x20
   int64_t OPTION_COMPONENT_UPDATE_INTERVAL; // x22
 
-  if ( (byte_4C3423D & 1) == 0 )
+  if ( (byte_4C3F827 & 1) == 0 )
   {
-    sub_1C32C20(&BlankEarthShortcutButtonOptionComponent_TypeInfo);
-    sub_1C32C20(&NetworkManager_TypeInfo);
-    byte_4C3423D = 1;
+    sub_1C37058(&BlankEarthShortcutButtonOptionComponent_TypeInfo);
+    sub_1C37058(&NetworkManager_TypeInfo);
+    byte_4C3F827 = 1;
   }
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
@@ -75,11 +75,11 @@ void BlankEarthShortcutButtonOptionComponent__SetUpOptionInfo(
   __int128 v14; // kr00_16 OVERLAPPED
   UnityEngine_Color_o v15; // [xsp+0h] [xbp-40h] BYREF
 
-  if ( (byte_4C3423C & 1) == 0 )
+  if ( (byte_4C3F826 & 1) == 0 )
   {
-    sub_1C32C20(&LocalizationManager_TypeInfo);
-    sub_1C32C20(&NetworkManager_TypeInfo);
-    byte_4C3423C = 1;
+    sub_1C37058(&LocalizationManager_TypeInfo);
+    sub_1C37058(&NetworkManager_TypeInfo);
+    byte_4C3F826 = 1;
   }
   *(_QWORD *)&v15.fields.r = 0;
   *(_QWORD *)&v15.fields.b = 0;
@@ -135,7 +135,7 @@ void BlankEarthShortcutButtonOptionComponent__SetUpOptionInfo(
       goto LABEL_22;
     }
 LABEL_24:
-    sub_1C32E7C(Time);
+    sub_1C372B4(Time);
   }
   if ( !v13 )
     goto LABEL_24;

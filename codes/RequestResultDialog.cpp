@@ -1,9 +1,9 @@
 void RequestResultDialog___ctor(RequestResultDialog_o *this, const MethodInfo *method)
 {
-  if ( (byte_4C33A85 & 1) == 0 )
+  if ( (byte_4C3F06F & 1) == 0 )
   {
-    sub_1C32C20(&BaseDialog_TypeInfo);
-    byte_4C33A85 = 1;
+    sub_1C37058(&BaseDialog_TypeInfo);
+    byte_4C3F06F = 1;
   }
   if ( !BaseDialog_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(BaseDialog_TypeInfo);
@@ -23,7 +23,7 @@ void RequestResultDialog__CallOnClose(RequestResultDialog_o *this, const MethodI
   {
     p_onClose = (CGThumbnailListItem_o *)&this->fields.onClose;
     p_onClose->klass = 0;
-    sub_1C32BC4(p_onClose, 0, v2, v3);
+    sub_1C36FFC(p_onClose, 0, v2, v3);
     ((void (__fastcall *)(intptr_t, intptr_t))onClose->fields.invoke_impl)(
       onClose->fields.method_code,
       onClose->fields.method);
@@ -42,7 +42,7 @@ void RequestResultDialog__CallOnDecide(RequestResultDialog_o *this, bool isOk, c
   {
     p_onDecide = (CGThumbnailListItem_o *)&this->fields.onDecide;
     p_onDecide->klass = 0;
-    sub_1C32BC4(p_onDecide, 0, (int32_t)method, v3);
+    sub_1C36FFC(p_onDecide, 0, (int32_t)method, v3);
     ((void (__fastcall *)(intptr_t, bool, intptr_t))onDecide->fields.invoke_impl)(
       onDecide->fields.method_code,
       isOk,
@@ -55,11 +55,11 @@ void RequestResultDialog__Close(RequestResultDialog_o *this, const MethodInfo *m
 {
   const MethodInfo *v2; // x2
 
-  RequestResultDialog__Close_34931960(this, 0, v2);
+  RequestResultDialog__Close_35027592(this, 0, v2);
 }
 
 
-void RequestResultDialog__Close_34931960(
+void RequestResultDialog__Close_35027592(
         RequestResultDialog_o *this,
         System_Action_o *callback,
         const MethodInfo *method)
@@ -67,16 +67,16 @@ void RequestResultDialog__Close_34931960(
   const MethodInfo *v3; // x3
   System_Action_o *v6; // x20
 
-  if ( (byte_4C33A7C & 1) == 0 )
+  if ( (byte_4C3F066 & 1) == 0 )
   {
-    sub_1C32C20(&System_Action_TypeInfo);
-    sub_1C32C20(&Method_RequestResultDialog_EndClose__);
-    byte_4C33A7C = 1;
+    sub_1C37058(&System_Action_TypeInfo);
+    sub_1C37058(&Method_RequestResultDialog_EndClose__);
+    byte_4C3F066 = 1;
   }
   this->fields.onClose = callback;
-  sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.onClose, (int32_t)callback, (int32_t)method, v3);
+  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.onClose, (int32_t)callback, (int32_t)method, v3);
   this->fields.isButtonEnable = 0;
-  v6 = (System_Action_o *)sub_1C32E6C(System_Action_TypeInfo);
+  v6 = (System_Action_o *)sub_1C372A4(System_Action_TypeInfo);
   System_Action___ctor(v6, (Il2CppObject *)this, Method_RequestResultDialog_EndClose__, 0);
   BaseDialog__Close((BaseDialog_o *)this, v6, 0);
 }
@@ -103,10 +103,10 @@ int32_t RequestResultDialog__GetKeepPanelDepth(RequestResultDialog_o *this, cons
   UIPanel_o *v4; // x0
   int32_t *p_keepPanelDepth; // x8
 
-  if ( (byte_4C33A7B & 1) == 0 )
+  if ( (byte_4C3F065 & 1) == 0 )
   {
-    sub_1C32C20(&UnityEngine_Object_TypeInfo);
-    byte_4C33A7B = 1;
+    sub_1C37058(&UnityEngine_Object_TypeInfo);
+    byte_4C3F065 = 1;
   }
   if ( this->fields.isInitPanelDepth )
     goto LABEL_9;
@@ -123,7 +123,7 @@ LABEL_9:
   {
     v4 = BaseDialog__get_TargetPanel((BaseDialog_o *)this, 0);
     if ( !v4 )
-      sub_1C32E7C(0);
+      sub_1C372B4(0);
     p_keepPanelDepth = &v4->fields.mDepth;
   }
   return *p_keepPanelDepth;
@@ -149,10 +149,10 @@ void RequestResultDialog__Init(RequestResultDialog_o *this, const MethodInfo *me
   UnityEngine_GameObject_o *gameObject; // x0
 
   v3 = this;
-  if ( (byte_4C33A76 & 1) == 0 )
+  if ( (byte_4C3F060 & 1) == 0 )
   {
-    this = (RequestResultDialog_o *)sub_1C32C20(&StringLiteral_1/*""*/);
-    byte_4C33A76 = 1;
+    this = (RequestResultDialog_o *)sub_1C37058(&StringLiteral_1/*""*/);
+    byte_4C3F060 = 1;
   }
   RequestResultDialog__SetLabelText(this, v3->fields.titleLabel, (System_String_o *)StringLiteral_1/*""*/, v2);
   RequestResultDialog__SetLabelText(v4, v3->fields.messageLabel, (System_String_o *)StringLiteral_1/*""*/, v5);
@@ -163,7 +163,7 @@ void RequestResultDialog__Init(RequestResultDialog_o *this, const MethodInfo *me
   RequestResultDialog__SetLabelText(v14, v3->fields.decideButtonLabel, (System_String_o *)StringLiteral_1/*""*/, v15);
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)v3, 0);
   if ( !gameObject )
-    sub_1C32E7C(0);
+    sub_1C372B4(0);
   UnityEngine_GameObject__SetActive(gameObject, 0, 0);
   BaseDialog__Init((BaseDialog_o *)v3, 0);
 }
@@ -175,17 +175,17 @@ void RequestResultDialog__OnClickCancel(RequestResultDialog_o *this, const Metho
   System_Reflection_MethodBase_o *v4; // x0
   const MethodInfo *v5; // x2
 
-  if ( (byte_4C33A7F & 1) == 0 )
+  if ( (byte_4C3F069 & 1) == 0 )
   {
-    sub_1C32C20(&Method_RequestResultDialog_OnClickCancel__);
-    byte_4C33A7F = 1;
+    sub_1C37058(&Method_RequestResultDialog_OnClickCancel__);
+    byte_4C3F069 = 1;
   }
   if ( this->fields.isButtonEnable )
   {
     v3 = Method_RequestResultDialog_OnClickCancel__;
     if ( (*((_BYTE *)Method_RequestResultDialog_OnClickCancel__ + 83) & 2) != 0 )
-      v3 = (_QWORD *)sub_1C32C38(Method_RequestResultDialog_OnClickCancel__);
-    v4 = (System_Reflection_MethodBase_o *)sub_1C32C04(v3, v3[4]);
+      v3 = (_QWORD *)sub_1C37070(Method_RequestResultDialog_OnClickCancel__);
+    v4 = (System_Reflection_MethodBase_o *)sub_1C3703C(v3, v3[4]);
     OverwriteAssetSoundName__PlaySystemSe(v4, 1, 0, 0);
     RequestResultDialog__CallOnDecide(this, 0, v5);
   }
@@ -198,17 +198,17 @@ void RequestResultDialog__OnClickDecide(RequestResultDialog_o *this, const Metho
   System_Reflection_MethodBase_o *v4; // x0
   const MethodInfo *v5; // x2
 
-  if ( (byte_4C33A7E & 1) == 0 )
+  if ( (byte_4C3F068 & 1) == 0 )
   {
-    sub_1C32C20(&Method_RequestResultDialog_OnClickDecide__);
-    byte_4C33A7E = 1;
+    sub_1C37058(&Method_RequestResultDialog_OnClickDecide__);
+    byte_4C3F068 = 1;
   }
   if ( this->fields.isButtonEnable )
   {
     v3 = Method_RequestResultDialog_OnClickDecide__;
     if ( (*((_BYTE *)Method_RequestResultDialog_OnClickDecide__ + 83) & 2) != 0 )
-      v3 = (_QWORD *)sub_1C32C38(Method_RequestResultDialog_OnClickDecide__);
-    v4 = (System_Reflection_MethodBase_o *)sub_1C32C04(v3, v3[4]);
+      v3 = (_QWORD *)sub_1C37070(Method_RequestResultDialog_OnClickDecide__);
+    v4 = (System_Reflection_MethodBase_o *)sub_1C3703C(v3, v3[4]);
     OverwriteAssetSoundName__PlaySystemSe(v4, 0, 0, 0);
     RequestResultDialog__CallOnDecide(this, 1, v5);
   }
@@ -221,17 +221,17 @@ void RequestResultDialog__OnClickOk(RequestResultDialog_o *this, const MethodInf
   System_Reflection_MethodBase_o *v4; // x0
   const MethodInfo *v5; // x2
 
-  if ( (byte_4C33A7D & 1) == 0 )
+  if ( (byte_4C3F067 & 1) == 0 )
   {
-    sub_1C32C20(&Method_RequestResultDialog_OnClickOk__);
-    byte_4C33A7D = 1;
+    sub_1C37058(&Method_RequestResultDialog_OnClickOk__);
+    byte_4C3F067 = 1;
   }
   if ( this->fields.isButtonEnable )
   {
     v3 = Method_RequestResultDialog_OnClickOk__;
     if ( (*((_BYTE *)Method_RequestResultDialog_OnClickOk__ + 83) & 2) != 0 )
-      v3 = (_QWORD *)sub_1C32C38(Method_RequestResultDialog_OnClickOk__);
-    v4 = (System_Reflection_MethodBase_o *)sub_1C32C04(v3, v3[4]);
+      v3 = (_QWORD *)sub_1C37070(Method_RequestResultDialog_OnClickOk__);
+    v4 = (System_Reflection_MethodBase_o *)sub_1C3703C(v3, v3[4]);
     OverwriteAssetSoundName__PlaySystemSe(v4, 0, 0, 0);
     RequestResultDialog__CallOnDecide(this, 1, v5);
   }
@@ -248,10 +248,10 @@ void RequestResultDialog__Open(
 {
   const MethodInfo *v6; // x6
 
-  if ( (byte_4C33A77 & 1) == 0 )
+  if ( (byte_4C3F061 & 1) == 0 )
   {
-    sub_1C32C20(&StringLiteral_1/*""*/);
-    byte_4C33A77 = 1;
+    sub_1C37058(&StringLiteral_1/*""*/);
+    byte_4C3F061 = 1;
   }
   RequestResultDialog__OpenAddMsg(
     this,
@@ -302,13 +302,13 @@ void RequestResultDialog__OpenAddMsg(
   const MethodInfo *v39; // x3
   System_Action_o *v40; // x20
 
-  if ( (byte_4C33A78 & 1) == 0 )
+  if ( (byte_4C3F062 & 1) == 0 )
   {
-    sub_1C32C20(&System_Action_TypeInfo);
-    sub_1C32C20(&LocalizationManager_TypeInfo);
-    sub_1C32C20(&Method_RequestResultDialog_EndOpen__);
-    sub_1C32C20(&StringLiteral_3685/*"COMMON_CONFIRM_CLOSE"*/);
-    byte_4C33A78 = 1;
+    sub_1C37058(&System_Action_TypeInfo);
+    sub_1C37058(&LocalizationManager_TypeInfo);
+    sub_1C37058(&Method_RequestResultDialog_EndOpen__);
+    sub_1C37058(&StringLiteral_3685/*"COMMON_CONFIRM_CLOSE"*/);
+    byte_4C3F062 = 1;
   }
   KeepPanelDepth = (UnityEngine_GameObject_o *)RequestResultDialog__GetKeepPanelDepth(this, (const MethodInfo *)message);
   normalBuyWindowObj = this->fields.normalBuyWindowObj;
@@ -321,7 +321,7 @@ void RequestResultDialog__OpenAddMsg(
     goto LABEL_20;
   UnityEngine_GameObject__SetActive(KeepPanelDepth, 0, 0);
   this->fields.onDecide = onDecide;
-  sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.onDecide, (int32_t)onDecide, v15, v16);
+  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.onDecide, (int32_t)onDecide, v15, v16);
   KeepPanelDepth = (UnityEngine_GameObject_o *)System_String__IsNullOrEmpty(addMessage, 0);
   if ( !this->fields.itemBuyWindowObj )
     goto LABEL_20;
@@ -376,16 +376,16 @@ void RequestResultDialog__OpenAddMsg(
   KeepPanelDepth = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
   if ( !KeepPanelDepth )
 LABEL_20:
-    sub_1C32E7C(KeepPanelDepth);
+    sub_1C372B4(KeepPanelDepth);
   UnityEngine_GameObject__SetActive(KeepPanelDepth, 1, 0);
   this->fields.isButtonEnable = 0;
-  v40 = (System_Action_o *)sub_1C32E6C(System_Action_TypeInfo);
+  v40 = (System_Action_o *)sub_1C372A4(System_Action_TypeInfo);
   System_Action___ctor(v40, (Il2CppObject *)this, Method_RequestResultDialog_EndOpen__, 0);
   BaseDialog__Open((BaseDialog_o *)this, v40, 0, 0, 0);
 }
 
 
-void RequestResultDialog__OpenAddMsg_34930940(
+void RequestResultDialog__OpenAddMsg_35026572(
         RequestResultDialog_o *this,
         System_String_o *title,
         System_String_o *message,
@@ -436,14 +436,14 @@ void RequestResultDialog__OpenAddMsg_34930940(
   const MethodInfo *v54; // x3
   System_Action_o *v55; // x20
 
-  if ( (byte_4C33A7A & 1) == 0 )
+  if ( (byte_4C3F064 & 1) == 0 )
   {
-    sub_1C32C20(&System_Action_TypeInfo);
-    sub_1C32C20(&LocalizationManager_TypeInfo);
-    sub_1C32C20(&Method_RequestResultDialog_EndOpen__);
-    sub_1C32C20(&StringLiteral_3685/*"COMMON_CONFIRM_CLOSE"*/);
-    sub_1C32C20(&StringLiteral_1/*""*/);
-    byte_4C33A7A = 1;
+    sub_1C37058(&System_Action_TypeInfo);
+    sub_1C37058(&LocalizationManager_TypeInfo);
+    sub_1C37058(&Method_RequestResultDialog_EndOpen__);
+    sub_1C37058(&StringLiteral_3685/*"COMMON_CONFIRM_CLOSE"*/);
+    sub_1C37058(&StringLiteral_1/*""*/);
+    byte_4C3F064 = 1;
   }
   BaseDialog__get_TargetPanel((BaseDialog_o *)this, 0);
   KeepPanelDepth = (UnityEngine_GameObject_o *)RequestResultDialog__GetKeepPanelDepth(this, v20);
@@ -457,7 +457,7 @@ void RequestResultDialog__OpenAddMsg_34930940(
     goto LABEL_27;
   UnityEngine_GameObject__SetActive(KeepPanelDepth, 0, 0);
   this->fields.onDecide = onDecide;
-  sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.onDecide, (int32_t)onDecide, v23, v24);
+  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.onDecide, (int32_t)onDecide, v23, v24);
   KeepPanelDepth = (UnityEngine_GameObject_o *)System_String__IsNullOrEmpty(addMessage, 0);
   if ( !this->fields.normalBuyWindowObj )
     goto LABEL_27;
@@ -506,7 +506,7 @@ void RequestResultDialog__OpenAddMsg_34930940(
       }
     }
 LABEL_27:
-    sub_1C32E7C(KeepPanelDepth);
+    sub_1C372B4(KeepPanelDepth);
   }
   UnityEngine_GameObject__SetActive(KeepPanelDepth, 1, 0);
   KeepPanelDepth = this->fields.cancelButtonObj;
@@ -538,13 +538,13 @@ LABEL_23:
     panelDepth = this->fields.keepPanelDepth;
   RequestResultDialog__SetPanelDepth(TargetPanel, (UIPanel_o *)TargetPanel, panelDepth, v54);
   this->fields.isButtonEnable = 0;
-  v55 = (System_Action_o *)sub_1C32E6C(System_Action_TypeInfo);
+  v55 = (System_Action_o *)sub_1C372A4(System_Action_TypeInfo);
   System_Action___ctor(v55, (Il2CppObject *)this, Method_RequestResultDialog_EndOpen__, 0);
   BaseDialog__Open((BaseDialog_o *)this, v55, 0, 0, 0);
 }
 
 
-void RequestResultDialog__Open_34930788(
+void RequestResultDialog__Open_35026420(
         RequestResultDialog_o *this,
         System_String_o *title,
         System_String_o *message,
@@ -554,12 +554,12 @@ void RequestResultDialog__Open_34930788(
 {
   const MethodInfo *v11; // [xsp+18h] [xbp-48h]
 
-  if ( (byte_4C33A79 & 1) == 0 )
+  if ( (byte_4C3F063 & 1) == 0 )
   {
-    sub_1C32C20(&StringLiteral_1/*""*/);
-    byte_4C33A79 = 1;
+    sub_1C37058(&StringLiteral_1/*""*/);
+    byte_4C3F063 = 1;
   }
-  RequestResultDialog__OpenAddMsg_34930940(
+  RequestResultDialog__OpenAddMsg_35026572(
     this,
     title,
     message,
@@ -582,10 +582,10 @@ void RequestResultDialog__SetLabelFontSizeAdjust(
         int32_t size,
         const MethodInfo *method)
 {
-  if ( (byte_4C33A81 & 1) == 0 )
+  if ( (byte_4C3F06B & 1) == 0 )
   {
-    sub_1C32C20(&UnityEngine_Object_TypeInfo);
-    byte_4C33A81 = 1;
+    sub_1C37058(&UnityEngine_Object_TypeInfo);
+    byte_4C3F06B = 1;
   }
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
@@ -603,10 +603,10 @@ void RequestResultDialog__SetLabelLacalPositionY(
   _BOOL8 v6; // x0
   UnityEngine_GameObject_o *gameObject; // x0
 
-  if ( (byte_4C33A83 & 1) == 0 )
+  if ( (byte_4C3F06D & 1) == 0 )
   {
-    sub_1C32C20(&UnityEngine_Object_TypeInfo);
-    byte_4C33A83 = 1;
+    sub_1C37058(&UnityEngine_Object_TypeInfo);
+    byte_4C3F06D = 1;
   }
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
@@ -614,7 +614,7 @@ void RequestResultDialog__SetLabelLacalPositionY(
   if ( !v6 )
   {
     if ( !label )
-      sub_1C32E7C(v6);
+      sub_1C372B4(v6);
     gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)label, 0);
     GameObjectExtensions__SetLocalPositionY(gameObject, y, 0);
   }
@@ -629,10 +629,10 @@ void RequestResultDialog__SetLabelText(
 {
   _BOOL8 v6; // x0
 
-  if ( (byte_4C33A80 & 1) == 0 )
+  if ( (byte_4C3F06A & 1) == 0 )
   {
-    sub_1C32C20(&UnityEngine_Object_TypeInfo);
-    byte_4C33A80 = 1;
+    sub_1C37058(&UnityEngine_Object_TypeInfo);
+    byte_4C3F06A = 1;
   }
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
@@ -640,7 +640,7 @@ void RequestResultDialog__SetLabelText(
   if ( !v6 )
   {
     if ( !label )
-      sub_1C32E7C(v6);
+      sub_1C372B4(v6);
     UILabel__set_text(label, text, 0);
   }
 }
@@ -654,10 +654,10 @@ void RequestResultDialog__SetPanelDepth(
 {
   _BOOL8 v6; // x0
 
-  if ( (byte_4C33A82 & 1) == 0 )
+  if ( (byte_4C3F06C & 1) == 0 )
   {
-    sub_1C32C20(&UnityEngine_Object_TypeInfo);
-    byte_4C33A82 = 1;
+    sub_1C37058(&UnityEngine_Object_TypeInfo);
+    byte_4C3F06C = 1;
   }
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
@@ -665,7 +665,7 @@ void RequestResultDialog__SetPanelDepth(
   if ( !v6 )
   {
     if ( !panel )
-      sub_1C32E7C(v6);
+      sub_1C372B4(v6);
     UIPanel__set_depth(panel, depth, 0);
   }
 }
@@ -676,18 +676,18 @@ System_String_o *RequestResultDialog__get_closeBtnPath(RequestResultDialog_o *th
   UnityEngine_GameObject_o *cancelButtonObj; // x0
   __int64 *v4; // x8
 
-  if ( (byte_4C33A84 & 1) == 0 )
+  if ( (byte_4C3F06E & 1) == 0 )
   {
-    sub_1C32C20(&StringLiteral_15639/*"Window/CancelButton"*/);
-    sub_1C32C20(&StringLiteral_15650/*"Window/OkBtn"*/);
-    byte_4C33A84 = 1;
+    sub_1C37058(&StringLiteral_15641/*"Window/CancelButton"*/);
+    sub_1C37058(&StringLiteral_15652/*"Window/OkBtn"*/);
+    byte_4C3F06E = 1;
   }
   cancelButtonObj = this->fields.cancelButtonObj;
   if ( !cancelButtonObj )
-    sub_1C32E7C(0);
+    sub_1C372B4(0);
   if ( UnityEngine_GameObject__get_activeInHierarchy(cancelButtonObj, 0) )
-    v4 = &StringLiteral_15639/*"Window/CancelButton"*/;
+    v4 = &StringLiteral_15641/*"Window/CancelButton"*/;
   else
-    v4 = &StringLiteral_15650/*"Window/OkBtn"*/;
+    v4 = &StringLiteral_15652/*"Window/OkBtn"*/;
   return (System_String_o *)*v4;
 }

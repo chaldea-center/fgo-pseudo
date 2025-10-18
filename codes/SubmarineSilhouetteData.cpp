@@ -27,7 +27,7 @@ void SubmarineSilhouetteData___ctor(
     || (this->fields._ObjectId_k__BackingField = EventPanelSpotEntity_k__BackingField->fields.objectId,
         objectQuestIds = EventPanelSpotEntity_k__BackingField->fields.objectQuestIds,
         this->fields._ObjectQuestIds_k__BackingField = objectQuestIds,
-        sub_1C32BC4(
+        sub_1C36FFC(
           (CGThumbnailListItem_o *)&this->fields._ObjectQuestIds_k__BackingField,
           (int32_t)objectQuestIds,
           v6,
@@ -35,11 +35,11 @@ void SubmarineSilhouetteData___ctor(
         (v13 = spotInfo->fields._EventPanelSpotEntity_k__BackingField) == 0) )
   {
 LABEL_6:
-    sub_1C32E7C(v5);
+    sub_1C372B4(v5);
   }
   enemySizeIdxListJson = v13->fields.enemySizeIdxListJson;
   this->fields._EnemySizeIdx_k__BackingField = enemySizeIdxListJson;
-  sub_1C32BC4(
+  sub_1C36FFC(
     (CGThumbnailListItem_o *)&this->fields._EnemySizeIdx_k__BackingField,
     (int32_t)enemySizeIdxListJson,
     v11,
@@ -54,10 +54,10 @@ bool SubmarineSilhouetteData__HasClearCondQuestId(
 {
   struct System_Int32_array *ObjectQuestIds_k__BackingField; // x0
 
-  if ( (byte_4C3434D & 1) == 0 )
+  if ( (byte_4C3F937 & 1) == 0 )
   {
-    sub_1C32C20(&Method_System_Array_IndexOf_int___);
-    byte_4C3434D = 1;
+    sub_1C37058(&Method_System_Array_IndexOf_int___);
+    byte_4C3F937 = 1;
   }
   ObjectQuestIds_k__BackingField = this->fields._ObjectQuestIds_k__BackingField;
   if ( ObjectQuestIds_k__BackingField )
@@ -66,7 +66,7 @@ bool SubmarineSilhouetteData__HasClearCondQuestId(
       LOBYTE(ObjectQuestIds_k__BackingField) = System_Array__IndexOf_int_(
                                                  ObjectQuestIds_k__BackingField,
                                                  questId,
-                                                 (const MethodInfo_31E4470 *)Method_System_Array_IndexOf_int___) >= 0;
+                                                 (const MethodInfo_31EECD8 *)Method_System_Array_IndexOf_int___) >= 0;
     else
       LOBYTE(ObjectQuestIds_k__BackingField) = 0;
   }
@@ -152,7 +152,7 @@ void SubmarineSilhouetteData__set_EnemySizeIdx(
   const MethodInfo *v3; // x3
 
   this->fields._EnemySizeIdx_k__BackingField = value;
-  sub_1C32BC4((CGThumbnailListItem_o *)&this->fields._EnemySizeIdx_k__BackingField, (int32_t)value, (int32_t)method, v3);
+  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields._EnemySizeIdx_k__BackingField, (int32_t)value, (int32_t)method, v3);
 }
 
 
@@ -170,7 +170,7 @@ void SubmarineSilhouetteData__set_ObjectQuestIds(
   const MethodInfo *v3; // x3
 
   this->fields._ObjectQuestIds_k__BackingField = value;
-  sub_1C32BC4(
+  sub_1C36FFC(
     (CGThumbnailListItem_o *)&this->fields._ObjectQuestIds_k__BackingField,
     (int32_t)value,
     (int32_t)method,

@@ -1,9 +1,9 @@
 void ServantCostumeListViewObject___ctor(ServantCostumeListViewObject_o *this, const MethodInfo *method)
 {
-  if ( (byte_4C3BC66 & 1) == 0 )
+  if ( (byte_4C3D06F & 1) == 0 )
   {
-    sub_1C32C20(&ListViewObject_TypeInfo);
-    byte_4C3BC66 = 1;
+    sub_1C37058(&ListViewObject_TypeInfo);
+    byte_4C3D06F = 1;
   }
   if ( !ListViewObject_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(ListViewObject_TypeInfo);
@@ -15,23 +15,21 @@ void ServantCostumeListViewObject__Awake(ServantCostumeListViewObject_o *this, c
 {
   UnityEngine_GameObject_o *dispObject; // x0
   Il2CppObject *Component_object; // x0
-  int32_t v5; // w2
-  const MethodInfo *v6; // x3
 
-  if ( (byte_4C3BC5E & 1) == 0 )
+  if ( (byte_4C3D067 & 1) == 0 )
   {
-    sub_1C32C20(&Method_UnityEngine_GameObject_GetComponent_ServantCostumeListViewItemDraw___);
-    byte_4C3BC5E = 1;
+    sub_1C37058(&Method_UnityEngine_GameObject_GetComponent_ServantCostumeListViewItemDraw___);
+    byte_4C3D067 = 1;
   }
   ListViewObject__Awake((ListViewObject_o *)this, 0);
   dispObject = this->fields.dispObject;
   if ( !dispObject )
-    sub_1C32E7C(0);
+    sub_1C372B4(0);
   Component_object = UnityEngine_GameObject__GetComponent_object_(
                        dispObject,
-                       (const MethodInfo_3134970 *)Method_UnityEngine_GameObject_GetComponent_ServantCostumeListViewItemDraw___);
+                       (const MethodInfo_313F1D8 *)Method_UnityEngine_GameObject_GetComponent_ServantCostumeListViewItemDraw___);
   this->fields.itemDraw = (struct ServantCostumeListViewItemDraw_o *)Component_object;
-  sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.itemDraw, (int32_t)Component_object, v5, v6);
+  sub_1C36FFC(&this->fields.itemDraw, Component_object);
 }
 
 
@@ -42,10 +40,10 @@ ServantCostumeListViewItem_o *ServantCostumeListViewObject__GetItem(
   struct ListViewItem_o *linkItem; // x8
   __int64 naturalAligment; // x11
 
-  if ( (byte_4C3BC5F & 1) == 0 )
+  if ( (byte_4C3D068 & 1) == 0 )
   {
-    sub_1C32C20(&ServantCostumeListViewItem_TypeInfo);
-    byte_4C3BC5F = 1;
+    sub_1C37058(&ServantCostumeListViewItem_TypeInfo);
+    byte_4C3D068 = 1;
   }
   linkItem = this->fields.linkItem;
   if ( !linkItem )
@@ -75,19 +73,15 @@ void ServantCostumeListViewObject__Init(
   bool v14; // w24
   UnityEngine_Transform_o *transform; // x0
   bool v16; // w24
-  CGThumbnailListItem_o *p_callbackFunc; // x21
-  int32_t v18; // w2
-  const MethodInfo *v19; // x3
-  const MethodInfo *v20; // x1
-  int32_t v21; // w2
-  const MethodInfo *v22; // x3
-  int32_t v23; // w9
-  CGThumbnailListItem_c *klass; // x19
+  struct System_Action_o **p_callbackFunc; // x21
+  const MethodInfo *v18; // x1
+  int32_t v19; // w9
+  struct System_Action_o *v20; // x19
 
-  if ( (byte_4C3BC61 & 1) == 0 )
+  if ( (byte_4C3D06A & 1) == 0 )
   {
-    sub_1C32C20(&ServantCostumeListViewItem_TypeInfo);
-    byte_4C3BC61 = 1;
+    sub_1C37058(&ServantCostumeListViewItem_TypeInfo);
+    byte_4C3D06A = 1;
   }
   linkItem = this->fields.linkItem;
   if ( linkItem
@@ -116,29 +110,27 @@ void ServantCostumeListViewObject__Init(
     || (UnityEngine_Transform__set_localPosition(transform, this->fields.basePosition, 0),
         (transform = UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0)) == 0) )
   {
-    sub_1C32E7C(transform);
+    sub_1C372B4(transform);
   }
   v16 = v13 || v14;
   UnityEngine_Transform__set_localScale(transform, this->fields.baseScale, 0);
   this->fields.callbackFunc = callbackFunc;
-  p_callbackFunc = (CGThumbnailListItem_o *)&this->fields.callbackFunc;
-  sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.callbackFunc, (int32_t)callbackFunc, v18, v19);
+  p_callbackFunc = &this->fields.callbackFunc;
+  sub_1C36FFC(&this->fields.callbackFunc, callbackFunc);
   if ( v11 <= 4 )
   {
-    v23 = dword_C44640[v11];
-    this->fields.dispMode = dword_C4462C[v11];
-    this->fields.state = v23;
+    v19 = dword_C46560[v11];
+    this->fields.dispMode = dword_C4654C[v11];
+    this->fields.state = v19;
   }
   if ( v16 || dispMode != this->fields.dispMode )
-    ServantCostumeListViewObject__SetupDisp(this, v20);
-  klass = p_callbackFunc->klass;
-  if ( p_callbackFunc->klass )
+    ServantCostumeListViewObject__SetupDisp(this, v18);
+  v20 = *p_callbackFunc;
+  if ( *p_callbackFunc )
   {
-    p_callbackFunc->klass = 0;
-    sub_1C32BC4(p_callbackFunc, 0, v21, v22);
-    ((void (__fastcall *)(Il2CppClass *, _QWORD))klass->_1.namespaze)(
-      klass->_1.element_class,
-      *(_QWORD *)&klass->_1.byval_arg.bits);
+    *p_callbackFunc = 0;
+    sub_1C36FFC(p_callbackFunc, 0);
+    ((void (__fastcall *)(intptr_t, intptr_t))v20->fields.invoke_impl)(v20->fields.method_code, v20->fields.method);
   }
 }
 
@@ -150,7 +142,7 @@ void ServantCostumeListViewObject__InitItem(ServantCostumeListViewObject_o *this
 
 
 // local variable allocation has failed, the output may be wrong!
-void ServantCostumeListViewObject__Init_48850484(
+void ServantCostumeListViewObject__Init_31478224(
         ServantCostumeListViewObject_o *this,
         int32_t initMode,
         const MethodInfo *method)
@@ -159,17 +151,17 @@ void ServantCostumeListViewObject__Init_48850484(
   float v4; // s0
   int v5; // s1 OVERLAPPED
 
-  if ( !byte_4C313D1 )
+  if ( !byte_4C3C921 )
   {
-    sub_1C32C20(&UnityEngine_Vector3_TypeInfo);
-    byte_4C313D1 = 1;
+    sub_1C37058(&UnityEngine_Vector3_TypeInfo);
+    byte_4C3C921 = 1;
   }
   ServantCostumeListViewObject__Init(this, initMode, 0, v4, *(UnityEngine_Vector3_o *)&v5, v3);
 }
 
 
 // local variable allocation has failed, the output may be wrong!
-void ServantCostumeListViewObject__Init_48851288(
+void ServantCostumeListViewObject__Init_31479028(
         ServantCostumeListViewObject_o *this,
         int32_t initMode,
         System_Action_o *callbackFunc,
@@ -178,17 +170,17 @@ void ServantCostumeListViewObject__Init_48851288(
   float v4; // s0
   int v5; // s1 OVERLAPPED
 
-  if ( !byte_4C313D1 )
+  if ( !byte_4C3C921 )
   {
-    sub_1C32C20(&UnityEngine_Vector3_TypeInfo);
-    byte_4C313D1 = 1;
+    sub_1C37058(&UnityEngine_Vector3_TypeInfo);
+    byte_4C3C921 = 1;
   }
   ServantCostumeListViewObject__Init(this, initMode, callbackFunc, v4, *(UnityEngine_Vector3_o *)&v5, method);
 }
 
 
 // local variable allocation has failed, the output may be wrong!
-void ServantCostumeListViewObject__Init_48856688(
+void ServantCostumeListViewObject__Init_31484428(
         ServantCostumeListViewObject_o *this,
         int32_t initMode,
         System_Action_o *callbackFunc,
@@ -197,10 +189,10 @@ void ServantCostumeListViewObject__Init_48856688(
 {
   int v5; // s1 OVERLAPPED
 
-  if ( !byte_4C313D1 )
+  if ( !byte_4C3C921 )
   {
-    sub_1C32C20(&UnityEngine_Vector3_TypeInfo);
-    byte_4C313D1 = 1;
+    sub_1C37058(&UnityEngine_Vector3_TypeInfo);
+    byte_4C3C921 = 1;
   }
   ServantCostumeListViewObject__Init(this, initMode, callbackFunc, delay, *(UnityEngine_Vector3_o *)&v5, method);
 }
@@ -213,12 +205,12 @@ void ServantCostumeListViewObject__OnClickSelect(ServantCostumeListViewObject_o 
   _QWORD *v5; // x0
   System_Reflection_MethodBase_o *v6; // x0
 
-  if ( (byte_4C3BC64 & 1) == 0 )
+  if ( (byte_4C3D06D & 1) == 0 )
   {
-    sub_1C32C20(&ServantCostumeListViewItem_TypeInfo);
-    sub_1C32C20(&Method_ServantCostumeListViewObject_OnClickSelect__);
-    sub_1C32C20(&StringLiteral_9866/*"OnClickSelectBase"*/);
-    byte_4C3BC64 = 1;
+    sub_1C37058(&ServantCostumeListViewItem_TypeInfo);
+    sub_1C37058(&Method_ServantCostumeListViewObject_OnClickSelect__);
+    sub_1C37058(&StringLiteral_9867/*"OnClickSelectBase"*/);
+    byte_4C3D06D = 1;
   }
   linkItem = (ServantCostumeListViewItem_o *)this->fields.linkItem;
   if ( linkItem )
@@ -231,8 +223,8 @@ void ServantCostumeListViewObject__OnClickSelect(ServantCostumeListViewObject_o 
       {
         v5 = Method_ServantCostumeListViewObject_OnClickSelect__;
         if ( (*((_BYTE *)Method_ServantCostumeListViewObject_OnClickSelect__ + 83) & 2) != 0 )
-          v5 = (_QWORD *)sub_1C32C38(Method_ServantCostumeListViewObject_OnClickSelect__);
-        v6 = (System_Reflection_MethodBase_o *)sub_1C32C04(v5, v5[4]);
+          v5 = (_QWORD *)sub_1C37070(Method_ServantCostumeListViewObject_OnClickSelect__);
+        v6 = (System_Reflection_MethodBase_o *)sub_1C3703C(v5, v5[4]);
         OverwriteAssetSoundName__PlaySystemSe(v6, 2, 0, 0);
         return;
       }
@@ -245,14 +237,14 @@ void ServantCostumeListViewObject__OnClickSelect(ServantCostumeListViewObject_o 
         {
           UnityEngine_Component__SendMessage(
             (UnityEngine_Component_o *)linkItem,
-            (System_String_o *)StringLiteral_9866/*"OnClickSelectBase"*/,
+            (System_String_o *)StringLiteral_9867/*"OnClickSelectBase"*/,
             (Il2CppObject *)this,
             0);
           return;
         }
       }
     }
-    sub_1C32E7C(linkItem);
+    sub_1C372B4(linkItem);
   }
 }
 
@@ -265,12 +257,12 @@ void ServantCostumeListViewObject__OnLongPush(ServantCostumeListViewObject_o *th
   _QWORD *monitor; // x8
 
   v2 = this;
-  if ( (byte_4C3BC65 & 1) == 0 )
+  if ( (byte_4C3D06E & 1) == 0 )
   {
-    sub_1C32C20(&ServantCostumeListViewItem_TypeInfo);
-    sub_1C32C20(&StringLiteral_9927/*"OnLongPushListView"*/);
-    this = (ServantCostumeListViewObject_o *)sub_1C32C20(&StringLiteral_9945/*"OnPressCancel"*/);
-    byte_4C3BC65 = 1;
+    sub_1C37058(&ServantCostumeListViewItem_TypeInfo);
+    sub_1C37058(&StringLiteral_9928/*"OnLongPushListView"*/);
+    this = (ServantCostumeListViewObject_o *)sub_1C37058(&StringLiteral_9946/*"OnPressCancel"*/);
+    byte_4C3D06E = 1;
   }
   linkItem = v2->fields.linkItem;
   if ( linkItem )
@@ -288,23 +280,23 @@ void ServantCostumeListViewObject__OnLongPush(ServantCostumeListViewObject_o *th
       this = (ServantCostumeListViewObject_o *)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)v2, 0);
       if ( this )
       {
-        UnityEngine_GameObject__SendMessage_71205516(
+        UnityEngine_GameObject__SendMessage_71248628(
           (UnityEngine_GameObject_o *)this,
-          (System_String_o *)StringLiteral_9945/*"OnPressCancel"*/,
+          (System_String_o *)StringLiteral_9946/*"OnPressCancel"*/,
           0);
         this = (ServantCostumeListViewObject_o *)v2->fields.manager;
         if ( this )
         {
           UnityEngine_Component__SendMessage(
             (UnityEngine_Component_o *)this,
-            (System_String_o *)StringLiteral_9927/*"OnLongPushListView"*/,
+            (System_String_o *)StringLiteral_9928/*"OnLongPushListView"*/,
             (Il2CppObject *)v2,
             0);
           return;
         }
       }
 LABEL_12:
-      sub_1C32E7C(this);
+      sub_1C372B4(this);
     }
   }
 }
@@ -322,11 +314,11 @@ void ServantCostumeListViewObject__SetInput(
   struct ListViewItem_o *v9; // x1
   ServantCostumeListViewItemDraw_o *v10; // x0
 
-  if ( (byte_4C3BC60 & 1) == 0 )
+  if ( (byte_4C3D069 & 1) == 0 )
   {
-    sub_1C32C20(&UnityEngine_Object_TypeInfo);
-    sub_1C32C20(&ServantCostumeListViewItem_TypeInfo);
-    byte_4C3BC60 = 1;
+    sub_1C37058(&UnityEngine_Object_TypeInfo);
+    sub_1C37058(&ServantCostumeListViewItem_TypeInfo);
+    byte_4C3D069 = 1;
   }
   ListViewObject__SetInput((ListViewObject_o *)this, isInput, 0);
   itemDraw = (UnityEngine_Object_o *)this->fields.itemDraw;
@@ -350,7 +342,7 @@ void ServantCostumeListViewObject__SetInput(
     }
     v10 = this->fields.itemDraw;
     if ( !v10 )
-      sub_1C32E7C(0);
+      sub_1C372B4(0);
     ServantCostumeListViewItemDraw__SetInput(v10, (ServantCostumeListViewItem_o *)v9, v6);
   }
 }
@@ -362,12 +354,12 @@ void ServantCostumeListViewObject__SetItem(
         ListViewItemSeed_o *seed,
         const MethodInfo *method)
 {
-  ListViewObject__SetItem_43729388((ListViewObject_o *)this, item, seed, 0);
+  ListViewObject__SetItem_43831492((ListViewObject_o *)this, item, seed, 0);
   this->fields.state = 0;
 }
 
 
-void ServantCostumeListViewObject__SetItem_48855748(
+void ServantCostumeListViewObject__SetItem_31483488(
         ServantCostumeListViewObject_o *this,
         ListViewItem_o *item,
         const MethodInfo *method)
@@ -386,11 +378,11 @@ void ServantCostumeListViewObject__SetupDisp(ServantCostumeListViewObject_o *thi
   const MethodInfo *v7; // x3
   ServantCostumeListViewItemDraw_o *v8; // x0
 
-  if ( (byte_4C3BC62 & 1) == 0 )
+  if ( (byte_4C3D06B & 1) == 0 )
   {
-    sub_1C32C20(&UnityEngine_Object_TypeInfo);
-    sub_1C32C20(&ServantCostumeListViewItem_TypeInfo);
-    byte_4C3BC62 = 1;
+    sub_1C37058(&UnityEngine_Object_TypeInfo);
+    sub_1C37058(&ServantCostumeListViewItem_TypeInfo);
+    byte_4C3D06B = 1;
   }
   linkItem = this->fields.linkItem;
   if ( !linkItem )
@@ -414,7 +406,7 @@ LABEL_8:
   {
     v8 = this->fields.itemDraw;
     if ( !v8 )
-      sub_1C32E7C(0);
+      sub_1C372B4(0);
     ServantCostumeListViewItemDraw__SetItem(v8, (ServantCostumeListViewItem_o *)linkItem, this->fields.dispMode, v7);
   }
 }
@@ -425,7 +417,7 @@ void ServantCostumeListViewObject__Start(ServantCostumeListViewObject_o *this, c
   const MethodInfo *v2; // x2
 
   if ( !this->fields.state )
-    ServantCostumeListViewObject__Init_48850484(this, 2, v2);
+    ServantCostumeListViewObject__Init_31478224(this, 2, v2);
 }
 
 
@@ -440,11 +432,11 @@ System_String_o *ServantCostumeListViewObject__ToString(ServantCostumeListViewOb
   __int64 v10; // [xsp+20h] [xbp-40h] BYREF
   float v11; // [xsp+28h] [xbp-38h]
 
-  if ( (byte_4C3BC63 & 1) == 0 )
+  if ( (byte_4C3D06C & 1) == 0 )
   {
-    sub_1C32C20(&ServantCostumeListViewItemDraw_DispMode_TypeInfo);
-    sub_1C32C20(&StringLiteral_113/*" "*/);
-    byte_4C3BC63 = 1;
+    sub_1C37058(&ServantCostumeListViewItemDraw_DispMode_TypeInfo);
+    sub_1C37058(&StringLiteral_113/*" "*/);
+    byte_4C3D06C = 1;
   }
   v11 = 0.0;
   v10 = 0;
@@ -456,8 +448,8 @@ System_String_o *ServantCostumeListViewObject__ToString(ServantCostumeListViewOb
   v5 = v3;
   v10 = *(_QWORD *)&this->fields.basePosition.fields.x;
   v11 = z;
-  v6 = (System_String_o *)sub_1DF1AD0(&v10, 0, 0, 0);
-  return System_String__Concat_63556792(v5, (System_String_o *)StringLiteral_113/*" "*/, v6, 0);
+  v6 = (System_String_o *)sub_1DF5F08(&v10, 0, 0, 0);
+  return System_String__Concat_63599904(v5, (System_String_o *)StringLiteral_113/*" "*/, v6, 0);
 }
 
 
@@ -476,10 +468,10 @@ void ServantCostumeListViewObject__add_callbackFunc(
   System_Action_o *v12; // x1
   const MethodInfo *v13; // x2
 
-  if ( (byte_4C3BC5C & 1) == 0 )
+  if ( (byte_4C3D065 & 1) == 0 )
   {
-    sub_1C32C20(&System_Action_TypeInfo);
-    byte_4C3BC5C = 1;
+    sub_1C37058(&System_Action_TypeInfo);
+    byte_4C3D065 = 1;
   }
   callbackFunc = this->fields.callbackFunc;
   p_callbackFunc = &this->fields.callbackFunc;
@@ -492,13 +484,13 @@ void ServantCostumeListViewObject__add_callbackFunc(
       if ( (System_Action_c *)v8->klass != System_Action_TypeInfo )
         break;
     }
-    v9 = sub_1C6CE78(p_callbackFunc, v8, v6);
+    v9 = sub_1C712B0(p_callbackFunc, v8, v6);
     v10 = v6 == (System_Delegate_o *)v9;
     v6 = (System_Delegate_o *)v9;
     if ( v10 )
       return;
   }
-  sub_1C3313C(v8);
+  v11 = (ServantCostumeListViewObject_o *)sub_1C37574(v8);
   ServantCostumeListViewObject__remove_callbackFunc(v11, v12, v13);
 }
 
@@ -517,10 +509,10 @@ void ServantCostumeListViewObject__remove_callbackFunc(
   ServantCostumeListViewObject_o *v11; // x0
   const MethodInfo *v12; // x1
 
-  if ( (byte_4C3BC5D & 1) == 0 )
+  if ( (byte_4C3D066 & 1) == 0 )
   {
-    sub_1C32C20(&System_Action_TypeInfo);
-    byte_4C3BC5D = 1;
+    sub_1C37058(&System_Action_TypeInfo);
+    byte_4C3D066 = 1;
   }
   callbackFunc = this->fields.callbackFunc;
   p_callbackFunc = &this->fields.callbackFunc;
@@ -533,12 +525,12 @@ void ServantCostumeListViewObject__remove_callbackFunc(
       if ( (System_Action_c *)v8->klass != System_Action_TypeInfo )
         break;
     }
-    v9 = sub_1C6CE78(p_callbackFunc, v8, v6);
+    v9 = sub_1C712B0(p_callbackFunc, v8, v6);
     v10 = v6 == (System_Delegate_o *)v9;
     v6 = (System_Delegate_o *)v9;
     if ( v10 )
       return;
   }
-  sub_1C3313C(v8);
+  v11 = (ServantCostumeListViewObject_o *)sub_1C37574(v8);
   ServantCostumeListViewObject__Awake(v11, v12);
 }

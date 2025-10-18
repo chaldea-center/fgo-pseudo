@@ -1,9 +1,9 @@
 void BattleTDConfWIndowComponent___cctor(const MethodInfo *method)
 {
-  if ( (byte_4C3B0F9 & 1) == 0 )
+  if ( (byte_4C4670C & 1) == 0 )
   {
-    sub_1C32C20(&BattleTDConfWIndowComponent_TypeInfo);
-    byte_4C3B0F9 = 1;
+    sub_1C37058(&BattleTDConfWIndowComponent_TypeInfo);
+    byte_4C4670C = 1;
   }
   *BattleTDConfWIndowComponent_TypeInfo->static_fields = (struct BattleTDConfWIndowComponent_StaticFields)0x6900000014LL;
 }
@@ -19,10 +19,10 @@ System_String_o *BattleTDConfWIndowComponent__get_closeBtnPath(
         BattleTDConfWIndowComponent_o *this,
         const MethodInfo *method)
 {
-  if ( (byte_4C3B0F8 & 1) == 0 )
+  if ( (byte_4C4670B & 1) == 0 )
   {
-    sub_1C32C20(&StringLiteral_4509/*"Close"*/);
-    byte_4C3B0F8 = 1;
+    sub_1C37058(&StringLiteral_4509/*"Close"*/);
+    byte_4C4670B = 1;
   }
   return (System_String_o *)StringLiteral_4509/*"Close"*/;
 }
@@ -56,7 +56,7 @@ void BattleTDConfWIndowComponent__setData(
   System_String_o *v29; // x0
   UIWidget_o *confLabel; // x21
   UILabel_o *v31; // x21
-  System_String_o *DetalShort_42887972; // x0
+  System_String_o *DetalShort_42989840; // x0
   System_String_o **p_masterLoadThreads; // x8
   UILabel_o *unknownNpLabel; // x21
   System_String_o *v35; // x1
@@ -65,38 +65,38 @@ void BattleTDConfWIndowComponent__setData(
   int32_t lva; // [xsp+Ch] [xbp-44h] BYREF
 
   lva = lv;
-  if ( (byte_4C3B0F7 & 1) == 0 )
+  if ( (byte_4C4670A & 1) == 0 )
   {
-    sub_1C32C20(&BattleTDConfWIndowComponent_TypeInfo);
-    sub_1C32C20(&Method_DataManager_GetMasterData_TreasureDvcLvMaster___);
-    sub_1C32C20(&Method_DataManager_GetMasterData_TreasureDvcMaster___);
-    sub_1C32C20(&Method_DataMasterBase_TreasureDvcMaster__TreasureDvcEntity__int__GetEntity__);
-    sub_1C32C20(&int_TypeInfo);
-    sub_1C32C20(&LocalizationManager_TypeInfo);
-    sub_1C32C20(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-    sub_1C32C20(&StringLiteral_9364/*"NP_UNKNOWN"*/);
-    sub_1C32C20(&StringLiteral_1/*""*/);
-    sub_1C32C20(&StringLiteral_8604/*"MAX {0}%"*/);
-    byte_4C3B0F7 = 1;
+    sub_1C37058(&BattleTDConfWIndowComponent_TypeInfo);
+    sub_1C37058(&Method_DataManager_GetMasterData_TreasureDvcLvMaster___);
+    sub_1C37058(&Method_DataManager_GetMasterData_TreasureDvcMaster___);
+    sub_1C37058(&Method_DataMasterBase_TreasureDvcMaster__TreasureDvcEntity__int__GetEntity__);
+    sub_1C37058(&int_TypeInfo);
+    sub_1C37058(&LocalizationManager_TypeInfo);
+    sub_1C37058(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    sub_1C37058(&StringLiteral_9365/*"NP_UNKNOWN"*/);
+    sub_1C37058(&StringLiteral_1/*""*/);
+    sub_1C37058(&StringLiteral_8605/*"MAX {0}%"*/);
+    byte_4C4670A = 1;
   }
-  Instance = (DataManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39E2904 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = (DataManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39ED16C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance )
     goto LABEL_48;
   Instance = (DataManager_o *)DataManager__GetMasterData_object_(
                                 Instance,
-                                (const MethodInfo_30DD3F0 *)Method_DataManager_GetMasterData_TreasureDvcMaster___);
+                                (const MethodInfo_30E7C58 *)Method_DataManager_GetMasterData_TreasureDvcMaster___);
   if ( !Instance )
     goto LABEL_48;
   Entity = DataMasterBase_object__object__int___GetEntity(
              (DataMasterBase_TMaster__TEntity__PKType__o *)Instance,
              tdId,
-             (const MethodInfo_3396838 *)Method_DataMasterBase_TreasureDvcMaster__TreasureDvcEntity__int__GetEntity__);
-  Instance = (DataManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39E2904 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+             (const MethodInfo_33A10A0 *)Method_DataMasterBase_TreasureDvcMaster__TreasureDvcEntity__int__GetEntity__);
+  Instance = (DataManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39ED16C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance )
     goto LABEL_48;
   Instance = (DataManager_o *)DataManager__GetMasterData_object_(
                                 Instance,
-                                (const MethodInfo_30DD3F0 *)Method_DataManager_GetMasterData_TreasureDvcLvMaster___);
+                                (const MethodInfo_30E7C58 *)Method_DataManager_GetMasterData_TreasureDvcLvMaster___);
   if ( !Instance )
     goto LABEL_48;
   v15 = TreasureDvcLvMaster__GetEntity((TreasureDvcLvMaster_o *)Instance, tdId, lv, 0);
@@ -134,7 +134,7 @@ void BattleTDConfWIndowComponent__setData(
   maxParLbal = this->fields.maxParLbal;
   v37 = 100 * v17->fields.gaugeCount;
   v28 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v37, v21, v22, v23, v24, v25, v26);
-  v29 = System_String__Format((System_String_o *)StringLiteral_8604/*"MAX {0}%"*/, v28, 0);
+  v29 = System_String__Format((System_String_o *)StringLiteral_8605/*"MAX {0}%"*/, v28, 0);
   WrapControlText__textAdjust(maxParLbal, v29, 22, 0, 0);
   Instance = (DataManager_o *)BattleTDConfWIndowComponent_TypeInfo;
   confLabel = (UIWidget_o *)this->fields.confLabel;
@@ -144,10 +144,10 @@ void BattleTDConfWIndowComponent__setData(
     goto LABEL_48;
   UIWidget__set_height(confLabel, BattleTDConfWIndowComponent_TypeInfo->static_fields->DEFAULT_LABEL_HEIGHT, 0);
   v31 = this->fields.confLabel;
-  DetalShort_42887972 = TreasureDvcLvEntity__getDetalShort_42887972(v17, lva, 0);
+  DetalShort_42989840 = TreasureDvcLvEntity__getDetalShort_42989840(v17, lva, 0);
   WrapControlText__textBBCodeAdjust(
     v31,
-    DetalShort_42887972,
+    DetalShort_42989840,
     BattleTDConfWIndowComponent_TypeInfo->static_fields->DETAIL_FONT_SIZE,
     BattleTDConfWIndowComponent_TypeInfo->static_fields->DETAIL_FONT_SIZE,
     0);
@@ -200,7 +200,7 @@ void BattleTDConfWIndowComponent__setData(
   {
     if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-    Instance = (DataManager_o *)LocalizationManager__Get((System_String_o *)StringLiteral_9364/*"NP_UNKNOWN"*/, 0);
+    Instance = (DataManager_o *)LocalizationManager__Get((System_String_o *)StringLiteral_9365/*"NP_UNKNOWN"*/, 0);
     v35 = (System_String_o *)Instance;
   }
   if ( !unknownNpLabel )
@@ -220,7 +220,7 @@ void BattleTDConfWIndowComponent__setData(
         (Instance = (DataManager_o *)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0)) == 0) )
   {
 LABEL_48:
-    sub_1C32E7C(Instance);
+    sub_1C372B4(Instance);
   }
   UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)Instance, activeSelf, 0);
 }

@@ -19,12 +19,12 @@ void EventCraftListViewManager__CheckIsSerializeFieldNotNull(Il2CppObject *targe
   System_RuntimeTypeHandle_o v12; // x0
 
   v2 = targetObj;
-  if ( (byte_4C31BF8 & 1) == 0 )
+  if ( (byte_4C3D1E2 & 1) == 0 )
   {
-    sub_1C32C20(&UnityEngine_Object_var);
-    sub_1C32C20(&UnityEngine_SerializeField_var);
-    targetObj = (Il2CppObject *)sub_1C32C20(&System_Type_TypeInfo);
-    byte_4C31BF8 = 1;
+    sub_1C37058(&UnityEngine_Object_var);
+    sub_1C37058(&UnityEngine_SerializeField_var);
+    targetObj = (Il2CppObject *)sub_1C37058(&System_Type_TypeInfo);
+    byte_4C3D1E2 = 1;
   }
   if ( !v2 )
     goto LABEL_17;
@@ -45,7 +45,7 @@ void EventCraftListViewManager__CheckIsSerializeFieldNotNull(Il2CppObject *targe
     while ( 1 )
     {
       if ( v5 >= monitor )
-        sub_1C32E84(targetObj);
+        sub_1C372BC(targetObj);
       v6 = (System_Reflection_MemberInfo_o *)*((_QWORD *)&v4[2].klass + (int)v5);
       v7 = UnityEngine_SerializeField_var;
       if ( !System_Type_TypeInfo->_2.cctor_finished )
@@ -77,12 +77,12 @@ void EventCraftListViewManager__CheckIsSerializeFieldNotNull(Il2CppObject *targe
         return;
     }
 LABEL_17:
-    sub_1C32E7C(targetObj);
+    sub_1C372B4(targetObj);
   }
 }
 
 
-void EventCraftListViewManager__CheckIsSerializeFieldNotNull_31563756(
+void EventCraftListViewManager__CheckIsSerializeFieldNotNull_31659388(
         EventCraftListViewManager_o *this,
         const MethodInfo *method)
 {
@@ -97,17 +97,17 @@ System_Collections_IEnumerator_o *EventCraftListViewManager__CoFirstTimeDialogOp
   EventCraftListViewManager__CoFirstTimeDialogOpenAfterLoginBonus_d__45_o *v3; // x20
   __int64 v4; // x0
 
-  if ( (byte_4C31BFA & 1) == 0 )
+  if ( (byte_4C3D1E4 & 1) == 0 )
   {
-    sub_1C32C20(&EventCraftListViewManager__CoFirstTimeDialogOpenAfterLoginBonus_d__45_TypeInfo);
-    byte_4C31BFA = 1;
+    sub_1C37058(&EventCraftListViewManager__CoFirstTimeDialogOpenAfterLoginBonus_d__45_TypeInfo);
+    byte_4C3D1E4 = 1;
   }
-  v3 = (EventCraftListViewManager__CoFirstTimeDialogOpenAfterLoginBonus_d__45_o *)sub_1C32E6C(EventCraftListViewManager__CoFirstTimeDialogOpenAfterLoginBonus_d__45_TypeInfo);
+  v3 = (EventCraftListViewManager__CoFirstTimeDialogOpenAfterLoginBonus_d__45_o *)sub_1C372A4(EventCraftListViewManager__CoFirstTimeDialogOpenAfterLoginBonus_d__45_TypeInfo);
   EventCraftListViewManager__CoFirstTimeDialogOpenAfterLoginBonus_d__45___ctor(v3, 0, 0);
   if ( !v3 )
-    sub_1C32E7C(v4);
+    sub_1C372B4(v4);
   v3->fields.__4__this = this;
-  sub_1C32BC4(&v3->fields.__4__this, this);
+  sub_1C36FFC(&v3->fields.__4__this, this);
   return (System_Collections_IEnumerator_o *)v3;
 }
 
@@ -122,12 +122,12 @@ void EventCraftListViewManager__CraftStartResponse(
   unsigned int svtId; // w20
   const MethodInfo *v8; // x2
 
-  if ( (byte_4C31C07 & 1) == 0 )
+  if ( (byte_4C3D1F1 & 1) == 0 )
   {
-    sub_1C32C20(&StringLiteral_22212/*"ng"*/);
-    byte_4C31C07 = 1;
+    sub_1C37058(&StringLiteral_22215/*"ng"*/);
+    byte_4C3D1F1 = 1;
   }
-  if ( !System_String__op_Equality(result, (System_String_o *)StringLiteral_22212/*"ng"*/, 0) )
+  if ( !System_String__op_Equality(result, (System_String_o *)StringLiteral_22215/*"ng"*/, 0) )
   {
     selectTradeGoodsEntity = this->fields.selectTradeGoodsEntity;
     if ( !selectTradeGoodsEntity
@@ -138,7 +138,7 @@ void EventCraftListViewManager__CraftStartResponse(
                                                                 0),
           !playVoiceAction) )
     {
-      sub_1C32E7C(selectTradeGoodsEntity);
+      sub_1C372B4(selectTradeGoodsEntity);
     }
     ((void (__fastcall *)(intptr_t, _QWORD, EventTradeGoodsEntity_o *, _QWORD, intptr_t))playVoiceAction->fields.invoke_impl)(
       playVoiceAction->fields.method_code,
@@ -172,15 +172,15 @@ void EventCraftListViewManager__CreateList(EventCraftListViewManager_o *this, co
   struct EventTradeGoodsEntity_array *v19; // x8
   UILabel_o *emptyMessageLabel; // x20
 
-  if ( (byte_4C31BFE & 1) == 0 )
+  if ( (byte_4C3D1E8 & 1) == 0 )
   {
-    sub_1C32C20(&System_Action_TypeInfo);
-    sub_1C32C20(&EventCraftListViewItem_TypeInfo);
-    sub_1C32C20(&Method_EventCraftListViewManager_UpdateReceiveAllButtonState__);
-    sub_1C32C20(&Method_System_Collections_Generic_List_ListViewItem__Add__);
-    sub_1C32C20(&LocalizationManager_TypeInfo);
-    sub_1C32C20(&StringLiteral_5707/*"EVENT_REWARD_SHOP_LIST_EMPTY"*/);
-    byte_4C31BFE = 1;
+    sub_1C37058(&System_Action_TypeInfo);
+    sub_1C37058(&EventCraftListViewItem_TypeInfo);
+    sub_1C37058(&Method_EventCraftListViewManager_UpdateReceiveAllButtonState__);
+    sub_1C37058(&Method_System_Collections_Generic_List_ListViewItem__Add__);
+    sub_1C37058(&LocalizationManager_TypeInfo);
+    sub_1C37058(&StringLiteral_5708/*"EVENT_REWARD_SHOP_LIST_EMPTY"*/);
+    byte_4C3D1E8 = 1;
   }
   ListViewManager__CreateList((ListViewManager_o *)this, 0, 0);
   tradeGoodsEntities = this->fields.tradeGoodsEntities;
@@ -193,16 +193,16 @@ void EventCraftListViewManager__CreateList(EventCraftListViewManager_o *this, co
     while ( 1 )
     {
       if ( v6 >= max_length )
-        sub_1C32E84(itemList);
+        sub_1C372BC(itemList);
       v7 = tradeGoodsEntities->m_Items[v6];
       if ( !v7 )
         break;
       id = v7->fields.id;
       supportTool = this->fields.supportTool;
       currentEventId = this->fields.currentEventId;
-      v11 = (System_Action_o *)sub_1C32E6C(System_Action_TypeInfo);
+      v11 = (System_Action_o *)sub_1C372A4(System_Action_TypeInfo);
       System_Action___ctor(v11, (Il2CppObject *)this, Method_EventCraftListViewManager_UpdateReceiveAllButtonState__, 0);
-      v12 = (EventCraftListViewItem_o *)sub_1C32E6C(EventCraftListViewItem_TypeInfo);
+      v12 = (EventCraftListViewItem_o *)sub_1C372A4(EventCraftListViewItem_TypeInfo);
       EventCraftListViewItem___ctor(v12, id, v7, supportTool, currentEventId, v11, v13);
       itemList = (System_Collections_Generic_List_object__o *)this->fields.itemList;
       if ( !itemList )
@@ -218,21 +218,21 @@ void EventCraftListViewManager__CreateList(EventCraftListViewManager_o *this, co
         System_Collections_Generic_List_object___AddWithResize(
           itemList,
           (Il2CppObject *)v12,
-          *(const MethodInfo_37987BC **)(*(_QWORD *)(v15[4] + 192LL) + 112LL));
+          *(const MethodInfo_37A3024 **)(*(_QWORD *)(v15[4] + 192LL) + 112LL));
       }
       else
       {
         v17 = &items->obj.klass + size;
         itemList->fields._size = size + 1;
         v17[4] = (Il2CppClass *)v12;
-        itemList = (System_Collections_Generic_List_object__o *)sub_1C32BC4(v17 + 4, v12);
+        itemList = (System_Collections_Generic_List_object__o *)sub_1C36FFC(v17 + 4, v12);
       }
       max_length = tradeGoodsEntities->max_length;
       if ( (int)++v6 >= max_length )
         goto LABEL_14;
     }
 LABEL_21:
-    sub_1C32E7C(itemList);
+    sub_1C372B4(itemList);
   }
 LABEL_14:
   ListViewManager__SortItem((ListViewManager_o *)this, -1, 0, -1, 0);
@@ -246,7 +246,7 @@ LABEL_14:
     if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
     itemList = (System_Collections_Generic_List_object__o *)LocalizationManager__Get(
-                                                              (System_String_o *)StringLiteral_5707/*"EVENT_REWARD_SHOP_LIST_EMPTY"*/,
+                                                              (System_String_o *)StringLiteral_5708/*"EVENT_REWARD_SHOP_LIST_EMPTY"*/,
                                                               0);
     if ( !emptyMessageLabel )
       goto LABEL_21;
@@ -270,10 +270,10 @@ void EventCraftListViewManager__DestroyList(EventCraftListViewManager_o *this, c
   UnityEngine_Object_o *tradeButtonBlinkEffect; // x20
   UnityEngine_Object_o *v13; // x21
 
-  if ( (byte_4C31C1E & 1) == 0 )
+  if ( (byte_4C3D208 & 1) == 0 )
   {
-    sub_1C32C20(&UnityEngine_Object_TypeInfo);
-    byte_4C31C1E = 1;
+    sub_1C37058(&UnityEngine_Object_TypeInfo);
+    byte_4C3D208 = 1;
   }
   ListViewManager__DestroyList((ListViewManager_o *)this, 0);
   assetManager = this->fields.assetManager;
@@ -290,9 +290,9 @@ void EventCraftListViewManager__DestroyList(EventCraftListViewManager_o *this, c
     gameObject = (UnityEngine_Object_o *)UnityEngine_Component__get_gameObject(currencyInfoController, 0);
     if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-    UnityEngine_Object__Destroy_71223640(gameObject, 0);
+    UnityEngine_Object__Destroy_71266752(gameObject, 0);
     this->fields.craftRewardDialog = 0;
-    sub_1C32BC4(&this->fields.craftRewardDialog, 0);
+    sub_1C36FFC(&this->fields.craftRewardDialog, 0);
   }
   craftNumConfirmDialog = (UnityEngine_Object_o *)this->fields.craftNumConfirmDialog;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -305,9 +305,9 @@ void EventCraftListViewManager__DestroyList(EventCraftListViewManager_o *this, c
     v9 = (UnityEngine_Object_o *)UnityEngine_Component__get_gameObject(currencyInfoController, 0);
     if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-    UnityEngine_Object__Destroy_71223640(v9, 0);
+    UnityEngine_Object__Destroy_71266752(v9, 0);
     this->fields.craftNumConfirmDialog = 0;
-    sub_1C32BC4(&this->fields.craftNumConfirmDialog, 0);
+    sub_1C36FFC(&this->fields.craftNumConfirmDialog, 0);
   }
   craftWithdrawConfirmDialog = (UnityEngine_Object_o *)this->fields.craftWithdrawConfirmDialog;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -320,9 +320,9 @@ void EventCraftListViewManager__DestroyList(EventCraftListViewManager_o *this, c
     v11 = (UnityEngine_Object_o *)UnityEngine_Component__get_gameObject(currencyInfoController, 0);
     if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-    UnityEngine_Object__Destroy_71223640(v11, 0);
+    UnityEngine_Object__Destroy_71266752(v11, 0);
     this->fields.craftWithdrawConfirmDialog = 0;
-    sub_1C32BC4(&this->fields.craftWithdrawConfirmDialog, 0);
+    sub_1C36FFC(&this->fields.craftWithdrawConfirmDialog, 0);
   }
   tradeButtonBlinkEffect = (UnityEngine_Object_o *)this->fields.tradeButtonBlinkEffect;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -332,14 +332,14 @@ void EventCraftListViewManager__DestroyList(EventCraftListViewManager_o *this, c
     v13 = (UnityEngine_Object_o *)this->fields.tradeButtonBlinkEffect;
     if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-    UnityEngine_Object__Destroy_71223640(v13, 0);
+    UnityEngine_Object__Destroy_71266752(v13, 0);
     this->fields.tradeButtonBlinkEffect = 0;
-    sub_1C32BC4(&this->fields.tradeButtonBlinkEffect, 0);
+    sub_1C36FFC(&this->fields.tradeButtonBlinkEffect, 0);
   }
   currencyInfoController = (UnityEngine_Component_o *)this->fields.currencyInfoController;
   if ( !currencyInfoController )
 LABEL_34:
-    sub_1C32E7C(currencyInfoController);
+    sub_1C372B4(currencyInfoController);
   ShopCurrencyInfoController__StopUpdateRemainTime((ShopCurrencyInfoController_o *)currencyInfoController, 0);
 }
 
@@ -356,25 +356,25 @@ int32_t EventCraftListViewManager__GetSupportToolItemId(
   struct ItemEntity_o *v9; // x8
   UserItemEntity_o *entity; // [xsp+8h] [xbp-28h] BYREF
 
-  if ( (byte_4C31C1A & 1) == 0 )
+  if ( (byte_4C3D204 & 1) == 0 )
   {
-    sub_1C32C20(&Method_DataManager_GetMaster_UserItemMaster___);
-    sub_1C32C20(&DataManager_TypeInfo);
-    sub_1C32C20(&NetworkManager_TypeInfo);
-    byte_4C31C1A = 1;
+    sub_1C37058(&Method_DataManager_GetMaster_UserItemMaster___);
+    sub_1C37058(&DataManager_TypeInfo);
+    sub_1C37058(&NetworkManager_TypeInfo);
+    byte_4C3D204 = 1;
   }
   entity = 0;
   if ( !isUseSupportTool )
     return 0;
   if ( !DataManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-  Master_object = DataManager__GetMaster_object_((const MethodInfo_30DD39C *)Method_DataManager_GetMaster_UserItemMaster___);
+  Master_object = DataManager__GetMaster_object_((const MethodInfo_30E7C04 *)Method_DataManager_GetMaster_UserItemMaster___);
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
-  if ( !byte_4C31812 )
+  if ( !byte_4C3CD62 )
   {
-    sub_1C32C20(&NetworkManager_TypeInfo);
-    byte_4C31812 = 1;
+    sub_1C37058(&NetworkManager_TypeInfo);
+    byte_4C3CD62 = 1;
   }
   v6 = NetworkManager_TypeInfo;
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
@@ -388,7 +388,7 @@ int32_t EventCraftListViewManager__GetSupportToolItemId(
     id = supportTool->fields.id;
     if ( !Master_object )
 LABEL_22:
-      sub_1C32E7C(v6);
+      sub_1C372B4(v6);
   }
   else
   {
@@ -448,101 +448,101 @@ void EventCraftListViewManager__Init(
   System_Action_o *v36; // x22
   const MethodInfo *v37; // x3
 
-  if ( (byte_4C31BF9 & 1) == 0 )
+  if ( (byte_4C3D1E3 & 1) == 0 )
   {
-    sub_1C32C20(&System_Action_TypeInfo);
-    sub_1C32C20(&Method_DataManager_GetMaster_EventDetailMaster___);
-    sub_1C32C20(&Method_DataManager_GetMaster_EventMaster___);
-    sub_1C32C20(&Method_DataManager_GetMaster_EventTradeGoodsMaster___);
-    sub_1C32C20(&Method_DataManager_GetMaster_EventTradeStoreMaster___);
-    sub_1C32C20(&Method_DataManager_GetMaster_ItemMaster___);
-    sub_1C32C20(&Method_DataManager_GetMaster_ShopMaster___);
-    sub_1C32C20(&DataManager_TypeInfo);
-    sub_1C32C20(&Method_DataMasterBase_EventDetailMaster__EventDetailEntity__int__GetEntity__);
-    sub_1C32C20(&Method_DataMasterBase_EventMaster__EventEntity__int__TryGetEntity__);
-    sub_1C32C20(&Method_System_Linq_Enumerable_FirstOrDefault_ItemEntity___);
-    sub_1C32C20(&EventCraftAssetManager_TypeInfo);
-    sub_1C32C20(&System_Func_ItemEntity__bool__TypeInfo);
-    sub_1C32C20(&Method_System_Collections_Generic_List_ShopBuyItemListViewObject___ctor__);
-    sub_1C32C20(&System_Collections_Generic_List_ShopBuyItemListViewObject__TypeInfo);
-    sub_1C32C20(&LocalizationManager_TypeInfo);
-    sub_1C32C20(&Method_EventCraftListViewManager___c__DisplayClass44_0__Init_b__0__);
-    sub_1C32C20(&Method_EventCraftListViewManager___c__DisplayClass44_0__Init_b__1__);
-    sub_1C32C20(&EventCraftListViewManager___c__DisplayClass44_0_TypeInfo);
-    sub_1C32C20(&StringLiteral_3903/*"CRAFT_EVENT_PUSH_BTN_LABEL"*/);
-    byte_4C31BF9 = 1;
+    sub_1C37058(&System_Action_TypeInfo);
+    sub_1C37058(&Method_DataManager_GetMaster_EventDetailMaster___);
+    sub_1C37058(&Method_DataManager_GetMaster_EventMaster___);
+    sub_1C37058(&Method_DataManager_GetMaster_EventTradeGoodsMaster___);
+    sub_1C37058(&Method_DataManager_GetMaster_EventTradeStoreMaster___);
+    sub_1C37058(&Method_DataManager_GetMaster_ItemMaster___);
+    sub_1C37058(&Method_DataManager_GetMaster_ShopMaster___);
+    sub_1C37058(&DataManager_TypeInfo);
+    sub_1C37058(&Method_DataMasterBase_EventDetailMaster__EventDetailEntity__int__GetEntity__);
+    sub_1C37058(&Method_DataMasterBase_EventMaster__EventEntity__int__TryGetEntity__);
+    sub_1C37058(&Method_System_Linq_Enumerable_FirstOrDefault_ItemEntity___);
+    sub_1C37058(&EventCraftAssetManager_TypeInfo);
+    sub_1C37058(&System_Func_ItemEntity__bool__TypeInfo);
+    sub_1C37058(&Method_System_Collections_Generic_List_ShopBuyItemListViewObject___ctor__);
+    sub_1C37058(&System_Collections_Generic_List_ShopBuyItemListViewObject__TypeInfo);
+    sub_1C37058(&LocalizationManager_TypeInfo);
+    sub_1C37058(&Method_EventCraftListViewManager___c__DisplayClass44_0__Init_b__0__);
+    sub_1C37058(&Method_EventCraftListViewManager___c__DisplayClass44_0__Init_b__1__);
+    sub_1C37058(&EventCraftListViewManager___c__DisplayClass44_0_TypeInfo);
+    sub_1C37058(&StringLiteral_3903/*"CRAFT_EVENT_PUSH_BTN_LABEL"*/);
+    byte_4C3D1E3 = 1;
   }
-  v13 = sub_1C32E6C(EventCraftListViewManager___c__DisplayClass44_0_TypeInfo);
+  v13 = sub_1C372A4(EventCraftListViewManager___c__DisplayClass44_0_TypeInfo);
   EventCraftListViewManager___c__DisplayClass44_0___ctor((EventCraftListViewManager___c__DisplayClass44_0_o *)v13, 0);
   if ( !v13 )
     goto LABEL_35;
   *(_QWORD *)(v13 + 24) = this;
   *(_DWORD *)(v13 + 16) = eventId;
-  sub_1C32BC4(v13 + 24, this);
+  sub_1C36FFC(v13 + 24, this);
   v15 = *(_DWORD *)(v13 + 16);
   this->fields.svtId = guidSvtId;
   this->fields.currentEventId = v15;
   this->fields.craftCallback = callback;
-  sub_1C32BC4(&this->fields.craftCallback, callback);
+  sub_1C36FFC(&this->fields.craftCallback, callback);
   this->fields.playVoiceAction = playVoice;
-  sub_1C32BC4(&this->fields.playVoiceAction, playVoice);
+  sub_1C36FFC(&this->fields.playVoiceAction, playVoice);
   this->fields.maskPanel = mask;
-  sub_1C32BC4(&this->fields.maskPanel, mask);
+  sub_1C36FFC(&this->fields.maskPanel, mask);
   this->fields.selectTradeGoodsEntity = 0;
-  sub_1C32BC4(&this->fields.selectTradeGoodsEntity, 0);
+  sub_1C36FFC(&this->fields.selectTradeGoodsEntity, 0);
   if ( this->fields.supportTool )
     goto LABEL_12;
   if ( !DataManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-  Master_object = (ItemMaster_o *)DataManager__GetMaster_object_((const MethodInfo_30DD39C *)Method_DataManager_GetMaster_ItemMaster___);
+  Master_object = (ItemMaster_o *)DataManager__GetMaster_object_((const MethodInfo_30E7C04 *)Method_DataManager_GetMaster_ItemMaster___);
   if ( !Master_object )
 LABEL_35:
-    sub_1C32E7C(Master_object);
+    sub_1C372B4(Master_object);
   EntityList = ItemMaster__GetEntityList(Master_object, 39, 0);
   if ( EntityList )
   {
     v17 = (System_Collections_Generic_IEnumerable_TSource__o *)EntityList;
-    v18 = (System_Func_object__bool__o *)sub_1C32E6C(System_Func_ItemEntity__bool__TypeInfo);
+    v18 = (System_Func_object__bool__o *)sub_1C372A4(System_Func_ItemEntity__bool__TypeInfo);
     System_Func_object__bool____ctor(
       v18,
       (Il2CppObject *)v13,
       Method_EventCraftListViewManager___c__DisplayClass44_0__Init_b__0__,
       0);
-    v19 = System_Linq_Enumerable__FirstOrDefault_object__51408536(
+    v19 = System_Linq_Enumerable__FirstOrDefault_object__51451648(
             v17,
             (System_Func_TSource__bool__o *)v18,
-            (const MethodInfo_3106E98 *)Method_System_Linq_Enumerable_FirstOrDefault_ItemEntity___);
+            (const MethodInfo_3111700 *)Method_System_Linq_Enumerable_FirstOrDefault_ItemEntity___);
   }
   else
   {
     v19 = 0;
   }
   this->fields.supportTool = (struct ItemEntity_o *)v19;
-  sub_1C32BC4(&this->fields.supportTool, v19);
+  sub_1C36FFC(&this->fields.supportTool, v19);
 LABEL_12:
   if ( !DataManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-  Master_object = (ItemMaster_o *)DataManager__GetMaster_object_((const MethodInfo_30DD39C *)Method_DataManager_GetMaster_ShopMaster___);
+  Master_object = (ItemMaster_o *)DataManager__GetMaster_object_((const MethodInfo_30E7C04 *)Method_DataManager_GetMaster_ShopMaster___);
   if ( !Master_object )
     goto LABEL_35;
   EventItemList = ShopMaster__GetEventItemList((ShopMaster_o *)Master_object, *(_DWORD *)(v13 + 16), 0);
-  Master_object = (ItemMaster_o *)DataManager__GetMaster_object_((const MethodInfo_30DD39C *)Method_DataManager_GetMaster_EventDetailMaster___);
+  Master_object = (ItemMaster_o *)DataManager__GetMaster_object_((const MethodInfo_30E7C04 *)Method_DataManager_GetMaster_EventDetailMaster___);
   if ( !Master_object )
     goto LABEL_35;
   Entity = DataMasterBase_object__object__int___GetEntity(
              (DataMasterBase_TMaster__TEntity__PKType__o *)Master_object,
              *(_DWORD *)(v13 + 16),
-             (const MethodInfo_3396838 *)Method_DataMasterBase_EventDetailMaster__EventDetailEntity__int__GetEntity__);
+             (const MethodInfo_33A10A0 *)Method_DataMasterBase_EventDetailMaster__EventDetailEntity__int__GetEntity__);
   currencyInfoController = this->fields.currencyInfoController;
   v23 = (EventDetailEntity_o *)Entity;
-  v24 = (System_Collections_Generic_List_object__o *)sub_1C32E6C(System_Collections_Generic_List_ShopBuyItemListViewObject__TypeInfo);
+  v24 = (System_Collections_Generic_List_object__o *)sub_1C372A4(System_Collections_Generic_List_ShopBuyItemListViewObject__TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v24,
-    (const MethodInfo_3797F88 *)Method_System_Collections_Generic_List_ShopBuyItemListViewObject___ctor__);
+    (const MethodInfo_37A27F0 *)Method_System_Collections_Generic_List_ShopBuyItemListViewObject___ctor__);
   if ( !currencyInfoController )
     goto LABEL_35;
   currencyInfoController->fields.objectList = (struct System_Collections_Generic_List_ShopBuyItemListViewObject__o *)v24;
-  Master_object = (ItemMaster_o *)sub_1C32BC4(&currencyInfoController->fields.objectList, v24);
+  Master_object = (ItemMaster_o *)sub_1C36FFC(&currencyInfoController->fields.objectList, v24);
   if ( !v23 )
     goto LABEL_35;
   v25 = this->fields.currencyInfoController;
@@ -558,7 +558,7 @@ LABEL_12:
   if ( !Master_object )
     goto LABEL_35;
   UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)Master_object, 1, 0);
-  Master_object = (ItemMaster_o *)DataManager__GetMaster_object_((const MethodInfo_30DD39C *)Method_DataManager_GetMaster_EventTradeGoodsMaster___);
+  Master_object = (ItemMaster_o *)DataManager__GetMaster_object_((const MethodInfo_30E7C04 *)Method_DataManager_GetMaster_EventTradeGoodsMaster___);
   if ( !Master_object )
     goto LABEL_35;
   TradeGoodsEntityArray = EventTradeGoodsMaster__GetTradeGoodsEntityArray(
@@ -566,8 +566,8 @@ LABEL_12:
                             this->fields.currentEventId,
                             0);
   this->fields.tradeGoodsEntities = TradeGoodsEntityArray;
-  sub_1C32BC4(&this->fields.tradeGoodsEntities, TradeGoodsEntityArray);
-  Master_object = (ItemMaster_o *)DataManager__GetMaster_object_((const MethodInfo_30DD39C *)Method_DataManager_GetMaster_EventTradeStoreMaster___);
+  sub_1C36FFC(&this->fields.tradeGoodsEntities, TradeGoodsEntityArray);
+  Master_object = (ItemMaster_o *)DataManager__GetMaster_object_((const MethodInfo_30E7C04 *)Method_DataManager_GetMaster_EventTradeStoreMaster___);
   if ( !Master_object )
     goto LABEL_35;
   OpenTradeStoreEntityArray = EventTradeStoreMaster__GetOpenTradeStoreEntityArray(
@@ -575,7 +575,7 @@ LABEL_12:
                                 this->fields.currentEventId,
                                 0);
   this->fields.tradeStoreEntities = OpenTradeStoreEntityArray;
-  sub_1C32BC4(&this->fields.tradeStoreEntities, OpenTradeStoreEntityArray);
+  sub_1C36FFC(&this->fields.tradeStoreEntities, OpenTradeStoreEntityArray);
   Master_object = (ItemMaster_o *)this->fields.touchPanel;
   if ( !Master_object )
     goto LABEL_35;
@@ -585,10 +585,10 @@ LABEL_12:
   UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)Master_object, 0, 0);
   if ( !this->fields.assetManager )
   {
-    v29 = (EventCraftAssetManager_o *)sub_1C32E6C(EventCraftAssetManager_TypeInfo);
+    v29 = (EventCraftAssetManager_o *)sub_1C372A4(EventCraftAssetManager_TypeInfo);
     EventCraftAssetManager___ctor(v29, v30);
     this->fields.assetManager = v29;
-    sub_1C32BC4(&this->fields.assetManager, v29);
+    sub_1C36FFC(&this->fields.assetManager, v29);
   }
   this->fields.isButtonOn = EventRewardSaveData__GetCraftNotification(0);
   EventCraftListViewManager__UpdateNoticeButtonDisplay(this, v31);
@@ -602,17 +602,17 @@ LABEL_12:
   EventCraftListViewManager__UpdateCraftAbleCountLb(this, v33);
   if ( !DataManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-  Master_object = (ItemMaster_o *)DataManager__GetMaster_object_((const MethodInfo_30DD39C *)Method_DataManager_GetMaster_EventMaster___);
+  Master_object = (ItemMaster_o *)DataManager__GetMaster_object_((const MethodInfo_30E7C04 *)Method_DataManager_GetMaster_EventMaster___);
   if ( !Master_object )
     goto LABEL_35;
   *(_BYTE *)(v13 + 32) = DataMasterBase_object__object__int___TryGetEntity(
                            (DataMasterBase_TMaster__TEntity__PKType__o *)Master_object,
                            (Il2CppObject **)(v13 + 40),
                            this->fields.currentEventId,
-                           (const MethodInfo_3396884 *)Method_DataMasterBase_EventMaster__EventEntity__int__TryGetEntity__);
+                           (const MethodInfo_33A10EC *)Method_DataMasterBase_EventMaster__EventEntity__int__TryGetEntity__);
   v34 = *(_DWORD *)(v13 + 16);
   assetManager = this->fields.assetManager;
-  v36 = (System_Action_o *)sub_1C32E6C(System_Action_TypeInfo);
+  v36 = (System_Action_o *)sub_1C372A4(System_Action_TypeInfo);
   System_Action___ctor(v36, (Il2CppObject *)v13, Method_EventCraftListViewManager___c__DisplayClass44_0__Init_b__1__, 0);
   if ( !assetManager )
     goto LABEL_35;
@@ -642,10 +642,10 @@ void EventCraftListViewManager__LocateDialogToCraftPanel(
   UnityEngine_Transform__SetParent(transform, (UnityEngine_Transform_o *)this, 0);
   this = (EventCraftListViewManager_o *)UnityEngine_Component__get_transform(dialog, 0);
   v6 = this;
-  if ( !byte_4C313D6 )
+  if ( !byte_4C3C926 )
   {
-    this = (EventCraftListViewManager_o *)sub_1C32C20(&UnityEngine_Vector3_TypeInfo);
-    byte_4C313D6 = 1;
+    this = (EventCraftListViewManager_o *)sub_1C37058(&UnityEngine_Vector3_TypeInfo);
+    byte_4C3C926 = 1;
   }
   if ( !v6
     || (UnityEngine_Transform__set_localScale(
@@ -655,7 +655,7 @@ void EventCraftListViewManager__LocateDialogToCraftPanel(
         (this = (EventCraftListViewManager_o *)UnityEngine_Component__get_gameObject(dialog, 0)) == 0) )
   {
 LABEL_9:
-    sub_1C32E7C(this);
+    sub_1C372B4(this);
   }
   UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)this, 0, 0);
 }
@@ -687,18 +687,18 @@ void EventCraftListViewManager__OnClickCraftStartButton(
   System_Action_o *v23; // x23
   int32_t storeIdx; // [xsp+3Ch] [xbp-44h] BYREF
 
-  if ( (byte_4C31C05 & 1) == 0 )
+  if ( (byte_4C3D1EF & 1) == 0 )
   {
-    sub_1C32C20(&System_Action_int____int__bool__TypeInfo);
-    sub_1C32C20(&System_Action_TypeInfo);
-    sub_1C32C20(&Method_EventCraftListViewManager_OnClickCraftStartButton__);
-    sub_1C32C20(&Method_EventCraftListViewManager_OnClickCraftStartDecide__);
-    sub_1C32C20(&Method_EventCraftListViewManager__OnClickCraftStartButton_b__57_0__);
-    sub_1C32C20(&LocalizationManager_TypeInfo);
-    sub_1C32C20(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
-    sub_1C32C20(&StringLiteral_3901/*"CRAFT_EVENT_IMPOSSIBLE_NOTIFICATION_DIALOG_TITLE"*/);
-    sub_1C32C20(&StringLiteral_3900/*"CRAFT_EVENT_IMPOSSIBLE_NOTIFICATION_DIALOG_MESSAGE"*/);
-    byte_4C31C05 = 1;
+    sub_1C37058(&System_Action_int____int__bool__TypeInfo);
+    sub_1C37058(&System_Action_TypeInfo);
+    sub_1C37058(&Method_EventCraftListViewManager_OnClickCraftStartButton__);
+    sub_1C37058(&Method_EventCraftListViewManager_OnClickCraftStartDecide__);
+    sub_1C37058(&Method_EventCraftListViewManager__OnClickCraftStartButton_b__57_0__);
+    sub_1C37058(&LocalizationManager_TypeInfo);
+    sub_1C37058(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+    sub_1C37058(&StringLiteral_3901/*"CRAFT_EVENT_IMPOSSIBLE_NOTIFICATION_DIALOG_TITLE"*/);
+    sub_1C37058(&StringLiteral_3900/*"CRAFT_EVENT_IMPOSSIBLE_NOTIFICATION_DIALOG_MESSAGE"*/);
+    byte_4C3D1EF = 1;
   }
   storeIdx = 0;
   maskPanel = this->fields.maskPanel;
@@ -716,8 +716,8 @@ void EventCraftListViewManager__OnClickCraftStartButton(
       IsBuyAble = EventCraftListViewItem__get_IsBuyAble((EventCraftListViewItem_o *)maskPanel, v7);
       v9 = Method_EventCraftListViewManager_OnClickCraftStartButton__;
       if ( (*((_BYTE *)Method_EventCraftListViewManager_OnClickCraftStartButton__ + 83) & 2) != 0 )
-        v9 = (_QWORD *)sub_1C32C38(Method_EventCraftListViewManager_OnClickCraftStartButton__);
-      v10 = (System_Reflection_MethodBase_o *)sub_1C32C04(v9, v9[4]);
+        v9 = (_QWORD *)sub_1C37070(Method_EventCraftListViewManager_OnClickCraftStartButton__);
+      v10 = (System_Reflection_MethodBase_o *)sub_1C3703C(v9, v9[4]);
       if ( !IsBuyAble )
       {
         OverwriteAssetSoundName__PlaySystemSe(v10, 2, 0, 0);
@@ -736,7 +736,7 @@ void EventCraftListViewManager__OnClickCraftStartButton(
           v15 = storeIdx;
           supportTool = this->fields.supportTool;
           v17 = Item;
-          v18 = (System_Action_T1__T2__T3__o *)sub_1C32E6C(System_Action_int____int__bool__TypeInfo);
+          v18 = (System_Action_T1__T2__T3__o *)sub_1C372A4(System_Action_int____int__bool__TypeInfo);
           System_Action_object__int__bool____ctor(
             v18,
             (Il2CppObject *)this,
@@ -757,7 +757,7 @@ void EventCraftListViewManager__OnClickCraftStartButton(
             {
               monitor = (struct EventTradeGoodsEntity_o *)maskPanel[5].monitor;
               this->fields.selectTradeGoodsEntity = monitor;
-              sub_1C32BC4(&this->fields.selectTradeGoodsEntity, monitor);
+              sub_1C36FFC(&this->fields.selectTradeGoodsEntity, monitor);
               goto LABEL_7;
             }
           }
@@ -765,12 +765,12 @@ void EventCraftListViewManager__OnClickCraftStartButton(
       }
       else
       {
-        Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39E2904 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+        Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39ED16C *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
         if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
           j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
         v21 = LocalizationManager__Get((System_String_o *)StringLiteral_3901/*"CRAFT_EVENT_IMPOSSIBLE_NOTIFICATION_DIALOG_TITLE"*/, 0);
         v22 = LocalizationManager__Get((System_String_o *)StringLiteral_3900/*"CRAFT_EVENT_IMPOSSIBLE_NOTIFICATION_DIALOG_MESSAGE"*/, 0);
-        v23 = (System_Action_o *)sub_1C32E6C(System_Action_TypeInfo);
+        v23 = (System_Action_o *)sub_1C372A4(System_Action_TypeInfo);
         System_Action___ctor(
           v23,
           (Il2CppObject *)this,
@@ -778,7 +778,7 @@ void EventCraftListViewManager__OnClickCraftStartButton(
           0);
         if ( Instance )
         {
-          CommonUI__OpenNotificationDialog_31191784(
+          CommonUI__OpenNotificationDialog_31209248(
             (CommonUI_o *)Instance,
             v21,
             v22,
@@ -801,7 +801,7 @@ void EventCraftListViewManager__OnClickCraftStartButton(
       }
     }
 LABEL_24:
-    sub_1C32E7C(maskPanel);
+    sub_1C372B4(maskPanel);
   }
 LABEL_7:
   maskPanel = this->fields.maskPanel;
@@ -826,13 +826,13 @@ void EventCraftListViewManager__OnClickCraftStartDecide(
   int32_t v14; // w25
   TradeStartRequest_o *v15; // x23
 
-  if ( (byte_4C31C06 & 1) == 0 )
+  if ( (byte_4C3D1F0 & 1) == 0 )
   {
-    sub_1C32C20(&Method_EventCraftListViewManager_CraftStartResponse__);
-    sub_1C32C20(&Method_NetworkManager_getRequest_TradeStartRequest___);
-    sub_1C32C20(&NetworkManager_TypeInfo);
-    sub_1C32C20(&NetworkManager_ResultCallbackFunc_TypeInfo);
-    byte_4C31C06 = 1;
+    sub_1C37058(&Method_EventCraftListViewManager_CraftStartResponse__);
+    sub_1C37058(&Method_NetworkManager_getRequest_TradeStartRequest___);
+    sub_1C37058(&NetworkManager_TypeInfo);
+    sub_1C37058(&NetworkManager_ResultCallbackFunc_TypeInfo);
+    byte_4C3D1F0 = 1;
   }
   craftNumConfirmDialog = this->fields.craftNumConfirmDialog;
   if ( !craftNumConfirmDialog )
@@ -844,7 +844,7 @@ void EventCraftListViewManager__OnClickCraftStartDecide(
   if ( createNum > 0 )
   {
     UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)craftNumConfirmDialog, 1, 0);
-    v10 = (NetworkManager_ResultCallbackFunc_o *)sub_1C32E6C(NetworkManager_ResultCallbackFunc_TypeInfo);
+    v10 = (NetworkManager_ResultCallbackFunc_o *)sub_1C372A4(NetworkManager_ResultCallbackFunc_TypeInfo);
     NetworkManager_ResultCallbackFunc___ctor(
       v10,
       (Il2CppObject *)this,
@@ -854,11 +854,11 @@ void EventCraftListViewManager__OnClickCraftStartDecide(
       j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
     craftNumConfirmDialog = (EventCraftNumConfirmDialogComponent_o *)NetworkManager__getRequest_object_(
                                                                        v10,
-                                                                       (const MethodInfo_3168488 *)Method_NetworkManager_getRequest_TradeStartRequest___);
+                                                                       (const MethodInfo_3172CF0 *)Method_NetworkManager_getRequest_TradeStartRequest___);
     if ( tradeInfo )
     {
       if ( LODWORD(tradeInfo->max_length) < 2 )
-        sub_1C32E84(craftNumConfirmDialog);
+        sub_1C372BC(craftNumConfirmDialog);
       currentEventId = this->fields.currentEventId;
       v14 = tradeInfo->m_Items[0];
       v13 = tradeInfo->m_Items[1];
@@ -874,7 +874,7 @@ void EventCraftListViewManager__OnClickCraftStartDecide(
       }
     }
 LABEL_13:
-    sub_1C32E7C(craftNumConfirmDialog);
+    sub_1C372B4(craftNumConfirmDialog);
   }
   UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)craftNumConfirmDialog, 0, 0);
 }
@@ -890,21 +890,21 @@ void EventCraftListViewManager__OnClickListView(
   _QWORD *v6; // x0
   System_Reflection_MethodBase_o *v7; // x0
 
-  if ( (byte_4C31C03 & 1) == 0 )
+  if ( (byte_4C3D1ED & 1) == 0 )
   {
-    this = (EventCraftListViewManager_o *)sub_1C32C20(&Method_EventCraftListViewManager_OnClickListView__);
-    byte_4C31C03 = 1;
+    this = (EventCraftListViewManager_o *)sub_1C37058(&Method_EventCraftListViewManager_OnClickListView__);
+    byte_4C3D1ED = 1;
   }
   if ( !obj || (this = (EventCraftListViewManager_o *)EventCraftListViewObject__GetItem(obj, 0)) == 0 )
-    sub_1C32E7C(this);
+    sub_1C372B4(this);
   v5 = this;
   if ( !this->fields.sortOrderButton && EventCraftListViewItem__get_IsEventEnd((EventCraftListViewItem_o *)this, v4)
     || !LOBYTE(v5->fields.SortObject) )
   {
     v6 = Method_EventCraftListViewManager_OnClickListView__;
     if ( (*((_BYTE *)Method_EventCraftListViewManager_OnClickListView__ + 83) & 2) != 0 )
-      v6 = (_QWORD *)sub_1C32C38(Method_EventCraftListViewManager_OnClickListView__);
-    v7 = (System_Reflection_MethodBase_o *)sub_1C32C04(v6, v6[4]);
+      v6 = (_QWORD *)sub_1C37070(Method_EventCraftListViewManager_OnClickListView__);
+    v7 = (System_Reflection_MethodBase_o *)sub_1C3703C(v6, v6[4]);
     OverwriteAssetSoundName__PlaySystemSe(v7, 2, 0, 0);
   }
 }
@@ -917,17 +917,17 @@ void EventCraftListViewManager__OnClickNoticeButton(EventCraftListViewManager_o 
   System_Reflection_MethodBase_o *v5; // x0
   const MethodInfo *v6; // x1
 
-  if ( (byte_4C31C1B & 1) == 0 )
+  if ( (byte_4C3D205 & 1) == 0 )
   {
-    sub_1C32C20(&Method_EventCraftListViewManager_OnClickNoticeButton__);
-    byte_4C31C1B = 1;
+    sub_1C37058(&Method_EventCraftListViewManager_OnClickNoticeButton__);
+    byte_4C3D205 = 1;
   }
   isButtonOn = this->fields.isButtonOn;
   this->fields.isButtonOn = isButtonOn ^ 1;
   v4 = Method_EventCraftListViewManager_OnClickNoticeButton__;
   if ( (*((_BYTE *)Method_EventCraftListViewManager_OnClickNoticeButton__ + 83) & 2) != 0 )
-    v4 = (_QWORD *)sub_1C32C38(Method_EventCraftListViewManager_OnClickNoticeButton__);
-  v5 = (System_Reflection_MethodBase_o *)sub_1C32C04(v4, v4[4]);
+    v4 = (_QWORD *)sub_1C37070(Method_EventCraftListViewManager_OnClickNoticeButton__);
+  v5 = (System_Reflection_MethodBase_o *)sub_1C3703C(v4, v4[4]);
   OverwriteAssetSoundName__PlaySystemSe(v5, isButtonOn, 0, 0);
   EventRewardSaveData__SetCraftNotification(this->fields.isButtonOn, 0);
   EventCraftListViewManager__UpdateNoticeButtonDisplay(this, v6);
@@ -945,22 +945,22 @@ void EventCraftListViewManager__OnClickReceiveAll(EventCraftListViewManager_o *t
   __int64 v9; // x8
   __int64 v10; // x0
 
-  if ( (byte_4C31C0B & 1) == 0 )
+  if ( (byte_4C3D1F5 & 1) == 0 )
   {
-    sub_1C32C20(&Method_System_Array_Empty_int___);
-    sub_1C32C20(&Method_EventCraftListViewManager_TradeReceiveResponse__);
-    sub_1C32C20(&Method_NetworkManager_getRequest_TradeReceiveRequest___);
-    sub_1C32C20(&NetworkManager_TypeInfo);
-    sub_1C32C20(&NetworkManager_ResultCallbackFunc_TypeInfo);
-    byte_4C31C0B = 1;
+    sub_1C37058(&Method_System_Array_Empty_int___);
+    sub_1C37058(&Method_EventCraftListViewManager_TradeReceiveResponse__);
+    sub_1C37058(&Method_NetworkManager_getRequest_TradeReceiveRequest___);
+    sub_1C37058(&NetworkManager_TypeInfo);
+    sub_1C37058(&NetworkManager_ResultCallbackFunc_TypeInfo);
+    byte_4C3D1F5 = 1;
   }
   maskPanel = this->fields.maskPanel;
   if ( !maskPanel )
     goto LABEL_16;
   UnityEngine_GameObject__SetActive(maskPanel, 1, 0);
   this->fields.selectTradeGoodsEntity = 0;
-  sub_1C32BC4(&this->fields.selectTradeGoodsEntity, 0);
-  v4 = (NetworkManager_ResultCallbackFunc_o *)sub_1C32E6C(NetworkManager_ResultCallbackFunc_TypeInfo);
+  sub_1C36FFC(&this->fields.selectTradeGoodsEntity, 0);
+  v4 = (NetworkManager_ResultCallbackFunc_o *)sub_1C372A4(NetworkManager_ResultCallbackFunc_TypeInfo);
   NetworkManager_ResultCallbackFunc___ctor(
     v4,
     (Il2CppObject *)this,
@@ -970,27 +970,27 @@ void EventCraftListViewManager__OnClickReceiveAll(EventCraftListViewManager_o *t
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
   Request_object = NetworkManager__getRequest_object_(
                      v4,
-                     (const MethodInfo_3168488 *)Method_NetworkManager_getRequest_TradeReceiveRequest___);
+                     (const MethodInfo_3172CF0 *)Method_NetworkManager_getRequest_TradeReceiveRequest___);
   v6 = Method_System_Array_Empty_int___;
   currentEventId = this->fields.currentEventId;
   v8 = (TradeReceiveRequest_o *)Request_object;
   v9 = *((_QWORD *)Method_System_Array_Empty_int___ + 7);
   if ( !v9 )
   {
-    sub_1C83390(Method_System_Array_Empty_int___);
+    sub_1C877C8(Method_System_Array_Empty_int___);
     v9 = v6[7];
   }
   v10 = *(_QWORD *)(v9 + 16);
   if ( (*(_BYTE *)(v10 + 309) & 1) == 0 )
-    v10 = sub_1C83334();
+    v10 = sub_1C8776C();
   if ( !*(_DWORD *)(v10 + 224) )
     j_il2cpp_runtime_class_init_0(v10);
   maskPanel = *(struct UnityEngine_GameObject_o **)(v6[7] + 16LL);
   if ( (maskPanel[12].fields.m_CachedPtr & 0x10000000000LL) == 0 )
-    maskPanel = (struct UnityEngine_GameObject_o *)sub_1C83334();
+    maskPanel = (struct UnityEngine_GameObject_o *)sub_1C8776C();
   if ( !v8 )
 LABEL_16:
-    sub_1C32E7C(maskPanel);
+    sub_1C372B4(maskPanel);
   TradeReceiveRequest__beginRequest(
     v8,
     currentEventId,
@@ -1011,19 +1011,19 @@ void EventCraftListViewManager__OnClickReceiveAllButton(EventCraftListViewManage
   const MethodInfo *v7; // x1
 
   v2 = this;
-  if ( (byte_4C31C0A & 1) == 0 )
+  if ( (byte_4C3D1F4 & 1) == 0 )
   {
-    this = (EventCraftListViewManager_o *)sub_1C32C20(&Method_EventCraftListViewManager_OnClickReceiveAllButton__);
-    byte_4C31C0A = 1;
+    this = (EventCraftListViewManager_o *)sub_1C37058(&Method_EventCraftListViewManager_OnClickReceiveAllButton__);
+    byte_4C3D1F4 = 1;
   }
   receiveAllButton = v2->fields.receiveAllButton;
   if ( !receiveAllButton )
-    sub_1C32E7C(this);
+    sub_1C372B4(this);
   mState = receiveAllButton->fields.mState;
   v5 = Method_EventCraftListViewManager_OnClickReceiveAllButton__;
   if ( (*((_BYTE *)Method_EventCraftListViewManager_OnClickReceiveAllButton__ + 83) & 2) != 0 )
-    v5 = (_QWORD *)sub_1C32C38(Method_EventCraftListViewManager_OnClickReceiveAllButton__);
-  v6 = (System_Reflection_MethodBase_o *)sub_1C32C04(v5, v5[4]);
+    v5 = (_QWORD *)sub_1C37070(Method_EventCraftListViewManager_OnClickReceiveAllButton__);
+  v6 = (System_Reflection_MethodBase_o *)sub_1C3703C(v5, v5[4]);
   if ( mState == 3 )
   {
     OverwriteAssetSoundName__PlaySystemSe(v6, 2, 0, 0);
@@ -1052,12 +1052,12 @@ void EventCraftListViewManager__OnClickReceiveButton(
   UnityEngine_GameObject_c *klass; // x8
   struct EventTradeGoodsEntity_o *monitor; // x1
 
-  if ( (byte_4C31C08 & 1) == 0 )
+  if ( (byte_4C3D1F2 & 1) == 0 )
   {
-    sub_1C32C20(&Method_EventCraftListViewManager_OnClickReceiveButton__);
-    sub_1C32C20(&EventCraftTimeCalculation_TypeInfo);
-    sub_1C32C20(&NetworkManager_TypeInfo);
-    byte_4C31C08 = 1;
+    sub_1C37058(&Method_EventCraftListViewManager_OnClickReceiveButton__);
+    sub_1C37058(&EventCraftTimeCalculation_TypeInfo);
+    sub_1C37058(&NetworkManager_TypeInfo);
+    byte_4C3D1F2 = 1;
   }
   maskPanel = this->fields.maskPanel;
   if ( !maskPanel )
@@ -1070,8 +1070,8 @@ void EventCraftListViewManager__OnClickReceiveButton(
   {
     v7 = Method_EventCraftListViewManager_OnClickReceiveButton__;
     if ( (*((_BYTE *)Method_EventCraftListViewManager_OnClickReceiveButton__ + 83) & 2) != 0 )
-      v7 = (_QWORD *)sub_1C32C38(Method_EventCraftListViewManager_OnClickReceiveButton__);
-    v8 = (System_Reflection_MethodBase_o *)sub_1C32C04(v7, v7[4]);
+      v7 = (_QWORD *)sub_1C37070(Method_EventCraftListViewManager_OnClickReceiveButton__);
+    v8 = (System_Reflection_MethodBase_o *)sub_1C3703C(v7, v7[4]);
     OverwriteAssetSoundName__PlaySystemSe(v8, 8, 0, 0);
     Item = EventCraftListViewObject__GetItem(obj, 0);
     if ( !NetworkManager_TypeInfo->_2.cctor_finished )
@@ -1092,13 +1092,13 @@ void EventCraftListViewManager__OnClickReceiveButton(
         {
           monitor = (struct EventTradeGoodsEntity_o *)maskPanel[5].monitor;
           this->fields.selectTradeGoodsEntity = monitor;
-          sub_1C32BC4(&this->fields.selectTradeGoodsEntity, monitor);
+          sub_1C36FFC(&this->fields.selectTradeGoodsEntity, monitor);
           goto LABEL_17;
         }
       }
     }
 LABEL_19:
-    sub_1C32E7C(maskPanel);
+    sub_1C372B4(maskPanel);
   }
 LABEL_17:
   maskPanel = this->fields.maskPanel;
@@ -1120,14 +1120,14 @@ void EventCraftListViewManager__OnClickReceiveDecide(
   int32_t currentEventId; // w21
   TradeReceiveRequest_o *v11; // x22
 
-  if ( (byte_4C31C09 & 1) == 0 )
+  if ( (byte_4C3D1F3 & 1) == 0 )
   {
-    sub_1C32C20(&Method_EventCraftListViewManager_TradeReceiveResponse__);
-    sub_1C32C20(&int___TypeInfo);
-    sub_1C32C20(&Method_NetworkManager_getRequest_TradeReceiveRequest___);
-    sub_1C32C20(&NetworkManager_TypeInfo);
-    sub_1C32C20(&NetworkManager_ResultCallbackFunc_TypeInfo);
-    byte_4C31C09 = 1;
+    sub_1C37058(&Method_EventCraftListViewManager_TradeReceiveResponse__);
+    sub_1C37058(&int___TypeInfo);
+    sub_1C37058(&Method_NetworkManager_getRequest_TradeReceiveRequest___);
+    sub_1C37058(&NetworkManager_TypeInfo);
+    sub_1C37058(&NetworkManager_ResultCallbackFunc_TypeInfo);
+    byte_4C3D1F3 = 1;
   }
   maskPanel = this->fields.maskPanel;
   if ( !maskPanel )
@@ -1135,7 +1135,7 @@ void EventCraftListViewManager__OnClickReceiveDecide(
   if ( receiveNum > 0 )
   {
     UnityEngine_GameObject__SetActive(maskPanel, 1, 0);
-    v8 = (NetworkManager_ResultCallbackFunc_o *)sub_1C32E6C(NetworkManager_ResultCallbackFunc_TypeInfo);
+    v8 = (NetworkManager_ResultCallbackFunc_o *)sub_1C372A4(NetworkManager_ResultCallbackFunc_TypeInfo);
     NetworkManager_ResultCallbackFunc___ctor(
       v8,
       (Il2CppObject *)this,
@@ -1145,14 +1145,14 @@ void EventCraftListViewManager__OnClickReceiveDecide(
       j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
     Request_object = NetworkManager__getRequest_object_(
                        v8,
-                       (const MethodInfo_3168488 *)Method_NetworkManager_getRequest_TradeReceiveRequest___);
+                       (const MethodInfo_3172CF0 *)Method_NetworkManager_getRequest_TradeReceiveRequest___);
     currentEventId = this->fields.currentEventId;
     v11 = (TradeReceiveRequest_o *)Request_object;
-    maskPanel = (struct UnityEngine_GameObject_o *)sub_1C32CC8(int___TypeInfo, 1);
+    maskPanel = (struct UnityEngine_GameObject_o *)sub_1C37100(int___TypeInfo, 1);
     if ( maskPanel )
     {
       if ( !LODWORD(maskPanel[1].klass) )
-        sub_1C32E84(maskPanel);
+        sub_1C372BC(maskPanel);
       LODWORD(maskPanel[1].monitor) = storeIdx;
       if ( v11 )
       {
@@ -1161,7 +1161,7 @@ void EventCraftListViewManager__OnClickReceiveDecide(
       }
     }
 LABEL_12:
-    sub_1C32E7C(maskPanel);
+    sub_1C372B4(maskPanel);
   }
   UnityEngine_GameObject__SetActive(maskPanel, 0, 0);
 }
@@ -1187,12 +1187,12 @@ void EventCraftListViewManager__OnClickReplenishmentButton(
   System_Action_T1__T2__T3__o *v17; // x25
   struct EventTradeGoodsEntity_o *monitor; // x1
 
-  if ( (byte_4C31C0F & 1) == 0 )
+  if ( (byte_4C3D1F9 & 1) == 0 )
   {
-    sub_1C32C20(&System_Action_int____int__bool__TypeInfo);
-    sub_1C32C20(&Method_EventCraftListViewManager_OnClickReplenishmentButton__);
-    sub_1C32C20(&Method_EventCraftListViewManager_OnClickTradeReplenishmentDecide__);
-    byte_4C31C0F = 1;
+    sub_1C37058(&System_Action_int____int__bool__TypeInfo);
+    sub_1C37058(&Method_EventCraftListViewManager_OnClickReplenishmentButton__);
+    sub_1C37058(&Method_EventCraftListViewManager_OnClickTradeReplenishmentDecide__);
+    byte_4C3D1F9 = 1;
   }
   maskPanel = this->fields.maskPanel;
   if ( !maskPanel )
@@ -1211,7 +1211,7 @@ LABEL_17:
       return;
     }
 LABEL_20:
-    sub_1C32E7C(maskPanel);
+    sub_1C372B4(maskPanel);
   }
   maskPanel = (UnityEngine_GameObject_o *)EventCraftListViewObject__GetItem(obj, 0);
   if ( !maskPanel )
@@ -1219,8 +1219,8 @@ LABEL_20:
   IsRefillable = EventCraftListViewItem__get_IsRefillable((EventCraftListViewItem_o *)maskPanel, v7);
   v9 = Method_EventCraftListViewManager_OnClickReplenishmentButton__;
   if ( (*((_BYTE *)Method_EventCraftListViewManager_OnClickReplenishmentButton__ + 83) & 2) != 0 )
-    v9 = (_QWORD *)sub_1C32C38(Method_EventCraftListViewManager_OnClickReplenishmentButton__);
-  v10 = (System_Reflection_MethodBase_o *)sub_1C32C04(v9, v9[4]);
+    v9 = (_QWORD *)sub_1C37070(Method_EventCraftListViewManager_OnClickReplenishmentButton__);
+  v10 = (System_Reflection_MethodBase_o *)sub_1C3703C(v9, v9[4]);
   if ( IsRefillable )
   {
     OverwriteAssetSoundName__PlaySystemSe(v10, 0, 0, 0);
@@ -1239,7 +1239,7 @@ LABEL_20:
       goto LABEL_20;
     name = (int32_t)klass->_1.name;
     supportTool = this->fields.supportTool;
-    v17 = (System_Action_T1__T2__T3__o *)sub_1C32E6C(System_Action_int____int__bool__TypeInfo);
+    v17 = (System_Action_T1__T2__T3__o *)sub_1C372A4(System_Action_int____int__bool__TypeInfo);
     System_Action_object__int__bool____ctor(
       v17,
       (Il2CppObject *)this,
@@ -1260,7 +1260,7 @@ LABEL_20:
       goto LABEL_20;
     monitor = (struct EventTradeGoodsEntity_o *)maskPanel[5].monitor;
     this->fields.selectTradeGoodsEntity = monitor;
-    sub_1C32BC4(&this->fields.selectTradeGoodsEntity, monitor);
+    sub_1C36FFC(&this->fields.selectTradeGoodsEntity, monitor);
     goto LABEL_17;
   }
   OverwriteAssetSoundName__PlaySystemSe(v10, 2, 0, 0);
@@ -1284,12 +1284,12 @@ void EventCraftListViewManager__OnClickSupportToolButton(
   System_Action_int__int__o *v14; // x25
   struct EventTradeGoodsEntity_o *monitor; // x1
 
-  if ( (byte_4C31C16 & 1) == 0 )
+  if ( (byte_4C3D200 & 1) == 0 )
   {
-    sub_1C32C20(&System_Action_int__int__TypeInfo);
-    sub_1C32C20(&Method_EventCraftListViewManager_OnClickSupportToolButton__);
-    sub_1C32C20(&Method_EventCraftListViewManager_OnClickSupportToolDecide__);
-    byte_4C31C16 = 1;
+    sub_1C37058(&System_Action_int__int__TypeInfo);
+    sub_1C37058(&Method_EventCraftListViewManager_OnClickSupportToolButton__);
+    sub_1C37058(&Method_EventCraftListViewManager_OnClickSupportToolDecide__);
+    byte_4C3D200 = 1;
   }
   maskPanel = this->fields.maskPanel;
   if ( !maskPanel )
@@ -1301,8 +1301,8 @@ void EventCraftListViewManager__OnClickSupportToolButton(
     goto LABEL_6;
   v6 = Method_EventCraftListViewManager_OnClickSupportToolButton__;
   if ( (*((_BYTE *)Method_EventCraftListViewManager_OnClickSupportToolButton__ + 83) & 2) != 0 )
-    v6 = (_QWORD *)sub_1C32C38(Method_EventCraftListViewManager_OnClickSupportToolButton__);
-  v7 = (System_Reflection_MethodBase_o *)sub_1C32C04(v6, v6[4]);
+    v6 = (_QWORD *)sub_1C37070(Method_EventCraftListViewManager_OnClickSupportToolButton__);
+  v7 = (System_Reflection_MethodBase_o *)sub_1C3703C(v6, v6[4]);
   OverwriteAssetSoundName__PlaySystemSe(v7, 0, 0, 0);
   EventCraftListViewManager__UpdateListObject(this, v8);
   maskPanel = (UnityEngine_GameObject_o *)this->fields.craftUseSupportToolDialog;
@@ -1316,7 +1316,7 @@ void EventCraftListViewManager__OnClickSupportToolButton(
     || (klass = maskPanel[6].klass) == 0
     || (name = (int32_t)klass->_1.name,
         supportTool = this->fields.supportTool,
-        v14 = (System_Action_int__int__o *)sub_1C32E6C(System_Action_int__int__TypeInfo),
+        v14 = (System_Action_int__int__o *)sub_1C372A4(System_Action_int__int__TypeInfo),
         System_Action_int__int____ctor(
           v14,
           (Il2CppObject *)this,
@@ -1327,11 +1327,11 @@ void EventCraftListViewManager__OnClickSupportToolButton(
         (maskPanel = (UnityEngine_GameObject_o *)EventCraftListViewObject__GetItem(obj, 0)) == 0) )
   {
 LABEL_16:
-    sub_1C32E7C(maskPanel);
+    sub_1C372B4(maskPanel);
   }
   monitor = (struct EventTradeGoodsEntity_o *)maskPanel[5].monitor;
   this->fields.selectTradeGoodsEntity = monitor;
-  sub_1C32BC4(&this->fields.selectTradeGoodsEntity, monitor);
+  sub_1C36FFC(&this->fields.selectTradeGoodsEntity, monitor);
 LABEL_6:
   maskPanel = this->fields.maskPanel;
   if ( !maskPanel )
@@ -1351,13 +1351,13 @@ void EventCraftListViewManager__OnClickSupportToolDecide(
   struct ItemEntity_o *supportTool; // x8
   int32_t id; // w5
 
-  if ( (byte_4C31C17 & 1) == 0 )
+  if ( (byte_4C3D201 & 1) == 0 )
   {
-    sub_1C32C20(&Method_EventCraftListViewManager_TradeSupportToolResponse__);
-    sub_1C32C20(&Method_NetworkManager_getRequest_TradeStartRequest___);
-    sub_1C32C20(&NetworkManager_TypeInfo);
-    sub_1C32C20(&NetworkManager_ResultCallbackFunc_TypeInfo);
-    byte_4C31C17 = 1;
+    sub_1C37058(&Method_EventCraftListViewManager_TradeSupportToolResponse__);
+    sub_1C37058(&Method_NetworkManager_getRequest_TradeStartRequest___);
+    sub_1C37058(&NetworkManager_TypeInfo);
+    sub_1C37058(&NetworkManager_ResultCallbackFunc_TypeInfo);
+    byte_4C3D201 = 1;
   }
   craftUseSupportToolDialog = this->fields.craftUseSupportToolDialog;
   if ( !craftUseSupportToolDialog )
@@ -1367,7 +1367,7 @@ void EventCraftListViewManager__OnClickSupportToolDecide(
   if ( !craftUseSupportToolDialog )
     goto LABEL_11;
   UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)craftUseSupportToolDialog, 1, 0);
-  v8 = (NetworkManager_ResultCallbackFunc_o *)sub_1C32E6C(NetworkManager_ResultCallbackFunc_TypeInfo);
+  v8 = (NetworkManager_ResultCallbackFunc_o *)sub_1C372A4(NetworkManager_ResultCallbackFunc_TypeInfo);
   NetworkManager_ResultCallbackFunc___ctor(
     v8,
     (Il2CppObject *)this,
@@ -1377,7 +1377,7 @@ void EventCraftListViewManager__OnClickSupportToolDecide(
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
   craftUseSupportToolDialog = (EventCraftUseSupportToolDialogComponent_o *)NetworkManager__getRequest_object_(
                                                                              v8,
-                                                                             (const MethodInfo_3168488 *)Method_NetworkManager_getRequest_TradeStartRequest___);
+                                                                             (const MethodInfo_3172CF0 *)Method_NetworkManager_getRequest_TradeStartRequest___);
   supportTool = this->fields.supportTool;
   if ( !supportTool )
   {
@@ -1385,7 +1385,7 @@ void EventCraftListViewManager__OnClickSupportToolDecide(
     if ( craftUseSupportToolDialog )
       goto LABEL_9;
 LABEL_11:
-    sub_1C32E7C(craftUseSupportToolDialog);
+    sub_1C372B4(craftUseSupportToolDialog);
   }
   id = supportTool->fields.id;
   if ( !craftUseSupportToolDialog )
@@ -1417,13 +1417,13 @@ void EventCraftListViewManager__OnClickTradeReplenishmentDecide(
   int32_t v14; // w25
   TradeStartRequest_o *v15; // x23
 
-  if ( (byte_4C31C10 & 1) == 0 )
+  if ( (byte_4C3D1FA & 1) == 0 )
   {
-    sub_1C32C20(&Method_EventCraftListViewManager_TradeReplenishmentResponse__);
-    sub_1C32C20(&Method_NetworkManager_getRequest_TradeStartRequest___);
-    sub_1C32C20(&NetworkManager_TypeInfo);
-    sub_1C32C20(&NetworkManager_ResultCallbackFunc_TypeInfo);
-    byte_4C31C10 = 1;
+    sub_1C37058(&Method_EventCraftListViewManager_TradeReplenishmentResponse__);
+    sub_1C37058(&Method_NetworkManager_getRequest_TradeStartRequest___);
+    sub_1C37058(&NetworkManager_TypeInfo);
+    sub_1C37058(&NetworkManager_ResultCallbackFunc_TypeInfo);
+    byte_4C3D1FA = 1;
   }
   craftNumConfirmDialog = this->fields.craftNumConfirmDialog;
   if ( !craftNumConfirmDialog )
@@ -1435,7 +1435,7 @@ void EventCraftListViewManager__OnClickTradeReplenishmentDecide(
   if ( createNum > 0 )
   {
     UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)craftNumConfirmDialog, 1, 0);
-    v10 = (NetworkManager_ResultCallbackFunc_o *)sub_1C32E6C(NetworkManager_ResultCallbackFunc_TypeInfo);
+    v10 = (NetworkManager_ResultCallbackFunc_o *)sub_1C372A4(NetworkManager_ResultCallbackFunc_TypeInfo);
     NetworkManager_ResultCallbackFunc___ctor(
       v10,
       (Il2CppObject *)this,
@@ -1445,11 +1445,11 @@ void EventCraftListViewManager__OnClickTradeReplenishmentDecide(
       j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
     craftNumConfirmDialog = (EventCraftNumConfirmDialogComponent_o *)NetworkManager__getRequest_object_(
                                                                        v10,
-                                                                       (const MethodInfo_3168488 *)Method_NetworkManager_getRequest_TradeStartRequest___);
+                                                                       (const MethodInfo_3172CF0 *)Method_NetworkManager_getRequest_TradeStartRequest___);
     if ( tradeInfo )
     {
       if ( LODWORD(tradeInfo->max_length) < 2 )
-        sub_1C32E84(craftNumConfirmDialog);
+        sub_1C372BC(craftNumConfirmDialog);
       currentEventId = this->fields.currentEventId;
       v14 = tradeInfo->m_Items[0];
       v13 = tradeInfo->m_Items[1];
@@ -1465,7 +1465,7 @@ void EventCraftListViewManager__OnClickTradeReplenishmentDecide(
       }
     }
 LABEL_13:
-    sub_1C32E7C(craftNumConfirmDialog);
+    sub_1C372B4(craftNumConfirmDialog);
   }
   UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)craftNumConfirmDialog, 0, 0);
 }
@@ -1487,23 +1487,23 @@ void EventCraftListViewManager__OnClickWithdrawalButton(
   EventCraftListViewItem_o *Item; // x22
   System_Action_bool__o *v14; // x23
 
-  if ( (byte_4C31C12 & 1) == 0 )
+  if ( (byte_4C3D1FC & 1) == 0 )
   {
-    sub_1C32C20(&System_Action_bool__TypeInfo);
-    sub_1C32C20(&Method_EventCraftListViewManager_OnClickWithdrawalButton__);
-    sub_1C32C20(&Method_EventCraftListViewManager___c__DisplayClass70_0__OnClickWithdrawalButton_b__0__);
-    sub_1C32C20(&EventCraftListViewManager___c__DisplayClass70_0_TypeInfo);
-    byte_4C31C12 = 1;
+    sub_1C37058(&System_Action_bool__TypeInfo);
+    sub_1C37058(&Method_EventCraftListViewManager_OnClickWithdrawalButton__);
+    sub_1C37058(&Method_EventCraftListViewManager___c__DisplayClass70_0__OnClickWithdrawalButton_b__0__);
+    sub_1C37058(&EventCraftListViewManager___c__DisplayClass70_0_TypeInfo);
+    byte_4C3D1FC = 1;
   }
-  v5 = (EventCraftListViewManager___c__DisplayClass70_0_o *)sub_1C32E6C(EventCraftListViewManager___c__DisplayClass70_0_TypeInfo);
+  v5 = (EventCraftListViewManager___c__DisplayClass70_0_o *)sub_1C372A4(EventCraftListViewManager___c__DisplayClass70_0_TypeInfo);
   EventCraftListViewManager___c__DisplayClass70_0___ctor(v5, 0);
   if ( !v5 )
     goto LABEL_16;
   v5->fields.__4__this = this;
-  sub_1C32BC4(&v5->fields, this);
+  sub_1C36FFC(&v5->fields, this);
   v5->fields.obj = obj;
   p_obj = &v5->fields.obj;
-  sub_1C32BC4(&v5->fields.obj, obj);
+  sub_1C36FFC(&v5->fields.obj, obj);
   maskPanel = this->fields.maskPanel;
   if ( !maskPanel )
     goto LABEL_16;
@@ -1515,8 +1515,8 @@ void EventCraftListViewManager__OnClickWithdrawalButton(
   {
     v9 = Method_EventCraftListViewManager_OnClickWithdrawalButton__;
     if ( (*((_BYTE *)Method_EventCraftListViewManager_OnClickWithdrawalButton__ + 83) & 2) != 0 )
-      v9 = (_QWORD *)sub_1C32C38(Method_EventCraftListViewManager_OnClickWithdrawalButton__);
-    v10 = (System_Reflection_MethodBase_o *)sub_1C32C04(v9, v9[4]);
+      v9 = (_QWORD *)sub_1C37070(Method_EventCraftListViewManager_OnClickWithdrawalButton__);
+    v10 = (System_Reflection_MethodBase_o *)sub_1C3703C(v9, v9[4]);
     OverwriteAssetSoundName__PlaySystemSe(v10, 0, 0, 0);
     EventCraftListViewManager__UpdateListObject(this, v11);
     maskPanel = (UnityEngine_GameObject_o *)this->fields.craftWithdrawConfirmDialog;
@@ -1528,7 +1528,7 @@ void EventCraftListViewManager__OnClickWithdrawalButton(
       {
         craftWithdrawConfirmDialog = this->fields.craftWithdrawConfirmDialog;
         Item = EventCraftListViewObject__GetItem((EventCraftListViewObject_o *)maskPanel, 0);
-        v14 = (System_Action_bool__o *)sub_1C32E6C(System_Action_bool__TypeInfo);
+        v14 = (System_Action_bool__o *)sub_1C372A4(System_Action_bool__TypeInfo);
         System_Action_bool____ctor(
           v14,
           (Il2CppObject *)v5,
@@ -1542,7 +1542,7 @@ void EventCraftListViewManager__OnClickWithdrawalButton(
       }
     }
 LABEL_16:
-    sub_1C32E7C(maskPanel);
+    sub_1C372B4(maskPanel);
   }
 LABEL_14:
   maskPanel = this->fields.maskPanel;
@@ -1566,14 +1566,14 @@ void EventCraftListViewManager__OnClickWithdrawalDecide(
   struct EventTradeInfo_o *TradeInfo_k__BackingField; // x8
   System_Int32_array *v12; // x22
 
-  if ( (byte_4C31C14 & 1) == 0 )
+  if ( (byte_4C3D1FE & 1) == 0 )
   {
-    sub_1C32C20(&Method_EventCraftListViewManager_WithdrawalResponse__);
-    sub_1C32C20(&int___TypeInfo);
-    sub_1C32C20(&Method_NetworkManager_getRequest_TradeReceiveRequest___);
-    sub_1C32C20(&NetworkManager_TypeInfo);
-    sub_1C32C20(&NetworkManager_ResultCallbackFunc_TypeInfo);
-    byte_4C31C14 = 1;
+    sub_1C37058(&Method_EventCraftListViewManager_WithdrawalResponse__);
+    sub_1C37058(&int___TypeInfo);
+    sub_1C37058(&Method_NetworkManager_getRequest_TradeReceiveRequest___);
+    sub_1C37058(&NetworkManager_TypeInfo);
+    sub_1C37058(&NetworkManager_ResultCallbackFunc_TypeInfo);
+    byte_4C3D1FE = 1;
   }
   craftWithdrawConfirmDialog = (__int64)this->fields.craftWithdrawConfirmDialog;
   if ( !craftWithdrawConfirmDialog )
@@ -1585,7 +1585,7 @@ void EventCraftListViewManager__OnClickWithdrawalDecide(
   if ( !craftWithdrawConfirmDialog )
     goto LABEL_13;
   UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)craftWithdrawConfirmDialog, 1, 0);
-  v6 = (NetworkManager_ResultCallbackFunc_o *)sub_1C32E6C(NetworkManager_ResultCallbackFunc_TypeInfo);
+  v6 = (NetworkManager_ResultCallbackFunc_o *)sub_1C372A4(NetworkManager_ResultCallbackFunc_TypeInfo);
   NetworkManager_ResultCallbackFunc___ctor(
     v6,
     (Il2CppObject *)this,
@@ -1595,10 +1595,10 @@ void EventCraftListViewManager__OnClickWithdrawalDecide(
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
   Request_object = NetworkManager__getRequest_object_(
                      v6,
-                     (const MethodInfo_3168488 *)Method_NetworkManager_getRequest_TradeReceiveRequest___);
+                     (const MethodInfo_3172CF0 *)Method_NetworkManager_getRequest_TradeReceiveRequest___);
   currentEventId = this->fields.currentEventId;
   v9 = (TradeReceiveRequest_o *)Request_object;
-  craftWithdrawConfirmDialog = sub_1C32CC8(int___TypeInfo, 1);
+  craftWithdrawConfirmDialog = sub_1C37100(int___TypeInfo, 1);
   if ( !item )
     goto LABEL_13;
   TradeInfo_k__BackingField = item->fields._TradeInfo_k__BackingField;
@@ -1608,12 +1608,12 @@ void EventCraftListViewManager__OnClickWithdrawalDecide(
   if ( !craftWithdrawConfirmDialog )
     goto LABEL_13;
   if ( !*(_DWORD *)(craftWithdrawConfirmDialog + 24) )
-    sub_1C32E84(craftWithdrawConfirmDialog);
+    sub_1C372BC(craftWithdrawConfirmDialog);
   *(_DWORD *)(craftWithdrawConfirmDialog + 32) = TradeInfo_k__BackingField->fields.storeIdx;
   craftWithdrawConfirmDialog = EventCraftListViewItem__get_NowCompleteNum(item, v10);
   if ( !v9 )
 LABEL_13:
-    sub_1C32E7C(craftWithdrawConfirmDialog);
+    sub_1C372B4(craftWithdrawConfirmDialog);
   TradeReceiveRequest__beginRequest(v9, currentEventId, v12, craftWithdrawConfirmDialog, 1, 0);
 }
 
@@ -1626,10 +1626,10 @@ void EventCraftListViewManager__OnMoveEnd(EventCraftListViewManager_o *this, con
   UnityEngine_Object_o *scrollView; // x20
   struct UIScrollView_o *v7; // x0
 
-  if ( (byte_4C31C02 & 1) == 0 )
+  if ( (byte_4C3D1EC & 1) == 0 )
   {
-    sub_1C32C20(&UnityEngine_Object_TypeInfo);
-    byte_4C31C02 = 1;
+    sub_1C37058(&UnityEngine_Object_TypeInfo);
+    byte_4C3D1EC = 1;
   }
   callbackCount = this->fields.callbackCount;
   v4 = __OFSUB__(callbackCount, 1);
@@ -1647,7 +1647,7 @@ void EventCraftListViewManager__OnMoveEnd(EventCraftListViewManager_o *this, con
       {
         v7 = this->fields.scrollView;
         if ( !v7 )
-          sub_1C32E7C(0);
+          sub_1C372B4(0);
         ((void (__fastcall *)(struct UIScrollView_o *, __int64, const MethodInfo *))v7->klass->vtable._8_UpdateScrollbars.methodPtr)(
           v7,
           1,
@@ -1674,28 +1674,28 @@ void EventCraftListViewManager__OpenReconfirmDialog(
   System_String_o *v13; // x24
   CommonConfirmDialog_ClickDelegate_o *v14; // x25
 
-  if ( (byte_4C31C13 & 1) == 0 )
+  if ( (byte_4C3D1FD & 1) == 0 )
   {
-    sub_1C32C20(&CommonConfirmDialog_ClickDelegate_TypeInfo);
-    sub_1C32C20(&LocalizationManager_TypeInfo);
-    sub_1C32C20(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
-    sub_1C32C20(&Method_EventCraftListViewManager___c__DisplayClass71_0__OpenReconfirmDialog_b__0__);
-    sub_1C32C20(&EventCraftListViewManager___c__DisplayClass71_0_TypeInfo);
-    sub_1C32C20(&StringLiteral_13508/*"TRADE_EVENT_WITHDRAWAL_RECONFIRMATION_NOTIFICATION_DIALOG_TITLE"*/);
-    sub_1C32C20(&StringLiteral_3687/*"COMMON_CONFIRM_EXECUTE"*/);
-    sub_1C32C20(&StringLiteral_3684/*"COMMON_CONFIRM_CANCEL"*/);
-    sub_1C32C20(&StringLiteral_3917/*"CRAFT_EVENT_WITHDRAWAL_RECONFIRMATION_NOTIFICATION_DIALOG_MESSAGE"*/);
-    byte_4C31C13 = 1;
+    sub_1C37058(&CommonConfirmDialog_ClickDelegate_TypeInfo);
+    sub_1C37058(&LocalizationManager_TypeInfo);
+    sub_1C37058(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+    sub_1C37058(&Method_EventCraftListViewManager___c__DisplayClass71_0__OpenReconfirmDialog_b__0__);
+    sub_1C37058(&EventCraftListViewManager___c__DisplayClass71_0_TypeInfo);
+    sub_1C37058(&StringLiteral_13509/*"TRADE_EVENT_WITHDRAWAL_RECONFIRMATION_NOTIFICATION_DIALOG_TITLE"*/);
+    sub_1C37058(&StringLiteral_3687/*"COMMON_CONFIRM_EXECUTE"*/);
+    sub_1C37058(&StringLiteral_3684/*"COMMON_CONFIRM_CANCEL"*/);
+    sub_1C37058(&StringLiteral_3917/*"CRAFT_EVENT_WITHDRAWAL_RECONFIRMATION_NOTIFICATION_DIALOG_MESSAGE"*/);
+    byte_4C3D1FD = 1;
   }
-  v5 = (EventCraftListViewManager___c__DisplayClass71_0_o *)sub_1C32E6C(EventCraftListViewManager___c__DisplayClass71_0_TypeInfo);
+  v5 = (EventCraftListViewManager___c__DisplayClass71_0_o *)sub_1C372A4(EventCraftListViewManager___c__DisplayClass71_0_TypeInfo);
   EventCraftListViewManager___c__DisplayClass71_0___ctor(v5, 0);
   if ( !v5 )
     goto LABEL_12;
   v5->fields.__4__this = this;
-  sub_1C32BC4(&v5->fields, this);
+  sub_1C36FFC(&v5->fields, this);
   v5->fields.item = item;
   p_item = (BaseDialog_o **)&v5->fields.item;
-  sub_1C32BC4(&v5->fields.item, item);
+  sub_1C36FFC(&v5->fields.item, item);
   craftWithdrawConfirmDialog = (BaseDialog_o *)this->fields.craftWithdrawConfirmDialog;
   if ( !craftWithdrawConfirmDialog )
     goto LABEL_12;
@@ -1707,14 +1707,14 @@ void EventCraftListViewManager__OpenReconfirmDialog(
   v5->fields.oldCompleteNum = EventCraftListViewItem__get_NowCompleteNum(
                                 (EventCraftListViewItem_o *)craftWithdrawConfirmDialog,
                                 v8);
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39E2904 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39ED16C *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-  v10 = LocalizationManager__Get((System_String_o *)StringLiteral_13508/*"TRADE_EVENT_WITHDRAWAL_RECONFIRMATION_NOTIFICATION_DIALOG_TITLE"*/, 0);
+  v10 = LocalizationManager__Get((System_String_o *)StringLiteral_13509/*"TRADE_EVENT_WITHDRAWAL_RECONFIRMATION_NOTIFICATION_DIALOG_TITLE"*/, 0);
   v11 = LocalizationManager__Get((System_String_o *)StringLiteral_3917/*"CRAFT_EVENT_WITHDRAWAL_RECONFIRMATION_NOTIFICATION_DIALOG_MESSAGE"*/, 0);
   v12 = LocalizationManager__Get((System_String_o *)StringLiteral_3687/*"COMMON_CONFIRM_EXECUTE"*/, 0);
   v13 = LocalizationManager__Get((System_String_o *)StringLiteral_3684/*"COMMON_CONFIRM_CANCEL"*/, 0);
-  v14 = (CommonConfirmDialog_ClickDelegate_o *)sub_1C32E6C(CommonConfirmDialog_ClickDelegate_TypeInfo);
+  v14 = (CommonConfirmDialog_ClickDelegate_o *)sub_1C372A4(CommonConfirmDialog_ClickDelegate_TypeInfo);
   CommonConfirmDialog_ClickDelegate___ctor(
     v14,
     (Il2CppObject *)v5,
@@ -1722,8 +1722,8 @@ void EventCraftListViewManager__OpenReconfirmDialog(
     0);
   if ( !Instance )
 LABEL_12:
-    sub_1C32E7C(craftWithdrawConfirmDialog);
-  CommonUI__OpenConfirmDialog_31190452((CommonUI_o *)Instance, v10, v11, v12, v13, 1, v14, 30, 26, 180.0, 13.0, 0, 0, 0);
+    sub_1C372B4(craftWithdrawConfirmDialog);
+  CommonUI__OpenConfirmDialog_31207916((CommonUI_o *)Instance, v10, v11, v12, v13, 1, v14, 30, 26, 180.0, 13.0, 0, 0, 0);
 }
 
 
@@ -1742,41 +1742,41 @@ void EventCraftListViewManager__OpenReplenishmentDialog(EventCraftListViewManage
   ItemEntity_o *supportTool; // x23
   System_Action_T1__T2__T3__o *v14; // x24
 
-  if ( (byte_4C31C0E & 1) == 0 )
+  if ( (byte_4C3D1F8 & 1) == 0 )
   {
-    sub_1C32C20(&System_Action_int____int__bool__TypeInfo);
-    sub_1C32C20(&Method_DataManager_GetMaster_EventMaster___);
-    sub_1C32C20(&DataManager_TypeInfo);
-    sub_1C32C20(&Method_DataMasterBase_EventMaster__EventEntity__int__GetEntity__);
-    sub_1C32C20(&Method_System_Linq_Enumerable_FirstOrDefault_EventCraftListViewObject___);
-    sub_1C32C20(&Method_EventCraftListViewManager_OnClickTradeReplenishmentDecide__);
-    sub_1C32C20(&Method_EventCraftListViewManager__OpenReplenishmentDialog_b__66_0__);
-    sub_1C32C20(&System_Func_EventCraftListViewObject__bool__TypeInfo);
-    sub_1C32C20(&UnityEngine_Object_TypeInfo);
-    byte_4C31C0E = 1;
+    sub_1C37058(&System_Action_int____int__bool__TypeInfo);
+    sub_1C37058(&Method_DataManager_GetMaster_EventMaster___);
+    sub_1C37058(&DataManager_TypeInfo);
+    sub_1C37058(&Method_DataMasterBase_EventMaster__EventEntity__int__GetEntity__);
+    sub_1C37058(&Method_System_Linq_Enumerable_FirstOrDefault_EventCraftListViewObject___);
+    sub_1C37058(&Method_EventCraftListViewManager_OnClickTradeReplenishmentDecide__);
+    sub_1C37058(&Method_EventCraftListViewManager__OpenReplenishmentDialog_b__66_0__);
+    sub_1C37058(&System_Func_EventCraftListViewObject__bool__TypeInfo);
+    sub_1C37058(&UnityEngine_Object_TypeInfo);
+    byte_4C3D1F8 = 1;
   }
   if ( this->fields.selectTradeGoodsEntity )
   {
     ObjectList = EventCraftListViewManager__get_ObjectList(this, method);
-    v4 = (System_Func_object__bool__o *)sub_1C32E6C(System_Func_EventCraftListViewObject__bool__TypeInfo);
+    v4 = (System_Func_object__bool__o *)sub_1C372A4(System_Func_EventCraftListViewObject__bool__TypeInfo);
     System_Func_object__bool____ctor(
       v4,
       (Il2CppObject *)this,
       Method_EventCraftListViewManager__OpenReplenishmentDialog_b__66_0__,
       0);
-    v5 = System_Linq_Enumerable__FirstOrDefault_object__51408536(
+    v5 = System_Linq_Enumerable__FirstOrDefault_object__51451648(
            (System_Collections_Generic_IEnumerable_TSource__o *)ObjectList,
            (System_Func_TSource__bool__o *)v4,
-           (const MethodInfo_3106E98 *)Method_System_Linq_Enumerable_FirstOrDefault_EventCraftListViewObject___);
+           (const MethodInfo_3111700 *)Method_System_Linq_Enumerable_FirstOrDefault_EventCraftListViewObject___);
     if ( !DataManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-    Master_object = (DataMasterBase_TMaster__TEntity__PKType__o *)DataManager__GetMaster_object_((const MethodInfo_30DD39C *)Method_DataManager_GetMaster_EventMaster___);
+    Master_object = (DataMasterBase_TMaster__TEntity__PKType__o *)DataManager__GetMaster_object_((const MethodInfo_30E7C04 *)Method_DataManager_GetMaster_EventMaster___);
     if ( !Master_object )
       goto LABEL_21;
     Entity = DataMasterBase_object__object__int___GetEntity(
                Master_object,
                this->fields.currentEventId,
-               (const MethodInfo_3396838 *)Method_DataMasterBase_EventMaster__EventEntity__int__GetEntity__);
+               (const MethodInfo_33A10A0 *)Method_DataMasterBase_EventMaster__EventEntity__int__GetEntity__);
     if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
     Master_object = (DataMasterBase_TMaster__TEntity__PKType__o *)UnityEngine_Object__op_Equality(
@@ -1815,7 +1815,7 @@ void EventCraftListViewManager__OpenReplenishmentDialog(EventCraftListViewManage
                 storeIdx = TradeInfo_k__BackingField->fields.storeIdx;
                 craftNumConfirmDialog = this->fields.craftNumConfirmDialog;
                 supportTool = this->fields.supportTool;
-                v14 = (System_Action_T1__T2__T3__o *)sub_1C32E6C(System_Action_int____int__bool__TypeInfo);
+                v14 = (System_Action_T1__T2__T3__o *)sub_1C372A4(System_Action_int____int__bool__TypeInfo);
                 System_Action_object__int__bool____ctor(
                   v14,
                   (Il2CppObject *)this,
@@ -1836,7 +1836,7 @@ void EventCraftListViewManager__OpenReplenishmentDialog(EventCraftListViewManage
               }
             }
 LABEL_21:
-            sub_1C32E7C(Master_object);
+            sub_1C372B4(Master_object);
           }
         }
       }
@@ -1859,13 +1859,13 @@ void EventCraftListViewManager__OpenRewardDialog(
   System_Action_bool__o *v11; // x24
   System_Action_o *v12; // x25
 
-  if ( (byte_4C31C0D & 1) == 0 )
+  if ( (byte_4C3D1F7 & 1) == 0 )
   {
-    sub_1C32C20(&System_Action_bool__TypeInfo);
-    sub_1C32C20(&System_Action_TypeInfo);
-    sub_1C32C20(&Method_EventCraftListViewManager_OpenReplenishmentDialog__);
-    sub_1C32C20(&Method_UnityEngine_GameObject_SetActive__);
-    byte_4C31C0D = 1;
+    sub_1C37058(&System_Action_bool__TypeInfo);
+    sub_1C37058(&System_Action_TypeInfo);
+    sub_1C37058(&Method_EventCraftListViewManager_OpenReplenishmentDialog__);
+    sub_1C37058(&Method_UnityEngine_GameObject_SetActive__);
+    byte_4C3D1F7 = 1;
   }
   craftRewardDialog = this->fields.craftRewardDialog;
   if ( !craftRewardDialog )
@@ -1878,13 +1878,13 @@ void EventCraftListViewManager__OpenRewardDialog(
   resultTradeRewardInfos = resData->fields.resultTradeRewardInfos;
   selectTradeGoodsEntity = this->fields.selectTradeGoodsEntity;
   maskPanel = (Il2CppObject *)this->fields.maskPanel;
-  v11 = (System_Action_bool__o *)sub_1C32E6C(System_Action_bool__TypeInfo);
+  v11 = (System_Action_bool__o *)sub_1C372A4(System_Action_bool__TypeInfo);
   System_Action_bool____ctor(v11, maskPanel, Method_UnityEngine_GameObject_SetActive__, 0);
-  v12 = (System_Action_o *)sub_1C32E6C(System_Action_TypeInfo);
+  v12 = (System_Action_o *)sub_1C372A4(System_Action_TypeInfo);
   System_Action___ctor(v12, (Il2CppObject *)this, Method_EventCraftListViewManager_OpenReplenishmentDialog__, 0);
   if ( !v6 )
 LABEL_7:
-    sub_1C32E7C(craftRewardDialog);
+    sub_1C372B4(craftRewardDialog);
   EventCraftRewardDialogComponent__Open(
     v6,
     currentEventId,
@@ -1906,29 +1906,29 @@ void EventCraftListViewManager__RequestListObject(EventCraftListViewManager_o *t
   __int64 v7; // x0
   System_Collections_Generic_List_Enumerator_object__o v8; // [xsp+8h] [xbp-58h] BYREF
 
-  if ( (byte_4C31BFF & 1) == 0 )
+  if ( (byte_4C3D1E9 & 1) == 0 )
   {
-    sub_1C32C20(&System_Action_TypeInfo);
-    sub_1C32C20(&Method_System_Collections_Generic_List_Enumerator_EventCraftListViewObject__Dispose__);
-    sub_1C32C20(&Method_System_Collections_Generic_List_Enumerator_EventCraftListViewObject__MoveNext__);
-    sub_1C32C20(&Method_System_Collections_Generic_List_Enumerator_EventCraftListViewObject__get_Current__);
-    sub_1C32C20(&Method_EventCraftListViewManager_OnMoveEnd__);
-    sub_1C32C20(&Method_System_Collections_Generic_List_EventCraftListViewObject__GetEnumerator__);
-    sub_1C32C20(&Method_System_Collections_Generic_List_EventCraftListViewObject__get_Count__);
-    sub_1C32C20(&StringLiteral_9941/*"OnMoveEnd"*/);
-    byte_4C31BFF = 1;
+    sub_1C37058(&System_Action_TypeInfo);
+    sub_1C37058(&Method_System_Collections_Generic_List_Enumerator_EventCraftListViewObject__Dispose__);
+    sub_1C37058(&Method_System_Collections_Generic_List_Enumerator_EventCraftListViewObject__MoveNext__);
+    sub_1C37058(&Method_System_Collections_Generic_List_Enumerator_EventCraftListViewObject__get_Current__);
+    sub_1C37058(&Method_EventCraftListViewManager_OnMoveEnd__);
+    sub_1C37058(&Method_System_Collections_Generic_List_EventCraftListViewObject__GetEnumerator__);
+    sub_1C37058(&Method_System_Collections_Generic_List_EventCraftListViewObject__get_Count__);
+    sub_1C37058(&StringLiteral_9942/*"OnMoveEnd"*/);
+    byte_4C3D1E9 = 1;
   }
   memset(&v8, 0, sizeof(v8));
   ObjectList = (System_Collections_Generic_List_object__o *)EventCraftListViewManager__get_ObjectList(this, method);
   if ( !ObjectList )
-    sub_1C32E7C(0);
+    sub_1C372B4(0);
   size = ObjectList->fields._size;
   if ( size < 1 )
   {
     this->fields.callbackCount = 1;
     UnityEngine_MonoBehaviour__Invoke(
       (UnityEngine_MonoBehaviour_o *)this,
-      (System_String_o *)StringLiteral_9941/*"OnMoveEnd"*/,
+      (System_String_o *)StringLiteral_9942/*"OnMoveEnd"*/,
       0.0,
       0);
   }
@@ -1938,21 +1938,21 @@ void EventCraftListViewManager__RequestListObject(EventCraftListViewManager_o *t
     System_Collections_Generic_List_object___GetEnumerator(
       (System_Collections_Generic_List_Enumerator_T__o *)&v8,
       ObjectList,
-      (const MethodInfo_37992B4 *)Method_System_Collections_Generic_List_EventCraftListViewObject__GetEnumerator__);
+      (const MethodInfo_37A3B1C *)Method_System_Collections_Generic_List_EventCraftListViewObject__GetEnumerator__);
     while ( System_Collections_Generic_List_Enumerator_object___MoveNext(
               &v8,
-              (const MethodInfo_3522FA8 *)Method_System_Collections_Generic_List_Enumerator_EventCraftListViewObject__MoveNext__) )
+              (const MethodInfo_352D810 *)Method_System_Collections_Generic_List_Enumerator_EventCraftListViewObject__MoveNext__) )
     {
       current = v8.fields._current;
-      v6 = (System_Action_o *)sub_1C32E6C(System_Action_TypeInfo);
+      v6 = (System_Action_o *)sub_1C372A4(System_Action_TypeInfo);
       System_Action___ctor(v6, (Il2CppObject *)this, Method_EventCraftListViewManager_OnMoveEnd__, 0);
       if ( !current )
-        sub_1C32E7C(v7);
+        sub_1C372B4(v7);
       EventCraftListViewObject__Init((EventCraftListViewObject_o *)current, 2, v6, 0);
     }
     System_Collections_Generic_List_Enumerator_object___Dispose(
       &v8,
-      (const MethodInfo_3522FA4 *)Method_System_Collections_Generic_List_Enumerator_EventCraftListViewObject__Dispose__);
+      (const MethodInfo_352D80C *)Method_System_Collections_Generic_List_Enumerator_EventCraftListViewObject__Dispose__);
   }
 }
 
@@ -1968,11 +1968,11 @@ void EventCraftListViewManager__ResponseCommonProcess(
   const MethodInfo *v7; // x1
   const MethodInfo *v8; // x1
 
-  if ( (byte_4C31C19 & 1) == 0 )
+  if ( (byte_4C3D203 & 1) == 0 )
   {
-    sub_1C32C20(&Method_DataManager_GetMaster_EventTradeStoreMaster___);
-    sub_1C32C20(&DataManager_TypeInfo);
-    byte_4C31C19 = 1;
+    sub_1C37058(&Method_DataManager_GetMaster_EventTradeStoreMaster___);
+    sub_1C37058(&DataManager_TypeInfo);
+    byte_4C3D203 = 1;
   }
   if ( !isReceive )
   {
@@ -1984,7 +1984,7 @@ void EventCraftListViewManager__ResponseCommonProcess(
   EventCraftListViewManager__UpdateReceiveAllButtonState(this, (const MethodInfo *)isReceive);
   if ( !DataManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-  currencyInfoController = (ShopCurrencyInfoController_o *)DataManager__GetMaster_object_((const MethodInfo_30DD39C *)Method_DataManager_GetMaster_EventTradeStoreMaster___);
+  currencyInfoController = (ShopCurrencyInfoController_o *)DataManager__GetMaster_object_((const MethodInfo_30E7C04 *)Method_DataManager_GetMaster_EventTradeStoreMaster___);
   if ( !currencyInfoController )
     goto LABEL_13;
   OpenTradeStoreEntityArray = EventTradeStoreMaster__GetOpenTradeStoreEntityArray(
@@ -1992,7 +1992,7 @@ void EventCraftListViewManager__ResponseCommonProcess(
                                 this->fields.currentEventId,
                                 0);
   this->fields.tradeStoreEntities = OpenTradeStoreEntityArray;
-  sub_1C32BC4(&this->fields.tradeStoreEntities, OpenTradeStoreEntityArray);
+  sub_1C36FFC(&this->fields.tradeStoreEntities, OpenTradeStoreEntityArray);
   EventCraftListViewManager__UpdateCraftAbleCountLb(this, v7);
   currencyInfoController = (ShopCurrencyInfoController_o *)this->fields.touchPanel;
   if ( !currencyInfoController
@@ -2003,7 +2003,7 @@ void EventCraftListViewManager__ResponseCommonProcess(
         (currencyInfoController = (ShopCurrencyInfoController_o *)this->fields.maskPanel) == 0) )
   {
 LABEL_13:
-    sub_1C32E7C(currencyInfoController);
+    sub_1C372B4(currencyInfoController);
   }
   UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)currencyInfoController, 0, 0);
   EventCraftListViewManager__RequestListObject(this, v8);
@@ -2040,16 +2040,16 @@ void EventCraftListViewManager__SetCraftObject(EventCraftListViewManager_o *this
   Il2CppObject *v27; // x0
   const MethodInfo *v28; // x2
 
-  if ( (byte_4C31BFB & 1) == 0 )
+  if ( (byte_4C3D1E5 & 1) == 0 )
   {
-    sub_1C32C20(&Method_UnityEngine_GameObject_GetComponent_EventCraftFirstTimeSupportToolDialogComponent___);
-    sub_1C32C20(&Method_UnityEngine_GameObject_GetComponent_EventCraftNumConfirmDialogComponent___);
-    sub_1C32C20(&Method_UnityEngine_GameObject_GetComponent_EventCraftRewardDialogComponent___);
-    sub_1C32C20(&Method_UnityEngine_GameObject_GetComponent_EventCraftUseSupportToolDialogComponent___);
-    sub_1C32C20(&Method_UnityEngine_GameObject_GetComponent_EventCraftWithdrawConfirmDialogComponent___);
-    sub_1C32C20(&Method_UnityEngine_Object_Instantiate_GameObject___);
-    sub_1C32C20(&UnityEngine_Object_TypeInfo);
-    byte_4C31BFB = 1;
+    sub_1C37058(&Method_UnityEngine_GameObject_GetComponent_EventCraftFirstTimeSupportToolDialogComponent___);
+    sub_1C37058(&Method_UnityEngine_GameObject_GetComponent_EventCraftNumConfirmDialogComponent___);
+    sub_1C37058(&Method_UnityEngine_GameObject_GetComponent_EventCraftRewardDialogComponent___);
+    sub_1C37058(&Method_UnityEngine_GameObject_GetComponent_EventCraftUseSupportToolDialogComponent___);
+    sub_1C37058(&Method_UnityEngine_GameObject_GetComponent_EventCraftWithdrawConfirmDialogComponent___);
+    sub_1C37058(&Method_UnityEngine_Object_Instantiate_GameObject___);
+    sub_1C37058(&UnityEngine_Object_TypeInfo);
+    byte_4C3D1E5 = 1;
   }
   craftRewardDialog = (UnityEngine_Object_o *)this->fields.craftRewardDialog;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -2065,14 +2065,14 @@ void EventCraftListViewManager__SetCraftObject(EventCraftListViewManager_o *this
       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
     v4 = UnityEngine_Object__Instantiate_object_(
            CraftRewardDialog_k__BackingField,
-           (const MethodInfo_3169758 *)Method_UnityEngine_Object_Instantiate_GameObject___);
+           (const MethodInfo_3173FC0 *)Method_UnityEngine_Object_Instantiate_GameObject___);
     if ( !v4 )
       goto LABEL_44;
     Component_object = UnityEngine_GameObject__GetComponent_object_(
                          (UnityEngine_GameObject_o *)v4,
-                         (const MethodInfo_3134970 *)Method_UnityEngine_GameObject_GetComponent_EventCraftRewardDialogComponent___);
+                         (const MethodInfo_313F1D8 *)Method_UnityEngine_GameObject_GetComponent_EventCraftRewardDialogComponent___);
     this->fields.craftRewardDialog = (struct EventCraftRewardDialogComponent_o *)Component_object;
-    sub_1C32BC4(&this->fields.craftRewardDialog, Component_object);
+    sub_1C36FFC(&this->fields.craftRewardDialog, Component_object);
     EventCraftListViewManager__LocateDialogToCraftPanel(
       this,
       (UnityEngine_Component_o *)this->fields.craftRewardDialog,
@@ -2092,14 +2092,14 @@ void EventCraftListViewManager__SetCraftObject(EventCraftListViewManager_o *this
       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
     v4 = UnityEngine_Object__Instantiate_object_(
            CraftItemNumConfirmDialog_k__BackingField,
-           (const MethodInfo_3169758 *)Method_UnityEngine_Object_Instantiate_GameObject___);
+           (const MethodInfo_3173FC0 *)Method_UnityEngine_Object_Instantiate_GameObject___);
     if ( !v4 )
       goto LABEL_44;
     v12 = UnityEngine_GameObject__GetComponent_object_(
             (UnityEngine_GameObject_o *)v4,
-            (const MethodInfo_3134970 *)Method_UnityEngine_GameObject_GetComponent_EventCraftNumConfirmDialogComponent___);
+            (const MethodInfo_313F1D8 *)Method_UnityEngine_GameObject_GetComponent_EventCraftNumConfirmDialogComponent___);
     this->fields.craftNumConfirmDialog = (struct EventCraftNumConfirmDialogComponent_o *)v12;
-    sub_1C32BC4(&this->fields.craftNumConfirmDialog, v12);
+    sub_1C36FFC(&this->fields.craftNumConfirmDialog, v12);
     EventCraftListViewManager__LocateDialogToCraftPanel(
       this,
       (UnityEngine_Component_o *)this->fields.craftNumConfirmDialog,
@@ -2119,14 +2119,14 @@ void EventCraftListViewManager__SetCraftObject(EventCraftListViewManager_o *this
       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
     v4 = UnityEngine_Object__Instantiate_object_(
            CraftItemWithdrawConfirmDialog_k__BackingField,
-           (const MethodInfo_3169758 *)Method_UnityEngine_Object_Instantiate_GameObject___);
+           (const MethodInfo_3173FC0 *)Method_UnityEngine_Object_Instantiate_GameObject___);
     if ( !v4 )
       goto LABEL_44;
     v17 = UnityEngine_GameObject__GetComponent_object_(
             (UnityEngine_GameObject_o *)v4,
-            (const MethodInfo_3134970 *)Method_UnityEngine_GameObject_GetComponent_EventCraftWithdrawConfirmDialogComponent___);
+            (const MethodInfo_313F1D8 *)Method_UnityEngine_GameObject_GetComponent_EventCraftWithdrawConfirmDialogComponent___);
     this->fields.craftWithdrawConfirmDialog = (struct EventCraftWithdrawConfirmDialogComponent_o *)v17;
-    sub_1C32BC4(&this->fields.craftWithdrawConfirmDialog, v17);
+    sub_1C36FFC(&this->fields.craftWithdrawConfirmDialog, v17);
     EventCraftListViewManager__LocateDialogToCraftPanel(
       this,
       (UnityEngine_Component_o *)this->fields.craftWithdrawConfirmDialog,
@@ -2146,14 +2146,14 @@ void EventCraftListViewManager__SetCraftObject(EventCraftListViewManager_o *this
       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
     v4 = UnityEngine_Object__Instantiate_object_(
            CraftUseSupportToolDialog_k__BackingField,
-           (const MethodInfo_3169758 *)Method_UnityEngine_Object_Instantiate_GameObject___);
+           (const MethodInfo_3173FC0 *)Method_UnityEngine_Object_Instantiate_GameObject___);
     if ( !v4 )
       goto LABEL_44;
     v22 = UnityEngine_GameObject__GetComponent_object_(
             (UnityEngine_GameObject_o *)v4,
-            (const MethodInfo_3134970 *)Method_UnityEngine_GameObject_GetComponent_EventCraftUseSupportToolDialogComponent___);
+            (const MethodInfo_313F1D8 *)Method_UnityEngine_GameObject_GetComponent_EventCraftUseSupportToolDialogComponent___);
     this->fields.craftUseSupportToolDialog = (struct EventCraftUseSupportToolDialogComponent_o *)v22;
-    sub_1C32BC4(&this->fields.craftUseSupportToolDialog, v22);
+    sub_1C36FFC(&this->fields.craftUseSupportToolDialog, v22);
     EventCraftListViewManager__LocateDialogToCraftPanel(
       this,
       (UnityEngine_Component_o *)this->fields.craftUseSupportToolDialog,
@@ -2173,14 +2173,14 @@ void EventCraftListViewManager__SetCraftObject(EventCraftListViewManager_o *this
         j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
       v4 = UnityEngine_Object__Instantiate_object_(
              CraftFirstTimeSupportToolDialog_k__BackingField,
-             (const MethodInfo_3169758 *)Method_UnityEngine_Object_Instantiate_GameObject___);
+             (const MethodInfo_3173FC0 *)Method_UnityEngine_Object_Instantiate_GameObject___);
       if ( v4 )
       {
         v27 = UnityEngine_GameObject__GetComponent_object_(
                 (UnityEngine_GameObject_o *)v4,
-                (const MethodInfo_3134970 *)Method_UnityEngine_GameObject_GetComponent_EventCraftFirstTimeSupportToolDialogComponent___);
+                (const MethodInfo_313F1D8 *)Method_UnityEngine_GameObject_GetComponent_EventCraftFirstTimeSupportToolDialogComponent___);
         this->fields.craftFirstTimeSupportToolDialog = (struct EventCraftFirstTimeSupportToolDialogComponent_o *)v27;
-        sub_1C32BC4(&this->fields.craftFirstTimeSupportToolDialog, v27);
+        sub_1C36FFC(&this->fields.craftFirstTimeSupportToolDialog, v27);
         EventCraftListViewManager__LocateDialogToCraftPanel(
           this,
           (UnityEngine_Component_o *)this->fields.craftFirstTimeSupportToolDialog,
@@ -2189,7 +2189,7 @@ void EventCraftListViewManager__SetCraftObject(EventCraftListViewManager_o *this
       }
     }
 LABEL_44:
-    sub_1C32E7C(v4);
+    sub_1C372B4(v4);
   }
 }
 
@@ -2209,19 +2209,19 @@ void EventCraftListViewManager__SetObjectItem(
   System_Action_object__o *v12; // x24
   System_Action_object__o *v13; // x25
 
-  if ( (byte_4C31C00 & 1) == 0 )
+  if ( (byte_4C3D1EA & 1) == 0 )
   {
-    sub_1C32C20(&System_Action_EventCraftListViewObject__TypeInfo);
-    sub_1C32C20(&System_Action_TypeInfo);
-    sub_1C32C20(&Method_EventCraftListViewManager_OnClickCraftStartButton__);
-    sub_1C32C20(&Method_EventCraftListViewManager_OnClickReceiveButton__);
-    sub_1C32C20(&Method_EventCraftListViewManager_OnClickReplenishmentButton__);
-    sub_1C32C20(&Method_EventCraftListViewManager_OnClickSupportToolButton__);
-    sub_1C32C20(&Method_EventCraftListViewManager_OnClickWithdrawalButton__);
-    sub_1C32C20(&Method_EventCraftListViewManager_OnMoveEnd__);
-    sub_1C32C20(&EventCraftListViewObject_TypeInfo);
-    sub_1C32C20(&UnityEngine_Object_TypeInfo);
-    byte_4C31C00 = 1;
+    sub_1C37058(&System_Action_EventCraftListViewObject__TypeInfo);
+    sub_1C37058(&System_Action_TypeInfo);
+    sub_1C37058(&Method_EventCraftListViewManager_OnClickCraftStartButton__);
+    sub_1C37058(&Method_EventCraftListViewManager_OnClickReceiveButton__);
+    sub_1C37058(&Method_EventCraftListViewManager_OnClickReplenishmentButton__);
+    sub_1C37058(&Method_EventCraftListViewManager_OnClickSupportToolButton__);
+    sub_1C37058(&Method_EventCraftListViewManager_OnClickWithdrawalButton__);
+    sub_1C37058(&Method_EventCraftListViewManager_OnMoveEnd__);
+    sub_1C37058(&EventCraftListViewObject_TypeInfo);
+    sub_1C37058(&UnityEngine_Object_TypeInfo);
+    byte_4C3D1EA = 1;
   }
   if ( obj )
   {
@@ -2240,36 +2240,36 @@ void EventCraftListViewManager__SetObjectItem(
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   if ( !UnityEngine_Object__op_Equality((UnityEngine_Object_o *)obj, 0, 0) )
   {
-    v7 = (System_Action_o *)sub_1C32E6C(System_Action_TypeInfo);
+    v7 = (System_Action_o *)sub_1C372A4(System_Action_TypeInfo);
     System_Action___ctor(v7, (Il2CppObject *)this, Method_EventCraftListViewManager_OnMoveEnd__, 0);
     if ( !obj )
-      sub_1C32E7C(v8);
+      sub_1C372B4(v8);
     EventCraftListViewObject__Init((EventCraftListViewObject_o *)obj, 2, v7, 0);
-    v9 = (System_Action_object__o *)sub_1C32E6C(System_Action_EventCraftListViewObject__TypeInfo);
+    v9 = (System_Action_object__o *)sub_1C372A4(System_Action_EventCraftListViewObject__TypeInfo);
     System_Action_object____ctor(
       v9,
       (Il2CppObject *)this,
       (intptr_t)Method_EventCraftListViewManager_OnClickCraftStartButton__,
       0);
-    v10 = (System_Action_object__o *)sub_1C32E6C(System_Action_EventCraftListViewObject__TypeInfo);
+    v10 = (System_Action_object__o *)sub_1C372A4(System_Action_EventCraftListViewObject__TypeInfo);
     System_Action_object____ctor(
       v10,
       (Il2CppObject *)this,
       (intptr_t)Method_EventCraftListViewManager_OnClickReceiveButton__,
       0);
-    v11 = (System_Action_object__o *)sub_1C32E6C(System_Action_EventCraftListViewObject__TypeInfo);
+    v11 = (System_Action_object__o *)sub_1C372A4(System_Action_EventCraftListViewObject__TypeInfo);
     System_Action_object____ctor(
       v11,
       (Il2CppObject *)this,
       (intptr_t)Method_EventCraftListViewManager_OnClickReplenishmentButton__,
       0);
-    v12 = (System_Action_object__o *)sub_1C32E6C(System_Action_EventCraftListViewObject__TypeInfo);
+    v12 = (System_Action_object__o *)sub_1C372A4(System_Action_EventCraftListViewObject__TypeInfo);
     System_Action_object____ctor(
       v12,
       (Il2CppObject *)this,
       (intptr_t)Method_EventCraftListViewManager_OnClickWithdrawalButton__,
       0);
-    v13 = (System_Action_object__o *)sub_1C32E6C(System_Action_EventCraftListViewObject__TypeInfo);
+    v13 = (System_Action_object__o *)sub_1C372A4(System_Action_EventCraftListViewObject__TypeInfo);
     System_Action_object____ctor(
       v13,
       (Il2CppObject *)this,
@@ -2292,7 +2292,7 @@ void EventCraftListViewManager__SetReceiveAllButton(EventCraftListViewManager_o 
   int32_t currentEventId; // w20
   UISprite_o *receiveAllButtonSprite; // x21
   UILabel_o *receiveAllButtonLabel; // x20
-  __int64 receiveAllButton; // x0
+  System_String_o *receiveAllButton; // x0
   UnityEngine_Object_o *tradeButtonBlinkEffect; // x20
   const MethodInfo *v8; // x1
   struct EventCraftAssetManager_o *assetManager; // x8
@@ -2302,38 +2302,38 @@ void EventCraftListViewManager__SetReceiveAllButton(EventCraftListViewManager_o 
   Il2CppObject *v13; // x0
   UnityEngine_Transform_o *v14; // x21
 
-  if ( (byte_4C31BFC & 1) == 0 )
+  if ( (byte_4C3D1E6 & 1) == 0 )
   {
-    sub_1C32C20(&AtlasManager_TypeInfo);
-    sub_1C32C20(&LocalizationManager_TypeInfo);
-    sub_1C32C20(&Method_UnityEngine_Object_Instantiate_GameObject____78147088);
-    sub_1C32C20(&UnityEngine_Object_TypeInfo);
-    sub_1C32C20(&StringLiteral_3354/*"CHECK_TRADE_BUTTON_LABEL"*/);
-    sub_1C32C20(&StringLiteral_17486/*"btn_getreward"*/);
-    byte_4C31BFC = 1;
+    sub_1C37058(&AtlasManager_TypeInfo);
+    sub_1C37058(&LocalizationManager_TypeInfo);
+    sub_1C37058(&Method_UnityEngine_Object_Instantiate_GameObject____78192880);
+    sub_1C37058(&UnityEngine_Object_TypeInfo);
+    sub_1C37058(&StringLiteral_3354/*"CHECK_TRADE_BUTTON_LABEL"*/);
+    sub_1C37058(&StringLiteral_17488/*"btn_getreward"*/);
+    byte_4C3D1E6 = 1;
   }
   currentEventId = this->fields.currentEventId;
   receiveAllButtonSprite = this->fields.receiveAllButtonSprite;
   if ( !AtlasManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo);
-  AtlasManager__SetEventUI_40507600(currentEventId, receiveAllButtonSprite, (System_String_o *)StringLiteral_17486/*"btn_getreward"*/, 0);
+  AtlasManager__SetEventUI_40606984(currentEventId, receiveAllButtonSprite, (System_String_o *)StringLiteral_17488/*"btn_getreward"*/, 0);
   receiveAllButtonLabel = this->fields.receiveAllButtonLabel;
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-  receiveAllButton = (__int64)LocalizationManager__Get((System_String_o *)StringLiteral_3354/*"CHECK_TRADE_BUTTON_LABEL"*/, 0);
+  receiveAllButton = LocalizationManager__Get((System_String_o *)StringLiteral_3354/*"CHECK_TRADE_BUTTON_LABEL"*/, 0);
   if ( !receiveAllButtonLabel )
     goto LABEL_22;
-  UILabel__set_text(receiveAllButtonLabel, (System_String_o *)receiveAllButton, 0);
+  UILabel__set_text(receiveAllButtonLabel, receiveAllButton, 0);
   tradeButtonBlinkEffect = (UnityEngine_Object_o *)this->fields.tradeButtonBlinkEffect;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-  receiveAllButton = UnityEngine_Object__op_Equality(tradeButtonBlinkEffect, 0, 0);
-  if ( (receiveAllButton & 1) != 0 )
+  receiveAllButton = (System_String_o *)UnityEngine_Object__op_Equality(tradeButtonBlinkEffect, 0, 0);
+  if ( ((unsigned __int8)receiveAllButton & 1) != 0 )
   {
     assetManager = this->fields.assetManager;
     if ( assetManager )
     {
-      receiveAllButton = (__int64)this->fields.receiveAllButton;
+      receiveAllButton = (System_String_o *)this->fields.receiveAllButton;
       if ( receiveAllButton )
       {
         CraftButtonBlinkEffect_k__BackingField = (Il2CppObject *)assetManager->fields._CraftButtonBlinkEffect_k__BackingField;
@@ -2341,28 +2341,28 @@ void EventCraftListViewManager__SetReceiveAllButton(EventCraftListViewManager_o 
         transform = UnityEngine_Component__get_transform((UnityEngine_Component_o *)receiveAllButton, 0);
         if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
           j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-        v13 = UnityEngine_Object__Instantiate_object__51812484(
+        v13 = UnityEngine_Object__Instantiate_object__51855596(
                 CraftButtonBlinkEffect_k__BackingField,
                 transform,
-                (const MethodInfo_3169884 *)Method_UnityEngine_Object_Instantiate_GameObject____78147088);
+                (const MethodInfo_31740EC *)Method_UnityEngine_Object_Instantiate_GameObject____78192880);
         *p_tradeButtonBlinkEffect = (struct UnityEngine_GameObject_o *)v13;
-        sub_1C32BC4(&this->fields.tradeButtonBlinkEffect, v13);
-        receiveAllButton = (__int64)*p_tradeButtonBlinkEffect;
+        sub_1C36FFC(&this->fields.tradeButtonBlinkEffect, v13);
+        receiveAllButton = (System_String_o *)*p_tradeButtonBlinkEffect;
         if ( *p_tradeButtonBlinkEffect )
         {
-          receiveAllButton = (__int64)UnityEngine_GameObject__get_transform(
-                                        (UnityEngine_GameObject_o *)receiveAllButton,
-                                        0);
+          receiveAllButton = (System_String_o *)UnityEngine_GameObject__get_transform(
+                                                  (UnityEngine_GameObject_o *)receiveAllButton,
+                                                  0);
           v14 = (UnityEngine_Transform_o *)receiveAllButton;
-          if ( !byte_4C313D6 )
+          if ( !byte_4C3C926 )
           {
-            receiveAllButton = sub_1C32C20(&UnityEngine_Vector3_TypeInfo);
-            byte_4C313D6 = 1;
+            receiveAllButton = (System_String_o *)sub_1C37058(&UnityEngine_Vector3_TypeInfo);
+            byte_4C3C926 = 1;
           }
           if ( v14 )
           {
             UnityEngine_Transform__set_localScale(v14, UnityEngine_Vector3_TypeInfo->static_fields->oneVector, 0);
-            receiveAllButton = (__int64)*p_tradeButtonBlinkEffect;
+            receiveAllButton = (System_String_o *)*p_tradeButtonBlinkEffect;
             if ( *p_tradeButtonBlinkEffect )
             {
               UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)receiveAllButton, 0, 0);
@@ -2373,7 +2373,7 @@ void EventCraftListViewManager__SetReceiveAllButton(EventCraftListViewManager_o 
       }
     }
 LABEL_22:
-    sub_1C32E7C(receiveAllButton);
+    sub_1C372B4(receiveAllButton);
   }
 LABEL_21:
   EventCraftListViewManager__UpdateReceiveAllButtonState(this, v8);
@@ -2390,31 +2390,31 @@ void EventCraftListViewManager__TradeReceiveResponse(
   const MethodInfo *v7; // x2
   const MethodInfo *v8; // x2
 
-  if ( (byte_4C31C0C & 1) == 0 )
+  if ( (byte_4C3D1F6 & 1) == 0 )
   {
-    sub_1C32C20(&Method_JsonManager_DeserializeArray_EventCraftListViewManager_ResData___);
-    sub_1C32C20(&JsonManager_TypeInfo);
-    sub_1C32C20(&StringLiteral_22212/*"ng"*/);
-    sub_1C32C20(&StringLiteral_15802/*"["*/);
-    sub_1C32C20(&StringLiteral_16056/*"]"*/);
-    byte_4C31C0C = 1;
+    sub_1C37058(&Method_JsonManager_DeserializeArray_EventCraftListViewManager_ResData___);
+    sub_1C37058(&JsonManager_TypeInfo);
+    sub_1C37058(&StringLiteral_22215/*"ng"*/);
+    sub_1C37058(&StringLiteral_15804/*"["*/);
+    sub_1C37058(&StringLiteral_16058/*"]"*/);
+    byte_4C3D1F6 = 1;
   }
-  if ( !System_String__op_Equality(result, (System_String_o *)StringLiteral_22212/*"ng"*/, 0) )
+  if ( !System_String__op_Equality(result, (System_String_o *)StringLiteral_22215/*"ng"*/, 0) )
   {
-    v5 = (Il2CppObject *)System_String__Concat_63556792(
-                           (System_String_o *)StringLiteral_15802/*"["*/,
+    v5 = (Il2CppObject *)System_String__Concat_63599904(
+                           (System_String_o *)StringLiteral_15804/*"["*/,
                            result,
-                           (System_String_o *)StringLiteral_16056/*"]"*/,
+                           (System_String_o *)StringLiteral_16058/*"]"*/,
                            0);
     if ( !JsonManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(JsonManager_TypeInfo);
     v6 = JsonManager__DeserializeArray_object_(
            v5,
-           (const MethodInfo_314C85C *)Method_JsonManager_DeserializeArray_EventCraftListViewManager_ResData___);
+           (const MethodInfo_31570C4 *)Method_JsonManager_DeserializeArray_EventCraftListViewManager_ResData___);
     if ( !v6 )
-      sub_1C32E7C(0);
+      sub_1C372B4(0);
     if ( !LODWORD(v6->max_length) )
-      sub_1C32E84(v6);
+      sub_1C372BC(v6);
     EventCraftListViewManager__OpenRewardDialog(this, (EventCraftListViewManager_ResData_o *)v6->m_Items[0], v7);
     EventCraftListViewManager__ResponseCommonProcess(this, 1, v8);
   }
@@ -2431,12 +2431,12 @@ void EventCraftListViewManager__TradeReplenishmentResponse(
   unsigned int svtId; // w20
   const MethodInfo *v8; // x2
 
-  if ( (byte_4C31C11 & 1) == 0 )
+  if ( (byte_4C3D1FB & 1) == 0 )
   {
-    sub_1C32C20(&StringLiteral_22212/*"ng"*/);
-    byte_4C31C11 = 1;
+    sub_1C37058(&StringLiteral_22215/*"ng"*/);
+    byte_4C3D1FB = 1;
   }
-  if ( !System_String__op_Equality(result, (System_String_o *)StringLiteral_22212/*"ng"*/, 0) )
+  if ( !System_String__op_Equality(result, (System_String_o *)StringLiteral_22215/*"ng"*/, 0) )
   {
     selectTradeGoodsEntity = this->fields.selectTradeGoodsEntity;
     if ( !selectTradeGoodsEntity
@@ -2447,7 +2447,7 @@ void EventCraftListViewManager__TradeReplenishmentResponse(
                                                                 0),
           !playVoiceAction) )
     {
-      sub_1C32E7C(selectTradeGoodsEntity);
+      sub_1C372B4(selectTradeGoodsEntity);
     }
     ((void (__fastcall *)(intptr_t, _QWORD, EventTradeGoodsEntity_o *, _QWORD, intptr_t))playVoiceAction->fields.invoke_impl)(
       playVoiceAction->fields.method_code,
@@ -2467,12 +2467,12 @@ void EventCraftListViewManager__TradeSupportToolResponse(
 {
   const MethodInfo *v5; // x2
 
-  if ( (byte_4C31C18 & 1) == 0 )
+  if ( (byte_4C3D202 & 1) == 0 )
   {
-    sub_1C32C20(&StringLiteral_22212/*"ng"*/);
-    byte_4C31C18 = 1;
+    sub_1C37058(&StringLiteral_22215/*"ng"*/);
+    byte_4C3D202 = 1;
   }
-  if ( !System_String__op_Equality(result, (System_String_o *)StringLiteral_22212/*"ng"*/, 0) )
+  if ( !System_String__op_Equality(result, (System_String_o *)StringLiteral_22215/*"ng"*/, 0) )
     EventCraftListViewManager__ResponseCommonProcess(this, 0, v5);
 }
 
@@ -2497,22 +2497,22 @@ bool EventCraftListViewManager__TryGetAvailableStoreIdx(
   System_Int32_array *usedStoreIdx; // [xsp+10h] [xbp-70h] BYREF
   UserEventTradeEntity_o *entity; // [xsp+18h] [xbp-68h] BYREF
 
-  if ( (byte_4C31C04 & 1) == 0 )
+  if ( (byte_4C3D1EE & 1) == 0 )
   {
-    sub_1C32C20(&Method_BasicHelper_Any_int____78062168);
-    sub_1C32C20(&Method_DataManager_GetMaster_UserEventTradeMaster___);
-    sub_1C32C20(&DataManager_TypeInfo);
-    sub_1C32C20(&System_Func_int__bool__TypeInfo);
-    sub_1C32C20(&Method_EventCraftListViewManager___c__DisplayClass56_0__TryGetAvailableStoreIdx_b__0__);
-    sub_1C32C20(&EventCraftListViewManager___c__DisplayClass56_0_TypeInfo);
-    byte_4C31C04 = 1;
+    sub_1C37058(&Method_BasicHelper_Any_int____78107944);
+    sub_1C37058(&Method_DataManager_GetMaster_UserEventTradeMaster___);
+    sub_1C37058(&DataManager_TypeInfo);
+    sub_1C37058(&System_Func_int__bool__TypeInfo);
+    sub_1C37058(&Method_EventCraftListViewManager___c__DisplayClass56_0__TryGetAvailableStoreIdx_b__0__);
+    sub_1C37058(&EventCraftListViewManager___c__DisplayClass56_0_TypeInfo);
+    byte_4C3D1EE = 1;
   }
   usedStoreIdx = 0;
   entity = 0;
   *storeIdx = -1;
   if ( !DataManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-  Master_object = (UserEventTradeMaster_o *)DataManager__GetMaster_object_((const MethodInfo_30DD39C *)Method_DataManager_GetMaster_UserEventTradeMaster___);
+  Master_object = (UserEventTradeMaster_o *)DataManager__GetMaster_object_((const MethodInfo_30E7C04 *)Method_DataManager_GetMaster_UserEventTradeMaster___);
   if ( !Master_object )
     goto LABEL_26;
   Master_object = (UserEventTradeMaster_o *)UserEventTradeMaster__TryGetEntity(
@@ -2535,7 +2535,7 @@ bool EventCraftListViewManager__TryGetAvailableStoreIdx(
       v7 = 0;
       while ( 1 )
       {
-        v8 = (EventCraftListViewManager___c__DisplayClass56_0_o *)sub_1C32E6C(EventCraftListViewManager___c__DisplayClass56_0_TypeInfo);
+        v8 = (EventCraftListViewManager___c__DisplayClass56_0_o *)sub_1C372A4(EventCraftListViewManager___c__DisplayClass56_0_TypeInfo);
         EventCraftListViewManager___c__DisplayClass56_0___ctor(v8, 0);
         if ( v7 >= LODWORD(tradeStoreEntities->max_length) )
           goto LABEL_27;
@@ -2544,18 +2544,18 @@ bool EventCraftListViewManager__TryGetAvailableStoreIdx(
         v9 = tradeStoreEntities->m_Items[v7];
         v8->fields.storeEntity = v9;
         p_fields = &v8->fields;
-        sub_1C32BC4(&v8->fields, v9);
+        sub_1C36FFC(&v8->fields, v9);
         v11 = usedStoreIdx;
-        v12 = (System_Func_int__bool__o *)sub_1C32E6C(System_Func_int__bool__TypeInfo);
+        v12 = (System_Func_int__bool__o *)sub_1C372A4(System_Func_int__bool__TypeInfo);
         System_Func_int__bool____ctor(
           v12,
           (Il2CppObject *)v8,
           Method_EventCraftListViewManager___c__DisplayClass56_0__TryGetAvailableStoreIdx_b__0__,
           0);
-        Master_object = (UserEventTradeMaster_o *)BasicHelper__Any_int__51143952(
+        Master_object = (UserEventTradeMaster_o *)BasicHelper__Any_int__51187064(
                                                     v11,
                                                     (System_Func_T__bool__o *)v12,
-                                                    (const MethodInfo_30C6510 *)Method_BasicHelper_Any_int____78062168);
+                                                    (const MethodInfo_30D0D78 *)Method_BasicHelper_Any_int____78107944);
         if ( ((unsigned __int8)Master_object & 1) == 0 )
           break;
         if ( (__int64)++v7 >= SLODWORD(tradeStoreEntities->max_length) )
@@ -2567,7 +2567,7 @@ bool EventCraftListViewManager__TryGetAvailableStoreIdx(
         return 1;
       }
 LABEL_26:
-      sub_1C32E7C(Master_object);
+      sub_1C372B4(Master_object);
     }
     return 0;
   }
@@ -2579,7 +2579,7 @@ LABEL_26:
     return 0;
   if ( !(_DWORD)max_length )
 LABEL_27:
-    sub_1C32E84(Master_object);
+    sub_1C372BC(Master_object);
   v15 = v13->m_Items[0];
   if ( !v15 )
     goto LABEL_26;
@@ -2619,15 +2619,15 @@ void EventCraftListViewManager__UpdateCraftAbleCountLb(EventCraftListViewManager
   UserEventTradeEntity_o *entity; // [xsp+18h] [xbp-38h] BYREF
 
   v2 = this;
-  if ( (byte_4C31C1D & 1) == 0 )
+  if ( (byte_4C3D207 & 1) == 0 )
   {
-    sub_1C32C20(&Method_DataManager_GetMaster_UserEventTradeMaster___);
-    sub_1C32C20(&DataManager_TypeInfo);
-    sub_1C32C20(&int_TypeInfo);
-    sub_1C32C20(&LocalizationManager_TypeInfo);
-    sub_1C32C20(&StringLiteral_3914/*"CRAFT_EVENT_TITLE_QUOTA_NOTHING_LABEL"*/);
-    this = (EventCraftListViewManager_o *)sub_1C32C20(&StringLiteral_3913/*"CRAFT_EVENT_TITLE_QUOTA_LABEL"*/);
-    byte_4C31C1D = 1;
+    sub_1C37058(&Method_DataManager_GetMaster_UserEventTradeMaster___);
+    sub_1C37058(&DataManager_TypeInfo);
+    sub_1C37058(&int_TypeInfo);
+    sub_1C37058(&LocalizationManager_TypeInfo);
+    sub_1C37058(&StringLiteral_3914/*"CRAFT_EVENT_TITLE_QUOTA_NOTHING_LABEL"*/);
+    this = (EventCraftListViewManager_o *)sub_1C37058(&StringLiteral_3913/*"CRAFT_EVENT_TITLE_QUOTA_LABEL"*/);
+    byte_4C3D207 = 1;
   }
   usedStoreIdx = 0;
   entity = 0;
@@ -2637,7 +2637,7 @@ void EventCraftListViewManager__UpdateCraftAbleCountLb(EventCraftListViewManager
   max_length = tradeStoreEntities->max_length;
   if ( !DataManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-  this = (EventCraftListViewManager_o *)DataManager__GetMaster_object_((const MethodInfo_30DD39C *)Method_DataManager_GetMaster_UserEventTradeMaster___);
+  this = (EventCraftListViewManager_o *)DataManager__GetMaster_object_((const MethodInfo_30E7C04 *)Method_DataManager_GetMaster_UserEventTradeMaster___);
   if ( !this )
     goto LABEL_20;
   if ( !UserEventTradeMaster__TryGetEntity((UserEventTradeMaster_o *)this, &entity, v2->fields.currentEventId, 0) )
@@ -2668,10 +2668,10 @@ LABEL_12:
   v17 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v26, v11, v12, v13, v14, v15, v16);
   v25 = max_length;
   v24 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v25, v18, v19, v20, v21, v22, v23);
-  this = (EventCraftListViewManager_o *)System_String__Format_63559836(v10, v17, v24, 0);
+  this = (EventCraftListViewManager_o *)System_String__Format_63602948(v10, v17, v24, 0);
   if ( !craftAbleCountLb )
 LABEL_20:
-    sub_1C32E7C(this);
+    sub_1C372B4(this);
   UILabel__set_text(craftAbleCountLb, (System_String_o *)this, 0);
 }
 
@@ -2684,38 +2684,38 @@ void EventCraftListViewManager__UpdateListObject(EventCraftListViewManager_o *th
   EventCraftListViewItem_o *Item; // x0
   System_Collections_Generic_List_Enumerator_object__o v7; // [xsp+8h] [xbp-38h] BYREF
 
-  if ( (byte_4C31C01 & 1) == 0 )
+  if ( (byte_4C3D1EB & 1) == 0 )
   {
-    sub_1C32C20(&Method_System_Collections_Generic_List_Enumerator_EventCraftListViewObject__Dispose__);
-    sub_1C32C20(&Method_System_Collections_Generic_List_Enumerator_EventCraftListViewObject__MoveNext__);
-    sub_1C32C20(&Method_System_Collections_Generic_List_Enumerator_EventCraftListViewObject__get_Current__);
-    sub_1C32C20(&Method_System_Collections_Generic_List_EventCraftListViewObject__GetEnumerator__);
-    byte_4C31C01 = 1;
+    sub_1C37058(&Method_System_Collections_Generic_List_Enumerator_EventCraftListViewObject__Dispose__);
+    sub_1C37058(&Method_System_Collections_Generic_List_Enumerator_EventCraftListViewObject__MoveNext__);
+    sub_1C37058(&Method_System_Collections_Generic_List_Enumerator_EventCraftListViewObject__get_Current__);
+    sub_1C37058(&Method_System_Collections_Generic_List_EventCraftListViewObject__GetEnumerator__);
+    byte_4C3D1EB = 1;
   }
   memset(&v7, 0, sizeof(v7));
   ObjectList = (System_Collections_Generic_List_object__o *)EventCraftListViewManager__get_ObjectList(this, method);
   if ( !ObjectList )
-    sub_1C32E7C(0);
+    sub_1C372B4(0);
   System_Collections_Generic_List_object___GetEnumerator(
     (System_Collections_Generic_List_Enumerator_T__o *)&v7,
     ObjectList,
-    (const MethodInfo_37992B4 *)Method_System_Collections_Generic_List_EventCraftListViewObject__GetEnumerator__);
+    (const MethodInfo_37A3B1C *)Method_System_Collections_Generic_List_EventCraftListViewObject__GetEnumerator__);
   while ( 1 )
   {
     v4 = System_Collections_Generic_List_Enumerator_object___MoveNext(
            &v7,
-           (const MethodInfo_3522FA8 *)Method_System_Collections_Generic_List_Enumerator_EventCraftListViewObject__MoveNext__);
+           (const MethodInfo_352D810 *)Method_System_Collections_Generic_List_Enumerator_EventCraftListViewObject__MoveNext__);
     if ( !v4 )
       break;
     current = v7.fields._current;
     if ( !v7.fields._current )
-      sub_1C32E7C(v4);
+      sub_1C372B4(v4);
     Item = EventCraftListViewObject__GetItem((EventCraftListViewObject_o *)v7.fields._current, 0);
     EventCraftListViewObject__UpdateItem((EventCraftListViewObject_o *)current, Item, 0);
   }
   System_Collections_Generic_List_Enumerator_object___Dispose(
     &v7,
-    (const MethodInfo_3522FA4 *)Method_System_Collections_Generic_List_Enumerator_EventCraftListViewObject__Dispose__);
+    (const MethodInfo_352D80C *)Method_System_Collections_Generic_List_Enumerator_EventCraftListViewObject__Dispose__);
 }
 
 
@@ -2724,19 +2724,19 @@ void EventCraftListViewManager__UpdateNoticeButtonDisplay(EventCraftListViewMana
   UISprite_o *craftNoticeBtnSp; // x0
   __int64 *v4; // x8
 
-  if ( (byte_4C31C1C & 1) == 0 )
+  if ( (byte_4C3D206 & 1) == 0 )
   {
-    sub_1C32C20(&StringLiteral_17505/*"btn_on"*/);
-    sub_1C32C20(&StringLiteral_17504/*"btn_off"*/);
-    byte_4C31C1C = 1;
+    sub_1C37058(&StringLiteral_17507/*"btn_on"*/);
+    sub_1C37058(&StringLiteral_17506/*"btn_off"*/);
+    byte_4C3D206 = 1;
   }
   craftNoticeBtnSp = this->fields.craftNoticeBtnSp;
   if ( !craftNoticeBtnSp )
-    sub_1C32E7C(0);
+    sub_1C372B4(0);
   if ( this->fields.isButtonOn )
-    v4 = &StringLiteral_17505/*"btn_on"*/;
+    v4 = &StringLiteral_17507/*"btn_on"*/;
   else
-    v4 = &StringLiteral_17504/*"btn_off"*/;
+    v4 = &StringLiteral_17506/*"btn_off"*/;
   UISprite__set_spriteName(craftNoticeBtnSp, (System_String_o *)*v4, 0);
 }
 
@@ -2762,14 +2762,14 @@ void EventCraftListViewManager__UpdateReceiveAllButtonState(
   UnityEngine_Object_o *tradeButtonBlinkEffect; // x21
 
   v2 = this;
-  if ( (byte_4C31BFD & 1) == 0 )
+  if ( (byte_4C3D1E7 & 1) == 0 )
   {
-    sub_1C32C20(&Method_BasicHelper_Any_ListViewItem___);
-    sub_1C32C20(&System_Func_ListViewItem__bool__TypeInfo);
-    sub_1C32C20(&UnityEngine_Object_TypeInfo);
-    sub_1C32C20(&Method_EventCraftListViewManager___c__UpdateReceiveAllButtonState_b__49_0__);
-    this = (EventCraftListViewManager_o *)sub_1C32C20(&EventCraftListViewManager___c_TypeInfo);
-    byte_4C31BFD = 1;
+    sub_1C37058(&Method_BasicHelper_Any_ListViewItem___);
+    sub_1C37058(&System_Func_ListViewItem__bool__TypeInfo);
+    sub_1C37058(&UnityEngine_Object_TypeInfo);
+    sub_1C37058(&Method_EventCraftListViewManager___c__UpdateReceiveAllButtonState_b__49_0__);
+    this = (EventCraftListViewManager_o *)sub_1C37058(&EventCraftListViewManager___c_TypeInfo);
+    byte_4C3D1E7 = 1;
   }
   itemList = (System_Collections_Generic_List_T__o *)v2->fields.itemList;
   if ( !itemList )
@@ -2795,7 +2795,7 @@ LABEL_13:
       v4 = EventCraftListViewManager___c_TypeInfo;
     }
     v6 = (Il2CppObject *)v4->static_fields->__9;
-    _9__49_0 = (System_Func_object__bool__o *)sub_1C32E6C(System_Func_ListViewItem__bool__TypeInfo);
+    _9__49_0 = (System_Func_object__bool__o *)sub_1C372A4(System_Func_ListViewItem__bool__TypeInfo);
     System_Func_object__bool____ctor(
       _9__49_0,
       v6,
@@ -2803,12 +2803,12 @@ LABEL_13:
       0);
     static_fields = EventCraftListViewManager___c_TypeInfo->static_fields;
     static_fields->__9__49_0 = (struct System_Func_ListViewItem__bool__o *)_9__49_0;
-    sub_1C32BC4(&static_fields->__9__49_0, _9__49_0);
+    sub_1C36FFC(&static_fields->__9__49_0, _9__49_0);
   }
   this = (EventCraftListViewManager_o *)BasicHelper__Any_object_(
                                           itemList,
                                           (System_Func_T__bool__o *)_9__49_0,
-                                          (const MethodInfo_30C6790 *)Method_BasicHelper_Any_ListViewItem___);
+                                          (const MethodInfo_30D0FF8 *)Method_BasicHelper_Any_ListViewItem___);
   receiveAllButton = v2->fields.receiveAllButton;
   if ( ((unsigned __int8)this & 1) == 0 )
     goto LABEL_13;
@@ -2845,7 +2845,7 @@ LABEL_14:
       return;
     }
 LABEL_24:
-    sub_1C32E7C(this);
+    sub_1C372B4(this);
   }
 }
 
@@ -2861,35 +2861,35 @@ void EventCraftListViewManager__WithdrawalResponse(
   EventCraftListViewManager_ResData_o *v8; // x1
   struct BattleDropItem_array *resultTradeRewardInfos; // x8
 
-  if ( (byte_4C31C15 & 1) == 0 )
+  if ( (byte_4C3D1FF & 1) == 0 )
   {
-    sub_1C32C20(&Method_JsonManager_DeserializeArray_EventCraftListViewManager_ResData___);
-    sub_1C32C20(&JsonManager_TypeInfo);
-    sub_1C32C20(&StringLiteral_22212/*"ng"*/);
-    sub_1C32C20(&StringLiteral_15802/*"["*/);
-    sub_1C32C20(&StringLiteral_16056/*"]"*/);
-    byte_4C31C15 = 1;
+    sub_1C37058(&Method_JsonManager_DeserializeArray_EventCraftListViewManager_ResData___);
+    sub_1C37058(&JsonManager_TypeInfo);
+    sub_1C37058(&StringLiteral_22215/*"ng"*/);
+    sub_1C37058(&StringLiteral_15804/*"["*/);
+    sub_1C37058(&StringLiteral_16058/*"]"*/);
+    byte_4C3D1FF = 1;
   }
-  if ( !System_String__op_Equality(result, (System_String_o *)StringLiteral_22212/*"ng"*/, 0) )
+  if ( !System_String__op_Equality(result, (System_String_o *)StringLiteral_22215/*"ng"*/, 0) )
   {
-    v5 = (Il2CppObject *)System_String__Concat_63556792(
-                           (System_String_o *)StringLiteral_15802/*"["*/,
+    v5 = (Il2CppObject *)System_String__Concat_63599904(
+                           (System_String_o *)StringLiteral_15804/*"["*/,
                            result,
-                           (System_String_o *)StringLiteral_16056/*"]"*/,
+                           (System_String_o *)StringLiteral_16058/*"]"*/,
                            0);
     if ( !JsonManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(JsonManager_TypeInfo);
     v6 = JsonManager__DeserializeArray_object_(
            v5,
-           (const MethodInfo_314C85C *)Method_JsonManager_DeserializeArray_EventCraftListViewManager_ResData___);
+           (const MethodInfo_31570C4 *)Method_JsonManager_DeserializeArray_EventCraftListViewManager_ResData___);
     if ( !v6 )
       goto LABEL_13;
     if ( !LODWORD(v6->max_length) )
-      sub_1C32E84(v6);
+      sub_1C372BC(v6);
     v8 = (EventCraftListViewManager_ResData_o *)v6->m_Items[0];
     if ( !v8 || (resultTradeRewardInfos = v8->fields.resultTradeRewardInfos) == 0 )
 LABEL_13:
-      sub_1C32E7C(v6);
+      sub_1C372B4(v6);
     if ( resultTradeRewardInfos->max_length )
       EventCraftListViewManager__OpenRewardDialog(this, v8, v7);
     EventCraftListViewManager__ResponseCommonProcess(this, 0, v7);
@@ -2905,7 +2905,7 @@ void EventCraftListViewManager___OnClickCraftStartButton_b__57_0(
 
   maskPanel = this->fields.maskPanel;
   if ( !maskPanel )
-    sub_1C32E7C(0);
+    sub_1C372B4(0);
   UnityEngine_GameObject__SetActive(maskPanel, 0, 0);
 }
 
@@ -2924,7 +2924,7 @@ bool EventCraftListViewManager___OpenReplenishmentDialog_b__66_0(
     || (dropList = this->fields.dropList) == 0
     || (selectTradeGoodsEntity = v3->fields.selectTradeGoodsEntity) == 0 )
   {
-    sub_1C32E7C(this);
+    sub_1C372B4(this);
   }
   return LODWORD(dropList->fields._items) == selectTradeGoodsEntity->fields.id;
 }
@@ -2938,7 +2938,7 @@ int32_t EventCraftListViewManager__get_ItemBaseWindowHeight(
 
   currencyInfoController = this->fields.currencyInfoController;
   if ( !currencyInfoController )
-    sub_1C32E7C(this);
+    sub_1C372B4(this);
   return currencyInfoController->fields._ItemBaseWindowHeight_k__BackingField;
 }
 
@@ -2959,34 +2959,34 @@ System_Collections_Generic_List_EventCraftListViewObject__o *EventCraftListViewM
   System_Collections_Generic_IEnumerable_T__o *v12; // x20
   System_Action_object__o *v13; // x21
 
-  if ( (byte_4C31BF7 & 1) == 0 )
+  if ( (byte_4C3D1E1 & 1) == 0 )
   {
-    sub_1C32C20(&System_Action_GameObject__TypeInfo);
-    sub_1C32C20(&Method_BasicHelper_ForEach_GameObject___);
-    sub_1C32C20(&Method_System_Linq_Enumerable_ToList_GameObject___);
-    sub_1C32C20(&Method_System_Linq_Enumerable_Where_GameObject___);
-    sub_1C32C20(&System_Func_GameObject__bool__TypeInfo);
-    sub_1C32C20(&Method_System_Collections_Generic_List_EventCraftListViewObject___ctor__);
-    sub_1C32C20(&System_Collections_Generic_List_EventCraftListViewObject__TypeInfo);
-    sub_1C32C20(&Method_EventCraftListViewManager___c__get_ObjectList_b__41_0__);
-    sub_1C32C20(&Method_EventCraftListViewManager___c__DisplayClass41_0__get_ObjectList_b__1__);
-    sub_1C32C20(&EventCraftListViewManager___c__DisplayClass41_0_TypeInfo);
-    sub_1C32C20(&EventCraftListViewManager___c_TypeInfo);
-    byte_4C31BF7 = 1;
+    sub_1C37058(&System_Action_GameObject__TypeInfo);
+    sub_1C37058(&Method_BasicHelper_ForEach_GameObject___);
+    sub_1C37058(&Method_System_Linq_Enumerable_ToList_GameObject___);
+    sub_1C37058(&Method_System_Linq_Enumerable_Where_GameObject___);
+    sub_1C37058(&System_Func_GameObject__bool__TypeInfo);
+    sub_1C37058(&Method_System_Collections_Generic_List_EventCraftListViewObject___ctor__);
+    sub_1C37058(&System_Collections_Generic_List_EventCraftListViewObject__TypeInfo);
+    sub_1C37058(&Method_EventCraftListViewManager___c__get_ObjectList_b__41_0__);
+    sub_1C37058(&Method_EventCraftListViewManager___c__DisplayClass41_0__get_ObjectList_b__1__);
+    sub_1C37058(&EventCraftListViewManager___c__DisplayClass41_0_TypeInfo);
+    sub_1C37058(&EventCraftListViewManager___c_TypeInfo);
+    byte_4C3D1E1 = 1;
   }
-  v3 = (EventCraftListViewManager___c__DisplayClass41_0_o *)sub_1C32E6C(EventCraftListViewManager___c__DisplayClass41_0_TypeInfo);
+  v3 = (EventCraftListViewManager___c__DisplayClass41_0_o *)sub_1C372A4(EventCraftListViewManager___c__DisplayClass41_0_TypeInfo);
   EventCraftListViewManager___c__DisplayClass41_0___ctor(v3, 0);
-  v4 = (System_Collections_Generic_List_object__o *)sub_1C32E6C(System_Collections_Generic_List_EventCraftListViewObject__TypeInfo);
+  v4 = (System_Collections_Generic_List_object__o *)sub_1C372A4(System_Collections_Generic_List_EventCraftListViewObject__TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v4,
-    (const MethodInfo_3797F88 *)Method_System_Collections_Generic_List_EventCraftListViewObject___ctor__);
+    (const MethodInfo_37A27F0 *)Method_System_Collections_Generic_List_EventCraftListViewObject___ctor__);
   if ( !v3 )
-    sub_1C32E7C(v5);
+    sub_1C372B4(v5);
   v3->fields.list = (struct System_Collections_Generic_List_EventCraftListViewObject__o *)v4;
-  sub_1C32BC4(&v3->fields, v4);
+  sub_1C36FFC(&v3->fields, v4);
   v6 = System_Linq_Enumerable__ToList_object_(
          (System_Collections_Generic_IEnumerable_TSource__o *)this->fields.objectList,
-         (const MethodInfo_3121728 *)Method_System_Linq_Enumerable_ToList_GameObject___);
+         (const MethodInfo_312BF90 *)Method_System_Linq_Enumerable_ToList_GameObject___);
   v7 = EventCraftListViewManager___c_TypeInfo;
   v8 = (System_Collections_Generic_IEnumerable_TSource__o *)v6;
   if ( !EventCraftListViewManager___c_TypeInfo->_2.cctor_finished )
@@ -3003,17 +3003,17 @@ System_Collections_Generic_List_EventCraftListViewObject__o *EventCraftListViewM
       v7 = EventCraftListViewManager___c_TypeInfo;
     }
     v10 = (Il2CppObject *)v7->static_fields->__9;
-    _9__41_0 = (System_Func_object__bool__o *)sub_1C32E6C(System_Func_GameObject__bool__TypeInfo);
+    _9__41_0 = (System_Func_object__bool__o *)sub_1C372A4(System_Func_GameObject__bool__TypeInfo);
     System_Func_object__bool____ctor(_9__41_0, v10, Method_EventCraftListViewManager___c__get_ObjectList_b__41_0__, 0);
     static_fields = EventCraftListViewManager___c_TypeInfo->static_fields;
     static_fields->__9__41_0 = (struct System_Func_GameObject__bool__o *)_9__41_0;
-    sub_1C32BC4(&static_fields->__9__41_0, _9__41_0);
+    sub_1C36FFC(&static_fields->__9__41_0, _9__41_0);
   }
   v12 = (System_Collections_Generic_IEnumerable_T__o *)System_Linq_Enumerable__Where_object_(
                                                          v8,
                                                          (System_Func_TSource__bool__o *)_9__41_0,
-                                                         (const MethodInfo_3123BA8 *)Method_System_Linq_Enumerable_Where_GameObject___);
-  v13 = (System_Action_object__o *)sub_1C32E6C(System_Action_GameObject__TypeInfo);
+                                                         (const MethodInfo_312E410 *)Method_System_Linq_Enumerable_Where_GameObject___);
+  v13 = (System_Action_object__o *)sub_1C372A4(System_Action_GameObject__TypeInfo);
   System_Action_object____ctor(
     v13,
     (Il2CppObject *)v3,
@@ -3022,7 +3022,7 @@ System_Collections_Generic_List_EventCraftListViewObject__o *EventCraftListViewM
   BasicHelper__ForEach_object_(
     v12,
     (System_Action_T__o *)v13,
-    (const MethodInfo_30C93B0 *)Method_BasicHelper_ForEach_GameObject___);
+    (const MethodInfo_30D3C18 *)Method_BasicHelper_ForEach_GameObject___);
   return v3->fields.list;
 }
 
@@ -3059,13 +3059,13 @@ bool EventCraftListViewManager__CoFirstTimeDialogOpenAfterLoginBonus_d__45__Move
   struct EventCraftListViewManager_o *_4__this; // x20
 
   v2 = this;
-  if ( (byte_4C31C27 & 1) == 0 )
+  if ( (byte_4C3D211 & 1) == 0 )
   {
-    sub_1C32C20(&System_Func_bool__TypeInfo);
-    sub_1C32C20(&Method_EventCraftListViewManager___c__CoFirstTimeDialogOpenAfterLoginBonus_b__45_0__);
-    sub_1C32C20(&EventCraftListViewManager___c_TypeInfo);
-    this = (EventCraftListViewManager__CoFirstTimeDialogOpenAfterLoginBonus_d__45_o *)sub_1C32C20(&UnityEngine_WaitWhile_TypeInfo);
-    byte_4C31C27 = 1;
+    sub_1C37058(&System_Func_bool__TypeInfo);
+    sub_1C37058(&Method_EventCraftListViewManager___c__CoFirstTimeDialogOpenAfterLoginBonus_b__45_0__);
+    sub_1C37058(&EventCraftListViewManager___c_TypeInfo);
+    this = (EventCraftListViewManager__CoFirstTimeDialogOpenAfterLoginBonus_d__45_o *)sub_1C37058(&UnityEngine_WaitWhile_TypeInfo);
+    byte_4C3D211 = 1;
   }
   _1__state = v2->fields.__1__state;
   if ( _1__state == 1 )
@@ -3079,7 +3079,7 @@ bool EventCraftListViewManager__CoFirstTimeDialogOpenAfterLoginBonus_d__45__Move
             0),
           (this = (EventCraftListViewManager__CoFirstTimeDialogOpenAfterLoginBonus_d__45_o *)_4__this->fields.craftFirstTimeSupportToolDialog) == 0) )
     {
-      sub_1C32E7C(this);
+      sub_1C372B4(this);
     }
     EventCraftFirstTimeSupportToolDialogComponent__Open(
       (EventCraftFirstTimeSupportToolDialogComponent_o *)this,
@@ -3106,7 +3106,7 @@ bool EventCraftListViewManager__CoFirstTimeDialogOpenAfterLoginBonus_d__45__Move
       v4 = EventCraftListViewManager___c_TypeInfo;
     }
     v6 = (Il2CppObject *)v4->static_fields->__9;
-    _9__45_0 = (System_Func_bool__o *)sub_1C32E6C(System_Func_bool__TypeInfo);
+    _9__45_0 = (System_Func_bool__o *)sub_1C372A4(System_Func_bool__TypeInfo);
     System_Func_bool____ctor(
       _9__45_0,
       v6,
@@ -3114,13 +3114,13 @@ bool EventCraftListViewManager__CoFirstTimeDialogOpenAfterLoginBonus_d__45__Move
       0);
     static_fields = EventCraftListViewManager___c_TypeInfo->static_fields;
     static_fields->__9__45_0 = _9__45_0;
-    sub_1C32BC4(&static_fields->__9__45_0, _9__45_0);
+    sub_1C36FFC(&static_fields->__9__45_0, _9__45_0);
   }
-  v8 = (UnityEngine_WaitWhile_o *)sub_1C32E6C(UnityEngine_WaitWhile_TypeInfo);
+  v8 = (UnityEngine_WaitWhile_o *)sub_1C372A4(UnityEngine_WaitWhile_TypeInfo);
   UnityEngine_WaitWhile___ctor(v8, _9__45_0, 0);
   v2->fields.__2__current = (Il2CppObject *)v8;
   p__2__current = &v2->fields.__2__current;
-  sub_1C32BC4(p__2__current, v8);
+  sub_1C36FFC(p__2__current, v8);
   result = 1;
   *((_DWORD *)p__2__current - 2) = 1;
   return result;
@@ -3143,11 +3143,11 @@ void __noreturn EventCraftListViewManager__CoFirstTimeDialogOpenAfterLoginBonus_
   System_NotSupportedException_o *v3; // x19
   __int64 v4; // x0
 
-  v2 = sub_1C32C34(&System_NotSupportedException_TypeInfo);
-  v3 = (System_NotSupportedException_o *)sub_1C32E6C(v2);
+  v2 = sub_1C3706C(&System_NotSupportedException_TypeInfo);
+  v3 = (System_NotSupportedException_o *)sub_1C372A4(v2);
   System_NotSupportedException___ctor(v3, 0);
-  v4 = sub_1C32C34(&Method_EventCraftListViewManager__CoFirstTimeDialogOpenAfterLoginBonus_d__45_System_Collections_IEnumerator_Reset__);
-  sub_1C32D48(v3, v4);
+  v4 = sub_1C3706C(&Method_EventCraftListViewManager__CoFirstTimeDialogOpenAfterLoginBonus_d__45_System_Collections_IEnumerator_Reset__);
+  sub_1C37180(v3, v4);
 }
 
 
@@ -3171,15 +3171,15 @@ void EventCraftListViewManager___c___cctor(const MethodInfo *method)
 {
   Il2CppObject *v1; // x19
 
-  if ( (byte_4C31C1F & 1) == 0 )
+  if ( (byte_4C3D209 & 1) == 0 )
   {
-    sub_1C32C20(&EventCraftListViewManager___c_TypeInfo);
-    byte_4C31C1F = 1;
+    sub_1C37058(&EventCraftListViewManager___c_TypeInfo);
+    byte_4C3D209 = 1;
   }
-  v1 = (Il2CppObject *)sub_1C32E6C(EventCraftListViewManager___c_TypeInfo);
+  v1 = (Il2CppObject *)sub_1C372A4(EventCraftListViewManager___c_TypeInfo);
   System_Object___ctor(v1, 0);
   EventCraftListViewManager___c_TypeInfo->static_fields->__9 = (struct EventCraftListViewManager___c_o *)v1;
-  sub_1C32BC4(EventCraftListViewManager___c_TypeInfo->static_fields, v1);
+  sub_1C36FFC(EventCraftListViewManager___c_TypeInfo->static_fields, v1);
 }
 
 
@@ -3198,12 +3198,12 @@ bool EventCraftListViewManager___c___CoFirstTimeDialogOpenAfterLoginBonus_b__45_
   TerminalSceneComponent_c *v5; // x0
   struct TerminalSceneComponent_o *v6; // x8
 
-  if ( (byte_4C31C21 & 1) == 0 )
+  if ( (byte_4C3D20B & 1) == 0 )
   {
-    sub_1C32C20(&UnityEngine_Object_TypeInfo);
-    sub_1C32C20(&ScrTerminalMap_TypeInfo);
-    sub_1C32C20(&TerminalSceneComponent_TypeInfo);
-    byte_4C31C21 = 1;
+    sub_1C37058(&UnityEngine_Object_TypeInfo);
+    sub_1C37058(&ScrTerminalMap_TypeInfo);
+    sub_1C37058(&TerminalSceneComponent_TypeInfo);
+    byte_4C3D20B = 1;
   }
   if ( !ScrTerminalMap_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(ScrTerminalMap_TypeInfo);
@@ -3211,10 +3211,10 @@ bool EventCraftListViewManager___c___CoFirstTimeDialogOpenAfterLoginBonus_b__45_
     return 1;
   if ( !TerminalSceneComponent_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(TerminalSceneComponent_TypeInfo);
-  if ( !byte_4C319B6 )
+  if ( !byte_4C3CF06 )
   {
-    sub_1C32C20(&TerminalSceneComponent_TypeInfo);
-    byte_4C319B6 = 1;
+    sub_1C37058(&TerminalSceneComponent_TypeInfo);
+    byte_4C3CF06 = 1;
   }
   v3 = TerminalSceneComponent_TypeInfo;
   if ( !TerminalSceneComponent_TypeInfo->_2.cctor_finished )
@@ -3229,10 +3229,10 @@ bool EventCraftListViewManager___c___CoFirstTimeDialogOpenAfterLoginBonus_b__45_
     return 0;
   if ( !TerminalSceneComponent_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(TerminalSceneComponent_TypeInfo);
-  if ( !byte_4C319B6 )
+  if ( !byte_4C3CF06 )
   {
-    sub_1C32C20(&TerminalSceneComponent_TypeInfo);
-    byte_4C319B6 = 1;
+    sub_1C37058(&TerminalSceneComponent_TypeInfo);
+    byte_4C3CF06 = 1;
   }
   v5 = TerminalSceneComponent_TypeInfo;
   if ( !TerminalSceneComponent_TypeInfo->_2.cctor_finished )
@@ -3242,7 +3242,7 @@ bool EventCraftListViewManager___c___CoFirstTimeDialogOpenAfterLoginBonus_b__45_
   }
   v6 = v5->static_fields->mInstance;
   if ( !v6 )
-    sub_1C32E7C(v5);
+    sub_1C372B4(v5);
   return v6->fields._IsPlayingCampaignDirectBonus_k__BackingField;
 }
 
@@ -3254,10 +3254,10 @@ bool EventCraftListViewManager___c___UpdateReceiveAllButtonState_b__49_0(
 {
   __int64 naturalAligment; // x10
 
-  if ( (byte_4C31C22 & 1) == 0 )
+  if ( (byte_4C3D20C & 1) == 0 )
   {
-    sub_1C32C20(&EventCraftListViewItem_TypeInfo);
-    byte_4C31C22 = 1;
+    sub_1C37058(&EventCraftListViewItem_TypeInfo);
+    byte_4C3D20C = 1;
   }
   if ( !item )
     return 0;
@@ -3278,10 +3278,10 @@ bool EventCraftListViewManager___c___get_ObjectList_b__41_0(
         UnityEngine_GameObject_o *go,
         const MethodInfo *method)
 {
-  if ( (byte_4C31C20 & 1) == 0 )
+  if ( (byte_4C3D20A & 1) == 0 )
   {
-    sub_1C32C20(&UnityEngine_Object_TypeInfo);
-    byte_4C31C20 = 1;
+    sub_1C37058(&UnityEngine_Object_TypeInfo);
+    byte_4C3D20A = 1;
   }
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
@@ -3311,24 +3311,24 @@ void EventCraftListViewManager___c__DisplayClass41_0___get_ObjectList_b__1(
   Il2CppClass **v10; // x0
 
   v4 = this;
-  if ( (byte_4C31C23 & 1) == 0 )
+  if ( (byte_4C3D20D & 1) == 0 )
   {
-    sub_1C32C20(&Method_UnityEngine_GameObject_GetComponent_EventCraftListViewObject___);
-    this = (EventCraftListViewManager___c__DisplayClass41_0_o *)sub_1C32C20(&Method_System_Collections_Generic_List_EventCraftListViewObject__Add__);
-    byte_4C31C23 = 1;
+    sub_1C37058(&Method_UnityEngine_GameObject_GetComponent_EventCraftListViewObject___);
+    this = (EventCraftListViewManager___c__DisplayClass41_0_o *)sub_1C37058(&Method_System_Collections_Generic_List_EventCraftListViewObject__Add__);
+    byte_4C3D20D = 1;
   }
   if ( !go
     || (list = (System_Collections_Generic_List_object__o *)v4->fields.list,
         this = (EventCraftListViewManager___c__DisplayClass41_0_o *)UnityEngine_GameObject__GetComponent_object_(
                                                                       go,
-                                                                      (const MethodInfo_3134970 *)Method_UnityEngine_GameObject_GetComponent_EventCraftListViewObject___),
+                                                                      (const MethodInfo_313F1D8 *)Method_UnityEngine_GameObject_GetComponent_EventCraftListViewObject___),
         !list)
     || (items = list->fields._items,
         v7 = Method_System_Collections_Generic_List_EventCraftListViewObject__Add__,
         ++list->fields._version,
         !items) )
   {
-    sub_1C32E7C(this);
+    sub_1C372B4(this);
   }
   size = list->fields._size;
   v9 = this;
@@ -3337,14 +3337,14 @@ void EventCraftListViewManager___c__DisplayClass41_0___get_ObjectList_b__1(
     System_Collections_Generic_List_object___AddWithResize(
       list,
       (Il2CppObject *)this,
-      *(const MethodInfo_37987BC **)(*(_QWORD *)(v7[4] + 192LL) + 112LL));
+      *(const MethodInfo_37A3024 **)(*(_QWORD *)(v7[4] + 192LL) + 112LL));
   }
   else
   {
     list->fields._size = size + 1;
     v10 = &items->obj.klass + size;
     v10[4] = (Il2CppClass *)v9;
-    sub_1C32BC4(v10 + 4, v9);
+    sub_1C36FFC(v10 + 4, v9);
   }
 }
 
@@ -3363,7 +3363,7 @@ bool EventCraftListViewManager___c__DisplayClass44_0___Init_b__0(
         const MethodInfo *method)
 {
   if ( !x )
-    sub_1C32E7C(this);
+    sub_1C372B4(this);
   return ItemEntity__GetEventId(x, 0) == this->fields.eventId;
 }
 
@@ -3376,10 +3376,10 @@ void EventCraftListViewManager___c__DisplayClass44_0___Init_b__1(
   EventCraftListViewManager_o *v4; // x19
   System_Collections_IEnumerator_o *TimeDialogOpenAfterLoginBonus; // x1
 
-  if ( (byte_4C31C24 & 1) == 0 )
+  if ( (byte_4C3D20E & 1) == 0 )
   {
-    sub_1C32C20(&StringLiteral_4833/*"CraftFirstTimeSupportToolDisplay"*/);
-    byte_4C31C24 = 1;
+    sub_1C37058(&StringLiteral_4833/*"CraftFirstTimeSupportToolDisplay"*/);
+    byte_4C3D20E = 1;
   }
   _4__this = this->fields.__4__this;
   if ( !_4__this )
@@ -3393,7 +3393,7 @@ void EventCraftListViewManager___c__DisplayClass44_0___Init_b__1(
   if ( !_4__this )
     goto LABEL_12;
   EventCraftListViewManager__CreateList(_4__this, 0);
-  if ( UnityEngine_PlayerPrefs__GetInt_71181884((System_String_o *)StringLiteral_4833/*"CraftFirstTimeSupportToolDisplay"*/, 0) == 0
+  if ( UnityEngine_PlayerPrefs__GetInt_71224996((System_String_o *)StringLiteral_4833/*"CraftFirstTimeSupportToolDisplay"*/, 0) == 0
     && this->fields.isGetEntity )
   {
     _4__this = (EventCraftListViewManager_o *)this->fields.eventEntity;
@@ -3407,14 +3407,14 @@ void EventCraftListViewManager___c__DisplayClass44_0___Init_b__1(
       if ( v4 )
       {
         TimeDialogOpenAfterLoginBonus = EventCraftListViewManager__CoFirstTimeDialogOpenAfterLoginBonus(v4, 0);
-        UnityEngine_MonoBehaviour__StartCoroutine_71209212(
+        UnityEngine_MonoBehaviour__StartCoroutine_71252324(
           (UnityEngine_MonoBehaviour_o *)v4,
           TimeDialogOpenAfterLoginBonus,
           0);
         return;
       }
 LABEL_12:
-      sub_1C32E7C(_4__this);
+      sub_1C372B4(_4__this);
     }
   }
 }
@@ -3437,7 +3437,7 @@ bool EventCraftListViewManager___c__DisplayClass56_0___TryGetAvailableStoreIdx_b
 
   storeEntity = this->fields.storeEntity;
   if ( !storeEntity )
-    sub_1C32E7C(this);
+    sub_1C372B4(this);
   return storeEntity->fields.idx == idx;
 }
 
@@ -3474,7 +3474,7 @@ void EventCraftListViewManager___c__DisplayClass70_0___OnClickWithdrawalButton_b
       }
     }
 LABEL_8:
-    sub_1C32E7C(this);
+    sub_1C372B4(this);
   }
   if ( !_4__this )
     goto LABEL_8;
@@ -3503,22 +3503,22 @@ void EventCraftListViewManager___c__DisplayClass71_0___OpenReconfirmDialog_b__0(
   Il2CppObject *Instance; // x19
   System_Action_o *v8; // x20
 
-  if ( (byte_4C31C25 & 1) == 0 )
+  if ( (byte_4C3D20F & 1) == 0 )
   {
-    sub_1C32C20(&System_Action_TypeInfo);
-    sub_1C32C20(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
-    sub_1C32C20(&Method_EventCraftListViewManager___c__DisplayClass71_1__OpenReconfirmDialog_b__1__);
-    sub_1C32C20(&EventCraftListViewManager___c__DisplayClass71_1_TypeInfo);
-    byte_4C31C25 = 1;
+    sub_1C37058(&System_Action_TypeInfo);
+    sub_1C37058(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+    sub_1C37058(&Method_EventCraftListViewManager___c__DisplayClass71_1__OpenReconfirmDialog_b__1__);
+    sub_1C37058(&EventCraftListViewManager___c__DisplayClass71_1_TypeInfo);
+    byte_4C3D20F = 1;
   }
-  v5 = sub_1C32E6C(EventCraftListViewManager___c__DisplayClass71_1_TypeInfo);
+  v5 = sub_1C372A4(EventCraftListViewManager___c__DisplayClass71_1_TypeInfo);
   System_Object___ctor((Il2CppObject *)v5, 0);
   if ( !v5
     || (*(_QWORD *)(v5 + 24) = this,
-        sub_1C32BC4(v5 + 24, this),
+        sub_1C36FFC(v5 + 24, this),
         *(_BYTE *)(v5 + 16) = decide,
-        Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39E2904 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__),
-        v8 = (System_Action_o *)sub_1C32E6C(System_Action_TypeInfo),
+        Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39ED16C *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__),
+        v8 = (System_Action_o *)sub_1C372A4(System_Action_TypeInfo),
         System_Action___ctor(
           v8,
           (Il2CppObject *)v5,
@@ -3526,9 +3526,9 @@ void EventCraftListViewManager___c__DisplayClass71_0___OpenReconfirmDialog_b__0(
           0),
         !Instance) )
   {
-    sub_1C32E7C(v6);
+    sub_1C372B4(v6);
   }
-  CommonUI__CloseConfirmDialog_31191080((CommonUI_o *)Instance, v8, 0);
+  CommonUI__CloseConfirmDialog_31208544((CommonUI_o *)Instance, v8, 0);
 }
 
 
@@ -3540,7 +3540,7 @@ void EventCraftListViewManager___c__DisplayClass71_0___OpenReconfirmDialog_b__2(
 
   _4__this = this->fields.__4__this;
   if ( !_4__this )
-    sub_1C32E7C(0);
+    sub_1C372B4(0);
   EventCraftListViewManager__OnClickWithdrawalDecide(_4__this, this->fields.item, 0);
 }
 
@@ -3572,15 +3572,15 @@ void EventCraftListViewManager___c__DisplayClass71_1___OpenReconfirmDialog_b__1(
   EventCraftListViewManager___c__DisplayClass71_1_o *v14; // x19
 
   v2 = this;
-  if ( (byte_4C31C26 & 1) == 0 )
+  if ( (byte_4C3D210 & 1) == 0 )
   {
-    sub_1C32C20(&System_Action_TypeInfo);
-    sub_1C32C20(&LocalizationManager_TypeInfo);
-    sub_1C32C20(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
-    sub_1C32C20(&string_TypeInfo);
-    sub_1C32C20(&Method_EventCraftListViewManager___c__DisplayClass71_0__OpenReconfirmDialog_b__2__);
-    this = (EventCraftListViewManager___c__DisplayClass71_1_o *)sub_1C32C20(&StringLiteral_3908/*"CRAFT_EVENT_STATE_CHANGE_NOTIFICATION_DIALOG_MESSAGE"*/);
-    byte_4C31C26 = 1;
+    sub_1C37058(&System_Action_TypeInfo);
+    sub_1C37058(&LocalizationManager_TypeInfo);
+    sub_1C37058(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+    sub_1C37058(&string_TypeInfo);
+    sub_1C37058(&Method_EventCraftListViewManager___c__DisplayClass71_0__OpenReconfirmDialog_b__2__);
+    this = (EventCraftListViewManager___c__DisplayClass71_1_o *)sub_1C37058(&StringLiteral_3908/*"CRAFT_EVENT_STATE_CHANGE_NOTIFICATION_DIALOG_MESSAGE"*/);
+    byte_4C3D210 = 1;
   }
   CS___8__locals1 = v2->fields.CS___8__locals1;
   if ( !CS___8__locals1 )
@@ -3595,7 +3595,7 @@ void EventCraftListViewManager___c__DisplayClass71_1___OpenReconfirmDialog_b__1(
       goto LABEL_23;
     TradeGoodsEntity_k__BackingField = item->fields._TradeGoodsEntity_k__BackingField;
     _4__this->fields.selectTradeGoodsEntity = TradeGoodsEntity_k__BackingField;
-    this = (EventCraftListViewManager___c__DisplayClass71_1_o *)sub_1C32BC4(
+    this = (EventCraftListViewManager___c__DisplayClass71_1_o *)sub_1C36FFC(
                                                                   &_4__this->fields.selectTradeGoodsEntity,
                                                                   TradeGoodsEntity_k__BackingField);
     v7 = v2->fields.CS___8__locals1;
@@ -3621,9 +3621,9 @@ void EventCraftListViewManager___c__DisplayClass71_1___OpenReconfirmDialog_b__1(
         }
       }
 LABEL_23:
-      sub_1C32E7C(this);
+      sub_1C372B4(this);
     }
-    Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39E2904 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+    Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39ED16C *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
     Empty = string_TypeInfo->static_fields->Empty;
     if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
@@ -3637,14 +3637,14 @@ LABEL_23:
     v14 = this;
     if ( !monitor )
     {
-      monitor = (System_Action_o *)sub_1C32E6C(System_Action_TypeInfo);
+      monitor = (System_Action_o *)sub_1C372A4(System_Action_TypeInfo);
       System_Action___ctor(
         monitor,
         v12,
         Method_EventCraftListViewManager___c__DisplayClass71_0__OpenReconfirmDialog_b__2__,
         0);
       v12[2].monitor = monitor;
-      this = (EventCraftListViewManager___c__DisplayClass71_1_o *)sub_1C32BC4(&v12[2].monitor, monitor);
+      this = (EventCraftListViewManager___c__DisplayClass71_1_o *)sub_1C36FFC(&v12[2].monitor, monitor);
     }
     if ( !Instance )
       goto LABEL_23;

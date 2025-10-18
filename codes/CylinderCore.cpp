@@ -5,14 +5,14 @@ void CylinderCore___cctor(const MethodInfo *method)
   struct CylinderCore_StaticFields *v3; // x9
   struct CylinderCore_StaticFields *v4; // x8
 
-  if ( (byte_4C342BB & 1) == 0 )
+  if ( (byte_4C3F8A5 & 1) == 0 )
   {
-    sub_1C32C20(&CylinderCore_TypeInfo);
-    byte_4C342BB = 1;
+    sub_1C37058(&CylinderCore_TypeInfo);
+    byte_4C3F8A5 = 1;
   }
   v1 = CylinderCore_TypeInfo;
   static_fields = CylinderCore_TypeInfo->static_fields;
-  *(_OWORD *)&static_fields->BASE_ROT_X = xmmword_C0C210;
+  *(_OWORD *)&static_fields->BASE_ROT_X = xmmword_C0E190;
   static_fields->FOCUS_IN_POS.fields.z = 5.0;
   v3 = v1->static_fields;
   *(_QWORD *)&v3->FOCUS_OUT_POS.fields.x = 0xC3340000C3290000LL;
@@ -29,15 +29,15 @@ void CylinderCore___ctor(CylinderCore_o *this, const MethodInfo *method)
   int32_t v4; // w2
   const MethodInfo *v5; // x3
 
-  if ( (byte_4C342BA & 1) == 0 )
+  if ( (byte_4C3F8A4 & 1) == 0 )
   {
-    sub_1C32C20(&CylinderCore_StateMain_TypeInfo);
-    byte_4C342BA = 1;
+    sub_1C37058(&CylinderCore_StateMain_TypeInfo);
+    byte_4C3F8A4 = 1;
   }
-  v3 = (Il2CppObject *)sub_1C32E6C(CylinderCore_StateMain_TypeInfo);
+  v3 = (Il2CppObject *)sub_1C372A4(CylinderCore_StateMain_TypeInfo);
   System_Object___ctor(v3, 0);
   this->fields.mStateMain = (struct CylinderCore_StateMain_o *)v3;
-  sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.mStateMain, (int32_t)v3, v4, v5);
+  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.mStateMain, (int32_t)v3, v4, v5);
   BaseCore___ctor((BaseCore_o *)this, 0);
 }
 
@@ -64,32 +64,32 @@ void CylinderCore__Awake(CylinderCore_o *this, const MethodInfo *method)
   CylinderCore_c *klass; // x8
   UnityEngine_Quaternion_o localRotation; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 
-  if ( (byte_4C342B5 & 1) == 0 )
+  if ( (byte_4C3F89F & 1) == 0 )
   {
-    sub_1C32C20(&Method_CStateManager_CylinderCore___ctor__);
-    sub_1C32C20(&Method_CStateManager_CylinderCore__add__);
-    sub_1C32C20(&CStateManager_CylinderCore__TypeInfo);
-    sub_1C32C20(&Method_UnityEngine_GameObject_GetComponent_MeshRenderer___);
-    sub_1C32C20(&CylinderCore_StateNone_TypeInfo);
-    sub_1C32C20(&CylinderCore_StateZoomIn_TypeInfo);
-    sub_1C32C20(&CylinderCore_StateZoomOut_TypeInfo);
-    byte_4C342B5 = 1;
+    sub_1C37058(&Method_CStateManager_CylinderCore___ctor__);
+    sub_1C37058(&Method_CStateManager_CylinderCore__add__);
+    sub_1C37058(&CStateManager_CylinderCore__TypeInfo);
+    sub_1C37058(&Method_UnityEngine_GameObject_GetComponent_MeshRenderer___);
+    sub_1C37058(&CylinderCore_StateNone_TypeInfo);
+    sub_1C37058(&CylinderCore_StateZoomIn_TypeInfo);
+    sub_1C37058(&CylinderCore_StateZoomOut_TypeInfo);
+    byte_4C3F89F = 1;
   }
   p_mFSM = &this->fields.mFSM;
   mFSM = this->fields.mFSM;
   this->fields.mCoreType = 1;
   if ( !mFSM )
   {
-    v5 = (CStateManager_T__o *)sub_1C32E6C(CStateManager_CylinderCore__TypeInfo);
+    v5 = (CStateManager_T__o *)sub_1C372A4(CStateManager_CylinderCore__TypeInfo);
     CStateManager_object____ctor(
       v5,
       (Il2CppObject *)this,
       4,
-      (const MethodInfo_3322708 *)Method_CStateManager_CylinderCore___ctor__);
+      (const MethodInfo_332CF70 *)Method_CStateManager_CylinderCore___ctor__);
     this->fields.mFSM = (struct CStateManager_CylinderCore__o *)v5;
-    sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.mFSM, (int32_t)v5, v6, v7);
+    sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.mFSM, (int32_t)v5, v6, v7);
     v8 = (CStateManager_T__o *)this->fields.mFSM;
-    v9 = (Il2CppObject *)sub_1C32E6C(CylinderCore_StateNone_TypeInfo);
+    v9 = (Il2CppObject *)sub_1C372A4(CylinderCore_StateNone_TypeInfo);
     System_Object___ctor(v9, 0);
     if ( !v8 )
       goto LABEL_13;
@@ -97,7 +97,7 @@ void CylinderCore__Awake(CylinderCore_o *this, const MethodInfo *method)
       v8,
       0,
       (IState_T__o *)v9,
-      (const MethodInfo_33227B0 *)Method_CStateManager_CylinderCore__add__);
+      (const MethodInfo_332D018 *)Method_CStateManager_CylinderCore__add__);
     mEarthRoot = (CStateManager_T__o *)*p_mFSM;
     if ( !*p_mFSM )
       goto LABEL_13;
@@ -105,41 +105,41 @@ void CylinderCore__Awake(CylinderCore_o *this, const MethodInfo *method)
       mEarthRoot,
       1,
       (IState_T__o *)this->fields.mStateMain,
-      (const MethodInfo_33227B0 *)Method_CStateManager_CylinderCore__add__);
+      (const MethodInfo_332D018 *)Method_CStateManager_CylinderCore__add__);
     v11 = (CStateManager_T__o *)this->fields.mFSM;
-    v12 = (Il2CppObject *)sub_1C32E6C(CylinderCore_StateZoomIn_TypeInfo);
+    v12 = (Il2CppObject *)sub_1C372A4(CylinderCore_StateZoomIn_TypeInfo);
     System_Object___ctor(v12, 0);
     if ( !v11
       || (CStateManager_object___add(
             v11,
             2,
             (IState_T__o *)v12,
-            (const MethodInfo_33227B0 *)Method_CStateManager_CylinderCore__add__),
+            (const MethodInfo_332D018 *)Method_CStateManager_CylinderCore__add__),
           v13 = (CStateManager_T__o *)*p_mFSM,
-          v14 = (Il2CppObject *)sub_1C32E6C(CylinderCore_StateZoomOut_TypeInfo),
+          v14 = (Il2CppObject *)sub_1C372A4(CylinderCore_StateZoomOut_TypeInfo),
           System_Object___ctor(v14, 0),
           !v13) )
     {
 LABEL_13:
-      sub_1C32E7C(mEarthRoot);
+      sub_1C372B4(mEarthRoot);
     }
     CStateManager_object___add(
       v13,
       3,
       (IState_T__o *)v14,
-      (const MethodInfo_33227B0 *)Method_CStateManager_CylinderCore__add__);
+      (const MethodInfo_332D018 *)Method_CStateManager_CylinderCore__add__);
     CylinderCore__SetState(this, 0, v15);
   }
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
-  GameObjectExtensions__SetLocalScale_36038768(gameObject, 1.0, 0);
+  GameObjectExtensions__SetLocalScale_36134400(gameObject, 1.0, 0);
   mEarthRoot = (CStateManager_T__o *)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
   if ( !mEarthRoot )
     goto LABEL_13;
   Component_object = UnityEngine_GameObject__GetComponent_object_(
                        (UnityEngine_GameObject_o *)mEarthRoot,
-                       (const MethodInfo_3134970 *)Method_UnityEngine_GameObject_GetComponent_MeshRenderer___);
+                       (const MethodInfo_313F1D8 *)Method_UnityEngine_GameObject_GetComponent_MeshRenderer___);
   this->fields.mMeshRenderer = (struct UnityEngine_MeshRenderer_o *)Component_object;
-  sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.mMeshRenderer, (int32_t)Component_object, v18, v19);
+  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.mMeshRenderer, (int32_t)Component_object, v18, v19);
   mEarthRoot = (CStateManager_T__o *)this->fields.mEarthRoot;
   if ( !mEarthRoot )
     goto LABEL_13;
@@ -181,12 +181,12 @@ void CylinderCore__FocusInOut(CylinderCore_o *this, bool isFocusIn, bool isForce
   UnityEngine_Vector3_o v27; // 0:s3.4,4:s4.4,8:s5.4
 
   v7 = isFocusIn;
-  if ( (byte_4C342B4 & 1) == 0 )
+  if ( (byte_4C3F89E & 1) == 0 )
   {
-    sub_1C32C20(&CylinderCore_TypeInfo);
-    sub_1C32C20(&Method_TransitionCalculator_Vector3___ctor__);
-    sub_1C32C20(&TransitionCalculator_Vector3__TypeInfo);
-    byte_4C342B4 = 1;
+    sub_1C37058(&CylinderCore_TypeInfo);
+    sub_1C37058(&Method_TransitionCalculator_Vector3___ctor__);
+    sub_1C37058(&TransitionCalculator_Vector3__TypeInfo);
+    byte_4C3F89E = 1;
   }
   this->fields.mIsFocusIn = v7;
   if ( !CylinderCore_TypeInfo->_2.cctor_finished )
@@ -216,7 +216,7 @@ void CylinderCore__FocusInOut(CylinderCore_o *this, bool isFocusIn, bool isForce
     v19 = LocalPosition.fields.x;
     v20 = LocalPosition.fields.y;
     v21 = LocalPosition.fields.z;
-    v22 = (TransitionCalculator_Vector3__o *)sub_1C32E6C(TransitionCalculator_Vector3__TypeInfo);
+    v22 = (TransitionCalculator_Vector3__o *)sub_1C372A4(TransitionCalculator_Vector3__TypeInfo);
     v26.fields.x = v19;
     v26.fields.y = v20;
     v26.fields.z = v21;
@@ -230,12 +230,12 @@ void CylinderCore__FocusInOut(CylinderCore_o *this, bool isFocusIn, bool isForce
       v27,
       v14,
       v15,
-      (const MethodInfo_3A5BA98 *)Method_TransitionCalculator_Vector3___ctor__);
+      (const MethodInfo_3A66300 *)Method_TransitionCalculator_Vector3___ctor__);
     this->fields.focusInOutPositionCalculator = v23;
     p_focusInOutPositionCalculator = &this->fields.focusInOutPositionCalculator;
     v13 = (int)v23;
   }
-  sub_1C32BC4((CGThumbnailListItem_o *)p_focusInOutPositionCalculator, v13, v10, v11);
+  sub_1C36FFC((CGThumbnailListItem_o *)p_focusInOutPositionCalculator, v13, v10, v11);
 }
 
 
@@ -245,14 +245,14 @@ int32_t CylinderCore__GetState(CylinderCore_o *this, const MethodInfo *method)
   struct CStateManager_CylinderCore__o *mFSM; // x8
 
   v2 = this;
-  if ( (byte_4C342B8 & 1) == 0 )
+  if ( (byte_4C3F8A2 & 1) == 0 )
   {
-    this = (CylinderCore_o *)sub_1C32C20(&Method_CStateManager_CylinderCore__getState__);
-    byte_4C342B8 = 1;
+    this = (CylinderCore_o *)sub_1C37058(&Method_CStateManager_CylinderCore__getState__);
+    byte_4C3F8A2 = 1;
   }
   mFSM = v2->fields.mFSM;
   if ( !mFSM )
-    sub_1C32E7C(this);
+    sub_1C372B4(this);
   return mFSM->fields.m_state;
 }
 
@@ -269,7 +269,7 @@ float CylinderCore__GetStateMainInertialSpdOld(CylinderCore_o *this, const Metho
 
   mStateMain = this->fields.mStateMain;
   if ( !mStateMain )
-    sub_1C32E7C(this);
+    sub_1C372B4(this);
   return mStateMain->fields._InertialSpdOld_k__BackingField;
 }
 
@@ -281,7 +281,7 @@ void CylinderCore__OnPress(CylinderCore_o *this, const MethodInfo *method)
   mStateMain = this->fields.mStateMain;
   this->fields.mIsTouch = 1;
   if ( !mStateMain )
-    sub_1C32E7C(this);
+    sub_1C372B4(this);
   mStateMain->fields._InertialSpdOld_k__BackingField = mStateMain->fields.mInertialSpd;
 }
 
@@ -297,7 +297,7 @@ void CylinderCore__SetDisp(CylinderCore_o *this, bool is_disp, const MethodInfo 
         UnityEngine_Renderer__set_enabled(mMeshRenderer, is_disp, 0),
         (mMeshRenderer = (UnityEngine_Renderer_o *)this->fields.mEarthPointRoot) == 0) )
   {
-    sub_1C32E7C(mMeshRenderer);
+    sub_1C372B4(mMeshRenderer);
   }
   UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)mMeshRenderer, v5, 0);
 }
@@ -307,18 +307,18 @@ void CylinderCore__SetState(CylinderCore_o *this, int32_t state, const MethodInf
 {
   CStateManager_T__o *mFSM; // x0
 
-  if ( (byte_4C342B9 & 1) == 0 )
+  if ( (byte_4C3F8A3 & 1) == 0 )
   {
-    sub_1C32C20(&Method_CStateManager_CylinderCore__setState__);
-    byte_4C342B9 = 1;
+    sub_1C37058(&Method_CStateManager_CylinderCore__setState__);
+    byte_4C3F8A3 = 1;
   }
   mFSM = (CStateManager_T__o *)this->fields.mFSM;
   if ( !mFSM )
-    sub_1C32E7C(0);
+    sub_1C372B4(0);
   CStateManager_object___setState(
     mFSM,
     state,
-    (const MethodInfo_332283C *)Method_CStateManager_CylinderCore__setState__);
+    (const MethodInfo_332D0A4 *)Method_CStateManager_CylinderCore__setState__);
 }
 
 
@@ -356,17 +356,17 @@ void CylinderCore__Setup(
   float cosx; // [xsp+48h] [xbp-78h] BYREF
   float sinx; // [xsp+4Ch] [xbp-74h] BYREF
 
-  if ( (byte_4C342B7 & 1) == 0 )
+  if ( (byte_4C3F8A1 & 1) == 0 )
   {
-    sub_1C32C20(&Method_BaseCore_CreateEarthPoint_CylinderPoint___);
-    sub_1C32C20(&CylinderPoint_TypeInfo);
-    sub_1C32C20(&Method_System_Collections_Generic_List_Enumerator_MapControl_WarInfo__Dispose__);
-    sub_1C32C20(&Method_System_Collections_Generic_List_Enumerator_MapControl_WarInfo__MoveNext__);
-    sub_1C32C20(&Method_System_Collections_Generic_List_Enumerator_MapControl_WarInfo__get_Current__);
-    sub_1C32C20(&Method_System_Collections_Generic_List_MapControl_WarInfo__GetEnumerator__);
-    sub_1C32C20(&UnityEngine_Object_TypeInfo);
-    sub_1C32C20(&StringLiteral_8255/*"LAST_WAR_ID"*/);
-    byte_4C342B7 = 1;
+    sub_1C37058(&Method_BaseCore_CreateEarthPoint_CylinderPoint___);
+    sub_1C37058(&CylinderPoint_TypeInfo);
+    sub_1C37058(&Method_System_Collections_Generic_List_Enumerator_MapControl_WarInfo__Dispose__);
+    sub_1C37058(&Method_System_Collections_Generic_List_Enumerator_MapControl_WarInfo__MoveNext__);
+    sub_1C37058(&Method_System_Collections_Generic_List_Enumerator_MapControl_WarInfo__get_Current__);
+    sub_1C37058(&Method_System_Collections_Generic_List_MapControl_WarInfo__GetEnumerator__);
+    sub_1C37058(&UnityEngine_Object_TypeInfo);
+    sub_1C37058(&StringLiteral_8256/*"LAST_WAR_ID"*/);
+    byte_4C3F8A1 = 1;
   }
   memset(&v31, 0, sizeof(v31));
   BaseCore__SetTerminalData((BaseCore_o *)this, 0);
@@ -378,10 +378,10 @@ void CylinderCore__Setup(
     goto LABEL_36;
   UnityEngine_Transform__set_localRotation((UnityEngine_Transform_o *)mEarthRoot, this->fields.mRootQua, 0);
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
-  if ( !byte_4C313D1 )
+  if ( !byte_4C3C921 )
   {
-    sub_1C32C20(&UnityEngine_Vector3_TypeInfo);
-    byte_4C313D1 = 1;
+    sub_1C37058(&UnityEngine_Vector3_TypeInfo);
+    byte_4C3C921 = 1;
   }
   GameObjectExtensions__SetLocalEulerAngle(gameObject, UnityEngine_Vector3_TypeInfo->static_fields->zeroVector, 0);
   ((void (__fastcall *)(CylinderCore_o *, bool, __int64, const MethodInfo *))this->klass->vtable._4_FocusInOut.methodPtr)(
@@ -389,26 +389,26 @@ void CylinderCore__Setup(
     isFocusIn,
     1,
     this->klass->vtable._4_FocusInOut.method);
-  mEarthRoot = (UnityEngine_GameObject_o *)ConstantMaster__getValue((System_String_o *)StringLiteral_8255/*"LAST_WAR_ID"*/, 0);
+  mEarthRoot = (UnityEngine_GameObject_o *)ConstantMaster__getValue((System_String_o *)StringLiteral_8256/*"LAST_WAR_ID"*/, 0);
   if ( !warInfoList )
 LABEL_36:
-    sub_1C32E7C(mEarthRoot);
+    sub_1C372B4(mEarthRoot);
   v9 = (int)mEarthRoot;
   System_Collections_Generic_List_object___GetEnumerator(
     (System_Collections_Generic_List_Enumerator_T__o *)&v30,
     (System_Collections_Generic_List_object__o *)warInfoList,
-    (const MethodInfo_37992B4 *)Method_System_Collections_Generic_List_MapControl_WarInfo__GetEnumerator__);
+    (const MethodInfo_37A3B1C *)Method_System_Collections_Generic_List_MapControl_WarInfo__GetEnumerator__);
   v31 = v30;
   while ( 1 )
   {
     v10 = System_Collections_Generic_List_Enumerator_object___MoveNext(
             &v31,
-            (const MethodInfo_3522FA8 *)Method_System_Collections_Generic_List_Enumerator_MapControl_WarInfo__MoveNext__);
+            (const MethodInfo_352D810 *)Method_System_Collections_Generic_List_Enumerator_MapControl_WarInfo__MoveNext__);
     if ( !v10 )
       break;
     current = (MapControl_WarInfo_o *)v31.fields._current;
     if ( !v31.fields._current )
-      sub_1C32E7C(v10);
+      sub_1C372B4(v10);
     Mine = MapControl_WarInfo__GetMine((MapControl_WarInfo_o *)v31.fields._current, 0);
     v13 = Mine;
     if ( Mine )
@@ -427,7 +427,7 @@ LABEL_36:
         if ( max_length < 2 )
           goto LABEL_21;
         if ( (unsigned int)mCoreType >= max_length )
-          sub_1C32E84(PrioredCoordinates);
+          sub_1C372BC(PrioredCoordinates);
         v19 = PrioredCoordinates->m_Items[mCoreType];
         if ( v19 && SLODWORD(v19->max_length) >= 2 )
         {
@@ -442,9 +442,9 @@ LABEL_36:
             if ( EarthPoint->klass->_2.naturalAligment < (unsigned int)naturalAligment
               || (CylinderPoint_c *)EarthPoint->klass->_2.typeHierarchy[naturalAligment - 1] != CylinderPoint_TypeInfo )
             {
-              sub_1C3313C(EarthPoint);
+              sub_1C37574(EarthPoint);
 LABEL_39:
-              sub_1C32E7C(EarthPoint_object);
+              sub_1C372B4(EarthPoint_object);
             }
           }
           if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -460,7 +460,7 @@ LABEL_39:
                                   cosx * 143.0,
                                   (float)(v20 / 90.0) * 120.0,
                                   sinx * 143.0,
-                                  (const MethodInfo_30C547C *)Method_BaseCore_CreateEarthPoint_CylinderPoint___);
+                                  (const MethodInfo_30CFCE4 *)Method_BaseCore_CreateEarthPoint_CylinderPoint___);
             if ( !EarthPoint_object )
               goto LABEL_39;
             *((float *)&EarthPoint_object[7].klass + 1) = v27;
@@ -469,10 +469,10 @@ LABEL_39:
           else
           {
             if ( !v24 )
-              sub_1C32E7C(v26);
+              sub_1C372B4(v26);
             v29 = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)v24, 0);
             if ( !v29 )
-              sub_1C32E7C(0);
+              sub_1C372B4(0);
             UnityEngine_GameObject__SetActive(v29, IsWarOpen, 0);
           }
         }
@@ -486,7 +486,7 @@ LABEL_21:
   }
   System_Collections_Generic_List_Enumerator_object___Dispose(
     &v31,
-    (const MethodInfo_3522FA4 *)Method_System_Collections_Generic_List_Enumerator_MapControl_WarInfo__Dispose__);
+    (const MethodInfo_352D80C *)Method_System_Collections_Generic_List_Enumerator_MapControl_WarInfo__Dispose__);
 }
 
 
@@ -495,14 +495,14 @@ void CylinderCore__Update(CylinderCore_o *this, const MethodInfo *method)
   CStateManager_T__o *mFSM; // x0
   const MethodInfo *v4; // x2
 
-  if ( (byte_4C342B6 & 1) == 0 )
+  if ( (byte_4C3F8A0 & 1) == 0 )
   {
-    sub_1C32C20(&Method_CStateManager_CylinderCore__update__);
-    byte_4C342B6 = 1;
+    sub_1C37058(&Method_CStateManager_CylinderCore__update__);
+    byte_4C3F8A0 = 1;
   }
   mFSM = (CStateManager_T__o *)this->fields.mFSM;
   if ( mFSM )
-    CStateManager_object___update(mFSM, (const MethodInfo_3322818 *)Method_CStateManager_CylinderCore__update__);
+    CStateManager_object___update(mFSM, (const MethodInfo_332D080 *)Method_CStateManager_CylinderCore__update__);
   if ( this->fields.mIsReqZoomIn && CylinderCore__GetState(this, method) == 1 )
   {
     BaseCore__EndSlideServant((BaseCore_o *)this, 0);
@@ -517,10 +517,10 @@ CylinderPoint_o *CylinderCore__get_mFocusCylinderPoint(CylinderCore_o *this, con
   struct BaseEarthPoint_o *mFocusEarthPoint; // x8
   __int64 naturalAligment; // x11
 
-  if ( (byte_4C342B3 & 1) == 0 )
+  if ( (byte_4C3F89D & 1) == 0 )
   {
-    sub_1C32C20(&CylinderPoint_TypeInfo);
-    byte_4C342B3 = 1;
+    sub_1C37058(&CylinderPoint_TypeInfo);
+    byte_4C3F89D = 1;
   }
   mFocusEarthPoint = this->fields.mFocusEarthPoint;
   if ( !mFocusEarthPoint )
@@ -620,13 +620,13 @@ void CylinderCore_StateMain__update(CylinderCore_StateMain_o *this, CylinderCore
   UnityEngine_Vector3_o v26; // 0:s0.4,4:s1.4,8:s2.4
 
   v4 = this;
-  if ( (byte_4C342BC & 1) == 0 )
+  if ( (byte_4C3F8A6 & 1) == 0 )
   {
-    sub_1C32C20(&CTouch_TypeInfo);
-    sub_1C32C20(&CylinderCore_TypeInfo);
-    sub_1C32C20(&Method_TransitionCalculator_Vector3__IsFinished__);
-    this = (CylinderCore_StateMain_o *)sub_1C32C20(&Method_TransitionCalculator_Vector3__Update__);
-    byte_4C342BC = 1;
+    sub_1C37058(&CTouch_TypeInfo);
+    sub_1C37058(&CylinderCore_TypeInfo);
+    sub_1C37058(&Method_TransitionCalculator_Vector3__IsFinished__);
+    this = (CylinderCore_StateMain_o *)sub_1C37058(&Method_TransitionCalculator_Vector3__Update__);
+    byte_4C3F8A6 = 1;
   }
   if ( !that )
     goto LABEL_38;
@@ -639,10 +639,10 @@ void CylinderCore_StateMain__update(CylinderCore_StateMain_o *this, CylinderCore
     {
       if ( !CTouch_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(CTouch_TypeInfo);
-      if ( !byte_4C341F0 )
+      if ( !byte_4C3F7DA )
       {
-        sub_1C32C20(&CTouch_TypeInfo);
-        byte_4C341F0 = 1;
+        sub_1C37058(&CTouch_TypeInfo);
+        byte_4C3F7DA = 1;
       }
       v10 = CTouch_TypeInfo;
       if ( !CTouch_TypeInfo->_2.cctor_finished )
@@ -651,11 +651,11 @@ void CylinderCore_StateMain__update(CylinderCore_StateMain_o *this, CylinderCore
         v10 = CTouch_TypeInfo;
       }
       x = v10->static_fields->mScrPosDelta.fields.x;
-      if ( !byte_4C341F1 )
+      if ( !byte_4C3F7DB )
       {
-        sub_1C32C20(&CTouch_TypeInfo);
+        sub_1C37058(&CTouch_TypeInfo);
         v10 = CTouch_TypeInfo;
-        byte_4C341F1 = 1;
+        byte_4C3F7DB = 1;
       }
       if ( !v10->_2.cctor_finished )
       {
@@ -671,10 +671,10 @@ void CylinderCore_StateMain__update(CylinderCore_StateMain_o *this, CylinderCore
   else
   {
     mInertialSpd = v4->fields.mInertialSpd;
-    if ( !byte_4C313D5 )
+    if ( !byte_4C3C925 )
     {
-      sub_1C32C20(&UnityEngine_Mathf_TypeInfo);
-      byte_4C313D5 = 1;
+      sub_1C37058(&UnityEngine_Mathf_TypeInfo);
+      byte_4C3C925 = 1;
     }
     v6 = fmaxf(fabsf(mInertialSpd), 0.0) * 0.000001;
     static_fields = UnityEngine_Mathf_TypeInfo->static_fields;
@@ -710,7 +710,7 @@ void CylinderCore_StateMain__update(CylinderCore_StateMain_o *this, CylinderCore
   if ( focusInOutPositionCalculator
     && !TransitionCalculator_Vector3___IsFinished(
           focusInOutPositionCalculator,
-          (const MethodInfo_3A5BB94 *)Method_TransitionCalculator_Vector3__IsFinished__) )
+          (const MethodInfo_3A663FC *)Method_TransitionCalculator_Vector3__IsFinished__) )
   {
     this = (CylinderCore_StateMain_o *)that->fields.focusInOutPositionCalculator;
     if ( this )
@@ -718,12 +718,12 @@ void CylinderCore_StateMain__update(CylinderCore_StateMain_o *this, CylinderCore
       v21 = that->fields.mEarthRoot;
       *(UnityEngine_Vector3_o *)&v22 = TransitionCalculator_Vector3___Update(
                                          (TransitionCalculator_Vector3__o *)this,
-                                         (const MethodInfo_3A5BB24 *)Method_TransitionCalculator_Vector3__Update__);
+                                         (const MethodInfo_3A6638C *)Method_TransitionCalculator_Vector3__Update__);
       v25 = 1;
       goto LABEL_37;
     }
 LABEL_38:
-    sub_1C32E7C(this);
+    sub_1C372B4(this);
   }
   v21 = that->fields.mEarthRoot;
   v22 = that->fields.mFocusTgtPos.fields.x;
@@ -772,11 +772,11 @@ void CylinderCore_StateZoomIn__GoNext(CylinderCore_StateZoomIn_o *this, const Me
   CylinderCore_o *mCore; // x0
   struct CylinderCore_o *v5; // x8
 
-  if ( (byte_4C342BF & 1) == 0 )
+  if ( (byte_4C3F8A9 & 1) == 0 )
   {
-    sub_1C32C20(&Method_UnityEngine_GameObject_GetComponent_PlayMakerFSM___);
-    sub_1C32C20(&StringLiteral_6978/*"GO_NEXT"*/);
-    byte_4C342BF = 1;
+    sub_1C37058(&Method_UnityEngine_GameObject_GetComponent_PlayMakerFSM___);
+    sub_1C37058(&StringLiteral_6979/*"GO_NEXT"*/);
+    byte_4C3F8A9 = 1;
   }
   mCore = this->fields.mCore;
   if ( !mCore
@@ -784,14 +784,14 @@ void CylinderCore_StateZoomIn__GoNext(CylinderCore_StateZoomIn_o *this, const Me
     || (mCore = (CylinderCore_o *)v5->fields.mTerminalMap) == 0
     || (mCore = (CylinderCore_o *)UnityEngine_GameObject__GetComponent_object_(
                                     (UnityEngine_GameObject_o *)mCore,
-                                    (const MethodInfo_3134970 *)Method_UnityEngine_GameObject_GetComponent_PlayMakerFSM___)) == 0
+                                    (const MethodInfo_313F1D8 *)Method_UnityEngine_GameObject_GetComponent_PlayMakerFSM___)) == 0
     || (mCore = (CylinderCore_o *)PlayMakerFSM__get_Fsm((PlayMakerFSM_o *)mCore, 0)) == 0 )
   {
-    sub_1C32E7C(mCore);
+    sub_1C372B4(mCore);
   }
-  HutongGames_PlayMaker_Fsm__Event_66340872(
+  HutongGames_PlayMaker_Fsm__Event_66383984(
     (HutongGames_PlayMaker_Fsm_o *)mCore,
-    (System_String_o *)StringLiteral_6978/*"GO_NEXT"*/,
+    (System_String_o *)StringLiteral_6979/*"GO_NEXT"*/,
     0);
 }
 
@@ -841,33 +841,33 @@ void CylinderCore_StateZoomIn__begin(CylinderCore_StateZoomIn_o *this, CylinderC
   UnityEngine_Vector3_o localEulerAngles; // 0:s0.4,4:s1.4,8:s2.4
   UnityEngine_Vector3_o v46; // 0:s0.4,4:s1.4,8:s2.4
 
-  if ( (byte_4C342BD & 1) == 0 )
+  if ( (byte_4C3F8A7 & 1) == 0 )
   {
-    sub_1C32C20(&System_Action_TypeInfo);
-    sub_1C32C20(&CylinderCore_TypeInfo);
-    sub_1C32C20(&Method_GameObjectExtensions_SafeGetComponent_EasingObject___);
-    sub_1C32C20(&UnityEngine_Object_TypeInfo);
-    sub_1C32C20(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
-    sub_1C32C20(&Method_CylinderCore_StateZoomIn_GoNext__);
-    sub_1C32C20(&Method_CylinderCore_StateZoomIn_begin__);
-    sub_1C32C20(&TerminalPramsManager_TypeInfo);
-    sub_1C32C20(&Method_CylinderCore_StateZoomIn___c__DisplayClass3_0__begin_b__0__);
-    sub_1C32C20(&Method_CylinderCore_StateZoomIn___c__DisplayClass3_0__begin_b__1__);
-    sub_1C32C20(&CylinderCore_StateZoomIn___c__DisplayClass3_0_TypeInfo);
-    byte_4C342BD = 1;
+    sub_1C37058(&System_Action_TypeInfo);
+    sub_1C37058(&CylinderCore_TypeInfo);
+    sub_1C37058(&Method_GameObjectExtensions_SafeGetComponent_EasingObject___);
+    sub_1C37058(&UnityEngine_Object_TypeInfo);
+    sub_1C37058(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+    sub_1C37058(&Method_CylinderCore_StateZoomIn_GoNext__);
+    sub_1C37058(&Method_CylinderCore_StateZoomIn_begin__);
+    sub_1C37058(&TerminalPramsManager_TypeInfo);
+    sub_1C37058(&Method_CylinderCore_StateZoomIn___c__DisplayClass3_0__begin_b__0__);
+    sub_1C37058(&Method_CylinderCore_StateZoomIn___c__DisplayClass3_0__begin_b__1__);
+    sub_1C37058(&CylinderCore_StateZoomIn___c__DisplayClass3_0_TypeInfo);
+    byte_4C3F8A7 = 1;
   }
-  v5 = sub_1C32E6C(CylinderCore_StateZoomIn___c__DisplayClass3_0_TypeInfo);
+  v5 = sub_1C372A4(CylinderCore_StateZoomIn___c__DisplayClass3_0_TypeInfo);
   System_Object___ctor((Il2CppObject *)v5, 0);
   if ( !v5 )
     goto LABEL_58;
   *(_QWORD *)(v5 + 48) = that;
   v9 = (UnityEngine_Component_o **)(v5 + 48);
-  sub_1C32BC4((CGThumbnailListItem_o *)(v5 + 48), (int32_t)that, v7, v8);
+  sub_1C36FFC((CGThumbnailListItem_o *)(v5 + 48), (int32_t)that, v7, v8);
   *(_QWORD *)(v5 + 88) = this;
-  sub_1C32BC4((CGThumbnailListItem_o *)(v5 + 88), (int32_t)this, v10, v11);
+  sub_1C36FFC((CGThumbnailListItem_o *)(v5 + 88), (int32_t)this, v10, v11);
   v12 = *(struct CylinderCore_o **)(v5 + 48);
   this->fields.mCore = v12;
-  sub_1C32BC4((CGThumbnailListItem_o *)&this->fields, (int32_t)v12, v13, v14);
+  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields, (int32_t)v12, v13, v14);
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(TerminalPramsManager_TypeInfo);
   IntpTime_AutoResume = TerminalPramsManager__GetIntpTime_AutoResume(1.5, 0);
@@ -882,10 +882,10 @@ void CylinderCore_StateZoomIn__begin(CylinderCore_StateZoomIn_o *this, CylinderC
   {
     if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(TerminalPramsManager_TypeInfo);
-    if ( !byte_4C343D1 )
+    if ( !byte_4C3F9BB )
     {
-      sub_1C32C20(&TerminalPramsManager_TypeInfo);
-      byte_4C343D1 = 1;
+      sub_1C37058(&TerminalPramsManager_TypeInfo);
+      byte_4C3F9BB = 1;
     }
     v19 = TerminalPramsManager_TypeInfo;
     if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -900,11 +900,11 @@ void CylinderCore_StateZoomIn__begin(CylinderCore_StateZoomIn_o *this, CylinderC
     }
     v40 = Method_CylinderCore_StateZoomIn_begin__;
     if ( (*((_BYTE *)Method_CylinderCore_StateZoomIn_begin__ + 83) & 2) != 0 )
-      v40 = (_QWORD *)sub_1C32C38(Method_CylinderCore_StateZoomIn_begin__);
-    v41 = (System_Reflection_MethodBase_o *)sub_1C32C04(v40, v40[4]);
+      v40 = (_QWORD *)sub_1C37070(Method_CylinderCore_StateZoomIn_begin__);
+    v41 = (System_Reflection_MethodBase_o *)sub_1C3703C(v40, v40[4]);
     OverwriteAssetSoundName__PlayCommonSe(v41, 23, 0, 0);
-    Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39E2904 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
-    v43 = (System_Action_o *)sub_1C32E6C(System_Action_TypeInfo);
+    Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39ED16C *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+    v43 = (System_Action_o *)sub_1C372A4(System_Action_TypeInfo);
     System_Action___ctor(v43, (Il2CppObject *)this, Method_CylinderCore_StateZoomIn_GoNext__, 0);
     if ( Instance )
     {
@@ -912,7 +912,7 @@ void CylinderCore_StateZoomIn__begin(CylinderCore_StateZoomIn_o *this, CylinderC
       return;
     }
 LABEL_58:
-    sub_1C32E7C(transform);
+    sub_1C372B4(transform);
   }
   transform = *v9;
   if ( !*v9 )
@@ -920,9 +920,9 @@ LABEL_58:
   gameObject = UnityEngine_Component__get_gameObject(transform, 0);
   Component_object = GameObjectExtensions__SafeGetComponent_object_(
                        gameObject,
-                       (const MethodInfo_3136458 *)Method_GameObjectExtensions_SafeGetComponent_EasingObject___);
+                       (const MethodInfo_3140CC0 *)Method_GameObjectExtensions_SafeGetComponent_EasingObject___);
   *(_QWORD *)(v5 + 16) = Component_object;
-  sub_1C32BC4((CGThumbnailListItem_o *)(v5 + 16), (int32_t)Component_object, v22, v23);
+  sub_1C36FFC((CGThumbnailListItem_o *)(v5 + 16), (int32_t)Component_object, v22, v23);
   v24 = *(_QWORD *)(v5 + 48);
   if ( !v24 )
     goto LABEL_58;
@@ -985,10 +985,10 @@ LABEL_58:
     goto LABEL_58;
   v46 = UnityEngine_Transform__get_localEulerAngles((UnityEngine_Transform_o *)transform, 0);
   *(UnityEngine_Vector3_o *)(v5 + 64) = v46;
-  if ( !byte_4C313D1 )
+  if ( !byte_4C3C921 )
   {
-    sub_1C32C20(&UnityEngine_Vector3_TypeInfo);
-    byte_4C313D1 = 1;
+    sub_1C37058(&UnityEngine_Vector3_TypeInfo);
+    byte_4C3C921 = 1;
     v46.fields.x = *(float *)(v5 + 64);
   }
   static_fields = UnityEngine_Vector3_TypeInfo->static_fields;
@@ -1004,19 +1004,19 @@ LABEL_58:
     *(float *)(v5 + 64) = v46.fields.x + -360.0;
   v33 = *(EasingObject_o **)(v5 + 16);
   mSpdTime = this->fields.mSpdTime;
-  v35 = (System_Action_o *)sub_1C32E6C(System_Action_TypeInfo);
+  v35 = (System_Action_o *)sub_1C372A4(System_Action_TypeInfo);
   System_Action___ctor(v35, (Il2CppObject *)v5, Method_CylinderCore_StateZoomIn___c__DisplayClass3_0__begin_b__0__, 0);
-  v36 = (System_Action_o *)sub_1C32E6C(System_Action_TypeInfo);
+  v36 = (System_Action_o *)sub_1C372A4(System_Action_TypeInfo);
   System_Action___ctor(v36, (Il2CppObject *)v5, Method_CylinderCore_StateZoomIn___c__DisplayClass3_0__begin_b__1__, 0);
   if ( !v33 )
     goto LABEL_58;
   EasingObject__Play(v33, mSpdTime, v35, v36, 0.0, 0, 0);
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(TerminalPramsManager_TypeInfo);
-  if ( !byte_4C343D1 )
+  if ( !byte_4C3F9BB )
   {
-    sub_1C32C20(&TerminalPramsManager_TypeInfo);
-    byte_4C343D1 = 1;
+    sub_1C37058(&TerminalPramsManager_TypeInfo);
+    byte_4C3F9BB = 1;
   }
   v37 = TerminalPramsManager_TypeInfo;
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -1028,8 +1028,8 @@ LABEL_58:
   {
     v38 = Method_CylinderCore_StateZoomIn_begin__;
     if ( (*((_BYTE *)Method_CylinderCore_StateZoomIn_begin__ + 83) & 2) != 0 )
-      v38 = (_QWORD *)sub_1C32C38(Method_CylinderCore_StateZoomIn_begin__);
-    v39 = (System_Reflection_MethodBase_o *)sub_1C32C04(v38, v38[4]);
+      v38 = (_QWORD *)sub_1C37070(Method_CylinderCore_StateZoomIn_begin__);
+    v39 = (System_Reflection_MethodBase_o *)sub_1C3703C(v38, v38[4]);
     OverwriteAssetSoundName__PlayCommonSe(v39, 23, 0, 0);
     this->fields.mStartTime = UnityEngine_Time__get_realtimeSinceStartup(0);
   }
@@ -1049,23 +1049,23 @@ void CylinderCore_StateZoomIn__update(CylinderCore_StateZoomIn_o *this, Cylinder
   System_Action_o *v6; // x21
   __int64 v7; // x0
 
-  if ( (byte_4C342BE & 1) == 0 )
+  if ( (byte_4C3F8A8 & 1) == 0 )
   {
-    sub_1C32C20(&System_Action_TypeInfo);
-    sub_1C32C20(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
-    sub_1C32C20(&Method_CylinderCore_StateZoomIn_GoNext__);
-    byte_4C342BE = 1;
+    sub_1C37058(&System_Action_TypeInfo);
+    sub_1C37058(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+    sub_1C37058(&Method_CylinderCore_StateZoomIn_GoNext__);
+    byte_4C3F8A8 = 1;
   }
   if ( this->fields.mStartTime > 0.0 )
   {
     v4 = this->fields.mSpdTime - (float)(UnityEngine_Time__get_realtimeSinceStartup(0) - this->fields.mStartTime);
     if ( v4 <= 0.4 )
     {
-      Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39E2904 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
-      v6 = (System_Action_o *)sub_1C32E6C(System_Action_TypeInfo);
+      Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39ED16C *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+      v6 = (System_Action_o *)sub_1C372A4(System_Action_TypeInfo);
       System_Action___ctor(v6, (Il2CppObject *)this, Method_CylinderCore_StateZoomIn_GoNext__, 0);
       if ( !Instance )
-        sub_1C32E7C(v7);
+        sub_1C372B4(v7);
       CommonUI__maskFadeout((CommonUI_o *)Instance, 2, v4, v6, 0);
       this->fields.mStartTime = 0.0;
     }
@@ -1115,9 +1115,9 @@ void CylinderCore_StateZoomIn___c__DisplayClass3_0___begin_b__0(
     goto LABEL_13;
   mNow = eo->fields.mNow;
   v4 = this;
-  v5 = Easing__Func_49010964(this->fields.startPos.fields.x, this->fields.endPos.fields.x, mNow, 3, 0);
-  v6 = Easing__Func_49010964(v4->fields.startPos.fields.y, v4->fields.endPos.fields.y, mNow, 15, 0);
-  v7 = Easing__Func_49010964(v4->fields.startPos.fields.z, v4->fields.endPos.fields.z, mNow, 1, 0);
+  v5 = Easing__Func_49054076(this->fields.startPos.fields.x, this->fields.endPos.fields.x, mNow, 3, 0);
+  v6 = Easing__Func_49054076(v4->fields.startPos.fields.y, v4->fields.endPos.fields.y, mNow, 15, 0);
+  v7 = Easing__Func_49054076(v4->fields.startPos.fields.z, v4->fields.endPos.fields.z, mNow, 1, 0);
   that = v4->fields.that;
   if ( !that )
     goto LABEL_13;
@@ -1142,12 +1142,12 @@ void CylinderCore_StateZoomIn___c__DisplayClass3_0___begin_b__0(
   v12 = gameObject;
   if ( mNow < 0.0 )
     v11 = 0.0;
-  v13 = Easing__Func_49010964(v4->fields.startRotY, v4->fields.endRotY, v11, 6, 0);
+  v13 = Easing__Func_49054076(v4->fields.startRotY, v4->fields.endRotY, v11, 6, 0);
   GameObjectExtensions__SetLocalEulerAngleY(v12, v13, 0);
   v14 = v4->fields.that;
   if ( !v14 )
 LABEL_13:
-    sub_1C32E7C(this);
+    sub_1C372B4(this);
   mEarthRoot = v14->fields.mEarthRoot;
   v16 = fminf(mNow * 1.5, 1.0);
   if ( (float)(mNow * 1.5) < 0.0 )
@@ -1171,10 +1171,10 @@ void CylinderCore_StateZoomIn___c__DisplayClass3_0___begin_b__1(
   TerminalPramsManager_c *v7; // x0
 
   v2 = this;
-  if ( (byte_4C342C0 & 1) == 0 )
+  if ( (byte_4C3F8AA & 1) == 0 )
   {
-    this = (CylinderCore_StateZoomIn___c__DisplayClass3_0_o *)sub_1C32C20(&TerminalPramsManager_TypeInfo);
-    byte_4C342C0 = 1;
+    this = (CylinderCore_StateZoomIn___c__DisplayClass3_0_o *)sub_1C37058(&TerminalPramsManager_TypeInfo);
+    byte_4C3F8AA = 1;
   }
   that = v2->fields.that;
   if ( !that )
@@ -1207,10 +1207,10 @@ void CylinderCore_StateZoomIn___c__DisplayClass3_0___begin_b__1(
   GameObjectExtensions__SetLocalEulerAngleY(gameObject, v2->fields.endRotY, 0);
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(TerminalPramsManager_TypeInfo);
-  if ( !byte_4C343D1 )
+  if ( !byte_4C3F9BB )
   {
-    sub_1C32C20(&TerminalPramsManager_TypeInfo);
-    byte_4C343D1 = 1;
+    sub_1C37058(&TerminalPramsManager_TypeInfo);
+    byte_4C3F9BB = 1;
   }
   v7 = TerminalPramsManager_TypeInfo;
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -1227,7 +1227,7 @@ void CylinderCore_StateZoomIn___c__DisplayClass3_0___begin_b__1(
       return;
     }
 LABEL_20:
-    sub_1C32E7C(this);
+    sub_1C372B4(this);
   }
 }
 
@@ -1244,11 +1244,11 @@ void CylinderCore_StateZoomOut__GoNext(CylinderCore_StateZoomOut_o *this, const 
   CylinderCore_o *mCore; // x0
   struct CylinderCore_o *v5; // x8
 
-  if ( (byte_4C342C2 & 1) == 0 )
+  if ( (byte_4C3F8AC & 1) == 0 )
   {
-    sub_1C32C20(&Method_UnityEngine_GameObject_GetComponent_PlayMakerFSM___);
-    sub_1C32C20(&StringLiteral_6978/*"GO_NEXT"*/);
-    byte_4C342C2 = 1;
+    sub_1C37058(&Method_UnityEngine_GameObject_GetComponent_PlayMakerFSM___);
+    sub_1C37058(&StringLiteral_6979/*"GO_NEXT"*/);
+    byte_4C3F8AC = 1;
   }
   mCore = this->fields.mCore;
   if ( !mCore
@@ -1256,14 +1256,14 @@ void CylinderCore_StateZoomOut__GoNext(CylinderCore_StateZoomOut_o *this, const 
     || (mCore = (CylinderCore_o *)v5->fields.mTerminalMap) == 0
     || (mCore = (CylinderCore_o *)UnityEngine_GameObject__GetComponent_object_(
                                     (UnityEngine_GameObject_o *)mCore,
-                                    (const MethodInfo_3134970 *)Method_UnityEngine_GameObject_GetComponent_PlayMakerFSM___)) == 0
+                                    (const MethodInfo_313F1D8 *)Method_UnityEngine_GameObject_GetComponent_PlayMakerFSM___)) == 0
     || (mCore = (CylinderCore_o *)PlayMakerFSM__get_Fsm((PlayMakerFSM_o *)mCore, 0)) == 0 )
   {
-    sub_1C32E7C(mCore);
+    sub_1C372B4(mCore);
   }
-  HutongGames_PlayMaker_Fsm__Event_66340872(
+  HutongGames_PlayMaker_Fsm__Event_66383984(
     (HutongGames_PlayMaker_Fsm_o *)mCore,
-    (System_String_o *)StringLiteral_6978/*"GO_NEXT"*/,
+    (System_String_o *)StringLiteral_6979/*"GO_NEXT"*/,
     0);
 }
 
@@ -1320,32 +1320,32 @@ void CylinderCore_StateZoomOut__begin(
   __int64 v49; // [xsp+0h] [xbp-60h]
   UnityEngine_Vector3_o localPosition; // 0:s0.4,4:s1.4,8:s2.4
 
-  if ( (byte_4C342C1 & 1) == 0 )
+  if ( (byte_4C3F8AB & 1) == 0 )
   {
-    sub_1C32C20(&System_Action_TypeInfo);
-    sub_1C32C20(&CylinderCore_TypeInfo);
-    sub_1C32C20(&Method_GameObjectExtensions_SafeGetComponent_EasingObject___);
-    sub_1C32C20(&UnityEngine_Object_TypeInfo);
-    sub_1C32C20(&TerminalPramsManager_TypeInfo);
-    sub_1C32C20(&Method_CylinderCore_StateZoomOut___c__begin_b__1_0__);
-    sub_1C32C20(&Method_CylinderCore_StateZoomOut___c__DisplayClass1_0__begin_b__1__);
-    sub_1C32C20(&Method_CylinderCore_StateZoomOut___c__DisplayClass1_0__begin_b__2__);
-    sub_1C32C20(&CylinderCore_StateZoomOut___c__DisplayClass1_0_TypeInfo);
-    sub_1C32C20(&CylinderCore_StateZoomOut___c_TypeInfo);
-    byte_4C342C1 = 1;
+    sub_1C37058(&System_Action_TypeInfo);
+    sub_1C37058(&CylinderCore_TypeInfo);
+    sub_1C37058(&Method_GameObjectExtensions_SafeGetComponent_EasingObject___);
+    sub_1C37058(&UnityEngine_Object_TypeInfo);
+    sub_1C37058(&TerminalPramsManager_TypeInfo);
+    sub_1C37058(&Method_CylinderCore_StateZoomOut___c__begin_b__1_0__);
+    sub_1C37058(&Method_CylinderCore_StateZoomOut___c__DisplayClass1_0__begin_b__1__);
+    sub_1C37058(&Method_CylinderCore_StateZoomOut___c__DisplayClass1_0__begin_b__2__);
+    sub_1C37058(&CylinderCore_StateZoomOut___c__DisplayClass1_0_TypeInfo);
+    sub_1C37058(&CylinderCore_StateZoomOut___c_TypeInfo);
+    byte_4C3F8AB = 1;
   }
-  v5 = sub_1C32E6C(CylinderCore_StateZoomOut___c__DisplayClass1_0_TypeInfo);
+  v5 = sub_1C372A4(CylinderCore_StateZoomOut___c__DisplayClass1_0_TypeInfo);
   System_Object___ctor((Il2CppObject *)v5, 0);
   if ( !v5 )
     goto LABEL_39;
   *(_QWORD *)(v5 + 48) = that;
   v9 = (CylinderCore_o **)(v5 + 48);
-  sub_1C32BC4((CGThumbnailListItem_o *)(v5 + 48), (int32_t)that, v7, v8);
+  sub_1C36FFC((CGThumbnailListItem_o *)(v5 + 48), (int32_t)that, v7, v8);
   *(_QWORD *)(v5 + 80) = this;
-  sub_1C32BC4((CGThumbnailListItem_o *)(v5 + 80), (int32_t)this, v10, v11);
+  sub_1C36FFC((CGThumbnailListItem_o *)(v5 + 80), (int32_t)this, v10, v11);
   v12 = *(struct CylinderCore_o **)(v5 + 48);
   this->fields.mCore = v12;
-  sub_1C32BC4((CGThumbnailListItem_o *)&this->fields, (int32_t)v12, v13, v14);
+  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields, (int32_t)v12, v13, v14);
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(TerminalPramsManager_TypeInfo);
   IntpTime_AutoResume = TerminalPramsManager__GetIntpTime_AutoResume(1.5, 0);
@@ -1371,13 +1371,13 @@ void CylinderCore_StateZoomOut__begin(
       v18 = CylinderCore_StateZoomOut___c_TypeInfo;
     }
     v20 = (Il2CppObject *)v18->static_fields->__9;
-    _9__1_0 = (System_Action_o *)sub_1C32E6C(System_Action_TypeInfo);
+    _9__1_0 = (System_Action_o *)sub_1C372A4(System_Action_TypeInfo);
     System_Action___ctor(_9__1_0, v20, Method_CylinderCore_StateZoomOut___c__begin_b__1_0__, 0);
     static_fields = CylinderCore_StateZoomOut___c_TypeInfo->static_fields;
     static_fields->__9__1_0 = _9__1_0;
-    sub_1C32BC4((CGThumbnailListItem_o *)&static_fields->__9__1_0, (int32_t)_9__1_0, v22, v23);
+    sub_1C36FFC((CGThumbnailListItem_o *)&static_fields->__9__1_0, (int32_t)_9__1_0, v22, v23);
   }
-  TerminalSceneComponent__Fadein_WorldDisp_45202776(mTerminalScene, 0.4, _9__1_0, 0);
+  TerminalSceneComponent__Fadein_WorldDisp_45305704(mTerminalScene, 0.4, _9__1_0, 0);
   if ( !*v9 )
     goto LABEL_39;
   mFocusEarthPoint = (UnityEngine_Object_o *)(*v9)->fields.mFocusEarthPoint;
@@ -1394,9 +1394,9 @@ void CylinderCore_StateZoomOut__begin(
   gameObject = UnityEngine_Component__get_gameObject(transform, 0);
   Component_object = GameObjectExtensions__SafeGetComponent_object_(
                        gameObject,
-                       (const MethodInfo_3136458 *)Method_GameObjectExtensions_SafeGetComponent_EasingObject___);
+                       (const MethodInfo_3140CC0 *)Method_GameObjectExtensions_SafeGetComponent_EasingObject___);
   *(_QWORD *)(v5 + 16) = Component_object;
-  sub_1C32BC4((CGThumbnailListItem_o *)(v5 + 16), (int32_t)Component_object, v28, v29);
+  sub_1C36FFC((CGThumbnailListItem_o *)(v5 + 16), (int32_t)Component_object, v28, v29);
   transform = (UnityEngine_Component_o *)CylinderCore_TypeInfo;
   if ( !CylinderCore_TypeInfo->_2.cctor_finished )
   {
@@ -1443,10 +1443,10 @@ void CylinderCore_StateZoomOut__begin(
   if ( !transform )
     goto LABEL_39;
   GameObjectExtensions__SetLocalEulerAngleY(v39, *((float *)&transform[4].fields.m_CachedPtr + 1) + 90.0, 0);
-  if ( !byte_4C313D1 )
+  if ( !byte_4C3C921 )
   {
-    sub_1C32C20(&UnityEngine_Vector3_TypeInfo);
-    byte_4C313D1 = 1;
+    sub_1C37058(&UnityEngine_Vector3_TypeInfo);
+    byte_4C3C921 = 1;
   }
   v40 = UnityEngine_Vector3_TypeInfo->static_fields;
   z = v40->zeroVector.fields.z;
@@ -1465,13 +1465,13 @@ void CylinderCore_StateZoomOut__begin(
   *(_DWORD *)(v5 + 60) = 0;
   *(_DWORD *)(v5 + 56) = v45;
   *(_DWORD *)(v5 + 64) = v46;
-  v47 = (System_Action_o *)sub_1C32E6C(System_Action_TypeInfo);
+  v47 = (System_Action_o *)sub_1C372A4(System_Action_TypeInfo);
   System_Action___ctor(v47, (Il2CppObject *)v5, Method_CylinderCore_StateZoomOut___c__DisplayClass1_0__begin_b__1__, 0);
-  v48 = (System_Action_o *)sub_1C32E6C(System_Action_TypeInfo);
+  v48 = (System_Action_o *)sub_1C372A4(System_Action_TypeInfo);
   System_Action___ctor(v48, (Il2CppObject *)v5, Method_CylinderCore_StateZoomOut___c__DisplayClass1_0__begin_b__2__, 0);
   if ( !v44 )
 LABEL_39:
-    sub_1C32E7C(transform);
+    sub_1C372B4(transform);
   EasingObject__Play(v44, v17, v47, v48, 0.0, 0, 0);
 }
 
@@ -1497,15 +1497,15 @@ void CylinderCore_StateZoomOut___c___cctor(const MethodInfo *method)
   int32_t v2; // w2
   const MethodInfo *v3; // x3
 
-  if ( (byte_4C342C3 & 1) == 0 )
+  if ( (byte_4C3F8AD & 1) == 0 )
   {
-    sub_1C32C20(&CylinderCore_StateZoomOut___c_TypeInfo);
-    byte_4C342C3 = 1;
+    sub_1C37058(&CylinderCore_StateZoomOut___c_TypeInfo);
+    byte_4C3F8AD = 1;
   }
-  v1 = (Il2CppObject *)sub_1C32E6C(CylinderCore_StateZoomOut___c_TypeInfo);
+  v1 = (Il2CppObject *)sub_1C372A4(CylinderCore_StateZoomOut___c_TypeInfo);
   System_Object___ctor(v1, 0);
   CylinderCore_StateZoomOut___c_TypeInfo->static_fields->__9 = (struct CylinderCore_StateZoomOut___c_o *)v1;
-  sub_1C32BC4((CGThumbnailListItem_o *)CylinderCore_StateZoomOut___c_TypeInfo->static_fields, (int32_t)v1, v2, v3);
+  sub_1C36FFC((CGThumbnailListItem_o *)CylinderCore_StateZoomOut___c_TypeInfo->static_fields, (int32_t)v1, v2, v3);
 }
 
 
@@ -1555,9 +1555,9 @@ void CylinderCore_StateZoomOut___c__DisplayClass1_0___begin_b__1(
     goto LABEL_10;
   mNow = eo->fields.mNow;
   v4 = this;
-  v5 = Easing__Func_49010964(this->fields.startPos.fields.x, this->fields.endPos.fields.x, mNow, 3, 0);
-  v6 = Easing__Func_49010964(v4->fields.startPos.fields.y, v4->fields.endPos.fields.y, mNow, 15, 0);
-  v7 = Easing__Func_49010964(v4->fields.startPos.fields.z, v4->fields.endPos.fields.z, mNow, 2, 0);
+  v5 = Easing__Func_49054076(this->fields.startPos.fields.x, this->fields.endPos.fields.x, mNow, 3, 0);
+  v6 = Easing__Func_49054076(v4->fields.startPos.fields.y, v4->fields.endPos.fields.y, mNow, 15, 0);
+  v7 = Easing__Func_49054076(v4->fields.startPos.fields.z, v4->fields.endPos.fields.z, mNow, 2, 0);
   that = v4->fields.that;
   if ( !that )
     goto LABEL_10;
@@ -1587,9 +1587,9 @@ void CylinderCore_StateZoomOut___c__DisplayClass1_0___begin_b__1(
   this = (CylinderCore_StateZoomOut___c__DisplayClass1_0_o *)v4->fields.that;
   if ( !this )
 LABEL_10:
-    sub_1C32E7C(this);
+    sub_1C372B4(this);
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
-  v15 = Easing__Func_49010964(0.0, 1.0, mNow, 5, 0);
+  v15 = Easing__Func_49054076(0.0, 1.0, mNow, 5, 0);
   GameObjectExtensions__AddLocalEulerAngleY(gameObject, v15 * -0.4, 0);
 }
 
@@ -1622,7 +1622,7 @@ void CylinderCore_StateZoomOut___c__DisplayClass1_0___begin_b__2(
         (this = (CylinderCore_StateZoomOut___c__DisplayClass1_0_o *)v3->fields.__4__this) == 0) )
   {
 LABEL_9:
-    sub_1C32E7C(this);
+    sub_1C372B4(this);
   }
   CylinderCore_StateZoomOut__GoNext((CylinderCore_StateZoomOut_o *)this, v5);
 }

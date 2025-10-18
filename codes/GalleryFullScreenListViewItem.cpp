@@ -8,15 +8,15 @@ void GalleryFullScreenListViewItem___ctor(
   const MethodInfo *v7; // x3
   __int64 v8; // x0
 
-  ListViewItem___ctor_43702564((ListViewItem_o *)this, index, 0);
+  ListViewItem___ctor_43804668((ListViewItem_o *)this, index, 0);
   this->fields._GalleryResourceEntity_k__BackingField = galleryResourceEntity;
-  sub_1C32BC4(
+  sub_1C36FFC(
     (CGThumbnailListItem_o *)&this->fields._GalleryResourceEntity_k__BackingField,
     (int32_t)galleryResourceEntity,
     v6,
     v7);
   if ( !galleryResourceEntity )
-    sub_1C32E7C(v8);
+    sub_1C372B4(v8);
   this->fields._CurrentGalleryType_k__BackingField = galleryResourceEntity->fields.galleryType;
 }
 

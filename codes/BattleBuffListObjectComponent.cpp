@@ -1,9 +1,9 @@
 void BattleBuffListObjectComponent___cctor(const MethodInfo *method)
 {
-  if ( (byte_4C3ADC0 & 1) == 0 )
+  if ( (byte_4C463D4 & 1) == 0 )
   {
-    sub_1C32C20(&BattleBuffListObjectComponent_TypeInfo);
-    byte_4C3ADC0 = 1;
+    sub_1C37058(&BattleBuffListObjectComponent_TypeInfo);
+    byte_4C463D4 = 1;
   }
   BattleBuffListObjectComponent_TypeInfo->static_fields->DEFAULT_FONT_SIZE = 17;
 }
@@ -54,23 +54,23 @@ void BattleBuffListObjectComponent__SetData(
   int32_t count; // [xsp+8h] [xbp-38h] BYREF
   int32_t v37; // [xsp+Ch] [xbp-34h] BYREF
 
-  if ( (byte_4C3ADBE & 1) == 0 )
+  if ( (byte_4C463D2 & 1) == 0 )
   {
-    sub_1C32C20(&BattleBuffListObjectComponent_TypeInfo);
-    sub_1C32C20(&Method_DataManager_GetMaster_BuffMaster___);
-    sub_1C32C20(&DataManager_TypeInfo);
-    sub_1C32C20(&Method_DataMasterBase_BuffMaster__BuffEntity__int__GetEntity__);
-    sub_1C32C20(&int_TypeInfo);
-    sub_1C32C20(&LocalizationManager_TypeInfo);
-    sub_1C32C20(&StringLiteral_2706/*"BATTLE_BUFF_TURN"*/);
-    sub_1C32C20(&StringLiteral_1/*""*/);
-    sub_1C32C20(&StringLiteral_2700/*"BATTLE_BUFF_COUNT"*/);
-    sub_1C32C20(&StringLiteral_2699/*"BATTLE_BUFF_BOOST"*/);
-    byte_4C3ADBE = 1;
+    sub_1C37058(&BattleBuffListObjectComponent_TypeInfo);
+    sub_1C37058(&Method_DataManager_GetMaster_BuffMaster___);
+    sub_1C37058(&DataManager_TypeInfo);
+    sub_1C37058(&Method_DataMasterBase_BuffMaster__BuffEntity__int__GetEntity__);
+    sub_1C37058(&int_TypeInfo);
+    sub_1C37058(&LocalizationManager_TypeInfo);
+    sub_1C37058(&StringLiteral_2706/*"BATTLE_BUFF_TURN"*/);
+    sub_1C37058(&StringLiteral_1/*""*/);
+    sub_1C37058(&StringLiteral_2700/*"BATTLE_BUFF_COUNT"*/);
+    sub_1C37058(&StringLiteral_2699/*"BATTLE_BUFF_BOOST"*/);
+    byte_4C463D2 = 1;
   }
   if ( !DataManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-  Master_object = (DataMasterBase_TMaster__TEntity__PKType__o *)DataManager__GetMaster_object_((const MethodInfo_30DD39C *)Method_DataManager_GetMaster_BuffMaster___);
+  Master_object = (DataMasterBase_TMaster__TEntity__PKType__o *)DataManager__GetMaster_object_((const MethodInfo_30E7C04 *)Method_DataManager_GetMaster_BuffMaster___);
   if ( !buffData )
     goto LABEL_39;
   if ( !Master_object )
@@ -78,11 +78,11 @@ void BattleBuffListObjectComponent__SetData(
   Master_object = (DataMasterBase_TMaster__TEntity__PKType__o *)DataMasterBase_object__object__int___GetEntity(
                                                                   Master_object,
                                                                   buffData->fields.buffId,
-                                                                  (const MethodInfo_3396838 *)Method_DataMasterBase_BuffMaster__BuffEntity__int__GetEntity__);
+                                                                  (const MethodInfo_33A10A0 *)Method_DataMasterBase_BuffMaster__BuffEntity__int__GetEntity__);
   if ( !this->fields.buffIcon )
     goto LABEL_39;
   v6 = Master_object;
-  BattleServantBuffIconComponent__setIcon_47337456(this->fields.buffIcon, buffData, 0);
+  BattleServantBuffIconComponent__setIcon_47458360(this->fields.buffIcon, buffData, 0);
   if ( !v6 )
     goto LABEL_39;
   Master_object = (DataMasterBase_TMaster__TEntity__PKType__o *)this->fields.nameLabel;
@@ -167,7 +167,7 @@ void BattleBuffListObjectComponent__SetData(
       goto LABEL_38;
     }
 LABEL_39:
-    sub_1C32E7C(Master_object);
+    sub_1C372B4(Master_object);
   }
   atTurnCondensedScaleLabel = this->fields.atTurnCondensedScaleLabel;
   if ( !atTurnCondensedScaleLabel )
@@ -202,16 +202,16 @@ void BattleBuffListObjectComponent__SetInterval(
   Il2CppObject *v21; // x0
   int32_t v22; // [xsp+Ch] [xbp-24h] BYREF
 
-  if ( (byte_4C3ADBF & 1) == 0 )
+  if ( (byte_4C463D3 & 1) == 0 )
   {
-    sub_1C32C20(&int_TypeInfo);
-    sub_1C32C20(&LocalizationManager_TypeInfo);
-    sub_1C32C20(&UnityEngine_Object_TypeInfo);
-    sub_1C32C20(&StringLiteral_2704/*"BATTLE_BUFF_INTERVAL_REMAIN"*/);
-    sub_1C32C20(&StringLiteral_2705/*"BATTLE_BUFF_INTERVAL_TURN"*/);
-    sub_1C32C20(&StringLiteral_1/*""*/);
-    sub_1C32C20(&StringLiteral_2703/*"BATTLE_BUFF_INTERVAL_COUNT"*/);
-    byte_4C3ADBF = 1;
+    sub_1C37058(&int_TypeInfo);
+    sub_1C37058(&LocalizationManager_TypeInfo);
+    sub_1C37058(&UnityEngine_Object_TypeInfo);
+    sub_1C37058(&StringLiteral_2704/*"BATTLE_BUFF_INTERVAL_REMAIN"*/);
+    sub_1C37058(&StringLiteral_2705/*"BATTLE_BUFF_INTERVAL_TURN"*/);
+    sub_1C37058(&StringLiteral_1/*""*/);
+    sub_1C37058(&StringLiteral_2703/*"BATTLE_BUFF_INTERVAL_COUNT"*/);
+    byte_4C463D3 = 1;
   }
   remainLabel = (UnityEngine_Object_o *)this->fields.remainLabel;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -261,7 +261,7 @@ void BattleBuffListObjectComponent__SetInterval(
             }
           }
 LABEL_22:
-          sub_1C32E7C(v7);
+          sub_1C372B4(v7);
         }
       }
     }

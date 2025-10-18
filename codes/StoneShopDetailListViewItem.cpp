@@ -19,33 +19,33 @@ void StoneShopDetailListViewItem___ctor(
   const MethodInfo *v19; // x3
   int32_t v20; // [xsp+Ch] [xbp-24h] BYREF
 
-  if ( (byte_4C33D3D & 1) == 0 )
+  if ( (byte_4C3F3B5 & 1) == 0 )
   {
-    sub_1C32C20(&Method_DataManager_GetMaster_ItemMaster___);
-    sub_1C32C20(&DataManager_TypeInfo);
-    sub_1C32C20(&Method_DataMasterBase_ItemMaster__ItemEntity__int__GetEntity__);
-    sub_1C32C20(&int_TypeInfo);
-    sub_1C32C20(&LocalizationManager_TypeInfo);
-    sub_1C32C20(&StringLiteral_12386/*"STONE_SHOP_EXTRA_ITEM_NUM"*/);
-    byte_4C33D3D = 1;
+    sub_1C37058(&Method_DataManager_GetMaster_ItemMaster___);
+    sub_1C37058(&DataManager_TypeInfo);
+    sub_1C37058(&Method_DataMasterBase_ItemMaster__ItemEntity__int__GetEntity__);
+    sub_1C37058(&int_TypeInfo);
+    sub_1C37058(&LocalizationManager_TypeInfo);
+    sub_1C37058(&StringLiteral_12387/*"STONE_SHOP_EXTRA_ITEM_NUM"*/);
+    byte_4C3F3B5 = 1;
   }
-  ListViewItem___ctor_43702564((ListViewItem_o *)this, index, 0);
+  ListViewItem___ctor_43804668((ListViewItem_o *)this, index, 0);
   if ( giftEnt )
   {
     if ( !DataManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-    Master_object = DataManager__GetMaster_object_((const MethodInfo_30DD39C *)Method_DataManager_GetMaster_ItemMaster___);
+    Master_object = DataManager__GetMaster_object_((const MethodInfo_30E7C04 *)Method_DataManager_GetMaster_ItemMaster___);
     if ( !Master_object )
       goto LABEL_17;
     Master_object = DataMasterBase_object__object__int___GetEntity(
                       (DataMasterBase_TMaster__TEntity__PKType__o *)Master_object,
                       giftEnt->fields.objectId,
-                      (const MethodInfo_3396838 *)Method_DataMasterBase_ItemMaster__ItemEntity__int__GetEntity__);
+                      (const MethodInfo_33A10A0 *)Method_DataMasterBase_ItemMaster__ItemEntity__int__GetEntity__);
     if ( Master_object )
       Master_object = (Il2CppObject *)ItemEntity__GetImageId((ItemEntity_o *)Master_object, 0);
     if ( !this )
 LABEL_17:
-      sub_1C32E7C(Master_object);
+      sub_1C372B4(Master_object);
     this->fields._ImageId_k__BackingField = (int)Master_object;
     if ( giftEnt->fields.num <= 1 )
       num = -1;
@@ -53,12 +53,12 @@ LABEL_17:
       num = giftEnt->fields.num;
     if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-    v9 = LocalizationManager__Get((System_String_o *)StringLiteral_12386/*"STONE_SHOP_EXTRA_ITEM_NUM"*/, 0);
+    v9 = LocalizationManager__Get((System_String_o *)StringLiteral_12387/*"STONE_SHOP_EXTRA_ITEM_NUM"*/, 0);
     v20 = num;
     v16 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v20, v10, v11, v12, v13, v14, v15);
     v17 = System_String__Format(v9, v16, 0);
     this->fields._Message_k__BackingField = v17;
-    sub_1C32BC4((CGThumbnailListItem_o *)&this->fields._Message_k__BackingField, (int32_t)v17, v18, v19);
+    sub_1C36FFC((CGThumbnailListItem_o *)&this->fields._Message_k__BackingField, (int32_t)v17, v18, v19);
   }
 }
 
@@ -94,5 +94,5 @@ void StoneShopDetailListViewItem__set_Message(
   const MethodInfo *v3; // x3
 
   this->fields._Message_k__BackingField = value;
-  sub_1C32BC4((CGThumbnailListItem_o *)&this->fields._Message_k__BackingField, (int32_t)value, (int32_t)method, v3);
+  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields._Message_k__BackingField, (int32_t)value, (int32_t)method, v3);
 }

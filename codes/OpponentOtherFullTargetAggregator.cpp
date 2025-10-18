@@ -12,18 +12,18 @@ System_Int32_array *OpponentOtherFullTargetAggregator__GetCandidate(
   System_Func_int__bool__o *v4; // x21
   System_Collections_Generic_IEnumerable_TSource__o *v5; // x0
 
-  if ( (byte_4C3AB8C & 1) == 0 )
+  if ( (byte_4C46283 & 1) == 0 )
   {
-    sub_1C32C20(&Method_System_Linq_Enumerable_ToArray_int___);
-    sub_1C32C20(&Method_System_Linq_Enumerable_Where_int___);
-    sub_1C32C20(&System_Func_int__bool__TypeInfo);
-    sub_1C32C20(&Method_OpponentOtherFullTargetAggregator__GetCandidate_b__0_0__);
-    byte_4C3AB8C = 1;
+    sub_1C37058(&Method_System_Linq_Enumerable_ToArray_int___);
+    sub_1C37058(&Method_System_Linq_Enumerable_Where_int___);
+    sub_1C37058(&System_Func_int__bool__TypeInfo);
+    sub_1C37058(&Method_OpponentOtherFullTargetAggregator__GetCandidate_b__0_0__);
+    byte_4C46283 = 1;
   }
   Candidate = (System_Collections_Generic_IEnumerable_TSource__o *)OpponentFullTargetAggregator__GetCandidate(
                                                                      (OpponentFullTargetAggregator_o *)this,
                                                                      method);
-  v4 = (System_Func_int__bool__o *)sub_1C32E6C(System_Func_int__bool__TypeInfo);
+  v4 = (System_Func_int__bool__o *)sub_1C372A4(System_Func_int__bool__TypeInfo);
   System_Func_int__bool____ctor(
     v4,
     (Il2CppObject *)this,
@@ -32,10 +32,10 @@ System_Int32_array *OpponentOtherFullTargetAggregator__GetCandidate(
   v5 = System_Linq_Enumerable__Where_int_(
          Candidate,
          (System_Func_TSource__bool__o *)v4,
-         (const MethodInfo_3123600 *)Method_System_Linq_Enumerable_Where_int___);
+         (const MethodInfo_312DE68 *)Method_System_Linq_Enumerable_Where_int___);
   return System_Linq_Enumerable__ToArray_int_(
            v5,
-           (const MethodInfo_311C8F4 *)Method_System_Linq_Enumerable_ToArray_int___);
+           (const MethodInfo_312715C *)Method_System_Linq_Enumerable_ToArray_int___);
 }
 
 
@@ -48,6 +48,6 @@ bool OpponentOtherFullTargetAggregator___GetCandidate_b__0_0(
 
   args = this->fields.args;
   if ( !args )
-    sub_1C32E7C(this);
+    sub_1C372B4(this);
   return args->fields._targetId_k__BackingField != x;
 }

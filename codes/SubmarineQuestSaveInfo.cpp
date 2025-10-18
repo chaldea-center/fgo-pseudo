@@ -29,40 +29,40 @@ SubmarineQuestSaveInfo_o *SubmarineQuestSaveInfo__CreateBySaveValue(System_Strin
   bool v14; // w20
   __int64 v15; // x23
 
-  if ( (byte_4C34340 & 1) == 0 )
+  if ( (byte_4C3F92A & 1) == 0 )
   {
-    sub_1C32C20(&bool_TypeInfo);
-    sub_1C32C20(&SubmarineQuestSaveInfo_TypeInfo);
-    byte_4C34340 = 1;
+    sub_1C37058(&bool_TypeInfo);
+    sub_1C37058(&SubmarineQuestSaveInfo_TypeInfo);
+    byte_4C3F92A = 1;
   }
   IsNullOrEmpty = System_String__IsNullOrEmpty(value, 0);
   if ( IsNullOrEmpty )
     return SubmarineQuestSaveInfo__CreateDefault((const MethodInfo *)IsNullOrEmpty);
   if ( !value )
-    sub_1C32E7C(IsNullOrEmpty);
+    sub_1C372B4(IsNullOrEmpty);
   v5 = System_String__Split(value, 0x2Cu, 0, 0);
   v6 = v5;
   if ( !v5 )
-    sub_1C32E7C(0);
+    sub_1C372B4(0);
   if ( !LODWORD(v5->max_length) )
-    sub_1C32E84(v5);
+    sub_1C372BC(v5);
   v7 = System_Int32__Parse(v5->m_Items[0], 0);
   if ( LODWORD(v6->max_length) <= 1 )
-    sub_1C32E84(v7);
+    sub_1C372BC(v7);
   v8 = v7;
   v9 = System_Int32__Parse(v6->m_Items[1], 0);
   if ( LODWORD(v6->max_length) <= 2 )
-    sub_1C32E84(v9);
+    sub_1C372BC(v9);
   v10 = v9;
   v11 = v6->m_Items[2];
   if ( !bool_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(bool_TypeInfo);
   v12 = System_Boolean__Parse(v11, 0);
   if ( LODWORD(v6->max_length) <= 3 )
-    sub_1C32E84(v12);
+    sub_1C372BC(v12);
   v13 = v12;
   v14 = System_Boolean__Parse(v6->m_Items[3], 0);
-  v15 = sub_1C32E6C(SubmarineQuestSaveInfo_TypeInfo);
+  v15 = sub_1C372A4(SubmarineQuestSaveInfo_TypeInfo);
   System_Object___ctor((Il2CppObject *)v15, 0);
   *(_DWORD *)(v15 + 16) = v8;
   *(_DWORD *)(v15 + 20) = v10;
@@ -76,12 +76,12 @@ SubmarineQuestSaveInfo_o *SubmarineQuestSaveInfo__CreateDefault(const MethodInfo
 {
   __int64 v1; // x19
 
-  if ( (byte_4C3433F & 1) == 0 )
+  if ( (byte_4C3F929 & 1) == 0 )
   {
-    sub_1C32C20(&SubmarineQuestSaveInfo_TypeInfo);
-    byte_4C3433F = 1;
+    sub_1C37058(&SubmarineQuestSaveInfo_TypeInfo);
+    byte_4C3F929 = 1;
   }
-  v1 = sub_1C32E6C(SubmarineQuestSaveInfo_TypeInfo);
+  v1 = sub_1C372A4(SubmarineQuestSaveInfo_TypeInfo);
   System_Object___ctor((Il2CppObject *)v1, 0);
   *(_QWORD *)(v1 + 16) = -1;
   *(_WORD *)(v1 + 24) = 0;
@@ -116,39 +116,39 @@ System_String_o *SubmarineQuestSaveInfo__GetSaveValue(SubmarineQuestSaveInfo_o *
   _BYTE v26[4]; // [xsp+8h] [xbp-28h] BYREF
   int32_t QuestId_k__BackingField; // [xsp+Ch] [xbp-24h] BYREF
 
-  if ( (byte_4C3433E & 1) == 0 )
+  if ( (byte_4C3F928 & 1) == 0 )
   {
-    sub_1C32C20(&bool_TypeInfo);
-    sub_1C32C20(&string___TypeInfo);
-    sub_1C32C20(&StringLiteral_811/*","*/);
-    byte_4C3433E = 1;
+    sub_1C37058(&bool_TypeInfo);
+    sub_1C37058(&string___TypeInfo);
+    sub_1C37058(&StringLiteral_811/*","*/);
+    byte_4C3F928 = 1;
   }
   v26[0] = 0;
-  v3 = sub_1C32CC8(string___TypeInfo, 8);
+  v3 = sub_1C37100(string___TypeInfo, 8);
   QuestId_k__BackingField = this->fields._QuestId_k__BackingField;
   v4 = System_Int32__ToString((int32_t)&QuestId_k__BackingField, 0);
   if ( !v3 )
-    sub_1C32E7C(v4);
+    sub_1C372B4(v4);
   if ( !*(_DWORD *)(v3 + 24) )
     goto LABEL_15;
   *(_QWORD *)(v3 + 32) = v4;
-  sub_1C32BC4((CGThumbnailListItem_o *)(v3 + 32), (int32_t)v4, v5, v6);
+  sub_1C36FFC((CGThumbnailListItem_o *)(v3 + 32), (int32_t)v4, v5, v6);
   if ( *(_DWORD *)(v3 + 24) <= 1u )
     goto LABEL_15;
   v9 = StringLiteral_811/*","*/;
   *(_QWORD *)(v3 + 40) = StringLiteral_811/*","*/;
-  sub_1C32BC4((CGThumbnailListItem_o *)(v3 + 40), v9, v7, v8);
+  sub_1C36FFC((CGThumbnailListItem_o *)(v3 + 40), v9, v7, v8);
   QuestId_k__BackingField = this->fields._PhaseCnt_k__BackingField;
   v4 = System_Int32__ToString((int32_t)&QuestId_k__BackingField, 0);
   if ( *(_DWORD *)(v3 + 24) <= 2u )
     goto LABEL_15;
   *(_QWORD *)(v3 + 48) = v4;
-  sub_1C32BC4((CGThumbnailListItem_o *)(v3 + 48), (int32_t)v4, v10, v11);
+  sub_1C36FFC((CGThumbnailListItem_o *)(v3 + 48), (int32_t)v4, v10, v11);
   if ( *(_DWORD *)(v3 + 24) <= 3u )
     goto LABEL_15;
   v14 = StringLiteral_811/*","*/;
   *(_QWORD *)(v3 + 56) = StringLiteral_811/*","*/;
-  sub_1C32BC4((CGThumbnailListItem_o *)(v3 + 56), v14, v12, v13);
+  sub_1C36FFC((CGThumbnailListItem_o *)(v3 + 56), v14, v12, v13);
   v26[0] = this->fields._IsQuestClear_k__BackingField;
   if ( !bool_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(bool_TypeInfo);
@@ -156,25 +156,25 @@ System_String_o *SubmarineQuestSaveInfo__GetSaveValue(SubmarineQuestSaveInfo_o *
   if ( *(_DWORD *)(v3 + 24) <= 4u )
     goto LABEL_15;
   *(_QWORD *)(v3 + 64) = v4;
-  sub_1C32BC4((CGThumbnailListItem_o *)(v3 + 64), (int32_t)v4, v15, v16);
+  sub_1C36FFC((CGThumbnailListItem_o *)(v3 + 64), (int32_t)v4, v15, v16);
   if ( *(_DWORD *)(v3 + 24) <= 5u
     || (v19 = StringLiteral_811/*","*/,
         *(_QWORD *)(v3 + 72) = StringLiteral_811/*","*/,
-        sub_1C32BC4((CGThumbnailListItem_o *)(v3 + 72), v19, v17, v18),
+        sub_1C36FFC((CGThumbnailListItem_o *)(v3 + 72), v19, v17, v18),
         v26[0] = this->fields._IsQuestPhaseClear_k__BackingField,
         v4 = System_Boolean__ToString((bool)v26, 0),
         *(_DWORD *)(v3 + 24) <= 6u)
     || (*(_QWORD *)(v3 + 80) = v4,
-        sub_1C32BC4((CGThumbnailListItem_o *)(v3 + 80), (int32_t)v4, v20, v21),
+        sub_1C36FFC((CGThumbnailListItem_o *)(v3 + 80), (int32_t)v4, v20, v21),
         *(_DWORD *)(v3 + 24) <= 7u) )
   {
 LABEL_15:
-    sub_1C32E84(v4);
+    sub_1C372BC(v4);
   }
   v24 = StringLiteral_811/*","*/;
   *(_QWORD *)(v3 + 88) = StringLiteral_811/*","*/;
-  sub_1C32BC4((CGThumbnailListItem_o *)(v3 + 88), v24, v22, v23);
-  return System_String__Concat_63559060((System_String_array *)v3, 0);
+  sub_1C36FFC((CGThumbnailListItem_o *)(v3 + 88), v24, v22, v23);
+  return System_String__Concat_63602172((System_String_array *)v3, 0);
 }
 
 

@@ -16,11 +16,11 @@ void CharaGraphEquipListViewItem___ctor(
   CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_o v18; // [xsp+0h] [xbp-80h] BYREF
   CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_o v19; // [xsp+20h] [xbp-60h]
 
-  if ( (byte_4C36CA7 & 1) == 0 )
+  if ( (byte_4C42297 & 1) == 0 )
   {
-    sub_1C32C20(&Method_System_Linq_Enumerable_Contains_long___);
-    sub_1C32C20(&CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo);
-    byte_4C36CA7 = 1;
+    sub_1C37058(&Method_System_Linq_Enumerable_Contains_long___);
+    sub_1C37058(&CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo);
+    byte_4C42297 = 1;
   }
   CharaGraphServantListViewItemBase___ctor(
     (CharaGraphServantListViewItemBase_o *)this,
@@ -37,14 +37,14 @@ void CharaGraphEquipListViewItem___ctor(
   if ( !CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo);
   v18 = v19;
-  v11 = CodeStage_AntiCheat_ObscuredTypes_ObscuredLong__op_Implicit_48891308(&v18, 0);
+  v11 = CodeStage_AntiCheat_ObscuredTypes_ObscuredLong__op_Implicit_48934420(&v18, 0);
   if ( !this->fields._UserServantEntity_k__BackingField )
 LABEL_10:
-    sub_1C32E7C(v11);
+    sub_1C372B4(v11);
   v14 = v11;
   EquipCategoryIdList = UserServantEntity__GetEquipCategoryIdList(this->fields._UserServantEntity_k__BackingField, 1, 0);
   this->fields._EquipCategoryIdArray_k__BackingField = EquipCategoryIdList;
-  sub_1C32BC4(
+  sub_1C36FFC(
     (CGThumbnailListItem_o *)&this->fields._EquipCategoryIdArray_k__BackingField,
     (int32_t)EquipCategoryIdList,
     v16,
@@ -52,7 +52,7 @@ LABEL_10:
   if ( System_Linq_Enumerable__Contains_long_(
          (System_Collections_Generic_IEnumerable_TSource__o *)partyUserEquipList,
          v14,
-         (const MethodInfo_30FA598 *)Method_System_Linq_Enumerable_Contains_long___) )
+         (const MethodInfo_3104E00 *)Method_System_Linq_Enumerable_Contains_long___) )
   {
     this->fields._IsUse_k__BackingField = 1;
   }
@@ -75,7 +75,7 @@ void CharaGraphEquipListViewItem__set_EquipCategoryIdArray(
   const MethodInfo *v3; // x3
 
   this->fields._EquipCategoryIdArray_k__BackingField = value;
-  sub_1C32BC4(
+  sub_1C36FFC(
     (CGThumbnailListItem_o *)&this->fields._EquipCategoryIdArray_k__BackingField,
     (int32_t)value,
     (int32_t)method,

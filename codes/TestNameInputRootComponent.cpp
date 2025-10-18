@@ -8,22 +8,22 @@ void TestNameInputRootComponent__beginInitialize(TestNameInputRootComponent_o *t
 {
   Il2CppObject *Instance; // x0
 
-  if ( (byte_4C351BE & 1) == 0 )
+  if ( (byte_4C407A9 & 1) == 0 )
   {
-    sub_1C32C20(&Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__);
-    byte_4C351BE = 1;
+    sub_1C37058(&Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__);
+    byte_4C407A9 = 1;
   }
   SceneRootComponent__beginInitialize((SceneRootComponent_o *)this, 0);
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39E2904 *)Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39ED16C *)Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__);
   if ( !Instance )
-    sub_1C32E7C(0);
+    sub_1C372B4(0);
   AvalonSceneManager__endInitialize((AvalonSceneManager_o *)Instance, (SceneRootComponent_o *)this, 0);
 }
 
 
 void TestNameInputRootComponent__beginStartUp(TestNameInputRootComponent_o *this, const MethodInfo *method)
 {
-  SceneRootComponent__beginStartUp_41381708((SceneRootComponent_o *)this, 0);
+  SceneRootComponent__beginStartUp_41481188((SceneRootComponent_o *)this, 0);
 }
 
 
@@ -56,7 +56,7 @@ bool TestNameInputRootComponent__closeSignupInput(TestNameInputRootComponent_o *
         (signupLineInput1 = (UILineInput_o *)this->fields.signupRootObject) == 0) )
   {
 LABEL_9:
-    sub_1C32E7C(signupLineInput1);
+    sub_1C372B4(signupLineInput1);
   }
   UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)signupLineInput1, 0, 0);
   return 1;
@@ -79,36 +79,36 @@ void TestNameInputRootComponent__onChangeInput(TestNameInputRootComponent_o *thi
   struct UIButton_o *v14; // x0
   __int64 v15; // [xsp+8h] [xbp-28h] BYREF
 
-  if ( (byte_4C351BF & 1) == 0 )
+  if ( (byte_4C407AA & 1) == 0 )
   {
-    sub_1C32C20(&StringLiteral_1/*""*/);
-    byte_4C351BF = 1;
+    sub_1C37058(&StringLiteral_1/*""*/);
+    byte_4C407AA = 1;
   }
   signupLineInput1 = this->fields.signupLineInput1;
   if ( !signupLineInput1 )
-    sub_1C32E7C(0);
+    sub_1C372B4(0);
   Text = UILineInput__GetText(signupLineInput1, 0);
   signupIntegerInput1 = this->fields.signupIntegerInput1;
   if ( !signupIntegerInput1 )
-    sub_1C32E7C(0);
+    sub_1C372B4(0);
   v6 = UILineInput__GetText(signupIntegerInput1, 0);
   v7 = System_Int32__Parse(v6, 0);
   signupIntegerInput2 = this->fields.signupIntegerInput2;
   if ( !signupIntegerInput2 )
-    sub_1C32E7C(0);
+    sub_1C372B4(0);
   v9 = UILineInput__GetText(signupIntegerInput2, 0);
   v10 = System_Int32__Parse(v9, 0);
   v15 = 0;
   v11.fields._dateData = (uint64_t)&v15;
-  System_DateTime___ctor_64904320(v11, 2000, v7, v10, 0);
+  System_DateTime___ctor_64947432(v11, 2000, v7, v10, 0);
   v12 = System_String__op_Inequality(Text, (System_String_o *)StringLiteral_1/*""*/, 0);
   signupDecideButton = (UnityEngine_Behaviour_o *)this->fields.signupDecideButton;
   if ( !signupDecideButton )
-    sub_1C32E7C(0);
+    sub_1C372B4(0);
   UnityEngine_Behaviour__set_enabled(signupDecideButton, v12, 0);
   v14 = this->fields.signupDecideButton;
   if ( !v14 )
-    sub_1C32E7C(0);
+    sub_1C372B4(0);
   ((void (__fastcall *)(struct UIButton_o *, bool, const MethodInfo *))v14->klass->vtable._5_set_isEnabled.methodPtr)(
     v14,
     v12,
@@ -120,10 +120,10 @@ void TestNameInputRootComponent__onClickInput(TestNameInputRootComponent_o *this
 {
   UnityEngine_GameObject_o *signupRootObject; // x0
 
-  if ( (byte_4C351C0 & 1) == 0 )
+  if ( (byte_4C407AB & 1) == 0 )
   {
-    sub_1C32C20(&StringLiteral_12219/*"SIGNUP_INPUT_OK"*/);
-    byte_4C351C0 = 1;
+    sub_1C37058(&StringLiteral_12220/*"SIGNUP_INPUT_OK"*/);
+    byte_4C407AB = 1;
   }
   TestNameInputRootComponent__closeSignupInput(this, method);
   signupRootObject = this->fields.signupRootObject;
@@ -132,9 +132,9 @@ void TestNameInputRootComponent__onClickInput(TestNameInputRootComponent_o *this
         UnityEngine_Input__set_imeCompositionMode(0, 0),
         (signupRootObject = (UnityEngine_GameObject_o *)this->fields.myFSM) == 0) )
   {
-    sub_1C32E7C(signupRootObject);
+    sub_1C372B4(signupRootObject);
   }
-  PlayMakerFSM__SendEvent((PlayMakerFSM_o *)signupRootObject, (System_String_o *)StringLiteral_12219/*"SIGNUP_INPUT_OK"*/, 0);
+  PlayMakerFSM__SendEvent((PlayMakerFSM_o *)signupRootObject, (System_String_o *)StringLiteral_12220/*"SIGNUP_INPUT_OK"*/, 0);
 }
 
 
@@ -157,7 +157,7 @@ bool TestNameInputRootComponent__openSignupInput(TestNameInputRootComponent_o *t
         (signupRootObject = (UnityEngine_GameObject_o *)this->fields.signupGenderInput) == 0) )
   {
 LABEL_7:
-    sub_1C32E7C(signupRootObject);
+    sub_1C372B4(signupRootObject);
   }
   UnityEngine_Behaviour__set_enabled((UnityEngine_Behaviour_o *)signupRootObject, 1, 0);
   TestNameInputRootComponent__onChangeInput(this, v4);
@@ -169,15 +169,15 @@ void TestNameInputRootComponent__requestSignup(TestNameInputRootComponent_o *thi
 {
   PlayMakerFSM_o *myFSM; // x0
 
-  if ( (byte_4C351C1 & 1) == 0 )
+  if ( (byte_4C407AC & 1) == 0 )
   {
-    sub_1C32C20(&StringLiteral_11083/*"REQUEST_OK"*/);
-    byte_4C351C1 = 1;
+    sub_1C37058(&StringLiteral_11084/*"REQUEST_OK"*/);
+    byte_4C407AC = 1;
   }
   myFSM = this->fields.myFSM;
   if ( !myFSM )
-    sub_1C32E7C(0);
-  PlayMakerFSM__SendEvent(myFSM, (System_String_o *)StringLiteral_11083/*"REQUEST_OK"*/, 0);
+    sub_1C372B4(0);
+  PlayMakerFSM__SendEvent(myFSM, (System_String_o *)StringLiteral_11084/*"REQUEST_OK"*/, 0);
 }
 
 

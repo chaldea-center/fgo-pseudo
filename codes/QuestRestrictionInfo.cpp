@@ -5,7 +5,7 @@ void QuestRestrictionInfo___ctor(QuestRestrictionInfo_o *this, int32_t questId, 
 }
 
 
-void QuestRestrictionInfo___ctor_43298736(
+void QuestRestrictionInfo___ctor_43400604(
         QuestRestrictionInfo_o *this,
         int32_t eventId,
         int32_t questId,
@@ -13,43 +13,43 @@ void QuestRestrictionInfo___ctor_43298736(
         const MethodInfo *method)
 {
   Il2CppObject *Instance; // x0
-  struct RestrictionEntity_array *RestrictionList_42442992; // x0
+  struct RestrictionEntity_array *RestrictionList_42544860; // x0
   int32_t v11; // w2
   const MethodInfo *v12; // x3
   int32_t v13; // w1
   const MethodInfo *v14; // x4
 
-  if ( (byte_4C38D10 & 1) == 0 )
+  if ( (byte_4C44309 & 1) == 0 )
   {
-    sub_1C32C20(&Method_DataManager_GetMasterData_QuestRestrictionMaster___);
-    sub_1C32C20(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-    byte_4C38D10 = 1;
+    sub_1C37058(&Method_DataManager_GetMasterData_QuestRestrictionMaster___);
+    sub_1C37058(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    byte_4C44309 = 1;
   }
   System_Object___ctor((Il2CppObject *)this, 0);
   this->fields.eventId = eventId;
   this->fields.questId = questId;
   this->fields.questPhase = questPhase;
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39E2904 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39ED16C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance
     || (Instance = DataManager__GetMasterData_object_(
                      (DataManager_o *)Instance,
-                     (const MethodInfo_30DD3F0 *)Method_DataManager_GetMasterData_QuestRestrictionMaster___)) == 0 )
+                     (const MethodInfo_30E7C58 *)Method_DataManager_GetMasterData_QuestRestrictionMaster___)) == 0 )
   {
-    sub_1C32E7C(Instance);
+    sub_1C372B4(Instance);
   }
-  RestrictionList_42442992 = QuestRestrictionMaster__getRestrictionList_42442992(
+  RestrictionList_42544860 = QuestRestrictionMaster__getRestrictionList_42544860(
                                (QuestRestrictionMaster_o *)Instance,
                                &this->fields.questRestrictionEntityList,
                                questId,
                                questPhase,
                                0);
-  this->fields.restrictionEntityList = RestrictionList_42442992;
-  sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.restrictionEntityList, (int32_t)RestrictionList_42442992, v11, v12);
+  this->fields.restrictionEntityList = RestrictionList_42544860;
+  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.restrictionEntityList, (int32_t)RestrictionList_42544860, v11, v12);
   QuestRestrictionInfo__Setup(this, v13, questId, questPhase, v14);
 }
 
 
-void QuestRestrictionInfo___ctor_43308376(
+void QuestRestrictionInfo___ctor_43410244(
         QuestRestrictionInfo_o *this,
         int32_t eventId,
         int32_t questId,
@@ -71,42 +71,42 @@ void QuestRestrictionInfo___ctor_43308376(
   const MethodInfo *v22; // x4
   __int64 v23; // x0
 
-  if ( (byte_4C38D11 & 1) == 0 )
+  if ( (byte_4C4430A & 1) == 0 )
   {
-    sub_1C32C20(&QuestRestrictionEntity___TypeInfo);
-    sub_1C32C20(&RestrictionEntity___TypeInfo);
-    byte_4C38D11 = 1;
+    sub_1C37058(&QuestRestrictionEntity___TypeInfo);
+    sub_1C37058(&RestrictionEntity___TypeInfo);
+    byte_4C4430A = 1;
   }
   System_Object___ctor((Il2CppObject *)this, 0);
   this->fields.eventId = eventId;
   this->fields.questId = questId;
   this->fields.questPhase = questPhase;
-  v11 = (struct QuestRestrictionEntity_array *)sub_1C32CC8(QuestRestrictionEntity___TypeInfo, 0);
+  v11 = (struct QuestRestrictionEntity_array *)sub_1C37100(QuestRestrictionEntity___TypeInfo, 0);
   this->fields.questRestrictionEntityList = v11;
-  sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.questRestrictionEntityList, (int32_t)v11, v12, v13);
+  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.questRestrictionEntityList, (int32_t)v11, v12, v13);
   if ( overwriteRestiction )
   {
-    v14 = sub_1C32CC8(RestrictionEntity___TypeInfo, 1);
+    v14 = sub_1C37100(RestrictionEntity___TypeInfo, 1);
     if ( !v14 )
-      sub_1C32E7C(0);
+      sub_1C372B4(0);
     v15 = v14;
-    v16 = sub_1C32D5C(overwriteRestiction, *(_QWORD *)(*(_QWORD *)v14 + 64LL));
+    v16 = sub_1C37194(overwriteRestiction, *(_QWORD *)(*(_QWORD *)v14 + 64LL));
     if ( !v16 )
     {
-      v23 = sub_1C32EA0(0);
-      sub_1C32D48(v23, 0);
+      v23 = sub_1C372D8(0);
+      sub_1C37180(v23, 0);
     }
     if ( !*(_DWORD *)(v15 + 24) )
-      sub_1C32E84(v16);
+      sub_1C372BC(v16);
     *(_QWORD *)(v15 + 32) = overwriteRestiction;
-    sub_1C32BC4((CGThumbnailListItem_o *)(v15 + 32), (int32_t)overwriteRestiction, v17, v18);
+    sub_1C36FFC((CGThumbnailListItem_o *)(v15 + 32), (int32_t)overwriteRestiction, v17, v18);
   }
   else
   {
-    v15 = sub_1C32CC8(RestrictionEntity___TypeInfo, 0);
+    v15 = sub_1C37100(RestrictionEntity___TypeInfo, 0);
   }
   this->fields.restrictionEntityList = (struct RestrictionEntity_array *)v15;
-  sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.restrictionEntityList, v15, v19, v20);
+  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.restrictionEntityList, v15, v19, v20);
   QuestRestrictionInfo__Setup(this, v21, questId, questPhase, v22);
 }
 
@@ -145,18 +145,18 @@ void QuestRestrictionInfo__CheckFixedServantPosition(
   char v37; // w22
   System_Collections_Generic_IEnumerable_TSource__o *second; // [xsp+8h] [xbp-68h]
 
-  if ( (byte_4C38D32 & 1) == 0 )
+  if ( (byte_4C4432B & 1) == 0 )
   {
-    sub_1C32C20(&BalanceConfig_TypeInfo);
-    sub_1C32C20(&Method_DataManager_GetMasterData_ServantMaster___);
-    sub_1C32C20(&Method_DataMasterBase_ServantMaster__ServantEntity__int__GetEntity__);
-    sub_1C32C20(&Method_System_Linq_Enumerable_Any_int___);
-    sub_1C32C20(&Method_System_Linq_Enumerable_Contains_int___);
-    sub_1C32C20(&Method_System_Linq_Enumerable_Intersect_int___);
-    sub_1C32C20(&Method_System_Collections_Generic_List_bool____get_Count__);
-    sub_1C32C20(&Method_System_Collections_Generic_List_bool____get_Item__);
-    sub_1C32C20(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-    byte_4C38D32 = 1;
+    sub_1C37058(&BalanceConfig_TypeInfo);
+    sub_1C37058(&Method_DataManager_GetMasterData_ServantMaster___);
+    sub_1C37058(&Method_DataMasterBase_ServantMaster__ServantEntity__int__GetEntity__);
+    sub_1C37058(&Method_System_Linq_Enumerable_Any_int___);
+    sub_1C37058(&Method_System_Linq_Enumerable_Contains_int___);
+    sub_1C37058(&Method_System_Linq_Enumerable_Intersect_int___);
+    sub_1C37058(&Method_System_Collections_Generic_List_bool____get_Count__);
+    sub_1C37058(&Method_System_Collections_Generic_List_bool____get_Item__);
+    sub_1C37058(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    byte_4C4432B = 1;
   }
   *isFixedServantPositionRestriction = 0;
   *isFixedServantPositionAgreement = 0;
@@ -173,7 +173,7 @@ void QuestRestrictionInfo__CheckFixedServantPosition(
       if ( System_Linq_Enumerable__Contains_int_(
              FixedServantPositionSvtIdList,
              svtId,
-             (const MethodInfo_30FA3A0 *)Method_System_Linq_Enumerable_Contains_int___) )
+             (const MethodInfo_3104C08 *)Method_System_Linq_Enumerable_Contains_int___) )
       {
         v25 = BalanceConfig_TypeInfo;
         if ( !BalanceConfig_TypeInfo->_2.cctor_finished )
@@ -192,18 +192,18 @@ void QuestRestrictionInfo__CheckFixedServantPosition(
     }
     return;
   }
-  Instance = (DataManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39E2904 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = (DataManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39ED16C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance )
     goto LABEL_15;
   Instance = (DataManager_o *)DataManager__GetMasterData_object_(
                                 Instance,
-                                (const MethodInfo_30DD3F0 *)Method_DataManager_GetMasterData_ServantMaster___);
+                                (const MethodInfo_30E7C58 *)Method_DataManager_GetMasterData_ServantMaster___);
   if ( !Instance )
     goto LABEL_15;
   Instance = (DataManager_o *)DataMasterBase_object__object__int___GetEntity(
                                 (DataMasterBase_TMaster__TEntity__PKType__o *)Instance,
                                 svtId,
-                                (const MethodInfo_3396838 *)Method_DataMasterBase_ServantMaster__ServantEntity__int__GetEntity__);
+                                (const MethodInfo_33A10A0 *)Method_DataMasterBase_ServantMaster__ServantEntity__int__GetEntity__);
   if ( !Instance )
     goto LABEL_15;
   second = (System_Collections_Generic_IEnumerable_TSource__o *)ServantEntity__getIndividuality(
@@ -222,7 +222,7 @@ void QuestRestrictionInfo__CheckFixedServantPosition(
     Instance = (DataManager_o *)System_Collections_Generic_List_object___get_Item(
                                   (System_Collections_Generic_List_object__o *)Instance,
                                   v23,
-                                  (const MethodInfo_37984EC *)Method_System_Collections_Generic_List_bool____get_Item__);
+                                  (const MethodInfo_37A2D54 *)Method_System_Collections_Generic_List_bool____get_Item__);
     if ( !Instance )
       goto LABEL_15;
     if ( LODWORD(Instance->fields.m_CancellationTokenSource) <= num )
@@ -244,7 +244,7 @@ LABEL_22:
     Instance = (DataManager_o *)System_Collections_Generic_List_object___get_Item(
                                   (System_Collections_Generic_List_object__o *)Instance,
                                   v23,
-                                  (const MethodInfo_37984EC *)Method_System_Collections_Generic_List_bool____get_Item__);
+                                  (const MethodInfo_37A2D54 *)Method_System_Collections_Generic_List_bool____get_Item__);
     if ( !Instance )
       goto LABEL_15;
     if ( LODWORD(Instance->fields.m_CancellationTokenSource) <= num )
@@ -262,17 +262,17 @@ LABEL_22:
     v28 = System_Linq_Enumerable__Intersect_int_(
             FixedMyServantPositionSvtIdList,
             second,
-            (const MethodInfo_3107AA0 *)Method_System_Linq_Enumerable_Intersect_int___);
+            (const MethodInfo_3112308 *)Method_System_Linq_Enumerable_Intersect_int___);
     Instance = (DataManager_o *)System_Linq_Enumerable__Any_int_(
                                   v28,
-                                  (const MethodInfo_30E8A38 *)Method_System_Linq_Enumerable_Any_int___);
+                                  (const MethodInfo_30F32A0 *)Method_System_Linq_Enumerable_Any_int___);
     if ( !this->fields.myServantPositionsList )
       goto LABEL_15;
     v29 = (char)Instance;
     Instance = (DataManager_o *)System_Collections_Generic_List_object___get_Item(
                                   (System_Collections_Generic_List_object__o *)this->fields.myServantPositionsList,
                                   v23,
-                                  (const MethodInfo_37984EC *)Method_System_Collections_Generic_List_bool____get_Item__);
+                                  (const MethodInfo_37A2D54 *)Method_System_Collections_Generic_List_bool____get_Item__);
     if ( !Instance )
       goto LABEL_15;
     if ( LODWORD(Instance->fields.m_CancellationTokenSource) <= num )
@@ -305,8 +305,8 @@ LABEL_37:
       v31 = System_Linq_Enumerable__Intersect_int_(
               NeedStartingSvtIdList,
               second,
-              (const MethodInfo_3107AA0 *)Method_System_Linq_Enumerable_Intersect_int___);
-      if ( System_Linq_Enumerable__Any_int_(v31, (const MethodInfo_30E8A38 *)Method_System_Linq_Enumerable_Any_int___) )
+              (const MethodInfo_3112308 *)Method_System_Linq_Enumerable_Intersect_int___);
+      if ( System_Linq_Enumerable__Any_int_(v31, (const MethodInfo_30F32A0 *)Method_System_Linq_Enumerable_Any_int___) )
       {
         v32 = BalanceConfig_TypeInfo;
         if ( !BalanceConfig_TypeInfo->_2.cctor_finished )
@@ -331,7 +331,7 @@ LABEL_37:
     Instance = (DataManager_o *)System_Collections_Generic_List_object___get_Item(
                                   (System_Collections_Generic_List_object__o *)Instance,
                                   v33,
-                                  (const MethodInfo_37984EC *)Method_System_Collections_Generic_List_bool____get_Item__);
+                                  (const MethodInfo_37A2D54 *)Method_System_Collections_Generic_List_bool____get_Item__);
     if ( !Instance )
       goto LABEL_15;
     if ( LODWORD(Instance->fields.m_CancellationTokenSource) <= num )
@@ -354,24 +354,24 @@ LABEL_57:
   v35 = System_Linq_Enumerable__Intersect_int_(
           FixedPositionSvtIdList,
           second,
-          (const MethodInfo_3107AA0 *)Method_System_Linq_Enumerable_Intersect_int___);
+          (const MethodInfo_3112308 *)Method_System_Linq_Enumerable_Intersect_int___);
   Instance = (DataManager_o *)System_Linq_Enumerable__Any_int_(
                                 v35,
-                                (const MethodInfo_30E8A38 *)Method_System_Linq_Enumerable_Any_int___);
+                                (const MethodInfo_30F32A0 *)Method_System_Linq_Enumerable_Any_int___);
   positionsList = (System_Collections_Generic_List_object__o *)this->fields.positionsList;
   if ( !positionsList
     || (v37 = (char)Instance,
         (Instance = (DataManager_o *)System_Collections_Generic_List_object___get_Item(
                                        positionsList,
                                        v33,
-                                       (const MethodInfo_37984EC *)Method_System_Collections_Generic_List_bool____get_Item__)) == 0) )
+                                       (const MethodInfo_37A2D54 *)Method_System_Collections_Generic_List_bool____get_Item__)) == 0) )
   {
 LABEL_15:
-    sub_1C32E7C(Instance);
+    sub_1C372B4(Instance);
   }
   if ( LODWORD(Instance->fields.m_CancellationTokenSource) <= num )
 LABEL_67:
-    sub_1C32E84(Instance);
+    sub_1C372BC(Instance);
   if ( (v37 & 1) != 0 )
   {
     if ( *(&Instance->fields._DispLog + num) )
@@ -436,12 +436,12 @@ int32_t QuestRestrictionInfo__ConvertOverwriteImageLimitCount(
       return -1;
   }
   if ( v6 >= LODWORD(overwriteLimitCounts->max_length) )
-    sub_1C32E84(this);
+    sub_1C372BC(this);
   return overwriteLimitCounts->m_Items[v6];
 }
 
 
-int32_t QuestRestrictionInfo__ConvertOverwriteImageLimitCount_43337428(
+int32_t QuestRestrictionInfo__ConvertOverwriteImageLimitCount_43439296(
         QuestRestrictionInfo_o *this,
         UserServantEntity_o *userServantEntity,
         const MethodInfo *method)
@@ -461,10 +461,10 @@ int32_t QuestRestrictionInfo__ConvertOverwriteImageLimitCount_43337428(
   CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o v17; // 0:x0.16
 
   v4 = this;
-  if ( (byte_4C38D3B & 1) == 0 )
+  if ( (byte_4C44334 & 1) == 0 )
   {
-    this = (QuestRestrictionInfo_o *)sub_1C32C20(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
-    byte_4C38D3B = 1;
+    this = (QuestRestrictionInfo_o *)sub_1C37058(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
+    byte_4C44334 = 1;
   }
   if ( !userServantEntity )
     goto LABEL_20;
@@ -474,11 +474,11 @@ int32_t QuestRestrictionInfo__ConvertOverwriteImageLimitCount_43337428(
     j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
   *(_QWORD *)&v16.fields.currentCryptoKey = v6;
   *(_QWORD *)&v16.fields.fakeValue = v5;
-  v7 = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_48887784(v16, 0);
+  v7 = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_48930896(v16, 0);
   this = (QuestRestrictionInfo_o *)QuestRestrictionInfo__ConvertOverwriteImageLimitCounts(v4, v7, v8);
   if ( !this )
 LABEL_20:
-    sub_1C32E7C(this);
+    sub_1C372B4(this);
   dialogMessageInfoDictionary = this->fields.dialogMessageInfoDictionary;
   v10 = this;
   if ( !dialogMessageInfoDictionary )
@@ -495,7 +495,7 @@ LABEL_20:
         j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
       *(_QWORD *)&v17.fields.currentCryptoKey = v14;
       *(_QWORD *)&v17.fields.fakeValue = v13;
-      this = (QuestRestrictionInfo_o *)CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_48887784(v17, 0);
+      this = (QuestRestrictionInfo_o *)CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_48930896(v17, 0);
       if ( (_DWORD)this == v12 )
         return v12;
       dialogMessageInfoDictionary = v10->fields.dialogMessageInfoDictionary;
@@ -503,7 +503,7 @@ LABEL_20:
         goto LABEL_15;
     }
 LABEL_19:
-    sub_1C32E84(this);
+    sub_1C372BC(this);
   }
 LABEL_15:
   if ( !(_DWORD)dialogMessageInfoDictionary )
@@ -528,18 +528,18 @@ System_Int32_array *QuestRestrictionInfo__ConvertOverwriteImageLimitCounts(
   _QWORD *v13; // x9
   __int64 size; // x10
 
-  if ( (byte_4C38D3A & 1) == 0 )
+  if ( (byte_4C44333 & 1) == 0 )
   {
-    sub_1C32C20(&Method_System_Collections_Generic_List_int__Add__);
-    sub_1C32C20(&Method_System_Collections_Generic_List_int__ToArray__);
-    sub_1C32C20(&Method_System_Collections_Generic_List_int___ctor__);
-    sub_1C32C20(&System_Collections_Generic_List_int__TypeInfo);
-    byte_4C38D3A = 1;
+    sub_1C37058(&Method_System_Collections_Generic_List_int__Add__);
+    sub_1C37058(&Method_System_Collections_Generic_List_int__ToArray__);
+    sub_1C37058(&Method_System_Collections_Generic_List_int___ctor__);
+    sub_1C37058(&System_Collections_Generic_List_int__TypeInfo);
+    byte_4C44333 = 1;
   }
-  v5 = (System_Collections_Generic_List_int__o *)sub_1C32E6C(System_Collections_Generic_List_int__TypeInfo);
+  v5 = (System_Collections_Generic_List_int__o *)sub_1C372A4(System_Collections_Generic_List_int__TypeInfo);
   System_Collections_Generic_List_int____ctor(
     v5,
-    (const MethodInfo_377AF44 *)Method_System_Collections_Generic_List_int___ctor__);
+    (const MethodInfo_37857AC *)Method_System_Collections_Generic_List_int___ctor__);
   overwriteLimitCountSvtIds = this->fields.overwriteLimitCountSvtIds;
   if ( overwriteLimitCountSvtIds && this->fields.overwriteLimitCounts && (int)overwriteLimitCountSvtIds->max_length >= 1 )
   {
@@ -549,7 +549,7 @@ System_Int32_array *QuestRestrictionInfo__ConvertOverwriteImageLimitCounts(
     {
       if ( v8 >= LODWORD(overwriteLimitCountSvtIds->max_length) )
 LABEL_21:
-        sub_1C32E84(v6);
+        sub_1C372BC(v6);
       if ( overwriteLimitCountSvtIds->m_Items[v8] == svtId )
       {
         overwriteLimitCounts = this->fields.overwriteLimitCounts;
@@ -571,7 +571,7 @@ LABEL_21:
           System_Collections_Generic_List_int___AddWithResize(
             v5,
             v11,
-            *(const MethodInfo_377B798 **)(*(_QWORD *)(v13[4] + 192LL) + 112LL));
+            *(const MethodInfo_3786000 **)(*(_QWORD *)(v13[4] + 192LL) + 112LL));
         }
         else
         {
@@ -586,14 +586,14 @@ LABEL_21:
     }
     while ( overwriteLimitCountSvtIds );
 LABEL_18:
-    sub_1C32E7C(v6);
+    sub_1C372B4(v6);
   }
 LABEL_19:
   if ( !v5 )
     goto LABEL_18;
   return System_Collections_Generic_List_int___ToArray(
            v5,
-           (const MethodInfo_377D250 *)Method_System_Collections_Generic_List_int__ToArray__);
+           (const MethodInfo_3787AB8 *)Method_System_Collections_Generic_List_int__ToArray__);
 }
 
 
@@ -650,20 +650,20 @@ System_String_o *QuestRestrictionInfo__GetConfirmRestrictionMessage(
   System_Collections_Generic_IEnumerable_string__o *v45; // x0
 
   v8 = this;
-  if ( (byte_4C38D24 & 1) == 0 )
+  if ( (byte_4C4431D & 1) == 0 )
   {
-    sub_1C32C20(&BalanceConfig_TypeInfo);
-    sub_1C32C20(&Method_System_Linq_Enumerable_Select_RestrictionEntity__string___);
-    sub_1C32C20(&Method_System_Linq_Enumerable_Where_RestrictionEntity___);
-    sub_1C32C20(&System_Func_RestrictionEntity__bool__TypeInfo);
-    sub_1C32C20(&System_Func_RestrictionEntity__string__TypeInfo);
-    sub_1C32C20(&Method_QuestRestrictionInfo___c__GetConfirmRestrictionMessage_b__109_0__);
-    sub_1C32C20(&Method_QuestRestrictionInfo___c__GetConfirmRestrictionMessage_b__109_1__);
-    sub_1C32C20(&Method_QuestRestrictionInfo___c__GetConfirmRestrictionMessage_b__109_2__);
-    sub_1C32C20(&QuestRestrictionInfo___c_TypeInfo);
-    sub_1C32C20(&StringLiteral_43/*"\n"*/);
-    this = (QuestRestrictionInfo_o *)sub_1C32C20(&StringLiteral_1/*""*/);
-    byte_4C38D24 = 1;
+    sub_1C37058(&BalanceConfig_TypeInfo);
+    sub_1C37058(&Method_System_Linq_Enumerable_Select_RestrictionEntity__string___);
+    sub_1C37058(&Method_System_Linq_Enumerable_Where_RestrictionEntity___);
+    sub_1C37058(&System_Func_RestrictionEntity__bool__TypeInfo);
+    sub_1C37058(&System_Func_RestrictionEntity__string__TypeInfo);
+    sub_1C37058(&Method_QuestRestrictionInfo___c__GetConfirmRestrictionMessage_b__109_0__);
+    sub_1C37058(&Method_QuestRestrictionInfo___c__GetConfirmRestrictionMessage_b__109_1__);
+    sub_1C37058(&Method_QuestRestrictionInfo___c__GetConfirmRestrictionMessage_b__109_2__);
+    sub_1C37058(&QuestRestrictionInfo___c_TypeInfo);
+    sub_1C37058(&StringLiteral_43/*"\n"*/);
+    this = (QuestRestrictionInfo_o *)sub_1C37058(&StringLiteral_1/*""*/);
+    byte_4C4431D = 1;
   }
   if ( !v8->fields.restrictionBaseEntity )
   {
@@ -686,8 +686,8 @@ LABEL_61:
         v45 = (System_Collections_Generic_IEnumerable_string__o *)System_Linq_Enumerable__Select_object__object_(
                                                                     (System_Collections_Generic_IEnumerable_TSource__o *)RestrictionMessageEntityList,
                                                                     _9__109_2,
-                                                                    (const MethodInfo_3113ABC *)Method_System_Linq_Enumerable_Select_RestrictionEntity__string___);
-        return System_String__Join_63561120((System_String_o *)StringLiteral_43/*"\n"*/, v45, 0);
+                                                                    (const MethodInfo_311E324 *)Method_System_Linq_Enumerable_Select_RestrictionEntity__string___);
+        return System_String__Join_63604232((System_String_o *)StringLiteral_43/*"\n"*/, v45, 0);
       }
       if ( !v26->_2.cctor_finished )
       {
@@ -695,7 +695,7 @@ LABEL_61:
         v26 = QuestRestrictionInfo___c_TypeInfo;
       }
       v43 = (Il2CppObject *)v26->static_fields->__9;
-      _9__109_2 = (System_Func_TSource__TResult__o *)sub_1C32E6C(System_Func_RestrictionEntity__string__TypeInfo);
+      _9__109_2 = (System_Func_TSource__TResult__o *)sub_1C372A4(System_Func_RestrictionEntity__string__TypeInfo);
       System_Func_object__object____ctor(
         (System_Func_object__object__o *)_9__109_2,
         v43,
@@ -716,7 +716,7 @@ LABEL_61:
           v26 = QuestRestrictionInfo___c_TypeInfo;
         }
         v29 = (Il2CppObject *)v26->static_fields->__9;
-        _9__109_0 = (System_Func_object__bool__o *)sub_1C32E6C(System_Func_RestrictionEntity__bool__TypeInfo);
+        _9__109_0 = (System_Func_object__bool__o *)sub_1C372A4(System_Func_RestrictionEntity__bool__TypeInfo);
         System_Func_object__bool____ctor(
           _9__109_0,
           v29,
@@ -724,12 +724,12 @@ LABEL_61:
           0);
         v30 = QuestRestrictionInfo___c_TypeInfo->static_fields;
         v30->__9__109_0 = (struct System_Func_RestrictionEntity__bool__o *)_9__109_0;
-        sub_1C32BC4((CGThumbnailListItem_o *)&v30->__9__109_0, (int32_t)_9__109_0, v31, v32);
+        sub_1C36FFC((CGThumbnailListItem_o *)&v30->__9__109_0, (int32_t)_9__109_0, v31, v32);
       }
       v33 = System_Linq_Enumerable__Where_object_(
               (System_Collections_Generic_IEnumerable_TSource__o *)RestrictionMessageEntityList,
               (System_Func_TSource__bool__o *)_9__109_0,
-              (const MethodInfo_3123BA8 *)Method_System_Linq_Enumerable_Where_RestrictionEntity___);
+              (const MethodInfo_312E410 *)Method_System_Linq_Enumerable_Where_RestrictionEntity___);
       v34 = QuestRestrictionInfo___c_TypeInfo;
       RestrictionMessageEntityList = (System_Collections_Generic_IEnumerable_RestrictionEntity__o *)v33;
       if ( !QuestRestrictionInfo___c_TypeInfo->_2.cctor_finished )
@@ -746,7 +746,7 @@ LABEL_61:
         v34 = QuestRestrictionInfo___c_TypeInfo;
       }
       v36 = (Il2CppObject *)v34->static_fields->__9;
-      _9__109_2 = (System_Func_TSource__TResult__o *)sub_1C32E6C(System_Func_RestrictionEntity__string__TypeInfo);
+      _9__109_2 = (System_Func_TSource__TResult__o *)sub_1C372A4(System_Func_RestrictionEntity__string__TypeInfo);
       System_Func_object__object____ctor(
         (System_Func_object__object__o *)_9__109_2,
         v36,
@@ -756,7 +756,7 @@ LABEL_61:
       v39->__9__109_1 = (struct System_Func_RestrictionEntity__string__o *)_9__109_2;
       p__9__109_2 = (CGThumbnailListItem_o *)&v39->__9__109_1;
     }
-    sub_1C32BC4(p__9__109_2, (int32_t)_9__109_2, v37, v38);
+    sub_1C36FFC(p__9__109_2, (int32_t)_9__109_2, v37, v38);
     goto LABEL_61;
   }
   if ( initPos >= 1 )
@@ -792,7 +792,7 @@ LABEL_61:
   restrictionWholeEntities = v8->fields.restrictionWholeEntities;
   if ( !restrictionWholeEntities )
 LABEL_64:
-    sub_1C32E7C(this);
+    sub_1C372B4(this);
   max_length = restrictionWholeEntities->max_length;
   if ( max_length < 1 )
     return v8->fields.confirmRestrictionMessage;
@@ -857,7 +857,7 @@ LABEL_64:
           goto LABEL_36;
       }
 LABEL_63:
-      sub_1C32E84(this);
+      sub_1C372BC(this);
     }
 LABEL_36:
     max_length = restrictionWholeEntities->max_length;
@@ -891,7 +891,7 @@ int32_t QuestRestrictionInfo__GetCorrectionIconId(
         goto LABEL_8;
     }
     if ( v7 >= LODWORD(overwriteLimitCountIconIds->max_length) )
-      sub_1C32E84(this);
+      sub_1C372BC(this);
     p_correctionIconId = &overwriteLimitCountIconIds->m_Items[v7];
   }
   else
@@ -936,22 +936,22 @@ System_Int32_array *QuestRestrictionInfo__GetDialogList(QuestRestrictionInfo_o *
   _QWORD *v25; // x9
   __int64 size; // x10
 
-  if ( (byte_4C38D37 & 1) == 0 )
+  if ( (byte_4C44330 & 1) == 0 )
   {
-    sub_1C32C20(&Method_DataManager_GetMasterData_UserQuestMaster___);
-    sub_1C32C20(&Method_System_Collections_Generic_List_int__Add__);
-    sub_1C32C20(&Method_System_Collections_Generic_List_int__ToArray__);
-    sub_1C32C20(&Method_System_Collections_Generic_List_int___ctor__);
-    sub_1C32C20(&System_Collections_Generic_List_int__TypeInfo);
-    sub_1C32C20(&NetworkManager_TypeInfo);
-    sub_1C32C20(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-    sub_1C32C20(&Method_SingletonTemplate_PartyOrganizationUtility__get_Instance__);
-    byte_4C38D37 = 1;
+    sub_1C37058(&Method_DataManager_GetMasterData_UserQuestMaster___);
+    sub_1C37058(&Method_System_Collections_Generic_List_int__Add__);
+    sub_1C37058(&Method_System_Collections_Generic_List_int__ToArray__);
+    sub_1C37058(&Method_System_Collections_Generic_List_int___ctor__);
+    sub_1C37058(&System_Collections_Generic_List_int__TypeInfo);
+    sub_1C37058(&NetworkManager_TypeInfo);
+    sub_1C37058(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    sub_1C37058(&Method_SingletonTemplate_PartyOrganizationUtility__get_Instance__);
+    byte_4C44330 = 1;
   }
-  v3 = (System_Collections_Generic_List_int__o *)sub_1C32E6C(System_Collections_Generic_List_int__TypeInfo);
+  v3 = (System_Collections_Generic_List_int__o *)sub_1C372A4(System_Collections_Generic_List_int__TypeInfo);
   System_Collections_Generic_List_int____ctor(
     v3,
-    (const MethodInfo_377AF44 *)Method_System_Collections_Generic_List_int___ctor__);
+    (const MethodInfo_37857AC *)Method_System_Collections_Generic_List_int___ctor__);
   if ( !this->fields.restrictionBaseEntity )
   {
     questRestrictionEntityList = this->fields.questRestrictionEntityList;
@@ -966,7 +966,7 @@ System_Int32_array *QuestRestrictionInfo__GetDialogList(QuestRestrictionInfo_o *
     {
       if ( (unsigned int)v19 >= LODWORD(questRestrictionEntityList->max_length) )
 LABEL_68:
-        sub_1C32E84(Instance);
+        sub_1C372BC(Instance);
       v20 = (int32_t *)questRestrictionEntityList->m_Items[v19];
       if ( !v20 )
         goto LABEL_67;
@@ -975,7 +975,7 @@ LABEL_68:
         break;
       if ( v21 == 2 )
       {
-        Instance = (PartyOrganizationUtility_o *)SingletonTemplate_object___get_Instance((const MethodInfo_39E2DF4 *)Method_SingletonTemplate_PartyOrganizationUtility__get_Instance__);
+        Instance = (PartyOrganizationUtility_o *)SingletonTemplate_object___get_Instance((const MethodInfo_39ED65C *)Method_SingletonTemplate_PartyOrganizationUtility__get_Instance__);
         if ( !Instance )
           goto LABEL_67;
         Instance = (PartyOrganizationUtility_o *)PartyOrganizationUtility__IsDisplayedRestrictionDialog(
@@ -1000,18 +1000,18 @@ LABEL_62:
       if ( !questRestrictionEntityList )
         goto LABEL_67;
     }
-    Instance = (PartyOrganizationUtility_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39E2904 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    Instance = (PartyOrganizationUtility_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39ED16C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
     if ( !Instance )
       goto LABEL_67;
     MasterData_object = DataManager__GetMasterData_object_(
                           (DataManager_o *)Instance,
-                          (const MethodInfo_30DD3F0 *)Method_DataManager_GetMasterData_UserQuestMaster___);
+                          (const MethodInfo_30E7C58 *)Method_DataManager_GetMasterData_UserQuestMaster___);
     if ( !NetworkManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
-    if ( !byte_4C31812 )
+    if ( !byte_4C3CD62 )
     {
-      sub_1C32C20(&NetworkManager_TypeInfo);
-      byte_4C31812 = 1;
+      sub_1C37058(&NetworkManager_TypeInfo);
+      byte_4C3CD62 = 1;
     }
     Instance = (PartyOrganizationUtility_o *)NetworkManager_TypeInfo;
     if ( !NetworkManager_TypeInfo->_2.cctor_finished )
@@ -1050,7 +1050,7 @@ LABEL_57:
       System_Collections_Generic_List_int___AddWithResize(
         v3,
         v19,
-        *(const MethodInfo_377B798 **)(*(_QWORD *)(v25[4] + 192LL) + 112LL));
+        *(const MethodInfo_3786000 **)(*(_QWORD *)(v25[4] + 192LL) + 112LL));
     }
     else
     {
@@ -1076,18 +1076,18 @@ LABEL_57:
       frequencyType = v8->fields.frequencyType;
       if ( frequencyType != 1 )
         break;
-      Instance = (PartyOrganizationUtility_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39E2904 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+      Instance = (PartyOrganizationUtility_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39ED16C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
       if ( !Instance )
         goto LABEL_67;
       v10 = DataManager__GetMasterData_object_(
               (DataManager_o *)Instance,
-              (const MethodInfo_30DD3F0 *)Method_DataManager_GetMasterData_UserQuestMaster___);
+              (const MethodInfo_30E7C58 *)Method_DataManager_GetMasterData_UserQuestMaster___);
       if ( !NetworkManager_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
-      if ( !byte_4C31812 )
+      if ( !byte_4C3CD62 )
       {
-        sub_1C32C20(&NetworkManager_TypeInfo);
-        byte_4C31812 = 1;
+        sub_1C37058(&NetworkManager_TypeInfo);
+        byte_4C3CD62 = 1;
       }
       Instance = (PartyOrganizationUtility_o *)NetworkManager_TypeInfo;
       if ( !NetworkManager_TypeInfo->_2.cctor_finished )
@@ -1119,7 +1119,7 @@ LABEL_32:
     }
     if ( frequencyType == 2 )
     {
-      Instance = (PartyOrganizationUtility_o *)SingletonTemplate_object___get_Instance((const MethodInfo_39E2DF4 *)Method_SingletonTemplate_PartyOrganizationUtility__get_Instance__);
+      Instance = (PartyOrganizationUtility_o *)SingletonTemplate_object___get_Instance((const MethodInfo_39ED65C *)Method_SingletonTemplate_PartyOrganizationUtility__get_Instance__);
       if ( !Instance )
         goto LABEL_67;
       Instance = (PartyOrganizationUtility_o *)PartyOrganizationUtility__IsDisplayedRestrictionDialog(
@@ -1151,7 +1151,7 @@ LABEL_27:
       System_Collections_Generic_List_int___AddWithResize(
         v3,
         id,
-        *(const MethodInfo_377B798 **)(*(_QWORD *)(v14[4] + 192LL) + 112LL));
+        *(const MethodInfo_3786000 **)(*(_QWORD *)(v14[4] + 192LL) + 112LL));
     }
     else
     {
@@ -1163,10 +1163,10 @@ LABEL_27:
 LABEL_65:
   if ( !v3 )
 LABEL_67:
-    sub_1C32E7C(Instance);
+    sub_1C372B4(Instance);
   return System_Collections_Generic_List_int___ToArray(
            v3,
-           (const MethodInfo_377D250 *)Method_System_Collections_Generic_List_int__ToArray__);
+           (const MethodInfo_3787AB8 *)Method_System_Collections_Generic_List_int__ToArray__);
 }
 
 
@@ -1191,10 +1191,10 @@ System_String_o *QuestRestrictionInfo__GetDialogMessage(
   Il2CppClass *v18; // x8
 
   v6 = this;
-  if ( (byte_4C38D38 & 1) == 0 )
+  if ( (byte_4C44331 & 1) == 0 )
   {
-    this = (QuestRestrictionInfo_o *)sub_1C32C20(&StringLiteral_1/*""*/);
-    byte_4C38D38 = 1;
+    this = (QuestRestrictionInfo_o *)sub_1C37058(&StringLiteral_1/*""*/);
+    byte_4C44331 = 1;
   }
   if ( v6->fields.restrictionBaseEntity )
   {
@@ -1227,7 +1227,7 @@ System_String_o *QuestRestrictionInfo__GetDialogMessage(
       return *p_dialogMessage;
     }
 LABEL_31:
-    sub_1C32E7C(this);
+    sub_1C372B4(this);
   }
   questRestrictionEntityList = v6->fields.questRestrictionEntityList;
   v13 = &questRestrictionEntityList->obj.klass + n;
@@ -1259,7 +1259,7 @@ LABEL_26:
       goto LABEL_31;
     }
 LABEL_32:
-    sub_1C32E84(this);
+    sub_1C372BC(this);
   }
   v16 = 0;
   while ( 1 )
@@ -1285,28 +1285,28 @@ QuestRestrictionInfo_DialogMessageInfo_o *QuestRestrictionInfo__GetDialogMessage
   struct System_Collections_Generic_Dictionary_int__QuestRestrictionInfo_DialogMessageInfo__o *dialogMessageInfoDictionary; // x0
   struct System_Collections_Generic_Dictionary_int__QuestRestrictionInfo_DialogMessageInfo__o *v6; // x0
 
-  if ( (byte_4C38D4E & 1) == 0 )
+  if ( (byte_4C44347 & 1) == 0 )
   {
-    sub_1C32C20(&Method_System_Collections_Generic_Dictionary_int__QuestRestrictionInfo_DialogMessageInfo__ContainsKey__);
-    sub_1C32C20(&Method_System_Collections_Generic_Dictionary_int__QuestRestrictionInfo_DialogMessageInfo__get_Item__);
-    byte_4C38D4E = 1;
+    sub_1C37058(&Method_System_Collections_Generic_Dictionary_int__QuestRestrictionInfo_DialogMessageInfo__ContainsKey__);
+    sub_1C37058(&Method_System_Collections_Generic_Dictionary_int__QuestRestrictionInfo_DialogMessageInfo__get_Item__);
+    byte_4C44347 = 1;
   }
   dialogMessageInfoDictionary = this->fields.dialogMessageInfoDictionary;
   if ( !dialogMessageInfoDictionary
     || !System_Collections_Generic_Dictionary_int__object___ContainsKey(
           (System_Collections_Generic_Dictionary_int__object__o *)dialogMessageInfoDictionary,
           messageId,
-          (const MethodInfo_33EFF10 *)Method_System_Collections_Generic_Dictionary_int__QuestRestrictionInfo_DialogMessageInfo__ContainsKey__) )
+          (const MethodInfo_33FA778 *)Method_System_Collections_Generic_Dictionary_int__QuestRestrictionInfo_DialogMessageInfo__ContainsKey__) )
   {
     return 0;
   }
   v6 = this->fields.dialogMessageInfoDictionary;
   if ( !v6 )
-    sub_1C32E7C(0);
+    sub_1C372B4(0);
   return (QuestRestrictionInfo_DialogMessageInfo_o *)System_Collections_Generic_Dictionary_int__object___get_Item(
                                                        (System_Collections_Generic_Dictionary_int__object__o *)v6,
                                                        messageId,
-                                                       (const MethodInfo_33EFC7C *)Method_System_Collections_Generic_Dictionary_int__QuestRestrictionInfo_DialogMessageInfo__get_Item__);
+                                                       (const MethodInfo_33FA4E4 *)Method_System_Collections_Generic_Dictionary_int__QuestRestrictionInfo_DialogMessageInfo__get_Item__);
 }
 
 
@@ -1321,13 +1321,13 @@ System_String_o *QuestRestrictionInfo__GetDialogMessageMySvtPos(QuestRestriction
   Il2CppObject *entity; // [xsp+8h] [xbp-48h] BYREF
 
   v2 = this;
-  if ( (byte_4C38D51 & 1) == 0 )
+  if ( (byte_4C4434A & 1) == 0 )
   {
-    sub_1C32C20(&Method_DataManager_GetMaster_RestrictionMessageMaster___);
-    sub_1C32C20(&DataManager_TypeInfo);
-    sub_1C32C20(&Method_DataMasterBase_RestrictionMessageMaster__RestrictionMessageEntity__int__TryGetEntity__);
-    this = (QuestRestrictionInfo_o *)sub_1C32C20(&StringLiteral_1/*""*/);
-    byte_4C38D51 = 1;
+    sub_1C37058(&Method_DataManager_GetMaster_RestrictionMessageMaster___);
+    sub_1C37058(&DataManager_TypeInfo);
+    sub_1C37058(&Method_DataMasterBase_RestrictionMessageMaster__RestrictionMessageEntity__int__TryGetEntity__);
+    this = (QuestRestrictionInfo_o *)sub_1C37058(&StringLiteral_1/*""*/);
+    byte_4C4434A = 1;
   }
   entity = 0;
   restrictionWholeEntities = v2->fields.restrictionWholeEntities;
@@ -1341,7 +1341,7 @@ System_String_o *QuestRestrictionInfo__GetDialogMessageMySvtPos(QuestRestriction
     while ( 1 )
     {
       if ( v6 >= max_length )
-        sub_1C32E84(this);
+        sub_1C372BC(this);
       v7 = restrictionWholeEntities->m_Items[v6];
       if ( !v7 )
         goto LABEL_19;
@@ -1349,14 +1349,14 @@ System_String_o *QuestRestrictionInfo__GetDialogMessageMySvtPos(QuestRestriction
       {
         if ( !DataManager_TypeInfo->_2.cctor_finished )
           j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-        this = (QuestRestrictionInfo_o *)DataManager__GetMaster_object_((const MethodInfo_30DD39C *)Method_DataManager_GetMaster_RestrictionMessageMaster___);
+        this = (QuestRestrictionInfo_o *)DataManager__GetMaster_object_((const MethodInfo_30E7C04 *)Method_DataManager_GetMaster_RestrictionMessageMaster___);
         if ( !this )
           goto LABEL_19;
         this = (QuestRestrictionInfo_o *)DataMasterBase_object__object__int___TryGetEntity(
                                            (DataMasterBase_TMaster__TEntity__PKType__o *)this,
                                            &entity,
                                            v7->fields.restrictionMessageId,
-                                           (const MethodInfo_3396884 *)Method_DataMasterBase_RestrictionMessageMaster__RestrictionMessageEntity__int__TryGetEntity__);
+                                           (const MethodInfo_33A10EC *)Method_DataMasterBase_RestrictionMessageMaster__RestrictionMessageEntity__int__TryGetEntity__);
         if ( ((unsigned __int8)this & 1) != 0 )
           break;
       }
@@ -1370,7 +1370,7 @@ System_String_o *QuestRestrictionInfo__GetDialogMessageMySvtPos(QuestRestriction
       return *p_monitor;
     }
 LABEL_19:
-    sub_1C32E7C(this);
+    sub_1C372B4(this);
   }
   p_monitor = (System_String_o **)&StringLiteral_1/*""*/;
   return *p_monitor;
@@ -1390,13 +1390,13 @@ System_String_o *QuestRestrictionInfo__GetDialogMessageSupportSvtPos(
   Il2CppObject *entity; // [xsp+8h] [xbp-48h] BYREF
 
   v2 = this;
-  if ( (byte_4C38D53 & 1) == 0 )
+  if ( (byte_4C4434C & 1) == 0 )
   {
-    sub_1C32C20(&Method_DataManager_GetMaster_RestrictionMessageMaster___);
-    sub_1C32C20(&DataManager_TypeInfo);
-    sub_1C32C20(&Method_DataMasterBase_RestrictionMessageMaster__RestrictionMessageEntity__int__TryGetEntity__);
-    this = (QuestRestrictionInfo_o *)sub_1C32C20(&StringLiteral_1/*""*/);
-    byte_4C38D53 = 1;
+    sub_1C37058(&Method_DataManager_GetMaster_RestrictionMessageMaster___);
+    sub_1C37058(&DataManager_TypeInfo);
+    sub_1C37058(&Method_DataMasterBase_RestrictionMessageMaster__RestrictionMessageEntity__int__TryGetEntity__);
+    this = (QuestRestrictionInfo_o *)sub_1C37058(&StringLiteral_1/*""*/);
+    byte_4C4434C = 1;
   }
   entity = 0;
   restrictionWholeEntities = v2->fields.restrictionWholeEntities;
@@ -1410,7 +1410,7 @@ System_String_o *QuestRestrictionInfo__GetDialogMessageSupportSvtPos(
     while ( 1 )
     {
       if ( v6 >= max_length )
-        sub_1C32E84(this);
+        sub_1C372BC(this);
       v7 = restrictionWholeEntities->m_Items[v6];
       if ( !v7 )
         goto LABEL_19;
@@ -1418,14 +1418,14 @@ System_String_o *QuestRestrictionInfo__GetDialogMessageSupportSvtPos(
       {
         if ( !DataManager_TypeInfo->_2.cctor_finished )
           j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-        this = (QuestRestrictionInfo_o *)DataManager__GetMaster_object_((const MethodInfo_30DD39C *)Method_DataManager_GetMaster_RestrictionMessageMaster___);
+        this = (QuestRestrictionInfo_o *)DataManager__GetMaster_object_((const MethodInfo_30E7C04 *)Method_DataManager_GetMaster_RestrictionMessageMaster___);
         if ( !this )
           goto LABEL_19;
         this = (QuestRestrictionInfo_o *)DataMasterBase_object__object__int___TryGetEntity(
                                            (DataMasterBase_TMaster__TEntity__PKType__o *)this,
                                            &entity,
                                            v7->fields.restrictionMessageId,
-                                           (const MethodInfo_3396884 *)Method_DataMasterBase_RestrictionMessageMaster__RestrictionMessageEntity__int__TryGetEntity__);
+                                           (const MethodInfo_33A10EC *)Method_DataMasterBase_RestrictionMessageMaster__RestrictionMessageEntity__int__TryGetEntity__);
         if ( ((unsigned __int8)this & 1) != 0 )
           break;
       }
@@ -1439,7 +1439,7 @@ System_String_o *QuestRestrictionInfo__GetDialogMessageSupportSvtPos(
       return *p_monitor;
     }
 LABEL_19:
-    sub_1C32E7C(this);
+    sub_1C372B4(this);
   }
   p_monitor = (System_String_o **)&StringLiteral_1/*""*/;
   return *p_monitor;
@@ -1458,13 +1458,13 @@ System_String_o *QuestRestrictionInfo__GetDialogMessageSvtPos(QuestRestrictionIn
   Il2CppObject *entity; // [xsp+8h] [xbp-48h] BYREF
 
   v2 = this;
-  if ( (byte_4C38D50 & 1) == 0 )
+  if ( (byte_4C44349 & 1) == 0 )
   {
-    sub_1C32C20(&Method_DataManager_GetMaster_RestrictionMessageMaster___);
-    sub_1C32C20(&DataManager_TypeInfo);
-    sub_1C32C20(&Method_DataMasterBase_RestrictionMessageMaster__RestrictionMessageEntity__int__TryGetEntity__);
-    this = (QuestRestrictionInfo_o *)sub_1C32C20(&StringLiteral_1/*""*/);
-    byte_4C38D50 = 1;
+    sub_1C37058(&Method_DataManager_GetMaster_RestrictionMessageMaster___);
+    sub_1C37058(&DataManager_TypeInfo);
+    sub_1C37058(&Method_DataMasterBase_RestrictionMessageMaster__RestrictionMessageEntity__int__TryGetEntity__);
+    this = (QuestRestrictionInfo_o *)sub_1C37058(&StringLiteral_1/*""*/);
+    byte_4C44349 = 1;
   }
   entity = 0;
   restrictionWholeEntities = v2->fields.restrictionWholeEntities;
@@ -1478,7 +1478,7 @@ System_String_o *QuestRestrictionInfo__GetDialogMessageSvtPos(QuestRestrictionIn
     while ( 1 )
     {
       if ( v6 >= max_length )
-        sub_1C32E84(this);
+        sub_1C372BC(this);
       v7 = restrictionWholeEntities->m_Items[v6];
       if ( !v7 )
         goto LABEL_20;
@@ -1487,14 +1487,14 @@ System_String_o *QuestRestrictionInfo__GetDialogMessageSvtPos(QuestRestrictionIn
       {
         if ( !DataManager_TypeInfo->_2.cctor_finished )
           j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-        this = (QuestRestrictionInfo_o *)DataManager__GetMaster_object_((const MethodInfo_30DD39C *)Method_DataManager_GetMaster_RestrictionMessageMaster___);
+        this = (QuestRestrictionInfo_o *)DataManager__GetMaster_object_((const MethodInfo_30E7C04 *)Method_DataManager_GetMaster_RestrictionMessageMaster___);
         if ( !this )
           goto LABEL_20;
         this = (QuestRestrictionInfo_o *)DataMasterBase_object__object__int___TryGetEntity(
                                            (DataMasterBase_TMaster__TEntity__PKType__o *)this,
                                            &entity,
                                            v7->fields.restrictionMessageId,
-                                           (const MethodInfo_3396884 *)Method_DataMasterBase_RestrictionMessageMaster__RestrictionMessageEntity__int__TryGetEntity__);
+                                           (const MethodInfo_33A10EC *)Method_DataMasterBase_RestrictionMessageMaster__RestrictionMessageEntity__int__TryGetEntity__);
         if ( ((unsigned __int8)this & 1) != 0 )
           break;
       }
@@ -1508,7 +1508,7 @@ System_String_o *QuestRestrictionInfo__GetDialogMessageSvtPos(QuestRestrictionIn
       return *p_monitor;
     }
 LABEL_20:
-    sub_1C32E7C(this);
+    sub_1C372B4(this);
   }
   p_monitor = (System_String_o **)&StringLiteral_1/*""*/;
   return *p_monitor;
@@ -1536,11 +1536,11 @@ System_String_o *QuestRestrictionInfo__GetDialogTargetName(
   Il2CppClass *v18; // x8
 
   v6 = this;
-  if ( (byte_4C38D39 & 1) == 0 )
+  if ( (byte_4C44332 & 1) == 0 )
   {
-    sub_1C32C20(&Method_System_Collections_Generic_Dictionary_int__RestrictionSlotEntity____get_Item__);
-    this = (QuestRestrictionInfo_o *)sub_1C32C20(&StringLiteral_1/*""*/);
-    byte_4C38D39 = 1;
+    sub_1C37058(&Method_System_Collections_Generic_Dictionary_int__RestrictionSlotEntity____get_Item__);
+    this = (QuestRestrictionInfo_o *)sub_1C37058(&StringLiteral_1/*""*/);
+    byte_4C44332 = 1;
   }
   if ( v6->fields.restrictionBaseEntity )
   {
@@ -1550,7 +1550,7 @@ System_String_o *QuestRestrictionInfo__GetDialogTargetName(
       this = (QuestRestrictionInfo_o *)System_Collections_Generic_Dictionary_int__object___get_Item(
                                          (System_Collections_Generic_Dictionary_int__object__o *)this,
                                          n,
-                                         (const MethodInfo_33EFC7C *)Method_System_Collections_Generic_Dictionary_int__RestrictionSlotEntity____get_Item__);
+                                         (const MethodInfo_33FA4E4 *)Method_System_Collections_Generic_Dictionary_int__RestrictionSlotEntity____get_Item__);
       if ( this )
       {
         dialogMessageInfoDictionary = (int)this->fields.dialogMessageInfoDictionary;
@@ -1583,7 +1583,7 @@ System_String_o *QuestRestrictionInfo__GetDialogTargetName(
       }
     }
 LABEL_32:
-    sub_1C32E7C(this);
+    sub_1C372B4(this);
   }
   questRestrictionEntityList = v6->fields.questRestrictionEntityList;
   v13 = &questRestrictionEntityList->obj.klass + n;
@@ -1615,7 +1615,7 @@ LABEL_27:
       goto LABEL_32;
     }
 LABEL_33:
-    sub_1C32E84(this);
+    sub_1C372BC(this);
   }
   v16 = 0;
   while ( 1 )
@@ -1657,7 +1657,7 @@ int32_t QuestRestrictionInfo__GetDialogType(
     max_length = restrictionEntityList->max_length;
     if ( max_length <= (unsigned int)n )
 LABEL_19:
-      sub_1C32E84(this);
+      sub_1C372BC(this);
     v8 = v6[4];
     if ( !v8 )
       goto LABEL_18;
@@ -1675,7 +1675,7 @@ LABEL_19:
           goto LABEL_15;
       }
 LABEL_18:
-      sub_1C32E7C(this);
+      sub_1C372B4(this);
     }
   }
   else if ( !restrictionEntityList )
@@ -1714,7 +1714,7 @@ bool QuestRestrictionInfo__GetExplanationMessage(
     questRestrictionEntityList = this->fields.questRestrictionEntityList;
     if ( !questRestrictionEntityList )
 LABEL_13:
-      sub_1C32E7C(this);
+      sub_1C372B4(this);
     max_length = questRestrictionEntityList->max_length;
     if ( max_length >= 1 )
     {
@@ -1722,7 +1722,7 @@ LABEL_13:
       while ( 1 )
       {
         if ( v11 >= LODWORD(questRestrictionEntityList->max_length) )
-          sub_1C32E84(this);
+          sub_1C372BC(this);
         v12 = questRestrictionEntityList->m_Items[v11];
         if ( !v12 )
           goto LABEL_13;
@@ -1740,7 +1740,7 @@ LABEL_13:
     }
 LABEL_14:
     *message = 0;
-    sub_1C32BC4((CGThumbnailListItem_o *)message, 0, (int32_t)method, v3);
+    sub_1C36FFC((CGThumbnailListItem_o *)message, 0, (int32_t)method, v3);
     return 0;
   }
   this = (QuestRestrictionInfo_o *)System_String__IsNullOrEmpty(restrictionBaseEntity->fields.subMessage, 0);
@@ -1752,22 +1752,22 @@ LABEL_14:
   noticeMessage = v7->fields.subMessage;
 LABEL_16:
   *message = noticeMessage;
-  sub_1C32BC4((CGThumbnailListItem_o *)message, (int32_t)noticeMessage, (int32_t)method, v3);
+  sub_1C36FFC((CGThumbnailListItem_o *)message, (int32_t)noticeMessage, (int32_t)method, v3);
   return 1;
 }
 
 
 System_String_o *QuestRestrictionInfo__GetFixNpcMessage(QuestRestrictionInfo_o *this, const MethodInfo *method)
 {
-  if ( (byte_4C38D43 & 1) == 0 )
+  if ( (byte_4C4433C & 1) == 0 )
   {
-    sub_1C32C20(&LocalizationManager_TypeInfo);
-    sub_1C32C20(&StringLiteral_10297/*"PARTY_ORGANIZATION_SERVANT_QUEST_RESTRICTION_FIXED_NPC"*/);
-    byte_4C38D43 = 1;
+    sub_1C37058(&LocalizationManager_TypeInfo);
+    sub_1C37058(&StringLiteral_10298/*"PARTY_ORGANIZATION_SERVANT_QUEST_RESTRICTION_FIXED_NPC"*/);
+    byte_4C4433C = 1;
   }
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-  return LocalizationManager__Get((System_String_o *)StringLiteral_10297/*"PARTY_ORGANIZATION_SERVANT_QUEST_RESTRICTION_FIXED_NPC"*/, 0);
+  return LocalizationManager__Get((System_String_o *)StringLiteral_10298/*"PARTY_ORGANIZATION_SERVANT_QUEST_RESTRICTION_FIXED_NPC"*/, 0);
 }
 
 
@@ -1775,15 +1775,15 @@ System_String_o *QuestRestrictionInfo__GetFixNpcOnlyRestrictionMessage(
         QuestRestrictionInfo_o *this,
         const MethodInfo *method)
 {
-  if ( (byte_4C38D42 & 1) == 0 )
+  if ( (byte_4C4433B & 1) == 0 )
   {
-    sub_1C32C20(&LocalizationManager_TypeInfo);
-    sub_1C32C20(&StringLiteral_10298/*"PARTY_ORGANIZATION_SERVANT_QUEST_RESTRICTION_FIXED_NPC_ONLY"*/);
-    byte_4C38D42 = 1;
+    sub_1C37058(&LocalizationManager_TypeInfo);
+    sub_1C37058(&StringLiteral_10299/*"PARTY_ORGANIZATION_SERVANT_QUEST_RESTRICTION_FIXED_NPC_ONLY"*/);
+    byte_4C4433B = 1;
   }
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-  return LocalizationManager__Get((System_String_o *)StringLiteral_10298/*"PARTY_ORGANIZATION_SERVANT_QUEST_RESTRICTION_FIXED_NPC_ONLY"*/, 0);
+  return LocalizationManager__Get((System_String_o *)StringLiteral_10299/*"PARTY_ORGANIZATION_SERVANT_QUEST_RESTRICTION_FIXED_NPC_ONLY"*/, 0);
 }
 
 
@@ -1794,37 +1794,37 @@ int32_t QuestRestrictionInfo__GetFixedMyServantPositionCount(QuestRestrictionInf
   _BOOL8 v5; // x0
   System_Collections_Generic_List_Enumerator_object__o v7; // [xsp+8h] [xbp-38h] BYREF
 
-  if ( (byte_4C38D59 & 1) == 0 )
+  if ( (byte_4C44352 & 1) == 0 )
   {
-    sub_1C32C20(&Method_System_Collections_Generic_List_Enumerator_int____Dispose__);
-    sub_1C32C20(&Method_System_Collections_Generic_List_Enumerator_int____MoveNext__);
-    sub_1C32C20(&Method_System_Collections_Generic_List_Enumerator_int____get_Current__);
-    sub_1C32C20(&Method_System_Collections_Generic_List_int____GetEnumerator__);
-    byte_4C38D59 = 1;
+    sub_1C37058(&Method_System_Collections_Generic_List_Enumerator_int____Dispose__);
+    sub_1C37058(&Method_System_Collections_Generic_List_Enumerator_int____MoveNext__);
+    sub_1C37058(&Method_System_Collections_Generic_List_Enumerator_int____get_Current__);
+    sub_1C37058(&Method_System_Collections_Generic_List_int____GetEnumerator__);
+    byte_4C44352 = 1;
   }
   memset(&v7, 0, sizeof(v7));
   if ( !this->fields.restrictionBaseEntity || !this->fields.isFixedMyServantPosition )
     return 0;
   fixedMyServantIndividualitiesList = this->fields.fixedMyServantIndividualitiesList;
   if ( !fixedMyServantIndividualitiesList )
-    sub_1C32E7C(0);
+    sub_1C372B4(0);
   System_Collections_Generic_List_object___GetEnumerator(
     (System_Collections_Generic_List_Enumerator_T__o *)&v7,
     (System_Collections_Generic_List_object__o *)fixedMyServantIndividualitiesList,
-    (const MethodInfo_37992B4 *)Method_System_Collections_Generic_List_int____GetEnumerator__);
+    (const MethodInfo_37A3B1C *)Method_System_Collections_Generic_List_int____GetEnumerator__);
   for ( i = 0; ; i += *(_DWORD *)((char *)&v7.fields._current->klass + (unsigned __int64)&off_18) )
   {
     v5 = System_Collections_Generic_List_Enumerator_object___MoveNext(
            &v7,
-           (const MethodInfo_3522FA8 *)Method_System_Collections_Generic_List_Enumerator_int____MoveNext__);
+           (const MethodInfo_352D810 *)Method_System_Collections_Generic_List_Enumerator_int____MoveNext__);
     if ( !v5 )
       break;
     if ( !v7.fields._current )
-      sub_1C32E7C(v5);
+      sub_1C372B4(v5);
   }
   System_Collections_Generic_List_Enumerator_object___Dispose(
     &v7,
-    (const MethodInfo_3522FA4 *)Method_System_Collections_Generic_List_Enumerator_int____Dispose__);
+    (const MethodInfo_352D80C *)Method_System_Collections_Generic_List_Enumerator_int____Dispose__);
   return i;
 }
 
@@ -1839,55 +1839,55 @@ System_Int32_array *QuestRestrictionInfo__GetFixedMyServantPositionSvtIdList(
   _BOOL8 v6; // x0
   System_Collections_Generic_List_Enumerator_object__o v8; // [xsp+8h] [xbp-38h] BYREF
 
-  if ( (byte_4C38D56 & 1) == 0 )
+  if ( (byte_4C4434F & 1) == 0 )
   {
-    sub_1C32C20(&Method_System_Collections_Generic_List_Enumerator_int____Dispose__);
-    sub_1C32C20(&Method_System_Collections_Generic_List_Enumerator_int____MoveNext__);
-    sub_1C32C20(&Method_System_Collections_Generic_List_Enumerator_int____get_Current__);
-    sub_1C32C20(&Method_System_Collections_Generic_List_int__AddRange__);
-    sub_1C32C20(&Method_System_Collections_Generic_List_int____GetEnumerator__);
-    sub_1C32C20(&Method_System_Collections_Generic_List_int__ToArray__);
-    sub_1C32C20(&Method_System_Collections_Generic_List_int___ctor__);
-    sub_1C32C20(&System_Collections_Generic_List_int__TypeInfo);
-    byte_4C38D56 = 1;
+    sub_1C37058(&Method_System_Collections_Generic_List_Enumerator_int____Dispose__);
+    sub_1C37058(&Method_System_Collections_Generic_List_Enumerator_int____MoveNext__);
+    sub_1C37058(&Method_System_Collections_Generic_List_Enumerator_int____get_Current__);
+    sub_1C37058(&Method_System_Collections_Generic_List_int__AddRange__);
+    sub_1C37058(&Method_System_Collections_Generic_List_int____GetEnumerator__);
+    sub_1C37058(&Method_System_Collections_Generic_List_int__ToArray__);
+    sub_1C37058(&Method_System_Collections_Generic_List_int___ctor__);
+    sub_1C37058(&System_Collections_Generic_List_int__TypeInfo);
+    byte_4C4434F = 1;
   }
   memset(&v8, 0, sizeof(v8));
   if ( !this->fields.restrictionBaseEntity || !this->fields.isFixedMyServantPosition )
     return 0;
-  v4 = (System_Collections_Generic_List_int__o *)sub_1C32E6C(System_Collections_Generic_List_int__TypeInfo);
+  v4 = (System_Collections_Generic_List_int__o *)sub_1C372A4(System_Collections_Generic_List_int__TypeInfo);
   System_Collections_Generic_List_int____ctor(
     v4,
-    (const MethodInfo_377AF44 *)Method_System_Collections_Generic_List_int___ctor__);
+    (const MethodInfo_37857AC *)Method_System_Collections_Generic_List_int___ctor__);
   fixedMyServantIndividualitiesList = this->fields.fixedMyServantIndividualitiesList;
   if ( !fixedMyServantIndividualitiesList )
     goto LABEL_15;
   System_Collections_Generic_List_object___GetEnumerator(
     (System_Collections_Generic_List_Enumerator_T__o *)&v8,
     (System_Collections_Generic_List_object__o *)fixedMyServantIndividualitiesList,
-    (const MethodInfo_37992B4 *)Method_System_Collections_Generic_List_int____GetEnumerator__);
+    (const MethodInfo_37A3B1C *)Method_System_Collections_Generic_List_int____GetEnumerator__);
   while ( 1 )
   {
     v6 = System_Collections_Generic_List_Enumerator_object___MoveNext(
            &v8,
-           (const MethodInfo_3522FA8 *)Method_System_Collections_Generic_List_Enumerator_int____MoveNext__);
+           (const MethodInfo_352D810 *)Method_System_Collections_Generic_List_Enumerator_int____MoveNext__);
     if ( !v6 )
       break;
     if ( !v4 )
-      sub_1C32E7C(v6);
+      sub_1C372B4(v6);
     System_Collections_Generic_List_int___AddRange(
       v4,
       (System_Collections_Generic_IEnumerable_T__o *)v8.fields._current,
-      (const MethodInfo_377B9A4 *)Method_System_Collections_Generic_List_int__AddRange__);
+      (const MethodInfo_378620C *)Method_System_Collections_Generic_List_int__AddRange__);
   }
   System_Collections_Generic_List_Enumerator_object___Dispose(
     &v8,
-    (const MethodInfo_3522FA4 *)Method_System_Collections_Generic_List_Enumerator_int____Dispose__);
+    (const MethodInfo_352D80C *)Method_System_Collections_Generic_List_Enumerator_int____Dispose__);
   if ( !v4 )
 LABEL_15:
-    sub_1C32E7C(fixedMyServantIndividualitiesList);
+    sub_1C372B4(fixedMyServantIndividualitiesList);
   return System_Collections_Generic_List_int___ToArray(
            v4,
-           (const MethodInfo_377D250 *)Method_System_Collections_Generic_List_int__ToArray__);
+           (const MethodInfo_3787AB8 *)Method_System_Collections_Generic_List_int__ToArray__);
 }
 
 
@@ -1913,14 +1913,14 @@ bool QuestRestrictionInfo__GetFixedMyServantSingleRestriction(
   int32_t max_length; // w9
 
   v10 = this;
-  if ( (byte_4C38D34 & 1) == 0 )
+  if ( (byte_4C4432D & 1) == 0 )
   {
-    sub_1C32C20(&Method_DataManager_GetMasterData_ServantLimitImageMaster___);
-    sub_1C32C20(&Method_DataManager_GetMasterData_ServantMaster___);
-    sub_1C32C20(&Method_DataMasterBase_ServantMaster__ServantEntity__int__GetEntity__);
-    sub_1C32C20(&Method_System_Collections_Generic_Dictionary_int__RestrictionSlotDetailEntity____get_Item__);
-    this = (QuestRestrictionInfo_o *)sub_1C32C20(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-    byte_4C38D34 = 1;
+    sub_1C37058(&Method_DataManager_GetMasterData_ServantLimitImageMaster___);
+    sub_1C37058(&Method_DataManager_GetMasterData_ServantMaster___);
+    sub_1C37058(&Method_DataMasterBase_ServantMaster__ServantEntity__int__GetEntity__);
+    sub_1C37058(&Method_System_Collections_Generic_Dictionary_int__RestrictionSlotDetailEntity____get_Item__);
+    this = (QuestRestrictionInfo_o *)sub_1C37058(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    byte_4C4432D = 1;
   }
   if ( !v10->fields.isFixedMyServantSingle )
     return 0;
@@ -1929,12 +1929,12 @@ bool QuestRestrictionInfo__GetFixedMyServantSingleRestriction(
     fixedMyServantSingleIndividualities = v10->fields.fixedMyServantSingleIndividualities;
     if ( !fixedMyServantSingleIndividualities || !fixedMyServantSingleIndividualities->max_length )
       return 0;
-    this = (QuestRestrictionInfo_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39E2904 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    this = (QuestRestrictionInfo_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39ED16C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
     if ( this )
     {
       this = (QuestRestrictionInfo_o *)DataManager__GetMasterData_object_(
                                          (DataManager_o *)this,
-                                         (const MethodInfo_30DD3F0 *)Method_DataManager_GetMasterData_ServantLimitImageMaster___);
+                                         (const MethodInfo_30E7C58 *)Method_DataManager_GetMasterData_ServantLimitImageMaster___);
       if ( this )
       {
         ServantImageLimitSealAfter = ServantLimitImageMaster__GetServantImageLimitSealAfter(
@@ -1942,25 +1942,25 @@ bool QuestRestrictionInfo__GetFixedMyServantSingleRestriction(
                                        svtId,
                                        dispLimitCount,
                                        0);
-        this = (QuestRestrictionInfo_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39E2904 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+        this = (QuestRestrictionInfo_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39ED16C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
         if ( this )
         {
           this = (QuestRestrictionInfo_o *)DataManager__GetMasterData_object_(
                                              (DataManager_o *)this,
-                                             (const MethodInfo_30DD3F0 *)Method_DataManager_GetMasterData_ServantMaster___);
+                                             (const MethodInfo_30E7C58 *)Method_DataManager_GetMasterData_ServantMaster___);
           if ( this )
           {
             this = (QuestRestrictionInfo_o *)DataMasterBase_object__object__int___GetEntity(
                                                (DataMasterBase_TMaster__TEntity__PKType__o *)this,
                                                svtId,
-                                               (const MethodInfo_3396838 *)Method_DataMasterBase_ServantMaster__ServantEntity__int__GetEntity__);
+                                               (const MethodInfo_33A10A0 *)Method_DataMasterBase_ServantMaster__ServantEntity__int__GetEntity__);
             if ( v10->fields.restrictionSlotDetailDictionary )
             {
               v13 = (ServantEntity_o *)this;
               this = (QuestRestrictionInfo_o *)System_Collections_Generic_Dictionary_int__object___get_Item(
                                                  (System_Collections_Generic_Dictionary_int__object__o *)v10->fields.restrictionSlotDetailDictionary,
                                                  1,
-                                                 (const MethodInfo_33EFC7C *)Method_System_Collections_Generic_Dictionary_int__RestrictionSlotDetailEntity____get_Item__);
+                                                 (const MethodInfo_33FA4E4 *)Method_System_Collections_Generic_Dictionary_int__RestrictionSlotDetailEntity____get_Item__);
               if ( this )
               {
                 dialogMessageInfoDictionary = (int)this->fields.dialogMessageInfoDictionary;
@@ -2000,7 +2000,7 @@ bool QuestRestrictionInfo__GetFixedMyServantSingleRestriction(
       }
     }
 LABEL_29:
-    sub_1C32E7C(this);
+    sub_1C372B4(this);
   }
   fixedMyServantSingleRestrictionEntity = v10->fields.fixedMyServantSingleRestrictionEntity;
   if ( !fixedMyServantSingleRestrictionEntity )
@@ -2013,7 +2013,7 @@ LABEL_29:
     return 0;
   if ( max_length <= (unsigned int)num )
 LABEL_30:
-    sub_1C32E84(this);
+    sub_1C372BC(this);
   return targetVals->m_Items[num] != svtId;
 }
 
@@ -2022,15 +2022,15 @@ System_String_o *QuestRestrictionInfo__GetFixedMyServantSingleRestrictionMessage
         QuestRestrictionInfo_o *this,
         const MethodInfo *method)
 {
-  if ( (byte_4C38D35 & 1) == 0 )
+  if ( (byte_4C4432E & 1) == 0 )
   {
-    sub_1C32C20(&LocalizationManager_TypeInfo);
-    sub_1C32C20(&StringLiteral_10296/*"PARTY_ORGANIZATION_SERVANT_QUEST_RESTRICTION_FIXED_MY_SERVANT_SINGLE"*/);
-    byte_4C38D35 = 1;
+    sub_1C37058(&LocalizationManager_TypeInfo);
+    sub_1C37058(&StringLiteral_10297/*"PARTY_ORGANIZATION_SERVANT_QUEST_RESTRICTION_FIXED_MY_SERVANT_SINGLE"*/);
+    byte_4C4432E = 1;
   }
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-  return LocalizationManager__Get((System_String_o *)StringLiteral_10296/*"PARTY_ORGANIZATION_SERVANT_QUEST_RESTRICTION_FIXED_MY_SERVANT_SINGLE"*/, 0);
+  return LocalizationManager__Get((System_String_o *)StringLiteral_10297/*"PARTY_ORGANIZATION_SERVANT_QUEST_RESTRICTION_FIXED_MY_SERVANT_SINGLE"*/, 0);
 }
 
 
@@ -2059,37 +2059,37 @@ int32_t QuestRestrictionInfo__GetFixedPositionCount(QuestRestrictionInfo_o *this
   _BOOL8 v5; // x0
   System_Collections_Generic_List_Enumerator_object__o v7; // [xsp+8h] [xbp-38h] BYREF
 
-  if ( (byte_4C38D5B & 1) == 0 )
+  if ( (byte_4C44354 & 1) == 0 )
   {
-    sub_1C32C20(&Method_System_Collections_Generic_List_Enumerator_int____Dispose__);
-    sub_1C32C20(&Method_System_Collections_Generic_List_Enumerator_int____MoveNext__);
-    sub_1C32C20(&Method_System_Collections_Generic_List_Enumerator_int____get_Current__);
-    sub_1C32C20(&Method_System_Collections_Generic_List_int____GetEnumerator__);
-    byte_4C38D5B = 1;
+    sub_1C37058(&Method_System_Collections_Generic_List_Enumerator_int____Dispose__);
+    sub_1C37058(&Method_System_Collections_Generic_List_Enumerator_int____MoveNext__);
+    sub_1C37058(&Method_System_Collections_Generic_List_Enumerator_int____get_Current__);
+    sub_1C37058(&Method_System_Collections_Generic_List_int____GetEnumerator__);
+    byte_4C44354 = 1;
   }
   memset(&v7, 0, sizeof(v7));
   if ( !this->fields.restrictionBaseEntity || !this->fields.isFixedPosition )
     return 0;
   fixedIndividualitiesList = this->fields.fixedIndividualitiesList;
   if ( !fixedIndividualitiesList )
-    sub_1C32E7C(0);
+    sub_1C372B4(0);
   System_Collections_Generic_List_object___GetEnumerator(
     (System_Collections_Generic_List_Enumerator_T__o *)&v7,
     (System_Collections_Generic_List_object__o *)fixedIndividualitiesList,
-    (const MethodInfo_37992B4 *)Method_System_Collections_Generic_List_int____GetEnumerator__);
+    (const MethodInfo_37A3B1C *)Method_System_Collections_Generic_List_int____GetEnumerator__);
   for ( i = 0; ; i += *(_DWORD *)((char *)&v7.fields._current->klass + (unsigned __int64)&off_18) )
   {
     v5 = System_Collections_Generic_List_Enumerator_object___MoveNext(
            &v7,
-           (const MethodInfo_3522FA8 *)Method_System_Collections_Generic_List_Enumerator_int____MoveNext__);
+           (const MethodInfo_352D810 *)Method_System_Collections_Generic_List_Enumerator_int____MoveNext__);
     if ( !v5 )
       break;
     if ( !v7.fields._current )
-      sub_1C32E7C(v5);
+      sub_1C372B4(v5);
   }
   System_Collections_Generic_List_Enumerator_object___Dispose(
     &v7,
-    (const MethodInfo_3522FA4 *)Method_System_Collections_Generic_List_Enumerator_int____Dispose__);
+    (const MethodInfo_352D80C *)Method_System_Collections_Generic_List_Enumerator_int____Dispose__);
   return i;
 }
 
@@ -2104,55 +2104,55 @@ System_Int32_array *QuestRestrictionInfo__GetFixedPositionSvtIdList(
   _BOOL8 v6; // x0
   System_Collections_Generic_List_Enumerator_object__o v8; // [xsp+8h] [xbp-38h] BYREF
 
-  if ( (byte_4C38D58 & 1) == 0 )
+  if ( (byte_4C44351 & 1) == 0 )
   {
-    sub_1C32C20(&Method_System_Collections_Generic_List_Enumerator_int____Dispose__);
-    sub_1C32C20(&Method_System_Collections_Generic_List_Enumerator_int____MoveNext__);
-    sub_1C32C20(&Method_System_Collections_Generic_List_Enumerator_int____get_Current__);
-    sub_1C32C20(&Method_System_Collections_Generic_List_int__AddRange__);
-    sub_1C32C20(&Method_System_Collections_Generic_List_int____GetEnumerator__);
-    sub_1C32C20(&Method_System_Collections_Generic_List_int__ToArray__);
-    sub_1C32C20(&Method_System_Collections_Generic_List_int___ctor__);
-    sub_1C32C20(&System_Collections_Generic_List_int__TypeInfo);
-    byte_4C38D58 = 1;
+    sub_1C37058(&Method_System_Collections_Generic_List_Enumerator_int____Dispose__);
+    sub_1C37058(&Method_System_Collections_Generic_List_Enumerator_int____MoveNext__);
+    sub_1C37058(&Method_System_Collections_Generic_List_Enumerator_int____get_Current__);
+    sub_1C37058(&Method_System_Collections_Generic_List_int__AddRange__);
+    sub_1C37058(&Method_System_Collections_Generic_List_int____GetEnumerator__);
+    sub_1C37058(&Method_System_Collections_Generic_List_int__ToArray__);
+    sub_1C37058(&Method_System_Collections_Generic_List_int___ctor__);
+    sub_1C37058(&System_Collections_Generic_List_int__TypeInfo);
+    byte_4C44351 = 1;
   }
   memset(&v8, 0, sizeof(v8));
   if ( !this->fields.restrictionBaseEntity || !this->fields.isFixedPosition )
     return 0;
-  v4 = (System_Collections_Generic_List_int__o *)sub_1C32E6C(System_Collections_Generic_List_int__TypeInfo);
+  v4 = (System_Collections_Generic_List_int__o *)sub_1C372A4(System_Collections_Generic_List_int__TypeInfo);
   System_Collections_Generic_List_int____ctor(
     v4,
-    (const MethodInfo_377AF44 *)Method_System_Collections_Generic_List_int___ctor__);
+    (const MethodInfo_37857AC *)Method_System_Collections_Generic_List_int___ctor__);
   fixedIndividualitiesList = this->fields.fixedIndividualitiesList;
   if ( !fixedIndividualitiesList )
     goto LABEL_15;
   System_Collections_Generic_List_object___GetEnumerator(
     (System_Collections_Generic_List_Enumerator_T__o *)&v8,
     (System_Collections_Generic_List_object__o *)fixedIndividualitiesList,
-    (const MethodInfo_37992B4 *)Method_System_Collections_Generic_List_int____GetEnumerator__);
+    (const MethodInfo_37A3B1C *)Method_System_Collections_Generic_List_int____GetEnumerator__);
   while ( 1 )
   {
     v6 = System_Collections_Generic_List_Enumerator_object___MoveNext(
            &v8,
-           (const MethodInfo_3522FA8 *)Method_System_Collections_Generic_List_Enumerator_int____MoveNext__);
+           (const MethodInfo_352D810 *)Method_System_Collections_Generic_List_Enumerator_int____MoveNext__);
     if ( !v6 )
       break;
     if ( !v4 )
-      sub_1C32E7C(v6);
+      sub_1C372B4(v6);
     System_Collections_Generic_List_int___AddRange(
       v4,
       (System_Collections_Generic_IEnumerable_T__o *)v8.fields._current,
-      (const MethodInfo_377B9A4 *)Method_System_Collections_Generic_List_int__AddRange__);
+      (const MethodInfo_378620C *)Method_System_Collections_Generic_List_int__AddRange__);
   }
   System_Collections_Generic_List_Enumerator_object___Dispose(
     &v8,
-    (const MethodInfo_3522FA4 *)Method_System_Collections_Generic_List_Enumerator_int____Dispose__);
+    (const MethodInfo_352D80C *)Method_System_Collections_Generic_List_Enumerator_int____Dispose__);
   if ( !v4 )
 LABEL_15:
-    sub_1C32E7C(fixedIndividualitiesList);
+    sub_1C372B4(fixedIndividualitiesList);
   return System_Collections_Generic_List_int___ToArray(
            v4,
-           (const MethodInfo_377D250 *)Method_System_Collections_Generic_List_int__ToArray__);
+           (const MethodInfo_3787AB8 *)Method_System_Collections_Generic_List_int__ToArray__);
 }
 
 
@@ -2169,13 +2169,13 @@ int32_t QuestRestrictionInfo__GetFixedServantPositionCount(QuestRestrictionInfo_
   System_Collections_Generic_List_Enumerator_object__o v12; // [xsp+8h] [xbp-68h] BYREF
   System_Collections_Generic_List_Enumerator_object__o i; // [xsp+20h] [xbp-50h] BYREF
 
-  if ( (byte_4C38D31 & 1) == 0 )
+  if ( (byte_4C4432A & 1) == 0 )
   {
-    sub_1C32C20(&Method_System_Collections_Generic_List_Enumerator_int____Dispose__);
-    sub_1C32C20(&Method_System_Collections_Generic_List_Enumerator_int____MoveNext__);
-    sub_1C32C20(&Method_System_Collections_Generic_List_Enumerator_int____get_Current__);
-    sub_1C32C20(&Method_System_Collections_Generic_List_int____GetEnumerator__);
-    byte_4C38D31 = 1;
+    sub_1C37058(&Method_System_Collections_Generic_List_Enumerator_int____Dispose__);
+    sub_1C37058(&Method_System_Collections_Generic_List_Enumerator_int____MoveNext__);
+    sub_1C37058(&Method_System_Collections_Generic_List_Enumerator_int____get_Current__);
+    sub_1C37058(&Method_System_Collections_Generic_List_int____GetEnumerator__);
+    byte_4C4432A = 1;
   }
   memset(&i, 0, sizeof(i));
   if ( !this->fields.restrictionBaseEntity )
@@ -2209,21 +2209,21 @@ int32_t QuestRestrictionInfo__GetFixedServantPositionCount(QuestRestrictionInfo_
     System_Collections_Generic_List_object___GetEnumerator(
       (System_Collections_Generic_List_Enumerator_T__o *)&v12,
       (System_Collections_Generic_List_object__o *)fixedMyServantIndividualitiesList,
-      (const MethodInfo_37992B4 *)Method_System_Collections_Generic_List_int____GetEnumerator__);
+      (const MethodInfo_37A3B1C *)Method_System_Collections_Generic_List_int____GetEnumerator__);
     v4 = 0;
     for ( i = v12; ; v4 += LODWORD(i.fields._current[1].monitor) )
     {
       v5 = System_Collections_Generic_List_Enumerator_object___MoveNext(
              &i,
-             (const MethodInfo_3522FA8 *)Method_System_Collections_Generic_List_Enumerator_int____MoveNext__);
+             (const MethodInfo_352D810 *)Method_System_Collections_Generic_List_Enumerator_int____MoveNext__);
       if ( !v5 )
         break;
       if ( !i.fields._current )
-        sub_1C32E7C(v5);
+        sub_1C372B4(v5);
     }
     System_Collections_Generic_List_Enumerator_object___Dispose(
       &i,
-      (const MethodInfo_3522FA4 *)Method_System_Collections_Generic_List_Enumerator_int____Dispose__);
+      (const MethodInfo_352D80C *)Method_System_Collections_Generic_List_Enumerator_int____Dispose__);
   }
   else
   {
@@ -2235,24 +2235,24 @@ int32_t QuestRestrictionInfo__GetFixedServantPositionCount(QuestRestrictionInfo_
   fixedMyServantIndividualitiesList = this->fields.fixedIndividualitiesList;
   if ( !fixedMyServantIndividualitiesList )
 LABEL_30:
-    sub_1C32E7C(fixedMyServantIndividualitiesList);
+    sub_1C372B4(fixedMyServantIndividualitiesList);
   System_Collections_Generic_List_object___GetEnumerator(
     (System_Collections_Generic_List_Enumerator_T__o *)&v12,
     (System_Collections_Generic_List_object__o *)fixedMyServantIndividualitiesList,
-    (const MethodInfo_37992B4 *)Method_System_Collections_Generic_List_int____GetEnumerator__);
+    (const MethodInfo_37A3B1C *)Method_System_Collections_Generic_List_int____GetEnumerator__);
   for ( i = v12; ; v9 += LODWORD(i.fields._current[1].monitor) )
   {
     v10 = System_Collections_Generic_List_Enumerator_object___MoveNext(
             &i,
-            (const MethodInfo_3522FA8 *)Method_System_Collections_Generic_List_Enumerator_int____MoveNext__);
+            (const MethodInfo_352D810 *)Method_System_Collections_Generic_List_Enumerator_int____MoveNext__);
     if ( !v10 )
       break;
     if ( !i.fields._current )
-      sub_1C32E7C(v10);
+      sub_1C372B4(v10);
   }
   System_Collections_Generic_List_Enumerator_object___Dispose(
     &i,
-    (const MethodInfo_3522FA4 *)Method_System_Collections_Generic_List_Enumerator_int____Dispose__);
+    (const MethodInfo_352D80C *)Method_System_Collections_Generic_List_Enumerator_int____Dispose__);
   return v9;
 }
 
@@ -2261,15 +2261,15 @@ System_String_o *QuestRestrictionInfo__GetFixedServantPositionRestrictionMessage
         QuestRestrictionInfo_o *this,
         const MethodInfo *method)
 {
-  if ( (byte_4C38D33 & 1) == 0 )
+  if ( (byte_4C4432C & 1) == 0 )
   {
-    sub_1C32C20(&LocalizationManager_TypeInfo);
-    sub_1C32C20(&StringLiteral_10295/*"PARTY_ORGANIZATION_SERVANT_QUEST_RESTRICTION_FIXED_MY_SERVANT_POSITION"*/);
-    byte_4C38D33 = 1;
+    sub_1C37058(&LocalizationManager_TypeInfo);
+    sub_1C37058(&StringLiteral_10296/*"PARTY_ORGANIZATION_SERVANT_QUEST_RESTRICTION_FIXED_MY_SERVANT_POSITION"*/);
+    byte_4C4432C = 1;
   }
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-  return LocalizationManager__Get((System_String_o *)StringLiteral_10295/*"PARTY_ORGANIZATION_SERVANT_QUEST_RESTRICTION_FIXED_MY_SERVANT_POSITION"*/, 0);
+  return LocalizationManager__Get((System_String_o *)StringLiteral_10296/*"PARTY_ORGANIZATION_SERVANT_QUEST_RESTRICTION_FIXED_MY_SERVANT_POSITION"*/, 0);
 }
 
 
@@ -2286,26 +2286,26 @@ System_Int32_array *QuestRestrictionInfo__GetFixedServantPositionSvtIdList(
   System_Collections_Generic_List_Enumerator_object__o v10; // [xsp+8h] [xbp-68h] BYREF
   System_Collections_Generic_List_Enumerator_object__o i; // [xsp+20h] [xbp-50h] BYREF
 
-  if ( (byte_4C38D30 & 1) == 0 )
+  if ( (byte_4C44329 & 1) == 0 )
   {
-    sub_1C32C20(&Method_System_Collections_Generic_List_Enumerator_int____Dispose__);
-    sub_1C32C20(&Method_System_Collections_Generic_List_Enumerator_int____MoveNext__);
-    sub_1C32C20(&Method_System_Collections_Generic_List_Enumerator_int____get_Current__);
-    sub_1C32C20(&Method_System_Collections_Generic_List_int__AddRange__);
-    sub_1C32C20(&Method_System_Collections_Generic_List_int____GetEnumerator__);
-    sub_1C32C20(&Method_System_Collections_Generic_List_int__ToArray__);
-    sub_1C32C20(&Method_System_Collections_Generic_List_int___ctor__);
-    sub_1C32C20(&Method_System_Collections_Generic_List_int__get_Count__);
-    sub_1C32C20(&System_Collections_Generic_List_int__TypeInfo);
-    byte_4C38D30 = 1;
+    sub_1C37058(&Method_System_Collections_Generic_List_Enumerator_int____Dispose__);
+    sub_1C37058(&Method_System_Collections_Generic_List_Enumerator_int____MoveNext__);
+    sub_1C37058(&Method_System_Collections_Generic_List_Enumerator_int____get_Current__);
+    sub_1C37058(&Method_System_Collections_Generic_List_int__AddRange__);
+    sub_1C37058(&Method_System_Collections_Generic_List_int____GetEnumerator__);
+    sub_1C37058(&Method_System_Collections_Generic_List_int__ToArray__);
+    sub_1C37058(&Method_System_Collections_Generic_List_int___ctor__);
+    sub_1C37058(&Method_System_Collections_Generic_List_int__get_Count__);
+    sub_1C37058(&System_Collections_Generic_List_int__TypeInfo);
+    byte_4C44329 = 1;
   }
   memset(&i, 0, sizeof(i));
   if ( this->fields.restrictionBaseEntity )
   {
-    v3 = (System_Collections_Generic_List_int__o *)sub_1C32E6C(System_Collections_Generic_List_int__TypeInfo);
+    v3 = (System_Collections_Generic_List_int__o *)sub_1C372A4(System_Collections_Generic_List_int__TypeInfo);
     System_Collections_Generic_List_int____ctor(
       v3,
-      (const MethodInfo_377AF44 *)Method_System_Collections_Generic_List_int___ctor__);
+      (const MethodInfo_37857AC *)Method_System_Collections_Generic_List_int___ctor__);
     if ( this->fields.isFixedMyServantPosition )
     {
       fixedMyServantIndividualitiesList = this->fields.fixedMyServantIndividualitiesList;
@@ -2314,25 +2314,25 @@ System_Int32_array *QuestRestrictionInfo__GetFixedServantPositionSvtIdList(
       System_Collections_Generic_List_object___GetEnumerator(
         (System_Collections_Generic_List_Enumerator_T__o *)&v10,
         (System_Collections_Generic_List_object__o *)fixedMyServantIndividualitiesList,
-        (const MethodInfo_37992B4 *)Method_System_Collections_Generic_List_int____GetEnumerator__);
+        (const MethodInfo_37A3B1C *)Method_System_Collections_Generic_List_int____GetEnumerator__);
       for ( i = v10;
             ;
             System_Collections_Generic_List_int___AddRange(
               v3,
               (System_Collections_Generic_IEnumerable_T__o *)i.fields._current,
-              (const MethodInfo_377B9A4 *)Method_System_Collections_Generic_List_int__AddRange__) )
+              (const MethodInfo_378620C *)Method_System_Collections_Generic_List_int__AddRange__) )
       {
         v5 = System_Collections_Generic_List_Enumerator_object___MoveNext(
                &i,
-               (const MethodInfo_3522FA8 *)Method_System_Collections_Generic_List_Enumerator_int____MoveNext__);
+               (const MethodInfo_352D810 *)Method_System_Collections_Generic_List_Enumerator_int____MoveNext__);
         if ( !v5 )
           break;
         if ( !v3 )
-          sub_1C32E7C(v5);
+          sub_1C372B4(v5);
       }
       System_Collections_Generic_List_Enumerator_object___Dispose(
         &i,
-        (const MethodInfo_3522FA4 *)Method_System_Collections_Generic_List_Enumerator_int____Dispose__);
+        (const MethodInfo_352D80C *)Method_System_Collections_Generic_List_Enumerator_int____Dispose__);
     }
     if ( this->fields.isNeedStarting )
     {
@@ -2342,25 +2342,25 @@ System_Int32_array *QuestRestrictionInfo__GetFixedServantPositionSvtIdList(
       System_Collections_Generic_List_object___GetEnumerator(
         (System_Collections_Generic_List_Enumerator_T__o *)&v10,
         (System_Collections_Generic_List_object__o *)fixedMyServantIndividualitiesList,
-        (const MethodInfo_37992B4 *)Method_System_Collections_Generic_List_int____GetEnumerator__);
+        (const MethodInfo_37A3B1C *)Method_System_Collections_Generic_List_int____GetEnumerator__);
       for ( i = v10;
             ;
             System_Collections_Generic_List_int___AddRange(
               v3,
               (System_Collections_Generic_IEnumerable_T__o *)i.fields._current,
-              (const MethodInfo_377B9A4 *)Method_System_Collections_Generic_List_int__AddRange__) )
+              (const MethodInfo_378620C *)Method_System_Collections_Generic_List_int__AddRange__) )
       {
         v6 = System_Collections_Generic_List_Enumerator_object___MoveNext(
                &i,
-               (const MethodInfo_3522FA8 *)Method_System_Collections_Generic_List_Enumerator_int____MoveNext__);
+               (const MethodInfo_352D810 *)Method_System_Collections_Generic_List_Enumerator_int____MoveNext__);
         if ( !v6 )
           break;
         if ( !v3 )
-          sub_1C32E7C(v6);
+          sub_1C372B4(v6);
       }
       System_Collections_Generic_List_Enumerator_object___Dispose(
         &i,
-        (const MethodInfo_3522FA4 *)Method_System_Collections_Generic_List_Enumerator_int____Dispose__);
+        (const MethodInfo_352D80C *)Method_System_Collections_Generic_List_Enumerator_int____Dispose__);
     }
     if ( this->fields.isFixedPosition )
     {
@@ -2370,36 +2370,36 @@ System_Int32_array *QuestRestrictionInfo__GetFixedServantPositionSvtIdList(
       System_Collections_Generic_List_object___GetEnumerator(
         (System_Collections_Generic_List_Enumerator_T__o *)&v10,
         (System_Collections_Generic_List_object__o *)fixedMyServantIndividualitiesList,
-        (const MethodInfo_37992B4 *)Method_System_Collections_Generic_List_int____GetEnumerator__);
+        (const MethodInfo_37A3B1C *)Method_System_Collections_Generic_List_int____GetEnumerator__);
       for ( i = v10;
             ;
             System_Collections_Generic_List_int___AddRange(
               v3,
               (System_Collections_Generic_IEnumerable_T__o *)i.fields._current,
-              (const MethodInfo_377B9A4 *)Method_System_Collections_Generic_List_int__AddRange__) )
+              (const MethodInfo_378620C *)Method_System_Collections_Generic_List_int__AddRange__) )
       {
         v7 = System_Collections_Generic_List_Enumerator_object___MoveNext(
                &i,
-               (const MethodInfo_3522FA8 *)Method_System_Collections_Generic_List_Enumerator_int____MoveNext__);
+               (const MethodInfo_352D810 *)Method_System_Collections_Generic_List_Enumerator_int____MoveNext__);
         if ( !v7 )
           break;
         if ( !v3 )
-          sub_1C32E7C(v7);
+          sub_1C372B4(v7);
       }
       System_Collections_Generic_List_Enumerator_object___Dispose(
         &i,
-        (const MethodInfo_3522FA4 *)Method_System_Collections_Generic_List_Enumerator_int____Dispose__);
+        (const MethodInfo_352D80C *)Method_System_Collections_Generic_List_Enumerator_int____Dispose__);
     }
     if ( v3 )
     {
       if ( v3->fields._size > 0 )
         return System_Collections_Generic_List_int___ToArray(
                  v3,
-                 (const MethodInfo_377D250 *)Method_System_Collections_Generic_List_int__ToArray__);
+                 (const MethodInfo_3787AB8 *)Method_System_Collections_Generic_List_int__ToArray__);
       return 0;
     }
 LABEL_38:
-    sub_1C32E7C(fixedMyServantIndividualitiesList);
+    sub_1C372B4(fixedMyServantIndividualitiesList);
   }
   if ( this->fields.isFixedMyServantPosition )
   {
@@ -2421,15 +2421,15 @@ System_String_o *QuestRestrictionInfo__GetFixedSupportPositionRestrictionMessage
         QuestRestrictionInfo_o *this,
         const MethodInfo *method)
 {
-  if ( (byte_4C38D2F & 1) == 0 )
+  if ( (byte_4C44328 & 1) == 0 )
   {
-    sub_1C32C20(&LocalizationManager_TypeInfo);
-    sub_1C32C20(&StringLiteral_10300/*"PARTY_ORGANIZATION_SERVANT_QUEST_RESTRICTION_FIXED_SUPPORT_POSITION"*/);
-    byte_4C38D2F = 1;
+    sub_1C37058(&LocalizationManager_TypeInfo);
+    sub_1C37058(&StringLiteral_10301/*"PARTY_ORGANIZATION_SERVANT_QUEST_RESTRICTION_FIXED_SUPPORT_POSITION"*/);
+    byte_4C44328 = 1;
   }
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-  return LocalizationManager__Get((System_String_o *)StringLiteral_10300/*"PARTY_ORGANIZATION_SERVANT_QUEST_RESTRICTION_FIXED_SUPPORT_POSITION"*/, 0);
+  return LocalizationManager__Get((System_String_o *)StringLiteral_10301/*"PARTY_ORGANIZATION_SERVANT_QUEST_RESTRICTION_FIXED_SUPPORT_POSITION"*/, 0);
 }
 
 
@@ -2443,30 +2443,30 @@ RestrictionEntity_o *QuestRestrictionInfo__GetGrandServantRestrictionEntity(
   struct System_Collections_Generic_List_RestrictionEntity__o *grandServantRestrictionEntityList; // x19
   System_Func_object__bool__o *v8; // x20
 
-  if ( (byte_4C38D5F & 1) == 0 )
+  if ( (byte_4C44358 & 1) == 0 )
   {
-    sub_1C32C20(&Method_System_Linq_Enumerable_FirstOrDefault_RestrictionEntity___);
-    sub_1C32C20(&System_Func_RestrictionEntity__bool__TypeInfo);
-    sub_1C32C20(&Method_QuestRestrictionInfo___c__DisplayClass217_0__GetGrandServantRestrictionEntity_b__0__);
-    sub_1C32C20(&QuestRestrictionInfo___c__DisplayClass217_0_TypeInfo);
-    byte_4C38D5F = 1;
+    sub_1C37058(&Method_System_Linq_Enumerable_FirstOrDefault_RestrictionEntity___);
+    sub_1C37058(&System_Func_RestrictionEntity__bool__TypeInfo);
+    sub_1C37058(&Method_QuestRestrictionInfo___c__DisplayClass217_0__GetGrandServantRestrictionEntity_b__0__);
+    sub_1C37058(&QuestRestrictionInfo___c__DisplayClass217_0_TypeInfo);
+    byte_4C44358 = 1;
   }
-  v5 = (QuestRestrictionInfo___c__DisplayClass217_0_o *)sub_1C32E6C(QuestRestrictionInfo___c__DisplayClass217_0_TypeInfo);
+  v5 = (QuestRestrictionInfo___c__DisplayClass217_0_o *)sub_1C372A4(QuestRestrictionInfo___c__DisplayClass217_0_TypeInfo);
   QuestRestrictionInfo___c__DisplayClass217_0___ctor(v5, 0);
   if ( !v5 )
-    sub_1C32E7C(v6);
+    sub_1C372B4(v6);
   v5->fields.initPos = initPos;
   grandServantRestrictionEntityList = this->fields.grandServantRestrictionEntityList;
-  v8 = (System_Func_object__bool__o *)sub_1C32E6C(System_Func_RestrictionEntity__bool__TypeInfo);
+  v8 = (System_Func_object__bool__o *)sub_1C372A4(System_Func_RestrictionEntity__bool__TypeInfo);
   System_Func_object__bool____ctor(
     v8,
     (Il2CppObject *)v5,
     Method_QuestRestrictionInfo___c__DisplayClass217_0__GetGrandServantRestrictionEntity_b__0__,
     0);
-  return (RestrictionEntity_o *)System_Linq_Enumerable__FirstOrDefault_object__51408536(
+  return (RestrictionEntity_o *)System_Linq_Enumerable__FirstOrDefault_object__51451648(
                                   (System_Collections_Generic_IEnumerable_TSource__o *)grandServantRestrictionEntityList,
                                   (System_Func_TSource__bool__o *)v8,
-                                  (const MethodInfo_3106E98 *)Method_System_Linq_Enumerable_FirstOrDefault_RestrictionEntity___);
+                                  (const MethodInfo_3111700 *)Method_System_Linq_Enumerable_FirstOrDefault_RestrictionEntity___);
 }
 
 
@@ -2489,15 +2489,15 @@ System_String_o *QuestRestrictionInfo__GetMessage(
   RestrictionWholeEntity_o *v9; // x12
 
   v4 = this;
-  if ( (byte_4C38D1B & 1) == 0 )
+  if ( (byte_4C44314 & 1) == 0 )
   {
-    this = (QuestRestrictionInfo_o *)sub_1C32C20(&StringLiteral_1/*""*/);
-    byte_4C38D1B = 1;
+    this = (QuestRestrictionInfo_o *)sub_1C37058(&StringLiteral_1/*""*/);
+    byte_4C44314 = 1;
   }
   restrictionWholeEntities = v4->fields.restrictionWholeEntities;
   if ( !restrictionWholeEntities )
 LABEL_15:
-    sub_1C32E7C(this);
+    sub_1C372B4(this);
   max_length = restrictionWholeEntities->max_length;
   if ( max_length < 1 )
   {
@@ -2510,7 +2510,7 @@ LABEL_15:
     while ( 1 )
     {
       if ( max_length == v8 )
-        sub_1C32E84(this);
+        sub_1C372BC(this);
       v9 = restrictionWholeEntities->m_Items[v8];
       if ( !v9 )
         goto LABEL_15;
@@ -2525,7 +2525,7 @@ LABEL_15:
 }
 
 
-System_String_o *QuestRestrictionInfo__GetMessage_43318012(
+System_String_o *QuestRestrictionInfo__GetMessage_43419880(
         QuestRestrictionInfo_o *this,
         int32_t restrictionType,
         const MethodInfo *method)
@@ -2538,15 +2538,15 @@ System_String_o *QuestRestrictionInfo__GetMessage_43318012(
   RestrictionEntity_o *v9; // x12
 
   v4 = this;
-  if ( (byte_4C38D1C & 1) == 0 )
+  if ( (byte_4C44315 & 1) == 0 )
   {
-    this = (QuestRestrictionInfo_o *)sub_1C32C20(&StringLiteral_1/*""*/);
-    byte_4C38D1C = 1;
+    this = (QuestRestrictionInfo_o *)sub_1C37058(&StringLiteral_1/*""*/);
+    byte_4C44315 = 1;
   }
   restrictionEntityList = v4->fields.restrictionEntityList;
   if ( !restrictionEntityList )
 LABEL_15:
-    sub_1C32E7C(this);
+    sub_1C372B4(this);
   max_length = restrictionEntityList->max_length;
   if ( max_length < 1 )
   {
@@ -2559,7 +2559,7 @@ LABEL_15:
     while ( 1 )
     {
       if ( max_length == v8 )
-        sub_1C32E84(this);
+        sub_1C372BC(this);
       v9 = restrictionEntityList->m_Items[v8];
       if ( !v9 )
         goto LABEL_15;
@@ -2641,39 +2641,39 @@ System_String_array *QuestRestrictionInfo__GetMessages(
   __int64 v67; // x10
   Il2CppClass **v68; // x0
 
-  if ( (byte_4C38D19 & 1) == 0 )
+  if ( (byte_4C44312 & 1) == 0 )
   {
-    sub_1C32C20(&Method_System_Collections_Generic_Dictionary_int__RestrictionSlotDetailEntity____get_Item__);
-    sub_1C32C20(&Method_System_Collections_Generic_List_string__Add__);
-    sub_1C32C20(&Method_System_Collections_Generic_List_string__ToArray__);
-    sub_1C32C20(&Method_System_Collections_Generic_List_string___ctor__);
-    sub_1C32C20(&System_Collections_Generic_List_string__TypeInfo);
-    sub_1C32C20(&LocalizationManager_TypeInfo);
-    sub_1C32C20(&StringLiteral_10268/*"PARTY_ORGANIZATION_QUEST_RESTRICTION_WARNING_SINGLE_SUPPORT"*/);
-    sub_1C32C20(&StringLiteral_11103/*"RESTRICTION_NOT_SATISFY_DIALOG_UNIQUE"*/);
-    sub_1C32C20(&StringLiteral_11104/*"RESTRICTION_NOT_SATISFY_DIALOG_WHOLE_SUFFIX"*/);
-    sub_1C32C20(&StringLiteral_11100/*"RESTRICTION_NOT_SATISFY_DIALOG_FATIGUE"*/);
-    sub_1C32C20(&StringLiteral_6453/*"FOLLOWER_SELECT_QUEST_RESTRICTION_TITLE"*/);
-    byte_4C38D19 = 1;
+    sub_1C37058(&Method_System_Collections_Generic_Dictionary_int__RestrictionSlotDetailEntity____get_Item__);
+    sub_1C37058(&Method_System_Collections_Generic_List_string__Add__);
+    sub_1C37058(&Method_System_Collections_Generic_List_string__ToArray__);
+    sub_1C37058(&Method_System_Collections_Generic_List_string___ctor__);
+    sub_1C37058(&System_Collections_Generic_List_string__TypeInfo);
+    sub_1C37058(&LocalizationManager_TypeInfo);
+    sub_1C37058(&StringLiteral_10269/*"PARTY_ORGANIZATION_QUEST_RESTRICTION_WARNING_SINGLE_SUPPORT"*/);
+    sub_1C37058(&StringLiteral_11104/*"RESTRICTION_NOT_SATISFY_DIALOG_UNIQUE"*/);
+    sub_1C37058(&StringLiteral_11105/*"RESTRICTION_NOT_SATISFY_DIALOG_WHOLE_SUFFIX"*/);
+    sub_1C37058(&StringLiteral_11101/*"RESTRICTION_NOT_SATISFY_DIALOG_FATIGUE"*/);
+    sub_1C37058(&StringLiteral_6454/*"FOLLOWER_SELECT_QUEST_RESTRICTION_TITLE"*/);
+    byte_4C44312 = 1;
   }
-  v21 = (System_Collections_Generic_List_object__o *)sub_1C32E6C(System_Collections_Generic_List_string__TypeInfo);
+  v21 = (System_Collections_Generic_List_object__o *)sub_1C372A4(System_Collections_Generic_List_string__TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v21,
-    (const MethodInfo_3797F88 *)Method_System_Collections_Generic_List_string___ctor__);
+    (const MethodInfo_37A27F0 *)Method_System_Collections_Generic_List_string___ctor__);
   if ( !this->fields.restrictionBaseEntity )
     goto LABEL_98;
   if ( !isSlotOnly )
   {
     if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-    v23 = LocalizationManager__Get((System_String_o *)StringLiteral_6453/*"FOLLOWER_SELECT_QUEST_RESTRICTION_TITLE"*/, 0);
-    IsNullOrEmpty = LocalizationManager__Get((System_String_o *)StringLiteral_11104/*"RESTRICTION_NOT_SATISFY_DIALOG_WHOLE_SUFFIX"*/, 0);
+    v23 = LocalizationManager__Get((System_String_o *)StringLiteral_6454/*"FOLLOWER_SELECT_QUEST_RESTRICTION_TITLE"*/, 0);
+    IsNullOrEmpty = LocalizationManager__Get((System_String_o *)StringLiteral_11105/*"RESTRICTION_NOT_SATISFY_DIALOG_WHOLE_SUFFIX"*/, 0);
     v24 = (System_String_o *)IsNullOrEmpty;
     if ( !this->fields.isUniqueServant )
       goto LABEL_20;
     if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-    IsNullOrEmpty = LocalizationManager__Get((System_String_o *)StringLiteral_11103/*"RESTRICTION_NOT_SATISFY_DIALOG_UNIQUE"*/, 0);
+    IsNullOrEmpty = LocalizationManager__Get((System_String_o *)StringLiteral_11104/*"RESTRICTION_NOT_SATISFY_DIALOG_UNIQUE"*/, 0);
     v27 = (System_String_o *)IsNullOrEmpty;
     if ( isNoneTitle )
     {
@@ -2687,7 +2687,7 @@ System_String_array *QuestRestrictionInfo__GetMessages(
       if ( uniqueServant )
       {
 LABEL_12:
-        IsNullOrEmpty = System_String__Concat_63518544(v27, v24, 0);
+        IsNullOrEmpty = System_String__Concat_63561656(v27, v24, 0);
         v27 = (System_String_o *)IsNullOrEmpty;
         if ( !v21 )
           goto LABEL_100;
@@ -2708,21 +2708,21 @@ LABEL_16:
       System_Collections_Generic_List_object___AddWithResize(
         v21,
         (Il2CppObject *)v27,
-        *(const MethodInfo_37987BC **)(*(_QWORD *)(v29[4] + 192LL) + 112LL));
+        *(const MethodInfo_37A3024 **)(*(_QWORD *)(v29[4] + 192LL) + 112LL));
     }
     else
     {
       v31 = &items->obj.klass + size;
       v21->fields._size = size + 1;
       v31[4] = (Il2CppClass *)v27;
-      sub_1C32BC4((CGThumbnailListItem_o *)(v31 + 4), (int32_t)v27, v25, v26);
+      sub_1C36FFC((CGThumbnailListItem_o *)(v31 + 4), (int32_t)v27, v25, v26);
     }
 LABEL_20:
     if ( !this->fields.isFatigure )
       goto LABEL_33;
     if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-    IsNullOrEmpty = LocalizationManager__Get((System_String_o *)StringLiteral_11100/*"RESTRICTION_NOT_SATISFY_DIALOG_FATIGUE"*/, 0);
+    IsNullOrEmpty = LocalizationManager__Get((System_String_o *)StringLiteral_11101/*"RESTRICTION_NOT_SATISFY_DIALOG_FATIGUE"*/, 0);
     v34 = (System_String_o *)IsNullOrEmpty;
     if ( isNoneTitle )
     {
@@ -2736,7 +2736,7 @@ LABEL_20:
       if ( fatigue )
       {
 LABEL_25:
-        IsNullOrEmpty = System_String__Concat_63518544(v34, v24, 0);
+        IsNullOrEmpty = System_String__Concat_63561656(v34, v24, 0);
         v34 = (System_String_o *)IsNullOrEmpty;
         if ( !v21 )
           goto LABEL_100;
@@ -2757,21 +2757,21 @@ LABEL_29:
       System_Collections_Generic_List_object___AddWithResize(
         v21,
         (Il2CppObject *)v34,
-        *(const MethodInfo_37987BC **)(*(_QWORD *)(v36[4] + 192LL) + 112LL));
+        *(const MethodInfo_37A3024 **)(*(_QWORD *)(v36[4] + 192LL) + 112LL));
     }
     else
     {
       v38 = &v35->obj.klass + v37;
       v21->fields._size = v37 + 1;
       v38[4] = (Il2CppClass *)v34;
-      sub_1C32BC4((CGThumbnailListItem_o *)(v38 + 4), (int32_t)v34, v32, v33);
+      sub_1C36FFC((CGThumbnailListItem_o *)(v38 + 4), (int32_t)v34, v32, v33);
     }
 LABEL_33:
     if ( !this->fields.isNotSingleSupportOnly )
       goto LABEL_46;
     if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-    IsNullOrEmpty = LocalizationManager__Get((System_String_o *)StringLiteral_10268/*"PARTY_ORGANIZATION_QUEST_RESTRICTION_WARNING_SINGLE_SUPPORT"*/, 0);
+    IsNullOrEmpty = LocalizationManager__Get((System_String_o *)StringLiteral_10269/*"PARTY_ORGANIZATION_QUEST_RESTRICTION_WARNING_SINGLE_SUPPORT"*/, 0);
     v41 = (System_String_o *)IsNullOrEmpty;
     if ( isNoneTitle )
     {
@@ -2785,7 +2785,7 @@ LABEL_33:
       if ( singleSupport )
       {
 LABEL_38:
-        IsNullOrEmpty = System_String__Concat_63518544(v41, v24, 0);
+        IsNullOrEmpty = System_String__Concat_63561656(v41, v24, 0);
         v41 = (System_String_o *)IsNullOrEmpty;
         if ( !v21 )
           goto LABEL_100;
@@ -2806,14 +2806,14 @@ LABEL_42:
       System_Collections_Generic_List_object___AddWithResize(
         v21,
         (Il2CppObject *)v41,
-        *(const MethodInfo_37987BC **)(*(_QWORD *)(v43[4] + 192LL) + 112LL));
+        *(const MethodInfo_37A3024 **)(*(_QWORD *)(v43[4] + 192LL) + 112LL));
     }
     else
     {
       v45 = &v42->obj.klass + v44;
       v21->fields._size = v44 + 1;
       v45[4] = (Il2CppClass *)v41;
-      sub_1C32BC4((CGThumbnailListItem_o *)(v45 + 4), (int32_t)v41, v39, v40);
+      sub_1C36FFC((CGThumbnailListItem_o *)(v45 + 4), (int32_t)v41, v39, v40);
     }
 LABEL_46:
     restrictionWholeEntities = this->fields.restrictionWholeEntities;
@@ -2875,7 +2875,7 @@ LABEL_46:
               if ( dataLostBattle )
               {
 LABEL_57:
-                IsNullOrEmpty = System_String__Concat_63518544(summary, v24, 0);
+                IsNullOrEmpty = System_String__Concat_63561656(summary, v24, 0);
                 summary = (System_String_o *)IsNullOrEmpty;
               }
               break;
@@ -2895,14 +2895,14 @@ LABEL_57:
             System_Collections_Generic_List_object___AddWithResize(
               v21,
               (Il2CppObject *)summary,
-              *(const MethodInfo_37987BC **)(*(_QWORD *)(v54[4] + 192LL) + 112LL));
+              *(const MethodInfo_37A3024 **)(*(_QWORD *)(v54[4] + 192LL) + 112LL));
           }
           else
           {
             v56 = &v53->obj.klass + v55;
             v21->fields._size = v55 + 1;
             v56[4] = (Il2CppClass *)summary;
-            sub_1C32BC4((CGThumbnailListItem_o *)(v56 + 4), (int32_t)summary, v50, v51);
+            sub_1C36FFC((CGThumbnailListItem_o *)(v56 + 4), (int32_t)summary, v50, v51);
           }
         }
         max_length = restrictionWholeEntities->max_length;
@@ -2910,7 +2910,7 @@ LABEL_57:
           goto LABEL_79;
       }
 LABEL_101:
-      sub_1C32E84(IsNullOrEmpty);
+      sub_1C372BC(IsNullOrEmpty);
     }
   }
 LABEL_79:
@@ -2921,10 +2921,10 @@ LABEL_79:
       || (IsNullOrEmpty = System_Collections_Generic_Dictionary_int__object___get_Item(
                             (System_Collections_Generic_Dictionary_int__object__o *)IsNullOrEmpty,
                             pos,
-                            (const MethodInfo_33EFC7C *)Method_System_Collections_Generic_Dictionary_int__RestrictionSlotDetailEntity____get_Item__)) == 0 )
+                            (const MethodInfo_33FA4E4 *)Method_System_Collections_Generic_Dictionary_int__RestrictionSlotDetailEntity____get_Item__)) == 0 )
     {
 LABEL_100:
-      sub_1C32E7C(IsNullOrEmpty);
+      sub_1C372B4(IsNullOrEmpty);
     }
     v57 = *((_DWORD *)IsNullOrEmpty + 6);
     v58 = IsNullOrEmpty;
@@ -2947,7 +2947,7 @@ LABEL_100:
           {
             if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
               j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-            v64 = LocalizationManager__Get((System_String_o *)StringLiteral_6453/*"FOLLOWER_SELECT_QUEST_RESTRICTION_TITLE"*/, 0);
+            v64 = LocalizationManager__Get((System_String_o *)StringLiteral_6454/*"FOLLOWER_SELECT_QUEST_RESTRICTION_TITLE"*/, 0);
             IsNullOrEmpty = System_String__Format(v64, *(Il2CppObject **)(v60 + 24), 0);
             v63 = (Il2CppObject *)IsNullOrEmpty;
           }
@@ -2964,14 +2964,14 @@ LABEL_100:
             System_Collections_Generic_List_object___AddWithResize(
               v21,
               v63,
-              *(const MethodInfo_37987BC **)(*(_QWORD *)(v66[4] + 192LL) + 112LL));
+              *(const MethodInfo_37A3024 **)(*(_QWORD *)(v66[4] + 192LL) + 112LL));
           }
           else
           {
             v68 = &v65->obj.klass + v67;
             v21->fields._size = v67 + 1;
             v68[4] = (Il2CppClass *)v63;
-            sub_1C32BC4((CGThumbnailListItem_o *)(v68 + 4), (int32_t)v63, v61, v62);
+            sub_1C36FFC((CGThumbnailListItem_o *)(v68 + 4), (int32_t)v63, v61, v62);
           }
         }
         v57 = *((_DWORD *)v58 + 6);
@@ -2986,11 +2986,11 @@ LABEL_98:
     goto LABEL_100;
   return (System_String_array *)System_Collections_Generic_List_object___ToArray(
                                   v21,
-                                  (const MethodInfo_379A314 *)Method_System_Collections_Generic_List_string__ToArray__);
+                                  (const MethodInfo_37A4B7C *)Method_System_Collections_Generic_List_string__ToArray__);
 }
 
 
-System_String_array *QuestRestrictionInfo__GetMessages_43316744(
+System_String_array *QuestRestrictionInfo__GetMessages_43418612(
         QuestRestrictionInfo_o *this,
         RestrictionEntity_array *entities,
         bool isNoneTitle,
@@ -3035,32 +3035,32 @@ System_String_array *QuestRestrictionInfo__GetMessages_43316744(
   __int64 v44; // x10
   Il2CppClass **v45; // x0
 
-  if ( (byte_4C38D1A & 1) == 0 )
+  if ( (byte_4C44313 & 1) == 0 )
   {
-    sub_1C32C20(&Method_System_Collections_Generic_List_string__Add__);
-    sub_1C32C20(&Method_System_Collections_Generic_List_string__ToArray__);
-    sub_1C32C20(&Method_System_Collections_Generic_List_string___ctor__);
-    sub_1C32C20(&System_Collections_Generic_List_string__TypeInfo);
-    sub_1C32C20(&LocalizationManager_TypeInfo);
-    sub_1C32C20(&StringLiteral_10268/*"PARTY_ORGANIZATION_QUEST_RESTRICTION_WARNING_SINGLE_SUPPORT"*/);
-    sub_1C32C20(&StringLiteral_11104/*"RESTRICTION_NOT_SATISFY_DIALOG_WHOLE_SUFFIX"*/);
-    sub_1C32C20(&StringLiteral_11100/*"RESTRICTION_NOT_SATISFY_DIALOG_FATIGUE"*/);
-    sub_1C32C20(&StringLiteral_6453/*"FOLLOWER_SELECT_QUEST_RESTRICTION_TITLE"*/);
-    byte_4C38D1A = 1;
+    sub_1C37058(&Method_System_Collections_Generic_List_string__Add__);
+    sub_1C37058(&Method_System_Collections_Generic_List_string__ToArray__);
+    sub_1C37058(&Method_System_Collections_Generic_List_string___ctor__);
+    sub_1C37058(&System_Collections_Generic_List_string__TypeInfo);
+    sub_1C37058(&LocalizationManager_TypeInfo);
+    sub_1C37058(&StringLiteral_10269/*"PARTY_ORGANIZATION_QUEST_RESTRICTION_WARNING_SINGLE_SUPPORT"*/);
+    sub_1C37058(&StringLiteral_11105/*"RESTRICTION_NOT_SATISFY_DIALOG_WHOLE_SUFFIX"*/);
+    sub_1C37058(&StringLiteral_11101/*"RESTRICTION_NOT_SATISFY_DIALOG_FATIGUE"*/);
+    sub_1C37058(&StringLiteral_6454/*"FOLLOWER_SELECT_QUEST_RESTRICTION_TITLE"*/);
+    byte_4C44313 = 1;
   }
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-  v18 = LocalizationManager__Get((System_String_o *)StringLiteral_6453/*"FOLLOWER_SELECT_QUEST_RESTRICTION_TITLE"*/, 0);
-  v19 = LocalizationManager__Get((System_String_o *)StringLiteral_11104/*"RESTRICTION_NOT_SATISFY_DIALOG_WHOLE_SUFFIX"*/, 0);
-  v20 = (System_Collections_Generic_List_object__o *)sub_1C32E6C(System_Collections_Generic_List_string__TypeInfo);
+  v18 = LocalizationManager__Get((System_String_o *)StringLiteral_6454/*"FOLLOWER_SELECT_QUEST_RESTRICTION_TITLE"*/, 0);
+  v19 = LocalizationManager__Get((System_String_o *)StringLiteral_11105/*"RESTRICTION_NOT_SATISFY_DIALOG_WHOLE_SUFFIX"*/, 0);
+  v20 = (System_Collections_Generic_List_object__o *)sub_1C372A4(System_Collections_Generic_List_string__TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v20,
-    (const MethodInfo_3797F88 *)Method_System_Collections_Generic_List_string___ctor__);
+    (const MethodInfo_37A27F0 *)Method_System_Collections_Generic_List_string___ctor__);
   if ( isSlotOnly || !this->fields.isFatigure )
     goto LABEL_19;
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-  IsNullOrEmpty = LocalizationManager__Get((System_String_o *)StringLiteral_11100/*"RESTRICTION_NOT_SATISFY_DIALOG_FATIGUE"*/, 0);
+  IsNullOrEmpty = LocalizationManager__Get((System_String_o *)StringLiteral_11101/*"RESTRICTION_NOT_SATISFY_DIALOG_FATIGUE"*/, 0);
   v24 = IsNullOrEmpty;
   if ( isNoneTitle )
   {
@@ -3079,7 +3079,7 @@ LABEL_11:
       goto LABEL_15;
     }
   }
-  IsNullOrEmpty = System_String__Concat_63518544(v24, v19, 0);
+  IsNullOrEmpty = System_String__Concat_63561656(v24, v19, 0);
   v24 = IsNullOrEmpty;
   if ( !v20 )
     goto LABEL_64;
@@ -3095,21 +3095,21 @@ LABEL_15:
     System_Collections_Generic_List_object___AddWithResize(
       v20,
       (Il2CppObject *)v24,
-      *(const MethodInfo_37987BC **)(*(_QWORD *)(v26[4] + 192LL) + 112LL));
+      *(const MethodInfo_37A3024 **)(*(_QWORD *)(v26[4] + 192LL) + 112LL));
   }
   else
   {
     v28 = &items->obj.klass + size;
     v20->fields._size = size + 1;
     v28[4] = (Il2CppClass *)v24;
-    sub_1C32BC4((CGThumbnailListItem_o *)(v28 + 4), (int32_t)v24, v22, v23);
+    sub_1C36FFC((CGThumbnailListItem_o *)(v28 + 4), (int32_t)v24, v22, v23);
   }
 LABEL_19:
   if ( this->fields.isNotSingleSupportOnly )
   {
     if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-    IsNullOrEmpty = LocalizationManager__Get((System_String_o *)StringLiteral_10268/*"PARTY_ORGANIZATION_QUEST_RESTRICTION_WARNING_SINGLE_SUPPORT"*/, 0);
+    IsNullOrEmpty = LocalizationManager__Get((System_String_o *)StringLiteral_10269/*"PARTY_ORGANIZATION_QUEST_RESTRICTION_WARNING_SINGLE_SUPPORT"*/, 0);
     v31 = IsNullOrEmpty;
     if ( !isNoneTitle )
     {
@@ -3118,7 +3118,7 @@ LABEL_19:
     }
     if ( singleSupport )
     {
-      IsNullOrEmpty = System_String__Concat_63518544(v31, v19, 0);
+      IsNullOrEmpty = System_String__Concat_63561656(v31, v19, 0);
       v31 = IsNullOrEmpty;
     }
     if ( !v20 )
@@ -3134,14 +3134,14 @@ LABEL_19:
       System_Collections_Generic_List_object___AddWithResize(
         v20,
         (Il2CppObject *)v31,
-        *(const MethodInfo_37987BC **)(*(_QWORD *)(v33[4] + 192LL) + 112LL));
+        *(const MethodInfo_37A3024 **)(*(_QWORD *)(v33[4] + 192LL) + 112LL));
     }
     else
     {
       v35 = &v32->obj.klass + v34;
       v20->fields._size = v34 + 1;
       v35[4] = (Il2CppClass *)v31;
-      sub_1C32BC4((CGThumbnailListItem_o *)(v35 + 4), (int32_t)v31, v29, v30);
+      sub_1C36FFC((CGThumbnailListItem_o *)(v35 + 4), (int32_t)v31, v29, v30);
     }
   }
   if ( !entities )
@@ -3153,7 +3153,7 @@ LABEL_19:
     while ( 1 )
     {
       if ( v37 >= max_length )
-        sub_1C32E84(IsNullOrEmpty);
+        sub_1C372BC(IsNullOrEmpty);
       v38 = entities->m_Items[v37];
       if ( !v38 )
         break;
@@ -3201,7 +3201,7 @@ LABEL_19:
             if ( dataLostBattle )
             {
 LABEL_42:
-              IsNullOrEmpty = System_String__Concat_63518544(name, v19, 0);
+              IsNullOrEmpty = System_String__Concat_63561656(name, v19, 0);
               name = IsNullOrEmpty;
             }
             break;
@@ -3221,14 +3221,14 @@ LABEL_42:
           System_Collections_Generic_List_object___AddWithResize(
             v20,
             (Il2CppObject *)name,
-            *(const MethodInfo_37987BC **)(*(_QWORD *)(v43[4] + 192LL) + 112LL));
+            *(const MethodInfo_37A3024 **)(*(_QWORD *)(v43[4] + 192LL) + 112LL));
         }
         else
         {
           v45 = &v42->obj.klass + v44;
           v20->fields._size = v44 + 1;
           v45[4] = (Il2CppClass *)name;
-          sub_1C32BC4((CGThumbnailListItem_o *)(v45 + 4), (int32_t)name, v39, v40);
+          sub_1C36FFC((CGThumbnailListItem_o *)(v45 + 4), (int32_t)name, v39, v40);
         }
       }
       max_length = entities->max_length;
@@ -3236,14 +3236,14 @@ LABEL_42:
         goto LABEL_62;
     }
 LABEL_64:
-    sub_1C32E7C(IsNullOrEmpty);
+    sub_1C372B4(IsNullOrEmpty);
   }
 LABEL_62:
   if ( !v20 )
     goto LABEL_64;
   return (System_String_array *)System_Collections_Generic_List_object___ToArray(
                                   v20,
-                                  (const MethodInfo_379A314 *)Method_System_Collections_Generic_List_string__ToArray__);
+                                  (const MethodInfo_37A4B7C *)Method_System_Collections_Generic_List_string__ToArray__);
 }
 
 
@@ -3257,12 +3257,12 @@ System_String_o *QuestRestrictionInfo__GetMyGrandServantRestrictionDialogMessage
   int32_t v7; // w21
   const MethodInfo *v8; // x3
 
-  if ( (byte_4C38D61 & 1) == 0 )
+  if ( (byte_4C4435A & 1) == 0 )
   {
-    sub_1C32C20(&Method_System_Collections_Generic_List_RestrictionEntity__get_Count__);
-    sub_1C32C20(&Method_System_Collections_Generic_List_RestrictionEntity__get_Item__);
-    sub_1C32C20(&string_TypeInfo);
-    byte_4C38D61 = 1;
+    sub_1C37058(&Method_System_Collections_Generic_List_RestrictionEntity__get_Count__);
+    sub_1C37058(&Method_System_Collections_Generic_List_RestrictionEntity__get_Item__);
+    sub_1C37058(&string_TypeInfo);
+    byte_4C4435A = 1;
   }
   if ( this->fields.restrictionBaseEntity )
     return string_TypeInfo->static_fields->Empty;
@@ -3277,7 +3277,7 @@ System_String_o *QuestRestrictionInfo__GetMyGrandServantRestrictionDialogMessage
     grandServantRestrictionEntityList = System_Collections_Generic_List_object___get_Item(
                                           (System_Collections_Generic_List_object__o *)grandServantRestrictionEntityList,
                                           v7,
-                                          (const MethodInfo_37984EC *)Method_System_Collections_Generic_List_RestrictionEntity__get_Item__);
+                                          (const MethodInfo_37A2D54 *)Method_System_Collections_Generic_List_RestrictionEntity__get_Item__);
     if ( grandServantRestrictionEntityList )
     {
       if ( !v6 && *((_DWORD *)grandServantRestrictionEntityList + 8) == 21 )
@@ -3295,10 +3295,10 @@ System_String_o *QuestRestrictionInfo__GetMyGrandServantRestrictionDialogMessage
   grandServantRestrictionEntityList = System_Collections_Generic_List_object___get_Item(
                                         (System_Collections_Generic_List_object__o *)grandServantRestrictionEntityList,
                                         v5,
-                                        (const MethodInfo_37984EC *)Method_System_Collections_Generic_List_RestrictionEntity__get_Item__);
+                                        (const MethodInfo_37A2D54 *)Method_System_Collections_Generic_List_RestrictionEntity__get_Item__);
   if ( !grandServantRestrictionEntityList )
 LABEL_16:
-    sub_1C32E7C(grandServantRestrictionEntityList);
+    sub_1C372B4(grandServantRestrictionEntityList);
   return QuestRestrictionInfo__GetDialogMessage(this, v5, *((_DWORD *)grandServantRestrictionEntityList + 4), v8);
 }
 
@@ -3339,15 +3339,15 @@ System_String_o *QuestRestrictionInfo__GetMyServantNumRestrictionDialogMessage(
   Il2CppObject *entity; // [xsp+18h] [xbp-58h] BYREF
 
   v3 = this;
-  if ( (byte_4C38D41 & 1) == 0 )
+  if ( (byte_4C4433A & 1) == 0 )
   {
-    sub_1C32C20(&Method_DataManager_GetMaster_RestrictionMessageMaster___);
-    sub_1C32C20(&DataManager_TypeInfo);
-    sub_1C32C20(&Method_DataMasterBase_RestrictionMessageMaster__RestrictionMessageEntity__int__TryGetEntity__);
-    sub_1C32C20(&Method_System_Collections_Generic_Dictionary_int__RestrictionSlotEntity____ContainsKey__);
-    sub_1C32C20(&Method_System_Collections_Generic_Dictionary_int__RestrictionSlotEntity____get_Item__);
-    this = (QuestRestrictionInfo_o *)sub_1C32C20(&StringLiteral_1/*""*/);
-    byte_4C38D41 = 1;
+    sub_1C37058(&Method_DataManager_GetMaster_RestrictionMessageMaster___);
+    sub_1C37058(&DataManager_TypeInfo);
+    sub_1C37058(&Method_DataMasterBase_RestrictionMessageMaster__RestrictionMessageEntity__int__TryGetEntity__);
+    sub_1C37058(&Method_System_Collections_Generic_Dictionary_int__RestrictionSlotEntity____ContainsKey__);
+    sub_1C37058(&Method_System_Collections_Generic_Dictionary_int__RestrictionSlotEntity____get_Item__);
+    this = (QuestRestrictionInfo_o *)sub_1C37058(&StringLiteral_1/*""*/);
+    byte_4C4433A = 1;
   }
   entity = 0;
   v25 = 0;
@@ -3389,7 +3389,7 @@ LABEL_53:
       }
     }
 LABEL_59:
-    sub_1C32E84(this);
+    sub_1C372BC(this);
   }
   restrictionWholeEntities = v3->fields.restrictionWholeEntities;
   if ( !restrictionWholeEntities )
@@ -3407,14 +3407,14 @@ LABEL_59:
       {
         if ( !DataManager_TypeInfo->_2.cctor_finished )
           j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-        this = (QuestRestrictionInfo_o *)DataManager__GetMaster_object_((const MethodInfo_30DD39C *)Method_DataManager_GetMaster_RestrictionMessageMaster___);
+        this = (QuestRestrictionInfo_o *)DataManager__GetMaster_object_((const MethodInfo_30E7C04 *)Method_DataManager_GetMaster_RestrictionMessageMaster___);
         if ( !this )
           goto LABEL_58;
         this = (QuestRestrictionInfo_o *)DataMasterBase_object__object__int___TryGetEntity(
                                            (DataMasterBase_TMaster__TEntity__PKType__o *)this,
                                            &entity,
                                            v7->fields.restrictionMessageId,
-                                           (const MethodInfo_3396884 *)Method_DataMasterBase_RestrictionMessageMaster__RestrictionMessageEntity__int__TryGetEntity__);
+                                           (const MethodInfo_33A10EC *)Method_DataMasterBase_RestrictionMessageMaster__RestrictionMessageEntity__int__TryGetEntity__);
         if ( ((unsigned __int8)this & 1) != 0 )
         {
           v23 = entity;
@@ -3455,7 +3455,7 @@ LABEL_15:
     this = (QuestRestrictionInfo_o *)System_Collections_Generic_Dictionary_int__object___ContainsKey(
                                        (System_Collections_Generic_Dictionary_int__object__o *)this,
                                        ++v9,
-                                       (const MethodInfo_33EFF10 *)Method_System_Collections_Generic_Dictionary_int__RestrictionSlotEntity____ContainsKey__);
+                                       (const MethodInfo_33FA778 *)Method_System_Collections_Generic_Dictionary_int__RestrictionSlotEntity____ContainsKey__);
     if ( ((unsigned __int8)this & 1) != 0 )
     {
       this = (QuestRestrictionInfo_o *)v3->fields.restrictionSlotDictionary;
@@ -3464,7 +3464,7 @@ LABEL_15:
       this = (QuestRestrictionInfo_o *)System_Collections_Generic_Dictionary_int__object___get_Item(
                                          (System_Collections_Generic_Dictionary_int__object__o *)this,
                                          v9,
-                                         (const MethodInfo_33EFC7C *)Method_System_Collections_Generic_Dictionary_int__RestrictionSlotEntity____get_Item__);
+                                         (const MethodInfo_33FA4E4 *)Method_System_Collections_Generic_Dictionary_int__RestrictionSlotEntity____get_Item__);
       if ( !this )
         goto LABEL_58;
       dialogMessageInfoDictionary = (int)this->fields.dialogMessageInfoDictionary;
@@ -3489,14 +3489,14 @@ LABEL_37:
     {
       if ( !DataManager_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-      this = (QuestRestrictionInfo_o *)DataManager__GetMaster_object_((const MethodInfo_30DD39C *)Method_DataManager_GetMaster_RestrictionMessageMaster___);
+      this = (QuestRestrictionInfo_o *)DataManager__GetMaster_object_((const MethodInfo_30E7C04 *)Method_DataManager_GetMaster_RestrictionMessageMaster___);
       if ( !this )
         goto LABEL_58;
       this = (QuestRestrictionInfo_o *)DataMasterBase_object__object__int___TryGetEntity(
                                          (DataMasterBase_TMaster__TEntity__PKType__o *)this,
                                          &v25,
                                          *(_DWORD *)(v15 + 44),
-                                         (const MethodInfo_3396884 *)Method_DataMasterBase_RestrictionMessageMaster__RestrictionMessageEntity__int__TryGetEntity__);
+                                         (const MethodInfo_33A10EC *)Method_DataMasterBase_RestrictionMessageMaster__RestrictionMessageEntity__int__TryGetEntity__);
       if ( ((unsigned __int8)this & 1) != 0 )
         break;
     }
@@ -3507,7 +3507,7 @@ LABEL_37:
   v23 = v25;
   if ( !v25 )
 LABEL_58:
-    sub_1C32E7C(this);
+    sub_1C372B4(this);
   return (System_String_o *)v23[1].monitor;
 }
 
@@ -3523,12 +3523,12 @@ System_String_o *QuestRestrictionInfo__GetMyServantOrNpcRestrictionMessage(
   System_String_o **v8; // x8
   System_String_o *v9; // x0
 
-  if ( (byte_4C38D4A & 1) == 0 )
+  if ( (byte_4C44343 & 1) == 0 )
   {
-    sub_1C32C20(&LocalizationManager_TypeInfo);
-    sub_1C32C20(&StringLiteral_10302/*"PARTY_ORGANIZATION_SERVANT_QUEST_RESTRICTION_SELECT_MY_SERVANT_OR_NPC"*/);
-    sub_1C32C20(&StringLiteral_10305/*"PARTY_ORGANIZATION_SERVANT_QUEST_RESTRICTION_SELECT_NPC"*/);
-    byte_4C38D4A = 1;
+    sub_1C37058(&LocalizationManager_TypeInfo);
+    sub_1C37058(&StringLiteral_10303/*"PARTY_ORGANIZATION_SERVANT_QUEST_RESTRICTION_SELECT_MY_SERVANT_OR_NPC"*/);
+    sub_1C37058(&StringLiteral_10306/*"PARTY_ORGANIZATION_SERVANT_QUEST_RESTRICTION_SELECT_NPC"*/);
+    byte_4C44343 = 1;
   }
   RestrictedName = (Il2CppObject *)QuestRestrictionInfo__GetRestrictedName(
                                      this,
@@ -3537,9 +3537,9 @@ System_String_o *QuestRestrictionInfo__GetMyServantOrNpcRestrictionMessage(
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   if ( haveIndividualityServant )
-    v8 = (System_String_o **)&StringLiteral_10302/*"PARTY_ORGANIZATION_SERVANT_QUEST_RESTRICTION_SELECT_MY_SERVANT_OR_NPC"*/;
+    v8 = (System_String_o **)&StringLiteral_10303/*"PARTY_ORGANIZATION_SERVANT_QUEST_RESTRICTION_SELECT_MY_SERVANT_OR_NPC"*/;
   else
-    v8 = (System_String_o **)&StringLiteral_10305/*"PARTY_ORGANIZATION_SERVANT_QUEST_RESTRICTION_SELECT_NPC"*/;
+    v8 = (System_String_o **)&StringLiteral_10306/*"PARTY_ORGANIZATION_SERVANT_QUEST_RESTRICTION_SELECT_NPC"*/;
   v9 = LocalizationManager__Get(*v8, 0);
   return System_String__Format(v9, RestrictedName, 0);
 }
@@ -3551,16 +3551,16 @@ int32_t QuestRestrictionInfo__GetMyServantOrNpcRestrictionNum(QuestRestrictionIn
   struct System_Collections_Generic_List_RestrictionEntity__o *myServantOrNpcRestrictionEntityList; // x8
 
   v2 = this;
-  if ( (byte_4C38D5E & 1) == 0 )
+  if ( (byte_4C44357 & 1) == 0 )
   {
-    this = (QuestRestrictionInfo_o *)sub_1C32C20(&Method_System_Collections_Generic_List_RestrictionEntity__get_Count__);
-    byte_4C38D5E = 1;
+    this = (QuestRestrictionInfo_o *)sub_1C37058(&Method_System_Collections_Generic_List_RestrictionEntity__get_Count__);
+    byte_4C44357 = 1;
   }
   if ( !v2->fields.isMyServantOrNpc && !v2->fields.isMyServantOrSupport )
     return 0;
   myServantOrNpcRestrictionEntityList = v2->fields.myServantOrNpcRestrictionEntityList;
   if ( !myServantOrNpcRestrictionEntityList )
-    sub_1C32E7C(this);
+    sub_1C372B4(this);
   return myServantOrNpcRestrictionEntityList->fields._size;
 }
 
@@ -3582,7 +3582,7 @@ System_Int32_array *QuestRestrictionInfo__GetMyServantOrNpcSvtIdList(
   System_Int32_array *CollectionList; // x19
   System_Collections_Generic_IEnumerable_TSource__o *monitor; // x0
   System_Collections_Generic_IEnumerable_TSource__o *v16; // x1
-  const MethodInfo_3107AA0 *v17; // x2
+  const MethodInfo_3112308 *v17; // x2
   struct QuestRestrictionEntity_array *questRestrictionEntityList; // x8
   System_Collections_Generic_List_object__o *myServantOrNpcRestrictionEntityList; // x19
   System_Predicate_object__o *v20; // x20
@@ -3590,44 +3590,44 @@ System_Int32_array *QuestRestrictionInfo__GetMyServantOrNpcSvtIdList(
   Il2CppObject *v22; // x19
   System_Collections_Generic_IEnumerable_TSource__o *v23; // x0
 
-  if ( (byte_4C38D4C & 1) == 0 )
+  if ( (byte_4C44345 & 1) == 0 )
   {
-    sub_1C32C20(&Method_DataManager_GetMasterData_ServantMaster___);
-    sub_1C32C20(&Method_System_Collections_Generic_Dictionary_int__RestrictionSlotDetailEntity____get_Item__);
-    sub_1C32C20(&Method_System_Linq_Enumerable_Distinct_int___);
-    sub_1C32C20(&Method_System_Linq_Enumerable_Intersect_int___);
-    sub_1C32C20(&Method_System_Linq_Enumerable_ToArray_int___);
-    sub_1C32C20(&Method_System_Collections_Generic_List_int__AddRange__);
-    sub_1C32C20(&Method_System_Collections_Generic_List_RestrictionEntity__Find__);
-    sub_1C32C20(&Method_System_Collections_Generic_List_int___ctor__);
-    sub_1C32C20(&Method_System_Collections_Generic_List_int__get_Count__);
-    sub_1C32C20(&System_Collections_Generic_List_int__TypeInfo);
-    sub_1C32C20(&System_Predicate_RestrictionEntity__TypeInfo);
-    sub_1C32C20(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-    sub_1C32C20(&Method_QuestRestrictionInfo___c__DisplayClass193_0__GetMyServantOrNpcSvtIdList_b__0__);
-    sub_1C32C20(&QuestRestrictionInfo___c__DisplayClass193_0_TypeInfo);
-    byte_4C38D4C = 1;
+    sub_1C37058(&Method_DataManager_GetMasterData_ServantMaster___);
+    sub_1C37058(&Method_System_Collections_Generic_Dictionary_int__RestrictionSlotDetailEntity____get_Item__);
+    sub_1C37058(&Method_System_Linq_Enumerable_Distinct_int___);
+    sub_1C37058(&Method_System_Linq_Enumerable_Intersect_int___);
+    sub_1C37058(&Method_System_Linq_Enumerable_ToArray_int___);
+    sub_1C37058(&Method_System_Collections_Generic_List_int__AddRange__);
+    sub_1C37058(&Method_System_Collections_Generic_List_RestrictionEntity__Find__);
+    sub_1C37058(&Method_System_Collections_Generic_List_int___ctor__);
+    sub_1C37058(&Method_System_Collections_Generic_List_int__get_Count__);
+    sub_1C37058(&System_Collections_Generic_List_int__TypeInfo);
+    sub_1C37058(&System_Predicate_RestrictionEntity__TypeInfo);
+    sub_1C37058(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    sub_1C37058(&Method_QuestRestrictionInfo___c__DisplayClass193_0__GetMyServantOrNpcSvtIdList_b__0__);
+    sub_1C37058(&QuestRestrictionInfo___c__DisplayClass193_0_TypeInfo);
+    byte_4C44345 = 1;
   }
-  v5 = sub_1C32E6C(QuestRestrictionInfo___c__DisplayClass193_0_TypeInfo);
+  v5 = sub_1C372A4(QuestRestrictionInfo___c__DisplayClass193_0_TypeInfo);
   QuestRestrictionInfo___c__DisplayClass193_0___ctor((QuestRestrictionInfo___c__DisplayClass193_0_o *)v5, 0);
   if ( !v5 )
     goto LABEL_29;
   *(_QWORD *)(v5 + 16) = this;
-  sub_1C32BC4((CGThumbnailListItem_o *)(v5 + 16), (int32_t)this, v7, v8);
+  sub_1C36FFC((CGThumbnailListItem_o *)(v5 + 16), (int32_t)this, v7, v8);
   *(_DWORD *)(v5 + 24) = index;
   if ( this->fields.restrictionBaseEntity )
   {
-    v9 = (System_Collections_Generic_List_int__o *)sub_1C32E6C(System_Collections_Generic_List_int__TypeInfo);
+    v9 = (System_Collections_Generic_List_int__o *)sub_1C372A4(System_Collections_Generic_List_int__TypeInfo);
     System_Collections_Generic_List_int____ctor(
       v9,
-      (const MethodInfo_377AF44 *)Method_System_Collections_Generic_List_int___ctor__);
+      (const MethodInfo_37857AC *)Method_System_Collections_Generic_List_int___ctor__);
     restrictionSlotDetailDictionary = this->fields.restrictionSlotDetailDictionary;
     if ( !restrictionSlotDetailDictionary )
       goto LABEL_29;
     restrictionSlotDetailDictionary = System_Collections_Generic_Dictionary_int__object___get_Item(
                                         (System_Collections_Generic_Dictionary_int__object__o *)restrictionSlotDetailDictionary,
                                         *(_DWORD *)(v5 + 24),
-                                        (const MethodInfo_33EFC7C *)Method_System_Collections_Generic_Dictionary_int__RestrictionSlotDetailEntity____get_Item__);
+                                        (const MethodInfo_33FA4E4 *)Method_System_Collections_Generic_Dictionary_int__RestrictionSlotDetailEntity____get_Item__);
     if ( !restrictionSlotDetailDictionary )
       goto LABEL_29;
     v10 = *((_DWORD *)restrictionSlotDetailDictionary + 6);
@@ -3638,7 +3638,7 @@ System_Int32_array *QuestRestrictionInfo__GetMyServantOrNpcSvtIdList(
       while ( 1 )
       {
         if ( v12 >= v10 )
-          sub_1C32E84(restrictionSlotDetailDictionary);
+          sub_1C372BC(restrictionSlotDetailDictionary);
         v13 = *((_QWORD *)v11 + (int)v12 + 4);
         if ( !v13 )
           break;
@@ -3649,39 +3649,39 @@ System_Int32_array *QuestRestrictionInfo__GetMyServantOrNpcSvtIdList(
           System_Collections_Generic_List_int___AddRange(
             v9,
             *(System_Collections_Generic_IEnumerable_T__o **)(v13 + 40),
-            (const MethodInfo_377B9A4 *)Method_System_Collections_Generic_List_int__AddRange__);
+            (const MethodInfo_378620C *)Method_System_Collections_Generic_List_int__AddRange__);
         }
         v10 = *((_DWORD *)v11 + 6);
         if ( (int)++v12 >= v10 )
           goto LABEL_15;
       }
 LABEL_29:
-      sub_1C32E7C(restrictionSlotDetailDictionary);
+      sub_1C372B4(restrictionSlotDetailDictionary);
     }
 LABEL_15:
     if ( !v9 )
       goto LABEL_29;
     if ( v9->fields._size >= 1 )
     {
-      restrictionSlotDetailDictionary = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39E2904 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+      restrictionSlotDetailDictionary = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39ED16C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
       if ( !restrictionSlotDetailDictionary )
         goto LABEL_29;
       restrictionSlotDetailDictionary = DataManager__GetMasterData_object_(
                                           (DataManager_o *)restrictionSlotDetailDictionary,
-                                          (const MethodInfo_30DD3F0 *)Method_DataManager_GetMasterData_ServantMaster___);
+                                          (const MethodInfo_30E7C58 *)Method_DataManager_GetMasterData_ServantMaster___);
       if ( !restrictionSlotDetailDictionary )
         goto LABEL_29;
       CollectionList = ServantMaster__GetCollectionList((ServantMaster_o *)restrictionSlotDetailDictionary, 0);
       monitor = System_Linq_Enumerable__Distinct_int_(
                   (System_Collections_Generic_IEnumerable_TSource__o *)v9,
-                  (const MethodInfo_31005DC *)Method_System_Linq_Enumerable_Distinct_int___);
+                  (const MethodInfo_310AE44 *)Method_System_Linq_Enumerable_Distinct_int___);
       v16 = (System_Collections_Generic_IEnumerable_TSource__o *)CollectionList;
-      v17 = (const MethodInfo_3107AA0 *)Method_System_Linq_Enumerable_Intersect_int___;
+      v17 = (const MethodInfo_3112308 *)Method_System_Linq_Enumerable_Intersect_int___;
 LABEL_27:
       v23 = System_Linq_Enumerable__Intersect_int_(monitor, v16, v17);
       return System_Linq_Enumerable__ToArray_int_(
                v23,
-               (const MethodInfo_311C8F4 *)Method_System_Linq_Enumerable_ToArray_int___);
+               (const MethodInfo_312715C *)Method_System_Linq_Enumerable_ToArray_int___);
     }
   }
   else
@@ -3692,7 +3692,7 @@ LABEL_27:
     if ( SLODWORD(questRestrictionEntityList->max_length) > index )
     {
       myServantOrNpcRestrictionEntityList = (System_Collections_Generic_List_object__o *)this->fields.myServantOrNpcRestrictionEntityList;
-      v20 = (System_Predicate_object__o *)sub_1C32E6C(System_Predicate_RestrictionEntity__TypeInfo);
+      v20 = (System_Predicate_object__o *)sub_1C372A4(System_Predicate_RestrictionEntity__TypeInfo);
       System_Predicate_object____ctor(
         v20,
         (Il2CppObject *)v5,
@@ -3703,23 +3703,23 @@ LABEL_27:
       v21 = System_Collections_Generic_List_object___Find(
               myServantOrNpcRestrictionEntityList,
               (System_Predicate_T__o *)v20,
-              (const MethodInfo_3798E24 *)Method_System_Collections_Generic_List_RestrictionEntity__Find__);
+              (const MethodInfo_37A368C *)Method_System_Collections_Generic_List_RestrictionEntity__Find__);
       if ( v21 )
       {
         v22 = v21;
-        restrictionSlotDetailDictionary = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39E2904 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+        restrictionSlotDetailDictionary = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39ED16C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
         if ( !restrictionSlotDetailDictionary )
           goto LABEL_29;
         restrictionSlotDetailDictionary = DataManager__GetMasterData_object_(
                                             (DataManager_o *)restrictionSlotDetailDictionary,
-                                            (const MethodInfo_30DD3F0 *)Method_DataManager_GetMasterData_ServantMaster___);
+                                            (const MethodInfo_30E7C58 *)Method_DataManager_GetMasterData_ServantMaster___);
         if ( !restrictionSlotDetailDictionary )
           goto LABEL_29;
         v16 = (System_Collections_Generic_IEnumerable_TSource__o *)ServantMaster__GetCollectionList(
                                                                      (ServantMaster_o *)restrictionSlotDetailDictionary,
                                                                      0);
         monitor = (System_Collections_Generic_IEnumerable_TSource__o *)v22[2].monitor;
-        v17 = (const MethodInfo_3107AA0 *)Method_System_Linq_Enumerable_Intersect_int___;
+        v17 = (const MethodInfo_3112308 *)Method_System_Linq_Enumerable_Intersect_int___;
         goto LABEL_27;
       }
     }
@@ -3785,61 +3785,61 @@ System_Int32_array *QuestRestrictionInfo__GetMyServantOrNpcSvtIdUnionNpcList(
   CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o v57; // 0:x0.16
   CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o v58; // 0:x0.16
 
-  if ( (byte_4C38D55 & 1) == 0 )
+  if ( (byte_4C4434E & 1) == 0 )
   {
-    sub_1C32C20(&Method_System_Array_Empty_int___);
-    sub_1C32C20(&Method_DataManager_GetMasterData_NpcFollowerMaster___);
-    sub_1C32C20(&Method_DataManager_GetMasterData_ServantMaster___);
-    sub_1C32C20(&Method_System_Collections_Generic_Dictionary_int__FollowerInfo__Add__);
-    sub_1C32C20(&Method_System_Collections_Generic_Dictionary_int__FollowerInfo__ContainsKey__);
-    sub_1C32C20(&Method_System_Collections_Generic_Dictionary_int__FollowerInfo___ctor__);
-    sub_1C32C20(&System_Collections_Generic_Dictionary_int__FollowerInfo__TypeInfo);
-    sub_1C32C20(&Method_System_Linq_Enumerable_Intersect_int___);
-    sub_1C32C20(&Method_System_Linq_Enumerable_ToArray_int___);
-    sub_1C32C20(&Method_System_Linq_Enumerable_Union_int___);
-    sub_1C32C20(&Method_System_Collections_Generic_List_int__Add__);
-    sub_1C32C20(&Method_System_Collections_Generic_List_RestrictionEntity__Find__);
-    sub_1C32C20(&Method_System_Collections_Generic_List_int___ctor__);
-    sub_1C32C20(&System_Collections_Generic_List_int__TypeInfo);
-    sub_1C32C20(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
-    sub_1C32C20(&System_Predicate_RestrictionEntity__TypeInfo);
-    sub_1C32C20(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-    sub_1C32C20(&Method_QuestRestrictionInfo___c__DisplayClass207_0__GetMyServantOrNpcSvtIdUnionNpcList_b__0__);
-    sub_1C32C20(&QuestRestrictionInfo___c__DisplayClass207_0_TypeInfo);
-    byte_4C38D55 = 1;
+    sub_1C37058(&Method_System_Array_Empty_int___);
+    sub_1C37058(&Method_DataManager_GetMasterData_NpcFollowerMaster___);
+    sub_1C37058(&Method_DataManager_GetMasterData_ServantMaster___);
+    sub_1C37058(&Method_System_Collections_Generic_Dictionary_int__FollowerInfo__Add__);
+    sub_1C37058(&Method_System_Collections_Generic_Dictionary_int__FollowerInfo__ContainsKey__);
+    sub_1C37058(&Method_System_Collections_Generic_Dictionary_int__FollowerInfo___ctor__);
+    sub_1C37058(&System_Collections_Generic_Dictionary_int__FollowerInfo__TypeInfo);
+    sub_1C37058(&Method_System_Linq_Enumerable_Intersect_int___);
+    sub_1C37058(&Method_System_Linq_Enumerable_ToArray_int___);
+    sub_1C37058(&Method_System_Linq_Enumerable_Union_int___);
+    sub_1C37058(&Method_System_Collections_Generic_List_int__Add__);
+    sub_1C37058(&Method_System_Collections_Generic_List_RestrictionEntity__Find__);
+    sub_1C37058(&Method_System_Collections_Generic_List_int___ctor__);
+    sub_1C37058(&System_Collections_Generic_List_int__TypeInfo);
+    sub_1C37058(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
+    sub_1C37058(&System_Predicate_RestrictionEntity__TypeInfo);
+    sub_1C37058(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    sub_1C37058(&Method_QuestRestrictionInfo___c__DisplayClass207_0__GetMyServantOrNpcSvtIdUnionNpcList_b__0__);
+    sub_1C37058(&QuestRestrictionInfo___c__DisplayClass207_0_TypeInfo);
+    byte_4C4434E = 1;
   }
   isWhole = 0;
-  v9 = (QuestRestrictionInfo___c__DisplayClass207_0_o *)sub_1C32E6C(QuestRestrictionInfo___c__DisplayClass207_0_TypeInfo);
+  v9 = (QuestRestrictionInfo___c__DisplayClass207_0_o *)sub_1C372A4(QuestRestrictionInfo___c__DisplayClass207_0_TypeInfo);
   QuestRestrictionInfo___c__DisplayClass207_0___ctor(v9, 0);
   if ( !v9 )
     goto LABEL_57;
   v9->fields.index = index;
-  v11 = (System_Collections_Generic_Dictionary_int__object__o *)sub_1C32E6C(System_Collections_Generic_Dictionary_int__FollowerInfo__TypeInfo);
+  v11 = (System_Collections_Generic_Dictionary_int__object__o *)sub_1C372A4(System_Collections_Generic_Dictionary_int__FollowerInfo__TypeInfo);
   System_Collections_Generic_Dictionary_int__object____ctor(
     v11,
-    (const MethodInfo_33EF348 *)Method_System_Collections_Generic_Dictionary_int__FollowerInfo___ctor__);
+    (const MethodInfo_33F9BB0 *)Method_System_Collections_Generic_Dictionary_int__FollowerInfo___ctor__);
   *npcInfoDictionary = (System_Collections_Generic_Dictionary_int__FollowerInfo__o *)v11;
-  sub_1C32BC4((CGThumbnailListItem_o *)npcInfoDictionary, (int32_t)v11, v12, v13);
+  sub_1C36FFC((CGThumbnailListItem_o *)npcInfoDictionary, (int32_t)v11, v12, v13);
   v16 = Method_System_Array_Empty_int___;
   v17 = *((_QWORD *)Method_System_Array_Empty_int___ + 7);
   if ( !v17 )
   {
-    sub_1C83390(Method_System_Array_Empty_int___);
+    sub_1C877C8(Method_System_Array_Empty_int___);
     v17 = v16[7];
   }
   v18 = *(_QWORD *)(v17 + 16);
   if ( (*(_BYTE *)(v18 + 309) & 1) == 0 )
-    v18 = sub_1C83334(inited);
+    v18 = sub_1C8776C(inited);
   if ( !*(_DWORD *)(v18 + 224) )
     inited = j_il2cpp_runtime_class_init_0(v18);
   v19 = *(_QWORD *)(v16[7] + 16LL);
   if ( (*(_BYTE *)(v19 + 309) & 1) == 0 )
-    v19 = sub_1C83334(inited);
+    v19 = sub_1C8776C(inited);
   if ( indexIsPos )
   {
     myServantOrNpcRestrictionEntityList = (System_Collections_Generic_List_object__o *)this->fields.myServantOrNpcRestrictionEntityList;
     MyServantOrNpcSvtIdList = **(System_Int32_array ***)(v19 + 184);
-    v22 = (System_Predicate_object__o *)sub_1C32E6C(System_Predicate_RestrictionEntity__TypeInfo);
+    v22 = (System_Predicate_object__o *)sub_1C372A4(System_Predicate_RestrictionEntity__TypeInfo);
     System_Predicate_object____ctor(
       v22,
       (Il2CppObject *)v9,
@@ -3850,16 +3850,16 @@ System_Int32_array *QuestRestrictionInfo__GetMyServantOrNpcSvtIdUnionNpcList(
     v23 = System_Collections_Generic_List_object___Find(
             myServantOrNpcRestrictionEntityList,
             (System_Predicate_T__o *)v22,
-            (const MethodInfo_3798E24 *)Method_System_Collections_Generic_List_RestrictionEntity__Find__);
+            (const MethodInfo_37A368C *)Method_System_Collections_Generic_List_RestrictionEntity__Find__);
     if ( v23 )
     {
       v24 = v23;
-      Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39E2904 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+      Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39ED16C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
       if ( !Instance )
         goto LABEL_57;
       Instance = DataManager__GetMasterData_object_(
                    (DataManager_o *)Instance,
-                   (const MethodInfo_30DD3F0 *)Method_DataManager_GetMasterData_ServantMaster___);
+                   (const MethodInfo_30E7C58 *)Method_DataManager_GetMasterData_ServantMaster___);
       if ( !Instance )
         goto LABEL_57;
       CollectionList = (System_Collections_Generic_IEnumerable_TSource__o *)ServantMaster__GetCollectionList(
@@ -3868,10 +3868,10 @@ System_Int32_array *QuestRestrictionInfo__GetMyServantOrNpcSvtIdUnionNpcList(
       v26 = System_Linq_Enumerable__Intersect_int_(
               (System_Collections_Generic_IEnumerable_TSource__o *)v24[2].monitor,
               CollectionList,
-              (const MethodInfo_3107AA0 *)Method_System_Linq_Enumerable_Intersect_int___);
+              (const MethodInfo_3112308 *)Method_System_Linq_Enumerable_Intersect_int___);
       MyServantOrNpcSvtIdList = System_Linq_Enumerable__ToArray_int_(
                                   v26,
-                                  (const MethodInfo_311C8F4 *)Method_System_Linq_Enumerable_ToArray_int___);
+                                  (const MethodInfo_312715C *)Method_System_Linq_Enumerable_ToArray_int___);
     }
     MyServantOrSupportTargetPos = v9->fields.index;
   }
@@ -3884,17 +3884,17 @@ System_Int32_array *QuestRestrictionInfo__GetMyServantOrNpcSvtIdUnionNpcList(
       v31 = *((_QWORD *)Method_System_Array_Empty_int___ + 7);
       if ( !v31 )
       {
-        sub_1C83390(Method_System_Array_Empty_int___);
+        sub_1C877C8(Method_System_Array_Empty_int___);
         v31 = v30[7];
       }
       v32 = *(_QWORD *)(v31 + 16);
       if ( (*(_BYTE *)(v32 + 309) & 1) == 0 )
-        v32 = sub_1C83334(v29);
+        v32 = sub_1C8776C(v29);
       if ( !*(_DWORD *)(v32 + 224) )
         v29 = j_il2cpp_runtime_class_init_0(v32);
       v33 = *(_QWORD *)(v30[7] + 16LL);
       if ( (*(_BYTE *)(v33 + 309) & 1) == 0 )
-        v33 = sub_1C83334(v29);
+        v33 = sub_1C8776C(v29);
       MyServantOrNpcSvtIdList = **(System_Int32_array ***)(v33 + 184);
     }
     MyServantOrSupportTargetPos = v9->fields.index;
@@ -3904,17 +3904,17 @@ System_Int32_array *QuestRestrictionInfo__GetMyServantOrNpcSvtIdUnionNpcList(
                                       MyServantOrSupportTargetPos,
                                       v28);
   }
-  v34 = (System_Collections_Generic_List_int__o *)sub_1C32E6C(System_Collections_Generic_List_int__TypeInfo);
+  v34 = (System_Collections_Generic_List_int__o *)sub_1C372A4(System_Collections_Generic_List_int__TypeInfo);
   System_Collections_Generic_List_int____ctor(
     v34,
-    (const MethodInfo_377AF44 *)Method_System_Collections_Generic_List_int___ctor__);
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39E2904 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    (const MethodInfo_37857AC *)Method_System_Collections_Generic_List_int___ctor__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39ED16C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance )
     goto LABEL_57;
   first = (System_Collections_Generic_IEnumerable_TSource__o *)MyServantOrNpcSvtIdList;
   Instance = DataManager__GetMasterData_object_(
                (DataManager_o *)Instance,
-               (const MethodInfo_30DD3F0 *)Method_DataManager_GetMasterData_NpcFollowerMaster___);
+               (const MethodInfo_30E7C58 *)Method_DataManager_GetMasterData_NpcFollowerMaster___);
   if ( !Instance )
     goto LABEL_57;
   Instance = NpcFollowerMaster__GetQuestFollowerList(
@@ -3932,7 +3932,7 @@ System_Int32_array *QuestRestrictionInfo__GetMyServantOrNpcSvtIdUnionNpcList(
     while ( 1 )
     {
       if ( v37 >= v35 )
-        sub_1C32E84(Instance);
+        sub_1C372BC(Instance);
       v38 = (FollowerInfo_o *)*((_QWORD *)v36 + (int)v37 + 4);
       Instance = (void *)FollowerInfo__GetReturnTypeByQuestId(this->fields.questId, 0);
       if ( !v38 )
@@ -3946,7 +3946,7 @@ System_Int32_array *QuestRestrictionInfo__GetMyServantOrNpcSvtIdUnionNpcList(
         Instance = ServantLeaderInfo__GetOverwriteStatus(v39, 0);
         if ( !Instance )
           break;
-        Instance = (void *)QuestRestrictionInfo__IsRestriction_43321380(
+        Instance = (void *)QuestRestrictionInfo__IsRestriction_43423248(
                              this,
                              &isWhole,
                              NpcServantIndividualityFull,
@@ -3957,7 +3957,7 @@ System_Int32_array *QuestRestrictionInfo__GetMyServantOrNpcSvtIdUnionNpcList(
                              v42);
         if ( ((unsigned __int8)Instance & 1) == 0 )
         {
-          Instance = (void *)QuestRestrictionInfo__IsRestrictionServantIndividuality_43343396(
+          Instance = (void *)QuestRestrictionInfo__IsRestrictionServantIndividuality_43445264(
                                this,
                                NpcServantIndividualityFull,
                                MyServantOrSupportTargetPos,
@@ -3970,7 +3970,7 @@ System_Int32_array *QuestRestrictionInfo__GetMyServantOrNpcSvtIdUnionNpcList(
               j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
             *(_QWORD *)&v57.fields.currentCryptoKey = v45;
             *(_QWORD *)&v57.fields.fakeValue = v44;
-            Instance = (void *)CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_48887784(v57, 0);
+            Instance = (void *)CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_48930896(v57, 0);
             if ( !v34 )
               break;
             items = v34->fields._items;
@@ -3984,7 +3984,7 @@ System_Int32_array *QuestRestrictionInfo__GetMyServantOrNpcSvtIdUnionNpcList(
               System_Collections_Generic_List_int___AddWithResize(
                 v34,
                 (int32_t)Instance,
-                *(const MethodInfo_377B798 **)(*(_QWORD *)(v47[4] + 192LL) + 112LL));
+                *(const MethodInfo_3786000 **)(*(_QWORD *)(v47[4] + 192LL) + 112LL));
             }
             else
             {
@@ -3992,13 +3992,13 @@ System_Int32_array *QuestRestrictionInfo__GetMyServantOrNpcSvtIdUnionNpcList(
               items->m_Items[size] = (int)Instance;
             }
             v49 = *npcInfoDictionary;
-            Instance = (void *)CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_48887784(v39->fields.svtId, 0);
+            Instance = (void *)CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_48930896(v39->fields.svtId, 0);
             if ( !v49 )
               break;
             Instance = (void *)System_Collections_Generic_Dictionary_int__object___ContainsKey(
                                  (System_Collections_Generic_Dictionary_int__object__o *)v49,
                                  (int32_t)Instance,
-                                 (const MethodInfo_33EFF10 *)Method_System_Collections_Generic_Dictionary_int__FollowerInfo__ContainsKey__);
+                                 (const MethodInfo_33FA778 *)Method_System_Collections_Generic_Dictionary_int__FollowerInfo__ContainsKey__);
             if ( ((unsigned __int8)Instance & 1) == 0 )
             {
               v50 = *npcInfoDictionary;
@@ -4008,14 +4008,14 @@ System_Int32_array *QuestRestrictionInfo__GetMyServantOrNpcSvtIdUnionNpcList(
                 j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
               *(_QWORD *)&v58.fields.currentCryptoKey = v52;
               *(_QWORD *)&v58.fields.fakeValue = v51;
-              Instance = (void *)CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_48887784(v58, 0);
+              Instance = (void *)CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_48930896(v58, 0);
               if ( !v50 )
                 break;
               System_Collections_Generic_Dictionary_int__object___Add(
                 (System_Collections_Generic_Dictionary_int__object__o *)v50,
                 (int32_t)Instance,
                 (Il2CppObject *)v38,
-                (const MethodInfo_33EFD1C *)Method_System_Collections_Generic_Dictionary_int__FollowerInfo__Add__);
+                (const MethodInfo_33FA584 *)Method_System_Collections_Generic_Dictionary_int__FollowerInfo__Add__);
             }
           }
         }
@@ -4025,16 +4025,16 @@ System_Int32_array *QuestRestrictionInfo__GetMyServantOrNpcSvtIdUnionNpcList(
         goto LABEL_56;
     }
 LABEL_57:
-    sub_1C32E7C(Instance);
+    sub_1C372B4(Instance);
   }
 LABEL_56:
   v53 = System_Linq_Enumerable__Union_int_(
           first,
           (System_Collections_Generic_IEnumerable_TSource__o *)v34,
-          (const MethodInfo_3121C60 *)Method_System_Linq_Enumerable_Union_int___);
+          (const MethodInfo_312C4C8 *)Method_System_Linq_Enumerable_Union_int___);
   return System_Linq_Enumerable__ToArray_int_(
            v53,
-           (const MethodInfo_311C8F4 *)Method_System_Linq_Enumerable_ToArray_int___);
+           (const MethodInfo_312715C *)Method_System_Linq_Enumerable_ToArray_int___);
 }
 
 
@@ -4052,27 +4052,27 @@ System_String_o *QuestRestrictionInfo__GetMyServantOrSupportRestrictionMessage(
   __int64 v11; // x20
   int v12; // w23
 
-  if ( (byte_4C38D4B & 1) == 0 )
+  if ( (byte_4C44344 & 1) == 0 )
   {
-    sub_1C32C20(&BalanceConfig_TypeInfo);
-    sub_1C32C20(&LocalizationManager_TypeInfo);
-    sub_1C32C20(&StringLiteral_10307/*"PARTY_ORGANIZATION_SERVANT_QUEST_RESTRICTION_SELECT_SUPPORT_ONLY"*/);
-    sub_1C32C20(&StringLiteral_10306/*"PARTY_ORGANIZATION_SERVANT_QUEST_RESTRICTION_SELECT_SUPPORT"*/);
-    sub_1C32C20(&StringLiteral_10304/*"PARTY_ORGANIZATION_SERVANT_QUEST_RESTRICTION_SELECT_MY_SERVANT_OR_SUPPORT_NOT_SINGLE_SUPPORT"*/);
-    sub_1C32C20(&StringLiteral_10303/*"PARTY_ORGANIZATION_SERVANT_QUEST_RESTRICTION_SELECT_MY_SERVANT_OR_SUPPORT"*/);
-    byte_4C38D4B = 1;
+    sub_1C37058(&BalanceConfig_TypeInfo);
+    sub_1C37058(&LocalizationManager_TypeInfo);
+    sub_1C37058(&StringLiteral_10308/*"PARTY_ORGANIZATION_SERVANT_QUEST_RESTRICTION_SELECT_SUPPORT_ONLY"*/);
+    sub_1C37058(&StringLiteral_10307/*"PARTY_ORGANIZATION_SERVANT_QUEST_RESTRICTION_SELECT_SUPPORT"*/);
+    sub_1C37058(&StringLiteral_10305/*"PARTY_ORGANIZATION_SERVANT_QUEST_RESTRICTION_SELECT_MY_SERVANT_OR_SUPPORT_NOT_SINGLE_SUPPORT"*/);
+    sub_1C37058(&StringLiteral_10304/*"PARTY_ORGANIZATION_SERVANT_QUEST_RESTRICTION_SELECT_MY_SERVANT_OR_SUPPORT"*/);
+    byte_4C44344 = 1;
   }
   if ( this->fields.isNotSingleSupportOnly && this->fields.servantNumMin >= 1 )
   {
     if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-    v7 = &StringLiteral_10304/*"PARTY_ORGANIZATION_SERVANT_QUEST_RESTRICTION_SELECT_MY_SERVANT_OR_SUPPORT_NOT_SINGLE_SUPPORT"*/;
+    v7 = &StringLiteral_10305/*"PARTY_ORGANIZATION_SERVANT_QUEST_RESTRICTION_SELECT_MY_SERVANT_OR_SUPPORT_NOT_SINGLE_SUPPORT"*/;
   }
   else if ( haveIndividualityServant )
   {
     if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-    v7 = &StringLiteral_10303/*"PARTY_ORGANIZATION_SERVANT_QUEST_RESTRICTION_SELECT_MY_SERVANT_OR_SUPPORT"*/;
+    v7 = &StringLiteral_10304/*"PARTY_ORGANIZATION_SERVANT_QUEST_RESTRICTION_SELECT_MY_SERVANT_OR_SUPPORT"*/;
   }
   else
   {
@@ -4086,7 +4086,7 @@ System_String_o *QuestRestrictionInfo__GetMyServantOrSupportRestrictionMessage(
       while ( 1 )
       {
         if ( (unsigned int)v11 >= v9 )
-          sub_1C32E84(MyServantOrNpcSvtIdList);
+          sub_1C372BC(MyServantOrNpcSvtIdList);
         MyServantOrNpcSvtIdList = (int *)BalanceConfig_TypeInfo;
         v12 = v10[v11 + 8];
         if ( !BalanceConfig_TypeInfo->_2.cctor_finished )
@@ -4102,14 +4102,14 @@ System_String_o *QuestRestrictionInfo__GetMyServantOrSupportRestrictionMessage(
       }
       if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-      v7 = &StringLiteral_10306/*"PARTY_ORGANIZATION_SERVANT_QUEST_RESTRICTION_SELECT_SUPPORT"*/;
+      v7 = &StringLiteral_10307/*"PARTY_ORGANIZATION_SERVANT_QUEST_RESTRICTION_SELECT_SUPPORT"*/;
     }
     else
     {
 LABEL_20:
       if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-      v7 = &StringLiteral_10307/*"PARTY_ORGANIZATION_SERVANT_QUEST_RESTRICTION_SELECT_SUPPORT_ONLY"*/;
+      v7 = &StringLiteral_10308/*"PARTY_ORGANIZATION_SERVANT_QUEST_RESTRICTION_SELECT_SUPPORT_ONLY"*/;
     }
   }
   return LocalizationManager__Get((System_String_o *)*v7, 0);
@@ -4130,20 +4130,20 @@ int32_t QuestRestrictionInfo__GetMyServantOrSupportTargetPos(
   System_Predicate_object__o *v11; // x20
   Il2CppClass *klass; // x8
 
-  if ( (byte_4C38D4D & 1) == 0 )
+  if ( (byte_4C44346 & 1) == 0 )
   {
-    sub_1C32C20(&Method_System_Collections_Generic_List_RestrictionEntity__Find__);
-    sub_1C32C20(&System_Predicate_RestrictionEntity__TypeInfo);
-    sub_1C32C20(&Method_QuestRestrictionInfo___c__DisplayClass194_0__GetMyServantOrSupportTargetPos_b__0__);
-    sub_1C32C20(&QuestRestrictionInfo___c__DisplayClass194_0_TypeInfo);
-    byte_4C38D4D = 1;
+    sub_1C37058(&Method_System_Collections_Generic_List_RestrictionEntity__Find__);
+    sub_1C37058(&System_Predicate_RestrictionEntity__TypeInfo);
+    sub_1C37058(&Method_QuestRestrictionInfo___c__DisplayClass194_0__GetMyServantOrSupportTargetPos_b__0__);
+    sub_1C37058(&QuestRestrictionInfo___c__DisplayClass194_0_TypeInfo);
+    byte_4C44346 = 1;
   }
-  v5 = sub_1C32E6C(QuestRestrictionInfo___c__DisplayClass194_0_TypeInfo);
+  v5 = sub_1C372A4(QuestRestrictionInfo___c__DisplayClass194_0_TypeInfo);
   QuestRestrictionInfo___c__DisplayClass194_0___ctor((QuestRestrictionInfo___c__DisplayClass194_0_o *)v5, 0);
   if ( !v5 )
     goto LABEL_14;
   *(_QWORD *)(v5 + 16) = this;
-  sub_1C32BC4((CGThumbnailListItem_o *)(v5 + 16), (int32_t)this, v7, v8);
+  sub_1C36FFC((CGThumbnailListItem_o *)(v5 + 16), (int32_t)this, v7, v8);
   *(_DWORD *)(v5 + 24) = index;
   if ( this->fields.restrictionBaseEntity )
     goto LABEL_12;
@@ -4157,7 +4157,7 @@ LABEL_12:
     return (int)v6;
   }
   myServantOrNpcRestrictionEntityList = (System_Collections_Generic_List_object__o *)this->fields.myServantOrNpcRestrictionEntityList;
-  v11 = (System_Predicate_object__o *)sub_1C32E6C(System_Predicate_RestrictionEntity__TypeInfo);
+  v11 = (System_Predicate_object__o *)sub_1C372A4(System_Predicate_RestrictionEntity__TypeInfo);
   System_Predicate_object____ctor(
     v11,
     (Il2CppObject *)v5,
@@ -4168,15 +4168,15 @@ LABEL_12:
   v6 = System_Collections_Generic_List_object___Find(
          myServantOrNpcRestrictionEntityList,
          (System_Predicate_T__o *)v11,
-         (const MethodInfo_3798E24 *)Method_System_Collections_Generic_List_RestrictionEntity__Find__);
+         (const MethodInfo_37A368C *)Method_System_Collections_Generic_List_RestrictionEntity__Find__);
   if ( !v6 )
     return (int)v6;
   klass = v6[3].klass;
   if ( !klass )
 LABEL_14:
-    sub_1C32E7C(v6);
+    sub_1C372B4(v6);
   if ( !LODWORD(klass->_1.namespaze) )
-    sub_1C32E84(v6);
+    sub_1C372BC(v6);
   LODWORD(v6) = klass->_1.byval_arg.data;
   return (int)v6;
 }
@@ -4196,11 +4196,11 @@ System_Collections_Generic_List_int____o *QuestRestrictionInfo__GetNeedIndividua
   if ( !slotInfos )
     goto LABEL_7;
   if ( (unsigned int)(pos - 1) >= LODWORD(slotInfos->max_length) )
-    sub_1C32E84(this);
+    sub_1C372BC(this);
   v4 = slotInfos->m_Items[pos - 1];
   if ( !v4 )
 LABEL_7:
-    sub_1C32E7C(this);
+    sub_1C372B4(this);
   return v4->fields.individualityList;
 }
 
@@ -4216,48 +4216,48 @@ System_String_o *QuestRestrictionInfo__GetNeedIndividualityMessage(
   System_String_o *DialogMessage; // x19
   System_Collections_Generic_Dictionary_Enumerator_TKey__TValue__o v10; // [xsp+0h] [xbp-50h] BYREF
 
-  if ( (byte_4C38D4F & 1) == 0 )
+  if ( (byte_4C44348 & 1) == 0 )
   {
-    sub_1C32C20(&Method_System_Collections_Generic_Dictionary_int__QuestRestrictionInfo_DialogMessageInfo__GetEnumerator__);
-    sub_1C32C20(&Method_System_Collections_Generic_Dictionary_Enumerator_int__QuestRestrictionInfo_DialogMessageInfo__Dispose__);
-    sub_1C32C20(&Method_System_Collections_Generic_Dictionary_Enumerator_int__QuestRestrictionInfo_DialogMessageInfo__MoveNext__);
-    sub_1C32C20(&Method_System_Collections_Generic_Dictionary_Enumerator_int__QuestRestrictionInfo_DialogMessageInfo__get_Current__);
-    sub_1C32C20(&Method_System_Collections_Generic_KeyValuePair_int__QuestRestrictionInfo_DialogMessageInfo__get_Key__);
-    sub_1C32C20(&Method_System_Collections_Generic_KeyValuePair_int__QuestRestrictionInfo_DialogMessageInfo__get_Value__);
-    sub_1C32C20(&StringLiteral_1/*""*/);
-    byte_4C38D4F = 1;
+    sub_1C37058(&Method_System_Collections_Generic_Dictionary_int__QuestRestrictionInfo_DialogMessageInfo__GetEnumerator__);
+    sub_1C37058(&Method_System_Collections_Generic_Dictionary_Enumerator_int__QuestRestrictionInfo_DialogMessageInfo__Dispose__);
+    sub_1C37058(&Method_System_Collections_Generic_Dictionary_Enumerator_int__QuestRestrictionInfo_DialogMessageInfo__MoveNext__);
+    sub_1C37058(&Method_System_Collections_Generic_Dictionary_Enumerator_int__QuestRestrictionInfo_DialogMessageInfo__get_Current__);
+    sub_1C37058(&Method_System_Collections_Generic_KeyValuePair_int__QuestRestrictionInfo_DialogMessageInfo__get_Key__);
+    sub_1C37058(&Method_System_Collections_Generic_KeyValuePair_int__QuestRestrictionInfo_DialogMessageInfo__get_Value__);
+    sub_1C37058(&StringLiteral_1/*""*/);
+    byte_4C44348 = 1;
   }
   memset(&v10, 0, sizeof(v10));
   if ( this->fields.restrictionBaseEntity )
   {
     dialogMessageInfoDictionary = this->fields.dialogMessageInfoDictionary;
     if ( !dialogMessageInfoDictionary )
-      sub_1C32E7C(0);
+      sub_1C372B4(0);
     System_Collections_Generic_Dictionary_int__object___GetEnumerator(
       &v10,
       (System_Collections_Generic_Dictionary_int__object__o *)dialogMessageInfoDictionary,
-      (const MethodInfo_33F0154 *)Method_System_Collections_Generic_Dictionary_int__QuestRestrictionInfo_DialogMessageInfo__GetEnumerator__);
+      (const MethodInfo_33FA9BC *)Method_System_Collections_Generic_Dictionary_int__QuestRestrictionInfo_DialogMessageInfo__GetEnumerator__);
     while ( 1 )
     {
       v6 = System_Collections_Generic_Dictionary_Enumerator_int__object___MoveNext(
              &v10,
-             (const MethodInfo_3546B90 *)Method_System_Collections_Generic_Dictionary_Enumerator_int__QuestRestrictionInfo_DialogMessageInfo__MoveNext__);
+             (const MethodInfo_35513F8 *)Method_System_Collections_Generic_Dictionary_Enumerator_int__QuestRestrictionInfo_DialogMessageInfo__MoveNext__);
       if ( !v6 )
         break;
       if ( !v10.fields._current.fields.value )
-        sub_1C32E7C(v6);
+        sub_1C372B4(v6);
       if ( LODWORD(v10.fields._current.fields.value[1].klass) == pos )
       {
         DialogMessage = QuestRestrictionInfo__GetDialogMessage(this, (int32_t)v10.fields._current.fields.key, 0, v7);
         System_Collections_Generic_Dictionary_Enumerator_int__object___Dispose(
           &v10,
-          (const MethodInfo_3546CB4 *)Method_System_Collections_Generic_Dictionary_Enumerator_int__QuestRestrictionInfo_DialogMessageInfo__Dispose__);
+          (const MethodInfo_355151C *)Method_System_Collections_Generic_Dictionary_Enumerator_int__QuestRestrictionInfo_DialogMessageInfo__Dispose__);
         return DialogMessage;
       }
     }
     System_Collections_Generic_Dictionary_Enumerator_int__object___Dispose(
       &v10,
-      (const MethodInfo_3546CB4 *)Method_System_Collections_Generic_Dictionary_Enumerator_int__QuestRestrictionInfo_DialogMessageInfo__Dispose__);
+      (const MethodInfo_355151C *)Method_System_Collections_Generic_Dictionary_Enumerator_int__QuestRestrictionInfo_DialogMessageInfo__Dispose__);
   }
   return (System_String_o *)StringLiteral_1/*""*/;
 }
@@ -4270,37 +4270,37 @@ int32_t QuestRestrictionInfo__GetNeedStartingSvtCount(QuestRestrictionInfo_o *th
   _BOOL8 v5; // x0
   System_Collections_Generic_List_Enumerator_object__o v7; // [xsp+8h] [xbp-38h] BYREF
 
-  if ( (byte_4C38D5A & 1) == 0 )
+  if ( (byte_4C44353 & 1) == 0 )
   {
-    sub_1C32C20(&Method_System_Collections_Generic_List_Enumerator_int____Dispose__);
-    sub_1C32C20(&Method_System_Collections_Generic_List_Enumerator_int____MoveNext__);
-    sub_1C32C20(&Method_System_Collections_Generic_List_Enumerator_int____get_Current__);
-    sub_1C32C20(&Method_System_Collections_Generic_List_int____GetEnumerator__);
-    byte_4C38D5A = 1;
+    sub_1C37058(&Method_System_Collections_Generic_List_Enumerator_int____Dispose__);
+    sub_1C37058(&Method_System_Collections_Generic_List_Enumerator_int____MoveNext__);
+    sub_1C37058(&Method_System_Collections_Generic_List_Enumerator_int____get_Current__);
+    sub_1C37058(&Method_System_Collections_Generic_List_int____GetEnumerator__);
+    byte_4C44353 = 1;
   }
   memset(&v7, 0, sizeof(v7));
   if ( !this->fields.restrictionBaseEntity || !this->fields.isNeedStarting )
     return 0;
   needStartingIndividualitiesList = this->fields.needStartingIndividualitiesList;
   if ( !needStartingIndividualitiesList )
-    sub_1C32E7C(0);
+    sub_1C372B4(0);
   System_Collections_Generic_List_object___GetEnumerator(
     (System_Collections_Generic_List_Enumerator_T__o *)&v7,
     (System_Collections_Generic_List_object__o *)needStartingIndividualitiesList,
-    (const MethodInfo_37992B4 *)Method_System_Collections_Generic_List_int____GetEnumerator__);
+    (const MethodInfo_37A3B1C *)Method_System_Collections_Generic_List_int____GetEnumerator__);
   for ( i = 0; ; i += *(_DWORD *)((char *)&v7.fields._current->klass + (unsigned __int64)&off_18) )
   {
     v5 = System_Collections_Generic_List_Enumerator_object___MoveNext(
            &v7,
-           (const MethodInfo_3522FA8 *)Method_System_Collections_Generic_List_Enumerator_int____MoveNext__);
+           (const MethodInfo_352D810 *)Method_System_Collections_Generic_List_Enumerator_int____MoveNext__);
     if ( !v5 )
       break;
     if ( !v7.fields._current )
-      sub_1C32E7C(v5);
+      sub_1C372B4(v5);
   }
   System_Collections_Generic_List_Enumerator_object___Dispose(
     &v7,
-    (const MethodInfo_3522FA4 *)Method_System_Collections_Generic_List_Enumerator_int____Dispose__);
+    (const MethodInfo_352D80C *)Method_System_Collections_Generic_List_Enumerator_int____Dispose__);
   return i;
 }
 
@@ -4314,55 +4314,55 @@ System_Int32_array *QuestRestrictionInfo__GetNeedStartingSvtIdList(
   _BOOL8 v5; // x0
   System_Collections_Generic_List_Enumerator_object__o v7; // [xsp+8h] [xbp-38h] BYREF
 
-  if ( (byte_4C38D57 & 1) == 0 )
+  if ( (byte_4C44350 & 1) == 0 )
   {
-    sub_1C32C20(&Method_System_Collections_Generic_List_Enumerator_int____Dispose__);
-    sub_1C32C20(&Method_System_Collections_Generic_List_Enumerator_int____MoveNext__);
-    sub_1C32C20(&Method_System_Collections_Generic_List_Enumerator_int____get_Current__);
-    sub_1C32C20(&Method_System_Collections_Generic_List_int__AddRange__);
-    sub_1C32C20(&Method_System_Collections_Generic_List_int____GetEnumerator__);
-    sub_1C32C20(&Method_System_Collections_Generic_List_int__ToArray__);
-    sub_1C32C20(&Method_System_Collections_Generic_List_int___ctor__);
-    sub_1C32C20(&System_Collections_Generic_List_int__TypeInfo);
-    byte_4C38D57 = 1;
+    sub_1C37058(&Method_System_Collections_Generic_List_Enumerator_int____Dispose__);
+    sub_1C37058(&Method_System_Collections_Generic_List_Enumerator_int____MoveNext__);
+    sub_1C37058(&Method_System_Collections_Generic_List_Enumerator_int____get_Current__);
+    sub_1C37058(&Method_System_Collections_Generic_List_int__AddRange__);
+    sub_1C37058(&Method_System_Collections_Generic_List_int____GetEnumerator__);
+    sub_1C37058(&Method_System_Collections_Generic_List_int__ToArray__);
+    sub_1C37058(&Method_System_Collections_Generic_List_int___ctor__);
+    sub_1C37058(&System_Collections_Generic_List_int__TypeInfo);
+    byte_4C44350 = 1;
   }
   memset(&v7, 0, sizeof(v7));
   if ( !this->fields.restrictionBaseEntity || !this->fields.isNeedStarting )
     return 0;
-  v3 = (System_Collections_Generic_List_int__o *)sub_1C32E6C(System_Collections_Generic_List_int__TypeInfo);
+  v3 = (System_Collections_Generic_List_int__o *)sub_1C372A4(System_Collections_Generic_List_int__TypeInfo);
   System_Collections_Generic_List_int____ctor(
     v3,
-    (const MethodInfo_377AF44 *)Method_System_Collections_Generic_List_int___ctor__);
+    (const MethodInfo_37857AC *)Method_System_Collections_Generic_List_int___ctor__);
   needStartingIndividualitiesList = this->fields.needStartingIndividualitiesList;
   if ( !needStartingIndividualitiesList )
     goto LABEL_15;
   System_Collections_Generic_List_object___GetEnumerator(
     (System_Collections_Generic_List_Enumerator_T__o *)&v7,
     (System_Collections_Generic_List_object__o *)needStartingIndividualitiesList,
-    (const MethodInfo_37992B4 *)Method_System_Collections_Generic_List_int____GetEnumerator__);
+    (const MethodInfo_37A3B1C *)Method_System_Collections_Generic_List_int____GetEnumerator__);
   while ( 1 )
   {
     v5 = System_Collections_Generic_List_Enumerator_object___MoveNext(
            &v7,
-           (const MethodInfo_3522FA8 *)Method_System_Collections_Generic_List_Enumerator_int____MoveNext__);
+           (const MethodInfo_352D810 *)Method_System_Collections_Generic_List_Enumerator_int____MoveNext__);
     if ( !v5 )
       break;
     if ( !v3 )
-      sub_1C32E7C(v5);
+      sub_1C372B4(v5);
     System_Collections_Generic_List_int___AddRange(
       v3,
       (System_Collections_Generic_IEnumerable_T__o *)v7.fields._current,
-      (const MethodInfo_377B9A4 *)Method_System_Collections_Generic_List_int__AddRange__);
+      (const MethodInfo_378620C *)Method_System_Collections_Generic_List_int__AddRange__);
   }
   System_Collections_Generic_List_Enumerator_object___Dispose(
     &v7,
-    (const MethodInfo_3522FA4 *)Method_System_Collections_Generic_List_Enumerator_int____Dispose__);
+    (const MethodInfo_352D80C *)Method_System_Collections_Generic_List_Enumerator_int____Dispose__);
   if ( !v3 )
 LABEL_15:
-    sub_1C32E7C(needStartingIndividualitiesList);
+    sub_1C372B4(needStartingIndividualitiesList);
   return System_Collections_Generic_List_int___ToArray(
            v3,
-           (const MethodInfo_377D250 *)Method_System_Collections_Generic_List_int__ToArray__);
+           (const MethodInfo_3787AB8 *)Method_System_Collections_Generic_List_int__ToArray__);
 }
 
 
@@ -4392,7 +4392,7 @@ int32_t QuestRestrictionInfo__GetOverwriteLimitCountRangeType(
       return 0;
   }
   if ( v6 >= LODWORD(overwriteLimitCountRangeTypes->max_length) )
-    sub_1C32E84(this);
+    sub_1C372BC(this);
   return overwriteLimitCountRangeTypes->m_Items[v6];
 }
 
@@ -4427,17 +4427,17 @@ System_String_array *QuestRestrictionInfo__GetPartyOrganizationServantSwapExplan
   UserServantCollectionEntity_o *v19; // [xsp+0h] [xbp-70h] BYREF
   Il2CppObject *entity; // [xsp+8h] [xbp-68h] BYREF
 
-  if ( (byte_4C38D3C & 1) == 0 )
+  if ( (byte_4C44335 & 1) == 0 )
   {
-    sub_1C32C20(&Method_DataManager_GetMasterData_UserServantCollectionMaster___);
-    sub_1C32C20(&Method_DataManager_GetMaster_ServantMaster___);
-    sub_1C32C20(&DataManager_TypeInfo);
-    sub_1C32C20(&Method_DataMasterBase_ServantMaster__ServantEntity__int__TryGetEntity__);
-    sub_1C32C20(&NetworkManager_TypeInfo);
-    sub_1C32C20(&OptionManager_TypeInfo);
-    sub_1C32C20(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-    sub_1C32C20(&string___TypeInfo);
-    byte_4C38D3C = 1;
+    sub_1C37058(&Method_DataManager_GetMasterData_UserServantCollectionMaster___);
+    sub_1C37058(&Method_DataManager_GetMaster_ServantMaster___);
+    sub_1C37058(&DataManager_TypeInfo);
+    sub_1C37058(&Method_DataMasterBase_ServantMaster__ServantEntity__int__TryGetEntity__);
+    sub_1C37058(&NetworkManager_TypeInfo);
+    sub_1C37058(&OptionManager_TypeInfo);
+    sub_1C37058(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    sub_1C37058(&string___TypeInfo);
+    byte_4C44335 = 1;
   }
   v19 = 0;
   entity = 0;
@@ -4451,7 +4451,7 @@ System_String_array *QuestRestrictionInfo__GetPartyOrganizationServantSwapExplan
   if ( !FixedServantPositionSvtIdList )
     goto LABEL_41;
   v7 = FixedServantPositionSvtIdList;
-  FixedServantPositionSvtIdList = sub_1C32CC8(string___TypeInfo, *(unsigned int *)(FixedServantPositionSvtIdList + 24));
+  FixedServantPositionSvtIdList = sub_1C37100(string___TypeInfo, *(unsigned int *)(FixedServantPositionSvtIdList + 24));
   v8 = FixedServantPositionSvtIdList;
   if ( v5 >= 1 )
   {
@@ -4461,31 +4461,31 @@ System_String_array *QuestRestrictionInfo__GetPartyOrganizationServantSwapExplan
     {
       if ( v9 >= *(unsigned int *)(v7 + 24) )
 LABEL_42:
-        sub_1C32E84(FixedServantPositionSvtIdList);
+        sub_1C372BC(FixedServantPositionSvtIdList);
       v12 = *(_DWORD *)(v7 + 32 + 4 * v9);
       if ( !DataManager_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-      FixedServantPositionSvtIdList = (__int64)DataManager__GetMaster_object_((const MethodInfo_30DD39C *)Method_DataManager_GetMaster_ServantMaster___);
+      FixedServantPositionSvtIdList = (__int64)DataManager__GetMaster_object_((const MethodInfo_30E7C04 *)Method_DataManager_GetMaster_ServantMaster___);
       if ( !FixedServantPositionSvtIdList )
         break;
       if ( !DataMasterBase_object__object__int___TryGetEntity(
               (DataMasterBase_TMaster__TEntity__PKType__o *)FixedServantPositionSvtIdList,
               &entity,
               v12,
-              (const MethodInfo_3396884 *)Method_DataMasterBase_ServantMaster__ServantEntity__int__TryGetEntity__) )
+              (const MethodInfo_33A10EC *)Method_DataMasterBase_ServantMaster__ServantEntity__int__TryGetEntity__) )
         return 0;
-      FixedServantPositionSvtIdList = (__int64)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39E2904 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+      FixedServantPositionSvtIdList = (__int64)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39ED16C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
       if ( !FixedServantPositionSvtIdList )
         break;
       MasterData_object = DataManager__GetMasterData_object_(
                             (DataManager_o *)FixedServantPositionSvtIdList,
-                            (const MethodInfo_30DD3F0 *)Method_DataManager_GetMasterData_UserServantCollectionMaster___);
+                            (const MethodInfo_30E7C58 *)Method_DataManager_GetMasterData_UserServantCollectionMaster___);
       if ( !NetworkManager_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
-      if ( !byte_4C31812 )
+      if ( !byte_4C3CD62 )
       {
-        sub_1C32C20(&NetworkManager_TypeInfo);
-        byte_4C31812 = 1;
+        sub_1C37058(&NetworkManager_TypeInfo);
+        byte_4C3CD62 = 1;
       }
       FixedServantPositionSvtIdList = (__int64)NetworkManager_TypeInfo;
       if ( !NetworkManager_TypeInfo->_2.cctor_finished )
@@ -4529,12 +4529,12 @@ LABEL_28:
       if ( v9 >= *(unsigned int *)(v8 + 24) )
         goto LABEL_42;
       i->klass = (CGThumbnailListItem_c *)FixedServantPositionSvtIdList;
-      sub_1C32BC4(i, FixedServantPositionSvtIdList, v16, v17);
+      sub_1C36FFC(i, FixedServantPositionSvtIdList, v16, v17);
       if ( v10 == ++v9 )
         return (System_String_array *)v8;
     }
 LABEL_41:
-    sub_1C32E7C(FixedServantPositionSvtIdList);
+    sub_1C372B4(FixedServantPositionSvtIdList);
   }
   return (System_String_array *)v8;
 }
@@ -4554,11 +4554,11 @@ System_Collections_Generic_List_Restriction_RangeType__o *QuestRestrictionInfo__
   if ( !slotInfos )
     goto LABEL_7;
   if ( (unsigned int)(pos - 1) >= LODWORD(slotInfos->max_length) )
-    sub_1C32E84(this);
+    sub_1C372BC(this);
   v4 = slotInfos->m_Items[pos - 1];
   if ( !v4 )
 LABEL_7:
-    sub_1C32E7C(this);
+    sub_1C372B4(this);
   return v4->fields.rangeTypeList;
 }
 
@@ -4586,15 +4586,15 @@ System_String_o *QuestRestrictionInfo__GetRestrictedName(
   System_String_o *v20; // [xsp+8h] [xbp-68h]
 
   v4 = this;
-  if ( (byte_4C38D49 & 1) == 0 )
+  if ( (byte_4C44342 & 1) == 0 )
   {
-    sub_1C32C20(&Method_System_Collections_Generic_Dictionary_int__RestrictionSlotEntity____get_Item__);
-    sub_1C32C20(&Method_System_Collections_Generic_List_RestrictionEntity__Find__);
-    sub_1C32C20(&System_Predicate_RestrictionEntity__TypeInfo);
-    sub_1C32C20(&Method_QuestRestrictionInfo___c__DisplayClass190_0__GetRestrictedName_b__0__);
-    sub_1C32C20(&QuestRestrictionInfo___c__DisplayClass190_0_TypeInfo);
-    this = (QuestRestrictionInfo_o *)sub_1C32C20(&StringLiteral_1/*""*/);
-    byte_4C38D49 = 1;
+    sub_1C37058(&Method_System_Collections_Generic_Dictionary_int__RestrictionSlotEntity____get_Item__);
+    sub_1C37058(&Method_System_Collections_Generic_List_RestrictionEntity__Find__);
+    sub_1C37058(&System_Predicate_RestrictionEntity__TypeInfo);
+    sub_1C37058(&Method_QuestRestrictionInfo___c__DisplayClass190_0__GetRestrictedName_b__0__);
+    sub_1C37058(&QuestRestrictionInfo___c__DisplayClass190_0_TypeInfo);
+    this = (QuestRestrictionInfo_o *)sub_1C37058(&StringLiteral_1/*""*/);
+    byte_4C44342 = 1;
   }
   v20 = (System_String_o *)StringLiteral_1/*""*/;
   if ( v4->fields.restrictionBaseEntity )
@@ -4605,7 +4605,7 @@ System_String_o *QuestRestrictionInfo__GetRestrictedName(
       this = (QuestRestrictionInfo_o *)System_Collections_Generic_Dictionary_int__object___get_Item(
                                          (System_Collections_Generic_Dictionary_int__object__o *)this,
                                          pos,
-                                         (const MethodInfo_33EFC7C *)Method_System_Collections_Generic_Dictionary_int__RestrictionSlotEntity____get_Item__);
+                                         (const MethodInfo_33FA4E4 *)Method_System_Collections_Generic_Dictionary_int__RestrictionSlotEntity____get_Item__);
       if ( this )
       {
         dialogMessageInfoDictionary = (int)this->fields.dialogMessageInfoDictionary;
@@ -4632,7 +4632,7 @@ System_String_o *QuestRestrictionInfo__GetRestrictedName(
       }
     }
 LABEL_29:
-    sub_1C32E7C(this);
+    sub_1C372B4(this);
   }
   questRestrictionEntityList = v4->fields.questRestrictionEntityList;
   if ( !questRestrictionEntityList )
@@ -4642,7 +4642,7 @@ LABEL_29:
     v10 = 0;
     while ( 1 )
     {
-      v11 = sub_1C32E6C(QuestRestrictionInfo___c__DisplayClass190_0_TypeInfo);
+      v11 = sub_1C372A4(QuestRestrictionInfo___c__DisplayClass190_0_TypeInfo);
       QuestRestrictionInfo___c__DisplayClass190_0___ctor((QuestRestrictionInfo___c__DisplayClass190_0_o *)v11, 0);
       if ( v10 >= LODWORD(questRestrictionEntityList->max_length) )
         break;
@@ -4651,9 +4651,9 @@ LABEL_29:
       v14 = questRestrictionEntityList->m_Items[v10];
       *(_QWORD *)(v11 + 16) = v14;
       v15 = v11 + 16;
-      sub_1C32BC4((CGThumbnailListItem_o *)(v11 + 16), (int32_t)v14, v12, v13);
+      sub_1C36FFC((CGThumbnailListItem_o *)(v11 + 16), (int32_t)v14, v12, v13);
       myServantOrNpcRestrictionEntityList = (System_Collections_Generic_List_object__o *)v4->fields.myServantOrNpcRestrictionEntityList;
-      v17 = (System_Predicate_object__o *)sub_1C32E6C(System_Predicate_RestrictionEntity__TypeInfo);
+      v17 = (System_Predicate_object__o *)sub_1C372A4(System_Predicate_RestrictionEntity__TypeInfo);
       System_Predicate_object____ctor(
         v17,
         (Il2CppObject *)v11,
@@ -4664,7 +4664,7 @@ LABEL_29:
       this = (QuestRestrictionInfo_o *)System_Collections_Generic_List_object___Find(
                                          myServantOrNpcRestrictionEntityList,
                                          (System_Predicate_T__o *)v17,
-                                         (const MethodInfo_3798E24 *)Method_System_Collections_Generic_List_RestrictionEntity__Find__);
+                                         (const MethodInfo_37A368C *)Method_System_Collections_Generic_List_RestrictionEntity__Find__);
       if ( this )
       {
         deckSvtIdList = this->fields.deckSvtIdList;
@@ -4683,7 +4683,7 @@ LABEL_29:
         return v20;
     }
 LABEL_30:
-    sub_1C32E84(this);
+    sub_1C372BC(this);
   }
   return v20;
 }
@@ -4713,17 +4713,17 @@ System_String_o *QuestRestrictionInfo__GetRestrictionMessage(
   QuestRestrictionInfo_SlotInfo_o *v20; // x8
 
   v4 = this;
-  if ( (byte_4C38D25 & 1) == 0 )
+  if ( (byte_4C4431E & 1) == 0 )
   {
-    sub_1C32C20(&Method_System_Linq_Enumerable_Prepend_string___);
-    sub_1C32C20(&Method_System_Linq_Enumerable_Select_RestrictionEntity__string___);
-    sub_1C32C20(&System_Func_RestrictionEntity__string__TypeInfo);
-    sub_1C32C20(&LocalizationManager_TypeInfo);
-    sub_1C32C20(&Method_QuestRestrictionInfo___c__GetRestrictionMessage_b__110_0__);
-    sub_1C32C20(&QuestRestrictionInfo___c_TypeInfo);
-    sub_1C32C20(&StringLiteral_43/*"\n"*/);
-    this = (QuestRestrictionInfo_o *)sub_1C32C20(&StringLiteral_10264/*"PARTY_ORGANIZATION_QUEST_RESTRICTION_WARNING"*/);
-    byte_4C38D25 = 1;
+    sub_1C37058(&Method_System_Linq_Enumerable_Prepend_string___);
+    sub_1C37058(&Method_System_Linq_Enumerable_Select_RestrictionEntity__string___);
+    sub_1C37058(&System_Func_RestrictionEntity__string__TypeInfo);
+    sub_1C37058(&LocalizationManager_TypeInfo);
+    sub_1C37058(&Method_QuestRestrictionInfo___c__GetRestrictionMessage_b__110_0__);
+    sub_1C37058(&QuestRestrictionInfo___c_TypeInfo);
+    sub_1C37058(&StringLiteral_43/*"\n"*/);
+    this = (QuestRestrictionInfo_o *)sub_1C37058(&StringLiteral_10265/*"PARTY_ORGANIZATION_QUEST_RESTRICTION_WARNING"*/);
+    byte_4C4431E = 1;
   }
   if ( v4->fields.restrictionBaseEntity )
   {
@@ -4742,23 +4742,23 @@ System_String_o *QuestRestrictionInfo__GetRestrictionMessage(
         return v4->fields.restrictionMessage;
       if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-      this = (QuestRestrictionInfo_o *)LocalizationManager__Get((System_String_o *)StringLiteral_10264/*"PARTY_ORGANIZATION_QUEST_RESTRICTION_WARNING"*/, 0);
+      this = (QuestRestrictionInfo_o *)LocalizationManager__Get((System_String_o *)StringLiteral_10265/*"PARTY_ORGANIZATION_QUEST_RESTRICTION_WARNING"*/, 0);
       v19 = v4->fields.slotInfos;
       if ( !v19 )
         goto LABEL_25;
       if ( (unsigned int)v6 >= LODWORD(v19->max_length) )
 LABEL_26:
-        sub_1C32E84(this);
+        sub_1C372BC(this);
       v20 = v19->m_Items[v6];
       if ( v20 )
-        return System_String__Concat_63556792(
+        return System_String__Concat_63599904(
                  (System_String_o *)this,
                  (System_String_o *)StringLiteral_43/*"\n"*/,
                  v20->fields.summary,
                  0);
     }
 LABEL_25:
-    sub_1C32E7C(this);
+    sub_1C372B4(this);
   }
   RestrictionMessageEntityList = QuestRestrictionInfo__GetRestrictionMessageEntityList(
                                    v4,
@@ -4778,7 +4778,7 @@ LABEL_25:
       v10 = QuestRestrictionInfo___c_TypeInfo;
     }
     v12 = (Il2CppObject *)v10->static_fields->__9;
-    _9__110_0 = (System_Func_object__object__o *)sub_1C32E6C(System_Func_RestrictionEntity__string__TypeInfo);
+    _9__110_0 = (System_Func_object__object__o *)sub_1C372A4(System_Func_RestrictionEntity__string__TypeInfo);
     System_Func_object__object____ctor(
       _9__110_0,
       v12,
@@ -4786,20 +4786,20 @@ LABEL_25:
       0);
     static_fields = QuestRestrictionInfo___c_TypeInfo->static_fields;
     static_fields->__9__110_0 = (struct System_Func_RestrictionEntity__string__o *)_9__110_0;
-    sub_1C32BC4((CGThumbnailListItem_o *)&static_fields->__9__110_0, (int32_t)_9__110_0, v14, v15);
+    sub_1C36FFC((CGThumbnailListItem_o *)&static_fields->__9__110_0, (int32_t)_9__110_0, v14, v15);
   }
   v16 = (System_Collections_Generic_IEnumerable_TSource__o *)System_Linq_Enumerable__Select_object__object_(
                                                                (System_Collections_Generic_IEnumerable_TSource__o *)RestrictionMessageEntityList,
                                                                (System_Func_TSource__TResult__o *)_9__110_0,
-                                                               (const MethodInfo_3113ABC *)Method_System_Linq_Enumerable_Select_RestrictionEntity__string___);
+                                                               (const MethodInfo_311E324 *)Method_System_Linq_Enumerable_Select_RestrictionEntity__string___);
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-  v17 = (Il2CppObject *)LocalizationManager__Get((System_String_o *)StringLiteral_10264/*"PARTY_ORGANIZATION_QUEST_RESTRICTION_WARNING"*/, 0);
+  v17 = (Il2CppObject *)LocalizationManager__Get((System_String_o *)StringLiteral_10265/*"PARTY_ORGANIZATION_QUEST_RESTRICTION_WARNING"*/, 0);
   v18 = (System_Collections_Generic_IEnumerable_string__o *)System_Linq_Enumerable__Prepend_object_(
                                                               v16,
                                                               v17,
-                                                              (const MethodInfo_310D350 *)Method_System_Linq_Enumerable_Prepend_string___);
-  return System_String__Join_63561120((System_String_o *)StringLiteral_43/*"\n"*/, v18, 0);
+                                                              (const MethodInfo_3117BB8 *)Method_System_Linq_Enumerable_Prepend_string___);
+  return System_String__Join_63604232((System_String_o *)StringLiteral_43/*"\n"*/, v18, 0);
 }
 
 
@@ -4815,13 +4815,13 @@ System_Collections_Generic_IEnumerable_RestrictionEntity__o *QuestRestrictionInf
   int32_t v8; // w2
   const MethodInfo *v9; // x3
 
-  if ( (byte_4C38D26 & 1) == 0 )
+  if ( (byte_4C4431F & 1) == 0 )
   {
-    sub_1C32C20(&Method_System_Linq_Enumerable_Where_RestrictionEntity___);
-    sub_1C32C20(&System_Func_RestrictionEntity__bool__TypeInfo);
-    sub_1C32C20(&Method_QuestRestrictionInfo___c__GetRestrictionMessageEntityList_b__111_0__);
-    sub_1C32C20(&QuestRestrictionInfo___c_TypeInfo);
-    byte_4C38D26 = 1;
+    sub_1C37058(&Method_System_Linq_Enumerable_Where_RestrictionEntity___);
+    sub_1C37058(&System_Func_RestrictionEntity__bool__TypeInfo);
+    sub_1C37058(&Method_QuestRestrictionInfo___c__GetRestrictionMessageEntityList_b__111_0__);
+    sub_1C37058(&QuestRestrictionInfo___c_TypeInfo);
+    byte_4C4431F = 1;
   }
   v3 = QuestRestrictionInfo___c_TypeInfo;
   restrictionEntityList = (System_Collections_Generic_IEnumerable_TSource__o *)this->fields.restrictionEntityList;
@@ -4839,7 +4839,7 @@ System_Collections_Generic_IEnumerable_RestrictionEntity__o *QuestRestrictionInf
       v3 = QuestRestrictionInfo___c_TypeInfo;
     }
     v6 = (Il2CppObject *)v3->static_fields->__9;
-    _9__111_0 = (System_Func_object__bool__o *)sub_1C32E6C(System_Func_RestrictionEntity__bool__TypeInfo);
+    _9__111_0 = (System_Func_object__bool__o *)sub_1C372A4(System_Func_RestrictionEntity__bool__TypeInfo);
     System_Func_object__bool____ctor(
       _9__111_0,
       v6,
@@ -4847,12 +4847,12 @@ System_Collections_Generic_IEnumerable_RestrictionEntity__o *QuestRestrictionInf
       0);
     static_fields = QuestRestrictionInfo___c_TypeInfo->static_fields;
     static_fields->__9__111_0 = (struct System_Func_RestrictionEntity__bool__o *)_9__111_0;
-    sub_1C32BC4((CGThumbnailListItem_o *)&static_fields->__9__111_0, (int32_t)_9__111_0, v8, v9);
+    sub_1C36FFC((CGThumbnailListItem_o *)&static_fields->__9__111_0, (int32_t)_9__111_0, v8, v9);
   }
   return (System_Collections_Generic_IEnumerable_RestrictionEntity__o *)System_Linq_Enumerable__Where_object_(
                                                                           restrictionEntityList,
                                                                           (System_Func_TSource__bool__o *)_9__111_0,
-                                                                          (const MethodInfo_3123BA8 *)Method_System_Linq_Enumerable_Where_RestrictionEntity___);
+                                                                          (const MethodInfo_312E410 *)Method_System_Linq_Enumerable_Where_RestrictionEntity___);
 }
 
 
@@ -4866,34 +4866,34 @@ System_Int32_array *QuestRestrictionInfo__GetServantIndividuality(
   Il2CppObject *Instance; // x0
   int32_t ServantImageLimitSealAfter; // w21
 
-  if ( (byte_4C38D1F & 1) == 0 )
+  if ( (byte_4C44318 & 1) == 0 )
   {
-    sub_1C32C20(&Method_DataManager_GetMasterData_ServantLimitImageMaster___);
-    sub_1C32C20(&Method_DataManager_GetMasterData_ServantMaster___);
-    sub_1C32C20(&Method_DataMasterBase_ServantMaster__ServantEntity__int__GetEntity__);
-    sub_1C32C20(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-    byte_4C38D1F = 1;
+    sub_1C37058(&Method_DataManager_GetMasterData_ServantLimitImageMaster___);
+    sub_1C37058(&Method_DataManager_GetMasterData_ServantMaster___);
+    sub_1C37058(&Method_DataMasterBase_ServantMaster__ServantEntity__int__GetEntity__);
+    sub_1C37058(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    byte_4C44318 = 1;
   }
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39E2904 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39ED16C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance
     || (Instance = DataManager__GetMasterData_object_(
                      (DataManager_o *)Instance,
-                     (const MethodInfo_30DD3F0 *)Method_DataManager_GetMasterData_ServantLimitImageMaster___)) == 0
+                     (const MethodInfo_30E7C58 *)Method_DataManager_GetMasterData_ServantLimitImageMaster___)) == 0
     || (ServantImageLimitSealAfter = ServantLimitImageMaster__GetServantImageLimitSealAfter(
                                        (ServantLimitImageMaster_o *)Instance,
                                        svtId,
                                        dispLimitCount,
                                        0),
-        (Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39E2904 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__)) == 0)
+        (Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39ED16C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__)) == 0)
     || (Instance = DataManager__GetMasterData_object_(
                      (DataManager_o *)Instance,
-                     (const MethodInfo_30DD3F0 *)Method_DataManager_GetMasterData_ServantMaster___)) == 0
+                     (const MethodInfo_30E7C58 *)Method_DataManager_GetMasterData_ServantMaster___)) == 0
     || (Instance = DataMasterBase_object__object__int___GetEntity(
                      (DataMasterBase_TMaster__TEntity__PKType__o *)Instance,
                      svtId,
-                     (const MethodInfo_3396838 *)Method_DataMasterBase_ServantMaster__ServantEntity__int__GetEntity__)) == 0 )
+                     (const MethodInfo_33A10A0 *)Method_DataMasterBase_ServantMaster__ServantEntity__int__GetEntity__)) == 0 )
   {
-    sub_1C32E7C(Instance);
+    sub_1C372B4(Instance);
   }
   return ServantEntity__getIndividuality((ServantEntity_o *)Instance, limitCount, ServantImageLimitSealAfter, 0);
 }
@@ -4912,10 +4912,10 @@ int32_t QuestRestrictionInfo__GetServantNumRangeType(QuestRestrictionInfo_o *thi
   int32_t servantNumMax; // w19
   BalanceConfig_c *v7; // x0
 
-  if ( (byte_4C38D3D & 1) == 0 )
+  if ( (byte_4C44336 & 1) == 0 )
   {
-    sub_1C32C20(&BalanceConfig_TypeInfo);
-    byte_4C38D3D = 1;
+    sub_1C37058(&BalanceConfig_TypeInfo);
+    byte_4C44336 = 1;
   }
   if ( this->fields.servantNumMax < 1 )
     return 0;
@@ -4945,7 +4945,7 @@ int32_t QuestRestrictionInfo__GetServantNumRangeType(QuestRestrictionInfo_o *thi
   {
     servantNumRestrictionEntity = this->fields.servantNumRestrictionEntity;
     if ( !servantNumRestrictionEntity )
-      sub_1C32E7C(0);
+      sub_1C372B4(0);
     return servantNumRestrictionEntity->fields.rangeType;
   }
 }
@@ -4984,14 +4984,14 @@ System_String_o *QuestRestrictionInfo__GetServantNumRestrictionDialogMessage(
   Il2CppObject *entity; // [xsp+8h] [xbp-58h] BYREF
 
   v3 = this;
-  if ( (byte_4C38D3F & 1) == 0 )
+  if ( (byte_4C44338 & 1) == 0 )
   {
-    sub_1C32C20(&Method_DataManager_GetMaster_RestrictionMessageMaster___);
-    sub_1C32C20(&DataManager_TypeInfo);
-    sub_1C32C20(&Method_DataMasterBase_RestrictionMessageMaster__RestrictionMessageEntity__int__TryGetEntity__);
-    sub_1C32C20(&Method_System_Collections_Generic_Dictionary_int__RestrictionSlotEntity____get_Item__);
-    this = (QuestRestrictionInfo_o *)sub_1C32C20(&StringLiteral_1/*""*/);
-    byte_4C38D3F = 1;
+    sub_1C37058(&Method_DataManager_GetMaster_RestrictionMessageMaster___);
+    sub_1C37058(&DataManager_TypeInfo);
+    sub_1C37058(&Method_DataMasterBase_RestrictionMessageMaster__RestrictionMessageEntity__int__TryGetEntity__);
+    sub_1C37058(&Method_System_Collections_Generic_Dictionary_int__RestrictionSlotEntity____get_Item__);
+    this = (QuestRestrictionInfo_o *)sub_1C37058(&StringLiteral_1/*""*/);
+    byte_4C44338 = 1;
   }
   v22 = 0;
   entity = 0;
@@ -5033,7 +5033,7 @@ LABEL_46:
       }
     }
 LABEL_52:
-    sub_1C32E84(this);
+    sub_1C372BC(this);
   }
   restrictionWholeEntities = v3->fields.restrictionWholeEntities;
   if ( !restrictionWholeEntities )
@@ -5053,7 +5053,7 @@ LABEL_16:
       this = (QuestRestrictionInfo_o *)System_Collections_Generic_Dictionary_int__object___get_Item(
                                          (System_Collections_Generic_Dictionary_int__object__o *)this,
                                          v8,
-                                         (const MethodInfo_33EFC7C *)Method_System_Collections_Generic_Dictionary_int__RestrictionSlotEntity____get_Item__);
+                                         (const MethodInfo_33FA4E4 *)Method_System_Collections_Generic_Dictionary_int__RestrictionSlotEntity____get_Item__);
       if ( !this )
         goto LABEL_51;
       dialogMessageInfoDictionary = (int)this->fields.dialogMessageInfoDictionary;
@@ -5076,14 +5076,14 @@ LABEL_31:
       {
         if ( !DataManager_TypeInfo->_2.cctor_finished )
           j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-        this = (QuestRestrictionInfo_o *)DataManager__GetMaster_object_((const MethodInfo_30DD39C *)Method_DataManager_GetMaster_RestrictionMessageMaster___);
+        this = (QuestRestrictionInfo_o *)DataManager__GetMaster_object_((const MethodInfo_30E7C04 *)Method_DataManager_GetMaster_RestrictionMessageMaster___);
         if ( !this )
           goto LABEL_51;
         this = (QuestRestrictionInfo_o *)DataMasterBase_object__object__int___TryGetEntity(
                                            (DataMasterBase_TMaster__TEntity__PKType__o *)this,
                                            &v22,
                                            *(_DWORD *)(v12 + 44),
-                                           (const MethodInfo_3396884 *)Method_DataMasterBase_RestrictionMessageMaster__RestrictionMessageEntity__int__TryGetEntity__);
+                                           (const MethodInfo_33A10EC *)Method_DataMasterBase_RestrictionMessageMaster__RestrictionMessageEntity__int__TryGetEntity__);
         if ( ((unsigned __int8)this & 1) != 0 )
           break;
       }
@@ -5095,7 +5095,7 @@ LABEL_31:
     if ( v22 )
       return (System_String_o *)v20[1].monitor;
 LABEL_51:
-    sub_1C32E7C(this);
+    sub_1C372B4(this);
   }
   v6 = 0;
   while ( 1 )
@@ -5109,14 +5109,14 @@ LABEL_51:
     {
       if ( !DataManager_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-      this = (QuestRestrictionInfo_o *)DataManager__GetMaster_object_((const MethodInfo_30DD39C *)Method_DataManager_GetMaster_RestrictionMessageMaster___);
+      this = (QuestRestrictionInfo_o *)DataManager__GetMaster_object_((const MethodInfo_30E7C04 *)Method_DataManager_GetMaster_RestrictionMessageMaster___);
       if ( !this )
         goto LABEL_51;
       this = (QuestRestrictionInfo_o *)DataMasterBase_object__object__int___TryGetEntity(
                                          (DataMasterBase_TMaster__TEntity__PKType__o *)this,
                                          &entity,
                                          v7->fields.restrictionMessageId,
-                                         (const MethodInfo_3396884 *)Method_DataMasterBase_RestrictionMessageMaster__RestrictionMessageEntity__int__TryGetEntity__);
+                                         (const MethodInfo_33A10EC *)Method_DataMasterBase_RestrictionMessageMaster__RestrictionMessageEntity__int__TryGetEntity__);
       if ( ((unsigned __int8)this & 1) != 0 )
         break;
     }
@@ -5150,14 +5150,14 @@ System_String_o *QuestRestrictionInfo__GetServantNumRestrictionMessage(
   int32_t v16; // [xsp+8h] [xbp-28h] BYREF
   int32_t v17; // [xsp+Ch] [xbp-24h] BYREF
 
-  if ( (byte_4C38D3E & 1) == 0 )
+  if ( (byte_4C44337 & 1) == 0 )
   {
-    sub_1C32C20(&BalanceConfig_TypeInfo);
-    sub_1C32C20(&int_TypeInfo);
-    sub_1C32C20(&LocalizationManager_TypeInfo);
-    sub_1C32C20(&StringLiteral_10309/*"PARTY_ORGANIZATION_SERVANT_QUEST_RESTRICTION_SERVANT_NUM_FREE"*/);
-    sub_1C32C20(&StringLiteral_10308/*"PARTY_ORGANIZATION_SERVANT_QUEST_RESTRICTION_SERVANT_NUM_FIXED"*/);
-    byte_4C38D3E = 1;
+    sub_1C37058(&BalanceConfig_TypeInfo);
+    sub_1C37058(&int_TypeInfo);
+    sub_1C37058(&LocalizationManager_TypeInfo);
+    sub_1C37058(&StringLiteral_10310/*"PARTY_ORGANIZATION_SERVANT_QUEST_RESTRICTION_SERVANT_NUM_FREE"*/);
+    sub_1C37058(&StringLiteral_10309/*"PARTY_ORGANIZATION_SERVANT_QUEST_RESTRICTION_SERVANT_NUM_FIXED"*/);
+    byte_4C44337 = 1;
   }
   ServantNumRangeType = QuestRestrictionInfo__GetServantNumRangeType(this, method);
   if ( ServantNumRangeType == 5 )
@@ -5176,7 +5176,7 @@ System_String_o *QuestRestrictionInfo__GetServantNumRestrictionMessage(
 LABEL_17:
     if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-    v12 = LocalizationManager__Get((System_String_o *)StringLiteral_10309/*"PARTY_ORGANIZATION_SERVANT_QUEST_RESTRICTION_SERVANT_NUM_FREE"*/, 0);
+    v12 = LocalizationManager__Get((System_String_o *)StringLiteral_10310/*"PARTY_ORGANIZATION_SERVANT_QUEST_RESTRICTION_SERVANT_NUM_FREE"*/, 0);
     v13 = &v17;
     v17 = this->fields.servantNumMax;
   }
@@ -5185,7 +5185,7 @@ LABEL_17:
 LABEL_18:
     if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-    v12 = LocalizationManager__Get((System_String_o *)StringLiteral_10308/*"PARTY_ORGANIZATION_SERVANT_QUEST_RESTRICTION_SERVANT_NUM_FIXED"*/, 0);
+    v12 = LocalizationManager__Get((System_String_o *)StringLiteral_10309/*"PARTY_ORGANIZATION_SERVANT_QUEST_RESTRICTION_SERVANT_NUM_FIXED"*/, 0);
     v13 = &v16;
     v16 = this->fields.servantNumMax;
   }
@@ -5204,15 +5204,15 @@ System_String_o *QuestRestrictionInfo__GetSupportOnlyRestrictionMessage(
         QuestRestrictionInfo_o *this,
         const MethodInfo *method)
 {
-  if ( (byte_4C38D27 & 1) == 0 )
+  if ( (byte_4C44320 & 1) == 0 )
   {
-    sub_1C32C20(&LocalizationManager_TypeInfo);
-    sub_1C32C20(&StringLiteral_10310/*"PARTY_ORGANIZATION_SERVANT_QUEST_RESTRICTION_SUPPORT_ONLY"*/);
-    byte_4C38D27 = 1;
+    sub_1C37058(&LocalizationManager_TypeInfo);
+    sub_1C37058(&StringLiteral_10311/*"PARTY_ORGANIZATION_SERVANT_QUEST_RESTRICTION_SUPPORT_ONLY"*/);
+    byte_4C44320 = 1;
   }
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-  return LocalizationManager__Get((System_String_o *)StringLiteral_10310/*"PARTY_ORGANIZATION_SERVANT_QUEST_RESTRICTION_SUPPORT_ONLY"*/, 0);
+  return LocalizationManager__Get((System_String_o *)StringLiteral_10311/*"PARTY_ORGANIZATION_SERVANT_QUEST_RESTRICTION_SUPPORT_ONLY"*/, 0);
 }
 
 
@@ -5248,10 +5248,10 @@ System_String_o *QuestRestrictionInfo__GetTotalCostRestrictionMessage(
   Il2CppObject *v11; // x0
   int32_t TotalCost; // [xsp+Ch] [xbp-14h] BYREF
 
-  if ( (byte_4C38D36 & 1) == 0 )
+  if ( (byte_4C4432F & 1) == 0 )
   {
-    sub_1C32C20(&int_TypeInfo);
-    byte_4C38D36 = 1;
+    sub_1C37058(&int_TypeInfo);
+    byte_4C4432F = 1;
   }
   result = (System_String_o *)this->fields.totalCostRestrictionEntity;
   if ( result )
@@ -5277,25 +5277,25 @@ System_String_o *QuestRestrictionInfo__GetUniqueIndividualityRestrictionMessage(
   RestrictionWholeEntity_o *v8; // x11
 
   v4 = this;
-  if ( (byte_4C38D2D & 1) == 0 )
+  if ( (byte_4C44326 & 1) == 0 )
   {
-    sub_1C32C20(&LocalizationManager_TypeInfo);
-    sub_1C32C20(&StringLiteral_10312/*"PARTY_ORGANIZATION_SERVANT_QUEST_RESTRICTION_UNIQUE_INDIVIDUALITY"*/);
-    this = (QuestRestrictionInfo_o *)sub_1C32C20(&StringLiteral_1/*""*/);
-    byte_4C38D2D = 1;
+    sub_1C37058(&LocalizationManager_TypeInfo);
+    sub_1C37058(&StringLiteral_10313/*"PARTY_ORGANIZATION_SERVANT_QUEST_RESTRICTION_UNIQUE_INDIVIDUALITY"*/);
+    this = (QuestRestrictionInfo_o *)sub_1C37058(&StringLiteral_1/*""*/);
+    byte_4C44326 = 1;
   }
   if ( !v4->fields.restrictionBaseEntity || isFixMessage )
   {
     if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-    return LocalizationManager__Get((System_String_o *)StringLiteral_10312/*"PARTY_ORGANIZATION_SERVANT_QUEST_RESTRICTION_UNIQUE_INDIVIDUALITY"*/, 0);
+    return LocalizationManager__Get((System_String_o *)StringLiteral_10313/*"PARTY_ORGANIZATION_SERVANT_QUEST_RESTRICTION_UNIQUE_INDIVIDUALITY"*/, 0);
   }
   else
   {
     restrictionWholeEntities = v4->fields.restrictionWholeEntities;
     if ( !restrictionWholeEntities )
 LABEL_18:
-      sub_1C32E7C(this);
+      sub_1C372B4(this);
     max_length = restrictionWholeEntities->max_length;
     if ( max_length < 1 )
     {
@@ -5307,7 +5307,7 @@ LABEL_18:
       while ( 1 )
       {
         if ( max_length == v7 )
-          sub_1C32E84(this);
+          sub_1C372BC(this);
         v8 = restrictionWholeEntities->m_Items[v7];
         if ( !v8 )
           goto LABEL_18;
@@ -5325,15 +5325,15 @@ System_String_o *QuestRestrictionInfo__GetUniqueServantRestrictionMessage(
         QuestRestrictionInfo_o *this,
         const MethodInfo *method)
 {
-  if ( (byte_4C38D2C & 1) == 0 )
+  if ( (byte_4C44325 & 1) == 0 )
   {
-    sub_1C32C20(&LocalizationManager_TypeInfo);
-    sub_1C32C20(&StringLiteral_10311/*"PARTY_ORGANIZATION_SERVANT_QUEST_RESTRICTION_UNIEQU_SERVANT"*/);
-    byte_4C38D2C = 1;
+    sub_1C37058(&LocalizationManager_TypeInfo);
+    sub_1C37058(&StringLiteral_10312/*"PARTY_ORGANIZATION_SERVANT_QUEST_RESTRICTION_UNIEQU_SERVANT"*/);
+    byte_4C44325 = 1;
   }
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-  return LocalizationManager__Get((System_String_o *)StringLiteral_10311/*"PARTY_ORGANIZATION_SERVANT_QUEST_RESTRICTION_UNIEQU_SERVANT"*/, 0);
+  return LocalizationManager__Get((System_String_o *)StringLiteral_10312/*"PARTY_ORGANIZATION_SERVANT_QUEST_RESTRICTION_UNIEQU_SERVANT"*/, 0);
 }
 
 
@@ -5382,23 +5382,23 @@ bool QuestRestrictionInfo__IsClassRestriction(
   System_Collections_Generic_IEnumerable_TSource__o *v30; // x20
   System_Func_object__bool__o *v31; // x21
 
-  if ( (byte_4C38D20 & 1) == 0 )
+  if ( (byte_4C44319 & 1) == 0 )
   {
-    sub_1C32C20(&Method_System_Linq_Enumerable_Any_RestrictionEntity___);
-    sub_1C32C20(&Method_System_Linq_Enumerable_Where_RestrictionEntity___);
-    sub_1C32C20(&System_Func_RestrictionEntity__bool__TypeInfo);
-    sub_1C32C20(&Method_QuestRestrictionInfo___c__IsClassRestriction_b__102_0__);
-    sub_1C32C20(&Method_QuestRestrictionInfo___c__IsClassRestriction_b__102_1__);
-    sub_1C32C20(&Method_QuestRestrictionInfo___c__IsClassRestriction_b__102_2__);
-    sub_1C32C20(&Method_QuestRestrictionInfo___c__DisplayClass102_0__IsClassRestriction_b__3__);
-    sub_1C32C20(&QuestRestrictionInfo___c__DisplayClass102_0_TypeInfo);
-    sub_1C32C20(&QuestRestrictionInfo___c_TypeInfo);
-    byte_4C38D20 = 1;
+    sub_1C37058(&Method_System_Linq_Enumerable_Any_RestrictionEntity___);
+    sub_1C37058(&Method_System_Linq_Enumerable_Where_RestrictionEntity___);
+    sub_1C37058(&System_Func_RestrictionEntity__bool__TypeInfo);
+    sub_1C37058(&Method_QuestRestrictionInfo___c__IsClassRestriction_b__102_0__);
+    sub_1C37058(&Method_QuestRestrictionInfo___c__IsClassRestriction_b__102_1__);
+    sub_1C37058(&Method_QuestRestrictionInfo___c__IsClassRestriction_b__102_2__);
+    sub_1C37058(&Method_QuestRestrictionInfo___c__DisplayClass102_0__IsClassRestriction_b__3__);
+    sub_1C37058(&QuestRestrictionInfo___c__DisplayClass102_0_TypeInfo);
+    sub_1C37058(&QuestRestrictionInfo___c_TypeInfo);
+    byte_4C44319 = 1;
   }
-  v5 = (QuestRestrictionInfo___c__DisplayClass102_0_o *)sub_1C32E6C(QuestRestrictionInfo___c__DisplayClass102_0_TypeInfo);
+  v5 = (QuestRestrictionInfo___c__DisplayClass102_0_o *)sub_1C372A4(QuestRestrictionInfo___c__DisplayClass102_0_TypeInfo);
   QuestRestrictionInfo___c__DisplayClass102_0___ctor(v5, 0);
   if ( !v5 )
-    sub_1C32E7C(v6);
+    sub_1C372B4(v6);
   v5->fields.individuality = individuality;
   restrictionEntityList = (System_Collections_Generic_IEnumerable_TSource__o *)this->fields.restrictionEntityList;
   v8 = QuestRestrictionInfo___c_TypeInfo;
@@ -5416,16 +5416,16 @@ bool QuestRestrictionInfo__IsClassRestriction(
       v8 = QuestRestrictionInfo___c_TypeInfo;
     }
     v10 = (Il2CppObject *)v8->static_fields->__9;
-    _9__102_0 = (System_Func_object__bool__o *)sub_1C32E6C(System_Func_RestrictionEntity__bool__TypeInfo);
+    _9__102_0 = (System_Func_object__bool__o *)sub_1C372A4(System_Func_RestrictionEntity__bool__TypeInfo);
     System_Func_object__bool____ctor(_9__102_0, v10, Method_QuestRestrictionInfo___c__IsClassRestriction_b__102_0__, 0);
     static_fields = QuestRestrictionInfo___c_TypeInfo->static_fields;
     static_fields->__9__102_0 = (struct System_Func_RestrictionEntity__bool__o *)_9__102_0;
-    sub_1C32BC4((CGThumbnailListItem_o *)&static_fields->__9__102_0, (int32_t)_9__102_0, v12, v13);
+    sub_1C36FFC((CGThumbnailListItem_o *)&static_fields->__9__102_0, (int32_t)_9__102_0, v12, v13);
   }
   v14 = System_Linq_Enumerable__Where_object_(
           restrictionEntityList,
           (System_Func_TSource__bool__o *)_9__102_0,
-          (const MethodInfo_3123BA8 *)Method_System_Linq_Enumerable_Where_RestrictionEntity___);
+          (const MethodInfo_312E410 *)Method_System_Linq_Enumerable_Where_RestrictionEntity___);
   v15 = QuestRestrictionInfo___c_TypeInfo;
   v16 = v14;
   if ( !QuestRestrictionInfo___c_TypeInfo->_2.cctor_finished )
@@ -5442,16 +5442,16 @@ bool QuestRestrictionInfo__IsClassRestriction(
       v15 = QuestRestrictionInfo___c_TypeInfo;
     }
     v18 = (Il2CppObject *)v15->static_fields->__9;
-    _9__102_1 = (System_Func_object__bool__o *)sub_1C32E6C(System_Func_RestrictionEntity__bool__TypeInfo);
+    _9__102_1 = (System_Func_object__bool__o *)sub_1C372A4(System_Func_RestrictionEntity__bool__TypeInfo);
     System_Func_object__bool____ctor(_9__102_1, v18, Method_QuestRestrictionInfo___c__IsClassRestriction_b__102_1__, 0);
     v19 = QuestRestrictionInfo___c_TypeInfo->static_fields;
     v19->__9__102_1 = (struct System_Func_RestrictionEntity__bool__o *)_9__102_1;
-    sub_1C32BC4((CGThumbnailListItem_o *)&v19->__9__102_1, (int32_t)_9__102_1, v20, v21);
+    sub_1C36FFC((CGThumbnailListItem_o *)&v19->__9__102_1, (int32_t)_9__102_1, v20, v21);
   }
   v22 = System_Linq_Enumerable__Where_object_(
           v16,
           (System_Func_TSource__bool__o *)_9__102_1,
-          (const MethodInfo_3123BA8 *)Method_System_Linq_Enumerable_Where_RestrictionEntity___);
+          (const MethodInfo_312E410 *)Method_System_Linq_Enumerable_Where_RestrictionEntity___);
   v23 = QuestRestrictionInfo___c_TypeInfo;
   v24 = v22;
   if ( !QuestRestrictionInfo___c_TypeInfo->_2.cctor_finished )
@@ -5468,26 +5468,26 @@ bool QuestRestrictionInfo__IsClassRestriction(
       v23 = QuestRestrictionInfo___c_TypeInfo;
     }
     v26 = (Il2CppObject *)v23->static_fields->__9;
-    _9__102_2 = (System_Func_object__bool__o *)sub_1C32E6C(System_Func_RestrictionEntity__bool__TypeInfo);
+    _9__102_2 = (System_Func_object__bool__o *)sub_1C372A4(System_Func_RestrictionEntity__bool__TypeInfo);
     System_Func_object__bool____ctor(_9__102_2, v26, Method_QuestRestrictionInfo___c__IsClassRestriction_b__102_2__, 0);
     v27 = QuestRestrictionInfo___c_TypeInfo->static_fields;
     v27->__9__102_2 = (struct System_Func_RestrictionEntity__bool__o *)_9__102_2;
-    sub_1C32BC4((CGThumbnailListItem_o *)&v27->__9__102_2, (int32_t)_9__102_2, v28, v29);
+    sub_1C36FFC((CGThumbnailListItem_o *)&v27->__9__102_2, (int32_t)_9__102_2, v28, v29);
   }
   v30 = System_Linq_Enumerable__Where_object_(
           v24,
           (System_Func_TSource__bool__o *)_9__102_2,
-          (const MethodInfo_3123BA8 *)Method_System_Linq_Enumerable_Where_RestrictionEntity___);
-  v31 = (System_Func_object__bool__o *)sub_1C32E6C(System_Func_RestrictionEntity__bool__TypeInfo);
+          (const MethodInfo_312E410 *)Method_System_Linq_Enumerable_Where_RestrictionEntity___);
+  v31 = (System_Func_object__bool__o *)sub_1C372A4(System_Func_RestrictionEntity__bool__TypeInfo);
   System_Func_object__bool____ctor(
     v31,
     (Il2CppObject *)v5,
     Method_QuestRestrictionInfo___c__DisplayClass102_0__IsClassRestriction_b__3__,
     0);
-  return System_Linq_Enumerable__Any_object__51293756(
+  return System_Linq_Enumerable__Any_object__51336868(
            v30,
            (System_Func_TSource__bool__o *)v31,
-           (const MethodInfo_30EAE3C *)Method_System_Linq_Enumerable_Any_RestrictionEntity___);
+           (const MethodInfo_30F56A4 *)Method_System_Linq_Enumerable_Any_RestrictionEntity___);
 }
 
 
@@ -5544,11 +5544,11 @@ bool QuestRestrictionInfo__IsEditablePos(QuestRestrictionInfo_o *this, int32_t i
   if ( !slotInfos )
     goto LABEL_7;
   if ( (unsigned int)(initPos - 1) >= LODWORD(slotInfos->max_length) )
-    sub_1C32E84(this);
+    sub_1C372BC(this);
   v4 = slotInfos->m_Items[initPos - 1];
   if ( !v4 )
 LABEL_7:
-    sub_1C32E7C(this);
+    sub_1C372B4(this);
   return v4->fields.isMoved;
 }
 
@@ -5561,7 +5561,7 @@ bool QuestRestrictionInfo__IsEmpty(QuestRestrictionInfo_o *this, const MethodInf
     return 0;
   restrictionEntityList = this->fields.restrictionEntityList;
   if ( !restrictionEntityList )
-    sub_1C32E7C(this);
+    sub_1C372B4(this);
   return LODWORD(restrictionEntityList->max_length) == 0;
 }
 
@@ -5606,7 +5606,7 @@ bool QuestRestrictionInfo__IsFirstServantNum(QuestRestrictionInfo_o *this, const
     while ( 1 )
     {
       if ( v4 >= max_length )
-        sub_1C32E84(this);
+        sub_1C372BC(this);
       v9 = restrictionEntityList->m_Items[v4];
       if ( !v9 )
         break;
@@ -5628,7 +5628,7 @@ bool QuestRestrictionInfo__IsFirstServantNum(QuestRestrictionInfo_o *this, const
         return v7 != 0 && v7 > v8;
     }
 LABEL_18:
-    sub_1C32E7C(this);
+    sub_1C372B4(this);
   }
   v8 = 0;
   v7 = 0;
@@ -5675,25 +5675,25 @@ bool QuestRestrictionInfo__IsFixedSupportPositionIndividuality(QuestRestrictionI
   System_Collections_Generic_List_Enumerator_object__o v8; // [xsp+8h] [xbp-68h] BYREF
   System_Collections_Generic_List_Enumerator_object__o i; // [xsp+20h] [xbp-50h] BYREF
 
-  if ( (byte_4C38D52 & 1) == 0 )
+  if ( (byte_4C4434B & 1) == 0 )
   {
-    sub_1C32C20(&Method_System_Collections_Generic_List_Enumerator_int____Dispose__);
-    sub_1C32C20(&Method_System_Collections_Generic_List_Enumerator_int____MoveNext__);
-    sub_1C32C20(&Method_System_Collections_Generic_List_Enumerator_int____get_Current__);
-    sub_1C32C20(&Method_System_Collections_Generic_List_int__AddRange__);
-    sub_1C32C20(&Method_System_Collections_Generic_List_int____GetEnumerator__);
-    sub_1C32C20(&Method_System_Collections_Generic_List_int___ctor__);
-    sub_1C32C20(&Method_System_Collections_Generic_List_int__get_Count__);
-    sub_1C32C20(&System_Collections_Generic_List_int__TypeInfo);
-    byte_4C38D52 = 1;
+    sub_1C37058(&Method_System_Collections_Generic_List_Enumerator_int____Dispose__);
+    sub_1C37058(&Method_System_Collections_Generic_List_Enumerator_int____MoveNext__);
+    sub_1C37058(&Method_System_Collections_Generic_List_Enumerator_int____get_Current__);
+    sub_1C37058(&Method_System_Collections_Generic_List_int__AddRange__);
+    sub_1C37058(&Method_System_Collections_Generic_List_int____GetEnumerator__);
+    sub_1C37058(&Method_System_Collections_Generic_List_int___ctor__);
+    sub_1C37058(&Method_System_Collections_Generic_List_int__get_Count__);
+    sub_1C37058(&System_Collections_Generic_List_int__TypeInfo);
+    byte_4C4434B = 1;
   }
   memset(&i, 0, sizeof(i));
   if ( !this->fields.isFixedSupportPosition && !this->fields.isFixedNpcPosition || !this->fields.restrictionBaseEntity )
     return 0;
-  v3 = (System_Collections_Generic_List_int__o *)sub_1C32E6C(System_Collections_Generic_List_int__TypeInfo);
+  v3 = (System_Collections_Generic_List_int__o *)sub_1C372A4(System_Collections_Generic_List_int__TypeInfo);
   System_Collections_Generic_List_int____ctor(
     v3,
-    (const MethodInfo_377AF44 *)Method_System_Collections_Generic_List_int___ctor__);
+    (const MethodInfo_37857AC *)Method_System_Collections_Generic_List_int___ctor__);
   if ( this->fields.isFixedSupportPosition )
   {
     fixedSupportIndividualitiesList = this->fields.fixedSupportIndividualitiesList;
@@ -5702,21 +5702,21 @@ bool QuestRestrictionInfo__IsFixedSupportPositionIndividuality(QuestRestrictionI
     System_Collections_Generic_List_object___GetEnumerator(
       (System_Collections_Generic_List_Enumerator_T__o *)&v8,
       (System_Collections_Generic_List_object__o *)fixedSupportIndividualitiesList,
-      (const MethodInfo_37992B4 *)Method_System_Collections_Generic_List_int____GetEnumerator__);
+      (const MethodInfo_37A3B1C *)Method_System_Collections_Generic_List_int____GetEnumerator__);
     for ( i = v8;
           ;
           System_Collections_Generic_List_int___AddRange(
             v3,
             (System_Collections_Generic_IEnumerable_T__o *)i.fields._current,
-            (const MethodInfo_377B9A4 *)Method_System_Collections_Generic_List_int__AddRange__) )
+            (const MethodInfo_378620C *)Method_System_Collections_Generic_List_int__AddRange__) )
     {
       v5 = System_Collections_Generic_List_Enumerator_object___MoveNext(
              &i,
-             (const MethodInfo_3522FA8 *)Method_System_Collections_Generic_List_Enumerator_int____MoveNext__);
+             (const MethodInfo_352D810 *)Method_System_Collections_Generic_List_Enumerator_int____MoveNext__);
       if ( !v5 )
         break;
       if ( !v3 )
-        sub_1C32E7C(v5);
+        sub_1C372B4(v5);
     }
   }
   else
@@ -5727,34 +5727,34 @@ bool QuestRestrictionInfo__IsFixedSupportPositionIndividuality(QuestRestrictionI
     System_Collections_Generic_List_object___GetEnumerator(
       (System_Collections_Generic_List_Enumerator_T__o *)&v8,
       (System_Collections_Generic_List_object__o *)fixedSupportIndividualitiesList,
-      (const MethodInfo_37992B4 *)Method_System_Collections_Generic_List_int____GetEnumerator__);
+      (const MethodInfo_37A3B1C *)Method_System_Collections_Generic_List_int____GetEnumerator__);
     for ( i = v8;
           ;
           System_Collections_Generic_List_int___AddRange(
             v3,
             (System_Collections_Generic_IEnumerable_T__o *)i.fields._current,
-            (const MethodInfo_377B9A4 *)Method_System_Collections_Generic_List_int__AddRange__) )
+            (const MethodInfo_378620C *)Method_System_Collections_Generic_List_int__AddRange__) )
     {
       v7 = System_Collections_Generic_List_Enumerator_object___MoveNext(
              &i,
-             (const MethodInfo_3522FA8 *)Method_System_Collections_Generic_List_Enumerator_int____MoveNext__);
+             (const MethodInfo_352D810 *)Method_System_Collections_Generic_List_Enumerator_int____MoveNext__);
       if ( !v7 )
         break;
       if ( !v3 )
-        sub_1C32E7C(v7);
+        sub_1C372B4(v7);
     }
   }
   System_Collections_Generic_List_Enumerator_object___Dispose(
     &i,
-    (const MethodInfo_3522FA4 *)Method_System_Collections_Generic_List_Enumerator_int____Dispose__);
+    (const MethodInfo_352D80C *)Method_System_Collections_Generic_List_Enumerator_int____Dispose__);
   if ( !v3 )
 LABEL_23:
-    sub_1C32E7C(fixedSupportIndividualitiesList);
+    sub_1C372B4(fixedSupportIndividualitiesList);
   return v3->fields._size > 0;
 }
 
 
-bool QuestRestrictionInfo__IsFixedSupportPosition_43327472(
+bool QuestRestrictionInfo__IsFixedSupportPosition_43429340(
         QuestRestrictionInfo_o *this,
         int32_t num,
         ServantLeaderInfo_o *servantInfo,
@@ -5778,25 +5778,25 @@ bool QuestRestrictionInfo__IsFixedSupportPosition_43327472(
   CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o v22; // 0:x0.16
 
   v6 = this;
-  if ( (byte_4C38D2E & 1) == 0 )
+  if ( (byte_4C44327 & 1) == 0 )
   {
-    sub_1C32C20(&Method_DataManager_GetMaster_ServantMaster___);
-    sub_1C32C20(&DataManager_TypeInfo);
-    sub_1C32C20(&Method_DataMasterBase_ServantMaster__ServantEntity__int__GetEntity__);
-    sub_1C32C20(&Method_System_Collections_Generic_List_Enumerator_int__Dispose__);
-    sub_1C32C20(&Method_System_Collections_Generic_List_Enumerator_int____Dispose__);
-    sub_1C32C20(&Method_System_Collections_Generic_List_Enumerator_int____MoveNext__);
-    sub_1C32C20(&Method_System_Collections_Generic_List_Enumerator_int__MoveNext__);
-    sub_1C32C20(&Method_System_Collections_Generic_List_Enumerator_int____get_Current__);
-    sub_1C32C20(&Method_System_Collections_Generic_List_Enumerator_int__get_Current__);
-    sub_1C32C20(&Method_System_Collections_Generic_List_int__AddRange__);
-    sub_1C32C20(&Method_System_Collections_Generic_List_int____GetEnumerator__);
-    sub_1C32C20(&Method_System_Collections_Generic_List_int__GetEnumerator__);
-    sub_1C32C20(&Method_System_Collections_Generic_List_int___ctor__);
-    sub_1C32C20(&Method_System_Collections_Generic_List_int__get_Count__);
-    sub_1C32C20(&System_Collections_Generic_List_int__TypeInfo);
-    this = (QuestRestrictionInfo_o *)sub_1C32C20(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
-    byte_4C38D2E = 1;
+    sub_1C37058(&Method_DataManager_GetMaster_ServantMaster___);
+    sub_1C37058(&DataManager_TypeInfo);
+    sub_1C37058(&Method_DataMasterBase_ServantMaster__ServantEntity__int__GetEntity__);
+    sub_1C37058(&Method_System_Collections_Generic_List_Enumerator_int__Dispose__);
+    sub_1C37058(&Method_System_Collections_Generic_List_Enumerator_int____Dispose__);
+    sub_1C37058(&Method_System_Collections_Generic_List_Enumerator_int____MoveNext__);
+    sub_1C37058(&Method_System_Collections_Generic_List_Enumerator_int__MoveNext__);
+    sub_1C37058(&Method_System_Collections_Generic_List_Enumerator_int____get_Current__);
+    sub_1C37058(&Method_System_Collections_Generic_List_Enumerator_int__get_Current__);
+    sub_1C37058(&Method_System_Collections_Generic_List_int__AddRange__);
+    sub_1C37058(&Method_System_Collections_Generic_List_int____GetEnumerator__);
+    sub_1C37058(&Method_System_Collections_Generic_List_int__GetEnumerator__);
+    sub_1C37058(&Method_System_Collections_Generic_List_int___ctor__);
+    sub_1C37058(&Method_System_Collections_Generic_List_int__get_Count__);
+    sub_1C37058(&System_Collections_Generic_List_int__TypeInfo);
+    this = (QuestRestrictionInfo_o *)sub_1C37058(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
+    byte_4C44327 = 1;
   }
   memset(&i, 0, sizeof(i));
   memset(&v20, 0, sizeof(v20));
@@ -5817,10 +5817,10 @@ bool QuestRestrictionInfo__IsFixedSupportPosition_43327472(
 LABEL_9:
   if ( !v6->fields.restrictionBaseEntity )
     goto LABEL_36;
-  v7 = (System_Collections_Generic_List_int__o *)sub_1C32E6C(System_Collections_Generic_List_int__TypeInfo);
+  v7 = (System_Collections_Generic_List_int__o *)sub_1C372A4(System_Collections_Generic_List_int__TypeInfo);
   System_Collections_Generic_List_int____ctor(
     v7,
-    (const MethodInfo_377AF44 *)Method_System_Collections_Generic_List_int___ctor__);
+    (const MethodInfo_37857AC *)Method_System_Collections_Generic_List_int___ctor__);
   if ( v6->fields.isFixedSupportPosition )
   {
     this = (QuestRestrictionInfo_o *)v6->fields.fixedSupportIndividualitiesList;
@@ -5829,21 +5829,21 @@ LABEL_9:
     System_Collections_Generic_List_object___GetEnumerator(
       (System_Collections_Generic_List_Enumerator_T__o *)&v19,
       (System_Collections_Generic_List_object__o *)this,
-      (const MethodInfo_37992B4 *)Method_System_Collections_Generic_List_int____GetEnumerator__);
+      (const MethodInfo_37A3B1C *)Method_System_Collections_Generic_List_int____GetEnumerator__);
     for ( i = v19;
           ;
           System_Collections_Generic_List_int___AddRange(
             v7,
             (System_Collections_Generic_IEnumerable_T__o *)i.fields._current,
-            (const MethodInfo_377B9A4 *)Method_System_Collections_Generic_List_int__AddRange__) )
+            (const MethodInfo_378620C *)Method_System_Collections_Generic_List_int__AddRange__) )
     {
       v8 = System_Collections_Generic_List_Enumerator_object___MoveNext(
              &i,
-             (const MethodInfo_3522FA8 *)Method_System_Collections_Generic_List_Enumerator_int____MoveNext__);
+             (const MethodInfo_352D810 *)Method_System_Collections_Generic_List_Enumerator_int____MoveNext__);
       if ( !v8 )
         break;
       if ( !v7 )
-        sub_1C32E7C(v8);
+        sub_1C372B4(v8);
     }
   }
   else
@@ -5854,33 +5854,33 @@ LABEL_9:
     System_Collections_Generic_List_object___GetEnumerator(
       (System_Collections_Generic_List_Enumerator_T__o *)&v19,
       (System_Collections_Generic_List_object__o *)this,
-      (const MethodInfo_37992B4 *)Method_System_Collections_Generic_List_int____GetEnumerator__);
+      (const MethodInfo_37A3B1C *)Method_System_Collections_Generic_List_int____GetEnumerator__);
     for ( i = v19;
           ;
           System_Collections_Generic_List_int___AddRange(
             v7,
             (System_Collections_Generic_IEnumerable_T__o *)i.fields._current,
-            (const MethodInfo_377B9A4 *)Method_System_Collections_Generic_List_int__AddRange__) )
+            (const MethodInfo_378620C *)Method_System_Collections_Generic_List_int__AddRange__) )
     {
       v10 = System_Collections_Generic_List_Enumerator_object___MoveNext(
               &i,
-              (const MethodInfo_3522FA8 *)Method_System_Collections_Generic_List_Enumerator_int____MoveNext__);
+              (const MethodInfo_352D810 *)Method_System_Collections_Generic_List_Enumerator_int____MoveNext__);
       if ( !v10 )
         break;
       if ( !v7 )
-        sub_1C32E7C(v10);
+        sub_1C372B4(v10);
     }
   }
   System_Collections_Generic_List_Enumerator_object___Dispose(
     &i,
-    (const MethodInfo_3522FA4 *)Method_System_Collections_Generic_List_Enumerator_int____Dispose__);
+    (const MethodInfo_352D80C *)Method_System_Collections_Generic_List_Enumerator_int____Dispose__);
   if ( !v7 )
     goto LABEL_42;
   if ( v7->fields._size < 1 )
     goto LABEL_36;
   if ( !DataManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-  this = (QuestRestrictionInfo_o *)DataManager__GetMaster_object_((const MethodInfo_30DD39C *)Method_DataManager_GetMaster_ServantMaster___);
+  this = (QuestRestrictionInfo_o *)DataManager__GetMaster_object_((const MethodInfo_30E7C04 *)Method_DataManager_GetMaster_ServantMaster___);
   if ( !servantInfo )
     goto LABEL_42;
   v11 = (DataMasterBase_TMaster__TEntity__PKType__o *)this;
@@ -5890,46 +5890,46 @@ LABEL_9:
     j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
   *(_QWORD *)&v22.fields.currentCryptoKey = v13;
   *(_QWORD *)&v22.fields.fakeValue = v12;
-  this = (QuestRestrictionInfo_o *)CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_48887784(v22, 0);
+  this = (QuestRestrictionInfo_o *)CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_48930896(v22, 0);
   if ( !v11 )
     goto LABEL_42;
   Entity = DataMasterBase_object__object__int___GetEntity(
              v11,
              (int32_t)this,
-             (const MethodInfo_3396838 *)Method_DataMasterBase_ServantMaster__ServantEntity__int__GetEntity__);
+             (const MethodInfo_33A10A0 *)Method_DataMasterBase_ServantMaster__ServantEntity__int__GetEntity__);
   System_Collections_Generic_List_int___GetEnumerator(
     (System_Collections_Generic_List_Enumerator_T__o *)&v19,
     v7,
-    (const MethodInfo_377C26C *)Method_System_Collections_Generic_List_int__GetEnumerator__);
+    (const MethodInfo_3786AD4 *)Method_System_Collections_Generic_List_int__GetEnumerator__);
   v20 = v19;
   do
   {
     if ( !System_Collections_Generic_List_Enumerator_int___MoveNext(
             (System_Collections_Generic_List_Enumerator_int__o *)&v20,
-            (const MethodInfo_351F190 *)Method_System_Collections_Generic_List_Enumerator_int__MoveNext__) )
+            (const MethodInfo_35299F8 *)Method_System_Collections_Generic_List_Enumerator_int__MoveNext__) )
     {
       System_Collections_Generic_List_Enumerator_int___Dispose(
         (System_Collections_Generic_List_Enumerator_int__o *)&v20,
-        (const MethodInfo_351F18C *)Method_System_Collections_Generic_List_Enumerator_int__Dispose__);
+        (const MethodInfo_35299F4 *)Method_System_Collections_Generic_List_Enumerator_int__Dispose__);
       return 1;
     }
     current = (int32_t)v20.fields._current;
     limitCount = servantInfo->fields.limitCount;
     DispLimitCount = ServantLeaderInfo__getDispLimitCount(servantInfo, 0);
     if ( !Entity )
-      sub_1C32E7C(DispLimitCount);
+      sub_1C372B4(DispLimitCount);
   }
   while ( !ServantEntity__IsIndividuality((ServantEntity_o *)Entity, limitCount, DispLimitCount, current, 0) );
   System_Collections_Generic_List_Enumerator_int___Dispose(
     (System_Collections_Generic_List_Enumerator_int__o *)&v20,
-    (const MethodInfo_351F18C *)Method_System_Collections_Generic_List_Enumerator_int__Dispose__);
+    (const MethodInfo_35299F4 *)Method_System_Collections_Generic_List_Enumerator_int__Dispose__);
 LABEL_36:
   supportPositionList = v6->fields.supportPositionList;
   if ( !supportPositionList )
 LABEL_42:
-    sub_1C32E7C(this);
+    sub_1C372B4(this);
   if ( LODWORD(supportPositionList->max_length) <= num )
-    sub_1C32E84(this);
+    sub_1C372BC(this);
   return !supportPositionList->m_Items[num];
 }
 
@@ -5958,7 +5958,7 @@ bool QuestRestrictionInfo__IsMyServantOrNpcRestriction(QuestRestrictionInfo_o *t
 }
 
 
-bool QuestRestrictionInfo__IsMyServantOrNpcRestriction_43340352(
+bool QuestRestrictionInfo__IsMyServantOrNpcRestriction_43442220(
         QuestRestrictionInfo_o *this,
         int32_t pos,
         const MethodInfo *method)
@@ -5970,15 +5970,15 @@ bool QuestRestrictionInfo__IsMyServantOrNpcRestriction_43340352(
   System_Collections_Generic_List_object__o *myServantOrNpcRestrictionEntityList; // x19
   System_Predicate_object__o *v11; // x20
 
-  if ( (byte_4C38D44 & 1) == 0 )
+  if ( (byte_4C4433D & 1) == 0 )
   {
-    sub_1C32C20(&Method_System_Collections_Generic_List_RestrictionEntity__Exists__);
-    sub_1C32C20(&System_Predicate_RestrictionEntity__TypeInfo);
-    sub_1C32C20(&Method_QuestRestrictionInfo___c__DisplayClass185_0__IsMyServantOrNpcRestriction_b__0__);
-    sub_1C32C20(&QuestRestrictionInfo___c__DisplayClass185_0_TypeInfo);
-    byte_4C38D44 = 1;
+    sub_1C37058(&Method_System_Collections_Generic_List_RestrictionEntity__Exists__);
+    sub_1C37058(&System_Predicate_RestrictionEntity__TypeInfo);
+    sub_1C37058(&Method_QuestRestrictionInfo___c__DisplayClass185_0__IsMyServantOrNpcRestriction_b__0__);
+    sub_1C37058(&QuestRestrictionInfo___c__DisplayClass185_0_TypeInfo);
+    byte_4C4433D = 1;
   }
-  v5 = (QuestRestrictionInfo___c__DisplayClass185_0_o *)sub_1C32E6C(QuestRestrictionInfo___c__DisplayClass185_0_TypeInfo);
+  v5 = (QuestRestrictionInfo___c__DisplayClass185_0_o *)sub_1C372A4(QuestRestrictionInfo___c__DisplayClass185_0_TypeInfo);
   QuestRestrictionInfo___c__DisplayClass185_0___ctor(v5, 0);
   if ( !v5 )
     goto LABEL_14;
@@ -5991,16 +5991,16 @@ bool QuestRestrictionInfo__IsMyServantOrNpcRestriction_43340352(
     if ( slotInfos )
     {
       if ( (unsigned int)(pos - 1) >= LODWORD(slotInfos->max_length) )
-        sub_1C32E84(v6);
+        sub_1C372BC(v6);
       v8 = slotInfos->m_Items[pos - 1];
       if ( v8 )
         return (unsigned int)(v8->fields.slotType - 3) < 2;
     }
 LABEL_14:
-    sub_1C32E7C(v6);
+    sub_1C372B4(v6);
   }
   myServantOrNpcRestrictionEntityList = (System_Collections_Generic_List_object__o *)this->fields.myServantOrNpcRestrictionEntityList;
-  v11 = (System_Predicate_object__o *)sub_1C32E6C(System_Predicate_RestrictionEntity__TypeInfo);
+  v11 = (System_Predicate_object__o *)sub_1C372A4(System_Predicate_RestrictionEntity__TypeInfo);
   System_Predicate_object____ctor(
     v11,
     (Il2CppObject *)v5,
@@ -6011,7 +6011,7 @@ LABEL_14:
   return System_Collections_Generic_List_object___Exists(
            myServantOrNpcRestrictionEntityList,
            (System_Predicate_T__o *)v11,
-           (const MethodInfo_3798DE8 *)Method_System_Collections_Generic_List_RestrictionEntity__Exists__);
+           (const MethodInfo_37A3650 *)Method_System_Collections_Generic_List_RestrictionEntity__Exists__);
 }
 
 
@@ -6034,21 +6034,21 @@ bool QuestRestrictionInfo__IsNotIndividuality(QuestRestrictionInfo_o *this, int3
   System_Predicate_object__o *v13; // x20
   __int64 v14; // x8
 
-  if ( (byte_4C38D46 & 1) == 0 )
+  if ( (byte_4C4433F & 1) == 0 )
   {
-    sub_1C32C20(&Method_System_Collections_Generic_Dictionary_int__RestrictionSlotDetailEntity____get_Item__);
-    sub_1C32C20(&Method_System_Collections_Generic_List_RestrictionEntity__Find__);
-    sub_1C32C20(&System_Predicate_RestrictionEntity__TypeInfo);
-    sub_1C32C20(&Method_QuestRestrictionInfo___c__DisplayClass187_0__IsNotIndividuality_b__0__);
-    sub_1C32C20(&QuestRestrictionInfo___c__DisplayClass187_0_TypeInfo);
-    byte_4C38D46 = 1;
+    sub_1C37058(&Method_System_Collections_Generic_Dictionary_int__RestrictionSlotDetailEntity____get_Item__);
+    sub_1C37058(&Method_System_Collections_Generic_List_RestrictionEntity__Find__);
+    sub_1C37058(&System_Predicate_RestrictionEntity__TypeInfo);
+    sub_1C37058(&Method_QuestRestrictionInfo___c__DisplayClass187_0__IsNotIndividuality_b__0__);
+    sub_1C37058(&QuestRestrictionInfo___c__DisplayClass187_0_TypeInfo);
+    byte_4C4433F = 1;
   }
-  v5 = (QuestRestrictionInfo___c__DisplayClass187_0_o *)sub_1C32E6C(QuestRestrictionInfo___c__DisplayClass187_0_TypeInfo);
+  v5 = (QuestRestrictionInfo___c__DisplayClass187_0_o *)sub_1C372A4(QuestRestrictionInfo___c__DisplayClass187_0_TypeInfo);
   QuestRestrictionInfo___c__DisplayClass187_0___ctor(v5, 0);
   if ( !v5 )
     goto LABEL_23;
   v5->fields.pos = pos;
-  if ( QuestRestrictionInfo__IsMyServantOrNpcRestriction_43340352(this, pos, v7) )
+  if ( QuestRestrictionInfo__IsMyServantOrNpcRestriction_43442220(this, pos, v7) )
   {
     if ( this->fields.restrictionBaseEntity )
     {
@@ -6058,7 +6058,7 @@ bool QuestRestrictionInfo__IsNotIndividuality(QuestRestrictionInfo_o *this, int3
       restrictionSlotDetailDictionary = System_Collections_Generic_Dictionary_int__object___get_Item(
                                           (System_Collections_Generic_Dictionary_int__object__o *)restrictionSlotDetailDictionary,
                                           v5->fields.pos,
-                                          (const MethodInfo_33EFC7C *)Method_System_Collections_Generic_Dictionary_int__RestrictionSlotDetailEntity____get_Item__);
+                                          (const MethodInfo_33FA4E4 *)Method_System_Collections_Generic_Dictionary_int__RestrictionSlotDetailEntity____get_Item__);
       if ( !restrictionSlotDetailDictionary )
         goto LABEL_23;
       v8 = *((_DWORD *)restrictionSlotDetailDictionary + 6);
@@ -6068,7 +6068,7 @@ bool QuestRestrictionInfo__IsNotIndividuality(QuestRestrictionInfo_o *this, int3
         while ( 1 )
         {
           if ( v8 == v9 )
-            sub_1C32E84(restrictionSlotDetailDictionary);
+            sub_1C372BC(restrictionSlotDetailDictionary);
           v10 = *((_QWORD *)restrictionSlotDetailDictionary + v9 + 4);
           if ( !v10 )
             break;
@@ -6085,7 +6085,7 @@ bool QuestRestrictionInfo__IsNotIndividuality(QuestRestrictionInfo_o *this, int3
             goto LABEL_16;
         }
 LABEL_23:
-        sub_1C32E7C(restrictionSlotDetailDictionary);
+        sub_1C372B4(restrictionSlotDetailDictionary);
       }
 LABEL_16:
       LOBYTE(restrictionSlotDetailDictionary) = 1;
@@ -6093,7 +6093,7 @@ LABEL_16:
     else
     {
       myServantOrNpcRestrictionEntityList = (System_Collections_Generic_List_object__o *)this->fields.myServantOrNpcRestrictionEntityList;
-      v13 = (System_Predicate_object__o *)sub_1C32E6C(System_Predicate_RestrictionEntity__TypeInfo);
+      v13 = (System_Predicate_object__o *)sub_1C372A4(System_Predicate_RestrictionEntity__TypeInfo);
       System_Predicate_object____ctor(
         v13,
         (Il2CppObject *)v5,
@@ -6104,7 +6104,7 @@ LABEL_16:
       restrictionSlotDetailDictionary = System_Collections_Generic_List_object___Find(
                                           myServantOrNpcRestrictionEntityList,
                                           (System_Predicate_T__o *)v13,
-                                          (const MethodInfo_3798E24 *)Method_System_Collections_Generic_List_RestrictionEntity__Find__);
+                                          (const MethodInfo_37A368C *)Method_System_Collections_Generic_List_RestrictionEntity__Find__);
       if ( restrictionSlotDetailDictionary )
       {
         v14 = *((_QWORD *)restrictionSlotDetailDictionary + 5);
@@ -6170,11 +6170,11 @@ bool QuestRestrictionInfo__IsPositionFixNpc(QuestRestrictionInfo_o *this, int32_
     if ( !slotInfos )
       goto LABEL_10;
     if ( (unsigned int)(initPos - 1) >= LODWORD(slotInfos->max_length) )
-      sub_1C32E84(this);
+      sub_1C372BC(this);
     v4 = slotInfos->m_Items[initPos - 1];
     if ( !v4 )
 LABEL_10:
-      sub_1C32E7C(this);
+      sub_1C372B4(this);
     return v4->fields.slotType == 1 && !QuestRestrictionInfo__IsEditablePos(this, initPos, method);
   }
   else
@@ -6200,13 +6200,13 @@ bool QuestRestrictionInfo__IsRestrictionIndividualitySlot(QuestRestrictionInfo_o
   int32_t v8; // w2
   const MethodInfo *v9; // x3
 
-  if ( (byte_4C38D1E & 1) == 0 )
+  if ( (byte_4C44317 & 1) == 0 )
   {
-    sub_1C32C20(&Method_BasicHelper_Any_QuestRestrictionInfo_SlotInfo___);
-    sub_1C32C20(&System_Func_QuestRestrictionInfo_SlotInfo__bool__TypeInfo);
-    sub_1C32C20(&Method_QuestRestrictionInfo___c__IsRestrictionIndividualitySlot_b__100_0__);
-    sub_1C32C20(&QuestRestrictionInfo___c_TypeInfo);
-    byte_4C38D1E = 1;
+    sub_1C37058(&Method_BasicHelper_Any_QuestRestrictionInfo_SlotInfo___);
+    sub_1C37058(&System_Func_QuestRestrictionInfo_SlotInfo__bool__TypeInfo);
+    sub_1C37058(&Method_QuestRestrictionInfo___c__IsRestrictionIndividualitySlot_b__100_0__);
+    sub_1C37058(&QuestRestrictionInfo___c_TypeInfo);
+    byte_4C44317 = 1;
   }
   if ( !this->fields.restrictionBaseEntity )
     return 0;
@@ -6226,7 +6226,7 @@ bool QuestRestrictionInfo__IsRestrictionIndividualitySlot(QuestRestrictionInfo_o
       v4 = QuestRestrictionInfo___c_TypeInfo;
     }
     v6 = (Il2CppObject *)v4->static_fields->__9;
-    _9__100_0 = (System_Func_object__bool__o *)sub_1C32E6C(System_Func_QuestRestrictionInfo_SlotInfo__bool__TypeInfo);
+    _9__100_0 = (System_Func_object__bool__o *)sub_1C372A4(System_Func_QuestRestrictionInfo_SlotInfo__bool__TypeInfo);
     System_Func_object__bool____ctor(
       _9__100_0,
       v6,
@@ -6234,12 +6234,12 @@ bool QuestRestrictionInfo__IsRestrictionIndividualitySlot(QuestRestrictionInfo_o
       0);
     static_fields = QuestRestrictionInfo___c_TypeInfo->static_fields;
     static_fields->__9__100_0 = (struct System_Func_QuestRestrictionInfo_SlotInfo__bool__o *)_9__100_0;
-    sub_1C32BC4((CGThumbnailListItem_o *)&static_fields->__9__100_0, (int32_t)_9__100_0, v8, v9);
+    sub_1C36FFC((CGThumbnailListItem_o *)&static_fields->__9__100_0, (int32_t)_9__100_0, v8, v9);
   }
-  return BasicHelper__Any_object__51144764(
+  return BasicHelper__Any_object__51187876(
            slotInfos,
            (System_Func_T__bool__o *)_9__100_0,
-           (const MethodInfo_30C683C *)Method_BasicHelper_Any_QuestRestrictionInfo_SlotInfo___);
+           (const MethodInfo_30D10A4 *)Method_BasicHelper_Any_QuestRestrictionInfo_SlotInfo___);
 }
 
 
@@ -6252,23 +6252,23 @@ bool QuestRestrictionInfo__IsRestrictionIndividualityWhole(QuestRestrictionInfo_
   struct QuestRestrictionInfo___c_StaticFields *static_fields; // x0
   int32_t v8; // w2
   const MethodInfo *v9; // x3
-  const MethodInfo_30C683C *v10; // x2
+  const MethodInfo_30D10A4 *v10; // x2
   QuestRestrictionInfo___c_c *v11; // x0
   Il2CppObject *v12; // x21
   struct QuestRestrictionInfo___c_StaticFields *v13; // x0
   int32_t v14; // w2
   const MethodInfo *v15; // x3
 
-  if ( (byte_4C38D1D & 1) == 0 )
+  if ( (byte_4C44316 & 1) == 0 )
   {
-    sub_1C32C20(&Method_BasicHelper_Any_RestrictionEntity___);
-    sub_1C32C20(&Method_BasicHelper_Any_RestrictionWholeEntity___);
-    sub_1C32C20(&System_Func_RestrictionEntity__bool__TypeInfo);
-    sub_1C32C20(&System_Func_RestrictionWholeEntity__bool__TypeInfo);
-    sub_1C32C20(&Method_QuestRestrictionInfo___c__IsRestrictionIndividualityWhole_b__99_0__);
-    sub_1C32C20(&Method_QuestRestrictionInfo___c__IsRestrictionIndividualityWhole_b__99_1__);
-    sub_1C32C20(&QuestRestrictionInfo___c_TypeInfo);
-    byte_4C38D1D = 1;
+    sub_1C37058(&Method_BasicHelper_Any_RestrictionEntity___);
+    sub_1C37058(&Method_BasicHelper_Any_RestrictionWholeEntity___);
+    sub_1C37058(&System_Func_RestrictionEntity__bool__TypeInfo);
+    sub_1C37058(&System_Func_RestrictionWholeEntity__bool__TypeInfo);
+    sub_1C37058(&Method_QuestRestrictionInfo___c__IsRestrictionIndividualityWhole_b__99_0__);
+    sub_1C37058(&Method_QuestRestrictionInfo___c__IsRestrictionIndividualityWhole_b__99_1__);
+    sub_1C37058(&QuestRestrictionInfo___c_TypeInfo);
+    byte_4C44316 = 1;
   }
   if ( this->fields.restrictionBaseEntity )
   {
@@ -6288,7 +6288,7 @@ bool QuestRestrictionInfo__IsRestrictionIndividualityWhole(QuestRestrictionInfo_
         v3 = QuestRestrictionInfo___c_TypeInfo;
       }
       v6 = (Il2CppObject *)v3->static_fields->__9;
-      _9__99_1 = (System_Func_object__bool__o *)sub_1C32E6C(System_Func_RestrictionWholeEntity__bool__TypeInfo);
+      _9__99_1 = (System_Func_object__bool__o *)sub_1C372A4(System_Func_RestrictionWholeEntity__bool__TypeInfo);
       System_Func_object__bool____ctor(
         _9__99_1,
         v6,
@@ -6296,9 +6296,9 @@ bool QuestRestrictionInfo__IsRestrictionIndividualityWhole(QuestRestrictionInfo_
         0);
       static_fields = QuestRestrictionInfo___c_TypeInfo->static_fields;
       static_fields->__9__99_1 = (struct System_Func_RestrictionWholeEntity__bool__o *)_9__99_1;
-      sub_1C32BC4((CGThumbnailListItem_o *)&static_fields->__9__99_1, (int32_t)_9__99_1, v8, v9);
+      sub_1C36FFC((CGThumbnailListItem_o *)&static_fields->__9__99_1, (int32_t)_9__99_1, v8, v9);
     }
-    v10 = (const MethodInfo_30C683C *)Method_BasicHelper_Any_RestrictionWholeEntity___;
+    v10 = (const MethodInfo_30D10A4 *)Method_BasicHelper_Any_RestrictionWholeEntity___;
   }
   else
   {
@@ -6318,7 +6318,7 @@ bool QuestRestrictionInfo__IsRestrictionIndividualityWhole(QuestRestrictionInfo_
         v11 = QuestRestrictionInfo___c_TypeInfo;
       }
       v12 = (Il2CppObject *)v11->static_fields->__9;
-      _9__99_1 = (System_Func_object__bool__o *)sub_1C32E6C(System_Func_RestrictionEntity__bool__TypeInfo);
+      _9__99_1 = (System_Func_object__bool__o *)sub_1C372A4(System_Func_RestrictionEntity__bool__TypeInfo);
       System_Func_object__bool____ctor(
         _9__99_1,
         v12,
@@ -6326,11 +6326,11 @@ bool QuestRestrictionInfo__IsRestrictionIndividualityWhole(QuestRestrictionInfo_
         0);
       v13 = QuestRestrictionInfo___c_TypeInfo->static_fields;
       v13->__9__99_0 = (struct System_Func_RestrictionEntity__bool__o *)_9__99_1;
-      sub_1C32BC4((CGThumbnailListItem_o *)&v13->__9__99_0, (int32_t)_9__99_1, v14, v15);
+      sub_1C36FFC((CGThumbnailListItem_o *)&v13->__9__99_0, (int32_t)_9__99_1, v14, v15);
     }
-    v10 = (const MethodInfo_30C683C *)Method_BasicHelper_Any_RestrictionEntity___;
+    v10 = (const MethodInfo_30D10A4 *)Method_BasicHelper_Any_RestrictionEntity___;
   }
-  return BasicHelper__Any_object__51144764(restrictionWholeEntities, (System_Func_T__bool__o *)_9__99_1, v10);
+  return BasicHelper__Any_object__51187876(restrictionWholeEntities, (System_Func_T__bool__o *)_9__99_1, v10);
 }
 
 
@@ -6365,33 +6365,33 @@ bool QuestRestrictionInfo__IsRestrictionServantIndividuality(
   struct System_Int32_array *targetVals; // x9
   System_Int32_array *Individuality; // x0
 
-  if ( (byte_4C38D47 & 1) == 0 )
+  if ( (byte_4C44340 & 1) == 0 )
   {
-    sub_1C32C20(&Method_DataManager_GetMasterData_ServantLimitImageMaster___);
-    sub_1C32C20(&Method_DataManager_GetMasterData_ServantMaster___);
-    sub_1C32C20(&Method_DataMasterBase_ServantMaster__ServantEntity__int__GetEntity__);
-    sub_1C32C20(&Method_System_Collections_Generic_Dictionary_int__RestrictionSlotEntity____get_Item__);
-    sub_1C32C20(&Method_System_Collections_Generic_Dictionary_int__RestrictionSlotDetailEntity____get_Item__);
-    sub_1C32C20(&Method_System_Collections_Generic_List_RestrictionEntity__Find__);
-    sub_1C32C20(&System_Predicate_RestrictionEntity__TypeInfo);
-    sub_1C32C20(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-    sub_1C32C20(&Method_QuestRestrictionInfo___c__DisplayClass188_0__IsRestrictionServantIndividuality_b__0__);
-    sub_1C32C20(&QuestRestrictionInfo___c__DisplayClass188_0_TypeInfo);
-    byte_4C38D47 = 1;
+    sub_1C37058(&Method_DataManager_GetMasterData_ServantLimitImageMaster___);
+    sub_1C37058(&Method_DataManager_GetMasterData_ServantMaster___);
+    sub_1C37058(&Method_DataMasterBase_ServantMaster__ServantEntity__int__GetEntity__);
+    sub_1C37058(&Method_System_Collections_Generic_Dictionary_int__RestrictionSlotEntity____get_Item__);
+    sub_1C37058(&Method_System_Collections_Generic_Dictionary_int__RestrictionSlotDetailEntity____get_Item__);
+    sub_1C37058(&Method_System_Collections_Generic_List_RestrictionEntity__Find__);
+    sub_1C37058(&System_Predicate_RestrictionEntity__TypeInfo);
+    sub_1C37058(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    sub_1C37058(&Method_QuestRestrictionInfo___c__DisplayClass188_0__IsRestrictionServantIndividuality_b__0__);
+    sub_1C37058(&QuestRestrictionInfo___c__DisplayClass188_0_TypeInfo);
+    byte_4C44340 = 1;
   }
-  v13 = (QuestRestrictionInfo___c__DisplayClass188_0_o *)sub_1C32E6C(QuestRestrictionInfo___c__DisplayClass188_0_TypeInfo);
+  v13 = (QuestRestrictionInfo___c__DisplayClass188_0_o *)sub_1C372A4(QuestRestrictionInfo___c__DisplayClass188_0_TypeInfo);
   QuestRestrictionInfo___c__DisplayClass188_0___ctor(v13, 0);
   if ( !v13 )
     goto LABEL_51;
   v13->fields.pos = pos;
-  if ( !QuestRestrictionInfo__IsMyServantOrNpcRestriction_43340352(this, pos, v15) )
+  if ( !QuestRestrictionInfo__IsMyServantOrNpcRestriction_43442220(this, pos, v15) )
     goto LABEL_49;
-  Instance = (DataManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39E2904 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = (DataManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39ED16C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance )
     goto LABEL_51;
   Instance = (DataManager_o *)DataManager__GetMasterData_object_(
                                 Instance,
-                                (const MethodInfo_30DD3F0 *)Method_DataManager_GetMasterData_ServantLimitImageMaster___);
+                                (const MethodInfo_30E7C58 *)Method_DataManager_GetMasterData_ServantLimitImageMaster___);
   if ( !Instance )
     goto LABEL_51;
   ServantImageLimitSealAfter = ServantLimitImageMaster__GetServantImageLimitSealAfter(
@@ -6399,18 +6399,18 @@ bool QuestRestrictionInfo__IsRestrictionServantIndividuality(
                                  svtId,
                                  dispLimitCount,
                                  0);
-  Instance = (DataManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39E2904 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = (DataManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39ED16C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance )
     goto LABEL_51;
   Instance = (DataManager_o *)DataManager__GetMasterData_object_(
                                 Instance,
-                                (const MethodInfo_30DD3F0 *)Method_DataManager_GetMasterData_ServantMaster___);
+                                (const MethodInfo_30E7C58 *)Method_DataManager_GetMasterData_ServantMaster___);
   if ( !Instance )
     goto LABEL_51;
   Entity = DataMasterBase_object__object__int___GetEntity(
              (DataMasterBase_TMaster__TEntity__PKType__o *)Instance,
              svtId,
-             (const MethodInfo_3396838 *)Method_DataMasterBase_ServantMaster__ServantEntity__int__GetEntity__);
+             (const MethodInfo_33A10A0 *)Method_DataMasterBase_ServantMaster__ServantEntity__int__GetEntity__);
   if ( this->fields.restrictionBaseEntity )
   {
     Instance = (DataManager_o *)this->fields.restrictionSlotDictionary;
@@ -6419,7 +6419,7 @@ bool QuestRestrictionInfo__IsRestrictionServantIndividuality(
       Instance = (DataManager_o *)System_Collections_Generic_Dictionary_int__object___get_Item(
                                     (System_Collections_Generic_Dictionary_int__object__o *)Instance,
                                     v13->fields.pos,
-                                    (const MethodInfo_33EFC7C *)Method_System_Collections_Generic_Dictionary_int__RestrictionSlotEntity____get_Item__);
+                                    (const MethodInfo_33FA4E4 *)Method_System_Collections_Generic_Dictionary_int__RestrictionSlotEntity____get_Item__);
       if ( Instance )
       {
         v18 = -1;
@@ -6463,7 +6463,7 @@ LABEL_30:
           Instance = (DataManager_o *)System_Collections_Generic_Dictionary_int__object___get_Item(
                                         (System_Collections_Generic_Dictionary_int__object__o *)Instance,
                                         v13->fields.pos,
-                                        (const MethodInfo_33EFC7C *)Method_System_Collections_Generic_Dictionary_int__RestrictionSlotDetailEntity____get_Item__);
+                                        (const MethodInfo_33FA4E4 *)Method_System_Collections_Generic_Dictionary_int__RestrictionSlotDetailEntity____get_Item__);
           if ( Instance )
           {
             v28 = Instance->fields.m_CancellationTokenSource;
@@ -6475,7 +6475,7 @@ LABEL_30:
               while ( 1 )
               {
                 if ( v30 >= (unsigned int)v28 )
-                  sub_1C32E84(Instance);
+                  sub_1C372BC(Instance);
                 v31 = (RestrictionSlotDetailEntity_o *)*((_QWORD *)&v29->fields._DispLog + v30);
                 if ( v18 < 0 )
                 {
@@ -6522,12 +6522,12 @@ LABEL_47:
       }
     }
 LABEL_51:
-    sub_1C32E7C(Instance);
+    sub_1C372B4(Instance);
   }
   if ( isChkSupport )
     goto LABEL_49;
   myServantOrNpcRestrictionEntityList = (System_Collections_Generic_List_object__o *)this->fields.myServantOrNpcRestrictionEntityList;
-  v23 = (System_Predicate_object__o *)sub_1C32E6C(System_Predicate_RestrictionEntity__TypeInfo);
+  v23 = (System_Predicate_object__o *)sub_1C372A4(System_Predicate_RestrictionEntity__TypeInfo);
   System_Predicate_object____ctor(
     v23,
     (Il2CppObject *)v13,
@@ -6538,7 +6538,7 @@ LABEL_51:
   Instance = (DataManager_o *)System_Collections_Generic_List_object___Find(
                                 myServantOrNpcRestrictionEntityList,
                                 (System_Predicate_T__o *)v23,
-                                (const MethodInfo_3798E24 *)Method_System_Collections_Generic_List_RestrictionEntity__Find__);
+                                (const MethodInfo_37A368C *)Method_System_Collections_Generic_List_RestrictionEntity__Find__);
   if ( !Instance )
     goto LABEL_49;
   datalist = Instance->fields.datalist;
@@ -6551,7 +6551,7 @@ LABEL_51:
     if ( !Entity )
       goto LABEL_51;
     v27 = ServantEntity__getIndividuality((ServantEntity_o *)Entity, limitCount, ServantImageLimitSealAfter, 0);
-    if ( RestrictionEntity__IsRestriction_42482652(v25, v27, 0) )
+    if ( RestrictionEntity__IsRestriction_42584520(v25, v27, 0) )
     {
       LOBYTE(max_length) = 1;
       return max_length;
@@ -6563,7 +6563,7 @@ LABEL_49:
 }
 
 
-bool QuestRestrictionInfo__IsRestrictionServantIndividuality_43343396(
+bool QuestRestrictionInfo__IsRestrictionServantIndividuality_43445264(
         QuestRestrictionInfo_o *this,
         System_Int32_array *individuality,
         int32_t pos,
@@ -6581,21 +6581,21 @@ bool QuestRestrictionInfo__IsRestrictionServantIndividuality_43343396(
   System_Predicate_object__o *v16; // x21
   __int64 v17; // x8
 
-  if ( (byte_4C38D48 & 1) == 0 )
+  if ( (byte_4C44341 & 1) == 0 )
   {
-    sub_1C32C20(&Method_System_Collections_Generic_Dictionary_int__RestrictionSlotDetailEntity____get_Item__);
-    sub_1C32C20(&Method_System_Collections_Generic_List_RestrictionEntity__Find__);
-    sub_1C32C20(&System_Predicate_RestrictionEntity__TypeInfo);
-    sub_1C32C20(&Method_QuestRestrictionInfo___c__DisplayClass189_0__IsRestrictionServantIndividuality_b__0__);
-    sub_1C32C20(&QuestRestrictionInfo___c__DisplayClass189_0_TypeInfo);
-    byte_4C38D48 = 1;
+    sub_1C37058(&Method_System_Collections_Generic_Dictionary_int__RestrictionSlotDetailEntity____get_Item__);
+    sub_1C37058(&Method_System_Collections_Generic_List_RestrictionEntity__Find__);
+    sub_1C37058(&System_Predicate_RestrictionEntity__TypeInfo);
+    sub_1C37058(&Method_QuestRestrictionInfo___c__DisplayClass189_0__IsRestrictionServantIndividuality_b__0__);
+    sub_1C37058(&QuestRestrictionInfo___c__DisplayClass189_0_TypeInfo);
+    byte_4C44341 = 1;
   }
-  v7 = (QuestRestrictionInfo___c__DisplayClass189_0_o *)sub_1C32E6C(QuestRestrictionInfo___c__DisplayClass189_0_TypeInfo);
+  v7 = (QuestRestrictionInfo___c__DisplayClass189_0_o *)sub_1C372A4(QuestRestrictionInfo___c__DisplayClass189_0_TypeInfo);
   QuestRestrictionInfo___c__DisplayClass189_0___ctor(v7, 0);
   if ( !v7 )
     goto LABEL_26;
   v7->fields.pos = pos;
-  if ( !QuestRestrictionInfo__IsMyServantOrNpcRestriction_43340352(this, pos, v9) )
+  if ( !QuestRestrictionInfo__IsMyServantOrNpcRestriction_43442220(this, pos, v9) )
     goto LABEL_24;
   if ( this->fields.restrictionBaseEntity )
   {
@@ -6605,7 +6605,7 @@ bool QuestRestrictionInfo__IsRestrictionServantIndividuality_43343396(
     restrictionSlotDetailDictionary = System_Collections_Generic_Dictionary_int__object___get_Item(
                                         (System_Collections_Generic_Dictionary_int__object__o *)restrictionSlotDetailDictionary,
                                         v7->fields.pos,
-                                        (const MethodInfo_33EFC7C *)Method_System_Collections_Generic_Dictionary_int__RestrictionSlotDetailEntity____get_Item__);
+                                        (const MethodInfo_33FA4E4 *)Method_System_Collections_Generic_Dictionary_int__RestrictionSlotDetailEntity____get_Item__);
     if ( !restrictionSlotDetailDictionary )
       goto LABEL_26;
     v10 = *((_DWORD *)restrictionSlotDetailDictionary + 6);
@@ -6617,7 +6617,7 @@ bool QuestRestrictionInfo__IsRestrictionServantIndividuality_43343396(
       while ( 1 )
       {
         if ( v12 >= v10 )
-          sub_1C32E84(restrictionSlotDetailDictionary);
+          sub_1C372BC(restrictionSlotDetailDictionary);
         restrictionSlotDetailDictionary = (void *)*((_QWORD *)v11 + (int)v12 + 4);
         if ( !restrictionSlotDetailDictionary )
           break;
@@ -6643,12 +6643,12 @@ bool QuestRestrictionInfo__IsRestrictionServantIndividuality_43343396(
           return v13 & 1;
       }
 LABEL_26:
-      sub_1C32E7C(restrictionSlotDetailDictionary);
+      sub_1C372B4(restrictionSlotDetailDictionary);
     }
     goto LABEL_24;
   }
   myServantOrNpcRestrictionEntityList = (System_Collections_Generic_List_object__o *)this->fields.myServantOrNpcRestrictionEntityList;
-  v16 = (System_Predicate_object__o *)sub_1C32E6C(System_Predicate_RestrictionEntity__TypeInfo);
+  v16 = (System_Predicate_object__o *)sub_1C372A4(System_Predicate_RestrictionEntity__TypeInfo);
   System_Predicate_object____ctor(
     v16,
     (Il2CppObject *)v7,
@@ -6659,7 +6659,7 @@ LABEL_26:
   restrictionSlotDetailDictionary = System_Collections_Generic_List_object___Find(
                                       myServantOrNpcRestrictionEntityList,
                                       (System_Predicate_T__o *)v16,
-                                      (const MethodInfo_3798E24 *)Method_System_Collections_Generic_List_RestrictionEntity__Find__);
+                                      (const MethodInfo_37A368C *)Method_System_Collections_Generic_List_RestrictionEntity__Find__);
   if ( !restrictionSlotDetailDictionary )
   {
 LABEL_24:
@@ -6671,7 +6671,7 @@ LABEL_24:
     goto LABEL_26;
   v13 = *(_QWORD *)(v17 + 24);
   if ( v13 )
-    return RestrictionEntity__IsRestriction_42482652(
+    return RestrictionEntity__IsRestriction_42584520(
              (RestrictionEntity_o *)restrictionSlotDetailDictionary,
              individuality,
              0);
@@ -6706,11 +6706,11 @@ bool QuestRestrictionInfo__IsRestrictionSlot(
                            limitCount,
                            dispLimitCount,
                            v12);
-  return QuestRestrictionInfo__IsRestrictionSlot_43320596(this, ServantIndividuality, initPos, v14);
+  return QuestRestrictionInfo__IsRestrictionSlot_43422464(this, ServantIndividuality, initPos, v14);
 }
 
 
-bool QuestRestrictionInfo__IsRestrictionSlot_43320596(
+bool QuestRestrictionInfo__IsRestrictionSlot_43422464(
         QuestRestrictionInfo_o *this,
         System_Int32_array *svtIndividuality,
         int32_t initPos,
@@ -6730,15 +6730,15 @@ bool QuestRestrictionInfo__IsRestrictionSlot_43320596(
   QuestRestrictionInfo_SlotInfo_o *v17; // x8
 
   v6 = this;
-  if ( (byte_4C38D23 & 1) == 0 )
+  if ( (byte_4C4431C & 1) == 0 )
   {
-    sub_1C32C20(&Method_System_Linq_Enumerable_Any_int___);
-    sub_1C32C20(&Method_System_Linq_Enumerable_Intersect_int___);
-    sub_1C32C20(&Method_System_Linq_Enumerable_ToArray_int___);
-    sub_1C32C20(&Method_System_Collections_Generic_List_int____get_Count__);
-    sub_1C32C20(&Method_System_Collections_Generic_List_int____get_Item__);
-    this = (QuestRestrictionInfo_o *)sub_1C32C20(&Method_System_Collections_Generic_List_Restriction_RangeType__get_Item__);
-    byte_4C38D23 = 1;
+    sub_1C37058(&Method_System_Linq_Enumerable_Any_int___);
+    sub_1C37058(&Method_System_Linq_Enumerable_Intersect_int___);
+    sub_1C37058(&Method_System_Linq_Enumerable_ToArray_int___);
+    sub_1C37058(&Method_System_Collections_Generic_List_int____get_Count__);
+    sub_1C37058(&Method_System_Collections_Generic_List_int____get_Item__);
+    this = (QuestRestrictionInfo_o *)sub_1C37058(&Method_System_Collections_Generic_List_Restriction_RangeType__get_Item__);
+    byte_4C4431C = 1;
   }
   v7 = initPos - 1;
   if ( initPos >= 1 )
@@ -6746,7 +6746,7 @@ bool QuestRestrictionInfo__IsRestrictionSlot_43320596(
     slotInfos = v6->fields.slotInfos;
     if ( !slotInfos )
 LABEL_27:
-      sub_1C32E7C(this);
+      sub_1C372B4(this);
     v9 = 0;
     v10 = 0;
     while ( v7 < LODWORD(slotInfos->max_length) )
@@ -6762,7 +6762,7 @@ LABEL_27:
       this = (QuestRestrictionInfo_o *)System_Collections_Generic_List_object___get_Item(
                                          (System_Collections_Generic_List_object__o *)this,
                                          v10,
-                                         (const MethodInfo_37984EC *)Method_System_Collections_Generic_List_int____get_Item__);
+                                         (const MethodInfo_37A2D54 *)Method_System_Collections_Generic_List_int____get_Item__);
       if ( !this )
         goto LABEL_27;
       if ( this->fields.dialogMessageInfoDictionary )
@@ -6770,10 +6770,10 @@ LABEL_27:
         v12 = System_Linq_Enumerable__Intersect_int_(
                 (System_Collections_Generic_IEnumerable_TSource__o *)this,
                 (System_Collections_Generic_IEnumerable_TSource__o *)svtIndividuality,
-                (const MethodInfo_3107AA0 *)Method_System_Linq_Enumerable_Intersect_int___);
+                (const MethodInfo_3112308 *)Method_System_Linq_Enumerable_Intersect_int___);
         this = (QuestRestrictionInfo_o *)System_Linq_Enumerable__ToArray_int_(
                                            v12,
-                                           (const MethodInfo_311C8F4 *)Method_System_Linq_Enumerable_ToArray_int___);
+                                           (const MethodInfo_312715C *)Method_System_Linq_Enumerable_ToArray_int___);
         v13 = v6->fields.slotInfos;
         if ( !v13 )
           goto LABEL_27;
@@ -6789,12 +6789,12 @@ LABEL_27:
         this = (QuestRestrictionInfo_o *)System_Collections_Generic_List_Int32Enum___get_Item(
                                            (System_Collections_Generic_List_T__o *)this,
                                            v10,
-                                           (const MethodInfo_377DCD4 *)Method_System_Collections_Generic_List_Restriction_RangeType__get_Item__);
+                                           (const MethodInfo_378853C *)Method_System_Collections_Generic_List_Restriction_RangeType__get_Item__);
         if ( (_DWORD)this == 1 )
         {
           this = (QuestRestrictionInfo_o *)System_Linq_Enumerable__Any_int_(
                                              (System_Collections_Generic_IEnumerable_TSource__o *)v15,
-                                             (const MethodInfo_30E8A38 *)Method_System_Linq_Enumerable_Any_int___);
+                                             (const MethodInfo_30F32A0 *)Method_System_Linq_Enumerable_Any_int___);
           if ( ((unsigned __int8)this & 1) != 0 )
             return 0;
         }
@@ -6814,12 +6814,12 @@ LABEL_27:
           this = (QuestRestrictionInfo_o *)System_Collections_Generic_List_Int32Enum___get_Item(
                                              (System_Collections_Generic_List_T__o *)this,
                                              v10,
-                                             (const MethodInfo_377DCD4 *)Method_System_Collections_Generic_List_Restriction_RangeType__get_Item__);
+                                             (const MethodInfo_378853C *)Method_System_Collections_Generic_List_Restriction_RangeType__get_Item__);
           if ( (_DWORD)this == 2 )
           {
             this = (QuestRestrictionInfo_o *)System_Linq_Enumerable__Any_int_(
                                                (System_Collections_Generic_IEnumerable_TSource__o *)v15,
-                                               (const MethodInfo_30E8A38 *)Method_System_Linq_Enumerable_Any_int___);
+                                               (const MethodInfo_30F32A0 *)Method_System_Linq_Enumerable_Any_int___);
             if ( ((unsigned __int8)this & 1) == 0 )
               return 0;
           }
@@ -6831,14 +6831,14 @@ LABEL_27:
       if ( !slotInfos )
         goto LABEL_27;
     }
-    sub_1C32E84(this);
+    sub_1C372BC(this);
   }
   return 0;
 }
 
 
 // local variable allocation has failed, the output may be wrong!
-bool QuestRestrictionInfo__IsRestriction_43319868(
+bool QuestRestrictionInfo__IsRestriction_43421736(
         QuestRestrictionInfo_o *this,
         int32_t svtId,
         int32_t limitCount,
@@ -6859,10 +6859,10 @@ bool QuestRestrictionInfo__IsRestriction_43319868(
   __int64 v23; // x0
   bool isWhole; // [xsp+Ch] [xbp-44h] BYREF
 
-  if ( (byte_4C38D21 & 1) == 0 )
+  if ( (byte_4C4431A & 1) == 0 )
   {
-    sub_1C32C20(&Method_System_Array_Empty_int___);
-    byte_4C38D21 = 1;
+    sub_1C37058(&Method_System_Array_Empty_int___);
+    byte_4C4431A = 1;
   }
   isWhole = 0;
   IsRestrictionIndividualityWhole = QuestRestrictionInfo__IsRestrictionIndividualityWhole(
@@ -6883,24 +6883,24 @@ bool QuestRestrictionInfo__IsRestriction_43319868(
     v21 = *((_QWORD *)Method_System_Array_Empty_int___ + 7);
     if ( !v21 )
     {
-      sub_1C83390(Method_System_Array_Empty_int___);
+      sub_1C877C8(Method_System_Array_Empty_int___);
       v21 = v20[7];
     }
     v22 = *(_QWORD *)(v21 + 16);
     if ( (*(_BYTE *)(v22 + 309) & 1) == 0 )
-      v22 = sub_1C83334(inited);
+      v22 = sub_1C8776C(inited);
     if ( !*(_DWORD *)(v22 + 224) )
       inited = j_il2cpp_runtime_class_init_0(v22);
     v23 = *(_QWORD *)(v20[7] + 16LL);
     if ( (*(_BYTE *)(v23 + 309) & 1) == 0 )
-      v23 = sub_1C83334(inited);
+      v23 = sub_1C8776C(inited);
     ServantIndividuality = **(System_Int32_array ***)(v23 + 184);
   }
-  return QuestRestrictionInfo__IsRestriction_43320128(this, &isWhole, ServantIndividuality, rarity, lv, targetType, v17);
+  return QuestRestrictionInfo__IsRestriction_43421996(this, &isWhole, ServantIndividuality, rarity, lv, targetType, v17);
 }
 
 
-bool QuestRestrictionInfo__IsRestriction_43320128(
+bool QuestRestrictionInfo__IsRestriction_43421996(
         QuestRestrictionInfo_o *this,
         bool *isWhole,
         System_Int32_array *svtIndividuality,
@@ -6927,7 +6927,7 @@ bool QuestRestrictionInfo__IsRestriction_43320128(
     restrictionEntityList = this->fields.restrictionEntityList;
     if ( !restrictionEntityList )
 LABEL_30:
-      sub_1C32E7C(this);
+      sub_1C372B4(this);
     max_length = restrictionEntityList->max_length;
     if ( max_length < 1 )
       return 0;
@@ -6936,7 +6936,7 @@ LABEL_30:
     {
       if ( v17 >= max_length )
 LABEL_29:
-        sub_1C32E84(this);
+        sub_1C372BC(this);
       v18 = restrictionEntityList->m_Items[v17];
       if ( !v18 )
         goto LABEL_30;
@@ -6958,7 +6958,7 @@ LABEL_24:
         this = (QuestRestrictionInfo_o *)RestrictionEntity__IsRestrictionTarget(v18, targetType, 0);
         if ( ((unsigned __int8)this & 1) != 0 )
         {
-          this = (QuestRestrictionInfo_o *)RestrictionEntity__IsRestriction_42482652(v18, svtIndividuality, 0);
+          this = (QuestRestrictionInfo_o *)RestrictionEntity__IsRestriction_42584520(v18, svtIndividuality, 0);
           if ( ((unsigned __int8)this & 1) != 0 )
             return 1;
         }
@@ -7005,7 +7005,7 @@ LABEL_25:
 }
 
 
-bool QuestRestrictionInfo__IsRestriction_43321100(
+bool QuestRestrictionInfo__IsRestriction_43422968(
         QuestRestrictionInfo_o *this,
         bool *isWhole,
         int32_t svtId,
@@ -7028,10 +7028,10 @@ bool QuestRestrictionInfo__IsRestriction_43321100(
   __int64 v26; // x0
   __int64 v27; // x0
 
-  if ( (byte_4C38D22 & 1) == 0 )
+  if ( (byte_4C4431B & 1) == 0 )
   {
-    sub_1C32C20(&Method_System_Array_Empty_int___);
-    byte_4C38D22 = 1;
+    sub_1C37058(&Method_System_Array_Empty_int___);
+    byte_4C4431B = 1;
   }
   IsRestrictionIndividualityWhole = QuestRestrictionInfo__IsRestrictionIndividualityWhole(
                                       this,
@@ -7052,20 +7052,20 @@ bool QuestRestrictionInfo__IsRestriction_43321100(
     v25 = *((_QWORD *)Method_System_Array_Empty_int___ + 7);
     if ( !v25 )
     {
-      sub_1C83390(Method_System_Array_Empty_int___);
+      sub_1C877C8(Method_System_Array_Empty_int___);
       v25 = v24[7];
     }
     v26 = *(_QWORD *)(v25 + 16);
     if ( (*(_BYTE *)(v26 + 309) & 1) == 0 )
-      v26 = sub_1C83334(inited);
+      v26 = sub_1C8776C(inited);
     if ( !*(_DWORD *)(v26 + 224) )
       inited = j_il2cpp_runtime_class_init_0(v26);
     v27 = *(_QWORD *)(v24[7] + 16LL);
     if ( (*(_BYTE *)(v27 + 309) & 1) == 0 )
-      v27 = sub_1C83334(inited);
+      v27 = sub_1C8776C(inited);
     ServantIndividuality = **(System_Int32_array ***)(v27 + 184);
   }
-  return QuestRestrictionInfo__IsRestriction_43321380(
+  return QuestRestrictionInfo__IsRestriction_43423248(
            this,
            isWhole,
            ServantIndividuality,
@@ -7078,7 +7078,7 @@ bool QuestRestrictionInfo__IsRestriction_43321100(
 
 
 // local variable allocation has failed, the output may be wrong!
-bool QuestRestrictionInfo__IsRestriction_43321380(
+bool QuestRestrictionInfo__IsRestriction_43423248(
         QuestRestrictionInfo_o *this,
         bool *isWhole,
         System_Int32_array *svtIndividuality,
@@ -7090,7 +7090,7 @@ bool QuestRestrictionInfo__IsRestriction_43321380(
 {
   const MethodInfo *v11; // x3
 
-  if ( QuestRestrictionInfo__IsRestriction_43320128(
+  if ( QuestRestrictionInfo__IsRestriction_43421996(
          this,
          isWhole,
          svtIndividuality,
@@ -7102,7 +7102,7 @@ bool QuestRestrictionInfo__IsRestriction_43321380(
     return 1;
   }
   if ( this->fields.restrictionBaseEntity )
-    return QuestRestrictionInfo__IsRestrictionSlot_43320596(this, svtIndividuality, initPos, v11);
+    return QuestRestrictionInfo__IsRestrictionSlot_43422464(this, svtIndividuality, initPos, v11);
   return 0;
 }
 
@@ -7113,7 +7113,7 @@ bool QuestRestrictionInfo__IsSelectableNormalSupport(
         const MethodInfo *method)
 {
   QuestRestrictionInfo___c__DisplayClass186_0_o *v5; // x21
-  _BOOL8 IsMyServantOrNpcRestriction_43340352; // x0
+  _BOOL8 IsMyServantOrNpcRestriction_43442220; // x0
   const MethodInfo *v7; // x2
   struct QuestRestrictionInfo_SlotInfo_array *slotInfos; // x8
   int v9; // w9
@@ -7123,21 +7123,21 @@ bool QuestRestrictionInfo__IsSelectableNormalSupport(
   System_Collections_Generic_List_object__o *myServantOrNpcRestrictionEntityList; // x19
   System_Predicate_object__o *v14; // x20
 
-  if ( (byte_4C38D45 & 1) == 0 )
+  if ( (byte_4C4433E & 1) == 0 )
   {
-    sub_1C32C20(&Method_System_Collections_Generic_List_RestrictionEntity__Find__);
-    sub_1C32C20(&System_Predicate_RestrictionEntity__TypeInfo);
-    sub_1C32C20(&Method_QuestRestrictionInfo___c__DisplayClass186_0__IsSelectableNormalSupport_b__0__);
-    sub_1C32C20(&QuestRestrictionInfo___c__DisplayClass186_0_TypeInfo);
-    byte_4C38D45 = 1;
+    sub_1C37058(&Method_System_Collections_Generic_List_RestrictionEntity__Find__);
+    sub_1C37058(&System_Predicate_RestrictionEntity__TypeInfo);
+    sub_1C37058(&Method_QuestRestrictionInfo___c__DisplayClass186_0__IsSelectableNormalSupport_b__0__);
+    sub_1C37058(&QuestRestrictionInfo___c__DisplayClass186_0_TypeInfo);
+    byte_4C4433E = 1;
   }
-  v5 = (QuestRestrictionInfo___c__DisplayClass186_0_o *)sub_1C32E6C(QuestRestrictionInfo___c__DisplayClass186_0_TypeInfo);
+  v5 = (QuestRestrictionInfo___c__DisplayClass186_0_o *)sub_1C372A4(QuestRestrictionInfo___c__DisplayClass186_0_TypeInfo);
   QuestRestrictionInfo___c__DisplayClass186_0___ctor(v5, 0);
   if ( !v5 )
     goto LABEL_18;
   v5->fields.pos = pos;
-  IsMyServantOrNpcRestriction_43340352 = QuestRestrictionInfo__IsMyServantOrNpcRestriction_43340352(this, pos, v7);
-  if ( !IsMyServantOrNpcRestriction_43340352 )
+  IsMyServantOrNpcRestriction_43442220 = QuestRestrictionInfo__IsMyServantOrNpcRestriction_43442220(this, pos, v7);
+  if ( !IsMyServantOrNpcRestriction_43442220 )
   {
     LOBYTE(v12) = 0;
     return (char)v12;
@@ -7145,7 +7145,7 @@ bool QuestRestrictionInfo__IsSelectableNormalSupport(
   if ( !this->fields.restrictionBaseEntity )
   {
     myServantOrNpcRestrictionEntityList = (System_Collections_Generic_List_object__o *)this->fields.myServantOrNpcRestrictionEntityList;
-    v14 = (System_Predicate_object__o *)sub_1C32E6C(System_Predicate_RestrictionEntity__TypeInfo);
+    v14 = (System_Predicate_object__o *)sub_1C372A4(System_Predicate_RestrictionEntity__TypeInfo);
     System_Predicate_object____ctor(
       v14,
       (Il2CppObject *)v5,
@@ -7156,21 +7156,21 @@ bool QuestRestrictionInfo__IsSelectableNormalSupport(
       v12 = System_Collections_Generic_List_object___Find(
               myServantOrNpcRestrictionEntityList,
               (System_Predicate_T__o *)v14,
-              (const MethodInfo_3798E24 *)Method_System_Collections_Generic_List_RestrictionEntity__Find__);
+              (const MethodInfo_37A368C *)Method_System_Collections_Generic_List_RestrictionEntity__Find__);
       if ( !v12 )
         return (char)v12;
       v11 = LODWORD(v12[2].klass) == 16;
       goto LABEL_14;
     }
 LABEL_18:
-    sub_1C32E7C(IsMyServantOrNpcRestriction_43340352);
+    sub_1C372B4(IsMyServantOrNpcRestriction_43442220);
   }
   slotInfos = this->fields.slotInfos;
   if ( !slotInfos )
     goto LABEL_18;
   v9 = v5->fields.pos - 1;
   if ( (unsigned int)v9 >= LODWORD(slotInfos->max_length) )
-    sub_1C32E84(IsMyServantOrNpcRestriction_43340352);
+    sub_1C372BC(IsMyServantOrNpcRestriction_43442220);
   v10 = slotInfos->m_Items[v9];
   if ( !v10 )
     goto LABEL_18;
@@ -7195,7 +7195,7 @@ bool QuestRestrictionInfo__IsServantNumAndFixedServantPositionRestriction(
         const MethodInfo *method)
 {
   int32_t servantNumMax; // w8
-  void *IsMyServantOrNpcRestriction_43340352; // x0
+  void *IsMyServantOrNpcRestriction_43442220; // x0
   int32_t *p_myServantNumMax; // x8
   int32_t v10; // w8
   struct System_Collections_Generic_List_RestrictionEntity__o *myServantOrNpcRestrictionEntityList; // x9
@@ -7214,27 +7214,27 @@ bool QuestRestrictionInfo__IsServantNumAndFixedServantPositionRestriction(
   int32_t v25; // w11
   int v26; // w12
 
-  if ( (byte_4C38D40 & 1) == 0 )
+  if ( (byte_4C44339 & 1) == 0 )
   {
-    sub_1C32C20(&BalanceConfig_TypeInfo);
-    sub_1C32C20(&Method_System_Collections_Generic_List_RestrictionEntity__get_Count__);
-    byte_4C38D40 = 1;
+    sub_1C37058(&BalanceConfig_TypeInfo);
+    sub_1C37058(&Method_System_Collections_Generic_List_RestrictionEntity__get_Count__);
+    byte_4C44339 = 1;
   }
   if ( !this->fields.isFixedMyServantPosition && !this->fields.isNeedStarting && !this->fields.isFixedPosition )
     return 0;
   servantNumMax = this->fields.servantNumMax;
   if ( servantNumMax <= 0 && !this->fields.isMyServantOrNpc && !this->fields.isMyServantOrSupport )
     return 0;
-  IsMyServantOrNpcRestriction_43340352 = BalanceConfig_TypeInfo;
+  IsMyServantOrNpcRestriction_43442220 = BalanceConfig_TypeInfo;
   if ( !BalanceConfig_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(BalanceConfig_TypeInfo);
-    IsMyServantOrNpcRestriction_43340352 = BalanceConfig_TypeInfo;
+    IsMyServantOrNpcRestriction_43442220 = BalanceConfig_TypeInfo;
     servantNumMax = this->fields.servantNumMax;
   }
   if ( servantNumMax < 1 )
   {
-    p_myServantNumMax = (int32_t *)(*((_QWORD *)IsMyServantOrNpcRestriction_43340352 + 23) + 172LL);
+    p_myServantNumMax = (int32_t *)(*((_QWORD *)IsMyServantOrNpcRestriction_43442220 + 23) + 172LL);
   }
   else
   {
@@ -7252,11 +7252,11 @@ bool QuestRestrictionInfo__IsServantNumAndFixedServantPositionRestriction(
   }
   if ( v10 != 1 )
     return 0;
-  IsMyServantOrNpcRestriction_43340352 = (void *)QuestRestrictionInfo__IsMyServantOrNpcRestriction_43340352(
+  IsMyServantOrNpcRestriction_43442220 = (void *)QuestRestrictionInfo__IsMyServantOrNpcRestriction_43442220(
                                                    this,
                                                    pos,
                                                    *(const MethodInfo **)&pos);
-  if ( ((unsigned __int8)IsMyServantOrNpcRestriction_43340352 & 1) != 0 )
+  if ( ((unsigned __int8)IsMyServantOrNpcRestriction_43442220 & 1) != 0 )
     return 0;
   if ( !this->fields.isFixedMyServantPosition )
   {
@@ -7275,7 +7275,7 @@ bool QuestRestrictionInfo__IsServantNumAndFixedServantPositionRestriction(
         {
           if ( !(v24 + v23) )
 LABEL_43:
-            sub_1C32E84(IsMyServantOrNpcRestriction_43340352);
+            sub_1C372BC(IsMyServantOrNpcRestriction_43442220);
           v25 = targetVals->m_Items[v23];
           if ( v25 == svtId )
             break;
@@ -7288,12 +7288,12 @@ LABEL_43:
       return 1;
     }
 LABEL_44:
-    sub_1C32E7C(IsMyServantOrNpcRestriction_43340352);
+    sub_1C372B4(IsMyServantOrNpcRestriction_43442220);
   }
-  IsMyServantOrNpcRestriction_43340352 = QuestRestrictionInfo__GetFixedServantPositionSvtIdList(this, v12);
-  if ( !IsMyServantOrNpcRestriction_43340352 )
+  IsMyServantOrNpcRestriction_43442220 = QuestRestrictionInfo__GetFixedServantPositionSvtIdList(this, v12);
+  if ( !IsMyServantOrNpcRestriction_43442220 )
     goto LABEL_44;
-  v14 = *((_DWORD *)IsMyServantOrNpcRestriction_43340352 + 6);
+  v14 = *((_DWORD *)IsMyServantOrNpcRestriction_43442220 + 6);
   if ( v14 < 1 )
     return 1;
   v15 = 0;
@@ -7302,7 +7302,7 @@ LABEL_44:
   {
     if ( !(v16 + v15) )
       goto LABEL_43;
-    v17 = *((_DWORD *)IsMyServantOrNpcRestriction_43340352 + v15 + 8);
+    v17 = *((_DWORD *)IsMyServantOrNpcRestriction_43442220 + v15 + 8);
     if ( v17 == svtId )
       break;
     v18 = v16 + v15++;
@@ -7327,10 +7327,10 @@ bool QuestRestrictionInfo__IsSetRequired(
   int32_t DeckMainMemberMax; // w8
 
   v6 = this;
-  if ( (byte_4C38D54 & 1) == 0 )
+  if ( (byte_4C4434D & 1) == 0 )
   {
-    this = (QuestRestrictionInfo_o *)sub_1C32C20(&BalanceConfig_TypeInfo);
-    byte_4C38D54 = 1;
+    this = (QuestRestrictionInfo_o *)sub_1C37058(&BalanceConfig_TypeInfo);
+    byte_4C4434D = 1;
   }
   if ( !v6->fields.restrictionBaseEntity )
     return pos == 1 && v6->fields.isFixedMyServantSingle;
@@ -7338,10 +7338,10 @@ bool QuestRestrictionInfo__IsSetRequired(
   if ( slotInfos )
   {
     if ( (unsigned int)(initPos - 1) >= LODWORD(slotInfos->max_length) )
-      sub_1C32E84(this);
+      sub_1C372BC(this);
     v8 = slotInfos->m_Items[initPos - 1];
     if ( !v8 )
-      sub_1C32E7C(this);
+      sub_1C372B4(this);
     if ( v8->fields.isRequired )
       return 1;
   }
@@ -7387,33 +7387,33 @@ bool QuestRestrictionInfo__IsSlotRestrictionForSupport(
   System_Collections_Generic_IEnumerable_TSource__o *v18; // x0
   System_Collections_Generic_IEnumerable_TSource__o *v19; // x21
 
-  if ( (byte_4C38D5D & 1) == 0 )
+  if ( (byte_4C44356 & 1) == 0 )
   {
-    sub_1C32C20(&Method_DataManager_GetMasterData_ServantMaster___);
-    sub_1C32C20(&Method_DataMasterBase_ServantMaster__ServantEntity__int__GetEntity__);
-    sub_1C32C20(&Method_System_Linq_Enumerable_Any_int___);
-    sub_1C32C20(&Method_System_Linq_Enumerable_Intersect_int___);
-    sub_1C32C20(&Method_System_Linq_Enumerable_ToArray_int___);
-    sub_1C32C20(&Method_System_Collections_Generic_List_int____get_Count__);
-    sub_1C32C20(&Method_System_Collections_Generic_List_int____get_Item__);
-    sub_1C32C20(&Method_System_Collections_Generic_List_Restriction_RangeType__get_Item__);
-    sub_1C32C20(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-    byte_4C38D5D = 1;
+    sub_1C37058(&Method_DataManager_GetMasterData_ServantMaster___);
+    sub_1C37058(&Method_DataMasterBase_ServantMaster__ServantEntity__int__GetEntity__);
+    sub_1C37058(&Method_System_Linq_Enumerable_Any_int___);
+    sub_1C37058(&Method_System_Linq_Enumerable_Intersect_int___);
+    sub_1C37058(&Method_System_Linq_Enumerable_ToArray_int___);
+    sub_1C37058(&Method_System_Collections_Generic_List_int____get_Count__);
+    sub_1C37058(&Method_System_Collections_Generic_List_int____get_Item__);
+    sub_1C37058(&Method_System_Collections_Generic_List_Restriction_RangeType__get_Item__);
+    sub_1C37058(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    byte_4C44356 = 1;
   }
   if ( this->fields.restrictionBaseEntity )
   {
-    Instance = (System_Int32_array *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39E2904 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    Instance = (System_Int32_array *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39ED16C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
     if ( !Instance )
       goto LABEL_33;
     Instance = (System_Int32_array *)DataManager__GetMasterData_object_(
                                        (DataManager_o *)Instance,
-                                       (const MethodInfo_30DD3F0 *)Method_DataManager_GetMasterData_ServantMaster___);
+                                       (const MethodInfo_30E7C58 *)Method_DataManager_GetMasterData_ServantMaster___);
     if ( !Instance )
       goto LABEL_33;
     Instance = (System_Int32_array *)DataMasterBase_object__object__int___GetEntity(
                                        (DataMasterBase_TMaster__TEntity__PKType__o *)Instance,
                                        svtId,
-                                       (const MethodInfo_3396838 *)Method_DataMasterBase_ServantMaster__ServantEntity__int__GetEntity__);
+                                       (const MethodInfo_33A10A0 *)Method_DataMasterBase_ServantMaster__ServantEntity__int__GetEntity__);
     if ( !Instance )
       goto LABEL_33;
     Instance = ServantEntity__getIndividuality((ServantEntity_o *)Instance, limitCount, dispLimitCount, 0);
@@ -7429,7 +7429,7 @@ bool QuestRestrictionInfo__IsSlotRestrictionForSupport(
       while ( 1 )
       {
         if ( v13 >= max_length )
-          sub_1C32E84(Instance);
+          sub_1C372BC(Instance);
         v15 = slotInfos->m_Items[v13];
         if ( !v15 )
           break;
@@ -7444,7 +7444,7 @@ bool QuestRestrictionInfo__IsSlotRestrictionForSupport(
             Instance = (System_Int32_array *)System_Collections_Generic_List_object___get_Item(
                                                (System_Collections_Generic_List_object__o *)Instance,
                                                v16,
-                                               (const MethodInfo_37984EC *)Method_System_Collections_Generic_List_int____get_Item__);
+                                               (const MethodInfo_37A2D54 *)Method_System_Collections_Generic_List_int____get_Item__);
             if ( !Instance )
               goto LABEL_33;
             if ( Instance->max_length )
@@ -7455,25 +7455,25 @@ bool QuestRestrictionInfo__IsSlotRestrictionForSupport(
               Item = System_Collections_Generic_List_object___get_Item(
                        (System_Collections_Generic_List_object__o *)Instance,
                        v16,
-                       (const MethodInfo_37984EC *)Method_System_Collections_Generic_List_int____get_Item__);
+                       (const MethodInfo_37A2D54 *)Method_System_Collections_Generic_List_int____get_Item__);
               v18 = System_Linq_Enumerable__Intersect_int_(
                       (System_Collections_Generic_IEnumerable_TSource__o *)Item,
                       v12,
-                      (const MethodInfo_3107AA0 *)Method_System_Linq_Enumerable_Intersect_int___);
+                      (const MethodInfo_3112308 *)Method_System_Linq_Enumerable_Intersect_int___);
               Instance = System_Linq_Enumerable__ToArray_int_(
                            v18,
-                           (const MethodInfo_311C8F4 *)Method_System_Linq_Enumerable_ToArray_int___);
+                           (const MethodInfo_312715C *)Method_System_Linq_Enumerable_ToArray_int___);
               if ( !v15->fields.rangeTypeList )
                 goto LABEL_33;
               v19 = (System_Collections_Generic_IEnumerable_TSource__o *)Instance;
               if ( System_Collections_Generic_List_Int32Enum___get_Item(
                      (System_Collections_Generic_List_T__o *)v15->fields.rangeTypeList,
                      v16,
-                     (const MethodInfo_377DCD4 *)Method_System_Collections_Generic_List_Restriction_RangeType__get_Item__) == 1 )
+                     (const MethodInfo_378853C *)Method_System_Collections_Generic_List_Restriction_RangeType__get_Item__) == 1 )
               {
                 if ( System_Linq_Enumerable__Any_int_(
                        v19,
-                       (const MethodInfo_30E8A38 *)Method_System_Linq_Enumerable_Any_int___) )
+                       (const MethodInfo_30F32A0 *)Method_System_Linq_Enumerable_Any_int___) )
                 {
                   return 0;
                 }
@@ -7486,10 +7486,10 @@ bool QuestRestrictionInfo__IsSlotRestrictionForSupport(
                 if ( System_Collections_Generic_List_Int32Enum___get_Item(
                        (System_Collections_Generic_List_T__o *)Instance,
                        v16,
-                       (const MethodInfo_377DCD4 *)Method_System_Collections_Generic_List_Restriction_RangeType__get_Item__) == 2
+                       (const MethodInfo_378853C *)Method_System_Collections_Generic_List_Restriction_RangeType__get_Item__) == 2
                   && !System_Linq_Enumerable__Any_int_(
                         v19,
-                        (const MethodInfo_30E8A38 *)Method_System_Linq_Enumerable_Any_int___) )
+                        (const MethodInfo_30F32A0 *)Method_System_Linq_Enumerable_Any_int___) )
                 {
                   return 0;
                 }
@@ -7507,7 +7507,7 @@ bool QuestRestrictionInfo__IsSlotRestrictionForSupport(
           return v14;
       }
 LABEL_33:
-      sub_1C32E7C(Instance);
+      sub_1C372B4(Instance);
     }
   }
   return 0;
@@ -7545,23 +7545,23 @@ bool QuestRestrictionInfo__IsUniqueIndividualityServant(QuestRestrictionInfo_o *
   unsigned __int64 v11; // x24
   Il2CppObject *entity; // [xsp+8h] [xbp-48h] BYREF
 
-  if ( (byte_4C38D5C & 1) == 0 )
+  if ( (byte_4C44355 & 1) == 0 )
   {
-    sub_1C32C20(&Method_DataManager_GetMaster_ServantMaster___);
-    sub_1C32C20(&DataManager_TypeInfo);
-    sub_1C32C20(&Method_DataMasterBase_ServantMaster__ServantEntity__int__TryGetEntity__);
-    byte_4C38D5C = 1;
+    sub_1C37058(&Method_DataManager_GetMaster_ServantMaster___);
+    sub_1C37058(&DataManager_TypeInfo);
+    sub_1C37058(&Method_DataMasterBase_ServantMaster__ServantEntity__int__TryGetEntity__);
+    byte_4C44355 = 1;
   }
   entity = 0;
   if ( !this->fields.restrictionBaseEntity )
     return 1;
   if ( !DataManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-  Master_object = DataManager__GetMaster_object_((const MethodInfo_30DD39C *)Method_DataManager_GetMaster_ServantMaster___);
+  Master_object = DataManager__GetMaster_object_((const MethodInfo_30E7C04 *)Method_DataManager_GetMaster_ServantMaster___);
   restrictionWholeEntities = this->fields.restrictionWholeEntities;
   if ( !restrictionWholeEntities )
 LABEL_23:
-    sub_1C32E7C(Master_object);
+    sub_1C372B4(Master_object);
   max_length = restrictionWholeEntities->max_length;
   if ( max_length < 1 )
     return 1;
@@ -7571,7 +7571,7 @@ LABEL_23:
   {
     if ( v7 >= max_length )
 LABEL_24:
-      sub_1C32E84(Master_object);
+      sub_1C372BC(Master_object);
     v8 = restrictionWholeEntities->m_Items[v7];
     if ( !v8 )
       goto LABEL_23;
@@ -7600,7 +7600,7 @@ LABEL_19:
                                       v6,
                                       &entity,
                                       targetVals->m_Items[v11],
-                                      (const MethodInfo_3396884 *)Method_DataMasterBase_ServantMaster__ServantEntity__int__TryGetEntity__);
+                                      (const MethodInfo_33A10EC *)Method_DataMasterBase_ServantMaster__ServantEntity__int__TryGetEntity__);
     if ( ((unsigned __int8)Master_object & 1) == 0 )
       return 0;
     LODWORD(v10) = targetVals->max_length;
@@ -7610,7 +7610,7 @@ LABEL_19:
 }
 
 
-bool QuestRestrictionInfo__IsUniqueIndividuality_43324172(
+bool QuestRestrictionInfo__IsUniqueIndividuality_43426040(
         QuestRestrictionInfo_o *this,
         int32_t svtId,
         int32_t limitCount,
@@ -7626,8 +7626,8 @@ bool QuestRestrictionInfo__IsUniqueIndividuality_43324172(
   struct System_Int32_array *uniqueIndividualitys; // x9
   il2cpp_array_size_t max_length; // x8
   BalanceConfig_c **v18; // x20
-  const MethodInfo_3398DE0 **v19; // x26
-  const MethodInfo_30FA3A0 **v20; // x24
+  const MethodInfo_33A3648 **v19; // x26
+  const MethodInfo_3104C08 **v20; // x24
   unsigned __int64 v21; // x10
   int32_t v22; // w27
   unsigned __int64 i; // x19
@@ -7638,11 +7638,11 @@ bool QuestRestrictionInfo__IsUniqueIndividuality_43324172(
   System_Collections_Generic_IEnumerable_TSource__o *NpcServantIndividuality; // x0
   struct FollowerInfo_array *v29; // x8
   int32_t v30; // w21
-  const MethodInfo_30FA3A0 **v31; // x27
+  const MethodInfo_3104C08 **v31; // x27
   Il2CppObject *v32; // x24
   BalanceConfig_c **v33; // x23
   Il2CppObject *v34; // x20
-  const MethodInfo_3398DE0 **v35; // x22
+  const MethodInfo_33A3648 **v35; // x22
   DataManager_o *v36; // x28
   struct System_Collections_Generic_Dictionary_int__DataMasterBase__o *lookup; // x26
   struct System_Byte_array *masterDataBytes; // x29
@@ -7667,22 +7667,22 @@ bool QuestRestrictionInfo__IsUniqueIndividuality_43324172(
   Il2CppObject *entity; // [xsp+48h] [xbp-68h] BYREF
   CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o v59; // 0:x0.16
 
-  if ( (byte_4C38D2A & 1) == 0 )
+  if ( (byte_4C44323 & 1) == 0 )
   {
-    sub_1C32C20(&BalanceConfig_TypeInfo);
-    sub_1C32C20(&Method_DataManager_GetMasterData_ServantLimitImageMaster___);
-    sub_1C32C20(&Method_DataManager_GetMaster_NpcServantFollowerIndividualityMaster___);
-    sub_1C32C20(&Method_DataManager_GetMaster_NpcServantFollowerMaster___);
-    sub_1C32C20(&Method_DataManager_GetMaster_ServantMaster___);
-    sub_1C32C20(&DataManager_TypeInfo);
-    sub_1C32C20(&Method_DataMasterBase_ServantMaster__ServantEntity__int__GetEntity__);
-    sub_1C32C20(&Method_DataMasterBase_NpcServantFollowerIndividualityMaster__NpcServantFollowerIndividualityEntity__long__TryGetEntity__);
-    sub_1C32C20(&Method_DataMasterBase_NpcServantFollowerMaster__NpcServantFollowerEntity__long__TryGetEntity__);
-    sub_1C32C20(&Method_System_Linq_Enumerable_Contains_int___);
-    sub_1C32C20(&ImageLimitCount_TypeInfo);
-    sub_1C32C20(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
-    sub_1C32C20(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-    byte_4C38D2A = 1;
+    sub_1C37058(&BalanceConfig_TypeInfo);
+    sub_1C37058(&Method_DataManager_GetMasterData_ServantLimitImageMaster___);
+    sub_1C37058(&Method_DataManager_GetMaster_NpcServantFollowerIndividualityMaster___);
+    sub_1C37058(&Method_DataManager_GetMaster_NpcServantFollowerMaster___);
+    sub_1C37058(&Method_DataManager_GetMaster_ServantMaster___);
+    sub_1C37058(&DataManager_TypeInfo);
+    sub_1C37058(&Method_DataMasterBase_ServantMaster__ServantEntity__int__GetEntity__);
+    sub_1C37058(&Method_DataMasterBase_NpcServantFollowerIndividualityMaster__NpcServantFollowerIndividualityEntity__long__TryGetEntity__);
+    sub_1C37058(&Method_DataMasterBase_NpcServantFollowerMaster__NpcServantFollowerEntity__long__TryGetEntity__);
+    sub_1C37058(&Method_System_Linq_Enumerable_Contains_int___);
+    sub_1C37058(&ImageLimitCount_TypeInfo);
+    sub_1C37058(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
+    sub_1C37058(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    byte_4C44323 = 1;
   }
   v57 = 0;
   entity = 0;
@@ -7691,17 +7691,17 @@ bool QuestRestrictionInfo__IsUniqueIndividuality_43324172(
     goto LABEL_71;
   if ( !DataManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-  Master_object = DataManager__GetMaster_object_((const MethodInfo_30DD39C *)Method_DataManager_GetMaster_NpcServantFollowerMaster___);
-  v12 = DataManager__GetMaster_object_((const MethodInfo_30DD39C *)Method_DataManager_GetMaster_NpcServantFollowerIndividualityMaster___);
+  Master_object = DataManager__GetMaster_object_((const MethodInfo_30E7C04 *)Method_DataManager_GetMaster_NpcServantFollowerMaster___);
+  v12 = DataManager__GetMaster_object_((const MethodInfo_30E7C04 *)Method_DataManager_GetMaster_NpcServantFollowerIndividualityMaster___);
   if ( !npcFollowerInfo
     || (Instance = (DataManager_o *)FollowerInfo__get_IsNpc(npcFollowerInfo, 0), ((unsigned __int8)Instance & 1) == 0) )
   {
-    Instance = (DataManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39E2904 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    Instance = (DataManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39ED16C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
     if ( !Instance )
       goto LABEL_82;
     Instance = (DataManager_o *)DataManager__GetMasterData_object_(
                                   Instance,
-                                  (const MethodInfo_30DD3F0 *)Method_DataManager_GetMasterData_ServantLimitImageMaster___);
+                                  (const MethodInfo_30E7C58 *)Method_DataManager_GetMasterData_ServantLimitImageMaster___);
     if ( !Instance )
       goto LABEL_82;
     dispLimitCount = ServantLimitImageMaster__GetServantImageLimitSealAfter(
@@ -7717,7 +7717,7 @@ bool QuestRestrictionInfo__IsUniqueIndividuality_43324172(
                                 (DataMasterBase_TMaster__TEntity__PKType__o *)v12,
                                 &entity,
                                 npcFollowerInfo->fields.npcFollowerSvtId,
-                                (const MethodInfo_3398DE0 *)Method_DataMasterBase_NpcServantFollowerIndividualityMaster__NpcServantFollowerIndividualityEntity__long__TryGetEntity__);
+                                (const MethodInfo_33A3648 *)Method_DataMasterBase_NpcServantFollowerIndividualityMaster__NpcServantFollowerIndividualityEntity__long__TryGetEntity__);
   if ( ((unsigned __int8)Instance & 1) == 0 )
   {
     if ( !Master_object )
@@ -7726,7 +7726,7 @@ bool QuestRestrictionInfo__IsUniqueIndividuality_43324172(
            (DataMasterBase_TMaster__TEntity__PKType__o *)Master_object,
            &v57,
            npcFollowerInfo->fields.npcFollowerSvtId,
-           (const MethodInfo_3398DE0 *)Method_DataMasterBase_NpcServantFollowerMaster__NpcServantFollowerEntity__long__TryGetEntity__) )
+           (const MethodInfo_33A3648 *)Method_DataMasterBase_NpcServantFollowerMaster__NpcServantFollowerEntity__long__TryGetEntity__) )
     {
       Instance = (DataManager_o *)v57;
       if ( !v57 )
@@ -7752,17 +7752,17 @@ LABEL_80:
 LABEL_17:
   if ( !DataManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-  Instance = (DataManager_o *)DataManager__GetMaster_object_((const MethodInfo_30DD39C *)Method_DataManager_GetMaster_ServantMaster___);
+  Instance = (DataManager_o *)DataManager__GetMaster_object_((const MethodInfo_30E7C04 *)Method_DataManager_GetMaster_ServantMaster___);
   if ( !Instance
     || (v15 = (DataMasterBase_TMaster__TEntity__PKType__o *)Instance,
         Instance = (DataManager_o *)DataMasterBase_object__object__int___GetEntity(
                                       (DataMasterBase_TMaster__TEntity__PKType__o *)Instance,
                                       svtId,
-                                      (const MethodInfo_3396838 *)Method_DataMasterBase_ServantMaster__ServantEntity__int__GetEntity__),
+                                      (const MethodInfo_33A10A0 *)Method_DataMasterBase_ServantMaster__ServantEntity__int__GetEntity__),
         (uniqueIndividualitys = this->fields.uniqueIndividualitys) == 0) )
   {
 LABEL_82:
-    sub_1C32E7C(Instance);
+    sub_1C372B4(Instance);
   }
   max_length = uniqueIndividualitys->max_length;
   if ( (int)max_length < 1 )
@@ -7775,8 +7775,8 @@ LABEL_71:
   v49 = dispLimitCount;
   v50 = limitCount;
   v18 = &BalanceConfig_TypeInfo;
-  v19 = (const MethodInfo_3398DE0 **)&Method_DataMasterBase_NpcServantFollowerIndividualityMaster__NpcServantFollowerIndividualityEntity__long__TryGetEntity__;
-  v20 = (const MethodInfo_30FA3A0 **)&Method_System_Linq_Enumerable_Contains_int___;
+  v19 = (const MethodInfo_33A3648 **)&Method_DataMasterBase_NpcServantFollowerIndividualityMaster__NpcServantFollowerIndividualityEntity__long__TryGetEntity__;
+  v20 = (const MethodInfo_3104C08 **)&Method_System_Linq_Enumerable_Contains_int___;
   v21 = 0;
   v52 = this->fields.uniqueIndividualitys;
   v55 = this;
@@ -7784,7 +7784,7 @@ LABEL_71:
   {
     if ( v21 >= (unsigned int)max_length )
 LABEL_83:
-      sub_1C32E84(Instance);
+      sub_1C372BC(Instance);
     v22 = uniqueIndividualitys->m_Items[v21];
     v54 = v21;
     if ( !source )
@@ -7854,7 +7854,7 @@ LABEL_29:
                                       (DataMasterBase_TMaster__TEntity__PKType__o *)Master_object,
                                       &v56,
                                       v27->fields.npcFollowerSvtId,
-                                      (const MethodInfo_3398DE0 *)Method_DataMasterBase_NpcServantFollowerMaster__NpcServantFollowerEntity__long__TryGetEntity__);
+                                      (const MethodInfo_33A3648 *)Method_DataMasterBase_NpcServantFollowerMaster__NpcServantFollowerEntity__long__TryGetEntity__);
         if ( ((unsigned __int8)Instance & 1) == 0 )
           goto LABEL_48;
         Instance = (DataManager_o *)v56;
@@ -7899,11 +7899,11 @@ LABEL_48:
             j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
           *(_QWORD *)&v59.fields.currentCryptoKey = lookup;
           *(_QWORD *)&v59.fields.fakeValue = masterDataBytes;
-          v39 = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_48887784(v59, 0);
+          v39 = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_48930896(v59, 0);
           v40 = DataMasterBase_object__object__int___GetEntity(
                   v15,
                   v39,
-                  (const MethodInfo_3396838 *)Method_DataMasterBase_ServantMaster__ServantEntity__int__GetEntity__);
+                  (const MethodInfo_33A10A0 *)Method_DataMasterBase_ServantMaster__ServantEntity__int__GetEntity__);
           saveNameList = (int32_t)v36->fields.saveNameList;
           m_CancellationTokenSource_high = HIDWORD(v36[1].fields.m_CancellationTokenSource);
           v43 = (ServantEntity_o *)v40;
@@ -7941,7 +7941,7 @@ LABEL_48:
       Instance = (DataManager_o *)DataMasterBase_object__object__int___GetEntity(
                                     v15,
                                     v45,
-                                    (const MethodInfo_3396838 *)Method_DataMasterBase_ServantMaster__ServantEntity__int__GetEntity__);
+                                    (const MethodInfo_33A10A0 *)Method_DataMasterBase_ServantMaster__ServantEntity__int__GetEntity__);
       deckLimitCountList = this->fields.deckLimitCountList;
       if ( !deckLimitCountList )
         goto LABEL_82;
@@ -7970,7 +7970,7 @@ LABEL_48:
 }
 
 
-bool QuestRestrictionInfo__IsUniqueIndividuality_43325656(
+bool QuestRestrictionInfo__IsUniqueIndividuality_43427524(
         QuestRestrictionInfo_o *this,
         int32_t svtId,
         int32_t limitCount,
@@ -8016,23 +8016,23 @@ bool QuestRestrictionInfo__IsUniqueIndividuality_43325656(
   Il2CppObject *entity; // [xsp+48h] [xbp-68h] BYREF
   CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o v51; // 0:x0.16
 
-  if ( (byte_4C38D2B & 1) == 0 )
+  if ( (byte_4C44324 & 1) == 0 )
   {
-    sub_1C32C20(&BalanceConfig_TypeInfo);
-    sub_1C32C20(&Method_DataManager_GetMasterData_ServantLimitImageMaster___);
-    sub_1C32C20(&Method_DataManager_GetMaster_NpcServantFollowerIndividualityMaster___);
-    sub_1C32C20(&Method_DataManager_GetMaster_NpcServantFollowerMaster___);
-    sub_1C32C20(&Method_DataManager_GetMaster_ServantMaster___);
-    sub_1C32C20(&DataManager_TypeInfo);
-    sub_1C32C20(&Method_DataMasterBase_ServantMaster__ServantEntity__int__GetEntity__);
-    sub_1C32C20(&Method_DataMasterBase_ServantMaster__ServantEntity__int__TryGetEntity__);
-    sub_1C32C20(&Method_DataMasterBase_NpcServantFollowerIndividualityMaster__NpcServantFollowerIndividualityEntity__long__TryGetEntity__);
-    sub_1C32C20(&Method_DataMasterBase_NpcServantFollowerMaster__NpcServantFollowerEntity__long__TryGetEntity__);
-    sub_1C32C20(&Method_System_Linq_Enumerable_Contains_int___);
-    sub_1C32C20(&ImageLimitCount_TypeInfo);
-    sub_1C32C20(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
-    sub_1C32C20(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-    byte_4C38D2B = 1;
+    sub_1C37058(&BalanceConfig_TypeInfo);
+    sub_1C37058(&Method_DataManager_GetMasterData_ServantLimitImageMaster___);
+    sub_1C37058(&Method_DataManager_GetMaster_NpcServantFollowerIndividualityMaster___);
+    sub_1C37058(&Method_DataManager_GetMaster_NpcServantFollowerMaster___);
+    sub_1C37058(&Method_DataManager_GetMaster_ServantMaster___);
+    sub_1C37058(&DataManager_TypeInfo);
+    sub_1C37058(&Method_DataMasterBase_ServantMaster__ServantEntity__int__GetEntity__);
+    sub_1C37058(&Method_DataMasterBase_ServantMaster__ServantEntity__int__TryGetEntity__);
+    sub_1C37058(&Method_DataMasterBase_NpcServantFollowerIndividualityMaster__NpcServantFollowerIndividualityEntity__long__TryGetEntity__);
+    sub_1C37058(&Method_DataMasterBase_NpcServantFollowerMaster__NpcServantFollowerEntity__long__TryGetEntity__);
+    sub_1C37058(&Method_System_Linq_Enumerable_Contains_int___);
+    sub_1C37058(&ImageLimitCount_TypeInfo);
+    sub_1C37058(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
+    sub_1C37058(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    byte_4C44324 = 1;
   }
   v49 = 0;
   entity = 0;
@@ -8042,16 +8042,16 @@ bool QuestRestrictionInfo__IsUniqueIndividuality_43325656(
     return 0;
   if ( !DataManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-  Master_object = (DataMasterBase_TMaster__TEntity__PKType__o *)DataManager__GetMaster_object_((const MethodInfo_30DD39C *)Method_DataManager_GetMaster_NpcServantFollowerMaster___);
-  v46 = (DataMasterBase_TMaster__TEntity__PKType__o *)DataManager__GetMaster_object_((const MethodInfo_30DD39C *)Method_DataManager_GetMaster_NpcServantFollowerIndividualityMaster___);
+  Master_object = (DataMasterBase_TMaster__TEntity__PKType__o *)DataManager__GetMaster_object_((const MethodInfo_30E7C04 *)Method_DataManager_GetMaster_NpcServantFollowerMaster___);
+  v46 = (DataMasterBase_TMaster__TEntity__PKType__o *)DataManager__GetMaster_object_((const MethodInfo_30E7C04 *)Method_DataManager_GetMaster_NpcServantFollowerIndividualityMaster___);
   if ( !npcFollowerInfo || !FollowerInfo__get_IsNpc(npcFollowerInfo, 0) )
   {
-    Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39E2904 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39ED16C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
     if ( !Instance )
       goto LABEL_75;
     Instance = DataManager__GetMasterData_object_(
                  (DataManager_o *)Instance,
-                 (const MethodInfo_30DD3F0 *)Method_DataManager_GetMasterData_ServantLimitImageMaster___);
+                 (const MethodInfo_30E7C58 *)Method_DataManager_GetMasterData_ServantLimitImageMaster___);
     if ( !Instance )
       goto LABEL_75;
     dispLimitCount = ServantLimitImageMaster__GetServantImageLimitSealAfter(
@@ -8068,7 +8068,7 @@ bool QuestRestrictionInfo__IsUniqueIndividuality_43325656(
           v46,
           &entity,
           npcFollowerInfo->fields.npcFollowerSvtId,
-          (const MethodInfo_3398DE0 *)Method_DataMasterBase_NpcServantFollowerIndividualityMaster__NpcServantFollowerIndividualityEntity__long__TryGetEntity__) )
+          (const MethodInfo_33A3648 *)Method_DataMasterBase_NpcServantFollowerIndividualityMaster__NpcServantFollowerIndividualityEntity__long__TryGetEntity__) )
   {
     Instance = Master_object;
     if ( !Master_object )
@@ -8077,7 +8077,7 @@ bool QuestRestrictionInfo__IsUniqueIndividuality_43325656(
            Master_object,
            &v49,
            npcFollowerInfo->fields.npcFollowerSvtId,
-           (const MethodInfo_3398DE0 *)Method_DataMasterBase_NpcServantFollowerMaster__NpcServantFollowerEntity__long__TryGetEntity__) )
+           (const MethodInfo_33A3648 *)Method_DataMasterBase_NpcServantFollowerMaster__NpcServantFollowerEntity__long__TryGetEntity__) )
     {
       Instance = v49;
       if ( !v49 )
@@ -8103,17 +8103,17 @@ LABEL_73:
 LABEL_17:
   if ( !DataManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-  Instance = DataManager__GetMaster_object_((const MethodInfo_30DD39C *)Method_DataManager_GetMaster_ServantMaster___);
+  Instance = DataManager__GetMaster_object_((const MethodInfo_30E7C04 *)Method_DataManager_GetMaster_ServantMaster___);
   if ( !Instance
     || (v19 = (DataMasterBase_TMaster__TEntity__PKType__o *)Instance,
         Instance = DataMasterBase_object__object__int___GetEntity(
                      (DataMasterBase_TMaster__TEntity__PKType__o *)Instance,
                      svtId,
-                     (const MethodInfo_3396838 *)Method_DataMasterBase_ServantMaster__ServantEntity__int__GetEntity__),
+                     (const MethodInfo_33A10A0 *)Method_DataMasterBase_ServantMaster__ServantEntity__int__GetEntity__),
         (uniqueIndividualitys = this->fields.uniqueIndividualitys) == 0) )
   {
 LABEL_75:
-    sub_1C32E7C(Instance);
+    sub_1C372B4(Instance);
   }
   max_length = uniqueIndividualitys->max_length;
   if ( (int)max_length >= 1 )
@@ -8125,14 +8125,14 @@ LABEL_75:
     do
     {
       if ( v22 >= (unsigned int)max_length )
-        sub_1C32E84(Instance);
+        sub_1C372BC(Instance);
       v23 = uniqueIndividualitys->m_Items[v22];
       if ( source )
       {
         Instance = (void *)System_Linq_Enumerable__Contains_int_(
                              source,
                              v23,
-                             (const MethodInfo_30FA3A0 *)Method_System_Linq_Enumerable_Contains_int___);
+                             (const MethodInfo_3104C08 *)Method_System_Linq_Enumerable_Contains_int___);
         if ( ((unsigned __int8)Instance & 1) != 0 )
           goto LABEL_29;
       }
@@ -8173,7 +8173,7 @@ LABEL_29:
                        v46,
                        &entity,
                        v25->fields.npcFollowerSvtId,
-                       (const MethodInfo_3398DE0 *)Method_DataMasterBase_NpcServantFollowerIndividualityMaster__NpcServantFollowerIndividualityEntity__long__TryGetEntity__) )
+                       (const MethodInfo_33A3648 *)Method_DataMasterBase_NpcServantFollowerIndividualityMaster__NpcServantFollowerIndividualityEntity__long__TryGetEntity__) )
                 {
                   NpcServantIndividuality = (System_Collections_Generic_IEnumerable_TSource__o *)FollowerInfo__GetNpcServantIndividuality(
                                                                                                    v25,
@@ -8190,7 +8190,7 @@ LABEL_29:
                           Master_object,
                           &v48,
                           v25->fields.npcFollowerSvtId,
-                          (const MethodInfo_3398DE0 *)Method_DataMasterBase_NpcServantFollowerMaster__NpcServantFollowerEntity__long__TryGetEntity__) )
+                          (const MethodInfo_33A3648 *)Method_DataMasterBase_NpcServantFollowerMaster__NpcServantFollowerEntity__long__TryGetEntity__) )
                     goto LABEL_54;
                   Instance = v48;
                   if ( !v48 )
@@ -8217,11 +8217,11 @@ LABEL_54:
                       j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
                     *(_QWORD *)&v51.fields.currentCryptoKey = v34;
                     *(_QWORD *)&v51.fields.fakeValue = v33;
-                    v35 = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_48887784(v51, 0);
+                    v35 = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_48930896(v51, 0);
                     v36 = DataMasterBase_object__object__int___GetEntity(
                             v19,
                             v35,
-                            (const MethodInfo_3396838 *)Method_DataMasterBase_ServantMaster__ServantEntity__int__GetEntity__);
+                            (const MethodInfo_33A10A0 *)Method_DataMasterBase_ServantMaster__ServantEntity__int__GetEntity__);
                     v37 = v32[16];
                     v38 = v32[45];
                     v39 = (ServantEntity_o *)v36;
@@ -8240,7 +8240,7 @@ LABEL_54:
                 if ( System_Linq_Enumerable__Contains_int_(
                        NpcServantIndividuality,
                        v23,
-                       (const MethodInfo_30FA3A0 *)Method_System_Linq_Enumerable_Contains_int___) )
+                       (const MethodInfo_3104C08 *)Method_System_Linq_Enumerable_Contains_int___) )
                 {
                   return 1;
                 }
@@ -8250,12 +8250,12 @@ LABEL_54:
                 v28 = PartyOrganizationListViewItem__get_SvtId(v26, 0);
                 if ( !CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo->_2.cctor_finished )
                   j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
-                v29 = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_48887784(v28, 0);
+                v29 = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_48930896(v28, 0);
                 if ( DataMasterBase_object__object__int___TryGetEntity(
                        v19,
                        &v47,
                        v29,
-                       (const MethodInfo_3396884 *)Method_DataMasterBase_ServantMaster__ServantEntity__int__TryGetEntity__) )
+                       (const MethodInfo_33A10EC *)Method_DataMasterBase_ServantMaster__ServantEntity__int__TryGetEntity__) )
                 {
                   v30 = v47;
                   svtLimitCount = v26->fields.svtLimitCount;
@@ -8286,7 +8286,7 @@ bool QuestRestrictionInfo__IsUniqueServant(QuestRestrictionInfo_o *this, const M
 }
 
 
-bool QuestRestrictionInfo__IsUniqueServant_43323644(
+bool QuestRestrictionInfo__IsUniqueServant_43425512(
         QuestRestrictionInfo_o *this,
         int32_t svtId,
         const MethodInfo *method)
@@ -8297,10 +8297,10 @@ bool QuestRestrictionInfo__IsUniqueServant_43323644(
   struct System_Int32_array *deckSvtIdList; // x9
   int32_t v9; // w9
 
-  if ( (byte_4C38D28 & 1) == 0 )
+  if ( (byte_4C44321 & 1) == 0 )
   {
-    sub_1C32C20(&BalanceConfig_TypeInfo);
-    byte_4C38D28 = 1;
+    sub_1C37058(&BalanceConfig_TypeInfo);
+    byte_4C44321 = 1;
   }
   isUniqueServant = this->fields.isUniqueServant;
   if ( isUniqueServant )
@@ -8324,9 +8324,9 @@ bool QuestRestrictionInfo__IsUniqueServant_43323644(
             break;
           deckSvtIdList = this->fields.deckSvtIdList;
           if ( !deckSvtIdList )
-            sub_1C32E7C(v7);
+            sub_1C372B4(v7);
           if ( (unsigned int)v6 >= LODWORD(deckSvtIdList->max_length) )
-            sub_1C32E84(v7);
+            sub_1C372BC(v7);
           v9 = deckSvtIdList->m_Items[v6++];
         }
         while ( v9 != svtId );
@@ -8337,7 +8337,7 @@ bool QuestRestrictionInfo__IsUniqueServant_43323644(
 }
 
 
-bool QuestRestrictionInfo__IsUniqueServant_43323844(
+bool QuestRestrictionInfo__IsUniqueServant_43425712(
         QuestRestrictionInfo_o *this,
         int32_t svtId,
         PartyListViewItem_o *partyItem,
@@ -8351,11 +8351,11 @@ bool QuestRestrictionInfo__IsUniqueServant_43323844(
   int32_t totalCostRestrictionEntity_high; // w8
   CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o v15; // kr00_16
 
-  if ( (byte_4C38D29 & 1) == 0 )
+  if ( (byte_4C44322 & 1) == 0 )
   {
-    sub_1C32C20(&BalanceConfig_TypeInfo);
-    sub_1C32C20(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
-    byte_4C38D29 = 1;
+    sub_1C37058(&BalanceConfig_TypeInfo);
+    sub_1C37058(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
+    byte_4C44322 = 1;
   }
   if ( !this->fields.isUniqueServant )
     return 0;
@@ -8377,11 +8377,11 @@ bool QuestRestrictionInfo__IsUniqueServant_43323844(
       if ( num != i && partyIndex != i )
       {
         if ( !partyItem || (Member = PartyListViewItem__GetMember(partyItem, i, 0)) == 0 )
-          sub_1C32E7C(Member);
+          sub_1C372B4(Member);
         v15 = PartyOrganizationListViewItem__get_SvtId(Member, 0);
         if ( !CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo->_2.cctor_finished )
           j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
-        if ( CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_48887784(v15, 0) == svtId )
+        if ( CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_48930896(v15, 0) == svtId )
           break;
       }
     }
@@ -8407,16 +8407,16 @@ bool QuestRestrictionInfo__IsWaveSetupSwitchParty(QuestRestrictionInfo_o *this, 
   QuestPhaseMaster_o *Master_object; // x0
   QuestPhaseEntity_o *entity; // [xsp+8h] [xbp-28h] BYREF
 
-  if ( (byte_4C38D60 & 1) == 0 )
+  if ( (byte_4C44359 & 1) == 0 )
   {
-    sub_1C32C20(&Method_DataManager_GetMaster_QuestPhaseMaster___);
-    sub_1C32C20(&DataManager_TypeInfo);
-    byte_4C38D60 = 1;
+    sub_1C37058(&Method_DataManager_GetMaster_QuestPhaseMaster___);
+    sub_1C37058(&DataManager_TypeInfo);
+    byte_4C44359 = 1;
   }
   entity = 0;
   if ( !DataManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-  Master_object = (QuestPhaseMaster_o *)DataManager__GetMaster_object_((const MethodInfo_30DD39C *)Method_DataManager_GetMaster_QuestPhaseMaster___);
+  Master_object = (QuestPhaseMaster_o *)DataManager__GetMaster_object_((const MethodInfo_30E7C04 *)Method_DataManager_GetMaster_QuestPhaseMaster___);
   if ( !Master_object )
     goto LABEL_11;
   if ( !QuestPhaseMaster__TryGetEntity(Master_object, &entity, this->fields.questId, this->fields.questPhase, 0) )
@@ -8424,7 +8424,7 @@ bool QuestRestrictionInfo__IsWaveSetupSwitchParty(QuestRestrictionInfo_o *this, 
   Master_object = (QuestPhaseMaster_o *)entity;
   if ( !entity )
 LABEL_11:
-    sub_1C32E7C(Master_object);
+    sub_1C372B4(Master_object);
   return QuestPhaseEntity__IsWaveSetupSwitchParty(entity, 0);
 }
 
@@ -8440,12 +8440,12 @@ void QuestRestrictionInfo__ResetDeckInfo(QuestRestrictionInfo_o *this, const Met
   const MethodInfo *v9; // x3
   const MethodInfo *v10; // x1
 
-  if ( (byte_4C38D17 & 1) == 0 )
+  if ( (byte_4C44310 & 1) == 0 )
   {
-    sub_1C32C20(&BalanceConfig_TypeInfo);
-    sub_1C32C20(&FollowerInfo___TypeInfo);
-    sub_1C32C20(&int___TypeInfo);
-    byte_4C38D17 = 1;
+    sub_1C37058(&BalanceConfig_TypeInfo);
+    sub_1C37058(&FollowerInfo___TypeInfo);
+    sub_1C37058(&int___TypeInfo);
+    byte_4C44310 = 1;
   }
   v3 = BalanceConfig_TypeInfo;
   if ( !BalanceConfig_TypeInfo->_2.cctor_finished )
@@ -8453,14 +8453,14 @@ void QuestRestrictionInfo__ResetDeckInfo(QuestRestrictionInfo_o *this, const Met
     j_il2cpp_runtime_class_init_0(BalanceConfig_TypeInfo);
     v3 = BalanceConfig_TypeInfo;
   }
-  v4 = (struct System_Int32_array *)sub_1C32CC8(int___TypeInfo, (unsigned int)v3->static_fields->DeckMemberMax);
+  v4 = (struct System_Int32_array *)sub_1C37100(int___TypeInfo, (unsigned int)v3->static_fields->DeckMemberMax);
   this->fields.deckSvtIdList = v4;
-  sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.deckSvtIdList, (int32_t)v4, v5, v6);
-  v7 = (struct FollowerInfo_array *)sub_1C32CC8(
+  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.deckSvtIdList, (int32_t)v4, v5, v6);
+  v7 = (struct FollowerInfo_array *)sub_1C37100(
                                       FollowerInfo___TypeInfo,
                                       (unsigned int)BalanceConfig_TypeInfo->static_fields->DeckMemberMax);
   this->fields.deckNpcInfoList = v7;
-  sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.deckNpcInfoList, (int32_t)v7, v8, v9);
+  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.deckNpcInfoList, (int32_t)v7, v8, v9);
   QuestRestrictionInfo__SetFixNpcFollowerDeckInfo(this, v10);
 }
 
@@ -8498,19 +8498,19 @@ void QuestRestrictionInfo__SetDeckInfo(
   CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o v30; // 0:x0.16
   CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o v31; // 0:x0.16
 
-  if ( (byte_4C38D14 & 1) == 0 )
+  if ( (byte_4C4430D & 1) == 0 )
   {
-    sub_1C32C20(&BalanceConfig_TypeInfo);
-    sub_1C32C20(&Method_DataManager_GetMaster_NpcFollowerMaster___);
-    sub_1C32C20(&DataManager_TypeInfo);
-    sub_1C32C20(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
-    byte_4C38D14 = 1;
+    sub_1C37058(&BalanceConfig_TypeInfo);
+    sub_1C37058(&Method_DataManager_GetMaster_NpcFollowerMaster___);
+    sub_1C37058(&DataManager_TypeInfo);
+    sub_1C37058(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
+    byte_4C4430D = 1;
   }
   if ( userDeckEntity && this->fields.deckSvtIdList )
   {
     if ( !DataManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-    Master_object = DataManager__GetMaster_object_((const MethodInfo_30DD39C *)Method_DataManager_GetMaster_NpcFollowerMaster___);
+    Master_object = DataManager__GetMaster_object_((const MethodInfo_30E7C04 *)Method_DataManager_GetMaster_NpcFollowerMaster___);
     v6 = 0;
     v7 = 8;
     v10 = (unsigned int)UserDeckEntity__GetFollowerIndex(userDeckEntity, 0) - 1LL;
@@ -8539,7 +8539,7 @@ void QuestRestrictionInfo__SetDeckInfo(
           if ( v6 >= max_length_low )
             goto LABEL_43;
           deckNpcInfoList->m_Items[v6] = 0;
-          sub_1C32BC4((CGThumbnailListItem_o *)((char *)deckNpcInfoList + v7 * 4), 0, v8, v9);
+          sub_1C36FFC((CGThumbnailListItem_o *)((char *)deckNpcInfoList + v7 * 4), 0, v8, v9);
         }
       }
       if ( v10 != v6 )
@@ -8554,7 +8554,7 @@ void QuestRestrictionInfo__SetDeckInfo(
             {
               if ( !Master_object )
                 goto LABEL_44;
-              NpcFollowerServantId = (__int64)NpcFollowerMaster__GetEntity_42319072(
+              NpcFollowerServantId = (__int64)NpcFollowerMaster__GetEntity_42420940(
                                                 (NpcFollowerMaster_o *)Master_object,
                                                 this->fields.questId,
                                                 this->fields.questPhase,
@@ -8574,18 +8574,18 @@ void QuestRestrictionInfo__SetDeckInfo(
               v19 = NpcFollowerServantId;
               if ( NpcFollowerServantId )
               {
-                NpcFollowerServantId = sub_1C32D5C(NpcFollowerServantId, *(_QWORD *)(*(_QWORD *)v16 + 64LL));
+                NpcFollowerServantId = sub_1C37194(NpcFollowerServantId, *(_QWORD *)(*(_QWORD *)v16 + 64LL));
                 if ( !NpcFollowerServantId )
                 {
-                  v29 = sub_1C32EA0(0);
-                  sub_1C32D48(v29, 0);
+                  v29 = sub_1C372D8(0);
+                  sub_1C37180(v29, 0);
                 }
               }
               if ( v6 >= v16[6] )
 LABEL_43:
-                sub_1C32E84(NpcFollowerServantId);
+                sub_1C372BC(NpcFollowerServantId);
               *(_QWORD *)&v16[2 * v6 + 8] = v19;
-              sub_1C32BC4((CGThumbnailListItem_o *)&v16[v7], v19, v17, v18);
+              sub_1C36FFC((CGThumbnailListItem_o *)&v16[v7], v19, v17, v18);
             }
           }
         }
@@ -8600,10 +8600,10 @@ LABEL_43:
             j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
           *(_QWORD *)&v30.fields.currentCryptoKey = v24;
           *(_QWORD *)&v30.fields.fakeValue = v23;
-          NpcFollowerServantId = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_48887784(v30, 0);
+          NpcFollowerServantId = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_48930896(v30, 0);
           if ( !v22 )
 LABEL_44:
-            sub_1C32E7C(NpcFollowerServantId);
+            sub_1C372B4(NpcFollowerServantId);
           if ( v6 >= LODWORD(v22->max_length) )
             goto LABEL_43;
           v22->m_Items[v6] = NpcFollowerServantId;
@@ -8616,7 +8616,7 @@ LABEL_44:
               j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
             *(_QWORD *)&v31.fields.currentCryptoKey = v27;
             *(_QWORD *)&v31.fields.fakeValue = v26;
-            NpcFollowerServantId = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_48887784(v31, 0);
+            NpcFollowerServantId = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_48930896(v31, 0);
             if ( v6 >= LODWORD(deckLimitCountList->max_length) )
               goto LABEL_43;
             deckLimitCountList->m_Items[v6] = NpcFollowerServantId;
@@ -8638,7 +8638,7 @@ LABEL_44:
 }
 
 
-void QuestRestrictionInfo__SetDeckInfo_43312860(
+void QuestRestrictionInfo__SetDeckInfo_43414728(
         QuestRestrictionInfo_o *this,
         UserEventDeckEntity_o *eventDeckEntity,
         const MethodInfo *method)
@@ -8657,7 +8657,7 @@ void QuestRestrictionInfo__SetDeckInfo_43312860(
   struct FollowerInfo_array *v16; // x8
   int64_t NpcFollowerServantId; // x0
   int64_t v18; // x3
-  NpcFollowerEntity_o *Entity_42319072; // x0
+  NpcFollowerEntity_o *Entity_42420940; // x0
   unsigned int *v20; // x25
   int32_t v21; // w2
   const MethodInfo *v22; // x3
@@ -8676,14 +8676,14 @@ void QuestRestrictionInfo__SetDeckInfo_43312860(
   CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o v35; // 0:x0.16
   CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o v36; // 0:x0.16
 
-  if ( (byte_4C38D15 & 1) == 0 )
+  if ( (byte_4C4430E & 1) == 0 )
   {
-    sub_1C32C20(&BalanceConfig_TypeInfo);
-    sub_1C32C20(&Method_DataManager_GetMaster_NpcFollowerMaster___);
-    sub_1C32C20(&DataManager_TypeInfo);
-    sub_1C32C20(&Method_System_Collections_Generic_List_int__Contains__);
-    sub_1C32C20(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
-    byte_4C38D15 = 1;
+    sub_1C37058(&BalanceConfig_TypeInfo);
+    sub_1C37058(&Method_DataManager_GetMaster_NpcFollowerMaster___);
+    sub_1C37058(&DataManager_TypeInfo);
+    sub_1C37058(&Method_System_Collections_Generic_List_int__Contains__);
+    sub_1C37058(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
+    byte_4C4430E = 1;
   }
   fixed = QuestRestrictionInfo__SetFixNpcFollowerDeckInfo(this, (const MethodInfo *)eventDeckEntity);
   if ( eventDeckEntity && this->fields.deckSvtIdList )
@@ -8691,7 +8691,7 @@ void QuestRestrictionInfo__SetDeckInfo_43312860(
     v6 = fixed;
     if ( !DataManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-    Master_object = (NpcFollowerMaster_o *)DataManager__GetMaster_object_((const MethodInfo_30DD39C *)Method_DataManager_GetMaster_NpcFollowerMaster___);
+    Master_object = (NpcFollowerMaster_o *)DataManager__GetMaster_object_((const MethodInfo_30E7C04 *)Method_DataManager_GetMaster_NpcFollowerMaster___);
     v7 = 0;
     v8 = 8;
     v9 = (unsigned int)UserEventDeckEntity__GetFollowerIndex(eventDeckEntity, 0) - 1LL;
@@ -8719,7 +8719,7 @@ void QuestRestrictionInfo__SetDeckInfo_43312860(
         Follower = System_Collections_Generic_List_int___Contains(
                      v6,
                      v7,
-                     (const MethodInfo_377BB10 *)Method_System_Collections_Generic_List_int__Contains__);
+                     (const MethodInfo_3786378 *)Method_System_Collections_Generic_List_int__Contains__);
         if ( (Follower & 1) == 0 )
         {
           v15 = this->fields.deckNpcInfoList;
@@ -8728,7 +8728,7 @@ void QuestRestrictionInfo__SetDeckInfo_43312860(
           if ( v7 >= LODWORD(v15->max_length) )
             goto LABEL_49;
           v15->m_Items[v7] = 0;
-          sub_1C32BC4((CGThumbnailListItem_o *)((char *)v15 + v8 * 4), 0, v13, v14);
+          sub_1C36FFC((CGThumbnailListItem_o *)((char *)v15 + v8 * 4), 0, v13, v14);
         }
       }
       if ( v9 != v7 )
@@ -8741,7 +8741,7 @@ void QuestRestrictionInfo__SetDeckInfo_43312860(
           if ( !System_Collections_Generic_List_int___Contains(
                   v6,
                   v7,
-                  (const MethodInfo_377BB10 *)Method_System_Collections_Generic_List_int__Contains__) )
+                  (const MethodInfo_3786378 *)Method_System_Collections_Generic_List_int__Contains__) )
           {
             NpcFollowerServantId = UserEventDeckEntity__GetNpcFollowerServantId(eventDeckEntity, v7, 0);
             if ( NpcFollowerServantId >= 1 )
@@ -8750,37 +8750,37 @@ void QuestRestrictionInfo__SetDeckInfo_43312860(
               Follower = (__int64)Master_object;
               if ( !Master_object )
                 goto LABEL_48;
-              Entity_42319072 = NpcFollowerMaster__GetEntity_42319072(
+              Entity_42420940 = NpcFollowerMaster__GetEntity_42420940(
                                   Master_object,
                                   this->fields.questId,
                                   this->fields.questPhase,
                                   v18,
                                   0);
-              if ( Entity_42319072 )
+              if ( Entity_42420940 )
               {
                 v20 = (unsigned int *)this->fields.deckNpcInfoList;
                 Follower = (__int64)NpcFollowerMaster__GetFollower(
                                       Master_object,
                                       this->fields.questId,
                                       this->fields.questPhase,
-                                      Entity_42319072->fields.id,
+                                      Entity_42420940->fields.id,
                                       0);
                 if ( !v20 )
                   goto LABEL_48;
                 v23 = Follower;
                 if ( Follower )
                 {
-                  Follower = sub_1C32D5C(Follower, *(_QWORD *)(*(_QWORD *)v20 + 64LL));
+                  Follower = sub_1C37194(Follower, *(_QWORD *)(*(_QWORD *)v20 + 64LL));
                   if ( !Follower )
                   {
-                    v33 = sub_1C32EA0(0);
-                    sub_1C32D48(v33, 0);
+                    v33 = sub_1C372D8(0);
+                    sub_1C37180(v33, 0);
                   }
                 }
                 if ( v7 >= v20[6] )
                   goto LABEL_49;
                 *(_QWORD *)&v20[2 * v7 + 8] = v23;
-                sub_1C32BC4((CGThumbnailListItem_o *)&v20[v8], v23, v21, v22);
+                sub_1C36FFC((CGThumbnailListItem_o *)&v20[v8], v23, v21, v22);
               }
             }
           }
@@ -8796,13 +8796,13 @@ void QuestRestrictionInfo__SetDeckInfo_43312860(
             j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
           *(_QWORD *)&v35.fields.currentCryptoKey = v28;
           *(_QWORD *)&v35.fields.fakeValue = v27;
-          Follower = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_48887784(v35, 0);
+          Follower = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_48930896(v35, 0);
           if ( !v26 )
 LABEL_48:
-            sub_1C32E7C(Follower);
+            sub_1C372B4(Follower);
           if ( v7 >= LODWORD(v26->max_length) )
 LABEL_49:
-            sub_1C32E84(Follower);
+            sub_1C372BC(Follower);
           v26->m_Items[v7] = Follower;
           deckLimitCountList = this->fields.deckLimitCountList;
           if ( deckLimitCountList )
@@ -8813,7 +8813,7 @@ LABEL_49:
               j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
             *(_QWORD *)&v36.fields.currentCryptoKey = v31;
             *(_QWORD *)&v36.fields.fakeValue = v30;
-            Follower = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_48887784(v36, 0);
+            Follower = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_48930896(v36, 0);
             if ( v7 >= LODWORD(deckLimitCountList->max_length) )
               goto LABEL_49;
             deckLimitCountList->m_Items[v7] = Follower;
@@ -8835,7 +8835,7 @@ LABEL_49:
 }
 
 
-void QuestRestrictionInfo__SetDeckInfo_43314212(
+void QuestRestrictionInfo__SetDeckInfo_43416080(
         QuestRestrictionInfo_o *this,
         PartyListViewItem_o *partyItem,
         int32_t num,
@@ -8859,11 +8859,11 @@ void QuestRestrictionInfo__SetDeckInfo_43314212(
   struct FollowerInfo_o *v22; // x22
   __int64 v23; // x0
 
-  if ( (byte_4C38D16 & 1) == 0 )
+  if ( (byte_4C4430F & 1) == 0 )
   {
-    sub_1C32C20(&BalanceConfig_TypeInfo);
-    sub_1C32C20(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
-    byte_4C38D16 = 1;
+    sub_1C37058(&BalanceConfig_TypeInfo);
+    sub_1C37058(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
+    byte_4C4430F = 1;
   }
   if ( this->fields.deckSvtIdList )
   {
@@ -8888,7 +8888,7 @@ void QuestRestrictionInfo__SetDeckInfo_43314212(
           if ( v7 >= max_length_low )
             goto LABEL_40;
           deckNpcInfoList->m_Items[v7] = 0;
-          sub_1C32BC4((CGThumbnailListItem_o *)((char *)deckNpcInfoList + i * 4), 0, num, method);
+          sub_1C36FFC((CGThumbnailListItem_o *)((char *)deckNpcInfoList + i * 4), 0, num, method);
         }
       }
       if ( v8 == v7 )
@@ -8912,12 +8912,12 @@ void QuestRestrictionInfo__SetDeckInfo_43314212(
         SvtId = PartyOrganizationListViewItem__get_SvtId(Member, 0);
         if ( !CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo->_2.cctor_finished )
           j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
-        Member = (PartyOrganizationListViewItem_o *)CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_48887784(
+        Member = (PartyOrganizationListViewItem_o *)CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_48930896(
                                                       SvtId,
                                                       0);
         if ( !v14 )
 LABEL_39:
-          sub_1C32E7C(Member);
+          sub_1C372B4(Member);
         if ( v7 >= LODWORD(v14->max_length) )
           goto LABEL_40;
         v14->m_Items[v7] = (int)Member;
@@ -8953,18 +8953,18 @@ LABEL_39:
                 v22 = v15->fields.followerInfo;
                 if ( v22 )
                 {
-                  Member = (PartyOrganizationListViewItem_o *)sub_1C32D5C(v22, *(_QWORD *)(*(_QWORD *)v21 + 64LL));
+                  Member = (PartyOrganizationListViewItem_o *)sub_1C37194(v22, *(_QWORD *)(*(_QWORD *)v21 + 64LL));
                   if ( !Member )
                   {
-                    v23 = sub_1C32EA0(0);
-                    sub_1C32D48(v23, 0);
+                    v23 = sub_1C372D8(0);
+                    sub_1C37180(v23, 0);
                   }
                 }
                 if ( v7 >= v21[6] )
 LABEL_40:
-                  sub_1C32E84(Member);
+                  sub_1C372BC(Member);
                 *(_QWORD *)&v21[2 * v7 + 8] = v22;
-                sub_1C32BC4((CGThumbnailListItem_o *)&v21[i], (int32_t)v22, num, method);
+                sub_1C36FFC((CGThumbnailListItem_o *)&v21[i], (int32_t)v22, num, method);
               }
             }
           }
@@ -8998,24 +8998,24 @@ System_Collections_Generic_List_int__o *QuestRestrictionInfo__SetFixNpcFollowerD
   int32_t v18; // w1
   __int64 v20; // x0
 
-  if ( (byte_4C38D18 & 1) == 0 )
+  if ( (byte_4C44311 & 1) == 0 )
   {
-    sub_1C32C20(&Method_DataManager_GetMaster_NpcFollowerMaster___);
-    sub_1C32C20(&DataManager_TypeInfo);
-    sub_1C32C20(&Method_System_Collections_Generic_List_int__Add__);
-    sub_1C32C20(&Method_System_Collections_Generic_List_int___ctor__);
-    sub_1C32C20(&System_Collections_Generic_List_int__TypeInfo);
-    byte_4C38D18 = 1;
+    sub_1C37058(&Method_DataManager_GetMaster_NpcFollowerMaster___);
+    sub_1C37058(&DataManager_TypeInfo);
+    sub_1C37058(&Method_System_Collections_Generic_List_int__Add__);
+    sub_1C37058(&Method_System_Collections_Generic_List_int___ctor__);
+    sub_1C37058(&System_Collections_Generic_List_int__TypeInfo);
+    byte_4C44311 = 1;
   }
-  v3 = (System_Collections_Generic_List_int__o *)sub_1C32E6C(System_Collections_Generic_List_int__TypeInfo);
+  v3 = (System_Collections_Generic_List_int__o *)sub_1C372A4(System_Collections_Generic_List_int__TypeInfo);
   System_Collections_Generic_List_int____ctor(
     v3,
-    (const MethodInfo_377AF44 *)Method_System_Collections_Generic_List_int___ctor__);
+    (const MethodInfo_37857AC *)Method_System_Collections_Generic_List_int___ctor__);
   if ( this->fields.deckNpcInfoList && this->fields.isNpcMultipleBattle && !this->fields.isNpcEditablePos )
   {
     if ( !DataManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-    Master_object = (FollowerInfo_array *)DataManager__GetMaster_object_((const MethodInfo_30DD39C *)Method_DataManager_GetMaster_NpcFollowerMaster___);
+    Master_object = (FollowerInfo_array *)DataManager__GetMaster_object_((const MethodInfo_30E7C04 *)Method_DataManager_GetMaster_NpcFollowerMaster___);
     if ( !Master_object
       || (Master_object = NpcFollowerMaster__GetQuestFollowerList(
                             (NpcFollowerMaster_o *)Master_object,
@@ -9024,7 +9024,7 @@ System_Collections_Generic_List_int__o *QuestRestrictionInfo__SetFixNpcFollowerD
                             0)) == 0 )
     {
 LABEL_25:
-      sub_1C32E7C(Master_object);
+      sub_1C372B4(Master_object);
     }
     max_length = Master_object->max_length;
     v6 = Master_object;
@@ -9042,17 +9042,17 @@ LABEL_25:
           if ( !deckNpcInfoList )
             goto LABEL_25;
           npcInitIdx = v8->fields.npcInitIdx;
-          Master_object = (FollowerInfo_array *)sub_1C32D5C(v8, deckNpcInfoList->obj.klass->_1.element_class);
+          Master_object = (FollowerInfo_array *)sub_1C37194(v8, deckNpcInfoList->obj.klass->_1.element_class);
           if ( !Master_object )
           {
-            v20 = sub_1C32EA0(0);
-            sub_1C32D48(v20, 0);
+            v20 = sub_1C372D8(0);
+            sub_1C37180(v20, 0);
           }
           if ( (unsigned int)(npcInitIdx - 1) >= LODWORD(deckNpcInfoList->max_length) )
             break;
           v13 = (char *)deckNpcInfoList + 8 * npcInitIdx - 8;
           *((_QWORD *)v13 + 4) = v8;
-          sub_1C32BC4((CGThumbnailListItem_o *)(v13 + 32), (int32_t)v8, v11, v12);
+          sub_1C36FFC((CGThumbnailListItem_o *)(v13 + 32), (int32_t)v8, v11, v12);
           if ( !v3 )
             goto LABEL_25;
           v14 = v8->fields.npcInitIdx;
@@ -9068,7 +9068,7 @@ LABEL_25:
             System_Collections_Generic_List_int___AddWithResize(
               v3,
               v18,
-              *(const MethodInfo_377B798 **)(*(_QWORD *)(v16[4] + 192LL) + 112LL));
+              *(const MethodInfo_3786000 **)(*(_QWORD *)(v16[4] + 192LL) + 112LL));
           }
           else
           {
@@ -9080,7 +9080,7 @@ LABEL_25:
         if ( (int)++v7 >= max_length )
           return v3;
       }
-      sub_1C32E84(Master_object);
+      sub_1C372BC(Master_object);
     }
   }
   return v3;
@@ -9420,7 +9420,7 @@ void QuestRestrictionInfo__Setup(
   int v328; // w21
   int v329; // w22
   __int64 v330; // x8
-  bool HasFlag_42367412; // w0
+  bool HasFlag_42469280; // w0
   bool v332; // w0
   Il2CppObject *Value_int__object; // x0
   int v334; // w9
@@ -9491,79 +9491,79 @@ void QuestRestrictionInfo__Setup(
   QuestPhaseEntity_o *v401; // [xsp+130h] [xbp-70h] BYREF
   Il2CppObject *v402; // [xsp+138h] [xbp-68h] BYREF
 
-  if ( (byte_4C38D12 & 1) == 0 )
+  if ( (byte_4C4430B & 1) == 0 )
   {
-    sub_1C32C20(&BalanceConfig_TypeInfo);
-    sub_1C32C20(&Method_BasicHelper_Any_RestrictionSlotDetailEntity___);
-    sub_1C32C20(&Method_BasicHelper_Any_RestrictionSlotEntity___);
-    sub_1C32C20(&Method_BasicHelper_GetValue_int__RestrictionSlotEntity_____);
-    sub_1C32C20(&Method_DataManager_GetMaster_NpcFollowerMaster___);
-    sub_1C32C20(&Method_DataManager_GetMaster_QuestGroupMaster___);
-    sub_1C32C20(&Method_DataManager_GetMaster_QuestMaster___);
-    sub_1C32C20(&Method_DataManager_GetMaster_QuestPhaseMaster___);
-    sub_1C32C20(&Method_DataManager_GetMaster_RestrictionBaseMaster___);
-    sub_1C32C20(&Method_DataManager_GetMaster_RestrictionMessageMaster___);
-    sub_1C32C20(&Method_DataManager_GetMaster_RestrictionSlotDetailMaster___);
-    sub_1C32C20(&Method_DataManager_GetMaster_RestrictionSlotMaster___);
-    sub_1C32C20(&Method_DataManager_GetMaster_RestrictionWholeMaster___);
-    sub_1C32C20(&DataManager_TypeInfo);
-    sub_1C32C20(&Method_DataMasterBase_QuestMaster__QuestEntity__int__TryGetEntity__);
-    sub_1C32C20(&Method_DataMasterBase_RestrictionMessageMaster__RestrictionMessageEntity__int__TryGetEntity__);
-    sub_1C32C20(&QuestRestrictionInfo_DialogMessageInfo_TypeInfo);
-    sub_1C32C20(&Method_System_Collections_Generic_Dictionary_int__RestrictionSlotDetailEntity____Add__);
-    sub_1C32C20(&Method_System_Collections_Generic_Dictionary_int__RestrictionSlotEntity____Add__);
-    sub_1C32C20(&Method_System_Collections_Generic_Dictionary_int__QuestRestrictionInfo_DialogMessageInfo__Add__);
-    sub_1C32C20(&Method_System_Collections_Generic_Dictionary_int__RestrictionSlotEntity____Clear__);
-    sub_1C32C20(&Method_System_Collections_Generic_Dictionary_int__RestrictionSlotDetailEntity____Clear__);
-    sub_1C32C20(&Method_System_Collections_Generic_Dictionary_int__RestrictionSlotEntity_____ctor__);
-    sub_1C32C20(&Method_System_Collections_Generic_Dictionary_int__QuestRestrictionInfo_DialogMessageInfo___ctor__);
-    sub_1C32C20(&Method_System_Collections_Generic_Dictionary_int__RestrictionSlotDetailEntity_____ctor__);
-    sub_1C32C20(&Method_System_Collections_Generic_Dictionary_int__RestrictionSlotEntity____get_Count__);
-    sub_1C32C20(&Method_System_Collections_Generic_Dictionary_int__RestrictionSlotDetailEntity____get_Item__);
-    sub_1C32C20(&Method_System_Collections_Generic_Dictionary_int__RestrictionSlotEntity____get_Values__);
-    sub_1C32C20(&System_Collections_Generic_Dictionary_int__RestrictionSlotEntity____TypeInfo);
-    sub_1C32C20(&System_Collections_Generic_Dictionary_int__RestrictionSlotDetailEntity____TypeInfo);
-    sub_1C32C20(&System_Collections_Generic_Dictionary_int__QuestRestrictionInfo_DialogMessageInfo__TypeInfo);
-    sub_1C32C20(&Method_System_Collections_Generic_Dictionary_ValueCollection_Enumerator_int__RestrictionSlotEntity____Dispose__);
-    sub_1C32C20(&Method_System_Collections_Generic_Dictionary_ValueCollection_Enumerator_int__RestrictionSlotEntity____MoveNext__);
-    sub_1C32C20(&Method_System_Collections_Generic_Dictionary_ValueCollection_Enumerator_int__RestrictionSlotEntity____get_Current__);
-    sub_1C32C20(&FollowerInfo___TypeInfo);
-    sub_1C32C20(&System_Func_RestrictionSlotDetailEntity__bool__TypeInfo);
-    sub_1C32C20(&System_Func_RestrictionSlotEntity__bool__TypeInfo);
-    sub_1C32C20(&int___TypeInfo);
-    sub_1C32C20(&Method_System_Collections_Generic_List_int__Add__);
-    sub_1C32C20(&Method_System_Collections_Generic_List_bool____Add__);
-    sub_1C32C20(&Method_System_Collections_Generic_List_RestrictionMessageEntity__Add__);
-    sub_1C32C20(&Method_System_Collections_Generic_List_Restriction_RangeType__Add__);
-    sub_1C32C20(&Method_System_Collections_Generic_List_int____Add__);
-    sub_1C32C20(&Method_System_Collections_Generic_List_int__Contains__);
-    sub_1C32C20(&Method_System_Collections_Generic_List_RestrictionMessageEntity__Contains__);
-    sub_1C32C20(&Method_System_Collections_Generic_List_RestrictionMessageEntity__ToArray__);
-    sub_1C32C20(&Method_System_Collections_Generic_List_int___ctor__);
-    sub_1C32C20(&Method_System_Collections_Generic_List_RestrictionEntity___ctor__);
-    sub_1C32C20(&Method_System_Collections_Generic_List_bool_____ctor__);
-    sub_1C32C20(&Method_System_Collections_Generic_List_RestrictionMessageEntity___ctor__);
-    sub_1C32C20(&Method_System_Collections_Generic_List_int_____ctor__);
-    sub_1C32C20(&System_Collections_Generic_List_int__TypeInfo);
-    sub_1C32C20(&System_Collections_Generic_List_RestrictionMessageEntity__TypeInfo);
-    sub_1C32C20(&System_Collections_Generic_List_RestrictionEntity__TypeInfo);
-    sub_1C32C20(&System_Collections_Generic_List_bool____TypeInfo);
-    sub_1C32C20(&System_Collections_Generic_List_int____TypeInfo);
-    sub_1C32C20(&LocalizationManager_TypeInfo);
-    sub_1C32C20(&QuestRestrictionInfo_SlotInfo___TypeInfo);
-    sub_1C32C20(&QuestRestrictionInfo_SlotInfo_TypeInfo);
-    sub_1C32C20(&System_Text_StringBuilder_TypeInfo);
-    sub_1C32C20(&Method_QuestRestrictionInfo___c__Setup_b__85_0__);
-    sub_1C32C20(&Method_QuestRestrictionInfo___c__Setup_b__85_1__);
-    sub_1C32C20(&Method_QuestRestrictionInfo___c__Setup_b__85_2__);
-    sub_1C32C20(&Method_QuestRestrictionInfo___c__Setup_b__85_3__);
-    sub_1C32C20(&QuestRestrictionInfo___c_TypeInfo);
-    sub_1C32C20(&Method_System_Collections_Generic_Dictionary_ValueCollection_int__RestrictionSlotEntity____GetEnumerator__);
-    sub_1C32C20(&StringLiteral_43/*"\n"*/);
-    sub_1C32C20(&StringLiteral_10299/*"PARTY_ORGANIZATION_SERVANT_QUEST_RESTRICTION_FIXED_POSITION"*/);
-    sub_1C32C20(&StringLiteral_10264/*"PARTY_ORGANIZATION_QUEST_RESTRICTION_WARNING"*/);
-    sub_1C32C20(&StringLiteral_1/*""*/);
-    byte_4C38D12 = 1;
+    sub_1C37058(&BalanceConfig_TypeInfo);
+    sub_1C37058(&Method_BasicHelper_Any_RestrictionSlotDetailEntity___);
+    sub_1C37058(&Method_BasicHelper_Any_RestrictionSlotEntity___);
+    sub_1C37058(&Method_BasicHelper_GetValue_int__RestrictionSlotEntity_____);
+    sub_1C37058(&Method_DataManager_GetMaster_NpcFollowerMaster___);
+    sub_1C37058(&Method_DataManager_GetMaster_QuestGroupMaster___);
+    sub_1C37058(&Method_DataManager_GetMaster_QuestMaster___);
+    sub_1C37058(&Method_DataManager_GetMaster_QuestPhaseMaster___);
+    sub_1C37058(&Method_DataManager_GetMaster_RestrictionBaseMaster___);
+    sub_1C37058(&Method_DataManager_GetMaster_RestrictionMessageMaster___);
+    sub_1C37058(&Method_DataManager_GetMaster_RestrictionSlotDetailMaster___);
+    sub_1C37058(&Method_DataManager_GetMaster_RestrictionSlotMaster___);
+    sub_1C37058(&Method_DataManager_GetMaster_RestrictionWholeMaster___);
+    sub_1C37058(&DataManager_TypeInfo);
+    sub_1C37058(&Method_DataMasterBase_QuestMaster__QuestEntity__int__TryGetEntity__);
+    sub_1C37058(&Method_DataMasterBase_RestrictionMessageMaster__RestrictionMessageEntity__int__TryGetEntity__);
+    sub_1C37058(&QuestRestrictionInfo_DialogMessageInfo_TypeInfo);
+    sub_1C37058(&Method_System_Collections_Generic_Dictionary_int__RestrictionSlotDetailEntity____Add__);
+    sub_1C37058(&Method_System_Collections_Generic_Dictionary_int__RestrictionSlotEntity____Add__);
+    sub_1C37058(&Method_System_Collections_Generic_Dictionary_int__QuestRestrictionInfo_DialogMessageInfo__Add__);
+    sub_1C37058(&Method_System_Collections_Generic_Dictionary_int__RestrictionSlotEntity____Clear__);
+    sub_1C37058(&Method_System_Collections_Generic_Dictionary_int__RestrictionSlotDetailEntity____Clear__);
+    sub_1C37058(&Method_System_Collections_Generic_Dictionary_int__RestrictionSlotEntity_____ctor__);
+    sub_1C37058(&Method_System_Collections_Generic_Dictionary_int__QuestRestrictionInfo_DialogMessageInfo___ctor__);
+    sub_1C37058(&Method_System_Collections_Generic_Dictionary_int__RestrictionSlotDetailEntity_____ctor__);
+    sub_1C37058(&Method_System_Collections_Generic_Dictionary_int__RestrictionSlotEntity____get_Count__);
+    sub_1C37058(&Method_System_Collections_Generic_Dictionary_int__RestrictionSlotDetailEntity____get_Item__);
+    sub_1C37058(&Method_System_Collections_Generic_Dictionary_int__RestrictionSlotEntity____get_Values__);
+    sub_1C37058(&System_Collections_Generic_Dictionary_int__RestrictionSlotEntity____TypeInfo);
+    sub_1C37058(&System_Collections_Generic_Dictionary_int__RestrictionSlotDetailEntity____TypeInfo);
+    sub_1C37058(&System_Collections_Generic_Dictionary_int__QuestRestrictionInfo_DialogMessageInfo__TypeInfo);
+    sub_1C37058(&Method_System_Collections_Generic_Dictionary_ValueCollection_Enumerator_int__RestrictionSlotEntity____Dispose__);
+    sub_1C37058(&Method_System_Collections_Generic_Dictionary_ValueCollection_Enumerator_int__RestrictionSlotEntity____MoveNext__);
+    sub_1C37058(&Method_System_Collections_Generic_Dictionary_ValueCollection_Enumerator_int__RestrictionSlotEntity____get_Current__);
+    sub_1C37058(&FollowerInfo___TypeInfo);
+    sub_1C37058(&System_Func_RestrictionSlotDetailEntity__bool__TypeInfo);
+    sub_1C37058(&System_Func_RestrictionSlotEntity__bool__TypeInfo);
+    sub_1C37058(&int___TypeInfo);
+    sub_1C37058(&Method_System_Collections_Generic_List_int__Add__);
+    sub_1C37058(&Method_System_Collections_Generic_List_bool____Add__);
+    sub_1C37058(&Method_System_Collections_Generic_List_RestrictionMessageEntity__Add__);
+    sub_1C37058(&Method_System_Collections_Generic_List_Restriction_RangeType__Add__);
+    sub_1C37058(&Method_System_Collections_Generic_List_int____Add__);
+    sub_1C37058(&Method_System_Collections_Generic_List_int__Contains__);
+    sub_1C37058(&Method_System_Collections_Generic_List_RestrictionMessageEntity__Contains__);
+    sub_1C37058(&Method_System_Collections_Generic_List_RestrictionMessageEntity__ToArray__);
+    sub_1C37058(&Method_System_Collections_Generic_List_int___ctor__);
+    sub_1C37058(&Method_System_Collections_Generic_List_RestrictionEntity___ctor__);
+    sub_1C37058(&Method_System_Collections_Generic_List_bool_____ctor__);
+    sub_1C37058(&Method_System_Collections_Generic_List_RestrictionMessageEntity___ctor__);
+    sub_1C37058(&Method_System_Collections_Generic_List_int_____ctor__);
+    sub_1C37058(&System_Collections_Generic_List_int__TypeInfo);
+    sub_1C37058(&System_Collections_Generic_List_RestrictionMessageEntity__TypeInfo);
+    sub_1C37058(&System_Collections_Generic_List_RestrictionEntity__TypeInfo);
+    sub_1C37058(&System_Collections_Generic_List_bool____TypeInfo);
+    sub_1C37058(&System_Collections_Generic_List_int____TypeInfo);
+    sub_1C37058(&LocalizationManager_TypeInfo);
+    sub_1C37058(&QuestRestrictionInfo_SlotInfo___TypeInfo);
+    sub_1C37058(&QuestRestrictionInfo_SlotInfo_TypeInfo);
+    sub_1C37058(&System_Text_StringBuilder_TypeInfo);
+    sub_1C37058(&Method_QuestRestrictionInfo___c__Setup_b__85_0__);
+    sub_1C37058(&Method_QuestRestrictionInfo___c__Setup_b__85_1__);
+    sub_1C37058(&Method_QuestRestrictionInfo___c__Setup_b__85_2__);
+    sub_1C37058(&Method_QuestRestrictionInfo___c__Setup_b__85_3__);
+    sub_1C37058(&QuestRestrictionInfo___c_TypeInfo);
+    sub_1C37058(&Method_System_Collections_Generic_Dictionary_ValueCollection_int__RestrictionSlotEntity____GetEnumerator__);
+    sub_1C37058(&StringLiteral_43/*"\n"*/);
+    sub_1C37058(&StringLiteral_10300/*"PARTY_ORGANIZATION_SERVANT_QUEST_RESTRICTION_FIXED_POSITION"*/);
+    sub_1C37058(&StringLiteral_10265/*"PARTY_ORGANIZATION_QUEST_RESTRICTION_WARNING"*/);
+    sub_1C37058(&StringLiteral_1/*""*/);
+    byte_4C4430B = 1;
   }
   v401 = 0;
   v402 = 0;
@@ -9576,144 +9576,144 @@ void QuestRestrictionInfo__Setup(
   v8 = this;
   this->fields.restrictionMessage = (struct System_String_o *)StringLiteral_1/*""*/;
   p_restrictionMessage = (CGThumbnailListItem_o *)&this->fields.restrictionMessage;
-  sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.restrictionMessage, v7, questId, *(const MethodInfo **)&questPhase);
+  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.restrictionMessage, v7, questId, *(const MethodInfo **)&questPhase);
   this->fields.confirmRestrictionMessage = v6;
   p_confirmRestrictionMessage = (CGThumbnailListItem_o *)&this->fields.confirmRestrictionMessage;
-  sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.confirmRestrictionMessage, (int32_t)v6, v9, v10);
+  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.confirmRestrictionMessage, (int32_t)v6, v9, v10);
   this->fields.supportOnlyRestrictionEntity = 0;
-  sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.supportOnlyRestrictionEntity, 0, v11, v12);
+  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.supportOnlyRestrictionEntity, 0, v11, v12);
   this->fields.uniqueSvtRestrictionEntity = 0;
-  sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.uniqueSvtRestrictionEntity, 0, v13, v14);
+  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.uniqueSvtRestrictionEntity, 0, v13, v14);
   this->fields.deckSvtIdList = 0;
   p_deckSvtIdList = (CGThumbnailListItem_o *)&this->fields.deckSvtIdList;
-  sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.deckSvtIdList, 0, v15, v16);
+  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.deckSvtIdList, 0, v15, v16);
   this->fields.deckNpcInfoList = 0;
   p_deckNpcInfoList = &this->fields.deckNpcInfoList;
-  sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.deckNpcInfoList, 0, v17, v18);
+  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.deckNpcInfoList, 0, v17, v18);
   this->fields.fixedSupportPositionRestrictionEntity = 0;
-  sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.fixedSupportPositionRestrictionEntity, 0, v19, v20);
+  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.fixedSupportPositionRestrictionEntity, 0, v19, v20);
   this->fields.supportPositionList = 0;
   p_supportPositionList = (CGThumbnailListItem_o *)&this->fields.supportPositionList;
-  sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.supportPositionList, 0, v22, v23);
+  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.supportPositionList, 0, v22, v23);
   this->fields.fixedMyServantPositionRestrictionEntity = 0;
-  sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.fixedMyServantPositionRestrictionEntity, 0, v24, v25);
+  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.fixedMyServantPositionRestrictionEntity, 0, v24, v25);
   this->fields.servantNumRestrictionEntity = 0;
-  sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.servantNumRestrictionEntity, 0, v26, v27);
+  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.servantNumRestrictionEntity, 0, v26, v27);
   this->fields.servantNumMax = 0;
   this->fields.myServantNumRestrictionEntity = 0;
-  sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.myServantNumRestrictionEntity, 0, v28, v29);
+  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.myServantNumRestrictionEntity, 0, v28, v29);
   this->fields.myServantNumMax = 0;
   *(_WORD *)&this->fields.isSupportOnlyForceBattle = 0;
   this->fields.svtIdForceBattleList = 0;
   p_svtIdForceBattleList = (CGThumbnailListItem_o *)&this->fields.svtIdForceBattleList;
-  sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.svtIdForceBattleList, 0, v30, v31);
+  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.svtIdForceBattleList, 0, v30, v31);
   this->fields.isFatigure = 0;
   p_eventDeckNum = &this->fields.eventDeckNum;
   v8->fields.eventDeckNum = 0;
   *(int32_t *)((char *)p_eventDeckNum + 3) = 0;
-  v33 = (System_Collections_Generic_List_object__o *)sub_1C32E6C(System_Collections_Generic_List_RestrictionEntity__TypeInfo);
+  v33 = (System_Collections_Generic_List_object__o *)sub_1C372A4(System_Collections_Generic_List_RestrictionEntity__TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v33,
-    (const MethodInfo_3797F88 *)Method_System_Collections_Generic_List_RestrictionEntity___ctor__);
+    (const MethodInfo_37A27F0 *)Method_System_Collections_Generic_List_RestrictionEntity___ctor__);
   v8->fields.myServantOrNpcRestrictionEntityList = (struct System_Collections_Generic_List_RestrictionEntity__o *)v33;
-  sub_1C32BC4((CGThumbnailListItem_o *)&v8->fields.myServantOrNpcRestrictionEntityList, (int32_t)v33, v34, v35);
-  v36 = (System_Collections_Generic_List_int__o *)sub_1C32E6C(System_Collections_Generic_List_int__TypeInfo);
+  sub_1C36FFC((CGThumbnailListItem_o *)&v8->fields.myServantOrNpcRestrictionEntityList, (int32_t)v33, v34, v35);
+  v36 = (System_Collections_Generic_List_int__o *)sub_1C372A4(System_Collections_Generic_List_int__TypeInfo);
   System_Collections_Generic_List_int____ctor(
     v36,
-    (const MethodInfo_377AF44 *)Method_System_Collections_Generic_List_int___ctor__);
+    (const MethodInfo_37857AC *)Method_System_Collections_Generic_List_int___ctor__);
   v8->fields.specifiedPositionList = v36;
-  sub_1C32BC4((CGThumbnailListItem_o *)&v8->fields.specifiedPositionList, (int32_t)v36, v37, v38);
+  sub_1C36FFC((CGThumbnailListItem_o *)&v8->fields.specifiedPositionList, (int32_t)v36, v37, v38);
   v8->fields.isNotTransitionSupportList = 0;
   v8->fields.supportInitIndex = 0;
   v8->fields.fixedServantPositionRestrictionEntity = 0;
-  sub_1C32BC4((CGThumbnailListItem_o *)&v8->fields.fixedServantPositionRestrictionEntity, 0, v39, v40);
+  sub_1C36FFC((CGThumbnailListItem_o *)&v8->fields.fixedServantPositionRestrictionEntity, 0, v39, v40);
   v8->fields.uniqueIndividualityEntity = 0;
-  sub_1C32BC4((CGThumbnailListItem_o *)&v8->fields.uniqueIndividualityEntity, 0, v41, v42);
+  sub_1C36FFC((CGThumbnailListItem_o *)&v8->fields.uniqueIndividualityEntity, 0, v41, v42);
   v8->fields.isAllOutBattle = 0;
   v8->fields.isDataLostBattle = 0;
   v8->fields.allOutBattleGroupNo = -1;
   v8->fields.dataLostBattleId = -1;
   v8->fields.deckLimitCountList = 0;
   p_deckLimitCountList = (CGThumbnailListItem_o *)&v8->fields.deckLimitCountList;
-  sub_1C32BC4((CGThumbnailListItem_o *)&v8->fields.deckLimitCountList, 0, v43, v44);
+  sub_1C36FFC((CGThumbnailListItem_o *)&v8->fields.deckLimitCountList, 0, v43, v44);
   v8->fields.deckDispLimitCountList = 0;
   p_deckDispLimitCountList = (CGThumbnailListItem_o *)&v8->fields.deckDispLimitCountList;
-  sub_1C32BC4((CGThumbnailListItem_o *)&v8->fields.deckDispLimitCountList, 0, v45, v46);
+  sub_1C36FFC((CGThumbnailListItem_o *)&v8->fields.deckDispLimitCountList, 0, v45, v46);
   v8->fields.isNotSingleSupportOnly = 0;
   *(_DWORD *)&v8->fields.isUniqueServant = 0;
-  v47 = (System_Collections_Generic_List_object__o *)sub_1C32E6C(System_Collections_Generic_List_bool____TypeInfo);
+  v47 = (System_Collections_Generic_List_object__o *)sub_1C372A4(System_Collections_Generic_List_bool____TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v47,
-    (const MethodInfo_3797F88 *)Method_System_Collections_Generic_List_bool_____ctor__);
+    (const MethodInfo_37A27F0 *)Method_System_Collections_Generic_List_bool_____ctor__);
   v8->fields.positionsList = (struct System_Collections_Generic_List_bool____o *)v47;
   p_positionsList = (System_Collections_Generic_List_object__o **)&v8->fields.positionsList;
-  sub_1C32BC4((CGThumbnailListItem_o *)&v8->fields.positionsList, (int32_t)v47, v48, v49);
-  v50 = (System_Collections_Generic_List_object__o *)sub_1C32E6C(System_Collections_Generic_List_int____TypeInfo);
+  sub_1C36FFC((CGThumbnailListItem_o *)&v8->fields.positionsList, (int32_t)v47, v48, v49);
+  v50 = (System_Collections_Generic_List_object__o *)sub_1C372A4(System_Collections_Generic_List_int____TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v50,
-    (const MethodInfo_3797F88 *)Method_System_Collections_Generic_List_int_____ctor__);
+    (const MethodInfo_37A27F0 *)Method_System_Collections_Generic_List_int_____ctor__);
   v8->fields.fixedIndividualitiesList = (struct System_Collections_Generic_List_int____o *)v50;
   p_fixedIndividualitiesList = (System_Collections_Generic_List_object__o **)&v8->fields.fixedIndividualitiesList;
-  sub_1C32BC4((CGThumbnailListItem_o *)&v8->fields.fixedIndividualitiesList, (int32_t)v50, v51, v52);
+  sub_1C36FFC((CGThumbnailListItem_o *)&v8->fields.fixedIndividualitiesList, (int32_t)v50, v51, v52);
   v8->fields.isFixedMyServantPosition = 0;
-  v53 = (System_Collections_Generic_List_object__o *)sub_1C32E6C(System_Collections_Generic_List_bool____TypeInfo);
+  v53 = (System_Collections_Generic_List_object__o *)sub_1C372A4(System_Collections_Generic_List_bool____TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v53,
-    (const MethodInfo_3797F88 *)Method_System_Collections_Generic_List_bool_____ctor__);
+    (const MethodInfo_37A27F0 *)Method_System_Collections_Generic_List_bool_____ctor__);
   v8->fields.myServantPositionsList = (struct System_Collections_Generic_List_bool____o *)v53;
   p_myServantPositionsList = (System_Collections_Generic_List_object__o **)&v8->fields.myServantPositionsList;
-  sub_1C32BC4((CGThumbnailListItem_o *)&v8->fields.myServantPositionsList, (int32_t)v53, v54, v55);
-  v56 = (System_Collections_Generic_List_object__o *)sub_1C32E6C(System_Collections_Generic_List_int____TypeInfo);
+  sub_1C36FFC((CGThumbnailListItem_o *)&v8->fields.myServantPositionsList, (int32_t)v53, v54, v55);
+  v56 = (System_Collections_Generic_List_object__o *)sub_1C372A4(System_Collections_Generic_List_int____TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v56,
-    (const MethodInfo_3797F88 *)Method_System_Collections_Generic_List_int_____ctor__);
+    (const MethodInfo_37A27F0 *)Method_System_Collections_Generic_List_int_____ctor__);
   v8->fields.fixedMyServantIndividualitiesList = (struct System_Collections_Generic_List_int____o *)v56;
   p_fixedMyServantIndividualitiesList = (System_Collections_Generic_List_object__o **)&v8->fields.fixedMyServantIndividualitiesList;
-  sub_1C32BC4((CGThumbnailListItem_o *)&v8->fields.fixedMyServantIndividualitiesList, (int32_t)v56, v57, v58);
+  sub_1C36FFC((CGThumbnailListItem_o *)&v8->fields.fixedMyServantIndividualitiesList, (int32_t)v56, v57, v58);
   v8->fields.isFixedSupportPosition = 0;
-  v59 = (System_Collections_Generic_List_object__o *)sub_1C32E6C(System_Collections_Generic_List_int____TypeInfo);
+  v59 = (System_Collections_Generic_List_object__o *)sub_1C372A4(System_Collections_Generic_List_int____TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v59,
-    (const MethodInfo_3797F88 *)Method_System_Collections_Generic_List_int_____ctor__);
+    (const MethodInfo_37A27F0 *)Method_System_Collections_Generic_List_int_____ctor__);
   v8->fields.fixedSupportIndividualitiesList = (struct System_Collections_Generic_List_int____o *)v59;
   p_fixedSupportIndividualitiesList = (System_Collections_Generic_List_object__o **)&v8->fields.fixedSupportIndividualitiesList;
-  sub_1C32BC4((CGThumbnailListItem_o *)&v8->fields.fixedSupportIndividualitiesList, (int32_t)v59, v60, v61);
+  sub_1C36FFC((CGThumbnailListItem_o *)&v8->fields.fixedSupportIndividualitiesList, (int32_t)v59, v60, v61);
   v8->fields.isFixedNpcPosition = 0;
-  v62 = (System_Collections_Generic_List_object__o *)sub_1C32E6C(System_Collections_Generic_List_int____TypeInfo);
+  v62 = (System_Collections_Generic_List_object__o *)sub_1C372A4(System_Collections_Generic_List_int____TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v62,
-    (const MethodInfo_3797F88 *)Method_System_Collections_Generic_List_int_____ctor__);
+    (const MethodInfo_37A27F0 *)Method_System_Collections_Generic_List_int_____ctor__);
   v8->fields.fixedNpcIndividualitiesList = (struct System_Collections_Generic_List_int____o *)v62;
   p_fixedNpcIndividualitiesList = (System_Collections_Generic_List_object__o **)&v8->fields.fixedNpcIndividualitiesList;
-  sub_1C32BC4((CGThumbnailListItem_o *)&v8->fields.fixedNpcIndividualitiesList, (int32_t)v62, v63, v64);
+  sub_1C36FFC((CGThumbnailListItem_o *)&v8->fields.fixedNpcIndividualitiesList, (int32_t)v62, v63, v64);
   v8->fields.npcPositionList = 0;
-  sub_1C32BC4((CGThumbnailListItem_o *)&v8->fields.npcPositionList, 0, v65, v66);
-  v67 = (System_Collections_Generic_List_object__o *)sub_1C32E6C(System_Collections_Generic_List_int____TypeInfo);
+  sub_1C36FFC((CGThumbnailListItem_o *)&v8->fields.npcPositionList, 0, v65, v66);
+  v67 = (System_Collections_Generic_List_object__o *)sub_1C372A4(System_Collections_Generic_List_int____TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v67,
-    (const MethodInfo_3797F88 *)Method_System_Collections_Generic_List_int_____ctor__);
+    (const MethodInfo_37A27F0 *)Method_System_Collections_Generic_List_int_____ctor__);
   v8->fields.needStartingIndividualitiesList = (struct System_Collections_Generic_List_int____o *)v67;
   p_needStartingIndividualitiesList = (System_Collections_Generic_List_object__o **)&v8->fields.needStartingIndividualitiesList;
-  sub_1C32BC4((CGThumbnailListItem_o *)&v8->fields.needStartingIndividualitiesList, (int32_t)v67, v68, v69);
+  sub_1C36FFC((CGThumbnailListItem_o *)&v8->fields.needStartingIndividualitiesList, (int32_t)v67, v68, v69);
   v8->fields.isNeedStarting = 0;
   v8->fields.isFixedMyServantSingle = 0;
   *(_WORD *)&v8->fields.isMyServantOrNpc = 0;
   v8->fields.slotInfos = 0;
   p_fields = (CGThumbnailListItem_o *)&v8->fields;
-  sub_1C32BC4((CGThumbnailListItem_o *)&v8->fields, 0, v70, v71);
+  sub_1C36FFC((CGThumbnailListItem_o *)&v8->fields, 0, v70, v71);
   v8->fields.dialogMessageInfoDictionary = 0;
   p_dialogMessageInfoDictionary = (System_Collections_Generic_Dictionary_K__V__o **)&v8->fields.dialogMessageInfoDictionary;
   v391 = v8;
-  sub_1C32BC4((CGThumbnailListItem_o *)&v8->fields.dialogMessageInfoDictionary, 0, v73, v74);
-  v75 = (System_Collections_Generic_List_object__o *)sub_1C32E6C(System_Collections_Generic_List_RestrictionEntity__TypeInfo);
+  sub_1C36FFC((CGThumbnailListItem_o *)&v8->fields.dialogMessageInfoDictionary, 0, v73, v74);
+  v75 = (System_Collections_Generic_List_object__o *)sub_1C372A4(System_Collections_Generic_List_RestrictionEntity__TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v75,
-    (const MethodInfo_3797F88 *)Method_System_Collections_Generic_List_RestrictionEntity___ctor__);
+    (const MethodInfo_37A27F0 *)Method_System_Collections_Generic_List_RestrictionEntity___ctor__);
   v8->fields.grandServantRestrictionEntityList = (struct System_Collections_Generic_List_RestrictionEntity__o *)v75;
-  sub_1C32BC4((CGThumbnailListItem_o *)&v8->fields.grandServantRestrictionEntityList, (int32_t)v75, v76, v77);
+  sub_1C36FFC((CGThumbnailListItem_o *)&v8->fields.grandServantRestrictionEntityList, (int32_t)v75, v76, v77);
   if ( !DataManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-  Master_object = (__int64)DataManager__GetMaster_object_((const MethodInfo_30DD39C *)Method_DataManager_GetMaster_RestrictionBaseMaster___);
+  Master_object = (__int64)DataManager__GetMaster_object_((const MethodInfo_30E7C04 *)Method_DataManager_GetMaster_RestrictionBaseMaster___);
   if ( !Master_object )
     goto LABEL_387;
   p_restrictionBaseEntity = &v8->fields.restrictionBaseEntity;
@@ -9725,29 +9725,29 @@ void QuestRestrictionInfo__Setup(
          v79) )
   {
     v8->fields.isRestriction = 1;
-    v81 = (System_Collections_Generic_Dictionary_int__object__o *)sub_1C32E6C(System_Collections_Generic_Dictionary_int__RestrictionSlotEntity____TypeInfo);
+    v81 = (System_Collections_Generic_Dictionary_int__object__o *)sub_1C372A4(System_Collections_Generic_Dictionary_int__RestrictionSlotEntity____TypeInfo);
     System_Collections_Generic_Dictionary_int__object____ctor(
       v81,
-      (const MethodInfo_33EF348 *)Method_System_Collections_Generic_Dictionary_int__RestrictionSlotEntity_____ctor__);
+      (const MethodInfo_33F9BB0 *)Method_System_Collections_Generic_Dictionary_int__RestrictionSlotEntity_____ctor__);
     v8->fields.restrictionSlotDictionary = (struct System_Collections_Generic_Dictionary_int__RestrictionSlotEntity____o *)v81;
     p_restrictionSlotDictionary = (System_Collections_Generic_Dictionary_K__V__o **)&v8->fields.restrictionSlotDictionary;
-    sub_1C32BC4((CGThumbnailListItem_o *)&v8->fields.restrictionSlotDictionary, (int32_t)v81, v82, v83);
-    v84 = (System_Collections_Generic_Dictionary_int__object__o *)sub_1C32E6C(System_Collections_Generic_Dictionary_int__RestrictionSlotDetailEntity____TypeInfo);
+    sub_1C36FFC((CGThumbnailListItem_o *)&v8->fields.restrictionSlotDictionary, (int32_t)v81, v82, v83);
+    v84 = (System_Collections_Generic_Dictionary_int__object__o *)sub_1C372A4(System_Collections_Generic_Dictionary_int__RestrictionSlotDetailEntity____TypeInfo);
     System_Collections_Generic_Dictionary_int__object____ctor(
       v84,
-      (const MethodInfo_33EF348 *)Method_System_Collections_Generic_Dictionary_int__RestrictionSlotDetailEntity_____ctor__);
+      (const MethodInfo_33F9BB0 *)Method_System_Collections_Generic_Dictionary_int__RestrictionSlotDetailEntity_____ctor__);
     v8->fields.restrictionSlotDetailDictionary = (struct System_Collections_Generic_Dictionary_int__RestrictionSlotDetailEntity____o *)v84;
-    sub_1C32BC4((CGThumbnailListItem_o *)&v8->fields.restrictionSlotDetailDictionary, (int32_t)v84, v85, v86);
-    v87 = (System_Collections_Generic_Dictionary_int__object__o *)sub_1C32E6C(System_Collections_Generic_Dictionary_int__QuestRestrictionInfo_DialogMessageInfo__TypeInfo);
+    sub_1C36FFC((CGThumbnailListItem_o *)&v8->fields.restrictionSlotDetailDictionary, (int32_t)v84, v85, v86);
+    v87 = (System_Collections_Generic_Dictionary_int__object__o *)sub_1C372A4(System_Collections_Generic_Dictionary_int__QuestRestrictionInfo_DialogMessageInfo__TypeInfo);
     System_Collections_Generic_Dictionary_int__object____ctor(
       v87,
-      (const MethodInfo_33EF348 *)Method_System_Collections_Generic_Dictionary_int__QuestRestrictionInfo_DialogMessageInfo___ctor__);
+      (const MethodInfo_33F9BB0 *)Method_System_Collections_Generic_Dictionary_int__QuestRestrictionInfo_DialogMessageInfo___ctor__);
     v8->fields.dialogMessageInfoDictionary = (struct System_Collections_Generic_Dictionary_int__QuestRestrictionInfo_DialogMessageInfo__o *)v87;
-    sub_1C32BC4((CGThumbnailListItem_o *)&v8->fields.dialogMessageInfoDictionary, (int32_t)v87, v88, v89);
-    v90 = (System_Collections_Generic_List_object__o *)sub_1C32E6C(System_Collections_Generic_List_RestrictionMessageEntity__TypeInfo);
+    sub_1C36FFC((CGThumbnailListItem_o *)&v8->fields.dialogMessageInfoDictionary, (int32_t)v87, v88, v89);
+    v90 = (System_Collections_Generic_List_object__o *)sub_1C372A4(System_Collections_Generic_List_RestrictionMessageEntity__TypeInfo);
     System_Collections_Generic_List_object____ctor(
       v90,
-      (const MethodInfo_3797F88 *)Method_System_Collections_Generic_List_RestrictionMessageEntity___ctor__);
+      (const MethodInfo_37A27F0 *)Method_System_Collections_Generic_List_RestrictionMessageEntity___ctor__);
     Master_object = (__int64)v391->fields.restrictionBaseEntity;
     p_restrictionSlotDetailDictionary = (System_Collections_Generic_Dictionary_int__object__o **)&v391->fields.restrictionSlotDetailDictionary;
     if ( !Master_object )
@@ -9777,9 +9777,9 @@ void QuestRestrictionInfo__Setup(
         j_il2cpp_runtime_class_init_0(BalanceConfig_TypeInfo);
         v93 = BalanceConfig_TypeInfo;
       }
-      v94 = sub_1C32CC8(int___TypeInfo, (unsigned int)v93->static_fields->DeckMemberMax);
+      v94 = sub_1C37100(int___TypeInfo, (unsigned int)v93->static_fields->DeckMemberMax);
       p_deckSvtIdList->klass = (CGThumbnailListItem_c *)v94;
-      sub_1C32BC4(p_deckSvtIdList, v94, v95, v96);
+      sub_1C36FFC(p_deckSvtIdList, v94, v95, v96);
     }
     Master_object = (__int64)*p_restrictionBaseEntity;
     if ( !*p_restrictionBaseEntity )
@@ -9797,8 +9797,8 @@ void QuestRestrictionInfo__Setup(
       0);
     if ( !DataManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-    v98 = DataManager__GetMaster_object_((const MethodInfo_30DD39C *)Method_DataManager_GetMaster_RestrictionMessageMaster___);
-    Master_object = (__int64)DataManager__GetMaster_object_((const MethodInfo_30DD39C *)Method_DataManager_GetMaster_RestrictionWholeMaster___);
+    v98 = DataManager__GetMaster_object_((const MethodInfo_30E7C04 *)Method_DataManager_GetMaster_RestrictionMessageMaster___);
+    Master_object = (__int64)DataManager__GetMaster_object_((const MethodInfo_30E7C04 *)Method_DataManager_GetMaster_RestrictionWholeMaster___);
     if ( !*p_restrictionBaseEntity )
       goto LABEL_387;
     if ( !Master_object )
@@ -9808,7 +9808,7 @@ void QuestRestrictionInfo__Setup(
                  (*p_restrictionBaseEntity)->fields.restrictionWholeId,
                  0);
     v391->fields.restrictionWholeEntities = Entities;
-    sub_1C32BC4((CGThumbnailListItem_o *)&v391->fields.restrictionWholeEntities, (int32_t)Entities, v100, v101);
+    sub_1C36FFC((CGThumbnailListItem_o *)&v391->fields.restrictionWholeEntities, (int32_t)Entities, v100, v101);
     restrictionWholeEntities = v391->fields.restrictionWholeEntities;
     p_restrictionWholeEntities = &v391->fields.restrictionWholeEntities;
     if ( !restrictionWholeEntities )
@@ -9834,7 +9834,7 @@ void QuestRestrictionInfo__Setup(
             case 2:
               if ( !DataManager_TypeInfo->_2.cctor_finished )
                 j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-              Master_object = (__int64)DataManager__GetMaster_object_((const MethodInfo_30DD39C *)Method_DataManager_GetMaster_QuestGroupMaster___);
+              Master_object = (__int64)DataManager__GetMaster_object_((const MethodInfo_30E7C04 *)Method_DataManager_GetMaster_QuestGroupMaster___);
               if ( !Master_object )
                 goto LABEL_387;
               Master_object = QuestGroupMaster__GetGroupId((QuestGroupMaster_o *)Master_object, questId, 17, 0);
@@ -9864,14 +9864,14 @@ void QuestRestrictionInfo__Setup(
                 System_Collections_Generic_List_object___AddWithResize(
                   v121,
                   (Il2CppObject *)Master_object,
-                  *(const MethodInfo_37987BC **)(*(_QWORD *)(v125[4] + 192LL) + 112LL));
+                  *(const MethodInfo_37A3024 **)(*(_QWORD *)(v125[4] + 192LL) + 112LL));
               }
               else
               {
                 v128 = &items->obj.klass + size;
                 v121->fields._size = size + 1;
                 v128[4] = (Il2CppClass *)v127;
-                sub_1C32BC4((CGThumbnailListItem_o *)(v128 + 4), v127, v122, v123);
+                sub_1C36FFC((CGThumbnailListItem_o *)(v128 + 4), v127, v122, v123);
               }
               Master_object = (__int64)v105->fields.targetVals;
               if ( !Master_object )
@@ -9880,7 +9880,7 @@ void QuestRestrictionInfo__Setup(
               Master_object = (__int64)System_Array__Clone((System_Array_o *)Master_object, 0);
               if ( !v182 )
                 goto LABEL_387;
-              Master_object = sub_1C32D5C(Master_object, int___TypeInfo);
+              Master_object = sub_1C37194(Master_object, int___TypeInfo);
               v185 = v182->fields._items;
               v186 = Method_System_Collections_Generic_List_int____Add__;
               ++v182->fields._version;
@@ -9893,14 +9893,14 @@ void QuestRestrictionInfo__Setup(
                 System_Collections_Generic_List_object___AddWithResize(
                   v182,
                   (Il2CppObject *)Master_object,
-                  *(const MethodInfo_37987BC **)(*(_QWORD *)(v186[4] + 192LL) + 112LL));
+                  *(const MethodInfo_37A3024 **)(*(_QWORD *)(v186[4] + 192LL) + 112LL));
               }
               else
               {
                 v189 = &v185->obj.klass + v187;
                 v182->fields._size = v187 + 1;
                 v189[4] = (Il2CppClass *)v188;
-                sub_1C32BC4((CGThumbnailListItem_o *)(v189 + 4), v188, v183, v184);
+                sub_1C36FFC((CGThumbnailListItem_o *)(v189 + 4), v188, v183, v184);
               }
               v391->fields.isFixedPosition = 1;
               goto LABEL_89;
@@ -9921,14 +9921,14 @@ void QuestRestrictionInfo__Setup(
                 System_Collections_Generic_List_object___AddWithResize(
                   v129,
                   (Il2CppObject *)Master_object,
-                  *(const MethodInfo_37987BC **)(*(_QWORD *)(v133[4] + 192LL) + 112LL));
+                  *(const MethodInfo_37A3024 **)(*(_QWORD *)(v133[4] + 192LL) + 112LL));
               }
               else
               {
                 v136 = &v132->obj.klass + v134;
                 v129->fields._size = v134 + 1;
                 v136[4] = (Il2CppClass *)v135;
-                sub_1C32BC4((CGThumbnailListItem_o *)(v136 + 4), v135, v130, v131);
+                sub_1C36FFC((CGThumbnailListItem_o *)(v136 + 4), v135, v130, v131);
               }
               Master_object = (__int64)v105->fields.targetVals;
               if ( !Master_object )
@@ -9937,7 +9937,7 @@ void QuestRestrictionInfo__Setup(
               Master_object = (__int64)System_Array__Clone((System_Array_o *)Master_object, 0);
               if ( !v190 )
                 goto LABEL_387;
-              Master_object = sub_1C32D5C(Master_object, int___TypeInfo);
+              Master_object = sub_1C37194(Master_object, int___TypeInfo);
               v193 = v190->fields._items;
               v194 = Method_System_Collections_Generic_List_int____Add__;
               ++v190->fields._version;
@@ -9950,28 +9950,28 @@ void QuestRestrictionInfo__Setup(
                 System_Collections_Generic_List_object___AddWithResize(
                   v190,
                   (Il2CppObject *)Master_object,
-                  *(const MethodInfo_37987BC **)(*(_QWORD *)(v194[4] + 192LL) + 112LL));
+                  *(const MethodInfo_37A3024 **)(*(_QWORD *)(v194[4] + 192LL) + 112LL));
               }
               else
               {
                 v197 = &v193->obj.klass + v195;
                 v190->fields._size = v195 + 1;
                 v197[4] = (Il2CppClass *)v196;
-                sub_1C32BC4((CGThumbnailListItem_o *)(v197 + 4), v196, v191, v192);
+                sub_1C36FFC((CGThumbnailListItem_o *)(v197 + 4), v196, v191, v192);
               }
               v391->fields.isFixedMyServantPosition = 1;
               goto LABEL_89;
             case 6:
               SetPossiblePosition = RestrictionWholeEntity__GetSetPossiblePosition(v105, 0);
               p_supportPositionList->klass = (CGThumbnailListItem_c *)SetPossiblePosition;
-              sub_1C32BC4(p_supportPositionList, (int32_t)SetPossiblePosition, v107, v108);
+              sub_1C36FFC(p_supportPositionList, (int32_t)SetPossiblePosition, v107, v108);
               Master_object = (__int64)v105->fields.targetVals;
               if ( !Master_object )
                 goto LABEL_387;
               v109 = System_Array__Clone((System_Array_o *)Master_object, 0);
-              p_fixedSupportIndividualities->klass = (CGThumbnailListItem_c *)sub_1C32D5C(v109, int___TypeInfo);
-              v110 = sub_1C32D5C(v109, int___TypeInfo);
-              sub_1C32BC4(p_fixedSupportIndividualities, v110, v111, v112);
+              p_fixedSupportIndividualities->klass = (CGThumbnailListItem_c *)sub_1C37194(v109, int___TypeInfo);
+              v110 = sub_1C37194(v109, int___TypeInfo);
+              sub_1C36FFC(p_fixedSupportIndividualities, v110, v111, v112);
               Master_object = (__int64)v105->fields.targetVals;
               if ( !Master_object )
                 goto LABEL_387;
@@ -9979,7 +9979,7 @@ void QuestRestrictionInfo__Setup(
               Master_object = (__int64)System_Array__Clone((System_Array_o *)Master_object, 0);
               if ( !v113 )
                 goto LABEL_387;
-              Master_object = sub_1C32D5C(Master_object, int___TypeInfo);
+              Master_object = sub_1C37194(Master_object, int___TypeInfo);
               v116 = v113->fields._items;
               v117 = Method_System_Collections_Generic_List_int____Add__;
               ++v113->fields._version;
@@ -9992,28 +9992,28 @@ void QuestRestrictionInfo__Setup(
                 System_Collections_Generic_List_object___AddWithResize(
                   v113,
                   (Il2CppObject *)Master_object,
-                  *(const MethodInfo_37987BC **)(*(_QWORD *)(v117[4] + 192LL) + 112LL));
+                  *(const MethodInfo_37A3024 **)(*(_QWORD *)(v117[4] + 192LL) + 112LL));
               }
               else
               {
                 v120 = &v116->obj.klass + v118;
                 v113->fields._size = v118 + 1;
                 v120[4] = (Il2CppClass *)v119;
-                sub_1C32BC4((CGThumbnailListItem_o *)(v120 + 4), v119, v114, v115);
+                sub_1C36FFC((CGThumbnailListItem_o *)(v120 + 4), v119, v114, v115);
               }
               v391->fields.isFixedSupportPosition = 1;
               goto LABEL_89;
             case 7:
               v154 = RestrictionWholeEntity__GetSetPossiblePosition(v105, 0);
               p_supportPositionList->klass = (CGThumbnailListItem_c *)v154;
-              sub_1C32BC4(p_supportPositionList, (int32_t)v154, v155, v156);
+              sub_1C36FFC(p_supportPositionList, (int32_t)v154, v155, v156);
               Master_object = (__int64)v105->fields.targetVals;
               if ( !Master_object )
                 goto LABEL_387;
               v157 = System_Array__Clone((System_Array_o *)Master_object, 0);
-              p_fixedNpcIndividualities->klass = (CGThumbnailListItem_c *)sub_1C32D5C(v157, int___TypeInfo);
-              v158 = sub_1C32D5C(v157, int___TypeInfo);
-              sub_1C32BC4(p_fixedNpcIndividualities, v158, v159, v160);
+              p_fixedNpcIndividualities->klass = (CGThumbnailListItem_c *)sub_1C37194(v157, int___TypeInfo);
+              v158 = sub_1C37194(v157, int___TypeInfo);
+              sub_1C36FFC(p_fixedNpcIndividualities, v158, v159, v160);
               Master_object = (__int64)v105->fields.targetVals;
               if ( !Master_object )
                 goto LABEL_387;
@@ -10021,7 +10021,7 @@ void QuestRestrictionInfo__Setup(
               Master_object = (__int64)System_Array__Clone((System_Array_o *)Master_object, 0);
               if ( !v161 )
                 goto LABEL_387;
-              Master_object = sub_1C32D5C(Master_object, int___TypeInfo);
+              Master_object = sub_1C37194(Master_object, int___TypeInfo);
               v164 = v161->fields._items;
               v165 = Method_System_Collections_Generic_List_int____Add__;
               ++v161->fields._version;
@@ -10034,14 +10034,14 @@ void QuestRestrictionInfo__Setup(
                 System_Collections_Generic_List_object___AddWithResize(
                   v161,
                   (Il2CppObject *)Master_object,
-                  *(const MethodInfo_37987BC **)(*(_QWORD *)(v165[4] + 192LL) + 112LL));
+                  *(const MethodInfo_37A3024 **)(*(_QWORD *)(v165[4] + 192LL) + 112LL));
               }
               else
               {
                 v168 = &v164->obj.klass + v166;
                 v161->fields._size = v166 + 1;
                 v168[4] = (Il2CppClass *)v167;
-                sub_1C32BC4((CGThumbnailListItem_o *)(v168 + 4), v167, v162, v163);
+                sub_1C36FFC((CGThumbnailListItem_o *)(v168 + 4), v167, v162, v163);
               }
               v391->fields.isFixedNpcPosition = 1;
               goto LABEL_89;
@@ -10050,9 +10050,9 @@ void QuestRestrictionInfo__Setup(
               if ( !Master_object )
                 goto LABEL_387;
               v169 = System_Array__Clone((System_Array_o *)Master_object, 0);
-              p_needStartingIndividualities->klass = (CGThumbnailListItem_c *)sub_1C32D5C(v169, int___TypeInfo);
-              v170 = sub_1C32D5C(v169, int___TypeInfo);
-              sub_1C32BC4(p_needStartingIndividualities, v170, v171, v172);
+              p_needStartingIndividualities->klass = (CGThumbnailListItem_c *)sub_1C37194(v169, int___TypeInfo);
+              v170 = sub_1C37194(v169, int___TypeInfo);
+              sub_1C36FFC(p_needStartingIndividualities, v170, v171, v172);
               Master_object = (__int64)v105->fields.targetVals;
               if ( !Master_object )
                 goto LABEL_387;
@@ -10060,7 +10060,7 @@ void QuestRestrictionInfo__Setup(
               Master_object = (__int64)System_Array__Clone((System_Array_o *)Master_object, 0);
               if ( !v173 )
                 goto LABEL_387;
-              Master_object = sub_1C32D5C(Master_object, int___TypeInfo);
+              Master_object = sub_1C37194(Master_object, int___TypeInfo);
               v176 = v173->fields._items;
               v177 = Method_System_Collections_Generic_List_int____Add__;
               ++v173->fields._version;
@@ -10073,14 +10073,14 @@ void QuestRestrictionInfo__Setup(
                 System_Collections_Generic_List_object___AddWithResize(
                   v173,
                   (Il2CppObject *)Master_object,
-                  *(const MethodInfo_37987BC **)(*(_QWORD *)(v177[4] + 192LL) + 112LL));
+                  *(const MethodInfo_37A3024 **)(*(_QWORD *)(v177[4] + 192LL) + 112LL));
               }
               else
               {
                 v180 = &v176->obj.klass + v178;
                 v173->fields._size = v178 + 1;
                 v180[4] = (Il2CppClass *)v179;
-                sub_1C32BC4((CGThumbnailListItem_o *)(v180 + 4), v179, v174, v175);
+                sub_1C36FFC((CGThumbnailListItem_o *)(v180 + 4), v179, v174, v175);
               }
               v391->fields.isNeedStarting = 1;
               goto LABEL_89;
@@ -10089,29 +10089,29 @@ void QuestRestrictionInfo__Setup(
               if ( !Master_object )
                 goto LABEL_387;
               v137 = System_Array__Clone((System_Array_o *)Master_object, 0);
-              p_uniqueIndividualitys->klass = (CGThumbnailListItem_c *)sub_1C32D5C(v137, int___TypeInfo);
-              v138 = sub_1C32D5C(v137, int___TypeInfo);
-              sub_1C32BC4(p_uniqueIndividualitys, v138, v139, v140);
+              p_uniqueIndividualitys->klass = (CGThumbnailListItem_c *)sub_1C37194(v137, int___TypeInfo);
+              v138 = sub_1C37194(v137, int___TypeInfo);
+              sub_1C36FFC(p_uniqueIndividualitys, v138, v139, v140);
               v141 = BalanceConfig_TypeInfo;
               if ( !BalanceConfig_TypeInfo->_2.cctor_finished )
               {
                 j_il2cpp_runtime_class_init_0(BalanceConfig_TypeInfo);
                 v141 = BalanceConfig_TypeInfo;
               }
-              v142 = sub_1C32CC8(int___TypeInfo, (unsigned int)v141->static_fields->DeckMemberMax);
+              v142 = sub_1C37100(int___TypeInfo, (unsigned int)v141->static_fields->DeckMemberMax);
               v391->fields.deckSvtIdList = (struct System_Int32_array *)v142;
-              sub_1C32BC4(p_deckSvtIdList, v142, v143, v144);
-              v145 = sub_1C32CC8(int___TypeInfo, (unsigned int)BalanceConfig_TypeInfo->static_fields->DeckMemberMax);
+              sub_1C36FFC(p_deckSvtIdList, v142, v143, v144);
+              v145 = sub_1C37100(int___TypeInfo, (unsigned int)BalanceConfig_TypeInfo->static_fields->DeckMemberMax);
               v391->fields.deckLimitCountList = (struct System_Int32_array *)v145;
-              sub_1C32BC4(p_deckLimitCountList, v145, v146, v147);
-              v148 = sub_1C32CC8(int___TypeInfo, (unsigned int)BalanceConfig_TypeInfo->static_fields->DeckMemberMax);
+              sub_1C36FFC(p_deckLimitCountList, v145, v146, v147);
+              v148 = sub_1C37100(int___TypeInfo, (unsigned int)BalanceConfig_TypeInfo->static_fields->DeckMemberMax);
               v391->fields.deckDispLimitCountList = (struct System_Int32_array *)v148;
-              sub_1C32BC4(p_deckDispLimitCountList, v148, v149, v150);
-              v151 = sub_1C32CC8(
+              sub_1C36FFC(p_deckDispLimitCountList, v148, v149, v150);
+              v151 = sub_1C37100(
                        FollowerInfo___TypeInfo,
                        (unsigned int)BalanceConfig_TypeInfo->static_fields->DeckMemberMax);
               v391->fields.deckNpcInfoList = (struct FollowerInfo_array *)v151;
-              sub_1C32BC4((CGThumbnailListItem_o *)p_deckNpcInfoList, v151, v152, v153);
+              sub_1C36FFC((CGThumbnailListItem_o *)p_deckNpcInfoList, v151, v152, v153);
               restrictionWholeEntities = v371;
               v391->fields.isUniqueIndividuality = 1;
               goto LABEL_89;
@@ -10133,7 +10133,7 @@ LABEL_89:
                                 (DataMasterBase_TMaster__TEntity__PKType__o *)v98,
                                 &entity,
                                 restrictionMessageId,
-                                (const MethodInfo_3396884 *)Method_DataMasterBase_RestrictionMessageMaster__RestrictionMessageEntity__int__TryGetEntity__);
+                                (const MethodInfo_33A10EC *)Method_DataMasterBase_RestrictionMessageMaster__RestrictionMessageEntity__int__TryGetEntity__);
               if ( (Master_object & 1) == 0 )
                 goto LABEL_102;
               if ( !v90 )
@@ -10141,7 +10141,7 @@ LABEL_89:
               Master_object = System_Collections_Generic_List_object___Contains(
                                 v90,
                                 entity,
-                                (const MethodInfo_3798B4C *)Method_System_Collections_Generic_List_RestrictionMessageEntity__Contains__);
+                                (const MethodInfo_37A33B4 *)Method_System_Collections_Generic_List_RestrictionMessageEntity__Contains__);
               if ( (Master_object & 1) != 0 )
                 goto LABEL_102;
               v201 = entity;
@@ -10156,16 +10156,16 @@ LABEL_89:
                 System_Collections_Generic_List_object___AddWithResize(
                   v90,
                   v201,
-                  *(const MethodInfo_37987BC **)(*(_QWORD *)(v203[4] + 192LL) + 112LL));
+                  *(const MethodInfo_37A3024 **)(*(_QWORD *)(v203[4] + 192LL) + 112LL));
               }
               else
               {
                 v205 = &v202->obj.klass + v204;
                 v90->fields._size = v204 + 1;
                 v205[4] = (Il2CppClass *)v201;
-                sub_1C32BC4((CGThumbnailListItem_o *)(v205 + 4), (int32_t)v201, v199, v200);
+                sub_1C36FFC((CGThumbnailListItem_o *)(v205 + 4), (int32_t)v201, v199, v200);
               }
-              v206 = (QuestRestrictionInfo_DialogMessageInfo_o *)sub_1C32E6C(QuestRestrictionInfo_DialogMessageInfo_TypeInfo);
+              v206 = (QuestRestrictionInfo_DialogMessageInfo_o *)sub_1C372A4(QuestRestrictionInfo_DialogMessageInfo_TypeInfo);
               QuestRestrictionInfo_DialogMessageInfo___ctor(v206, 0);
               if ( !v206 )
                 goto LABEL_387;
@@ -10179,7 +10179,7 @@ LABEL_89:
                 (System_Collections_Generic_Dictionary_int__object__o *)Master_object,
                 (int32_t)entity[1].klass,
                 (Il2CppObject *)v206,
-                (const MethodInfo_33EFD1C *)Method_System_Collections_Generic_Dictionary_int__QuestRestrictionInfo_DialogMessageInfo__Add__);
+                (const MethodInfo_33FA584 *)Method_System_Collections_Generic_Dictionary_int__QuestRestrictionInfo_DialogMessageInfo__Add__);
 LABEL_102:
               max_length = restrictionWholeEntities->max_length;
               if ( (int)++v104 >= max_length )
@@ -10195,7 +10195,7 @@ LABEL_102:
 LABEL_103:
     if ( !DataManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-    Master_object = (__int64)DataManager__GetMaster_object_((const MethodInfo_30DD39C *)Method_DataManager_GetMaster_QuestMaster___);
+    Master_object = (__int64)DataManager__GetMaster_object_((const MethodInfo_30E7C04 *)Method_DataManager_GetMaster_QuestMaster___);
     v207 = v391;
     if ( !Master_object )
       goto LABEL_387;
@@ -10203,11 +10203,11 @@ LABEL_103:
       (DataMasterBase_TMaster__TEntity__PKType__o *)Master_object,
       &v402,
       questId,
-      (const MethodInfo_3396884 *)Method_DataMasterBase_QuestMaster__QuestEntity__int__TryGetEntity__);
+      (const MethodInfo_33A10EC *)Method_DataMasterBase_QuestMaster__QuestEntity__int__TryGetEntity__);
     Master_object = (__int64)v402;
     if ( !v402 )
       goto LABEL_387;
-    Master_object = QuestEntity__HasFlag_42367412((QuestEntity_o *)v402, 0x100000, questPhase, 0);
+    Master_object = QuestEntity__HasFlag_42469280((QuestEntity_o *)v402, 0x100000, questPhase, 0);
     if ( (Master_object & 1) != 0 )
     {
       if ( !v391 )
@@ -10222,19 +10222,19 @@ LABEL_103:
     Master_object = (__int64)v402;
     if ( !v402 )
       goto LABEL_387;
-    v391->fields.isSupportOnlyForceBattle = QuestEntity__HasFlag_42367412((QuestEntity_o *)v402, 0x80000, questPhase, 0);
+    v391->fields.isSupportOnlyForceBattle = QuestEntity__HasFlag_42469280((QuestEntity_o *)v402, 0x80000, questPhase, 0);
     Master_object = (__int64)v402;
     if ( !v402 )
       goto LABEL_387;
-    v391->fields.isFatigure = QuestEntity__HasFlag_42367412((QuestEntity_o *)v402, 0x200000, questPhase, 0);
+    v391->fields.isFatigure = QuestEntity__HasFlag_42469280((QuestEntity_o *)v402, 0x200000, questPhase, 0);
     if ( !DataManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-    Master_object = (__int64)DataManager__GetMaster_object_((const MethodInfo_30DD39C *)Method_DataManager_GetMaster_QuestPhaseMaster___);
+    Master_object = (__int64)DataManager__GetMaster_object_((const MethodInfo_30E7C04 *)Method_DataManager_GetMaster_QuestPhaseMaster___);
     if ( !Master_object )
       goto LABEL_387;
     if ( QuestPhaseMaster__TryGetEntity((QuestPhaseMaster_o *)Master_object, &v401, questId, questPhase, 0) )
     {
-      Master_object = sub_1C32CC8(int___TypeInfo, 1);
+      Master_object = sub_1C37100(int___TypeInfo, 1);
       if ( !v401 )
         goto LABEL_387;
       v209 = Master_object;
@@ -10245,7 +10245,7 @@ LABEL_103:
         goto LABEL_388;
       *(_DWORD *)(v209 + 32) = Master_object;
       p_svtIdForceBattleList->klass = (CGThumbnailListItem_c *)v209;
-      sub_1C32BC4(p_svtIdForceBattleList, v209, v210, v211);
+      sub_1C36FFC(p_svtIdForceBattleList, v209, v210, v211);
       Master_object = (__int64)v401;
       if ( !v401 )
         goto LABEL_387;
@@ -10265,21 +10265,21 @@ LABEL_103:
       j_il2cpp_runtime_class_init_0(BalanceConfig_TypeInfo);
       v212 = BalanceConfig_TypeInfo;
     }
-    v213 = sub_1C32CC8(QuestRestrictionInfo_SlotInfo___TypeInfo, (unsigned int)v212->static_fields->DeckMemberMax);
+    v213 = sub_1C37100(QuestRestrictionInfo_SlotInfo___TypeInfo, (unsigned int)v212->static_fields->DeckMemberMax);
     p_fields->klass = (CGThumbnailListItem_c *)v213;
-    sub_1C32BC4(p_fields, v213, v214, v215);
+    sub_1C36FFC(p_fields, v213, v214, v215);
     Master_object = (__int64)*p_restrictionSlotDictionary;
     if ( !*p_restrictionSlotDictionary )
       goto LABEL_387;
     System_Collections_Generic_Dictionary_int__object___Clear(
       (System_Collections_Generic_Dictionary_int__object__o *)Master_object,
-      (const MethodInfo_33EFEA4 *)Method_System_Collections_Generic_Dictionary_int__RestrictionSlotEntity____Clear__);
+      (const MethodInfo_33FA70C *)Method_System_Collections_Generic_Dictionary_int__RestrictionSlotEntity____Clear__);
     Master_object = (__int64)*p_restrictionSlotDetailDictionary;
     if ( !*p_restrictionSlotDetailDictionary )
       goto LABEL_387;
     System_Collections_Generic_Dictionary_int__object___Clear(
       (System_Collections_Generic_Dictionary_int__object__o *)Master_object,
-      (const MethodInfo_33EFEA4 *)Method_System_Collections_Generic_Dictionary_int__RestrictionSlotDetailEntity____Clear__);
+      (const MethodInfo_33FA70C *)Method_System_Collections_Generic_Dictionary_int__RestrictionSlotDetailEntity____Clear__);
     v216 = 1;
     v217 = 1;
     v387 = p_dialogMessageInfoDictionary;
@@ -10295,7 +10295,7 @@ LABEL_103:
         break;
       if ( !DataManager_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-      Master_object = (__int64)DataManager__GetMaster_object_((const MethodInfo_30DD39C *)Method_DataManager_GetMaster_RestrictionSlotMaster___);
+      Master_object = (__int64)DataManager__GetMaster_object_((const MethodInfo_30E7C04 *)Method_DataManager_GetMaster_RestrictionSlotMaster___);
       if ( !*p_restrictionBaseEntity )
         goto LABEL_387;
       if ( !Master_object )
@@ -10318,11 +10318,11 @@ LABEL_103:
         (System_Collections_Generic_Dictionary_int__object__o *)Master_object,
         v216,
         (Il2CppObject *)v219,
-        (const MethodInfo_33EFD1C *)Method_System_Collections_Generic_Dictionary_int__RestrictionSlotEntity____Add__);
-      v220 = (System_Collections_Generic_List_int__o *)sub_1C32E6C(System_Collections_Generic_List_int__TypeInfo);
+        (const MethodInfo_33FA584 *)Method_System_Collections_Generic_Dictionary_int__RestrictionSlotEntity____Add__);
+      v220 = (System_Collections_Generic_List_int__o *)sub_1C372A4(System_Collections_Generic_List_int__TypeInfo);
       System_Collections_Generic_List_int____ctor(
         v220,
-        (const MethodInfo_377AF44 *)Method_System_Collections_Generic_List_int___ctor__);
+        (const MethodInfo_37857AC *)Method_System_Collections_Generic_List_int___ctor__);
       v221 = *(_DWORD *)(v219 + 24);
       if ( v221 >= 1 )
       {
@@ -10335,7 +10335,7 @@ LABEL_103:
           Master_object = System_Collections_Generic_List_int___Contains(
                             v220,
                             *(_DWORD *)(v223 + 40),
-                            (const MethodInfo_377BB10 *)Method_System_Collections_Generic_List_int__Contains__);
+                            (const MethodInfo_3786378 *)Method_System_Collections_Generic_List_int__Contains__);
           if ( (Master_object & 1) == 0 )
           {
             v224 = *(_DWORD *)(v223 + 40);
@@ -10350,7 +10350,7 @@ LABEL_103:
               System_Collections_Generic_List_int___AddWithResize(
                 v220,
                 v224,
-                *(const MethodInfo_377B798 **)(*(_QWORD *)(v226[4] + 192LL) + 112LL));
+                *(const MethodInfo_3786000 **)(*(_QWORD *)(v226[4] + 192LL) + 112LL));
             }
             else
             {
@@ -10367,7 +10367,7 @@ LABEL_103:
                               (DataMasterBase_TMaster__TEntity__PKType__o *)v98,
                               &item,
                               v228,
-                              (const MethodInfo_3396884 *)Method_DataMasterBase_RestrictionMessageMaster__RestrictionMessageEntity__int__TryGetEntity__);
+                              (const MethodInfo_33A10EC *)Method_DataMasterBase_RestrictionMessageMaster__RestrictionMessageEntity__int__TryGetEntity__);
             if ( (Master_object & 1) != 0 )
             {
               if ( !v90 )
@@ -10375,7 +10375,7 @@ LABEL_103:
               Master_object = System_Collections_Generic_List_object___Contains(
                                 v90,
                                 item,
-                                (const MethodInfo_3798B4C *)Method_System_Collections_Generic_List_RestrictionMessageEntity__Contains__);
+                                (const MethodInfo_37A33B4 *)Method_System_Collections_Generic_List_RestrictionMessageEntity__Contains__);
               if ( (Master_object & 1) == 0 )
               {
                 v231 = item;
@@ -10390,16 +10390,16 @@ LABEL_103:
                   System_Collections_Generic_List_object___AddWithResize(
                     v90,
                     v231,
-                    *(const MethodInfo_37987BC **)(*(_QWORD *)(v233[4] + 192LL) + 112LL));
+                    *(const MethodInfo_37A3024 **)(*(_QWORD *)(v233[4] + 192LL) + 112LL));
                 }
                 else
                 {
                   v235 = &v232->obj.klass + v234;
                   v90->fields._size = v234 + 1;
                   v235[4] = (Il2CppClass *)v231;
-                  sub_1C32BC4((CGThumbnailListItem_o *)(v235 + 4), (int32_t)v231, v229, v230);
+                  sub_1C36FFC((CGThumbnailListItem_o *)(v235 + 4), (int32_t)v231, v229, v230);
                 }
-                v236 = (QuestRestrictionInfo_DialogMessageInfo_o *)sub_1C32E6C(QuestRestrictionInfo_DialogMessageInfo_TypeInfo);
+                v236 = (QuestRestrictionInfo_DialogMessageInfo_o *)sub_1C372A4(QuestRestrictionInfo_DialogMessageInfo_TypeInfo);
                 QuestRestrictionInfo_DialogMessageInfo___ctor(v236, 0);
                 if ( !v236 )
                   goto LABEL_387;
@@ -10413,7 +10413,7 @@ LABEL_103:
                   (System_Collections_Generic_Dictionary_int__object__o *)Master_object,
                   (int32_t)item[1].klass,
                   (Il2CppObject *)v236,
-                  (const MethodInfo_33EFD1C *)Method_System_Collections_Generic_Dictionary_int__QuestRestrictionInfo_DialogMessageInfo__Add__);
+                  (const MethodInfo_33FA584 *)Method_System_Collections_Generic_Dictionary_int__QuestRestrictionInfo_DialogMessageInfo__Add__);
               }
             }
           }
@@ -10426,7 +10426,7 @@ LABEL_103:
 LABEL_163:
       if ( !DataManager_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-      Master_object = (__int64)DataManager__GetMaster_object_((const MethodInfo_30DD39C *)Method_DataManager_GetMaster_RestrictionSlotDetailMaster___);
+      Master_object = (__int64)DataManager__GetMaster_object_((const MethodInfo_30E7C04 *)Method_DataManager_GetMaster_RestrictionSlotDetailMaster___);
       if ( !Master_object )
         goto LABEL_387;
       Master_object = (__int64)RestrictionSlotDetailMaster__GetEntities(
@@ -10440,19 +10440,19 @@ LABEL_163:
         *p_restrictionSlotDetailDictionary,
         v216,
         (Il2CppObject *)Master_object,
-        (const MethodInfo_33EFD1C *)Method_System_Collections_Generic_Dictionary_int__RestrictionSlotDetailEntity____Add__);
+        (const MethodInfo_33FA584 *)Method_System_Collections_Generic_Dictionary_int__RestrictionSlotDetailEntity____Add__);
       klass = p_fields->klass;
-      v239 = (QuestRestrictionInfo_SlotInfo_o *)sub_1C32E6C(QuestRestrictionInfo_SlotInfo_TypeInfo);
+      v239 = (QuestRestrictionInfo_SlotInfo_o *)sub_1C372A4(QuestRestrictionInfo_SlotInfo_TypeInfo);
       QuestRestrictionInfo_SlotInfo___ctor(v239, 0);
       if ( !klass )
         goto LABEL_387;
       if ( v239 )
       {
-        Master_object = sub_1C32D5C(v239, *((_QWORD *)klass->_1.image + 8));
+        Master_object = sub_1C37194(v239, *((_QWORD *)klass->_1.image + 8));
         if ( !Master_object )
         {
-          v366 = sub_1C32EA0(0);
-          sub_1C32D48(v366, 0);
+          v366 = sub_1C372D8(0);
+          sub_1C37180(v366, 0);
         }
       }
       v242 = v216 - 1;
@@ -10460,7 +10460,7 @@ LABEL_163:
         goto LABEL_388;
       v243 = &klass->_1.image + v242;
       v243[4] = v239;
-      sub_1C32BC4((CGThumbnailListItem_o *)(v243 + 4), (int32_t)v239, v240, v241);
+      sub_1C36FFC((CGThumbnailListItem_o *)(v243 + 4), (int32_t)v239, v240, v241);
       servantNumMax = v207->fields.servantNumMax;
       if ( servantNumMax < 1 || v242 < servantNumMax )
       {
@@ -10479,16 +10479,16 @@ LABEL_163:
             v248 = QuestRestrictionInfo___c_TypeInfo;
           }
           v250 = (Il2CppObject *)v248->static_fields->__9;
-          _9__85_0 = (System_Func_object__bool__o *)sub_1C32E6C(System_Func_RestrictionSlotEntity__bool__TypeInfo);
+          _9__85_0 = (System_Func_object__bool__o *)sub_1C372A4(System_Func_RestrictionSlotEntity__bool__TypeInfo);
           System_Func_object__bool____ctor(_9__85_0, v250, Method_QuestRestrictionInfo___c__Setup_b__85_0__, 0);
           static_fields = QuestRestrictionInfo___c_TypeInfo->static_fields;
           static_fields->__9__85_0 = (struct System_Func_RestrictionSlotEntity__bool__o *)_9__85_0;
-          sub_1C32BC4((CGThumbnailListItem_o *)&static_fields->__9__85_0, (int32_t)_9__85_0, v252, v253);
+          sub_1C36FFC((CGThumbnailListItem_o *)&static_fields->__9__85_0, (int32_t)_9__85_0, v252, v253);
         }
-        v254 = BasicHelper__Any_object__51144764(
+        v254 = BasicHelper__Any_object__51187876(
                  (System_Object_array *)v219,
                  (System_Func_T__bool__o *)_9__85_0,
-                 (const MethodInfo_30C683C *)Method_BasicHelper_Any_RestrictionSlotEntity___);
+                 (const MethodInfo_30D10A4 *)Method_BasicHelper_Any_RestrictionSlotEntity___);
         v255 = QuestRestrictionInfo___c_TypeInfo;
         v256 = v254;
         if ( !QuestRestrictionInfo___c_TypeInfo->_2.cctor_finished )
@@ -10505,16 +10505,16 @@ LABEL_163:
             v255 = QuestRestrictionInfo___c_TypeInfo;
           }
           v258 = (Il2CppObject *)v255->static_fields->__9;
-          _9__85_1 = (System_Func_object__bool__o *)sub_1C32E6C(System_Func_RestrictionSlotEntity__bool__TypeInfo);
+          _9__85_1 = (System_Func_object__bool__o *)sub_1C372A4(System_Func_RestrictionSlotEntity__bool__TypeInfo);
           System_Func_object__bool____ctor(_9__85_1, v258, Method_QuestRestrictionInfo___c__Setup_b__85_1__, 0);
           v259 = QuestRestrictionInfo___c_TypeInfo->static_fields;
           v259->__9__85_1 = (struct System_Func_RestrictionSlotEntity__bool__o *)_9__85_1;
-          sub_1C32BC4((CGThumbnailListItem_o *)&v259->__9__85_1, (int32_t)_9__85_1, v260, v261);
+          sub_1C36FFC((CGThumbnailListItem_o *)&v259->__9__85_1, (int32_t)_9__85_1, v260, v261);
         }
-        v262 = BasicHelper__Any_object__51144764(
+        v262 = BasicHelper__Any_object__51187876(
                  (System_Object_array *)v219,
                  (System_Func_T__bool__o *)_9__85_1,
-                 (const MethodInfo_30C683C *)Method_BasicHelper_Any_RestrictionSlotEntity___);
+                 (const MethodInfo_30D10A4 *)Method_BasicHelper_Any_RestrictionSlotEntity___);
         v263 = QuestRestrictionInfo___c_TypeInfo;
         v264 = v262;
         if ( !QuestRestrictionInfo___c_TypeInfo->_2.cctor_finished )
@@ -10531,16 +10531,16 @@ LABEL_163:
             v263 = QuestRestrictionInfo___c_TypeInfo;
           }
           v266 = (Il2CppObject *)v263->static_fields->__9;
-          _9__85_2 = (System_Func_object__bool__o *)sub_1C32E6C(System_Func_RestrictionSlotEntity__bool__TypeInfo);
+          _9__85_2 = (System_Func_object__bool__o *)sub_1C372A4(System_Func_RestrictionSlotEntity__bool__TypeInfo);
           System_Func_object__bool____ctor(_9__85_2, v266, Method_QuestRestrictionInfo___c__Setup_b__85_2__, 0);
           v267 = QuestRestrictionInfo___c_TypeInfo->static_fields;
           v267->__9__85_2 = (struct System_Func_RestrictionSlotEntity__bool__o *)_9__85_2;
-          sub_1C32BC4((CGThumbnailListItem_o *)&v267->__9__85_2, (int32_t)_9__85_2, v268, v269);
+          sub_1C36FFC((CGThumbnailListItem_o *)&v267->__9__85_2, (int32_t)_9__85_2, v268, v269);
         }
-        Master_object = BasicHelper__Any_object__51144764(
+        Master_object = BasicHelper__Any_object__51187876(
                           (System_Object_array *)v219,
                           (System_Func_T__bool__o *)_9__85_2,
-                          (const MethodInfo_30C683C *)Method_BasicHelper_Any_RestrictionSlotEntity___);
+                          (const MethodInfo_30D10A4 *)Method_BasicHelper_Any_RestrictionSlotEntity___);
         if ( v264 || !v256 || (Master_object & 1) != 0 )
         {
           v207 = v391;
@@ -10653,7 +10653,7 @@ LABEL_163:
                 Master_object = (__int64)System_Array__Clone((System_Array_o *)Master_object, 0);
                 if ( !v282 )
                   goto LABEL_387;
-                Master_object = sub_1C32D5C(Master_object, int___TypeInfo);
+                Master_object = sub_1C37194(Master_object, int___TypeInfo);
                 v285 = v282->fields._items;
                 v286 = Method_System_Collections_Generic_List_int____Add__;
                 ++v282->fields._version;
@@ -10666,14 +10666,14 @@ LABEL_163:
                   System_Collections_Generic_List_object___AddWithResize(
                     v282,
                     (Il2CppObject *)Master_object,
-                    *(const MethodInfo_37987BC **)(*(_QWORD *)(v286[4] + 192LL) + 112LL));
+                    *(const MethodInfo_37A3024 **)(*(_QWORD *)(v286[4] + 192LL) + 112LL));
                 }
                 else
                 {
                   v289 = &v285->obj.klass + v287;
                   v282->fields._size = v287 + 1;
                   v289[4] = (Il2CppClass *)v288;
-                  sub_1C32BC4((CGThumbnailListItem_o *)(v289 + 4), v288, v283, v284);
+                  sub_1C36FFC((CGThumbnailListItem_o *)(v289 + 4), v288, v283, v284);
                 }
                 v290 = p_fields->klass;
                 if ( !p_fields->klass )
@@ -10698,7 +10698,7 @@ LABEL_163:
                   System_Collections_Generic_List_Int32Enum___AddWithResize(
                     (System_Collections_Generic_List_T__o *)Master_object,
                     v292,
-                    *(const MethodInfo_377DFC4 **)(*(_QWORD *)(v294[4] + 192LL) + 112LL));
+                    *(const MethodInfo_378882C **)(*(_QWORD *)(v294[4] + 192LL) + 112LL));
                 }
                 else
                 {
@@ -10710,7 +10710,7 @@ LABEL_163:
               {
                 if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
                   j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-                Master_object = (__int64)LocalizationManager__Get((System_String_o *)StringLiteral_10299/*"PARTY_ORGANIZATION_SERVANT_QUEST_RESTRICTION_FIXED_POSITION"*/, 0);
+                Master_object = (__int64)LocalizationManager__Get((System_String_o *)StringLiteral_10300/*"PARTY_ORGANIZATION_SERVANT_QUEST_RESTRICTION_FIXED_POSITION"*/, 0);
                 v296 = (System_String_o *)Master_object;
               }
               else
@@ -10736,9 +10736,9 @@ LABEL_163:
                 goto LABEL_387;
               v303 = (System_String_o **)(v302 + 40);
               if ( (Master_object & 1) == 0 )
-                v296 = System_String__Concat_63556792(*v303, (System_String_o *)StringLiteral_43/*"\n"*/, v296, 0);
+                v296 = System_String__Concat_63599904(*v303, (System_String_o *)StringLiteral_43/*"\n"*/, v296, 0);
               *v303 = v296;
-              sub_1C32BC4((CGThumbnailListItem_o *)v303, (int32_t)v296, v299, v300);
+              sub_1C36FFC((CGThumbnailListItem_o *)v303, (int32_t)v296, v299, v300);
             }
             v276 = *(_DWORD *)(v237 + 24);
             if ( (int)++v277 >= v276 )
@@ -10768,17 +10768,17 @@ LABEL_253:
             v305 = QuestRestrictionInfo___c_TypeInfo;
           }
           v308 = (Il2CppObject *)v305->static_fields->__9;
-          _9__85_3 = (System_Func_object__bool__o *)sub_1C32E6C(System_Func_RestrictionSlotDetailEntity__bool__TypeInfo);
+          _9__85_3 = (System_Func_object__bool__o *)sub_1C372A4(System_Func_RestrictionSlotDetailEntity__bool__TypeInfo);
           System_Func_object__bool____ctor(_9__85_3, v308, Method_QuestRestrictionInfo___c__Setup_b__85_3__, 0);
           v309 = QuestRestrictionInfo___c_TypeInfo->static_fields;
           v309->__9__85_3 = (struct System_Func_RestrictionSlotDetailEntity__bool__o *)_9__85_3;
-          sub_1C32BC4((CGThumbnailListItem_o *)&v309->__9__85_3, (int32_t)_9__85_3, v310, v311);
+          sub_1C36FFC((CGThumbnailListItem_o *)&v309->__9__85_3, (int32_t)_9__85_3, v310, v311);
           v207 = v391;
         }
-        Master_object = BasicHelper__Any_object__51144764(
+        Master_object = BasicHelper__Any_object__51187876(
                           (System_Object_array *)v237,
                           (System_Func_T__bool__o *)_9__85_3,
-                          (const MethodInfo_30C683C *)Method_BasicHelper_Any_RestrictionSlotDetailEntity___);
+                          (const MethodInfo_30D10A4 *)Method_BasicHelper_Any_RestrictionSlotDetailEntity___);
         if ( !v306 )
           goto LABEL_387;
         *(_BYTE *)(v306 + 48) = (Master_object & 1) == 0;
@@ -10820,13 +10820,13 @@ LABEL_253:
     if ( !v90
       || (v318 = System_Collections_Generic_List_object___ToArray(
                    v90,
-                   (const MethodInfo_379A314 *)Method_System_Collections_Generic_List_RestrictionMessageEntity__ToArray__),
+                   (const MethodInfo_37A4B7C *)Method_System_Collections_Generic_List_RestrictionMessageEntity__ToArray__),
           v207->fields.restrictionMessageEntities = (struct RestrictionMessageEntity_array *)v318,
-          sub_1C32BC4((CGThumbnailListItem_o *)&v207->fields.restrictionMessageEntities, (int32_t)v318, v319, v320),
+          sub_1C36FFC((CGThumbnailListItem_o *)&v207->fields.restrictionMessageEntities, (int32_t)v318, v319, v320),
           (slotInfos = v207->fields.slotInfos) == 0) )
     {
 LABEL_387:
-      sub_1C32E7C(Master_object);
+      sub_1C372B4(Master_object);
     }
     v322 = slotInfos->max_length;
     if ( v322 >= 1 )
@@ -10860,7 +10860,7 @@ LABEL_387:
           goto LABEL_293;
       }
 LABEL_388:
-      sub_1C32E84(Master_object);
+      sub_1C372BC(Master_object);
     }
     v326 = 0;
     v325 = 0;
@@ -10870,7 +10870,7 @@ LABEL_293:
       v207->fields.isNoSupportBattle = 1;
     if ( !DataManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-    Master_object = (__int64)DataManager__GetMaster_object_((const MethodInfo_30DD39C *)Method_DataManager_GetMaster_NpcFollowerMaster___);
+    Master_object = (__int64)DataManager__GetMaster_object_((const MethodInfo_30E7C04 *)Method_DataManager_GetMaster_NpcFollowerMaster___);
     if ( !Master_object )
       goto LABEL_387;
     Master_object = (__int64)NpcFollowerMaster__GetQuestFollowerList(
@@ -10900,14 +10900,14 @@ LABEL_307:
     Master_object = (__int64)v402;
     if ( !v402 )
       goto LABEL_387;
-    HasFlag_42367412 = QuestEntity__HasFlag_42367412((QuestEntity_o *)v402, 0x10000000, questPhase, 0);
-    v207->fields.isNpcMultipleBattle = HasFlag_42367412;
-    if ( !HasFlag_42367412 )
+    HasFlag_42469280 = QuestEntity__HasFlag_42469280((QuestEntity_o *)v402, 0x10000000, questPhase, 0);
+    v207->fields.isNpcMultipleBattle = HasFlag_42469280;
+    if ( !HasFlag_42469280 )
       v207->fields.isNpcMultipleBattle = v329 < v328 && v326 > 0 && v325 > 0;
     Master_object = (__int64)v402;
     if ( !v402 )
       goto LABEL_387;
-    v332 = QuestEntity__HasFlag_42367412((QuestEntity_o *)v402, 0x20000000, questPhase, 0);
+    v332 = QuestEntity__HasFlag_42469280((QuestEntity_o *)v402, 0x20000000, questPhase, 0);
     v207->fields.isNpcOnlyBattle = v332;
     if ( !v332 )
       v207->fields.isNpcOnlyBattle = v329 < v328 && v326 == 0 && v325 > 0;
@@ -10920,7 +10920,7 @@ LABEL_307:
                             *p_restrictionSlotDictionary,
                             2,
                             0,
-                            (const MethodInfo_30CB13C *)Method_BasicHelper_GetValue_int__RestrictionSlotEntity_____);
+                            (const MethodInfo_30D59A4 *)Method_BasicHelper_GetValue_int__RestrictionSlotEntity_____);
       if ( Value_int__object && Value_int__object[1].monitor )
         v334 = 2;
       else
@@ -10960,7 +10960,7 @@ LABEL_307:
         Master_object = (__int64)System_Collections_Generic_Dictionary_int__object___get_Item(
                                    (System_Collections_Generic_Dictionary_int__object__o *)Master_object,
                                    1,
-                                   (const MethodInfo_33EFC7C *)Method_System_Collections_Generic_Dictionary_int__RestrictionSlotDetailEntity____get_Item__);
+                                   (const MethodInfo_33FA4E4 *)Method_System_Collections_Generic_Dictionary_int__RestrictionSlotDetailEntity____get_Item__);
         if ( Master_object )
         {
           v337 = *(struct System_Collections_Generic_Dictionary_Entry_TKey__TValue__array **)(Master_object + 24);
@@ -10975,11 +10975,11 @@ LABEL_307:
             if ( !Master_object )
               goto LABEL_387;
             v339 = System_Array__Clone((System_Array_o *)Master_object, 0);
-            v207->fields.fixedMyServantSingleIndividualities = (struct System_Int32_array *)sub_1C32D5C(
+            v207->fields.fixedMyServantSingleIndividualities = (struct System_Int32_array *)sub_1C37194(
                                                                                               v339,
                                                                                               int___TypeInfo);
-            v340 = sub_1C32D5C(v339, int___TypeInfo);
-            sub_1C32BC4((CGThumbnailListItem_o *)&v207->fields.fixedMyServantSingleIndividualities, v340, v341, v342);
+            v340 = sub_1C37194(v339, int___TypeInfo);
+            sub_1C36FFC((CGThumbnailListItem_o *)&v207->fields.fixedMyServantSingleIndividualities, v340, v341, v342);
           }
         }
       }
@@ -10989,30 +10989,30 @@ LABEL_307:
       goto LABEL_387;
     Master_object = System_Collections_Generic_Dictionary_int__object___get_Count(
                       (System_Collections_Generic_Dictionary_int__object__o *)Master_object,
-                      (const MethodInfo_33EF9CC *)Method_System_Collections_Generic_Dictionary_int__RestrictionSlotEntity____get_Count__);
+                      (const MethodInfo_33FA234 *)Method_System_Collections_Generic_Dictionary_int__RestrictionSlotEntity____get_Count__);
     restrictionSlotDictionary = (System_Collections_Generic_Dictionary_int__object__o *)v207->fields.restrictionSlotDictionary;
     v207->fields.isSupportOnly = (int)Master_object > 0;
     if ( !restrictionSlotDictionary )
       goto LABEL_387;
     Master_object = (__int64)System_Collections_Generic_Dictionary_int__object___get_Values(
                                restrictionSlotDictionary,
-                               (const MethodInfo_33EFB2C *)Method_System_Collections_Generic_Dictionary_int__RestrictionSlotEntity____get_Values__);
+                               (const MethodInfo_33FA394 *)Method_System_Collections_Generic_Dictionary_int__RestrictionSlotEntity____get_Values__);
     if ( !Master_object )
       goto LABEL_387;
     System_Collections_Generic_Dictionary_ValueCollection_int__object___GetEnumerator(
       &v397,
       (System_Collections_Generic_Dictionary_ValueCollection_TKey__TValue__o *)Master_object,
-      (const MethodInfo_3ACF124 *)Method_System_Collections_Generic_Dictionary_ValueCollection_int__RestrictionSlotEntity____GetEnumerator__);
+      (const MethodInfo_3AD998C *)Method_System_Collections_Generic_Dictionary_ValueCollection_int__RestrictionSlotEntity____GetEnumerator__);
     v398 = v397;
     do
     {
       v344 = System_Collections_Generic_Dictionary_ValueCollection_Enumerator_int__object___MoveNext(
                &v398,
-               (const MethodInfo_3547804 *)Method_System_Collections_Generic_Dictionary_ValueCollection_Enumerator_int__RestrictionSlotEntity____MoveNext__);
+               (const MethodInfo_355206C *)Method_System_Collections_Generic_Dictionary_ValueCollection_Enumerator_int__RestrictionSlotEntity____MoveNext__);
       if ( !v344 )
         break;
       if ( !v398.fields._currentValue )
-        sub_1C32E7C(v344);
+        sub_1C372B4(v344);
       monitor = (int)v398.fields._currentValue[1].monitor;
       if ( monitor >= 1 )
       {
@@ -11020,10 +11020,10 @@ LABEL_307:
         while ( 1 )
         {
           if ( monitor == v346 )
-            sub_1C32E84(v344);
+            sub_1C372BC(v344);
           v347 = *((_QWORD *)&v398.fields._currentValue[2].klass + v346);
           if ( !v347 )
-            sub_1C32E7C(v344);
+            sub_1C372B4(v344);
           if ( *(_DWORD *)(v347 + 28) == 1 )
             break;
           if ( monitor == ++v346 )
@@ -11038,10 +11038,10 @@ LABEL_348:
     while ( v207->fields.isSupportOnly );
     System_Collections_Generic_Dictionary_ValueCollection_Enumerator_int__object___Dispose(
       &v398,
-      (const MethodInfo_3547800 *)Method_System_Collections_Generic_Dictionary_ValueCollection_Enumerator_int__RestrictionSlotEntity____Dispose__);
-    v348 = (System_Text_StringBuilder_o *)sub_1C32E6C(System_Text_StringBuilder_TypeInfo);
+      (const MethodInfo_3552068 *)Method_System_Collections_Generic_Dictionary_ValueCollection_Enumerator_int__RestrictionSlotEntity____Dispose__);
+    v348 = (System_Text_StringBuilder_o *)sub_1C372A4(System_Text_StringBuilder_TypeInfo);
     System_Text_StringBuilder___ctor(v348, 0);
-    v349 = (System_Text_StringBuilder_o *)sub_1C32E6C(System_Text_StringBuilder_TypeInfo);
+    v349 = (System_Text_StringBuilder_o *)sub_1C372A4(System_Text_StringBuilder_TypeInfo);
     System_Text_StringBuilder___ctor(v349, 0);
     v350 = *p_restrictionWholeEntities;
     if ( !*p_restrictionWholeEntities )
@@ -11086,13 +11086,13 @@ LABEL_365:
             {
               if ( !v349 )
                 goto LABEL_387;
-              System_Text_StringBuilder__Append_63603608(v349, (System_String_o *)StringLiteral_43/*"\n"*/, 0);
+              System_Text_StringBuilder__Append_63646720(v349, (System_String_o *)StringLiteral_43/*"\n"*/, 0);
             }
             else if ( !v349 )
             {
               goto LABEL_387;
             }
-            Master_object = (__int64)System_Text_StringBuilder__Append_63603608(v349, v353->fields.summary, 0);
+            Master_object = (__int64)System_Text_StringBuilder__Append_63646720(v349, v353->fields.summary, 0);
             v207->fields.isRestriction = 1;
           }
           if ( v356 )
@@ -11101,13 +11101,13 @@ LABEL_365:
             {
               if ( !v348 )
                 goto LABEL_387;
-              System_Text_StringBuilder__Append_63603608(v348, (System_String_o *)StringLiteral_43/*"\n"*/, 0);
+              System_Text_StringBuilder__Append_63646720(v348, (System_String_o *)StringLiteral_43/*"\n"*/, 0);
             }
             else if ( !v348 )
             {
               goto LABEL_387;
             }
-            Master_object = (__int64)System_Text_StringBuilder__Append_63603608(v348, v353->fields.summary, 0);
+            Master_object = (__int64)System_Text_StringBuilder__Append_63646720(v348, v353->fields.summary, 0);
             v207->fields.isRestriction = 1;
           }
           goto LABEL_377;
@@ -11127,7 +11127,7 @@ LABEL_378:
                v349,
                v349->klass->vtable._3_ToString.method);
       p_confirmRestrictionMessage->klass = (CGThumbnailListItem_c *)v358;
-      sub_1C32BC4(p_confirmRestrictionMessage, v358, v359, v360);
+      sub_1C36FFC(p_confirmRestrictionMessage, v358, v359, v360);
     }
     if ( !v348 )
       goto LABEL_387;
@@ -11135,13 +11135,13 @@ LABEL_378:
     {
       if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-      v361 = LocalizationManager__Get((System_String_o *)StringLiteral_10264/*"PARTY_ORGANIZATION_QUEST_RESTRICTION_WARNING"*/, 0);
+      v361 = LocalizationManager__Get((System_String_o *)StringLiteral_10265/*"PARTY_ORGANIZATION_QUEST_RESTRICTION_WARNING"*/, 0);
       v362 = (System_String_o *)((__int64 (__fastcall *)(System_Text_StringBuilder_o *, const MethodInfo *))v348->klass->vtable._3_ToString.methodPtr)(
                                   v348,
                                   v348->klass->vtable._3_ToString.method);
-      v363 = System_String__Concat_63556792(v361, (System_String_o *)StringLiteral_43/*"\n"*/, v362, 0);
+      v363 = System_String__Concat_63599904(v361, (System_String_o *)StringLiteral_43/*"\n"*/, v362, 0);
       p_restrictionMessage->klass = (CGThumbnailListItem_c *)v363;
-      sub_1C32BC4(p_restrictionMessage, (int32_t)v363, v364, v365);
+      sub_1C36FFC(p_restrictionMessage, (int32_t)v363, v364, v365);
     }
   }
   else
@@ -11232,7 +11232,7 @@ void QuestRestrictionInfo__SetupOldRestriction(QuestRestrictionInfo_o *this, con
   int32_t v79; // w2
   const MethodInfo *v80; // x3
   bool v81; // w0
-  bool HasFlag_42367412; // w0
+  bool HasFlag_42469280; // w0
   bool v83; // w0
   System_Collections_Generic_List_object__o *v84; // x20
   int32_t v85; // w2
@@ -11252,32 +11252,32 @@ void QuestRestrictionInfo__SetupOldRestriction(QuestRestrictionInfo_o *this, con
   QuestPhaseEntity_o *v99; // [xsp+80h] [xbp-70h] BYREF
   Il2CppObject *entity; // [xsp+88h] [xbp-68h] BYREF
 
-  if ( (byte_4C38D13 & 1) == 0 )
+  if ( (byte_4C4430C & 1) == 0 )
   {
-    sub_1C32C20(&BalanceConfig_TypeInfo);
-    sub_1C32C20(&Method_DataManager_GetMasterData_QuestGroupMaster___);
-    sub_1C32C20(&Method_DataManager_GetMasterData_QuestMaster___);
-    sub_1C32C20(&Method_DataManager_GetMasterData_QuestPhaseMaster___);
-    sub_1C32C20(&Method_DataManager_GetMasterData_QuestRestrictionInfoMaster___);
-    sub_1C32C20(&Method_DataMasterBase_QuestMaster__QuestEntity__int__TryGetEntity__);
-    sub_1C32C20(&FollowerInfo___TypeInfo);
-    sub_1C32C20(&int___TypeInfo);
-    sub_1C32C20(&Method_System_Collections_Generic_List_int__Add__);
-    sub_1C32C20(&Method_System_Collections_Generic_List_RestrictionEntity__Add__);
-    sub_1C32C20(&LocalizationManager_TypeInfo);
-    sub_1C32C20(&Method_SingletonMonoBehaviour_DataManager__getInstance__);
-    sub_1C32C20(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-    sub_1C32C20(&System_Text_StringBuilder_TypeInfo);
-    sub_1C32C20(&StringLiteral_43/*"\n"*/);
-    sub_1C32C20(&StringLiteral_10264/*"PARTY_ORGANIZATION_QUEST_RESTRICTION_WARNING"*/);
-    byte_4C38D13 = 1;
+    sub_1C37058(&BalanceConfig_TypeInfo);
+    sub_1C37058(&Method_DataManager_GetMasterData_QuestGroupMaster___);
+    sub_1C37058(&Method_DataManager_GetMasterData_QuestMaster___);
+    sub_1C37058(&Method_DataManager_GetMasterData_QuestPhaseMaster___);
+    sub_1C37058(&Method_DataManager_GetMasterData_QuestRestrictionInfoMaster___);
+    sub_1C37058(&Method_DataMasterBase_QuestMaster__QuestEntity__int__TryGetEntity__);
+    sub_1C37058(&FollowerInfo___TypeInfo);
+    sub_1C37058(&int___TypeInfo);
+    sub_1C37058(&Method_System_Collections_Generic_List_int__Add__);
+    sub_1C37058(&Method_System_Collections_Generic_List_RestrictionEntity__Add__);
+    sub_1C37058(&LocalizationManager_TypeInfo);
+    sub_1C37058(&Method_SingletonMonoBehaviour_DataManager__getInstance__);
+    sub_1C37058(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    sub_1C37058(&System_Text_StringBuilder_TypeInfo);
+    sub_1C37058(&StringLiteral_43/*"\n"*/);
+    sub_1C37058(&StringLiteral_10265/*"PARTY_ORGANIZATION_QUEST_RESTRICTION_WARNING"*/);
+    byte_4C4430C = 1;
   }
   v99 = 0;
   entity = 0;
   v98 = 0;
-  v3 = (System_Text_StringBuilder_o *)sub_1C32E6C(System_Text_StringBuilder_TypeInfo);
+  v3 = (System_Text_StringBuilder_o *)sub_1C372A4(System_Text_StringBuilder_TypeInfo);
   System_Text_StringBuilder___ctor(v3, 0);
-  v4 = (System_Text_StringBuilder_o *)sub_1C32E6C(System_Text_StringBuilder_TypeInfo);
+  v4 = (System_Text_StringBuilder_o *)sub_1C372A4(System_Text_StringBuilder_TypeInfo);
   System_Text_StringBuilder___ctor(v4, 0);
   restrictionEntityList = this->fields.restrictionEntityList;
   if ( !restrictionEntityList )
@@ -11305,40 +11305,40 @@ void QuestRestrictionInfo__SetupOldRestriction(QuestRestrictionInfo_o *this, con
           goto LABEL_51;
         case 5:
           this->fields.supportOnlyRestrictionEntity = v11;
-          sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.supportOnlyRestrictionEntity, (int32_t)v11, v6, v7);
+          sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.supportOnlyRestrictionEntity, (int32_t)v11, v6, v7);
           this->fields.isSupportOnly = 1;
           goto LABEL_72;
         case 6:
           p_uniqueSvtRestrictionEntity->klass = (CGThumbnailListItem_c *)v11;
-          sub_1C32BC4(p_uniqueSvtRestrictionEntity, (int32_t)v11, v6, v7);
+          sub_1C36FFC(p_uniqueSvtRestrictionEntity, (int32_t)v11, v6, v7);
           v13 = BalanceConfig_TypeInfo;
           if ( !BalanceConfig_TypeInfo->_2.cctor_finished )
           {
             j_il2cpp_runtime_class_init_0(BalanceConfig_TypeInfo);
             v13 = BalanceConfig_TypeInfo;
           }
-          v14 = (struct System_Int32_array *)sub_1C32CC8(
+          v14 = (struct System_Int32_array *)sub_1C37100(
                                                int___TypeInfo,
                                                (unsigned int)v13->static_fields->DeckMemberMax);
           this->fields.deckSvtIdList = v14;
-          sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.deckSvtIdList, (int32_t)v14, v15, v16);
+          sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.deckSvtIdList, (int32_t)v14, v15, v16);
           this->fields.isUniqueServant = 1;
           goto LABEL_72;
         case 7:
           this->fields.fixedSupportPositionRestrictionEntity = v11;
-          sub_1C32BC4(
+          sub_1C36FFC(
             (CGThumbnailListItem_o *)&this->fields.fixedSupportPositionRestrictionEntity,
             (int32_t)v11,
             v6,
             v7);
           DeckPositionList = RestrictionEntity__getDeckPositionList(v11, 0);
           this->fields.supportPositionList = DeckPositionList;
-          sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.supportPositionList, (int32_t)DeckPositionList, v18, v19);
+          sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.supportPositionList, (int32_t)DeckPositionList, v18, v19);
           this->fields.isFixedSupportPosition = 1;
           goto LABEL_72;
         case 8:
           this->fields.fixedMyServantPositionRestrictionEntity = v11;
-          sub_1C32BC4(
+          sub_1C36FFC(
             (CGThumbnailListItem_o *)&this->fields.fixedMyServantPositionRestrictionEntity,
             (int32_t)v11,
             v6,
@@ -11347,7 +11347,7 @@ void QuestRestrictionInfo__SetupOldRestriction(QuestRestrictionInfo_o *this, con
           goto LABEL_72;
         case 9:
           this->fields.fixedMyServantSingleRestrictionEntity = v11;
-          sub_1C32BC4(
+          sub_1C36FFC(
             (CGThumbnailListItem_o *)&this->fields.fixedMyServantSingleRestrictionEntity,
             (int32_t)v11,
             v6,
@@ -11356,7 +11356,7 @@ void QuestRestrictionInfo__SetupOldRestriction(QuestRestrictionInfo_o *this, con
           goto LABEL_72;
         case 0xA:
           p_servantNumRestrictionEntity->klass = (CGThumbnailListItem_c *)v11;
-          sub_1C32BC4(p_servantNumRestrictionEntity, (int32_t)v11, v6, v7);
+          sub_1C36FFC(p_servantNumRestrictionEntity, (int32_t)v11, v6, v7);
           targetVals = (int *)v11->fields.targetVals;
           if ( v11->fields.rangeType == 5 )
           {
@@ -11386,7 +11386,7 @@ LABEL_72:
           break;
         case 0xB:
           p_myServantNumRestrictionEntity->klass = (CGThumbnailListItem_c *)v11;
-          sub_1C32BC4(p_myServantNumRestrictionEntity, (int32_t)v11, v6, v7);
+          sub_1C36FFC(p_myServantNumRestrictionEntity, (int32_t)v11, v6, v7);
           v22 = v11->fields.targetVals;
           if ( !v22 )
             goto LABEL_72;
@@ -11412,14 +11412,14 @@ LABEL_72:
             System_Collections_Generic_List_object___AddWithResize(
               myServantOrNpcRestrictionEntityList,
               (Il2CppObject *)v11,
-              *(const MethodInfo_37987BC **)(*(_QWORD *)(v25[4] + 192LL) + 112LL));
+              *(const MethodInfo_37A3024 **)(*(_QWORD *)(v25[4] + 192LL) + 112LL));
           }
           else
           {
             v27 = &items->obj.klass + size;
             myServantOrNpcRestrictionEntityList->fields._size = size + 1;
             v27[4] = (Il2CppClass *)v11;
-            sub_1C32BC4((CGThumbnailListItem_o *)(v27 + 4), (int32_t)v11, v6, v7);
+            sub_1C36FFC((CGThumbnailListItem_o *)(v27 + 4), (int32_t)v11, v6, v7);
           }
           specifiedPositionList = this->fields.specifiedPositionList;
           myServantOrNpcRestrictionEntityList = (System_Collections_Generic_List_object__o *)RestrictionEntity__GetSpecifiedPosition(
@@ -11438,7 +11438,7 @@ LABEL_72:
             System_Collections_Generic_List_int___AddWithResize(
               specifiedPositionList,
               (int32_t)myServantOrNpcRestrictionEntityList,
-              *(const MethodInfo_377B798 **)(*(_QWORD *)(v58[4] + 192LL) + 112LL));
+              *(const MethodInfo_3786000 **)(*(_QWORD *)(v58[4] + 192LL) + 112LL));
           }
           else
           {
@@ -11449,7 +11449,7 @@ LABEL_72:
           goto LABEL_72;
         case 0xE:
           this->fields.fixedServantPositionRestrictionEntity = v11;
-          sub_1C32BC4(
+          sub_1C36FFC(
             (CGThumbnailListItem_o *)&this->fields.fixedServantPositionRestrictionEntity,
             (int32_t)v11,
             v6,
@@ -11458,40 +11458,40 @@ LABEL_72:
           goto LABEL_72;
         case 0xF:
           p_uniqueIndividualityEntity->klass = (CGThumbnailListItem_c *)v11;
-          sub_1C32BC4(p_uniqueIndividualityEntity, (int32_t)v11, v6, v7);
+          sub_1C36FFC(p_uniqueIndividualityEntity, (int32_t)v11, v6, v7);
           myServantOrNpcRestrictionEntityList = (System_Collections_Generic_List_object__o *)v11->fields.targetVals;
           if ( !myServantOrNpcRestrictionEntityList )
             goto LABEL_155;
           v28 = System_Array__Clone((System_Array_o *)myServantOrNpcRestrictionEntityList, 0);
-          this->fields.uniqueIndividualitys = (struct System_Int32_array *)sub_1C32D5C(v28, int___TypeInfo);
-          v29 = sub_1C32D5C(v28, int___TypeInfo);
-          sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.uniqueIndividualitys, v29, v30, v31);
+          this->fields.uniqueIndividualitys = (struct System_Int32_array *)sub_1C37194(v28, int___TypeInfo);
+          v29 = sub_1C37194(v28, int___TypeInfo);
+          sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.uniqueIndividualitys, v29, v30, v31);
           v32 = BalanceConfig_TypeInfo;
           if ( !BalanceConfig_TypeInfo->_2.cctor_finished )
           {
             j_il2cpp_runtime_class_init_0(BalanceConfig_TypeInfo);
             v32 = BalanceConfig_TypeInfo;
           }
-          v33 = (struct System_Int32_array *)sub_1C32CC8(
+          v33 = (struct System_Int32_array *)sub_1C37100(
                                                int___TypeInfo,
                                                (unsigned int)v32->static_fields->DeckMemberMax);
           this->fields.deckSvtIdList = v33;
-          sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.deckSvtIdList, (int32_t)v33, v34, v35);
-          v36 = (struct System_Int32_array *)sub_1C32CC8(
+          sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.deckSvtIdList, (int32_t)v33, v34, v35);
+          v36 = (struct System_Int32_array *)sub_1C37100(
                                                int___TypeInfo,
                                                (unsigned int)BalanceConfig_TypeInfo->static_fields->DeckMemberMax);
           this->fields.deckLimitCountList = v36;
-          sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.deckLimitCountList, (int32_t)v36, v37, v38);
-          v39 = (struct System_Int32_array *)sub_1C32CC8(
+          sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.deckLimitCountList, (int32_t)v36, v37, v38);
+          v39 = (struct System_Int32_array *)sub_1C37100(
                                                int___TypeInfo,
                                                (unsigned int)BalanceConfig_TypeInfo->static_fields->DeckMemberMax);
           this->fields.deckDispLimitCountList = v39;
-          sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.deckDispLimitCountList, (int32_t)v39, v40, v41);
-          v42 = (struct FollowerInfo_array *)sub_1C32CC8(
+          sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.deckDispLimitCountList, (int32_t)v39, v40, v41);
+          v42 = (struct FollowerInfo_array *)sub_1C37100(
                                                FollowerInfo___TypeInfo,
                                                (unsigned int)BalanceConfig_TypeInfo->static_fields->DeckMemberMax);
           this->fields.deckNpcInfoList = v42;
-          sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.deckNpcInfoList, (int32_t)v42, v43, v44);
+          sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.deckNpcInfoList, (int32_t)v42, v43, v44);
           this->fields.isUniqueIndividuality = 1;
           goto LABEL_72;
         case 0x10:
@@ -11509,14 +11509,14 @@ LABEL_72:
             System_Collections_Generic_List_object___AddWithResize(
               myServantOrNpcRestrictionEntityList,
               (Il2CppObject *)v11,
-              *(const MethodInfo_37987BC **)(*(_QWORD *)(v46[4] + 192LL) + 112LL));
+              *(const MethodInfo_37A3024 **)(*(_QWORD *)(v46[4] + 192LL) + 112LL));
           }
           else
           {
             v48 = &v45->obj.klass + v47;
             myServantOrNpcRestrictionEntityList->fields._size = v47 + 1;
             v48[4] = (Il2CppClass *)v11;
-            sub_1C32BC4((CGThumbnailListItem_o *)(v48 + 4), (int32_t)v11, v6, v7);
+            sub_1C36FFC((CGThumbnailListItem_o *)(v48 + 4), (int32_t)v11, v6, v7);
           }
           v60 = this->fields.specifiedPositionList;
           myServantOrNpcRestrictionEntityList = (System_Collections_Generic_List_object__o *)RestrictionEntity__GetSpecifiedPosition(
@@ -11535,7 +11535,7 @@ LABEL_72:
             System_Collections_Generic_List_int___AddWithResize(
               v60,
               (int32_t)myServantOrNpcRestrictionEntityList,
-              *(const MethodInfo_377B798 **)(*(_QWORD *)(v62[4] + 192LL) + 112LL));
+              *(const MethodInfo_3786000 **)(*(_QWORD *)(v62[4] + 192LL) + 112LL));
           }
           else
           {
@@ -11558,7 +11558,7 @@ LABEL_72:
 LABEL_44:
             if ( !v3 )
               goto LABEL_155;
-            System_Text_StringBuilder__Append_63603608(v3, (System_String_o *)StringLiteral_43/*"\n"*/, 0);
+            System_Text_StringBuilder__Append_63646720(v3, (System_String_o *)StringLiteral_43/*"\n"*/, 0);
           }
           else
           {
@@ -11566,7 +11566,7 @@ LABEL_11:
             if ( !v3 )
               goto LABEL_155;
           }
-          myServantOrNpcRestrictionEntityList = (System_Collections_Generic_List_object__o *)System_Text_StringBuilder__Append_63603608(
+          myServantOrNpcRestrictionEntityList = (System_Collections_Generic_List_object__o *)System_Text_StringBuilder__Append_63646720(
                                                                                                v3,
                                                                                                v11->fields.name,
                                                                                                0);
@@ -11587,7 +11587,7 @@ LABEL_11:
             System_Collections_Generic_List_object___AddWithResize(
               myServantOrNpcRestrictionEntityList,
               (Il2CppObject *)v11,
-              *(const MethodInfo_37987BC **)(*(_QWORD *)(v52[4] + 192LL) + 112LL));
+              *(const MethodInfo_37A3024 **)(*(_QWORD *)(v52[4] + 192LL) + 112LL));
           }
           else
           {
@@ -11596,7 +11596,7 @@ LABEL_11:
             v54[4] = (Il2CppClass *)v11;
             p_totalCostRestrictionEntity = (struct RestrictionEntity_o **)(v54 + 4);
 LABEL_51:
-            sub_1C32BC4((CGThumbnailListItem_o *)p_totalCostRestrictionEntity, (int32_t)v11, v6, v7);
+            sub_1C36FFC((CGThumbnailListItem_o *)p_totalCostRestrictionEntity, (int32_t)v11, v6, v7);
           }
           goto LABEL_72;
         default:
@@ -11615,37 +11615,37 @@ LABEL_73:
                                       v3,
                                       v3->klass->vtable._3_ToString.method);
     this->fields.confirmRestrictionMessage = v64;
-    sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.confirmRestrictionMessage, (int32_t)v64, v65, v66);
+    sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.confirmRestrictionMessage, (int32_t)v64, v65, v66);
     if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-    v67 = LocalizationManager__Get((System_String_o *)StringLiteral_10264/*"PARTY_ORGANIZATION_QUEST_RESTRICTION_WARNING"*/, 0);
-    v68 = System_String__Concat_63556792(
+    v67 = LocalizationManager__Get((System_String_o *)StringLiteral_10265/*"PARTY_ORGANIZATION_QUEST_RESTRICTION_WARNING"*/, 0);
+    v68 = System_String__Concat_63599904(
             v67,
             (System_String_o *)StringLiteral_43/*"\n"*/,
             this->fields.confirmRestrictionMessage,
             0);
     this->fields.restrictionMessage = v68;
-    sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.restrictionMessage, (int32_t)v68, v69, v70);
+    sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.restrictionMessage, (int32_t)v68, v69, v70);
   }
-  myServantOrNpcRestrictionEntityList = (System_Collections_Generic_List_object__o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39E2904 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  myServantOrNpcRestrictionEntityList = (System_Collections_Generic_List_object__o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39ED16C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !myServantOrNpcRestrictionEntityList )
     goto LABEL_155;
   myServantOrNpcRestrictionEntityList = (System_Collections_Generic_List_object__o *)DataManager__GetMasterData_object_(
                                                                                        (DataManager_o *)myServantOrNpcRestrictionEntityList,
-                                                                                       (const MethodInfo_30DD3F0 *)Method_DataManager_GetMasterData_QuestMaster___);
+                                                                                       (const MethodInfo_30E7C58 *)Method_DataManager_GetMasterData_QuestMaster___);
   if ( !myServantOrNpcRestrictionEntityList )
     goto LABEL_155;
   DataMasterBase_object__object__int___TryGetEntity(
     (DataMasterBase_TMaster__TEntity__PKType__o *)myServantOrNpcRestrictionEntityList,
     &entity,
     this->fields.questId,
-    (const MethodInfo_3396884 *)Method_DataMasterBase_QuestMaster__QuestEntity__int__TryGetEntity__);
-  myServantOrNpcRestrictionEntityList = (System_Collections_Generic_List_object__o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39E2904 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    (const MethodInfo_33A10EC *)Method_DataMasterBase_QuestMaster__QuestEntity__int__TryGetEntity__);
+  myServantOrNpcRestrictionEntityList = (System_Collections_Generic_List_object__o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39ED16C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !myServantOrNpcRestrictionEntityList )
     goto LABEL_155;
   myServantOrNpcRestrictionEntityList = (System_Collections_Generic_List_object__o *)DataManager__GetMasterData_object_(
                                                                                        (DataManager_o *)myServantOrNpcRestrictionEntityList,
-                                                                                       (const MethodInfo_30DD3F0 *)Method_DataManager_GetMasterData_QuestPhaseMaster___);
+                                                                                       (const MethodInfo_30E7C58 *)Method_DataManager_GetMasterData_QuestPhaseMaster___);
   if ( !myServantOrNpcRestrictionEntityList )
     goto LABEL_155;
   QuestPhaseMaster__TryGetEntity(
@@ -11656,16 +11656,16 @@ LABEL_73:
     0);
   v72 = *((_QWORD *)Method_SingletonMonoBehaviour_DataManager__getInstance__ + 4);
   if ( (*(_BYTE *)(v72 + 309) & 1) == 0 )
-    v72 = sub_1C83334(v71);
+    v72 = sub_1C8776C(v71);
   v73 = *(_QWORD *)(*(_QWORD *)(v72 + 192) + 16LL);
   if ( (*(_BYTE *)(v73 + 309) & 1) == 0 )
-    v73 = sub_1C83334(v71);
+    v73 = sub_1C8776C(v71);
   myServantOrNpcRestrictionEntityList = **(System_Collections_Generic_List_object__o ***)(v73 + 184);
   if ( !myServantOrNpcRestrictionEntityList )
     goto LABEL_155;
   myServantOrNpcRestrictionEntityList = (System_Collections_Generic_List_object__o *)DataManager__GetMasterData_object_(
                                                                                        (DataManager_o *)myServantOrNpcRestrictionEntityList,
-                                                                                       (const MethodInfo_30DD3F0 *)Method_DataManager_GetMasterData_QuestRestrictionInfoMaster___);
+                                                                                       (const MethodInfo_30E7C58 *)Method_DataManager_GetMasterData_QuestRestrictionInfoMaster___);
   if ( !myServantOrNpcRestrictionEntityList )
     goto LABEL_155;
   if ( QuestRestrictionInfoMaster__TryGetEntity(
@@ -11730,10 +11730,10 @@ LABEL_107:
                   this->fields.isAllOutBattle = v81;
                   if ( v81 )
                   {
-                    myServantOrNpcRestrictionEntityList = (System_Collections_Generic_List_object__o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39E2904 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+                    myServantOrNpcRestrictionEntityList = (System_Collections_Generic_List_object__o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39ED16C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
                     if ( !myServantOrNpcRestrictionEntityList )
                       goto LABEL_155;
-                    myServantOrNpcRestrictionEntityList = (System_Collections_Generic_List_object__o *)DataManager__GetMasterData_object_((DataManager_o *)myServantOrNpcRestrictionEntityList, (const MethodInfo_30DD3F0 *)Method_DataManager_GetMasterData_QuestGroupMaster___);
+                    myServantOrNpcRestrictionEntityList = (System_Collections_Generic_List_object__o *)DataManager__GetMasterData_object_((DataManager_o *)myServantOrNpcRestrictionEntityList, (const MethodInfo_30E7C58 *)Method_DataManager_GetMasterData_QuestGroupMaster___);
                     if ( !myServantOrNpcRestrictionEntityList )
                       goto LABEL_155;
                     this->fields.allOutBattleGroupNo = QuestGroupMaster__GetGroupId(
@@ -11743,7 +11743,7 @@ LABEL_107:
                                                          0);
                   }
                   if ( entity )
-                    this->fields.isFatigure = QuestEntity__HasFlag_42367412(
+                    this->fields.isFatigure = QuestEntity__HasFlag_42469280(
                                                 (QuestEntity_o *)entity,
                                                 0x200000,
                                                 this->fields.questPhase,
@@ -11776,7 +11776,7 @@ LABEL_107:
         }
       }
 LABEL_155:
-      sub_1C32E7C(myServantOrNpcRestrictionEntityList);
+      sub_1C372B4(myServantOrNpcRestrictionEntityList);
     }
     myServantOrNpcRestrictionEntityList = (System_Collections_Generic_List_object__o *)v98;
     if ( !v98 )
@@ -11788,7 +11788,7 @@ LABEL_155:
         goto LABEL_155;
       this->fields.eventDeckNum = QuestRestrictionInfoEntity__GetUserEventDeckNo(v98, 0);
     }
-    myServantOrNpcRestrictionEntityList = (System_Collections_Generic_List_object__o *)sub_1C32CC8(int___TypeInfo, 1);
+    myServantOrNpcRestrictionEntityList = (System_Collections_Generic_List_object__o *)sub_1C37100(int___TypeInfo, 1);
     if ( !v98 )
       goto LABEL_155;
     v78 = myServantOrNpcRestrictionEntityList;
@@ -11801,15 +11801,15 @@ LABEL_155:
     {
       LODWORD(v78->fields._syncRoot) = (_DWORD)myServantOrNpcRestrictionEntityList;
       this->fields.svtIdForceBattleList = (struct System_Int32_array *)v78;
-      sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.svtIdForceBattleList, (int32_t)v78, v79, v80);
+      sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.svtIdForceBattleList, (int32_t)v78, v79, v80);
       goto LABEL_107;
     }
 LABEL_156:
-    sub_1C32E84(myServantOrNpcRestrictionEntityList);
+    sub_1C372BC(myServantOrNpcRestrictionEntityList);
   }
   if ( entity )
   {
-    if ( QuestEntity__HasFlag_42367412((QuestEntity_o *)entity, 0x100000, this->fields.questPhase, 0) )
+    if ( QuestEntity__HasFlag_42469280((QuestEntity_o *)entity, 0x100000, this->fields.questPhase, 0) )
     {
       this->fields.isNoSupportBattle = 1;
     }
@@ -11818,18 +11818,18 @@ LABEL_156:
       myServantOrNpcRestrictionEntityList = (System_Collections_Generic_List_object__o *)entity;
       if ( !entity )
         goto LABEL_155;
-      HasFlag_42367412 = QuestEntity__HasFlag_42367412(
+      HasFlag_42469280 = QuestEntity__HasFlag_42469280(
                            (QuestEntity_o *)entity,
                            0x400000000000000LL,
                            this->fields.questPhase,
                            0);
-      this->fields.isNoSupportBattle = HasFlag_42367412;
-      if ( !HasFlag_42367412 )
+      this->fields.isNoSupportBattle = HasFlag_42469280;
+      if ( !HasFlag_42469280 )
       {
         myServantOrNpcRestrictionEntityList = (System_Collections_Generic_List_object__o *)entity;
         if ( !entity )
           goto LABEL_155;
-        v83 = QuestEntity__HasFlag_42367412((QuestEntity_o *)entity, 0x80000, this->fields.questPhase, 0);
+        v83 = QuestEntity__HasFlag_42469280((QuestEntity_o *)entity, 0x80000, this->fields.questPhase, 0);
         this->fields.isSupportOnlyForceBattle = v83;
         if ( !v83 )
         {
@@ -11838,14 +11838,14 @@ LABEL_156:
             myServantOrNpcRestrictionEntityList = (System_Collections_Generic_List_object__o *)entity;
             if ( !entity )
               goto LABEL_155;
-            if ( QuestEntity__HasFlag_42367412((QuestEntity_o *)entity, 0x1000000, this->fields.questPhase, 0) )
+            if ( QuestEntity__HasFlag_42469280((QuestEntity_o *)entity, 0x1000000, this->fields.questPhase, 0) )
             {
               myServantOrNpcRestrictionEntityList = (System_Collections_Generic_List_object__o *)v99;
               if ( !v99 )
                 goto LABEL_155;
               this->fields.eventDeckNum = QuestPhaseEntity__GetUserEventDeckNo(v99, 0);
             }
-            myServantOrNpcRestrictionEntityList = (System_Collections_Generic_List_object__o *)sub_1C32CC8(
+            myServantOrNpcRestrictionEntityList = (System_Collections_Generic_List_object__o *)sub_1C37100(
                                                                                                  int___TypeInfo,
                                                                                                  1);
             if ( !v99 )
@@ -11860,7 +11860,7 @@ LABEL_156:
               goto LABEL_156;
             LODWORD(v84->fields._syncRoot) = (_DWORD)myServantOrNpcRestrictionEntityList;
             this->fields.svtIdForceBattleList = (struct System_Int32_array *)v84;
-            sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.svtIdForceBattleList, (int32_t)v84, v85, v86);
+            sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.svtIdForceBattleList, (int32_t)v84, v85, v86);
           }
         }
       }
@@ -11868,7 +11868,7 @@ LABEL_156:
     myServantOrNpcRestrictionEntityList = (System_Collections_Generic_List_object__o *)entity;
     if ( !entity )
       goto LABEL_155;
-    this->fields.isFatigure = QuestEntity__HasFlag_42367412(
+    this->fields.isFatigure = QuestEntity__HasFlag_42469280(
                                 (QuestEntity_o *)entity,
                                 0x200000,
                                 this->fields.questPhase,
@@ -11876,16 +11876,16 @@ LABEL_156:
     myServantOrNpcRestrictionEntityList = (System_Collections_Generic_List_object__o *)entity;
     if ( !entity )
       goto LABEL_155;
-    v87 = QuestEntity__HasFlag_42367412((QuestEntity_o *)entity, 0x400000000000000LL, this->fields.questPhase, 0);
+    v87 = QuestEntity__HasFlag_42469280((QuestEntity_o *)entity, 0x400000000000000LL, this->fields.questPhase, 0);
     this->fields.isAllOutBattle = v87;
     if ( v87 )
     {
-      myServantOrNpcRestrictionEntityList = (System_Collections_Generic_List_object__o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39E2904 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+      myServantOrNpcRestrictionEntityList = (System_Collections_Generic_List_object__o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39ED16C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
       if ( !myServantOrNpcRestrictionEntityList )
         goto LABEL_155;
       myServantOrNpcRestrictionEntityList = (System_Collections_Generic_List_object__o *)DataManager__GetMasterData_object_(
                                                                                            (DataManager_o *)myServantOrNpcRestrictionEntityList,
-                                                                                           (const MethodInfo_30DD3F0 *)Method_DataManager_GetMasterData_QuestGroupMaster___);
+                                                                                           (const MethodInfo_30E7C58 *)Method_DataManager_GetMasterData_QuestGroupMaster___);
       if ( !myServantOrNpcRestrictionEntityList )
         goto LABEL_155;
       this->fields.allOutBattleGroupNo = QuestGroupMaster__GetGroupId(
@@ -11897,7 +11897,7 @@ LABEL_156:
     myServantOrNpcRestrictionEntityList = (System_Collections_Generic_List_object__o *)entity;
     if ( !entity )
       goto LABEL_155;
-    this->fields.isNpcMultipleBattle = QuestEntity__HasFlag_42367412(
+    this->fields.isNpcMultipleBattle = QuestEntity__HasFlag_42469280(
                                          (QuestEntity_o *)entity,
                                          0x10000000,
                                          this->fields.questPhase,
@@ -11905,7 +11905,7 @@ LABEL_156:
     myServantOrNpcRestrictionEntityList = (System_Collections_Generic_List_object__o *)entity;
     if ( !entity )
       goto LABEL_155;
-    this->fields.isNpcOnlyBattle = QuestEntity__HasFlag_42367412(
+    this->fields.isNpcOnlyBattle = QuestEntity__HasFlag_42469280(
                                      (QuestEntity_o *)entity,
                                      0x20000000,
                                      this->fields.questPhase,
@@ -11913,7 +11913,7 @@ LABEL_156:
     myServantOrNpcRestrictionEntityList = (System_Collections_Generic_List_object__o *)entity;
     if ( !entity )
       goto LABEL_155;
-    this->fields.isNpcEditablePos = QuestEntity__HasFlag_42367412(
+    this->fields.isNpcEditablePos = QuestEntity__HasFlag_42469280(
                                       (QuestEntity_o *)entity,
                                       0x800000000LL,
                                       this->fields.questPhase,
@@ -11921,7 +11921,7 @@ LABEL_156:
     myServantOrNpcRestrictionEntityList = (System_Collections_Generic_List_object__o *)entity;
     if ( !entity )
       goto LABEL_155;
-    this->fields.isNotTransitionSupportList = QuestEntity__HasFlag_42367412(
+    this->fields.isNotTransitionSupportList = QuestEntity__HasFlag_42469280(
                                                 (QuestEntity_o *)entity,
                                                 0x80000000000000LL,
                                                 this->fields.questPhase,
@@ -11929,7 +11929,7 @@ LABEL_156:
     myServantOrNpcRestrictionEntityList = (System_Collections_Generic_List_object__o *)entity;
     if ( !entity )
       goto LABEL_155;
-    this->fields.isNotSingleSupportOnly = QuestEntity__HasFlag_42367412(
+    this->fields.isNotSingleSupportOnly = QuestEntity__HasFlag_42469280(
                                             (QuestEntity_o *)entity,
                                             0x1000000000000000LL,
                                             this->fields.questPhase,
@@ -11957,13 +11957,13 @@ LABEL_156:
   {
     this->fields.correctionIconId = -1;
     this->fields.overwriteLimitCountSvtIds = 0;
-    sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.overwriteLimitCountSvtIds, 0, v74, v75);
+    sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.overwriteLimitCountSvtIds, 0, v74, v75);
     this->fields.overwriteLimitCounts = 0;
-    sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.overwriteLimitCounts, 0, v88, v89);
+    sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.overwriteLimitCounts, 0, v88, v89);
     this->fields.overwriteLimitCountIconIds = 0;
-    sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.overwriteLimitCountIconIds, 0, v90, v91);
+    sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.overwriteLimitCountIconIds, 0, v90, v91);
     this->fields.overwriteLimitCountRangeTypes = 0;
-    sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.overwriteLimitCountRangeTypes, 0, v92, v93);
+    sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.overwriteLimitCountRangeTypes, 0, v92, v93);
   }
 }
 
@@ -11987,14 +11987,14 @@ bool QuestRestrictionInfo__TryGetFixedMasterEquipInfo(
   QuestPhaseEntity_o *entity; // [xsp+28h] [xbp-28h] BYREF
   CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o v18; // 0:x0.16
 
-  if ( (byte_4C38D62 & 1) == 0 )
+  if ( (byte_4C4435B & 1) == 0 )
   {
-    sub_1C32C20(&Method_DataManager_GetMaster_EquipMaster___);
-    sub_1C32C20(&Method_DataManager_GetMaster_QuestPhaseMaster___);
-    sub_1C32C20(&DataManager_TypeInfo);
-    sub_1C32C20(&Method_DataMasterBase_EquipMaster__EquipEntity__int__TryGetEntity__);
-    sub_1C32C20(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
-    byte_4C38D62 = 1;
+    sub_1C37058(&Method_DataManager_GetMaster_EquipMaster___);
+    sub_1C37058(&Method_DataManager_GetMaster_QuestPhaseMaster___);
+    sub_1C37058(&DataManager_TypeInfo);
+    sub_1C37058(&Method_DataMasterBase_EquipMaster__EquipEntity__int__TryGetEntity__);
+    sub_1C37058(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
+    byte_4C4435B = 1;
   }
   entity = 0;
   outFixedEquipId = 0;
@@ -12003,7 +12003,7 @@ bool QuestRestrictionInfo__TryGetFixedMasterEquipInfo(
   *genderImageId = 0;
   if ( !DataManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-  Master_object = (DataMasterBase_TMaster__TEntity__PKType__o *)DataManager__GetMaster_object_((const MethodInfo_30DD39C *)Method_DataManager_GetMaster_QuestPhaseMaster___);
+  Master_object = (DataMasterBase_TMaster__TEntity__PKType__o *)DataManager__GetMaster_object_((const MethodInfo_30E7C04 *)Method_DataManager_GetMaster_QuestPhaseMaster___);
   if ( !Master_object )
     goto LABEL_28;
   if ( QuestPhaseMaster__TryGetEntity(
@@ -12020,14 +12020,14 @@ bool QuestRestrictionInfo__TryGetFixedMasterEquipInfo(
     {
       if ( !DataManager_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-      Master_object = (DataMasterBase_TMaster__TEntity__PKType__o *)DataManager__GetMaster_object_((const MethodInfo_30DD39C *)Method_DataManager_GetMaster_EquipMaster___);
+      Master_object = (DataMasterBase_TMaster__TEntity__PKType__o *)DataManager__GetMaster_object_((const MethodInfo_30E7C04 *)Method_DataManager_GetMaster_EquipMaster___);
       if ( !Master_object )
         goto LABEL_28;
       if ( DataMasterBase_object__object__int___TryGetEntity(
              Master_object,
              &v15,
              outFixedEquipId,
-             (const MethodInfo_3396884 *)Method_DataMasterBase_EquipMaster__EquipEntity__int__TryGetEntity__) )
+             (const MethodInfo_33A10EC *)Method_DataMasterBase_EquipMaster__EquipEntity__int__TryGetEntity__) )
       {
         Master_object = (DataMasterBase_TMaster__TEntity__PKType__o *)UserGameMaster__getSelfUserGame(0);
         if ( Master_object )
@@ -12059,21 +12059,21 @@ LABEL_24:
                   j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
                 *(_QWORD *)&v18.fields.currentCryptoKey = klass;
                 *(_QWORD *)&v18.fields.fakeValue = monitor;
-                v10 = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_48887784(v18, 0);
+                v10 = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_48930896(v18, 0);
                 outFixedEquipLv = v10;
                 goto LABEL_27;
               }
               break;
             default:
-              v11 = sub_1C32C34(&System_ArgumentOutOfRangeException_TypeInfo);
-              v12 = (System_ArgumentOutOfRangeException_o *)sub_1C32E6C(v11);
+              v11 = sub_1C3706C(&System_ArgumentOutOfRangeException_TypeInfo);
+              v12 = (System_ArgumentOutOfRangeException_o *)sub_1C372A4(v11);
               System_ArgumentOutOfRangeException___ctor(v12, 0);
-              v13 = sub_1C32C34(&Method_QuestRestrictionInfo_TryGetFixedMasterEquipInfo__);
-              sub_1C32D48(v12, v13);
+              v13 = sub_1C3706C(&Method_QuestRestrictionInfo_TryGetFixedMasterEquipInfo__);
+              sub_1C37180(v12, v13);
           }
         }
 LABEL_28:
-        sub_1C32E7C(Master_object);
+        sub_1C372B4(Master_object);
       }
     }
   }
@@ -12127,33 +12127,33 @@ void QuestRestrictionInfo_SlotInfo___ctor(QuestRestrictionInfo_SlotInfo_o *this,
   int32_t v11; // w2
   const MethodInfo *v12; // x3
 
-  if ( (byte_4C38D64 & 1) == 0 )
+  if ( (byte_4C4435D & 1) == 0 )
   {
-    sub_1C32C20(&Method_System_Collections_Generic_List_Restriction_RangeType___ctor__);
-    sub_1C32C20(&Method_System_Collections_Generic_List_int_____ctor__);
-    sub_1C32C20(&System_Collections_Generic_List_int____TypeInfo);
-    sub_1C32C20(&System_Collections_Generic_List_Restriction_RangeType__TypeInfo);
-    sub_1C32C20(&StringLiteral_1/*""*/);
-    byte_4C38D64 = 1;
+    sub_1C37058(&Method_System_Collections_Generic_List_Restriction_RangeType___ctor__);
+    sub_1C37058(&Method_System_Collections_Generic_List_int_____ctor__);
+    sub_1C37058(&System_Collections_Generic_List_int____TypeInfo);
+    sub_1C37058(&System_Collections_Generic_List_Restriction_RangeType__TypeInfo);
+    sub_1C37058(&StringLiteral_1/*""*/);
+    byte_4C4435D = 1;
   }
   System_Object___ctor((Il2CppObject *)this, 0);
   this->fields.slotType = 0;
-  v3 = (System_Collections_Generic_List_object__o *)sub_1C32E6C(System_Collections_Generic_List_int____TypeInfo);
+  v3 = (System_Collections_Generic_List_object__o *)sub_1C372A4(System_Collections_Generic_List_int____TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v3,
-    (const MethodInfo_3797F88 *)Method_System_Collections_Generic_List_int_____ctor__);
+    (const MethodInfo_37A27F0 *)Method_System_Collections_Generic_List_int_____ctor__);
   this->fields.individualityList = (struct System_Collections_Generic_List_int____o *)v3;
-  sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.individualityList, (int32_t)v3, v4, v5);
-  v6 = (System_Collections_Generic_List_T__o *)sub_1C32E6C(System_Collections_Generic_List_Restriction_RangeType__TypeInfo);
+  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.individualityList, (int32_t)v3, v4, v5);
+  v6 = (System_Collections_Generic_List_T__o *)sub_1C372A4(System_Collections_Generic_List_Restriction_RangeType__TypeInfo);
   System_Collections_Generic_List_Int32Enum____ctor(
     v6,
-    (const MethodInfo_377D770 *)Method_System_Collections_Generic_List_Restriction_RangeType___ctor__);
+    (const MethodInfo_3787FD8 *)Method_System_Collections_Generic_List_Restriction_RangeType___ctor__);
   this->fields.rangeTypeList = (struct System_Collections_Generic_List_Restriction_RangeType__o *)v6;
-  sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.rangeTypeList, (int32_t)v6, v7, v8);
+  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.rangeTypeList, (int32_t)v6, v7, v8);
   v9 = StringLiteral_1/*""*/;
   this->fields.summary = (struct System_String_o *)StringLiteral_1/*""*/;
   p_summary = &this->fields.summary;
-  sub_1C32BC4((CGThumbnailListItem_o *)p_summary, v9, v11, v12);
+  sub_1C36FFC((CGThumbnailListItem_o *)p_summary, v9, v11, v12);
   *((_WORD *)p_summary + 4) = 1;
 }
 
@@ -12164,15 +12164,15 @@ void QuestRestrictionInfo___c___cctor(const MethodInfo *method)
   int32_t v2; // w2
   const MethodInfo *v3; // x3
 
-  if ( (byte_4C38D65 & 1) == 0 )
+  if ( (byte_4C4435E & 1) == 0 )
   {
-    sub_1C32C20(&QuestRestrictionInfo___c_TypeInfo);
-    byte_4C38D65 = 1;
+    sub_1C37058(&QuestRestrictionInfo___c_TypeInfo);
+    byte_4C4435E = 1;
   }
-  v1 = (Il2CppObject *)sub_1C32E6C(QuestRestrictionInfo___c_TypeInfo);
+  v1 = (Il2CppObject *)sub_1C372A4(QuestRestrictionInfo___c_TypeInfo);
   System_Object___ctor(v1, 0);
   QuestRestrictionInfo___c_TypeInfo->static_fields->__9 = (struct QuestRestrictionInfo___c_o *)v1;
-  sub_1C32BC4((CGThumbnailListItem_o *)QuestRestrictionInfo___c_TypeInfo->static_fields, (int32_t)v1, v2, v3);
+  sub_1C36FFC((CGThumbnailListItem_o *)QuestRestrictionInfo___c_TypeInfo->static_fields, (int32_t)v1, v2, v3);
 }
 
 
@@ -12188,7 +12188,7 @@ bool QuestRestrictionInfo___c___GetConfirmRestrictionMessage_b__109_0(
         const MethodInfo *method)
 {
   if ( !e )
-    sub_1C32E7C(this);
+    sub_1C372B4(this);
   return e->fields.type != 1 || RestrictionEntity__IsRestrictionTarget(e, 1, 0);
 }
 
@@ -12199,7 +12199,7 @@ System_String_o *QuestRestrictionInfo___c___GetConfirmRestrictionMessage_b__109_
         const MethodInfo *method)
 {
   if ( !e )
-    sub_1C32E7C(this);
+    sub_1C372B4(this);
   return e->fields.name;
 }
 
@@ -12210,7 +12210,7 @@ System_String_o *QuestRestrictionInfo___c___GetConfirmRestrictionMessage_b__109_
         const MethodInfo *method)
 {
   if ( !e )
-    sub_1C32E7C(this);
+    sub_1C372B4(this);
   return e->fields.name;
 }
 
@@ -12224,7 +12224,7 @@ bool QuestRestrictionInfo___c___GetRestrictionMessageEntityList_b__111_0(
   _BOOL4 v4; // w0
 
   if ( !e )
-    sub_1C32E7C(this);
+    sub_1C372B4(this);
   v3 = e->fields.type - 1;
   if ( v3 > 0x10 )
     LOBYTE(v4) = 0;
@@ -12240,7 +12240,7 @@ System_String_o *QuestRestrictionInfo___c___GetRestrictionMessage_b__110_0(
         const MethodInfo *method)
 {
   if ( !e )
-    sub_1C32E7C(this);
+    sub_1C372B4(this);
   return e->fields.name;
 }
 
@@ -12251,7 +12251,7 @@ bool QuestRestrictionInfo___c___IsClassRestriction_b__102_0(
         const MethodInfo *method)
 {
   if ( !e )
-    sub_1C32E7C(this);
+    sub_1C372B4(this);
   return e->fields.type == 1 && e->fields.targetVals != 0;
 }
 
@@ -12262,7 +12262,7 @@ bool QuestRestrictionInfo___c___IsClassRestriction_b__102_1(
         const MethodInfo *method)
 {
   if ( !e )
-    sub_1C32E7C(this);
+    sub_1C372B4(this);
   return RestrictionEntity__IsRestrictionTarget(e, 3, 0) && RestrictionEntity__IsRestrictionTarget(e, 2, 0);
 }
 
@@ -12280,16 +12280,16 @@ bool QuestRestrictionInfo___c___IsClassRestriction_b__102_2(
   int32_t v9; // w2
   const MethodInfo *v10; // x3
 
-  if ( (byte_4C38D67 & 1) == 0 )
+  if ( (byte_4C44360 & 1) == 0 )
   {
-    sub_1C32C20(&Method_BasicHelper_Any_int____78062168);
-    sub_1C32C20(&System_Func_int__bool__TypeInfo);
-    sub_1C32C20(&Method_QuestRestrictionInfo___c__IsClassRestriction_b__102_4__);
-    this = (QuestRestrictionInfo___c_o *)sub_1C32C20(&QuestRestrictionInfo___c_TypeInfo);
-    byte_4C38D67 = 1;
+    sub_1C37058(&Method_BasicHelper_Any_int____78107944);
+    sub_1C37058(&System_Func_int__bool__TypeInfo);
+    sub_1C37058(&Method_QuestRestrictionInfo___c__IsClassRestriction_b__102_4__);
+    this = (QuestRestrictionInfo___c_o *)sub_1C37058(&QuestRestrictionInfo___c_TypeInfo);
+    byte_4C44360 = 1;
   }
   if ( !e )
-    sub_1C32E7C(this);
+    sub_1C372B4(this);
   if ( e->fields.rangeType == 1 )
   {
     targetVals = e->fields.targetVals;
@@ -12308,16 +12308,16 @@ bool QuestRestrictionInfo___c___IsClassRestriction_b__102_2(
         v5 = QuestRestrictionInfo___c_TypeInfo;
       }
       v7 = (Il2CppObject *)v5->static_fields->__9;
-      _9__102_4 = (System_Func_int__bool__o *)sub_1C32E6C(System_Func_int__bool__TypeInfo);
+      _9__102_4 = (System_Func_int__bool__o *)sub_1C372A4(System_Func_int__bool__TypeInfo);
       System_Func_int__bool____ctor(_9__102_4, v7, Method_QuestRestrictionInfo___c__IsClassRestriction_b__102_4__, 0);
       static_fields = QuestRestrictionInfo___c_TypeInfo->static_fields;
       static_fields->__9__102_4 = _9__102_4;
-      sub_1C32BC4((CGThumbnailListItem_o *)&static_fields->__9__102_4, (int32_t)_9__102_4, v9, v10);
+      sub_1C36FFC((CGThumbnailListItem_o *)&static_fields->__9__102_4, (int32_t)_9__102_4, v9, v10);
     }
-    return !BasicHelper__Any_int__51143952(
+    return !BasicHelper__Any_int__51187064(
               targetVals,
               (System_Func_T__bool__o *)_9__102_4,
-              (const MethodInfo_30C6510 *)Method_BasicHelper_Any_int____78062168);
+              (const MethodInfo_30D0D78 *)Method_BasicHelper_Any_int____78107944);
   }
   else
   {
@@ -12331,10 +12331,10 @@ bool QuestRestrictionInfo___c___IsClassRestriction_b__102_4(
         int32_t i,
         const MethodInfo *method)
 {
-  if ( (byte_4C38D68 & 1) == 0 )
+  if ( (byte_4C44361 & 1) == 0 )
   {
-    sub_1C32C20(&Individuality_TypeInfo);
-    byte_4C38D68 = 1;
+    sub_1C37058(&Individuality_TypeInfo);
+    byte_4C44361 = 1;
   }
   if ( !Individuality_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(Individuality_TypeInfo);
@@ -12349,13 +12349,13 @@ bool QuestRestrictionInfo___c___IsRestrictionIndividualitySlot_b__100_0(
 {
   struct System_Collections_Generic_List_int____o *individualityList; // x8
 
-  if ( (byte_4C38D66 & 1) == 0 )
+  if ( (byte_4C4435F & 1) == 0 )
   {
-    this = (QuestRestrictionInfo___c_o *)sub_1C32C20(&Method_System_Collections_Generic_List_int____get_Count__);
-    byte_4C38D66 = 1;
+    this = (QuestRestrictionInfo___c_o *)sub_1C37058(&Method_System_Collections_Generic_List_int____get_Count__);
+    byte_4C4435F = 1;
   }
   if ( !s || (individualityList = s->fields.individualityList) == 0 )
-    sub_1C32E7C(this);
+    sub_1C372B4(this);
   return individualityList->fields._size > 0;
 }
 
@@ -12366,7 +12366,7 @@ bool QuestRestrictionInfo___c___IsRestrictionIndividualityWhole_b__99_0(
         const MethodInfo *method)
 {
   if ( !e )
-    sub_1C32E7C(this);
+    sub_1C372B4(this);
   return e->fields.type == 1;
 }
 
@@ -12377,7 +12377,7 @@ bool QuestRestrictionInfo___c___IsRestrictionIndividualityWhole_b__99_1(
         const MethodInfo *method)
 {
   if ( !e )
-    sub_1C32E7C(this);
+    sub_1C372B4(this);
   return e->fields.type == 1;
 }
 
@@ -12388,7 +12388,7 @@ bool QuestRestrictionInfo___c___Setup_b__85_0(
         const MethodInfo *method)
 {
   if ( !x )
-    sub_1C32E7C(this);
+    sub_1C372B4(this);
   return x->fields.type == 1;
 }
 
@@ -12399,7 +12399,7 @@ bool QuestRestrictionInfo___c___Setup_b__85_1(
         const MethodInfo *method)
 {
   if ( !x )
-    sub_1C32E7C(this);
+    sub_1C372B4(this);
   return x->fields.type == 3;
 }
 
@@ -12410,7 +12410,7 @@ bool QuestRestrictionInfo___c___Setup_b__85_2(
         const MethodInfo *method)
 {
   if ( !x )
-    sub_1C32E7C(this);
+    sub_1C372B4(this);
   return x->fields.type == 2;
 }
 
@@ -12421,7 +12421,7 @@ bool QuestRestrictionInfo___c___Setup_b__85_3(
         const MethodInfo *method)
 {
   if ( !x )
-    sub_1C32E7C(this);
+    sub_1C372B4(this);
   return x->fields.type == 2;
 }
 
@@ -12440,7 +12440,7 @@ bool QuestRestrictionInfo___c__DisplayClass102_0___IsClassRestriction_b__3(
         const MethodInfo *method)
 {
   if ( !e )
-    sub_1C32E7C(this);
+    sub_1C372B4(this);
   return RestrictionEntity__IsRestriction(e, this->fields.individuality, 0);
 }
 
@@ -12459,7 +12459,7 @@ bool QuestRestrictionInfo___c__DisplayClass185_0___IsMyServantOrNpcRestriction_b
         const MethodInfo *method)
 {
   if ( !x )
-    sub_1C32E7C(this);
+    sub_1C372B4(this);
   return RestrictionEntity__GetSpecifiedPosition(x, 0) == this->fields.pos;
 }
 
@@ -12478,7 +12478,7 @@ bool QuestRestrictionInfo___c__DisplayClass186_0___IsSelectableNormalSupport_b__
         const MethodInfo *method)
 {
   if ( !x )
-    sub_1C32E7C(this);
+    sub_1C372B4(this);
   return RestrictionEntity__GetSpecifiedPosition(x, 0) == this->fields.pos;
 }
 
@@ -12497,7 +12497,7 @@ bool QuestRestrictionInfo___c__DisplayClass187_0___IsNotIndividuality_b__0(
         const MethodInfo *method)
 {
   if ( !x )
-    sub_1C32E7C(this);
+    sub_1C372B4(this);
   return RestrictionEntity__GetSpecifiedPosition(x, 0) == this->fields.pos;
 }
 
@@ -12516,7 +12516,7 @@ bool QuestRestrictionInfo___c__DisplayClass188_0___IsRestrictionServantIndividua
         const MethodInfo *method)
 {
   if ( !x )
-    sub_1C32E7C(this);
+    sub_1C372B4(this);
   return RestrictionEntity__GetSpecifiedPosition(x, 0) == this->fields.pos;
 }
 
@@ -12535,7 +12535,7 @@ bool QuestRestrictionInfo___c__DisplayClass189_0___IsRestrictionServantIndividua
         const MethodInfo *method)
 {
   if ( !x )
-    sub_1C32E7C(this);
+    sub_1C372B4(this);
   return RestrictionEntity__GetSpecifiedPosition(x, 0) == this->fields.pos;
 }
 
@@ -12556,7 +12556,7 @@ bool QuestRestrictionInfo___c__DisplayClass190_0___GetRestrictedName_b__0(
   struct QuestRestrictionEntity_o *questRestrictionEntity; // x8
 
   if ( !x || (questRestrictionEntity = this->fields.questRestrictionEntity) == 0 )
-    sub_1C32E7C(this);
+    sub_1C372B4(this);
   return x->fields.id == questRestrictionEntity->fields.restrictionId;
 }
 
@@ -12589,11 +12589,11 @@ bool QuestRestrictionInfo___c__DisplayClass193_0___GetMyServantOrNpcSvtIdList_b_
     goto LABEL_7;
   index = this->fields.index;
   if ( (unsigned int)index >= LODWORD(questRestrictionEntityList->max_length) )
-    sub_1C32E84(this);
+    sub_1C372BC(this);
   v6 = questRestrictionEntityList->m_Items[index];
   if ( !v6 )
 LABEL_7:
-    sub_1C32E7C(this);
+    sub_1C372B4(this);
   return x->fields.id == v6->fields.restrictionId;
 }
 
@@ -12626,11 +12626,11 @@ bool QuestRestrictionInfo___c__DisplayClass194_0___GetMyServantOrSupportTargetPo
     goto LABEL_7;
   index = this->fields.index;
   if ( (unsigned int)index >= LODWORD(questRestrictionEntityList->max_length) )
-    sub_1C32E84(this);
+    sub_1C372BC(this);
   v6 = questRestrictionEntityList->m_Items[index];
   if ( !v6 )
 LABEL_7:
-    sub_1C32E7C(this);
+    sub_1C372B4(this);
   return x->fields.id == v6->fields.restrictionId;
 }
 
@@ -12649,7 +12649,7 @@ bool QuestRestrictionInfo___c__DisplayClass207_0___GetMyServantOrNpcSvtIdUnionNp
         const MethodInfo *method)
 {
   if ( !x )
-    sub_1C32E7C(this);
+    sub_1C372B4(this);
   return RestrictionEntity__GetSpecifiedPosition(x, 0) == this->fields.index;
 }
 
@@ -12674,15 +12674,15 @@ bool QuestRestrictionInfo___c__DisplayClass217_0___GetGrandServantRestrictionEnt
   const MethodInfo *v9; // x3
 
   v4 = this;
-  if ( (byte_4C38D69 & 1) == 0 )
+  if ( (byte_4C44362 & 1) == 0 )
   {
-    sub_1C32C20(&Method_BasicHelper_Any_int____78062168);
-    sub_1C32C20(&System_Func_int__bool__TypeInfo);
-    this = (QuestRestrictionInfo___c__DisplayClass217_0_o *)sub_1C32C20(&Method_QuestRestrictionInfo___c__DisplayClass217_0__GetGrandServantRestrictionEntity_b__1__);
-    byte_4C38D69 = 1;
+    sub_1C37058(&Method_BasicHelper_Any_int____78107944);
+    sub_1C37058(&System_Func_int__bool__TypeInfo);
+    this = (QuestRestrictionInfo___c__DisplayClass217_0_o *)sub_1C37058(&Method_QuestRestrictionInfo___c__DisplayClass217_0__GetGrandServantRestrictionEntity_b__1__);
+    byte_4C44362 = 1;
   }
   if ( !entity )
-    sub_1C32E7C(this);
+    sub_1C372B4(this);
   if ( BasicHelper__IsNullOrEmpty((System_Collections_ICollection_o *)entity->fields.targetVals2, 0)
     && v4->fields.initPos == 1 )
   {
@@ -12692,19 +12692,19 @@ bool QuestRestrictionInfo___c__DisplayClass217_0___GetGrandServantRestrictionEnt
   _9__1 = v4->fields.__9__1;
   if ( !_9__1 )
   {
-    _9__1 = (System_Func_int__bool__o *)sub_1C32E6C(System_Func_int__bool__TypeInfo);
+    _9__1 = (System_Func_int__bool__o *)sub_1C372A4(System_Func_int__bool__TypeInfo);
     System_Func_int__bool____ctor(
       _9__1,
       (Il2CppObject *)v4,
       Method_QuestRestrictionInfo___c__DisplayClass217_0__GetGrandServantRestrictionEntity_b__1__,
       0);
     v4->fields.__9__1 = _9__1;
-    sub_1C32BC4((CGThumbnailListItem_o *)&v4->fields.__9__1, (int32_t)_9__1, v8, v9);
+    sub_1C36FFC((CGThumbnailListItem_o *)&v4->fields.__9__1, (int32_t)_9__1, v8, v9);
   }
-  return BasicHelper__Any_int__51143952(
+  return BasicHelper__Any_int__51187064(
            targetVals2,
            (System_Func_T__bool__o *)_9__1,
-           (const MethodInfo_30C6510 *)Method_BasicHelper_Any_int____78062168);
+           (const MethodInfo_30D0D78 *)Method_BasicHelper_Any_int____78107944);
 }
 
 

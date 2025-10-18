@@ -21,7 +21,7 @@ void DebugInputSkillAttackProbabilitySurvey__Cancel(
                                                       (UnityEngine_Component_o *)this,
                                                       0)) == 0) )
   {
-    sub_1C32E7C(debugMenuTran);
+    sub_1C372B4(debugMenuTran);
   }
   UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)debugMenuTran, 0, 0);
 }
@@ -52,17 +52,17 @@ void DebugInputSkillAttackProbabilitySurvey__Open(
   UnityEngine_GameObject_o *gameObject; // x0
 
   this->fields.data = inputData;
-  sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.data, (int32_t)inputData, (int32_t)inputDebugMenuTran, method);
+  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.data, (int32_t)inputData, (int32_t)inputDebugMenuTran, method);
   this->fields.debugMenuTran = inputDebugMenuTran;
   p_debugMenuTran = &this->fields.debugMenuTran;
-  sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.debugMenuTran, (int32_t)inputDebugMenuTran, v7, v8);
+  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.debugMenuTran, (int32_t)inputDebugMenuTran, v7, v8);
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
   if ( !gameObject
     || (UnityEngine_GameObject__SetActive(gameObject, 1, 0),
         (gameObject = (UnityEngine_GameObject_o *)*p_debugMenuTran) == 0)
     || (gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)gameObject, 0)) == 0 )
   {
-    sub_1C32E7C(gameObject);
+    sub_1C372B4(gameObject);
   }
   UnityEngine_GameObject__SetActive(gameObject, 0, 0);
 }
@@ -105,10 +105,10 @@ void DebugInputSkillAttackProbabilitySurvey__TurnLeft(
   int32_t result; // [xsp+Ch] [xbp-24h] BYREF
 
   v4 = this;
-  if ( (byte_4C38F93 & 1) == 0 )
+  if ( (byte_4C4458C & 1) == 0 )
   {
-    this = (DebugInputSkillAttackProbabilitySurvey_o *)sub_1C32C20(&System_Math_TypeInfo);
-    byte_4C38F93 = 1;
+    this = (DebugInputSkillAttackProbabilitySurvey_o *)sub_1C37058(&System_Math_TypeInfo);
+    byte_4C4458C = 1;
   }
   result = 0;
   if ( !buttonName )
@@ -117,14 +117,14 @@ void DebugInputSkillAttackProbabilitySurvey__TurnLeft(
   if ( !this )
     goto LABEL_12;
   if ( LODWORD(this->fields.m_CancellationTokenSource) <= 1 )
-    sub_1C32E84(this);
+    sub_1C372BC(this);
   if ( System_Int32__TryParse(*(System_String_o **)&this->fields.attackNum, &result, 0) )
   {
     v5 = v4->fields.attackNum - result;
     v4->fields.attackNum = v5;
     if ( !System_Math_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(System_Math_TypeInfo);
-    v6 = System_Math__Max_65041976(v5, 1, 0);
+    v6 = System_Math__Max_65085088(v5, 1, 0);
     attackNumLabel = v4->fields.attackNumLabel;
     v4->fields.attackNum = v6;
     this = (DebugInputSkillAttackProbabilitySurvey_o *)System_Int32__ToString((int)v4 + 40, 0);
@@ -134,7 +134,7 @@ void DebugInputSkillAttackProbabilitySurvey__TurnLeft(
       return;
     }
 LABEL_12:
-    sub_1C32E7C(this);
+    sub_1C372B4(this);
   }
 }
 
@@ -151,10 +151,10 @@ void DebugInputSkillAttackProbabilitySurvey__TurnRight(
   int32_t result; // [xsp+Ch] [xbp-24h] BYREF
 
   v4 = this;
-  if ( (byte_4C38F92 & 1) == 0 )
+  if ( (byte_4C4458B & 1) == 0 )
   {
-    this = (DebugInputSkillAttackProbabilitySurvey_o *)sub_1C32C20(&System_Math_TypeInfo);
-    byte_4C38F92 = 1;
+    this = (DebugInputSkillAttackProbabilitySurvey_o *)sub_1C37058(&System_Math_TypeInfo);
+    byte_4C4458B = 1;
   }
   result = 0;
   if ( !buttonName )
@@ -163,14 +163,14 @@ void DebugInputSkillAttackProbabilitySurvey__TurnRight(
   if ( !this )
     goto LABEL_12;
   if ( LODWORD(this->fields.m_CancellationTokenSource) <= 1 )
-    sub_1C32E84(this);
+    sub_1C372BC(this);
   if ( System_Int32__TryParse(*(System_String_o **)&this->fields.attackNum, &result, 0) )
   {
     v5 = result + v4->fields.attackNum;
     v4->fields.attackNum = v5;
     if ( !System_Math_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(System_Math_TypeInfo);
-    v6 = System_Math__Min_65042304(v5, 1000, 0);
+    v6 = System_Math__Min_65085416(v5, 1000, 0);
     attackNumLabel = v4->fields.attackNumLabel;
     v4->fields.attackNum = v6;
     this = (DebugInputSkillAttackProbabilitySurvey_o *)System_Int32__ToString((int)v4 + 40, 0);
@@ -180,6 +180,6 @@ void DebugInputSkillAttackProbabilitySurvey__TurnRight(
       return;
     }
 LABEL_12:
-    sub_1C32E7C(this);
+    sub_1C372B4(this);
   }
 }

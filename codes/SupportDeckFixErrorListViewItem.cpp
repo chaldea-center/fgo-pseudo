@@ -7,9 +7,9 @@ void SupportDeckFixErrorListViewItem___ctor(
   int32_t v6; // w2
   const MethodInfo *v7; // x3
 
-  ListViewItem___ctor_43702564((ListViewItem_o *)this, index, 0);
+  ListViewItem___ctor_43804668((ListViewItem_o *)this, index, 0);
   this->fields.message = message;
-  sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.message, (int32_t)message, v6, v7);
+  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.message, (int32_t)message, v6, v7);
 }
 
 

@@ -1,9 +1,9 @@
 void UIExtrusionLabel___ctor(UIExtrusionLabel_o *this, const MethodInfo *method)
 {
-  if ( (byte_4C39227 & 1) == 0 )
+  if ( (byte_4C44821 & 1) == 0 )
   {
-    sub_1C32C20(&UILabel_TypeInfo);
-    byte_4C39227 = 1;
+    sub_1C37058(&UILabel_TypeInfo);
+    byte_4C44821 = 1;
   }
   this->fields.extrusionBlankSize = 2;
   if ( !UILabel_TypeInfo->_2.cctor_finished )
@@ -31,10 +31,10 @@ void UIExtrusionLabel__set_text(UIExtrusionLabel_o *this, System_String_o *value
   UnityEngine_Vector3_o localPosition; // 0:s0.4,4:s1.4,8:s2.4
   UnityEngine_Vector3_o v14; // 0:s0.4,4:s1.4,8:s2.4
 
-  if ( (byte_4C39226 & 1) == 0 )
+  if ( (byte_4C44820 & 1) == 0 )
   {
-    sub_1C32C20(&UnityEngine_Object_TypeInfo);
-    byte_4C39226 = 1;
+    sub_1C37058(&UnityEngine_Object_TypeInfo);
+    byte_4C44820 = 1;
   }
   UILabel__set_text((UILabel_o *)this, value, 0);
   extrusionObject = (UnityEngine_Object_o *)this->fields.extrusionObject;
@@ -63,7 +63,7 @@ void UIExtrusionLabel__set_text(UIExtrusionLabel_o *this, System_String_o *value
       || (transform = (UnityEngine_GameObject_o *)UnityEngine_GameObject__get_transform(transform, 0)) == 0 )
     {
 LABEL_17:
-      sub_1C32E7C(transform);
+      sub_1C372B4(transform);
     }
     v14.fields.y = y;
     v14.fields.z = z;

@@ -2,10 +2,10 @@ void AccountDeletePasswordDialog___cctor(const MethodInfo *method)
 {
   struct AccountDeletePasswordDialog_StaticFields *static_fields; // x8
 
-  if ( (byte_4C31709 & 1) == 0 )
+  if ( (byte_4C3CC59 & 1) == 0 )
   {
-    sub_1C32C20(&AccountDeletePasswordDialog_TypeInfo);
-    byte_4C31709 = 1;
+    sub_1C37058(&AccountDeletePasswordDialog_TypeInfo);
+    byte_4C3CC59 = 1;
   }
   static_fields = AccountDeletePasswordDialog_TypeInfo->static_fields;
   *(_QWORD *)&static_fields->ALREADY_WARNING_LABEL_POS_Y = 0x1342840000LL;
@@ -16,10 +16,10 @@ void AccountDeletePasswordDialog___cctor(const MethodInfo *method)
 
 void AccountDeletePasswordDialog___ctor(AccountDeletePasswordDialog_o *this, const MethodInfo *method)
 {
-  if ( (byte_4C31708 & 1) == 0 )
+  if ( (byte_4C3CC58 & 1) == 0 )
   {
-    sub_1C32C20(&BaseDialog_TypeInfo);
-    byte_4C31708 = 1;
+    sub_1C37058(&BaseDialog_TypeInfo);
+    byte_4C3CC58 = 1;
   }
   if ( !BaseDialog_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(BaseDialog_TypeInfo);
@@ -31,11 +31,11 @@ void AccountDeletePasswordDialog__Close(AccountDeletePasswordDialog_o *this, con
 {
   const MethodInfo *v2; // x2
 
-  AccountDeletePasswordDialog__Close_31086088(this, 0, v2);
+  AccountDeletePasswordDialog__Close_31103552(this, 0, v2);
 }
 
 
-void AccountDeletePasswordDialog__Close_31086088(
+void AccountDeletePasswordDialog__Close_31103552(
         AccountDeletePasswordDialog_o *this,
         System_Action_o *callback,
         const MethodInfo *method)
@@ -43,15 +43,15 @@ void AccountDeletePasswordDialog__Close_31086088(
   System_Action_o *v5; // x20
   const MethodInfo *v6; // x2
 
-  if ( (byte_4C316FF & 1) == 0 )
+  if ( (byte_4C3CC4F & 1) == 0 )
   {
-    sub_1C32C20(&Method_AccountDeletePasswordDialog_EndClose__);
-    sub_1C32C20(&System_Action_TypeInfo);
-    byte_4C316FF = 1;
+    sub_1C37058(&Method_AccountDeletePasswordDialog_EndClose__);
+    sub_1C37058(&System_Action_TypeInfo);
+    byte_4C3CC4F = 1;
   }
   this->fields.closeEndFunc = callback;
-  sub_1C32BC4(&this->fields.closeEndFunc, callback);
-  v5 = (System_Action_o *)sub_1C32E6C(System_Action_TypeInfo);
+  sub_1C36FFC(&this->fields.closeEndFunc, callback);
+  v5 = (System_Action_o *)sub_1C372A4(System_Action_TypeInfo);
   System_Action___ctor(v5, (Il2CppObject *)this, Method_AccountDeletePasswordDialog_EndClose__, 0);
   BaseDialog__Close((BaseDialog_o *)this, v5, v6);
 }
@@ -66,7 +66,7 @@ void AccountDeletePasswordDialog__EndClose(AccountDeletePasswordDialog_o *this, 
   if ( closeEndFunc )
   {
     this->fields.closeEndFunc = 0;
-    sub_1C32BC4(&this->fields.closeEndFunc, 0);
+    sub_1C36FFC(&this->fields.closeEndFunc, 0);
     ((void (__fastcall *)(intptr_t, intptr_t))closeEndFunc->fields.invoke_impl)(
       closeEndFunc->fields.method_code,
       closeEndFunc->fields.method);
@@ -85,18 +85,18 @@ System_String_o *AccountDeletePasswordDialog__GetPasswordText(
   System_String_o *v7; // x0
 
   v4 = this;
-  if ( (byte_4C316FE & 1) == 0 )
+  if ( (byte_4C3CC4E & 1) == 0 )
   {
-    sub_1C32C20(&LocalizationManager_TypeInfo);
-    sub_1C32C20(&StringLiteral_1854/*"ACCOUNT_DELETE_PASSWORD_HIDDEN_STR"*/);
-    this = (AccountDeletePasswordDialog_o *)sub_1C32C20(&StringLiteral_1/*""*/);
-    byte_4C316FE = 1;
+    sub_1C37058(&LocalizationManager_TypeInfo);
+    sub_1C37058(&StringLiteral_1854/*"ACCOUNT_DELETE_PASSWORD_HIDDEN_STR"*/);
+    this = (AccountDeletePasswordDialog_o *)sub_1C37058(&StringLiteral_1/*""*/);
+    byte_4C3CC4E = 1;
   }
   passwordText = v4->fields.passwordText;
   if ( !open )
   {
     if ( !passwordText )
-      sub_1C32E7C(this);
+      sub_1C372B4(this);
     stringLength = passwordText->fields._stringLength;
     passwordText = (System_String_o *)StringLiteral_1/*""*/;
     if ( stringLength >= 1 )
@@ -107,7 +107,7 @@ System_String_o *AccountDeletePasswordDialog__GetPasswordText(
           j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
         v7 = LocalizationManager__Get((System_String_o *)StringLiteral_1854/*"ACCOUNT_DELETE_PASSWORD_HIDDEN_STR"*/, 0);
         --stringLength;
-        passwordText = System_String__Concat_63518544(passwordText, v7, 0);
+        passwordText = System_String__Concat_63561656(passwordText, v7, 0);
       }
       while ( stringLength );
     }
@@ -136,20 +136,20 @@ UnityEngine_Vector2_o AccountDeletePasswordDialog__GetScreenPosition(
   z = pos.fields.z;
   y = pos.fields.y;
   x = pos.fields.x;
-  if ( (byte_4C31706 & 1) == 0 )
+  if ( (byte_4C3CC56 & 1) == 0 )
   {
-    sub_1C32C20(&UnityEngine_Object_TypeInfo);
-    byte_4C31706 = 1;
+    sub_1C37058(&UnityEngine_Object_TypeInfo);
+    byte_4C3CC56 = 1;
   }
   main = (UnityEngine_Object_o *)UnityEngine_Camera__get_main(0);
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   if ( UnityEngine_Object__op_Equality(main, 0, 0) )
   {
-    if ( !byte_4C312CA )
+    if ( !byte_4C3C81A )
     {
-      sub_1C32C20(&UnityEngine_Vector2_TypeInfo);
-      byte_4C312CA = 1;
+      sub_1C37058(&UnityEngine_Vector2_TypeInfo);
+      byte_4C3C81A = 1;
     }
     static_fields = UnityEngine_Vector2_TypeInfo->static_fields;
     v8 = static_fields->zeroVector.fields.x;
@@ -159,11 +159,11 @@ UnityEngine_Vector2_o AccountDeletePasswordDialog__GetScreenPosition(
   {
     v10 = UnityEngine_Camera__get_main(0);
     if ( !v10 )
-      sub_1C32E7C(0);
+      sub_1C372B4(0);
     v12.fields.x = x;
     v12.fields.y = y;
     v12.fields.z = z;
-    *(UnityEngine_Vector3_o *)&v8 = UnityEngine_Camera__WorldToScreenPoint_71029908(v10, v12, 0);
+    *(UnityEngine_Vector3_o *)&v8 = UnityEngine_Camera__WorldToScreenPoint_71073020(v10, v12, 0);
   }
   result.fields.y = v9;
   result.fields.x = v8;
@@ -189,11 +189,11 @@ void AccountDeletePasswordDialog__Init(AccountDeletePasswordDialog_o *this, cons
   UnityEngine_Object_o *buttonCancelLabel; // x20
   const MethodInfo *v17; // x1
 
-  if ( (byte_4C316FC & 1) == 0 )
+  if ( (byte_4C3CC4C & 1) == 0 )
   {
-    sub_1C32C20(&UnityEngine_Object_TypeInfo);
-    sub_1C32C20(&StringLiteral_1/*""*/);
-    byte_4C316FC = 1;
+    sub_1C37058(&UnityEngine_Object_TypeInfo);
+    sub_1C37058(&StringLiteral_1/*""*/);
+    byte_4C3CC4C = 1;
   }
   titleLabel = (UnityEngine_Object_o *)this->fields.titleLabel;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -328,7 +328,7 @@ void AccountDeletePasswordDialog__Init(AccountDeletePasswordDialog_o *this, cons
   gameObject = (UILabel_o *)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
   if ( !gameObject )
 LABEL_70:
-    sub_1C32E7C(gameObject);
+    sub_1C372B4(gameObject);
   UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)gameObject, 0, 0);
   BaseDialog__Init((BaseDialog_o *)this, v17);
 }
@@ -342,11 +342,11 @@ bool AccountDeletePasswordDialog__IsHitWindow(AccountDeletePasswordDialog_o *thi
   UnityEngine_Object_o *hoveredObject; // x19
   UnityEngine_Object_o *gameObject; // x20
 
-  if ( (byte_4C31707 & 1) == 0 )
+  if ( (byte_4C3CC57 & 1) == 0 )
   {
-    sub_1C32C20(&UnityEngine_Object_TypeInfo);
-    sub_1C32C20(&UICamera_TypeInfo);
-    byte_4C31707 = 1;
+    sub_1C37058(&UnityEngine_Object_TypeInfo);
+    sub_1C37058(&UICamera_TypeInfo);
+    byte_4C3CC57 = 1;
   }
   v3 = UICamera_TypeInfo;
   if ( !UICamera_TypeInfo->_2.cctor_finished )
@@ -355,7 +355,7 @@ bool AccountDeletePasswordDialog__IsHitWindow(AccountDeletePasswordDialog_o *thi
     v3 = UICamera_TypeInfo;
   }
   if ( !this->fields.passwordWindow )
-    sub_1C32E7C(v3);
+    sub_1C372B4(v3);
   static_fields = v3->static_fields;
   passwordWindow = (UnityEngine_Component_o *)this->fields.passwordWindow;
   hoveredObject = (UnityEngine_Object_o *)static_fields->hoveredObject;
@@ -374,27 +374,27 @@ void AccountDeletePasswordDialog__OnClickCancel(AccountDeletePasswordDialog_o *t
   __int64 v6; // x0
   struct System_Action_o *clickFunc; // x8
 
-  if ( (byte_4C31702 & 1) == 0 )
+  if ( (byte_4C3CC52 & 1) == 0 )
   {
-    sub_1C32C20(&Method_AccountDeletePasswordDialog_OnClickCancel__);
-    byte_4C31702 = 1;
+    sub_1C37058(&Method_AccountDeletePasswordDialog_OnClickCancel__);
+    byte_4C3CC52 = 1;
   }
   v3 = Method_AccountDeletePasswordDialog_OnClickCancel__;
   if ( (*((_BYTE *)Method_AccountDeletePasswordDialog_OnClickCancel__ + 83) & 2) != 0 )
-    v3 = (_QWORD *)sub_1C32C38();
-  v4 = (System_Reflection_MethodBase_o *)sub_1C32C04(v3, v3[4]);
+    v3 = (_QWORD *)sub_1C37070();
+  v4 = (System_Reflection_MethodBase_o *)sub_1C3703C(v3, v3[4]);
   OverwriteAssetSoundName__PlaySystemSe(v4, 1, 0, 0);
   if ( this->fields.clickFunc )
   {
-    AccountDeletePasswordDialog__Close_31086088(this, 0, v5);
+    AccountDeletePasswordDialog__Close_31103552(this, 0, v5);
     clickFunc = this->fields.clickFunc;
     if ( !clickFunc )
-      sub_1C32E7C(v6);
+      sub_1C372B4(v6);
     ((void (__fastcall *)(intptr_t, intptr_t))clickFunc->fields.invoke_impl)(
       clickFunc->fields.method_code,
       clickFunc->fields.method);
     this->fields.clickFunc = 0;
-    sub_1C32BC4(&this->fields.clickFunc, 0);
+    sub_1C36FFC(&this->fields.clickFunc, 0);
   }
 }
 
@@ -405,16 +405,16 @@ void AccountDeletePasswordDialog__OnClickCopy(AccountDeletePasswordDialog_o *thi
   System_Reflection_MethodBase_o *v4; // x0
   System_String_o *passwordText; // x19
 
-  if ( (byte_4C31703 & 1) == 0 )
+  if ( (byte_4C3CC53 & 1) == 0 )
   {
-    sub_1C32C20(&Method_AccountDeletePasswordDialog_OnClickCopy__);
-    sub_1C32C20(&UnityEngine_GUIUtility_TypeInfo);
-    byte_4C31703 = 1;
+    sub_1C37058(&Method_AccountDeletePasswordDialog_OnClickCopy__);
+    sub_1C37058(&UnityEngine_GUIUtility_TypeInfo);
+    byte_4C3CC53 = 1;
   }
   v3 = Method_AccountDeletePasswordDialog_OnClickCopy__;
   if ( (*((_BYTE *)Method_AccountDeletePasswordDialog_OnClickCopy__ + 83) & 2) != 0 )
-    v3 = (_QWORD *)sub_1C32C38();
-  v4 = (System_Reflection_MethodBase_o *)sub_1C32C04(v3, v3[4]);
+    v3 = (_QWORD *)sub_1C37070();
+  v4 = (System_Reflection_MethodBase_o *)sub_1C3703C(v3, v3[4]);
   OverwriteAssetSoundName__PlaySystemSe(v4, 0, 0, 0);
   if ( !System_String__IsNullOrEmpty(this->fields.passwordText, 0) )
   {
@@ -434,18 +434,18 @@ void AccountDeletePasswordDialog__OnClickDecide(AccountDeletePasswordDialog_o *t
   const MethodInfo *v6; // x1
   System_Collections_IEnumerator_o *v7; // x1
 
-  if ( (byte_4C31700 & 1) == 0 )
+  if ( (byte_4C3CC50 & 1) == 0 )
   {
-    sub_1C32C20(&Method_AccountDeletePasswordDialog_OnClickDecide__);
-    byte_4C31700 = 1;
+    sub_1C37058(&Method_AccountDeletePasswordDialog_OnClickDecide__);
+    byte_4C3CC50 = 1;
   }
   v3 = Method_AccountDeletePasswordDialog_OnClickDecide__;
   if ( (*((_BYTE *)Method_AccountDeletePasswordDialog_OnClickDecide__ + 83) & 2) != 0 )
-    v3 = (_QWORD *)sub_1C32C38();
-  v4 = (System_Reflection_MethodBase_o *)sub_1C32C04(v3, v3[4]);
+    v3 = (_QWORD *)sub_1C37070();
+  v4 = (System_Reflection_MethodBase_o *)sub_1C3703C(v3, v3[4]);
   OverwriteAssetSoundName__PlaySystemSe(v4, 0, 0, 0);
   v7 = AccountDeletePasswordDialog__WaitForOpen(v5, v6);
-  UnityEngine_MonoBehaviour__StartCoroutine_71209212((UnityEngine_MonoBehaviour_o *)this, v7, 0);
+  UnityEngine_MonoBehaviour__StartCoroutine_71252324((UnityEngine_MonoBehaviour_o *)this, v7, 0);
 }
 
 
@@ -453,13 +453,13 @@ void AccountDeletePasswordDialog__OnEnable(AccountDeletePasswordDialog_o *this, 
 {
   UnityEngine_Transform_o *transform; // x0
 
-  if ( (byte_4C31704 & 1) == 0 )
+  if ( (byte_4C3CC54 & 1) == 0 )
   {
-    sub_1C32C20(&StringLiteral_15647/*"Window/Objects/Buttons/CancelButton"*/);
-    byte_4C31704 = 1;
+    sub_1C37058(&StringLiteral_15649/*"Window/Objects/Buttons/CancelButton"*/);
+    byte_4C3CC54 = 1;
   }
   transform = UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0);
-  AndroidBackKeyManager__AddBackBtn_44857896(transform, (System_String_o *)StringLiteral_15647/*"Window/Objects/Buttons/CancelButton"*/, 0);
+  AndroidBackKeyManager__AddBackBtn_44960000(transform, (System_String_o *)StringLiteral_15649/*"Window/Objects/Buttons/CancelButton"*/, 0);
 }
 
 
@@ -494,25 +494,25 @@ void AccountDeletePasswordDialog__Open(
   System_String_o *v30; // x1
   const MethodInfo *v31; // x4
 
-  if ( (byte_4C316FD & 1) == 0 )
+  if ( (byte_4C3CC4D & 1) == 0 )
   {
-    sub_1C32C20(&AccountDeletePasswordDialog_TypeInfo);
-    sub_1C32C20(&LocalizationManager_TypeInfo);
-    sub_1C32C20(&Method_SingletonMonoBehaviour_NetworkManager__get_Instance__);
-    sub_1C32C20(&StringLiteral_1849/*"ACCOUNT_DELETE_PASSWORD_ALREADY_ISSUED_MESSAGE"*/);
-    sub_1C32C20(&StringLiteral_1858/*"ACCOUNT_DELETE_PASSWORD_NAME"*/);
-    sub_1C32C20(&StringLiteral_1850/*"ACCOUNT_DELETE_PASSWORD_ALREADY_ISSUED_TITLE"*/);
-    sub_1C32C20(&StringLiteral_1851/*"ACCOUNT_DELETE_PASSWORD_CANCEL"*/);
-    sub_1C32C20(&StringLiteral_1859/*"ACCOUNT_DELETE_PASSWORD_PASSWORD"*/);
-    sub_1C32C20(&StringLiteral_1857/*"ACCOUNT_DELETE_PASSWORD_ISSUED_WARNING"*/);
-    sub_1C32C20(&StringLiteral_1853/*"ACCOUNT_DELETE_PASSWORD_DECIDE"*/);
-    sub_1C32C20(&StringLiteral_1860/*"ACCOUNT_DELETE_PASSWORD_USER_ID"*/);
-    sub_1C32C20(&StringLiteral_1856/*"ACCOUNT_DELETE_PASSWORD_ISSUED_TITLE"*/);
-    sub_1C32C20(&StringLiteral_1/*""*/);
-    sub_1C32C20(&StringLiteral_1848/*"ACCOUNT_DELETE_PASSWORD_ALREADY_ISSUED_INFO"*/);
-    sub_1C32C20(&StringLiteral_1855/*"ACCOUNT_DELETE_PASSWORD_ISSUED_MESSAGE"*/);
-    sub_1C32C20(&StringLiteral_1852/*"ACCOUNT_DELETE_PASSWORD_COPY"*/);
-    byte_4C316FD = 1;
+    sub_1C37058(&AccountDeletePasswordDialog_TypeInfo);
+    sub_1C37058(&LocalizationManager_TypeInfo);
+    sub_1C37058(&Method_SingletonMonoBehaviour_NetworkManager__get_Instance__);
+    sub_1C37058(&StringLiteral_1849/*"ACCOUNT_DELETE_PASSWORD_ALREADY_ISSUED_MESSAGE"*/);
+    sub_1C37058(&StringLiteral_1858/*"ACCOUNT_DELETE_PASSWORD_NAME"*/);
+    sub_1C37058(&StringLiteral_1850/*"ACCOUNT_DELETE_PASSWORD_ALREADY_ISSUED_TITLE"*/);
+    sub_1C37058(&StringLiteral_1851/*"ACCOUNT_DELETE_PASSWORD_CANCEL"*/);
+    sub_1C37058(&StringLiteral_1859/*"ACCOUNT_DELETE_PASSWORD_PASSWORD"*/);
+    sub_1C37058(&StringLiteral_1857/*"ACCOUNT_DELETE_PASSWORD_ISSUED_WARNING"*/);
+    sub_1C37058(&StringLiteral_1853/*"ACCOUNT_DELETE_PASSWORD_DECIDE"*/);
+    sub_1C37058(&StringLiteral_1860/*"ACCOUNT_DELETE_PASSWORD_USER_ID"*/);
+    sub_1C37058(&StringLiteral_1856/*"ACCOUNT_DELETE_PASSWORD_ISSUED_TITLE"*/);
+    sub_1C37058(&StringLiteral_1/*""*/);
+    sub_1C37058(&StringLiteral_1848/*"ACCOUNT_DELETE_PASSWORD_ALREADY_ISSUED_INFO"*/);
+    sub_1C37058(&StringLiteral_1855/*"ACCOUNT_DELETE_PASSWORD_ISSUED_MESSAGE"*/);
+    sub_1C37058(&StringLiteral_1852/*"ACCOUNT_DELETE_PASSWORD_COPY"*/);
+    byte_4C3CC4D = 1;
   }
   passwordTitleLabel = this->fields.passwordTitleLabel;
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
@@ -552,7 +552,7 @@ void AccountDeletePasswordDialog__Open(
     goto LABEL_37;
   UILabel__set_text(warningLabel, Instance, 0);
   this->fields.passwordText = password;
-  sub_1C32BC4(&this->fields.passwordText, password);
+  sub_1C36FFC(&this->fields.passwordText, password);
   this->fields.isAlready = already;
   titleLabel = this->fields.titleLabel;
   if ( LocalizationManager_TypeInfo->_2.cctor_finished )
@@ -628,7 +628,7 @@ LABEL_14:
         }
       }
 LABEL_37:
-      sub_1C32E7C(Instance);
+      sub_1C372B4(Instance);
     }
   }
   Instance = LocalizationManager__Get((System_String_o *)StringLiteral_1856/*"ACCOUNT_DELETE_PASSWORD_ISSUED_TITLE"*/, 0);
@@ -647,7 +647,7 @@ LABEL_37:
   UILabel__set_text(v26, Instance, 0);
 LABEL_29:
   SelfUserGame = UserGameMaster__getSelfUserGame(0);
-  Instance = (System_String_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39E2904 *)Method_SingletonMonoBehaviour_NetworkManager__get_Instance__);
+  Instance = (System_String_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39ED16C *)Method_SingletonMonoBehaviour_NetworkManager__get_Instance__);
   if ( !Instance )
     goto LABEL_37;
   DispFriendCode = NetworkManager__GetDispFriendCode((NetworkManager_o *)Instance, 0);
@@ -663,7 +663,7 @@ LABEL_29:
     goto LABEL_37;
   UILabel__set_text((UILabel_o *)Instance, SelfUserGame->fields.name, 0);
   this->fields.clickFunc = func;
-  sub_1C32BC4(&this->fields.clickFunc, func);
+  sub_1C36FFC(&this->fields.clickFunc, func);
   BaseDialog__Open((BaseDialog_o *)this, 0, 0, 0, v31);
 }
 
@@ -703,7 +703,7 @@ void AccountDeletePasswordDialog__SetPasswordTextOpen(
       goto LABEL_5;
     }
 LABEL_10:
-    sub_1C32E7C(v6);
+    sub_1C372B4(v6);
   }
 LABEL_5:
   isPasswordOpen = 1;
@@ -720,16 +720,16 @@ void AccountDeletePasswordDialog__Update(AccountDeletePasswordDialog_o *this, co
   const MethodInfo *v6; // x2
   bool v7; // w0
 
-  if ( (byte_4C31705 & 1) == 0 )
+  if ( (byte_4C3CC55 & 1) == 0 )
   {
-    sub_1C32C20(&UICamera_TypeInfo);
-    byte_4C31705 = 1;
+    sub_1C37058(&UICamera_TypeInfo);
+    byte_4C3CC55 = 1;
   }
   if ( this->fields.isAlready )
   {
     passwordWindow = (UnityEngine_Component_o *)this->fields.passwordWindow;
     if ( !passwordWindow )
-      sub_1C32E7C(0);
+      sub_1C372B4(0);
     gameObject = UnityEngine_Component__get_gameObject(passwordWindow, 0);
     if ( !UICamera_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(UICamera_TypeInfo);
@@ -745,12 +745,12 @@ System_Collections_IEnumerator_o *AccountDeletePasswordDialog__WaitForOpen(
 {
   __int64 v2; // x19
 
-  if ( (byte_4C31701 & 1) == 0 )
+  if ( (byte_4C3CC51 & 1) == 0 )
   {
-    sub_1C32C20(&AccountDeletePasswordDialog__WaitForOpen_d__33_TypeInfo);
-    byte_4C31701 = 1;
+    sub_1C37058(&AccountDeletePasswordDialog__WaitForOpen_d__33_TypeInfo);
+    byte_4C3CC51 = 1;
   }
-  v2 = sub_1C32E6C(AccountDeletePasswordDialog__WaitForOpen_d__33_TypeInfo);
+  v2 = sub_1C372A4(AccountDeletePasswordDialog__WaitForOpen_d__33_TypeInfo);
   System_Object___ctor((Il2CppObject *)v2, 0);
   *(_DWORD *)(v2 + 16) = 0;
   return (System_Collections_IEnumerator_o *)v2;
@@ -774,17 +774,17 @@ bool AccountDeletePasswordDialog__WaitForOpen_d__33__MoveNext(
   unsigned int _1__state; // w8
   Il2CppObject **p__2__current; // x19
   bool result; // w0
-  System_String_o *WebViewAddress_41280180; // x19
+  System_String_o *WebViewAddress_41379660; // x19
   UnityEngine_WaitForSeconds_o *v7; // x20
   Il2CppObject **v8; // x19
 
-  if ( (byte_4C3170A & 1) == 0 )
+  if ( (byte_4C3CC5A & 1) == 0 )
   {
-    sub_1C32C20(&UnityEngine_Application_TypeInfo);
-    sub_1C32C20(&NetworkManager_TypeInfo);
-    sub_1C32C20(&SoundManager_TypeInfo);
-    sub_1C32C20(&UnityEngine_WaitForSeconds_TypeInfo);
-    byte_4C3170A = 1;
+    sub_1C37058(&UnityEngine_Application_TypeInfo);
+    sub_1C37058(&NetworkManager_TypeInfo);
+    sub_1C37058(&SoundManager_TypeInfo);
+    sub_1C37058(&UnityEngine_WaitForSeconds_TypeInfo);
+    byte_4C3CC5A = 1;
   }
   _1__state = this->fields.__1__state;
   if ( _1__state >= 2 )
@@ -794,10 +794,10 @@ bool AccountDeletePasswordDialog__WaitForOpen_d__33__MoveNext(
       this->fields.__1__state = -1;
       if ( !NetworkManager_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
-      WebViewAddress_41280180 = NetworkManager__getWebViewAddress_41280180(12, 0);
+      WebViewAddress_41379660 = NetworkManager__getWebViewAddress_41379660(12, 0);
       if ( !UnityEngine_Application_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(UnityEngine_Application_TypeInfo);
-      UnityEngine_Application__OpenURL(WebViewAddress_41280180, 0);
+      UnityEngine_Application__OpenURL(WebViewAddress_41379660, 0);
     }
     return 0;
   }
@@ -810,17 +810,17 @@ bool AccountDeletePasswordDialog__WaitForOpen_d__33__MoveNext(
     {
       this->fields.__2__current = 0;
       p__2__current = &this->fields.__2__current;
-      sub_1C32BC4(p__2__current, 0);
+      sub_1C36FFC(p__2__current, 0);
       result = 1;
       *((_DWORD *)p__2__current - 2) = 1;
     }
     else
     {
-      v7 = (UnityEngine_WaitForSeconds_o *)sub_1C32E6C(UnityEngine_WaitForSeconds_TypeInfo);
+      v7 = (UnityEngine_WaitForSeconds_o *)sub_1C372A4(UnityEngine_WaitForSeconds_TypeInfo);
       UnityEngine_WaitForSeconds___ctor(v7, 0.5, 0);
       this->fields.__2__current = (Il2CppObject *)v7;
       v8 = &this->fields.__2__current;
-      sub_1C32BC4(v8, v7);
+      sub_1C36FFC(v8, v7);
       result = 1;
       *((_DWORD *)v8 - 2) = 2;
     }
@@ -845,11 +845,11 @@ void __noreturn AccountDeletePasswordDialog__WaitForOpen_d__33__System_Collectio
   System_NotSupportedException_o *v3; // x19
   __int64 v4; // x0
 
-  v2 = sub_1C32C34(&System_NotSupportedException_TypeInfo);
-  v3 = (System_NotSupportedException_o *)sub_1C32E6C(v2);
+  v2 = sub_1C3706C(&System_NotSupportedException_TypeInfo);
+  v3 = (System_NotSupportedException_o *)sub_1C372A4(v2);
   System_NotSupportedException___ctor(v3, 0);
-  v4 = sub_1C32C34(&Method_AccountDeletePasswordDialog__WaitForOpen_d__33_System_Collections_IEnumerator_Reset__);
-  sub_1C32D48(v3, v4);
+  v4 = sub_1C3706C(&Method_AccountDeletePasswordDialog__WaitForOpen_d__33_System_Collections_IEnumerator_Reset__);
+  sub_1C37180(v3, v4);
 }
 
 

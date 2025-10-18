@@ -1,27 +1,27 @@
 void EventItemDisplayEntity___ctor(EventItemDisplayEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_4C3798B & 1) == 0 )
+  if ( (byte_4C42F83 & 1) == 0 )
   {
-    sub_1C32C20(&Method_DataEntityBase_string___ctor__);
-    byte_4C3798B = 1;
+    sub_1C37058(&Method_DataEntityBase_string___ctor__);
+    byte_4C42F83 = 1;
   }
   DataEntityBase_object____ctor(
     (DataEntityBase_PKType__o *)this,
-    (const MethodInfo_33943CC *)Method_DataEntityBase_string___ctor__);
+    (const MethodInfo_339EC34 *)Method_DataEntityBase_string___ctor__);
 }
 
 
 System_String_o *EventItemDisplayEntity__CreatePK(int32_t id, int32_t eventId, const MethodInfo *method)
 {
-  if ( (byte_4C37989 & 1) == 0 )
+  if ( (byte_4C42F81 & 1) == 0 )
   {
-    sub_1C32C20(&Method_DataEntityBase_CreateMultiplePK_int__int___);
-    byte_4C37989 = 1;
+    sub_1C37058(&Method_DataEntityBase_CreateMultiplePK_int__int___);
+    byte_4C42F81 = 1;
   }
   return DataEntityBase__CreateMultiplePK_int__int_(
            id,
            eventId,
-           (const MethodInfo_30DB578 *)Method_DataEntityBase_CreateMultiplePK_int__int___);
+           (const MethodInfo_30E5DE0 *)Method_DataEntityBase_CreateMultiplePK_int__int___);
 }
 
 
@@ -63,13 +63,13 @@ bool EventItemDisplayEntity__IsEnable(EventItemDisplayEntity_o *this, const Meth
   const MethodInfo *v10; // x1
   Il2CppObject *entity; // [xsp+8h] [xbp-38h] BYREF
 
-  if ( (byte_4C3798A & 1) == 0 )
+  if ( (byte_4C42F82 & 1) == 0 )
   {
-    sub_1C32C20(&Method_DataManager_GetMasterData_EventItemDisplayReleaseMaster___);
-    sub_1C32C20(&Method_DataMasterBase_EventItemDisplayReleaseMaster__EventItemDisplayReleaseEntity__int__TryGetEntity__);
-    sub_1C32C20(&NetworkManager_TypeInfo);
-    sub_1C32C20(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-    byte_4C3798A = 1;
+    sub_1C37058(&Method_DataManager_GetMasterData_EventItemDisplayReleaseMaster___);
+    sub_1C37058(&Method_DataMasterBase_EventItemDisplayReleaseMaster__EventItemDisplayReleaseEntity__int__TryGetEntity__);
+    sub_1C37058(&NetworkManager_TypeInfo);
+    sub_1C37058(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    byte_4C42F82 = 1;
   }
   entity = 0;
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
@@ -81,12 +81,12 @@ bool EventItemDisplayEntity__IsEnable(EventItemDisplayEntity_o *this, const Meth
   }
   else
   {
-    Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39E2904 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39ED16C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
     if ( !Instance )
       goto LABEL_20;
     Instance = DataManager__GetMasterData_object_(
                  (DataManager_o *)Instance,
-                 (const MethodInfo_30DD3F0 *)Method_DataManager_GetMasterData_EventItemDisplayReleaseMaster___);
+                 (const MethodInfo_30E7C58 *)Method_DataManager_GetMasterData_EventItemDisplayReleaseMaster___);
     conditionDetailIds = this->fields.conditionDetailIds;
     if ( !conditionDetailIds )
       goto LABEL_20;
@@ -99,14 +99,14 @@ bool EventItemDisplayEntity__IsEnable(EventItemDisplayEntity_o *this, const Meth
       while ( 1 )
       {
         if ( v9 >= (unsigned int)max_length )
-          sub_1C32E84(Instance);
+          sub_1C372BC(Instance);
         if ( !v8 )
           break;
         Instance = (Il2CppObject *)DataMasterBase_object__object__int___TryGetEntity(
                                      v8,
                                      &entity,
                                      conditionDetailIds->m_Items[v9],
-                                     (const MethodInfo_3396884 *)Method_DataMasterBase_EventItemDisplayReleaseMaster__EventItemDisplayReleaseEntity__int__TryGetEntity__);
+                                     (const MethodInfo_33A10EC *)Method_DataMasterBase_EventItemDisplayReleaseMaster__EventItemDisplayReleaseEntity__int__TryGetEntity__);
         if ( ((unsigned __int8)Instance & 1) == 0 )
           goto LABEL_24;
         Instance = entity;
@@ -126,7 +126,7 @@ LABEL_24:
         return !v7;
       }
 LABEL_20:
-      sub_1C32E7C(Instance);
+      sub_1C372B4(Instance);
     }
     return !v7;
   }

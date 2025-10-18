@@ -1,9 +1,9 @@
 void SkillEntity___cctor(const MethodInfo *method)
 {
-  if ( (byte_4C38564 & 1) == 0 )
+  if ( (byte_4C43B5D & 1) == 0 )
   {
-    sub_1C32C20(&SkillEntity_TypeInfo);
-    byte_4C38564 = 1;
+    sub_1C37058(&SkillEntity_TypeInfo);
+    byte_4C43B5D = 1;
   }
   SkillEntity_TypeInfo->static_fields->CHECK_SCRIPT_TRUE = 1;
 }
@@ -11,14 +11,14 @@ void SkillEntity___cctor(const MethodInfo *method)
 
 void SkillEntity___ctor(SkillEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_4C38563 & 1) == 0 )
+  if ( (byte_4C43B5C & 1) == 0 )
   {
-    sub_1C32C20(&Method_DataEntityBase_int___ctor__);
-    byte_4C38563 = 1;
+    sub_1C37058(&Method_DataEntityBase_int___ctor__);
+    byte_4C43B5C = 1;
   }
   DataEntityBase_int____ctor(
     (DataEntityBase_int__o *)this,
-    (const MethodInfo_3394354 *)Method_DataEntityBase_int___ctor__);
+    (const MethodInfo_339EBBC *)Method_DataEntityBase_int___ctor__);
 }
 
 
@@ -39,47 +39,47 @@ bool SkillEntity__DoesCutInWorkAsEnemyCommandSpell(SkillEntity_o *this, const Me
   const MethodInfo *v2; // x3
   int32_t param; // [xsp+Ch] [xbp-24h] BYREF
 
-  if ( (byte_4C38549 & 1) == 0 )
+  if ( (byte_4C43B42 & 1) == 0 )
   {
-    sub_1C32C20(&StringLiteral_18419/*"cutInWorksAsEnemyCommandSpell"*/);
-    byte_4C38549 = 1;
+    sub_1C37058(&StringLiteral_18422/*"cutInWorksAsEnemyCommandSpell"*/);
+    byte_4C43B42 = 1;
   }
   param = 0;
-  return SkillEntity__checkScript(this, (System_String_o *)StringLiteral_18419/*"cutInWorksAsEnemyCommandSpell"*/, &param, v2);
+  return SkillEntity__checkScript(this, (System_String_o *)StringLiteral_18422/*"cutInWorksAsEnemyCommandSpell"*/, &param, v2);
 }
 
 
 int32_t SkillEntity__GetAfterWaitGroup(SkillEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_4C3855B & 1) == 0 )
+  if ( (byte_4C43B54 & 1) == 0 )
   {
-    sub_1C32C20(&StringLiteral_16715/*"afterWaitGroup"*/);
-    byte_4C3855B = 1;
+    sub_1C37058(&StringLiteral_16717/*"afterWaitGroup"*/);
+    byte_4C43B54 = 1;
   }
-  return EntityScriptUtil__GetIntValue(this->fields.script, (System_String_o *)StringLiteral_16715/*"afterWaitGroup"*/, 0, 0);
+  return EntityScriptUtil__GetIntValue(this->fields.script, (System_String_o *)StringLiteral_16717/*"afterWaitGroup"*/, 0, 0);
 }
 
 
 float SkillEntity__GetAfterWaitSecond(SkillEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_4C3855C & 1) == 0 )
+  if ( (byte_4C43B55 & 1) == 0 )
   {
-    sub_1C32C20(&StringLiteral_16716/*"afterWaitTime"*/);
-    byte_4C3855C = 1;
+    sub_1C37058(&StringLiteral_16718/*"afterWaitTime"*/);
+    byte_4C43B55 = 1;
   }
-  return (float)EntityScriptUtil__GetIntValue(this->fields.script, (System_String_o *)StringLiteral_16716/*"afterWaitTime"*/, 0, 0)
+  return (float)EntityScriptUtil__GetIntValue(this->fields.script, (System_String_o *)StringLiteral_16718/*"afterWaitTime"*/, 0, 0)
        / 1000.0;
 }
 
 
 System_Int32_array *SkillEntity__GetAssumedEffectId(SkillEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_4C38550 & 1) == 0 )
+  if ( (byte_4C43B49 & 1) == 0 )
   {
-    sub_1C32C20(&StringLiteral_16920/*"assumedEffectId"*/);
-    byte_4C38550 = 1;
+    sub_1C37058(&StringLiteral_16922/*"assumedEffectId"*/);
+    byte_4C43B49 = 1;
   }
-  return EntityScriptUtil__GetIntArrayDefaultEmpty(this->fields.script, (System_String_o *)StringLiteral_16920/*"assumedEffectId"*/, 0);
+  return EntityScriptUtil__GetIntArrayDefaultEmpty(this->fields.script, (System_String_o *)StringLiteral_16922/*"assumedEffectId"*/, 0);
 }
 
 
@@ -93,14 +93,14 @@ SkillAddEntity_o *SkillEntity__GetAvailableSkillAddEntity(SkillEntity_o *this, c
   int32_t v8; // w2
   const MethodInfo *v9; // x3
 
-  if ( (byte_4C38535 & 1) == 0 )
+  if ( (byte_4C43B2E & 1) == 0 )
   {
-    sub_1C32C20(&Method_System_Linq_Enumerable_FirstOrDefault_SkillAddEntity___);
-    sub_1C32C20(&System_Func_SkillAddEntity__bool__TypeInfo);
-    sub_1C32C20(&Method_System_Collections_Generic_List_SkillAddEntity__get_Count__);
-    sub_1C32C20(&Method_SkillEntity___c__GetAvailableSkillAddEntity_b__22_0__);
-    sub_1C32C20(&SkillEntity___c_TypeInfo);
-    byte_4C38535 = 1;
+    sub_1C37058(&Method_System_Linq_Enumerable_FirstOrDefault_SkillAddEntity___);
+    sub_1C37058(&System_Func_SkillAddEntity__bool__TypeInfo);
+    sub_1C37058(&Method_System_Collections_Generic_List_SkillAddEntity__get_Count__);
+    sub_1C37058(&Method_SkillEntity___c__GetAvailableSkillAddEntity_b__22_0__);
+    sub_1C37058(&SkillEntity___c_TypeInfo);
+    byte_4C43B2E = 1;
   }
   SortedSkillAddEntityList_k__BackingField = this->fields._SortedSkillAddEntityList_k__BackingField;
   if ( !SortedSkillAddEntityList_k__BackingField || SortedSkillAddEntityList_k__BackingField->fields._size < 1 )
@@ -120,25 +120,25 @@ SkillAddEntity_o *SkillEntity__GetAvailableSkillAddEntity(SkillEntity_o *this, c
       v4 = SkillEntity___c_TypeInfo;
     }
     v6 = (Il2CppObject *)v4->static_fields->__9;
-    _9__22_0 = (System_Func_object__bool__o *)sub_1C32E6C(System_Func_SkillAddEntity__bool__TypeInfo);
+    _9__22_0 = (System_Func_object__bool__o *)sub_1C372A4(System_Func_SkillAddEntity__bool__TypeInfo);
     System_Func_object__bool____ctor(_9__22_0, v6, Method_SkillEntity___c__GetAvailableSkillAddEntity_b__22_0__, 0);
     static_fields = SkillEntity___c_TypeInfo->static_fields;
     static_fields->__9__22_0 = (struct System_Func_SkillAddEntity__bool__o *)_9__22_0;
-    sub_1C32BC4((CGThumbnailListItem_o *)&static_fields->__9__22_0, (int32_t)_9__22_0, v8, v9);
+    sub_1C36FFC((CGThumbnailListItem_o *)&static_fields->__9__22_0, (int32_t)_9__22_0, v8, v9);
   }
-  return (SkillAddEntity_o *)System_Linq_Enumerable__FirstOrDefault_object__51408536(
+  return (SkillAddEntity_o *)System_Linq_Enumerable__FirstOrDefault_object__51451648(
                                (System_Collections_Generic_IEnumerable_TSource__o *)SortedSkillAddEntityList_k__BackingField,
                                (System_Func_TSource__bool__o *)_9__22_0,
-                               (const MethodInfo_3106E98 *)Method_System_Linq_Enumerable_FirstOrDefault_SkillAddEntity___);
+                               (const MethodInfo_3111700 *)Method_System_Linq_Enumerable_FirstOrDefault_SkillAddEntity___);
 }
 
 
 System_Int32_array *SkillEntity__GetBattleEffectMovieIds(SkillEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_4C38556 & 1) == 0 )
+  if ( (byte_4C43B4F & 1) == 0 )
   {
-    sub_1C32C20(&StringLiteral_3118/*"BattleEffectMovieIds"*/);
-    byte_4C38556 = 1;
+    sub_1C37058(&StringLiteral_3118/*"BattleEffectMovieIds"*/);
+    byte_4C43B4F = 1;
   }
   return EntityScriptUtil__GetIntArray(this->fields.script, (System_String_o *)StringLiteral_3118/*"BattleEffectMovieIds"*/, 0, 0);
 }
@@ -158,26 +158,26 @@ System_Int32_array *SkillEntity__GetBranchSkillFuncIds(SkillEntity_o *this, int3
   const MethodInfo *v14; // x2
   System_Collections_Generic_HashSet_int__o *ret; // [xsp+8h] [xbp-38h] BYREF
 
-  if ( (byte_4C38562 & 1) == 0 )
+  if ( (byte_4C43B5B & 1) == 0 )
   {
-    sub_1C32C20(&Method_DataManager_GetMaster_SkillLvMaster___);
-    sub_1C32C20(&DataManager_TypeInfo);
-    sub_1C32C20(&Method_System_Linq_Enumerable_ToArray_int___);
-    sub_1C32C20(&Method_System_Collections_Generic_HashSet_int___ctor__);
-    sub_1C32C20(&System_Collections_Generic_HashSet_int__TypeInfo);
-    byte_4C38562 = 1;
+    sub_1C37058(&Method_DataManager_GetMaster_SkillLvMaster___);
+    sub_1C37058(&DataManager_TypeInfo);
+    sub_1C37058(&Method_System_Linq_Enumerable_ToArray_int___);
+    sub_1C37058(&Method_System_Collections_Generic_HashSet_int___ctor__);
+    sub_1C37058(&System_Collections_Generic_HashSet_int__TypeInfo);
+    byte_4C43B5B = 1;
   }
-  v5 = (System_Collections_Generic_HashSet_int__o *)sub_1C32E6C(System_Collections_Generic_HashSet_int__TypeInfo);
+  v5 = (System_Collections_Generic_HashSet_int__o *)sub_1C372A4(System_Collections_Generic_HashSet_int__TypeInfo);
   System_Collections_Generic_HashSet_int____ctor(
     v5,
-    (const MethodInfo_3649220 *)Method_System_Collections_Generic_HashSet_int___ctor__);
+    (const MethodInfo_3653A88 *)Method_System_Collections_Generic_HashSet_int___ctor__);
   ret = v5;
   SkillEntity__SetCondBranchSkillInfo(this, v6);
   if ( !BasicHelper__IsNullOrEmpty((System_Collections_ICollection_o *)this->fields.condBranchSkillInfos, 0) )
   {
     if ( !DataManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-    Master_object = (SkillLvEntity_o *)DataManager__GetMaster_object_((const MethodInfo_30DD39C *)Method_DataManager_GetMaster_SkillLvMaster___);
+    Master_object = (SkillLvEntity_o *)DataManager__GetMaster_object_((const MethodInfo_30E7C04 *)Method_DataManager_GetMaster_SkillLvMaster___);
     condBranchSkillInfos = this->fields.condBranchSkillInfos;
     if ( !condBranchSkillInfos )
       goto LABEL_15;
@@ -189,7 +189,7 @@ System_Int32_array *SkillEntity__GetBranchSkillFuncIds(SkillEntity_o *this, int3
       while ( 1 )
       {
         if ( v12 >= max_length )
-          sub_1C32E84(Master_object);
+          sub_1C372BC(Master_object);
         v13 = condBranchSkillInfos->m_Items[v12];
         if ( !v13 )
           break;
@@ -203,15 +203,15 @@ System_Int32_array *SkillEntity__GetBranchSkillFuncIds(SkillEntity_o *this, int3
         if ( (int)++v12 >= max_length )
           return System_Linq_Enumerable__ToArray_int_(
                    (System_Collections_Generic_IEnumerable_TSource__o *)v5,
-                   (const MethodInfo_311C8F4 *)Method_System_Linq_Enumerable_ToArray_int___);
+                   (const MethodInfo_312715C *)Method_System_Linq_Enumerable_ToArray_int___);
       }
 LABEL_15:
-      sub_1C32E7C(Master_object);
+      sub_1C372B4(Master_object);
     }
   }
   return System_Linq_Enumerable__ToArray_int_(
            (System_Collections_Generic_IEnumerable_TSource__o *)v5,
-           (const MethodInfo_311C8F4 *)Method_System_Linq_Enumerable_ToArray_int___);
+           (const MethodInfo_312715C *)Method_System_Linq_Enumerable_ToArray_int___);
 }
 
 
@@ -219,26 +219,26 @@ SkillEntity_CondBranchSkillInfoData_array *SkillEntity__GetCondBranchSkillInfoDa
         SkillEntity_o *this,
         const MethodInfo *method)
 {
-  if ( (byte_4C38561 & 1) == 0 )
+  if ( (byte_4C43B5A & 1) == 0 )
   {
-    sub_1C32C20(&Method_System_Linq_Enumerable_ToArray_SkillEntity_CondBranchSkillInfoData___);
-    byte_4C38561 = 1;
+    sub_1C37058(&Method_System_Linq_Enumerable_ToArray_SkillEntity_CondBranchSkillInfoData___);
+    byte_4C43B5A = 1;
   }
   SkillEntity__SetCondBranchSkillInfo(this, method);
   return (SkillEntity_CondBranchSkillInfoData_array *)System_Linq_Enumerable__ToArray_object_(
                                                         (System_Collections_Generic_IEnumerable_TSource__o *)this->fields.condBranchSkillInfos,
-                                                        (const MethodInfo_311CA8C *)Method_System_Linq_Enumerable_ToArray_SkillEntity_CondBranchSkillInfoData___);
+                                                        (const MethodInfo_31272F4 *)Method_System_Linq_Enumerable_ToArray_SkillEntity_CondBranchSkillInfoData___);
 }
 
 
 float SkillEntity__GetCutinAdditionalTime(SkillEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_4C3854B & 1) == 0 )
+  if ( (byte_4C43B44 & 1) == 0 )
   {
-    sub_1C32C20(&StringLiteral_18421/*"cutinAdditionalTime"*/);
-    byte_4C3854B = 1;
+    sub_1C37058(&StringLiteral_18424/*"cutinAdditionalTime"*/);
+    byte_4C43B44 = 1;
   }
-  return EntityScriptUtil__GetFloatValue(this->fields.script, (System_String_o *)StringLiteral_18421/*"cutinAdditionalTime"*/, 0.0, 0);
+  return EntityScriptUtil__GetFloatValue(this->fields.script, (System_String_o *)StringLiteral_18424/*"cutinAdditionalTime"*/, 0.0, 0);
 }
 
 
@@ -247,13 +247,13 @@ int32_t SkillEntity__GetCutinFirstId(SkillEntity_o *this, const MethodInfo *meth
   const MethodInfo *v2; // x3
   int32_t param; // [xsp+Ch] [xbp-24h] BYREF
 
-  if ( (byte_4C38553 & 1) == 0 )
+  if ( (byte_4C43B4C & 1) == 0 )
   {
-    sub_1C32C20(&StringLiteral_18422/*"cutinFirstId"*/);
-    byte_4C38553 = 1;
+    sub_1C37058(&StringLiteral_18425/*"cutinFirstId"*/);
+    byte_4C43B4C = 1;
   }
   param = 0;
-  SkillEntity__checkScript(this, (System_String_o *)StringLiteral_18422/*"cutinFirstId"*/, &param, v2);
+  SkillEntity__checkScript(this, (System_String_o *)StringLiteral_18425/*"cutinFirstId"*/, &param, v2);
   return param;
 }
 
@@ -281,21 +281,21 @@ void SkillEntity__GetEffectExplanation(
     v7 = skillLv;
   EffectTitle = SkillEntity__getEffectTitle(this, v7, (const MethodInfo *)explanation);
   *title = EffectTitle;
-  sub_1C32BC4((CGThumbnailListItem_o *)title, (int32_t)EffectTitle, v12, v13);
+  sub_1C36FFC((CGThumbnailListItem_o *)title, (int32_t)EffectTitle, v12, v13);
   EffectExplanation = SkillEntity__getEffectExplanation(this, skillLv, v14);
   *explanation = EffectExplanation;
-  sub_1C32BC4((CGThumbnailListItem_o *)explanation, (int32_t)EffectExplanation, v16, v17);
+  sub_1C36FFC((CGThumbnailListItem_o *)explanation, (int32_t)EffectExplanation, v16, v17);
 }
 
 
 System_String_o *SkillEntity__GetEnemyCountChangeMessage(SkillEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_4C38558 & 1) == 0 )
+  if ( (byte_4C43B51 & 1) == 0 )
   {
-    sub_1C32C20(&StringLiteral_19020/*"enemyCountChangeMessage"*/);
-    byte_4C38558 = 1;
+    sub_1C37058(&StringLiteral_19023/*"enemyCountChangeMessage"*/);
+    byte_4C43B51 = 1;
   }
-  return EntityScriptUtil__GetStringValue(this->fields.script, (System_String_o *)StringLiteral_19020/*"enemyCountChangeMessage"*/, 0, 0);
+  return EntityScriptUtil__GetStringValue(this->fields.script, (System_String_o *)StringLiteral_19023/*"enemyCountChangeMessage"*/, 0, 0);
 }
 
 
@@ -305,11 +305,11 @@ int32_t SkillEntity__GetFieldCallEffectId(SkillEntity_o *this, bool isBefore, co
   System_String_o **v6; // x8
   int32_t param; // [xsp+Ch] [xbp-34h] BYREF
 
-  if ( (byte_4C3854D & 1) == 0 )
+  if ( (byte_4C43B46 & 1) == 0 )
   {
-    sub_1C32C20(&StringLiteral_3133/*"BeforeFieldCallEffect"*/);
-    sub_1C32C20(&StringLiteral_2178/*"AfterFieldCallEffect"*/);
-    byte_4C3854D = 1;
+    sub_1C37058(&StringLiteral_3133/*"BeforeFieldCallEffect"*/);
+    sub_1C37058(&StringLiteral_2178/*"AfterFieldCallEffect"*/);
+    byte_4C43B46 = 1;
   }
   param = 0;
   if ( isBefore )
@@ -338,18 +338,18 @@ int32_t SkillEntity__GetIconId(SkillEntity_o *this, const MethodInfo *method)
   SkillGroupOverwriteEntity_o *entity; // [xsp+8h] [xbp-48h] BYREF
 
   v2 = this;
-  if ( (byte_4C38552 & 1) == 0 )
+  if ( (byte_4C43B4B & 1) == 0 )
   {
-    sub_1C32C20(&Method_DataManager_GetMaster_SkillGroupMaster___);
-    sub_1C32C20(&Method_DataManager_GetMaster_SkillGroupOverwriteMaster___);
-    this = (SkillEntity_o *)sub_1C32C20(&DataManager_TypeInfo);
-    byte_4C38552 = 1;
+    sub_1C37058(&Method_DataManager_GetMaster_SkillGroupMaster___);
+    sub_1C37058(&Method_DataManager_GetMaster_SkillGroupOverwriteMaster___);
+    this = (SkillEntity_o *)sub_1C37058(&DataManager_TypeInfo);
+    byte_4C43B4B = 1;
   }
   entity = 0;
   BaseTime = SkillLvMaster__GetBaseTime((const MethodInfo *)this);
   if ( !DataManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-  Master_object = (System_Int32_array *)DataManager__GetMaster_object_((const MethodInfo_30DD39C *)Method_DataManager_GetMaster_SkillGroupMaster___);
+  Master_object = (System_Int32_array *)DataManager__GetMaster_object_((const MethodInfo_30E7C04 *)Method_DataManager_GetMaster_SkillGroupMaster___);
   if ( !Master_object )
     goto LABEL_19;
   Master_object = SkillGroupMaster__GetSkillGroupIdFromSkillId((SkillGroupMaster_o *)Master_object, v2->fields.id, v5);
@@ -363,11 +363,11 @@ int32_t SkillEntity__GetIconId(SkillEntity_o *this, const MethodInfo *method)
     while ( 1 )
     {
       if ( v8 >= (unsigned int)max_length )
-        sub_1C32E84(Master_object);
+        sub_1C372BC(Master_object);
       v9 = v7->m_Items[v8];
       if ( !DataManager_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-      Master_object = (System_Int32_array *)DataManager__GetMaster_object_((const MethodInfo_30DD39C *)Method_DataManager_GetMaster_SkillGroupOverwriteMaster___);
+      Master_object = (System_Int32_array *)DataManager__GetMaster_object_((const MethodInfo_30E7C04 *)Method_DataManager_GetMaster_SkillGroupOverwriteMaster___);
       if ( !Master_object )
         goto LABEL_19;
       Master_object = (System_Int32_array *)SkillGroupOverwriteMaster__TryGetSkillGroupOverwriteEntity(
@@ -388,7 +388,7 @@ int32_t SkillEntity__GetIconId(SkillEntity_o *this, const MethodInfo *method)
       return *p_iconId;
     }
 LABEL_19:
-    sub_1C32E7C(Master_object);
+    sub_1C372B4(Master_object);
   }
 LABEL_15:
   p_iconId = &v2->fields.iconId;
@@ -401,13 +401,13 @@ int32_t SkillEntity__GetLossCutinId(SkillEntity_o *this, const MethodInfo *metho
   const MethodInfo *v2; // x3
   int32_t param; // [xsp+Ch] [xbp-24h] BYREF
 
-  if ( (byte_4C3854C & 1) == 0 )
+  if ( (byte_4C43B45 & 1) == 0 )
   {
-    sub_1C32C20(&StringLiteral_23515/*"skillScript_1"*/);
-    byte_4C3854C = 1;
+    sub_1C37058(&StringLiteral_23519/*"skillScript_1"*/);
+    byte_4C43B45 = 1;
   }
   param = 0;
-  if ( SkillEntity__checkScript(this, (System_String_o *)StringLiteral_23515/*"skillScript_1"*/, &param, v2) )
+  if ( SkillEntity__checkScript(this, (System_String_o *)StringLiteral_23519/*"skillScript_1"*/, &param, v2) )
     return param;
   else
     return 0;
@@ -429,16 +429,16 @@ int32_t SkillEntity__GetMotionId(SkillEntity_o *this, int32_t svtId, const Metho
   int32_t v16; // [xsp+8h] [xbp-38h] BYREF
   int32_t param; // [xsp+Ch] [xbp-34h] BYREF
 
-  if ( (byte_4C3854A & 1) == 0 )
+  if ( (byte_4C43B43 & 1) == 0 )
   {
-    sub_1C32C20(&int_TypeInfo);
-    sub_1C32C20(&StringLiteral_10081/*"OverwriteMotion_{0}"*/);
-    byte_4C3854A = 1;
+    sub_1C37058(&int_TypeInfo);
+    sub_1C37058(&StringLiteral_10082/*"OverwriteMotion_{0}"*/);
+    byte_4C43B43 = 1;
   }
   v16 = svtId;
   param = 0;
   v10 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v16, method, v3, v4, v5, v6, v7);
-  v11 = System_String__Format((System_String_o *)StringLiteral_10081/*"OverwriteMotion_{0}"*/, v10, 0);
+  v11 = System_String__Format((System_String_o *)StringLiteral_10082/*"OverwriteMotion_{0}"*/, v10, 0);
   v13 = SkillEntity__checkScript(this, v11, &param, v12);
   p_motion = &this->fields.motion;
   if ( v13 )
@@ -452,25 +452,25 @@ int32_t SkillEntity__GetOverWriteSkillInfoId(SkillEntity_o *this, const MethodIn
   const MethodInfo *v2; // x3
   int32_t param; // [xsp+Ch] [xbp-24h] BYREF
 
-  if ( (byte_4C38551 & 1) == 0 )
+  if ( (byte_4C43B4A & 1) == 0 )
   {
-    sub_1C32C20(&StringLiteral_10076/*"OverWriteSkillInfoId"*/);
-    byte_4C38551 = 1;
+    sub_1C37058(&StringLiteral_10077/*"OverWriteSkillInfoId"*/);
+    byte_4C43B4A = 1;
   }
   param = 0;
-  SkillEntity__checkScript(this, (System_String_o *)StringLiteral_10076/*"OverWriteSkillInfoId"*/, &param, v2);
+  SkillEntity__checkScript(this, (System_String_o *)StringLiteral_10077/*"OverWriteSkillInfoId"*/, &param, v2);
   return param;
 }
 
 
 float SkillEntity__GetTimingLastWaitTime(SkillEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_4C3855D & 1) == 0 )
+  if ( (byte_4C43B56 & 1) == 0 )
   {
-    sub_1C32C20(&StringLiteral_24091/*"timingLastWaitTime"*/);
-    byte_4C3855D = 1;
+    sub_1C37058(&StringLiteral_24095/*"timingLastWaitTime"*/);
+    byte_4C43B56 = 1;
   }
-  return (float)EntityScriptUtil__GetIntValue(this->fields.script, (System_String_o *)StringLiteral_24091/*"timingLastWaitTime"*/, 0, 0)
+  return (float)EntityScriptUtil__GetIntValue(this->fields.script, (System_String_o *)StringLiteral_24095/*"timingLastWaitTime"*/, 0, 0)
        / 1000.0;
 }
 
@@ -480,13 +480,13 @@ bool SkillEntity__IsBehaveAsAssistSkill(SkillEntity_o *this, const MethodInfo *m
   const MethodInfo *v2; // x3
   int32_t param; // [xsp+Ch] [xbp-24h] BYREF
 
-  if ( (byte_4C3855A & 1) == 0 )
+  if ( (byte_4C43B53 & 1) == 0 )
   {
-    sub_1C32C20(&StringLiteral_17130/*"behaveAsAssistSkill"*/);
-    byte_4C3855A = 1;
+    sub_1C37058(&StringLiteral_17132/*"behaveAsAssistSkill"*/);
+    byte_4C43B53 = 1;
   }
   param = 0;
-  return SkillEntity__checkScript(this, (System_String_o *)StringLiteral_17130/*"behaveAsAssistSkill"*/, &param, v2);
+  return SkillEntity__checkScript(this, (System_String_o *)StringLiteral_17132/*"behaveAsAssistSkill"*/, &param, v2);
 }
 
 
@@ -495,10 +495,10 @@ bool SkillEntity__IsCheckUpdateShiftServant(SkillEntity_o *this, const MethodInf
   const MethodInfo *v2; // x3
   int32_t param; // [xsp+Ch] [xbp-24h] BYREF
 
-  if ( (byte_4C38554 & 1) == 0 )
+  if ( (byte_4C43B4D & 1) == 0 )
   {
-    sub_1C32C20(&StringLiteral_4400/*"CheckUpdateShiftServant"*/);
-    byte_4C38554 = 1;
+    sub_1C37058(&StringLiteral_4400/*"CheckUpdateShiftServant"*/);
+    byte_4C43B4D = 1;
   }
   param = 0;
   return SkillEntity__checkScript(this, (System_String_o *)StringLiteral_4400/*"CheckUpdateShiftServant"*/, &param, v2);
@@ -513,16 +513,16 @@ bool SkillEntity__IsIgnoreBattlePointUp(
   System_Collections_Generic_IEnumerable_TSource__o *IntArray; // x0
   System_Collections_Generic_IEnumerable_TSource__o *v6; // x0
 
-  if ( (byte_4C38557 & 1) == 0 )
+  if ( (byte_4C43B50 & 1) == 0 )
   {
-    sub_1C32C20(&Method_System_Linq_Enumerable_Any_int___);
-    sub_1C32C20(&Method_System_Linq_Enumerable_Intersect_int___);
-    sub_1C32C20(&StringLiteral_7548/*"IgnoreBattlePointUp"*/);
-    byte_4C38557 = 1;
+    sub_1C37058(&Method_System_Linq_Enumerable_Any_int___);
+    sub_1C37058(&Method_System_Linq_Enumerable_Intersect_int___);
+    sub_1C37058(&StringLiteral_7549/*"IgnoreBattlePointUp"*/);
+    byte_4C43B50 = 1;
   }
   IntArray = (System_Collections_Generic_IEnumerable_TSource__o *)EntityScriptUtil__GetIntArray(
                                                                     this->fields.script,
-                                                                    (System_String_o *)StringLiteral_7548/*"IgnoreBattlePointUp"*/,
+                                                                    (System_String_o *)StringLiteral_7549/*"IgnoreBattlePointUp"*/,
                                                                     0,
                                                                     0);
   if ( IntArray )
@@ -530,10 +530,10 @@ bool SkillEntity__IsIgnoreBattlePointUp(
     v6 = System_Linq_Enumerable__Intersect_int_(
            (System_Collections_Generic_IEnumerable_TSource__o *)battlePointIds,
            IntArray,
-           (const MethodInfo_3107AA0 *)Method_System_Linq_Enumerable_Intersect_int___);
+           (const MethodInfo_3112308 *)Method_System_Linq_Enumerable_Intersect_int___);
     LOBYTE(IntArray) = System_Linq_Enumerable__Any_int_(
                          v6,
-                         (const MethodInfo_30E8A38 *)Method_System_Linq_Enumerable_Any_int___);
+                         (const MethodInfo_30F32A0 *)Method_System_Linq_Enumerable_Any_int___);
   }
   return (char)IntArray;
 }
@@ -544,56 +544,56 @@ bool SkillEntity__IsIgnoreValueUp(SkillEntity_o *this, const MethodInfo *method)
   const MethodInfo *v2; // x3
   int32_t param; // [xsp+Ch] [xbp-24h] BYREF
 
-  if ( (byte_4C38555 & 1) == 0 )
+  if ( (byte_4C43B4E & 1) == 0 )
   {
-    sub_1C32C20(&StringLiteral_7555/*"IgnoreValueUp"*/);
-    byte_4C38555 = 1;
+    sub_1C37058(&StringLiteral_7556/*"IgnoreValueUp"*/);
+    byte_4C43B4E = 1;
   }
   param = 0;
-  return SkillEntity__checkScript(this, (System_String_o *)StringLiteral_7555/*"IgnoreValueUp"*/, &param, v2);
+  return SkillEntity__checkScript(this, (System_String_o *)StringLiteral_7556/*"IgnoreValueUp"*/, &param, v2);
 }
 
 
 bool SkillEntity__IsNotShowRankUpIcon(SkillEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_4C3855E & 1) == 0 )
+  if ( (byte_4C43B57 & 1) == 0 )
   {
-    sub_1C32C20(&StringLiteral_20935/*"isNotShowRankUpIcon"*/);
-    byte_4C3855E = 1;
+    sub_1C37058(&StringLiteral_20938/*"isNotShowRankUpIcon"*/);
+    byte_4C43B57 = 1;
   }
-  return EntityScriptUtil__ScriptHasKey(this->fields.script, (System_String_o *)StringLiteral_20935/*"isNotShowRankUpIcon"*/, 0);
+  return EntityScriptUtil__ScriptHasKey(this->fields.script, (System_String_o *)StringLiteral_20938/*"isNotShowRankUpIcon"*/, 0);
 }
 
 
 bool SkillEntity__IsSkippable(SkillEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_4C3854E & 1) == 0 )
+  if ( (byte_4C43B47 & 1) == 0 )
   {
-    sub_1C32C20(&Method_BasicHelper_GetValue_long___);
-    sub_1C32C20(&StringLiteral_4030/*"CanNotSkip"*/);
-    byte_4C3854E = 1;
+    sub_1C37058(&Method_BasicHelper_GetValue_long___);
+    sub_1C37058(&StringLiteral_4030/*"CanNotSkip"*/);
+    byte_4C43B47 = 1;
   }
   return BasicHelper__GetValue_long_(
            this->fields.script,
            (System_String_o *)StringLiteral_4030/*"CanNotSkip"*/,
            0,
-           (const MethodInfo_30CAC78 *)Method_BasicHelper_GetValue_long___) == 0;
+           (const MethodInfo_30D54E0 *)Method_BasicHelper_GetValue_long___) == 0;
 }
 
 
 bool SkillEntity__IsWarBoardForcePassiveEveryBattle(SkillEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_4C3854F & 1) == 0 )
+  if ( (byte_4C43B48 & 1) == 0 )
   {
-    sub_1C32C20(&Method_BasicHelper_GetValue_long___);
-    sub_1C32C20(&StringLiteral_15585/*"WarBoardForcePassiveEveryBattle"*/);
-    byte_4C3854F = 1;
+    sub_1C37058(&Method_BasicHelper_GetValue_long___);
+    sub_1C37058(&StringLiteral_15587/*"WarBoardForcePassiveEveryBattle"*/);
+    byte_4C43B48 = 1;
   }
   return BasicHelper__GetValue_long_(
            this->fields.script,
-           (System_String_o *)StringLiteral_15585/*"WarBoardForcePassiveEveryBattle"*/,
+           (System_String_o *)StringLiteral_15587/*"WarBoardForcePassiveEveryBattle"*/,
            0,
-           (const MethodInfo_30CAC78 *)Method_BasicHelper_GetValue_long___) > 0;
+           (const MethodInfo_30D54E0 *)Method_BasicHelper_GetValue_long___) > 0;
 }
 
 
@@ -604,13 +604,13 @@ System_Nullable_bool__o SkillEntity__PreventInvisibleWhenInstantDeath(SkillEntit
   System_Nullable_bool__o *v5; // x0
   System_Nullable_bool__o v7; // [xsp+Ch] [xbp-24h] BYREF
 
-  if ( (byte_4C38559 & 1) == 0 )
+  if ( (byte_4C43B52 & 1) == 0 )
   {
-    sub_1C32C20(&Method_System_Nullable_bool___ctor__);
-    sub_1C32C20(&StringLiteral_22765/*"preventInvisibleWhenInstantDeath"*/);
-    byte_4C38559 = 1;
+    sub_1C37058(&Method_System_Nullable_bool___ctor__);
+    sub_1C37058(&StringLiteral_22769/*"preventInvisibleWhenInstantDeath"*/);
+    byte_4C43B52 = 1;
   }
-  IntValue = EntityScriptUtil__GetIntValue(this->fields.script, (System_String_o *)StringLiteral_22765/*"preventInvisibleWhenInstantDeath"*/, -1, 0);
+  IntValue = EntityScriptUtil__GetIntValue(this->fields.script, (System_String_o *)StringLiteral_22769/*"preventInvisibleWhenInstantDeath"*/, -1, 0);
   v7 = 0;
   if ( IntValue < 0 )
   {
@@ -623,7 +623,7 @@ System_Nullable_bool__o SkillEntity__PreventInvisibleWhenInstantDeath(SkillEntit
     System_Nullable_bool____ctor(
       (System_Nullable_bool__o)v5,
       v4,
-      (const MethodInfo_38BA7DC *)Method_System_Nullable_bool___ctor__);
+      (const MethodInfo_38C5044 *)Method_System_Nullable_bool___ctor__);
     return v7;
   }
 }
@@ -646,14 +646,14 @@ void SkillEntity__SetCondBranchSkillInfo(SkillEntity_o *this, const MethodInfo *
   CGThumbnailListItem_c **v15; // x8
   Il2CppObject *value; // [xsp+8h] [xbp-18h] BYREF
 
-  if ( (byte_4C38560 & 1) == 0 )
+  if ( (byte_4C43B59 & 1) == 0 )
   {
-    sub_1C32C20(&Method_System_Array_Empty_SkillEntity_CondBranchSkillInfoData___);
-    sub_1C32C20(&Method_System_Collections_Generic_Dictionary_string__object__TryGetValue__);
-    sub_1C32C20(&Method_JsonManager_Deserialize_SkillEntity_CondBranchSkillInfoData_____);
-    sub_1C32C20(&JsonManager_TypeInfo);
-    sub_1C32C20(&StringLiteral_18199/*"condBranchSkillInfo"*/);
-    byte_4C38560 = 1;
+    sub_1C37058(&Method_System_Array_Empty_SkillEntity_CondBranchSkillInfoData___);
+    sub_1C37058(&Method_System_Collections_Generic_Dictionary_string__object__TryGetValue__);
+    sub_1C37058(&Method_JsonManager_Deserialize_SkillEntity_CondBranchSkillInfoData_____);
+    sub_1C37058(&JsonManager_TypeInfo);
+    sub_1C37058(&StringLiteral_18201/*"condBranchSkillInfo"*/);
+    byte_4C43B59 = 1;
   }
   value = 0;
   p_condBranchSkillInfos = (CGThumbnailListItem_o *)&this->fields.condBranchSkillInfos;
@@ -661,19 +661,19 @@ void SkillEntity__SetCondBranchSkillInfo(SkillEntity_o *this, const MethodInfo *
   {
     script = this->fields.script;
     if ( !script )
-      sub_1C32E7C(0);
+      sub_1C372B4(0);
     if ( System_Collections_Generic_Dictionary_object__object___TryGetValue(
            (System_Collections_Generic_Dictionary_object__object__o *)script,
-           (Il2CppObject *)StringLiteral_18199/*"condBranchSkillInfo"*/,
+           (Il2CppObject *)StringLiteral_18201/*"condBranchSkillInfo"*/,
            &value,
-           (const MethodInfo_345A5D4 *)Method_System_Collections_Generic_Dictionary_string__object__TryGetValue__) )
+           (const MethodInfo_3464E3C *)Method_System_Collections_Generic_Dictionary_string__object__TryGetValue__) )
     {
       v8 = value;
       if ( !JsonManager_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(JsonManager_TypeInfo);
       v9 = JsonManager__Deserialize_object_(
              v8,
-             (const MethodInfo_314C70C *)Method_JsonManager_Deserialize_SkillEntity_CondBranchSkillInfoData_____);
+             (const MethodInfo_3156F74 *)Method_JsonManager_Deserialize_SkillEntity_CondBranchSkillInfoData_____);
       LODWORD(v10) = (_DWORD)v9;
       p_condBranchSkillInfos->klass = (CGThumbnailListItem_c *)v9;
     }
@@ -683,22 +683,22 @@ void SkillEntity__SetCondBranchSkillInfo(SkillEntity_o *this, const MethodInfo *
       v12 = *((_QWORD *)Method_System_Array_Empty_SkillEntity_CondBranchSkillInfoData___ + 7);
       if ( !v12 )
       {
-        sub_1C83390(Method_System_Array_Empty_SkillEntity_CondBranchSkillInfoData___);
+        sub_1C877C8(Method_System_Array_Empty_SkillEntity_CondBranchSkillInfoData___);
         v12 = v11[7];
       }
       v13 = *(_QWORD *)(v12 + 16);
       if ( (*(_BYTE *)(v13 + 309) & 1) == 0 )
-        v13 = sub_1C83334(inited);
+        v13 = sub_1C8776C(inited);
       if ( !*(_DWORD *)(v13 + 224) )
         inited = j_il2cpp_runtime_class_init_0(v13);
       v14 = *(_QWORD *)(v11[7] + 16LL);
       if ( (*(_BYTE *)(v14 + 309) & 1) == 0 )
-        v14 = sub_1C83334(inited);
+        v14 = sub_1C8776C(inited);
       v15 = *(CGThumbnailListItem_c ***)(v14 + 184);
       v10 = *v15;
       p_condBranchSkillInfos->klass = *v15;
     }
-    sub_1C32BC4(p_condBranchSkillInfos, (int32_t)v10, v5, v6);
+    sub_1C36FFC(p_condBranchSkillInfos, (int32_t)v10, v5, v6);
   }
 }
 
@@ -707,15 +707,15 @@ bool SkillEntity__TryGetMessageDisplayTime(SkillEntity_o *this, float *time, con
 {
   bool HasKey; // w21
 
-  if ( (byte_4C3855F & 1) == 0 )
+  if ( (byte_4C43B58 & 1) == 0 )
   {
-    sub_1C32C20(&StringLiteral_21544/*"messageDisplayTime"*/);
-    byte_4C3855F = 1;
+    sub_1C37058(&StringLiteral_21547/*"messageDisplayTime"*/);
+    byte_4C43B58 = 1;
   }
   *time = 0.0;
-  HasKey = EntityScriptUtil__ScriptHasKey(this->fields.script, (System_String_o *)StringLiteral_21544/*"messageDisplayTime"*/, 0);
+  HasKey = EntityScriptUtil__ScriptHasKey(this->fields.script, (System_String_o *)StringLiteral_21547/*"messageDisplayTime"*/, 0);
   if ( HasKey )
-    *time = (float)EntityScriptUtil__GetIntValue(this->fields.script, (System_String_o *)StringLiteral_21544/*"messageDisplayTime"*/, 0, 0)
+    *time = (float)EntityScriptUtil__GetIntValue(this->fields.script, (System_String_o *)StringLiteral_21547/*"messageDisplayTime"*/, 0, 0)
           / 1000.0;
   return HasKey;
 }
@@ -731,12 +731,12 @@ bool SkillEntity__checkScript(SkillEntity_o *this, System_String_o *key, int32_t
   SkillEntity_o *v12; // x0
   const MethodInfo *v13; // x1
 
-  if ( (byte_4C3853C & 1) == 0 )
+  if ( (byte_4C43B35 & 1) == 0 )
   {
-    sub_1C32C20(&Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__);
-    sub_1C32C20(&Method_System_Collections_Generic_Dictionary_string__object__get_Item__);
-    sub_1C32C20(&long_TypeInfo);
-    byte_4C3853C = 1;
+    sub_1C37058(&Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__);
+    sub_1C37058(&Method_System_Collections_Generic_Dictionary_string__object__get_Item__);
+    sub_1C37058(&long_TypeInfo);
+    byte_4C43B35 = 1;
   }
   *param = 0;
   script = this->fields.script;
@@ -745,16 +745,16 @@ bool SkillEntity__checkScript(SkillEntity_o *this, System_String_o *key, int32_t
     if ( System_Collections_Generic_Dictionary_object__object___ContainsKey(
            (System_Collections_Generic_Dictionary_object__object__o *)script,
            (Il2CppObject *)key,
-           (const MethodInfo_3458FBC *)Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__) )
+           (const MethodInfo_3463824 *)Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__) )
     {
       Item = (System_Collections_Generic_Dictionary_object__object__o *)this->fields.script;
       if ( !Item
         || (Item = (System_Collections_Generic_Dictionary_object__object__o *)System_Collections_Generic_Dictionary_object__object___get_Item(
                                                                                 Item,
                                                                                 (Il2CppObject *)key,
-                                                                                (const MethodInfo_3458D48 *)Method_System_Collections_Generic_Dictionary_string__object__get_Item__)) == 0 )
+                                                                                (const MethodInfo_34635B0 *)Method_System_Collections_Generic_Dictionary_string__object__get_Item__)) == 0 )
       {
-        sub_1C32E7C(Item);
+        sub_1C372B4(Item);
       }
       if ( Item->klass->_1.element_class == long_TypeInfo->_1.element_class )
       {
@@ -764,7 +764,7 @@ bool SkillEntity__checkScript(SkillEntity_o *this, System_String_o *key, int32_t
       }
       else
       {
-        sub_1C3313C(Item);
+        sub_1C37574(Item);
         LOBYTE(script) = (unsigned __int8)SkillEntity__getActIndividuality(v12, v13);
       }
     }
@@ -786,10 +786,10 @@ bool SkillEntity__checkScriptFromIdx(SkillEntity_o *this, System_String_o *key, 
   SkillEntity_c *v9; // x0
   int32_t param; // [xsp+Ch] [xbp-24h] BYREF
 
-  if ( (byte_4C3853F & 1) == 0 )
+  if ( (byte_4C43B38 & 1) == 0 )
   {
-    sub_1C32C20(&SkillEntity_TypeInfo);
-    byte_4C3853F = 1;
+    sub_1C37058(&SkillEntity_TypeInfo);
+    byte_4C43B38 = 1;
   }
   param = 0;
   v6 = SkillEntity__checkScript(this, key, &param, v3);
@@ -813,18 +813,18 @@ bool SkillEntity__checkUseTreasure(SkillEntity_o *this, int32_t type, const Meth
 {
   struct System_Collections_Generic_Dictionary_string__object__o *script; // x0
 
-  if ( (byte_4C3853E & 1) == 0 )
+  if ( (byte_4C43B37 & 1) == 0 )
   {
-    sub_1C32C20(&Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__);
-    sub_1C32C20(&StringLiteral_17946/*"checkUseTreasure"*/);
-    byte_4C3853E = 1;
+    sub_1C37058(&Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__);
+    sub_1C37058(&StringLiteral_17948/*"checkUseTreasure"*/);
+    byte_4C43B37 = 1;
   }
   script = this->fields.script;
   return !script
       || !System_Collections_Generic_Dictionary_object__object___ContainsKey(
             (System_Collections_Generic_Dictionary_object__object__o *)script,
-            (Il2CppObject *)StringLiteral_17946/*"checkUseTreasure"*/,
-            (const MethodInfo_3458FBC *)Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__)
+            (Il2CppObject *)StringLiteral_17948/*"checkUseTreasure"*/,
+            (const MethodInfo_3463824 *)Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__)
       || Follower__isUseTreasure(type, 0);
 }
 
@@ -833,14 +833,14 @@ System_Int32_array *SkillEntity__getActIndividuality(SkillEntity_o *this, const 
 {
   System_Int32_array *result; // x0
 
-  if ( (byte_4C3853D & 1) == 0 )
+  if ( (byte_4C43B36 & 1) == 0 )
   {
-    sub_1C32C20(&int___TypeInfo);
-    byte_4C3853D = 1;
+    sub_1C37058(&int___TypeInfo);
+    byte_4C43B36 = 1;
   }
   result = this->fields.actIndividuality;
   if ( !result )
-    return (System_Int32_array *)sub_1C32CC8(int___TypeInfo, 0);
+    return (System_Int32_array *)sub_1C37100(int___TypeInfo, 0);
   return result;
 }
 
@@ -855,27 +855,27 @@ int32_t SkillEntity__getEffectChargeTurn(SkillEntity_o *this, int32_t lv, const 
   int32_t v10; // w2
   SkillLvEntity_o *Entity; // x0
 
-  if ( (byte_4C38537 & 1) == 0 )
+  if ( (byte_4C43B30 & 1) == 0 )
   {
-    sub_1C32C20(&Method_DataManager_GetMasterData_SkillLvMaster___);
-    sub_1C32C20(&Method_SingletonMonoBehaviour_DataManager__getInstance__);
-    byte_4C38537 = 1;
+    sub_1C37058(&Method_DataManager_GetMasterData_SkillLvMaster___);
+    sub_1C37058(&Method_SingletonMonoBehaviour_DataManager__getInstance__);
+    byte_4C43B30 = 1;
   }
   if ( this->fields.type != 1 )
     return -1;
   v6 = *((_QWORD *)Method_SingletonMonoBehaviour_DataManager__getInstance__ + 4);
   if ( (*(_BYTE *)(v6 + 309) & 1) == 0 )
-    v6 = sub_1C83334(v3);
+    v6 = sub_1C8776C(v3);
   v7 = *(_QWORD *)(*(_QWORD *)(v6 + 192) + 16LL);
   if ( (*(_BYTE *)(v7 + 309) & 1) == 0 )
-    v7 = sub_1C83334(v3);
+    v7 = sub_1C8776C(v3);
   MasterData_object = **(Il2CppObject ***)(v7 + 184);
   if ( !MasterData_object
     || (MasterData_object = DataManager__GetMasterData_object_(
                               (DataManager_o *)MasterData_object,
-                              (const MethodInfo_30DD3F0 *)Method_DataManager_GetMasterData_SkillLvMaster___)) == 0 )
+                              (const MethodInfo_30E7C58 *)Method_DataManager_GetMasterData_SkillLvMaster___)) == 0 )
   {
-    sub_1C32E7C(MasterData_object);
+    sub_1C372B4(MasterData_object);
   }
   v10 = lv <= 1 ? 1 : lv;
   Entity = SkillLvMaster__GetEntity((SkillLvMaster_o *)MasterData_object, this->fields.id, v10, v9);
@@ -898,26 +898,26 @@ System_String_o *SkillEntity__getEffectExplanation(SkillEntity_o *this, int32_t 
   const MethodInfo *v12; // x3
   LocalizationManager_c *v14; // x0
 
-  if ( (byte_4C38538 & 1) == 0 )
+  if ( (byte_4C43B31 & 1) == 0 )
   {
-    sub_1C32C20(&Method_DataManager_GetMasterData_SkillLvMaster___);
-    sub_1C32C20(&LocalizationManager_TypeInfo);
-    sub_1C32C20(&Method_SingletonMonoBehaviour_DataManager__getInstance__);
-    byte_4C38538 = 1;
+    sub_1C37058(&Method_DataManager_GetMasterData_SkillLvMaster___);
+    sub_1C37058(&LocalizationManager_TypeInfo);
+    sub_1C37058(&Method_SingletonMonoBehaviour_DataManager__getInstance__);
+    byte_4C43B31 = 1;
   }
   v6 = *((_QWORD *)Method_SingletonMonoBehaviour_DataManager__getInstance__ + 4);
   if ( (*(_BYTE *)(v6 + 309) & 1) == 0 )
-    v6 = sub_1C83334(v3);
+    v6 = sub_1C8776C(v3);
   v7 = *(_QWORD *)(*(_QWORD *)(v6 + 192) + 16LL);
   if ( (*(_BYTE *)(v7 + 309) & 1) == 0 )
-    v7 = sub_1C83334(v3);
+    v7 = sub_1C8776C(v3);
   MasterData_object = **(Il2CppObject ***)(v7 + 184);
   if ( !MasterData_object
     || (MasterData_object = DataManager__GetMasterData_object_(
                               (DataManager_o *)MasterData_object,
-                              (const MethodInfo_30DD3F0 *)Method_DataManager_GetMasterData_SkillLvMaster___)) == 0 )
+                              (const MethodInfo_30E7C58 *)Method_DataManager_GetMasterData_SkillLvMaster___)) == 0 )
   {
-    sub_1C32E7C(MasterData_object);
+    sub_1C372B4(MasterData_object);
   }
   if ( lv <= 1 )
     v10 = 1;
@@ -925,13 +925,13 @@ System_String_o *SkillEntity__getEffectExplanation(SkillEntity_o *this, int32_t 
     v10 = lv;
   Entity = SkillLvMaster__GetEntity((SkillLvMaster_o *)MasterData_object, this->fields.id, v10, v9);
   if ( Entity )
-    return SkillLvEntity__getDetail_42778376(Entity, lv, 0, v12);
+    return SkillLvEntity__getDetail_42880244(Entity, lv, 0, v12);
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-  if ( !byte_4C32D4C )
+  if ( !byte_4C3E2C9 )
   {
-    sub_1C32C20(&LocalizationManager_TypeInfo);
-    byte_4C32D4C = 1;
+    sub_1C37058(&LocalizationManager_TypeInfo);
+    byte_4C3E2C9 = 1;
   }
   v14 = LocalizationManager_TypeInfo;
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
@@ -966,29 +966,29 @@ System_String_o *SkillEntity__getEffectTitle(SkillEntity_o *this, int32_t lv, co
   Il2CppObject *Name; // x0
   int32_t v19; // [xsp+Ch] [xbp-24h] BYREF
 
-  if ( (byte_4C38536 & 1) == 0 )
+  if ( (byte_4C43B2F & 1) == 0 )
   {
-    sub_1C32C20(&int_TypeInfo);
-    sub_1C32C20(&LocalizationManager_TypeInfo);
-    sub_1C32C20(&StringLiteral_12228/*"SKILL_EFFECT_TITLE"*/);
-    sub_1C32C20(&StringLiteral_12227/*"SKILL_EFFECT_LEVEL_TITLE"*/);
-    byte_4C38536 = 1;
+    sub_1C37058(&int_TypeInfo);
+    sub_1C37058(&LocalizationManager_TypeInfo);
+    sub_1C37058(&StringLiteral_12229/*"SKILL_EFFECT_TITLE"*/);
+    sub_1C37058(&StringLiteral_12228/*"SKILL_EFFECT_LEVEL_TITLE"*/);
+    byte_4C43B2F = 1;
   }
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   if ( lv < 1 )
   {
-    v16 = LocalizationManager__Get((System_String_o *)StringLiteral_12228/*"SKILL_EFFECT_TITLE"*/, 0);
+    v16 = LocalizationManager__Get((System_String_o *)StringLiteral_12229/*"SKILL_EFFECT_TITLE"*/, 0);
     Name = (Il2CppObject *)SkillEntity__getName(this, v17);
     return System_String__Format(v16, Name, 0);
   }
   else
   {
-    v5 = LocalizationManager__Get((System_String_o *)StringLiteral_12227/*"SKILL_EFFECT_LEVEL_TITLE"*/, 0);
+    v5 = LocalizationManager__Get((System_String_o *)StringLiteral_12228/*"SKILL_EFFECT_LEVEL_TITLE"*/, 0);
     v7 = (Il2CppObject *)SkillEntity__getName(this, v6);
     v19 = lv;
     v14 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v19, v8, v9, v10, v11, v12, v13);
-    return System_String__Format_63559836(v5, v7, v14, 0);
+    return System_String__Format_63602948(v5, v7, v14, 0);
   }
 }
 
@@ -1005,26 +1005,26 @@ System_String_o *SkillEntity__getFuncExplanation(SkillEntity_o *this, int32_t lv
   const MethodInfo *v12; // x1
   LocalizationManager_c *v14; // x0
 
-  if ( (byte_4C38539 & 1) == 0 )
+  if ( (byte_4C43B32 & 1) == 0 )
   {
-    sub_1C32C20(&Method_DataManager_GetMasterData_SkillLvMaster___);
-    sub_1C32C20(&LocalizationManager_TypeInfo);
-    sub_1C32C20(&Method_SingletonMonoBehaviour_DataManager__getInstance__);
-    byte_4C38539 = 1;
+    sub_1C37058(&Method_DataManager_GetMasterData_SkillLvMaster___);
+    sub_1C37058(&LocalizationManager_TypeInfo);
+    sub_1C37058(&Method_SingletonMonoBehaviour_DataManager__getInstance__);
+    byte_4C43B32 = 1;
   }
   v6 = *((_QWORD *)Method_SingletonMonoBehaviour_DataManager__getInstance__ + 4);
   if ( (*(_BYTE *)(v6 + 309) & 1) == 0 )
-    v6 = sub_1C83334(v3);
+    v6 = sub_1C8776C(v3);
   v7 = *(_QWORD *)(*(_QWORD *)(v6 + 192) + 16LL);
   if ( (*(_BYTE *)(v7 + 309) & 1) == 0 )
-    v7 = sub_1C83334(v3);
+    v7 = sub_1C8776C(v3);
   MasterData_object = **(Il2CppObject ***)(v7 + 184);
   if ( !MasterData_object
     || (MasterData_object = DataManager__GetMasterData_object_(
                               (DataManager_o *)MasterData_object,
-                              (const MethodInfo_30DD3F0 *)Method_DataManager_GetMasterData_SkillLvMaster___)) == 0 )
+                              (const MethodInfo_30E7C58 *)Method_DataManager_GetMasterData_SkillLvMaster___)) == 0 )
   {
-    sub_1C32E7C(MasterData_object);
+    sub_1C372B4(MasterData_object);
   }
   if ( lv <= 1 )
     v10 = 1;
@@ -1035,10 +1035,10 @@ System_String_o *SkillEntity__getFuncExplanation(SkillEntity_o *this, int32_t lv
     return SkillLvEntity__getFuncDetail(Entity, v12);
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-  if ( !byte_4C32D4C )
+  if ( !byte_4C3E2C9 )
   {
-    sub_1C32C20(&LocalizationManager_TypeInfo);
-    byte_4C32D4C = 1;
+    sub_1C37058(&LocalizationManager_TypeInfo);
+    byte_4C3E2C9 = 1;
   }
   v14 = LocalizationManager_TypeInfo;
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
@@ -1056,10 +1056,10 @@ System_String_o *SkillEntity__getName(SkillEntity_o *this, const MethodInfo *met
   SkillAddEntity_o *AvailableSkillAddEntity; // x0
   System_String_o **p_name; // x8
 
-  if ( (byte_4C38534 & 1) == 0 )
+  if ( (byte_4C43B2D & 1) == 0 )
   {
-    sub_1C32C20(&Method_System_Collections_Generic_List_SkillAddEntity__get_Count__);
-    byte_4C38534 = 1;
+    sub_1C37058(&Method_System_Collections_Generic_List_SkillAddEntity__get_Count__);
+    byte_4C43B2D = 1;
   }
   SortedSkillAddEntityList_k__BackingField = this->fields._SortedSkillAddEntityList_k__BackingField;
   if ( SortedSkillAddEntityList_k__BackingField
@@ -1086,12 +1086,12 @@ System_String_array *SkillEntity__getScriptStrings(
   SkillEntity_o *v9; // x0
   const MethodInfo *v10; // x1
 
-  if ( (byte_4C38541 & 1) == 0 )
+  if ( (byte_4C43B3A & 1) == 0 )
   {
-    sub_1C32C20(&Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__);
-    sub_1C32C20(&Method_System_Collections_Generic_Dictionary_string__object__get_Item__);
-    sub_1C32C20(&string_TypeInfo);
-    byte_4C38541 = 1;
+    sub_1C37058(&Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__);
+    sub_1C37058(&Method_System_Collections_Generic_Dictionary_string__object__get_Item__);
+    sub_1C37058(&string_TypeInfo);
+    byte_4C43B3A = 1;
   }
   script = (System_Collections_Generic_Dictionary_object__object__o *)this->fields.script;
   if ( !script )
@@ -1099,21 +1099,21 @@ System_String_array *SkillEntity__getScriptStrings(
   if ( !System_Collections_Generic_Dictionary_object__object___ContainsKey(
           script,
           (Il2CppObject *)key,
-          (const MethodInfo_3458FBC *)Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__) )
+          (const MethodInfo_3463824 *)Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__) )
     return 0;
   script = (System_Collections_Generic_Dictionary_object__object__o *)this->fields.script;
   if ( !script
     || (script = (System_Collections_Generic_Dictionary_object__object__o *)System_Collections_Generic_Dictionary_object__object___get_Item(
                                                                               script,
                                                                               (Il2CppObject *)key,
-                                                                              (const MethodInfo_3458D48 *)Method_System_Collections_Generic_Dictionary_string__object__get_Item__)) == 0 )
+                                                                              (const MethodInfo_34635B0 *)Method_System_Collections_Generic_Dictionary_string__object__get_Item__)) == 0 )
   {
 LABEL_10:
-    sub_1C32E7C(script);
+    sub_1C372B4(script);
   }
   if ( (System_String_c *)script->klass == string_TypeInfo )
     return System_String__Split((System_String_o *)script, splitChar, 0, 0);
-  sub_1C3313C(script);
+  sub_1C37574(script);
   return SkillEntity__getSkillCutInVoices(v9, v10);
 }
 
@@ -1124,19 +1124,19 @@ int32_t SkillEntity__getSkillChargeTime(SkillEntity_o *this, int32_t lv, const M
   const MethodInfo *v6; // x3
   SkillLvEntity_o *Entity; // x0
 
-  if ( (byte_4C3853A & 1) == 0 )
+  if ( (byte_4C43B33 & 1) == 0 )
   {
-    sub_1C32C20(&Method_DataManager_GetMasterData_SkillLvMaster___);
-    sub_1C32C20(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-    byte_4C3853A = 1;
+    sub_1C37058(&Method_DataManager_GetMasterData_SkillLvMaster___);
+    sub_1C37058(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    byte_4C43B33 = 1;
   }
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39E2904 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39ED16C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance
     || (Instance = DataManager__GetMasterData_object_(
                      (DataManager_o *)Instance,
-                     (const MethodInfo_30DD3F0 *)Method_DataManager_GetMasterData_SkillLvMaster___)) == 0 )
+                     (const MethodInfo_30E7C58 *)Method_DataManager_GetMasterData_SkillLvMaster___)) == 0 )
   {
-    sub_1C32E7C(Instance);
+    sub_1C372B4(Instance);
   }
   Entity = SkillLvMaster__GetEntity((SkillLvMaster_o *)Instance, this->fields.id, lv, v6);
   if ( Entity )
@@ -1150,13 +1150,13 @@ bool SkillEntity__getSkillCutInCamPlayerAll(SkillEntity_o *this, const MethodInf
   const MethodInfo *v2; // x3
   int32_t param; // [xsp+Ch] [xbp-24h] BYREF
 
-  if ( (byte_4C38546 & 1) == 0 )
+  if ( (byte_4C43B3F & 1) == 0 )
   {
-    sub_1C32C20(&StringLiteral_18410/*"cutInCamPlayerAll"*/);
-    byte_4C38546 = 1;
+    sub_1C37058(&StringLiteral_18413/*"cutInCamPlayerAll"*/);
+    byte_4C43B3F = 1;
   }
   param = 0;
-  SkillEntity__checkScript(this, (System_String_o *)StringLiteral_18410/*"cutInCamPlayerAll"*/, &param, v2);
+  SkillEntity__checkScript(this, (System_String_o *)StringLiteral_18413/*"cutInCamPlayerAll"*/, &param, v2);
   return param == 1;
 }
 
@@ -1166,13 +1166,13 @@ int32_t SkillEntity__getSkillCutInId(SkillEntity_o *this, const MethodInfo *meth
   const MethodInfo *v2; // x3
   int32_t param; // [xsp+Ch] [xbp-24h] BYREF
 
-  if ( (byte_4C3853B & 1) == 0 )
+  if ( (byte_4C43B34 & 1) == 0 )
   {
-    sub_1C32C20(&StringLiteral_18411/*"cutInId"*/);
-    byte_4C3853B = 1;
+    sub_1C37058(&StringLiteral_18414/*"cutInId"*/);
+    byte_4C43B34 = 1;
   }
   param = 0;
-  if ( SkillEntity__checkScript(this, (System_String_o *)StringLiteral_18411/*"cutInId"*/, &param, v2) )
+  if ( SkillEntity__checkScript(this, (System_String_o *)StringLiteral_18414/*"cutInId"*/, &param, v2) )
     return param;
   else
     return 0;
@@ -1184,13 +1184,13 @@ int32_t SkillEntity__getSkillCutInMessageMode(SkillEntity_o *this, const MethodI
   const MethodInfo *v2; // x3
   int32_t param; // [xsp+Ch] [xbp-24h] BYREF
 
-  if ( (byte_4C38548 & 1) == 0 )
+  if ( (byte_4C43B41 & 1) == 0 )
   {
-    sub_1C32C20(&StringLiteral_18412/*"cutInMessageMode"*/);
-    byte_4C38548 = 1;
+    sub_1C37058(&StringLiteral_18415/*"cutInMessageMode"*/);
+    byte_4C43B41 = 1;
   }
   param = 0;
-  SkillEntity__checkScript(this, (System_String_o *)StringLiteral_18412/*"cutInMessageMode"*/, &param, v2);
+  SkillEntity__checkScript(this, (System_String_o *)StringLiteral_18415/*"cutInMessageMode"*/, &param, v2);
   return param;
 }
 
@@ -1199,12 +1199,12 @@ System_String_array *SkillEntity__getSkillCutInPrefabInfo(SkillEntity_o *this, c
 {
   const MethodInfo *v2; // x3
 
-  if ( (byte_4C38543 & 1) == 0 )
+  if ( (byte_4C43B3C & 1) == 0 )
   {
-    sub_1C32C20(&StringLiteral_18414/*"cutInPrefabInfo"*/);
-    byte_4C38543 = 1;
+    sub_1C37058(&StringLiteral_18417/*"cutInPrefabInfo"*/);
+    byte_4C43B3C = 1;
   }
-  return SkillEntity__getScriptStrings(this, (System_String_o *)StringLiteral_18414/*"cutInPrefabInfo"*/, 0x2Cu, v2);
+  return SkillEntity__getScriptStrings(this, (System_String_o *)StringLiteral_18417/*"cutInPrefabInfo"*/, 0x2Cu, v2);
 }
 
 
@@ -1226,17 +1226,17 @@ UnityEngine_Vector3_array *SkillEntity__getSkillCutInPrefabOffsets(SkillEntity_o
   float v16; // s0
   float v17; // s0
 
-  if ( (byte_4C38544 & 1) == 0 )
+  if ( (byte_4C43B3D & 1) == 0 )
   {
-    sub_1C32C20(&UnityEngine_Vector3___TypeInfo);
-    sub_1C32C20(&StringLiteral_18415/*"cutInPrefabOffsets"*/);
-    byte_4C38544 = 1;
+    sub_1C37058(&UnityEngine_Vector3___TypeInfo);
+    sub_1C37058(&StringLiteral_18418/*"cutInPrefabOffsets"*/);
+    byte_4C43B3D = 1;
   }
-  ScriptStrings = SkillEntity__getScriptStrings(this, (System_String_o *)StringLiteral_18415/*"cutInPrefabOffsets"*/, 0x2Fu, v2);
+  ScriptStrings = SkillEntity__getScriptStrings(this, (System_String_o *)StringLiteral_18418/*"cutInPrefabOffsets"*/, 0x2Fu, v2);
   if ( !ScriptStrings )
     return 0;
   v5 = ScriptStrings;
-  v6 = (System_String_array *)sub_1C32CC8(UnityEngine_Vector3___TypeInfo, LODWORD(ScriptStrings->max_length));
+  v6 = (System_String_array *)sub_1C37100(UnityEngine_Vector3___TypeInfo, LODWORD(ScriptStrings->max_length));
   max_length = v5->max_length;
   v8 = v6;
   if ( max_length >= 1 )
@@ -1278,10 +1278,10 @@ UnityEngine_Vector3_array *SkillEntity__getSkillCutInPrefabOffsets(SkillEntity_o
         v13 = System_Single__Parse(v12->m_Items[0], 0);
       if ( !v8 )
 LABEL_21:
-        sub_1C32E7C(v6);
+        sub_1C372B4(v6);
       if ( (unsigned int)v9 >= LODWORD(v8->max_length) )
 LABEL_22:
-        sub_1C32E84(v6);
+        sub_1C372BC(v6);
       *(v10 - 2) = v14;
       *(v10 - 1) = v15;
       *v10 = v13;
@@ -1313,17 +1313,17 @@ UnityEngine_Vector3_array *SkillEntity__getSkillCutInPrefabSizes(SkillEntity_o *
   float v16; // s0
   float v17; // s0
 
-  if ( (byte_4C38545 & 1) == 0 )
+  if ( (byte_4C43B3E & 1) == 0 )
   {
-    sub_1C32C20(&UnityEngine_Vector3___TypeInfo);
-    sub_1C32C20(&StringLiteral_18416/*"cutInPrefabSizes"*/);
-    byte_4C38545 = 1;
+    sub_1C37058(&UnityEngine_Vector3___TypeInfo);
+    sub_1C37058(&StringLiteral_18419/*"cutInPrefabSizes"*/);
+    byte_4C43B3E = 1;
   }
-  ScriptStrings = SkillEntity__getScriptStrings(this, (System_String_o *)StringLiteral_18416/*"cutInPrefabSizes"*/, 0x2Fu, v2);
+  ScriptStrings = SkillEntity__getScriptStrings(this, (System_String_o *)StringLiteral_18419/*"cutInPrefabSizes"*/, 0x2Fu, v2);
   if ( !ScriptStrings )
     return 0;
   v5 = ScriptStrings;
-  v6 = (System_String_array *)sub_1C32CC8(UnityEngine_Vector3___TypeInfo, LODWORD(ScriptStrings->max_length));
+  v6 = (System_String_array *)sub_1C37100(UnityEngine_Vector3___TypeInfo, LODWORD(ScriptStrings->max_length));
   max_length = v5->max_length;
   v8 = v6;
   if ( max_length >= 1 )
@@ -1365,10 +1365,10 @@ UnityEngine_Vector3_array *SkillEntity__getSkillCutInPrefabSizes(SkillEntity_o *
         v13 = System_Single__Parse(v12->m_Items[0], 0);
       if ( !v8 )
 LABEL_21:
-        sub_1C32E7C(v6);
+        sub_1C372B4(v6);
       if ( (unsigned int)v9 >= LODWORD(v8->max_length) )
 LABEL_22:
-        sub_1C32E84(v6);
+        sub_1C372BC(v6);
       *(v10 - 2) = v14;
       *(v10 - 1) = v15;
       *v10 = v13;
@@ -1386,12 +1386,12 @@ System_String_array *SkillEntity__getSkillCutInVoices(SkillEntity_o *this, const
 {
   const MethodInfo *v2; // x3
 
-  if ( (byte_4C38542 & 1) == 0 )
+  if ( (byte_4C43B3B & 1) == 0 )
   {
-    sub_1C32C20(&StringLiteral_18418/*"cutInVoices"*/);
-    byte_4C38542 = 1;
+    sub_1C37058(&StringLiteral_18421/*"cutInVoices"*/);
+    byte_4C43B3B = 1;
   }
-  return SkillEntity__getScriptStrings(this, (System_String_o *)StringLiteral_18418/*"cutInVoices"*/, 0x2Fu, v2);
+  return SkillEntity__getScriptStrings(this, (System_String_o *)StringLiteral_18421/*"cutInVoices"*/, 0x2Fu, v2);
 }
 
 
@@ -1412,10 +1412,10 @@ void SkillEntity__getSkillMessageInfo(
 
   v9 = SkillEntity__getName(this, (const MethodInfo *)name);
   *name = v9;
-  sub_1C32BC4((CGThumbnailListItem_o *)name, (int32_t)v9, v10, v11);
+  sub_1C36FFC((CGThumbnailListItem_o *)name, (int32_t)v9, v10, v11);
   EffectExplanation = SkillEntity__getEffectExplanation(this, lv, v12);
   *detail = EffectExplanation;
-  sub_1C32BC4((CGThumbnailListItem_o *)detail, (int32_t)EffectExplanation, v14, v15);
+  sub_1C36FFC((CGThumbnailListItem_o *)detail, (int32_t)EffectExplanation, v14, v15);
 }
 
 
@@ -1439,13 +1439,13 @@ bool SkillEntity__isForcedSkillSpeedOne(SkillEntity_o *this, const MethodInfo *m
   bool v4; // w0
   int32_t param; // [xsp+Ch] [xbp-24h] BYREF
 
-  if ( (byte_4C38540 & 1) == 0 )
+  if ( (byte_4C43B39 & 1) == 0 )
   {
-    sub_1C32C20(&StringLiteral_6819/*"ForcedSkillSpeed"*/);
-    byte_4C38540 = 1;
+    sub_1C37058(&StringLiteral_6820/*"ForcedSkillSpeed"*/);
+    byte_4C43B39 = 1;
   }
   param = 0;
-  v4 = SkillEntity__checkScript(this, (System_String_o *)StringLiteral_6819/*"ForcedSkillSpeed"*/, &param, v2);
+  v4 = SkillEntity__checkScript(this, (System_String_o *)StringLiteral_6820/*"ForcedSkillSpeed"*/, &param, v2);
   return v4 && param == 1;
 }
 
@@ -1461,13 +1461,13 @@ bool SkillEntity__isSkillCutInCamField(SkillEntity_o *this, const MethodInfo *me
   const MethodInfo *v2; // x3
   int32_t param; // [xsp+Ch] [xbp-24h] BYREF
 
-  if ( (byte_4C38547 & 1) == 0 )
+  if ( (byte_4C43B40 & 1) == 0 )
   {
-    sub_1C32C20(&StringLiteral_18410/*"cutInCamPlayerAll"*/);
-    byte_4C38547 = 1;
+    sub_1C37058(&StringLiteral_18413/*"cutInCamPlayerAll"*/);
+    byte_4C43B40 = 1;
   }
   param = 0;
-  SkillEntity__checkScript(this, (System_String_o *)StringLiteral_18410/*"cutInCamPlayerAll"*/, &param, v2);
+  SkillEntity__checkScript(this, (System_String_o *)StringLiteral_18413/*"cutInCamPlayerAll"*/, &param, v2);
   return param == 2;
 }
 
@@ -1480,7 +1480,7 @@ void SkillEntity__set_SortedSkillAddEntityList(
   const MethodInfo *v3; // x3
 
   this->fields._SortedSkillAddEntityList_k__BackingField = value;
-  sub_1C32BC4(
+  sub_1C36FFC(
     (CGThumbnailListItem_o *)&this->fields._SortedSkillAddEntityList_k__BackingField,
     (int32_t)value,
     (int32_t)method,
@@ -1495,15 +1495,15 @@ void SkillEntity_CondBranchSkillInfoData___ctor(SkillEntity_CondBranchSkillInfoD
   struct System_String_StaticFields *static_fields; // x8
   struct System_String_o *Empty; // x1
 
-  if ( (byte_4C38565 & 1) == 0 )
+  if ( (byte_4C43B5E & 1) == 0 )
   {
-    sub_1C32C20(&string_TypeInfo);
-    byte_4C38565 = 1;
+    sub_1C37058(&string_TypeInfo);
+    byte_4C43B5E = 1;
   }
   static_fields = string_TypeInfo->static_fields;
   Empty = static_fields->Empty;
   this->fields.condType = static_fields->Empty;
-  sub_1C32BC4((CGThumbnailListItem_o *)&this->fields, (int32_t)Empty, v2, v3);
+  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields, (int32_t)Empty, v2, v3);
   System_Object___ctor((Il2CppObject *)this, 0);
 }
 
@@ -1514,15 +1514,15 @@ void SkillEntity___c___cctor(const MethodInfo *method)
   int32_t v2; // w2
   const MethodInfo *v3; // x3
 
-  if ( (byte_4C38566 & 1) == 0 )
+  if ( (byte_4C43B5F & 1) == 0 )
   {
-    sub_1C32C20(&SkillEntity___c_TypeInfo);
-    byte_4C38566 = 1;
+    sub_1C37058(&SkillEntity___c_TypeInfo);
+    byte_4C43B5F = 1;
   }
-  v1 = (Il2CppObject *)sub_1C32E6C(SkillEntity___c_TypeInfo);
+  v1 = (Il2CppObject *)sub_1C372A4(SkillEntity___c_TypeInfo);
   System_Object___ctor(v1, 0);
   SkillEntity___c_TypeInfo->static_fields->__9 = (struct SkillEntity___c_o *)v1;
-  sub_1C32BC4((CGThumbnailListItem_o *)SkillEntity___c_TypeInfo->static_fields, (int32_t)v1, v2, v3);
+  sub_1C36FFC((CGThumbnailListItem_o *)SkillEntity___c_TypeInfo->static_fields, (int32_t)v1, v2, v3);
 }
 
 
@@ -1538,6 +1538,6 @@ bool SkillEntity___c___GetAvailableSkillAddEntity_b__22_0(
         const MethodInfo *method)
 {
   if ( !x )
-    sub_1C32E7C(this);
+    sub_1C372B4(this);
   return SkillAddEntity__IsOpen(x, (const MethodInfo *)x);
 }

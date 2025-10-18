@@ -35,11 +35,11 @@ void EasingObject__Play(
         int32_t easingType,
         const MethodInfo *method)
 {
-  EasingObject__Play_49012140(this, 0.0, 1.0, sec, procAct, endAct, delay, easingType, method);
+  EasingObject__Play_49055252(this, 0.0, 1.0, sec, procAct, endAct, delay, easingType, method);
 }
 
 
-void EasingObject__Play_49012140(
+void EasingObject__Play_49055252(
         EasingObject_o *this,
         float from,
         float to,
@@ -68,11 +68,11 @@ void EasingObject__Play_49012140(
   this->fields.mStartTime = UnityEngine_Time__get_time(0);
   this->fields.mTime = v15;
   this->fields.mEndAct = endAct;
-  sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.mEndAct, (int32_t)endAct, v16, v17);
+  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.mEndAct, (int32_t)endAct, v16, v17);
   this->fields.mProcessAct = procAct;
   p_mProcessAct = &this->fields.mProcessAct;
   *((float *)p_mProcessAct - 6) = from;
-  sub_1C32BC4((CGThumbnailListItem_o *)p_mProcessAct, (int32_t)procAct, v19, v20);
+  sub_1C36FFC((CGThumbnailListItem_o *)p_mProcessAct, (int32_t)procAct, v19, v20);
   v21 = *p_mProcessAct;
   *((_DWORD *)p_mProcessAct + 4) = easingType;
   *((float *)p_mProcessAct - 3) = delay;
@@ -156,7 +156,7 @@ void EasingObject__Update(EasingObject_o *this, const MethodInfo *method)
         v10 = 1.0;
       else
         v10 = v7;
-      v11 = Easing__Func_49010964(this->fields.mFrom, this->fields.mTo, v10, this->fields.mEasingType, v5);
+      v11 = Easing__Func_49054076(this->fields.mFrom, this->fields.mTo, v10, this->fields.mEasingType, v5);
       mProcessAct = this->fields.mProcessAct;
       this->fields.mNow = v11;
       if ( mProcessAct )

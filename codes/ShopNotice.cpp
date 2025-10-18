@@ -16,17 +16,17 @@ void ShopNotice__CompareShopListNotice(ShopNotice_o *this, ShopListNotice_o *lis
   int64_t PeriodTimeLimit_k__BackingField; // x8
   int64_t ExchangeServatTimeLimit_k__BackingField; // x1
 
-  if ( (byte_4C33C6A & 1) == 0 )
+  if ( (byte_4C3F254 & 1) == 0 )
   {
-    sub_1C32C20(&System_Func_bool__bool__bool__bool__ShopListNotice_ShopLimitedType__TypeInfo);
-    sub_1C32C20(&Method_ShopListNotice_GetShopLimitedType__);
-    byte_4C33C6A = 1;
+    sub_1C37058(&System_Func_bool__bool__bool__bool__ShopListNotice_ShopLimitedType__TypeInfo);
+    sub_1C37058(&Method_ShopListNotice_GetShopLimitedType__);
+    byte_4C3F254 = 1;
   }
   if ( listNotice )
   {
     this->fields._IsShowNew_k__BackingField |= listNotice->fields._IsShowNew_k__BackingField;
     LimitedType_k__BackingField = listNotice->fields._LimitedType_k__BackingField;
-    v6 = (System_Func_T1__T2__T3__T4__TResult__o *)sub_1C32E6C(System_Func_bool__bool__bool__bool__ShopListNotice_ShopLimitedType__TypeInfo);
+    v6 = (System_Func_T1__T2__T3__T4__TResult__o *)sub_1C372A4(System_Func_bool__bool__bool__bool__ShopListNotice_ShopLimitedType__TypeInfo);
     System_Func_bool__bool__bool__bool__Int32Enum____ctor(
       v6,
       (Il2CppObject *)listNotice,
@@ -75,10 +75,10 @@ void ShopNotice__SetExchangeServantTimeLimit(
 {
   int64_t ExchangeServantTimeLimit_k__BackingField; // x8
 
-  if ( (byte_4C33C6D & 1) == 0 )
+  if ( (byte_4C3F257 & 1) == 0 )
   {
-    sub_1C32C20(&NetworkManager_TypeInfo);
-    byte_4C33C6D = 1;
+    sub_1C37058(&NetworkManager_TypeInfo);
+    byte_4C3F257 = 1;
   }
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
@@ -97,7 +97,7 @@ void ShopNotice__SetExchangeServantTimeLimit(
 void ShopNotice__SetFlag(ShopNotice_o *this, int32_t type, const MethodInfo *method)
 {
   if ( (unsigned int)(type - 1) <= 3 )
-    type = dword_C0DBB0[type - 1];
+    type = dword_C0FB30[type - 1];
   this->fields.limitedTypeFlag |= type;
 }
 
@@ -135,11 +135,11 @@ void ShopNotice__SetLimitedType(
   if ( type && this->fields._LimitedType_k__BackingField != 30 )
   {
     if ( (unsigned int)(type - 1) <= 3 )
-      type = dword_C0DBB0[type - 1];
+      type = dword_C0FB30[type - 1];
     v4 = this->fields.limitedTypeFlag | type;
     this->fields.limitedTypeFlag = v4;
     if ( !GetShopLimitedType )
-      sub_1C32E7C(this);
+      sub_1C372B4(this);
     this->fields._LimitedType_k__BackingField = ((__int64 (__fastcall *)(intptr_t, _QWORD, _QWORD, _QWORD, _QWORD, intptr_t))GetShopLimitedType->fields.invoke_impl)(
                                                   GetShopLimitedType->fields.method_code,
                                                   (v4 >> 1) & 1,
@@ -155,10 +155,10 @@ void ShopNotice__SetMonthlyTimeLimit(ShopNotice_o *this, int64_t timeLimit, cons
 {
   int64_t MonthlyTimeLimit_k__BackingField; // x8
 
-  if ( (byte_4C33C6C & 1) == 0 )
+  if ( (byte_4C3F256 & 1) == 0 )
   {
-    sub_1C32C20(&NetworkManager_TypeInfo);
-    byte_4C33C6C = 1;
+    sub_1C37058(&NetworkManager_TypeInfo);
+    byte_4C3F256 = 1;
   }
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
@@ -176,10 +176,10 @@ void ShopNotice__SetMostRecentTimeLimit(ShopNotice_o *this, int64_t timeLimit, c
 {
   int64_t MostRecentTimeLimit_k__BackingField; // x8
 
-  if ( (byte_4C33C6E & 1) == 0 )
+  if ( (byte_4C3F258 & 1) == 0 )
   {
-    sub_1C32C20(&NetworkManager_TypeInfo);
-    byte_4C33C6E = 1;
+    sub_1C37058(&NetworkManager_TypeInfo);
+    byte_4C3F258 = 1;
   }
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
@@ -197,10 +197,10 @@ void ShopNotice__SetPeriodTimeLimit(ShopNotice_o *this, int64_t timeLimit, const
 {
   int64_t PeriodTimeLimit_k__BackingField; // x8
 
-  if ( (byte_4C33C6B & 1) == 0 )
+  if ( (byte_4C3F255 & 1) == 0 )
   {
-    sub_1C32C20(&NetworkManager_TypeInfo);
-    byte_4C33C6B = 1;
+    sub_1C37058(&NetworkManager_TypeInfo);
+    byte_4C3F255 = 1;
   }
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);

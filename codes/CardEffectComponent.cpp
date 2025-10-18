@@ -1,9 +1,9 @@
 void CardEffectComponent___ctor(CardEffectComponent_o *this, const MethodInfo *method)
 {
-  if ( (byte_4C3A736 & 1) == 0 )
+  if ( (byte_4C45D43 & 1) == 0 )
   {
-    sub_1C32C20(&EffectComponent_TypeInfo);
-    byte_4C3A736 = 1;
+    sub_1C37058(&EffectComponent_TypeInfo);
+    byte_4C45D43 = 1;
   }
   if ( !EffectComponent_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(EffectComponent_TypeInfo);
@@ -47,13 +47,13 @@ void CardEffectComponent__SetCardEffectDepth(
         goto LABEL_7;
     }
 LABEL_14:
-    sub_1C32E84(this);
+    sub_1C372BC(this);
   }
 LABEL_7:
   underCardEffectArray = v7->fields.underCardEffectArray;
   if ( !underCardEffectArray )
 LABEL_15:
-    sub_1C32E7C(this);
+    sub_1C372B4(this);
   v11 = underCardEffectArray->max_length;
   if ( v11 >= 1 )
   {

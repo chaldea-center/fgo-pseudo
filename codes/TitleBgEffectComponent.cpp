@@ -14,10 +14,10 @@ void TitleBgEffectComponent__Release(TitleBgEffectComponent_o *this, const Metho
   UnityEngine_Object_o *targetCamera; // x20
   UnityEngine_Object_o *targetTexture; // x19
 
-  if ( (byte_4C35210 & 1) == 0 )
+  if ( (byte_4C407FB & 1) == 0 )
   {
-    sub_1C32C20(&UnityEngine_Object_TypeInfo);
-    byte_4C35210 = 1;
+    sub_1C37058(&UnityEngine_Object_TypeInfo);
+    byte_4C407FB = 1;
   }
   mesh = (UnityEngine_Object_o *)this->fields.mesh;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -34,7 +34,7 @@ void TitleBgEffectComponent__Release(TitleBgEffectComponent_o *this, const Metho
     material = (UnityEngine_Object_o *)UnityEngine_Renderer__get_material(v4, 0);
     if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-    UnityEngine_Object__DestroyImmediate_71223828(material, 0);
+    UnityEngine_Object__DestroyImmediate_71266940(material, 0);
   }
   particle = (UnityEngine_Object_o *)this->fields.particle;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -51,7 +51,7 @@ void TitleBgEffectComponent__Release(TitleBgEffectComponent_o *this, const Metho
     v7 = (UnityEngine_Object_o *)UnityEngine_Renderer__get_material(v4, 0);
     if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-    UnityEngine_Object__DestroyImmediate_71223828(v7, 0);
+    UnityEngine_Object__DestroyImmediate_71266940(v7, 0);
   }
   targetCamera = (UnityEngine_Object_o *)this->fields.targetCamera;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -68,11 +68,11 @@ void TitleBgEffectComponent__Release(TitleBgEffectComponent_o *this, const Metho
         targetTexture = (UnityEngine_Object_o *)UnityEngine_Camera__get_targetTexture((UnityEngine_Camera_o *)v4, 0);
         if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
           j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-        UnityEngine_Object__DestroyImmediate_71223828(targetTexture, 0);
+        UnityEngine_Object__DestroyImmediate_71266940(targetTexture, 0);
         return;
       }
     }
 LABEL_28:
-    sub_1C32E7C(v4);
+    sub_1C372B4(v4);
   }
 }

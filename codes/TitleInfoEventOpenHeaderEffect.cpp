@@ -1,9 +1,9 @@
 void TitleInfoEventOpenHeaderEffect___ctor(TitleInfoEventOpenHeaderEffect_o *this, const MethodInfo *method)
 {
-  if ( (byte_4C359C6 & 1) == 0 )
+  if ( (byte_4C40F2F & 1) == 0 )
   {
-    sub_1C32C20(&CommonEffectComponent_TypeInfo);
-    byte_4C359C6 = 1;
+    sub_1C37058(&CommonEffectComponent_TypeInfo);
+    byte_4C40F2F = 1;
   }
   if ( !CommonEffectComponent_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(CommonEffectComponent_TypeInfo);
@@ -49,22 +49,22 @@ void TitleInfoEventOpenHeaderEffect__setup(
   int32_t v16; // [xsp+Ch] [xbp-34h] BYREF
 
   v16 = eventId;
-  if ( (byte_4C359C5 & 1) == 0 )
+  if ( (byte_4C40F2E & 1) == 0 )
   {
-    sub_1C32C20(&StringLiteral_16534/*"_anim"*/);
-    sub_1C32C20(&StringLiteral_18843/*"ef_mapnamechange_"*/);
-    byte_4C359C5 = 1;
+    sub_1C37058(&StringLiteral_16536/*"_anim"*/);
+    sub_1C37058(&StringLiteral_18846/*"ef_mapnamechange_"*/);
+    byte_4C40F2E = 1;
   }
   v8 = System_Int32__ToString((int32_t)&v16, 0);
-  v9 = System_String__Concat_63556792(
-         (System_String_o *)StringLiteral_18843/*"ef_mapnamechange_"*/,
+  v9 = System_String__Concat_63599904(
+         (System_String_o *)StringLiteral_18846/*"ef_mapnamechange_"*/,
          v8,
-         (System_String_o *)StringLiteral_16534/*"_anim"*/,
+         (System_String_o *)StringLiteral_16536/*"_anim"*/,
          0);
   this->fields.baseName = v9;
-  sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.baseName, (int32_t)v9, v10, v11);
+  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.baseName, (int32_t)v9, v10, v11);
   this->fields.changeUiCallback = changeUiCallback;
-  sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.changeUiCallback, (int32_t)changeUiCallback, v12, v13);
+  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.changeUiCallback, (int32_t)changeUiCallback, v12, v13);
   this->fields.animEndCallback = endCallback;
-  sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.animEndCallback, (int32_t)endCallback, v14, v15);
+  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.animEndCallback, (int32_t)endCallback, v14, v15);
 }

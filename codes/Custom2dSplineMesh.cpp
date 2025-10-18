@@ -1,9 +1,9 @@
 void Custom2dSplineMesh___cctor(const MethodInfo *method)
 {
-  if ( (byte_4C37416 & 1) == 0 )
+  if ( (byte_4C42A06 & 1) == 0 )
   {
-    sub_1C32C20(&Custom2dSplineMesh_TypeInfo);
-    byte_4C37416 = 1;
+    sub_1C37058(&Custom2dSplineMesh_TypeInfo);
+    byte_4C42A06 = 1;
   }
   LODWORD(Custom2dSplineMesh_TypeInfo->static_fields->JUMP_THRESH_HOLD) = (struct Custom2dSplineMesh_StaticFields)953267991;
 }
@@ -15,22 +15,22 @@ void Custom2dSplineMesh___ctor(Custom2dSplineMesh_o *this, const MethodInfo *met
   int32_t v4; // w2
   const MethodInfo *v5; // x3
 
-  if ( (byte_4C37415 & 1) == 0 )
+  if ( (byte_4C42A05 & 1) == 0 )
   {
-    sub_1C32C20(&Method_System_Collections_Generic_List_Vector3___ctor__);
-    sub_1C32C20(&System_Collections_Generic_List_Vector3__TypeInfo);
-    byte_4C37415 = 1;
+    sub_1C37058(&Method_System_Collections_Generic_List_Vector3___ctor__);
+    sub_1C37058(&System_Collections_Generic_List_Vector3__TypeInfo);
+    byte_4C42A05 = 1;
   }
   this->fields.PathRate = 1.0;
   this->fields.UVrate = 0.5;
   *(_QWORD *)&this->fields.complexity = 0x3F7D70A441A00000LL;
   this->fields.DrawWidth = 3.0;
-  v3 = (System_Collections_Generic_List_Vector3__o *)sub_1C32E6C(System_Collections_Generic_List_Vector3__TypeInfo);
+  v3 = (System_Collections_Generic_List_Vector3__o *)sub_1C372A4(System_Collections_Generic_List_Vector3__TypeInfo);
   System_Collections_Generic_List_Vector3____ctor(
     v3,
-    (const MethodInfo_37F0CF0 *)Method_System_Collections_Generic_List_Vector3___ctor__);
+    (const MethodInfo_37FB558 *)Method_System_Collections_Generic_List_Vector3___ctor__);
   this->fields.splinePos = v3;
-  sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.splinePos, (int32_t)v3, v4, v5);
+  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.splinePos, (int32_t)v3, v4, v5);
   UnityEngine_MonoBehaviour___ctor((UnityEngine_MonoBehaviour_o *)this, 0);
 }
 
@@ -92,7 +92,7 @@ void Custom2dSplineMesh__AddCap(
   __int64 v53; // x10
   float *v54; // x8
   struct System_Collections_Generic_List_Vector2__o *uvs; // x21
-  unsigned __int64 UV_41456544; // kr00_8
+  unsigned __int64 UV_41556024; // kr00_8
   struct UnityEngine_Vector2_array *v57; // x8
   _QWORD *v58; // x9
   __int64 v59; // x10
@@ -441,12 +441,12 @@ void Custom2dSplineMesh__AddCap(
   x = normalizedDir.fields.x;
   v356 = pos.fields.x;
   item = pos.fields.z;
-  if ( (byte_4C37414 & 1) == 0 )
+  if ( (byte_4C42A04 & 1) == 0 )
   {
-    sub_1C32C20(&Method_System_Collections_Generic_List_int__Add__);
-    sub_1C32C20(&Method_System_Collections_Generic_List_Vector3__Add__);
-    sub_1C32C20(&Method_System_Collections_Generic_List_Vector2__Add__);
-    byte_4C37414 = 1;
+    sub_1C37058(&Method_System_Collections_Generic_List_int__Add__);
+    sub_1C37058(&Method_System_Collections_Generic_List_Vector3__Add__);
+    sub_1C37058(&Method_System_Collections_Generic_List_Vector2__Add__);
+    byte_4C42A04 = 1;
   }
   v12 = offset.fields.y;
   v13 = offset.fields.x;
@@ -511,7 +511,7 @@ LABEL_7:
         System_Collections_Generic_List_Vector3___AddWithResize(
           verts,
           v359,
-          *(const MethodInfo_37F1584 **)(*(_QWORD *)(v48[4] + 192LL) + 112LL));
+          *(const MethodInfo_37FBDEC **)(*(_QWORD *)(v48[4] + 192LL) + 112LL));
       }
       else
       {
@@ -538,7 +538,7 @@ LABEL_7:
         System_Collections_Generic_List_Vector3___AddWithResize(
           verts,
           v360,
-          *(const MethodInfo_37F1584 **)(*(_QWORD *)(v52[4] + 192LL) + 112LL));
+          *(const MethodInfo_37FBDEC **)(*(_QWORD *)(v52[4] + 192LL) + 112LL));
       }
       else
       {
@@ -554,13 +554,13 @@ LABEL_7:
         v361.fields.x = v18;
         v361.fields.y = v19;
         v361.fields.z = v21;
-        UV_41456544 = (unsigned __int64)Custom2dSplineMesh__GetUV_41456544(this, v361, (const MethodInfo *)isTail);
+        UV_41556024 = (unsigned __int64)Custom2dSplineMesh__GetUV_41556024(this, v361, (const MethodInfo *)isTail);
         if ( !uvs )
           goto LABEL_374;
       }
       else
       {
-        UV_41456544 = __PAIR64__(LODWORD(this->fields.capVmin), 0);
+        UV_41556024 = __PAIR64__(LODWORD(this->fields.capVmin), 0);
         if ( !uvs )
           goto LABEL_374;
       }
@@ -574,13 +574,13 @@ LABEL_7:
       {
         System_Collections_Generic_List_Vector2___AddWithResize(
           uvs,
-          (UnityEngine_Vector2_o)UV_41456544,
-          *(const MethodInfo_37EECAC **)(*(_QWORD *)(v58[4] + 192LL) + 112LL));
+          (UnityEngine_Vector2_o)UV_41556024,
+          *(const MethodInfo_37F9514 **)(*(_QWORD *)(v58[4] + 192LL) + 112LL));
       }
       else
       {
         uvs->fields._size = v59 + 1;
-        v57->m_Items[v59] = (UnityEngine_Vector2_o)UV_41456544;
+        v57->m_Items[v59] = (UnityEngine_Vector2_o)UV_41556024;
       }
       v60 = this->fields.uvs;
       if ( this->fields.StrictUVmode )
@@ -588,7 +588,7 @@ LABEL_7:
         v362.fields.x = v24;
         v362.fields.y = v22;
         v362.fields.z = v23;
-        v61 = (unsigned __int64)Custom2dSplineMesh__GetUV_41456544(this, v362, (const MethodInfo *)isTail);
+        v61 = (unsigned __int64)Custom2dSplineMesh__GetUV_41556024(this, v362, (const MethodInfo *)isTail);
       }
       else
       {
@@ -608,7 +608,7 @@ LABEL_7:
         System_Collections_Generic_List_Vector2___AddWithResize(
           v60,
           (UnityEngine_Vector2_o)v61,
-          *(const MethodInfo_37EECAC **)(*(_QWORD *)(v63[4] + 192LL) + 112LL));
+          *(const MethodInfo_37F9514 **)(*(_QWORD *)(v63[4] + 192LL) + 112LL));
       }
       else
       {
@@ -644,7 +644,7 @@ LABEL_64:
             System_Collections_Generic_List_Vector3___AddWithResize(
               verts,
               v363,
-              *(const MethodInfo_37F1584 **)(*(_QWORD *)(v75[4] + 192LL) + 112LL));
+              *(const MethodInfo_37FBDEC **)(*(_QWORD *)(v75[4] + 192LL) + 112LL));
           }
           else
           {
@@ -671,7 +671,7 @@ LABEL_64:
                 System_Collections_Generic_List_Vector3___AddWithResize(
                   verts,
                   v364,
-                  *(const MethodInfo_37F1584 **)(*(_QWORD *)(v79[4] + 192LL) + 112LL));
+                  *(const MethodInfo_37FBDEC **)(*(_QWORD *)(v79[4] + 192LL) + 112LL));
               }
               else
               {
@@ -688,7 +688,7 @@ LABEL_64:
                 v365.fields.x = v67;
                 v365.fields.y = v66;
                 v365.fields.z = v68;
-                v84 = (unsigned __int64)Custom2dSplineMesh__GetUV_41456544(this, v365, (const MethodInfo *)isTail);
+                v84 = (unsigned __int64)Custom2dSplineMesh__GetUV_41556024(this, v365, (const MethodInfo *)isTail);
                 if ( !v82 )
                   goto LABEL_374;
               }
@@ -709,7 +709,7 @@ LABEL_64:
                   System_Collections_Generic_List_Vector2___AddWithResize(
                     v82,
                     (UnityEngine_Vector2_o)v84,
-                    *(const MethodInfo_37EECAC **)(*(_QWORD *)(v86[4] + 192LL) + 112LL));
+                    *(const MethodInfo_37F9514 **)(*(_QWORD *)(v86[4] + 192LL) + 112LL));
                 }
                 else
                 {
@@ -722,7 +722,7 @@ LABEL_64:
                   v366.fields.x = v71;
                   v366.fields.y = v70;
                   v366.fields.z = v72;
-                  v90 = Custom2dSplineMesh__GetUV_41456544(this, v366, (const MethodInfo *)isTail);
+                  v90 = Custom2dSplineMesh__GetUV_41556024(this, v366, (const MethodInfo *)isTail);
                   capVmax = v90.fields.y;
                   v83 = v90.fields.x;
                 }
@@ -744,7 +744,7 @@ LABEL_64:
                       System_Collections_Generic_List_Vector2___AddWithResize(
                         v88,
                         *(UnityEngine_Vector2_o *)(&capVmax - 1),
-                        *(const MethodInfo_37EECAC **)(*(_QWORD *)(v92[4] + 192LL) + 112LL));
+                        *(const MethodInfo_37F9514 **)(*(_QWORD *)(v92[4] + 192LL) + 112LL));
                     }
                     else
                     {
@@ -809,7 +809,7 @@ LABEL_64:
                         System_Collections_Generic_List_Vector3___AddWithResize(
                           verts,
                           v367,
-                          *(const MethodInfo_37F1584 **)(*(_QWORD *)(v107[4] + 192LL) + 112LL));
+                          *(const MethodInfo_37FBDEC **)(*(_QWORD *)(v107[4] + 192LL) + 112LL));
                       }
                       else
                       {
@@ -836,7 +836,7 @@ LABEL_64:
                         System_Collections_Generic_List_Vector3___AddWithResize(
                           verts,
                           v368,
-                          *(const MethodInfo_37F1584 **)(*(_QWORD *)(v111[4] + 192LL) + 112LL));
+                          *(const MethodInfo_37FBDEC **)(*(_QWORD *)(v111[4] + 192LL) + 112LL));
                       }
                       else
                       {
@@ -852,7 +852,7 @@ LABEL_64:
                         v369.fields.x = v98;
                         v369.fields.y = v100;
                         v369.fields.z = v102;
-                        v115 = (unsigned __int64)Custom2dSplineMesh__GetUV_41456544(
+                        v115 = (unsigned __int64)Custom2dSplineMesh__GetUV_41556024(
                                                    this,
                                                    v369,
                                                    (const MethodInfo *)isTail);
@@ -876,7 +876,7 @@ LABEL_64:
                         System_Collections_Generic_List_Vector2___AddWithResize(
                           v114,
                           (UnityEngine_Vector2_o)v115,
-                          *(const MethodInfo_37EECAC **)(*(_QWORD *)(v117[4] + 192LL) + 112LL));
+                          *(const MethodInfo_37F9514 **)(*(_QWORD *)(v117[4] + 192LL) + 112LL));
                       }
                       else
                       {
@@ -896,7 +896,7 @@ LABEL_64:
                       v122 = v103;
                       v123 = v104;
 LABEL_342:
-                      v124 = Custom2dSplineMesh__GetUV_41456544(
+                      v124 = Custom2dSplineMesh__GetUV_41556024(
                                v120,
                                *(UnityEngine_Vector3_o *)&v121,
                                (const MethodInfo *)isTail);
@@ -914,7 +914,7 @@ LABEL_343:
                         System_Collections_Generic_List_Vector2___AddWithResize(
                           v119,
                           v124,
-                          *(const MethodInfo_37EECAC **)(*(_QWORD *)(v320[4] + 192LL) + 112LL));
+                          *(const MethodInfo_37F9514 **)(*(_QWORD *)(v320[4] + 192LL) + 112LL));
                       }
                       else
                       {
@@ -932,7 +932,7 @@ LABEL_343:
         }
       }
 LABEL_374:
-      sub_1C32E7C(verts);
+      sub_1C372B4(verts);
     }
     v68 = item + offset.fields.z;
     if ( v65 == 1 )
@@ -1014,7 +1014,7 @@ LABEL_63:
         System_Collections_Generic_List_Vector3___AddWithResize(
           verts,
           v374,
-          *(const MethodInfo_37F1584 **)(*(_QWORD *)(v158[4] + 192LL) + 112LL));
+          *(const MethodInfo_37FBDEC **)(*(_QWORD *)(v158[4] + 192LL) + 112LL));
       }
       else
       {
@@ -1028,7 +1028,7 @@ LABEL_63:
       v375.fields.x = v44;
       v375.fields.y = v156;
       v375.fields.z = v45;
-      v163 = Custom2dSplineMesh__GetUV_41456544(this, v375, (const MethodInfo *)isTail);
+      v163 = Custom2dSplineMesh__GetUV_41556024(this, v375, (const MethodInfo *)isTail);
       if ( !v161 )
         goto LABEL_374;
       v164 = v161->fields._items;
@@ -1042,7 +1042,7 @@ LABEL_63:
         System_Collections_Generic_List_Vector2___AddWithResize(
           v161,
           v163,
-          *(const MethodInfo_37EECAC **)(*(_QWORD *)(v165[4] + 192LL) + 112LL));
+          *(const MethodInfo_37F9514 **)(*(_QWORD *)(v165[4] + 192LL) + 112LL));
       }
       else
       {
@@ -1113,7 +1113,7 @@ LABEL_63:
             System_Collections_Generic_List_Vector3___AddWithResize(
               verts,
               v377,
-              *(const MethodInfo_37F1584 **)(*(_QWORD *)(v180[4] + 192LL) + 112LL));
+              *(const MethodInfo_37FBDEC **)(*(_QWORD *)(v180[4] + 192LL) + 112LL));
           }
           else
           {
@@ -1127,7 +1127,7 @@ LABEL_63:
           v378.fields.x = v178;
           v378.fields.y = v175;
           v378.fields.z = v177;
-          v184 = Custom2dSplineMesh__GetUV_41456544(this, v378, v174);
+          v184 = Custom2dSplineMesh__GetUV_41556024(this, v378, v174);
           if ( !v183 )
             goto LABEL_374;
           v185 = v183->fields._items;
@@ -1141,7 +1141,7 @@ LABEL_63:
             System_Collections_Generic_List_Vector2___AddWithResize(
               v183,
               v184,
-              *(const MethodInfo_37EECAC **)(*(_QWORD *)(v186[4] + 192LL) + 112LL));
+              *(const MethodInfo_37F9514 **)(*(_QWORD *)(v186[4] + 192LL) + 112LL));
           }
           else
           {
@@ -1169,7 +1169,7 @@ LABEL_63:
               System_Collections_Generic_List_int___AddWithResize(
                 (System_Collections_Generic_List_int__o *)verts,
                 vtxIdx,
-                *(const MethodInfo_377B798 **)(*(_QWORD *)(v190[4] + 192LL) + 112LL));
+                *(const MethodInfo_3786000 **)(*(_QWORD *)(v190[4] + 192LL) + 112LL));
               verts = (System_Collections_Generic_List_Vector3__o *)this->fields.trianges;
               if ( !verts )
                 goto LABEL_374;
@@ -1193,7 +1193,7 @@ LABEL_63:
               System_Collections_Generic_List_int___AddWithResize(
                 (System_Collections_Generic_List_int__o *)verts,
                 v197,
-                *(const MethodInfo_377B798 **)(*(_QWORD *)(v195[4] + 192LL) + 112LL));
+                *(const MethodInfo_3786000 **)(*(_QWORD *)(v195[4] + 192LL) + 112LL));
               verts = (System_Collections_Generic_List_Vector3__o *)this->fields.trianges;
               if ( !verts )
                 goto LABEL_374;
@@ -1216,7 +1216,7 @@ LABEL_63:
               System_Collections_Generic_List_int___AddWithResize(
                 (System_Collections_Generic_List_int__o *)verts,
                 v162,
-                *(const MethodInfo_377B798 **)(*(_QWORD *)(v200[4] + 192LL) + 112LL));
+                *(const MethodInfo_3786000 **)(*(_QWORD *)(v200[4] + 192LL) + 112LL));
             }
             else
             {
@@ -1266,7 +1266,7 @@ LABEL_128:
         System_Collections_Generic_List_Vector3___AddWithResize(
           verts,
           v370,
-          *(const MethodInfo_37F1584 **)(*(_QWORD *)(v129[4] + 192LL) + 112LL));
+          *(const MethodInfo_37FBDEC **)(*(_QWORD *)(v129[4] + 192LL) + 112LL));
       }
       else
       {
@@ -1293,7 +1293,7 @@ LABEL_128:
         System_Collections_Generic_List_Vector3___AddWithResize(
           verts,
           v371,
-          *(const MethodInfo_37F1584 **)(*(_QWORD *)(v133[4] + 192LL) + 112LL));
+          *(const MethodInfo_37FBDEC **)(*(_QWORD *)(v133[4] + 192LL) + 112LL));
       }
       else
       {
@@ -1307,7 +1307,7 @@ LABEL_128:
       v372.fields.x = v36;
       v372.fields.y = v35;
       v372.fields.z = v37;
-      v138 = Custom2dSplineMesh__GetUV_41456544(this, v372, (const MethodInfo *)isTail);
+      v138 = Custom2dSplineMesh__GetUV_41556024(this, v372, (const MethodInfo *)isTail);
       if ( !v136 )
         goto LABEL_374;
       v139 = v136->fields._items;
@@ -1321,7 +1321,7 @@ LABEL_128:
         System_Collections_Generic_List_Vector2___AddWithResize(
           v136,
           v138,
-          *(const MethodInfo_37EECAC **)(*(_QWORD *)(v140[4] + 192LL) + 112LL));
+          *(const MethodInfo_37F9514 **)(*(_QWORD *)(v140[4] + 192LL) + 112LL));
       }
       else
       {
@@ -1332,7 +1332,7 @@ LABEL_128:
       v373.fields.x = v40;
       v373.fields.y = v39;
       v373.fields.z = v125;
-      v143 = Custom2dSplineMesh__GetUV_41456544(this, v373, v137);
+      v143 = Custom2dSplineMesh__GetUV_41556024(this, v373, v137);
       if ( !v142 )
         goto LABEL_374;
       v144 = v142->fields._items;
@@ -1346,7 +1346,7 @@ LABEL_128:
         System_Collections_Generic_List_Vector2___AddWithResize(
           v142,
           v143,
-          *(const MethodInfo_37EECAC **)(*(_QWORD *)(v145[4] + 192LL) + 112LL));
+          *(const MethodInfo_37F9514 **)(*(_QWORD *)(v145[4] + 192LL) + 112LL));
       }
       else
       {
@@ -1392,7 +1392,7 @@ LABEL_128:
           System_Collections_Generic_List_int___AddWithResize(
             (System_Collections_Generic_List_int__o *)verts,
             v211,
-            *(const MethodInfo_377B798 **)(*(_QWORD *)(v213[4] + 192LL) + 112LL));
+            *(const MethodInfo_3786000 **)(*(_QWORD *)(v213[4] + 192LL) + 112LL));
           verts = (System_Collections_Generic_List_Vector3__o *)this->fields.trianges;
           if ( !verts )
             goto LABEL_374;
@@ -1415,7 +1415,7 @@ LABEL_128:
           System_Collections_Generic_List_int___AddWithResize(
             (System_Collections_Generic_List_int__o *)verts,
             v219,
-            *(const MethodInfo_377B798 **)(*(_QWORD *)(v217[4] + 192LL) + 112LL));
+            *(const MethodInfo_3786000 **)(*(_QWORD *)(v217[4] + 192LL) + 112LL));
           verts = (System_Collections_Generic_List_Vector3__o *)this->fields.trianges;
           if ( !verts )
             goto LABEL_374;
@@ -1471,7 +1471,7 @@ LABEL_128:
           System_Collections_Generic_List_int___AddWithResize(
             (System_Collections_Generic_List_int__o *)verts,
             v226,
-            *(const MethodInfo_377B798 **)(*(_QWORD *)(v228[4] + 192LL) + 112LL));
+            *(const MethodInfo_3786000 **)(*(_QWORD *)(v228[4] + 192LL) + 112LL));
           verts = (System_Collections_Generic_List_Vector3__o *)this->fields.trianges;
           if ( !verts )
             goto LABEL_374;
@@ -1494,7 +1494,7 @@ LABEL_128:
           System_Collections_Generic_List_int___AddWithResize(
             (System_Collections_Generic_List_int__o *)verts,
             v234,
-            *(const MethodInfo_377B798 **)(*(_QWORD *)(v232[4] + 192LL) + 112LL));
+            *(const MethodInfo_3786000 **)(*(_QWORD *)(v232[4] + 192LL) + 112LL));
           verts = (System_Collections_Generic_List_Vector3__o *)this->fields.trianges;
           if ( !verts )
             goto LABEL_374;
@@ -1519,7 +1519,7 @@ LABEL_128:
         System_Collections_Generic_List_int___AddWithResize(
           (System_Collections_Generic_List_int__o *)verts,
           v225,
-          *(const MethodInfo_377B798 **)(*(_QWORD *)(v222[4] + 192LL) + 112LL));
+          *(const MethodInfo_3786000 **)(*(_QWORD *)(v222[4] + 192LL) + 112LL));
       }
       else
       {
@@ -1543,7 +1543,7 @@ LABEL_128:
         System_Collections_Generic_List_Vector3___AddWithResize(
           verts,
           v380,
-          *(const MethodInfo_37F1584 **)(*(_QWORD *)(v237[4] + 192LL) + 112LL));
+          *(const MethodInfo_37FBDEC **)(*(_QWORD *)(v237[4] + 192LL) + 112LL));
       }
       else
       {
@@ -1557,7 +1557,7 @@ LABEL_128:
       v381.fields.x = v153;
       v381.fields.y = v150;
       v381.fields.z = v152;
-      v241 = Custom2dSplineMesh__GetUV_41456544(this, v381, (const MethodInfo *)v225);
+      v241 = Custom2dSplineMesh__GetUV_41556024(this, v381, (const MethodInfo *)v225);
       if ( !v240 )
         goto LABEL_374;
       v242 = v240->fields._items;
@@ -1571,7 +1571,7 @@ LABEL_128:
         System_Collections_Generic_List_Vector2___AddWithResize(
           v240,
           v241,
-          *(const MethodInfo_37EECAC **)(*(_QWORD *)(v243[4] + 192LL) + 112LL));
+          *(const MethodInfo_37F9514 **)(*(_QWORD *)(v243[4] + 192LL) + 112LL));
       }
       else
       {
@@ -1673,7 +1673,7 @@ LABEL_127:
       System_Collections_Generic_List_Vector3___AddWithResize(
         verts,
         v382,
-        *(const MethodInfo_37F1584 **)(*(_QWORD *)(v249[4] + 192LL) + 112LL));
+        *(const MethodInfo_37FBDEC **)(*(_QWORD *)(v249[4] + 192LL) + 112LL));
     }
     else
     {
@@ -1700,7 +1700,7 @@ LABEL_127:
       System_Collections_Generic_List_Vector3___AddWithResize(
         verts,
         v383,
-        *(const MethodInfo_37F1584 **)(*(_QWORD *)(v253[4] + 192LL) + 112LL));
+        *(const MethodInfo_37FBDEC **)(*(_QWORD *)(v253[4] + 192LL) + 112LL));
     }
     else
     {
@@ -1714,7 +1714,7 @@ LABEL_127:
     v384.fields.x = v33;
     v384.fields.y = v28;
     v384.fields.z = v31;
-    v258 = Custom2dSplineMesh__GetUV_41456544(this, v384, v207);
+    v258 = Custom2dSplineMesh__GetUV_41556024(this, v384, v207);
     if ( !v256 )
       goto LABEL_374;
     v259 = v256->fields._items;
@@ -1728,7 +1728,7 @@ LABEL_127:
       System_Collections_Generic_List_Vector2___AddWithResize(
         v256,
         v258,
-        *(const MethodInfo_37EECAC **)(*(_QWORD *)(v260[4] + 192LL) + 112LL));
+        *(const MethodInfo_37F9514 **)(*(_QWORD *)(v260[4] + 192LL) + 112LL));
     }
     else
     {
@@ -1739,7 +1739,7 @@ LABEL_127:
     v385.fields.x = v30;
     v385.fields.y = v208;
     v385.fields.z = v210;
-    v263 = Custom2dSplineMesh__GetUV_41456544(this, v385, v257);
+    v263 = Custom2dSplineMesh__GetUV_41556024(this, v385, v257);
     if ( !v262 )
       goto LABEL_374;
     v264 = v262->fields._items;
@@ -1754,7 +1754,7 @@ LABEL_127:
       System_Collections_Generic_List_Vector2___AddWithResize(
         v262,
         v263,
-        *(const MethodInfo_37EECAC **)(*(_QWORD *)(v265[4] + 192LL) + 112LL));
+        *(const MethodInfo_37F9514 **)(*(_QWORD *)(v265[4] + 192LL) + 112LL));
     }
     else
     {
@@ -1815,7 +1815,7 @@ LABEL_294:
     System_Collections_Generic_List_Vector3___AddWithResize(
       verts,
       v386,
-      *(const MethodInfo_37F1584 **)(*(_QWORD *)(v277[4] + 192LL) + 112LL));
+      *(const MethodInfo_37FBDEC **)(*(_QWORD *)(v277[4] + 192LL) + 112LL));
   }
   else
   {
@@ -1842,7 +1842,7 @@ LABEL_294:
     System_Collections_Generic_List_Vector3___AddWithResize(
       verts,
       v387,
-      *(const MethodInfo_37F1584 **)(*(_QWORD *)(v281[4] + 192LL) + 112LL));
+      *(const MethodInfo_37FBDEC **)(*(_QWORD *)(v281[4] + 192LL) + 112LL));
   }
   else
   {
@@ -1856,7 +1856,7 @@ LABEL_294:
   v388.fields.x = v269;
   v388.fields.y = v268;
   v388.fields.z = v270;
-  v286 = Custom2dSplineMesh__GetUV_41456544(this, v388, (const MethodInfo *)isTail);
+  v286 = Custom2dSplineMesh__GetUV_41556024(this, v388, (const MethodInfo *)isTail);
   if ( !v284 )
     goto LABEL_374;
   v287 = v284->fields._items;
@@ -1870,7 +1870,7 @@ LABEL_294:
     System_Collections_Generic_List_Vector2___AddWithResize(
       v284,
       v286,
-      *(const MethodInfo_37EECAC **)(*(_QWORD *)(v288[4] + 192LL) + 112LL));
+      *(const MethodInfo_37F9514 **)(*(_QWORD *)(v288[4] + 192LL) + 112LL));
   }
   else
   {
@@ -1881,7 +1881,7 @@ LABEL_294:
   v389.fields.x = v273;
   v389.fields.y = v272;
   v389.fields.z = v274;
-  v292 = Custom2dSplineMesh__GetUV_41456544(this, v389, v285);
+  v292 = Custom2dSplineMesh__GetUV_41556024(this, v389, v285);
   if ( !v290 )
     goto LABEL_374;
   v293 = v290->fields._items;
@@ -1895,7 +1895,7 @@ LABEL_294:
     System_Collections_Generic_List_Vector2___AddWithResize(
       v290,
       v292,
-      *(const MethodInfo_37EECAC **)(*(_QWORD *)(v294[4] + 192LL) + 112LL));
+      *(const MethodInfo_37F9514 **)(*(_QWORD *)(v294[4] + 192LL) + 112LL));
   }
   else
   {
@@ -1964,7 +1964,7 @@ LABEL_294:
       System_Collections_Generic_List_Vector3___AddWithResize(
         verts,
         v392,
-        *(const MethodInfo_37F1584 **)(*(_QWORD *)(v307[4] + 192LL) + 112LL));
+        *(const MethodInfo_37FBDEC **)(*(_QWORD *)(v307[4] + 192LL) + 112LL));
     }
     else
     {
@@ -1991,7 +1991,7 @@ LABEL_294:
       System_Collections_Generic_List_Vector3___AddWithResize(
         verts,
         v393,
-        *(const MethodInfo_37F1584 **)(*(_QWORD *)(v311[4] + 192LL) + 112LL));
+        *(const MethodInfo_37FBDEC **)(*(_QWORD *)(v311[4] + 192LL) + 112LL));
     }
     else
     {
@@ -2005,7 +2005,7 @@ LABEL_294:
     v394.fields.x = v301;
     v394.fields.y = v297;
     v394.fields.z = v300;
-    v315 = Custom2dSplineMesh__GetUV_41456544(this, v394, v302);
+    v315 = Custom2dSplineMesh__GetUV_41556024(this, v394, v302);
     if ( !v314 )
       goto LABEL_374;
     v316 = v314->fields._items;
@@ -2019,7 +2019,7 @@ LABEL_294:
       System_Collections_Generic_List_Vector2___AddWithResize(
         v314,
         v315,
-        *(const MethodInfo_37EECAC **)(*(_QWORD *)(v317[4] + 192LL) + 112LL));
+        *(const MethodInfo_37F9514 **)(*(_QWORD *)(v317[4] + 192LL) + 112LL));
     }
     else
     {
@@ -2050,7 +2050,7 @@ LABEL_347:
     System_Collections_Generic_List_int___AddWithResize(
       (System_Collections_Generic_List_int__o *)verts,
       v322,
-      *(const MethodInfo_377B798 **)(*(_QWORD *)(v324[4] + 192LL) + 112LL));
+      *(const MethodInfo_3786000 **)(*(_QWORD *)(v324[4] + 192LL) + 112LL));
     verts = (System_Collections_Generic_List_Vector3__o *)this->fields.trianges;
     if ( !verts )
       goto LABEL_374;
@@ -2073,7 +2073,7 @@ LABEL_347:
     System_Collections_Generic_List_int___AddWithResize(
       (System_Collections_Generic_List_int__o *)verts,
       v330,
-      *(const MethodInfo_377B798 **)(*(_QWORD *)(v328[4] + 192LL) + 112LL));
+      *(const MethodInfo_3786000 **)(*(_QWORD *)(v328[4] + 192LL) + 112LL));
     verts = (System_Collections_Generic_List_Vector3__o *)this->fields.trianges;
     if ( !verts )
       goto LABEL_374;
@@ -2096,7 +2096,7 @@ LABEL_347:
     System_Collections_Generic_List_int___AddWithResize(
       (System_Collections_Generic_List_int__o *)verts,
       v335,
-      *(const MethodInfo_377B798 **)(*(_QWORD *)(v333[4] + 192LL) + 112LL));
+      *(const MethodInfo_3786000 **)(*(_QWORD *)(v333[4] + 192LL) + 112LL));
     verts = (System_Collections_Generic_List_Vector3__o *)this->fields.trianges;
     if ( !verts )
       goto LABEL_374;
@@ -2119,7 +2119,7 @@ LABEL_347:
     System_Collections_Generic_List_int___AddWithResize(
       (System_Collections_Generic_List_int__o *)verts,
       v340,
-      *(const MethodInfo_377B798 **)(*(_QWORD *)(v338[4] + 192LL) + 112LL));
+      *(const MethodInfo_3786000 **)(*(_QWORD *)(v338[4] + 192LL) + 112LL));
     verts = (System_Collections_Generic_List_Vector3__o *)this->fields.trianges;
     if ( !verts )
       goto LABEL_374;
@@ -2142,7 +2142,7 @@ LABEL_347:
     System_Collections_Generic_List_int___AddWithResize(
       (System_Collections_Generic_List_int__o *)verts,
       v345,
-      *(const MethodInfo_377B798 **)(*(_QWORD *)(v343[4] + 192LL) + 112LL));
+      *(const MethodInfo_3786000 **)(*(_QWORD *)(v343[4] + 192LL) + 112LL));
     verts = (System_Collections_Generic_List_Vector3__o *)this->fields.trianges;
     if ( !verts )
       goto LABEL_374;
@@ -2165,7 +2165,7 @@ LABEL_347:
     System_Collections_Generic_List_int___AddWithResize(
       (System_Collections_Generic_List_int__o *)verts,
       v350,
-      *(const MethodInfo_377B798 **)(*(_QWORD *)(v348[4] + 192LL) + 112LL));
+      *(const MethodInfo_3786000 **)(*(_QWORD *)(v348[4] + 192LL) + 112LL));
   }
   else
   {
@@ -2314,52 +2314,52 @@ int32_t Custom2dSplineMesh__AddCurve(Custom2dSplineMesh_o *this, int32_t index, 
   float v136; // [xsp+4Ch] [xbp-C4h]
   int v137; // [xsp+50h] [xbp-C0h]
   int32_t indexa[2]; // [xsp+68h] [xbp-A8h]
-  UnityEngine_Vector3_o Point_41439912; // 0:s0.4,4:s1.4,8:s2.4
-  UnityEngine_Vector3_o FirstDerivative_41440176; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o Point_41539392; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o FirstDerivative_41539656; // 0:s0.4,4:s1.4,8:s2.4
   UnityEngine_Vector3_o v141; // 0:s0.4,4:s1.4,8:s2.4
   UnityEngine_Vector3_o position; // 0:s0.4,4:s1.4,8:s2.4
 
-  if ( (byte_4C3740C & 1) == 0 )
+  if ( (byte_4C429FC & 1) == 0 )
   {
-    sub_1C32C20(&Method_System_Collections_Generic_List_float__Add__);
-    sub_1C32C20(&Method_System_Collections_Generic_List_Vector3__Add__);
-    sub_1C32C20(&Method_System_Collections_Generic_List_BezierControlPointMode__Add__);
-    sub_1C32C20(&Method_System_Collections_Generic_List_Vector3__InsertRange__);
-    sub_1C32C20(&Method_System_Collections_Generic_List_BezierControlPointMode__Insert__);
-    sub_1C32C20(&Method_System_Collections_Generic_List_float__Insert__);
-    sub_1C32C20(&Method_System_Collections_Generic_List_BezierControlPointMode__ToArray__);
-    sub_1C32C20(&Method_System_Collections_Generic_List_float__ToArray__);
-    sub_1C32C20(&Method_System_Collections_Generic_List_Vector3__ToArray__);
-    sub_1C32C20(&Method_System_Collections_Generic_List_BezierControlPointMode___ctor__);
-    sub_1C32C20(&Method_System_Collections_Generic_List_float___ctor___78020840);
-    sub_1C32C20(&Method_System_Collections_Generic_List_Vector3___ctor___78027512);
-    sub_1C32C20(&System_Collections_Generic_List_float__TypeInfo);
-    sub_1C32C20(&System_Collections_Generic_List_BezierControlPointMode__TypeInfo);
-    sub_1C32C20(&System_Collections_Generic_List_Vector3__TypeInfo);
-    sub_1C32C20(&UnityEngine_Vector3___TypeInfo);
-    byte_4C3740C = 1;
+    sub_1C37058(&Method_System_Collections_Generic_List_float__Add__);
+    sub_1C37058(&Method_System_Collections_Generic_List_Vector3__Add__);
+    sub_1C37058(&Method_System_Collections_Generic_List_BezierControlPointMode__Add__);
+    sub_1C37058(&Method_System_Collections_Generic_List_Vector3__InsertRange__);
+    sub_1C37058(&Method_System_Collections_Generic_List_BezierControlPointMode__Insert__);
+    sub_1C37058(&Method_System_Collections_Generic_List_float__Insert__);
+    sub_1C37058(&Method_System_Collections_Generic_List_BezierControlPointMode__ToArray__);
+    sub_1C37058(&Method_System_Collections_Generic_List_float__ToArray__);
+    sub_1C37058(&Method_System_Collections_Generic_List_Vector3__ToArray__);
+    sub_1C37058(&Method_System_Collections_Generic_List_BezierControlPointMode___ctor__);
+    sub_1C37058(&Method_System_Collections_Generic_List_float___ctor___78066576);
+    sub_1C37058(&Method_System_Collections_Generic_List_Vector3___ctor___78073248);
+    sub_1C37058(&System_Collections_Generic_List_float__TypeInfo);
+    sub_1C37058(&System_Collections_Generic_List_BezierControlPointMode__TypeInfo);
+    sub_1C37058(&System_Collections_Generic_List_Vector3__TypeInfo);
+    sub_1C37058(&UnityEngine_Vector3___TypeInfo);
+    byte_4C429FC = 1;
   }
   p_points = &this->fields.points;
   points = (System_Collections_Generic_IEnumerable_T__o *)this->fields.points;
-  v7 = (System_Collections_Generic_List_Vector3__o *)sub_1C32E6C(System_Collections_Generic_List_Vector3__TypeInfo);
-  System_Collections_Generic_List_Vector3____ctor_58658328(
+  v7 = (System_Collections_Generic_List_Vector3__o *)sub_1C372A4(System_Collections_Generic_List_Vector3__TypeInfo);
+  System_Collections_Generic_List_Vector3____ctor_58701440(
     v7,
     points,
-    (const MethodInfo_37F0E18 *)Method_System_Collections_Generic_List_Vector3___ctor___78027512);
+    (const MethodInfo_37FB680 *)Method_System_Collections_Generic_List_Vector3___ctor___78073248);
   p_modes = &this->fields.modes;
   modes = (System_Collections_Generic_IEnumerable_T__o *)this->fields.modes;
-  v10 = (System_Collections_Generic_List_T__o *)sub_1C32E6C(System_Collections_Generic_List_BezierControlPointMode__TypeInfo);
-  System_Collections_Generic_List_Int32Enum____ctor_58185880(
+  v10 = (System_Collections_Generic_List_T__o *)sub_1C372A4(System_Collections_Generic_List_BezierControlPointMode__TypeInfo);
+  System_Collections_Generic_List_Int32Enum____ctor_58228992(
     v10,
     modes,
-    (const MethodInfo_377D898 *)Method_System_Collections_Generic_List_BezierControlPointMode___ctor__);
+    (const MethodInfo_3788100 *)Method_System_Collections_Generic_List_BezierControlPointMode___ctor__);
   p_curveWeight = (CGThumbnailListItem_o *)&this->fields.curveWeight;
   curveWeight = (System_Collections_Generic_IEnumerable_T__o *)this->fields.curveWeight;
-  v13 = (System_Collections_Generic_List_float__o *)sub_1C32E6C(System_Collections_Generic_List_float__TypeInfo);
-  System_Collections_Generic_List_float____ctor_58448900(
+  v13 = (System_Collections_Generic_List_float__o *)sub_1C372A4(System_Collections_Generic_List_float__TypeInfo);
+  System_Collections_Generic_List_float____ctor_58492012(
     v13,
     curveWeight,
-    (const MethodInfo_37BDC04 *)Method_System_Collections_Generic_List_float___ctor___78020840);
+    (const MethodInfo_37C846C *)Method_System_Collections_Generic_List_float___ctor___78066576);
   if ( (index & 0x80000000) == 0 )
   {
     if ( !*p_modes )
@@ -2368,7 +2368,7 @@ int32_t Custom2dSplineMesh__AddCurve(Custom2dSplineMesh_o *this, int32_t index, 
     v16 = (index + 1) / 3;
     if ( v15 / 3 < LODWORD((*p_modes)->max_length) - 1 )
     {
-      *(_QWORD *)&v14.fields.x = sub_1C32CC8(UnityEngine_Vector3___TypeInfo, 3);
+      *(_QWORD *)&v14.fields.x = sub_1C37100(UnityEngine_Vector3___TypeInfo, 3);
       v18 = *p_points;
       if ( !*p_points )
         goto LABEL_79;
@@ -2388,7 +2388,7 @@ int32_t Custom2dSplineMesh__AddCurve(Custom2dSplineMesh_o *this, int32_t index, 
             {
               v24 = *(_QWORD *)&v14.fields.x;
               *(_QWORD *)indexa = v22;
-              Point_41439912 = Bezier__GetPoint_41439912(
+              Point_41539392 = Bezier__GetPoint_41539392(
                                  v18->m_Items[v20],
                                  v18->m_Items[v21],
                                  v18->m_Items[v22],
@@ -2399,7 +2399,7 @@ int32_t Custom2dSplineMesh__AddCurve(Custom2dSplineMesh_o *this, int32_t index, 
                 goto LABEL_79;
               if ( *(_DWORD *)(v24 + 24) > 1u )
               {
-                *(UnityEngine_Vector3_o *)(v24 + 44) = Point_41439912;
+                *(UnityEngine_Vector3_o *)(v24 + 44) = Point_41539392;
                 *(_QWORD *)&v14.fields.x = UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0);
                 v26 = this->fields.points;
                 if ( !v26 )
@@ -2408,7 +2408,7 @@ int32_t Custom2dSplineMesh__AddCurve(Custom2dSplineMesh_o *this, int32_t index, 
                 if ( (unsigned int)v20 < v27 && (unsigned int)v21 < v27 && indexa[0] < v27 && v23 < v27 )
                 {
                   v28 = *(UnityEngine_Transform_o **)&v14.fields.x;
-                  FirstDerivative_41440176 = Bezier__GetFirstDerivative_41440176(
+                  FirstDerivative_41539656 = Bezier__GetFirstDerivative_41539656(
                                                v26->m_Items[v20],
                                                v26->m_Items[v21],
                                                v26->m_Items[*(_QWORD *)indexa],
@@ -2417,7 +2417,7 @@ int32_t Custom2dSplineMesh__AddCurve(Custom2dSplineMesh_o *this, int32_t index, 
                                                v25);
                   if ( !v28 )
                     goto LABEL_79;
-                  v141 = UnityEngine_Transform__TransformPoint(v28, FirstDerivative_41440176, 0);
+                  v141 = UnityEngine_Transform__TransformPoint(v28, FirstDerivative_41539656, 0);
                   x = v141.fields.x;
                   y = v141.fields.y;
                   z = v141.fields.z;
@@ -2428,10 +2428,10 @@ int32_t Custom2dSplineMesh__AddCurve(Custom2dSplineMesh_o *this, int32_t index, 
                   v32 = position.fields.x;
                   v33 = position.fields.y;
                   v34 = position.fields.z;
-                  if ( !byte_4C313D4 )
+                  if ( !byte_4C3C924 )
                   {
-                    sub_1C32C20(&System_Math_TypeInfo);
-                    byte_4C313D4 = 1;
+                    sub_1C37058(&System_Math_TypeInfo);
+                    byte_4C3C924 = 1;
                   }
                   v35 = x - v32;
                   v36 = y - v33;
@@ -2442,10 +2442,10 @@ int32_t Custom2dSplineMesh__AddCurve(Custom2dSplineMesh_o *this, int32_t index, 
                   v38 = sqrtf((float)(v37 * v37) + (float)((float)(v35 * v35) + (float)(v36 * v36)));
                   if ( v38 <= 0.00001 )
                   {
-                    if ( !byte_4C313D1 )
+                    if ( !byte_4C3C921 )
                     {
-                      *(_QWORD *)&v14.fields.x = sub_1C32C20(&UnityEngine_Vector3_TypeInfo);
-                      byte_4C313D1 = 1;
+                      *(_QWORD *)&v14.fields.x = sub_1C37058(&UnityEngine_Vector3_TypeInfo);
+                      byte_4C3C921 = 1;
                     }
                     static_fields = UnityEngine_Vector3_TypeInfo->static_fields;
                     v39 = static_fields->zeroVector.fields.x;
@@ -2472,10 +2472,10 @@ int32_t Custom2dSplineMesh__AddCurve(Custom2dSplineMesh_o *this, int32_t index, 
                     v99 = v95[8];
                     v100 = v95[10];
                     v136 = v95[9];
-                    if ( !byte_4C313CF )
+                    if ( !byte_4C3C91F )
                     {
-                      sub_1C32C20(&System_Math_TypeInfo);
-                      byte_4C313CF = 1;
+                      sub_1C37058(&System_Math_TypeInfo);
+                      byte_4C3C91F = 1;
                     }
                     *(_QWORD *)&v14.fields.x = System_Math_TypeInfo;
                     if ( !System_Math_TypeInfo->_2.cctor_finished )
@@ -2502,10 +2502,10 @@ int32_t Custom2dSplineMesh__AddCurve(Custom2dSplineMesh_o *this, int32_t index, 
                         v109 = v107[8];
                         v108 = v107[9];
                         v110 = v107[10];
-                        if ( !byte_4C313CF )
+                        if ( !byte_4C3C91F )
                         {
-                          sub_1C32C20(&System_Math_TypeInfo);
-                          byte_4C313CF = 1;
+                          sub_1C37058(&System_Math_TypeInfo);
+                          byte_4C3C91F = 1;
                         }
                         *(_QWORD *)&v14.fields.x = System_Math_TypeInfo;
                         if ( !System_Math_TypeInfo->_2.cctor_finished )
@@ -2543,27 +2543,27 @@ int32_t Custom2dSplineMesh__AddCurve(Custom2dSplineMesh_o *this, int32_t index, 
                                 v7,
                                 indexa[0],
                                 (System_Collections_Generic_IEnumerable_T__o *)v24,
-                                (const MethodInfo_37F2600 *)Method_System_Collections_Generic_List_Vector3__InsertRange__);
+                                (const MethodInfo_37FCE68 *)Method_System_Collections_Generic_List_Vector3__InsertRange__);
                               if ( v10 )
                               {
                                 System_Collections_Generic_List_Int32Enum___Insert(
                                   v10,
                                   v137 + 1,
                                   0,
-                                  (const MethodInfo_377ED48 *)Method_System_Collections_Generic_List_BezierControlPointMode__Insert__);
+                                  (const MethodInfo_37895B0 *)Method_System_Collections_Generic_List_BezierControlPointMode__Insert__);
                                 if ( v13 )
                                 {
                                   System_Collections_Generic_List_float___Insert(
                                     v13,
                                     v137 + 1,
                                     1.0,
-                                    (const MethodInfo_37BF0C0 *)Method_System_Collections_Generic_List_float__Insert__);
+                                    (const MethodInfo_37C9928 *)Method_System_Collections_Generic_List_float__Insert__);
                                   goto LABEL_77;
                                 }
                               }
                             }
 LABEL_79:
-                            sub_1C32E7C(*(_QWORD *)&v14.fields.x);
+                            sub_1C372B4(*(_QWORD *)&v14.fields.x);
                           }
                         }
                       }
@@ -2576,7 +2576,7 @@ LABEL_79:
         }
       }
 LABEL_80:
-      sub_1C32E84(*(_QWORD *)&v14.fields.x);
+      sub_1C372BC(*(_QWORD *)&v14.fields.x);
     }
   }
   v42 = *p_points;
@@ -2615,7 +2615,7 @@ LABEL_80:
     System_Collections_Generic_List_Vector3___AddWithResize(
       v7,
       *(UnityEngine_Vector3_o *)&v61,
-      *(const MethodInfo_37F1584 **)(*(_QWORD *)(v58[4] + 192LL) + 112LL));
+      *(const MethodInfo_37FBDEC **)(*(_QWORD *)(v58[4] + 192LL) + 112LL));
   }
   else
   {
@@ -2649,7 +2649,7 @@ LABEL_80:
     System_Collections_Generic_List_Vector3___AddWithResize(
       v7,
       *(UnityEngine_Vector3_o *)&v74,
-      *(const MethodInfo_37F1584 **)(*(_QWORD *)(v71[4] + 192LL) + 112LL));
+      *(const MethodInfo_37FBDEC **)(*(_QWORD *)(v71[4] + 192LL) + 112LL));
   }
   else
   {
@@ -2673,7 +2673,7 @@ LABEL_80:
     System_Collections_Generic_List_Vector3___AddWithResize(
       v7,
       *(UnityEngine_Vector3_o *)&v81,
-      *(const MethodInfo_37F1584 **)(*(_QWORD *)(v79[4] + 192LL) + 112LL));
+      *(const MethodInfo_37FBDEC **)(*(_QWORD *)(v79[4] + 192LL) + 112LL));
   }
   else
   {
@@ -2696,7 +2696,7 @@ LABEL_80:
     System_Collections_Generic_List_Int32Enum___AddWithResize(
       v10,
       0,
-      *(const MethodInfo_377DFC4 **)(*(_QWORD *)(v86[4] + 192LL) + 112LL));
+      *(const MethodInfo_378882C **)(*(_QWORD *)(v86[4] + 192LL) + 112LL));
   }
   else
   {
@@ -2716,7 +2716,7 @@ LABEL_80:
     System_Collections_Generic_List_float___AddWithResize(
       v13,
       1.0,
-      *(const MethodInfo_37BE338 **)(*(_QWORD *)(v89[4] + 192LL) + 112LL));
+      *(const MethodInfo_37C8BA0 **)(*(_QWORD *)(v89[4] + 192LL) + 112LL));
   }
   else
   {
@@ -2727,19 +2727,19 @@ LABEL_80:
 LABEL_77:
   v119 = System_Collections_Generic_List_Vector3___ToArray(
            v7,
-           (const MethodInfo_37F3154 *)Method_System_Collections_Generic_List_Vector3__ToArray__);
+           (const MethodInfo_37FD9BC *)Method_System_Collections_Generic_List_Vector3__ToArray__);
   *p_points = v119;
-  sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.points, (int32_t)v119, v120, v121);
+  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.points, (int32_t)v119, v120, v121);
   v122 = System_Collections_Generic_List_Int32Enum___ToArray(
            v10,
-           (const MethodInfo_377FA7C *)Method_System_Collections_Generic_List_BezierControlPointMode__ToArray__);
+           (const MethodInfo_378A2E4 *)Method_System_Collections_Generic_List_BezierControlPointMode__ToArray__);
   *p_modes = (struct BezierControlPointMode_array *)v122;
-  sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.modes, (int32_t)v122, v123, v124);
+  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.modes, (int32_t)v122, v123, v124);
   v125 = System_Collections_Generic_List_float___ToArray(
            v13,
-           (const MethodInfo_37BFDF0 *)Method_System_Collections_Generic_List_float__ToArray__);
+           (const MethodInfo_37CA658 *)Method_System_Collections_Generic_List_float__ToArray__);
   p_curveWeight->klass = (CGThumbnailListItem_c *)v125;
-  sub_1C32BC4(p_curveWeight, (int32_t)v125, v126, v127);
+  sub_1C36FFC(p_curveWeight, (int32_t)v125, v126, v127);
   if ( !*p_points )
     goto LABEL_79;
   Custom2dSplineMesh__EnforceMode(this, LODWORD((*p_points)->max_length) - 4, v128);
@@ -2754,10 +2754,10 @@ void Custom2dSplineMesh__ChangeWeight(Custom2dSplineMesh_o *this, int32_t index,
 
   curveWeight = this->fields.curveWeight;
   if ( !curveWeight )
-    sub_1C32E7C(this);
+    sub_1C372B4(this);
   v5 = (index + 1) / 3;
   if ( (unsigned int)v5 >= LODWORD(curveWeight->max_length) )
-    sub_1C32E84(this);
+    sub_1C372BC(this);
   curveWeight->m_Items[v5] = value;
   Custom2dSplineMesh__EnforceMode(this, index, method);
 }
@@ -2771,18 +2771,18 @@ void Custom2dSplineMesh__CreateMesh(Custom2dSplineMesh_o *this, const MethodInfo
   const MethodInfo *v6; // x1
   const MethodInfo *v7; // x1
 
-  if ( (byte_4C37412 & 1) == 0 )
+  if ( (byte_4C42A02 & 1) == 0 )
   {
-    sub_1C32C20(&Method_UnityEngine_Component_GetComponent_MeshFilter___);
-    byte_4C37412 = 1;
+    sub_1C37058(&Method_UnityEngine_Component_GetComponent_MeshFilter___);
+    byte_4C42A02 = 1;
   }
   if ( this->fields.DrawPath )
   {
     Component_object = UnityEngine_Component__GetComponent_object_(
                          (UnityEngine_Component_o *)this,
-                         (const MethodInfo_30D3BC0 *)Method_UnityEngine_Component_GetComponent_MeshFilter___);
+                         (const MethodInfo_30DE428 *)Method_UnityEngine_Component_GetComponent_MeshFilter___);
     this->fields.meshFilter = (struct UnityEngine_MeshFilter_o *)Component_object;
-    sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.meshFilter, (int32_t)Component_object, v4, v5);
+    sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.meshFilter, (int32_t)Component_object, v4, v5);
     Custom2dSplineMesh__SetList(this, v6);
     Custom2dSplineMesh__GenMesh(this, v7);
   }
@@ -2814,37 +2814,37 @@ void Custom2dSplineMesh__DeletePoint(Custom2dSplineMesh_o *this, int32_t index, 
   int32_t v25; // w2
   const MethodInfo *v26; // x3
 
-  if ( (byte_4C3740D & 1) == 0 )
+  if ( (byte_4C429FD & 1) == 0 )
   {
-    sub_1C32C20(&Method_System_Collections_Generic_List_float__RemoveAt__);
-    sub_1C32C20(&Method_System_Collections_Generic_List_BezierControlPointMode__RemoveAt__);
-    sub_1C32C20(&Method_System_Collections_Generic_List_Vector3__RemoveRange__);
-    sub_1C32C20(&Method_System_Collections_Generic_List_BezierControlPointMode__ToArray__);
-    sub_1C32C20(&Method_System_Collections_Generic_List_float__ToArray__);
-    sub_1C32C20(&Method_System_Collections_Generic_List_Vector3__ToArray__);
-    sub_1C32C20(&Method_System_Collections_Generic_List_BezierControlPointMode___ctor__);
-    sub_1C32C20(&Method_System_Collections_Generic_List_float___ctor___78020840);
-    sub_1C32C20(&Method_System_Collections_Generic_List_Vector3___ctor___78027512);
-    sub_1C32C20(&System_Collections_Generic_List_float__TypeInfo);
-    sub_1C32C20(&System_Collections_Generic_List_BezierControlPointMode__TypeInfo);
-    sub_1C32C20(&System_Collections_Generic_List_Vector3__TypeInfo);
-    byte_4C3740D = 1;
+    sub_1C37058(&Method_System_Collections_Generic_List_float__RemoveAt__);
+    sub_1C37058(&Method_System_Collections_Generic_List_BezierControlPointMode__RemoveAt__);
+    sub_1C37058(&Method_System_Collections_Generic_List_Vector3__RemoveRange__);
+    sub_1C37058(&Method_System_Collections_Generic_List_BezierControlPointMode__ToArray__);
+    sub_1C37058(&Method_System_Collections_Generic_List_float__ToArray__);
+    sub_1C37058(&Method_System_Collections_Generic_List_Vector3__ToArray__);
+    sub_1C37058(&Method_System_Collections_Generic_List_BezierControlPointMode___ctor__);
+    sub_1C37058(&Method_System_Collections_Generic_List_float___ctor___78066576);
+    sub_1C37058(&Method_System_Collections_Generic_List_Vector3___ctor___78073248);
+    sub_1C37058(&System_Collections_Generic_List_float__TypeInfo);
+    sub_1C37058(&System_Collections_Generic_List_BezierControlPointMode__TypeInfo);
+    sub_1C37058(&System_Collections_Generic_List_Vector3__TypeInfo);
+    byte_4C429FD = 1;
   }
   p_points = &this->fields.points;
   points = (System_Collections_Generic_IEnumerable_T__o *)this->fields.points;
   v7 = (index + 1) / 3;
-  v8 = (System_Collections_Generic_List_Vector3__o *)sub_1C32E6C(System_Collections_Generic_List_Vector3__TypeInfo);
-  System_Collections_Generic_List_Vector3____ctor_58658328(
+  v8 = (System_Collections_Generic_List_Vector3__o *)sub_1C372A4(System_Collections_Generic_List_Vector3__TypeInfo);
+  System_Collections_Generic_List_Vector3____ctor_58701440(
     v8,
     points,
-    (const MethodInfo_37F0E18 *)Method_System_Collections_Generic_List_Vector3___ctor___78027512);
+    (const MethodInfo_37FB680 *)Method_System_Collections_Generic_List_Vector3___ctor___78073248);
   p_curveWeight = &this->fields.curveWeight;
   curveWeight = (System_Collections_Generic_IEnumerable_T__o *)this->fields.curveWeight;
-  v11 = (System_Collections_Generic_List_float__o *)sub_1C32E6C(System_Collections_Generic_List_float__TypeInfo);
-  System_Collections_Generic_List_float____ctor_58448900(
+  v11 = (System_Collections_Generic_List_float__o *)sub_1C372A4(System_Collections_Generic_List_float__TypeInfo);
+  System_Collections_Generic_List_float____ctor_58492012(
     v11,
     curveWeight,
-    (const MethodInfo_37BDC04 *)Method_System_Collections_Generic_List_float___ctor___78020840);
+    (const MethodInfo_37C846C *)Method_System_Collections_Generic_List_float___ctor___78066576);
   if ( (unsigned int)(index + 3) > 4 )
   {
     modes = this->fields.modes;
@@ -2860,7 +2860,7 @@ void Custom2dSplineMesh__DeletePoint(Custom2dSplineMesh_o *this, int32_t index, 
             v8,
             LODWORD((*p_points)->max_length) - 3,
             3,
-            (const MethodInfo_37F2E84 *)Method_System_Collections_Generic_List_Vector3__RemoveRange__);
+            (const MethodInfo_37FD6EC *)Method_System_Collections_Generic_List_Vector3__RemoveRange__);
           if ( *p_curveWeight )
           {
             if ( v11 )
@@ -2878,13 +2878,13 @@ void Custom2dSplineMesh__DeletePoint(Custom2dSplineMesh_o *this, int32_t index, 
         v8,
         3 * v7 - 1,
         3,
-        (const MethodInfo_37F2E84 *)Method_System_Collections_Generic_List_Vector3__RemoveRange__);
+        (const MethodInfo_37FD6EC *)Method_System_Collections_Generic_List_Vector3__RemoveRange__);
       v13 = (index + 1) / 3;
       if ( v11 )
         goto LABEL_16;
     }
 LABEL_18:
-    sub_1C32E7C(v12);
+    sub_1C372B4(v12);
   }
   if ( !v8 )
     goto LABEL_18;
@@ -2892,7 +2892,7 @@ LABEL_18:
     v8,
     0,
     3,
-    (const MethodInfo_37F2E84 *)Method_System_Collections_Generic_List_Vector3__RemoveRange__);
+    (const MethodInfo_37FD6EC *)Method_System_Collections_Generic_List_Vector3__RemoveRange__);
   v13 = 0;
   if ( !v11 )
     goto LABEL_18;
@@ -2900,35 +2900,35 @@ LABEL_16:
   System_Collections_Generic_List_float___RemoveAt(
     v11,
     v13,
-    (const MethodInfo_37BFAB8 *)Method_System_Collections_Generic_List_float__RemoveAt__);
+    (const MethodInfo_37CA320 *)Method_System_Collections_Generic_List_float__RemoveAt__);
   v16 = (System_Collections_Generic_IEnumerable_T__o *)this->fields.modes;
   p_modes = (CGThumbnailListItem_o *)&this->fields.modes;
-  v17 = (System_Collections_Generic_List_T__o *)sub_1C32E6C(System_Collections_Generic_List_BezierControlPointMode__TypeInfo);
-  System_Collections_Generic_List_Int32Enum____ctor_58185880(
+  v17 = (System_Collections_Generic_List_T__o *)sub_1C372A4(System_Collections_Generic_List_BezierControlPointMode__TypeInfo);
+  System_Collections_Generic_List_Int32Enum____ctor_58228992(
     v17,
     v16,
-    (const MethodInfo_377D898 *)Method_System_Collections_Generic_List_BezierControlPointMode___ctor__);
+    (const MethodInfo_3788100 *)Method_System_Collections_Generic_List_BezierControlPointMode___ctor__);
   if ( !v17 )
     goto LABEL_18;
   System_Collections_Generic_List_Int32Enum___RemoveAt(
     v17,
     v7,
-    (const MethodInfo_377F744 *)Method_System_Collections_Generic_List_BezierControlPointMode__RemoveAt__);
+    (const MethodInfo_3789FAC *)Method_System_Collections_Generic_List_BezierControlPointMode__RemoveAt__);
   v18 = System_Collections_Generic_List_Vector3___ToArray(
           v8,
-          (const MethodInfo_37F3154 *)Method_System_Collections_Generic_List_Vector3__ToArray__);
+          (const MethodInfo_37FD9BC *)Method_System_Collections_Generic_List_Vector3__ToArray__);
   *p_points = v18;
-  sub_1C32BC4((CGThumbnailListItem_o *)p_points, (int32_t)v18, v19, v20);
+  sub_1C36FFC((CGThumbnailListItem_o *)p_points, (int32_t)v18, v19, v20);
   v21 = System_Collections_Generic_List_Int32Enum___ToArray(
           v17,
-          (const MethodInfo_377FA7C *)Method_System_Collections_Generic_List_BezierControlPointMode__ToArray__);
+          (const MethodInfo_378A2E4 *)Method_System_Collections_Generic_List_BezierControlPointMode__ToArray__);
   p_modes->klass = (CGThumbnailListItem_c *)v21;
-  sub_1C32BC4(p_modes, (int32_t)v21, v22, v23);
+  sub_1C36FFC(p_modes, (int32_t)v21, v22, v23);
   v24 = System_Collections_Generic_List_float___ToArray(
           v11,
-          (const MethodInfo_37BFDF0 *)Method_System_Collections_Generic_List_float__ToArray__);
+          (const MethodInfo_37CA658 *)Method_System_Collections_Generic_List_float__ToArray__);
   *p_curveWeight = v24;
-  sub_1C32BC4((CGThumbnailListItem_o *)p_curveWeight, (int32_t)v24, v25, v26);
+  sub_1C36FFC((CGThumbnailListItem_o *)p_curveWeight, (int32_t)v24, v25, v26);
 }
 
 
@@ -3039,12 +3039,12 @@ LABEL_41:
           return;
         }
 LABEL_44:
-        sub_1C32E84(this);
+        sub_1C372BC(this);
       }
-      if ( !byte_4C313D4 )
+      if ( !byte_4C3C924 )
       {
-        sub_1C32C20(&System_Math_TypeInfo);
-        byte_4C313D4 = 1;
+        sub_1C37058(&System_Math_TypeInfo);
+        byte_4C3C924 = 1;
       }
       this = (Custom2dSplineMesh_o *)System_Math_TypeInfo;
       if ( !System_Math_TypeInfo->_2.cctor_finished )
@@ -3053,10 +3053,10 @@ LABEL_44:
       v20.n64_f32[0] = sqrtf((float)(v19 * v19) + vaddv_f32(v20));
       if ( v20.n64_f32[0] <= 0.00001 )
       {
-        if ( !byte_4C313D1 )
+        if ( !byte_4C3C921 )
         {
-          this = (Custom2dSplineMesh_o *)sub_1C32C20(&UnityEngine_Vector3_TypeInfo);
-          byte_4C313D1 = 1;
+          this = (Custom2dSplineMesh_o *)sub_1C37058(&UnityEngine_Vector3_TypeInfo);
+          byte_4C3C921 = 1;
         }
         static_fields = UnityEngine_Vector3_TypeInfo->static_fields;
         v21.n64_u64[0] = *(unsigned __int64 *)&static_fields->zeroVector.fields.x;
@@ -3075,10 +3075,10 @@ LABEL_44:
         v25 = (float32x2_t *)((char *)v24 + 12 * v13);
         v26.n64_u64[0] = v25[4].n64_u64[0];
         v27 = v25[5].n64_f32[0];
-        if ( !byte_4C313CF )
+        if ( !byte_4C3C91F )
         {
-          sub_1C32C20(&System_Math_TypeInfo);
-          byte_4C313CF = 1;
+          sub_1C37058(&System_Math_TypeInfo);
+          byte_4C3C91F = 1;
         }
         this = (Custom2dSplineMesh_o *)System_Math_TypeInfo;
         if ( !System_Math_TypeInfo->_2.cctor_finished )
@@ -3094,7 +3094,7 @@ LABEL_44:
         }
       }
 LABEL_45:
-      sub_1C32E7C(this);
+      sub_1C372B4(this);
     }
   }
 }
@@ -3195,7 +3195,7 @@ void Custom2dSplineMesh__GenMesh(Custom2dSplineMesh_o *this, const MethodInfo *m
   __int64 v92; // x10
   float *v93; // x8
   struct System_Collections_Generic_List_Vector2__o *uvs; // x26
-  unsigned __int64 UV_41456544; // kr00_8
+  unsigned __int64 UV_41556024; // kr00_8
   struct UnityEngine_Vector2_array *items; // x8
   _QWORD *v97; // x9
   __int64 size; // x10
@@ -3522,29 +3522,29 @@ void Custom2dSplineMesh__GenMesh(Custom2dSplineMesh_o *this, const MethodInfo *m
   UnityEngine_Vector3_o v419; // 0:s0.4,4:s1.4,8:s2.4
   UnityEngine_Vector3_o v420; // 0:s3.4,4:s4.4,8:s5.4
 
-  if ( (byte_4C37413 & 1) == 0 )
+  if ( (byte_4C42A03 & 1) == 0 )
   {
-    sub_1C32C20(&Method_UnityEngine_Component_GetComponent_MeshFilter___);
-    sub_1C32C20(&Custom2dSplineMesh_TypeInfo);
-    sub_1C32C20(&Method_System_Collections_Generic_List_int__Add__);
-    sub_1C32C20(&Method_System_Collections_Generic_List_Vector3__Add__);
-    sub_1C32C20(&Method_System_Collections_Generic_List_Vector2__Add__);
-    sub_1C32C20(&Method_System_Collections_Generic_List_Vector3__Clear__);
-    sub_1C32C20(&Method_System_Collections_Generic_List_Vector2__Clear__);
-    sub_1C32C20(&Method_System_Collections_Generic_List_int__Clear__);
-    sub_1C32C20(&Method_System_Collections_Generic_List_int__ToArray__);
-    sub_1C32C20(&Method_System_Collections_Generic_List_Vector2__ToArray__);
-    sub_1C32C20(&Method_System_Collections_Generic_List_Vector3__ToArray__);
-    sub_1C32C20(&Method_System_Collections_Generic_List_int___ctor__);
-    sub_1C32C20(&Method_System_Collections_Generic_List_Vector2___ctor__);
-    sub_1C32C20(&Method_System_Collections_Generic_List_Vector3___ctor__);
-    sub_1C32C20(&System_Collections_Generic_List_int__TypeInfo);
-    sub_1C32C20(&System_Collections_Generic_List_Vector3__TypeInfo);
-    sub_1C32C20(&System_Collections_Generic_List_Vector2__TypeInfo);
-    sub_1C32C20(&UnityEngine_Mesh_TypeInfo);
-    sub_1C32C20(&UnityEngine_Object_TypeInfo);
-    sub_1C32C20(&StringLiteral_12274/*"SPLINE MESH"*/);
-    byte_4C37413 = 1;
+    sub_1C37058(&Method_UnityEngine_Component_GetComponent_MeshFilter___);
+    sub_1C37058(&Custom2dSplineMesh_TypeInfo);
+    sub_1C37058(&Method_System_Collections_Generic_List_int__Add__);
+    sub_1C37058(&Method_System_Collections_Generic_List_Vector3__Add__);
+    sub_1C37058(&Method_System_Collections_Generic_List_Vector2__Add__);
+    sub_1C37058(&Method_System_Collections_Generic_List_Vector3__Clear__);
+    sub_1C37058(&Method_System_Collections_Generic_List_Vector2__Clear__);
+    sub_1C37058(&Method_System_Collections_Generic_List_int__Clear__);
+    sub_1C37058(&Method_System_Collections_Generic_List_int__ToArray__);
+    sub_1C37058(&Method_System_Collections_Generic_List_Vector2__ToArray__);
+    sub_1C37058(&Method_System_Collections_Generic_List_Vector3__ToArray__);
+    sub_1C37058(&Method_System_Collections_Generic_List_int___ctor__);
+    sub_1C37058(&Method_System_Collections_Generic_List_Vector2___ctor__);
+    sub_1C37058(&Method_System_Collections_Generic_List_Vector3___ctor__);
+    sub_1C37058(&System_Collections_Generic_List_int__TypeInfo);
+    sub_1C37058(&System_Collections_Generic_List_Vector3__TypeInfo);
+    sub_1C37058(&System_Collections_Generic_List_Vector2__TypeInfo);
+    sub_1C37058(&UnityEngine_Mesh_TypeInfo);
+    sub_1C37058(&UnityEngine_Object_TypeInfo);
+    sub_1C37058(&StringLiteral_12275/*"SPLINE MESH"*/);
+    byte_4C42A03 = 1;
   }
   item.fields.y = 0.0;
   p_drawMesh = &this->fields.drawMesh;
@@ -3553,14 +3553,14 @@ void Custom2dSplineMesh__GenMesh(Custom2dSplineMesh_o *this, const MethodInfo *m
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   if ( UnityEngine_Object__op_Equality(drawMesh, 0, 0) )
   {
-    v5 = (UnityEngine_Mesh_o *)sub_1C32E6C(UnityEngine_Mesh_TypeInfo);
+    v5 = (UnityEngine_Mesh_o *)sub_1C372A4(UnityEngine_Mesh_TypeInfo);
     UnityEngine_Mesh___ctor(v5, 0);
     *p_drawMesh = v5;
-    sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.drawMesh, (int32_t)v5, v6, v7);
+    sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.drawMesh, (int32_t)v5, v6, v7);
     v8 = (UnityEngine_Object_o *)*p_drawMesh;
     if ( !*p_drawMesh )
       goto LABEL_334;
-    UnityEngine_Object__set_name(v8, (System_String_o *)StringLiteral_12274/*"SPLINE MESH"*/, 0);
+    UnityEngine_Object__set_name(v8, (System_String_o *)StringLiteral_12275/*"SPLINE MESH"*/, 0);
   }
   else
   {
@@ -3577,35 +3577,35 @@ void Custom2dSplineMesh__GenMesh(Custom2dSplineMesh_o *this, const MethodInfo *m
   {
     Component_object = UnityEngine_Component__GetComponent_object_(
                          (UnityEngine_Component_o *)this,
-                         (const MethodInfo_30D3BC0 *)Method_UnityEngine_Component_GetComponent_MeshFilter___);
+                         (const MethodInfo_30DE428 *)Method_UnityEngine_Component_GetComponent_MeshFilter___);
     this->fields.meshFilter = (struct UnityEngine_MeshFilter_o *)Component_object;
-    sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.meshFilter, (int32_t)Component_object, v12, v13);
+    sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.meshFilter, (int32_t)Component_object, v12, v13);
   }
   v8 = (UnityEngine_Object_o *)*p_meshFilter;
   v349 = &this->fields.drawMesh;
   if ( !*p_meshFilter )
     goto LABEL_334;
   UnityEngine_MeshFilter__set_mesh((UnityEngine_MeshFilter_o *)v8, this->fields.drawMesh, 0);
-  v14 = (System_Collections_Generic_List_Vector3__o *)sub_1C32E6C(System_Collections_Generic_List_Vector3__TypeInfo);
+  v14 = (System_Collections_Generic_List_Vector3__o *)sub_1C372A4(System_Collections_Generic_List_Vector3__TypeInfo);
   System_Collections_Generic_List_Vector3____ctor(
     v14,
-    (const MethodInfo_37F0CF0 *)Method_System_Collections_Generic_List_Vector3___ctor__);
+    (const MethodInfo_37FB558 *)Method_System_Collections_Generic_List_Vector3___ctor__);
   this->fields.verts = v14;
   p_verts = &this->fields.verts;
-  sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.verts, (int32_t)v14, v16, v17);
-  v18 = (System_Collections_Generic_List_int__o *)sub_1C32E6C(System_Collections_Generic_List_int__TypeInfo);
+  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.verts, (int32_t)v14, v16, v17);
+  v18 = (System_Collections_Generic_List_int__o *)sub_1C372A4(System_Collections_Generic_List_int__TypeInfo);
   System_Collections_Generic_List_int____ctor(
     v18,
-    (const MethodInfo_377AF44 *)Method_System_Collections_Generic_List_int___ctor__);
+    (const MethodInfo_37857AC *)Method_System_Collections_Generic_List_int___ctor__);
   this->fields.trianges = v18;
   p_trianges = &this->fields.trianges;
-  sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.trianges, (int32_t)v18, v20, v21);
-  v22 = (System_Collections_Generic_List_Vector2__o *)sub_1C32E6C(System_Collections_Generic_List_Vector2__TypeInfo);
+  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.trianges, (int32_t)v18, v20, v21);
+  v22 = (System_Collections_Generic_List_Vector2__o *)sub_1C372A4(System_Collections_Generic_List_Vector2__TypeInfo);
   System_Collections_Generic_List_Vector2____ctor(
     v22,
-    (const MethodInfo_37EE444 *)Method_System_Collections_Generic_List_Vector2___ctor__);
+    (const MethodInfo_37F8CAC *)Method_System_Collections_Generic_List_Vector2___ctor__);
   this->fields.uvs = v22;
-  sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.uvs, (int32_t)v22, v23, v24);
+  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.uvs, (int32_t)v22, v23, v24);
   points = this->fields.points;
   if ( !points )
     goto LABEL_334;
@@ -3634,10 +3634,10 @@ void Custom2dSplineMesh__GenMesh(Custom2dSplineMesh_o *this, const MethodInfo *m
   v378 = Direction.fields.x;
   item.fields.x = Direction.fields.y;
   v374 = Direction.fields.z;
-  if ( !byte_4C313D4 )
+  if ( !byte_4C3C924 )
   {
-    sub_1C32C20(&System_Math_TypeInfo);
-    byte_4C313D4 = 1;
+    sub_1C37058(&System_Math_TypeInfo);
+    byte_4C3C924 = 1;
   }
   v39 = x;
   v40 = v33 - x;
@@ -3652,10 +3652,10 @@ void Custom2dSplineMesh__GenMesh(Custom2dSplineMesh_o *this, const MethodInfo *m
   if ( v43 <= 0.00001 )
   {
     v45 = z;
-    if ( !byte_4C313D1 )
+    if ( !byte_4C3C921 )
     {
-      sub_1C32C20(&UnityEngine_Vector3_TypeInfo);
-      byte_4C313D1 = 1;
+      sub_1C37058(&UnityEngine_Vector3_TypeInfo);
+      byte_4C3C921 = 1;
     }
     static_fields = UnityEngine_Vector3_TypeInfo->static_fields;
     normalizedDir_8 = static_fields->zeroVector.fields.x;
@@ -3688,20 +3688,20 @@ void Custom2dSplineMesh__GenMesh(Custom2dSplineMesh_o *this, const MethodInfo *m
     v52 = v388.fields.y;
     v53 = v388.fields.z;
     width = Custom2dSplineMesh__GetWidth(this, 0.0, v49);
-    if ( !byte_4C313D4 )
+    if ( !byte_4C3C924 )
     {
-      sub_1C32C20(&System_Math_TypeInfo);
-      byte_4C313D4 = 1;
+      sub_1C37058(&System_Math_TypeInfo);
+      byte_4C3C924 = 1;
     }
     if ( !System_Math_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(System_Math_TypeInfo);
     v56 = sqrtf((float)(v374 * v374) + (float)((float)(v378 * v378) + (float)(item.fields.x * item.fields.x)));
     if ( v56 <= 0.00001 )
     {
-      if ( !byte_4C313D1 )
+      if ( !byte_4C3C921 )
       {
-        sub_1C32C20(&UnityEngine_Vector3_TypeInfo);
-        byte_4C313D1 = 1;
+        sub_1C37058(&UnityEngine_Vector3_TypeInfo);
+        byte_4C3C921 = 1;
       }
       v60 = UnityEngine_Vector3_TypeInfo->static_fields;
       v57 = v60->zeroVector.fields.x;
@@ -3749,10 +3749,10 @@ void Custom2dSplineMesh__GenMesh(Custom2dSplineMesh_o *this, const MethodInfo *m
           v67 = 0;
         }
       }
-      if ( !byte_4C313D4 )
+      if ( !byte_4C3C924 )
       {
-        sub_1C32C20(&System_Math_TypeInfo);
-        byte_4C313D4 = 1;
+        sub_1C37058(&System_Math_TypeInfo);
+        byte_4C3C924 = 1;
       }
       if ( !System_Math_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(System_Math_TypeInfo);
@@ -3767,10 +3767,10 @@ void Custom2dSplineMesh__GenMesh(Custom2dSplineMesh_o *this, const MethodInfo *m
       v377 = v63;
       if ( v71 <= 0.00001 )
       {
-        if ( !byte_4C313D1 )
+        if ( !byte_4C3C921 )
         {
-          sub_1C32C20(&UnityEngine_Vector3_TypeInfo);
-          byte_4C313D1 = 1;
+          sub_1C37058(&UnityEngine_Vector3_TypeInfo);
+          byte_4C3C921 = 1;
         }
         v73 = item.fields.x;
         v77 = UnityEngine_Vector3_TypeInfo->static_fields;
@@ -3835,7 +3835,7 @@ LABEL_67:
         System_Collections_Generic_List_Vector3___AddWithResize(
           (System_Collections_Generic_List_Vector3__o *)v8,
           v392,
-          *(const MethodInfo_37F1584 **)(*(_QWORD *)(v87[4] + 192LL) + 112LL));
+          *(const MethodInfo_37FBDEC **)(*(_QWORD *)(v87[4] + 192LL) + 112LL));
       }
       else
       {
@@ -3862,7 +3862,7 @@ LABEL_67:
         System_Collections_Generic_List_Vector3___AddWithResize(
           (System_Collections_Generic_List_Vector3__o *)v8,
           v393,
-          *(const MethodInfo_37F1584 **)(*(_QWORD *)(v91[4] + 192LL) + 112LL));
+          *(const MethodInfo_37FBDEC **)(*(_QWORD *)(v91[4] + 192LL) + 112LL));
       }
       else
       {
@@ -3879,11 +3879,11 @@ LABEL_67:
         v394.fields.x = v79;
         v394.fields.y = v80;
         v394.fields.z = v81;
-        UV_41456544 = (unsigned __int64)Custom2dSplineMesh__GetUV_41456544(this, v394, v66);
+        UV_41556024 = (unsigned __int64)Custom2dSplineMesh__GetUV_41556024(this, v394, v66);
       }
       else
       {
-        UV_41456544 = __PAIR64__(LODWORD(this->fields.lineVmin), LODWORD(v73));
+        UV_41556024 = __PAIR64__(LODWORD(this->fields.lineVmin), LODWORD(v73));
       }
       v65 = rate;
       v33 = v375;
@@ -3901,13 +3901,13 @@ LABEL_67:
       {
         System_Collections_Generic_List_Vector2___AddWithResize(
           uvs,
-          (UnityEngine_Vector2_o)UV_41456544,
-          *(const MethodInfo_37EECAC **)(*(_QWORD *)(v97[4] + 192LL) + 112LL));
+          (UnityEngine_Vector2_o)UV_41556024,
+          *(const MethodInfo_37F9514 **)(*(_QWORD *)(v97[4] + 192LL) + 112LL));
       }
       else
       {
         uvs->fields._size = size + 1;
-        items->m_Items[size] = (UnityEngine_Vector2_o)UV_41456544;
+        items->m_Items[size] = (UnityEngine_Vector2_o)UV_41556024;
       }
       v99 = this->fields.uvs;
       if ( this->fields.StrictUVmode )
@@ -3915,7 +3915,7 @@ LABEL_67:
         v395.fields.x = v84;
         v395.fields.y = v83;
         v395.fields.z = v85;
-        v100 = (unsigned __int64)Custom2dSplineMesh__GetUV_41456544(this, v395, v66);
+        v100 = (unsigned __int64)Custom2dSplineMesh__GetUV_41556024(this, v395, v66);
       }
       else
       {
@@ -3938,7 +3938,7 @@ LABEL_67:
         System_Collections_Generic_List_Vector2___AddWithResize(
           v99,
           (UnityEngine_Vector2_o)v100,
-          *(const MethodInfo_37EECAC **)(*(_QWORD *)(v102[4] + 192LL) + 112LL));
+          *(const MethodInfo_37F9514 **)(*(_QWORD *)(v102[4] + 192LL) + 112LL));
       }
       else
       {
@@ -3967,7 +3967,7 @@ LABEL_67:
           System_Collections_Generic_List_int___AddWithResize(
             (System_Collections_Generic_List_int__o *)v8,
             v127,
-            *(const MethodInfo_377B798 **)(*(_QWORD *)(v129[4] + 192LL) + 112LL));
+            *(const MethodInfo_3786000 **)(*(_QWORD *)(v129[4] + 192LL) + 112LL));
           v8 = (UnityEngine_Object_o *)*p_trianges;
           if ( !*p_trianges )
             goto LABEL_334;
@@ -3990,7 +3990,7 @@ LABEL_67:
           System_Collections_Generic_List_int___AddWithResize(
             (System_Collections_Generic_List_int__o *)v8,
             v135,
-            *(const MethodInfo_377B798 **)(*(_QWORD *)(v133[4] + 192LL) + 112LL));
+            *(const MethodInfo_3786000 **)(*(_QWORD *)(v133[4] + 192LL) + 112LL));
           v8 = (UnityEngine_Object_o *)*p_trianges;
           if ( !*p_trianges )
             goto LABEL_334;
@@ -4013,7 +4013,7 @@ LABEL_67:
           System_Collections_Generic_List_int___AddWithResize(
             (System_Collections_Generic_List_int__o *)v8,
             v140,
-            *(const MethodInfo_377B798 **)(*(_QWORD *)(v138[4] + 192LL) + 112LL));
+            *(const MethodInfo_3786000 **)(*(_QWORD *)(v138[4] + 192LL) + 112LL));
           v8 = (UnityEngine_Object_o *)*p_trianges;
           if ( !*p_trianges )
             goto LABEL_334;
@@ -4036,7 +4036,7 @@ LABEL_67:
           System_Collections_Generic_List_int___AddWithResize(
             (System_Collections_Generic_List_int__o *)v8,
             v145,
-            *(const MethodInfo_377B798 **)(*(_QWORD *)(v143[4] + 192LL) + 112LL));
+            *(const MethodInfo_3786000 **)(*(_QWORD *)(v143[4] + 192LL) + 112LL));
           v8 = (UnityEngine_Object_o *)*p_trianges;
           if ( !*p_trianges )
             goto LABEL_334;
@@ -4059,7 +4059,7 @@ LABEL_67:
           System_Collections_Generic_List_int___AddWithResize(
             (System_Collections_Generic_List_int__o *)v8,
             v150,
-            *(const MethodInfo_377B798 **)(*(_QWORD *)(v148[4] + 192LL) + 112LL));
+            *(const MethodInfo_3786000 **)(*(_QWORD *)(v148[4] + 192LL) + 112LL));
           v8 = (UnityEngine_Object_o *)*p_trianges;
           if ( !*p_trianges )
             goto LABEL_334;
@@ -4082,7 +4082,7 @@ LABEL_67:
           System_Collections_Generic_List_int___AddWithResize(
             (System_Collections_Generic_List_int__o *)v8,
             (int32_t)v66,
-            *(const MethodInfo_377B798 **)(*(_QWORD *)(v153[4] + 192LL) + 112LL));
+            *(const MethodInfo_3786000 **)(*(_QWORD *)(v153[4] + 192LL) + 112LL));
         }
         else
         {
@@ -4093,10 +4093,10 @@ LABEL_67:
         if ( !v67 )
         {
 LABEL_131:
-          if ( !byte_4C313CF )
+          if ( !byte_4C3C91F )
           {
-            sub_1C32C20(&System_Math_TypeInfo);
-            byte_4C313CF = 1;
+            sub_1C37058(&System_Math_TypeInfo);
+            byte_4C3C91F = 1;
           }
           if ( !System_Math_TypeInfo->_2.cctor_finished )
             j_il2cpp_runtime_class_init_0(System_Math_TypeInfo);
@@ -4110,10 +4110,10 @@ LABEL_131:
           goto LABEL_249;
         }
       }
-      if ( !byte_4C313CF )
+      if ( !byte_4C3C91F )
       {
-        sub_1C32C20(&System_Math_TypeInfo);
-        byte_4C313CF = 1;
+        sub_1C37058(&System_Math_TypeInfo);
+        byte_4C3C91F = 1;
       }
       if ( !System_Math_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(System_Math_TypeInfo);
@@ -4206,7 +4206,7 @@ LABEL_140:
         System_Collections_Generic_List_Vector3___AddWithResize(
           (System_Collections_Generic_List_Vector3__o *)v8,
           v398,
-          *(const MethodInfo_37F1584 **)(*(_QWORD *)(v158[4] + 192LL) + 112LL));
+          *(const MethodInfo_37FBDEC **)(*(_QWORD *)(v158[4] + 192LL) + 112LL));
       }
       else
       {
@@ -4233,7 +4233,7 @@ LABEL_140:
         System_Collections_Generic_List_Vector3___AddWithResize(
           (System_Collections_Generic_List_Vector3__o *)v8,
           v399,
-          *(const MethodInfo_37F1584 **)(*(_QWORD *)(v162[4] + 192LL) + 112LL));
+          *(const MethodInfo_37FBDEC **)(*(_QWORD *)(v162[4] + 192LL) + 112LL));
       }
       else
       {
@@ -4254,7 +4254,7 @@ LABEL_140:
         v400.fields.x = v122;
         v400.fields.y = v124;
         v400.fields.z = v125;
-        v168 = (unsigned __int64)Custom2dSplineMesh__GetUV_41456544(this, v400, v119);
+        v168 = (unsigned __int64)Custom2dSplineMesh__GetUV_41556024(this, v400, v119);
         if ( !v166 )
           goto LABEL_334;
       }
@@ -4275,7 +4275,7 @@ LABEL_140:
         System_Collections_Generic_List_Vector2___AddWithResize(
           v166,
           (UnityEngine_Vector2_o)v168,
-          *(const MethodInfo_37EECAC **)(*(_QWORD *)(v170[4] + 192LL) + 112LL));
+          *(const MethodInfo_37F9514 **)(*(_QWORD *)(v170[4] + 192LL) + 112LL));
       }
       else
       {
@@ -4288,7 +4288,7 @@ LABEL_140:
         v401.fields.y = v364;
         v401.fields.x = v366;
         v401.fields.z = v359;
-        v174 = Custom2dSplineMesh__GetUV_41456544(this, v401, v119);
+        v174 = Custom2dSplineMesh__GetUV_41556024(this, v401, v119);
         lineVmax = v174.fields.y;
         v167 = v174.fields.x;
         if ( !v172 )
@@ -4312,7 +4312,7 @@ LABEL_140:
         System_Collections_Generic_List_Vector2___AddWithResize(
           v172,
           *(UnityEngine_Vector2_o *)(&lineVmax - 1),
-          *(const MethodInfo_37EECAC **)(*(_QWORD *)(v176[4] + 192LL) + 112LL));
+          *(const MethodInfo_37F9514 **)(*(_QWORD *)(v176[4] + 192LL) + 112LL));
       }
       else
       {
@@ -4336,7 +4336,7 @@ LABEL_140:
         System_Collections_Generic_List_int___AddWithResize(
           (System_Collections_Generic_List_int__o *)v8,
           v180,
-          *(const MethodInfo_377B798 **)(*(_QWORD *)(v182[4] + 192LL) + 112LL));
+          *(const MethodInfo_3786000 **)(*(_QWORD *)(v182[4] + 192LL) + 112LL));
         v8 = (UnityEngine_Object_o *)*p_trianges;
         if ( !*p_trianges )
           goto LABEL_334;
@@ -4359,7 +4359,7 @@ LABEL_140:
         System_Collections_Generic_List_int___AddWithResize(
           (System_Collections_Generic_List_int__o *)v8,
           v188,
-          *(const MethodInfo_377B798 **)(*(_QWORD *)(v186[4] + 192LL) + 112LL));
+          *(const MethodInfo_3786000 **)(*(_QWORD *)(v186[4] + 192LL) + 112LL));
         v8 = (UnityEngine_Object_o *)*p_trianges;
         if ( !*p_trianges )
           goto LABEL_334;
@@ -4382,7 +4382,7 @@ LABEL_140:
         System_Collections_Generic_List_int___AddWithResize(
           (System_Collections_Generic_List_int__o *)v8,
           v193,
-          *(const MethodInfo_377B798 **)(*(_QWORD *)(v191[4] + 192LL) + 112LL));
+          *(const MethodInfo_3786000 **)(*(_QWORD *)(v191[4] + 192LL) + 112LL));
         v8 = (UnityEngine_Object_o *)*p_trianges;
         if ( !*p_trianges )
           goto LABEL_334;
@@ -4405,7 +4405,7 @@ LABEL_140:
         System_Collections_Generic_List_int___AddWithResize(
           (System_Collections_Generic_List_int__o *)v8,
           v198,
-          *(const MethodInfo_377B798 **)(*(_QWORD *)(v196[4] + 192LL) + 112LL));
+          *(const MethodInfo_3786000 **)(*(_QWORD *)(v196[4] + 192LL) + 112LL));
         v8 = (UnityEngine_Object_o *)*p_trianges;
         if ( !*p_trianges )
           goto LABEL_334;
@@ -4428,7 +4428,7 @@ LABEL_140:
         System_Collections_Generic_List_int___AddWithResize(
           (System_Collections_Generic_List_int__o *)v8,
           v203,
-          *(const MethodInfo_377B798 **)(*(_QWORD *)(v201[4] + 192LL) + 112LL));
+          *(const MethodInfo_3786000 **)(*(_QWORD *)(v201[4] + 192LL) + 112LL));
         v8 = (UnityEngine_Object_o *)*p_trianges;
         if ( !*p_trianges )
           goto LABEL_334;
@@ -4452,7 +4452,7 @@ LABEL_140:
         System_Collections_Generic_List_int___AddWithResize(
           (System_Collections_Generic_List_int__o *)v8,
           (int32_t)v208,
-          *(const MethodInfo_377B798 **)(*(_QWORD *)(v206[4] + 192LL) + 112LL));
+          *(const MethodInfo_3786000 **)(*(_QWORD *)(v206[4] + 192LL) + 112LL));
       }
       else
       {
@@ -4464,20 +4464,20 @@ LABEL_140:
       v210 = v402.fields.x;
       v211 = v402.fields.y;
       v212 = v402.fields.z;
-      if ( !byte_4C313D4 )
+      if ( !byte_4C3C924 )
       {
-        sub_1C32C20(&System_Math_TypeInfo);
-        byte_4C313D4 = 1;
+        sub_1C37058(&System_Math_TypeInfo);
+        byte_4C3C924 = 1;
       }
       if ( !System_Math_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(System_Math_TypeInfo);
       v213 = sqrtf((float)(v212 * v212) + (float)((float)(v210 * v210) + (float)(v211 * v211)));
       if ( v213 <= 0.00001 )
       {
-        if ( !byte_4C313D1 )
+        if ( !byte_4C3C921 )
         {
-          sub_1C32C20(&UnityEngine_Vector3_TypeInfo);
-          byte_4C313D1 = 1;
+          sub_1C37058(&UnityEngine_Vector3_TypeInfo);
+          byte_4C3C921 = 1;
         }
         v217 = UnityEngine_Vector3_TypeInfo->static_fields;
         v214 = v217->zeroVector.fields.x;
@@ -4501,20 +4501,20 @@ LABEL_140:
       v221 = v404.fields.x;
       v222 = v404.fields.y;
       v223 = v404.fields.z;
-      if ( !byte_4C313D4 )
+      if ( !byte_4C3C924 )
       {
-        sub_1C32C20(&System_Math_TypeInfo);
-        byte_4C313D4 = 1;
+        sub_1C37058(&System_Math_TypeInfo);
+        byte_4C3C924 = 1;
       }
       if ( !System_Math_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(System_Math_TypeInfo);
       v224 = sqrtf((float)(v223 * v223) + (float)((float)(v221 * v221) + (float)(v222 * v222)));
       if ( v224 <= 0.00001 )
       {
-        if ( !byte_4C313D1 )
+        if ( !byte_4C3C921 )
         {
-          sub_1C32C20(&UnityEngine_Vector3_TypeInfo);
-          byte_4C313D1 = 1;
+          sub_1C37058(&UnityEngine_Vector3_TypeInfo);
+          byte_4C3C921 = 1;
         }
         v227 = UnityEngine_Vector3_TypeInfo->static_fields;
         v225 = v227->zeroVector.fields.y;
@@ -4594,7 +4594,7 @@ LABEL_218:
         System_Collections_Generic_List_Vector3___AddWithResize(
           (System_Collections_Generic_List_Vector3__o *)v8,
           v406,
-          *(const MethodInfo_37F1584 **)(*(_QWORD *)(v243[4] + 192LL) + 112LL));
+          *(const MethodInfo_37FBDEC **)(*(_QWORD *)(v243[4] + 192LL) + 112LL));
       }
       else
       {
@@ -4621,7 +4621,7 @@ LABEL_218:
         System_Collections_Generic_List_Vector3___AddWithResize(
           (System_Collections_Generic_List_Vector3__o *)v8,
           v407,
-          *(const MethodInfo_37F1584 **)(*(_QWORD *)(v247[4] + 192LL) + 112LL));
+          *(const MethodInfo_37FBDEC **)(*(_QWORD *)(v247[4] + 192LL) + 112LL));
       }
       else
       {
@@ -4637,7 +4637,7 @@ LABEL_218:
         v408.fields.x = v234;
         v408.fields.y = v235;
         v408.fields.z = v236;
-        v251 = (unsigned __int64)Custom2dSplineMesh__GetUV_41456544(this, v408, v232);
+        v251 = (unsigned __int64)Custom2dSplineMesh__GetUV_41556024(this, v408, v232);
       }
       else
       {
@@ -4657,7 +4657,7 @@ LABEL_218:
         System_Collections_Generic_List_Vector2___AddWithResize(
           v250,
           (UnityEngine_Vector2_o)v251,
-          *(const MethodInfo_37EECAC **)(*(_QWORD *)(v253[4] + 192LL) + 112LL));
+          *(const MethodInfo_37F9514 **)(*(_QWORD *)(v253[4] + 192LL) + 112LL));
       }
       else
       {
@@ -4670,7 +4670,7 @@ LABEL_218:
         v409.fields.x = v239;
         v409.fields.y = v241;
         v409.fields.z = v238;
-        v256 = (unsigned __int64)Custom2dSplineMesh__GetUV_41456544(this, v409, v232);
+        v256 = (unsigned __int64)Custom2dSplineMesh__GetUV_41556024(this, v409, v232);
       }
       else
       {
@@ -4689,17 +4689,17 @@ LABEL_218:
         System_Collections_Generic_List_Vector2___AddWithResize(
           v255,
           (UnityEngine_Vector2_o)v256,
-          *(const MethodInfo_37EECAC **)(*(_QWORD *)(v258[4] + 192LL) + 112LL));
+          *(const MethodInfo_37F9514 **)(*(_QWORD *)(v258[4] + 192LL) + 112LL));
       }
       else
       {
         v255->fields._size = v259 + 1;
         v257->m_Items[v259] = (UnityEngine_Vector2_o)v256;
       }
-      if ( !byte_4C313CF )
+      if ( !byte_4C3C91F )
       {
-        sub_1C32C20(&System_Math_TypeInfo);
-        byte_4C313CF = 1;
+        sub_1C37058(&System_Math_TypeInfo);
+        byte_4C3C91F = 1;
       }
       if ( !System_Math_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(System_Math_TypeInfo);
@@ -4786,7 +4786,7 @@ LABEL_250:
           System_Collections_Generic_List_Vector3___AddWithResize(
             (System_Collections_Generic_List_Vector3__o *)v8,
             v413,
-            *(const MethodInfo_37F1584 **)(*(_QWORD *)(v271[4] + 192LL) + 112LL));
+            *(const MethodInfo_37FBDEC **)(*(_QWORD *)(v271[4] + 192LL) + 112LL));
         }
         else
         {
@@ -4813,7 +4813,7 @@ LABEL_250:
               System_Collections_Generic_List_Vector3___AddWithResize(
                 (System_Collections_Generic_List_Vector3__o *)v8,
                 v414,
-                *(const MethodInfo_37F1584 **)(*(_QWORD *)(v275[4] + 192LL) + 112LL));
+                *(const MethodInfo_37FBDEC **)(*(_QWORD *)(v275[4] + 192LL) + 112LL));
             }
             else
             {
@@ -4829,7 +4829,7 @@ LABEL_250:
               v415.fields.x = v263;
               v415.fields.y = v264;
               v415.fields.z = v265;
-              v279 = (unsigned __int64)Custom2dSplineMesh__GetUV_41456544(this, v415, v261);
+              v279 = (unsigned __int64)Custom2dSplineMesh__GetUV_41556024(this, v415, v261);
               v280 = item.fields.x;
               if ( !v278 )
                 goto LABEL_334;
@@ -4852,7 +4852,7 @@ LABEL_250:
               System_Collections_Generic_List_Vector2___AddWithResize(
                 v278,
                 (UnityEngine_Vector2_o)v279,
-                *(const MethodInfo_37EECAC **)(*(_QWORD *)(v282[4] + 192LL) + 112LL));
+                *(const MethodInfo_37F9514 **)(*(_QWORD *)(v282[4] + 192LL) + 112LL));
             }
             else
             {
@@ -4865,7 +4865,7 @@ LABEL_250:
               v416.fields.x = v267;
               v416.fields.y = v269;
               v416.fields.z = v268;
-              v286 = Custom2dSplineMesh__GetUV_41456544(this, v416, v261);
+              v286 = Custom2dSplineMesh__GetUV_41556024(this, v416, v261);
               v285 = v286.fields.y;
               v280 = v286.fields.x;
               if ( !v284 )
@@ -4889,7 +4889,7 @@ LABEL_250:
                 System_Collections_Generic_List_Vector2___AddWithResize(
                   v284,
                   *(UnityEngine_Vector2_o *)(&v285 - 1),
-                  *(const MethodInfo_37EECAC **)(*(_QWORD *)(v288[4] + 192LL) + 112LL));
+                  *(const MethodInfo_37F9514 **)(*(_QWORD *)(v288[4] + 192LL) + 112LL));
               }
               else
               {
@@ -4913,7 +4913,7 @@ LABEL_250:
                     System_Collections_Generic_List_int___AddWithResize(
                       (System_Collections_Generic_List_int__o *)v8,
                       v292,
-                      *(const MethodInfo_377B798 **)(*(_QWORD *)(v294[4] + 192LL) + 112LL));
+                      *(const MethodInfo_3786000 **)(*(_QWORD *)(v294[4] + 192LL) + 112LL));
                     v8 = (UnityEngine_Object_o *)*p_trianges;
                     if ( !*p_trianges )
                       goto LABEL_334;
@@ -4936,7 +4936,7 @@ LABEL_250:
                       System_Collections_Generic_List_int___AddWithResize(
                         (System_Collections_Generic_List_int__o *)v8,
                         v300,
-                        *(const MethodInfo_377B798 **)(*(_QWORD *)(v298[4] + 192LL) + 112LL));
+                        *(const MethodInfo_3786000 **)(*(_QWORD *)(v298[4] + 192LL) + 112LL));
                       v8 = (UnityEngine_Object_o *)*p_trianges;
                       if ( !*p_trianges )
                         goto LABEL_334;
@@ -4959,7 +4959,7 @@ LABEL_250:
                         System_Collections_Generic_List_int___AddWithResize(
                           (System_Collections_Generic_List_int__o *)v8,
                           v305,
-                          *(const MethodInfo_377B798 **)(*(_QWORD *)(v303[4] + 192LL) + 112LL));
+                          *(const MethodInfo_3786000 **)(*(_QWORD *)(v303[4] + 192LL) + 112LL));
                         v8 = (UnityEngine_Object_o *)*p_trianges;
                         if ( !*p_trianges )
                           goto LABEL_334;
@@ -4982,7 +4982,7 @@ LABEL_250:
                           System_Collections_Generic_List_int___AddWithResize(
                             (System_Collections_Generic_List_int__o *)v8,
                             v310,
-                            *(const MethodInfo_377B798 **)(*(_QWORD *)(v308[4] + 192LL) + 112LL));
+                            *(const MethodInfo_3786000 **)(*(_QWORD *)(v308[4] + 192LL) + 112LL));
                           v8 = (UnityEngine_Object_o *)*p_trianges;
                           if ( !*p_trianges )
                             goto LABEL_334;
@@ -5005,7 +5005,7 @@ LABEL_250:
                             System_Collections_Generic_List_int___AddWithResize(
                               (System_Collections_Generic_List_int__o *)v8,
                               v315,
-                              *(const MethodInfo_377B798 **)(*(_QWORD *)(v313[4] + 192LL) + 112LL));
+                              *(const MethodInfo_3786000 **)(*(_QWORD *)(v313[4] + 192LL) + 112LL));
                             v8 = (UnityEngine_Object_o *)*p_trianges;
                             if ( !*p_trianges )
                               goto LABEL_334;
@@ -5028,7 +5028,7 @@ LABEL_250:
                               System_Collections_Generic_List_int___AddWithResize(
                                 (System_Collections_Generic_List_int__o *)v8,
                                 (int32_t)v49,
-                                *(const MethodInfo_377B798 **)(*(_QWORD *)(v318[4] + 192LL) + 112LL));
+                                *(const MethodInfo_3786000 **)(*(_QWORD *)(v318[4] + 192LL) + 112LL));
                             }
                             else
                             {
@@ -5050,7 +5050,7 @@ LABEL_250:
       }
     }
 LABEL_334:
-    sub_1C32E7C(v8);
+    sub_1C372B4(v8);
   }
 LABEL_312:
   if ( this->fields.DrawCap )
@@ -5064,20 +5064,20 @@ LABEL_312:
     v327 = v418.fields.x;
     v328 = v418.fields.y;
     v329 = v418.fields.z;
-    if ( !byte_4C313D4 )
+    if ( !byte_4C3C924 )
     {
-      sub_1C32C20(&System_Math_TypeInfo);
-      byte_4C313D4 = 1;
+      sub_1C37058(&System_Math_TypeInfo);
+      byte_4C3C924 = 1;
     }
     if ( !System_Math_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(System_Math_TypeInfo);
     v330 = sqrtf((float)(v329 * v329) + (float)((float)(v327 * v327) + (float)(v328 * v328)));
     if ( v330 <= 0.00001 )
     {
-      if ( !byte_4C313D1 )
+      if ( !byte_4C3C921 )
       {
-        sub_1C32C20(&UnityEngine_Vector3_TypeInfo);
-        byte_4C313D1 = 1;
+        sub_1C37058(&UnityEngine_Vector3_TypeInfo);
+        byte_4C3C921 = 1;
       }
       v334 = UnityEngine_Vector3_TypeInfo->static_fields;
       v331 = v334->zeroVector.fields.x;
@@ -5103,7 +5103,7 @@ LABEL_312:
   v335 = *v349;
   v8 = (UnityEngine_Object_o *)System_Collections_Generic_List_Vector3___ToArray(
                                  (System_Collections_Generic_List_Vector3__o *)v8,
-                                 (const MethodInfo_37F3154 *)Method_System_Collections_Generic_List_Vector3__ToArray__);
+                                 (const MethodInfo_37FD9BC *)Method_System_Collections_Generic_List_Vector3__ToArray__);
   if ( !v335 )
     goto LABEL_334;
   UnityEngine_Mesh__set_vertices(v335, (UnityEngine_Vector3_array *)v8, 0);
@@ -5113,7 +5113,7 @@ LABEL_312:
   v336 = *v349;
   v8 = (UnityEngine_Object_o *)System_Collections_Generic_List_int___ToArray(
                                  (System_Collections_Generic_List_int__o *)v8,
-                                 (const MethodInfo_377D250 *)Method_System_Collections_Generic_List_int__ToArray__);
+                                 (const MethodInfo_3787AB8 *)Method_System_Collections_Generic_List_int__ToArray__);
   if ( !v336 )
     goto LABEL_334;
   UnityEngine_Mesh__set_triangles(v336, (System_Int32_array *)v8, 0);
@@ -5123,7 +5123,7 @@ LABEL_312:
   v337 = *v349;
   v8 = (UnityEngine_Object_o *)System_Collections_Generic_List_Vector2___ToArray(
                                  (System_Collections_Generic_List_Vector2__o *)v8,
-                                 (const MethodInfo_37F07C8 *)Method_System_Collections_Generic_List_Vector2__ToArray__);
+                                 (const MethodInfo_37FB030 *)Method_System_Collections_Generic_List_Vector2__ToArray__);
   if ( !v337 )
     goto LABEL_334;
   UnityEngine_Mesh__set_uv(v337, (UnityEngine_Vector2_array *)v8, 0);
@@ -5166,9 +5166,9 @@ UnityEngine_Vector3_o Custom2dSplineMesh__GetControlPoint(
 
   points = this->fields.points;
   if ( !points )
-    sub_1C32E7C(this);
+    sub_1C372B4(this);
   if ( LODWORD(points->max_length) <= index )
-    sub_1C32E84(this);
+    sub_1C372BC(this);
   v4 = (float *)((char *)points + 12 * index);
   v5 = v4[8];
   v6 = v4[9];
@@ -5187,10 +5187,10 @@ int32_t Custom2dSplineMesh__GetControlPointMode(Custom2dSplineMesh_o *this, int3
 
   modes = this->fields.modes;
   if ( !modes )
-    sub_1C32E7C(this);
+    sub_1C372B4(this);
   v4 = (index + 1) / 3;
   if ( (unsigned int)v4 >= LODWORD(modes->max_length) )
-    sub_1C32E84(this);
+    sub_1C372BC(this);
   return modes->m_Items[v4];
 }
 
@@ -5205,10 +5205,10 @@ float Custom2dSplineMesh__GetCurveWeight(Custom2dSplineMesh_o *this, int32_t ind
   Custom2dSplineMesh__checkWeightNull(this, *(const MethodInfo **)&index);
   curveWeight = this->fields.curveWeight;
   if ( !curveWeight )
-    sub_1C32E7C(v5);
+    sub_1C372B4(v5);
   v7 = (index + 1) / 3;
   if ( (unsigned int)v7 >= LODWORD(curveWeight->max_length) )
-    sub_1C32E84(v5);
+    sub_1C372BC(v5);
   return curveWeight->m_Items[v7];
 }
 
@@ -5230,20 +5230,20 @@ UnityEngine_Vector3_o Custom2dSplineMesh__GetDirection(Custom2dSplineMesh_o *thi
   x = Velocity.fields.x;
   y = Velocity.fields.y;
   z = Velocity.fields.z;
-  if ( !byte_4C313D4 )
+  if ( !byte_4C3C924 )
   {
-    sub_1C32C20(&System_Math_TypeInfo);
-    byte_4C313D4 = 1;
+    sub_1C37058(&System_Math_TypeInfo);
+    byte_4C3C924 = 1;
   }
   if ( !System_Math_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(System_Math_TypeInfo);
   v6 = sqrtf((float)(z * z) + (float)((float)(x * x) + (float)(y * y)));
   if ( v6 <= 0.00001 )
   {
-    if ( !byte_4C313D1 )
+    if ( !byte_4C3C921 )
     {
-      sub_1C32C20(&UnityEngine_Vector3_TypeInfo);
-      byte_4C313D1 = 1;
+      sub_1C37058(&UnityEngine_Vector3_TypeInfo);
+      byte_4C3C921 = 1;
     }
     static_fields = UnityEngine_Vector3_TypeInfo->static_fields;
     v7 = static_fields->zeroVector.fields.x;
@@ -5353,10 +5353,10 @@ UnityEngine_Vector3_o Custom2dSplineMesh__GetOffset(Custom2dSplineMesh_o *this, 
   v16 = Direction.fields.z * v7;
   v17 = Direction.fields.y * v7;
   v18 = Direction.fields.x * v10;
-  if ( !byte_4C313D4 )
+  if ( !byte_4C3C924 )
   {
-    sub_1C32C20(&System_Math_TypeInfo);
-    byte_4C313D4 = 1;
+    sub_1C37058(&System_Math_TypeInfo);
+    byte_4C3C924 = 1;
   }
   v19 = v13 - v14;
   v20 = v15 - v16;
@@ -5366,10 +5366,10 @@ UnityEngine_Vector3_o Custom2dSplineMesh__GetOffset(Custom2dSplineMesh_o *this, 
   v22 = sqrtf((float)(v21 * v21) + (float)((float)(v19 * v19) + (float)(v20 * v20)));
   if ( v22 <= 0.00001 )
   {
-    if ( !byte_4C313D1 )
+    if ( !byte_4C3C921 )
     {
-      sub_1C32C20(&UnityEngine_Vector3_TypeInfo);
-      byte_4C313D1 = 1;
+      sub_1C37058(&UnityEngine_Vector3_TypeInfo);
+      byte_4C3C921 = 1;
     }
     static_fields = UnityEngine_Vector3_TypeInfo->static_fields;
     x = static_fields->zeroVector.fields.x;
@@ -5425,16 +5425,16 @@ UnityEngine_Vector3_o Custom2dSplineMesh__GetPoint(Custom2dSplineMesh_o *this, f
   *(_QWORD *)&v5.fields.x = Custom2dSplineMesh__GetWeightedPointIdxAndT(this, t, &innerT, v3);
   points = this->fields.points;
   if ( !points )
-    sub_1C32E7C(*(_QWORD *)&v5.fields.x);
+    sub_1C372B4(*(_QWORD *)&v5.fields.x);
   max_length = points->max_length;
   if ( LODWORD(v5.fields.x) >= max_length
     || LODWORD(v5.fields.x) + 1 >= max_length
     || LODWORD(v5.fields.x) + 2 >= max_length
     || LODWORD(v5.fields.x) + 3 >= max_length )
   {
-    sub_1C32E84(*(_QWORD *)&v5.fields.x);
+    sub_1C372BC(*(_QWORD *)&v5.fields.x);
   }
-  return Bezier__GetPoint_41439912(
+  return Bezier__GetPoint_41539392(
            points->m_Items[SLODWORD(v5.fields.x)],
            points->m_Items[LODWORD(v5.fields.x) + 1],
            points->m_Items[LODWORD(v5.fields.x) + 2],
@@ -5458,7 +5458,7 @@ UnityEngine_Vector3_o Custom2dSplineMesh__GetPointAsWorld(
   transform = UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0);
   Point = Custom2dSplineMesh__GetPoint(this, t, v6);
   if ( !transform )
-    sub_1C32E7C(v7);
+    sub_1C372B4(v7);
   v9.fields.z = Point.fields.z + this->fields.PointOffset.fields.z;
   v9.fields.y = Point.fields.y + this->fields.PointOffset.fields.y;
   v9.fields.x = Point.fields.x + this->fields.PointOffset.fields.x;
@@ -5503,7 +5503,7 @@ UnityEngine_Vector3_o Custom2dSplineMesh__GetPointAsWorldFlatten(
     v11 = 0.0;
   }
   if ( !transform )
-    sub_1C32E7C(v7);
+    sub_1C372B4(v7);
   return UnityEngine_Transform__TransformPoint(transform, *(UnityEngine_Vector3_o *)(&v9 - 1), 0);
 }
 
@@ -5521,7 +5521,7 @@ float Custom2dSplineMesh__GetTotalWeight(Custom2dSplineMesh_o *this, const Metho
   Custom2dSplineMesh__checkWeightNull(this, method);
   curveWeight = this->fields.curveWeight;
   if ( !curveWeight )
-    sub_1C32E7C(v3);
+    sub_1C372B4(v3);
   max_length_low = LODWORD(curveWeight->max_length);
   if ( (__int64)(max_length_low << 32) < 1 )
     return 0.0;
@@ -5531,7 +5531,7 @@ float Custom2dSplineMesh__GetTotalWeight(Custom2dSplineMesh_o *this, const Metho
   do
   {
     if ( v6 >= max_length_low )
-      sub_1C32E84(v3);
+      sub_1C372BC(v3);
     v9 = m_Items[v6++];
     result = result + v9;
   }
@@ -5547,16 +5547,16 @@ UnityEngine_Vector2_o Custom2dSplineMesh__GetUV(
         float coordV,
         const MethodInfo *method)
 {
-  UnityEngine_Vector2_o UV_41456544; // kr00_8
+  UnityEngine_Vector2_o UV_41556024; // kr00_8
   float v6; // s0
   float v7; // s1
   UnityEngine_Vector2_o result; // 0:s0.4,4:s1.4
 
   if ( this->fields.StrictUVmode )
   {
-    UV_41456544 = Custom2dSplineMesh__GetUV_41456544(this, pos, method);
-    coordU = UV_41456544.fields.x;
-    coordV = UV_41456544.fields.y;
+    UV_41556024 = Custom2dSplineMesh__GetUV_41556024(this, pos, method);
+    coordU = UV_41556024.fields.x;
+    coordV = UV_41556024.fields.y;
   }
   v6 = coordU;
   v7 = coordV;
@@ -5566,7 +5566,7 @@ UnityEngine_Vector2_o Custom2dSplineMesh__GetUV(
 }
 
 
-UnityEngine_Vector2_o Custom2dSplineMesh__GetUV_41456544(
+UnityEngine_Vector2_o Custom2dSplineMesh__GetUV_41556024(
         Custom2dSplineMesh_o *this,
         UnityEngine_Vector3_o pos,
         const MethodInfo *method)
@@ -5598,10 +5598,10 @@ LABEL_7:
   }
   if ( flattenAxis )
   {
-    if ( !byte_4C312CA )
+    if ( !byte_4C3C81A )
     {
-      sub_1C32C20(&UnityEngine_Vector2_TypeInfo);
-      byte_4C312CA = 1;
+      sub_1C37058(&UnityEngine_Vector2_TypeInfo);
+      byte_4C3C81A = 1;
     }
     static_fields = UnityEngine_Vector2_TypeInfo->static_fields;
     x = static_fields->zeroVector.fields.x;
@@ -5636,7 +5636,7 @@ UnityEngine_Vector3_o Custom2dSplineMesh__GetVelocity(Custom2dSplineMesh_o *this
   float v15; // s1
   float v16; // s2
   float innerT; // [xsp+3Ch] [xbp-34h] BYREF
-  UnityEngine_Vector3_o FirstDerivative_41440176; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o FirstDerivative_41539656; // 0:s0.4,4:s1.4,8:s2.4
   UnityEngine_Vector3_o v19; // 0:s0.4,4:s1.4,8:s2.4
   UnityEngine_Vector3_o position; // 0:s0.4,4:s1.4,8:s2.4
   UnityEngine_Vector3_o result; // 0:s0.4,4:s1.4,8:s2.4
@@ -5653,10 +5653,10 @@ UnityEngine_Vector3_o Custom2dSplineMesh__GetVelocity(Custom2dSplineMesh_o *this
     || WeightedPointIdxAndT + 2 >= max_length
     || WeightedPointIdxAndT + 3 >= max_length )
   {
-    sub_1C32E84(*(_QWORD *)&v6.fields.x);
+    sub_1C372BC(*(_QWORD *)&v6.fields.x);
   }
   v10 = *(UnityEngine_Transform_o **)&v6.fields.x;
-  FirstDerivative_41440176 = Bezier__GetFirstDerivative_41440176(
+  FirstDerivative_41539656 = Bezier__GetFirstDerivative_41539656(
                                points->m_Items[WeightedPointIdxAndT],
                                points->m_Items[WeightedPointIdxAndT + 1],
                                points->m_Items[WeightedPointIdxAndT + 2],
@@ -5664,14 +5664,14 @@ UnityEngine_Vector3_o Custom2dSplineMesh__GetVelocity(Custom2dSplineMesh_o *this
                                COERCE_FLOAT(*(_QWORD *)&points->m_Items[WeightedPointIdxAndT + 3].fields.x),
                                v7);
   if ( !v10
-    || (v19 = UnityEngine_Transform__TransformPoint(v10, FirstDerivative_41440176, 0),
+    || (v19 = UnityEngine_Transform__TransformPoint(v10, FirstDerivative_41539656, 0),
         x = v19.fields.x,
         y = v19.fields.y,
         z = v19.fields.z,
         (*(_QWORD *)&v6.fields.x = UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0)) == 0) )
   {
 LABEL_10:
-    sub_1C32E7C(*(_QWORD *)&v6.fields.x);
+    sub_1C372B4(*(_QWORD *)&v6.fields.x);
   }
   position = UnityEngine_Transform__get_position(*(UnityEngine_Transform_o **)&v6.fields.x, 0);
   v14 = x - position.fields.x;
@@ -5727,7 +5727,7 @@ int32_t Custom2dSplineMesh__GetWeightedPointIdxAndT(
       do
       {
         if ( v14 >= LODWORD(curveWeight->max_length) )
-          sub_1C32E84(v10);
+          sub_1C372BC(v10);
         v16 = (float *)((char *)curveWeight + 4 * (int)v14);
         v11 = v9;
         ++v14;
@@ -5739,7 +5739,7 @@ int32_t Custom2dSplineMesh__GetWeightedPointIdxAndT(
       goto LABEL_10;
     }
 LABEL_15:
-    sub_1C32E7C(this);
+    sub_1C372B4(this);
   }
   LODWORD(v10) = -3;
   v11 = 0.0;
@@ -5800,23 +5800,23 @@ void Custom2dSplineMesh__OnDestroy(Custom2dSplineMesh_o *this, const MethodInfo 
   UnityEngine_MeshFilter_o *meshFilter; // x0
   UnityEngine_Object_o *drawMesh; // x19
 
-  if ( (byte_4C37410 & 1) == 0 )
+  if ( (byte_4C42A00 & 1) == 0 )
   {
-    sub_1C32C20(&UnityEngine_Object_TypeInfo);
-    byte_4C37410 = 1;
+    sub_1C37058(&UnityEngine_Object_TypeInfo);
+    byte_4C42A00 = 1;
   }
   meshFilter = this->fields.meshFilter;
   if ( !meshFilter
     || (UnityEngine_MeshFilter__set_mesh(meshFilter, 0, 0),
         (meshFilter = (UnityEngine_MeshFilter_o *)this->fields.drawMesh) == 0) )
   {
-    sub_1C32E7C(meshFilter);
+    sub_1C372B4(meshFilter);
   }
   UnityEngine_Mesh__Clear((UnityEngine_Mesh_o *)meshFilter, 0);
   drawMesh = (UnityEngine_Object_o *)this->fields.drawMesh;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-  UnityEngine_Object__Destroy_71223640(drawMesh, 0);
+  UnityEngine_Object__Destroy_71266752(drawMesh, 0);
 }
 
 
@@ -5826,7 +5826,7 @@ void Custom2dSplineMesh__RemoveMesh(Custom2dSplineMesh_o *this, const MethodInfo
 
   meshFilter = this->fields.meshFilter;
   if ( !meshFilter )
-    sub_1C32E7C(0);
+    sub_1C372B4(0);
   UnityEngine_MeshFilter__set_mesh(meshFilter, 0, 0);
 }
 
@@ -5843,14 +5843,14 @@ void Custom2dSplineMesh__Reset(Custom2dSplineMesh_o *this, const MethodInfo *met
   int32_t v10; // w2
   const MethodInfo *v11; // x3
 
-  if ( (byte_4C3740A & 1) == 0 )
+  if ( (byte_4C429FA & 1) == 0 )
   {
-    sub_1C32C20(&BezierControlPointMode___TypeInfo);
-    sub_1C32C20(&float___TypeInfo);
-    sub_1C32C20(&UnityEngine_Vector3___TypeInfo);
-    byte_4C3740A = 1;
+    sub_1C37058(&BezierControlPointMode___TypeInfo);
+    sub_1C37058(&float___TypeInfo);
+    sub_1C37058(&UnityEngine_Vector3___TypeInfo);
+    byte_4C429FA = 1;
   }
-  v3 = sub_1C32CC8(UnityEngine_Vector3___TypeInfo, 4);
+  v3 = sub_1C37100(UnityEngine_Vector3___TypeInfo, 4);
   if ( !v3 )
     goto LABEL_12;
   v6 = *(_DWORD *)(v3 + 24);
@@ -5860,24 +5860,24 @@ void Custom2dSplineMesh__Reset(Custom2dSplineMesh_o *this, const MethodInfo *met
     || (*(_DWORD *)(v3 + 64) = 0, *(_QWORD *)(v3 + 56) = 1077936128, v6 == 3) )
   {
 LABEL_11:
-    sub_1C32E84(v3);
+    sub_1C372BC(v3);
   }
   *(_DWORD *)(v3 + 76) = 0;
   *(_QWORD *)(v3 + 68) = 1082130432;
   this->fields.points = (struct UnityEngine_Vector3_array *)v3;
-  sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.points, v3, v4, v5);
-  v7 = (struct BezierControlPointMode_array *)sub_1C32CC8(BezierControlPointMode___TypeInfo, 2);
+  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.points, v3, v4, v5);
+  v7 = (struct BezierControlPointMode_array *)sub_1C37100(BezierControlPointMode___TypeInfo, 2);
   this->fields.modes = v7;
-  sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.modes, (int32_t)v7, v8, v9);
-  v3 = sub_1C32CC8(float___TypeInfo, 1);
+  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.modes, (int32_t)v7, v8, v9);
+  v3 = sub_1C37100(float___TypeInfo, 1);
   if ( !v3 )
 LABEL_12:
-    sub_1C32E7C(v3);
+    sub_1C372B4(v3);
   if ( !*(_DWORD *)(v3 + 24) )
     goto LABEL_11;
   *(_DWORD *)(v3 + 32) = 1065353216;
   this->fields.curveWeight = (struct System_Single_array *)v3;
-  sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.curveWeight, v3, v10, v11);
+  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.curveWeight, v3, v10, v11);
 }
 
 
@@ -5920,7 +5920,7 @@ LABEL_10:
       v16.fields.x = x;
       v16.fields.y = y;
       v16.fields.z = z;
-      v14 = UnityEngine_Quaternion__op_Multiply_71162940(v17, v16, 0);
+      v14 = UnityEngine_Quaternion__op_Multiply_71206052(v17, v16, 0);
       x = v14.fields.x;
       y = v14.fields.y;
       z = v14.fields.z;
@@ -5993,7 +5993,7 @@ void Custom2dSplineMesh__SetControlPoint(
       points = this->fields.points;
       if ( !points )
 LABEL_14:
-        sub_1C32E7C(this);
+        sub_1C372B4(this);
     }
     v14 = points->max_length;
     if ( (int)(v14 - 1) > index )
@@ -6012,7 +6012,7 @@ LABEL_14:
     goto LABEL_14;
   if ( LODWORD(v18->max_length) <= index )
 LABEL_13:
-    sub_1C32E84(this);
+    sub_1C372BC(this);
   v18->m_Items[index] = point;
   Custom2dSplineMesh__EnforceMode(this, index, method);
 }
@@ -6030,10 +6030,10 @@ void Custom2dSplineMesh__SetControlPointMode(
 
   modes = this->fields.modes;
   if ( !modes )
-    sub_1C32E7C(this);
+    sub_1C372B4(this);
   v5 = (index + 1) / 3;
   if ( (unsigned int)v5 >= LODWORD(modes->max_length) )
-    sub_1C32E84(this);
+    sub_1C372BC(this);
   modes->m_Items[v5] = mode;
   Custom2dSplineMesh__EnforceMode(this, index, *(const MethodInfo **)&mode);
 }
@@ -6044,22 +6044,22 @@ void Custom2dSplineMesh__SetList(Custom2dSplineMesh_o *this, const MethodInfo *m
   struct System_Collections_Generic_List_Vector3__o *splinePos; // x0
   int v4; // w8
 
-  if ( (byte_4C37411 & 1) == 0 )
+  if ( (byte_4C42A01 & 1) == 0 )
   {
-    sub_1C32C20(&Method_System_Collections_Generic_List_Vector3__AddRange__);
-    sub_1C32C20(&Method_System_Collections_Generic_List_Vector3__Clear__);
-    byte_4C37411 = 1;
+    sub_1C37058(&Method_System_Collections_Generic_List_Vector3__AddRange__);
+    sub_1C37058(&Method_System_Collections_Generic_List_Vector3__Clear__);
+    byte_4C42A01 = 1;
   }
   splinePos = this->fields.splinePos;
   if ( !splinePos )
-    sub_1C32E7C(0);
+    sub_1C372B4(0);
   v4 = splinePos->fields._version + 1;
   splinePos->fields._size = 0;
   splinePos->fields._version = v4;
   System_Collections_Generic_List_Vector3___AddRange(
     splinePos,
     (System_Collections_Generic_IEnumerable_T__o *)this->fields.points,
-    (const MethodInfo_37F17B4 *)Method_System_Collections_Generic_List_Vector3__AddRange__);
+    (const MethodInfo_37FC01C *)Method_System_Collections_Generic_List_Vector3__AddRange__);
 }
 
 
@@ -6078,18 +6078,18 @@ void Custom2dSplineMesh__Start(Custom2dSplineMesh_o *this, const MethodInfo *met
   const MethodInfo *v6; // x1
   const MethodInfo *v7; // x1
 
-  if ( (byte_4C3740E & 1) == 0 )
+  if ( (byte_4C429FE & 1) == 0 )
   {
-    sub_1C32C20(&Method_UnityEngine_Component_GetComponent_MeshFilter___);
-    byte_4C3740E = 1;
+    sub_1C37058(&Method_UnityEngine_Component_GetComponent_MeshFilter___);
+    byte_4C429FE = 1;
   }
   if ( this->fields.DrawPath )
   {
     Component_object = UnityEngine_Component__GetComponent_object_(
                          (UnityEngine_Component_o *)this,
-                         (const MethodInfo_30D3BC0 *)Method_UnityEngine_Component_GetComponent_MeshFilter___);
+                         (const MethodInfo_30DE428 *)Method_UnityEngine_Component_GetComponent_MeshFilter___);
     this->fields.meshFilter = (struct UnityEngine_MeshFilter_o *)Component_object;
-    sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.meshFilter, (int32_t)Component_object, v4, v5);
+    sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.meshFilter, (int32_t)Component_object, v4, v5);
     Custom2dSplineMesh__SetList(this, v6);
     Custom2dSplineMesh__GenMesh(this, v7);
   }
@@ -6109,11 +6109,11 @@ void Custom2dSplineMesh__Update(Custom2dSplineMesh_o *this, const MethodInfo *me
   UnityEngine_Vector3_o Item; // 0:s0.4,4:s1.4,8:s2.4
 
   v2 = this;
-  if ( (byte_4C3740F & 1) == 0 )
+  if ( (byte_4C429FF & 1) == 0 )
   {
-    sub_1C32C20(&Method_System_Collections_Generic_List_Vector3__get_Count__);
-    this = (Custom2dSplineMesh_o *)sub_1C32C20(&Method_System_Collections_Generic_List_Vector3__get_Item__);
-    byte_4C3740F = 1;
+    sub_1C37058(&Method_System_Collections_Generic_List_Vector3__get_Count__);
+    this = (Custom2dSplineMesh_o *)sub_1C37058(&Method_System_Collections_Generic_List_Vector3__get_Item__);
+    byte_4C429FF = 1;
   }
   if ( v2->fields.DrawPath && v2->fields.ResetOnUpdate )
   {
@@ -6145,12 +6145,12 @@ void Custom2dSplineMesh__Update(Custom2dSplineMesh_o *this, const MethodInfo *me
               Item = System_Collections_Generic_List_Vector3___get_Item(
                        (System_Collections_Generic_List_Vector3__o *)this,
                        v7,
-                       (const MethodInfo_37F1254 *)Method_System_Collections_Generic_List_Vector3__get_Item__);
+                       (const MethodInfo_37FBABC *)Method_System_Collections_Generic_List_Vector3__get_Item__);
               v8 = v2->fields.points;
               if ( !v8 )
                 break;
               if ( v7 >= LODWORD(v8->max_length) )
-                sub_1C32E84(this);
+                sub_1C372BC(this);
               v9 = (float *)((char *)v8 + v6);
               if ( (float)((float)((float)(Item.fields.z - v9[10]) * (float)(Item.fields.z - v9[10]))
                          + (float)((float)((float)(Item.fields.x - v9[8]) * (float)(Item.fields.x - v9[8]))
@@ -6165,7 +6165,7 @@ void Custom2dSplineMesh__Update(Custom2dSplineMesh_o *this, const MethodInfo *me
                 return;
             }
 LABEL_22:
-            sub_1C32E7C(this);
+            sub_1C372B4(this);
           }
           return;
         }
@@ -6197,14 +6197,14 @@ void Custom2dSplineMesh__checkWeightNull(Custom2dSplineMesh_o *this, const Metho
   const MethodInfo *v16; // x3
 
   v2 = this;
-  if ( (byte_4C3740B & 1) == 0 )
+  if ( (byte_4C429FB & 1) == 0 )
   {
-    sub_1C32C20(&Method_System_Collections_Generic_List_float__RemoveAt__);
-    sub_1C32C20(&Method_System_Collections_Generic_List_float__ToArray__);
-    sub_1C32C20(&Method_System_Collections_Generic_List_float___ctor___78020840);
-    sub_1C32C20(&System_Collections_Generic_List_float__TypeInfo);
-    this = (Custom2dSplineMesh_o *)sub_1C32C20(&float___TypeInfo);
-    byte_4C3740B = 1;
+    sub_1C37058(&Method_System_Collections_Generic_List_float__RemoveAt__);
+    sub_1C37058(&Method_System_Collections_Generic_List_float__ToArray__);
+    sub_1C37058(&Method_System_Collections_Generic_List_float___ctor___78066576);
+    sub_1C37058(&System_Collections_Generic_List_float__TypeInfo);
+    this = (Custom2dSplineMesh_o *)sub_1C37058(&float___TypeInfo);
+    byte_4C429FB = 1;
   }
   p_curveWeight = (CGThumbnailListItem_o *)&v2->fields.curveWeight;
   curveWeight = (System_Collections_Generic_IEnumerable_T__o *)v2->fields.curveWeight;
@@ -6213,9 +6213,9 @@ void Custom2dSplineMesh__checkWeightNull(Custom2dSplineMesh_o *this, const Metho
     modes = v2->fields.modes;
     if ( !modes )
       goto LABEL_18;
-    v7 = sub_1C32CC8(float___TypeInfo, (unsigned int)(LODWORD(modes->max_length) - 1));
+    v7 = sub_1C37100(float___TypeInfo, (unsigned int)(LODWORD(modes->max_length) - 1));
     p_curveWeight->klass = (CGThumbnailListItem_c *)v7;
-    sub_1C32BC4((CGThumbnailListItem_o *)&v2->fields.curveWeight, v7, v8, v9);
+    sub_1C36FFC((CGThumbnailListItem_o *)&v2->fields.curveWeight, v7, v8, v9);
     curveWeight = (System_Collections_Generic_IEnumerable_T__o *)p_curveWeight->klass;
     if ( !p_curveWeight->klass )
       goto LABEL_18;
@@ -6226,7 +6226,7 @@ void Custom2dSplineMesh__checkWeightNull(Custom2dSplineMesh_o *this, const Metho
       do
       {
         if ( v10 >= monitor_low )
-          sub_1C32E84(this);
+          sub_1C372BC(this);
         v11 = (char *)curveWeight + 4 * v10++;
         *((_DWORD *)v11 + 8) = 1065353216;
       }
@@ -6238,26 +6238,26 @@ void Custom2dSplineMesh__checkWeightNull(Custom2dSplineMesh_o *this, const Metho
     goto LABEL_18;
   if ( (_DWORD)monitor_low == LODWORD(v12->max_length) )
   {
-    v13 = (System_Collections_Generic_List_float__o *)sub_1C32E6C(System_Collections_Generic_List_float__TypeInfo);
-    System_Collections_Generic_List_float____ctor_58448900(
+    v13 = (System_Collections_Generic_List_float__o *)sub_1C372A4(System_Collections_Generic_List_float__TypeInfo);
+    System_Collections_Generic_List_float____ctor_58492012(
       v13,
       curveWeight,
-      (const MethodInfo_37BDC04 *)Method_System_Collections_Generic_List_float___ctor___78020840);
+      (const MethodInfo_37C846C *)Method_System_Collections_Generic_List_float___ctor___78066576);
     if ( p_curveWeight->klass && v13 )
     {
       System_Collections_Generic_List_float___RemoveAt(
         v13,
         LODWORD(p_curveWeight->klass->_1.namespaze) - 1,
-        (const MethodInfo_37BFAB8 *)Method_System_Collections_Generic_List_float__RemoveAt__);
+        (const MethodInfo_37CA320 *)Method_System_Collections_Generic_List_float__RemoveAt__);
       v14 = System_Collections_Generic_List_float___ToArray(
               v13,
-              (const MethodInfo_37BFDF0 *)Method_System_Collections_Generic_List_float__ToArray__);
+              (const MethodInfo_37CA658 *)Method_System_Collections_Generic_List_float__ToArray__);
       p_curveWeight->klass = (CGThumbnailListItem_c *)v14;
-      sub_1C32BC4(p_curveWeight, (int32_t)v14, v15, v16);
+      sub_1C36FFC(p_curveWeight, (int32_t)v14, v15, v16);
       return;
     }
 LABEL_18:
-    sub_1C32E7C(this);
+    sub_1C372B4(this);
   }
 }
 
@@ -6268,7 +6268,7 @@ int32_t Custom2dSplineMesh__get_ControlPointCount(Custom2dSplineMesh_o *this, co
 
   points = this->fields.points;
   if ( !points )
-    sub_1C32E7C(this);
+    sub_1C372B4(this);
   return points->max_length;
 }
 
@@ -6280,7 +6280,7 @@ int32_t Custom2dSplineMesh__get_CurveCount(Custom2dSplineMesh_o *this, const Met
 
   points = this->fields.points;
   if ( !points )
-    sub_1C32E7C(this);
+    sub_1C372B4(this);
   v3 = 1431655766LL * (LODWORD(points->max_length) - 1);
   return HIDWORD(v3) + (v3 >> 63);
 }
@@ -6312,7 +6312,7 @@ bool Custom2dSplineMesh__isJumpcut(
   {
     curveWeight = this->fields.curveWeight;
     if ( !curveWeight )
-      sub_1C32E7C(v9);
+      sub_1C372B4(v9);
     max_length_low = LODWORD(curveWeight->max_length);
     if ( (__int64)(max_length_low << 32) >= 1 )
     {
@@ -6322,7 +6322,7 @@ bool Custom2dSplineMesh__isJumpcut(
       do
       {
         if ( v14 >= max_length_low )
-          sub_1C32E84(v9);
+          sub_1C372BC(v9);
         v16 = v16 + m_Items[v14];
         v11 = v16 / TotalWeight;
         if ( (float)(v16 / TotalWeight) > now )

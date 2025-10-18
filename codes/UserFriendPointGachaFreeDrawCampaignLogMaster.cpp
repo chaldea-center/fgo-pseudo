@@ -2,15 +2,15 @@ void UserFriendPointGachaFreeDrawCampaignLogMaster___ctor(
         UserFriendPointGachaFreeDrawCampaignLogMaster_o *this,
         const MethodInfo *method)
 {
-  if ( (byte_4C38856 & 1) == 0 )
+  if ( (byte_4C43E4F & 1) == 0 )
   {
-    sub_1C32C20(&Method_DataMasterBase_UserFriendPointGachaFreeDrawCampaignLogMaster__UserFriendPointGachaFreeDrawCampaignLogEntity__string___ctor__);
-    byte_4C38856 = 1;
+    sub_1C37058(&Method_DataMasterBase_UserFriendPointGachaFreeDrawCampaignLogMaster__UserFriendPointGachaFreeDrawCampaignLogEntity__string___ctor__);
+    byte_4C43E4F = 1;
   }
   DataMasterBase_object__object__object____ctor(
     (DataMasterBase_TMaster__TEntity__PKType__o *)this,
     398,
-    (const MethodInfo_3398FCC *)Method_DataMasterBase_UserFriendPointGachaFreeDrawCampaignLogMaster__UserFriendPointGachaFreeDrawCampaignLogEntity__string___ctor__);
+    (const MethodInfo_33A3834 *)Method_DataMasterBase_UserFriendPointGachaFreeDrawCampaignLogMaster__UserFriendPointGachaFreeDrawCampaignLogEntity__string___ctor__);
 }
 
 
@@ -42,22 +42,22 @@ int32_t UserFriendPointGachaFreeDrawCampaignLogMaster__GetDrawLogNum(
   int32_t *v26; // x10
   __int64 v27; // x0
 
-  if ( (byte_4C38857 & 1) == 0 )
+  if ( (byte_4C43E50 & 1) == 0 )
   {
-    sub_1C32C20(&Method_System_Collections_ObjectModel_Collection_UserFriendPointGachaFreeDrawCampaignLogEntity__GetEnumerator__);
-    sub_1C32C20(&System_IDisposable_TypeInfo);
-    sub_1C32C20(&System_Collections_Generic_IEnumerator_UserFriendPointGachaFreeDrawCampaignLogEntity__TypeInfo);
-    sub_1C32C20(&System_Collections_IEnumerator_TypeInfo);
-    byte_4C38857 = 1;
+    sub_1C37058(&Method_System_Collections_ObjectModel_Collection_UserFriendPointGachaFreeDrawCampaignLogEntity__GetEnumerator__);
+    sub_1C37058(&System_IDisposable_TypeInfo);
+    sub_1C37058(&System_Collections_Generic_IEnumerator_UserFriendPointGachaFreeDrawCampaignLogEntity__TypeInfo);
+    sub_1C37058(&System_Collections_IEnumerator_TypeInfo);
+    byte_4C43E50 = 1;
   }
   list = (System_Collections_ObjectModel_Collection_T__o *)this->fields.list;
   if ( !list )
-    sub_1C32E7C(0);
+    sub_1C372B4(0);
   Enumerator = System_Collections_ObjectModel_Collection_object___GetEnumerator(
                  list,
-                 (const MethodInfo_3330280 *)Method_System_Collections_ObjectModel_Collection_UserFriendPointGachaFreeDrawCampaignLogEntity__GetEnumerator__);
+                 (const MethodInfo_333AAE8 *)Method_System_Collections_ObjectModel_Collection_UserFriendPointGachaFreeDrawCampaignLogEntity__GetEnumerator__);
   if ( !Enumerator )
-    sub_1C32E7C(0);
+    sub_1C372B4(0);
   v9 = 0;
   while ( 1 )
   {
@@ -78,7 +78,7 @@ int32_t UserFriendPointGachaFreeDrawCampaignLogMaster__GetDrawLogNum(
     else
     {
 LABEL_10:
-      v13 = sub_1C83438(Enumerator, System_Collections_IEnumerator_TypeInfo, 0);
+      v13 = sub_1C87870(Enumerator, System_Collections_IEnumerator_TypeInfo, 0);
     }
     if ( ((*(__int64 (__fastcall **)(System_Collections_Generic_IEnumerator_T__o *, _QWORD))v13)(
             Enumerator,
@@ -102,7 +102,7 @@ LABEL_10:
     else
     {
 LABEL_17:
-      v17 = sub_1C83438(
+      v17 = sub_1C87870(
               Enumerator,
               System_Collections_Generic_IEnumerator_UserFriendPointGachaFreeDrawCampaignLogEntity__TypeInfo,
               0);
@@ -111,10 +111,10 @@ LABEL_17:
             Enumerator,
             *(_QWORD *)(v17 + 8));
     if ( !v18 )
-      sub_1C32E7C(0);
+      sub_1C372B4(0);
     v19 = *(_QWORD *)(v18 + 16);
     if ( !v19 )
-      sub_1C32E7C(v18);
+      sub_1C372B4(v18);
     v20 = *(unsigned int *)(v19 + 24);
     if ( v20 << 32 >= 1 )
     {
@@ -123,7 +123,7 @@ LABEL_17:
       do
       {
         if ( !v20 )
-          sub_1C32E84(v18);
+          sub_1C372BC(v18);
         v23 = *v22++;
         --v21;
         --v20;
@@ -149,7 +149,7 @@ LABEL_17:
   else
   {
 LABEL_30:
-    v27 = sub_1C83438(Enumerator, System_IDisposable_TypeInfo, 0);
+    v27 = sub_1C87870(Enumerator, System_IDisposable_TypeInfo, 0);
   }
   (*(void (__fastcall **)(System_Collections_Generic_IEnumerator_T__o *, _QWORD))v27)(Enumerator, *(_QWORD *)(v27 + 8));
   return v9;

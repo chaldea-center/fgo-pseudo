@@ -26,36 +26,36 @@ void ServantCheckEquipListViewItem___ctor(
   int32_t v27; // w22
   CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o v28; // 0:x0.16
 
-  if ( (byte_4C339A6 & 1) == 0 )
+  if ( (byte_4C3EF90 & 1) == 0 )
   {
-    sub_1C32C20(&Method_DataManager_GetMasterData_ServantLimitMaster___);
-    sub_1C32C20(&IconLabelInfo_TypeInfo);
-    sub_1C32C20(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
-    sub_1C32C20(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-    byte_4C339A6 = 1;
+    sub_1C37058(&Method_DataManager_GetMasterData_ServantLimitMaster___);
+    sub_1C37058(&IconLabelInfo_TypeInfo);
+    sub_1C37058(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
+    sub_1C37058(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    byte_4C3EF90 = 1;
   }
-  v9 = (IconLabelInfo_o *)sub_1C32E6C(IconLabelInfo_TypeInfo);
+  v9 = (IconLabelInfo_o *)sub_1C372A4(IconLabelInfo_TypeInfo);
   IconLabelInfo___ctor(v9, 0);
   this->fields.materialIconLabelInfo = v9;
-  sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.materialIconLabelInfo, (int32_t)v9, v10, v11);
-  v12 = (IconLabelInfo_o *)sub_1C32E6C(IconLabelInfo_TypeInfo);
+  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.materialIconLabelInfo, (int32_t)v9, v10, v11);
+  v12 = (IconLabelInfo_o *)sub_1C372A4(IconLabelInfo_TypeInfo);
   IconLabelInfo___ctor(v12, 0);
   this->fields.equipSvtIconLabelInfo = v12;
-  sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.equipSvtIconLabelInfo, (int32_t)v12, v13, v14);
+  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.equipSvtIconLabelInfo, (int32_t)v12, v13, v14);
   ListViewItem___ctor((ListViewItem_o *)this, 0);
   this->fields.materialUserServantEntity = materialUserSvtEntity;
   p_materialUserServantEntity = &this->fields.materialUserServantEntity;
-  sub_1C32BC4(
+  sub_1C36FFC(
     (CGThumbnailListItem_o *)&this->fields.materialUserServantEntity,
     (int32_t)materialUserSvtEntity,
     v16,
     v17);
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39E2904 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39ED16C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance )
     goto LABEL_13;
   Instance = DataManager__GetMasterData_object_(
                (DataManager_o *)Instance,
-               (const MethodInfo_30DD3F0 *)Method_DataManager_GetMasterData_ServantLimitMaster___);
+               (const MethodInfo_30E7C58 *)Method_DataManager_GetMasterData_ServantLimitMaster___);
   v19 = *p_materialUserServantEntity;
   if ( !*p_materialUserServantEntity )
     goto LABEL_13;
@@ -66,12 +66,12 @@ void ServantCheckEquipListViewItem___ctor(
     j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
   *(_QWORD *)&v28.fields.currentCryptoKey = v22;
   *(_QWORD *)&v28.fields.fakeValue = v21;
-  Instance = (void *)CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_48887784(v28, 0);
+  Instance = (void *)CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_48930896(v28, 0);
   v23 = (CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o *)*p_materialUserServantEntity;
   if ( !*p_materialUserServantEntity )
     goto LABEL_13;
   v24 = (int)Instance;
-  Instance = (void *)CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_48887784(v23[6], 0);
+  Instance = (void *)CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_48930896(v23[6], 0);
   if ( !v20 )
     goto LABEL_13;
   Instance = ServantLimitMaster__GetEntity(v20, v24, (int32_t)Instance, 0);
@@ -87,14 +87,14 @@ void ServantCheckEquipListViewItem___ctor(
         !materialIconLabelInfo) )
   {
 LABEL_13:
-    sub_1C32E7C(Instance);
+    sub_1C372B4(Instance);
   }
-  IconLabelInfo__Set_40818388(materialIconLabelInfo, 2, v27, (int32_t)Instance, 0, 0, 0, 0, 0, 0);
+  IconLabelInfo__Set_40917868(materialIconLabelInfo, 2, v27, (int32_t)Instance, 0, 0, 0, 0, 0, 0);
   this->fields.warningTextType = warningType;
 }
 
 
-void ServantCheckEquipListViewItem___ctor_34846744(
+void ServantCheckEquipListViewItem___ctor_34942376(
         ServantCheckEquipListViewItem_o *this,
         bool isParty,
         bool isSupport,
@@ -129,48 +129,48 @@ void ServantCheckEquipListViewItem___ctor_34846744(
 
   v13 = isParty;
   v14 = isSupport;
-  if ( (byte_4C339A7 & 1) == 0 )
+  if ( (byte_4C3EF91 & 1) == 0 )
   {
-    sub_1C32C20(&Method_DataManager_GetMasterData_UserServantMaster___);
-    sub_1C32C20(&Method_DataMasterBase_UserServantMaster__UserServantEntity__long__GetEntity__);
-    sub_1C32C20(&IconLabelInfo_TypeInfo);
-    sub_1C32C20(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-    byte_4C339A7 = 1;
+    sub_1C37058(&Method_DataManager_GetMasterData_UserServantMaster___);
+    sub_1C37058(&Method_DataMasterBase_UserServantMaster__UserServantEntity__long__GetEntity__);
+    sub_1C37058(&IconLabelInfo_TypeInfo);
+    sub_1C37058(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    byte_4C3EF91 = 1;
   }
-  v15 = (IconLabelInfo_o *)sub_1C32E6C(IconLabelInfo_TypeInfo);
+  v15 = (IconLabelInfo_o *)sub_1C372A4(IconLabelInfo_TypeInfo);
   IconLabelInfo___ctor(v15, 0);
   this->fields.materialIconLabelInfo = v15;
-  sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.materialIconLabelInfo, (int32_t)v15, v16, v17);
-  v18 = (IconLabelInfo_o *)sub_1C32E6C(IconLabelInfo_TypeInfo);
+  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.materialIconLabelInfo, (int32_t)v15, v16, v17);
+  v18 = (IconLabelInfo_o *)sub_1C372A4(IconLabelInfo_TypeInfo);
   IconLabelInfo___ctor(v18, 0);
   this->fields.equipSvtIconLabelInfo = v18;
-  sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.equipSvtIconLabelInfo, (int32_t)v18, v19, v20);
+  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.equipSvtIconLabelInfo, (int32_t)v18, v19, v20);
   ListViewItem___ctor((ListViewItem_o *)this, 0);
   this->fields.isParty = v13;
   this->fields.isSupport = v14;
   this->fields.partyIndex = partyIndex;
-  Instance = (DataManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39E2904 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = (DataManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39ED16C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance )
     goto LABEL_11;
   Instance = (DataManager_o *)DataManager__GetMasterData_object_(
                                 Instance,
-                                (const MethodInfo_30DD3F0 *)Method_DataManager_GetMasterData_UserServantMaster___);
+                                (const MethodInfo_30E7C58 *)Method_DataManager_GetMasterData_UserServantMaster___);
   if ( !Instance )
     goto LABEL_11;
   v22 = (DataMasterBase_TMaster__TEntity__PKType__o *)Instance;
   Entity = DataMasterBase_object__object__long___GetEntity(
              (DataMasterBase_TMaster__TEntity__PKType__o *)Instance,
              materialUserSvtId,
-             (const MethodInfo_3398D94 *)Method_DataMasterBase_UserServantMaster__UserServantEntity__long__GetEntity__);
+             (const MethodInfo_33A35FC *)Method_DataMasterBase_UserServantMaster__UserServantEntity__long__GetEntity__);
   this->fields.materialUserServantEntity = (struct UserServantEntity_o *)Entity;
-  sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.materialUserServantEntity, (int32_t)Entity, v24, v25);
+  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.materialUserServantEntity, (int32_t)Entity, v24, v25);
   v26 = DataMasterBase_object__object__long___GetEntity(
           v22,
           equipSvtId,
-          (const MethodInfo_3398D94 *)Method_DataMasterBase_UserServantMaster__UserServantEntity__long__GetEntity__);
+          (const MethodInfo_33A35FC *)Method_DataMasterBase_UserServantMaster__UserServantEntity__long__GetEntity__);
   this->fields.equipUserServantEntity = (struct UserServantEntity_o *)v26;
   p_equipUserServantEntity = &this->fields.equipUserServantEntity;
-  sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.equipUserServantEntity, (int32_t)v26, v28, v29);
+  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.equipUserServantEntity, (int32_t)v26, v28, v29);
   Instance = (DataManager_o *)this->fields.materialUserServantEntity;
   if ( !Instance )
     goto LABEL_11;
@@ -179,7 +179,7 @@ void ServantCheckEquipListViewItem___ctor_34846744(
   Instance = (DataManager_o *)UserServantEntity__getLevelMax((UserServantEntity_o *)Instance, 0);
   if ( !materialIconLabelInfo )
     goto LABEL_11;
-  IconLabelInfo__Set_40818388(materialIconLabelInfo, 2, nowLoadCount, (int32_t)Instance, 0, 0, 0, 0, 0, 0);
+  IconLabelInfo__Set_40917868(materialIconLabelInfo, 2, nowLoadCount, (int32_t)Instance, 0, 0, 0, 0, 0, 0);
   v32 = *p_equipUserServantEntity;
   if ( *p_equipUserServantEntity )
   {
@@ -188,11 +188,11 @@ void ServantCheckEquipListViewItem___ctor_34846744(
     Instance = (DataManager_o *)UserServantEntity__getLevelMax(v32, 0);
     if ( equipSvtIconLabelInfo )
     {
-      IconLabelInfo__Set_40818388(equipSvtIconLabelInfo, 2, lv, (int32_t)Instance, 0, 0, 0, 0, 0, 0);
+      IconLabelInfo__Set_40917868(equipSvtIconLabelInfo, 2, lv, (int32_t)Instance, 0, 0, 0, 0, 0, 0);
       goto LABEL_10;
     }
 LABEL_11:
-    sub_1C32E7C(Instance);
+    sub_1C372B4(Instance);
   }
 LABEL_10:
   this->fields.warningTextType = warningType;

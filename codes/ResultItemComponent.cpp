@@ -16,7 +16,7 @@ void ResultItemComponent__Clear(ResultItemComponent_o *this, const MethodInfo *m
     || (UnityEngine_GameObject__SetActive(baseObject, 0, 0),
         (baseObject = (UnityEngine_GameObject_o *)this->fields.itemIcon) == 0) )
   {
-    sub_1C32E7C(baseObject);
+    sub_1C372B4(baseObject);
   }
   ItemIconComponent__Clear((ItemIconComponent_o *)baseObject, 0);
 }
@@ -58,7 +58,7 @@ void ResultItemComponent__Set(
         num = -1;
       else
         num = giftEnt->fields.num;
-      ItemIconComponent__SetItemImage_40826104(
+      ItemIconComponent__SetItemImage_40925584(
         (ItemIconComponent_o *)this,
         prioredIconId,
         giftEnt->fields.objectId,
@@ -67,7 +67,7 @@ void ResultItemComponent__Set(
       return;
     }
 LABEL_19:
-    sub_1C32E7C(this);
+    sub_1C372B4(this);
   }
   if ( !this )
     goto LABEL_19;
@@ -75,7 +75,7 @@ LABEL_19:
     v11 = -1;
   else
     v11 = (unsigned int)count;
-  ItemIconComponent__SetGift_40822420((ItemIconComponent_o *)this, giftEnt->fields.type, v7, v11, 0, 0);
+  ItemIconComponent__SetGift_40921900((ItemIconComponent_o *)this, giftEnt->fields.type, v7, v11, 0, 0);
 }
 
 
@@ -95,9 +95,9 @@ void ResultItemComponent__SetExtra(ResultItemComponent_o *this, int32_t imgId, i
       || (UnityEngine_GameObject__SetActive(baseObject, 1, 0),
           (baseObject = (UnityEngine_GameObject_o *)this->fields.itemIcon) == 0) )
     {
-      sub_1C32E7C(baseObject);
+      sub_1C372B4(baseObject);
     }
-    ItemIconComponent__SetItemImage_40820084((ItemIconComponent_o *)baseObject, imgId, bgId, -1, -1, 1, 0);
+    ItemIconComponent__SetItemImage_40919564((ItemIconComponent_o *)baseObject, imgId, bgId, -1, -1, 1, 0);
   }
 }
 
@@ -116,7 +116,7 @@ void ResultItemComponent__SetItemIconScale(
 
   itemIcon = (UnityEngine_Component_o *)this->fields.itemIcon;
   if ( !itemIcon )
-    sub_1C32E7C(0);
+    sub_1C372B4(0);
   z = vec.fields.z;
   y = vec.fields.y;
   x = vec.fields.x;
@@ -136,7 +136,7 @@ void ResultItemComponent__SetRareItem(ResultItemComponent_o *this, const MethodI
   if ( !bonusSprite
     || (bonusSprite = (UnityEngine_Component_o *)UnityEngine_Component__get_gameObject(bonusSprite, 0)) == 0 )
   {
-    sub_1C32E7C(bonusSprite);
+    sub_1C372B4(bonusSprite);
   }
   UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)bonusSprite, 1, 0);
 }

@@ -21,21 +21,21 @@ void EventInfoSkillComponent__CreateEventInfoSkillDialog(
   Il2CppObject *v7; // x0
   const MethodInfo *v8; // x3
 
-  if ( (byte_4C397C6 & 1) == 0 )
+  if ( (byte_4C44DC0 & 1) == 0 )
   {
-    sub_1C32C20(&Method_GameObjectHelper_Instantiate_EventInfoSkillDialog___);
-    sub_1C32C20(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
-    byte_4C397C6 = 1;
+    sub_1C37058(&Method_GameObjectHelper_Instantiate_EventInfoSkillDialog___);
+    sub_1C37058(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+    byte_4C44DC0 = 1;
   }
   eventInfoSkillDialogPrefab = this->fields.eventInfoSkillDialogPrefab;
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39E2904 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39ED16C *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
   if ( !Instance )
-    sub_1C32E7C(0);
+    sub_1C372B4(0);
   v7 = GameObjectHelper__Instantiate_object_(
          eventInfoSkillDialogPrefab,
          (UnityEngine_Transform_o *)Instance[8].monitor,
          0,
-         (const MethodInfo_3136594 *)Method_GameObjectHelper_Instantiate_EventInfoSkillDialog___);
+         (const MethodInfo_3140DFC *)Method_GameObjectHelper_Instantiate_EventInfoSkillDialog___);
   if ( v7 )
     EventInfoSkillDialog__Open((EventInfoSkillDialog_o *)v7, this->fields.imagePartsGroupId, onClosed, v8);
 }
@@ -56,12 +56,12 @@ void EventInfoSkillComponent__OnClick(EventInfoSkillComponent_o *this, const Met
   System_Action_o *v7; // x20
   const MethodInfo *v8; // x2
 
-  if ( (byte_4C397C5 & 1) == 0 )
+  if ( (byte_4C44DBF & 1) == 0 )
   {
-    sub_1C32C20(&System_Action_TypeInfo);
-    sub_1C32C20(&Method_EventInfoSkillComponent_OnClick__);
-    sub_1C32C20(&Method_EventInfoSkillComponent__OnClick_b__5_0__);
-    byte_4C397C5 = 1;
+    sub_1C37058(&System_Action_TypeInfo);
+    sub_1C37058(&Method_EventInfoSkillComponent_OnClick__);
+    sub_1C37058(&Method_EventInfoSkillComponent__OnClick_b__5_0__);
+    byte_4C44DBF = 1;
   }
   v3 = (EventInfoSkillComponent_o *)((__int64 (__fastcall *)(EventInfoSkillComponent_o *, const MethodInfo *))this->klass->vtable._17_IsBusy.methodPtr)(
                                       this,
@@ -72,10 +72,10 @@ void EventInfoSkillComponent__OnClick(EventInfoSkillComponent_o *this, const Met
     EventInfoSkillComponent__SetTerminalTouchEnable(v3, 0, v4);
     v5 = Method_EventInfoSkillComponent_OnClick__;
     if ( (*((_BYTE *)Method_EventInfoSkillComponent_OnClick__ + 83) & 2) != 0 )
-      v5 = (_QWORD *)sub_1C32C38(Method_EventInfoSkillComponent_OnClick__);
-    v6 = (System_Reflection_MethodBase_o *)sub_1C32C04(v5, v5[4]);
+      v5 = (_QWORD *)sub_1C37070(Method_EventInfoSkillComponent_OnClick__);
+    v6 = (System_Reflection_MethodBase_o *)sub_1C3703C(v5, v5[4]);
     OverwriteAssetSoundName__PlaySystemSe(v6, 0, 0, 0);
-    v7 = (System_Action_o *)sub_1C32E6C(System_Action_TypeInfo);
+    v7 = (System_Action_o *)sub_1C372A4(System_Action_TypeInfo);
     System_Action___ctor(v7, (Il2CppObject *)this, Method_EventInfoSkillComponent__OnClick_b__5_0__, 0);
     EventInfoSkillComponent__CreateEventInfoSkillDialog(this, v7, v8);
   }
@@ -92,18 +92,18 @@ void EventInfoSkillComponent__SetTerminalTouchEnable(
   TitleInfoControl_o *genericContainerHandle; // x0
   UISprite_c *klass; // x8
 
-  if ( (byte_4C397C7 & 1) == 0 )
+  if ( (byte_4C44DC1 & 1) == 0 )
   {
-    sub_1C32C20(&UnityEngine_Object_TypeInfo);
-    sub_1C32C20(&TerminalSceneComponent_TypeInfo);
-    byte_4C397C7 = 1;
+    sub_1C37058(&UnityEngine_Object_TypeInfo);
+    sub_1C37058(&TerminalSceneComponent_TypeInfo);
+    byte_4C44DC1 = 1;
   }
   if ( !TerminalSceneComponent_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(TerminalSceneComponent_TypeInfo);
-  if ( !byte_4C319B6 )
+  if ( !byte_4C3CF06 )
   {
-    sub_1C32C20(&TerminalSceneComponent_TypeInfo);
-    byte_4C319B6 = 1;
+    sub_1C37058(&TerminalSceneComponent_TypeInfo);
+    byte_4C3CF06 = 1;
   }
   v4 = TerminalSceneComponent_TypeInfo;
   if ( !TerminalSceneComponent_TypeInfo->_2.cctor_finished )
@@ -118,10 +118,10 @@ void EventInfoSkillComponent__SetTerminalTouchEnable(
   {
     if ( !TerminalSceneComponent_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(TerminalSceneComponent_TypeInfo);
-    if ( !byte_4C319B6 )
+    if ( !byte_4C3CF06 )
     {
-      sub_1C32C20(&TerminalSceneComponent_TypeInfo);
-      byte_4C319B6 = 1;
+      sub_1C37058(&TerminalSceneComponent_TypeInfo);
+      byte_4C3CF06 = 1;
     }
     genericContainerHandle = (TitleInfoControl_o *)TerminalSceneComponent_TypeInfo;
     if ( !TerminalSceneComponent_TypeInfo->_2.cctor_finished )
@@ -131,7 +131,7 @@ void EventInfoSkillComponent__SetTerminalTouchEnable(
     }
     klass = genericContainerHandle->fields.mEventBgSp->klass;
     if ( !klass || (genericContainerHandle = (TitleInfoControl_o *)klass->_2.genericContainerHandle) == 0 )
-      sub_1C32E7C(genericContainerHandle);
+      sub_1C372B4(genericContainerHandle);
     TitleInfoControl__SetTouchEnable(genericContainerHandle, enable, 0);
   }
 }

@@ -4,19 +4,19 @@ void AtlasSubManagerEventUI___ctor(AtlasSubManagerEventUI_o *this, const MethodI
   int32_t v4; // w2
   const MethodInfo *v5; // x3
 
-  if ( (byte_4C36AE4 & 1) == 0 )
+  if ( (byte_4C420D4 & 1) == 0 )
   {
-    sub_1C32C20(&Method_System_Collections_Generic_Dictionary_string__AtlasManagerUnit___ctor__);
-    sub_1C32C20(&System_Collections_Generic_Dictionary_string__AtlasManagerUnit__TypeInfo);
-    byte_4C36AE4 = 1;
+    sub_1C37058(&Method_System_Collections_Generic_Dictionary_string__AtlasManagerUnit___ctor__);
+    sub_1C37058(&System_Collections_Generic_Dictionary_string__AtlasManagerUnit__TypeInfo);
+    byte_4C420D4 = 1;
   }
   System_Object___ctor((Il2CppObject *)this, 0);
-  v3 = (System_Collections_Generic_Dictionary_object__object__o *)sub_1C32E6C(System_Collections_Generic_Dictionary_string__AtlasManagerUnit__TypeInfo);
+  v3 = (System_Collections_Generic_Dictionary_object__object__o *)sub_1C372A4(System_Collections_Generic_Dictionary_string__AtlasManagerUnit__TypeInfo);
   System_Collections_Generic_Dictionary_object__object____ctor(
     v3,
-    (const MethodInfo_3458418 *)Method_System_Collections_Generic_Dictionary_string__AtlasManagerUnit___ctor__);
+    (const MethodInfo_3462C80 *)Method_System_Collections_Generic_Dictionary_string__AtlasManagerUnit___ctor__);
   this->fields.assetLoadDict = (struct System_Collections_Generic_Dictionary_string__AtlasManagerUnit__o *)v3;
-  sub_1C32BC4((CGThumbnailListItem_o *)&this->fields, (int32_t)v3, v4, v5);
+  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields, (int32_t)v3, v4, v5);
 }
 
 
@@ -33,15 +33,15 @@ System_String_o *AtlasSubManagerEventUI__GetAssetPath(
   Il2CppObject *v9; // x0
   int32_t v11; // [xsp+Ch] [xbp-24h] BYREF
 
-  if ( (byte_4C36AE5 & 1) == 0 )
+  if ( (byte_4C420D5 & 1) == 0 )
   {
-    sub_1C32C20(&int_TypeInfo);
-    sub_1C32C20(&StringLiteral_6273/*"EventUI/Prefabs/{0}"*/);
-    byte_4C36AE5 = 1;
+    sub_1C37058(&int_TypeInfo);
+    sub_1C37058(&StringLiteral_6274/*"EventUI/Prefabs/{0}"*/);
+    byte_4C420D5 = 1;
   }
   v11 = eventId;
   v9 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v11, method, v3, v4, v5, v6, v7);
-  return System_String__Format((System_String_o *)StringLiteral_6273/*"EventUI/Prefabs/{0}"*/, v9, 0);
+  return System_String__Format((System_String_o *)StringLiteral_6274/*"EventUI/Prefabs/{0}"*/, v9, 0);
 }
 
 
@@ -55,13 +55,13 @@ AtlasManagerUnit_o *AtlasSubManagerEventUI__GetOrCreateAtlasManagerUnit(
   AtlasManagerUnit_o *v7; // x22
   const MethodInfo *v8; // x3
 
-  if ( (byte_4C36AE6 & 1) == 0 )
+  if ( (byte_4C420D6 & 1) == 0 )
   {
-    sub_1C32C20(&AtlasManagerUnit_TypeInfo);
-    sub_1C32C20(&Method_System_Collections_Generic_Dictionary_string__AtlasManagerUnit__ContainsKey__);
-    sub_1C32C20(&Method_System_Collections_Generic_Dictionary_string__AtlasManagerUnit__get_Item__);
-    sub_1C32C20(&Method_System_Collections_Generic_Dictionary_string__AtlasManagerUnit__set_Item__);
-    byte_4C36AE6 = 1;
+    sub_1C37058(&AtlasManagerUnit_TypeInfo);
+    sub_1C37058(&Method_System_Collections_Generic_Dictionary_string__AtlasManagerUnit__ContainsKey__);
+    sub_1C37058(&Method_System_Collections_Generic_Dictionary_string__AtlasManagerUnit__get_Item__);
+    sub_1C37058(&Method_System_Collections_Generic_Dictionary_string__AtlasManagerUnit__set_Item__);
+    byte_4C420D6 = 1;
   }
   assetLoadDict = this->fields.assetLoadDict;
   if ( !assetLoadDict )
@@ -69,10 +69,10 @@ AtlasManagerUnit_o *AtlasSubManagerEventUI__GetOrCreateAtlasManagerUnit(
   if ( !System_Collections_Generic_Dictionary_object__object___ContainsKey(
           (System_Collections_Generic_Dictionary_object__object__o *)assetLoadDict,
           (Il2CppObject *)assetPath,
-          (const MethodInfo_3458FBC *)Method_System_Collections_Generic_Dictionary_string__AtlasManagerUnit__ContainsKey__) )
+          (const MethodInfo_3463824 *)Method_System_Collections_Generic_Dictionary_string__AtlasManagerUnit__ContainsKey__) )
   {
     v6 = this->fields.assetLoadDict;
-    v7 = (AtlasManagerUnit_o *)sub_1C32E6C(AtlasManagerUnit_TypeInfo);
+    v7 = (AtlasManagerUnit_o *)sub_1C372A4(AtlasManagerUnit_TypeInfo);
     AtlasManagerUnit___ctor(v7, assetPath, 0, v8);
     if ( !v6 )
       goto LABEL_9;
@@ -80,16 +80,16 @@ AtlasManagerUnit_o *AtlasSubManagerEventUI__GetOrCreateAtlasManagerUnit(
       (System_Collections_Generic_Dictionary_object__object__o *)v6,
       (Il2CppObject *)assetPath,
       (Il2CppObject *)v7,
-      (const MethodInfo_3458DB4 *)Method_System_Collections_Generic_Dictionary_string__AtlasManagerUnit__set_Item__);
+      (const MethodInfo_346361C *)Method_System_Collections_Generic_Dictionary_string__AtlasManagerUnit__set_Item__);
   }
   assetLoadDict = this->fields.assetLoadDict;
   if ( !assetLoadDict )
 LABEL_9:
-    sub_1C32E7C(assetLoadDict);
+    sub_1C372B4(assetLoadDict);
   return (AtlasManagerUnit_o *)System_Collections_Generic_Dictionary_object__object___get_Item(
                                  (System_Collections_Generic_Dictionary_object__object__o *)assetLoadDict,
                                  (Il2CppObject *)assetPath,
-                                 (const MethodInfo_3458D48 *)Method_System_Collections_Generic_Dictionary_string__AtlasManagerUnit__get_Item__);
+                                 (const MethodInfo_34635B0 *)Method_System_Collections_Generic_Dictionary_string__AtlasManagerUnit__get_Item__);
 }
 
 
@@ -108,7 +108,7 @@ void AtlasSubManagerEventUI__Load(
   AssetPath = AtlasSubManagerEventUI__GetAssetPath(this, eventId, (const MethodInfo *)finishCallback);
   AtlasManagerUnit = AtlasSubManagerEventUI__GetOrCreateAtlasManagerUnit(this, AssetPath, v9);
   if ( !AtlasManagerUnit )
-    sub_1C32E7C(0);
+    sub_1C372B4(0);
   AtlasManagerUnit__Load(AtlasManagerUnit, finishCallback, loadParallelMax, v11);
 }
 
@@ -121,12 +121,12 @@ void AtlasSubManagerEventUI__Release(AtlasSubManagerEventUI_o *this, int32_t eve
   const MethodInfo *v7; // x1
 
   v4 = this;
-  if ( (byte_4C36AE2 & 1) == 0 )
+  if ( (byte_4C420D2 & 1) == 0 )
   {
-    sub_1C32C20(&Method_System_Collections_Generic_Dictionary_string__AtlasManagerUnit__ContainsKey__);
-    sub_1C32C20(&Method_System_Collections_Generic_Dictionary_string__AtlasManagerUnit__Remove__);
-    this = (AtlasSubManagerEventUI_o *)sub_1C32C20(&Method_System_Collections_Generic_Dictionary_string__AtlasManagerUnit__get_Item__);
-    byte_4C36AE2 = 1;
+    sub_1C37058(&Method_System_Collections_Generic_Dictionary_string__AtlasManagerUnit__ContainsKey__);
+    sub_1C37058(&Method_System_Collections_Generic_Dictionary_string__AtlasManagerUnit__Remove__);
+    this = (AtlasSubManagerEventUI_o *)sub_1C37058(&Method_System_Collections_Generic_Dictionary_string__AtlasManagerUnit__get_Item__);
+    byte_4C420D2 = 1;
   }
   AssetPath = (System_Collections_Generic_Dictionary_object__object__o *)AtlasSubManagerEventUI__GetAssetPath(
                                                                            this,
@@ -138,7 +138,7 @@ void AtlasSubManagerEventUI__Release(AtlasSubManagerEventUI_o *this, int32_t eve
   if ( System_Collections_Generic_Dictionary_object__object___ContainsKey(
          (System_Collections_Generic_Dictionary_object__object__o *)v4->fields.assetLoadDict,
          (Il2CppObject *)AssetPath,
-         (const MethodInfo_3458FBC *)Method_System_Collections_Generic_Dictionary_string__AtlasManagerUnit__ContainsKey__) )
+         (const MethodInfo_3463824 *)Method_System_Collections_Generic_Dictionary_string__AtlasManagerUnit__ContainsKey__) )
   {
     AssetPath = (System_Collections_Generic_Dictionary_object__object__o *)v4->fields.assetLoadDict;
     if ( AssetPath )
@@ -146,7 +146,7 @@ void AtlasSubManagerEventUI__Release(AtlasSubManagerEventUI_o *this, int32_t eve
       AssetPath = (System_Collections_Generic_Dictionary_object__object__o *)System_Collections_Generic_Dictionary_object__object___get_Item(
                                                                                AssetPath,
                                                                                v6,
-                                                                               (const MethodInfo_3458D48 *)Method_System_Collections_Generic_Dictionary_string__AtlasManagerUnit__get_Item__);
+                                                                               (const MethodInfo_34635B0 *)Method_System_Collections_Generic_Dictionary_string__AtlasManagerUnit__get_Item__);
       if ( AssetPath )
       {
         AtlasManagerUnit__Release((AtlasManagerUnit_o *)AssetPath, v7);
@@ -156,13 +156,13 @@ void AtlasSubManagerEventUI__Release(AtlasSubManagerEventUI_o *this, int32_t eve
           System_Collections_Generic_Dictionary_object__object___Remove(
             AssetPath,
             v6,
-            (const MethodInfo_345A2C4 *)Method_System_Collections_Generic_Dictionary_string__AtlasManagerUnit__Remove__);
+            (const MethodInfo_3464B2C *)Method_System_Collections_Generic_Dictionary_string__AtlasManagerUnit__Remove__);
           return;
         }
       }
     }
 LABEL_10:
-    sub_1C32E7C(AssetPath);
+    sub_1C372B4(AssetPath);
   }
 }
 
@@ -180,11 +180,11 @@ bool AtlasSubManagerEventUI__SetUI(
   const MethodInfo *v11; // x3
 
   v8 = this;
-  if ( (byte_4C36AE3 & 1) == 0 )
+  if ( (byte_4C420D3 & 1) == 0 )
   {
-    sub_1C32C20(&Method_System_Collections_Generic_Dictionary_string__AtlasManagerUnit__ContainsKey__);
-    this = (AtlasSubManagerEventUI_o *)sub_1C32C20(&Method_System_Collections_Generic_Dictionary_string__AtlasManagerUnit__get_Item__);
-    byte_4C36AE3 = 1;
+    sub_1C37058(&Method_System_Collections_Generic_Dictionary_string__AtlasManagerUnit__ContainsKey__);
+    this = (AtlasSubManagerEventUI_o *)sub_1C37058(&Method_System_Collections_Generic_Dictionary_string__AtlasManagerUnit__get_Item__);
+    byte_4C420D3 = 1;
   }
   AssetPath = (Il2CppObject *)AtlasSubManagerEventUI__GetAssetPath(this, eventId, (const MethodInfo *)sprite);
   if ( !v8->fields.assetLoadDict )
@@ -193,7 +193,7 @@ bool AtlasSubManagerEventUI__SetUI(
   AssetPath = (Il2CppObject *)System_Collections_Generic_Dictionary_object__object___ContainsKey(
                                 (System_Collections_Generic_Dictionary_object__object__o *)v8->fields.assetLoadDict,
                                 AssetPath,
-                                (const MethodInfo_3458FBC *)Method_System_Collections_Generic_Dictionary_string__AtlasManagerUnit__ContainsKey__);
+                                (const MethodInfo_3463824 *)Method_System_Collections_Generic_Dictionary_string__AtlasManagerUnit__ContainsKey__);
   if ( ((unsigned __int8)AssetPath & 1) != 0 )
   {
     AssetPath = (Il2CppObject *)v8->fields.assetLoadDict;
@@ -202,12 +202,12 @@ bool AtlasSubManagerEventUI__SetUI(
       AssetPath = System_Collections_Generic_Dictionary_object__object___get_Item(
                     (System_Collections_Generic_Dictionary_object__object__o *)AssetPath,
                     v10,
-                    (const MethodInfo_3458D48 *)Method_System_Collections_Generic_Dictionary_string__AtlasManagerUnit__get_Item__);
+                    (const MethodInfo_34635B0 *)Method_System_Collections_Generic_Dictionary_string__AtlasManagerUnit__get_Item__);
       if ( AssetPath )
         return AtlasManagerUnit__SetUI((AtlasManagerUnit_o *)AssetPath, sprite, spriteName, v11);
     }
 LABEL_10:
-    sub_1C32E7C(AssetPath);
+    sub_1C372B4(AssetPath);
   }
   if ( !sprite )
     goto LABEL_10;
@@ -224,18 +224,18 @@ AtlasSubManagerEventUI_o *AtlasSubManagerEventUI__get_Instance(const MethodInfo 
   int32_t v4; // w2
   const MethodInfo *v5; // x3
 
-  if ( (byte_4C36AE1 & 1) == 0 )
+  if ( (byte_4C420D1 & 1) == 0 )
   {
-    sub_1C32C20(&AtlasSubManagerEventUI_TypeInfo);
-    byte_4C36AE1 = 1;
+    sub_1C37058(&AtlasSubManagerEventUI_TypeInfo);
+    byte_4C420D1 = 1;
   }
   instance = AtlasSubManagerEventUI_TypeInfo->static_fields->instance;
   if ( !instance )
   {
-    v2 = (AtlasSubManagerEventUI_o *)sub_1C32E6C(AtlasSubManagerEventUI_TypeInfo);
+    v2 = (AtlasSubManagerEventUI_o *)sub_1C372A4(AtlasSubManagerEventUI_TypeInfo);
     AtlasSubManagerEventUI___ctor(v2, v3);
     AtlasSubManagerEventUI_TypeInfo->static_fields->instance = v2;
-    sub_1C32BC4((CGThumbnailListItem_o *)AtlasSubManagerEventUI_TypeInfo->static_fields, (int32_t)v2, v4, v5);
+    sub_1C36FFC((CGThumbnailListItem_o *)AtlasSubManagerEventUI_TypeInfo->static_fields, (int32_t)v2, v4, v5);
     return AtlasSubManagerEventUI_TypeInfo->static_fields->instance;
   }
   return instance;

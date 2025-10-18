@@ -6,10 +6,10 @@ void BlacklistTopRequest___ctor(BlacklistTopRequest_o *this, const MethodInfo *m
 
 System_String_o *BlacklistTopRequest__getMockData(BlacklistTopRequest_o *this, const MethodInfo *method)
 {
-  if ( (byte_4C3943D & 1) == 0 )
+  if ( (byte_4C44A37 & 1) == 0 )
   {
-    sub_1C32C20(&StringLiteral_1/*""*/);
-    byte_4C3943D = 1;
+    sub_1C37058(&StringLiteral_1/*""*/);
+    byte_4C44A37 = 1;
   }
   return (System_String_o *)StringLiteral_1/*""*/;
 }
@@ -19,16 +19,16 @@ System_String_o *BlacklistTopRequest__getURL(BlacklistTopRequest_o *this, const 
 {
   System_String_o *BaseUrl; // x0
 
-  if ( (byte_4C3943C & 1) == 0 )
+  if ( (byte_4C44A36 & 1) == 0 )
   {
-    sub_1C32C20(&NetworkManager_TypeInfo);
-    sub_1C32C20(&StringLiteral_17301/*"blacklist/top"*/);
-    byte_4C3943C = 1;
+    sub_1C37058(&NetworkManager_TypeInfo);
+    sub_1C37058(&StringLiteral_17303/*"blacklist/top"*/);
+    byte_4C44A36 = 1;
   }
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
   BaseUrl = NetworkManager__getBaseUrl(1, 0);
-  return System_String__Concat_63518544(BaseUrl, (System_String_o *)StringLiteral_17301/*"blacklist/top"*/, 0);
+  return System_String__Concat_63561656(BaseUrl, (System_String_o *)StringLiteral_17303/*"blacklist/top"*/, 0);
 }
 
 
@@ -42,17 +42,17 @@ void BlacklistTopRequest__requestCompleted(
   Il2CppObject *success; // x20
   System_String_o *v8; // x1
 
-  if ( (byte_4C3943E & 1) == 0 )
+  if ( (byte_4C44A38 & 1) == 0 )
   {
-    sub_1C32C20(&JsonManager_TypeInfo);
-    sub_1C32C20(&ResponseCommandKind_TypeInfo);
-    sub_1C32C20(&StringLiteral_22212/*"ng"*/);
-    byte_4C3943E = 1;
+    sub_1C37058(&JsonManager_TypeInfo);
+    sub_1C37058(&ResponseCommandKind_TypeInfo);
+    sub_1C37058(&StringLiteral_22215/*"ng"*/);
+    byte_4C44A38 = 1;
   }
   if ( !ResponseCommandKind_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(ResponseCommandKind_TypeInfo);
   v5 = ResponseCommandKind__SearchData(63, responseList, 0);
-  if ( v5 && (v6 = v5, ResponseData__checkError_44140424(v5, 0)) )
+  if ( v5 && (v6 = v5, ResponseData__checkError_44242528(v5, 0)) )
   {
     success = (Il2CppObject *)v6->fields.success;
     if ( !JsonManager_TypeInfo->_2.cctor_finished )
@@ -61,7 +61,7 @@ void BlacklistTopRequest__requestCompleted(
   }
   else
   {
-    v8 = (System_String_o *)StringLiteral_22212/*"ng"*/;
+    v8 = (System_String_o *)StringLiteral_22215/*"ng"*/;
   }
   RequestBase__completed((RequestBase_o *)this, v8, 0);
 }

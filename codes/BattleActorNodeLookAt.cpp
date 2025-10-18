@@ -13,7 +13,7 @@ void BattleActorNodeLookAt__Awake(BattleActorNodeLookAt_o *this, const MethodInf
 
   transform = UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0);
   this->fields.selfTransform = transform;
-  sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.selfTransform, (int32_t)transform, v4, v5);
+  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.selfTransform, (int32_t)transform, v4, v5);
 }
 
 
@@ -53,10 +53,10 @@ void BattleActorNodeLookAt__LateUpdate(BattleActorNodeLookAt_o *this, const Meth
   UnityEngine_Quaternion_o rotation; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
   UnityEngine_Quaternion_o v35; // 0:s4.4,4:s5.4,8:s6.4,12:s7.4
 
-  if ( (byte_4C39F99 & 1) == 0 )
+  if ( (byte_4C45662 & 1) == 0 )
   {
-    sub_1C32C20(&UnityEngine_Object_TypeInfo);
-    byte_4C39F99 = 1;
+    sub_1C37058(&UnityEngine_Object_TypeInfo);
+    byte_4C45662 = 1;
   }
   type = this->fields.type;
   if ( type == 1 )
@@ -80,10 +80,10 @@ void BattleActorNodeLookAt__LateUpdate(BattleActorNodeLookAt_o *this, const Meth
       v14 = v30.fields.x;
       v15 = v30.fields.y;
       v16 = v30.fields.z;
-      if ( !byte_4C313D3 )
+      if ( !byte_4C3C923 )
       {
-        sub_1C32C20(&System_Math_TypeInfo);
-        byte_4C313D3 = 1;
+        sub_1C37058(&System_Math_TypeInfo);
+        byte_4C3C923 = 1;
       }
       v17 = x - v14;
       v18 = y - v15;
@@ -94,7 +94,7 @@ void BattleActorNodeLookAt__LateUpdate(BattleActorNodeLookAt_o *this, const Meth
         v31.fields.x = v17;
         v31.fields.y = v18;
         v31.fields.z = z - v16;
-        v33 = UnityEngine_Quaternion__LookRotation_71162484(v31, 0);
+        v33 = UnityEngine_Quaternion__LookRotation_71205596(v31, 0);
         v19 = v33.fields.x;
         v20 = v33.fields.y;
         v21 = v33.fields.z;
@@ -119,7 +119,7 @@ void BattleActorNodeLookAt__LateUpdate(BattleActorNodeLookAt_o *this, const Meth
           goto LABEL_7;
         }
 LABEL_24:
-        sub_1C32E7C(selfTransform);
+        sub_1C372B4(selfTransform);
       }
     }
   }

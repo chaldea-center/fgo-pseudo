@@ -19,11 +19,11 @@ void EquipGraphViewModeState__AutoPlayView(EquipGraphViewModeState_o *this, cons
   UIEquipGraphV_o *uiEquipGraphV; // x0
   int32_t v6; // w1
 
-  if ( (byte_4C34EF5 & 1) == 0 )
+  if ( (byte_4C404E0 & 1) == 0 )
   {
-    sub_1C32C20(&UnityEngine_Object_TypeInfo);
-    sub_1C32C20(&StringLiteral_2501/*"AutoPlayView"*/);
-    byte_4C34EF5 = 1;
+    sub_1C37058(&UnityEngine_Object_TypeInfo);
+    sub_1C37058(&StringLiteral_2501/*"AutoPlayView"*/);
+    byte_4C404E0 = 1;
   }
   AutoPlayMode = this->fields.AutoPlayMode;
   if ( AutoPlayMode == 2 )
@@ -36,7 +36,7 @@ void EquipGraphViewModeState__AutoPlayView(EquipGraphViewModeState_o *this, cons
       goto LABEL_14;
     }
 LABEL_21:
-    sub_1C32E7C(uiEquipGraphV);
+    sub_1C372B4(uiEquipGraphV);
   }
   if ( AutoPlayMode == 1 )
   {
@@ -103,7 +103,7 @@ void EquipGraphViewModeState__FowardView(EquipGraphViewModeState_o *this, const 
 
   scriptManager = this->fields.scriptManager;
   if ( !scriptManager )
-    sub_1C32E7C(0);
+    sub_1C372B4(0);
   ScriptManager__OnClickFowardView(scriptManager, 0);
 }
 
@@ -135,7 +135,7 @@ void EquipGraphViewModeState__OnClickAutoPlayButton(
       return;
     }
 LABEL_9:
-    sub_1C32E7C(autoPlaySprite);
+    sub_1C372B4(autoPlaySprite);
   }
   UnityEngine_Behaviour__set_enabled(autoPlaySprite, 0, 0);
   if ( !this->fields._quickAutobtn_k__BackingField )
@@ -150,10 +150,10 @@ void EquipGraphViewModeState__OnClickQuickAutoPlayButton(
 {
   UnityEngine_Behaviour_o *quickAutoPlaySprite; // x0
 
-  if ( (byte_4C34EF4 & 1) == 0 )
+  if ( (byte_4C404DF & 1) == 0 )
   {
-    sub_1C32C20(&StringLiteral_6851/*"FowardView"*/);
-    byte_4C34EF4 = 1;
+    sub_1C37058(&StringLiteral_6852/*"FowardView"*/);
+    byte_4C404DF = 1;
   }
   if ( !isSetting )
     this->fields._quickAutobtn_k__BackingField ^= 1u;
@@ -171,13 +171,13 @@ void EquipGraphViewModeState__OnClickQuickAutoPlayButton(
       UnityEngine_MonoBehaviour__CancelInvoke((UnityEngine_MonoBehaviour_o *)this, 0);
       UnityEngine_MonoBehaviour__Invoke(
         (UnityEngine_MonoBehaviour_o *)this,
-        (System_String_o *)StringLiteral_6851/*"FowardView"*/,
+        (System_String_o *)StringLiteral_6852/*"FowardView"*/,
         this->fields.AutoPlayInterval,
         0);
       return;
     }
 LABEL_11:
-    sub_1C32E7C(quickAutoPlaySprite);
+    sub_1C372B4(quickAutoPlaySprite);
   }
   UnityEngine_Behaviour__set_enabled(quickAutoPlaySprite, 0, 0);
   if ( !this->fields._autobtn_k__BackingField )

@@ -1,13 +1,13 @@
 void CommonRestrictionEntity___ctor(CommonRestrictionEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_4C377D8 & 1) == 0 )
+  if ( (byte_4C42DCF & 1) == 0 )
   {
-    sub_1C32C20(&Method_DataEntityBase_int___ctor__);
-    byte_4C377D8 = 1;
+    sub_1C37058(&Method_DataEntityBase_int___ctor__);
+    byte_4C42DCF = 1;
   }
   DataEntityBase_int____ctor(
     (DataEntityBase_int__o *)this,
-    (const MethodInfo_3394354 *)Method_DataEntityBase_int___ctor__);
+    (const MethodInfo_339EBBC *)Method_DataEntityBase_int___ctor__);
 }
 
 
@@ -22,15 +22,15 @@ bool CommonRestrictionEntity__IsIncludedSvt(
         int32_t baseSvtId,
         const MethodInfo *method)
 {
-  if ( (byte_4C377D7 & 1) == 0 )
+  if ( (byte_4C42DCE & 1) == 0 )
   {
-    sub_1C32C20(&Method_System_Array_IndexOf_int___);
-    byte_4C377D7 = 1;
+    sub_1C37058(&Method_System_Array_IndexOf_int___);
+    byte_4C42DCE = 1;
   }
   return System_Array__IndexOf_int_(
            this->fields.targetSvtIds,
            baseSvtId,
-           (const MethodInfo_31E4470 *)Method_System_Array_IndexOf_int___) >= 0;
+           (const MethodInfo_31EECD8 *)Method_System_Array_IndexOf_int___) >= 0;
 }
 
 

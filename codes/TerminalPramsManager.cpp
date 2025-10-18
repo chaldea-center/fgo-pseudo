@@ -18,42 +18,42 @@ void TerminalPramsManager___cctor(const MethodInfo *method)
   const MethodInfo *v16; // x3
   struct TerminalPramsManager_StaticFields *v17; // x8
 
-  if ( (byte_4C34DE7 & 1) == 0 )
+  if ( (byte_4C403D1 & 1) == 0 )
   {
-    sub_1C32C20(&Method_System_Collections_Generic_HashSet_int___ctor__);
-    sub_1C32C20(&System_Collections_Generic_HashSet_int__TypeInfo);
-    sub_1C32C20(&Method_System_Collections_Generic_List_string___ctor__);
-    sub_1C32C20(&System_Collections_Generic_List_string__TypeInfo);
-    sub_1C32C20(&float___TypeInfo);
-    sub_1C32C20(&TerminalPramsManager_TypeInfo);
-    sub_1C32C20(&StringLiteral_1/*""*/);
-    byte_4C34DE7 = 1;
+    sub_1C37058(&Method_System_Collections_Generic_HashSet_int___ctor__);
+    sub_1C37058(&System_Collections_Generic_HashSet_int__TypeInfo);
+    sub_1C37058(&Method_System_Collections_Generic_List_string___ctor__);
+    sub_1C37058(&System_Collections_Generic_List_string__TypeInfo);
+    sub_1C37058(&float___TypeInfo);
+    sub_1C37058(&TerminalPramsManager_TypeInfo);
+    sub_1C37058(&StringLiteral_1/*""*/);
+    byte_4C403D1 = 1;
   }
-  v1 = (System_Collections_Generic_HashSet_int__o *)sub_1C32E6C(System_Collections_Generic_HashSet_int__TypeInfo);
+  v1 = (System_Collections_Generic_HashSet_int__o *)sub_1C372A4(System_Collections_Generic_HashSet_int__TypeInfo);
   System_Collections_Generic_HashSet_int____ctor(
     v1,
-    (const MethodInfo_3649220 *)Method_System_Collections_Generic_HashSet_int___ctor__);
+    (const MethodInfo_3653A88 *)Method_System_Collections_Generic_HashSet_int___ctor__);
   static_fields = TerminalPramsManager_TypeInfo->static_fields;
   static_fields->loginQuestNotifiedList = v1;
-  sub_1C32BC4((CGThumbnailListItem_o *)&static_fields->loginQuestNotifiedList, (int32_t)v1, v3, v4);
+  sub_1C36FFC((CGThumbnailListItem_o *)&static_fields->loginQuestNotifiedList, (int32_t)v1, v3, v4);
   v5 = TerminalPramsManager_TypeInfo->static_fields;
   v5->_IsMainInterludeWarClear_k__BackingField = 0;
   v6 = StringLiteral_1/*""*/;
   v5->mTerminalWarStartedIds = (struct System_String_o *)StringLiteral_1/*""*/;
-  sub_1C32BC4((CGThumbnailListItem_o *)&v5->mTerminalWarStartedIds, v6, v7, v8);
-  *(_OWORD *)&TerminalPramsManager_TypeInfo->static_fields->clearLastBattleRaidId = xmmword_C0CDB0;
-  v9 = sub_1C32CC8(float___TypeInfo, 3);
+  sub_1C36FFC((CGThumbnailListItem_o *)&v5->mTerminalWarStartedIds, v6, v7, v8);
+  *(_OWORD *)&TerminalPramsManager_TypeInfo->static_fields->clearLastBattleRaidId = xmmword_C0ED30;
+  v9 = sub_1C37100(float___TypeInfo, 3);
   v10 = TerminalPramsManager_TypeInfo->static_fields;
   v10->TipsArchiveScrollValueList = (struct System_Single_array *)v9;
-  sub_1C32BC4((CGThumbnailListItem_o *)&v10->TipsArchiveScrollValueList, v9, v11, v12);
+  sub_1C36FFC((CGThumbnailListItem_o *)&v10->TipsArchiveScrollValueList, v9, v11, v12);
   TerminalPramsManager_TypeInfo->static_fields->joinGroupId = -1;
-  v13 = (System_Collections_Generic_List_object__o *)sub_1C32E6C(System_Collections_Generic_List_string__TypeInfo);
+  v13 = (System_Collections_Generic_List_object__o *)sub_1C372A4(System_Collections_Generic_List_string__TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v13,
-    (const MethodInfo_3797F88 *)Method_System_Collections_Generic_List_string___ctor__);
+    (const MethodInfo_37A27F0 *)Method_System_Collections_Generic_List_string___ctor__);
   p_eventScriptMessages = (CGThumbnailListItem_o *)&TerminalPramsManager_TypeInfo->static_fields->eventScriptMessages;
   p_eventScriptMessages->klass = (CGThumbnailListItem_c *)v13;
-  sub_1C32BC4(p_eventScriptMessages, (int32_t)v13, v15, v16);
+  sub_1C36FFC(p_eventScriptMessages, (int32_t)v13, v15, v16);
   v17 = TerminalPramsManager_TypeInfo->static_fields;
   *(_QWORD *)&v17->EVENT_POINT_EFFECT_STATE_SUB = 0xFFFFFFFFLL;
   v17->EVENT_POINT_EFFECT_STATE_ADD = 1;
@@ -74,11 +74,11 @@ void TerminalPramsManager__AddNotifiedLoginQuest(int32_t questId, const MethodIn
   TerminalPramsManager_c *v3; // x0
   System_Collections_Generic_HashSet_int__o *loginQuestNotifiedList; // x0
 
-  if ( (byte_4C34DC3 & 1) == 0 )
+  if ( (byte_4C403AD & 1) == 0 )
   {
-    sub_1C32C20(&Method_System_Collections_Generic_HashSet_int__Add__);
-    sub_1C32C20(&TerminalPramsManager_TypeInfo);
-    byte_4C34DC3 = 1;
+    sub_1C37058(&Method_System_Collections_Generic_HashSet_int__Add__);
+    sub_1C37058(&TerminalPramsManager_TypeInfo);
+    byte_4C403AD = 1;
   }
   v3 = TerminalPramsManager_TypeInfo;
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -88,11 +88,11 @@ void TerminalPramsManager__AddNotifiedLoginQuest(int32_t questId, const MethodIn
   }
   loginQuestNotifiedList = v3->static_fields->loginQuestNotifiedList;
   if ( !loginQuestNotifiedList )
-    sub_1C32E7C(0);
+    sub_1C372B4(0);
   System_Collections_Generic_HashSet_int___Add(
     loginQuestNotifiedList,
     questId,
-    (const MethodInfo_364A424 *)Method_System_Collections_Generic_HashSet_int__Add__);
+    (const MethodInfo_3654C8C *)Method_System_Collections_Generic_HashSet_int__Add__);
 }
 
 
@@ -101,17 +101,17 @@ void TerminalPramsManager__AutoOff(const MethodInfo *method)
   TerminalPramsManager_c *v1; // x0
   struct TerminalPramsManager_StaticFields *static_fields; // x8
 
-  if ( (byte_4C34D85 & 1) == 0 )
+  if ( (byte_4C4036F & 1) == 0 )
   {
-    sub_1C32C20(&TerminalPramsManager_TypeInfo);
-    byte_4C34D85 = 1;
+    sub_1C37058(&TerminalPramsManager_TypeInfo);
+    byte_4C4036F = 1;
   }
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(TerminalPramsManager_TypeInfo);
-  if ( !byte_4C3219C )
+  if ( !byte_4C3D786 )
   {
-    sub_1C32C20(&TerminalPramsManager_TypeInfo);
-    byte_4C3219C = 1;
+    sub_1C37058(&TerminalPramsManager_TypeInfo);
+    byte_4C3D786 = 1;
   }
   v1 = TerminalPramsManager_TypeInfo;
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -120,11 +120,11 @@ void TerminalPramsManager__AutoOff(const MethodInfo *method)
     v1 = TerminalPramsManager_TypeInfo;
   }
   v1->static_fields->_IsAutoResume_k__BackingField = 0;
-  if ( !byte_4C349C1 )
+  if ( !byte_4C3FFAB )
   {
-    sub_1C32C20(&TerminalPramsManager_TypeInfo);
+    sub_1C37058(&TerminalPramsManager_TypeInfo);
     v1 = TerminalPramsManager_TypeInfo;
-    byte_4C349C1 = 1;
+    byte_4C3FFAB = 1;
   }
   if ( !v1->_2.cctor_finished )
   {
@@ -141,18 +141,18 @@ void TerminalPramsManager__BlankEarthRank_SaveData(const MethodInfo *method)
 {
   TerminalPramsManager_c *v1; // x0
 
-  if ( (byte_4C34DB7 & 1) == 0 )
+  if ( (byte_4C403A1 & 1) == 0 )
   {
-    sub_1C32C20(&TerminalPramsManager_TypeInfo);
-    sub_1C32C20(&StringLiteral_11448/*"SAVEKEY_BlankEarthRank"*/);
-    byte_4C34DB7 = 1;
+    sub_1C37058(&TerminalPramsManager_TypeInfo);
+    sub_1C37058(&StringLiteral_11449/*"SAVEKEY_BlankEarthRank"*/);
+    byte_4C403A1 = 1;
   }
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(TerminalPramsManager_TypeInfo);
-  if ( !byte_4C34E0A )
+  if ( !byte_4C403F4 )
   {
-    sub_1C32C20(&TerminalPramsManager_TypeInfo);
-    byte_4C34E0A = 1;
+    sub_1C37058(&TerminalPramsManager_TypeInfo);
+    byte_4C403F4 = 1;
   }
   v1 = TerminalPramsManager_TypeInfo;
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -161,7 +161,7 @@ void TerminalPramsManager__BlankEarthRank_SaveData(const MethodInfo *method)
     v1 = TerminalPramsManager_TypeInfo;
   }
   UnityEngine_PlayerPrefs__SetInt(
-    (System_String_o *)StringLiteral_11448/*"SAVEKEY_BlankEarthRank"*/,
+    (System_String_o *)StringLiteral_11449/*"SAVEKEY_BlankEarthRank"*/,
     v1->static_fields->_BlankEarthRank_k__BackingField,
     0);
   UnityEngine_PlayerPrefs__Save(0);
@@ -172,18 +172,18 @@ void TerminalPramsManager__BlankEarthSpotId_SaveData(const MethodInfo *method)
 {
   TerminalPramsManager_c *v1; // x0
 
-  if ( (byte_4C34DB6 & 1) == 0 )
+  if ( (byte_4C403A0 & 1) == 0 )
   {
-    sub_1C32C20(&TerminalPramsManager_TypeInfo);
-    sub_1C32C20(&StringLiteral_11449/*"SAVEKEY_BlankEarthSpotId"*/);
-    byte_4C34DB6 = 1;
+    sub_1C37058(&TerminalPramsManager_TypeInfo);
+    sub_1C37058(&StringLiteral_11450/*"SAVEKEY_BlankEarthSpotId"*/);
+    byte_4C403A0 = 1;
   }
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(TerminalPramsManager_TypeInfo);
-  if ( !byte_4C341F2 )
+  if ( !byte_4C3F7DC )
   {
-    sub_1C32C20(&TerminalPramsManager_TypeInfo);
-    byte_4C341F2 = 1;
+    sub_1C37058(&TerminalPramsManager_TypeInfo);
+    byte_4C3F7DC = 1;
   }
   v1 = TerminalPramsManager_TypeInfo;
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -192,7 +192,7 @@ void TerminalPramsManager__BlankEarthSpotId_SaveData(const MethodInfo *method)
     v1 = TerminalPramsManager_TypeInfo;
   }
   UnityEngine_PlayerPrefs__SetInt(
-    (System_String_o *)StringLiteral_11449/*"SAVEKEY_BlankEarthSpotId"*/,
+    (System_String_o *)StringLiteral_11450/*"SAVEKEY_BlankEarthSpotId"*/,
     v1->static_fields->_BlankEarthSpotId_k__BackingField,
     0);
   UnityEngine_PlayerPrefs__Save(0);
@@ -205,20 +205,20 @@ void TerminalPramsManager__CampaignDirectBonus_SaveData(const MethodInfo *method
   Il2CppObject *p_obj; // x19
   System_String_o *v3; // x0
 
-  if ( (byte_4C34DB5 & 1) == 0 )
+  if ( (byte_4C4039F & 1) == 0 )
   {
-    sub_1C32C20(&CommonUI_CampaignDirectBonusData___TypeInfo);
-    sub_1C32C20(&JsonManager_TypeInfo);
-    sub_1C32C20(&TerminalPramsManager_TypeInfo);
-    sub_1C32C20(&StringLiteral_11450/*"SAVEKEY_CampaignDirectBonus"*/);
-    byte_4C34DB5 = 1;
+    sub_1C37058(&CommonUI_CampaignDirectBonusData___TypeInfo);
+    sub_1C37058(&JsonManager_TypeInfo);
+    sub_1C37058(&TerminalPramsManager_TypeInfo);
+    sub_1C37058(&StringLiteral_11451/*"SAVEKEY_CampaignDirectBonus"*/);
+    byte_4C4039F = 1;
   }
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(TerminalPramsManager_TypeInfo);
-  if ( !byte_4C319B7 )
+  if ( !byte_4C3CF07 )
   {
-    sub_1C32C20(&TerminalPramsManager_TypeInfo);
-    byte_4C319B7 = 1;
+    sub_1C37058(&TerminalPramsManager_TypeInfo);
+    byte_4C3CF07 = 1;
   }
   v1 = TerminalPramsManager_TypeInfo;
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -228,11 +228,11 @@ void TerminalPramsManager__CampaignDirectBonus_SaveData(const MethodInfo *method
   }
   p_obj = &v1->static_fields->_CampaignDirectBonus_k__BackingField->obj;
   if ( !p_obj )
-    p_obj = (Il2CppObject *)sub_1C32CC8(CommonUI_CampaignDirectBonusData___TypeInfo, 0);
+    p_obj = (Il2CppObject *)sub_1C37100(CommonUI_CampaignDirectBonusData___TypeInfo, 0);
   if ( !JsonManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(JsonManager_TypeInfo);
   v3 = JsonManager__toJson(p_obj, 0, 0, 0);
-  UnityEngine_PlayerPrefs__SetString((System_String_o *)StringLiteral_11450/*"SAVEKEY_CampaignDirectBonus"*/, v3, 0);
+  UnityEngine_PlayerPrefs__SetString((System_String_o *)StringLiteral_11451/*"SAVEKEY_CampaignDirectBonus"*/, v3, 0);
   UnityEngine_PlayerPrefs__Save(0);
 }
 
@@ -244,34 +244,34 @@ bool TerminalPramsManager__CanSendTrackEvent(int32_t questId, const MethodInfo *
   Il2CppObject *v7; // [xsp+0h] [xbp-30h] BYREF
   QuestEntity_o *entity; // [xsp+8h] [xbp-28h] BYREF
 
-  if ( (byte_4C34DD2 & 1) == 0 )
+  if ( (byte_4C403BC & 1) == 0 )
   {
-    sub_1C32C20(&BalanceConfig_TypeInfo);
-    sub_1C32C20(&Method_DataManager_GetMasterData_QuestMaster___);
-    sub_1C32C20(&Method_DataManager_GetMasterData_SpotMaster___);
-    sub_1C32C20(&Method_DataMasterBase_SpotMaster__SpotEntity__int__TryGetEntity__);
-    sub_1C32C20(&Method_System_Linq_Enumerable_Contains_int___);
-    sub_1C32C20(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-    byte_4C34DD2 = 1;
+    sub_1C37058(&BalanceConfig_TypeInfo);
+    sub_1C37058(&Method_DataManager_GetMasterData_QuestMaster___);
+    sub_1C37058(&Method_DataManager_GetMasterData_SpotMaster___);
+    sub_1C37058(&Method_DataMasterBase_SpotMaster__SpotEntity__int__TryGetEntity__);
+    sub_1C37058(&Method_System_Linq_Enumerable_Contains_int___);
+    sub_1C37058(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    byte_4C403BC = 1;
   }
   v7 = 0;
   entity = 0;
-  Instance = (DataManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39E2904 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = (DataManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39ED16C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance )
     goto LABEL_16;
   Instance = (DataManager_o *)DataManager__GetMasterData_object_(
                                 Instance,
-                                (const MethodInfo_30DD3F0 *)Method_DataManager_GetMasterData_QuestMaster___);
+                                (const MethodInfo_30E7C58 *)Method_DataManager_GetMasterData_QuestMaster___);
   if ( !Instance )
     goto LABEL_16;
   if ( !QuestMaster__TryGetQuestEntity((QuestMaster_o *)Instance, &entity, questId, 0) )
     return 0;
-  Instance = (DataManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39E2904 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = (DataManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39ED16C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance )
     goto LABEL_16;
   Instance = (DataManager_o *)DataManager__GetMasterData_object_(
                                 Instance,
-                                (const MethodInfo_30DD3F0 *)Method_DataManager_GetMasterData_SpotMaster___);
+                                (const MethodInfo_30E7C58 *)Method_DataManager_GetMasterData_SpotMaster___);
   if ( !entity )
     goto LABEL_16;
   v4 = (DataMasterBase_TMaster__TEntity__PKType__o *)Instance;
@@ -282,18 +282,18 @@ bool TerminalPramsManager__CanSendTrackEvent(int32_t questId, const MethodInfo *
           v4,
           &v7,
           (int32_t)Instance,
-          (const MethodInfo_3396884 *)Method_DataMasterBase_SpotMaster__SpotEntity__int__TryGetEntity__) )
+          (const MethodInfo_33A10EC *)Method_DataMasterBase_SpotMaster__SpotEntity__int__TryGetEntity__) )
     return 0;
   Instance = (DataManager_o *)BalanceConfig_TypeInfo;
   if ( !BalanceConfig_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(BalanceConfig_TypeInfo);
   if ( !v7 )
 LABEL_16:
-    sub_1C32E7C(Instance);
+    sub_1C372B4(Instance);
   return !System_Linq_Enumerable__Contains_int_(
             (System_Collections_Generic_IEnumerable_TSource__o *)BalanceConfig_TypeInfo->static_fields->NotSendTrackEventAtWarIds,
             HIDWORD(v7[1].klass),
-            (const MethodInfo_30FA3A0 *)Method_System_Linq_Enumerable_Contains_int___);
+            (const MethodInfo_3104C08 *)Method_System_Linq_Enumerable_Contains_int___);
 }
 
 
@@ -303,17 +303,17 @@ void TerminalPramsManager__CheckClearSelectedStoryQuestId(int32_t questId, const
   TerminalPramsManager_c *v4; // x0
   const MethodInfo *v5; // x0
 
-  if ( (byte_4C34DB8 & 1) == 0 )
+  if ( (byte_4C403A2 & 1) == 0 )
   {
-    sub_1C32C20(&TerminalPramsManager_TypeInfo);
-    byte_4C34DB8 = 1;
+    sub_1C37058(&TerminalPramsManager_TypeInfo);
+    byte_4C403A2 = 1;
   }
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(TerminalPramsManager_TypeInfo);
-  if ( !byte_4C34BCA )
+  if ( !byte_4C401B4 )
   {
-    sub_1C32C20(&TerminalPramsManager_TypeInfo);
-    byte_4C34BCA = 1;
+    sub_1C37058(&TerminalPramsManager_TypeInfo);
+    byte_4C401B4 = 1;
   }
   v3 = TerminalPramsManager_TypeInfo;
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -325,10 +325,10 @@ void TerminalPramsManager__CheckClearSelectedStoryQuestId(int32_t questId, const
   {
     if ( !v3->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(v3);
-    if ( !byte_4C34BCA )
+    if ( !byte_4C401B4 )
     {
-      sub_1C32C20(&TerminalPramsManager_TypeInfo);
-      byte_4C34BCA = 1;
+      sub_1C37058(&TerminalPramsManager_TypeInfo);
+      byte_4C401B4 = 1;
     }
     v4 = TerminalPramsManager_TypeInfo;
     if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -340,10 +340,10 @@ void TerminalPramsManager__CheckClearSelectedStoryQuestId(int32_t questId, const
     {
       if ( !v4->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(v4);
-      if ( !byte_4C346C6 )
+      if ( !byte_4C3FCB0 )
       {
-        sub_1C32C20(&TerminalPramsManager_TypeInfo);
-        byte_4C346C6 = 1;
+        sub_1C37058(&TerminalPramsManager_TypeInfo);
+        byte_4C3FCB0 = 1;
       }
       v5 = (const MethodInfo *)TerminalPramsManager_TypeInfo;
       if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -360,25 +360,25 @@ void TerminalPramsManager__CheckClearSelectedStoryQuestId(int32_t questId, const
 
 bool TerminalPramsManager__CheckEventActivityPointSaveData(const MethodInfo *method)
 {
-  if ( (byte_4C34DA0 & 1) == 0 )
+  if ( (byte_4C4038A & 1) == 0 )
   {
-    sub_1C32C20(&StringLiteral_13695/*"TerminalBeforeEventActivityPoint"*/);
-    sub_1C32C20(&StringLiteral_13696/*"TerminalBeforeEventActivityPointGauge"*/);
-    byte_4C34DA0 = 1;
+    sub_1C37058(&StringLiteral_13696/*"TerminalBeforeEventActivityPoint"*/);
+    sub_1C37058(&StringLiteral_13697/*"TerminalBeforeEventActivityPointGauge"*/);
+    byte_4C4038A = 1;
   }
-  return UnityEngine_PlayerPrefs__HasKey((System_String_o *)StringLiteral_13695/*"TerminalBeforeEventActivityPoint"*/, 0)
-      && UnityEngine_PlayerPrefs__HasKey((System_String_o *)StringLiteral_13696/*"TerminalBeforeEventActivityPointGauge"*/, 0);
+  return UnityEngine_PlayerPrefs__HasKey((System_String_o *)StringLiteral_13696/*"TerminalBeforeEventActivityPoint"*/, 0)
+      && UnityEngine_PlayerPrefs__HasKey((System_String_o *)StringLiteral_13697/*"TerminalBeforeEventActivityPointGauge"*/, 0);
 }
 
 
 bool TerminalPramsManager__CheckEventSubmarinePointSaveData(const MethodInfo *method)
 {
-  if ( (byte_4C34DA2 & 1) == 0 )
+  if ( (byte_4C4038C & 1) == 0 )
   {
-    sub_1C32C20(&StringLiteral_13697/*"TerminalBeforeEventSubmarinePointData"*/);
-    byte_4C34DA2 = 1;
+    sub_1C37058(&StringLiteral_13698/*"TerminalBeforeEventSubmarinePointData"*/);
+    byte_4C4038C = 1;
   }
-  return UnityEngine_PlayerPrefs__HasKey((System_String_o *)StringLiteral_13697/*"TerminalBeforeEventSubmarinePointData"*/, 0);
+  return UnityEngine_PlayerPrefs__HasKey((System_String_o *)StringLiteral_13698/*"TerminalBeforeEventSubmarinePointData"*/, 0);
 }
 
 
@@ -387,10 +387,10 @@ bool TerminalPramsManager__CheckIsOrdealCallWarClear(WarEntity_o *warEntity, con
   int32_t parentWarId; // w19
   BalanceConfig_c *v4; // x0
 
-  if ( (byte_4C34DDF & 1) == 0 )
+  if ( (byte_4C403C9 & 1) == 0 )
   {
-    sub_1C32C20(&BalanceConfig_TypeInfo);
-    byte_4C34DDF = 1;
+    sub_1C37058(&BalanceConfig_TypeInfo);
+    byte_4C403C9 = 1;
   }
   if ( !warEntity )
     return 0;
@@ -432,29 +432,29 @@ void TerminalPramsManager__CheckResumeEffectNT2(const MethodInfo *method)
   CGThumbnailListItem_o *p_PlayedTerminalEffects_k__BackingField; // x0
   const MethodInfo *v24; // x0
 
-  if ( (byte_4C34DBC & 1) == 0 )
+  if ( (byte_4C403A6 & 1) == 0 )
   {
-    sub_1C32C20(&System_Action_string__TypeInfo);
-    sub_1C32C20(&Method_System_Linq_Enumerable_ToList_string___);
-    sub_1C32C20(&Method_System_Collections_Generic_List_string__ForEach__);
-    sub_1C32C20(&Method_System_Collections_Generic_List_string__Remove__);
-    sub_1C32C20(&ScrTerminalListTop_TypeInfo);
-    sub_1C32C20(&TerminalPramsManager_TypeInfo);
-    sub_1C32C20(&Method_TerminalPramsManager___c__DisplayClass712_0__CheckResumeEffectNT2_b__0__);
-    sub_1C32C20(&TerminalPramsManager___c__DisplayClass712_0_TypeInfo);
-    sub_1C32C20(&StringLiteral_43/*"\n"*/);
-    sub_1C32C20(&StringLiteral_87/*"\r\n"*/);
-    sub_1C32C20(&StringLiteral_1/*""*/);
-    byte_4C34DBC = 1;
+    sub_1C37058(&System_Action_string__TypeInfo);
+    sub_1C37058(&Method_System_Linq_Enumerable_ToList_string___);
+    sub_1C37058(&Method_System_Collections_Generic_List_string__ForEach__);
+    sub_1C37058(&Method_System_Collections_Generic_List_string__Remove__);
+    sub_1C37058(&ScrTerminalListTop_TypeInfo);
+    sub_1C37058(&TerminalPramsManager_TypeInfo);
+    sub_1C37058(&Method_TerminalPramsManager___c__DisplayClass712_0__CheckResumeEffectNT2_b__0__);
+    sub_1C37058(&TerminalPramsManager___c__DisplayClass712_0_TypeInfo);
+    sub_1C37058(&StringLiteral_43/*"\n"*/);
+    sub_1C37058(&StringLiteral_87/*"\r\n"*/);
+    sub_1C37058(&StringLiteral_1/*""*/);
+    byte_4C403A6 = 1;
   }
-  v1 = sub_1C32E6C(TerminalPramsManager___c__DisplayClass712_0_TypeInfo);
+  v1 = sub_1C372A4(TerminalPramsManager___c__DisplayClass712_0_TypeInfo);
   TerminalPramsManager___c__DisplayClass712_0___ctor((TerminalPramsManager___c__DisplayClass712_0_o *)v1, 0);
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(TerminalPramsManager_TypeInfo);
-  if ( !byte_4C34E08 )
+  if ( !byte_4C403F2 )
   {
-    sub_1C32C20(&TerminalPramsManager_TypeInfo);
-    byte_4C34E08 = 1;
+    sub_1C37058(&TerminalPramsManager_TypeInfo);
+    byte_4C403F2 = 1;
   }
   v3 = TerminalPramsManager_TypeInfo;
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -501,10 +501,10 @@ void TerminalPramsManager__CheckResumeEffectNT2(const MethodInfo *method)
                                 PlayedTerminalEffects_k__BackingField->klass->vtable._3_ToString.method);
         if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
           j_il2cpp_runtime_class_init_0(TerminalPramsManager_TypeInfo);
-        if ( !byte_4C34E08 )
+        if ( !byte_4C403F2 )
         {
-          sub_1C32C20(&TerminalPramsManager_TypeInfo);
-          byte_4C34E08 = 1;
+          sub_1C37058(&TerminalPramsManager_TypeInfo);
+          byte_4C403F2 = 1;
         }
         v12 = TerminalPramsManager_TypeInfo;
         if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -514,7 +514,7 @@ void TerminalPramsManager__CheckResumeEffectNT2(const MethodInfo *method)
         }
         PlayedTerminalEffects_k__BackingField = v12->static_fields->_PlayedTerminalEffects_k__BackingField;
         if ( !PlayedTerminalEffects_k__BackingField
-          || (PlayedTerminalEffects_k__BackingField = System_String__Replace_63565092(
+          || (PlayedTerminalEffects_k__BackingField = System_String__Replace_63608204(
                                                         PlayedTerminalEffects_k__BackingField,
                                                         (System_String_o *)StringLiteral_87/*"\r\n"*/,
                                                         (System_String_o *)StringLiteral_43/*"\n"*/,
@@ -526,21 +526,21 @@ void TerminalPramsManager__CheckResumeEffectNT2(const MethodInfo *method)
                                                                            0),
               (PlayedTerminalEffects_k__BackingField = (System_String_o *)System_Linq_Enumerable__ToList_object_(
                                                                             v13,
-                                                                            (const MethodInfo_3121728 *)Method_System_Linq_Enumerable_ToList_string___)) == 0)
+                                                                            (const MethodInfo_312BF90 *)Method_System_Linq_Enumerable_ToList_string___)) == 0)
           || (v14 = (System_Collections_Generic_List_object__o *)PlayedTerminalEffects_k__BackingField,
               PlayedTerminalEffects_k__BackingField = (System_String_o *)System_Collections_Generic_List_object___Remove(
                                                                            (System_Collections_Generic_List_object__o *)PlayedTerminalEffects_k__BackingField,
                                                                            v11,
-                                                                           (const MethodInfo_3799CE4 *)Method_System_Collections_Generic_List_string__Remove__),
+                                                                           (const MethodInfo_37A454C *)Method_System_Collections_Generic_List_string__Remove__),
               !v1) )
         {
 LABEL_39:
-          sub_1C32E7C(PlayedTerminalEffects_k__BackingField);
+          sub_1C372B4(PlayedTerminalEffects_k__BackingField);
         }
         v17 = StringLiteral_1/*""*/;
         *(_QWORD *)(v1 + 16) = StringLiteral_1/*""*/;
-        sub_1C32BC4((CGThumbnailListItem_o *)(v1 + 16), v17, v15, v16);
-        v18 = (System_Action_object__o *)sub_1C32E6C(System_Action_string__TypeInfo);
+        sub_1C36FFC((CGThumbnailListItem_o *)(v1 + 16), v17, v15, v16);
+        v18 = (System_Action_object__o *)sub_1C372A4(System_Action_string__TypeInfo);
         System_Action_object____ctor(
           v18,
           (Il2CppObject *)v1,
@@ -549,12 +549,12 @@ LABEL_39:
         System_Collections_Generic_List_object___ForEach(
           v14,
           (System_Action_T__o *)v18,
-          (const MethodInfo_37991FC *)Method_System_Collections_Generic_List_string__ForEach__);
+          (const MethodInfo_37A3A64 *)Method_System_Collections_Generic_List_string__ForEach__);
         v21 = *(CGThumbnailListItem_c **)(v1 + 16);
-        if ( !byte_4C34DF9 )
+        if ( !byte_4C403E3 )
         {
-          sub_1C32C20(&TerminalPramsManager_TypeInfo);
-          byte_4C34DF9 = 1;
+          sub_1C37058(&TerminalPramsManager_TypeInfo);
+          byte_4C403E3 = 1;
         }
         v22 = TerminalPramsManager_TypeInfo;
         if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -564,7 +564,7 @@ LABEL_39:
         }
         p_PlayedTerminalEffects_k__BackingField = (CGThumbnailListItem_o *)&v22->static_fields->_PlayedTerminalEffects_k__BackingField;
         p_PlayedTerminalEffects_k__BackingField->klass = v21;
-        sub_1C32BC4(p_PlayedTerminalEffects_k__BackingField, (int32_t)v21, v19, v20);
+        sub_1C36FFC(p_PlayedTerminalEffects_k__BackingField, (int32_t)v21, v19, v20);
         TerminalPramsManager__Save_SaveData(v24);
       }
     }
@@ -576,18 +576,18 @@ void TerminalPramsManager__ClearEventQuestIds_SaveData(const MethodInfo *method)
 {
   TerminalPramsManager_c *v1; // x0
 
-  if ( (byte_4C34DB0 & 1) == 0 )
+  if ( (byte_4C4039A & 1) == 0 )
   {
-    sub_1C32C20(&TerminalPramsManager_TypeInfo);
-    sub_1C32C20(&StringLiteral_11451/*"SAVEKEY_ClearEventQuestIds"*/);
-    byte_4C34DB0 = 1;
+    sub_1C37058(&TerminalPramsManager_TypeInfo);
+    sub_1C37058(&StringLiteral_11452/*"SAVEKEY_ClearEventQuestIds"*/);
+    byte_4C4039A = 1;
   }
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(TerminalPramsManager_TypeInfo);
-  if ( !byte_4C342AB )
+  if ( !byte_4C3F895 )
   {
-    sub_1C32C20(&TerminalPramsManager_TypeInfo);
-    byte_4C342AB = 1;
+    sub_1C37058(&TerminalPramsManager_TypeInfo);
+    byte_4C3F895 = 1;
   }
   v1 = TerminalPramsManager_TypeInfo;
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -596,7 +596,7 @@ void TerminalPramsManager__ClearEventQuestIds_SaveData(const MethodInfo *method)
     v1 = TerminalPramsManager_TypeInfo;
   }
   UnityEngine_PlayerPrefs__SetString(
-    (System_String_o *)StringLiteral_11451/*"SAVEKEY_ClearEventQuestIds"*/,
+    (System_String_o *)StringLiteral_11452/*"SAVEKEY_ClearEventQuestIds"*/,
     v1->static_fields->_ClearEventQuestIds_k__BackingField,
     0);
   UnityEngine_PlayerPrefs__Save(0);
@@ -607,12 +607,12 @@ void TerminalPramsManager__ConnectMark_SaveData(const MethodInfo *method)
 {
   TerminalPramsManager_c *v1; // x0
 
-  if ( (byte_4C34DAF & 1) == 0 )
+  if ( (byte_4C40399 & 1) == 0 )
   {
-    sub_1C32C20(&TerminalPramsManager_TypeInfo);
-    sub_1C32C20(&StringLiteral_11453/*"SAVEKEY_ConnectMarkEventId"*/);
-    sub_1C32C20(&StringLiteral_11452/*"SAVEKEY_ConnectMarkAnimationId"*/);
-    byte_4C34DAF = 1;
+    sub_1C37058(&TerminalPramsManager_TypeInfo);
+    sub_1C37058(&StringLiteral_11454/*"SAVEKEY_ConnectMarkEventId"*/);
+    sub_1C37058(&StringLiteral_11453/*"SAVEKEY_ConnectMarkAnimationId"*/);
+    byte_4C40399 = 1;
   }
   v1 = TerminalPramsManager_TypeInfo;
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -620,9 +620,9 @@ void TerminalPramsManager__ConnectMark_SaveData(const MethodInfo *method)
     j_il2cpp_runtime_class_init_0(TerminalPramsManager_TypeInfo);
     v1 = TerminalPramsManager_TypeInfo;
   }
-  UnityEngine_PlayerPrefs__SetInt((System_String_o *)StringLiteral_11453/*"SAVEKEY_ConnectMarkEventId"*/, v1->static_fields->ConnectMarkEventId, 0);
+  UnityEngine_PlayerPrefs__SetInt((System_String_o *)StringLiteral_11454/*"SAVEKEY_ConnectMarkEventId"*/, v1->static_fields->ConnectMarkEventId, 0);
   UnityEngine_PlayerPrefs__SetInt(
-    (System_String_o *)StringLiteral_11452/*"SAVEKEY_ConnectMarkAnimationId"*/,
+    (System_String_o *)StringLiteral_11453/*"SAVEKEY_ConnectMarkAnimationId"*/,
     TerminalPramsManager_TypeInfo->static_fields->ConnectMarkAnimationId,
     0);
   UnityEngine_PlayerPrefs__Save(0);
@@ -638,12 +638,12 @@ void TerminalPramsManager__DeleteClearDatas(const MethodInfo *method)
   struct TerminalPramsManager_StaticFields *static_fields; // x8
   int32_t v6; // w1
 
-  if ( (byte_4C34DD5 & 1) == 0 )
+  if ( (byte_4C403BF & 1) == 0 )
   {
-    sub_1C32C20(&TerminalPramsManager_ClearData_TypeInfo);
-    sub_1C32C20(&TerminalPramsManager_TypeInfo);
-    sub_1C32C20(&StringLiteral_1/*""*/);
-    byte_4C34DD5 = 1;
+    sub_1C37058(&TerminalPramsManager_ClearData_TypeInfo);
+    sub_1C37058(&TerminalPramsManager_TypeInfo);
+    sub_1C37058(&StringLiteral_1/*""*/);
+    byte_4C403BF = 1;
   }
   v1 = TerminalPramsManager_ClearData_TypeInfo;
   if ( !TerminalPramsManager_ClearData_TypeInfo->_2.cctor_finished )
@@ -654,10 +654,10 @@ void TerminalPramsManager__DeleteClearDatas(const MethodInfo *method)
   UnityEngine_PlayerPrefs__DeleteKey(v1->static_fields->SAVEKEY_CLEAR_REWARD_DISP, 0);
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(TerminalPramsManager_TypeInfo);
-  if ( !byte_4C34E1C )
+  if ( !byte_4C40406 )
   {
-    sub_1C32C20(&TerminalPramsManager_TypeInfo);
-    byte_4C34E1C = 1;
+    sub_1C37058(&TerminalPramsManager_TypeInfo);
+    byte_4C40406 = 1;
   }
   v4 = TerminalPramsManager_TypeInfo;
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -669,7 +669,7 @@ void TerminalPramsManager__DeleteClearDatas(const MethodInfo *method)
   static_fields->_isQuestRewardSetted_k__BackingField = 0;
   v6 = StringLiteral_1/*""*/;
   static_fields->lastPlayBgmName = (struct System_String_o *)StringLiteral_1/*""*/;
-  sub_1C32BC4((CGThumbnailListItem_o *)&static_fields->lastPlayBgmName, v6, v2, v3);
+  sub_1C36FFC((CGThumbnailListItem_o *)&static_fields->lastPlayBgmName, v6, v2, v3);
 }
 
 
@@ -680,101 +680,101 @@ void TerminalPramsManager__DeleteContinueData(const MethodInfo *method)
   const MethodInfo *v3; // x0
   const MethodInfo *v4; // x0
 
-  if ( (byte_4C34D93 & 1) == 0 )
+  if ( (byte_4C4037D & 1) == 0 )
   {
-    sub_1C32C20(&TerminalPramsManager_TypeInfo);
-    sub_1C32C20(&StringLiteral_11456/*"SAVEKEY_LastPlayBgmName"*/);
-    sub_1C32C20(&StringLiteral_13699/*"TerminalEndTime"*/);
-    sub_1C32C20(&StringLiteral_5185/*"Debug_IsOriginalGuestNPC"*/);
-    sub_1C32C20(&StringLiteral_11462/*"SAVEKEY_PlayedTerminalEffects"*/);
-    sub_1C32C20(&StringLiteral_13695/*"TerminalBeforeEventActivityPoint"*/);
-    sub_1C32C20(&StringLiteral_11450/*"SAVEKEY_CampaignDirectBonus"*/);
-    sub_1C32C20(&StringLiteral_11457/*"SAVEKEY_LastPlayQuestConsumeType"*/);
-    sub_1C32C20(&StringLiteral_11467/*"SAVEKEY_TerminalCraftInfoDisp"*/);
-    sub_1C32C20(&StringLiteral_13700/*"TerminalEventDailyPointEventId"*/);
-    sub_1C32C20(&StringLiteral_5181/*"Debug_GuestNPCInfoList"*/);
-    sub_1C32C20(&StringLiteral_13697/*"TerminalBeforeEventSubmarinePointData"*/);
-    sub_1C32C20(&StringLiteral_13706/*"TerminalPhaseCnt"*/);
-    sub_1C32C20(&StringLiteral_11466/*"SAVEKEY_TerminalConquestInfos"*/);
-    sub_1C32C20(&StringLiteral_13714/*"TerminalTimeStatusEventId"*/);
-    sub_1C32C20(&StringLiteral_13698/*"TerminalDispState"*/);
-    sub_1C32C20(&StringLiteral_11459/*"SAVEKEY_PlayTerminalEffectDisappear"*/);
-    sub_1C32C20(&StringLiteral_13701/*"TerminalIsDoneShortcut"*/);
-    sub_1C32C20(&StringLiteral_11458/*"SAVEKEY_MapModelClearQuestInfo"*/);
-    sub_1C32C20(&StringLiteral_11463/*"SAVEKEY_PlayerGenderType"*/);
-    sub_1C32C20(&StringLiteral_11468/*"SAVEKEY_TerminalHarvestGrowthInfo"*/);
-    sub_1C32C20(&StringLiteral_11451/*"SAVEKEY_ClearEventQuestIds"*/);
-    sub_1C32C20(&StringLiteral_11460/*"SAVEKEY_PlayTerminalEffectDisappearWarId"*/);
-    sub_1C32C20(&StringLiteral_5186/*"Debug_IsQuestReleaseAll"*/);
-    sub_1C32C20(&StringLiteral_5183/*"Debug_IsDummyErrorSelect"*/);
-    sub_1C32C20(&StringLiteral_13709/*"TerminalQuestId"*/);
-    sub_1C32C20(&StringLiteral_11465/*"SAVEKEY_TerminalConquestInfoDisp"*/);
-    sub_1C32C20(&StringLiteral_11471/*"SAVEKEY_TerminalSelectedStoryQuestId"*/);
-    sub_1C32C20(&StringLiteral_13713/*"TerminalTimeStatusEventDailyPoint"*/);
-    sub_1C32C20(&StringLiteral_13718/*"TerminalWarId"*/);
-    sub_1C32C20(&StringLiteral_13711/*"TerminalSpotId"*/);
-    sub_1C32C20(&StringLiteral_13715/*"TerminalTimeStatusLoopCount"*/);
-    sub_1C32C20(&StringLiteral_13696/*"TerminalBeforeEventActivityPointGauge"*/);
-    sub_1C32C20(&StringLiteral_11449/*"SAVEKEY_BlankEarthSpotId"*/);
-    sub_1C32C20(&StringLiteral_11454/*"SAVEKEY_DataLostBattleAutoReset"*/);
-    sub_1C32C20(&StringLiteral_5184/*"Debug_IsOriginalBattle"*/);
-    sub_1C32C20(&StringLiteral_13719/*"TerminalWarStartedIds"*/);
-    sub_1C32C20(&StringLiteral_5180/*"Debug_BattleEnemyList"*/);
-    sub_1C32C20(&StringLiteral_11453/*"SAVEKEY_ConnectMarkEventId"*/);
-    sub_1C32C20(&StringLiteral_13717/*"TerminalTransitionInfoVoiceAssetName"*/);
-    sub_1C32C20(&StringLiteral_11452/*"SAVEKEY_ConnectMarkAnimationId"*/);
-    sub_1C32C20(&StringLiteral_11461/*"SAVEKEY_PlayTerminalEffectNt2AfterAction"*/);
-    sub_1C32C20(&StringLiteral_13704/*"TerminalLastPlayedQuestId"*/);
-    sub_1C32C20(&StringLiteral_5182/*"Debug_IsBuildInfoDisp"*/);
-    sub_1C32C20(&StringLiteral_13716/*"TerminalTransitionInfoMissionId"*/);
-    sub_1C32C20(&StringLiteral_11470/*"SAVEKEY_TerminalSelectedRecollectionWarId"*/);
-    byte_4C34D93 = 1;
+    sub_1C37058(&TerminalPramsManager_TypeInfo);
+    sub_1C37058(&StringLiteral_11457/*"SAVEKEY_LastPlayBgmName"*/);
+    sub_1C37058(&StringLiteral_13700/*"TerminalEndTime"*/);
+    sub_1C37058(&StringLiteral_5186/*"Debug_IsOriginalGuestNPC"*/);
+    sub_1C37058(&StringLiteral_11463/*"SAVEKEY_PlayedTerminalEffects"*/);
+    sub_1C37058(&StringLiteral_13696/*"TerminalBeforeEventActivityPoint"*/);
+    sub_1C37058(&StringLiteral_11451/*"SAVEKEY_CampaignDirectBonus"*/);
+    sub_1C37058(&StringLiteral_11458/*"SAVEKEY_LastPlayQuestConsumeType"*/);
+    sub_1C37058(&StringLiteral_11468/*"SAVEKEY_TerminalCraftInfoDisp"*/);
+    sub_1C37058(&StringLiteral_13701/*"TerminalEventDailyPointEventId"*/);
+    sub_1C37058(&StringLiteral_5182/*"Debug_GuestNPCInfoList"*/);
+    sub_1C37058(&StringLiteral_13698/*"TerminalBeforeEventSubmarinePointData"*/);
+    sub_1C37058(&StringLiteral_13707/*"TerminalPhaseCnt"*/);
+    sub_1C37058(&StringLiteral_11467/*"SAVEKEY_TerminalConquestInfos"*/);
+    sub_1C37058(&StringLiteral_13715/*"TerminalTimeStatusEventId"*/);
+    sub_1C37058(&StringLiteral_13699/*"TerminalDispState"*/);
+    sub_1C37058(&StringLiteral_11460/*"SAVEKEY_PlayTerminalEffectDisappear"*/);
+    sub_1C37058(&StringLiteral_13702/*"TerminalIsDoneShortcut"*/);
+    sub_1C37058(&StringLiteral_11459/*"SAVEKEY_MapModelClearQuestInfo"*/);
+    sub_1C37058(&StringLiteral_11464/*"SAVEKEY_PlayerGenderType"*/);
+    sub_1C37058(&StringLiteral_11469/*"SAVEKEY_TerminalHarvestGrowthInfo"*/);
+    sub_1C37058(&StringLiteral_11452/*"SAVEKEY_ClearEventQuestIds"*/);
+    sub_1C37058(&StringLiteral_11461/*"SAVEKEY_PlayTerminalEffectDisappearWarId"*/);
+    sub_1C37058(&StringLiteral_5187/*"Debug_IsQuestReleaseAll"*/);
+    sub_1C37058(&StringLiteral_5184/*"Debug_IsDummyErrorSelect"*/);
+    sub_1C37058(&StringLiteral_13710/*"TerminalQuestId"*/);
+    sub_1C37058(&StringLiteral_11466/*"SAVEKEY_TerminalConquestInfoDisp"*/);
+    sub_1C37058(&StringLiteral_11472/*"SAVEKEY_TerminalSelectedStoryQuestId"*/);
+    sub_1C37058(&StringLiteral_13714/*"TerminalTimeStatusEventDailyPoint"*/);
+    sub_1C37058(&StringLiteral_13719/*"TerminalWarId"*/);
+    sub_1C37058(&StringLiteral_13712/*"TerminalSpotId"*/);
+    sub_1C37058(&StringLiteral_13716/*"TerminalTimeStatusLoopCount"*/);
+    sub_1C37058(&StringLiteral_13697/*"TerminalBeforeEventActivityPointGauge"*/);
+    sub_1C37058(&StringLiteral_11450/*"SAVEKEY_BlankEarthSpotId"*/);
+    sub_1C37058(&StringLiteral_11455/*"SAVEKEY_DataLostBattleAutoReset"*/);
+    sub_1C37058(&StringLiteral_5185/*"Debug_IsOriginalBattle"*/);
+    sub_1C37058(&StringLiteral_13720/*"TerminalWarStartedIds"*/);
+    sub_1C37058(&StringLiteral_5181/*"Debug_BattleEnemyList"*/);
+    sub_1C37058(&StringLiteral_11454/*"SAVEKEY_ConnectMarkEventId"*/);
+    sub_1C37058(&StringLiteral_13718/*"TerminalTransitionInfoVoiceAssetName"*/);
+    sub_1C37058(&StringLiteral_11453/*"SAVEKEY_ConnectMarkAnimationId"*/);
+    sub_1C37058(&StringLiteral_11462/*"SAVEKEY_PlayTerminalEffectNt2AfterAction"*/);
+    sub_1C37058(&StringLiteral_13705/*"TerminalLastPlayedQuestId"*/);
+    sub_1C37058(&StringLiteral_5183/*"Debug_IsBuildInfoDisp"*/);
+    sub_1C37058(&StringLiteral_13717/*"TerminalTransitionInfoMissionId"*/);
+    sub_1C37058(&StringLiteral_11471/*"SAVEKEY_TerminalSelectedRecollectionWarId"*/);
+    byte_4C4037D = 1;
   }
-  UnityEngine_PlayerPrefs__DeleteKey((System_String_o *)StringLiteral_13698/*"TerminalDispState"*/, 0);
-  UnityEngine_PlayerPrefs__DeleteKey((System_String_o *)StringLiteral_13718/*"TerminalWarId"*/, 0);
-  UnityEngine_PlayerPrefs__DeleteKey((System_String_o *)StringLiteral_13711/*"TerminalSpotId"*/, 0);
-  UnityEngine_PlayerPrefs__DeleteKey((System_String_o *)StringLiteral_13709/*"TerminalQuestId"*/, 0);
-  UnityEngine_PlayerPrefs__DeleteKey((System_String_o *)StringLiteral_13704/*"TerminalLastPlayedQuestId"*/, 0);
-  UnityEngine_PlayerPrefs__DeleteKey((System_String_o *)StringLiteral_13706/*"TerminalPhaseCnt"*/, 0);
-  UnityEngine_PlayerPrefs__DeleteKey((System_String_o *)StringLiteral_13699/*"TerminalEndTime"*/, 0);
-  UnityEngine_PlayerPrefs__DeleteKey((System_String_o *)StringLiteral_13701/*"TerminalIsDoneShortcut"*/, 0);
-  UnityEngine_PlayerPrefs__DeleteKey((System_String_o *)StringLiteral_13719/*"TerminalWarStartedIds"*/, 0);
-  UnityEngine_PlayerPrefs__DeleteKey((System_String_o *)StringLiteral_5186/*"Debug_IsQuestReleaseAll"*/, 0);
-  UnityEngine_PlayerPrefs__DeleteKey((System_String_o *)StringLiteral_5183/*"Debug_IsDummyErrorSelect"*/, 0);
-  UnityEngine_PlayerPrefs__DeleteKey((System_String_o *)StringLiteral_5182/*"Debug_IsBuildInfoDisp"*/, 0);
-  UnityEngine_PlayerPrefs__DeleteKey((System_String_o *)StringLiteral_5184/*"Debug_IsOriginalBattle"*/, 0);
-  UnityEngine_PlayerPrefs__DeleteKey((System_String_o *)StringLiteral_5185/*"Debug_IsOriginalGuestNPC"*/, 0);
-  UnityEngine_PlayerPrefs__DeleteKey((System_String_o *)StringLiteral_5180/*"Debug_BattleEnemyList"*/, 0);
-  UnityEngine_PlayerPrefs__DeleteKey((System_String_o *)StringLiteral_5181/*"Debug_GuestNPCInfoList"*/, 0);
-  UnityEngine_PlayerPrefs__DeleteKey((System_String_o *)StringLiteral_13714/*"TerminalTimeStatusEventId"*/, 0);
-  UnityEngine_PlayerPrefs__DeleteKey((System_String_o *)StringLiteral_13715/*"TerminalTimeStatusLoopCount"*/, 0);
-  UnityEngine_PlayerPrefs__DeleteKey((System_String_o *)StringLiteral_13700/*"TerminalEventDailyPointEventId"*/, 0);
-  UnityEngine_PlayerPrefs__DeleteKey((System_String_o *)StringLiteral_13713/*"TerminalTimeStatusEventDailyPoint"*/, 0);
-  UnityEngine_PlayerPrefs__DeleteKey((System_String_o *)StringLiteral_13716/*"TerminalTransitionInfoMissionId"*/, 0);
-  UnityEngine_PlayerPrefs__DeleteKey((System_String_o *)StringLiteral_13717/*"TerminalTransitionInfoVoiceAssetName"*/, 0);
-  UnityEngine_PlayerPrefs__DeleteKey((System_String_o *)StringLiteral_13695/*"TerminalBeforeEventActivityPoint"*/, 0);
-  UnityEngine_PlayerPrefs__DeleteKey((System_String_o *)StringLiteral_13696/*"TerminalBeforeEventActivityPointGauge"*/, 0);
-  UnityEngine_PlayerPrefs__DeleteKey((System_String_o *)StringLiteral_13697/*"TerminalBeforeEventSubmarinePointData"*/, 0);
-  UnityEngine_PlayerPrefs__DeleteKey((System_String_o *)StringLiteral_11466/*"SAVEKEY_TerminalConquestInfos"*/, 0);
-  UnityEngine_PlayerPrefs__DeleteKey((System_String_o *)StringLiteral_11465/*"SAVEKEY_TerminalConquestInfoDisp"*/, 0);
-  UnityEngine_PlayerPrefs__DeleteKey((System_String_o *)StringLiteral_11467/*"SAVEKEY_TerminalCraftInfoDisp"*/, 0);
-  UnityEngine_PlayerPrefs__DeleteKey((System_String_o *)StringLiteral_11468/*"SAVEKEY_TerminalHarvestGrowthInfo"*/, 0);
-  UnityEngine_PlayerPrefs__DeleteKey((System_String_o *)StringLiteral_11456/*"SAVEKEY_LastPlayBgmName"*/, 0);
-  UnityEngine_PlayerPrefs__DeleteKey((System_String_o *)StringLiteral_11457/*"SAVEKEY_LastPlayQuestConsumeType"*/, 0);
-  UnityEngine_PlayerPrefs__DeleteKey((System_String_o *)StringLiteral_11462/*"SAVEKEY_PlayedTerminalEffects"*/, 0);
-  UnityEngine_PlayerPrefs__DeleteKey((System_String_o *)StringLiteral_11459/*"SAVEKEY_PlayTerminalEffectDisappear"*/, 0);
-  UnityEngine_PlayerPrefs__DeleteKey((System_String_o *)StringLiteral_11460/*"SAVEKEY_PlayTerminalEffectDisappearWarId"*/, 0);
-  UnityEngine_PlayerPrefs__DeleteKey((System_String_o *)StringLiteral_11461/*"SAVEKEY_PlayTerminalEffectNt2AfterAction"*/, 0);
-  UnityEngine_PlayerPrefs__DeleteKey((System_String_o *)StringLiteral_11471/*"SAVEKEY_TerminalSelectedStoryQuestId"*/, 0);
-  UnityEngine_PlayerPrefs__DeleteKey((System_String_o *)StringLiteral_11453/*"SAVEKEY_ConnectMarkEventId"*/, 0);
-  UnityEngine_PlayerPrefs__DeleteKey((System_String_o *)StringLiteral_11452/*"SAVEKEY_ConnectMarkAnimationId"*/, 0);
-  UnityEngine_PlayerPrefs__DeleteKey((System_String_o *)StringLiteral_11470/*"SAVEKEY_TerminalSelectedRecollectionWarId"*/, 0);
-  UnityEngine_PlayerPrefs__DeleteKey((System_String_o *)StringLiteral_11451/*"SAVEKEY_ClearEventQuestIds"*/, 0);
-  UnityEngine_PlayerPrefs__DeleteKey((System_String_o *)StringLiteral_11458/*"SAVEKEY_MapModelClearQuestInfo"*/, 0);
-  UnityEngine_PlayerPrefs__DeleteKey((System_String_o *)StringLiteral_11454/*"SAVEKEY_DataLostBattleAutoReset"*/, 0);
-  UnityEngine_PlayerPrefs__DeleteKey((System_String_o *)StringLiteral_11463/*"SAVEKEY_PlayerGenderType"*/, 0);
-  UnityEngine_PlayerPrefs__DeleteKey((System_String_o *)StringLiteral_11450/*"SAVEKEY_CampaignDirectBonus"*/, 0);
-  UnityEngine_PlayerPrefs__DeleteKey((System_String_o *)StringLiteral_11449/*"SAVEKEY_BlankEarthSpotId"*/, 0);
+  UnityEngine_PlayerPrefs__DeleteKey((System_String_o *)StringLiteral_13699/*"TerminalDispState"*/, 0);
+  UnityEngine_PlayerPrefs__DeleteKey((System_String_o *)StringLiteral_13719/*"TerminalWarId"*/, 0);
+  UnityEngine_PlayerPrefs__DeleteKey((System_String_o *)StringLiteral_13712/*"TerminalSpotId"*/, 0);
+  UnityEngine_PlayerPrefs__DeleteKey((System_String_o *)StringLiteral_13710/*"TerminalQuestId"*/, 0);
+  UnityEngine_PlayerPrefs__DeleteKey((System_String_o *)StringLiteral_13705/*"TerminalLastPlayedQuestId"*/, 0);
+  UnityEngine_PlayerPrefs__DeleteKey((System_String_o *)StringLiteral_13707/*"TerminalPhaseCnt"*/, 0);
+  UnityEngine_PlayerPrefs__DeleteKey((System_String_o *)StringLiteral_13700/*"TerminalEndTime"*/, 0);
+  UnityEngine_PlayerPrefs__DeleteKey((System_String_o *)StringLiteral_13702/*"TerminalIsDoneShortcut"*/, 0);
+  UnityEngine_PlayerPrefs__DeleteKey((System_String_o *)StringLiteral_13720/*"TerminalWarStartedIds"*/, 0);
+  UnityEngine_PlayerPrefs__DeleteKey((System_String_o *)StringLiteral_5187/*"Debug_IsQuestReleaseAll"*/, 0);
+  UnityEngine_PlayerPrefs__DeleteKey((System_String_o *)StringLiteral_5184/*"Debug_IsDummyErrorSelect"*/, 0);
+  UnityEngine_PlayerPrefs__DeleteKey((System_String_o *)StringLiteral_5183/*"Debug_IsBuildInfoDisp"*/, 0);
+  UnityEngine_PlayerPrefs__DeleteKey((System_String_o *)StringLiteral_5185/*"Debug_IsOriginalBattle"*/, 0);
+  UnityEngine_PlayerPrefs__DeleteKey((System_String_o *)StringLiteral_5186/*"Debug_IsOriginalGuestNPC"*/, 0);
+  UnityEngine_PlayerPrefs__DeleteKey((System_String_o *)StringLiteral_5181/*"Debug_BattleEnemyList"*/, 0);
+  UnityEngine_PlayerPrefs__DeleteKey((System_String_o *)StringLiteral_5182/*"Debug_GuestNPCInfoList"*/, 0);
+  UnityEngine_PlayerPrefs__DeleteKey((System_String_o *)StringLiteral_13715/*"TerminalTimeStatusEventId"*/, 0);
+  UnityEngine_PlayerPrefs__DeleteKey((System_String_o *)StringLiteral_13716/*"TerminalTimeStatusLoopCount"*/, 0);
+  UnityEngine_PlayerPrefs__DeleteKey((System_String_o *)StringLiteral_13701/*"TerminalEventDailyPointEventId"*/, 0);
+  UnityEngine_PlayerPrefs__DeleteKey((System_String_o *)StringLiteral_13714/*"TerminalTimeStatusEventDailyPoint"*/, 0);
+  UnityEngine_PlayerPrefs__DeleteKey((System_String_o *)StringLiteral_13717/*"TerminalTransitionInfoMissionId"*/, 0);
+  UnityEngine_PlayerPrefs__DeleteKey((System_String_o *)StringLiteral_13718/*"TerminalTransitionInfoVoiceAssetName"*/, 0);
+  UnityEngine_PlayerPrefs__DeleteKey((System_String_o *)StringLiteral_13696/*"TerminalBeforeEventActivityPoint"*/, 0);
+  UnityEngine_PlayerPrefs__DeleteKey((System_String_o *)StringLiteral_13697/*"TerminalBeforeEventActivityPointGauge"*/, 0);
+  UnityEngine_PlayerPrefs__DeleteKey((System_String_o *)StringLiteral_13698/*"TerminalBeforeEventSubmarinePointData"*/, 0);
+  UnityEngine_PlayerPrefs__DeleteKey((System_String_o *)StringLiteral_11467/*"SAVEKEY_TerminalConquestInfos"*/, 0);
+  UnityEngine_PlayerPrefs__DeleteKey((System_String_o *)StringLiteral_11466/*"SAVEKEY_TerminalConquestInfoDisp"*/, 0);
+  UnityEngine_PlayerPrefs__DeleteKey((System_String_o *)StringLiteral_11468/*"SAVEKEY_TerminalCraftInfoDisp"*/, 0);
+  UnityEngine_PlayerPrefs__DeleteKey((System_String_o *)StringLiteral_11469/*"SAVEKEY_TerminalHarvestGrowthInfo"*/, 0);
+  UnityEngine_PlayerPrefs__DeleteKey((System_String_o *)StringLiteral_11457/*"SAVEKEY_LastPlayBgmName"*/, 0);
+  UnityEngine_PlayerPrefs__DeleteKey((System_String_o *)StringLiteral_11458/*"SAVEKEY_LastPlayQuestConsumeType"*/, 0);
+  UnityEngine_PlayerPrefs__DeleteKey((System_String_o *)StringLiteral_11463/*"SAVEKEY_PlayedTerminalEffects"*/, 0);
+  UnityEngine_PlayerPrefs__DeleteKey((System_String_o *)StringLiteral_11460/*"SAVEKEY_PlayTerminalEffectDisappear"*/, 0);
+  UnityEngine_PlayerPrefs__DeleteKey((System_String_o *)StringLiteral_11461/*"SAVEKEY_PlayTerminalEffectDisappearWarId"*/, 0);
+  UnityEngine_PlayerPrefs__DeleteKey((System_String_o *)StringLiteral_11462/*"SAVEKEY_PlayTerminalEffectNt2AfterAction"*/, 0);
+  UnityEngine_PlayerPrefs__DeleteKey((System_String_o *)StringLiteral_11472/*"SAVEKEY_TerminalSelectedStoryQuestId"*/, 0);
+  UnityEngine_PlayerPrefs__DeleteKey((System_String_o *)StringLiteral_11454/*"SAVEKEY_ConnectMarkEventId"*/, 0);
+  UnityEngine_PlayerPrefs__DeleteKey((System_String_o *)StringLiteral_11453/*"SAVEKEY_ConnectMarkAnimationId"*/, 0);
+  UnityEngine_PlayerPrefs__DeleteKey((System_String_o *)StringLiteral_11471/*"SAVEKEY_TerminalSelectedRecollectionWarId"*/, 0);
+  UnityEngine_PlayerPrefs__DeleteKey((System_String_o *)StringLiteral_11452/*"SAVEKEY_ClearEventQuestIds"*/, 0);
+  UnityEngine_PlayerPrefs__DeleteKey((System_String_o *)StringLiteral_11459/*"SAVEKEY_MapModelClearQuestInfo"*/, 0);
+  UnityEngine_PlayerPrefs__DeleteKey((System_String_o *)StringLiteral_11455/*"SAVEKEY_DataLostBattleAutoReset"*/, 0);
+  UnityEngine_PlayerPrefs__DeleteKey((System_String_o *)StringLiteral_11464/*"SAVEKEY_PlayerGenderType"*/, 0);
+  UnityEngine_PlayerPrefs__DeleteKey((System_String_o *)StringLiteral_11451/*"SAVEKEY_CampaignDirectBonus"*/, 0);
+  UnityEngine_PlayerPrefs__DeleteKey((System_String_o *)StringLiteral_11450/*"SAVEKEY_BlankEarthSpotId"*/, 0);
   v1 = TerminalPramsManager_TypeInfo;
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(TerminalPramsManager_TypeInfo);
@@ -792,18 +792,18 @@ void TerminalPramsManager__DeleteEventRaidDefeatedEffectInfo(const MethodInfo *m
   TerminalPramsManager_c *v3; // x0
   CGThumbnailListItem_o *p_EventRaidDefeatedEffectInfo_k__BackingField; // x0
 
-  if ( (byte_4C34DD6 & 1) == 0 )
+  if ( (byte_4C403C0 & 1) == 0 )
   {
-    sub_1C32C20(&TerminalPramsManager_TypeInfo);
-    sub_1C32C20(&StringLiteral_11455/*"SAVEKEY_EventRaidDefeatedEffectInfo"*/);
-    byte_4C34DD6 = 1;
+    sub_1C37058(&TerminalPramsManager_TypeInfo);
+    sub_1C37058(&StringLiteral_11456/*"SAVEKEY_EventRaidDefeatedEffectInfo"*/);
+    byte_4C403C0 = 1;
   }
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(TerminalPramsManager_TypeInfo);
-  if ( !byte_4C34E1D )
+  if ( !byte_4C40407 )
   {
-    sub_1C32C20(&TerminalPramsManager_TypeInfo);
-    byte_4C34E1D = 1;
+    sub_1C37058(&TerminalPramsManager_TypeInfo);
+    byte_4C40407 = 1;
   }
   v3 = TerminalPramsManager_TypeInfo;
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -813,8 +813,8 @@ void TerminalPramsManager__DeleteEventRaidDefeatedEffectInfo(const MethodInfo *m
   }
   p_EventRaidDefeatedEffectInfo_k__BackingField = (CGThumbnailListItem_o *)&v3->static_fields->_EventRaidDefeatedEffectInfo_k__BackingField;
   p_EventRaidDefeatedEffectInfo_k__BackingField->klass = 0;
-  sub_1C32BC4(p_EventRaidDefeatedEffectInfo_k__BackingField, 0, v1, v2);
-  UnityEngine_PlayerPrefs__DeleteKey((System_String_o *)StringLiteral_11455/*"SAVEKEY_EventRaidDefeatedEffectInfo"*/, 0);
+  sub_1C36FFC(p_EventRaidDefeatedEffectInfo_k__BackingField, 0, v1, v2);
+  UnityEngine_PlayerPrefs__DeleteKey((System_String_o *)StringLiteral_11456/*"SAVEKEY_EventRaidDefeatedEffectInfo"*/, 0);
 }
 
 
@@ -825,18 +825,18 @@ void TerminalPramsManager__DeleteQuestRandomGroupList(const MethodInfo *method)
   TerminalPramsManager_c *v3; // x0
   CGThumbnailListItem_o *p_QuestRandomGroupList_k__BackingField; // x0
 
-  if ( (byte_4C34DDB & 1) == 0 )
+  if ( (byte_4C403C5 & 1) == 0 )
   {
-    sub_1C32C20(&TerminalPramsManager_TypeInfo);
-    sub_1C32C20(&StringLiteral_11464/*"SAVEKEY_QuestRandomGroupList"*/);
-    byte_4C34DDB = 1;
+    sub_1C37058(&TerminalPramsManager_TypeInfo);
+    sub_1C37058(&StringLiteral_11465/*"SAVEKEY_QuestRandomGroupList"*/);
+    byte_4C403C5 = 1;
   }
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(TerminalPramsManager_TypeInfo);
-  if ( !byte_4C34E1F )
+  if ( !byte_4C40409 )
   {
-    sub_1C32C20(&TerminalPramsManager_TypeInfo);
-    byte_4C34E1F = 1;
+    sub_1C37058(&TerminalPramsManager_TypeInfo);
+    byte_4C40409 = 1;
   }
   v3 = TerminalPramsManager_TypeInfo;
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -846,8 +846,8 @@ void TerminalPramsManager__DeleteQuestRandomGroupList(const MethodInfo *method)
   }
   p_QuestRandomGroupList_k__BackingField = (CGThumbnailListItem_o *)&v3->static_fields->_QuestRandomGroupList_k__BackingField;
   p_QuestRandomGroupList_k__BackingField->klass = 0;
-  sub_1C32BC4(p_QuestRandomGroupList_k__BackingField, 0, v1, v2);
-  UnityEngine_PlayerPrefs__DeleteKey((System_String_o *)StringLiteral_11464/*"SAVEKEY_QuestRandomGroupList"*/, 0);
+  sub_1C36FFC(p_QuestRandomGroupList_k__BackingField, 0, v1, v2);
+  UnityEngine_PlayerPrefs__DeleteKey((System_String_o *)StringLiteral_11465/*"SAVEKEY_QuestRandomGroupList"*/, 0);
 }
 
 
@@ -856,11 +856,11 @@ bool TerminalPramsManager__EnableResumeToBlankEarthMap(int32_t warId, const Meth
   TerminalPramsManager_c *v3; // x0
   Il2CppObject *Instance; // x0
 
-  if ( (byte_4C34DE3 & 1) == 0 )
+  if ( (byte_4C403CD & 1) == 0 )
   {
-    sub_1C32C20(&Method_SingletonTemplate_QuestTree__get_Instance__);
-    sub_1C32C20(&TerminalPramsManager_TypeInfo);
-    byte_4C34DE3 = 1;
+    sub_1C37058(&Method_SingletonTemplate_QuestTree__get_Instance__);
+    sub_1C37058(&TerminalPramsManager_TypeInfo);
+    byte_4C403CD = 1;
   }
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(TerminalPramsManager_TypeInfo);
@@ -871,9 +871,9 @@ bool TerminalPramsManager__EnableResumeToBlankEarthMap(int32_t warId, const Meth
     j_il2cpp_runtime_class_init_0(TerminalPramsManager_TypeInfo);
   if ( TerminalPramsManager__ExistBlankEarthTutorial((const MethodInfo *)v3) )
     return 0;
-  Instance = SingletonTemplate_object___get_Instance((const MethodInfo_39E2DF4 *)Method_SingletonTemplate_QuestTree__get_Instance__);
+  Instance = SingletonTemplate_object___get_Instance((const MethodInfo_39ED65C *)Method_SingletonTemplate_QuestTree__get_Instance__);
   if ( !Instance )
-    sub_1C32E7C(0);
+    sub_1C372B4(0);
   return QuestTree__IsActiveWar((QuestTree_o *)Instance, warId, 0);
 }
 
@@ -885,19 +885,19 @@ void TerminalPramsManager__EventDailyPointSave_SaveData(const MethodInfo *method
   System_String_o *v3; // x0
   int64_t BeforeTimeEventDailyPoint_k__BackingField; // [xsp+8h] [xbp-18h] BYREF
 
-  if ( (byte_4C34D9C & 1) == 0 )
+  if ( (byte_4C40386 & 1) == 0 )
   {
-    sub_1C32C20(&TerminalPramsManager_TypeInfo);
-    sub_1C32C20(&StringLiteral_13700/*"TerminalEventDailyPointEventId"*/);
-    sub_1C32C20(&StringLiteral_13713/*"TerminalTimeStatusEventDailyPoint"*/);
-    byte_4C34D9C = 1;
+    sub_1C37058(&TerminalPramsManager_TypeInfo);
+    sub_1C37058(&StringLiteral_13701/*"TerminalEventDailyPointEventId"*/);
+    sub_1C37058(&StringLiteral_13714/*"TerminalTimeStatusEventDailyPoint"*/);
+    byte_4C40386 = 1;
   }
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(TerminalPramsManager_TypeInfo);
-  if ( !byte_4C34E04 )
+  if ( !byte_4C403EE )
   {
-    sub_1C32C20(&TerminalPramsManager_TypeInfo);
-    byte_4C34E04 = 1;
+    sub_1C37058(&TerminalPramsManager_TypeInfo);
+    byte_4C403EE = 1;
   }
   v1 = TerminalPramsManager_TypeInfo;
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -906,13 +906,13 @@ void TerminalPramsManager__EventDailyPointSave_SaveData(const MethodInfo *method
     v1 = TerminalPramsManager_TypeInfo;
   }
   UnityEngine_PlayerPrefs__SetInt(
-    (System_String_o *)StringLiteral_13700/*"TerminalEventDailyPointEventId"*/,
+    (System_String_o *)StringLiteral_13701/*"TerminalEventDailyPointEventId"*/,
     v1->static_fields->_EventDailyPointEventId_k__BackingField,
     0);
-  if ( !byte_4C34E05 )
+  if ( !byte_4C403EF )
   {
-    sub_1C32C20(&TerminalPramsManager_TypeInfo);
-    byte_4C34E05 = 1;
+    sub_1C37058(&TerminalPramsManager_TypeInfo);
+    byte_4C403EF = 1;
   }
   v2 = TerminalPramsManager_TypeInfo;
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -922,7 +922,7 @@ void TerminalPramsManager__EventDailyPointSave_SaveData(const MethodInfo *method
   }
   BeforeTimeEventDailyPoint_k__BackingField = v2->static_fields->_BeforeTimeEventDailyPoint_k__BackingField;
   v3 = System_Int64__ToString((int64_t)&BeforeTimeEventDailyPoint_k__BackingField, 0);
-  UnityEngine_PlayerPrefs__SetString((System_String_o *)StringLiteral_13713/*"TerminalTimeStatusEventDailyPoint"*/, v3, 0);
+  UnityEngine_PlayerPrefs__SetString((System_String_o *)StringLiteral_13714/*"TerminalTimeStatusEventDailyPoint"*/, v3, 0);
   UnityEngine_PlayerPrefs__Save(0);
 }
 
@@ -932,19 +932,19 @@ void TerminalPramsManager__EventStatusSave_SaveData(const MethodInfo *method)
   TerminalPramsManager_c *v1; // x0
   TerminalPramsManager_c *v2; // x0
 
-  if ( (byte_4C34D9B & 1) == 0 )
+  if ( (byte_4C40385 & 1) == 0 )
   {
-    sub_1C32C20(&TerminalPramsManager_TypeInfo);
-    sub_1C32C20(&StringLiteral_13714/*"TerminalTimeStatusEventId"*/);
-    sub_1C32C20(&StringLiteral_13715/*"TerminalTimeStatusLoopCount"*/);
-    byte_4C34D9B = 1;
+    sub_1C37058(&TerminalPramsManager_TypeInfo);
+    sub_1C37058(&StringLiteral_13715/*"TerminalTimeStatusEventId"*/);
+    sub_1C37058(&StringLiteral_13716/*"TerminalTimeStatusLoopCount"*/);
+    byte_4C40385 = 1;
   }
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(TerminalPramsManager_TypeInfo);
-  if ( !byte_4C34BC5 )
+  if ( !byte_4C401AF )
   {
-    sub_1C32C20(&TerminalPramsManager_TypeInfo);
-    byte_4C34BC5 = 1;
+    sub_1C37058(&TerminalPramsManager_TypeInfo);
+    byte_4C401AF = 1;
   }
   v1 = TerminalPramsManager_TypeInfo;
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -953,13 +953,13 @@ void TerminalPramsManager__EventStatusSave_SaveData(const MethodInfo *method)
     v1 = TerminalPramsManager_TypeInfo;
   }
   UnityEngine_PlayerPrefs__SetInt(
-    (System_String_o *)StringLiteral_13714/*"TerminalTimeStatusEventId"*/,
+    (System_String_o *)StringLiteral_13715/*"TerminalTimeStatusEventId"*/,
     v1->static_fields->_TimeStatusEventId_k__BackingField,
     0);
-  if ( !byte_4C34BC6 )
+  if ( !byte_4C401B0 )
   {
-    sub_1C32C20(&TerminalPramsManager_TypeInfo);
-    byte_4C34BC6 = 1;
+    sub_1C37058(&TerminalPramsManager_TypeInfo);
+    byte_4C401B0 = 1;
   }
   v2 = TerminalPramsManager_TypeInfo;
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -968,7 +968,7 @@ void TerminalPramsManager__EventStatusSave_SaveData(const MethodInfo *method)
     v2 = TerminalPramsManager_TypeInfo;
   }
   UnityEngine_PlayerPrefs__SetInt(
-    (System_String_o *)StringLiteral_13715/*"TerminalTimeStatusLoopCount"*/,
+    (System_String_o *)StringLiteral_13716/*"TerminalTimeStatusLoopCount"*/,
     v2->static_fields->_TimeStatusLoopCount_k__BackingField,
     0);
   UnityEngine_PlayerPrefs__Save(0);
@@ -980,11 +980,11 @@ bool TerminalPramsManager__ExistBlankEarthTutorial(const MethodInfo *method)
   TerminalPramsManager_c *v1; // x0
   BalanceConfig_c *v3; // x0
 
-  if ( (byte_4C34DE2 & 1) == 0 )
+  if ( (byte_4C403CC & 1) == 0 )
   {
-    sub_1C32C20(&BalanceConfig_TypeInfo);
-    sub_1C32C20(&TerminalPramsManager_TypeInfo);
-    byte_4C34DE2 = 1;
+    sub_1C37058(&BalanceConfig_TypeInfo);
+    sub_1C37058(&TerminalPramsManager_TypeInfo);
+    byte_4C403CC = 1;
   }
   v1 = TerminalPramsManager_TypeInfo;
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -1015,15 +1015,15 @@ bool TerminalPramsManager__ExistBlankEarthTutorialAction(const MethodInfo *metho
   __int64 v2; // x0
   System_Collections_ICollection_o *AvailableTutorialArray; // x0
 
-  if ( (byte_4C34DE1 & 1) == 0 )
+  if ( (byte_4C403CB & 1) == 0 )
   {
-    sub_1C32C20(&EventTutorialMaster_EventTutorialArgs_TypeInfo);
-    byte_4C34DE1 = 1;
+    sub_1C37058(&EventTutorialMaster_EventTutorialArgs_TypeInfo);
+    byte_4C403CB = 1;
   }
-  v1 = sub_1C32E6C(EventTutorialMaster_EventTutorialArgs_TypeInfo);
+  v1 = sub_1C372A4(EventTutorialMaster_EventTutorialArgs_TypeInfo);
   EventTutorialMaster_EventTutorialArgs___ctor((EventTutorialMaster_EventTutorialArgs_o *)v1, 0);
   if ( !v1 )
-    sub_1C32E7C(v2);
+    sub_1C372B4(v2);
   *(_QWORD *)(v1 + 16) = 0x5300000000LL;
   AvailableTutorialArray = (System_Collections_ICollection_o *)EventTutorialMaster__GetAvailableTutorialArray(
                                                                  (EventTutorialMaster_EventTutorialArgs_o *)v1,
@@ -1036,10 +1036,10 @@ float TerminalPramsManager__GetAutoIntpTime(const MethodInfo *method)
 {
   int32_t targetFrameRate; // w0
 
-  if ( (byte_4C34D8E & 1) == 0 )
+  if ( (byte_4C40378 & 1) == 0 )
   {
-    sub_1C32C20(&UnityEngine_Application_TypeInfo);
-    byte_4C34D8E = 1;
+    sub_1C37058(&UnityEngine_Application_TypeInfo);
+    byte_4C40378 = 1;
   }
   if ( !UnityEngine_Application_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Application_TypeInfo);
@@ -1055,11 +1055,11 @@ int32_t TerminalPramsManager__GetFolderLastClickedIdx(int32_t warId, const Metho
   __int64 v5; // x0
   int32_t value; // [xsp+Ch] [xbp-24h] BYREF
 
-  if ( (byte_4C34DC1 & 1) == 0 )
+  if ( (byte_4C403AB & 1) == 0 )
   {
-    sub_1C32C20(&Method_System_Collections_Generic_Dictionary_int__int__TryGetValue__);
-    sub_1C32C20(&TerminalPramsManager_TypeInfo);
-    byte_4C34DC1 = 1;
+    sub_1C37058(&Method_System_Collections_Generic_Dictionary_int__int__TryGetValue__);
+    sub_1C37058(&TerminalPramsManager_TypeInfo);
+    byte_4C403AB = 1;
   }
   v3 = TerminalPramsManager_TypeInfo;
   value = 0;
@@ -1076,13 +1076,13 @@ int32_t TerminalPramsManager__GetFolderLastClickedIdx(int32_t warId, const Metho
     j_il2cpp_runtime_class_init_0(v3);
     folderLastIdxs = TerminalPramsManager_TypeInfo->static_fields->folderLastIdxs;
     if ( !folderLastIdxs )
-      sub_1C32E7C(v5);
+      sub_1C372B4(v5);
   }
   if ( System_Collections_Generic_Dictionary_int__int___TryGetValue(
          folderLastIdxs,
          warId,
          &value,
-         (const MethodInfo_33E88FC *)Method_System_Collections_Generic_Dictionary_int__int__TryGetValue__) )
+         (const MethodInfo_33F3164 *)Method_System_Collections_Generic_Dictionary_int__int__TryGetValue__) )
   {
     return value;
   }
@@ -1098,17 +1098,17 @@ float TerminalPramsManager__GetIntpTime_AutoResume(float time, const MethodInfo 
   TerminalPramsManager_c *v3; // x0
   TerminalPramsManager_c *v4; // x0
 
-  if ( (byte_4C34D8F & 1) == 0 )
+  if ( (byte_4C40379 & 1) == 0 )
   {
-    sub_1C32C20(&TerminalPramsManager_TypeInfo);
-    byte_4C34D8F = 1;
+    sub_1C37058(&TerminalPramsManager_TypeInfo);
+    byte_4C40379 = 1;
   }
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(TerminalPramsManager_TypeInfo);
-  if ( !byte_4C343D1 )
+  if ( !byte_4C3F9BB )
   {
-    sub_1C32C20(&TerminalPramsManager_TypeInfo);
-    byte_4C343D1 = 1;
+    sub_1C37058(&TerminalPramsManager_TypeInfo);
+    byte_4C3F9BB = 1;
   }
   v3 = TerminalPramsManager_TypeInfo;
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -1120,10 +1120,10 @@ float TerminalPramsManager__GetIntpTime_AutoResume(float time, const MethodInfo 
     return time;
   if ( !v3->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(v3);
-  if ( !byte_4C349DC )
+  if ( !byte_4C3FFC6 )
   {
-    sub_1C32C20(&TerminalPramsManager_TypeInfo);
-    byte_4C349DC = 1;
+    sub_1C37058(&TerminalPramsManager_TypeInfo);
+    byte_4C3FFC6 = 1;
   }
   v4 = TerminalPramsManager_TypeInfo;
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -1144,17 +1144,17 @@ int32_t TerminalPramsManager__GetQuestReleasedFocusState(int32_t questId, const 
   TerminalPramsManager_c *v3; // x0
   QuestFocusStateManager_o *QuestFocusStateManager; // x0
 
-  if ( (byte_4C34DC7 & 1) == 0 )
+  if ( (byte_4C403B1 & 1) == 0 )
   {
-    sub_1C32C20(&TerminalPramsManager_TypeInfo);
-    byte_4C34DC7 = 1;
+    sub_1C37058(&TerminalPramsManager_TypeInfo);
+    byte_4C403B1 = 1;
   }
   v3 = TerminalPramsManager_TypeInfo;
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(TerminalPramsManager_TypeInfo);
   QuestFocusStateManager = TerminalPramsManager__get_QuestFocusStateManager((const MethodInfo *)v3);
   if ( !QuestFocusStateManager )
-    sub_1C32E7C(0);
+    sub_1C372B4(0);
   return QuestFocusStateManager__GetFocusState(QuestFocusStateManager, questId, 0);
 }
 
@@ -1163,10 +1163,10 @@ void TerminalPramsManager__InitLoad(const MethodInfo *method)
 {
   TerminalPramsManager_c *v1; // x0
 
-  if ( (byte_4C34D95 & 1) == 0 )
+  if ( (byte_4C4037F & 1) == 0 )
   {
-    sub_1C32C20(&TerminalPramsManager_TypeInfo);
-    byte_4C34D95 = 1;
+    sub_1C37058(&TerminalPramsManager_TypeInfo);
+    byte_4C4037F = 1;
   }
   v1 = TerminalPramsManager_TypeInfo;
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -1187,18 +1187,18 @@ void TerminalPramsManager__InitMessageWindowData(const MethodInfo *method)
   TerminalPramsManager_c *v8; // x0
   struct TerminalPramsManager_StaticFields *v9; // x0
 
-  if ( (byte_4C34DBF & 1) == 0 )
+  if ( (byte_4C403A9 & 1) == 0 )
   {
-    sub_1C32C20(&TerminalPramsManager_TypeInfo);
-    sub_1C32C20(&StringLiteral_1/*""*/);
-    byte_4C34DBF = 1;
+    sub_1C37058(&TerminalPramsManager_TypeInfo);
+    sub_1C37058(&StringLiteral_1/*""*/);
+    byte_4C403A9 = 1;
   }
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(TerminalPramsManager_TypeInfo);
-  if ( !byte_4C3359F )
+  if ( !byte_4C3EC68 )
   {
-    sub_1C32C20(&TerminalPramsManager_TypeInfo);
-    byte_4C3359F = 1;
+    sub_1C37058(&TerminalPramsManager_TypeInfo);
+    byte_4C3EC68 = 1;
   }
   v3 = TerminalPramsManager_TypeInfo;
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -1208,11 +1208,11 @@ void TerminalPramsManager__InitMessageWindowData(const MethodInfo *method)
   }
   v3->static_fields->_IsDispOnly_k__BackingField = 0;
   v4 = StringLiteral_1/*""*/;
-  if ( !byte_4C349C4 )
+  if ( !byte_4C3FFAE )
   {
-    sub_1C32C20(&TerminalPramsManager_TypeInfo);
+    sub_1C37058(&TerminalPramsManager_TypeInfo);
     v3 = TerminalPramsManager_TypeInfo;
-    byte_4C349C4 = 1;
+    byte_4C3FFAE = 1;
   }
   if ( !v3->_2.cctor_finished )
   {
@@ -1221,11 +1221,11 @@ void TerminalPramsManager__InitMessageWindowData(const MethodInfo *method)
   }
   static_fields = v3->static_fields;
   static_fields->_QuestWindowMessage_k__BackingField = (struct System_String_o *)v4;
-  sub_1C32BC4((CGThumbnailListItem_o *)&static_fields->_QuestWindowMessage_k__BackingField, v4, v1, v2);
-  if ( !byte_4C349C3 )
+  sub_1C36FFC((CGThumbnailListItem_o *)&static_fields->_QuestWindowMessage_k__BackingField, v4, v1, v2);
+  if ( !byte_4C3FFAD )
   {
-    sub_1C32C20(&TerminalPramsManager_TypeInfo);
-    byte_4C349C3 = 1;
+    sub_1C37058(&TerminalPramsManager_TypeInfo);
+    byte_4C3FFAD = 1;
   }
   v8 = TerminalPramsManager_TypeInfo;
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -1234,11 +1234,11 @@ void TerminalPramsManager__InitMessageWindowData(const MethodInfo *method)
     v8 = TerminalPramsManager_TypeInfo;
   }
   v8->static_fields->_MessageDispType_k__BackingField = 0;
-  if ( !byte_4C3359E )
+  if ( !byte_4C3EC67 )
   {
-    sub_1C32C20(&TerminalPramsManager_TypeInfo);
+    sub_1C37058(&TerminalPramsManager_TypeInfo);
     v8 = TerminalPramsManager_TypeInfo;
-    byte_4C3359E = 1;
+    byte_4C3EC67 = 1;
   }
   if ( !v8->_2.cctor_finished )
   {
@@ -1247,7 +1247,7 @@ void TerminalPramsManager__InitMessageWindowData(const MethodInfo *method)
   }
   v9 = v8->static_fields;
   v9->_BattleSetupKeep_k__BackingField = 0;
-  sub_1C32BC4((CGThumbnailListItem_o *)&v9->_BattleSetupKeep_k__BackingField, 0, v6, v7);
+  sub_1C36FFC((CGThumbnailListItem_o *)&v9->_BattleSetupKeep_k__BackingField, 0, v6, v7);
 }
 
 
@@ -1307,19 +1307,19 @@ void TerminalPramsManager__InitParameter(const MethodInfo *method)
   TerminalPramsManager_c *v52; // x0
   System_Collections_Generic_HashSet_T__o *ForcePlayEventTutorialArray_k__BackingField; // x0
 
-  if ( (byte_4C34D94 & 1) == 0 )
+  if ( (byte_4C4037E & 1) == 0 )
   {
-    sub_1C32C20(&Method_System_Collections_Generic_HashSet_Dictionary_int__int___Clear__);
-    sub_1C32C20(&TerminalPramsManager_TypeInfo);
-    sub_1C32C20(&StringLiteral_1/*""*/);
-    byte_4C34D94 = 1;
+    sub_1C37058(&Method_System_Collections_Generic_HashSet_Dictionary_int__int___Clear__);
+    sub_1C37058(&TerminalPramsManager_TypeInfo);
+    sub_1C37058(&StringLiteral_1/*""*/);
+    byte_4C4037E = 1;
   }
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(TerminalPramsManager_TypeInfo);
-  if ( !byte_4C342B2 )
+  if ( !byte_4C3F89C )
   {
-    sub_1C32C20(&TerminalPramsManager_TypeInfo);
-    byte_4C342B2 = 1;
+    sub_1C37058(&TerminalPramsManager_TypeInfo);
+    byte_4C3F89C = 1;
   }
   v3 = TerminalPramsManager_TypeInfo;
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -1328,11 +1328,11 @@ void TerminalPramsManager__InitParameter(const MethodInfo *method)
     v3 = TerminalPramsManager_TypeInfo;
   }
   v3->static_fields->_WarId_k__BackingField = 0;
-  if ( !byte_4C342B1 )
+  if ( !byte_4C3F89B )
   {
-    sub_1C32C20(&TerminalPramsManager_TypeInfo);
+    sub_1C37058(&TerminalPramsManager_TypeInfo);
     v3 = TerminalPramsManager_TypeInfo;
-    byte_4C342B1 = 1;
+    byte_4C3F89B = 1;
   }
   if ( !v3->_2.cctor_finished )
   {
@@ -1340,11 +1340,11 @@ void TerminalPramsManager__InitParameter(const MethodInfo *method)
     v3 = TerminalPramsManager_TypeInfo;
   }
   v3->static_fields->_SpotId_k__BackingField = 0;
-  if ( !byte_4C342AC )
+  if ( !byte_4C3F896 )
   {
-    sub_1C32C20(&TerminalPramsManager_TypeInfo);
+    sub_1C37058(&TerminalPramsManager_TypeInfo);
     v3 = TerminalPramsManager_TypeInfo;
-    byte_4C342AC = 1;
+    byte_4C3F896 = 1;
   }
   if ( !v3->_2.cctor_finished )
   {
@@ -1352,11 +1352,11 @@ void TerminalPramsManager__InitParameter(const MethodInfo *method)
     v3 = TerminalPramsManager_TypeInfo;
   }
   v3->static_fields->_QuestId_k__BackingField = 0;
-  if ( !byte_4C346C0 )
+  if ( !byte_4C3FCAA )
   {
-    sub_1C32C20(&TerminalPramsManager_TypeInfo);
+    sub_1C37058(&TerminalPramsManager_TypeInfo);
     v3 = TerminalPramsManager_TypeInfo;
-    byte_4C346C0 = 1;
+    byte_4C3FCAA = 1;
   }
   if ( !v3->_2.cctor_finished )
   {
@@ -1364,11 +1364,11 @@ void TerminalPramsManager__InitParameter(const MethodInfo *method)
     v3 = TerminalPramsManager_TypeInfo;
   }
   v3->static_fields->_LastPlayedQuestId_k__BackingField = 0;
-  if ( !byte_4C34DEF )
+  if ( !byte_4C403D9 )
   {
-    sub_1C32C20(&TerminalPramsManager_TypeInfo);
+    sub_1C37058(&TerminalPramsManager_TypeInfo);
     v3 = TerminalPramsManager_TypeInfo;
-    byte_4C34DEF = 1;
+    byte_4C403D9 = 1;
   }
   if ( !v3->_2.cctor_finished )
   {
@@ -1376,11 +1376,11 @@ void TerminalPramsManager__InitParameter(const MethodInfo *method)
     v3 = TerminalPramsManager_TypeInfo;
   }
   v3->static_fields->_LastSelectQuestIndex_k__BackingField = 0;
-  if ( !byte_4C346C1 )
+  if ( !byte_4C3FCAB )
   {
-    sub_1C32C20(&TerminalPramsManager_TypeInfo);
+    sub_1C37058(&TerminalPramsManager_TypeInfo);
     v3 = TerminalPramsManager_TypeInfo;
-    byte_4C346C1 = 1;
+    byte_4C3FCAB = 1;
   }
   if ( !v3->_2.cctor_finished )
   {
@@ -1388,11 +1388,11 @@ void TerminalPramsManager__InitParameter(const MethodInfo *method)
     v3 = TerminalPramsManager_TypeInfo;
   }
   v3->static_fields->_LastPlayedFreeQuestSpotId_k__BackingField = 0;
-  if ( !byte_4C34570 )
+  if ( !byte_4C3FB5A )
   {
-    sub_1C32C20(&TerminalPramsManager_TypeInfo);
+    sub_1C37058(&TerminalPramsManager_TypeInfo);
     v3 = TerminalPramsManager_TypeInfo;
-    byte_4C34570 = 1;
+    byte_4C3FB5A = 1;
   }
   if ( !v3->_2.cctor_finished )
   {
@@ -1400,11 +1400,11 @@ void TerminalPramsManager__InitParameter(const MethodInfo *method)
     v3 = TerminalPramsManager_TypeInfo;
   }
   v3->static_fields->_AfterActionFocusQuestId_k__BackingField = 0;
-  if ( !byte_4C346C6 )
+  if ( !byte_4C3FCB0 )
   {
-    sub_1C32C20(&TerminalPramsManager_TypeInfo);
+    sub_1C37058(&TerminalPramsManager_TypeInfo);
     v3 = TerminalPramsManager_TypeInfo;
-    byte_4C346C6 = 1;
+    byte_4C3FCB0 = 1;
   }
   if ( !v3->_2.cctor_finished )
   {
@@ -1412,11 +1412,11 @@ void TerminalPramsManager__InitParameter(const MethodInfo *method)
     v3 = TerminalPramsManager_TypeInfo;
   }
   v3->static_fields->_SelectedStoryQuestId_k__BackingField = 0;
-  if ( !byte_4C3367F )
+  if ( !byte_4C3EBA0 )
   {
-    sub_1C32C20(&TerminalPramsManager_TypeInfo);
+    sub_1C37058(&TerminalPramsManager_TypeInfo);
     v3 = TerminalPramsManager_TypeInfo;
-    byte_4C3367F = 1;
+    byte_4C3EBA0 = 1;
   }
   if ( !v3->_2.cctor_finished )
   {
@@ -1424,11 +1424,11 @@ void TerminalPramsManager__InitParameter(const MethodInfo *method)
     v3 = TerminalPramsManager_TypeInfo;
   }
   v3->static_fields->_SelectedRecollectionWarId_k__BackingField = 0;
-  if ( !byte_4C346C7 )
+  if ( !byte_4C3FCB1 )
   {
-    sub_1C32C20(&TerminalPramsManager_TypeInfo);
+    sub_1C37058(&TerminalPramsManager_TypeInfo);
     v3 = TerminalPramsManager_TypeInfo;
-    byte_4C346C7 = 1;
+    byte_4C3FCB1 = 1;
   }
   if ( !v3->_2.cctor_finished )
   {
@@ -1436,11 +1436,11 @@ void TerminalPramsManager__InitParameter(const MethodInfo *method)
     v3 = TerminalPramsManager_TypeInfo;
   }
   v3->static_fields->_IsFromRecollectionBoard_k__BackingField = 0;
-  if ( !byte_4C349F3 )
+  if ( !byte_4C3FFDD )
   {
-    sub_1C32C20(&TerminalPramsManager_TypeInfo);
+    sub_1C37058(&TerminalPramsManager_TypeInfo);
     v3 = TerminalPramsManager_TypeInfo;
-    byte_4C349F3 = 1;
+    byte_4C3FFDD = 1;
   }
   if ( !v3->_2.cctor_finished )
   {
@@ -1448,11 +1448,11 @@ void TerminalPramsManager__InitParameter(const MethodInfo *method)
     v3 = TerminalPramsManager_TypeInfo;
   }
   v3->static_fields->_IsForceFocusTerminalQuestId_k__BackingField = 0;
-  if ( !byte_4C349F1 )
+  if ( !byte_4C3FFDB )
   {
-    sub_1C32C20(&TerminalPramsManager_TypeInfo);
+    sub_1C37058(&TerminalPramsManager_TypeInfo);
     v3 = TerminalPramsManager_TypeInfo;
-    byte_4C349F1 = 1;
+    byte_4C3FFDB = 1;
   }
   if ( !v3->_2.cctor_finished )
   {
@@ -1460,11 +1460,11 @@ void TerminalPramsManager__InitParameter(const MethodInfo *method)
     v3 = TerminalPramsManager_TypeInfo;
   }
   v3->static_fields->_QuestReleaseFocusQuestId_k__BackingField = 0;
-  if ( !byte_4C33F3E )
+  if ( !byte_4C3F528 )
   {
-    sub_1C32C20(&TerminalPramsManager_TypeInfo);
+    sub_1C37058(&TerminalPramsManager_TypeInfo);
     v3 = TerminalPramsManager_TypeInfo;
-    byte_4C33F3E = 1;
+    byte_4C3F528 = 1;
   }
   if ( !v3->_2.cctor_finished )
   {
@@ -1473,11 +1473,11 @@ void TerminalPramsManager__InitParameter(const MethodInfo *method)
   }
   static_fields = v3->static_fields;
   static_fields->_SelectedBannerEntity_k__BackingField = 0;
-  sub_1C32BC4((CGThumbnailListItem_o *)&static_fields->_SelectedBannerEntity_k__BackingField, 0, v1, v2);
-  if ( !byte_4C342B0 )
+  sub_1C36FFC((CGThumbnailListItem_o *)&static_fields->_SelectedBannerEntity_k__BackingField, 0, v1, v2);
+  if ( !byte_4C3F89A )
   {
-    sub_1C32C20(&TerminalPramsManager_TypeInfo);
-    byte_4C342B0 = 1;
+    sub_1C37058(&TerminalPramsManager_TypeInfo);
+    byte_4C3F89A = 1;
   }
   v7 = TerminalPramsManager_TypeInfo;
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -1486,11 +1486,11 @@ void TerminalPramsManager__InitParameter(const MethodInfo *method)
     v7 = TerminalPramsManager_TypeInfo;
   }
   v7->static_fields->_PhaseCnt_k__BackingField = 0;
-  if ( !byte_4C342AD )
+  if ( !byte_4C3F897 )
   {
-    sub_1C32C20(&TerminalPramsManager_TypeInfo);
+    sub_1C37058(&TerminalPramsManager_TypeInfo);
     v7 = TerminalPramsManager_TypeInfo;
-    byte_4C342AD = 1;
+    byte_4C3F897 = 1;
   }
   if ( !v7->_2.cctor_finished )
   {
@@ -1498,11 +1498,11 @@ void TerminalPramsManager__InitParameter(const MethodInfo *method)
     v7 = TerminalPramsManager_TypeInfo;
   }
   v7->static_fields->_EndTime_k__BackingField = 0;
-  if ( !byte_4C342AF )
+  if ( !byte_4C3F899 )
   {
-    sub_1C32C20(&TerminalPramsManager_TypeInfo);
+    sub_1C37058(&TerminalPramsManager_TypeInfo);
     v7 = TerminalPramsManager_TypeInfo;
-    byte_4C342AF = 1;
+    byte_4C3F899 = 1;
   }
   if ( !v7->_2.cctor_finished )
   {
@@ -1513,11 +1513,11 @@ void TerminalPramsManager__InitParameter(const MethodInfo *method)
   v8->_IsDoneShortcut_k__BackingField = 0;
   v9 = StringLiteral_1/*""*/;
   v8->mTerminalWarStartedIds = (struct System_String_o *)StringLiteral_1/*""*/;
-  sub_1C32BC4((CGThumbnailListItem_o *)&v8->mTerminalWarStartedIds, v9, v5, v6);
-  if ( !byte_4C34DF0 )
+  sub_1C36FFC((CGThumbnailListItem_o *)&v8->mTerminalWarStartedIds, v9, v5, v6);
+  if ( !byte_4C403DA )
   {
-    sub_1C32C20(&TerminalPramsManager_TypeInfo);
-    byte_4C34DF0 = 1;
+    sub_1C37058(&TerminalPramsManager_TypeInfo);
+    byte_4C403DA = 1;
   }
   v12 = TerminalPramsManager_TypeInfo;
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -1526,11 +1526,11 @@ void TerminalPramsManager__InitParameter(const MethodInfo *method)
     v12 = TerminalPramsManager_TypeInfo;
   }
   v12->static_fields->mDebug_IsQuestReleaseAll = 0;
-  if ( !byte_4C34DF1 )
+  if ( !byte_4C403DB )
   {
-    sub_1C32C20(&TerminalPramsManager_TypeInfo);
+    sub_1C37058(&TerminalPramsManager_TypeInfo);
     v12 = TerminalPramsManager_TypeInfo;
-    byte_4C34DF1 = 1;
+    byte_4C403DB = 1;
   }
   if ( !v12->_2.cctor_finished )
   {
@@ -1538,11 +1538,11 @@ void TerminalPramsManager__InitParameter(const MethodInfo *method)
     v12 = TerminalPramsManager_TypeInfo;
   }
   v12->static_fields->mDebug_IsDummyErrorSelect = 0;
-  if ( !byte_4C34DF2 )
+  if ( !byte_4C403DC )
   {
-    sub_1C32C20(&TerminalPramsManager_TypeInfo);
+    sub_1C37058(&TerminalPramsManager_TypeInfo);
     v12 = TerminalPramsManager_TypeInfo;
-    byte_4C34DF2 = 1;
+    byte_4C403DC = 1;
   }
   if ( !v12->_2.cctor_finished )
   {
@@ -1550,11 +1550,11 @@ void TerminalPramsManager__InitParameter(const MethodInfo *method)
     v12 = TerminalPramsManager_TypeInfo;
   }
   v12->static_fields->mDebug_IsBuildInfoDisp = 0;
-  if ( !byte_4C349F8 )
+  if ( !byte_4C3FFE2 )
   {
-    sub_1C32C20(&TerminalPramsManager_TypeInfo);
+    sub_1C37058(&TerminalPramsManager_TypeInfo);
     v12 = TerminalPramsManager_TypeInfo;
-    byte_4C349F8 = 1;
+    byte_4C3FFE2 = 1;
   }
   if ( !v12->_2.cctor_finished )
   {
@@ -1562,11 +1562,11 @@ void TerminalPramsManager__InitParameter(const MethodInfo *method)
     v12 = TerminalPramsManager_TypeInfo;
   }
   v12->static_fields->_TimeStatusEventId_k__BackingField = 0;
-  if ( !byte_4C349F9 )
+  if ( !byte_4C3FFE3 )
   {
-    sub_1C32C20(&TerminalPramsManager_TypeInfo);
+    sub_1C37058(&TerminalPramsManager_TypeInfo);
     v12 = TerminalPramsManager_TypeInfo;
-    byte_4C349F9 = 1;
+    byte_4C3FFE3 = 1;
   }
   if ( !v12->_2.cctor_finished )
   {
@@ -1574,11 +1574,11 @@ void TerminalPramsManager__InitParameter(const MethodInfo *method)
     v12 = TerminalPramsManager_TypeInfo;
   }
   v12->static_fields->_TimeStatusLoopCount_k__BackingField = 0;
-  if ( !byte_4C34DF3 )
+  if ( !byte_4C403DD )
   {
-    sub_1C32C20(&TerminalPramsManager_TypeInfo);
+    sub_1C37058(&TerminalPramsManager_TypeInfo);
     v12 = TerminalPramsManager_TypeInfo;
-    byte_4C34DF3 = 1;
+    byte_4C403DD = 1;
   }
   if ( !v12->_2.cctor_finished )
   {
@@ -1587,11 +1587,11 @@ void TerminalPramsManager__InitParameter(const MethodInfo *method)
   }
   p_timeStatusRecord_k__BackingField = (CGThumbnailListItem_o *)&v12->static_fields->_timeStatusRecord_k__BackingField;
   p_timeStatusRecord_k__BackingField->klass = 0;
-  sub_1C32BC4(p_timeStatusRecord_k__BackingField, 0, v10, v11);
-  if ( !byte_4C34DF4 )
+  sub_1C36FFC(p_timeStatusRecord_k__BackingField, 0, v10, v11);
+  if ( !byte_4C403DE )
   {
-    sub_1C32C20(&TerminalPramsManager_TypeInfo);
-    byte_4C34DF4 = 1;
+    sub_1C37058(&TerminalPramsManager_TypeInfo);
+    byte_4C403DE = 1;
   }
   v16 = TerminalPramsManager_TypeInfo;
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -1600,11 +1600,11 @@ void TerminalPramsManager__InitParameter(const MethodInfo *method)
     v16 = TerminalPramsManager_TypeInfo;
   }
   v16->static_fields->_EventDailyPointEventId_k__BackingField = 0;
-  if ( !byte_4C34DF5 )
+  if ( !byte_4C403DF )
   {
-    sub_1C32C20(&TerminalPramsManager_TypeInfo);
+    sub_1C37058(&TerminalPramsManager_TypeInfo);
     v16 = TerminalPramsManager_TypeInfo;
-    byte_4C34DF5 = 1;
+    byte_4C403DF = 1;
   }
   if ( !v16->_2.cctor_finished )
   {
@@ -1612,11 +1612,11 @@ void TerminalPramsManager__InitParameter(const MethodInfo *method)
     v16 = TerminalPramsManager_TypeInfo;
   }
   v16->static_fields->_BeforeTimeEventDailyPoint_k__BackingField = 0;
-  if ( !byte_4C34DF6 )
+  if ( !byte_4C403E0 )
   {
-    sub_1C32C20(&TerminalPramsManager_TypeInfo);
+    sub_1C37058(&TerminalPramsManager_TypeInfo);
     v16 = TerminalPramsManager_TypeInfo;
-    byte_4C34DF6 = 1;
+    byte_4C403E0 = 1;
   }
   if ( !v16->_2.cctor_finished )
   {
@@ -1624,11 +1624,11 @@ void TerminalPramsManager__InitParameter(const MethodInfo *method)
     v16 = TerminalPramsManager_TypeInfo;
   }
   v16->static_fields->_BeforeEventActivityPoint_k__BackingField = 0;
-  if ( !byte_4C34DF7 )
+  if ( !byte_4C403E1 )
   {
-    sub_1C32C20(&TerminalPramsManager_TypeInfo);
+    sub_1C37058(&TerminalPramsManager_TypeInfo);
     v16 = TerminalPramsManager_TypeInfo;
-    byte_4C34DF7 = 1;
+    byte_4C403E1 = 1;
   }
   if ( !v16->_2.cctor_finished )
   {
@@ -1636,11 +1636,11 @@ void TerminalPramsManager__InitParameter(const MethodInfo *method)
     v16 = TerminalPramsManager_TypeInfo;
   }
   v16->static_fields->_BeforeEventActivityPointGauge_k__BackingField = 0;
-  if ( !byte_4C343D4 )
+  if ( !byte_4C3F9BE )
   {
-    sub_1C32C20(&TerminalPramsManager_TypeInfo);
+    sub_1C37058(&TerminalPramsManager_TypeInfo);
     v16 = TerminalPramsManager_TypeInfo;
-    byte_4C343D4 = 1;
+    byte_4C3F9BE = 1;
   }
   if ( !v16->_2.cctor_finished )
   {
@@ -1649,18 +1649,18 @@ void TerminalPramsManager__InitParameter(const MethodInfo *method)
   }
   p_BeforeEventSubmarineSaveData_k__BackingField = (CGThumbnailListItem_o *)&v16->static_fields->_BeforeEventSubmarineSaveData_k__BackingField;
   p_BeforeEventSubmarineSaveData_k__BackingField->klass = 0;
-  sub_1C32BC4(p_BeforeEventSubmarineSaveData_k__BackingField, 0, v14, v15);
+  sub_1C36FFC(p_BeforeEventSubmarineSaveData_k__BackingField, 0, v14, v15);
   v18 = StringLiteral_1/*""*/;
   p_lastPlayBgmName = (CGThumbnailListItem_o *)&TerminalPramsManager_TypeInfo->static_fields->lastPlayBgmName;
   p_lastPlayBgmName->klass = (CGThumbnailListItem_c *)StringLiteral_1/*""*/;
-  sub_1C32BC4(p_lastPlayBgmName, v18, v20, v21);
+  sub_1C36FFC(p_lastPlayBgmName, v18, v20, v21);
   v24 = TerminalPramsManager_TypeInfo;
   *(_QWORD *)&TerminalPramsManager_TypeInfo->static_fields->lastPlayQuestConsumeAp = 0;
-  if ( !byte_4C34DF8 )
+  if ( !byte_4C403E2 )
   {
-    sub_1C32C20(&TerminalPramsManager_TypeInfo);
+    sub_1C37058(&TerminalPramsManager_TypeInfo);
     v24 = TerminalPramsManager_TypeInfo;
-    byte_4C34DF8 = 1;
+    byte_4C403E2 = 1;
   }
   if ( !v24->_2.cctor_finished )
   {
@@ -1669,11 +1669,11 @@ void TerminalPramsManager__InitParameter(const MethodInfo *method)
   }
   v25 = v24->static_fields;
   v25->_SpecifiedChangeSceneInfo_k__BackingField = 0;
-  sub_1C32BC4((CGThumbnailListItem_o *)&v25->_SpecifiedChangeSceneInfo_k__BackingField, 0, v22, v23);
-  if ( !byte_4C34BD7 )
+  sub_1C36FFC((CGThumbnailListItem_o *)&v25->_SpecifiedChangeSceneInfo_k__BackingField, 0, v22, v23);
+  if ( !byte_4C401C1 )
   {
-    sub_1C32C20(&TerminalPramsManager_TypeInfo);
-    byte_4C34BD7 = 1;
+    sub_1C37058(&TerminalPramsManager_TypeInfo);
+    byte_4C401C1 = 1;
   }
   v26 = TerminalPramsManager_TypeInfo;
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -1682,11 +1682,11 @@ void TerminalPramsManager__InitParameter(const MethodInfo *method)
     v26 = TerminalPramsManager_TypeInfo;
   }
   v26->static_fields->_EventBoardGameSquareIndex_k__BackingField = 0;
-  if ( !byte_4C34BD9 )
+  if ( !byte_4C401C3 )
   {
-    sub_1C32C20(&TerminalPramsManager_TypeInfo);
+    sub_1C37058(&TerminalPramsManager_TypeInfo);
     v26 = TerminalPramsManager_TypeInfo;
-    byte_4C34BD9 = 1;
+    byte_4C401C3 = 1;
   }
   if ( !v26->_2.cctor_finished )
   {
@@ -1694,11 +1694,11 @@ void TerminalPramsManager__InitParameter(const MethodInfo *method)
     v26 = TerminalPramsManager_TypeInfo;
   }
   v26->static_fields->_IsEventBoardGameDiceBtnActive_k__BackingField = 0;
-  if ( !byte_4C34BDB )
+  if ( !byte_4C401C5 )
   {
-    sub_1C32C20(&TerminalPramsManager_TypeInfo);
+    sub_1C37058(&TerminalPramsManager_TypeInfo);
     v26 = TerminalPramsManager_TypeInfo;
-    byte_4C34BDB = 1;
+    byte_4C401C5 = 1;
   }
   if ( !v26->_2.cctor_finished )
   {
@@ -1706,11 +1706,11 @@ void TerminalPramsManager__InitParameter(const MethodInfo *method)
     v26 = TerminalPramsManager_TypeInfo;
   }
   v26->static_fields->_IsPlayEventBoardGameDiceBtnActiveEffect_k__BackingField = 0;
-  if ( !byte_4C34DEC )
+  if ( !byte_4C403D6 )
   {
-    sub_1C32C20(&TerminalPramsManager_TypeInfo);
+    sub_1C37058(&TerminalPramsManager_TypeInfo);
     v26 = TerminalPramsManager_TypeInfo;
-    byte_4C34DEC = 1;
+    byte_4C403D6 = 1;
   }
   if ( !v26->_2.cctor_finished )
   {
@@ -1720,10 +1720,10 @@ void TerminalPramsManager__InitParameter(const MethodInfo *method)
   v26->static_fields->_IsPlayScriptWithMap_k__BackingField = 0;
   TerminalPramsManager__InitMessageWindowData((const MethodInfo *)v26);
   TerminalPramsManager__ResetResumeScriptWithMap(v27);
-  if ( !byte_4C346C3 )
+  if ( !byte_4C3FCAD )
   {
-    sub_1C32C20(&TerminalPramsManager_TypeInfo);
-    byte_4C346C3 = 1;
+    sub_1C37058(&TerminalPramsManager_TypeInfo);
+    byte_4C3FCAD = 1;
   }
   v30 = TerminalPramsManager_TypeInfo;
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -1733,11 +1733,11 @@ void TerminalPramsManager__InitParameter(const MethodInfo *method)
   }
   v30->static_fields->_IsTopLastIdxNextBoardRequest_k__BackingField = 0;
   v31 = StringLiteral_1/*""*/;
-  if ( !byte_4C34DF9 )
+  if ( !byte_4C403E3 )
   {
-    sub_1C32C20(&TerminalPramsManager_TypeInfo);
+    sub_1C37058(&TerminalPramsManager_TypeInfo);
     v30 = TerminalPramsManager_TypeInfo;
-    byte_4C34DF9 = 1;
+    byte_4C403E3 = 1;
   }
   if ( !v30->_2.cctor_finished )
   {
@@ -1746,11 +1746,11 @@ void TerminalPramsManager__InitParameter(const MethodInfo *method)
   }
   p_PlayedTerminalEffects_k__BackingField = (CGThumbnailListItem_o *)&v30->static_fields->_PlayedTerminalEffects_k__BackingField;
   p_PlayedTerminalEffects_k__BackingField->klass = (CGThumbnailListItem_c *)v31;
-  sub_1C32BC4(p_PlayedTerminalEffects_k__BackingField, v31, v28, v29);
-  if ( !byte_4C34AD4 )
+  sub_1C36FFC(p_PlayedTerminalEffects_k__BackingField, v31, v28, v29);
+  if ( !byte_4C400BE )
   {
-    sub_1C32C20(&TerminalPramsManager_TypeInfo);
-    byte_4C34AD4 = 1;
+    sub_1C37058(&TerminalPramsManager_TypeInfo);
+    byte_4C400BE = 1;
   }
   v35 = TerminalPramsManager_TypeInfo;
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -1759,11 +1759,11 @@ void TerminalPramsManager__InitParameter(const MethodInfo *method)
     v35 = TerminalPramsManager_TypeInfo;
   }
   v35->static_fields->_IsPlayTerminalEffectDisappear_k__BackingField = 0;
-  if ( !byte_4C34AD5 )
+  if ( !byte_4C400BF )
   {
-    sub_1C32C20(&TerminalPramsManager_TypeInfo);
+    sub_1C37058(&TerminalPramsManager_TypeInfo);
     v35 = TerminalPramsManager_TypeInfo;
-    byte_4C34AD5 = 1;
+    byte_4C400BF = 1;
   }
   if ( !v35->_2.cctor_finished )
   {
@@ -1771,11 +1771,11 @@ void TerminalPramsManager__InitParameter(const MethodInfo *method)
     v35 = TerminalPramsManager_TypeInfo;
   }
   v35->static_fields->_IsPlayTerminalEffectDisappearWarId_k__BackingField = 0;
-  if ( !byte_4C34BC8 )
+  if ( !byte_4C401B2 )
   {
-    sub_1C32C20(&TerminalPramsManager_TypeInfo);
+    sub_1C37058(&TerminalPramsManager_TypeInfo);
     v35 = TerminalPramsManager_TypeInfo;
-    byte_4C34BC8 = 1;
+    byte_4C401B2 = 1;
   }
   if ( !v35->_2.cctor_finished )
   {
@@ -1785,11 +1785,11 @@ void TerminalPramsManager__InitParameter(const MethodInfo *method)
   v36 = v35->static_fields;
   v36->_IsPlayTerminalEffectNt2AfterAction_k__BackingField = 0;
   *(_QWORD *)&v36->ConnectMarkEventId = 0;
-  if ( !byte_4C31EAF )
+  if ( !byte_4C3D499 )
   {
-    sub_1C32C20(&TerminalPramsManager_TypeInfo);
+    sub_1C37058(&TerminalPramsManager_TypeInfo);
     v35 = TerminalPramsManager_TypeInfo;
-    byte_4C31EAF = 1;
+    byte_4C3D499 = 1;
   }
   if ( !v35->_2.cctor_finished )
   {
@@ -1797,11 +1797,11 @@ void TerminalPramsManager__InitParameter(const MethodInfo *method)
     v35 = TerminalPramsManager_TypeInfo;
   }
   v35->static_fields->_isFortificationCheck_k__BackingField = 0;
-  if ( !byte_4C34DFA )
+  if ( !byte_4C403E4 )
   {
-    sub_1C32C20(&TerminalPramsManager_TypeInfo);
+    sub_1C37058(&TerminalPramsManager_TypeInfo);
     v35 = TerminalPramsManager_TypeInfo;
-    byte_4C34DFA = 1;
+    byte_4C403E4 = 1;
   }
   if ( !v35->_2.cctor_finished )
   {
@@ -1809,11 +1809,11 @@ void TerminalPramsManager__InitParameter(const MethodInfo *method)
     v35 = TerminalPramsManager_TypeInfo;
   }
   v35->static_fields->_MapModelClearQuestId_k__BackingField = 0;
-  if ( !byte_4C34DFB )
+  if ( !byte_4C403E5 )
   {
-    sub_1C32C20(&TerminalPramsManager_TypeInfo);
+    sub_1C37058(&TerminalPramsManager_TypeInfo);
     v35 = TerminalPramsManager_TypeInfo;
-    byte_4C34DFB = 1;
+    byte_4C403E5 = 1;
   }
   if ( !v35->_2.cctor_finished )
   {
@@ -1821,11 +1821,11 @@ void TerminalPramsManager__InitParameter(const MethodInfo *method)
     v35 = TerminalPramsManager_TypeInfo;
   }
   v35->static_fields->_MapModelClearPhaseCount_k__BackingField = 0;
-  if ( !byte_4C34BD0 )
+  if ( !byte_4C401BA )
   {
-    sub_1C32C20(&TerminalPramsManager_TypeInfo);
+    sub_1C37058(&TerminalPramsManager_TypeInfo);
     v35 = TerminalPramsManager_TypeInfo;
-    byte_4C34BD0 = 1;
+    byte_4C401BA = 1;
   }
   if ( !v35->_2.cctor_finished )
   {
@@ -1833,11 +1833,11 @@ void TerminalPramsManager__InitParameter(const MethodInfo *method)
     v35 = TerminalPramsManager_TypeInfo;
   }
   v35->static_fields->_IsDataLostBattleAutoReset_k__BackingField = 0;
-  if ( !byte_4C349E8 )
+  if ( !byte_4C3FFD2 )
   {
-    sub_1C32C20(&TerminalPramsManager_TypeInfo);
+    sub_1C37058(&TerminalPramsManager_TypeInfo);
     v35 = TerminalPramsManager_TypeInfo;
-    byte_4C349E8 = 1;
+    byte_4C3FFD2 = 1;
   }
   if ( !v35->_2.cctor_finished )
   {
@@ -1845,11 +1845,11 @@ void TerminalPramsManager__InitParameter(const MethodInfo *method)
     v35 = TerminalPramsManager_TypeInfo;
   }
   v35->static_fields->_isIncomingCall_k__BackingField = 0;
-  if ( !byte_4C34BCE )
+  if ( !byte_4C401B8 )
   {
-    sub_1C32C20(&TerminalPramsManager_TypeInfo);
+    sub_1C37058(&TerminalPramsManager_TypeInfo);
     v35 = TerminalPramsManager_TypeInfo;
-    byte_4C34BCE = 1;
+    byte_4C401B8 = 1;
   }
   if ( !v35->_2.cctor_finished )
   {
@@ -1857,11 +1857,11 @@ void TerminalPramsManager__InitParameter(const MethodInfo *method)
     v35 = TerminalPramsManager_TypeInfo;
   }
   v35->static_fields->_DataLostBattleEventId_k__BackingField = 0;
-  if ( !byte_4C34BCF )
+  if ( !byte_4C401B9 )
   {
-    sub_1C32C20(&TerminalPramsManager_TypeInfo);
+    sub_1C37058(&TerminalPramsManager_TypeInfo);
     v35 = TerminalPramsManager_TypeInfo;
-    byte_4C34BCF = 1;
+    byte_4C401B9 = 1;
   }
   if ( !v35->_2.cctor_finished )
   {
@@ -1869,11 +1869,11 @@ void TerminalPramsManager__InitParameter(const MethodInfo *method)
     v35 = TerminalPramsManager_TypeInfo;
   }
   v35->static_fields->_DataLostBattleWarId_k__BackingField = 0;
-  if ( !byte_4C34BCD )
+  if ( !byte_4C401B7 )
   {
-    sub_1C32C20(&TerminalPramsManager_TypeInfo);
+    sub_1C37058(&TerminalPramsManager_TypeInfo);
     v35 = TerminalPramsManager_TypeInfo;
-    byte_4C34BCD = 1;
+    byte_4C401B7 = 1;
   }
   if ( !v35->_2.cctor_finished )
   {
@@ -1881,11 +1881,11 @@ void TerminalPramsManager__InitParameter(const MethodInfo *method)
     v35 = TerminalPramsManager_TypeInfo;
   }
   v35->static_fields->_IsStopMasterFaceOverwrite_k__BackingField = 0;
-  if ( !byte_4C34BD0 )
+  if ( !byte_4C401BA )
   {
-    sub_1C32C20(&TerminalPramsManager_TypeInfo);
+    sub_1C37058(&TerminalPramsManager_TypeInfo);
     v35 = TerminalPramsManager_TypeInfo;
-    byte_4C34BD0 = 1;
+    byte_4C401BA = 1;
   }
   if ( !v35->_2.cctor_finished )
   {
@@ -1893,11 +1893,11 @@ void TerminalPramsManager__InitParameter(const MethodInfo *method)
     v35 = TerminalPramsManager_TypeInfo;
   }
   v35->static_fields->_IsDataLostBattleAutoReset_k__BackingField = 0;
-  if ( !byte_4C34BC2 )
+  if ( !byte_4C401AC )
   {
-    sub_1C32C20(&TerminalPramsManager_TypeInfo);
+    sub_1C37058(&TerminalPramsManager_TypeInfo);
     v35 = TerminalPramsManager_TypeInfo;
-    byte_4C34BC2 = 1;
+    byte_4C401AC = 1;
   }
   if ( !v35->_2.cctor_finished )
   {
@@ -1905,11 +1905,11 @@ void TerminalPramsManager__InitParameter(const MethodInfo *method)
     v35 = TerminalPramsManager_TypeInfo;
   }
   v35->static_fields->_DataLostBattleResetFadeInTime_k__BackingField = 0.0;
-  if ( !byte_4C34DFC )
+  if ( !byte_4C403E6 )
   {
-    sub_1C32C20(&TerminalPramsManager_TypeInfo);
+    sub_1C37058(&TerminalPramsManager_TypeInfo);
     v35 = TerminalPramsManager_TypeInfo;
-    byte_4C34DFC = 1;
+    byte_4C403E6 = 1;
   }
   if ( !v35->_2.cctor_finished )
   {
@@ -1917,11 +1917,11 @@ void TerminalPramsManager__InitParameter(const MethodInfo *method)
     v35 = TerminalPramsManager_TypeInfo;
   }
   v35->static_fields->_IsDataLostBattleNoticePause_k__BackingField = 0;
-  if ( !byte_4C346C4 )
+  if ( !byte_4C3FCAE )
   {
-    sub_1C32C20(&TerminalPramsManager_TypeInfo);
+    sub_1C37058(&TerminalPramsManager_TypeInfo);
     v35 = TerminalPramsManager_TypeInfo;
-    byte_4C346C4 = 1;
+    byte_4C3FCAE = 1;
   }
   if ( !v35->_2.cctor_finished )
   {
@@ -1929,11 +1929,11 @@ void TerminalPramsManager__InitParameter(const MethodInfo *method)
     v35 = TerminalPramsManager_TypeInfo;
   }
   v35->static_fields->_IsPlayedEntryBanner_k__BackingField = 0;
-  if ( !byte_4C32B1E )
+  if ( !byte_4C3E108 )
   {
-    sub_1C32C20(&TerminalPramsManager_TypeInfo);
+    sub_1C37058(&TerminalPramsManager_TypeInfo);
     v35 = TerminalPramsManager_TypeInfo;
-    byte_4C32B1E = 1;
+    byte_4C3E108 = 1;
   }
   if ( !v35->_2.cctor_finished )
   {
@@ -1941,11 +1941,11 @@ void TerminalPramsManager__InitParameter(const MethodInfo *method)
     v35 = TerminalPramsManager_TypeInfo;
   }
   v35->static_fields->_PlayerGenderType_k__BackingField = 0;
-  if ( !byte_4C34DFD )
+  if ( !byte_4C403E7 )
   {
-    sub_1C32C20(&TerminalPramsManager_TypeInfo);
+    sub_1C37058(&TerminalPramsManager_TypeInfo);
     v35 = TerminalPramsManager_TypeInfo;
-    byte_4C34DFD = 1;
+    byte_4C403E7 = 1;
   }
   if ( !v35->_2.cctor_finished )
   {
@@ -1954,11 +1954,11 @@ void TerminalPramsManager__InitParameter(const MethodInfo *method)
   }
   v35->static_fields->_EventUIEffectClearQuestId_k__BackingField = -1;
   v37 = StringLiteral_1/*""*/;
-  if ( !byte_4C34BD5 )
+  if ( !byte_4C401BF )
   {
-    sub_1C32C20(&TerminalPramsManager_TypeInfo);
+    sub_1C37058(&TerminalPramsManager_TypeInfo);
     v35 = TerminalPramsManager_TypeInfo;
-    byte_4C34BD5 = 1;
+    byte_4C401BF = 1;
   }
   if ( !v35->_2.cctor_finished )
   {
@@ -1967,11 +1967,11 @@ void TerminalPramsManager__InitParameter(const MethodInfo *method)
   }
   p_SceneMoveQuestClearedInfo_k__BackingField = (CGThumbnailListItem_o *)&v35->static_fields->_SceneMoveQuestClearedInfo_k__BackingField;
   p_SceneMoveQuestClearedInfo_k__BackingField->klass = (CGThumbnailListItem_c *)v37;
-  sub_1C32BC4(p_SceneMoveQuestClearedInfo_k__BackingField, v37, v33, v34);
-  if ( !byte_4C34DFE )
+  sub_1C36FFC(p_SceneMoveQuestClearedInfo_k__BackingField, v37, v33, v34);
+  if ( !byte_4C403E8 )
   {
-    sub_1C32C20(&TerminalPramsManager_TypeInfo);
-    byte_4C34DFE = 1;
+    sub_1C37058(&TerminalPramsManager_TypeInfo);
+    byte_4C403E8 = 1;
   }
   v41 = TerminalPramsManager_TypeInfo;
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -1981,11 +1981,11 @@ void TerminalPramsManager__InitParameter(const MethodInfo *method)
   }
   v42 = v41->static_fields;
   v42->_CampaignBonus_k__BackingField = 0;
-  sub_1C32BC4((CGThumbnailListItem_o *)&v42->_CampaignBonus_k__BackingField, 0, v39, v40);
-  if ( !byte_4C34DFF )
+  sub_1C36FFC((CGThumbnailListItem_o *)&v42->_CampaignBonus_k__BackingField, 0, v39, v40);
+  if ( !byte_4C403E9 )
   {
-    sub_1C32C20(&TerminalPramsManager_TypeInfo);
-    byte_4C34DFF = 1;
+    sub_1C37058(&TerminalPramsManager_TypeInfo);
+    byte_4C403E9 = 1;
   }
   v45 = TerminalPramsManager_TypeInfo;
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -1995,11 +1995,11 @@ void TerminalPramsManager__InitParameter(const MethodInfo *method)
   }
   v46 = v45->static_fields;
   v46->_CampaignDirectBonus_k__BackingField = 0;
-  sub_1C32BC4((CGThumbnailListItem_o *)&v46->_CampaignDirectBonus_k__BackingField, 0, v43, v44);
-  if ( !byte_4C34E00 )
+  sub_1C36FFC((CGThumbnailListItem_o *)&v46->_CampaignDirectBonus_k__BackingField, 0, v43, v44);
+  if ( !byte_4C403EA )
   {
-    sub_1C32C20(&TerminalPramsManager_TypeInfo);
-    byte_4C34E00 = 1;
+    sub_1C37058(&TerminalPramsManager_TypeInfo);
+    byte_4C403EA = 1;
   }
   v49 = TerminalPramsManager_TypeInfo;
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -2009,11 +2009,11 @@ void TerminalPramsManager__InitParameter(const MethodInfo *method)
   }
   v49->static_fields->_isPlayRiverActionCheck_k__BackingField = 0;
   v50 = StringLiteral_1/*""*/;
-  if ( !byte_4C319B9 )
+  if ( !byte_4C3CF09 )
   {
-    sub_1C32C20(&TerminalPramsManager_TypeInfo);
+    sub_1C37058(&TerminalPramsManager_TypeInfo);
     v49 = TerminalPramsManager_TypeInfo;
-    byte_4C319B9 = 1;
+    byte_4C3CF09 = 1;
   }
   if ( !v49->_2.cctor_finished )
   {
@@ -2022,11 +2022,11 @@ void TerminalPramsManager__InitParameter(const MethodInfo *method)
   }
   p_TransitionScrollTabName_k__BackingField = (CGThumbnailListItem_o *)&v49->static_fields->_TransitionScrollTabName_k__BackingField;
   p_TransitionScrollTabName_k__BackingField->klass = (CGThumbnailListItem_c *)v50;
-  sub_1C32BC4(p_TransitionScrollTabName_k__BackingField, v50, v47, v48);
-  if ( !byte_4C34E01 )
+  sub_1C36FFC(p_TransitionScrollTabName_k__BackingField, v50, v47, v48);
+  if ( !byte_4C403EB )
   {
-    sub_1C32C20(&TerminalPramsManager_TypeInfo);
-    byte_4C34E01 = 1;
+    sub_1C37058(&TerminalPramsManager_TypeInfo);
+    byte_4C403EB = 1;
   }
   v52 = TerminalPramsManager_TypeInfo;
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -2038,7 +2038,7 @@ void TerminalPramsManager__InitParameter(const MethodInfo *method)
   if ( ForcePlayEventTutorialArray_k__BackingField )
     System_Collections_Generic_HashSet_object___Clear(
       ForcePlayEventTutorialArray_k__BackingField,
-      (const MethodInfo_364FEBC *)Method_System_Collections_Generic_HashSet_Dictionary_int__int___Clear__);
+      (const MethodInfo_365A724 *)Method_System_Collections_Generic_HashSet_Dictionary_int__int___Clear__);
 }
 
 
@@ -2050,10 +2050,10 @@ void TerminalPramsManager__InitTipsArchiveScrollValueList(const MethodInfo *meth
   struct System_Single_array *v4; // x8
   char *v5; // x8
 
-  if ( (byte_4C34DE4 & 1) == 0 )
+  if ( (byte_4C403CE & 1) == 0 )
   {
-    sub_1C32C20(&TerminalPramsManager_TypeInfo);
-    byte_4C34DE4 = 1;
+    sub_1C37058(&TerminalPramsManager_TypeInfo);
+    byte_4C403CE = 1;
   }
   v1 = TerminalPramsManager_TypeInfo;
   for ( i = 0; ; ++i )
@@ -2066,7 +2066,7 @@ void TerminalPramsManager__InitTipsArchiveScrollValueList(const MethodInfo *meth
     TipsArchiveScrollValueList = v1->static_fields->TipsArchiveScrollValueList;
     if ( !TipsArchiveScrollValueList )
 LABEL_14:
-      sub_1C32E7C(v1);
+      sub_1C372B4(v1);
     if ( (__int64)i >= SLODWORD(TipsArchiveScrollValueList->max_length) )
       break;
     if ( !v1->_2.cctor_finished )
@@ -2078,7 +2078,7 @@ LABEL_14:
     if ( !v4 )
       goto LABEL_14;
     if ( i >= LODWORD(v4->max_length) )
-      sub_1C32E84(v1);
+      sub_1C372BC(v1);
     v5 = (char *)v4 + 4 * i;
     *((_DWORD *)v5 + 8) = 0;
   }
@@ -2090,17 +2090,17 @@ bool TerminalPramsManager__IsAuto(const MethodInfo *method)
   TerminalPramsManager_c *v1; // x0
   TerminalPramsManager_c *v3; // x0
 
-  if ( (byte_4C34D82 & 1) == 0 )
+  if ( (byte_4C4036C & 1) == 0 )
   {
-    sub_1C32C20(&TerminalPramsManager_TypeInfo);
-    byte_4C34D82 = 1;
+    sub_1C37058(&TerminalPramsManager_TypeInfo);
+    byte_4C4036C = 1;
   }
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(TerminalPramsManager_TypeInfo);
-  if ( !byte_4C343D1 )
+  if ( !byte_4C3F9BB )
   {
-    sub_1C32C20(&TerminalPramsManager_TypeInfo);
-    byte_4C343D1 = 1;
+    sub_1C37058(&TerminalPramsManager_TypeInfo);
+    byte_4C3F9BB = 1;
   }
   v1 = TerminalPramsManager_TypeInfo;
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -2112,10 +2112,10 @@ bool TerminalPramsManager__IsAuto(const MethodInfo *method)
     return 1;
   if ( !v1->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(v1);
-  if ( !byte_4C34DE9 )
+  if ( !byte_4C403D3 )
   {
-    sub_1C32C20(&TerminalPramsManager_TypeInfo);
-    byte_4C34DE9 = 1;
+    sub_1C37058(&TerminalPramsManager_TypeInfo);
+    byte_4C403D3 = 1;
   }
   v3 = TerminalPramsManager_TypeInfo;
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -2136,24 +2136,24 @@ bool TerminalPramsManager__IsAutoForTimeProgressEvents(const MethodInfo *method)
   Il2CppObject *v7; // [xsp+8h] [xbp-38h] BYREF
   Il2CppObject *entity; // [xsp+18h] [xbp-28h] BYREF
 
-  if ( (byte_4C34D84 & 1) == 0 )
+  if ( (byte_4C4036E & 1) == 0 )
   {
-    sub_1C32C20(&Method_DataManager_GetMasterData_EventDetailMaster___);
-    sub_1C32C20(&Method_DataManager_GetMasterData_WarMaster___);
-    sub_1C32C20(&Method_DataMasterBase_EventDetailMaster__EventDetailEntity__int__TryGetEntity__);
-    sub_1C32C20(&Method_DataMasterBase_WarMaster__WarEntity__int__TryGetEntity__);
-    sub_1C32C20(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-    sub_1C32C20(&TerminalPramsManager_TypeInfo);
-    byte_4C34D84 = 1;
+    sub_1C37058(&Method_DataManager_GetMasterData_EventDetailMaster___);
+    sub_1C37058(&Method_DataManager_GetMasterData_WarMaster___);
+    sub_1C37058(&Method_DataMasterBase_EventDetailMaster__EventDetailEntity__int__TryGetEntity__);
+    sub_1C37058(&Method_DataMasterBase_WarMaster__WarEntity__int__TryGetEntity__);
+    sub_1C37058(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    sub_1C37058(&TerminalPramsManager_TypeInfo);
+    byte_4C4036E = 1;
   }
   entity = 0;
   v7 = 0;
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(TerminalPramsManager_TypeInfo);
-  if ( !byte_4C343D1 )
+  if ( !byte_4C3F9BB )
   {
-    sub_1C32C20(&TerminalPramsManager_TypeInfo);
-    byte_4C343D1 = 1;
+    sub_1C37058(&TerminalPramsManager_TypeInfo);
+    byte_4C3F9BB = 1;
   }
   v1 = TerminalPramsManager_TypeInfo;
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -2165,10 +2165,10 @@ bool TerminalPramsManager__IsAutoForTimeProgressEvents(const MethodInfo *method)
     return 0;
   if ( !v1->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(v1);
-  if ( !byte_4C31DAD )
+  if ( !byte_4C3D397 )
   {
-    sub_1C32C20(&TerminalPramsManager_TypeInfo);
-    byte_4C31DAD = 1;
+    sub_1C37058(&TerminalPramsManager_TypeInfo);
+    byte_4C3D397 = 1;
   }
   v2 = TerminalPramsManager_TypeInfo;
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -2178,18 +2178,18 @@ bool TerminalPramsManager__IsAutoForTimeProgressEvents(const MethodInfo *method)
   }
   if ( v2->static_fields->_WarId_k__BackingField < 1 )
     return 0;
-  Instance = (DataManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39E2904 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = (DataManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39ED16C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance )
     goto LABEL_34;
   MasterData_object = DataManager__GetMasterData_object_(
                         Instance,
-                        (const MethodInfo_30DD3F0 *)Method_DataManager_GetMasterData_WarMaster___);
+                        (const MethodInfo_30E7C58 *)Method_DataManager_GetMasterData_WarMaster___);
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(TerminalPramsManager_TypeInfo);
-  if ( !byte_4C31DAD )
+  if ( !byte_4C3D397 )
   {
-    sub_1C32C20(&TerminalPramsManager_TypeInfo);
-    byte_4C31DAD = 1;
+    sub_1C37058(&TerminalPramsManager_TypeInfo);
+    byte_4C3D397 = 1;
   }
   Instance = (DataManager_o *)TerminalPramsManager_TypeInfo;
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -2203,24 +2203,24 @@ bool TerminalPramsManager__IsAutoForTimeProgressEvents(const MethodInfo *method)
           (DataMasterBase_TMaster__TEntity__PKType__o *)MasterData_object,
           &entity,
           *(_DWORD *)(*(_QWORD *)&Instance[1].fields._DispLog + 4LL),
-          (const MethodInfo_3396884 *)Method_DataMasterBase_WarMaster__WarEntity__int__TryGetEntity__) )
+          (const MethodInfo_33A10EC *)Method_DataMasterBase_WarMaster__WarEntity__int__TryGetEntity__) )
     return 0;
-  Instance = (DataManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39E2904 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = (DataManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39ED16C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance
     || (Instance = (DataManager_o *)DataManager__GetMasterData_object_(
                                       Instance,
-                                      (const MethodInfo_30DD3F0 *)Method_DataManager_GetMasterData_EventDetailMaster___),
+                                      (const MethodInfo_30E7C58 *)Method_DataManager_GetMasterData_EventDetailMaster___),
         !entity)
     || !Instance )
   {
 LABEL_34:
-    sub_1C32E7C(Instance);
+    sub_1C372B4(Instance);
   }
   if ( !DataMasterBase_object__object__int___TryGetEntity(
           (DataMasterBase_TMaster__TEntity__PKType__o *)Instance,
           &v7,
           (int32_t)entity[6].klass,
-          (const MethodInfo_3396884 *)Method_DataMasterBase_EventDetailMaster__EventDetailEntity__int__TryGetEntity__) )
+          (const MethodInfo_33A10EC *)Method_DataMasterBase_EventDetailMaster__EventDetailEntity__int__TryGetEntity__) )
     return 0;
   Instance = (DataManager_o *)v7;
   if ( !v7 )
@@ -2238,13 +2238,13 @@ bool TerminalPramsManager__IsBlankEarthWarByWarId(int32_t targetWarId, const Met
   System_Nullable_int__o v7; // x0
   __int64 v9; // [xsp+8h] [xbp-28h] BYREF
 
-  if ( (byte_4C34DE0 & 1) == 0 )
+  if ( (byte_4C403CA & 1) == 0 )
   {
-    sub_1C32C20(&BalanceConfig_TypeInfo);
-    sub_1C32C20(&Method_System_Nullable_int__GetValueOrDefault__);
-    sub_1C32C20(&Method_System_Nullable_int___ctor__);
-    sub_1C32C20(&Method_SingletonTemplate_QuestTree__get_Instance__);
-    byte_4C34DE0 = 1;
+    sub_1C37058(&BalanceConfig_TypeInfo);
+    sub_1C37058(&Method_System_Nullable_int__GetValueOrDefault__);
+    sub_1C37058(&Method_System_Nullable_int___ctor__);
+    sub_1C37058(&Method_SingletonTemplate_QuestTree__get_Instance__);
+    byte_4C403CA = 1;
   }
   v3 = BalanceConfig_TypeInfo;
   if ( !BalanceConfig_TypeInfo->_2.cctor_finished )
@@ -2258,9 +2258,9 @@ bool TerminalPramsManager__IsBlankEarthWarByWarId(int32_t targetWarId, const Met
   }
   else
   {
-    Instance = SingletonTemplate_object___get_Instance((const MethodInfo_39E2DF4 *)Method_SingletonTemplate_QuestTree__get_Instance__);
+    Instance = SingletonTemplate_object___get_Instance((const MethodInfo_39ED65C *)Method_SingletonTemplate_QuestTree__get_Instance__);
     if ( !Instance )
-      sub_1C32E7C(0);
+      sub_1C372B4(0);
     WarInfoByWarID = QuestTree__mfGetWarInfoByWarID((QuestTree_o *)Instance, targetWarId, 0);
     if ( WarInfoByWarID )
     {
@@ -2270,7 +2270,7 @@ bool TerminalPramsManager__IsBlankEarthWarByWarId(int32_t targetWarId, const Met
         v6 = *((_DWORD *)WarInfoByWarID + 31);
         v7 = (System_Nullable_int__o)&v9;
         v9 = 0;
-        System_Nullable_int____ctor(v7, v6, (const MethodInfo_38BDF3C *)Method_System_Nullable_int___ctor__);
+        System_Nullable_int____ctor(v7, v6, (const MethodInfo_38C87A4 *)Method_System_Nullable_int___ctor__);
         LOBYTE(WarInfoByWarID) = HIDWORD(v9) != 0;
       }
     }
@@ -2283,18 +2283,18 @@ void TerminalPramsManager__IsDataLostBattleAutoReset_SaveData(const MethodInfo *
 {
   TerminalPramsManager_c *v1; // x0
 
-  if ( (byte_4C34DB2 & 1) == 0 )
+  if ( (byte_4C4039C & 1) == 0 )
   {
-    sub_1C32C20(&TerminalPramsManager_TypeInfo);
-    sub_1C32C20(&StringLiteral_11454/*"SAVEKEY_DataLostBattleAutoReset"*/);
-    byte_4C34DB2 = 1;
+    sub_1C37058(&TerminalPramsManager_TypeInfo);
+    sub_1C37058(&StringLiteral_11455/*"SAVEKEY_DataLostBattleAutoReset"*/);
+    byte_4C4039C = 1;
   }
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(TerminalPramsManager_TypeInfo);
-  if ( !byte_4C34BCC )
+  if ( !byte_4C401B6 )
   {
-    sub_1C32C20(&TerminalPramsManager_TypeInfo);
-    byte_4C34BCC = 1;
+    sub_1C37058(&TerminalPramsManager_TypeInfo);
+    byte_4C401B6 = 1;
   }
   v1 = TerminalPramsManager_TypeInfo;
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -2303,7 +2303,7 @@ void TerminalPramsManager__IsDataLostBattleAutoReset_SaveData(const MethodInfo *
     v1 = TerminalPramsManager_TypeInfo;
   }
   UnityEngine_PlayerPrefs__SetInt(
-    (System_String_o *)StringLiteral_11454/*"SAVEKEY_DataLostBattleAutoReset"*/,
+    (System_String_o *)StringLiteral_11455/*"SAVEKEY_DataLostBattleAutoReset"*/,
     v1->static_fields->_IsDataLostBattleAutoReset_k__BackingField,
     0);
   UnityEngine_PlayerPrefs__Save(0);
@@ -2317,14 +2317,14 @@ bool TerminalPramsManager__IsMainStory(int32_t warId, const MethodInfo *method)
   Il2CppObject *Instance; // x0
   Il2CppObject *entity; // [xsp+8h] [xbp-28h] BYREF
 
-  if ( (byte_4C34DD0 & 1) == 0 )
+  if ( (byte_4C403BA & 1) == 0 )
   {
-    sub_1C32C20(&BalanceConfig_TypeInfo);
-    sub_1C32C20(&Method_DataManager_GetMasterData_WarMaster___);
-    sub_1C32C20(&Method_DataMasterBase_WarMaster__WarEntity__int__TryGetEntity__);
-    sub_1C32C20(&Method_System_Linq_Enumerable_Contains_int___);
-    sub_1C32C20(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-    byte_4C34DD0 = 1;
+    sub_1C37058(&BalanceConfig_TypeInfo);
+    sub_1C37058(&Method_DataManager_GetMasterData_WarMaster___);
+    sub_1C37058(&Method_DataMasterBase_WarMaster__WarEntity__int__TryGetEntity__);
+    sub_1C37058(&Method_System_Linq_Enumerable_Contains_int___);
+    sub_1C37058(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    byte_4C403BA = 1;
   }
   v3 = BalanceConfig_TypeInfo;
   entity = 0;
@@ -2344,28 +2344,28 @@ bool TerminalPramsManager__IsMainStory(int32_t warId, const MethodInfo *method)
     if ( !System_Linq_Enumerable__Contains_int_(
             (System_Collections_Generic_IEnumerable_TSource__o *)static_fields->MainChaptersWithEventId,
             warId,
-            (const MethodInfo_30FA3A0 *)Method_System_Linq_Enumerable_Contains_int___) )
+            (const MethodInfo_3104C08 *)Method_System_Linq_Enumerable_Contains_int___) )
     {
-      Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39E2904 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+      Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39ED16C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
       if ( Instance )
       {
         Instance = DataManager__GetMasterData_object_(
                      (DataManager_o *)Instance,
-                     (const MethodInfo_30DD3F0 *)Method_DataManager_GetMasterData_WarMaster___);
+                     (const MethodInfo_30E7C58 *)Method_DataManager_GetMasterData_WarMaster___);
         if ( Instance )
         {
           Instance = (Il2CppObject *)DataMasterBase_object__object__int___TryGetEntity(
                                        (DataMasterBase_TMaster__TEntity__PKType__o *)Instance,
                                        &entity,
                                        warId,
-                                       (const MethodInfo_3396884 *)Method_DataMasterBase_WarMaster__WarEntity__int__TryGetEntity__);
+                                       (const MethodInfo_33A10EC *)Method_DataMasterBase_WarMaster__WarEntity__int__TryGetEntity__);
           if ( ((unsigned __int8)Instance & 1) == 0 )
             return 0;
           if ( entity )
             return LODWORD(entity[6].klass) == 0;
         }
       }
-      sub_1C32E7C(Instance);
+      sub_1C372B4(Instance);
     }
   }
   return 1;
@@ -2381,45 +2381,45 @@ bool TerminalPramsManager__IsMainStoryForQuestId(int32_t questId, const MethodIn
   Il2CppObject *v9; // [xsp+0h] [xbp-30h] BYREF
   QuestEntity_o *entity; // [xsp+8h] [xbp-28h] BYREF
 
-  if ( (byte_4C34DD1 & 1) == 0 )
+  if ( (byte_4C403BB & 1) == 0 )
   {
-    sub_1C32C20(&Method_DataManager_GetMasterData_QuestMaster___);
-    sub_1C32C20(&Method_DataManager_GetMasterData_SpotMaster___);
-    sub_1C32C20(&Method_DataMasterBase_SpotMaster__SpotEntity__int__TryGetEntity__);
-    sub_1C32C20(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-    sub_1C32C20(&TerminalPramsManager_TypeInfo);
-    byte_4C34DD1 = 1;
+    sub_1C37058(&Method_DataManager_GetMasterData_QuestMaster___);
+    sub_1C37058(&Method_DataManager_GetMasterData_SpotMaster___);
+    sub_1C37058(&Method_DataMasterBase_SpotMaster__SpotEntity__int__TryGetEntity__);
+    sub_1C37058(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    sub_1C37058(&TerminalPramsManager_TypeInfo);
+    byte_4C403BB = 1;
   }
   v9 = 0;
   entity = 0;
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39E2904 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39ED16C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance )
     goto LABEL_16;
   Instance = DataManager__GetMasterData_object_(
                (DataManager_o *)Instance,
-               (const MethodInfo_30DD3F0 *)Method_DataManager_GetMasterData_QuestMaster___);
+               (const MethodInfo_30E7C58 *)Method_DataManager_GetMasterData_QuestMaster___);
   if ( !Instance )
     goto LABEL_16;
   if ( !QuestMaster__TryGetQuestEntity((QuestMaster_o *)Instance, &entity, questId, 0) )
     return 0;
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39E2904 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39ED16C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance
     || (Instance = DataManager__GetMasterData_object_(
                      (DataManager_o *)Instance,
-                     (const MethodInfo_30DD3F0 *)Method_DataManager_GetMasterData_SpotMaster___),
+                     (const MethodInfo_30E7C58 *)Method_DataManager_GetMasterData_SpotMaster___),
         !entity)
     || (v4 = (DataMasterBase_TMaster__TEntity__PKType__o *)Instance,
         Instance = (Il2CppObject *)QuestEntity__getSpotId(entity, 0),
         !v4) )
   {
 LABEL_16:
-    sub_1C32E7C(Instance);
+    sub_1C372B4(Instance);
   }
   Instance = (Il2CppObject *)DataMasterBase_object__object__int___TryGetEntity(
                                v4,
                                &v9,
                                (int32_t)Instance,
-                               (const MethodInfo_3396884 *)Method_DataMasterBase_SpotMaster__SpotEntity__int__TryGetEntity__);
+                               (const MethodInfo_33A10EC *)Method_DataMasterBase_SpotMaster__SpotEntity__int__TryGetEntity__);
   if ( ((unsigned __int8)Instance & 1) == 0 )
     return 0;
   if ( !v9 )
@@ -2436,12 +2436,12 @@ bool TerminalPramsManager__IsMustPlayMainStory(int32_t warId, const MethodInfo *
   BalanceConfig_c *v3; // x0
   const MethodInfo *v4; // x1
 
-  if ( (byte_4C34DCF & 1) == 0 )
+  if ( (byte_4C403B9 & 1) == 0 )
   {
-    sub_1C32C20(&BalanceConfig_TypeInfo);
-    sub_1C32C20(&Method_System_Linq_Enumerable_Contains_int___);
-    sub_1C32C20(&TerminalPramsManager_TypeInfo);
-    byte_4C34DCF = 1;
+    sub_1C37058(&BalanceConfig_TypeInfo);
+    sub_1C37058(&Method_System_Linq_Enumerable_Contains_int___);
+    sub_1C37058(&TerminalPramsManager_TypeInfo);
+    byte_4C403B9 = 1;
   }
   v3 = BalanceConfig_TypeInfo;
   if ( !BalanceConfig_TypeInfo->_2.cctor_finished )
@@ -2452,7 +2452,7 @@ bool TerminalPramsManager__IsMustPlayMainStory(int32_t warId, const MethodInfo *
   if ( System_Linq_Enumerable__Contains_int_(
          (System_Collections_Generic_IEnumerable_TSource__o *)v3->static_fields->NotRequiredPlayWarIds,
          warId,
-         (const MethodInfo_30FA3A0 *)Method_System_Linq_Enumerable_Contains_int___) )
+         (const MethodInfo_3104C08 *)Method_System_Linq_Enumerable_Contains_int___) )
   {
     return 0;
   }
@@ -2467,11 +2467,11 @@ bool TerminalPramsManager__IsNotifiedLoginQuest(int32_t questId, const MethodInf
   TerminalPramsManager_c *v3; // x0
   System_Collections_Generic_HashSet_int__o *loginQuestNotifiedList; // x0
 
-  if ( (byte_4C34DC2 & 1) == 0 )
+  if ( (byte_4C403AC & 1) == 0 )
   {
-    sub_1C32C20(&Method_System_Collections_Generic_HashSet_int__Contains__);
-    sub_1C32C20(&TerminalPramsManager_TypeInfo);
-    byte_4C34DC2 = 1;
+    sub_1C37058(&Method_System_Collections_Generic_HashSet_int__Contains__);
+    sub_1C37058(&TerminalPramsManager_TypeInfo);
+    byte_4C403AC = 1;
   }
   v3 = TerminalPramsManager_TypeInfo;
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -2481,11 +2481,11 @@ bool TerminalPramsManager__IsNotifiedLoginQuest(int32_t questId, const MethodInf
   }
   loginQuestNotifiedList = v3->static_fields->loginQuestNotifiedList;
   if ( !loginQuestNotifiedList )
-    sub_1C32E7C(0);
+    sub_1C372B4(0);
   return System_Collections_Generic_HashSet_int___Contains(
            loginQuestNotifiedList,
            questId,
-           (const MethodInfo_3649914 *)Method_System_Collections_Generic_HashSet_int__Contains__);
+           (const MethodInfo_365417C *)Method_System_Collections_Generic_HashSet_int__Contains__);
 }
 
 
@@ -2493,18 +2493,18 @@ void TerminalPramsManager__IsPlayTerminalEffectDisappearWarId_SaveData(const Met
 {
   TerminalPramsManager_c *v1; // x0
 
-  if ( (byte_4C34DAB & 1) == 0 )
+  if ( (byte_4C40395 & 1) == 0 )
   {
-    sub_1C32C20(&TerminalPramsManager_TypeInfo);
-    sub_1C32C20(&StringLiteral_11460/*"SAVEKEY_PlayTerminalEffectDisappearWarId"*/);
-    byte_4C34DAB = 1;
+    sub_1C37058(&TerminalPramsManager_TypeInfo);
+    sub_1C37058(&StringLiteral_11461/*"SAVEKEY_PlayTerminalEffectDisappearWarId"*/);
+    byte_4C40395 = 1;
   }
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(TerminalPramsManager_TypeInfo);
-  if ( !byte_4C349E6 )
+  if ( !byte_4C3FFD0 )
   {
-    sub_1C32C20(&TerminalPramsManager_TypeInfo);
-    byte_4C349E6 = 1;
+    sub_1C37058(&TerminalPramsManager_TypeInfo);
+    byte_4C3FFD0 = 1;
   }
   v1 = TerminalPramsManager_TypeInfo;
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -2513,7 +2513,7 @@ void TerminalPramsManager__IsPlayTerminalEffectDisappearWarId_SaveData(const Met
     v1 = TerminalPramsManager_TypeInfo;
   }
   UnityEngine_PlayerPrefs__SetInt(
-    (System_String_o *)StringLiteral_11460/*"SAVEKEY_PlayTerminalEffectDisappearWarId"*/,
+    (System_String_o *)StringLiteral_11461/*"SAVEKEY_PlayTerminalEffectDisappearWarId"*/,
     v1->static_fields->_IsPlayTerminalEffectDisappearWarId_k__BackingField,
     0);
   UnityEngine_PlayerPrefs__Save(0);
@@ -2524,18 +2524,18 @@ void TerminalPramsManager__IsPlayTerminalEffectDisappear_SaveData(const MethodIn
 {
   TerminalPramsManager_c *v1; // x0
 
-  if ( (byte_4C34DAA & 1) == 0 )
+  if ( (byte_4C40394 & 1) == 0 )
   {
-    sub_1C32C20(&TerminalPramsManager_TypeInfo);
-    sub_1C32C20(&StringLiteral_11459/*"SAVEKEY_PlayTerminalEffectDisappear"*/);
-    byte_4C34DAA = 1;
+    sub_1C37058(&TerminalPramsManager_TypeInfo);
+    sub_1C37058(&StringLiteral_11460/*"SAVEKEY_PlayTerminalEffectDisappear"*/);
+    byte_4C40394 = 1;
   }
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(TerminalPramsManager_TypeInfo);
-  if ( !byte_4C349E5 )
+  if ( !byte_4C3FFCF )
   {
-    sub_1C32C20(&TerminalPramsManager_TypeInfo);
-    byte_4C349E5 = 1;
+    sub_1C37058(&TerminalPramsManager_TypeInfo);
+    byte_4C3FFCF = 1;
   }
   v1 = TerminalPramsManager_TypeInfo;
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -2544,7 +2544,7 @@ void TerminalPramsManager__IsPlayTerminalEffectDisappear_SaveData(const MethodIn
     v1 = TerminalPramsManager_TypeInfo;
   }
   UnityEngine_PlayerPrefs__SetInt(
-    (System_String_o *)StringLiteral_11459/*"SAVEKEY_PlayTerminalEffectDisappear"*/,
+    (System_String_o *)StringLiteral_11460/*"SAVEKEY_PlayTerminalEffectDisappear"*/,
     v1->static_fields->_IsPlayTerminalEffectDisappear_k__BackingField,
     0);
   UnityEngine_PlayerPrefs__Save(0);
@@ -2555,18 +2555,18 @@ void TerminalPramsManager__IsPlayTerminalEffectNt2AfterAction_SaveData(const Met
 {
   TerminalPramsManager_c *v1; // x0
 
-  if ( (byte_4C34DAC & 1) == 0 )
+  if ( (byte_4C40396 & 1) == 0 )
   {
-    sub_1C32C20(&TerminalPramsManager_TypeInfo);
-    sub_1C32C20(&StringLiteral_11461/*"SAVEKEY_PlayTerminalEffectNt2AfterAction"*/);
-    byte_4C34DAC = 1;
+    sub_1C37058(&TerminalPramsManager_TypeInfo);
+    sub_1C37058(&StringLiteral_11462/*"SAVEKEY_PlayTerminalEffectNt2AfterAction"*/);
+    byte_4C40396 = 1;
   }
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(TerminalPramsManager_TypeInfo);
-  if ( !byte_4C34BC7 )
+  if ( !byte_4C401B1 )
   {
-    sub_1C32C20(&TerminalPramsManager_TypeInfo);
-    byte_4C34BC7 = 1;
+    sub_1C37058(&TerminalPramsManager_TypeInfo);
+    byte_4C401B1 = 1;
   }
   v1 = TerminalPramsManager_TypeInfo;
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -2575,7 +2575,7 @@ void TerminalPramsManager__IsPlayTerminalEffectNt2AfterAction_SaveData(const Met
     v1 = TerminalPramsManager_TypeInfo;
   }
   UnityEngine_PlayerPrefs__SetInt(
-    (System_String_o *)StringLiteral_11461/*"SAVEKEY_PlayTerminalEffectNt2AfterAction"*/,
+    (System_String_o *)StringLiteral_11462/*"SAVEKEY_PlayTerminalEffectNt2AfterAction"*/,
     v1->static_fields->_IsPlayTerminalEffectNt2AfterAction_k__BackingField,
     0);
   UnityEngine_PlayerPrefs__Save(0);
@@ -2589,20 +2589,20 @@ bool TerminalPramsManager__IsPlayedEventRaidDefeatedEffect(int32_t eventId, int3
   char v7; // w0
   Il2CppObject *value; // [xsp+8h] [xbp-28h] BYREF
 
-  if ( (byte_4C34DDA & 1) == 0 )
+  if ( (byte_4C403C4 & 1) == 0 )
   {
-    sub_1C32C20(&Method_System_Collections_Generic_Dictionary_int__List_int___TryGetValue__);
-    sub_1C32C20(&Method_System_Collections_Generic_List_int__Contains__);
-    sub_1C32C20(&TerminalPramsManager_TypeInfo);
-    byte_4C34DDA = 1;
+    sub_1C37058(&Method_System_Collections_Generic_Dictionary_int__List_int___TryGetValue__);
+    sub_1C37058(&Method_System_Collections_Generic_List_int__Contains__);
+    sub_1C37058(&TerminalPramsManager_TypeInfo);
+    byte_4C403C4 = 1;
   }
   value = 0;
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(TerminalPramsManager_TypeInfo);
-  if ( !byte_4C34E1E )
+  if ( !byte_4C40408 )
   {
-    sub_1C32C20(&TerminalPramsManager_TypeInfo);
-    byte_4C34E1E = 1;
+    sub_1C37058(&TerminalPramsManager_TypeInfo);
+    byte_4C40408 = 1;
   }
   v5 = (System_Collections_Generic_Dictionary_int__object__o *)TerminalPramsManager_TypeInfo;
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -2612,19 +2612,19 @@ bool TerminalPramsManager__IsPlayedEventRaidDefeatedEffect(int32_t eventId, int3
   }
   v6 = *(_QWORD *)&v5[2].fields._entries->m_Items[17].fields.hashCode;
   if ( !v6 || (v5 = *(System_Collections_Generic_Dictionary_int__object__o **)(v6 + 16)) == 0 )
-    sub_1C32E7C(v5);
+    sub_1C372B4(v5);
   if ( System_Collections_Generic_Dictionary_int__object___TryGetValue(
          v5,
          eventId,
          &value,
-         (const MethodInfo_33F14A8 *)Method_System_Collections_Generic_Dictionary_int__List_int___TryGetValue__) )
+         (const MethodInfo_33FBD10 *)Method_System_Collections_Generic_Dictionary_int__List_int___TryGetValue__) )
   {
     v7 = (char)value;
     if ( value )
       v7 = System_Collections_Generic_List_int___Contains(
              (System_Collections_Generic_List_int__o *)value,
              day,
-             (const MethodInfo_377BB10 *)Method_System_Collections_Generic_List_int__Contains__);
+             (const MethodInfo_3786378 *)Method_System_Collections_Generic_List_int__Contains__);
   }
   else
   {
@@ -2647,12 +2647,12 @@ bool TerminalPramsManager__IsTerminalEffectNT2BoardOpen(const MethodInfo *method
   int32_t QuestId_k__BackingField; // w19
   TerminalPramsManager_c *v10; // x0
 
-  if ( (byte_4C34DBB & 1) == 0 )
+  if ( (byte_4C403A5 & 1) == 0 )
   {
-    sub_1C32C20(&ScrTerminalListTop_TypeInfo);
-    sub_1C32C20(&Method_SingletonTemplate_clsQuestCheck__get_Instance__);
-    sub_1C32C20(&TerminalPramsManager_TypeInfo);
-    byte_4C34DBB = 1;
+    sub_1C37058(&ScrTerminalListTop_TypeInfo);
+    sub_1C37058(&Method_SingletonTemplate_clsQuestCheck__get_Instance__);
+    sub_1C37058(&TerminalPramsManager_TypeInfo);
+    byte_4C403A5 = 1;
   }
   v2 = ScrTerminalListTop_TypeInfo;
   if ( !ScrTerminalListTop_TypeInfo->_2.cctor_finished )
@@ -2665,7 +2665,7 @@ bool TerminalPramsManager__IsTerminalEffectNT2BoardOpen(const MethodInfo *method
     j_il2cpp_runtime_class_init_0(TerminalPramsManager_TypeInfo);
   if ( TerminalPramsManager__IsTerminalEffectPlayed(NT2_EFFECT_AREA_BOARD_COMPLETE_EFFECT_ID, v1) )
     return 0;
-  Instance = SingletonTemplate_object___get_Instance((const MethodInfo_39E2DF4 *)Method_SingletonTemplate_clsQuestCheck__get_Instance__);
+  Instance = SingletonTemplate_object___get_Instance((const MethodInfo_39ED65C *)Method_SingletonTemplate_clsQuestCheck__get_Instance__);
   v5 = (clsQuestCheck_o *)Instance;
   if ( !ScrTerminalListTop_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(ScrTerminalListTop_TypeInfo);
@@ -2677,13 +2677,13 @@ bool TerminalPramsManager__IsTerminalEffectNT2BoardOpen(const MethodInfo *method
           0,
           0) )
     return 0;
-  Instance = SingletonTemplate_object___get_Instance((const MethodInfo_39E2DF4 *)Method_SingletonTemplate_clsQuestCheck__get_Instance__);
+  Instance = SingletonTemplate_object___get_Instance((const MethodInfo_39ED65C *)Method_SingletonTemplate_clsQuestCheck__get_Instance__);
   v6 = (clsQuestCheck_o *)Instance;
   if ( !ScrTerminalListTop_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(ScrTerminalListTop_TypeInfo);
   if ( !v6 )
 LABEL_34:
-    sub_1C32E7C(Instance);
+    sub_1C372B4(Instance);
   if ( !clsQuestCheck__IsWarClear(
           v6,
           ScrTerminalListTop_TypeInfo->static_fields->NT2_EFFECT_AREA_BOARD_TARGET_WAR_ID,
@@ -2691,10 +2691,10 @@ LABEL_34:
   {
     if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(TerminalPramsManager_TypeInfo);
-    if ( !byte_4C31A97 )
+    if ( !byte_4C3CFE7 )
     {
-      sub_1C32C20(&TerminalPramsManager_TypeInfo);
-      byte_4C31A97 = 1;
+      sub_1C37058(&TerminalPramsManager_TypeInfo);
+      byte_4C3CFE7 = 1;
     }
     v7 = TerminalPramsManager_TypeInfo;
     if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -2713,10 +2713,10 @@ LABEL_34:
     {
       if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(TerminalPramsManager_TypeInfo);
-      if ( !byte_4C31A96 )
+      if ( !byte_4C3CFE6 )
       {
-        sub_1C32C20(&TerminalPramsManager_TypeInfo);
-        byte_4C31A96 = 1;
+        sub_1C37058(&TerminalPramsManager_TypeInfo);
+        byte_4C3CFE6 = 1;
       }
       v10 = TerminalPramsManager_TypeInfo;
       if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -2743,29 +2743,29 @@ bool TerminalPramsManager__IsTerminalEffectPlayed(System_String_o *effectName, c
   System_String_array *v9; // x20
   System_Func_object__bool__o *v10; // x21
 
-  if ( (byte_4C34DB9 & 1) == 0 )
+  if ( (byte_4C403A3 & 1) == 0 )
   {
-    sub_1C32C20(&Method_BasicHelper_Any_string____78062400);
-    sub_1C32C20(&System_Func_string__bool__TypeInfo);
-    sub_1C32C20(&TerminalPramsManager_TypeInfo);
-    sub_1C32C20(&Method_TerminalPramsManager___c__DisplayClass709_0__IsTerminalEffectPlayed_b__0__);
-    sub_1C32C20(&TerminalPramsManager___c__DisplayClass709_0_TypeInfo);
-    sub_1C32C20(&StringLiteral_43/*"\n"*/);
-    sub_1C32C20(&StringLiteral_87/*"\r\n"*/);
-    byte_4C34DB9 = 1;
+    sub_1C37058(&Method_BasicHelper_Any_string____78108176);
+    sub_1C37058(&System_Func_string__bool__TypeInfo);
+    sub_1C37058(&TerminalPramsManager_TypeInfo);
+    sub_1C37058(&Method_TerminalPramsManager___c__DisplayClass709_0__IsTerminalEffectPlayed_b__0__);
+    sub_1C37058(&TerminalPramsManager___c__DisplayClass709_0_TypeInfo);
+    sub_1C37058(&StringLiteral_43/*"\n"*/);
+    sub_1C37058(&StringLiteral_87/*"\r\n"*/);
+    byte_4C403A3 = 1;
   }
-  v3 = sub_1C32E6C(TerminalPramsManager___c__DisplayClass709_0_TypeInfo);
+  v3 = sub_1C372A4(TerminalPramsManager___c__DisplayClass709_0_TypeInfo);
   TerminalPramsManager___c__DisplayClass709_0___ctor((TerminalPramsManager___c__DisplayClass709_0_o *)v3, 0);
   if ( !v3 )
     goto LABEL_21;
   *(_QWORD *)(v3 + 16) = effectName;
-  sub_1C32BC4((CGThumbnailListItem_o *)(v3 + 16), (int32_t)effectName, v5, v6);
+  sub_1C36FFC((CGThumbnailListItem_o *)(v3 + 16), (int32_t)effectName, v5, v6);
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(TerminalPramsManager_TypeInfo);
-  if ( !byte_4C34E08 )
+  if ( !byte_4C403F2 )
   {
-    sub_1C32C20(&TerminalPramsManager_TypeInfo);
-    byte_4C34E08 = 1;
+    sub_1C37058(&TerminalPramsManager_TypeInfo);
+    byte_4C403F2 = 1;
   }
   v7 = TerminalPramsManager_TypeInfo;
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -2777,10 +2777,10 @@ bool TerminalPramsManager__IsTerminalEffectPlayed(System_String_o *effectName, c
   {
     if ( !v7->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(v7);
-    if ( !byte_4C34E08 )
+    if ( !byte_4C403F2 )
     {
-      sub_1C32C20(&TerminalPramsManager_TypeInfo);
-      byte_4C34E08 = 1;
+      sub_1C37058(&TerminalPramsManager_TypeInfo);
+      byte_4C403F2 = 1;
     }
     v8 = TerminalPramsManager_TypeInfo;
     if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -2791,7 +2791,7 @@ bool TerminalPramsManager__IsTerminalEffectPlayed(System_String_o *effectName, c
     PlayedTerminalEffects_k__BackingField = v8->static_fields->_PlayedTerminalEffects_k__BackingField;
     if ( PlayedTerminalEffects_k__BackingField )
     {
-      PlayedTerminalEffects_k__BackingField = System_String__Replace_63565092(
+      PlayedTerminalEffects_k__BackingField = System_String__Replace_63608204(
                                                 PlayedTerminalEffects_k__BackingField,
                                                 (System_String_o *)StringLiteral_87/*"\r\n"*/,
                                                 (System_String_o *)StringLiteral_43/*"\n"*/,
@@ -2799,20 +2799,20 @@ bool TerminalPramsManager__IsTerminalEffectPlayed(System_String_o *effectName, c
       if ( PlayedTerminalEffects_k__BackingField )
       {
         v9 = System_String__Split(PlayedTerminalEffects_k__BackingField, 0xAu, 0, 0);
-        v10 = (System_Func_object__bool__o *)sub_1C32E6C(System_Func_string__bool__TypeInfo);
+        v10 = (System_Func_object__bool__o *)sub_1C372A4(System_Func_string__bool__TypeInfo);
         System_Func_object__bool____ctor(
           v10,
           (Il2CppObject *)v3,
           Method_TerminalPramsManager___c__DisplayClass709_0__IsTerminalEffectPlayed_b__0__,
           0);
-        return BasicHelper__Any_object__51144764(
+        return BasicHelper__Any_object__51187876(
                  (System_Object_array *)v9,
                  (System_Func_T__bool__o *)v10,
-                 (const MethodInfo_30C683C *)Method_BasicHelper_Any_string____78062400);
+                 (const MethodInfo_30D10A4 *)Method_BasicHelper_Any_string____78108176);
       }
     }
 LABEL_21:
-    sub_1C32E7C(PlayedTerminalEffects_k__BackingField);
+    sub_1C372B4(PlayedTerminalEffects_k__BackingField);
   }
   return 0;
 }
@@ -2833,19 +2833,19 @@ bool TerminalPramsManager__IsUsePopupQuestReward(int32_t questId, const MethodIn
   Il2CppObject *v15; // [xsp+20h] [xbp-30h] BYREF
   QuestEntity_o *entity; // [xsp+28h] [xbp-28h] BYREF
 
-  if ( (byte_4C34DDE & 1) == 0 )
+  if ( (byte_4C403C8 & 1) == 0 )
   {
-    sub_1C32C20(&BalanceConfig_TypeInfo);
-    sub_1C32C20(&Method_DataManager_GetMaster_BlankEarthSpotMaster___);
-    sub_1C32C20(&Method_DataManager_GetMaster_QuestMaster___);
-    sub_1C32C20(&Method_DataManager_GetMaster_SpotMaster___);
-    sub_1C32C20(&Method_DataManager_GetMaster_WarMaster___);
-    sub_1C32C20(&DataManager_TypeInfo);
-    sub_1C32C20(&Method_DataMasterBase_SpotMaster__SpotEntity__int__TryGetEntity__);
-    sub_1C32C20(&Method_DataMasterBase_BlankEarthSpotMaster__BlankEarthSpotEntity__int__TryGetEntity__);
-    sub_1C32C20(&Method_DataMasterBase_WarMaster__WarEntity__int__TryGetEntity__);
-    sub_1C32C20(&Method_SingletonTemplate_clsQuestCheck__get_Instance__);
-    byte_4C34DDE = 1;
+    sub_1C37058(&BalanceConfig_TypeInfo);
+    sub_1C37058(&Method_DataManager_GetMaster_BlankEarthSpotMaster___);
+    sub_1C37058(&Method_DataManager_GetMaster_QuestMaster___);
+    sub_1C37058(&Method_DataManager_GetMaster_SpotMaster___);
+    sub_1C37058(&Method_DataManager_GetMaster_WarMaster___);
+    sub_1C37058(&DataManager_TypeInfo);
+    sub_1C37058(&Method_DataMasterBase_SpotMaster__SpotEntity__int__TryGetEntity__);
+    sub_1C37058(&Method_DataMasterBase_BlankEarthSpotMaster__BlankEarthSpotEntity__int__TryGetEntity__);
+    sub_1C37058(&Method_DataMasterBase_WarMaster__WarEntity__int__TryGetEntity__);
+    sub_1C37058(&Method_SingletonTemplate_clsQuestCheck__get_Instance__);
+    byte_4C403C8 = 1;
   }
   v15 = 0;
   entity = 0;
@@ -2854,14 +2854,14 @@ bool TerminalPramsManager__IsUsePopupQuestReward(int32_t questId, const MethodIn
   v12 = 0;
   if ( !DataManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-  Master_object = (QuestMaster_o *)DataManager__GetMaster_object_((const MethodInfo_30DD39C *)Method_DataManager_GetMaster_QuestMaster___);
+  Master_object = (QuestMaster_o *)DataManager__GetMaster_object_((const MethodInfo_30E7C04 *)Method_DataManager_GetMaster_QuestMaster___);
   if ( !Master_object )
     goto LABEL_42;
   if ( !QuestMaster__TryGetQuestEntity(Master_object, &entity, questId, 0) )
     return 0;
   if ( !DataManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-  Master_object = (QuestMaster_o *)DataManager__GetMaster_object_((const MethodInfo_30DD39C *)Method_DataManager_GetMaster_BlankEarthSpotMaster___);
+  Master_object = (QuestMaster_o *)DataManager__GetMaster_object_((const MethodInfo_30E7C04 *)Method_DataManager_GetMaster_BlankEarthSpotMaster___);
   if ( !entity )
     goto LABEL_42;
   v4 = (DataMasterBase_TMaster__TEntity__PKType__o *)Master_object;
@@ -2872,18 +2872,18 @@ bool TerminalPramsManager__IsUsePopupQuestReward(int32_t questId, const MethodIn
           v4,
           &v15,
           (int32_t)Master_object,
-          (const MethodInfo_3396884 *)Method_DataMasterBase_BlankEarthSpotMaster__BlankEarthSpotEntity__int__TryGetEntity__) )
+          (const MethodInfo_33A10EC *)Method_DataMasterBase_BlankEarthSpotMaster__BlankEarthSpotEntity__int__TryGetEntity__) )
     goto LABEL_45;
   if ( !DataManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-  Master_object = (QuestMaster_o *)DataManager__GetMaster_object_((const MethodInfo_30DD39C *)Method_DataManager_GetMaster_WarMaster___);
+  Master_object = (QuestMaster_o *)DataManager__GetMaster_object_((const MethodInfo_30E7C04 *)Method_DataManager_GetMaster_WarMaster___);
   if ( !v15 || !Master_object )
     goto LABEL_42;
   Master_object = (QuestMaster_o *)DataMasterBase_object__object__int___TryGetEntity(
                                      (DataMasterBase_TMaster__TEntity__PKType__o *)Master_object,
                                      &v13,
                                      HIDWORD(v15[1].klass),
-                                     (const MethodInfo_3396884 *)Method_DataMasterBase_WarMaster__WarEntity__int__TryGetEntity__);
+                                     (const MethodInfo_33A10EC *)Method_DataMasterBase_WarMaster__WarEntity__int__TryGetEntity__);
   if ( ((unsigned __int8)Master_object & 1) == 0 )
     return 0;
   if ( !v15 )
@@ -2900,7 +2900,7 @@ bool TerminalPramsManager__IsUsePopupQuestReward(int32_t questId, const MethodIn
 LABEL_45:
     if ( !DataManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-    Master_object = (QuestMaster_o *)DataManager__GetMaster_object_((const MethodInfo_30DD39C *)Method_DataManager_GetMaster_SpotMaster___);
+    Master_object = (QuestMaster_o *)DataManager__GetMaster_object_((const MethodInfo_30E7C04 *)Method_DataManager_GetMaster_SpotMaster___);
     if ( !entity )
       goto LABEL_42;
     v8 = (DataMasterBase_TMaster__TEntity__PKType__o *)Master_object;
@@ -2911,18 +2911,18 @@ LABEL_45:
            v8,
            &v14,
            (int32_t)Master_object,
-           (const MethodInfo_3396884 *)Method_DataMasterBase_SpotMaster__SpotEntity__int__TryGetEntity__) )
+           (const MethodInfo_33A10EC *)Method_DataMasterBase_SpotMaster__SpotEntity__int__TryGetEntity__) )
     {
       if ( !DataManager_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-      Master_object = (QuestMaster_o *)DataManager__GetMaster_object_((const MethodInfo_30DD39C *)Method_DataManager_GetMaster_WarMaster___);
+      Master_object = (QuestMaster_o *)DataManager__GetMaster_object_((const MethodInfo_30E7C04 *)Method_DataManager_GetMaster_WarMaster___);
       if ( !v14 || !Master_object )
         goto LABEL_42;
       Master_object = (QuestMaster_o *)DataMasterBase_object__object__int___TryGetEntity(
                                          (DataMasterBase_TMaster__TEntity__PKType__o *)Master_object,
                                          &v12,
                                          HIDWORD(v14[1].klass),
-                                         (const MethodInfo_3396884 *)Method_DataMasterBase_WarMaster__WarEntity__int__TryGetEntity__);
+                                         (const MethodInfo_33A10EC *)Method_DataMasterBase_WarMaster__WarEntity__int__TryGetEntity__);
       if ( ((unsigned __int8)Master_object & 1) != 0 )
       {
         if ( !v12 )
@@ -2936,11 +2936,11 @@ LABEL_45:
         }
         if ( monitor == v10->static_fields->GrandBoardWarId )
         {
-          Master_object = (QuestMaster_o *)SingletonTemplate_object___get_Instance((const MethodInfo_39E2DF4 *)Method_SingletonTemplate_clsQuestCheck__get_Instance__);
+          Master_object = (QuestMaster_o *)SingletonTemplate_object___get_Instance((const MethodInfo_39ED65C *)Method_SingletonTemplate_clsQuestCheck__get_Instance__);
           if ( entity && Master_object )
             return clsQuestCheck__IsConsumeStormPod((clsQuestCheck_o *)Master_object, entity->fields.id, 0);
 LABEL_42:
-          sub_1C32E7C(Master_object);
+          sub_1C372B4(Master_object);
         }
       }
     }
@@ -2966,12 +2966,12 @@ bool TerminalPramsManager__IsWarStartedId(int32_t war_id, const MethodInfo *meth
   int32_t v11; // [xsp+Ch] [xbp-34h] BYREF
 
   v11 = war_id;
-  if ( (byte_4C34DBD & 1) == 0 )
+  if ( (byte_4C403A7 & 1) == 0 )
   {
-    sub_1C32C20(&TerminalPramsManager_TypeInfo);
-    sub_1C32C20(&StringLiteral_43/*"\n"*/);
-    sub_1C32C20(&StringLiteral_87/*"\r\n"*/);
-    byte_4C34DBD = 1;
+    sub_1C37058(&TerminalPramsManager_TypeInfo);
+    sub_1C37058(&StringLiteral_43/*"\n"*/);
+    sub_1C37058(&StringLiteral_87/*"\r\n"*/);
+    byte_4C403A7 = 1;
   }
   v2 = TerminalPramsManager_TypeInfo;
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -2981,14 +2981,14 @@ bool TerminalPramsManager__IsWarStartedId(int32_t war_id, const MethodInfo *meth
   }
   mTerminalWarStartedIds = v2->static_fields->mTerminalWarStartedIds;
   if ( !mTerminalWarStartedIds
-    || (mTerminalWarStartedIds = System_String__Replace_63565092(
+    || (mTerminalWarStartedIds = System_String__Replace_63608204(
                                    mTerminalWarStartedIds,
                                    (System_String_o *)StringLiteral_87/*"\r\n"*/,
                                    (System_String_o *)StringLiteral_43/*"\n"*/,
                                    0)) == 0
     || (mTerminalWarStartedIds = (System_String_o *)System_String__Split(mTerminalWarStartedIds, 0xAu, 0, 0)) == 0 )
   {
-    sub_1C32E7C(mTerminalWarStartedIds);
+    sub_1C372B4(mTerminalWarStartedIds);
   }
   klass = mTerminalWarStartedIds[1].klass;
   v5 = mTerminalWarStartedIds;
@@ -2999,7 +2999,7 @@ bool TerminalPramsManager__IsWarStartedId(int32_t war_id, const MethodInfo *meth
     do
     {
       if ( v7 >= (unsigned int)klass )
-        sub_1C32E84(mTerminalWarStartedIds);
+        sub_1C372BC(mTerminalWarStartedIds);
       v8 = (System_String_o *)*((_QWORD *)&v5[1].monitor + v7);
       v9 = System_Int32__ToString((int32_t)&v11, 0);
       mTerminalWarStartedIds = (System_String_o *)System_String__op_Equality(v8, v9, 0);
@@ -3018,11 +3018,11 @@ void TerminalPramsManager__LastPanelEventPointSave_SaveData(const MethodInfo *me
 {
   TerminalPramsManager_c *v1; // x0
 
-  if ( (byte_4C34DA9 & 1) == 0 )
+  if ( (byte_4C40393 & 1) == 0 )
   {
-    sub_1C32C20(&TerminalPramsManager_TypeInfo);
-    sub_1C32C20(&StringLiteral_13702/*"TerminalLastPanelEventPoint"*/);
-    byte_4C34DA9 = 1;
+    sub_1C37058(&TerminalPramsManager_TypeInfo);
+    sub_1C37058(&StringLiteral_13703/*"TerminalLastPanelEventPoint"*/);
+    byte_4C40393 = 1;
   }
   v1 = TerminalPramsManager_TypeInfo;
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -3030,7 +3030,7 @@ void TerminalPramsManager__LastPanelEventPointSave_SaveData(const MethodInfo *me
     j_il2cpp_runtime_class_init_0(TerminalPramsManager_TypeInfo);
     v1 = TerminalPramsManager_TypeInfo;
   }
-  UnityEngine_PlayerPrefs__SetInt((System_String_o *)StringLiteral_13702/*"TerminalLastPanelEventPoint"*/, v1->static_fields->panelEventPoint, 0);
+  UnityEngine_PlayerPrefs__SetInt((System_String_o *)StringLiteral_13703/*"TerminalLastPanelEventPoint"*/, v1->static_fields->panelEventPoint, 0);
   UnityEngine_PlayerPrefs__Save(0);
 }
 
@@ -3039,11 +3039,11 @@ void TerminalPramsManager__LastPlayBgmNameSave_SaveData(const MethodInfo *method
 {
   TerminalPramsManager_c *v1; // x0
 
-  if ( (byte_4C34DA7 & 1) == 0 )
+  if ( (byte_4C40391 & 1) == 0 )
   {
-    sub_1C32C20(&TerminalPramsManager_TypeInfo);
-    sub_1C32C20(&StringLiteral_11456/*"SAVEKEY_LastPlayBgmName"*/);
-    byte_4C34DA7 = 1;
+    sub_1C37058(&TerminalPramsManager_TypeInfo);
+    sub_1C37058(&StringLiteral_11457/*"SAVEKEY_LastPlayBgmName"*/);
+    byte_4C40391 = 1;
   }
   v1 = TerminalPramsManager_TypeInfo;
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -3051,7 +3051,7 @@ void TerminalPramsManager__LastPlayBgmNameSave_SaveData(const MethodInfo *method
     j_il2cpp_runtime_class_init_0(TerminalPramsManager_TypeInfo);
     v1 = TerminalPramsManager_TypeInfo;
   }
-  UnityEngine_PlayerPrefs__SetString((System_String_o *)StringLiteral_11456/*"SAVEKEY_LastPlayBgmName"*/, v1->static_fields->lastPlayBgmName, 0);
+  UnityEngine_PlayerPrefs__SetString((System_String_o *)StringLiteral_11457/*"SAVEKEY_LastPlayBgmName"*/, v1->static_fields->lastPlayBgmName, 0);
   UnityEngine_PlayerPrefs__Save(0);
 }
 
@@ -3060,11 +3060,11 @@ void TerminalPramsManager__LastPlayQuestConsumeApSave_SaveData(const MethodInfo 
 {
   TerminalPramsManager_c *v1; // x0
 
-  if ( (byte_4C34DA8 & 1) == 0 )
+  if ( (byte_4C40392 & 1) == 0 )
   {
-    sub_1C32C20(&TerminalPramsManager_TypeInfo);
-    sub_1C32C20(&StringLiteral_11457/*"SAVEKEY_LastPlayQuestConsumeType"*/);
-    byte_4C34DA8 = 1;
+    sub_1C37058(&TerminalPramsManager_TypeInfo);
+    sub_1C37058(&StringLiteral_11458/*"SAVEKEY_LastPlayQuestConsumeType"*/);
+    byte_4C40392 = 1;
   }
   v1 = TerminalPramsManager_TypeInfo;
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -3072,7 +3072,7 @@ void TerminalPramsManager__LastPlayQuestConsumeApSave_SaveData(const MethodInfo 
     j_il2cpp_runtime_class_init_0(TerminalPramsManager_TypeInfo);
     v1 = TerminalPramsManager_TypeInfo;
   }
-  UnityEngine_PlayerPrefs__SetInt((System_String_o *)StringLiteral_11457/*"SAVEKEY_LastPlayQuestConsumeType"*/, v1->static_fields->lastPlayQuestConsumeAp, 0);
+  UnityEngine_PlayerPrefs__SetInt((System_String_o *)StringLiteral_11458/*"SAVEKEY_LastPlayQuestConsumeType"*/, v1->static_fields->lastPlayQuestConsumeAp, 0);
   UnityEngine_PlayerPrefs__Save(0);
 }
 
@@ -3082,7 +3082,7 @@ void TerminalPramsManager__LoadClearDatas(const MethodInfo *method)
   TerminalPramsManager_c *v1; // x0
   TerminalPramsManager_ClearData_c *v2; // x0
   TerminalPramsManager_ClearData_c *v3; // x0
-  Il2CppObject *String_71182452; // x19
+  Il2CppObject *String_71225564; // x19
   int32_t v5; // w2
   const MethodInfo *v6; // x3
   Il2CppObject *v7; // x19
@@ -3098,7 +3098,7 @@ void TerminalPramsManager__LoadClearDatas(const MethodInfo *method)
   QuestClearHeroineInfo_o *Load; // x20
   TerminalPramsManager_c *v18; // x0
   CGThumbnailListItem_o *v19; // x0
-  __int64 v20; // x0
+  TerminalPramsManager_c *v20; // x0
   char monitor; // w20
   TerminalPramsManager_c *v22; // x8
   char v23; // w21
@@ -3238,20 +3238,20 @@ void TerminalPramsManager__LoadClearDatas(const MethodInfo *method)
   TerminalPramsManager_c *v157; // x8
   TerminalPramsManager_c *v158; // x0
 
-  if ( (byte_4C34DD4 & 1) == 0 )
+  if ( (byte_4C403BE & 1) == 0 )
   {
-    sub_1C32C20(&TerminalPramsManager_ClearData_TypeInfo);
-    sub_1C32C20(&Method_JsonManager_Deserialize_TerminalPramsManager_ClearData___);
-    sub_1C32C20(&JsonManager_TypeInfo);
-    sub_1C32C20(&TerminalPramsManager_TypeInfo);
-    byte_4C34DD4 = 1;
+    sub_1C37058(&TerminalPramsManager_ClearData_TypeInfo);
+    sub_1C37058(&Method_JsonManager_Deserialize_TerminalPramsManager_ClearData___);
+    sub_1C37058(&JsonManager_TypeInfo);
+    sub_1C37058(&TerminalPramsManager_TypeInfo);
+    byte_4C403BE = 1;
   }
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(TerminalPramsManager_TypeInfo);
-  if ( !byte_4C349D8 )
+  if ( !byte_4C3FFC2 )
   {
-    sub_1C32C20(&TerminalPramsManager_TypeInfo);
-    byte_4C349D8 = 1;
+    sub_1C37058(&TerminalPramsManager_TypeInfo);
+    byte_4C3FFC2 = 1;
   }
   v1 = TerminalPramsManager_TypeInfo;
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -3275,14 +3275,14 @@ void TerminalPramsManager__LoadClearDatas(const MethodInfo *method)
         j_il2cpp_runtime_class_init_0(TerminalPramsManager_ClearData_TypeInfo);
         v3 = TerminalPramsManager_ClearData_TypeInfo;
       }
-      String_71182452 = (Il2CppObject *)UnityEngine_PlayerPrefs__GetString_71182452(
+      String_71225564 = (Il2CppObject *)UnityEngine_PlayerPrefs__GetString_71225564(
                                           v3->static_fields->SAVEKEY_CLEAR_REWARD_DISP,
                                           0);
       if ( !JsonManager_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(JsonManager_TypeInfo);
       v7 = JsonManager__Deserialize_object_(
-             String_71182452,
-             (const MethodInfo_314C70C *)Method_JsonManager_Deserialize_TerminalPramsManager_ClearData___);
+             String_71225564,
+             (const MethodInfo_3156F74 *)Method_JsonManager_Deserialize_TerminalPramsManager_ClearData___);
       v8 = TerminalPramsManager_TypeInfo;
       if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
       {
@@ -3291,12 +3291,12 @@ void TerminalPramsManager__LoadClearDatas(const MethodInfo *method)
       }
       p_mQuestClearHeroineInfo = (CGThumbnailListItem_o *)&v8->static_fields->mQuestClearHeroineInfo;
       p_mQuestClearHeroineInfo->klass = 0;
-      sub_1C32BC4(p_mQuestClearHeroineInfo, 0, v5, v6);
+      sub_1C36FFC(p_mQuestClearHeroineInfo, 0, v5, v6);
       if ( !v7 )
-        sub_1C32E7C(v10);
+        sub_1C372B4(v10);
       klass = v7[1].klass;
       if ( !klass )
-        sub_1C32E7C(v10);
+        sub_1C372B4(v10);
       name = klass->_1.name;
       if ( name && *((int *)name + 8) >= 1 )
       {
@@ -3311,16 +3311,16 @@ void TerminalPramsManager__LoadClearDatas(const MethodInfo *method)
         }
         v19 = (CGThumbnailListItem_o *)&v18->static_fields->mQuestClearHeroineInfo;
         v19->klass = (CGThumbnailListItem_c *)Load;
-        sub_1C32BC4(v19, (int32_t)Load, v15, v16);
+        sub_1C36FFC(v19, (int32_t)Load, v15, v16);
       }
-      v20 = (__int64)TerminalPramsManager_TypeInfo;
+      v20 = TerminalPramsManager_TypeInfo;
       monitor = (char)v7[2].monitor;
       if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(TerminalPramsManager_TypeInfo);
-      if ( !byte_4C34565 )
+      if ( !byte_4C3FB4F )
       {
-        v20 = sub_1C32C20(&TerminalPramsManager_TypeInfo);
-        byte_4C34565 = 1;
+        v20 = (TerminalPramsManager_c *)sub_1C37058(&TerminalPramsManager_TypeInfo);
+        byte_4C3FB4F = 1;
       }
       v22 = TerminalPramsManager_TypeInfo;
       if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -3330,11 +3330,11 @@ void TerminalPramsManager__LoadClearDatas(const MethodInfo *method)
       }
       v22->static_fields->_IsQuestClear_k__BackingField = monitor;
       v23 = BYTE1(v7[2].monitor);
-      if ( !byte_4C34566 )
+      if ( !byte_4C3FB50 )
       {
-        v20 = sub_1C32C20(&TerminalPramsManager_TypeInfo);
+        v20 = (TerminalPramsManager_c *)sub_1C37058(&TerminalPramsManager_TypeInfo);
         v22 = TerminalPramsManager_TypeInfo;
-        byte_4C34566 = 1;
+        byte_4C3FB50 = 1;
       }
       if ( !v22->_2.cctor_finished )
       {
@@ -3345,7 +3345,7 @@ void TerminalPramsManager__LoadClearDatas(const MethodInfo *method)
       static_fields->_IsPhaseClear_k__BackingField = v23;
       v25 = v7[1].monitor;
       if ( !v25 )
-        sub_1C32E7C(v20);
+        sub_1C372B4(v20);
       if ( v25[3] )
         v26 = (struct QuestRewardInfo_array *)v7[1].monitor;
       else
@@ -3356,10 +3356,10 @@ void TerminalPramsManager__LoadClearDatas(const MethodInfo *method)
         static_fields = TerminalPramsManager_TypeInfo->static_fields;
       }
       static_fields->mQuestRewardInfos = v26;
-      sub_1C32BC4((CGThumbnailListItem_o *)&static_fields->mQuestRewardInfos, (int32_t)v26, v11, v12);
+      sub_1C36FFC((CGThumbnailListItem_o *)&static_fields->mQuestRewardInfos, (int32_t)v26, v11, v12);
       v30 = v7[2].klass;
       if ( !v30 )
-        sub_1C32E7C(v27);
+        sub_1C372B4(v27);
       v31 = TerminalPramsManager_TypeInfo;
       if ( v30->_1.namespaze )
         v32 = v7[2].klass;
@@ -3372,24 +3372,24 @@ void TerminalPramsManager__LoadClearDatas(const MethodInfo *method)
       }
       p_mQuestPhaseRewardInfos = (CGThumbnailListItem_o *)&v31->static_fields->mQuestPhaseRewardInfos;
       p_mQuestPhaseRewardInfos->klass = (CGThumbnailListItem_c *)v32;
-      sub_1C32BC4(p_mQuestPhaseRewardInfos, (int32_t)v32, v28, v29);
+      sub_1C36FFC(p_mQuestPhaseRewardInfos, (int32_t)v32, v28, v29);
       v37 = TerminalPramsManager_TypeInfo;
       v38 = TerminalPramsManager_TypeInfo->static_fields;
       *(_QWORD *)&v38->clearLastBattleRaidId = *(void **)((char *)&v7[2].monitor + 4);
       v38->joinGroupId = HIDWORD(v7[3].klass);
       v39 = v7[3].monitor;
       if ( !v39 )
-        sub_1C32E7C(v34);
+        sub_1C372B4(v34);
       if ( v39[3] )
         v40 = (struct UserSuperBossEntity_array *)v7[3].monitor;
       else
         v40 = 0;
       if ( !v37->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(v37);
-      if ( !byte_4C34E14 )
+      if ( !byte_4C403FE )
       {
-        sub_1C32C20(&TerminalPramsManager_TypeInfo);
-        byte_4C34E14 = 1;
+        sub_1C37058(&TerminalPramsManager_TypeInfo);
+        byte_4C403FE = 1;
       }
       v41 = TerminalPramsManager_TypeInfo;
       if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -3399,20 +3399,20 @@ void TerminalPramsManager__LoadClearDatas(const MethodInfo *method)
       }
       v42 = v41->static_fields;
       v42->_oldSuperBoss_k__BackingField = v40;
-      sub_1C32BC4((CGThumbnailListItem_o *)&v42->_oldSuperBoss_k__BackingField, (int32_t)v40, v35, v36);
+      sub_1C36FFC((CGThumbnailListItem_o *)&v42->_oldSuperBoss_k__BackingField, (int32_t)v40, v35, v36);
       v46 = v7[4].klass;
       if ( !v46 )
-        sub_1C32E7C(v43);
+        sub_1C372B4(v43);
       if ( v46->_1.namespaze )
         v47 = v7[4].klass;
       else
         v47 = 0;
       if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(TerminalPramsManager_TypeInfo);
-      if ( !byte_4C34E15 )
+      if ( !byte_4C403FF )
       {
-        sub_1C32C20(&TerminalPramsManager_TypeInfo);
-        byte_4C34E15 = 1;
+        sub_1C37058(&TerminalPramsManager_TypeInfo);
+        byte_4C403FF = 1;
       }
       v48 = TerminalPramsManager_TypeInfo;
       if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -3422,20 +3422,20 @@ void TerminalPramsManager__LoadClearDatas(const MethodInfo *method)
       }
       v49 = v48->static_fields;
       v49->_oldPersonalBoss_k__BackingField = (struct UserSuperBossEntity_array *)v47;
-      sub_1C32BC4((CGThumbnailListItem_o *)&v49->_oldPersonalBoss_k__BackingField, (int32_t)v47, v44, v45);
+      sub_1C36FFC((CGThumbnailListItem_o *)&v49->_oldPersonalBoss_k__BackingField, (int32_t)v47, v44, v45);
       v53 = (int *)v7[4].monitor;
       if ( !v53 )
-        sub_1C32E7C(v50);
+        sub_1C372B4(v50);
       if ( v53[4] <= 0 )
         v54 = 0;
       else
         v54 = (CGThumbnailListItem_c *)v7[4].monitor;
       if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(TerminalPramsManager_TypeInfo);
-      if ( !byte_4C34E0E )
+      if ( !byte_4C403F8 )
       {
-        sub_1C32C20(&TerminalPramsManager_TypeInfo);
-        byte_4C34E0E = 1;
+        sub_1C37058(&TerminalPramsManager_TypeInfo);
+        byte_4C403F8 = 1;
       }
       v55 = TerminalPramsManager_TypeInfo;
       if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -3445,12 +3445,12 @@ void TerminalPramsManager__LoadClearDatas(const MethodInfo *method)
       }
       p_eventPointWinReward_k__BackingField = (CGThumbnailListItem_o *)&v55->static_fields->_eventPointWinReward_k__BackingField;
       p_eventPointWinReward_k__BackingField->klass = v54;
-      sub_1C32BC4(p_eventPointWinReward_k__BackingField, (int32_t)v54, v51, v52);
+      sub_1C36FFC(p_eventPointWinReward_k__BackingField, (int32_t)v54, v51, v52);
       v60 = (int32_t)v7[5].klass;
-      if ( !byte_4C34E0F )
+      if ( !byte_4C403F9 )
       {
-        v57 = sub_1C32C20(&TerminalPramsManager_TypeInfo);
-        byte_4C34E0F = 1;
+        v57 = sub_1C37058(&TerminalPramsManager_TypeInfo);
+        byte_4C403F9 = 1;
       }
       v61 = TerminalPramsManager_TypeInfo;
       if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -3461,17 +3461,17 @@ void TerminalPramsManager__LoadClearDatas(const MethodInfo *method)
       v61->static_fields->_eventPointWinType_k__BackingField = v60;
       v62 = (int *)v7[5].monitor;
       if ( !v62 )
-        sub_1C32E7C(v57);
+        sub_1C372B4(v57);
       if ( v62[4] <= 0 )
         v63 = 0;
       else
         v63 = (CGThumbnailListItem_c *)v7[5].monitor;
       if ( !v61->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(v61);
-      if ( !byte_4C34BD6 )
+      if ( !byte_4C401C0 )
       {
-        sub_1C32C20(&TerminalPramsManager_TypeInfo);
-        byte_4C34BD6 = 1;
+        sub_1C37058(&TerminalPramsManager_TypeInfo);
+        byte_4C401C0 = 1;
       }
       v64 = TerminalPramsManager_TypeInfo;
       if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -3481,20 +3481,20 @@ void TerminalPramsManager__LoadClearDatas(const MethodInfo *method)
       }
       p_eventRaceBoost_k__BackingField = (CGThumbnailListItem_o *)&v64->static_fields->_eventRaceBoost_k__BackingField;
       p_eventRaceBoost_k__BackingField->klass = v63;
-      sub_1C32BC4(p_eventRaceBoost_k__BackingField, (int32_t)v63, v58, v59);
+      sub_1C36FFC(p_eventRaceBoost_k__BackingField, (int32_t)v63, v58, v59);
       v69 = v7[6].klass;
       if ( !v69 )
-        sub_1C32E7C(v66);
+        sub_1C372B4(v66);
       if ( v69->_1.namespaze )
         v70 = v7[6].klass;
       else
         v70 = 0;
       if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(TerminalPramsManager_TypeInfo);
-      if ( !byte_4C34AD3 )
+      if ( !byte_4C400BD )
       {
-        sub_1C32C20(&TerminalPramsManager_TypeInfo);
-        byte_4C34AD3 = 1;
+        sub_1C37058(&TerminalPramsManager_TypeInfo);
+        byte_4C400BD = 1;
       }
       v71 = TerminalPramsManager_TypeInfo;
       if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -3504,20 +3504,20 @@ void TerminalPramsManager__LoadClearDatas(const MethodInfo *method)
       }
       p_questClearCostumeRelease_k__BackingField = (CGThumbnailListItem_o *)&v71->static_fields->_questClearCostumeRelease_k__BackingField;
       p_questClearCostumeRelease_k__BackingField->klass = (CGThumbnailListItem_c *)v70;
-      sub_1C32BC4(p_questClearCostumeRelease_k__BackingField, (int32_t)v70, v67, v68);
+      sub_1C36FFC(p_questClearCostumeRelease_k__BackingField, (int32_t)v70, v67, v68);
       v76 = v7[6].monitor;
       if ( !v76 )
-        sub_1C32E7C(v73);
+        sub_1C372B4(v73);
       if ( v76[3] )
         v77 = (CGThumbnailListItem_c *)v7[6].monitor;
       else
         v77 = 0;
       if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(TerminalPramsManager_TypeInfo);
-      if ( !byte_4C349D5 )
+      if ( !byte_4C3FFBF )
       {
-        sub_1C32C20(&TerminalPramsManager_TypeInfo);
-        byte_4C349D5 = 1;
+        sub_1C37058(&TerminalPramsManager_TypeInfo);
+        byte_4C3FFBF = 1;
       }
       v78 = TerminalPramsManager_TypeInfo;
       if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -3527,20 +3527,20 @@ void TerminalPramsManager__LoadClearDatas(const MethodInfo *method)
       }
       p_questClearCostumeGet_k__BackingField = (CGThumbnailListItem_o *)&v78->static_fields->_questClearCostumeGet_k__BackingField;
       p_questClearCostumeGet_k__BackingField->klass = v77;
-      sub_1C32BC4(p_questClearCostumeGet_k__BackingField, (int32_t)v77, v74, v75);
+      sub_1C36FFC(p_questClearCostumeGet_k__BackingField, (int32_t)v77, v74, v75);
       v83 = v7[7].klass;
       if ( !v83 )
-        sub_1C32E7C(v80);
+        sub_1C372B4(v80);
       if ( SLODWORD(v83->_1.name) <= 0 )
         v84 = 0;
       else
         v84 = v7[7].klass;
       if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(TerminalPramsManager_TypeInfo);
-      if ( !byte_4C34E12 )
+      if ( !byte_4C403FC )
       {
-        sub_1C32C20(&TerminalPramsManager_TypeInfo);
-        byte_4C34E12 = 1;
+        sub_1C37058(&TerminalPramsManager_TypeInfo);
+        byte_4C403FC = 1;
       }
       v85 = TerminalPramsManager_TypeInfo;
       if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -3550,18 +3550,18 @@ void TerminalPramsManager__LoadClearDatas(const MethodInfo *method)
       }
       p_eventTowerReward_k__BackingField = (CGThumbnailListItem_o *)&v85->static_fields->_eventTowerReward_k__BackingField;
       p_eventTowerReward_k__BackingField->klass = (CGThumbnailListItem_c *)v84;
-      sub_1C32BC4(p_eventTowerReward_k__BackingField, (int32_t)v84, v81, v82);
+      sub_1C36FFC(p_eventTowerReward_k__BackingField, (int32_t)v84, v81, v82);
       v90 = v7[7].monitor;
       if ( !v90 )
-        sub_1C32E7C(v87);
+        sub_1C372B4(v87);
       v91 = v90[3];
       if ( v91 )
       {
         if ( !(_DWORD)v91 )
-          sub_1C32E84(v87);
+          sub_1C372BC(v87);
         v92 = v90[4];
         if ( !v92 )
-          sub_1C32E7C(v87);
+          sub_1C372B4(v87);
         if ( *(__int64 *)(v92 + 32) <= 0 )
           v93 = 0;
         else
@@ -3573,10 +3573,10 @@ void TerminalPramsManager__LoadClearDatas(const MethodInfo *method)
       }
       if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(TerminalPramsManager_TypeInfo);
-      if ( !byte_4C34E13 )
+      if ( !byte_4C403FD )
       {
-        sub_1C32C20(&TerminalPramsManager_TypeInfo);
-        byte_4C34E13 = 1;
+        sub_1C37058(&TerminalPramsManager_TypeInfo);
+        byte_4C403FD = 1;
       }
       v94 = TerminalPramsManager_TypeInfo;
       if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -3586,20 +3586,20 @@ void TerminalPramsManager__LoadClearDatas(const MethodInfo *method)
       }
       p_resultEventTowerRewardInfo_k__BackingField = (CGThumbnailListItem_o *)&v94->static_fields->_resultEventTowerRewardInfo_k__BackingField;
       p_resultEventTowerRewardInfo_k__BackingField->klass = v93;
-      sub_1C32BC4(p_resultEventTowerRewardInfo_k__BackingField, (int32_t)v93, v88, v89);
+      sub_1C36FFC(p_resultEventTowerRewardInfo_k__BackingField, (int32_t)v93, v88, v89);
       v99 = v7[8].klass;
       if ( !v99 )
-        sub_1C32E7C(v96);
+        sub_1C372B4(v96);
       if ( v99->_1.namespaze )
         v100 = v7[8].klass;
       else
         v100 = 0;
       if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(TerminalPramsManager_TypeInfo);
-      if ( !byte_4C349CF )
+      if ( !byte_4C3FFB9 )
       {
-        sub_1C32C20(&TerminalPramsManager_TypeInfo);
-        byte_4C349CF = 1;
+        sub_1C37058(&TerminalPramsManager_TypeInfo);
+        byte_4C3FFB9 = 1;
       }
       v101 = TerminalPramsManager_TypeInfo;
       if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -3609,20 +3609,20 @@ void TerminalPramsManager__LoadClearDatas(const MethodInfo *method)
       }
       p_resultBoostItemRewardInfo_k__BackingField = (CGThumbnailListItem_o *)&v101->static_fields->_resultBoostItemRewardInfo_k__BackingField;
       p_resultBoostItemRewardInfo_k__BackingField->klass = (CGThumbnailListItem_c *)v100;
-      sub_1C32BC4(p_resultBoostItemRewardInfo_k__BackingField, (int32_t)v100, v97, v98);
+      sub_1C36FFC(p_resultBoostItemRewardInfo_k__BackingField, (int32_t)v100, v97, v98);
       v106 = v7[8].monitor;
       if ( !v106 )
-        sub_1C32E7C(v103);
+        sub_1C372B4(v103);
       if ( v106[3] )
         v107 = (CGThumbnailListItem_c *)v7[8].monitor;
       else
         v107 = 0;
       if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(TerminalPramsManager_TypeInfo);
-      if ( !byte_4C349D0 )
+      if ( !byte_4C3FFBA )
       {
-        sub_1C32C20(&TerminalPramsManager_TypeInfo);
-        byte_4C349D0 = 1;
+        sub_1C37058(&TerminalPramsManager_TypeInfo);
+        byte_4C3FFBA = 1;
       }
       v108 = TerminalPramsManager_TypeInfo;
       if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -3632,12 +3632,12 @@ void TerminalPramsManager__LoadClearDatas(const MethodInfo *method)
       }
       p_resultEventBoardGameTokenRewardInfo_k__BackingField = (CGThumbnailListItem_o *)&v108->static_fields->_resultEventBoardGameTokenRewardInfo_k__BackingField;
       p_resultEventBoardGameTokenRewardInfo_k__BackingField->klass = v107;
-      sub_1C32BC4(p_resultEventBoardGameTokenRewardInfo_k__BackingField, (int32_t)v107, v104, v105);
+      sub_1C36FFC(p_resultEventBoardGameTokenRewardInfo_k__BackingField, (int32_t)v107, v104, v105);
       v113 = (char)v7[9].klass;
-      if ( !byte_4C3359F )
+      if ( !byte_4C3EC68 )
       {
-        v110 = sub_1C32C20(&TerminalPramsManager_TypeInfo);
-        byte_4C3359F = 1;
+        v110 = sub_1C37058(&TerminalPramsManager_TypeInfo);
+        byte_4C3EC68 = 1;
       }
       v114 = TerminalPramsManager_TypeInfo;
       if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -3648,17 +3648,17 @@ void TerminalPramsManager__LoadClearDatas(const MethodInfo *method)
       v114->static_fields->_IsDispOnly_k__BackingField = v113;
       v115 = v7[9].monitor;
       if ( !v115 )
-        sub_1C32E7C(v110);
+        sub_1C372B4(v110);
       if ( v115[3] )
         v116 = (CGThumbnailListItem_c *)v7[9].monitor;
       else
         v116 = 0;
       if ( !v114->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(v114);
-      if ( !byte_4C349DA )
+      if ( !byte_4C3FFC4 )
       {
-        sub_1C32C20(&TerminalPramsManager_TypeInfo);
-        byte_4C349DA = 1;
+        sub_1C37058(&TerminalPramsManager_TypeInfo);
+        byte_4C3FFC4 = 1;
       }
       v117 = TerminalPramsManager_TypeInfo;
       if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -3668,12 +3668,12 @@ void TerminalPramsManager__LoadClearDatas(const MethodInfo *method)
       }
       p_warClearReward_k__BackingField = (CGThumbnailListItem_o *)&v117->static_fields->_warClearReward_k__BackingField;
       p_warClearReward_k__BackingField->klass = v116;
-      sub_1C32BC4(p_warClearReward_k__BackingField, (int32_t)v116, v111, v112);
+      sub_1C36FFC(p_warClearReward_k__BackingField, (int32_t)v116, v111, v112);
       v122 = (int32_t)v7[10].klass;
-      if ( !byte_4C3219A )
+      if ( !byte_4C3D784 )
       {
-        v119 = sub_1C32C20(&TerminalPramsManager_TypeInfo);
-        byte_4C3219A = 1;
+        v119 = sub_1C37058(&TerminalPramsManager_TypeInfo);
+        byte_4C3D784 = 1;
       }
       v123 = TerminalPramsManager_TypeInfo;
       if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -3683,11 +3683,11 @@ void TerminalPramsManager__LoadClearDatas(const MethodInfo *method)
       }
       v123->static_fields->_EventActivityPointEffectState_k__BackingField = v122;
       v124 = BYTE4(v7[10].klass);
-      if ( !byte_4C349D7 )
+      if ( !byte_4C3FFC1 )
       {
-        v119 = sub_1C32C20(&TerminalPramsManager_TypeInfo);
+        v119 = sub_1C37058(&TerminalPramsManager_TypeInfo);
         v123 = TerminalPramsManager_TypeInfo;
-        byte_4C349D7 = 1;
+        byte_4C3FFC1 = 1;
       }
       if ( !v123->_2.cctor_finished )
       {
@@ -3698,7 +3698,7 @@ void TerminalPramsManager__LoadClearDatas(const MethodInfo *method)
       v125->_IsWarBoardClear_k__BackingField = v124;
       v126 = v7[10].monitor;
       if ( !v126 )
-        sub_1C32E7C(v119);
+        sub_1C372B4(v119);
       if ( v126[3] )
         v127 = (struct BattleDropItem_array *)v7[10].monitor;
       else
@@ -3709,10 +3709,10 @@ void TerminalPramsManager__LoadClearDatas(const MethodInfo *method)
         v125 = TerminalPramsManager_TypeInfo->static_fields;
       }
       v125->mQuestResultAfterEventRewardInfos = v127;
-      sub_1C32BC4((CGThumbnailListItem_o *)&v125->mQuestResultAfterEventRewardInfos, (int32_t)v127, v120, v121);
+      sub_1C36FFC((CGThumbnailListItem_o *)&v125->mQuestResultAfterEventRewardInfos, (int32_t)v127, v120, v121);
       v131 = v7[11].klass;
       if ( !v131 )
-        sub_1C32E7C(v128);
+        sub_1C372B4(v128);
       v132 = TerminalPramsManager_TypeInfo;
       if ( v131->_1.namespaze )
         v133 = v7[11].klass;
@@ -3725,15 +3725,15 @@ void TerminalPramsManager__LoadClearDatas(const MethodInfo *method)
       }
       p_mResultEventPanelRewardInfos = (CGThumbnailListItem_o *)&v132->static_fields->mResultEventPanelRewardInfos;
       p_mResultEventPanelRewardInfos->klass = (CGThumbnailListItem_c *)v133;
-      sub_1C32BC4(p_mResultEventPanelRewardInfos, (int32_t)v133, v129, v130);
+      sub_1C36FFC(p_mResultEventPanelRewardInfos, (int32_t)v133, v129, v130);
       v137 = TerminalPramsManager_TypeInfo;
       TerminalPramsManager_TypeInfo->static_fields->panelEventPoint = (int32_t)v7[11].monitor;
       v138 = v7[12].klass;
-      if ( !byte_4C349D3 )
+      if ( !byte_4C3FFBD )
       {
-        sub_1C32C20(&TerminalPramsManager_TypeInfo);
+        sub_1C37058(&TerminalPramsManager_TypeInfo);
         v137 = TerminalPramsManager_TypeInfo;
-        byte_4C349D3 = 1;
+        byte_4C3FFBD = 1;
       }
       if ( !v137->_2.cctor_finished )
       {
@@ -3742,12 +3742,12 @@ void TerminalPramsManager__LoadClearDatas(const MethodInfo *method)
       }
       p_limitImageAnnounces_k__BackingField = (CGThumbnailListItem_o *)&v137->static_fields->_limitImageAnnounces_k__BackingField;
       p_limitImageAnnounces_k__BackingField->klass = (CGThumbnailListItem_c *)v138;
-      sub_1C32BC4(p_limitImageAnnounces_k__BackingField, (int32_t)v138, v135, v136);
+      sub_1C36FFC(p_limitImageAnnounces_k__BackingField, (int32_t)v138, v135, v136);
       v142 = (char)v7[12].monitor;
-      if ( !byte_4C34569 )
+      if ( !byte_4C3FB53 )
       {
-        sub_1C32C20(&TerminalPramsManager_TypeInfo);
-        byte_4C34569 = 1;
+        sub_1C37058(&TerminalPramsManager_TypeInfo);
+        byte_4C3FB53 = 1;
       }
       v143 = TerminalPramsManager_TypeInfo;
       if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -3757,11 +3757,11 @@ void TerminalPramsManager__LoadClearDatas(const MethodInfo *method)
       }
       v143->static_fields->_IsOrdealCallWarClear_k__BackingField = v142;
       monitor_high = HIDWORD(v7[12].monitor);
-      if ( !byte_4C349CA )
+      if ( !byte_4C3FFB4 )
       {
-        sub_1C32C20(&TerminalPramsManager_TypeInfo);
+        sub_1C37058(&TerminalPramsManager_TypeInfo);
         v143 = TerminalPramsManager_TypeInfo;
-        byte_4C349CA = 1;
+        byte_4C3FFB4 = 1;
       }
       if ( !v143->_2.cctor_finished )
       {
@@ -3770,11 +3770,11 @@ void TerminalPramsManager__LoadClearDatas(const MethodInfo *method)
       }
       v143->static_fields->_EventMuralId_k__BackingField = monitor_high;
       v145 = (int32_t)v7[13].klass;
-      if ( !byte_4C34BD3 )
+      if ( !byte_4C401BD )
       {
-        sub_1C32C20(&TerminalPramsManager_TypeInfo);
+        sub_1C37058(&TerminalPramsManager_TypeInfo);
         v143 = TerminalPramsManager_TypeInfo;
-        byte_4C34BD3 = 1;
+        byte_4C401BD = 1;
       }
       if ( !v143->_2.cctor_finished )
       {
@@ -3783,11 +3783,11 @@ void TerminalPramsManager__LoadClearDatas(const MethodInfo *method)
       }
       v143->static_fields->_EventActionQuestId_k__BackingField = v145;
       v146 = BYTE4(v7[13].klass);
-      if ( !byte_4C349CC )
+      if ( !byte_4C3FFB6 )
       {
-        sub_1C32C20(&TerminalPramsManager_TypeInfo);
+        sub_1C37058(&TerminalPramsManager_TypeInfo);
         v143 = TerminalPramsManager_TypeInfo;
-        byte_4C349CC = 1;
+        byte_4C3FFB6 = 1;
       }
       if ( !v143->_2.cctor_finished )
       {
@@ -3796,11 +3796,11 @@ void TerminalPramsManager__LoadClearDatas(const MethodInfo *method)
       }
       v143->static_fields->_PlayHappinessCounterEffect_k__BackingField = v146;
       v147 = (CGThumbnailListItem_c *)v7[13].monitor;
-      if ( !byte_4C34E0C )
+      if ( !byte_4C403F6 )
       {
-        sub_1C32C20(&TerminalPramsManager_TypeInfo);
+        sub_1C37058(&TerminalPramsManager_TypeInfo);
         v143 = TerminalPramsManager_TypeInfo;
-        byte_4C34E0C = 1;
+        byte_4C403F6 = 1;
       }
       if ( !v143->_2.cctor_finished )
       {
@@ -3809,20 +3809,20 @@ void TerminalPramsManager__LoadClearDatas(const MethodInfo *method)
       }
       p_OldUserEventPoint_k__BackingField = (CGThumbnailListItem_o *)&v143->static_fields->_OldUserEventPoint_k__BackingField;
       p_OldUserEventPoint_k__BackingField->klass = v147;
-      sub_1C32BC4(p_OldUserEventPoint_k__BackingField, (int32_t)v147, v140, v141);
+      sub_1C36FFC(p_OldUserEventPoint_k__BackingField, (int32_t)v147, v140, v141);
       v152 = v7[14].klass;
       if ( !v152 )
-        sub_1C32E7C(v149);
+        sub_1C372B4(v149);
       if ( v152->_1.namespaze )
         v153 = v7[14].klass;
       else
         v153 = 0;
       if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(TerminalPramsManager_TypeInfo);
-      if ( !byte_4C31A9A )
+      if ( !byte_4C3CFEA )
       {
-        sub_1C32C20(&TerminalPramsManager_TypeInfo);
-        byte_4C31A9A = 1;
+        sub_1C37058(&TerminalPramsManager_TypeInfo);
+        byte_4C3CFEA = 1;
       }
       v154 = TerminalPramsManager_TypeInfo;
       if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -3832,16 +3832,16 @@ void TerminalPramsManager__LoadClearDatas(const MethodInfo *method)
       }
       p_UseAddRewardItemRewardInfos_k__BackingField = (CGThumbnailListItem_o *)&v154->static_fields->_UseAddRewardItemRewardInfos_k__BackingField;
       p_UseAddRewardItemRewardInfos_k__BackingField->klass = (CGThumbnailListItem_c *)v153;
-      sub_1C32BC4(p_UseAddRewardItemRewardInfos_k__BackingField, (int32_t)v153, v150, v151);
+      sub_1C36FFC(p_UseAddRewardItemRewardInfos_k__BackingField, (int32_t)v153, v150, v151);
       v156 = TerminalPramsManager_TypeInfo;
       if ( BYTE1(v7[2].monitor) )
       {
         if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
           j_il2cpp_runtime_class_init_0(TerminalPramsManager_TypeInfo);
-        if ( !byte_4C3219C )
+        if ( !byte_4C3D786 )
         {
-          sub_1C32C20(&TerminalPramsManager_TypeInfo);
-          byte_4C3219C = 1;
+          sub_1C37058(&TerminalPramsManager_TypeInfo);
+          byte_4C3D786 = 1;
         }
         v156 = TerminalPramsManager_TypeInfo;
         if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -3853,10 +3853,10 @@ void TerminalPramsManager__LoadClearDatas(const MethodInfo *method)
       }
       if ( !v156->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(v156);
-      if ( !byte_4C349D9 )
+      if ( !byte_4C3FFC3 )
       {
-        sub_1C32C20(&TerminalPramsManager_TypeInfo);
-        byte_4C349D9 = 1;
+        sub_1C37058(&TerminalPramsManager_TypeInfo);
+        byte_4C3FFC3 = 1;
       }
       v157 = TerminalPramsManager_TypeInfo;
       if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -3868,10 +3868,10 @@ void TerminalPramsManager__LoadClearDatas(const MethodInfo *method)
         goto LABEL_276;
       if ( !v157->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(v157);
-      if ( !byte_4C349D6 )
+      if ( !byte_4C3FFC0 )
       {
-        sub_1C32C20(&TerminalPramsManager_TypeInfo);
-        byte_4C349D6 = 1;
+        sub_1C37058(&TerminalPramsManager_TypeInfo);
+        byte_4C3FFC0 = 1;
       }
       v157 = TerminalPramsManager_TypeInfo;
       if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -3884,10 +3884,10 @@ void TerminalPramsManager__LoadClearDatas(const MethodInfo *method)
 LABEL_276:
         if ( !v157->_2.cctor_finished )
           j_il2cpp_runtime_class_init_0(v157);
-        if ( !byte_4C34E1C )
+        if ( !byte_4C40406 )
         {
-          sub_1C32C20(&TerminalPramsManager_TypeInfo);
-          byte_4C34E1C = 1;
+          sub_1C37058(&TerminalPramsManager_TypeInfo);
+          byte_4C40406 = 1;
         }
         v158 = TerminalPramsManager_TypeInfo;
         if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -3913,20 +3913,20 @@ void TerminalPramsManager__LoadEventRaidDefeatedEffectInfo(const MethodInfo *met
   TerminalPramsManager_c *v7; // x0
   struct TerminalPramsManager_StaticFields *static_fields; // x8
 
-  if ( (byte_4C34DD7 & 1) == 0 )
+  if ( (byte_4C403C1 & 1) == 0 )
   {
-    sub_1C32C20(&EventRaidDefeatedEffectInfo_TypeInfo);
-    sub_1C32C20(&string_TypeInfo);
-    sub_1C32C20(&TerminalPramsManager_TypeInfo);
-    sub_1C32C20(&StringLiteral_11455/*"SAVEKEY_EventRaidDefeatedEffectInfo"*/);
-    byte_4C34DD7 = 1;
+    sub_1C37058(&EventRaidDefeatedEffectInfo_TypeInfo);
+    sub_1C37058(&string_TypeInfo);
+    sub_1C37058(&TerminalPramsManager_TypeInfo);
+    sub_1C37058(&StringLiteral_11456/*"SAVEKEY_EventRaidDefeatedEffectInfo"*/);
+    byte_4C403C1 = 1;
   }
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(TerminalPramsManager_TypeInfo);
-  if ( !byte_4C34E1E )
+  if ( !byte_4C40408 )
   {
-    sub_1C32C20(&TerminalPramsManager_TypeInfo);
-    byte_4C34E1E = 1;
+    sub_1C37058(&TerminalPramsManager_TypeInfo);
+    byte_4C40408 = 1;
   }
   v1 = TerminalPramsManager_TypeInfo;
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -3937,17 +3937,17 @@ void TerminalPramsManager__LoadEventRaidDefeatedEffectInfo(const MethodInfo *met
   if ( !v1->static_fields->_EventRaidDefeatedEffectInfo_k__BackingField )
   {
     String = UnityEngine_PlayerPrefs__GetString(
-               (System_String_o *)StringLiteral_11455/*"SAVEKEY_EventRaidDefeatedEffectInfo"*/,
+               (System_String_o *)StringLiteral_11456/*"SAVEKEY_EventRaidDefeatedEffectInfo"*/,
                string_TypeInfo->static_fields->Empty,
                0);
-    v3 = (EventRaidDefeatedEffectInfo_o *)sub_1C32E6C(EventRaidDefeatedEffectInfo_TypeInfo);
+    v3 = (EventRaidDefeatedEffectInfo_o *)sub_1C372A4(EventRaidDefeatedEffectInfo_TypeInfo);
     EventRaidDefeatedEffectInfo___ctor(v3, String, v4);
     if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(TerminalPramsManager_TypeInfo);
-    if ( !byte_4C34E1D )
+    if ( !byte_4C40407 )
     {
-      sub_1C32C20(&TerminalPramsManager_TypeInfo);
-      byte_4C34E1D = 1;
+      sub_1C37058(&TerminalPramsManager_TypeInfo);
+      byte_4C40407 = 1;
     }
     v7 = TerminalPramsManager_TypeInfo;
     if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -3957,7 +3957,7 @@ void TerminalPramsManager__LoadEventRaidDefeatedEffectInfo(const MethodInfo *met
     }
     static_fields = v7->static_fields;
     static_fields->_EventRaidDefeatedEffectInfo_k__BackingField = v3;
-    sub_1C32BC4(
+    sub_1C36FFC(
       (CGThumbnailListItem_o *)&static_fields->_EventRaidDefeatedEffectInfo_k__BackingField,
       (int32_t)v3,
       v5,
@@ -3982,22 +3982,22 @@ void TerminalPramsManager__LoadQuestRandomGroupList(const MethodInfo *method)
   CGThumbnailListItem_o *p_QuestRandomGroupList_k__BackingField; // x0
   int32_t result[2]; // [xsp+8h] [xbp-38h] BYREF
 
-  if ( (byte_4C34DDC & 1) == 0 )
+  if ( (byte_4C403C6 & 1) == 0 )
   {
-    sub_1C32C20(&Method_System_Collections_Generic_Dictionary_int__int__Add__);
-    sub_1C32C20(&Method_System_Collections_Generic_Dictionary_int__int___ctor__);
-    sub_1C32C20(&System_Collections_Generic_Dictionary_int__int__TypeInfo);
-    sub_1C32C20(&string_TypeInfo);
-    sub_1C32C20(&TerminalPramsManager_TypeInfo);
-    sub_1C32C20(&StringLiteral_11464/*"SAVEKEY_QuestRandomGroupList"*/);
-    byte_4C34DDC = 1;
+    sub_1C37058(&Method_System_Collections_Generic_Dictionary_int__int__Add__);
+    sub_1C37058(&Method_System_Collections_Generic_Dictionary_int__int___ctor__);
+    sub_1C37058(&System_Collections_Generic_Dictionary_int__int__TypeInfo);
+    sub_1C37058(&string_TypeInfo);
+    sub_1C37058(&TerminalPramsManager_TypeInfo);
+    sub_1C37058(&StringLiteral_11465/*"SAVEKEY_QuestRandomGroupList"*/);
+    byte_4C403C6 = 1;
   }
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(TerminalPramsManager_TypeInfo);
-  if ( !byte_4C342A8 )
+  if ( !byte_4C3F892 )
   {
-    sub_1C32C20(&TerminalPramsManager_TypeInfo);
-    byte_4C342A8 = 1;
+    sub_1C37058(&TerminalPramsManager_TypeInfo);
+    byte_4C3F892 = 1;
   }
   v1 = TerminalPramsManager_TypeInfo;
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -4008,13 +4008,13 @@ void TerminalPramsManager__LoadQuestRandomGroupList(const MethodInfo *method)
   if ( !v1->static_fields->_QuestRandomGroupList_k__BackingField )
   {
     String = UnityEngine_PlayerPrefs__GetString(
-               (System_String_o *)StringLiteral_11464/*"SAVEKEY_QuestRandomGroupList"*/,
+               (System_String_o *)StringLiteral_11465/*"SAVEKEY_QuestRandomGroupList"*/,
                string_TypeInfo->static_fields->Empty,
                0);
-    v3 = (System_Collections_Generic_Dictionary_int__int__o *)sub_1C32E6C(System_Collections_Generic_Dictionary_int__int__TypeInfo);
+    v3 = (System_Collections_Generic_Dictionary_int__int__o *)sub_1C372A4(System_Collections_Generic_Dictionary_int__int__TypeInfo);
     System_Collections_Generic_Dictionary_int__int____ctor(
       v3,
-      (const MethodInfo_33E68A0 *)Method_System_Collections_Generic_Dictionary_int__int___ctor__);
+      (const MethodInfo_33F1108 *)Method_System_Collections_Generic_Dictionary_int__int___ctor__);
     *(_QWORD *)result = 0;
     if ( !String )
       goto LABEL_35;
@@ -4030,7 +4030,7 @@ void TerminalPramsManager__LoadQuestRandomGroupList(const MethodInfo *method)
       {
         if ( v9 >= max_length )
 LABEL_36:
-          sub_1C32E84(v4);
+          sub_1C372BC(v4);
         v4 = (System_String_array *)v8->m_Items[v9];
         if ( !v4 )
           break;
@@ -4055,7 +4055,7 @@ LABEL_36:
                 v3,
                 result[1],
                 result[0],
-                (const MethodInfo_33E7264 *)Method_System_Collections_Generic_Dictionary_int__int__Add__);
+                (const MethodInfo_33F1ACC *)Method_System_Collections_Generic_Dictionary_int__int__Add__);
             }
           }
         }
@@ -4064,15 +4064,15 @@ LABEL_36:
           goto LABEL_27;
       }
 LABEL_35:
-      sub_1C32E7C(v4);
+      sub_1C372B4(v4);
     }
 LABEL_27:
     if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(TerminalPramsManager_TypeInfo);
-    if ( !byte_4C34E1F )
+    if ( !byte_4C40409 )
     {
-      sub_1C32C20(&TerminalPramsManager_TypeInfo);
-      byte_4C34E1F = 1;
+      sub_1C37058(&TerminalPramsManager_TypeInfo);
+      byte_4C40409 = 1;
     }
     v11 = TerminalPramsManager_TypeInfo;
     if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -4082,7 +4082,7 @@ LABEL_27:
     }
     p_QuestRandomGroupList_k__BackingField = (CGThumbnailListItem_o *)&v11->static_fields->_QuestRandomGroupList_k__BackingField;
     p_QuestRandomGroupList_k__BackingField->klass = (CGThumbnailListItem_c *)v3;
-    sub_1C32BC4(p_QuestRandomGroupList_k__BackingField, (int32_t)v3, v5, v6);
+    sub_1C36FFC(p_QuestRandomGroupList_k__BackingField, (int32_t)v3, v5, v6);
   }
 }
 
@@ -4092,11 +4092,11 @@ void TerminalPramsManager__LoadQuestReleasedFocusState(const MethodInfo *method)
   TerminalPramsManager_c *v1; // x0
   QuestFocusStateManager_o *QuestFocusStateManager; // x0
 
-  if ( (byte_4C34DC4 & 1) == 0 )
+  if ( (byte_4C403AE & 1) == 0 )
   {
-    sub_1C32C20(&QuestFocusStateManager_TypeInfo);
-    sub_1C32C20(&TerminalPramsManager_TypeInfo);
-    byte_4C34DC4 = 1;
+    sub_1C37058(&QuestFocusStateManager_TypeInfo);
+    sub_1C37058(&TerminalPramsManager_TypeInfo);
+    byte_4C403AE = 1;
   }
   if ( !QuestFocusStateManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(QuestFocusStateManager_TypeInfo);
@@ -4106,7 +4106,7 @@ void TerminalPramsManager__LoadQuestReleasedFocusState(const MethodInfo *method)
     j_il2cpp_runtime_class_init_0(TerminalPramsManager_TypeInfo);
   QuestFocusStateManager = TerminalPramsManager__get_QuestFocusStateManager((const MethodInfo *)v1);
   if ( !QuestFocusStateManager )
-    sub_1C32E7C(0);
+    sub_1C372B4(0);
   QuestFocusStateManager__ReadData(QuestFocusStateManager, 0);
 }
 
@@ -4114,7 +4114,7 @@ void TerminalPramsManager__LoadQuestReleasedFocusState(const MethodInfo *method)
 void TerminalPramsManager__Load_SaveData(const MethodInfo *method)
 {
   System_String_o *v1; // x19
-  int32_t Int_71181884; // w19
+  int32_t Int_71224996; // w19
   TerminalPramsManager_c *v3; // x0
   System_String_o *v4; // x19
   int32_t v5; // w19
@@ -4132,7 +4132,7 @@ void TerminalPramsManager__Load_SaveData(const MethodInfo *method)
   int32_t v17; // w19
   TerminalPramsManager_c *v18; // x0
   System_String_o *v19; // x19
-  System_String_o *String_71182452; // x20
+  System_String_o *String_71225564; // x20
   int64_t v21; // x19
   TerminalPramsManager_c *v22; // x0
   System_String_o *v23; // x19
@@ -4282,71 +4282,71 @@ void TerminalPramsManager__Load_SaveData(const MethodInfo *method)
   int32_t v167; // w19
   TerminalPramsManager_c *v168; // x0
 
-  if ( (byte_4C34D96 & 1) == 0 )
+  if ( (byte_4C40380 & 1) == 0 )
   {
-    sub_1C32C20(&System_Convert_TypeInfo);
-    sub_1C32C20(&Method_JsonManager_Deserialize_CommonUI_CampaignDirectBonusData_____);
-    sub_1C32C20(&Method_JsonManager_Deserialize_EventConquestInfo_____);
-    sub_1C32C20(&Method_JsonManager_Deserialize_EventHarvestGrowthInfo___);
-    sub_1C32C20(&Method_JsonManager_Deserialize_EventSaveData___);
-    sub_1C32C20(&JsonManager_TypeInfo);
-    sub_1C32C20(&TerminalPramsManager_TypeInfo);
-    sub_1C32C20(&StringLiteral_11456/*"SAVEKEY_LastPlayBgmName"*/);
-    sub_1C32C20(&StringLiteral_13699/*"TerminalEndTime"*/);
-    sub_1C32C20(&StringLiteral_11462/*"SAVEKEY_PlayedTerminalEffects"*/);
-    sub_1C32C20(&StringLiteral_13695/*"TerminalBeforeEventActivityPoint"*/);
-    sub_1C32C20(&StringLiteral_11450/*"SAVEKEY_CampaignDirectBonus"*/);
-    sub_1C32C20(&StringLiteral_11457/*"SAVEKEY_LastPlayQuestConsumeType"*/);
-    sub_1C32C20(&StringLiteral_11469/*"SAVEKEY_TerminalLastSelectQuestIndex"*/);
-    sub_1C32C20(&StringLiteral_11467/*"SAVEKEY_TerminalCraftInfoDisp"*/);
-    sub_1C32C20(&StringLiteral_13700/*"TerminalEventDailyPointEventId"*/);
-    sub_1C32C20(&StringLiteral_13697/*"TerminalBeforeEventSubmarinePointData"*/);
-    sub_1C32C20(&StringLiteral_13706/*"TerminalPhaseCnt"*/);
-    sub_1C32C20(&StringLiteral_11466/*"SAVEKEY_TerminalConquestInfos"*/);
-    sub_1C32C20(&StringLiteral_13714/*"TerminalTimeStatusEventId"*/);
-    sub_1C32C20(&StringLiteral_13698/*"TerminalDispState"*/);
-    sub_1C32C20(&StringLiteral_11459/*"SAVEKEY_PlayTerminalEffectDisappear"*/);
-    sub_1C32C20(&StringLiteral_13701/*"TerminalIsDoneShortcut"*/);
-    sub_1C32C20(&StringLiteral_11458/*"SAVEKEY_MapModelClearQuestInfo"*/);
-    sub_1C32C20(&StringLiteral_11463/*"SAVEKEY_PlayerGenderType"*/);
-    sub_1C32C20(&StringLiteral_11448/*"SAVEKEY_BlankEarthRank"*/);
-    sub_1C32C20(&StringLiteral_13702/*"TerminalLastPanelEventPoint"*/);
-    sub_1C32C20(&StringLiteral_11468/*"SAVEKEY_TerminalHarvestGrowthInfo"*/);
-    sub_1C32C20(&StringLiteral_11451/*"SAVEKEY_ClearEventQuestIds"*/);
-    sub_1C32C20(&StringLiteral_11460/*"SAVEKEY_PlayTerminalEffectDisappearWarId"*/);
-    sub_1C32C20(&StringLiteral_5186/*"Debug_IsQuestReleaseAll"*/);
-    sub_1C32C20(&StringLiteral_5183/*"Debug_IsDummyErrorSelect"*/);
-    sub_1C32C20(&StringLiteral_13709/*"TerminalQuestId"*/);
-    sub_1C32C20(&StringLiteral_11465/*"SAVEKEY_TerminalConquestInfoDisp"*/);
-    sub_1C32C20(&StringLiteral_11471/*"SAVEKEY_TerminalSelectedStoryQuestId"*/);
-    sub_1C32C20(&StringLiteral_13713/*"TerminalTimeStatusEventDailyPoint"*/);
-    sub_1C32C20(&StringLiteral_13718/*"TerminalWarId"*/);
-    sub_1C32C20(&StringLiteral_13711/*"TerminalSpotId"*/);
-    sub_1C32C20(&StringLiteral_13715/*"TerminalTimeStatusLoopCount"*/);
-    sub_1C32C20(&StringLiteral_13696/*"TerminalBeforeEventActivityPointGauge"*/);
-    sub_1C32C20(&StringLiteral_11449/*"SAVEKEY_BlankEarthSpotId"*/);
-    sub_1C32C20(&StringLiteral_11454/*"SAVEKEY_DataLostBattleAutoReset"*/);
-    sub_1C32C20(&StringLiteral_13719/*"TerminalWarStartedIds"*/);
-    sub_1C32C20(&StringLiteral_11453/*"SAVEKEY_ConnectMarkEventId"*/);
-    sub_1C32C20(&StringLiteral_13703/*"TerminalLastPlayedFreeQuestSpotId"*/);
-    sub_1C32C20(&StringLiteral_11452/*"SAVEKEY_ConnectMarkAnimationId"*/);
-    sub_1C32C20(&StringLiteral_11461/*"SAVEKEY_PlayTerminalEffectNt2AfterAction"*/);
-    sub_1C32C20(&StringLiteral_1/*""*/);
-    sub_1C32C20(&StringLiteral_13704/*"TerminalLastPlayedQuestId"*/);
-    sub_1C32C20(&StringLiteral_5182/*"Debug_IsBuildInfoDisp"*/);
-    sub_1C32C20(&StringLiteral_11470/*"SAVEKEY_TerminalSelectedRecollectionWarId"*/);
-    byte_4C34D96 = 1;
+    sub_1C37058(&System_Convert_TypeInfo);
+    sub_1C37058(&Method_JsonManager_Deserialize_CommonUI_CampaignDirectBonusData_____);
+    sub_1C37058(&Method_JsonManager_Deserialize_EventConquestInfo_____);
+    sub_1C37058(&Method_JsonManager_Deserialize_EventHarvestGrowthInfo___);
+    sub_1C37058(&Method_JsonManager_Deserialize_EventSaveData___);
+    sub_1C37058(&JsonManager_TypeInfo);
+    sub_1C37058(&TerminalPramsManager_TypeInfo);
+    sub_1C37058(&StringLiteral_11457/*"SAVEKEY_LastPlayBgmName"*/);
+    sub_1C37058(&StringLiteral_13700/*"TerminalEndTime"*/);
+    sub_1C37058(&StringLiteral_11463/*"SAVEKEY_PlayedTerminalEffects"*/);
+    sub_1C37058(&StringLiteral_13696/*"TerminalBeforeEventActivityPoint"*/);
+    sub_1C37058(&StringLiteral_11451/*"SAVEKEY_CampaignDirectBonus"*/);
+    sub_1C37058(&StringLiteral_11458/*"SAVEKEY_LastPlayQuestConsumeType"*/);
+    sub_1C37058(&StringLiteral_11470/*"SAVEKEY_TerminalLastSelectQuestIndex"*/);
+    sub_1C37058(&StringLiteral_11468/*"SAVEKEY_TerminalCraftInfoDisp"*/);
+    sub_1C37058(&StringLiteral_13701/*"TerminalEventDailyPointEventId"*/);
+    sub_1C37058(&StringLiteral_13698/*"TerminalBeforeEventSubmarinePointData"*/);
+    sub_1C37058(&StringLiteral_13707/*"TerminalPhaseCnt"*/);
+    sub_1C37058(&StringLiteral_11467/*"SAVEKEY_TerminalConquestInfos"*/);
+    sub_1C37058(&StringLiteral_13715/*"TerminalTimeStatusEventId"*/);
+    sub_1C37058(&StringLiteral_13699/*"TerminalDispState"*/);
+    sub_1C37058(&StringLiteral_11460/*"SAVEKEY_PlayTerminalEffectDisappear"*/);
+    sub_1C37058(&StringLiteral_13702/*"TerminalIsDoneShortcut"*/);
+    sub_1C37058(&StringLiteral_11459/*"SAVEKEY_MapModelClearQuestInfo"*/);
+    sub_1C37058(&StringLiteral_11464/*"SAVEKEY_PlayerGenderType"*/);
+    sub_1C37058(&StringLiteral_11449/*"SAVEKEY_BlankEarthRank"*/);
+    sub_1C37058(&StringLiteral_13703/*"TerminalLastPanelEventPoint"*/);
+    sub_1C37058(&StringLiteral_11469/*"SAVEKEY_TerminalHarvestGrowthInfo"*/);
+    sub_1C37058(&StringLiteral_11452/*"SAVEKEY_ClearEventQuestIds"*/);
+    sub_1C37058(&StringLiteral_11461/*"SAVEKEY_PlayTerminalEffectDisappearWarId"*/);
+    sub_1C37058(&StringLiteral_5187/*"Debug_IsQuestReleaseAll"*/);
+    sub_1C37058(&StringLiteral_5184/*"Debug_IsDummyErrorSelect"*/);
+    sub_1C37058(&StringLiteral_13710/*"TerminalQuestId"*/);
+    sub_1C37058(&StringLiteral_11466/*"SAVEKEY_TerminalConquestInfoDisp"*/);
+    sub_1C37058(&StringLiteral_11472/*"SAVEKEY_TerminalSelectedStoryQuestId"*/);
+    sub_1C37058(&StringLiteral_13714/*"TerminalTimeStatusEventDailyPoint"*/);
+    sub_1C37058(&StringLiteral_13719/*"TerminalWarId"*/);
+    sub_1C37058(&StringLiteral_13712/*"TerminalSpotId"*/);
+    sub_1C37058(&StringLiteral_13716/*"TerminalTimeStatusLoopCount"*/);
+    sub_1C37058(&StringLiteral_13697/*"TerminalBeforeEventActivityPointGauge"*/);
+    sub_1C37058(&StringLiteral_11450/*"SAVEKEY_BlankEarthSpotId"*/);
+    sub_1C37058(&StringLiteral_11455/*"SAVEKEY_DataLostBattleAutoReset"*/);
+    sub_1C37058(&StringLiteral_13720/*"TerminalWarStartedIds"*/);
+    sub_1C37058(&StringLiteral_11454/*"SAVEKEY_ConnectMarkEventId"*/);
+    sub_1C37058(&StringLiteral_13704/*"TerminalLastPlayedFreeQuestSpotId"*/);
+    sub_1C37058(&StringLiteral_11453/*"SAVEKEY_ConnectMarkAnimationId"*/);
+    sub_1C37058(&StringLiteral_11462/*"SAVEKEY_PlayTerminalEffectNt2AfterAction"*/);
+    sub_1C37058(&StringLiteral_1/*""*/);
+    sub_1C37058(&StringLiteral_13705/*"TerminalLastPlayedQuestId"*/);
+    sub_1C37058(&StringLiteral_5183/*"Debug_IsBuildInfoDisp"*/);
+    sub_1C37058(&StringLiteral_11471/*"SAVEKEY_TerminalSelectedRecollectionWarId"*/);
+    byte_4C40380 = 1;
   }
-  v1 = (System_String_o *)StringLiteral_13698/*"TerminalDispState"*/;
-  if ( UnityEngine_PlayerPrefs__HasKey((System_String_o *)StringLiteral_13698/*"TerminalDispState"*/, 0) )
+  v1 = (System_String_o *)StringLiteral_13699/*"TerminalDispState"*/;
+  if ( UnityEngine_PlayerPrefs__HasKey((System_String_o *)StringLiteral_13699/*"TerminalDispState"*/, 0) )
   {
-    Int_71181884 = UnityEngine_PlayerPrefs__GetInt_71181884(v1, 0);
+    Int_71224996 = UnityEngine_PlayerPrefs__GetInt_71224996(v1, 0);
     if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(TerminalPramsManager_TypeInfo);
-    if ( !byte_4C342AE )
+    if ( !byte_4C3F898 )
     {
-      sub_1C32C20(&TerminalPramsManager_TypeInfo);
-      byte_4C342AE = 1;
+      sub_1C37058(&TerminalPramsManager_TypeInfo);
+      byte_4C3F898 = 1;
     }
     v3 = TerminalPramsManager_TypeInfo;
     if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -4354,18 +4354,18 @@ void TerminalPramsManager__Load_SaveData(const MethodInfo *method)
       j_il2cpp_runtime_class_init_0(TerminalPramsManager_TypeInfo);
       v3 = TerminalPramsManager_TypeInfo;
     }
-    v3->static_fields->_DispState_k__BackingField = Int_71181884;
+    v3->static_fields->_DispState_k__BackingField = Int_71224996;
   }
-  v4 = (System_String_o *)StringLiteral_13718/*"TerminalWarId"*/;
-  if ( UnityEngine_PlayerPrefs__HasKey((System_String_o *)StringLiteral_13718/*"TerminalWarId"*/, 0) )
+  v4 = (System_String_o *)StringLiteral_13719/*"TerminalWarId"*/;
+  if ( UnityEngine_PlayerPrefs__HasKey((System_String_o *)StringLiteral_13719/*"TerminalWarId"*/, 0) )
   {
-    v5 = UnityEngine_PlayerPrefs__GetInt_71181884(v4, 0);
+    v5 = UnityEngine_PlayerPrefs__GetInt_71224996(v4, 0);
     if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(TerminalPramsManager_TypeInfo);
-    if ( !byte_4C342B2 )
+    if ( !byte_4C3F89C )
     {
-      sub_1C32C20(&TerminalPramsManager_TypeInfo);
-      byte_4C342B2 = 1;
+      sub_1C37058(&TerminalPramsManager_TypeInfo);
+      byte_4C3F89C = 1;
     }
     v6 = TerminalPramsManager_TypeInfo;
     if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -4375,16 +4375,16 @@ void TerminalPramsManager__Load_SaveData(const MethodInfo *method)
     }
     v6->static_fields->_WarId_k__BackingField = v5;
   }
-  v7 = (System_String_o *)StringLiteral_13711/*"TerminalSpotId"*/;
-  if ( UnityEngine_PlayerPrefs__HasKey((System_String_o *)StringLiteral_13711/*"TerminalSpotId"*/, 0) )
+  v7 = (System_String_o *)StringLiteral_13712/*"TerminalSpotId"*/;
+  if ( UnityEngine_PlayerPrefs__HasKey((System_String_o *)StringLiteral_13712/*"TerminalSpotId"*/, 0) )
   {
-    v8 = UnityEngine_PlayerPrefs__GetInt_71181884(v7, 0);
+    v8 = UnityEngine_PlayerPrefs__GetInt_71224996(v7, 0);
     if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(TerminalPramsManager_TypeInfo);
-    if ( !byte_4C342B1 )
+    if ( !byte_4C3F89B )
     {
-      sub_1C32C20(&TerminalPramsManager_TypeInfo);
-      byte_4C342B1 = 1;
+      sub_1C37058(&TerminalPramsManager_TypeInfo);
+      byte_4C3F89B = 1;
     }
     v9 = TerminalPramsManager_TypeInfo;
     if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -4394,16 +4394,16 @@ void TerminalPramsManager__Load_SaveData(const MethodInfo *method)
     }
     v9->static_fields->_SpotId_k__BackingField = v8;
   }
-  v10 = (System_String_o *)StringLiteral_13709/*"TerminalQuestId"*/;
-  if ( UnityEngine_PlayerPrefs__HasKey((System_String_o *)StringLiteral_13709/*"TerminalQuestId"*/, 0) )
+  v10 = (System_String_o *)StringLiteral_13710/*"TerminalQuestId"*/;
+  if ( UnityEngine_PlayerPrefs__HasKey((System_String_o *)StringLiteral_13710/*"TerminalQuestId"*/, 0) )
   {
-    v11 = UnityEngine_PlayerPrefs__GetInt_71181884(v10, 0);
+    v11 = UnityEngine_PlayerPrefs__GetInt_71224996(v10, 0);
     if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(TerminalPramsManager_TypeInfo);
-    if ( !byte_4C342AC )
+    if ( !byte_4C3F896 )
     {
-      sub_1C32C20(&TerminalPramsManager_TypeInfo);
-      byte_4C342AC = 1;
+      sub_1C37058(&TerminalPramsManager_TypeInfo);
+      byte_4C3F896 = 1;
     }
     v12 = TerminalPramsManager_TypeInfo;
     if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -4413,16 +4413,16 @@ void TerminalPramsManager__Load_SaveData(const MethodInfo *method)
     }
     v12->static_fields->_QuestId_k__BackingField = v11;
   }
-  v13 = (System_String_o *)StringLiteral_13704/*"TerminalLastPlayedQuestId"*/;
-  if ( UnityEngine_PlayerPrefs__HasKey((System_String_o *)StringLiteral_13704/*"TerminalLastPlayedQuestId"*/, 0) )
+  v13 = (System_String_o *)StringLiteral_13705/*"TerminalLastPlayedQuestId"*/;
+  if ( UnityEngine_PlayerPrefs__HasKey((System_String_o *)StringLiteral_13705/*"TerminalLastPlayedQuestId"*/, 0) )
   {
-    v14 = UnityEngine_PlayerPrefs__GetInt_71181884(v13, 0);
+    v14 = UnityEngine_PlayerPrefs__GetInt_71224996(v13, 0);
     if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(TerminalPramsManager_TypeInfo);
-    if ( !byte_4C346C0 )
+    if ( !byte_4C3FCAA )
     {
-      sub_1C32C20(&TerminalPramsManager_TypeInfo);
-      byte_4C346C0 = 1;
+      sub_1C37058(&TerminalPramsManager_TypeInfo);
+      byte_4C3FCAA = 1;
     }
     v15 = TerminalPramsManager_TypeInfo;
     if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -4432,16 +4432,16 @@ void TerminalPramsManager__Load_SaveData(const MethodInfo *method)
     }
     v15->static_fields->_LastPlayedQuestId_k__BackingField = v14;
   }
-  v16 = (System_String_o *)StringLiteral_13706/*"TerminalPhaseCnt"*/;
-  if ( UnityEngine_PlayerPrefs__HasKey((System_String_o *)StringLiteral_13706/*"TerminalPhaseCnt"*/, 0) )
+  v16 = (System_String_o *)StringLiteral_13707/*"TerminalPhaseCnt"*/;
+  if ( UnityEngine_PlayerPrefs__HasKey((System_String_o *)StringLiteral_13707/*"TerminalPhaseCnt"*/, 0) )
   {
-    v17 = UnityEngine_PlayerPrefs__GetInt_71181884(v16, 0);
+    v17 = UnityEngine_PlayerPrefs__GetInt_71224996(v16, 0);
     if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(TerminalPramsManager_TypeInfo);
-    if ( !byte_4C342B0 )
+    if ( !byte_4C3F89A )
     {
-      sub_1C32C20(&TerminalPramsManager_TypeInfo);
-      byte_4C342B0 = 1;
+      sub_1C37058(&TerminalPramsManager_TypeInfo);
+      byte_4C3F89A = 1;
     }
     v18 = TerminalPramsManager_TypeInfo;
     if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -4451,23 +4451,23 @@ void TerminalPramsManager__Load_SaveData(const MethodInfo *method)
     }
     v18->static_fields->_PhaseCnt_k__BackingField = v17;
   }
-  v19 = (System_String_o *)StringLiteral_13699/*"TerminalEndTime"*/;
-  if ( UnityEngine_PlayerPrefs__HasKey((System_String_o *)StringLiteral_13699/*"TerminalEndTime"*/, 0) )
+  v19 = (System_String_o *)StringLiteral_13700/*"TerminalEndTime"*/;
+  if ( UnityEngine_PlayerPrefs__HasKey((System_String_o *)StringLiteral_13700/*"TerminalEndTime"*/, 0) )
   {
-    String_71182452 = UnityEngine_PlayerPrefs__GetString_71182452(v19, 0);
+    String_71225564 = UnityEngine_PlayerPrefs__GetString_71225564(v19, 0);
     v21 = 0;
-    if ( System_String__op_Inequality(String_71182452, (System_String_o *)StringLiteral_1/*""*/, 0) )
+    if ( System_String__op_Inequality(String_71225564, (System_String_o *)StringLiteral_1/*""*/, 0) )
     {
       if ( !System_Convert_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(System_Convert_TypeInfo);
-      v21 = System_Convert__ToInt64_64608736(String_71182452, 0);
+      v21 = System_Convert__ToInt64_64651848(String_71225564, 0);
     }
     if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(TerminalPramsManager_TypeInfo);
-    if ( !byte_4C342AD )
+    if ( !byte_4C3F897 )
     {
-      sub_1C32C20(&TerminalPramsManager_TypeInfo);
-      byte_4C342AD = 1;
+      sub_1C37058(&TerminalPramsManager_TypeInfo);
+      byte_4C3F897 = 1;
     }
     v22 = TerminalPramsManager_TypeInfo;
     if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -4477,16 +4477,16 @@ void TerminalPramsManager__Load_SaveData(const MethodInfo *method)
     }
     v22->static_fields->_EndTime_k__BackingField = v21;
   }
-  v23 = (System_String_o *)StringLiteral_13701/*"TerminalIsDoneShortcut"*/;
-  if ( UnityEngine_PlayerPrefs__HasKey((System_String_o *)StringLiteral_13701/*"TerminalIsDoneShortcut"*/, 0) )
+  v23 = (System_String_o *)StringLiteral_13702/*"TerminalIsDoneShortcut"*/;
+  if ( UnityEngine_PlayerPrefs__HasKey((System_String_o *)StringLiteral_13702/*"TerminalIsDoneShortcut"*/, 0) )
   {
-    v24 = UnityEngine_PlayerPrefs__GetInt_71181884(v23, 0);
+    v24 = UnityEngine_PlayerPrefs__GetInt_71224996(v23, 0);
     if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(TerminalPramsManager_TypeInfo);
-    if ( !byte_4C342AF )
+    if ( !byte_4C3F899 )
     {
-      sub_1C32C20(&TerminalPramsManager_TypeInfo);
-      byte_4C342AF = 1;
+      sub_1C37058(&TerminalPramsManager_TypeInfo);
+      byte_4C3F899 = 1;
     }
     v25 = TerminalPramsManager_TypeInfo;
     if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -4496,10 +4496,10 @@ void TerminalPramsManager__Load_SaveData(const MethodInfo *method)
     }
     v25->static_fields->_IsDoneShortcut_k__BackingField = v24 != 0;
   }
-  v26 = (System_String_o *)StringLiteral_13719/*"TerminalWarStartedIds"*/;
-  if ( UnityEngine_PlayerPrefs__HasKey((System_String_o *)StringLiteral_13719/*"TerminalWarStartedIds"*/, 0) )
+  v26 = (System_String_o *)StringLiteral_13720/*"TerminalWarStartedIds"*/;
+  if ( UnityEngine_PlayerPrefs__HasKey((System_String_o *)StringLiteral_13720/*"TerminalWarStartedIds"*/, 0) )
   {
-    v29 = UnityEngine_PlayerPrefs__GetString_71182452(v26, 0);
+    v29 = UnityEngine_PlayerPrefs__GetString_71225564(v26, 0);
     v30 = TerminalPramsManager_TypeInfo;
     if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
     {
@@ -4508,18 +4508,18 @@ void TerminalPramsManager__Load_SaveData(const MethodInfo *method)
     }
     static_fields = v30->static_fields;
     static_fields->mTerminalWarStartedIds = v29;
-    sub_1C32BC4((CGThumbnailListItem_o *)&static_fields->mTerminalWarStartedIds, (int32_t)v29, v27, v28);
+    sub_1C36FFC((CGThumbnailListItem_o *)&static_fields->mTerminalWarStartedIds, (int32_t)v29, v27, v28);
   }
-  v32 = (System_String_o *)StringLiteral_5186/*"Debug_IsQuestReleaseAll"*/;
-  if ( UnityEngine_PlayerPrefs__HasKey((System_String_o *)StringLiteral_5186/*"Debug_IsQuestReleaseAll"*/, 0) )
+  v32 = (System_String_o *)StringLiteral_5187/*"Debug_IsQuestReleaseAll"*/;
+  if ( UnityEngine_PlayerPrefs__HasKey((System_String_o *)StringLiteral_5187/*"Debug_IsQuestReleaseAll"*/, 0) )
   {
-    v33 = UnityEngine_PlayerPrefs__GetInt_71181884(v32, 0);
+    v33 = UnityEngine_PlayerPrefs__GetInt_71224996(v32, 0);
     if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(TerminalPramsManager_TypeInfo);
-    if ( !byte_4C34DF0 )
+    if ( !byte_4C403DA )
     {
-      sub_1C32C20(&TerminalPramsManager_TypeInfo);
-      byte_4C34DF0 = 1;
+      sub_1C37058(&TerminalPramsManager_TypeInfo);
+      byte_4C403DA = 1;
     }
     v34 = TerminalPramsManager_TypeInfo;
     if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -4529,16 +4529,16 @@ void TerminalPramsManager__Load_SaveData(const MethodInfo *method)
     }
     v34->static_fields->mDebug_IsQuestReleaseAll = v33 != 0;
   }
-  v35 = (System_String_o *)StringLiteral_5183/*"Debug_IsDummyErrorSelect"*/;
-  if ( UnityEngine_PlayerPrefs__HasKey((System_String_o *)StringLiteral_5183/*"Debug_IsDummyErrorSelect"*/, 0) )
+  v35 = (System_String_o *)StringLiteral_5184/*"Debug_IsDummyErrorSelect"*/;
+  if ( UnityEngine_PlayerPrefs__HasKey((System_String_o *)StringLiteral_5184/*"Debug_IsDummyErrorSelect"*/, 0) )
   {
-    v36 = UnityEngine_PlayerPrefs__GetInt_71181884(v35, 0);
+    v36 = UnityEngine_PlayerPrefs__GetInt_71224996(v35, 0);
     if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(TerminalPramsManager_TypeInfo);
-    if ( !byte_4C34DF1 )
+    if ( !byte_4C403DB )
     {
-      sub_1C32C20(&TerminalPramsManager_TypeInfo);
-      byte_4C34DF1 = 1;
+      sub_1C37058(&TerminalPramsManager_TypeInfo);
+      byte_4C403DB = 1;
     }
     v37 = TerminalPramsManager_TypeInfo;
     if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -4548,16 +4548,16 @@ void TerminalPramsManager__Load_SaveData(const MethodInfo *method)
     }
     v37->static_fields->mDebug_IsDummyErrorSelect = v36 != 0;
   }
-  v38 = (System_String_o *)StringLiteral_5182/*"Debug_IsBuildInfoDisp"*/;
-  if ( UnityEngine_PlayerPrefs__HasKey((System_String_o *)StringLiteral_5182/*"Debug_IsBuildInfoDisp"*/, 0) )
+  v38 = (System_String_o *)StringLiteral_5183/*"Debug_IsBuildInfoDisp"*/;
+  if ( UnityEngine_PlayerPrefs__HasKey((System_String_o *)StringLiteral_5183/*"Debug_IsBuildInfoDisp"*/, 0) )
   {
-    v39 = UnityEngine_PlayerPrefs__GetInt_71181884(v38, 0);
+    v39 = UnityEngine_PlayerPrefs__GetInt_71224996(v38, 0);
     if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(TerminalPramsManager_TypeInfo);
-    if ( !byte_4C34DF2 )
+    if ( !byte_4C403DC )
     {
-      sub_1C32C20(&TerminalPramsManager_TypeInfo);
-      byte_4C34DF2 = 1;
+      sub_1C37058(&TerminalPramsManager_TypeInfo);
+      byte_4C403DC = 1;
     }
     v40 = TerminalPramsManager_TypeInfo;
     if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -4567,16 +4567,16 @@ void TerminalPramsManager__Load_SaveData(const MethodInfo *method)
     }
     v40->static_fields->mDebug_IsBuildInfoDisp = v39 != 0;
   }
-  v41 = (System_String_o *)StringLiteral_13714/*"TerminalTimeStatusEventId"*/;
-  if ( UnityEngine_PlayerPrefs__HasKey((System_String_o *)StringLiteral_13714/*"TerminalTimeStatusEventId"*/, 0) )
+  v41 = (System_String_o *)StringLiteral_13715/*"TerminalTimeStatusEventId"*/;
+  if ( UnityEngine_PlayerPrefs__HasKey((System_String_o *)StringLiteral_13715/*"TerminalTimeStatusEventId"*/, 0) )
   {
-    v42 = UnityEngine_PlayerPrefs__GetInt_71181884(v41, 0);
+    v42 = UnityEngine_PlayerPrefs__GetInt_71224996(v41, 0);
     if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(TerminalPramsManager_TypeInfo);
-    if ( !byte_4C349F8 )
+    if ( !byte_4C3FFE2 )
     {
-      sub_1C32C20(&TerminalPramsManager_TypeInfo);
-      byte_4C349F8 = 1;
+      sub_1C37058(&TerminalPramsManager_TypeInfo);
+      byte_4C3FFE2 = 1;
     }
     v43 = TerminalPramsManager_TypeInfo;
     if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -4586,16 +4586,16 @@ void TerminalPramsManager__Load_SaveData(const MethodInfo *method)
     }
     v43->static_fields->_TimeStatusEventId_k__BackingField = v42;
   }
-  v44 = (System_String_o *)StringLiteral_13715/*"TerminalTimeStatusLoopCount"*/;
-  if ( UnityEngine_PlayerPrefs__HasKey((System_String_o *)StringLiteral_13715/*"TerminalTimeStatusLoopCount"*/, 0) )
+  v44 = (System_String_o *)StringLiteral_13716/*"TerminalTimeStatusLoopCount"*/;
+  if ( UnityEngine_PlayerPrefs__HasKey((System_String_o *)StringLiteral_13716/*"TerminalTimeStatusLoopCount"*/, 0) )
   {
-    v45 = UnityEngine_PlayerPrefs__GetInt_71181884(v44, 0);
+    v45 = UnityEngine_PlayerPrefs__GetInt_71224996(v44, 0);
     if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(TerminalPramsManager_TypeInfo);
-    if ( !byte_4C349F9 )
+    if ( !byte_4C3FFE3 )
     {
-      sub_1C32C20(&TerminalPramsManager_TypeInfo);
-      byte_4C349F9 = 1;
+      sub_1C37058(&TerminalPramsManager_TypeInfo);
+      byte_4C3FFE3 = 1;
     }
     v46 = TerminalPramsManager_TypeInfo;
     if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -4605,16 +4605,16 @@ void TerminalPramsManager__Load_SaveData(const MethodInfo *method)
     }
     v46->static_fields->_TimeStatusLoopCount_k__BackingField = v45;
   }
-  v47 = (System_String_o *)StringLiteral_13700/*"TerminalEventDailyPointEventId"*/;
-  if ( UnityEngine_PlayerPrefs__HasKey((System_String_o *)StringLiteral_13700/*"TerminalEventDailyPointEventId"*/, 0) )
+  v47 = (System_String_o *)StringLiteral_13701/*"TerminalEventDailyPointEventId"*/;
+  if ( UnityEngine_PlayerPrefs__HasKey((System_String_o *)StringLiteral_13701/*"TerminalEventDailyPointEventId"*/, 0) )
   {
-    v48 = UnityEngine_PlayerPrefs__GetInt_71181884(v47, 0);
+    v48 = UnityEngine_PlayerPrefs__GetInt_71224996(v47, 0);
     if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(TerminalPramsManager_TypeInfo);
-    if ( !byte_4C34DF4 )
+    if ( !byte_4C403DE )
     {
-      sub_1C32C20(&TerminalPramsManager_TypeInfo);
-      byte_4C34DF4 = 1;
+      sub_1C37058(&TerminalPramsManager_TypeInfo);
+      byte_4C403DE = 1;
     }
     v49 = TerminalPramsManager_TypeInfo;
     if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -4624,23 +4624,23 @@ void TerminalPramsManager__Load_SaveData(const MethodInfo *method)
     }
     v49->static_fields->_EventDailyPointEventId_k__BackingField = v48;
   }
-  v50 = (System_String_o *)StringLiteral_13713/*"TerminalTimeStatusEventDailyPoint"*/;
-  if ( UnityEngine_PlayerPrefs__HasKey((System_String_o *)StringLiteral_13713/*"TerminalTimeStatusEventDailyPoint"*/, 0) )
+  v50 = (System_String_o *)StringLiteral_13714/*"TerminalTimeStatusEventDailyPoint"*/;
+  if ( UnityEngine_PlayerPrefs__HasKey((System_String_o *)StringLiteral_13714/*"TerminalTimeStatusEventDailyPoint"*/, 0) )
   {
-    v51 = UnityEngine_PlayerPrefs__GetString_71182452(v50, 0);
+    v51 = UnityEngine_PlayerPrefs__GetString_71225564(v50, 0);
     v52 = 0;
     if ( !System_String__op_Equality(v51, (System_String_o *)StringLiteral_1/*""*/, 0) )
     {
       if ( !System_Convert_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(System_Convert_TypeInfo);
-      v52 = System_Convert__ToInt64_64608736(v51, 0);
+      v52 = System_Convert__ToInt64_64651848(v51, 0);
     }
     if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(TerminalPramsManager_TypeInfo);
-    if ( !byte_4C34DF5 )
+    if ( !byte_4C403DF )
     {
-      sub_1C32C20(&TerminalPramsManager_TypeInfo);
-      byte_4C34DF5 = 1;
+      sub_1C37058(&TerminalPramsManager_TypeInfo);
+      byte_4C403DF = 1;
     }
     v53 = TerminalPramsManager_TypeInfo;
     if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -4650,16 +4650,16 @@ void TerminalPramsManager__Load_SaveData(const MethodInfo *method)
     }
     v53->static_fields->_BeforeTimeEventDailyPoint_k__BackingField = v52;
   }
-  v54 = (System_String_o *)StringLiteral_13695/*"TerminalBeforeEventActivityPoint"*/;
-  if ( UnityEngine_PlayerPrefs__HasKey((System_String_o *)StringLiteral_13695/*"TerminalBeforeEventActivityPoint"*/, 0) )
+  v54 = (System_String_o *)StringLiteral_13696/*"TerminalBeforeEventActivityPoint"*/;
+  if ( UnityEngine_PlayerPrefs__HasKey((System_String_o *)StringLiteral_13696/*"TerminalBeforeEventActivityPoint"*/, 0) )
   {
-    v55 = UnityEngine_PlayerPrefs__GetInt_71181884(v54, 0);
+    v55 = UnityEngine_PlayerPrefs__GetInt_71224996(v54, 0);
     if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(TerminalPramsManager_TypeInfo);
-    if ( !byte_4C34DF6 )
+    if ( !byte_4C403E0 )
     {
-      sub_1C32C20(&TerminalPramsManager_TypeInfo);
-      byte_4C34DF6 = 1;
+      sub_1C37058(&TerminalPramsManager_TypeInfo);
+      byte_4C403E0 = 1;
     }
     v56 = TerminalPramsManager_TypeInfo;
     if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -4669,16 +4669,16 @@ void TerminalPramsManager__Load_SaveData(const MethodInfo *method)
     }
     v56->static_fields->_BeforeEventActivityPoint_k__BackingField = v55;
   }
-  v57 = (System_String_o *)StringLiteral_13696/*"TerminalBeforeEventActivityPointGauge"*/;
-  if ( UnityEngine_PlayerPrefs__HasKey((System_String_o *)StringLiteral_13696/*"TerminalBeforeEventActivityPointGauge"*/, 0) )
+  v57 = (System_String_o *)StringLiteral_13697/*"TerminalBeforeEventActivityPointGauge"*/;
+  if ( UnityEngine_PlayerPrefs__HasKey((System_String_o *)StringLiteral_13697/*"TerminalBeforeEventActivityPointGauge"*/, 0) )
   {
-    v58 = UnityEngine_PlayerPrefs__GetInt_71181884(v57, 0);
+    v58 = UnityEngine_PlayerPrefs__GetInt_71224996(v57, 0);
     if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(TerminalPramsManager_TypeInfo);
-    if ( !byte_4C34DF7 )
+    if ( !byte_4C403E1 )
     {
-      sub_1C32C20(&TerminalPramsManager_TypeInfo);
-      byte_4C34DF7 = 1;
+      sub_1C37058(&TerminalPramsManager_TypeInfo);
+      byte_4C403E1 = 1;
     }
     v59 = TerminalPramsManager_TypeInfo;
     if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -4688,21 +4688,21 @@ void TerminalPramsManager__Load_SaveData(const MethodInfo *method)
     }
     v59->static_fields->_BeforeEventActivityPointGauge_k__BackingField = v58;
   }
-  v60 = (System_String_o *)StringLiteral_13697/*"TerminalBeforeEventSubmarinePointData"*/;
-  if ( UnityEngine_PlayerPrefs__HasKey((System_String_o *)StringLiteral_13697/*"TerminalBeforeEventSubmarinePointData"*/, 0) )
+  v60 = (System_String_o *)StringLiteral_13698/*"TerminalBeforeEventSubmarinePointData"*/;
+  if ( UnityEngine_PlayerPrefs__HasKey((System_String_o *)StringLiteral_13698/*"TerminalBeforeEventSubmarinePointData"*/, 0) )
   {
-    v61 = (Il2CppObject *)UnityEngine_PlayerPrefs__GetString_71182452(v60, 0);
+    v61 = (Il2CppObject *)UnityEngine_PlayerPrefs__GetString_71225564(v60, 0);
     if ( !JsonManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(JsonManager_TypeInfo);
     v64 = JsonManager__Deserialize_object_(
             v61,
-            (const MethodInfo_314C70C *)Method_JsonManager_Deserialize_EventSaveData___);
+            (const MethodInfo_3156F74 *)Method_JsonManager_Deserialize_EventSaveData___);
     if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(TerminalPramsManager_TypeInfo);
-    if ( !byte_4C343D4 )
+    if ( !byte_4C3F9BE )
     {
-      sub_1C32C20(&TerminalPramsManager_TypeInfo);
-      byte_4C343D4 = 1;
+      sub_1C37058(&TerminalPramsManager_TypeInfo);
+      byte_4C3F9BE = 1;
     }
     v65 = TerminalPramsManager_TypeInfo;
     if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -4712,18 +4712,18 @@ void TerminalPramsManager__Load_SaveData(const MethodInfo *method)
     }
     p_BeforeEventSubmarineSaveData_k__BackingField = (CGThumbnailListItem_o *)&v65->static_fields->_BeforeEventSubmarineSaveData_k__BackingField;
     p_BeforeEventSubmarineSaveData_k__BackingField->klass = (CGThumbnailListItem_c *)v64;
-    sub_1C32BC4(p_BeforeEventSubmarineSaveData_k__BackingField, (int32_t)v64, v62, v63);
+    sub_1C36FFC(p_BeforeEventSubmarineSaveData_k__BackingField, (int32_t)v64, v62, v63);
   }
-  v67 = (System_String_o *)StringLiteral_11469/*"SAVEKEY_TerminalLastSelectQuestIndex"*/;
-  if ( UnityEngine_PlayerPrefs__HasKey((System_String_o *)StringLiteral_11469/*"SAVEKEY_TerminalLastSelectQuestIndex"*/, 0) )
+  v67 = (System_String_o *)StringLiteral_11470/*"SAVEKEY_TerminalLastSelectQuestIndex"*/;
+  if ( UnityEngine_PlayerPrefs__HasKey((System_String_o *)StringLiteral_11470/*"SAVEKEY_TerminalLastSelectQuestIndex"*/, 0) )
   {
-    v69 = UnityEngine_PlayerPrefs__GetInt_71181884(v67, 0);
+    v69 = UnityEngine_PlayerPrefs__GetInt_71224996(v67, 0);
     if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(TerminalPramsManager_TypeInfo);
-    if ( !byte_4C34DEF )
+    if ( !byte_4C403D9 )
     {
-      sub_1C32C20(&TerminalPramsManager_TypeInfo);
-      byte_4C34DEF = 1;
+      sub_1C37058(&TerminalPramsManager_TypeInfo);
+      byte_4C403D9 = 1;
     }
     v70 = TerminalPramsManager_TypeInfo;
     if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -4732,11 +4732,11 @@ void TerminalPramsManager__Load_SaveData(const MethodInfo *method)
       v70 = TerminalPramsManager_TypeInfo;
     }
     v70->static_fields->_LastSelectQuestIndex_k__BackingField = v69;
-    if ( !byte_4C31DAD )
+    if ( !byte_4C3D397 )
     {
-      sub_1C32C20(&TerminalPramsManager_TypeInfo);
+      sub_1C37058(&TerminalPramsManager_TypeInfo);
       v70 = TerminalPramsManager_TypeInfo;
-      byte_4C31DAD = 1;
+      byte_4C3D397 = 1;
     }
     if ( !v70->_2.cctor_finished )
     {
@@ -4744,11 +4744,11 @@ void TerminalPramsManager__Load_SaveData(const MethodInfo *method)
       v70 = TerminalPramsManager_TypeInfo;
     }
     WarId_k__BackingField = v70->static_fields->_WarId_k__BackingField;
-    if ( !byte_4C34E02 )
+    if ( !byte_4C403EC )
     {
-      sub_1C32C20(&TerminalPramsManager_TypeInfo);
+      sub_1C37058(&TerminalPramsManager_TypeInfo);
       v70 = TerminalPramsManager_TypeInfo;
-      byte_4C34E02 = 1;
+      byte_4C403EC = 1;
     }
     if ( !v70->_2.cctor_finished )
     {
@@ -4760,15 +4760,15 @@ void TerminalPramsManager__Load_SaveData(const MethodInfo *method)
       v70->static_fields->_LastSelectQuestIndex_k__BackingField,
       v68);
   }
-  v72 = (System_String_o *)StringLiteral_11466/*"SAVEKEY_TerminalConquestInfos"*/;
-  if ( UnityEngine_PlayerPrefs__HasKey((System_String_o *)StringLiteral_11466/*"SAVEKEY_TerminalConquestInfos"*/, 0) )
+  v72 = (System_String_o *)StringLiteral_11467/*"SAVEKEY_TerminalConquestInfos"*/;
+  if ( UnityEngine_PlayerPrefs__HasKey((System_String_o *)StringLiteral_11467/*"SAVEKEY_TerminalConquestInfos"*/, 0) )
   {
-    v73 = (Il2CppObject *)UnityEngine_PlayerPrefs__GetString_71182452(v72, 0);
+    v73 = (Il2CppObject *)UnityEngine_PlayerPrefs__GetString_71225564(v72, 0);
     if ( !JsonManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(JsonManager_TypeInfo);
     v76 = JsonManager__Deserialize_object_(
             v73,
-            (const MethodInfo_314C70C *)Method_JsonManager_Deserialize_EventConquestInfo_____);
+            (const MethodInfo_3156F74 *)Method_JsonManager_Deserialize_EventConquestInfo_____);
     v77 = TerminalPramsManager_TypeInfo;
     if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
     {
@@ -4777,12 +4777,12 @@ void TerminalPramsManager__Load_SaveData(const MethodInfo *method)
     }
     p_eventConquestInfos = (CGThumbnailListItem_o *)&v77->static_fields->eventConquestInfos;
     p_eventConquestInfos->klass = (CGThumbnailListItem_c *)v76;
-    sub_1C32BC4(p_eventConquestInfos, (int32_t)v76, v74, v75);
+    sub_1C36FFC(p_eventConquestInfos, (int32_t)v76, v74, v75);
   }
-  v79 = (System_String_o *)StringLiteral_11465/*"SAVEKEY_TerminalConquestInfoDisp"*/;
-  if ( UnityEngine_PlayerPrefs__HasKey((System_String_o *)StringLiteral_11465/*"SAVEKEY_TerminalConquestInfoDisp"*/, 0) )
+  v79 = (System_String_o *)StringLiteral_11466/*"SAVEKEY_TerminalConquestInfoDisp"*/;
+  if ( UnityEngine_PlayerPrefs__HasKey((System_String_o *)StringLiteral_11466/*"SAVEKEY_TerminalConquestInfoDisp"*/, 0) )
   {
-    v80 = UnityEngine_PlayerPrefs__GetInt_71181884(v79, 0);
+    v80 = UnityEngine_PlayerPrefs__GetInt_71224996(v79, 0);
     v81 = TerminalPramsManager_TypeInfo;
     if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
     {
@@ -4791,10 +4791,10 @@ void TerminalPramsManager__Load_SaveData(const MethodInfo *method)
     }
     v81->static_fields->eventConquestInfoDisp = v80 != 0;
   }
-  v82 = (System_String_o *)StringLiteral_11467/*"SAVEKEY_TerminalCraftInfoDisp"*/;
-  if ( UnityEngine_PlayerPrefs__HasKey((System_String_o *)StringLiteral_11467/*"SAVEKEY_TerminalCraftInfoDisp"*/, 0) )
+  v82 = (System_String_o *)StringLiteral_11468/*"SAVEKEY_TerminalCraftInfoDisp"*/;
+  if ( UnityEngine_PlayerPrefs__HasKey((System_String_o *)StringLiteral_11468/*"SAVEKEY_TerminalCraftInfoDisp"*/, 0) )
   {
-    v83 = UnityEngine_PlayerPrefs__GetInt_71181884(v82, 0);
+    v83 = UnityEngine_PlayerPrefs__GetInt_71224996(v82, 0);
     v84 = TerminalPramsManager_TypeInfo;
     if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
     {
@@ -4803,15 +4803,15 @@ void TerminalPramsManager__Load_SaveData(const MethodInfo *method)
     }
     v84->static_fields->eventCraftInfoDisp = v83 != 0;
   }
-  v85 = (System_String_o *)StringLiteral_11468/*"SAVEKEY_TerminalHarvestGrowthInfo"*/;
-  if ( UnityEngine_PlayerPrefs__HasKey((System_String_o *)StringLiteral_11468/*"SAVEKEY_TerminalHarvestGrowthInfo"*/, 0) )
+  v85 = (System_String_o *)StringLiteral_11469/*"SAVEKEY_TerminalHarvestGrowthInfo"*/;
+  if ( UnityEngine_PlayerPrefs__HasKey((System_String_o *)StringLiteral_11469/*"SAVEKEY_TerminalHarvestGrowthInfo"*/, 0) )
   {
-    v86 = (Il2CppObject *)UnityEngine_PlayerPrefs__GetString_71182452(v85, 0);
+    v86 = (Il2CppObject *)UnityEngine_PlayerPrefs__GetString_71225564(v85, 0);
     if ( !JsonManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(JsonManager_TypeInfo);
     v89 = JsonManager__Deserialize_object_(
             v86,
-            (const MethodInfo_314C70C *)Method_JsonManager_Deserialize_EventHarvestGrowthInfo___);
+            (const MethodInfo_3156F74 *)Method_JsonManager_Deserialize_EventHarvestGrowthInfo___);
     v90 = TerminalPramsManager_TypeInfo;
     if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
     {
@@ -4820,12 +4820,12 @@ void TerminalPramsManager__Load_SaveData(const MethodInfo *method)
     }
     p_eventHarvestGrowthInfo = (CGThumbnailListItem_o *)&v90->static_fields->eventHarvestGrowthInfo;
     p_eventHarvestGrowthInfo->klass = (CGThumbnailListItem_c *)v89;
-    sub_1C32BC4(p_eventHarvestGrowthInfo, (int32_t)v89, v87, v88);
+    sub_1C36FFC(p_eventHarvestGrowthInfo, (int32_t)v89, v87, v88);
   }
-  v92 = (System_String_o *)StringLiteral_11456/*"SAVEKEY_LastPlayBgmName"*/;
-  if ( UnityEngine_PlayerPrefs__HasKey((System_String_o *)StringLiteral_11456/*"SAVEKEY_LastPlayBgmName"*/, 0) )
+  v92 = (System_String_o *)StringLiteral_11457/*"SAVEKEY_LastPlayBgmName"*/;
+  if ( UnityEngine_PlayerPrefs__HasKey((System_String_o *)StringLiteral_11457/*"SAVEKEY_LastPlayBgmName"*/, 0) )
   {
-    v95 = UnityEngine_PlayerPrefs__GetString_71182452(v92, 0);
+    v95 = UnityEngine_PlayerPrefs__GetString_71225564(v92, 0);
     v96 = TerminalPramsManager_TypeInfo;
     if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
     {
@@ -4834,12 +4834,12 @@ void TerminalPramsManager__Load_SaveData(const MethodInfo *method)
     }
     p_lastPlayBgmName = (CGThumbnailListItem_o *)&v96->static_fields->lastPlayBgmName;
     p_lastPlayBgmName->klass = (CGThumbnailListItem_c *)v95;
-    sub_1C32BC4(p_lastPlayBgmName, (int32_t)v95, v93, v94);
+    sub_1C36FFC(p_lastPlayBgmName, (int32_t)v95, v93, v94);
   }
-  v98 = (System_String_o *)StringLiteral_11457/*"SAVEKEY_LastPlayQuestConsumeType"*/;
-  if ( UnityEngine_PlayerPrefs__HasKey((System_String_o *)StringLiteral_11457/*"SAVEKEY_LastPlayQuestConsumeType"*/, 0) )
+  v98 = (System_String_o *)StringLiteral_11458/*"SAVEKEY_LastPlayQuestConsumeType"*/;
+  if ( UnityEngine_PlayerPrefs__HasKey((System_String_o *)StringLiteral_11458/*"SAVEKEY_LastPlayQuestConsumeType"*/, 0) )
   {
-    v99 = UnityEngine_PlayerPrefs__GetInt_71181884(v98, 0);
+    v99 = UnityEngine_PlayerPrefs__GetInt_71224996(v98, 0);
     v100 = TerminalPramsManager_TypeInfo;
     if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
     {
@@ -4848,16 +4848,16 @@ void TerminalPramsManager__Load_SaveData(const MethodInfo *method)
     }
     v100->static_fields->lastPlayQuestConsumeAp = v99;
   }
-  v101 = (System_String_o *)StringLiteral_13703/*"TerminalLastPlayedFreeQuestSpotId"*/;
-  if ( UnityEngine_PlayerPrefs__HasKey((System_String_o *)StringLiteral_13703/*"TerminalLastPlayedFreeQuestSpotId"*/, 0) )
+  v101 = (System_String_o *)StringLiteral_13704/*"TerminalLastPlayedFreeQuestSpotId"*/;
+  if ( UnityEngine_PlayerPrefs__HasKey((System_String_o *)StringLiteral_13704/*"TerminalLastPlayedFreeQuestSpotId"*/, 0) )
   {
-    v102 = UnityEngine_PlayerPrefs__GetInt_71181884(v101, 0);
+    v102 = UnityEngine_PlayerPrefs__GetInt_71224996(v101, 0);
     if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(TerminalPramsManager_TypeInfo);
-    if ( !byte_4C346C1 )
+    if ( !byte_4C3FCAB )
     {
-      sub_1C32C20(&TerminalPramsManager_TypeInfo);
-      byte_4C346C1 = 1;
+      sub_1C37058(&TerminalPramsManager_TypeInfo);
+      byte_4C3FCAB = 1;
     }
     v103 = TerminalPramsManager_TypeInfo;
     if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -4867,10 +4867,10 @@ void TerminalPramsManager__Load_SaveData(const MethodInfo *method)
     }
     v103->static_fields->_LastPlayedFreeQuestSpotId_k__BackingField = v102;
   }
-  v104 = (System_String_o *)StringLiteral_13702/*"TerminalLastPanelEventPoint"*/;
-  if ( UnityEngine_PlayerPrefs__HasKey((System_String_o *)StringLiteral_13702/*"TerminalLastPanelEventPoint"*/, 0) )
+  v104 = (System_String_o *)StringLiteral_13703/*"TerminalLastPanelEventPoint"*/;
+  if ( UnityEngine_PlayerPrefs__HasKey((System_String_o *)StringLiteral_13703/*"TerminalLastPanelEventPoint"*/, 0) )
   {
-    v105 = UnityEngine_PlayerPrefs__GetInt_71181884(v104, 0);
+    v105 = UnityEngine_PlayerPrefs__GetInt_71224996(v104, 0);
     v106 = TerminalPramsManager_TypeInfo;
     if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
     {
@@ -4879,16 +4879,16 @@ void TerminalPramsManager__Load_SaveData(const MethodInfo *method)
     }
     v106->static_fields->panelEventPoint = v105;
   }
-  v107 = (System_String_o *)StringLiteral_11462/*"SAVEKEY_PlayedTerminalEffects"*/;
-  if ( UnityEngine_PlayerPrefs__HasKey((System_String_o *)StringLiteral_11462/*"SAVEKEY_PlayedTerminalEffects"*/, 0) )
+  v107 = (System_String_o *)StringLiteral_11463/*"SAVEKEY_PlayedTerminalEffects"*/;
+  if ( UnityEngine_PlayerPrefs__HasKey((System_String_o *)StringLiteral_11463/*"SAVEKEY_PlayedTerminalEffects"*/, 0) )
   {
-    v110 = UnityEngine_PlayerPrefs__GetString_71182452(v107, 0);
+    v110 = UnityEngine_PlayerPrefs__GetString_71225564(v107, 0);
     if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(TerminalPramsManager_TypeInfo);
-    if ( !byte_4C34DF9 )
+    if ( !byte_4C403E3 )
     {
-      sub_1C32C20(&TerminalPramsManager_TypeInfo);
-      byte_4C34DF9 = 1;
+      sub_1C37058(&TerminalPramsManager_TypeInfo);
+      byte_4C403E3 = 1;
     }
     v111 = TerminalPramsManager_TypeInfo;
     if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -4898,18 +4898,18 @@ void TerminalPramsManager__Load_SaveData(const MethodInfo *method)
     }
     p_PlayedTerminalEffects_k__BackingField = (CGThumbnailListItem_o *)&v111->static_fields->_PlayedTerminalEffects_k__BackingField;
     p_PlayedTerminalEffects_k__BackingField->klass = (CGThumbnailListItem_c *)v110;
-    sub_1C32BC4(p_PlayedTerminalEffects_k__BackingField, (int32_t)v110, v108, v109);
+    sub_1C36FFC(p_PlayedTerminalEffects_k__BackingField, (int32_t)v110, v108, v109);
   }
-  v113 = (System_String_o *)StringLiteral_11459/*"SAVEKEY_PlayTerminalEffectDisappear"*/;
-  if ( UnityEngine_PlayerPrefs__HasKey((System_String_o *)StringLiteral_11459/*"SAVEKEY_PlayTerminalEffectDisappear"*/, 0) )
+  v113 = (System_String_o *)StringLiteral_11460/*"SAVEKEY_PlayTerminalEffectDisappear"*/;
+  if ( UnityEngine_PlayerPrefs__HasKey((System_String_o *)StringLiteral_11460/*"SAVEKEY_PlayTerminalEffectDisappear"*/, 0) )
   {
-    v114 = UnityEngine_PlayerPrefs__GetInt_71181884(v113, 0);
+    v114 = UnityEngine_PlayerPrefs__GetInt_71224996(v113, 0);
     if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(TerminalPramsManager_TypeInfo);
-    if ( !byte_4C34AD4 )
+    if ( !byte_4C400BE )
     {
-      sub_1C32C20(&TerminalPramsManager_TypeInfo);
-      byte_4C34AD4 = 1;
+      sub_1C37058(&TerminalPramsManager_TypeInfo);
+      byte_4C400BE = 1;
     }
     v115 = TerminalPramsManager_TypeInfo;
     if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -4919,16 +4919,16 @@ void TerminalPramsManager__Load_SaveData(const MethodInfo *method)
     }
     v115->static_fields->_IsPlayTerminalEffectDisappear_k__BackingField = v114 != 0;
   }
-  v116 = (System_String_o *)StringLiteral_11460/*"SAVEKEY_PlayTerminalEffectDisappearWarId"*/;
-  if ( UnityEngine_PlayerPrefs__HasKey((System_String_o *)StringLiteral_11460/*"SAVEKEY_PlayTerminalEffectDisappearWarId"*/, 0) )
+  v116 = (System_String_o *)StringLiteral_11461/*"SAVEKEY_PlayTerminalEffectDisappearWarId"*/;
+  if ( UnityEngine_PlayerPrefs__HasKey((System_String_o *)StringLiteral_11461/*"SAVEKEY_PlayTerminalEffectDisappearWarId"*/, 0) )
   {
-    v117 = UnityEngine_PlayerPrefs__GetInt_71181884(v116, 0);
+    v117 = UnityEngine_PlayerPrefs__GetInt_71224996(v116, 0);
     if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(TerminalPramsManager_TypeInfo);
-    if ( !byte_4C34AD5 )
+    if ( !byte_4C400BF )
     {
-      sub_1C32C20(&TerminalPramsManager_TypeInfo);
-      byte_4C34AD5 = 1;
+      sub_1C37058(&TerminalPramsManager_TypeInfo);
+      byte_4C400BF = 1;
     }
     v118 = TerminalPramsManager_TypeInfo;
     if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -4938,16 +4938,16 @@ void TerminalPramsManager__Load_SaveData(const MethodInfo *method)
     }
     v118->static_fields->_IsPlayTerminalEffectDisappearWarId_k__BackingField = v117;
   }
-  v119 = (System_String_o *)StringLiteral_11461/*"SAVEKEY_PlayTerminalEffectNt2AfterAction"*/;
-  if ( UnityEngine_PlayerPrefs__HasKey((System_String_o *)StringLiteral_11461/*"SAVEKEY_PlayTerminalEffectNt2AfterAction"*/, 0) )
+  v119 = (System_String_o *)StringLiteral_11462/*"SAVEKEY_PlayTerminalEffectNt2AfterAction"*/;
+  if ( UnityEngine_PlayerPrefs__HasKey((System_String_o *)StringLiteral_11462/*"SAVEKEY_PlayTerminalEffectNt2AfterAction"*/, 0) )
   {
-    v120 = UnityEngine_PlayerPrefs__GetInt_71181884(v119, 0);
+    v120 = UnityEngine_PlayerPrefs__GetInt_71224996(v119, 0);
     if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(TerminalPramsManager_TypeInfo);
-    if ( !byte_4C34BC8 )
+    if ( !byte_4C401B2 )
     {
-      sub_1C32C20(&TerminalPramsManager_TypeInfo);
-      byte_4C34BC8 = 1;
+      sub_1C37058(&TerminalPramsManager_TypeInfo);
+      byte_4C401B2 = 1;
     }
     v121 = TerminalPramsManager_TypeInfo;
     if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -4957,16 +4957,16 @@ void TerminalPramsManager__Load_SaveData(const MethodInfo *method)
     }
     v121->static_fields->_IsPlayTerminalEffectNt2AfterAction_k__BackingField = v120 != 0;
   }
-  v122 = (System_String_o *)StringLiteral_11471/*"SAVEKEY_TerminalSelectedStoryQuestId"*/;
-  if ( UnityEngine_PlayerPrefs__HasKey((System_String_o *)StringLiteral_11471/*"SAVEKEY_TerminalSelectedStoryQuestId"*/, 0) )
+  v122 = (System_String_o *)StringLiteral_11472/*"SAVEKEY_TerminalSelectedStoryQuestId"*/;
+  if ( UnityEngine_PlayerPrefs__HasKey((System_String_o *)StringLiteral_11472/*"SAVEKEY_TerminalSelectedStoryQuestId"*/, 0) )
   {
-    v123 = UnityEngine_PlayerPrefs__GetInt_71181884(v122, 0);
+    v123 = UnityEngine_PlayerPrefs__GetInt_71224996(v122, 0);
     if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(TerminalPramsManager_TypeInfo);
-    if ( !byte_4C346C6 )
+    if ( !byte_4C3FCB0 )
     {
-      sub_1C32C20(&TerminalPramsManager_TypeInfo);
-      byte_4C346C6 = 1;
+      sub_1C37058(&TerminalPramsManager_TypeInfo);
+      byte_4C3FCB0 = 1;
     }
     v124 = TerminalPramsManager_TypeInfo;
     if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -4976,10 +4976,10 @@ void TerminalPramsManager__Load_SaveData(const MethodInfo *method)
     }
     v124->static_fields->_SelectedStoryQuestId_k__BackingField = v123;
   }
-  v125 = (System_String_o *)StringLiteral_11453/*"SAVEKEY_ConnectMarkEventId"*/;
-  if ( UnityEngine_PlayerPrefs__HasKey((System_String_o *)StringLiteral_11453/*"SAVEKEY_ConnectMarkEventId"*/, 0) )
+  v125 = (System_String_o *)StringLiteral_11454/*"SAVEKEY_ConnectMarkEventId"*/;
+  if ( UnityEngine_PlayerPrefs__HasKey((System_String_o *)StringLiteral_11454/*"SAVEKEY_ConnectMarkEventId"*/, 0) )
   {
-    v126 = UnityEngine_PlayerPrefs__GetInt_71181884(v125, 0);
+    v126 = UnityEngine_PlayerPrefs__GetInt_71224996(v125, 0);
     v127 = TerminalPramsManager_TypeInfo;
     if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
     {
@@ -4988,10 +4988,10 @@ void TerminalPramsManager__Load_SaveData(const MethodInfo *method)
     }
     v127->static_fields->ConnectMarkEventId = v126;
   }
-  v128 = (System_String_o *)StringLiteral_11452/*"SAVEKEY_ConnectMarkAnimationId"*/;
-  if ( UnityEngine_PlayerPrefs__HasKey((System_String_o *)StringLiteral_11452/*"SAVEKEY_ConnectMarkAnimationId"*/, 0) )
+  v128 = (System_String_o *)StringLiteral_11453/*"SAVEKEY_ConnectMarkAnimationId"*/;
+  if ( UnityEngine_PlayerPrefs__HasKey((System_String_o *)StringLiteral_11453/*"SAVEKEY_ConnectMarkAnimationId"*/, 0) )
   {
-    v129 = UnityEngine_PlayerPrefs__GetInt_71181884(v128, 0);
+    v129 = UnityEngine_PlayerPrefs__GetInt_71224996(v128, 0);
     v130 = TerminalPramsManager_TypeInfo;
     if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
     {
@@ -5000,16 +5000,16 @@ void TerminalPramsManager__Load_SaveData(const MethodInfo *method)
     }
     v130->static_fields->ConnectMarkAnimationId = v129;
   }
-  v131 = (System_String_o *)StringLiteral_11470/*"SAVEKEY_TerminalSelectedRecollectionWarId"*/;
-  if ( UnityEngine_PlayerPrefs__HasKey((System_String_o *)StringLiteral_11470/*"SAVEKEY_TerminalSelectedRecollectionWarId"*/, 0) )
+  v131 = (System_String_o *)StringLiteral_11471/*"SAVEKEY_TerminalSelectedRecollectionWarId"*/;
+  if ( UnityEngine_PlayerPrefs__HasKey((System_String_o *)StringLiteral_11471/*"SAVEKEY_TerminalSelectedRecollectionWarId"*/, 0) )
   {
-    v132 = UnityEngine_PlayerPrefs__GetInt_71181884(v131, 0);
+    v132 = UnityEngine_PlayerPrefs__GetInt_71224996(v131, 0);
     if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(TerminalPramsManager_TypeInfo);
-    if ( !byte_4C3367F )
+    if ( !byte_4C3EBA0 )
     {
-      sub_1C32C20(&TerminalPramsManager_TypeInfo);
-      byte_4C3367F = 1;
+      sub_1C37058(&TerminalPramsManager_TypeInfo);
+      byte_4C3EBA0 = 1;
     }
     v133 = TerminalPramsManager_TypeInfo;
     if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -5019,16 +5019,16 @@ void TerminalPramsManager__Load_SaveData(const MethodInfo *method)
     }
     v133->static_fields->_SelectedRecollectionWarId_k__BackingField = v132;
   }
-  v134 = (System_String_o *)StringLiteral_11451/*"SAVEKEY_ClearEventQuestIds"*/;
-  if ( UnityEngine_PlayerPrefs__HasKey((System_String_o *)StringLiteral_11451/*"SAVEKEY_ClearEventQuestIds"*/, 0) )
+  v134 = (System_String_o *)StringLiteral_11452/*"SAVEKEY_ClearEventQuestIds"*/;
+  if ( UnityEngine_PlayerPrefs__HasKey((System_String_o *)StringLiteral_11452/*"SAVEKEY_ClearEventQuestIds"*/, 0) )
   {
-    v137 = UnityEngine_PlayerPrefs__GetString_71182452(v134, 0);
+    v137 = UnityEngine_PlayerPrefs__GetString_71225564(v134, 0);
     if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(TerminalPramsManager_TypeInfo);
-    if ( !byte_4C342AA )
+    if ( !byte_4C3F894 )
     {
-      sub_1C32C20(&TerminalPramsManager_TypeInfo);
-      byte_4C342AA = 1;
+      sub_1C37058(&TerminalPramsManager_TypeInfo);
+      byte_4C3F894 = 1;
     }
     v138 = TerminalPramsManager_TypeInfo;
     if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -5038,23 +5038,23 @@ void TerminalPramsManager__Load_SaveData(const MethodInfo *method)
     }
     p_ClearEventQuestIds_k__BackingField = (CGThumbnailListItem_o *)&v138->static_fields->_ClearEventQuestIds_k__BackingField;
     p_ClearEventQuestIds_k__BackingField->klass = (CGThumbnailListItem_c *)v137;
-    sub_1C32BC4(p_ClearEventQuestIds_k__BackingField, (int32_t)v137, v135, v136);
+    sub_1C36FFC(p_ClearEventQuestIds_k__BackingField, (int32_t)v137, v135, v136);
   }
-  v140 = (System_String_o *)StringLiteral_11458/*"SAVEKEY_MapModelClearQuestInfo"*/;
-  if ( UnityEngine_PlayerPrefs__HasKey((System_String_o *)StringLiteral_11458/*"SAVEKEY_MapModelClearQuestInfo"*/, 0) )
+  v140 = (System_String_o *)StringLiteral_11459/*"SAVEKEY_MapModelClearQuestInfo"*/;
+  if ( UnityEngine_PlayerPrefs__HasKey((System_String_o *)StringLiteral_11459/*"SAVEKEY_MapModelClearQuestInfo"*/, 0) )
   {
-    v141 = UnityEngine_PlayerPrefs__GetString_71182452(v140, 0);
+    v141 = UnityEngine_PlayerPrefs__GetString_71225564(v140, 0);
     IsNullOrEmpty = (System_String_array *)System_String__IsNullOrEmpty(v141, 0);
     if ( ((unsigned __int8)IsNullOrEmpty & 1) == 0 )
     {
       if ( !v141 || (IsNullOrEmpty = System_String__Split(v141, 0x2Cu, 0, 0)) == 0 )
-        sub_1C32E7C(IsNullOrEmpty);
+        sub_1C372B4(IsNullOrEmpty);
       max_length = IsNullOrEmpty->max_length;
       v144 = IsNullOrEmpty;
       if ( max_length )
       {
         if ( !(_DWORD)max_length )
-          sub_1C32E84(IsNullOrEmpty);
+          sub_1C372BC(IsNullOrEmpty);
         v145 = System_Int32__Parse(IsNullOrEmpty->m_Items[0], 0);
       }
       else
@@ -5063,10 +5063,10 @@ void TerminalPramsManager__Load_SaveData(const MethodInfo *method)
       }
       if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(TerminalPramsManager_TypeInfo);
-      if ( !byte_4C34DFA )
+      if ( !byte_4C403E4 )
       {
-        sub_1C32C20(&TerminalPramsManager_TypeInfo);
-        byte_4C34DFA = 1;
+        sub_1C37058(&TerminalPramsManager_TypeInfo);
+        byte_4C403E4 = 1;
       }
       v146 = TerminalPramsManager_TypeInfo;
       if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -5087,10 +5087,10 @@ void TerminalPramsManager__Load_SaveData(const MethodInfo *method)
       }
       if ( !v146->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(v146);
-      if ( !byte_4C34DFB )
+      if ( !byte_4C403E5 )
       {
-        sub_1C32C20(&TerminalPramsManager_TypeInfo);
-        byte_4C34DFB = 1;
+        sub_1C37058(&TerminalPramsManager_TypeInfo);
+        byte_4C403E5 = 1;
       }
       v149 = TerminalPramsManager_TypeInfo;
       if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -5101,16 +5101,16 @@ void TerminalPramsManager__Load_SaveData(const MethodInfo *method)
       v149->static_fields->_MapModelClearPhaseCount_k__BackingField = v148;
     }
   }
-  v150 = (System_String_o *)StringLiteral_11454/*"SAVEKEY_DataLostBattleAutoReset"*/;
-  if ( UnityEngine_PlayerPrefs__HasKey((System_String_o *)StringLiteral_11454/*"SAVEKEY_DataLostBattleAutoReset"*/, 0) )
+  v150 = (System_String_o *)StringLiteral_11455/*"SAVEKEY_DataLostBattleAutoReset"*/;
+  if ( UnityEngine_PlayerPrefs__HasKey((System_String_o *)StringLiteral_11455/*"SAVEKEY_DataLostBattleAutoReset"*/, 0) )
   {
-    v151 = UnityEngine_PlayerPrefs__GetInt_71181884(v150, 0);
+    v151 = UnityEngine_PlayerPrefs__GetInt_71224996(v150, 0);
     if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(TerminalPramsManager_TypeInfo);
-    if ( !byte_4C34BD0 )
+    if ( !byte_4C401BA )
     {
-      sub_1C32C20(&TerminalPramsManager_TypeInfo);
-      byte_4C34BD0 = 1;
+      sub_1C37058(&TerminalPramsManager_TypeInfo);
+      byte_4C401BA = 1;
     }
     v152 = TerminalPramsManager_TypeInfo;
     if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -5120,16 +5120,16 @@ void TerminalPramsManager__Load_SaveData(const MethodInfo *method)
     }
     v152->static_fields->_IsDataLostBattleAutoReset_k__BackingField = v151 != 0;
   }
-  v153 = (System_String_o *)StringLiteral_11463/*"SAVEKEY_PlayerGenderType"*/;
-  if ( UnityEngine_PlayerPrefs__HasKey((System_String_o *)StringLiteral_11463/*"SAVEKEY_PlayerGenderType"*/, 0) )
+  v153 = (System_String_o *)StringLiteral_11464/*"SAVEKEY_PlayerGenderType"*/;
+  if ( UnityEngine_PlayerPrefs__HasKey((System_String_o *)StringLiteral_11464/*"SAVEKEY_PlayerGenderType"*/, 0) )
   {
-    v154 = UnityEngine_PlayerPrefs__GetInt_71181884(v153, 0);
+    v154 = UnityEngine_PlayerPrefs__GetInt_71224996(v153, 0);
     if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(TerminalPramsManager_TypeInfo);
-    if ( !byte_4C32B1E )
+    if ( !byte_4C3E108 )
     {
-      sub_1C32C20(&TerminalPramsManager_TypeInfo);
-      byte_4C32B1E = 1;
+      sub_1C37058(&TerminalPramsManager_TypeInfo);
+      byte_4C3E108 = 1;
     }
     v155 = TerminalPramsManager_TypeInfo;
     if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -5139,21 +5139,21 @@ void TerminalPramsManager__Load_SaveData(const MethodInfo *method)
     }
     v155->static_fields->_PlayerGenderType_k__BackingField = v154;
   }
-  v156 = (System_String_o *)StringLiteral_11450/*"SAVEKEY_CampaignDirectBonus"*/;
-  if ( UnityEngine_PlayerPrefs__HasKey((System_String_o *)StringLiteral_11450/*"SAVEKEY_CampaignDirectBonus"*/, 0) )
+  v156 = (System_String_o *)StringLiteral_11451/*"SAVEKEY_CampaignDirectBonus"*/;
+  if ( UnityEngine_PlayerPrefs__HasKey((System_String_o *)StringLiteral_11451/*"SAVEKEY_CampaignDirectBonus"*/, 0) )
   {
-    v157 = (Il2CppObject *)UnityEngine_PlayerPrefs__GetString_71182452(v156, 0);
+    v157 = (Il2CppObject *)UnityEngine_PlayerPrefs__GetString_71225564(v156, 0);
     if ( !JsonManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(JsonManager_TypeInfo);
     v160 = JsonManager__Deserialize_object_(
              v157,
-             (const MethodInfo_314C70C *)Method_JsonManager_Deserialize_CommonUI_CampaignDirectBonusData_____);
+             (const MethodInfo_3156F74 *)Method_JsonManager_Deserialize_CommonUI_CampaignDirectBonusData_____);
     if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(TerminalPramsManager_TypeInfo);
-    if ( !byte_4C34DFF )
+    if ( !byte_4C403E9 )
     {
-      sub_1C32C20(&TerminalPramsManager_TypeInfo);
-      byte_4C34DFF = 1;
+      sub_1C37058(&TerminalPramsManager_TypeInfo);
+      byte_4C403E9 = 1;
     }
     v161 = TerminalPramsManager_TypeInfo;
     if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -5163,18 +5163,18 @@ void TerminalPramsManager__Load_SaveData(const MethodInfo *method)
     }
     v162 = v161->static_fields;
     v162->_CampaignDirectBonus_k__BackingField = (struct CommonUI_CampaignDirectBonusData_array *)v160;
-    sub_1C32BC4((CGThumbnailListItem_o *)&v162->_CampaignDirectBonus_k__BackingField, (int32_t)v160, v158, v159);
+    sub_1C36FFC((CGThumbnailListItem_o *)&v162->_CampaignDirectBonus_k__BackingField, (int32_t)v160, v158, v159);
   }
-  v163 = (System_String_o *)StringLiteral_11449/*"SAVEKEY_BlankEarthSpotId"*/;
-  if ( UnityEngine_PlayerPrefs__HasKey((System_String_o *)StringLiteral_11449/*"SAVEKEY_BlankEarthSpotId"*/, 0) )
+  v163 = (System_String_o *)StringLiteral_11450/*"SAVEKEY_BlankEarthSpotId"*/;
+  if ( UnityEngine_PlayerPrefs__HasKey((System_String_o *)StringLiteral_11450/*"SAVEKEY_BlankEarthSpotId"*/, 0) )
   {
-    v164 = UnityEngine_PlayerPrefs__GetInt_71181884(v163, 0);
+    v164 = UnityEngine_PlayerPrefs__GetInt_71224996(v163, 0);
     if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(TerminalPramsManager_TypeInfo);
-    if ( !byte_4C341F6 )
+    if ( !byte_4C3F7E0 )
     {
-      sub_1C32C20(&TerminalPramsManager_TypeInfo);
-      byte_4C341F6 = 1;
+      sub_1C37058(&TerminalPramsManager_TypeInfo);
+      byte_4C3F7E0 = 1;
     }
     v165 = TerminalPramsManager_TypeInfo;
     if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -5184,16 +5184,16 @@ void TerminalPramsManager__Load_SaveData(const MethodInfo *method)
     }
     v165->static_fields->_BlankEarthSpotId_k__BackingField = v164;
   }
-  v166 = (System_String_o *)StringLiteral_11448/*"SAVEKEY_BlankEarthRank"*/;
-  if ( UnityEngine_PlayerPrefs__HasKey((System_String_o *)StringLiteral_11448/*"SAVEKEY_BlankEarthRank"*/, 0) )
+  v166 = (System_String_o *)StringLiteral_11449/*"SAVEKEY_BlankEarthRank"*/;
+  if ( UnityEngine_PlayerPrefs__HasKey((System_String_o *)StringLiteral_11449/*"SAVEKEY_BlankEarthRank"*/, 0) )
   {
-    v167 = UnityEngine_PlayerPrefs__GetInt_71181884(v166, 0);
+    v167 = UnityEngine_PlayerPrefs__GetInt_71224996(v166, 0);
     if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(TerminalPramsManager_TypeInfo);
-    if ( !byte_4C34E03 )
+    if ( !byte_4C403ED )
     {
-      sub_1C32C20(&TerminalPramsManager_TypeInfo);
-      byte_4C34E03 = 1;
+      sub_1C37058(&TerminalPramsManager_TypeInfo);
+      byte_4C403ED = 1;
     }
     v168 = TerminalPramsManager_TypeInfo;
     if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -5210,46 +5210,46 @@ TerminalTransitionInfo_o *TerminalPramsManager__Load_TerminalTransitionInfoData(
 {
   System_String_o *v1; // x20
   __int64 v2; // x19
-  int32_t Int_71181884; // w0
+  int32_t Int_71224996; // w0
   int32_t v4; // w20
   const MethodInfo *v5; // x1
   __int64 v6; // x0
   System_String_o *v7; // x20
-  System_String_o *String_71182452; // x0
+  System_String_o *String_71225564; // x0
   int32_t v9; // w2
   const MethodInfo *v10; // x3
 
-  if ( (byte_4C34D97 & 1) == 0 )
+  if ( (byte_4C40381 & 1) == 0 )
   {
-    sub_1C32C20(&TerminalTransitionInfo_TypeInfo);
-    sub_1C32C20(&StringLiteral_13717/*"TerminalTransitionInfoVoiceAssetName"*/);
-    sub_1C32C20(&StringLiteral_13716/*"TerminalTransitionInfoMissionId"*/);
-    byte_4C34D97 = 1;
+    sub_1C37058(&TerminalTransitionInfo_TypeInfo);
+    sub_1C37058(&StringLiteral_13718/*"TerminalTransitionInfoVoiceAssetName"*/);
+    sub_1C37058(&StringLiteral_13717/*"TerminalTransitionInfoMissionId"*/);
+    byte_4C40381 = 1;
   }
-  v1 = (System_String_o *)StringLiteral_13716/*"TerminalTransitionInfoMissionId"*/;
+  v1 = (System_String_o *)StringLiteral_13717/*"TerminalTransitionInfoMissionId"*/;
   v2 = 0;
-  if ( UnityEngine_PlayerPrefs__HasKey((System_String_o *)StringLiteral_13716/*"TerminalTransitionInfoMissionId"*/, 0) )
+  if ( UnityEngine_PlayerPrefs__HasKey((System_String_o *)StringLiteral_13717/*"TerminalTransitionInfoMissionId"*/, 0) )
   {
-    Int_71181884 = UnityEngine_PlayerPrefs__GetInt_71181884(v1, 0);
-    if ( Int_71181884 < 1 )
+    Int_71224996 = UnityEngine_PlayerPrefs__GetInt_71224996(v1, 0);
+    if ( Int_71224996 < 1 )
     {
       return 0;
     }
     else
     {
-      v4 = Int_71181884;
-      v2 = sub_1C32E6C(TerminalTransitionInfo_TypeInfo);
+      v4 = Int_71224996;
+      v2 = sub_1C372A4(TerminalTransitionInfo_TypeInfo);
       System_Object___ctor((Il2CppObject *)v2, 0);
       TerminalTransitionInfo__Init((TerminalTransitionInfo_o *)v2, v5);
       if ( !v2 )
-        sub_1C32E7C(v6);
+        sub_1C372B4(v6);
       *(_DWORD *)(v2 + 16) = v4;
-      v7 = (System_String_o *)StringLiteral_13717/*"TerminalTransitionInfoVoiceAssetName"*/;
-      if ( UnityEngine_PlayerPrefs__HasKey((System_String_o *)StringLiteral_13717/*"TerminalTransitionInfoVoiceAssetName"*/, 0) )
+      v7 = (System_String_o *)StringLiteral_13718/*"TerminalTransitionInfoVoiceAssetName"*/;
+      if ( UnityEngine_PlayerPrefs__HasKey((System_String_o *)StringLiteral_13718/*"TerminalTransitionInfoVoiceAssetName"*/, 0) )
       {
-        String_71182452 = UnityEngine_PlayerPrefs__GetString_71182452(v7, 0);
-        *(_QWORD *)(v2 + 40) = String_71182452;
-        sub_1C32BC4((CGThumbnailListItem_o *)(v2 + 40), (int32_t)String_71182452, v9, v10);
+        String_71225564 = UnityEngine_PlayerPrefs__GetString_71225564(v7, 0);
+        *(_QWORD *)(v2 + 40) = String_71225564;
+        sub_1C36FFC((CGThumbnailListItem_o *)(v2 + 40), (int32_t)String_71225564, v9, v10);
       }
     }
   }
@@ -5266,19 +5266,19 @@ void TerminalPramsManager__MapModelClearQuestInfo_SaveData(const MethodInfo *met
   System_String_o *v5; // x0
   int32_t MapModelClearQuestId_k__BackingField; // [xsp+Ch] [xbp-24h] BYREF
 
-  if ( (byte_4C34DB1 & 1) == 0 )
+  if ( (byte_4C4039B & 1) == 0 )
   {
-    sub_1C32C20(&TerminalPramsManager_TypeInfo);
-    sub_1C32C20(&StringLiteral_11458/*"SAVEKEY_MapModelClearQuestInfo"*/);
-    sub_1C32C20(&StringLiteral_811/*","*/);
-    byte_4C34DB1 = 1;
+    sub_1C37058(&TerminalPramsManager_TypeInfo);
+    sub_1C37058(&StringLiteral_11459/*"SAVEKEY_MapModelClearQuestInfo"*/);
+    sub_1C37058(&StringLiteral_811/*","*/);
+    byte_4C4039B = 1;
   }
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(TerminalPramsManager_TypeInfo);
-  if ( !byte_4C344B1 )
+  if ( !byte_4C3FA9B )
   {
-    sub_1C32C20(&TerminalPramsManager_TypeInfo);
-    byte_4C344B1 = 1;
+    sub_1C37058(&TerminalPramsManager_TypeInfo);
+    byte_4C3FA9B = 1;
   }
   v1 = TerminalPramsManager_TypeInfo;
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -5288,10 +5288,10 @@ void TerminalPramsManager__MapModelClearQuestInfo_SaveData(const MethodInfo *met
   }
   MapModelClearQuestId_k__BackingField = v1->static_fields->_MapModelClearQuestId_k__BackingField;
   v2 = System_Int32__ToString((int32_t)&MapModelClearQuestId_k__BackingField, 0);
-  if ( !byte_4C344B2 )
+  if ( !byte_4C3FA9C )
   {
-    sub_1C32C20(&TerminalPramsManager_TypeInfo);
-    byte_4C344B2 = 1;
+    sub_1C37058(&TerminalPramsManager_TypeInfo);
+    byte_4C3FA9C = 1;
   }
   v3 = TerminalPramsManager_TypeInfo;
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -5301,8 +5301,8 @@ void TerminalPramsManager__MapModelClearQuestInfo_SaveData(const MethodInfo *met
   }
   MapModelClearQuestId_k__BackingField = v3->static_fields->_MapModelClearPhaseCount_k__BackingField;
   v4 = System_Int32__ToString((int32_t)&MapModelClearQuestId_k__BackingField, 0);
-  v5 = System_String__Concat_63556792(v2, (System_String_o *)StringLiteral_811/*","*/, v4, 0);
-  UnityEngine_PlayerPrefs__SetString((System_String_o *)StringLiteral_11458/*"SAVEKEY_MapModelClearQuestInfo"*/, v5, 0);
+  v5 = System_String__Concat_63599904(v2, (System_String_o *)StringLiteral_811/*","*/, v4, 0);
+  UnityEngine_PlayerPrefs__SetString((System_String_o *)StringLiteral_11459/*"SAVEKEY_MapModelClearQuestInfo"*/, v5, 0);
   UnityEngine_PlayerPrefs__Save(0);
 }
 
@@ -5313,20 +5313,20 @@ void TerminalPramsManager__PlayQuestSave_SaveData(const MethodInfo *method)
   TerminalPramsManager_c *v2; // x0
   TerminalPramsManager_c *v3; // x0
 
-  if ( (byte_4C34D9D & 1) == 0 )
+  if ( (byte_4C40387 & 1) == 0 )
   {
-    sub_1C32C20(&TerminalPramsManager_TypeInfo);
-    sub_1C32C20(&StringLiteral_11469/*"SAVEKEY_TerminalLastSelectQuestIndex"*/);
-    sub_1C32C20(&StringLiteral_13703/*"TerminalLastPlayedFreeQuestSpotId"*/);
-    sub_1C32C20(&StringLiteral_13704/*"TerminalLastPlayedQuestId"*/);
-    byte_4C34D9D = 1;
+    sub_1C37058(&TerminalPramsManager_TypeInfo);
+    sub_1C37058(&StringLiteral_11470/*"SAVEKEY_TerminalLastSelectQuestIndex"*/);
+    sub_1C37058(&StringLiteral_13704/*"TerminalLastPlayedFreeQuestSpotId"*/);
+    sub_1C37058(&StringLiteral_13705/*"TerminalLastPlayedQuestId"*/);
+    byte_4C40387 = 1;
   }
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(TerminalPramsManager_TypeInfo);
-  if ( !byte_4C345C7 )
+  if ( !byte_4C3FBF6 )
   {
-    sub_1C32C20(&TerminalPramsManager_TypeInfo);
-    byte_4C345C7 = 1;
+    sub_1C37058(&TerminalPramsManager_TypeInfo);
+    byte_4C3FBF6 = 1;
   }
   v1 = TerminalPramsManager_TypeInfo;
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -5335,13 +5335,13 @@ void TerminalPramsManager__PlayQuestSave_SaveData(const MethodInfo *method)
     v1 = TerminalPramsManager_TypeInfo;
   }
   UnityEngine_PlayerPrefs__SetInt(
-    (System_String_o *)StringLiteral_13704/*"TerminalLastPlayedQuestId"*/,
+    (System_String_o *)StringLiteral_13705/*"TerminalLastPlayedQuestId"*/,
     v1->static_fields->_LastPlayedQuestId_k__BackingField,
     0);
-  if ( !byte_4C34E02 )
+  if ( !byte_4C403EC )
   {
-    sub_1C32C20(&TerminalPramsManager_TypeInfo);
-    byte_4C34E02 = 1;
+    sub_1C37058(&TerminalPramsManager_TypeInfo);
+    byte_4C403EC = 1;
   }
   v2 = TerminalPramsManager_TypeInfo;
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -5350,13 +5350,13 @@ void TerminalPramsManager__PlayQuestSave_SaveData(const MethodInfo *method)
     v2 = TerminalPramsManager_TypeInfo;
   }
   UnityEngine_PlayerPrefs__SetInt(
-    (System_String_o *)StringLiteral_11469/*"SAVEKEY_TerminalLastSelectQuestIndex"*/,
+    (System_String_o *)StringLiteral_11470/*"SAVEKEY_TerminalLastSelectQuestIndex"*/,
     v2->static_fields->_LastSelectQuestIndex_k__BackingField,
     0);
-  if ( !byte_4C342A5 )
+  if ( !byte_4C3F88F )
   {
-    sub_1C32C20(&TerminalPramsManager_TypeInfo);
-    byte_4C342A5 = 1;
+    sub_1C37058(&TerminalPramsManager_TypeInfo);
+    byte_4C3F88F = 1;
   }
   v3 = TerminalPramsManager_TypeInfo;
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -5365,7 +5365,7 @@ void TerminalPramsManager__PlayQuestSave_SaveData(const MethodInfo *method)
     v3 = TerminalPramsManager_TypeInfo;
   }
   UnityEngine_PlayerPrefs__SetInt(
-    (System_String_o *)StringLiteral_13703/*"TerminalLastPlayedFreeQuestSpotId"*/,
+    (System_String_o *)StringLiteral_13704/*"TerminalLastPlayedFreeQuestSpotId"*/,
     v3->static_fields->_LastPlayedFreeQuestSpotId_k__BackingField,
     0);
   UnityEngine_PlayerPrefs__Save(0);
@@ -5380,18 +5380,18 @@ void TerminalPramsManager__PlaySystemSE(int32_t seKind, const MethodInfo *method
   _QWORD *v6; // x0
   System_Reflection_MethodBase_o *v7; // x0
 
-  if ( (byte_4C34D92 & 1) == 0 )
+  if ( (byte_4C4037C & 1) == 0 )
   {
-    sub_1C32C20(&Method_TerminalPramsManager_PlaySystemSE__);
-    sub_1C32C20(&TerminalPramsManager_TypeInfo);
-    byte_4C34D92 = 1;
+    sub_1C37058(&Method_TerminalPramsManager_PlaySystemSE__);
+    sub_1C37058(&TerminalPramsManager_TypeInfo);
+    byte_4C4037C = 1;
   }
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(TerminalPramsManager_TypeInfo);
-  if ( !byte_4C34DED )
+  if ( !byte_4C403D7 )
   {
-    sub_1C32C20(&TerminalPramsManager_TypeInfo);
-    byte_4C34DED = 1;
+    sub_1C37058(&TerminalPramsManager_TypeInfo);
+    byte_4C403D7 = 1;
   }
   v3 = TerminalPramsManager_TypeInfo;
   if ( TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -5399,10 +5399,10 @@ void TerminalPramsManager__PlaySystemSE(int32_t seKind, const MethodInfo *method
     if ( TerminalPramsManager_TypeInfo->static_fields->_IsAutoNoSe_k__BackingField )
     {
 LABEL_9:
-      if ( !byte_4C34DEE )
+      if ( !byte_4C403D8 )
       {
-        sub_1C32C20(&TerminalPramsManager_TypeInfo);
-        byte_4C34DEE = 1;
+        sub_1C37058(&TerminalPramsManager_TypeInfo);
+        byte_4C403D8 = 1;
       }
       v4 = TerminalPramsManager_TypeInfo;
       if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -5435,8 +5435,8 @@ LABEL_9:
   {
     v6 = Method_TerminalPramsManager_PlaySystemSE__;
     if ( (*((_BYTE *)Method_TerminalPramsManager_PlaySystemSE__ + 83) & 2) != 0 )
-      v6 = (_QWORD *)sub_1C32C38(Method_TerminalPramsManager_PlaySystemSE__);
-    v7 = (System_Reflection_MethodBase_o *)sub_1C32C04(v6, v6[4]);
+      v6 = (_QWORD *)sub_1C37070(Method_TerminalPramsManager_PlaySystemSE__);
+    v7 = (System_Reflection_MethodBase_o *)sub_1C3703C(v6, v6[4]);
     OverwriteAssetSoundName__PlaySystemSe(v7, seKind, 0, 0);
   }
 }
@@ -5458,12 +5458,12 @@ void TerminalPramsManager__PlayedTerminalEffectsSave_SaveData(System_String_o *e
   CGThumbnailListItem_o *v14; // x0
   const MethodInfo *v15; // x0
 
-  if ( (byte_4C34DBA & 1) == 0 )
+  if ( (byte_4C403A4 & 1) == 0 )
   {
-    sub_1C32C20(&TerminalPramsManager_TypeInfo);
-    sub_1C32C20(&StringLiteral_43/*"\n"*/);
-    sub_1C32C20(&StringLiteral_1/*""*/);
-    byte_4C34DBA = 1;
+    sub_1C37058(&TerminalPramsManager_TypeInfo);
+    sub_1C37058(&StringLiteral_43/*"\n"*/);
+    sub_1C37058(&StringLiteral_1/*""*/);
+    byte_4C403A4 = 1;
   }
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(TerminalPramsManager_TypeInfo);
@@ -5471,10 +5471,10 @@ void TerminalPramsManager__PlayedTerminalEffectsSave_SaveData(System_String_o *e
   {
     if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(TerminalPramsManager_TypeInfo);
-    if ( !byte_4C34E08 )
+    if ( !byte_4C403F2 )
     {
-      sub_1C32C20(&TerminalPramsManager_TypeInfo);
-      byte_4C34E08 = 1;
+      sub_1C37058(&TerminalPramsManager_TypeInfo);
+      byte_4C403F2 = 1;
     }
     v5 = TerminalPramsManager_TypeInfo;
     if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -5487,10 +5487,10 @@ void TerminalPramsManager__PlayedTerminalEffectsSave_SaveData(System_String_o *e
       v6 = StringLiteral_1/*""*/;
       if ( !v5->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(v5);
-      if ( !byte_4C34DF9 )
+      if ( !byte_4C403E3 )
       {
-        sub_1C32C20(&TerminalPramsManager_TypeInfo);
-        byte_4C34DF9 = 1;
+        sub_1C37058(&TerminalPramsManager_TypeInfo);
+        byte_4C403E3 = 1;
       }
       v7 = TerminalPramsManager_TypeInfo;
       if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -5500,15 +5500,15 @@ void TerminalPramsManager__PlayedTerminalEffectsSave_SaveData(System_String_o *e
       }
       p_PlayedTerminalEffects_k__BackingField = (CGThumbnailListItem_o *)&v7->static_fields->_PlayedTerminalEffects_k__BackingField;
       p_PlayedTerminalEffects_k__BackingField->klass = (CGThumbnailListItem_c *)v6;
-      sub_1C32BC4(p_PlayedTerminalEffects_k__BackingField, v6, v3, v4);
+      sub_1C36FFC(p_PlayedTerminalEffects_k__BackingField, v6, v3, v4);
       v5 = TerminalPramsManager_TypeInfo;
     }
     if ( !v5->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(v5);
-    if ( !byte_4C34E08 )
+    if ( !byte_4C403F2 )
     {
-      sub_1C32C20(&TerminalPramsManager_TypeInfo);
-      byte_4C34E08 = 1;
+      sub_1C37058(&TerminalPramsManager_TypeInfo);
+      byte_4C403F2 = 1;
     }
     v9 = TerminalPramsManager_TypeInfo;
     if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -5516,15 +5516,15 @@ void TerminalPramsManager__PlayedTerminalEffectsSave_SaveData(System_String_o *e
       j_il2cpp_runtime_class_init_0(TerminalPramsManager_TypeInfo);
       v9 = TerminalPramsManager_TypeInfo;
     }
-    v12 = System_String__Concat_63556792(
+    v12 = System_String__Concat_63599904(
             v9->static_fields->_PlayedTerminalEffects_k__BackingField,
             effectName,
             (System_String_o *)StringLiteral_43/*"\n"*/,
             0);
-    if ( !byte_4C34DF9 )
+    if ( !byte_4C403E3 )
     {
-      sub_1C32C20(&TerminalPramsManager_TypeInfo);
-      byte_4C34DF9 = 1;
+      sub_1C37058(&TerminalPramsManager_TypeInfo);
+      byte_4C403E3 = 1;
     }
     v13 = TerminalPramsManager_TypeInfo;
     if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -5534,7 +5534,7 @@ void TerminalPramsManager__PlayedTerminalEffectsSave_SaveData(System_String_o *e
     }
     v14 = (CGThumbnailListItem_o *)&v13->static_fields->_PlayedTerminalEffects_k__BackingField;
     v14->klass = (CGThumbnailListItem_c *)v12;
-    sub_1C32BC4(v14, (int32_t)v12, v10, v11);
+    sub_1C36FFC(v14, (int32_t)v12, v10, v11);
     TerminalPramsManager__Save_SaveData(v15);
   }
 }
@@ -5544,18 +5544,18 @@ void TerminalPramsManager__PlayerGenderType_SaveData(const MethodInfo *method)
 {
   TerminalPramsManager_c *v1; // x0
 
-  if ( (byte_4C34DB3 & 1) == 0 )
+  if ( (byte_4C4039D & 1) == 0 )
   {
-    sub_1C32C20(&TerminalPramsManager_TypeInfo);
-    sub_1C32C20(&StringLiteral_11463/*"SAVEKEY_PlayerGenderType"*/);
-    byte_4C34DB3 = 1;
+    sub_1C37058(&TerminalPramsManager_TypeInfo);
+    sub_1C37058(&StringLiteral_11464/*"SAVEKEY_PlayerGenderType"*/);
+    byte_4C4039D = 1;
   }
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(TerminalPramsManager_TypeInfo);
-  if ( !byte_4C34E09 )
+  if ( !byte_4C403F3 )
   {
-    sub_1C32C20(&TerminalPramsManager_TypeInfo);
-    byte_4C34E09 = 1;
+    sub_1C37058(&TerminalPramsManager_TypeInfo);
+    byte_4C403F3 = 1;
   }
   v1 = TerminalPramsManager_TypeInfo;
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -5564,7 +5564,7 @@ void TerminalPramsManager__PlayerGenderType_SaveData(const MethodInfo *method)
     v1 = TerminalPramsManager_TypeInfo;
   }
   UnityEngine_PlayerPrefs__SetInt(
-    (System_String_o *)StringLiteral_11463/*"SAVEKEY_PlayerGenderType"*/,
+    (System_String_o *)StringLiteral_11464/*"SAVEKEY_PlayerGenderType"*/,
     v1->static_fields->_PlayerGenderType_k__BackingField,
     0);
   UnityEngine_PlayerPrefs__Save(0);
@@ -6029,69 +6029,69 @@ void TerminalPramsManager__ReceiveQuestEndResultInfo(
   CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o v454; // 0:x0.16
 
   v4 = result;
-  if ( (byte_4C34DC8 & 1) == 0 )
+  if ( (byte_4C403B2 & 1) == 0 )
   {
-    sub_1C32C20(&BalanceConfig_TypeInfo);
-    sub_1C32C20(&bool_TypeInfo);
-    sub_1C32C20(&CondType_TypeInfo);
-    sub_1C32C20(&Method_DataManager_GetMasterData_EventDetailMaster___);
-    sub_1C32C20(&Method_DataManager_GetMasterData_EventPointMaster___);
-    sub_1C32C20(&Method_DataManager_GetMasterData_EventRaidMaster___);
-    sub_1C32C20(&Method_DataManager_GetMasterData_QuestGroupMaster___);
-    sub_1C32C20(&Method_DataManager_GetMasterData_QuestMaster___);
-    sub_1C32C20(&Method_DataManager_GetMasterData_QuestMessageMaster___);
-    sub_1C32C20(&Method_DataManager_GetMasterData_QuestPhaseMaster___);
-    sub_1C32C20(&Method_DataManager_GetMasterData_QuestReleaseMaster___);
-    sub_1C32C20(&Method_DataManager_GetMasterData_UserQuestMaster___);
-    sub_1C32C20(&Method_DataManager_GetMasterData_UserServantMaster___);
-    sub_1C32C20(&Method_DataManager_GetMasterData_WarMaster___);
-    sub_1C32C20(&Method_DataManager_GetMaster_EventDetailMaster___);
-    sub_1C32C20(&Method_DataManager_GetMaster_EventUiMaster___);
-    sub_1C32C20(&Method_DataManager_GetMaster_QuestPhaseMaster___);
-    sub_1C32C20(&Method_DataManager_GetMaster_ServantMaster___);
-    sub_1C32C20(&Method_DataManager_GetMaster_UserEventCooltimeRewardMaster___);
-    sub_1C32C20(&Method_DataManager_GetMaster_UserServantCollectionMaster___);
-    sub_1C32C20(&Method_DataManager_GetMaster_UserSuperBossMaster___);
-    sub_1C32C20(&Method_DataManager_GetMaster_WarMaster___);
-    sub_1C32C20(&DataManager_TypeInfo);
-    sub_1C32C20(&Method_DataMasterBase_UserServantMaster__UserServantEntity__long__GetEntity__);
-    sub_1C32C20(&Method_DataMasterBase_ServantMaster__ServantEntity__int__TryGetEntity__);
-    sub_1C32C20(&Method_DataMasterBase_EventDetailMaster__EventDetailEntity__int__TryGetEntity__);
-    sub_1C32C20(&Method_DataMasterBase_WarMaster__WarEntity__int__TryGetEntity__);
-    sub_1C32C20(&Method_System_Linq_Enumerable_Contains_int___);
-    sub_1C32C20(&EventHarvestGrowthInfo_TypeInfo);
-    sub_1C32C20(&EventSaveData_TypeInfo);
-    sub_1C32C20(&Method_System_Collections_Generic_List_QuestReleaseEntity__Find__);
-    sub_1C32C20(&MyRoomParamsManager_TypeInfo);
-    sub_1C32C20(&NetworkManager_TypeInfo);
-    sub_1C32C20(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
-    sub_1C32C20(&CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo);
-    sub_1C32C20(&System_Predicate_QuestReleaseEntity__TypeInfo);
-    sub_1C32C20(&QuestClearHeroineInfo_TypeInfo);
-    sub_1C32C20(&ScriptManager_TypeInfo);
-    sub_1C32C20(&Method_SingletonMonoBehaviour_AdManager__get_Instance__);
-    sub_1C32C20(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-    sub_1C32C20(&Method_SingletonMonoBehaviour_ScriptManager__get_Instance__);
-    sub_1C32C20(&Method_SingletonTemplate_clsQuestCheck__get_Instance__);
-    sub_1C32C20(&Method_SingletonTemplate_QuestTree__get_Instance__);
-    sub_1C32C20(&string___TypeInfo);
-    sub_1C32C20(&TerminalPramsManager_TypeInfo);
-    sub_1C32C20(&TitleInfoEventRaidBossComponent_TypeInfo);
-    sub_1C32C20(&TitleInfoEventSubmarineStatusComponent_TypeInfo);
-    sub_1C32C20(&Method_TerminalPramsManager___c__ReceiveQuestEndResultInfo_b__724_0__);
-    sub_1C32C20(&TerminalPramsManager___c_TypeInfo);
-    sub_1C32C20(&UserServantCollectionEntity___TypeInfo);
-    sub_1C32C20(&UserServantCollectionEntity_TypeInfo);
-    sub_1C32C20(&UserServantEntity_TypeInfo);
-    sub_1C32C20(&UserSuperBossEntity___TypeInfo);
-    sub_1C32C20(&StringLiteral_19933/*"harvestGrowthAfterQuestId"*/);
-    sub_1C32C20(&StringLiteral_16711/*"afterActionBk"*/);
-    sub_1C32C20(&StringLiteral_811/*","*/);
-    sub_1C32C20(&StringLiteral_19934/*"harvestGrowthBeforeQuestId"*/);
-    sub_1C32C20(&StringLiteral_1/*""*/);
-    sub_1C32C20(&StringLiteral_6640/*"False"*/);
-    result = (BattleResultComponent_resultData_array *)sub_1C32C20(&StringLiteral_1122/*"0"*/);
-    byte_4C34DC8 = 1;
+    sub_1C37058(&BalanceConfig_TypeInfo);
+    sub_1C37058(&bool_TypeInfo);
+    sub_1C37058(&CondType_TypeInfo);
+    sub_1C37058(&Method_DataManager_GetMasterData_EventDetailMaster___);
+    sub_1C37058(&Method_DataManager_GetMasterData_EventPointMaster___);
+    sub_1C37058(&Method_DataManager_GetMasterData_EventRaidMaster___);
+    sub_1C37058(&Method_DataManager_GetMasterData_QuestGroupMaster___);
+    sub_1C37058(&Method_DataManager_GetMasterData_QuestMaster___);
+    sub_1C37058(&Method_DataManager_GetMasterData_QuestMessageMaster___);
+    sub_1C37058(&Method_DataManager_GetMasterData_QuestPhaseMaster___);
+    sub_1C37058(&Method_DataManager_GetMasterData_QuestReleaseMaster___);
+    sub_1C37058(&Method_DataManager_GetMasterData_UserQuestMaster___);
+    sub_1C37058(&Method_DataManager_GetMasterData_UserServantMaster___);
+    sub_1C37058(&Method_DataManager_GetMasterData_WarMaster___);
+    sub_1C37058(&Method_DataManager_GetMaster_EventDetailMaster___);
+    sub_1C37058(&Method_DataManager_GetMaster_EventUiMaster___);
+    sub_1C37058(&Method_DataManager_GetMaster_QuestPhaseMaster___);
+    sub_1C37058(&Method_DataManager_GetMaster_ServantMaster___);
+    sub_1C37058(&Method_DataManager_GetMaster_UserEventCooltimeRewardMaster___);
+    sub_1C37058(&Method_DataManager_GetMaster_UserServantCollectionMaster___);
+    sub_1C37058(&Method_DataManager_GetMaster_UserSuperBossMaster___);
+    sub_1C37058(&Method_DataManager_GetMaster_WarMaster___);
+    sub_1C37058(&DataManager_TypeInfo);
+    sub_1C37058(&Method_DataMasterBase_UserServantMaster__UserServantEntity__long__GetEntity__);
+    sub_1C37058(&Method_DataMasterBase_ServantMaster__ServantEntity__int__TryGetEntity__);
+    sub_1C37058(&Method_DataMasterBase_EventDetailMaster__EventDetailEntity__int__TryGetEntity__);
+    sub_1C37058(&Method_DataMasterBase_WarMaster__WarEntity__int__TryGetEntity__);
+    sub_1C37058(&Method_System_Linq_Enumerable_Contains_int___);
+    sub_1C37058(&EventHarvestGrowthInfo_TypeInfo);
+    sub_1C37058(&EventSaveData_TypeInfo);
+    sub_1C37058(&Method_System_Collections_Generic_List_QuestReleaseEntity__Find__);
+    sub_1C37058(&MyRoomParamsManager_TypeInfo);
+    sub_1C37058(&NetworkManager_TypeInfo);
+    sub_1C37058(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
+    sub_1C37058(&CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo);
+    sub_1C37058(&System_Predicate_QuestReleaseEntity__TypeInfo);
+    sub_1C37058(&QuestClearHeroineInfo_TypeInfo);
+    sub_1C37058(&ScriptManager_TypeInfo);
+    sub_1C37058(&Method_SingletonMonoBehaviour_AdManager__get_Instance__);
+    sub_1C37058(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    sub_1C37058(&Method_SingletonMonoBehaviour_ScriptManager__get_Instance__);
+    sub_1C37058(&Method_SingletonTemplate_clsQuestCheck__get_Instance__);
+    sub_1C37058(&Method_SingletonTemplate_QuestTree__get_Instance__);
+    sub_1C37058(&string___TypeInfo);
+    sub_1C37058(&TerminalPramsManager_TypeInfo);
+    sub_1C37058(&TitleInfoEventRaidBossComponent_TypeInfo);
+    sub_1C37058(&TitleInfoEventSubmarineStatusComponent_TypeInfo);
+    sub_1C37058(&Method_TerminalPramsManager___c__ReceiveQuestEndResultInfo_b__724_0__);
+    sub_1C37058(&TerminalPramsManager___c_TypeInfo);
+    sub_1C37058(&UserServantCollectionEntity___TypeInfo);
+    sub_1C37058(&UserServantCollectionEntity_TypeInfo);
+    sub_1C37058(&UserServantEntity_TypeInfo);
+    sub_1C37058(&UserSuperBossEntity___TypeInfo);
+    sub_1C37058(&StringLiteral_19936/*"harvestGrowthAfterQuestId"*/);
+    sub_1C37058(&StringLiteral_16713/*"afterActionBk"*/);
+    sub_1C37058(&StringLiteral_811/*","*/);
+    sub_1C37058(&StringLiteral_19937/*"harvestGrowthBeforeQuestId"*/);
+    sub_1C37058(&StringLiteral_1/*""*/);
+    sub_1C37058(&StringLiteral_6641/*"False"*/);
+    result = (BattleResultComponent_resultData_array *)sub_1C37058(&StringLiteral_1122/*"0"*/);
+    byte_4C403B2 = 1;
   }
   v449 = 0;
   v448 = 0;
@@ -6115,10 +6115,10 @@ void TerminalPramsManager__ReceiveQuestEndResultInfo(
   oldUserSvtCollection = v5->fields.oldUserSvtCollection;
   if ( !oldUserSvtCollection )
     goto LABEL_1211;
-  v7 = (_DWORD *)sub_1C32CC8(UserServantCollectionEntity___TypeInfo, LODWORD(oldUserSvtCollection->max_length));
+  v7 = (_DWORD *)sub_1C37100(UserServantCollectionEntity___TypeInfo, LODWORD(oldUserSvtCollection->max_length));
   if ( !DataManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-  result = (BattleResultComponent_resultData_array *)DataManager__GetMaster_object_((const MethodInfo_30DD39C *)Method_DataManager_GetMaster_UserServantCollectionMaster___);
+  result = (BattleResultComponent_resultData_array *)DataManager__GetMaster_object_((const MethodInfo_30E7C04 *)Method_DataManager_GetMaster_UserServantCollectionMaster___);
   if ( !LODWORD(v4->max_length) )
     goto LABEL_1212;
   p_max_length = &v4->max_length;
@@ -6140,10 +6140,10 @@ void TerminalPramsManager__ReceiveQuestEndResultInfo(
       v14 = *((_QWORD *)&v10->fields.eventEndMessage + (int)v13);
       if ( !NetworkManager_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
-      if ( !byte_4C31812 )
+      if ( !byte_4C3CD62 )
       {
-        sub_1C32C20(&NetworkManager_TypeInfo);
-        byte_4C31812 = 1;
+        sub_1C37058(&NetworkManager_TypeInfo);
+        byte_4C3CD62 = 1;
       }
       result = (BattleResultComponent_resultData_array *)NetworkManager_TypeInfo;
       if ( !NetworkManager_TypeInfo->_2.cctor_finished )
@@ -6160,19 +6160,19 @@ void TerminalPramsManager__ReceiveQuestEndResultInfo(
         j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
       *(_QWORD *)&v450.fields.currentCryptoKey = v16;
       *(_QWORD *)&v450.fields.fakeValue = v15;
-      result = (BattleResultComponent_resultData_array *)CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_48887784(
+      result = (BattleResultComponent_resultData_array *)CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_48930896(
                                                            v450,
                                                            0);
       if ( !v12 )
         goto LABEL_1211;
       EntityDefinitely = UserServantCollectionMaster__GetEntityDefinitely(v12, (int64_t)myDeck, (int32_t)result, 0);
-      v19 = (UserServantCollectionEntity_o *)sub_1C32E6C(UserServantCollectionEntity_TypeInfo);
-      UserServantCollectionEntity___ctor_43029184(v19, EntityDefinitely, 0);
+      v19 = (UserServantCollectionEntity_o *)sub_1C372A4(UserServantCollectionEntity_TypeInfo);
+      UserServantCollectionEntity___ctor_43131052(v19, EntityDefinitely, 0);
       if ( !v7 )
         goto LABEL_1211;
       if ( v19 )
       {
-        result = (BattleResultComponent_resultData_array *)sub_1C32D5C(v19, *(_QWORD *)(*(_QWORD *)v7 + 64LL));
+        result = (BattleResultComponent_resultData_array *)sub_1C37194(v19, *(_QWORD *)(*(_QWORD *)v7 + 64LL));
         if ( !result )
           goto LABEL_1213;
       }
@@ -6181,7 +6181,7 @@ void TerminalPramsManager__ReceiveQuestEndResultInfo(
       v22 = &v7[2 * v13];
       *((_QWORD *)v22 + 4) = v19;
       v23 = (CGThumbnailListItem_o *)(v22 + 8);
-      sub_1C32BC4(v23, (int32_t)v19, v20, v21);
+      sub_1C36FFC(v23, (int32_t)v19, v20, v21);
       if ( v13 >= v7[6] )
         break;
       klass = v23->klass;
@@ -6208,7 +6208,7 @@ void TerminalPramsManager__ReceiveQuestEndResultInfo(
         goto LABEL_36;
     }
 LABEL_1212:
-    sub_1C32E84(result);
+    sub_1C372BC(result);
   }
 LABEL_36:
   v26 = TerminalPramsManager_TypeInfo;
@@ -6220,7 +6220,7 @@ LABEL_36:
   v27 = p_max_length;
   p_mQuestClearHeroineInfo = (CGThumbnailListItem_o *)&v26->static_fields->mQuestClearHeroineInfo;
   p_mQuestClearHeroineInfo->klass = 0;
-  sub_1C32BC4(p_mQuestClearHeroineInfo, 0, v8, v9);
+  sub_1C36FFC(p_mQuestClearHeroineInfo, 0, v8, v9);
   v30 = *p_max_length;
   if ( !(unsigned int)*p_max_length )
     goto LABEL_1212;
@@ -6235,12 +6235,12 @@ LABEL_36:
       if ( !(_DWORD)v32 )
         goto LABEL_1212;
       eventEndMessage = v31->fields.eventEndMessage;
-      result = (BattleResultComponent_resultData_array *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39E2904 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+      result = (BattleResultComponent_resultData_array *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39ED16C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
       if ( !result )
         goto LABEL_1211;
       result = (BattleResultComponent_resultData_array *)DataManager__GetMasterData_object_(
                                                            (DataManager_o *)result,
-                                                           (const MethodInfo_30DD3F0 *)Method_DataManager_GetMasterData_UserServantMaster___);
+                                                           (const MethodInfo_30E7C58 *)Method_DataManager_GetMasterData_UserServantMaster___);
       if ( !eventEndMessage )
         goto LABEL_1211;
       v34 = *(_OWORD *)&eventEndMessage[1].monitor;
@@ -6250,7 +6250,7 @@ LABEL_36:
       if ( !CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo);
       v436 = v437;
-      result = (BattleResultComponent_resultData_array *)CodeStage_AntiCheat_ObscuredTypes_ObscuredLong__op_Implicit_48891308(
+      result = (BattleResultComponent_resultData_array *)CodeStage_AntiCheat_ObscuredTypes_ObscuredLong__op_Implicit_48934420(
                                                            &v436,
                                                            0);
       if ( !v35 )
@@ -6258,9 +6258,9 @@ LABEL_36:
       v36 = (UserServantEntity_o *)DataMasterBase_object__object__long___GetEntity(
                                      v35,
                                      (int64_t)result,
-                                     (const MethodInfo_3398D94 *)Method_DataMasterBase_UserServantMaster__UserServantEntity__long__GetEntity__);
-      v37 = sub_1C32E6C(UserServantEntity_TypeInfo);
-      UserServantEntity___ctor_43055416((UserServantEntity_o *)v37, v36, 0);
+                                     (const MethodInfo_33A35FC *)Method_DataMasterBase_UserServantMaster__UserServantEntity__long__GetEntity__);
+      v37 = sub_1C372A4(UserServantEntity_TypeInfo);
+      UserServantEntity___ctor_43157284((UserServantEntity_o *)v37, v36, 0);
       v438 = *(_OWORD *)&eventEndMessage[4].klass;
       if ( !v37 )
         goto LABEL_1211;
@@ -6275,7 +6275,7 @@ LABEL_36:
         j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
       *(_QWORD *)&v451.fields.currentCryptoKey = v39;
       *(_QWORD *)&v451.fields.fakeValue = v41;
-      result = (BattleResultComponent_resultData_array *)CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_48887784(
+      result = (BattleResultComponent_resultData_array *)CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_48930896(
                                                            v451,
                                                            0);
       if ( (int)result >= 1 )
@@ -6295,10 +6295,10 @@ LABEL_36:
           userId = (struct DeckData_o *)v44->fields.userId;
           if ( !NetworkManager_TypeInfo->_2.cctor_finished )
             j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
-          if ( !byte_4C31812 )
+          if ( !byte_4C3CD62 )
           {
-            sub_1C32C20(&NetworkManager_TypeInfo);
-            byte_4C31812 = 1;
+            sub_1C37058(&NetworkManager_TypeInfo);
+            byte_4C3CD62 = 1;
           }
           result = (BattleResultComponent_resultData_array *)NetworkManager_TypeInfo;
           if ( !NetworkManager_TypeInfo->_2.cctor_finished )
@@ -6316,7 +6316,7 @@ LABEL_36:
               j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
             *(_QWORD *)&v452.fields.currentCryptoKey = v48;
             *(_QWORD *)&v452.fields.fakeValue = v47;
-            result = (BattleResultComponent_resultData_array *)CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_48887784(
+            result = (BattleResultComponent_resultData_array *)CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_48930896(
                                                                  v452,
                                                                  0);
             if ( v49 == (_DWORD)result )
@@ -6333,12 +6333,12 @@ LABEL_36:
 LABEL_69:
       v44 = 0;
 LABEL_70:
-      v50 = sub_1C32E6C(QuestClearHeroineInfo_TypeInfo);
+      v50 = sub_1C372A4(QuestClearHeroineInfo_TypeInfo);
       System_Object___ctor((Il2CppObject *)v50, 0);
       if ( !v50 )
         goto LABEL_1211;
       *(_QWORD *)(v50 + 16) = v37;
-      sub_1C32BC4((CGThumbnailListItem_o *)(v50 + 16), v37, v51, v52);
+      sub_1C36FFC((CGThumbnailListItem_o *)(v50 + 16), v37, v51, v52);
       result = (BattleResultComponent_resultData_array *)UserServantEntity__getLimitCount((UserServantEntity_o *)v37, 0);
       if ( !v36 )
         goto LABEL_1211;
@@ -6355,13 +6355,13 @@ LABEL_70:
       {
         if ( !DataManager_TypeInfo->_2.cctor_finished )
           j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-        Master_object = DataManager__GetMaster_object_((const MethodInfo_30DD39C *)Method_DataManager_GetMaster_UserServantCollectionMaster___);
+        Master_object = DataManager__GetMaster_object_((const MethodInfo_30E7C04 *)Method_DataManager_GetMaster_UserServantCollectionMaster___);
         if ( !NetworkManager_TypeInfo->_2.cctor_finished )
           j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
-        if ( !byte_4C31812 )
+        if ( !byte_4C3CD62 )
         {
-          sub_1C32C20(&NetworkManager_TypeInfo);
-          byte_4C31812 = 1;
+          sub_1C37058(&NetworkManager_TypeInfo);
+          byte_4C3CD62 = 1;
         }
         v57 = NetworkManager_TypeInfo;
         if ( !NetworkManager_TypeInfo->_2.cctor_finished )
@@ -6376,7 +6376,7 @@ LABEL_70:
           j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
         *(_QWORD *)&v453.fields.currentCryptoKey = v59;
         *(_QWORD *)&v453.fields.fakeValue = v58;
-        result = (BattleResultComponent_resultData_array *)CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_48887784(
+        result = (BattleResultComponent_resultData_array *)CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_48930896(
                                                              v453,
                                                              0);
         if ( !Master_object )
@@ -6396,7 +6396,7 @@ LABEL_70:
         {
           if ( !DataManager_TypeInfo->_2.cctor_finished )
             j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-          v62 = DataManager__GetMaster_object_((const MethodInfo_30DD39C *)Method_DataManager_GetMaster_ServantMaster___);
+          v62 = DataManager__GetMaster_object_((const MethodInfo_30E7C04 *)Method_DataManager_GetMaster_ServantMaster___);
           v64 = *(_QWORD *)(v37 + 80);
           v63 = *(_QWORD *)(v37 + 88);
           v65 = (DataMasterBase_TMaster__TEntity__PKType__o *)v62;
@@ -6404,7 +6404,7 @@ LABEL_70:
             j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
           *(_QWORD *)&v454.fields.currentCryptoKey = v64;
           *(_QWORD *)&v454.fields.fakeValue = v63;
-          result = (BattleResultComponent_resultData_array *)CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_48887784(
+          result = (BattleResultComponent_resultData_array *)CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_48930896(
                                                                v454,
                                                                0);
           if ( !v65 )
@@ -6413,7 +6413,7 @@ LABEL_70:
                                                                v65,
                                                                &entity,
                                                                (int32_t)result,
-                                                               (const MethodInfo_3396884 *)Method_DataMasterBase_ServantMaster__ServantEntity__int__TryGetEntity__);
+                                                               (const MethodInfo_33A10EC *)Method_DataMasterBase_ServantMaster__ServantEntity__int__TryGetEntity__);
           v27 = p_max_length;
           if ( ((unsigned __int8)result & 1) != 0 )
           {
@@ -6434,7 +6434,7 @@ LABEL_70:
       }
       v69 = (CGThumbnailListItem_o *)&v68->static_fields->mQuestClearHeroineInfo;
       v69->klass = (CGThumbnailListItem_c *)v50;
-      sub_1C32BC4(v69, v50, v53, v54);
+      sub_1C36FFC(v69, v50, v53, v54);
       v30 = *v27;
     }
   }
@@ -6461,10 +6461,10 @@ LABEL_70:
   }
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(TerminalPramsManager_TypeInfo);
-  if ( !byte_4C34566 )
+  if ( !byte_4C3FB50 )
   {
-    sub_1C32C20(&TerminalPramsManager_TypeInfo);
-    byte_4C34566 = 1;
+    sub_1C37058(&TerminalPramsManager_TypeInfo);
+    byte_4C3FB50 = 1;
   }
   result = (BattleResultComponent_resultData_array *)TerminalPramsManager_TypeInfo;
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -6473,11 +6473,11 @@ LABEL_70:
     result = (BattleResultComponent_resultData_array *)TerminalPramsManager_TypeInfo;
   }
   BYTE6(result->m_Items[19]->fields.oldUserGame) = v74 != 0;
-  if ( !byte_4C34565 )
+  if ( !byte_4C3FB4F )
   {
-    sub_1C32C20(&TerminalPramsManager_TypeInfo);
+    sub_1C37058(&TerminalPramsManager_TypeInfo);
     result = (BattleResultComponent_resultData_array *)TerminalPramsManager_TypeInfo;
-    byte_4C34565 = 1;
+    byte_4C3FB4F = 1;
   }
   if ( !LODWORD(result->m_Items[24]) )
   {
@@ -6485,11 +6485,11 @@ LABEL_70:
     result = (BattleResultComponent_resultData_array *)TerminalPramsManager_TypeInfo;
   }
   BYTE5(result->m_Items[19]->fields.oldUserGame) = 0;
-  if ( !byte_4C346C4 )
+  if ( !byte_4C3FCAE )
   {
-    sub_1C32C20(&TerminalPramsManager_TypeInfo);
+    sub_1C37058(&TerminalPramsManager_TypeInfo);
     result = (BattleResultComponent_resultData_array *)TerminalPramsManager_TypeInfo;
-    byte_4C346C4 = 1;
+    byte_4C3FCAE = 1;
   }
   if ( !LODWORD(result->m_Items[24]) )
   {
@@ -6497,11 +6497,11 @@ LABEL_70:
     result = (BattleResultComponent_resultData_array *)TerminalPramsManager_TypeInfo;
   }
   BYTE1(result->m_Items[19]->fields.resultDamageRewardInfos) = 0;
-  if ( !byte_4C34564 )
+  if ( !byte_4C3FB4E )
   {
-    sub_1C32C20(&TerminalPramsManager_TypeInfo);
+    sub_1C37058(&TerminalPramsManager_TypeInfo);
     result = (BattleResultComponent_resultData_array *)TerminalPramsManager_TypeInfo;
-    byte_4C34564 = 1;
+    byte_4C3FB4E = 1;
   }
   if ( !LODWORD(result->m_Items[24]) )
   {
@@ -6512,10 +6512,10 @@ LABEL_70:
   {
     if ( !LODWORD(result->m_Items[24]) )
       j_il2cpp_runtime_class_init_0(result);
-    if ( !byte_4C31A97 )
+    if ( !byte_4C3CFE7 )
     {
-      sub_1C32C20(&TerminalPramsManager_TypeInfo);
-      byte_4C31A97 = 1;
+      sub_1C37058(&TerminalPramsManager_TypeInfo);
+      byte_4C3CFE7 = 1;
     }
     result = (BattleResultComponent_resultData_array *)TerminalPramsManager_TypeInfo;
     if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -6535,10 +6535,10 @@ LABEL_70:
       questId = v74->fields.questId;
       if ( !LODWORD(result->m_Items[24]) )
         j_il2cpp_runtime_class_init_0(result);
-      if ( !byte_4C342AC )
+      if ( !byte_4C3F896 )
       {
-        sub_1C32C20(&TerminalPramsManager_TypeInfo);
-        byte_4C342AC = 1;
+        sub_1C37058(&TerminalPramsManager_TypeInfo);
+        byte_4C3F896 = 1;
       }
       v76 = TerminalPramsManager_TypeInfo;
       if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -6548,10 +6548,10 @@ LABEL_70:
       }
       v76->static_fields->_QuestId_k__BackingField = questId;
       QuestPhase = UserQuestEntity__getQuestPhase(v74, 0);
-      if ( !byte_4C342B0 )
+      if ( !byte_4C3F89A )
       {
-        sub_1C32C20(&TerminalPramsManager_TypeInfo);
-        byte_4C342B0 = 1;
+        sub_1C37058(&TerminalPramsManager_TypeInfo);
+        byte_4C3F89A = 1;
       }
       v78 = TerminalPramsManager_TypeInfo;
       if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -6562,18 +6562,18 @@ LABEL_70:
       v78->static_fields->_PhaseCnt_k__BackingField = QuestPhase;
     }
     v79 = v74->fields.questId;
-    result = (BattleResultComponent_resultData_array *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39E2904 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    result = (BattleResultComponent_resultData_array *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39ED16C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
     if ( !result )
       goto LABEL_1211;
     MasterData_object = DataManager__GetMasterData_object_(
                           (DataManager_o *)result,
-                          (const MethodInfo_30DD3F0 *)Method_DataManager_GetMasterData_UserQuestMaster___);
+                          (const MethodInfo_30E7C58 *)Method_DataManager_GetMasterData_UserQuestMaster___);
     if ( !NetworkManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
-    if ( !byte_4C31812 )
+    if ( !byte_4C3CD62 )
     {
-      sub_1C32C20(&NetworkManager_TypeInfo);
-      byte_4C31812 = 1;
+      sub_1C37058(&NetworkManager_TypeInfo);
+      byte_4C3CD62 = 1;
     }
     result = (BattleResultComponent_resultData_array *)NetworkManager_TypeInfo;
     if ( !NetworkManager_TypeInfo->_2.cctor_finished )
@@ -6598,10 +6598,10 @@ LABEL_70:
         v84 = 1;
       if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(TerminalPramsManager_TypeInfo);
-      if ( !byte_4C34565 )
+      if ( !byte_4C3FB4F )
       {
-        sub_1C32C20(&TerminalPramsManager_TypeInfo);
-        byte_4C34565 = 1;
+        sub_1C37058(&TerminalPramsManager_TypeInfo);
+        byte_4C3FB4F = 1;
       }
       v85 = TerminalPramsManager_TypeInfo;
       if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -6610,11 +6610,11 @@ LABEL_70:
         v85 = TerminalPramsManager_TypeInfo;
       }
       v85->static_fields->_IsQuestClear_k__BackingField = v84;
-      if ( !byte_4C34DFD )
+      if ( !byte_4C403E7 )
       {
-        sub_1C32C20(&TerminalPramsManager_TypeInfo);
+        sub_1C37058(&TerminalPramsManager_TypeInfo);
         v85 = TerminalPramsManager_TypeInfo;
-        byte_4C34DFD = 1;
+        byte_4C403E7 = 1;
       }
       if ( !v85->_2.cctor_finished )
       {
@@ -6622,11 +6622,11 @@ LABEL_70:
         v85 = TerminalPramsManager_TypeInfo;
       }
       v85->static_fields->_EventUIEffectClearQuestId_k__BackingField = v79;
-      if ( !byte_4C34DFA )
+      if ( !byte_4C403E4 )
       {
-        sub_1C32C20(&TerminalPramsManager_TypeInfo);
+        sub_1C37058(&TerminalPramsManager_TypeInfo);
         v85 = TerminalPramsManager_TypeInfo;
-        byte_4C34DFA = 1;
+        byte_4C403E4 = 1;
       }
       if ( !v85->_2.cctor_finished )
       {
@@ -6634,11 +6634,11 @@ LABEL_70:
         v85 = TerminalPramsManager_TypeInfo;
       }
       v85->static_fields->_MapModelClearQuestId_k__BackingField = v79;
-      if ( !byte_4C34DFB )
+      if ( !byte_4C403E5 )
       {
-        sub_1C32C20(&TerminalPramsManager_TypeInfo);
+        sub_1C37058(&TerminalPramsManager_TypeInfo);
         v85 = TerminalPramsManager_TypeInfo;
-        byte_4C34DFB = 1;
+        byte_4C403E5 = 1;
       }
       if ( !v85->_2.cctor_finished )
       {
@@ -6647,7 +6647,7 @@ LABEL_70:
       }
       v85->static_fields->_MapModelClearPhaseCount_k__BackingField = v83;
       TerminalPramsManager__MapModelClearQuestInfo_SaveData((const MethodInfo *)v85);
-      result = (BattleResultComponent_resultData_array *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39E2904 *)Method_SingletonMonoBehaviour_AdManager__get_Instance__);
+      result = (BattleResultComponent_resultData_array *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39ED16C *)Method_SingletonMonoBehaviour_AdManager__get_Instance__);
       if ( !result )
         goto LABEL_1211;
       AdManager__TrackEvent((AdManager_o *)result, 4, 1, v79, v83, 0, 0);
@@ -6661,12 +6661,12 @@ LABEL_70:
     if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(TerminalPramsManager_TypeInfo);
     TerminalPramsManager__InitMessageWindowData((const MethodInfo *)v87);
-    result = (BattleResultComponent_resultData_array *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39E2904 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    result = (BattleResultComponent_resultData_array *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39ED16C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
     if ( !result )
       goto LABEL_1211;
     result = (BattleResultComponent_resultData_array *)DataManager__GetMasterData_object_(
                                                          (DataManager_o *)result,
-                                                         (const MethodInfo_30DD3F0 *)Method_DataManager_GetMasterData_QuestMessageMaster___);
+                                                         (const MethodInfo_30E7C58 *)Method_DataManager_GetMasterData_QuestMessageMaster___);
     if ( !result )
       goto LABEL_1211;
     ValidMessage = QuestMessageMaster__GetValidMessage((QuestMessageMaster_o *)result, v79, v83, 3, 0);
@@ -6675,10 +6675,10 @@ LABEL_70:
     {
       if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(TerminalPramsManager_TypeInfo);
-      if ( !byte_4C3359F )
+      if ( !byte_4C3EC68 )
       {
-        sub_1C32C20(&TerminalPramsManager_TypeInfo);
-        byte_4C3359F = 1;
+        sub_1C37058(&TerminalPramsManager_TypeInfo);
+        byte_4C3EC68 = 1;
       }
       v90 = TerminalPramsManager_TypeInfo;
       if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -6690,10 +6690,10 @@ LABEL_70:
     }
     if ( !v90->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(v90);
-    if ( !byte_4C34E0B )
+    if ( !byte_4C403F5 )
     {
-      sub_1C32C20(&TerminalPramsManager_TypeInfo);
-      byte_4C34E0B = 1;
+      sub_1C37058(&TerminalPramsManager_TypeInfo);
+      byte_4C403F5 = 1;
     }
     v91 = TerminalPramsManager_TypeInfo;
     if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -6705,10 +6705,10 @@ LABEL_70:
     {
       if ( !v91->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(v91);
-      if ( !byte_4C34E0B )
+      if ( !byte_4C403F5 )
       {
-        sub_1C32C20(&TerminalPramsManager_TypeInfo);
-        byte_4C34E0B = 1;
+        sub_1C37058(&TerminalPramsManager_TypeInfo);
+        byte_4C403F5 = 1;
       }
       v92 = TerminalPramsManager_TypeInfo;
       if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -6721,10 +6721,10 @@ LABEL_70:
         1,
         v89);
       TerminalPramsManager__SaveQuestReleasedFocusState(v93);
-      if ( !byte_4C349F1 )
+      if ( !byte_4C3FFDB )
       {
-        sub_1C32C20(&TerminalPramsManager_TypeInfo);
-        byte_4C349F1 = 1;
+        sub_1C37058(&TerminalPramsManager_TypeInfo);
+        byte_4C3FFDB = 1;
       }
       v91 = TerminalPramsManager_TypeInfo;
       if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -6736,10 +6736,10 @@ LABEL_70:
     }
     if ( !v91->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(v91);
-    if ( !byte_4C34BD3 )
+    if ( !byte_4C401BD )
     {
-      sub_1C32C20(&TerminalPramsManager_TypeInfo);
-      byte_4C34BD3 = 1;
+      sub_1C37058(&TerminalPramsManager_TypeInfo);
+      byte_4C401BD = 1;
     }
     result = (BattleResultComponent_resultData_array *)TerminalPramsManager_TypeInfo;
     if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -6751,10 +6751,10 @@ LABEL_70:
   }
   if ( !LODWORD(result->m_Items[24]) )
     j_il2cpp_runtime_class_init_0(result);
-  if ( !byte_4C34567 )
+  if ( !byte_4C3FB51 )
   {
-    result = (BattleResultComponent_resultData_array *)sub_1C32C20(&TerminalPramsManager_TypeInfo);
-    byte_4C34567 = 1;
+    result = (BattleResultComponent_resultData_array *)sub_1C37058(&TerminalPramsManager_TypeInfo);
+    byte_4C3FB51 = 1;
   }
   v94 = TerminalPramsManager_TypeInfo;
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -6767,12 +6767,12 @@ LABEL_70:
     if ( !v74 )
       goto LABEL_1211;
     v95 = v74->fields.questId;
-    result = (BattleResultComponent_resultData_array *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39E2904 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    result = (BattleResultComponent_resultData_array *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39ED16C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
     if ( !result )
       goto LABEL_1211;
     result = (BattleResultComponent_resultData_array *)DataManager__GetMasterData_object_(
                                                          (DataManager_o *)result,
-                                                         (const MethodInfo_30DD3F0 *)Method_DataManager_GetMasterData_WarMaster___);
+                                                         (const MethodInfo_30E7C58 *)Method_DataManager_GetMasterData_WarMaster___);
     if ( !result )
       goto LABEL_1211;
     v97 = WarMaster__getByLastQuestId((WarMaster_o *)result, v95, 0);
@@ -6787,14 +6787,14 @@ LABEL_70:
       if ( System_Linq_Enumerable__Contains_int_(
              (System_Collections_Generic_IEnumerable_TSource__o *)v98->static_fields->MainInterludeMapReturnWarIds,
              v97->fields.id,
-             (const MethodInfo_30FA3A0 *)Method_System_Linq_Enumerable_Contains_int___) )
+             (const MethodInfo_3104C08 *)Method_System_Linq_Enumerable_Contains_int___) )
       {
         if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
           j_il2cpp_runtime_class_init_0(TerminalPramsManager_TypeInfo);
-        if ( !byte_4C34568 )
+        if ( !byte_4C3FB52 )
         {
-          sub_1C32C20(&TerminalPramsManager_TypeInfo);
-          byte_4C34568 = 1;
+          sub_1C37058(&TerminalPramsManager_TypeInfo);
+          byte_4C3FB52 = 1;
         }
         v99 = TerminalPramsManager_TypeInfo;
         if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -6808,10 +6808,10 @@ LABEL_70:
     }
     if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(TerminalPramsManager_TypeInfo);
-    if ( !byte_4C34568 )
+    if ( !byte_4C3FB52 )
     {
-      sub_1C32C20(&TerminalPramsManager_TypeInfo);
-      byte_4C34568 = 1;
+      sub_1C37058(&TerminalPramsManager_TypeInfo);
+      byte_4C3FB52 = 1;
     }
     v100 = TerminalPramsManager_TypeInfo;
     if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -6825,10 +6825,10 @@ LABEL_70:
       j_il2cpp_runtime_class_init_0(TerminalPramsManager_TypeInfo);
     if ( v101 )
     {
-      if ( !byte_4C34569 )
+      if ( !byte_4C3FB53 )
       {
-        sub_1C32C20(&TerminalPramsManager_TypeInfo);
-        byte_4C34569 = 1;
+        sub_1C37058(&TerminalPramsManager_TypeInfo);
+        byte_4C3FB53 = 1;
       }
       v102 = TerminalPramsManager_TypeInfo;
       if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -6840,10 +6840,10 @@ LABEL_70:
     }
     else
     {
-      if ( !byte_4C34569 )
+      if ( !byte_4C3FB53 )
       {
-        sub_1C32C20(&TerminalPramsManager_TypeInfo);
-        byte_4C34569 = 1;
+        sub_1C37058(&TerminalPramsManager_TypeInfo);
+        byte_4C3FB53 = 1;
       }
       v102 = TerminalPramsManager_TypeInfo;
       if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -6856,10 +6856,10 @@ LABEL_70:
     v102->static_fields->_IsOrdealCallWarClear_k__BackingField = v103;
     if ( !v102->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(v102);
-    if ( !byte_4C3456A )
+    if ( !byte_4C3FB54 )
     {
-      sub_1C32C20(&TerminalPramsManager_TypeInfo);
-      byte_4C3456A = 1;
+      sub_1C37058(&TerminalPramsManager_TypeInfo);
+      byte_4C3FB54 = 1;
     }
     result = (BattleResultComponent_resultData_array *)TerminalPramsManager_TypeInfo;
     if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -6873,23 +6873,23 @@ LABEL_70:
         goto LABEL_1211;
       if ( !WarEntity__IsEvent(v97, 0) )
       {
-        result = (BattleResultComponent_resultData_array *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39E2904 *)Method_SingletonMonoBehaviour_AdManager__get_Instance__);
+        result = (BattleResultComponent_resultData_array *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39ED16C *)Method_SingletonMonoBehaviour_AdManager__get_Instance__);
         if ( !result )
           goto LABEL_1211;
         AdManager__TrackEvent((AdManager_o *)result, 6, 1, v97->fields.id, -1, 0, 0);
       }
     }
-    result = (BattleResultComponent_resultData_array *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39E2904 *)Method_SingletonMonoBehaviour_AdManager__get_Instance__);
+    result = (BattleResultComponent_resultData_array *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39ED16C *)Method_SingletonMonoBehaviour_AdManager__get_Instance__);
     if ( !result )
       goto LABEL_1211;
     AdManager__TrackEvent((AdManager_o *)result, 5, 1, v95, -1, 0, 0);
     if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(TerminalPramsManager_TypeInfo);
     TerminalPramsManager__SendOpenedQuestIdToAdManager(v95, v104);
-    if ( !byte_4C3456A )
+    if ( !byte_4C3FB54 )
     {
-      result = (BattleResultComponent_resultData_array *)sub_1C32C20(&TerminalPramsManager_TypeInfo);
-      byte_4C3456A = 1;
+      result = (BattleResultComponent_resultData_array *)sub_1C37058(&TerminalPramsManager_TypeInfo);
+      byte_4C3FB54 = 1;
     }
     v94 = TerminalPramsManager_TypeInfo;
     if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -6907,10 +6907,10 @@ LABEL_70:
       {
         if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
           j_il2cpp_runtime_class_init_0(TerminalPramsManager_TypeInfo);
-        if ( !byte_4C346C3 )
+        if ( !byte_4C3FCAD )
         {
-          sub_1C32C20(&TerminalPramsManager_TypeInfo);
-          byte_4C346C3 = 1;
+          sub_1C37058(&TerminalPramsManager_TypeInfo);
+          byte_4C3FCAD = 1;
         }
         v94 = TerminalPramsManager_TypeInfo;
         if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -6919,11 +6919,11 @@ LABEL_70:
           v94 = TerminalPramsManager_TypeInfo;
         }
         v94->static_fields->_IsTopLastIdxNextBoardRequest_k__BackingField = 1;
-        if ( !byte_4C346C4 )
+        if ( !byte_4C3FCAE )
         {
-          sub_1C32C20(&TerminalPramsManager_TypeInfo);
+          sub_1C37058(&TerminalPramsManager_TypeInfo);
           v94 = TerminalPramsManager_TypeInfo;
-          byte_4C346C4 = 1;
+          byte_4C3FCAE = 1;
         }
         if ( !v94->_2.cctor_finished )
         {
@@ -6944,7 +6944,7 @@ LABEL_70:
   static_fields = TerminalPramsManager_TypeInfo->static_fields;
   static_fields->panelEventPoint = HIDWORD((*m_Items)->m_Items[2]);
   static_fields->mResultEventPanelRewardInfos = 0;
-  sub_1C32BC4((CGThumbnailListItem_o *)&static_fields->mResultEventPanelRewardInfos, 0, v106, v107);
+  sub_1C36FFC((CGThumbnailListItem_o *)&static_fields->mResultEventPanelRewardInfos, 0, v106, v107);
   if ( !*(_DWORD *)p_max_length )
     goto LABEL_1212;
   if ( !*m_Items )
@@ -6960,7 +6960,7 @@ LABEL_70:
     }
     p_mResultEventPanelRewardInfos = (CGThumbnailListItem_o *)&v112->static_fields->mResultEventPanelRewardInfos;
     p_mResultEventPanelRewardInfos->klass = v111;
-    sub_1C32BC4(p_mResultEventPanelRewardInfos, (int32_t)v111, v109, v110);
+    sub_1C36FFC(p_mResultEventPanelRewardInfos, (int32_t)v111, v109, v110);
   }
   v114 = TerminalPramsManager_TypeInfo;
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -6970,11 +6970,11 @@ LABEL_70:
   }
   p_eventConquestInfos = (CGThumbnailListItem_o *)&v114->static_fields->eventConquestInfos;
   p_eventConquestInfos->klass = 0;
-  sub_1C32BC4(p_eventConquestInfos, 0, v109, v110);
+  sub_1C36FFC(p_eventConquestInfos, 0, v109, v110);
   TerminalPramsManager_TypeInfo->static_fields->eventConquestInfoDisp = 0;
   if ( !DataManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-  result = (BattleResultComponent_resultData_array *)DataManager__GetMaster_object_((const MethodInfo_30DD39C *)Method_DataManager_GetMaster_EventDetailMaster___);
+  result = (BattleResultComponent_resultData_array *)DataManager__GetMaster_object_((const MethodInfo_30E7C04 *)Method_DataManager_GetMaster_EventDetailMaster___);
   if ( !*(_DWORD *)p_max_length )
     goto LABEL_1212;
   if ( !*m_Items || !result )
@@ -6983,7 +6983,7 @@ LABEL_70:
                                                        (DataMasterBase_TMaster__TEntity__PKType__o *)result,
                                                        &v446,
                                                        HIDWORD((*m_Items)->bounds),
-                                                       (const MethodInfo_3396884 *)Method_DataMasterBase_EventDetailMaster__EventDetailEntity__int__TryGetEntity__);
+                                                       (const MethodInfo_33A10EC *)Method_DataMasterBase_EventDetailMaster__EventDetailEntity__int__TryGetEntity__);
   if ( !*(_DWORD *)p_max_length )
     goto LABEL_1212;
   if ( !*m_Items )
@@ -6999,7 +6999,7 @@ LABEL_70:
     }
     v120 = (CGThumbnailListItem_o *)&v119->static_fields->eventConquestInfos;
     v120->klass = v118;
-    sub_1C32BC4(v120, (int32_t)v118, v116, v117);
+    sub_1C36FFC(v120, (int32_t)v118, v116, v117);
     if ( v446 )
       Farm = EventDetailEntity__IsMakeFarm((EventDetailEntity_o *)v446, 0);
     else
@@ -7020,10 +7020,10 @@ LABEL_70:
     {
       if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(TerminalPramsManager_TypeInfo);
-      if ( !byte_4C34567 )
+      if ( !byte_4C3FB51 )
       {
-        sub_1C32C20(&TerminalPramsManager_TypeInfo);
-        byte_4C34567 = 1;
+        sub_1C37058(&TerminalPramsManager_TypeInfo);
+        byte_4C3FB51 = 1;
       }
       result = (BattleResultComponent_resultData_array *)TerminalPramsManager_TypeInfo;
       if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -7039,10 +7039,10 @@ LABEL_70:
       {
         if ( !LODWORD(result->m_Items[24]) )
           j_il2cpp_runtime_class_init_0(result);
-        if ( !byte_4C34564 )
+        if ( !byte_4C3FB4E )
         {
-          sub_1C32C20(&TerminalPramsManager_TypeInfo);
-          byte_4C34564 = 1;
+          sub_1C37058(&TerminalPramsManager_TypeInfo);
+          byte_4C3FB4E = 1;
         }
         result = (BattleResultComponent_resultData_array *)TerminalPramsManager_TypeInfo;
         if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -7068,10 +7068,10 @@ LABEL_70:
   {
     if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(TerminalPramsManager_TypeInfo);
-    if ( !byte_4C34AD4 )
+    if ( !byte_4C400BE )
     {
-      sub_1C32C20(&TerminalPramsManager_TypeInfo);
-      byte_4C34AD4 = 1;
+      sub_1C37058(&TerminalPramsManager_TypeInfo);
+      byte_4C400BE = 1;
     }
     result = (BattleResultComponent_resultData_array *)TerminalPramsManager_TypeInfo;
     if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -7080,11 +7080,11 @@ LABEL_70:
       result = (BattleResultComponent_resultData_array *)TerminalPramsManager_TypeInfo;
     }
     LOBYTE(result->m_Items[19]->fields.resultUseRewardAddItemRewardInfos) = 1;
-    if ( !byte_4C34567 )
+    if ( !byte_4C3FB51 )
     {
-      sub_1C32C20(&TerminalPramsManager_TypeInfo);
+      sub_1C37058(&TerminalPramsManager_TypeInfo);
       result = (BattleResultComponent_resultData_array *)TerminalPramsManager_TypeInfo;
-      byte_4C34567 = 1;
+      byte_4C3FB51 = 1;
     }
     if ( !LODWORD(result->m_Items[24]) )
     {
@@ -7096,12 +7096,12 @@ LABEL_70:
       if ( !v74 )
         goto LABEL_1211;
       v124 = v74->fields.questId;
-      result = (BattleResultComponent_resultData_array *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39E2904 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+      result = (BattleResultComponent_resultData_array *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39ED16C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
       if ( !result )
         goto LABEL_1211;
       result = (BattleResultComponent_resultData_array *)DataManager__GetMasterData_object_(
                                                            (DataManager_o *)result,
-                                                           (const MethodInfo_30DD3F0 *)Method_DataManager_GetMasterData_WarMaster___);
+                                                           (const MethodInfo_30E7C58 *)Method_DataManager_GetMasterData_WarMaster___);
       if ( !result )
         goto LABEL_1211;
       v125 = WarMaster__getByLastQuestId((WarMaster_o *)result, v124, 0);
@@ -7110,10 +7110,10 @@ LABEL_70:
         id = v125->fields.id;
         if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
           j_il2cpp_runtime_class_init_0(TerminalPramsManager_TypeInfo);
-        if ( !byte_4C34AD5 )
+        if ( !byte_4C400BF )
         {
-          sub_1C32C20(&TerminalPramsManager_TypeInfo);
-          byte_4C34AD5 = 1;
+          sub_1C37058(&TerminalPramsManager_TypeInfo);
+          byte_4C400BF = 1;
         }
         v127 = TerminalPramsManager_TypeInfo;
         if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -7132,21 +7132,21 @@ LABEL_70:
     v128 = TerminalPramsManager_TypeInfo;
   }
   *(_QWORD *)&v128->static_fields->clearLastBattleRaidId = -1;
-  result = (BattleResultComponent_resultData_array *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39E2904 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  result = (BattleResultComponent_resultData_array *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39ED16C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !result )
     goto LABEL_1211;
   v129 = DataManager__GetMasterData_object_(
            (DataManager_o *)result,
-           (const MethodInfo_30DD3F0 *)Method_DataManager_GetMasterData_EventRaidMaster___);
-  result = (BattleResultComponent_resultData_array *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39E2904 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+           (const MethodInfo_30E7C58 *)Method_DataManager_GetMasterData_EventRaidMaster___);
+  result = (BattleResultComponent_resultData_array *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39ED16C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !result )
     goto LABEL_1211;
   v130 = DataManager__GetMasterData_object_(
            (DataManager_o *)result,
-           (const MethodInfo_30DD3F0 *)Method_DataManager_GetMasterData_EventDetailMaster___);
+           (const MethodInfo_30E7C58 *)Method_DataManager_GetMasterData_EventDetailMaster___);
   if ( !DataManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-  result = (BattleResultComponent_resultData_array *)DataManager__GetMaster_object_((const MethodInfo_30DD39C *)Method_DataManager_GetMaster_EventUiMaster___);
+  result = (BattleResultComponent_resultData_array *)DataManager__GetMaster_object_((const MethodInfo_30E7C04 *)Method_DataManager_GetMaster_EventUiMaster___);
   if ( !*(_DWORD *)p_max_length )
     goto LABEL_1212;
   if ( !*m_Items || !v130 )
@@ -7155,7 +7155,7 @@ LABEL_70:
           (DataMasterBase_TMaster__TEntity__PKType__o *)v130,
           &v445,
           HIDWORD((*m_Items)->bounds),
-          (const MethodInfo_3396884 *)Method_DataMasterBase_EventDetailMaster__EventDetailEntity__int__TryGetEntity__) )
+          (const MethodInfo_33A10EC *)Method_DataMasterBase_EventDetailMaster__EventDetailEntity__int__TryGetEntity__) )
     goto LABEL_631;
   result = (BattleResultComponent_resultData_array *)v445;
   if ( !v445 )
@@ -7172,10 +7172,10 @@ LABEL_70:
   }
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(TerminalPramsManager_TypeInfo);
-  if ( !byte_4C34E0C )
+  if ( !byte_4C403F6 )
   {
-    sub_1C32C20(&TerminalPramsManager_TypeInfo);
-    byte_4C34E0C = 1;
+    sub_1C37058(&TerminalPramsManager_TypeInfo);
+    byte_4C403F6 = 1;
   }
   v136 = TerminalPramsManager_TypeInfo;
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -7185,7 +7185,7 @@ LABEL_70:
   }
   p_OldUserEventPoint_k__BackingField = (CGThumbnailListItem_o *)&v136->static_fields->_OldUserEventPoint_k__BackingField;
   p_OldUserEventPoint_k__BackingField->klass = v135;
-  sub_1C32BC4(p_OldUserEventPoint_k__BackingField, (int32_t)v135, v133, v134);
+  sub_1C36FFC(p_OldUserEventPoint_k__BackingField, (int32_t)v135, v133, v134);
   if ( !*(_DWORD *)p_max_length )
     goto LABEL_1212;
   if ( !*m_Items || !v129 )
@@ -7236,10 +7236,10 @@ LABEL_70:
                                  0);
         if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
           j_il2cpp_runtime_class_init_0(TerminalPramsManager_TypeInfo);
-        if ( !byte_4C31A97 )
+        if ( !byte_4C3CFE7 )
         {
-          sub_1C32C20(&TerminalPramsManager_TypeInfo);
-          byte_4C31A97 = 1;
+          sub_1C37058(&TerminalPramsManager_TypeInfo);
+          byte_4C3CFE7 = 1;
         }
         result = (BattleResultComponent_resultData_array *)TerminalPramsManager_TypeInfo;
         if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -7249,7 +7249,7 @@ LABEL_70:
         }
         if ( RaidGroupDeadQuestId == result->m_Items[19]->fields.eventId )
         {
-          result = (BattleResultComponent_resultData_array *)SingletonTemplate_object___get_Instance((const MethodInfo_39E2DF4 *)Method_SingletonTemplate_clsQuestCheck__get_Instance__);
+          result = (BattleResultComponent_resultData_array *)SingletonTemplate_object___get_Instance((const MethodInfo_39ED65C *)Method_SingletonTemplate_clsQuestCheck__get_Instance__);
           if ( !result )
             goto LABEL_1211;
           result = (BattleResultComponent_resultData_array *)clsQuestCheck__IsQuestClear(
@@ -7285,10 +7285,10 @@ LABEL_70:
           v147 = *((_DWORD *)v145->m_Items + v146);
           if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
             j_il2cpp_runtime_class_init_0(TerminalPramsManager_TypeInfo);
-          if ( !byte_4C31A97 )
+          if ( !byte_4C3CFE7 )
           {
-            sub_1C32C20(&TerminalPramsManager_TypeInfo);
-            byte_4C31A97 = 1;
+            sub_1C37058(&TerminalPramsManager_TypeInfo);
+            byte_4C3CFE7 = 1;
           }
           result = (BattleResultComponent_resultData_array *)TerminalPramsManager_TypeInfo;
           if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -7339,7 +7339,7 @@ LABEL_431:
       goto LABEL_461;
     if ( !DataManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-    result = (BattleResultComponent_resultData_array *)DataManager__GetMaster_object_((const MethodInfo_30DD39C *)Method_DataManager_GetMaster_EventUiMaster___);
+    result = (BattleResultComponent_resultData_array *)DataManager__GetMaster_object_((const MethodInfo_30E7C04 *)Method_DataManager_GetMaster_EventUiMaster___);
     if ( !*(_DWORD *)p_max_length )
       goto LABEL_1212;
     if ( !*m_Items || !result )
@@ -7357,10 +7357,10 @@ LABEL_431:
       v169 = (int32_t)(*m_Items)->m_Items[43];
       if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(TerminalPramsManager_TypeInfo);
-      if ( !byte_4C3219A )
+      if ( !byte_4C3D784 )
       {
-        sub_1C32C20(&TerminalPramsManager_TypeInfo);
-        byte_4C3219A = 1;
+        sub_1C37058(&TerminalPramsManager_TypeInfo);
+        byte_4C3D784 = 1;
       }
       v170 = TerminalPramsManager_TypeInfo;
       if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -7381,10 +7381,10 @@ LABEL_461:
         result = (BattleResultComponent_resultData_array *)TerminalPramsManager_TypeInfo;
         if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
           j_il2cpp_runtime_class_init_0(TerminalPramsManager_TypeInfo);
-        if ( !byte_4C34E0D )
+        if ( !byte_4C403F7 )
         {
-          result = (BattleResultComponent_resultData_array *)sub_1C32C20(&TerminalPramsManager_TypeInfo);
-          byte_4C34E0D = 1;
+          result = (BattleResultComponent_resultData_array *)sub_1C37058(&TerminalPramsManager_TypeInfo);
+          byte_4C403F7 = 1;
         }
         v156 = TerminalPramsManager_TypeInfo;
         if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -7411,10 +7411,10 @@ LABEL_461:
         }
         if ( !v156->_2.cctor_finished )
           j_il2cpp_runtime_class_init_0(v156);
-        if ( !byte_4C34BDB )
+        if ( !byte_4C401C5 )
         {
-          sub_1C32C20(&TerminalPramsManager_TypeInfo);
-          byte_4C34BDB = 1;
+          sub_1C37058(&TerminalPramsManager_TypeInfo);
+          byte_4C401C5 = 1;
         }
         v173 = TerminalPramsManager_TypeInfo;
         if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -7433,13 +7433,13 @@ LABEL_461:
           goto LABEL_504;
         if ( !DataManager_TypeInfo->_2.cctor_finished )
           j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-        v160 = DataManager__GetMaster_object_((const MethodInfo_30DD39C *)Method_DataManager_GetMaster_QuestPhaseMaster___);
+        v160 = DataManager__GetMaster_object_((const MethodInfo_30E7C04 *)Method_DataManager_GetMaster_QuestPhaseMaster___);
         if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
           j_il2cpp_runtime_class_init_0(TerminalPramsManager_TypeInfo);
-        if ( !byte_4C31A97 )
+        if ( !byte_4C3CFE7 )
         {
-          sub_1C32C20(&TerminalPramsManager_TypeInfo);
-          byte_4C31A97 = 1;
+          sub_1C37058(&TerminalPramsManager_TypeInfo);
+          byte_4C3CFE7 = 1;
         }
         result = (BattleResultComponent_resultData_array *)TerminalPramsManager_TypeInfo;
         if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -7448,11 +7448,11 @@ LABEL_461:
           result = (BattleResultComponent_resultData_array *)TerminalPramsManager_TypeInfo;
         }
         eventId = result->m_Items[19]->fields.eventId;
-        if ( !byte_4C31A96 )
+        if ( !byte_4C3CFE6 )
         {
-          sub_1C32C20(&TerminalPramsManager_TypeInfo);
+          sub_1C37058(&TerminalPramsManager_TypeInfo);
           result = (BattleResultComponent_resultData_array *)TerminalPramsManager_TypeInfo;
-          byte_4C31A96 = 1;
+          byte_4C3CFE6 = 1;
         }
         if ( !LODWORD(result->m_Items[24]) )
         {
@@ -7474,10 +7474,10 @@ LABEL_461:
           v162 = QuestPhaseEntity__PlayHappinessCounterEffect(v443, 0);
           if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
             j_il2cpp_runtime_class_init_0(TerminalPramsManager_TypeInfo);
-          if ( !byte_4C349CC )
+          if ( !byte_4C3FFB6 )
           {
-            sub_1C32C20(&TerminalPramsManager_TypeInfo);
-            byte_4C349CC = 1;
+            sub_1C37058(&TerminalPramsManager_TypeInfo);
+            byte_4C3FFB6 = 1;
           }
           v163 = TerminalPramsManager_TypeInfo;
           if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -7527,10 +7527,10 @@ LABEL_504:
               }
               if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
                 j_il2cpp_runtime_class_init_0(TerminalPramsManager_TypeInfo);
-              if ( !byte_4C343D3 )
+              if ( !byte_4C3F9BD )
               {
-                sub_1C32C20(&TerminalPramsManager_TypeInfo);
-                byte_4C343D3 = 1;
+                sub_1C37058(&TerminalPramsManager_TypeInfo);
+                byte_4C3F9BD = 1;
               }
               v175 = TerminalPramsManager_TypeInfo;
               if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -7540,14 +7540,14 @@ LABEL_504:
               }
               if ( !v175->static_fields->_BeforeEventSubmarineSaveData_k__BackingField )
               {
-                v176 = (Il2CppObject *)sub_1C32E6C(EventSaveData_TypeInfo);
+                v176 = (Il2CppObject *)sub_1C372A4(EventSaveData_TypeInfo);
                 System_Object___ctor(v176, 0);
                 if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
                   j_il2cpp_runtime_class_init_0(TerminalPramsManager_TypeInfo);
-                if ( !byte_4C343D4 )
+                if ( !byte_4C3F9BE )
                 {
-                  sub_1C32C20(&TerminalPramsManager_TypeInfo);
-                  byte_4C343D4 = 1;
+                  sub_1C37058(&TerminalPramsManager_TypeInfo);
+                  byte_4C3F9BE = 1;
                 }
                 v179 = TerminalPramsManager_TypeInfo;
                 if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -7557,15 +7557,15 @@ LABEL_504:
                 }
                 p_BeforeEventSubmarineSaveData_k__BackingField = (CGThumbnailListItem_o *)&v179->static_fields->_BeforeEventSubmarineSaveData_k__BackingField;
                 p_BeforeEventSubmarineSaveData_k__BackingField->klass = (CGThumbnailListItem_c *)v176;
-                sub_1C32BC4(p_BeforeEventSubmarineSaveData_k__BackingField, (int32_t)v176, v177, v178);
+                sub_1C36FFC(p_BeforeEventSubmarineSaveData_k__BackingField, (int32_t)v176, v177, v178);
                 v175 = TerminalPramsManager_TypeInfo;
               }
               if ( !v175->_2.cctor_finished )
                 j_il2cpp_runtime_class_init_0(v175);
-              if ( !byte_4C343D3 )
+              if ( !byte_4C3F9BD )
               {
-                sub_1C32C20(&TerminalPramsManager_TypeInfo);
-                byte_4C343D3 = 1;
+                sub_1C37058(&TerminalPramsManager_TypeInfo);
+                byte_4C3F9BD = 1;
               }
               result = (BattleResultComponent_resultData_array *)TerminalPramsManager_TypeInfo;
               if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -7577,11 +7577,11 @@ LABEL_504:
               if ( !rewardBonus )
                 goto LABEL_1211;
               rewardBonus->fields.animationId = *(_DWORD *)(v168 + 24);
-              if ( !byte_4C343D3 )
+              if ( !byte_4C3F9BD )
               {
-                sub_1C32C20(&TerminalPramsManager_TypeInfo);
+                sub_1C37058(&TerminalPramsManager_TypeInfo);
                 result = (BattleResultComponent_resultData_array *)TerminalPramsManager_TypeInfo;
-                byte_4C343D3 = 1;
+                byte_4C3F9BD = 1;
               }
               if ( !LODWORD(result->m_Items[24]) )
               {
@@ -7606,12 +7606,12 @@ LABEL_504:
                 v185 = *v184;
                 v186 = v183 <= 2 ? (System_String_o **)&StringLiteral_1122/*"0"*/ : (System_String_o **)&result->m_Items[2];
                 v187 = *v186;
-                v188 = v183 <= 3 ? (System_String_o **)&StringLiteral_6640/*"False"*/ : (System_String_o **)&result->m_Items[3];
+                v188 = v183 <= 3 ? (System_String_o **)&StringLiteral_6641/*"False"*/ : (System_String_o **)&result->m_Items[3];
               }
               else
               {
                 v187 = (System_String_o *)StringLiteral_1122/*"0"*/;
-                v188 = (System_String_o **)&StringLiteral_6640/*"False"*/;
+                v188 = (System_String_o **)&StringLiteral_6641/*"False"*/;
                 v185 = StringLiteral_1122/*"0"*/;
               }
               if ( !v445 )
@@ -7641,7 +7641,7 @@ LABEL_504:
                   v192 = TerminalPramsManager___c_TypeInfo;
                 }
                 v195 = (Il2CppObject *)v192->static_fields->__9;
-                _9__724_0 = (System_Predicate_object__o *)sub_1C32E6C(System_Predicate_QuestReleaseEntity__TypeInfo);
+                _9__724_0 = (System_Predicate_object__o *)sub_1C372A4(System_Predicate_QuestReleaseEntity__TypeInfo);
                 System_Predicate_object____ctor(
                   _9__724_0,
                   v195,
@@ -7649,7 +7649,7 @@ LABEL_504:
                   0);
                 v196 = TerminalPramsManager___c_TypeInfo->static_fields;
                 v196->__9__724_0 = (struct System_Predicate_QuestReleaseEntity__o *)_9__724_0;
-                sub_1C32BC4((CGThumbnailListItem_o *)&v196->__9__724_0, (int32_t)_9__724_0, v197, v198);
+                sub_1C36FFC((CGThumbnailListItem_o *)&v196->__9__724_0, (int32_t)_9__724_0, v197, v198);
                 v187 = v194;
               }
               if ( !v191 )
@@ -7658,14 +7658,14 @@ LABEL_504:
               if ( System_Collections_Generic_List_object___Find(
                      v191,
                      (System_Predicate_T__o *)_9__724_0,
-                     (const MethodInfo_3798E24 *)Method_System_Collections_Generic_List_QuestReleaseEntity__Find__) )
+                     (const MethodInfo_37A368C *)Method_System_Collections_Generic_List_QuestReleaseEntity__Find__) )
               {
                 if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
                   j_il2cpp_runtime_class_init_0(TerminalPramsManager_TypeInfo);
-                if ( !byte_4C31A97 )
+                if ( !byte_4C3CFE7 )
                 {
-                  sub_1C32C20(&TerminalPramsManager_TypeInfo);
-                  byte_4C31A97 = 1;
+                  sub_1C37058(&TerminalPramsManager_TypeInfo);
+                  byte_4C3CFE7 = 1;
                 }
                 v200 = TerminalPramsManager_TypeInfo;
                 if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -7678,10 +7678,10 @@ LABEL_504:
               }
               if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
                 j_il2cpp_runtime_class_init_0(TerminalPramsManager_TypeInfo);
-              if ( !byte_4C343D3 )
+              if ( !byte_4C3F9BD )
               {
-                sub_1C32C20(&TerminalPramsManager_TypeInfo);
-                byte_4C343D3 = 1;
+                sub_1C37058(&TerminalPramsManager_TypeInfo);
+                byte_4C3F9BD = 1;
               }
               v201 = TerminalPramsManager_TypeInfo;
               if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -7693,7 +7693,7 @@ LABEL_504:
               v203 = System_Int64__ToString(v168 + 32, 0);
               if ( !TitleInfoEventSubmarineStatusComponent_TypeInfo->_2.cctor_finished )
                 j_il2cpp_runtime_class_init_0(TitleInfoEventSubmarineStatusComponent_TypeInfo);
-              result = (BattleResultComponent_resultData_array *)TitleInfoEventSubmarineStatusComponent__CreateSaveData_39703332(
+              result = (BattleResultComponent_resultData_array *)TitleInfoEventSubmarineStatusComponent__CreateSaveData_39801392(
                                                                    v203,
                                                                    v199,
                                                                    v187,
@@ -7702,7 +7702,7 @@ LABEL_504:
               if ( !BeforeEventSubmarineSaveData_k__BackingField )
                 goto LABEL_1211;
               BeforeEventSubmarineSaveData_k__BackingField->fields.value = (struct System_String_o *)result;
-              sub_1C32BC4(
+              sub_1C36FFC(
                 (CGThumbnailListItem_o *)&BeforeEventSubmarineSaveData_k__BackingField->fields.value,
                 (int32_t)result,
                 v204,
@@ -7711,10 +7711,10 @@ LABEL_504:
 LABEL_612:
             if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
               j_il2cpp_runtime_class_init_0(TerminalPramsManager_TypeInfo);
-            if ( !byte_4C31A97 )
+            if ( !byte_4C3CFE7 )
             {
-              sub_1C32C20(&TerminalPramsManager_TypeInfo);
-              byte_4C31A97 = 1;
+              sub_1C37058(&TerminalPramsManager_TypeInfo);
+              byte_4C3CFE7 = 1;
             }
             v206 = TerminalPramsManager_TypeInfo;
             if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -7723,11 +7723,11 @@ LABEL_612:
               v206 = TerminalPramsManager_TypeInfo;
             }
             v207 = v206->static_fields->_QuestId_k__BackingField;
-            if ( !byte_4C31A96 )
+            if ( !byte_4C3CFE6 )
             {
-              sub_1C32C20(&TerminalPramsManager_TypeInfo);
+              sub_1C37058(&TerminalPramsManager_TypeInfo);
               v206 = TerminalPramsManager_TypeInfo;
-              byte_4C31A96 = 1;
+              byte_4C3CFE6 = 1;
             }
             if ( !v206->_2.cctor_finished )
             {
@@ -7735,11 +7735,11 @@ LABEL_612:
               v206 = TerminalPramsManager_TypeInfo;
             }
             PhaseCnt_k__BackingField = v206->static_fields->_PhaseCnt_k__BackingField;
-            if ( !byte_4C34567 )
+            if ( !byte_4C3FB51 )
             {
-              sub_1C32C20(&TerminalPramsManager_TypeInfo);
+              sub_1C37058(&TerminalPramsManager_TypeInfo);
               v206 = TerminalPramsManager_TypeInfo;
-              byte_4C34567 = 1;
+              byte_4C3FB51 = 1;
             }
             if ( !v206->_2.cctor_finished )
             {
@@ -7747,11 +7747,11 @@ LABEL_612:
               v206 = TerminalPramsManager_TypeInfo;
             }
             IsQuestClear_k__BackingField = v206->static_fields->_IsQuestClear_k__BackingField;
-            if ( !byte_4C34564 )
+            if ( !byte_4C3FB4E )
             {
-              sub_1C32C20(&TerminalPramsManager_TypeInfo);
+              sub_1C37058(&TerminalPramsManager_TypeInfo);
               v206 = TerminalPramsManager_TypeInfo;
-              byte_4C34564 = 1;
+              byte_4C3FB4E = 1;
             }
             if ( !v206->_2.cctor_finished )
             {
@@ -7774,10 +7774,10 @@ LABEL_612:
             {
               if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
                 j_il2cpp_runtime_class_init_0(TerminalPramsManager_TypeInfo);
-              if ( !byte_4C34E00 )
+              if ( !byte_4C403EA )
               {
-                sub_1C32C20(&TerminalPramsManager_TypeInfo);
-                byte_4C34E00 = 1;
+                sub_1C37058(&TerminalPramsManager_TypeInfo);
+                byte_4C403EA = 1;
               }
               v174 = TerminalPramsManager_TypeInfo;
               if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -7825,10 +7825,10 @@ LABEL_612:
                           0);
       if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(TerminalPramsManager_TypeInfo);
-      if ( !byte_4C31A97 )
+      if ( !byte_4C3CFE7 )
       {
-        sub_1C32C20(&TerminalPramsManager_TypeInfo);
-        byte_4C31A97 = 1;
+        sub_1C37058(&TerminalPramsManager_TypeInfo);
+        byte_4C3CFE7 = 1;
       }
       result = (BattleResultComponent_resultData_array *)TerminalPramsManager_TypeInfo;
       if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -7852,7 +7852,7 @@ LABEL_612:
       v155 = TerminalPramsManager_TypeInfo->static_fields;
     }
     v155->clearBattleRaidId = v164;
-    result = (BattleResultComponent_resultData_array *)SingletonTemplate_object___get_Instance((const MethodInfo_39E2DF4 *)Method_SingletonTemplate_clsQuestCheck__get_Instance__);
+    result = (BattleResultComponent_resultData_array *)SingletonTemplate_object___get_Instance((const MethodInfo_39ED65C *)Method_SingletonTemplate_clsQuestCheck__get_Instance__);
     if ( !result )
       goto LABEL_1211;
     if ( clsQuestCheck__IsQuestClear((clsQuestCheck_o *)result, RaidDeadQuestId, 0, 0) )
@@ -7879,13 +7879,13 @@ LABEL_631:
   {
     if ( !DataManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-    v211 = DataManager__GetMaster_object_((const MethodInfo_30DD39C *)Method_DataManager_GetMaster_WarMaster___);
+    v211 = DataManager__GetMaster_object_((const MethodInfo_30E7C04 *)Method_DataManager_GetMaster_WarMaster___);
     if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(TerminalPramsManager_TypeInfo);
-    if ( !byte_4C31DAD )
+    if ( !byte_4C3D397 )
     {
-      sub_1C32C20(&TerminalPramsManager_TypeInfo);
-      byte_4C31DAD = 1;
+      sub_1C37058(&TerminalPramsManager_TypeInfo);
+      byte_4C3D397 = 1;
     }
     result = (BattleResultComponent_resultData_array *)TerminalPramsManager_TypeInfo;
     if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -7899,7 +7899,7 @@ LABEL_631:
            (DataMasterBase_TMaster__TEntity__PKType__o *)v211,
            &v442,
            HIDWORD(result->m_Items[19]->klass),
-           (const MethodInfo_3396884 *)Method_DataMasterBase_WarMaster__WarEntity__int__TryGetEntity__) )
+           (const MethodInfo_33A10EC *)Method_DataMasterBase_WarMaster__WarEntity__int__TryGetEntity__) )
     {
       result = (BattleResultComponent_resultData_array *)v442;
       if ( !v442 )
@@ -7923,10 +7923,10 @@ LABEL_631:
   }
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(TerminalPramsManager_TypeInfo);
-  if ( !byte_4C349D7 )
+  if ( !byte_4C3FFC1 )
   {
-    sub_1C32C20(&TerminalPramsManager_TypeInfo);
-    byte_4C349D7 = 1;
+    sub_1C37058(&TerminalPramsManager_TypeInfo);
+    byte_4C3FFC1 = 1;
   }
   v212 = TerminalPramsManager_TypeInfo;
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -7935,11 +7935,11 @@ LABEL_631:
     v212 = TerminalPramsManager_TypeInfo;
   }
   v212->static_fields->_IsWarBoardClear_k__BackingField = 0;
-  if ( !byte_4C31A97 )
+  if ( !byte_4C3CFE7 )
   {
-    sub_1C32C20(&TerminalPramsManager_TypeInfo);
+    sub_1C37058(&TerminalPramsManager_TypeInfo);
     v212 = TerminalPramsManager_TypeInfo;
-    byte_4C31A97 = 1;
+    byte_4C3CFE7 = 1;
   }
   if ( !v212->_2.cctor_finished )
   {
@@ -7948,18 +7948,18 @@ LABEL_631:
   }
   if ( v212->static_fields->_QuestId_k__BackingField >= 1 )
   {
-    result = (BattleResultComponent_resultData_array *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39E2904 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    result = (BattleResultComponent_resultData_array *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39ED16C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
     if ( !result )
       goto LABEL_1211;
     v213 = DataManager__GetMasterData_object_(
              (DataManager_o *)result,
-             (const MethodInfo_30DD3F0 *)Method_DataManager_GetMasterData_QuestMaster___);
+             (const MethodInfo_30E7C58 *)Method_DataManager_GetMasterData_QuestMaster___);
     if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(TerminalPramsManager_TypeInfo);
-    if ( !byte_4C31A97 )
+    if ( !byte_4C3CFE7 )
     {
-      sub_1C32C20(&TerminalPramsManager_TypeInfo);
-      byte_4C31A97 = 1;
+      sub_1C37058(&TerminalPramsManager_TypeInfo);
+      byte_4C3CFE7 = 1;
     }
     result = (BattleResultComponent_resultData_array *)TerminalPramsManager_TypeInfo;
     if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -7976,10 +7976,10 @@ LABEL_631:
     if ( !result )
       goto LABEL_1211;
     v214 = (int)result->m_Items[1];
-    if ( !byte_4C349D7 )
+    if ( !byte_4C3FFC1 )
     {
-      sub_1C32C20(&TerminalPramsManager_TypeInfo);
-      byte_4C349D7 = 1;
+      sub_1C37058(&TerminalPramsManager_TypeInfo);
+      byte_4C3FFC1 = 1;
     }
     v212 = TerminalPramsManager_TypeInfo;
     if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -7991,10 +7991,10 @@ LABEL_631:
   }
   if ( !v212->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(v212);
-  if ( !byte_4C34AD3 )
+  if ( !byte_4C400BD )
   {
-    sub_1C32C20(&TerminalPramsManager_TypeInfo);
-    byte_4C34AD3 = 1;
+    sub_1C37058(&TerminalPramsManager_TypeInfo);
+    byte_4C400BD = 1;
   }
   v215 = TerminalPramsManager_TypeInfo;
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -8004,7 +8004,7 @@ LABEL_631:
   }
   p_questClearCostumeRelease_k__BackingField = (CGThumbnailListItem_o *)&v215->static_fields->_questClearCostumeRelease_k__BackingField;
   p_questClearCostumeRelease_k__BackingField->klass = 0;
-  sub_1C32BC4(p_questClearCostumeRelease_k__BackingField, 0, v131, v132);
+  sub_1C36FFC(p_questClearCostumeRelease_k__BackingField, 0, v131, v132);
   if ( !*(_DWORD *)p_max_length )
     goto LABEL_1212;
   if ( !*m_Items )
@@ -8014,10 +8014,10 @@ LABEL_631:
   {
     if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(TerminalPramsManager_TypeInfo);
-    if ( !byte_4C349C8 )
+    if ( !byte_4C3FFB2 )
     {
-      sub_1C32C20(&TerminalPramsManager_TypeInfo);
-      byte_4C349C8 = 1;
+      sub_1C37058(&TerminalPramsManager_TypeInfo);
+      byte_4C3FFB2 = 1;
     }
     result = (BattleResultComponent_resultData_array *)TerminalPramsManager_TypeInfo;
     if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -8034,10 +8034,10 @@ LABEL_631:
       v220 = (CGThumbnailListItem_c *)(*m_Items)->m_Items[22];
       if ( !LODWORD(result->m_Items[24]) )
         j_il2cpp_runtime_class_init_0(result);
-      if ( !byte_4C34AD3 )
+      if ( !byte_4C400BD )
       {
-        sub_1C32C20(&TerminalPramsManager_TypeInfo);
-        byte_4C34AD3 = 1;
+        sub_1C37058(&TerminalPramsManager_TypeInfo);
+        byte_4C400BD = 1;
       }
       v221 = TerminalPramsManager_TypeInfo;
       if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -8047,15 +8047,15 @@ LABEL_631:
       }
       v222 = (CGThumbnailListItem_o *)&v221->static_fields->_questClearCostumeRelease_k__BackingField;
       v222->klass = v220;
-      sub_1C32BC4(v222, (int32_t)v220, v217, v218);
+      sub_1C36FFC(v222, (int32_t)v220, v217, v218);
     }
   }
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(TerminalPramsManager_TypeInfo);
-  if ( !byte_4C349D5 )
+  if ( !byte_4C3FFBF )
   {
-    sub_1C32C20(&TerminalPramsManager_TypeInfo);
-    byte_4C349D5 = 1;
+    sub_1C37058(&TerminalPramsManager_TypeInfo);
+    byte_4C3FFBF = 1;
   }
   v223 = TerminalPramsManager_TypeInfo;
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -8065,7 +8065,7 @@ LABEL_631:
   }
   p_questClearCostumeGet_k__BackingField = (CGThumbnailListItem_o *)&v223->static_fields->_questClearCostumeGet_k__BackingField;
   p_questClearCostumeGet_k__BackingField->klass = 0;
-  sub_1C32BC4(p_questClearCostumeGet_k__BackingField, 0, v217, v218);
+  sub_1C36FFC(p_questClearCostumeGet_k__BackingField, 0, v217, v218);
   if ( !*(_DWORD *)p_max_length )
     goto LABEL_1212;
   if ( !*m_Items )
@@ -8075,10 +8075,10 @@ LABEL_631:
   {
     if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(TerminalPramsManager_TypeInfo);
-    if ( !byte_4C349D5 )
+    if ( !byte_4C3FFBF )
     {
-      sub_1C32C20(&TerminalPramsManager_TypeInfo);
-      byte_4C349D5 = 1;
+      sub_1C37058(&TerminalPramsManager_TypeInfo);
+      byte_4C3FFBF = 1;
     }
     v228 = TerminalPramsManager_TypeInfo;
     if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -8088,14 +8088,14 @@ LABEL_631:
     }
     v229 = (CGThumbnailListItem_o *)&v228->static_fields->_questClearCostumeGet_k__BackingField;
     v229->klass = v227;
-    sub_1C32BC4(v229, (int32_t)v227, v225, v226);
+    sub_1C36FFC(v229, (int32_t)v227, v225, v226);
   }
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(TerminalPramsManager_TypeInfo);
-  if ( !byte_4C34E0E )
+  if ( !byte_4C403F8 )
   {
-    sub_1C32C20(&TerminalPramsManager_TypeInfo);
-    byte_4C34E0E = 1;
+    sub_1C37058(&TerminalPramsManager_TypeInfo);
+    byte_4C403F8 = 1;
   }
   v230 = TerminalPramsManager_TypeInfo;
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -8105,11 +8105,11 @@ LABEL_631:
   }
   p_eventPointWinReward_k__BackingField = (CGThumbnailListItem_o *)&v230->static_fields->_eventPointWinReward_k__BackingField;
   p_eventPointWinReward_k__BackingField->klass = 0;
-  sub_1C32BC4(p_eventPointWinReward_k__BackingField, 0, v225, v226);
-  if ( !byte_4C34E0F )
+  sub_1C36FFC(p_eventPointWinReward_k__BackingField, 0, v225, v226);
+  if ( !byte_4C403F9 )
   {
-    sub_1C32C20(&TerminalPramsManager_TypeInfo);
-    byte_4C34E0F = 1;
+    sub_1C37058(&TerminalPramsManager_TypeInfo);
+    byte_4C403F9 = 1;
   }
   v234 = TerminalPramsManager_TypeInfo;
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -8121,12 +8121,12 @@ LABEL_631:
   if ( v74 && v445 && HIDWORD(v445[9].klass) == 4 )
   {
     v235 = v74->fields.questId;
-    result = (BattleResultComponent_resultData_array *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39E2904 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    result = (BattleResultComponent_resultData_array *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39ED16C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
     if ( !result )
       goto LABEL_1211;
     result = (BattleResultComponent_resultData_array *)DataManager__GetMasterData_object_(
                                                          (DataManager_o *)result,
-                                                         (const MethodInfo_30DD3F0 *)Method_DataManager_GetMasterData_QuestGroupMaster___);
+                                                         (const MethodInfo_30E7C58 *)Method_DataManager_GetMasterData_QuestGroupMaster___);
     if ( !result )
       goto LABEL_1211;
     v236 = (QuestGroupMaster_o *)result;
@@ -8140,10 +8140,10 @@ LABEL_631:
     }
     v238->static_fields->joinGroupId = v239;
     v240 = QuestGroupMaster__GetGroupId(v236, v235, 3, 0);
-    if ( !byte_4C34567 )
+    if ( !byte_4C3FB51 )
     {
-      sub_1C32C20(&TerminalPramsManager_TypeInfo);
-      byte_4C34567 = 1;
+      sub_1C37058(&TerminalPramsManager_TypeInfo);
+      byte_4C3FB51 = 1;
     }
     result = (BattleResultComponent_resultData_array *)TerminalPramsManager_TypeInfo;
     if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -8153,18 +8153,18 @@ LABEL_631:
     }
     if ( v240 >= 1 && BYTE5(result->m_Items[19]->fields.oldUserGame) )
     {
-      result = (BattleResultComponent_resultData_array *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39E2904 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+      result = (BattleResultComponent_resultData_array *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39ED16C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
       if ( !result )
         goto LABEL_1211;
       v241 = DataManager__GetMasterData_object_(
                (DataManager_o *)result,
-               (const MethodInfo_30DD3F0 *)Method_DataManager_GetMasterData_QuestReleaseMaster___);
-      result = (BattleResultComponent_resultData_array *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39E2904 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+               (const MethodInfo_30E7C58 *)Method_DataManager_GetMasterData_QuestReleaseMaster___);
+      result = (BattleResultComponent_resultData_array *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39ED16C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
       if ( !result )
         goto LABEL_1211;
       result = (BattleResultComponent_resultData_array *)DataManager__GetMasterData_object_(
                                                            (DataManager_o *)result,
-                                                           (const MethodInfo_30DD3F0 *)Method_DataManager_GetMasterData_EventPointMaster___);
+                                                           (const MethodInfo_30E7C58 *)Method_DataManager_GetMasterData_EventPointMaster___);
       if ( !*(_DWORD *)p_max_length )
         goto LABEL_1212;
       if ( !*m_Items || !result )
@@ -8190,10 +8190,10 @@ LABEL_631:
                v235,
                (unsigned __int8)result & 1,
                0);
-      if ( !byte_4C34E0F )
+      if ( !byte_4C403F9 )
       {
-        sub_1C32C20(&TerminalPramsManager_TypeInfo);
-        byte_4C34E0F = 1;
+        sub_1C37058(&TerminalPramsManager_TypeInfo);
+        byte_4C403F9 = 1;
       }
       result = (BattleResultComponent_resultData_array *)TerminalPramsManager_TypeInfo;
       if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -8202,11 +8202,11 @@ LABEL_631:
         result = (BattleResultComponent_resultData_array *)TerminalPramsManager_TypeInfo;
       }
       HIDWORD(result->m_Items[19]->fields.warClearReward) = v243;
-      if ( !byte_4C34E10 )
+      if ( !byte_4C403FA )
       {
-        sub_1C32C20(&TerminalPramsManager_TypeInfo);
+        sub_1C37058(&TerminalPramsManager_TypeInfo);
         result = (BattleResultComponent_resultData_array *)TerminalPramsManager_TypeInfo;
-        byte_4C34E10 = 1;
+        byte_4C403FA = 1;
       }
       if ( !LODWORD(result->m_Items[24]) )
       {
@@ -8240,10 +8240,10 @@ LABEL_631:
         v247 = (CGThumbnailListItem_c *)v245->fields.eventEndMessage;
         if ( !LODWORD(result->m_Items[24]) )
           j_il2cpp_runtime_class_init_0(result);
-        if ( !byte_4C34E0E )
+        if ( !byte_4C403F8 )
         {
-          sub_1C32C20(&TerminalPramsManager_TypeInfo);
-          byte_4C34E0E = 1;
+          sub_1C37058(&TerminalPramsManager_TypeInfo);
+          byte_4C403F8 = 1;
         }
         v248 = TerminalPramsManager_TypeInfo;
         if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -8253,7 +8253,7 @@ LABEL_631:
         }
         v249 = (CGThumbnailListItem_o *)&v248->static_fields->_eventPointWinReward_k__BackingField;
         v249->klass = v247;
-        sub_1C32BC4(v249, (int32_t)v247, v232, v233);
+        sub_1C36FFC(v249, (int32_t)v247, v232, v233);
       }
     }
   }
@@ -8262,10 +8262,10 @@ LABEL_631:
     v250 = v74->fields.questId;
     if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(TerminalPramsManager_TypeInfo);
-    if ( !byte_4C34E11 )
+    if ( !byte_4C403FB )
     {
-      sub_1C32C20(&TerminalPramsManager_TypeInfo);
-      byte_4C34E11 = 1;
+      sub_1C37058(&TerminalPramsManager_TypeInfo);
+      byte_4C403FB = 1;
     }
     v251 = TerminalPramsManager_TypeInfo;
     if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -8277,10 +8277,10 @@ LABEL_631:
   }
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(TerminalPramsManager_TypeInfo);
-  if ( !byte_4C34BD6 )
+  if ( !byte_4C401C0 )
   {
-    sub_1C32C20(&TerminalPramsManager_TypeInfo);
-    byte_4C34BD6 = 1;
+    sub_1C37058(&TerminalPramsManager_TypeInfo);
+    byte_4C401C0 = 1;
   }
   v252 = TerminalPramsManager_TypeInfo;
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -8290,7 +8290,7 @@ LABEL_631:
   }
   p_eventRaceBoost_k__BackingField = (CGThumbnailListItem_o *)&v252->static_fields->_eventRaceBoost_k__BackingField;
   p_eventRaceBoost_k__BackingField->klass = 0;
-  sub_1C32BC4(p_eventRaceBoost_k__BackingField, 0, v232, v233);
+  sub_1C36FFC(p_eventRaceBoost_k__BackingField, 0, v232, v233);
   v256 = *p_max_length;
   if ( !(unsigned int)*p_max_length )
     goto LABEL_1212;
@@ -8301,10 +8301,10 @@ LABEL_631:
   {
     if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(TerminalPramsManager_TypeInfo);
-    if ( !byte_4C34BD6 )
+    if ( !byte_4C401C0 )
     {
-      sub_1C32C20(&TerminalPramsManager_TypeInfo);
-      byte_4C34BD6 = 1;
+      sub_1C37058(&TerminalPramsManager_TypeInfo);
+      byte_4C401C0 = 1;
     }
     v258 = TerminalPramsManager_TypeInfo;
     if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -8314,11 +8314,11 @@ LABEL_631:
     }
     v259 = (CGThumbnailListItem_o *)&v258->static_fields->_eventRaceBoost_k__BackingField;
     v259->klass = (CGThumbnailListItem_c *)v257;
-    sub_1C32BC4(v259, (int32_t)v257, v254, v255);
-    if ( !byte_4C34BBD )
+    sub_1C36FFC(v259, (int32_t)v257, v254, v255);
+    if ( !byte_4C401A7 )
     {
-      sub_1C32C20(&TerminalPramsManager_TypeInfo);
-      byte_4C34BBD = 1;
+      sub_1C37058(&TerminalPramsManager_TypeInfo);
+      byte_4C401A7 = 1;
     }
     result = (BattleResultComponent_resultData_array *)TerminalPramsManager_TypeInfo;
     if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -8327,11 +8327,11 @@ LABEL_631:
       result = (BattleResultComponent_resultData_array *)TerminalPramsManager_TypeInfo;
     }
     v260 = *(_QWORD *)&result->m_Items[19]->fields.followerType;
-    if ( !byte_4C31A97 )
+    if ( !byte_4C3CFE7 )
     {
-      sub_1C32C20(&TerminalPramsManager_TypeInfo);
+      sub_1C37058(&TerminalPramsManager_TypeInfo);
       result = (BattleResultComponent_resultData_array *)TerminalPramsManager_TypeInfo;
-      byte_4C31A97 = 1;
+      byte_4C3CFE7 = 1;
     }
     if ( !LODWORD(result->m_Items[24]) )
     {
@@ -8362,10 +8362,10 @@ LABEL_631:
       {
         if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
           j_il2cpp_runtime_class_init_0(TerminalPramsManager_TypeInfo);
-        if ( !byte_4C34E12 )
+        if ( !byte_4C403FC )
         {
-          sub_1C32C20(&TerminalPramsManager_TypeInfo);
-          byte_4C34E12 = 1;
+          sub_1C37058(&TerminalPramsManager_TypeInfo);
+          byte_4C403FC = 1;
         }
         v264 = TerminalPramsManager_TypeInfo;
         if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -8375,16 +8375,16 @@ LABEL_631:
         }
         p_eventTowerReward_k__BackingField = (CGThumbnailListItem_o *)&v264->static_fields->_eventTowerReward_k__BackingField;
         p_eventTowerReward_k__BackingField->klass = (CGThumbnailListItem_c *)v263;
-        sub_1C32BC4(p_eventTowerReward_k__BackingField, (int32_t)v263, v254, v255);
+        sub_1C36FFC(p_eventTowerReward_k__BackingField, (int32_t)v263, v254, v255);
         if ( !*(_DWORD *)p_max_length )
           goto LABEL_1212;
         if ( !*m_Items )
           goto LABEL_1211;
         v268 = (CGThumbnailListItem_c *)(*m_Items)->m_Items[25];
-        if ( !byte_4C34E13 )
+        if ( !byte_4C403FD )
         {
-          sub_1C32C20(&TerminalPramsManager_TypeInfo);
-          byte_4C34E13 = 1;
+          sub_1C37058(&TerminalPramsManager_TypeInfo);
+          byte_4C403FD = 1;
         }
         v269 = TerminalPramsManager_TypeInfo;
         if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -8394,7 +8394,7 @@ LABEL_631:
         }
         p_resultEventTowerRewardInfo_k__BackingField = (CGThumbnailListItem_o *)&v269->static_fields->_resultEventTowerRewardInfo_k__BackingField;
         p_resultEventTowerRewardInfo_k__BackingField->klass = v268;
-        sub_1C32BC4(p_resultEventTowerRewardInfo_k__BackingField, (int32_t)v268, v266, v267);
+        sub_1C36FFC(p_resultEventTowerRewardInfo_k__BackingField, (int32_t)v268, v266, v267);
         v256 = *p_max_length;
       }
     }
@@ -8408,10 +8408,10 @@ LABEL_631:
   {
     if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(TerminalPramsManager_TypeInfo);
-    if ( !byte_4C349CF )
+    if ( !byte_4C3FFB9 )
     {
-      sub_1C32C20(&TerminalPramsManager_TypeInfo);
-      byte_4C349CF = 1;
+      sub_1C37058(&TerminalPramsManager_TypeInfo);
+      byte_4C3FFB9 = 1;
     }
     v272 = TerminalPramsManager_TypeInfo;
     if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -8421,7 +8421,7 @@ LABEL_631:
     }
     p_resultBoostItemRewardInfo_k__BackingField = (CGThumbnailListItem_o *)&v272->static_fields->_resultBoostItemRewardInfo_k__BackingField;
     p_resultBoostItemRewardInfo_k__BackingField->klass = v271;
-    sub_1C32BC4(p_resultBoostItemRewardInfo_k__BackingField, (int32_t)v271, v254, v255);
+    sub_1C36FFC(p_resultBoostItemRewardInfo_k__BackingField, (int32_t)v271, v254, v255);
     v256 = *p_max_length;
   }
   if ( !(_DWORD)v256 )
@@ -8433,10 +8433,10 @@ LABEL_631:
   {
     if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(TerminalPramsManager_TypeInfo);
-    if ( !byte_4C349D0 )
+    if ( !byte_4C3FFBA )
     {
-      sub_1C32C20(&TerminalPramsManager_TypeInfo);
-      byte_4C349D0 = 1;
+      sub_1C37058(&TerminalPramsManager_TypeInfo);
+      byte_4C3FFBA = 1;
     }
     v275 = TerminalPramsManager_TypeInfo;
     if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -8446,7 +8446,7 @@ LABEL_631:
     }
     p_resultEventBoardGameTokenRewardInfo_k__BackingField = (CGThumbnailListItem_o *)&v275->static_fields->_resultEventBoardGameTokenRewardInfo_k__BackingField;
     p_resultEventBoardGameTokenRewardInfo_k__BackingField->klass = v274;
-    sub_1C32BC4(p_resultEventBoardGameTokenRewardInfo_k__BackingField, (int32_t)v274, v254, v255);
+    sub_1C36FFC(p_resultEventBoardGameTokenRewardInfo_k__BackingField, (int32_t)v274, v254, v255);
     v256 = *p_max_length;
   }
   if ( !(_DWORD)v256 )
@@ -8458,10 +8458,10 @@ LABEL_631:
   {
     if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(TerminalPramsManager_TypeInfo);
-    if ( !byte_4C349DA )
+    if ( !byte_4C3FFC4 )
     {
-      sub_1C32C20(&TerminalPramsManager_TypeInfo);
-      byte_4C349DA = 1;
+      sub_1C37058(&TerminalPramsManager_TypeInfo);
+      byte_4C3FFC4 = 1;
     }
     v278 = TerminalPramsManager_TypeInfo;
     if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -8471,14 +8471,14 @@ LABEL_631:
     }
     p_warClearReward_k__BackingField = (CGThumbnailListItem_o *)&v278->static_fields->_warClearReward_k__BackingField;
     p_warClearReward_k__BackingField->klass = v277;
-    sub_1C32BC4(p_warClearReward_k__BackingField, (int32_t)v277, v254, v255);
+    sub_1C36FFC(p_warClearReward_k__BackingField, (int32_t)v277, v254, v255);
   }
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(TerminalPramsManager_TypeInfo);
-  if ( !byte_4C34E14 )
+  if ( !byte_4C403FE )
   {
-    sub_1C32C20(&TerminalPramsManager_TypeInfo);
-    byte_4C34E14 = 1;
+    sub_1C37058(&TerminalPramsManager_TypeInfo);
+    byte_4C403FE = 1;
   }
   v280 = TerminalPramsManager_TypeInfo;
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -8488,11 +8488,11 @@ LABEL_631:
   }
   v281 = v280->static_fields;
   v281->_oldSuperBoss_k__BackingField = 0;
-  sub_1C32BC4((CGThumbnailListItem_o *)&v281->_oldSuperBoss_k__BackingField, 0, v254, v255);
-  if ( !byte_4C34E15 )
+  sub_1C36FFC((CGThumbnailListItem_o *)&v281->_oldSuperBoss_k__BackingField, 0, v254, v255);
+  if ( !byte_4C403FF )
   {
-    sub_1C32C20(&TerminalPramsManager_TypeInfo);
-    byte_4C34E15 = 1;
+    sub_1C37058(&TerminalPramsManager_TypeInfo);
+    byte_4C403FF = 1;
   }
   v284 = TerminalPramsManager_TypeInfo;
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -8502,12 +8502,12 @@ LABEL_631:
   }
   v285 = v284->static_fields;
   v285->_oldPersonalBoss_k__BackingField = 0;
-  sub_1C32BC4((CGThumbnailListItem_o *)&v285->_oldPersonalBoss_k__BackingField, 0, v282, v283);
-  Instance = SingletonTemplate_object___get_Instance((const MethodInfo_39E2DF4 *)Method_SingletonTemplate_QuestTree__get_Instance__);
-  if ( !byte_4C31A97 )
+  sub_1C36FFC((CGThumbnailListItem_o *)&v285->_oldPersonalBoss_k__BackingField, 0, v282, v283);
+  Instance = SingletonTemplate_object___get_Instance((const MethodInfo_39ED65C *)Method_SingletonTemplate_QuestTree__get_Instance__);
+  if ( !byte_4C3CFE7 )
   {
-    sub_1C32C20(&TerminalPramsManager_TypeInfo);
-    byte_4C31A97 = 1;
+    sub_1C37058(&TerminalPramsManager_TypeInfo);
+    byte_4C3CFE7 = 1;
   }
   result = (BattleResultComponent_resultData_array *)TerminalPramsManager_TypeInfo;
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -8518,7 +8518,7 @@ LABEL_631:
   if ( !Instance )
     goto LABEL_1211;
   WarID_ByQuestID = QuestTree__GetWarID_ByQuestID((QuestTree_o *)Instance, result->m_Items[19]->fields.eventId, 0);
-  result = (BattleResultComponent_resultData_array *)SingletonTemplate_object___get_Instance((const MethodInfo_39E2DF4 *)Method_SingletonTemplate_QuestTree__get_Instance__);
+  result = (BattleResultComponent_resultData_array *)SingletonTemplate_object___get_Instance((const MethodInfo_39ED65C *)Method_SingletonTemplate_QuestTree__get_Instance__);
   if ( !result )
     goto LABEL_1211;
   WarEntityByWarID = QuestTree__mfGetWarEntityByWarID((QuestTree_o *)result, WarID_ByQuestID, 0);
@@ -8528,14 +8528,14 @@ LABEL_631:
     v289 = 0;
   if ( !DataManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-  result = (BattleResultComponent_resultData_array *)DataManager__GetMaster_object_((const MethodInfo_30DD39C *)Method_DataManager_GetMaster_EventDetailMaster___);
+  result = (BattleResultComponent_resultData_array *)DataManager__GetMaster_object_((const MethodInfo_30E7C04 *)Method_DataManager_GetMaster_EventDetailMaster___);
   if ( !result )
     goto LABEL_1211;
   result = (BattleResultComponent_resultData_array *)DataMasterBase_object__object__int___TryGetEntity(
                                                        (DataMasterBase_TMaster__TEntity__PKType__o *)result,
                                                        &v441,
                                                        v289,
-                                                       (const MethodInfo_3396884 *)Method_DataMasterBase_EventDetailMaster__EventDetailEntity__int__TryGetEntity__);
+                                                       (const MethodInfo_33A10EC *)Method_DataMasterBase_EventDetailMaster__EventDetailEntity__int__TryGetEntity__);
   if ( v432 )
     goto LABEL_1216;
   if ( !*(_DWORD *)p_max_length )
@@ -8572,10 +8572,10 @@ LABEL_1216:
         v293 = (*m_Items)->m_Items[42];
         if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
           j_il2cpp_runtime_class_init_0(TerminalPramsManager_TypeInfo);
-        if ( !byte_4C34E15 )
+        if ( !byte_4C403FF )
         {
-          sub_1C32C20(&TerminalPramsManager_TypeInfo);
-          byte_4C34E15 = 1;
+          sub_1C37058(&TerminalPramsManager_TypeInfo);
+          byte_4C403FF = 1;
         }
         v294 = TerminalPramsManager_TypeInfo;
         if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -8596,10 +8596,10 @@ LABEL_1216:
         v293 = (*m_Items)->m_Items[42];
         if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
           j_il2cpp_runtime_class_init_0(TerminalPramsManager_TypeInfo);
-        if ( !byte_4C34E14 )
+        if ( !byte_4C403FE )
         {
-          sub_1C32C20(&TerminalPramsManager_TypeInfo);
-          byte_4C34E14 = 1;
+          sub_1C37058(&TerminalPramsManager_TypeInfo);
+          byte_4C403FE = 1;
         }
         v297 = TerminalPramsManager_TypeInfo;
         if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -8611,15 +8611,15 @@ LABEL_1216:
         v298->_oldSuperBoss_k__BackingField = (struct UserSuperBossEntity_array *)v293;
         p_oldPersonalBoss_k__BackingField = (CGThumbnailListItem_o *)&v298->_oldSuperBoss_k__BackingField;
       }
-      sub_1C32BC4(p_oldPersonalBoss_k__BackingField, (int32_t)v293, v290, v291);
+      sub_1C36FFC(p_oldPersonalBoss_k__BackingField, (int32_t)v293, v290, v291);
     }
   }
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(TerminalPramsManager_TypeInfo);
-  if ( !byte_4C34E16 )
+  if ( !byte_4C40400 )
   {
-    sub_1C32C20(&TerminalPramsManager_TypeInfo);
-    byte_4C34E16 = 1;
+    sub_1C37058(&TerminalPramsManager_TypeInfo);
+    byte_4C40400 = 1;
   }
   result = (BattleResultComponent_resultData_array *)TerminalPramsManager_TypeInfo;
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -8631,10 +8631,10 @@ LABEL_1216:
     goto LABEL_1217;
   if ( !LODWORD(result->m_Items[24]) )
     j_il2cpp_runtime_class_init_0(result);
-  if ( !byte_4C34E16 )
+  if ( !byte_4C40400 )
   {
-    sub_1C32C20(&TerminalPramsManager_TypeInfo);
-    byte_4C34E16 = 1;
+    sub_1C37058(&TerminalPramsManager_TypeInfo);
+    byte_4C40400 = 1;
   }
   result = (BattleResultComponent_resultData_array *)TerminalPramsManager_TypeInfo;
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -8654,10 +8654,10 @@ LABEL_1216:
 LABEL_1217:
     if ( !LODWORD(result->m_Items[24]) )
       j_il2cpp_runtime_class_init_0(result);
-    if ( !byte_4C31A97 )
+    if ( !byte_4C3CFE7 )
     {
-      sub_1C32C20(&TerminalPramsManager_TypeInfo);
-      byte_4C31A97 = 1;
+      sub_1C37058(&TerminalPramsManager_TypeInfo);
+      byte_4C3CFE7 = 1;
     }
     result = (BattleResultComponent_resultData_array *)TerminalPramsManager_TypeInfo;
     if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -8677,10 +8677,10 @@ LABEL_1217:
   }
   if ( !LODWORD(result->m_Items[24]) )
     j_il2cpp_runtime_class_init_0(result);
-  if ( !byte_4C349E8 )
+  if ( !byte_4C3FFD2 )
   {
-    sub_1C32C20(&TerminalPramsManager_TypeInfo);
-    byte_4C349E8 = 1;
+    sub_1C37058(&TerminalPramsManager_TypeInfo);
+    byte_4C3FFD2 = 1;
   }
   v303 = TerminalPramsManager_TypeInfo;
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -8693,10 +8693,10 @@ LABEL_1217:
   {
     if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(TerminalPramsManager_TypeInfo);
-    if ( !byte_4C31A97 )
+    if ( !byte_4C3CFE7 )
     {
-      sub_1C32C20(&TerminalPramsManager_TypeInfo);
-      byte_4C31A97 = 1;
+      sub_1C37058(&TerminalPramsManager_TypeInfo);
+      byte_4C3CFE7 = 1;
     }
     v304 = TerminalPramsManager_TypeInfo;
     if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -8715,10 +8715,10 @@ LABEL_1217:
     {
       if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(TerminalPramsManager_TypeInfo);
-      if ( !byte_4C31A96 )
+      if ( !byte_4C3CFE6 )
       {
-        sub_1C32C20(&TerminalPramsManager_TypeInfo);
-        byte_4C31A96 = 1;
+        sub_1C37058(&TerminalPramsManager_TypeInfo);
+        byte_4C3CFE6 = 1;
       }
       v307 = TerminalPramsManager_TypeInfo;
       if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -8737,10 +8737,10 @@ LABEL_1217:
         goto LABEL_1218;
       if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(TerminalPramsManager_TypeInfo);
-      if ( !byte_4C31A96 )
+      if ( !byte_4C3CFE6 )
       {
-        sub_1C32C20(&TerminalPramsManager_TypeInfo);
-        byte_4C31A96 = 1;
+        sub_1C37058(&TerminalPramsManager_TypeInfo);
+        byte_4C3CFE6 = 1;
       }
       v310 = TerminalPramsManager_TypeInfo;
       if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -8760,13 +8760,13 @@ LABEL_1217:
 LABEL_1218:
         if ( !DataManager_TypeInfo->_2.cctor_finished )
           j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-        v313 = DataManager__GetMaster_object_((const MethodInfo_30DD39C *)Method_DataManager_GetMaster_UserSuperBossMaster___);
+        v313 = DataManager__GetMaster_object_((const MethodInfo_30E7C04 *)Method_DataManager_GetMaster_UserSuperBossMaster___);
         if ( !NetworkManager_TypeInfo->_2.cctor_finished )
           j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
-        if ( !byte_4C31812 )
+        if ( !byte_4C3CD62 )
         {
-          sub_1C32C20(&NetworkManager_TypeInfo);
-          byte_4C31812 = 1;
+          sub_1C37058(&NetworkManager_TypeInfo);
+          byte_4C3CD62 = 1;
         }
         result = (BattleResultComponent_resultData_array *)NetworkManager_TypeInfo;
         if ( !NetworkManager_TypeInfo->_2.cctor_finished )
@@ -8787,31 +8787,31 @@ LABEL_1218:
                BalanceConfig_TypeInfo->static_fields->OrtThirdFormId,
                0) )
         {
-          result = (BattleResultComponent_resultData_array *)sub_1C32CC8(UserSuperBossEntity___TypeInfo, 1);
+          result = (BattleResultComponent_resultData_array *)sub_1C37100(UserSuperBossEntity___TypeInfo, 1);
           if ( !result )
             goto LABEL_1211;
           v317 = v440;
           v318 = result;
           if ( v440 )
           {
-            result = (BattleResultComponent_resultData_array *)sub_1C32D5C(v440, result->obj.klass->_1.element_class);
+            result = (BattleResultComponent_resultData_array *)sub_1C37194(v440, result->obj.klass->_1.element_class);
             if ( !result )
             {
 LABEL_1213:
-              v430 = sub_1C32EA0();
-              sub_1C32D48(v430, 0);
+              v430 = sub_1C372D8();
+              sub_1C37180(v430, 0);
             }
           }
           if ( !LODWORD(v318->max_length) )
             goto LABEL_1212;
           v318->m_Items[0] = (BattleResultComponent_resultData_o *)v317;
-          sub_1C32BC4((CGThumbnailListItem_o *)v318->m_Items, (int32_t)v317, v315, v316);
+          sub_1C36FFC((CGThumbnailListItem_o *)v318->m_Items, (int32_t)v317, v315, v316);
           if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
             j_il2cpp_runtime_class_init_0(TerminalPramsManager_TypeInfo);
-          if ( !byte_4C34E15 )
+          if ( !byte_4C403FF )
           {
-            sub_1C32C20(&TerminalPramsManager_TypeInfo);
-            byte_4C34E15 = 1;
+            sub_1C37058(&TerminalPramsManager_TypeInfo);
+            byte_4C403FF = 1;
           }
           v321 = TerminalPramsManager_TypeInfo;
           if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -8821,7 +8821,7 @@ LABEL_1213:
           }
           v322 = v321->static_fields;
           v322->_oldPersonalBoss_k__BackingField = (struct UserSuperBossEntity_array *)v318;
-          sub_1C32BC4((CGThumbnailListItem_o *)&v322->_oldPersonalBoss_k__BackingField, (int32_t)v318, v319, v320);
+          sub_1C36FFC((CGThumbnailListItem_o *)&v322->_oldPersonalBoss_k__BackingField, (int32_t)v318, v319, v320);
         }
       }
     }
@@ -8832,18 +8832,18 @@ LABEL_1213:
   if ( TalkResumeInfo )
   {
     v324 = TalkResumeInfo;
-    result = (BattleResultComponent_resultData_array *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39E2904 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    result = (BattleResultComponent_resultData_array *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39ED16C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
     if ( !result )
       goto LABEL_1211;
     v325 = DataManager__GetMasterData_object_(
              (DataManager_o *)result,
-             (const MethodInfo_30DD3F0 *)Method_DataManager_GetMasterData_QuestMaster___);
+             (const MethodInfo_30E7C58 *)Method_DataManager_GetMasterData_QuestMaster___);
     if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(TerminalPramsManager_TypeInfo);
-    if ( !byte_4C31A97 )
+    if ( !byte_4C3CFE7 )
     {
-      sub_1C32C20(&TerminalPramsManager_TypeInfo);
-      byte_4C31A97 = 1;
+      sub_1C37058(&TerminalPramsManager_TypeInfo);
+      byte_4C3CFE7 = 1;
     }
     result = (BattleResultComponent_resultData_array *)TerminalPramsManager_TypeInfo;
     if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -8854,11 +8854,11 @@ LABEL_1213:
     if ( !v325 )
       goto LABEL_1211;
     ScriptQuestId = QuestMaster__getScriptQuestId((QuestMaster_o *)v325, result->m_Items[19]->fields.eventId, 0);
-    v327 = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39E2904 *)Method_SingletonMonoBehaviour_ScriptManager__get_Instance__);
-    if ( !byte_4C31A96 )
+    v327 = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39ED16C *)Method_SingletonMonoBehaviour_ScriptManager__get_Instance__);
+    if ( !byte_4C3CFE6 )
     {
-      sub_1C32C20(&TerminalPramsManager_TypeInfo);
-      byte_4C31A96 = 1;
+      sub_1C37058(&TerminalPramsManager_TypeInfo);
+      byte_4C3CFE6 = 1;
     }
     v328 = TerminalPramsManager_TypeInfo;
     if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -8879,13 +8879,13 @@ LABEL_1213:
       goto LABEL_1211;
     if ( ScriptManager__IsExistScriptFile((ScriptManager_o *)v327, (System_String_o *)result, 0) )
       goto LABEL_1026;
-    v333 = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39E2904 *)Method_SingletonMonoBehaviour_ScriptManager__get_Instance__);
+    v333 = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39ED16C *)Method_SingletonMonoBehaviour_ScriptManager__get_Instance__);
     if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(TerminalPramsManager_TypeInfo);
-    if ( !byte_4C31A96 )
+    if ( !byte_4C3CFE6 )
     {
-      sub_1C32C20(&TerminalPramsManager_TypeInfo);
-      byte_4C31A96 = 1;
+      sub_1C37058(&TerminalPramsManager_TypeInfo);
+      byte_4C3CFE6 = 1;
     }
     v334 = TerminalPramsManager_TypeInfo;
     if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -8916,22 +8916,22 @@ LABEL_1026:
       v338 = StringLiteral_1/*""*/;
       p_lastPlayBgmName = (CGThumbnailListItem_o *)&v337->static_fields->lastPlayBgmName;
       p_lastPlayBgmName->klass = (CGThumbnailListItem_c *)StringLiteral_1/*""*/;
-      sub_1C32BC4(p_lastPlayBgmName, v338, v331, v332);
+      sub_1C36FFC(p_lastPlayBgmName, v338, v331, v332);
       TerminalPramsManager__LastPlayBgmNameSave_SaveData(v340);
     }
   }
-  result = (BattleResultComponent_resultData_array *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39E2904 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  result = (BattleResultComponent_resultData_array *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39ED16C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !result )
     goto LABEL_1211;
   v341 = DataManager__GetMasterData_object_(
            (DataManager_o *)result,
-           (const MethodInfo_30DD3F0 *)Method_DataManager_GetMasterData_QuestPhaseMaster___);
+           (const MethodInfo_30E7C58 *)Method_DataManager_GetMasterData_QuestPhaseMaster___);
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(TerminalPramsManager_TypeInfo);
-  if ( !byte_4C31A97 )
+  if ( !byte_4C3CFE7 )
   {
-    sub_1C32C20(&TerminalPramsManager_TypeInfo);
-    byte_4C31A97 = 1;
+    sub_1C37058(&TerminalPramsManager_TypeInfo);
+    byte_4C3CFE7 = 1;
   }
   result = (BattleResultComponent_resultData_array *)TerminalPramsManager_TypeInfo;
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -8940,11 +8940,11 @@ LABEL_1026:
     result = (BattleResultComponent_resultData_array *)TerminalPramsManager_TypeInfo;
   }
   v342 = result->m_Items[19]->fields.eventId;
-  if ( !byte_4C31A96 )
+  if ( !byte_4C3CFE6 )
   {
-    sub_1C32C20(&TerminalPramsManager_TypeInfo);
+    sub_1C37058(&TerminalPramsManager_TypeInfo);
     result = (BattleResultComponent_resultData_array *)TerminalPramsManager_TypeInfo;
-    byte_4C31A96 = 1;
+    byte_4C3CFE6 = 1;
   }
   if ( !LODWORD(result->m_Items[24]) )
   {
@@ -8959,10 +8959,10 @@ LABEL_1026:
     v342,
     LODWORD(result->m_Items[19]->fields.eventEndTitle) + 1,
     0);
-  if ( !byte_4C34E17 )
+  if ( !byte_4C40401 )
   {
-    sub_1C32C20(&TerminalPramsManager_TypeInfo);
-    byte_4C34E17 = 1;
+    sub_1C37058(&TerminalPramsManager_TypeInfo);
+    byte_4C40401 = 1;
   }
   result = (BattleResultComponent_resultData_array *)TerminalPramsManager_TypeInfo;
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -8974,10 +8974,10 @@ LABEL_1026:
   {
     if ( !LODWORD(result->m_Items[24]) )
       j_il2cpp_runtime_class_init_0(result);
-    if ( !byte_4C34E17 )
+    if ( !byte_4C40401 )
     {
-      sub_1C32C20(&TerminalPramsManager_TypeInfo);
-      byte_4C34E17 = 1;
+      sub_1C37058(&TerminalPramsManager_TypeInfo);
+      byte_4C40401 = 1;
     }
     v345 = TerminalPramsManager_TypeInfo;
     if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -8991,7 +8991,7 @@ LABEL_1026:
     result->max_length = 0;
     v346 = &result->max_length;
     *(v346 - 1) = 0;
-    sub_1C32BC4((CGThumbnailListItem_o *)v346, 0, v343, v344);
+    sub_1C36FFC((CGThumbnailListItem_o *)v346, 0, v343, v344);
   }
   if ( !*(_DWORD *)p_max_length )
     goto LABEL_1212;
@@ -9000,10 +9000,10 @@ LABEL_1026:
   v347 = HIDWORD((*m_Items)->bounds);
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(TerminalPramsManager_TypeInfo);
-  if ( !byte_4C31A97 )
+  if ( !byte_4C3CFE7 )
   {
-    sub_1C32C20(&TerminalPramsManager_TypeInfo);
-    byte_4C31A97 = 1;
+    sub_1C37058(&TerminalPramsManager_TypeInfo);
+    byte_4C3CFE7 = 1;
   }
   v348 = TerminalPramsManager_TypeInfo;
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -9012,11 +9012,11 @@ LABEL_1026:
     v348 = TerminalPramsManager_TypeInfo;
   }
   v349 = v348->static_fields->_QuestId_k__BackingField;
-  if ( !byte_4C31A96 )
+  if ( !byte_4C3CFE6 )
   {
-    sub_1C32C20(&TerminalPramsManager_TypeInfo);
+    sub_1C37058(&TerminalPramsManager_TypeInfo);
     v348 = TerminalPramsManager_TypeInfo;
-    byte_4C31A96 = 1;
+    byte_4C3CFE6 = 1;
   }
   if ( !v348->_2.cctor_finished )
   {
@@ -9029,10 +9029,10 @@ LABEL_1026:
                          v349,
                          v348->static_fields->_PhaseCnt_k__BackingField + 1,
                          0);
-  if ( !byte_4C34DF8 )
+  if ( !byte_4C403E2 )
   {
-    sub_1C32C20(&TerminalPramsManager_TypeInfo);
-    byte_4C34DF8 = 1;
+    sub_1C37058(&TerminalPramsManager_TypeInfo);
+    byte_4C403E2 = 1;
   }
   v353 = TerminalPramsManager_TypeInfo;
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -9042,7 +9042,7 @@ LABEL_1026:
   }
   v354 = v353->static_fields;
   v354->_SpecifiedChangeSceneInfo_k__BackingField = SpecifiedSceneInfo;
-  sub_1C32BC4(
+  sub_1C36FFC(
     (CGThumbnailListItem_o *)&v354->_SpecifiedChangeSceneInfo_k__BackingField,
     (int32_t)SpecifiedSceneInfo,
     v350,
@@ -9059,10 +9059,10 @@ LABEL_1026:
   {
     if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(TerminalPramsManager_TypeInfo);
-    if ( !byte_4C349CA )
+    if ( !byte_4C3FFB4 )
     {
-      sub_1C32C20(&TerminalPramsManager_TypeInfo);
-      byte_4C349CA = 1;
+      sub_1C37058(&TerminalPramsManager_TypeInfo);
+      byte_4C3FFB4 = 1;
     }
     v359 = TerminalPramsManager_TypeInfo;
     if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -9079,11 +9079,11 @@ LABEL_1026:
   }
   p_eventHarvestGrowthInfo = (CGThumbnailListItem_o *)&v359->static_fields->eventHarvestGrowthInfo;
   p_eventHarvestGrowthInfo->klass = 0;
-  sub_1C32BC4(p_eventHarvestGrowthInfo, 0, v356, v357);
-  if ( !byte_4C31A97 )
+  sub_1C36FFC(p_eventHarvestGrowthInfo, 0, v356, v357);
+  if ( !byte_4C3CFE7 )
   {
-    sub_1C32C20(&TerminalPramsManager_TypeInfo);
-    byte_4C31A97 = 1;
+    sub_1C37058(&TerminalPramsManager_TypeInfo);
+    byte_4C3CFE7 = 1;
   }
   v361 = TerminalPramsManager_TypeInfo;
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -9101,16 +9101,16 @@ LABEL_1026:
   v362 = result;
   ScriptIntParam = QuestPhaseEntity__getScriptIntParam(
                      (QuestPhaseEntity_o *)result,
-                     (System_String_o *)StringLiteral_19934/*"harvestGrowthBeforeQuestId"*/,
+                     (System_String_o *)StringLiteral_19937/*"harvestGrowthBeforeQuestId"*/,
                      -1,
                      0);
-  v364 = QuestPhaseEntity__getScriptIntParam((QuestPhaseEntity_o *)v362, (System_String_o *)StringLiteral_19933/*"harvestGrowthAfterQuestId"*/, -1, 0);
+  v364 = QuestPhaseEntity__getScriptIntParam((QuestPhaseEntity_o *)v362, (System_String_o *)StringLiteral_19936/*"harvestGrowthAfterQuestId"*/, -1, 0);
   if ( ScriptIntParam >= 1 )
   {
     v365 = v364;
     if ( v364 >= 1 )
     {
-      v366 = sub_1C32E6C(EventHarvestGrowthInfo_TypeInfo);
+      v366 = sub_1C372A4(EventHarvestGrowthInfo_TypeInfo);
       System_Object___ctor((Il2CppObject *)v366, 0);
       if ( !v366 )
         goto LABEL_1211;
@@ -9126,21 +9126,21 @@ LABEL_1026:
       }
       v371 = (CGThumbnailListItem_o *)&v370->static_fields->eventHarvestGrowthInfo;
       v371->klass = (CGThumbnailListItem_c *)v366;
-      sub_1C32BC4(v371, v366, v367, v368);
+      sub_1C36FFC(v371, v366, v367, v368);
     }
   }
-  result = (BattleResultComponent_resultData_array *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39E2904 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  result = (BattleResultComponent_resultData_array *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39ED16C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !result )
     goto LABEL_1211;
   v372 = DataManager__GetMasterData_object_(
            (DataManager_o *)result,
-           (const MethodInfo_30DD3F0 *)Method_DataManager_GetMasterData_QuestMaster___);
+           (const MethodInfo_30E7C58 *)Method_DataManager_GetMasterData_QuestMaster___);
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(TerminalPramsManager_TypeInfo);
-  if ( !byte_4C31A97 )
+  if ( !byte_4C3CFE7 )
   {
-    sub_1C32C20(&TerminalPramsManager_TypeInfo);
-    byte_4C31A97 = 1;
+    sub_1C37058(&TerminalPramsManager_TypeInfo);
+    byte_4C3CFE7 = 1;
   }
   result = (BattleResultComponent_resultData_array *)TerminalPramsManager_TypeInfo;
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -9156,10 +9156,10 @@ LABEL_1026:
     v375 = QuestEntity;
     if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(TerminalPramsManager_TypeInfo);
-    if ( !byte_4C31A97 )
+    if ( !byte_4C3CFE7 )
     {
-      sub_1C32C20(&TerminalPramsManager_TypeInfo);
-      byte_4C31A97 = 1;
+      sub_1C37058(&TerminalPramsManager_TypeInfo);
+      byte_4C3CFE7 = 1;
     }
     v376 = TerminalPramsManager_TypeInfo;
     if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -9175,7 +9175,7 @@ LABEL_1026:
       SpotId = QuestEntity__getSpotId(v375, 0);
       if ( !DataManager_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-      result = (BattleResultComponent_resultData_array *)DataManager__GetMaster_object_((const MethodInfo_30DD39C *)Method_DataManager_GetMaster_UserEventCooltimeRewardMaster___);
+      result = (BattleResultComponent_resultData_array *)DataManager__GetMaster_object_((const MethodInfo_30E7C04 *)Method_DataManager_GetMaster_UserEventCooltimeRewardMaster___);
       if ( !*(_DWORD *)p_max_length )
         goto LABEL_1212;
       if ( !*m_Items || !result )
@@ -9211,10 +9211,10 @@ LABEL_1026:
   }
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(TerminalPramsManager_TypeInfo);
-  if ( !byte_4C31DAD )
+  if ( !byte_4C3D397 )
   {
-    sub_1C32C20(&TerminalPramsManager_TypeInfo);
-    byte_4C31DAD = 1;
+    sub_1C37058(&TerminalPramsManager_TypeInfo);
+    byte_4C3D397 = 1;
   }
   v382 = TerminalPramsManager_TypeInfo;
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -9233,10 +9233,10 @@ LABEL_1026:
     {
       if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(TerminalPramsManager_TypeInfo);
-      if ( !byte_4C31A97 )
+      if ( !byte_4C3CFE7 )
       {
-        sub_1C32C20(&TerminalPramsManager_TypeInfo);
-        byte_4C31A97 = 1;
+        sub_1C37058(&TerminalPramsManager_TypeInfo);
+        byte_4C3CFE7 = 1;
       }
       v385 = TerminalPramsManager_TypeInfo;
       if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -9246,10 +9246,10 @@ LABEL_1026:
       }
       v448 = v385->static_fields->_QuestId_k__BackingField;
       v386 = System_Int32__ToString((int32_t)&v448, 0);
-      if ( !byte_4C31A96 )
+      if ( !byte_4C3CFE6 )
       {
-        sub_1C32C20(&TerminalPramsManager_TypeInfo);
-        byte_4C31A96 = 1;
+        sub_1C37058(&TerminalPramsManager_TypeInfo);
+        byte_4C3CFE6 = 1;
       }
       v387 = TerminalPramsManager_TypeInfo;
       if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -9259,11 +9259,11 @@ LABEL_1026:
       }
       v448 = v387->static_fields->_PhaseCnt_k__BackingField + 1;
       v388 = System_Int32__ToString((int32_t)&v448, 0);
-      v391 = System_String__Concat_63556792(v386, (System_String_o *)StringLiteral_811/*","*/, v388, 0);
-      if ( !byte_4C34BD5 )
+      v391 = System_String__Concat_63599904(v386, (System_String_o *)StringLiteral_811/*","*/, v388, 0);
+      if ( !byte_4C401BF )
       {
-        sub_1C32C20(&TerminalPramsManager_TypeInfo);
-        byte_4C34BD5 = 1;
+        sub_1C37058(&TerminalPramsManager_TypeInfo);
+        byte_4C401BF = 1;
       }
       v392 = TerminalPramsManager_TypeInfo;
       if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -9273,7 +9273,7 @@ LABEL_1026:
       }
       p_SceneMoveQuestClearedInfo_k__BackingField = (CGThumbnailListItem_o *)&v392->static_fields->_SceneMoveQuestClearedInfo_k__BackingField;
       p_SceneMoveQuestClearedInfo_k__BackingField->klass = (CGThumbnailListItem_c *)v391;
-      sub_1C32BC4(p_SceneMoveQuestClearedInfo_k__BackingField, (int32_t)v391, v389, v390);
+      sub_1C36FFC(p_SceneMoveQuestClearedInfo_k__BackingField, (int32_t)v391, v389, v390);
     }
   }
   if ( !*(_DWORD *)p_max_length )
@@ -9285,10 +9285,10 @@ LABEL_1026:
   {
     if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(TerminalPramsManager_TypeInfo);
-    if ( !byte_4C349D3 )
+    if ( !byte_4C3FFBD )
     {
-      sub_1C32C20(&TerminalPramsManager_TypeInfo);
-      byte_4C349D3 = 1;
+      sub_1C37058(&TerminalPramsManager_TypeInfo);
+      byte_4C3FFBD = 1;
     }
     v395 = TerminalPramsManager_TypeInfo;
     if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -9298,15 +9298,15 @@ LABEL_1026:
     }
     p_limitImageAnnounces_k__BackingField = (CGThumbnailListItem_o *)&v395->static_fields->_limitImageAnnounces_k__BackingField;
     p_limitImageAnnounces_k__BackingField->klass = v394;
-    sub_1C32BC4(p_limitImageAnnounces_k__BackingField, (int32_t)v394, v383, v384);
+    sub_1C36FFC(p_limitImageAnnounces_k__BackingField, (int32_t)v394, v383, v384);
   }
-  v397 = sub_1C32CC8(string___TypeInfo, 7);
+  v397 = sub_1C37100(string___TypeInfo, 7);
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(TerminalPramsManager_TypeInfo);
-  if ( !byte_4C31A97 )
+  if ( !byte_4C3CFE7 )
   {
-    sub_1C32C20(&TerminalPramsManager_TypeInfo);
-    byte_4C31A97 = 1;
+    sub_1C37058(&TerminalPramsManager_TypeInfo);
+    byte_4C3CFE7 = 1;
   }
   v398 = TerminalPramsManager_TypeInfo;
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -9318,20 +9318,20 @@ LABEL_1026:
   result = (BattleResultComponent_resultData_array *)System_Int32__ToString((int32_t)&v448, 0);
   if ( !v397 )
 LABEL_1211:
-    sub_1C32E7C(result);
+    sub_1C372B4(result);
   if ( !*(_DWORD *)(v397 + 24) )
     goto LABEL_1212;
   *(_QWORD *)(v397 + 32) = result;
-  sub_1C32BC4((CGThumbnailListItem_o *)(v397 + 32), (int32_t)result, v399, v400);
+  sub_1C36FFC((CGThumbnailListItem_o *)(v397 + 32), (int32_t)result, v399, v400);
   if ( *(_DWORD *)(v397 + 24) <= 1u )
     goto LABEL_1212;
   v403 = StringLiteral_811/*","*/;
   *(_QWORD *)(v397 + 40) = StringLiteral_811/*","*/;
-  sub_1C32BC4((CGThumbnailListItem_o *)(v397 + 40), v403, v401, v402);
-  if ( !byte_4C31A96 )
+  sub_1C36FFC((CGThumbnailListItem_o *)(v397 + 40), v403, v401, v402);
+  if ( !byte_4C3CFE6 )
   {
-    sub_1C32C20(&TerminalPramsManager_TypeInfo);
-    byte_4C31A96 = 1;
+    sub_1C37058(&TerminalPramsManager_TypeInfo);
+    byte_4C3CFE6 = 1;
   }
   v404 = TerminalPramsManager_TypeInfo;
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -9344,16 +9344,16 @@ LABEL_1211:
   if ( *(_DWORD *)(v397 + 24) <= 2u )
     goto LABEL_1212;
   *(_QWORD *)(v397 + 48) = result;
-  sub_1C32BC4((CGThumbnailListItem_o *)(v397 + 48), (int32_t)result, v405, v406);
+  sub_1C36FFC((CGThumbnailListItem_o *)(v397 + 48), (int32_t)result, v405, v406);
   if ( *(_DWORD *)(v397 + 24) <= 3u )
     goto LABEL_1212;
   v409 = StringLiteral_811/*","*/;
   *(_QWORD *)(v397 + 56) = StringLiteral_811/*","*/;
-  sub_1C32BC4((CGThumbnailListItem_o *)(v397 + 56), v409, v407, v408);
-  if ( !byte_4C34567 )
+  sub_1C36FFC((CGThumbnailListItem_o *)(v397 + 56), v409, v407, v408);
+  if ( !byte_4C3FB51 )
   {
-    sub_1C32C20(&TerminalPramsManager_TypeInfo);
-    byte_4C34567 = 1;
+    sub_1C37058(&TerminalPramsManager_TypeInfo);
+    byte_4C3FB51 = 1;
   }
   v410 = TerminalPramsManager_TypeInfo;
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -9368,16 +9368,16 @@ LABEL_1211:
   if ( *(_DWORD *)(v397 + 24) <= 4u )
     goto LABEL_1212;
   *(_QWORD *)(v397 + 64) = result;
-  sub_1C32BC4((CGThumbnailListItem_o *)(v397 + 64), (int32_t)result, v411, v412);
+  sub_1C36FFC((CGThumbnailListItem_o *)(v397 + 64), (int32_t)result, v411, v412);
   if ( *(_DWORD *)(v397 + 24) <= 5u )
     goto LABEL_1212;
   v415 = StringLiteral_811/*","*/;
   *(_QWORD *)(v397 + 72) = StringLiteral_811/*","*/;
-  sub_1C32BC4((CGThumbnailListItem_o *)(v397 + 72), v415, v413, v414);
-  if ( !byte_4C34564 )
+  sub_1C36FFC((CGThumbnailListItem_o *)(v397 + 72), v415, v413, v414);
+  if ( !byte_4C3FB4E )
   {
-    sub_1C32C20(&TerminalPramsManager_TypeInfo);
-    byte_4C34564 = 1;
+    sub_1C37058(&TerminalPramsManager_TypeInfo);
+    byte_4C3FB4E = 1;
   }
   v416 = TerminalPramsManager_TypeInfo;
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -9390,19 +9390,19 @@ LABEL_1211:
   if ( *(_DWORD *)(v397 + 24) <= 6u )
     goto LABEL_1212;
   *(_QWORD *)(v397 + 80) = result;
-  sub_1C32BC4((CGThumbnailListItem_o *)(v397 + 80), (int32_t)result, v417, v418);
-  v419 = System_String__Concat_63559060((System_String_array *)v397, 0);
-  UnityEngine_PlayerPrefs__SetString((System_String_o *)StringLiteral_16711/*"afterActionBk"*/, v419, 0);
+  sub_1C36FFC((CGThumbnailListItem_o *)(v397 + 80), (int32_t)result, v417, v418);
+  v419 = System_String__Concat_63602172((System_String_array *)v397, 0);
+  UnityEngine_PlayerPrefs__SetString((System_String_o *)StringLiteral_16713/*"afterActionBk"*/, v419, 0);
   TerminalPramsManager__SaveClearDatas(resulta, v420);
   TerminalPramsManager__TerminalEventConquestInfosSave_SaveData(v421);
   TerminalPramsManager__TerminalEventCraftInfoDispSave_SaveData(v422);
   TerminalPramsManager__TerminalEventHarvestGrowthInfosSave_SaveData(v423);
   TerminalPramsManager__IsPlayTerminalEffectDisappear_SaveData(v424);
   TerminalPramsManager__IsPlayTerminalEffectDisappearWarId_SaveData(v425);
-  if ( !byte_4C31A97 )
+  if ( !byte_4C3CFE7 )
   {
-    sub_1C32C20(&TerminalPramsManager_TypeInfo);
-    byte_4C31A97 = 1;
+    sub_1C37058(&TerminalPramsManager_TypeInfo);
+    byte_4C3CFE7 = 1;
   }
   v426 = TerminalPramsManager_TypeInfo;
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -9418,10 +9418,10 @@ LABEL_1211:
   {
     if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(TerminalPramsManager_TypeInfo);
-    if ( !byte_4C342B2 )
+    if ( !byte_4C3F89C )
     {
-      sub_1C32C20(&TerminalPramsManager_TypeInfo);
-      byte_4C342B2 = 1;
+      sub_1C37058(&TerminalPramsManager_TypeInfo);
+      byte_4C3F89C = 1;
     }
     v429 = TerminalPramsManager_TypeInfo;
     if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -9430,11 +9430,11 @@ LABEL_1211:
       v429 = TerminalPramsManager_TypeInfo;
     }
     v429->static_fields->_WarId_k__BackingField = 0;
-    if ( !byte_4C3219C )
+    if ( !byte_4C3D786 )
     {
-      sub_1C32C20(&TerminalPramsManager_TypeInfo);
+      sub_1C37058(&TerminalPramsManager_TypeInfo);
       v429 = TerminalPramsManager_TypeInfo;
-      byte_4C3219C = 1;
+      byte_4C3D786 = 1;
     }
     if ( !v429->_2.cctor_finished )
     {
@@ -9442,11 +9442,11 @@ LABEL_1211:
       v429 = TerminalPramsManager_TypeInfo;
     }
     v429->static_fields->_IsAutoResume_k__BackingField = 1;
-    if ( !byte_4C349BC )
+    if ( !byte_4C3FFA6 )
     {
-      sub_1C32C20(&TerminalPramsManager_TypeInfo);
+      sub_1C37058(&TerminalPramsManager_TypeInfo);
       v429 = TerminalPramsManager_TypeInfo;
-      byte_4C349BC = 1;
+      byte_4C3FFA6 = 1;
     }
     if ( !v429->_2.cctor_finished )
     {
@@ -9454,11 +9454,11 @@ LABEL_1211:
       v429 = TerminalPramsManager_TypeInfo;
     }
     v429->static_fields->_IsMapReturnFolder_k__BackingField = 0;
-    if ( !byte_4C34BC8 )
+    if ( !byte_4C401B2 )
     {
-      sub_1C32C20(&TerminalPramsManager_TypeInfo);
+      sub_1C37058(&TerminalPramsManager_TypeInfo);
       v429 = TerminalPramsManager_TypeInfo;
-      byte_4C34BC8 = 1;
+      byte_4C401B2 = 1;
     }
     if ( !v429->_2.cctor_finished )
     {
@@ -9475,17 +9475,17 @@ void TerminalPramsManager__ResetBlankEarthSpotInfo(const MethodInfo *method)
 {
   const MethodInfo *v1; // x0
 
-  if ( (byte_4C34D83 & 1) == 0 )
+  if ( (byte_4C4036D & 1) == 0 )
   {
-    sub_1C32C20(&TerminalPramsManager_TypeInfo);
-    byte_4C34D83 = 1;
+    sub_1C37058(&TerminalPramsManager_TypeInfo);
+    byte_4C4036D = 1;
   }
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(TerminalPramsManager_TypeInfo);
-  if ( !byte_4C341F6 )
+  if ( !byte_4C3F7E0 )
   {
-    sub_1C32C20(&TerminalPramsManager_TypeInfo);
-    byte_4C341F6 = 1;
+    sub_1C37058(&TerminalPramsManager_TypeInfo);
+    byte_4C3F7E0 = 1;
   }
   v1 = (const MethodInfo *)TerminalPramsManager_TypeInfo;
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -9506,17 +9506,17 @@ void TerminalPramsManager__ResetResumeScriptWithMap(const MethodInfo *method)
   CGThumbnailListItem_o *p_TalkScriptInfo_k__BackingField; // x0
   TerminalPramsManager_c *v5; // x0
 
-  if ( (byte_4C34D8D & 1) == 0 )
+  if ( (byte_4C40377 & 1) == 0 )
   {
-    sub_1C32C20(&TerminalPramsManager_TypeInfo);
-    byte_4C34D8D = 1;
+    sub_1C37058(&TerminalPramsManager_TypeInfo);
+    byte_4C40377 = 1;
   }
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(TerminalPramsManager_TypeInfo);
-  if ( !byte_4C34DEA )
+  if ( !byte_4C403D4 )
   {
-    sub_1C32C20(&TerminalPramsManager_TypeInfo);
-    byte_4C34DEA = 1;
+    sub_1C37058(&TerminalPramsManager_TypeInfo);
+    byte_4C403D4 = 1;
   }
   v3 = TerminalPramsManager_TypeInfo;
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -9525,11 +9525,11 @@ void TerminalPramsManager__ResetResumeScriptWithMap(const MethodInfo *method)
     v3 = TerminalPramsManager_TypeInfo;
   }
   v3->static_fields->_QuestMessageScriptQuestId_k__BackingField = -1;
-  if ( !byte_4C34DEB )
+  if ( !byte_4C403D5 )
   {
-    sub_1C32C20(&TerminalPramsManager_TypeInfo);
+    sub_1C37058(&TerminalPramsManager_TypeInfo);
     v3 = TerminalPramsManager_TypeInfo;
-    byte_4C34DEB = 1;
+    byte_4C403D5 = 1;
   }
   if ( !v3->_2.cctor_finished )
   {
@@ -9537,11 +9537,11 @@ void TerminalPramsManager__ResetResumeScriptWithMap(const MethodInfo *method)
     v3 = TerminalPramsManager_TypeInfo;
   }
   v3->static_fields->_QuestMessageScriptQuestPhase_k__BackingField = -1;
-  if ( !byte_4C34AD8 )
+  if ( !byte_4C400C2 )
   {
-    sub_1C32C20(&TerminalPramsManager_TypeInfo);
+    sub_1C37058(&TerminalPramsManager_TypeInfo);
     v3 = TerminalPramsManager_TypeInfo;
-    byte_4C34AD8 = 1;
+    byte_4C400C2 = 1;
   }
   if ( !v3->_2.cctor_finished )
   {
@@ -9550,11 +9550,11 @@ void TerminalPramsManager__ResetResumeScriptWithMap(const MethodInfo *method)
   }
   p_TalkScriptInfo_k__BackingField = (CGThumbnailListItem_o *)&v3->static_fields->_TalkScriptInfo_k__BackingField;
   p_TalkScriptInfo_k__BackingField->klass = 0;
-  sub_1C32BC4(p_TalkScriptInfo_k__BackingField, 0, v1, v2);
-  if ( !byte_4C34DEC )
+  sub_1C36FFC(p_TalkScriptInfo_k__BackingField, 0, v1, v2);
+  if ( !byte_4C403D6 )
   {
-    sub_1C32C20(&TerminalPramsManager_TypeInfo);
-    byte_4C34DEC = 1;
+    sub_1C37058(&TerminalPramsManager_TypeInfo);
+    byte_4C403D6 = 1;
   }
   v5 = TerminalPramsManager_TypeInfo;
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -9616,12 +9616,12 @@ void TerminalPramsManager__SaveClearDatas(BattleResultComponent_resultData_array
   QuestRewardInfo_array *mQuestPhaseRewardInfos; // [xsp+148h] [xbp-78h]
   QuestRewardInfo_array *useAddRewardItemRewardInfos; // [xsp+150h] [xbp-70h]
 
-  if ( (byte_4C34DD3 & 1) == 0 )
+  if ( (byte_4C403BD & 1) == 0 )
   {
-    sub_1C32C20(&TerminalPramsManager_ClearData_TypeInfo);
-    sub_1C32C20(&JsonManager_TypeInfo);
-    sub_1C32C20(&TerminalPramsManager_TypeInfo);
-    byte_4C34DD3 = 1;
+    sub_1C37058(&TerminalPramsManager_ClearData_TypeInfo);
+    sub_1C37058(&JsonManager_TypeInfo);
+    sub_1C37058(&TerminalPramsManager_TypeInfo);
+    byte_4C403BD = 1;
   }
   v3 = TerminalPramsManager_TypeInfo;
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -9630,11 +9630,11 @@ void TerminalPramsManager__SaveClearDatas(BattleResultComponent_resultData_array
     v3 = TerminalPramsManager_TypeInfo;
   }
   mQuestRewardInfos = v3->static_fields->mQuestRewardInfos;
-  if ( !byte_4C31A99 )
+  if ( !byte_4C3CFE9 )
   {
-    sub_1C32C20(&TerminalPramsManager_TypeInfo);
+    sub_1C37058(&TerminalPramsManager_TypeInfo);
     v3 = TerminalPramsManager_TypeInfo;
-    byte_4C31A99 = 1;
+    byte_4C3CFE9 = 1;
   }
   if ( !v3->_2.cctor_finished )
   {
@@ -9645,18 +9645,18 @@ void TerminalPramsManager__SaveClearDatas(BattleResultComponent_resultData_array
   if ( result )
   {
     if ( !LODWORD(result->max_length) )
-      sub_1C32E84(v3);
+      sub_1C372BC(v3);
     v6 = result->m_Items[0];
     if ( !v6 )
-      sub_1C32E7C(0);
+      sub_1C372B4(0);
     if ( BattleResultComponent_resultData__checkResultDispFlag(v6, 2048, 0) )
     {
       if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(TerminalPramsManager_TypeInfo);
-      if ( !byte_4C31A97 )
+      if ( !byte_4C3CFE7 )
       {
-        sub_1C32C20(&TerminalPramsManager_TypeInfo);
-        byte_4C31A97 = 1;
+        sub_1C37058(&TerminalPramsManager_TypeInfo);
+        byte_4C3CFE7 = 1;
       }
       v8 = TerminalPramsManager_TypeInfo;
       if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -9679,11 +9679,11 @@ void TerminalPramsManager__SaveClearDatas(BattleResultComponent_resultData_array
   static_fields = v9->static_fields;
   mQuestClearHeroineInfo = static_fields->mQuestClearHeroineInfo;
   mQuestPhaseRewardInfos = static_fields->mQuestPhaseRewardInfos;
-  if ( !byte_4C34567 )
+  if ( !byte_4C3FB51 )
   {
-    sub_1C32C20(&TerminalPramsManager_TypeInfo);
+    sub_1C37058(&TerminalPramsManager_TypeInfo);
     v9 = TerminalPramsManager_TypeInfo;
-    byte_4C34567 = 1;
+    byte_4C3FB51 = 1;
   }
   if ( !v9->_2.cctor_finished )
   {
@@ -9691,11 +9691,11 @@ void TerminalPramsManager__SaveClearDatas(BattleResultComponent_resultData_array
     v9 = TerminalPramsManager_TypeInfo;
   }
   IsQuestClear_k__BackingField = v9->static_fields->_IsQuestClear_k__BackingField;
-  if ( !byte_4C34564 )
+  if ( !byte_4C3FB4E )
   {
-    sub_1C32C20(&TerminalPramsManager_TypeInfo);
+    sub_1C37058(&TerminalPramsManager_TypeInfo);
     v9 = TerminalPramsManager_TypeInfo;
-    byte_4C34564 = 1;
+    byte_4C3FB4E = 1;
   }
   if ( !v9->_2.cctor_finished )
   {
@@ -9707,11 +9707,11 @@ void TerminalPramsManager__SaveClearDatas(BattleResultComponent_resultData_array
   lastRaidId = v11->clearLastBattleRaidId;
   raidId = v11->clearBattleRaidId;
   groupjoin = v11->joinGroupId;
-  if ( !byte_4C34E18 )
+  if ( !byte_4C40402 )
   {
-    sub_1C32C20(&TerminalPramsManager_TypeInfo);
+    sub_1C37058(&TerminalPramsManager_TypeInfo);
     v9 = TerminalPramsManager_TypeInfo;
-    byte_4C34E18 = 1;
+    byte_4C40402 = 1;
   }
   if ( !v9->_2.cctor_finished )
   {
@@ -9719,11 +9719,11 @@ void TerminalPramsManager__SaveClearDatas(BattleResultComponent_resultData_array
     v9 = TerminalPramsManager_TypeInfo;
   }
   oldSuperBoss = v9->static_fields->_oldSuperBoss_k__BackingField;
-  if ( !byte_4C34E16 )
+  if ( !byte_4C40400 )
   {
-    sub_1C32C20(&TerminalPramsManager_TypeInfo);
+    sub_1C37058(&TerminalPramsManager_TypeInfo);
     v9 = TerminalPramsManager_TypeInfo;
-    byte_4C34E16 = 1;
+    byte_4C40400 = 1;
   }
   if ( !v9->_2.cctor_finished )
   {
@@ -9731,11 +9731,11 @@ void TerminalPramsManager__SaveClearDatas(BattleResultComponent_resultData_array
     v9 = TerminalPramsManager_TypeInfo;
   }
   oldPersonalBoss = v9->static_fields->_oldPersonalBoss_k__BackingField;
-  if ( !byte_4C34E19 )
+  if ( !byte_4C40403 )
   {
-    sub_1C32C20(&TerminalPramsManager_TypeInfo);
+    sub_1C37058(&TerminalPramsManager_TypeInfo);
     v9 = TerminalPramsManager_TypeInfo;
-    byte_4C34E19 = 1;
+    byte_4C40403 = 1;
   }
   if ( !v9->_2.cctor_finished )
   {
@@ -9743,11 +9743,11 @@ void TerminalPramsManager__SaveClearDatas(BattleResultComponent_resultData_array
     v9 = TerminalPramsManager_TypeInfo;
   }
   eventPointWinReward_k__BackingField = v9->static_fields->_eventPointWinReward_k__BackingField;
-  if ( !byte_4C34E10 )
+  if ( !byte_4C403FA )
   {
-    sub_1C32C20(&TerminalPramsManager_TypeInfo);
+    sub_1C37058(&TerminalPramsManager_TypeInfo);
     v9 = TerminalPramsManager_TypeInfo;
-    byte_4C34E10 = 1;
+    byte_4C403FA = 1;
   }
   if ( !v9->_2.cctor_finished )
   {
@@ -9755,11 +9755,11 @@ void TerminalPramsManager__SaveClearDatas(BattleResultComponent_resultData_array
     v9 = TerminalPramsManager_TypeInfo;
   }
   evpWinType = v9->static_fields->_eventPointWinType_k__BackingField;
-  if ( !byte_4C34BBD )
+  if ( !byte_4C401A7 )
   {
-    sub_1C32C20(&TerminalPramsManager_TypeInfo);
+    sub_1C37058(&TerminalPramsManager_TypeInfo);
     v9 = TerminalPramsManager_TypeInfo;
-    byte_4C34BBD = 1;
+    byte_4C401A7 = 1;
   }
   if ( !v9->_2.cctor_finished )
   {
@@ -9767,11 +9767,11 @@ void TerminalPramsManager__SaveClearDatas(BattleResultComponent_resultData_array
     v9 = TerminalPramsManager_TypeInfo;
   }
   evRace = v9->static_fields->_eventRaceBoost_k__BackingField;
-  if ( !byte_4C349D1 )
+  if ( !byte_4C3FFBB )
   {
-    sub_1C32C20(&TerminalPramsManager_TypeInfo);
+    sub_1C37058(&TerminalPramsManager_TypeInfo);
     v9 = TerminalPramsManager_TypeInfo;
-    byte_4C349D1 = 1;
+    byte_4C3FFBB = 1;
   }
   if ( !v9->_2.cctor_finished )
   {
@@ -9779,11 +9779,11 @@ void TerminalPramsManager__SaveClearDatas(BattleResultComponent_resultData_array
     v9 = TerminalPramsManager_TypeInfo;
   }
   questClearCostumeRelease = v9->static_fields->_questClearCostumeRelease_k__BackingField;
-  if ( !byte_4C349C7 )
+  if ( !byte_4C3FFB1 )
   {
-    sub_1C32C20(&TerminalPramsManager_TypeInfo);
+    sub_1C37058(&TerminalPramsManager_TypeInfo);
     v9 = TerminalPramsManager_TypeInfo;
-    byte_4C349C7 = 1;
+    byte_4C3FFB1 = 1;
   }
   if ( !v9->_2.cctor_finished )
   {
@@ -9791,11 +9791,11 @@ void TerminalPramsManager__SaveClearDatas(BattleResultComponent_resultData_array
     v9 = TerminalPramsManager_TypeInfo;
   }
   questClearCostumeGet_k__BackingField = v9->static_fields->_questClearCostumeGet_k__BackingField;
-  if ( !byte_4C349CD )
+  if ( !byte_4C3FFB7 )
   {
-    sub_1C32C20(&TerminalPramsManager_TypeInfo);
+    sub_1C37058(&TerminalPramsManager_TypeInfo);
     v9 = TerminalPramsManager_TypeInfo;
-    byte_4C349CD = 1;
+    byte_4C3FFB7 = 1;
   }
   if ( !v9->_2.cctor_finished )
   {
@@ -9803,11 +9803,11 @@ void TerminalPramsManager__SaveClearDatas(BattleResultComponent_resultData_array
     v9 = TerminalPramsManager_TypeInfo;
   }
   evTowerReward = v9->static_fields->_eventTowerReward_k__BackingField;
-  if ( !byte_4C34E1A )
+  if ( !byte_4C40404 )
   {
-    sub_1C32C20(&TerminalPramsManager_TypeInfo);
+    sub_1C37058(&TerminalPramsManager_TypeInfo);
     v9 = TerminalPramsManager_TypeInfo;
-    byte_4C34E1A = 1;
+    byte_4C40404 = 1;
   }
   if ( !v9->_2.cctor_finished )
   {
@@ -9815,11 +9815,11 @@ void TerminalPramsManager__SaveClearDatas(BattleResultComponent_resultData_array
     v9 = TerminalPramsManager_TypeInfo;
   }
   resultEventTowerRewardInfo_k__BackingField = v9->static_fields->_resultEventTowerRewardInfo_k__BackingField;
-  if ( !byte_4C3359C )
+  if ( !byte_4C3EC65 )
   {
-    sub_1C32C20(&TerminalPramsManager_TypeInfo);
+    sub_1C37058(&TerminalPramsManager_TypeInfo);
     v9 = TerminalPramsManager_TypeInfo;
-    byte_4C3359C = 1;
+    byte_4C3EC65 = 1;
   }
   if ( !v9->_2.cctor_finished )
   {
@@ -9827,11 +9827,11 @@ void TerminalPramsManager__SaveClearDatas(BattleResultComponent_resultData_array
     v9 = TerminalPramsManager_TypeInfo;
   }
   IsDispOnly_k__BackingField = v9->static_fields->_IsDispOnly_k__BackingField;
-  if ( !byte_4C349D9 )
+  if ( !byte_4C3FFC3 )
   {
-    sub_1C32C20(&TerminalPramsManager_TypeInfo);
+    sub_1C37058(&TerminalPramsManager_TypeInfo);
     v9 = TerminalPramsManager_TypeInfo;
-    byte_4C349D9 = 1;
+    byte_4C3FFC3 = 1;
   }
   if ( !v9->_2.cctor_finished )
   {
@@ -9839,11 +9839,11 @@ void TerminalPramsManager__SaveClearDatas(BattleResultComponent_resultData_array
     v9 = TerminalPramsManager_TypeInfo;
   }
   warClearRewardIn = v9->static_fields->_warClearReward_k__BackingField;
-  if ( !byte_4C34E1B )
+  if ( !byte_4C40405 )
   {
-    sub_1C32C20(&TerminalPramsManager_TypeInfo);
+    sub_1C37058(&TerminalPramsManager_TypeInfo);
     v9 = TerminalPramsManager_TypeInfo;
-    byte_4C34E1B = 1;
+    byte_4C40405 = 1;
   }
   if ( !v9->_2.cctor_finished )
   {
@@ -9851,11 +9851,11 @@ void TerminalPramsManager__SaveClearDatas(BattleResultComponent_resultData_array
     v9 = TerminalPramsManager_TypeInfo;
   }
   eventActivityPointEffectState = v9->static_fields->_EventActivityPointEffectState_k__BackingField;
-  if ( !byte_4C349C8 )
+  if ( !byte_4C3FFB2 )
   {
-    sub_1C32C20(&TerminalPramsManager_TypeInfo);
+    sub_1C37058(&TerminalPramsManager_TypeInfo);
     v9 = TerminalPramsManager_TypeInfo;
-    byte_4C349C8 = 1;
+    byte_4C3FFB2 = 1;
   }
   if ( !v9->_2.cctor_finished )
   {
@@ -9867,11 +9867,11 @@ void TerminalPramsManager__SaveClearDatas(BattleResultComponent_resultData_array
   mResultEventPanelRewardInfos = v14->mResultEventPanelRewardInfos;
   questResultAfterEventRewardInfos = v14->mQuestResultAfterEventRewardInfos;
   panelEventPoint = v14->panelEventPoint;
-  if ( !byte_4C349D2 )
+  if ( !byte_4C3FFBC )
   {
-    sub_1C32C20(&TerminalPramsManager_TypeInfo);
+    sub_1C37058(&TerminalPramsManager_TypeInfo);
     v9 = TerminalPramsManager_TypeInfo;
-    byte_4C349D2 = 1;
+    byte_4C3FFBC = 1;
   }
   if ( !v9->_2.cctor_finished )
   {
@@ -9879,11 +9879,11 @@ void TerminalPramsManager__SaveClearDatas(BattleResultComponent_resultData_array
     v9 = TerminalPramsManager_TypeInfo;
   }
   limitImageAnnounces = v9->static_fields->_limitImageAnnounces_k__BackingField;
-  if ( !byte_4C341F5 )
+  if ( !byte_4C3F7DF )
   {
-    sub_1C32C20(&TerminalPramsManager_TypeInfo);
+    sub_1C37058(&TerminalPramsManager_TypeInfo);
     v9 = TerminalPramsManager_TypeInfo;
-    byte_4C341F5 = 1;
+    byte_4C3F7DF = 1;
   }
   if ( !v9->_2.cctor_finished )
   {
@@ -9891,11 +9891,11 @@ void TerminalPramsManager__SaveClearDatas(BattleResultComponent_resultData_array
     v9 = TerminalPramsManager_TypeInfo;
   }
   IsOrdealCallWarClear_k__BackingField = v9->static_fields->_IsOrdealCallWarClear_k__BackingField;
-  if ( !byte_4C349C9 )
+  if ( !byte_4C3FFB3 )
   {
-    sub_1C32C20(&TerminalPramsManager_TypeInfo);
+    sub_1C37058(&TerminalPramsManager_TypeInfo);
     v9 = TerminalPramsManager_TypeInfo;
-    byte_4C349C9 = 1;
+    byte_4C3FFB3 = 1;
   }
   if ( !v9->_2.cctor_finished )
   {
@@ -9903,11 +9903,11 @@ void TerminalPramsManager__SaveClearDatas(BattleResultComponent_resultData_array
     v9 = TerminalPramsManager_TypeInfo;
   }
   eventMuralId = v9->static_fields->_EventMuralId_k__BackingField;
-  if ( !byte_4C34BCB )
+  if ( !byte_4C401B5 )
   {
-    sub_1C32C20(&TerminalPramsManager_TypeInfo);
+    sub_1C37058(&TerminalPramsManager_TypeInfo);
     v9 = TerminalPramsManager_TypeInfo;
-    byte_4C34BCB = 1;
+    byte_4C401B5 = 1;
   }
   if ( !v9->_2.cctor_finished )
   {
@@ -9919,8 +9919,8 @@ void TerminalPramsManager__SaveClearDatas(BattleResultComponent_resultData_array
   v21 = !IsPhaseClear_k__BackingField;
   eventActionQuestId = v9->static_fields->_EventActionQuestId_k__BackingField;
   v23 = !v21;
-  v24 = (TerminalPramsManager_ClearData_o *)sub_1C32E6C(TerminalPramsManager_ClearData_TypeInfo);
-  TerminalPramsManager_ClearData___ctor_37223732(
+  v24 = (TerminalPramsManager_ClearData_o *)sub_1C372A4(TerminalPramsManager_ClearData_TypeInfo);
+  TerminalPramsManager_ClearData___ctor_37319364(
     v24,
     mQuestClearHeroineInfo,
     mQuestRewardInfos,
@@ -9952,10 +9952,10 @@ void TerminalPramsManager__SaveClearDatas(BattleResultComponent_resultData_array
     eventActionQuestId,
     useAddRewardItemRewardInfos,
     0);
-  if ( !byte_4C34E1C )
+  if ( !byte_4C40406 )
   {
-    sub_1C32C20(&TerminalPramsManager_TypeInfo);
-    byte_4C34E1C = 1;
+    sub_1C37058(&TerminalPramsManager_TypeInfo);
+    byte_4C40406 = 1;
   }
   v25 = TerminalPramsManager_TypeInfo;
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -9985,18 +9985,18 @@ void TerminalPramsManager__SaveEventRaidDefeatedEffectInfo(const MethodInfo *met
   EventRaidDefeatedEffectInfo_o *EventRaidDefeatedEffectInfo_k__BackingField; // x0
   System_String_o *v4; // x0
 
-  if ( (byte_4C34DD9 & 1) == 0 )
+  if ( (byte_4C403C3 & 1) == 0 )
   {
-    sub_1C32C20(&TerminalPramsManager_TypeInfo);
-    sub_1C32C20(&StringLiteral_11455/*"SAVEKEY_EventRaidDefeatedEffectInfo"*/);
-    byte_4C34DD9 = 1;
+    sub_1C37058(&TerminalPramsManager_TypeInfo);
+    sub_1C37058(&StringLiteral_11456/*"SAVEKEY_EventRaidDefeatedEffectInfo"*/);
+    byte_4C403C3 = 1;
   }
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(TerminalPramsManager_TypeInfo);
-  if ( !byte_4C34E1E )
+  if ( !byte_4C40408 )
   {
-    sub_1C32C20(&TerminalPramsManager_TypeInfo);
-    byte_4C34E1E = 1;
+    sub_1C37058(&TerminalPramsManager_TypeInfo);
+    byte_4C40408 = 1;
   }
   v2 = TerminalPramsManager_TypeInfo;
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -10006,9 +10006,9 @@ void TerminalPramsManager__SaveEventRaidDefeatedEffectInfo(const MethodInfo *met
   }
   EventRaidDefeatedEffectInfo_k__BackingField = v2->static_fields->_EventRaidDefeatedEffectInfo_k__BackingField;
   if ( !EventRaidDefeatedEffectInfo_k__BackingField )
-    sub_1C32E7C(0);
+    sub_1C372B4(0);
   v4 = EventRaidDefeatedEffectInfo__ConvertToStringData(EventRaidDefeatedEffectInfo_k__BackingField, v1);
-  UnityEngine_PlayerPrefs__SetString((System_String_o *)StringLiteral_11455/*"SAVEKEY_EventRaidDefeatedEffectInfo"*/, v4, 0);
+  UnityEngine_PlayerPrefs__SetString((System_String_o *)StringLiteral_11456/*"SAVEKEY_EventRaidDefeatedEffectInfo"*/, v4, 0);
   UnityEngine_PlayerPrefs__Save(0);
 }
 
@@ -10021,31 +10021,31 @@ void TerminalPramsManager__SaveLastClearedGrandWar(int32_t warId, const MethodIn
   GrandQuestRootComponent_c *v6; // x0
   Il2CppObject *entity; // [xsp+8h] [xbp-28h] BYREF
 
-  if ( (byte_4C34DE5 & 1) == 0 )
+  if ( (byte_4C403CF & 1) == 0 )
   {
-    sub_1C32C20(&BalanceConfig_TypeInfo);
-    sub_1C32C20(&Method_DataManager_GetMaster_WarMaster___);
-    sub_1C32C20(&DataManager_TypeInfo);
-    sub_1C32C20(&Method_DataMasterBase_WarMaster__WarEntity__int__TryGetEntity__);
-    sub_1C32C20(&GrandQuestRootComponent_TypeInfo);
-    byte_4C34DE5 = 1;
+    sub_1C37058(&BalanceConfig_TypeInfo);
+    sub_1C37058(&Method_DataManager_GetMaster_WarMaster___);
+    sub_1C37058(&DataManager_TypeInfo);
+    sub_1C37058(&Method_DataMasterBase_WarMaster__WarEntity__int__TryGetEntity__);
+    sub_1C37058(&GrandQuestRootComponent_TypeInfo);
+    byte_4C403CF = 1;
   }
   entity = 0;
   if ( !DataManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-  Master_object = DataManager__GetMaster_object_((const MethodInfo_30DD39C *)Method_DataManager_GetMaster_WarMaster___);
+  Master_object = DataManager__GetMaster_object_((const MethodInfo_30E7C04 *)Method_DataManager_GetMaster_WarMaster___);
   if ( !Master_object )
     goto LABEL_15;
   Master_object = (Il2CppObject *)DataMasterBase_object__object__int___TryGetEntity(
                                     (DataMasterBase_TMaster__TEntity__PKType__o *)Master_object,
                                     &entity,
                                     warId,
-                                    (const MethodInfo_3396884 *)Method_DataMasterBase_WarMaster__WarEntity__int__TryGetEntity__);
+                                    (const MethodInfo_33A10EC *)Method_DataMasterBase_WarMaster__WarEntity__int__TryGetEntity__);
   if ( ((unsigned __int8)Master_object & 1) == 0 )
     return;
   if ( !entity )
 LABEL_15:
-    sub_1C32E7C(Master_object);
+    sub_1C372B4(Master_object);
   monitor = (int)entity[3].monitor;
   v5 = BalanceConfig_TypeInfo;
   if ( !BalanceConfig_TypeInfo->_2.cctor_finished )
@@ -10072,19 +10072,19 @@ void TerminalPramsManager__SaveQuestInfo_SaveData(const MethodInfo *method)
   TerminalPramsManager_c *v1; // x0
   TerminalPramsManager_c *v2; // x0
 
-  if ( (byte_4C34D9A & 1) == 0 )
+  if ( (byte_4C40384 & 1) == 0 )
   {
-    sub_1C32C20(&TerminalPramsManager_TypeInfo);
-    sub_1C32C20(&StringLiteral_13706/*"TerminalPhaseCnt"*/);
-    sub_1C32C20(&StringLiteral_13709/*"TerminalQuestId"*/);
-    byte_4C34D9A = 1;
+    sub_1C37058(&TerminalPramsManager_TypeInfo);
+    sub_1C37058(&StringLiteral_13707/*"TerminalPhaseCnt"*/);
+    sub_1C37058(&StringLiteral_13710/*"TerminalQuestId"*/);
+    byte_4C40384 = 1;
   }
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(TerminalPramsManager_TypeInfo);
-  if ( !byte_4C31A97 )
+  if ( !byte_4C3CFE7 )
   {
-    sub_1C32C20(&TerminalPramsManager_TypeInfo);
-    byte_4C31A97 = 1;
+    sub_1C37058(&TerminalPramsManager_TypeInfo);
+    byte_4C3CFE7 = 1;
   }
   v1 = TerminalPramsManager_TypeInfo;
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -10093,13 +10093,13 @@ void TerminalPramsManager__SaveQuestInfo_SaveData(const MethodInfo *method)
     v1 = TerminalPramsManager_TypeInfo;
   }
   UnityEngine_PlayerPrefs__SetInt(
-    (System_String_o *)StringLiteral_13709/*"TerminalQuestId"*/,
+    (System_String_o *)StringLiteral_13710/*"TerminalQuestId"*/,
     v1->static_fields->_QuestId_k__BackingField,
     0);
-  if ( !byte_4C31A96 )
+  if ( !byte_4C3CFE6 )
   {
-    sub_1C32C20(&TerminalPramsManager_TypeInfo);
-    byte_4C31A96 = 1;
+    sub_1C37058(&TerminalPramsManager_TypeInfo);
+    byte_4C3CFE6 = 1;
   }
   v2 = TerminalPramsManager_TypeInfo;
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -10108,7 +10108,7 @@ void TerminalPramsManager__SaveQuestInfo_SaveData(const MethodInfo *method)
     v2 = TerminalPramsManager_TypeInfo;
   }
   UnityEngine_PlayerPrefs__SetInt(
-    (System_String_o *)StringLiteral_13706/*"TerminalPhaseCnt"*/,
+    (System_String_o *)StringLiteral_13707/*"TerminalPhaseCnt"*/,
     v2->static_fields->_PhaseCnt_k__BackingField,
     0);
   UnityEngine_PlayerPrefs__Save(0);
@@ -10141,30 +10141,30 @@ void TerminalPramsManager__SaveQuestRandomGroupList(const MethodInfo *method)
   _OWORD v22[2]; // [xsp+10h] [xbp-90h] BYREF
   System_Collections_Generic_Dictionary_Enumerator_TKey__TValue__o v23; // [xsp+30h] [xbp-70h] BYREF
 
-  if ( (byte_4C34DDD & 1) == 0 )
+  if ( (byte_4C403C7 & 1) == 0 )
   {
-    sub_1C32C20(&Method_System_Collections_Generic_Dictionary_int__int__GetEnumerator__);
-    sub_1C32C20(&Method_System_Collections_Generic_Dictionary_Enumerator_int__int__Dispose__);
-    sub_1C32C20(&Method_System_Collections_Generic_Dictionary_Enumerator_int__int__MoveNext__);
-    sub_1C32C20(&Method_System_Collections_Generic_Dictionary_Enumerator_int__int__get_Current__);
-    sub_1C32C20(&int_TypeInfo);
-    sub_1C32C20(&Method_System_Collections_Generic_KeyValuePair_int__int__get_Key__);
-    sub_1C32C20(&Method_System_Collections_Generic_KeyValuePair_int__int__get_Value__);
-    sub_1C32C20(&string_TypeInfo);
-    sub_1C32C20(&TerminalPramsManager_TypeInfo);
-    sub_1C32C20(&StringLiteral_11464/*"SAVEKEY_QuestRandomGroupList"*/);
-    sub_1C32C20(&StringLiteral_25172/*"{0}:{1}"*/);
-    sub_1C32C20(&StringLiteral_811/*","*/);
-    byte_4C34DDD = 1;
+    sub_1C37058(&Method_System_Collections_Generic_Dictionary_int__int__GetEnumerator__);
+    sub_1C37058(&Method_System_Collections_Generic_Dictionary_Enumerator_int__int__Dispose__);
+    sub_1C37058(&Method_System_Collections_Generic_Dictionary_Enumerator_int__int__MoveNext__);
+    sub_1C37058(&Method_System_Collections_Generic_Dictionary_Enumerator_int__int__get_Current__);
+    sub_1C37058(&int_TypeInfo);
+    sub_1C37058(&Method_System_Collections_Generic_KeyValuePair_int__int__get_Key__);
+    sub_1C37058(&Method_System_Collections_Generic_KeyValuePair_int__int__get_Value__);
+    sub_1C37058(&string_TypeInfo);
+    sub_1C37058(&TerminalPramsManager_TypeInfo);
+    sub_1C37058(&StringLiteral_11465/*"SAVEKEY_QuestRandomGroupList"*/);
+    sub_1C37058(&StringLiteral_25177/*"{0}:{1}"*/);
+    sub_1C37058(&StringLiteral_811/*","*/);
+    byte_4C403C7 = 1;
   }
   memset(&v23, 0, 32);
   Empty = string_TypeInfo->static_fields->Empty;
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(TerminalPramsManager_TypeInfo);
-  if ( !byte_4C342A8 )
+  if ( !byte_4C3F892 )
   {
-    sub_1C32C20(&TerminalPramsManager_TypeInfo);
-    byte_4C342A8 = 1;
+    sub_1C37058(&TerminalPramsManager_TypeInfo);
+    byte_4C3F892 = 1;
   }
   v2 = TerminalPramsManager_TypeInfo;
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -10174,32 +10174,32 @@ void TerminalPramsManager__SaveQuestRandomGroupList(const MethodInfo *method)
   }
   QuestRandomGroupList_k__BackingField = v2->static_fields->_QuestRandomGroupList_k__BackingField;
   if ( !QuestRandomGroupList_k__BackingField )
-    sub_1C32E7C(0);
+    sub_1C372B4(0);
   System_Collections_Generic_Dictionary_int__int___GetEnumerator(
     (System_Collections_Generic_Dictionary_Enumerator_TKey__TValue__o *)v22,
     QuestRandomGroupList_k__BackingField,
-    (const MethodInfo_33E763C *)Method_System_Collections_Generic_Dictionary_int__int__GetEnumerator__);
+    (const MethodInfo_33F1EA4 *)Method_System_Collections_Generic_Dictionary_int__int__GetEnumerator__);
   *(_OWORD *)&v23.fields._dictionary = v22[0];
   v23.fields._current = (struct System_Collections_Generic_KeyValuePair_TKey__TValue__o)v22[1];
   while ( System_Collections_Generic_Dictionary_Enumerator_int__int___MoveNext(
             &v23,
-            (const MethodInfo_3545214 *)Method_System_Collections_Generic_Dictionary_Enumerator_int__int__MoveNext__) )
+            (const MethodInfo_354FA7C *)Method_System_Collections_Generic_Dictionary_Enumerator_int__int__MoveNext__) )
   {
     key = (int)v23.fields._current.fields.key;
     key_high = HIDWORD(v23.fields._current.fields.key);
     if ( !System_String__IsNullOrEmpty(Empty, 0) )
-      Empty = System_String__Concat_63518544(Empty, (System_String_o *)StringLiteral_811/*","*/, 0);
+      Empty = System_String__Concat_63561656(Empty, (System_String_o *)StringLiteral_811/*","*/, 0);
     LODWORD(v22[0]) = key;
     v12 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, v22, v6, v7, v8, v9, v10, v11);
     v21 = key_high;
     v19 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v21, v13, v14, v15, v16, v17, v18);
-    v20 = System_String__Format_63559836((System_String_o *)StringLiteral_25172/*"{0}:{1}"*/, v12, v19, 0);
-    Empty = System_String__Concat_63518544(Empty, v20, 0);
+    v20 = System_String__Format_63602948((System_String_o *)StringLiteral_25177/*"{0}:{1}"*/, v12, v19, 0);
+    Empty = System_String__Concat_63561656(Empty, v20, 0);
   }
   System_Collections_Generic_Dictionary_Enumerator_int__int___Dispose(
     &v23,
-    (const MethodInfo_3545314 *)Method_System_Collections_Generic_Dictionary_Enumerator_int__int__Dispose__);
-  UnityEngine_PlayerPrefs__SetString((System_String_o *)StringLiteral_11464/*"SAVEKEY_QuestRandomGroupList"*/, Empty, 0);
+    (const MethodInfo_354FB7C *)Method_System_Collections_Generic_Dictionary_Enumerator_int__int__Dispose__);
+  UnityEngine_PlayerPrefs__SetString((System_String_o *)StringLiteral_11465/*"SAVEKEY_QuestRandomGroupList"*/, Empty, 0);
   UnityEngine_PlayerPrefs__Save(0);
 }
 
@@ -10209,17 +10209,17 @@ void TerminalPramsManager__SaveQuestReleasedFocusState(const MethodInfo *method)
   TerminalPramsManager_c *v1; // x0
   QuestFocusStateManager_o *QuestFocusStateManager; // x0
 
-  if ( (byte_4C34DC5 & 1) == 0 )
+  if ( (byte_4C403AF & 1) == 0 )
   {
-    sub_1C32C20(&TerminalPramsManager_TypeInfo);
-    byte_4C34DC5 = 1;
+    sub_1C37058(&TerminalPramsManager_TypeInfo);
+    byte_4C403AF = 1;
   }
   v1 = TerminalPramsManager_TypeInfo;
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(TerminalPramsManager_TypeInfo);
   QuestFocusStateManager = TerminalPramsManager__get_QuestFocusStateManager((const MethodInfo *)v1);
   if ( !QuestFocusStateManager )
-    sub_1C32E7C(0);
+    sub_1C372B4(0);
   QuestFocusStateManager__WriteData(QuestFocusStateManager, 0);
 }
 
@@ -10260,47 +10260,47 @@ void TerminalPramsManager__Save_SaveData(const MethodInfo *method)
   int32_t MapModelClearQuestId_k__BackingField; // [xsp+Ch] [xbp-34h] BYREF
   int64_t EndTime_k__BackingField; // [xsp+18h] [xbp-28h] BYREF
 
-  if ( (byte_4C34D98 & 1) == 0 )
+  if ( (byte_4C40382 & 1) == 0 )
   {
-    sub_1C32C20(&TerminalPramsManager_TypeInfo);
-    sub_1C32C20(&StringLiteral_13699/*"TerminalEndTime"*/);
-    sub_1C32C20(&StringLiteral_11462/*"SAVEKEY_PlayedTerminalEffects"*/);
-    sub_1C32C20(&StringLiteral_13695/*"TerminalBeforeEventActivityPoint"*/);
-    sub_1C32C20(&StringLiteral_13700/*"TerminalEventDailyPointEventId"*/);
-    sub_1C32C20(&StringLiteral_13706/*"TerminalPhaseCnt"*/);
-    sub_1C32C20(&StringLiteral_13714/*"TerminalTimeStatusEventId"*/);
-    sub_1C32C20(&StringLiteral_13698/*"TerminalDispState"*/);
-    sub_1C32C20(&StringLiteral_11459/*"SAVEKEY_PlayTerminalEffectDisappear"*/);
-    sub_1C32C20(&StringLiteral_13701/*"TerminalIsDoneShortcut"*/);
-    sub_1C32C20(&StringLiteral_11458/*"SAVEKEY_MapModelClearQuestInfo"*/);
-    sub_1C32C20(&StringLiteral_11463/*"SAVEKEY_PlayerGenderType"*/);
-    sub_1C32C20(&StringLiteral_11451/*"SAVEKEY_ClearEventQuestIds"*/);
-    sub_1C32C20(&StringLiteral_11460/*"SAVEKEY_PlayTerminalEffectDisappearWarId"*/);
-    sub_1C32C20(&StringLiteral_13709/*"TerminalQuestId"*/);
-    sub_1C32C20(&StringLiteral_11471/*"SAVEKEY_TerminalSelectedStoryQuestId"*/);
-    sub_1C32C20(&StringLiteral_13713/*"TerminalTimeStatusEventDailyPoint"*/);
-    sub_1C32C20(&StringLiteral_13718/*"TerminalWarId"*/);
-    sub_1C32C20(&StringLiteral_13711/*"TerminalSpotId"*/);
-    sub_1C32C20(&StringLiteral_13715/*"TerminalTimeStatusLoopCount"*/);
-    sub_1C32C20(&StringLiteral_13696/*"TerminalBeforeEventActivityPointGauge"*/);
-    sub_1C32C20(&StringLiteral_11449/*"SAVEKEY_BlankEarthSpotId"*/);
-    sub_1C32C20(&StringLiteral_11454/*"SAVEKEY_DataLostBattleAutoReset"*/);
-    sub_1C32C20(&StringLiteral_13719/*"TerminalWarStartedIds"*/);
-    sub_1C32C20(&StringLiteral_11453/*"SAVEKEY_ConnectMarkEventId"*/);
-    sub_1C32C20(&StringLiteral_811/*","*/);
-    sub_1C32C20(&StringLiteral_11452/*"SAVEKEY_ConnectMarkAnimationId"*/);
-    sub_1C32C20(&StringLiteral_11461/*"SAVEKEY_PlayTerminalEffectNt2AfterAction"*/);
-    sub_1C32C20(&StringLiteral_11470/*"SAVEKEY_TerminalSelectedRecollectionWarId"*/);
-    byte_4C34D98 = 1;
+    sub_1C37058(&TerminalPramsManager_TypeInfo);
+    sub_1C37058(&StringLiteral_13700/*"TerminalEndTime"*/);
+    sub_1C37058(&StringLiteral_11463/*"SAVEKEY_PlayedTerminalEffects"*/);
+    sub_1C37058(&StringLiteral_13696/*"TerminalBeforeEventActivityPoint"*/);
+    sub_1C37058(&StringLiteral_13701/*"TerminalEventDailyPointEventId"*/);
+    sub_1C37058(&StringLiteral_13707/*"TerminalPhaseCnt"*/);
+    sub_1C37058(&StringLiteral_13715/*"TerminalTimeStatusEventId"*/);
+    sub_1C37058(&StringLiteral_13699/*"TerminalDispState"*/);
+    sub_1C37058(&StringLiteral_11460/*"SAVEKEY_PlayTerminalEffectDisappear"*/);
+    sub_1C37058(&StringLiteral_13702/*"TerminalIsDoneShortcut"*/);
+    sub_1C37058(&StringLiteral_11459/*"SAVEKEY_MapModelClearQuestInfo"*/);
+    sub_1C37058(&StringLiteral_11464/*"SAVEKEY_PlayerGenderType"*/);
+    sub_1C37058(&StringLiteral_11452/*"SAVEKEY_ClearEventQuestIds"*/);
+    sub_1C37058(&StringLiteral_11461/*"SAVEKEY_PlayTerminalEffectDisappearWarId"*/);
+    sub_1C37058(&StringLiteral_13710/*"TerminalQuestId"*/);
+    sub_1C37058(&StringLiteral_11472/*"SAVEKEY_TerminalSelectedStoryQuestId"*/);
+    sub_1C37058(&StringLiteral_13714/*"TerminalTimeStatusEventDailyPoint"*/);
+    sub_1C37058(&StringLiteral_13719/*"TerminalWarId"*/);
+    sub_1C37058(&StringLiteral_13712/*"TerminalSpotId"*/);
+    sub_1C37058(&StringLiteral_13716/*"TerminalTimeStatusLoopCount"*/);
+    sub_1C37058(&StringLiteral_13697/*"TerminalBeforeEventActivityPointGauge"*/);
+    sub_1C37058(&StringLiteral_11450/*"SAVEKEY_BlankEarthSpotId"*/);
+    sub_1C37058(&StringLiteral_11455/*"SAVEKEY_DataLostBattleAutoReset"*/);
+    sub_1C37058(&StringLiteral_13720/*"TerminalWarStartedIds"*/);
+    sub_1C37058(&StringLiteral_11454/*"SAVEKEY_ConnectMarkEventId"*/);
+    sub_1C37058(&StringLiteral_811/*","*/);
+    sub_1C37058(&StringLiteral_11453/*"SAVEKEY_ConnectMarkAnimationId"*/);
+    sub_1C37058(&StringLiteral_11462/*"SAVEKEY_PlayTerminalEffectNt2AfterAction"*/);
+    sub_1C37058(&StringLiteral_11471/*"SAVEKEY_TerminalSelectedRecollectionWarId"*/);
+    byte_4C40382 = 1;
   }
   EndTime_k__BackingField = 0;
   MapModelClearQuestId_k__BackingField = 0;
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(TerminalPramsManager_TypeInfo);
-  if ( !byte_4C344B0 )
+  if ( !byte_4C3FA9A )
   {
-    sub_1C32C20(&TerminalPramsManager_TypeInfo);
-    byte_4C344B0 = 1;
+    sub_1C37058(&TerminalPramsManager_TypeInfo);
+    byte_4C3FA9A = 1;
   }
   v1 = TerminalPramsManager_TypeInfo;
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -10309,13 +10309,13 @@ void TerminalPramsManager__Save_SaveData(const MethodInfo *method)
     v1 = TerminalPramsManager_TypeInfo;
   }
   UnityEngine_PlayerPrefs__SetInt(
-    (System_String_o *)StringLiteral_13698/*"TerminalDispState"*/,
+    (System_String_o *)StringLiteral_13699/*"TerminalDispState"*/,
     v1->static_fields->_DispState_k__BackingField,
     0);
-  if ( !byte_4C31DAD )
+  if ( !byte_4C3D397 )
   {
-    sub_1C32C20(&TerminalPramsManager_TypeInfo);
-    byte_4C31DAD = 1;
+    sub_1C37058(&TerminalPramsManager_TypeInfo);
+    byte_4C3D397 = 1;
   }
   v2 = TerminalPramsManager_TypeInfo;
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -10323,11 +10323,11 @@ void TerminalPramsManager__Save_SaveData(const MethodInfo *method)
     j_il2cpp_runtime_class_init_0(TerminalPramsManager_TypeInfo);
     v2 = TerminalPramsManager_TypeInfo;
   }
-  UnityEngine_PlayerPrefs__SetInt((System_String_o *)StringLiteral_13718/*"TerminalWarId"*/, v2->static_fields->_WarId_k__BackingField, 0);
-  if ( !byte_4C344B4 )
+  UnityEngine_PlayerPrefs__SetInt((System_String_o *)StringLiteral_13719/*"TerminalWarId"*/, v2->static_fields->_WarId_k__BackingField, 0);
+  if ( !byte_4C3FA9E )
   {
-    sub_1C32C20(&TerminalPramsManager_TypeInfo);
-    byte_4C344B4 = 1;
+    sub_1C37058(&TerminalPramsManager_TypeInfo);
+    byte_4C3FA9E = 1;
   }
   v3 = TerminalPramsManager_TypeInfo;
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -10335,11 +10335,11 @@ void TerminalPramsManager__Save_SaveData(const MethodInfo *method)
     j_il2cpp_runtime_class_init_0(TerminalPramsManager_TypeInfo);
     v3 = TerminalPramsManager_TypeInfo;
   }
-  UnityEngine_PlayerPrefs__SetInt((System_String_o *)StringLiteral_13711/*"TerminalSpotId"*/, v3->static_fields->_SpotId_k__BackingField, 0);
-  if ( !byte_4C341F2 )
+  UnityEngine_PlayerPrefs__SetInt((System_String_o *)StringLiteral_13712/*"TerminalSpotId"*/, v3->static_fields->_SpotId_k__BackingField, 0);
+  if ( !byte_4C3F7DC )
   {
-    sub_1C32C20(&TerminalPramsManager_TypeInfo);
-    byte_4C341F2 = 1;
+    sub_1C37058(&TerminalPramsManager_TypeInfo);
+    byte_4C3F7DC = 1;
   }
   v4 = TerminalPramsManager_TypeInfo;
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -10348,13 +10348,13 @@ void TerminalPramsManager__Save_SaveData(const MethodInfo *method)
     v4 = TerminalPramsManager_TypeInfo;
   }
   UnityEngine_PlayerPrefs__SetInt(
-    (System_String_o *)StringLiteral_11449/*"SAVEKEY_BlankEarthSpotId"*/,
+    (System_String_o *)StringLiteral_11450/*"SAVEKEY_BlankEarthSpotId"*/,
     v4->static_fields->_BlankEarthSpotId_k__BackingField,
     0);
-  if ( !byte_4C31A97 )
+  if ( !byte_4C3CFE7 )
   {
-    sub_1C32C20(&TerminalPramsManager_TypeInfo);
-    byte_4C31A97 = 1;
+    sub_1C37058(&TerminalPramsManager_TypeInfo);
+    byte_4C3CFE7 = 1;
   }
   v5 = TerminalPramsManager_TypeInfo;
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -10363,13 +10363,13 @@ void TerminalPramsManager__Save_SaveData(const MethodInfo *method)
     v5 = TerminalPramsManager_TypeInfo;
   }
   UnityEngine_PlayerPrefs__SetInt(
-    (System_String_o *)StringLiteral_13709/*"TerminalQuestId"*/,
+    (System_String_o *)StringLiteral_13710/*"TerminalQuestId"*/,
     v5->static_fields->_QuestId_k__BackingField,
     0);
-  if ( !byte_4C31A96 )
+  if ( !byte_4C3CFE6 )
   {
-    sub_1C32C20(&TerminalPramsManager_TypeInfo);
-    byte_4C31A96 = 1;
+    sub_1C37058(&TerminalPramsManager_TypeInfo);
+    byte_4C3CFE6 = 1;
   }
   v6 = TerminalPramsManager_TypeInfo;
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -10378,13 +10378,13 @@ void TerminalPramsManager__Save_SaveData(const MethodInfo *method)
     v6 = TerminalPramsManager_TypeInfo;
   }
   UnityEngine_PlayerPrefs__SetInt(
-    (System_String_o *)StringLiteral_13706/*"TerminalPhaseCnt"*/,
+    (System_String_o *)StringLiteral_13707/*"TerminalPhaseCnt"*/,
     v6->static_fields->_PhaseCnt_k__BackingField,
     0);
-  if ( !byte_4C344B5 )
+  if ( !byte_4C3FA9F )
   {
-    sub_1C32C20(&TerminalPramsManager_TypeInfo);
-    byte_4C344B5 = 1;
+    sub_1C37058(&TerminalPramsManager_TypeInfo);
+    byte_4C3FA9F = 1;
   }
   v7 = TerminalPramsManager_TypeInfo;
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -10394,11 +10394,11 @@ void TerminalPramsManager__Save_SaveData(const MethodInfo *method)
   }
   EndTime_k__BackingField = v7->static_fields->_EndTime_k__BackingField;
   v8 = System_Int64__ToString((int64_t)&EndTime_k__BackingField, 0);
-  UnityEngine_PlayerPrefs__SetString((System_String_o *)StringLiteral_13699/*"TerminalEndTime"*/, v8, 0);
-  if ( !byte_4C349F4 )
+  UnityEngine_PlayerPrefs__SetString((System_String_o *)StringLiteral_13700/*"TerminalEndTime"*/, v8, 0);
+  if ( !byte_4C3FFDE )
   {
-    sub_1C32C20(&TerminalPramsManager_TypeInfo);
-    byte_4C349F4 = 1;
+    sub_1C37058(&TerminalPramsManager_TypeInfo);
+    byte_4C3FFDE = 1;
   }
   v9 = TerminalPramsManager_TypeInfo;
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -10407,7 +10407,7 @@ void TerminalPramsManager__Save_SaveData(const MethodInfo *method)
     v9 = TerminalPramsManager_TypeInfo;
   }
   UnityEngine_PlayerPrefs__SetInt(
-    (System_String_o *)StringLiteral_13701/*"TerminalIsDoneShortcut"*/,
+    (System_String_o *)StringLiteral_13702/*"TerminalIsDoneShortcut"*/,
     v9->static_fields->_IsDoneShortcut_k__BackingField,
     0);
   v10 = TerminalPramsManager_TypeInfo;
@@ -10417,13 +10417,13 @@ void TerminalPramsManager__Save_SaveData(const MethodInfo *method)
     v10 = TerminalPramsManager_TypeInfo;
   }
   UnityEngine_PlayerPrefs__SetString(
-    (System_String_o *)StringLiteral_13719/*"TerminalWarStartedIds"*/,
+    (System_String_o *)StringLiteral_13720/*"TerminalWarStartedIds"*/,
     v10->static_fields->mTerminalWarStartedIds,
     0);
-  if ( !byte_4C34BC5 )
+  if ( !byte_4C401AF )
   {
-    sub_1C32C20(&TerminalPramsManager_TypeInfo);
-    byte_4C34BC5 = 1;
+    sub_1C37058(&TerminalPramsManager_TypeInfo);
+    byte_4C401AF = 1;
   }
   v11 = TerminalPramsManager_TypeInfo;
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -10432,13 +10432,13 @@ void TerminalPramsManager__Save_SaveData(const MethodInfo *method)
     v11 = TerminalPramsManager_TypeInfo;
   }
   UnityEngine_PlayerPrefs__SetInt(
-    (System_String_o *)StringLiteral_13714/*"TerminalTimeStatusEventId"*/,
+    (System_String_o *)StringLiteral_13715/*"TerminalTimeStatusEventId"*/,
     v11->static_fields->_TimeStatusEventId_k__BackingField,
     0);
-  if ( !byte_4C34BC6 )
+  if ( !byte_4C401B0 )
   {
-    sub_1C32C20(&TerminalPramsManager_TypeInfo);
-    byte_4C34BC6 = 1;
+    sub_1C37058(&TerminalPramsManager_TypeInfo);
+    byte_4C401B0 = 1;
   }
   v12 = TerminalPramsManager_TypeInfo;
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -10447,13 +10447,13 @@ void TerminalPramsManager__Save_SaveData(const MethodInfo *method)
     v12 = TerminalPramsManager_TypeInfo;
   }
   UnityEngine_PlayerPrefs__SetInt(
-    (System_String_o *)StringLiteral_13715/*"TerminalTimeStatusLoopCount"*/,
+    (System_String_o *)StringLiteral_13716/*"TerminalTimeStatusLoopCount"*/,
     v12->static_fields->_TimeStatusLoopCount_k__BackingField,
     0);
-  if ( !byte_4C34E04 )
+  if ( !byte_4C403EE )
   {
-    sub_1C32C20(&TerminalPramsManager_TypeInfo);
-    byte_4C34E04 = 1;
+    sub_1C37058(&TerminalPramsManager_TypeInfo);
+    byte_4C403EE = 1;
   }
   v13 = TerminalPramsManager_TypeInfo;
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -10462,13 +10462,13 @@ void TerminalPramsManager__Save_SaveData(const MethodInfo *method)
     v13 = TerminalPramsManager_TypeInfo;
   }
   UnityEngine_PlayerPrefs__SetInt(
-    (System_String_o *)StringLiteral_13700/*"TerminalEventDailyPointEventId"*/,
+    (System_String_o *)StringLiteral_13701/*"TerminalEventDailyPointEventId"*/,
     v13->static_fields->_EventDailyPointEventId_k__BackingField,
     0);
-  if ( !byte_4C34E05 )
+  if ( !byte_4C403EF )
   {
-    sub_1C32C20(&TerminalPramsManager_TypeInfo);
-    byte_4C34E05 = 1;
+    sub_1C37058(&TerminalPramsManager_TypeInfo);
+    byte_4C403EF = 1;
   }
   v14 = TerminalPramsManager_TypeInfo;
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -10478,11 +10478,11 @@ void TerminalPramsManager__Save_SaveData(const MethodInfo *method)
   }
   EndTime_k__BackingField = v14->static_fields->_BeforeTimeEventDailyPoint_k__BackingField;
   v15 = System_Int64__ToString((int64_t)&EndTime_k__BackingField, 0);
-  UnityEngine_PlayerPrefs__SetString((System_String_o *)StringLiteral_13713/*"TerminalTimeStatusEventDailyPoint"*/, v15, 0);
-  if ( !byte_4C34E06 )
+  UnityEngine_PlayerPrefs__SetString((System_String_o *)StringLiteral_13714/*"TerminalTimeStatusEventDailyPoint"*/, v15, 0);
+  if ( !byte_4C403F0 )
   {
-    sub_1C32C20(&TerminalPramsManager_TypeInfo);
-    byte_4C34E06 = 1;
+    sub_1C37058(&TerminalPramsManager_TypeInfo);
+    byte_4C403F0 = 1;
   }
   v16 = TerminalPramsManager_TypeInfo;
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -10491,13 +10491,13 @@ void TerminalPramsManager__Save_SaveData(const MethodInfo *method)
     v16 = TerminalPramsManager_TypeInfo;
   }
   UnityEngine_PlayerPrefs__SetInt(
-    (System_String_o *)StringLiteral_13695/*"TerminalBeforeEventActivityPoint"*/,
+    (System_String_o *)StringLiteral_13696/*"TerminalBeforeEventActivityPoint"*/,
     v16->static_fields->_BeforeEventActivityPoint_k__BackingField,
     0);
-  if ( !byte_4C34E07 )
+  if ( !byte_4C403F1 )
   {
-    sub_1C32C20(&TerminalPramsManager_TypeInfo);
-    byte_4C34E07 = 1;
+    sub_1C37058(&TerminalPramsManager_TypeInfo);
+    byte_4C403F1 = 1;
   }
   v17 = TerminalPramsManager_TypeInfo;
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -10506,13 +10506,13 @@ void TerminalPramsManager__Save_SaveData(const MethodInfo *method)
     v17 = TerminalPramsManager_TypeInfo;
   }
   UnityEngine_PlayerPrefs__SetInt(
-    (System_String_o *)StringLiteral_13696/*"TerminalBeforeEventActivityPointGauge"*/,
+    (System_String_o *)StringLiteral_13697/*"TerminalBeforeEventActivityPointGauge"*/,
     v17->static_fields->_BeforeEventActivityPointGauge_k__BackingField,
     0);
-  if ( !byte_4C34E08 )
+  if ( !byte_4C403F2 )
   {
-    sub_1C32C20(&TerminalPramsManager_TypeInfo);
-    byte_4C34E08 = 1;
+    sub_1C37058(&TerminalPramsManager_TypeInfo);
+    byte_4C403F2 = 1;
   }
   v18 = TerminalPramsManager_TypeInfo;
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -10521,13 +10521,13 @@ void TerminalPramsManager__Save_SaveData(const MethodInfo *method)
     v18 = TerminalPramsManager_TypeInfo;
   }
   UnityEngine_PlayerPrefs__SetString(
-    (System_String_o *)StringLiteral_11462/*"SAVEKEY_PlayedTerminalEffects"*/,
+    (System_String_o *)StringLiteral_11463/*"SAVEKEY_PlayedTerminalEffects"*/,
     v18->static_fields->_PlayedTerminalEffects_k__BackingField,
     0);
-  if ( !byte_4C349E5 )
+  if ( !byte_4C3FFCF )
   {
-    sub_1C32C20(&TerminalPramsManager_TypeInfo);
-    byte_4C349E5 = 1;
+    sub_1C37058(&TerminalPramsManager_TypeInfo);
+    byte_4C3FFCF = 1;
   }
   v19 = TerminalPramsManager_TypeInfo;
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -10536,15 +10536,15 @@ void TerminalPramsManager__Save_SaveData(const MethodInfo *method)
     v19 = TerminalPramsManager_TypeInfo;
   }
   UnityEngine_PlayerPrefs__SetInt(
-    (System_String_o *)StringLiteral_11459/*"SAVEKEY_PlayTerminalEffectDisappear"*/,
+    (System_String_o *)StringLiteral_11460/*"SAVEKEY_PlayTerminalEffectDisappear"*/,
     v19->static_fields->_IsPlayTerminalEffectDisappear_k__BackingField,
     0);
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(TerminalPramsManager_TypeInfo);
-  if ( !byte_4C349E6 )
+  if ( !byte_4C3FFD0 )
   {
-    sub_1C32C20(&TerminalPramsManager_TypeInfo);
-    byte_4C349E6 = 1;
+    sub_1C37058(&TerminalPramsManager_TypeInfo);
+    byte_4C3FFD0 = 1;
   }
   v20 = TerminalPramsManager_TypeInfo;
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -10553,13 +10553,13 @@ void TerminalPramsManager__Save_SaveData(const MethodInfo *method)
     v20 = TerminalPramsManager_TypeInfo;
   }
   UnityEngine_PlayerPrefs__SetInt(
-    (System_String_o *)StringLiteral_11460/*"SAVEKEY_PlayTerminalEffectDisappearWarId"*/,
+    (System_String_o *)StringLiteral_11461/*"SAVEKEY_PlayTerminalEffectDisappearWarId"*/,
     v20->static_fields->_IsPlayTerminalEffectDisappearWarId_k__BackingField,
     0);
-  if ( !byte_4C34BC7 )
+  if ( !byte_4C401B1 )
   {
-    sub_1C32C20(&TerminalPramsManager_TypeInfo);
-    byte_4C34BC7 = 1;
+    sub_1C37058(&TerminalPramsManager_TypeInfo);
+    byte_4C401B1 = 1;
   }
   v21 = TerminalPramsManager_TypeInfo;
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -10568,15 +10568,15 @@ void TerminalPramsManager__Save_SaveData(const MethodInfo *method)
     v21 = TerminalPramsManager_TypeInfo;
   }
   UnityEngine_PlayerPrefs__SetInt(
-    (System_String_o *)StringLiteral_11461/*"SAVEKEY_PlayTerminalEffectNt2AfterAction"*/,
+    (System_String_o *)StringLiteral_11462/*"SAVEKEY_PlayTerminalEffectNt2AfterAction"*/,
     v21->static_fields->_IsPlayTerminalEffectNt2AfterAction_k__BackingField,
     0);
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(TerminalPramsManager_TypeInfo);
-  if ( !byte_4C34BCA )
+  if ( !byte_4C401B4 )
   {
-    sub_1C32C20(&TerminalPramsManager_TypeInfo);
-    byte_4C34BCA = 1;
+    sub_1C37058(&TerminalPramsManager_TypeInfo);
+    byte_4C401B4 = 1;
   }
   v22 = TerminalPramsManager_TypeInfo;
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -10585,21 +10585,21 @@ void TerminalPramsManager__Save_SaveData(const MethodInfo *method)
     v22 = TerminalPramsManager_TypeInfo;
   }
   UnityEngine_PlayerPrefs__SetInt(
-    (System_String_o *)StringLiteral_11471/*"SAVEKEY_TerminalSelectedStoryQuestId"*/,
+    (System_String_o *)StringLiteral_11472/*"SAVEKEY_TerminalSelectedStoryQuestId"*/,
     v22->static_fields->_SelectedStoryQuestId_k__BackingField,
     0);
   UnityEngine_PlayerPrefs__SetInt(
-    (System_String_o *)StringLiteral_11453/*"SAVEKEY_ConnectMarkEventId"*/,
+    (System_String_o *)StringLiteral_11454/*"SAVEKEY_ConnectMarkEventId"*/,
     TerminalPramsManager_TypeInfo->static_fields->ConnectMarkEventId,
     0);
   UnityEngine_PlayerPrefs__SetInt(
-    (System_String_o *)StringLiteral_11452/*"SAVEKEY_ConnectMarkAnimationId"*/,
+    (System_String_o *)StringLiteral_11453/*"SAVEKEY_ConnectMarkAnimationId"*/,
     TerminalPramsManager_TypeInfo->static_fields->ConnectMarkAnimationId,
     0);
-  if ( !byte_4C349BE )
+  if ( !byte_4C3FFA8 )
   {
-    sub_1C32C20(&TerminalPramsManager_TypeInfo);
-    byte_4C349BE = 1;
+    sub_1C37058(&TerminalPramsManager_TypeInfo);
+    byte_4C3FFA8 = 1;
   }
   v23 = TerminalPramsManager_TypeInfo;
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -10608,13 +10608,13 @@ void TerminalPramsManager__Save_SaveData(const MethodInfo *method)
     v23 = TerminalPramsManager_TypeInfo;
   }
   UnityEngine_PlayerPrefs__SetInt(
-    (System_String_o *)StringLiteral_11470/*"SAVEKEY_TerminalSelectedRecollectionWarId"*/,
+    (System_String_o *)StringLiteral_11471/*"SAVEKEY_TerminalSelectedRecollectionWarId"*/,
     v23->static_fields->_SelectedRecollectionWarId_k__BackingField,
     0);
-  if ( !byte_4C342AB )
+  if ( !byte_4C3F895 )
   {
-    sub_1C32C20(&TerminalPramsManager_TypeInfo);
-    byte_4C342AB = 1;
+    sub_1C37058(&TerminalPramsManager_TypeInfo);
+    byte_4C3F895 = 1;
   }
   v24 = TerminalPramsManager_TypeInfo;
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -10623,13 +10623,13 @@ void TerminalPramsManager__Save_SaveData(const MethodInfo *method)
     v24 = TerminalPramsManager_TypeInfo;
   }
   UnityEngine_PlayerPrefs__SetString(
-    (System_String_o *)StringLiteral_11451/*"SAVEKEY_ClearEventQuestIds"*/,
+    (System_String_o *)StringLiteral_11452/*"SAVEKEY_ClearEventQuestIds"*/,
     v24->static_fields->_ClearEventQuestIds_k__BackingField,
     0);
-  if ( !byte_4C344B1 )
+  if ( !byte_4C3FA9B )
   {
-    sub_1C32C20(&TerminalPramsManager_TypeInfo);
-    byte_4C344B1 = 1;
+    sub_1C37058(&TerminalPramsManager_TypeInfo);
+    byte_4C3FA9B = 1;
   }
   v25 = TerminalPramsManager_TypeInfo;
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -10639,10 +10639,10 @@ void TerminalPramsManager__Save_SaveData(const MethodInfo *method)
   }
   MapModelClearQuestId_k__BackingField = v25->static_fields->_MapModelClearQuestId_k__BackingField;
   v26 = System_Int32__ToString((int32_t)&MapModelClearQuestId_k__BackingField, 0);
-  if ( !byte_4C344B2 )
+  if ( !byte_4C3FA9C )
   {
-    sub_1C32C20(&TerminalPramsManager_TypeInfo);
-    byte_4C344B2 = 1;
+    sub_1C37058(&TerminalPramsManager_TypeInfo);
+    byte_4C3FA9C = 1;
   }
   v27 = TerminalPramsManager_TypeInfo;
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -10652,12 +10652,12 @@ void TerminalPramsManager__Save_SaveData(const MethodInfo *method)
   }
   MapModelClearQuestId_k__BackingField = v27->static_fields->_MapModelClearPhaseCount_k__BackingField;
   v28 = System_Int32__ToString((int32_t)&MapModelClearQuestId_k__BackingField, 0);
-  v29 = System_String__Concat_63556792(v26, (System_String_o *)StringLiteral_811/*","*/, v28, 0);
-  UnityEngine_PlayerPrefs__SetString((System_String_o *)StringLiteral_11458/*"SAVEKEY_MapModelClearQuestInfo"*/, v29, 0);
-  if ( !byte_4C34BCC )
+  v29 = System_String__Concat_63599904(v26, (System_String_o *)StringLiteral_811/*","*/, v28, 0);
+  UnityEngine_PlayerPrefs__SetString((System_String_o *)StringLiteral_11459/*"SAVEKEY_MapModelClearQuestInfo"*/, v29, 0);
+  if ( !byte_4C401B6 )
   {
-    sub_1C32C20(&TerminalPramsManager_TypeInfo);
-    byte_4C34BCC = 1;
+    sub_1C37058(&TerminalPramsManager_TypeInfo);
+    byte_4C401B6 = 1;
   }
   v30 = TerminalPramsManager_TypeInfo;
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -10666,15 +10666,15 @@ void TerminalPramsManager__Save_SaveData(const MethodInfo *method)
     v30 = TerminalPramsManager_TypeInfo;
   }
   UnityEngine_PlayerPrefs__SetInt(
-    (System_String_o *)StringLiteral_11454/*"SAVEKEY_DataLostBattleAutoReset"*/,
+    (System_String_o *)StringLiteral_11455/*"SAVEKEY_DataLostBattleAutoReset"*/,
     v30->static_fields->_IsDataLostBattleAutoReset_k__BackingField,
     0);
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(TerminalPramsManager_TypeInfo);
-  if ( !byte_4C34E09 )
+  if ( !byte_4C403F3 )
   {
-    sub_1C32C20(&TerminalPramsManager_TypeInfo);
-    byte_4C34E09 = 1;
+    sub_1C37058(&TerminalPramsManager_TypeInfo);
+    byte_4C403F3 = 1;
   }
   v31 = TerminalPramsManager_TypeInfo;
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -10683,7 +10683,7 @@ void TerminalPramsManager__Save_SaveData(const MethodInfo *method)
     v31 = TerminalPramsManager_TypeInfo;
   }
   UnityEngine_PlayerPrefs__SetInt(
-    (System_String_o *)StringLiteral_11463/*"SAVEKEY_PlayerGenderType"*/,
+    (System_String_o *)StringLiteral_11464/*"SAVEKEY_PlayerGenderType"*/,
     v31->static_fields->_PlayerGenderType_k__BackingField,
     0);
   UnityEngine_PlayerPrefs__Save(0);
@@ -10698,11 +10698,11 @@ void TerminalPramsManager__SendClearQuestToAdManager(int32_t questId, int32_t qu
   Il2CppObject *Instance; // x0
   int32_t v8; // w1
 
-  if ( (byte_4C34DCD & 1) == 0 )
+  if ( (byte_4C403B7 & 1) == 0 )
   {
-    sub_1C32C20(&Method_SingletonMonoBehaviour_AdManager__get_Instance__);
-    sub_1C32C20(&TerminalPramsManager_TypeInfo);
-    byte_4C34DCD = 1;
+    sub_1C37058(&Method_SingletonMonoBehaviour_AdManager__get_Instance__);
+    sub_1C37058(&TerminalPramsManager_TypeInfo);
+    byte_4C403B7 = 1;
   }
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(TerminalPramsManager_TypeInfo);
@@ -10711,9 +10711,9 @@ void TerminalPramsManager__SendClearQuestToAdManager(int32_t questId, int32_t qu
     if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(TerminalPramsManager_TypeInfo);
     IsMainStoryForQuestId = TerminalPramsManager__IsMainStoryForQuestId(questId, v5);
-    Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39E2904 *)Method_SingletonMonoBehaviour_AdManager__get_Instance__);
+    Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39ED16C *)Method_SingletonMonoBehaviour_AdManager__get_Instance__);
     if ( !Instance )
-      sub_1C32E7C(0);
+      sub_1C372B4(0);
     if ( IsMainStoryForQuestId )
       v8 = 10;
     else
@@ -10768,63 +10768,63 @@ void TerminalPramsManager__SendOpenedQuestIdToAdManager(int32_t clearedQuestId, 
   Il2CppObject *v43; // [xsp+0h] [xbp-40h] BYREF
   QuestEntity_o *entity; // [xsp+8h] [xbp-38h] BYREF
 
-  if ( (byte_4C34DCE & 1) == 0 )
+  if ( (byte_4C403B8 & 1) == 0 )
   {
-    sub_1C32C20(&Method_DataManager_GetMasterData_QuestMaster___);
-    sub_1C32C20(&Method_DataManager_GetMasterData_QuestReleaseMaster___);
-    sub_1C32C20(&Method_DataManager_GetMasterData_SpotMaster___);
-    sub_1C32C20(&Method_DataManager_GetMasterData_UserQuestMaster___);
-    sub_1C32C20(&Method_DataMasterBase_SpotMaster__SpotEntity__int__TryGetEntity__);
-    sub_1C32C20(&Method_System_Linq_Enumerable_FirstOrDefault_int___);
-    sub_1C32C20(&Method_System_Linq_Enumerable_OrderByDescending_int__int___);
-    sub_1C32C20(&Method_System_Linq_Enumerable_Select_int__QuestEntity___);
-    sub_1C32C20(&Method_System_Linq_Enumerable_Select_QuestEntity__int___);
-    sub_1C32C20(&Method_System_Linq_Enumerable_Where_int___);
-    sub_1C32C20(&Method_System_Linq_Enumerable_Where_QuestEntity___);
-    sub_1C32C20(&System_Func_int__int__TypeInfo);
-    sub_1C32C20(&System_Func_int__bool__TypeInfo);
-    sub_1C32C20(&System_Func_QuestEntity__int__TypeInfo);
-    sub_1C32C20(&System_Func_QuestEntity__bool__TypeInfo);
-    sub_1C32C20(&System_Func_int__QuestEntity__TypeInfo);
-    sub_1C32C20(&Method_SingletonMonoBehaviour_AdManager__get_Instance__);
-    sub_1C32C20(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-    sub_1C32C20(&TerminalPramsManager_TypeInfo);
-    sub_1C32C20(&Method_TerminalPramsManager___c__SendOpenedQuestIdToAdManager_b__730_0__);
-    sub_1C32C20(&Method_TerminalPramsManager___c__SendOpenedQuestIdToAdManager_b__730_3__);
-    sub_1C32C20(&Method_TerminalPramsManager___c__SendOpenedQuestIdToAdManager_b__730_4__);
-    sub_1C32C20(&Method_TerminalPramsManager___c__DisplayClass730_0__SendOpenedQuestIdToAdManager_b__1__);
-    sub_1C32C20(&Method_TerminalPramsManager___c__DisplayClass730_0__SendOpenedQuestIdToAdManager_b__2__);
-    sub_1C32C20(&TerminalPramsManager___c__DisplayClass730_0_TypeInfo);
-    sub_1C32C20(&TerminalPramsManager___c_TypeInfo);
-    byte_4C34DCE = 1;
+    sub_1C37058(&Method_DataManager_GetMasterData_QuestMaster___);
+    sub_1C37058(&Method_DataManager_GetMasterData_QuestReleaseMaster___);
+    sub_1C37058(&Method_DataManager_GetMasterData_SpotMaster___);
+    sub_1C37058(&Method_DataManager_GetMasterData_UserQuestMaster___);
+    sub_1C37058(&Method_DataMasterBase_SpotMaster__SpotEntity__int__TryGetEntity__);
+    sub_1C37058(&Method_System_Linq_Enumerable_FirstOrDefault_int___);
+    sub_1C37058(&Method_System_Linq_Enumerable_OrderByDescending_int__int___);
+    sub_1C37058(&Method_System_Linq_Enumerable_Select_int__QuestEntity___);
+    sub_1C37058(&Method_System_Linq_Enumerable_Select_QuestEntity__int___);
+    sub_1C37058(&Method_System_Linq_Enumerable_Where_int___);
+    sub_1C37058(&Method_System_Linq_Enumerable_Where_QuestEntity___);
+    sub_1C37058(&System_Func_int__int__TypeInfo);
+    sub_1C37058(&System_Func_int__bool__TypeInfo);
+    sub_1C37058(&System_Func_QuestEntity__int__TypeInfo);
+    sub_1C37058(&System_Func_QuestEntity__bool__TypeInfo);
+    sub_1C37058(&System_Func_int__QuestEntity__TypeInfo);
+    sub_1C37058(&Method_SingletonMonoBehaviour_AdManager__get_Instance__);
+    sub_1C37058(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    sub_1C37058(&TerminalPramsManager_TypeInfo);
+    sub_1C37058(&Method_TerminalPramsManager___c__SendOpenedQuestIdToAdManager_b__730_0__);
+    sub_1C37058(&Method_TerminalPramsManager___c__SendOpenedQuestIdToAdManager_b__730_3__);
+    sub_1C37058(&Method_TerminalPramsManager___c__SendOpenedQuestIdToAdManager_b__730_4__);
+    sub_1C37058(&Method_TerminalPramsManager___c__DisplayClass730_0__SendOpenedQuestIdToAdManager_b__1__);
+    sub_1C37058(&Method_TerminalPramsManager___c__DisplayClass730_0__SendOpenedQuestIdToAdManager_b__2__);
+    sub_1C37058(&TerminalPramsManager___c__DisplayClass730_0_TypeInfo);
+    sub_1C37058(&TerminalPramsManager___c_TypeInfo);
+    byte_4C403B8 = 1;
   }
   v43 = 0;
   entity = 0;
-  v3 = sub_1C32E6C(TerminalPramsManager___c__DisplayClass730_0_TypeInfo);
+  v3 = sub_1C372A4(TerminalPramsManager___c__DisplayClass730_0_TypeInfo);
   TerminalPramsManager___c__DisplayClass730_0___ctor((TerminalPramsManager___c__DisplayClass730_0_o *)v3, 0);
   if ( clearedQuestId >= 1 )
   {
-    Instance = (DataManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39E2904 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    Instance = (DataManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39ED16C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
     if ( !Instance )
       goto LABEL_43;
     Instance = (DataManager_o *)DataManager__GetMasterData_object_(
                                   Instance,
-                                  (const MethodInfo_30DD3F0 *)Method_DataManager_GetMasterData_QuestMaster___);
+                                  (const MethodInfo_30E7C58 *)Method_DataManager_GetMasterData_QuestMaster___);
     if ( !v3 )
       goto LABEL_43;
     *(_QWORD *)(v3 + 16) = Instance;
-    sub_1C32BC4((CGThumbnailListItem_o *)(v3 + 16), (int32_t)Instance, v5, v6);
+    sub_1C36FFC((CGThumbnailListItem_o *)(v3 + 16), (int32_t)Instance, v5, v6);
     Instance = *(DataManager_o **)(v3 + 16);
     if ( !Instance )
       goto LABEL_43;
     if ( !QuestMaster__TryGetQuestEntity((QuestMaster_o *)Instance, &entity, clearedQuestId, 0) )
       return;
-    Instance = (DataManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39E2904 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    Instance = (DataManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39ED16C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
     if ( !Instance )
       goto LABEL_43;
     Instance = (DataManager_o *)DataManager__GetMasterData_object_(
                                   Instance,
-                                  (const MethodInfo_30DD3F0 *)Method_DataManager_GetMasterData_SpotMaster___);
+                                  (const MethodInfo_30E7C58 *)Method_DataManager_GetMasterData_SpotMaster___);
     if ( !entity )
       goto LABEL_43;
     v7 = (DataMasterBase_TMaster__TEntity__PKType__o *)Instance;
@@ -10835,7 +10835,7 @@ void TerminalPramsManager__SendOpenedQuestIdToAdManager(int32_t clearedQuestId, 
                                   v7,
                                   &v43,
                                   (int32_t)Instance,
-                                  (const MethodInfo_3396884 *)Method_DataMasterBase_SpotMaster__SpotEntity__int__TryGetEntity__);
+                                  (const MethodInfo_33A10EC *)Method_DataMasterBase_SpotMaster__SpotEntity__int__TryGetEntity__);
     if ( ((unsigned __int8)Instance & 1) == 0 )
       return;
     if ( !v43 )
@@ -10850,20 +10850,20 @@ void TerminalPramsManager__SendOpenedQuestIdToAdManager(int32_t clearedQuestId, 
         goto LABEL_43;
       if ( QuestEntity__GetTypeFlag(entity, 0) != 2 )
         return;
-      Instance = (DataManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39E2904 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+      Instance = (DataManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39ED16C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
       if ( !Instance )
         goto LABEL_43;
       MasterData_object = DataManager__GetMasterData_object_(
                             Instance,
-                            (const MethodInfo_30DD3F0 *)Method_DataManager_GetMasterData_UserQuestMaster___);
+                            (const MethodInfo_30E7C58 *)Method_DataManager_GetMasterData_UserQuestMaster___);
       *(_QWORD *)(v3 + 24) = MasterData_object;
-      sub_1C32BC4((CGThumbnailListItem_o *)(v3 + 24), (int32_t)MasterData_object, v11, v12);
-      Instance = (DataManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39E2904 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+      sub_1C36FFC((CGThumbnailListItem_o *)(v3 + 24), (int32_t)MasterData_object, v11, v12);
+      Instance = (DataManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39ED16C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
       if ( !Instance )
         goto LABEL_43;
       Instance = (DataManager_o *)DataManager__GetMasterData_object_(
                                     Instance,
-                                    (const MethodInfo_30DD3F0 *)Method_DataManager_GetMasterData_QuestReleaseMaster___);
+                                    (const MethodInfo_30E7C58 *)Method_DataManager_GetMasterData_QuestReleaseMaster___);
       if ( !Instance )
         goto LABEL_43;
       QuestIdsByTargetAndOpenCondType = (System_Collections_Generic_IEnumerable_TSource__o *)QuestReleaseMaster__getQuestIdsByTargetAndOpenCondType(
@@ -10886,7 +10886,7 @@ void TerminalPramsManager__SendOpenedQuestIdToAdManager(int32_t clearedQuestId, 
           v14 = TerminalPramsManager___c_TypeInfo;
         }
         v16 = (Il2CppObject *)v14->static_fields->__9;
-        _9__730_0 = (System_Func_int__bool__o *)sub_1C32E6C(System_Func_int__bool__TypeInfo);
+        _9__730_0 = (System_Func_int__bool__o *)sub_1C372A4(System_Func_int__bool__TypeInfo);
         System_Func_int__bool____ctor(
           _9__730_0,
           v16,
@@ -10894,13 +10894,13 @@ void TerminalPramsManager__SendOpenedQuestIdToAdManager(int32_t clearedQuestId, 
           0);
         static_fields = TerminalPramsManager___c_TypeInfo->static_fields;
         static_fields->__9__730_0 = _9__730_0;
-        sub_1C32BC4((CGThumbnailListItem_o *)&static_fields->__9__730_0, (int32_t)_9__730_0, v18, v19);
+        sub_1C36FFC((CGThumbnailListItem_o *)&static_fields->__9__730_0, (int32_t)_9__730_0, v18, v19);
       }
       v20 = System_Linq_Enumerable__Where_int_(
               QuestIdsByTargetAndOpenCondType,
               (System_Func_TSource__bool__o *)_9__730_0,
-              (const MethodInfo_3123600 *)Method_System_Linq_Enumerable_Where_int___);
-      v21 = (System_Func_T__TResult__o *)sub_1C32E6C(System_Func_int__QuestEntity__TypeInfo);
+              (const MethodInfo_312DE68 *)Method_System_Linq_Enumerable_Where_int___);
+      v21 = (System_Func_T__TResult__o *)sub_1C372A4(System_Func_int__QuestEntity__TypeInfo);
       System_Func_int__object____ctor(
         v21,
         (Il2CppObject *)v3,
@@ -10909,8 +10909,8 @@ void TerminalPramsManager__SendOpenedQuestIdToAdManager(int32_t clearedQuestId, 
       v22 = (System_Collections_Generic_IEnumerable_TSource__o *)System_Linq_Enumerable__Select_int__object_(
                                                                    v20,
                                                                    (System_Func_TSource__TResult__o *)v21,
-                                                                   (const MethodInfo_3110E00 *)Method_System_Linq_Enumerable_Select_int__QuestEntity___);
-      v23 = (System_Func_object__bool__o *)sub_1C32E6C(System_Func_QuestEntity__bool__TypeInfo);
+                                                                   (const MethodInfo_311B668 *)Method_System_Linq_Enumerable_Select_int__QuestEntity___);
+      v23 = (System_Func_object__bool__o *)sub_1C372A4(System_Func_QuestEntity__bool__TypeInfo);
       System_Func_object__bool____ctor(
         v23,
         (Il2CppObject *)v3,
@@ -10919,7 +10919,7 @@ void TerminalPramsManager__SendOpenedQuestIdToAdManager(int32_t clearedQuestId, 
       v24 = System_Linq_Enumerable__Where_object_(
               v22,
               (System_Func_TSource__bool__o *)v23,
-              (const MethodInfo_3123BA8 *)Method_System_Linq_Enumerable_Where_QuestEntity___);
+              (const MethodInfo_312E410 *)Method_System_Linq_Enumerable_Where_QuestEntity___);
       v25 = TerminalPramsManager___c_TypeInfo;
       v26 = v24;
       if ( !TerminalPramsManager___c_TypeInfo->_2.cctor_finished )
@@ -10936,7 +10936,7 @@ void TerminalPramsManager__SendOpenedQuestIdToAdManager(int32_t clearedQuestId, 
           v25 = TerminalPramsManager___c_TypeInfo;
         }
         v28 = (Il2CppObject *)v25->static_fields->__9;
-        _9__730_3 = (System_Func_object__int__o *)sub_1C32E6C(System_Func_QuestEntity__int__TypeInfo);
+        _9__730_3 = (System_Func_object__int__o *)sub_1C372A4(System_Func_QuestEntity__int__TypeInfo);
         System_Func_object__int____ctor(
           _9__730_3,
           v28,
@@ -10944,12 +10944,12 @@ void TerminalPramsManager__SendOpenedQuestIdToAdManager(int32_t clearedQuestId, 
           0);
         v29 = TerminalPramsManager___c_TypeInfo->static_fields;
         v29->__9__730_3 = (struct System_Func_QuestEntity__int__o *)_9__730_3;
-        sub_1C32BC4((CGThumbnailListItem_o *)&v29->__9__730_3, (int32_t)_9__730_3, v30, v31);
+        sub_1C36FFC((CGThumbnailListItem_o *)&v29->__9__730_3, (int32_t)_9__730_3, v30, v31);
       }
       v32 = System_Linq_Enumerable__Select_object__int_(
               v26,
               (System_Func_TSource__TResult__o *)_9__730_3,
-              (const MethodInfo_31131E0 *)Method_System_Linq_Enumerable_Select_QuestEntity__int___);
+              (const MethodInfo_311DA48 *)Method_System_Linq_Enumerable_Select_QuestEntity__int___);
       v33 = TerminalPramsManager___c_TypeInfo;
       v34 = (System_Collections_Generic_IEnumerable_TSource__o *)v32;
       if ( !TerminalPramsManager___c_TypeInfo->_2.cctor_finished )
@@ -10966,7 +10966,7 @@ void TerminalPramsManager__SendOpenedQuestIdToAdManager(int32_t clearedQuestId, 
           v33 = TerminalPramsManager___c_TypeInfo;
         }
         v36 = (Il2CppObject *)v33->static_fields->__9;
-        _9__730_4 = (System_Func_int__int__o *)sub_1C32E6C(System_Func_int__int__TypeInfo);
+        _9__730_4 = (System_Func_int__int__o *)sub_1C372A4(System_Func_int__int__TypeInfo);
         System_Func_int__int____ctor(
           _9__730_4,
           v36,
@@ -10974,26 +10974,26 @@ void TerminalPramsManager__SendOpenedQuestIdToAdManager(int32_t clearedQuestId, 
           0);
         v37 = TerminalPramsManager___c_TypeInfo->static_fields;
         v37->__9__730_4 = _9__730_4;
-        sub_1C32BC4((CGThumbnailListItem_o *)&v37->__9__730_4, (int32_t)_9__730_4, v38, v39);
+        sub_1C36FFC((CGThumbnailListItem_o *)&v37->__9__730_4, (int32_t)_9__730_4, v38, v39);
       }
       v40 = (System_Collections_Generic_IEnumerable_TSource__o *)System_Linq_Enumerable__OrderByDescending_int__int_(
                                                                    v34,
                                                                    (System_Func_TSource__TKey__o *)_9__730_4,
-                                                                   (const MethodInfo_310CF80 *)Method_System_Linq_Enumerable_OrderByDescending_int__int___);
+                                                                   (const MethodInfo_31177E8 *)Method_System_Linq_Enumerable_OrderByDescending_int__int___);
       v41 = System_Linq_Enumerable__FirstOrDefault_int_(
               v40,
-              (const MethodInfo_3105264 *)Method_System_Linq_Enumerable_FirstOrDefault_int___);
+              (const MethodInfo_310FACC *)Method_System_Linq_Enumerable_FirstOrDefault_int___);
       if ( v41 )
       {
         v42 = v41;
-        Instance = (DataManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39E2904 *)Method_SingletonMonoBehaviour_AdManager__get_Instance__);
+        Instance = (DataManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39ED16C *)Method_SingletonMonoBehaviour_AdManager__get_Instance__);
         if ( Instance )
         {
           AdManager__SetOpenedStoryQuest((AdManager_o *)Instance, v42, 0);
           return;
         }
 LABEL_43:
-        sub_1C32E7C(Instance);
+        sub_1C372B4(Instance);
       }
     }
   }
@@ -11010,24 +11010,24 @@ void TerminalPramsManager__SendResumeQuestToAdManager(int32_t questId, int32_t q
 
   v6 = questPhase;
   v7 = questId;
-  if ( (byte_4C34DCC & 1) == 0 )
+  if ( (byte_4C403B6 & 1) == 0 )
   {
-    sub_1C32C20(&Method_SingletonMonoBehaviour_CrashReporter__get_Instance__);
-    sub_1C32C20(&StringLiteral_19743/*"game.resume_quest_id"*/);
-    sub_1C32C20(&StringLiteral_19744/*"game.resume_quest_phase"*/);
-    byte_4C34DCC = 1;
+    sub_1C37058(&Method_SingletonMonoBehaviour_CrashReporter__get_Instance__);
+    sub_1C37058(&StringLiteral_19746/*"game.resume_quest_id"*/);
+    sub_1C37058(&StringLiteral_19747/*"game.resume_quest_phase"*/);
+    byte_4C403B6 = 1;
   }
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39E2904 *)Method_SingletonMonoBehaviour_CrashReporter__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39ED16C *)Method_SingletonMonoBehaviour_CrashReporter__get_Instance__);
   v4 = System_Int32__ToString((int32_t)&v7, 0);
   if ( !Instance
-    || (CrashReporter__AddCustomKey((CrashReporter_o *)Instance, (System_String_o *)StringLiteral_19743/*"game.resume_quest_id"*/, v4, 0),
-        v5 = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39E2904 *)Method_SingletonMonoBehaviour_CrashReporter__get_Instance__),
+    || (CrashReporter__AddCustomKey((CrashReporter_o *)Instance, (System_String_o *)StringLiteral_19746/*"game.resume_quest_id"*/, v4, 0),
+        v5 = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39ED16C *)Method_SingletonMonoBehaviour_CrashReporter__get_Instance__),
         v4 = System_Int32__ToString((int32_t)&v6, 0),
         !v5) )
   {
-    sub_1C32E7C(v4);
+    sub_1C372B4(v4);
   }
-  CrashReporter__AddCustomKey((CrashReporter_o *)v5, (System_String_o *)StringLiteral_19744/*"game.resume_quest_phase"*/, v4, 0);
+  CrashReporter__AddCustomKey((CrashReporter_o *)v5, (System_String_o *)StringLiteral_19747/*"game.resume_quest_phase"*/, v4, 0);
 }
 
 
@@ -11045,14 +11045,14 @@ void TerminalPramsManager__SendStartQuestToAdManager(int32_t questId, int32_t qu
 
   v11 = questPhase;
   v12 = questId;
-  if ( (byte_4C34DCB & 1) == 0 )
+  if ( (byte_4C403B5 & 1) == 0 )
   {
-    sub_1C32C20(&Method_SingletonMonoBehaviour_CrashReporter__get_Instance__);
-    sub_1C32C20(&Method_SingletonMonoBehaviour_AdManager__get_Instance__);
-    sub_1C32C20(&TerminalPramsManager_TypeInfo);
-    sub_1C32C20(&StringLiteral_19737/*"game.last_quest_id"*/);
-    sub_1C32C20(&StringLiteral_19739/*"game.last_quest_phase"*/);
-    byte_4C34DCB = 1;
+    sub_1C37058(&Method_SingletonMonoBehaviour_CrashReporter__get_Instance__);
+    sub_1C37058(&Method_SingletonMonoBehaviour_AdManager__get_Instance__);
+    sub_1C37058(&TerminalPramsManager_TypeInfo);
+    sub_1C37058(&StringLiteral_19740/*"game.last_quest_id"*/);
+    sub_1C37058(&StringLiteral_19742/*"game.last_quest_phase"*/);
+    byte_4C403B5 = 1;
   }
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(TerminalPramsManager_TypeInfo);
@@ -11061,27 +11061,27 @@ void TerminalPramsManager__SendStartQuestToAdManager(int32_t questId, int32_t qu
     if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(TerminalPramsManager_TypeInfo);
     IsMainStoryForQuestId = TerminalPramsManager__IsMainStoryForQuestId(questId, v5);
-    Instance = (AdManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39E2904 *)Method_SingletonMonoBehaviour_AdManager__get_Instance__);
+    Instance = (AdManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39ED16C *)Method_SingletonMonoBehaviour_AdManager__get_Instance__);
     if ( !Instance
       || (!IsMainStoryForQuestId ? (v8 = 9) : (v8 = 10),
           (AdManager__TrackEvent(Instance, v8, 9, questId, questPhase, 0, 0),
-           v9 = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39E2904 *)Method_SingletonMonoBehaviour_CrashReporter__get_Instance__),
+           v9 = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39ED16C *)Method_SingletonMonoBehaviour_CrashReporter__get_Instance__),
            Instance = (AdManager_o *)System_Int32__ToString((int32_t)&v12, 0),
            !v9)
        || (CrashReporter__AddCustomKey(
              (CrashReporter_o *)v9,
-             (System_String_o *)StringLiteral_19737/*"game.last_quest_id"*/,
+             (System_String_o *)StringLiteral_19740/*"game.last_quest_id"*/,
              (System_String_o *)Instance,
              0),
-           v10 = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39E2904 *)Method_SingletonMonoBehaviour_CrashReporter__get_Instance__),
+           v10 = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39ED16C *)Method_SingletonMonoBehaviour_CrashReporter__get_Instance__),
            Instance = (AdManager_o *)System_Int32__ToString((int32_t)&v11, 0),
            !v10)) )
     {
-      sub_1C32E7C(Instance);
+      sub_1C372B4(Instance);
     }
     CrashReporter__AddCustomKey(
       (CrashReporter_o *)v10,
-      (System_String_o *)StringLiteral_19739/*"game.last_quest_phase"*/,
+      (System_String_o *)StringLiteral_19742/*"game.last_quest_phase"*/,
       (System_String_o *)Instance,
       0);
   }
@@ -11127,26 +11127,26 @@ void TerminalPramsManager__SetAutoResumeByQuestId(int32_t questId, const MethodI
   unsigned __int64 v37; // [xsp+8h] [xbp-48h] BYREF
   Il2CppObject *entity; // [xsp+18h] [xbp-38h] BYREF
 
-  if ( (byte_4C34D8A & 1) == 0 )
+  if ( (byte_4C40374 & 1) == 0 )
   {
-    sub_1C32C20(&Method_DataManager_GetMaster_BlankEarthSpotMaster___);
-    sub_1C32C20(&DataManager_TypeInfo);
-    sub_1C32C20(&Method_DataMasterBase_BlankEarthSpotMaster__BlankEarthSpotEntity__int__TryGetEntity__);
-    sub_1C32C20(&Method_System_Nullable_int__GetValueOrDefault__);
-    sub_1C32C20(&Method_System_Nullable_int___ctor__);
-    sub_1C32C20(&UnityEngine_Object_TypeInfo);
-    sub_1C32C20(&Method_SingletonTemplate_QuestTree__get_Instance__);
-    sub_1C32C20(&TerminalPramsManager_TypeInfo);
-    sub_1C32C20(&TerminalSceneComponent_TypeInfo);
-    byte_4C34D8A = 1;
+    sub_1C37058(&Method_DataManager_GetMaster_BlankEarthSpotMaster___);
+    sub_1C37058(&DataManager_TypeInfo);
+    sub_1C37058(&Method_DataMasterBase_BlankEarthSpotMaster__BlankEarthSpotEntity__int__TryGetEntity__);
+    sub_1C37058(&Method_System_Nullable_int__GetValueOrDefault__);
+    sub_1C37058(&Method_System_Nullable_int___ctor__);
+    sub_1C37058(&UnityEngine_Object_TypeInfo);
+    sub_1C37058(&Method_SingletonTemplate_QuestTree__get_Instance__);
+    sub_1C37058(&TerminalPramsManager_TypeInfo);
+    sub_1C37058(&TerminalSceneComponent_TypeInfo);
+    byte_4C40374 = 1;
   }
   entity = 0;
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(TerminalPramsManager_TypeInfo);
-  if ( !byte_4C34569 )
+  if ( !byte_4C3FB53 )
   {
-    sub_1C32C20(&TerminalPramsManager_TypeInfo);
-    byte_4C34569 = 1;
+    sub_1C37058(&TerminalPramsManager_TypeInfo);
+    byte_4C3FB53 = 1;
   }
   v3 = TerminalPramsManager_TypeInfo;
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -11155,9 +11155,9 @@ void TerminalPramsManager__SetAutoResumeByQuestId(int32_t questId, const MethodI
     v3 = TerminalPramsManager_TypeInfo;
   }
   v3->static_fields->_IsOrdealCallWarClear_k__BackingField = 0;
-  if ( SingletonTemplate_object___get_Instance((const MethodInfo_39E2DF4 *)Method_SingletonTemplate_QuestTree__get_Instance__) )
+  if ( SingletonTemplate_object___get_Instance((const MethodInfo_39ED65C *)Method_SingletonTemplate_QuestTree__get_Instance__) )
   {
-    Instance = (QuestTree_o *)SingletonTemplate_object___get_Instance((const MethodInfo_39E2DF4 *)Method_SingletonTemplate_QuestTree__get_Instance__);
+    Instance = (QuestTree_o *)SingletonTemplate_object___get_Instance((const MethodInfo_39ED65C *)Method_SingletonTemplate_QuestTree__get_Instance__);
     if ( !Instance )
       goto LABEL_148;
     QuestInfo = QuestTree__GetQuestInfo(Instance, questId, 0);
@@ -11167,10 +11167,10 @@ void TerminalPramsManager__SetAutoResumeByQuestId(int32_t questId, const MethodI
     warId = QuestInfo->fields.warId;
     if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(TerminalPramsManager_TypeInfo);
-    if ( !byte_4C342B2 )
+    if ( !byte_4C3F89C )
     {
-      sub_1C32C20(&TerminalPramsManager_TypeInfo);
-      byte_4C342B2 = 1;
+      sub_1C37058(&TerminalPramsManager_TypeInfo);
+      byte_4C3F89C = 1;
     }
     v8 = TerminalPramsManager_TypeInfo;
     if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -11181,7 +11181,7 @@ void TerminalPramsManager__SetAutoResumeByQuestId(int32_t questId, const MethodI
     v8->static_fields->_WarId_k__BackingField = warId;
     if ( !DataManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-    Master_object = DataManager__GetMaster_object_((const MethodInfo_30DD39C *)Method_DataManager_GetMaster_BlankEarthSpotMaster___);
+    Master_object = DataManager__GetMaster_object_((const MethodInfo_30E7C04 *)Method_DataManager_GetMaster_BlankEarthSpotMaster___);
     Instance = (QuestTree_o *)MapControl_QuestInfo__GetSpotID(v6, 0);
     if ( !Master_object )
       goto LABEL_148;
@@ -11189,21 +11189,21 @@ void TerminalPramsManager__SetAutoResumeByQuestId(int32_t questId, const MethodI
             (DataMasterBase_TMaster__TEntity__PKType__o *)Master_object,
             &entity,
             (int32_t)Instance,
-            (const MethodInfo_3396884 *)Method_DataMasterBase_BlankEarthSpotMaster__BlankEarthSpotEntity__int__TryGetEntity__);
+            (const MethodInfo_33A10EC *)Method_DataMasterBase_BlankEarthSpotMaster__BlankEarthSpotEntity__int__TryGetEntity__);
     LODWORD(Master_object) = MapControl_QuestInfo__GetSpotID(v6, 0);
     if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(TerminalPramsManager_TypeInfo);
     if ( v10 )
     {
-      if ( byte_4C341F6 )
+      if ( byte_4C3F7E0 )
         goto LABEL_38;
     }
     else
     {
-      if ( !byte_4C342B1 )
+      if ( !byte_4C3F89B )
       {
-        sub_1C32C20(&TerminalPramsManager_TypeInfo);
-        byte_4C342B1 = 1;
+        sub_1C37058(&TerminalPramsManager_TypeInfo);
+        byte_4C3F89B = 1;
       }
       v11 = TerminalPramsManager_TypeInfo;
       if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -11221,7 +11221,7 @@ void TerminalPramsManager__SetAutoResumeByQuestId(int32_t questId, const MethodI
         System_Nullable_int____ctor(
           v15,
           parentBlankEarthSpotId,
-          (const MethodInfo_38BDF3C *)Method_System_Nullable_int___ctor__);
+          (const MethodInfo_38C87A4 *)Method_System_Nullable_int___ctor__);
         v16 = v37;
       }
       else
@@ -11231,7 +11231,7 @@ void TerminalPramsManager__SetAutoResumeByQuestId(int32_t questId, const MethodI
       if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(TerminalPramsManager_TypeInfo);
       Master_object = (Il2CppObject *)HIDWORD(v16);
-      if ( byte_4C341F6 )
+      if ( byte_4C3F7E0 )
       {
 LABEL_38:
         v17 = TerminalPramsManager_TypeInfo;
@@ -11244,10 +11244,10 @@ LABEL_38:
         v18 = v6->fields.questId;
         if ( !v17->_2.cctor_finished )
           j_il2cpp_runtime_class_init_0(v17);
-        if ( !byte_4C342AC )
+        if ( !byte_4C3F896 )
         {
-          sub_1C32C20(&TerminalPramsManager_TypeInfo);
-          byte_4C342AC = 1;
+          sub_1C37058(&TerminalPramsManager_TypeInfo);
+          byte_4C3F896 = 1;
         }
         v19 = TerminalPramsManager_TypeInfo;
         if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -11257,11 +11257,11 @@ LABEL_38:
         }
         v19->static_fields->_QuestId_k__BackingField = v18;
         questPhase = v6->fields.questPhase;
-        if ( !byte_4C342B0 )
+        if ( !byte_4C3F89A )
         {
-          sub_1C32C20(&TerminalPramsManager_TypeInfo);
+          sub_1C37058(&TerminalPramsManager_TypeInfo);
           v19 = TerminalPramsManager_TypeInfo;
-          byte_4C342B0 = 1;
+          byte_4C3F89A = 1;
         }
         if ( !v19->_2.cctor_finished )
         {
@@ -11270,11 +11270,11 @@ LABEL_38:
         }
         v19->static_fields->_PhaseCnt_k__BackingField = questPhase;
         endTime = v6->fields.endTime;
-        if ( !byte_4C342AD )
+        if ( !byte_4C3F897 )
         {
-          sub_1C32C20(&TerminalPramsManager_TypeInfo);
+          sub_1C37058(&TerminalPramsManager_TypeInfo);
           v19 = TerminalPramsManager_TypeInfo;
-          byte_4C342AD = 1;
+          byte_4C3F897 = 1;
         }
         if ( !v19->_2.cctor_finished )
         {
@@ -11282,11 +11282,11 @@ LABEL_38:
           v19 = TerminalPramsManager_TypeInfo;
         }
         v19->static_fields->_EndTime_k__BackingField = endTime;
-        if ( !byte_4C349F3 )
+        if ( !byte_4C3FFDD )
         {
-          sub_1C32C20(&TerminalPramsManager_TypeInfo);
+          sub_1C37058(&TerminalPramsManager_TypeInfo);
           v19 = TerminalPramsManager_TypeInfo;
-          byte_4C349F3 = 1;
+          byte_4C3FFDD = 1;
         }
         if ( !v19->_2.cctor_finished )
         {
@@ -11294,15 +11294,15 @@ LABEL_38:
           v19 = TerminalPramsManager_TypeInfo;
         }
         v19->static_fields->_IsForceFocusTerminalQuestId_k__BackingField = 1;
-        if ( !SingletonTemplate_object___get_Instance((const MethodInfo_39E2DF4 *)Method_SingletonTemplate_QuestTree__get_Instance__) )
+        if ( !SingletonTemplate_object___get_Instance((const MethodInfo_39ED65C *)Method_SingletonTemplate_QuestTree__get_Instance__) )
           goto LABEL_151;
-        v22 = SingletonTemplate_object___get_Instance((const MethodInfo_39E2DF4 *)Method_SingletonTemplate_QuestTree__get_Instance__);
+        v22 = SingletonTemplate_object___get_Instance((const MethodInfo_39ED65C *)Method_SingletonTemplate_QuestTree__get_Instance__);
         if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
           j_il2cpp_runtime_class_init_0(TerminalPramsManager_TypeInfo);
-        if ( !byte_4C31DAD )
+        if ( !byte_4C3D397 )
         {
-          sub_1C32C20(&TerminalPramsManager_TypeInfo);
-          byte_4C31DAD = 1;
+          sub_1C37058(&TerminalPramsManager_TypeInfo);
+          byte_4C3D397 = 1;
         }
         Instance = (QuestTree_o *)TerminalPramsManager_TypeInfo;
         if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -11323,10 +11323,10 @@ LABEL_38:
             j_il2cpp_runtime_class_init_0(TerminalPramsManager_TypeInfo);
           if ( IsFolder )
           {
-            if ( !byte_4C342AE )
+            if ( !byte_4C3F898 )
             {
-              sub_1C32C20(&TerminalPramsManager_TypeInfo);
-              byte_4C342AE = 1;
+              sub_1C37058(&TerminalPramsManager_TypeInfo);
+              byte_4C3F898 = 1;
             }
             v25 = TerminalPramsManager_TypeInfo;
             if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -11338,10 +11338,10 @@ LABEL_38:
           }
           else
           {
-            if ( !byte_4C342AE )
+            if ( !byte_4C3F898 )
             {
-              sub_1C32C20(&TerminalPramsManager_TypeInfo);
-              byte_4C342AE = 1;
+              sub_1C37058(&TerminalPramsManager_TypeInfo);
+              byte_4C3F898 = 1;
             }
             v25 = TerminalPramsManager_TypeInfo;
             if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -11357,10 +11357,10 @@ LABEL_38:
 LABEL_151:
           if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
             j_il2cpp_runtime_class_init_0(TerminalPramsManager_TypeInfo);
-          if ( !byte_4C342AE )
+          if ( !byte_4C3F898 )
           {
-            sub_1C32C20(&TerminalPramsManager_TypeInfo);
-            byte_4C342AE = 1;
+            sub_1C37058(&TerminalPramsManager_TypeInfo);
+            byte_4C3F898 = 1;
           }
           v25 = TerminalPramsManager_TypeInfo;
           if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -11373,10 +11373,10 @@ LABEL_151:
         v25->static_fields->_DispState_k__BackingField = v26;
         if ( !TerminalSceneComponent_TypeInfo->_2.cctor_finished )
           j_il2cpp_runtime_class_init_0(TerminalSceneComponent_TypeInfo);
-        if ( !byte_4C319B6 )
+        if ( !byte_4C3CF06 )
         {
-          sub_1C32C20(&TerminalSceneComponent_TypeInfo);
-          byte_4C319B6 = 1;
+          sub_1C37058(&TerminalSceneComponent_TypeInfo);
+          byte_4C3CF06 = 1;
         }
         v27 = TerminalSceneComponent_TypeInfo;
         if ( !TerminalSceneComponent_TypeInfo->_2.cctor_finished )
@@ -11391,10 +11391,10 @@ LABEL_151:
           goto LABEL_140;
         if ( !TerminalSceneComponent_TypeInfo->_2.cctor_finished )
           j_il2cpp_runtime_class_init_0(TerminalSceneComponent_TypeInfo);
-        if ( !byte_4C319B6 )
+        if ( !byte_4C3CF06 )
         {
-          sub_1C32C20(&TerminalSceneComponent_TypeInfo);
-          byte_4C319B6 = 1;
+          sub_1C37058(&TerminalSceneComponent_TypeInfo);
+          byte_4C3CF06 = 1;
         }
         Instance = (QuestTree_o *)TerminalSceneComponent_TypeInfo;
         if ( !TerminalSceneComponent_TypeInfo->_2.cctor_finished )
@@ -11412,10 +11412,10 @@ LABEL_151:
           {
             if ( !TerminalSceneComponent_TypeInfo->_2.cctor_finished )
               j_il2cpp_runtime_class_init_0(TerminalSceneComponent_TypeInfo);
-            if ( !byte_4C319B6 )
+            if ( !byte_4C3CF06 )
             {
-              sub_1C32C20(&TerminalSceneComponent_TypeInfo);
-              byte_4C319B6 = 1;
+              sub_1C37058(&TerminalSceneComponent_TypeInfo);
+              byte_4C3CF06 = 1;
             }
             Instance = (QuestTree_o *)TerminalSceneComponent_TypeInfo;
             if ( !TerminalSceneComponent_TypeInfo->_2.cctor_finished )
@@ -11429,10 +11429,10 @@ LABEL_151:
             v32 = *(ScrTerminalListTop_o **)&v31->_2.element_size;
             if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
               j_il2cpp_runtime_class_init_0(TerminalPramsManager_TypeInfo);
-            if ( !byte_4C31DAD )
+            if ( !byte_4C3D397 )
             {
-              sub_1C32C20(&TerminalPramsManager_TypeInfo);
-              byte_4C31DAD = 1;
+              sub_1C37058(&TerminalPramsManager_TypeInfo);
+              byte_4C3D397 = 1;
             }
             Instance = (QuestTree_o *)TerminalPramsManager_TypeInfo;
             if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -11449,10 +11449,10 @@ LABEL_151:
           }
           if ( !TerminalSceneComponent_TypeInfo->_2.cctor_finished )
             j_il2cpp_runtime_class_init_0(TerminalSceneComponent_TypeInfo);
-          if ( !byte_4C319B6 )
+          if ( !byte_4C3CF06 )
           {
-            sub_1C32C20(&TerminalSceneComponent_TypeInfo);
-            byte_4C319B6 = 1;
+            sub_1C37058(&TerminalSceneComponent_TypeInfo);
+            byte_4C3CF06 = 1;
           }
           Instance = (QuestTree_o *)TerminalSceneComponent_TypeInfo;
           if ( !TerminalSceneComponent_TypeInfo->_2.cctor_finished )
@@ -11470,10 +11470,10 @@ LABEL_151:
               goto LABEL_140;
             if ( !TerminalSceneComponent_TypeInfo->_2.cctor_finished )
               j_il2cpp_runtime_class_init_0(TerminalSceneComponent_TypeInfo);
-            if ( !byte_4C319B6 )
+            if ( !byte_4C3CF06 )
             {
-              sub_1C32C20(&TerminalSceneComponent_TypeInfo);
-              byte_4C319B6 = 1;
+              sub_1C37058(&TerminalSceneComponent_TypeInfo);
+              byte_4C3CF06 = 1;
             }
             Instance = (QuestTree_o *)TerminalSceneComponent_TypeInfo;
             if ( !TerminalSceneComponent_TypeInfo->_2.cctor_finished )
@@ -11491,10 +11491,10 @@ LABEL_151:
 LABEL_140:
                 if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
                   j_il2cpp_runtime_class_init_0(TerminalPramsManager_TypeInfo);
-                if ( !byte_4C3219C )
+                if ( !byte_4C3D786 )
                 {
-                  sub_1C32C20(&TerminalPramsManager_TypeInfo);
-                  byte_4C3219C = 1;
+                  sub_1C37058(&TerminalPramsManager_TypeInfo);
+                  byte_4C3D786 = 1;
                 }
                 v36 = (const MethodInfo *)TerminalPramsManager_TypeInfo;
                 if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -11510,11 +11510,11 @@ LABEL_140:
           }
         }
 LABEL_148:
-        sub_1C32E7C(Instance);
+        sub_1C372B4(Instance);
       }
     }
-    sub_1C32C20(&TerminalPramsManager_TypeInfo);
-    byte_4C341F6 = 1;
+    sub_1C37058(&TerminalPramsManager_TypeInfo);
+    byte_4C3F7E0 = 1;
     goto LABEL_38;
   }
 }
@@ -11546,21 +11546,21 @@ void TerminalPramsManager__SetAutoResumeByWarId(int32_t warId, const MethodInfo 
   UISprite_c *v24; // x8
   const MethodInfo *v25; // x0
 
-  if ( (byte_4C34D8B & 1) == 0 )
+  if ( (byte_4C40375 & 1) == 0 )
   {
-    sub_1C32C20(&BalanceConfig_TypeInfo);
-    sub_1C32C20(&UnityEngine_Object_TypeInfo);
-    sub_1C32C20(&Method_SingletonTemplate_QuestTree__get_Instance__);
-    sub_1C32C20(&TerminalPramsManager_TypeInfo);
-    sub_1C32C20(&TerminalSceneComponent_TypeInfo);
-    byte_4C34D8B = 1;
+    sub_1C37058(&BalanceConfig_TypeInfo);
+    sub_1C37058(&UnityEngine_Object_TypeInfo);
+    sub_1C37058(&Method_SingletonTemplate_QuestTree__get_Instance__);
+    sub_1C37058(&TerminalPramsManager_TypeInfo);
+    sub_1C37058(&TerminalSceneComponent_TypeInfo);
+    byte_4C40375 = 1;
   }
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(TerminalPramsManager_TypeInfo);
-  if ( !byte_4C34569 )
+  if ( !byte_4C3FB53 )
   {
-    sub_1C32C20(&TerminalPramsManager_TypeInfo);
-    byte_4C34569 = 1;
+    sub_1C37058(&TerminalPramsManager_TypeInfo);
+    byte_4C3FB53 = 1;
   }
   v3 = TerminalPramsManager_TypeInfo;
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -11569,11 +11569,11 @@ void TerminalPramsManager__SetAutoResumeByWarId(int32_t warId, const MethodInfo 
     v3 = TerminalPramsManager_TypeInfo;
   }
   v3->static_fields->_IsOrdealCallWarClear_k__BackingField = 0;
-  if ( !byte_4C342B2 )
+  if ( !byte_4C3F89C )
   {
-    sub_1C32C20(&TerminalPramsManager_TypeInfo);
+    sub_1C37058(&TerminalPramsManager_TypeInfo);
     v3 = TerminalPramsManager_TypeInfo;
-    byte_4C342B2 = 1;
+    byte_4C3F89C = 1;
   }
   if ( !v3->_2.cctor_finished )
   {
@@ -11581,15 +11581,15 @@ void TerminalPramsManager__SetAutoResumeByWarId(int32_t warId, const MethodInfo 
     v3 = TerminalPramsManager_TypeInfo;
   }
   v3->static_fields->_WarId_k__BackingField = warId;
-  if ( !SingletonTemplate_object___get_Instance((const MethodInfo_39E2DF4 *)Method_SingletonTemplate_QuestTree__get_Instance__) )
+  if ( !SingletonTemplate_object___get_Instance((const MethodInfo_39ED65C *)Method_SingletonTemplate_QuestTree__get_Instance__) )
     goto LABEL_124;
-  Instance = SingletonTemplate_object___get_Instance((const MethodInfo_39E2DF4 *)Method_SingletonTemplate_QuestTree__get_Instance__);
+  Instance = SingletonTemplate_object___get_Instance((const MethodInfo_39ED65C *)Method_SingletonTemplate_QuestTree__get_Instance__);
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(TerminalPramsManager_TypeInfo);
-  if ( !byte_4C31DAD )
+  if ( !byte_4C3D397 )
   {
-    sub_1C32C20(&TerminalPramsManager_TypeInfo);
-    byte_4C31DAD = 1;
+    sub_1C37058(&TerminalPramsManager_TypeInfo);
+    byte_4C3D397 = 1;
   }
   v5 = (TitleInfoControl_o *)TerminalPramsManager_TypeInfo;
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -11608,10 +11608,10 @@ void TerminalPramsManager__SetAutoResumeByWarId(int32_t warId, const MethodInfo 
       j_il2cpp_runtime_class_init_0(TerminalPramsManager_TypeInfo);
     if ( IsFolder )
     {
-      if ( !byte_4C342AE )
+      if ( !byte_4C3F898 )
       {
-        sub_1C32C20(&TerminalPramsManager_TypeInfo);
-        byte_4C342AE = 1;
+        sub_1C37058(&TerminalPramsManager_TypeInfo);
+        byte_4C3F898 = 1;
       }
       v9 = TerminalPramsManager_TypeInfo;
       if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -11624,10 +11624,10 @@ void TerminalPramsManager__SetAutoResumeByWarId(int32_t warId, const MethodInfo 
     }
     else
     {
-      if ( !byte_4C342AE )
+      if ( !byte_4C3F898 )
       {
-        sub_1C32C20(&TerminalPramsManager_TypeInfo);
-        byte_4C342AE = 1;
+        sub_1C37058(&TerminalPramsManager_TypeInfo);
+        byte_4C3F898 = 1;
       }
       v9 = TerminalPramsManager_TypeInfo;
       if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -11644,10 +11644,10 @@ void TerminalPramsManager__SetAutoResumeByWarId(int32_t warId, const MethodInfo 
 LABEL_124:
     if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(TerminalPramsManager_TypeInfo);
-    if ( !byte_4C342AE )
+    if ( !byte_4C3F898 )
     {
-      sub_1C32C20(&TerminalPramsManager_TypeInfo);
-      byte_4C342AE = 1;
+      sub_1C37058(&TerminalPramsManager_TypeInfo);
+      byte_4C3F898 = 1;
     }
     v9 = TerminalPramsManager_TypeInfo;
     if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -11670,10 +11670,10 @@ LABEL_124:
   {
     if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(TerminalPramsManager_TypeInfo);
-    if ( !byte_4C32812 )
+    if ( !byte_4C3DDFC )
     {
-      sub_1C32C20(&TerminalPramsManager_TypeInfo);
-      byte_4C32812 = 1;
+      sub_1C37058(&TerminalPramsManager_TypeInfo);
+      byte_4C3DDFC = 1;
     }
     v13 = TerminalPramsManager_TypeInfo;
     if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -11689,10 +11689,10 @@ LABEL_124:
     parentBlankEarthSpotId = v7->fields.parentBlankEarthSpotId;
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(TerminalPramsManager_TypeInfo);
-  if ( !byte_4C341F6 )
+  if ( !byte_4C3F7E0 )
   {
-    sub_1C32C20(&TerminalPramsManager_TypeInfo);
-    byte_4C341F6 = 1;
+    sub_1C37058(&TerminalPramsManager_TypeInfo);
+    byte_4C3F7E0 = 1;
   }
   v15 = TerminalPramsManager_TypeInfo;
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -11703,10 +11703,10 @@ LABEL_124:
   v15->static_fields->_BlankEarthSpotId_k__BackingField = parentBlankEarthSpotId;
   if ( !TerminalSceneComponent_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(TerminalSceneComponent_TypeInfo);
-  if ( !byte_4C319B6 )
+  if ( !byte_4C3CF06 )
   {
-    sub_1C32C20(&TerminalSceneComponent_TypeInfo);
-    byte_4C319B6 = 1;
+    sub_1C37058(&TerminalSceneComponent_TypeInfo);
+    byte_4C3CF06 = 1;
   }
   v16 = TerminalSceneComponent_TypeInfo;
   if ( !TerminalSceneComponent_TypeInfo->_2.cctor_finished )
@@ -11721,10 +11721,10 @@ LABEL_124:
   {
     if ( !TerminalSceneComponent_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(TerminalSceneComponent_TypeInfo);
-    if ( !byte_4C319B6 )
+    if ( !byte_4C3CF06 )
     {
-      sub_1C32C20(&TerminalSceneComponent_TypeInfo);
-      byte_4C319B6 = 1;
+      sub_1C37058(&TerminalSceneComponent_TypeInfo);
+      byte_4C3CF06 = 1;
     }
     v5 = (TitleInfoControl_o *)TerminalSceneComponent_TypeInfo;
     if ( !TerminalSceneComponent_TypeInfo->_2.cctor_finished )
@@ -11742,10 +11742,10 @@ LABEL_124:
     {
       if ( !TerminalSceneComponent_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(TerminalSceneComponent_TypeInfo);
-      if ( !byte_4C319B6 )
+      if ( !byte_4C3CF06 )
       {
-        sub_1C32C20(&TerminalSceneComponent_TypeInfo);
-        byte_4C319B6 = 1;
+        sub_1C37058(&TerminalSceneComponent_TypeInfo);
+        byte_4C3CF06 = 1;
       }
       v5 = (TitleInfoControl_o *)TerminalSceneComponent_TypeInfo;
       if ( !TerminalSceneComponent_TypeInfo->_2.cctor_finished )
@@ -11759,10 +11759,10 @@ LABEL_124:
       v21 = *(ScrTerminalListTop_o **)&v20->_2.element_size;
       if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(TerminalPramsManager_TypeInfo);
-      if ( !byte_4C31DAD )
+      if ( !byte_4C3D397 )
       {
-        sub_1C32C20(&TerminalPramsManager_TypeInfo);
-        byte_4C31DAD = 1;
+        sub_1C37058(&TerminalPramsManager_TypeInfo);
+        byte_4C3D397 = 1;
       }
       v5 = (TitleInfoControl_o *)TerminalPramsManager_TypeInfo;
       if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -11776,10 +11776,10 @@ LABEL_124:
     }
     if ( !TerminalSceneComponent_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(TerminalSceneComponent_TypeInfo);
-    if ( !byte_4C319B6 )
+    if ( !byte_4C3CF06 )
     {
-      sub_1C32C20(&TerminalSceneComponent_TypeInfo);
-      byte_4C319B6 = 1;
+      sub_1C37058(&TerminalSceneComponent_TypeInfo);
+      byte_4C3CF06 = 1;
     }
     v5 = (TitleInfoControl_o *)TerminalSceneComponent_TypeInfo;
     if ( !TerminalSceneComponent_TypeInfo->_2.cctor_finished )
@@ -11797,10 +11797,10 @@ LABEL_124:
     {
       if ( !TerminalSceneComponent_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(TerminalSceneComponent_TypeInfo);
-      if ( !byte_4C319B6 )
+      if ( !byte_4C3CF06 )
       {
-        sub_1C32C20(&TerminalSceneComponent_TypeInfo);
-        byte_4C319B6 = 1;
+        sub_1C37058(&TerminalSceneComponent_TypeInfo);
+        byte_4C3CF06 = 1;
       }
       v5 = (TitleInfoControl_o *)TerminalSceneComponent_TypeInfo;
       if ( !TerminalSceneComponent_TypeInfo->_2.cctor_finished )
@@ -11819,16 +11819,16 @@ LABEL_124:
         }
       }
 LABEL_121:
-      sub_1C32E7C(v5);
+      sub_1C372B4(v5);
     }
   }
 LABEL_114:
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(TerminalPramsManager_TypeInfo);
-  if ( !byte_4C3219C )
+  if ( !byte_4C3D786 )
   {
-    sub_1C32C20(&TerminalPramsManager_TypeInfo);
-    byte_4C3219C = 1;
+    sub_1C37058(&TerminalPramsManager_TypeInfo);
+    byte_4C3D786 = 1;
   }
   v25 = (const MethodInfo *)TerminalPramsManager_TypeInfo;
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -11868,26 +11868,26 @@ void TerminalPramsManager__SetAutoResumeForFolder(int32_t warId, const MethodInf
   WarEntity_o *WarEntityByWarID; // [xsp+0h] [xbp-60h] BYREF
   Il2CppObject *entity; // [xsp+8h] [xbp-58h] BYREF
 
-  if ( (byte_4C34D8C & 1) == 0 )
+  if ( (byte_4C40376 & 1) == 0 )
   {
-    sub_1C32C20(&BalanceConfig_TypeInfo);
-    sub_1C32C20(&Method_DataManager_GetMaster_WarMaster___);
-    sub_1C32C20(&DataManager_TypeInfo);
-    sub_1C32C20(&Method_DataMasterBase_WarMaster__WarEntity__int__TryGetEntity__);
-    sub_1C32C20(&UnityEngine_Object_TypeInfo);
-    sub_1C32C20(&Method_SingletonTemplate_QuestTree__get_Instance__);
-    sub_1C32C20(&TerminalPramsManager_TypeInfo);
-    sub_1C32C20(&TerminalSceneComponent_TypeInfo);
-    byte_4C34D8C = 1;
+    sub_1C37058(&BalanceConfig_TypeInfo);
+    sub_1C37058(&Method_DataManager_GetMaster_WarMaster___);
+    sub_1C37058(&DataManager_TypeInfo);
+    sub_1C37058(&Method_DataMasterBase_WarMaster__WarEntity__int__TryGetEntity__);
+    sub_1C37058(&UnityEngine_Object_TypeInfo);
+    sub_1C37058(&Method_SingletonTemplate_QuestTree__get_Instance__);
+    sub_1C37058(&TerminalPramsManager_TypeInfo);
+    sub_1C37058(&TerminalSceneComponent_TypeInfo);
+    byte_4C40376 = 1;
   }
   WarEntityByWarID = 0;
   entity = 0;
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(TerminalPramsManager_TypeInfo);
-  if ( !byte_4C34569 )
+  if ( !byte_4C3FB53 )
   {
-    sub_1C32C20(&TerminalPramsManager_TypeInfo);
-    byte_4C34569 = 1;
+    sub_1C37058(&TerminalPramsManager_TypeInfo);
+    byte_4C3FB53 = 1;
   }
   v3 = TerminalPramsManager_TypeInfo;
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -11896,11 +11896,11 @@ void TerminalPramsManager__SetAutoResumeForFolder(int32_t warId, const MethodInf
     v3 = TerminalPramsManager_TypeInfo;
   }
   v3->static_fields->_IsOrdealCallWarClear_k__BackingField = 0;
-  if ( !byte_4C342B2 )
+  if ( !byte_4C3F89C )
   {
-    sub_1C32C20(&TerminalPramsManager_TypeInfo);
+    sub_1C37058(&TerminalPramsManager_TypeInfo);
     v3 = TerminalPramsManager_TypeInfo;
-    byte_4C342B2 = 1;
+    byte_4C3F89C = 1;
   }
   if ( !v3->_2.cctor_finished )
   {
@@ -11908,11 +11908,11 @@ void TerminalPramsManager__SetAutoResumeForFolder(int32_t warId, const MethodInf
     v3 = TerminalPramsManager_TypeInfo;
   }
   v3->static_fields->_WarId_k__BackingField = 0;
-  if ( !byte_4C342AE )
+  if ( !byte_4C3F898 )
   {
-    sub_1C32C20(&TerminalPramsManager_TypeInfo);
+    sub_1C37058(&TerminalPramsManager_TypeInfo);
     v3 = TerminalPramsManager_TypeInfo;
-    byte_4C342AE = 1;
+    byte_4C3F898 = 1;
   }
   if ( !v3->_2.cctor_finished )
   {
@@ -11920,7 +11920,7 @@ void TerminalPramsManager__SetAutoResumeForFolder(int32_t warId, const MethodInf
     v3 = TerminalPramsManager_TypeInfo;
   }
   v3->static_fields->_DispState_k__BackingField = 1;
-  Instance = SingletonTemplate_object___get_Instance((const MethodInfo_39E2DF4 *)Method_SingletonTemplate_QuestTree__get_Instance__);
+  Instance = SingletonTemplate_object___get_Instance((const MethodInfo_39ED65C *)Method_SingletonTemplate_QuestTree__get_Instance__);
   if ( Instance )
   {
     entity = (Il2CppObject *)QuestTree__mfGetWarEntityByWarID((QuestTree_o *)Instance, warId, 0);
@@ -11933,23 +11933,23 @@ void TerminalPramsManager__SetAutoResumeForFolder(int32_t warId, const MethodInf
   }
   if ( !DataManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-  Master_object = (DataMasterBase_TMaster__TEntity__PKType__o *)DataManager__GetMaster_object_((const MethodInfo_30DD39C *)Method_DataManager_GetMaster_WarMaster___);
+  Master_object = (DataMasterBase_TMaster__TEntity__PKType__o *)DataManager__GetMaster_object_((const MethodInfo_30E7C04 *)Method_DataManager_GetMaster_WarMaster___);
   if ( !Master_object )
     goto LABEL_135;
   DataMasterBase_object__object__int___TryGetEntity(
     Master_object,
     &entity,
     warId,
-    (const MethodInfo_3396884 *)Method_DataMasterBase_WarMaster__WarEntity__int__TryGetEntity__);
+    (const MethodInfo_33A10EC *)Method_DataMasterBase_WarMaster__WarEntity__int__TryGetEntity__);
   if ( !entity )
     return;
 LABEL_25:
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(TerminalPramsManager_TypeInfo);
-  if ( !byte_4C32814 )
+  if ( !byte_4C3DDFE )
   {
-    sub_1C32C20(&TerminalPramsManager_TypeInfo);
-    byte_4C32814 = 1;
+    sub_1C37058(&TerminalPramsManager_TypeInfo);
+    byte_4C3DDFE = 1;
   }
   v6 = TerminalPramsManager_TypeInfo;
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -11962,7 +11962,7 @@ LABEL_25:
   if ( !entity )
     goto LABEL_135;
   PrioredParentId = WarEntity__GetPrioredParentId((WarEntity_o *)entity, 0);
-  v8 = SingletonTemplate_object___get_Instance((const MethodInfo_39E2DF4 *)Method_SingletonTemplate_QuestTree__get_Instance__);
+  v8 = SingletonTemplate_object___get_Instance((const MethodInfo_39ED65C *)Method_SingletonTemplate_QuestTree__get_Instance__);
   if ( v8 )
   {
     WarEntityByWarID = QuestTree__mfGetWarEntityByWarID((QuestTree_o *)v8, PrioredParentId, 0);
@@ -11975,23 +11975,23 @@ LABEL_25:
   }
   if ( !DataManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-  Master_object = (DataMasterBase_TMaster__TEntity__PKType__o *)DataManager__GetMaster_object_((const MethodInfo_30DD39C *)Method_DataManager_GetMaster_WarMaster___);
+  Master_object = (DataMasterBase_TMaster__TEntity__PKType__o *)DataManager__GetMaster_object_((const MethodInfo_30E7C04 *)Method_DataManager_GetMaster_WarMaster___);
   if ( !Master_object )
     goto LABEL_135;
   DataMasterBase_object__object__int___TryGetEntity(
     Master_object,
     (Il2CppObject **)&WarEntityByWarID,
     PrioredParentId,
-    (const MethodInfo_3396884 *)Method_DataMasterBase_WarMaster__WarEntity__int__TryGetEntity__);
+    (const MethodInfo_33A10EC *)Method_DataMasterBase_WarMaster__WarEntity__int__TryGetEntity__);
   if ( !WarEntityByWarID )
     return;
 LABEL_40:
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(TerminalPramsManager_TypeInfo);
-  if ( !byte_4C342B2 )
+  if ( !byte_4C3F89C )
   {
-    sub_1C32C20(&TerminalPramsManager_TypeInfo);
-    byte_4C342B2 = 1;
+    sub_1C37058(&TerminalPramsManager_TypeInfo);
+    byte_4C3F89C = 1;
   }
   v9 = TerminalPramsManager_TypeInfo;
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -12007,10 +12007,10 @@ LABEL_40:
   {
     if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(TerminalPramsManager_TypeInfo);
-    if ( !byte_4C342AE )
+    if ( !byte_4C3F898 )
     {
-      sub_1C32C20(&TerminalPramsManager_TypeInfo);
-      byte_4C342AE = 1;
+      sub_1C37058(&TerminalPramsManager_TypeInfo);
+      byte_4C3F898 = 1;
     }
     v10 = TerminalPramsManager_TypeInfo;
     if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -12030,10 +12030,10 @@ LABEL_40:
   {
     if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(TerminalPramsManager_TypeInfo);
-    if ( !byte_4C32812 )
+    if ( !byte_4C3DDFC )
     {
-      sub_1C32C20(&TerminalPramsManager_TypeInfo);
-      byte_4C32812 = 1;
+      sub_1C37058(&TerminalPramsManager_TypeInfo);
+      byte_4C3DDFC = 1;
     }
     v12 = TerminalPramsManager_TypeInfo;
     if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -12049,10 +12049,10 @@ LABEL_40:
     monitor_high = 0;
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(TerminalPramsManager_TypeInfo);
-  if ( !byte_4C341F6 )
+  if ( !byte_4C3F7E0 )
   {
-    sub_1C32C20(&TerminalPramsManager_TypeInfo);
-    byte_4C341F6 = 1;
+    sub_1C37058(&TerminalPramsManager_TypeInfo);
+    byte_4C3F7E0 = 1;
   }
   v14 = TerminalPramsManager_TypeInfo;
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -12063,10 +12063,10 @@ LABEL_40:
   v14->static_fields->_BlankEarthSpotId_k__BackingField = monitor_high;
   if ( !TerminalSceneComponent_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(TerminalSceneComponent_TypeInfo);
-  if ( !byte_4C319B6 )
+  if ( !byte_4C3CF06 )
   {
-    sub_1C32C20(&TerminalSceneComponent_TypeInfo);
-    byte_4C319B6 = 1;
+    sub_1C37058(&TerminalSceneComponent_TypeInfo);
+    byte_4C3CF06 = 1;
   }
   v15 = TerminalSceneComponent_TypeInfo;
   if ( !TerminalSceneComponent_TypeInfo->_2.cctor_finished )
@@ -12081,10 +12081,10 @@ LABEL_40:
     goto LABEL_127;
   if ( !TerminalSceneComponent_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(TerminalSceneComponent_TypeInfo);
-  if ( !byte_4C319B6 )
+  if ( !byte_4C3CF06 )
   {
-    sub_1C32C20(&TerminalSceneComponent_TypeInfo);
-    byte_4C319B6 = 1;
+    sub_1C37058(&TerminalSceneComponent_TypeInfo);
+    byte_4C3CF06 = 1;
   }
   Master_object = (DataMasterBase_TMaster__TEntity__PKType__o *)TerminalSceneComponent_TypeInfo;
   if ( !TerminalSceneComponent_TypeInfo->_2.cctor_finished )
@@ -12102,10 +12102,10 @@ LABEL_40:
   {
     if ( !TerminalSceneComponent_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(TerminalSceneComponent_TypeInfo);
-    if ( !byte_4C319B6 )
+    if ( !byte_4C3CF06 )
     {
-      sub_1C32C20(&TerminalSceneComponent_TypeInfo);
-      byte_4C319B6 = 1;
+      sub_1C37058(&TerminalSceneComponent_TypeInfo);
+      byte_4C3CF06 = 1;
     }
     Master_object = (DataMasterBase_TMaster__TEntity__PKType__o *)TerminalSceneComponent_TypeInfo;
     if ( !TerminalSceneComponent_TypeInfo->_2.cctor_finished )
@@ -12119,10 +12119,10 @@ LABEL_40:
     v20 = *(ScrTerminalListTop_o **)&v19->_2.element_size;
     if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(TerminalPramsManager_TypeInfo);
-    if ( !byte_4C31DAD )
+    if ( !byte_4C3D397 )
     {
-      sub_1C32C20(&TerminalPramsManager_TypeInfo);
-      byte_4C31DAD = 1;
+      sub_1C37058(&TerminalPramsManager_TypeInfo);
+      byte_4C3D397 = 1;
     }
     Master_object = (DataMasterBase_TMaster__TEntity__PKType__o *)TerminalPramsManager_TypeInfo;
     if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -12136,10 +12136,10 @@ LABEL_40:
   }
   if ( !TerminalSceneComponent_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(TerminalSceneComponent_TypeInfo);
-  if ( !byte_4C319B6 )
+  if ( !byte_4C3CF06 )
   {
-    sub_1C32C20(&TerminalSceneComponent_TypeInfo);
-    byte_4C319B6 = 1;
+    sub_1C37058(&TerminalSceneComponent_TypeInfo);
+    byte_4C3CF06 = 1;
   }
   Master_object = (DataMasterBase_TMaster__TEntity__PKType__o *)TerminalSceneComponent_TypeInfo;
   if ( !TerminalSceneComponent_TypeInfo->_2.cctor_finished )
@@ -12157,10 +12157,10 @@ LABEL_40:
     goto LABEL_127;
   if ( !TerminalSceneComponent_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(TerminalSceneComponent_TypeInfo);
-  if ( !byte_4C319B6 )
+  if ( !byte_4C3CF06 )
   {
-    sub_1C32C20(&TerminalSceneComponent_TypeInfo);
-    byte_4C319B6 = 1;
+    sub_1C37058(&TerminalSceneComponent_TypeInfo);
+    byte_4C3CF06 = 1;
   }
   Master_object = (DataMasterBase_TMaster__TEntity__PKType__o *)TerminalSceneComponent_TypeInfo;
   if ( !TerminalSceneComponent_TypeInfo->_2.cctor_finished )
@@ -12171,15 +12171,15 @@ LABEL_40:
   v23 = Master_object[2].fields.list->klass;
   if ( !v23 || (Master_object = (DataMasterBase_TMaster__TEntity__PKType__o *)v23->_2.genericContainerHandle) == 0 )
 LABEL_135:
-    sub_1C32E7C(Master_object);
+    sub_1C372B4(Master_object);
   TitleInfoControl__CloseEventBannerWindow((TitleInfoControl_o *)Master_object, 0);
 LABEL_127:
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(TerminalPramsManager_TypeInfo);
-  if ( !byte_4C3219C )
+  if ( !byte_4C3D786 )
   {
-    sub_1C32C20(&TerminalPramsManager_TypeInfo);
-    byte_4C3219C = 1;
+    sub_1C37058(&TerminalPramsManager_TypeInfo);
+    byte_4C3D786 = 1;
   }
   v24 = (const MethodInfo *)TerminalPramsManager_TypeInfo;
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -12206,22 +12206,22 @@ void TerminalPramsManager__SetBattleResultCampaignBonus(
   CommonUI_CampaignBonusData_array *campaignbonus; // x19
 
   v4 = result;
-  if ( (byte_4C34DC9 & 1) == 0 )
+  if ( (byte_4C403B3 & 1) == 0 )
   {
-    result = (BattleResultComponent_resultData_o *)sub_1C32C20(&TerminalPramsManager_TypeInfo);
-    byte_4C34DC9 = 1;
+    result = (BattleResultComponent_resultData_o *)sub_1C37058(&TerminalPramsManager_TypeInfo);
+    byte_4C403B3 = 1;
   }
   if ( !v4 )
-    sub_1C32E7C(result);
+    sub_1C372B4(result);
   campaignDirectBonus = v4->fields.campaignDirectBonus;
   if ( campaignDirectBonus && campaignDirectBonus->max_length )
   {
     if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(TerminalPramsManager_TypeInfo);
-    if ( !byte_4C34DFF )
+    if ( !byte_4C403E9 )
     {
-      sub_1C32C20(&TerminalPramsManager_TypeInfo);
-      byte_4C34DFF = 1;
+      sub_1C37058(&TerminalPramsManager_TypeInfo);
+      byte_4C403E9 = 1;
     }
     v6 = TerminalPramsManager_TypeInfo;
     if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -12231,7 +12231,7 @@ void TerminalPramsManager__SetBattleResultCampaignBonus(
     }
     static_fields = v6->static_fields;
     static_fields->_CampaignDirectBonus_k__BackingField = campaignDirectBonus;
-    sub_1C32BC4(
+    sub_1C36FFC(
       (CGThumbnailListItem_o *)&static_fields->_CampaignDirectBonus_k__BackingField,
       (int32_t)campaignDirectBonus,
       v2,
@@ -12257,17 +12257,17 @@ void TerminalPramsManager__SetCampaignBonus(
   TerminalPramsManager_c *v5; // x0
   struct TerminalPramsManager_StaticFields *static_fields; // x0
 
-  if ( (byte_4C34DB4 & 1) == 0 )
+  if ( (byte_4C4039E & 1) == 0 )
   {
-    sub_1C32C20(&TerminalPramsManager_TypeInfo);
-    byte_4C34DB4 = 1;
+    sub_1C37058(&TerminalPramsManager_TypeInfo);
+    byte_4C4039E = 1;
   }
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(TerminalPramsManager_TypeInfo);
-  if ( !byte_4C34DFE )
+  if ( !byte_4C403E8 )
   {
-    sub_1C32C20(&TerminalPramsManager_TypeInfo);
-    byte_4C34DFE = 1;
+    sub_1C37058(&TerminalPramsManager_TypeInfo);
+    byte_4C403E8 = 1;
   }
   v5 = TerminalPramsManager_TypeInfo;
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -12277,7 +12277,7 @@ void TerminalPramsManager__SetCampaignBonus(
   }
   static_fields = v5->static_fields;
   static_fields->_CampaignBonus_k__BackingField = campaignBonuses;
-  sub_1C32BC4((CGThumbnailListItem_o *)&static_fields->_CampaignBonus_k__BackingField, (int32_t)campaignBonuses, v2, v3);
+  sub_1C36FFC((CGThumbnailListItem_o *)&static_fields->_CampaignBonus_k__BackingField, (int32_t)campaignBonuses, v2, v3);
 }
 
 
@@ -12292,14 +12292,14 @@ void TerminalPramsManager__SetFolderLastClickedIdx(int32_t warId, int32_t idx, c
   System_Collections_Generic_Dictionary_int__int__o *folderLastIdxs; // x0
   TerminalPramsManager_c *v12; // x0
 
-  if ( (byte_4C34DC0 & 1) == 0 )
+  if ( (byte_4C403AA & 1) == 0 )
   {
-    sub_1C32C20(&Method_System_Collections_Generic_Dictionary_int__int__Add__);
-    sub_1C32C20(&Method_System_Collections_Generic_Dictionary_int__int__Remove__);
-    sub_1C32C20(&Method_System_Collections_Generic_Dictionary_int__int___ctor__);
-    sub_1C32C20(&System_Collections_Generic_Dictionary_int__int__TypeInfo);
-    sub_1C32C20(&TerminalPramsManager_TypeInfo);
-    byte_4C34DC0 = 1;
+    sub_1C37058(&Method_System_Collections_Generic_Dictionary_int__int__Add__);
+    sub_1C37058(&Method_System_Collections_Generic_Dictionary_int__int__Remove__);
+    sub_1C37058(&Method_System_Collections_Generic_Dictionary_int__int___ctor__);
+    sub_1C37058(&System_Collections_Generic_Dictionary_int__int__TypeInfo);
+    sub_1C37058(&TerminalPramsManager_TypeInfo);
+    byte_4C403AA = 1;
   }
   v5 = TerminalPramsManager_TypeInfo;
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -12309,10 +12309,10 @@ void TerminalPramsManager__SetFolderLastClickedIdx(int32_t warId, int32_t idx, c
   }
   if ( !v5->static_fields->folderLastIdxs )
   {
-    v6 = (System_Collections_Generic_Dictionary_int__int__o *)sub_1C32E6C(System_Collections_Generic_Dictionary_int__int__TypeInfo);
+    v6 = (System_Collections_Generic_Dictionary_int__int__o *)sub_1C372A4(System_Collections_Generic_Dictionary_int__int__TypeInfo);
     System_Collections_Generic_Dictionary_int__int____ctor(
       v6,
-      (const MethodInfo_33E68A0 *)Method_System_Collections_Generic_Dictionary_int__int___ctor__);
+      (const MethodInfo_33F1108 *)Method_System_Collections_Generic_Dictionary_int__int___ctor__);
     v9 = TerminalPramsManager_TypeInfo;
     if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
     {
@@ -12321,7 +12321,7 @@ void TerminalPramsManager__SetFolderLastClickedIdx(int32_t warId, int32_t idx, c
     }
     static_fields = v9->static_fields;
     static_fields->folderLastIdxs = v6;
-    sub_1C32BC4((CGThumbnailListItem_o *)&static_fields->folderLastIdxs, (int32_t)v6, v7, v8);
+    sub_1C36FFC((CGThumbnailListItem_o *)&static_fields->folderLastIdxs, (int32_t)v6, v7, v8);
     v5 = TerminalPramsManager_TypeInfo;
   }
   if ( !v5->_2.cctor_finished )
@@ -12334,20 +12334,20 @@ void TerminalPramsManager__SetFolderLastClickedIdx(int32_t warId, int32_t idx, c
     || (System_Collections_Generic_Dictionary_int__int___Remove(
           folderLastIdxs,
           warId,
-          (const MethodInfo_33E861C *)Method_System_Collections_Generic_Dictionary_int__int__Remove__),
+          (const MethodInfo_33F2E84 *)Method_System_Collections_Generic_Dictionary_int__int__Remove__),
         (folderLastIdxs = TerminalPramsManager_TypeInfo->static_fields->folderLastIdxs) == 0) )
   {
-    sub_1C32E7C(folderLastIdxs);
+    sub_1C372B4(folderLastIdxs);
   }
   System_Collections_Generic_Dictionary_int__int___Add(
     folderLastIdxs,
     warId,
     idx,
-    (const MethodInfo_33E7264 *)Method_System_Collections_Generic_Dictionary_int__int__Add__);
-  if ( !byte_4C34DEF )
+    (const MethodInfo_33F1ACC *)Method_System_Collections_Generic_Dictionary_int__int__Add__);
+  if ( !byte_4C403D9 )
   {
-    sub_1C32C20(&TerminalPramsManager_TypeInfo);
-    byte_4C34DEF = 1;
+    sub_1C37058(&TerminalPramsManager_TypeInfo);
+    byte_4C403D9 = 1;
   }
   v12 = TerminalPramsManager_TypeInfo;
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -12371,23 +12371,23 @@ void TerminalPramsManager__SetForcePlayEventTutorialArray(int32_t eventId, int32
   System_Collections_Generic_HashSet_T__o *ForcePlayEventTutorialArray_k__BackingField; // x0
   TerminalPramsManager_c *v13; // x0
 
-  if ( (byte_4C34DE6 & 1) == 0 )
+  if ( (byte_4C403D0 & 1) == 0 )
   {
-    sub_1C32C20(&Method_System_Collections_Generic_Dictionary_int__int__Add__);
-    sub_1C32C20(&Method_System_Collections_Generic_Dictionary_int__int___ctor__);
-    sub_1C32C20(&System_Collections_Generic_Dictionary_int__int__TypeInfo);
-    sub_1C32C20(&Method_System_Collections_Generic_HashSet_Dictionary_int__int___Add__);
-    sub_1C32C20(&Method_System_Collections_Generic_HashSet_Dictionary_int__int____ctor__);
-    sub_1C32C20(&System_Collections_Generic_HashSet_Dictionary_int__int___TypeInfo);
-    sub_1C32C20(&TerminalPramsManager_TypeInfo);
-    byte_4C34DE6 = 1;
+    sub_1C37058(&Method_System_Collections_Generic_Dictionary_int__int__Add__);
+    sub_1C37058(&Method_System_Collections_Generic_Dictionary_int__int___ctor__);
+    sub_1C37058(&System_Collections_Generic_Dictionary_int__int__TypeInfo);
+    sub_1C37058(&Method_System_Collections_Generic_HashSet_Dictionary_int__int___Add__);
+    sub_1C37058(&Method_System_Collections_Generic_HashSet_Dictionary_int__int____ctor__);
+    sub_1C37058(&System_Collections_Generic_HashSet_Dictionary_int__int___TypeInfo);
+    sub_1C37058(&TerminalPramsManager_TypeInfo);
+    byte_4C403D0 = 1;
   }
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(TerminalPramsManager_TypeInfo);
-  if ( !byte_4C34E01 )
+  if ( !byte_4C403EB )
   {
-    sub_1C32C20(&TerminalPramsManager_TypeInfo);
-    byte_4C34E01 = 1;
+    sub_1C37058(&TerminalPramsManager_TypeInfo);
+    byte_4C403EB = 1;
   }
   v5 = TerminalPramsManager_TypeInfo;
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -12397,16 +12397,16 @@ void TerminalPramsManager__SetForcePlayEventTutorialArray(int32_t eventId, int32
   }
   if ( !v5->static_fields->_ForcePlayEventTutorialArray_k__BackingField )
   {
-    v6 = (System_Collections_Generic_HashSet_T__o *)sub_1C32E6C(System_Collections_Generic_HashSet_Dictionary_int__int___TypeInfo);
+    v6 = (System_Collections_Generic_HashSet_T__o *)sub_1C372A4(System_Collections_Generic_HashSet_Dictionary_int__int___TypeInfo);
     System_Collections_Generic_HashSet_object____ctor(
       v6,
-      (const MethodInfo_364F828 *)Method_System_Collections_Generic_HashSet_Dictionary_int__int____ctor__);
+      (const MethodInfo_365A090 *)Method_System_Collections_Generic_HashSet_Dictionary_int__int____ctor__);
     if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(TerminalPramsManager_TypeInfo);
-    if ( !byte_4C34E20 )
+    if ( !byte_4C4040A )
     {
-      sub_1C32C20(&TerminalPramsManager_TypeInfo);
-      byte_4C34E20 = 1;
+      sub_1C37058(&TerminalPramsManager_TypeInfo);
+      byte_4C4040A = 1;
     }
     v9 = TerminalPramsManager_TypeInfo;
     if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -12416,25 +12416,25 @@ void TerminalPramsManager__SetForcePlayEventTutorialArray(int32_t eventId, int32
     }
     p_ForcePlayEventTutorialArray_k__BackingField = (CGThumbnailListItem_o *)&v9->static_fields->_ForcePlayEventTutorialArray_k__BackingField;
     p_ForcePlayEventTutorialArray_k__BackingField->klass = (CGThumbnailListItem_c *)v6;
-    sub_1C32BC4(p_ForcePlayEventTutorialArray_k__BackingField, (int32_t)v6, v7, v8);
+    sub_1C36FFC(p_ForcePlayEventTutorialArray_k__BackingField, (int32_t)v6, v7, v8);
   }
-  v11 = (System_Collections_Generic_Dictionary_int__int__o *)sub_1C32E6C(System_Collections_Generic_Dictionary_int__int__TypeInfo);
+  v11 = (System_Collections_Generic_Dictionary_int__int__o *)sub_1C372A4(System_Collections_Generic_Dictionary_int__int__TypeInfo);
   System_Collections_Generic_Dictionary_int__int____ctor(
     v11,
-    (const MethodInfo_33E68A0 *)Method_System_Collections_Generic_Dictionary_int__int___ctor__);
+    (const MethodInfo_33F1108 *)Method_System_Collections_Generic_Dictionary_int__int___ctor__);
   if ( !v11 )
     goto LABEL_26;
   System_Collections_Generic_Dictionary_int__int___Add(
     v11,
     eventId,
     flagType,
-    (const MethodInfo_33E7264 *)Method_System_Collections_Generic_Dictionary_int__int__Add__);
+    (const MethodInfo_33F1ACC *)Method_System_Collections_Generic_Dictionary_int__int__Add__);
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(TerminalPramsManager_TypeInfo);
-  if ( !byte_4C34E01 )
+  if ( !byte_4C403EB )
   {
-    sub_1C32C20(&TerminalPramsManager_TypeInfo);
-    byte_4C34E01 = 1;
+    sub_1C37058(&TerminalPramsManager_TypeInfo);
+    byte_4C403EB = 1;
   }
   v13 = TerminalPramsManager_TypeInfo;
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -12445,11 +12445,11 @@ void TerminalPramsManager__SetForcePlayEventTutorialArray(int32_t eventId, int32
   ForcePlayEventTutorialArray_k__BackingField = (System_Collections_Generic_HashSet_T__o *)v13->static_fields->_ForcePlayEventTutorialArray_k__BackingField;
   if ( !ForcePlayEventTutorialArray_k__BackingField )
 LABEL_26:
-    sub_1C32E7C(ForcePlayEventTutorialArray_k__BackingField);
+    sub_1C372B4(ForcePlayEventTutorialArray_k__BackingField);
   System_Collections_Generic_HashSet_object___Add(
     ForcePlayEventTutorialArray_k__BackingField,
     (Il2CppObject *)v11,
-    (const MethodInfo_3650A0C *)Method_System_Collections_Generic_HashSet_Dictionary_int__int___Add__);
+    (const MethodInfo_365B274 *)Method_System_Collections_Generic_HashSet_Dictionary_int__int___Add__);
 }
 
 
@@ -12458,17 +12458,17 @@ void TerminalPramsManager__SetQuestReleasedFocusState(int32_t questId, int32_t s
   TerminalPramsManager_c *v5; // x0
   QuestFocusStateManager_o *QuestFocusStateManager; // x0
 
-  if ( (byte_4C34DC6 & 1) == 0 )
+  if ( (byte_4C403B0 & 1) == 0 )
   {
-    sub_1C32C20(&TerminalPramsManager_TypeInfo);
-    byte_4C34DC6 = 1;
+    sub_1C37058(&TerminalPramsManager_TypeInfo);
+    byte_4C403B0 = 1;
   }
   v5 = TerminalPramsManager_TypeInfo;
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(TerminalPramsManager_TypeInfo);
   QuestFocusStateManager = TerminalPramsManager__get_QuestFocusStateManager((const MethodInfo *)v5);
   if ( !QuestFocusStateManager )
-    sub_1C32E7C(0);
+    sub_1C372B4(0);
   QuestFocusStateManager__SetFocusState(QuestFocusStateManager, questId, state, 0);
 }
 
@@ -12511,10 +12511,10 @@ void TerminalPramsManager__SetQuestRewardInfo(BattleResultComponent_resultData_a
   TerminalPramsManager_c *v36; // x0
   struct TerminalPramsManager_StaticFields *static_fields; // x8
 
-  if ( (byte_4C34DCA & 1) == 0 )
+  if ( (byte_4C403B4 & 1) == 0 )
   {
-    sub_1C32C20(&TerminalPramsManager_TypeInfo);
-    byte_4C34DCA = 1;
+    sub_1C37058(&TerminalPramsManager_TypeInfo);
+    byte_4C403B4 = 1;
   }
   v5 = TerminalPramsManager_TypeInfo;
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -12524,7 +12524,7 @@ void TerminalPramsManager__SetQuestRewardInfo(BattleResultComponent_resultData_a
   }
   p_mQuestRewardInfos = (CGThumbnailListItem_o *)&v5->static_fields->mQuestRewardInfos;
   p_mQuestRewardInfos->klass = 0;
-  sub_1C32BC4(p_mQuestRewardInfos, 0, v2, v3);
+  sub_1C36FFC(p_mQuestRewardInfos, 0, v2, v3);
   if ( !result )
     goto LABEL_44;
   if ( !LODWORD(result->max_length) )
@@ -12543,7 +12543,7 @@ void TerminalPramsManager__SetQuestRewardInfo(BattleResultComponent_resultData_a
     }
     v13 = (CGThumbnailListItem_o *)&v12->static_fields->mQuestRewardInfos;
     v13->klass = rewardInfos;
-    sub_1C32BC4(v13, (int32_t)rewardInfos, v8, v9);
+    sub_1C36FFC(v13, (int32_t)rewardInfos, v8, v9);
   }
   v14 = TerminalPramsManager_TypeInfo;
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -12553,7 +12553,7 @@ void TerminalPramsManager__SetQuestRewardInfo(BattleResultComponent_resultData_a
   }
   p_mQuestPhaseRewardInfos = (CGThumbnailListItem_o *)&v14->static_fields->mQuestPhaseRewardInfos;
   p_mQuestPhaseRewardInfos->klass = 0;
-  sub_1C32BC4(p_mQuestPhaseRewardInfos, 0, v8, v9);
+  sub_1C36FFC(p_mQuestPhaseRewardInfos, 0, v8, v9);
   if ( !LODWORD(result->max_length) )
     goto LABEL_45;
   v18 = result->m_Items[0];
@@ -12570,7 +12570,7 @@ void TerminalPramsManager__SetQuestRewardInfo(BattleResultComponent_resultData_a
     }
     v21 = (CGThumbnailListItem_o *)&v20->static_fields->mQuestPhaseRewardInfos;
     v21->klass = resultQuestPhaseRewardInfos;
-    sub_1C32BC4(v21, (int32_t)resultQuestPhaseRewardInfos, v16, v17);
+    sub_1C36FFC(v21, (int32_t)resultQuestPhaseRewardInfos, v16, v17);
   }
   v22 = TerminalPramsManager_TypeInfo;
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -12580,7 +12580,7 @@ void TerminalPramsManager__SetQuestRewardInfo(BattleResultComponent_resultData_a
   }
   p_mQuestResultAfterEventRewardInfos = (CGThumbnailListItem_o *)&v22->static_fields->mQuestResultAfterEventRewardInfos;
   p_mQuestResultAfterEventRewardInfos->klass = 0;
-  sub_1C32BC4(p_mQuestResultAfterEventRewardInfos, 0, v16, v17);
+  sub_1C36FFC(p_mQuestResultAfterEventRewardInfos, 0, v16, v17);
   max_length = result->max_length;
   if ( !(_DWORD)max_length )
     goto LABEL_45;
@@ -12598,7 +12598,7 @@ void TerminalPramsManager__SetQuestRewardInfo(BattleResultComponent_resultData_a
     }
     v30 = (CGThumbnailListItem_o *)&v29->static_fields->mQuestResultAfterEventRewardInfos;
     v30->klass = resultAfterEventRewardInfos;
-    sub_1C32BC4(v30, (int32_t)resultAfterEventRewardInfos, v24, v25);
+    sub_1C36FFC(v30, (int32_t)resultAfterEventRewardInfos, v24, v25);
     max_length = result->max_length;
   }
   if ( !(_DWORD)max_length )
@@ -12614,19 +12614,19 @@ void TerminalPramsManager__SetQuestRewardInfo(BattleResultComponent_resultData_a
     goto LABEL_37;
   if ( !LODWORD(result->max_length) )
 LABEL_45:
-    sub_1C32E84(IsNullOrEmpty);
+    sub_1C372BC(IsNullOrEmpty);
   v35 = result->m_Items[0];
   if ( !v35 )
 LABEL_44:
-    sub_1C32E7C(IsNullOrEmpty);
+    sub_1C372B4(IsNullOrEmpty);
   resultUseRewardAddItemRewardInfos = v35->fields.resultUseRewardAddItemRewardInfos;
 LABEL_37:
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(TerminalPramsManager_TypeInfo);
-  if ( !byte_4C31A9A )
+  if ( !byte_4C3CFEA )
   {
-    sub_1C32C20(&TerminalPramsManager_TypeInfo);
-    byte_4C31A9A = 1;
+    sub_1C37058(&TerminalPramsManager_TypeInfo);
+    byte_4C3CFEA = 1;
   }
   v36 = TerminalPramsManager_TypeInfo;
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -12636,7 +12636,7 @@ LABEL_37:
   }
   static_fields = v36->static_fields;
   static_fields->_UseAddRewardItemRewardInfos_k__BackingField = resultUseRewardAddItemRewardInfos;
-  sub_1C32BC4(
+  sub_1C36FFC(
     (CGThumbnailListItem_o *)&static_fields->_UseAddRewardItemRewardInfos_k__BackingField,
     (int32_t)resultUseRewardAddItemRewardInfos,
     v32,
@@ -12657,11 +12657,11 @@ void TerminalPramsManager__SetWarStartedId(int32_t war_id, const MethodInfo *met
   int32_t v11; // [xsp+Ch] [xbp-24h] BYREF
 
   v11 = war_id;
-  if ( (byte_4C34DBE & 1) == 0 )
+  if ( (byte_4C403A8 & 1) == 0 )
   {
-    sub_1C32C20(&TerminalPramsManager_TypeInfo);
-    sub_1C32C20(&StringLiteral_43/*"\n"*/);
-    byte_4C34DBE = 1;
+    sub_1C37058(&TerminalPramsManager_TypeInfo);
+    sub_1C37058(&StringLiteral_43/*"\n"*/);
+    byte_4C403A8 = 1;
   }
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(TerminalPramsManager_TypeInfo);
@@ -12675,10 +12675,10 @@ void TerminalPramsManager__SetWarStartedId(int32_t war_id, const MethodInfo *met
     }
     mTerminalWarStartedIds = v3->static_fields->mTerminalWarStartedIds;
     v5 = System_Int32__ToString((int32_t)&v11, 0);
-    v6 = System_String__Concat_63556792(mTerminalWarStartedIds, v5, (System_String_o *)StringLiteral_43/*"\n"*/, 0);
+    v6 = System_String__Concat_63599904(mTerminalWarStartedIds, v5, (System_String_o *)StringLiteral_43/*"\n"*/, 0);
     static_fields = TerminalPramsManager_TypeInfo->static_fields;
     static_fields->mTerminalWarStartedIds = v6;
-    sub_1C32BC4((CGThumbnailListItem_o *)&static_fields->mTerminalWarStartedIds, (int32_t)v6, v8, v9);
+    sub_1C36FFC((CGThumbnailListItem_o *)&static_fields->mTerminalWarStartedIds, (int32_t)v6, v8, v9);
     TerminalPramsManager__Save_SaveData(v10);
   }
 }
@@ -12688,18 +12688,18 @@ void TerminalPramsManager__SpotIdSave_SaveData(const MethodInfo *method)
 {
   TerminalPramsManager_c *v1; // x0
 
-  if ( (byte_4C34D99 & 1) == 0 )
+  if ( (byte_4C40383 & 1) == 0 )
   {
-    sub_1C32C20(&TerminalPramsManager_TypeInfo);
-    sub_1C32C20(&StringLiteral_13711/*"TerminalSpotId"*/);
-    byte_4C34D99 = 1;
+    sub_1C37058(&TerminalPramsManager_TypeInfo);
+    sub_1C37058(&StringLiteral_13712/*"TerminalSpotId"*/);
+    byte_4C40383 = 1;
   }
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(TerminalPramsManager_TypeInfo);
-  if ( !byte_4C344B4 )
+  if ( !byte_4C3FA9E )
   {
-    sub_1C32C20(&TerminalPramsManager_TypeInfo);
-    byte_4C344B4 = 1;
+    sub_1C37058(&TerminalPramsManager_TypeInfo);
+    byte_4C3FA9E = 1;
   }
   v1 = TerminalPramsManager_TypeInfo;
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -12707,7 +12707,7 @@ void TerminalPramsManager__SpotIdSave_SaveData(const MethodInfo *method)
     j_il2cpp_runtime_class_init_0(TerminalPramsManager_TypeInfo);
     v1 = TerminalPramsManager_TypeInfo;
   }
-  UnityEngine_PlayerPrefs__SetInt((System_String_o *)StringLiteral_13711/*"TerminalSpotId"*/, v1->static_fields->_SpotId_k__BackingField, 0);
+  UnityEngine_PlayerPrefs__SetInt((System_String_o *)StringLiteral_13712/*"TerminalSpotId"*/, v1->static_fields->_SpotId_k__BackingField, 0);
   UnityEngine_PlayerPrefs__Save(0);
 }
 
@@ -12717,19 +12717,19 @@ void TerminalPramsManager__TerminalEventActivityPointInfoSave_SaveData(const Met
   TerminalPramsManager_c *v1; // x0
   TerminalPramsManager_c *v2; // x0
 
-  if ( (byte_4C34D9F & 1) == 0 )
+  if ( (byte_4C40389 & 1) == 0 )
   {
-    sub_1C32C20(&TerminalPramsManager_TypeInfo);
-    sub_1C32C20(&StringLiteral_13695/*"TerminalBeforeEventActivityPoint"*/);
-    sub_1C32C20(&StringLiteral_13696/*"TerminalBeforeEventActivityPointGauge"*/);
-    byte_4C34D9F = 1;
+    sub_1C37058(&TerminalPramsManager_TypeInfo);
+    sub_1C37058(&StringLiteral_13696/*"TerminalBeforeEventActivityPoint"*/);
+    sub_1C37058(&StringLiteral_13697/*"TerminalBeforeEventActivityPointGauge"*/);
+    byte_4C40389 = 1;
   }
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(TerminalPramsManager_TypeInfo);
-  if ( !byte_4C34E06 )
+  if ( !byte_4C403F0 )
   {
-    sub_1C32C20(&TerminalPramsManager_TypeInfo);
-    byte_4C34E06 = 1;
+    sub_1C37058(&TerminalPramsManager_TypeInfo);
+    byte_4C403F0 = 1;
   }
   v1 = TerminalPramsManager_TypeInfo;
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -12738,13 +12738,13 @@ void TerminalPramsManager__TerminalEventActivityPointInfoSave_SaveData(const Met
     v1 = TerminalPramsManager_TypeInfo;
   }
   UnityEngine_PlayerPrefs__SetInt(
-    (System_String_o *)StringLiteral_13695/*"TerminalBeforeEventActivityPoint"*/,
+    (System_String_o *)StringLiteral_13696/*"TerminalBeforeEventActivityPoint"*/,
     v1->static_fields->_BeforeEventActivityPoint_k__BackingField,
     0);
-  if ( !byte_4C34E07 )
+  if ( !byte_4C403F1 )
   {
-    sub_1C32C20(&TerminalPramsManager_TypeInfo);
-    byte_4C34E07 = 1;
+    sub_1C37058(&TerminalPramsManager_TypeInfo);
+    byte_4C403F1 = 1;
   }
   v2 = TerminalPramsManager_TypeInfo;
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -12753,7 +12753,7 @@ void TerminalPramsManager__TerminalEventActivityPointInfoSave_SaveData(const Met
     v2 = TerminalPramsManager_TypeInfo;
   }
   UnityEngine_PlayerPrefs__SetInt(
-    (System_String_o *)StringLiteral_13696/*"TerminalBeforeEventActivityPointGauge"*/,
+    (System_String_o *)StringLiteral_13697/*"TerminalBeforeEventActivityPointGauge"*/,
     v2->static_fields->_BeforeEventActivityPointGauge_k__BackingField,
     0);
   UnityEngine_PlayerPrefs__Save(0);
@@ -12764,11 +12764,11 @@ void TerminalPramsManager__TerminalEventConquestInfoDispSave_SaveData(const Meth
 {
   TerminalPramsManager_c *v1; // x0
 
-  if ( (byte_4C34DA4 & 1) == 0 )
+  if ( (byte_4C4038E & 1) == 0 )
   {
-    sub_1C32C20(&TerminalPramsManager_TypeInfo);
-    sub_1C32C20(&StringLiteral_11465/*"SAVEKEY_TerminalConquestInfoDisp"*/);
-    byte_4C34DA4 = 1;
+    sub_1C37058(&TerminalPramsManager_TypeInfo);
+    sub_1C37058(&StringLiteral_11466/*"SAVEKEY_TerminalConquestInfoDisp"*/);
+    byte_4C4038E = 1;
   }
   v1 = TerminalPramsManager_TypeInfo;
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -12776,7 +12776,7 @@ void TerminalPramsManager__TerminalEventConquestInfoDispSave_SaveData(const Meth
     j_il2cpp_runtime_class_init_0(TerminalPramsManager_TypeInfo);
     v1 = TerminalPramsManager_TypeInfo;
   }
-  UnityEngine_PlayerPrefs__SetInt((System_String_o *)StringLiteral_11465/*"SAVEKEY_TerminalConquestInfoDisp"*/, v1->static_fields->eventConquestInfoDisp, 0);
+  UnityEngine_PlayerPrefs__SetInt((System_String_o *)StringLiteral_11466/*"SAVEKEY_TerminalConquestInfoDisp"*/, v1->static_fields->eventConquestInfoDisp, 0);
   UnityEngine_PlayerPrefs__Save(0);
 }
 
@@ -12788,14 +12788,14 @@ void TerminalPramsManager__TerminalEventConquestInfosSave_SaveData(const MethodI
   System_String_o *v3; // x0
   TerminalPramsManager_c *v4; // x0
 
-  if ( (byte_4C34DA3 & 1) == 0 )
+  if ( (byte_4C4038D & 1) == 0 )
   {
-    sub_1C32C20(&EventConquestInfo___TypeInfo);
-    sub_1C32C20(&JsonManager_TypeInfo);
-    sub_1C32C20(&TerminalPramsManager_TypeInfo);
-    sub_1C32C20(&StringLiteral_11466/*"SAVEKEY_TerminalConquestInfos"*/);
-    sub_1C32C20(&StringLiteral_11465/*"SAVEKEY_TerminalConquestInfoDisp"*/);
-    byte_4C34DA3 = 1;
+    sub_1C37058(&EventConquestInfo___TypeInfo);
+    sub_1C37058(&JsonManager_TypeInfo);
+    sub_1C37058(&TerminalPramsManager_TypeInfo);
+    sub_1C37058(&StringLiteral_11467/*"SAVEKEY_TerminalConquestInfos"*/);
+    sub_1C37058(&StringLiteral_11466/*"SAVEKEY_TerminalConquestInfoDisp"*/);
+    byte_4C4038D = 1;
   }
   v1 = TerminalPramsManager_TypeInfo;
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -12814,19 +12814,19 @@ void TerminalPramsManager__TerminalEventConquestInfosSave_SaveData(const MethodI
   }
   else
   {
-    eventConquestInfos = (struct EventConquestInfo_array *)sub_1C32CC8(EventConquestInfo___TypeInfo, 0);
+    eventConquestInfos = (struct EventConquestInfo_array *)sub_1C37100(EventConquestInfo___TypeInfo, 0);
   }
   if ( !JsonManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(JsonManager_TypeInfo);
   v3 = JsonManager__toJson(&eventConquestInfos->obj, 0, 0, 0);
-  UnityEngine_PlayerPrefs__SetString((System_String_o *)StringLiteral_11466/*"SAVEKEY_TerminalConquestInfos"*/, v3, 0);
+  UnityEngine_PlayerPrefs__SetString((System_String_o *)StringLiteral_11467/*"SAVEKEY_TerminalConquestInfos"*/, v3, 0);
   v4 = TerminalPramsManager_TypeInfo;
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(TerminalPramsManager_TypeInfo);
     v4 = TerminalPramsManager_TypeInfo;
   }
-  UnityEngine_PlayerPrefs__SetInt((System_String_o *)StringLiteral_11465/*"SAVEKEY_TerminalConquestInfoDisp"*/, v4->static_fields->eventConquestInfoDisp, 0);
+  UnityEngine_PlayerPrefs__SetInt((System_String_o *)StringLiteral_11466/*"SAVEKEY_TerminalConquestInfoDisp"*/, v4->static_fields->eventConquestInfoDisp, 0);
   UnityEngine_PlayerPrefs__Save(0);
 }
 
@@ -12835,11 +12835,11 @@ void TerminalPramsManager__TerminalEventCraftInfoDispSave_SaveData(const MethodI
 {
   TerminalPramsManager_c *v1; // x0
 
-  if ( (byte_4C34DA5 & 1) == 0 )
+  if ( (byte_4C4038F & 1) == 0 )
   {
-    sub_1C32C20(&TerminalPramsManager_TypeInfo);
-    sub_1C32C20(&StringLiteral_11467/*"SAVEKEY_TerminalCraftInfoDisp"*/);
-    byte_4C34DA5 = 1;
+    sub_1C37058(&TerminalPramsManager_TypeInfo);
+    sub_1C37058(&StringLiteral_11468/*"SAVEKEY_TerminalCraftInfoDisp"*/);
+    byte_4C4038F = 1;
   }
   v1 = TerminalPramsManager_TypeInfo;
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -12847,7 +12847,7 @@ void TerminalPramsManager__TerminalEventCraftInfoDispSave_SaveData(const MethodI
     j_il2cpp_runtime_class_init_0(TerminalPramsManager_TypeInfo);
     v1 = TerminalPramsManager_TypeInfo;
   }
-  UnityEngine_PlayerPrefs__SetInt((System_String_o *)StringLiteral_11467/*"SAVEKEY_TerminalCraftInfoDisp"*/, v1->static_fields->eventCraftInfoDisp, 0);
+  UnityEngine_PlayerPrefs__SetInt((System_String_o *)StringLiteral_11468/*"SAVEKEY_TerminalCraftInfoDisp"*/, v1->static_fields->eventCraftInfoDisp, 0);
   UnityEngine_PlayerPrefs__Save(0);
 }
 
@@ -12858,13 +12858,13 @@ void TerminalPramsManager__TerminalEventHarvestGrowthInfosSave_SaveData(const Me
   Il2CppObject *eventHarvestGrowthInfo; // x19
   System_String_o *v3; // x0
 
-  if ( (byte_4C34DA6 & 1) == 0 )
+  if ( (byte_4C40390 & 1) == 0 )
   {
-    sub_1C32C20(&EventHarvestGrowthInfo_TypeInfo);
-    sub_1C32C20(&JsonManager_TypeInfo);
-    sub_1C32C20(&TerminalPramsManager_TypeInfo);
-    sub_1C32C20(&StringLiteral_11468/*"SAVEKEY_TerminalHarvestGrowthInfo"*/);
-    byte_4C34DA6 = 1;
+    sub_1C37058(&EventHarvestGrowthInfo_TypeInfo);
+    sub_1C37058(&JsonManager_TypeInfo);
+    sub_1C37058(&TerminalPramsManager_TypeInfo);
+    sub_1C37058(&StringLiteral_11469/*"SAVEKEY_TerminalHarvestGrowthInfo"*/);
+    byte_4C40390 = 1;
   }
   v1 = TerminalPramsManager_TypeInfo;
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -12883,13 +12883,13 @@ void TerminalPramsManager__TerminalEventHarvestGrowthInfosSave_SaveData(const Me
   }
   else
   {
-    eventHarvestGrowthInfo = (Il2CppObject *)sub_1C32E6C(EventHarvestGrowthInfo_TypeInfo);
+    eventHarvestGrowthInfo = (Il2CppObject *)sub_1C372A4(EventHarvestGrowthInfo_TypeInfo);
     System_Object___ctor(eventHarvestGrowthInfo, 0);
   }
   if ( !JsonManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(JsonManager_TypeInfo);
   v3 = JsonManager__toJson(eventHarvestGrowthInfo, 0, 0, 0);
-  UnityEngine_PlayerPrefs__SetString((System_String_o *)StringLiteral_11468/*"SAVEKEY_TerminalHarvestGrowthInfo"*/, v3, 0);
+  UnityEngine_PlayerPrefs__SetString((System_String_o *)StringLiteral_11469/*"SAVEKEY_TerminalHarvestGrowthInfo"*/, v3, 0);
   UnityEngine_PlayerPrefs__Save(0);
 }
 
@@ -12901,19 +12901,19 @@ void TerminalPramsManager__TerminalEventSubmarinePointInfoSave_SaveData(const Me
   Il2CppObject *BeforeEventSubmarineSaveData_k__BackingField; // x19
   System_String_o *v4; // x0
 
-  if ( (byte_4C34DA1 & 1) == 0 )
+  if ( (byte_4C4038B & 1) == 0 )
   {
-    sub_1C32C20(&JsonManager_TypeInfo);
-    sub_1C32C20(&TerminalPramsManager_TypeInfo);
-    sub_1C32C20(&StringLiteral_13697/*"TerminalBeforeEventSubmarinePointData"*/);
-    byte_4C34DA1 = 1;
+    sub_1C37058(&JsonManager_TypeInfo);
+    sub_1C37058(&TerminalPramsManager_TypeInfo);
+    sub_1C37058(&StringLiteral_13698/*"TerminalBeforeEventSubmarinePointData"*/);
+    byte_4C4038B = 1;
   }
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(TerminalPramsManager_TypeInfo);
-  if ( !byte_4C343D3 )
+  if ( !byte_4C3F9BD )
   {
-    sub_1C32C20(&TerminalPramsManager_TypeInfo);
-    byte_4C343D3 = 1;
+    sub_1C37058(&TerminalPramsManager_TypeInfo);
+    byte_4C3F9BD = 1;
   }
   v1 = TerminalPramsManager_TypeInfo;
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -12925,10 +12925,10 @@ void TerminalPramsManager__TerminalEventSubmarinePointInfoSave_SaveData(const Me
   {
     if ( !v1->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(v1);
-    if ( !byte_4C343D3 )
+    if ( !byte_4C3F9BD )
     {
-      sub_1C32C20(&TerminalPramsManager_TypeInfo);
-      byte_4C343D3 = 1;
+      sub_1C37058(&TerminalPramsManager_TypeInfo);
+      byte_4C3F9BD = 1;
     }
     v2 = TerminalPramsManager_TypeInfo;
     if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -12940,7 +12940,7 @@ void TerminalPramsManager__TerminalEventSubmarinePointInfoSave_SaveData(const Me
     if ( !JsonManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(JsonManager_TypeInfo);
     v4 = JsonManager__toJson(BeforeEventSubmarineSaveData_k__BackingField, 0, 0, 0);
-    UnityEngine_PlayerPrefs__SetString((System_String_o *)StringLiteral_13697/*"TerminalBeforeEventSubmarinePointData"*/, v4, 0);
+    UnityEngine_PlayerPrefs__SetString((System_String_o *)StringLiteral_13698/*"TerminalBeforeEventSubmarinePointData"*/, v4, 0);
     UnityEngine_PlayerPrefs__Save(0);
   }
 }
@@ -12950,18 +12950,18 @@ void TerminalPramsManager__TerminalSelectedRecollectionWarId_SaveData(const Meth
 {
   TerminalPramsManager_c *v1; // x0
 
-  if ( (byte_4C34DAE & 1) == 0 )
+  if ( (byte_4C40398 & 1) == 0 )
   {
-    sub_1C32C20(&TerminalPramsManager_TypeInfo);
-    sub_1C32C20(&StringLiteral_11470/*"SAVEKEY_TerminalSelectedRecollectionWarId"*/);
-    byte_4C34DAE = 1;
+    sub_1C37058(&TerminalPramsManager_TypeInfo);
+    sub_1C37058(&StringLiteral_11471/*"SAVEKEY_TerminalSelectedRecollectionWarId"*/);
+    byte_4C40398 = 1;
   }
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(TerminalPramsManager_TypeInfo);
-  if ( !byte_4C349BE )
+  if ( !byte_4C3FFA8 )
   {
-    sub_1C32C20(&TerminalPramsManager_TypeInfo);
-    byte_4C349BE = 1;
+    sub_1C37058(&TerminalPramsManager_TypeInfo);
+    byte_4C3FFA8 = 1;
   }
   v1 = TerminalPramsManager_TypeInfo;
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -12970,7 +12970,7 @@ void TerminalPramsManager__TerminalSelectedRecollectionWarId_SaveData(const Meth
     v1 = TerminalPramsManager_TypeInfo;
   }
   UnityEngine_PlayerPrefs__SetInt(
-    (System_String_o *)StringLiteral_11470/*"SAVEKEY_TerminalSelectedRecollectionWarId"*/,
+    (System_String_o *)StringLiteral_11471/*"SAVEKEY_TerminalSelectedRecollectionWarId"*/,
     v1->static_fields->_SelectedRecollectionWarId_k__BackingField,
     0);
   UnityEngine_PlayerPrefs__Save(0);
@@ -12981,18 +12981,18 @@ void TerminalPramsManager__TerminalSelectedStoryQuestId_SaveData(const MethodInf
 {
   TerminalPramsManager_c *v1; // x0
 
-  if ( (byte_4C34DAD & 1) == 0 )
+  if ( (byte_4C40397 & 1) == 0 )
   {
-    sub_1C32C20(&TerminalPramsManager_TypeInfo);
-    sub_1C32C20(&StringLiteral_11471/*"SAVEKEY_TerminalSelectedStoryQuestId"*/);
-    byte_4C34DAD = 1;
+    sub_1C37058(&TerminalPramsManager_TypeInfo);
+    sub_1C37058(&StringLiteral_11472/*"SAVEKEY_TerminalSelectedStoryQuestId"*/);
+    byte_4C40397 = 1;
   }
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(TerminalPramsManager_TypeInfo);
-  if ( !byte_4C34BCA )
+  if ( !byte_4C401B4 )
   {
-    sub_1C32C20(&TerminalPramsManager_TypeInfo);
-    byte_4C34BCA = 1;
+    sub_1C37058(&TerminalPramsManager_TypeInfo);
+    byte_4C401B4 = 1;
   }
   v1 = TerminalPramsManager_TypeInfo;
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -13001,7 +13001,7 @@ void TerminalPramsManager__TerminalSelectedStoryQuestId_SaveData(const MethodInf
     v1 = TerminalPramsManager_TypeInfo;
   }
   UnityEngine_PlayerPrefs__SetInt(
-    (System_String_o *)StringLiteral_11471/*"SAVEKEY_TerminalSelectedStoryQuestId"*/,
+    (System_String_o *)StringLiteral_11472/*"SAVEKEY_TerminalSelectedStoryQuestId"*/,
     v1->static_fields->_SelectedStoryQuestId_k__BackingField,
     0);
   UnityEngine_PlayerPrefs__Save(0);
@@ -13012,17 +13012,17 @@ void TerminalPramsManager__TerminalTransitionInfoSave_SaveData(
         TerminalTransitionInfo_o *terminalTransitionInfo,
         const MethodInfo *method)
 {
-  if ( (byte_4C34D9E & 1) == 0 )
+  if ( (byte_4C40388 & 1) == 0 )
   {
-    sub_1C32C20(&StringLiteral_13717/*"TerminalTransitionInfoVoiceAssetName"*/);
-    sub_1C32C20(&StringLiteral_13716/*"TerminalTransitionInfoMissionId"*/);
-    byte_4C34D9E = 1;
+    sub_1C37058(&StringLiteral_13718/*"TerminalTransitionInfoVoiceAssetName"*/);
+    sub_1C37058(&StringLiteral_13717/*"TerminalTransitionInfoMissionId"*/);
+    byte_4C40388 = 1;
   }
   if ( terminalTransitionInfo )
   {
-    UnityEngine_PlayerPrefs__SetInt((System_String_o *)StringLiteral_13716/*"TerminalTransitionInfoMissionId"*/, terminalTransitionInfo->fields.missionId, 0);
+    UnityEngine_PlayerPrefs__SetInt((System_String_o *)StringLiteral_13717/*"TerminalTransitionInfoMissionId"*/, terminalTransitionInfo->fields.missionId, 0);
     UnityEngine_PlayerPrefs__SetString(
-      (System_String_o *)StringLiteral_13717/*"TerminalTransitionInfoVoiceAssetName"*/,
+      (System_String_o *)StringLiteral_13718/*"TerminalTransitionInfoVoiceAssetName"*/,
       terminalTransitionInfo->fields.voiceAssetName,
       0);
     UnityEngine_PlayerPrefs__Save(0);
@@ -13041,24 +13041,24 @@ void TerminalPramsManager__UpdateEventRaidDefeatedEffectInfo(int32_t eventId, in
   __int64 entries_low; // x10
   Il2CppObject *value; // [xsp+8h] [xbp-38h] BYREF
 
-  if ( (byte_4C34DD8 & 1) == 0 )
+  if ( (byte_4C403C2 & 1) == 0 )
   {
-    sub_1C32C20(&Method_System_Collections_Generic_Dictionary_int__List_int___Add__);
-    sub_1C32C20(&Method_System_Collections_Generic_Dictionary_int__List_int___TryGetValue__);
-    sub_1C32C20(&Method_System_Collections_Generic_List_int__Add__);
-    sub_1C32C20(&Method_System_Collections_Generic_List_int__Contains__);
-    sub_1C32C20(&Method_System_Collections_Generic_List_int___ctor__);
-    sub_1C32C20(&System_Collections_Generic_List_int__TypeInfo);
-    sub_1C32C20(&TerminalPramsManager_TypeInfo);
-    byte_4C34DD8 = 1;
+    sub_1C37058(&Method_System_Collections_Generic_Dictionary_int__List_int___Add__);
+    sub_1C37058(&Method_System_Collections_Generic_Dictionary_int__List_int___TryGetValue__);
+    sub_1C37058(&Method_System_Collections_Generic_List_int__Add__);
+    sub_1C37058(&Method_System_Collections_Generic_List_int__Contains__);
+    sub_1C37058(&Method_System_Collections_Generic_List_int___ctor__);
+    sub_1C37058(&System_Collections_Generic_List_int__TypeInfo);
+    sub_1C37058(&TerminalPramsManager_TypeInfo);
+    byte_4C403C2 = 1;
   }
   value = 0;
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(TerminalPramsManager_TypeInfo);
-  if ( !byte_4C34E1E )
+  if ( !byte_4C40408 )
   {
-    sub_1C32C20(&TerminalPramsManager_TypeInfo);
-    byte_4C34E1E = 1;
+    sub_1C37058(&TerminalPramsManager_TypeInfo);
+    byte_4C40408 = 1;
   }
   v5 = (System_Collections_Generic_Dictionary_int__object__o *)TerminalPramsManager_TypeInfo;
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -13076,19 +13076,19 @@ void TerminalPramsManager__UpdateEventRaidDefeatedEffectInfo(int32_t eventId, in
           v5,
           eventId,
           &value,
-          (const MethodInfo_33F14A8 *)Method_System_Collections_Generic_Dictionary_int__List_int___TryGetValue__) )
+          (const MethodInfo_33FBD10 *)Method_System_Collections_Generic_Dictionary_int__List_int___TryGetValue__) )
   {
-    v7 = (System_Collections_Generic_List_int__o *)sub_1C32E6C(System_Collections_Generic_List_int__TypeInfo);
+    v7 = (System_Collections_Generic_List_int__o *)sub_1C372A4(System_Collections_Generic_List_int__TypeInfo);
     System_Collections_Generic_List_int____ctor(
       v7,
-      (const MethodInfo_377AF44 *)Method_System_Collections_Generic_List_int___ctor__);
+      (const MethodInfo_37857AC *)Method_System_Collections_Generic_List_int___ctor__);
     value = (Il2CppObject *)v7;
     if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(TerminalPramsManager_TypeInfo);
-    if ( !byte_4C34E1E )
+    if ( !byte_4C40408 )
     {
-      sub_1C32C20(&TerminalPramsManager_TypeInfo);
-      byte_4C34E1E = 1;
+      sub_1C37058(&TerminalPramsManager_TypeInfo);
+      byte_4C40408 = 1;
     }
     v5 = (System_Collections_Generic_Dictionary_int__object__o *)TerminalPramsManager_TypeInfo;
     if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -13106,12 +13106,12 @@ void TerminalPramsManager__UpdateEventRaidDefeatedEffectInfo(int32_t eventId, in
           v5,
           eventId,
           value,
-          (const MethodInfo_33EFD1C *)Method_System_Collections_Generic_Dictionary_int__List_int___Add__);
+          (const MethodInfo_33FA584 *)Method_System_Collections_Generic_Dictionary_int__List_int___Add__);
         goto LABEL_24;
       }
     }
 LABEL_30:
-    sub_1C32E7C(v5);
+    sub_1C372B4(v5);
   }
   v5 = (System_Collections_Generic_Dictionary_int__object__o *)value;
   if ( !value )
@@ -13119,7 +13119,7 @@ LABEL_30:
   if ( System_Collections_Generic_List_int___Contains(
          (System_Collections_Generic_List_int__o *)value,
          day,
-         (const MethodInfo_377BB10 *)Method_System_Collections_Generic_List_int__Contains__) )
+         (const MethodInfo_3786378 *)Method_System_Collections_Generic_List_int__Contains__) )
   {
     return;
   }
@@ -13138,7 +13138,7 @@ LABEL_24:
     System_Collections_Generic_List_int___AddWithResize(
       (System_Collections_Generic_List_int__o *)v5,
       day,
-      *(const MethodInfo_377B798 **)(*(_QWORD *)(v10[4] + 192LL) + 112LL));
+      *(const MethodInfo_3786000 **)(*(_QWORD *)(v10[4] + 192LL) + 112LL));
   }
   else
   {
@@ -13152,10 +13152,10 @@ int32_t TerminalPramsManager__get_AfterActionFocusQuestId(const MethodInfo *meth
 {
   TerminalPramsManager_c *v1; // x0
 
-  if ( (byte_4C34C90 & 1) == 0 )
+  if ( (byte_4C4027A & 1) == 0 )
   {
-    sub_1C32C20(&TerminalPramsManager_TypeInfo);
-    byte_4C34C90 = 1;
+    sub_1C37058(&TerminalPramsManager_TypeInfo);
+    byte_4C4027A = 1;
   }
   v1 = TerminalPramsManager_TypeInfo;
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -13171,10 +13171,10 @@ BattleSetupInfo_o *TerminalPramsManager__get_BattleSetupKeep(const MethodInfo *m
 {
   TerminalPramsManager_c *v1; // x0
 
-  if ( (byte_4C34CB2 & 1) == 0 )
+  if ( (byte_4C4029C & 1) == 0 )
   {
-    sub_1C32C20(&TerminalPramsManager_TypeInfo);
-    byte_4C34CB2 = 1;
+    sub_1C37058(&TerminalPramsManager_TypeInfo);
+    byte_4C4029C = 1;
   }
   v1 = TerminalPramsManager_TypeInfo;
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -13196,24 +13196,24 @@ int32_t TerminalPramsManager__get_BeforeClearQuest(const MethodInfo *method)
   int32_t *p_QuestId_k__BackingField; // x8
   TerminalPramsManager_c *v7; // x0
 
-  if ( (byte_4C34CEA & 1) == 0 )
+  if ( (byte_4C402D4 & 1) == 0 )
   {
-    sub_1C32C20(&Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__);
-    sub_1C32C20(&TerminalPramsManager_TypeInfo);
-    sub_1C32C20(&TerminalSceneComponent_TypeInfo);
-    byte_4C34CEA = 1;
+    sub_1C37058(&Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__);
+    sub_1C37058(&TerminalPramsManager_TypeInfo);
+    sub_1C37058(&TerminalSceneComponent_TypeInfo);
+    byte_4C402D4 = 1;
   }
-  Instance = (AvalonSceneManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39E2904 *)Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__);
+  Instance = (AvalonSceneManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39ED16C *)Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__);
   if ( !Instance )
     goto LABEL_31;
   if ( AvalonSceneManager__checkNowScene(Instance, 34, 0) )
   {
     if ( !TerminalSceneComponent_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(TerminalSceneComponent_TypeInfo);
-    if ( !byte_4C319B6 )
+    if ( !byte_4C3CF06 )
     {
-      sub_1C32C20(&TerminalSceneComponent_TypeInfo);
-      byte_4C319B6 = 1;
+      sub_1C37058(&TerminalSceneComponent_TypeInfo);
+      byte_4C3CF06 = 1;
     }
     Instance = (AvalonSceneManager_o *)TerminalSceneComponent_TypeInfo;
     if ( !TerminalSceneComponent_TypeInfo->_2.cctor_finished )
@@ -13231,10 +13231,10 @@ int32_t TerminalPramsManager__get_BeforeClearQuest(const MethodInfo *method)
     {
       if ( !LODWORD(Instance[2].klass) )
         j_il2cpp_runtime_class_init_0(Instance);
-      if ( !byte_4C319B6 )
+      if ( !byte_4C3CF06 )
       {
-        sub_1C32C20(&TerminalSceneComponent_TypeInfo);
-        byte_4C319B6 = 1;
+        sub_1C37058(&TerminalSceneComponent_TypeInfo);
+        byte_4C3CF06 = 1;
       }
       Instance = (AvalonSceneManager_o *)TerminalSceneComponent_TypeInfo;
       if ( !TerminalSceneComponent_TypeInfo->_2.cctor_finished )
@@ -13253,15 +13253,15 @@ int32_t TerminalPramsManager__get_BeforeClearQuest(const MethodInfo *method)
         }
       }
 LABEL_31:
-      sub_1C32E7C(Instance);
+      sub_1C372B4(Instance);
     }
   }
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(TerminalPramsManager_TypeInfo);
-  if ( !byte_4C31A97 )
+  if ( !byte_4C3CFE7 )
   {
-    sub_1C32C20(&TerminalPramsManager_TypeInfo);
-    byte_4C31A97 = 1;
+    sub_1C37058(&TerminalPramsManager_TypeInfo);
+    byte_4C3CFE7 = 1;
   }
   v7 = TerminalPramsManager_TypeInfo;
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -13278,10 +13278,10 @@ int32_t TerminalPramsManager__get_BeforeEventActivityPoint(const MethodInfo *met
 {
   TerminalPramsManager_c *v1; // x0
 
-  if ( (byte_4C34D05 & 1) == 0 )
+  if ( (byte_4C402EF & 1) == 0 )
   {
-    sub_1C32C20(&TerminalPramsManager_TypeInfo);
-    byte_4C34D05 = 1;
+    sub_1C37058(&TerminalPramsManager_TypeInfo);
+    byte_4C402EF = 1;
   }
   v1 = TerminalPramsManager_TypeInfo;
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -13297,10 +13297,10 @@ int32_t TerminalPramsManager__get_BeforeEventActivityPointGauge(const MethodInfo
 {
   TerminalPramsManager_c *v1; // x0
 
-  if ( (byte_4C34D07 & 1) == 0 )
+  if ( (byte_4C402F1 & 1) == 0 )
   {
-    sub_1C32C20(&TerminalPramsManager_TypeInfo);
-    byte_4C34D07 = 1;
+    sub_1C37058(&TerminalPramsManager_TypeInfo);
+    byte_4C402F1 = 1;
   }
   v1 = TerminalPramsManager_TypeInfo;
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -13316,10 +13316,10 @@ EventSaveData_o *TerminalPramsManager__get_BeforeEventSubmarineSaveData(const Me
 {
   TerminalPramsManager_c *v1; // x0
 
-  if ( (byte_4C34D0B & 1) == 0 )
+  if ( (byte_4C402F5 & 1) == 0 )
   {
-    sub_1C32C20(&TerminalPramsManager_TypeInfo);
-    byte_4C34D0B = 1;
+    sub_1C37058(&TerminalPramsManager_TypeInfo);
+    byte_4C402F5 = 1;
   }
   v1 = TerminalPramsManager_TypeInfo;
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -13335,10 +13335,10 @@ int32_t TerminalPramsManager__get_BeforeQuestStartWarId(const MethodInfo *method
 {
   TerminalPramsManager_c *v1; // x0
 
-  if ( (byte_4C34D74 & 1) == 0 )
+  if ( (byte_4C4035E & 1) == 0 )
   {
-    sub_1C32C20(&TerminalPramsManager_TypeInfo);
-    byte_4C34D74 = 1;
+    sub_1C37058(&TerminalPramsManager_TypeInfo);
+    byte_4C4035E = 1;
   }
   v1 = TerminalPramsManager_TypeInfo;
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -13354,10 +13354,10 @@ int64_t TerminalPramsManager__get_BeforeTimeEventDailyPoint(const MethodInfo *me
 {
   TerminalPramsManager_c *v1; // x0
 
-  if ( (byte_4C34CF9 & 1) == 0 )
+  if ( (byte_4C402E3 & 1) == 0 )
   {
-    sub_1C32C20(&TerminalPramsManager_TypeInfo);
-    byte_4C34CF9 = 1;
+    sub_1C37058(&TerminalPramsManager_TypeInfo);
+    byte_4C402E3 = 1;
   }
   v1 = TerminalPramsManager_TypeInfo;
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -13373,10 +13373,10 @@ int32_t TerminalPramsManager__get_BlankEarthAfterActionFocusSpotId(const MethodI
 {
   TerminalPramsManager_c *v1; // x0
 
-  if ( (byte_4C34D2B & 1) == 0 )
+  if ( (byte_4C40315 & 1) == 0 )
   {
-    sub_1C32C20(&TerminalPramsManager_TypeInfo);
-    byte_4C34D2B = 1;
+    sub_1C37058(&TerminalPramsManager_TypeInfo);
+    byte_4C40315 = 1;
   }
   v1 = TerminalPramsManager_TypeInfo;
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -13392,10 +13392,10 @@ int32_t TerminalPramsManager__get_BlankEarthRank(const MethodInfo *method)
 {
   TerminalPramsManager_c *v1; // x0
 
-  if ( (byte_4C34D2F & 1) == 0 )
+  if ( (byte_4C40319 & 1) == 0 )
   {
-    sub_1C32C20(&TerminalPramsManager_TypeInfo);
-    byte_4C34D2F = 1;
+    sub_1C37058(&TerminalPramsManager_TypeInfo);
+    byte_4C40319 = 1;
   }
   v1 = TerminalPramsManager_TypeInfo;
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -13411,10 +13411,10 @@ int32_t TerminalPramsManager__get_BlankEarthSpotId(const MethodInfo *method)
 {
   TerminalPramsManager_c *v1; // x0
 
-  if ( (byte_4C34D29 & 1) == 0 )
+  if ( (byte_4C40313 & 1) == 0 )
   {
-    sub_1C32C20(&TerminalPramsManager_TypeInfo);
-    byte_4C34D29 = 1;
+    sub_1C37058(&TerminalPramsManager_TypeInfo);
+    byte_4C40313 = 1;
   }
   v1 = TerminalPramsManager_TypeInfo;
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -13430,10 +13430,10 @@ BlankEarthTransform_o *TerminalPramsManager__get_BlankEarthTransformData(const M
 {
   TerminalPramsManager_c *v1; // x0
 
-  if ( (byte_4C34D2D & 1) == 0 )
+  if ( (byte_4C40317 & 1) == 0 )
   {
-    sub_1C32C20(&TerminalPramsManager_TypeInfo);
-    byte_4C34D2D = 1;
+    sub_1C37058(&TerminalPramsManager_TypeInfo);
+    byte_4C40317 = 1;
   }
   v1 = TerminalPramsManager_TypeInfo;
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -13449,10 +13449,10 @@ int32_t TerminalPramsManager__get_CaldeaGateFolderFocusWarId(const MethodInfo *m
 {
   TerminalPramsManager_c *v1; // x0
 
-  if ( (byte_4C34D41 & 1) == 0 )
+  if ( (byte_4C4032B & 1) == 0 )
   {
-    sub_1C32C20(&TerminalPramsManager_TypeInfo);
-    byte_4C34D41 = 1;
+    sub_1C37058(&TerminalPramsManager_TypeInfo);
+    byte_4C4032B = 1;
   }
   v1 = TerminalPramsManager_TypeInfo;
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -13468,10 +13468,10 @@ CommonUI_CampaignBonusData_array *TerminalPramsManager__get_CampaignBonus(const 
 {
   TerminalPramsManager_c *v1; // x0
 
-  if ( (byte_4C34CD0 & 1) == 0 )
+  if ( (byte_4C402BA & 1) == 0 )
   {
-    sub_1C32C20(&TerminalPramsManager_TypeInfo);
-    byte_4C34CD0 = 1;
+    sub_1C37058(&TerminalPramsManager_TypeInfo);
+    byte_4C402BA = 1;
   }
   v1 = TerminalPramsManager_TypeInfo;
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -13487,10 +13487,10 @@ CommonUI_CampaignDirectBonusData_array *TerminalPramsManager__get_CampaignDirect
 {
   TerminalPramsManager_c *v1; // x0
 
-  if ( (byte_4C34CD2 & 1) == 0 )
+  if ( (byte_4C402BC & 1) == 0 )
   {
-    sub_1C32C20(&TerminalPramsManager_TypeInfo);
-    byte_4C34CD2 = 1;
+    sub_1C37058(&TerminalPramsManager_TypeInfo);
+    byte_4C402BC = 1;
   }
   v1 = TerminalPramsManager_TypeInfo;
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -13506,10 +13506,10 @@ System_String_o *TerminalPramsManager__get_ClearEventQuestIds(const MethodInfo *
 {
   TerminalPramsManager_c *v1; // x0
 
-  if ( (byte_4C34D03 & 1) == 0 )
+  if ( (byte_4C402ED & 1) == 0 )
   {
-    sub_1C32C20(&TerminalPramsManager_TypeInfo);
-    byte_4C34D03 = 1;
+    sub_1C37058(&TerminalPramsManager_TypeInfo);
+    byte_4C402ED = 1;
   }
   v1 = TerminalPramsManager_TypeInfo;
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -13525,10 +13525,10 @@ int32_t TerminalPramsManager__get_CurrentWaveNum(const MethodInfo *method)
 {
   TerminalPramsManager_c *v1; // x0
 
-  if ( (byte_4C34D45 & 1) == 0 )
+  if ( (byte_4C4032F & 1) == 0 )
   {
-    sub_1C32C20(&TerminalPramsManager_TypeInfo);
-    byte_4C34D45 = 1;
+    sub_1C37058(&TerminalPramsManager_TypeInfo);
+    byte_4C4032F = 1;
   }
   v1 = TerminalPramsManager_TypeInfo;
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -13544,10 +13544,10 @@ int32_t TerminalPramsManager__get_DataLostBattleEventId(const MethodInfo *method
 {
   TerminalPramsManager_c *v1; // x0
 
-  if ( (byte_4C34CBE & 1) == 0 )
+  if ( (byte_4C402A8 & 1) == 0 )
   {
-    sub_1C32C20(&TerminalPramsManager_TypeInfo);
-    byte_4C34CBE = 1;
+    sub_1C37058(&TerminalPramsManager_TypeInfo);
+    byte_4C402A8 = 1;
   }
   v1 = TerminalPramsManager_TypeInfo;
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -13563,10 +13563,10 @@ float TerminalPramsManager__get_DataLostBattleResetFadeInTime(const MethodInfo *
 {
   TerminalPramsManager_c *v1; // x0
 
-  if ( (byte_4C34CC6 & 1) == 0 )
+  if ( (byte_4C402B0 & 1) == 0 )
   {
-    sub_1C32C20(&TerminalPramsManager_TypeInfo);
-    byte_4C34CC6 = 1;
+    sub_1C37058(&TerminalPramsManager_TypeInfo);
+    byte_4C402B0 = 1;
   }
   v1 = TerminalPramsManager_TypeInfo;
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -13582,10 +13582,10 @@ int32_t TerminalPramsManager__get_DataLostBattleWarId(const MethodInfo *method)
 {
   TerminalPramsManager_c *v1; // x0
 
-  if ( (byte_4C34CC0 & 1) == 0 )
+  if ( (byte_4C402AA & 1) == 0 )
   {
-    sub_1C32C20(&TerminalPramsManager_TypeInfo);
-    byte_4C34CC0 = 1;
+    sub_1C37058(&TerminalPramsManager_TypeInfo);
+    byte_4C402AA = 1;
   }
   v1 = TerminalPramsManager_TypeInfo;
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -13631,10 +13631,10 @@ int32_t TerminalPramsManager__get_DispState(const MethodInfo *method)
 {
   TerminalPramsManager_c *v1; // x0
 
-  if ( (byte_4C34C6E & 1) == 0 )
+  if ( (byte_4C40258 & 1) == 0 )
   {
-    sub_1C32C20(&TerminalPramsManager_TypeInfo);
-    byte_4C34C6E = 1;
+    sub_1C37058(&TerminalPramsManager_TypeInfo);
+    byte_4C40258 = 1;
   }
   v1 = TerminalPramsManager_TypeInfo;
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -13650,10 +13650,10 @@ int64_t TerminalPramsManager__get_EndTime(const MethodInfo *method)
 {
   TerminalPramsManager_c *v1; // x0
 
-  if ( (byte_4C34CB4 & 1) == 0 )
+  if ( (byte_4C4029E & 1) == 0 )
   {
-    sub_1C32C20(&TerminalPramsManager_TypeInfo);
-    byte_4C34CB4 = 1;
+    sub_1C37058(&TerminalPramsManager_TypeInfo);
+    byte_4C4029E = 1;
   }
   v1 = TerminalPramsManager_TypeInfo;
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -13669,10 +13669,10 @@ int32_t TerminalPramsManager__get_EventActionQuestId(const MethodInfo *method)
 {
   TerminalPramsManager_c *v1; // x0
 
-  if ( (byte_4C34CD4 & 1) == 0 )
+  if ( (byte_4C402BE & 1) == 0 )
   {
-    sub_1C32C20(&TerminalPramsManager_TypeInfo);
-    byte_4C34CD4 = 1;
+    sub_1C37058(&TerminalPramsManager_TypeInfo);
+    byte_4C402BE = 1;
   }
   v1 = TerminalPramsManager_TypeInfo;
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -13688,10 +13688,10 @@ int32_t TerminalPramsManager__get_EventActivityPointEffectState(const MethodInfo
 {
   TerminalPramsManager_c *v1; // x0
 
-  if ( (byte_4C34D09 & 1) == 0 )
+  if ( (byte_4C402F3 & 1) == 0 )
   {
-    sub_1C32C20(&TerminalPramsManager_TypeInfo);
-    byte_4C34D09 = 1;
+    sub_1C37058(&TerminalPramsManager_TypeInfo);
+    byte_4C402F3 = 1;
   }
   v1 = TerminalPramsManager_TypeInfo;
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -13707,10 +13707,10 @@ int32_t TerminalPramsManager__get_EventBoardGameSquareIndex(const MethodInfo *me
 {
   TerminalPramsManager_c *v1; // x0
 
-  if ( (byte_4C34D11 & 1) == 0 )
+  if ( (byte_4C402FB & 1) == 0 )
   {
-    sub_1C32C20(&TerminalPramsManager_TypeInfo);
-    byte_4C34D11 = 1;
+    sub_1C37058(&TerminalPramsManager_TypeInfo);
+    byte_4C402FB = 1;
   }
   v1 = TerminalPramsManager_TypeInfo;
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -13726,10 +13726,10 @@ int32_t TerminalPramsManager__get_EventDailyPointEventId(const MethodInfo *metho
 {
   TerminalPramsManager_c *v1; // x0
 
-  if ( (byte_4C34CFB & 1) == 0 )
+  if ( (byte_4C402E5 & 1) == 0 )
   {
-    sub_1C32C20(&TerminalPramsManager_TypeInfo);
-    byte_4C34CFB = 1;
+    sub_1C37058(&TerminalPramsManager_TypeInfo);
+    byte_4C402E5 = 1;
   }
   v1 = TerminalPramsManager_TypeInfo;
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -13745,10 +13745,10 @@ int32_t TerminalPramsManager__get_EventDailyPointItem(const MethodInfo *method)
 {
   TerminalPramsManager_c *v1; // x0
 
-  if ( (byte_4C34CF7 & 1) == 0 )
+  if ( (byte_4C402E1 & 1) == 0 )
   {
-    sub_1C32C20(&TerminalPramsManager_TypeInfo);
-    byte_4C34CF7 = 1;
+    sub_1C37058(&TerminalPramsManager_TypeInfo);
+    byte_4C402E1 = 1;
   }
   v1 = TerminalPramsManager_TypeInfo;
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -13764,10 +13764,10 @@ int32_t TerminalPramsManager__get_EventMuralId(const MethodInfo *method)
 {
   TerminalPramsManager_c *v1; // x0
 
-  if ( (byte_4C34C9E & 1) == 0 )
+  if ( (byte_4C40288 & 1) == 0 )
   {
-    sub_1C32C20(&TerminalPramsManager_TypeInfo);
-    byte_4C34C9E = 1;
+    sub_1C37058(&TerminalPramsManager_TypeInfo);
+    byte_4C40288 = 1;
   }
   v1 = TerminalPramsManager_TypeInfo;
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -13783,10 +13783,10 @@ EventRaidDefeatedEffectInfo_o *TerminalPramsManager__get_EventRaidDefeatedEffect
 {
   TerminalPramsManager_c *v1; // x0
 
-  if ( (byte_4C34D0D & 1) == 0 )
+  if ( (byte_4C402F7 & 1) == 0 )
   {
-    sub_1C32C20(&TerminalPramsManager_TypeInfo);
-    byte_4C34D0D = 1;
+    sub_1C37058(&TerminalPramsManager_TypeInfo);
+    byte_4C402F7 = 1;
   }
   v1 = TerminalPramsManager_TypeInfo;
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -13802,10 +13802,10 @@ int32_t TerminalPramsManager__get_EventUIEffectClearQuestId(const MethodInfo *me
 {
   TerminalPramsManager_c *v1; // x0
 
-  if ( (byte_4C34D35 & 1) == 0 )
+  if ( (byte_4C4031F & 1) == 0 )
   {
-    sub_1C32C20(&TerminalPramsManager_TypeInfo);
-    byte_4C34D35 = 1;
+    sub_1C37058(&TerminalPramsManager_TypeInfo);
+    byte_4C4031F = 1;
   }
   v1 = TerminalPramsManager_TypeInfo;
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -13821,10 +13821,10 @@ int32_t TerminalPramsManager__get_EventUiWarId(const MethodInfo *method)
 {
   TerminalPramsManager_c *v1; // x0
 
-  if ( (byte_4C34D76 & 1) == 0 )
+  if ( (byte_4C40360 & 1) == 0 )
   {
-    sub_1C32C20(&TerminalPramsManager_TypeInfo);
-    byte_4C34D76 = 1;
+    sub_1C37058(&TerminalPramsManager_TypeInfo);
+    byte_4C40360 = 1;
   }
   v1 = TerminalPramsManager_TypeInfo;
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -13841,10 +13841,10 @@ System_Collections_Generic_HashSet_Dictionary_int__int___o *TerminalPramsManager
 {
   TerminalPramsManager_c *v1; // x0
 
-  if ( (byte_4C34D80 & 1) == 0 )
+  if ( (byte_4C4036A & 1) == 0 )
   {
-    sub_1C32C20(&TerminalPramsManager_TypeInfo);
-    byte_4C34D80 = 1;
+    sub_1C37058(&TerminalPramsManager_TypeInfo);
+    byte_4C4036A = 1;
   }
   v1 = TerminalPramsManager_TypeInfo;
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -13860,10 +13860,10 @@ int32_t TerminalPramsManager__get_FriendshipQuestDialogOpenId(const MethodInfo *
 {
   TerminalPramsManager_c *v1; // x0
 
-  if ( (byte_4C34D6A & 1) == 0 )
+  if ( (byte_4C40354 & 1) == 0 )
   {
-    sub_1C32C20(&TerminalPramsManager_TypeInfo);
-    byte_4C34D6A = 1;
+    sub_1C37058(&TerminalPramsManager_TypeInfo);
+    byte_4C40354 = 1;
   }
   v1 = TerminalPramsManager_TypeInfo;
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -13879,10 +13879,10 @@ bool TerminalPramsManager__get_IsAutoFolder(const MethodInfo *method)
 {
   TerminalPramsManager_c *v1; // x0
 
-  if ( (byte_4C34D58 & 1) == 0 )
+  if ( (byte_4C40342 & 1) == 0 )
   {
-    sub_1C32C20(&TerminalPramsManager_TypeInfo);
-    byte_4C34D58 = 1;
+    sub_1C37058(&TerminalPramsManager_TypeInfo);
+    byte_4C40342 = 1;
   }
   v1 = TerminalPramsManager_TypeInfo;
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -13898,10 +13898,10 @@ bool TerminalPramsManager__get_IsAutoNoSe(const MethodInfo *method)
 {
   TerminalPramsManager_c *v1; // x0
 
-  if ( (byte_4C34D5C & 1) == 0 )
+  if ( (byte_4C40346 & 1) == 0 )
   {
-    sub_1C32C20(&TerminalPramsManager_TypeInfo);
-    byte_4C34D5C = 1;
+    sub_1C37058(&TerminalPramsManager_TypeInfo);
+    byte_4C40346 = 1;
   }
   v1 = TerminalPramsManager_TypeInfo;
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -13917,10 +13917,10 @@ bool TerminalPramsManager__get_IsAutoOpenMasterMission(const MethodInfo *method)
 {
   TerminalPramsManager_c *v1; // x0
 
-  if ( (byte_4C34D86 & 1) == 0 )
+  if ( (byte_4C40370 & 1) == 0 )
   {
-    sub_1C32C20(&TerminalPramsManager_TypeInfo);
-    byte_4C34D86 = 1;
+    sub_1C37058(&TerminalPramsManager_TypeInfo);
+    byte_4C40370 = 1;
   }
   v1 = TerminalPramsManager_TypeInfo;
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -13936,10 +13936,10 @@ bool TerminalPramsManager__get_IsAutoResume(const MethodInfo *method)
 {
   TerminalPramsManager_c *v1; // x0
 
-  if ( (byte_4C34D52 & 1) == 0 )
+  if ( (byte_4C4033C & 1) == 0 )
   {
-    sub_1C32C20(&TerminalPramsManager_TypeInfo);
-    byte_4C34D52 = 1;
+    sub_1C37058(&TerminalPramsManager_TypeInfo);
+    byte_4C4033C = 1;
   }
   v1 = TerminalPramsManager_TypeInfo;
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -13955,10 +13955,10 @@ bool TerminalPramsManager__get_IsAutoShortcut(const MethodInfo *method)
 {
   TerminalPramsManager_c *v1; // x0
 
-  if ( (byte_4C34D54 & 1) == 0 )
+  if ( (byte_4C4033E & 1) == 0 )
   {
-    sub_1C32C20(&TerminalPramsManager_TypeInfo);
-    byte_4C34D54 = 1;
+    sub_1C37058(&TerminalPramsManager_TypeInfo);
+    byte_4C4033E = 1;
   }
   v1 = TerminalPramsManager_TypeInfo;
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -13974,10 +13974,10 @@ bool TerminalPramsManager__get_IsBackQuestBoardDisable(const MethodInfo *method)
 {
   TerminalPramsManager_c *v1; // x0
 
-  if ( (byte_4C34D72 & 1) == 0 )
+  if ( (byte_4C4035C & 1) == 0 )
   {
-    sub_1C32C20(&TerminalPramsManager_TypeInfo);
-    byte_4C34D72 = 1;
+    sub_1C37058(&TerminalPramsManager_TypeInfo);
+    byte_4C4035C = 1;
   }
   v1 = TerminalPramsManager_TypeInfo;
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -13993,10 +13993,10 @@ bool TerminalPramsManager__get_IsBlankEarthShortcutMoving(const MethodInfo *meth
 {
   TerminalPramsManager_c *v1; // x0
 
-  if ( (byte_4C34D31 & 1) == 0 )
+  if ( (byte_4C4031B & 1) == 0 )
   {
-    sub_1C32C20(&TerminalPramsManager_TypeInfo);
-    byte_4C34D31 = 1;
+    sub_1C37058(&TerminalPramsManager_TypeInfo);
+    byte_4C4031B = 1;
   }
   v1 = TerminalPramsManager_TypeInfo;
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -14012,10 +14012,10 @@ bool TerminalPramsManager__get_IsCheckHomeExpirationDateEventMap(const MethodInf
 {
   TerminalPramsManager_c *v1; // x0
 
-  if ( (byte_4C34D5E & 1) == 0 )
+  if ( (byte_4C40348 & 1) == 0 )
   {
-    sub_1C32C20(&TerminalPramsManager_TypeInfo);
-    byte_4C34D5E = 1;
+    sub_1C37058(&TerminalPramsManager_TypeInfo);
+    byte_4C40348 = 1;
   }
   v1 = TerminalPramsManager_TypeInfo;
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -14031,10 +14031,10 @@ bool TerminalPramsManager__get_IsDataLostBattleAutoReset(const MethodInfo *metho
 {
   TerminalPramsManager_c *v1; // x0
 
-  if ( (byte_4C34CBC & 1) == 0 )
+  if ( (byte_4C402A6 & 1) == 0 )
   {
-    sub_1C32C20(&TerminalPramsManager_TypeInfo);
-    byte_4C34CBC = 1;
+    sub_1C37058(&TerminalPramsManager_TypeInfo);
+    byte_4C402A6 = 1;
   }
   v1 = TerminalPramsManager_TypeInfo;
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -14050,10 +14050,10 @@ bool TerminalPramsManager__get_IsDataLostBattleNoticePause(const MethodInfo *met
 {
   TerminalPramsManager_c *v1; // x0
 
-  if ( (byte_4C34CC8 & 1) == 0 )
+  if ( (byte_4C402B2 & 1) == 0 )
   {
-    sub_1C32C20(&TerminalPramsManager_TypeInfo);
-    byte_4C34CC8 = 1;
+    sub_1C37058(&TerminalPramsManager_TypeInfo);
+    byte_4C402B2 = 1;
   }
   v1 = TerminalPramsManager_TypeInfo;
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -14069,10 +14069,10 @@ bool TerminalPramsManager__get_IsDataLostBattleResetFadeIn(const MethodInfo *met
 {
   TerminalPramsManager_c *v1; // x0
 
-  if ( (byte_4C34CC4 & 1) == 0 )
+  if ( (byte_4C402AE & 1) == 0 )
   {
-    sub_1C32C20(&TerminalPramsManager_TypeInfo);
-    byte_4C34CC4 = 1;
+    sub_1C37058(&TerminalPramsManager_TypeInfo);
+    byte_4C402AE = 1;
   }
   v1 = TerminalPramsManager_TypeInfo;
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -14088,10 +14088,10 @@ bool TerminalPramsManager__get_IsDirectTransition(const MethodInfo *method)
 {
   TerminalPramsManager_c *v1; // x0
 
-  if ( (byte_4C34D3D & 1) == 0 )
+  if ( (byte_4C40327 & 1) == 0 )
   {
-    sub_1C32C20(&TerminalPramsManager_TypeInfo);
-    byte_4C34D3D = 1;
+    sub_1C37058(&TerminalPramsManager_TypeInfo);
+    byte_4C40327 = 1;
   }
   v1 = TerminalPramsManager_TypeInfo;
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -14107,10 +14107,10 @@ bool TerminalPramsManager__get_IsDispDone_AutoWebView(const MethodInfo *method)
 {
   TerminalPramsManager_c *v1; // x0
 
-  if ( (byte_4C34C92 & 1) == 0 )
+  if ( (byte_4C4027C & 1) == 0 )
   {
-    sub_1C32C20(&TerminalPramsManager_TypeInfo);
-    byte_4C34C92 = 1;
+    sub_1C37058(&TerminalPramsManager_TypeInfo);
+    byte_4C4027C = 1;
   }
   v1 = TerminalPramsManager_TypeInfo;
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -14126,10 +14126,10 @@ bool TerminalPramsManager__get_IsDispDone_UIStandFigure(const MethodInfo *method
 {
   TerminalPramsManager_c *v1; // x0
 
-  if ( (byte_4C34C94 & 1) == 0 )
+  if ( (byte_4C4027E & 1) == 0 )
   {
-    sub_1C32C20(&TerminalPramsManager_TypeInfo);
-    byte_4C34C94 = 1;
+    sub_1C37058(&TerminalPramsManager_TypeInfo);
+    byte_4C4027E = 1;
   }
   v1 = TerminalPramsManager_TypeInfo;
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -14145,10 +14145,10 @@ bool TerminalPramsManager__get_IsDispOnly(const MethodInfo *method)
 {
   TerminalPramsManager_c *v1; // x0
 
-  if ( (byte_4C34CA6 & 1) == 0 )
+  if ( (byte_4C40290 & 1) == 0 )
   {
-    sub_1C32C20(&TerminalPramsManager_TypeInfo);
-    byte_4C34CA6 = 1;
+    sub_1C37058(&TerminalPramsManager_TypeInfo);
+    byte_4C40290 = 1;
   }
   v1 = TerminalPramsManager_TypeInfo;
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -14164,10 +14164,10 @@ bool TerminalPramsManager__get_IsDispUIStandFigure(const MethodInfo *method)
 {
   TerminalPramsManager_c *v1; // x0
 
-  if ( (byte_4C34C96 & 1) == 0 )
+  if ( (byte_4C40280 & 1) == 0 )
   {
-    sub_1C32C20(&TerminalPramsManager_TypeInfo);
-    byte_4C34C96 = 1;
+    sub_1C37058(&TerminalPramsManager_TypeInfo);
+    byte_4C40280 = 1;
   }
   v1 = TerminalPramsManager_TypeInfo;
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -14183,10 +14183,10 @@ bool TerminalPramsManager__get_IsDoneShortcut(const MethodInfo *method)
 {
   TerminalPramsManager_c *v1; // x0
 
-  if ( (byte_4C34C7C & 1) == 0 )
+  if ( (byte_4C40266 & 1) == 0 )
   {
-    sub_1C32C20(&TerminalPramsManager_TypeInfo);
-    byte_4C34C7C = 1;
+    sub_1C37058(&TerminalPramsManager_TypeInfo);
+    byte_4C40266 = 1;
   }
   v1 = TerminalPramsManager_TypeInfo;
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -14202,10 +14202,10 @@ bool TerminalPramsManager__get_IsErrorDialogReturnTerminal(const MethodInfo *met
 {
   TerminalPramsManager_c *v1; // x0
 
-  if ( (byte_4C34D7A & 1) == 0 )
+  if ( (byte_4C40364 & 1) == 0 )
   {
-    sub_1C32C20(&TerminalPramsManager_TypeInfo);
-    byte_4C34D7A = 1;
+    sub_1C37058(&TerminalPramsManager_TypeInfo);
+    byte_4C40364 = 1;
   }
   v1 = TerminalPramsManager_TypeInfo;
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -14221,10 +14221,10 @@ bool TerminalPramsManager__get_IsEventBoardGameDiceBtnActive(const MethodInfo *m
 {
   TerminalPramsManager_c *v1; // x0
 
-  if ( (byte_4C34D13 & 1) == 0 )
+  if ( (byte_4C402FD & 1) == 0 )
   {
-    sub_1C32C20(&TerminalPramsManager_TypeInfo);
-    byte_4C34D13 = 1;
+    sub_1C37058(&TerminalPramsManager_TypeInfo);
+    byte_4C402FD = 1;
   }
   v1 = TerminalPramsManager_TypeInfo;
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -14240,10 +14240,10 @@ bool TerminalPramsManager__get_IsForceFocusTerminalQuestId(const MethodInfo *met
 {
   TerminalPramsManager_c *v1; // x0
 
-  if ( (byte_4C34C84 & 1) == 0 )
+  if ( (byte_4C4026E & 1) == 0 )
   {
-    sub_1C32C20(&TerminalPramsManager_TypeInfo);
-    byte_4C34C84 = 1;
+    sub_1C37058(&TerminalPramsManager_TypeInfo);
+    byte_4C4026E = 1;
   }
   v1 = TerminalPramsManager_TypeInfo;
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -14259,10 +14259,10 @@ bool TerminalPramsManager__get_IsFromRecollectionBoard(const MethodInfo *method)
 {
   TerminalPramsManager_c *v1; // x0
 
-  if ( (byte_4C34C82 & 1) == 0 )
+  if ( (byte_4C4026C & 1) == 0 )
   {
-    sub_1C32C20(&TerminalPramsManager_TypeInfo);
-    byte_4C34C82 = 1;
+    sub_1C37058(&TerminalPramsManager_TypeInfo);
+    byte_4C4026C = 1;
   }
   v1 = TerminalPramsManager_TypeInfo;
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -14278,10 +14278,10 @@ bool TerminalPramsManager__get_IsInvisibleConnectAndLoad(const MethodInfo *metho
 {
   TerminalPramsManager_c *v1; // x0
 
-  if ( (byte_4C34D4A & 1) == 0 )
+  if ( (byte_4C40334 & 1) == 0 )
   {
-    sub_1C32C20(&TerminalPramsManager_TypeInfo);
-    byte_4C34D4A = 1;
+    sub_1C37058(&TerminalPramsManager_TypeInfo);
+    byte_4C40334 = 1;
   }
   v1 = TerminalPramsManager_TypeInfo;
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -14297,10 +14297,10 @@ bool TerminalPramsManager__get_IsMainInterludeWarClear(const MethodInfo *method)
 {
   TerminalPramsManager_c *v1; // x0
 
-  if ( (byte_4C34C9C & 1) == 0 )
+  if ( (byte_4C40286 & 1) == 0 )
   {
-    sub_1C32C20(&TerminalPramsManager_TypeInfo);
-    byte_4C34C9C = 1;
+    sub_1C37058(&TerminalPramsManager_TypeInfo);
+    byte_4C40286 = 1;
   }
   v1 = TerminalPramsManager_TypeInfo;
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -14316,10 +14316,10 @@ bool TerminalPramsManager__get_IsMapReturnFolder(const MethodInfo *method)
 {
   TerminalPramsManager_c *v1; // x0
 
-  if ( (byte_4C34D56 & 1) == 0 )
+  if ( (byte_4C40340 & 1) == 0 )
   {
-    sub_1C32C20(&TerminalPramsManager_TypeInfo);
-    byte_4C34D56 = 1;
+    sub_1C37058(&TerminalPramsManager_TypeInfo);
+    byte_4C40340 = 1;
   }
   v1 = TerminalPramsManager_TypeInfo;
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -14335,10 +14335,10 @@ bool TerminalPramsManager__get_IsMoveFolderByQuestAfterAction(const MethodInfo *
 {
   TerminalPramsManager_c *v1; // x0
 
-  if ( (byte_4C34D5A & 1) == 0 )
+  if ( (byte_4C40344 & 1) == 0 )
   {
-    sub_1C32C20(&TerminalPramsManager_TypeInfo);
-    byte_4C34D5A = 1;
+    sub_1C37058(&TerminalPramsManager_TypeInfo);
+    byte_4C40344 = 1;
   }
   v1 = TerminalPramsManager_TypeInfo;
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -14354,10 +14354,10 @@ bool TerminalPramsManager__get_IsMoveToGrandQuestClassSelect(const MethodInfo *m
 {
   TerminalPramsManager_c *v1; // x0
 
-  if ( (byte_4C34D7E & 1) == 0 )
+  if ( (byte_4C40368 & 1) == 0 )
   {
-    sub_1C32C20(&TerminalPramsManager_TypeInfo);
-    byte_4C34D7E = 1;
+    sub_1C37058(&TerminalPramsManager_TypeInfo);
+    byte_4C40368 = 1;
   }
   v1 = TerminalPramsManager_TypeInfo;
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -14373,10 +14373,10 @@ bool TerminalPramsManager__get_IsOrdealCallWarClear(const MethodInfo *method)
 {
   TerminalPramsManager_c *v1; // x0
 
-  if ( (byte_4C34C9A & 1) == 0 )
+  if ( (byte_4C40284 & 1) == 0 )
   {
-    sub_1C32C20(&TerminalPramsManager_TypeInfo);
-    byte_4C34C9A = 1;
+    sub_1C37058(&TerminalPramsManager_TypeInfo);
+    byte_4C40284 = 1;
   }
   v1 = TerminalPramsManager_TypeInfo;
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -14392,10 +14392,10 @@ bool TerminalPramsManager__get_IsPhaseClear(const MethodInfo *method)
 {
   TerminalPramsManager_c *v1; // x0
 
-  if ( (byte_4C34CA4 & 1) == 0 )
+  if ( (byte_4C4028E & 1) == 0 )
   {
-    sub_1C32C20(&TerminalPramsManager_TypeInfo);
-    byte_4C34CA4 = 1;
+    sub_1C37058(&TerminalPramsManager_TypeInfo);
+    byte_4C4028E = 1;
   }
   v1 = TerminalPramsManager_TypeInfo;
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -14411,10 +14411,10 @@ bool TerminalPramsManager__get_IsPlayEventBoardGameArrivalEffectAuto(const Metho
 {
   TerminalPramsManager_c *v1; // x0
 
-  if ( (byte_4C34CAA & 1) == 0 )
+  if ( (byte_4C40294 & 1) == 0 )
   {
-    sub_1C32C20(&TerminalPramsManager_TypeInfo);
-    byte_4C34CAA = 1;
+    sub_1C37058(&TerminalPramsManager_TypeInfo);
+    byte_4C40294 = 1;
   }
   v1 = TerminalPramsManager_TypeInfo;
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -14430,10 +14430,10 @@ bool TerminalPramsManager__get_IsPlayEventBoardGameDiceBtnActiveEffect(const Met
 {
   TerminalPramsManager_c *v1; // x0
 
-  if ( (byte_4C34D15 & 1) == 0 )
+  if ( (byte_4C402FF & 1) == 0 )
   {
-    sub_1C32C20(&TerminalPramsManager_TypeInfo);
-    byte_4C34D15 = 1;
+    sub_1C37058(&TerminalPramsManager_TypeInfo);
+    byte_4C402FF = 1;
   }
   v1 = TerminalPramsManager_TypeInfo;
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -14449,10 +14449,10 @@ bool TerminalPramsManager__get_IsPlayGetEffect(const MethodInfo *method)
 {
   TerminalPramsManager_c *v1; // x0
 
-  if ( (byte_4C34CCC & 1) == 0 )
+  if ( (byte_4C402B6 & 1) == 0 )
   {
-    sub_1C32C20(&TerminalPramsManager_TypeInfo);
-    byte_4C34CCC = 1;
+    sub_1C37058(&TerminalPramsManager_TypeInfo);
+    byte_4C402B6 = 1;
   }
   v1 = TerminalPramsManager_TypeInfo;
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -14468,10 +14468,10 @@ bool TerminalPramsManager__get_IsPlayScriptWithMap(const MethodInfo *method)
 {
   TerminalPramsManager_c *v1; // x0
 
-  if ( (byte_4C34CA8 & 1) == 0 )
+  if ( (byte_4C40292 & 1) == 0 )
   {
-    sub_1C32C20(&TerminalPramsManager_TypeInfo);
-    byte_4C34CA8 = 1;
+    sub_1C37058(&TerminalPramsManager_TypeInfo);
+    byte_4C40292 = 1;
   }
   v1 = TerminalPramsManager_TypeInfo;
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -14487,10 +14487,10 @@ bool TerminalPramsManager__get_IsPlayTerminalEffectDisappear(const MethodInfo *m
 {
   TerminalPramsManager_c *v1; // x0
 
-  if ( (byte_4C34D23 & 1) == 0 )
+  if ( (byte_4C4030D & 1) == 0 )
   {
-    sub_1C32C20(&TerminalPramsManager_TypeInfo);
-    byte_4C34D23 = 1;
+    sub_1C37058(&TerminalPramsManager_TypeInfo);
+    byte_4C4030D = 1;
   }
   v1 = TerminalPramsManager_TypeInfo;
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -14506,10 +14506,10 @@ int32_t TerminalPramsManager__get_IsPlayTerminalEffectDisappearWarId(const Metho
 {
   TerminalPramsManager_c *v1; // x0
 
-  if ( (byte_4C34D25 & 1) == 0 )
+  if ( (byte_4C4030F & 1) == 0 )
   {
-    sub_1C32C20(&TerminalPramsManager_TypeInfo);
-    byte_4C34D25 = 1;
+    sub_1C37058(&TerminalPramsManager_TypeInfo);
+    byte_4C4030F = 1;
   }
   v1 = TerminalPramsManager_TypeInfo;
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -14525,10 +14525,10 @@ bool TerminalPramsManager__get_IsPlayTerminalEffectNt2AfterAction(const MethodIn
 {
   TerminalPramsManager_c *v1; // x0
 
-  if ( (byte_4C34D27 & 1) == 0 )
+  if ( (byte_4C40311 & 1) == 0 )
   {
-    sub_1C32C20(&TerminalPramsManager_TypeInfo);
-    byte_4C34D27 = 1;
+    sub_1C37058(&TerminalPramsManager_TypeInfo);
+    byte_4C40311 = 1;
   }
   v1 = TerminalPramsManager_TypeInfo;
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -14544,10 +14544,10 @@ bool TerminalPramsManager__get_IsPlayedEntryBanner(const MethodInfo *method)
 {
   TerminalPramsManager_c *v1; // x0
 
-  if ( (byte_4C34CCA & 1) == 0 )
+  if ( (byte_4C402B4 & 1) == 0 )
   {
-    sub_1C32C20(&TerminalPramsManager_TypeInfo);
-    byte_4C34CCA = 1;
+    sub_1C37058(&TerminalPramsManager_TypeInfo);
+    byte_4C402B4 = 1;
   }
   v1 = TerminalPramsManager_TypeInfo;
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -14563,10 +14563,10 @@ bool TerminalPramsManager__get_IsQuestClear(const MethodInfo *method)
 {
   TerminalPramsManager_c *v1; // x0
 
-  if ( (byte_4C34CA2 & 1) == 0 )
+  if ( (byte_4C4028C & 1) == 0 )
   {
-    sub_1C32C20(&TerminalPramsManager_TypeInfo);
-    byte_4C34CA2 = 1;
+    sub_1C37058(&TerminalPramsManager_TypeInfo);
+    byte_4C4028C = 1;
   }
   v1 = TerminalPramsManager_TypeInfo;
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -14582,10 +14582,10 @@ bool TerminalPramsManager__get_IsScriptDisp(const MethodInfo *method)
 {
   TerminalPramsManager_c *v1; // x0
 
-  if ( (byte_4C34CAC & 1) == 0 )
+  if ( (byte_4C40296 & 1) == 0 )
   {
-    sub_1C32C20(&TerminalPramsManager_TypeInfo);
-    byte_4C34CAC = 1;
+    sub_1C37058(&TerminalPramsManager_TypeInfo);
+    byte_4C40296 = 1;
   }
   v1 = TerminalPramsManager_TypeInfo;
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -14601,10 +14601,10 @@ bool TerminalPramsManager__get_IsSkipNoticeLoginQuestAtOnce(const MethodInfo *me
 {
   TerminalPramsManager_c *v1; // x0
 
-  if ( (byte_4C34D70 & 1) == 0 )
+  if ( (byte_4C4035A & 1) == 0 )
   {
-    sub_1C32C20(&TerminalPramsManager_TypeInfo);
-    byte_4C34D70 = 1;
+    sub_1C37058(&TerminalPramsManager_TypeInfo);
+    byte_4C4035A = 1;
   }
   v1 = TerminalPramsManager_TypeInfo;
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -14620,10 +14620,10 @@ bool TerminalPramsManager__get_IsStopMasterFaceOverwrite(const MethodInfo *metho
 {
   TerminalPramsManager_c *v1; // x0
 
-  if ( (byte_4C34CC2 & 1) == 0 )
+  if ( (byte_4C402AC & 1) == 0 )
   {
-    sub_1C32C20(&TerminalPramsManager_TypeInfo);
-    byte_4C34CC2 = 1;
+    sub_1C37058(&TerminalPramsManager_TypeInfo);
+    byte_4C402AC = 1;
   }
   v1 = TerminalPramsManager_TypeInfo;
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -14639,10 +14639,10 @@ bool TerminalPramsManager__get_IsTopLastIdxNextBoardRequest(const MethodInfo *me
 {
   TerminalPramsManager_c *v1; // x0
 
-  if ( (byte_4C34D60 & 1) == 0 )
+  if ( (byte_4C4034A & 1) == 0 )
   {
-    sub_1C32C20(&TerminalPramsManager_TypeInfo);
-    byte_4C34D60 = 1;
+    sub_1C37058(&TerminalPramsManager_TypeInfo);
+    byte_4C4034A = 1;
   }
   v1 = TerminalPramsManager_TypeInfo;
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -14658,10 +14658,10 @@ bool TerminalPramsManager__get_IsTransFromOrdealCall(const MethodInfo *method)
 {
   TerminalPramsManager_c *v1; // x0
 
-  if ( (byte_4C34D3B & 1) == 0 )
+  if ( (byte_4C40325 & 1) == 0 )
   {
-    sub_1C32C20(&TerminalPramsManager_TypeInfo);
-    byte_4C34D3B = 1;
+    sub_1C37058(&TerminalPramsManager_TypeInfo);
+    byte_4C40325 = 1;
   }
   v1 = TerminalPramsManager_TypeInfo;
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -14677,10 +14677,10 @@ bool TerminalPramsManager__get_IsTransOrdealCall(const MethodInfo *method)
 {
   TerminalPramsManager_c *v1; // x0
 
-  if ( (byte_4C34D39 & 1) == 0 )
+  if ( (byte_4C40323 & 1) == 0 )
   {
-    sub_1C32C20(&TerminalPramsManager_TypeInfo);
-    byte_4C34D39 = 1;
+    sub_1C37058(&TerminalPramsManager_TypeInfo);
+    byte_4C40323 = 1;
   }
   v1 = TerminalPramsManager_TypeInfo;
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -14696,10 +14696,10 @@ bool TerminalPramsManager__get_IsWarBoardClear(const MethodInfo *method)
 {
   TerminalPramsManager_c *v1; // x0
 
-  if ( (byte_4C34CB6 & 1) == 0 )
+  if ( (byte_4C402A0 & 1) == 0 )
   {
-    sub_1C32C20(&TerminalPramsManager_TypeInfo);
-    byte_4C34CB6 = 1;
+    sub_1C37058(&TerminalPramsManager_TypeInfo);
+    byte_4C402A0 = 1;
   }
   v1 = TerminalPramsManager_TypeInfo;
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -14715,10 +14715,10 @@ bool TerminalPramsManager__get_IsWarClear(const MethodInfo *method)
 {
   TerminalPramsManager_c *v1; // x0
 
-  if ( (byte_4C34C98 & 1) == 0 )
+  if ( (byte_4C40282 & 1) == 0 )
   {
-    sub_1C32C20(&TerminalPramsManager_TypeInfo);
-    byte_4C34C98 = 1;
+    sub_1C37058(&TerminalPramsManager_TypeInfo);
+    byte_4C40282 = 1;
   }
   v1 = TerminalPramsManager_TypeInfo;
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -14734,10 +14734,10 @@ int32_t TerminalPramsManager__get_LastPlayedFreeQuestSpotId(const MethodInfo *me
 {
   TerminalPramsManager_c *v1; // x0
 
-  if ( (byte_4C34C8C & 1) == 0 )
+  if ( (byte_4C40276 & 1) == 0 )
   {
-    sub_1C32C20(&TerminalPramsManager_TypeInfo);
-    byte_4C34C8C = 1;
+    sub_1C37058(&TerminalPramsManager_TypeInfo);
+    byte_4C40276 = 1;
   }
   v1 = TerminalPramsManager_TypeInfo;
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -14753,10 +14753,10 @@ int32_t TerminalPramsManager__get_LastPlayedQuestId(const MethodInfo *method)
 {
   TerminalPramsManager_c *v1; // x0
 
-  if ( (byte_4C34C8A & 1) == 0 )
+  if ( (byte_4C40274 & 1) == 0 )
   {
-    sub_1C32C20(&TerminalPramsManager_TypeInfo);
-    byte_4C34C8A = 1;
+    sub_1C37058(&TerminalPramsManager_TypeInfo);
+    byte_4C40274 = 1;
   }
   v1 = TerminalPramsManager_TypeInfo;
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -14772,10 +14772,10 @@ int32_t TerminalPramsManager__get_LastSelectQuestIndex(const MethodInfo *method)
 {
   TerminalPramsManager_c *v1; // x0
 
-  if ( (byte_4C34C8E & 1) == 0 )
+  if ( (byte_4C40278 & 1) == 0 )
   {
-    sub_1C32C20(&TerminalPramsManager_TypeInfo);
-    byte_4C34C8E = 1;
+    sub_1C37058(&TerminalPramsManager_TypeInfo);
+    byte_4C40278 = 1;
   }
   v1 = TerminalPramsManager_TypeInfo;
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -14791,10 +14791,10 @@ int32_t TerminalPramsManager__get_LimitCountUnSealQuestId(const MethodInfo *meth
 {
   TerminalPramsManager_c *v1; // x0
 
-  if ( (byte_4C34D6C & 1) == 0 )
+  if ( (byte_4C40356 & 1) == 0 )
   {
-    sub_1C32C20(&TerminalPramsManager_TypeInfo);
-    byte_4C34D6C = 1;
+    sub_1C37058(&TerminalPramsManager_TypeInfo);
+    byte_4C40356 = 1;
   }
   v1 = TerminalPramsManager_TypeInfo;
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -14810,10 +14810,10 @@ int32_t TerminalPramsManager__get_MapModelClearPhaseCount(const MethodInfo *meth
 {
   TerminalPramsManager_c *v1; // x0
 
-  if ( (byte_4C34CBA & 1) == 0 )
+  if ( (byte_4C402A4 & 1) == 0 )
   {
-    sub_1C32C20(&TerminalPramsManager_TypeInfo);
-    byte_4C34CBA = 1;
+    sub_1C37058(&TerminalPramsManager_TypeInfo);
+    byte_4C402A4 = 1;
   }
   v1 = TerminalPramsManager_TypeInfo;
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -14829,10 +14829,10 @@ int32_t TerminalPramsManager__get_MapModelClearQuestId(const MethodInfo *method)
 {
   TerminalPramsManager_c *v1; // x0
 
-  if ( (byte_4C34CB8 & 1) == 0 )
+  if ( (byte_4C402A2 & 1) == 0 )
   {
-    sub_1C32C20(&TerminalPramsManager_TypeInfo);
-    byte_4C34CB8 = 1;
+    sub_1C37058(&TerminalPramsManager_TypeInfo);
+    byte_4C402A2 = 1;
   }
   v1 = TerminalPramsManager_TypeInfo;
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -14848,10 +14848,10 @@ int32_t TerminalPramsManager__get_MasterMissionTargetType(const MethodInfo *meth
 {
   TerminalPramsManager_c *v1; // x0
 
-  if ( (byte_4C34D88 & 1) == 0 )
+  if ( (byte_4C40372 & 1) == 0 )
   {
-    sub_1C32C20(&TerminalPramsManager_TypeInfo);
-    byte_4C34D88 = 1;
+    sub_1C37058(&TerminalPramsManager_TypeInfo);
+    byte_4C40372 = 1;
   }
   v1 = TerminalPramsManager_TypeInfo;
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -14867,10 +14867,10 @@ int32_t TerminalPramsManager__get_MessageDispType(const MethodInfo *method)
 {
   TerminalPramsManager_c *v1; // x0
 
-  if ( (byte_4C34CAE & 1) == 0 )
+  if ( (byte_4C40298 & 1) == 0 )
   {
-    sub_1C32C20(&TerminalPramsManager_TypeInfo);
-    byte_4C34CAE = 1;
+    sub_1C37058(&TerminalPramsManager_TypeInfo);
+    byte_4C40298 = 1;
   }
   v1 = TerminalPramsManager_TypeInfo;
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -14886,10 +14886,10 @@ System_String_o *TerminalPramsManager__get_NoticeLastModified(const MethodInfo *
 {
   TerminalPramsManager_c *v1; // x0
 
-  if ( (byte_4C34D33 & 1) == 0 )
+  if ( (byte_4C4031D & 1) == 0 )
   {
-    sub_1C32C20(&TerminalPramsManager_TypeInfo);
-    byte_4C34D33 = 1;
+    sub_1C37058(&TerminalPramsManager_TypeInfo);
+    byte_4C4031D = 1;
   }
   v1 = TerminalPramsManager_TypeInfo;
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -14905,10 +14905,10 @@ UserEventPointEntity_array *TerminalPramsManager__get_OldUserEventPoint(const Me
 {
   TerminalPramsManager_c *v1; // x0
 
-  if ( (byte_4C34D47 & 1) == 0 )
+  if ( (byte_4C40331 & 1) == 0 )
   {
-    sub_1C32C20(&TerminalPramsManager_TypeInfo);
-    byte_4C34D47 = 1;
+    sub_1C37058(&TerminalPramsManager_TypeInfo);
+    byte_4C40331 = 1;
   }
   v1 = TerminalPramsManager_TypeInfo;
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -14924,10 +14924,10 @@ int32_t TerminalPramsManager__get_PhaseCnt(const MethodInfo *method)
 {
   TerminalPramsManager_c *v1; // x0
 
-  if ( (byte_4C34C7A & 1) == 0 )
+  if ( (byte_4C40264 & 1) == 0 )
   {
-    sub_1C32C20(&TerminalPramsManager_TypeInfo);
-    byte_4C34C7A = 1;
+    sub_1C37058(&TerminalPramsManager_TypeInfo);
+    byte_4C40264 = 1;
   }
   v1 = TerminalPramsManager_TypeInfo;
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -14943,10 +14943,10 @@ bool TerminalPramsManager__get_PlayHappinessCounterEffect(const MethodInfo *meth
 {
   TerminalPramsManager_c *v1; // x0
 
-  if ( (byte_4C34CA0 & 1) == 0 )
+  if ( (byte_4C4028A & 1) == 0 )
   {
-    sub_1C32C20(&TerminalPramsManager_TypeInfo);
-    byte_4C34CA0 = 1;
+    sub_1C37058(&TerminalPramsManager_TypeInfo);
+    byte_4C4028A = 1;
   }
   v1 = TerminalPramsManager_TypeInfo;
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -14962,10 +14962,10 @@ System_String_o *TerminalPramsManager__get_PlayedTerminalEffects(const MethodInf
 {
   TerminalPramsManager_c *v1; // x0
 
-  if ( (byte_4C34D21 & 1) == 0 )
+  if ( (byte_4C4030B & 1) == 0 )
   {
-    sub_1C32C20(&TerminalPramsManager_TypeInfo);
-    byte_4C34D21 = 1;
+    sub_1C37058(&TerminalPramsManager_TypeInfo);
+    byte_4C4030B = 1;
   }
   v1 = TerminalPramsManager_TypeInfo;
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -14981,10 +14981,10 @@ int32_t TerminalPramsManager__get_PlayerGenderType(const MethodInfo *method)
 {
   TerminalPramsManager_c *v1; // x0
 
-  if ( (byte_4C34CCE & 1) == 0 )
+  if ( (byte_4C402B8 & 1) == 0 )
   {
-    sub_1C32C20(&TerminalPramsManager_TypeInfo);
-    byte_4C34CCE = 1;
+    sub_1C37058(&TerminalPramsManager_TypeInfo);
+    byte_4C402B8 = 1;
   }
   v1 = TerminalPramsManager_TypeInfo;
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -15005,11 +15005,11 @@ QuestFocusStateManager_o *TerminalPramsManager__get_QuestFocusStateManager(const
   TerminalPramsManager_c *v5; // x0
   CGThumbnailListItem_o *p_questFocusStateManager; // x0
 
-  if ( (byte_4C34D49 & 1) == 0 )
+  if ( (byte_4C40333 & 1) == 0 )
   {
-    sub_1C32C20(&QuestFocusStateManager_TypeInfo);
-    sub_1C32C20(&TerminalPramsManager_TypeInfo);
-    byte_4C34D49 = 1;
+    sub_1C37058(&QuestFocusStateManager_TypeInfo);
+    sub_1C37058(&TerminalPramsManager_TypeInfo);
+    byte_4C40333 = 1;
   }
   v1 = TerminalPramsManager_TypeInfo;
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -15019,7 +15019,7 @@ QuestFocusStateManager_o *TerminalPramsManager__get_QuestFocusStateManager(const
   }
   if ( !v1->static_fields->questFocusStateManager )
   {
-    v2 = (QuestFocusStateManager_o *)sub_1C32E6C(QuestFocusStateManager_TypeInfo);
+    v2 = (QuestFocusStateManager_o *)sub_1C372A4(QuestFocusStateManager_TypeInfo);
     QuestFocusStateManager___ctor(v2, 0);
     v5 = TerminalPramsManager_TypeInfo;
     if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -15029,7 +15029,7 @@ QuestFocusStateManager_o *TerminalPramsManager__get_QuestFocusStateManager(const
     }
     p_questFocusStateManager = (CGThumbnailListItem_o *)&v5->static_fields->questFocusStateManager;
     p_questFocusStateManager->klass = (CGThumbnailListItem_c *)v2;
-    sub_1C32BC4(p_questFocusStateManager, (int32_t)v2, v3, v4);
+    sub_1C36FFC(p_questFocusStateManager, (int32_t)v2, v3, v4);
     v1 = TerminalPramsManager_TypeInfo;
   }
   if ( !v1->_2.cctor_finished )
@@ -15045,10 +15045,10 @@ int32_t TerminalPramsManager__get_QuestId(const MethodInfo *method)
 {
   TerminalPramsManager_c *v1; // x0
 
-  if ( (byte_4C34C78 & 1) == 0 )
+  if ( (byte_4C40262 & 1) == 0 )
   {
-    sub_1C32C20(&TerminalPramsManager_TypeInfo);
-    byte_4C34C78 = 1;
+    sub_1C37058(&TerminalPramsManager_TypeInfo);
+    byte_4C40262 = 1;
   }
   v1 = TerminalPramsManager_TypeInfo;
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -15064,10 +15064,10 @@ int32_t TerminalPramsManager__get_QuestMessageScriptQuestId(const MethodInfo *me
 {
   TerminalPramsManager_c *v1; // x0
 
-  if ( (byte_4C34D62 & 1) == 0 )
+  if ( (byte_4C4034C & 1) == 0 )
   {
-    sub_1C32C20(&TerminalPramsManager_TypeInfo);
-    byte_4C34D62 = 1;
+    sub_1C37058(&TerminalPramsManager_TypeInfo);
+    byte_4C4034C = 1;
   }
   v1 = TerminalPramsManager_TypeInfo;
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -15083,10 +15083,10 @@ int32_t TerminalPramsManager__get_QuestMessageScriptQuestPhase(const MethodInfo 
 {
   TerminalPramsManager_c *v1; // x0
 
-  if ( (byte_4C34D64 & 1) == 0 )
+  if ( (byte_4C4034E & 1) == 0 )
   {
-    sub_1C32C20(&TerminalPramsManager_TypeInfo);
-    byte_4C34D64 = 1;
+    sub_1C37058(&TerminalPramsManager_TypeInfo);
+    byte_4C4034E = 1;
   }
   v1 = TerminalPramsManager_TypeInfo;
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -15103,10 +15103,10 @@ System_Collections_Generic_Dictionary_int__int__o *TerminalPramsManager__get_Que
 {
   TerminalPramsManager_c *v1; // x0
 
-  if ( (byte_4C34D1F & 1) == 0 )
+  if ( (byte_4C40309 & 1) == 0 )
   {
-    sub_1C32C20(&TerminalPramsManager_TypeInfo);
-    byte_4C34D1F = 1;
+    sub_1C37058(&TerminalPramsManager_TypeInfo);
+    byte_4C40309 = 1;
   }
   v1 = TerminalPramsManager_TypeInfo;
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -15122,10 +15122,10 @@ int32_t TerminalPramsManager__get_QuestReleaseFocusQuestId(const MethodInfo *met
 {
   TerminalPramsManager_c *v1; // x0
 
-  if ( (byte_4C34C86 & 1) == 0 )
+  if ( (byte_4C40270 & 1) == 0 )
   {
-    sub_1C32C20(&TerminalPramsManager_TypeInfo);
-    byte_4C34C86 = 1;
+    sub_1C37058(&TerminalPramsManager_TypeInfo);
+    byte_4C40270 = 1;
   }
   v1 = TerminalPramsManager_TypeInfo;
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -15141,10 +15141,10 @@ System_String_o *TerminalPramsManager__get_QuestWindowMessage(const MethodInfo *
 {
   TerminalPramsManager_c *v1; // x0
 
-  if ( (byte_4C34CB0 & 1) == 0 )
+  if ( (byte_4C4029A & 1) == 0 )
   {
-    sub_1C32C20(&TerminalPramsManager_TypeInfo);
-    byte_4C34CB0 = 1;
+    sub_1C37058(&TerminalPramsManager_TypeInfo);
+    byte_4C4029A = 1;
   }
   v1 = TerminalPramsManager_TypeInfo;
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -15160,10 +15160,10 @@ System_String_o *TerminalPramsManager__get_SceneMoveQuestClearedInfo(const Metho
 {
   TerminalPramsManager_c *v1; // x0
 
-  if ( (byte_4C34D37 & 1) == 0 )
+  if ( (byte_4C40321 & 1) == 0 )
   {
-    sub_1C32C20(&TerminalPramsManager_TypeInfo);
-    byte_4C34D37 = 1;
+    sub_1C37058(&TerminalPramsManager_TypeInfo);
+    byte_4C40321 = 1;
   }
   v1 = TerminalPramsManager_TypeInfo;
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -15179,10 +15179,10 @@ BannerEntity_o *TerminalPramsManager__get_SelectedBannerEntity(const MethodInfo 
 {
   TerminalPramsManager_c *v1; // x0
 
-  if ( (byte_4C34C88 & 1) == 0 )
+  if ( (byte_4C40272 & 1) == 0 )
   {
-    sub_1C32C20(&TerminalPramsManager_TypeInfo);
-    byte_4C34C88 = 1;
+    sub_1C37058(&TerminalPramsManager_TypeInfo);
+    byte_4C40272 = 1;
   }
   v1 = TerminalPramsManager_TypeInfo;
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -15198,10 +15198,10 @@ int32_t TerminalPramsManager__get_SelectedRecollectionWarId(const MethodInfo *me
 {
   TerminalPramsManager_c *v1; // x0
 
-  if ( (byte_4C34C80 & 1) == 0 )
+  if ( (byte_4C4026A & 1) == 0 )
   {
-    sub_1C32C20(&TerminalPramsManager_TypeInfo);
-    byte_4C34C80 = 1;
+    sub_1C37058(&TerminalPramsManager_TypeInfo);
+    byte_4C4026A = 1;
   }
   v1 = TerminalPramsManager_TypeInfo;
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -15217,10 +15217,10 @@ int32_t TerminalPramsManager__get_SelectedStoryQuestId(const MethodInfo *method)
 {
   TerminalPramsManager_c *v1; // x0
 
-  if ( (byte_4C34C7E & 1) == 0 )
+  if ( (byte_4C40268 & 1) == 0 )
   {
-    sub_1C32C20(&TerminalPramsManager_TypeInfo);
-    byte_4C34C7E = 1;
+    sub_1C37058(&TerminalPramsManager_TypeInfo);
+    byte_4C40268 = 1;
   }
   v1 = TerminalPramsManager_TypeInfo;
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -15236,10 +15236,10 @@ int32_t TerminalPramsManager__get_ShopFocusItemId(const MethodInfo *method)
 {
   TerminalPramsManager_c *v1; // x0
 
-  if ( (byte_4C34D3F & 1) == 0 )
+  if ( (byte_4C40329 & 1) == 0 )
   {
-    sub_1C32C20(&TerminalPramsManager_TypeInfo);
-    byte_4C34D3F = 1;
+    sub_1C37058(&TerminalPramsManager_TypeInfo);
+    byte_4C40329 = 1;
   }
   v1 = TerminalPramsManager_TypeInfo;
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -15255,10 +15255,10 @@ SpecifiedSceneInfo_o *TerminalPramsManager__get_SpecifiedChangeSceneInfo(const M
 {
   TerminalPramsManager_c *v1; // x0
 
-  if ( (byte_4C34CD8 & 1) == 0 )
+  if ( (byte_4C402C2 & 1) == 0 )
   {
-    sub_1C32C20(&TerminalPramsManager_TypeInfo);
-    byte_4C34CD8 = 1;
+    sub_1C37058(&TerminalPramsManager_TypeInfo);
+    byte_4C402C2 = 1;
   }
   v1 = TerminalPramsManager_TypeInfo;
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -15274,10 +15274,10 @@ int32_t TerminalPramsManager__get_SpotId(const MethodInfo *method)
 {
   TerminalPramsManager_c *v1; // x0
 
-  if ( (byte_4C34C76 & 1) == 0 )
+  if ( (byte_4C40260 & 1) == 0 )
   {
-    sub_1C32C20(&TerminalPramsManager_TypeInfo);
-    byte_4C34C76 = 1;
+    sub_1C37058(&TerminalPramsManager_TypeInfo);
+    byte_4C40260 = 1;
   }
   v1 = TerminalPramsManager_TypeInfo;
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -15293,10 +15293,10 @@ int32_t TerminalPramsManager__get_SummonId(const MethodInfo *method)
 {
   TerminalPramsManager_c *v1; // x0
 
-  if ( (byte_4C34C74 & 1) == 0 )
+  if ( (byte_4C4025E & 1) == 0 )
   {
-    sub_1C32C20(&TerminalPramsManager_TypeInfo);
-    byte_4C34C74 = 1;
+    sub_1C37058(&TerminalPramsManager_TypeInfo);
+    byte_4C4025E = 1;
   }
   v1 = TerminalPramsManager_TypeInfo;
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -15312,10 +15312,10 @@ int32_t TerminalPramsManager__get_SummonType(const MethodInfo *method)
 {
   TerminalPramsManager_c *v1; // x0
 
-  if ( (byte_4C34C72 & 1) == 0 )
+  if ( (byte_4C4025C & 1) == 0 )
   {
-    sub_1C32C20(&TerminalPramsManager_TypeInfo);
-    byte_4C34C72 = 1;
+    sub_1C37058(&TerminalPramsManager_TypeInfo);
+    byte_4C4025C = 1;
   }
   v1 = TerminalPramsManager_TypeInfo;
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -15331,10 +15331,10 @@ BattleScriptRootComponent_TalkScriptInfo_o *TerminalPramsManager__get_TalkScript
 {
   TerminalPramsManager_c *v1; // x0
 
-  if ( (byte_4C34D66 & 1) == 0 )
+  if ( (byte_4C40350 & 1) == 0 )
   {
-    sub_1C32C20(&TerminalPramsManager_TypeInfo);
-    byte_4C34D66 = 1;
+    sub_1C37058(&TerminalPramsManager_TypeInfo);
+    byte_4C40350 = 1;
   }
   v1 = TerminalPramsManager_TypeInfo;
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -15350,10 +15350,10 @@ int32_t TerminalPramsManager__get_TerminalTopFocusWarIdByShortcut(const MethodIn
 {
   TerminalPramsManager_c *v1; // x0
 
-  if ( (byte_4C34D43 & 1) == 0 )
+  if ( (byte_4C4032D & 1) == 0 )
   {
-    sub_1C32C20(&TerminalPramsManager_TypeInfo);
-    byte_4C34D43 = 1;
+    sub_1C37058(&TerminalPramsManager_TypeInfo);
+    byte_4C4032D = 1;
   }
   v1 = TerminalPramsManager_TypeInfo;
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -15369,10 +15369,10 @@ int32_t TerminalPramsManager__get_TimeStatusEventId(const MethodInfo *method)
 {
   TerminalPramsManager_c *v1; // x0
 
-  if ( (byte_4C34CFF & 1) == 0 )
+  if ( (byte_4C402E9 & 1) == 0 )
   {
-    sub_1C32C20(&TerminalPramsManager_TypeInfo);
-    byte_4C34CFF = 1;
+    sub_1C37058(&TerminalPramsManager_TypeInfo);
+    byte_4C402E9 = 1;
   }
   v1 = TerminalPramsManager_TypeInfo;
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -15388,10 +15388,10 @@ int32_t TerminalPramsManager__get_TimeStatusLoopCount(const MethodInfo *method)
 {
   TerminalPramsManager_c *v1; // x0
 
-  if ( (byte_4C34D01 & 1) == 0 )
+  if ( (byte_4C402EB & 1) == 0 )
   {
-    sub_1C32C20(&TerminalPramsManager_TypeInfo);
-    byte_4C34D01 = 1;
+    sub_1C37058(&TerminalPramsManager_TypeInfo);
+    byte_4C402EB = 1;
   }
   v1 = TerminalPramsManager_TypeInfo;
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -15407,10 +15407,10 @@ System_String_o *TerminalPramsManager__get_TransitionScrollTabName(const MethodI
 {
   TerminalPramsManager_c *v1; // x0
 
-  if ( (byte_4C34D78 & 1) == 0 )
+  if ( (byte_4C40362 & 1) == 0 )
   {
-    sub_1C32C20(&TerminalPramsManager_TypeInfo);
-    byte_4C34D78 = 1;
+    sub_1C37058(&TerminalPramsManager_TypeInfo);
+    byte_4C40362 = 1;
   }
   v1 = TerminalPramsManager_TypeInfo;
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -15426,10 +15426,10 @@ QuestRewardInfo_array *TerminalPramsManager__get_UseAddRewardItemRewardInfos(con
 {
   TerminalPramsManager_c *v1; // x0
 
-  if ( (byte_4C34D7C & 1) == 0 )
+  if ( (byte_4C40366 & 1) == 0 )
   {
-    sub_1C32C20(&TerminalPramsManager_TypeInfo);
-    byte_4C34D7C = 1;
+    sub_1C37058(&TerminalPramsManager_TypeInfo);
+    byte_4C40366 = 1;
   }
   v1 = TerminalPramsManager_TypeInfo;
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -15445,10 +15445,10 @@ WarBoardDataEntity_o *TerminalPramsManager__get_WarBoardData(const MethodInfo *m
 {
   TerminalPramsManager_c *v1; // x0
 
-  if ( (byte_4C34D17 & 1) == 0 )
+  if ( (byte_4C40301 & 1) == 0 )
   {
-    sub_1C32C20(&TerminalPramsManager_TypeInfo);
-    byte_4C34D17 = 1;
+    sub_1C37058(&TerminalPramsManager_TypeInfo);
+    byte_4C40301 = 1;
   }
   v1 = TerminalPramsManager_TypeInfo;
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -15464,10 +15464,10 @@ int32_t TerminalPramsManager__get_WarId(const MethodInfo *method)
 {
   TerminalPramsManager_c *v1; // x0
 
-  if ( (byte_4C34C70 & 1) == 0 )
+  if ( (byte_4C4025A & 1) == 0 )
   {
-    sub_1C32C20(&TerminalPramsManager_TypeInfo);
-    byte_4C34C70 = 1;
+    sub_1C37058(&TerminalPramsManager_TypeInfo);
+    byte_4C4025A = 1;
   }
   v1 = TerminalPramsManager_TypeInfo;
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -15485,11 +15485,11 @@ float TerminalPramsManager__get_ZoomSize(const MethodInfo *method)
   MapZoom_c *v2; // x8
   float ZOOM_DEFAULT; // s8
 
-  if ( (byte_4C34CD6 & 1) == 0 )
+  if ( (byte_4C402C0 & 1) == 0 )
   {
-    sub_1C32C20(&MapZoom_TypeInfo);
-    sub_1C32C20(&TerminalPramsManager_TypeInfo);
-    byte_4C34CD6 = 1;
+    sub_1C37058(&MapZoom_TypeInfo);
+    sub_1C37058(&TerminalPramsManager_TypeInfo);
+    byte_4C402C0 = 1;
   }
   v1 = TerminalPramsManager_TypeInfo;
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -15527,10 +15527,10 @@ EventDailyPoint_o *TerminalPramsManager__get_eventDailyPoint(const MethodInfo *m
 {
   TerminalPramsManager_c *v1; // x0
 
-  if ( (byte_4C34CF5 & 1) == 0 )
+  if ( (byte_4C402DF & 1) == 0 )
   {
-    sub_1C32C20(&TerminalPramsManager_TypeInfo);
-    byte_4C34CF5 = 1;
+    sub_1C37058(&TerminalPramsManager_TypeInfo);
+    byte_4C402DF = 1;
   }
   v1 = TerminalPramsManager_TypeInfo;
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -15546,10 +15546,10 @@ EventPointWinReward_o *TerminalPramsManager__get_eventPointWinReward(const Metho
 {
   TerminalPramsManager_c *v1; // x0
 
-  if ( (byte_4C34CE0 & 1) == 0 )
+  if ( (byte_4C402CA & 1) == 0 )
   {
-    sub_1C32C20(&TerminalPramsManager_TypeInfo);
-    byte_4C34CE0 = 1;
+    sub_1C37058(&TerminalPramsManager_TypeInfo);
+    byte_4C402CA = 1;
   }
   v1 = TerminalPramsManager_TypeInfo;
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -15565,10 +15565,10 @@ int32_t TerminalPramsManager__get_eventPointWinType(const MethodInfo *method)
 {
   TerminalPramsManager_c *v1; // x0
 
-  if ( (byte_4C34CDE & 1) == 0 )
+  if ( (byte_4C402C8 & 1) == 0 )
   {
-    sub_1C32C20(&TerminalPramsManager_TypeInfo);
-    byte_4C34CDE = 1;
+    sub_1C37058(&TerminalPramsManager_TypeInfo);
+    byte_4C402C8 = 1;
   }
   v1 = TerminalPramsManager_TypeInfo;
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -15584,10 +15584,10 @@ EventRaceBoostInfo_o *TerminalPramsManager__get_eventRaceBoost(const MethodInfo 
 {
   TerminalPramsManager_c *v1; // x0
 
-  if ( (byte_4C34CE2 & 1) == 0 )
+  if ( (byte_4C402CC & 1) == 0 )
   {
-    sub_1C32C20(&TerminalPramsManager_TypeInfo);
-    byte_4C34CE2 = 1;
+    sub_1C37058(&TerminalPramsManager_TypeInfo);
+    byte_4C402CC = 1;
   }
   v1 = TerminalPramsManager_TypeInfo;
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -15603,10 +15603,10 @@ EventTowerReward_o *TerminalPramsManager__get_eventTowerReward(const MethodInfo 
 {
   TerminalPramsManager_c *v1; // x0
 
-  if ( (byte_4C34CEB & 1) == 0 )
+  if ( (byte_4C402D5 & 1) == 0 )
   {
-    sub_1C32C20(&TerminalPramsManager_TypeInfo);
-    byte_4C34CEB = 1;
+    sub_1C37058(&TerminalPramsManager_TypeInfo);
+    byte_4C402D5 = 1;
   }
   v1 = TerminalPramsManager_TypeInfo;
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -15622,10 +15622,10 @@ bool TerminalPramsManager__get_isFortificationCheck(const MethodInfo *method)
 {
   TerminalPramsManager_c *v1; // x0
 
-  if ( (byte_4C34D1B & 1) == 0 )
+  if ( (byte_4C40305 & 1) == 0 )
   {
-    sub_1C32C20(&TerminalPramsManager_TypeInfo);
-    byte_4C34D1B = 1;
+    sub_1C37058(&TerminalPramsManager_TypeInfo);
+    byte_4C40305 = 1;
   }
   v1 = TerminalPramsManager_TypeInfo;
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -15641,10 +15641,10 @@ bool TerminalPramsManager__get_isIncomingCall(const MethodInfo *method)
 {
   TerminalPramsManager_c *v1; // x0
 
-  if ( (byte_4C34D0F & 1) == 0 )
+  if ( (byte_4C402F9 & 1) == 0 )
   {
-    sub_1C32C20(&TerminalPramsManager_TypeInfo);
-    byte_4C34D0F = 1;
+    sub_1C37058(&TerminalPramsManager_TypeInfo);
+    byte_4C402F9 = 1;
   }
   v1 = TerminalPramsManager_TypeInfo;
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -15660,10 +15660,10 @@ bool TerminalPramsManager__get_isPlayRiverActionCheck(const MethodInfo *method)
 {
   TerminalPramsManager_c *v1; // x0
 
-  if ( (byte_4C34D1D & 1) == 0 )
+  if ( (byte_4C40307 & 1) == 0 )
   {
-    sub_1C32C20(&TerminalPramsManager_TypeInfo);
-    byte_4C34D1D = 1;
+    sub_1C37058(&TerminalPramsManager_TypeInfo);
+    byte_4C40307 = 1;
   }
   v1 = TerminalPramsManager_TypeInfo;
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -15679,10 +15679,10 @@ bool TerminalPramsManager__get_isQuestRewardSetted(const MethodInfo *method)
 {
   TerminalPramsManager_c *v1; // x0
 
-  if ( (byte_4C34D50 & 1) == 0 )
+  if ( (byte_4C4033A & 1) == 0 )
   {
-    sub_1C32C20(&TerminalPramsManager_TypeInfo);
-    byte_4C34D50 = 1;
+    sub_1C37058(&TerminalPramsManager_TypeInfo);
+    byte_4C4033A = 1;
   }
   v1 = TerminalPramsManager_TypeInfo;
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -15698,10 +15698,10 @@ bool TerminalPramsManager__get_isWarBoardPlay(const MethodInfo *method)
 {
   TerminalPramsManager_c *v1; // x0
 
-  if ( (byte_4C34D19 & 1) == 0 )
+  if ( (byte_4C40303 & 1) == 0 )
   {
-    sub_1C32C20(&TerminalPramsManager_TypeInfo);
-    byte_4C34D19 = 1;
+    sub_1C37058(&TerminalPramsManager_TypeInfo);
+    byte_4C40303 = 1;
   }
   v1 = TerminalPramsManager_TypeInfo;
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -15717,10 +15717,10 @@ LimitImageAnnounce_array *TerminalPramsManager__get_limitImageAnnounces(const Me
 {
   TerminalPramsManager_c *v1; // x0
 
-  if ( (byte_4C34D68 & 1) == 0 )
+  if ( (byte_4C40352 & 1) == 0 )
   {
-    sub_1C32C20(&TerminalPramsManager_TypeInfo);
-    byte_4C34D68 = 1;
+    sub_1C37058(&TerminalPramsManager_TypeInfo);
+    byte_4C40352 = 1;
   }
   v1 = TerminalPramsManager_TypeInfo;
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -15736,10 +15736,10 @@ UserSuperBossEntity_array *TerminalPramsManager__get_oldPersonalBoss(const Metho
 {
   TerminalPramsManager_c *v1; // x0
 
-  if ( (byte_4C34CDC & 1) == 0 )
+  if ( (byte_4C402C6 & 1) == 0 )
   {
-    sub_1C32C20(&TerminalPramsManager_TypeInfo);
-    byte_4C34CDC = 1;
+    sub_1C37058(&TerminalPramsManager_TypeInfo);
+    byte_4C402C6 = 1;
   }
   v1 = TerminalPramsManager_TypeInfo;
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -15755,10 +15755,10 @@ int32_t TerminalPramsManager__get_oldQuestIdForHeaderEvent(const MethodInfo *met
 {
   TerminalPramsManager_c *v1; // x0
 
-  if ( (byte_4C34CE8 & 1) == 0 )
+  if ( (byte_4C402D2 & 1) == 0 )
   {
-    sub_1C32C20(&TerminalPramsManager_TypeInfo);
-    byte_4C34CE8 = 1;
+    sub_1C37058(&TerminalPramsManager_TypeInfo);
+    byte_4C402D2 = 1;
   }
   v1 = TerminalPramsManager_TypeInfo;
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -15774,10 +15774,10 @@ UserSuperBossEntity_array *TerminalPramsManager__get_oldSuperBoss(const MethodIn
 {
   TerminalPramsManager_c *v1; // x0
 
-  if ( (byte_4C34CDA & 1) == 0 )
+  if ( (byte_4C402C4 & 1) == 0 )
   {
-    sub_1C32C20(&TerminalPramsManager_TypeInfo);
-    byte_4C34CDA = 1;
+    sub_1C37058(&TerminalPramsManager_TypeInfo);
+    byte_4C402C4 = 1;
   }
   v1 = TerminalPramsManager_TypeInfo;
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -15793,10 +15793,10 @@ CostumeReleaseAnnounce_array *TerminalPramsManager__get_questClearCostumeGet(con
 {
   TerminalPramsManager_c *v1; // x0
 
-  if ( (byte_4C34CE6 & 1) == 0 )
+  if ( (byte_4C402D0 & 1) == 0 )
   {
-    sub_1C32C20(&TerminalPramsManager_TypeInfo);
-    byte_4C34CE6 = 1;
+    sub_1C37058(&TerminalPramsManager_TypeInfo);
+    byte_4C402D0 = 1;
   }
   v1 = TerminalPramsManager_TypeInfo;
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -15812,10 +15812,10 @@ CostumeReleaseAnnounce_array *TerminalPramsManager__get_questClearCostumeRelease
 {
   TerminalPramsManager_c *v1; // x0
 
-  if ( (byte_4C34CE4 & 1) == 0 )
+  if ( (byte_4C402CE & 1) == 0 )
   {
-    sub_1C32C20(&TerminalPramsManager_TypeInfo);
-    byte_4C34CE4 = 1;
+    sub_1C37058(&TerminalPramsManager_TypeInfo);
+    byte_4C402CE = 1;
   }
   v1 = TerminalPramsManager_TypeInfo;
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -15831,10 +15831,10 @@ QuestRewardInfo_array *TerminalPramsManager__get_resultBoostItemRewardInfo(const
 {
   TerminalPramsManager_c *v1; // x0
 
-  if ( (byte_4C34CEF & 1) == 0 )
+  if ( (byte_4C402D9 & 1) == 0 )
   {
-    sub_1C32C20(&TerminalPramsManager_TypeInfo);
-    byte_4C34CEF = 1;
+    sub_1C37058(&TerminalPramsManager_TypeInfo);
+    byte_4C402D9 = 1;
   }
   v1 = TerminalPramsManager_TypeInfo;
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -15850,10 +15850,10 @@ QuestRewardInfo_array *TerminalPramsManager__get_resultEventBoardGameTokenReward
 {
   TerminalPramsManager_c *v1; // x0
 
-  if ( (byte_4C34CF1 & 1) == 0 )
+  if ( (byte_4C402DB & 1) == 0 )
   {
-    sub_1C32C20(&TerminalPramsManager_TypeInfo);
-    byte_4C34CF1 = 1;
+    sub_1C37058(&TerminalPramsManager_TypeInfo);
+    byte_4C402DB = 1;
   }
   v1 = TerminalPramsManager_TypeInfo;
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -15869,10 +15869,10 @@ QuestRewardInfo_array *TerminalPramsManager__get_resultEventTowerRewardInfo(cons
 {
   TerminalPramsManager_c *v1; // x0
 
-  if ( (byte_4C34CED & 1) == 0 )
+  if ( (byte_4C402D7 & 1) == 0 )
   {
-    sub_1C32C20(&TerminalPramsManager_TypeInfo);
-    byte_4C34CED = 1;
+    sub_1C37058(&TerminalPramsManager_TypeInfo);
+    byte_4C402D7 = 1;
   }
   v1 = TerminalPramsManager_TypeInfo;
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -15888,10 +15888,10 @@ TimeStatusRecord_o *TerminalPramsManager__get_timeStatusRecord(const MethodInfo 
 {
   TerminalPramsManager_c *v1; // x0
 
-  if ( (byte_4C34CF3 & 1) == 0 )
+  if ( (byte_4C402DD & 1) == 0 )
   {
-    sub_1C32C20(&TerminalPramsManager_TypeInfo);
-    byte_4C34CF3 = 1;
+    sub_1C37058(&TerminalPramsManager_TypeInfo);
+    byte_4C402DD = 1;
   }
   v1 = TerminalPramsManager_TypeInfo;
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -15907,10 +15907,10 @@ UpdateProfileDialogInfoEntity_array *TerminalPramsManager__get_updateProfileInfo
 {
   TerminalPramsManager_c *v1; // x0
 
-  if ( (byte_4C34D6E & 1) == 0 )
+  if ( (byte_4C40358 & 1) == 0 )
   {
-    sub_1C32C20(&TerminalPramsManager_TypeInfo);
-    byte_4C34D6E = 1;
+    sub_1C37058(&TerminalPramsManager_TypeInfo);
+    byte_4C40358 = 1;
   }
   v1 = TerminalPramsManager_TypeInfo;
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -15926,10 +15926,10 @@ WarClearReward_array *TerminalPramsManager__get_warClearReward(const MethodInfo 
 {
   TerminalPramsManager_c *v1; // x0
 
-  if ( (byte_4C34CFD & 1) == 0 )
+  if ( (byte_4C402E7 & 1) == 0 )
   {
-    sub_1C32C20(&TerminalPramsManager_TypeInfo);
-    byte_4C34CFD = 1;
+    sub_1C37058(&TerminalPramsManager_TypeInfo);
+    byte_4C402E7 = 1;
   }
   v1 = TerminalPramsManager_TypeInfo;
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -15945,10 +15945,10 @@ int32_t TerminalPramsManager__mfGetSceneStatus(const MethodInfo *method)
 {
   TerminalPramsManager_c *v1; // x0
 
-  if ( (byte_4C34D91 & 1) == 0 )
+  if ( (byte_4C4037B & 1) == 0 )
   {
-    sub_1C32C20(&TerminalPramsManager_TypeInfo);
-    byte_4C34D91 = 1;
+    sub_1C37058(&TerminalPramsManager_TypeInfo);
+    byte_4C4037B = 1;
   }
   v1 = TerminalPramsManager_TypeInfo;
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -15964,10 +15964,10 @@ void TerminalPramsManager__mfSetSceneStatus(int32_t eSceneStatus, const MethodIn
 {
   TerminalPramsManager_c *v3; // x0
 
-  if ( (byte_4C34D90 & 1) == 0 )
+  if ( (byte_4C4037A & 1) == 0 )
   {
-    sub_1C32C20(&TerminalPramsManager_TypeInfo);
-    byte_4C34D90 = 1;
+    sub_1C37058(&TerminalPramsManager_TypeInfo);
+    byte_4C4037A = 1;
   }
   v3 = TerminalPramsManager_TypeInfo;
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -15983,10 +15983,10 @@ void TerminalPramsManager__set_AfterActionFocusQuestId(int32_t value, const Meth
 {
   TerminalPramsManager_c *v3; // x0
 
-  if ( (byte_4C34C91 & 1) == 0 )
+  if ( (byte_4C4027B & 1) == 0 )
   {
-    sub_1C32C20(&TerminalPramsManager_TypeInfo);
-    byte_4C34C91 = 1;
+    sub_1C37058(&TerminalPramsManager_TypeInfo);
+    byte_4C4027B = 1;
   }
   v3 = TerminalPramsManager_TypeInfo;
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -16005,10 +16005,10 @@ void TerminalPramsManager__set_BattleSetupKeep(BattleSetupInfo_o *value, const M
   TerminalPramsManager_c *v5; // x0
   struct TerminalPramsManager_StaticFields *static_fields; // x0
 
-  if ( (byte_4C34CB3 & 1) == 0 )
+  if ( (byte_4C4029D & 1) == 0 )
   {
-    sub_1C32C20(&TerminalPramsManager_TypeInfo);
-    byte_4C34CB3 = 1;
+    sub_1C37058(&TerminalPramsManager_TypeInfo);
+    byte_4C4029D = 1;
   }
   v5 = TerminalPramsManager_TypeInfo;
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -16018,7 +16018,7 @@ void TerminalPramsManager__set_BattleSetupKeep(BattleSetupInfo_o *value, const M
   }
   static_fields = v5->static_fields;
   static_fields->_BattleSetupKeep_k__BackingField = value;
-  sub_1C32BC4((CGThumbnailListItem_o *)&static_fields->_BattleSetupKeep_k__BackingField, (int32_t)value, v2, v3);
+  sub_1C36FFC((CGThumbnailListItem_o *)&static_fields->_BattleSetupKeep_k__BackingField, (int32_t)value, v2, v3);
 }
 
 
@@ -16026,10 +16026,10 @@ void TerminalPramsManager__set_BeforeEventActivityPoint(int32_t value, const Met
 {
   TerminalPramsManager_c *v3; // x0
 
-  if ( (byte_4C34D06 & 1) == 0 )
+  if ( (byte_4C402F0 & 1) == 0 )
   {
-    sub_1C32C20(&TerminalPramsManager_TypeInfo);
-    byte_4C34D06 = 1;
+    sub_1C37058(&TerminalPramsManager_TypeInfo);
+    byte_4C402F0 = 1;
   }
   v3 = TerminalPramsManager_TypeInfo;
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -16045,10 +16045,10 @@ void TerminalPramsManager__set_BeforeEventActivityPointGauge(int32_t value, cons
 {
   TerminalPramsManager_c *v3; // x0
 
-  if ( (byte_4C34D08 & 1) == 0 )
+  if ( (byte_4C402F2 & 1) == 0 )
   {
-    sub_1C32C20(&TerminalPramsManager_TypeInfo);
-    byte_4C34D08 = 1;
+    sub_1C37058(&TerminalPramsManager_TypeInfo);
+    byte_4C402F2 = 1;
   }
   v3 = TerminalPramsManager_TypeInfo;
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -16067,10 +16067,10 @@ void TerminalPramsManager__set_BeforeEventSubmarineSaveData(EventSaveData_o *val
   TerminalPramsManager_c *v5; // x0
   CGThumbnailListItem_o *static_fields; // x8
 
-  if ( (byte_4C34D0C & 1) == 0 )
+  if ( (byte_4C402F6 & 1) == 0 )
   {
-    sub_1C32C20(&TerminalPramsManager_TypeInfo);
-    byte_4C34D0C = 1;
+    sub_1C37058(&TerminalPramsManager_TypeInfo);
+    byte_4C402F6 = 1;
   }
   v5 = TerminalPramsManager_TypeInfo;
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -16080,7 +16080,7 @@ void TerminalPramsManager__set_BeforeEventSubmarineSaveData(EventSaveData_o *val
   }
   static_fields = (CGThumbnailListItem_o *)v5->static_fields;
   static_fields[3].klass = (CGThumbnailListItem_c *)value;
-  sub_1C32BC4(static_fields + 3, (int32_t)value, v2, v3);
+  sub_1C36FFC(static_fields + 3, (int32_t)value, v2, v3);
 }
 
 
@@ -16088,10 +16088,10 @@ void TerminalPramsManager__set_BeforeQuestStartWarId(int32_t value, const Method
 {
   TerminalPramsManager_c *v3; // x0
 
-  if ( (byte_4C34D75 & 1) == 0 )
+  if ( (byte_4C4035F & 1) == 0 )
   {
-    sub_1C32C20(&TerminalPramsManager_TypeInfo);
-    byte_4C34D75 = 1;
+    sub_1C37058(&TerminalPramsManager_TypeInfo);
+    byte_4C4035F = 1;
   }
   v3 = TerminalPramsManager_TypeInfo;
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -16107,10 +16107,10 @@ void TerminalPramsManager__set_BeforeTimeEventDailyPoint(int64_t value, const Me
 {
   TerminalPramsManager_c *v3; // x0
 
-  if ( (byte_4C34CFA & 1) == 0 )
+  if ( (byte_4C402E4 & 1) == 0 )
   {
-    sub_1C32C20(&TerminalPramsManager_TypeInfo);
-    byte_4C34CFA = 1;
+    sub_1C37058(&TerminalPramsManager_TypeInfo);
+    byte_4C402E4 = 1;
   }
   v3 = TerminalPramsManager_TypeInfo;
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -16126,10 +16126,10 @@ void TerminalPramsManager__set_BlankEarthAfterActionFocusSpotId(int32_t value, c
 {
   TerminalPramsManager_c *v3; // x0
 
-  if ( (byte_4C34D2C & 1) == 0 )
+  if ( (byte_4C40316 & 1) == 0 )
   {
-    sub_1C32C20(&TerminalPramsManager_TypeInfo);
-    byte_4C34D2C = 1;
+    sub_1C37058(&TerminalPramsManager_TypeInfo);
+    byte_4C40316 = 1;
   }
   v3 = TerminalPramsManager_TypeInfo;
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -16145,10 +16145,10 @@ void TerminalPramsManager__set_BlankEarthRank(int32_t value, const MethodInfo *m
 {
   TerminalPramsManager_c *v3; // x0
 
-  if ( (byte_4C34D30 & 1) == 0 )
+  if ( (byte_4C4031A & 1) == 0 )
   {
-    sub_1C32C20(&TerminalPramsManager_TypeInfo);
-    byte_4C34D30 = 1;
+    sub_1C37058(&TerminalPramsManager_TypeInfo);
+    byte_4C4031A = 1;
   }
   v3 = TerminalPramsManager_TypeInfo;
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -16164,10 +16164,10 @@ void TerminalPramsManager__set_BlankEarthSpotId(int32_t value, const MethodInfo 
 {
   TerminalPramsManager_c *v3; // x0
 
-  if ( (byte_4C34D2A & 1) == 0 )
+  if ( (byte_4C40314 & 1) == 0 )
   {
-    sub_1C32C20(&TerminalPramsManager_TypeInfo);
-    byte_4C34D2A = 1;
+    sub_1C37058(&TerminalPramsManager_TypeInfo);
+    byte_4C40314 = 1;
   }
   v3 = TerminalPramsManager_TypeInfo;
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -16186,10 +16186,10 @@ void TerminalPramsManager__set_BlankEarthTransformData(BlankEarthTransform_o *va
   TerminalPramsManager_c *v5; // x0
   struct TerminalPramsManager_StaticFields *static_fields; // x8
 
-  if ( (byte_4C34D2E & 1) == 0 )
+  if ( (byte_4C40318 & 1) == 0 )
   {
-    sub_1C32C20(&TerminalPramsManager_TypeInfo);
-    byte_4C34D2E = 1;
+    sub_1C37058(&TerminalPramsManager_TypeInfo);
+    byte_4C40318 = 1;
   }
   v5 = TerminalPramsManager_TypeInfo;
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -16199,7 +16199,7 @@ void TerminalPramsManager__set_BlankEarthTransformData(BlankEarthTransform_o *va
   }
   static_fields = v5->static_fields;
   static_fields->_BlankEarthTransformData_k__BackingField = value;
-  sub_1C32BC4((CGThumbnailListItem_o *)&static_fields->_BlankEarthTransformData_k__BackingField, (int32_t)value, v2, v3);
+  sub_1C36FFC((CGThumbnailListItem_o *)&static_fields->_BlankEarthTransformData_k__BackingField, (int32_t)value, v2, v3);
 }
 
 
@@ -16207,10 +16207,10 @@ void TerminalPramsManager__set_CaldeaGateFolderFocusWarId(int32_t value, const M
 {
   TerminalPramsManager_c *v3; // x0
 
-  if ( (byte_4C34D42 & 1) == 0 )
+  if ( (byte_4C4032C & 1) == 0 )
   {
-    sub_1C32C20(&TerminalPramsManager_TypeInfo);
-    byte_4C34D42 = 1;
+    sub_1C37058(&TerminalPramsManager_TypeInfo);
+    byte_4C4032C = 1;
   }
   v3 = TerminalPramsManager_TypeInfo;
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -16229,10 +16229,10 @@ void TerminalPramsManager__set_CampaignBonus(CommonUI_CampaignBonusData_array *v
   TerminalPramsManager_c *v5; // x0
   struct TerminalPramsManager_StaticFields *static_fields; // x0
 
-  if ( (byte_4C34CD1 & 1) == 0 )
+  if ( (byte_4C402BB & 1) == 0 )
   {
-    sub_1C32C20(&TerminalPramsManager_TypeInfo);
-    byte_4C34CD1 = 1;
+    sub_1C37058(&TerminalPramsManager_TypeInfo);
+    byte_4C402BB = 1;
   }
   v5 = TerminalPramsManager_TypeInfo;
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -16242,7 +16242,7 @@ void TerminalPramsManager__set_CampaignBonus(CommonUI_CampaignBonusData_array *v
   }
   static_fields = v5->static_fields;
   static_fields->_CampaignBonus_k__BackingField = value;
-  sub_1C32BC4((CGThumbnailListItem_o *)&static_fields->_CampaignBonus_k__BackingField, (int32_t)value, v2, v3);
+  sub_1C36FFC((CGThumbnailListItem_o *)&static_fields->_CampaignBonus_k__BackingField, (int32_t)value, v2, v3);
 }
 
 
@@ -16255,10 +16255,10 @@ void TerminalPramsManager__set_CampaignDirectBonus(
   TerminalPramsManager_c *v5; // x0
   struct TerminalPramsManager_StaticFields *static_fields; // x0
 
-  if ( (byte_4C34CD3 & 1) == 0 )
+  if ( (byte_4C402BD & 1) == 0 )
   {
-    sub_1C32C20(&TerminalPramsManager_TypeInfo);
-    byte_4C34CD3 = 1;
+    sub_1C37058(&TerminalPramsManager_TypeInfo);
+    byte_4C402BD = 1;
   }
   v5 = TerminalPramsManager_TypeInfo;
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -16268,7 +16268,7 @@ void TerminalPramsManager__set_CampaignDirectBonus(
   }
   static_fields = v5->static_fields;
   static_fields->_CampaignDirectBonus_k__BackingField = value;
-  sub_1C32BC4((CGThumbnailListItem_o *)&static_fields->_CampaignDirectBonus_k__BackingField, (int32_t)value, v2, v3);
+  sub_1C36FFC((CGThumbnailListItem_o *)&static_fields->_CampaignDirectBonus_k__BackingField, (int32_t)value, v2, v3);
 }
 
 
@@ -16279,10 +16279,10 @@ void TerminalPramsManager__set_ClearEventQuestIds(System_String_o *value, const 
   TerminalPramsManager_c *v5; // x0
   struct TerminalPramsManager_StaticFields *static_fields; // x8
 
-  if ( (byte_4C34D04 & 1) == 0 )
+  if ( (byte_4C402EE & 1) == 0 )
   {
-    sub_1C32C20(&TerminalPramsManager_TypeInfo);
-    byte_4C34D04 = 1;
+    sub_1C37058(&TerminalPramsManager_TypeInfo);
+    byte_4C402EE = 1;
   }
   v5 = TerminalPramsManager_TypeInfo;
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -16292,7 +16292,7 @@ void TerminalPramsManager__set_ClearEventQuestIds(System_String_o *value, const 
   }
   static_fields = v5->static_fields;
   static_fields->_ClearEventQuestIds_k__BackingField = value;
-  sub_1C32BC4((CGThumbnailListItem_o *)&static_fields->_ClearEventQuestIds_k__BackingField, (int32_t)value, v2, v3);
+  sub_1C36FFC((CGThumbnailListItem_o *)&static_fields->_ClearEventQuestIds_k__BackingField, (int32_t)value, v2, v3);
 }
 
 
@@ -16300,10 +16300,10 @@ void TerminalPramsManager__set_CurrentWaveNum(int32_t value, const MethodInfo *m
 {
   TerminalPramsManager_c *v3; // x0
 
-  if ( (byte_4C34D46 & 1) == 0 )
+  if ( (byte_4C40330 & 1) == 0 )
   {
-    sub_1C32C20(&TerminalPramsManager_TypeInfo);
-    byte_4C34D46 = 1;
+    sub_1C37058(&TerminalPramsManager_TypeInfo);
+    byte_4C40330 = 1;
   }
   v3 = TerminalPramsManager_TypeInfo;
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -16319,10 +16319,10 @@ void TerminalPramsManager__set_DataLostBattleEventId(int32_t value, const Method
 {
   TerminalPramsManager_c *v3; // x0
 
-  if ( (byte_4C34CBF & 1) == 0 )
+  if ( (byte_4C402A9 & 1) == 0 )
   {
-    sub_1C32C20(&TerminalPramsManager_TypeInfo);
-    byte_4C34CBF = 1;
+    sub_1C37058(&TerminalPramsManager_TypeInfo);
+    byte_4C402A9 = 1;
   }
   v3 = TerminalPramsManager_TypeInfo;
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -16338,10 +16338,10 @@ void TerminalPramsManager__set_DataLostBattleResetFadeInTime(float value, const 
 {
   TerminalPramsManager_c *v3; // x0
 
-  if ( (byte_4C34CC7 & 1) == 0 )
+  if ( (byte_4C402B1 & 1) == 0 )
   {
-    sub_1C32C20(&TerminalPramsManager_TypeInfo);
-    byte_4C34CC7 = 1;
+    sub_1C37058(&TerminalPramsManager_TypeInfo);
+    byte_4C402B1 = 1;
   }
   v3 = TerminalPramsManager_TypeInfo;
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -16357,10 +16357,10 @@ void TerminalPramsManager__set_DataLostBattleWarId(int32_t value, const MethodIn
 {
   TerminalPramsManager_c *v3; // x0
 
-  if ( (byte_4C34CC1 & 1) == 0 )
+  if ( (byte_4C402AB & 1) == 0 )
   {
-    sub_1C32C20(&TerminalPramsManager_TypeInfo);
-    byte_4C34CC1 = 1;
+    sub_1C37058(&TerminalPramsManager_TypeInfo);
+    byte_4C402AB = 1;
   }
   v3 = TerminalPramsManager_TypeInfo;
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -16376,10 +16376,10 @@ void TerminalPramsManager__set_Debug_IsBuildInfoDisp(bool value, const MethodInf
 {
   TerminalPramsManager_c *v3; // x0
 
-  if ( (byte_4C34D4F & 1) == 0 )
+  if ( (byte_4C40339 & 1) == 0 )
   {
-    sub_1C32C20(&TerminalPramsManager_TypeInfo);
-    byte_4C34D4F = 1;
+    sub_1C37058(&TerminalPramsManager_TypeInfo);
+    byte_4C40339 = 1;
   }
   v3 = TerminalPramsManager_TypeInfo;
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -16395,10 +16395,10 @@ void TerminalPramsManager__set_Debug_IsDummyErrorSelect(bool value, const Method
 {
   TerminalPramsManager_c *v3; // x0
 
-  if ( (byte_4C34D4E & 1) == 0 )
+  if ( (byte_4C40338 & 1) == 0 )
   {
-    sub_1C32C20(&TerminalPramsManager_TypeInfo);
-    byte_4C34D4E = 1;
+    sub_1C37058(&TerminalPramsManager_TypeInfo);
+    byte_4C40338 = 1;
   }
   v3 = TerminalPramsManager_TypeInfo;
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -16414,10 +16414,10 @@ void TerminalPramsManager__set_Debug_IsQuestReleaseAll(bool value, const MethodI
 {
   TerminalPramsManager_c *v3; // x0
 
-  if ( (byte_4C34D4C & 1) == 0 )
+  if ( (byte_4C40336 & 1) == 0 )
   {
-    sub_1C32C20(&TerminalPramsManager_TypeInfo);
-    byte_4C34D4C = 1;
+    sub_1C37058(&TerminalPramsManager_TypeInfo);
+    byte_4C40336 = 1;
   }
   v3 = TerminalPramsManager_TypeInfo;
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -16433,10 +16433,10 @@ void TerminalPramsManager__set_Debug_IsWarStartActionSkip(bool value, const Meth
 {
   TerminalPramsManager_c *v3; // x0
 
-  if ( (byte_4C34D4D & 1) == 0 )
+  if ( (byte_4C40337 & 1) == 0 )
   {
-    sub_1C32C20(&TerminalPramsManager_TypeInfo);
-    byte_4C34D4D = 1;
+    sub_1C37058(&TerminalPramsManager_TypeInfo);
+    byte_4C40337 = 1;
   }
   v3 = TerminalPramsManager_TypeInfo;
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -16452,10 +16452,10 @@ void TerminalPramsManager__set_DispState(int32_t value, const MethodInfo *method
 {
   TerminalPramsManager_c *v3; // x0
 
-  if ( (byte_4C34C6F & 1) == 0 )
+  if ( (byte_4C40259 & 1) == 0 )
   {
-    sub_1C32C20(&TerminalPramsManager_TypeInfo);
-    byte_4C34C6F = 1;
+    sub_1C37058(&TerminalPramsManager_TypeInfo);
+    byte_4C40259 = 1;
   }
   v3 = TerminalPramsManager_TypeInfo;
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -16471,10 +16471,10 @@ void TerminalPramsManager__set_EndTime(int64_t value, const MethodInfo *method)
 {
   TerminalPramsManager_c *v3; // x0
 
-  if ( (byte_4C34CB5 & 1) == 0 )
+  if ( (byte_4C4029F & 1) == 0 )
   {
-    sub_1C32C20(&TerminalPramsManager_TypeInfo);
-    byte_4C34CB5 = 1;
+    sub_1C37058(&TerminalPramsManager_TypeInfo);
+    byte_4C4029F = 1;
   }
   v3 = TerminalPramsManager_TypeInfo;
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -16490,10 +16490,10 @@ void TerminalPramsManager__set_EventActionQuestId(int32_t value, const MethodInf
 {
   TerminalPramsManager_c *v3; // x0
 
-  if ( (byte_4C34CD5 & 1) == 0 )
+  if ( (byte_4C402BF & 1) == 0 )
   {
-    sub_1C32C20(&TerminalPramsManager_TypeInfo);
-    byte_4C34CD5 = 1;
+    sub_1C37058(&TerminalPramsManager_TypeInfo);
+    byte_4C402BF = 1;
   }
   v3 = TerminalPramsManager_TypeInfo;
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -16509,10 +16509,10 @@ void TerminalPramsManager__set_EventActivityPointEffectState(int32_t value, cons
 {
   TerminalPramsManager_c *v3; // x0
 
-  if ( (byte_4C34D0A & 1) == 0 )
+  if ( (byte_4C402F4 & 1) == 0 )
   {
-    sub_1C32C20(&TerminalPramsManager_TypeInfo);
-    byte_4C34D0A = 1;
+    sub_1C37058(&TerminalPramsManager_TypeInfo);
+    byte_4C402F4 = 1;
   }
   v3 = TerminalPramsManager_TypeInfo;
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -16528,10 +16528,10 @@ void TerminalPramsManager__set_EventBoardGameSquareIndex(int32_t value, const Me
 {
   TerminalPramsManager_c *v3; // x0
 
-  if ( (byte_4C34D12 & 1) == 0 )
+  if ( (byte_4C402FC & 1) == 0 )
   {
-    sub_1C32C20(&TerminalPramsManager_TypeInfo);
-    byte_4C34D12 = 1;
+    sub_1C37058(&TerminalPramsManager_TypeInfo);
+    byte_4C402FC = 1;
   }
   v3 = TerminalPramsManager_TypeInfo;
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -16547,10 +16547,10 @@ void TerminalPramsManager__set_EventDailyPointEventId(int32_t value, const Metho
 {
   TerminalPramsManager_c *v3; // x0
 
-  if ( (byte_4C34CFC & 1) == 0 )
+  if ( (byte_4C402E6 & 1) == 0 )
   {
-    sub_1C32C20(&TerminalPramsManager_TypeInfo);
-    byte_4C34CFC = 1;
+    sub_1C37058(&TerminalPramsManager_TypeInfo);
+    byte_4C402E6 = 1;
   }
   v3 = TerminalPramsManager_TypeInfo;
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -16566,10 +16566,10 @@ void TerminalPramsManager__set_EventDailyPointItem(int32_t value, const MethodIn
 {
   TerminalPramsManager_c *v3; // x0
 
-  if ( (byte_4C34CF8 & 1) == 0 )
+  if ( (byte_4C402E2 & 1) == 0 )
   {
-    sub_1C32C20(&TerminalPramsManager_TypeInfo);
-    byte_4C34CF8 = 1;
+    sub_1C37058(&TerminalPramsManager_TypeInfo);
+    byte_4C402E2 = 1;
   }
   v3 = TerminalPramsManager_TypeInfo;
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -16585,10 +16585,10 @@ void TerminalPramsManager__set_EventMuralId(int32_t value, const MethodInfo *met
 {
   TerminalPramsManager_c *v3; // x0
 
-  if ( (byte_4C34C9F & 1) == 0 )
+  if ( (byte_4C40289 & 1) == 0 )
   {
-    sub_1C32C20(&TerminalPramsManager_TypeInfo);
-    byte_4C34C9F = 1;
+    sub_1C37058(&TerminalPramsManager_TypeInfo);
+    byte_4C40289 = 1;
   }
   v3 = TerminalPramsManager_TypeInfo;
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -16609,10 +16609,10 @@ void TerminalPramsManager__set_EventRaidDefeatedEffectInfo(
   TerminalPramsManager_c *v5; // x0
   struct TerminalPramsManager_StaticFields *static_fields; // x8
 
-  if ( (byte_4C34D0E & 1) == 0 )
+  if ( (byte_4C402F8 & 1) == 0 )
   {
-    sub_1C32C20(&TerminalPramsManager_TypeInfo);
-    byte_4C34D0E = 1;
+    sub_1C37058(&TerminalPramsManager_TypeInfo);
+    byte_4C402F8 = 1;
   }
   v5 = TerminalPramsManager_TypeInfo;
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -16622,7 +16622,7 @@ void TerminalPramsManager__set_EventRaidDefeatedEffectInfo(
   }
   static_fields = v5->static_fields;
   static_fields->_EventRaidDefeatedEffectInfo_k__BackingField = value;
-  sub_1C32BC4(
+  sub_1C36FFC(
     (CGThumbnailListItem_o *)&static_fields->_EventRaidDefeatedEffectInfo_k__BackingField,
     (int32_t)value,
     v2,
@@ -16634,10 +16634,10 @@ void TerminalPramsManager__set_EventUIEffectClearQuestId(int32_t value, const Me
 {
   TerminalPramsManager_c *v3; // x0
 
-  if ( (byte_4C34D36 & 1) == 0 )
+  if ( (byte_4C40320 & 1) == 0 )
   {
-    sub_1C32C20(&TerminalPramsManager_TypeInfo);
-    byte_4C34D36 = 1;
+    sub_1C37058(&TerminalPramsManager_TypeInfo);
+    byte_4C40320 = 1;
   }
   v3 = TerminalPramsManager_TypeInfo;
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -16653,10 +16653,10 @@ void TerminalPramsManager__set_EventUiWarId(int32_t value, const MethodInfo *met
 {
   TerminalPramsManager_c *v3; // x0
 
-  if ( (byte_4C34D77 & 1) == 0 )
+  if ( (byte_4C40361 & 1) == 0 )
   {
-    sub_1C32C20(&TerminalPramsManager_TypeInfo);
-    byte_4C34D77 = 1;
+    sub_1C37058(&TerminalPramsManager_TypeInfo);
+    byte_4C40361 = 1;
   }
   v3 = TerminalPramsManager_TypeInfo;
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -16677,10 +16677,10 @@ void TerminalPramsManager__set_ForcePlayEventTutorialArray(
   TerminalPramsManager_c *v5; // x0
   struct TerminalPramsManager_StaticFields *static_fields; // x8
 
-  if ( (byte_4C34D81 & 1) == 0 )
+  if ( (byte_4C4036B & 1) == 0 )
   {
-    sub_1C32C20(&TerminalPramsManager_TypeInfo);
-    byte_4C34D81 = 1;
+    sub_1C37058(&TerminalPramsManager_TypeInfo);
+    byte_4C4036B = 1;
   }
   v5 = TerminalPramsManager_TypeInfo;
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -16690,7 +16690,7 @@ void TerminalPramsManager__set_ForcePlayEventTutorialArray(
   }
   static_fields = v5->static_fields;
   static_fields->_ForcePlayEventTutorialArray_k__BackingField = value;
-  sub_1C32BC4(
+  sub_1C36FFC(
     (CGThumbnailListItem_o *)&static_fields->_ForcePlayEventTutorialArray_k__BackingField,
     (int32_t)value,
     v2,
@@ -16702,10 +16702,10 @@ void TerminalPramsManager__set_FriendshipQuestDialogOpenId(int32_t value, const 
 {
   TerminalPramsManager_c *v3; // x0
 
-  if ( (byte_4C34D6B & 1) == 0 )
+  if ( (byte_4C40355 & 1) == 0 )
   {
-    sub_1C32C20(&TerminalPramsManager_TypeInfo);
-    byte_4C34D6B = 1;
+    sub_1C37058(&TerminalPramsManager_TypeInfo);
+    byte_4C40355 = 1;
   }
   v3 = TerminalPramsManager_TypeInfo;
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -16721,10 +16721,10 @@ void TerminalPramsManager__set_IsAutoFolder(bool value, const MethodInfo *method
 {
   TerminalPramsManager_c *v3; // x0
 
-  if ( (byte_4C34D59 & 1) == 0 )
+  if ( (byte_4C40343 & 1) == 0 )
   {
-    sub_1C32C20(&TerminalPramsManager_TypeInfo);
-    byte_4C34D59 = 1;
+    sub_1C37058(&TerminalPramsManager_TypeInfo);
+    byte_4C40343 = 1;
   }
   v3 = TerminalPramsManager_TypeInfo;
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -16740,10 +16740,10 @@ void TerminalPramsManager__set_IsAutoNoSe(bool value, const MethodInfo *method)
 {
   TerminalPramsManager_c *v3; // x0
 
-  if ( (byte_4C34D5D & 1) == 0 )
+  if ( (byte_4C40347 & 1) == 0 )
   {
-    sub_1C32C20(&TerminalPramsManager_TypeInfo);
-    byte_4C34D5D = 1;
+    sub_1C37058(&TerminalPramsManager_TypeInfo);
+    byte_4C40347 = 1;
   }
   v3 = TerminalPramsManager_TypeInfo;
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -16761,18 +16761,18 @@ void TerminalPramsManager__set_IsAutoOpenMasterMission(bool value, const MethodI
   TerminalPramsManager_c *v4; // x0
   struct TerminalPramsManager_StaticFields *static_fields; // x8
 
-  if ( (byte_4C34D87 & 1) == 0 )
+  if ( (byte_4C40371 & 1) == 0 )
   {
-    sub_1C32C20(&TerminalPramsManager_TypeInfo);
-    byte_4C34D87 = 1;
+    sub_1C37058(&TerminalPramsManager_TypeInfo);
+    byte_4C40371 = 1;
   }
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(TerminalPramsManager_TypeInfo);
   v3 = value;
-  if ( !byte_4C3219C )
+  if ( !byte_4C3D786 )
   {
-    sub_1C32C20(&TerminalPramsManager_TypeInfo);
-    byte_4C3219C = 1;
+    sub_1C37058(&TerminalPramsManager_TypeInfo);
+    byte_4C3D786 = 1;
   }
   v4 = TerminalPramsManager_TypeInfo;
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -16790,10 +16790,10 @@ void TerminalPramsManager__set_IsAutoResume(bool value, const MethodInfo *method
 {
   TerminalPramsManager_c *v3; // x0
 
-  if ( (byte_4C34D53 & 1) == 0 )
+  if ( (byte_4C4033D & 1) == 0 )
   {
-    sub_1C32C20(&TerminalPramsManager_TypeInfo);
-    byte_4C34D53 = 1;
+    sub_1C37058(&TerminalPramsManager_TypeInfo);
+    byte_4C4033D = 1;
   }
   v3 = TerminalPramsManager_TypeInfo;
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -16809,10 +16809,10 @@ void TerminalPramsManager__set_IsAutoShortcut(bool value, const MethodInfo *meth
 {
   TerminalPramsManager_c *v3; // x0
 
-  if ( (byte_4C34D55 & 1) == 0 )
+  if ( (byte_4C4033F & 1) == 0 )
   {
-    sub_1C32C20(&TerminalPramsManager_TypeInfo);
-    byte_4C34D55 = 1;
+    sub_1C37058(&TerminalPramsManager_TypeInfo);
+    byte_4C4033F = 1;
   }
   v3 = TerminalPramsManager_TypeInfo;
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -16828,10 +16828,10 @@ void TerminalPramsManager__set_IsBackQuestBoardDisable(bool value, const MethodI
 {
   TerminalPramsManager_c *v3; // x0
 
-  if ( (byte_4C34D73 & 1) == 0 )
+  if ( (byte_4C4035D & 1) == 0 )
   {
-    sub_1C32C20(&TerminalPramsManager_TypeInfo);
-    byte_4C34D73 = 1;
+    sub_1C37058(&TerminalPramsManager_TypeInfo);
+    byte_4C4035D = 1;
   }
   v3 = TerminalPramsManager_TypeInfo;
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -16847,10 +16847,10 @@ void TerminalPramsManager__set_IsBlankEarthShortcutMoving(bool value, const Meth
 {
   TerminalPramsManager_c *v3; // x0
 
-  if ( (byte_4C34D32 & 1) == 0 )
+  if ( (byte_4C4031C & 1) == 0 )
   {
-    sub_1C32C20(&TerminalPramsManager_TypeInfo);
-    byte_4C34D32 = 1;
+    sub_1C37058(&TerminalPramsManager_TypeInfo);
+    byte_4C4031C = 1;
   }
   v3 = TerminalPramsManager_TypeInfo;
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -16866,10 +16866,10 @@ void TerminalPramsManager__set_IsCheckHomeExpirationDateEventMap(bool value, con
 {
   TerminalPramsManager_c *v3; // x0
 
-  if ( (byte_4C34D5F & 1) == 0 )
+  if ( (byte_4C40349 & 1) == 0 )
   {
-    sub_1C32C20(&TerminalPramsManager_TypeInfo);
-    byte_4C34D5F = 1;
+    sub_1C37058(&TerminalPramsManager_TypeInfo);
+    byte_4C40349 = 1;
   }
   v3 = TerminalPramsManager_TypeInfo;
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -16885,10 +16885,10 @@ void TerminalPramsManager__set_IsDataLostBattleAutoReset(bool value, const Metho
 {
   TerminalPramsManager_c *v3; // x0
 
-  if ( (byte_4C34CBD & 1) == 0 )
+  if ( (byte_4C402A7 & 1) == 0 )
   {
-    sub_1C32C20(&TerminalPramsManager_TypeInfo);
-    byte_4C34CBD = 1;
+    sub_1C37058(&TerminalPramsManager_TypeInfo);
+    byte_4C402A7 = 1;
   }
   v3 = TerminalPramsManager_TypeInfo;
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -16904,10 +16904,10 @@ void TerminalPramsManager__set_IsDataLostBattleNoticePause(bool value, const Met
 {
   TerminalPramsManager_c *v3; // x0
 
-  if ( (byte_4C34CC9 & 1) == 0 )
+  if ( (byte_4C402B3 & 1) == 0 )
   {
-    sub_1C32C20(&TerminalPramsManager_TypeInfo);
-    byte_4C34CC9 = 1;
+    sub_1C37058(&TerminalPramsManager_TypeInfo);
+    byte_4C402B3 = 1;
   }
   v3 = TerminalPramsManager_TypeInfo;
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -16923,10 +16923,10 @@ void TerminalPramsManager__set_IsDataLostBattleResetFadeIn(bool value, const Met
 {
   TerminalPramsManager_c *v3; // x0
 
-  if ( (byte_4C34CC5 & 1) == 0 )
+  if ( (byte_4C402AF & 1) == 0 )
   {
-    sub_1C32C20(&TerminalPramsManager_TypeInfo);
-    byte_4C34CC5 = 1;
+    sub_1C37058(&TerminalPramsManager_TypeInfo);
+    byte_4C402AF = 1;
   }
   v3 = TerminalPramsManager_TypeInfo;
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -16942,10 +16942,10 @@ void TerminalPramsManager__set_IsDirectTransition(bool value, const MethodInfo *
 {
   TerminalPramsManager_c *v3; // x0
 
-  if ( (byte_4C34D3E & 1) == 0 )
+  if ( (byte_4C40328 & 1) == 0 )
   {
-    sub_1C32C20(&TerminalPramsManager_TypeInfo);
-    byte_4C34D3E = 1;
+    sub_1C37058(&TerminalPramsManager_TypeInfo);
+    byte_4C40328 = 1;
   }
   v3 = TerminalPramsManager_TypeInfo;
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -16961,10 +16961,10 @@ void TerminalPramsManager__set_IsDispDone_AutoWebView(bool value, const MethodIn
 {
   TerminalPramsManager_c *v3; // x0
 
-  if ( (byte_4C34C93 & 1) == 0 )
+  if ( (byte_4C4027D & 1) == 0 )
   {
-    sub_1C32C20(&TerminalPramsManager_TypeInfo);
-    byte_4C34C93 = 1;
+    sub_1C37058(&TerminalPramsManager_TypeInfo);
+    byte_4C4027D = 1;
   }
   v3 = TerminalPramsManager_TypeInfo;
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -16980,10 +16980,10 @@ void TerminalPramsManager__set_IsDispDone_UIStandFigure(bool value, const Method
 {
   TerminalPramsManager_c *v3; // x0
 
-  if ( (byte_4C34C95 & 1) == 0 )
+  if ( (byte_4C4027F & 1) == 0 )
   {
-    sub_1C32C20(&TerminalPramsManager_TypeInfo);
-    byte_4C34C95 = 1;
+    sub_1C37058(&TerminalPramsManager_TypeInfo);
+    byte_4C4027F = 1;
   }
   v3 = TerminalPramsManager_TypeInfo;
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -16999,10 +16999,10 @@ void TerminalPramsManager__set_IsDispOnly(bool value, const MethodInfo *method)
 {
   TerminalPramsManager_c *v3; // x0
 
-  if ( (byte_4C34CA7 & 1) == 0 )
+  if ( (byte_4C40291 & 1) == 0 )
   {
-    sub_1C32C20(&TerminalPramsManager_TypeInfo);
-    byte_4C34CA7 = 1;
+    sub_1C37058(&TerminalPramsManager_TypeInfo);
+    byte_4C40291 = 1;
   }
   v3 = TerminalPramsManager_TypeInfo;
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -17018,10 +17018,10 @@ void TerminalPramsManager__set_IsDispUIStandFigure(bool value, const MethodInfo 
 {
   TerminalPramsManager_c *v3; // x0
 
-  if ( (byte_4C34C97 & 1) == 0 )
+  if ( (byte_4C40281 & 1) == 0 )
   {
-    sub_1C32C20(&TerminalPramsManager_TypeInfo);
-    byte_4C34C97 = 1;
+    sub_1C37058(&TerminalPramsManager_TypeInfo);
+    byte_4C40281 = 1;
   }
   v3 = TerminalPramsManager_TypeInfo;
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -17037,10 +17037,10 @@ void TerminalPramsManager__set_IsDoneShortcut(bool value, const MethodInfo *meth
 {
   TerminalPramsManager_c *v3; // x0
 
-  if ( (byte_4C34C7D & 1) == 0 )
+  if ( (byte_4C40267 & 1) == 0 )
   {
-    sub_1C32C20(&TerminalPramsManager_TypeInfo);
-    byte_4C34C7D = 1;
+    sub_1C37058(&TerminalPramsManager_TypeInfo);
+    byte_4C40267 = 1;
   }
   v3 = TerminalPramsManager_TypeInfo;
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -17056,10 +17056,10 @@ void TerminalPramsManager__set_IsErrorDialogReturnTerminal(bool value, const Met
 {
   TerminalPramsManager_c *v3; // x0
 
-  if ( (byte_4C34D7B & 1) == 0 )
+  if ( (byte_4C40365 & 1) == 0 )
   {
-    sub_1C32C20(&TerminalPramsManager_TypeInfo);
-    byte_4C34D7B = 1;
+    sub_1C37058(&TerminalPramsManager_TypeInfo);
+    byte_4C40365 = 1;
   }
   v3 = TerminalPramsManager_TypeInfo;
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -17075,10 +17075,10 @@ void TerminalPramsManager__set_IsEventBoardGameDiceBtnActive(bool value, const M
 {
   TerminalPramsManager_c *v3; // x0
 
-  if ( (byte_4C34D14 & 1) == 0 )
+  if ( (byte_4C402FE & 1) == 0 )
   {
-    sub_1C32C20(&TerminalPramsManager_TypeInfo);
-    byte_4C34D14 = 1;
+    sub_1C37058(&TerminalPramsManager_TypeInfo);
+    byte_4C402FE = 1;
   }
   v3 = TerminalPramsManager_TypeInfo;
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -17094,10 +17094,10 @@ void TerminalPramsManager__set_IsForceFocusTerminalQuestId(bool value, const Met
 {
   TerminalPramsManager_c *v3; // x0
 
-  if ( (byte_4C34C85 & 1) == 0 )
+  if ( (byte_4C4026F & 1) == 0 )
   {
-    sub_1C32C20(&TerminalPramsManager_TypeInfo);
-    byte_4C34C85 = 1;
+    sub_1C37058(&TerminalPramsManager_TypeInfo);
+    byte_4C4026F = 1;
   }
   v3 = TerminalPramsManager_TypeInfo;
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -17113,10 +17113,10 @@ void TerminalPramsManager__set_IsFromRecollectionBoard(bool value, const MethodI
 {
   TerminalPramsManager_c *v3; // x0
 
-  if ( (byte_4C34C83 & 1) == 0 )
+  if ( (byte_4C4026D & 1) == 0 )
   {
-    sub_1C32C20(&TerminalPramsManager_TypeInfo);
-    byte_4C34C83 = 1;
+    sub_1C37058(&TerminalPramsManager_TypeInfo);
+    byte_4C4026D = 1;
   }
   v3 = TerminalPramsManager_TypeInfo;
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -17132,10 +17132,10 @@ void TerminalPramsManager__set_IsInvisibleConnectAndLoad(bool value, const Metho
 {
   TerminalPramsManager_c *v3; // x0
 
-  if ( (byte_4C34D4B & 1) == 0 )
+  if ( (byte_4C40335 & 1) == 0 )
   {
-    sub_1C32C20(&TerminalPramsManager_TypeInfo);
-    byte_4C34D4B = 1;
+    sub_1C37058(&TerminalPramsManager_TypeInfo);
+    byte_4C40335 = 1;
   }
   v3 = TerminalPramsManager_TypeInfo;
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -17151,10 +17151,10 @@ void TerminalPramsManager__set_IsMainInterludeWarClear(bool value, const MethodI
 {
   TerminalPramsManager_c *v3; // x0
 
-  if ( (byte_4C34C9D & 1) == 0 )
+  if ( (byte_4C40287 & 1) == 0 )
   {
-    sub_1C32C20(&TerminalPramsManager_TypeInfo);
-    byte_4C34C9D = 1;
+    sub_1C37058(&TerminalPramsManager_TypeInfo);
+    byte_4C40287 = 1;
   }
   v3 = TerminalPramsManager_TypeInfo;
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -17170,10 +17170,10 @@ void TerminalPramsManager__set_IsMapReturnFolder(bool value, const MethodInfo *m
 {
   TerminalPramsManager_c *v3; // x0
 
-  if ( (byte_4C34D57 & 1) == 0 )
+  if ( (byte_4C40341 & 1) == 0 )
   {
-    sub_1C32C20(&TerminalPramsManager_TypeInfo);
-    byte_4C34D57 = 1;
+    sub_1C37058(&TerminalPramsManager_TypeInfo);
+    byte_4C40341 = 1;
   }
   v3 = TerminalPramsManager_TypeInfo;
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -17189,10 +17189,10 @@ void TerminalPramsManager__set_IsMoveFolderByQuestAfterAction(bool value, const 
 {
   TerminalPramsManager_c *v3; // x0
 
-  if ( (byte_4C34D5B & 1) == 0 )
+  if ( (byte_4C40345 & 1) == 0 )
   {
-    sub_1C32C20(&TerminalPramsManager_TypeInfo);
-    byte_4C34D5B = 1;
+    sub_1C37058(&TerminalPramsManager_TypeInfo);
+    byte_4C40345 = 1;
   }
   v3 = TerminalPramsManager_TypeInfo;
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -17208,10 +17208,10 @@ void TerminalPramsManager__set_IsMoveToGrandQuestClassSelect(bool value, const M
 {
   TerminalPramsManager_c *v3; // x0
 
-  if ( (byte_4C34D7F & 1) == 0 )
+  if ( (byte_4C40369 & 1) == 0 )
   {
-    sub_1C32C20(&TerminalPramsManager_TypeInfo);
-    byte_4C34D7F = 1;
+    sub_1C37058(&TerminalPramsManager_TypeInfo);
+    byte_4C40369 = 1;
   }
   v3 = TerminalPramsManager_TypeInfo;
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -17227,10 +17227,10 @@ void TerminalPramsManager__set_IsOrdealCallWarClear(bool value, const MethodInfo
 {
   TerminalPramsManager_c *v3; // x0
 
-  if ( (byte_4C34C9B & 1) == 0 )
+  if ( (byte_4C40285 & 1) == 0 )
   {
-    sub_1C32C20(&TerminalPramsManager_TypeInfo);
-    byte_4C34C9B = 1;
+    sub_1C37058(&TerminalPramsManager_TypeInfo);
+    byte_4C40285 = 1;
   }
   v3 = TerminalPramsManager_TypeInfo;
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -17246,10 +17246,10 @@ void TerminalPramsManager__set_IsPhaseClear(bool value, const MethodInfo *method
 {
   TerminalPramsManager_c *v3; // x0
 
-  if ( (byte_4C34CA5 & 1) == 0 )
+  if ( (byte_4C4028F & 1) == 0 )
   {
-    sub_1C32C20(&TerminalPramsManager_TypeInfo);
-    byte_4C34CA5 = 1;
+    sub_1C37058(&TerminalPramsManager_TypeInfo);
+    byte_4C4028F = 1;
   }
   v3 = TerminalPramsManager_TypeInfo;
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -17265,10 +17265,10 @@ void TerminalPramsManager__set_IsPlayEventBoardGameArrivalEffectAuto(bool value,
 {
   TerminalPramsManager_c *v3; // x0
 
-  if ( (byte_4C34CAB & 1) == 0 )
+  if ( (byte_4C40295 & 1) == 0 )
   {
-    sub_1C32C20(&TerminalPramsManager_TypeInfo);
-    byte_4C34CAB = 1;
+    sub_1C37058(&TerminalPramsManager_TypeInfo);
+    byte_4C40295 = 1;
   }
   v3 = TerminalPramsManager_TypeInfo;
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -17284,10 +17284,10 @@ void TerminalPramsManager__set_IsPlayEventBoardGameDiceBtnActiveEffect(bool valu
 {
   TerminalPramsManager_c *v3; // x0
 
-  if ( (byte_4C34D16 & 1) == 0 )
+  if ( (byte_4C40300 & 1) == 0 )
   {
-    sub_1C32C20(&TerminalPramsManager_TypeInfo);
-    byte_4C34D16 = 1;
+    sub_1C37058(&TerminalPramsManager_TypeInfo);
+    byte_4C40300 = 1;
   }
   v3 = TerminalPramsManager_TypeInfo;
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -17303,10 +17303,10 @@ void TerminalPramsManager__set_IsPlayGetEffect(bool value, const MethodInfo *met
 {
   TerminalPramsManager_c *v3; // x0
 
-  if ( (byte_4C34CCD & 1) == 0 )
+  if ( (byte_4C402B7 & 1) == 0 )
   {
-    sub_1C32C20(&TerminalPramsManager_TypeInfo);
-    byte_4C34CCD = 1;
+    sub_1C37058(&TerminalPramsManager_TypeInfo);
+    byte_4C402B7 = 1;
   }
   v3 = TerminalPramsManager_TypeInfo;
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -17322,10 +17322,10 @@ void TerminalPramsManager__set_IsPlayScriptWithMap(bool value, const MethodInfo 
 {
   TerminalPramsManager_c *v3; // x0
 
-  if ( (byte_4C34CA9 & 1) == 0 )
+  if ( (byte_4C40293 & 1) == 0 )
   {
-    sub_1C32C20(&TerminalPramsManager_TypeInfo);
-    byte_4C34CA9 = 1;
+    sub_1C37058(&TerminalPramsManager_TypeInfo);
+    byte_4C40293 = 1;
   }
   v3 = TerminalPramsManager_TypeInfo;
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -17341,10 +17341,10 @@ void TerminalPramsManager__set_IsPlayTerminalEffectDisappear(bool value, const M
 {
   TerminalPramsManager_c *v3; // x0
 
-  if ( (byte_4C34D24 & 1) == 0 )
+  if ( (byte_4C4030E & 1) == 0 )
   {
-    sub_1C32C20(&TerminalPramsManager_TypeInfo);
-    byte_4C34D24 = 1;
+    sub_1C37058(&TerminalPramsManager_TypeInfo);
+    byte_4C4030E = 1;
   }
   v3 = TerminalPramsManager_TypeInfo;
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -17360,10 +17360,10 @@ void TerminalPramsManager__set_IsPlayTerminalEffectDisappearWarId(int32_t value,
 {
   TerminalPramsManager_c *v3; // x0
 
-  if ( (byte_4C34D26 & 1) == 0 )
+  if ( (byte_4C40310 & 1) == 0 )
   {
-    sub_1C32C20(&TerminalPramsManager_TypeInfo);
-    byte_4C34D26 = 1;
+    sub_1C37058(&TerminalPramsManager_TypeInfo);
+    byte_4C40310 = 1;
   }
   v3 = TerminalPramsManager_TypeInfo;
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -17379,10 +17379,10 @@ void TerminalPramsManager__set_IsPlayTerminalEffectNt2AfterAction(bool value, co
 {
   TerminalPramsManager_c *v3; // x0
 
-  if ( (byte_4C34D28 & 1) == 0 )
+  if ( (byte_4C40312 & 1) == 0 )
   {
-    sub_1C32C20(&TerminalPramsManager_TypeInfo);
-    byte_4C34D28 = 1;
+    sub_1C37058(&TerminalPramsManager_TypeInfo);
+    byte_4C40312 = 1;
   }
   v3 = TerminalPramsManager_TypeInfo;
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -17398,10 +17398,10 @@ void TerminalPramsManager__set_IsPlayedEntryBanner(bool value, const MethodInfo 
 {
   TerminalPramsManager_c *v3; // x0
 
-  if ( (byte_4C34CCB & 1) == 0 )
+  if ( (byte_4C402B5 & 1) == 0 )
   {
-    sub_1C32C20(&TerminalPramsManager_TypeInfo);
-    byte_4C34CCB = 1;
+    sub_1C37058(&TerminalPramsManager_TypeInfo);
+    byte_4C402B5 = 1;
   }
   v3 = TerminalPramsManager_TypeInfo;
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -17417,10 +17417,10 @@ void TerminalPramsManager__set_IsQuestClear(bool value, const MethodInfo *method
 {
   TerminalPramsManager_c *v3; // x0
 
-  if ( (byte_4C34CA3 & 1) == 0 )
+  if ( (byte_4C4028D & 1) == 0 )
   {
-    sub_1C32C20(&TerminalPramsManager_TypeInfo);
-    byte_4C34CA3 = 1;
+    sub_1C37058(&TerminalPramsManager_TypeInfo);
+    byte_4C4028D = 1;
   }
   v3 = TerminalPramsManager_TypeInfo;
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -17436,10 +17436,10 @@ void TerminalPramsManager__set_IsScriptDisp(bool value, const MethodInfo *method
 {
   TerminalPramsManager_c *v3; // x0
 
-  if ( (byte_4C34CAD & 1) == 0 )
+  if ( (byte_4C40297 & 1) == 0 )
   {
-    sub_1C32C20(&TerminalPramsManager_TypeInfo);
-    byte_4C34CAD = 1;
+    sub_1C37058(&TerminalPramsManager_TypeInfo);
+    byte_4C40297 = 1;
   }
   v3 = TerminalPramsManager_TypeInfo;
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -17455,10 +17455,10 @@ void TerminalPramsManager__set_IsSkipNoticeLoginQuestAtOnce(bool value, const Me
 {
   TerminalPramsManager_c *v3; // x0
 
-  if ( (byte_4C34D71 & 1) == 0 )
+  if ( (byte_4C4035B & 1) == 0 )
   {
-    sub_1C32C20(&TerminalPramsManager_TypeInfo);
-    byte_4C34D71 = 1;
+    sub_1C37058(&TerminalPramsManager_TypeInfo);
+    byte_4C4035B = 1;
   }
   v3 = TerminalPramsManager_TypeInfo;
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -17474,10 +17474,10 @@ void TerminalPramsManager__set_IsStopMasterFaceOverwrite(bool value, const Metho
 {
   TerminalPramsManager_c *v3; // x0
 
-  if ( (byte_4C34CC3 & 1) == 0 )
+  if ( (byte_4C402AD & 1) == 0 )
   {
-    sub_1C32C20(&TerminalPramsManager_TypeInfo);
-    byte_4C34CC3 = 1;
+    sub_1C37058(&TerminalPramsManager_TypeInfo);
+    byte_4C402AD = 1;
   }
   v3 = TerminalPramsManager_TypeInfo;
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -17493,10 +17493,10 @@ void TerminalPramsManager__set_IsTopLastIdxNextBoardRequest(bool value, const Me
 {
   TerminalPramsManager_c *v3; // x0
 
-  if ( (byte_4C34D61 & 1) == 0 )
+  if ( (byte_4C4034B & 1) == 0 )
   {
-    sub_1C32C20(&TerminalPramsManager_TypeInfo);
-    byte_4C34D61 = 1;
+    sub_1C37058(&TerminalPramsManager_TypeInfo);
+    byte_4C4034B = 1;
   }
   v3 = TerminalPramsManager_TypeInfo;
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -17512,10 +17512,10 @@ void TerminalPramsManager__set_IsTransFromOrdealCall(bool value, const MethodInf
 {
   TerminalPramsManager_c *v3; // x0
 
-  if ( (byte_4C34D3C & 1) == 0 )
+  if ( (byte_4C40326 & 1) == 0 )
   {
-    sub_1C32C20(&TerminalPramsManager_TypeInfo);
-    byte_4C34D3C = 1;
+    sub_1C37058(&TerminalPramsManager_TypeInfo);
+    byte_4C40326 = 1;
   }
   v3 = TerminalPramsManager_TypeInfo;
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -17531,10 +17531,10 @@ void TerminalPramsManager__set_IsTransOrdealCall(bool value, const MethodInfo *m
 {
   TerminalPramsManager_c *v3; // x0
 
-  if ( (byte_4C34D3A & 1) == 0 )
+  if ( (byte_4C40324 & 1) == 0 )
   {
-    sub_1C32C20(&TerminalPramsManager_TypeInfo);
-    byte_4C34D3A = 1;
+    sub_1C37058(&TerminalPramsManager_TypeInfo);
+    byte_4C40324 = 1;
   }
   v3 = TerminalPramsManager_TypeInfo;
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -17550,10 +17550,10 @@ void TerminalPramsManager__set_IsWarBoardClear(bool value, const MethodInfo *met
 {
   TerminalPramsManager_c *v3; // x0
 
-  if ( (byte_4C34CB7 & 1) == 0 )
+  if ( (byte_4C402A1 & 1) == 0 )
   {
-    sub_1C32C20(&TerminalPramsManager_TypeInfo);
-    byte_4C34CB7 = 1;
+    sub_1C37058(&TerminalPramsManager_TypeInfo);
+    byte_4C402A1 = 1;
   }
   v3 = TerminalPramsManager_TypeInfo;
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -17569,10 +17569,10 @@ void TerminalPramsManager__set_IsWarClear(bool value, const MethodInfo *method)
 {
   TerminalPramsManager_c *v3; // x0
 
-  if ( (byte_4C34C99 & 1) == 0 )
+  if ( (byte_4C40283 & 1) == 0 )
   {
-    sub_1C32C20(&TerminalPramsManager_TypeInfo);
-    byte_4C34C99 = 1;
+    sub_1C37058(&TerminalPramsManager_TypeInfo);
+    byte_4C40283 = 1;
   }
   v3 = TerminalPramsManager_TypeInfo;
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -17588,10 +17588,10 @@ void TerminalPramsManager__set_LastPlayedFreeQuestSpotId(int32_t value, const Me
 {
   TerminalPramsManager_c *v3; // x0
 
-  if ( (byte_4C34C8D & 1) == 0 )
+  if ( (byte_4C40277 & 1) == 0 )
   {
-    sub_1C32C20(&TerminalPramsManager_TypeInfo);
-    byte_4C34C8D = 1;
+    sub_1C37058(&TerminalPramsManager_TypeInfo);
+    byte_4C40277 = 1;
   }
   v3 = TerminalPramsManager_TypeInfo;
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -17607,10 +17607,10 @@ void TerminalPramsManager__set_LastPlayedQuestId(int32_t value, const MethodInfo
 {
   TerminalPramsManager_c *v3; // x0
 
-  if ( (byte_4C34C8B & 1) == 0 )
+  if ( (byte_4C40275 & 1) == 0 )
   {
-    sub_1C32C20(&TerminalPramsManager_TypeInfo);
-    byte_4C34C8B = 1;
+    sub_1C37058(&TerminalPramsManager_TypeInfo);
+    byte_4C40275 = 1;
   }
   v3 = TerminalPramsManager_TypeInfo;
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -17626,10 +17626,10 @@ void TerminalPramsManager__set_LastSelectQuestIndex(int32_t value, const MethodI
 {
   TerminalPramsManager_c *v3; // x0
 
-  if ( (byte_4C34C8F & 1) == 0 )
+  if ( (byte_4C40279 & 1) == 0 )
   {
-    sub_1C32C20(&TerminalPramsManager_TypeInfo);
-    byte_4C34C8F = 1;
+    sub_1C37058(&TerminalPramsManager_TypeInfo);
+    byte_4C40279 = 1;
   }
   v3 = TerminalPramsManager_TypeInfo;
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -17645,10 +17645,10 @@ void TerminalPramsManager__set_LimitCountUnSealQuestId(int32_t value, const Meth
 {
   TerminalPramsManager_c *v3; // x0
 
-  if ( (byte_4C34D6D & 1) == 0 )
+  if ( (byte_4C40357 & 1) == 0 )
   {
-    sub_1C32C20(&TerminalPramsManager_TypeInfo);
-    byte_4C34D6D = 1;
+    sub_1C37058(&TerminalPramsManager_TypeInfo);
+    byte_4C40357 = 1;
   }
   v3 = TerminalPramsManager_TypeInfo;
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -17664,10 +17664,10 @@ void TerminalPramsManager__set_MapModelClearPhaseCount(int32_t value, const Meth
 {
   TerminalPramsManager_c *v3; // x0
 
-  if ( (byte_4C34CBB & 1) == 0 )
+  if ( (byte_4C402A5 & 1) == 0 )
   {
-    sub_1C32C20(&TerminalPramsManager_TypeInfo);
-    byte_4C34CBB = 1;
+    sub_1C37058(&TerminalPramsManager_TypeInfo);
+    byte_4C402A5 = 1;
   }
   v3 = TerminalPramsManager_TypeInfo;
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -17683,10 +17683,10 @@ void TerminalPramsManager__set_MapModelClearQuestId(int32_t value, const MethodI
 {
   TerminalPramsManager_c *v3; // x0
 
-  if ( (byte_4C34CB9 & 1) == 0 )
+  if ( (byte_4C402A3 & 1) == 0 )
   {
-    sub_1C32C20(&TerminalPramsManager_TypeInfo);
-    byte_4C34CB9 = 1;
+    sub_1C37058(&TerminalPramsManager_TypeInfo);
+    byte_4C402A3 = 1;
   }
   v3 = TerminalPramsManager_TypeInfo;
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -17702,10 +17702,10 @@ void TerminalPramsManager__set_MasterMissionTargetType(int32_t value, const Meth
 {
   TerminalPramsManager_c *v3; // x0
 
-  if ( (byte_4C34D89 & 1) == 0 )
+  if ( (byte_4C40373 & 1) == 0 )
   {
-    sub_1C32C20(&TerminalPramsManager_TypeInfo);
-    byte_4C34D89 = 1;
+    sub_1C37058(&TerminalPramsManager_TypeInfo);
+    byte_4C40373 = 1;
   }
   v3 = TerminalPramsManager_TypeInfo;
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -17721,10 +17721,10 @@ void TerminalPramsManager__set_MessageDispType(int32_t value, const MethodInfo *
 {
   TerminalPramsManager_c *v3; // x0
 
-  if ( (byte_4C34CAF & 1) == 0 )
+  if ( (byte_4C40299 & 1) == 0 )
   {
-    sub_1C32C20(&TerminalPramsManager_TypeInfo);
-    byte_4C34CAF = 1;
+    sub_1C37058(&TerminalPramsManager_TypeInfo);
+    byte_4C40299 = 1;
   }
   v3 = TerminalPramsManager_TypeInfo;
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -17743,10 +17743,10 @@ void TerminalPramsManager__set_NoticeLastModified(System_String_o *value, const 
   TerminalPramsManager_c *v5; // x0
   struct TerminalPramsManager_StaticFields *static_fields; // x8
 
-  if ( (byte_4C34D34 & 1) == 0 )
+  if ( (byte_4C4031E & 1) == 0 )
   {
-    sub_1C32C20(&TerminalPramsManager_TypeInfo);
-    byte_4C34D34 = 1;
+    sub_1C37058(&TerminalPramsManager_TypeInfo);
+    byte_4C4031E = 1;
   }
   v5 = TerminalPramsManager_TypeInfo;
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -17756,7 +17756,7 @@ void TerminalPramsManager__set_NoticeLastModified(System_String_o *value, const 
   }
   static_fields = v5->static_fields;
   static_fields->_NoticeLastModified_k__BackingField = value;
-  sub_1C32BC4((CGThumbnailListItem_o *)&static_fields->_NoticeLastModified_k__BackingField, (int32_t)value, v2, v3);
+  sub_1C36FFC((CGThumbnailListItem_o *)&static_fields->_NoticeLastModified_k__BackingField, (int32_t)value, v2, v3);
 }
 
 
@@ -17767,10 +17767,10 @@ void TerminalPramsManager__set_OldUserEventPoint(UserEventPointEntity_array *val
   TerminalPramsManager_c *v5; // x0
   struct TerminalPramsManager_StaticFields *static_fields; // x8
 
-  if ( (byte_4C34D48 & 1) == 0 )
+  if ( (byte_4C40332 & 1) == 0 )
   {
-    sub_1C32C20(&TerminalPramsManager_TypeInfo);
-    byte_4C34D48 = 1;
+    sub_1C37058(&TerminalPramsManager_TypeInfo);
+    byte_4C40332 = 1;
   }
   v5 = TerminalPramsManager_TypeInfo;
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -17780,7 +17780,7 @@ void TerminalPramsManager__set_OldUserEventPoint(UserEventPointEntity_array *val
   }
   static_fields = v5->static_fields;
   static_fields->_OldUserEventPoint_k__BackingField = value;
-  sub_1C32BC4((CGThumbnailListItem_o *)&static_fields->_OldUserEventPoint_k__BackingField, (int32_t)value, v2, v3);
+  sub_1C36FFC((CGThumbnailListItem_o *)&static_fields->_OldUserEventPoint_k__BackingField, (int32_t)value, v2, v3);
 }
 
 
@@ -17788,10 +17788,10 @@ void TerminalPramsManager__set_PhaseCnt(int32_t value, const MethodInfo *method)
 {
   TerminalPramsManager_c *v3; // x0
 
-  if ( (byte_4C34C7B & 1) == 0 )
+  if ( (byte_4C40265 & 1) == 0 )
   {
-    sub_1C32C20(&TerminalPramsManager_TypeInfo);
-    byte_4C34C7B = 1;
+    sub_1C37058(&TerminalPramsManager_TypeInfo);
+    byte_4C40265 = 1;
   }
   v3 = TerminalPramsManager_TypeInfo;
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -17807,10 +17807,10 @@ void TerminalPramsManager__set_PlayHappinessCounterEffect(bool value, const Meth
 {
   TerminalPramsManager_c *v3; // x0
 
-  if ( (byte_4C34CA1 & 1) == 0 )
+  if ( (byte_4C4028B & 1) == 0 )
   {
-    sub_1C32C20(&TerminalPramsManager_TypeInfo);
-    byte_4C34CA1 = 1;
+    sub_1C37058(&TerminalPramsManager_TypeInfo);
+    byte_4C4028B = 1;
   }
   v3 = TerminalPramsManager_TypeInfo;
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -17829,10 +17829,10 @@ void TerminalPramsManager__set_PlayedTerminalEffects(System_String_o *value, con
   TerminalPramsManager_c *v5; // x0
   struct TerminalPramsManager_StaticFields *static_fields; // x8
 
-  if ( (byte_4C34D22 & 1) == 0 )
+  if ( (byte_4C4030C & 1) == 0 )
   {
-    sub_1C32C20(&TerminalPramsManager_TypeInfo);
-    byte_4C34D22 = 1;
+    sub_1C37058(&TerminalPramsManager_TypeInfo);
+    byte_4C4030C = 1;
   }
   v5 = TerminalPramsManager_TypeInfo;
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -17842,7 +17842,7 @@ void TerminalPramsManager__set_PlayedTerminalEffects(System_String_o *value, con
   }
   static_fields = v5->static_fields;
   static_fields->_PlayedTerminalEffects_k__BackingField = value;
-  sub_1C32BC4((CGThumbnailListItem_o *)&static_fields->_PlayedTerminalEffects_k__BackingField, (int32_t)value, v2, v3);
+  sub_1C36FFC((CGThumbnailListItem_o *)&static_fields->_PlayedTerminalEffects_k__BackingField, (int32_t)value, v2, v3);
 }
 
 
@@ -17850,10 +17850,10 @@ void TerminalPramsManager__set_PlayerGenderType(int32_t value, const MethodInfo 
 {
   TerminalPramsManager_c *v3; // x0
 
-  if ( (byte_4C34CCF & 1) == 0 )
+  if ( (byte_4C402B9 & 1) == 0 )
   {
-    sub_1C32C20(&TerminalPramsManager_TypeInfo);
-    byte_4C34CCF = 1;
+    sub_1C37058(&TerminalPramsManager_TypeInfo);
+    byte_4C402B9 = 1;
   }
   v3 = TerminalPramsManager_TypeInfo;
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -17869,10 +17869,10 @@ void TerminalPramsManager__set_QuestId(int32_t value, const MethodInfo *method)
 {
   TerminalPramsManager_c *v3; // x0
 
-  if ( (byte_4C34C79 & 1) == 0 )
+  if ( (byte_4C40263 & 1) == 0 )
   {
-    sub_1C32C20(&TerminalPramsManager_TypeInfo);
-    byte_4C34C79 = 1;
+    sub_1C37058(&TerminalPramsManager_TypeInfo);
+    byte_4C40263 = 1;
   }
   v3 = TerminalPramsManager_TypeInfo;
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -17888,10 +17888,10 @@ void TerminalPramsManager__set_QuestMessageScriptQuestId(int32_t value, const Me
 {
   TerminalPramsManager_c *v3; // x0
 
-  if ( (byte_4C34D63 & 1) == 0 )
+  if ( (byte_4C4034D & 1) == 0 )
   {
-    sub_1C32C20(&TerminalPramsManager_TypeInfo);
-    byte_4C34D63 = 1;
+    sub_1C37058(&TerminalPramsManager_TypeInfo);
+    byte_4C4034D = 1;
   }
   v3 = TerminalPramsManager_TypeInfo;
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -17907,10 +17907,10 @@ void TerminalPramsManager__set_QuestMessageScriptQuestPhase(int32_t value, const
 {
   TerminalPramsManager_c *v3; // x0
 
-  if ( (byte_4C34D65 & 1) == 0 )
+  if ( (byte_4C4034F & 1) == 0 )
   {
-    sub_1C32C20(&TerminalPramsManager_TypeInfo);
-    byte_4C34D65 = 1;
+    sub_1C37058(&TerminalPramsManager_TypeInfo);
+    byte_4C4034F = 1;
   }
   v3 = TerminalPramsManager_TypeInfo;
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -17931,10 +17931,10 @@ void TerminalPramsManager__set_QuestRandomGroupList(
   TerminalPramsManager_c *v5; // x0
   struct TerminalPramsManager_StaticFields *static_fields; // x8
 
-  if ( (byte_4C34D20 & 1) == 0 )
+  if ( (byte_4C4030A & 1) == 0 )
   {
-    sub_1C32C20(&TerminalPramsManager_TypeInfo);
-    byte_4C34D20 = 1;
+    sub_1C37058(&TerminalPramsManager_TypeInfo);
+    byte_4C4030A = 1;
   }
   v5 = TerminalPramsManager_TypeInfo;
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -17944,7 +17944,7 @@ void TerminalPramsManager__set_QuestRandomGroupList(
   }
   static_fields = v5->static_fields;
   static_fields->_QuestRandomGroupList_k__BackingField = value;
-  sub_1C32BC4((CGThumbnailListItem_o *)&static_fields->_QuestRandomGroupList_k__BackingField, (int32_t)value, v2, v3);
+  sub_1C36FFC((CGThumbnailListItem_o *)&static_fields->_QuestRandomGroupList_k__BackingField, (int32_t)value, v2, v3);
 }
 
 
@@ -17952,10 +17952,10 @@ void TerminalPramsManager__set_QuestReleaseFocusQuestId(int32_t value, const Met
 {
   TerminalPramsManager_c *v3; // x0
 
-  if ( (byte_4C34C87 & 1) == 0 )
+  if ( (byte_4C40271 & 1) == 0 )
   {
-    sub_1C32C20(&TerminalPramsManager_TypeInfo);
-    byte_4C34C87 = 1;
+    sub_1C37058(&TerminalPramsManager_TypeInfo);
+    byte_4C40271 = 1;
   }
   v3 = TerminalPramsManager_TypeInfo;
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -17974,10 +17974,10 @@ void TerminalPramsManager__set_QuestWindowMessage(System_String_o *value, const 
   TerminalPramsManager_c *v5; // x0
   struct TerminalPramsManager_StaticFields *static_fields; // x0
 
-  if ( (byte_4C34CB1 & 1) == 0 )
+  if ( (byte_4C4029B & 1) == 0 )
   {
-    sub_1C32C20(&TerminalPramsManager_TypeInfo);
-    byte_4C34CB1 = 1;
+    sub_1C37058(&TerminalPramsManager_TypeInfo);
+    byte_4C4029B = 1;
   }
   v5 = TerminalPramsManager_TypeInfo;
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -17987,7 +17987,7 @@ void TerminalPramsManager__set_QuestWindowMessage(System_String_o *value, const 
   }
   static_fields = v5->static_fields;
   static_fields->_QuestWindowMessage_k__BackingField = value;
-  sub_1C32BC4((CGThumbnailListItem_o *)&static_fields->_QuestWindowMessage_k__BackingField, (int32_t)value, v2, v3);
+  sub_1C36FFC((CGThumbnailListItem_o *)&static_fields->_QuestWindowMessage_k__BackingField, (int32_t)value, v2, v3);
 }
 
 
@@ -17998,10 +17998,10 @@ void TerminalPramsManager__set_SceneMoveQuestClearedInfo(System_String_o *value,
   TerminalPramsManager_c *v5; // x0
   struct TerminalPramsManager_StaticFields *static_fields; // x8
 
-  if ( (byte_4C34D38 & 1) == 0 )
+  if ( (byte_4C40322 & 1) == 0 )
   {
-    sub_1C32C20(&TerminalPramsManager_TypeInfo);
-    byte_4C34D38 = 1;
+    sub_1C37058(&TerminalPramsManager_TypeInfo);
+    byte_4C40322 = 1;
   }
   v5 = TerminalPramsManager_TypeInfo;
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -18011,7 +18011,7 @@ void TerminalPramsManager__set_SceneMoveQuestClearedInfo(System_String_o *value,
   }
   static_fields = v5->static_fields;
   static_fields->_SceneMoveQuestClearedInfo_k__BackingField = value;
-  sub_1C32BC4(
+  sub_1C36FFC(
     (CGThumbnailListItem_o *)&static_fields->_SceneMoveQuestClearedInfo_k__BackingField,
     (int32_t)value,
     v2,
@@ -18026,10 +18026,10 @@ void TerminalPramsManager__set_SelectedBannerEntity(BannerEntity_o *value, const
   TerminalPramsManager_c *v5; // x0
   struct TerminalPramsManager_StaticFields *static_fields; // x0
 
-  if ( (byte_4C34C89 & 1) == 0 )
+  if ( (byte_4C40273 & 1) == 0 )
   {
-    sub_1C32C20(&TerminalPramsManager_TypeInfo);
-    byte_4C34C89 = 1;
+    sub_1C37058(&TerminalPramsManager_TypeInfo);
+    byte_4C40273 = 1;
   }
   v5 = TerminalPramsManager_TypeInfo;
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -18039,7 +18039,7 @@ void TerminalPramsManager__set_SelectedBannerEntity(BannerEntity_o *value, const
   }
   static_fields = v5->static_fields;
   static_fields->_SelectedBannerEntity_k__BackingField = value;
-  sub_1C32BC4((CGThumbnailListItem_o *)&static_fields->_SelectedBannerEntity_k__BackingField, (int32_t)value, v2, v3);
+  sub_1C36FFC((CGThumbnailListItem_o *)&static_fields->_SelectedBannerEntity_k__BackingField, (int32_t)value, v2, v3);
 }
 
 
@@ -18047,10 +18047,10 @@ void TerminalPramsManager__set_SelectedRecollectionWarId(int32_t value, const Me
 {
   TerminalPramsManager_c *v3; // x0
 
-  if ( (byte_4C34C81 & 1) == 0 )
+  if ( (byte_4C4026B & 1) == 0 )
   {
-    sub_1C32C20(&TerminalPramsManager_TypeInfo);
-    byte_4C34C81 = 1;
+    sub_1C37058(&TerminalPramsManager_TypeInfo);
+    byte_4C4026B = 1;
   }
   v3 = TerminalPramsManager_TypeInfo;
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -18066,10 +18066,10 @@ void TerminalPramsManager__set_SelectedStoryQuestId(int32_t value, const MethodI
 {
   TerminalPramsManager_c *v3; // x0
 
-  if ( (byte_4C34C7F & 1) == 0 )
+  if ( (byte_4C40269 & 1) == 0 )
   {
-    sub_1C32C20(&TerminalPramsManager_TypeInfo);
-    byte_4C34C7F = 1;
+    sub_1C37058(&TerminalPramsManager_TypeInfo);
+    byte_4C40269 = 1;
   }
   v3 = TerminalPramsManager_TypeInfo;
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -18085,10 +18085,10 @@ void TerminalPramsManager__set_ShopFocusItemId(int32_t value, const MethodInfo *
 {
   TerminalPramsManager_c *v3; // x0
 
-  if ( (byte_4C34D40 & 1) == 0 )
+  if ( (byte_4C4032A & 1) == 0 )
   {
-    sub_1C32C20(&TerminalPramsManager_TypeInfo);
-    byte_4C34D40 = 1;
+    sub_1C37058(&TerminalPramsManager_TypeInfo);
+    byte_4C4032A = 1;
   }
   v3 = TerminalPramsManager_TypeInfo;
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -18107,10 +18107,10 @@ void TerminalPramsManager__set_SpecifiedChangeSceneInfo(SpecifiedSceneInfo_o *va
   TerminalPramsManager_c *v5; // x0
   struct TerminalPramsManager_StaticFields *static_fields; // x0
 
-  if ( (byte_4C34CD9 & 1) == 0 )
+  if ( (byte_4C402C3 & 1) == 0 )
   {
-    sub_1C32C20(&TerminalPramsManager_TypeInfo);
-    byte_4C34CD9 = 1;
+    sub_1C37058(&TerminalPramsManager_TypeInfo);
+    byte_4C402C3 = 1;
   }
   v5 = TerminalPramsManager_TypeInfo;
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -18120,7 +18120,7 @@ void TerminalPramsManager__set_SpecifiedChangeSceneInfo(SpecifiedSceneInfo_o *va
   }
   static_fields = v5->static_fields;
   static_fields->_SpecifiedChangeSceneInfo_k__BackingField = value;
-  sub_1C32BC4(
+  sub_1C36FFC(
     (CGThumbnailListItem_o *)&static_fields->_SpecifiedChangeSceneInfo_k__BackingField,
     (int32_t)value,
     v2,
@@ -18132,10 +18132,10 @@ void TerminalPramsManager__set_SpotId(int32_t value, const MethodInfo *method)
 {
   TerminalPramsManager_c *v3; // x0
 
-  if ( (byte_4C34C77 & 1) == 0 )
+  if ( (byte_4C40261 & 1) == 0 )
   {
-    sub_1C32C20(&TerminalPramsManager_TypeInfo);
-    byte_4C34C77 = 1;
+    sub_1C37058(&TerminalPramsManager_TypeInfo);
+    byte_4C40261 = 1;
   }
   v3 = TerminalPramsManager_TypeInfo;
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -18151,10 +18151,10 @@ void TerminalPramsManager__set_SummonId(int32_t value, const MethodInfo *method)
 {
   TerminalPramsManager_c *v3; // x0
 
-  if ( (byte_4C34C75 & 1) == 0 )
+  if ( (byte_4C4025F & 1) == 0 )
   {
-    sub_1C32C20(&TerminalPramsManager_TypeInfo);
-    byte_4C34C75 = 1;
+    sub_1C37058(&TerminalPramsManager_TypeInfo);
+    byte_4C4025F = 1;
   }
   v3 = TerminalPramsManager_TypeInfo;
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -18170,10 +18170,10 @@ void TerminalPramsManager__set_SummonType(int32_t value, const MethodInfo *metho
 {
   TerminalPramsManager_c *v3; // x0
 
-  if ( (byte_4C34C73 & 1) == 0 )
+  if ( (byte_4C4025D & 1) == 0 )
   {
-    sub_1C32C20(&TerminalPramsManager_TypeInfo);
-    byte_4C34C73 = 1;
+    sub_1C37058(&TerminalPramsManager_TypeInfo);
+    byte_4C4025D = 1;
   }
   v3 = TerminalPramsManager_TypeInfo;
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -18194,10 +18194,10 @@ void TerminalPramsManager__set_TalkScriptInfo(
   TerminalPramsManager_c *v5; // x0
   struct TerminalPramsManager_StaticFields *static_fields; // x8
 
-  if ( (byte_4C34D67 & 1) == 0 )
+  if ( (byte_4C40351 & 1) == 0 )
   {
-    sub_1C32C20(&TerminalPramsManager_TypeInfo);
-    byte_4C34D67 = 1;
+    sub_1C37058(&TerminalPramsManager_TypeInfo);
+    byte_4C40351 = 1;
   }
   v5 = TerminalPramsManager_TypeInfo;
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -18207,7 +18207,7 @@ void TerminalPramsManager__set_TalkScriptInfo(
   }
   static_fields = v5->static_fields;
   static_fields->_TalkScriptInfo_k__BackingField = value;
-  sub_1C32BC4((CGThumbnailListItem_o *)&static_fields->_TalkScriptInfo_k__BackingField, (int32_t)value, v2, v3);
+  sub_1C36FFC((CGThumbnailListItem_o *)&static_fields->_TalkScriptInfo_k__BackingField, (int32_t)value, v2, v3);
 }
 
 
@@ -18215,10 +18215,10 @@ void TerminalPramsManager__set_TerminalTopFocusWarIdByShortcut(int32_t value, co
 {
   TerminalPramsManager_c *v3; // x0
 
-  if ( (byte_4C34D44 & 1) == 0 )
+  if ( (byte_4C4032E & 1) == 0 )
   {
-    sub_1C32C20(&TerminalPramsManager_TypeInfo);
-    byte_4C34D44 = 1;
+    sub_1C37058(&TerminalPramsManager_TypeInfo);
+    byte_4C4032E = 1;
   }
   v3 = TerminalPramsManager_TypeInfo;
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -18234,10 +18234,10 @@ void TerminalPramsManager__set_TimeStatusEventId(int32_t value, const MethodInfo
 {
   TerminalPramsManager_c *v3; // x0
 
-  if ( (byte_4C34D00 & 1) == 0 )
+  if ( (byte_4C402EA & 1) == 0 )
   {
-    sub_1C32C20(&TerminalPramsManager_TypeInfo);
-    byte_4C34D00 = 1;
+    sub_1C37058(&TerminalPramsManager_TypeInfo);
+    byte_4C402EA = 1;
   }
   v3 = TerminalPramsManager_TypeInfo;
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -18253,10 +18253,10 @@ void TerminalPramsManager__set_TimeStatusLoopCount(int32_t value, const MethodIn
 {
   TerminalPramsManager_c *v3; // x0
 
-  if ( (byte_4C34D02 & 1) == 0 )
+  if ( (byte_4C402EC & 1) == 0 )
   {
-    sub_1C32C20(&TerminalPramsManager_TypeInfo);
-    byte_4C34D02 = 1;
+    sub_1C37058(&TerminalPramsManager_TypeInfo);
+    byte_4C402EC = 1;
   }
   v3 = TerminalPramsManager_TypeInfo;
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -18275,10 +18275,10 @@ void TerminalPramsManager__set_TransitionScrollTabName(System_String_o *value, c
   TerminalPramsManager_c *v5; // x0
   struct TerminalPramsManager_StaticFields *static_fields; // x8
 
-  if ( (byte_4C34D79 & 1) == 0 )
+  if ( (byte_4C40363 & 1) == 0 )
   {
-    sub_1C32C20(&TerminalPramsManager_TypeInfo);
-    byte_4C34D79 = 1;
+    sub_1C37058(&TerminalPramsManager_TypeInfo);
+    byte_4C40363 = 1;
   }
   v5 = TerminalPramsManager_TypeInfo;
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -18288,7 +18288,7 @@ void TerminalPramsManager__set_TransitionScrollTabName(System_String_o *value, c
   }
   static_fields = v5->static_fields;
   static_fields->_TransitionScrollTabName_k__BackingField = value;
-  sub_1C32BC4((CGThumbnailListItem_o *)&static_fields->_TransitionScrollTabName_k__BackingField, (int32_t)value, v2, v3);
+  sub_1C36FFC((CGThumbnailListItem_o *)&static_fields->_TransitionScrollTabName_k__BackingField, (int32_t)value, v2, v3);
 }
 
 
@@ -18299,10 +18299,10 @@ void TerminalPramsManager__set_UseAddRewardItemRewardInfos(QuestRewardInfo_array
   TerminalPramsManager_c *v5; // x0
   struct TerminalPramsManager_StaticFields *static_fields; // x8
 
-  if ( (byte_4C34D7D & 1) == 0 )
+  if ( (byte_4C40367 & 1) == 0 )
   {
-    sub_1C32C20(&TerminalPramsManager_TypeInfo);
-    byte_4C34D7D = 1;
+    sub_1C37058(&TerminalPramsManager_TypeInfo);
+    byte_4C40367 = 1;
   }
   v5 = TerminalPramsManager_TypeInfo;
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -18312,7 +18312,7 @@ void TerminalPramsManager__set_UseAddRewardItemRewardInfos(QuestRewardInfo_array
   }
   static_fields = v5->static_fields;
   static_fields->_UseAddRewardItemRewardInfos_k__BackingField = value;
-  sub_1C32BC4(
+  sub_1C36FFC(
     (CGThumbnailListItem_o *)&static_fields->_UseAddRewardItemRewardInfos_k__BackingField,
     (int32_t)value,
     v2,
@@ -18327,10 +18327,10 @@ void TerminalPramsManager__set_WarBoardData(WarBoardDataEntity_o *value, const M
   TerminalPramsManager_c *v5; // x0
   struct TerminalPramsManager_StaticFields *static_fields; // x8
 
-  if ( (byte_4C34D18 & 1) == 0 )
+  if ( (byte_4C40302 & 1) == 0 )
   {
-    sub_1C32C20(&TerminalPramsManager_TypeInfo);
-    byte_4C34D18 = 1;
+    sub_1C37058(&TerminalPramsManager_TypeInfo);
+    byte_4C40302 = 1;
   }
   v5 = TerminalPramsManager_TypeInfo;
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -18340,7 +18340,7 @@ void TerminalPramsManager__set_WarBoardData(WarBoardDataEntity_o *value, const M
   }
   static_fields = v5->static_fields;
   static_fields->_WarBoardData_k__BackingField = value;
-  sub_1C32BC4((CGThumbnailListItem_o *)&static_fields->_WarBoardData_k__BackingField, (int32_t)value, v2, v3);
+  sub_1C36FFC((CGThumbnailListItem_o *)&static_fields->_WarBoardData_k__BackingField, (int32_t)value, v2, v3);
 }
 
 
@@ -18348,10 +18348,10 @@ void TerminalPramsManager__set_WarId(int32_t value, const MethodInfo *method)
 {
   TerminalPramsManager_c *v3; // x0
 
-  if ( (byte_4C34C71 & 1) == 0 )
+  if ( (byte_4C4025B & 1) == 0 )
   {
-    sub_1C32C20(&TerminalPramsManager_TypeInfo);
-    byte_4C34C71 = 1;
+    sub_1C37058(&TerminalPramsManager_TypeInfo);
+    byte_4C4025B = 1;
   }
   v3 = TerminalPramsManager_TypeInfo;
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -18367,10 +18367,10 @@ void TerminalPramsManager__set_ZoomSize(float value, const MethodInfo *method)
 {
   TerminalPramsManager_c *v3; // x0
 
-  if ( (byte_4C34CD7 & 1) == 0 )
+  if ( (byte_4C402C1 & 1) == 0 )
   {
-    sub_1C32C20(&TerminalPramsManager_TypeInfo);
-    byte_4C34CD7 = 1;
+    sub_1C37058(&TerminalPramsManager_TypeInfo);
+    byte_4C402C1 = 1;
   }
   v3 = TerminalPramsManager_TypeInfo;
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -18389,10 +18389,10 @@ void TerminalPramsManager__set_eventDailyPoint(EventDailyPoint_o *value, const M
   TerminalPramsManager_c *v5; // x0
   struct TerminalPramsManager_StaticFields *static_fields; // x8
 
-  if ( (byte_4C34CF6 & 1) == 0 )
+  if ( (byte_4C402E0 & 1) == 0 )
   {
-    sub_1C32C20(&TerminalPramsManager_TypeInfo);
-    byte_4C34CF6 = 1;
+    sub_1C37058(&TerminalPramsManager_TypeInfo);
+    byte_4C402E0 = 1;
   }
   v5 = TerminalPramsManager_TypeInfo;
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -18402,7 +18402,7 @@ void TerminalPramsManager__set_eventDailyPoint(EventDailyPoint_o *value, const M
   }
   static_fields = v5->static_fields;
   static_fields->_eventDailyPoint_k__BackingField = value;
-  sub_1C32BC4((CGThumbnailListItem_o *)&static_fields->_eventDailyPoint_k__BackingField, (int32_t)value, v2, v3);
+  sub_1C36FFC((CGThumbnailListItem_o *)&static_fields->_eventDailyPoint_k__BackingField, (int32_t)value, v2, v3);
 }
 
 
@@ -18413,10 +18413,10 @@ void TerminalPramsManager__set_eventPointWinReward(EventPointWinReward_o *value,
   TerminalPramsManager_c *v5; // x0
   struct TerminalPramsManager_StaticFields *static_fields; // x8
 
-  if ( (byte_4C34CE1 & 1) == 0 )
+  if ( (byte_4C402CB & 1) == 0 )
   {
-    sub_1C32C20(&TerminalPramsManager_TypeInfo);
-    byte_4C34CE1 = 1;
+    sub_1C37058(&TerminalPramsManager_TypeInfo);
+    byte_4C402CB = 1;
   }
   v5 = TerminalPramsManager_TypeInfo;
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -18426,7 +18426,7 @@ void TerminalPramsManager__set_eventPointWinReward(EventPointWinReward_o *value,
   }
   static_fields = v5->static_fields;
   static_fields->_eventPointWinReward_k__BackingField = value;
-  sub_1C32BC4((CGThumbnailListItem_o *)&static_fields->_eventPointWinReward_k__BackingField, (int32_t)value, v2, v3);
+  sub_1C36FFC((CGThumbnailListItem_o *)&static_fields->_eventPointWinReward_k__BackingField, (int32_t)value, v2, v3);
 }
 
 
@@ -18434,10 +18434,10 @@ void TerminalPramsManager__set_eventPointWinType(int32_t value, const MethodInfo
 {
   TerminalPramsManager_c *v3; // x0
 
-  if ( (byte_4C34CDF & 1) == 0 )
+  if ( (byte_4C402C9 & 1) == 0 )
   {
-    sub_1C32C20(&TerminalPramsManager_TypeInfo);
-    byte_4C34CDF = 1;
+    sub_1C37058(&TerminalPramsManager_TypeInfo);
+    byte_4C402C9 = 1;
   }
   v3 = TerminalPramsManager_TypeInfo;
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -18456,10 +18456,10 @@ void TerminalPramsManager__set_eventRaceBoost(EventRaceBoostInfo_o *value, const
   TerminalPramsManager_c *v5; // x0
   struct TerminalPramsManager_StaticFields *static_fields; // x8
 
-  if ( (byte_4C34CE3 & 1) == 0 )
+  if ( (byte_4C402CD & 1) == 0 )
   {
-    sub_1C32C20(&TerminalPramsManager_TypeInfo);
-    byte_4C34CE3 = 1;
+    sub_1C37058(&TerminalPramsManager_TypeInfo);
+    byte_4C402CD = 1;
   }
   v5 = TerminalPramsManager_TypeInfo;
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -18469,7 +18469,7 @@ void TerminalPramsManager__set_eventRaceBoost(EventRaceBoostInfo_o *value, const
   }
   static_fields = v5->static_fields;
   static_fields->_eventRaceBoost_k__BackingField = value;
-  sub_1C32BC4((CGThumbnailListItem_o *)&static_fields->_eventRaceBoost_k__BackingField, (int32_t)value, v2, v3);
+  sub_1C36FFC((CGThumbnailListItem_o *)&static_fields->_eventRaceBoost_k__BackingField, (int32_t)value, v2, v3);
 }
 
 
@@ -18480,10 +18480,10 @@ void TerminalPramsManager__set_eventTowerReward(EventTowerReward_o *value, const
   TerminalPramsManager_c *v5; // x0
   struct TerminalPramsManager_StaticFields *static_fields; // x8
 
-  if ( (byte_4C34CEC & 1) == 0 )
+  if ( (byte_4C402D6 & 1) == 0 )
   {
-    sub_1C32C20(&TerminalPramsManager_TypeInfo);
-    byte_4C34CEC = 1;
+    sub_1C37058(&TerminalPramsManager_TypeInfo);
+    byte_4C402D6 = 1;
   }
   v5 = TerminalPramsManager_TypeInfo;
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -18493,7 +18493,7 @@ void TerminalPramsManager__set_eventTowerReward(EventTowerReward_o *value, const
   }
   static_fields = v5->static_fields;
   static_fields->_eventTowerReward_k__BackingField = value;
-  sub_1C32BC4((CGThumbnailListItem_o *)&static_fields->_eventTowerReward_k__BackingField, (int32_t)value, v2, v3);
+  sub_1C36FFC((CGThumbnailListItem_o *)&static_fields->_eventTowerReward_k__BackingField, (int32_t)value, v2, v3);
 }
 
 
@@ -18501,10 +18501,10 @@ void TerminalPramsManager__set_isFortificationCheck(bool value, const MethodInfo
 {
   TerminalPramsManager_c *v3; // x0
 
-  if ( (byte_4C34D1C & 1) == 0 )
+  if ( (byte_4C40306 & 1) == 0 )
   {
-    sub_1C32C20(&TerminalPramsManager_TypeInfo);
-    byte_4C34D1C = 1;
+    sub_1C37058(&TerminalPramsManager_TypeInfo);
+    byte_4C40306 = 1;
   }
   v3 = TerminalPramsManager_TypeInfo;
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -18520,10 +18520,10 @@ void TerminalPramsManager__set_isIncomingCall(bool value, const MethodInfo *meth
 {
   TerminalPramsManager_c *v3; // x0
 
-  if ( (byte_4C34D10 & 1) == 0 )
+  if ( (byte_4C402FA & 1) == 0 )
   {
-    sub_1C32C20(&TerminalPramsManager_TypeInfo);
-    byte_4C34D10 = 1;
+    sub_1C37058(&TerminalPramsManager_TypeInfo);
+    byte_4C402FA = 1;
   }
   v3 = TerminalPramsManager_TypeInfo;
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -18539,10 +18539,10 @@ void TerminalPramsManager__set_isPlayRiverActionCheck(bool value, const MethodIn
 {
   TerminalPramsManager_c *v3; // x0
 
-  if ( (byte_4C34D1E & 1) == 0 )
+  if ( (byte_4C40308 & 1) == 0 )
   {
-    sub_1C32C20(&TerminalPramsManager_TypeInfo);
-    byte_4C34D1E = 1;
+    sub_1C37058(&TerminalPramsManager_TypeInfo);
+    byte_4C40308 = 1;
   }
   v3 = TerminalPramsManager_TypeInfo;
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -18558,10 +18558,10 @@ void TerminalPramsManager__set_isQuestRewardSetted(bool value, const MethodInfo 
 {
   TerminalPramsManager_c *v3; // x0
 
-  if ( (byte_4C34D51 & 1) == 0 )
+  if ( (byte_4C4033B & 1) == 0 )
   {
-    sub_1C32C20(&TerminalPramsManager_TypeInfo);
-    byte_4C34D51 = 1;
+    sub_1C37058(&TerminalPramsManager_TypeInfo);
+    byte_4C4033B = 1;
   }
   v3 = TerminalPramsManager_TypeInfo;
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -18577,10 +18577,10 @@ void TerminalPramsManager__set_isWarBoardPlay(bool value, const MethodInfo *meth
 {
   TerminalPramsManager_c *v3; // x0
 
-  if ( (byte_4C34D1A & 1) == 0 )
+  if ( (byte_4C40304 & 1) == 0 )
   {
-    sub_1C32C20(&TerminalPramsManager_TypeInfo);
-    byte_4C34D1A = 1;
+    sub_1C37058(&TerminalPramsManager_TypeInfo);
+    byte_4C40304 = 1;
   }
   v3 = TerminalPramsManager_TypeInfo;
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -18599,10 +18599,10 @@ void TerminalPramsManager__set_limitImageAnnounces(LimitImageAnnounce_array *val
   TerminalPramsManager_c *v5; // x0
   struct TerminalPramsManager_StaticFields *static_fields; // x8
 
-  if ( (byte_4C34D69 & 1) == 0 )
+  if ( (byte_4C40353 & 1) == 0 )
   {
-    sub_1C32C20(&TerminalPramsManager_TypeInfo);
-    byte_4C34D69 = 1;
+    sub_1C37058(&TerminalPramsManager_TypeInfo);
+    byte_4C40353 = 1;
   }
   v5 = TerminalPramsManager_TypeInfo;
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -18612,7 +18612,7 @@ void TerminalPramsManager__set_limitImageAnnounces(LimitImageAnnounce_array *val
   }
   static_fields = v5->static_fields;
   static_fields->_limitImageAnnounces_k__BackingField = value;
-  sub_1C32BC4((CGThumbnailListItem_o *)&static_fields->_limitImageAnnounces_k__BackingField, (int32_t)value, v2, v3);
+  sub_1C36FFC((CGThumbnailListItem_o *)&static_fields->_limitImageAnnounces_k__BackingField, (int32_t)value, v2, v3);
 }
 
 
@@ -18623,10 +18623,10 @@ void TerminalPramsManager__set_oldPersonalBoss(UserSuperBossEntity_array *value,
   TerminalPramsManager_c *v5; // x0
   struct TerminalPramsManager_StaticFields *static_fields; // x0
 
-  if ( (byte_4C34CDD & 1) == 0 )
+  if ( (byte_4C402C7 & 1) == 0 )
   {
-    sub_1C32C20(&TerminalPramsManager_TypeInfo);
-    byte_4C34CDD = 1;
+    sub_1C37058(&TerminalPramsManager_TypeInfo);
+    byte_4C402C7 = 1;
   }
   v5 = TerminalPramsManager_TypeInfo;
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -18636,7 +18636,7 @@ void TerminalPramsManager__set_oldPersonalBoss(UserSuperBossEntity_array *value,
   }
   static_fields = v5->static_fields;
   static_fields->_oldPersonalBoss_k__BackingField = value;
-  sub_1C32BC4((CGThumbnailListItem_o *)&static_fields->_oldPersonalBoss_k__BackingField, (int32_t)value, v2, v3);
+  sub_1C36FFC((CGThumbnailListItem_o *)&static_fields->_oldPersonalBoss_k__BackingField, (int32_t)value, v2, v3);
 }
 
 
@@ -18644,10 +18644,10 @@ void TerminalPramsManager__set_oldQuestIdForHeaderEvent(int32_t value, const Met
 {
   TerminalPramsManager_c *v3; // x0
 
-  if ( (byte_4C34CE9 & 1) == 0 )
+  if ( (byte_4C402D3 & 1) == 0 )
   {
-    sub_1C32C20(&TerminalPramsManager_TypeInfo);
-    byte_4C34CE9 = 1;
+    sub_1C37058(&TerminalPramsManager_TypeInfo);
+    byte_4C402D3 = 1;
   }
   v3 = TerminalPramsManager_TypeInfo;
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -18666,10 +18666,10 @@ void TerminalPramsManager__set_oldSuperBoss(UserSuperBossEntity_array *value, co
   TerminalPramsManager_c *v5; // x0
   struct TerminalPramsManager_StaticFields *static_fields; // x0
 
-  if ( (byte_4C34CDB & 1) == 0 )
+  if ( (byte_4C402C5 & 1) == 0 )
   {
-    sub_1C32C20(&TerminalPramsManager_TypeInfo);
-    byte_4C34CDB = 1;
+    sub_1C37058(&TerminalPramsManager_TypeInfo);
+    byte_4C402C5 = 1;
   }
   v5 = TerminalPramsManager_TypeInfo;
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -18679,7 +18679,7 @@ void TerminalPramsManager__set_oldSuperBoss(UserSuperBossEntity_array *value, co
   }
   static_fields = v5->static_fields;
   static_fields->_oldSuperBoss_k__BackingField = value;
-  sub_1C32BC4((CGThumbnailListItem_o *)&static_fields->_oldSuperBoss_k__BackingField, (int32_t)value, v2, v3);
+  sub_1C36FFC((CGThumbnailListItem_o *)&static_fields->_oldSuperBoss_k__BackingField, (int32_t)value, v2, v3);
 }
 
 
@@ -18690,10 +18690,10 @@ void TerminalPramsManager__set_questClearCostumeGet(CostumeReleaseAnnounce_array
   TerminalPramsManager_c *v5; // x0
   CGThumbnailListItem_o *static_fields; // x8
 
-  if ( (byte_4C34CE7 & 1) == 0 )
+  if ( (byte_4C402D1 & 1) == 0 )
   {
-    sub_1C32C20(&TerminalPramsManager_TypeInfo);
-    byte_4C34CE7 = 1;
+    sub_1C37058(&TerminalPramsManager_TypeInfo);
+    byte_4C402D1 = 1;
   }
   v5 = TerminalPramsManager_TypeInfo;
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -18703,7 +18703,7 @@ void TerminalPramsManager__set_questClearCostumeGet(CostumeReleaseAnnounce_array
   }
   static_fields = (CGThumbnailListItem_o *)v5->static_fields;
   static_fields[2].klass = (CGThumbnailListItem_c *)value;
-  sub_1C32BC4(static_fields + 2, (int32_t)value, v2, v3);
+  sub_1C36FFC(static_fields + 2, (int32_t)value, v2, v3);
 }
 
 
@@ -18714,10 +18714,10 @@ void TerminalPramsManager__set_questClearCostumeRelease(CostumeReleaseAnnounce_a
   TerminalPramsManager_c *v5; // x0
   struct TerminalPramsManager_StaticFields *static_fields; // x8
 
-  if ( (byte_4C34CE5 & 1) == 0 )
+  if ( (byte_4C402CF & 1) == 0 )
   {
-    sub_1C32C20(&TerminalPramsManager_TypeInfo);
-    byte_4C34CE5 = 1;
+    sub_1C37058(&TerminalPramsManager_TypeInfo);
+    byte_4C402CF = 1;
   }
   v5 = TerminalPramsManager_TypeInfo;
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -18727,7 +18727,7 @@ void TerminalPramsManager__set_questClearCostumeRelease(CostumeReleaseAnnounce_a
   }
   static_fields = v5->static_fields;
   static_fields->_questClearCostumeRelease_k__BackingField = value;
-  sub_1C32BC4(
+  sub_1C36FFC(
     (CGThumbnailListItem_o *)&static_fields->_questClearCostumeRelease_k__BackingField,
     (int32_t)value,
     v2,
@@ -18742,10 +18742,10 @@ void TerminalPramsManager__set_resultBoostItemRewardInfo(QuestRewardInfo_array *
   TerminalPramsManager_c *v5; // x0
   struct TerminalPramsManager_StaticFields *static_fields; // x8
 
-  if ( (byte_4C34CF0 & 1) == 0 )
+  if ( (byte_4C402DA & 1) == 0 )
   {
-    sub_1C32C20(&TerminalPramsManager_TypeInfo);
-    byte_4C34CF0 = 1;
+    sub_1C37058(&TerminalPramsManager_TypeInfo);
+    byte_4C402DA = 1;
   }
   v5 = TerminalPramsManager_TypeInfo;
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -18755,7 +18755,7 @@ void TerminalPramsManager__set_resultBoostItemRewardInfo(QuestRewardInfo_array *
   }
   static_fields = v5->static_fields;
   static_fields->_resultBoostItemRewardInfo_k__BackingField = value;
-  sub_1C32BC4(
+  sub_1C36FFC(
     (CGThumbnailListItem_o *)&static_fields->_resultBoostItemRewardInfo_k__BackingField,
     (int32_t)value,
     v2,
@@ -18772,10 +18772,10 @@ void TerminalPramsManager__set_resultEventBoardGameTokenRewardInfo(
   TerminalPramsManager_c *v5; // x0
   struct TerminalPramsManager_StaticFields *static_fields; // x8
 
-  if ( (byte_4C34CF2 & 1) == 0 )
+  if ( (byte_4C402DC & 1) == 0 )
   {
-    sub_1C32C20(&TerminalPramsManager_TypeInfo);
-    byte_4C34CF2 = 1;
+    sub_1C37058(&TerminalPramsManager_TypeInfo);
+    byte_4C402DC = 1;
   }
   v5 = TerminalPramsManager_TypeInfo;
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -18785,7 +18785,7 @@ void TerminalPramsManager__set_resultEventBoardGameTokenRewardInfo(
   }
   static_fields = v5->static_fields;
   static_fields->_resultEventBoardGameTokenRewardInfo_k__BackingField = value;
-  sub_1C32BC4(
+  sub_1C36FFC(
     (CGThumbnailListItem_o *)&static_fields->_resultEventBoardGameTokenRewardInfo_k__BackingField,
     (int32_t)value,
     v2,
@@ -18800,10 +18800,10 @@ void TerminalPramsManager__set_resultEventTowerRewardInfo(QuestRewardInfo_array 
   TerminalPramsManager_c *v5; // x0
   struct TerminalPramsManager_StaticFields *static_fields; // x8
 
-  if ( (byte_4C34CEE & 1) == 0 )
+  if ( (byte_4C402D8 & 1) == 0 )
   {
-    sub_1C32C20(&TerminalPramsManager_TypeInfo);
-    byte_4C34CEE = 1;
+    sub_1C37058(&TerminalPramsManager_TypeInfo);
+    byte_4C402D8 = 1;
   }
   v5 = TerminalPramsManager_TypeInfo;
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -18813,7 +18813,7 @@ void TerminalPramsManager__set_resultEventTowerRewardInfo(QuestRewardInfo_array 
   }
   static_fields = v5->static_fields;
   static_fields->_resultEventTowerRewardInfo_k__BackingField = value;
-  sub_1C32BC4(
+  sub_1C36FFC(
     (CGThumbnailListItem_o *)&static_fields->_resultEventTowerRewardInfo_k__BackingField,
     (int32_t)value,
     v2,
@@ -18828,10 +18828,10 @@ void TerminalPramsManager__set_timeStatusRecord(TimeStatusRecord_o *value, const
   TerminalPramsManager_c *v5; // x0
   struct TerminalPramsManager_StaticFields *static_fields; // x8
 
-  if ( (byte_4C34CF4 & 1) == 0 )
+  if ( (byte_4C402DE & 1) == 0 )
   {
-    sub_1C32C20(&TerminalPramsManager_TypeInfo);
-    byte_4C34CF4 = 1;
+    sub_1C37058(&TerminalPramsManager_TypeInfo);
+    byte_4C402DE = 1;
   }
   v5 = TerminalPramsManager_TypeInfo;
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -18841,7 +18841,7 @@ void TerminalPramsManager__set_timeStatusRecord(TimeStatusRecord_o *value, const
   }
   static_fields = v5->static_fields;
   static_fields->_timeStatusRecord_k__BackingField = value;
-  sub_1C32BC4((CGThumbnailListItem_o *)&static_fields->_timeStatusRecord_k__BackingField, (int32_t)value, v2, v3);
+  sub_1C36FFC((CGThumbnailListItem_o *)&static_fields->_timeStatusRecord_k__BackingField, (int32_t)value, v2, v3);
 }
 
 
@@ -18854,10 +18854,10 @@ void TerminalPramsManager__set_updateProfileInfoEntity(
   TerminalPramsManager_c *v5; // x0
   struct TerminalPramsManager_StaticFields *static_fields; // x8
 
-  if ( (byte_4C34D6F & 1) == 0 )
+  if ( (byte_4C40359 & 1) == 0 )
   {
-    sub_1C32C20(&TerminalPramsManager_TypeInfo);
-    byte_4C34D6F = 1;
+    sub_1C37058(&TerminalPramsManager_TypeInfo);
+    byte_4C40359 = 1;
   }
   v5 = TerminalPramsManager_TypeInfo;
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -18867,7 +18867,7 @@ void TerminalPramsManager__set_updateProfileInfoEntity(
   }
   static_fields = v5->static_fields;
   static_fields->_updateProfileInfoEntity_k__BackingField = value;
-  sub_1C32BC4((CGThumbnailListItem_o *)&static_fields->_updateProfileInfoEntity_k__BackingField, (int32_t)value, v2, v3);
+  sub_1C36FFC((CGThumbnailListItem_o *)&static_fields->_updateProfileInfoEntity_k__BackingField, (int32_t)value, v2, v3);
 }
 
 
@@ -18878,10 +18878,10 @@ void TerminalPramsManager__set_warClearReward(WarClearReward_array *value, const
   TerminalPramsManager_c *v5; // x0
   struct TerminalPramsManager_StaticFields *static_fields; // x8
 
-  if ( (byte_4C34CFE & 1) == 0 )
+  if ( (byte_4C402E8 & 1) == 0 )
   {
-    sub_1C32C20(&TerminalPramsManager_TypeInfo);
-    byte_4C34CFE = 1;
+    sub_1C37058(&TerminalPramsManager_TypeInfo);
+    byte_4C402E8 = 1;
   }
   v5 = TerminalPramsManager_TypeInfo;
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -18891,7 +18891,7 @@ void TerminalPramsManager__set_warClearReward(WarClearReward_array *value, const
   }
   static_fields = v5->static_fields;
   static_fields->_warClearReward_k__BackingField = value;
-  sub_1C32BC4((CGThumbnailListItem_o *)&static_fields->_warClearReward_k__BackingField, (int32_t)value, v2, v3);
+  sub_1C36FFC((CGThumbnailListItem_o *)&static_fields->_warClearReward_k__BackingField, (int32_t)value, v2, v3);
 }
 
 
@@ -18900,16 +18900,16 @@ void TerminalPramsManager_ClearData___cctor(const MethodInfo *method)
   int32_t v1; // w2
   const MethodInfo *v2; // x3
 
-  if ( (byte_4C34E27 & 1) == 0 )
+  if ( (byte_4C40411 & 1) == 0 )
   {
-    sub_1C32C20(&TerminalPramsManager_ClearData_TypeInfo);
-    sub_1C32C20(&StringLiteral_13365/*"TERMINAL_CLEAR_REWARD_DISP"*/);
-    byte_4C34E27 = 1;
+    sub_1C37058(&TerminalPramsManager_ClearData_TypeInfo);
+    sub_1C37058(&StringLiteral_13366/*"TERMINAL_CLEAR_REWARD_DISP"*/);
+    byte_4C40411 = 1;
   }
-  TerminalPramsManager_ClearData_TypeInfo->static_fields->SAVEKEY_CLEAR_REWARD_DISP = (struct System_String_o *)StringLiteral_13365/*"TERMINAL_CLEAR_REWARD_DISP"*/;
-  sub_1C32BC4(
+  TerminalPramsManager_ClearData_TypeInfo->static_fields->SAVEKEY_CLEAR_REWARD_DISP = (struct System_String_o *)StringLiteral_13366/*"TERMINAL_CLEAR_REWARD_DISP"*/;
+  sub_1C36FFC(
     (CGThumbnailListItem_o *)TerminalPramsManager_ClearData_TypeInfo->static_fields,
-    StringLiteral_13365/*"TERMINAL_CLEAR_REWARD_DISP"*/,
+    StringLiteral_13366/*"TERMINAL_CLEAR_REWARD_DISP"*/,
     v1,
     v2);
 }
@@ -18953,45 +18953,45 @@ void TerminalPramsManager_ClearData___ctor(TerminalPramsManager_ClearData_o *thi
   int32_t v36; // w2
   const MethodInfo *v37; // x3
 
-  if ( (byte_4C34E25 & 1) == 0 )
+  if ( (byte_4C4040F & 1) == 0 )
   {
-    sub_1C32C20(&TerminalPramsManager_TypeInfo);
-    byte_4C34E25 = 1;
+    sub_1C37058(&TerminalPramsManager_TypeInfo);
+    byte_4C4040F = 1;
   }
   System_Object___ctor((Il2CppObject *)this, 0);
   this->fields.qClearHeroineInfo = 0;
-  sub_1C32BC4((CGThumbnailListItem_o *)&this->fields, 0, v3, v4);
+  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields, 0, v3, v4);
   this->fields.questRewardInfos = 0;
-  sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.questRewardInfos, 0, v5, v6);
+  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.questRewardInfos, 0, v5, v6);
   this->fields.questPhaseRewardInfos = 0;
-  sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.questPhaseRewardInfos, 0, v7, v8);
+  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.questPhaseRewardInfos, 0, v7, v8);
   this->fields.questResultAfterEventRewardInfos = 0;
-  sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.questResultAfterEventRewardInfos, 0, v9, v10);
+  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.questResultAfterEventRewardInfos, 0, v9, v10);
   this->fields.resultEventPanelRewardInfos = 0;
-  sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.resultEventPanelRewardInfos, 0, v11, v12);
+  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.resultEventPanelRewardInfos, 0, v11, v12);
   this->fields.panelEventPoint = 0;
   *(_QWORD *)&this->fields.clearedLastBattleRaidId = -1;
   this->fields.joinGroup = -1;
   this->fields.mOldSuperBoss = 0;
-  sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.mOldSuperBoss, 0, v13, v14);
+  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.mOldSuperBoss, 0, v13, v14);
   this->fields.oldPersonalBoss = 0;
-  sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.oldPersonalBoss, 0, v15, v16);
+  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.oldPersonalBoss, 0, v15, v16);
   this->fields.evPointWinReward = 0;
-  sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.evPointWinReward, 0, v17, v18);
+  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.evPointWinReward, 0, v17, v18);
   this->fields.evPointWinType = 0;
   this->fields.evRaceBoost = 0;
-  sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.evRaceBoost, 0, v19, v20);
+  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.evRaceBoost, 0, v19, v20);
   this->fields.questClearCostume = 0;
-  sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.questClearCostume, 0, v21, v22);
+  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.questClearCostume, 0, v21, v22);
   this->fields.questClearCostumeGetInfo = 0;
-  sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.questClearCostumeGetInfo, 0, v23, v24);
+  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.questClearCostumeGetInfo, 0, v23, v24);
   this->fields.eventTowerReward = 0;
-  sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.eventTowerReward, 0, v25, v26);
+  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.eventTowerReward, 0, v25, v26);
   this->fields.resultEventTowerRewardInfo = 0;
-  sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.resultEventTowerRewardInfo, 0, v27, v28);
+  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.resultEventTowerRewardInfo, 0, v27, v28);
   this->fields.warClearReward = 0;
   this->fields.isDispOnly = 0;
-  sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.warClearReward, 0, v29, v30);
+  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.warClearReward, 0, v29, v30);
   v33 = TerminalPramsManager_TypeInfo;
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
   {
@@ -19000,18 +19000,18 @@ void TerminalPramsManager_ClearData___ctor(TerminalPramsManager_ClearData_o *thi
   }
   this->fields.EventActivityPointEffectState = v33->static_fields->EVENT_POINT_EFFECT_STATE_NONE;
   this->fields.limitImageAnnounces = 0;
-  sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.limitImageAnnounces, 0, v31, v32);
+  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.limitImageAnnounces, 0, v31, v32);
   this->fields.isOrdealCallWarClear = 0;
   this->fields.eventMuralId = 0;
   this->fields.playHappinessCounterEffect = 0;
   this->fields.oldUserEventPoint = 0;
-  sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.oldUserEventPoint, 0, v34, v35);
+  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.oldUserEventPoint, 0, v34, v35);
   this->fields.UseAddRewardItemRewardInfos = 0;
-  sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.UseAddRewardItemRewardInfos, 0, v36, v37);
+  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.UseAddRewardItemRewardInfos, 0, v36, v37);
 }
 
 
-void TerminalPramsManager_ClearData___ctor_37223732(
+void TerminalPramsManager_ClearData___ctor_37319364(
         TerminalPramsManager_ClearData_o *this,
         QuestClearHeroineInfo_o *qcrHeroineInfo,
         QuestRewardInfo_array *qri,
@@ -19118,87 +19118,87 @@ void TerminalPramsManager_ClearData___ctor_37223732(
   v38 = questClearCostumeGet;
   v39 = questClearCostumeRelease;
   v40 = oldPersonalBoss;
-  if ( (byte_4C34E26 & 1) == 0 )
+  if ( (byte_4C40410 & 1) == 0 )
   {
-    sub_1C32C20(&Method_System_Array_Empty_QuestRewardInfo___);
-    sub_1C32C20(&BattleDropItem___TypeInfo);
-    sub_1C32C20(&CostumeReleaseAnnounce___TypeInfo);
-    sub_1C32C20(&LimitImageAnnounce___TypeInfo);
-    sub_1C32C20(&TerminalPramsManager_QuestClearHeroineInfoForSave_TypeInfo);
-    sub_1C32C20(&QuestRewardInfo___TypeInfo);
-    sub_1C32C20(&TerminalPramsManager_TypeInfo);
-    sub_1C32C20(&UserSuperBossEntity___TypeInfo);
-    sub_1C32C20(&WarClearReward___TypeInfo);
-    byte_4C34E26 = 1;
+    sub_1C37058(&Method_System_Array_Empty_QuestRewardInfo___);
+    sub_1C37058(&BattleDropItem___TypeInfo);
+    sub_1C37058(&CostumeReleaseAnnounce___TypeInfo);
+    sub_1C37058(&LimitImageAnnounce___TypeInfo);
+    sub_1C37058(&TerminalPramsManager_QuestClearHeroineInfoForSave_TypeInfo);
+    sub_1C37058(&QuestRewardInfo___TypeInfo);
+    sub_1C37058(&TerminalPramsManager_TypeInfo);
+    sub_1C37058(&UserSuperBossEntity___TypeInfo);
+    sub_1C37058(&WarClearReward___TypeInfo);
+    byte_4C40410 = 1;
   }
   System_Object___ctor((Il2CppObject *)this, 0);
-  v41 = (TerminalPramsManager_QuestClearHeroineInfoForSave_o *)sub_1C32E6C(TerminalPramsManager_QuestClearHeroineInfoForSave_TypeInfo);
+  v41 = (TerminalPramsManager_QuestClearHeroineInfoForSave_o *)sub_1C372A4(TerminalPramsManager_QuestClearHeroineInfoForSave_TypeInfo);
   v43 = v41;
   if ( qcrHeroineInfo )
   {
-    TerminalPramsManager_QuestClearHeroineInfoForSave___ctor_37222960(v41, qcrHeroineInfo, v42);
+    TerminalPramsManager_QuestClearHeroineInfoForSave___ctor_37318592(v41, qcrHeroineInfo, v42);
     if ( this )
       goto LABEL_5;
 LABEL_34:
-    sub_1C32E7C(v44);
+    sub_1C372B4(v44);
   }
   System_Object___ctor((Il2CppObject *)v41, 0);
   v43->fields.oldUsrSvtData = 0;
-  sub_1C32BC4((CGThumbnailListItem_o *)&v43->fields, 0, v75, v76);
+  sub_1C36FFC((CGThumbnailListItem_o *)&v43->fields, 0, v75, v76);
   if ( !this )
     goto LABEL_34;
 LABEL_5:
   this->fields.qClearHeroineInfo = v43;
   v47 = qClear;
   v48 = pclear;
-  sub_1C32BC4((CGThumbnailListItem_o *)&this->fields, (int32_t)v43, v45, v46);
+  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields, (int32_t)v43, v45, v46);
   if ( !qri )
-    qri = (QuestRewardInfo_array *)sub_1C32CC8(QuestRewardInfo___TypeInfo, 0);
+    qri = (QuestRewardInfo_array *)sub_1C37100(QuestRewardInfo___TypeInfo, 0);
   this->fields.questRewardInfos = qri;
-  sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.questRewardInfos, (int32_t)qri, v49, v50);
+  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.questRewardInfos, (int32_t)qri, v49, v50);
   if ( !questPhaseRewardInfos )
-    questPhaseRewardInfos = (QuestRewardInfo_array *)sub_1C32CC8(QuestRewardInfo___TypeInfo, 0);
+    questPhaseRewardInfos = (QuestRewardInfo_array *)sub_1C37100(QuestRewardInfo___TypeInfo, 0);
   this->fields.questPhaseRewardInfos = questPhaseRewardInfos;
-  sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.questPhaseRewardInfos, (int32_t)questPhaseRewardInfos, v51, v52);
+  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.questPhaseRewardInfos, (int32_t)questPhaseRewardInfos, v51, v52);
   this->fields.questClear = v47;
   this->fields.phaseClear = v48;
   this->fields.clearedLastBattleRaidId = lastRaidId;
   this->fields.clearedBattleRaidId = raidId;
   this->fields.joinGroup = groupjoin;
   if ( !oldSuperBoss )
-    v31 = (struct UserSuperBossEntity_array *)sub_1C32CC8(UserSuperBossEntity___TypeInfo, 0);
+    v31 = (struct UserSuperBossEntity_array *)sub_1C37100(UserSuperBossEntity___TypeInfo, 0);
   this->fields.mOldSuperBoss = v31;
-  sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.mOldSuperBoss, (int32_t)v31, v53, v54);
+  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.mOldSuperBoss, (int32_t)v31, v53, v54);
   if ( !oldPersonalBoss )
-    v40 = (struct UserSuperBossEntity_array *)sub_1C32CC8(UserSuperBossEntity___TypeInfo, 0);
+    v40 = (struct UserSuperBossEntity_array *)sub_1C37100(UserSuperBossEntity___TypeInfo, 0);
   this->fields.oldPersonalBoss = v40;
-  sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.oldPersonalBoss, (int32_t)v40, v55, v56);
+  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.oldPersonalBoss, (int32_t)v40, v55, v56);
   this->fields.evPointWinReward = evpWinReward;
-  sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.evPointWinReward, (int32_t)evpWinReward, v57, v58);
+  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.evPointWinReward, (int32_t)evpWinReward, v57, v58);
   this->fields.evRaceBoost = evRace;
   this->fields.evPointWinType = evpWinType;
-  sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.evRaceBoost, (int32_t)evRace, v59, v60);
+  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.evRaceBoost, (int32_t)evRace, v59, v60);
   if ( !questClearCostumeRelease )
-    v39 = (struct CostumeReleaseAnnounce_array *)sub_1C32CC8(CostumeReleaseAnnounce___TypeInfo, 0);
+    v39 = (struct CostumeReleaseAnnounce_array *)sub_1C37100(CostumeReleaseAnnounce___TypeInfo, 0);
   this->fields.questClearCostume = v39;
-  sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.questClearCostume, (int32_t)v39, v61, v62);
+  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.questClearCostume, (int32_t)v39, v61, v62);
   if ( !questClearCostumeGet )
-    v38 = (struct CostumeReleaseAnnounce_array *)sub_1C32CC8(CostumeReleaseAnnounce___TypeInfo, 0);
+    v38 = (struct CostumeReleaseAnnounce_array *)sub_1C37100(CostumeReleaseAnnounce___TypeInfo, 0);
   this->fields.questClearCostumeGetInfo = v38;
-  sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.questClearCostumeGetInfo, (int32_t)v38, v63, v64);
+  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.questClearCostumeGetInfo, (int32_t)v38, v63, v64);
   this->fields.eventTowerReward = evTowerReward;
-  sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.eventTowerReward, (int32_t)evTowerReward, v65, v66);
+  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.eventTowerReward, (int32_t)evTowerReward, v65, v66);
   v69 = resultEvTowerRewardInfo;
   if ( !resultEvTowerRewardInfo )
-    v69 = (struct QuestRewardInfo_array *)sub_1C32CC8(QuestRewardInfo___TypeInfo, 0);
+    v69 = (struct QuestRewardInfo_array *)sub_1C37100(QuestRewardInfo___TypeInfo, 0);
   this->fields.resultEventTowerRewardInfo = v69;
-  sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.resultEventTowerRewardInfo, (int32_t)v69, v67, v68);
+  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.resultEventTowerRewardInfo, (int32_t)v69, v67, v68);
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(TerminalPramsManager_TypeInfo);
-  if ( !byte_4C349CE )
+  if ( !byte_4C3FFB8 )
   {
-    sub_1C32C20(&TerminalPramsManager_TypeInfo);
-    byte_4C349CE = 1;
+    sub_1C37058(&TerminalPramsManager_TypeInfo);
+    byte_4C3FFB8 = 1;
   }
   v72 = TerminalPramsManager_TypeInfo;
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -19210,10 +19210,10 @@ LABEL_5:
   {
     if ( !v72->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(v72);
-    if ( !byte_4C349CE )
+    if ( !byte_4C3FFB8 )
     {
-      sub_1C32C20(&TerminalPramsManager_TypeInfo);
-      byte_4C349CE = 1;
+      sub_1C37058(&TerminalPramsManager_TypeInfo);
+      byte_4C3FFB8 = 1;
     }
     v73 = TerminalPramsManager_TypeInfo;
     if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -19225,22 +19225,22 @@ LABEL_5:
   }
   else
   {
-    resultBoostItemRewardInfo_k__BackingField = (struct QuestRewardInfo_array *)sub_1C32CC8(
+    resultBoostItemRewardInfo_k__BackingField = (struct QuestRewardInfo_array *)sub_1C37100(
                                                                                   QuestRewardInfo___TypeInfo,
                                                                                   0);
   }
   this->fields.resultBoostItemRewardInfo = resultBoostItemRewardInfo_k__BackingField;
-  sub_1C32BC4(
+  sub_1C36FFC(
     (CGThumbnailListItem_o *)&this->fields.resultBoostItemRewardInfo,
     (int32_t)resultBoostItemRewardInfo_k__BackingField,
     v70,
     v71);
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(TerminalPramsManager_TypeInfo);
-  if ( !byte_4C349C6 )
+  if ( !byte_4C3FFB0 )
   {
-    sub_1C32C20(&TerminalPramsManager_TypeInfo);
-    byte_4C349C6 = 1;
+    sub_1C37058(&TerminalPramsManager_TypeInfo);
+    byte_4C3FFB0 = 1;
   }
   v79 = TerminalPramsManager_TypeInfo;
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -19252,10 +19252,10 @@ LABEL_5:
   {
     if ( !v79->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(v79);
-    if ( !byte_4C349C6 )
+    if ( !byte_4C3FFB0 )
     {
-      sub_1C32C20(&TerminalPramsManager_TypeInfo);
-      byte_4C349C6 = 1;
+      sub_1C37058(&TerminalPramsManager_TypeInfo);
+      byte_4C3FFB0 = 1;
     }
     v80 = TerminalPramsManager_TypeInfo;
     if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -19267,12 +19267,12 @@ LABEL_5:
   }
   else
   {
-    resultEventBoardGameTokenRewardInfo_k__BackingField = (struct QuestRewardInfo_array *)sub_1C32CC8(
+    resultEventBoardGameTokenRewardInfo_k__BackingField = (struct QuestRewardInfo_array *)sub_1C37100(
                                                                                             QuestRewardInfo___TypeInfo,
                                                                                             0);
   }
   this->fields.resultEventBoardGameTokenRewardInfo = resultEventBoardGameTokenRewardInfo_k__BackingField;
-  sub_1C32BC4(
+  sub_1C36FFC(
     (CGThumbnailListItem_o *)&this->fields.resultEventBoardGameTokenRewardInfo,
     (int32_t)resultEventBoardGameTokenRewardInfo_k__BackingField,
     v77,
@@ -19280,33 +19280,33 @@ LABEL_5:
   v84 = warClearRewardIn;
   this->fields.isDispOnly = dispOnly;
   if ( !warClearRewardIn )
-    v84 = (struct WarClearReward_array *)sub_1C32CC8(WarClearReward___TypeInfo, 0);
+    v84 = (struct WarClearReward_array *)sub_1C37100(WarClearReward___TypeInfo, 0);
   this->fields.warClearReward = v84;
-  sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.warClearReward, (int32_t)v84, v82, v83);
+  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.warClearReward, (int32_t)v84, v82, v83);
   v87 = questResultAfterEventRewardInfos;
   this->fields.isWarBoardClear = isWarBoardClear;
   this->fields.EventActivityPointEffectState = eventActivityPointEffectState;
   if ( !questResultAfterEventRewardInfos )
-    v87 = (struct BattleDropItem_array *)sub_1C32CC8(BattleDropItem___TypeInfo, 0);
+    v87 = (struct BattleDropItem_array *)sub_1C37100(BattleDropItem___TypeInfo, 0);
   this->fields.questResultAfterEventRewardInfos = v87;
-  sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.questResultAfterEventRewardInfos, (int32_t)v87, v85, v86);
+  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.questResultAfterEventRewardInfos, (int32_t)v87, v85, v86);
   v90 = resultEventPanelRewardInfos;
   if ( !resultEventPanelRewardInfos )
-    v90 = (struct BattleDropItem_array *)sub_1C32CC8(BattleDropItem___TypeInfo, 0);
+    v90 = (struct BattleDropItem_array *)sub_1C37100(BattleDropItem___TypeInfo, 0);
   this->fields.resultEventPanelRewardInfos = v90;
-  sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.resultEventPanelRewardInfos, (int32_t)v90, v88, v89);
+  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.resultEventPanelRewardInfos, (int32_t)v90, v88, v89);
   v93 = limitImageAnnounces;
   this->fields.panelEventPoint = panelEventPoint;
   if ( !limitImageAnnounces )
-    v93 = (struct LimitImageAnnounce_array *)sub_1C32CC8(LimitImageAnnounce___TypeInfo, 0);
+    v93 = (struct LimitImageAnnounce_array *)sub_1C37100(LimitImageAnnounce___TypeInfo, 0);
   this->fields.limitImageAnnounces = v93;
-  sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.limitImageAnnounces, (int32_t)v93, v91, v92);
+  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.limitImageAnnounces, (int32_t)v93, v91, v92);
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(TerminalPramsManager_TypeInfo);
-  if ( !byte_4C341F5 )
+  if ( !byte_4C3F7DF )
   {
-    sub_1C32C20(&TerminalPramsManager_TypeInfo);
-    byte_4C341F5 = 1;
+    sub_1C37058(&TerminalPramsManager_TypeInfo);
+    byte_4C3F7DF = 1;
   }
   v96 = TerminalPramsManager_TypeInfo;
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -19315,11 +19315,11 @@ LABEL_5:
     v96 = TerminalPramsManager_TypeInfo;
   }
   this->fields.isOrdealCallWarClear = v96->static_fields->_IsOrdealCallWarClear_k__BackingField;
-  if ( !byte_4C349C9 )
+  if ( !byte_4C3FFB3 )
   {
-    sub_1C32C20(&TerminalPramsManager_TypeInfo);
+    sub_1C37058(&TerminalPramsManager_TypeInfo);
     v96 = TerminalPramsManager_TypeInfo;
-    byte_4C349C9 = 1;
+    byte_4C3FFB3 = 1;
   }
   if ( !v96->_2.cctor_finished )
   {
@@ -19327,11 +19327,11 @@ LABEL_5:
     v96 = TerminalPramsManager_TypeInfo;
   }
   this->fields.eventMuralId = v96->static_fields->_EventMuralId_k__BackingField;
-  if ( !byte_4C34BCB )
+  if ( !byte_4C401B5 )
   {
-    sub_1C32C20(&TerminalPramsManager_TypeInfo);
+    sub_1C37058(&TerminalPramsManager_TypeInfo);
     v96 = TerminalPramsManager_TypeInfo;
-    byte_4C34BCB = 1;
+    byte_4C401B5 = 1;
   }
   if ( !v96->_2.cctor_finished )
   {
@@ -19339,11 +19339,11 @@ LABEL_5:
     v96 = TerminalPramsManager_TypeInfo;
   }
   this->fields.eventActionQuestId = v96->static_fields->_EventActionQuestId_k__BackingField;
-  if ( !byte_4C349CB )
+  if ( !byte_4C3FFB5 )
   {
-    sub_1C32C20(&TerminalPramsManager_TypeInfo);
+    sub_1C37058(&TerminalPramsManager_TypeInfo);
     v96 = TerminalPramsManager_TypeInfo;
-    byte_4C349CB = 1;
+    byte_4C3FFB5 = 1;
   }
   if ( !v96->_2.cctor_finished )
   {
@@ -19351,11 +19351,11 @@ LABEL_5:
     v96 = TerminalPramsManager_TypeInfo;
   }
   this->fields.playHappinessCounterEffect = v96->static_fields->_PlayHappinessCounterEffect_k__BackingField;
-  if ( !byte_4C343D2 )
+  if ( !byte_4C3F9BC )
   {
-    sub_1C32C20(&TerminalPramsManager_TypeInfo);
+    sub_1C37058(&TerminalPramsManager_TypeInfo);
     v96 = TerminalPramsManager_TypeInfo;
-    byte_4C343D2 = 1;
+    byte_4C3F9BC = 1;
   }
   if ( !v96->_2.cctor_finished )
   {
@@ -19365,7 +19365,7 @@ LABEL_5:
   v97 = useAddRewardItemRewardInfos;
   OldUserEventPoint_k__BackingField = v96->static_fields->_OldUserEventPoint_k__BackingField;
   this->fields.oldUserEventPoint = OldUserEventPoint_k__BackingField;
-  sub_1C32BC4(
+  sub_1C36FFC(
     (CGThumbnailListItem_o *)&this->fields.oldUserEventPoint,
     (int32_t)OldUserEventPoint_k__BackingField,
     v94,
@@ -19376,21 +19376,21 @@ LABEL_5:
     v103 = *((_QWORD *)Method_System_Array_Empty_QuestRewardInfo___ + 7);
     if ( !v103 )
     {
-      sub_1C83390(Method_System_Array_Empty_QuestRewardInfo___);
+      sub_1C877C8(Method_System_Array_Empty_QuestRewardInfo___);
       v103 = v102[7];
     }
     v104 = *(_QWORD *)(v103 + 16);
     if ( (*(_BYTE *)(v104 + 309) & 1) == 0 )
-      v104 = sub_1C83334(inited);
+      v104 = sub_1C8776C(inited);
     if ( !*(_DWORD *)(v104 + 224) )
       inited = j_il2cpp_runtime_class_init_0(v104);
     v105 = *(_QWORD *)(v102[7] + 16LL);
     if ( (*(_BYTE *)(v105 + 309) & 1) == 0 )
-      v105 = sub_1C83334(inited);
+      v105 = sub_1C8776C(inited);
     v97 = **(struct QuestRewardInfo_array ***)(v105 + 184);
   }
   this->fields.UseAddRewardItemRewardInfos = v97;
-  sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.UseAddRewardItemRewardInfos, (int32_t)v97, v99, v100);
+  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.UseAddRewardItemRewardInfos, (int32_t)v97, v99, v100);
 }
 
 
@@ -19402,7 +19402,7 @@ void TerminalPramsManager_OldHeroineLawData___ctor(
 }
 
 
-void TerminalPramsManager_OldHeroineLawData___ctor_37222196(
+void TerminalPramsManager_OldHeroineLawData___ctor_37317828(
         TerminalPramsManager_OldHeroineLawData_o *this,
         UserServantEntity_o *uSvtEnt,
         const MethodInfo *method)
@@ -19417,46 +19417,46 @@ void TerminalPramsManager_OldHeroineLawData___ctor_37222196(
   CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_o v12; // [xsp+40h] [xbp-50h]
   CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o v13; // 0:x0.16
 
-  if ( (byte_4C34E21 & 1) == 0 )
+  if ( (byte_4C4040B & 1) == 0 )
   {
-    sub_1C32C20(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
-    sub_1C32C20(&CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo);
-    byte_4C34E21 = 1;
+    sub_1C37058(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
+    sub_1C37058(&CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo);
+    byte_4C4040B = 1;
   }
   System_Object___ctor((Il2CppObject *)this, 0);
   if ( !uSvtEnt )
-    sub_1C32E7C(v5);
+    sub_1C372B4(v5);
   v6 = *(_OWORD *)&uSvtEnt->fields.id.fields.fakeValue;
   *(_OWORD *)&v12.fields.currentCryptoKey = *(_OWORD *)&uSvtEnt->fields.id.fields.currentCryptoKey;
   *(_OWORD *)&v12.fields.fakeValue = v6;
   if ( !CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo);
   v11 = v12;
-  this->fields.id = CodeStage_AntiCheat_ObscuredTypes_ObscuredLong__op_Implicit_48891308(&v11, 0);
+  this->fields.id = CodeStage_AntiCheat_ObscuredTypes_ObscuredLong__op_Implicit_48934420(&v11, 0);
   v7 = *(_OWORD *)&uSvtEnt->fields.userId.fields.fakeValue;
   *(_OWORD *)&v10.fields.currentCryptoKey = *(_OWORD *)&uSvtEnt->fields.userId.fields.currentCryptoKey;
   *(_OWORD *)&v10.fields.fakeValue = v7;
-  this->fields.userId = CodeStage_AntiCheat_ObscuredTypes_ObscuredLong__op_Implicit_48891308(&v10, 0);
+  this->fields.userId = CodeStage_AntiCheat_ObscuredTypes_ObscuredLong__op_Implicit_48934420(&v10, 0);
   v9 = *(_QWORD *)&uSvtEnt->fields.svtId.fields.currentCryptoKey;
   v8 = *(_QWORD *)&uSvtEnt->fields.svtId.fields.fakeValue;
   if ( !CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
   *(_QWORD *)&v13.fields.currentCryptoKey = v9;
   *(_QWORD *)&v13.fields.fakeValue = v8;
-  this->fields.svtId = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_48887784(v13, 0);
-  this->fields.limitCount = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_48887784(
+  this->fields.svtId = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_48930896(v13, 0);
+  this->fields.limitCount = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_48930896(
                               uSvtEnt->fields.limitCount,
                               0);
-  this->fields.imageLimitCount = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_48887784(
+  this->fields.imageLimitCount = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_48930896(
                                    uSvtEnt->fields.imageLimitCount,
                                    0);
-  this->fields.dispLimitCount = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_48887784(
+  this->fields.dispLimitCount = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_48930896(
                                   uSvtEnt->fields.dispLimitCount,
                                   0);
-  this->fields.commandCardLimitCount = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_48887784(
+  this->fields.commandCardLimitCount = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_48930896(
                                          uSvtEnt->fields.commandCardLimitCount,
                                          0);
-  this->fields.iconLimitCount = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_48887784(
+  this->fields.iconLimitCount = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_48930896(
                                   uSvtEnt->fields.iconLimitCount,
                                   0);
   *(_OWORD *)&this->fields.lv = *(_OWORD *)&uSvtEnt->fields.lv;
@@ -19481,14 +19481,14 @@ UserServantEntity_o *TerminalPramsManager_OldHeroineLawData__GetLoad(
   CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_o v11; // [xsp+20h] [xbp-70h] BYREF
   CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_o v12; // [xsp+40h] [xbp-50h]
 
-  if ( (byte_4C34E22 & 1) == 0 )
+  if ( (byte_4C4040C & 1) == 0 )
   {
-    sub_1C32C20(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
-    sub_1C32C20(&CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo);
-    sub_1C32C20(&UserServantEntity_TypeInfo);
-    byte_4C34E22 = 1;
+    sub_1C37058(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
+    sub_1C37058(&CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo);
+    sub_1C37058(&UserServantEntity_TypeInfo);
+    byte_4C4040C = 1;
   }
-  v3 = sub_1C32E6C(UserServantEntity_TypeInfo);
+  v3 = sub_1C372A4(UserServantEntity_TypeInfo);
   UserServantEntity___ctor((UserServantEntity_o *)v3, 0);
   id = this->fields.id;
   if ( !CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo->_2.cctor_finished )
@@ -19496,7 +19496,7 @@ UserServantEntity_o *TerminalPramsManager_OldHeroineLawData__GetLoad(
   v5 = CodeStage_AntiCheat_ObscuredTypes_ObscuredLong__op_Implicit(&v11, id, 0);
   v12 = v11;
   if ( !v3 )
-    sub_1C32E7C(v5);
+    sub_1C372B4(v5);
   v6 = *(_OWORD *)&v12.fields.fakeValue;
   *(_OWORD *)(v3 + 16) = *(_OWORD *)&v12.fields.currentCryptoKey;
   *(_OWORD *)(v3 + 32) = v6;
@@ -19544,11 +19544,11 @@ void TerminalPramsManager_QuestClearHeroineInfoForSave___ctor(
 
   System_Object___ctor((Il2CppObject *)this, 0);
   this->fields.oldUsrSvtData = 0;
-  sub_1C32BC4((CGThumbnailListItem_o *)&this->fields, 0, v3, v4);
+  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields, 0, v3, v4);
 }
 
 
-void TerminalPramsManager_QuestClearHeroineInfoForSave___ctor_37222960(
+void TerminalPramsManager_QuestClearHeroineInfoForSave___ctor_37318592(
         TerminalPramsManager_QuestClearHeroineInfoForSave_o *this,
         QuestClearHeroineInfo_o *qClearHeroineInfo,
         const MethodInfo *method)
@@ -19561,20 +19561,20 @@ void TerminalPramsManager_QuestClearHeroineInfoForSave___ctor_37222960(
   int32_t v10; // w2
   const MethodInfo *v11; // x3
 
-  if ( (byte_4C34E23 & 1) == 0 )
+  if ( (byte_4C4040D & 1) == 0 )
   {
-    sub_1C32C20(&TerminalPramsManager_OldHeroineLawData_TypeInfo);
-    byte_4C34E23 = 1;
+    sub_1C37058(&TerminalPramsManager_OldHeroineLawData_TypeInfo);
+    byte_4C4040D = 1;
   }
   System_Object___ctor((Il2CppObject *)this, 0);
   if ( !qClearHeroineInfo )
-    sub_1C32E7C(v5);
+    sub_1C372B4(v5);
   oldUsrSvtData = qClearHeroineInfo->fields.oldUsrSvtData;
-  v7 = (TerminalPramsManager_OldHeroineLawData_o *)sub_1C32E6C(TerminalPramsManager_OldHeroineLawData_TypeInfo);
-  TerminalPramsManager_OldHeroineLawData___ctor_37222196(v7, oldUsrSvtData, v8);
+  v7 = (TerminalPramsManager_OldHeroineLawData_o *)sub_1C372A4(TerminalPramsManager_OldHeroineLawData_TypeInfo);
+  TerminalPramsManager_OldHeroineLawData___ctor_37317828(v7, oldUsrSvtData, v8);
   this->fields.oldUsrSvtData = v7;
   p_fields = &this->fields;
-  sub_1C32BC4((CGThumbnailListItem_o *)p_fields, (int32_t)v7, v10, v11);
+  sub_1C36FFC((CGThumbnailListItem_o *)p_fields, (int32_t)v7, v10, v11);
   p_fields->isChangeLimitcnt = qClearHeroineInfo->fields.isChangeLimitcnt;
   p_fields->isChangeTreasureDvc = qClearHeroineInfo->fields.isChangeTreasureDvc;
   *(_QWORD *)&p_fields->treasureDvcId = *(_QWORD *)&qClearHeroineInfo->fields.treasureDvcId;
@@ -19595,12 +19595,12 @@ QuestClearHeroineInfo_o *TerminalPramsManager_QuestClearHeroineInfoForSave__GetL
   const MethodInfo *v7; // x3
   QuestClearHeroineInfo_o *result; // x0
 
-  if ( (byte_4C34E24 & 1) == 0 )
+  if ( (byte_4C4040E & 1) == 0 )
   {
-    sub_1C32C20(&QuestClearHeroineInfo_TypeInfo);
-    byte_4C34E24 = 1;
+    sub_1C37058(&QuestClearHeroineInfo_TypeInfo);
+    byte_4C4040E = 1;
   }
-  v3 = sub_1C32E6C(QuestClearHeroineInfo_TypeInfo);
+  v3 = sub_1C372A4(QuestClearHeroineInfo_TypeInfo);
   QuestClearHeroineInfo___ctor((QuestClearHeroineInfo_o *)v3, 0);
   oldUsrSvtData = this->fields.oldUsrSvtData;
   if ( !oldUsrSvtData
@@ -19609,10 +19609,10 @@ QuestClearHeroineInfo_o *TerminalPramsManager_QuestClearHeroineInfoForSave__GetL
                                                                       v4),
         !v3) )
   {
-    sub_1C32E7C(oldUsrSvtData);
+    sub_1C372B4(oldUsrSvtData);
   }
   *(_QWORD *)(v3 + 16) = oldUsrSvtData;
-  sub_1C32BC4((CGThumbnailListItem_o *)(v3 + 16), (int32_t)oldUsrSvtData, v6, v7);
+  sub_1C36FFC((CGThumbnailListItem_o *)(v3 + 16), (int32_t)oldUsrSvtData, v6, v7);
   result = (QuestClearHeroineInfo_o *)v3;
   *(_BYTE *)(v3 + 24) = this->fields.isChangeLimitcnt;
   *(_BYTE *)(v3 + 25) = this->fields.isChangeTreasureDvc;
@@ -19630,15 +19630,15 @@ void TerminalPramsManager___c___cctor(const MethodInfo *method)
   int32_t v2; // w2
   const MethodInfo *v3; // x3
 
-  if ( (byte_4C34E28 & 1) == 0 )
+  if ( (byte_4C40412 & 1) == 0 )
   {
-    sub_1C32C20(&TerminalPramsManager___c_TypeInfo);
-    byte_4C34E28 = 1;
+    sub_1C37058(&TerminalPramsManager___c_TypeInfo);
+    byte_4C40412 = 1;
   }
-  v1 = (Il2CppObject *)sub_1C32E6C(TerminalPramsManager___c_TypeInfo);
+  v1 = (Il2CppObject *)sub_1C372A4(TerminalPramsManager___c_TypeInfo);
   System_Object___ctor(v1, 0);
   TerminalPramsManager___c_TypeInfo->static_fields->__9 = (struct TerminalPramsManager___c_o *)v1;
-  sub_1C32BC4((CGThumbnailListItem_o *)TerminalPramsManager___c_TypeInfo->static_fields, (int32_t)v1, v2, v3);
+  sub_1C36FFC((CGThumbnailListItem_o *)TerminalPramsManager___c_TypeInfo->static_fields, (int32_t)v1, v2, v3);
 }
 
 
@@ -19656,20 +19656,20 @@ bool TerminalPramsManager___c___ReceiveQuestEndResultInfo_b__724_0(
   int32_t questId; // w19
   TerminalPramsManager_c *v5; // x0
 
-  if ( (byte_4C34E29 & 1) == 0 )
+  if ( (byte_4C40413 & 1) == 0 )
   {
-    this = (TerminalPramsManager___c_o *)sub_1C32C20(&TerminalPramsManager_TypeInfo);
-    byte_4C34E29 = 1;
+    this = (TerminalPramsManager___c_o *)sub_1C37058(&TerminalPramsManager_TypeInfo);
+    byte_4C40413 = 1;
   }
   if ( !n )
-    sub_1C32E7C(this);
+    sub_1C372B4(this);
   questId = n->fields.questId;
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(TerminalPramsManager_TypeInfo);
-  if ( !byte_4C31A97 )
+  if ( !byte_4C3CFE7 )
   {
-    sub_1C32C20(&TerminalPramsManager_TypeInfo);
-    byte_4C31A97 = 1;
+    sub_1C37058(&TerminalPramsManager_TypeInfo);
+    byte_4C3CFE7 = 1;
   }
   v5 = TerminalPramsManager_TypeInfo;
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -19686,10 +19686,10 @@ bool TerminalPramsManager___c___SendOpenedQuestIdToAdManager_b__730_0(
         int32_t v,
         const MethodInfo *method)
 {
-  if ( (byte_4C34E2A & 1) == 0 )
+  if ( (byte_4C40414 & 1) == 0 )
   {
-    sub_1C32C20(&TerminalPramsManager_TypeInfo);
-    byte_4C34E2A = 1;
+    sub_1C37058(&TerminalPramsManager_TypeInfo);
+    byte_4C40414 = 1;
   }
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(TerminalPramsManager_TypeInfo);
@@ -19703,7 +19703,7 @@ int32_t TerminalPramsManager___c___SendOpenedQuestIdToAdManager_b__730_3(
         const MethodInfo *method)
 {
   if ( !v )
-    sub_1C32E7C(this);
+    sub_1C372B4(this);
   return v->fields.id;
 }
 
@@ -19753,16 +19753,16 @@ void TerminalPramsManager___c__DisplayClass712_0___CheckResumeEffectNT2_b__0(
   int32_t v8; // w2
   const MethodInfo *v9; // x3
 
-  if ( (byte_4C34E2B & 1) == 0 )
+  if ( (byte_4C40415 & 1) == 0 )
   {
-    sub_1C32C20(&StringLiteral_43/*"\n"*/);
-    byte_4C34E2B = 1;
+    sub_1C37058(&StringLiteral_43/*"\n"*/);
+    byte_4C40415 = 1;
   }
   effectIdsStr = this->fields.effectIdsStr;
   p_fields = (CGThumbnailListItem_o *)&this->fields;
-  v7 = System_String__Concat_63556792(effectIdsStr, effectId, (System_String_o *)StringLiteral_43/*"\n"*/, 0);
+  v7 = System_String__Concat_63599904(effectIdsStr, effectId, (System_String_o *)StringLiteral_43/*"\n"*/, 0);
   p_fields->klass = (CGThumbnailListItem_c *)v7;
-  sub_1C32BC4(p_fields, (int32_t)v7, v8, v9);
+  sub_1C36FFC(p_fields, (int32_t)v7, v8, v9);
 }
 
 
@@ -19783,7 +19783,7 @@ QuestEntity_o *TerminalPramsManager___c__DisplayClass730_0___SendOpenedQuestIdTo
 
   questMaster = this->fields.questMaster;
   if ( !questMaster )
-    sub_1C32E7C(0);
+    sub_1C372B4(0);
   return QuestMaster__getQuestEntity(questMaster, v, 0);
 }
 
@@ -19797,19 +19797,19 @@ bool TerminalPramsManager___c__DisplayClass730_0___SendOpenedQuestIdToAdManager_
   NetworkManager_c *v6; // x0
   UserQuestEntity_o *entity; // [xsp+8h] [xbp-28h] BYREF
 
-  if ( (byte_4C34E2C & 1) == 0 )
+  if ( (byte_4C40416 & 1) == 0 )
   {
-    sub_1C32C20(&NetworkManager_TypeInfo);
-    byte_4C34E2C = 1;
+    sub_1C37058(&NetworkManager_TypeInfo);
+    byte_4C40416 = 1;
   }
   entity = 0;
   userQuestMaster = this->fields.userQuestMaster;
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
-  if ( !byte_4C31812 )
+  if ( !byte_4C3CD62 )
   {
-    sub_1C32C20(&NetworkManager_TypeInfo);
-    byte_4C31812 = 1;
+    sub_1C37058(&NetworkManager_TypeInfo);
+    byte_4C3CD62 = 1;
   }
   v6 = NetworkManager_TypeInfo;
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
@@ -19830,7 +19830,7 @@ bool TerminalPramsManager___c__DisplayClass730_0___SendOpenedQuestIdToAdManager_
     if ( entity )
       return entity->fields.clearNum == 0;
 LABEL_15:
-    sub_1C32E7C(v6);
+    sub_1C372B4(v6);
   }
   return 1;
 }

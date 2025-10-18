@@ -1,14 +1,14 @@
 void ClassRelationOverwriteMaster___ctor(ClassRelationOverwriteMaster_o *this, const MethodInfo *method)
 {
-  if ( (byte_4C3774F & 1) == 0 )
+  if ( (byte_4C42D46 & 1) == 0 )
   {
-    sub_1C32C20(&Method_DataMasterBase_ClassRelationOverwriteMaster__ClassRelationOverwriteEntity__string___ctor__);
-    byte_4C3774F = 1;
+    sub_1C37058(&Method_DataMasterBase_ClassRelationOverwriteMaster__ClassRelationOverwriteEntity__string___ctor__);
+    byte_4C42D46 = 1;
   }
   DataMasterBase_object__object__object____ctor(
     (DataMasterBase_TMaster__TEntity__PKType__o *)this,
     298,
-    (const MethodInfo_3398FCC *)Method_DataMasterBase_ClassRelationOverwriteMaster__ClassRelationOverwriteEntity__string___ctor__);
+    (const MethodInfo_33A3834 *)Method_DataMasterBase_ClassRelationOverwriteMaster__ClassRelationOverwriteEntity__string___ctor__);
 }
 
 
@@ -23,10 +23,10 @@ ClassRelationOverwriteEntity_o *ClassRelationOverwriteMaster__GetEntity(
 {
   Il2CppObject *PK; // x1
 
-  if ( (byte_4C3774D & 1) == 0 )
+  if ( (byte_4C42D44 & 1) == 0 )
   {
-    sub_1C32C20(&Method_DataMasterBase_ClassRelationOverwriteMaster__ClassRelationOverwriteEntity__string__GetEntity__);
-    byte_4C3774D = 1;
+    sub_1C37058(&Method_DataMasterBase_ClassRelationOverwriteMaster__ClassRelationOverwriteEntity__string__GetEntity__);
+    byte_4C42D44 = 1;
   }
   PK = (Il2CppObject *)ClassRelationOverwriteEntity__CreatePK(
                          id,
@@ -37,7 +37,7 @@ ClassRelationOverwriteEntity_o *ClassRelationOverwriteMaster__GetEntity(
   return (ClassRelationOverwriteEntity_o *)DataMasterBase_object__object__object___GetEntity(
                                              (DataMasterBase_TMaster__TEntity__PKType__o *)this,
                                              PK,
-                                             (const MethodInfo_339B2F0 *)Method_DataMasterBase_ClassRelationOverwriteMaster__ClassRelationOverwriteEntity__string__GetEntity__);
+                                             (const MethodInfo_33A5B58 *)Method_DataMasterBase_ClassRelationOverwriteMaster__ClassRelationOverwriteEntity__string__GetEntity__);
 }
 
 
@@ -53,10 +53,10 @@ bool ClassRelationOverwriteMaster__TryGetEntity(
 {
   Il2CppObject *PK; // x2
 
-  if ( (byte_4C3774E & 1) == 0 )
+  if ( (byte_4C42D45 & 1) == 0 )
   {
-    sub_1C32C20(&Method_DataMasterBase_ClassRelationOverwriteMaster__ClassRelationOverwriteEntity__string__TryGetEntity__);
-    byte_4C3774E = 1;
+    sub_1C37058(&Method_DataMasterBase_ClassRelationOverwriteMaster__ClassRelationOverwriteEntity__string__TryGetEntity__);
+    byte_4C42D45 = 1;
   }
   PK = (Il2CppObject *)ClassRelationOverwriteEntity__CreatePK(
                          id,
@@ -68,7 +68,7 @@ bool ClassRelationOverwriteMaster__TryGetEntity(
            (DataMasterBase_TMaster__TEntity__PKType__o *)this,
            (Il2CppObject **)entity,
            PK,
-           (const MethodInfo_339B33C *)Method_DataMasterBase_ClassRelationOverwriteMaster__ClassRelationOverwriteEntity__string__TryGetEntity__);
+           (const MethodInfo_33A5BA4 *)Method_DataMasterBase_ClassRelationOverwriteMaster__ClassRelationOverwriteEntity__string__TryGetEntity__);
 }
 
 
@@ -99,16 +99,16 @@ bool ClassRelationOverwriteMaster__getEntity(
   int32_t v28; // w2
   int32_t v29; // w3
 
-  if ( (byte_4C37750 & 1) == 0 )
+  if ( (byte_4C42D47 & 1) == 0 )
   {
-    sub_1C32C20(&int___TypeInfo);
-    byte_4C37750 = 1;
+    sub_1C37058(&int___TypeInfo);
+    byte_4C42D47 = 1;
   }
   *outEnt = 0;
-  sub_1C32BC4((CGThumbnailListItem_o *)outEnt, 0, relationId, (const MethodInfo *)isAtkSide);
-  Entity = sub_1C32CC8(int___TypeInfo, 4);
+  sub_1C36FFC((CGThumbnailListItem_o *)outEnt, 0, relationId, (const MethodInfo *)isAtkSide);
+  Entity = sub_1C37100(int___TypeInfo, 4);
   if ( !Entity )
-    sub_1C32E7C(0);
+    sub_1C372B4(0);
   v15 = *(_DWORD *)(Entity + 24);
   v16 = (_DWORD *)Entity;
   if ( !v15 )
@@ -153,7 +153,7 @@ bool ClassRelationOverwriteMaster__getEntity(
   v27 = v16[6];
   if ( v27 <= 2 || (v16[10] = 0, v27 == 3) )
 LABEL_19:
-    sub_1C32E84(Entity);
+    sub_1C372BC(Entity);
   v28 = v16[8];
   v29 = v16[9];
   v16[11] = 0;

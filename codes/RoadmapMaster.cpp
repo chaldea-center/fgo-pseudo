@@ -1,14 +1,14 @@
 void RoadmapMaster___ctor(RoadmapMaster_o *this, const MethodInfo *method)
 {
-  if ( (byte_4C381CB & 1) == 0 )
+  if ( (byte_4C437C4 & 1) == 0 )
   {
-    sub_1C32C20(&Method_DataMasterBase_RoadmapMaster__RoadmapEntity__string___ctor__);
-    byte_4C381CB = 1;
+    sub_1C37058(&Method_DataMasterBase_RoadmapMaster__RoadmapEntity__string___ctor__);
+    byte_4C437C4 = 1;
   }
   DataMasterBase_object__object__object____ctor(
     (DataMasterBase_TMaster__TEntity__PKType__o *)this,
     517,
-    (const MethodInfo_3398FCC *)Method_DataMasterBase_RoadmapMaster__RoadmapEntity__string___ctor__);
+    (const MethodInfo_33A3834 *)Method_DataMasterBase_RoadmapMaster__RoadmapEntity__string___ctor__);
 }
 
 
@@ -21,16 +21,16 @@ RoadmapEntity_o *RoadmapMaster__GetEntity(
 {
   Il2CppObject *PK; // x1
 
-  if ( (byte_4C381CC & 1) == 0 )
+  if ( (byte_4C437C5 & 1) == 0 )
   {
-    sub_1C32C20(&Method_DataMasterBase_RoadmapMaster__RoadmapEntity__string__GetEntity__);
-    byte_4C381CC = 1;
+    sub_1C37058(&Method_DataMasterBase_RoadmapMaster__RoadmapEntity__string__GetEntity__);
+    byte_4C437C5 = 1;
   }
   PK = (Il2CppObject *)RoadmapEntity__CreatePK(tabGroup, groupIndex, *(const MethodInfo **)&groupIndex);
   return (RoadmapEntity_o *)DataMasterBase_object__object__object___GetEntity(
                               (DataMasterBase_TMaster__TEntity__PKType__o *)this,
                               PK,
-                              (const MethodInfo_339B2F0 *)Method_DataMasterBase_RoadmapMaster__RoadmapEntity__string__GetEntity__);
+                              (const MethodInfo_33A5B58 *)Method_DataMasterBase_RoadmapMaster__RoadmapEntity__string__GetEntity__);
 }
 
 
@@ -51,61 +51,61 @@ RoadmapEntity_o *RoadmapMaster__GetInProgressRoadmapEntity(
   System_Func_object__bool__o *v15; // x22
   RoadmapEntity_o *result; // x0
 
-  if ( (byte_4C381CA & 1) == 0 )
+  if ( (byte_4C437C3 & 1) == 0 )
   {
-    sub_1C32C20(&Method_System_Linq_Enumerable_FirstOrDefault_RoadmapEntity___);
-    sub_1C32C20(&Method_System_Linq_Enumerable_Last_RoadmapEntity___);
-    sub_1C32C20(&Method_System_Linq_Enumerable_Skip_RoadmapEntity___);
-    sub_1C32C20(&Method_System_Linq_Enumerable_ToList_RoadmapEntity___);
-    sub_1C32C20(&Method_System_Linq_Enumerable_Where_RoadmapEntity___);
-    sub_1C32C20(&System_Func_RoadmapEntity__bool__TypeInfo);
-    sub_1C32C20(&Method_System_Collections_Generic_List_RoadmapEntity__FindLastIndex__);
-    sub_1C32C20(&System_Predicate_RoadmapEntity__TypeInfo);
-    sub_1C32C20(&Method_RoadmapMaster_IsDispBoard__);
-    sub_1C32C20(&Method_RoadmapMaster_IsWarRewardBoard__);
-    sub_1C32C20(&Method_RoadmapMaster__GetInProgressRoadmapEntity_b__5_0__);
-    byte_4C381CA = 1;
+    sub_1C37058(&Method_System_Linq_Enumerable_FirstOrDefault_RoadmapEntity___);
+    sub_1C37058(&Method_System_Linq_Enumerable_Last_RoadmapEntity___);
+    sub_1C37058(&Method_System_Linq_Enumerable_Skip_RoadmapEntity___);
+    sub_1C37058(&Method_System_Linq_Enumerable_ToList_RoadmapEntity___);
+    sub_1C37058(&Method_System_Linq_Enumerable_Where_RoadmapEntity___);
+    sub_1C37058(&System_Func_RoadmapEntity__bool__TypeInfo);
+    sub_1C37058(&Method_System_Collections_Generic_List_RoadmapEntity__FindLastIndex__);
+    sub_1C37058(&System_Predicate_RoadmapEntity__TypeInfo);
+    sub_1C37058(&Method_RoadmapMaster_IsDispBoard__);
+    sub_1C37058(&Method_RoadmapMaster_IsWarRewardBoard__);
+    sub_1C37058(&Method_RoadmapMaster__GetInProgressRoadmapEntity_b__5_0__);
+    byte_4C437C3 = 1;
   }
   SortedDispBoardEntityList = RoadmapMaster__GetSortedDispBoardEntityList(
                                 this,
                                 roadmapAssetData,
                                 roadmapAtlasList,
                                 method);
-  v8 = (System_Func_object__bool__o *)sub_1C32E6C(System_Func_RoadmapEntity__bool__TypeInfo);
+  v8 = (System_Func_object__bool__o *)sub_1C372A4(System_Func_RoadmapEntity__bool__TypeInfo);
   System_Func_object__bool____ctor(v8, (Il2CppObject *)this, Method_RoadmapMaster_IsWarRewardBoard__, 0);
   v9 = System_Linq_Enumerable__Where_object_(
          (System_Collections_Generic_IEnumerable_TSource__o *)SortedDispBoardEntityList,
          (System_Func_TSource__bool__o *)v8,
-         (const MethodInfo_3123BA8 *)Method_System_Linq_Enumerable_Where_RoadmapEntity___);
+         (const MethodInfo_312E410 *)Method_System_Linq_Enumerable_Where_RoadmapEntity___);
   v10 = (System_Collections_Generic_List_object__o *)System_Linq_Enumerable__ToList_object_(
                                                        v9,
-                                                       (const MethodInfo_3121728 *)Method_System_Linq_Enumerable_ToList_RoadmapEntity___);
-  v11 = (System_Predicate_object__o *)sub_1C32E6C(System_Predicate_RoadmapEntity__TypeInfo);
+                                                       (const MethodInfo_312BF90 *)Method_System_Linq_Enumerable_ToList_RoadmapEntity___);
+  v11 = (System_Predicate_object__o *)sub_1C372A4(System_Predicate_RoadmapEntity__TypeInfo);
   System_Predicate_object____ctor(
     v11,
     (Il2CppObject *)this,
     Method_RoadmapMaster__GetInProgressRoadmapEntity_b__5_0__,
     0);
   if ( !v10 )
-    sub_1C32E7C(v12);
+    sub_1C372B4(v12);
   LastIndex = System_Collections_Generic_List_object___FindLastIndex(
                 v10,
                 (System_Predicate_T__o *)v11,
-                (const MethodInfo_3799100 *)Method_System_Collections_Generic_List_RoadmapEntity__FindLastIndex__);
+                (const MethodInfo_37A3968 *)Method_System_Collections_Generic_List_RoadmapEntity__FindLastIndex__);
   v14 = System_Linq_Enumerable__Skip_object_(
           (System_Collections_Generic_IEnumerable_TSource__o *)v10,
           LastIndex + 1,
-          (const MethodInfo_311AD40 *)Method_System_Linq_Enumerable_Skip_RoadmapEntity___);
-  v15 = (System_Func_object__bool__o *)sub_1C32E6C(System_Func_RoadmapEntity__bool__TypeInfo);
+          (const MethodInfo_31255A8 *)Method_System_Linq_Enumerable_Skip_RoadmapEntity___);
+  v15 = (System_Func_object__bool__o *)sub_1C372A4(System_Func_RoadmapEntity__bool__TypeInfo);
   System_Func_object__bool____ctor(v15, (Il2CppObject *)this, Method_RoadmapMaster_IsDispBoard__, 0);
-  result = (RoadmapEntity_o *)System_Linq_Enumerable__FirstOrDefault_object__51408536(
+  result = (RoadmapEntity_o *)System_Linq_Enumerable__FirstOrDefault_object__51451648(
                                 v14,
                                 (System_Func_TSource__bool__o *)v15,
-                                (const MethodInfo_3106E98 *)Method_System_Linq_Enumerable_FirstOrDefault_RoadmapEntity___);
+                                (const MethodInfo_3111700 *)Method_System_Linq_Enumerable_FirstOrDefault_RoadmapEntity___);
   if ( !result )
     return (RoadmapEntity_o *)System_Linq_Enumerable__Last_object_(
                                 (System_Collections_Generic_IEnumerable_TSource__o *)v10,
-                                (const MethodInfo_31082C4 *)Method_System_Linq_Enumerable_Last_RoadmapEntity___);
+                                (const MethodInfo_3112B2C *)Method_System_Linq_Enumerable_Last_RoadmapEntity___);
   return result;
 }
 
@@ -120,24 +120,24 @@ System_Collections_Generic_List_RoadmapEntity__o *RoadmapMaster__GetSortedDispBo
   System_Func_object__bool__o *v8; // x21
   System_Collections_Generic_IEnumerable_TSource__o *v9; // x0
 
-  if ( (byte_4C381C9 & 1) == 0 )
+  if ( (byte_4C437C2 & 1) == 0 )
   {
-    sub_1C32C20(&Method_System_Linq_Enumerable_ToList_RoadmapEntity___);
-    sub_1C32C20(&Method_System_Linq_Enumerable_Where_RoadmapEntity___);
-    sub_1C32C20(&System_Func_RoadmapEntity__bool__TypeInfo);
-    sub_1C32C20(&Method_RoadmapMaster_IsDispBoard__);
-    byte_4C381C9 = 1;
+    sub_1C37058(&Method_System_Linq_Enumerable_ToList_RoadmapEntity___);
+    sub_1C37058(&Method_System_Linq_Enumerable_Where_RoadmapEntity___);
+    sub_1C37058(&System_Func_RoadmapEntity__bool__TypeInfo);
+    sub_1C37058(&Method_RoadmapMaster_IsDispBoard__);
+    byte_4C437C2 = 1;
   }
   Item1 = RoadmapMaster__GetSortedExistingBoardEntityList(this, roadmapAssetData, roadmapAtlasList, method).fields.Item1;
-  v8 = (System_Func_object__bool__o *)sub_1C32E6C(System_Func_RoadmapEntity__bool__TypeInfo);
+  v8 = (System_Func_object__bool__o *)sub_1C372A4(System_Func_RoadmapEntity__bool__TypeInfo);
   System_Func_object__bool____ctor(v8, (Il2CppObject *)this, Method_RoadmapMaster_IsDispBoard__, 0);
   v9 = System_Linq_Enumerable__Where_object_(
          (System_Collections_Generic_IEnumerable_TSource__o *)Item1,
          (System_Func_TSource__bool__o *)v8,
-         (const MethodInfo_3123BA8 *)Method_System_Linq_Enumerable_Where_RoadmapEntity___);
+         (const MethodInfo_312E410 *)Method_System_Linq_Enumerable_Where_RoadmapEntity___);
   return (System_Collections_Generic_List_RoadmapEntity__o *)System_Linq_Enumerable__ToList_object_(
                                                                v9,
-                                                               (const MethodInfo_3121728 *)Method_System_Linq_Enumerable_ToList_RoadmapEntity___);
+                                                               (const MethodInfo_312BF90 *)Method_System_Linq_Enumerable_ToList_RoadmapEntity___);
 }
 
 
@@ -205,7 +205,7 @@ System_ValueTuple_List_RoadmapEntity___List_UIAtlas___o RoadmapMaster__GetSorted
   _QWORD *v60; // x9
   __int64 v61; // x10
   Il2CppClass **v62; // x0
-  const MethodInfo_3AF85D0 *v63; // x4
+  const MethodInfo_3B02E38 *v63; // x4
   struct System_Collections_Generic_List_RoadmapEntity__o *v64; // x0
   struct System_Collections_Generic_List_UIAtlas__o *v65; // x1
   System_Collections_Generic_List_Enumerator_object__o v67; // [xsp+8h] [xbp-A8h] BYREF
@@ -215,35 +215,35 @@ System_ValueTuple_List_RoadmapEntity___List_UIAtlas___o RoadmapMaster__GetSorted
   System_ValueTuple_object__object__o v71; // 0:x0.16
   System_ValueTuple_List_RoadmapEntity___List_UIAtlas___o result; // 0:x0.16
 
-  if ( (byte_4C381C8 & 1) == 0 )
+  if ( (byte_4C437C1 & 1) == 0 )
   {
-    sub_1C32C20(&Method_System_Linq_Enumerable_Cast_RoadmapEntity___);
-    sub_1C32C20(&Method_System_Linq_Enumerable_OrderBy_RoadmapEntity__int___);
-    sub_1C32C20(&Method_System_Linq_Enumerable_ThenBy_RoadmapEntity__int___);
-    sub_1C32C20(&Method_System_Linq_Enumerable_ToList_RoadmapEntity___);
-    sub_1C32C20(&Method_System_Collections_Generic_List_Enumerator_RoadmapEntity__Dispose__);
-    sub_1C32C20(&Method_System_Collections_Generic_List_Enumerator_RoadmapEntity__MoveNext__);
-    sub_1C32C20(&Method_System_Collections_Generic_List_Enumerator_RoadmapEntity__get_Current__);
-    sub_1C32C20(&System_Func_RoadmapEntity__int__TypeInfo);
-    sub_1C32C20(&Method_System_Collections_Generic_List_RoadmapEntity__Add__);
-    sub_1C32C20(&Method_System_Collections_Generic_List_UIAtlas__Add__);
-    sub_1C32C20(&Method_System_Collections_Generic_List_RoadmapEntity__GetEnumerator__);
-    sub_1C32C20(&Method_System_Collections_Generic_List_RoadmapEntity___ctor__);
-    sub_1C32C20(&Method_System_Collections_Generic_List_UIAtlas___ctor__);
-    sub_1C32C20(&System_Collections_Generic_List_UIAtlas__TypeInfo);
-    sub_1C32C20(&System_Collections_Generic_List_RoadmapEntity__TypeInfo);
-    sub_1C32C20(&UnityEngine_Object_TypeInfo);
-    sub_1C32C20(&RoadmapBoardListViewManager_TypeInfo);
-    sub_1C32C20(&Method_RoadmapMaster___c__GetSortedExistingBoardEntityList_b__3_0__);
-    sub_1C32C20(&Method_RoadmapMaster___c__GetSortedExistingBoardEntityList_b__3_1__);
-    sub_1C32C20(&RoadmapMaster___c_TypeInfo);
-    sub_1C32C20(&Method_System_ValueTuple_List_RoadmapEntity___List_UIAtlas____ctor__);
-    byte_4C381C8 = 1;
+    sub_1C37058(&Method_System_Linq_Enumerable_Cast_RoadmapEntity___);
+    sub_1C37058(&Method_System_Linq_Enumerable_OrderBy_RoadmapEntity__int___);
+    sub_1C37058(&Method_System_Linq_Enumerable_ThenBy_RoadmapEntity__int___);
+    sub_1C37058(&Method_System_Linq_Enumerable_ToList_RoadmapEntity___);
+    sub_1C37058(&Method_System_Collections_Generic_List_Enumerator_RoadmapEntity__Dispose__);
+    sub_1C37058(&Method_System_Collections_Generic_List_Enumerator_RoadmapEntity__MoveNext__);
+    sub_1C37058(&Method_System_Collections_Generic_List_Enumerator_RoadmapEntity__get_Current__);
+    sub_1C37058(&System_Func_RoadmapEntity__int__TypeInfo);
+    sub_1C37058(&Method_System_Collections_Generic_List_RoadmapEntity__Add__);
+    sub_1C37058(&Method_System_Collections_Generic_List_UIAtlas__Add__);
+    sub_1C37058(&Method_System_Collections_Generic_List_RoadmapEntity__GetEnumerator__);
+    sub_1C37058(&Method_System_Collections_Generic_List_RoadmapEntity___ctor__);
+    sub_1C37058(&Method_System_Collections_Generic_List_UIAtlas___ctor__);
+    sub_1C37058(&System_Collections_Generic_List_UIAtlas__TypeInfo);
+    sub_1C37058(&System_Collections_Generic_List_RoadmapEntity__TypeInfo);
+    sub_1C37058(&UnityEngine_Object_TypeInfo);
+    sub_1C37058(&RoadmapBoardListViewManager_TypeInfo);
+    sub_1C37058(&Method_RoadmapMaster___c__GetSortedExistingBoardEntityList_b__3_0__);
+    sub_1C37058(&Method_RoadmapMaster___c__GetSortedExistingBoardEntityList_b__3_1__);
+    sub_1C37058(&RoadmapMaster___c_TypeInfo);
+    sub_1C37058(&Method_System_ValueTuple_List_RoadmapEntity___List_UIAtlas____ctor__);
+    byte_4C437C1 = 1;
   }
   memset(&v68, 0, sizeof(v68));
   v6 = System_Linq_Enumerable__Cast_object_(
          (System_Collections_IEnumerable_o *)this->fields.list,
-         (const MethodInfo_30EBAC8 *)Method_System_Linq_Enumerable_Cast_RoadmapEntity___);
+         (const MethodInfo_30F6330 *)Method_System_Linq_Enumerable_Cast_RoadmapEntity___);
   v7 = RoadmapMaster___c_TypeInfo;
   v8 = (System_Collections_Generic_IEnumerable_TSource__o *)v6;
   if ( !RoadmapMaster___c_TypeInfo->_2.cctor_finished )
@@ -260,7 +260,7 @@ System_ValueTuple_List_RoadmapEntity___List_UIAtlas___o RoadmapMaster__GetSorted
       v7 = RoadmapMaster___c_TypeInfo;
     }
     v10 = (Il2CppObject *)v7->static_fields->__9;
-    _9__3_0 = (System_Func_object__int__o *)sub_1C32E6C(System_Func_RoadmapEntity__int__TypeInfo);
+    _9__3_0 = (System_Func_object__int__o *)sub_1C372A4(System_Func_RoadmapEntity__int__TypeInfo);
     System_Func_object__int____ctor(
       _9__3_0,
       v10,
@@ -268,12 +268,12 @@ System_ValueTuple_List_RoadmapEntity___List_UIAtlas___o RoadmapMaster__GetSorted
       0);
     static_fields = RoadmapMaster___c_TypeInfo->static_fields;
     static_fields->__9__3_0 = (struct System_Func_RoadmapEntity__int__o *)_9__3_0;
-    sub_1C32BC4((CGThumbnailListItem_o *)&static_fields->__9__3_0, (int32_t)_9__3_0, v12, v13);
+    sub_1C36FFC((CGThumbnailListItem_o *)&static_fields->__9__3_0, (int32_t)_9__3_0, v12, v13);
   }
   v14 = System_Linq_Enumerable__OrderBy_object__int_(
           v8,
           (System_Func_TSource__TKey__o *)_9__3_0,
-          (const MethodInfo_310CB44 *)Method_System_Linq_Enumerable_OrderBy_RoadmapEntity__int___);
+          (const MethodInfo_31173AC *)Method_System_Linq_Enumerable_OrderBy_RoadmapEntity__int___);
   v15 = RoadmapMaster___c_TypeInfo;
   v16 = v14;
   if ( !RoadmapMaster___c_TypeInfo->_2.cctor_finished )
@@ -290,7 +290,7 @@ System_ValueTuple_List_RoadmapEntity___List_UIAtlas___o RoadmapMaster__GetSorted
       v15 = RoadmapMaster___c_TypeInfo;
     }
     v18 = (Il2CppObject *)v15->static_fields->__9;
-    _9__3_1 = (System_Func_object__int__o *)sub_1C32E6C(System_Func_RoadmapEntity__int__TypeInfo);
+    _9__3_1 = (System_Func_object__int__o *)sub_1C372A4(System_Func_RoadmapEntity__int__TypeInfo);
     System_Func_object__int____ctor(
       _9__3_1,
       v18,
@@ -298,35 +298,35 @@ System_ValueTuple_List_RoadmapEntity___List_UIAtlas___o RoadmapMaster__GetSorted
       0);
     v19 = RoadmapMaster___c_TypeInfo->static_fields;
     v19->__9__3_1 = (struct System_Func_RoadmapEntity__int__o *)_9__3_1;
-    sub_1C32BC4((CGThumbnailListItem_o *)&v19->__9__3_1, (int32_t)_9__3_1, v20, v21);
+    sub_1C36FFC((CGThumbnailListItem_o *)&v19->__9__3_1, (int32_t)_9__3_1, v20, v21);
   }
   v22 = (System_Collections_Generic_IEnumerable_TSource__o *)System_Linq_Enumerable__ThenBy_object__int_(
                                                                v16,
                                                                (System_Func_TSource__TKey__o *)_9__3_1,
-                                                               (const MethodInfo_311BBF0 *)Method_System_Linq_Enumerable_ThenBy_RoadmapEntity__int___);
+                                                               (const MethodInfo_3126458 *)Method_System_Linq_Enumerable_ThenBy_RoadmapEntity__int___);
   v23 = (System_Collections_Generic_List_object__o *)System_Linq_Enumerable__ToList_object_(
                                                        v22,
-                                                       (const MethodInfo_3121728 *)Method_System_Linq_Enumerable_ToList_RoadmapEntity___);
-  v24 = (System_Collections_Generic_List_object__o *)sub_1C32E6C(System_Collections_Generic_List_RoadmapEntity__TypeInfo);
+                                                       (const MethodInfo_312BF90 *)Method_System_Linq_Enumerable_ToList_RoadmapEntity___);
+  v24 = (System_Collections_Generic_List_object__o *)sub_1C372A4(System_Collections_Generic_List_RoadmapEntity__TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v24,
-    (const MethodInfo_3797F88 *)Method_System_Collections_Generic_List_RoadmapEntity___ctor__);
-  v25 = (System_Collections_Generic_List_object__o *)sub_1C32E6C(System_Collections_Generic_List_UIAtlas__TypeInfo);
+    (const MethodInfo_37A27F0 *)Method_System_Collections_Generic_List_RoadmapEntity___ctor__);
+  v25 = (System_Collections_Generic_List_object__o *)sub_1C372A4(System_Collections_Generic_List_UIAtlas__TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v25,
-    (const MethodInfo_3797F88 *)Method_System_Collections_Generic_List_UIAtlas___ctor__);
+    (const MethodInfo_37A27F0 *)Method_System_Collections_Generic_List_UIAtlas___ctor__);
   if ( !v23 )
-    sub_1C32E7C(v26);
+    sub_1C372B4(v26);
   System_Collections_Generic_List_object___GetEnumerator(
     (System_Collections_Generic_List_Enumerator_T__o *)&v67,
     v23,
-    (const MethodInfo_37992B4 *)Method_System_Collections_Generic_List_RoadmapEntity__GetEnumerator__);
+    (const MethodInfo_37A3B1C *)Method_System_Collections_Generic_List_RoadmapEntity__GetEnumerator__);
   v68 = v67;
   while ( 1 )
   {
     v27 = System_Collections_Generic_List_Enumerator_object___MoveNext(
             &v68,
-            (const MethodInfo_3522FA8 *)Method_System_Collections_Generic_List_Enumerator_RoadmapEntity__MoveNext__);
+            (const MethodInfo_352D810 *)Method_System_Collections_Generic_List_Enumerator_RoadmapEntity__MoveNext__);
     if ( !v27 )
       break;
     current = v68.fields._current;
@@ -334,13 +334,13 @@ System_ValueTuple_List_RoadmapEntity___List_UIAtlas___o RoadmapMaster__GetSorted
     if ( IsDispAchieved )
     {
       if ( !current )
-        sub_1C32E7C(IsDispAchieved);
+        sub_1C372B4(IsDispAchieved);
       v31 = (int32_t *)&current[2].klass + 1;
     }
     else
     {
       if ( !current )
-        sub_1C32E7C(IsDispAchieved);
+        sub_1C372B4(IsDispAchieved);
       v31 = (int32_t *)&current[1].monitor + 1;
     }
     v32 = *v31;
@@ -353,48 +353,48 @@ System_ValueTuple_List_RoadmapEntity___List_UIAtlas___o RoadmapMaster__GetSorted
     if ( v34 )
     {
       if ( !v24 )
-        sub_1C32E7C(v34);
+        sub_1C372B4(v34);
       items = v24->fields._items;
       v38 = Method_System_Collections_Generic_List_RoadmapEntity__Add__;
       ++v24->fields._version;
       if ( !items )
-        sub_1C32E7C(v34);
+        sub_1C372B4(v34);
       size = v24->fields._size;
       if ( (unsigned int)size >= LODWORD(items->max_length) )
       {
         System_Collections_Generic_List_object___AddWithResize(
           v24,
           current,
-          *(const MethodInfo_37987BC **)(*(_QWORD *)(v38[4] + 192LL) + 112LL));
+          *(const MethodInfo_37A3024 **)(*(_QWORD *)(v38[4] + 192LL) + 112LL));
       }
       else
       {
         v40 = &items->obj.klass + size;
         v24->fields._size = size + 1;
         v40[4] = (Il2CppClass *)current;
-        sub_1C32BC4((CGThumbnailListItem_o *)(v40 + 4), (int32_t)current, v35, v36);
+        sub_1C36FFC((CGThumbnailListItem_o *)(v40 + 4), (int32_t)current, v35, v36);
       }
       if ( !v25 )
-        sub_1C32E7C(v41);
+        sub_1C372B4(v41);
       v55 = v25->fields._items;
       v56 = Method_System_Collections_Generic_List_UIAtlas__Add__;
       ++v25->fields._version;
       if ( !v55 )
-        sub_1C32E7C(v41);
+        sub_1C372B4(v41);
       v57 = v25->fields._size;
       if ( (unsigned int)v57 >= LODWORD(v55->max_length) )
       {
         System_Collections_Generic_List_object___AddWithResize(
           v25,
           0,
-          *(const MethodInfo_37987BC **)(*(_QWORD *)(v56[4] + 192LL) + 112LL));
+          *(const MethodInfo_37A3024 **)(*(_QWORD *)(v56[4] + 192LL) + 112LL));
       }
       else
       {
         v58 = &v55->obj.klass + v57;
         v25->fields._size = v57 + 1;
         v58[4] = 0;
-        sub_1C32BC4((CGThumbnailListItem_o *)(v58 + 4), 0, v42, v43);
+        sub_1C36FFC((CGThumbnailListItem_o *)(v58 + 4), 0, v42, v43);
       }
     }
     else
@@ -408,55 +408,55 @@ System_ValueTuple_List_RoadmapEntity___List_UIAtlas___o RoadmapMaster__GetSorted
       if ( v45 )
       {
         if ( !v24 )
-          sub_1C32E7C(v45);
+          sub_1C372B4(v45);
         v48 = v24->fields._items;
         v49 = Method_System_Collections_Generic_List_RoadmapEntity__Add__;
         ++v24->fields._version;
         if ( !v48 )
-          sub_1C32E7C(v45);
+          sub_1C372B4(v45);
         v50 = v24->fields._size;
         if ( (unsigned int)v50 >= LODWORD(v48->max_length) )
         {
           System_Collections_Generic_List_object___AddWithResize(
             v24,
             current,
-            *(const MethodInfo_37987BC **)(*(_QWORD *)(v49[4] + 192LL) + 112LL));
+            *(const MethodInfo_37A3024 **)(*(_QWORD *)(v49[4] + 192LL) + 112LL));
         }
         else
         {
           v51 = &v48->obj.klass + v50;
           v24->fields._size = v50 + 1;
           v51[4] = (Il2CppClass *)current;
-          sub_1C32BC4((CGThumbnailListItem_o *)(v51 + 4), (int32_t)current, v46, v47);
+          sub_1C36FFC((CGThumbnailListItem_o *)(v51 + 4), (int32_t)current, v46, v47);
         }
         if ( !v25 )
-          sub_1C32E7C(v52);
+          sub_1C372B4(v52);
         v59 = v25->fields._items;
         v60 = Method_System_Collections_Generic_List_UIAtlas__Add__;
         ++v25->fields._version;
         if ( !v59 )
-          sub_1C32E7C(v52);
+          sub_1C372B4(v52);
         v61 = v25->fields._size;
         if ( (unsigned int)v61 >= LODWORD(v59->max_length) )
         {
           System_Collections_Generic_List_object___AddWithResize(
             v25,
             (Il2CppObject *)BoardAtlasById,
-            *(const MethodInfo_37987BC **)(*(_QWORD *)(v60[4] + 192LL) + 112LL));
+            *(const MethodInfo_37A3024 **)(*(_QWORD *)(v60[4] + 192LL) + 112LL));
         }
         else
         {
           v62 = &v59->obj.klass + v61;
           v25->fields._size = v61 + 1;
           v62[4] = (Il2CppClass *)BoardAtlasById;
-          sub_1C32BC4((CGThumbnailListItem_o *)(v62 + 4), (int32_t)BoardAtlasById, v53, v54);
+          sub_1C36FFC((CGThumbnailListItem_o *)(v62 + 4), (int32_t)BoardAtlasById, v53, v54);
         }
       }
     }
   }
   System_Collections_Generic_List_Enumerator_object___Dispose(
     &v68,
-    (const MethodInfo_3522FA4 *)Method_System_Collections_Generic_List_Enumerator_RoadmapEntity__Dispose__);
+    (const MethodInfo_352D80C *)Method_System_Collections_Generic_List_Enumerator_RoadmapEntity__Dispose__);
   v71.fields.Item1 = (Il2CppObject *)&v69;
   v71.fields.Item2 = (Il2CppObject *)v24;
   v69 = 0;
@@ -478,17 +478,17 @@ bool RoadmapMaster__IsDispAchieved(RoadmapMaster_o *this, RoadmapEntity_o *roadm
 {
   Il2CppObject *Master_object; // x0
 
-  if ( (byte_4C381C7 & 1) == 0 )
+  if ( (byte_4C437C0 & 1) == 0 )
   {
-    sub_1C32C20(&Method_DataManager_GetMaster_CommonReleaseMaster___);
-    sub_1C32C20(&DataManager_TypeInfo);
-    byte_4C381C7 = 1;
+    sub_1C37058(&Method_DataManager_GetMaster_CommonReleaseMaster___);
+    sub_1C37058(&DataManager_TypeInfo);
+    byte_4C437C0 = 1;
   }
   if ( !DataManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-  Master_object = DataManager__GetMaster_object_((const MethodInfo_30DD39C *)Method_DataManager_GetMaster_CommonReleaseMaster___);
+  Master_object = DataManager__GetMaster_object_((const MethodInfo_30E7C04 *)Method_DataManager_GetMaster_CommonReleaseMaster___);
   if ( !roadmap || !Master_object )
-    sub_1C32E7C(Master_object);
+    sub_1C372B4(Master_object);
   return CommonReleaseMaster__IsOpen(
            (CommonReleaseMaster_o *)Master_object,
            roadmap->fields.displayAchievedCommonReleaseId,
@@ -502,17 +502,17 @@ bool RoadmapMaster__IsDispBoard(RoadmapMaster_o *this, RoadmapEntity_o *roadmap,
 {
   Il2CppObject *Master_object; // x0
 
-  if ( (byte_4C381C6 & 1) == 0 )
+  if ( (byte_4C437BF & 1) == 0 )
   {
-    sub_1C32C20(&Method_DataManager_GetMaster_CommonReleaseMaster___);
-    sub_1C32C20(&DataManager_TypeInfo);
-    byte_4C381C6 = 1;
+    sub_1C37058(&Method_DataManager_GetMaster_CommonReleaseMaster___);
+    sub_1C37058(&DataManager_TypeInfo);
+    byte_4C437BF = 1;
   }
   if ( !DataManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-  Master_object = DataManager__GetMaster_object_((const MethodInfo_30DD39C *)Method_DataManager_GetMaster_CommonReleaseMaster___);
+  Master_object = DataManager__GetMaster_object_((const MethodInfo_30E7C04 *)Method_DataManager_GetMaster_CommonReleaseMaster___);
   if ( !roadmap || !Master_object )
-    sub_1C32E7C(Master_object);
+    sub_1C372B4(Master_object);
   return CommonReleaseMaster__IsOpen(
            (CommonReleaseMaster_o *)Master_object,
            roadmap->fields.displayBoardCommonReleaseId,
@@ -525,7 +525,7 @@ bool RoadmapMaster__IsDispBoard(RoadmapMaster_o *this, RoadmapEntity_o *roadmap,
 bool RoadmapMaster__IsWarRewardBoard(RoadmapMaster_o *this, RoadmapEntity_o *roadmap, const MethodInfo *method)
 {
   if ( !roadmap )
-    sub_1C32E7C(this);
+    sub_1C372B4(this);
   return roadmap->fields.type == 1;
 }
 
@@ -540,17 +540,17 @@ bool RoadmapMaster__TryGetEntity(
 {
   Il2CppObject *PK; // x2
 
-  if ( (byte_4C381CD & 1) == 0 )
+  if ( (byte_4C437C6 & 1) == 0 )
   {
-    sub_1C32C20(&Method_DataMasterBase_RoadmapMaster__RoadmapEntity__string__TryGetEntity__);
-    byte_4C381CD = 1;
+    sub_1C37058(&Method_DataMasterBase_RoadmapMaster__RoadmapEntity__string__TryGetEntity__);
+    byte_4C437C6 = 1;
   }
   PK = (Il2CppObject *)RoadmapEntity__CreatePK(tabGroup, groupIndex, *(const MethodInfo **)&tabGroup);
   return DataMasterBase_object__object__object___TryGetEntity(
            (DataMasterBase_TMaster__TEntity__PKType__o *)this,
            (Il2CppObject **)entity,
            PK,
-           (const MethodInfo_339B33C *)Method_DataMasterBase_RoadmapMaster__RoadmapEntity__string__TryGetEntity__);
+           (const MethodInfo_33A5BA4 *)Method_DataMasterBase_RoadmapMaster__RoadmapEntity__string__TryGetEntity__);
 }
 
 
@@ -573,15 +573,15 @@ void RoadmapMaster___c___cctor(const MethodInfo *method)
   int32_t v2; // w2
   const MethodInfo *v3; // x3
 
-  if ( (byte_4C381CE & 1) == 0 )
+  if ( (byte_4C437C7 & 1) == 0 )
   {
-    sub_1C32C20(&RoadmapMaster___c_TypeInfo);
-    byte_4C381CE = 1;
+    sub_1C37058(&RoadmapMaster___c_TypeInfo);
+    byte_4C437C7 = 1;
   }
-  v1 = (Il2CppObject *)sub_1C32E6C(RoadmapMaster___c_TypeInfo);
+  v1 = (Il2CppObject *)sub_1C372A4(RoadmapMaster___c_TypeInfo);
   System_Object___ctor(v1, 0);
   RoadmapMaster___c_TypeInfo->static_fields->__9 = (struct RoadmapMaster___c_o *)v1;
-  sub_1C32BC4((CGThumbnailListItem_o *)RoadmapMaster___c_TypeInfo->static_fields, (int32_t)v1, v2, v3);
+  sub_1C36FFC((CGThumbnailListItem_o *)RoadmapMaster___c_TypeInfo->static_fields, (int32_t)v1, v2, v3);
 }
 
 
@@ -597,7 +597,7 @@ int32_t RoadmapMaster___c___GetSortedExistingBoardEntityList_b__3_0(
         const MethodInfo *method)
 {
   if ( !roadmap )
-    sub_1C32E7C(this);
+    sub_1C372B4(this);
   return roadmap->fields.tabGroup;
 }
 
@@ -608,6 +608,6 @@ int32_t RoadmapMaster___c___GetSortedExistingBoardEntityList_b__3_1(
         const MethodInfo *method)
 {
   if ( !roadmap )
-    sub_1C32E7C(this);
+    sub_1C372B4(this);
   return roadmap->fields.groupIndex;
 }

@@ -16,9 +16,9 @@ FsmEventData_o *FsmEventDataList__Get(FsmEventDataList_o *this, int32_t index, c
 
   eventDataList = this->fields.eventDataList;
   if ( !eventDataList )
-    sub_1C32E7C(this);
+    sub_1C372B4(this);
   if ( LODWORD(eventDataList->max_length) <= index )
-    sub_1C32E84(this);
+    sub_1C372BC(this);
   return eventDataList->m_Items[index];
 }
 
@@ -32,11 +32,11 @@ System_String_o *FsmEventDataList__GetEventData(FsmEventDataList_o *this, int32_
   if ( !eventDataList )
     goto LABEL_5;
   if ( LODWORD(eventDataList->max_length) <= index )
-    sub_1C32E84(this);
+    sub_1C372BC(this);
   v4 = eventDataList->m_Items[index];
   if ( !v4 )
 LABEL_5:
-    sub_1C32E7C(this);
+    sub_1C372B4(this);
   return v4->fields.eventData;
 }
 
@@ -50,11 +50,11 @@ System_String_o *FsmEventDataList__GetTitle(FsmEventDataList_o *this, int32_t in
   if ( !eventDataList )
     goto LABEL_5;
   if ( LODWORD(eventDataList->max_length) <= index )
-    sub_1C32E84(this);
+    sub_1C372BC(this);
   v4 = eventDataList->m_Items[index];
   if ( !v4 )
 LABEL_5:
-    sub_1C32E7C(this);
+    sub_1C372B4(this);
   return v4->fields.title;
 }
 
@@ -66,10 +66,10 @@ void FsmEventDataList__SendEvent(FsmEventDataList_o *this, int32_t index, const 
   struct FsmEventData_array *eventDataList; // x8
   FsmEventData_o *v8; // x8
 
-  if ( (byte_4C390D1 & 1) == 0 )
+  if ( (byte_4C446CB & 1) == 0 )
   {
-    sub_1C32C20(&UnityEngine_Object_TypeInfo);
-    byte_4C390D1 = 1;
+    sub_1C37058(&UnityEngine_Object_TypeInfo);
+    byte_4C446CB = 1;
   }
   targetFSM = (UnityEngine_Object_o *)this->fields.targetFSM;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -81,11 +81,11 @@ void FsmEventDataList__SendEvent(FsmEventDataList_o *this, int32_t index, const 
     if ( !eventDataList )
       goto LABEL_12;
     if ( LODWORD(eventDataList->max_length) <= index )
-      sub_1C32E84(v6);
+      sub_1C372BC(v6);
     v8 = eventDataList->m_Items[index];
     if ( !v8 || (v6 = this->fields.targetFSM) == 0 )
 LABEL_12:
-      sub_1C32E7C(v6);
+      sub_1C372B4(v6);
     PlayMakerFSM__SendEvent(v6, v8->fields.eventData, 0);
   }
 }
@@ -128,11 +128,11 @@ void FsmEventDataList__set_Length(FsmEventDataList_o *this, int32_t value, const
   const MethodInfo *v19; // x1
   __int64 v20; // x0
 
-  if ( (byte_4C390D0 & 1) == 0 )
+  if ( (byte_4C446CA & 1) == 0 )
   {
-    sub_1C32C20(&FsmEventData___TypeInfo);
-    sub_1C32C20(&FsmEventData_TypeInfo);
-    byte_4C390D0 = 1;
+    sub_1C37058(&FsmEventData___TypeInfo);
+    sub_1C37058(&FsmEventData_TypeInfo);
+    byte_4C446CA = 1;
   }
   eventDataList = this->fields.eventDataList;
   p_eventDataList = (CGThumbnailListItem_o *)&this->fields.eventDataList;
@@ -143,7 +143,7 @@ void FsmEventDataList__set_Length(FsmEventDataList_o *this, int32_t value, const
     max_length = 0;
   if ( max_length != value )
   {
-    v9 = sub_1C32CC8(FsmEventData___TypeInfo, (unsigned int)value);
+    v9 = sub_1C37100(FsmEventData___TypeInfo, (unsigned int)value);
     v12 = (unsigned int *)v9;
     if ( value >= 1 )
     {
@@ -155,11 +155,11 @@ void FsmEventDataList__set_Length(FsmEventDataList_o *this, int32_t value, const
       {
         if ( (__int64)v13 >= v14 )
         {
-          v18 = (FsmEventData_o *)sub_1C32E6C(FsmEventData_TypeInfo);
+          v18 = (FsmEventData_o *)sub_1C372A4(FsmEventData_TypeInfo);
           FsmEventData___ctor(v18, v19);
           if ( !v12 )
 LABEL_20:
-            sub_1C32E7C(v9);
+            sub_1C372B4(v9);
         }
         else
         {
@@ -168,31 +168,31 @@ LABEL_20:
             goto LABEL_20;
           if ( v13 >= LODWORD(klass->_1.namespaze) )
 LABEL_21:
-            sub_1C32E84(v9);
+            sub_1C372BC(v9);
           if ( !v12 )
             goto LABEL_20;
           v18 = (FsmEventData_o *)*((_QWORD *)&klass->_1.byval_arg.data + v13);
         }
         if ( v18 )
         {
-          v9 = sub_1C32D5C(v18, *(_QWORD *)(*(_QWORD *)v12 + 64LL));
+          v9 = sub_1C37194(v18, *(_QWORD *)(*(_QWORD *)v12 + 64LL));
           if ( !v9 )
           {
-            v20 = sub_1C32EA0(0);
-            sub_1C32D48(v20, 0);
+            v20 = sub_1C372D8(0);
+            sub_1C37180(v20, 0);
           }
         }
         if ( v13 >= v12[6] )
           goto LABEL_21;
         v16->klass = (CGThumbnailListItem_c *)v18;
-        sub_1C32BC4(v16, (int32_t)v18, v10, v11);
+        sub_1C36FFC(v16, (int32_t)v18, v10, v11);
         ++v13;
         v16 = (CGThumbnailListItem_o *)((char *)v16 + 8);
       }
       while ( v15 != v13 );
     }
     p_eventDataList->klass = (CGThumbnailListItem_c *)v12;
-    sub_1C32BC4(p_eventDataList, (int32_t)v12, v10, v11);
+    sub_1C36FFC(p_eventDataList, (int32_t)v12, v10, v11);
   }
 }
 
@@ -202,5 +202,5 @@ void FsmEventDataList__set_TargetFSM(FsmEventDataList_o *this, PlayMakerFSM_o *v
   const MethodInfo *v3; // x3
 
   this->fields.targetFSM = value;
-  sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.targetFSM, (int32_t)value, (int32_t)method, v3);
+  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.targetFSM, (int32_t)value, (int32_t)method, v3);
 }

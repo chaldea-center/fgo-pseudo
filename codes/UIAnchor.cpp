@@ -4,10 +4,10 @@ void UIAnchor___ctor(UIAnchor_o *this, const MethodInfo *method)
 
   this->fields.side = 8;
   this->fields.runOnlyOnce = 1;
-  if ( !byte_4C312CA )
+  if ( !byte_4C3C81A )
   {
-    sub_1C32C20(&UnityEngine_Vector2_TypeInfo);
-    byte_4C312CA = 1;
+    sub_1C37058(&UnityEngine_Vector2_TypeInfo);
+    byte_4C3C81A = 1;
   }
   v3 = UnityEngine_Vector2_TypeInfo;
   this->fields.relativeOffset = UnityEngine_Vector2_TypeInfo->static_fields->zeroVector;
@@ -36,22 +36,22 @@ void UIAnchor__Awake(UIAnchor_o *this, const MethodInfo *method)
   CGThumbnailListItem_o *p_onScreenResize; // x0
   struct UICamera_StaticFields *static_fields; // x0
 
-  if ( (byte_4C3C269 & 1) == 0 )
+  if ( (byte_4C477E4 & 1) == 0 )
   {
-    sub_1C32C20(&Method_UnityEngine_Component_GetComponent_Animation___);
-    sub_1C32C20(&UICamera_OnScreenResize_TypeInfo);
-    sub_1C32C20(&Method_UIAnchor_ScreenSizeChanged__);
-    sub_1C32C20(&UICamera_TypeInfo);
-    byte_4C3C269 = 1;
+    sub_1C37058(&Method_UnityEngine_Component_GetComponent_Animation___);
+    sub_1C37058(&UICamera_OnScreenResize_TypeInfo);
+    sub_1C37058(&Method_UIAnchor_ScreenSizeChanged__);
+    sub_1C37058(&UICamera_TypeInfo);
+    byte_4C477E4 = 1;
   }
   transform = UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0);
   this->fields.mTrans = transform;
-  sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.mTrans, (int32_t)transform, v4, v5);
+  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.mTrans, (int32_t)transform, v4, v5);
   Component_object = UnityEngine_Component__GetComponent_object_(
                        (UnityEngine_Component_o *)this,
-                       (const MethodInfo_30D3BC0 *)Method_UnityEngine_Component_GetComponent_Animation___);
+                       (const MethodInfo_30DE428 *)Method_UnityEngine_Component_GetComponent_Animation___);
   this->fields.mAnim = (struct UnityEngine_Animation_o *)Component_object;
-  sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.mAnim, (int32_t)Component_object, v7, v8);
+  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.mAnim, (int32_t)Component_object, v7, v8);
   v9 = UICamera_TypeInfo;
   if ( !UICamera_TypeInfo->_2.cctor_finished )
   {
@@ -59,7 +59,7 @@ void UIAnchor__Awake(UIAnchor_o *this, const MethodInfo *method)
     v9 = UICamera_TypeInfo;
   }
   onScreenResize = (System_Delegate_o *)v9->static_fields->onScreenResize;
-  v11 = (UICamera_OnScreenResize_o *)sub_1C32E6C(UICamera_OnScreenResize_TypeInfo);
+  v11 = (UICamera_OnScreenResize_o *)sub_1C372A4(UICamera_OnScreenResize_TypeInfo);
   UICamera_OnScreenResize___ctor(v11, (Il2CppObject *)this, Method_UIAnchor_ScreenSizeChanged__, 0);
   v12 = System_Delegate__Combine(onScreenResize, (System_Delegate_o *)v11, 0);
   v15 = v12;
@@ -72,13 +72,13 @@ void UIAnchor__Awake(UIAnchor_o *this, const MethodInfo *method)
         p_onScreenResize = (CGThumbnailListItem_o *)&v17->onScreenResize,
         (UICamera_OnScreenResize_c *)v15->klass != v16) )
   {
-    sub_1C3313C(v15);
+    sub_1C37574(v15);
 LABEL_9:
     static_fields = UICamera_TypeInfo->static_fields;
     static_fields->onScreenResize = (struct UICamera_OnScreenResize_o *)v15;
     p_onScreenResize = (CGThumbnailListItem_o *)&static_fields->onScreenResize;
   }
-  sub_1C32BC4(p_onScreenResize, (int32_t)v15, v13, v14);
+  sub_1C36FFC(p_onScreenResize, (int32_t)v15, v13, v14);
 }
 
 
@@ -96,12 +96,12 @@ void UIAnchor__OnDestroy(UIAnchor_o *this, const MethodInfo *method)
   CGThumbnailListItem_o *p_onScreenResize; // x0
   struct UICamera_StaticFields *static_fields; // x0
 
-  if ( (byte_4C3C26A & 1) == 0 )
+  if ( (byte_4C477E5 & 1) == 0 )
   {
-    sub_1C32C20(&UICamera_OnScreenResize_TypeInfo);
-    sub_1C32C20(&Method_UIAnchor_ScreenSizeChanged__);
-    sub_1C32C20(&UICamera_TypeInfo);
-    byte_4C3C26A = 1;
+    sub_1C37058(&UICamera_OnScreenResize_TypeInfo);
+    sub_1C37058(&Method_UIAnchor_ScreenSizeChanged__);
+    sub_1C37058(&UICamera_TypeInfo);
+    byte_4C477E5 = 1;
   }
   v3 = UICamera_TypeInfo;
   if ( !UICamera_TypeInfo->_2.cctor_finished )
@@ -110,7 +110,7 @@ void UIAnchor__OnDestroy(UIAnchor_o *this, const MethodInfo *method)
     v3 = UICamera_TypeInfo;
   }
   onScreenResize = (System_Delegate_o *)v3->static_fields->onScreenResize;
-  v5 = (UICamera_OnScreenResize_o *)sub_1C32E6C(UICamera_OnScreenResize_TypeInfo);
+  v5 = (UICamera_OnScreenResize_o *)sub_1C372A4(UICamera_OnScreenResize_TypeInfo);
   UICamera_OnScreenResize___ctor(v5, (Il2CppObject *)this, Method_UIAnchor_ScreenSizeChanged__, 0);
   v6 = System_Delegate__Remove(onScreenResize, (System_Delegate_o *)v5, 0);
   v9 = v6;
@@ -123,13 +123,13 @@ void UIAnchor__OnDestroy(UIAnchor_o *this, const MethodInfo *method)
         p_onScreenResize = (CGThumbnailListItem_o *)&v11->onScreenResize,
         (UICamera_OnScreenResize_c *)v9->klass != v10) )
   {
-    sub_1C3313C(v9);
+    sub_1C37574(v9);
 LABEL_9:
     static_fields = UICamera_TypeInfo->static_fields;
     static_fields->onScreenResize = (struct UICamera_OnScreenResize_o *)v9;
     p_onScreenResize = (CGThumbnailListItem_o *)&static_fields->onScreenResize;
   }
-  sub_1C32BC4(p_onScreenResize, (int32_t)v9, v7, v8);
+  sub_1C36FFC(p_onScreenResize, (int32_t)v9, v7, v8);
 }
 
 
@@ -162,12 +162,12 @@ void UIAnchor__Start(UIAnchor_o *this, const MethodInfo *method)
   int32_t v20; // w2
   const MethodInfo *v21; // x3
 
-  if ( (byte_4C3C26B & 1) == 0 )
+  if ( (byte_4C477E6 & 1) == 0 )
   {
-    sub_1C32C20(&Method_NGUITools_FindInParents_UIRoot___);
-    sub_1C32C20(&NGUITools_TypeInfo);
-    sub_1C32C20(&UnityEngine_Object_TypeInfo);
-    byte_4C3C26B = 1;
+    sub_1C37058(&Method_NGUITools_FindInParents_UIRoot___);
+    sub_1C37058(&NGUITools_TypeInfo);
+    sub_1C37058(&UnityEngine_Object_TypeInfo);
+    byte_4C477E6 = 1;
   }
   container = (UnityEngine_Object_o *)this->fields.container;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -185,17 +185,17 @@ void UIAnchor__Start(UIAnchor_o *this, const MethodInfo *method)
         goto LABEL_21;
       gameObject = UnityEngine_Component__get_gameObject(v6, 0);
       this->fields.container = gameObject;
-      sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.container, (int32_t)gameObject, v8, v9);
+      sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.container, (int32_t)gameObject, v8, v9);
       *p_widgetContainer = 0;
-      sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.widgetContainer, 0, v10, v11);
+      sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.widgetContainer, 0, v10, v11);
     }
   }
   v12 = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
   if ( !NGUITools_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NGUITools_TypeInfo);
-  v13 = NGUITools__FindInParents_object_(v12, (const MethodInfo_31676B4 *)Method_NGUITools_FindInParents_UIRoot___);
+  v13 = NGUITools__FindInParents_object_(v12, (const MethodInfo_3171F1C *)Method_NGUITools_FindInParents_UIRoot___);
   this->fields.mRoot = (struct UIRoot_o *)v13;
-  sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.mRoot, (int32_t)v13, v14, v15);
+  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.mRoot, (int32_t)v13, v14, v15);
   uiCamera = (UnityEngine_Object_o *)this->fields.uiCamera;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
@@ -209,11 +209,11 @@ void UIAnchor__Start(UIAnchor_o *this, const MethodInfo *method)
         j_il2cpp_runtime_class_init_0(NGUITools_TypeInfo);
       CameraForLayer = NGUITools__FindCameraForLayer(layer, 0);
       this->fields.uiCamera = CameraForLayer;
-      sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.uiCamera, (int32_t)CameraForLayer, v20, v21);
+      sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.uiCamera, (int32_t)CameraForLayer, v20, v21);
       goto LABEL_20;
     }
 LABEL_21:
-    sub_1C32E7C(v6);
+    sub_1C372B4(v6);
   }
 LABEL_20:
   UIAnchor__Update(this, v17);
@@ -297,13 +297,13 @@ void UIAnchor__Update(UIAnchor_o *this, const MethodInfo *method)
   UnityEngine_Vector3_o v73; // 0:s0.4,4:s1.4,8:s2.4
   UnityEngine_Vector3_o v74; // 0:s0.4,4:s1.4,8:s2.4
 
-  if ( (byte_4C3C26C & 1) == 0 )
+  if ( (byte_4C477E7 & 1) == 0 )
   {
-    sub_1C32C20(&UnityEngine_Application_TypeInfo);
-    sub_1C32C20(&Method_UnityEngine_GameObject_GetComponent_UIPanel___);
-    sub_1C32C20(&Method_UnityEngine_GameObject_GetComponent_UIWidget___);
-    sub_1C32C20(&UnityEngine_Object_TypeInfo);
-    byte_4C3C26C = 1;
+    sub_1C37058(&UnityEngine_Application_TypeInfo);
+    sub_1C37058(&Method_UnityEngine_GameObject_GetComponent_UIPanel___);
+    sub_1C37058(&Method_UnityEngine_GameObject_GetComponent_UIWidget___);
+    sub_1C37058(&UnityEngine_Object_TypeInfo);
+    byte_4C477E7 = 1;
   }
   mAnim = (UnityEngine_Object_o *)this->fields.mAnim;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -333,7 +333,7 @@ void UIAnchor__Update(UIAnchor_o *this, const MethodInfo *method)
       goto LABEL_146;
     Component_object = UnityEngine_GameObject__GetComponent_object_(
                          (UnityEngine_GameObject_o *)transform,
-                         (const MethodInfo_3134970 *)Method_UnityEngine_GameObject_GetComponent_UIWidget___);
+                         (const MethodInfo_313F1D8 *)Method_UnityEngine_GameObject_GetComponent_UIWidget___);
   }
   v7 = (UnityEngine_Object_o *)this->fields.container;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -351,7 +351,7 @@ LABEL_21:
       goto LABEL_146;
     v8 = UnityEngine_GameObject__GetComponent_object_(
            (UnityEngine_GameObject_o *)transform,
-           (const MethodInfo_3134970 *)Method_UnityEngine_GameObject_GetComponent_UIPanel___);
+           (const MethodInfo_313F1D8 *)Method_UnityEngine_GameObject_GetComponent_UIPanel___);
   }
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
@@ -368,7 +368,7 @@ LABEL_21:
     transform = (UnityEngine_Animation_o *)UnityEngine_Transform__get_parent((UnityEngine_Transform_o *)transform, 0);
     if ( !Component_object )
       goto LABEL_146;
-    UIWidget__CalculateBounds_49382128(&iptr, (UIWidget_o *)Component_object, (UnityEngine_Transform_o *)transform, 0);
+    UIWidget__CalculateBounds_49425240(&iptr, (UIWidget_o *)Component_object, (UnityEngine_Transform_o *)transform, 0);
     v9 = 0;
     *(float *)&v10 = iptr.fields.m_Center.fields.x - iptr.fields.m_Extents.fields.x;
     v11 = iptr.fields.m_Center.fields.y - iptr.fields.m_Extents.fields.y;
@@ -443,7 +443,7 @@ LABEL_37:
     v19 = (char)transform;
     v20 = UnityEngine_GameObject__get_transform(this->fields.container, 0);
     if ( (v19 & 1) != 0 )
-      NGUIMath__CalculateRelativeWidgetBounds_49181936(&iptr, (UnityEngine_Transform_o *)parent, v20, 0);
+      NGUIMath__CalculateRelativeWidgetBounds_49225048(&iptr, (UnityEngine_Transform_o *)parent, v20, 0);
     else
       NGUIMath__CalculateRelativeWidgetBounds(&iptr, v20, 0);
     v9 = 0;
@@ -563,13 +563,13 @@ LABEL_132:
       position = UnityEngine_Transform__get_position((UnityEngine_Transform_o *)transform, 0);
       if ( !uiCamera )
         goto LABEL_146;
-      v72 = UnityEngine_Camera__WorldToScreenPoint_71029908(uiCamera, position, 0);
+      v72 = UnityEngine_Camera__WorldToScreenPoint_71073020(uiCamera, position, 0);
       transform = (UnityEngine_Animation_o *)this->fields.uiCamera;
       if ( !transform )
         goto LABEL_146;
       v63 = v22;
       v64 = v23;
-      v70 = UnityEngine_Camera__ScreenToWorldPoint_71029932((UnityEngine_Camera_o *)transform, v72, 0);
+      v70 = UnityEngine_Camera__ScreenToWorldPoint_71073044((UnityEngine_Camera_o *)transform, v72, 0);
       x = v65;
       y = v66;
       goto LABEL_136;
@@ -712,7 +712,7 @@ LABEL_140:
       }
     }
 LABEL_146:
-    sub_1C32E7C(transform);
+    sub_1C372B4(transform);
   }
   v21 = (UnityEngine_Object_o *)this->fields.uiCamera;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )

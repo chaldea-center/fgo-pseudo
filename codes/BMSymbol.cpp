@@ -35,10 +35,10 @@ bool BMSymbol__Validate(BMSymbol_o *this, UIAtlas_o *atlas, const MethodInfo *me
   UnityEngine_Rect_o v26; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
   UnityEngine_Rect_o v27; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 
-  if ( (byte_4C3C0F9 & 1) == 0 )
+  if ( (byte_4C47674 & 1) == 0 )
   {
-    sub_1C32C20(&UnityEngine_Object_TypeInfo);
-    byte_4C3C0F9 = 1;
+    sub_1C37058(&UnityEngine_Object_TypeInfo);
+    byte_4C47674 = 1;
   }
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
@@ -60,7 +60,7 @@ bool BMSymbol__Validate(BMSymbol_o *this, UIAtlas_o *atlas, const MethodInfo *me
     }
     this->fields.mSprite = Sprite;
     p_mSprite = &this->fields.mSprite;
-    sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.mSprite, (int32_t)Sprite, v7, v8);
+    sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.mSprite, (int32_t)Sprite, v7, v8);
     if ( !this->fields.mSprite )
       return this->fields.mSprite != 0;
     if ( atlas )
@@ -72,7 +72,7 @@ bool BMSymbol__Validate(BMSymbol_o *this, UIAtlas_o *atlas, const MethodInfo *me
       if ( v6 )
       {
         *p_mSprite = 0;
-        sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.mSprite, 0, v12, v13);
+        sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.mSprite, 0, v12, v13);
         return this->fields.mSprite != 0;
       }
       v14 = (int *)*p_mSprite;
@@ -117,7 +117,7 @@ bool BMSymbol__Validate(BMSymbol_o *this, UIAtlas_o *atlas, const MethodInfo *me
       }
     }
 LABEL_25:
-    sub_1C32E7C(v6);
+    sub_1C372B4(v6);
   }
   return this->fields.mSprite != 0;
 }
@@ -145,7 +145,7 @@ int32_t BMSymbol__get_length(BMSymbol_o *this, const MethodInfo *method)
   {
     sequence = this->fields.sequence;
     if ( !sequence )
-      sub_1C32E7C(this);
+      sub_1C372B4(this);
     mLength = sequence->fields._stringLength;
     this->fields.mLength = mLength;
   }

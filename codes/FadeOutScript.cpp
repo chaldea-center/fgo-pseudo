@@ -1,6 +1,6 @@
 void FadeOutScript___ctor(FadeOutScript_o *this, const MethodInfo *method)
 {
-  this->fields.alpha = (struct UnityEngine_Color_o)xmmword_C0BFF0;
+  this->fields.alpha = (struct UnityEngine_Color_o)xmmword_C0DF70;
   UnityEngine_MonoBehaviour___ctor((UnityEngine_MonoBehaviour_o *)this, 0);
 }
 
@@ -18,14 +18,14 @@ void FadeOutScript__Update(FadeOutScript_o *this, const MethodInfo *method)
   UnityEngine_Color_o color; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
   UnityEngine_Color_o v6; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 
-  if ( (byte_4C36742 & 1) == 0 )
+  if ( (byte_4C41D30 & 1) == 0 )
   {
-    sub_1C32C20(&Method_UnityEngine_Component_GetComponent_Renderer___);
-    byte_4C36742 = 1;
+    sub_1C37058(&Method_UnityEngine_Component_GetComponent_Renderer___);
+    byte_4C41D30 = 1;
   }
   Component_object = (UnityEngine_Renderer_o *)UnityEngine_Component__GetComponent_object_(
                                                  (UnityEngine_Component_o *)this,
-                                                 (const MethodInfo_30D3BC0 *)Method_UnityEngine_Component_GetComponent_Renderer___);
+                                                 (const MethodInfo_30DE428 *)Method_UnityEngine_Component_GetComponent_Renderer___);
   if ( !Component_object )
     goto LABEL_9;
   Component_object = (UnityEngine_Renderer_o *)UnityEngine_Renderer__get_material(Component_object, 0);
@@ -36,12 +36,12 @@ void FadeOutScript__Update(FadeOutScript_o *this, const MethodInfo *method)
     return;
   Component_object = (UnityEngine_Renderer_o *)UnityEngine_Component__GetComponent_object_(
                                                  (UnityEngine_Component_o *)this,
-                                                 (const MethodInfo_30D3BC0 *)Method_UnityEngine_Component_GetComponent_Renderer___);
+                                                 (const MethodInfo_30DE428 *)Method_UnityEngine_Component_GetComponent_Renderer___);
   if ( !Component_object
     || (Component_object = (UnityEngine_Renderer_o *)UnityEngine_Renderer__get_material(Component_object, 0)) == 0 )
   {
 LABEL_9:
-    sub_1C32E7C(Component_object);
+    sub_1C372B4(Component_object);
   }
   v4 = (UnityEngine_Material_o *)Component_object;
   v6 = UnityEngine_Material__get_color((UnityEngine_Material_o *)Component_object, 0);

@@ -4,19 +4,19 @@ void UIPlayTween___ctor(UIPlayTween_o *this, const MethodInfo *method)
   int32_t v4; // w2
   const MethodInfo *v5; // x3
 
-  if ( (byte_4C3C074 & 1) == 0 )
+  if ( (byte_4C475EF & 1) == 0 )
   {
-    sub_1C32C20(&Method_System_Collections_Generic_List_EventDelegate___ctor__);
-    sub_1C32C20(&System_Collections_Generic_List_EventDelegate__TypeInfo);
-    byte_4C3C074 = 1;
+    sub_1C37058(&Method_System_Collections_Generic_List_EventDelegate___ctor__);
+    sub_1C37058(&System_Collections_Generic_List_EventDelegate__TypeInfo);
+    byte_4C475EF = 1;
   }
   this->fields.playDirection = 1;
-  v3 = (System_Collections_Generic_List_object__o *)sub_1C32E6C(System_Collections_Generic_List_EventDelegate__TypeInfo);
+  v3 = (System_Collections_Generic_List_object__o *)sub_1C372A4(System_Collections_Generic_List_EventDelegate__TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v3,
-    (const MethodInfo_3797F88 *)Method_System_Collections_Generic_List_EventDelegate___ctor__);
+    (const MethodInfo_37A27F0 *)Method_System_Collections_Generic_List_EventDelegate___ctor__);
   this->fields.onFinished = (struct System_Collections_Generic_List_EventDelegate__o *)v3;
-  sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.onFinished, (int32_t)v3, v4, v5);
+  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.onFinished, (int32_t)v3, v4, v5);
   UnityEngine_MonoBehaviour___ctor((UnityEngine_MonoBehaviour_o *)this, 0);
 }
 
@@ -30,11 +30,11 @@ void UIPlayTween__Awake(UIPlayTween_o *this, const MethodInfo *method)
   int32_t v7; // w2
   const MethodInfo *v8; // x3
 
-  if ( (byte_4C3C06C & 1) == 0 )
+  if ( (byte_4C475E7 & 1) == 0 )
   {
-    sub_1C32C20(&EventDelegate_TypeInfo);
-    sub_1C32C20(&UnityEngine_Object_TypeInfo);
-    byte_4C3C06C = 1;
+    sub_1C37058(&EventDelegate_TypeInfo);
+    sub_1C37058(&UnityEngine_Object_TypeInfo);
+    byte_4C475E7 = 1;
   }
   eventReceiver = (UnityEngine_Object_o *)this->fields.eventReceiver;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -44,12 +44,12 @@ void UIPlayTween__Awake(UIPlayTween_o *this, const MethodInfo *method)
     onFinished = this->fields.onFinished;
     if ( !EventDelegate_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(EventDelegate_TypeInfo);
-    if ( EventDelegate__IsValid_49205960(onFinished, 0) )
+    if ( EventDelegate__IsValid_49249072(onFinished, 0) )
     {
       this->fields.eventReceiver = 0;
-      sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.eventReceiver, 0, v5, v6);
+      sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.eventReceiver, 0, v5, v6);
       this->fields.callWhenFinished = 0;
-      sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.callWhenFinished, 0, v7, v8);
+      sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.callWhenFinished, 0, v7, v8);
     }
   }
 }
@@ -71,27 +71,27 @@ void UIPlayTween__OnDisable(UIPlayTween_o *this, const MethodInfo *method)
   System_Collections_Generic_List_EventDelegate__o *m_CachedPtr; // x20
   EventDelegate_Callback_o *v6; // x21
 
-  if ( (byte_4C3C06F & 1) == 0 )
+  if ( (byte_4C475EA & 1) == 0 )
   {
-    sub_1C32C20(&EventDelegate_Callback_TypeInfo);
-    sub_1C32C20(&Method_UnityEngine_Component_GetComponent_UIToggle___);
-    sub_1C32C20(&EventDelegate_TypeInfo);
-    sub_1C32C20(&UnityEngine_Object_TypeInfo);
-    sub_1C32C20(&Method_UIPlayTween_OnToggle__);
-    byte_4C3C06F = 1;
+    sub_1C37058(&EventDelegate_Callback_TypeInfo);
+    sub_1C37058(&Method_UnityEngine_Component_GetComponent_UIToggle___);
+    sub_1C37058(&EventDelegate_TypeInfo);
+    sub_1C37058(&UnityEngine_Object_TypeInfo);
+    sub_1C37058(&Method_UIPlayTween_OnToggle__);
+    byte_4C475EA = 1;
   }
   Component_object = (UnityEngine_Object_o *)UnityEngine_Component__GetComponent_object_(
                                                (UnityEngine_Component_o *)this,
-                                               (const MethodInfo_30D3BC0 *)Method_UnityEngine_Component_GetComponent_UIToggle___);
+                                               (const MethodInfo_30DE428 *)Method_UnityEngine_Component_GetComponent_UIToggle___);
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   v4 = UnityEngine_Object__op_Inequality(Component_object, 0, 0);
   if ( v4 )
   {
     if ( !Component_object )
-      sub_1C32E7C(v4);
+      sub_1C372B4(v4);
     m_CachedPtr = (System_Collections_Generic_List_EventDelegate__o *)Component_object[2].fields.m_CachedPtr;
-    v6 = (EventDelegate_Callback_o *)sub_1C32E6C(EventDelegate_Callback_TypeInfo);
+    v6 = (EventDelegate_Callback_o *)sub_1C372A4(EventDelegate_Callback_TypeInfo);
     EventDelegate_Callback___ctor(v6, (Il2CppObject *)this, Method_UIPlayTween_OnToggle__, 0);
     if ( !EventDelegate_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(EventDelegate_TypeInfo);
@@ -149,15 +149,15 @@ void UIPlayTween__OnEnable(UIPlayTween_o *this, const MethodInfo *method)
   System_Collections_Generic_List_EventDelegate__o *m_CachedPtr; // x20
   EventDelegate_Callback_o *v18; // x21
 
-  if ( (byte_4C3C06E & 1) == 0 )
+  if ( (byte_4C475E9 & 1) == 0 )
   {
-    sub_1C32C20(&EventDelegate_Callback_TypeInfo);
-    sub_1C32C20(&Method_UnityEngine_Component_GetComponent_UIToggle___);
-    sub_1C32C20(&EventDelegate_TypeInfo);
-    sub_1C32C20(&UnityEngine_Object_TypeInfo);
-    sub_1C32C20(&UICamera_TypeInfo);
-    sub_1C32C20(&Method_UIPlayTween_OnToggle__);
-    byte_4C3C06E = 1;
+    sub_1C37058(&EventDelegate_Callback_TypeInfo);
+    sub_1C37058(&Method_UnityEngine_Component_GetComponent_UIToggle___);
+    sub_1C37058(&EventDelegate_TypeInfo);
+    sub_1C37058(&UnityEngine_Object_TypeInfo);
+    sub_1C37058(&UICamera_TypeInfo);
+    sub_1C37058(&Method_UIPlayTween_OnToggle__);
+    byte_4C475E9 = 1;
   }
   if ( this->fields.mStarted )
   {
@@ -214,7 +214,7 @@ void UIPlayTween__OnEnable(UIPlayTween_o *this, const MethodInfo *method)
   }
   Component_object = (UnityEngine_Object_o *)UnityEngine_Component__GetComponent_object_(
                                                (UnityEngine_Component_o *)this,
-                                               (const MethodInfo_30D3BC0 *)Method_UnityEngine_Component_GetComponent_UIToggle___);
+                                               (const MethodInfo_30DE428 *)Method_UnityEngine_Component_GetComponent_UIToggle___);
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   v9 = (UICamera_c *)UnityEngine_Object__op_Inequality(Component_object, 0, 0);
@@ -223,7 +223,7 @@ void UIPlayTween__OnEnable(UIPlayTween_o *this, const MethodInfo *method)
     if ( Component_object )
     {
       m_CachedPtr = (System_Collections_Generic_List_EventDelegate__o *)Component_object[2].fields.m_CachedPtr;
-      v18 = (EventDelegate_Callback_o *)sub_1C32E6C(EventDelegate_Callback_TypeInfo);
+      v18 = (EventDelegate_Callback_o *)sub_1C372A4(EventDelegate_Callback_TypeInfo);
       EventDelegate_Callback___ctor(v18, (Il2CppObject *)this, Method_UIPlayTween_OnToggle__, 0);
       if ( !EventDelegate_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(EventDelegate_TypeInfo);
@@ -231,7 +231,7 @@ void UIPlayTween__OnEnable(UIPlayTween_o *this, const MethodInfo *method)
       return;
     }
 LABEL_32:
-    sub_1C32E7C(v9);
+    sub_1C372B4(v9);
   }
 }
 
@@ -250,12 +250,12 @@ void UIPlayTween__OnFinished(UIPlayTween_o *this, const MethodInfo *method)
   int32_t v12; // w2
   const MethodInfo *v13; // x3
 
-  if ( (byte_4C3C073 & 1) == 0 )
+  if ( (byte_4C475EE & 1) == 0 )
   {
-    sub_1C32C20(&EventDelegate_TypeInfo);
-    sub_1C32C20(&UnityEngine_Object_TypeInfo);
-    sub_1C32C20(&UIPlayTween_TypeInfo);
-    byte_4C3C073 = 1;
+    sub_1C37058(&EventDelegate_TypeInfo);
+    sub_1C37058(&UnityEngine_Object_TypeInfo);
+    sub_1C37058(&UIPlayTween_TypeInfo);
+    byte_4C475EE = 1;
   }
   v3 = this->fields.mActive - 1;
   this->fields.mActive = v3;
@@ -267,11 +267,11 @@ void UIPlayTween__OnFinished(UIPlayTween_o *this, const MethodInfo *method)
     if ( UnityEngine_Object__op_Equality(current, 0, 0) )
     {
       UIPlayTween_TypeInfo->static_fields->current = this;
-      sub_1C32BC4((CGThumbnailListItem_o *)UIPlayTween_TypeInfo->static_fields, (int32_t)this, v5, v6);
+      sub_1C36FFC((CGThumbnailListItem_o *)UIPlayTween_TypeInfo->static_fields, (int32_t)this, v5, v6);
       onFinished = this->fields.onFinished;
       if ( !EventDelegate_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(EventDelegate_TypeInfo);
-      EventDelegate__Execute_49177388(onFinished, 0);
+      EventDelegate__Execute_49220500(onFinished, 0);
       p_eventReceiver = &this->fields.eventReceiver;
       eventReceiver = (UnityEngine_Object_o *)this->fields.eventReceiver;
       if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -280,13 +280,13 @@ void UIPlayTween__OnFinished(UIPlayTween_o *this, const MethodInfo *method)
         && !System_String__IsNullOrEmpty(this->fields.callWhenFinished, 0) )
       {
         if ( !*p_eventReceiver )
-          sub_1C32E7C(0);
+          sub_1C372B4(0);
         UnityEngine_GameObject__SendMessage(*p_eventReceiver, this->fields.callWhenFinished, 1, 0);
       }
       *p_eventReceiver = 0;
-      sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.eventReceiver, 0, v10, v11);
+      sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.eventReceiver, 0, v10, v11);
       UIPlayTween_TypeInfo->static_fields->current = 0;
-      sub_1C32BC4((CGThumbnailListItem_o *)UIPlayTween_TypeInfo->static_fields, 0, v12, v13);
+      sub_1C36FFC((CGThumbnailListItem_o *)UIPlayTween_TypeInfo->static_fields, 0, v12, v13);
     }
   }
 }
@@ -355,11 +355,11 @@ void UIPlayTween__OnToggle(UIPlayTween_o *this, const MethodInfo *method)
   bool value; // w1
   const MethodInfo *v11; // x2
 
-  if ( (byte_4C3C070 & 1) == 0 )
+  if ( (byte_4C475EB & 1) == 0 )
   {
-    sub_1C32C20(&UnityEngine_Object_TypeInfo);
-    sub_1C32C20(&UIToggle_TypeInfo);
-    byte_4C3C070 = 1;
+    sub_1C37058(&UnityEngine_Object_TypeInfo);
+    sub_1C37058(&UIToggle_TypeInfo);
+    byte_4C475EB = 1;
   }
   if ( UnityEngine_Behaviour__get_enabled((UnityEngine_Behaviour_o *)this, 0) )
   {
@@ -403,7 +403,7 @@ void UIPlayTween__OnToggle(UIPlayTween_o *this, const MethodInfo *method)
         v7 = v8->static_fields->current;
         if ( !v7 )
 LABEL_26:
-          sub_1C32E7C(v7);
+          sub_1C372B4(v7);
         if ( UIToggle__get_value(v7, 0) )
           return;
       }
@@ -431,7 +431,7 @@ void UIPlayTween__Play(UIPlayTween_o *this, bool forward, const MethodInfo *meth
 {
   UnityEngine_Object_o *tweenTarget; // x20
   UnityEngine_GameObject_o *gameObject; // x20
-  _BOOL8 Active_49301984; // x0
+  _BOOL8 Active_49345096; // x0
   struct UITweener_array *v8; // x0
   int32_t v9; // w2
   const MethodInfo *v10; // x3
@@ -449,16 +449,16 @@ void UIPlayTween__Play(UIPlayTween_o *this, bool forward, const MethodInfo *meth
   EventDelegate_Callback_o *v22; // x24
   UnityEngine_GameObject_o *v23; // x19
 
-  if ( (byte_4C3C072 & 1) == 0 )
+  if ( (byte_4C475ED & 1) == 0 )
   {
-    sub_1C32C20(&EventDelegate_Callback_TypeInfo);
-    sub_1C32C20(&EventDelegate_TypeInfo);
-    sub_1C32C20(&Method_UnityEngine_GameObject_GetComponentsInChildren_UITweener___);
-    sub_1C32C20(&Method_UnityEngine_GameObject_GetComponents_UITweener___);
-    sub_1C32C20(&NGUITools_TypeInfo);
-    sub_1C32C20(&UnityEngine_Object_TypeInfo);
-    sub_1C32C20(&Method_UIPlayTween_OnFinished__);
-    byte_4C3C072 = 1;
+    sub_1C37058(&EventDelegate_Callback_TypeInfo);
+    sub_1C37058(&EventDelegate_TypeInfo);
+    sub_1C37058(&Method_UnityEngine_GameObject_GetComponentsInChildren_UITweener___);
+    sub_1C37058(&Method_UnityEngine_GameObject_GetComponents_UITweener___);
+    sub_1C37058(&NGUITools_TypeInfo);
+    sub_1C37058(&UnityEngine_Object_TypeInfo);
+    sub_1C37058(&Method_UIPlayTween_OnFinished__);
+    byte_4C475ED = 1;
   }
   this->fields.mActive = 0;
   tweenTarget = (UnityEngine_Object_o *)this->fields.tweenTarget;
@@ -470,8 +470,8 @@ void UIPlayTween__Play(UIPlayTween_o *this, bool forward, const MethodInfo *meth
     gameObject = this->fields.tweenTarget;
   if ( !NGUITools_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NGUITools_TypeInfo);
-  Active_49301984 = NGUITools__GetActive_49301984(gameObject, 0);
-  if ( !Active_49301984 )
+  Active_49345096 = NGUITools__GetActive_49345096(gameObject, 0);
+  if ( !Active_49345096 )
   {
     if ( this->fields.ifDisabledOnPlay != 1 )
       return;
@@ -482,15 +482,15 @@ void UIPlayTween__Play(UIPlayTween_o *this, bool forward, const MethodInfo *meth
   if ( !gameObject )
     goto LABEL_55;
   v8 = (struct UITweener_array *)(this->fields.includeChildren
-                                ? UnityEngine_GameObject__GetComponentsInChildren_object__51598740(
+                                ? UnityEngine_GameObject__GetComponentsInChildren_object__51641852(
                                     gameObject,
-                                    (const MethodInfo_3135594 *)Method_UnityEngine_GameObject_GetComponentsInChildren_UITweener___)
+                                    (const MethodInfo_313FDFC *)Method_UnityEngine_GameObject_GetComponentsInChildren_UITweener___)
                                 : UnityEngine_GameObject__GetComponents_object_(
                                     gameObject,
-                                    (const MethodInfo_31352CC *)Method_UnityEngine_GameObject_GetComponents_UITweener___));
+                                    (const MethodInfo_313FB34 *)Method_UnityEngine_GameObject_GetComponents_UITweener___));
   this->fields.mTweens = v8;
   p_mTweens = &this->fields.mTweens;
-  sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.mTweens, (int32_t)v8, v9, v10);
+  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.mTweens, (int32_t)v8, v9, v10);
   mTweens = this->fields.mTweens;
   if ( !mTweens )
     goto LABEL_55;
@@ -505,7 +505,7 @@ void UIPlayTween__Play(UIPlayTween_o *this, bool forward, const MethodInfo *meth
       do
       {
         if ( v14 >= LODWORD(mTweens->max_length) )
-          sub_1C32E84(Active_49301984);
+          sub_1C372BC(Active_49345096);
         v17 = mTweens->m_Items[v14];
         if ( !v17 )
           break;
@@ -519,7 +519,7 @@ void UIPlayTween__Play(UIPlayTween_o *this, bool forward, const MethodInfo *meth
           {
             if ( !NGUITools_TypeInfo->_2.cctor_finished )
               j_il2cpp_runtime_class_init_0(NGUITools_TypeInfo);
-            if ( NGUITools__GetActive_49301984(gameObject, 0) )
+            if ( NGUITools__GetActive_49345096(gameObject, 0) )
             {
               v15 = 0;
             }
@@ -538,25 +538,25 @@ void UIPlayTween__Play(UIPlayTween_o *this, bool forward, const MethodInfo *meth
             if ( this->fields.resetOnPlay
               || this->fields.resetIfDisabled && !UnityEngine_Behaviour__get_enabled((UnityEngine_Behaviour_o *)v17, 0) )
             {
-              UITweener__Play_49409336(v17, v16 & 1, 0);
+              UITweener__Play_49452448(v17, v16 & 1, 0);
               UITweener__ResetToBeginning(v17, 0);
             }
             onFinished = v17->fields.onFinished;
-            v20 = (EventDelegate_Callback_o *)sub_1C32E6C(EventDelegate_Callback_TypeInfo);
+            v20 = (EventDelegate_Callback_o *)sub_1C372A4(EventDelegate_Callback_TypeInfo);
             EventDelegate_Callback___ctor(v20, (Il2CppObject *)this, Method_UIPlayTween_OnFinished__, 0);
             if ( !EventDelegate_TypeInfo->_2.cctor_finished )
               j_il2cpp_runtime_class_init_0(EventDelegate_TypeInfo);
-            EventDelegate__Add_49235496(onFinished, v20, 1, 0);
-            UITweener__Play_49409336(v17, v16 & 1, 0);
+            EventDelegate__Add_49278608(onFinished, v20, 1, 0);
+            UITweener__Play_49452448(v17, v16 & 1, 0);
           }
           else
           {
             v21 = v17->fields.onFinished;
-            v22 = (EventDelegate_Callback_o *)sub_1C32E6C(EventDelegate_Callback_TypeInfo);
+            v22 = (EventDelegate_Callback_o *)sub_1C372A4(EventDelegate_Callback_TypeInfo);
             EventDelegate_Callback___ctor(v22, (Il2CppObject *)this, Method_UIPlayTween_OnFinished__, 0);
             if ( !EventDelegate_TypeInfo->_2.cctor_finished )
               j_il2cpp_runtime_class_init_0(EventDelegate_TypeInfo);
-            EventDelegate__Add_49235496(v21, v22, 1, 0);
+            EventDelegate__Add_49278608(v21, v22, 1, 0);
             UITweener__Toggle(v17, 0);
           }
         }
@@ -566,7 +566,7 @@ void UIPlayTween__Play(UIPlayTween_o *this, bool forward, const MethodInfo *meth
       }
       while ( *p_mTweens );
 LABEL_55:
-      sub_1C32E7C(Active_49301984);
+      sub_1C372B4(Active_49345096);
     }
   }
   else if ( this->fields.disableWhenFinished )
@@ -586,10 +586,10 @@ void UIPlayTween__Start(UIPlayTween_o *this, const MethodInfo *method)
   int32_t v5; // w2
   const MethodInfo *v6; // x3
 
-  if ( (byte_4C3C06D & 1) == 0 )
+  if ( (byte_4C475E8 & 1) == 0 )
   {
-    sub_1C32C20(&UnityEngine_Object_TypeInfo);
-    byte_4C3C06D = 1;
+    sub_1C37058(&UnityEngine_Object_TypeInfo);
+    byte_4C475E8 = 1;
   }
   tweenTarget = (UnityEngine_Object_o *)this->fields.tweenTarget;
   this->fields.mStarted = 1;
@@ -599,7 +599,7 @@ void UIPlayTween__Start(UIPlayTween_o *this, const MethodInfo *method)
   {
     gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
     this->fields.tweenTarget = gameObject;
-    sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.tweenTarget, (int32_t)gameObject, v5, v6);
+    sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.tweenTarget, (int32_t)gameObject, v5, v6);
   }
 }
 
@@ -618,10 +618,10 @@ void UIPlayTween__Update(UIPlayTween_o *this, const MethodInfo *method)
   UnityEngine_GameObject_o *tweenTarget; // x20
 
   v4 = this;
-  if ( (byte_4C3C071 & 1) == 0 )
+  if ( (byte_4C475EC & 1) == 0 )
   {
-    this = (UIPlayTween_o *)sub_1C32C20(&NGUITools_TypeInfo);
-    byte_4C3C071 = 1;
+    this = (UIPlayTween_o *)sub_1C37058(&NGUITools_TypeInfo);
+    byte_4C475EC = 1;
   }
   if ( v4->fields.disableWhenFinished )
   {
@@ -637,11 +637,11 @@ void UIPlayTween__Update(UIPlayTween_o *this, const MethodInfo *method)
       while ( 1 )
       {
         if ( v8 >= mTweens[6] )
-          sub_1C32E84(this);
+          sub_1C372BC(this);
         v10 = *(_QWORD *)&mTweens[2 * v8 + 8];
         if ( !v10 )
 LABEL_14:
-          sub_1C32E7C(this);
+          sub_1C372B4(this);
         if ( *(_DWORD *)(v10 + 64) == v4->fields.tweenGroup )
         {
           if ( UnityEngine_Behaviour__get_enabled((UnityEngine_Behaviour_o *)v10, 0) )
@@ -664,7 +664,7 @@ LABEL_17:
         NGUITools__SetActive(tweenTarget, 0, 0);
       }
       p_mTweens->klass = 0;
-      sub_1C32BC4(p_mTweens, 0, v2, v3);
+      sub_1C36FFC(p_mTweens, 0, v2, v3);
     }
   }
 }

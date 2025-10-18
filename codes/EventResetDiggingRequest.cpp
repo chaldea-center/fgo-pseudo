@@ -10,14 +10,14 @@ void EventResetDiggingRequest__beginRequest(
         int32_t areaNum,
         const MethodInfo *method)
 {
-  if ( (byte_4C394DC & 1) == 0 )
+  if ( (byte_4C44AD6 & 1) == 0 )
   {
-    sub_1C32C20(&StringLiteral_19143/*"eventId"*/);
-    sub_1C32C20(&StringLiteral_16867/*"areaNum"*/);
-    byte_4C394DC = 1;
+    sub_1C37058(&StringLiteral_19146/*"eventId"*/);
+    sub_1C37058(&StringLiteral_16869/*"areaNum"*/);
+    byte_4C44AD6 = 1;
   }
-  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_19143/*"eventId"*/, eventId, 0);
-  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_16867/*"areaNum"*/, areaNum, 0);
+  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_19146/*"eventId"*/, eventId, 0);
+  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_16869/*"areaNum"*/, areaNum, 0);
   RequestBase__beginRequest((RequestBase_o *)this, 0);
 }
 
@@ -26,16 +26,16 @@ System_String_o *EventResetDiggingRequest__getURL(EventResetDiggingRequest_o *th
 {
   System_String_o *BaseUrl; // x0
 
-  if ( (byte_4C394DB & 1) == 0 )
+  if ( (byte_4C44AD5 & 1) == 0 )
   {
-    sub_1C32C20(&NetworkManager_TypeInfo);
-    sub_1C32C20(&StringLiteral_19133/*"event/resetDigging"*/);
-    byte_4C394DB = 1;
+    sub_1C37058(&NetworkManager_TypeInfo);
+    sub_1C37058(&StringLiteral_19136/*"event/resetDigging"*/);
+    byte_4C44AD5 = 1;
   }
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
   BaseUrl = NetworkManager__getBaseUrl(1, 0);
-  return System_String__Concat_63518544(BaseUrl, (System_String_o *)StringLiteral_19133/*"event/resetDigging"*/, 0);
+  return System_String__Concat_63561656(BaseUrl, (System_String_o *)StringLiteral_19136/*"event/resetDigging"*/, 0);
 }
 
 
@@ -50,11 +50,11 @@ void EventResetDiggingRequest__requestCompleted(
   System_String_o *v8; // x1
   Il2CppObject *success; // x20
 
-  if ( (byte_4C394DD & 1) == 0 )
+  if ( (byte_4C44AD7 & 1) == 0 )
   {
-    sub_1C32C20(&JsonManager_TypeInfo);
-    sub_1C32C20(&ResponseCommandKind_TypeInfo);
-    byte_4C394DD = 1;
+    sub_1C37058(&JsonManager_TypeInfo);
+    sub_1C37058(&ResponseCommandKind_TypeInfo);
+    byte_4C44AD7 = 1;
   }
   if ( !ResponseCommandKind_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(ResponseCommandKind_TypeInfo);
@@ -62,7 +62,7 @@ void EventResetDiggingRequest__requestCompleted(
   if ( v5 )
   {
     v6 = v5;
-    v7 = ResponseData__checkError_44140424(v5, 0);
+    v7 = ResponseData__checkError_44242528(v5, 0);
     v8 = 0;
     if ( v7 )
     {

@@ -13,7 +13,7 @@ void CharaGraphListViewItemDrawPatternGrandEquip__SetupUseSprite(
         const MethodInfo *method)
 {
   if ( !itemDraw )
-    sub_1C32E7C(this);
+    sub_1C372B4(this);
   CharaGraphListViewItemDrawPatternDefault__SetActive(
     (CharaGraphListViewItemDrawPatternDefault_o *)this,
     (UnityEngine_Component_o *)itemDraw->fields.useSprite,
@@ -53,16 +53,16 @@ void CharaGraphListViewItemDrawPatternGrandEquip__SetupWarningAndMask(
   int v28; // [xsp+Ch] [xbp-64h] BYREF
 
   v6 = (CharaGraphListViewItemDrawPatternDefault_o *)this;
-  if ( (byte_4C32787 & 1) == 0 )
+  if ( (byte_4C3DD71 & 1) == 0 )
   {
-    sub_1C32C20(&BalanceConfig_TypeInfo);
-    sub_1C32C20(&CharaGraphGrandEquipListViewItem_TypeInfo);
-    sub_1C32C20(&LocalizationManager_TypeInfo);
-    sub_1C32C20(&StringLiteral_43/*"\n"*/);
-    sub_1C32C20(&StringLiteral_7006/*"GRAND_SERVANT_EQUIP_FRAME_"*/);
-    sub_1C32C20(&StringLiteral_1/*""*/);
-    this = (CharaGraphListViewItemDrawPatternGrandEquip_o *)sub_1C32C20(&StringLiteral_5491/*"EQUIP_GRAPH_USE"*/);
-    byte_4C32787 = 1;
+    sub_1C37058(&BalanceConfig_TypeInfo);
+    sub_1C37058(&CharaGraphGrandEquipListViewItem_TypeInfo);
+    sub_1C37058(&LocalizationManager_TypeInfo);
+    sub_1C37058(&StringLiteral_43/*"\n"*/);
+    sub_1C37058(&StringLiteral_7007/*"GRAND_SERVANT_EQUIP_FRAME_"*/);
+    sub_1C37058(&StringLiteral_1/*""*/);
+    this = (CharaGraphListViewItemDrawPatternGrandEquip_o *)sub_1C37058(&StringLiteral_5492/*"EQUIP_GRAPH_USE"*/);
+    byte_4C3DD71 = 1;
   }
   v28 = 0;
   if ( !item )
@@ -128,7 +128,7 @@ void CharaGraphListViewItemDrawPatternGrandEquip__SetupWarningAndMask(
         if ( v12 - 4 >= (int)v14 )
           break;
         if ( v12 - 4 >= v14 )
-          sub_1C32E84(this);
+          sub_1C372BC(this);
         if ( *(_QWORD *)(v13 + 8 * v12) == v9[1].fields.sortValueLast )
         {
           warningLabel3 = itemDraw->fields.warningLabel3;
@@ -136,11 +136,11 @@ void CharaGraphListViewItemDrawPatternGrandEquip__SetupWarningAndMask(
           {
             v28 = v12 - 3;
             v16 = System_Int32__ToString((int32_t)&v28, 0);
-            v17 = System_String__Concat_63518544((System_String_o *)StringLiteral_7006/*"GRAND_SERVANT_EQUIP_FRAME_"*/, v16, 0);
+            v17 = System_String__Concat_63561656((System_String_o *)StringLiteral_7007/*"GRAND_SERVANT_EQUIP_FRAME_"*/, v16, 0);
             if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
               j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
             v18 = LocalizationManager__Get(v17, 0);
-            this = (CharaGraphListViewItemDrawPatternGrandEquip_o *)System_String__Concat_63518544(
+            this = (CharaGraphListViewItemDrawPatternGrandEquip_o *)System_String__Concat_63561656(
                                                                       (System_String_o *)StringLiteral_43/*"\n"*/,
                                                                       v18,
                                                                       0);
@@ -209,7 +209,7 @@ void CharaGraphListViewItemDrawPatternGrandEquip__SetupWarningAndMask(
             }
           }
 LABEL_36:
-          sub_1C32E7C(this);
+          sub_1C372B4(this);
         }
         this = (CharaGraphListViewItemDrawPatternGrandEquip_o *)itemDraw->fields.warningLabel3;
         if ( !this )
@@ -229,8 +229,8 @@ LABEL_53:
   {
     if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-    v25 = LocalizationManager__Get((System_String_o *)StringLiteral_5491/*"EQUIP_GRAPH_USE"*/, 0);
-    this = (CharaGraphListViewItemDrawPatternGrandEquip_o *)System_String__Concat_63518544(
+    v25 = LocalizationManager__Get((System_String_o *)StringLiteral_5492/*"EQUIP_GRAPH_USE"*/, 0);
+    this = (CharaGraphListViewItemDrawPatternGrandEquip_o *)System_String__Concat_63561656(
                                                               v25,
                                                               (System_String_o *)StringLiteral_43/*"\n"*/,
                                                               0);

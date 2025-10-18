@@ -2,10 +2,10 @@ void WarBoardConsumedPieceActionPointPopup___ctor(
         WarBoardConsumedPieceActionPointPopup_o *this,
         const MethodInfo *method)
 {
-  if ( (byte_4C356A2 & 1) == 0 )
+  if ( (byte_4C40C8D & 1) == 0 )
   {
-    sub_1C32C20(&WarBoardInfoPopupBase_TypeInfo);
-    byte_4C356A2 = 1;
+    sub_1C37058(&WarBoardInfoPopupBase_TypeInfo);
+    byte_4C40C8D = 1;
   }
   if ( !WarBoardInfoPopupBase_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(WarBoardInfoPopupBase_TypeInfo);
@@ -35,14 +35,14 @@ void WarBoardConsumedPieceActionPointPopup__ClosePopup(
   System_Action_c *v11; // x1
   const MethodInfo *v12; // x1
 
-  if ( (byte_4C356A1 & 1) == 0 )
+  if ( (byte_4C40C8C & 1) == 0 )
   {
-    sub_1C32C20(&System_Action_TypeInfo);
-    byte_4C356A1 = 1;
+    sub_1C37058(&System_Action_TypeInfo);
+    byte_4C40C8C = 1;
   }
   this->fields.hideCompleteCallback = 0;
   p_hideCompleteCallback = &this->fields.hideCompleteCallback;
-  sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.hideCompleteCallback, 0, (int32_t)method, v3);
+  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.hideCompleteCallback, 0, (int32_t)method, v3);
   v7 = System_Delegate__Combine(
          (System_Delegate_o *)this->fields.hideCompleteCallback,
          (System_Delegate_o *)hideCallback,
@@ -54,11 +54,11 @@ void WarBoardConsumedPieceActionPointPopup__ClosePopup(
   if ( (System_Action_c *)v7->klass != System_Action_TypeInfo
     || (*p_hideCompleteCallback = (struct System_Action_o *)v7, (System_Action_c *)v7->klass != v11) )
   {
-    sub_1C3313C(v7);
+    sub_1C37574(v7);
 LABEL_7:
     *p_hideCompleteCallback = (struct System_Action_o *)v10;
   }
-  sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.hideCompleteCallback, (int32_t)v10, v8, v9);
+  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.hideCompleteCallback, (int32_t)v10, v8, v9);
   WarBoardInfoPopupBase__Hide((WarBoardInfoPopupBase_o *)this, v12);
 }
 
@@ -72,7 +72,7 @@ void WarBoardConsumedPieceActionPointPopup__Initialize(
   WarBoardInfoPopupBase__Initialize((WarBoardInfoPopupBase_o *)this, method);
   windowBase = this->fields.windowBase;
   if ( !windowBase )
-    sub_1C32E7C(0);
+    sub_1C372B4(0);
   UISkinSprite__setupSprite(windowBase, 0, 0);
 }
 
@@ -85,10 +85,10 @@ void WarBoardConsumedPieceActionPointPopup__OnClickClose(
   System_Reflection_MethodBase_o *v4; // x0
   struct System_Action_bool__o *clickCallback; // x8
 
-  if ( (byte_4C356A0 & 1) == 0 )
+  if ( (byte_4C40C8B & 1) == 0 )
   {
-    sub_1C32C20(&Method_WarBoardConsumedPieceActionPointPopup_OnClickClose__);
-    byte_4C356A0 = 1;
+    sub_1C37058(&Method_WarBoardConsumedPieceActionPointPopup_OnClickClose__);
+    byte_4C40C8B = 1;
   }
   if ( WarBoardInfoPopupBase__get_isShown((WarBoardInfoPopupBase_o *)this, method)
     && !this->fields._isShowAnimating_k__BackingField
@@ -96,8 +96,8 @@ void WarBoardConsumedPieceActionPointPopup__OnClickClose(
   {
     v3 = Method_WarBoardConsumedPieceActionPointPopup_OnClickClose__;
     if ( (*((_BYTE *)Method_WarBoardConsumedPieceActionPointPopup_OnClickClose__ + 83) & 2) != 0 )
-      v3 = (_QWORD *)sub_1C32C38(Method_WarBoardConsumedPieceActionPointPopup_OnClickClose__);
-    v4 = (System_Reflection_MethodBase_o *)sub_1C32C04(v3, v3[4]);
+      v3 = (_QWORD *)sub_1C37070(Method_WarBoardConsumedPieceActionPointPopup_OnClickClose__);
+    v4 = (System_Reflection_MethodBase_o *)sub_1C3703C(v3, v3[4]);
     OverwriteAssetSoundName__PlaySystemSe(v4, 0, 0, 0);
     clickCallback = this->fields.clickCallback;
     if ( clickCallback )
@@ -140,41 +140,41 @@ void WarBoardConsumedPieceActionPointPopup__OpenNoticePopup(
   int v30; // w8
   int32_t v31; // [xsp+Ch] [xbp-54h] BYREF
 
-  if ( (byte_4C3569F & 1) == 0 )
+  if ( (byte_4C40C8A & 1) == 0 )
   {
-    sub_1C32C20(&int_TypeInfo);
-    sub_1C32C20(&LocalizationManager_TypeInfo);
-    sub_1C32C20(&NGUITools_TypeInfo);
-    sub_1C32C20(&UnityEngine_Object_TypeInfo);
-    sub_1C32C20(&Method_System_Collections_ObjectModel_ReadOnlyCollection_WarBoardPieceData__get_Count__);
-    sub_1C32C20(&Method_System_Collections_ObjectModel_ReadOnlyCollection_WarBoardPieceData__get_Item__);
-    sub_1C32C20(&System_Text_StringBuilder_TypeInfo);
-    sub_1C32C20(&StringLiteral_15377/*"WARBOARD_CONSUMED_PIECE_ACTION_POINT_CLOSE"*/);
-    sub_1C32C20(&StringLiteral_15378/*"WARBOARD_CONSUMED_PIECE_ACTION_POINT_MESSAGE"*/);
-    byte_4C3569F = 1;
+    sub_1C37058(&int_TypeInfo);
+    sub_1C37058(&LocalizationManager_TypeInfo);
+    sub_1C37058(&NGUITools_TypeInfo);
+    sub_1C37058(&UnityEngine_Object_TypeInfo);
+    sub_1C37058(&Method_System_Collections_ObjectModel_ReadOnlyCollection_WarBoardPieceData__get_Count__);
+    sub_1C37058(&Method_System_Collections_ObjectModel_ReadOnlyCollection_WarBoardPieceData__get_Item__);
+    sub_1C37058(&System_Text_StringBuilder_TypeInfo);
+    sub_1C37058(&StringLiteral_15379/*"WARBOARD_CONSUMED_PIECE_ACTION_POINT_CLOSE"*/);
+    sub_1C37058(&StringLiteral_15380/*"WARBOARD_CONSUMED_PIECE_ACTION_POINT_MESSAGE"*/);
+    byte_4C40C8A = 1;
   }
   this->fields.clickCallback = clickCallback;
-  sub_1C32BC4(
+  sub_1C36FFC(
     (CGThumbnailListItem_o *)&this->fields.clickCallback,
     (int32_t)clickCallback,
     consumedPoint,
     (const MethodInfo *)consumedPieceList);
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-  v9 = LocalizationManager__Get((System_String_o *)StringLiteral_15378/*"WARBOARD_CONSUMED_PIECE_ACTION_POINT_MESSAGE"*/, 0);
+  v9 = LocalizationManager__Get((System_String_o *)StringLiteral_15380/*"WARBOARD_CONSUMED_PIECE_ACTION_POINT_MESSAGE"*/, 0);
   v31 = consumedPoint;
   v16 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v31, v10, v11, v12, v13, v14, v15);
   Count = System_String__Format(v9, v16, 0);
   if ( !this->fields.messgeLabel )
     goto LABEL_36;
   UILabel__set_text(this->fields.messgeLabel, Count, 0);
-  v18 = (System_Text_StringBuilder_o *)sub_1C32E6C(System_Text_StringBuilder_TypeInfo);
+  v18 = (System_Text_StringBuilder_o *)sub_1C372A4(System_Text_StringBuilder_TypeInfo);
   System_Text_StringBuilder___ctor(v18, 0);
   if ( !consumedPieceList )
     goto LABEL_36;
   Count = (System_String_o *)System_Collections_ObjectModel_ReadOnlyCollection_object___get_Count(
                                (System_Collections_ObjectModel_ReadOnlyCollection_T__o *)consumedPieceList,
-                               (const MethodInfo_398D500 *)Method_System_Collections_ObjectModel_ReadOnlyCollection_WarBoardPieceData__get_Count__);
+                               (const MethodInfo_3997D68 *)Method_System_Collections_ObjectModel_ReadOnlyCollection_WarBoardPieceData__get_Count__);
   if ( (int)Count >= 1 )
   {
     v19 = 0;
@@ -183,10 +183,10 @@ void WarBoardConsumedPieceActionPointPopup__OpenNoticePopup(
       Item = System_Collections_ObjectModel_ReadOnlyCollection_object___get_Item(
                (System_Collections_ObjectModel_ReadOnlyCollection_T__o *)consumedPieceList,
                v19,
-               (const MethodInfo_398D588 *)Method_System_Collections_ObjectModel_ReadOnlyCollection_WarBoardPieceData__get_Item__);
+               (const MethodInfo_3997DF0 *)Method_System_Collections_ObjectModel_ReadOnlyCollection_WarBoardPieceData__get_Item__);
       Count = (System_String_o *)System_Collections_ObjectModel_ReadOnlyCollection_object___get_Count(
                                    (System_Collections_ObjectModel_ReadOnlyCollection_T__o *)consumedPieceList,
-                                   (const MethodInfo_398D500 *)Method_System_Collections_ObjectModel_ReadOnlyCollection_WarBoardPieceData__get_Count__);
+                                   (const MethodInfo_3997D68 *)Method_System_Collections_ObjectModel_ReadOnlyCollection_WarBoardPieceData__get_Count__);
       if ( !Item )
         break;
       v21 = (int)Count;
@@ -197,18 +197,18 @@ void WarBoardConsumedPieceActionPointPopup__OpenNoticePopup(
       if ( !v18 )
         break;
       if ( v19 == v21 - 1 )
-        System_Text_StringBuilder__Append_63603608(v18, Count, 0);
+        System_Text_StringBuilder__Append_63646720(v18, Count, 0);
       else
-        System_Text_StringBuilder__AppendLine_63604832(v18, Count, 0);
+        System_Text_StringBuilder__AppendLine_63647944(v18, Count, 0);
       ++v19;
       Count = (System_String_o *)System_Collections_ObjectModel_ReadOnlyCollection_object___get_Count(
                                    (System_Collections_ObjectModel_ReadOnlyCollection_T__o *)consumedPieceList,
-                                   (const MethodInfo_398D500 *)Method_System_Collections_ObjectModel_ReadOnlyCollection_WarBoardPieceData__get_Count__);
+                                   (const MethodInfo_3997D68 *)Method_System_Collections_ObjectModel_ReadOnlyCollection_WarBoardPieceData__get_Count__);
       if ( v19 >= (int)Count )
         goto LABEL_16;
     }
 LABEL_36:
-    sub_1C32E7C(Count);
+    sub_1C372B4(Count);
   }
 LABEL_16:
   if ( !v18 )
@@ -223,7 +223,7 @@ LABEL_16:
   closeButtonLabel = this->fields.closeButtonLabel;
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-  Count = LocalizationManager__Get((System_String_o *)StringLiteral_15377/*"WARBOARD_CONSUMED_PIECE_ACTION_POINT_CLOSE"*/, 0);
+  Count = LocalizationManager__Get((System_String_o *)StringLiteral_15379/*"WARBOARD_CONSUMED_PIECE_ACTION_POINT_CLOSE"*/, 0);
   if ( !closeButtonLabel )
     goto LABEL_36;
   UILabel__set_text(closeButtonLabel, Count, 0);
@@ -233,7 +233,7 @@ LABEL_16:
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)Count, 0);
   if ( !NGUITools_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NGUITools_TypeInfo);
-  NGUITools__UpdateWidgetCollider_49305224(gameObject, 1, 0);
+  NGUITools__UpdateWidgetCollider_49348336(gameObject, 1, 0);
   scrollView = (UnityEngine_Object_o *)this->fields.scrollView;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);

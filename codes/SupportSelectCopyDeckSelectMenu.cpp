@@ -1,9 +1,9 @@
 void SupportSelectCopyDeckSelectMenu___ctor(SupportSelectCopyDeckSelectMenu_o *this, const MethodInfo *method)
 {
-  if ( (byte_4C34038 & 1) == 0 )
+  if ( (byte_4C3F622 & 1) == 0 )
   {
-    sub_1C32C20(&BaseDialog_TypeInfo);
-    byte_4C34038 = 1;
+    sub_1C37058(&BaseDialog_TypeInfo);
+    byte_4C3F622 = 1;
   }
   this->fields.currentState = 2;
   if ( !BaseDialog_TypeInfo->_2.cctor_finished )
@@ -16,14 +16,14 @@ void SupportSelectCopyDeckSelectMenu__Close(SupportSelectCopyDeckSelectMenu_o *t
 {
   System_Action_o *v3; // x20
 
-  if ( (byte_4C34034 & 1) == 0 )
+  if ( (byte_4C3F61E & 1) == 0 )
   {
-    sub_1C32C20(&System_Action_TypeInfo);
-    sub_1C32C20(&Method_SupportSelectCopyDeckSelectMenu_OnFinishedClose__);
-    byte_4C34034 = 1;
+    sub_1C37058(&System_Action_TypeInfo);
+    sub_1C37058(&Method_SupportSelectCopyDeckSelectMenu_OnFinishedClose__);
+    byte_4C3F61E = 1;
   }
   this->fields.currentState = 2;
-  v3 = (System_Action_o *)sub_1C32E6C(System_Action_TypeInfo);
+  v3 = (System_Action_o *)sub_1C372A4(System_Action_TypeInfo);
   System_Action___ctor(v3, (Il2CppObject *)this, Method_SupportSelectCopyDeckSelectMenu_OnFinishedClose__, 0);
   BaseDialog__Close((BaseDialog_o *)this, v3, 0);
 }
@@ -35,17 +35,17 @@ void SupportSelectCopyDeckSelectMenu__OnClickCancel(SupportSelectCopyDeckSelectM
   System_Reflection_MethodBase_o *v4; // x0
   struct SupportSelectCopyDeckSelectMenu_OnSelectEvent_o *onSelected; // x8
 
-  if ( (byte_4C34036 & 1) == 0 )
+  if ( (byte_4C3F620 & 1) == 0 )
   {
-    sub_1C32C20(&Method_SupportSelectCopyDeckSelectMenu_OnClickCancel__);
-    byte_4C34036 = 1;
+    sub_1C37058(&Method_SupportSelectCopyDeckSelectMenu_OnClickCancel__);
+    byte_4C3F620 = 1;
   }
   if ( this->fields.currentState == 1 )
   {
     v3 = Method_SupportSelectCopyDeckSelectMenu_OnClickCancel__;
     if ( (*((_BYTE *)Method_SupportSelectCopyDeckSelectMenu_OnClickCancel__ + 83) & 2) != 0 )
-      v3 = (_QWORD *)sub_1C32C38(Method_SupportSelectCopyDeckSelectMenu_OnClickCancel__);
-    v4 = (System_Reflection_MethodBase_o *)sub_1C32C04(v3, v3[4]);
+      v3 = (_QWORD *)sub_1C37070(Method_SupportSelectCopyDeckSelectMenu_OnClickCancel__);
+    v4 = (System_Reflection_MethodBase_o *)sub_1C3703C(v3, v3[4]);
     OverwriteAssetSoundName__PlaySystemSe(v4, 1, 0, 0);
     onSelected = this->fields.onSelected;
     if ( onSelected )
@@ -68,10 +68,10 @@ void SupportSelectCopyDeckSelectMenu__OnFinishedClose(
 
   this->fields.onSelected = 0;
   p_onSelected = &this->fields.onSelected;
-  sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.onSelected, 0, v2, v3);
+  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.onSelected, 0, v2, v3);
   v5 = (ListViewManager_o *)*(p_onSelected - 2);
   if ( !v5 )
-    sub_1C32E7C(0);
+    sub_1C372B4(0);
   ListViewManager__DestroyList(v5, 0);
 }
 
@@ -84,23 +84,23 @@ void SupportSelectCopyDeckSelectMenu__OnFinishedOpen(SupportSelectCopyDeckSelect
   __int64 v6; // x0
   const MethodInfo *v7; // x3
 
-  if ( (byte_4C34033 & 1) == 0 )
+  if ( (byte_4C3F61D & 1) == 0 )
   {
-    sub_1C32C20(&SupportSelectDeckListViewObject_OnSelectEvent_TypeInfo);
-    sub_1C32C20(&Method_SupportSelectCopyDeckSelectMenu_OnSelectedDeck__);
-    byte_4C34033 = 1;
+    sub_1C37058(&SupportSelectDeckListViewObject_OnSelectEvent_TypeInfo);
+    sub_1C37058(&Method_SupportSelectCopyDeckSelectMenu_OnSelectedDeck__);
+    byte_4C3F61D = 1;
   }
   this->fields.currentState = 1;
   deckListViewManager = this->fields.deckListViewManager;
-  v4 = (SupportSelectDeckListViewObject_OnSelectEvent_o *)sub_1C32E6C(SupportSelectDeckListViewObject_OnSelectEvent_TypeInfo);
+  v4 = (SupportSelectDeckListViewObject_OnSelectEvent_o *)sub_1C372A4(SupportSelectDeckListViewObject_OnSelectEvent_TypeInfo);
   SupportSelectDeckListViewObject_OnSelectEvent___ctor(
     v4,
     (Il2CppObject *)this,
     (intptr_t)Method_SupportSelectCopyDeckSelectMenu_OnSelectedDeck__,
     v5);
   if ( !deckListViewManager )
-    sub_1C32E7C(v6);
-  SupportSelectDeckListViewManager__SetMode_35598156(deckListViewManager, 2, v4, v7);
+    sub_1C372B4(v6);
+  SupportSelectDeckListViewManager__SetMode_35693788(deckListViewManager, 2, v4, v7);
 }
 
 
@@ -113,17 +113,17 @@ void SupportSelectCopyDeckSelectMenu__OnSelectedDeck(
   System_Reflection_MethodBase_o *v6; // x0
   struct SupportSelectCopyDeckSelectMenu_OnSelectEvent_o *onSelected; // x8
 
-  if ( (byte_4C34035 & 1) == 0 )
+  if ( (byte_4C3F61F & 1) == 0 )
   {
-    sub_1C32C20(&Method_SupportSelectCopyDeckSelectMenu_OnSelectedDeck__);
-    byte_4C34035 = 1;
+    sub_1C37058(&Method_SupportSelectCopyDeckSelectMenu_OnSelectedDeck__);
+    byte_4C3F61F = 1;
   }
   if ( this->fields.currentState == 1 )
   {
     v5 = Method_SupportSelectCopyDeckSelectMenu_OnSelectedDeck__;
     if ( (*((_BYTE *)Method_SupportSelectCopyDeckSelectMenu_OnSelectedDeck__ + 83) & 2) != 0 )
-      v5 = (_QWORD *)sub_1C32C38(Method_SupportSelectCopyDeckSelectMenu_OnSelectedDeck__);
-    v6 = (System_Reflection_MethodBase_o *)sub_1C32C04(v5, v5[4]);
+      v5 = (_QWORD *)sub_1C37070(Method_SupportSelectCopyDeckSelectMenu_OnSelectedDeck__);
+    v6 = (System_Reflection_MethodBase_o *)sub_1C3703C(v5, v5[4]);
     OverwriteAssetSoundName__PlaySystemSe(v6, 0, 0, 0);
     onSelected = this->fields.onSelected;
     if ( onSelected )
@@ -153,15 +153,15 @@ void SupportSelectCopyDeckSelectMenu__Open(
   const MethodInfo *v18; // x3
   System_Action_o *v19; // x20
 
-  if ( (byte_4C34032 & 1) == 0 )
+  if ( (byte_4C3F61C & 1) == 0 )
   {
-    sub_1C32C20(&System_Action_TypeInfo);
-    sub_1C32C20(&LocalizationManager_TypeInfo);
-    sub_1C32C20(&Method_SupportSelectCopyDeckSelectMenu_OnFinishedOpen__);
-    sub_1C32C20(&StringLiteral_12526/*"SUPPORT_SELECT_CONFIRM_DECK_MENU_COPY_SELECT_MESSAGE"*/);
-    sub_1C32C20(&StringLiteral_12525/*"SUPPORT_SELECT_CONFIRM_DECK_MENU_COPY_SELECT_CANCEL"*/);
-    sub_1C32C20(&StringLiteral_12527/*"SUPPORT_SELECT_CONFIRM_DECK_MENU_COPY_SELECT_TITLE"*/);
-    byte_4C34032 = 1;
+    sub_1C37058(&System_Action_TypeInfo);
+    sub_1C37058(&LocalizationManager_TypeInfo);
+    sub_1C37058(&Method_SupportSelectCopyDeckSelectMenu_OnFinishedOpen__);
+    sub_1C37058(&StringLiteral_12527/*"SUPPORT_SELECT_CONFIRM_DECK_MENU_COPY_SELECT_MESSAGE"*/);
+    sub_1C37058(&StringLiteral_12526/*"SUPPORT_SELECT_CONFIRM_DECK_MENU_COPY_SELECT_CANCEL"*/);
+    sub_1C37058(&StringLiteral_12528/*"SUPPORT_SELECT_CONFIRM_DECK_MENU_COPY_SELECT_TITLE"*/);
+    byte_4C3F61C = 1;
   }
   if ( this->fields.currentState == 2 )
   {
@@ -181,28 +181,28 @@ void SupportSelectCopyDeckSelectMenu__Open(
     gameObject = (UnityEngine_GameObject_o *)this->fields.deckListViewManager;
     if ( !gameObject )
       goto LABEL_14;
-    SupportSelectDeckListViewManager__SetMode_35598156((SupportSelectDeckListViewManager_o *)gameObject, 1, 0, v13);
+    SupportSelectDeckListViewManager__SetMode_35693788((SupportSelectDeckListViewManager_o *)gameObject, 1, 0, v13);
     titleLabel = this->fields.titleLabel;
     if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-    gameObject = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)StringLiteral_12527/*"SUPPORT_SELECT_CONFIRM_DECK_MENU_COPY_SELECT_TITLE"*/, 0);
+    gameObject = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)StringLiteral_12528/*"SUPPORT_SELECT_CONFIRM_DECK_MENU_COPY_SELECT_TITLE"*/, 0);
     if ( !titleLabel
       || (UILabel__set_text(titleLabel, (System_String_o *)gameObject, 0),
           messageLabel = this->fields.messageLabel,
-          gameObject = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)StringLiteral_12526/*"SUPPORT_SELECT_CONFIRM_DECK_MENU_COPY_SELECT_MESSAGE"*/, 0),
+          gameObject = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)StringLiteral_12527/*"SUPPORT_SELECT_CONFIRM_DECK_MENU_COPY_SELECT_MESSAGE"*/, 0),
           !messageLabel)
       || (UILabel__set_text(messageLabel, (System_String_o *)gameObject, 0),
           cancelButtonLabel = this->fields.cancelButtonLabel,
-          gameObject = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)StringLiteral_12525/*"SUPPORT_SELECT_CONFIRM_DECK_MENU_COPY_SELECT_CANCEL"*/, 0),
+          gameObject = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)StringLiteral_12526/*"SUPPORT_SELECT_CONFIRM_DECK_MENU_COPY_SELECT_CANCEL"*/, 0),
           !cancelButtonLabel) )
     {
 LABEL_14:
-      sub_1C32E7C(gameObject);
+      sub_1C372B4(gameObject);
     }
     UILabel__set_text(cancelButtonLabel, (System_String_o *)gameObject, 0);
     this->fields.onSelected = onSelected;
-    sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.onSelected, (int32_t)onSelected, v17, v18);
-    v19 = (System_Action_o *)sub_1C32E6C(System_Action_TypeInfo);
+    sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.onSelected, (int32_t)onSelected, v17, v18);
+    v19 = (System_Action_o *)sub_1C372A4(System_Action_TypeInfo);
     System_Action___ctor(v19, (Il2CppObject *)this, Method_SupportSelectCopyDeckSelectMenu_OnFinishedOpen__, 0);
     BaseDialog__Open((BaseDialog_o *)this, v19, 0, 0, 0);
   }
@@ -224,10 +224,10 @@ void SupportSelectCopyDeckSelectMenu__add_onSelected(
   SupportSelectCopyDeckSelectMenu_OnSelectEvent_o *v12; // x1
   const MethodInfo *v13; // x2
 
-  if ( (byte_4C34030 & 1) == 0 )
+  if ( (byte_4C3F61A & 1) == 0 )
   {
-    sub_1C32C20(&SupportSelectCopyDeckSelectMenu_OnSelectEvent_TypeInfo);
-    byte_4C34030 = 1;
+    sub_1C37058(&SupportSelectCopyDeckSelectMenu_OnSelectEvent_TypeInfo);
+    byte_4C3F61A = 1;
   }
   onSelected = this->fields.onSelected;
   p_onSelected = &this->fields.onSelected;
@@ -240,13 +240,13 @@ void SupportSelectCopyDeckSelectMenu__add_onSelected(
       if ( (SupportSelectCopyDeckSelectMenu_OnSelectEvent_c *)v8->klass != SupportSelectCopyDeckSelectMenu_OnSelectEvent_TypeInfo )
         break;
     }
-    v9 = sub_1C6CE78(p_onSelected, v8, v6);
+    v9 = sub_1C712B0(p_onSelected, v8, v6);
     v10 = v6 == (System_Delegate_o *)v9;
     v6 = (System_Delegate_o *)v9;
     if ( v10 )
       return;
   }
-  sub_1C3313C(v8);
+  sub_1C37574(v8);
   SupportSelectCopyDeckSelectMenu__remove_onSelected(v11, v12, v13);
 }
 
@@ -255,10 +255,10 @@ System_String_o *SupportSelectCopyDeckSelectMenu__get_closeBtnPath(
         SupportSelectCopyDeckSelectMenu_o *this,
         const MethodInfo *method)
 {
-  if ( (byte_4C34037 & 1) == 0 )
+  if ( (byte_4C3F621 & 1) == 0 )
   {
-    sub_1C32C20(&StringLiteral_3071/*"BaseWindow/CacnelButton"*/);
-    byte_4C34037 = 1;
+    sub_1C37058(&StringLiteral_3071/*"BaseWindow/CacnelButton"*/);
+    byte_4C3F621 = 1;
   }
   return (System_String_o *)StringLiteral_3071/*"BaseWindow/CacnelButton"*/;
 }
@@ -282,10 +282,10 @@ void SupportSelectCopyDeckSelectMenu__remove_onSelected(
   SupportSelectCopyDeckSelectMenu_OnSelectEvent_o *v15; // x4
   const MethodInfo *v16; // x5
 
-  if ( (byte_4C34031 & 1) == 0 )
+  if ( (byte_4C3F61B & 1) == 0 )
   {
-    sub_1C32C20(&SupportSelectCopyDeckSelectMenu_OnSelectEvent_TypeInfo);
-    byte_4C34031 = 1;
+    sub_1C37058(&SupportSelectCopyDeckSelectMenu_OnSelectEvent_TypeInfo);
+    byte_4C3F61B = 1;
   }
   onSelected = this->fields.onSelected;
   p_onSelected = &this->fields.onSelected;
@@ -298,13 +298,13 @@ void SupportSelectCopyDeckSelectMenu__remove_onSelected(
       if ( (SupportSelectCopyDeckSelectMenu_OnSelectEvent_c *)v8->klass != SupportSelectCopyDeckSelectMenu_OnSelectEvent_TypeInfo )
         break;
     }
-    v9 = sub_1C6CE78(p_onSelected, v8, v6);
+    v9 = sub_1C712B0(p_onSelected, v8, v6);
     v10 = v6 == (System_Delegate_o *)v9;
     v6 = (System_Delegate_o *)v9;
     if ( v10 )
       return;
   }
-  sub_1C3313C(v8);
+  sub_1C37574(v8);
   SupportSelectCopyDeckSelectMenu__Open(v11, v12, v13, v14, v15, v16);
 }
 
@@ -324,15 +324,15 @@ void SupportSelectCopyDeckSelectMenu_OnSelectEvent___ctor(
   this->fields.method = method;
   this->fields.method_ptr = v4;
   this->fields.m_target = object;
-  sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.m_target, (int32_t)object, method, a4);
+  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.m_target, (int32_t)object, method, a4);
   v8 = *(unsigned __int8 *)(method + 82);
   this->fields.method_code = (intptr_t)this;
-  if ( (sub_1C32CE0(method) & 1) == 0 )
+  if ( (sub_1C37118(method) & 1) == 0 )
   {
     if ( !object )
     {
-      v10 = sub_1C32E98(0, "Delegate to an instance method cannot have null 'this'.");
-      sub_1C32D48(v10, 0);
+      v10 = sub_1C372D0(0, "Delegate to an instance method cannot have null 'this'.");
+      sub_1C37180(v10, 0);
     }
     goto LABEL_5;
   }
@@ -344,9 +344,9 @@ LABEL_5:
     this->fields.method_code = (intptr_t)m_target;
     goto LABEL_6;
   }
-  this->fields.invoke_impl = (intptr_t)sub_1A73DE4;
+  this->fields.invoke_impl = (intptr_t)sub_1A78114;
 LABEL_6:
-  this->fields.extra_arg = (intptr_t)sub_1A73D9C;
+  this->fields.extra_arg = (intptr_t)sub_1A780CC;
 }
 
 
@@ -364,14 +364,14 @@ System_IAsyncResult_o *SupportSelectCopyDeckSelectMenu_OnSelectEvent__BeginInvok
   int32_t v13; // [xsp+1Ch] [xbp-34h] BYREF
 
   v13 = selectDeckId;
-  if ( (byte_4C34039 & 1) == 0 )
+  if ( (byte_4C3F623 & 1) == 0 )
   {
-    sub_1C32C20(&int_TypeInfo);
-    byte_4C34039 = 1;
+    sub_1C37058(&int_TypeInfo);
+    byte_4C3F623 = 1;
   }
   v12[1] = 0;
   v12[0] = j_il2cpp_value_box_0(int_TypeInfo, &v13, callback, object, method, v5, v6, v7);
-  return (System_IAsyncResult_o *)sub_1C32BD4(this, v12, callback, object);
+  return (System_IAsyncResult_o *)sub_1C3700C(this, v12, callback, object);
 }
 
 
@@ -380,7 +380,7 @@ void SupportSelectCopyDeckSelectMenu_OnSelectEvent__EndInvoke(
         System_IAsyncResult_o *result,
         const MethodInfo *method)
 {
-  sub_1C32BD8(result, 0, method);
+  sub_1C37010(result, 0, method);
 }
 
 

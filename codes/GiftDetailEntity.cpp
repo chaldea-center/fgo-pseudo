@@ -1,13 +1,13 @@
 void GiftDetailEntity___ctor(GiftDetailEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_4C37CE5 & 1) == 0 )
+  if ( (byte_4C432DE & 1) == 0 )
   {
-    sub_1C32C20(&Method_DataEntityBase_int___ctor__);
-    byte_4C37CE5 = 1;
+    sub_1C37058(&Method_DataEntityBase_int___ctor__);
+    byte_4C432DE = 1;
   }
   DataEntityBase_int____ctor(
     (DataEntityBase_int__o *)this,
-    (const MethodInfo_3394354 *)Method_DataEntityBase_int___ctor__);
+    (const MethodInfo_339EBBC *)Method_DataEntityBase_int___ctor__);
 }
 
 
@@ -21,12 +21,12 @@ System_Int32_array *GiftDetailEntity__GetIgnoreQuestBoardRewardIconItemIds(
         GiftDetailEntity_o *this,
         const MethodInfo *method)
 {
-  if ( (byte_4C37CE2 & 1) == 0 )
+  if ( (byte_4C432DB & 1) == 0 )
   {
-    sub_1C32C20(&StringLiteral_7552/*"IgnoreQuestBoardRewardIconItemIds"*/);
-    byte_4C37CE2 = 1;
+    sub_1C37058(&StringLiteral_7553/*"IgnoreQuestBoardRewardIconItemIds"*/);
+    byte_4C432DB = 1;
   }
-  return EntityScriptUtil__GetIntArray(this->fields.script, (System_String_o *)StringLiteral_7552/*"IgnoreQuestBoardRewardIconItemIds"*/, 0, 0);
+  return EntityScriptUtil__GetIntArray(this->fields.script, (System_String_o *)StringLiteral_7553/*"IgnoreQuestBoardRewardIconItemIds"*/, 0, 0);
 }
 
 
@@ -34,12 +34,12 @@ System_Int32_array *GiftDetailEntity__GetIgnoreQuestClearRewardItemIds(
         GiftDetailEntity_o *this,
         const MethodInfo *method)
 {
-  if ( (byte_4C37CE3 & 1) == 0 )
+  if ( (byte_4C432DC & 1) == 0 )
   {
-    sub_1C32C20(&StringLiteral_7553/*"IgnoreQuestClearRewardItemIds"*/);
-    byte_4C37CE3 = 1;
+    sub_1C37058(&StringLiteral_7554/*"IgnoreQuestClearRewardItemIds"*/);
+    byte_4C432DC = 1;
   }
-  return EntityScriptUtil__GetIntArray(this->fields.script, (System_String_o *)StringLiteral_7553/*"IgnoreQuestClearRewardItemIds"*/, 0, 0);
+  return EntityScriptUtil__GetIntArray(this->fields.script, (System_String_o *)StringLiteral_7554/*"IgnoreQuestClearRewardItemIds"*/, 0, 0);
 }
 
 
@@ -47,26 +47,26 @@ System_Int32_array *GiftDetailEntity__GetIgnoreQuestPhaseClearRewardItemIds(
         GiftDetailEntity_o *this,
         const MethodInfo *method)
 {
-  if ( (byte_4C37CE4 & 1) == 0 )
+  if ( (byte_4C432DD & 1) == 0 )
   {
-    sub_1C32C20(&StringLiteral_7554/*"IgnoreQuestPhaseClearRewardItemIds"*/);
-    byte_4C37CE4 = 1;
+    sub_1C37058(&StringLiteral_7555/*"IgnoreQuestPhaseClearRewardItemIds"*/);
+    byte_4C432DD = 1;
   }
-  return EntityScriptUtil__GetIntArray(this->fields.script, (System_String_o *)StringLiteral_7554/*"IgnoreQuestPhaseClearRewardItemIds"*/, 0, 0);
+  return EntityScriptUtil__GetIntArray(this->fields.script, (System_String_o *)StringLiteral_7555/*"IgnoreQuestPhaseClearRewardItemIds"*/, 0, 0);
 }
 
 
 System_String_o *GiftDetailEntity__GetOverwritePhaseRewardImageId(GiftDetailEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_4C37CE1 & 1) == 0 )
+  if ( (byte_4C432DA & 1) == 0 )
   {
-    sub_1C32C20(&string_TypeInfo);
-    sub_1C32C20(&StringLiteral_22678/*"phaseRewardImageId"*/);
-    byte_4C37CE1 = 1;
+    sub_1C37058(&string_TypeInfo);
+    sub_1C37058(&StringLiteral_22681/*"phaseRewardImageId"*/);
+    byte_4C432DA = 1;
   }
   return EntityScriptUtil__GetStringValue(
            this->fields.script,
-           (System_String_o *)StringLiteral_22678/*"phaseRewardImageId"*/,
+           (System_String_o *)StringLiteral_22681/*"phaseRewardImageId"*/,
            string_TypeInfo->static_fields->Empty,
            0);
 }
@@ -80,10 +80,10 @@ Il2CppObject *GiftDetailEntity__GetScriptValue(
   Il2CppObject *result; // x0
   Il2CppObject *value; // [xsp+8h] [xbp-28h] BYREF
 
-  if ( (byte_4C37CE0 & 1) == 0 )
+  if ( (byte_4C432D9 & 1) == 0 )
   {
-    sub_1C32C20(&Method_System_Collections_Generic_Dictionary_string__object__TryGetValue__);
-    byte_4C37CE0 = 1;
+    sub_1C37058(&Method_System_Collections_Generic_Dictionary_string__object__TryGetValue__);
+    byte_4C432D9 = 1;
   }
   value = 0;
   result = (Il2CppObject *)this->fields.script;
@@ -93,7 +93,7 @@ Il2CppObject *GiftDetailEntity__GetScriptValue(
            (System_Collections_Generic_Dictionary_object__object__o *)result,
            (Il2CppObject *)key,
            &value,
-           (const MethodInfo_345A5D4 *)Method_System_Collections_Generic_Dictionary_string__object__TryGetValue__) )
+           (const MethodInfo_3464E3C *)Method_System_Collections_Generic_Dictionary_string__object__TryGetValue__) )
     {
       return value;
     }

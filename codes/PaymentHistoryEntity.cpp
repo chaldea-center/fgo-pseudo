@@ -1,13 +1,13 @@
 void PaymentHistoryEntity___ctor(PaymentHistoryEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_4C37F78 & 1) == 0 )
+  if ( (byte_4C43571 & 1) == 0 )
   {
-    sub_1C32C20(&Method_DataEntityBase_string___ctor__);
-    byte_4C37F78 = 1;
+    sub_1C37058(&Method_DataEntityBase_string___ctor__);
+    byte_4C43571 = 1;
   }
   DataEntityBase_object____ctor(
     (DataEntityBase_PKType__o *)this,
-    (const MethodInfo_33943CC *)Method_DataEntityBase_string___ctor__);
+    (const MethodInfo_339EC34 *)Method_DataEntityBase_string___ctor__);
 }
 
 
@@ -21,10 +21,10 @@ System_String_o *PaymentHistoryEntity__GetDispPrice(PaymentHistoryEntity_o *this
 {
   int32_t price; // w19
 
-  if ( (byte_4C37F77 & 1) == 0 )
+  if ( (byte_4C43570 & 1) == 0 )
   {
-    sub_1C32C20(&LocalizationManager_TypeInfo);
-    byte_4C37F77 = 1;
+    sub_1C37058(&LocalizationManager_TypeInfo);
+    byte_4C43570 = 1;
   }
   price = this->fields.price;
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
@@ -39,13 +39,13 @@ System_String_o *PaymentHistoryEntity__GetTypeText(PaymentHistoryEntity_o *this,
   __int64 *v4; // x8
   int32_t subType; // w8
 
-  if ( (byte_4C37F76 & 1) == 0 )
+  if ( (byte_4C4356F & 1) == 0 )
   {
-    sub_1C32C20(&LocalizationManager_TypeInfo);
-    sub_1C32C20(&StringLiteral_10336/*"PAYMENT_HISTORY_EXTERNAL"*/);
-    sub_1C32C20(&StringLiteral_10337/*"PAYMENT_HISTORY_EXTERNAL_GIFT_CARD"*/);
-    sub_1C32C20(&StringLiteral_10338/*"PAYMENT_HISTORY_INTERNAL"*/);
-    byte_4C37F76 = 1;
+    sub_1C37058(&LocalizationManager_TypeInfo);
+    sub_1C37058(&StringLiteral_10337/*"PAYMENT_HISTORY_EXTERNAL"*/);
+    sub_1C37058(&StringLiteral_10338/*"PAYMENT_HISTORY_EXTERNAL_GIFT_CARD"*/);
+    sub_1C37058(&StringLiteral_10339/*"PAYMENT_HISTORY_INTERNAL"*/);
+    byte_4C4356F = 1;
   }
   type = this->fields.type;
   if ( type == 2 )
@@ -55,14 +55,14 @@ System_String_o *PaymentHistoryEntity__GetTypeText(PaymentHistoryEntity_o *this,
     {
       if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-      v4 = &StringLiteral_10337/*"PAYMENT_HISTORY_EXTERNAL_GIFT_CARD"*/;
+      v4 = &StringLiteral_10338/*"PAYMENT_HISTORY_EXTERNAL_GIFT_CARD"*/;
       return LocalizationManager__Get((System_String_o *)*v4, 0);
     }
     if ( !subType )
     {
       if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-      v4 = &StringLiteral_10336/*"PAYMENT_HISTORY_EXTERNAL"*/;
+      v4 = &StringLiteral_10337/*"PAYMENT_HISTORY_EXTERNAL"*/;
       return LocalizationManager__Get((System_String_o *)*v4, 0);
     }
     return 0;
@@ -71,7 +71,7 @@ System_String_o *PaymentHistoryEntity__GetTypeText(PaymentHistoryEntity_o *this,
     return 0;
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-  v4 = &StringLiteral_10338/*"PAYMENT_HISTORY_INTERNAL"*/;
+  v4 = &StringLiteral_10339/*"PAYMENT_HISTORY_INTERNAL"*/;
   return LocalizationManager__Get((System_String_o *)*v4, 0);
 }
 
@@ -84,10 +84,10 @@ System_String_o *PaymentHistoryEntity__get_CreatedAtToString(PaymentHistoryEntit
   int32_t v6; // w2
   const MethodInfo *v7; // x3
 
-  if ( (byte_4C37F75 & 1) == 0 )
+  if ( (byte_4C4356E & 1) == 0 )
   {
-    sub_1C32C20(&LocalizationManager_TypeInfo);
-    byte_4C37F75 = 1;
+    sub_1C37058(&LocalizationManager_TypeInfo);
+    byte_4C4356E = 1;
   }
   p_createdAtString = (CGThumbnailListItem_o *)&this->fields.createdAtString;
   if ( System_String__IsNullOrEmpty(this->fields.createdAtString, 0) )
@@ -97,7 +97,7 @@ System_String_o *PaymentHistoryEntity__get_CreatedAtToString(PaymentHistoryEntit
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
     Date = LocalizationManager__GetDate(createdAt, 0);
     p_createdAtString->klass = (CGThumbnailListItem_c *)Date;
-    sub_1C32BC4(p_createdAtString, (int32_t)Date, v6, v7);
+    sub_1C36FFC(p_createdAtString, (int32_t)Date, v6, v7);
   }
   return (System_String_o *)p_createdAtString->klass;
 }

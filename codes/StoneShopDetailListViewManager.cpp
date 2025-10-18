@@ -25,20 +25,20 @@ void StoneShopDetailListViewManager__CreateList(
   __int64 v18; // x10
   Il2CppClass **v19; // x0
 
-  if ( (byte_4C33D3E & 1) == 0 )
+  if ( (byte_4C3F3B6 & 1) == 0 )
   {
-    sub_1C32C20(&Method_DataManager_GetMaster_GiftMaster___);
-    sub_1C32C20(&DataManager_TypeInfo);
-    sub_1C32C20(&Method_System_Collections_Generic_List_ListViewItem__Add__);
-    sub_1C32C20(&Method_System_Collections_Generic_List_GiftEntity__get_Count__);
-    sub_1C32C20(&Method_System_Collections_Generic_List_GiftEntity__get_Item__);
-    sub_1C32C20(&StoneShopDetailListViewItem_TypeInfo);
-    byte_4C33D3E = 1;
+    sub_1C37058(&Method_DataManager_GetMaster_GiftMaster___);
+    sub_1C37058(&DataManager_TypeInfo);
+    sub_1C37058(&Method_System_Collections_Generic_List_ListViewItem__Add__);
+    sub_1C37058(&Method_System_Collections_Generic_List_GiftEntity__get_Count__);
+    sub_1C37058(&Method_System_Collections_Generic_List_GiftEntity__get_Item__);
+    sub_1C37058(&StoneShopDetailListViewItem_TypeInfo);
+    byte_4C3F3B6 = 1;
   }
   ListViewManager__CreateList((ListViewManager_o *)this, 0, 0);
   if ( !DataManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-  Master_object = (GiftMaster_o *)DataManager__GetMaster_object_((const MethodInfo_30DD39C *)Method_DataManager_GetMaster_GiftMaster___);
+  Master_object = (GiftMaster_o *)DataManager__GetMaster_object_((const MethodInfo_30E7C04 *)Method_DataManager_GetMaster_GiftMaster___);
   if ( !bankShop || !Master_object )
     goto LABEL_18;
   ListById = GiftMaster__GetListById(Master_object, bankShop->fields.giftId, 0);
@@ -55,8 +55,8 @@ void StoneShopDetailListViewManager__CreateList(
         Item = System_Collections_Generic_List_object___get_Item(
                  v8,
                  v9,
-                 (const MethodInfo_37984EC *)Method_System_Collections_Generic_List_GiftEntity__get_Item__);
-        v12 = (StoneShopDetailListViewItem_o *)sub_1C32E6C(StoneShopDetailListViewItem_TypeInfo);
+                 (const MethodInfo_37A2D54 *)Method_System_Collections_Generic_List_GiftEntity__get_Item__);
+        v12 = (StoneShopDetailListViewItem_o *)sub_1C372A4(StoneShopDetailListViewItem_TypeInfo);
         StoneShopDetailListViewItem___ctor(v12, v9, (GiftEntity_o *)Item, v13);
         if ( !itemList )
           break;
@@ -71,20 +71,20 @@ void StoneShopDetailListViewManager__CreateList(
           System_Collections_Generic_List_object___AddWithResize(
             itemList,
             (Il2CppObject *)v12,
-            *(const MethodInfo_37987BC **)(*(_QWORD *)(v17[4] + 192LL) + 112LL));
+            *(const MethodInfo_37A3024 **)(*(_QWORD *)(v17[4] + 192LL) + 112LL));
         }
         else
         {
           v19 = &items->obj.klass + v18;
           itemList->fields._size = v18 + 1;
           v19[4] = (Il2CppClass *)v12;
-          sub_1C32BC4((CGThumbnailListItem_o *)(v19 + 4), (int32_t)v12, v14, v15);
+          sub_1C36FFC((CGThumbnailListItem_o *)(v19 + 4), (int32_t)v12, v14, v15);
         }
         if ( size == ++v9 )
           goto LABEL_16;
       }
 LABEL_18:
-      sub_1C32E7C(Master_object);
+      sub_1C372B4(Master_object);
     }
   }
 LABEL_16:
@@ -104,17 +104,17 @@ void StoneShopDetailListViewManager__SetObjectItem(
 {
   __int64 naturalAligment; // x10
 
-  if ( (byte_4C33D3F & 1) == 0 )
+  if ( (byte_4C3F3B7 & 1) == 0 )
   {
-    this = (StoneShopDetailListViewManager_o *)sub_1C32C20(&StoneShopDetailListViewObject_TypeInfo);
-    byte_4C33D3F = 1;
+    this = (StoneShopDetailListViewManager_o *)sub_1C37058(&StoneShopDetailListViewObject_TypeInfo);
+    byte_4C3F3B7 = 1;
   }
   if ( !obj
     || (naturalAligment = StoneShopDetailListViewObject_TypeInfo->_2.naturalAligment,
         obj->klass->_2.naturalAligment < (unsigned int)naturalAligment)
     || (StoneShopDetailListViewObject_c *)obj->klass->_2.typeHierarchy[naturalAligment - 1] != StoneShopDetailListViewObject_TypeInfo )
   {
-    sub_1C32E7C(this);
+    sub_1C372B4(this);
   }
   StoneShopDetailListViewObject__SetupDisp((StoneShopDetailListViewObject_o *)obj, (const MethodInfo *)obj);
 }
@@ -130,7 +130,7 @@ float StoneShopDetailListViewManager__get_ListViewHeight(
   ItemSum = ListViewManager__get_ItemSum((ListViewManager_o *)this, 0);
   seed = this->fields.seed;
   if ( !seed )
-    sub_1C32E7C(ItemSum);
+    sub_1C372B4(ItemSum);
   return seed->fields.arrangementPich.fields.y * (float)(int)ItemSum;
 }
 

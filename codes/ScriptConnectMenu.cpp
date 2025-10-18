@@ -17,7 +17,7 @@ void ScriptConnectMenu__Callback(ScriptConnectMenu_o *this, bool result, const M
   if ( callbackFunc )
   {
     p_callbackFunc->klass = 0;
-    sub_1C32BC4(p_callbackFunc, 0, (int32_t)method, v3);
+    sub_1C36FFC(p_callbackFunc, 0, (int32_t)method, v3);
     ((void (__fastcall *)(intptr_t, bool, intptr_t))v5->fields.invoke_impl)(
       v5->fields.method_code,
       result,
@@ -34,7 +34,7 @@ void ScriptConnectMenu__Close(ScriptConnectMenu_o *this, const MethodInfo *metho
   serverSettingRootObject = this->fields.serverSettingRootObject;
   this->fields.state = 0;
   if ( !serverSettingRootObject )
-    sub_1C32E7C(0);
+    sub_1C372B4(0);
   UnityEngine_GameObject__SetActive(serverSettingRootObject, 0, 0);
 }
 
@@ -53,11 +53,11 @@ void ScriptConnectMenu__CloseAction(ScriptConnectMenu_o *this, bool result, cons
   ScriptConnectData_o v13; // [xsp+0h] [xbp-A0h] BYREF
   ScriptConnectData_o v14; // [xsp+30h] [xbp-70h] BYREF
 
-  if ( (byte_4C34FA3 & 1) == 0 )
+  if ( (byte_4C4058E & 1) == 0 )
   {
-    sub_1C32C20(&System_Action_TypeInfo);
-    sub_1C32C20(&ScriptManager_TypeInfo);
-    byte_4C34FA3 = 1;
+    sub_1C37058(&System_Action_TypeInfo);
+    sub_1C37058(&ScriptManager_TypeInfo);
+    byte_4C4058E = 1;
   }
   ScriptConnectMenu__Close(this, (const MethodInfo *)result);
   if ( result )
@@ -65,10 +65,10 @@ void ScriptConnectMenu__CloseAction(ScriptConnectMenu_o *this, bool result, cons
     parentComponent_k__BackingField = this->fields._parentComponent_k__BackingField;
     if ( !ScriptManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(ScriptManager_TypeInfo);
-    if ( !byte_4C34F49 )
+    if ( !byte_4C40534 )
     {
-      sub_1C32C20(&ScriptManager_TypeInfo);
-      byte_4C34F49 = 1;
+      sub_1C37058(&ScriptManager_TypeInfo);
+      byte_4C40534 = 1;
     }
     v6 = ScriptManager_TypeInfo;
     if ( !ScriptManager_TypeInfo->_2.cctor_finished )
@@ -77,11 +77,11 @@ void ScriptConnectMenu__CloseAction(ScriptConnectMenu_o *this, bool result, cons
       v6 = ScriptManager_TypeInfo;
     }
     scriptServerSettingAddress = v6->static_fields->scriptServerSettingAddress;
-    if ( !byte_4C34F4A )
+    if ( !byte_4C40535 )
     {
-      sub_1C32C20(&ScriptManager_TypeInfo);
+      sub_1C37058(&ScriptManager_TypeInfo);
       v6 = ScriptManager_TypeInfo;
-      byte_4C34F4A = 1;
+      byte_4C40535 = 1;
     }
     if ( !v6->_2.cctor_finished )
     {
@@ -89,14 +89,14 @@ void ScriptConnectMenu__CloseAction(ScriptConnectMenu_o *this, bool result, cons
       v6 = ScriptManager_TypeInfo;
     }
     scriptObjectSettingAddress = v6->static_fields->scriptObjectSettingAddress;
-    v9 = (System_Action_o *)sub_1C32E6C(System_Action_TypeInfo);
+    v9 = (System_Action_o *)sub_1C372A4(System_Action_TypeInfo);
     System_Action___ctor(v9, (Il2CppObject *)this, (intptr_t)this->klass->vtable._4_StartMenu.method, 0);
-    v10 = (System_Action_o *)sub_1C32E6C(System_Action_TypeInfo);
+    v10 = (System_Action_o *)sub_1C372A4(System_Action_TypeInfo);
     System_Action___ctor(v10, (Il2CppObject *)this, (intptr_t)this->klass->vtable._4_StartMenu.method, 0);
     memset(&v14, 0, sizeof(v14));
     ScriptConnectData___ctor(&v14, scriptServerSettingAddress, scriptObjectSettingAddress, v9, v10, -1, 0, v11);
     if ( !parentComponent_k__BackingField )
-      sub_1C32E7C(v12);
+      sub_1C372B4(v12);
     v13 = v14;
     DebugTestRootComponent__StartConnectScript(parentComponent_k__BackingField, &v13, 0);
   }
@@ -114,11 +114,11 @@ void ScriptConnectMenu__EndConnectScriptPlay(ScriptConnectMenu_o *this, const Me
   System_String_o *v9; // x2
   const MethodInfo *v10; // x5
 
-  if ( (byte_4C34FA9 & 1) == 0 )
+  if ( (byte_4C40594 & 1) == 0 )
   {
-    sub_1C32C20(&ScriptConnectListViewMenu_CallbackFunc_TypeInfo);
-    sub_1C32C20(&Method_ScriptConnectMenu_OnEndSelectObject__);
-    byte_4C34FA9 = 1;
+    sub_1C37058(&ScriptConnectListViewMenu_CallbackFunc_TypeInfo);
+    sub_1C37058(&Method_ScriptConnectMenu_OnEndSelectObject__);
+    byte_4C40594 = 1;
   }
   jumpLineObjectInput = this->fields.jumpLineObjectInput;
   this->fields.state = 2;
@@ -126,7 +126,7 @@ void ScriptConnectMenu__EndConnectScriptPlay(ScriptConnectMenu_o *this, const Me
     || (scriptConnectListViewMenu = this->fields.scriptConnectListViewMenu,
         selectConnectPath = this->fields.selectConnectPath,
         Text = UILineInput__GetText(jumpLineObjectInput, 0),
-        v7 = (ScriptConnectListViewMenu_CallbackFunc_o *)sub_1C32E6C(ScriptConnectListViewMenu_CallbackFunc_TypeInfo),
+        v7 = (ScriptConnectListViewMenu_CallbackFunc_o *)sub_1C372A4(ScriptConnectListViewMenu_CallbackFunc_TypeInfo),
         ScriptConnectListViewMenu_CallbackFunc___ctor(
           v7,
           (Il2CppObject *)this,
@@ -134,7 +134,7 @@ void ScriptConnectMenu__EndConnectScriptPlay(ScriptConnectMenu_o *this, const Me
           v8),
         !scriptConnectListViewMenu) )
   {
-    sub_1C32E7C(jumpLineObjectInput);
+    sub_1C372B4(jumpLineObjectInput);
   }
   ScriptConnectListViewMenu__Open(scriptConnectListViewMenu, selectConnectPath, v9, Text, v7, v10);
 }
@@ -146,11 +146,11 @@ void ScriptConnectMenu__EndInput(ScriptConnectMenu_o *this, const MethodInfo *me
   UIInput_o *v4; // x20
   UIInput_o *v5; // x21
 
-  if ( (byte_4C34FA5 & 1) == 0 )
+  if ( (byte_4C40590 & 1) == 0 )
   {
-    sub_1C32C20(&Method_UnityEngine_Component_GetComponent_UIInput___);
-    sub_1C32C20(&StringLiteral_1/*""*/);
-    byte_4C34FA5 = 1;
+    sub_1C37058(&Method_UnityEngine_Component_GetComponent_UIInput___);
+    sub_1C37058(&StringLiteral_1/*""*/);
+    byte_4C40590 = 1;
   }
   if ( this->fields.state )
   {
@@ -159,13 +159,13 @@ void ScriptConnectMenu__EndInput(ScriptConnectMenu_o *this, const MethodInfo *me
       goto LABEL_19;
     dataScriptPathInput = (UnityEngine_Component_o *)UnityEngine_Component__GetComponent_object_(
                                                        dataScriptPathInput,
-                                                       (const MethodInfo_30D3BC0 *)Method_UnityEngine_Component_GetComponent_UIInput___);
+                                                       (const MethodInfo_30DE428 *)Method_UnityEngine_Component_GetComponent_UIInput___);
     if ( !this->fields.dataScriptObjectInput )
       goto LABEL_19;
     v4 = (UIInput_o *)dataScriptPathInput;
     dataScriptPathInput = (UnityEngine_Component_o *)UnityEngine_Component__GetComponent_object_(
                                                        (UnityEngine_Component_o *)this->fields.dataScriptObjectInput,
-                                                       (const MethodInfo_30D3BC0 *)Method_UnityEngine_Component_GetComponent_UIInput___);
+                                                       (const MethodInfo_30DE428 *)Method_UnityEngine_Component_GetComponent_UIInput___);
     if ( !v4 )
       goto LABEL_19;
     v5 = (UIInput_o *)dataScriptPathInput;
@@ -209,7 +209,7 @@ void ScriptConnectMenu__EndInput(ScriptConnectMenu_o *this, const MethodInfo *me
           (dataScriptPathInput = (UnityEngine_Component_o *)this->fields.serverCancelButton) == 0) )
     {
 LABEL_19:
-      sub_1C32E7C(dataScriptPathInput);
+      sub_1C372B4(dataScriptPathInput);
     }
     UnityEngine_Behaviour__set_enabled((UnityEngine_Behaviour_o *)dataScriptPathInput, 0, 0);
     UnityEngine_Input__set_imeCompositionMode(0, 0);
@@ -230,7 +230,7 @@ int32_t ScriptConnectMenu__GetJumpLine(ScriptConnectMenu_o *this, const MethodIn
 
   jumpLineObjectInput = this->fields.jumpLineObjectInput;
   if ( !jumpLineObjectInput )
-    sub_1C32E7C(0);
+    sub_1C372B4(0);
   Text = UILineInput__GetText(jumpLineObjectInput, 0);
   if ( System_String__IsNullOrEmpty(Text, 0) )
     return -1;
@@ -245,7 +245,7 @@ System_String_o *ScriptConnectMenu__GetJumpLineString(ScriptConnectMenu_o *this,
 
   jumpLineObjectInput = this->fields.jumpLineObjectInput;
   if ( !jumpLineObjectInput )
-    sub_1C32E7C(0);
+    sub_1C372B4(0);
   return UILineInput__GetText(jumpLineObjectInput, 0);
 }
 
@@ -300,14 +300,14 @@ void ScriptConnectMenu__OnClickDecide(ScriptConnectMenu_o *this, const MethodInf
   ScriptConnectData_o v29; // [xsp+0h] [xbp-A0h] BYREF
   ScriptConnectData_o v30; // [xsp+30h] [xbp-70h] BYREF
 
-  if ( (byte_4C34FAA & 1) == 0 )
+  if ( (byte_4C40595 & 1) == 0 )
   {
-    sub_1C32C20(&System_Action_TypeInfo);
-    sub_1C32C20(&Gender_TypeInfo);
-    sub_1C32C20(&Method_ScriptConnectMenu_EndPlayScript__);
-    sub_1C32C20(&ScriptManager_TypeInfo);
-    sub_1C32C20(&Method_SingletonMonoBehaviour_ScriptManager__get_Instance__);
-    byte_4C34FAA = 1;
+    sub_1C37058(&System_Action_TypeInfo);
+    sub_1C37058(&Gender_TypeInfo);
+    sub_1C37058(&Method_ScriptConnectMenu_EndPlayScript__);
+    sub_1C37058(&ScriptManager_TypeInfo);
+    sub_1C37058(&Method_SingletonMonoBehaviour_ScriptManager__get_Instance__);
+    byte_4C40595 = 1;
   }
   if ( this->fields.state == 1 )
   {
@@ -316,13 +316,13 @@ void ScriptConnectMenu__OnClickDecide(ScriptConnectMenu_o *this, const MethodInf
     {
       Text = UILineInput__GetText(dataScriptPathInput, 0);
       this->fields.selectConnectPath = Text;
-      sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.selectConnectPath, (int32_t)Text, v5, v6);
+      sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.selectConnectPath, (int32_t)Text, v5, v6);
       dataScriptPathInput = this->fields.dataScriptObjectInput;
       if ( dataScriptPathInput )
       {
         v7 = UILineInput__GetText(dataScriptPathInput, 0);
         this->fields.selectObjectPath = v7;
-        sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.selectObjectPath, (int32_t)v7, v8, v9);
+        sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.selectObjectPath, (int32_t)v7, v8, v9);
         genderInput = this->fields.genderInput;
         if ( genderInput )
         {
@@ -336,7 +336,7 @@ void ScriptConnectMenu__OnClickDecide(ScriptConnectMenu_o *this, const MethodInf
           {
             v15 = startModeInput->fields.mSelectedItem;
             this->fields.selectStartModeName = v15;
-            sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.selectStartModeName, (int32_t)v15, v12, v13);
+            sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.selectStartModeName, (int32_t)v15, v12, v13);
             dataScriptPathInput = (UILineInput_o *)this->fields.hiddenTruthSprite;
             if ( dataScriptPathInput )
             {
@@ -356,7 +356,7 @@ void ScriptConnectMenu__OnClickDecide(ScriptConnectMenu_o *this, const MethodInf
                      enabled,
                      0) )
               {
-                dataScriptPathInput = (UILineInput_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39E2904 *)Method_SingletonMonoBehaviour_ScriptManager__get_Instance__);
+                dataScriptPathInput = (UILineInput_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39ED16C *)Method_SingletonMonoBehaviour_ScriptManager__get_Instance__);
                 if ( !dataScriptPathInput )
                   goto LABEL_21;
                 ScriptManager__WriteSetting((ScriptManager_o *)dataScriptPathInput, 0);
@@ -368,9 +368,9 @@ void ScriptConnectMenu__OnClickDecide(ScriptConnectMenu_o *this, const MethodInf
               debugTestRootComponent = this->fields.debugTestRootComponent;
               v22 = this->fields.selectConnectPath;
               v23 = this->fields.selectObjectPath;
-              v24 = (System_Action_o *)sub_1C32E6C(System_Action_TypeInfo);
+              v24 = (System_Action_o *)sub_1C372A4(System_Action_TypeInfo);
               System_Action___ctor(v24, (Il2CppObject *)this, Method_ScriptConnectMenu_EndPlayScript__, 0);
-              v25 = (System_Action_o *)sub_1C32E6C(System_Action_TypeInfo);
+              v25 = (System_Action_o *)sub_1C372A4(System_Action_TypeInfo);
               System_Action___ctor(v25, (Il2CppObject *)this, Method_ScriptConnectMenu_EndPlayScript__, 0);
               JumpLine = ScriptConnectMenu__GetJumpLine(this, v26);
               memset(&v30, 0, sizeof(v30));
@@ -387,7 +387,7 @@ void ScriptConnectMenu__OnClickDecide(ScriptConnectMenu_o *this, const MethodInf
       }
     }
 LABEL_21:
-    sub_1C32E7C(dataScriptPathInput);
+    sub_1C372B4(dataScriptPathInput);
   }
 }
 
@@ -398,10 +398,10 @@ void ScriptConnectMenu__OnClickForceCheckOn(ScriptConnectMenu_o *this, const Met
   bool enabled; // w19
   ScriptManager_c *v5; // x0
 
-  if ( (byte_4C34FA6 & 1) == 0 )
+  if ( (byte_4C40591 & 1) == 0 )
   {
-    sub_1C32C20(&ScriptManager_TypeInfo);
-    byte_4C34FA6 = 1;
+    sub_1C37058(&ScriptManager_TypeInfo);
+    byte_4C40591 = 1;
   }
   forceCheckOnSprite = this->fields.forceCheckOnSprite;
   if ( !forceCheckOnSprite
@@ -415,15 +415,15 @@ void ScriptConnectMenu__OnClickForceCheckOn(ScriptConnectMenu_o *this, const Met
           0),
         (forceCheckOnSprite = this->fields.forceCheckOnSprite) == 0) )
   {
-    sub_1C32E7C(forceCheckOnSprite);
+    sub_1C372B4(forceCheckOnSprite);
   }
   enabled = UnityEngine_Behaviour__get_enabled((UnityEngine_Behaviour_o *)forceCheckOnSprite, 0);
   if ( !ScriptManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(ScriptManager_TypeInfo);
-  if ( !byte_4C35045 )
+  if ( !byte_4C40630 )
   {
-    sub_1C32C20(&ScriptManager_TypeInfo);
-    byte_4C35045 = 1;
+    sub_1C37058(&ScriptManager_TypeInfo);
+    byte_4C40630 = 1;
   }
   v5 = ScriptManager_TypeInfo;
   if ( !ScriptManager_TypeInfo->_2.cctor_finished )
@@ -446,7 +446,7 @@ void ScriptConnectMenu__OnClickHiddenTruth(ScriptConnectMenu_o *this, const Meth
                                                    0),
         !this->fields.hiddenTruthSprite) )
   {
-    sub_1C32E7C(hiddenTruthSprite);
+    sub_1C372B4(hiddenTruthSprite);
   }
   UnityEngine_Behaviour__set_enabled(
     (UnityEngine_Behaviour_o *)this->fields.hiddenTruthSprite,
@@ -475,12 +475,12 @@ void ScriptConnectMenu__OnClickSelect(ScriptConnectMenu_o *this, const MethodInf
   System_String_o *v18; // x2
   const MethodInfo *v19; // x5
 
-  if ( (byte_4C34FA7 & 1) == 0 )
+  if ( (byte_4C40592 & 1) == 0 )
   {
-    sub_1C32C20(&ScriptConnectListViewMenu_CallbackFunc_TypeInfo);
-    sub_1C32C20(&Gender_TypeInfo);
-    sub_1C32C20(&Method_ScriptConnectMenu_OnEndSelectObject__);
-    byte_4C34FA7 = 1;
+    sub_1C37058(&ScriptConnectListViewMenu_CallbackFunc_TypeInfo);
+    sub_1C37058(&Gender_TypeInfo);
+    sub_1C37058(&Method_ScriptConnectMenu_OnEndSelectObject__);
+    byte_4C40592 = 1;
   }
   if ( this->fields.state == 1 )
   {
@@ -489,7 +489,7 @@ void ScriptConnectMenu__OnClickSelect(ScriptConnectMenu_o *this, const MethodInf
       goto LABEL_13;
     Text = UILineInput__GetText(dataScriptPathInput, 0);
     this->fields.selectConnectPath = Text;
-    sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.selectConnectPath, (int32_t)Text, v5, v6);
+    sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.selectConnectPath, (int32_t)Text, v5, v6);
     genderInput = this->fields.genderInput;
     if ( !genderInput )
       goto LABEL_13;
@@ -503,14 +503,14 @@ void ScriptConnectMenu__OnClickSelect(ScriptConnectMenu_o *this, const MethodInf
       goto LABEL_13;
     v12 = startModeInput->fields.mSelectedItem;
     this->fields.selectStartModeName = v12;
-    sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.selectStartModeName, (int32_t)v12, v9, v10);
+    sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.selectStartModeName, (int32_t)v12, v9, v10);
     dataScriptPathInput = this->fields.jumpLineObjectInput;
     this->fields.state = 2;
     if ( !dataScriptPathInput
       || (scriptConnectListViewMenu = this->fields.scriptConnectListViewMenu,
           selectConnectPath = this->fields.selectConnectPath,
           v15 = UILineInput__GetText(dataScriptPathInput, 0),
-          v16 = (ScriptConnectListViewMenu_CallbackFunc_o *)sub_1C32E6C(ScriptConnectListViewMenu_CallbackFunc_TypeInfo),
+          v16 = (ScriptConnectListViewMenu_CallbackFunc_o *)sub_1C372A4(ScriptConnectListViewMenu_CallbackFunc_TypeInfo),
           ScriptConnectListViewMenu_CallbackFunc___ctor(
             v16,
             (Il2CppObject *)this,
@@ -519,7 +519,7 @@ void ScriptConnectMenu__OnClickSelect(ScriptConnectMenu_o *this, const MethodInf
           !scriptConnectListViewMenu) )
     {
 LABEL_13:
-      sub_1C32E7C(dataScriptPathInput);
+      sub_1C372B4(dataScriptPathInput);
     }
     ScriptConnectListViewMenu__Open(scriptConnectListViewMenu, selectConnectPath, v18, v15, v16, v19);
   }
@@ -553,33 +553,33 @@ void ScriptConnectMenu__OnEndSelectObject(
   ScriptConnectData_o v24; // [xsp+0h] [xbp-B0h] BYREF
   ScriptConnectData_o v25; // [xsp+30h] [xbp-80h] BYREF
 
-  if ( (byte_4C34FA8 & 1) == 0 )
+  if ( (byte_4C40593 & 1) == 0 )
   {
-    sub_1C32C20(&System_Action_TypeInfo);
-    sub_1C32C20(&Method_UnityEngine_Component_GetComponent_UIInput___);
-    sub_1C32C20(&Method_ScriptConnectMenu_EndConnectScriptPlay__);
-    sub_1C32C20(&ScriptManager_TypeInfo);
-    sub_1C32C20(&Method_SingletonMonoBehaviour_ScriptManager__get_Instance__);
-    byte_4C34FA8 = 1;
+    sub_1C37058(&System_Action_TypeInfo);
+    sub_1C37058(&Method_UnityEngine_Component_GetComponent_UIInput___);
+    sub_1C37058(&Method_ScriptConnectMenu_EndConnectScriptPlay__);
+    sub_1C37058(&ScriptManager_TypeInfo);
+    sub_1C37058(&Method_SingletonMonoBehaviour_ScriptManager__get_Instance__);
+    byte_4C40593 = 1;
   }
   if ( this->fields.state == 2 )
   {
     if ( (result & 0xFFFFFFFE) == 2 )
     {
       this->fields.selectObjectPath = path;
-      sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.selectObjectPath, (int32_t)path, (int32_t)path, method);
+      sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.selectObjectPath, (int32_t)path, (int32_t)path, method);
       dataScriptObjectInput = (UnityEngine_Component_o *)this->fields.dataScriptObjectInput;
       if ( dataScriptObjectInput )
       {
         dataScriptObjectInput = (UnityEngine_Component_o *)UnityEngine_Component__GetComponent_object_(
                                                              dataScriptObjectInput,
-                                                             (const MethodInfo_30D3BC0 *)Method_UnityEngine_Component_GetComponent_UIInput___);
+                                                             (const MethodInfo_30DE428 *)Method_UnityEngine_Component_GetComponent_UIInput___);
         if ( this->fields.jumpLineObjectInput )
         {
           v8 = (UIInput_o *)dataScriptObjectInput;
           dataScriptObjectInput = (UnityEngine_Component_o *)UnityEngine_Component__GetComponent_object_(
                                                                (UnityEngine_Component_o *)this->fields.jumpLineObjectInput,
-                                                               (const MethodInfo_30D3BC0 *)Method_UnityEngine_Component_GetComponent_UIInput___);
+                                                               (const MethodInfo_30DE428 *)Method_UnityEngine_Component_GetComponent_UIInput___);
           if ( v8 )
           {
             v9 = (UIInput_o *)dataScriptObjectInput;
@@ -611,7 +611,7 @@ void ScriptConnectMenu__OnEndSelectObject(
                          selectIsHiddenTruthSetting,
                          0) )
                   {
-                    dataScriptObjectInput = (UnityEngine_Component_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39E2904 *)Method_SingletonMonoBehaviour_ScriptManager__get_Instance__);
+                    dataScriptObjectInput = (UnityEngine_Component_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39ED16C *)Method_SingletonMonoBehaviour_ScriptManager__get_Instance__);
                     if ( !dataScriptObjectInput )
                       goto LABEL_24;
                     ScriptManager__WriteSetting((ScriptManager_o *)dataScriptObjectInput, 0);
@@ -620,9 +620,9 @@ void ScriptConnectMenu__OnEndSelectObject(
                   debugTestRootComponent = this->fields.debugTestRootComponent;
                   v17 = this->fields.selectConnectPath;
                   v18 = this->fields.selectObjectPath;
-                  v19 = (System_Action_o *)sub_1C32E6C(System_Action_TypeInfo);
+                  v19 = (System_Action_o *)sub_1C372A4(System_Action_TypeInfo);
                   System_Action___ctor(v19, (Il2CppObject *)this, Method_ScriptConnectMenu_EndConnectScriptPlay__, 0);
-                  v20 = (System_Action_o *)sub_1C32E6C(System_Action_TypeInfo);
+                  v20 = (System_Action_o *)sub_1C372A4(System_Action_TypeInfo);
                   System_Action___ctor(v20, (Il2CppObject *)this, Method_ScriptConnectMenu_EndConnectScriptPlay__, 0);
                   JumpLine = ScriptConnectMenu__GetJumpLine(this, v21);
                   memset(&v25, 0, sizeof(v25));
@@ -668,7 +668,7 @@ void ScriptConnectMenu__OnEndSelectObject(
       }
     }
 LABEL_24:
-    sub_1C32E7C(dataScriptObjectInput);
+    sub_1C372B4(dataScriptObjectInput);
   }
 }
 
@@ -701,28 +701,28 @@ void ScriptConnectMenu__Open(
   System_Enum_o v25; // [xsp+8h] [xbp-48h] BYREF
   int32_t selectGenderIndex; // [xsp+18h] [xbp-38h]
 
-  if ( (byte_4C34FA4 & 1) == 0 )
+  if ( (byte_4C4058F & 1) == 0 )
   {
-    sub_1C32C20(&Method_UnityEngine_Component_GetComponent_UIInput___);
-    sub_1C32C20(&ScriptManager_TypeInfo);
-    sub_1C32C20(&Method_SingletonMonoBehaviour_ScriptManager__get_Instance__);
-    sub_1C32C20(&Gender_Type_TypeInfo);
-    byte_4C34FA4 = 1;
+    sub_1C37058(&Method_UnityEngine_Component_GetComponent_UIInput___);
+    sub_1C37058(&ScriptManager_TypeInfo);
+    sub_1C37058(&Method_SingletonMonoBehaviour_ScriptManager__get_Instance__);
+    sub_1C37058(&Gender_Type_TypeInfo);
+    byte_4C4058F = 1;
   }
   if ( !this->fields.state )
   {
     this->fields.callbackFunc = callback;
-    sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.callbackFunc, (int32_t)callback, (int32_t)method, v3);
-    Instance = (ScriptManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39E2904 *)Method_SingletonMonoBehaviour_ScriptManager__get_Instance__);
+    sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.callbackFunc, (int32_t)callback, (int32_t)method, v3);
+    Instance = (ScriptManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39ED16C *)Method_SingletonMonoBehaviour_ScriptManager__get_Instance__);
     if ( !Instance )
       goto LABEL_51;
     ScriptManager__ReadSetting(Instance, 0);
     if ( !ScriptManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(ScriptManager_TypeInfo);
-    if ( !byte_4C34F49 )
+    if ( !byte_4C40534 )
     {
-      sub_1C32C20(&ScriptManager_TypeInfo);
-      byte_4C34F49 = 1;
+      sub_1C37058(&ScriptManager_TypeInfo);
+      byte_4C40534 = 1;
     }
     v9 = ScriptManager_TypeInfo;
     if ( !ScriptManager_TypeInfo->_2.cctor_finished )
@@ -732,11 +732,11 @@ void ScriptConnectMenu__Open(
     }
     scriptServerSettingAddress = v9->static_fields->scriptServerSettingAddress;
     this->fields.selectConnectPath = scriptServerSettingAddress;
-    sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.selectConnectPath, (int32_t)scriptServerSettingAddress, v7, v8);
-    if ( !byte_4C34F4A )
+    sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.selectConnectPath, (int32_t)scriptServerSettingAddress, v7, v8);
+    if ( !byte_4C40535 )
     {
-      sub_1C32C20(&ScriptManager_TypeInfo);
-      byte_4C34F4A = 1;
+      sub_1C37058(&ScriptManager_TypeInfo);
+      byte_4C40535 = 1;
     }
     v13 = ScriptManager_TypeInfo;
     if ( !ScriptManager_TypeInfo->_2.cctor_finished )
@@ -746,11 +746,11 @@ void ScriptConnectMenu__Open(
     }
     scriptObjectSettingAddress = v13->static_fields->scriptObjectSettingAddress;
     this->fields.selectObjectPath = scriptObjectSettingAddress;
-    sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.selectObjectPath, (int32_t)scriptObjectSettingAddress, v11, v12);
-    if ( !byte_4C34F4E )
+    sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.selectObjectPath, (int32_t)scriptObjectSettingAddress, v11, v12);
+    if ( !byte_4C40539 )
     {
-      sub_1C32C20(&ScriptManager_TypeInfo);
-      byte_4C34F4E = 1;
+      sub_1C37058(&ScriptManager_TypeInfo);
+      byte_4C40539 = 1;
     }
     v17 = ScriptManager_TypeInfo;
     if ( !ScriptManager_TypeInfo->_2.cctor_finished )
@@ -759,11 +759,11 @@ void ScriptConnectMenu__Open(
       v17 = ScriptManager_TypeInfo;
     }
     this->fields.selectGenderIndex = v17->static_fields->scriptGenderSettingIndex;
-    if ( !byte_4C34F4B )
+    if ( !byte_4C40536 )
     {
-      sub_1C32C20(&ScriptManager_TypeInfo);
+      sub_1C37058(&ScriptManager_TypeInfo);
       v17 = ScriptManager_TypeInfo;
-      byte_4C34F4B = 1;
+      byte_4C40536 = 1;
     }
     if ( !v17->_2.cctor_finished )
     {
@@ -772,15 +772,15 @@ void ScriptConnectMenu__Open(
     }
     scriptStartModeSettingName = v17->static_fields->scriptStartModeSettingName;
     this->fields.selectStartModeName = scriptStartModeSettingName;
-    sub_1C32BC4(
+    sub_1C36FFC(
       (CGThumbnailListItem_o *)&this->fields.selectStartModeName,
       (int32_t)scriptStartModeSettingName,
       v15,
       v16);
-    if ( !byte_4C35043 )
+    if ( !byte_4C4062E )
     {
-      sub_1C32C20(&ScriptManager_TypeInfo);
-      byte_4C35043 = 1;
+      sub_1C37058(&ScriptManager_TypeInfo);
+      byte_4C4062E = 1;
     }
     v19 = ScriptManager_TypeInfo;
     if ( !ScriptManager_TypeInfo->_2.cctor_finished )
@@ -827,13 +827,13 @@ void ScriptConnectMenu__Open(
       goto LABEL_51;
     Instance = (ScriptManager_o *)UnityEngine_Component__GetComponent_object_(
                                     (UnityEngine_Component_o *)Instance,
-                                    (const MethodInfo_30D3BC0 *)Method_UnityEngine_Component_GetComponent_UIInput___);
+                                    (const MethodInfo_30DE428 *)Method_UnityEngine_Component_GetComponent_UIInput___);
     if ( !this->fields.dataScriptObjectInput )
       goto LABEL_51;
     v21 = (UIInput_o *)Instance;
     Instance = (ScriptManager_o *)UnityEngine_Component__GetComponent_object_(
                                     (UnityEngine_Component_o *)this->fields.dataScriptObjectInput,
-                                    (const MethodInfo_30D3BC0 *)Method_UnityEngine_Component_GetComponent_UIInput___);
+                                    (const MethodInfo_30DE428 *)Method_UnityEngine_Component_GetComponent_UIInput___);
     if ( !v21 )
       goto LABEL_51;
     v22 = (UIInput_o *)Instance;
@@ -872,10 +872,10 @@ void ScriptConnectMenu__Open(
       1,
       Instance->klass[1]._1.namespaze);
     forceCheckOnSprite = (UnityEngine_Behaviour_o *)this->fields.forceCheckOnSprite;
-    if ( !byte_4C35044 )
+    if ( !byte_4C4062F )
     {
-      sub_1C32C20(&ScriptManager_TypeInfo);
-      byte_4C35044 = 1;
+      sub_1C37058(&ScriptManager_TypeInfo);
+      byte_4C4062F = 1;
     }
     Instance = (ScriptManager_o *)ScriptManager_TypeInfo;
     if ( !ScriptManager_TypeInfo->_2.cctor_finished )
@@ -885,7 +885,7 @@ void ScriptConnectMenu__Open(
     }
     if ( !forceCheckOnSprite )
 LABEL_51:
-      sub_1C32E7C(Instance);
+      sub_1C372B4(Instance);
     UnityEngine_Behaviour__set_enabled(
       forceCheckOnSprite,
       BYTE1(Instance->fields.equipViewSeed[3].fields.m_CancellationTokenSource),
@@ -901,16 +901,16 @@ void ScriptConnectMenu__StartMenu(ScriptConnectMenu_o *this, const MethodInfo *m
   const MethodInfo *v4; // x3
   const MethodInfo *v5; // x2
 
-  if ( (byte_4C34FA2 & 1) == 0 )
+  if ( (byte_4C4058D & 1) == 0 )
   {
-    sub_1C32C20(&ScriptConnectMenu_CallbackFunc_TypeInfo);
-    sub_1C32C20(&Method_ScriptConnectMenu_CloseAction__);
-    byte_4C34FA2 = 1;
+    sub_1C37058(&ScriptConnectMenu_CallbackFunc_TypeInfo);
+    sub_1C37058(&Method_ScriptConnectMenu_CloseAction__);
+    byte_4C4058D = 1;
   }
   TestScript_DebugTest_DebugItem_DebugItemMenuBase__StartMenu(
     (TestScript_DebugTest_DebugItem_DebugItemMenuBase_o *)this,
     0);
-  v3 = (ScriptConnectMenu_CallbackFunc_o *)sub_1C32E6C(ScriptConnectMenu_CallbackFunc_TypeInfo);
+  v3 = (ScriptConnectMenu_CallbackFunc_o *)sub_1C372A4(ScriptConnectMenu_CallbackFunc_TypeInfo);
   ScriptConnectMenu_CallbackFunc___ctor(v3, (Il2CppObject *)this, Method_ScriptConnectMenu_CloseAction__, v4);
   ScriptConnectMenu__Open(this, v3, v5);
 }
@@ -931,10 +931,10 @@ void ScriptConnectMenu__add_callbackFunc(
   ScriptConnectMenu_CallbackFunc_o *v12; // x1
   const MethodInfo *v13; // x2
 
-  if ( (byte_4C34FA0 & 1) == 0 )
+  if ( (byte_4C4058B & 1) == 0 )
   {
-    sub_1C32C20(&ScriptConnectMenu_CallbackFunc_TypeInfo);
-    byte_4C34FA0 = 1;
+    sub_1C37058(&ScriptConnectMenu_CallbackFunc_TypeInfo);
+    byte_4C4058B = 1;
   }
   callbackFunc = this->fields.callbackFunc;
   p_callbackFunc = &this->fields.callbackFunc;
@@ -947,13 +947,13 @@ void ScriptConnectMenu__add_callbackFunc(
       if ( (ScriptConnectMenu_CallbackFunc_c *)v8->klass != ScriptConnectMenu_CallbackFunc_TypeInfo )
         break;
     }
-    v9 = sub_1C6CE78(p_callbackFunc, v8, v6);
+    v9 = sub_1C712B0(p_callbackFunc, v8, v6);
     v10 = v6 == (System_Delegate_o *)v9;
     v6 = (System_Delegate_o *)v9;
     if ( v10 )
       return;
   }
-  sub_1C3313C(v8);
+  sub_1C37574(v8);
   ScriptConnectMenu__remove_callbackFunc(v11, v12, v13);
 }
 
@@ -972,10 +972,10 @@ void ScriptConnectMenu__remove_callbackFunc(
   ScriptConnectMenu_o *v11; // x0
   const MethodInfo *v12; // x1
 
-  if ( (byte_4C34FA1 & 1) == 0 )
+  if ( (byte_4C4058C & 1) == 0 )
   {
-    sub_1C32C20(&ScriptConnectMenu_CallbackFunc_TypeInfo);
-    byte_4C34FA1 = 1;
+    sub_1C37058(&ScriptConnectMenu_CallbackFunc_TypeInfo);
+    byte_4C4058C = 1;
   }
   callbackFunc = this->fields.callbackFunc;
   p_callbackFunc = &this->fields.callbackFunc;
@@ -988,13 +988,13 @@ void ScriptConnectMenu__remove_callbackFunc(
       if ( (ScriptConnectMenu_CallbackFunc_c *)v8->klass != ScriptConnectMenu_CallbackFunc_TypeInfo )
         break;
     }
-    v9 = sub_1C6CE78(p_callbackFunc, v8, v6);
+    v9 = sub_1C712B0(p_callbackFunc, v8, v6);
     v10 = v6 == (System_Delegate_o *)v9;
     v6 = (System_Delegate_o *)v9;
     if ( v10 )
       return;
   }
-  sub_1C3313C(v8);
+  sub_1C37574(v8);
   ScriptConnectMenu__StartMenu(v11, v12);
 }
 
@@ -1014,15 +1014,15 @@ void ScriptConnectMenu_CallbackFunc___ctor(
   this->fields.method = method;
   this->fields.method_ptr = v4;
   this->fields.m_target = object;
-  sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.m_target, (int32_t)object, method, a4);
+  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.m_target, (int32_t)object, method, a4);
   v8 = *(unsigned __int8 *)(method + 82);
   this->fields.method_code = (intptr_t)this;
-  if ( (sub_1C32CE0(method) & 1) == 0 )
+  if ( (sub_1C37118(method) & 1) == 0 )
   {
     if ( !object )
     {
-      v10 = sub_1C32E98(0, "Delegate to an instance method cannot have null 'this'.");
-      sub_1C32D48(v10, 0);
+      v10 = sub_1C372D0(0, "Delegate to an instance method cannot have null 'this'.");
+      sub_1C37180(v10, 0);
     }
     goto LABEL_5;
   }
@@ -1034,9 +1034,9 @@ LABEL_5:
     this->fields.method_code = (intptr_t)m_target;
     goto LABEL_6;
   }
-  this->fields.invoke_impl = (intptr_t)sub_1A74878;
+  this->fields.invoke_impl = (intptr_t)sub_1A78BA8;
 LABEL_6:
-  this->fields.extra_arg = (intptr_t)sub_1A74830;
+  this->fields.extra_arg = (intptr_t)sub_1A78B60;
 }
 
 
@@ -1054,14 +1054,14 @@ System_IAsyncResult_o *ScriptConnectMenu_CallbackFunc__BeginInvoke(
   bool v13[4]; // [xsp+1Ch] [xbp-34h] BYREF
 
   v13[0] = result;
-  if ( (byte_4C34FAB & 1) == 0 )
+  if ( (byte_4C40596 & 1) == 0 )
   {
-    sub_1C32C20(&bool_TypeInfo);
-    byte_4C34FAB = 1;
+    sub_1C37058(&bool_TypeInfo);
+    byte_4C40596 = 1;
   }
   v12[1] = 0;
   v12[0] = j_il2cpp_value_box_0(bool_TypeInfo, v13, callback, object, method, v5, v6, v7);
-  return (System_IAsyncResult_o *)sub_1C32BD4(this, v12, callback, object);
+  return (System_IAsyncResult_o *)sub_1C3700C(this, v12, callback, object);
 }
 
 
@@ -1070,7 +1070,7 @@ void ScriptConnectMenu_CallbackFunc__EndInvoke(
         System_IAsyncResult_o *result,
         const MethodInfo *method)
 {
-  sub_1C32BD8(result, 0, method);
+  sub_1C37010(result, 0, method);
 }
 
 

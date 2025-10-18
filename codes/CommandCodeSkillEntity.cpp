@@ -1,13 +1,13 @@
 void CommandCodeSkillEntity___ctor(CommandCodeSkillEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_4C3779D & 1) == 0 )
+  if ( (byte_4C42D94 & 1) == 0 )
   {
-    sub_1C32C20(&Method_DataEntityBase_string___ctor__);
-    byte_4C3779D = 1;
+    sub_1C37058(&Method_DataEntityBase_string___ctor__);
+    byte_4C42D94 = 1;
   }
   DataEntityBase_object____ctor(
     (DataEntityBase_PKType__o *)this,
-    (const MethodInfo_33943CC *)Method_DataEntityBase_string___ctor__);
+    (const MethodInfo_339EC34 *)Method_DataEntityBase_string___ctor__);
 }
 
 
@@ -17,16 +17,16 @@ System_String_o *CommandCodeSkillEntity__CreatePK(
         int32_t priority,
         const MethodInfo *method)
 {
-  if ( (byte_4C37799 & 1) == 0 )
+  if ( (byte_4C42D90 & 1) == 0 )
   {
-    sub_1C32C20(&Method_DataEntityBase_CreateMultiplePK_int__int__int___);
-    byte_4C37799 = 1;
+    sub_1C37058(&Method_DataEntityBase_CreateMultiplePK_int__int__int___);
+    byte_4C42D90 = 1;
   }
   return DataEntityBase__CreateMultiplePK_int__int__int_(
            commandCodeId,
            num,
            priority,
-           (const MethodInfo_30DBA08 *)Method_DataEntityBase_CreateMultiplePK_int__int__int___);
+           (const MethodInfo_30E6270 *)Method_DataEntityBase_CreateMultiplePK_int__int__int___);
 }
 
 
@@ -60,33 +60,33 @@ void CommandCodeSkillEntity__getEffectExplanation(
   LocalizationManager_c *v21; // x0
   System_String_o *unknownNameText; // x1
 
-  if ( (byte_4C3779B & 1) == 0 )
+  if ( (byte_4C42D92 & 1) == 0 )
   {
-    sub_1C32C20(&Method_DataManager_GetMasterData_SkillMaster___);
-    sub_1C32C20(&Method_DataMasterBase_SkillMaster__SkillEntity__int__GetEntity__);
-    sub_1C32C20(&LocalizationManager_TypeInfo);
-    sub_1C32C20(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-    sub_1C32C20(&StringLiteral_1/*""*/);
-    byte_4C3779B = 1;
+    sub_1C37058(&Method_DataManager_GetMasterData_SkillMaster___);
+    sub_1C37058(&Method_DataMasterBase_SkillMaster__SkillEntity__int__GetEntity__);
+    sub_1C37058(&LocalizationManager_TypeInfo);
+    sub_1C37058(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    sub_1C37058(&StringLiteral_1/*""*/);
+    byte_4C42D92 = 1;
   }
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39E2904 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39ED16C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance
     || (Instance = DataManager__GetMasterData_object_(
                      (DataManager_o *)Instance,
-                     (const MethodInfo_30DD3F0 *)Method_DataManager_GetMasterData_SkillMaster___)) == 0 )
+                     (const MethodInfo_30E7C58 *)Method_DataManager_GetMasterData_SkillMaster___)) == 0 )
   {
-    sub_1C32E7C(Instance);
+    sub_1C372B4(Instance);
   }
   Entity = DataMasterBase_object__object__int___GetEntity(
              (DataMasterBase_TMaster__TEntity__PKType__o *)Instance,
              this->fields.skillId,
-             (const MethodInfo_3396838 *)Method_DataMasterBase_SkillMaster__SkillEntity__int__GetEntity__);
+             (const MethodInfo_33A10A0 *)Method_DataMasterBase_SkillMaster__SkillEntity__int__GetEntity__);
   if ( Entity )
   {
     v13 = (SkillEntity_o *)Entity;
     EffectTitle = SkillEntity__getEffectTitle((SkillEntity_o *)Entity, skillLv, 0);
     *title = EffectTitle;
-    sub_1C32BC4((CGThumbnailListItem_o *)title, (int32_t)EffectTitle, v15, v16);
+    sub_1C36FFC((CGThumbnailListItem_o *)title, (int32_t)EffectTitle, v15, v16);
     EffectExplanation = SkillEntity__getEffectExplanation(v13, skillLv, 0);
     v20 = (int)EffectExplanation;
     *explanation = EffectExplanation;
@@ -95,10 +95,10 @@ void CommandCodeSkillEntity__getEffectExplanation(
   {
     if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-    if ( !byte_4C32D4C )
+    if ( !byte_4C3E2C9 )
     {
-      sub_1C32C20(&LocalizationManager_TypeInfo);
-      byte_4C32D4C = 1;
+      sub_1C37058(&LocalizationManager_TypeInfo);
+      byte_4C3E2C9 = 1;
     }
     v21 = LocalizationManager_TypeInfo;
     if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
@@ -108,11 +108,11 @@ void CommandCodeSkillEntity__getEffectExplanation(
     }
     unknownNameText = v21->static_fields->unknownNameText;
     *title = unknownNameText;
-    sub_1C32BC4((CGThumbnailListItem_o *)title, (int32_t)unknownNameText, v11, v12);
+    sub_1C36FFC((CGThumbnailListItem_o *)title, (int32_t)unknownNameText, v11, v12);
     *explanation = (System_String_o *)StringLiteral_1/*""*/;
     v20 = StringLiteral_1/*""*/;
   }
-  sub_1C32BC4((CGThumbnailListItem_o *)explanation, v20, v18, v19);
+  sub_1C36FFC((CGThumbnailListItem_o *)explanation, v20, v18, v19);
 }
 
 
@@ -122,34 +122,34 @@ System_String_o *CommandCodeSkillEntity__getSkillName(CommandCodeSkillEntity_o *
   Il2CppObject *Entity; // x0
   LocalizationManager_c *v6; // x0
 
-  if ( (byte_4C3779C & 1) == 0 )
+  if ( (byte_4C42D93 & 1) == 0 )
   {
-    sub_1C32C20(&Method_DataManager_GetMasterData_SkillMaster___);
-    sub_1C32C20(&Method_DataMasterBase_SkillMaster__SkillEntity__int__GetEntity__);
-    sub_1C32C20(&LocalizationManager_TypeInfo);
-    sub_1C32C20(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-    byte_4C3779C = 1;
+    sub_1C37058(&Method_DataManager_GetMasterData_SkillMaster___);
+    sub_1C37058(&Method_DataMasterBase_SkillMaster__SkillEntity__int__GetEntity__);
+    sub_1C37058(&LocalizationManager_TypeInfo);
+    sub_1C37058(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    byte_4C42D93 = 1;
   }
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39E2904 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39ED16C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance
     || (Instance = DataManager__GetMasterData_object_(
                      (DataManager_o *)Instance,
-                     (const MethodInfo_30DD3F0 *)Method_DataManager_GetMasterData_SkillMaster___)) == 0 )
+                     (const MethodInfo_30E7C58 *)Method_DataManager_GetMasterData_SkillMaster___)) == 0 )
   {
-    sub_1C32E7C(Instance);
+    sub_1C372B4(Instance);
   }
   Entity = DataMasterBase_object__object__int___GetEntity(
              (DataMasterBase_TMaster__TEntity__PKType__o *)Instance,
              this->fields.skillId,
-             (const MethodInfo_3396838 *)Method_DataMasterBase_SkillMaster__SkillEntity__int__GetEntity__);
+             (const MethodInfo_33A10A0 *)Method_DataMasterBase_SkillMaster__SkillEntity__int__GetEntity__);
   if ( Entity )
     return SkillEntity__getName((SkillEntity_o *)Entity, 0);
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-  if ( !byte_4C32D4C )
+  if ( !byte_4C3E2C9 )
   {
-    sub_1C32C20(&LocalizationManager_TypeInfo);
-    byte_4C32D4C = 1;
+    sub_1C37058(&LocalizationManager_TypeInfo);
+    byte_4C3E2C9 = 1;
   }
   v6 = LocalizationManager_TypeInfo;
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
@@ -169,27 +169,26 @@ bool CommandCodeSkillEntity__isUse(
 {
   int64_t Time; // x0
   Il2CppObject *Instance; // x0
-  const MethodInfo *v9; // x5
 
-  if ( (byte_4C3779A & 1) == 0 )
+  if ( (byte_4C42D91 & 1) == 0 )
   {
-    sub_1C32C20(&Method_DataManager_GetMasterData_CommandCodeSkillReleaseMaster___);
-    sub_1C32C20(&NetworkManager_TypeInfo);
-    sub_1C32C20(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-    byte_4C3779A = 1;
+    sub_1C37058(&Method_DataManager_GetMasterData_CommandCodeSkillReleaseMaster___);
+    sub_1C37058(&NetworkManager_TypeInfo);
+    sub_1C37058(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    byte_4C42D91 = 1;
   }
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
   Time = NetworkManager__getTime(0);
   if ( Time < this->fields.startedAt || Time > this->fields.endedAt )
     return 0;
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39E2904 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39ED16C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance
     || (Instance = DataManager__GetMasterData_object_(
                      (DataManager_o *)Instance,
-                     (const MethodInfo_30DD3F0 *)Method_DataManager_GetMasterData_CommandCodeSkillReleaseMaster___)) == 0 )
+                     (const MethodInfo_30E7C58 *)Method_DataManager_GetMasterData_CommandCodeSkillReleaseMaster___)) == 0 )
   {
-    sub_1C32E7C(Instance);
+    sub_1C372B4(Instance);
   }
   return CommandCodeSkillReleaseMaster__isUse(
            (CommandCodeSkillReleaseMaster_o *)Instance,
@@ -197,5 +196,5 @@ bool CommandCodeSkillEntity__isUse(
            this->fields.num,
            this->fields.priority,
            beforeClearQuestId,
-           v9);
+           0);
 }

@@ -1,21 +1,21 @@
 void BitValue___Il2CppFullySharedGenericType____ctor(
         BitValue_T__o *this,
         System_Func_T__int__o *func,
-        const MethodInfo_3316E70 *method)
+        const MethodInfo_33216D8 *method)
 {
   int32_t v5; // w2
   const MethodInfo *v6; // x3
 
   System_Object___ctor((Il2CppObject *)this, 0);
   this->fields.convertFunc = func;
-  sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.convertFunc, (int32_t)func, v5, v6);
+  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.convertFunc, (int32_t)func, v5, v6);
 }
 
 
 bool BitValue___Il2CppFullySharedGenericType___Check(
         BitValue_T__o *this,
         Unity_IL2CPP_Metadata___Il2CppFullySharedGenericType_o val,
-        const MethodInfo_3317060 *method)
+        const MethodInfo_33218C8 *method)
 {
   __int64 v3; // x23
   __int64 v4; // x8
@@ -45,7 +45,7 @@ bool BitValue___Il2CppFullySharedGenericType___Check(
     val.klass = (Unity_IL2CPP_Metadata___Il2CppFullySharedGenericType_c *)&klass;
   v8 = memcpy((char *)&klass - (((__int64)val.monitor + 15) & 0x1FFFFFFF0LL), val.klass, (size_t)val.monitor);
   if ( !convertFunc )
-    sub_1C32E7C(v8);
+    sub_1C372B4(v8);
   v9 = *(_QWORD *)(v3 + 192);
   v10 = *(__int64 **)(v9 + 24);
   v11 = *v10;
@@ -65,7 +65,7 @@ bool BitValue___Il2CppFullySharedGenericType___Check(
 bool BitValue___Il2CppFullySharedGenericType___CheckAndOff(
         BitValue_T__o *this,
         Unity_IL2CPP_Metadata___Il2CppFullySharedGenericType_o val,
-        const MethodInfo_331713C *method)
+        const MethodInfo_33219A4 *method)
 {
   _QWORD *monitor; // x22
   Unity_IL2CPP_Metadata___Il2CppFullySharedGenericType_c *klass; // x21
@@ -128,7 +128,7 @@ bool BitValue___Il2CppFullySharedGenericType___CheckAndOff(
 void BitValue___Il2CppFullySharedGenericType___Off(
         BitValue_T__o *this,
         Unity_IL2CPP_Metadata___Il2CppFullySharedGenericType_o val,
-        const MethodInfo_3316F80 *method)
+        const MethodInfo_33217E8 *method)
 {
   __int64 v4; // x24
   __int64 v5; // x8
@@ -157,7 +157,7 @@ void BitValue___Il2CppFullySharedGenericType___Off(
     val.klass = (Unity_IL2CPP_Metadata___Il2CppFullySharedGenericType_c *)&klass;
   v9 = memcpy((char *)&klass - (((__int64)val.monitor + 15) & 0x1FFFFFFF0LL), val.klass, (size_t)val.monitor);
   if ( !convertFunc )
-    sub_1C32E7C(v9);
+    sub_1C372B4(v9);
   v10 = *(_QWORD *)(v4 + 192);
   v11 = *(__int64 **)(v10 + 24);
   v12 = *v11;
@@ -177,7 +177,7 @@ void BitValue___Il2CppFullySharedGenericType___Off(
 void BitValue___Il2CppFullySharedGenericType___On(
         BitValue_T__o *this,
         Unity_IL2CPP_Metadata___Il2CppFullySharedGenericType_o val,
-        const MethodInfo_3316EA0 *method)
+        const MethodInfo_3321708 *method)
 {
   __int64 v4; // x24
   __int64 v5; // x8
@@ -206,7 +206,7 @@ void BitValue___Il2CppFullySharedGenericType___On(
     val.klass = (Unity_IL2CPP_Metadata___Il2CppFullySharedGenericType_c *)&klass;
   v9 = memcpy((char *)&klass - (((__int64)val.monitor + 15) & 0x1FFFFFFF0LL), val.klass, (size_t)val.monitor);
   if ( !convertFunc )
-    sub_1C32E7C(v9);
+    sub_1C372B4(v9);
   v10 = *(_QWORD *)(v4 + 192);
   v11 = *(__int64 **)(v10 + 24);
   v12 = *v11;
@@ -223,7 +223,7 @@ void BitValue___Il2CppFullySharedGenericType___On(
 }
 
 
-void BitValue___Il2CppFullySharedGenericType___Reset(BitValue_T__o *this, const MethodInfo_3317294 *method)
+void BitValue___Il2CppFullySharedGenericType___Reset(BitValue_T__o *this, const MethodInfo_3321AFC *method)
 {
   this->fields.value = 0;
 }

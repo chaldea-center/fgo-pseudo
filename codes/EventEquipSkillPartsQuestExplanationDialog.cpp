@@ -1,13 +1,13 @@
 void EventEquipSkillPartsQuestExplanationDialog___cctor(const MethodInfo *method)
 {
-  if ( (byte_4C31C75 & 1) == 0 )
+  if ( (byte_4C3D25F & 1) == 0 )
   {
-    sub_1C32C20(&EventEquipSkillPartsQuestExplanationDialog_TypeInfo);
-    sub_1C32C20(&StringLiteral_5603/*"EVENT_EQUIP_SKILL_PARTS_RENO_QUEST_EXPLANATION_DIALOG_TEXT_UNDER"*/);
-    byte_4C31C75 = 1;
+    sub_1C37058(&EventEquipSkillPartsQuestExplanationDialog_TypeInfo);
+    sub_1C37058(&StringLiteral_5604/*"EVENT_EQUIP_SKILL_PARTS_RENO_QUEST_EXPLANATION_DIALOG_TEXT_UNDER"*/);
+    byte_4C3D25F = 1;
   }
-  EventEquipSkillPartsQuestExplanationDialog_TypeInfo->static_fields->MessageUnderLocalizationKey = (struct System_String_o *)StringLiteral_5603/*"EVENT_EQUIP_SKILL_PARTS_RENO_QUEST_EXPLANATION_DIALOG_TEXT_UNDER"*/;
-  sub_1C32BC4(EventEquipSkillPartsQuestExplanationDialog_TypeInfo->static_fields, StringLiteral_5603/*"EVENT_EQUIP_SKILL_PARTS_RENO_QUEST_EXPLANATION_DIALOG_TEXT_UNDER"*/);
+  EventEquipSkillPartsQuestExplanationDialog_TypeInfo->static_fields->MessageUnderLocalizationKey = (struct System_String_o *)StringLiteral_5604/*"EVENT_EQUIP_SKILL_PARTS_RENO_QUEST_EXPLANATION_DIALOG_TEXT_UNDER"*/;
+  sub_1C36FFC(EventEquipSkillPartsQuestExplanationDialog_TypeInfo->static_fields, StringLiteral_5604/*"EVENT_EQUIP_SKILL_PARTS_RENO_QUEST_EXPLANATION_DIALOG_TEXT_UNDER"*/);
 }
 
 
@@ -15,10 +15,10 @@ void EventEquipSkillPartsQuestExplanationDialog___ctor(
         EventEquipSkillPartsQuestExplanationDialog_o *this,
         const MethodInfo *method)
 {
-  if ( (byte_4C31C74 & 1) == 0 )
+  if ( (byte_4C3D25E & 1) == 0 )
   {
-    sub_1C32C20(&BaseDialog_TypeInfo);
-    byte_4C31C74 = 1;
+    sub_1C37058(&BaseDialog_TypeInfo);
+    byte_4C3D25E = 1;
   }
   if ( !BaseDialog_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(BaseDialog_TypeInfo);
@@ -33,21 +33,21 @@ void EventEquipSkillPartsQuestExplanationDialog__Init(
   UnityEngine_Transform_o *transform; // x0
   Il2CppObject *Component_object; // x0
 
-  if ( (byte_4C31C6E & 1) == 0 )
+  if ( (byte_4C3D258 & 1) == 0 )
   {
-    sub_1C32C20(&Method_UnityEngine_Component_GetComponent_UIPanel___);
-    byte_4C31C6E = 1;
+    sub_1C37058(&Method_UnityEngine_Component_GetComponent_UIPanel___);
+    byte_4C3D258 = 1;
   }
   this->fields.btnCallback = 0;
-  sub_1C32BC4(&this->fields.btnCallback, 0);
+  sub_1C36FFC(&this->fields.btnCallback, 0);
   transform = UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0);
   if ( !transform || (transform = UnityEngine_Transform__get_parent(transform, 0)) == 0 )
-    sub_1C32E7C(transform);
+    sub_1C372B4(transform);
   Component_object = UnityEngine_Component__GetComponent_object_(
                        (UnityEngine_Component_o *)transform,
-                       (const MethodInfo_30D3BC0 *)Method_UnityEngine_Component_GetComponent_UIPanel___);
+                       (const MethodInfo_30DE428 *)Method_UnityEngine_Component_GetComponent_UIPanel___);
   this->fields.basePanel = (struct UIPanel_o *)Component_object;
-  sub_1C32BC4(&this->fields.basePanel, Component_object);
+  sub_1C36FFC(&this->fields.basePanel, Component_object);
   BaseDialog__Init((BaseDialog_o *)this, 0);
 }
 
@@ -60,21 +60,21 @@ void EventEquipSkillPartsQuestExplanationDialog__OnClickCancel(
   System_Reflection_MethodBase_o *v4; // x0
   System_Action_o *v5; // x20
 
-  if ( (byte_4C31C72 & 1) == 0 )
+  if ( (byte_4C3D25C & 1) == 0 )
   {
-    sub_1C32C20(&System_Action_TypeInfo);
-    sub_1C32C20(&Method_EventEquipSkillPartsQuestExplanationDialog_OnClickCancel__);
-    sub_1C32C20(&Method_EventEquipSkillPartsQuestExplanationDialog__OnClickCancel_b__22_0__);
-    byte_4C31C72 = 1;
+    sub_1C37058(&System_Action_TypeInfo);
+    sub_1C37058(&Method_EventEquipSkillPartsQuestExplanationDialog_OnClickCancel__);
+    sub_1C37058(&Method_EventEquipSkillPartsQuestExplanationDialog__OnClickCancel_b__22_0__);
+    byte_4C3D25C = 1;
   }
   if ( this->fields.baseState == 2 )
   {
     v3 = Method_EventEquipSkillPartsQuestExplanationDialog_OnClickCancel__;
     if ( (*((_BYTE *)Method_EventEquipSkillPartsQuestExplanationDialog_OnClickCancel__ + 83) & 2) != 0 )
-      v3 = (_QWORD *)sub_1C32C38(Method_EventEquipSkillPartsQuestExplanationDialog_OnClickCancel__);
-    v4 = (System_Reflection_MethodBase_o *)sub_1C32C04(v3, v3[4]);
+      v3 = (_QWORD *)sub_1C37070(Method_EventEquipSkillPartsQuestExplanationDialog_OnClickCancel__);
+    v4 = (System_Reflection_MethodBase_o *)sub_1C3703C(v3, v3[4]);
     OverwriteAssetSoundName__PlaySystemSe(v4, 1, 0, 0);
-    v5 = (System_Action_o *)sub_1C32E6C(System_Action_TypeInfo);
+    v5 = (System_Action_o *)sub_1C372A4(System_Action_TypeInfo);
     System_Action___ctor(
       v5,
       (Il2CppObject *)this,
@@ -93,21 +93,21 @@ void EventEquipSkillPartsQuestExplanationDialog__OnClickDecide(
   System_Reflection_MethodBase_o *v4; // x0
   System_Action_o *v5; // x20
 
-  if ( (byte_4C31C71 & 1) == 0 )
+  if ( (byte_4C3D25B & 1) == 0 )
   {
-    sub_1C32C20(&System_Action_TypeInfo);
-    sub_1C32C20(&Method_EventEquipSkillPartsQuestExplanationDialog_OnClickDecide__);
-    sub_1C32C20(&Method_EventEquipSkillPartsQuestExplanationDialog__OnClickDecide_b__21_0__);
-    byte_4C31C71 = 1;
+    sub_1C37058(&System_Action_TypeInfo);
+    sub_1C37058(&Method_EventEquipSkillPartsQuestExplanationDialog_OnClickDecide__);
+    sub_1C37058(&Method_EventEquipSkillPartsQuestExplanationDialog__OnClickDecide_b__21_0__);
+    byte_4C3D25B = 1;
   }
   if ( this->fields.baseState == 2 )
   {
     v3 = Method_EventEquipSkillPartsQuestExplanationDialog_OnClickDecide__;
     if ( (*((_BYTE *)Method_EventEquipSkillPartsQuestExplanationDialog_OnClickDecide__ + 83) & 2) != 0 )
-      v3 = (_QWORD *)sub_1C32C38(Method_EventEquipSkillPartsQuestExplanationDialog_OnClickDecide__);
-    v4 = (System_Reflection_MethodBase_o *)sub_1C32C04(v3, v3[4]);
+      v3 = (_QWORD *)sub_1C37070(Method_EventEquipSkillPartsQuestExplanationDialog_OnClickDecide__);
+    v4 = (System_Reflection_MethodBase_o *)sub_1C3703C(v3, v3[4]);
     OverwriteAssetSoundName__PlaySystemSe(v4, 8, 0, 0);
-    v5 = (System_Action_o *)sub_1C32E6C(System_Action_TypeInfo);
+    v5 = (System_Action_o *)sub_1C372A4(System_Action_TypeInfo);
     System_Action___ctor(
       v5,
       (Il2CppObject *)this,
@@ -143,20 +143,20 @@ void EventEquipSkillPartsQuestExplanationDialog__Open(
   UILabel_o *decideLabel; // x21
   UILabel_o *cancelLabel; // x21
 
-  if ( (byte_4C31C6F & 1) == 0 )
+  if ( (byte_4C3D259 & 1) == 0 )
   {
-    sub_1C32C20(&Method_DataManager_GetMaster_QuestMaster___);
-    sub_1C32C20(&DataManager_TypeInfo);
-    sub_1C32C20(&EventEquipSkillPartsQuestExplanationDialog_TypeInfo);
-    sub_1C32C20(&LocalizationManager_TypeInfo);
-    sub_1C32C20(&StringLiteral_10884/*"QUEST_MESSAGE_DLG_DECIDE"*/);
-    sub_1C32C20(&StringLiteral_10883/*"QUEST_MESSAGE_DLG_CANCEL"*/);
-    byte_4C31C6F = 1;
+    sub_1C37058(&Method_DataManager_GetMaster_QuestMaster___);
+    sub_1C37058(&DataManager_TypeInfo);
+    sub_1C37058(&EventEquipSkillPartsQuestExplanationDialog_TypeInfo);
+    sub_1C37058(&LocalizationManager_TypeInfo);
+    sub_1C37058(&StringLiteral_10885/*"QUEST_MESSAGE_DLG_DECIDE"*/);
+    sub_1C37058(&StringLiteral_10884/*"QUEST_MESSAGE_DLG_CANCEL"*/);
+    byte_4C3D259 = 1;
   }
   EventEquipSkillPartsQuestExplanationDialog__Init(this, (const MethodInfo *)questPhaseEntity);
   if ( !DataManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-  Master_object = (QuestMaster_o *)DataManager__GetMaster_object_((const MethodInfo_30DD39C *)Method_DataManager_GetMaster_QuestMaster___);
+  Master_object = (QuestMaster_o *)DataManager__GetMaster_object_((const MethodInfo_30E7C04 *)Method_DataManager_GetMaster_QuestMaster___);
   if ( !questPhaseEntity )
     goto LABEL_17;
   if ( !Master_object )
@@ -195,19 +195,19 @@ void EventEquipSkillPartsQuestExplanationDialog__Open(
   BasicHelper__SetActiveSafely(assistSkillList, !v23, 0);
   EventEquipSkillPartsQuestExplanationDialog__Setup(this, eventEquipSkillPartsEntityList, assistList, v24);
   decideLabel = this->fields.decideLabel;
-  Master_object = (QuestMaster_o *)LocalizationManager__Get((System_String_o *)StringLiteral_10884/*"QUEST_MESSAGE_DLG_DECIDE"*/, 0);
+  Master_object = (QuestMaster_o *)LocalizationManager__Get((System_String_o *)StringLiteral_10885/*"QUEST_MESSAGE_DLG_DECIDE"*/, 0);
   if ( !decideLabel
     || (UILabel__set_text(decideLabel, (System_String_o *)Master_object, 0),
         cancelLabel = this->fields.cancelLabel,
-        Master_object = (QuestMaster_o *)LocalizationManager__Get((System_String_o *)StringLiteral_10883/*"QUEST_MESSAGE_DLG_CANCEL"*/, 0),
+        Master_object = (QuestMaster_o *)LocalizationManager__Get((System_String_o *)StringLiteral_10884/*"QUEST_MESSAGE_DLG_CANCEL"*/, 0),
         !cancelLabel) )
   {
 LABEL_17:
-    sub_1C32E7C(Master_object);
+    sub_1C372B4(Master_object);
   }
   UILabel__set_text(cancelLabel, (System_String_o *)Master_object, 0);
   this->fields.btnCallback = callback;
-  sub_1C32BC4(&this->fields.btnCallback, callback);
+  sub_1C36FFC(&this->fields.btnCallback, callback);
   BaseDialog__SafeOpen((BaseDialog_o *)this, 0, 0, 0);
 }
 
@@ -248,21 +248,21 @@ void EventEquipSkillPartsQuestExplanationDialog__Setup(
   System_Collections_ICollection_o *self; // [xsp+68h] [xbp-68h]
 
   v6 = this;
-  if ( (byte_4C31C70 & 1) == 0 )
+  if ( (byte_4C3D25A & 1) == 0 )
   {
-    sub_1C32C20(&Method_System_Collections_Generic_List_Enumerator_EventEquipSkillPartsEntity__Dispose__);
-    sub_1C32C20(&Method_System_Collections_Generic_List_Enumerator_AssistEntity__Dispose__);
-    sub_1C32C20(&Method_System_Collections_Generic_List_Enumerator_AssistEntity__MoveNext__);
-    sub_1C32C20(&Method_System_Collections_Generic_List_Enumerator_EventEquipSkillPartsEntity__MoveNext__);
-    sub_1C32C20(&Method_System_Collections_Generic_List_Enumerator_AssistEntity__get_Current__);
-    sub_1C32C20(&Method_System_Collections_Generic_List_Enumerator_EventEquipSkillPartsEntity__get_Current__);
-    sub_1C32C20(&EventEquipSkillPartsQuestExplanationDialogBoardItem_TypeInfo);
-    sub_1C32C20(&Method_GameObjectHelper_Instantiate_EventEquipSkillPartsQuestExplanationDialogBoardItemDraw___);
-    sub_1C32C20(&Method_System_Collections_Generic_List_AssistEntity__GetEnumerator__);
-    sub_1C32C20(&Method_System_Collections_Generic_List_EventEquipSkillPartsEntity__GetEnumerator__);
-    sub_1C32C20(&Method_System_Collections_Generic_List_AssistEntity__get_Count__);
-    this = (EventEquipSkillPartsQuestExplanationDialog_o *)sub_1C32C20(&Method_System_Collections_Generic_List_EventEquipSkillPartsEntity__get_Count__);
-    byte_4C31C70 = 1;
+    sub_1C37058(&Method_System_Collections_Generic_List_Enumerator_EventEquipSkillPartsEntity__Dispose__);
+    sub_1C37058(&Method_System_Collections_Generic_List_Enumerator_AssistEntity__Dispose__);
+    sub_1C37058(&Method_System_Collections_Generic_List_Enumerator_AssistEntity__MoveNext__);
+    sub_1C37058(&Method_System_Collections_Generic_List_Enumerator_EventEquipSkillPartsEntity__MoveNext__);
+    sub_1C37058(&Method_System_Collections_Generic_List_Enumerator_AssistEntity__get_Current__);
+    sub_1C37058(&Method_System_Collections_Generic_List_Enumerator_EventEquipSkillPartsEntity__get_Current__);
+    sub_1C37058(&EventEquipSkillPartsQuestExplanationDialogBoardItem_TypeInfo);
+    sub_1C37058(&Method_GameObjectHelper_Instantiate_EventEquipSkillPartsQuestExplanationDialogBoardItemDraw___);
+    sub_1C37058(&Method_System_Collections_Generic_List_AssistEntity__GetEnumerator__);
+    sub_1C37058(&Method_System_Collections_Generic_List_EventEquipSkillPartsEntity__GetEnumerator__);
+    sub_1C37058(&Method_System_Collections_Generic_List_AssistEntity__get_Count__);
+    this = (EventEquipSkillPartsQuestExplanationDialog_o *)sub_1C37058(&Method_System_Collections_Generic_List_EventEquipSkillPartsEntity__get_Count__);
+    byte_4C3D25A = 1;
   }
   memset(&v32, 0, sizeof(v32));
   memset(&v31, 0, sizeof(v31));
@@ -275,34 +275,34 @@ void EventEquipSkillPartsQuestExplanationDialog__Setup(
   self = (System_Collections_ICollection_o *)assistList;
   if ( !this )
 LABEL_27:
-    sub_1C32E7C(this);
+    sub_1C372B4(this);
   UIProgressBar__set_value((UIProgressBar_o *)this, oneDisplayScrollBarValue, 0);
   System_Collections_Generic_List_object___GetEnumerator(
     (System_Collections_Generic_List_Enumerator_T__o *)&v30,
     (System_Collections_Generic_List_object__o *)eventEquipSkillPartsEntityList,
-    (const MethodInfo_37992B4 *)Method_System_Collections_Generic_List_EventEquipSkillPartsEntity__GetEnumerator__);
+    (const MethodInfo_37A3B1C *)Method_System_Collections_Generic_List_EventEquipSkillPartsEntity__GetEnumerator__);
   v8 = 0.0;
   v32 = v30;
   while ( System_Collections_Generic_List_Enumerator_object___MoveNext(
             &v32,
-            (const MethodInfo_3522FA8 *)Method_System_Collections_Generic_List_Enumerator_EventEquipSkillPartsEntity__MoveNext__) )
+            (const MethodInfo_352D810 *)Method_System_Collections_Generic_List_Enumerator_EventEquipSkillPartsEntity__MoveNext__) )
   {
     current = (EventEquipSkillPartsEntity_o *)v32.fields._current;
     v10 = GameObjectHelper__Instantiate_object_(
             v6->fields.prefab,
             v6->fields.equipSkillParent,
             0,
-            (const MethodInfo_3136594 *)Method_GameObjectHelper_Instantiate_EventEquipSkillPartsQuestExplanationDialogBoardItemDraw___);
+            (const MethodInfo_3140DFC *)Method_GameObjectHelper_Instantiate_EventEquipSkillPartsQuestExplanationDialogBoardItemDraw___);
     BasicHelper__SetActiveSafely((UnityEngine_Component_o *)v10, 1, 0);
     if ( !current )
-      sub_1C32E7C(v11);
+      sub_1C372B4(v11);
     skillId = current->fields.skillId;
     SkillName = EventEquipSkillPartsEntity__GetSkillName(current, 0);
     SkillDetail = EventEquipSkillPartsEntity__GetSkillDetail(current, 0, 0);
-    v15 = (EventEquipSkillPartsQuestExplanationDialogBoardItem_o *)sub_1C32E6C(EventEquipSkillPartsQuestExplanationDialogBoardItem_TypeInfo);
+    v15 = (EventEquipSkillPartsQuestExplanationDialogBoardItem_o *)sub_1C372A4(EventEquipSkillPartsQuestExplanationDialogBoardItem_TypeInfo);
     EventEquipSkillPartsQuestExplanationDialogBoardItem___ctor(v15, skillId, SkillName, SkillDetail, v16);
     if ( !v10 )
-      sub_1C32E7C(v17);
+      sub_1C372B4(v17);
     EventEquipSkillPartsQuestExplanationDialogBoardItemDraw__UpdateUi(
       (EventEquipSkillPartsQuestExplanationDialogBoardItemDraw_o *)v10,
       v15,
@@ -312,7 +312,7 @@ LABEL_27:
   }
   System_Collections_Generic_List_Enumerator_object___Dispose(
     &v32,
-    (const MethodInfo_3522FA4 *)Method_System_Collections_Generic_List_Enumerator_EventEquipSkillPartsEntity__Dispose__);
+    (const MethodInfo_352D80C *)Method_System_Collections_Generic_List_Enumerator_EventEquipSkillPartsEntity__Dispose__);
   if ( BasicHelper__IsNullOrEmpty((System_Collections_ICollection_o *)eventEquipSkillPartsEntityList, 0) )
   {
     v19 = self;
@@ -332,28 +332,28 @@ LABEL_27:
   System_Collections_Generic_List_object___GetEnumerator(
     (System_Collections_Generic_List_Enumerator_T__o *)&v30,
     (System_Collections_Generic_List_object__o *)v19,
-    (const MethodInfo_37992B4 *)Method_System_Collections_Generic_List_AssistEntity__GetEnumerator__);
+    (const MethodInfo_37A3B1C *)Method_System_Collections_Generic_List_AssistEntity__GetEnumerator__);
   v31 = v30;
   while ( System_Collections_Generic_List_Enumerator_object___MoveNext(
             &v31,
-            (const MethodInfo_3522FA8 *)Method_System_Collections_Generic_List_Enumerator_AssistEntity__MoveNext__) )
+            (const MethodInfo_352D810 *)Method_System_Collections_Generic_List_Enumerator_AssistEntity__MoveNext__) )
   {
     v20 = (AssistEntity_o *)v31.fields._current;
     v21 = GameObjectHelper__Instantiate_object_(
             v6->fields.prefab,
             v6->fields.assistSkillParent,
             0,
-            (const MethodInfo_3136594 *)Method_GameObjectHelper_Instantiate_EventEquipSkillPartsQuestExplanationDialogBoardItemDraw___);
+            (const MethodInfo_3140DFC *)Method_GameObjectHelper_Instantiate_EventEquipSkillPartsQuestExplanationDialogBoardItemDraw___);
     BasicHelper__SetActiveSafely((UnityEngine_Component_o *)v21, 1, 0);
     if ( !v20 )
-      sub_1C32E7C(v22);
+      sub_1C372B4(v22);
     v23 = v20->fields.skillId;
     name = v20->fields.name;
     Detail = AssistEntity__GetDetail(v20, 0, 0);
-    v26 = (EventEquipSkillPartsQuestExplanationDialogBoardItem_o *)sub_1C32E6C(EventEquipSkillPartsQuestExplanationDialogBoardItem_TypeInfo);
+    v26 = (EventEquipSkillPartsQuestExplanationDialogBoardItem_o *)sub_1C372A4(EventEquipSkillPartsQuestExplanationDialogBoardItem_TypeInfo);
     EventEquipSkillPartsQuestExplanationDialogBoardItem___ctor(v26, v23, name, Detail, v27);
     if ( !v21 )
-      sub_1C32E7C(v28);
+      sub_1C372B4(v28);
     EventEquipSkillPartsQuestExplanationDialogBoardItemDraw__UpdateUi(
       (EventEquipSkillPartsQuestExplanationDialogBoardItemDraw_o *)v21,
       v26,
@@ -363,7 +363,7 @@ LABEL_27:
   }
   System_Collections_Generic_List_Enumerator_object___Dispose(
     &v31,
-    (const MethodInfo_3522FA4 *)Method_System_Collections_Generic_List_Enumerator_AssistEntity__Dispose__);
+    (const MethodInfo_352D80C *)Method_System_Collections_Generic_List_Enumerator_AssistEntity__Dispose__);
 }
 
 
@@ -374,10 +374,10 @@ void EventEquipSkillPartsQuestExplanationDialog___OnClickCancel_b__22_0(
   struct CommonConfirmDialog_ClickDelegate_o *btnCallback; // x8
   UnityEngine_Object_o *gameObject; // x19
 
-  if ( (byte_4C31C77 & 1) == 0 )
+  if ( (byte_4C3D261 & 1) == 0 )
   {
-    sub_1C32C20(&UnityEngine_Object_TypeInfo);
-    byte_4C31C77 = 1;
+    sub_1C37058(&UnityEngine_Object_TypeInfo);
+    byte_4C3D261 = 1;
   }
   btnCallback = this->fields.btnCallback;
   if ( btnCallback )
@@ -386,11 +386,11 @@ void EventEquipSkillPartsQuestExplanationDialog___OnClickCancel_b__22_0(
       0,
       btnCallback->fields.method);
   this->fields.btnCallback = 0;
-  sub_1C32BC4(&this->fields.btnCallback, 0);
+  sub_1C36FFC(&this->fields.btnCallback, 0);
   gameObject = (UnityEngine_Object_o *)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-  UnityEngine_Object__Destroy_71223640(gameObject, 0);
+  UnityEngine_Object__Destroy_71266752(gameObject, 0);
 }
 
 
@@ -401,10 +401,10 @@ void EventEquipSkillPartsQuestExplanationDialog___OnClickDecide_b__21_0(
   struct CommonConfirmDialog_ClickDelegate_o *btnCallback; // x8
   UnityEngine_Object_o *gameObject; // x19
 
-  if ( (byte_4C31C76 & 1) == 0 )
+  if ( (byte_4C3D260 & 1) == 0 )
   {
-    sub_1C32C20(&UnityEngine_Object_TypeInfo);
-    byte_4C31C76 = 1;
+    sub_1C37058(&UnityEngine_Object_TypeInfo);
+    byte_4C3D260 = 1;
   }
   btnCallback = this->fields.btnCallback;
   if ( btnCallback )
@@ -413,11 +413,11 @@ void EventEquipSkillPartsQuestExplanationDialog___OnClickDecide_b__21_0(
       1,
       btnCallback->fields.method);
   this->fields.btnCallback = 0;
-  sub_1C32BC4(&this->fields.btnCallback, 0);
+  sub_1C36FFC(&this->fields.btnCallback, 0);
   gameObject = (UnityEngine_Object_o *)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-  UnityEngine_Object__Destroy_71223640(gameObject, 0);
+  UnityEngine_Object__Destroy_71266752(gameObject, 0);
 }
 
 
@@ -428,10 +428,10 @@ UnityEngine_GameObject_o *EventEquipSkillPartsQuestExplanationDialog__get_closeB
   UnityEngine_Object_o *cancelButton; // x20
   UnityEngine_Component_o *v5; // x0
 
-  if ( (byte_4C31C73 & 1) == 0 )
+  if ( (byte_4C3D25D & 1) == 0 )
   {
-    sub_1C32C20(&UnityEngine_Object_TypeInfo);
-    byte_4C31C73 = 1;
+    sub_1C37058(&UnityEngine_Object_TypeInfo);
+    byte_4C3D25D = 1;
   }
   cancelButton = (UnityEngine_Object_o *)this->fields.cancelButton;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -440,6 +440,6 @@ UnityEngine_GameObject_o *EventEquipSkillPartsQuestExplanationDialog__get_closeB
     return 0;
   v5 = (UnityEngine_Component_o *)this->fields.cancelButton;
   if ( !v5 )
-    sub_1C32E7C(0);
+    sub_1C372B4(0);
   return UnityEngine_Component__get_gameObject(v5, 0);
 }

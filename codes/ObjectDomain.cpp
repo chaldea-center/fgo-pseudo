@@ -8,12 +8,12 @@ void ObjectDomain___ctor(ObjectDomain_o *this, float x, float y, float width, fl
 }
 
 
-void ObjectDomain___ctor_35929364(ObjectDomain_o *this, ObjectDomain_o *domain, const MethodInfo *method)
+void ObjectDomain___ctor_36024996(ObjectDomain_o *this, ObjectDomain_o *domain, const MethodInfo *method)
 {
   ObjectDomain_Fields fields; // [xsp+0h] [xbp-20h]
 
   if ( !domain )
-    sub_1C32E7C(this);
+    sub_1C372B4(this);
   fields = domain->fields;
   System_Object___ctor((Il2CppObject *)this, 0);
   this->fields = fields;

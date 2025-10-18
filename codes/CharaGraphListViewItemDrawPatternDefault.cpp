@@ -14,10 +14,10 @@ void CharaGraphListViewItemDrawPatternDefault__SetActive(
 {
   UnityEngine_GameObject_o *gameObject; // x0
 
-  if ( (byte_4C36CB0 & 1) == 0 )
+  if ( (byte_4C422A0 & 1) == 0 )
   {
-    sub_1C32C20(&UnityEngine_Object_TypeInfo);
-    byte_4C36CB0 = 1;
+    sub_1C37058(&UnityEngine_Object_TypeInfo);
+    byte_4C422A0 = 1;
   }
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
@@ -25,7 +25,7 @@ void CharaGraphListViewItemDrawPatternDefault__SetActive(
   if ( ((unsigned __int8)gameObject & 1) != 0 )
   {
     if ( !obj || (gameObject = UnityEngine_Component__get_gameObject(obj, 0)) == 0 )
-      sub_1C32E7C(gameObject);
+      sub_1C372B4(gameObject);
     UnityEngine_GameObject__SetActive(gameObject, value, 0);
   }
 }
@@ -42,11 +42,11 @@ void CharaGraphListViewItemDrawPatternDefault__SetInput(
   UnityEngine_Object_o *baseButton; // x23
 
   v8 = this;
-  if ( (byte_4C36CAF & 1) == 0 )
+  if ( (byte_4C4229F & 1) == 0 )
   {
-    sub_1C32C20(&Method_UnityEngine_Component_GetComponent_Collider___);
-    this = (CharaGraphListViewItemDrawPatternDefault_o *)sub_1C32C20(&UnityEngine_Object_TypeInfo);
-    byte_4C36CAF = 1;
+    sub_1C37058(&Method_UnityEngine_Component_GetComponent_Collider___);
+    this = (CharaGraphListViewItemDrawPatternDefault_o *)sub_1C37058(&UnityEngine_Object_TypeInfo);
+    byte_4C4229F = 1;
   }
   if ( !itemDraw )
     goto LABEL_12;
@@ -60,7 +60,7 @@ void CharaGraphListViewItemDrawPatternDefault__SetInput(
     {
       this = (CharaGraphListViewItemDrawPatternDefault_o *)UnityEngine_Component__GetComponent_object_(
                                                              (UnityEngine_Component_o *)this,
-                                                             (const MethodInfo_30D3BC0 *)Method_UnityEngine_Component_GetComponent_Collider___);
+                                                             (const MethodInfo_30DE428 *)Method_UnityEngine_Component_GetComponent_Collider___);
       if ( this )
       {
         UnityEngine_Collider__set_enabled((UnityEngine_Collider_o *)this, isInput, 0);
@@ -77,7 +77,7 @@ void CharaGraphListViewItemDrawPatternDefault__SetInput(
       }
     }
 LABEL_12:
-    sub_1C32E7C(this);
+    sub_1C372B4(this);
   }
 LABEL_11:
   ((void (__fastcall *)(CharaGraphListViewItemDrawPatternDefault_o *, CharaGraphListViewItemDraw_o *, CharaGraphListViewItemBase_o *, const MethodInfo *))v8->klass->vtable._6_SetupAccessories.methodPtr)(
@@ -182,7 +182,7 @@ void CharaGraphListViewItemDrawPatternDefault__SetupAccessories(
         (selectObject = (CharaGraphListViewItemDrawPatternDefault_o *)itemDraw->fields.servantFaceIcon) == 0) )
   {
 LABEL_6:
-    sub_1C32E7C(selectObject);
+    sub_1C372B4(selectObject);
   }
   ServantFaceIconComponent__ResetIconLabelScale((ServantFaceIconComponent_o *)selectObject, 0);
   CharaGraphListViewItemDrawPatternDefault__SetupMaterialTd(v19, itemDraw, item, v20);
@@ -206,12 +206,12 @@ void CharaGraphListViewItemDrawPatternDefault__SetupFaceIcon(
   __int64 v9; // x11
   __int64 v10; // x11
 
-  if ( (byte_4C36CB1 & 1) == 0 )
+  if ( (byte_4C422A1 & 1) == 0 )
   {
-    sub_1C32C20(&CharaGraphCommandCodeListViewItem_TypeInfo);
-    sub_1C32C20(&CharaGraphServantCollectionListViewItem_TypeInfo);
-    this = (CharaGraphListViewItemDrawPatternDefault_o *)sub_1C32C20(&CharaGraphServantListViewItemBase_TypeInfo);
-    byte_4C36CB1 = 1;
+    sub_1C37058(&CharaGraphCommandCodeListViewItem_TypeInfo);
+    sub_1C37058(&CharaGraphServantCollectionListViewItem_TypeInfo);
+    this = (CharaGraphListViewItemDrawPatternDefault_o *)sub_1C37058(&CharaGraphServantListViewItemBase_TypeInfo);
+    byte_4C422A1 = 1;
   }
   if ( item )
   {
@@ -226,7 +226,7 @@ void CharaGraphListViewItemDrawPatternDefault__SetupFaceIcon(
         this = (CharaGraphListViewItemDrawPatternDefault_o *)itemDraw->fields.servantFaceIcon;
         if ( this )
         {
-          ServantFaceIconComponent__Set_40905852(
+          ServantFaceIconComponent__Set_41005332(
             (ServantFaceIconComponent_o *)this,
             (UserServantEntity_o *)item[1].monitor,
             item->fields._IconInfo1_k__BackingField,
@@ -247,7 +247,7 @@ void CharaGraphListViewItemDrawPatternDefault__SetupFaceIcon(
           this = (CharaGraphListViewItemDrawPatternDefault_o *)itemDraw->fields.servantFaceIcon;
           if ( this )
           {
-            ServantFaceIconComponent__Set_40913296(
+            ServantFaceIconComponent__Set_41012776(
               (ServantFaceIconComponent_o *)this,
               (UserCommandCodeEntity_o *)item[1].klass,
               item->fields._IconInfo1_k__BackingField,
@@ -270,7 +270,7 @@ void CharaGraphListViewItemDrawPatternDefault__SetupFaceIcon(
           this = (CharaGraphListViewItemDrawPatternDefault_o *)itemDraw->fields.servantFaceIcon;
           if ( this )
           {
-            ServantFaceIconComponent__Set_40907464(
+            ServantFaceIconComponent__Set_41006944(
               (ServantFaceIconComponent_o *)this,
               (UserServantCollectionEntity_o *)item[1].klass,
               item->fields._IconInfo1_k__BackingField,
@@ -282,7 +282,7 @@ void CharaGraphListViewItemDrawPatternDefault__SetupFaceIcon(
         }
       }
     }
-    sub_1C32E7C(this);
+    sub_1C372B4(this);
   }
 }
 
@@ -294,7 +294,7 @@ void CharaGraphListViewItemDrawPatternDefault__SetupFaceMask(
         const MethodInfo *method)
 {
   if ( !itemDraw || (this = (CharaGraphListViewItemDrawPatternDefault_o *)itemDraw->fields.servantFaceIcon) == 0 )
-    sub_1C32E7C(this);
+    sub_1C372B4(this);
   ServantFaceIconComponent__SetGrandFaceMaskSpriteCommonAtlas(
     (ServantFaceIconComponent_o *)this,
     itemDraw->fields.maskSprite,
@@ -315,12 +315,12 @@ void CharaGraphListViewItemDrawPatternDefault__SetupMaterialTd(
   UISprite_o *v8; // x21
   UnityEngine_Vector3_o v9; // 0:s0.4,4:s1.4,8:s2.4
 
-  if ( (byte_4C36CB5 & 1) == 0 )
+  if ( (byte_4C422A5 & 1) == 0 )
   {
-    sub_1C32C20(&AtlasManager_TypeInfo);
-    sub_1C32C20(&UnityEngine_Object_TypeInfo);
-    this = (CharaGraphListViewItemDrawPatternDefault_o *)sub_1C32C20(&StringLiteral_23108/*"ribbon_noblephantasmup_01"*/);
-    byte_4C36CB5 = 1;
+    sub_1C37058(&AtlasManager_TypeInfo);
+    sub_1C37058(&UnityEngine_Object_TypeInfo);
+    this = (CharaGraphListViewItemDrawPatternDefault_o *)sub_1C37058(&StringLiteral_23112/*"ribbon_noblephantasmup_01"*/);
+    byte_4C422A5 = 1;
   }
   if ( !itemDraw )
     goto LABEL_15;
@@ -342,7 +342,7 @@ void CharaGraphListViewItemDrawPatternDefault__SetupMaterialTd(
       v8 = itemDraw->fields.materialTdSprite;
       if ( !AtlasManager_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo);
-      AtlasManager__SetEventSprite(v8, (System_String_o *)StringLiteral_23108/*"ribbon_noblephantasmup_01"*/, 0);
+      AtlasManager__SetEventSprite(v8, (System_String_o *)StringLiteral_23112/*"ribbon_noblephantasmup_01"*/, 0);
       if ( item->fields._IsNeedAdjustIconLabelScale_k__BackingField )
       {
         this = (CharaGraphListViewItemDrawPatternDefault_o *)itemDraw->fields.servantFaceIcon;
@@ -355,7 +355,7 @@ void CharaGraphListViewItemDrawPatternDefault__SetupMaterialTd(
           return;
         }
 LABEL_15:
-        sub_1C32E7C(this);
+        sub_1C372B4(this);
       }
     }
   }
@@ -372,11 +372,11 @@ void CharaGraphListViewItemDrawPatternDefault__SetupPartyIcon(
   __int64 naturalAligment; // x10
   bool v8; // w1
 
-  if ( (byte_4C36CB2 & 1) == 0 )
+  if ( (byte_4C422A2 & 1) == 0 )
   {
-    sub_1C32C20(&CharaGraphPartyServantListViewItem_TypeInfo);
-    this = (CharaGraphListViewItemDrawPatternDefault_o *)sub_1C32C20(&UnityEngine_Object_TypeInfo);
-    byte_4C36CB2 = 1;
+    sub_1C37058(&CharaGraphPartyServantListViewItem_TypeInfo);
+    this = (CharaGraphListViewItemDrawPatternDefault_o *)sub_1C37058(&UnityEngine_Object_TypeInfo);
+    byte_4C422A2 = 1;
   }
   if ( !itemDraw )
     goto LABEL_17;
@@ -411,12 +411,12 @@ void CharaGraphListViewItemDrawPatternDefault__SetupPartyIcon(
       {
         v8 = 0;
 LABEL_12:
-        FlashingIconComponent__Set_40801560((FlashingIconComponent_o *)this, v8, 0);
+        FlashingIconComponent__Set_40901040((FlashingIconComponent_o *)this, v8, 0);
         return;
       }
     }
 LABEL_17:
-    sub_1C32E7C(this);
+    sub_1C372B4(this);
   }
 }
 
@@ -428,7 +428,7 @@ void CharaGraphListViewItemDrawPatternDefault__SetupStatusLabel(
         const MethodInfo *method)
 {
   if ( !itemDraw )
-    sub_1C32E7C(this);
+    sub_1C372B4(this);
   CharaGraphListViewItemDrawPatternDefault__SetActive(
     this,
     (UnityEngine_Component_o *)itemDraw->fields.statusLb,
@@ -448,13 +448,13 @@ void CharaGraphListViewItemDrawPatternDefault__SetupUseSprite(
   __int64 naturalAligment; // x11
   __int64 *v9; // x8
 
-  if ( (byte_4C36CB3 & 1) == 0 )
+  if ( (byte_4C422A3 & 1) == 0 )
   {
-    sub_1C32C20(&CharaGraphCommandCodeListViewItem_TypeInfo);
-    sub_1C32C20(&UnityEngine_Object_TypeInfo);
-    sub_1C32C20(&StringLiteral_20186/*"icon_equip"*/);
-    this = (CharaGraphListViewItemDrawPatternDefault_o *)sub_1C32C20(&StringLiteral_20187/*"icon_equip_cc"*/);
-    byte_4C36CB3 = 1;
+    sub_1C37058(&CharaGraphCommandCodeListViewItem_TypeInfo);
+    sub_1C37058(&UnityEngine_Object_TypeInfo);
+    sub_1C37058(&StringLiteral_20189/*"icon_equip"*/);
+    this = (CharaGraphListViewItemDrawPatternDefault_o *)sub_1C37058(&StringLiteral_20190/*"icon_equip_cc"*/);
+    byte_4C422A3 = 1;
   }
   if ( !itemDraw )
     goto LABEL_15;
@@ -474,11 +474,11 @@ void CharaGraphListViewItemDrawPatternDefault__SetupUseSprite(
     if ( item->fields._IsUse_k__BackingField )
     {
       naturalAligment = CharaGraphCommandCodeListViewItem_TypeInfo->_2.naturalAligment;
-      v9 = &StringLiteral_20186/*"icon_equip"*/;
+      v9 = &StringLiteral_20189/*"icon_equip"*/;
       if ( item->klass->_2.naturalAligment >= (unsigned int)naturalAligment
         && (CharaGraphCommandCodeListViewItem_c *)item->klass->_2.typeHierarchy[naturalAligment - 1] == CharaGraphCommandCodeListViewItem_TypeInfo )
       {
-        v9 = &StringLiteral_20187/*"icon_equip_cc"*/;
+        v9 = &StringLiteral_20190/*"icon_equip_cc"*/;
       }
       this = (CharaGraphListViewItemDrawPatternDefault_o *)itemDraw->fields.useSprite;
       if ( this )
@@ -487,7 +487,7 @@ void CharaGraphListViewItemDrawPatternDefault__SetupUseSprite(
         return;
       }
 LABEL_15:
-      sub_1C32E7C(this);
+      sub_1C372B4(this);
     }
   }
 }
@@ -507,13 +507,13 @@ void CharaGraphListViewItemDrawPatternDefault__SetupWarningAndMask(
   System_String_o *v11; // x20
 
   v6 = this;
-  if ( (byte_4C36CB4 & 1) == 0 )
+  if ( (byte_4C422A4 & 1) == 0 )
   {
-    sub_1C32C20(&LocalizationManager_TypeInfo);
-    sub_1C32C20(&StringLiteral_11520/*"SELECT_CANNOT"*/);
-    sub_1C32C20(&StringLiteral_11552/*"SELECT_SERVANT_EVENT_JOIN"*/);
-    this = (CharaGraphListViewItemDrawPatternDefault_o *)sub_1C32C20(&StringLiteral_1/*""*/);
-    byte_4C36CB4 = 1;
+    sub_1C37058(&LocalizationManager_TypeInfo);
+    sub_1C37058(&StringLiteral_11521/*"SELECT_CANNOT"*/);
+    sub_1C37058(&StringLiteral_11553/*"SELECT_SERVANT_EVENT_JOIN"*/);
+    this = (CharaGraphListViewItemDrawPatternDefault_o *)sub_1C37058(&StringLiteral_1/*""*/);
+    byte_4C422A4 = 1;
   }
   if ( !itemDraw )
     goto LABEL_18;
@@ -544,9 +544,9 @@ void CharaGraphListViewItemDrawPatternDefault__SetupWarningAndMask(
   {
     warningLabel = itemDraw->fields.warningLabel;
     if ( item->fields._IsEventJoin_k__BackingField )
-      v10 = &StringLiteral_11552/*"SELECT_SERVANT_EVENT_JOIN"*/;
+      v10 = &StringLiteral_11553/*"SELECT_SERVANT_EVENT_JOIN"*/;
     else
-      v10 = &StringLiteral_11520/*"SELECT_CANNOT"*/;
+      v10 = &StringLiteral_11521/*"SELECT_CANNOT"*/;
     v11 = (System_String_o *)*v10;
     if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
@@ -557,6 +557,6 @@ void CharaGraphListViewItemDrawPatternDefault__SetupWarningAndMask(
       return;
     }
 LABEL_18:
-    sub_1C32E7C(this);
+    sub_1C372B4(this);
   }
 }

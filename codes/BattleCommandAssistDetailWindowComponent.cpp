@@ -47,18 +47,18 @@ void BattleCommandAssistDetailWindowComponent__SetCommandAssistInfo(
   int32_t v38; // [xsp+8h] [xbp-58h] BYREF
   int32_t lv; // [xsp+Ch] [xbp-54h] BYREF
 
-  if ( (byte_4C3ADC3 & 1) == 0 )
+  if ( (byte_4C463D7 & 1) == 0 )
   {
-    sub_1C32C20(&BattleData_TypeInfo);
-    sub_1C32C20(&Method_DataManager_GetMaster_EventCommandAssistMaster___);
-    sub_1C32C20(&Method_DataManager_GetMaster_SkillLvMaster___);
-    sub_1C32C20(&DataManager_TypeInfo);
-    sub_1C32C20(&int_TypeInfo);
-    sub_1C32C20(&LocalizationManager_TypeInfo);
-    sub_1C32C20(&UnityEngine_Object_TypeInfo);
-    sub_1C32C20(&StringLiteral_3618/*"COMMAND_ASSIST_NAME"*/);
-    sub_1C32C20(&StringLiteral_3685/*"COMMON_CONFIRM_CLOSE"*/);
-    byte_4C3ADC3 = 1;
+    sub_1C37058(&BattleData_TypeInfo);
+    sub_1C37058(&Method_DataManager_GetMaster_EventCommandAssistMaster___);
+    sub_1C37058(&Method_DataManager_GetMaster_SkillLvMaster___);
+    sub_1C37058(&DataManager_TypeInfo);
+    sub_1C37058(&int_TypeInfo);
+    sub_1C37058(&LocalizationManager_TypeInfo);
+    sub_1C37058(&UnityEngine_Object_TypeInfo);
+    sub_1C37058(&StringLiteral_3618/*"COMMAND_ASSIST_NAME"*/);
+    sub_1C37058(&StringLiteral_3685/*"COMMON_CONFIRM_CLOSE"*/);
+    byte_4C463D7 = 1;
   }
   commandAssistNameLabel = (UnityEngine_Object_o *)this->fields.commandAssistNameLabel;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -85,7 +85,7 @@ void BattleCommandAssistDetailWindowComponent__SetCommandAssistInfo(
           EventId = BattleData__GetEventId(0);
           if ( !DataManager_TypeInfo->_2.cctor_finished )
             j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-          Master_object = (EventCommandAssistMaster_o *)DataManager__GetMaster_object_((const MethodInfo_30DD39C *)Method_DataManager_GetMaster_EventCommandAssistMaster___);
+          Master_object = (EventCommandAssistMaster_o *)DataManager__GetMaster_object_((const MethodInfo_30E7C04 *)Method_DataManager_GetMaster_EventCommandAssistMaster___);
           if ( commandData )
           {
             v11 = Master_object;
@@ -116,7 +116,7 @@ void BattleCommandAssistDetailWindowComponent__SetCommandAssistInfo(
                   v27 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &lv, v21, v22, v23, v24, v25, v26);
                   v38 = v16->fields.lv;
                   v34 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v38, v28, v29, v30, v31, v32, v33);
-                  Master_object = (EventCommandAssistMaster_o *)System_String__Format_63559904(v20, name, v27, v34, 0);
+                  Master_object = (EventCommandAssistMaster_o *)System_String__Format_63603016(v20, name, v27, v34, 0);
                   if ( !v17 )
                     goto LABEL_45;
                   UILabel__set_text(v17, (System_String_o *)Master_object, 0);
@@ -130,7 +130,7 @@ void BattleCommandAssistDetailWindowComponent__SetCommandAssistInfo(
               {
                 if ( !DataManager_TypeInfo->_2.cctor_finished )
                   j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-                Master_object = (EventCommandAssistMaster_o *)DataManager__GetMaster_object_((const MethodInfo_30DD39C *)Method_DataManager_GetMaster_SkillLvMaster___);
+                Master_object = (EventCommandAssistMaster_o *)DataManager__GetMaster_object_((const MethodInfo_30E7C04 *)Method_DataManager_GetMaster_SkillLvMaster___);
                 if ( !Master_object )
                   goto LABEL_45;
                 Entity = SkillLvMaster__GetEntity(
@@ -141,7 +141,7 @@ void BattleCommandAssistDetailWindowComponent__SetCommandAssistInfo(
                 if ( Entity )
                 {
                   v36 = this->fields.detailLabel;
-                  Master_object = (EventCommandAssistMaster_o *)SkillLvEntity__getDetail_42778376(
+                  Master_object = (EventCommandAssistMaster_o *)SkillLvEntity__getDetail_42880244(
                                                                   Entity,
                                                                   v14->fields.skillLv,
                                                                   0,
@@ -193,7 +193,7 @@ void BattleCommandAssistDetailWindowComponent__SetCommandAssistInfo(
             }
           }
 LABEL_45:
-          sub_1C32E7C(Master_object);
+          sub_1C372B4(Master_object);
         }
       }
     }
@@ -205,10 +205,10 @@ System_String_o *BattleCommandAssistDetailWindowComponent__get_closeBtnPath(
         BattleCommandAssistDetailWindowComponent_o *this,
         const MethodInfo *method)
 {
-  if ( (byte_4C3ADC4 & 1) == 0 )
+  if ( (byte_4C463D8 & 1) == 0 )
   {
-    sub_1C32C20(&StringLiteral_18018/*"closeBtn"*/);
-    byte_4C3ADC4 = 1;
+    sub_1C37058(&StringLiteral_18020/*"closeBtn"*/);
+    byte_4C463D8 = 1;
   }
-  return (System_String_o *)StringLiteral_18018/*"closeBtn"*/;
+  return (System_String_o *)StringLiteral_18020/*"closeBtn"*/;
 }

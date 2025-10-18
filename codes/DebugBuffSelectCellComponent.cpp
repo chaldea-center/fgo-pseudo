@@ -24,27 +24,27 @@ void DebugBuffSelectCellComponent__Set(
   System_String_o *v21; // x0
   System_String_o *v22; // x0
 
-  if ( (byte_4C38F6D & 1) == 0 )
+  if ( (byte_4C44566 & 1) == 0 )
   {
-    sub_1C32C20(&StringLiteral_1457/*":"*/);
-    byte_4C38F6D = 1;
+    sub_1C37058(&StringLiteral_1457/*":"*/);
+    byte_4C44566 = 1;
   }
   this->fields.id = id;
   v13 = (_DWORD)this + 40;
   this->fields.name = name;
   p_name = &this->fields.name;
-  sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.name, (int32_t)name, (int32_t)name, (const MethodInfo *)detail);
+  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.name, (int32_t)name, (int32_t)name, (const MethodInfo *)detail);
   this->fields.detail = detail;
-  sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.detail, (int32_t)detail, v15, v16);
+  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.detail, (int32_t)detail, v15, v16);
   this->fields.callback = callback;
   p_callback = &this->fields.callback;
-  sub_1C32BC4((CGThumbnailListItem_o *)p_callback, (int32_t)callback, v18, v19);
+  sub_1C36FFC((CGThumbnailListItem_o *)p_callback, (int32_t)callback, v18, v19);
   v20 = (UILabel_o *)*(p_callback - 5);
   *((_DWORD *)p_callback - 2) = buffType;
   v21 = System_Int32__ToString(v13, 0);
-  v22 = System_String__Concat_63556792(v21, (System_String_o *)StringLiteral_1457/*":"*/, *p_name, 0);
+  v22 = System_String__Concat_63599904(v21, (System_String_o *)StringLiteral_1457/*":"*/, *p_name, 0);
   if ( !v20 )
-    sub_1C32E7C(v22);
+    sub_1C372B4(v22);
   UILabel__set_text(v20, v22, 0);
 }
 

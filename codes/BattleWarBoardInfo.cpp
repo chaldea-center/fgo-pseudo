@@ -13,18 +13,18 @@ System_Collections_Generic_List_int__o *BattleWarBoardInfo__GetBattleSquareIndiv
   _BOOL8 BattleSquareEntity; // x0
   WarBoardSquareEntity_o *squareEntity; // [xsp+8h] [xbp-28h] BYREF
 
-  if ( (byte_4C3A729 & 1) == 0 )
+  if ( (byte_4C45D36 & 1) == 0 )
   {
-    sub_1C32C20(&Method_System_Collections_Generic_List_int__AddRange__);
-    sub_1C32C20(&Method_System_Collections_Generic_List_int___ctor__);
-    sub_1C32C20(&System_Collections_Generic_List_int__TypeInfo);
-    byte_4C3A729 = 1;
+    sub_1C37058(&Method_System_Collections_Generic_List_int__AddRange__);
+    sub_1C37058(&Method_System_Collections_Generic_List_int___ctor__);
+    sub_1C37058(&System_Collections_Generic_List_int__TypeInfo);
+    byte_4C45D36 = 1;
   }
   squareEntity = 0;
-  v3 = (System_Collections_Generic_List_int__o *)sub_1C32E6C(System_Collections_Generic_List_int__TypeInfo);
+  v3 = (System_Collections_Generic_List_int__o *)sub_1C372A4(System_Collections_Generic_List_int__TypeInfo);
   System_Collections_Generic_List_int____ctor(
     v3,
-    (const MethodInfo_377AF44 *)Method_System_Collections_Generic_List_int___ctor__);
+    (const MethodInfo_37857AC *)Method_System_Collections_Generic_List_int___ctor__);
   BattleSquareEntity = BattleWarBoardInfo__TryGetBattleSquareEntity(this, &squareEntity, v4);
   if ( BattleSquareEntity )
   {
@@ -40,11 +40,11 @@ System_Collections_Generic_List_int__o *BattleWarBoardInfo__GetBattleSquareIndiv
         System_Collections_Generic_List_int___AddRange(
           v3,
           (System_Collections_Generic_IEnumerable_T__o *)squareEntity->fields.individuality,
-          (const MethodInfo_377B9A4 *)Method_System_Collections_Generic_List_int__AddRange__);
+          (const MethodInfo_378620C *)Method_System_Collections_Generic_List_int__AddRange__);
         return v3;
       }
 LABEL_10:
-      sub_1C32E7C(BattleSquareEntity);
+      sub_1C372B4(BattleSquareEntity);
     }
   }
   return v3;
@@ -56,22 +56,22 @@ int32_t BattleWarBoardInfo__GetPartySkillId(BattleWarBoardInfo_o *this, const Me
   Il2CppObject *Master_object; // x0
   Il2CppObject *Entity; // x0
 
-  if ( (byte_4C3A727 & 1) == 0 )
+  if ( (byte_4C45D34 & 1) == 0 )
   {
-    sub_1C32C20(&Method_DataManager_GetMaster_WarBoardStageMaster___);
-    sub_1C32C20(&DataManager_TypeInfo);
-    sub_1C32C20(&Method_DataMasterBase_WarBoardStageMaster__WarBoardStageEntity__int__GetEntity__);
-    byte_4C3A727 = 1;
+    sub_1C37058(&Method_DataManager_GetMaster_WarBoardStageMaster___);
+    sub_1C37058(&DataManager_TypeInfo);
+    sub_1C37058(&Method_DataMasterBase_WarBoardStageMaster__WarBoardStageEntity__int__GetEntity__);
+    byte_4C45D34 = 1;
   }
   if ( !DataManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-  Master_object = DataManager__GetMaster_object_((const MethodInfo_30DD39C *)Method_DataManager_GetMaster_WarBoardStageMaster___);
+  Master_object = DataManager__GetMaster_object_((const MethodInfo_30E7C04 *)Method_DataManager_GetMaster_WarBoardStageMaster___);
   if ( !Master_object )
-    sub_1C32E7C(0);
+    sub_1C372B4(0);
   Entity = DataMasterBase_object__object__int___GetEntity(
              (DataMasterBase_TMaster__TEntity__PKType__o *)Master_object,
              this->fields.stageId,
-             (const MethodInfo_3396838 *)Method_DataMasterBase_WarBoardStageMaster__WarBoardStageEntity__int__GetEntity__);
+             (const MethodInfo_33A10A0 *)Method_DataMasterBase_WarBoardStageMaster__WarBoardStageEntity__int__GetEntity__);
   if ( Entity )
     LODWORD(Entity) = HIDWORD(Entity[3].monitor);
   return (int)Entity;
@@ -94,17 +94,17 @@ bool BattleWarBoardInfo__TryGetBattleSquareEntity(
   int v13; // w11
   Il2CppObject *entity; // [xsp+8h] [xbp-28h] BYREF
 
-  if ( (byte_4C3A728 & 1) == 0 )
+  if ( (byte_4C45D35 & 1) == 0 )
   {
-    sub_1C32C20(&Method_DataManager_GetMaster_WarBoardSquareMaster___);
-    sub_1C32C20(&Method_DataManager_GetMaster_WarBoardStageMaster___);
-    sub_1C32C20(&DataManager_TypeInfo);
-    sub_1C32C20(&Method_DataMasterBase_WarBoardStageMaster__WarBoardStageEntity__int__TryGetEntity__);
-    byte_4C3A728 = 1;
+    sub_1C37058(&Method_DataManager_GetMaster_WarBoardSquareMaster___);
+    sub_1C37058(&Method_DataManager_GetMaster_WarBoardStageMaster___);
+    sub_1C37058(&DataManager_TypeInfo);
+    sub_1C37058(&Method_DataMasterBase_WarBoardStageMaster__WarBoardStageEntity__int__TryGetEntity__);
+    byte_4C45D35 = 1;
   }
   entity = 0;
   *squareEntity = 0;
-  sub_1C32BC4((CGThumbnailListItem_o *)squareEntity, 0, (int32_t)method, v3);
+  sub_1C36FFC((CGThumbnailListItem_o *)squareEntity, 0, (int32_t)method, v3);
   IsNullOrEmpty = (Il2CppObject *)BasicHelper__IsNullOrEmpty(
                                     (System_Collections_ICollection_o *)this->fields.svtInfo,
                                     0);
@@ -121,7 +121,7 @@ bool BattleWarBoardInfo__TryGetBattleSquareEntity(
     while ( 1 )
     {
       if ( !(v10 + v9) )
-        sub_1C32E84(IsNullOrEmpty);
+        sub_1C372BC(IsNullOrEmpty);
       v11 = svtInfo->m_Items[v9];
       if ( !v11 )
         goto LABEL_24;
@@ -139,15 +139,15 @@ bool BattleWarBoardInfo__TryGetBattleSquareEntity(
 LABEL_13:
   if ( !DataManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-  IsNullOrEmpty = DataManager__GetMaster_object_((const MethodInfo_30DD39C *)Method_DataManager_GetMaster_WarBoardStageMaster___);
+  IsNullOrEmpty = DataManager__GetMaster_object_((const MethodInfo_30E7C04 *)Method_DataManager_GetMaster_WarBoardStageMaster___);
   if ( !IsNullOrEmpty )
 LABEL_24:
-    sub_1C32E7C(IsNullOrEmpty);
+    sub_1C372B4(IsNullOrEmpty);
   if ( !DataMasterBase_object__object__int___TryGetEntity(
           (DataMasterBase_TMaster__TEntity__PKType__o *)IsNullOrEmpty,
           &entity,
           this->fields.stageId,
-          (const MethodInfo_3396884 *)Method_DataMasterBase_WarBoardStageMaster__WarBoardStageEntity__int__TryGetEntity__) )
+          (const MethodInfo_33A10EC *)Method_DataMasterBase_WarBoardStageMaster__WarBoardStageEntity__int__TryGetEntity__) )
   {
     return 0;
   }
@@ -155,7 +155,7 @@ LABEL_24:
   {
     if ( !DataManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-    IsNullOrEmpty = DataManager__GetMaster_object_((const MethodInfo_30DD39C *)Method_DataManager_GetMaster_WarBoardSquareMaster___);
+    IsNullOrEmpty = DataManager__GetMaster_object_((const MethodInfo_30E7C04 *)Method_DataManager_GetMaster_WarBoardSquareMaster___);
     if ( !entity || !IsNullOrEmpty )
       goto LABEL_24;
     return WarBoardSquareMaster__TryGetEntity(

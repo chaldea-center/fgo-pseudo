@@ -1,14 +1,14 @@
 void StaffPhotoMaster___ctor(StaffPhotoMaster_o *this, const MethodInfo *method)
 {
-  if ( (byte_4C385EF & 1) == 0 )
+  if ( (byte_4C43BE8 & 1) == 0 )
   {
-    sub_1C32C20(&Method_DataMasterBase_StaffPhotoMaster__StaffPhotoEntity__int___ctor__);
-    byte_4C385EF = 1;
+    sub_1C37058(&Method_DataMasterBase_StaffPhotoMaster__StaffPhotoEntity__int___ctor__);
+    byte_4C43BE8 = 1;
   }
   DataMasterBase_object__object__int____ctor(
     (DataMasterBase_TMaster__TEntity__PKType__o *)this,
     212,
-    (const MethodInfo_3394514 *)Method_DataMasterBase_StaffPhotoMaster__StaffPhotoEntity__int___ctor__);
+    (const MethodInfo_339ED7C *)Method_DataMasterBase_StaffPhotoMaster__StaffPhotoEntity__int___ctor__);
 }
 
 
@@ -21,17 +21,17 @@ int32_t StaffPhotoMaster__GetEnableEntityNum(
   _BOOL8 EnableEntityList; // x0
   System_Collections_Generic_List_StaffPhotoEntity__o *staffPhotoEntityList; // [xsp+8h] [xbp-28h] BYREF
 
-  if ( (byte_4C385EE & 1) == 0 )
+  if ( (byte_4C43BE7 & 1) == 0 )
   {
-    sub_1C32C20(&Method_System_Collections_Generic_List_StaffPhotoEntity__get_Count__);
-    byte_4C385EE = 1;
+    sub_1C37058(&Method_System_Collections_Generic_List_StaffPhotoEntity__get_Count__);
+    byte_4C43BE7 = 1;
   }
   staffPhotoEntityList = 0;
   EnableEntityList = StaffPhotoMaster__TryGetEnableEntityList(this, &staffPhotoEntityList, selectedStaffPhotoId, v3);
   if ( !EnableEntityList )
     return 0;
   if ( !staffPhotoEntityList )
-    sub_1C32E7C(EnableEntityList);
+    sub_1C372B4(EnableEntityList);
   return *(_DWORD *)((char *)&off_18 + (_QWORD)staffPhotoEntityList);
 }
 
@@ -74,32 +74,32 @@ bool StaffPhotoMaster__TryGetEnableEntityList(
   int32_t *v36; // x10
   __int64 v37; // x0
 
-  if ( (byte_4C385ED & 1) == 0 )
+  if ( (byte_4C43BE6 & 1) == 0 )
   {
-    sub_1C32C20(&Method_System_Collections_ObjectModel_Collection_StaffPhotoEntity__GetEnumerator__);
-    sub_1C32C20(&CondType_TypeInfo);
-    sub_1C32C20(&System_IDisposable_TypeInfo);
-    sub_1C32C20(&System_Collections_Generic_IEnumerator_StaffPhotoEntity__TypeInfo);
-    sub_1C32C20(&System_Collections_IEnumerator_TypeInfo);
-    sub_1C32C20(&Method_System_Collections_Generic_List_StaffPhotoEntity__Add__);
-    sub_1C32C20(&Method_System_Collections_Generic_List_StaffPhotoEntity___ctor__);
-    sub_1C32C20(&System_Collections_Generic_List_StaffPhotoEntity__TypeInfo);
-    byte_4C385ED = 1;
+    sub_1C37058(&Method_System_Collections_ObjectModel_Collection_StaffPhotoEntity__GetEnumerator__);
+    sub_1C37058(&CondType_TypeInfo);
+    sub_1C37058(&System_IDisposable_TypeInfo);
+    sub_1C37058(&System_Collections_Generic_IEnumerator_StaffPhotoEntity__TypeInfo);
+    sub_1C37058(&System_Collections_IEnumerator_TypeInfo);
+    sub_1C37058(&Method_System_Collections_Generic_List_StaffPhotoEntity__Add__);
+    sub_1C37058(&Method_System_Collections_Generic_List_StaffPhotoEntity___ctor__);
+    sub_1C37058(&System_Collections_Generic_List_StaffPhotoEntity__TypeInfo);
+    byte_4C43BE6 = 1;
   }
-  v7 = (System_Collections_Generic_List_object__o *)sub_1C32E6C(System_Collections_Generic_List_StaffPhotoEntity__TypeInfo);
+  v7 = (System_Collections_Generic_List_object__o *)sub_1C372A4(System_Collections_Generic_List_StaffPhotoEntity__TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v7,
-    (const MethodInfo_3797F88 *)Method_System_Collections_Generic_List_StaffPhotoEntity___ctor__);
+    (const MethodInfo_37A27F0 *)Method_System_Collections_Generic_List_StaffPhotoEntity___ctor__);
   *staffPhotoEntityList = (System_Collections_Generic_List_StaffPhotoEntity__o *)v7;
-  sub_1C32BC4((CGThumbnailListItem_o *)staffPhotoEntityList, (int32_t)v7, v8, v9);
+  sub_1C36FFC((CGThumbnailListItem_o *)staffPhotoEntityList, (int32_t)v7, v8, v9);
   list = (System_Collections_ObjectModel_Collection_T__o *)this->fields.list;
   if ( !list )
-    sub_1C32E7C(0);
+    sub_1C372B4(0);
   Enumerator = System_Collections_ObjectModel_Collection_object___GetEnumerator(
                  list,
-                 (const MethodInfo_3330280 *)Method_System_Collections_ObjectModel_Collection_StaffPhotoEntity__GetEnumerator__);
+                 (const MethodInfo_333AAE8 *)Method_System_Collections_ObjectModel_Collection_StaffPhotoEntity__GetEnumerator__);
   if ( !Enumerator )
-    sub_1C32E7C(0);
+    sub_1C372B4(0);
   while ( 1 )
   {
     klass = Enumerator->klass;
@@ -119,7 +119,7 @@ bool StaffPhotoMaster__TryGetEnableEntityList(
     else
     {
 LABEL_9:
-      v15 = sub_1C83438(Enumerator, System_Collections_IEnumerator_TypeInfo, 0);
+      v15 = sub_1C87870(Enumerator, System_Collections_IEnumerator_TypeInfo, 0);
     }
     if ( ((*(__int64 (__fastcall **)(System_Collections_Generic_IEnumerator_T__o *, _QWORD))v15)(
             Enumerator,
@@ -143,13 +143,13 @@ LABEL_9:
     else
     {
 LABEL_16:
-      v19 = sub_1C83438(Enumerator, System_Collections_Generic_IEnumerator_StaffPhotoEntity__TypeInfo, 0);
+      v19 = sub_1C87870(Enumerator, System_Collections_Generic_IEnumerator_StaffPhotoEntity__TypeInfo, 0);
     }
     v20 = (*(__int64 (__fastcall **)(System_Collections_Generic_IEnumerator_T__o *, _QWORD))v19)(
             Enumerator,
             *(_QWORD *)(v19 + 8));
     if ( !v20 )
-      sub_1C32E7C(0);
+      sub_1C372B4(0);
     v22 = *(_DWORD *)(v20 + 44);
     v21 = *(_DWORD *)(v20 + 48);
     v23 = *(int *)(v20 + 52);
@@ -163,26 +163,26 @@ LABEL_16:
     {
       v29 = (System_Collections_Generic_List_object__o *)*staffPhotoEntityList;
       if ( !*staffPhotoEntityList )
-        sub_1C32E7C(0);
+        sub_1C372B4(0);
       items = v29->fields._items;
       v31 = Method_System_Collections_Generic_List_StaffPhotoEntity__Add__;
       ++v29->fields._version;
       if ( !items )
-        sub_1C32E7C(v29);
+        sub_1C372B4(v29);
       size = v29->fields._size;
       if ( (unsigned int)size >= LODWORD(items->max_length) )
       {
         System_Collections_Generic_List_object___AddWithResize(
           v29,
           (Il2CppObject *)v20,
-          *(const MethodInfo_37987BC **)(*(_QWORD *)(v31[4] + 192LL) + 112LL));
+          *(const MethodInfo_37A3024 **)(*(_QWORD *)(v31[4] + 192LL) + 112LL));
       }
       else
       {
         v33 = &items->obj.klass + size;
         v29->fields._size = size + 1;
         v33[4] = (Il2CppClass *)v20;
-        sub_1C32BC4((CGThumbnailListItem_o *)(v33 + 4), v20, v27, v28);
+        sub_1C36FFC((CGThumbnailListItem_o *)(v33 + 4), v20, v27, v28);
       }
     }
   }
@@ -203,7 +203,7 @@ LABEL_16:
   else
   {
 LABEL_31:
-    v37 = sub_1C83438(Enumerator, System_IDisposable_TypeInfo, 0);
+    v37 = sub_1C87870(Enumerator, System_IDisposable_TypeInfo, 0);
   }
   (*(void (__fastcall **)(System_Collections_Generic_IEnumerator_T__o *, _QWORD))v37)(Enumerator, *(_QWORD *)(v37 + 8));
   return !BasicHelper__IsNullOrEmpty((System_Collections_ICollection_o *)*staffPhotoEntityList, 0);
@@ -244,32 +244,32 @@ bool StaffPhotoMaster__TryGetOpenEntityList(
   int32_t *v31; // x10
   __int64 v32; // x0
 
-  if ( (byte_4C385EC & 1) == 0 )
+  if ( (byte_4C43BE5 & 1) == 0 )
   {
-    sub_1C32C20(&Method_System_Collections_ObjectModel_Collection_StaffPhotoEntity__GetEnumerator__);
-    sub_1C32C20(&CondType_TypeInfo);
-    sub_1C32C20(&System_IDisposable_TypeInfo);
-    sub_1C32C20(&System_Collections_Generic_IEnumerator_StaffPhotoEntity__TypeInfo);
-    sub_1C32C20(&System_Collections_IEnumerator_TypeInfo);
-    sub_1C32C20(&Method_System_Collections_Generic_List_StaffPhotoEntity__Add__);
-    sub_1C32C20(&Method_System_Collections_Generic_List_StaffPhotoEntity___ctor__);
-    sub_1C32C20(&System_Collections_Generic_List_StaffPhotoEntity__TypeInfo);
-    byte_4C385EC = 1;
+    sub_1C37058(&Method_System_Collections_ObjectModel_Collection_StaffPhotoEntity__GetEnumerator__);
+    sub_1C37058(&CondType_TypeInfo);
+    sub_1C37058(&System_IDisposable_TypeInfo);
+    sub_1C37058(&System_Collections_Generic_IEnumerator_StaffPhotoEntity__TypeInfo);
+    sub_1C37058(&System_Collections_IEnumerator_TypeInfo);
+    sub_1C37058(&Method_System_Collections_Generic_List_StaffPhotoEntity__Add__);
+    sub_1C37058(&Method_System_Collections_Generic_List_StaffPhotoEntity___ctor__);
+    sub_1C37058(&System_Collections_Generic_List_StaffPhotoEntity__TypeInfo);
+    byte_4C43BE5 = 1;
   }
-  v5 = (System_Collections_Generic_List_object__o *)sub_1C32E6C(System_Collections_Generic_List_StaffPhotoEntity__TypeInfo);
+  v5 = (System_Collections_Generic_List_object__o *)sub_1C372A4(System_Collections_Generic_List_StaffPhotoEntity__TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v5,
-    (const MethodInfo_3797F88 *)Method_System_Collections_Generic_List_StaffPhotoEntity___ctor__);
+    (const MethodInfo_37A27F0 *)Method_System_Collections_Generic_List_StaffPhotoEntity___ctor__);
   *staffPhotoEntityList = (System_Collections_Generic_List_StaffPhotoEntity__o *)v5;
-  sub_1C32BC4((CGThumbnailListItem_o *)staffPhotoEntityList, (int32_t)v5, v6, v7);
+  sub_1C36FFC((CGThumbnailListItem_o *)staffPhotoEntityList, (int32_t)v5, v6, v7);
   list = (System_Collections_ObjectModel_Collection_T__o *)this->fields.list;
   if ( !list )
-    sub_1C32E7C(0);
+    sub_1C372B4(0);
   Enumerator = System_Collections_ObjectModel_Collection_object___GetEnumerator(
                  list,
-                 (const MethodInfo_3330280 *)Method_System_Collections_ObjectModel_Collection_StaffPhotoEntity__GetEnumerator__);
+                 (const MethodInfo_333AAE8 *)Method_System_Collections_ObjectModel_Collection_StaffPhotoEntity__GetEnumerator__);
   if ( !Enumerator )
-    sub_1C32E7C(0);
+    sub_1C372B4(0);
   while ( 1 )
   {
     klass = Enumerator->klass;
@@ -289,7 +289,7 @@ bool StaffPhotoMaster__TryGetOpenEntityList(
     else
     {
 LABEL_9:
-      v13 = sub_1C83438(Enumerator, System_Collections_IEnumerator_TypeInfo, 0);
+      v13 = sub_1C87870(Enumerator, System_Collections_IEnumerator_TypeInfo, 0);
     }
     if ( ((*(__int64 (__fastcall **)(System_Collections_Generic_IEnumerator_T__o *, _QWORD))v13)(
             Enumerator,
@@ -313,13 +313,13 @@ LABEL_9:
     else
     {
 LABEL_16:
-      v17 = sub_1C83438(Enumerator, System_Collections_Generic_IEnumerator_StaffPhotoEntity__TypeInfo, 0);
+      v17 = sub_1C87870(Enumerator, System_Collections_Generic_IEnumerator_StaffPhotoEntity__TypeInfo, 0);
     }
     v18 = (*(__int64 (__fastcall **)(System_Collections_Generic_IEnumerator_T__o *, _QWORD))v17)(
             Enumerator,
             *(_QWORD *)(v17 + 8));
     if ( !v18 )
-      sub_1C32E7C(0);
+      sub_1C372B4(0);
     v20 = *(_DWORD *)(v18 + 44);
     v19 = *(_DWORD *)(v18 + 48);
     v21 = *(int *)(v18 + 52);
@@ -329,26 +329,26 @@ LABEL_16:
     {
       v24 = (System_Collections_Generic_List_object__o *)*staffPhotoEntityList;
       if ( !*staffPhotoEntityList )
-        sub_1C32E7C(0);
+        sub_1C372B4(0);
       items = v24->fields._items;
       v26 = Method_System_Collections_Generic_List_StaffPhotoEntity__Add__;
       ++v24->fields._version;
       if ( !items )
-        sub_1C32E7C(v24);
+        sub_1C372B4(v24);
       size = v24->fields._size;
       if ( (unsigned int)size >= LODWORD(items->max_length) )
       {
         System_Collections_Generic_List_object___AddWithResize(
           v24,
           (Il2CppObject *)v18,
-          *(const MethodInfo_37987BC **)(*(_QWORD *)(v26[4] + 192LL) + 112LL));
+          *(const MethodInfo_37A3024 **)(*(_QWORD *)(v26[4] + 192LL) + 112LL));
       }
       else
       {
         v28 = &items->obj.klass + size;
         v24->fields._size = size + 1;
         v28[4] = (Il2CppClass *)v18;
-        sub_1C32BC4((CGThumbnailListItem_o *)(v28 + 4), v18, v22, v23);
+        sub_1C36FFC((CGThumbnailListItem_o *)(v28 + 4), v18, v22, v23);
       }
     }
   }
@@ -369,7 +369,7 @@ LABEL_16:
   else
   {
 LABEL_31:
-    v32 = sub_1C83438(Enumerator, System_IDisposable_TypeInfo, 0);
+    v32 = sub_1C87870(Enumerator, System_IDisposable_TypeInfo, 0);
   }
   (*(void (__fastcall **)(System_Collections_Generic_IEnumerator_T__o *, _QWORD))v32)(Enumerator, *(_QWORD *)(v32 + 8));
   return !BasicHelper__IsNullOrEmpty((System_Collections_ICollection_o *)*staffPhotoEntityList, 0);

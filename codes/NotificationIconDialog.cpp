@@ -1,9 +1,9 @@
 void NotificationIconDialog___ctor(NotificationIconDialog_o *this, const MethodInfo *method)
 {
-  if ( (byte_4C319C0 & 1) == 0 )
+  if ( (byte_4C3CF10 & 1) == 0 )
   {
-    sub_1C32C20(&BaseDialog_TypeInfo);
-    byte_4C319C0 = 1;
+    sub_1C37058(&BaseDialog_TypeInfo);
+    byte_4C3CF10 = 1;
   }
   if ( !BaseDialog_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(BaseDialog_TypeInfo);
@@ -15,27 +15,27 @@ void NotificationIconDialog__Close(NotificationIconDialog_o *this, const MethodI
 {
   const MethodInfo *v2; // x2
 
-  NotificationIconDialog__Close_31314212(this, 0, v2);
+  NotificationIconDialog__Close_31331676(this, 0, v2);
 }
 
 
-void NotificationIconDialog__Close_31314212(
+void NotificationIconDialog__Close_31331676(
         NotificationIconDialog_o *this,
         System_Action_o *callback,
         const MethodInfo *method)
 {
   System_Action_o *v5; // x20
 
-  if ( (byte_4C319BD & 1) == 0 )
+  if ( (byte_4C3CF0D & 1) == 0 )
   {
-    sub_1C32C20(&System_Action_TypeInfo);
-    sub_1C32C20(&Method_NotificationIconDialog_EndClose__);
-    byte_4C319BD = 1;
+    sub_1C37058(&System_Action_TypeInfo);
+    sub_1C37058(&Method_NotificationIconDialog_EndClose__);
+    byte_4C3CF0D = 1;
   }
   this->fields.closeEndFunc = callback;
-  sub_1C32BC4(&this->fields.closeEndFunc, callback);
+  sub_1C36FFC(&this->fields.closeEndFunc, callback);
   this->fields.isButtonEnable = 0;
-  v5 = (System_Action_o *)sub_1C32E6C(System_Action_TypeInfo);
+  v5 = (System_Action_o *)sub_1C372A4(System_Action_TypeInfo);
   System_Action___ctor(v5, (Il2CppObject *)this, Method_NotificationIconDialog_EndClose__, 0);
   BaseDialog__Close((BaseDialog_o *)this, v5, 0);
 }
@@ -54,7 +54,7 @@ void NotificationIconDialog__EndClose(NotificationIconDialog_o *this, const Meth
   if ( closeEndFunc )
   {
     *p_closeEndFunc = 0;
-    sub_1C32BC4(p_closeEndFunc, 0);
+    sub_1C36FFC(p_closeEndFunc, 0);
     ((void (__fastcall *)(intptr_t, intptr_t))v4->fields.invoke_impl)(v4->fields.method_code, v4->fields.method);
   }
 }
@@ -73,11 +73,11 @@ void NotificationIconDialog__Init(NotificationIconDialog_o *this, const MethodIn
   UnityEngine_Object_o *messageLabel; // x20
   UnityEngine_Object_o *okBtnLabel; // x20
 
-  if ( (byte_4C319BB & 1) == 0 )
+  if ( (byte_4C3CF0B & 1) == 0 )
   {
-    sub_1C32C20(&UnityEngine_Object_TypeInfo);
-    sub_1C32C20(&StringLiteral_1/*""*/);
-    byte_4C319BB = 1;
+    sub_1C37058(&UnityEngine_Object_TypeInfo);
+    sub_1C37058(&StringLiteral_1/*""*/);
+    byte_4C3CF0B = 1;
   }
   titleLabel = (UnityEngine_Object_o *)this->fields.titleLabel;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -112,7 +112,7 @@ void NotificationIconDialog__Init(NotificationIconDialog_o *this, const MethodIn
   gameObject = (UILabel_o *)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
   if ( !gameObject )
 LABEL_20:
-    sub_1C32E7C(gameObject);
+    sub_1C372B4(gameObject);
   UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)gameObject, 0, 0);
   BaseDialog__Init((BaseDialog_o *)this, 0);
 }
@@ -125,22 +125,22 @@ void NotificationIconDialog__OnClickOk(NotificationIconDialog_o *this, const Met
   Il2CppObject *Instance; // x0
   struct System_Action_o *clickFunc; // x8
 
-  if ( (byte_4C319BE & 1) == 0 )
+  if ( (byte_4C3CF0E & 1) == 0 )
   {
-    sub_1C32C20(&Method_NotificationIconDialog_OnClickOk__);
-    sub_1C32C20(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
-    byte_4C319BE = 1;
+    sub_1C37058(&Method_NotificationIconDialog_OnClickOk__);
+    sub_1C37058(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+    byte_4C3CF0E = 1;
   }
   if ( this->fields.isButtonEnable )
   {
     v3 = Method_NotificationIconDialog_OnClickOk__;
     if ( (*((_BYTE *)Method_NotificationIconDialog_OnClickOk__ + 83) & 2) != 0 )
-      v3 = (_QWORD *)sub_1C32C38(Method_NotificationIconDialog_OnClickOk__);
-    v4 = (System_Reflection_MethodBase_o *)sub_1C32C04(v3, v3[4]);
+      v3 = (_QWORD *)sub_1C37070(Method_NotificationIconDialog_OnClickOk__);
+    v4 = (System_Reflection_MethodBase_o *)sub_1C3703C(v3, v3[4]);
     OverwriteAssetSoundName__PlaySystemSe(v4, this->fields.onClickOkSeKind, 0, 0);
-    Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39E2904 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+    Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39ED16C *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
     if ( !Instance )
-      sub_1C32E7C(0);
+      sub_1C372B4(0);
     CommonUI__CloseNotificationIconDialog((CommonUI_o *)Instance, 0, 0);
     clickFunc = this->fields.clickFunc;
     if ( clickFunc )
@@ -170,18 +170,18 @@ void NotificationIconDialog__Open(
   UnityEngine_Object_o *itemIconComponent; // x22
   System_Action_o *v21; // x20
 
-  if ( (byte_4C319BC & 1) == 0 )
+  if ( (byte_4C3CF0C & 1) == 0 )
   {
-    sub_1C32C20(&System_Action_TypeInfo);
-    sub_1C32C20(&LocalizationManager_TypeInfo);
-    sub_1C32C20(&Method_NotificationIconDialog_EndOpen__);
-    sub_1C32C20(&UnityEngine_Object_TypeInfo);
-    sub_1C32C20(&StringLiteral_3685/*"COMMON_CONFIRM_CLOSE"*/);
-    sub_1C32C20(&StringLiteral_1/*""*/);
-    byte_4C319BC = 1;
+    sub_1C37058(&System_Action_TypeInfo);
+    sub_1C37058(&LocalizationManager_TypeInfo);
+    sub_1C37058(&Method_NotificationIconDialog_EndOpen__);
+    sub_1C37058(&UnityEngine_Object_TypeInfo);
+    sub_1C37058(&StringLiteral_3685/*"COMMON_CONFIRM_CLOSE"*/);
+    sub_1C37058(&StringLiteral_1/*""*/);
+    byte_4C3CF0C = 1;
   }
   this->fields.clickFunc = func;
-  sub_1C32BC4(&this->fields.clickFunc, func);
+  sub_1C36FFC(&this->fields.clickFunc, func);
   titleLabel = (UnityEngine_Object_o *)this->fields.titleLabel;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
@@ -231,16 +231,16 @@ void NotificationIconDialog__Open(
     v14 = (UILabel_o *)this->fields.itemIconComponent;
     if ( v14 )
     {
-      ItemIconComponent__SetGift_40822420((ItemIconComponent_o *)v14, type, objectId, -1, 0, 0);
+      ItemIconComponent__SetGift_40921900((ItemIconComponent_o *)v14, type, objectId, -1, 0, 0);
       goto LABEL_31;
     }
 LABEL_32:
-    sub_1C32E7C(v14);
+    sub_1C372B4(v14);
   }
 LABEL_31:
   this->fields.isButtonEnable = 0;
   BaseDialog__SetMaskTouchCloseEnabled((BaseDialog_o *)this, 1, 0);
-  v21 = (System_Action_o *)sub_1C32E6C(System_Action_TypeInfo);
+  v21 = (System_Action_o *)sub_1C372A4(System_Action_TypeInfo);
   System_Action___ctor(v21, (Il2CppObject *)this, Method_NotificationIconDialog_EndOpen__, 0);
   BaseDialog__Open((BaseDialog_o *)this, v21, 0, 0, 0);
 }
@@ -248,10 +248,10 @@ LABEL_31:
 
 System_String_o *NotificationIconDialog__get_closeBtnPath(NotificationIconDialog_o *this, const MethodInfo *method)
 {
-  if ( (byte_4C319BF & 1) == 0 )
+  if ( (byte_4C3CF0F & 1) == 0 )
   {
-    sub_1C32C20(&StringLiteral_15650/*"Window/OkBtn"*/);
-    byte_4C319BF = 1;
+    sub_1C37058(&StringLiteral_15652/*"Window/OkBtn"*/);
+    byte_4C3CF0F = 1;
   }
-  return (System_String_o *)StringLiteral_15650/*"Window/OkBtn"*/;
+  return (System_String_o *)StringLiteral_15652/*"Window/OkBtn"*/;
 }

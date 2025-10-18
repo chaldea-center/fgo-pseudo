@@ -4,15 +4,15 @@ void UIScriptHorizontalImage___ctor(UIScriptHorizontalImage_o *this, const Metho
   int32_t v4; // w2
   const MethodInfo *v5; // x3
 
-  if ( (byte_4C39A7D & 1) == 0 )
+  if ( (byte_4C45077 & 1) == 0 )
   {
-    sub_1C32C20(&UIHorizontalImageM___TypeInfo);
-    sub_1C32C20(&UIScriptChara_TypeInfo);
-    byte_4C39A7D = 1;
+    sub_1C37058(&UIHorizontalImageM___TypeInfo);
+    sub_1C37058(&UIScriptChara_TypeInfo);
+    byte_4C45077 = 1;
   }
-  v3 = (struct UIHorizontalImageM_array *)sub_1C32CC8(UIHorizontalImageM___TypeInfo, 2);
+  v3 = (struct UIHorizontalImageM_array *)sub_1C37100(UIHorizontalImageM___TypeInfo, 2);
   this->fields.imageList = v3;
-  sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.imageList, (int32_t)v3, v4, v5);
+  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.imageList, (int32_t)v3, v4, v5);
   *(_QWORD *)&this->fields.OFFSET_IMAGE_Y = 0x4400000043900000LL;
   if ( !UIScriptChara_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UIScriptChara_TypeInfo);
@@ -38,13 +38,13 @@ void UIScriptHorizontalImage__ChangeCharacter(
   UIHorizontalImageRender_o *v19; // x23
   System_Action_o *v20; // x23
 
-  if ( (byte_4C39A77 & 1) == 0 )
+  if ( (byte_4C45071 & 1) == 0 )
   {
-    sub_1C32C20(&System_Action_TypeInfo);
-    sub_1C32C20(&Method_UIScriptHorizontalImage_UpdateChange__);
-    byte_4C39A77 = 1;
+    sub_1C37058(&System_Action_TypeInfo);
+    sub_1C37058(&Method_UIScriptHorizontalImage_UpdateChange__);
+    byte_4C45071 = 1;
   }
-  UIScriptChara__ChangeCharacter_44803592((UIScriptChara_o *)this, kind, speed, imageName, faceType, callback, 0);
+  UIScriptChara__ChangeCharacter_44905696((UIScriptChara_o *)this, kind, speed, imageName, faceType, callback, 0);
   imageList = this->fields.imageList;
   if ( !imageList )
     goto LABEL_9;
@@ -53,7 +53,7 @@ void UIScriptHorizontalImage__ChangeCharacter(
   if ( (unsigned int)mainIndex >= max_length
     || (backIndex = this->fields.backIndex, (unsigned int)backIndex >= max_length) )
   {
-    sub_1C32E84(v13);
+    sub_1C372BC(v13);
   }
   v18 = (UIHorizontalImageRender_o *)imageList->m_Items[mainIndex];
   v19 = (UIHorizontalImageRender_o *)imageList->m_Items[backIndex];
@@ -65,11 +65,11 @@ void UIScriptHorizontalImage__ChangeCharacter(
         !v19) )
   {
 LABEL_9:
-    sub_1C32E7C(v13);
+    sub_1C372B4(v13);
   }
   UIHorizontalImageRender__SetDepth(v19, 0.0, 0);
   UIHorizontalImageRender__SetShadow(v18, this->fields.isShadow, 0);
-  v20 = (System_Action_o *)sub_1C32E6C(System_Action_TypeInfo);
+  v20 = (System_Action_o *)sub_1C372A4(System_Action_TypeInfo);
   System_Action___ctor(v20, (Il2CppObject *)this, Method_UIScriptHorizontalImage_UpdateChange__, 0);
   UIHorizontalImageM__SetCharacter((UIHorizontalImageM_o *)v18, imageName, faceType, v20, 0);
 }
@@ -77,15 +77,15 @@ LABEL_9:
 
 void UIScriptHorizontalImage__ContinueChangeFade(UIScriptHorizontalImage_o *this, const MethodInfo *method)
 {
-  if ( (byte_4C39A79 & 1) == 0 )
+  if ( (byte_4C45073 & 1) == 0 )
   {
-    sub_1C32C20(&StringLiteral_15182/*"UpdateChange"*/);
-    byte_4C39A79 = 1;
+    sub_1C37058(&StringLiteral_15184/*"UpdateChange"*/);
+    byte_4C45073 = 1;
   }
   UIScriptHorizontalImage__SetOverlap(this, 1.0, method);
   UnityEngine_MonoBehaviour__Invoke(
     (UnityEngine_MonoBehaviour_o *)this,
-    (System_String_o *)StringLiteral_15182/*"UpdateChange"*/,
+    (System_String_o *)StringLiteral_15184/*"UpdateChange"*/,
     this->fields.changeStep,
     0);
 }
@@ -114,7 +114,7 @@ void UIScriptHorizontalImage__EndChange(UIScriptHorizontalImage_o *this, const M
   if ( (unsigned int)mainIndex >= max_length
     || (backIndex = this->fields.backIndex, (unsigned int)backIndex >= max_length) )
   {
-    sub_1C32E84(this);
+    sub_1C372BC(this);
   }
   this = (UIScriptHorizontalImage_o *)imageList->m_Items[mainIndex];
   if ( !this
@@ -123,7 +123,7 @@ void UIScriptHorizontalImage__EndChange(UIScriptHorizontalImage_o *this, const M
         !v7) )
   {
 LABEL_9:
-    sub_1C32E7C(this);
+    sub_1C372B4(this);
   }
   UIHorizontalImageRender__SetAlpha(v7, 0.0, 0);
   UIHorizontalImageM__ReleaseCharacter((UIHorizontalImageM_o *)v7, 0);
@@ -134,7 +134,7 @@ LABEL_9:
   if ( changeCallback )
   {
     p_changeCallback->klass = 0;
-    sub_1C32BC4(p_changeCallback, 0, v8, v9);
+    sub_1C36FFC(p_changeCallback, 0, v8, v9);
     ((void (__fastcall *)(intptr_t, intptr_t))v11->fields.invoke_impl)(v11->fields.method_code, v11->fields.method);
   }
 }
@@ -172,7 +172,7 @@ void UIScriptHorizontalImage__EndSet(UIScriptHorizontalImage_o *this, const Meth
   mainIndex = this->fields.mainIndex;
   v4 = this;
   if ( (unsigned int)mainIndex >= LODWORD(imageList->max_length) )
-    sub_1C32E84(this);
+    sub_1C372BC(this);
   v5 = &imageList->obj.klass + mainIndex;
   v6 = (UIHorizontalImageRender_o *)v5[4];
   if ( !v6 )
@@ -242,7 +242,7 @@ void UIScriptHorizontalImage__EndSet(UIScriptHorizontalImage_o *this, const Meth
         (this = (UIScriptHorizontalImage_o *)UnityEngine_GameObject__get_transform((UnityEngine_GameObject_o *)this, 0)) == 0) )
   {
 LABEL_23:
-    sub_1C32E7C(this);
+    sub_1C372B4(this);
   }
   v24.fields.x = CenterOffset.fields.x;
   v24.fields.y = CenterOffset.fields.y;
@@ -254,7 +254,7 @@ LABEL_23:
   if ( setCallback )
   {
     p_setCallback->klass = 0;
-    sub_1C32BC4(p_setCallback, 0, v12, v13);
+    sub_1C36FFC(p_setCallback, 0, v12, v13);
     ((void (__fastcall *)(intptr_t, intptr_t))v15->fields.invoke_impl)(v15->fields.method_code, v15->fields.method);
   }
 }
@@ -270,11 +270,11 @@ UnityEngine_Transform_o *UIScriptHorizontalImage__GetBody(UIScriptHorizontalImag
     goto LABEL_5;
   mainIndex = this->fields.mainIndex;
   if ( (unsigned int)mainIndex >= LODWORD(imageList->max_length) )
-    sub_1C32E84(this);
+    sub_1C372BC(this);
   this = (UIScriptHorizontalImage_o *)imageList->m_Items[mainIndex];
   if ( !this )
 LABEL_5:
-    sub_1C32E7C(this);
+    sub_1C372B4(this);
   return UIHorizontalImageM__GetBody((UIHorizontalImageM_o *)this, 0);
 }
 
@@ -291,11 +291,11 @@ UnityEngine_Texture_o *UIScriptHorizontalImage__GetBodySubTexture(
     goto LABEL_5;
   mainIndex = this->fields.mainIndex;
   if ( (unsigned int)mainIndex >= LODWORD(imageList->max_length) )
-    sub_1C32E84(this);
+    sub_1C372BC(this);
   this = (UIScriptHorizontalImage_o *)imageList->m_Items[mainIndex];
   if ( !this )
 LABEL_5:
-    sub_1C32E7C(this);
+    sub_1C372B4(this);
   return UIHorizontalImageM__GetBodySubTexture((UIHorizontalImageM_o *)this, 0);
 }
 
@@ -324,11 +324,11 @@ UnityEngine_Vector3_o UIScriptHorizontalImage__GetOffsetEdgeBlur(
   mainIndex = this->fields.mainIndex;
   v4 = this;
   if ( (unsigned int)mainIndex >= LODWORD(imageList->max_length) )
-    sub_1C32E84(this);
+    sub_1C372BC(this);
   this = (UIScriptHorizontalImage_o *)imageList->m_Items[mainIndex];
   if ( !this || (this = (UIScriptHorizontalImage_o *)UIHorizontalImageM__GetBody((UIHorizontalImageM_o *)this, 0)) == 0 )
 LABEL_6:
-    sub_1C32E7C(this);
+    sub_1C372B4(this);
   v5 = this;
   position = (unsigned int)UnityEngine_Transform__get_position((UnityEngine_Transform_o *)this, 0);
   OFFSET_IMAGE_X = v4->fields.OFFSET_IMAGE_X;
@@ -375,10 +375,10 @@ UnityEngine_Vector2_o UIScriptHorizontalImage__GetSizeEdgeBlur(
   float v5; // s1
   UnityEngine_Vector2_o result; // 0:s0.4,4:s1.4
 
-  if ( (byte_4C39A7C & 1) == 0 )
+  if ( (byte_4C45076 & 1) == 0 )
   {
-    sub_1C32C20(&UIHorizontalImageRender_TypeInfo);
-    byte_4C39A7C = 1;
+    sub_1C37058(&UIHorizontalImageRender_TypeInfo);
+    byte_4C45076 = 1;
   }
   v2 = UIHorizontalImageRender_TypeInfo;
   if ( !UIHorizontalImageRender_TypeInfo->_2.cctor_finished )
@@ -406,11 +406,11 @@ bool UIScriptHorizontalImage__IsBusyMoveAlpha(UIScriptHorizontalImage_o *this, c
     goto LABEL_5;
   mainIndex = this->fields.mainIndex;
   if ( (unsigned int)mainIndex >= LODWORD(imageList->max_length) )
-    sub_1C32E84(this);
+    sub_1C372BC(this);
   v4 = imageList->m_Items[mainIndex];
   if ( !v4 )
 LABEL_5:
-    sub_1C32E7C(this);
+    sub_1C372B4(this);
   return v4->fields.isBusyMoveAlpha;
 }
 
@@ -432,11 +432,11 @@ void UIScriptHorizontalImage__MoveAlpha(
   mainIndex = this->fields.mainIndex;
   v6 = (UIScriptChara_o *)this;
   if ( (unsigned int)mainIndex >= LODWORD(imageList->max_length) )
-    sub_1C32E84(this);
+    sub_1C372BC(this);
   this = (UIScriptHorizontalImage_o *)imageList->m_Items[mainIndex];
   if ( !this )
 LABEL_5:
-    sub_1C32E7C(this);
+    sub_1C372B4(this);
   UIHorizontalImageRender__MoveAlpha((UIHorizontalImageRender_o *)this, duration, a, 0, 0, 0);
   UIScriptChara__RecoverShadowEffect(v6, 0, 0);
 }
@@ -459,11 +459,11 @@ void UIScriptHorizontalImage__MoveAlphaSpeed(
   mainIndex = this->fields.mainIndex;
   v6 = (UIScriptChara_o *)this;
   if ( (unsigned int)mainIndex >= LODWORD(imageList->max_length) )
-    sub_1C32E84(this);
+    sub_1C372BC(this);
   this = (UIScriptHorizontalImage_o *)imageList->m_Items[mainIndex];
   if ( !this )
 LABEL_5:
-    sub_1C32E7C(this);
+    sub_1C372B4(this);
   UIHorizontalImageRender__MoveAlphaSpeed((UIHorizontalImageRender_o *)this, speed, a, 0, 0, 0);
   UIScriptChara__RecoverShadowEffect(v6, 0, 0);
 }
@@ -482,11 +482,11 @@ void UIScriptHorizontalImage__SetAlpha(UIScriptHorizontalImage_o *this, float a,
   mainIndex = this->fields.mainIndex;
   v5 = (UIScriptChara_o *)this;
   if ( (unsigned int)mainIndex >= LODWORD(imageList->max_length) )
-    sub_1C32E84(this);
+    sub_1C372BC(this);
   this = (UIScriptHorizontalImage_o *)imageList->m_Items[mainIndex];
   if ( !this )
 LABEL_5:
-    sub_1C32E7C(this);
+    sub_1C372B4(this);
   UIHorizontalImageRender__SetAlpha((UIHorizontalImageRender_o *)this, a, 0);
   UIScriptChara__RecoverShadowEffect(v5, 0, 0);
 }
@@ -506,13 +506,13 @@ void UIScriptHorizontalImage__SetCharacter(
   UIHorizontalImageM_o *v13; // x22
   System_Action_o *v14; // x23
 
-  if ( (byte_4C39A7A & 1) == 0 )
+  if ( (byte_4C45074 & 1) == 0 )
   {
-    sub_1C32C20(&System_Action_TypeInfo);
-    byte_4C39A7A = 1;
+    sub_1C37058(&System_Action_TypeInfo);
+    byte_4C45074 = 1;
   }
   this->fields.setCallback = callback;
-  sub_1C32BC4(
+  sub_1C36FFC(
     (CGThumbnailListItem_o *)&this->fields.setCallback,
     (int32_t)callback,
     faceType,
@@ -522,18 +522,18 @@ void UIScriptHorizontalImage__SetCharacter(
     goto LABEL_7;
   mainIndex = this->fields.mainIndex;
   if ( (unsigned int)mainIndex >= LODWORD(imageList->max_length) )
-    sub_1C32E84(v9);
+    sub_1C372BC(v9);
   v12 = &imageList->obj.klass + mainIndex;
   v13 = (UIHorizontalImageM_o *)v12[4];
   if ( !v13 )
 LABEL_7:
-    sub_1C32E7C(v9);
+    sub_1C372B4(v9);
   UIHorizontalImageRender__SetFilter(
     (UIHorizontalImageRender_o *)v12[4],
     this->fields.filterName,
     this->fields.filterColor,
     0);
-  v14 = (System_Action_o *)sub_1C32E6C(System_Action_TypeInfo);
+  v14 = (System_Action_o *)sub_1C372A4(System_Action_TypeInfo);
   System_Action___ctor(v14, (Il2CppObject *)this, (intptr_t)this->klass->vtable._12_EndSet.method, 0);
   UIHorizontalImageM__SetCharacter(v13, imageName, faceType, v14, 0);
 }
@@ -554,7 +554,7 @@ void UIScriptHorizontalImage__SetDepth(UIScriptHorizontalImage_o *this, int32_t 
   mainIndex = this->fields.mainIndex;
   v5 = this;
   if ( (unsigned int)mainIndex >= LODWORD(imageList->max_length) )
-    sub_1C32E84(this);
+    sub_1C372BC(this);
   this = (UIScriptHorizontalImage_o *)this->fields.baseDepth;
   if ( !this
     || (v6 = (UIHorizontalImageRender_o *)imageList->m_Items[mainIndex],
@@ -565,7 +565,7 @@ void UIScriptHorizontalImage__SetDepth(UIScriptHorizontalImage_o *this, int32_t 
         !v6) )
   {
 LABEL_7:
-    sub_1C32E7C(this);
+    sub_1C372B4(this);
   }
   UIHorizontalImageRender__SetDepth(v6, 0.1, 0);
 }
@@ -594,7 +594,7 @@ void UIScriptHorizontalImage__SetFilter(
   b = filterColor.fields.b;
   g = filterColor.fields.g;
   r = filterColor.fields.r;
-  sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.filterName, (int32_t)filterName, (int32_t)method, v4);
+  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.filterName, (int32_t)filterName, (int32_t)method, v4);
   v11 = p_filterName[26];
   *((float *)p_filterName + 2) = r;
   *((float *)p_filterName + 3) = g;
@@ -604,11 +604,11 @@ void UIScriptHorizontalImage__SetFilter(
     goto LABEL_5;
   v12 = *((int *)p_filterName + 16);
   if ( (unsigned int)v12 >= LODWORD(v11[1].klass) )
-    sub_1C32E84(v10);
+    sub_1C372BC(v10);
   v10 = (UIHorizontalImageRender_o *)*((_QWORD *)&v11[1].monitor + v12);
   if ( !v10 )
 LABEL_5:
-    sub_1C32E7C(v10);
+    sub_1C372B4(v10);
   v13.fields.b = b;
   v13.fields.a = a;
   v13.fields.r = r;
@@ -636,7 +636,7 @@ void UIScriptHorizontalImage__SetMaskInteraction(
     while ( 1 )
     {
       if ( v6 >= max_length )
-        sub_1C32E84(this);
+        sub_1C372BC(this);
       this = (UIScriptHorizontalImage_o *)imageList->m_Items[v6];
       if ( !this )
         break;
@@ -646,7 +646,7 @@ void UIScriptHorizontalImage__SetMaskInteraction(
         return;
     }
 LABEL_9:
-    sub_1C32E7C(this);
+    sub_1C372B4(this);
   }
 }
 
@@ -667,7 +667,7 @@ void UIScriptHorizontalImage__SetOverlap(UIScriptHorizontalImage_o *this, float 
   if ( (unsigned int)mainIndex >= max_length
     || (backIndex = this->fields.backIndex, (unsigned int)backIndex >= max_length) )
   {
-    sub_1C32E84(this);
+    sub_1C372BC(this);
   }
   this = (UIScriptHorizontalImage_o *)imageList->m_Items[mainIndex];
   if ( !this
@@ -676,7 +676,7 @@ void UIScriptHorizontalImage__SetOverlap(UIScriptHorizontalImage_o *this, float 
         !v7) )
   {
 LABEL_7:
-    sub_1C32E7C(this);
+    sub_1C372B4(this);
   }
   UIHorizontalImageRender__SetAlpha(v7, 1.0 - a, 0);
 }
@@ -718,7 +718,7 @@ LABEL_10:
       klass = v5[1].klass;
       if ( !klass )
 LABEL_11:
-        sub_1C32E7C(this);
+        sub_1C372B4(this);
       if ( (unsigned int)backIndex < LODWORD(klass->_1.namespaze) )
       {
         this = (UIScriptHorizontalImage_o *)*((_QWORD *)&klass->_1.byval_arg.data + backIndex);
@@ -730,7 +730,7 @@ LABEL_11:
         goto LABEL_11;
       }
     }
-    sub_1C32E84(this);
+    sub_1C372BC(this);
   }
 }
 
@@ -751,7 +751,7 @@ void UIScriptHorizontalImage__SetSortingOrder(UIScriptHorizontalImage_o *this, i
     while ( 1 )
     {
       if ( v6 >= max_length )
-        sub_1C32E84(this);
+        sub_1C372BC(this);
       this = (UIScriptHorizontalImage_o *)imageList->m_Items[v6];
       if ( !this )
         break;
@@ -761,7 +761,7 @@ void UIScriptHorizontalImage__SetSortingOrder(UIScriptHorizontalImage_o *this, i
         return;
     }
 LABEL_9:
-    sub_1C32E7C(this);
+    sub_1C372B4(this);
   }
 }
 
@@ -800,23 +800,23 @@ void UIScriptHorizontalImage__SetSpecialEffect(
   z = pos.fields.z;
   y = pos.fields.y;
   x = pos.fields.x;
-  if ( (byte_4C39A7B & 1) == 0 )
+  if ( (byte_4C45075 & 1) == 0 )
   {
     colora = color.fields.a;
-    sub_1C32C20(&UnityEngine_Object_TypeInfo);
-    sub_1C32C20(&StringLiteral_24830/*"wipe"*/);
-    sub_1C32C20(&StringLiteral_16819/*"appearanceReverse"*/);
-    sub_1C32C20(&StringLiteral_18445/*"darkEnemyErasure"*/);
-    sub_1C32C20(&StringLiteral_24836/*"wipeTimeRe"*/);
-    sub_1C32C20(&StringLiteral_18446/*"darkWipe"*/);
-    sub_1C32C20(&StringLiteral_19480/*"flashErasure"*/);
-    sub_1C32C20(&StringLiteral_16818/*"appearance"*/);
-    sub_1C32C20(&StringLiteral_19064/*"erasure"*/);
-    sub_1C32C20(&StringLiteral_19065/*"erasureReverse"*/);
-    sub_1C32C20(&StringLiteral_19025/*"enemyErasure"*/);
-    sub_1C32C20(&StringLiteral_24835/*"wipeTime"*/);
+    sub_1C37058(&UnityEngine_Object_TypeInfo);
+    sub_1C37058(&StringLiteral_24835/*"wipe"*/);
+    sub_1C37058(&StringLiteral_16821/*"appearanceReverse"*/);
+    sub_1C37058(&StringLiteral_18448/*"darkEnemyErasure"*/);
+    sub_1C37058(&StringLiteral_24841/*"wipeTimeRe"*/);
+    sub_1C37058(&StringLiteral_18449/*"darkWipe"*/);
+    sub_1C37058(&StringLiteral_19483/*"flashErasure"*/);
+    sub_1C37058(&StringLiteral_16820/*"appearance"*/);
+    sub_1C37058(&StringLiteral_19067/*"erasure"*/);
+    sub_1C37058(&StringLiteral_19068/*"erasureReverse"*/);
+    sub_1C37058(&StringLiteral_19028/*"enemyErasure"*/);
+    sub_1C37058(&StringLiteral_24840/*"wipeTime"*/);
     color.fields.a = colora;
-    byte_4C39A7B = 1;
+    byte_4C45075 = 1;
   }
   v29.fields.x = x;
   v29.fields.y = y;
@@ -841,9 +841,9 @@ void UIScriptHorizontalImage__SetSpecialEffect(
   {
     imageList = this->fields.imageList;
     if ( !imageList )
-      sub_1C32E7C(v24);
+      sub_1C372B4(v24);
     if ( this->fields.mainIndex >= LODWORD(imageList->max_length) )
-      sub_1C32E84(v24);
+      sub_1C372BC(v24);
     v26 = PrivateImplementationDetails___ComputeStringHash(n, 0);
     if ( v26 > 0x8D759330 )
     {
@@ -852,13 +852,13 @@ void UIScriptHorizontalImage__SetSpecialEffect(
         switch ( v26 )
         {
           case 0xE7555186:
-            v27 = &StringLiteral_24830/*"wipe"*/;
+            v27 = &StringLiteral_24835/*"wipe"*/;
             break;
           case 0xEC9DA126:
-            v27 = &StringLiteral_18446/*"darkWipe"*/;
+            v27 = &StringLiteral_18449/*"darkWipe"*/;
             break;
           case 0xEE11C37F:
-            v27 = &StringLiteral_16818/*"appearance"*/;
+            v27 = &StringLiteral_16820/*"appearance"*/;
             break;
           default:
             return;
@@ -869,13 +869,13 @@ void UIScriptHorizontalImage__SetSpecialEffect(
         switch ( v26 )
         {
           case 0x8DA714B6:
-            v27 = &StringLiteral_24836/*"wipeTimeRe"*/;
+            v27 = &StringLiteral_24841/*"wipeTimeRe"*/;
             break;
           case 0x9C7CDA94:
-            v27 = &StringLiteral_19480/*"flashErasure"*/;
+            v27 = &StringLiteral_19483/*"flashErasure"*/;
             break;
           case 0xD4B34506:
-            v27 = &StringLiteral_19065/*"erasureReverse"*/;
+            v27 = &StringLiteral_19068/*"erasureReverse"*/;
             break;
           default:
             return;
@@ -887,13 +887,13 @@ void UIScriptHorizontalImage__SetSpecialEffect(
       switch ( v26 )
       {
         case 0x8D759330:
-          v27 = &StringLiteral_19064/*"erasure"*/;
+          v27 = &StringLiteral_19067/*"erasure"*/;
           break;
         case 0x4DE5D9DEu:
-          v27 = &StringLiteral_19025/*"enemyErasure"*/;
+          v27 = &StringLiteral_19028/*"enemyErasure"*/;
           break;
         case 0x50AF70CBu:
-          v27 = &StringLiteral_16819/*"appearanceReverse"*/;
+          v27 = &StringLiteral_16821/*"appearanceReverse"*/;
           break;
         default:
           return;
@@ -901,13 +901,13 @@ void UIScriptHorizontalImage__SetSpecialEffect(
     }
     else if ( v26 == 242689791 )
     {
-      v27 = &StringLiteral_24835/*"wipeTime"*/;
+      v27 = &StringLiteral_24840/*"wipeTime"*/;
     }
     else
     {
       if ( v26 != 1242641086 )
         return;
-      v27 = &StringLiteral_18445/*"darkEnemyErasure"*/;
+      v27 = &StringLiteral_18448/*"darkEnemyErasure"*/;
     }
     if ( System_String__op_Equality(n, (System_String_o *)*v27, 0) )
       UIScriptChara__StopShadowEffect((UIScriptChara_o *)this, isSkip, 0);
@@ -939,12 +939,12 @@ void UIScriptHorizontalImage__UpdateChange(UIScriptHorizontalImage_o *this, cons
   float UNIT_SPEED; // s0
 
   v2 = this;
-  if ( (byte_4C39A78 & 1) == 0 )
+  if ( (byte_4C45072 & 1) == 0 )
   {
-    sub_1C32C20(&UIScriptChara_TypeInfo);
-    sub_1C32C20(&StringLiteral_5983/*"EndChange"*/);
-    this = (UIScriptHorizontalImage_o *)sub_1C32C20(&StringLiteral_4699/*"ContinueChangeFade"*/);
-    byte_4C39A78 = 1;
+    sub_1C37058(&UIScriptChara_TypeInfo);
+    sub_1C37058(&StringLiteral_5984/*"EndChange"*/);
+    this = (UIScriptHorizontalImage_o *)sub_1C37058(&StringLiteral_4699/*"ContinueChangeFade"*/);
+    byte_4C45072 = 1;
   }
   imageList = v2->fields.imageList;
   if ( !imageList )
@@ -954,7 +954,7 @@ void UIScriptHorizontalImage__UpdateChange(UIScriptHorizontalImage_o *this, cons
   if ( (unsigned int)mainIndex >= max_length
     || (backIndex = v2->fields.backIndex, (unsigned int)backIndex >= max_length) )
   {
-    sub_1C32E84(this);
+    sub_1C372BC(this);
   }
   changeKind = v2->fields.changeKind;
   if ( changeKind != 3 )
@@ -981,13 +981,13 @@ LABEL_16:
           changeSpeed,
           1.0,
           (UnityEngine_GameObject_o *)this,
-          (System_String_o *)StringLiteral_5983/*"EndChange"*/,
+          (System_String_o *)StringLiteral_5984/*"EndChange"*/,
           0);
         return;
       }
     }
 LABEL_25:
-    sub_1C32E7C(this);
+    sub_1C372B4(this);
   }
   v8 = v2->fields.changeSpeed;
   if ( v8 <= 0.0 )

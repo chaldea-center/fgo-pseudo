@@ -32,22 +32,22 @@ void RecommendSupportMessageSelectListViewItemDraw__Init(
   UICommonButton_o *button; // x0
   UISprite_o *frameSprite; // x19
 
-  if ( (byte_4C3389D & 1) == 0 )
+  if ( (byte_4C3EE87 & 1) == 0 )
   {
-    sub_1C32C20(&AtlasManager_TypeInfo);
-    sub_1C32C20(&StringLiteral_20407/*"img_frameselect"*/);
-    sub_1C32C20(&StringLiteral_1/*""*/);
-    byte_4C3389D = 1;
+    sub_1C37058(&AtlasManager_TypeInfo);
+    sub_1C37058(&StringLiteral_20410/*"img_frameselect"*/);
+    sub_1C37058(&StringLiteral_1/*""*/);
+    byte_4C3EE87 = 1;
   }
   RecommendSupportMessageSelectListViewItemDraw__SetButtonState(this, 0, 0, v2);
   button = this->fields.button;
   if ( !button || (UICommonButton__SetEnable(button, 1, 0), (button = (UICommonButton_o *)this->fields.wordLabel) == 0) )
-    sub_1C32E7C(button);
+    sub_1C372B4(button);
   UILabel__set_text((UILabel_o *)button, (System_String_o *)StringLiteral_1/*""*/, 0);
   frameSprite = this->fields.frameSprite;
   if ( !AtlasManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo);
-  AtlasManager__SetPartyOrganizationImage(frameSprite, (System_String_o *)StringLiteral_20407/*"img_frameselect"*/, 0);
+  AtlasManager__SetPartyOrganizationImage(frameSprite, (System_String_o *)StringLiteral_20410/*"img_frameselect"*/, 0);
 }
 
 
@@ -88,7 +88,7 @@ LABEL_8:
       goto LABEL_10;
     }
 LABEL_11:
-    sub_1C32E7C(button);
+    sub_1C372B4(button);
   }
   UICommonButton__SetEnable(button, 0, 0);
   RecommendSupportMessageSelectListViewItemDraw__SetHighlight(this, 0, v9);
@@ -112,7 +112,7 @@ void RecommendSupportMessageSelectListViewItemDraw__SetHighlight(
   if ( !frameSprite
     || (frameSprite = (UnityEngine_Component_o *)UnityEngine_Component__get_gameObject(frameSprite, 0)) == 0 )
   {
-    sub_1C32E7C(frameSprite);
+    sub_1C372B4(frameSprite);
   }
   UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)frameSprite, isActive, 0);
 }
@@ -131,10 +131,10 @@ void RecommendSupportMessageSelectListViewItemDraw__SetInput(
   if ( item )
   {
     IsUse_k__BackingField = item->fields._IsUse_k__BackingField;
-    if ( !byte_4C3395B )
+    if ( !byte_4C3EF45 )
     {
-      sub_1C32C20(&RecommendSupportMessageSelectDialog_TypeInfo);
-      byte_4C3395B = 1;
+      sub_1C37058(&RecommendSupportMessageSelectDialog_TypeInfo);
+      byte_4C3EF45 = 1;
     }
     RecommendSupportMessageSelectListViewItemDraw__SetButtonState(
       this,
@@ -143,7 +143,7 @@ void RecommendSupportMessageSelectListViewItemDraw__SetInput(
       method);
     RecommendAdviceMessageEntity_k__BackingField = item->fields._RecommendAdviceMessageEntity_k__BackingField;
     if ( !RecommendAdviceMessageEntity_k__BackingField || (wordLabel = this->fields.wordLabel) == 0 )
-      sub_1C32E7C(wordLabel);
+      sub_1C372B4(wordLabel);
     UILabel__set_text(wordLabel, RecommendAdviceMessageEntity_k__BackingField->fields.message, 0);
   }
 }
@@ -162,10 +162,10 @@ void RecommendSupportMessageSelectListViewItemDraw__SetItem(
   if ( item )
   {
     IsUse_k__BackingField = item->fields._IsUse_k__BackingField;
-    if ( !byte_4C3395B )
+    if ( !byte_4C3EF45 )
     {
-      sub_1C32C20(&RecommendSupportMessageSelectDialog_TypeInfo);
-      byte_4C3395B = 1;
+      sub_1C37058(&RecommendSupportMessageSelectDialog_TypeInfo);
+      byte_4C3EF45 = 1;
     }
     RecommendSupportMessageSelectListViewItemDraw__SetButtonState(
       this,
@@ -174,7 +174,7 @@ void RecommendSupportMessageSelectListViewItemDraw__SetItem(
       v3);
     RecommendAdviceMessageEntity_k__BackingField = item->fields._RecommendAdviceMessageEntity_k__BackingField;
     if ( !RecommendAdviceMessageEntity_k__BackingField || (wordLabel = this->fields.wordLabel) == 0 )
-      sub_1C32E7C(wordLabel);
+      sub_1C372B4(wordLabel);
     UILabel__set_text(wordLabel, RecommendAdviceMessageEntity_k__BackingField->fields.message, 0);
   }
 }
@@ -189,6 +189,6 @@ void RecommendSupportMessageSelectListViewItemDraw__SetMask(
 
   mask = this->fields.mask;
   if ( !mask )
-    sub_1C32E7C(0);
+    sub_1C372B4(0);
   UnityEngine_GameObject__SetActive(mask, isActive, 0);
 }

@@ -2,10 +2,10 @@ void MapCamera___cctor(const MethodInfo *method)
 {
   struct MapCamera_StaticFields *static_fields; // x8
 
-  if ( (byte_4C3449F & 1) == 0 )
+  if ( (byte_4C3FA89 & 1) == 0 )
   {
-    sub_1C32C20(&MapCamera_TypeInfo);
-    byte_4C3449F = 1;
+    sub_1C37058(&MapCamera_TypeInfo);
+    byte_4C3FA89 = 1;
   }
   static_fields = MapCamera_TypeInfo->static_fields;
   *(_QWORD *)&static_fields->MAP_BASE_W = 0x4D800000780LL;
@@ -29,7 +29,7 @@ void MapCamera__CalcWorldRect(MapCamera_o *this, const MethodInfo *method)
 
   mCamera = (UnityEngine_Component_o *)this->fields.mCamera;
   if ( !mCamera )
-    sub_1C32E7C(0);
+    sub_1C372B4(0);
   gameObject = UnityEngine_Component__get_gameObject(mCamera, 0);
   LocalPosition = GameObjectExtensions__GetLocalPosition(gameObject, v5);
   this->fields.mCameraRect = MapCamera__GetWorldRect(this, LocalPosition, v6);
@@ -56,7 +56,7 @@ UnityEngine_Rect_o MapCamera__GetWorldRect(MapCamera_o *this, UnityEngine_Vector
 
   mZoom = this->fields.mZoom;
   if ( !mZoom )
-    sub_1C32E7C(0);
+    sub_1C372B4(0);
   y = cam_pos.fields.y;
   x = cam_pos.fields.x;
   ZoomSize = MapZoom__GetZoomSize(mZoom, 0);
@@ -72,7 +72,7 @@ UnityEngine_Rect_o MapCamera__GetWorldRect(MapCamera_o *this, UnityEngine_Vector
 }
 
 
-UnityEngine_Rect_o MapCamera__GetWorldRect_36077016(
+UnityEngine_Rect_o MapCamera__GetWorldRect_36172648(
         MapCamera_o *this,
         UnityEngine_Vector3_o cam_pos,
         float scale,
@@ -109,32 +109,32 @@ void MapCamera__Init(MapCamera_o *this, const MethodInfo *method)
   int32_t v11; // w2
   const MethodInfo *v12; // x3
 
-  if ( (byte_4C34496 & 1) == 0 )
+  if ( (byte_4C3FA80 & 1) == 0 )
   {
-    sub_1C32C20(&MapScroll_TypeInfo);
-    sub_1C32C20(&MapTouchDetector_TypeInfo);
-    sub_1C32C20(&MapZoom_TypeInfo);
-    byte_4C34496 = 1;
+    sub_1C37058(&MapScroll_TypeInfo);
+    sub_1C37058(&MapTouchDetector_TypeInfo);
+    sub_1C37058(&MapZoom_TypeInfo);
+    byte_4C3FA80 = 1;
   }
   if ( !this->fields.mIsInitDone )
   {
     this->fields._windowSize_k__BackingField = FSWindowUtil__GetSize(0);
-    v3 = (MapTouchDetector_o *)sub_1C32E6C(MapTouchDetector_TypeInfo);
+    v3 = (MapTouchDetector_o *)sub_1C372A4(MapTouchDetector_TypeInfo);
     MapTouchDetector___ctor(v3, 0);
     this->fields.touchDetector = v3;
-    sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.touchDetector, (int32_t)v3, v4, v5);
-    v6 = (MapScroll_o *)sub_1C32E6C(MapScroll_TypeInfo);
+    sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.touchDetector, (int32_t)v3, v4, v5);
+    v6 = (MapScroll_o *)sub_1C372A4(MapScroll_TypeInfo);
     MapScroll___ctor(v6, 0);
     this->fields.mScrl = v6;
-    sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.mScrl, (int32_t)v6, v7, v8);
+    sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.mScrl, (int32_t)v6, v7, v8);
     mScrl = this->fields.mScrl;
     if ( !mScrl )
       goto LABEL_8;
     MapScroll__Init(mScrl, this, this->fields.touchDetector, 0);
-    v10 = (MapZoom_o *)sub_1C32E6C(MapZoom_TypeInfo);
+    v10 = (MapZoom_o *)sub_1C372A4(MapZoom_TypeInfo);
     MapZoom___ctor(v10, 0);
     this->fields.mZoom = v10;
-    sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.mZoom, (int32_t)v10, v11, v12);
+    sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.mZoom, (int32_t)v10, v11, v12);
     mScrl = (MapScroll_o *)this->fields.mZoom;
     if ( !mScrl
       || (MapZoom__Init((MapZoom_o *)mScrl, this, this->fields.touchDetector, 0),
@@ -143,7 +143,7 @@ void MapCamera__Init(MapCamera_o *this, const MethodInfo *method)
           !mScrl) )
     {
 LABEL_8:
-      sub_1C32E7C(mScrl);
+      sub_1C372B4(mScrl);
     }
     UnityEngine_Behaviour__set_enabled((UnityEngine_Behaviour_o *)mScrl, 0, 0);
   }
@@ -163,7 +163,7 @@ bool MapCamera__IsAutoWork(MapCamera_o *this, const MethodInfo *method)
     if ( this )
       return !MapScroll__IsStop((MapScroll_o *)this, 0);
 LABEL_7:
-    sub_1C32E7C(this);
+    sub_1C372B4(this);
   }
   return 1;
 }
@@ -175,7 +175,7 @@ bool MapCamera__IsEnable(MapCamera_o *this, const MethodInfo *method)
 
   mCamera = (UnityEngine_Behaviour_o *)this->fields.mCamera;
   if ( !mCamera )
-    sub_1C32E7C(0);
+    sub_1C372B4(0);
   return UnityEngine_Behaviour__get_enabled(mCamera, 0);
 }
 
@@ -210,7 +210,7 @@ bool MapCamera__IsMatchPosAndZoomSize(
         return (float)(ScrlPosVec3.fields.y - y) == 0.0;
       }
 LABEL_8:
-      sub_1C32E7C(mZoom);
+      sub_1C372B4(mZoom);
     }
   }
   return 0;
@@ -223,10 +223,10 @@ void MapCamera__Process(MapCamera_o *this, bool is_tch_enable, const MethodInfo 
   float ZoomSize; // s8
   TerminalPramsManager_c *v7; // x0
 
-  if ( (byte_4C34497 & 1) == 0 )
+  if ( (byte_4C3FA81 & 1) == 0 )
   {
-    sub_1C32C20(&TerminalPramsManager_TypeInfo);
-    byte_4C34497 = 1;
+    sub_1C37058(&TerminalPramsManager_TypeInfo);
+    byte_4C3FA81 = 1;
   }
   if ( this->fields.mIsInitDone )
   {
@@ -253,10 +253,10 @@ void MapCamera__Process(MapCamera_o *this, bool is_tch_enable, const MethodInfo 
               ZoomSize = MapZoom__GetZoomSize((MapZoom_o *)mCamera, 0);
               if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
                 j_il2cpp_runtime_class_init_0(TerminalPramsManager_TypeInfo);
-              if ( !byte_4C344B3 )
+              if ( !byte_4C3FA9D )
               {
-                sub_1C32C20(&TerminalPramsManager_TypeInfo);
-                byte_4C344B3 = 1;
+                sub_1C37058(&TerminalPramsManager_TypeInfo);
+                byte_4C3FA9D = 1;
               }
               v7 = TerminalPramsManager_TypeInfo;
               if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -276,7 +276,7 @@ void MapCamera__Process(MapCamera_o *this, bool is_tch_enable, const MethodInfo 
         }
       }
 LABEL_19:
-      sub_1C32E7C(mCamera);
+      sub_1C372B4(mCamera);
     }
   }
 }
@@ -287,12 +287,12 @@ void MapCamera__RemoveMapTexture(MapCamera_o *this, const MethodInfo *method)
   CrashReporter_o *mMapBg; // x0
   UnityEngine_Object_o *v4; // x20
 
-  if ( (byte_4C3449B & 1) == 0 )
+  if ( (byte_4C3FA85 & 1) == 0 )
   {
-    sub_1C32C20(&UnityEngine_Object_TypeInfo);
-    sub_1C32C20(&Method_SingletonMonoBehaviour_CrashReporter__get_Instance__);
-    sub_1C32C20(&StringLiteral_7481/*"IN_TerminalScene"*/);
-    byte_4C3449B = 1;
+    sub_1C37058(&UnityEngine_Object_TypeInfo);
+    sub_1C37058(&Method_SingletonMonoBehaviour_CrashReporter__get_Instance__);
+    sub_1C37058(&StringLiteral_7482/*"IN_TerminalScene"*/);
+    byte_4C3FA85 = 1;
   }
   mMapBg = (CrashReporter_o *)this->fields.mMapBg;
   if ( !mMapBg )
@@ -304,15 +304,15 @@ void MapCamera__RemoveMapTexture(MapCamera_o *this, const MethodInfo *method)
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   if ( UnityEngine_Object__op_Inequality(0, v4, 0) )
   {
-    mMapBg = (CrashReporter_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39E2904 *)Method_SingletonMonoBehaviour_CrashReporter__get_Instance__);
+    mMapBg = (CrashReporter_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39ED16C *)Method_SingletonMonoBehaviour_CrashReporter__get_Instance__);
     if ( !mMapBg )
       goto LABEL_11;
-    CrashReporter__SetNowState(mMapBg, (System_String_o *)StringLiteral_7481/*"IN_TerminalScene"*/, 0);
+    CrashReporter__SetNowState(mMapBg, (System_String_o *)StringLiteral_7482/*"IN_TerminalScene"*/, 0);
   }
   mMapBg = (CrashReporter_o *)this->fields.mMapBg;
   if ( !mMapBg )
 LABEL_11:
-    sub_1C32E7C(mMapBg);
+    sub_1C372B4(mMapBg);
   ((void (__fastcall *)(CrashReporter_o *, _QWORD, void *))mMapBg->klass[1].vtable._3_ToString.method)(
     mMapBg,
     0,
@@ -326,7 +326,7 @@ void MapCamera__SetEnable(MapCamera_o *this, bool is_enable, const MethodInfo *m
 
   mCamera = (UnityEngine_Behaviour_o *)this->fields.mCamera;
   if ( !mCamera )
-    sub_1C32E7C(0);
+    sub_1C372B4(0);
   UnityEngine_Behaviour__set_enabled(mCamera, is_enable, 0);
 }
 
@@ -338,15 +338,15 @@ void MapCamera__SetMapBg(MapCamera_o *this, UITexture_o *mapBg, const MethodInfo
   CrashReporter_o *mMapBg; // x0
   UnityEngine_Object_o *v8; // x19
 
-  if ( (byte_4C34498 & 1) == 0 )
+  if ( (byte_4C3FA82 & 1) == 0 )
   {
-    sub_1C32C20(&UnityEngine_Object_TypeInfo);
-    sub_1C32C20(&Method_SingletonMonoBehaviour_CrashReporter__get_Instance__);
-    sub_1C32C20(&StringLiteral_12024/*"SET_TERMINAL_MAP"*/);
-    byte_4C34498 = 1;
+    sub_1C37058(&UnityEngine_Object_TypeInfo);
+    sub_1C37058(&Method_SingletonMonoBehaviour_CrashReporter__get_Instance__);
+    sub_1C37058(&StringLiteral_12025/*"SET_TERMINAL_MAP"*/);
+    byte_4C3FA82 = 1;
   }
   this->fields.mMapBg = mapBg;
-  sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.mMapBg, (int32_t)mapBg, (int32_t)method, v3);
+  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.mMapBg, (int32_t)mapBg, (int32_t)method, v3);
   MapCamera__SetMapRate(this, v6);
   mMapBg = (CrashReporter_o *)this->fields.mMapBg;
   if ( !mMapBg )
@@ -358,14 +358,14 @@ void MapCamera__SetMapBg(MapCamera_o *this, UITexture_o *mapBg, const MethodInfo
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   if ( UnityEngine_Object__op_Inequality(0, v8, 0) )
   {
-    mMapBg = (CrashReporter_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39E2904 *)Method_SingletonMonoBehaviour_CrashReporter__get_Instance__);
+    mMapBg = (CrashReporter_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39ED16C *)Method_SingletonMonoBehaviour_CrashReporter__get_Instance__);
     if ( mMapBg )
     {
-      CrashReporter__SetNowState(mMapBg, (System_String_o *)StringLiteral_12024/*"SET_TERMINAL_MAP"*/, 0);
+      CrashReporter__SetNowState(mMapBg, (System_String_o *)StringLiteral_12025/*"SET_TERMINAL_MAP"*/, 0);
       return;
     }
 LABEL_10:
-    sub_1C32E7C(mMapBg);
+    sub_1C372B4(mMapBg);
   }
 }
 
@@ -387,11 +387,11 @@ void MapCamera__SetMapRate(MapCamera_o *this, const MethodInfo *method)
   int MAP_BASE_H; // s8
 
   v2 = this;
-  if ( (byte_4C3449A & 1) == 0 )
+  if ( (byte_4C3FA84 & 1) == 0 )
   {
-    sub_1C32C20(&ManagerConfig_TypeInfo);
-    this = (MapCamera_o *)sub_1C32C20(&MapCamera_TypeInfo);
-    byte_4C3449A = 1;
+    sub_1C37058(&ManagerConfig_TypeInfo);
+    this = (MapCamera_o *)sub_1C37058(&MapCamera_TypeInfo);
+    byte_4C3FA84 = 1;
   }
   mMapBg = (int32x2_t *)v2->fields.mMapBg;
   if ( !mMapBg )
@@ -425,7 +425,7 @@ void MapCamera__SetMapRate(MapCamera_o *this, const MethodInfo *method)
       goto LABEL_18;
     }
 LABEL_19:
-    sub_1C32E7C(this);
+    sub_1C372B4(this);
   }
   v5 = MapCamera_TypeInfo;
   mWidth = v4->fields.mWidth;
@@ -461,12 +461,12 @@ void MapCamera__SetMapTexture(
   const MethodInfo *v10; // x1
   UnityEngine_Object_o *v11; // x19
 
-  if ( (byte_4C34499 & 1) == 0 )
+  if ( (byte_4C3FA83 & 1) == 0 )
   {
-    sub_1C32C20(&UnityEngine_Object_TypeInfo);
-    sub_1C32C20(&Method_SingletonMonoBehaviour_CrashReporter__get_Instance__);
-    sub_1C32C20(&StringLiteral_12024/*"SET_TERMINAL_MAP"*/);
-    byte_4C34499 = 1;
+    sub_1C37058(&UnityEngine_Object_TypeInfo);
+    sub_1C37058(&Method_SingletonMonoBehaviour_CrashReporter__get_Instance__);
+    sub_1C37058(&StringLiteral_12025/*"SET_TERMINAL_MAP"*/);
+    byte_4C3FA83 = 1;
   }
   mMapBg = (UIWidget_o *)this->fields.mMapBg;
   if ( !mMapBg )
@@ -496,14 +496,14 @@ void MapCamera__SetMapTexture(
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   if ( UnityEngine_Object__op_Inequality(0, v11, 0) )
   {
-    mMapBg = (UIWidget_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39E2904 *)Method_SingletonMonoBehaviour_CrashReporter__get_Instance__);
+    mMapBg = (UIWidget_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39ED16C *)Method_SingletonMonoBehaviour_CrashReporter__get_Instance__);
     if ( mMapBg )
     {
-      CrashReporter__SetNowState((CrashReporter_o *)mMapBg, (System_String_o *)StringLiteral_12024/*"SET_TERMINAL_MAP"*/, 0);
+      CrashReporter__SetNowState((CrashReporter_o *)mMapBg, (System_String_o *)StringLiteral_12025/*"SET_TERMINAL_MAP"*/, 0);
       return;
     }
 LABEL_13:
-    sub_1C32E7C(mMapBg);
+    sub_1C372B4(mMapBg);
   }
 }
 
@@ -519,7 +519,7 @@ void MapCamera__SetMoveLimit(MapCamera_o *this, const MethodInfo *method)
 
   mMapBg = this->fields.mMapBg;
   if ( !mMapBg )
-    sub_1C32E7C(this);
+    sub_1C372B4(this);
   __asm { FMOV            V1.2S, #-4.0 }
   v8.n128_u64[0] = 0xBF000000BF000000LL;
   v8.n128_u64[1] = 0xBF000000BF000000LL;
@@ -556,10 +556,10 @@ void MapCamera__StartAutoMove(
   z = screenPos.fields.z;
   y = screenPos.fields.y;
   x = screenPos.fields.x;
-  if ( (byte_4C3449C & 1) == 0 )
+  if ( (byte_4C3FA86 & 1) == 0 )
   {
-    sub_1C32C20(&Method_System_Nullable_Vector3___ctor__);
-    byte_4C3449C = 1;
+    sub_1C37058(&Method_System_Nullable_Vector3___ctor__);
+    byte_4C3FA86 = 1;
   }
   *(_QWORD *)&v16.fields.value.fields.y = Method_System_Nullable_Vector3___ctor__;
   *(_QWORD *)&v16.fields.hasValue = &v15;
@@ -568,7 +568,7 @@ void MapCamera__StartAutoMove(
   v17.fields.z = z;
   *(_QWORD *)&v15.fields.hasValue = 0;
   *(_QWORD *)&v15.fields.value.fields.y = 0;
-  System_Nullable_Vector3____ctor(v16, v17, (const MethodInfo_38C2B00 *)endAct);
+  System_Nullable_Vector3____ctor(v16, v17, (const MethodInfo_38CD368 *)endAct);
   v13 = 0;
   MapCamera__StartAutoWork(this, sec, v15, v13, easeType, endAct, v14);
 }
@@ -593,11 +593,11 @@ void MapCamera__StartAutoWork(
 
   v10 = *(_QWORD *)&screenPos.fields.value.fields.y;
   v11 = *(_QWORD *)&screenPos.fields.hasValue;
-  if ( (byte_4C3449E & 1) == 0 )
+  if ( (byte_4C3FA88 & 1) == 0 )
   {
-    sub_1C32C20(&MapCameraViewAdjusterUtil_TypeInfo);
-    sub_1C32C20(&MapCamera_TypeInfo);
-    byte_4C3449E = 1;
+    sub_1C37058(&MapCameraViewAdjusterUtil_TypeInfo);
+    sub_1C37058(&MapCamera_TypeInfo);
+    byte_4C3FA88 = 1;
   }
   if ( !MapCameraViewAdjusterUtil_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(MapCameraViewAdjusterUtil_TypeInfo);
@@ -626,7 +626,7 @@ void MapCamera__StartAutoWork(
     || (MapZoom__StartAutoZoom(SafeCameraDestination, *(&v17->fields.mZoomMargin + 1), sec, easeType, 0, 0),
         (SafeCameraDestination = (MapZoom_o *)this->fields.mScrl) == 0) )
   {
-    sub_1C32E7C(SafeCameraDestination);
+    sub_1C372B4(SafeCameraDestination);
   }
   MapScroll__StartAutoMove(
     (MapScroll_o *)SafeCameraDestination,
@@ -652,14 +652,14 @@ void MapCamera__StartAutoZoom(
   System_Nullable_float__o sizea; // [xsp+8h] [xbp-48h] BYREF
   System_Nullable_Vector3__o v15; // 0:x1.16
 
-  if ( (byte_4C3449D & 1) == 0 )
+  if ( (byte_4C3FA87 & 1) == 0 )
   {
-    sub_1C32C20(&Method_System_Nullable_float___ctor__);
-    byte_4C3449D = 1;
+    sub_1C37058(&Method_System_Nullable_float___ctor__);
+    byte_4C3FA87 = 1;
   }
   p_sizea = (System_Nullable_float__o)&sizea;
   sizea = 0;
-  System_Nullable_float____ctor(p_sizea, size, (const MethodInfo_38C063C *)Method_System_Nullable_float___ctor__);
+  System_Nullable_float____ctor(p_sizea, size, (const MethodInfo_38CAEA4 *)Method_System_Nullable_float___ctor__);
   v12 = sizea;
   *(_QWORD *)&v15.fields.hasValue = 0;
   *(_QWORD *)&v15.fields.value.fields.y = 0;
@@ -688,18 +688,18 @@ void MapCamera__UnInit(MapCamera_o *this, const MethodInfo *method)
     {
       MapScroll__UnInit(mScrl, 0);
       p_mScrl->klass = 0;
-      sub_1C32BC4(p_mScrl, 0, v7, v8);
+      sub_1C36FFC(p_mScrl, 0, v7, v8);
     }
     mZoom = this->fields.mZoom;
     if ( mZoom )
     {
       MapZoom__UnInit(mZoom, 0);
       this->fields.mZoom = 0;
-      sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.mZoom, 0, v10, v11);
+      sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.mZoom, 0, v10, v11);
     }
     this->fields.touchDetector = 0;
     p_touchDetector = &this->fields.touchDetector;
-    sub_1C32BC4((CGThumbnailListItem_o *)p_touchDetector, 0, v2, v3);
+    sub_1C36FFC((CGThumbnailListItem_o *)p_touchDetector, 0, v2, v3);
     *((_BYTE *)p_touchDetector + 8) = 0;
   }
 }

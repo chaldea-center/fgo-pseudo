@@ -12,15 +12,15 @@ void PartyOrganizationEventPointListViewItem___ctor(
 
   v9 = isFollower;
   this->fields.displayValueType = 1;
-  ListViewItem___ctor_43702564((ListViewItem_o *)this, index, 0);
+  ListViewItem___ctor_43804668((ListViewItem_o *)this, index, 0);
   this->fields.titleName = titleName;
-  sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.titleName, (int32_t)titleName, v10, v11);
+  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.titleName, (int32_t)titleName, v10, v11);
   this->fields.isFollower = v9;
   this->fields.displayValueType = displayValueType;
 }
 
 
-void PartyOrganizationEventPointListViewItem___ctor_34111048(
+void PartyOrganizationEventPointListViewItem___ctor_34206680(
         PartyOrganizationEventPointListViewItem_o *this,
         int32_t index,
         EventMargeItemUpValInfo_o *margeItemInfo,
@@ -31,9 +31,9 @@ void PartyOrganizationEventPointListViewItem___ctor_34111048(
   const MethodInfo *v9; // x3
 
   this->fields.displayValueType = 1;
-  ListViewItem___ctor_43702564((ListViewItem_o *)this, index, 0);
+  ListViewItem___ctor_43804668((ListViewItem_o *)this, index, 0);
   this->fields.margeItemInfo = margeItemInfo;
-  sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.margeItemInfo, (int32_t)margeItemInfo, v8, v9);
+  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.margeItemInfo, (int32_t)margeItemInfo, v8, v9);
   this->fields.displayValueType = displayValueType;
 }
 
@@ -56,12 +56,12 @@ System_String_o *PartyOrganizationEventPointListViewItem__GetDataString(
   System_String_o *ColorString; // x20
   System_String_o *v8; // x2
 
-  if ( (byte_4C333DD & 1) == 0 )
+  if ( (byte_4C3E9C7 & 1) == 0 )
   {
-    sub_1C32C20(&LocalizationManager_TypeInfo);
-    sub_1C32C20(&StringLiteral_1/*""*/);
-    sub_1C32C20(&StringLiteral_10231/*"PARTY_ORGANIZATION_EVENT_MEMBER_OFFSET"*/);
-    byte_4C333DD = 1;
+    sub_1C37058(&LocalizationManager_TypeInfo);
+    sub_1C37058(&StringLiteral_1/*""*/);
+    sub_1C37058(&StringLiteral_10232/*"PARTY_ORGANIZATION_EVENT_MEMBER_OFFSET"*/);
+    byte_4C3E9C7 = 1;
   }
   margeItemInfo = this->fields.margeItemInfo;
   if ( !margeItemInfo )
@@ -71,12 +71,12 @@ System_String_o *PartyOrganizationEventPointListViewItem__GetDataString(
     return (System_String_o *)StringLiteral_1/*""*/;
   v6 = this->fields.margeItemInfo;
   if ( !v6 )
-    sub_1C32E7C(0);
+    sub_1C372B4(0);
   ColorString = EventMargeItemUpValInfo__GetColorString(v6, 0);
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-  v8 = LocalizationManager__Get((System_String_o *)StringLiteral_10231/*"PARTY_ORGANIZATION_EVENT_MEMBER_OFFSET"*/, 0);
-  return System_String__Concat_63556792(ColorString, EventUpString, v8, 0);
+  v8 = LocalizationManager__Get((System_String_o *)StringLiteral_10232/*"PARTY_ORGANIZATION_EVENT_MEMBER_OFFSET"*/, 0);
+  return System_String__Concat_63599904(ColorString, EventUpString, v8, 0);
 }
 
 
@@ -108,21 +108,21 @@ System_String_o *PartyOrganizationEventPointListViewItem__GetTitleString(
   System_String_o *v17; // x19
   System_String_o *v18; // x1
 
-  if ( (byte_4C333DC & 1) == 0 )
+  if ( (byte_4C3E9C6 & 1) == 0 )
   {
-    sub_1C32C20(&LocalizationManager_TypeInfo);
-    sub_1C32C20(&StringLiteral_10233/*"PARTY_ORGANIZATION_EVENT_MEMBER_SUPPORT"*/);
-    sub_1C32C20(&StringLiteral_10235/*"PARTY_ORGANIZATION_EVENT_PARTY_SUM"*/);
-    sub_1C32C20(&StringLiteral_1/*""*/);
-    sub_1C32C20(&StringLiteral_10226/*"PARTY_ORGANIZATION_EVENT_MEMBER"*/);
-    byte_4C333DC = 1;
+    sub_1C37058(&LocalizationManager_TypeInfo);
+    sub_1C37058(&StringLiteral_10234/*"PARTY_ORGANIZATION_EVENT_MEMBER_SUPPORT"*/);
+    sub_1C37058(&StringLiteral_10236/*"PARTY_ORGANIZATION_EVENT_PARTY_SUM"*/);
+    sub_1C37058(&StringLiteral_1/*""*/);
+    sub_1C37058(&StringLiteral_10227/*"PARTY_ORGANIZATION_EVENT_MEMBER"*/);
+    byte_4C3E9C6 = 1;
   }
   if ( this->fields.titleName )
   {
     if ( this->fields.isFollower )
-      v3 = (System_String_o **)&StringLiteral_10233/*"PARTY_ORGANIZATION_EVENT_MEMBER_SUPPORT"*/;
+      v3 = (System_String_o **)&StringLiteral_10234/*"PARTY_ORGANIZATION_EVENT_MEMBER_SUPPORT"*/;
     else
-      v3 = (System_String_o **)&StringLiteral_10226/*"PARTY_ORGANIZATION_EVENT_MEMBER"*/;
+      v3 = (System_String_o **)&StringLiteral_10227/*"PARTY_ORGANIZATION_EVENT_MEMBER"*/;
     v4 = *v3;
     if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
@@ -136,7 +136,7 @@ System_String_o *PartyOrganizationEventPointListViewItem__GetTitleString(
   if ( !this->fields.margeItemInfo
     || (v9 = ColorString,
         NameTitleString = EventMargeItemUpValInfo__GetNameTitleString(this->fields.margeItemInfo, 0),
-        ColorString = System_String__Concat_63518544(v9, NameTitleString, 0),
+        ColorString = System_String__Concat_63561656(v9, NameTitleString, 0),
         !this->fields.margeItemInfo)
     || (v11 = ColorString,
         ColorString = EventMargeItemUpValInfo__GetItemName(this->fields.margeItemInfo, 0),
@@ -145,19 +145,19 @@ System_String_o *PartyOrganizationEventPointListViewItem__GetTitleString(
         ColorString = EventMargeItemUpValInfo__GetServantName(this->fields.margeItemInfo, 0),
         !this->fields.margeItemInfo) )
   {
-    sub_1C32E7C(ColorString);
+    sub_1C372B4(ColorString);
   }
   v13 = (Il2CppObject *)ColorString;
   TargetString = (Il2CppObject *)EventMargeItemUpValInfo__GetTargetString(this->fields.margeItemInfo, 0);
-  v15 = System_String__Format_63559904(v11, v12, v13, TargetString, 0);
+  v15 = System_String__Format_63603016(v11, v12, v13, TargetString, 0);
   displayValueType = this->fields.displayValueType;
   v17 = v15;
   if ( displayValueType )
     return v17;
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-  v18 = LocalizationManager__Get((System_String_o *)StringLiteral_10235/*"PARTY_ORGANIZATION_EVENT_PARTY_SUM"*/, 0);
-  return System_String__Concat_63518544(v17, v18, 0);
+  v18 = LocalizationManager__Get((System_String_o *)StringLiteral_10236/*"PARTY_ORGANIZATION_EVENT_PARTY_SUM"*/, 0);
+  return System_String__Concat_63561656(v17, v18, 0);
 }
 
 

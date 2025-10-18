@@ -25,7 +25,7 @@ void ExtraBattleUserInterfaceComponent__SetActive(
 
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
   if ( !gameObject )
-    sub_1C32E7C(0);
+    sub_1C372B4(0);
   UnityEngine_GameObject__SetActive(gameObject, value, 0);
 }
 
@@ -38,7 +38,7 @@ void ExtraBattleUserInterfaceComponent__SetOnTapCallback(
   const MethodInfo *v3; // x3
 
   this->fields.onTapCallback = callback;
-  sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.onTapCallback, (int32_t)callback, (int32_t)method, v3);
+  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.onTapCallback, (int32_t)callback, (int32_t)method, v3);
 }
 
 
@@ -52,21 +52,21 @@ void ExtraBattleUserInterfaceComponent__SetupBattleAssetUiAtlas(
   BattleDataDefine_c *v6; // x0
   System_String_o *ASSET_BATTLE_COMMON; // x20
   AssetData_o *AssetStorage; // x0
-  Il2CppObject *Object_object__51111776; // x20
+  Il2CppObject *Object_object__51154888; // x20
   _BOOL8 v10; // x0
   Il2CppObject *Component_object; // x0
   int32_t v12; // w2
   const MethodInfo *v13; // x3
 
-  if ( (byte_4C3A926 & 1) == 0 )
+  if ( (byte_4C45F33 & 1) == 0 )
   {
-    sub_1C32C20(&Method_AssetData_GetObject_GameObject____78059392);
-    sub_1C32C20(&AssetManager_TypeInfo);
-    sub_1C32C20(&BattleDataDefine_TypeInfo);
-    sub_1C32C20(&Method_UnityEngine_GameObject_GetComponent_UIAtlas___);
-    sub_1C32C20(&UnityEngine_Object_TypeInfo);
-    sub_1C32C20(&StringLiteral_3107/*"BattleAssetUIAtlas"*/);
-    byte_4C3A926 = 1;
+    sub_1C37058(&Method_AssetData_GetObject_GameObject____78105168);
+    sub_1C37058(&AssetManager_TypeInfo);
+    sub_1C37058(&BattleDataDefine_TypeInfo);
+    sub_1C37058(&Method_UnityEngine_GameObject_GetComponent_UIAtlas___);
+    sub_1C37058(&UnityEngine_Object_TypeInfo);
+    sub_1C37058(&StringLiteral_3107/*"BattleAssetUIAtlas"*/);
+    byte_4C45F33 = 1;
   }
   battleAssetUiAtlas = this->fields.battleAssetUiAtlas;
   p_battleAssetUiAtlas = (CGThumbnailListItem_o *)&this->fields.battleAssetUiAtlas;
@@ -87,22 +87,22 @@ void ExtraBattleUserInterfaceComponent__SetupBattleAssetUiAtlas(
     AssetStorage = AssetManager__getAssetStorage(ASSET_BATTLE_COMMON, 0);
     if ( AssetStorage )
     {
-      Object_object__51111776 = AssetData__GetObject_object__51111776(
+      Object_object__51154888 = AssetData__GetObject_object__51154888(
                                   AssetStorage,
                                   (System_String_o *)StringLiteral_3107/*"BattleAssetUIAtlas"*/,
-                                  (const MethodInfo_30BE760 *)Method_AssetData_GetObject_GameObject____78059392);
+                                  (const MethodInfo_30C8FC8 *)Method_AssetData_GetObject_GameObject____78105168);
       if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-      v10 = UnityEngine_Object__op_Equality((UnityEngine_Object_o *)Object_object__51111776, 0, 0);
+      v10 = UnityEngine_Object__op_Equality((UnityEngine_Object_o *)Object_object__51154888, 0, 0);
       if ( !v10 )
       {
-        if ( !Object_object__51111776 )
-          sub_1C32E7C(v10);
+        if ( !Object_object__51154888 )
+          sub_1C372B4(v10);
         Component_object = UnityEngine_GameObject__GetComponent_object_(
-                             (UnityEngine_GameObject_o *)Object_object__51111776,
-                             (const MethodInfo_3134970 *)Method_UnityEngine_GameObject_GetComponent_UIAtlas___);
+                             (UnityEngine_GameObject_o *)Object_object__51154888,
+                             (const MethodInfo_313F1D8 *)Method_UnityEngine_GameObject_GetComponent_UIAtlas___);
         p_battleAssetUiAtlas->klass = (CGThumbnailListItem_c *)Component_object;
-        sub_1C32BC4(p_battleAssetUiAtlas, (int32_t)Component_object, v12, v13);
+        sub_1C36FFC(p_battleAssetUiAtlas, (int32_t)Component_object, v12, v13);
       }
     }
   }
@@ -130,12 +130,12 @@ void ExtraBattleUserInterfaceComponent__SwitchDispAnimation(
       if ( (__int64)v5 >= (int)max_length_low )
         break;
       if ( v5 >= max_length_low )
-        sub_1C32E84(this);
+        sub_1C372BC(this);
       BasicHelper__SetActiveSafely((UnityEngine_Component_o *)animations->m_Items[v5], v6, 0);
       animations = this->fields.animations;
       ++v5;
       if ( !animations )
-        sub_1C32E7C(this);
+        sub_1C372B4(this);
     }
   }
 }
@@ -165,10 +165,10 @@ void ExtraBattleUserInterfaceComponent__UpdateData(
   UnityEngine_Color_o color; // [xsp+8h] [xbp-68h] BYREF
   System_String_o *text; // [xsp+18h] [xbp-58h] BYREF
 
-  if ( (byte_4C3A924 & 1) == 0 )
+  if ( (byte_4C45F31 & 1) == 0 )
   {
-    sub_1C32C20(&UnityEngine_Object_TypeInfo);
-    byte_4C3A924 = 1;
+    sub_1C37058(&UnityEngine_Object_TypeInfo);
+    byte_4C45F31 = 1;
   }
   *(_QWORD *)&color.fields.b = 0;
   text = 0;
@@ -180,7 +180,7 @@ void ExtraBattleUserInterfaceComponent__UpdateData(
     labels = this->fields.labels;
     if ( !labels )
 LABEL_33:
-      sub_1C32E7C(IsNullOrEmpty);
+      sub_1C372B4(IsNullOrEmpty);
     v14 = 0;
     while ( (signed int)v14 < SLODWORD(labels->max_length) )
     {
@@ -212,7 +212,7 @@ LABEL_33:
           goto LABEL_33;
         if ( v14 >= LODWORD(v18->max_length) )
 LABEL_35:
-          sub_1C32E84(IsNullOrEmpty);
+          sub_1C372BC(IsNullOrEmpty);
         IsNullOrEmpty = (ExtraBattleUserInterfaceData_LabelDataWrapper_o *)v18->m_Items[v14];
         if ( !IsNullOrEmpty )
           goto LABEL_33;
@@ -256,7 +256,7 @@ LABEL_35:
                 {
                   if ( !v22 )
                     goto LABEL_33;
-                  UnityEngine_Animation__Stop_70968068(
+                  UnityEngine_Animation__Stop_71011180(
                     (UnityEngine_Animation_o *)v22,
                     CurrentAnimationName_k__BackingField,
                     0);
@@ -266,7 +266,7 @@ LABEL_35:
                 {
                   if ( !v22 )
                     goto LABEL_33;
-                  IsNullOrEmpty = (ExtraBattleUserInterfaceData_LabelDataWrapper_o *)UnityEngine_Animation__Play_70968924(
+                  IsNullOrEmpty = (ExtraBattleUserInterfaceData_LabelDataWrapper_o *)UnityEngine_Animation__Play_71012036(
                                                                                        (UnityEngine_Animation_o *)v22,
                                                                                        b,
                                                                                        0);
@@ -297,10 +297,10 @@ void ExtraBattleUserInterfaceComponent__UpdateSprites(
   ExtraBattleUserInterfaceComponent_SpriteParam_o *v8; // x24
   UnityEngine_Object_o *sprite; // x20
 
-  if ( (byte_4C3A925 & 1) == 0 )
+  if ( (byte_4C45F32 & 1) == 0 )
   {
-    sub_1C32C20(&UnityEngine_Object_TypeInfo);
-    byte_4C3A925 = 1;
+    sub_1C37058(&UnityEngine_Object_TypeInfo);
+    byte_4C45F32 = 1;
   }
   if ( !BasicHelper__IsNullOrEmpty((System_Collections_ICollection_o *)this->fields.spriteParams, 0) )
   {
@@ -315,7 +315,7 @@ void ExtraBattleUserInterfaceComponent__UpdateSprites(
       while ( 1 )
       {
         if ( v7 >= max_length )
-          sub_1C32E84(v4);
+          sub_1C372BC(v4);
         v8 = spriteParams->m_Items[v7];
         if ( !v8 )
           break;
@@ -339,7 +339,7 @@ void ExtraBattleUserInterfaceComponent__UpdateSprites(
           return;
       }
 LABEL_17:
-      sub_1C32E7C(v4);
+      sub_1C372B4(v4);
     }
   }
 }

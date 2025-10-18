@@ -16,13 +16,13 @@ float BattlePointGaugeSetting__GetBarProgressValue(
 
   sprite = this->fields.sprite;
   if ( !sprite || (barProgressValues = sprite->fields.barProgressValues) == 0 )
-    sub_1C32E7C(this);
+    sub_1C372B4(this);
   max_length = barProgressValues->max_length;
   result = 0.0;
   if ( max_length > phase )
   {
     if ( max_length <= (unsigned int)phase )
-      sub_1C32E84(this);
+      sub_1C372BC(this);
     return barProgressValues->m_Items[phase];
   }
   return result;
@@ -46,14 +46,14 @@ System_String_o *BattlePointGaugeSetting__GetPhaseSpriteName(
   int32_t v14; // [xsp+Ch] [xbp-24h] BYREF
 
   v9 = this;
-  if ( (byte_4C3AFBF & 1) == 0 )
+  if ( (byte_4C465D3 & 1) == 0 )
   {
-    this = (BattlePointGaugeSetting_o *)sub_1C32C20(&int_TypeInfo);
-    byte_4C3AFBF = 1;
+    this = (BattlePointGaugeSetting_o *)sub_1C37058(&int_TypeInfo);
+    byte_4C465D3 = 1;
   }
   sprite = v9->fields.sprite;
   if ( !sprite )
-    sub_1C32E7C(this);
+    sub_1C372B4(this);
   phaseSpriteNameFormat = sprite->fields.phaseSpriteNameFormat;
   v14 = phaseValue;
   v12 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v14, method, v3, v4, v5, v6, v7);
@@ -78,14 +78,14 @@ System_String_o *BattlePointGaugeSetting__GetStepSpriteName(
   int32_t v14; // [xsp+Ch] [xbp-24h] BYREF
 
   v9 = this;
-  if ( (byte_4C3AFC0 & 1) == 0 )
+  if ( (byte_4C465D4 & 1) == 0 )
   {
-    this = (BattlePointGaugeSetting_o *)sub_1C32C20(&int_TypeInfo);
-    byte_4C3AFC0 = 1;
+    this = (BattlePointGaugeSetting_o *)sub_1C37058(&int_TypeInfo);
+    byte_4C465D4 = 1;
   }
   sprite = v9->fields.sprite;
   if ( !sprite )
-    sub_1C32E7C(this);
+    sub_1C372B4(this);
   stepSpriteNameFormat = sprite->fields.stepSpriteNameFormat;
   v14 = effectId;
   v12 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v14, method, v3, v4, v5, v6, v7);
@@ -110,36 +110,36 @@ bool BattlePointGaugeSetting__TryGetStepUpEffect(
   UnityEngine_GameObject_o *monitor; // x1
   UnityEngine_Object_o *v16; // x19
 
-  if ( (byte_4C3AFC1 & 1) == 0 )
+  if ( (byte_4C465D5 & 1) == 0 )
   {
-    sub_1C32C20(&Method_System_Linq_Enumerable_FirstOrDefault_BattlePointGaugeSetting_EffectSection_StepUpEffectData___);
-    sub_1C32C20(&System_Func_BattlePointGaugeSetting_EffectSection_StepUpEffectData__bool__TypeInfo);
-    sub_1C32C20(&UnityEngine_Object_TypeInfo);
-    sub_1C32C20(&Method_BattlePointGaugeSetting___c__DisplayClass17_0__TryGetStepUpEffect_b__0__);
-    sub_1C32C20(&BattlePointGaugeSetting___c__DisplayClass17_0_TypeInfo);
-    byte_4C3AFC1 = 1;
+    sub_1C37058(&Method_System_Linq_Enumerable_FirstOrDefault_BattlePointGaugeSetting_EffectSection_StepUpEffectData___);
+    sub_1C37058(&System_Func_BattlePointGaugeSetting_EffectSection_StepUpEffectData__bool__TypeInfo);
+    sub_1C37058(&UnityEngine_Object_TypeInfo);
+    sub_1C37058(&Method_BattlePointGaugeSetting___c__DisplayClass17_0__TryGetStepUpEffect_b__0__);
+    sub_1C37058(&BattlePointGaugeSetting___c__DisplayClass17_0_TypeInfo);
+    byte_4C465D5 = 1;
   }
-  v7 = sub_1C32E6C(BattlePointGaugeSetting___c__DisplayClass17_0_TypeInfo);
+  v7 = sub_1C372A4(BattlePointGaugeSetting___c__DisplayClass17_0_TypeInfo);
   System_Object___ctor((Il2CppObject *)v7, 0);
   if ( !v7 || (*(_DWORD *)(v7 + 16) = effectId, (effect = this->fields.effect) == 0) )
-    sub_1C32E7C(v8);
+    sub_1C372B4(v8);
   stepUpEffectPrefabs = (System_Collections_Generic_IEnumerable_TSource__o *)effect->fields.stepUpEffectPrefabs;
-  v11 = (System_Func_object__bool__o *)sub_1C32E6C(System_Func_BattlePointGaugeSetting_EffectSection_StepUpEffectData__bool__TypeInfo);
+  v11 = (System_Func_object__bool__o *)sub_1C372A4(System_Func_BattlePointGaugeSetting_EffectSection_StepUpEffectData__bool__TypeInfo);
   System_Func_object__bool____ctor(
     v11,
     (Il2CppObject *)v7,
     Method_BattlePointGaugeSetting___c__DisplayClass17_0__TryGetStepUpEffect_b__0__,
     0);
-  v12 = System_Linq_Enumerable__FirstOrDefault_object__51408536(
+  v12 = System_Linq_Enumerable__FirstOrDefault_object__51451648(
           stepUpEffectPrefabs,
           (System_Func_TSource__bool__o *)v11,
-          (const MethodInfo_3106E98 *)Method_System_Linq_Enumerable_FirstOrDefault_BattlePointGaugeSetting_EffectSection_StepUpEffectData___);
+          (const MethodInfo_3111700 *)Method_System_Linq_Enumerable_FirstOrDefault_BattlePointGaugeSetting_EffectSection_StepUpEffectData___);
   if ( v12 )
     monitor = (UnityEngine_GameObject_o *)v12[1].monitor;
   else
     monitor = 0;
   *effectPrefab = monitor;
-  sub_1C32BC4((CGThumbnailListItem_o *)effectPrefab, (int32_t)monitor, v13, v14);
+  sub_1C36FFC((CGThumbnailListItem_o *)effectPrefab, (int32_t)monitor, v13, v14);
   v16 = (UnityEngine_Object_o *)*effectPrefab;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
@@ -159,7 +159,7 @@ void BattlePointGaugeSetting__ValidateSerializedField(BattlePointGaugeSetting_o 
     || (effect = this->fields.effect, name = UnityEngine_Object__get_name((UnityEngine_Object_o *)this, 0), !effect)
     || !effect->fields.stepUpEffectPrefabs )
   {
-    sub_1C32E7C(name);
+    sub_1C372B4(name);
   }
 }
 
@@ -170,7 +170,7 @@ int32_t BattlePointGaugeSetting__get_EffectNumPerPhase(BattlePointGaugeSetting_o
 
   effect = this->fields.effect;
   if ( !effect )
-    sub_1C32E7C(this);
+    sub_1C372B4(this);
   return effect->fields.effectNumPerPhase;
 }
 
@@ -181,7 +181,7 @@ System_String_o *BattlePointGaugeSetting__get_EffectSeName(BattlePointGaugeSetti
 
   effect = this->fields.effect;
   if ( !effect )
-    sub_1C32E7C(this);
+    sub_1C372B4(this);
   return effect->fields.effectSeName;
 }
 
@@ -194,7 +194,7 @@ UnityEngine_GameObject_o *BattlePointGaugeSetting__get_PointEffectPrefab(
 
   effect = this->fields.effect;
   if ( !effect )
-    sub_1C32E7C(this);
+    sub_1C372B4(this);
   return effect->fields.pointEffectPrefab;
 }
 
@@ -207,7 +207,7 @@ int32_t BattlePointGaugeSetting__get_PointEffectSpeedUpBorderEffectNum(
 
   effect = this->fields.effect;
   if ( !effect )
-    sub_1C32E7C(this);
+    sub_1C372B4(this);
   return effect->fields.pointEffectSpeedUpBorderEffectNum;
 }
 
@@ -220,7 +220,7 @@ float BattlePointGaugeSetting__get_PointEffectSpeedUpCoefficient(
 
   effect = this->fields.effect;
   if ( !effect )
-    sub_1C32E7C(this);
+    sub_1C372B4(this);
   return effect->fields.pointEffectSpeedUpCoefficient;
 }
 
@@ -246,7 +246,7 @@ void BattlePointGaugeSetting_EffectSection__ValidateSerializedField(
 
   stepUpEffectPrefabs = this->fields.stepUpEffectPrefabs;
   if ( !stepUpEffectPrefabs )
-    sub_1C32E7C(this);
+    sub_1C372B4(this);
   max_length = stepUpEffectPrefabs->max_length;
   v5 = -1;
   do
@@ -290,18 +290,18 @@ void BattlePointGaugeSetting_SpriteSection___ctor(
   int32_t v7; // w2
   const MethodInfo *v8; // x3
 
-  if ( (byte_4C3AFC2 & 1) == 0 )
+  if ( (byte_4C465D6 & 1) == 0 )
   {
-    sub_1C32C20(&StringLiteral_17112/*"battlepoint_phase_{0}"*/);
-    sub_1C32C20(&StringLiteral_17113/*"battlepoint_step_{0}"*/);
-    byte_4C3AFC2 = 1;
+    sub_1C37058(&StringLiteral_17114/*"battlepoint_phase_{0}"*/);
+    sub_1C37058(&StringLiteral_17115/*"battlepoint_step_{0}"*/);
+    byte_4C465D6 = 1;
   }
-  v5 = StringLiteral_17112/*"battlepoint_phase_{0}"*/;
-  this->fields.phaseSpriteNameFormat = (struct System_String_o *)StringLiteral_17112/*"battlepoint_phase_{0}"*/;
-  sub_1C32BC4((CGThumbnailListItem_o *)&this->fields, v5, v2, v3);
-  v6 = StringLiteral_17113/*"battlepoint_step_{0}"*/;
-  this->fields.stepSpriteNameFormat = (struct System_String_o *)StringLiteral_17113/*"battlepoint_step_{0}"*/;
-  sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.stepSpriteNameFormat, v6, v7, v8);
+  v5 = StringLiteral_17114/*"battlepoint_phase_{0}"*/;
+  this->fields.phaseSpriteNameFormat = (struct System_String_o *)StringLiteral_17114/*"battlepoint_phase_{0}"*/;
+  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields, v5, v2, v3);
+  v6 = StringLiteral_17115/*"battlepoint_step_{0}"*/;
+  this->fields.stepSpriteNameFormat = (struct System_String_o *)StringLiteral_17115/*"battlepoint_step_{0}"*/;
+  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.stepSpriteNameFormat, v6, v7, v8);
   System_Object___ctor((Il2CppObject *)this, 0);
 }
 
@@ -329,6 +329,6 @@ bool BattlePointGaugeSetting___c__DisplayClass17_0___TryGetStepUpEffect_b__0(
         const MethodInfo *method)
 {
   if ( !x )
-    sub_1C32E7C(this);
+    sub_1C372B4(this);
   return x->fields.effectId == this->fields.effectId;
 }

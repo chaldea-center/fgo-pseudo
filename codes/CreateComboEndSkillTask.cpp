@@ -24,7 +24,7 @@ bool CreateComboEndSkillTask__IsCreatable(
     return 1;
   if ( !logic || (this = (CreateComboEndSkillTask_o *)logic->fields.logicnomal) == 0 )
 LABEL_9:
-    sub_1C32E7C(this);
+    sub_1C372B4(this);
   return BattleLogicNomal__IsComboEnd((BattleLogicNomal_o *)this, 0);
 }
 
@@ -35,16 +35,16 @@ BuffList_ACTION_array *CreateComboEndSkillTask__get_TargetActs(
 {
   BuffList_ACTION_array *result; // x0
 
-  if ( (byte_4C3A95D & 1) == 0 )
+  if ( (byte_4C45F6A & 1) == 0 )
   {
-    sub_1C32C20(&BuffList_ACTION___TypeInfo);
-    byte_4C3A95D = 1;
+    sub_1C37058(&BuffList_ACTION___TypeInfo);
+    byte_4C45F6A = 1;
   }
-  result = (BuffList_ACTION_array *)sub_1C32CC8(BuffList_ACTION___TypeInfo, 1);
+  result = (BuffList_ACTION_array *)sub_1C37100(BuffList_ACTION___TypeInfo, 1);
   if ( !result )
-    sub_1C32E7C(0);
+    sub_1C372B4(0);
   if ( !LODWORD(result->max_length) )
-    sub_1C32E84(result);
+    sub_1C372BC(result);
   result->m_Items[0] = 149;
   return result;
 }

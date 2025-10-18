@@ -16,7 +16,7 @@ void ServantAiActArgument___ctor(
   BaseAiActArgument___ctor((BaseAiActArgument_o *)this, aiActEnt, aiEnt, procState, *(const MethodInfo **)&procState);
   v9->fields._SvtData_k__BackingField = svtData;
   v9 = (ServantAiActArgument_o *)((char *)v9 + 40);
-  sub_1C32BC4((CGThumbnailListItem_o *)v9, (int32_t)svtData, v10, v11);
+  sub_1C36FFC((CGThumbnailListItem_o *)v9, (int32_t)svtData, v10, v11);
   LOBYTE(v9->monitor) = isNoMessage;
 }
 
@@ -39,7 +39,7 @@ void ServantAiActArgument__InitCommonTask(
       goto LABEL_10;
     infoText = AiEnt_k__BackingField->fields.infoText;
     task->fields.motionMessage = infoText;
-    sub_1C32BC4((CGThumbnailListItem_o *)&task->fields.motionMessage, (int32_t)infoText, (int32_t)method, v3);
+    sub_1C36FFC((CGThumbnailListItem_o *)&task->fields.motionMessage, (int32_t)infoText, (int32_t)method, v3);
   }
   this = (ServantAiActArgument_o *)v4->fields._AiEnt_k__BackingField;
   if ( !this )
@@ -49,7 +49,7 @@ void ServantAiActArgument__InitCommonTask(
     return;
   if ( !task )
 LABEL_10:
-    sub_1C32E7C(this);
+    sub_1C372B4(this);
   task->fields.isForcedSpeedOne = 1;
 }
 
@@ -72,7 +72,7 @@ int32_t ServantAiActArgument__get_UniqueId(ServantAiActArgument_o *this, const M
 
   SvtData_k__BackingField = this->fields._SvtData_k__BackingField;
   if ( !SvtData_k__BackingField )
-    sub_1C32E7C(this);
+    sub_1C372B4(this);
   return SvtData_k__BackingField->fields.uniqueId;
 }
 
@@ -91,5 +91,5 @@ void ServantAiActArgument__set_SvtData(
   const MethodInfo *v3; // x3
 
   this->fields._SvtData_k__BackingField = value;
-  sub_1C32BC4((CGThumbnailListItem_o *)&this->fields._SvtData_k__BackingField, (int32_t)value, (int32_t)method, v3);
+  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields._SvtData_k__BackingField, (int32_t)value, (int32_t)method, v3);
 }

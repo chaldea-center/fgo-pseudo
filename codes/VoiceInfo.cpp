@@ -12,11 +12,11 @@ void VoiceInfo___ctor(VoiceInfo_o *this, const MethodInfo *method)
   System_Object___ctor((Il2CppObject *)this, 0);
   v2->fields.isCanPlay = 0;
   v2->fields.overwriteName = 0;
-  sub_1C32BC4((CGThumbnailListItem_o *)&v2->fields.overwriteName, 0, v3, v4);
+  sub_1C36FFC((CGThumbnailListItem_o *)&v2->fields.overwriteName, 0, v3, v4);
   v2->fields.overwriteNameDefault = 0;
-  sub_1C32BC4((CGThumbnailListItem_o *)&v2->fields.overwriteNameDefault, 0, v5, v6);
+  sub_1C36FFC((CGThumbnailListItem_o *)&v2->fields.overwriteNameDefault, 0, v5, v6);
   v2->fields.servantVoiceConds = 0;
   v2 = (VoiceInfo_o *)((char *)v2 + 56);
   v2[-1].fields.servantVoiceConds = 0;
-  sub_1C32BC4((CGThumbnailListItem_o *)v2, 0, v7, v8);
+  sub_1C36FFC((CGThumbnailListItem_o *)v2, 0, v7, v8);
 }

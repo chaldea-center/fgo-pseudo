@@ -4,7 +4,7 @@ void EnemySimpleHpData___ctor(EnemySimpleHpData_o *this, BattleServantData_o *sv
 
   SimpleHpData___ctor((SimpleHpData_o *)this, svtData, method);
   if ( !svtData )
-    sub_1C32E7C(v5);
+    sub_1C372B4(v5);
   *(int32x2_t *)&this->fields._NextTpTurn_k__BackingField = vrev64_s32(*(int32x2_t *)&svtData->fields.maxtpturn);
 }
 

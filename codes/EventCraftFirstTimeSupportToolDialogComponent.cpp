@@ -2,10 +2,10 @@ void EventCraftFirstTimeSupportToolDialogComponent___ctor(
         EventCraftFirstTimeSupportToolDialogComponent_o *this,
         const MethodInfo *method)
 {
-  if ( (byte_4C31BE6 & 1) == 0 )
+  if ( (byte_4C3D1D0 & 1) == 0 )
   {
-    sub_1C32C20(&BaseDialog_TypeInfo);
-    byte_4C31BE6 = 1;
+    sub_1C37058(&BaseDialog_TypeInfo);
+    byte_4C3D1D0 = 1;
   }
   if ( !BaseDialog_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(BaseDialog_TypeInfo);
@@ -29,15 +29,15 @@ void EventCraftFirstTimeSupportToolDialogComponent__OnClickClose(
   _QWORD *v3; // x0
   System_Reflection_MethodBase_o *v4; // x0
 
-  if ( (byte_4C31BE4 & 1) == 0 )
+  if ( (byte_4C3D1CE & 1) == 0 )
   {
-    sub_1C32C20(&Method_EventCraftFirstTimeSupportToolDialogComponent_OnClickClose__);
-    byte_4C31BE4 = 1;
+    sub_1C37058(&Method_EventCraftFirstTimeSupportToolDialogComponent_OnClickClose__);
+    byte_4C3D1CE = 1;
   }
   v3 = Method_EventCraftFirstTimeSupportToolDialogComponent_OnClickClose__;
   if ( (*((_BYTE *)Method_EventCraftFirstTimeSupportToolDialogComponent_OnClickClose__ + 83) & 2) != 0 )
-    v3 = (_QWORD *)sub_1C32C38(Method_EventCraftFirstTimeSupportToolDialogComponent_OnClickClose__);
-  v4 = (System_Reflection_MethodBase_o *)sub_1C32C04(v3, v3[4]);
+    v3 = (_QWORD *)sub_1C37070(Method_EventCraftFirstTimeSupportToolDialogComponent_OnClickClose__);
+  v4 = (System_Reflection_MethodBase_o *)sub_1C3703C(v3, v3[4]);
   OverwriteAssetSoundName__PlaySystemSe(v4, 0, 0, 0);
   BaseDialog__Close((BaseDialog_o *)this, this->fields.closeAction, 0);
 }
@@ -55,16 +55,16 @@ void EventCraftFirstTimeSupportToolDialogComponent__Open(
   UILabel_o *detailLabel; // x20
   UILabel_o *closeButtonLb; // x20
 
-  if ( (byte_4C31BE3 & 1) == 0 )
+  if ( (byte_4C3D1CD & 1) == 0 )
   {
-    sub_1C32C20(&LocalizationManager_TypeInfo);
-    sub_1C32C20(&StringLiteral_3898/*"CRAFT_EVENT_FIRST_TIME_SUPPORT_TOOL_DIALOG_DETAIL"*/);
-    sub_1C32C20(&StringLiteral_3685/*"COMMON_CONFIRM_CLOSE"*/);
-    sub_1C32C20(&StringLiteral_3899/*"CRAFT_EVENT_FIRST_TIME_SUPPORT_TOOL_DIALOG_POSSESSION"*/);
-    byte_4C31BE3 = 1;
+    sub_1C37058(&LocalizationManager_TypeInfo);
+    sub_1C37058(&StringLiteral_3898/*"CRAFT_EVENT_FIRST_TIME_SUPPORT_TOOL_DIALOG_DETAIL"*/);
+    sub_1C37058(&StringLiteral_3685/*"COMMON_CONFIRM_CLOSE"*/);
+    sub_1C37058(&StringLiteral_3899/*"CRAFT_EVENT_FIRST_TIME_SUPPORT_TOOL_DIALOG_POSSESSION"*/);
+    byte_4C3D1CD = 1;
   }
   this->fields.closeAction = closeCallback;
-  sub_1C32BC4(&this->fields.closeAction, closeCallback);
+  sub_1C36FFC(&this->fields.closeAction, closeCallback);
   supportToolItem = this->fields.supportToolItem;
   if ( supportTool )
   {
@@ -94,7 +94,7 @@ void EventCraftFirstTimeSupportToolDialogComponent__Open(
         !closeButtonLb) )
   {
 LABEL_13:
-    sub_1C32E7C(supportToolItem);
+    sub_1C372B4(supportToolItem);
   }
   UILabel__set_text(closeButtonLb, (System_String_o *)supportToolItem, 0);
   BaseDialog__Open((BaseDialog_o *)this, 0, 0, 0, 0);
@@ -108,10 +108,10 @@ UnityEngine_GameObject_o *EventCraftFirstTimeSupportToolDialogComponent__get_clo
   UnityEngine_Object_o *closeButton; // x20
   UnityEngine_Component_o *v5; // x0
 
-  if ( (byte_4C31BE5 & 1) == 0 )
+  if ( (byte_4C3D1CF & 1) == 0 )
   {
-    sub_1C32C20(&UnityEngine_Object_TypeInfo);
-    byte_4C31BE5 = 1;
+    sub_1C37058(&UnityEngine_Object_TypeInfo);
+    byte_4C3D1CF = 1;
   }
   closeButton = (UnityEngine_Object_o *)this->fields.closeButton;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -120,6 +120,6 @@ UnityEngine_GameObject_o *EventCraftFirstTimeSupportToolDialogComponent__get_clo
     return 0;
   v5 = (UnityEngine_Component_o *)this->fields.closeButton;
   if ( !v5 )
-    sub_1C32E7C(0);
+    sub_1C372B4(0);
   return UnityEngine_Component__get_gameObject(v5, 0);
 }

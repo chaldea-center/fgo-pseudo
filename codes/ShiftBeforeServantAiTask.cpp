@@ -7,6 +7,6 @@ bool ShiftBeforeServantAiTask__IsActable(
 
   svtData = this->fields.svtData;
   if ( !svtData )
-    sub_1C32E7C(0);
+    sub_1C372B4(0);
   return BattleServantData__isAlive(svtData, 0, 0);
 }

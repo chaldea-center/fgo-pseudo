@@ -1,9 +1,9 @@
 void CostSpriteViewObject___ctor(CostSpriteViewObject_o *this, const MethodInfo *method)
 {
-  if ( (byte_4C34E61 & 1) == 0 )
+  if ( (byte_4C4044B & 1) == 0 )
   {
-    sub_1C32C20(&ListViewObject_TypeInfo);
-    byte_4C34E61 = 1;
+    sub_1C37058(&ListViewObject_TypeInfo);
+    byte_4C4044B = 1;
   }
   if ( !ListViewObject_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(ListViewObject_TypeInfo);
@@ -18,20 +18,20 @@ void CostSpriteViewObject__Awake(CostSpriteViewObject_o *this, const MethodInfo 
   int32_t v5; // w2
   const MethodInfo *v6; // x3
 
-  if ( (byte_4C34E5E & 1) == 0 )
+  if ( (byte_4C40448 & 1) == 0 )
   {
-    sub_1C32C20(&Method_UnityEngine_GameObject_GetComponent_CostSpriteViewItemDraw___);
-    byte_4C34E5E = 1;
+    sub_1C37058(&Method_UnityEngine_GameObject_GetComponent_CostSpriteViewItemDraw___);
+    byte_4C40448 = 1;
   }
   ListViewObject__Awake((ListViewObject_o *)this, 0);
   dispObject = this->fields.dispObject;
   if ( !dispObject )
-    sub_1C32E7C(0);
+    sub_1C372B4(0);
   Component_object = UnityEngine_GameObject__GetComponent_object_(
                        dispObject,
-                       (const MethodInfo_3134970 *)Method_UnityEngine_GameObject_GetComponent_CostSpriteViewItemDraw___);
+                       (const MethodInfo_313F1D8 *)Method_UnityEngine_GameObject_GetComponent_CostSpriteViewItemDraw___);
   this->fields.itemDraw = (struct CostSpriteViewItemDraw_o *)Component_object;
-  sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.itemDraw, (int32_t)Component_object, v5, v6);
+  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.itemDraw, (int32_t)Component_object, v5, v6);
 }
 
 
@@ -45,7 +45,7 @@ void CostSpriteViewObject__Init(CostSpriteViewObject_o *this, const MethodInfo *
     || (UnityEngine_Transform__set_localPosition(transform, this->fields.basePosition, 0),
         (transform = UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0)) == 0) )
   {
-    sub_1C32E7C(transform);
+    sub_1C372B4(transform);
   }
   UnityEngine_Transform__set_localScale(transform, this->fields.baseScale, 0);
   CostSpriteViewObject__SetupDisp(this, v4);
@@ -58,7 +58,7 @@ bool CostSpriteViewObject__IsCostSpriteEnabled(CostSpriteViewObject_o *this, con
 
   itemDraw = this->fields.itemDraw;
   if ( !itemDraw || (this = (CostSpriteViewObject_o *)itemDraw->fields.costSprite) == 0 )
-    sub_1C32E7C(this);
+    sub_1C372B4(this);
   return UnityEngine_Behaviour__get_enabled((UnityEngine_Behaviour_o *)this, 0);
 }
 
@@ -72,11 +72,11 @@ void CostSpriteViewObject__OnDestroy(CostSpriteViewObject_o *this, const MethodI
   int32_t v7; // w2
   const MethodInfo *v8; // x3
 
-  if ( (byte_4C34E5F & 1) == 0 )
+  if ( (byte_4C40449 & 1) == 0 )
   {
-    sub_1C32C20(&NGUITools_TypeInfo);
-    sub_1C32C20(&UnityEngine_Object_TypeInfo);
-    byte_4C34E5F = 1;
+    sub_1C37058(&NGUITools_TypeInfo);
+    sub_1C37058(&UnityEngine_Object_TypeInfo);
+    byte_4C40449 = 1;
   }
   dragObject = this->fields.dragObject;
   p_dragObject = (CGThumbnailListItem_o *)&this->fields.dragObject;
@@ -90,7 +90,7 @@ void CostSpriteViewObject__OnDestroy(CostSpriteViewObject_o *this, const MethodI
       j_il2cpp_runtime_class_init_0(NGUITools_TypeInfo);
     NGUITools__Destroy(klass, 0);
     p_dragObject->klass = 0;
-    sub_1C32BC4(p_dragObject, 0, v7, v8);
+    sub_1C36FFC(p_dragObject, 0, v7, v8);
   }
 }
 
@@ -104,11 +104,11 @@ void CostSpriteViewObject__SetupDisp(CostSpriteViewObject_o *this, const MethodI
   const MethodInfo *v7; // x2
   CostSpriteViewItemDraw_o *v8; // x0
 
-  if ( (byte_4C34E60 & 1) == 0 )
+  if ( (byte_4C4044A & 1) == 0 )
   {
-    sub_1C32C20(&CostSpriteViewItem_TypeInfo);
-    sub_1C32C20(&UnityEngine_Object_TypeInfo);
-    byte_4C34E60 = 1;
+    sub_1C37058(&CostSpriteViewItem_TypeInfo);
+    sub_1C37058(&UnityEngine_Object_TypeInfo);
+    byte_4C4044A = 1;
   }
   linkItem = this->fields.linkItem;
   if ( linkItem
@@ -132,7 +132,7 @@ void CostSpriteViewObject__SetupDisp(CostSpriteViewObject_o *this, const MethodI
   {
     v8 = this->fields.itemDraw;
     if ( !v8 )
-      sub_1C32E7C(0);
+      sub_1C372B4(0);
     CostSpriteViewItemDraw__SetItem(v8, (CostSpriteViewItem_o *)v5, v7);
   }
 }

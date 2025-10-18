@@ -26,23 +26,23 @@ void UICenterOnClick__OnClick(UICenterOnClick_o *this, const MethodInfo *method)
   UnityEngine_Vector3_o localPosition; // 0:s0.4,4:s1.4,8:s2.4
   UnityEngine_Vector3_o v21; // 0:s0.4,4:s1.4,8:s2.4
 
-  if ( (byte_4C3BFF5 & 1) == 0 )
+  if ( (byte_4C47570 & 1) == 0 )
   {
-    sub_1C32C20(&Method_UnityEngine_Component_GetComponent_UIScrollView___);
-    sub_1C32C20(&Method_NGUITools_FindInParents_UICenterOnChild___);
-    sub_1C32C20(&Method_NGUITools_FindInParents_UIPanel___);
-    sub_1C32C20(&NGUITools_TypeInfo);
-    sub_1C32C20(&UnityEngine_Object_TypeInfo);
-    byte_4C3BFF5 = 1;
+    sub_1C37058(&Method_UnityEngine_Component_GetComponent_UIScrollView___);
+    sub_1C37058(&Method_NGUITools_FindInParents_UICenterOnChild___);
+    sub_1C37058(&Method_NGUITools_FindInParents_UIPanel___);
+    sub_1C37058(&NGUITools_TypeInfo);
+    sub_1C37058(&UnityEngine_Object_TypeInfo);
+    byte_4C47570 = 1;
   }
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
   if ( !NGUITools_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NGUITools_TypeInfo);
   v4 = NGUITools__FindInParents_object_(
          gameObject,
-         (const MethodInfo_31676B4 *)Method_NGUITools_FindInParents_UICenterOnChild___);
+         (const MethodInfo_3171F1C *)Method_NGUITools_FindInParents_UICenterOnChild___);
   v5 = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
-  v6 = NGUITools__FindInParents_object_(v5, (const MethodInfo_31676B4 *)Method_NGUITools_FindInParents_UIPanel___);
+  v6 = NGUITools__FindInParents_object_(v5, (const MethodInfo_3171F1C *)Method_NGUITools_FindInParents_UIPanel___);
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   v7 = (UnityEngine_Transform_o *)UnityEngine_Object__op_Inequality((UnityEngine_Object_o *)v4, 0, 0);
@@ -53,7 +53,7 @@ void UICenterOnClick__OnClick(UICenterOnClick_o *this, const MethodInfo *method)
       if ( UnityEngine_Behaviour__get_enabled((UnityEngine_Behaviour_o *)v4, 0) )
       {
         transform = UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0);
-        UICenterOnChild__CenterOn_49105576((UICenterOnChild_o *)v4, transform, 1, v9);
+        UICenterOnChild__CenterOn_49148688((UICenterOnChild_o *)v4, transform, 1, v9);
       }
       return;
     }
@@ -70,7 +70,7 @@ void UICenterOnClick__OnClick(UICenterOnClick_o *this, const MethodInfo *method)
         return;
       Component_object = UnityEngine_Component__GetComponent_object_(
                            (UnityEngine_Component_o *)v6,
-                           (const MethodInfo_30D3BC0 *)Method_UnityEngine_Component_GetComponent_UIScrollView___);
+                           (const MethodInfo_30DE428 *)Method_UnityEngine_Component_GetComponent_UIScrollView___);
       cachedTransform = UIRect__get_cachedTransform((UIRect_o *)v6, 0);
       v7 = UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0);
       if ( v7 )
@@ -118,6 +118,6 @@ void UICenterOnClick__OnClick(UICenterOnClick_o *this, const MethodInfo *method)
       }
     }
 LABEL_29:
-    sub_1C32E7C(v7);
+    sub_1C372B4(v7);
   }
 }

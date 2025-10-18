@@ -1,9 +1,9 @@
 void ClassBoardMissionListViewItemDraw___ctor(ClassBoardMissionListViewItemDraw_o *this, const MethodInfo *method)
 {
-  if ( (byte_4C3B430 & 1) == 0 )
+  if ( (byte_4C46B00 & 1) == 0 )
   {
-    sub_1C32C20(&MissionListViewItemDraw_TypeInfo);
-    byte_4C3B430 = 1;
+    sub_1C37058(&MissionListViewItemDraw_TypeInfo);
+    byte_4C46B00 = 1;
   }
   if ( !MissionListViewItemDraw_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(MissionListViewItemDraw_TypeInfo);
@@ -29,13 +29,13 @@ bool ClassBoardMissionListViewItemDraw__SetItem(
   __int64 v17; // x20
   UnityEngine_Color_o v19; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 
-  if ( (byte_4C3B42F & 1) == 0 )
+  if ( (byte_4C46AFF & 1) == 0 )
   {
-    sub_1C32C20(&LocalizationManager_TypeInfo);
-    sub_1C32C20(&UnityEngine_Object_TypeInfo);
-    sub_1C32C20(&StringLiteral_3410/*"CLASS_BOARD_LOCK_RELEASE_CONDITION_TITLE"*/);
-    sub_1C32C20(&StringLiteral_3409/*"CLASS_BOARD_LOCK_RELEASE_CONDITION_PROG"*/);
-    byte_4C3B42F = 1;
+    sub_1C37058(&LocalizationManager_TypeInfo);
+    sub_1C37058(&UnityEngine_Object_TypeInfo);
+    sub_1C37058(&StringLiteral_3410/*"CLASS_BOARD_LOCK_RELEASE_CONDITION_TITLE"*/);
+    sub_1C37058(&StringLiteral_3409/*"CLASS_BOARD_LOCK_RELEASE_CONDITION_PROG"*/);
+    byte_4C46AFF = 1;
   }
   conditionTitle = (UnityEngine_Object_o *)this->fields.conditionTitle;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -89,7 +89,7 @@ bool ClassBoardMissionListViewItemDraw__SetItem(
         while ( 1 )
         {
           if ( (unsigned int)v17 >= (unsigned int)max_length )
-            sub_1C32E84(v16);
+            sub_1C372BC(v16);
           missionCondLb = (System_String_o *)disableDispObjList->m_Items[v17];
           if ( !missionCondLb )
             break;
@@ -99,7 +99,7 @@ bool ClassBoardMissionListViewItemDraw__SetItem(
             goto LABEL_26;
         }
 LABEL_29:
-        sub_1C32E7C(missionCondLb);
+        sub_1C372B4(missionCondLb);
       }
     }
     else

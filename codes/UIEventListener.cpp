@@ -10,24 +10,24 @@ UIEventListener_o *UIEventListener__Get(UnityEngine_GameObject_o *go, const Meth
   Il2CppObject *Component_object; // x20
 
   v2 = go;
-  if ( (byte_4C3C1E8 & 1) == 0 )
+  if ( (byte_4C47763 & 1) == 0 )
   {
-    sub_1C32C20(&Method_UnityEngine_GameObject_AddComponent_UIEventListener___);
-    sub_1C32C20(&Method_UnityEngine_GameObject_GetComponent_UIEventListener___);
-    go = (UnityEngine_GameObject_o *)sub_1C32C20(&UnityEngine_Object_TypeInfo);
-    byte_4C3C1E8 = 1;
+    sub_1C37058(&Method_UnityEngine_GameObject_AddComponent_UIEventListener___);
+    sub_1C37058(&Method_UnityEngine_GameObject_GetComponent_UIEventListener___);
+    go = (UnityEngine_GameObject_o *)sub_1C37058(&UnityEngine_Object_TypeInfo);
+    byte_4C47763 = 1;
   }
   if ( !v2 )
-    sub_1C32E7C(go);
+    sub_1C372B4(go);
   Component_object = UnityEngine_GameObject__GetComponent_object_(
                        v2,
-                       (const MethodInfo_3134970 *)Method_UnityEngine_GameObject_GetComponent_UIEventListener___);
+                       (const MethodInfo_313F1D8 *)Method_UnityEngine_GameObject_GetComponent_UIEventListener___);
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   if ( UnityEngine_Object__op_Equality((UnityEngine_Object_o *)Component_object, 0, 0) )
     return (UIEventListener_o *)UnityEngine_GameObject__AddComponent_object_(
                                   v2,
-                                  (const MethodInfo_3134888 *)Method_UnityEngine_GameObject_AddComponent_UIEventListener___);
+                                  (const MethodInfo_313F0F0 *)Method_UnityEngine_GameObject_AddComponent_UIEventListener___);
   else
     return (UIEventListener_o *)Component_object;
 }
@@ -321,20 +321,20 @@ void UIEventListener_BoolDelegate___ctor(
   this->fields.method = method;
   this->fields.method_ptr = v4;
   this->fields.m_target = object;
-  sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.m_target, (int32_t)object, method, a4);
+  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.m_target, (int32_t)object, method, a4);
   v8 = *(unsigned __int8 *)(method + 82);
   this->fields.method_code = (intptr_t)this;
-  if ( (sub_1C32CE0(method) & 1) == 0 )
+  if ( (sub_1C37118(method) & 1) == 0 )
   {
     if ( v8 == 1 )
     {
-      v9 = sub_1A7E8D8;
+      v9 = sub_1A829E0;
       goto LABEL_6;
     }
     if ( !object )
     {
-      v11 = sub_1C32E98(0, "Delegate to an instance method cannot have null 'this'.");
-      sub_1C32D48(v11, 0);
+      v11 = sub_1C372D0(0, "Delegate to an instance method cannot have null 'this'.");
+      sub_1C37180(v11, 0);
     }
 LABEL_8:
     m_target = this->fields.m_target;
@@ -344,11 +344,11 @@ LABEL_8:
   }
   if ( v8 != 2 )
     goto LABEL_8;
-  v9 = sub_1A7E900;
+  v9 = sub_1A82A08;
 LABEL_6:
   this->fields.invoke_impl = (intptr_t)v9;
 LABEL_9:
-  this->fields.extra_arg = (intptr_t)sub_1A7E880;
+  this->fields.extra_arg = (intptr_t)sub_1A82988;
 }
 
 
@@ -367,15 +367,15 @@ System_IAsyncResult_o *UIEventListener_BoolDelegate__BeginInvoke(
   bool v14[4]; // [xsp+2Ch] [xbp-34h] BYREF
 
   v14[0] = state;
-  if ( (byte_4C3C1E9 & 1) == 0 )
+  if ( (byte_4C47764 & 1) == 0 )
   {
-    sub_1C32C20(&bool_TypeInfo);
-    byte_4C3C1E9 = 1;
+    sub_1C37058(&bool_TypeInfo);
+    byte_4C47764 = 1;
   }
   v13[2] = 0;
   v13[0] = go;
   v13[1] = j_il2cpp_value_box_0(bool_TypeInfo, v14, state, callback, object, method, v6, v7);
-  return (System_IAsyncResult_o *)sub_1C32BD4(this, v13, callback, object);
+  return (System_IAsyncResult_o *)sub_1C3700C(this, v13, callback, object);
 }
 
 
@@ -384,7 +384,7 @@ void UIEventListener_BoolDelegate__EndInvoke(
         System_IAsyncResult_o *result,
         const MethodInfo *method)
 {
-  sub_1C32BD8(result, 0, method);
+  sub_1C37010(result, 0, method);
 }
 
 
@@ -418,20 +418,20 @@ void UIEventListener_FloatDelegate___ctor(
   this->fields.method = method;
   this->fields.method_ptr = v4;
   this->fields.m_target = object;
-  sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.m_target, (int32_t)object, method, a4);
+  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.m_target, (int32_t)object, method, a4);
   v8 = *(unsigned __int8 *)(method + 82);
   this->fields.method_code = (intptr_t)this;
-  if ( (sub_1C32CE0(method) & 1) == 0 )
+  if ( (sub_1C37118(method) & 1) == 0 )
   {
     if ( v8 == 1 )
     {
-      v9 = sub_1A7E970;
+      v9 = sub_1A82A78;
       goto LABEL_6;
     }
     if ( !object )
     {
-      v11 = sub_1C32E98(0, "Delegate to an instance method cannot have null 'this'.");
-      sub_1C32D48(v11, 0);
+      v11 = sub_1C372D0(0, "Delegate to an instance method cannot have null 'this'.");
+      sub_1C37180(v11, 0);
     }
 LABEL_8:
     m_target = this->fields.m_target;
@@ -441,11 +441,11 @@ LABEL_8:
   }
   if ( v8 != 2 )
     goto LABEL_8;
-  v9 = sub_1A7E990;
+  v9 = sub_1A82A98;
 LABEL_6:
   this->fields.invoke_impl = (intptr_t)v9;
 LABEL_9:
-  this->fields.extra_arg = (intptr_t)sub_1A7E918;
+  this->fields.extra_arg = (intptr_t)sub_1A82A20;
 }
 
 
@@ -464,15 +464,15 @@ System_IAsyncResult_o *UIEventListener_FloatDelegate__BeginInvoke(
   float v15; // [xsp+2Ch] [xbp-34h] BYREF
 
   v15 = delta;
-  if ( (byte_4C3C1EA & 1) == 0 )
+  if ( (byte_4C47765 & 1) == 0 )
   {
-    sub_1C32C20(&float_TypeInfo);
-    byte_4C3C1EA = 1;
+    sub_1C37058(&float_TypeInfo);
+    byte_4C47765 = 1;
   }
   v14[2] = 0;
   v14[0] = go;
   v14[1] = j_il2cpp_value_box_0(float_TypeInfo, &v15, callback, object, method, v6, v7, v8);
-  return (System_IAsyncResult_o *)sub_1C32BD4(this, v14, callback, object);
+  return (System_IAsyncResult_o *)sub_1C3700C(this, v14, callback, object);
 }
 
 
@@ -481,7 +481,7 @@ void UIEventListener_FloatDelegate__EndInvoke(
         System_IAsyncResult_o *result,
         const MethodInfo *method)
 {
-  sub_1C32BD8(result, 0, method);
+  sub_1C37010(result, 0, method);
 }
 
 
@@ -515,20 +515,20 @@ void UIEventListener_KeyCodeDelegate___ctor(
   this->fields.method = method;
   this->fields.method_ptr = v4;
   this->fields.m_target = object;
-  sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.m_target, (int32_t)object, method, a4);
+  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.m_target, (int32_t)object, method, a4);
   v8 = *(unsigned __int8 *)(method + 82);
   this->fields.method_code = (intptr_t)this;
-  if ( (sub_1C32CE0(method) & 1) == 0 )
+  if ( (sub_1C37118(method) & 1) == 0 )
   {
     if ( v8 == 1 )
     {
-      v9 = sub_1A7EB18;
+      v9 = sub_1A82C20;
       goto LABEL_6;
     }
     if ( !object )
     {
-      v11 = sub_1C32E98(0, "Delegate to an instance method cannot have null 'this'.");
-      sub_1C32D48(v11, 0);
+      v11 = sub_1C372D0(0, "Delegate to an instance method cannot have null 'this'.");
+      sub_1C37180(v11, 0);
     }
 LABEL_8:
     m_target = this->fields.m_target;
@@ -538,11 +538,11 @@ LABEL_8:
   }
   if ( v8 != 2 )
     goto LABEL_8;
-  v9 = sub_1A7EB3C;
+  v9 = sub_1A82C44;
 LABEL_6:
   this->fields.invoke_impl = (intptr_t)v9;
 LABEL_9:
-  this->fields.extra_arg = (intptr_t)sub_1A7EAC0;
+  this->fields.extra_arg = (intptr_t)sub_1A82BC8;
 }
 
 
@@ -561,15 +561,15 @@ System_IAsyncResult_o *UIEventListener_KeyCodeDelegate__BeginInvoke(
   int32_t v14; // [xsp+2Ch] [xbp-34h] BYREF
 
   v14 = key;
-  if ( (byte_4C3C1EC & 1) == 0 )
+  if ( (byte_4C47767 & 1) == 0 )
   {
-    sub_1C32C20(&UnityEngine_KeyCode_TypeInfo);
-    byte_4C3C1EC = 1;
+    sub_1C37058(&UnityEngine_KeyCode_TypeInfo);
+    byte_4C47767 = 1;
   }
   v13[2] = 0;
   v13[0] = go;
   v13[1] = j_il2cpp_value_box_0(UnityEngine_KeyCode_TypeInfo, &v14, *(_QWORD *)&key, callback, object, method, v6, v7);
-  return (System_IAsyncResult_o *)sub_1C32BD4(this, v13, callback, object);
+  return (System_IAsyncResult_o *)sub_1C3700C(this, v13, callback, object);
 }
 
 
@@ -578,7 +578,7 @@ void UIEventListener_KeyCodeDelegate__EndInvoke(
         System_IAsyncResult_o *result,
         const MethodInfo *method)
 {
-  sub_1C32BD8(result, 0, method);
+  sub_1C37010(result, 0, method);
 }
 
 
@@ -612,20 +612,20 @@ void UIEventListener_ObjectDelegate___ctor(
   this->fields.method = method;
   this->fields.method_ptr = v4;
   this->fields.m_target = object;
-  sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.m_target, (int32_t)object, method, a4);
+  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.m_target, (int32_t)object, method, a4);
   v8 = *(unsigned __int8 *)(method + 82);
   this->fields.method_code = (intptr_t)this;
-  if ( (sub_1C32CE0(method) & 1) == 0 )
+  if ( (sub_1C37118(method) & 1) == 0 )
   {
     if ( v8 == 1 )
     {
-      v9 = sub_1A7EA88;
+      v9 = sub_1A82B90;
       goto LABEL_6;
     }
     if ( !object )
     {
-      v11 = sub_1C32E98(0, "Delegate to an instance method cannot have null 'this'.");
-      sub_1C32D48(v11, 0);
+      v11 = sub_1C372D0(0, "Delegate to an instance method cannot have null 'this'.");
+      sub_1C37180(v11, 0);
     }
 LABEL_8:
     m_target = this->fields.m_target;
@@ -635,11 +635,11 @@ LABEL_8:
   }
   if ( v8 != 2 )
     goto LABEL_8;
-  v9 = sub_1A7EAAC;
+  v9 = sub_1A82BB4;
 LABEL_6:
   this->fields.invoke_impl = (intptr_t)v9;
 LABEL_9:
-  this->fields.extra_arg = (intptr_t)sub_1A7EA30;
+  this->fields.extra_arg = (intptr_t)sub_1A82B38;
 }
 
 
@@ -655,7 +655,7 @@ System_IAsyncResult_o *UIEventListener_ObjectDelegate__BeginInvoke(
 
   v7[0] = go;
   v7[1] = obj;
-  return (System_IAsyncResult_o *)sub_1C32BD4(this, v7, callback, object);
+  return (System_IAsyncResult_o *)sub_1C3700C(this, v7, callback, object);
 }
 
 
@@ -664,7 +664,7 @@ void UIEventListener_ObjectDelegate__EndInvoke(
         System_IAsyncResult_o *result,
         const MethodInfo *method)
 {
-  sub_1C32BD8(result, 0, method);
+  sub_1C37010(result, 0, method);
 }
 
 
@@ -698,20 +698,20 @@ void UIEventListener_VectorDelegate___ctor(
   this->fields.method = method;
   this->fields.method_ptr = v4;
   this->fields.m_target = object;
-  sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.m_target, (int32_t)object, method, a4);
+  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.m_target, (int32_t)object, method, a4);
   v8 = *(unsigned __int8 *)(method + 82);
   this->fields.method_code = (intptr_t)this;
-  if ( (sub_1C32CE0(method) & 1) == 0 )
+  if ( (sub_1C37118(method) & 1) == 0 )
   {
     if ( v8 == 1 )
     {
-      v9 = sub_1A7EA00;
+      v9 = sub_1A82B08;
       goto LABEL_6;
     }
     if ( !object )
     {
-      v11 = sub_1C32E98(0, "Delegate to an instance method cannot have null 'this'.");
-      sub_1C32D48(v11, 0);
+      v11 = sub_1C372D0(0, "Delegate to an instance method cannot have null 'this'.");
+      sub_1C37180(v11, 0);
     }
 LABEL_8:
     m_target = this->fields.m_target;
@@ -721,11 +721,11 @@ LABEL_8:
   }
   if ( v8 != 2 )
     goto LABEL_8;
-  v9 = sub_1A7EA20;
+  v9 = sub_1A82B28;
 LABEL_6:
   this->fields.invoke_impl = (intptr_t)v9;
 LABEL_9:
-  this->fields.extra_arg = (intptr_t)sub_1A7E9A0;
+  this->fields.extra_arg = (intptr_t)sub_1A82AA8;
 }
 
 
@@ -744,15 +744,15 @@ System_IAsyncResult_o *UIEventListener_VectorDelegate__BeginInvoke(
   UnityEngine_Vector2_o v15; // [xsp+28h] [xbp-38h] BYREF
 
   v15 = delta;
-  if ( (byte_4C3C1EB & 1) == 0 )
+  if ( (byte_4C47766 & 1) == 0 )
   {
-    sub_1C32C20(&UnityEngine_Vector2_TypeInfo);
-    byte_4C3C1EB = 1;
+    sub_1C37058(&UnityEngine_Vector2_TypeInfo);
+    byte_4C47766 = 1;
   }
   v14[2] = 0;
   v14[0] = go;
   v14[1] = j_il2cpp_value_box_0(UnityEngine_Vector2_TypeInfo, &v15, callback, object, method, v6, v7, v8);
-  return (System_IAsyncResult_o *)sub_1C32BD4(this, v14, callback, object);
+  return (System_IAsyncResult_o *)sub_1C3700C(this, v14, callback, object);
 }
 
 
@@ -761,7 +761,7 @@ void UIEventListener_VectorDelegate__EndInvoke(
         System_IAsyncResult_o *result,
         const MethodInfo *method)
 {
-  sub_1C32BD8(result, 0, method);
+  sub_1C37010(result, 0, method);
 }
 
 
@@ -797,14 +797,14 @@ void UIEventListener_VoidDelegate___ctor(
   this->fields.method = method;
   this->fields.method_ptr = v4;
   this->fields.m_target = object;
-  sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.m_target, (int32_t)object, method, a4);
+  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.m_target, (int32_t)object, method, a4);
   v8 = *(unsigned __int8 *)(method + 82);
   this->fields.method_code = (intptr_t)this;
-  if ( (sub_1C32CE0(method) & 1) != 0 )
+  if ( (sub_1C37118(method) & 1) != 0 )
   {
     if ( v8 == 1 )
     {
-      v9 = sub_1A7E870;
+      v9 = sub_1A82978;
 LABEL_8:
       this->fields.invoke_impl = (intptr_t)v9;
       goto LABEL_9;
@@ -814,20 +814,20 @@ LABEL_8:
   {
     if ( !v8 )
     {
-      v9 = sub_1A7E850;
+      v9 = sub_1A82958;
       goto LABEL_8;
     }
     if ( !object )
     {
-      v11 = sub_1C32E98(0, "Delegate to an instance method cannot have null 'this'.");
-      sub_1C32D48(v11, 0);
+      v11 = sub_1C372D0(0, "Delegate to an instance method cannot have null 'this'.");
+      sub_1C37180(v11, 0);
     }
   }
   m_target = this->fields.m_target;
   this->fields.invoke_impl = this->fields.method_ptr;
   this->fields.method_code = (intptr_t)m_target;
 LABEL_9:
-  this->fields.extra_arg = (intptr_t)sub_1A7E808;
+  this->fields.extra_arg = (intptr_t)sub_1A82910;
 }
 
 
@@ -841,7 +841,7 @@ System_IAsyncResult_o *UIEventListener_VoidDelegate__BeginInvoke(
   UnityEngine_GameObject_o *v6; // [xsp+0h] [xbp-20h] BYREF
 
   v6 = go;
-  return (System_IAsyncResult_o *)sub_1C32BD4(this, &v6, callback, object);
+  return (System_IAsyncResult_o *)sub_1C3700C(this, &v6, callback, object);
 }
 
 
@@ -850,7 +850,7 @@ void UIEventListener_VoidDelegate__EndInvoke(
         System_IAsyncResult_o *result,
         const MethodInfo *method)
 {
-  sub_1C32BD8(result, 0, method);
+  sub_1C37010(result, 0, method);
 }
 
 

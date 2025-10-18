@@ -40,90 +40,90 @@ void UIEventTrigger___ctor(UIEventTrigger_o *this, const MethodInfo *method)
   int32_t v40; // w2
   const MethodInfo *v41; // x3
 
-  if ( (byte_4C3C02A & 1) == 0 )
+  if ( (byte_4C475A5 & 1) == 0 )
   {
-    sub_1C32C20(&Method_System_Collections_Generic_List_EventDelegate___ctor__);
-    sub_1C32C20(&System_Collections_Generic_List_EventDelegate__TypeInfo);
-    byte_4C3C02A = 1;
+    sub_1C37058(&Method_System_Collections_Generic_List_EventDelegate___ctor__);
+    sub_1C37058(&System_Collections_Generic_List_EventDelegate__TypeInfo);
+    byte_4C475A5 = 1;
   }
-  v3 = (System_Collections_Generic_List_object__o *)sub_1C32E6C(System_Collections_Generic_List_EventDelegate__TypeInfo);
+  v3 = (System_Collections_Generic_List_object__o *)sub_1C372A4(System_Collections_Generic_List_EventDelegate__TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v3,
-    (const MethodInfo_3797F88 *)Method_System_Collections_Generic_List_EventDelegate___ctor__);
+    (const MethodInfo_37A27F0 *)Method_System_Collections_Generic_List_EventDelegate___ctor__);
   this->fields.onHoverOver = (struct System_Collections_Generic_List_EventDelegate__o *)v3;
-  sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.onHoverOver, (int32_t)v3, v4, v5);
-  v6 = (System_Collections_Generic_List_object__o *)sub_1C32E6C(System_Collections_Generic_List_EventDelegate__TypeInfo);
+  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.onHoverOver, (int32_t)v3, v4, v5);
+  v6 = (System_Collections_Generic_List_object__o *)sub_1C372A4(System_Collections_Generic_List_EventDelegate__TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v6,
-    (const MethodInfo_3797F88 *)Method_System_Collections_Generic_List_EventDelegate___ctor__);
+    (const MethodInfo_37A27F0 *)Method_System_Collections_Generic_List_EventDelegate___ctor__);
   this->fields.onHoverOut = (struct System_Collections_Generic_List_EventDelegate__o *)v6;
-  sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.onHoverOut, (int32_t)v6, v7, v8);
-  v9 = (System_Collections_Generic_List_object__o *)sub_1C32E6C(System_Collections_Generic_List_EventDelegate__TypeInfo);
+  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.onHoverOut, (int32_t)v6, v7, v8);
+  v9 = (System_Collections_Generic_List_object__o *)sub_1C372A4(System_Collections_Generic_List_EventDelegate__TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v9,
-    (const MethodInfo_3797F88 *)Method_System_Collections_Generic_List_EventDelegate___ctor__);
+    (const MethodInfo_37A27F0 *)Method_System_Collections_Generic_List_EventDelegate___ctor__);
   this->fields.onPress = (struct System_Collections_Generic_List_EventDelegate__o *)v9;
-  sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.onPress, (int32_t)v9, v10, v11);
-  v12 = (System_Collections_Generic_List_object__o *)sub_1C32E6C(System_Collections_Generic_List_EventDelegate__TypeInfo);
+  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.onPress, (int32_t)v9, v10, v11);
+  v12 = (System_Collections_Generic_List_object__o *)sub_1C372A4(System_Collections_Generic_List_EventDelegate__TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v12,
-    (const MethodInfo_3797F88 *)Method_System_Collections_Generic_List_EventDelegate___ctor__);
+    (const MethodInfo_37A27F0 *)Method_System_Collections_Generic_List_EventDelegate___ctor__);
   this->fields.onRelease = (struct System_Collections_Generic_List_EventDelegate__o *)v12;
-  sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.onRelease, (int32_t)v12, v13, v14);
-  v15 = (System_Collections_Generic_List_object__o *)sub_1C32E6C(System_Collections_Generic_List_EventDelegate__TypeInfo);
+  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.onRelease, (int32_t)v12, v13, v14);
+  v15 = (System_Collections_Generic_List_object__o *)sub_1C372A4(System_Collections_Generic_List_EventDelegate__TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v15,
-    (const MethodInfo_3797F88 *)Method_System_Collections_Generic_List_EventDelegate___ctor__);
+    (const MethodInfo_37A27F0 *)Method_System_Collections_Generic_List_EventDelegate___ctor__);
   this->fields.onSelect = (struct System_Collections_Generic_List_EventDelegate__o *)v15;
-  sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.onSelect, (int32_t)v15, v16, v17);
-  v18 = (System_Collections_Generic_List_object__o *)sub_1C32E6C(System_Collections_Generic_List_EventDelegate__TypeInfo);
+  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.onSelect, (int32_t)v15, v16, v17);
+  v18 = (System_Collections_Generic_List_object__o *)sub_1C372A4(System_Collections_Generic_List_EventDelegate__TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v18,
-    (const MethodInfo_3797F88 *)Method_System_Collections_Generic_List_EventDelegate___ctor__);
+    (const MethodInfo_37A27F0 *)Method_System_Collections_Generic_List_EventDelegate___ctor__);
   this->fields.onDeselect = (struct System_Collections_Generic_List_EventDelegate__o *)v18;
-  sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.onDeselect, (int32_t)v18, v19, v20);
-  v21 = (System_Collections_Generic_List_object__o *)sub_1C32E6C(System_Collections_Generic_List_EventDelegate__TypeInfo);
+  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.onDeselect, (int32_t)v18, v19, v20);
+  v21 = (System_Collections_Generic_List_object__o *)sub_1C372A4(System_Collections_Generic_List_EventDelegate__TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v21,
-    (const MethodInfo_3797F88 *)Method_System_Collections_Generic_List_EventDelegate___ctor__);
+    (const MethodInfo_37A27F0 *)Method_System_Collections_Generic_List_EventDelegate___ctor__);
   this->fields.onClick = (struct System_Collections_Generic_List_EventDelegate__o *)v21;
-  sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.onClick, (int32_t)v21, v22, v23);
-  v24 = (System_Collections_Generic_List_object__o *)sub_1C32E6C(System_Collections_Generic_List_EventDelegate__TypeInfo);
+  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.onClick, (int32_t)v21, v22, v23);
+  v24 = (System_Collections_Generic_List_object__o *)sub_1C372A4(System_Collections_Generic_List_EventDelegate__TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v24,
-    (const MethodInfo_3797F88 *)Method_System_Collections_Generic_List_EventDelegate___ctor__);
+    (const MethodInfo_37A27F0 *)Method_System_Collections_Generic_List_EventDelegate___ctor__);
   this->fields.onDoubleClick = (struct System_Collections_Generic_List_EventDelegate__o *)v24;
-  sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.onDoubleClick, (int32_t)v24, v25, v26);
-  v27 = (System_Collections_Generic_List_object__o *)sub_1C32E6C(System_Collections_Generic_List_EventDelegate__TypeInfo);
+  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.onDoubleClick, (int32_t)v24, v25, v26);
+  v27 = (System_Collections_Generic_List_object__o *)sub_1C372A4(System_Collections_Generic_List_EventDelegate__TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v27,
-    (const MethodInfo_3797F88 *)Method_System_Collections_Generic_List_EventDelegate___ctor__);
+    (const MethodInfo_37A27F0 *)Method_System_Collections_Generic_List_EventDelegate___ctor__);
   this->fields.onDragStart = (struct System_Collections_Generic_List_EventDelegate__o *)v27;
-  sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.onDragStart, (int32_t)v27, v28, v29);
-  v30 = (System_Collections_Generic_List_object__o *)sub_1C32E6C(System_Collections_Generic_List_EventDelegate__TypeInfo);
+  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.onDragStart, (int32_t)v27, v28, v29);
+  v30 = (System_Collections_Generic_List_object__o *)sub_1C372A4(System_Collections_Generic_List_EventDelegate__TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v30,
-    (const MethodInfo_3797F88 *)Method_System_Collections_Generic_List_EventDelegate___ctor__);
+    (const MethodInfo_37A27F0 *)Method_System_Collections_Generic_List_EventDelegate___ctor__);
   this->fields.onDragEnd = (struct System_Collections_Generic_List_EventDelegate__o *)v30;
-  sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.onDragEnd, (int32_t)v30, v31, v32);
-  v33 = (System_Collections_Generic_List_object__o *)sub_1C32E6C(System_Collections_Generic_List_EventDelegate__TypeInfo);
+  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.onDragEnd, (int32_t)v30, v31, v32);
+  v33 = (System_Collections_Generic_List_object__o *)sub_1C372A4(System_Collections_Generic_List_EventDelegate__TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v33,
-    (const MethodInfo_3797F88 *)Method_System_Collections_Generic_List_EventDelegate___ctor__);
+    (const MethodInfo_37A27F0 *)Method_System_Collections_Generic_List_EventDelegate___ctor__);
   this->fields.onDragOver = (struct System_Collections_Generic_List_EventDelegate__o *)v33;
-  sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.onDragOver, (int32_t)v33, v34, v35);
-  v36 = (System_Collections_Generic_List_object__o *)sub_1C32E6C(System_Collections_Generic_List_EventDelegate__TypeInfo);
+  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.onDragOver, (int32_t)v33, v34, v35);
+  v36 = (System_Collections_Generic_List_object__o *)sub_1C372A4(System_Collections_Generic_List_EventDelegate__TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v36,
-    (const MethodInfo_3797F88 *)Method_System_Collections_Generic_List_EventDelegate___ctor__);
+    (const MethodInfo_37A27F0 *)Method_System_Collections_Generic_List_EventDelegate___ctor__);
   this->fields.onDragOut = (struct System_Collections_Generic_List_EventDelegate__o *)v36;
-  sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.onDragOut, (int32_t)v36, v37, v38);
-  v39 = (System_Collections_Generic_List_object__o *)sub_1C32E6C(System_Collections_Generic_List_EventDelegate__TypeInfo);
+  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.onDragOut, (int32_t)v36, v37, v38);
+  v39 = (System_Collections_Generic_List_object__o *)sub_1C372A4(System_Collections_Generic_List_EventDelegate__TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v39,
-    (const MethodInfo_3797F88 *)Method_System_Collections_Generic_List_EventDelegate___ctor__);
+    (const MethodInfo_37A27F0 *)Method_System_Collections_Generic_List_EventDelegate___ctor__);
   this->fields.onDrag = (struct System_Collections_Generic_List_EventDelegate__o *)v39;
-  sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.onDrag, (int32_t)v39, v40, v41);
+  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.onDrag, (int32_t)v39, v40, v41);
   UnityEngine_MonoBehaviour___ctor((UnityEngine_MonoBehaviour_o *)this, 0);
 }
 
@@ -137,12 +137,12 @@ void UIEventTrigger__OnClick(UIEventTrigger_o *this, const MethodInfo *method)
   int32_t v7; // w2
   const MethodInfo *v8; // x3
 
-  if ( (byte_4C3C023 & 1) == 0 )
+  if ( (byte_4C4759E & 1) == 0 )
   {
-    sub_1C32C20(&EventDelegate_TypeInfo);
-    sub_1C32C20(&UnityEngine_Object_TypeInfo);
-    sub_1C32C20(&UIEventTrigger_TypeInfo);
-    byte_4C3C023 = 1;
+    sub_1C37058(&EventDelegate_TypeInfo);
+    sub_1C37058(&UnityEngine_Object_TypeInfo);
+    sub_1C37058(&UIEventTrigger_TypeInfo);
+    byte_4C4759E = 1;
   }
   current = (UnityEngine_Object_o *)UIEventTrigger_TypeInfo->static_fields->current;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -150,13 +150,13 @@ void UIEventTrigger__OnClick(UIEventTrigger_o *this, const MethodInfo *method)
   if ( !UnityEngine_Object__op_Inequality(current, 0, 0) )
   {
     UIEventTrigger_TypeInfo->static_fields->current = this;
-    sub_1C32BC4((CGThumbnailListItem_o *)UIEventTrigger_TypeInfo->static_fields, (int32_t)this, v4, v5);
+    sub_1C36FFC((CGThumbnailListItem_o *)UIEventTrigger_TypeInfo->static_fields, (int32_t)this, v4, v5);
     onClick = this->fields.onClick;
     if ( !EventDelegate_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(EventDelegate_TypeInfo);
-    EventDelegate__Execute_49177388(onClick, 0);
+    EventDelegate__Execute_49220500(onClick, 0);
     UIEventTrigger_TypeInfo->static_fields->current = 0;
-    sub_1C32BC4((CGThumbnailListItem_o *)UIEventTrigger_TypeInfo->static_fields, 0, v7, v8);
+    sub_1C36FFC((CGThumbnailListItem_o *)UIEventTrigger_TypeInfo->static_fields, 0, v7, v8);
   }
 }
 
@@ -170,12 +170,12 @@ void UIEventTrigger__OnDoubleClick(UIEventTrigger_o *this, const MethodInfo *met
   int32_t v7; // w2
   const MethodInfo *v8; // x3
 
-  if ( (byte_4C3C024 & 1) == 0 )
+  if ( (byte_4C4759F & 1) == 0 )
   {
-    sub_1C32C20(&EventDelegate_TypeInfo);
-    sub_1C32C20(&UnityEngine_Object_TypeInfo);
-    sub_1C32C20(&UIEventTrigger_TypeInfo);
-    byte_4C3C024 = 1;
+    sub_1C37058(&EventDelegate_TypeInfo);
+    sub_1C37058(&UnityEngine_Object_TypeInfo);
+    sub_1C37058(&UIEventTrigger_TypeInfo);
+    byte_4C4759F = 1;
   }
   current = (UnityEngine_Object_o *)UIEventTrigger_TypeInfo->static_fields->current;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -183,13 +183,13 @@ void UIEventTrigger__OnDoubleClick(UIEventTrigger_o *this, const MethodInfo *met
   if ( !UnityEngine_Object__op_Inequality(current, 0, 0) )
   {
     UIEventTrigger_TypeInfo->static_fields->current = this;
-    sub_1C32BC4((CGThumbnailListItem_o *)UIEventTrigger_TypeInfo->static_fields, (int32_t)this, v4, v5);
+    sub_1C36FFC((CGThumbnailListItem_o *)UIEventTrigger_TypeInfo->static_fields, (int32_t)this, v4, v5);
     onDoubleClick = this->fields.onDoubleClick;
     if ( !EventDelegate_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(EventDelegate_TypeInfo);
-    EventDelegate__Execute_49177388(onDoubleClick, 0);
+    EventDelegate__Execute_49220500(onDoubleClick, 0);
     UIEventTrigger_TypeInfo->static_fields->current = 0;
-    sub_1C32BC4((CGThumbnailListItem_o *)UIEventTrigger_TypeInfo->static_fields, 0, v7, v8);
+    sub_1C36FFC((CGThumbnailListItem_o *)UIEventTrigger_TypeInfo->static_fields, 0, v7, v8);
   }
 }
 
@@ -203,12 +203,12 @@ void UIEventTrigger__OnDrag(UIEventTrigger_o *this, UnityEngine_Vector2_o delta,
   int32_t v8; // w2
   const MethodInfo *v9; // x3
 
-  if ( (byte_4C3C029 & 1) == 0 )
+  if ( (byte_4C475A4 & 1) == 0 )
   {
-    sub_1C32C20(&EventDelegate_TypeInfo);
-    sub_1C32C20(&UnityEngine_Object_TypeInfo);
-    sub_1C32C20(&UIEventTrigger_TypeInfo);
-    byte_4C3C029 = 1;
+    sub_1C37058(&EventDelegate_TypeInfo);
+    sub_1C37058(&UnityEngine_Object_TypeInfo);
+    sub_1C37058(&UIEventTrigger_TypeInfo);
+    byte_4C475A4 = 1;
   }
   current = (UnityEngine_Object_o *)UIEventTrigger_TypeInfo->static_fields->current;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -216,13 +216,13 @@ void UIEventTrigger__OnDrag(UIEventTrigger_o *this, UnityEngine_Vector2_o delta,
   if ( !UnityEngine_Object__op_Inequality(current, 0, 0) )
   {
     UIEventTrigger_TypeInfo->static_fields->current = this;
-    sub_1C32BC4((CGThumbnailListItem_o *)UIEventTrigger_TypeInfo->static_fields, (int32_t)this, v5, v6);
+    sub_1C36FFC((CGThumbnailListItem_o *)UIEventTrigger_TypeInfo->static_fields, (int32_t)this, v5, v6);
     onDrag = this->fields.onDrag;
     if ( !EventDelegate_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(EventDelegate_TypeInfo);
-    EventDelegate__Execute_49177388(onDrag, 0);
+    EventDelegate__Execute_49220500(onDrag, 0);
     UIEventTrigger_TypeInfo->static_fields->current = 0;
-    sub_1C32BC4((CGThumbnailListItem_o *)UIEventTrigger_TypeInfo->static_fields, 0, v8, v9);
+    sub_1C36FFC((CGThumbnailListItem_o *)UIEventTrigger_TypeInfo->static_fields, 0, v8, v9);
   }
 }
 
@@ -236,12 +236,12 @@ void UIEventTrigger__OnDragEnd(UIEventTrigger_o *this, const MethodInfo *method)
   int32_t v7; // w2
   const MethodInfo *v8; // x3
 
-  if ( (byte_4C3C026 & 1) == 0 )
+  if ( (byte_4C475A1 & 1) == 0 )
   {
-    sub_1C32C20(&EventDelegate_TypeInfo);
-    sub_1C32C20(&UnityEngine_Object_TypeInfo);
-    sub_1C32C20(&UIEventTrigger_TypeInfo);
-    byte_4C3C026 = 1;
+    sub_1C37058(&EventDelegate_TypeInfo);
+    sub_1C37058(&UnityEngine_Object_TypeInfo);
+    sub_1C37058(&UIEventTrigger_TypeInfo);
+    byte_4C475A1 = 1;
   }
   current = (UnityEngine_Object_o *)UIEventTrigger_TypeInfo->static_fields->current;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -249,13 +249,13 @@ void UIEventTrigger__OnDragEnd(UIEventTrigger_o *this, const MethodInfo *method)
   if ( !UnityEngine_Object__op_Inequality(current, 0, 0) )
   {
     UIEventTrigger_TypeInfo->static_fields->current = this;
-    sub_1C32BC4((CGThumbnailListItem_o *)UIEventTrigger_TypeInfo->static_fields, (int32_t)this, v4, v5);
+    sub_1C36FFC((CGThumbnailListItem_o *)UIEventTrigger_TypeInfo->static_fields, (int32_t)this, v4, v5);
     onDragEnd = this->fields.onDragEnd;
     if ( !EventDelegate_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(EventDelegate_TypeInfo);
-    EventDelegate__Execute_49177388(onDragEnd, 0);
+    EventDelegate__Execute_49220500(onDragEnd, 0);
     UIEventTrigger_TypeInfo->static_fields->current = 0;
-    sub_1C32BC4((CGThumbnailListItem_o *)UIEventTrigger_TypeInfo->static_fields, 0, v7, v8);
+    sub_1C36FFC((CGThumbnailListItem_o *)UIEventTrigger_TypeInfo->static_fields, 0, v7, v8);
   }
 }
 
@@ -269,12 +269,12 @@ void UIEventTrigger__OnDragOut(UIEventTrigger_o *this, UnityEngine_GameObject_o 
   int32_t v8; // w2
   const MethodInfo *v9; // x3
 
-  if ( (byte_4C3C028 & 1) == 0 )
+  if ( (byte_4C475A3 & 1) == 0 )
   {
-    sub_1C32C20(&EventDelegate_TypeInfo);
-    sub_1C32C20(&UnityEngine_Object_TypeInfo);
-    sub_1C32C20(&UIEventTrigger_TypeInfo);
-    byte_4C3C028 = 1;
+    sub_1C37058(&EventDelegate_TypeInfo);
+    sub_1C37058(&UnityEngine_Object_TypeInfo);
+    sub_1C37058(&UIEventTrigger_TypeInfo);
+    byte_4C475A3 = 1;
   }
   current = (UnityEngine_Object_o *)UIEventTrigger_TypeInfo->static_fields->current;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -282,13 +282,13 @@ void UIEventTrigger__OnDragOut(UIEventTrigger_o *this, UnityEngine_GameObject_o 
   if ( !UnityEngine_Object__op_Inequality(current, 0, 0) )
   {
     UIEventTrigger_TypeInfo->static_fields->current = this;
-    sub_1C32BC4((CGThumbnailListItem_o *)UIEventTrigger_TypeInfo->static_fields, (int32_t)this, v5, v6);
+    sub_1C36FFC((CGThumbnailListItem_o *)UIEventTrigger_TypeInfo->static_fields, (int32_t)this, v5, v6);
     onDragOut = this->fields.onDragOut;
     if ( !EventDelegate_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(EventDelegate_TypeInfo);
-    EventDelegate__Execute_49177388(onDragOut, 0);
+    EventDelegate__Execute_49220500(onDragOut, 0);
     UIEventTrigger_TypeInfo->static_fields->current = 0;
-    sub_1C32BC4((CGThumbnailListItem_o *)UIEventTrigger_TypeInfo->static_fields, 0, v8, v9);
+    sub_1C36FFC((CGThumbnailListItem_o *)UIEventTrigger_TypeInfo->static_fields, 0, v8, v9);
   }
 }
 
@@ -302,12 +302,12 @@ void UIEventTrigger__OnDragOver(UIEventTrigger_o *this, UnityEngine_GameObject_o
   int32_t v8; // w2
   const MethodInfo *v9; // x3
 
-  if ( (byte_4C3C027 & 1) == 0 )
+  if ( (byte_4C475A2 & 1) == 0 )
   {
-    sub_1C32C20(&EventDelegate_TypeInfo);
-    sub_1C32C20(&UnityEngine_Object_TypeInfo);
-    sub_1C32C20(&UIEventTrigger_TypeInfo);
-    byte_4C3C027 = 1;
+    sub_1C37058(&EventDelegate_TypeInfo);
+    sub_1C37058(&UnityEngine_Object_TypeInfo);
+    sub_1C37058(&UIEventTrigger_TypeInfo);
+    byte_4C475A2 = 1;
   }
   current = (UnityEngine_Object_o *)UIEventTrigger_TypeInfo->static_fields->current;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -315,13 +315,13 @@ void UIEventTrigger__OnDragOver(UIEventTrigger_o *this, UnityEngine_GameObject_o
   if ( !UnityEngine_Object__op_Inequality(current, 0, 0) )
   {
     UIEventTrigger_TypeInfo->static_fields->current = this;
-    sub_1C32BC4((CGThumbnailListItem_o *)UIEventTrigger_TypeInfo->static_fields, (int32_t)this, v5, v6);
+    sub_1C36FFC((CGThumbnailListItem_o *)UIEventTrigger_TypeInfo->static_fields, (int32_t)this, v5, v6);
     onDragOver = this->fields.onDragOver;
     if ( !EventDelegate_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(EventDelegate_TypeInfo);
-    EventDelegate__Execute_49177388(onDragOver, 0);
+    EventDelegate__Execute_49220500(onDragOver, 0);
     UIEventTrigger_TypeInfo->static_fields->current = 0;
-    sub_1C32BC4((CGThumbnailListItem_o *)UIEventTrigger_TypeInfo->static_fields, 0, v8, v9);
+    sub_1C36FFC((CGThumbnailListItem_o *)UIEventTrigger_TypeInfo->static_fields, 0, v8, v9);
   }
 }
 
@@ -335,12 +335,12 @@ void UIEventTrigger__OnDragStart(UIEventTrigger_o *this, const MethodInfo *metho
   int32_t v7; // w2
   const MethodInfo *v8; // x3
 
-  if ( (byte_4C3C025 & 1) == 0 )
+  if ( (byte_4C475A0 & 1) == 0 )
   {
-    sub_1C32C20(&EventDelegate_TypeInfo);
-    sub_1C32C20(&UnityEngine_Object_TypeInfo);
-    sub_1C32C20(&UIEventTrigger_TypeInfo);
-    byte_4C3C025 = 1;
+    sub_1C37058(&EventDelegate_TypeInfo);
+    sub_1C37058(&UnityEngine_Object_TypeInfo);
+    sub_1C37058(&UIEventTrigger_TypeInfo);
+    byte_4C475A0 = 1;
   }
   current = (UnityEngine_Object_o *)UIEventTrigger_TypeInfo->static_fields->current;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -348,13 +348,13 @@ void UIEventTrigger__OnDragStart(UIEventTrigger_o *this, const MethodInfo *metho
   if ( !UnityEngine_Object__op_Inequality(current, 0, 0) )
   {
     UIEventTrigger_TypeInfo->static_fields->current = this;
-    sub_1C32BC4((CGThumbnailListItem_o *)UIEventTrigger_TypeInfo->static_fields, (int32_t)this, v4, v5);
+    sub_1C36FFC((CGThumbnailListItem_o *)UIEventTrigger_TypeInfo->static_fields, (int32_t)this, v4, v5);
     onDragStart = this->fields.onDragStart;
     if ( !EventDelegate_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(EventDelegate_TypeInfo);
-    EventDelegate__Execute_49177388(onDragStart, 0);
+    EventDelegate__Execute_49220500(onDragStart, 0);
     UIEventTrigger_TypeInfo->static_fields->current = 0;
-    sub_1C32BC4((CGThumbnailListItem_o *)UIEventTrigger_TypeInfo->static_fields, 0, v7, v8);
+    sub_1C36FFC((CGThumbnailListItem_o *)UIEventTrigger_TypeInfo->static_fields, 0, v7, v8);
   }
 }
 
@@ -368,12 +368,12 @@ void UIEventTrigger__OnHover(UIEventTrigger_o *this, bool isOver, const MethodIn
   int32_t v9; // w2
   const MethodInfo *v10; // x3
 
-  if ( (byte_4C3C020 & 1) == 0 )
+  if ( (byte_4C4759B & 1) == 0 )
   {
-    sub_1C32C20(&EventDelegate_TypeInfo);
-    sub_1C32C20(&UnityEngine_Object_TypeInfo);
-    sub_1C32C20(&UIEventTrigger_TypeInfo);
-    byte_4C3C020 = 1;
+    sub_1C37058(&EventDelegate_TypeInfo);
+    sub_1C37058(&UnityEngine_Object_TypeInfo);
+    sub_1C37058(&UIEventTrigger_TypeInfo);
+    byte_4C4759B = 1;
   }
   current = (UnityEngine_Object_o *)UIEventTrigger_TypeInfo->static_fields->current;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -381,16 +381,16 @@ void UIEventTrigger__OnHover(UIEventTrigger_o *this, bool isOver, const MethodIn
   if ( !UnityEngine_Object__op_Inequality(current, 0, 0) )
   {
     UIEventTrigger_TypeInfo->static_fields->current = this;
-    sub_1C32BC4((CGThumbnailListItem_o *)UIEventTrigger_TypeInfo->static_fields, (int32_t)this, v6, v7);
+    sub_1C36FFC((CGThumbnailListItem_o *)UIEventTrigger_TypeInfo->static_fields, (int32_t)this, v6, v7);
     if ( isOver )
       onHoverOver = this->fields.onHoverOver;
     else
       onHoverOver = this->fields.onHoverOut;
     if ( !EventDelegate_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(EventDelegate_TypeInfo);
-    EventDelegate__Execute_49177388(onHoverOver, 0);
+    EventDelegate__Execute_49220500(onHoverOver, 0);
     UIEventTrigger_TypeInfo->static_fields->current = 0;
-    sub_1C32BC4((CGThumbnailListItem_o *)UIEventTrigger_TypeInfo->static_fields, 0, v9, v10);
+    sub_1C36FFC((CGThumbnailListItem_o *)UIEventTrigger_TypeInfo->static_fields, 0, v9, v10);
   }
 }
 
@@ -404,12 +404,12 @@ void UIEventTrigger__OnPress(UIEventTrigger_o *this, bool pressed, const MethodI
   int32_t v9; // w2
   const MethodInfo *v10; // x3
 
-  if ( (byte_4C3C021 & 1) == 0 )
+  if ( (byte_4C4759C & 1) == 0 )
   {
-    sub_1C32C20(&EventDelegate_TypeInfo);
-    sub_1C32C20(&UnityEngine_Object_TypeInfo);
-    sub_1C32C20(&UIEventTrigger_TypeInfo);
-    byte_4C3C021 = 1;
+    sub_1C37058(&EventDelegate_TypeInfo);
+    sub_1C37058(&UnityEngine_Object_TypeInfo);
+    sub_1C37058(&UIEventTrigger_TypeInfo);
+    byte_4C4759C = 1;
   }
   current = (UnityEngine_Object_o *)UIEventTrigger_TypeInfo->static_fields->current;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -417,16 +417,16 @@ void UIEventTrigger__OnPress(UIEventTrigger_o *this, bool pressed, const MethodI
   if ( !UnityEngine_Object__op_Inequality(current, 0, 0) )
   {
     UIEventTrigger_TypeInfo->static_fields->current = this;
-    sub_1C32BC4((CGThumbnailListItem_o *)UIEventTrigger_TypeInfo->static_fields, (int32_t)this, v6, v7);
+    sub_1C36FFC((CGThumbnailListItem_o *)UIEventTrigger_TypeInfo->static_fields, (int32_t)this, v6, v7);
     if ( pressed )
       onPress = this->fields.onPress;
     else
       onPress = this->fields.onRelease;
     if ( !EventDelegate_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(EventDelegate_TypeInfo);
-    EventDelegate__Execute_49177388(onPress, 0);
+    EventDelegate__Execute_49220500(onPress, 0);
     UIEventTrigger_TypeInfo->static_fields->current = 0;
-    sub_1C32BC4((CGThumbnailListItem_o *)UIEventTrigger_TypeInfo->static_fields, 0, v9, v10);
+    sub_1C36FFC((CGThumbnailListItem_o *)UIEventTrigger_TypeInfo->static_fields, 0, v9, v10);
   }
 }
 
@@ -440,12 +440,12 @@ void UIEventTrigger__OnSelect(UIEventTrigger_o *this, bool selected, const Metho
   int32_t v9; // w2
   const MethodInfo *v10; // x3
 
-  if ( (byte_4C3C022 & 1) == 0 )
+  if ( (byte_4C4759D & 1) == 0 )
   {
-    sub_1C32C20(&EventDelegate_TypeInfo);
-    sub_1C32C20(&UnityEngine_Object_TypeInfo);
-    sub_1C32C20(&UIEventTrigger_TypeInfo);
-    byte_4C3C022 = 1;
+    sub_1C37058(&EventDelegate_TypeInfo);
+    sub_1C37058(&UnityEngine_Object_TypeInfo);
+    sub_1C37058(&UIEventTrigger_TypeInfo);
+    byte_4C4759D = 1;
   }
   current = (UnityEngine_Object_o *)UIEventTrigger_TypeInfo->static_fields->current;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -453,15 +453,15 @@ void UIEventTrigger__OnSelect(UIEventTrigger_o *this, bool selected, const Metho
   if ( !UnityEngine_Object__op_Inequality(current, 0, 0) )
   {
     UIEventTrigger_TypeInfo->static_fields->current = this;
-    sub_1C32BC4((CGThumbnailListItem_o *)UIEventTrigger_TypeInfo->static_fields, (int32_t)this, v6, v7);
+    sub_1C36FFC((CGThumbnailListItem_o *)UIEventTrigger_TypeInfo->static_fields, (int32_t)this, v6, v7);
     if ( selected )
       onSelect = this->fields.onSelect;
     else
       onSelect = this->fields.onDeselect;
     if ( !EventDelegate_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(EventDelegate_TypeInfo);
-    EventDelegate__Execute_49177388(onSelect, 0);
+    EventDelegate__Execute_49220500(onSelect, 0);
     UIEventTrigger_TypeInfo->static_fields->current = 0;
-    sub_1C32BC4((CGThumbnailListItem_o *)UIEventTrigger_TypeInfo->static_fields, 0, v9, v10);
+    sub_1C36FFC((CGThumbnailListItem_o *)UIEventTrigger_TypeInfo->static_fields, 0, v9, v10);
   }
 }

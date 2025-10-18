@@ -2,7 +2,7 @@ void BattleCallBack___Il2CppFullySharedGenericType____ctor(
         BattleCallBack_T__o *this,
         Unity_IL2CPP_Metadata___Il2CppFullySharedGenericType_o argument,
         System_Action_T__o *callBack,
-        const MethodInfo_330CDCC *method)
+        const MethodInfo_3317634 *method)
 {
   void *monitor; // x20
   Unity_IL2CPP_Metadata___Il2CppFullySharedGenericType_c *klass; // x21
@@ -23,16 +23,16 @@ void BattleCallBack___Il2CppFullySharedGenericType____ctor(
   else
     v10 = klass;
   memcpy((char *)v11 - ((v8 + 15) & 0x1FFFFFFF0LL), v10, v8);
-  sub_1C32C48(
+  sub_1C37080(
     this,
     *((_QWORD *)m_target[12].klass->_1.gc_desc + 16),
     (char *)v11 - ((v8 + 15) & 0x1FFFFFFF0LL),
     (unsigned int)v8);
-  sub_1A81C90(this, *((_QWORD *)callBack->fields.m_target[12].klass->_1.gc_desc + 16) + 32LL, monitor);
+  sub_1A85D98(this, *((_QWORD *)callBack->fields.m_target[12].klass->_1.gc_desc + 16) + 32LL, monitor);
 }
 
 
-void BattleCallBack___Il2CppFullySharedGenericType___call(BattleCallBack_T__o *this, const MethodInfo_330CEC8 *method)
+void BattleCallBack___Il2CppFullySharedGenericType___call(BattleCallBack_T__o *this, const MethodInfo_3317730 *method)
 {
   BattleCallBack_T__RGCTXs *rgctx_data; // x8
   size_t actualSize; // x22
@@ -49,11 +49,11 @@ void BattleCallBack___Il2CppFullySharedGenericType___call(BattleCallBack_T__o *t
   rgctx_data = method->klass->rgctx_data;
   actualSize = rgctx_data->_0_T->_2.actualSize;
   v6 = (_QWORD *)((char *)v13 - ((actualSize + 15) & 0x1FFFFFFF0LL));
-  v7 = *(void **)sub_1C32C44(this, (char *)rgctx_data->_1_BattleCallBack_T_->_1.fields + 32);
-  v8 = (const void *)sub_1C32C44(this, method->klass->rgctx_data->_1_BattleCallBack_T_->_1.fields);
+  v7 = *(void **)sub_1C3707C(this, (char *)rgctx_data->_1_BattleCallBack_T_->_1.fields + 32);
+  v8 = (const void *)sub_1C3707C(this, method->klass->rgctx_data->_1_BattleCallBack_T_->_1.fields);
   v9 = memcpy(v6, v8, actualSize);
   if ( !v7 )
-    sub_1C32E7C(v9);
+    sub_1C372B4(v9);
   v10 = method->klass->rgctx_data;
   _3_System_Action_T__Invoke = v10->_3_System_Action_T__Invoke;
   methodPointer = _3_System_Action_T__Invoke->methodPointer;

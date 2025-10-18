@@ -8,16 +8,16 @@ System_String_o *AuCreateSeedRequest__getURL(AuCreateSeedRequest_o *this, const 
 {
   System_String_o *BaseUrl; // x0
 
-  if ( (byte_4C393F8 & 1) == 0 )
+  if ( (byte_4C449F2 & 1) == 0 )
   {
-    sub_1C32C20(&NetworkManager_TypeInfo);
-    sub_1C32C20(&StringLiteral_23433/*"shop/createSeed"*/);
-    byte_4C393F8 = 1;
+    sub_1C37058(&NetworkManager_TypeInfo);
+    sub_1C37058(&StringLiteral_23437/*"shop/createSeed"*/);
+    byte_4C449F2 = 1;
   }
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
   BaseUrl = NetworkManager__getBaseUrl(1, 0);
-  return System_String__Concat_63518544(BaseUrl, (System_String_o *)StringLiteral_23433/*"shop/createSeed"*/, 0);
+  return System_String__Concat_63561656(BaseUrl, (System_String_o *)StringLiteral_23437/*"shop/createSeed"*/, 0);
 }
 
 
@@ -36,18 +36,18 @@ void AuCreateSeedRequest__requestCompleted(
   Il2CppObject *value; // [xsp+8h] [xbp-48h] BYREF
 
   v4 = this;
-  if ( (byte_4C393F9 & 1) == 0 )
+  if ( (byte_4C449F3 & 1) == 0 )
   {
-    sub_1C32C20(&Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__);
-    sub_1C32C20(&Method_System_Collections_Generic_Dictionary_string__object__TryGetValue__);
-    sub_1C32C20(&string_TypeInfo);
-    this = (AuCreateSeedRequest_o *)sub_1C32C20(&StringLiteral_23246/*"seed"*/);
-    byte_4C393F9 = 1;
+    sub_1C37058(&Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__);
+    sub_1C37058(&Method_System_Collections_Generic_Dictionary_string__object__TryGetValue__);
+    sub_1C37058(&string_TypeInfo);
+    this = (AuCreateSeedRequest_o *)sub_1C37058(&StringLiteral_23250/*"seed"*/);
+    byte_4C449F3 = 1;
   }
   value = 0;
   if ( !responseList )
 LABEL_19:
-    sub_1C32E7C(this);
+    sub_1C372B4(this);
   max_length = responseList->max_length;
   if ( max_length < 1 )
   {
@@ -61,7 +61,7 @@ LABEL_16:
     while ( 1 )
     {
       if ( v6 >= max_length )
-        sub_1C32E84(this);
+        sub_1C372BC(this);
       v7 = &responseList->obj.klass + (int)v6;
       v8 = v7[4];
       if ( !v8 )
@@ -77,8 +77,8 @@ LABEL_16:
           goto LABEL_19;
         this = (AuCreateSeedRequest_o *)System_Collections_Generic_Dictionary_object__object___ContainsKey(
                                           (System_Collections_Generic_Dictionary_object__object__o *)this,
-                                          (Il2CppObject *)StringLiteral_23246/*"seed"*/,
-                                          (const MethodInfo_3458FBC *)Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__);
+                                          (Il2CppObject *)StringLiteral_23250/*"seed"*/,
+                                          (const MethodInfo_3463824 *)Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__);
         if ( ((unsigned __int8)this & 1) != 0 )
         {
           this = (AuCreateSeedRequest_o *)v8->_1.byval_arg.data;
@@ -86,9 +86,9 @@ LABEL_16:
             goto LABEL_19;
           this = (AuCreateSeedRequest_o *)System_Collections_Generic_Dictionary_object__object___TryGetValue(
                                             (System_Collections_Generic_Dictionary_object__object__o *)this,
-                                            (Il2CppObject *)StringLiteral_23246/*"seed"*/,
+                                            (Il2CppObject *)StringLiteral_23250/*"seed"*/,
                                             &value,
-                                            (const MethodInfo_345A5D4 *)Method_System_Collections_Generic_Dictionary_string__object__TryGetValue__);
+                                            (const MethodInfo_3464E3C *)Method_System_Collections_Generic_Dictionary_string__object__TryGetValue__);
           if ( ((unsigned __int8)this & 1) != 0 )
           {
             v9 = value;

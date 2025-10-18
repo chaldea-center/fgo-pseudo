@@ -26,13 +26,13 @@ void EventInfoAssistListComponent__Setup(EventInfoAssistListComponent_o *this, c
   float v13; // s0
 
   v2 = this;
-  if ( (byte_4C37D5A & 1) == 0 )
+  if ( (byte_4C43353 & 1) == 0 )
   {
-    sub_1C32C20(&Method_DataManager_GetMaster_AssistMaster___);
-    sub_1C32C20(&DataManager_TypeInfo);
-    sub_1C32C20(&Method_GameObjectHelper_Instantiate_EventInfoAssistComponent___);
-    this = (EventInfoAssistListComponent_o *)sub_1C32C20(&UnityEngine_Object_TypeInfo);
-    byte_4C37D5A = 1;
+    sub_1C37058(&Method_DataManager_GetMaster_AssistMaster___);
+    sub_1C37058(&DataManager_TypeInfo);
+    sub_1C37058(&Method_GameObjectHelper_Instantiate_EventInfoAssistComponent___);
+    this = (EventInfoAssistListComponent_o *)sub_1C37058(&UnityEngine_Object_TypeInfo);
+    byte_4C43353 = 1;
   }
   assistIds = v2->fields.assistIds;
   v2->fields._Height_k__BackingField = 0.0;
@@ -49,20 +49,20 @@ void EventInfoAssistListComponent__Setup(EventInfoAssistListComponent_o *this, c
       do
       {
         if ( v5 >= (unsigned int)max_length )
-          sub_1C32E84(this);
+          sub_1C372BC(this);
         v6 = assistIds->m_Items[v5];
         if ( !DataManager_TypeInfo->_2.cctor_finished )
           j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-        Master_object = DataManager__GetMaster_object_((const MethodInfo_30DD39C *)Method_DataManager_GetMaster_AssistMaster___);
+        Master_object = DataManager__GetMaster_object_((const MethodInfo_30E7C04 *)Method_DataManager_GetMaster_AssistMaster___);
         if ( !Master_object )
 LABEL_25:
-          sub_1C32E7C(Master_object);
+          sub_1C372B4(Master_object);
         CurrentEntity = AssistMaster__GetCurrentEntity((AssistMaster_o *)Master_object, v6, 0);
         if ( CurrentEntity )
           goto LABEL_15;
         if ( !DataManager_TypeInfo->_2.cctor_finished )
           j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-        Master_object = DataManager__GetMaster_object_((const MethodInfo_30DD39C *)Method_DataManager_GetMaster_AssistMaster___);
+        Master_object = DataManager__GetMaster_object_((const MethodInfo_30E7C04 *)Method_DataManager_GetMaster_AssistMaster___);
         if ( !Master_object )
           goto LABEL_25;
         this = (EventInfoAssistListComponent_o *)AssistMaster__GetMinPriorityEntity(
@@ -77,7 +77,7 @@ LABEL_15:
                  v2->fields.assistPrefab,
                  v2->fields.assistParent,
                  0,
-                 (const MethodInfo_3136594 *)Method_GameObjectHelper_Instantiate_EventInfoAssistComponent___);
+                 (const MethodInfo_3140DFC *)Method_GameObjectHelper_Instantiate_EventInfoAssistComponent___);
           if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
             j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
           this = (EventInfoAssistListComponent_o *)UnityEngine_Object__op_Equality((UnityEngine_Object_o *)v9, 0, 0);

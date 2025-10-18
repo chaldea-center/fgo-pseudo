@@ -25,7 +25,7 @@ void BattlePointGaugeProgressBarTypeComponent__UpdateProgressGauge(
                              method),
         !barFrontProgressBar) )
   {
-    sub_1C32E7C(this);
+    sub_1C372B4(this);
   }
   UIProgressBar__set_value(barFrontProgressBar, BarProgressValue, 0);
 }
@@ -39,6 +39,6 @@ void BattlePointGaugeProgressBarTypeComponent__ValidateSerializedField(
 
   setting = this->fields.setting;
   if ( !setting )
-    sub_1C32E7C(0);
+    sub_1C372B4(0);
   BattlePointGaugeSetting__ValidateSerializedField(setting, method);
 }

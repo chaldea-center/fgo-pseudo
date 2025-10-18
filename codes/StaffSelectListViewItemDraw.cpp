@@ -34,15 +34,15 @@ void StaffSelectListViewItemDraw__SetDisp(
   UnityEngine_Color_o v25; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 
   v4 = this;
-  if ( (byte_4C33078 & 1) == 0 )
+  if ( (byte_4C3E662 & 1) == 0 )
   {
-    sub_1C32C20(&LocalizationManager_TypeInfo);
-    sub_1C32C20(&UnityEngine_Object_TypeInfo);
-    sub_1C32C20(&string_TypeInfo);
-    sub_1C32C20(&StringLiteral_17445/*"btn_bg_20"*/);
-    sub_1C32C20(&StringLiteral_12298/*"STAFF_NO_SELECT_WARNING"*/);
-    this = (StaffSelectListViewItemDraw_o *)sub_1C32C20(&StringLiteral_17446/*"btn_bg_21"*/);
-    byte_4C33078 = 1;
+    sub_1C37058(&LocalizationManager_TypeInfo);
+    sub_1C37058(&UnityEngine_Object_TypeInfo);
+    sub_1C37058(&string_TypeInfo);
+    sub_1C37058(&StringLiteral_17447/*"btn_bg_20"*/);
+    sub_1C37058(&StringLiteral_12299/*"STAFF_NO_SELECT_WARNING"*/);
+    this = (StaffSelectListViewItemDraw_o *)sub_1C37058(&StringLiteral_17448/*"btn_bg_21"*/);
+    byte_4C3E662 = 1;
   }
   if ( !item )
     goto LABEL_49;
@@ -65,10 +65,10 @@ void StaffSelectListViewItemDraw__SetDisp(
   if ( !IsSelected_k__BackingField )
   {
 LABEL_15:
-    if ( !byte_4C32194 )
+    if ( !byte_4C3D77E )
     {
-      sub_1C32C20(&LocalizationManager_TypeInfo);
-      byte_4C32194 = 1;
+      sub_1C37058(&LocalizationManager_TypeInfo);
+      byte_4C3D77E = 1;
     }
     this = (StaffSelectListViewItemDraw_o *)LocalizationManager_TypeInfo;
     if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
@@ -84,13 +84,13 @@ LABEL_15:
     if ( nameLabel )
       goto LABEL_20;
 LABEL_49:
-    sub_1C32E7C(this);
+    sub_1C372B4(this);
   }
 LABEL_8:
-  if ( !byte_4C32195 )
+  if ( !byte_4C3D77F )
   {
-    sub_1C32C20(&LocalizationManager_TypeInfo);
-    byte_4C32195 = 1;
+    sub_1C37058(&LocalizationManager_TypeInfo);
+    byte_4C3D77F = 1;
   }
   this = (StaffSelectListViewItemDraw_o *)LocalizationManager_TypeInfo;
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
@@ -125,9 +125,9 @@ LABEL_20:
   if ( !this )
     goto LABEL_49;
   if ( item->fields._IsSelected_k__BackingField )
-    v18 = &StringLiteral_17446/*"btn_bg_21"*/;
+    v18 = &StringLiteral_17448/*"btn_bg_21"*/;
   else
-    v18 = &StringLiteral_17445/*"btn_bg_20"*/;
+    v18 = &StringLiteral_17447/*"btn_bg_20"*/;
   UISprite__set_spriteName((UISprite_o *)this, (System_String_o *)*v18, 0);
   PhotoCampaignAtlas_k__BackingField = (UnityEngine_Object_o *)item->fields._PhotoCampaignAtlas_k__BackingField;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -162,7 +162,7 @@ LABEL_20:
   {
     if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-    this = (StaffSelectListViewItemDraw_o *)LocalizationManager__Get((System_String_o *)StringLiteral_12298/*"STAFF_NO_SELECT_WARNING"*/, 0);
+    this = (StaffSelectListViewItemDraw_o *)LocalizationManager__Get((System_String_o *)StringLiteral_12299/*"STAFF_NO_SELECT_WARNING"*/, 0);
     Empty = (System_String_o *)this;
     if ( !v22 )
       goto LABEL_49;
@@ -206,11 +206,11 @@ void StaffSelectListViewItemDraw__SetInput(
   const MethodInfo *v8; // x2
   UnityEngine_Component_o *Component_object; // x0
 
-  if ( (byte_4C33077 & 1) == 0 )
+  if ( (byte_4C3E661 & 1) == 0 )
   {
-    sub_1C32C20(&Method_UnityEngine_Component_GetComponent_Collider___);
-    sub_1C32C20(&UnityEngine_Object_TypeInfo);
-    byte_4C33077 = 1;
+    sub_1C37058(&Method_UnityEngine_Component_GetComponent_Collider___);
+    sub_1C37058(&UnityEngine_Object_TypeInfo);
+    byte_4C3E661 = 1;
   }
   if ( item )
   {
@@ -223,11 +223,11 @@ void StaffSelectListViewItemDraw__SetInput(
       if ( !Component_object
         || (Component_object = (UnityEngine_Component_o *)UnityEngine_Component__GetComponent_object_(
                                                             Component_object,
-                                                            (const MethodInfo_30D3BC0 *)Method_UnityEngine_Component_GetComponent_Collider___)) == 0
+                                                            (const MethodInfo_30DE428 *)Method_UnityEngine_Component_GetComponent_Collider___)) == 0
         || (UnityEngine_Collider__set_enabled((UnityEngine_Collider_o *)Component_object, isInput, 0),
             (Component_object = (UnityEngine_Component_o *)this->fields.baseButton) == 0) )
       {
-        sub_1C32E7C(Component_object);
+        sub_1C372B4(Component_object);
       }
       ((void (__fastcall *)(UnityEngine_Component_o *, _QWORD, __int64, Il2CppClass **))Component_object->klass[1]._1.nestedTypes)(
         Component_object,

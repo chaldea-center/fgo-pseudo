@@ -6,7 +6,7 @@ void SelectImageLimitListViewItem___ctor(
         int32_t selectedImageId,
         const MethodInfo *method)
 {
-  ListViewItem___ctor_43702564((ListViewItem_o *)this, index, 0);
+  ListViewItem___ctor_43804668((ListViewItem_o *)this, index, 0);
   this->fields.svtId = svtId;
   this->fields.limitCount = limitCount;
   this->fields.isSelected = limitCount == selectedImageId;

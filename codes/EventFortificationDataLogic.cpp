@@ -7,29 +7,29 @@ int32_t EventFortificationDataLogic__CalculationGetPoint(
   int32_t lv; // w19
   Il2CppObject *entity; // [xsp+8h] [xbp-28h] BYREF
 
-  if ( (byte_4C31D11 & 1) == 0 )
+  if ( (byte_4C3D2FB & 1) == 0 )
   {
-    sub_1C32C20(&Method_DataManager_GetMasterData_EventDetailMaster___);
-    sub_1C32C20(&Method_DataMasterBase_EventDetailMaster__EventDetailEntity__int__TryGetEntity__);
-    sub_1C32C20(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-    byte_4C31D11 = 1;
+    sub_1C37058(&Method_DataManager_GetMasterData_EventDetailMaster___);
+    sub_1C37058(&Method_DataMasterBase_EventDetailMaster__EventDetailEntity__int__TryGetEntity__);
+    sub_1C37058(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    byte_4C3D2FB = 1;
   }
   entity = 0;
   if ( userServantEntity )
   {
-    Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39E2904 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39ED16C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
     if ( !Instance )
       goto LABEL_12;
     Instance = DataManager__GetMasterData_object_(
                  (DataManager_o *)Instance,
-                 (const MethodInfo_30DD3F0 *)Method_DataManager_GetMasterData_EventDetailMaster___);
+                 (const MethodInfo_30E7C58 *)Method_DataManager_GetMasterData_EventDetailMaster___);
     if ( !Instance )
       goto LABEL_12;
     if ( DataMasterBase_object__object__int___TryGetEntity(
            (DataMasterBase_TMaster__TEntity__PKType__o *)Instance,
            &entity,
            eventId,
-           (const MethodInfo_3396884 *)Method_DataMasterBase_EventDetailMaster__EventDetailEntity__int__TryGetEntity__) )
+           (const MethodInfo_33A10EC *)Method_DataMasterBase_EventDetailMaster__EventDetailEntity__int__TryGetEntity__) )
     {
       Instance = entity;
       if ( entity )
@@ -42,7 +42,7 @@ int32_t EventFortificationDataLogic__CalculationGetPoint(
         }
       }
 LABEL_12:
-      sub_1C32E7C(Instance);
+      sub_1C372B4(Instance);
     }
   }
   return 0;
@@ -63,32 +63,32 @@ void EventFortificationDataLogic__SetFortification(
   __int64 v13; // x26
   EventEntity_o *v14; // x25
 
-  if ( (byte_4C31D12 & 1) == 0 )
+  if ( (byte_4C3D2FC & 1) == 0 )
   {
-    sub_1C32C20(&Method_DataManager_GetMasterData_EventMaster___);
-    sub_1C32C20(&Method_DataManager_GetMasterData_UserEventFortificationMaster___);
-    sub_1C32C20(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-    sub_1C32C20(&StringLiteral_1/*""*/);
-    byte_4C31D12 = 1;
+    sub_1C37058(&Method_DataManager_GetMasterData_EventMaster___);
+    sub_1C37058(&Method_DataManager_GetMasterData_UserEventFortificationMaster___);
+    sub_1C37058(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    sub_1C37058(&StringLiteral_1/*""*/);
+    byte_4C3D2FC = 1;
   }
   *isFortification = 0;
   *fortificationName = (System_String_o *)StringLiteral_1/*""*/;
-  sub_1C32BC4(fortificationName, StringLiteral_1/*""*/);
+  sub_1C36FFC(fortificationName, StringLiteral_1/*""*/);
   *fortificationDetailName = (System_String_o *)StringLiteral_1/*""*/;
-  sub_1C32BC4(fortificationDetailName, StringLiteral_1/*""*/);
-  Instance = (EventEntity_array *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39E2904 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  sub_1C36FFC(fortificationDetailName, StringLiteral_1/*""*/);
+  Instance = (EventEntity_array *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39ED16C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance
     || (MasterData_object = DataManager__GetMasterData_object_(
                               (DataManager_o *)Instance,
-                              (const MethodInfo_30DD3F0 *)Method_DataManager_GetMasterData_UserEventFortificationMaster___),
-        (Instance = (EventEntity_array *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39E2904 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__)) == 0)
+                              (const MethodInfo_30E7C58 *)Method_DataManager_GetMasterData_UserEventFortificationMaster___),
+        (Instance = (EventEntity_array *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39ED16C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__)) == 0)
     || (Instance = (EventEntity_array *)DataManager__GetMasterData_object_(
                                           (DataManager_o *)Instance,
-                                          (const MethodInfo_30DD3F0 *)Method_DataManager_GetMasterData_EventMaster___)) == 0
+                                          (const MethodInfo_30E7C58 *)Method_DataManager_GetMasterData_EventMaster___)) == 0
     || (Instance = EventMaster__GetEnableEntityList((EventMaster_o *)Instance, 12, 1, 0, 0)) == 0 )
   {
 LABEL_19:
-    sub_1C32E7C(Instance);
+    sub_1C372B4(Instance);
   }
   max_length = Instance->max_length;
   v12 = Instance;
@@ -100,7 +100,7 @@ LABEL_19:
     while ( 1 )
     {
       if ( (unsigned int)v13 >= (unsigned int)max_length )
-        sub_1C32E84(Instance);
+        sub_1C372BC(Instance);
       v14 = v12->m_Items[v13];
       if ( !v14 || !MasterData_object )
         goto LABEL_19;
@@ -139,11 +139,11 @@ bool EventFortificationDataLogic__TryGetColorByWorkType(
   bool v14; // w0
 
   v8 = colorCodeA;
-  if ( (byte_4C31D13 & 1) == 0 )
+  if ( (byte_4C3D2FD & 1) == 0 )
   {
-    sub_1C32C20(&StringLiteral_370/*"#"*/);
-    sub_1C32C20(&StringLiteral_1/*""*/);
-    byte_4C31D13 = 1;
+    sub_1C37058(&StringLiteral_370/*"#"*/);
+    sub_1C37058(&StringLiteral_1/*""*/);
+    byte_4C3D2FD = 1;
   }
   if ( workType != 1 )
   {
@@ -156,7 +156,7 @@ bool EventFortificationDataLogic__TryGetColorByWorkType(
         colorCodeMilitsry = (System_String_o *)StringLiteral_1/*""*/;
     }
   }
-  v13 = System_String__Concat_63518544((System_String_o *)StringLiteral_370/*"#"*/, colorCodeMilitsry, 0);
+  v13 = System_String__Concat_63561656((System_String_o *)StringLiteral_370/*"#"*/, colorCodeMilitsry, 0);
   v14 = UnityEngine_ColorUtility__TryParseHtmlString(v13, color, 0);
   color->fields.a = (float)v8 / 255.0;
   return v14;

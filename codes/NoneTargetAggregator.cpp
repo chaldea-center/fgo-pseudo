@@ -6,10 +6,10 @@ void NoneTargetAggregator___ctor(NoneTargetAggregator_o *this, const MethodInfo 
 
 System_Int32_array *NoneTargetAggregator__GetCandidate(NoneTargetAggregator_o *this, const MethodInfo *method)
 {
-  if ( (byte_4C3AB86 & 1) == 0 )
+  if ( (byte_4C4627D & 1) == 0 )
   {
-    sub_1C32C20(&int___TypeInfo);
-    byte_4C3AB86 = 1;
+    sub_1C37058(&int___TypeInfo);
+    byte_4C4627D = 1;
   }
-  return (System_Int32_array *)sub_1C32CC8(int___TypeInfo, 0);
+  return (System_Int32_array *)sub_1C37100(int___TypeInfo, 0);
 }

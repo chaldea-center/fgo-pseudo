@@ -14,11 +14,11 @@ void BuddyPointResultReplayButton__SetBgSprite(
   UnityEngine_Object_o *v7; // x21
   UISprite_o *v8; // x21
 
-  if ( (byte_4C32009 & 1) == 0 )
+  if ( (byte_4C3D5F3 & 1) == 0 )
   {
-    sub_1C32C20(&AtlasManager_TypeInfo);
-    sub_1C32C20(&UnityEngine_Object_TypeInfo);
-    byte_4C32009 = 1;
+    sub_1C37058(&AtlasManager_TypeInfo);
+    sub_1C37058(&UnityEngine_Object_TypeInfo);
+    byte_4C3D5F3 = 1;
   }
   bgSprite = (UnityEngine_Object_o *)this->fields.bgSprite;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -48,7 +48,7 @@ void BuddyPointResultReplayButton__SetBgSprite(
         return;
       }
     }
-    sub_1C32E7C(v6);
+    sub_1C372B4(v6);
   }
 }
 
@@ -72,13 +72,13 @@ void BuddyPointResultReplayButton__Setup(
   __int64 v16; // x10
   Il2CppClass **v17; // x0
 
-  if ( (byte_4C32008 & 1) == 0 )
+  if ( (byte_4C3D5F2 & 1) == 0 )
   {
-    sub_1C32C20(&EventDelegate_TypeInfo);
-    sub_1C32C20(&Method_System_Collections_Generic_List_EventDelegate__Add__);
-    sub_1C32C20(&Method_System_Collections_Generic_List_EventDelegate__Clear__);
-    sub_1C32C20(&UnityEngine_Object_TypeInfo);
-    byte_4C32008 = 1;
+    sub_1C37058(&EventDelegate_TypeInfo);
+    sub_1C37058(&Method_System_Collections_Generic_List_EventDelegate__Add__);
+    sub_1C37058(&Method_System_Collections_Generic_List_EventDelegate__Clear__);
+    sub_1C37058(&UnityEngine_Object_TypeInfo);
+    byte_4C3D5F2 = 1;
   }
   button = (UnityEngine_Object_o *)this->fields.button;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -104,8 +104,8 @@ void BuddyPointResultReplayButton__Setup(
         goto LABEL_16;
     }
     v12 = (System_Collections_Generic_List_object__o *)v8->fields.onClick;
-    v13 = (EventDelegate_o *)sub_1C32E6C(EventDelegate_TypeInfo);
-    EventDelegate___ctor_49230836(v13, onClickAction, 0);
+    v13 = (EventDelegate_o *)sub_1C372A4(EventDelegate_TypeInfo);
+    EventDelegate___ctor_49273948(v13, onClickAction, 0);
     if ( !v12
       || (items = v12->fields._items,
           v15 = Method_System_Collections_Generic_List_EventDelegate__Add__,
@@ -113,7 +113,7 @@ void BuddyPointResultReplayButton__Setup(
           !items) )
     {
 LABEL_16:
-      sub_1C32E7C(v6);
+      sub_1C372B4(v6);
     }
     v16 = v12->fields._size;
     if ( (unsigned int)v16 >= LODWORD(items->max_length) )
@@ -121,14 +121,14 @@ LABEL_16:
       System_Collections_Generic_List_object___AddWithResize(
         v12,
         (Il2CppObject *)v13,
-        *(const MethodInfo_37987BC **)(*(_QWORD *)(v15[4] + 192LL) + 112LL));
+        *(const MethodInfo_37A3024 **)(*(_QWORD *)(v15[4] + 192LL) + 112LL));
     }
     else
     {
       v17 = &items->obj.klass + v16;
       v12->fields._size = v16 + 1;
       v17[4] = (Il2CppClass *)v13;
-      sub_1C32BC4(v17 + 4, v13);
+      sub_1C36FFC(v17 + 4, v13);
     }
   }
   BuddyPointResultReplayButton__SetBgSprite(this, this->fields.bgSpriteName, v7);

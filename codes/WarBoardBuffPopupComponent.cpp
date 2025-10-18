@@ -9,15 +9,15 @@ void WarBoardBuffPopupComponent__Destroy(WarBoardBuffPopupComponent_o *this, con
 {
   UnityEngine_Object_o *gameObject; // x19
 
-  if ( (byte_4C35237 & 1) == 0 )
+  if ( (byte_4C40822 & 1) == 0 )
   {
-    sub_1C32C20(&UnityEngine_Object_TypeInfo);
-    byte_4C35237 = 1;
+    sub_1C37058(&UnityEngine_Object_TypeInfo);
+    byte_4C40822 = 1;
   }
   gameObject = (UnityEngine_Object_o *)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-  UnityEngine_Object__Destroy_71223640(gameObject, 0);
+  UnityEngine_Object__Destroy_71266752(gameObject, 0);
 }
 
 
@@ -46,10 +46,10 @@ void WarBoardBuffPopupComponent__SetLabel(
   z = targetPosition.fields.z;
   y = targetPosition.fields.y;
   x = targetPosition.fields.x;
-  if ( (byte_4C35236 & 1) == 0 )
+  if ( (byte_4C40821 & 1) == 0 )
   {
-    sub_1C32C20(&AtlasManager_TypeInfo);
-    byte_4C35236 = 1;
+    sub_1C37058(&AtlasManager_TypeInfo);
+    byte_4C40821 = 1;
   }
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
   if ( !gameObject )
@@ -101,7 +101,7 @@ void WarBoardBuffPopupComponent__SetLabel(
     || (v18 = v17, LODWORD(v19) = *(_QWORD *)&UILabel__get_printedSize((UILabel_o *)gameObject, 0), !v16) )
   {
 LABEL_18:
-    sub_1C32E7C(gameObject);
+    sub_1C372B4(gameObject);
   }
   v21.fields.y = 2.0;
   v21.fields.x = -(float)((float)(v18 * 0.5) + (float)(v19 * 0.5));

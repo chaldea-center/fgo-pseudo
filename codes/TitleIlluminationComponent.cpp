@@ -22,17 +22,17 @@ void TitleIlluminationComponent__Setup(
   UIWidget_o *v18; // x19
   UnityEngine_Color_o v19; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 
-  if ( (byte_4C35211 & 1) == 0 )
+  if ( (byte_4C407FC & 1) == 0 )
   {
-    sub_1C32C20(&Method_UnityEngine_Component_GetComponent_UISprite___);
-    byte_4C35211 = 1;
+    sub_1C37058(&Method_UnityEngine_Component_GetComponent_UISprite___);
+    byte_4C407FC = 1;
   }
   this->fields.IlluminationX = x;
   this->fields.IlluminationY = y;
   this->fields.lifetime = lifetime;
   this->fields.lifetimeMax = lifetime;
   this->fields.manager = manager;
-  sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.manager, (int32_t)manager, y, *(const MethodInfo **)&sz);
+  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.manager, (int32_t)manager, y, *(const MethodInfo **)&sz);
   if ( sz >= 0 )
     v13 = sz;
   else
@@ -48,10 +48,10 @@ void TitleIlluminationComponent__Setup(
   UnityEngine_Transform__set_localPosition((UnityEngine_Transform_o *)transform, *(UnityEngine_Vector3_o *)&v15, 0);
   transform = UnityEngine_Component__GetComponent_object_(
                 (UnityEngine_Component_o *)this,
-                (const MethodInfo_30D3BC0 *)Method_UnityEngine_Component_GetComponent_UISprite___);
+                (const MethodInfo_30DE428 *)Method_UnityEngine_Component_GetComponent_UISprite___);
   if ( !transform )
 LABEL_11:
-    sub_1C32E7C(transform);
+    sub_1C372B4(transform);
   v19.fields.r = *((float *)transform + 37);
   v19.fields.g = *((float *)transform + 38);
   v19.fields.b = *((float *)transform + 39);
@@ -80,17 +80,17 @@ void TitleIlluminationComponent__Update(TitleIlluminationComponent_o *this, cons
   long double v7; // q0
   long double v8; // q0
 
-  if ( (byte_4C35212 & 1) == 0 )
+  if ( (byte_4C407FD & 1) == 0 )
   {
-    sub_1C32C20(&Method_UnityEngine_Component_GetComponent_UISprite___);
-    sub_1C32C20(&UnityEngine_Object_TypeInfo);
-    byte_4C35212 = 1;
+    sub_1C37058(&Method_UnityEngine_Component_GetComponent_UISprite___);
+    sub_1C37058(&UnityEngine_Object_TypeInfo);
+    byte_4C407FD = 1;
   }
   lifetime = this->fields.lifetime;
   this->fields.lifetime = lifetime - UnityEngine_Time__get_deltaTime(0);
   Component_object = UnityEngine_Component__GetComponent_object_(
                        (UnityEngine_Component_o *)this,
-                       (const MethodInfo_30D3BC0 *)Method_UnityEngine_Component_GetComponent_UISprite___);
+                       (const MethodInfo_30DE428 *)Method_UnityEngine_Component_GetComponent_UISprite___);
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   manager = (TitleIlluminationManager_o *)UnityEngine_Object__op_Equality(
@@ -130,6 +130,6 @@ LABEL_12:
         Component_object->klass->vtable[30].method);
       return;
     }
-    sub_1C32E7C(manager);
+    sub_1C372B4(manager);
   }
 }

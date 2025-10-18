@@ -26,18 +26,18 @@ void EventRewardAnotherPayListViewItemDraw__SetUi(
   Il2CppObject *entity; // [xsp+18h] [xbp-48h] BYREF
 
   v4 = (EventRewardAnotherPayListViewItemDraw_o **)this;
-  if ( (byte_4C321E8 & 1) == 0 )
+  if ( (byte_4C3D7D2 & 1) == 0 )
   {
-    sub_1C32C20(&Method_DataManager_GetMaster_SkillLvMaster___);
-    sub_1C32C20(&Method_DataManager_GetMaster_SkillMaster___);
-    sub_1C32C20(&Method_DataManager_GetMaster_UserItemMaster___);
-    sub_1C32C20(&DataManager_TypeInfo);
-    sub_1C32C20(&Method_DataMasterBase_SkillMaster__SkillEntity__int__TryGetEntity__);
-    sub_1C32C20(&LocalizationManager_TypeInfo);
-    sub_1C32C20(&NetworkManager_TypeInfo);
-    sub_1C32C20(&string_TypeInfo);
-    this = (EventRewardAnotherPayListViewItemDraw_o *)sub_1C32C20(&StringLiteral_1963/*"ANOTHER_PAY_ITEM_MULTI_LIST_SKILL_NONE"*/);
-    byte_4C321E8 = 1;
+    sub_1C37058(&Method_DataManager_GetMaster_SkillLvMaster___);
+    sub_1C37058(&Method_DataManager_GetMaster_SkillMaster___);
+    sub_1C37058(&Method_DataManager_GetMaster_UserItemMaster___);
+    sub_1C37058(&DataManager_TypeInfo);
+    sub_1C37058(&Method_DataMasterBase_SkillMaster__SkillEntity__int__TryGetEntity__);
+    sub_1C37058(&LocalizationManager_TypeInfo);
+    sub_1C37058(&NetworkManager_TypeInfo);
+    sub_1C37058(&string_TypeInfo);
+    this = (EventRewardAnotherPayListViewItemDraw_o *)sub_1C37058(&StringLiteral_1963/*"ANOTHER_PAY_ITEM_MULTI_LIST_SKILL_NONE"*/);
+    byte_4C3D7D2 = 1;
   }
   entity = 0;
   v15 = 0;
@@ -53,17 +53,17 @@ void EventRewardAnotherPayListViewItemDraw__SetUi(
   this = v4[5];
   if ( !this )
     goto LABEL_43;
-  ItemIconComponent__SetItem_40818828((ItemIconComponent_o *)this, ItemEntity_k__BackingField, -1, 1, 0);
+  ItemIconComponent__SetItem_40918308((ItemIconComponent_o *)this, ItemEntity_k__BackingField, -1, 1, 0);
   v6 = (ItemIconComponent_o *)v4[5];
   if ( !DataManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-  Master_object = DataManager__GetMaster_object_((const MethodInfo_30DD39C *)Method_DataManager_GetMaster_UserItemMaster___);
+  Master_object = DataManager__GetMaster_object_((const MethodInfo_30E7C04 *)Method_DataManager_GetMaster_UserItemMaster___);
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
-  if ( !byte_4C31812 )
+  if ( !byte_4C3CD62 )
   {
-    sub_1C32C20(&NetworkManager_TypeInfo);
-    byte_4C31812 = 1;
+    sub_1C37058(&NetworkManager_TypeInfo);
+    byte_4C3CD62 = 1;
   }
   this = (EventRewardAnotherPayListViewItemDraw_o *)NetworkManager_TypeInfo;
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
@@ -92,8 +92,8 @@ void EventRewardAnotherPayListViewItemDraw__SetUi(
     value = ItemEntity_k__BackingField->fields.value;
     if ( !DataManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-    v9 = DataManager__GetMaster_object_((const MethodInfo_30DD39C *)Method_DataManager_GetMaster_SkillMaster___);
-    this = (EventRewardAnotherPayListViewItemDraw_o *)DataManager__GetMaster_object_((const MethodInfo_30DD39C *)Method_DataManager_GetMaster_SkillLvMaster___);
+    v9 = DataManager__GetMaster_object_((const MethodInfo_30E7C04 *)Method_DataManager_GetMaster_SkillMaster___);
+    this = (EventRewardAnotherPayListViewItemDraw_o *)DataManager__GetMaster_object_((const MethodInfo_30E7C04 *)Method_DataManager_GetMaster_SkillLvMaster___);
     if ( !v9 )
       goto LABEL_43;
     v10 = (SkillLvMaster_o *)this;
@@ -101,7 +101,7 @@ void EventRewardAnotherPayListViewItemDraw__SetUi(
                                                         (DataMasterBase_TMaster__TEntity__PKType__o *)v9,
                                                         &entity,
                                                         value,
-                                                        (const MethodInfo_3396884 *)Method_DataMasterBase_SkillMaster__SkillEntity__int__TryGetEntity__);
+                                                        (const MethodInfo_33A10EC *)Method_DataMasterBase_SkillMaster__SkillEntity__int__TryGetEntity__);
     if ( ((unsigned __int8)this & 1) != 0 )
     {
       if ( !v10 )
@@ -148,7 +148,7 @@ void EventRewardAnotherPayListViewItemDraw__SetUi(
           }
         }
 LABEL_43:
-        sub_1C32E7C(this);
+        sub_1C372B4(this);
       }
     }
   }

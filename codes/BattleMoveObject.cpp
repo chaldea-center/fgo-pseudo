@@ -11,10 +11,10 @@ UnityEngine_Transform_o *BattleMoveObject__GetTransform(BattleMoveObject_o *this
   int32_t v5; // w2
   const MethodInfo *v6; // x3
 
-  if ( (byte_4C3A4E1 & 1) == 0 )
+  if ( (byte_4C45AE9 & 1) == 0 )
   {
-    sub_1C32C20(&UnityEngine_Object_TypeInfo);
-    byte_4C3A4E1 = 1;
+    sub_1C37058(&UnityEngine_Object_TypeInfo);
+    byte_4C45AE9 = 1;
   }
   selfTransform = (UnityEngine_Object_o *)this->fields.selfTransform;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -23,7 +23,7 @@ UnityEngine_Transform_o *BattleMoveObject__GetTransform(BattleMoveObject_o *this
   {
     transform = UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0);
     this->fields.selfTransform = transform;
-    sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.selfTransform, (int32_t)transform, v5, v6);
+    sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.selfTransform, (int32_t)transform, v5, v6);
   }
   return this->fields.selfTransform;
 }
@@ -49,12 +49,12 @@ void BattleMoveObject__OnSpawn(BattleMoveObject_o *this, const MethodInfo *metho
   this->fields.type = 0;
   *(_WORD *)&this->fields.dropflg = 0;
   this->fields.targetTr = 0;
-  sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.targetTr, 0, v2, v3);
+  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.targetTr, 0, v2, v3);
   v4->fields.perf = 0;
-  sub_1C32BC4((CGThumbnailListItem_o *)&v4->fields.perf, 0, v5, v6);
+  sub_1C36FFC((CGThumbnailListItem_o *)&v4->fields.perf, 0, v5, v6);
   v4->fields.destoryobject = 0;
   v4 = (BattleMoveObject_o *)((char *)v4 + 64);
-  sub_1C32BC4((CGThumbnailListItem_o *)v4, 0, v7, v8);
+  sub_1C36FFC((CGThumbnailListItem_o *)v4, 0, v7, v8);
   LODWORD(v4->fields.spawner) = 0;
 }
 
@@ -69,29 +69,29 @@ void BattleMoveObject__PlayStarSe(BattleMoveObject_o *this, const MethodInfo *me
   float v7; // s8
   System_Reflection_MethodBase_o *v8; // x0
 
-  if ( (byte_4C3A4E0 & 1) == 0 )
+  if ( (byte_4C45AE8 & 1) == 0 )
   {
-    sub_1C32C20(&Method_BattleMoveObject_PlayStarSe__);
-    sub_1C32C20(&Method_SingletonMonoBehaviour_SoundManager__get_Instance__);
-    sub_1C32C20(&Method_SingletonMonoBehaviour_SeManager__get_Instance__);
-    byte_4C3A4E0 = 1;
+    sub_1C37058(&Method_BattleMoveObject_PlayStarSe__);
+    sub_1C37058(&Method_SingletonMonoBehaviour_SoundManager__get_Instance__);
+    sub_1C37058(&Method_SingletonMonoBehaviour_SeManager__get_Instance__);
+    byte_4C45AE8 = 1;
   }
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39E2904 *)Method_SingletonMonoBehaviour_SeManager__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39ED16C *)Method_SingletonMonoBehaviour_SeManager__get_Instance__);
   if ( !Instance
     || (CommonSeNameLocal = SeManager__GetCommonSeNameLocal((SeManager_o *)Instance, 7, 0),
-        (Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39E2904 *)Method_SingletonMonoBehaviour_SoundManager__get_Instance__)) == 0)
+        (Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39ED16C *)Method_SingletonMonoBehaviour_SoundManager__get_Instance__)) == 0)
     || (CueSheet = SoundManager__GetCueSheet((SoundManager_o *)Instance, CommonSeNameLocal, 0),
-        (Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39E2904 *)Method_SingletonMonoBehaviour_SeManager__get_Instance__)) == 0) )
+        (Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39ED16C *)Method_SingletonMonoBehaviour_SeManager__get_Instance__)) == 0) )
   {
-    sub_1C32E7C(Instance);
+    sub_1C372B4(Instance);
   }
   DefaultPreDelayTime = SeManager__GetDefaultPreDelayTime((SeManager_o *)Instance, CueSheet, CommonSeNameLocal, 0);
   v6 = Method_BattleMoveObject_PlayStarSe__;
   v7 = DefaultPreDelayTime;
   if ( (*((_BYTE *)Method_BattleMoveObject_PlayStarSe__ + 83) & 2) != 0 )
-    v6 = (_QWORD *)sub_1C32C38(Method_BattleMoveObject_PlayStarSe__);
-  v8 = (System_Reflection_MethodBase_o *)sub_1C32C04(v6, v6[4]);
-  OverwriteAssetSoundName__PlayCommonSe_41321884(v8, 7, v7 / 1000.0, 1, 0, 0);
+    v6 = (_QWORD *)sub_1C37070(Method_BattleMoveObject_PlayStarSe__);
+  v8 = (System_Reflection_MethodBase_o *)sub_1C3703C(v6, v6[4]);
+  OverwriteAssetSoundName__PlayCommonSe_41421364(v8, 7, v7 / 1000.0, 1, 0, 0);
 }
 
 
@@ -109,11 +109,11 @@ void BattleMoveObject__SetRigidbodyGravity(BattleMoveObject_o *this, bool flg, c
   int32_t v8; // w2
   const MethodInfo *v9; // x3
 
-  if ( (byte_4C3A4E2 & 1) == 0 )
+  if ( (byte_4C45AEA & 1) == 0 )
   {
-    sub_1C32C20(&Method_UnityEngine_Component_GetComponent_Rigidbody___);
-    sub_1C32C20(&UnityEngine_Object_TypeInfo);
-    byte_4C3A4E2 = 1;
+    sub_1C37058(&Method_UnityEngine_Component_GetComponent_Rigidbody___);
+    sub_1C37058(&UnityEngine_Object_TypeInfo);
+    byte_4C45AEA = 1;
   }
   p_rigibody = &this->fields.rigibody;
   rigibody = (UnityEngine_Object_o *)this->fields.rigibody;
@@ -123,12 +123,12 @@ void BattleMoveObject__SetRigidbodyGravity(BattleMoveObject_o *this, bool flg, c
   {
     Component_object = UnityEngine_Component__GetComponent_object_(
                          (UnityEngine_Component_o *)this,
-                         (const MethodInfo_30D3BC0 *)Method_UnityEngine_Component_GetComponent_Rigidbody___);
+                         (const MethodInfo_30DE428 *)Method_UnityEngine_Component_GetComponent_Rigidbody___);
     this->fields.rigibody = (struct UnityEngine_Rigidbody_o *)Component_object;
-    sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.rigibody, (int32_t)Component_object, v8, v9);
+    sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.rigibody, (int32_t)Component_object, v8, v9);
   }
   if ( !*p_rigibody )
-    sub_1C32E7C(0);
+    sub_1C372B4(0);
   UnityEngine_Rigidbody__set_useGravity(*p_rigibody, flg, 0);
 }
 
@@ -157,23 +157,23 @@ void BattleMoveObject__Start(BattleMoveObject_o *this, const MethodInfo *method)
   int32_t v10; // w2
   const MethodInfo *v11; // x3
 
-  if ( (byte_4C3A4DC & 1) == 0 )
+  if ( (byte_4C45AE4 & 1) == 0 )
   {
-    sub_1C32C20(&Method_UnityEngine_Component_GetComponent_Rigidbody___);
-    sub_1C32C20(&Method_SingletonMonoBehaviour_Spawner__get_Instance__);
-    byte_4C3A4DC = 1;
+    sub_1C37058(&Method_UnityEngine_Component_GetComponent_Rigidbody___);
+    sub_1C37058(&Method_SingletonMonoBehaviour_Spawner__get_Instance__);
+    byte_4C45AE4 = 1;
   }
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39E2904 *)Method_SingletonMonoBehaviour_Spawner__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39ED16C *)Method_SingletonMonoBehaviour_Spawner__get_Instance__);
   this->fields.spawner = (struct Spawner_o *)Instance;
-  sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.spawner, (int32_t)Instance, v4, v5);
+  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.spawner, (int32_t)Instance, v4, v5);
   Component_object = UnityEngine_Component__GetComponent_object_(
                        (UnityEngine_Component_o *)this,
-                       (const MethodInfo_30D3BC0 *)Method_UnityEngine_Component_GetComponent_Rigidbody___);
+                       (const MethodInfo_30DE428 *)Method_UnityEngine_Component_GetComponent_Rigidbody___);
   this->fields.rigibody = (struct UnityEngine_Rigidbody_o *)Component_object;
-  sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.rigibody, (int32_t)Component_object, v7, v8);
+  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.rigibody, (int32_t)Component_object, v7, v8);
   transform = UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0);
   this->fields.selfTransform = transform;
-  sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.selfTransform, (int32_t)transform, v10, v11);
+  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.selfTransform, (int32_t)transform, v10, v11);
 }
 
 
@@ -205,7 +205,7 @@ void BattleMoveObject__StartNotTweenMove(
   v14 = to.fields.x;
   v15 = from.fields.z;
   v16 = from.fields.y;
-  sub_1C32BC4(
+  sub_1C36FFC(
     (CGThumbnailListItem_o *)&this->fields.notTweenInfo.fields.callback,
     (int32_t)callback,
     (int32_t)method,
@@ -219,14 +219,14 @@ void BattleMoveObject__StartNotTweenMove(
   this->fields.notTweenInfo.fields.time = time;
   this->fields.notTweenInfo.fields.startTime = UnityEngine_Time__get_timeSinceLevelLoad(0);
   started = BattleMoveObject___StartNotTweenMove(this, delay, v17);
-  UnityEngine_MonoBehaviour__StartCoroutine_71209212((UnityEngine_MonoBehaviour_o *)this, started, 0);
+  UnityEngine_MonoBehaviour__StartCoroutine_71252324((UnityEngine_MonoBehaviour_o *)this, started, 0);
 }
 
 
 // local variable allocation has failed, the output may be wrong!
 void BattleMoveObject__Update(BattleMoveObject_o *this, const MethodInfo *method)
 {
-  __int64 gameObject; // x0
+  UnityEngine_GameObject_o *gameObject; // x0
   UnityEngine_Transform_o *transform; // x20
   unsigned int v5; // s0
   float y; // s8
@@ -252,39 +252,39 @@ void BattleMoveObject__Update(BattleMoveObject_o *this, const MethodInfo *method
   UnityEngine_Vector3_o position; // 0:s0.4,4:s1.4,8:s2.4
   UnityEngine_Vector3_o v27; // 0:s0.4,4:s1.4,8:s2.4
 
-  if ( (byte_4C3A4DD & 1) == 0 )
+  if ( (byte_4C45AE5 & 1) == 0 )
   {
-    sub_1C32C20(&UnityEngine_Object_TypeInfo);
-    byte_4C3A4DD = 1;
+    sub_1C37058(&UnityEngine_Object_TypeInfo);
+    byte_4C45AE5 = 1;
   }
   if ( this->fields.dropflg )
   {
-    gameObject = (__int64)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
+    gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
     if ( !gameObject )
       goto LABEL_38;
-    gameObject = (__int64)UnityEngine_GameObject__get_transform((UnityEngine_GameObject_o *)gameObject, 0);
+    gameObject = (UnityEngine_GameObject_o *)UnityEngine_GameObject__get_transform(gameObject, 0);
     if ( !gameObject )
       goto LABEL_38;
     position = UnityEngine_Transform__get_position((UnityEngine_Transform_o *)gameObject, 0);
     if ( position.fields.y < this->fields.checkvec.fields.y )
     {
-      gameObject = (__int64)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
+      gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
       if ( !gameObject )
         goto LABEL_38;
-      transform = UnityEngine_GameObject__get_transform((UnityEngine_GameObject_o *)gameObject, 0);
-      gameObject = (__int64)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
+      transform = UnityEngine_GameObject__get_transform(gameObject, 0);
+      gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
       if ( !gameObject )
         goto LABEL_38;
-      gameObject = (__int64)UnityEngine_GameObject__get_transform((UnityEngine_GameObject_o *)gameObject, 0);
+      gameObject = (UnityEngine_GameObject_o *)UnityEngine_GameObject__get_transform(gameObject, 0);
       if ( !gameObject )
         goto LABEL_38;
       v5 = (unsigned int)UnityEngine_Transform__get_position((UnityEngine_Transform_o *)gameObject, 0);
       y = this->fields.checkvec.fields.y;
       v7 = v5;
-      gameObject = (__int64)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
+      gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
       if ( !gameObject )
         goto LABEL_38;
-      gameObject = (__int64)UnityEngine_GameObject__get_transform((UnityEngine_GameObject_o *)gameObject, 0);
+      gameObject = (UnityEngine_GameObject_o *)UnityEngine_GameObject__get_transform(gameObject, 0);
       if ( !gameObject )
         goto LABEL_38;
       v27 = UnityEngine_Transform__get_position((UnityEngine_Transform_o *)gameObject, 0);
@@ -296,28 +296,28 @@ void BattleMoveObject__Update(BattleMoveObject_o *this, const MethodInfo *method
       rigibody = (UnityEngine_Object_o *)this->fields.rigibody;
       if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-      gameObject = UnityEngine_Object__op_Inequality(rigibody, 0, 0);
-      if ( (gameObject & 1) != 0 )
+      gameObject = (UnityEngine_GameObject_o *)UnityEngine_Object__op_Inequality(rigibody, 0, 0);
+      if ( ((unsigned __int8)gameObject & 1) != 0 )
       {
         v11 = this->fields.rigibody;
-        if ( !byte_4C313D1 )
+        if ( !byte_4C3C921 )
         {
-          gameObject = sub_1C32C20(&UnityEngine_Vector3_TypeInfo);
-          byte_4C313D1 = 1;
+          gameObject = (UnityEngine_GameObject_o *)sub_1C37058(&UnityEngine_Vector3_TypeInfo);
+          byte_4C3C921 = 1;
         }
         if ( !v11 )
           goto LABEL_38;
         UnityEngine_Rigidbody__set_velocity(v11, UnityEngine_Vector3_TypeInfo->static_fields->zeroVector, 0);
         v12 = this->fields.rigibody;
-        if ( !byte_4C313D1 )
+        if ( !byte_4C3C921 )
         {
-          gameObject = sub_1C32C20(&UnityEngine_Vector3_TypeInfo);
-          byte_4C313D1 = 1;
+          gameObject = (UnityEngine_GameObject_o *)sub_1C37058(&UnityEngine_Vector3_TypeInfo);
+          byte_4C3C921 = 1;
         }
         if ( !v12 )
           goto LABEL_38;
         UnityEngine_Rigidbody__set_angularVelocity(v12, UnityEngine_Vector3_TypeInfo->static_fields->zeroVector, 0);
-        gameObject = (__int64)this->fields.rigibody;
+        gameObject = (UnityEngine_GameObject_o *)this->fields.rigibody;
         if ( !gameObject )
           goto LABEL_38;
         UnityEngine_Rigidbody__set_useGravity((UnityEngine_Rigidbody_o *)gameObject, 0, 0);
@@ -333,7 +333,7 @@ void BattleMoveObject__Update(BattleMoveObject_o *this, const MethodInfo *method
     v15 = (float)(v14 * v14) * (float)((float)(v14 * 2.7016) + -1.7016);
   else
     v15 = v14 * (float)(v14 * (float)(v14 * v14));
-  gameObject = (__int64)this->fields.selfTransform;
+  gameObject = (UnityEngine_GameObject_o *)this->fields.selfTransform;
   v16 = v15 + 0.0;
   v17 = fminf(v16, 1.0);
   if ( v16 < 0.0 )
@@ -356,11 +356,11 @@ void BattleMoveObject__Update(BattleMoveObject_o *this, const MethodInfo *method
   UnityEngine_Transform__set_localPosition((UnityEngine_Transform_o *)gameObject, *(UnityEngine_Vector3_o *)&v21, 0);
   if ( v13 <= this->fields.notTweenInfo.fields.time )
     return;
-  gameObject = (__int64)this->fields.selfTransform;
+  gameObject = (UnityEngine_GameObject_o *)this->fields.selfTransform;
   this->fields.isNotTweenMove = 0;
   if ( !gameObject )
 LABEL_38:
-    sub_1C32E7C(gameObject);
+    sub_1C372B4(gameObject);
   UnityEngine_Transform__set_localPosition(
     (UnityEngine_Transform_o *)gameObject,
     this->fields.notTweenInfo.fields.to,
@@ -386,16 +386,16 @@ System_Collections_IEnumerator_o *BattleMoveObject___StartNotTweenMove(
   int32_t v6; // w2
   const MethodInfo *v7; // x3
 
-  if ( (byte_4C3A4E3 & 1) == 0 )
+  if ( (byte_4C45AEB & 1) == 0 )
   {
-    sub_1C32C20(&BattleMoveObject___StartNotTweenMove_d__36_TypeInfo);
-    byte_4C3A4E3 = 1;
+    sub_1C37058(&BattleMoveObject___StartNotTweenMove_d__36_TypeInfo);
+    byte_4C45AEB = 1;
   }
-  v5 = sub_1C32E6C(BattleMoveObject___StartNotTweenMove_d__36_TypeInfo);
+  v5 = sub_1C372A4(BattleMoveObject___StartNotTweenMove_d__36_TypeInfo);
   System_Object___ctor((Il2CppObject *)v5, 0);
   *(_DWORD *)(v5 + 16) = 0;
   *(_QWORD *)(v5 + 40) = this;
-  sub_1C32BC4((CGThumbnailListItem_o *)(v5 + 40), (int32_t)this, v6, v7);
+  sub_1C36FFC((CGThumbnailListItem_o *)(v5 + 40), (int32_t)this, v6, v7);
   *(float *)(v5 + 32) = delay;
   return (System_Collections_IEnumerator_o *)v5;
 }
@@ -446,11 +446,11 @@ void BattleMoveObject__onOpenComplete(BattleMoveObject_o *this, const MethodInfo
   Spawner_o *spawner; // x20
   UnityEngine_Vector3_o position; // 0:s0.4,4:s1.4,8:s2.4
 
-  if ( (byte_4C3A4DF & 1) == 0 )
+  if ( (byte_4C45AE7 & 1) == 0 )
   {
-    sub_1C32C20(&Method_BattleMoveObject_onOpenComplete__);
-    sub_1C32C20(&UnityEngine_Object_TypeInfo);
-    byte_4C3A4DF = 1;
+    sub_1C37058(&Method_BattleMoveObject_onOpenComplete__);
+    sub_1C37058(&UnityEngine_Object_TypeInfo);
+    byte_4C45AE7 = 1;
   }
   perf = (UnityEngine_Object_o *)this->fields.perf;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -472,8 +472,8 @@ void BattleMoveObject__onOpenComplete(BattleMoveObject_o *this, const MethodInfo
       {
         v7 = Method_BattleMoveObject_onOpenComplete__;
         if ( (*((_BYTE *)Method_BattleMoveObject_onOpenComplete__ + 83) & 2) != 0 )
-          v7 = (_QWORD *)sub_1C32C38(Method_BattleMoveObject_onOpenComplete__);
-        v8 = (System_Reflection_MethodBase_o *)sub_1C32C04(v7, v7[4]);
+          v7 = (_QWORD *)sub_1C37070(Method_BattleMoveObject_onOpenComplete__);
+        v8 = (System_Reflection_MethodBase_o *)sub_1C3703C(v7, v7[4]);
         OverwriteAssetSoundName__PlaySystemSe(v8, 4, 0, 0);
         gameObject = this->fields.perf;
         if ( !gameObject )
@@ -528,7 +528,7 @@ void BattleMoveObject__onOpenComplete(BattleMoveObject_o *this, const MethodInfo
       }
     }
 LABEL_28:
-    sub_1C32E7C(gameObject);
+    sub_1C372B4(gameObject);
   }
 LABEL_26:
   spawner = this->fields.spawner;
@@ -557,7 +557,7 @@ void BattleMoveObject__setParam(
 
   this->fields.perf = perf;
   p_perf = &this->fields.perf;
-  sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.perf, (int32_t)perf, count, method);
+  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.perf, (int32_t)perf, count, method);
   *((_DWORD *)p_perf + 2) = count;
 }
 
@@ -573,7 +573,7 @@ void BattleMoveObject__setTargetTr(BattleMoveObject_o *this, UnityEngine_Transfo
   const MethodInfo *v3; // x3
 
   this->fields.targetTr = tr;
-  sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.targetTr, (int32_t)tr, (int32_t)method, v3);
+  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.targetTr, (int32_t)tr, (int32_t)method, v3);
 }
 
 
@@ -614,62 +614,62 @@ void BattleMoveObject__startMoveTarget(BattleMoveObject_o *this, const MethodInf
   float v29; // [xsp+18h] [xbp-68h] BYREF
   int v30; // [xsp+1Ch] [xbp-64h] BYREF
 
-  if ( (byte_4C3A4DE & 1) == 0 )
+  if ( (byte_4C45AE6 & 1) == 0 )
   {
-    sub_1C32C20(&iTween_EaseType_TypeInfo);
-    sub_1C32C20(&System_Collections_Hashtable_TypeInfo);
-    sub_1C32C20(&float_TypeInfo);
-    sub_1C32C20(&UnityEngine_Vector3_TypeInfo);
-    sub_1C32C20(&StringLiteral_18751/*"easetype"*/);
-    sub_1C32C20(&StringLiteral_22415/*"onOpenComplete"*/);
-    sub_1C32C20(&StringLiteral_24067/*"time"*/);
-    sub_1C32C20(&StringLiteral_22736/*"position"*/);
-    sub_1C32C20(&StringLiteral_22427/*"oncomplete"*/);
-    sub_1C32C20(&iTween_TypeInfo);
-    byte_4C3A4DE = 1;
+    sub_1C37058(&iTween_EaseType_TypeInfo);
+    sub_1C37058(&System_Collections_Hashtable_TypeInfo);
+    sub_1C37058(&float_TypeInfo);
+    sub_1C37058(&UnityEngine_Vector3_TypeInfo);
+    sub_1C37058(&StringLiteral_18754/*"easetype"*/);
+    sub_1C37058(&StringLiteral_22418/*"onOpenComplete"*/);
+    sub_1C37058(&StringLiteral_24071/*"time"*/);
+    sub_1C37058(&StringLiteral_22740/*"position"*/);
+    sub_1C37058(&StringLiteral_22430/*"oncomplete"*/);
+    sub_1C37058(&iTween_TypeInfo);
+    byte_4C45AE6 = 1;
   }
   this->fields.moveflg = 1;
   v3 = UnityEngine_Random__Range(0.2, 0.4, 0);
-  v4 = (System_Collections_Hashtable_o *)sub_1C32E6C(System_Collections_Hashtable_TypeInfo);
-  System_Collections_Hashtable___ctor_64882772(v4, 0);
+  v4 = (System_Collections_Hashtable_o *)sub_1C372A4(System_Collections_Hashtable_TypeInfo);
+  System_Collections_Hashtable___ctor_64925884(v4, 0);
   if ( !v4
     || (((void (__fastcall *)(System_Collections_Hashtable_o *, const MethodInfo *))v4->klass->vtable._23_Clear.methodPtr)(
           v4,
           v4->klass->vtable._23_Clear.method),
         (targetTr = this->fields.targetTr) == 0) )
   {
-    sub_1C32E7C(targetTr);
+    sub_1C372B4(targetTr);
   }
   position = UnityEngine_Transform__get_position(targetTr, 0);
   v12 = j_il2cpp_value_box_0(UnityEngine_Vector3_TypeInfo, &position, v6, v7, v8, v9, v10, v11);
   ((void (__fastcall *)(System_Collections_Hashtable_o *, __int64, __int64, const MethodInfo *))v4->klass->vtable._22_Add.methodPtr)(
     v4,
-    StringLiteral_22736/*"position"*/,
+    StringLiteral_22740/*"position"*/,
     v12,
     v4->klass->vtable._22_Add.method);
   v30 = 26;
   v19 = j_il2cpp_value_box_0(iTween_EaseType_TypeInfo, &v30, v13, v14, v15, v16, v17, v18);
   ((void (__fastcall *)(System_Collections_Hashtable_o *, __int64, __int64, const MethodInfo *))v4->klass->vtable._22_Add.methodPtr)(
     v4,
-    StringLiteral_18751/*"easetype"*/,
+    StringLiteral_18754/*"easetype"*/,
     v19,
     v4->klass->vtable._22_Add.method);
   ((void (__fastcall *)(System_Collections_Hashtable_o *, __int64, __int64, const MethodInfo *))v4->klass->vtable._22_Add.methodPtr)(
     v4,
-    StringLiteral_22427/*"oncomplete"*/,
-    StringLiteral_22415/*"onOpenComplete"*/,
+    StringLiteral_22430/*"oncomplete"*/,
+    StringLiteral_22418/*"onOpenComplete"*/,
     v4->klass->vtable._22_Add.method);
   v29 = v3;
   v26 = j_il2cpp_value_box_0(float_TypeInfo, &v29, v20, v21, v22, v23, v24, v25);
   ((void (__fastcall *)(System_Collections_Hashtable_o *, __int64, __int64, const MethodInfo *))v4->klass->vtable._22_Add.methodPtr)(
     v4,
-    StringLiteral_24067/*"time"*/,
+    StringLiteral_24071/*"time"*/,
     v26,
     v4->klass->vtable._22_Add.method);
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
   if ( !iTween_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(iTween_TypeInfo);
-  iTween__MoveTo_63156108(gameObject, v4, 0);
+  iTween__MoveTo_63199220(gameObject, v4, 0);
 }
 
 
@@ -698,10 +698,10 @@ bool BattleMoveObject___StartNotTweenMove_d__36__MoveNext(
   bool result; // w0
 
   v2 = this;
-  if ( (byte_4C3A4E5 & 1) == 0 )
+  if ( (byte_4C45AED & 1) == 0 )
   {
-    this = (BattleMoveObject___StartNotTweenMove_d__36_o *)sub_1C32C20(&UnityEngine_WaitForSeconds_TypeInfo);
-    byte_4C3A4E5 = 1;
+    this = (BattleMoveObject___StartNotTweenMove_d__36_o *)sub_1C37058(&UnityEngine_WaitForSeconds_TypeInfo);
+    byte_4C45AED = 1;
   }
   _1__state = v2->fields.__1__state;
   _4__this = v2->fields.__4__this;
@@ -717,18 +717,18 @@ bool BattleMoveObject___StartNotTweenMove_d__36__MoveNext(
     v2->fields.__1__state = -1;
     if ( delay > 0.0 )
     {
-      v6 = (UnityEngine_WaitForSeconds_o *)sub_1C32E6C(UnityEngine_WaitForSeconds_TypeInfo);
+      v6 = (UnityEngine_WaitForSeconds_o *)sub_1C372A4(UnityEngine_WaitForSeconds_TypeInfo);
       UnityEngine_WaitForSeconds___ctor(v6, delay, 0);
       v2->fields.__2__current = (Il2CppObject *)v6;
       p__2__current = (CGThumbnailListItem_o *)&v2->fields.__2__current;
-      sub_1C32BC4(p__2__current, (int32_t)v6, v8, v9);
+      sub_1C36FFC(p__2__current, (int32_t)v6, v8, v9);
       result = 1;
       LODWORD(p__2__current[-1].fields._ThumbnailSpritePath_k__BackingField) = 1;
       return result;
     }
   }
   if ( !_4__this )
-    sub_1C32E7C(this);
+    sub_1C372B4(this);
   result = 0;
   _4__this->fields.isNotTweenMove = 1;
   return result;
@@ -751,11 +751,11 @@ void __noreturn BattleMoveObject___StartNotTweenMove_d__36__System_Collections_I
   System_NotSupportedException_o *v3; // x19
   __int64 v4; // x0
 
-  v2 = sub_1C32C34(&System_NotSupportedException_TypeInfo);
-  v3 = (System_NotSupportedException_o *)sub_1C32E6C(v2);
+  v2 = sub_1C3706C(&System_NotSupportedException_TypeInfo);
+  v3 = (System_NotSupportedException_o *)sub_1C372A4(v2);
   System_NotSupportedException___ctor(v3, 0);
-  v4 = sub_1C32C34(&Method_BattleMoveObject___StartNotTweenMove_d__36_System_Collections_IEnumerator_Reset__);
-  sub_1C32D48(v3, v4);
+  v4 = sub_1C3706C(&Method_BattleMoveObject___StartNotTweenMove_d__36_System_Collections_IEnumerator_Reset__);
+  sub_1C37180(v3, v4);
 }
 
 

@@ -17,7 +17,7 @@ void SetCombineData__Clear(SetCombineData_o *this, const MethodInfo *method)
   *(_QWORD *)&this->fields.getExp = 0;
   *(_QWORD *)&this->fields.getHpAdjustVal = 0;
   this->fields.materialUsrSvtIdList = 0;
-  sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.materialUsrSvtIdList, 0, v2, v3);
+  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.materialUsrSvtIdList, 0, v2, v3);
   this->fields.svtEqMaterialList = 0;
-  sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.svtEqMaterialList, 0, v5, v6);
+  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.svtEqMaterialList, 0, v5, v6);
 }

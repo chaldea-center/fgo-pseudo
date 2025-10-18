@@ -8,19 +8,19 @@ void UIBasicSprite___cctor(const MethodInfo *method)
   int32_t v6; // w2
   const MethodInfo *v7; // x3
 
-  if ( (byte_4C3C1C5 & 1) == 0 )
+  if ( (byte_4C47740 & 1) == 0 )
   {
-    sub_1C32C20(&UIBasicSprite_TypeInfo);
-    sub_1C32C20(&UnityEngine_Vector2___TypeInfo);
-    byte_4C3C1C5 = 1;
+    sub_1C37058(&UIBasicSprite_TypeInfo);
+    sub_1C37058(&UnityEngine_Vector2___TypeInfo);
+    byte_4C47740 = 1;
   }
-  v1 = (struct UnityEngine_Vector2_array *)sub_1C32CC8(UnityEngine_Vector2___TypeInfo, 4);
+  v1 = (struct UnityEngine_Vector2_array *)sub_1C37100(UnityEngine_Vector2___TypeInfo, 4);
   UIBasicSprite_TypeInfo->static_fields->mTempPos = v1;
-  sub_1C32BC4((CGThumbnailListItem_o *)UIBasicSprite_TypeInfo->static_fields, (int32_t)v1, v2, v3);
-  v4 = sub_1C32CC8(UnityEngine_Vector2___TypeInfo, 4);
+  sub_1C36FFC((CGThumbnailListItem_o *)UIBasicSprite_TypeInfo->static_fields, (int32_t)v1, v2, v3);
+  v4 = sub_1C37100(UnityEngine_Vector2___TypeInfo, 4);
   static_fields = UIBasicSprite_TypeInfo->static_fields;
   static_fields->mTempUVs = (struct UnityEngine_Vector2_array *)v4;
-  sub_1C32BC4((CGThumbnailListItem_o *)&static_fields->mTempUVs, v4, v6, v7);
+  sub_1C36FFC((CGThumbnailListItem_o *)&static_fields->mTempUVs, v4, v6, v7);
 }
 
 
@@ -202,11 +202,11 @@ void UIBasicSprite__AdvancedFill(
   float v164; // [xsp+3Ch] [xbp-94h]
   float v165; // [xsp+3Ch] [xbp-94h]
 
-  if ( (byte_4C3C1C2 & 1) == 0 )
+  if ( (byte_4C4773D & 1) == 0 )
   {
-    sub_1C32C20(&UnityEngine_Object_TypeInfo);
-    sub_1C32C20(&UIBasicSprite_TypeInfo);
-    byte_4C3C1C2 = 1;
+    sub_1C37058(&UnityEngine_Object_TypeInfo);
+    sub_1C37058(&UIBasicSprite_TypeInfo);
+    byte_4C4773D = 1;
   }
   v9 = (UnityEngine_Object_o *)((__int64 (__fastcall *)(UIBasicSprite_o *, const MethodInfo *, BetterList_Vector2__o *, BetterList_Color32__o *, const MethodInfo *))this->klass->vtable._26_get_mainTexture.methodPtr)(
                                  this,
@@ -412,7 +412,7 @@ LABEL_57:
                         v101 = LODWORD(v100->max_length);
                         if ( v101 <= 1 || v69 >= v101 || v71 >= v101 )
                           goto LABEL_225;
-                        UIBasicSprite__Fill_49341004(
+                        UIBasicSprite__Fill_49384116(
                           verts,
                           uvs,
                           cols,
@@ -527,7 +527,7 @@ LABEL_103:
                             }
                             if ( !v24->_2.cctor_finished )
                               j_il2cpp_runtime_class_init_0(v24);
-                            UIBasicSprite__Fill_49341004(
+                            UIBasicSprite__Fill_49384116(
                               verts,
                               uvs,
                               cols,
@@ -597,7 +597,7 @@ LABEL_62:
                         v128 = v120->m_Items[v71].fields.y;
                         v129 = v122->m_Items[v69].fields.x;
 LABEL_219:
-                        UIBasicSprite__Fill_49341004(
+                        UIBasicSprite__Fill_49384116(
                           verts,
                           uvs,
                           cols,
@@ -672,7 +672,7 @@ LABEL_219:
                           }
                           if ( !v24->_2.cctor_finished )
                             j_il2cpp_runtime_class_init_0(v24);
-                          UIBasicSprite__Fill_49341004(
+                          UIBasicSprite__Fill_49384116(
                             verts,
                             uvs,
                             cols,
@@ -693,7 +693,7 @@ LABEL_219:
                           v107 = v114;
                         }
 LABEL_224:
-                        sub_1C32E7C(v24);
+                        sub_1C372B4(v24);
                       }
                     }
                     else
@@ -824,7 +824,7 @@ LABEL_206:
                           }
                           if ( !v24->_2.cctor_finished )
                             j_il2cpp_runtime_class_init_0(v24);
-                          UIBasicSprite__Fill_49341004(
+                          UIBasicSprite__Fill_49384116(
                             verts,
                             uvs,
                             cols,
@@ -909,7 +909,7 @@ LABEL_63:
       }
     }
 LABEL_225:
-    sub_1C32E84(v24);
+    sub_1C372BC(v24);
   }
 }
 
@@ -957,7 +957,7 @@ void UIBasicSprite__Fill(
 }
 
 
-void UIBasicSprite__Fill_49341004(
+void UIBasicSprite__Fill_49384116(
         BetterList_Vector3__o *verts,
         BetterList_Vector2__o *uvs,
         BetterList_Color32__o *cols,
@@ -1001,53 +1001,53 @@ void UIBasicSprite__Fill_49341004(
   v28.fields.y = u1y;
   item.fields.x = u1x;
   item.fields.y = u0y;
-  if ( (byte_4C3C1C4 & 1) == 0 )
+  if ( (byte_4C4773F & 1) == 0 )
   {
-    sub_1C32C20(&Method_BetterList_Vector3__Add__);
-    sub_1C32C20(&Method_BetterList_Color32__Add__);
-    verts = (BetterList_Vector3__o *)sub_1C32C20(&Method_BetterList_Vector2__Add__);
-    byte_4C3C1C4 = 1;
+    sub_1C37058(&Method_BetterList_Vector3__Add__);
+    sub_1C37058(&Method_BetterList_Color32__Add__);
+    verts = (BetterList_Vector3__o *)sub_1C37058(&Method_BetterList_Vector2__Add__);
+    byte_4C4773F = 1;
   }
   if ( !v23 )
     goto LABEL_7;
   v34.fields.z = 0.0;
   v34.fields.x = v0x;
   v34.fields.y = v0y;
-  BetterList_Vector3___Add(v23, v34, (const MethodInfo_33114AC *)Method_BetterList_Vector3__Add__);
+  BetterList_Vector3___Add(v23, v34, (const MethodInfo_331BD14 *)Method_BetterList_Vector3__Add__);
   v35.fields.z = 0.0;
   v35.fields.x = v0x;
   v35.fields.y = v1y;
-  BetterList_Vector3___Add(v23, v35, (const MethodInfo_33114AC *)Method_BetterList_Vector3__Add__);
+  BetterList_Vector3___Add(v23, v35, (const MethodInfo_331BD14 *)Method_BetterList_Vector3__Add__);
   v36.fields.z = 0.0;
   v36.fields.x = v1x;
   v36.fields.y = v1y;
-  BetterList_Vector3___Add(v23, v36, (const MethodInfo_33114AC *)Method_BetterList_Vector3__Add__);
+  BetterList_Vector3___Add(v23, v36, (const MethodInfo_331BD14 *)Method_BetterList_Vector3__Add__);
   v37.fields.z = 0.0;
   v37.fields.x = v1x;
   v37.fields.y = v0y;
-  BetterList_Vector3___Add(v23, v37, (const MethodInfo_33114AC *)Method_BetterList_Vector3__Add__);
+  BetterList_Vector3___Add(v23, v37, (const MethodInfo_331BD14 *)Method_BetterList_Vector3__Add__);
   if ( !uvs )
     goto LABEL_7;
   v32.fields.x = v28.fields.x;
   v32.fields.y = item.fields.y;
-  BetterList_Vector2___Add(uvs, v32, (const MethodInfo_3310A20 *)Method_BetterList_Vector2__Add__);
-  BetterList_Vector2___Add(uvs, v28, (const MethodInfo_3310A20 *)Method_BetterList_Vector2__Add__);
+  BetterList_Vector2___Add(uvs, v32, (const MethodInfo_331B288 *)Method_BetterList_Vector2__Add__);
+  BetterList_Vector2___Add(uvs, v28, (const MethodInfo_331B288 *)Method_BetterList_Vector2__Add__);
   v33.fields.y = v28.fields.y;
   v33.fields.x = item.fields.x;
-  BetterList_Vector2___Add(uvs, v33, (const MethodInfo_3310A20 *)Method_BetterList_Vector2__Add__);
-  BetterList_Vector2___Add(uvs, item, (const MethodInfo_3310A20 *)Method_BetterList_Vector2__Add__);
-  verts = (BetterList_Vector3__o *)sub_250F080(0, v16, v15, v14, v13);
+  BetterList_Vector2___Add(uvs, v33, (const MethodInfo_331B288 *)Method_BetterList_Vector2__Add__);
+  BetterList_Vector2___Add(uvs, item, (const MethodInfo_331B288 *)Method_BetterList_Vector2__Add__);
+  verts = (BetterList_Vector3__o *)sub_2526688(0, v16, v15, v14, v13);
   if ( !cols )
 LABEL_7:
-    sub_1C32E7C(verts);
+    sub_1C372B4(verts);
   v24 = (UnityEngine_Color32_o)(unsigned int)verts;
-  BetterList_Color32___Add(cols, v24, (const MethodInfo_330E4D4 *)Method_BetterList_Color32__Add__);
-  v25 = (UnityEngine_Color32_o)(unsigned int)sub_250F080(0, v16, v15, v14, v13);
-  BetterList_Color32___Add(cols, v25, (const MethodInfo_330E4D4 *)Method_BetterList_Color32__Add__);
-  v26 = (UnityEngine_Color32_o)(unsigned int)sub_250F080(0, v16, v15, v14, v13);
-  BetterList_Color32___Add(cols, v26, (const MethodInfo_330E4D4 *)Method_BetterList_Color32__Add__);
-  v27 = (UnityEngine_Color32_o)(unsigned int)sub_250F080(0, v16, v15, v14, v13);
-  BetterList_Color32___Add(cols, v27, (const MethodInfo_330E4D4 *)Method_BetterList_Color32__Add__);
+  BetterList_Color32___Add(cols, v24, (const MethodInfo_3318D3C *)Method_BetterList_Color32__Add__);
+  v25 = (UnityEngine_Color32_o)(unsigned int)sub_2526688(0, v16, v15, v14, v13);
+  BetterList_Color32___Add(cols, v25, (const MethodInfo_3318D3C *)Method_BetterList_Color32__Add__);
+  v26 = (UnityEngine_Color32_o)(unsigned int)sub_2526688(0, v16, v15, v14, v13);
+  BetterList_Color32___Add(cols, v26, (const MethodInfo_3318D3C *)Method_BetterList_Color32__Add__);
+  v27 = (UnityEngine_Color32_o)(unsigned int)sub_2526688(0, v16, v15, v14, v13);
+  BetterList_Color32___Add(cols, v27, (const MethodInfo_3318D3C *)Method_BetterList_Color32__Add__);
 }
 
 
@@ -1169,7 +1169,7 @@ void UIBasicSprite__FilledFill(
   unsigned int v117; // w8
   float v118; // s0
   float v119; // s0
-  const MethodInfo_33114AC **v120; // x26
+  const MethodInfo_331BD14 **v120; // x26
   _BOOL4 v121; // w22
   float v122; // s9
   struct UIBasicSprite_StaticFields *v123; // x8
@@ -1199,13 +1199,13 @@ void UIBasicSprite__FilledFill(
   UnityEngine_Vector3_o v147; // 0:s0.4,4:s1.4,8:s2.4
   UnityEngine_Vector4_o drawingUVs; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 
-  if ( (byte_4C3C1C1 & 1) == 0 )
+  if ( (byte_4C4773C & 1) == 0 )
   {
-    sub_1C32C20(&Method_BetterList_Vector3__Add__);
-    sub_1C32C20(&Method_BetterList_Color32__Add__);
-    sub_1C32C20(&Method_BetterList_Vector2__Add__);
-    sub_1C32C20(&UIBasicSprite_TypeInfo);
-    byte_4C3C1C1 = 1;
+    sub_1C37058(&Method_BetterList_Vector3__Add__);
+    sub_1C37058(&Method_BetterList_Color32__Add__);
+    sub_1C37058(&Method_BetterList_Vector2__Add__);
+    sub_1C37058(&UIBasicSprite_TypeInfo);
+    byte_4C4773C = 1;
   }
   if ( this->fields.mFillAmount >= 0.001 )
   {
@@ -1319,7 +1319,7 @@ void UIBasicSprite__FilledFill(
       goto LABEL_148;
     if ( LODWORD(v39->max_length) <= 3 )
 LABEL_149:
-      sub_1C32E84(v31);
+      sub_1C372BC(v31);
     v39->m_Items[3].fields.x = z;
     v39->m_Items[3].fields.y = y;
     v40 = this->fields.mFillAmount;
@@ -1347,7 +1347,7 @@ LABEL_81:
         v145.fields.x = v88[8];
         v145.fields.y = v88[9];
         v145.fields.z = 0.0;
-        BetterList_Vector3___Add(verts, v145, (const MethodInfo_33114AC *)Method_BetterList_Vector3__Add__);
+        BetterList_Vector3___Add(verts, v145, (const MethodInfo_331BD14 *)Method_BetterList_Vector3__Add__);
         v89 = UIBasicSprite_TypeInfo->static_fields->mTempUVs;
         if ( !v89 )
           goto LABEL_148;
@@ -1355,11 +1355,11 @@ LABEL_81:
           goto LABEL_149;
         if ( !uvs )
           goto LABEL_148;
-        BetterList_Vector2___Add(uvs, v89->m_Items[v85], (const MethodInfo_3310A20 *)Method_BetterList_Vector2__Add__);
+        BetterList_Vector2___Add(uvs, v89->m_Items[v85], (const MethodInfo_331B288 *)Method_BetterList_Vector2__Add__);
         if ( !cols )
           goto LABEL_148;
         v90 = (UnityEngine_Color32_o)v24;
-        BetterList_Color32___Add(cols, v90, (const MethodInfo_330E4D4 *)Method_BetterList_Color32__Add__);
+        BetterList_Color32___Add(cols, v90, (const MethodInfo_3318D3C *)Method_BetterList_Color32__Add__);
         ++v86;
         ++v85;
         if ( v86 == 4 )
@@ -1507,7 +1507,7 @@ LABEL_79:
             v144.fields.x = v82[8];
             v144.fields.y = v82[9];
             v144.fields.z = 0.0;
-            BetterList_Vector3___Add(verts, v144, (const MethodInfo_33114AC *)Method_BetterList_Vector3__Add__);
+            BetterList_Vector3___Add(verts, v144, (const MethodInfo_331BD14 *)Method_BetterList_Vector3__Add__);
             v83 = UIBasicSprite_TypeInfo->static_fields->mTempUVs;
             if ( !v83 )
               goto LABEL_148;
@@ -1518,11 +1518,11 @@ LABEL_79:
             BetterList_Vector2___Add(
               uvs,
               v83->m_Items[v79],
-              (const MethodInfo_3310A20 *)Method_BetterList_Vector2__Add__);
+              (const MethodInfo_331B288 *)Method_BetterList_Vector2__Add__);
             if ( !cols )
               goto LABEL_148;
             v84 = (UnityEngine_Color32_o)v24;
-            BetterList_Color32___Add(cols, v84, (const MethodInfo_330E4D4 *)Method_BetterList_Color32__Add__);
+            BetterList_Color32___Add(cols, v84, (const MethodInfo_3318D3C *)Method_BetterList_Color32__Add__);
             ++v80;
             ++v79;
             if ( v80 == 4 )
@@ -1603,7 +1603,7 @@ LABEL_79:
         v116->m_Items[2].fields.y = v107;
         v116->m_Items[3].fields.x = v119;
         v116->m_Items[3].fields.y = v108;
-        v120 = (const MethodInfo_33114AC **)v98;
+        v120 = (const MethodInfo_331BD14 **)v98;
         v121 = this->fields.mInvert;
         v122 = this->fields.mFillAmount;
         v140 = v105;
@@ -1660,18 +1660,18 @@ LABEL_146:
           goto LABEL_149;
         if ( !uvs )
           break;
-        BetterList_Vector2___Add(uvs, v134->m_Items[v130], (const MethodInfo_3310A20 *)Method_BetterList_Vector2__Add__);
+        BetterList_Vector2___Add(uvs, v134->m_Items[v130], (const MethodInfo_331B288 *)Method_BetterList_Vector2__Add__);
         if ( !cols )
           break;
         v135 = (UnityEngine_Color32_o)v24;
-        BetterList_Color32___Add(cols, v135, (const MethodInfo_330E4D4 *)Method_BetterList_Color32__Add__);
+        BetterList_Color32___Add(cols, v135, (const MethodInfo_3318D3C *)Method_BetterList_Color32__Add__);
         ++v131;
         ++v130;
         if ( v131 == 4 )
           goto LABEL_146;
       }
 LABEL_148:
-      sub_1C32E7C(v31);
+      sub_1C372B4(v31);
     }
     v91 = UIBasicSprite_TypeInfo;
     if ( !UIBasicSprite_TypeInfo->_2.cctor_finished )
@@ -1709,7 +1709,7 @@ LABEL_148:
         v146.fields.x = v95[8];
         v146.fields.y = v95[9];
         v146.fields.z = 0.0;
-        BetterList_Vector3___Add(verts, v146, (const MethodInfo_33114AC *)Method_BetterList_Vector3__Add__);
+        BetterList_Vector3___Add(verts, v146, (const MethodInfo_331BD14 *)Method_BetterList_Vector3__Add__);
         v96 = UIBasicSprite_TypeInfo->static_fields->mTempUVs;
         if ( !v96 )
           goto LABEL_148;
@@ -1717,11 +1717,11 @@ LABEL_148:
           goto LABEL_149;
         if ( !uvs )
           goto LABEL_148;
-        BetterList_Vector2___Add(uvs, v96->m_Items[v92], (const MethodInfo_3310A20 *)Method_BetterList_Vector2__Add__);
+        BetterList_Vector2___Add(uvs, v96->m_Items[v92], (const MethodInfo_331B288 *)Method_BetterList_Vector2__Add__);
         if ( !cols )
           goto LABEL_148;
         v97 = (UnityEngine_Color32_o)v24;
-        BetterList_Color32___Add(cols, v97, (const MethodInfo_330E4D4 *)Method_BetterList_Color32__Add__);
+        BetterList_Color32___Add(cols, v97, (const MethodInfo_3318D3C *)Method_BetterList_Color32__Add__);
         ++v93;
         ++v92;
         if ( v93 == 4 )
@@ -1752,10 +1752,10 @@ bool UIBasicSprite__RadialCut(
   float cosx; // [xsp+8h] [xbp-48h] BYREF
   float sinx; // [xsp+Ch] [xbp-44h] BYREF
 
-  if ( (byte_4C3C1C3 & 1) == 0 )
+  if ( (byte_4C4773E & 1) == 0 )
   {
-    sub_1C32C20(&UIBasicSprite_TypeInfo);
-    byte_4C3C1C3 = 1;
+    sub_1C37058(&UIBasicSprite_TypeInfo);
+    byte_4C4773E = 1;
   }
   if ( fill < 0.001 )
     return 0;
@@ -1775,14 +1775,14 @@ bool UIBasicSprite__RadialCut(
     if ( !UIBasicSprite_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(UIBasicSprite_TypeInfo);
     v18 = v11 & 1;
-    UIBasicSprite__RadialCut_49341560(xy, v16, v17, v18, corner, v15);
-    UIBasicSprite__RadialCut_49341560(uv, v16, v17, v18, corner, v19);
+    UIBasicSprite__RadialCut_49384672(xy, v16, v17, v18, corner, v15);
+    UIBasicSprite__RadialCut_49384672(uv, v16, v17, v18, corner, v19);
   }
   return 1;
 }
 
 
-void UIBasicSprite__RadialCut_49341560(
+void UIBasicSprite__RadialCut_49384672(
         UnityEngine_Vector2_array *xy,
         float cos,
         float sin,
@@ -2024,10 +2024,10 @@ LABEL_48:
           }
         }
 LABEL_76:
-        sub_1C32E84(v13);
+        sub_1C372BC(v13);
       }
 LABEL_77:
-      sub_1C32E7C(v13);
+      sub_1C372B4(v13);
     }
   }
   if ( !xy )
@@ -2088,12 +2088,12 @@ void UIBasicSprite__SimpleFill(
   UnityEngine_Vector3_o v35; // 0:s0.4,4:s1.4,8:s2.4
   UnityEngine_Vector4_o drawingUVs; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 
-  if ( (byte_4C3C1BE & 1) == 0 )
+  if ( (byte_4C47739 & 1) == 0 )
   {
-    sub_1C32C20(&Method_BetterList_Vector3__Add__);
-    sub_1C32C20(&Method_BetterList_Color32__Add__);
-    sub_1C32C20(&Method_BetterList_Vector2__Add__);
-    byte_4C3C1BE = 1;
+    sub_1C37058(&Method_BetterList_Vector3__Add__);
+    sub_1C37058(&Method_BetterList_Color32__Add__);
+    sub_1C37058(&Method_BetterList_Vector2__Add__);
+    byte_4C47739 = 1;
   }
   LODWORD(v9) = COERCE_UNSIGNED_INT128(
                   ((long double (__fastcall *)(UIBasicSprite_o *, const MethodInfo *, BetterList_Vector2__o *, BetterList_Color32__o *, const MethodInfo *))this->klass->vtable._23_get_drawingDimensions.methodPtr)(
@@ -2117,44 +2117,44 @@ void UIBasicSprite__SimpleFill(
   v32.fields.z = 0.0;
   v32.fields.x = v9;
   v32.fields.y = v11;
-  BetterList_Vector3___Add(verts, v32, (const MethodInfo_33114AC *)Method_BetterList_Vector3__Add__);
+  BetterList_Vector3___Add(verts, v32, (const MethodInfo_331BD14 *)Method_BetterList_Vector3__Add__);
   v33.fields.z = 0.0;
   v33.fields.x = v9;
   v33.fields.y = v15;
-  BetterList_Vector3___Add(verts, v33, (const MethodInfo_33114AC *)Method_BetterList_Vector3__Add__);
+  BetterList_Vector3___Add(verts, v33, (const MethodInfo_331BD14 *)Method_BetterList_Vector3__Add__);
   v34.fields.z = 0.0;
   v34.fields.x = v13;
   v34.fields.y = v15;
-  BetterList_Vector3___Add(verts, v34, (const MethodInfo_33114AC *)Method_BetterList_Vector3__Add__);
+  BetterList_Vector3___Add(verts, v34, (const MethodInfo_331BD14 *)Method_BetterList_Vector3__Add__);
   v35.fields.z = 0.0;
   v35.fields.x = v13;
   v35.fields.y = v11;
-  BetterList_Vector3___Add(verts, v35, (const MethodInfo_33114AC *)Method_BetterList_Vector3__Add__);
+  BetterList_Vector3___Add(verts, v35, (const MethodInfo_331BD14 *)Method_BetterList_Vector3__Add__);
   if ( !uvs )
     goto LABEL_7;
   v28.fields.x = x;
   v28.fields.y = y;
-  BetterList_Vector2___Add(uvs, v28, (const MethodInfo_3310A20 *)Method_BetterList_Vector2__Add__);
+  BetterList_Vector2___Add(uvs, v28, (const MethodInfo_331B288 *)Method_BetterList_Vector2__Add__);
   v29.fields.x = x;
   v29.fields.y = w;
-  BetterList_Vector2___Add(uvs, v29, (const MethodInfo_3310A20 *)Method_BetterList_Vector2__Add__);
+  BetterList_Vector2___Add(uvs, v29, (const MethodInfo_331B288 *)Method_BetterList_Vector2__Add__);
   v30.fields.x = z;
   v30.fields.y = w;
-  BetterList_Vector2___Add(uvs, v30, (const MethodInfo_3310A20 *)Method_BetterList_Vector2__Add__);
+  BetterList_Vector2___Add(uvs, v30, (const MethodInfo_331B288 *)Method_BetterList_Vector2__Add__);
   v31.fields.x = z;
   v31.fields.y = y;
-  BetterList_Vector2___Add(uvs, v31, (const MethodInfo_3310A20 *)Method_BetterList_Vector2__Add__);
+  BetterList_Vector2___Add(uvs, v31, (const MethodInfo_331B288 *)Method_BetterList_Vector2__Add__);
   if ( !cols )
 LABEL_7:
-    ((void (__fastcall __noreturn *)(_QWORD))sub_1C32E7C)(drawingColor);
+    ((void (__fastcall __noreturn *)(_QWORD))sub_1C372B4)(drawingColor);
   v24 = (UnityEngine_Color32_o)rgba;
-  BetterList_Color32___Add(cols, v24, (const MethodInfo_330E4D4 *)Method_BetterList_Color32__Add__);
+  BetterList_Color32___Add(cols, v24, (const MethodInfo_3318D3C *)Method_BetterList_Color32__Add__);
   v25 = (UnityEngine_Color32_o)rgba;
-  BetterList_Color32___Add(cols, v25, (const MethodInfo_330E4D4 *)Method_BetterList_Color32__Add__);
+  BetterList_Color32___Add(cols, v25, (const MethodInfo_3318D3C *)Method_BetterList_Color32__Add__);
   v26 = (UnityEngine_Color32_o)rgba;
-  BetterList_Color32___Add(cols, v26, (const MethodInfo_330E4D4 *)Method_BetterList_Color32__Add__);
+  BetterList_Color32___Add(cols, v26, (const MethodInfo_3318D3C *)Method_BetterList_Color32__Add__);
   v27 = (UnityEngine_Color32_o)rgba;
-  BetterList_Color32___Add(cols, v27, (const MethodInfo_330E4D4 *)Method_BetterList_Color32__Add__);
+  BetterList_Color32___Add(cols, v27, (const MethodInfo_3318D3C *)Method_BetterList_Color32__Add__);
 }
 
 
@@ -2255,13 +2255,13 @@ void UIBasicSprite__SlicedFill(
   UnityEngine_Vector3_o v96; // 0:s0.4,4:s1.4,8:s2.4
   UnityEngine_Vector3_o v97; // 0:s0.4,4:s1.4,8:s2.4
 
-  if ( (byte_4C3C1BF & 1) == 0 )
+  if ( (byte_4C4773A & 1) == 0 )
   {
-    sub_1C32C20(&Method_BetterList_Vector3__Add__);
-    sub_1C32C20(&Method_BetterList_Color32__Add__);
-    sub_1C32C20(&Method_BetterList_Vector2__Add__);
-    sub_1C32C20(&UIBasicSprite_TypeInfo);
-    byte_4C3C1BF = 1;
+    sub_1C37058(&Method_BetterList_Vector3__Add__);
+    sub_1C37058(&Method_BetterList_Color32__Add__);
+    sub_1C37058(&Method_BetterList_Vector2__Add__);
+    sub_1C37058(&UIBasicSprite_TypeInfo);
+    byte_4C4773A = 1;
   }
   v8 = COERCE_FLOAT(
          COERCE_UNSIGNED_INT128(
@@ -2413,11 +2413,11 @@ void UIBasicSprite__SlicedFill(
           goto LABEL_53;
         }
 LABEL_92:
-        sub_1C32E84(v28);
+        sub_1C372BC(v28);
       }
     }
 LABEL_93:
-    sub_1C32E7C(v28);
+    sub_1C372B4(v28);
   }
   if ( !v45 )
   {
@@ -2484,7 +2484,7 @@ LABEL_53:
         v94.fields.y = *(float *)(v62 + 8 * v60 + 36);
         v94.fields.x = *(float *)(v62 + 8 * v59 + 32);
         v94.fields.z = 0.0;
-        BetterList_Vector3___Add(verts, v94, (const MethodInfo_33114AC *)Method_BetterList_Vector3__Add__);
+        BetterList_Vector3___Add(verts, v94, (const MethodInfo_331BD14 *)Method_BetterList_Vector3__Add__);
         v64 = UIBasicSprite_TypeInfo->static_fields->mTempPos;
         if ( !v64 )
           goto LABEL_93;
@@ -2498,7 +2498,7 @@ LABEL_53:
         v95.fields.x = m_Items[v59].fields.x;
         v95.fields.y = m_Items[v66].fields.y;
         v95.fields.z = 0.0;
-        BetterList_Vector3___Add(verts, v95, (const MethodInfo_33114AC *)Method_BetterList_Vector3__Add__);
+        BetterList_Vector3___Add(verts, v95, (const MethodInfo_331BD14 *)Method_BetterList_Vector3__Add__);
         v68 = UIBasicSprite_TypeInfo->static_fields->mTempPos;
         if ( !v68 )
           goto LABEL_93;
@@ -2509,7 +2509,7 @@ LABEL_53:
         v96.fields.x = v70[v61].fields.x;
         v96.fields.y = v70[v66].fields.y;
         v96.fields.z = 0.0;
-        BetterList_Vector3___Add(verts, v96, (const MethodInfo_33114AC *)Method_BetterList_Vector3__Add__);
+        BetterList_Vector3___Add(verts, v96, (const MethodInfo_331BD14 *)Method_BetterList_Vector3__Add__);
         v71 = UIBasicSprite_TypeInfo->static_fields->mTempPos;
         if ( !v71 )
           goto LABEL_93;
@@ -2520,7 +2520,7 @@ LABEL_53:
         v97.fields.x = v73[v61].fields.x;
         v97.fields.y = v73[v60].fields.y;
         v97.fields.z = 0.0;
-        BetterList_Vector3___Add(verts, v97, (const MethodInfo_33114AC *)Method_BetterList_Vector3__Add__);
+        BetterList_Vector3___Add(verts, v97, (const MethodInfo_331BD14 *)Method_BetterList_Vector3__Add__);
         v74 = UIBasicSprite_TypeInfo->static_fields->mTempUVs;
         if ( !v74 )
           goto LABEL_93;
@@ -2532,7 +2532,7 @@ LABEL_53:
           goto LABEL_93;
         v90.fields.y = v74->m_Items[v60].fields.y;
         v90.fields.x = v74->m_Items[v59].fields.x;
-        BetterList_Vector2___Add(uvs, v90, (const MethodInfo_3310A20 *)Method_BetterList_Vector2__Add__);
+        BetterList_Vector2___Add(uvs, v90, (const MethodInfo_331B288 *)Method_BetterList_Vector2__Add__);
         v76 = UIBasicSprite_TypeInfo->static_fields->mTempUVs;
         if ( !v76 )
           goto LABEL_93;
@@ -2542,7 +2542,7 @@ LABEL_53:
         v78 = v76->m_Items;
         v91.fields.x = v78[v59].fields.x;
         v91.fields.y = v78[v66].fields.y;
-        BetterList_Vector2___Add(uvs, v91, (const MethodInfo_3310A20 *)Method_BetterList_Vector2__Add__);
+        BetterList_Vector2___Add(uvs, v91, (const MethodInfo_331B288 *)Method_BetterList_Vector2__Add__);
         v79 = UIBasicSprite_TypeInfo->static_fields->mTempUVs;
         if ( !v79 )
           goto LABEL_93;
@@ -2552,7 +2552,7 @@ LABEL_53:
         v81 = v79->m_Items;
         v92.fields.x = v81[v61].fields.x;
         v92.fields.y = v81[v66].fields.y;
-        BetterList_Vector2___Add(uvs, v92, (const MethodInfo_3310A20 *)Method_BetterList_Vector2__Add__);
+        BetterList_Vector2___Add(uvs, v92, (const MethodInfo_331B288 *)Method_BetterList_Vector2__Add__);
         v82 = UIBasicSprite_TypeInfo->static_fields->mTempUVs;
         if ( !v82 )
           goto LABEL_93;
@@ -2562,17 +2562,17 @@ LABEL_53:
         v84 = v82->m_Items;
         v93.fields.x = v84[v61].fields.x;
         v93.fields.y = v84[v60].fields.y;
-        BetterList_Vector2___Add(uvs, v93, (const MethodInfo_3310A20 *)Method_BetterList_Vector2__Add__);
+        BetterList_Vector2___Add(uvs, v93, (const MethodInfo_331B288 *)Method_BetterList_Vector2__Add__);
         if ( !cols )
           goto LABEL_93;
         v85 = (UnityEngine_Color32_o)rgba;
-        BetterList_Color32___Add(cols, v85, (const MethodInfo_330E4D4 *)Method_BetterList_Color32__Add__);
+        BetterList_Color32___Add(cols, v85, (const MethodInfo_3318D3C *)Method_BetterList_Color32__Add__);
         v86 = (UnityEngine_Color32_o)rgba;
-        BetterList_Color32___Add(cols, v86, (const MethodInfo_330E4D4 *)Method_BetterList_Color32__Add__);
+        BetterList_Color32___Add(cols, v86, (const MethodInfo_3318D3C *)Method_BetterList_Color32__Add__);
         v87 = (UnityEngine_Color32_o)rgba;
-        BetterList_Color32___Add(cols, v87, (const MethodInfo_330E4D4 *)Method_BetterList_Color32__Add__);
+        BetterList_Color32___Add(cols, v87, (const MethodInfo_3318D3C *)Method_BetterList_Color32__Add__);
         v88 = (UnityEngine_Color32_o)rgba;
-        BetterList_Color32___Add(cols, v88, (const MethodInfo_330E4D4 *)Method_BetterList_Color32__Add__);
+        BetterList_Color32___Add(cols, v88, (const MethodInfo_3318D3C *)Method_BetterList_Color32__Add__);
         ++v60;
       }
     }
@@ -2645,13 +2645,13 @@ void UIBasicSprite__TiledFill(
   UnityEngine_Vector3_o v61; // 0:s0.4,4:s1.4,8:s2.4
   UnityEngine_Vector3_o v62; // 0:s0.4,4:s1.4,8:s2.4
 
-  if ( (byte_4C3C1C0 & 1) == 0 )
+  if ( (byte_4C4773B & 1) == 0 )
   {
-    sub_1C32C20(&Method_BetterList_Vector3__Add__);
-    sub_1C32C20(&Method_BetterList_Color32__Add__);
-    sub_1C32C20(&Method_BetterList_Vector2__Add__);
-    sub_1C32C20(&UnityEngine_Object_TypeInfo);
-    byte_4C3C1C0 = 1;
+    sub_1C37058(&Method_BetterList_Vector3__Add__);
+    sub_1C37058(&Method_BetterList_Color32__Add__);
+    sub_1C37058(&Method_BetterList_Vector2__Add__);
+    sub_1C37058(&UnityEngine_Object_TypeInfo);
+    byte_4C4773B = 1;
   }
   v9 = (UnityEngine_Object_o *)((__int64 (__fastcall *)(UIBasicSprite_o *, const MethodInfo *, BetterList_Vector2__o *, BetterList_Color32__o *, const MethodInfo *))this->klass->vtable._26_get_mainTexture.methodPtr)(
                                  this,
@@ -2766,49 +2766,49 @@ LABEL_35:
         v59.fields.z = 0.0;
         v59.fields.x = v34;
         v59.fields.y = item;
-        BetterList_Vector3___Add(verts, v59, (const MethodInfo_33114AC *)Method_BetterList_Vector3__Add__);
+        BetterList_Vector3___Add(verts, v59, (const MethodInfo_331BD14 *)Method_BetterList_Vector3__Add__);
         v60.fields.z = 0.0;
         v60.fields.x = v34;
         v60.fields.y = v29;
-        BetterList_Vector3___Add(verts, v60, (const MethodInfo_33114AC *)Method_BetterList_Vector3__Add__);
+        BetterList_Vector3___Add(verts, v60, (const MethodInfo_331BD14 *)Method_BetterList_Vector3__Add__);
         v61.fields.z = 0.0;
         v61.fields.x = v37;
         v61.fields.y = v29;
-        BetterList_Vector3___Add(verts, v61, (const MethodInfo_33114AC *)Method_BetterList_Vector3__Add__);
+        BetterList_Vector3___Add(verts, v61, (const MethodInfo_331BD14 *)Method_BetterList_Vector3__Add__);
         v62.fields.z = 0.0;
         v62.fields.x = v37;
         v62.fields.y = item;
-        BetterList_Vector3___Add(verts, v62, (const MethodInfo_33114AC *)Method_BetterList_Vector3__Add__);
+        BetterList_Vector3___Add(verts, v62, (const MethodInfo_331BD14 *)Method_BetterList_Vector3__Add__);
         if ( !uvs )
           break;
         v55.fields.x = v53;
         v55.fields.y = v51;
-        BetterList_Vector2___Add(uvs, v55, (const MethodInfo_3310A20 *)Method_BetterList_Vector2__Add__);
+        BetterList_Vector2___Add(uvs, v55, (const MethodInfo_331B288 *)Method_BetterList_Vector2__Add__);
         v56.fields.x = v53;
         v56.fields.y = v28;
-        BetterList_Vector2___Add(uvs, v56, (const MethodInfo_3310A20 *)Method_BetterList_Vector2__Add__);
+        BetterList_Vector2___Add(uvs, v56, (const MethodInfo_331B288 *)Method_BetterList_Vector2__Add__);
         v57.fields.x = v35;
         v57.fields.y = v28;
-        BetterList_Vector2___Add(uvs, v57, (const MethodInfo_3310A20 *)Method_BetterList_Vector2__Add__);
+        BetterList_Vector2___Add(uvs, v57, (const MethodInfo_331B288 *)Method_BetterList_Vector2__Add__);
         v58.fields.x = v35;
         v58.fields.y = v51;
-        BetterList_Vector2___Add(uvs, v58, (const MethodInfo_3310A20 *)Method_BetterList_Vector2__Add__);
+        BetterList_Vector2___Add(uvs, v58, (const MethodInfo_331B288 *)Method_BetterList_Vector2__Add__);
         if ( !cols )
           break;
         v41 = (UnityEngine_Color32_o)rgba;
-        BetterList_Color32___Add(cols, v41, (const MethodInfo_330E4D4 *)Method_BetterList_Color32__Add__);
+        BetterList_Color32___Add(cols, v41, (const MethodInfo_3318D3C *)Method_BetterList_Color32__Add__);
         v42 = (UnityEngine_Color32_o)rgba;
-        BetterList_Color32___Add(cols, v42, (const MethodInfo_330E4D4 *)Method_BetterList_Color32__Add__);
+        BetterList_Color32___Add(cols, v42, (const MethodInfo_3318D3C *)Method_BetterList_Color32__Add__);
         v43 = (UnityEngine_Color32_o)rgba;
-        BetterList_Color32___Add(cols, v43, (const MethodInfo_330E4D4 *)Method_BetterList_Color32__Add__);
+        BetterList_Color32___Add(cols, v43, (const MethodInfo_3318D3C *)Method_BetterList_Color32__Add__);
         v44 = (UnityEngine_Color32_o)rgba;
-        BetterList_Color32___Add(cols, v44, (const MethodInfo_330E4D4 *)Method_BetterList_Color32__Add__);
+        BetterList_Color32___Add(cols, v44, (const MethodInfo_3318D3C *)Method_BetterList_Color32__Add__);
         v34 = v54 + v34;
         if ( v36 >= v27 )
           goto LABEL_35;
       }
     }
-    sub_1C32E7C(v10);
+    sub_1C372B4(v10);
   }
 }
 
@@ -2823,10 +2823,10 @@ UnityEngine_Color32_o UIBasicSprite__get_drawingColor(UIBasicSprite_o *this, con
   long double v8; // q0
   long double v9; // q0
 
-  if ( (byte_4C3C1BD & 1) == 0 )
+  if ( (byte_4C47738 & 1) == 0 )
   {
-    sub_1C32C20(&NGUITools_TypeInfo);
-    byte_4C3C1BD = 1;
+    sub_1C37058(&NGUITools_TypeInfo);
+    byte_4C47738 = 1;
   }
   *(float *)&v4 = this->fields.mColor.fields.g;
   *(float *)&v3 = this->fields.mColor.fields.b;
@@ -2855,7 +2855,7 @@ UnityEngine_Color32_o UIBasicSprite__get_drawingColor(UIBasicSprite_o *this, con
     *(float *)&v9 = powf(*(float *)&v3, 2.2);
     v3 = v9;
   }
-  return (UnityEngine_Color32_o)(unsigned int)sub_250F080(0, v5, v4, v3, v2);
+  return (UnityEngine_Color32_o)(unsigned int)sub_2526688(0, v5, v4, v3, v2);
 }
 
 
@@ -2987,10 +2987,10 @@ int32_t UIBasicSprite__get_minHeight(UIBasicSprite_o *this, const MethodInfo *me
          this->klass->vtable._42_get_pixelSize.method);
   v8 = v4 * v7;
   v9 = v6 * v7;
-  if ( !byte_4C32B16 )
+  if ( !byte_4C3E100 )
   {
-    sub_1C32C20(&System_Math_TypeInfo);
-    byte_4C32B16 = 1;
+    sub_1C37058(&System_Math_TypeInfo);
+    byte_4C3E100 = 1;
   }
   v10 = v8 + v9;
   if ( !System_Math_TypeInfo->_2.cctor_finished )
@@ -3071,10 +3071,10 @@ int32_t UIBasicSprite__get_minWidth(UIBasicSprite_o *this, const MethodInfo *met
          this->klass->vtable._42_get_pixelSize.method);
   v7 = v3 * v6;
   v8 = v5 * v6;
-  if ( !byte_4C32B16 )
+  if ( !byte_4C3E100 )
   {
-    sub_1C32C20(&System_Math_TypeInfo);
-    byte_4C32B16 = 1;
+    sub_1C37058(&System_Math_TypeInfo);
+    byte_4C3E100 = 1;
   }
   v9 = v7 + v8;
   if ( !System_Math_TypeInfo->_2.cctor_finished )

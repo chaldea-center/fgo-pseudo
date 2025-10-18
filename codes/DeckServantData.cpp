@@ -8,12 +8,12 @@ void DeckServantData___ctor(DeckServantData_o *this, const MethodInfo *method)
   int32_t v8; // w2
   const MethodInfo *v9; // x3
 
-  if ( (byte_4C374DC & 1) == 0 )
+  if ( (byte_4C42ACE & 1) == 0 )
   {
-    sub_1C32C20(&BalanceConfig_TypeInfo);
-    sub_1C32C20(&int___TypeInfo);
-    sub_1C32C20(&long___TypeInfo);
-    byte_4C374DC = 1;
+    sub_1C37058(&BalanceConfig_TypeInfo);
+    sub_1C37058(&int___TypeInfo);
+    sub_1C37058(&long___TypeInfo);
+    byte_4C42ACE = 1;
   }
   this->fields.followerType = -1;
   System_Object___ctor((Il2CppObject *)this, 0);
@@ -23,14 +23,14 @@ void DeckServantData___ctor(DeckServantData_o *this, const MethodInfo *method)
     j_il2cpp_runtime_class_init_0(BalanceConfig_TypeInfo);
     v3 = BalanceConfig_TypeInfo;
   }
-  v4 = (struct System_Int64_array *)sub_1C32CC8(long___TypeInfo, (unsigned int)v3->static_fields->SvtEquipMax);
+  v4 = (struct System_Int64_array *)sub_1C37100(long___TypeInfo, (unsigned int)v3->static_fields->SvtEquipMax);
   this->fields.userSvtEquipIds = v4;
-  sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.userSvtEquipIds, (int32_t)v4, v5, v6);
-  v7 = (struct System_Int32_array *)sub_1C32CC8(
+  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.userSvtEquipIds, (int32_t)v4, v5, v6);
+  v7 = (struct System_Int32_array *)sub_1C37100(
                                       int___TypeInfo,
                                       (unsigned int)BalanceConfig_TypeInfo->static_fields->SvtEquipMax);
   this->fields.svtEquipIds = v7;
-  sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.svtEquipIds, (int32_t)v7, v8, v9);
+  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.svtEquipIds, (int32_t)v7, v8, v9);
 }
 
 
@@ -49,14 +49,14 @@ DeckServantData_o *DeckServantData__Clone(DeckServantData_o *this, const MethodI
   const MethodInfo *v13; // x3
   DeckServantData_o *result; // x0
 
-  if ( (byte_4C374DD & 1) == 0 )
+  if ( (byte_4C42ACF & 1) == 0 )
   {
-    sub_1C32C20(&DeckServantData_TypeInfo);
-    sub_1C32C20(&int___TypeInfo);
-    sub_1C32C20(&long___TypeInfo);
-    byte_4C374DD = 1;
+    sub_1C37058(&DeckServantData_TypeInfo);
+    sub_1C37058(&int___TypeInfo);
+    sub_1C37058(&long___TypeInfo);
+    byte_4C42ACF = 1;
   }
-  v3 = sub_1C32E6C(DeckServantData_TypeInfo);
+  v3 = sub_1C372A4(DeckServantData_TypeInfo);
   DeckServantData___ctor((DeckServantData_o *)v3, v4);
   if ( !v3 )
     goto LABEL_7;
@@ -66,18 +66,18 @@ DeckServantData_o *DeckServantData__Clone(DeckServantData_o *this, const MethodI
   userSvtEquipIds = (System_Array_o *)this->fields.userSvtEquipIds;
   if ( !userSvtEquipIds
     || (v6 = System_Array__Clone(userSvtEquipIds, 0),
-        *(_QWORD *)(v3 + 40) = sub_1C32D5C(v6, long___TypeInfo),
-        v7 = sub_1C32D5C(v6, long___TypeInfo),
-        sub_1C32BC4((CGThumbnailListItem_o *)(v3 + 40), v7, v8, v9),
+        *(_QWORD *)(v3 + 40) = sub_1C37194(v6, long___TypeInfo),
+        v7 = sub_1C37194(v6, long___TypeInfo),
+        sub_1C36FFC((CGThumbnailListItem_o *)(v3 + 40), v7, v8, v9),
         (userSvtEquipIds = (System_Array_o *)this->fields.svtEquipIds) == 0) )
   {
 LABEL_7:
-    sub_1C32E7C(userSvtEquipIds);
+    sub_1C372B4(userSvtEquipIds);
   }
   v10 = System_Array__Clone(userSvtEquipIds, 0);
-  *(_QWORD *)(v3 + 48) = sub_1C32D5C(v10, int___TypeInfo);
-  v11 = sub_1C32D5C(v10, int___TypeInfo);
-  sub_1C32BC4((CGThumbnailListItem_o *)(v3 + 48), v11, v12, v13);
+  *(_QWORD *)(v3 + 48) = sub_1C37194(v10, int___TypeInfo);
+  v11 = sub_1C37194(v10, int___TypeInfo);
+  sub_1C36FFC((CGThumbnailListItem_o *)(v3 + 48), v11, v12, v13);
   result = (DeckServantData_o *)v3;
   *(_BYTE *)(v3 + 56) = this->fields.isFollowerSvt;
   *(_QWORD *)(v3 + 64) = this->fields.npcFollowerSvtId;

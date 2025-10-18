@@ -8,29 +8,29 @@ void UserServantLeaderEntity___ctor(UserServantLeaderEntity_o *this, const Metho
   int32_t v8; // w2
   const MethodInfo *v9; // x3
 
-  if ( (byte_4C38A11 & 1) == 0 )
+  if ( (byte_4C4400A & 1) == 0 )
   {
-    sub_1C32C20(&Method_DataEntityBase_string___ctor__);
-    byte_4C38A11 = 1;
+    sub_1C37058(&Method_DataEntityBase_string___ctor__);
+    byte_4C4400A = 1;
   }
   this->fields.supportDeckId = 1;
   DataEntityBase_object____ctor(
     (DataEntityBase_PKType__o *)this,
-    (const MethodInfo_33943CC *)Method_DataEntityBase_string___ctor__);
+    (const MethodInfo_339EC34 *)Method_DataEntityBase_string___ctor__);
   this->fields.userServantEntity = 0;
-  sub_1C32BC4((CGThumbnailListItem_o *)&this->fields, 0, v3, v4);
+  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields, 0, v3, v4);
   this->fields.servantLeaderInfo = 0;
-  sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.servantLeaderInfo, 0, v5, v6);
+  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.servantLeaderInfo, 0, v5, v6);
   this->fields.supportDeckId = 1;
   this->fields.equipTarget1 = 0;
   p_equipTarget1 = &this->fields.equipTarget1;
   *(struct EquipTargetInfo_o **)((char *)p_equipTarget1 + 28) = 0;
   *(struct EquipTargetInfo_o **)((char *)p_equipTarget1 + 20) = 0;
-  sub_1C32BC4((CGThumbnailListItem_o *)p_equipTarget1, 0, v8, v9);
+  sub_1C36FFC((CGThumbnailListItem_o *)p_equipTarget1, 0, v8, v9);
 }
 
 
-void UserServantLeaderEntity___ctor_43111508(
+void UserServantLeaderEntity___ctor_43213376(
         UserServantLeaderEntity_o *this,
         int32_t classPos,
         int32_t supportDeckId,
@@ -44,30 +44,30 @@ void UserServantLeaderEntity___ctor_43111508(
   int32_t v12; // w2
   const MethodInfo *v13; // x3
 
-  if ( (byte_4C38A12 & 1) == 0 )
+  if ( (byte_4C4400B & 1) == 0 )
   {
-    sub_1C32C20(&Method_DataEntityBase_string___ctor__);
-    byte_4C38A12 = 1;
+    sub_1C37058(&Method_DataEntityBase_string___ctor__);
+    byte_4C4400B = 1;
   }
   this->fields.supportDeckId = 1;
   DataEntityBase_object____ctor(
     (DataEntityBase_PKType__o *)this,
-    (const MethodInfo_33943CC *)Method_DataEntityBase_string___ctor__);
+    (const MethodInfo_339EC34 *)Method_DataEntityBase_string___ctor__);
   this->fields.userServantEntity = 0;
-  sub_1C32BC4((CGThumbnailListItem_o *)&this->fields, 0, v7, v8);
+  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields, 0, v7, v8);
   this->fields.servantLeaderInfo = 0;
-  sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.servantLeaderInfo, 0, v9, v10);
+  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.servantLeaderInfo, 0, v9, v10);
   this->fields.supportDeckId = supportDeckId;
   this->fields.equipTarget1 = 0;
   p_equipTarget1 = &this->fields.equipTarget1;
   *((_DWORD *)p_equipTarget1 + 8) = 0;
   p_equipTarget1[3] = 0;
   *((_DWORD *)p_equipTarget1 + 5) = classPos;
-  sub_1C32BC4((CGThumbnailListItem_o *)p_equipTarget1, 0, v12, v13);
+  sub_1C36FFC((CGThumbnailListItem_o *)p_equipTarget1, 0, v12, v13);
 }
 
 
-void UserServantLeaderEntity___ctor_43111668(
+void UserServantLeaderEntity___ctor_43213536(
         UserServantLeaderEntity_o *this,
         UserServantLeaderEntity_o *src,
         const MethodInfo *method)
@@ -81,23 +81,23 @@ void UserServantLeaderEntity___ctor_43111668(
   const MethodInfo *v11; // x3
   const MethodInfo *v12; // x2
 
-  if ( (byte_4C38A13 & 1) == 0 )
+  if ( (byte_4C4400C & 1) == 0 )
   {
-    sub_1C32C20(&Method_DataEntityBase_string___ctor__);
-    byte_4C38A13 = 1;
+    sub_1C37058(&Method_DataEntityBase_string___ctor__);
+    byte_4C4400C = 1;
   }
   this->fields.supportDeckId = 1;
   DataEntityBase_object____ctor(
     (DataEntityBase_PKType__o *)this,
-    (const MethodInfo_33943CC *)Method_DataEntityBase_string___ctor__);
+    (const MethodInfo_339EC34 *)Method_DataEntityBase_string___ctor__);
   if ( !src )
-    sub_1C32E7C(v5);
+    sub_1C372B4(v5);
   userServantEntity = src->fields.userServantEntity;
   this->fields.userServantEntity = userServantEntity;
-  sub_1C32BC4((CGThumbnailListItem_o *)&this->fields, (int32_t)userServantEntity, v6, v7);
+  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields, (int32_t)userServantEntity, v6, v7);
   servantLeaderInfo = src->fields.servantLeaderInfo;
   this->fields.servantLeaderInfo = servantLeaderInfo;
-  sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.servantLeaderInfo, (int32_t)servantLeaderInfo, v10, v11);
+  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.servantLeaderInfo, (int32_t)servantLeaderInfo, v10, v11);
   this->fields.svtId = src->fields.svtId;
   this->fields.userSvtId = src->fields.userSvtId;
   *(_QWORD *)&this->fields.supportDeckId = *(_QWORD *)&src->fields.supportDeckId;
@@ -111,16 +111,16 @@ System_String_o *UserServantLeaderEntity__CreatePK(
         int32_t supportDeckId,
         const MethodInfo *method)
 {
-  if ( (byte_4C38A10 & 1) == 0 )
+  if ( (byte_4C44009 & 1) == 0 )
   {
-    sub_1C32C20(&Method_DataEntityBase_CreateMultiplePK_long__int__int___);
-    byte_4C38A10 = 1;
+    sub_1C37058(&Method_DataEntityBase_CreateMultiplePK_long__int__int___);
+    byte_4C44009 = 1;
   }
   return DataEntityBase__CreateMultiplePK_long__int__int_(
            userId,
            classId,
            supportDeckId,
-           (const MethodInfo_30DBBC4 *)Method_DataEntityBase_CreateMultiplePK_long__int__int___);
+           (const MethodInfo_30E642C *)Method_DataEntityBase_CreateMultiplePK_long__int__int___);
 }
 
 
@@ -147,10 +147,10 @@ int64_t UserServantLeaderEntity__getEquipUserSvtId(UserServantLeaderEntity_o *th
   CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_o v6; // [xsp+0h] [xbp-60h] BYREF
   CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_o v7; // [xsp+20h] [xbp-40h]
 
-  if ( (byte_4C38A14 & 1) == 0 )
+  if ( (byte_4C4400D & 1) == 0 )
   {
-    sub_1C32C20(&CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo);
-    byte_4C38A14 = 1;
+    sub_1C37058(&CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo);
+    byte_4C4400D = 1;
   }
   equipTarget1 = this->fields.equipTarget1;
   if ( !equipTarget1 )
@@ -161,7 +161,7 @@ int64_t UserServantLeaderEntity__getEquipUserSvtId(UserServantLeaderEntity_o *th
   if ( !CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo);
   v6 = v7;
-  return CodeStage_AntiCheat_ObscuredTypes_ObscuredLong__op_Implicit_48891308(&v6, 0);
+  return CodeStage_AntiCheat_ObscuredTypes_ObscuredLong__op_Implicit_48934420(&v6, 0);
 }
 
 
@@ -182,15 +182,15 @@ void UserServantLeaderEntity__setEquipTargetInfo(
   int32_t v6; // w2
   const MethodInfo *v7; // x3
 
-  if ( (byte_4C38A15 & 1) == 0 )
+  if ( (byte_4C4400E & 1) == 0 )
   {
-    sub_1C32C20(&EquipTargetInfo_TypeInfo);
-    byte_4C38A15 = 1;
+    sub_1C37058(&EquipTargetInfo_TypeInfo);
+    byte_4C4400E = 1;
   }
-  v5 = (EquipTargetInfo_o *)sub_1C32E6C(EquipTargetInfo_TypeInfo);
-  EquipTargetInfo___ctor_41611092(v5, equipTargetInfo, 0);
+  v5 = (EquipTargetInfo_o *)sub_1C372A4(EquipTargetInfo_TypeInfo);
+  EquipTargetInfo___ctor_41710900(v5, equipTargetInfo, 0);
   this->fields.equipTarget1 = v5;
-  sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.equipTarget1, (int32_t)v5, v6, v7);
+  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.equipTarget1, (int32_t)v5, v6, v7);
 }
 
 
@@ -214,42 +214,42 @@ void UserServantLeaderEntity__setUserServantEntity(
   CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_o v18; // [xsp+40h] [xbp-50h]
   CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o v19; // 0:x0.16
 
-  if ( (byte_4C38A16 & 1) == 0 )
+  if ( (byte_4C4400F & 1) == 0 )
   {
-    sub_1C32C20(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
-    sub_1C32C20(&CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo);
-    byte_4C38A16 = 1;
+    sub_1C37058(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
+    sub_1C37058(&CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo);
+    byte_4C4400F = 1;
   }
   this->fields.userServantEntity = entity;
-  sub_1C32BC4((CGThumbnailListItem_o *)&this->fields, (int32_t)entity, classPos, *(const MethodInfo **)&supportDeckId);
+  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields, (int32_t)entity, classPos, *(const MethodInfo **)&supportDeckId);
   this->fields.servantLeaderInfo = 0;
-  sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.servantLeaderInfo, 0, v9, v10);
+  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.servantLeaderInfo, 0, v9, v10);
   if ( !entity )
-    sub_1C32E7C(v11);
+    sub_1C372B4(v11);
   v12 = *(_OWORD *)&entity->fields.userId.fields.fakeValue;
   *(_OWORD *)&v18.fields.currentCryptoKey = *(_OWORD *)&entity->fields.userId.fields.currentCryptoKey;
   *(_OWORD *)&v18.fields.fakeValue = v12;
   if ( !CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo);
   v17 = v18;
-  this->fields.userId = CodeStage_AntiCheat_ObscuredTypes_ObscuredLong__op_Implicit_48891308(&v17, 0);
+  this->fields.userId = CodeStage_AntiCheat_ObscuredTypes_ObscuredLong__op_Implicit_48934420(&v17, 0);
   this->fields.supportDeckId = supportDeckId;
   this->fields.classId = classPos;
   v13 = *(_OWORD *)&entity->fields.id.fields.fakeValue;
   *(_OWORD *)&v16.fields.currentCryptoKey = *(_OWORD *)&entity->fields.id.fields.currentCryptoKey;
   *(_OWORD *)&v16.fields.fakeValue = v13;
-  this->fields.userSvtId = CodeStage_AntiCheat_ObscuredTypes_ObscuredLong__op_Implicit_48891308(&v16, 0);
+  this->fields.userSvtId = CodeStage_AntiCheat_ObscuredTypes_ObscuredLong__op_Implicit_48934420(&v16, 0);
   v15 = *(_QWORD *)&entity->fields.svtId.fields.currentCryptoKey;
   v14 = *(_QWORD *)&entity->fields.svtId.fields.fakeValue;
   if ( !CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
   *(_QWORD *)&v19.fields.currentCryptoKey = v15;
   *(_QWORD *)&v19.fields.fakeValue = v14;
-  this->fields.svtId = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_48887784(v19, 0);
+  this->fields.svtId = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_48930896(v19, 0);
 }
 
 
-void UserServantLeaderEntity__setUserServantEntity_43112352(
+void UserServantLeaderEntity__setUserServantEntity_43214220(
         UserServantLeaderEntity_o *this,
         ServantLeaderInfo_o *info,
         const MethodInfo *method)
@@ -265,17 +265,17 @@ void UserServantLeaderEntity__setUserServantEntity_43112352(
   const MethodInfo *v13; // x3
   CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o v14; // 0:x0.16
 
-  if ( (byte_4C38A17 & 1) == 0 )
+  if ( (byte_4C44010 & 1) == 0 )
   {
-    sub_1C32C20(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
-    byte_4C38A17 = 1;
+    sub_1C37058(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
+    byte_4C44010 = 1;
   }
   this->fields.userServantEntity = 0;
-  sub_1C32BC4((CGThumbnailListItem_o *)&this->fields, 0, (int32_t)method, v3);
+  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields, 0, (int32_t)method, v3);
   this->fields.servantLeaderInfo = info;
-  sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.servantLeaderInfo, (int32_t)info, v6, v7);
+  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.servantLeaderInfo, (int32_t)info, v6, v7);
   if ( !info )
-    sub_1C32E7C(v8);
+    sub_1C372B4(v8);
   this->fields.userId = info->fields.userId;
   this->fields.supportDeckId = info->fields.supportDeckId;
   this->fields.classId = info->fields.classId;
@@ -286,9 +286,9 @@ void UserServantLeaderEntity__setUserServantEntity_43112352(
     j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
   *(_QWORD *)&v14.fields.currentCryptoKey = v10;
   *(_QWORD *)&v14.fields.fakeValue = v9;
-  this->fields.svtId = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_48887784(v14, 0);
+  this->fields.svtId = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_48930896(v14, 0);
   ServantLeaderInfo__SetEquipImagePartsGroupIdxs(info, 0);
   equipTarget1 = info->fields.equipTarget1;
   this->fields.equipTarget1 = equipTarget1;
-  sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.equipTarget1, (int32_t)equipTarget1, v12, v13);
+  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.equipTarget1, (int32_t)equipTarget1, v12, v13);
 }

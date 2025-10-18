@@ -15,19 +15,19 @@ void BattleServantSkillIConComponent__ClickSkillIconFunc(
   Il2CppObject *Component_object; // x21
   Il2CppObject *v7; // x21
 
-  if ( (byte_4C3B0BB & 1) == 0 )
+  if ( (byte_4C466CE & 1) == 0 )
   {
-    sub_1C32C20(&Method_UnityEngine_GameObject_GetComponent_BattlePerformanceMaster___);
-    sub_1C32C20(&Method_UnityEngine_GameObject_GetComponent_BattleServantParamComponent___);
-    sub_1C32C20(&UnityEngine_Object_TypeInfo);
-    byte_4C3B0BB = 1;
+    sub_1C37058(&Method_UnityEngine_GameObject_GetComponent_BattlePerformanceMaster___);
+    sub_1C37058(&Method_UnityEngine_GameObject_GetComponent_BattleServantParamComponent___);
+    sub_1C37058(&UnityEngine_Object_TypeInfo);
+    byte_4C466CE = 1;
   }
   target = this->fields.target;
   if ( !target )
     goto LABEL_16;
   Component_object = UnityEngine_GameObject__GetComponent_object_(
                        target,
-                       (const MethodInfo_3134970 *)Method_UnityEngine_GameObject_GetComponent_BattleServantParamComponent___);
+                       (const MethodInfo_313F1D8 *)Method_UnityEngine_GameObject_GetComponent_BattleServantParamComponent___);
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   target = (UnityEngine_GameObject_o *)UnityEngine_Object__op_Inequality((UnityEngine_Object_o *)Component_object, 0, 0);
@@ -44,10 +44,10 @@ void BattleServantSkillIConComponent__ClickSkillIconFunc(
   target = this->fields.target;
   if ( !target )
 LABEL_16:
-    sub_1C32E7C(target);
+    sub_1C372B4(target);
   v7 = UnityEngine_GameObject__GetComponent_object_(
          target,
-         (const MethodInfo_3134970 *)Method_UnityEngine_GameObject_GetComponent_BattlePerformanceMaster___);
+         (const MethodInfo_313F1D8 *)Method_UnityEngine_GameObject_GetComponent_BattlePerformanceMaster___);
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   target = (UnityEngine_GameObject_o *)UnityEngine_Object__op_Inequality((UnityEngine_Object_o *)v7, 0, 0);
@@ -75,10 +75,10 @@ void BattleServantSkillIConComponent__DeleteRankUpEffect(
   int32_t v8; // w2
   const MethodInfo *v9; // x3
 
-  if ( (byte_4C3B0BE & 1) == 0 )
+  if ( (byte_4C466D1 & 1) == 0 )
   {
-    sub_1C32C20(&UnityEngine_Object_TypeInfo);
-    byte_4C3B0BE = 1;
+    sub_1C37058(&UnityEngine_Object_TypeInfo);
+    byte_4C466D1 = 1;
   }
   p_rankupEffect = (UnityEngine_Component_o **)&this->fields.rankupEffect;
   rankupEffect = (UnityEngine_Object_o *)this->fields.rankupEffect;
@@ -87,15 +87,15 @@ void BattleServantSkillIConComponent__DeleteRankUpEffect(
   if ( UnityEngine_Object__op_Inequality(rankupEffect, 0, 0) )
   {
     if ( !*p_rankupEffect )
-      sub_1C32E7C(0);
+      sub_1C372B4(0);
     gameObject = (UnityEngine_Object_o *)UnityEngine_Component__get_gameObject(*p_rankupEffect, 0);
     if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-    UnityEngine_Object__Destroy_71223640(gameObject, 0);
+    UnityEngine_Object__Destroy_71266752(gameObject, 0);
     this->fields.rankupEffect = 0;
-    sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.rankupEffect, 0, v6, v7);
+    sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.rankupEffect, 0, v6, v7);
     this->fields.rankupSprite = 0;
-    sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.rankupSprite, 0, v8, v9);
+    sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.rankupSprite, 0, v8, v9);
   }
 }
 
@@ -109,10 +109,10 @@ int32_t BattleServantSkillIConComponent__GetRankUpState(
   BattleRankUpSkillInfoData_c *v5; // x10
   BattleRankUpSkillInfoData_o *v6; // x0
 
-  if ( (byte_4C3B0C0 & 1) == 0 )
+  if ( (byte_4C466D3 & 1) == 0 )
   {
-    sub_1C32C20(&BattleRankUpSkillInfoData_TypeInfo);
-    byte_4C3B0C0 = 1;
+    sub_1C37058(&BattleRankUpSkillInfoData_TypeInfo);
+    byte_4C466D3 = 1;
   }
   skillInfo = this->fields.skillInfo;
   if ( !skillInfo )
@@ -125,7 +125,7 @@ int32_t BattleServantSkillIConComponent__GetRankUpState(
   if ( v5 != BattleRankUpSkillInfoData_TypeInfo )
     return -1;
   if ( !v6 )
-    sub_1C32E7C(0);
+    sub_1C372B4(0);
   return BattleRankUpSkillInfoData__GetRankUpState(v6, 0);
 }
 
@@ -135,10 +135,10 @@ void BattleServantSkillIConComponent__OnClickIcon(BattleServantSkillIConComponen
   UnityEngine_Object_o *target; // x20
   const MethodInfo *v4; // x2
 
-  if ( (byte_4C3B0BA & 1) == 0 )
+  if ( (byte_4C466CD & 1) == 0 )
   {
-    sub_1C32C20(&UnityEngine_Object_TypeInfo);
-    byte_4C3B0BA = 1;
+    sub_1C37058(&UnityEngine_Object_TypeInfo);
+    byte_4C466CD = 1;
   }
   target = (UnityEngine_Object_o *)this->fields.target;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -153,10 +153,10 @@ void BattleServantSkillIConComponent__OnLongTapIcon(BattleServantSkillIConCompon
   UnityEngine_Object_o *target; // x20
   const MethodInfo *v4; // x2
 
-  if ( (byte_4C3B0B9 & 1) == 0 )
+  if ( (byte_4C466CC & 1) == 0 )
   {
-    sub_1C32C20(&UnityEngine_Object_TypeInfo);
-    byte_4C3B0B9 = 1;
+    sub_1C37058(&UnityEngine_Object_TypeInfo);
+    byte_4C466CC = 1;
   }
   target = (UnityEngine_Object_o *)this->fields.target;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -175,28 +175,28 @@ bool BattleServantSkillIConComponent__PlayRankUpEffect(
 {
   BattleServantSkillIConComponent_o *v8; // x19
   UnityEngine_Transform_o *transform; // x0
-  UnityEngine_Object_o *Object_41085732; // x21
+  UnityEngine_Object_o *Object_41185212; // x21
   Il2CppObject *Component_object; // x0
   BattleServantSkillIConComponent_o **p_rankupEffect; // x21
   int32_t v13; // w2
   const MethodInfo *v14; // x3
   UnityEngine_Object_o *rankupEffect; // x22
-  Il2CppObject *ComponentInChildren_object__51199524; // x0
+  Il2CppObject *ComponentInChildren_object__51242636; // x0
   int32_t v17; // w2
   const MethodInfo *v18; // x3
 
   v8 = this;
-  if ( (byte_4C3B0BF & 1) == 0 )
+  if ( (byte_4C466D2 & 1) == 0 )
   {
-    sub_1C32C20(&Method_UnityEngine_Component_GetComponentInChildren_UISprite___);
-    sub_1C32C20(&Method_UnityEngine_GameObject_GetComponent_CommonEffectComponent___);
-    this = (BattleServantSkillIConComponent_o *)sub_1C32C20(&UnityEngine_Object_TypeInfo);
-    byte_4C3B0BF = 1;
+    sub_1C37058(&Method_UnityEngine_Component_GetComponentInChildren_UISprite___);
+    sub_1C37058(&Method_UnityEngine_GameObject_GetComponent_CommonEffectComponent___);
+    this = (BattleServantSkillIConComponent_o *)sub_1C37058(&UnityEngine_Object_TypeInfo);
+    byte_4C466D2 = 1;
   }
   if ( !root )
     goto LABEL_15;
   transform = UnityEngine_GameObject__get_transform(root, 0);
-  Object_41085732 = (UnityEngine_Object_o *)BaseMonoBehaviour__createObject_41085732(
+  Object_41185212 = (UnityEngine_Object_o *)BaseMonoBehaviour__createObject_41185212(
                                               (BaseMonoBehaviour_o *)v8,
                                               resPath,
                                               transform,
@@ -204,17 +204,17 @@ bool BattleServantSkillIConComponent__PlayRankUpEffect(
                                               0);
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-  this = (BattleServantSkillIConComponent_o *)UnityEngine_Object__op_Inequality(Object_41085732, 0, 0);
+  this = (BattleServantSkillIConComponent_o *)UnityEngine_Object__op_Inequality(Object_41185212, 0, 0);
   if ( ((unsigned __int8)this & 1) != 0 )
   {
-    if ( !Object_41085732 )
+    if ( !Object_41185212 )
       goto LABEL_15;
     Component_object = UnityEngine_GameObject__GetComponent_object_(
-                         (UnityEngine_GameObject_o *)Object_41085732,
-                         (const MethodInfo_3134970 *)Method_UnityEngine_GameObject_GetComponent_CommonEffectComponent___);
+                         (UnityEngine_GameObject_o *)Object_41185212,
+                         (const MethodInfo_313F1D8 *)Method_UnityEngine_GameObject_GetComponent_CommonEffectComponent___);
     v8->fields.rankupEffect = (struct CommonEffectComponent_o *)Component_object;
     p_rankupEffect = (BattleServantSkillIConComponent_o **)&v8->fields.rankupEffect;
-    sub_1C32BC4((CGThumbnailListItem_o *)&v8->fields.rankupEffect, (int32_t)Component_object, v13, v14);
+    sub_1C36FFC((CGThumbnailListItem_o *)&v8->fields.rankupEffect, (int32_t)Component_object, v13, v14);
     rankupEffect = (UnityEngine_Object_o *)v8->fields.rankupEffect;
     if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
@@ -227,20 +227,20 @@ bool BattleServantSkillIConComponent__PlayRankUpEffect(
         this = *p_rankupEffect;
         if ( *p_rankupEffect )
         {
-          ComponentInChildren_object__51199524 = UnityEngine_Component__GetComponentInChildren_object__51199524(
+          ComponentInChildren_object__51242636 = UnityEngine_Component__GetComponentInChildren_object__51242636(
                                                    (UnityEngine_Component_o *)this,
-                                                   (const MethodInfo_30D3E24 *)Method_UnityEngine_Component_GetComponentInChildren_UISprite___);
-          v8->fields.rankupSprite = (struct UISprite_o *)ComponentInChildren_object__51199524;
-          sub_1C32BC4(
+                                                   (const MethodInfo_30DE68C *)Method_UnityEngine_Component_GetComponentInChildren_UISprite___);
+          v8->fields.rankupSprite = (struct UISprite_o *)ComponentInChildren_object__51242636;
+          sub_1C36FFC(
             (CGThumbnailListItem_o *)&v8->fields.rankupSprite,
-            (int32_t)ComponentInChildren_object__51199524,
+            (int32_t)ComponentInChildren_object__51242636,
             v17,
             v18);
           return 1;
         }
       }
 LABEL_15:
-      sub_1C32E7C(this);
+      sub_1C372B4(this);
     }
   }
   return 0;
@@ -300,17 +300,17 @@ void BattleServantSkillIConComponent__SetSkillInfo(
   const MethodInfo *v41; // x1
 
   v9 = sealSkillTurn;
-  if ( (byte_4C3B0B0 & 1) == 0 )
+  if ( (byte_4C466C3 & 1) == 0 )
   {
-    sub_1C32C20(&AtlasManager_TypeInfo);
-    sub_1C32C20(&UnityEngine_Object_TypeInfo);
-    sub_1C32C20(&StringLiteral_20224/*"icon_sealact_skill"*/);
-    sub_1C32C20(&StringLiteral_20222/*"icon_sealact_disable"*/);
-    sub_1C32C20(&StringLiteral_20223/*"icon_sealact_seal"*/);
-    byte_4C3B0B0 = 1;
+    sub_1C37058(&AtlasManager_TypeInfo);
+    sub_1C37058(&UnityEngine_Object_TypeInfo);
+    sub_1C37058(&StringLiteral_20227/*"icon_sealact_skill"*/);
+    sub_1C37058(&StringLiteral_20225/*"icon_sealact_disable"*/);
+    sub_1C37058(&StringLiteral_20226/*"icon_sealact_seal"*/);
+    byte_4C466C3 = 1;
   }
   this->fields.skillInfo = skillInfo;
-  sub_1C32BC4(
+  sub_1C36FFC(
     (CGThumbnailListItem_o *)&this->fields.skillInfo,
     (int32_t)skillInfo,
     isActSkill,
@@ -391,7 +391,7 @@ void BattleServantSkillIConComponent__SetSkillInfo(
         goto LABEL_49;
       mAtlas = v31->fields.mAtlas;
       this->fields.defaultNoActAtlas = mAtlas;
-      sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.defaultNoActAtlas, (int32_t)mAtlas, v29, v30);
+      sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.defaultNoActAtlas, (int32_t)mAtlas, v29, v30);
     }
     root = (UnityEngine_GameObject_o *)this->fields.noActSprite;
     if ( root )
@@ -419,7 +419,7 @@ void BattleServantSkillIConComponent__SetSkillInfo(
           }
           BattleServantSkillIConComponent__UpdateNoActSpriteByDefaultAtlas(
             this,
-            (System_String_o *)StringLiteral_20224/*"icon_sealact_skill"*/,
+            (System_String_o *)StringLiteral_20227/*"icon_sealact_skill"*/,
             v34);
           BattleServantSkillIConComponent__stopSealActSprite(this, v40);
           v9 = noActTurn;
@@ -428,7 +428,7 @@ void BattleServantSkillIConComponent__SetSkillInfo(
         {
           BattleServantSkillIConComponent__UpdateNoActSpriteByDefaultAtlas(
             this,
-            (System_String_o *)StringLiteral_20223/*"icon_sealact_seal"*/,
+            (System_String_o *)StringLiteral_20226/*"icon_sealact_seal"*/,
             v34);
           BattleServantSkillIConComponent__stopSealActSprite(this, v36);
           if ( IsSealSkillSelect )
@@ -436,7 +436,7 @@ void BattleServantSkillIConComponent__SetSkillInfo(
             v38 = this->fields.noActSprite;
             if ( !AtlasManager_TypeInfo->_2.cctor_finished )
               j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo);
-            AtlasManager__SetEventSprite(v38, (System_String_o *)StringLiteral_20222/*"icon_sealact_disable"*/, 0);
+            AtlasManager__SetEventSprite(v38, (System_String_o *)StringLiteral_20225/*"icon_sealact_disable"*/, 0);
             if ( isActSkill )
               goto LABEL_46;
 LABEL_45:
@@ -450,7 +450,7 @@ LABEL_45:
       }
     }
 LABEL_49:
-    sub_1C32E7C(root);
+    sub_1C372B4(root);
   }
 LABEL_46:
   BattleServantSkillIConComponent__UpdateRankUpEffectState(this, v27);
@@ -525,25 +525,25 @@ void BattleServantSkillIConComponent__SetUseCond(BattleServantSkillIConComponent
   Il2CppObject *entity; // [xsp+10h] [xbp-60h] BYREF
   int32_t v66; // [xsp+1Ch] [xbp-54h] BYREF
 
-  if ( (byte_4C3B0C2 & 1) == 0 )
+  if ( (byte_4C466D5 & 1) == 0 )
   {
-    sub_1C32C20(&AtlasManager_TypeInfo);
-    sub_1C32C20(&Method_DataManager_GetMasterData_ItemMaster___);
-    sub_1C32C20(&Method_DataManager_GetMasterData_UserItemMaster___);
-    sub_1C32C20(&Method_DataMasterBase_ItemMaster__ItemEntity__int__TryGetEntity__);
-    sub_1C32C20(&Method_UnityEngine_GameObject_GetComponentInChildren_UILabel___);
-    sub_1C32C20(&Method_UnityEngine_GameObject_GetComponentInChildren_UISprite___);
-    sub_1C32C20(&int_TypeInfo);
-    sub_1C32C20(&LocalizationManager_TypeInfo);
-    sub_1C32C20(&NetworkManager_TypeInfo);
-    sub_1C32C20(&UnityEngine_Object_TypeInfo);
-    sub_1C32C20(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-    sub_1C32C20(&Method_SingletonTemplate_BattleItemData__get_Instance__);
-    sub_1C32C20(&string_TypeInfo);
-    sub_1C32C20(&StringLiteral_987/*"-{0}"*/);
-    sub_1C32C20(&StringLiteral_2800/*"BATTLE_MASTER_SKILL_ADD_NOT_OPEN_COND_COLOR"*/);
-    sub_1C32C20(&StringLiteral_23519/*"skill_item_{0}"*/);
-    byte_4C3B0C2 = 1;
+    sub_1C37058(&AtlasManager_TypeInfo);
+    sub_1C37058(&Method_DataManager_GetMasterData_ItemMaster___);
+    sub_1C37058(&Method_DataManager_GetMasterData_UserItemMaster___);
+    sub_1C37058(&Method_DataMasterBase_ItemMaster__ItemEntity__int__TryGetEntity__);
+    sub_1C37058(&Method_UnityEngine_GameObject_GetComponentInChildren_UILabel___);
+    sub_1C37058(&Method_UnityEngine_GameObject_GetComponentInChildren_UISprite___);
+    sub_1C37058(&int_TypeInfo);
+    sub_1C37058(&LocalizationManager_TypeInfo);
+    sub_1C37058(&NetworkManager_TypeInfo);
+    sub_1C37058(&UnityEngine_Object_TypeInfo);
+    sub_1C37058(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    sub_1C37058(&Method_SingletonTemplate_BattleItemData__get_Instance__);
+    sub_1C37058(&string_TypeInfo);
+    sub_1C37058(&StringLiteral_987/*"-{0}"*/);
+    sub_1C37058(&StringLiteral_2800/*"BATTLE_MASTER_SKILL_ADD_NOT_OPEN_COND_COLOR"*/);
+    sub_1C37058(&StringLiteral_23523/*"skill_item_{0}"*/);
+    byte_4C466D5 = 1;
   }
   entity = 0;
   useCondRoot = (UnityEngine_Object_o *)this->fields.useCondRoot;
@@ -575,9 +575,9 @@ void BattleServantSkillIConComponent__SetUseCond(BattleServantSkillIConComponent
       goto LABEL_86;
     ComponentInChildren_object = UnityEngine_GameObject__GetComponentInChildren_object_(
                                    (UnityEngine_GameObject_o *)skillInfo,
-                                   (const MethodInfo_3134BD4 *)Method_UnityEngine_GameObject_GetComponentInChildren_UISprite___);
+                                   (const MethodInfo_313F43C *)Method_UnityEngine_GameObject_GetComponentInChildren_UISprite___);
     *p_useCondItemIcon = (struct UISprite_o *)ComponentInChildren_object;
-    sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.useCondItemIcon, (int32_t)ComponentInChildren_object, v8, v9);
+    sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.useCondItemIcon, (int32_t)ComponentInChildren_object, v8, v9);
   }
   p_useCondItemCountLabel = &this->fields.useCondItemCountLabel;
   useCondItemCountLabel = (UnityEngine_Object_o *)this->fields.useCondItemCountLabel;
@@ -590,16 +590,16 @@ void BattleServantSkillIConComponent__SetUseCond(BattleServantSkillIConComponent
       goto LABEL_86;
     v12 = UnityEngine_GameObject__GetComponentInChildren_object_(
             (UnityEngine_GameObject_o *)skillInfo,
-            (const MethodInfo_3134BD4 *)Method_UnityEngine_GameObject_GetComponentInChildren_UILabel___);
+            (const MethodInfo_313F43C *)Method_UnityEngine_GameObject_GetComponentInChildren_UILabel___);
     *p_useCondItemCountLabel = (struct UILabel_o *)v12;
-    sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.useCondItemCountLabel, (int32_t)v12, v13, v14);
+    sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.useCondItemCountLabel, (int32_t)v12, v13, v14);
   }
-  skillInfo = (BattleSkillInfoData_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39E2904 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  skillInfo = (BattleSkillInfoData_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39ED16C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !skillInfo )
     goto LABEL_86;
   skillInfo = (BattleSkillInfoData_o *)DataManager__GetMasterData_object_(
                                          (DataManager_o *)skillInfo,
-                                         (const MethodInfo_30DD3F0 *)Method_DataManager_GetMasterData_ItemMaster___);
+                                         (const MethodInfo_30E7C58 *)Method_DataManager_GetMasterData_ItemMaster___);
   if ( !this->fields.skillInfo )
     goto LABEL_86;
   v15 = (DataMasterBase_TMaster__TEntity__PKType__o *)skillInfo;
@@ -610,7 +610,7 @@ void BattleServantSkillIConComponent__SetUseCond(BattleServantSkillIConComponent
           v15,
           &entity,
           (int32_t)skillInfo,
-          (const MethodInfo_3396884 *)Method_DataMasterBase_ItemMaster__ItemEntity__int__TryGetEntity__) )
+          (const MethodInfo_33A10EC *)Method_DataMasterBase_ItemMaster__ItemEntity__int__TryGetEntity__) )
     goto LABEL_38;
   v16 = (UnityEngine_Object_o *)*p_useCondItemIcon;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -628,10 +628,10 @@ void BattleServantSkillIConComponent__SetUseCond(BattleServantSkillIConComponent
   }
   if ( !entity )
 LABEL_86:
-    sub_1C32E7C(skillInfo);
+    sub_1C372B4(skillInfo);
   if ( LODWORD(entity[3].klass) == 35 )
   {
-    skillInfo = (BattleSkillInfoData_o *)SingletonTemplate_object___get_Instance((const MethodInfo_39E2DF4 *)Method_SingletonTemplate_BattleItemData__get_Instance__);
+    skillInfo = (BattleSkillInfoData_o *)SingletonTemplate_object___get_Instance((const MethodInfo_39ED65C *)Method_SingletonTemplate_BattleItemData__get_Instance__);
     if ( !entity || !skillInfo )
       goto LABEL_86;
     v19 = BattleItemData__GetItemCountWithIdCheck((BattleItemData_o *)skillInfo, (int32_t)entity[1].klass, 0);
@@ -642,18 +642,18 @@ LABEL_86:
     goto LABEL_67;
   }
 LABEL_38:
-  skillInfo = (BattleSkillInfoData_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39E2904 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  skillInfo = (BattleSkillInfoData_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39ED16C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !skillInfo )
     goto LABEL_86;
   MasterData_object = DataManager__GetMasterData_object_(
                         (DataManager_o *)skillInfo,
-                        (const MethodInfo_30DD3F0 *)Method_DataManager_GetMasterData_UserItemMaster___);
+                        (const MethodInfo_30E7C58 *)Method_DataManager_GetMasterData_UserItemMaster___);
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
-  if ( !byte_4C31812 )
+  if ( !byte_4C3CD62 )
   {
-    sub_1C32C20(&NetworkManager_TypeInfo);
-    byte_4C31812 = 1;
+    sub_1C37058(&NetworkManager_TypeInfo);
+    byte_4C3CD62 = 1;
   }
   skillInfo = (BattleSkillInfoData_o *)NetworkManager_TypeInfo;
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
@@ -695,7 +695,7 @@ LABEL_38:
                                 v30,
                                 v31,
                                 v32);
-        v35 = System_String__Format((System_String_o *)StringLiteral_23519/*"skill_item_{0}"*/, v34, 0);
+        v35 = System_String__Format((System_String_o *)StringLiteral_23523/*"skill_item_{0}"*/, v34, 0);
         if ( !AtlasManager_TypeInfo->_2.cctor_finished )
           j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo);
         AtlasManager__SetEventSprite(v33, v35, 0);
@@ -716,12 +716,12 @@ LABEL_67:
   }
   if ( v26 )
   {
-    skillInfo = (BattleSkillInfoData_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39E2904 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    skillInfo = (BattleSkillInfoData_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39ED16C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
     if ( !skillInfo )
       goto LABEL_86;
     skillInfo = (BattleSkillInfoData_o *)DataManager__GetMasterData_object_(
                                            (DataManager_o *)skillInfo,
-                                           (const MethodInfo_30DD3F0 *)Method_DataManager_GetMasterData_ItemMaster___);
+                                           (const MethodInfo_30E7C58 *)Method_DataManager_GetMasterData_ItemMaster___);
     if ( !this->fields.skillInfo )
       goto LABEL_86;
     v36 = (ItemMaster_o *)skillInfo;
@@ -742,7 +742,7 @@ LABEL_67:
                               v40,
                               v41,
                               v42);
-      v45 = System_String__Format((System_String_o *)StringLiteral_23519/*"skill_item_{0}"*/, v44, 0);
+      v45 = System_String__Format((System_String_o *)StringLiteral_23523/*"skill_item_{0}"*/, v44, 0);
       if ( !AtlasManager_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo);
       AtlasManager__SetEventSprite(v43, v45, 0);
@@ -832,7 +832,7 @@ void BattleServantSkillIConComponent__UpdateNoActSpriteByDefaultAtlas(
     || (UISprite__set_atlas(noActSprite, this->fields.defaultNoActAtlas, 0),
         (noActSprite = this->fields.noActSprite) == 0) )
   {
-    sub_1C32E7C(noActSprite);
+    sub_1C372B4(noActSprite);
   }
   UISprite__set_spriteName(noActSprite, spriteName, 0);
 }
@@ -849,10 +849,10 @@ void BattleServantSkillIConComponent__UpdateRankUpEffectState(
   UnityEngine_Object_o *rankupSprite; // x20
   UnityEngine_Color_o v8; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 
-  if ( (byte_4C3B0C1 & 1) == 0 )
+  if ( (byte_4C466D4 & 1) == 0 )
   {
-    sub_1C32C20(&UnityEngine_Object_TypeInfo);
-    byte_4C3B0C1 = 1;
+    sub_1C37058(&UnityEngine_Object_TypeInfo);
+    byte_4C466D4 = 1;
   }
   noActSprite = (UnityEngine_Object_o *)this->fields.noActSprite;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -899,7 +899,7 @@ void BattleServantSkillIConComponent__UpdateRankUpEffectState(
       }
     }
 LABEL_19:
-    sub_1C32E7C(gameObject);
+    sub_1C372B4(gameObject);
   }
 }
 
@@ -923,12 +923,12 @@ bool BattleServantSkillIConComponent__UpdateSkillRankUpEffect(
   int32_t v16; // w2
   const MethodInfo *v17; // x3
 
-  if ( (byte_4C3B0BD & 1) == 0 )
+  if ( (byte_4C466D0 & 1) == 0 )
   {
-    sub_1C32C20(&BattleRankUpSkillInfoData_TypeInfo);
-    sub_1C32C20(&UnityEngine_Object_TypeInfo);
-    sub_1C32C20(&StringLiteral_18886/*"effect/data/effect/ef_skill_rankup01"*/);
-    byte_4C3B0BD = 1;
+    sub_1C37058(&BattleRankUpSkillInfoData_TypeInfo);
+    sub_1C37058(&UnityEngine_Object_TypeInfo);
+    sub_1C37058(&StringLiteral_18889/*"effect/data/effect/ef_skill_rankup01"*/);
+    byte_4C466D0 = 1;
   }
   skillInfo = this->fields.skillInfo;
   if ( skillInfo )
@@ -955,7 +955,7 @@ bool BattleServantSkillIConComponent__UpdateSkillRankUpEffect(
               {
                 v7 = BattleServantSkillIConComponent__PlayRankUpEffect(
                        this,
-                       (System_String_o *)StringLiteral_18886/*"effect/data/effect/ef_skill_rankup01"*/,
+                       (System_String_o *)StringLiteral_18889/*"effect/data/effect/ef_skill_rankup01"*/,
                        this->fields.rankupRoot,
                        v11 != 1,
                        v13);
@@ -984,11 +984,11 @@ LABEL_23:
               0,
               v6->klass->vtable._8_get_IndividualityArray.method);
             *p_rankupEffect = 0;
-            sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.rankupEffect, 0, v16, v17);
+            sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.rankupEffect, 0, v16, v17);
             goto LABEL_24;
           }
         }
-        sub_1C32E7C(v6);
+        sub_1C372B4(v6);
       }
     }
   }
@@ -1011,10 +1011,10 @@ void BattleServantSkillIConComponent__changeTurnCount(
 
   v4 = this;
   v10 = turn;
-  if ( (byte_4C3B0B8 & 1) == 0 )
+  if ( (byte_4C466CB & 1) == 0 )
   {
-    this = (BattleServantSkillIConComponent_o *)sub_1C32C20(&UnityEngine_Object_TypeInfo);
-    byte_4C3B0B8 = 1;
+    this = (BattleServantSkillIConComponent_o *)sub_1C37058(&UnityEngine_Object_TypeInfo);
+    byte_4C466CB = 1;
   }
   skillInfo = v4->fields.skillInfo;
   if ( !skillInfo )
@@ -1071,7 +1071,7 @@ LABEL_22:
           goto LABEL_26;
       }
 LABEL_27:
-      sub_1C32E7C(this);
+      sub_1C372B4(this);
     }
     v8 = (UnityEngine_Object_o *)v4->fields.turnNoLabel;
     if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -1103,13 +1103,13 @@ void BattleServantSkillIConComponent__completeSealActSpriteValues(
   UISprite_o *noActSprite; // x19
   const MethodInfo *v8; // x2
 
-  if ( (byte_4C3B0B5 & 1) == 0 )
+  if ( (byte_4C466C8 & 1) == 0 )
   {
-    sub_1C32C20(&AtlasManager_TypeInfo);
-    sub_1C32C20(&StringLiteral_20224/*"icon_sealact_skill"*/);
-    sub_1C32C20(&StringLiteral_20222/*"icon_sealact_disable"*/);
-    sub_1C32C20(&StringLiteral_20223/*"icon_sealact_seal"*/);
-    byte_4C3B0B5 = 1;
+    sub_1C37058(&AtlasManager_TypeInfo);
+    sub_1C37058(&StringLiteral_20227/*"icon_sealact_skill"*/);
+    sub_1C37058(&StringLiteral_20225/*"icon_sealact_disable"*/);
+    sub_1C37058(&StringLiteral_20226/*"icon_sealact_seal"*/);
+    byte_4C466C8 = 1;
   }
   isTweenReverse = this->fields.isTweenReverse;
   this->fields.isTweenReverse = !isTweenReverse;
@@ -1117,7 +1117,7 @@ void BattleServantSkillIConComponent__completeSealActSpriteValues(
   {
     if ( this->fields.isNoSkillSprite )
     {
-      BattleServantSkillIConComponent__UpdateNoActSpriteByDefaultAtlas(this, (System_String_o *)StringLiteral_20223/*"icon_sealact_seal"*/, v2);
+      BattleServantSkillIConComponent__UpdateNoActSpriteByDefaultAtlas(this, (System_String_o *)StringLiteral_20226/*"icon_sealact_seal"*/, v2);
       BattleServantSkillIConComponent__setTurnLabel(this, this->fields.tweenNoSkillTurn, v5);
       isTweenSealSkillSelect = this->fields.isTweenSealSkillSelect;
       this->fields.isNoSkillSprite = 0;
@@ -1126,12 +1126,12 @@ void BattleServantSkillIConComponent__completeSealActSpriteValues(
         noActSprite = this->fields.noActSprite;
         if ( !AtlasManager_TypeInfo->_2.cctor_finished )
           j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo);
-        AtlasManager__SetEventSprite(noActSprite, (System_String_o *)StringLiteral_20222/*"icon_sealact_disable"*/, 0);
+        AtlasManager__SetEventSprite(noActSprite, (System_String_o *)StringLiteral_20225/*"icon_sealact_disable"*/, 0);
       }
     }
     else
     {
-      BattleServantSkillIConComponent__UpdateNoActSpriteByDefaultAtlas(this, (System_String_o *)StringLiteral_20224/*"icon_sealact_skill"*/, v2);
+      BattleServantSkillIConComponent__UpdateNoActSpriteByDefaultAtlas(this, (System_String_o *)StringLiteral_20227/*"icon_sealact_skill"*/, v2);
       BattleServantSkillIConComponent__setTurnLabel(this, this->fields.tweenNoActTurn, v8);
       this->fields.isNoSkillSprite = 1;
     }
@@ -1144,53 +1144,56 @@ void BattleServantSkillIConComponent__setCollider(
         bool flg,
         const MethodInfo *method)
 {
-  __int64 gameObject; // x0
+  UnityEngine_GameObject_o *gameObject; // x0
   Il2CppObject *Component_object; // x21
   Il2CppObject *v7; // x21
   UnityEngine_Transform_o *v8; // x19
 
-  if ( (byte_4C3B0AF & 1) == 0 )
+  if ( (byte_4C466C2 & 1) == 0 )
   {
-    sub_1C32C20(&Method_UnityEngine_GameObject_GetComponent_Collider___);
-    sub_1C32C20(&Method_UnityEngine_GameObject_GetComponent_TweenScale___);
-    sub_1C32C20(&UnityEngine_Object_TypeInfo);
-    byte_4C3B0AF = 1;
+    sub_1C37058(&Method_UnityEngine_GameObject_GetComponent_Collider___);
+    sub_1C37058(&Method_UnityEngine_GameObject_GetComponent_TweenScale___);
+    sub_1C37058(&UnityEngine_Object_TypeInfo);
+    byte_4C466C2 = 1;
   }
-  gameObject = (__int64)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
+  gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
   if ( !gameObject )
     goto LABEL_20;
   Component_object = UnityEngine_GameObject__GetComponent_object_(
-                       (UnityEngine_GameObject_o *)gameObject,
-                       (const MethodInfo_3134970 *)Method_UnityEngine_GameObject_GetComponent_Collider___);
+                       gameObject,
+                       (const MethodInfo_313F1D8 *)Method_UnityEngine_GameObject_GetComponent_Collider___);
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-  gameObject = UnityEngine_Object__op_Inequality((UnityEngine_Object_o *)Component_object, 0, 0);
-  if ( (gameObject & 1) != 0 )
+  gameObject = (UnityEngine_GameObject_o *)UnityEngine_Object__op_Inequality(
+                                             (UnityEngine_Object_o *)Component_object,
+                                             0,
+                                             0);
+  if ( ((unsigned __int8)gameObject & 1) != 0 )
   {
     if ( !Component_object )
       goto LABEL_20;
     UnityEngine_Collider__set_enabled((UnityEngine_Collider_o *)Component_object, flg, 0);
   }
-  gameObject = (__int64)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
+  gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
   if ( !gameObject )
 LABEL_20:
-    sub_1C32E7C(gameObject);
+    sub_1C372B4(gameObject);
   v7 = UnityEngine_GameObject__GetComponent_object_(
-         (UnityEngine_GameObject_o *)gameObject,
-         (const MethodInfo_3134970 *)Method_UnityEngine_GameObject_GetComponent_TweenScale___);
+         gameObject,
+         (const MethodInfo_313F1D8 *)Method_UnityEngine_GameObject_GetComponent_TweenScale___);
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   if ( UnityEngine_Object__op_Inequality((UnityEngine_Object_o *)v7, 0, 0) && !flg )
   {
-    gameObject = (__int64)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
+    gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
     if ( gameObject )
     {
-      gameObject = (__int64)UnityEngine_GameObject__get_transform((UnityEngine_GameObject_o *)gameObject, 0);
+      gameObject = (UnityEngine_GameObject_o *)UnityEngine_GameObject__get_transform(gameObject, 0);
       v8 = (UnityEngine_Transform_o *)gameObject;
-      if ( !byte_4C313D6 )
+      if ( !byte_4C3C926 )
       {
-        gameObject = sub_1C32C20(&UnityEngine_Vector3_TypeInfo);
-        byte_4C313D6 = 1;
+        gameObject = (UnityEngine_GameObject_o *)sub_1C37058(&UnityEngine_Vector3_TypeInfo);
+        byte_4C3C926 = 1;
       }
       if ( v8 )
       {
@@ -1218,7 +1221,7 @@ void BattleServantSkillIConComponent__setNoSkill(
   {
     root = this->fields.root;
     if ( !root )
-      sub_1C32E7C(0);
+      sub_1C372B4(0);
     UnityEngine_GameObject__SetActive(root, 0, 0);
   }
 }
@@ -1236,13 +1239,13 @@ void BattleServantSkillIConComponent__setSkillIcon(
   int32_t v8; // w20
 
   v4 = this;
-  if ( (byte_4C3B0B1 & 1) == 0 )
+  if ( (byte_4C466C4 & 1) == 0 )
   {
-    this = (BattleServantSkillIConComponent_o *)sub_1C32C20(&AtlasManager_TypeInfo);
-    byte_4C3B0B1 = 1;
+    this = (BattleServantSkillIConComponent_o *)sub_1C37058(&AtlasManager_TypeInfo);
+    byte_4C466C4 = 1;
   }
   if ( !skillInfo )
-    sub_1C32E7C(this);
+    sub_1C372B4(this);
   isItemIcon = BattleSkillInfoData__isItemIcon(skillInfo, 0);
   skillIcon = v4->fields.skillIcon;
   if ( isItemIcon )
@@ -1282,12 +1285,12 @@ void BattleServantSkillIConComponent__setTurnLabel(
   Il2CppObject *v15; // x0
   int32_t v16; // [xsp+Ch] [xbp-24h] BYREF
 
-  if ( (byte_4C3B0B2 & 1) == 0 )
+  if ( (byte_4C466C5 & 1) == 0 )
   {
-    sub_1C32C20(&int_TypeInfo);
-    sub_1C32C20(&UnityEngine_Object_TypeInfo);
-    sub_1C32C20(&StringLiteral_25096/*"{0}"*/);
-    byte_4C3B0B2 = 1;
+    sub_1C37058(&int_TypeInfo);
+    sub_1C37058(&UnityEngine_Object_TypeInfo);
+    sub_1C37058(&StringLiteral_25101/*"{0}"*/);
+    byte_4C466C5 = 1;
   }
   turnNoLabelBase = (UnityEngine_Object_o *)this->fields.turnNoLabelBase;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -1310,10 +1313,10 @@ void BattleServantSkillIConComponent__setTurnLabel(
     v8 = turn + 1 >= 0 ? turn + 1 : turn + 2;
     v16 = BattleUtility__FloorToInt((float)(v8 >> 1), 0);
     v15 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v16, v9, v10, v11, v12, v13, v14);
-    gameObject = (UnityEngine_Component_o *)System_String__Format((System_String_o *)StringLiteral_25096/*"{0}"*/, v15, 0);
+    gameObject = (UnityEngine_Component_o *)System_String__Format((System_String_o *)StringLiteral_25101/*"{0}"*/, v15, 0);
     if ( !turnNoLabel )
 LABEL_16:
-      sub_1C32E7C(gameObject);
+      sub_1C372B4(gameObject);
     UILabel__set_text(turnNoLabel, (System_String_o *)gameObject, 0);
   }
 }
@@ -1339,10 +1342,10 @@ bool BattleServantSkillIConComponent__showChageEffect(
   UnityEngine_GameObject_o *root; // x0
   UnityEngine_Transform_o *transform; // x0
 
-  if ( (byte_4C3B0BC & 1) == 0 )
+  if ( (byte_4C466CF & 1) == 0 )
   {
-    sub_1C32C20(&StringLiteral_18894/*"effect/ef_command_flash01"*/);
-    byte_4C3B0BC = 1;
+    sub_1C37058(&StringLiteral_18897/*"effect/ef_command_flash01"*/);
+    byte_4C466CF = 1;
   }
   skillInfo = this->fields.skillInfo;
   if ( !skillInfo || !skillInfo->fields.isCharge )
@@ -1353,11 +1356,11 @@ bool BattleServantSkillIConComponent__showChageEffect(
   {
     root = this->fields.root;
     if ( !root )
-      sub_1C32E7C(0);
+      sub_1C372B4(0);
     transform = UnityEngine_GameObject__get_transform(root, 0);
-    BaseMonoBehaviour__createObject_41085732(
+    BaseMonoBehaviour__createObject_41185212(
       (BaseMonoBehaviour_o *)this,
-      (System_String_o *)StringLiteral_18894/*"effect/ef_command_flash01"*/,
+      (System_String_o *)StringLiteral_18897/*"effect/ef_command_flash01"*/,
       transform,
       0,
       0);
@@ -1448,56 +1451,56 @@ void BattleServantSkillIConComponent__startChangeSealActSprite(
   int v79; // [xsp+18h] [xbp-38h] BYREF
   int v80; // [xsp+1Ch] [xbp-34h] BYREF
 
-  if ( (byte_4C3B0B3 & 1) == 0 )
+  if ( (byte_4C466C6 & 1) == 0 )
   {
-    sub_1C32C20(&AtlasManager_TypeInfo);
-    sub_1C32C20(&object___TypeInfo);
-    sub_1C32C20(&float_TypeInfo);
-    sub_1C32C20(&StringLiteral_19689/*"from"*/);
-    sub_1C32C20(&StringLiteral_21352/*"loopType"*/);
-    sub_1C32C20(&StringLiteral_24067/*"time"*/);
-    sub_1C32C20(&StringLiteral_22435/*"onupdate"*/);
-    sub_1C32C20(&StringLiteral_22700/*"pingPong"*/);
-    sub_1C32C20(&StringLiteral_18742/*"easeOutCirc"*/);
-    sub_1C32C20(&StringLiteral_24106/*"to"*/);
-    sub_1C32C20(&StringLiteral_24437/*"updateSealActSpriteValues"*/);
-    sub_1C32C20(&StringLiteral_18185/*"completeSealActSpriteValues"*/);
-    sub_1C32C20(&StringLiteral_18750/*"easeType"*/);
-    sub_1C32C20(&StringLiteral_20222/*"icon_sealact_disable"*/);
-    sub_1C32C20(&StringLiteral_20223/*"icon_sealact_seal"*/);
-    sub_1C32C20(&StringLiteral_22427/*"oncomplete"*/);
-    sub_1C32C20(&iTween_TypeInfo);
-    byte_4C3B0B3 = 1;
+    sub_1C37058(&AtlasManager_TypeInfo);
+    sub_1C37058(&object___TypeInfo);
+    sub_1C37058(&float_TypeInfo);
+    sub_1C37058(&StringLiteral_19692/*"from"*/);
+    sub_1C37058(&StringLiteral_21355/*"loopType"*/);
+    sub_1C37058(&StringLiteral_24071/*"time"*/);
+    sub_1C37058(&StringLiteral_22438/*"onupdate"*/);
+    sub_1C37058(&StringLiteral_22703/*"pingPong"*/);
+    sub_1C37058(&StringLiteral_18745/*"easeOutCirc"*/);
+    sub_1C37058(&StringLiteral_24110/*"to"*/);
+    sub_1C37058(&StringLiteral_24441/*"updateSealActSpriteValues"*/);
+    sub_1C37058(&StringLiteral_18187/*"completeSealActSpriteValues"*/);
+    sub_1C37058(&StringLiteral_18753/*"easeType"*/);
+    sub_1C37058(&StringLiteral_20225/*"icon_sealact_disable"*/);
+    sub_1C37058(&StringLiteral_20226/*"icon_sealact_seal"*/);
+    sub_1C37058(&StringLiteral_22430/*"oncomplete"*/);
+    sub_1C37058(&iTween_TypeInfo);
+    byte_4C466C6 = 1;
   }
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
   if ( !iTween_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(iTween_TypeInfo);
-  if ( iTween__Count_63264648(gameObject, 0) <= 0 )
+  if ( iTween__Count_63307760(gameObject, 0) <= 0 )
   {
-    BattleServantSkillIConComponent__UpdateNoActSpriteByDefaultAtlas(this, (System_String_o *)StringLiteral_20223/*"icon_sealact_seal"*/, v9);
+    BattleServantSkillIConComponent__UpdateNoActSpriteByDefaultAtlas(this, (System_String_o *)StringLiteral_20226/*"icon_sealact_seal"*/, v9);
     if ( this->fields.isTweenSealSkillSelect )
     {
       noActSprite = this->fields.noActSprite;
       if ( !AtlasManager_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo);
-      AtlasManager__SetEventSprite(noActSprite, (System_String_o *)StringLiteral_20222/*"icon_sealact_disable"*/, 0);
+      AtlasManager__SetEventSprite(noActSprite, (System_String_o *)StringLiteral_20225/*"icon_sealact_disable"*/, 0);
     }
     BattleServantSkillIConComponent__setTurnLabel(this, this->fields.tweenNoSkillTurn, v10);
     *(_WORD *)&this->fields.isNoSkillSprite = 0;
     this->fields.tweenNoActTurn = noActTurn;
     this->fields.tweenNoSkillTurn = sealSkillTurn;
     v12 = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
-    v13 = sub_1C32CC8(object___TypeInfo, 14);
+    v13 = sub_1C37100(object___TypeInfo, 14);
     if ( !v13 )
-      sub_1C32E7C(0);
+      sub_1C372B4(0);
     v16 = v13;
-    v17 = StringLiteral_19689/*"from"*/;
-    if ( StringLiteral_19689/*"from"*/ )
+    v17 = StringLiteral_19692/*"from"*/;
+    if ( StringLiteral_19692/*"from"*/ )
     {
-      v17 = sub_1C32D5C(StringLiteral_19689/*"from"*/, *(_QWORD *)(*(_QWORD *)v16 + 64LL));
+      v17 = sub_1C37194(StringLiteral_19692/*"from"*/, *(_QWORD *)(*(_QWORD *)v16 + 64LL));
       if ( !v17 )
         goto LABEL_80;
-      v18 = StringLiteral_19689/*"from"*/;
+      v18 = StringLiteral_19692/*"from"*/;
     }
     else
     {
@@ -1506,23 +1509,23 @@ void BattleServantSkillIConComponent__startChangeSealActSprite(
     if ( !*(_DWORD *)(v16 + 24) )
       goto LABEL_79;
     *(_QWORD *)(v16 + 32) = v18;
-    sub_1C32BC4((CGThumbnailListItem_o *)(v16 + 32), v18, v14, v15);
+    sub_1C36FFC((CGThumbnailListItem_o *)(v16 + 32), v18, v14, v15);
     v80 = 0;
     v17 = j_il2cpp_value_box_0(float_TypeInfo, &v80, v19, v20, v21, v22, v23, v24);
     v27 = v17;
-    if ( !v17 || (v17 = sub_1C32D5C(v17, *(_QWORD *)(*(_QWORD *)v16 + 64LL))) != 0 )
+    if ( !v17 || (v17 = sub_1C37194(v17, *(_QWORD *)(*(_QWORD *)v16 + 64LL))) != 0 )
     {
       if ( *(_DWORD *)(v16 + 24) <= 1u )
         goto LABEL_79;
       *(_QWORD *)(v16 + 40) = v27;
-      sub_1C32BC4((CGThumbnailListItem_o *)(v16 + 40), v27, v25, v26);
-      v17 = StringLiteral_24106/*"to"*/;
-      if ( StringLiteral_24106/*"to"*/ )
+      sub_1C36FFC((CGThumbnailListItem_o *)(v16 + 40), v27, v25, v26);
+      v17 = StringLiteral_24110/*"to"*/;
+      if ( StringLiteral_24110/*"to"*/ )
       {
-        v17 = sub_1C32D5C(StringLiteral_24106/*"to"*/, *(_QWORD *)(*(_QWORD *)v16 + 64LL));
+        v17 = sub_1C37194(StringLiteral_24110/*"to"*/, *(_QWORD *)(*(_QWORD *)v16 + 64LL));
         if ( !v17 )
           goto LABEL_80;
-        v30 = StringLiteral_24106/*"to"*/;
+        v30 = StringLiteral_24110/*"to"*/;
       }
       else
       {
@@ -1531,23 +1534,23 @@ void BattleServantSkillIConComponent__startChangeSealActSprite(
       if ( *(_DWORD *)(v16 + 24) <= 2u )
         goto LABEL_79;
       *(_QWORD *)(v16 + 48) = v30;
-      sub_1C32BC4((CGThumbnailListItem_o *)(v16 + 48), v30, v28, v29);
+      sub_1C36FFC((CGThumbnailListItem_o *)(v16 + 48), v30, v28, v29);
       v79 = 1065353216;
       v17 = j_il2cpp_value_box_0(float_TypeInfo, &v79, v31, v32, v33, v34, v35, v36);
       v39 = v17;
-      if ( !v17 || (v17 = sub_1C32D5C(v17, *(_QWORD *)(*(_QWORD *)v16 + 64LL))) != 0 )
+      if ( !v17 || (v17 = sub_1C37194(v17, *(_QWORD *)(*(_QWORD *)v16 + 64LL))) != 0 )
       {
         if ( *(_DWORD *)(v16 + 24) <= 3u )
           goto LABEL_79;
         *(_QWORD *)(v16 + 56) = v39;
-        sub_1C32BC4((CGThumbnailListItem_o *)(v16 + 56), v39, v37, v38);
-        v17 = StringLiteral_22435/*"onupdate"*/;
-        if ( StringLiteral_22435/*"onupdate"*/ )
+        sub_1C36FFC((CGThumbnailListItem_o *)(v16 + 56), v39, v37, v38);
+        v17 = StringLiteral_22438/*"onupdate"*/;
+        if ( StringLiteral_22438/*"onupdate"*/ )
         {
-          v17 = sub_1C32D5C(StringLiteral_22435/*"onupdate"*/, *(_QWORD *)(*(_QWORD *)v16 + 64LL));
+          v17 = sub_1C37194(StringLiteral_22438/*"onupdate"*/, *(_QWORD *)(*(_QWORD *)v16 + 64LL));
           if ( !v17 )
             goto LABEL_80;
-          v42 = StringLiteral_22435/*"onupdate"*/;
+          v42 = StringLiteral_22438/*"onupdate"*/;
         }
         else
         {
@@ -1556,14 +1559,14 @@ void BattleServantSkillIConComponent__startChangeSealActSprite(
         if ( *(_DWORD *)(v16 + 24) <= 4u )
           goto LABEL_79;
         *(_QWORD *)(v16 + 64) = v42;
-        sub_1C32BC4((CGThumbnailListItem_o *)(v16 + 64), v42, v40, v41);
-        v17 = StringLiteral_24437/*"updateSealActSpriteValues"*/;
-        if ( StringLiteral_24437/*"updateSealActSpriteValues"*/ )
+        sub_1C36FFC((CGThumbnailListItem_o *)(v16 + 64), v42, v40, v41);
+        v17 = StringLiteral_24441/*"updateSealActSpriteValues"*/;
+        if ( StringLiteral_24441/*"updateSealActSpriteValues"*/ )
         {
-          v17 = sub_1C32D5C(StringLiteral_24437/*"updateSealActSpriteValues"*/, *(_QWORD *)(*(_QWORD *)v16 + 64LL));
+          v17 = sub_1C37194(StringLiteral_24441/*"updateSealActSpriteValues"*/, *(_QWORD *)(*(_QWORD *)v16 + 64LL));
           if ( !v17 )
             goto LABEL_80;
-          v45 = StringLiteral_24437/*"updateSealActSpriteValues"*/;
+          v45 = StringLiteral_24441/*"updateSealActSpriteValues"*/;
         }
         else
         {
@@ -1572,14 +1575,14 @@ void BattleServantSkillIConComponent__startChangeSealActSprite(
         if ( *(_DWORD *)(v16 + 24) <= 5u )
           goto LABEL_79;
         *(_QWORD *)(v16 + 72) = v45;
-        sub_1C32BC4((CGThumbnailListItem_o *)(v16 + 72), v45, v43, v44);
-        v17 = StringLiteral_22427/*"oncomplete"*/;
-        if ( StringLiteral_22427/*"oncomplete"*/ )
+        sub_1C36FFC((CGThumbnailListItem_o *)(v16 + 72), v45, v43, v44);
+        v17 = StringLiteral_22430/*"oncomplete"*/;
+        if ( StringLiteral_22430/*"oncomplete"*/ )
         {
-          v17 = sub_1C32D5C(StringLiteral_22427/*"oncomplete"*/, *(_QWORD *)(*(_QWORD *)v16 + 64LL));
+          v17 = sub_1C37194(StringLiteral_22430/*"oncomplete"*/, *(_QWORD *)(*(_QWORD *)v16 + 64LL));
           if ( !v17 )
             goto LABEL_80;
-          v48 = StringLiteral_22427/*"oncomplete"*/;
+          v48 = StringLiteral_22430/*"oncomplete"*/;
         }
         else
         {
@@ -1588,14 +1591,14 @@ void BattleServantSkillIConComponent__startChangeSealActSprite(
         if ( *(_DWORD *)(v16 + 24) <= 6u )
           goto LABEL_79;
         *(_QWORD *)(v16 + 80) = v48;
-        sub_1C32BC4((CGThumbnailListItem_o *)(v16 + 80), v48, v46, v47);
-        v17 = StringLiteral_18185/*"completeSealActSpriteValues"*/;
-        if ( StringLiteral_18185/*"completeSealActSpriteValues"*/ )
+        sub_1C36FFC((CGThumbnailListItem_o *)(v16 + 80), v48, v46, v47);
+        v17 = StringLiteral_18187/*"completeSealActSpriteValues"*/;
+        if ( StringLiteral_18187/*"completeSealActSpriteValues"*/ )
         {
-          v17 = sub_1C32D5C(StringLiteral_18185/*"completeSealActSpriteValues"*/, *(_QWORD *)(*(_QWORD *)v16 + 64LL));
+          v17 = sub_1C37194(StringLiteral_18187/*"completeSealActSpriteValues"*/, *(_QWORD *)(*(_QWORD *)v16 + 64LL));
           if ( !v17 )
             goto LABEL_80;
-          v51 = StringLiteral_18185/*"completeSealActSpriteValues"*/;
+          v51 = StringLiteral_18187/*"completeSealActSpriteValues"*/;
         }
         else
         {
@@ -1604,14 +1607,14 @@ void BattleServantSkillIConComponent__startChangeSealActSprite(
         if ( *(_DWORD *)(v16 + 24) <= 7u )
           goto LABEL_79;
         *(_QWORD *)(v16 + 88) = v51;
-        sub_1C32BC4((CGThumbnailListItem_o *)(v16 + 88), v51, v49, v50);
-        v17 = StringLiteral_21352/*"loopType"*/;
-        if ( StringLiteral_21352/*"loopType"*/ )
+        sub_1C36FFC((CGThumbnailListItem_o *)(v16 + 88), v51, v49, v50);
+        v17 = StringLiteral_21355/*"loopType"*/;
+        if ( StringLiteral_21355/*"loopType"*/ )
         {
-          v17 = sub_1C32D5C(StringLiteral_21352/*"loopType"*/, *(_QWORD *)(*(_QWORD *)v16 + 64LL));
+          v17 = sub_1C37194(StringLiteral_21355/*"loopType"*/, *(_QWORD *)(*(_QWORD *)v16 + 64LL));
           if ( !v17 )
             goto LABEL_80;
-          v54 = StringLiteral_21352/*"loopType"*/;
+          v54 = StringLiteral_21355/*"loopType"*/;
         }
         else
         {
@@ -1620,14 +1623,14 @@ void BattleServantSkillIConComponent__startChangeSealActSprite(
         if ( *(_DWORD *)(v16 + 24) <= 8u )
           goto LABEL_79;
         *(_QWORD *)(v16 + 96) = v54;
-        sub_1C32BC4((CGThumbnailListItem_o *)(v16 + 96), v54, v52, v53);
-        v17 = StringLiteral_22700/*"pingPong"*/;
-        if ( StringLiteral_22700/*"pingPong"*/ )
+        sub_1C36FFC((CGThumbnailListItem_o *)(v16 + 96), v54, v52, v53);
+        v17 = StringLiteral_22703/*"pingPong"*/;
+        if ( StringLiteral_22703/*"pingPong"*/ )
         {
-          v17 = sub_1C32D5C(StringLiteral_22700/*"pingPong"*/, *(_QWORD *)(*(_QWORD *)v16 + 64LL));
+          v17 = sub_1C37194(StringLiteral_22703/*"pingPong"*/, *(_QWORD *)(*(_QWORD *)v16 + 64LL));
           if ( !v17 )
             goto LABEL_80;
-          v57 = StringLiteral_22700/*"pingPong"*/;
+          v57 = StringLiteral_22703/*"pingPong"*/;
         }
         else
         {
@@ -1636,14 +1639,14 @@ void BattleServantSkillIConComponent__startChangeSealActSprite(
         if ( *(_DWORD *)(v16 + 24) <= 9u )
           goto LABEL_79;
         *(_QWORD *)(v16 + 104) = v57;
-        sub_1C32BC4((CGThumbnailListItem_o *)(v16 + 104), v57, v55, v56);
-        v17 = StringLiteral_18750/*"easeType"*/;
-        if ( StringLiteral_18750/*"easeType"*/ )
+        sub_1C36FFC((CGThumbnailListItem_o *)(v16 + 104), v57, v55, v56);
+        v17 = StringLiteral_18753/*"easeType"*/;
+        if ( StringLiteral_18753/*"easeType"*/ )
         {
-          v17 = sub_1C32D5C(StringLiteral_18750/*"easeType"*/, *(_QWORD *)(*(_QWORD *)v16 + 64LL));
+          v17 = sub_1C37194(StringLiteral_18753/*"easeType"*/, *(_QWORD *)(*(_QWORD *)v16 + 64LL));
           if ( !v17 )
             goto LABEL_80;
-          v60 = StringLiteral_18750/*"easeType"*/;
+          v60 = StringLiteral_18753/*"easeType"*/;
         }
         else
         {
@@ -1652,14 +1655,14 @@ void BattleServantSkillIConComponent__startChangeSealActSprite(
         if ( *(_DWORD *)(v16 + 24) <= 0xAu )
           goto LABEL_79;
         *(_QWORD *)(v16 + 112) = v60;
-        sub_1C32BC4((CGThumbnailListItem_o *)(v16 + 112), v60, v58, v59);
-        v17 = StringLiteral_18742/*"easeOutCirc"*/;
-        if ( StringLiteral_18742/*"easeOutCirc"*/ )
+        sub_1C36FFC((CGThumbnailListItem_o *)(v16 + 112), v60, v58, v59);
+        v17 = StringLiteral_18745/*"easeOutCirc"*/;
+        if ( StringLiteral_18745/*"easeOutCirc"*/ )
         {
-          v17 = sub_1C32D5C(StringLiteral_18742/*"easeOutCirc"*/, *(_QWORD *)(*(_QWORD *)v16 + 64LL));
+          v17 = sub_1C37194(StringLiteral_18745/*"easeOutCirc"*/, *(_QWORD *)(*(_QWORD *)v16 + 64LL));
           if ( !v17 )
             goto LABEL_80;
-          v63 = StringLiteral_18742/*"easeOutCirc"*/;
+          v63 = StringLiteral_18745/*"easeOutCirc"*/;
         }
         else
         {
@@ -1668,14 +1671,14 @@ void BattleServantSkillIConComponent__startChangeSealActSprite(
         if ( *(_DWORD *)(v16 + 24) <= 0xBu )
           goto LABEL_79;
         *(_QWORD *)(v16 + 120) = v63;
-        sub_1C32BC4((CGThumbnailListItem_o *)(v16 + 120), v63, v61, v62);
-        v17 = StringLiteral_24067/*"time"*/;
-        if ( StringLiteral_24067/*"time"*/ )
+        sub_1C36FFC((CGThumbnailListItem_o *)(v16 + 120), v63, v61, v62);
+        v17 = StringLiteral_24071/*"time"*/;
+        if ( StringLiteral_24071/*"time"*/ )
         {
-          v17 = sub_1C32D5C(StringLiteral_24067/*"time"*/, *(_QWORD *)(*(_QWORD *)v16 + 64LL));
+          v17 = sub_1C37194(StringLiteral_24071/*"time"*/, *(_QWORD *)(*(_QWORD *)v16 + 64LL));
           if ( !v17 )
             goto LABEL_80;
-          v66 = StringLiteral_24067/*"time"*/;
+          v66 = StringLiteral_24071/*"time"*/;
         }
         else
         {
@@ -1684,16 +1687,16 @@ void BattleServantSkillIConComponent__startChangeSealActSprite(
         if ( *(_DWORD *)(v16 + 24) <= 0xCu )
           goto LABEL_79;
         *(_QWORD *)(v16 + 128) = v66;
-        sub_1C32BC4((CGThumbnailListItem_o *)(v16 + 128), v66, v64, v65);
+        sub_1C36FFC((CGThumbnailListItem_o *)(v16 + 128), v66, v64, v65);
         changeTimeSealSprite = this->fields.changeTimeSealSprite;
         v17 = j_il2cpp_value_box_0(float_TypeInfo, &changeTimeSealSprite, v67, v68, v69, v70, v71, v72);
         v75 = v17;
-        if ( !v17 || (v17 = sub_1C32D5C(v17, *(_QWORD *)(*(_QWORD *)v16 + 64LL))) != 0 )
+        if ( !v17 || (v17 = sub_1C37194(v17, *(_QWORD *)(*(_QWORD *)v16 + 64LL))) != 0 )
         {
           if ( *(_DWORD *)(v16 + 24) > 0xDu )
           {
             *(_QWORD *)(v16 + 136) = v75;
-            sub_1C32BC4((CGThumbnailListItem_o *)(v16 + 136), v75, v73, v74);
+            sub_1C36FFC((CGThumbnailListItem_o *)(v16 + 136), v75, v73, v74);
             if ( !iTween_TypeInfo->_2.cctor_finished )
               j_il2cpp_runtime_class_init_0(iTween_TypeInfo);
             v76 = iTween__Hash((System_Object_array *)v16, 0);
@@ -1701,13 +1704,13 @@ void BattleServantSkillIConComponent__startChangeSealActSprite(
             return;
           }
 LABEL_79:
-          sub_1C32E84(v17);
+          sub_1C372BC(v17);
         }
       }
     }
 LABEL_80:
-    v77 = sub_1C32EA0(v17);
-    sub_1C32D48(v77, 0);
+    v77 = sub_1C372D8(v17);
+    sub_1C37180(v77, 0);
   }
 }
 
@@ -1719,15 +1722,15 @@ void BattleServantSkillIConComponent__stopSealActSprite(
   UnityEngine_GameObject_o *gameObject; // x20
   const MethodInfo *v4; // x1
 
-  if ( (byte_4C3B0B6 & 1) == 0 )
+  if ( (byte_4C466C9 & 1) == 0 )
   {
-    sub_1C32C20(&iTween_TypeInfo);
-    byte_4C3B0B6 = 1;
+    sub_1C37058(&iTween_TypeInfo);
+    byte_4C466C9 = 1;
   }
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
   if ( !iTween_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(iTween_TypeInfo);
-  iTween__Stop_63266448(gameObject, 0);
+  iTween__Stop_63309560(gameObject, 0);
   BattleServantSkillIConComponent__updateSealActSpriteValues(this, 1.0, v4);
 }
 
@@ -1740,10 +1743,10 @@ void BattleServantSkillIConComponent__updateFlashSkill(
   BattleSkillInfoData_o *skillInfo; // x0
   UnityEngine_GameObject_o *v5; // x20
 
-  if ( (byte_4C3B0B7 & 1) == 0 )
+  if ( (byte_4C466CA & 1) == 0 )
   {
-    sub_1C32C20(&UnityEngine_Object_TypeInfo);
-    byte_4C3B0B7 = 1;
+    sub_1C37058(&UnityEngine_Object_TypeInfo);
+    byte_4C466CA = 1;
   }
   flashIcon = (UnityEngine_Object_o *)this->fields.flashIcon;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -1759,7 +1762,7 @@ void BattleServantSkillIConComponent__updateFlashSkill(
         skillInfo = (BattleSkillInfoData_o *)BattleSkillInfoData__IsAvailable(skillInfo, 0);
         if ( !v5 )
 LABEL_14:
-          sub_1C32E7C(skillInfo);
+          sub_1C372B4(skillInfo);
       }
       else
       {
@@ -1792,11 +1795,11 @@ void BattleServantSkillIConComponent__updateSealActSpriteValues(
   UnityEngine_Color_o v10; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
   UnityEngine_Color_o v11; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 
-  if ( (byte_4C3B0B4 & 1) == 0 )
+  if ( (byte_4C466C7 & 1) == 0 )
   {
-    sub_1C32C20(&Method_UnityEngine_GameObject_GetComponent_UISprite___);
-    sub_1C32C20(&UnityEngine_Object_TypeInfo);
-    byte_4C3B0B4 = 1;
+    sub_1C37058(&Method_UnityEngine_GameObject_GetComponent_UISprite___);
+    sub_1C37058(&UnityEngine_Object_TypeInfo);
+    byte_4C466C7 = 1;
   }
   noActSprite = this->fields.noActSprite;
   if ( !noActSprite )
@@ -1806,7 +1809,7 @@ void BattleServantSkillIConComponent__updateSealActSpriteValues(
     goto LABEL_14;
   noActSprite = UnityEngine_GameObject__GetComponent_object_(
                   (UnityEngine_GameObject_o *)noActSprite,
-                  (const MethodInfo_3134970 *)Method_UnityEngine_GameObject_GetComponent_UISprite___);
+                  (const MethodInfo_313F1D8 *)Method_UnityEngine_GameObject_GetComponent_UISprite___);
   if ( !noActSprite )
     goto LABEL_14;
   v6 = *((float *)noActSprite + 37);
@@ -1830,7 +1833,7 @@ void BattleServantSkillIConComponent__updateSealActSpriteValues(
       {
         noActSprite = UnityEngine_GameObject__GetComponent_object_(
                         (UnityEngine_GameObject_o *)noActSprite,
-                        (const MethodInfo_3134970 *)Method_UnityEngine_GameObject_GetComponent_UISprite___);
+                        (const MethodInfo_313F1D8 *)Method_UnityEngine_GameObject_GetComponent_UISprite___);
         if ( noActSprite )
         {
           v11.fields.r = v6;
@@ -1843,6 +1846,6 @@ void BattleServantSkillIConComponent__updateSealActSpriteValues(
       }
     }
 LABEL_14:
-    sub_1C32E7C(noActSprite);
+    sub_1C372B4(noActSprite);
   }
 }

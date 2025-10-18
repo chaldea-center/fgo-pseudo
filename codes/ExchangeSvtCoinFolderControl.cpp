@@ -1,13 +1,13 @@
 void ExchangeSvtCoinFolderControl___cctor(const MethodInfo *method)
 {
-  if ( (byte_4C328DE & 1) == 0 )
+  if ( (byte_4C3DEC8 & 1) == 0 )
   {
-    sub_1C32C20(&ExchangeSvtCoinFolderControl_TypeInfo);
-    sub_1C32C20(&StringLiteral_5770/*"EXCHANGE_SVT_COIN_FOLDER_NAME_{0}"*/);
-    byte_4C328DE = 1;
+    sub_1C37058(&ExchangeSvtCoinFolderControl_TypeInfo);
+    sub_1C37058(&StringLiteral_5771/*"EXCHANGE_SVT_COIN_FOLDER_NAME_{0}"*/);
+    byte_4C3DEC8 = 1;
   }
-  ExchangeSvtCoinFolderControl_TypeInfo->static_fields->FOLDER_NAME = (struct System_String_o *)StringLiteral_5770/*"EXCHANGE_SVT_COIN_FOLDER_NAME_{0}"*/;
-  sub_1C32BC4(ExchangeSvtCoinFolderControl_TypeInfo->static_fields, StringLiteral_5770/*"EXCHANGE_SVT_COIN_FOLDER_NAME_{0}"*/);
+  ExchangeSvtCoinFolderControl_TypeInfo->static_fields->FOLDER_NAME = (struct System_String_o *)StringLiteral_5771/*"EXCHANGE_SVT_COIN_FOLDER_NAME_{0}"*/;
+  sub_1C36FFC(ExchangeSvtCoinFolderControl_TypeInfo->static_fields, StringLiteral_5771/*"EXCHANGE_SVT_COIN_FOLDER_NAME_{0}"*/);
 }
 
 
@@ -28,18 +28,18 @@ void ExchangeSvtCoinFolderControl__InitFolder(ExchangeSvtCoinFolderControl_o *th
   struct System_Action_int__o **p_onClickAction; // x19
   UILabel_o *v4; // x0
 
-  if ( (byte_4C328DC & 1) == 0 )
+  if ( (byte_4C3DEC6 & 1) == 0 )
   {
-    sub_1C32C20(&StringLiteral_1/*""*/);
-    byte_4C328DC = 1;
+    sub_1C37058(&StringLiteral_1/*""*/);
+    byte_4C3DEC6 = 1;
   }
   this->fields.onClickAction = 0;
   p_onClickAction = &this->fields.onClickAction;
   *((_DWORD *)p_onClickAction - 2) = 0;
-  sub_1C32BC4(p_onClickAction, 0);
+  sub_1C36FFC(p_onClickAction, 0);
   v4 = (UILabel_o *)*(p_onClickAction - 2);
   if ( !v4 )
-    sub_1C32E7C(0);
+    sub_1C372B4(0);
   UILabel__set_text(v4, (System_String_o *)StringLiteral_1/*""*/, 0);
 }
 
@@ -63,7 +63,7 @@ void ExchangeSvtCoinFolderControl__SetActive(ExchangeSvtCoinFolderControl_o *thi
 
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
   if ( !gameObject )
-    sub_1C32E7C(0);
+    sub_1C372B4(0);
   UnityEngine_GameObject__SetActive(gameObject, this->fields.svtCoinType > 0, 0);
 }
 
@@ -89,16 +89,16 @@ void ExchangeSvtCoinFolderControl__SetFolder(
   System_String_o *v19; // x0
   int32_t v20; // [xsp+Ch] [xbp-34h] BYREF
 
-  if ( (byte_4C328DD & 1) == 0 )
+  if ( (byte_4C3DEC7 & 1) == 0 )
   {
-    sub_1C32C20(&ExchangeSvtCoinFolderControl_TypeInfo);
-    sub_1C32C20(&int_TypeInfo);
-    sub_1C32C20(&LocalizationManager_TypeInfo);
-    byte_4C328DD = 1;
+    sub_1C37058(&ExchangeSvtCoinFolderControl_TypeInfo);
+    sub_1C37058(&int_TypeInfo);
+    sub_1C37058(&LocalizationManager_TypeInfo);
+    byte_4C3DEC7 = 1;
   }
   this->fields.onClickAction = onClickAction;
   this->fields.svtCoinType = svtCoinType;
-  sub_1C32BC4(&this->fields.onClickAction, onClickAction);
+  sub_1C36FFC(&this->fields.onClickAction, onClickAction);
   v13 = ExchangeSvtCoinFolderControl_TypeInfo;
   if ( !ExchangeSvtCoinFolderControl_TypeInfo->_2.cctor_finished )
   {
@@ -115,6 +115,6 @@ void ExchangeSvtCoinFolderControl__SetFolder(
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   v19 = LocalizationManager__Get(v18, 0);
   if ( !folderNameLb )
-    sub_1C32E7C(v19);
+    sub_1C372B4(v19);
   UILabel__set_text(folderNameLb, v19, 0);
 }

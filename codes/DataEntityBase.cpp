@@ -6,7 +6,7 @@ void DataEntityBase___ctor(DataEntityBase_o *this, const MethodInfo *method)
 
 System_String_o *DataEntityBase__CreateMultiplePK___Il2CppFullySharedGenericType_(
         Unity_IL2CPP_Metadata___Il2CppFullySharedGenericType_o arg1,
-        const MethodInfo_30DB484 *method)
+        const MethodInfo_30E5CEC *method)
 {
   long double v2; // q0
   _QWORD *monitor; // x20
@@ -27,7 +27,7 @@ System_String_o *DataEntityBase__CreateMultiplePK___Il2CppFullySharedGenericType
   v5 = (__int64 *)*((_QWORD *)arg1.monitor + 7);
   if ( !v5 )
   {
-    sub_1C83390();
+    sub_1C877C8();
     v5 = (__int64 *)monitor[7];
   }
   v6 = *v5;
@@ -38,7 +38,7 @@ System_String_o *DataEntityBase__CreateMultiplePK___Il2CppFullySharedGenericType
   }
   else
   {
-    v8 = sub_1C83334(v2);
+    v8 = sub_1C8776C(v2);
     v5 = (__int64 *)monitor[7];
     v6 = *v5;
     v7 = *(_WORD *)(*v5 + 309);
@@ -46,7 +46,7 @@ System_String_o *DataEntityBase__CreateMultiplePK___Il2CppFullySharedGenericType
   v9 = (char *)&v14[-1] - (((unsigned int)(*(_DWORD *)(v8 + 252) + 16) + 15LL) & 0x1FFFFFFF0LL);
   if ( (v7 & 1) == 0 )
   {
-    v10 = sub_1C83334(v2);
+    v10 = sub_1C8776C(v2);
     v5 = (__int64 *)monitor[7];
     LODWORD(v6) = v10;
   }
@@ -54,7 +54,7 @@ System_String_o *DataEntityBase__CreateMultiplePK___Il2CppFullySharedGenericType
     v11 = (Unity_IL2CPP_Metadata___Il2CppFullySharedGenericType_c *)v14;
   else
     v11 = klass;
-  sub_1C33688(v6, v5[1], (int)v9, v11);
+  sub_1C37AC0(v6, v5[1], (int)v9, v11);
   return (System_String_o *)v14[1];
 }
 
@@ -62,7 +62,7 @@ System_String_o *DataEntityBase__CreateMultiplePK___Il2CppFullySharedGenericType
 System_String_o *DataEntityBase__CreateMultiplePK___Il2CppFullySharedGenericType____Il2CppFullySharedGenericType_(
         Unity_IL2CPP_Metadata___Il2CppFullySharedGenericType_o arg1,
         Unity_IL2CPP_Metadata___Il2CppFullySharedGenericType_o arg2,
-        const MethodInfo_30DB890 *method)
+        const MethodInfo_30E60F8 *method)
 {
   Unity_IL2CPP_Metadata___Il2CppFullySharedGenericType_c *klass; // x19
   void **monitor; // x22
@@ -91,12 +91,12 @@ System_String_o *DataEntityBase__CreateMultiplePK___Il2CppFullySharedGenericType
   v6 = *(_QWORD **)&arg2.klass->_1.this_arg.bits;
   if ( !v6 )
   {
-    sub_1C32C20(&Cysharp_Text_ZString_TypeInfo);
-    sub_1C32C20(&StringLiteral_25172/*"{0}:{1}"*/);
+    sub_1C37058(&Cysharp_Text_ZString_TypeInfo);
+    sub_1C37058(&StringLiteral_25177/*"{0}:{1}"*/);
     v6 = *(_QWORD **)&klass->_1.this_arg.bits;
     if ( !v6 )
     {
-      sub_1C83390();
+      sub_1C877C8();
       v6 = *(_QWORD **)&klass->_1.this_arg.bits;
     }
   }
@@ -125,7 +125,7 @@ System_String_o *DataEntityBase__CreateMultiplePK___Il2CppFullySharedGenericType
     v9 = (_QWORD *)*v9;
   if ( (*(_DWORD *)(v6[1] + 40LL) & 0x80000000) == 0 )
     v10 = (_QWORD *)*v10;
-  v19[0] = StringLiteral_25172/*"{0}:{1}"*/;
+  v19[0] = StringLiteral_25177/*"{0}:{1}"*/;
   v19[1] = v9;
   v19[2] = v10;
   ((void (__fastcall *)(__int64, __int64 *, _QWORD, _QWORD *, _QWORD *))v13[2])(v14, v13, 0, v19, v20);
@@ -137,7 +137,7 @@ System_String_o *DataEntityBase__CreateMultiplePK___Il2CppFullySharedGenericType
         Unity_IL2CPP_Metadata___Il2CppFullySharedGenericType_o arg1,
         Unity_IL2CPP_Metadata___Il2CppFullySharedGenericType_o arg2,
         Unity_IL2CPP_Metadata___Il2CppFullySharedGenericType_o arg3,
-        const MethodInfo_30DBCEC *method)
+        const MethodInfo_30E6554 *method)
 {
   _QWORD *monitor; // x19
   Unity_IL2CPP_Metadata___Il2CppFullySharedGenericType_c *klass; // x23
@@ -174,12 +174,12 @@ System_String_o *DataEntityBase__CreateMultiplePK___Il2CppFullySharedGenericType
   v8 = arg1.klass;
   if ( !v7 )
   {
-    sub_1C32C20(&Cysharp_Text_ZString_TypeInfo);
-    sub_1C32C20(&StringLiteral_25176/*"{0}:{1}:{2}"*/);
+    sub_1C37058(&Cysharp_Text_ZString_TypeInfo);
+    sub_1C37058(&StringLiteral_25181/*"{0}:{1}:{2}"*/);
     v7 = (_QWORD *)monitor[7];
     if ( !v7 )
     {
-      sub_1C83390();
+      sub_1C877C8();
       v7 = (_QWORD *)monitor[7];
     }
   }
@@ -217,7 +217,7 @@ System_String_o *DataEntityBase__CreateMultiplePK___Il2CppFullySharedGenericType
     v13 = (_QWORD *)*v13;
   if ( (*(_DWORD *)(v7[2] + 40LL) & 0x80000000) == 0 )
     v14 = (_QWORD *)*v14;
-  v25[0] = StringLiteral_25176/*"{0}:{1}:{2}"*/;
+  v25[0] = StringLiteral_25181/*"{0}:{1}:{2}"*/;
   v25[1] = v12;
   v25[2] = v13;
   v25[3] = v14;
@@ -231,7 +231,7 @@ System_String_o *DataEntityBase__CreateMultiplePK___Il2CppFullySharedGenericType
         Unity_IL2CPP_Metadata___Il2CppFullySharedGenericType_o arg2,
         Unity_IL2CPP_Metadata___Il2CppFullySharedGenericType_o arg3,
         Unity_IL2CPP_Metadata___Il2CppFullySharedGenericType_o arg4,
-        const MethodInfo_30DC1D4 *method)
+        const MethodInfo_30E6A3C *method)
 {
   Unity_IL2CPP_Metadata___Il2CppFullySharedGenericType_c *klass; // x19
   void **monitor; // x26
@@ -279,12 +279,12 @@ System_String_o *DataEntityBase__CreateMultiplePK___Il2CppFullySharedGenericType
   v30 = arg2;
   if ( !v8 )
   {
-    sub_1C32C20(&Cysharp_Text_ZString_TypeInfo);
-    sub_1C32C20(&StringLiteral_25178/*"{0}:{1}:{2}:{3}"*/);
+    sub_1C37058(&Cysharp_Text_ZString_TypeInfo);
+    sub_1C37058(&StringLiteral_25183/*"{0}:{1}:{2}:{3}"*/);
     v8 = *(_QWORD **)&klass->_1.this_arg.bits;
     if ( !v8 )
     {
-      sub_1C83390();
+      sub_1C877C8();
       v8 = *(_QWORD **)&klass->_1.this_arg.bits;
     }
   }
@@ -336,7 +336,7 @@ System_String_o *DataEntityBase__CreateMultiplePK___Il2CppFullySharedGenericType
     v19 = (_QWORD *)*v19;
   if ( (*(_DWORD *)(v8[3] + 40LL) & 0x80000000) == 0 )
     v20 = (_QWORD *)*v20;
-  v36[0] = StringLiteral_25178/*"{0}:{1}:{2}:{3}"*/;
+  v36[0] = StringLiteral_25183/*"{0}:{1}:{2}:{3}"*/;
   v36[1] = v17;
   v36[2] = v18;
   v36[3] = v19;
@@ -352,7 +352,7 @@ System_String_o *DataEntityBase__CreateMultiplePK___Il2CppFullySharedGenericType
         Unity_IL2CPP_Metadata___Il2CppFullySharedGenericType_o arg3,
         Unity_IL2CPP_Metadata___Il2CppFullySharedGenericType_o arg4,
         Unity_IL2CPP_Metadata___Il2CppFullySharedGenericType_o arg5,
-        const MethodInfo_30DC610 *method)
+        const MethodInfo_30E6E78 *method)
 {
   _QWORD *monitor; // x19
   _QWORD *v7; // x22
@@ -408,13 +408,13 @@ System_String_o *DataEntityBase__CreateMultiplePK___Il2CppFullySharedGenericType
   if ( !v7 )
   {
     v8 = arg1.klass;
-    sub_1C32C20(&Cysharp_Text_ZString_TypeInfo);
-    sub_1C32C20(&StringLiteral_25179/*"{0}:{1}:{2}:{3}:{4}"*/);
+    sub_1C37058(&Cysharp_Text_ZString_TypeInfo);
+    sub_1C37058(&StringLiteral_25184/*"{0}:{1}:{2}:{3}:{4}"*/);
     v7 = (_QWORD *)monitor[7];
     arg1.klass = v8;
     if ( !v7 )
     {
-      sub_1C83390();
+      sub_1C877C8();
       v7 = (_QWORD *)monitor[7];
       arg1.klass = v8;
     }
@@ -477,7 +477,7 @@ System_String_o *DataEntityBase__CreateMultiplePK___Il2CppFullySharedGenericType
     v22 = (_QWORD *)*v22;
   if ( (*(_DWORD *)(v7[4] + 40LL) & 0x80000000) == 0 )
     v23 = (_QWORD *)*v23;
-  v43[0] = StringLiteral_25179/*"{0}:{1}:{2}:{3}:{4}"*/;
+  v43[0] = StringLiteral_25184/*"{0}:{1}:{2}:{3}:{4}"*/;
   v43[1] = v19;
   v43[2] = v20;
   v43[3] = v21;
@@ -495,7 +495,7 @@ System_String_o *DataEntityBase__CreateMultiplePK___Il2CppFullySharedGenericType
         Unity_IL2CPP_Metadata___Il2CppFullySharedGenericType_o arg4,
         Unity_IL2CPP_Metadata___Il2CppFullySharedGenericType_o arg5,
         Unity_IL2CPP_Metadata___Il2CppFullySharedGenericType_o arg6,
-        const MethodInfo_30DC95C *method)
+        const MethodInfo_30E71C4 *method)
 {
   Unity_IL2CPP_Metadata___Il2CppFullySharedGenericType_c *klass; // x19
   Unity_IL2CPP_Metadata___Il2CppFullySharedGenericType_c *v8; // x14
@@ -562,13 +562,13 @@ System_String_o *DataEntityBase__CreateMultiplePK___Il2CppFullySharedGenericType
   if ( !v9 )
   {
     v10 = arg1.klass;
-    sub_1C32C20(&Cysharp_Text_ZString_TypeInfo);
-    sub_1C32C20(&StringLiteral_25180/*"{0}:{1}:{2}:{3}:{4}:{5}"*/);
+    sub_1C37058(&Cysharp_Text_ZString_TypeInfo);
+    sub_1C37058(&StringLiteral_25185/*"{0}:{1}:{2}:{3}:{4}:{5}"*/);
     v9 = *(_QWORD **)&klass->_1.this_arg.bits;
     v8 = v10;
     if ( !v9 )
     {
-      sub_1C83390();
+      sub_1C877C8();
       v9 = *(_QWORD **)&klass->_1.this_arg.bits;
       v8 = v10;
     }
@@ -647,7 +647,7 @@ System_String_o *DataEntityBase__CreateMultiplePK___Il2CppFullySharedGenericType
     v24 = (_QWORD *)*v24;
   if ( (*(_DWORD *)(v9[5] + 40LL) & 0x80000000) == 0 )
     v25 = (_QWORD *)*v25;
-  v53[0] = StringLiteral_25180/*"{0}:{1}:{2}:{3}:{4}:{5}"*/;
+  v53[0] = StringLiteral_25185/*"{0}:{1}:{2}:{3}:{4}:{5}"*/;
   v53[1] = v34;
   v53[2] = v35;
   v53[3] = v22;
@@ -667,7 +667,7 @@ System_String_o *DataEntityBase__CreateMultiplePK___Il2CppFullySharedGenericType
         Unity_IL2CPP_Metadata___Il2CppFullySharedGenericType_o arg5,
         Unity_IL2CPP_Metadata___Il2CppFullySharedGenericType_o arg6,
         Unity_IL2CPP_Metadata___Il2CppFullySharedGenericType_o arg7,
-        const MethodInfo_30DCC64 *method)
+        const MethodInfo_30E74CC *method)
 {
   _QWORD *monitor; // x19
   Unity_IL2CPP_Metadata___Il2CppFullySharedGenericType_c *klass; // x15
@@ -740,13 +740,13 @@ System_String_o *DataEntityBase__CreateMultiplePK___Il2CppFullySharedGenericType
   if ( !v10 )
   {
     v11 = arg1.klass;
-    sub_1C32C20(&Cysharp_Text_ZString_TypeInfo);
-    sub_1C32C20(&StringLiteral_25181/*"{0}:{1}:{2}:{3}:{4}:{5}:{6}"*/);
+    sub_1C37058(&Cysharp_Text_ZString_TypeInfo);
+    sub_1C37058(&StringLiteral_25186/*"{0}:{1}:{2}:{3}:{4}:{5}:{6}"*/);
     v10 = (_QWORD *)monitor[7];
     klass = v11;
     if ( !v10 )
     {
-      sub_1C83390();
+      sub_1C877C8();
       v10 = (_QWORD *)monitor[7];
       klass = v11;
     }
@@ -830,7 +830,7 @@ System_String_o *DataEntityBase__CreateMultiplePK___Il2CppFullySharedGenericType
     v23 = (_QWORD *)*v23;
   if ( (*(_DWORD *)(v35[6] + 40LL) & 0x80000000) == 0 )
     v24 = (_QWORD *)*v24;
-  v58[0] = StringLiteral_25181/*"{0}:{1}:{2}:{3}:{4}:{5}:{6}"*/;
+  v58[0] = StringLiteral_25186/*"{0}:{1}:{2}:{3}:{4}:{5}:{6}"*/;
   v58[1] = v36;
   v58[2] = v37;
   v58[3] = v20;
@@ -858,7 +858,7 @@ System_String_o *DataEntityBase__CreateMultiplePK___Il2CppFullySharedGenericType
         Unity_IL2CPP_Metadata___Il2CppFullySharedGenericType_o arg6,
         Unity_IL2CPP_Metadata___Il2CppFullySharedGenericType_o arg7,
         Unity_IL2CPP_Metadata___Il2CppFullySharedGenericType_o arg8,
-        const MethodInfo_30DCFC8 *method)
+        const MethodInfo_30E7830 *method)
 {
   Unity_IL2CPP_Metadata___Il2CppFullySharedGenericType_c *klass; // x16
   _QWORD *v10; // x19
@@ -939,13 +939,13 @@ System_String_o *DataEntityBase__CreateMultiplePK___Il2CppFullySharedGenericType
   if ( !v10 )
   {
     v11 = arg1.klass;
-    sub_1C32C20(&Cysharp_Text_ZString_TypeInfo);
-    sub_1C32C20(&StringLiteral_25182/*"{0}:{1}:{2}:{3}:{4}:{5}:{6}:{7}"*/);
+    sub_1C37058(&Cysharp_Text_ZString_TypeInfo);
+    sub_1C37058(&StringLiteral_25187/*"{0}:{1}:{2}:{3}:{4}:{5}:{6}:{7}"*/);
     v10 = *(_QWORD **)&arg5.klass->_1.this_arg.bits;
     klass = v11;
     if ( !v10 )
     {
-      sub_1C83390();
+      sub_1C877C8();
       v10 = *(_QWORD **)&arg5.klass->_1.this_arg.bits;
       klass = v11;
     }
@@ -1042,7 +1042,7 @@ System_String_o *DataEntityBase__CreateMultiplePK___Il2CppFullySharedGenericType
     v27 = (_QWORD *)*v27;
   if ( (*(_DWORD *)(v40[7] + 40LL) & 0x80000000) == 0 )
     v28 = (_QWORD *)*v28;
-  v67[0] = StringLiteral_25182/*"{0}:{1}:{2}:{3}:{4}:{5}:{6}:{7}"*/;
+  v67[0] = StringLiteral_25187/*"{0}:{1}:{2}:{3}:{4}:{5}:{6}:{7}"*/;
   v67[1] = v41;
   v67[2] = v42;
   v67[3] = v23;
@@ -1062,16 +1062,16 @@ System_String_o *DataEntityBase__CreateMultiplePK___Il2CppFullySharedGenericType
 }
 
 
-System_String_o *DataEntityBase__CreateMultiplePK_int_(int32_t arg1, const MethodInfo_30DB40C *method)
+System_String_o *DataEntityBase__CreateMultiplePK_int_(int32_t arg1, const MethodInfo_30E5C74 *method)
 {
-  const MethodInfo_30DB40C_RGCTXs *rgctx_data; // x8
+  const MethodInfo_30E5C74_RGCTXs *rgctx_data; // x8
   int32_t v5; // [xsp+Ch] [xbp-14h] BYREF
 
   v5 = arg1;
   rgctx_data = method->rgctx_data;
   if ( !rgctx_data )
   {
-    sub_1C83390();
+    sub_1C877C8();
     rgctx_data = method->rgctx_data;
   }
   return System_Int32__ToString((int32_t)&v5, (const MethodInfo *)rgctx_data[1]._0_T);
@@ -1081,18 +1081,18 @@ System_String_o *DataEntityBase__CreateMultiplePK_int_(int32_t arg1, const Metho
 System_String_o *DataEntityBase__CreateMultiplePK_int__int_(
         int32_t arg1,
         int32_t arg2,
-        const MethodInfo_30DB578 *method)
+        const MethodInfo_30E5DE0 *method)
 {
   if ( !method->rgctx_data )
   {
-    sub_1C32C20(&Cysharp_Text_ZString_TypeInfo);
-    sub_1C32C20(&StringLiteral_25172/*"{0}:{1}"*/);
+    sub_1C37058(&Cysharp_Text_ZString_TypeInfo);
+    sub_1C37058(&StringLiteral_25177/*"{0}:{1}"*/);
     if ( !method->rgctx_data )
-      sub_1C83390();
+      sub_1C877C8();
   }
   if ( !Cysharp_Text_ZString_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(Cysharp_Text_ZString_TypeInfo);
-  JUMPOUT(0x30F6B70);
+  JUMPOUT(0x31013D8);
 }
 
 
@@ -1100,18 +1100,18 @@ System_String_o *DataEntityBase__CreateMultiplePK_int__int__int_(
         int32_t arg1,
         int32_t arg2,
         int32_t arg3,
-        const MethodInfo_30DBA08 *method)
+        const MethodInfo_30E6270 *method)
 {
   if ( !method->rgctx_data )
   {
-    sub_1C32C20(&Cysharp_Text_ZString_TypeInfo);
-    sub_1C32C20(&StringLiteral_25176/*"{0}:{1}:{2}"*/);
+    sub_1C37058(&Cysharp_Text_ZString_TypeInfo);
+    sub_1C37058(&StringLiteral_25181/*"{0}:{1}:{2}"*/);
     if ( !method->rgctx_data )
-      sub_1C83390();
+      sub_1C877C8();
   }
   if ( !Cysharp_Text_ZString_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(Cysharp_Text_ZString_TypeInfo);
-  JUMPOUT(0x30F76BC);
+  JUMPOUT(0x3101F24);
 }
 
 
@@ -1120,18 +1120,18 @@ System_String_o *DataEntityBase__CreateMultiplePK_int__int__int__int_(
         int32_t arg2,
         int32_t arg3,
         int32_t arg4,
-        const MethodInfo_30DBEC8 *method)
+        const MethodInfo_30E6730 *method)
 {
   if ( !method->rgctx_data )
   {
-    sub_1C32C20(&Cysharp_Text_ZString_TypeInfo);
-    sub_1C32C20(&StringLiteral_25178/*"{0}:{1}:{2}:{3}"*/);
+    sub_1C37058(&Cysharp_Text_ZString_TypeInfo);
+    sub_1C37058(&StringLiteral_25183/*"{0}:{1}:{2}:{3}"*/);
     if ( !method->rgctx_data )
-      sub_1C83390();
+      sub_1C877C8();
   }
   if ( !Cysharp_Text_ZString_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(Cysharp_Text_ZString_TypeInfo);
-  JUMPOUT(0x30F7DC4);
+  JUMPOUT(0x310262C);
 }
 
 
@@ -1141,18 +1141,18 @@ System_String_o *DataEntityBase__CreateMultiplePK_int__int__int__int__int_(
         int32_t arg3,
         int32_t arg4,
         int32_t arg5,
-        const MethodInfo_30DC40C *method)
+        const MethodInfo_30E6C74 *method)
 {
   if ( !method->rgctx_data )
   {
-    sub_1C32C20(&Cysharp_Text_ZString_TypeInfo);
-    sub_1C32C20(&StringLiteral_25179/*"{0}:{1}:{2}:{3}:{4}"*/);
+    sub_1C37058(&Cysharp_Text_ZString_TypeInfo);
+    sub_1C37058(&StringLiteral_25184/*"{0}:{1}:{2}:{3}:{4}"*/);
     if ( !method->rgctx_data )
-      sub_1C83390();
+      sub_1C877C8();
   }
   if ( !Cysharp_Text_ZString_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(Cysharp_Text_ZString_TypeInfo);
-  JUMPOUT(0x30F84F4);
+  JUMPOUT(0x3102D5C);
 }
 
 
@@ -1162,18 +1162,18 @@ System_String_o *DataEntityBase__CreateMultiplePK_int__int__int__int__long_(
         int32_t arg3,
         int32_t arg4,
         int64_t arg5,
-        const MethodInfo_30DC4B8 *method)
+        const MethodInfo_30E6D20 *method)
 {
   if ( !method->rgctx_data )
   {
-    sub_1C32C20(&Cysharp_Text_ZString_TypeInfo);
-    sub_1C32C20(&StringLiteral_25179/*"{0}:{1}:{2}:{3}:{4}"*/);
+    sub_1C37058(&Cysharp_Text_ZString_TypeInfo);
+    sub_1C37058(&StringLiteral_25184/*"{0}:{1}:{2}:{3}:{4}"*/);
     if ( !method->rgctx_data )
-      sub_1C83390();
+      sub_1C877C8();
   }
   if ( !Cysharp_Text_ZString_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(Cysharp_Text_ZString_TypeInfo);
-  JUMPOUT(0x30F8674);
+  JUMPOUT(0x3102EDC);
 }
 
 
@@ -1182,18 +1182,18 @@ System_String_o *DataEntityBase__CreateMultiplePK_int__int__int__long_(
         int32_t arg2,
         int32_t arg3,
         int64_t arg4,
-        const MethodInfo_30DBF64 *method)
+        const MethodInfo_30E67CC *method)
 {
   if ( !method->rgctx_data )
   {
-    sub_1C32C20(&Cysharp_Text_ZString_TypeInfo);
-    sub_1C32C20(&StringLiteral_25178/*"{0}:{1}:{2}:{3}"*/);
+    sub_1C37058(&Cysharp_Text_ZString_TypeInfo);
+    sub_1C37058(&StringLiteral_25183/*"{0}:{1}:{2}:{3}"*/);
     if ( !method->rgctx_data )
-      sub_1C83390();
+      sub_1C877C8();
   }
   if ( !Cysharp_Text_ZString_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(Cysharp_Text_ZString_TypeInfo);
-  JUMPOUT(0x30F7F34);
+  JUMPOUT(0x310279C);
 }
 
 
@@ -1203,18 +1203,18 @@ System_String_o *DataEntityBase__CreateMultiplePK_int__int__int__object__int_(
         int32_t arg3,
         Il2CppObject *arg4,
         int32_t arg5,
-        const MethodInfo_30DC564 *method)
+        const MethodInfo_30E6DCC *method)
 {
   if ( !method->rgctx_data )
   {
-    sub_1C32C20(&Cysharp_Text_ZString_TypeInfo);
-    sub_1C32C20(&StringLiteral_25179/*"{0}:{1}:{2}:{3}:{4}"*/);
+    sub_1C37058(&Cysharp_Text_ZString_TypeInfo);
+    sub_1C37058(&StringLiteral_25184/*"{0}:{1}:{2}:{3}:{4}"*/);
     if ( !method->rgctx_data )
-      sub_1C83390();
+      sub_1C877C8();
   }
   if ( !Cysharp_Text_ZString_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(Cysharp_Text_ZString_TypeInfo);
-  JUMPOUT(0x30F87F4);
+  JUMPOUT(0x310305C);
 }
 
 
@@ -1222,18 +1222,18 @@ System_String_o *DataEntityBase__CreateMultiplePK_int__int__long_(
         int32_t arg1,
         int32_t arg2,
         int64_t arg3,
-        const MethodInfo_30DBA9C *method)
+        const MethodInfo_30E6304 *method)
 {
   if ( !method->rgctx_data )
   {
-    sub_1C32C20(&Cysharp_Text_ZString_TypeInfo);
-    sub_1C32C20(&StringLiteral_25176/*"{0}:{1}:{2}"*/);
+    sub_1C37058(&Cysharp_Text_ZString_TypeInfo);
+    sub_1C37058(&StringLiteral_25181/*"{0}:{1}:{2}"*/);
     if ( !method->rgctx_data )
-      sub_1C83390();
+      sub_1C877C8();
   }
   if ( !Cysharp_Text_ZString_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(Cysharp_Text_ZString_TypeInfo);
-  JUMPOUT(0x30F7824);
+  JUMPOUT(0x310208C);
 }
 
 
@@ -1241,18 +1241,18 @@ System_String_o *DataEntityBase__CreateMultiplePK_int__int__object_(
         int32_t arg1,
         int32_t arg2,
         Il2CppObject *arg3,
-        const MethodInfo_30DBB30 *method)
+        const MethodInfo_30E6398 *method)
 {
   if ( !method->rgctx_data )
   {
-    sub_1C32C20(&Cysharp_Text_ZString_TypeInfo);
-    sub_1C32C20(&StringLiteral_25176/*"{0}:{1}:{2}"*/);
+    sub_1C37058(&Cysharp_Text_ZString_TypeInfo);
+    sub_1C37058(&StringLiteral_25181/*"{0}:{1}:{2}"*/);
     if ( !method->rgctx_data )
-      sub_1C83390();
+      sub_1C877C8();
   }
   if ( !Cysharp_Text_ZString_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(Cysharp_Text_ZString_TypeInfo);
-  JUMPOUT(0x30F798C);
+  JUMPOUT(0x31021F4);
 }
 
 
@@ -1261,49 +1261,49 @@ System_String_o *DataEntityBase__CreateMultiplePK_int__int__object__object_(
         int32_t arg2,
         Il2CppObject *arg3,
         Il2CppObject *arg4,
-        const MethodInfo_30DC000 *method)
+        const MethodInfo_30E6868 *method)
 {
   if ( !method->rgctx_data )
   {
-    sub_1C32C20(&Cysharp_Text_ZString_TypeInfo);
-    sub_1C32C20(&StringLiteral_25178/*"{0}:{1}:{2}:{3}"*/);
+    sub_1C37058(&Cysharp_Text_ZString_TypeInfo);
+    sub_1C37058(&StringLiteral_25183/*"{0}:{1}:{2}:{3}"*/);
     if ( !method->rgctx_data )
-      sub_1C83390();
+      sub_1C877C8();
   }
   if ( !Cysharp_Text_ZString_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(Cysharp_Text_ZString_TypeInfo);
-  JUMPOUT(0x30F80A4);
+  JUMPOUT(0x310290C);
 }
 
 
 System_String_o *DataEntityBase__CreateMultiplePK_int__long_(
         int32_t arg1,
         int64_t arg2,
-        const MethodInfo_30DB5FC *method)
+        const MethodInfo_30E5E64 *method)
 {
   if ( !method->rgctx_data )
   {
-    sub_1C32C20(&Cysharp_Text_ZString_TypeInfo);
-    sub_1C32C20(&StringLiteral_25172/*"{0}:{1}"*/);
+    sub_1C37058(&Cysharp_Text_ZString_TypeInfo);
+    sub_1C37058(&StringLiteral_25177/*"{0}:{1}"*/);
     if ( !method->rgctx_data )
-      sub_1C83390();
+      sub_1C877C8();
   }
   if ( !Cysharp_Text_ZString_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(Cysharp_Text_ZString_TypeInfo);
-  JUMPOUT(0x30F7004);
+  JUMPOUT(0x310186C);
 }
 
 
-System_String_o *DataEntityBase__CreateMultiplePK_long_(int64_t arg1, const MethodInfo_30DB448 *method)
+System_String_o *DataEntityBase__CreateMultiplePK_long_(int64_t arg1, const MethodInfo_30E5CB0 *method)
 {
-  const MethodInfo_30DB448_RGCTXs *rgctx_data; // x8
+  const MethodInfo_30E5CB0_RGCTXs *rgctx_data; // x8
   int64_t v5; // [xsp+8h] [xbp-18h] BYREF
 
   v5 = arg1;
   rgctx_data = method->rgctx_data;
   if ( !rgctx_data )
   {
-    sub_1C83390();
+    sub_1C877C8();
     rgctx_data = method->rgctx_data;
   }
   return System_Int64__ToString((int64_t)&v5, (const MethodInfo *)rgctx_data[1]._0_T);
@@ -1313,18 +1313,18 @@ System_String_o *DataEntityBase__CreateMultiplePK_long_(int64_t arg1, const Meth
 System_String_o *DataEntityBase__CreateMultiplePK_long__int_(
         int64_t arg1,
         int32_t arg2,
-        const MethodInfo_30DB680 *method)
+        const MethodInfo_30E5EE8 *method)
 {
   if ( !method->rgctx_data )
   {
-    sub_1C32C20(&Cysharp_Text_ZString_TypeInfo);
-    sub_1C32C20(&StringLiteral_25172/*"{0}:{1}"*/);
+    sub_1C37058(&Cysharp_Text_ZString_TypeInfo);
+    sub_1C37058(&StringLiteral_25177/*"{0}:{1}"*/);
     if ( !method->rgctx_data )
-      sub_1C83390();
+      sub_1C877C8();
   }
   if ( !Cysharp_Text_ZString_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(Cysharp_Text_ZString_TypeInfo);
-  JUMPOUT(0x30F715C);
+  JUMPOUT(0x31019C4);
 }
 
 
@@ -1332,18 +1332,18 @@ System_String_o *DataEntityBase__CreateMultiplePK_long__int__int_(
         int64_t arg1,
         int32_t arg2,
         int32_t arg3,
-        const MethodInfo_30DBBC4 *method)
+        const MethodInfo_30E642C *method)
 {
   if ( !method->rgctx_data )
   {
-    sub_1C32C20(&Cysharp_Text_ZString_TypeInfo);
-    sub_1C32C20(&StringLiteral_25176/*"{0}:{1}:{2}"*/);
+    sub_1C37058(&Cysharp_Text_ZString_TypeInfo);
+    sub_1C37058(&StringLiteral_25181/*"{0}:{1}:{2}"*/);
     if ( !method->rgctx_data )
-      sub_1C83390();
+      sub_1C877C8();
   }
   if ( !Cysharp_Text_ZString_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(Cysharp_Text_ZString_TypeInfo);
-  JUMPOUT(0x30F7AF4);
+  JUMPOUT(0x310235C);
 }
 
 
@@ -1352,36 +1352,36 @@ System_String_o *DataEntityBase__CreateMultiplePK_long__int__int__int_(
         int32_t arg2,
         int32_t arg3,
         int32_t arg4,
-        const MethodInfo_30DC09C *method)
+        const MethodInfo_30E6904 *method)
 {
   if ( !method->rgctx_data )
   {
-    sub_1C32C20(&Cysharp_Text_ZString_TypeInfo);
-    sub_1C32C20(&StringLiteral_25178/*"{0}:{1}:{2}:{3}"*/);
+    sub_1C37058(&Cysharp_Text_ZString_TypeInfo);
+    sub_1C37058(&StringLiteral_25183/*"{0}:{1}:{2}:{3}"*/);
     if ( !method->rgctx_data )
-      sub_1C83390();
+      sub_1C877C8();
   }
   if ( !Cysharp_Text_ZString_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(Cysharp_Text_ZString_TypeInfo);
-  JUMPOUT(0x30F8214);
+  JUMPOUT(0x3102A7C);
 }
 
 
 System_String_o *DataEntityBase__CreateMultiplePK_long__long_(
         int64_t arg1,
         int64_t arg2,
-        const MethodInfo_30DB704 *method)
+        const MethodInfo_30E5F6C *method)
 {
   if ( !method->rgctx_data )
   {
-    sub_1C32C20(&Cysharp_Text_ZString_TypeInfo);
-    sub_1C32C20(&StringLiteral_25172/*"{0}:{1}"*/);
+    sub_1C37058(&Cysharp_Text_ZString_TypeInfo);
+    sub_1C37058(&StringLiteral_25177/*"{0}:{1}"*/);
     if ( !method->rgctx_data )
-      sub_1C83390();
+      sub_1C877C8();
   }
   if ( !Cysharp_Text_ZString_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(Cysharp_Text_ZString_TypeInfo);
-  JUMPOUT(0x30F72B4);
+  JUMPOUT(0x3101B1C);
 }
 
 
@@ -1389,18 +1389,18 @@ System_String_o *DataEntityBase__CreateMultiplePK_long__long__object_(
         int64_t arg1,
         int64_t arg2,
         Il2CppObject *arg3,
-        const MethodInfo_30DBC58 *method)
+        const MethodInfo_30E64C0 *method)
 {
   if ( !method->rgctx_data )
   {
-    sub_1C32C20(&Cysharp_Text_ZString_TypeInfo);
-    sub_1C32C20(&StringLiteral_25176/*"{0}:{1}:{2}"*/);
+    sub_1C37058(&Cysharp_Text_ZString_TypeInfo);
+    sub_1C37058(&StringLiteral_25181/*"{0}:{1}:{2}"*/);
     if ( !method->rgctx_data )
-      sub_1C83390();
+      sub_1C877C8();
   }
   if ( !Cysharp_Text_ZString_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(Cysharp_Text_ZString_TypeInfo);
-  JUMPOUT(0x30F7C5C);
+  JUMPOUT(0x31024C4);
 }
 
 
@@ -1409,18 +1409,18 @@ System_String_o *DataEntityBase__CreateMultiplePK_long__long__object__long_(
         int64_t arg2,
         Il2CppObject *arg3,
         int64_t arg4,
-        const MethodInfo_30DC138 *method)
+        const MethodInfo_30E69A0 *method)
 {
   if ( !method->rgctx_data )
   {
-    sub_1C32C20(&Cysharp_Text_ZString_TypeInfo);
-    sub_1C32C20(&StringLiteral_25178/*"{0}:{1}:{2}:{3}"*/);
+    sub_1C37058(&Cysharp_Text_ZString_TypeInfo);
+    sub_1C37058(&StringLiteral_25183/*"{0}:{1}:{2}:{3}"*/);
     if ( !method->rgctx_data )
-      sub_1C83390();
+      sub_1C877C8();
   }
   if ( !Cysharp_Text_ZString_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(Cysharp_Text_ZString_TypeInfo);
-  JUMPOUT(0x30F8384);
+  JUMPOUT(0x3102BEC);
 }
 
 
@@ -1431,52 +1431,52 @@ System_String_o *DataEntityBase__CreateMultiplePK_long__long__object__long__long
         int64_t arg4,
         int64_t arg5,
         int64_t arg6,
-        const MethodInfo_30DC8A8 *method)
+        const MethodInfo_30E7110 *method)
 {
   if ( !method->rgctx_data )
   {
-    sub_1C32C20(&Cysharp_Text_ZString_TypeInfo);
-    sub_1C32C20(&StringLiteral_25180/*"{0}:{1}:{2}:{3}:{4}:{5}"*/);
+    sub_1C37058(&Cysharp_Text_ZString_TypeInfo);
+    sub_1C37058(&StringLiteral_25185/*"{0}:{1}:{2}:{3}:{4}:{5}"*/);
     if ( !method->rgctx_data )
-      sub_1C83390();
+      sub_1C877C8();
   }
   if ( !Cysharp_Text_ZString_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(Cysharp_Text_ZString_TypeInfo);
-  JUMPOUT(0x30F8974);
+  JUMPOUT(0x31031DC);
 }
 
 
 System_String_o *DataEntityBase__CreateMultiplePK_object__int_(
         Il2CppObject *arg1,
         int32_t arg2,
-        const MethodInfo_30DB788 *method)
+        const MethodInfo_30E5FF0 *method)
 {
   if ( !method->rgctx_data )
   {
-    sub_1C32C20(&Cysharp_Text_ZString_TypeInfo);
-    sub_1C32C20(&StringLiteral_25172/*"{0}:{1}"*/);
+    sub_1C37058(&Cysharp_Text_ZString_TypeInfo);
+    sub_1C37058(&StringLiteral_25177/*"{0}:{1}"*/);
     if ( !method->rgctx_data )
-      sub_1C83390();
+      sub_1C877C8();
   }
   if ( !Cysharp_Text_ZString_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(Cysharp_Text_ZString_TypeInfo);
-  JUMPOUT(0x30F740C);
+  JUMPOUT(0x3101C74);
 }
 
 
 System_String_o *DataEntityBase__CreateMultiplePK_object__long_(
         Il2CppObject *arg1,
         int64_t arg2,
-        const MethodInfo_30DB80C *method)
+        const MethodInfo_30E6074 *method)
 {
   if ( !method->rgctx_data )
   {
-    sub_1C32C20(&Cysharp_Text_ZString_TypeInfo);
-    sub_1C32C20(&StringLiteral_25172/*"{0}:{1}"*/);
+    sub_1C37058(&Cysharp_Text_ZString_TypeInfo);
+    sub_1C37058(&StringLiteral_25177/*"{0}:{1}"*/);
     if ( !method->rgctx_data )
-      sub_1C83390();
+      sub_1C877C8();
   }
   if ( !Cysharp_Text_ZString_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(Cysharp_Text_ZString_TypeInfo);
-  JUMPOUT(0x30F7564);
+  JUMPOUT(0x3101DCC);
 }

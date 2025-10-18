@@ -1,26 +1,26 @@
 void UserItemEntity___ctor(UserItemEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_4C388AB & 1) == 0 )
+  if ( (byte_4C43EA4 & 1) == 0 )
   {
-    sub_1C32C20(&Method_DataEntityBase_string___ctor__);
-    byte_4C388AB = 1;
+    sub_1C37058(&Method_DataEntityBase_string___ctor__);
+    byte_4C43EA4 = 1;
   }
   DataEntityBase_object____ctor(
     (DataEntityBase_PKType__o *)this,
-    (const MethodInfo_33943CC *)Method_DataEntityBase_string___ctor__);
+    (const MethodInfo_339EC34 *)Method_DataEntityBase_string___ctor__);
 }
 
 
-void UserItemEntity___ctor_42997496(UserItemEntity_o *this, int64_t userId, int32_t itemId, const MethodInfo *method)
+void UserItemEntity___ctor_43099364(UserItemEntity_o *this, int64_t userId, int32_t itemId, const MethodInfo *method)
 {
-  if ( (byte_4C388AC & 1) == 0 )
+  if ( (byte_4C43EA5 & 1) == 0 )
   {
-    sub_1C32C20(&Method_DataEntityBase_string___ctor__);
-    byte_4C388AC = 1;
+    sub_1C37058(&Method_DataEntityBase_string___ctor__);
+    byte_4C43EA5 = 1;
   }
   DataEntityBase_object____ctor(
     (DataEntityBase_PKType__o *)this,
-    (const MethodInfo_33943CC *)Method_DataEntityBase_string___ctor__);
+    (const MethodInfo_339EC34 *)Method_DataEntityBase_string___ctor__);
   this->fields.userId = userId;
   this->fields.itemId = itemId;
   this->fields.num = 0;
@@ -29,15 +29,15 @@ void UserItemEntity___ctor_42997496(UserItemEntity_o *this, int64_t userId, int3
 
 System_String_o *UserItemEntity__CreatePK(int64_t userId, int32_t itemId, const MethodInfo *method)
 {
-  if ( (byte_4C388AA & 1) == 0 )
+  if ( (byte_4C43EA3 & 1) == 0 )
   {
-    sub_1C32C20(&Method_DataEntityBase_CreateMultiplePK_long__int___);
-    byte_4C388AA = 1;
+    sub_1C37058(&Method_DataEntityBase_CreateMultiplePK_long__int___);
+    byte_4C43EA3 = 1;
   }
   return DataEntityBase__CreateMultiplePK_long__int_(
            userId,
            itemId,
-           (const MethodInfo_30DB680 *)Method_DataEntityBase_CreateMultiplePK_long__int___);
+           (const MethodInfo_30E5EE8 *)Method_DataEntityBase_CreateMultiplePK_long__int___);
 }
 
 
@@ -53,19 +53,19 @@ ItemEntity_o *UserItemEntity__getItemInfo(UserItemEntity_o *this, const MethodIn
 {
   Il2CppObject *Instance; // x0
 
-  if ( (byte_4C388AD & 1) == 0 )
+  if ( (byte_4C43EA6 & 1) == 0 )
   {
-    sub_1C32C20(&Method_DataManager_GetMasterData_ItemMaster___);
-    sub_1C32C20(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-    byte_4C388AD = 1;
+    sub_1C37058(&Method_DataManager_GetMasterData_ItemMaster___);
+    sub_1C37058(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    byte_4C43EA6 = 1;
   }
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39E2904 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39ED16C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance
     || (Instance = DataManager__GetMasterData_object_(
                      (DataManager_o *)Instance,
-                     (const MethodInfo_30DD3F0 *)Method_DataManager_GetMasterData_ItemMaster___)) == 0 )
+                     (const MethodInfo_30E7C58 *)Method_DataManager_GetMasterData_ItemMaster___)) == 0 )
   {
-    sub_1C32E7C(Instance);
+    sub_1C372B4(Instance);
   }
   return ItemMaster__GetItemData((ItemMaster_o *)Instance, this->fields.itemId, -1, 0);
 }

@@ -7,10 +7,10 @@ void AdjustPopupPosInScreenArgument___ctor(AdjustPopupPosInScreenArgument_o *thi
   float v7; // s1
 
   this->fields.IsExec = 1;
-  if ( !byte_4C313D1 )
+  if ( !byte_4C3C921 )
   {
-    sub_1C32C20(&UnityEngine_Vector3_TypeInfo);
-    byte_4C313D1 = 1;
+    sub_1C37058(&UnityEngine_Vector3_TypeInfo);
+    byte_4C3C921 = 1;
   }
   v3 = UnityEngine_Vector3_TypeInfo;
   static_fields = UnityEngine_Vector3_TypeInfo->static_fields;
@@ -25,7 +25,7 @@ void AdjustPopupPosInScreenArgument___ctor(AdjustPopupPosInScreenArgument_o *thi
 }
 
 
-void AdjustPopupPosInScreenArgument___ctor_47127860(
+void AdjustPopupPosInScreenArgument___ctor_47248764(
         AdjustPopupPosInScreenArgument_o *this,
         UnityEngine_Vector3_o adjustAfterOffset,
         const MethodInfo *method)
@@ -43,10 +43,10 @@ void AdjustPopupPosInScreenArgument___ctor_47127860(
   z = adjustAfterOffset.fields.z;
   y = adjustAfterOffset.fields.y;
   x = adjustAfterOffset.fields.x;
-  if ( !byte_4C313D1 )
+  if ( !byte_4C3C921 )
   {
-    sub_1C32C20(&UnityEngine_Vector3_TypeInfo);
-    byte_4C313D1 = 1;
+    sub_1C37058(&UnityEngine_Vector3_TypeInfo);
+    byte_4C3C921 = 1;
   }
   v7 = UnityEngine_Vector3_TypeInfo;
   static_fields = UnityEngine_Vector3_TypeInfo->static_fields;
@@ -79,7 +79,7 @@ AdjustPopupPosInScreenArgument_o *AdjustPopupPosInScreenArgument__Init(
   z = worldPos.fields.z;
   y = worldPos.fields.y;
   x = worldPos.fields.x;
-  sub_1C32BC4((CGThumbnailListItem_o *)&this->fields._Camera_k__BackingField, (int32_t)camera, (int32_t)method, v4);
+  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields._Camera_k__BackingField, (int32_t)camera, (int32_t)method, v4);
   this->fields._WorldPos_k__BackingField.fields.x = x;
   this->fields._WorldPos_k__BackingField.fields.y = y;
   this->fields._WorldPos_k__BackingField.fields.z = z;
@@ -130,10 +130,10 @@ UnityEngine_Vector3_o AdjustPopupPosInScreenArgument__get_ViewPos(
   UnityEngine_Object_o *Camera_k__BackingField; // x20
   UnityEngine_Camera_o *v4; // x0
 
-  if ( (byte_4C3ADBA & 1) == 0 )
+  if ( (byte_4C463CE & 1) == 0 )
   {
-    sub_1C32C20(&UnityEngine_Object_TypeInfo);
-    byte_4C3ADBA = 1;
+    sub_1C37058(&UnityEngine_Object_TypeInfo);
+    byte_4C463CE = 1;
   }
   Camera_k__BackingField = (UnityEngine_Object_o *)this->fields._Camera_k__BackingField;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -142,15 +142,15 @@ UnityEngine_Vector3_o AdjustPopupPosInScreenArgument__get_ViewPos(
   {
     v4 = this->fields._Camera_k__BackingField;
     if ( !v4 )
-      sub_1C32E7C(0);
-    return UnityEngine_Camera__WorldToViewportPoint_71029916(v4, this->fields._WorldPos_k__BackingField, 0);
+      sub_1C372B4(0);
+    return UnityEngine_Camera__WorldToViewportPoint_71073028(v4, this->fields._WorldPos_k__BackingField, 0);
   }
   else
   {
-    if ( !byte_4C313D1 )
+    if ( !byte_4C3C921 )
     {
-      sub_1C32C20(&UnityEngine_Vector3_TypeInfo);
-      byte_4C313D1 = 1;
+      sub_1C37058(&UnityEngine_Vector3_TypeInfo);
+      byte_4C3C921 = 1;
     }
     return UnityEngine_Vector3_TypeInfo->static_fields->zeroVector;
   }
@@ -184,7 +184,7 @@ void AdjustPopupPosInScreenArgument__set_Camera(
   const MethodInfo *v3; // x3
 
   this->fields._Camera_k__BackingField = value;
-  sub_1C32BC4((CGThumbnailListItem_o *)&this->fields._Camera_k__BackingField, (int32_t)value, (int32_t)method, v3);
+  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields._Camera_k__BackingField, (int32_t)value, (int32_t)method, v3);
 }
 
 

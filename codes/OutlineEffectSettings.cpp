@@ -17,15 +17,15 @@ void OutlineEffectSettings___cctor(const MethodInfo *method)
   struct OutlineEffectSettings_StaticFields *v15; // x9
   struct OutlineEffectSettings_StaticFields *v16; // x8
 
-  if ( (byte_4C331AC & 1) == 0 )
+  if ( (byte_4C3E796 & 1) == 0 )
   {
-    sub_1C32C20(&OutlineEffectSettings_TypeInfo);
-    byte_4C331AC = 1;
+    sub_1C37058(&OutlineEffectSettings_TypeInfo);
+    byte_4C3E796 = 1;
   }
-  if ( !byte_4C313D1 )
+  if ( !byte_4C3C921 )
   {
-    sub_1C32C20(&UnityEngine_Vector3_TypeInfo);
-    byte_4C313D1 = 1;
+    sub_1C37058(&UnityEngine_Vector3_TypeInfo);
+    byte_4C3C921 = 1;
   }
   static_fields = OutlineEffectSettings_TypeInfo->static_fields;
   v2 = UnityEngine_Vector3_TypeInfo->static_fields;
@@ -44,12 +44,12 @@ void OutlineEffectSettings___cctor(const MethodInfo *method)
   v11 = v9->zeroVector.fields.z;
   *(_QWORD *)&v10->_DefaultGaussianBloomSilhouetteBlue_k__BackingField.fields.x = *(_QWORD *)&v9->zeroVector.fields.x;
   v10->_DefaultGaussianBloomSilhouetteBlue_k__BackingField.fields.z = v11;
-  if ( !byte_4C313D6 )
+  if ( !byte_4C3C926 )
   {
-    sub_1C32C20(&UnityEngine_Vector3_TypeInfo);
+    sub_1C37058(&UnityEngine_Vector3_TypeInfo);
     v4 = UnityEngine_Vector3_TypeInfo;
     v5 = OutlineEffectSettings_TypeInfo;
-    byte_4C313D6 = 1;
+    byte_4C3C926 = 1;
   }
   v12 = v4->static_fields;
   v13 = v5->static_fields;
@@ -82,18 +82,18 @@ void OutlineEffectSettings___ctor(OutlineEffectSettings_o *this, const MethodInf
   __int64 v15; // d1
   float v16; // s2
 
-  if ( (byte_4C331AB & 1) == 0 )
+  if ( (byte_4C3E795 & 1) == 0 )
   {
-    sub_1C32C20(&OutlineEffectSettings_TypeInfo);
-    byte_4C331AB = 1;
+    sub_1C37058(&OutlineEffectSettings_TypeInfo);
+    byte_4C3E795 = 1;
   }
-  *(_OWORD *)&this->fields.thickness = xmmword_C0C1F0;
+  *(_OWORD *)&this->fields.thickness = xmmword_C0E170;
   if ( !OutlineEffectSettings_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(OutlineEffectSettings_TypeInfo);
-  if ( !byte_4C33276 )
+  if ( !byte_4C3E860 )
   {
-    sub_1C32C20(&OutlineEffectSettings_TypeInfo);
-    byte_4C33276 = 1;
+    sub_1C37058(&OutlineEffectSettings_TypeInfo);
+    byte_4C3E860 = 1;
   }
   v3 = OutlineEffectSettings_TypeInfo;
   if ( !OutlineEffectSettings_TypeInfo->_2.cctor_finished )
@@ -105,11 +105,11 @@ void OutlineEffectSettings___ctor(OutlineEffectSettings_o *this, const MethodInf
   z = static_fields->_DefaultVertexScale_k__BackingField.fields.z;
   *(_QWORD *)&this->fields.vertexScale.fields.x = *(_QWORD *)&static_fields->_DefaultVertexScale_k__BackingField.fields.x;
   this->fields.vertexScale.fields.z = z;
-  if ( !byte_4C33277 )
+  if ( !byte_4C3E861 )
   {
-    sub_1C32C20(&OutlineEffectSettings_TypeInfo);
+    sub_1C37058(&OutlineEffectSettings_TypeInfo);
     v3 = OutlineEffectSettings_TypeInfo;
-    byte_4C33277 = 1;
+    byte_4C3E861 = 1;
   }
   if ( !v3->_2.cctor_finished )
   {
@@ -119,16 +119,16 @@ void OutlineEffectSettings___ctor(OutlineEffectSettings_o *this, const MethodInf
   v6 = v3->static_fields;
   v7 = *(_QWORD *)&v6->_DefaultVertexOffset_k__BackingField.fields.x;
   v8 = v6->_DefaultVertexOffset_k__BackingField.fields.z;
-  *(_OWORD *)&this->fields.fullscreenUVScaleX = xmmword_C0DD00;
-  this->fields.gaussianSilhouetteR = (struct UnityEngine_Color_o)xmmword_C0DFC0;
-  this->fields.gaussianSilhouetteG = (struct UnityEngine_Color_o)xmmword_C0DEC0;
-  this->fields.gaussianSilhouetteB = (struct UnityEngine_Color_o)xmmword_C0C610;
+  *(_OWORD *)&this->fields.fullscreenUVScaleX = xmmword_C0FC80;
+  this->fields.gaussianSilhouetteR = (struct UnityEngine_Color_o)xmmword_C0FF40;
+  this->fields.gaussianSilhouetteG = (struct UnityEngine_Color_o)xmmword_C0FE40;
+  this->fields.gaussianSilhouetteB = (struct UnityEngine_Color_o)xmmword_C0E590;
   *(_QWORD *)&this->fields.vertexOffset.fields.x = v7;
   this->fields.vertexOffset.fields.z = v8;
-  if ( !byte_4C313D6 )
+  if ( !byte_4C3C926 )
   {
-    sub_1C32C20(&UnityEngine_Vector3_TypeInfo);
-    byte_4C313D6 = 1;
+    sub_1C37058(&UnityEngine_Vector3_TypeInfo);
+    byte_4C3C926 = 1;
   }
   v9 = UnityEngine_Vector3_TypeInfo;
   v10 = UnityEngine_Vector3_TypeInfo->static_fields;
@@ -142,7 +142,7 @@ void OutlineEffectSettings___ctor(OutlineEffectSettings_o *this, const MethodInf
   v14 = v9->static_fields;
   v15 = *(_QWORD *)&v14->oneVector.fields.x;
   v16 = v14->oneVector.fields.z;
-  *(_OWORD *)&this->fields.gaussianBloomIntensity = xmmword_C0CE20;
+  *(_OWORD *)&this->fields.gaussianBloomIntensity = xmmword_C0EDA0;
   *(_QWORD *)&this->fields.gaussianBloomSigma = 0x1B40200000LL;
   *(_QWORD *)&this->fields.gaussianSilhouetteScaleB.fields.x = v15;
   this->fields.gaussianSilhouetteScaleB.fields.z = v16;
@@ -180,27 +180,27 @@ OutlineEffectSettings_o *OutlineEffectSettings__get_Default(const MethodInfo *me
   Il2CppClass *v25; // d4
   float v26; // s5
 
-  if ( (byte_4C331AA & 1) == 0 )
+  if ( (byte_4C3E794 & 1) == 0 )
   {
-    sub_1C32C20(&UnityEngine_Gradient_TypeInfo);
-    sub_1C32C20(&OutlineEffectSettings_TypeInfo);
-    sub_1C32C20(&Method_UnityEngine_ScriptableObject_CreateInstance_OutlineEffectSettings___);
-    byte_4C331AA = 1;
+    sub_1C37058(&UnityEngine_Gradient_TypeInfo);
+    sub_1C37058(&OutlineEffectSettings_TypeInfo);
+    sub_1C37058(&Method_UnityEngine_ScriptableObject_CreateInstance_OutlineEffectSettings___);
+    byte_4C3E794 = 1;
   }
-  Instance_object = UnityEngine_ScriptableObject__CreateInstance_object_((const MethodInfo_318433C *)Method_UnityEngine_ScriptableObject_CreateInstance_OutlineEffectSettings___);
-  v2 = (UnityEngine_Gradient_o *)sub_1C32E6C(UnityEngine_Gradient_TypeInfo);
+  Instance_object = UnityEngine_ScriptableObject__CreateInstance_object_((const MethodInfo_318EBA4 *)Method_UnityEngine_ScriptableObject_CreateInstance_OutlineEffectSettings___);
+  v2 = (UnityEngine_Gradient_o *)sub_1C372A4(UnityEngine_Gradient_TypeInfo);
   UnityEngine_Gradient___ctor(v2, 0);
   if ( !Instance_object )
-    sub_1C32E7C(v3);
+    sub_1C372B4(v3);
   Instance_object[1].monitor = v2;
-  sub_1C32BC4((CGThumbnailListItem_o *)&Instance_object[1].monitor, (int32_t)v2, v4, v5);
-  Instance_object[2] = (Il2CppObject)xmmword_C0C1F0;
+  sub_1C36FFC((CGThumbnailListItem_o *)&Instance_object[1].monitor, (int32_t)v2, v4, v5);
+  Instance_object[2] = (Il2CppObject)xmmword_C0E170;
   if ( !OutlineEffectSettings_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(OutlineEffectSettings_TypeInfo);
-  if ( !byte_4C33277 )
+  if ( !byte_4C3E861 )
   {
-    sub_1C32C20(&OutlineEffectSettings_TypeInfo);
-    byte_4C33277 = 1;
+    sub_1C37058(&OutlineEffectSettings_TypeInfo);
+    byte_4C3E861 = 1;
   }
   v6 = OutlineEffectSettings_TypeInfo;
   if ( !OutlineEffectSettings_TypeInfo->_2.cctor_finished )
@@ -212,11 +212,11 @@ OutlineEffectSettings_o *OutlineEffectSettings__get_Default(const MethodInfo *me
   z = static_fields->_DefaultVertexOffset_k__BackingField.fields.z;
   *(void **)((char *)&Instance_object[3].monitor + 4) = *(void **)&static_fields->_DefaultVertexOffset_k__BackingField.fields.x;
   *((float *)&Instance_object[4].klass + 1) = z;
-  if ( !byte_4C33276 )
+  if ( !byte_4C3E860 )
   {
-    sub_1C32C20(&OutlineEffectSettings_TypeInfo);
+    sub_1C37058(&OutlineEffectSettings_TypeInfo);
     v6 = OutlineEffectSettings_TypeInfo;
-    byte_4C33276 = 1;
+    byte_4C3E860 = 1;
   }
   if ( !v6->_2.cctor_finished )
   {
@@ -226,14 +226,14 @@ OutlineEffectSettings_o *OutlineEffectSettings__get_Default(const MethodInfo *me
   v9 = v6->static_fields;
   v10 = *(Il2CppClass **)&v9->_DefaultVertexScale_k__BackingField.fields.x;
   v11 = v9->_DefaultVertexScale_k__BackingField.fields.z;
-  *(_OWORD *)&Instance_object[4].monitor = xmmword_C0DD00;
+  *(_OWORD *)&Instance_object[4].monitor = xmmword_C0FC80;
   Instance_object[3].klass = v10;
   *(float *)&Instance_object[3].monitor = v11;
-  if ( !byte_4C33278 )
+  if ( !byte_4C3E862 )
   {
-    sub_1C32C20(&OutlineEffectSettings_TypeInfo);
+    sub_1C37058(&OutlineEffectSettings_TypeInfo);
     v6 = OutlineEffectSettings_TypeInfo;
-    byte_4C33278 = 1;
+    byte_4C3E862 = 1;
   }
   if ( !v6->_2.cctor_finished )
   {
@@ -244,11 +244,11 @@ OutlineEffectSettings_o *OutlineEffectSettings__get_Default(const MethodInfo *me
   v13 = v12->_DefaultGaussianBloomSilhouetteRed_k__BackingField.fields.z;
   *(void **)((char *)&Instance_object[10].monitor + 4) = *(void **)&v12->_DefaultGaussianBloomSilhouetteRed_k__BackingField.fields.x;
   *((float *)&Instance_object[11].klass + 1) = v13;
-  if ( !byte_4C33279 )
+  if ( !byte_4C3E863 )
   {
-    sub_1C32C20(&OutlineEffectSettings_TypeInfo);
+    sub_1C37058(&OutlineEffectSettings_TypeInfo);
     v6 = OutlineEffectSettings_TypeInfo;
-    byte_4C33279 = 1;
+    byte_4C3E863 = 1;
   }
   if ( !v6->_2.cctor_finished )
   {
@@ -259,11 +259,11 @@ OutlineEffectSettings_o *OutlineEffectSettings__get_Default(const MethodInfo *me
   v15 = v14->_DefaultGaussianBloomSilhouetteGreen_k__BackingField.fields.z;
   Instance_object[11].monitor = *(void **)&v14->_DefaultGaussianBloomSilhouetteGreen_k__BackingField.fields.x;
   *(float *)&Instance_object[12].klass = v15;
-  if ( !byte_4C3327A )
+  if ( !byte_4C3E864 )
   {
-    sub_1C32C20(&OutlineEffectSettings_TypeInfo);
+    sub_1C37058(&OutlineEffectSettings_TypeInfo);
     v6 = OutlineEffectSettings_TypeInfo;
-    byte_4C3327A = 1;
+    byte_4C3E864 = 1;
   }
   if ( !v6->_2.cctor_finished )
   {
@@ -274,11 +274,11 @@ OutlineEffectSettings_o *OutlineEffectSettings__get_Default(const MethodInfo *me
   v17 = v16->_DefaultGaussianBloomSilhouetteBlue_k__BackingField.fields.z;
   *(Il2CppClass **)((char *)&Instance_object[12].klass + 4) = *(Il2CppClass **)&v16->_DefaultGaussianBloomSilhouetteBlue_k__BackingField.fields.x;
   *((float *)&Instance_object[12].monitor + 1) = v17;
-  if ( !byte_4C3327B )
+  if ( !byte_4C3E865 )
   {
-    sub_1C32C20(&OutlineEffectSettings_TypeInfo);
+    sub_1C37058(&OutlineEffectSettings_TypeInfo);
     v6 = OutlineEffectSettings_TypeInfo;
-    byte_4C3327B = 1;
+    byte_4C3E865 = 1;
   }
   if ( v6->_2.cctor_finished )
   {
@@ -288,7 +288,7 @@ OutlineEffectSettings_o *OutlineEffectSettings__get_Default(const MethodInfo *me
   {
     j_il2cpp_runtime_class_init_0(v6);
     v6 = OutlineEffectSettings_TypeInfo;
-    v18 = byte_4C3327B == 0;
+    v18 = byte_4C3E865 == 0;
   }
   v19 = v6->static_fields;
   v20 = v19->_DefaultGaussianBloomSilhouetteScale_k__BackingField.fields.z;
@@ -296,9 +296,9 @@ OutlineEffectSettings_o *OutlineEffectSettings__get_Default(const MethodInfo *me
   *(float *)&Instance_object[9].klass = v20;
   if ( v18 )
   {
-    sub_1C32C20(&OutlineEffectSettings_TypeInfo);
+    sub_1C37058(&OutlineEffectSettings_TypeInfo);
     v6 = OutlineEffectSettings_TypeInfo;
-    byte_4C3327B = 1;
+    byte_4C3E865 = 1;
   }
   if ( v6->_2.cctor_finished )
   {
@@ -308,7 +308,7 @@ OutlineEffectSettings_o *OutlineEffectSettings__get_Default(const MethodInfo *me
   {
     j_il2cpp_runtime_class_init_0(v6);
     v6 = OutlineEffectSettings_TypeInfo;
-    v21 = byte_4C3327B == 0;
+    v21 = byte_4C3E865 == 0;
   }
   v22 = v6->static_fields;
   v23 = v22->_DefaultGaussianBloomSilhouetteScale_k__BackingField.fields.z;
@@ -316,9 +316,9 @@ OutlineEffectSettings_o *OutlineEffectSettings__get_Default(const MethodInfo *me
   *((float *)&Instance_object[9].monitor + 1) = v23;
   if ( v21 )
   {
-    sub_1C32C20(&OutlineEffectSettings_TypeInfo);
+    sub_1C37058(&OutlineEffectSettings_TypeInfo);
     v6 = OutlineEffectSettings_TypeInfo;
-    byte_4C3327B = 1;
+    byte_4C3E865 = 1;
   }
   if ( !v6->_2.cctor_finished )
   {
@@ -329,10 +329,10 @@ OutlineEffectSettings_o *OutlineEffectSettings__get_Default(const MethodInfo *me
   v25 = *(Il2CppClass **)&v24->_DefaultGaussianBloomSilhouetteScale_k__BackingField.fields.x;
   v26 = v24->_DefaultGaussianBloomSilhouetteScale_k__BackingField.fields.z;
   Instance_object[13].klass = (Il2CppClass *)0x1B40200000LL;
-  *(_OWORD *)&Instance_object[5].monitor = xmmword_C0DFC0;
-  *(_OWORD *)&Instance_object[6].monitor = xmmword_C0DEC0;
-  *(_OWORD *)&Instance_object[7].monitor = xmmword_C0C610;
-  *(_OWORD *)&Instance_object[13].monitor = xmmword_C0CE20;
+  *(_OWORD *)&Instance_object[5].monitor = xmmword_C0FF40;
+  *(_OWORD *)&Instance_object[6].monitor = xmmword_C0FE40;
+  *(_OWORD *)&Instance_object[7].monitor = xmmword_C0E590;
+  *(_OWORD *)&Instance_object[13].monitor = xmmword_C0EDA0;
   Instance_object[10].klass = v25;
   *(float *)&Instance_object[10].monitor = v26;
   LODWORD(Instance_object[14].monitor) = 1065353216;
@@ -349,10 +349,10 @@ UnityEngine_Vector3_o OutlineEffectSettings__get_DefaultGaussianBloomSilhouetteB
   float v5; // s2
   UnityEngine_Vector3_o result; // 0:s0.4,4:s1.4,8:s2.4
 
-  if ( (byte_4C331A5 & 1) == 0 )
+  if ( (byte_4C3E78F & 1) == 0 )
   {
-    sub_1C32C20(&OutlineEffectSettings_TypeInfo);
-    byte_4C331A5 = 1;
+    sub_1C37058(&OutlineEffectSettings_TypeInfo);
+    byte_4C3E78F = 1;
   }
   v1 = OutlineEffectSettings_TypeInfo;
   if ( !OutlineEffectSettings_TypeInfo->_2.cctor_finished )
@@ -380,10 +380,10 @@ UnityEngine_Vector3_o OutlineEffectSettings__get_DefaultGaussianBloomSilhouetteG
   float v5; // s2
   UnityEngine_Vector3_o result; // 0:s0.4,4:s1.4,8:s2.4
 
-  if ( (byte_4C331A4 & 1) == 0 )
+  if ( (byte_4C3E78E & 1) == 0 )
   {
-    sub_1C32C20(&OutlineEffectSettings_TypeInfo);
-    byte_4C331A4 = 1;
+    sub_1C37058(&OutlineEffectSettings_TypeInfo);
+    byte_4C3E78E = 1;
   }
   v1 = OutlineEffectSettings_TypeInfo;
   if ( !OutlineEffectSettings_TypeInfo->_2.cctor_finished )
@@ -411,10 +411,10 @@ UnityEngine_Vector3_o OutlineEffectSettings__get_DefaultGaussianBloomSilhouetteR
   float v5; // s2
   UnityEngine_Vector3_o result; // 0:s0.4,4:s1.4,8:s2.4
 
-  if ( (byte_4C331A3 & 1) == 0 )
+  if ( (byte_4C3E78D & 1) == 0 )
   {
-    sub_1C32C20(&OutlineEffectSettings_TypeInfo);
-    byte_4C331A3 = 1;
+    sub_1C37058(&OutlineEffectSettings_TypeInfo);
+    byte_4C3E78D = 1;
   }
   v1 = OutlineEffectSettings_TypeInfo;
   if ( !OutlineEffectSettings_TypeInfo->_2.cctor_finished )
@@ -442,10 +442,10 @@ UnityEngine_Vector3_o OutlineEffectSettings__get_DefaultGaussianBloomSilhouetteS
   float v5; // s2
   UnityEngine_Vector3_o result; // 0:s0.4,4:s1.4,8:s2.4
 
-  if ( (byte_4C331A6 & 1) == 0 )
+  if ( (byte_4C3E790 & 1) == 0 )
   {
-    sub_1C32C20(&OutlineEffectSettings_TypeInfo);
-    byte_4C331A6 = 1;
+    sub_1C37058(&OutlineEffectSettings_TypeInfo);
+    byte_4C3E790 = 1;
   }
   v1 = OutlineEffectSettings_TypeInfo;
   if ( !OutlineEffectSettings_TypeInfo->_2.cctor_finished )
@@ -492,13 +492,13 @@ UnityEngine_Gradient_o *OutlineEffectSettings__get_DefaultGradient(const MethodI
   UnityEngine_Color_o v25; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
   UnityEngine_Color_o v26; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 
-  if ( (byte_4C331A9 & 1) == 0 )
+  if ( (byte_4C3E793 & 1) == 0 )
   {
-    sub_1C32C20(&UnityEngine_GradientAlphaKey___TypeInfo);
-    sub_1C32C20(&UnityEngine_GradientColorKey___TypeInfo);
-    sub_1C32C20(&UnityEngine_Gradient_TypeInfo);
-    sub_1C32C20(&OutlineEffectSettings_TypeInfo);
-    byte_4C331A9 = 1;
+    sub_1C37058(&UnityEngine_GradientAlphaKey___TypeInfo);
+    sub_1C37058(&UnityEngine_GradientColorKey___TypeInfo);
+    sub_1C37058(&UnityEngine_Gradient_TypeInfo);
+    sub_1C37058(&OutlineEffectSettings_TypeInfo);
+    byte_4C3E793 = 1;
   }
   v1 = OutlineEffectSettings_TypeInfo;
   if ( !OutlineEffectSettings_TypeInfo->_2.cctor_finished )
@@ -508,7 +508,7 @@ UnityEngine_Gradient_o *OutlineEffectSettings__get_DefaultGradient(const MethodI
   }
   if ( !v1->static_fields->defaultGradient )
   {
-    v2 = (UnityEngine_Gradient_o *)sub_1C32E6C(UnityEngine_Gradient_TypeInfo);
+    v2 = (UnityEngine_Gradient_o *)sub_1C372A4(UnityEngine_Gradient_TypeInfo);
     UnityEngine_Gradient___ctor(v2, 0);
     v5 = OutlineEffectSettings_TypeInfo;
     if ( !OutlineEffectSettings_TypeInfo->_2.cctor_finished )
@@ -518,8 +518,8 @@ UnityEngine_Gradient_o *OutlineEffectSettings__get_DefaultGradient(const MethodI
     }
     static_fields = v5->static_fields;
     static_fields->defaultGradient = v2;
-    sub_1C32BC4((CGThumbnailListItem_o *)&static_fields->defaultGradient, (int32_t)v2, v3, v4);
-    v7 = sub_1C32CC8(UnityEngine_GradientColorKey___TypeInfo, 2);
+    sub_1C36FFC((CGThumbnailListItem_o *)&static_fields->defaultGradient, (int32_t)v2, v3, v4);
+    v7 = sub_1C37100(UnityEngine_GradientColorKey___TypeInfo, 2);
     v25.fields.r = 1.0;
     v25.fields.g = 1.0;
     v25.fields.b = 1.0;
@@ -546,7 +546,7 @@ UnityEngine_Gradient_o *OutlineEffectSettings__get_DefaultGradient(const MethodI
       color = method_8.fields.color;
       *(float *)(v7 + 68) = method_8.fields.time;
       *(struct UnityEngine_Color_o *)(v7 + 52) = color;
-      v11 = sub_1C32CC8(UnityEngine_GradientAlphaKey___TypeInfo, 2);
+      v11 = sub_1C37100(UnityEngine_GradientAlphaKey___TypeInfo, 2);
       v23.fields.alpha = 1.0;
       v23.fields.time = 0.0;
       methoda = 0;
@@ -562,7 +562,7 @@ UnityEngine_Gradient_o *OutlineEffectSettings__get_DefaultGradient(const MethodI
             *(_DWORD *)(v11 + 24) <= 1u) )
       {
 LABEL_20:
-        sub_1C32E84(defaultGradient);
+        sub_1C372BC(defaultGradient);
       }
       *(_QWORD *)(v11 + 40) = v17;
       defaultGradient = OutlineEffectSettings_TypeInfo->static_fields->defaultGradient;
@@ -579,7 +579,7 @@ LABEL_20:
       }
     }
 LABEL_21:
-    sub_1C32E7C(defaultGradient);
+    sub_1C372B4(defaultGradient);
   }
 LABEL_17:
   if ( !v1->_2.cctor_finished )
@@ -600,10 +600,10 @@ UnityEngine_Vector3_o OutlineEffectSettings__get_DefaultVertexOffset(const Metho
   float v5; // s2
   UnityEngine_Vector3_o result; // 0:s0.4,4:s1.4,8:s2.4
 
-  if ( (byte_4C331A8 & 1) == 0 )
+  if ( (byte_4C3E792 & 1) == 0 )
   {
-    sub_1C32C20(&OutlineEffectSettings_TypeInfo);
-    byte_4C331A8 = 1;
+    sub_1C37058(&OutlineEffectSettings_TypeInfo);
+    byte_4C3E792 = 1;
   }
   v1 = OutlineEffectSettings_TypeInfo;
   if ( !OutlineEffectSettings_TypeInfo->_2.cctor_finished )
@@ -631,10 +631,10 @@ UnityEngine_Vector3_o OutlineEffectSettings__get_DefaultVertexScale(const Method
   float v5; // s2
   UnityEngine_Vector3_o result; // 0:s0.4,4:s1.4,8:s2.4
 
-  if ( (byte_4C331A7 & 1) == 0 )
+  if ( (byte_4C3E791 & 1) == 0 )
   {
-    sub_1C32C20(&OutlineEffectSettings_TypeInfo);
-    byte_4C331A7 = 1;
+    sub_1C37058(&OutlineEffectSettings_TypeInfo);
+    byte_4C3E791 = 1;
   }
   v1 = OutlineEffectSettings_TypeInfo;
   if ( !OutlineEffectSettings_TypeInfo->_2.cctor_finished )

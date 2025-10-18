@@ -4,14 +4,14 @@ void EventInfoMuralComponent___ctor(EventInfoMuralComponent_o *this, const Metho
   const MethodInfo *v3; // x3
   int32_t v5; // w1
 
-  if ( (byte_4C38EEA & 1) == 0 )
+  if ( (byte_4C444E3 & 1) == 0 )
   {
-    sub_1C32C20(&StringLiteral_17622/*"btn_wallpainting"*/);
-    byte_4C38EEA = 1;
+    sub_1C37058(&StringLiteral_17624/*"btn_wallpainting"*/);
+    byte_4C444E3 = 1;
   }
-  v5 = StringLiteral_17622/*"btn_wallpainting"*/;
-  this->fields.buttonSpriteName = (struct System_String_o *)StringLiteral_17622/*"btn_wallpainting"*/;
-  sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.buttonSpriteName, v5, v2, v3);
+  v5 = StringLiteral_17624/*"btn_wallpainting"*/;
+  this->fields.buttonSpriteName = (struct System_String_o *)StringLiteral_17624/*"btn_wallpainting"*/;
+  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.buttonSpriteName, v5, v2, v3);
   EventInfoUIBase___ctor((EventInfoUIBase_o *)this, 0);
 }
 
@@ -36,12 +36,12 @@ void EventInfoMuralComponent__InitDisplay(
   UILabel_o *totalNumLabel; // x20
   int32_t total[2]; // [xsp+8h] [xbp-38h] BYREF
 
-  if ( (byte_4C38EE7 & 1) == 0 )
+  if ( (byte_4C444E0 & 1) == 0 )
   {
-    sub_1C32C20(&Method_DataManager_GetMaster_EventMuralMaster___);
-    sub_1C32C20(&DataManager_TypeInfo);
-    sub_1C32C20(&UnityEngine_Object_TypeInfo);
-    byte_4C38EE7 = 1;
+    sub_1C37058(&Method_DataManager_GetMaster_EventMuralMaster___);
+    sub_1C37058(&DataManager_TypeInfo);
+    sub_1C37058(&UnityEngine_Object_TypeInfo);
+    byte_4C444E0 = 1;
   }
   *(_QWORD *)total = 0;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -49,7 +49,7 @@ void EventInfoMuralComponent__InitDisplay(
   if ( UnityEngine_Object__op_Inequality((UnityEngine_Object_o *)eventInfoCircleProgressControl, 0, 0) )
   {
     this->fields.eventInfoCircleProgressControl = eventInfoCircleProgressControl;
-    sub_1C32BC4(
+    sub_1C36FFC(
       (CGThumbnailListItem_o *)&this->fields.eventInfoCircleProgressControl,
       (int32_t)eventInfoCircleProgressControl,
       v7,
@@ -64,7 +64,7 @@ void EventInfoMuralComponent__InitDisplay(
     this->fields.eventId = eventId;
     if ( !DataManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-    Master_object = (EventMuralMaster_o *)DataManager__GetMaster_object_((const MethodInfo_30DD39C *)Method_DataManager_GetMaster_EventMuralMaster___);
+    Master_object = (EventMuralMaster_o *)DataManager__GetMaster_object_((const MethodInfo_30E7C04 *)Method_DataManager_GetMaster_EventMuralMaster___);
     if ( !Master_object )
       goto LABEL_18;
     EventMuralMaster__GetOpenedEntitiesFromEventId(Master_object, eventId, &total[1], total, 0);
@@ -84,7 +84,7 @@ void EventInfoMuralComponent__InitDisplay(
           !totalNumLabel) )
     {
 LABEL_18:
-      sub_1C32E7C(Master_object);
+      sub_1C372B4(Master_object);
     }
     UILabel__set_text(totalNumLabel, (System_String_o *)Master_object, 0);
     this->fields.isEnableClick = 1;
@@ -100,7 +100,7 @@ void EventInfoMuralComponent__Initialization(
   const MethodInfo *v3; // x3
 
   this->fields.eventUiEntity = entity;
-  sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.eventUiEntity, (int32_t)entity, (int32_t)method, v3);
+  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.eventUiEntity, (int32_t)entity, (int32_t)method, v3);
 }
 
 
@@ -125,32 +125,32 @@ void EventInfoMuralComponent__LoadEventMuralUpdate(
   float DEFAULT_FADE_TIME; // s8
   System_Action_o *v19; // x21
 
-  if ( (byte_4C38EE9 & 1) == 0 )
+  if ( (byte_4C444E2 & 1) == 0 )
   {
-    sub_1C32C20(&System_Action_TypeInfo);
-    sub_1C32C20(&AvalonSceneManager_TypeInfo);
-    sub_1C32C20(&UnityEngine_Object_TypeInfo);
-    sub_1C32C20(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
-    sub_1C32C20(&TerminalSceneComponent_TypeInfo);
-    sub_1C32C20(&Method_EventInfoMuralComponent___c__DisplayClass14_0__LoadEventMuralUpdate_b__0__);
-    sub_1C32C20(&Method_EventInfoMuralComponent___c__DisplayClass14_0__LoadEventMuralUpdate_b__1__);
-    sub_1C32C20(&EventInfoMuralComponent___c__DisplayClass14_0_TypeInfo);
-    byte_4C38EE9 = 1;
+    sub_1C37058(&System_Action_TypeInfo);
+    sub_1C37058(&AvalonSceneManager_TypeInfo);
+    sub_1C37058(&UnityEngine_Object_TypeInfo);
+    sub_1C37058(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+    sub_1C37058(&TerminalSceneComponent_TypeInfo);
+    sub_1C37058(&Method_EventInfoMuralComponent___c__DisplayClass14_0__LoadEventMuralUpdate_b__0__);
+    sub_1C37058(&Method_EventInfoMuralComponent___c__DisplayClass14_0__LoadEventMuralUpdate_b__1__);
+    sub_1C37058(&EventInfoMuralComponent___c__DisplayClass14_0_TypeInfo);
+    byte_4C444E2 = 1;
   }
-  v5 = sub_1C32E6C(EventInfoMuralComponent___c__DisplayClass14_0_TypeInfo);
+  v5 = sub_1C372A4(EventInfoMuralComponent___c__DisplayClass14_0_TypeInfo);
   System_Object___ctor((Il2CppObject *)v5, 0);
   if ( !v5 )
     goto LABEL_18;
   *(_QWORD *)(v5 + 16) = callback;
-  sub_1C32BC4((CGThumbnailListItem_o *)(v5 + 16), (int32_t)callback, v7, v8);
+  sub_1C36FFC((CGThumbnailListItem_o *)(v5 + 16), (int32_t)callback, v7, v8);
   *(_QWORD *)(v5 + 24) = this;
-  sub_1C32BC4((CGThumbnailListItem_o *)(v5 + 24), (int32_t)this, v9, v10);
+  sub_1C36FFC((CGThumbnailListItem_o *)(v5 + 24), (int32_t)this, v9, v10);
   if ( !TerminalSceneComponent_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(TerminalSceneComponent_TypeInfo);
-  if ( !byte_4C319B6 )
+  if ( !byte_4C3CF06 )
   {
-    sub_1C32C20(&TerminalSceneComponent_TypeInfo);
-    byte_4C319B6 = 1;
+    sub_1C37058(&TerminalSceneComponent_TypeInfo);
+    byte_4C3CF06 = 1;
   }
   v6 = TerminalSceneComponent_TypeInfo;
   if ( !TerminalSceneComponent_TypeInfo->_2.cctor_finished )
@@ -166,15 +166,15 @@ void EventInfoMuralComponent__LoadEventMuralUpdate(
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   if ( !UnityEngine_Object__op_Equality(mTerminalList, 0, 0) )
   {
-    v13 = (System_Action_o *)sub_1C32E6C(System_Action_TypeInfo);
+    v13 = (System_Action_o *)sub_1C372A4(System_Action_TypeInfo);
     System_Action___ctor(
       v13,
       (Il2CppObject *)v5,
       Method_EventInfoMuralComponent___c__DisplayClass14_0__LoadEventMuralUpdate_b__0__,
       0);
     *(_QWORD *)(v5 + 32) = v13;
-    sub_1C32BC4((CGThumbnailListItem_o *)(v5 + 32), (int32_t)v13, v14, v15);
-    Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39E2904 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+    sub_1C36FFC((CGThumbnailListItem_o *)(v5 + 32), (int32_t)v13, v14, v15);
+    Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39ED16C *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
     v17 = AvalonSceneManager_TypeInfo;
     if ( !AvalonSceneManager_TypeInfo->_2.cctor_finished )
     {
@@ -182,7 +182,7 @@ void EventInfoMuralComponent__LoadEventMuralUpdate(
       v17 = AvalonSceneManager_TypeInfo;
     }
     DEFAULT_FADE_TIME = v17->static_fields->DEFAULT_FADE_TIME;
-    v19 = (System_Action_o *)sub_1C32E6C(System_Action_TypeInfo);
+    v19 = (System_Action_o *)sub_1C372A4(System_Action_TypeInfo);
     System_Action___ctor(
       v19,
       (Il2CppObject *)v5,
@@ -194,7 +194,7 @@ void EventInfoMuralComponent__LoadEventMuralUpdate(
       return;
     }
 LABEL_18:
-    sub_1C32E7C(v6);
+    sub_1C372B4(v6);
   }
 }
 
@@ -213,28 +213,28 @@ void EventInfoMuralComponent__OnClickButton(EventInfoMuralComponent_o *this, con
   int32_t v12; // w2
   const MethodInfo *v13; // x3
 
-  if ( (byte_4C38EE8 & 1) == 0 )
+  if ( (byte_4C444E1 & 1) == 0 )
   {
-    sub_1C32C20(&System_Action_TypeInfo);
-    sub_1C32C20(&Method_EventInfoMuralComponent_OnClickButton__);
-    sub_1C32C20(&TerminalSceneComponent_TypeInfo);
-    sub_1C32C20(&Method_EventInfoMuralComponent___c__OnClickButton_b__13_0__);
-    sub_1C32C20(&EventInfoMuralComponent___c_TypeInfo);
-    byte_4C38EE8 = 1;
+    sub_1C37058(&System_Action_TypeInfo);
+    sub_1C37058(&Method_EventInfoMuralComponent_OnClickButton__);
+    sub_1C37058(&TerminalSceneComponent_TypeInfo);
+    sub_1C37058(&Method_EventInfoMuralComponent___c__OnClickButton_b__13_0__);
+    sub_1C37058(&EventInfoMuralComponent___c_TypeInfo);
+    byte_4C444E1 = 1;
   }
   if ( this->fields.isEnableClick )
   {
     v3 = Method_EventInfoMuralComponent_OnClickButton__;
     if ( (*((_BYTE *)Method_EventInfoMuralComponent_OnClickButton__ + 83) & 2) != 0 )
-      v3 = (_QWORD *)sub_1C32C38(Method_EventInfoMuralComponent_OnClickButton__);
-    v4 = (System_Reflection_MethodBase_o *)sub_1C32C04(v3, v3[4]);
+      v3 = (_QWORD *)sub_1C37070(Method_EventInfoMuralComponent_OnClickButton__);
+    v4 = (System_Reflection_MethodBase_o *)sub_1C3703C(v3, v3[4]);
     OverwriteAssetSoundName__PlaySystemSe(v4, 0, 0, 0);
     if ( !TerminalSceneComponent_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(TerminalSceneComponent_TypeInfo);
-    if ( !byte_4C319B6 )
+    if ( !byte_4C3CF06 )
     {
-      sub_1C32C20(&TerminalSceneComponent_TypeInfo);
-      byte_4C319B6 = 1;
+      sub_1C37058(&TerminalSceneComponent_TypeInfo);
+      byte_4C3CF06 = 1;
     }
     v5 = (ScrTerminalMap_o *)TerminalSceneComponent_TypeInfo;
     if ( !TerminalSceneComponent_TypeInfo->_2.cctor_finished )
@@ -244,7 +244,7 @@ void EventInfoMuralComponent__OnClickButton(EventInfoMuralComponent_o *this, con
     }
     klass = v5->fields.subRootGimmickP->klass;
     if ( !klass || (v5 = *(ScrTerminalMap_o **)&klass->_2.static_fields_size) == 0 )
-      sub_1C32E7C(v5);
+      sub_1C372B4(v5);
     ScrTerminalMap__SetMapCameraTouchEnable(v5, 0, 0);
     v8 = EventInfoMuralComponent___c_TypeInfo;
     if ( !EventInfoMuralComponent___c_TypeInfo->_2.cctor_finished )
@@ -261,11 +261,11 @@ void EventInfoMuralComponent__OnClickButton(EventInfoMuralComponent_o *this, con
         v8 = EventInfoMuralComponent___c_TypeInfo;
       }
       v10 = (Il2CppObject *)v8->static_fields->__9;
-      _9__13_0 = (System_Action_o *)sub_1C32E6C(System_Action_TypeInfo);
+      _9__13_0 = (System_Action_o *)sub_1C372A4(System_Action_TypeInfo);
       System_Action___ctor(_9__13_0, v10, Method_EventInfoMuralComponent___c__OnClickButton_b__13_0__, 0);
       static_fields = EventInfoMuralComponent___c_TypeInfo->static_fields;
       static_fields->__9__13_0 = _9__13_0;
-      sub_1C32BC4((CGThumbnailListItem_o *)&static_fields->__9__13_0, (int32_t)_9__13_0, v12, v13);
+      sub_1C36FFC((CGThumbnailListItem_o *)&static_fields->__9__13_0, (int32_t)_9__13_0, v12, v13);
     }
     EventInfoMuralComponent__LoadEventMuralUpdate(this, _9__13_0, v7);
   }
@@ -298,15 +298,15 @@ void EventInfoMuralComponent___c___cctor(const MethodInfo *method)
   int32_t v2; // w2
   const MethodInfo *v3; // x3
 
-  if ( (byte_4C38EEB & 1) == 0 )
+  if ( (byte_4C444E4 & 1) == 0 )
   {
-    sub_1C32C20(&EventInfoMuralComponent___c_TypeInfo);
-    byte_4C38EEB = 1;
+    sub_1C37058(&EventInfoMuralComponent___c_TypeInfo);
+    byte_4C444E4 = 1;
   }
-  v1 = (Il2CppObject *)sub_1C32E6C(EventInfoMuralComponent___c_TypeInfo);
+  v1 = (Il2CppObject *)sub_1C372A4(EventInfoMuralComponent___c_TypeInfo);
   System_Object___ctor(v1, 0);
   EventInfoMuralComponent___c_TypeInfo->static_fields->__9 = (struct EventInfoMuralComponent___c_o *)v1;
-  sub_1C32BC4((CGThumbnailListItem_o *)EventInfoMuralComponent___c_TypeInfo->static_fields, (int32_t)v1, v2, v3);
+  sub_1C36FFC((CGThumbnailListItem_o *)EventInfoMuralComponent___c_TypeInfo->static_fields, (int32_t)v1, v2, v3);
 }
 
 
@@ -321,17 +321,17 @@ void EventInfoMuralComponent___c___OnClickButton_b__13_0(EventInfoMuralComponent
   ScrTerminalMap_o *v2; // x0
   UnityEngine_GameObject_c *klass; // x8
 
-  if ( (byte_4C38EEC & 1) == 0 )
+  if ( (byte_4C444E5 & 1) == 0 )
   {
-    sub_1C32C20(&TerminalSceneComponent_TypeInfo);
-    byte_4C38EEC = 1;
+    sub_1C37058(&TerminalSceneComponent_TypeInfo);
+    byte_4C444E5 = 1;
   }
   if ( !TerminalSceneComponent_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(TerminalSceneComponent_TypeInfo);
-  if ( !byte_4C319B6 )
+  if ( !byte_4C3CF06 )
   {
-    sub_1C32C20(&TerminalSceneComponent_TypeInfo);
-    byte_4C319B6 = 1;
+    sub_1C37058(&TerminalSceneComponent_TypeInfo);
+    byte_4C3CF06 = 1;
   }
   v2 = (ScrTerminalMap_o *)TerminalSceneComponent_TypeInfo;
   if ( !TerminalSceneComponent_TypeInfo->_2.cctor_finished )
@@ -341,7 +341,7 @@ void EventInfoMuralComponent___c___OnClickButton_b__13_0(EventInfoMuralComponent
   }
   klass = v2->fields.subRootGimmickP->klass;
   if ( !klass || (v2 = *(ScrTerminalMap_o **)&klass->_2.static_fields_size) == 0 )
-    sub_1C32E7C(v2);
+    sub_1C372B4(v2);
   ScrTerminalMap__SetMapCameraTouchEnable(v2, 1, 0);
 }
 
@@ -366,15 +366,15 @@ void EventInfoMuralComponent___c__DisplayClass14_0___LoadEventMuralUpdate_b__0(
   int32_t v8; // w2
   const MethodInfo *v9; // x3
 
-  if ( (byte_4C38EED & 1) == 0 )
+  if ( (byte_4C444E6 & 1) == 0 )
   {
-    sub_1C32C20(&System_Action_TypeInfo);
-    sub_1C32C20(&AvalonSceneManager_TypeInfo);
-    sub_1C32C20(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
-    sub_1C32C20(&Method_EventInfoMuralComponent___c__DisplayClass14_0__LoadEventMuralUpdate_b__2__);
-    byte_4C38EED = 1;
+    sub_1C37058(&System_Action_TypeInfo);
+    sub_1C37058(&AvalonSceneManager_TypeInfo);
+    sub_1C37058(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+    sub_1C37058(&Method_EventInfoMuralComponent___c__DisplayClass14_0__LoadEventMuralUpdate_b__2__);
+    byte_4C444E6 = 1;
   }
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39E2904 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39ED16C *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
   v4 = AvalonSceneManager_TypeInfo;
   v5 = (CommonUI_o *)Instance;
   if ( !AvalonSceneManager_TypeInfo->_2.cctor_finished )
@@ -386,17 +386,17 @@ void EventInfoMuralComponent___c__DisplayClass14_0___LoadEventMuralUpdate_b__0(
   _9__2 = this->fields.__9__2;
   if ( !_9__2 )
   {
-    _9__2 = (System_Action_o *)sub_1C32E6C(System_Action_TypeInfo);
+    _9__2 = (System_Action_o *)sub_1C372A4(System_Action_TypeInfo);
     System_Action___ctor(
       _9__2,
       (Il2CppObject *)this,
       Method_EventInfoMuralComponent___c__DisplayClass14_0__LoadEventMuralUpdate_b__2__,
       0);
     this->fields.__9__2 = _9__2;
-    sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.__9__2, (int32_t)_9__2, v8, v9);
+    sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.__9__2, (int32_t)_9__2, v8, v9);
   }
   if ( !v5 )
-    sub_1C32E7C(Instance);
+    sub_1C372B4(Instance);
   CommonUI__maskFadein(v5, DEFAULT_FADE_TIME, _9__2, 0);
 }
 
@@ -414,19 +414,19 @@ void EventInfoMuralComponent___c__DisplayClass14_0___LoadEventMuralUpdate_b__1(
   int32_t v9; // w2
   const MethodInfo *v10; // x3
 
-  if ( (byte_4C38EEE & 1) == 0 )
+  if ( (byte_4C444E7 & 1) == 0 )
   {
-    sub_1C32C20(&System_Action_TypeInfo);
-    sub_1C32C20(&TerminalSceneComponent_TypeInfo);
-    sub_1C32C20(&Method_EventInfoMuralComponent___c__DisplayClass14_0__LoadEventMuralUpdate_b__3__);
-    byte_4C38EEE = 1;
+    sub_1C37058(&System_Action_TypeInfo);
+    sub_1C37058(&TerminalSceneComponent_TypeInfo);
+    sub_1C37058(&Method_EventInfoMuralComponent___c__DisplayClass14_0__LoadEventMuralUpdate_b__3__);
+    byte_4C444E7 = 1;
   }
   if ( !TerminalSceneComponent_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(TerminalSceneComponent_TypeInfo);
-  if ( !byte_4C319B6 )
+  if ( !byte_4C3CF06 )
   {
-    sub_1C32C20(&TerminalSceneComponent_TypeInfo);
-    byte_4C319B6 = 1;
+    sub_1C37058(&TerminalSceneComponent_TypeInfo);
+    byte_4C3CF06 = 1;
   }
   v3 = TerminalSceneComponent_TypeInfo;
   if ( !TerminalSceneComponent_TypeInfo->_2.cctor_finished )
@@ -445,18 +445,18 @@ void EventInfoMuralComponent___c__DisplayClass14_0___LoadEventMuralUpdate_b__1(
   _9__3 = this->fields.__9__3;
   if ( !_9__3 )
   {
-    _9__3 = (System_Action_o *)sub_1C32E6C(System_Action_TypeInfo);
+    _9__3 = (System_Action_o *)sub_1C372A4(System_Action_TypeInfo);
     System_Action___ctor(
       _9__3,
       (Il2CppObject *)this,
       Method_EventInfoMuralComponent___c__DisplayClass14_0__LoadEventMuralUpdate_b__3__,
       0);
     this->fields.__9__3 = _9__3;
-    sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.__9__3, (int32_t)_9__3, v9, v10);
+    sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.__9__3, (int32_t)_9__3, v9, v10);
   }
   if ( !mTerminalList )
 LABEL_15:
-    sub_1C32E7C(v3);
+    sub_1C372B4(v3);
   ScrTerminalListTop__StartEventMuralUpdateNoAnim(mTerminalList, eventId, _9__3, 0);
 }
 
@@ -477,7 +477,7 @@ void EventInfoMuralComponent___c__DisplayClass14_0___LoadEventMuralUpdate_b__3(
 
   endAction = this->fields.endAction;
   if ( !endAction )
-    sub_1C32E7C(this);
+    sub_1C372B4(this);
   ((void (__fastcall *)(intptr_t, intptr_t))endAction->fields.invoke_impl)(
     endAction->fields.method_code,
     endAction->fields.method);

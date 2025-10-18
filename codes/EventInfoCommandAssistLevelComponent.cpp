@@ -7,23 +7,23 @@ void EventInfoCommandAssistLevelComponent___cctor(const MethodInfo *method)
   int32_t v5; // w2
   const MethodInfo *v6; // x3
 
-  if ( (byte_4C37DAE & 1) == 0 )
+  if ( (byte_4C433A7 & 1) == 0 )
   {
-    sub_1C32C20(&EventInfoCommandAssistLevelComponent_TypeInfo);
-    sub_1C32C20(&StringLiteral_17016/*"badge_lock"*/);
-    sub_1C32C20(&StringLiteral_15982/*"[ffff00]"*/);
-    byte_4C37DAE = 1;
+    sub_1C37058(&EventInfoCommandAssistLevelComponent_TypeInfo);
+    sub_1C37058(&StringLiteral_17018/*"badge_lock"*/);
+    sub_1C37058(&StringLiteral_15984/*"[ffff00]"*/);
+    byte_4C433A7 = 1;
   }
-  EventInfoCommandAssistLevelComponent_TypeInfo->static_fields->ICON_SPRITE_NAME_LOCK = (struct System_String_o *)StringLiteral_17016/*"badge_lock"*/;
-  sub_1C32BC4(
+  EventInfoCommandAssistLevelComponent_TypeInfo->static_fields->ICON_SPRITE_NAME_LOCK = (struct System_String_o *)StringLiteral_17018/*"badge_lock"*/;
+  sub_1C36FFC(
     (CGThumbnailListItem_o *)EventInfoCommandAssistLevelComponent_TypeInfo->static_fields,
-    StringLiteral_17016/*"badge_lock"*/,
+    StringLiteral_17018/*"badge_lock"*/,
     v1,
     v2);
-  v3 = StringLiteral_15982/*"[ffff00]"*/;
+  v3 = StringLiteral_15984/*"[ffff00]"*/;
   static_fields = EventInfoCommandAssistLevelComponent_TypeInfo->static_fields;
-  static_fields->MAX_LEVEL_TEXT_COLOR = (struct System_String_o *)StringLiteral_15982/*"[ffff00]"*/;
-  sub_1C32BC4((CGThumbnailListItem_o *)&static_fields->MAX_LEVEL_TEXT_COLOR, v3, v5, v6);
+  static_fields->MAX_LEVEL_TEXT_COLOR = (struct System_String_o *)StringLiteral_15984/*"[ffff00]"*/;
+  sub_1C36FFC((CGThumbnailListItem_o *)&static_fields->MAX_LEVEL_TEXT_COLOR, v3, v5, v6);
 }
 
 
@@ -59,7 +59,7 @@ bool EventInfoCommandAssistLevelComponent__IsReleasedNow(
 
   assistData = this->fields.assistData;
   if ( !assistData )
-    sub_1C32E7C(this);
+    sub_1C372B4(this);
   return assistData->fields.oldLv <= 0 && assistData->fields.lv > 0;
 }
 
@@ -81,10 +81,10 @@ void EventInfoCommandAssistLevelComponent__Setup(
   const MethodInfo *v15; // x2
   struct EventInfoCommandAssistLevelComponent_AssistData_o *v16; // x8
 
-  if ( (byte_4C37DAA & 1) == 0 )
+  if ( (byte_4C433A3 & 1) == 0 )
   {
-    sub_1C32C20(&UnityEngine_Object_TypeInfo);
-    byte_4C37DAA = 1;
+    sub_1C37058(&UnityEngine_Object_TypeInfo);
+    byte_4C433A3 = 1;
   }
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
@@ -92,15 +92,15 @@ void EventInfoCommandAssistLevelComponent__Setup(
   if ( data && !v7 )
   {
     this->fields.commandAssistLevelControl = control;
-    sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.commandAssistLevelControl, (int32_t)control, v8, v9);
+    sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.commandAssistLevelControl, (int32_t)control, v8, v9);
     this->fields.assistData = data;
-    sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.assistData, (int32_t)data, v10, v11);
+    sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.assistData, (int32_t)data, v10, v11);
     assistData = this->fields.assistData;
     if ( !assistData
       || (EventInfoCommandAssistLevelComponent__SetupIcon(this, assistData->fields.oldLv, v13),
           (v16 = this->fields.assistData) == 0) )
     {
-      sub_1C32E7C(v12);
+      sub_1C372B4(v12);
     }
     EventInfoCommandAssistLevelComponent__SetupLevel(this, v16->fields.oldLv, v15);
   }
@@ -117,11 +117,11 @@ void EventInfoCommandAssistLevelComponent__SetupIcon(
   EventInfoCommandAssistLevelComponent_c *v7; // x0
   UISprite_o *skillIconSprite; // x19
 
-  if ( (byte_4C37DAB & 1) == 0 )
+  if ( (byte_4C433A4 & 1) == 0 )
   {
-    sub_1C32C20(&AtlasManager_TypeInfo);
-    sub_1C32C20(&EventInfoCommandAssistLevelComponent_TypeInfo);
-    byte_4C37DAB = 1;
+    sub_1C37058(&AtlasManager_TypeInfo);
+    sub_1C37058(&EventInfoCommandAssistLevelComponent_TypeInfo);
+    byte_4C433A4 = 1;
   }
   if ( level >= 1 && (assistData = this->fields.assistData) != 0 )
   {
@@ -160,13 +160,13 @@ void EventInfoCommandAssistLevelComponent__SetupLevel(
   int32_t v13; // [xsp+Ch] [xbp-24h] BYREF
 
   v13 = level;
-  if ( (byte_4C37DAC & 1) == 0 )
+  if ( (byte_4C433A5 & 1) == 0 )
   {
-    sub_1C32C20(&EventInfoCommandAssistLevelComponent_TypeInfo);
-    sub_1C32C20(&LocalizationManager_TypeInfo);
-    sub_1C32C20(&StringLiteral_8262/*"LEVEL_INFO"*/);
-    sub_1C32C20(&StringLiteral_1/*""*/);
-    byte_4C37DAC = 1;
+    sub_1C37058(&EventInfoCommandAssistLevelComponent_TypeInfo);
+    sub_1C37058(&LocalizationManager_TypeInfo);
+    sub_1C37058(&StringLiteral_8263/*"LEVEL_INFO"*/);
+    sub_1C37058(&StringLiteral_1/*""*/);
+    byte_4C433A5 = 1;
   }
   if ( level < 1 )
   {
@@ -177,7 +177,7 @@ void EventInfoCommandAssistLevelComponent__SetupLevel(
       return;
     }
 LABEL_15:
-    sub_1C32E7C(levelLabel);
+    sub_1C372B4(levelLabel);
   }
   if ( level < 10 )
   {
@@ -197,9 +197,9 @@ LABEL_15:
   v9 = this->fields.levelLabel;
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-  v10 = LocalizationManager__Get((System_String_o *)StringLiteral_8262/*"LEVEL_INFO"*/, 0);
+  v10 = LocalizationManager__Get((System_String_o *)StringLiteral_8263/*"LEVEL_INFO"*/, 0);
   v11 = System_Int32__ToString((int32_t)&v13, 0);
-  v12 = (Il2CppObject *)System_String__Concat_63518544(v8, v11, 0);
+  v12 = (Il2CppObject *)System_String__Concat_63561656(v8, v11, 0);
   levelLabel = (UILabel_o *)System_String__Format(v10, v12, 0);
   if ( !v9 )
     goto LABEL_15;
@@ -219,10 +219,10 @@ void EventInfoCommandAssistLevelComponent__UpdateDisp(
   struct EventInfoCommandAssistLevelComponent_AssistData_o *v9; // x8
   int32_t lv; // w1
 
-  if ( (byte_4C37DAD & 1) == 0 )
+  if ( (byte_4C433A6 & 1) == 0 )
   {
-    sub_1C32C20(&UnityEngine_Object_TypeInfo);
-    byte_4C37DAD = 1;
+    sub_1C37058(&UnityEngine_Object_TypeInfo);
+    byte_4C433A6 = 1;
   }
   commandAssistLevelControl = (UnityEngine_Object_o *)this->fields.commandAssistLevelControl;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )

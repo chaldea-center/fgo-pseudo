@@ -6,7 +6,7 @@ void WarBoardAPIGameSetRequestTask___ctor(
         bool onStartBeginRequest,
         const MethodInfo *method)
 {
-  WarBoardAPIRequestTask___ctor_38162528(
+  WarBoardAPIRequestTask___ctor_38258280(
     (WarBoardAPIRequestTask_o *)this,
     resultCallback,
     onStartBeginRequest,
@@ -23,14 +23,14 @@ void WarBoardAPIGameSetRequestTask__SetRequest(WarBoardAPIGameSetRequestTask_o *
   int32_t v6; // w2
   const MethodInfo *v7; // x3
 
-  if ( (byte_4C35637 & 1) == 0 )
+  if ( (byte_4C40C22 & 1) == 0 )
   {
-    sub_1C32C20(&Method_NetworkManager_getRequest_WarBoardFinishRequest___);
-    sub_1C32C20(&NetworkManager_TypeInfo);
-    sub_1C32C20(&Method_SingletonMonoBehaviour_WarBoardManager__get_Instance__);
-    byte_4C35637 = 1;
+    sub_1C37058(&Method_NetworkManager_getRequest_WarBoardFinishRequest___);
+    sub_1C37058(&NetworkManager_TypeInfo);
+    sub_1C37058(&Method_SingletonMonoBehaviour_WarBoardManager__get_Instance__);
+    byte_4C40C22 = 1;
   }
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39E2904 *)Method_SingletonMonoBehaviour_WarBoardManager__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39ED16C *)Method_SingletonMonoBehaviour_WarBoardManager__get_Instance__);
   if ( !Instance )
     goto LABEL_9;
   monitor = (WarBoardData_o *)Instance[27].monitor;
@@ -38,12 +38,12 @@ void WarBoardAPIGameSetRequestTask__SetRequest(WarBoardAPIGameSetRequestTask_o *
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
   Instance = NetworkManager__getRequest_object_(
                0,
-               (const MethodInfo_3168488 *)Method_NetworkManager_getRequest_WarBoardFinishRequest___);
+               (const MethodInfo_3172CF0 *)Method_NetworkManager_getRequest_WarBoardFinishRequest___);
   if ( !monitor
     || (v5 = (WarBoardFinishRequest_o *)Instance, Instance = (Il2CppObject *)WarBoardData__get_id(monitor, 0), !v5) )
   {
 LABEL_9:
-    sub_1C32E7C(Instance);
+    sub_1C372B4(Instance);
   }
   WarBoardFinishRequest__beginRequest(
     v5,
@@ -53,5 +53,5 @@ LABEL_9:
     monitor->fields.winCondGroup,
     0);
   this->fields.request = (struct RequestBase_o *)v5;
-  sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.request, (int32_t)v5, v6, v7);
+  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.request, (int32_t)v5, v6, v7);
 }

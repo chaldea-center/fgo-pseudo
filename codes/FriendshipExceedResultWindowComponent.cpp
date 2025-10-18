@@ -2,10 +2,10 @@ void FriendshipExceedResultWindowComponent___ctor(
         FriendshipExceedResultWindowComponent_o *this,
         const MethodInfo *method)
 {
-  if ( (byte_4C3B90A & 1) == 0 )
+  if ( (byte_4C46F1D & 1) == 0 )
   {
-    sub_1C32C20(&BaseDialog_TypeInfo);
-    byte_4C3B90A = 1;
+    sub_1C37058(&BaseDialog_TypeInfo);
+    byte_4C46F1D = 1;
   }
   if ( !BaseDialog_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(BaseDialog_TypeInfo);
@@ -24,20 +24,20 @@ void FriendshipExceedResultWindowComponent__CloseToNext(
   const MethodInfo *v8; // x3
   System_Action_o *v9; // x20
 
-  if ( (byte_4C3B909 & 1) == 0 )
+  if ( (byte_4C46F1C & 1) == 0 )
   {
-    sub_1C32C20(&System_Action_TypeInfo);
-    sub_1C32C20(&Method_FriendshipExceedResultWindowComponent___c__DisplayClass10_0__CloseToNext_b__0__);
-    sub_1C32C20(&FriendshipExceedResultWindowComponent___c__DisplayClass10_0_TypeInfo);
-    byte_4C3B909 = 1;
+    sub_1C37058(&System_Action_TypeInfo);
+    sub_1C37058(&Method_FriendshipExceedResultWindowComponent___c__DisplayClass10_0__CloseToNext_b__0__);
+    sub_1C37058(&FriendshipExceedResultWindowComponent___c__DisplayClass10_0_TypeInfo);
+    byte_4C46F1C = 1;
   }
-  v5 = sub_1C32E6C(FriendshipExceedResultWindowComponent___c__DisplayClass10_0_TypeInfo);
+  v5 = sub_1C372A4(FriendshipExceedResultWindowComponent___c__DisplayClass10_0_TypeInfo);
   System_Object___ctor((Il2CppObject *)v5, 0);
   if ( !v5 )
-    sub_1C32E7C(v6);
+    sub_1C372B4(v6);
   *(_QWORD *)(v5 + 16) = callback;
-  sub_1C32BC4((CGThumbnailListItem_o *)(v5 + 16), (int32_t)callback, v7, v8);
-  v9 = (System_Action_o *)sub_1C32E6C(System_Action_TypeInfo);
+  sub_1C36FFC((CGThumbnailListItem_o *)(v5 + 16), (int32_t)callback, v7, v8);
+  v9 = (System_Action_o *)sub_1C372A4(System_Action_TypeInfo);
   System_Action___ctor(
     v9,
     (Il2CppObject *)v5,
@@ -70,19 +70,19 @@ void FriendshipExceedResultWindowComponent__OpenFriendshipExceedInfo(
   UserServantCollectionEntity_o *entity; // [xsp+48h] [xbp-48h] BYREF
   CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o v23; // 0:x0.16
 
-  if ( (byte_4C3B907 & 1) == 0 )
+  if ( (byte_4C46F1A & 1) == 0 )
   {
-    sub_1C32C20(&Method_DataManager_GetMaster_UserServantCollectionMaster___);
-    sub_1C32C20(&DataManager_TypeInfo);
-    sub_1C32C20(&Method_FriendshipExceedResultWindowComponent_OpenFriendshipExceedInfo__);
-    sub_1C32C20(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
-    sub_1C32C20(&CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo);
-    byte_4C3B907 = 1;
+    sub_1C37058(&Method_DataManager_GetMaster_UserServantCollectionMaster___);
+    sub_1C37058(&DataManager_TypeInfo);
+    sub_1C37058(&Method_FriendshipExceedResultWindowComponent_OpenFriendshipExceedInfo__);
+    sub_1C37058(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
+    sub_1C37058(&CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo);
+    byte_4C46F1A = 1;
   }
   entity = 0;
   if ( !DataManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-  Master_object = (UserServantCollectionMaster_o *)DataManager__GetMaster_object_((const MethodInfo_30DD39C *)Method_DataManager_GetMaster_UserServantCollectionMaster___);
+  Master_object = (UserServantCollectionMaster_o *)DataManager__GetMaster_object_((const MethodInfo_30E7C04 *)Method_DataManager_GetMaster_UserServantCollectionMaster___);
   if ( !userServantEntity )
     goto LABEL_19;
   v10 = *(_OWORD *)&userServantEntity->fields.userId.fields.fakeValue;
@@ -92,7 +92,7 @@ void FriendshipExceedResultWindowComponent__OpenFriendshipExceedInfo(
   if ( !CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo);
   v20 = v21;
-  v12 = CodeStage_AntiCheat_ObscuredTypes_ObscuredLong__op_Implicit_48891308(&v20, 0);
+  v12 = CodeStage_AntiCheat_ObscuredTypes_ObscuredLong__op_Implicit_48934420(&v20, 0);
   v14 = *(_QWORD *)&userServantEntity->fields.svtId.fields.currentCryptoKey;
   v13 = *(_QWORD *)&userServantEntity->fields.svtId.fields.fakeValue;
   v15 = v12;
@@ -100,7 +100,7 @@ void FriendshipExceedResultWindowComponent__OpenFriendshipExceedInfo(
     j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
   *(_QWORD *)&v23.fields.currentCryptoKey = v14;
   *(_QWORD *)&v23.fields.fakeValue = v13;
-  Master_object = (UserServantCollectionMaster_o *)CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_48887784(
+  Master_object = (UserServantCollectionMaster_o *)CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_48930896(
                                                      v23,
                                                      0);
   if ( !v11 )
@@ -109,8 +109,8 @@ void FriendshipExceedResultWindowComponent__OpenFriendshipExceedInfo(
   {
     v16 = Method_FriendshipExceedResultWindowComponent_OpenFriendshipExceedInfo__;
     if ( (*((_BYTE *)Method_FriendshipExceedResultWindowComponent_OpenFriendshipExceedInfo__ + 83) & 2) != 0 )
-      v16 = (_QWORD *)sub_1C32C38(Method_FriendshipExceedResultWindowComponent_OpenFriendshipExceedInfo__);
-    v17 = (System_Reflection_MethodBase_o *)sub_1C32C04(v16, v16[4]);
+      v16 = (_QWORD *)sub_1C37070(Method_FriendshipExceedResultWindowComponent_OpenFriendshipExceedInfo__);
+    v17 = (System_Reflection_MethodBase_o *)sub_1C3703C(v16, v16[4]);
     OverwriteAssetSoundName__PlaySystemSe(v17, 6, 0, 0);
     Master_object = (UserServantCollectionMaster_o *)this->fields.friendshipExceedInfoComponent;
     if ( Master_object )
@@ -128,7 +128,7 @@ void FriendshipExceedResultWindowComponent__OpenFriendshipExceedInfo(
       return;
     }
 LABEL_19:
-    sub_1C32E7C(Master_object);
+    sub_1C372B4(Master_object);
   }
   if ( openedAction )
     ((void (__fastcall *)(intptr_t, intptr_t))openedAction->fields.invoke_impl)(
@@ -144,11 +144,11 @@ void FriendshipExceedResultWindowComponent__SetFriendshipExceedInfo(
 {
   const MethodInfo *v3; // x3
 
-  FriendshipExceedResultWindowComponent__SetFriendshipExceedInfo_48388484(this, userServantEntity, 0, v3);
+  FriendshipExceedResultWindowComponent__SetFriendshipExceedInfo_48509388(this, userServantEntity, 0, v3);
 }
 
 
-void FriendshipExceedResultWindowComponent__SetFriendshipExceedInfo_48388484(
+void FriendshipExceedResultWindowComponent__SetFriendshipExceedInfo_48509388(
         FriendshipExceedResultWindowComponent_o *this,
         UserServantEntity_o *userServantEntity,
         int32_t currentMax,
@@ -170,30 +170,30 @@ void FriendshipExceedResultWindowComponent__SetFriendshipExceedInfo_48388484(
   CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_o v20; // [xsp+20h] [xbp-60h]
   CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o v21; // 0:x0.16
 
-  if ( (byte_4C3B906 & 1) == 0 )
+  if ( (byte_4C46F19 & 1) == 0 )
   {
-    sub_1C32C20(&System_Action_TypeInfo);
-    sub_1C32C20(&Method_BaseDialog_EndOpenBaseDialog__);
-    sub_1C32C20(&Method_DataManager_GetMasterData_ServantMaster___);
-    sub_1C32C20(&Method_DataManager_GetMasterData_UserServantCollectionMaster___);
-    sub_1C32C20(&Method_DataMasterBase_ServantMaster__ServantEntity__int__GetEntity__);
-    sub_1C32C20(&Method_FriendshipExceedResultWindowComponent_SetFriendshipExceedInfo__);
-    sub_1C32C20(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
-    sub_1C32C20(&CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo);
-    sub_1C32C20(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-    byte_4C3B906 = 1;
+    sub_1C37058(&System_Action_TypeInfo);
+    sub_1C37058(&Method_BaseDialog_EndOpenBaseDialog__);
+    sub_1C37058(&Method_DataManager_GetMasterData_ServantMaster___);
+    sub_1C37058(&Method_DataManager_GetMasterData_UserServantCollectionMaster___);
+    sub_1C37058(&Method_DataMasterBase_ServantMaster__ServantEntity__int__GetEntity__);
+    sub_1C37058(&Method_FriendshipExceedResultWindowComponent_SetFriendshipExceedInfo__);
+    sub_1C37058(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
+    sub_1C37058(&CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo);
+    sub_1C37058(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    byte_4C46F19 = 1;
   }
   v7 = Method_FriendshipExceedResultWindowComponent_SetFriendshipExceedInfo__;
   if ( (*((_BYTE *)Method_FriendshipExceedResultWindowComponent_SetFriendshipExceedInfo__ + 83) & 2) != 0 )
-    v7 = (_QWORD *)sub_1C32C38(Method_FriendshipExceedResultWindowComponent_SetFriendshipExceedInfo__);
-  v8 = (System_Reflection_MethodBase_o *)sub_1C32C04(v7, v7[4]);
+    v7 = (_QWORD *)sub_1C37070(Method_FriendshipExceedResultWindowComponent_SetFriendshipExceedInfo__);
+  v8 = (System_Reflection_MethodBase_o *)sub_1C3703C(v7, v7[4]);
   OverwriteAssetSoundName__PlaySystemSe(v8, 6, 0, 0);
-  Instance = (DataManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39E2904 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = (DataManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39ED16C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance )
     goto LABEL_16;
   Instance = (DataManager_o *)DataManager__GetMasterData_object_(
                                 Instance,
-                                (const MethodInfo_30DD3F0 *)Method_DataManager_GetMasterData_ServantMaster___);
+                                (const MethodInfo_30E7C58 *)Method_DataManager_GetMasterData_ServantMaster___);
   if ( !userServantEntity )
     goto LABEL_16;
   v10 = (DataMasterBase_TMaster__TEntity__PKType__o *)Instance;
@@ -203,19 +203,19 @@ void FriendshipExceedResultWindowComponent__SetFriendshipExceedInfo_48388484(
     j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
   *(_QWORD *)&v21.fields.currentCryptoKey = v12;
   *(_QWORD *)&v21.fields.fakeValue = v11;
-  Instance = (DataManager_o *)CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_48887784(v21, 0);
+  Instance = (DataManager_o *)CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_48930896(v21, 0);
   if ( !v10 )
     goto LABEL_16;
   DataMasterBase_object__object__int___GetEntity(
     v10,
     (int32_t)Instance,
-    (const MethodInfo_3396838 *)Method_DataMasterBase_ServantMaster__ServantEntity__int__GetEntity__);
-  Instance = (DataManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39E2904 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    (const MethodInfo_33A10A0 *)Method_DataMasterBase_ServantMaster__ServantEntity__int__GetEntity__);
+  Instance = (DataManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39ED16C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance )
     goto LABEL_16;
   MasterData_object = DataManager__GetMasterData_object_(
                         Instance,
-                        (const MethodInfo_30DD3F0 *)Method_DataManager_GetMasterData_UserServantCollectionMaster___);
+                        (const MethodInfo_30E7C58 *)Method_DataManager_GetMasterData_UserServantCollectionMaster___);
   v14 = *(_OWORD *)&userServantEntity->fields.userId.fields.fakeValue;
   v15 = (UserServantCollectionMaster_o *)MasterData_object;
   *(_OWORD *)&v20.fields.currentCryptoKey = *(_OWORD *)&userServantEntity->fields.userId.fields.currentCryptoKey;
@@ -223,8 +223,8 @@ void FriendshipExceedResultWindowComponent__SetFriendshipExceedInfo_48388484(
   if ( !CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo);
   v19 = v20;
-  v16 = CodeStage_AntiCheat_ObscuredTypes_ObscuredLong__op_Implicit_48891308(&v19, 0);
-  Instance = (DataManager_o *)CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_48887784(
+  v16 = CodeStage_AntiCheat_ObscuredTypes_ObscuredLong__op_Implicit_48934420(&v19, 0);
+  Instance = (DataManager_o *)CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_48930896(
                                 userServantEntity->fields.svtId,
                                 0);
   if ( !v15
@@ -232,7 +232,7 @@ void FriendshipExceedResultWindowComponent__SetFriendshipExceedInfo_48388484(
         !this->fields.friendshipExceedInfoComponent) )
   {
 LABEL_16:
-    sub_1C32E7C(Instance);
+    sub_1C372B4(Instance);
   }
   FriendshipExceedInfoComponent__SetInfo(
     this->fields.friendshipExceedInfoComponent,
@@ -242,7 +242,7 @@ LABEL_16:
     1,
     currentMax,
     v17);
-  v18 = (System_Action_o *)sub_1C32E6C(System_Action_TypeInfo);
+  v18 = (System_Action_o *)sub_1C372A4(System_Action_TypeInfo);
   System_Action___ctor(v18, (Il2CppObject *)this, Method_BaseDialog_EndOpenBaseDialog__, 0);
   BaseDialog__Open((BaseDialog_o *)this, v18, 0, 0, 0);
 }
@@ -262,15 +262,15 @@ void FriendshipExceedResultWindowComponent__SetupSpecialEffectUI(
   int32_t v10; // w2
   const MethodInfo *v11; // x3
 
-  if ( (byte_4C3B908 & 1) == 0 )
+  if ( (byte_4C46F1B & 1) == 0 )
   {
-    sub_1C32C20(&System_Action_FriendshipExceedResultWindowComponent_SpecialimageInfo__TypeInfo);
-    sub_1C32C20(&Method_BasicHelper_ForEach_FriendshipExceedResultWindowComponent_SpecialimageInfo___);
-    sub_1C32C20(&LocalizationManager_TypeInfo);
-    sub_1C32C20(&Method_FriendshipExceedResultWindowComponent___c__SetupSpecialEffectUI_b__9_0__);
-    sub_1C32C20(&FriendshipExceedResultWindowComponent___c_TypeInfo);
-    sub_1C32C20(&StringLiteral_3840/*"COSTUME_CHANGE_FRIENDSHIP_EXCEED_TITLE"*/);
-    byte_4C3B908 = 1;
+    sub_1C37058(&System_Action_FriendshipExceedResultWindowComponent_SpecialimageInfo__TypeInfo);
+    sub_1C37058(&Method_BasicHelper_ForEach_FriendshipExceedResultWindowComponent_SpecialimageInfo___);
+    sub_1C37058(&LocalizationManager_TypeInfo);
+    sub_1C37058(&Method_FriendshipExceedResultWindowComponent___c__SetupSpecialEffectUI_b__9_0__);
+    sub_1C37058(&FriendshipExceedResultWindowComponent___c_TypeInfo);
+    sub_1C37058(&StringLiteral_3840/*"COSTUME_CHANGE_FRIENDSHIP_EXCEED_TITLE"*/);
+    byte_4C46F1B = 1;
   }
   if ( this->fields.isSpecialEffect )
   {
@@ -280,7 +280,7 @@ void FriendshipExceedResultWindowComponent__SetupSpecialEffectUI(
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
     v4 = LocalizationManager__Get((System_String_o *)StringLiteral_3840/*"COSTUME_CHANGE_FRIENDSHIP_EXCEED_TITLE"*/, 0);
     if ( !friendshipExceedInfoTitle )
-      sub_1C32E7C(v4);
+      sub_1C372B4(v4);
     UILabel__set_text(friendshipExceedInfoTitle, v4, 0);
     if ( !BasicHelper__IsNullOrEmpty((System_Collections_ICollection_o *)this->fields.specialImageInfos, 0) )
     {
@@ -300,7 +300,7 @@ void FriendshipExceedResultWindowComponent__SetupSpecialEffectUI(
           v6 = FriendshipExceedResultWindowComponent___c_TypeInfo;
         }
         v8 = (Il2CppObject *)v6->static_fields->__9;
-        _9__9_0 = (System_Action_FriendshipExceedResultWindowComponent_SpecialimageInfo__o *)sub_1C32E6C(System_Action_FriendshipExceedResultWindowComponent_SpecialimageInfo__TypeInfo);
+        _9__9_0 = (System_Action_FriendshipExceedResultWindowComponent_SpecialimageInfo__o *)sub_1C372A4(System_Action_FriendshipExceedResultWindowComponent_SpecialimageInfo__TypeInfo);
         System_Action_FriendshipExceedResultWindowComponent_SpecialimageInfo____ctor(
           _9__9_0,
           v8,
@@ -308,12 +308,12 @@ void FriendshipExceedResultWindowComponent__SetupSpecialEffectUI(
           0);
         static_fields = FriendshipExceedResultWindowComponent___c_TypeInfo->static_fields;
         static_fields->__9__9_0 = _9__9_0;
-        sub_1C32BC4((CGThumbnailListItem_o *)&static_fields->__9__9_0, (int32_t)_9__9_0, v10, v11);
+        sub_1C36FFC((CGThumbnailListItem_o *)&static_fields->__9__9_0, (int32_t)_9__9_0, v10, v11);
       }
       BasicHelper__ForEach_FriendshipExceedResultWindowComponent_SpecialimageInfo_(
         specialImageInfos,
         (System_Action_T__o *)_9__9_0,
-        (const MethodInfo_30CA7E8 *)Method_BasicHelper_ForEach_FriendshipExceedResultWindowComponent_SpecialimageInfo___);
+        (const MethodInfo_30D5050 *)Method_BasicHelper_ForEach_FriendshipExceedResultWindowComponent_SpecialimageInfo___);
     }
   }
 }
@@ -333,15 +333,15 @@ void FriendshipExceedResultWindowComponent___c___cctor(const MethodInfo *method)
   int32_t v2; // w2
   const MethodInfo *v3; // x3
 
-  if ( (byte_4C3B90B & 1) == 0 )
+  if ( (byte_4C46F1E & 1) == 0 )
   {
-    sub_1C32C20(&FriendshipExceedResultWindowComponent___c_TypeInfo);
-    byte_4C3B90B = 1;
+    sub_1C37058(&FriendshipExceedResultWindowComponent___c_TypeInfo);
+    byte_4C46F1E = 1;
   }
-  v1 = (Il2CppObject *)sub_1C32E6C(FriendshipExceedResultWindowComponent___c_TypeInfo);
+  v1 = (Il2CppObject *)sub_1C372A4(FriendshipExceedResultWindowComponent___c_TypeInfo);
   System_Object___ctor(v1, 0);
   FriendshipExceedResultWindowComponent___c_TypeInfo->static_fields->__9 = (struct FriendshipExceedResultWindowComponent___c_o *)v1;
-  sub_1C32BC4(
+  sub_1C36FFC(
     (CGThumbnailListItem_o *)FriendshipExceedResultWindowComponent___c_TypeInfo->static_fields,
     (int32_t)v1,
     v2,
@@ -367,10 +367,10 @@ void FriendshipExceedResultWindowComponent___c___SetupSpecialEffectUI_b__9_0(
 
   ImageName = n.fields.ImageName;
   Sprite = n.fields.Sprite;
-  if ( (byte_4C3B90C & 1) == 0 )
+  if ( (byte_4C46F1F & 1) == 0 )
   {
-    sub_1C32C20(&AtlasManager_TypeInfo);
-    byte_4C3B90C = 1;
+    sub_1C37058(&AtlasManager_TypeInfo);
+    byte_4C46F1F = 1;
   }
   if ( !AtlasManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo);

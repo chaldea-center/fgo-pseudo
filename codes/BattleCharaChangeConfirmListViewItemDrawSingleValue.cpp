@@ -26,12 +26,12 @@ BattleCharaChangeConfirmListViewItemDrawSingleValue_GetValueFunc_o *BattleCharaC
   int32_t v7; // w2
   const MethodInfo *v8; // x3
 
-  if ( (byte_4C32DA1 & 1) == 0 )
+  if ( (byte_4C3E248 & 1) == 0 )
   {
-    sub_1C32C20(&BattleCharaChangeConfirmListViewItemDrawSingleValue_GetValueFunc_TypeInfo);
-    sub_1C32C20(&Method_BattleCharaChangeConfirmListViewItemDrawSingleValue___c__GetAtk_b__11_0__);
-    sub_1C32C20(&BattleCharaChangeConfirmListViewItemDrawSingleValue___c_TypeInfo);
-    byte_4C32DA1 = 1;
+    sub_1C37058(&BattleCharaChangeConfirmListViewItemDrawSingleValue_GetValueFunc_TypeInfo);
+    sub_1C37058(&Method_BattleCharaChangeConfirmListViewItemDrawSingleValue___c__GetAtk_b__11_0__);
+    sub_1C37058(&BattleCharaChangeConfirmListViewItemDrawSingleValue___c_TypeInfo);
+    byte_4C3E248 = 1;
   }
   v2 = BattleCharaChangeConfirmListViewItemDrawSingleValue___c_TypeInfo;
   if ( !BattleCharaChangeConfirmListViewItemDrawSingleValue___c_TypeInfo->_2.cctor_finished )
@@ -48,7 +48,7 @@ BattleCharaChangeConfirmListViewItemDrawSingleValue_GetValueFunc_o *BattleCharaC
       v2 = BattleCharaChangeConfirmListViewItemDrawSingleValue___c_TypeInfo;
     }
     v4 = (Il2CppObject *)v2->static_fields->__9;
-    _9__11_0 = (BattleCharaChangeConfirmListViewItemDrawSingleValue_GetValueFunc_o *)sub_1C32E6C(BattleCharaChangeConfirmListViewItemDrawSingleValue_GetValueFunc_TypeInfo);
+    _9__11_0 = (BattleCharaChangeConfirmListViewItemDrawSingleValue_GetValueFunc_o *)sub_1C372A4(BattleCharaChangeConfirmListViewItemDrawSingleValue_GetValueFunc_TypeInfo);
     BattleCharaChangeConfirmListViewItemDrawSingleValue_GetValueFunc___ctor(
       _9__11_0,
       v4,
@@ -56,7 +56,7 @@ BattleCharaChangeConfirmListViewItemDrawSingleValue_GetValueFunc_o *BattleCharaC
       v5);
     static_fields = BattleCharaChangeConfirmListViewItemDrawSingleValue___c_TypeInfo->static_fields;
     static_fields->__9__11_0 = _9__11_0;
-    sub_1C32BC4((CGThumbnailListItem_o *)&static_fields->__9__11_0, (int32_t)_9__11_0, v7, v8);
+    sub_1C36FFC((CGThumbnailListItem_o *)&static_fields->__9__11_0, (int32_t)_9__11_0, v7, v8);
   }
   return _9__11_0;
 }
@@ -73,25 +73,25 @@ BattleCharaChangeConfirmListViewItemDrawSingleValue_GetValueFunc_o *BattleCharaC
   BattleCharaChangeConfirmListViewItemDrawSingleValue_GetValueFunc_o *v6; // x20
   const MethodInfo *v7; // x3
 
-  if ( (byte_4C32DA3 & 1) == 0 )
+  if ( (byte_4C3E24A & 1) == 0 )
   {
-    sub_1C32C20(&Method_DataManager_GetMaster_ServantCostumeMaster___);
-    sub_1C32C20(&DataManager_TypeInfo);
-    sub_1C32C20(&BattleCharaChangeConfirmListViewItemDrawSingleValue_GetValueFunc_TypeInfo);
-    sub_1C32C20(&Method_BattleCharaChangeConfirmListViewItemDrawSingleValue___c__DisplayClass13_0__GetBattleCharaName_b__1__);
-    sub_1C32C20(&BattleCharaChangeConfirmListViewItemDrawSingleValue___c__DisplayClass13_0_TypeInfo);
-    byte_4C32DA3 = 1;
+    sub_1C37058(&Method_DataManager_GetMaster_ServantCostumeMaster___);
+    sub_1C37058(&DataManager_TypeInfo);
+    sub_1C37058(&BattleCharaChangeConfirmListViewItemDrawSingleValue_GetValueFunc_TypeInfo);
+    sub_1C37058(&Method_BattleCharaChangeConfirmListViewItemDrawSingleValue___c__DisplayClass13_0__GetBattleCharaName_b__1__);
+    sub_1C37058(&BattleCharaChangeConfirmListViewItemDrawSingleValue___c__DisplayClass13_0_TypeInfo);
+    byte_4C3E24A = 1;
   }
-  v2 = sub_1C32E6C(BattleCharaChangeConfirmListViewItemDrawSingleValue___c__DisplayClass13_0_TypeInfo);
+  v2 = sub_1C372A4(BattleCharaChangeConfirmListViewItemDrawSingleValue___c__DisplayClass13_0_TypeInfo);
   System_Object___ctor((Il2CppObject *)v2, 0);
   if ( !DataManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-  Master_object = DataManager__GetMaster_object_((const MethodInfo_30DD39C *)Method_DataManager_GetMaster_ServantCostumeMaster___);
+  Master_object = DataManager__GetMaster_object_((const MethodInfo_30E7C04 *)Method_DataManager_GetMaster_ServantCostumeMaster___);
   if ( !v2 )
-    sub_1C32E7C(Master_object);
+    sub_1C372B4(Master_object);
   *(_QWORD *)(v2 + 16) = Master_object;
-  sub_1C32BC4((CGThumbnailListItem_o *)(v2 + 16), (int32_t)Master_object, v4, v5);
-  v6 = (BattleCharaChangeConfirmListViewItemDrawSingleValue_GetValueFunc_o *)sub_1C32E6C(BattleCharaChangeConfirmListViewItemDrawSingleValue_GetValueFunc_TypeInfo);
+  sub_1C36FFC((CGThumbnailListItem_o *)(v2 + 16), (int32_t)Master_object, v4, v5);
+  v6 = (BattleCharaChangeConfirmListViewItemDrawSingleValue_GetValueFunc_o *)sub_1C372A4(BattleCharaChangeConfirmListViewItemDrawSingleValue_GetValueFunc_TypeInfo);
   BattleCharaChangeConfirmListViewItemDrawSingleValue_GetValueFunc___ctor(
     v6,
     (Il2CppObject *)v2,
@@ -113,12 +113,12 @@ BattleCharaChangeConfirmListViewItemDrawSingleValue_GetValueFunc_o *BattleCharaC
   int32_t v7; // w2
   const MethodInfo *v8; // x3
 
-  if ( (byte_4C32D9F & 1) == 0 )
+  if ( (byte_4C3E246 & 1) == 0 )
   {
-    sub_1C32C20(&BattleCharaChangeConfirmListViewItemDrawSingleValue_GetValueFunc_TypeInfo);
-    sub_1C32C20(&Method_BattleCharaChangeConfirmListViewItemDrawSingleValue___c__GetCost_b__9_0__);
-    sub_1C32C20(&BattleCharaChangeConfirmListViewItemDrawSingleValue___c_TypeInfo);
-    byte_4C32D9F = 1;
+    sub_1C37058(&BattleCharaChangeConfirmListViewItemDrawSingleValue_GetValueFunc_TypeInfo);
+    sub_1C37058(&Method_BattleCharaChangeConfirmListViewItemDrawSingleValue___c__GetCost_b__9_0__);
+    sub_1C37058(&BattleCharaChangeConfirmListViewItemDrawSingleValue___c_TypeInfo);
+    byte_4C3E246 = 1;
   }
   v2 = BattleCharaChangeConfirmListViewItemDrawSingleValue___c_TypeInfo;
   if ( !BattleCharaChangeConfirmListViewItemDrawSingleValue___c_TypeInfo->_2.cctor_finished )
@@ -135,7 +135,7 @@ BattleCharaChangeConfirmListViewItemDrawSingleValue_GetValueFunc_o *BattleCharaC
       v2 = BattleCharaChangeConfirmListViewItemDrawSingleValue___c_TypeInfo;
     }
     v4 = (Il2CppObject *)v2->static_fields->__9;
-    _9__9_0 = (BattleCharaChangeConfirmListViewItemDrawSingleValue_GetValueFunc_o *)sub_1C32E6C(BattleCharaChangeConfirmListViewItemDrawSingleValue_GetValueFunc_TypeInfo);
+    _9__9_0 = (BattleCharaChangeConfirmListViewItemDrawSingleValue_GetValueFunc_o *)sub_1C372A4(BattleCharaChangeConfirmListViewItemDrawSingleValue_GetValueFunc_TypeInfo);
     BattleCharaChangeConfirmListViewItemDrawSingleValue_GetValueFunc___ctor(
       _9__9_0,
       v4,
@@ -143,7 +143,7 @@ BattleCharaChangeConfirmListViewItemDrawSingleValue_GetValueFunc_o *BattleCharaC
       v5);
     static_fields = BattleCharaChangeConfirmListViewItemDrawSingleValue___c_TypeInfo->static_fields;
     static_fields->__9__9_0 = _9__9_0;
-    sub_1C32BC4((CGThumbnailListItem_o *)&static_fields->__9__9_0, (int32_t)_9__9_0, v7, v8);
+    sub_1C36FFC((CGThumbnailListItem_o *)&static_fields->__9__9_0, (int32_t)_9__9_0, v7, v8);
   }
   return _9__9_0;
 }
@@ -161,12 +161,12 @@ BattleCharaChangeConfirmListViewItemDrawSingleValue_GetValueFunc_o *BattleCharaC
   int32_t v7; // w2
   const MethodInfo *v8; // x3
 
-  if ( (byte_4C32DA2 & 1) == 0 )
+  if ( (byte_4C3E249 & 1) == 0 )
   {
-    sub_1C32C20(&BattleCharaChangeConfirmListViewItemDrawSingleValue_GetValueFunc_TypeInfo);
-    sub_1C32C20(&Method_BattleCharaChangeConfirmListViewItemDrawSingleValue___c__GetHp_b__12_0__);
-    sub_1C32C20(&BattleCharaChangeConfirmListViewItemDrawSingleValue___c_TypeInfo);
-    byte_4C32DA2 = 1;
+    sub_1C37058(&BattleCharaChangeConfirmListViewItemDrawSingleValue_GetValueFunc_TypeInfo);
+    sub_1C37058(&Method_BattleCharaChangeConfirmListViewItemDrawSingleValue___c__GetHp_b__12_0__);
+    sub_1C37058(&BattleCharaChangeConfirmListViewItemDrawSingleValue___c_TypeInfo);
+    byte_4C3E249 = 1;
   }
   v2 = BattleCharaChangeConfirmListViewItemDrawSingleValue___c_TypeInfo;
   if ( !BattleCharaChangeConfirmListViewItemDrawSingleValue___c_TypeInfo->_2.cctor_finished )
@@ -183,7 +183,7 @@ BattleCharaChangeConfirmListViewItemDrawSingleValue_GetValueFunc_o *BattleCharaC
       v2 = BattleCharaChangeConfirmListViewItemDrawSingleValue___c_TypeInfo;
     }
     v4 = (Il2CppObject *)v2->static_fields->__9;
-    _9__12_0 = (BattleCharaChangeConfirmListViewItemDrawSingleValue_GetValueFunc_o *)sub_1C32E6C(BattleCharaChangeConfirmListViewItemDrawSingleValue_GetValueFunc_TypeInfo);
+    _9__12_0 = (BattleCharaChangeConfirmListViewItemDrawSingleValue_GetValueFunc_o *)sub_1C372A4(BattleCharaChangeConfirmListViewItemDrawSingleValue_GetValueFunc_TypeInfo);
     BattleCharaChangeConfirmListViewItemDrawSingleValue_GetValueFunc___ctor(
       _9__12_0,
       v4,
@@ -191,7 +191,7 @@ BattleCharaChangeConfirmListViewItemDrawSingleValue_GetValueFunc_o *BattleCharaC
       v5);
     static_fields = BattleCharaChangeConfirmListViewItemDrawSingleValue___c_TypeInfo->static_fields;
     static_fields->__9__12_0 = _9__12_0;
-    sub_1C32BC4((CGThumbnailListItem_o *)&static_fields->__9__12_0, (int32_t)_9__12_0, v7, v8);
+    sub_1C36FFC((CGThumbnailListItem_o *)&static_fields->__9__12_0, (int32_t)_9__12_0, v7, v8);
   }
   return _9__12_0;
 }
@@ -209,12 +209,12 @@ BattleCharaChangeConfirmListViewItemDrawSingleValue_GetValueFunc_o *BattleCharaC
   int32_t v7; // w2
   const MethodInfo *v8; // x3
 
-  if ( (byte_4C32DA0 & 1) == 0 )
+  if ( (byte_4C3E247 & 1) == 0 )
   {
-    sub_1C32C20(&BattleCharaChangeConfirmListViewItemDrawSingleValue_GetValueFunc_TypeInfo);
-    sub_1C32C20(&Method_BattleCharaChangeConfirmListViewItemDrawSingleValue___c__GetRarity_b__10_0__);
-    sub_1C32C20(&BattleCharaChangeConfirmListViewItemDrawSingleValue___c_TypeInfo);
-    byte_4C32DA0 = 1;
+    sub_1C37058(&BattleCharaChangeConfirmListViewItemDrawSingleValue_GetValueFunc_TypeInfo);
+    sub_1C37058(&Method_BattleCharaChangeConfirmListViewItemDrawSingleValue___c__GetRarity_b__10_0__);
+    sub_1C37058(&BattleCharaChangeConfirmListViewItemDrawSingleValue___c_TypeInfo);
+    byte_4C3E247 = 1;
   }
   v2 = BattleCharaChangeConfirmListViewItemDrawSingleValue___c_TypeInfo;
   if ( !BattleCharaChangeConfirmListViewItemDrawSingleValue___c_TypeInfo->_2.cctor_finished )
@@ -231,7 +231,7 @@ BattleCharaChangeConfirmListViewItemDrawSingleValue_GetValueFunc_o *BattleCharaC
       v2 = BattleCharaChangeConfirmListViewItemDrawSingleValue___c_TypeInfo;
     }
     v4 = (Il2CppObject *)v2->static_fields->__9;
-    _9__10_0 = (BattleCharaChangeConfirmListViewItemDrawSingleValue_GetValueFunc_o *)sub_1C32E6C(BattleCharaChangeConfirmListViewItemDrawSingleValue_GetValueFunc_TypeInfo);
+    _9__10_0 = (BattleCharaChangeConfirmListViewItemDrawSingleValue_GetValueFunc_o *)sub_1C372A4(BattleCharaChangeConfirmListViewItemDrawSingleValue_GetValueFunc_TypeInfo);
     BattleCharaChangeConfirmListViewItemDrawSingleValue_GetValueFunc___ctor(
       _9__10_0,
       v4,
@@ -239,7 +239,7 @@ BattleCharaChangeConfirmListViewItemDrawSingleValue_GetValueFunc_o *BattleCharaC
       v5);
     static_fields = BattleCharaChangeConfirmListViewItemDrawSingleValue___c_TypeInfo->static_fields;
     static_fields->__9__10_0 = _9__10_0;
-    sub_1C32BC4((CGThumbnailListItem_o *)&static_fields->__9__10_0, (int32_t)_9__10_0, v7, v8);
+    sub_1C36FFC((CGThumbnailListItem_o *)&static_fields->__9__10_0, (int32_t)_9__10_0, v7, v8);
   }
   return _9__10_0;
 }
@@ -252,10 +252,10 @@ void BattleCharaChangeConfirmListViewItemDrawSingleValue__Init(
 {
   UILabel_o *nowTitleLabel; // x0
 
-  if ( (byte_4C32D9E & 1) == 0 )
+  if ( (byte_4C3E245 & 1) == 0 )
   {
-    sub_1C32C20(&StringLiteral_1/*""*/);
-    byte_4C32D9E = 1;
+    sub_1C37058(&StringLiteral_1/*""*/);
+    byte_4C3E245 = 1;
   }
   BattleCharaChangeConfirmListViewItemDraw__Init((BattleCharaChangeConfirmListViewItemDraw_o *)this, kind, method);
   nowTitleLabel = this->fields.nowTitleLabel;
@@ -267,7 +267,7 @@ void BattleCharaChangeConfirmListViewItemDrawSingleValue__Init(
     || (UILabel__set_text(nowTitleLabel, (System_String_o *)StringLiteral_1/*""*/, 0),
         (nowTitleLabel = this->fields.nextValueLabel) == 0) )
   {
-    sub_1C32E7C(nowTitleLabel);
+    sub_1C372B4(nowTitleLabel);
   }
   UILabel__set_text(nowTitleLabel, (System_String_o *)StringLiteral_1/*""*/, 0);
 }
@@ -283,8 +283,8 @@ void BattleCharaChangeConfirmListViewItemDrawSingleValue__ModifyColor(
 
   nextValueLabel = this->fields.nextValueLabel;
   if ( !nextValueLabel )
-    sub_1C32E7C(this);
-  v4 = System_String__Concat_63518544(color, nextValueLabel->fields.mText, 0);
+    sub_1C372B4(this);
+  v4 = System_String__Concat_63561656(color, nextValueLabel->fields.mText, 0);
   UILabel__set_text(nextValueLabel, v4, 0);
 }
 
@@ -356,7 +356,7 @@ LABEL_13:
                   v11),
                 (nowValueLabel = this->fields.nextValueLabel) == 0) )
           {
-            sub_1C32E7C(nowValueLabel);
+            sub_1C372B4(nowValueLabel);
           }
           UILabel__set_text(nowValueLabel, v13, 0);
           if ( System_String__op_Inequality(v13, value, 0) )
@@ -383,7 +383,7 @@ void BattleCharaChangeConfirmListViewItemDrawSingleValue__SetTitle(
         this = (BattleCharaChangeConfirmListViewItemDrawSingleValue_o *)System_String__IsNullOrEmpty(title, 0),
         !gameObject) )
   {
-    sub_1C32E7C(this);
+    sub_1C372B4(this);
   }
   UnityEngine_GameObject__SetActive(gameObject, ((unsigned __int8)this & 1) == 0, 0);
   UILabel__set_text(titleLabel, title, 0);
@@ -397,7 +397,7 @@ void BattleCharaChangeConfirmListViewItemDrawSingleValue__SetUI(
         const MethodInfo *method)
 {
   if ( !valueLabel )
-    sub_1C32E7C(this);
+    sub_1C372B4(this);
   UILabel__set_text(valueLabel, value, 0);
 }
 
@@ -420,14 +420,14 @@ void BattleCharaChangeConfirmListViewItemDrawSingleValue_GetValueFunc___ctor(
   this->fields.method = method;
   this->fields.method_ptr = v4;
   this->fields.m_target = object;
-  sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.m_target, (int32_t)object, method, a4);
+  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.m_target, (int32_t)object, method, a4);
   v8 = *(unsigned __int8 *)(method + 82);
   this->fields.method_code = (intptr_t)this;
-  if ( (sub_1C32CE0(method) & 1) != 0 )
+  if ( (sub_1C37118(method) & 1) != 0 )
   {
     if ( v8 == 4 )
     {
-      v9 = sub_1A70810;
+      v9 = sub_1A74980;
 LABEL_16:
       this->fields.invoke_impl = (intptr_t)v9;
       goto LABEL_17;
@@ -439,41 +439,41 @@ LABEL_16:
     {
       if ( this->fields.method_is_virtual )
       {
-        v10 = sub_1C32CD8(method);
-        v11 = sub_1C33194(method);
+        v10 = sub_1C37110(method);
+        v11 = sub_1C375CC(method);
         if ( (v10 & 1) != 0 )
         {
           if ( (v11 & 1) != 0 )
-            v9 = sub_1A7096C;
+            v9 = sub_1A74ADC;
           else
-            v9 = sub_1A70908;
+            v9 = sub_1A74A78;
         }
         else if ( (v11 & 1) != 0 )
         {
-          v9 = sub_1A70864;
+          v9 = sub_1A749D4;
         }
         else
         {
-          v9 = sub_1A7082C;
+          v9 = sub_1A7499C;
         }
       }
       else
       {
-        v9 = sub_1A707E4;
+        v9 = sub_1A74954;
       }
       goto LABEL_16;
     }
     if ( !object )
     {
-      v13 = sub_1C32E98(0, "Delegate to an instance method cannot have null 'this'.");
-      sub_1C32D48(v13, 0);
+      v13 = sub_1C372D0(0, "Delegate to an instance method cannot have null 'this'.");
+      sub_1C37180(v13, 0);
     }
   }
   m_target = this->fields.m_target;
   this->fields.invoke_impl = this->fields.method_ptr;
   this->fields.method_code = (intptr_t)m_target;
 LABEL_17:
-  this->fields.extra_arg = (intptr_t)sub_1A70774;
+  this->fields.extra_arg = (intptr_t)sub_1A748E4;
 }
 
 
@@ -497,7 +497,7 @@ System_IAsyncResult_o *BattleCharaChangeConfirmListViewItemDrawSingleValue_GetVa
   v9 = *next;
   v11[2] = *now;
   v11[3] = v9;
-  return (System_IAsyncResult_o *)sub_1C32BD4(this, v11, callback, object);
+  return (System_IAsyncResult_o *)sub_1C3700C(this, v11, callback, object);
 }
 
 
@@ -514,7 +514,7 @@ void BattleCharaChangeConfirmListViewItemDrawSingleValue_GetValueFunc__EndInvoke
   v6[2] = next;
   v6[0] = title;
   v6[1] = now;
-  sub_1C32BD8(result, v6, now);
+  sub_1C37010(result, v6, now);
 }
 
 
@@ -542,15 +542,15 @@ void BattleCharaChangeConfirmListViewItemDrawSingleValue___c___cctor(const Metho
   int32_t v2; // w2
   const MethodInfo *v3; // x3
 
-  if ( (byte_4C32DA4 & 1) == 0 )
+  if ( (byte_4C3E24B & 1) == 0 )
   {
-    sub_1C32C20(&BattleCharaChangeConfirmListViewItemDrawSingleValue___c_TypeInfo);
-    byte_4C32DA4 = 1;
+    sub_1C37058(&BattleCharaChangeConfirmListViewItemDrawSingleValue___c_TypeInfo);
+    byte_4C3E24B = 1;
   }
-  v1 = (Il2CppObject *)sub_1C32E6C(BattleCharaChangeConfirmListViewItemDrawSingleValue___c_TypeInfo);
+  v1 = (Il2CppObject *)sub_1C372A4(BattleCharaChangeConfirmListViewItemDrawSingleValue___c_TypeInfo);
   System_Object___ctor(v1, 0);
   BattleCharaChangeConfirmListViewItemDrawSingleValue___c_TypeInfo->static_fields->__9 = (struct BattleCharaChangeConfirmListViewItemDrawSingleValue___c_o *)v1;
-  sub_1C32BC4(
+  sub_1C36FFC(
     (CGThumbnailListItem_o *)BattleCharaChangeConfirmListViewItemDrawSingleValue___c_TypeInfo->static_fields,
     (int32_t)v1,
     v2,
@@ -590,37 +590,37 @@ void BattleCharaChangeConfirmListViewItemDrawSingleValue___c___GetAtk_b__11_0(
   const MethodInfo *v23; // x3
   int32_t Atk_k__BackingField; // [xsp+Ch] [xbp-34h] BYREF
 
-  if ( (byte_4C32DA7 & 1) == 0 )
+  if ( (byte_4C3E24E & 1) == 0 )
   {
-    sub_1C32C20(&LocalizationManager_TypeInfo);
-    sub_1C32C20(&StringLiteral_397/*"#,0"*/);
-    sub_1C32C20(&StringLiteral_11892/*"SERVANT_STATUS_BATTLE_CHANGE_CONFIRM_ATK_TITLE"*/);
-    byte_4C32DA7 = 1;
+    sub_1C37058(&LocalizationManager_TypeInfo);
+    sub_1C37058(&StringLiteral_397/*"#,0"*/);
+    sub_1C37058(&StringLiteral_11893/*"SERVANT_STATUS_BATTLE_CHANGE_CONFIRM_ATK_TITLE"*/);
+    byte_4C3E24E = 1;
   }
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-  v10 = LocalizationManager__Get((System_String_o *)StringLiteral_11892/*"SERVANT_STATUS_BATTLE_CHANGE_CONFIRM_ATK_TITLE"*/, 0);
+  v10 = LocalizationManager__Get((System_String_o *)StringLiteral_11893/*"SERVANT_STATUS_BATTLE_CHANGE_CONFIRM_ATK_TITLE"*/, 0);
   *title = v10;
-  sub_1C32BC4((CGThumbnailListItem_o *)title, (int32_t)v10, v11, v12);
+  sub_1C36FFC((CGThumbnailListItem_o *)title, (int32_t)v10, v11, v12);
   if ( !item )
     goto LABEL_11;
   NowData_k__BackingField = item->fields._NowData_k__BackingField;
   if ( !NowData_k__BackingField
     || (Status_k__BackingField = NowData_k__BackingField->fields._Status_k__BackingField) == 0
     || (Atk_k__BackingField = Status_k__BackingField->fields._Atk_k__BackingField,
-        v16 = System_Int32__ToString_65028652((int32_t)&Atk_k__BackingField, (System_String_o *)StringLiteral_397/*"#,0"*/, 0),
+        v16 = System_Int32__ToString_65071764((int32_t)&Atk_k__BackingField, (System_String_o *)StringLiteral_397/*"#,0"*/, 0),
         *now = v16,
-        sub_1C32BC4((CGThumbnailListItem_o *)now, (int32_t)v16, v17, v18),
+        sub_1C36FFC((CGThumbnailListItem_o *)now, (int32_t)v16, v17, v18),
         (NextData_k__BackingField = item->fields._NextData_k__BackingField) == 0)
     || (v20 = NextData_k__BackingField->fields._Status_k__BackingField) == 0 )
   {
 LABEL_11:
-    sub_1C32E7C(v13);
+    sub_1C372B4(v13);
   }
   Atk_k__BackingField = v20->fields._Atk_k__BackingField;
-  v21 = System_Int32__ToString_65028652((int32_t)&Atk_k__BackingField, (System_String_o *)StringLiteral_397/*"#,0"*/, 0);
+  v21 = System_Int32__ToString_65071764((int32_t)&Atk_k__BackingField, (System_String_o *)StringLiteral_397/*"#,0"*/, 0);
   *next = v21;
-  sub_1C32BC4((CGThumbnailListItem_o *)next, (int32_t)v21, v22, v23);
+  sub_1C36FFC((CGThumbnailListItem_o *)next, (int32_t)v21, v22, v23);
 }
 
 
@@ -648,17 +648,17 @@ void BattleCharaChangeConfirmListViewItemDrawSingleValue___c___GetCost_b__9_0(
   const MethodInfo *v23; // x3
   int32_t Cost_k__BackingField; // [xsp+Ch] [xbp-34h] BYREF
 
-  if ( (byte_4C32DA5 & 1) == 0 )
+  if ( (byte_4C3E24C & 1) == 0 )
   {
-    sub_1C32C20(&LocalizationManager_TypeInfo);
-    sub_1C32C20(&StringLiteral_11894/*"SERVANT_STATUS_BATTLE_CHANGE_CONFIRM_COST_TITLE"*/);
-    byte_4C32DA5 = 1;
+    sub_1C37058(&LocalizationManager_TypeInfo);
+    sub_1C37058(&StringLiteral_11895/*"SERVANT_STATUS_BATTLE_CHANGE_CONFIRM_COST_TITLE"*/);
+    byte_4C3E24C = 1;
   }
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-  v10 = LocalizationManager__Get((System_String_o *)StringLiteral_11894/*"SERVANT_STATUS_BATTLE_CHANGE_CONFIRM_COST_TITLE"*/, 0);
+  v10 = LocalizationManager__Get((System_String_o *)StringLiteral_11895/*"SERVANT_STATUS_BATTLE_CHANGE_CONFIRM_COST_TITLE"*/, 0);
   *title = v10;
-  sub_1C32BC4((CGThumbnailListItem_o *)title, (int32_t)v10, v11, v12);
+  sub_1C36FFC((CGThumbnailListItem_o *)title, (int32_t)v10, v11, v12);
   if ( !item )
     goto LABEL_11;
   NowData_k__BackingField = item->fields._NowData_k__BackingField;
@@ -667,17 +667,17 @@ void BattleCharaChangeConfirmListViewItemDrawSingleValue___c___GetCost_b__9_0(
     || (Cost_k__BackingField = Status_k__BackingField->fields._Cost_k__BackingField,
         v16 = System_Int32__ToString((int32_t)&Cost_k__BackingField, 0),
         *now = v16,
-        sub_1C32BC4((CGThumbnailListItem_o *)now, (int32_t)v16, v17, v18),
+        sub_1C36FFC((CGThumbnailListItem_o *)now, (int32_t)v16, v17, v18),
         (NextData_k__BackingField = item->fields._NextData_k__BackingField) == 0)
     || (v20 = NextData_k__BackingField->fields._Status_k__BackingField) == 0 )
   {
 LABEL_11:
-    sub_1C32E7C(v13);
+    sub_1C372B4(v13);
   }
   Cost_k__BackingField = v20->fields._Cost_k__BackingField;
   v21 = System_Int32__ToString((int32_t)&Cost_k__BackingField, 0);
   *next = v21;
-  sub_1C32BC4((CGThumbnailListItem_o *)next, (int32_t)v21, v22, v23);
+  sub_1C36FFC((CGThumbnailListItem_o *)next, (int32_t)v21, v22, v23);
 }
 
 
@@ -705,37 +705,37 @@ void BattleCharaChangeConfirmListViewItemDrawSingleValue___c___GetHp_b__12_0(
   const MethodInfo *v23; // x3
   int32_t Hp_k__BackingField; // [xsp+Ch] [xbp-34h] BYREF
 
-  if ( (byte_4C32DA8 & 1) == 0 )
+  if ( (byte_4C3E24F & 1) == 0 )
   {
-    sub_1C32C20(&LocalizationManager_TypeInfo);
-    sub_1C32C20(&StringLiteral_11895/*"SERVANT_STATUS_BATTLE_CHANGE_CONFIRM_HP_TITLE"*/);
-    sub_1C32C20(&StringLiteral_397/*"#,0"*/);
-    byte_4C32DA8 = 1;
+    sub_1C37058(&LocalizationManager_TypeInfo);
+    sub_1C37058(&StringLiteral_11896/*"SERVANT_STATUS_BATTLE_CHANGE_CONFIRM_HP_TITLE"*/);
+    sub_1C37058(&StringLiteral_397/*"#,0"*/);
+    byte_4C3E24F = 1;
   }
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-  v10 = LocalizationManager__Get((System_String_o *)StringLiteral_11895/*"SERVANT_STATUS_BATTLE_CHANGE_CONFIRM_HP_TITLE"*/, 0);
+  v10 = LocalizationManager__Get((System_String_o *)StringLiteral_11896/*"SERVANT_STATUS_BATTLE_CHANGE_CONFIRM_HP_TITLE"*/, 0);
   *title = v10;
-  sub_1C32BC4((CGThumbnailListItem_o *)title, (int32_t)v10, v11, v12);
+  sub_1C36FFC((CGThumbnailListItem_o *)title, (int32_t)v10, v11, v12);
   if ( !item )
     goto LABEL_11;
   NowData_k__BackingField = item->fields._NowData_k__BackingField;
   if ( !NowData_k__BackingField
     || (Status_k__BackingField = NowData_k__BackingField->fields._Status_k__BackingField) == 0
     || (Hp_k__BackingField = Status_k__BackingField->fields._Hp_k__BackingField,
-        v16 = System_Int32__ToString_65028652((int32_t)&Hp_k__BackingField, (System_String_o *)StringLiteral_397/*"#,0"*/, 0),
+        v16 = System_Int32__ToString_65071764((int32_t)&Hp_k__BackingField, (System_String_o *)StringLiteral_397/*"#,0"*/, 0),
         *now = v16,
-        sub_1C32BC4((CGThumbnailListItem_o *)now, (int32_t)v16, v17, v18),
+        sub_1C36FFC((CGThumbnailListItem_o *)now, (int32_t)v16, v17, v18),
         (NextData_k__BackingField = item->fields._NextData_k__BackingField) == 0)
     || (v20 = NextData_k__BackingField->fields._Status_k__BackingField) == 0 )
   {
 LABEL_11:
-    sub_1C32E7C(v13);
+    sub_1C372B4(v13);
   }
   Hp_k__BackingField = v20->fields._Hp_k__BackingField;
-  v21 = System_Int32__ToString_65028652((int32_t)&Hp_k__BackingField, (System_String_o *)StringLiteral_397/*"#,0"*/, 0);
+  v21 = System_Int32__ToString_65071764((int32_t)&Hp_k__BackingField, (System_String_o *)StringLiteral_397/*"#,0"*/, 0);
   *next = v21;
-  sub_1C32BC4((CGThumbnailListItem_o *)next, (int32_t)v21, v22, v23);
+  sub_1C36FFC((CGThumbnailListItem_o *)next, (int32_t)v21, v22, v23);
 }
 
 
@@ -763,18 +763,18 @@ void BattleCharaChangeConfirmListViewItemDrawSingleValue___c___GetRarity_b__10_0
   int32_t v23; // w2
   const MethodInfo *v24; // x3
 
-  if ( (byte_4C32DA6 & 1) == 0 )
+  if ( (byte_4C3E24D & 1) == 0 )
   {
-    sub_1C32C20(&LocalizationManager_TypeInfo);
-    sub_1C32C20(&Rarity_TypeInfo);
-    sub_1C32C20(&StringLiteral_11900/*"SERVANT_STATUS_BATTLE_CHANGE_CONFIRM_RARITY_TITLE"*/);
-    byte_4C32DA6 = 1;
+    sub_1C37058(&LocalizationManager_TypeInfo);
+    sub_1C37058(&Rarity_TypeInfo);
+    sub_1C37058(&StringLiteral_11901/*"SERVANT_STATUS_BATTLE_CHANGE_CONFIRM_RARITY_TITLE"*/);
+    byte_4C3E24D = 1;
   }
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-  v10 = LocalizationManager__Get((System_String_o *)StringLiteral_11900/*"SERVANT_STATUS_BATTLE_CHANGE_CONFIRM_RARITY_TITLE"*/, 0);
+  v10 = LocalizationManager__Get((System_String_o *)StringLiteral_11901/*"SERVANT_STATUS_BATTLE_CHANGE_CONFIRM_RARITY_TITLE"*/, 0);
   *title = v10;
-  sub_1C32BC4((CGThumbnailListItem_o *)title, (int32_t)v10, v11, v12);
+  sub_1C36FFC((CGThumbnailListItem_o *)title, (int32_t)v10, v11, v12);
   if ( !item )
     goto LABEL_13;
   NowData_k__BackingField = item->fields._NowData_k__BackingField;
@@ -788,14 +788,14 @@ void BattleCharaChangeConfirmListViewItemDrawSingleValue___c___GetRarity_b__10_0
     j_il2cpp_runtime_class_init_0(Rarity_TypeInfo);
   RarityType = Rarity__getRarityType(Rarity_k__BackingField, 0);
   *now = RarityType;
-  sub_1C32BC4((CGThumbnailListItem_o *)now, (int32_t)RarityType, v18, v19);
+  sub_1C36FFC((CGThumbnailListItem_o *)now, (int32_t)RarityType, v18, v19);
   NextData_k__BackingField = item->fields._NextData_k__BackingField;
   if ( !NextData_k__BackingField || (v21 = NextData_k__BackingField->fields._Status_k__BackingField) == 0 )
 LABEL_13:
-    sub_1C32E7C(v13);
+    sub_1C372B4(v13);
   v22 = Rarity__getRarityType(v21->fields._Rarity_k__BackingField, 0);
   *next = v22;
-  sub_1C32BC4((CGThumbnailListItem_o *)next, (int32_t)v22, v23, v24);
+  sub_1C36FFC((CGThumbnailListItem_o *)next, (int32_t)v22, v23, v24);
 }
 
 
@@ -827,13 +827,13 @@ void BattleCharaChangeConfirmListViewItemDrawSingleValue___c__DisplayClass13_0__
   int32_t v20; // w2
   const MethodInfo *v21; // x3
 
-  if ( (byte_4C32DAA & 1) == 0 )
+  if ( (byte_4C3E251 & 1) == 0 )
   {
-    sub_1C32C20(&StringLiteral_1/*""*/);
-    byte_4C32DAA = 1;
+    sub_1C37058(&StringLiteral_1/*""*/);
+    byte_4C3E251 = 1;
   }
   *title = (System_String_o *)StringLiteral_1/*""*/;
-  sub_1C32BC4((CGThumbnailListItem_o *)title, StringLiteral_1/*""*/, (int32_t)title, (const MethodInfo *)now);
+  sub_1C36FFC((CGThumbnailListItem_o *)title, StringLiteral_1/*""*/, (int32_t)title, (const MethodInfo *)now);
   if ( !item
     || (NowData_k__BackingField = item->fields._NowData_k__BackingField) == 0
     || (v14 = BattleCharaChangeConfirmListViewItemDrawSingleValue___c__DisplayClass13_0___GetBattleCharaName_g__GetDispLimitCountName_0(
@@ -842,10 +842,10 @@ void BattleCharaChangeConfirmListViewItemDrawSingleValue___c__DisplayClass13_0__
                 NowData_k__BackingField->fields._DispLimitCount_k__BackingField,
                 v12),
         *now = v14,
-        sub_1C32BC4((CGThumbnailListItem_o *)now, (int32_t)v14, v15, v16),
+        sub_1C36FFC((CGThumbnailListItem_o *)now, (int32_t)v14, v15, v16),
         (NextData_k__BackingField = item->fields._NextData_k__BackingField) == 0) )
   {
-    sub_1C32E7C(v11);
+    sub_1C372B4(v11);
   }
   v19 = BattleCharaChangeConfirmListViewItemDrawSingleValue___c__DisplayClass13_0___GetBattleCharaName_g__GetDispLimitCountName_0(
           this,
@@ -853,7 +853,7 @@ void BattleCharaChangeConfirmListViewItemDrawSingleValue___c__DisplayClass13_0__
           NextData_k__BackingField->fields._DispLimitCount_k__BackingField,
           v17);
   *next = v19;
-  sub_1C32BC4((CGThumbnailListItem_o *)next, (int32_t)v19, v20, v21);
+  sub_1C36FFC((CGThumbnailListItem_o *)next, (int32_t)v19, v20, v21);
 }
 
 
@@ -871,11 +871,11 @@ System_String_o *BattleCharaChangeConfirmListViewItemDrawSingleValue___c__Displa
   int32_t v13; // [xsp+1Ch] [xbp-24h] BYREF
 
   v13 = dispLimitCount;
-  if ( (byte_4C32DA9 & 1) == 0 )
+  if ( (byte_4C3E250 & 1) == 0 )
   {
-    sub_1C32C20(&LocalizationManager_TypeInfo);
-    sub_1C32C20(&StringLiteral_11939/*"SERVANT_STATUS_IMAGE_LIMIT_COUNT_LEVEL_"*/);
-    byte_4C32DA9 = 1;
+    sub_1C37058(&LocalizationManager_TypeInfo);
+    sub_1C37058(&StringLiteral_11940/*"SERVANT_STATUS_IMAGE_LIMIT_COUNT_LEVEL_"*/);
+    byte_4C3E250 = 1;
   }
   entity = 0;
   if ( dispLimitCount >= 11 )
@@ -894,11 +894,11 @@ System_String_o *BattleCharaChangeConfirmListViewItemDrawSingleValue___c__Displa
       if ( entity )
         return entity->fields.name;
 LABEL_12:
-      sub_1C32E7C(servantCostumeMaster);
+      sub_1C372B4(servantCostumeMaster);
     }
   }
   v9 = System_Int32__ToString((int32_t)&v13, 0);
-  v10 = System_String__Concat_63518544((System_String_o *)StringLiteral_11939/*"SERVANT_STATUS_IMAGE_LIMIT_COUNT_LEVEL_"*/, v9, 0);
+  v10 = System_String__Concat_63561656((System_String_o *)StringLiteral_11940/*"SERVANT_STATUS_IMAGE_LIMIT_COUNT_LEVEL_"*/, v9, 0);
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   v11 = LocalizationManager__Get(v10, 0);

@@ -18,10 +18,10 @@ void GameOptionToggleButton__ChangeSelectedState(GameOptionToggleButton_o *this,
   float *p_a; // x11
   UnityEngine_Color_o v14; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 
-  if ( (byte_4C329EF & 1) == 0 )
+  if ( (byte_4C3DFD9 & 1) == 0 )
   {
-    sub_1C32C20(&UnityEngine_Object_TypeInfo);
-    byte_4C329EF = 1;
+    sub_1C37058(&UnityEngine_Object_TypeInfo);
+    byte_4C3DFD9 = 1;
   }
   Button = GameOptionToggleButton__get_Button(this, (const MethodInfo *)value);
   if ( !Button )
@@ -60,7 +60,7 @@ void GameOptionToggleButton__ChangeSelectedState(GameOptionToggleButton_o *this,
       return;
     }
 LABEL_15:
-    sub_1C32E7C(Button);
+    sub_1C372B4(Button);
   }
 }
 
@@ -74,16 +74,16 @@ void GameOptionToggleButton__SetButtonEnableWithCollider(
   _BOOL8 v6; // x0
   Il2CppObject *v7; // x20
 
-  if ( (byte_4C329F0 & 1) == 0 )
+  if ( (byte_4C3DFDA & 1) == 0 )
   {
-    sub_1C32C20(&Method_UnityEngine_Component_GetComponent_Collider___);
-    sub_1C32C20(&Method_UnityEngine_Component_GetComponent_UITouchPress___);
-    sub_1C32C20(&UnityEngine_Object_TypeInfo);
-    byte_4C329F0 = 1;
+    sub_1C37058(&Method_UnityEngine_Component_GetComponent_Collider___);
+    sub_1C37058(&Method_UnityEngine_Component_GetComponent_UITouchPress___);
+    sub_1C37058(&UnityEngine_Object_TypeInfo);
+    byte_4C3DFDA = 1;
   }
   Component_object = UnityEngine_Component__GetComponent_object_(
                        (UnityEngine_Component_o *)this,
-                       (const MethodInfo_30D3BC0 *)Method_UnityEngine_Component_GetComponent_Collider___);
+                       (const MethodInfo_30DE428 *)Method_UnityEngine_Component_GetComponent_Collider___);
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   v6 = UnityEngine_Object__op_Inequality((UnityEngine_Object_o *)Component_object, 0, 0);
@@ -95,7 +95,7 @@ void GameOptionToggleButton__SetButtonEnableWithCollider(
   }
   v7 = UnityEngine_Component__GetComponent_object_(
          (UnityEngine_Component_o *)this,
-         (const MethodInfo_30D3BC0 *)Method_UnityEngine_Component_GetComponent_UITouchPress___);
+         (const MethodInfo_30DE428 *)Method_UnityEngine_Component_GetComponent_UITouchPress___);
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   v6 = UnityEngine_Object__op_Inequality((UnityEngine_Object_o *)v7, 0, 0);
@@ -107,7 +107,7 @@ void GameOptionToggleButton__SetButtonEnableWithCollider(
       return;
     }
 LABEL_14:
-    sub_1C32E7C(v6);
+    sub_1C372B4(v6);
   }
 }
 
@@ -119,11 +119,11 @@ UIButton_o *GameOptionToggleButton__get_Button(GameOptionToggleButton_o *this, c
   int32_t v5; // w2
   const MethodInfo *v6; // x3
 
-  if ( (byte_4C329EE & 1) == 0 )
+  if ( (byte_4C3DFD8 & 1) == 0 )
   {
-    sub_1C32C20(&Method_UnityEngine_Component_GetComponent_UIButton___);
-    sub_1C32C20(&UnityEngine_Object_TypeInfo);
-    byte_4C329EE = 1;
+    sub_1C37058(&Method_UnityEngine_Component_GetComponent_UIButton___);
+    sub_1C37058(&UnityEngine_Object_TypeInfo);
+    byte_4C3DFD8 = 1;
   }
   button = (UnityEngine_Object_o *)this->fields.button;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -132,9 +132,9 @@ UIButton_o *GameOptionToggleButton__get_Button(GameOptionToggleButton_o *this, c
   {
     Component_object = UnityEngine_Component__GetComponent_object_(
                          (UnityEngine_Component_o *)this,
-                         (const MethodInfo_30D3BC0 *)Method_UnityEngine_Component_GetComponent_UIButton___);
+                         (const MethodInfo_30DE428 *)Method_UnityEngine_Component_GetComponent_UIButton___);
     this->fields.button = (struct UIButton_o *)Component_object;
-    sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.button, (int32_t)Component_object, v5, v6);
+    sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.button, (int32_t)Component_object, v5, v6);
   }
   return this->fields.button;
 }
@@ -143,28 +143,28 @@ UIButton_o *GameOptionToggleButton__get_Button(GameOptionToggleButton_o *this, c
 UILabel_o *GameOptionToggleButton__get_Label(GameOptionToggleButton_o *this, const MethodInfo *method)
 {
   UnityEngine_Object_o *defaultLabel; // x21
-  Il2CppObject *ComponentInChildren_object__51199524; // x0
+  Il2CppObject *ComponentInChildren_object__51242636; // x0
   int32_t v5; // w2
   const MethodInfo *v6; // x3
 
-  if ( (byte_4C329ED & 1) == 0 )
+  if ( (byte_4C3DFD7 & 1) == 0 )
   {
-    sub_1C32C20(&Method_UnityEngine_Component_GetComponentInChildren_UILabel___);
-    sub_1C32C20(&UnityEngine_Object_TypeInfo);
-    byte_4C329ED = 1;
+    sub_1C37058(&Method_UnityEngine_Component_GetComponentInChildren_UILabel___);
+    sub_1C37058(&UnityEngine_Object_TypeInfo);
+    byte_4C3DFD7 = 1;
   }
   defaultLabel = (UnityEngine_Object_o *)this->fields.defaultLabel;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   if ( UnityEngine_Object__op_Equality(defaultLabel, 0, 0) )
   {
-    ComponentInChildren_object__51199524 = UnityEngine_Component__GetComponentInChildren_object__51199524(
+    ComponentInChildren_object__51242636 = UnityEngine_Component__GetComponentInChildren_object__51242636(
                                              (UnityEngine_Component_o *)this,
-                                             (const MethodInfo_30D3E24 *)Method_UnityEngine_Component_GetComponentInChildren_UILabel___);
-    this->fields.defaultLabel = (struct UILabel_o *)ComponentInChildren_object__51199524;
-    sub_1C32BC4(
+                                             (const MethodInfo_30DE68C *)Method_UnityEngine_Component_GetComponentInChildren_UILabel___);
+    this->fields.defaultLabel = (struct UILabel_o *)ComponentInChildren_object__51242636;
+    sub_1C36FFC(
       (CGThumbnailListItem_o *)&this->fields.defaultLabel,
-      (int32_t)ComponentInChildren_object__51199524,
+      (int32_t)ComponentInChildren_object__51242636,
       v5,
       v6);
   }

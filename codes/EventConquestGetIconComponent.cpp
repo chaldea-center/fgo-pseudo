@@ -1,9 +1,9 @@
 void EventConquestGetIconComponent___ctor(EventConquestGetIconComponent_o *this, const MethodInfo *method)
 {
-  if ( (byte_4C31BAB & 1) == 0 )
+  if ( (byte_4C3D195 & 1) == 0 )
   {
-    sub_1C32C20(&ItemIconComponent_TypeInfo);
-    byte_4C31BAB = 1;
+    sub_1C37058(&ItemIconComponent_TypeInfo);
+    byte_4C3D195 = 1;
   }
   if ( !ItemIconComponent_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(ItemIconComponent_TypeInfo);
@@ -50,28 +50,28 @@ void EventConquestGetIconComponent__setPossessionCounterLabel(
   int32_t v37; // [xsp+1Ch] [xbp-54h] BYREF
   UnityEngine_Vector3_o v38; // 0:s0.4,4:s1.4,8:s2.4
 
-  if ( (byte_4C31BAA & 1) == 0 )
+  if ( (byte_4C3D194 & 1) == 0 )
   {
-    sub_1C32C20(&int_TypeInfo);
-    sub_1C32C20(&long_TypeInfo);
-    sub_1C32C20(&LocalizationManager_TypeInfo);
-    sub_1C32C20(&UnityEngine_Object_TypeInfo);
-    sub_1C32C20(&System_Text_StringBuilder_TypeInfo);
-    sub_1C32C20(&StringLiteral_5563/*"EVENT_CONQUEST_GET_COUNT_LABEL"*/);
-    sub_1C32C20(&StringLiteral_5564/*"EVENT_CONQUEST_GET_ITEM_FORMAT"*/);
-    sub_1C32C20(&StringLiteral_5569/*"EVENT_CONQUEST_POS_ITEM_FORMAT"*/);
-    byte_4C31BAA = 1;
+    sub_1C37058(&int_TypeInfo);
+    sub_1C37058(&long_TypeInfo);
+    sub_1C37058(&LocalizationManager_TypeInfo);
+    sub_1C37058(&UnityEngine_Object_TypeInfo);
+    sub_1C37058(&System_Text_StringBuilder_TypeInfo);
+    sub_1C37058(&StringLiteral_5564/*"EVENT_CONQUEST_GET_COUNT_LABEL"*/);
+    sub_1C37058(&StringLiteral_5565/*"EVENT_CONQUEST_GET_ITEM_FORMAT"*/);
+    sub_1C37058(&StringLiteral_5570/*"EVENT_CONQUEST_POS_ITEM_FORMAT"*/);
+    byte_4C3D194 = 1;
   }
   possessionCounterLabel = (UnityEngine_Object_o *)this->fields.possessionCounterLabel;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   if ( !UnityEngine_Object__op_Equality(possessionCounterLabel, 0, 0) )
   {
-    v10 = (System_Text_StringBuilder_o *)sub_1C32E6C(System_Text_StringBuilder_TypeInfo);
+    v10 = (System_Text_StringBuilder_o *)sub_1C372A4(System_Text_StringBuilder_TypeInfo);
     System_Text_StringBuilder___ctor(v10, 0);
     if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-    v11 = LocalizationManager__Get((System_String_o *)StringLiteral_5569/*"EVENT_CONQUEST_POS_ITEM_FORMAT"*/, 0);
+    v11 = LocalizationManager__Get((System_String_o *)StringLiteral_5570/*"EVENT_CONQUEST_POS_ITEM_FORMAT"*/, 0);
     v37 = getCount;
     transform = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v37, v12, v13, v14, v15, v16, v17);
     if ( !v10 )
@@ -84,9 +84,9 @@ void EventConquestGetIconComponent__setPossessionCounterLabel(
     if ( !counterLabel )
       goto LABEL_24;
     UILabel__set_text(counterLabel, (System_String_o *)transform, 0);
-    v20 = (System_Text_StringBuilder_o *)sub_1C32E6C(System_Text_StringBuilder_TypeInfo);
+    v20 = (System_Text_StringBuilder_o *)sub_1C372A4(System_Text_StringBuilder_TypeInfo);
     System_Text_StringBuilder___ctor(v20, 0);
-    v21 = LocalizationManager__Get((System_String_o *)StringLiteral_5564/*"EVENT_CONQUEST_GET_ITEM_FORMAT"*/, 0);
+    v21 = LocalizationManager__Get((System_String_o *)StringLiteral_5565/*"EVENT_CONQUEST_GET_ITEM_FORMAT"*/, 0);
     v36 = posCount;
     transform = (Il2CppObject *)j_il2cpp_value_box_0(long_TypeInfo, &v36, v22, v23, v24, v25, v26, v27);
     if ( !v20 )
@@ -116,7 +116,7 @@ void EventConquestGetIconComponent__setPossessionCounterLabel(
     possessionNameLabel = this->fields.possessionNameLabel;
     if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-    transform = (Il2CppObject *)LocalizationManager__Get((System_String_o *)StringLiteral_5563/*"EVENT_CONQUEST_GET_COUNT_LABEL"*/, 0);
+    transform = (Il2CppObject *)LocalizationManager__Get((System_String_o *)StringLiteral_5564/*"EVENT_CONQUEST_GET_COUNT_LABEL"*/, 0);
     if ( !possessionNameLabel
       || (UILabel__set_text(possessionNameLabel, (System_String_o *)transform, 0),
           (transform = (Il2CppObject *)UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0)) == 0)
@@ -126,7 +126,7 @@ void EventConquestGetIconComponent__setPossessionCounterLabel(
           (transform = (Il2CppObject *)UnityEngine_Component__get_transform((UnityEngine_Component_o *)transform, 0)) == 0) )
     {
 LABEL_24:
-      sub_1C32E7C(transform);
+      sub_1C372B4(transform);
     }
     v38.fields.x = 1.0 / v35;
     v38.fields.y = 1.0 / v35;

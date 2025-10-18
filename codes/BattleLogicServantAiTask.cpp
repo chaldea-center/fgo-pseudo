@@ -15,15 +15,15 @@ void BattleLogicServantAiTask___ctor(
   BattleLogicServantTask___ctor((BattleLogicServantTask_o *)this, 59, svtData, (const MethodInfo *)logic);
   this->fields.procState = procState;
   this->fields.svtData = svtData;
-  sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.svtData, (int32_t)svtData, v9, v10);
+  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.svtData, (int32_t)svtData, v9, v10);
   if ( !svtData )
-    sub_1C32E7C(v11);
+    sub_1C372B4(v11);
   v12 = (struct BattleLogicServantAi_o *)((__int64 (__fastcall *)(BattleServantData_o *, BattleLogic_o *, const MethodInfo *))svtData->klass->vtable._20_GetLogicServantAi.methodPtr)(
                                            svtData,
                                            logic,
                                            svtData->klass->vtable._20_GetLogicServantAi.method);
   this->fields.logicAi = v12;
-  sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.logicAi, (int32_t)v12, v13, v14);
+  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.logicAi, (int32_t)v12, v13, v14);
 }
 
 
@@ -43,20 +43,20 @@ BattleLogicTask_array *BattleLogicServantAiTask__MakeActionTask(
 {
   BattleLogicServantAi_o *logicAi; // x0
 
-  if ( (byte_4C3AB70 & 1) == 0 )
+  if ( (byte_4C46267 & 1) == 0 )
   {
-    sub_1C32C20(&BattleLogicTask___TypeInfo);
-    byte_4C3AB70 = 1;
+    sub_1C37058(&BattleLogicTask___TypeInfo);
+    byte_4C46267 = 1;
   }
   if ( (((__int64 (__fastcall *)(BattleLogicServantAiTask_o *, BattleLogic_o *, const MethodInfo *))this->klass->vtable._11_IsActable.methodPtr)(
           this,
           logic,
           this->klass->vtable._11_IsActable.method)
       & 1) == 0 )
-    return (BattleLogicTask_array *)sub_1C32CC8(BattleLogicTask___TypeInfo, 0);
+    return (BattleLogicTask_array *)sub_1C37100(BattleLogicTask___TypeInfo, 0);
   logicAi = this->fields.logicAi;
   if ( !logicAi )
-    sub_1C32E7C(0);
+    sub_1C372B4(0);
   return BattleLogicServantAi__TaskAiTargetAct(
            logicAi,
            this->fields.svtData,

@@ -8,7 +8,7 @@ void SkillValueUpApplierPlayerMaster___ctor(
 
   System_Object___ctor((Il2CppObject *)this, 0);
   this->fields.data = data;
-  sub_1C32BC4((CGThumbnailListItem_o *)&this->fields, (int32_t)data, v5, v6);
+  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields, (int32_t)data, v5, v6);
 }
 
 
@@ -48,14 +48,14 @@ void SkillValueUpApplierPlayerMaster__ApplyTo(
   __int64 v32; // x0
 
   v4 = this;
-  if ( (byte_4C3A8FE & 1) == 0 )
+  if ( (byte_4C45F0B & 1) == 0 )
   {
-    sub_1C32C20(&Method_BasicHelper_ExcludeNull_DataVals___);
-    sub_1C32C20(&System_IDisposable_TypeInfo);
-    sub_1C32C20(&System_Collections_Generic_IEnumerable_DataVals__TypeInfo);
-    sub_1C32C20(&System_Collections_Generic_IEnumerator_DataVals__TypeInfo);
-    this = (SkillValueUpApplierPlayerMaster_o *)sub_1C32C20(&System_Collections_IEnumerator_TypeInfo);
-    byte_4C3A8FE = 1;
+    sub_1C37058(&Method_BasicHelper_ExcludeNull_DataVals___);
+    sub_1C37058(&System_IDisposable_TypeInfo);
+    sub_1C37058(&System_Collections_Generic_IEnumerable_DataVals__TypeInfo);
+    sub_1C37058(&System_Collections_Generic_IEnumerator_DataVals__TypeInfo);
+    this = (SkillValueUpApplierPlayerMaster_o *)sub_1C37058(&System_Collections_IEnumerator_TypeInfo);
+    byte_4C45F0B = 1;
   }
   if ( !funcUnit )
     goto LABEL_40;
@@ -72,16 +72,16 @@ void SkillValueUpApplierPlayerMaster__ApplyTo(
          v4->klass->vtable._6_CreateFuncParamValueUpInfo.method);
   dataVals_k__BackingField->fields._FuncParamValueUpInfo_k__BackingField = (struct FuncParamValueUpInfoBase_o *)v6;
   p_FuncParamValueUpInfo_k__BackingField = (CGThumbnailListItem_o *)&dataVals_k__BackingField->fields._FuncParamValueUpInfo_k__BackingField;
-  sub_1C32BC4(p_FuncParamValueUpInfo_k__BackingField, v6, v8, v9);
+  sub_1C36FFC(p_FuncParamValueUpInfo_k__BackingField, v6, v8, v9);
   v10 = *(System_Collections_Generic_IEnumerable_T__o **)&p_FuncParamValueUpInfo_k__BackingField[-1].fields._Id_k__BackingField;
   if ( !v10 )
     return;
   this = (SkillValueUpApplierPlayerMaster_o *)BasicHelper__ExcludeNull_object_(
                                                 v10,
-                                                (const MethodInfo_30C70E4 *)Method_BasicHelper_ExcludeNull_DataVals___);
+                                                (const MethodInfo_30D194C *)Method_BasicHelper_ExcludeNull_DataVals___);
   if ( !this )
 LABEL_40:
-    sub_1C32E7C(this);
+    sub_1C372B4(this);
   klass = this->klass;
   v12 = this;
   v13 = *(unsigned __int16 *)&this->klass->_2.rank;
@@ -100,11 +100,11 @@ LABEL_40:
   else
   {
 LABEL_13:
-    v15 = sub_1C83438(this, System_Collections_Generic_IEnumerable_DataVals__TypeInfo, 0);
+    v15 = sub_1C87870(this, System_Collections_Generic_IEnumerable_DataVals__TypeInfo, 0);
   }
   v16 = (*(__int64 (__fastcall **)(SkillValueUpApplierPlayerMaster_o *, _QWORD))v15)(v12, *(_QWORD *)(v15 + 8));
   if ( !v16 )
-    sub_1C32E7C(0);
+    sub_1C372B4(0);
   while ( 1 )
   {
     v17 = *(_QWORD *)v16;
@@ -124,7 +124,7 @@ LABEL_13:
     else
     {
 LABEL_20:
-      v20 = sub_1C83438(v16, System_Collections_IEnumerator_TypeInfo, 0);
+      v20 = sub_1C87870(v16, System_Collections_IEnumerator_TypeInfo, 0);
     }
     if ( ((*(__int64 (__fastcall **)(__int64, _QWORD))v20)(v16, *(_QWORD *)(v20 + 8)) & 1) == 0 )
       break;
@@ -145,7 +145,7 @@ LABEL_20:
     else
     {
 LABEL_27:
-      v24 = sub_1C83438(v16, System_Collections_Generic_IEnumerator_DataVals__TypeInfo, 0);
+      v24 = sub_1C87870(v16, System_Collections_Generic_IEnumerator_DataVals__TypeInfo, 0);
     }
     v25 = (*(__int64 (__fastcall **)(__int64, _QWORD))v24)(v16, *(_QWORD *)(v24 + 8));
     v26 = ((__int64 (__fastcall *)(SkillValueUpApplierPlayerMaster_o *, __int64, const MethodInfo *))v4->klass->vtable._6_CreateFuncParamValueUpInfo.methodPtr)(
@@ -153,9 +153,9 @@ LABEL_27:
             v25,
             v4->klass->vtable._6_CreateFuncParamValueUpInfo.method);
     if ( !v25 )
-      sub_1C32E7C(v26);
+      sub_1C372B4(v26);
     *(_QWORD *)(v25 + 104) = v26;
-    sub_1C32BC4((CGThumbnailListItem_o *)(v25 + 104), v26, v27, v28);
+    sub_1C36FFC((CGThumbnailListItem_o *)(v25 + 104), v26, v27, v28);
   }
   v29 = *(_QWORD *)v16;
   v30 = *(unsigned __int16 *)(*(_QWORD *)v16 + 302LL);
@@ -174,7 +174,7 @@ LABEL_27:
   else
   {
 LABEL_35:
-    v32 = sub_1C83438(v16, System_IDisposable_TypeInfo, 0);
+    v32 = sub_1C87870(v16, System_IDisposable_TypeInfo, 0);
   }
   (*(void (__fastcall **)(__int64, _QWORD))v32)(v16, *(_QWORD *)(v32 + 8));
 }
@@ -203,16 +203,16 @@ int32_t SkillValueUpApplierPlayerMaster__CalcSkillValueUpRate(
   BattleBuffData_CheckIndividualitiesData_o *v19; // x23
   BattleBuffData_ActValueRequest_o *v20; // x22
 
-  if ( (byte_4C3A900 & 1) == 0 )
+  if ( (byte_4C45F0D & 1) == 0 )
   {
-    sub_1C32C20(&BattleBuffData_ActValueRequest_TypeInfo);
-    sub_1C32C20(&BattleBuffData_CheckIndividualitiesData_TypeInfo);
-    sub_1C32C20(&Method_System_Linq_Enumerable_ToArray_BattleServantData___);
-    sub_1C32C20(&Method_System_Linq_Enumerable_Where_BattleServantData___);
-    sub_1C32C20(&System_Func_BattleServantData__bool__TypeInfo);
-    sub_1C32C20(&Method_SkillValueUpApplierPlayerMaster___c__CalcSkillValueUpRate_b__5_0__);
-    sub_1C32C20(&SkillValueUpApplierPlayerMaster___c_TypeInfo);
-    byte_4C3A900 = 1;
+    sub_1C37058(&BattleBuffData_ActValueRequest_TypeInfo);
+    sub_1C37058(&BattleBuffData_CheckIndividualitiesData_TypeInfo);
+    sub_1C37058(&Method_System_Linq_Enumerable_ToArray_BattleServantData___);
+    sub_1C37058(&Method_System_Linq_Enumerable_Where_BattleServantData___);
+    sub_1C37058(&System_Func_BattleServantData__bool__TypeInfo);
+    sub_1C37058(&Method_SkillValueUpApplierPlayerMaster___c__CalcSkillValueUpRate_b__5_0__);
+    sub_1C37058(&SkillValueUpApplierPlayerMaster___c_TypeInfo);
+    byte_4C45F0D = 1;
   }
   data = this->fields.data;
   if ( !data )
@@ -234,7 +234,7 @@ int32_t SkillValueUpApplierPlayerMaster__CalcSkillValueUpRate(
       v5 = SkillValueUpApplierPlayerMaster___c_TypeInfo;
     }
     v8 = (Il2CppObject *)v5->static_fields->__9;
-    _9__5_0 = (System_Func_object__bool__o *)sub_1C32E6C(System_Func_BattleServantData__bool__TypeInfo);
+    _9__5_0 = (System_Func_object__bool__o *)sub_1C372A4(System_Func_BattleServantData__bool__TypeInfo);
     System_Func_object__bool____ctor(
       _9__5_0,
       v8,
@@ -242,21 +242,21 @@ int32_t SkillValueUpApplierPlayerMaster__CalcSkillValueUpRate(
       0);
     static_fields = SkillValueUpApplierPlayerMaster___c_TypeInfo->static_fields;
     static_fields->__9__5_0 = (struct System_Func_BattleServantData__bool__o *)_9__5_0;
-    sub_1C32BC4((CGThumbnailListItem_o *)&static_fields->__9__5_0, (int32_t)_9__5_0, v10, v11);
+    sub_1C36FFC((CGThumbnailListItem_o *)&static_fields->__9__5_0, (int32_t)_9__5_0, v10, v11);
   }
   v12 = System_Linq_Enumerable__Where_object_(
           v6,
           (System_Func_TSource__bool__o *)_9__5_0,
-          (const MethodInfo_3123BA8 *)Method_System_Linq_Enumerable_Where_BattleServantData___);
+          (const MethodInfo_312E410 *)Method_System_Linq_Enumerable_Where_BattleServantData___);
   data = (BattleData_o *)System_Linq_Enumerable__ToArray_object_(
                            v12,
-                           (const MethodInfo_311CA8C *)Method_System_Linq_Enumerable_ToArray_BattleServantData___);
+                           (const MethodInfo_31272F4 *)Method_System_Linq_Enumerable_ToArray_BattleServantData___);
   v13 = this->fields.data;
   if ( !v13
     || (v14 = data, BattleData__SetUseOnlyHighestValueBuffInGroup(v13, 113, (BattleServantData_array *)data, 0, 0), !v14) )
   {
 LABEL_24:
-    sub_1C32E7C(data);
+    sub_1C372B4(data);
   }
   m_CancellationTokenSource = (int)v14->fields.m_CancellationTokenSource;
   if ( m_CancellationTokenSource < 1 )
@@ -266,11 +266,11 @@ LABEL_24:
   do
   {
     if ( v16 >= (unsigned int)m_CancellationTokenSource )
-      sub_1C32E84(data);
+      sub_1C372BC(data);
     v18 = (BattleServantData_o *)*((_QWORD *)&v14->fields.rootfsm + v16);
-    v19 = (BattleBuffData_CheckIndividualitiesData_o *)sub_1C32E6C(BattleBuffData_CheckIndividualitiesData_TypeInfo);
-    BattleBuffData_CheckIndividualitiesData___ctor_45709708(v19, v18, 0, 0, 0, 0, 0, 1, 0);
-    v20 = (BattleBuffData_ActValueRequest_o *)sub_1C32E6C(BattleBuffData_ActValueRequest_TypeInfo);
+    v19 = (BattleBuffData_CheckIndividualitiesData_o *)sub_1C372A4(BattleBuffData_CheckIndividualitiesData_TypeInfo);
+    BattleBuffData_CheckIndividualitiesData___ctor_45659904(v19, v18, 0, 0, 0, 0, 0, 1, 0);
+    v20 = (BattleBuffData_ActValueRequest_o *)sub_1C372A4(BattleBuffData_ActValueRequest_TypeInfo);
     BattleBuffData_ActValueRequest___ctor(v20, 113, v19, 0, 0);
     if ( !v18 )
       goto LABEL_24;
@@ -300,10 +300,10 @@ FuncParamValueUpInfoBase_o *SkillValueUpApplierPlayerMaster__CreateFuncParamValu
 {
   int32_t valueUpRate; // w20
 
-  if ( (byte_4C3A8FF & 1) == 0 )
+  if ( (byte_4C45F0C & 1) == 0 )
   {
-    sub_1C32C20(&FuncParamValueUpInfoDefault_TypeInfo);
-    byte_4C3A8FF = 1;
+    sub_1C37058(&FuncParamValueUpInfoDefault_TypeInfo);
+    byte_4C45F0C = 1;
   }
   valueUpRate = this->fields.valueUpRate;
   if ( !FuncParamValueUpInfoDefault_TypeInfo->_2.cctor_finished )
@@ -326,15 +326,15 @@ void SkillValueUpApplierPlayerMaster___c___cctor(const MethodInfo *method)
   int32_t v2; // w2
   const MethodInfo *v3; // x3
 
-  if ( (byte_4C3A901 & 1) == 0 )
+  if ( (byte_4C45F0E & 1) == 0 )
   {
-    sub_1C32C20(&SkillValueUpApplierPlayerMaster___c_TypeInfo);
-    byte_4C3A901 = 1;
+    sub_1C37058(&SkillValueUpApplierPlayerMaster___c_TypeInfo);
+    byte_4C45F0E = 1;
   }
-  v1 = (Il2CppObject *)sub_1C32E6C(SkillValueUpApplierPlayerMaster___c_TypeInfo);
+  v1 = (Il2CppObject *)sub_1C372A4(SkillValueUpApplierPlayerMaster___c_TypeInfo);
   System_Object___ctor(v1, 0);
   SkillValueUpApplierPlayerMaster___c_TypeInfo->static_fields->__9 = (struct SkillValueUpApplierPlayerMaster___c_o *)v1;
-  sub_1C32BC4((CGThumbnailListItem_o *)SkillValueUpApplierPlayerMaster___c_TypeInfo->static_fields, (int32_t)v1, v2, v3);
+  sub_1C36FFC((CGThumbnailListItem_o *)SkillValueUpApplierPlayerMaster___c_TypeInfo->static_fields, (int32_t)v1, v2, v3);
 }
 
 

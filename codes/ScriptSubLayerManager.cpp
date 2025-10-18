@@ -4,18 +4,18 @@ void ScriptSubLayerManager___ctor(ScriptSubLayerManager_o *this, const MethodInf
   int32_t v4; // w2
   const MethodInfo *v5; // x3
 
-  if ( (byte_4C39A2B & 1) == 0 )
+  if ( (byte_4C45025 & 1) == 0 )
   {
-    sub_1C32C20(&Method_System_Collections_Generic_List_ScriptSubLayer___ctor__);
-    sub_1C32C20(&System_Collections_Generic_List_ScriptSubLayer__TypeInfo);
-    byte_4C39A2B = 1;
+    sub_1C37058(&Method_System_Collections_Generic_List_ScriptSubLayer___ctor__);
+    sub_1C37058(&System_Collections_Generic_List_ScriptSubLayer__TypeInfo);
+    byte_4C45025 = 1;
   }
-  v3 = (System_Collections_Generic_List_object__o *)sub_1C32E6C(System_Collections_Generic_List_ScriptSubLayer__TypeInfo);
+  v3 = (System_Collections_Generic_List_object__o *)sub_1C372A4(System_Collections_Generic_List_ScriptSubLayer__TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v3,
-    (const MethodInfo_3797F88 *)Method_System_Collections_Generic_List_ScriptSubLayer___ctor__);
+    (const MethodInfo_37A27F0 *)Method_System_Collections_Generic_List_ScriptSubLayer___ctor__);
   this->fields.listSubLayer = (struct System_Collections_Generic_List_ScriptSubLayer__o *)v3;
-  sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.listSubLayer, (int32_t)v3, v4, v5);
+  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.listSubLayer, (int32_t)v3, v4, v5);
   BaseMonoBehaviour___ctor((BaseMonoBehaviour_o *)this, 0);
 }
 
@@ -36,15 +36,15 @@ void ScriptSubLayerManager__ClearSubLayer(ScriptSubLayerManager_o *this, const M
   int v7; // w9
   System_Collections_Generic_List_Enumerator_object__o v8; // [xsp+8h] [xbp-48h] BYREF
 
-  if ( (byte_4C39A28 & 1) == 0 )
+  if ( (byte_4C45022 & 1) == 0 )
   {
-    sub_1C32C20(&Method_System_Collections_Generic_List_Enumerator_ScriptSubLayer__Dispose__);
-    sub_1C32C20(&Method_System_Collections_Generic_List_Enumerator_ScriptSubLayer__MoveNext__);
-    sub_1C32C20(&Method_System_Collections_Generic_List_Enumerator_ScriptSubLayer__get_Current__);
-    sub_1C32C20(&Method_System_Collections_Generic_List_ScriptSubLayer__Clear__);
-    sub_1C32C20(&Method_System_Collections_Generic_List_ScriptSubLayer__GetEnumerator__);
-    sub_1C32C20(&UnityEngine_Object_TypeInfo);
-    byte_4C39A28 = 1;
+    sub_1C37058(&Method_System_Collections_Generic_List_Enumerator_ScriptSubLayer__Dispose__);
+    sub_1C37058(&Method_System_Collections_Generic_List_Enumerator_ScriptSubLayer__MoveNext__);
+    sub_1C37058(&Method_System_Collections_Generic_List_Enumerator_ScriptSubLayer__get_Current__);
+    sub_1C37058(&Method_System_Collections_Generic_List_ScriptSubLayer__Clear__);
+    sub_1C37058(&Method_System_Collections_Generic_List_ScriptSubLayer__GetEnumerator__);
+    sub_1C37058(&UnityEngine_Object_TypeInfo);
+    byte_4C45022 = 1;
   }
   memset(&v8, 0, sizeof(v8));
   listSubLayer = (System_Collections_Generic_List_object__o *)this->fields.listSubLayer;
@@ -53,27 +53,27 @@ void ScriptSubLayerManager__ClearSubLayer(ScriptSubLayerManager_o *this, const M
   System_Collections_Generic_List_object___GetEnumerator(
     (System_Collections_Generic_List_Enumerator_T__o *)&v8,
     listSubLayer,
-    (const MethodInfo_37992B4 *)Method_System_Collections_Generic_List_ScriptSubLayer__GetEnumerator__);
+    (const MethodInfo_37A3B1C *)Method_System_Collections_Generic_List_ScriptSubLayer__GetEnumerator__);
   while ( System_Collections_Generic_List_Enumerator_object___MoveNext(
             &v8,
-            (const MethodInfo_3522FA8 *)Method_System_Collections_Generic_List_Enumerator_ScriptSubLayer__MoveNext__) )
+            (const MethodInfo_352D810 *)Method_System_Collections_Generic_List_Enumerator_ScriptSubLayer__MoveNext__) )
   {
     if ( !v8.fields._current )
-      sub_1C32E7C(0);
+      sub_1C372B4(0);
     gameObject = (UnityEngine_Object_o *)UnityEngine_Component__get_gameObject(
                                            (UnityEngine_Component_o *)v8.fields._current,
                                            0);
     if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-    UnityEngine_Object__Destroy_71223640(gameObject, 0);
+    UnityEngine_Object__Destroy_71266752(gameObject, 0);
   }
   System_Collections_Generic_List_Enumerator_object___Dispose(
     &v8,
-    (const MethodInfo_3522FA4 *)Method_System_Collections_Generic_List_Enumerator_ScriptSubLayer__Dispose__);
+    (const MethodInfo_352D80C *)Method_System_Collections_Generic_List_Enumerator_ScriptSubLayer__Dispose__);
   v5 = this->fields.listSubLayer;
   if ( !v5 )
 LABEL_15:
-    sub_1C32E7C(listSubLayer);
+    sub_1C372B4(listSubLayer);
   size = v5->fields._size;
   v7 = v5->fields._version + 1;
   v5->fields._size = 0;
@@ -96,11 +96,11 @@ void ScriptSubLayerManager__CreateSubLayer(ScriptSubLayerManager_o *this, int32_
   __int64 klass_low; // x10
   intptr_t v14; // x8
 
-  if ( (byte_4C39A27 & 1) == 0 )
+  if ( (byte_4C45021 & 1) == 0 )
   {
-    sub_1C32C20(&Method_UnityEngine_GameObject_GetComponent_ScriptSubLayer___);
-    sub_1C32C20(&Method_System_Collections_Generic_List_ScriptSubLayer__Add__);
-    byte_4C39A27 = 1;
+    sub_1C37058(&Method_UnityEngine_GameObject_GetComponent_ScriptSubLayer___);
+    sub_1C37058(&Method_System_Collections_Generic_List_ScriptSubLayer__Add__);
+    byte_4C45021 = 1;
   }
   if ( count >= 1 )
   {
@@ -118,7 +118,7 @@ void ScriptSubLayerManager__CreateSubLayer(ScriptSubLayerManager_o *this, int32_
       UnityEngine_GameObject__SetActive(Object, 1, 0);
       Object = (UnityEngine_GameObject_o *)UnityEngine_GameObject__GetComponent_object_(
                                              v6,
-                                             (const MethodInfo_3134970 *)Method_UnityEngine_GameObject_GetComponent_ScriptSubLayer___);
+                                             (const MethodInfo_313F1D8 *)Method_UnityEngine_GameObject_GetComponent_ScriptSubLayer___);
       if ( !Object
         || (v8 = (Il2CppObject *)Object,
             ScriptSubLayer__StartSubLayer((ScriptSubLayer_o *)Object, v7),
@@ -129,7 +129,7 @@ void ScriptSubLayerManager__CreateSubLayer(ScriptSubLayerManager_o *this, int32_
             !m_CachedPtr) )
       {
 LABEL_13:
-        sub_1C32E7C(Object);
+        sub_1C372B4(Object);
       }
       klass_low = SLODWORD(Object[1].klass);
       if ( (unsigned int)klass_low >= *(_DWORD *)(m_CachedPtr + 24) )
@@ -137,14 +137,14 @@ LABEL_13:
         System_Collections_Generic_List_object___AddWithResize(
           (System_Collections_Generic_List_object__o *)Object,
           v8,
-          *(const MethodInfo_37987BC **)(*(_QWORD *)(v12[4] + 192LL) + 112LL));
+          *(const MethodInfo_37A3024 **)(*(_QWORD *)(v12[4] + 192LL) + 112LL));
       }
       else
       {
         v14 = m_CachedPtr + 8 * klass_low;
         LODWORD(Object[1].klass) = klass_low + 1;
         *(_QWORD *)(v14 + 32) = v8;
-        sub_1C32BC4((CGThumbnailListItem_o *)(v14 + 32), (int32_t)v8, v9, v10);
+        sub_1C36FFC((CGThumbnailListItem_o *)(v14 + 32), (int32_t)v8, v9, v10);
       }
       --count;
     }
@@ -191,33 +191,33 @@ ScriptSubLayer_o *ScriptSubLayerManager__GetSubLayer(
   const MethodInfo *v25; // x3
   __int64 v26; // x1
 
-  if ( (byte_4C39A29 & 1) == 0 )
+  if ( (byte_4C45023 & 1) == 0 )
   {
-    sub_1C32C20(&Method_System_Collections_Generic_List_ScriptSubLayer__Find__);
-    sub_1C32C20(&UnityEngine_Object_TypeInfo);
-    sub_1C32C20(&System_Predicate_ScriptSubLayer__TypeInfo);
-    sub_1C32C20(&Method_ScriptSubLayerManager___c__GetSubLayer_b__21_1__);
-    sub_1C32C20(&Method_ScriptSubLayerManager___c__DisplayClass21_0__GetSubLayer_b__0__);
-    sub_1C32C20(&ScriptSubLayerManager___c__DisplayClass21_0_TypeInfo);
-    sub_1C32C20(&ScriptSubLayerManager___c_TypeInfo);
-    sub_1C32C20(&StringLiteral_416/*"#A"*/);
-    byte_4C39A29 = 1;
+    sub_1C37058(&Method_System_Collections_Generic_List_ScriptSubLayer__Find__);
+    sub_1C37058(&UnityEngine_Object_TypeInfo);
+    sub_1C37058(&System_Predicate_ScriptSubLayer__TypeInfo);
+    sub_1C37058(&Method_ScriptSubLayerManager___c__GetSubLayer_b__21_1__);
+    sub_1C37058(&Method_ScriptSubLayerManager___c__DisplayClass21_0__GetSubLayer_b__0__);
+    sub_1C37058(&ScriptSubLayerManager___c__DisplayClass21_0_TypeInfo);
+    sub_1C37058(&ScriptSubLayerManager___c_TypeInfo);
+    sub_1C37058(&StringLiteral_416/*"#A"*/);
+    byte_4C45023 = 1;
   }
-  v7 = sub_1C32E6C(ScriptSubLayerManager___c__DisplayClass21_0_TypeInfo);
+  v7 = sub_1C372A4(ScriptSubLayerManager___c__DisplayClass21_0_TypeInfo);
   System_Object___ctor((Il2CppObject *)v7, 0);
   if ( !v7 )
     goto LABEL_21;
   *(_QWORD *)(v7 + 16) = layerKey;
   v11 = (__int64 *)(v7 + 16);
-  sub_1C32BC4((CGThumbnailListItem_o *)(v7 + 16), (int32_t)layerKey, v9, v10);
+  sub_1C36FFC((CGThumbnailListItem_o *)(v7 + 16), (int32_t)layerKey, v9, v10);
   if ( System_String__IsNullOrEmpty(*(System_String_o **)(v7 + 16), 0) )
   {
     v14 = StringLiteral_416/*"#A"*/;
     *v11 = StringLiteral_416/*"#A"*/;
-    sub_1C32BC4((CGThumbnailListItem_o *)(v7 + 16), v14, v12, v13);
+    sub_1C36FFC((CGThumbnailListItem_o *)(v7 + 16), v14, v12, v13);
   }
   listSubLayer = (System_Collections_Generic_List_object__o *)this->fields.listSubLayer;
-  v16 = (System_Predicate_object__o *)sub_1C32E6C(System_Predicate_ScriptSubLayer__TypeInfo);
+  v16 = (System_Predicate_object__o *)sub_1C372A4(System_Predicate_ScriptSubLayer__TypeInfo);
   System_Predicate_object____ctor(
     v16,
     (Il2CppObject *)v7,
@@ -228,7 +228,7 @@ ScriptSubLayer_o *ScriptSubLayerManager__GetSubLayer(
   v17 = System_Collections_Generic_List_object___Find(
           listSubLayer,
           (System_Predicate_T__o *)v16,
-          (const MethodInfo_3798E24 *)Method_System_Collections_Generic_List_ScriptSubLayer__Find__);
+          (const MethodInfo_37A368C *)Method_System_Collections_Generic_List_ScriptSubLayer__Find__);
   if ( isRegist )
   {
     if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -251,29 +251,29 @@ ScriptSubLayer_o *ScriptSubLayerManager__GetSubLayer(
           v8 = (char *)ScriptSubLayerManager___c_TypeInfo;
         }
         v20 = (Il2CppObject *)**((_QWORD **)v8 + 23);
-        v19 = (System_Predicate_object__o *)sub_1C32E6C(System_Predicate_ScriptSubLayer__TypeInfo);
+        v19 = (System_Predicate_object__o *)sub_1C372A4(System_Predicate_ScriptSubLayer__TypeInfo);
         System_Predicate_object____ctor(v19, v20, Method_ScriptSubLayerManager___c__GetSubLayer_b__21_1__, 0);
         static_fields = ScriptSubLayerManager___c_TypeInfo->static_fields;
         static_fields->__9__21_1 = (struct System_Predicate_ScriptSubLayer__o *)v19;
-        sub_1C32BC4((CGThumbnailListItem_o *)&static_fields->__9__21_1, (int32_t)v19, v22, v23);
+        sub_1C36FFC((CGThumbnailListItem_o *)&static_fields->__9__21_1, (int32_t)v19, v22, v23);
       }
       if ( v18 )
       {
         v8 = (char *)System_Collections_Generic_List_object___Find(
                        v18,
                        (System_Predicate_T__o *)v19,
-                       (const MethodInfo_3798E24 *)Method_System_Collections_Generic_List_ScriptSubLayer__Find__);
+                       (const MethodInfo_37A368C *)Method_System_Collections_Generic_List_ScriptSubLayer__Find__);
         if ( v8 )
         {
           v26 = *v11;
           v17 = (Il2CppObject *)v8;
           *((_QWORD *)v8 + 4) = *v11;
-          sub_1C32BC4((CGThumbnailListItem_o *)(v8 + 32), v26, v24, v25);
+          sub_1C36FFC((CGThumbnailListItem_o *)(v8 + 32), v26, v24, v25);
           return (ScriptSubLayer_o *)v17;
         }
       }
 LABEL_21:
-      sub_1C32E7C(v8);
+      sub_1C372B4(v8);
     }
   }
   return (ScriptSubLayer_o *)v17;
@@ -291,7 +291,7 @@ void ScriptSubLayerManager__Init(ScriptSubLayerManager_o *this, const MethodInfo
     || (UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)subLayerCamera, 0, 0),
         (subLayerCamera = (UnityEngine_Component_o *)this->fields.subLayerCamera) == 0) )
   {
-    sub_1C32E7C(subLayerCamera);
+    sub_1C372B4(subLayerCamera);
   }
   UnityEngine_Camera__set_targetTexture((UnityEngine_Camera_o *)subLayerCamera, 0, 0);
   this->fields.isInvalidStretch = 0;
@@ -319,7 +319,7 @@ void ScriptSubLayerManager__RegistCharaData(
   ScriptSubLayerManager__RemoveCharaData(this, charaData, (const MethodInfo *)charaData);
   SubLayer = ScriptSubLayerManager__GetSubLayer(this, layerKey, 1, v7);
   if ( !SubLayer )
-    sub_1C32E7C(0);
+    sub_1C372B4(0);
   ScriptSubLayer__RegistCharaData(SubLayer, charaData, v9);
 }
 
@@ -333,23 +333,23 @@ void ScriptSubLayerManager__RemoveCharaData(
   int32_t v6; // w21
   const MethodInfo *v7; // x2
 
-  if ( (byte_4C39A25 & 1) == 0 )
+  if ( (byte_4C4501F & 1) == 0 )
   {
-    sub_1C32C20(&Method_System_Collections_Generic_List_ScriptSubLayer__get_Count__);
-    sub_1C32C20(&Method_System_Collections_Generic_List_ScriptSubLayer__get_Item__);
-    byte_4C39A25 = 1;
+    sub_1C37058(&Method_System_Collections_Generic_List_ScriptSubLayer__get_Count__);
+    sub_1C37058(&Method_System_Collections_Generic_List_ScriptSubLayer__get_Item__);
+    byte_4C4501F = 1;
   }
   listSubLayer = (System_Collections_Generic_List_object__o *)this->fields.listSubLayer;
   if ( !listSubLayer )
 LABEL_8:
-    sub_1C32E7C(listSubLayer);
+    sub_1C372B4(listSubLayer);
   v6 = 0;
   while ( v6 < listSubLayer->fields._size )
   {
     listSubLayer = (System_Collections_Generic_List_object__o *)System_Collections_Generic_List_object___get_Item(
                                                                   listSubLayer,
                                                                   v6,
-                                                                  (const MethodInfo_37984EC *)Method_System_Collections_Generic_List_ScriptSubLayer__get_Item__);
+                                                                  (const MethodInfo_37A2D54 *)Method_System_Collections_Generic_List_ScriptSubLayer__get_Item__);
     if ( listSubLayer )
     {
       ScriptSubLayer__RemoveCharaData((ScriptSubLayer_o *)listSubLayer, charaData, v7);
@@ -422,15 +422,15 @@ void ScriptSubLayerManager__RenderingSubLayer(ScriptSubLayerManager_o *this, con
   UnityEngine_Color_o v56; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 
   v2 = this;
-  if ( (byte_4C39A2A & 1) == 0 )
+  if ( (byte_4C45024 & 1) == 0 )
   {
-    sub_1C32C20(&UnityEngine_Graphics_TypeInfo);
-    sub_1C32C20(&Method_System_Collections_Generic_List_ScriptSubLayer__get_Count__);
-    sub_1C32C20(&Method_System_Collections_Generic_List_ScriptSubLayer__get_Item__);
-    sub_1C32C20(&UnityEngine_Object_TypeInfo);
-    sub_1C32C20(&StringLiteral_16222/*"_FilterParam"*/);
-    this = (ScriptSubLayerManager_o *)sub_1C32C20(&StringLiteral_16171/*"_Color"*/);
-    byte_4C39A2A = 1;
+    sub_1C37058(&UnityEngine_Graphics_TypeInfo);
+    sub_1C37058(&Method_System_Collections_Generic_List_ScriptSubLayer__get_Count__);
+    sub_1C37058(&Method_System_Collections_Generic_List_ScriptSubLayer__get_Item__);
+    sub_1C37058(&UnityEngine_Object_TypeInfo);
+    sub_1C37058(&StringLiteral_16224/*"_FilterParam"*/);
+    this = (ScriptSubLayerManager_o *)sub_1C37058(&StringLiteral_16173/*"_Color"*/);
+    byte_4C45024 = 1;
   }
   listSubLayer = v2->fields.listSubLayer;
   if ( !listSubLayer )
@@ -476,7 +476,7 @@ void ScriptSubLayerManager__RenderingSubLayer(ScriptSubLayerManager_o *this, con
       this = (ScriptSubLayerManager_o *)System_Collections_Generic_List_object___get_Item(
                                           (System_Collections_Generic_List_object__o *)this,
                                           v10,
-                                          (const MethodInfo_37984EC *)Method_System_Collections_Generic_List_ScriptSubLayer__get_Item__);
+                                          (const MethodInfo_37A2D54 *)Method_System_Collections_Generic_List_ScriptSubLayer__get_Item__);
       if ( this )
       {
         ScriptSubLayer__RemoveInvalidCharaData((ScriptSubLayer_o *)this, v12);
@@ -495,7 +495,7 @@ void ScriptSubLayerManager__RenderingSubLayer(ScriptSubLayerManager_o *this, con
         this = (ScriptSubLayerManager_o *)System_Collections_Generic_List_object___get_Item(
                                             (System_Collections_Generic_List_object__o *)this,
                                             v13,
-                                            (const MethodInfo_37984EC *)Method_System_Collections_Generic_List_ScriptSubLayer__get_Item__);
+                                            (const MethodInfo_37A2D54 *)Method_System_Collections_Generic_List_ScriptSubLayer__get_Item__);
         if ( !this )
           break;
         if ( LOBYTE(this->fields.subLayerInstanceRoot) )
@@ -511,7 +511,7 @@ void ScriptSubLayerManager__RenderingSubLayer(ScriptSubLayerManager_o *this, con
               this = (ScriptSubLayerManager_o *)System_Collections_Generic_List_object___get_Item(
                                                   (System_Collections_Generic_List_object__o *)this,
                                                   v14,
-                                                  (const MethodInfo_37984EC *)Method_System_Collections_Generic_List_ScriptSubLayer__get_Item__);
+                                                  (const MethodInfo_37A2D54 *)Method_System_Collections_Generic_List_ScriptSubLayer__get_Item__);
               if ( !this )
                 goto LABEL_93;
               ScriptSubLayer__SetLayer((ScriptSubLayer_o *)this, -1, v15);
@@ -524,7 +524,7 @@ void ScriptSubLayerManager__RenderingSubLayer(ScriptSubLayerManager_o *this, con
           this = (ScriptSubLayerManager_o *)System_Collections_Generic_List_object___get_Item(
                                               (System_Collections_Generic_List_object__o *)this,
                                               v13,
-                                              (const MethodInfo_37984EC *)Method_System_Collections_Generic_List_ScriptSubLayer__get_Item__);
+                                              (const MethodInfo_37A2D54 *)Method_System_Collections_Generic_List_ScriptSubLayer__get_Item__);
           if ( !this )
             break;
           ScriptSubLayer__SetLayerActive((ScriptSubLayer_o *)this, v16);
@@ -540,7 +540,7 @@ void ScriptSubLayerManager__RenderingSubLayer(ScriptSubLayerManager_o *this, con
             this = (ScriptSubLayerManager_o *)System_Collections_Generic_List_object___get_Item(
                                                 (System_Collections_Generic_List_object__o *)v2->fields.listSubLayer,
                                                 v13,
-                                                (const MethodInfo_37984EC *)Method_System_Collections_Generic_List_ScriptSubLayer__get_Item__);
+                                                (const MethodInfo_37A2D54 *)Method_System_Collections_Generic_List_ScriptSubLayer__get_Item__);
             if ( !this )
               break;
             this = (ScriptSubLayerManager_o *)this[1].fields.subLayerPrefab;
@@ -566,7 +566,7 @@ void ScriptSubLayerManager__RenderingSubLayer(ScriptSubLayerManager_o *this, con
             this = (ScriptSubLayerManager_o *)System_Collections_Generic_List_object___get_Item(
                                                 (System_Collections_Generic_List_object__o *)v2->fields.listSubLayer,
                                                 v13,
-                                                (const MethodInfo_37984EC *)Method_System_Collections_Generic_List_ScriptSubLayer__get_Item__);
+                                                (const MethodInfo_37A2D54 *)Method_System_Collections_Generic_List_ScriptSubLayer__get_Item__);
             if ( !this )
               break;
             this = (ScriptSubLayerManager_o *)this[1].fields.subLayerPrefab;
@@ -590,7 +590,7 @@ void ScriptSubLayerManager__RenderingSubLayer(ScriptSubLayerManager_o *this, con
           this = (ScriptSubLayerManager_o *)System_Collections_Generic_List_object___get_Item(
                                               (System_Collections_Generic_List_object__o *)this,
                                               v13,
-                                              (const MethodInfo_37984EC *)Method_System_Collections_Generic_List_ScriptSubLayer__get_Item__);
+                                              (const MethodInfo_37A2D54 *)Method_System_Collections_Generic_List_ScriptSubLayer__get_Item__);
           if ( !this )
             break;
           if ( !subLayerCamera )
@@ -607,7 +607,7 @@ void ScriptSubLayerManager__RenderingSubLayer(ScriptSubLayerManager_o *this, con
           this = (ScriptSubLayerManager_o *)System_Collections_Generic_List_object___get_Item(
                                               (System_Collections_Generic_List_object__o *)this,
                                               v13,
-                                              (const MethodInfo_37984EC *)Method_System_Collections_Generic_List_ScriptSubLayer__get_Item__);
+                                              (const MethodInfo_37A2D54 *)Method_System_Collections_Generic_List_ScriptSubLayer__get_Item__);
           if ( !this )
             break;
           if ( !v20 )
@@ -623,7 +623,7 @@ void ScriptSubLayerManager__RenderingSubLayer(ScriptSubLayerManager_o *this, con
           this = (ScriptSubLayerManager_o *)System_Collections_Generic_List_object___get_Item(
                                               (System_Collections_Generic_List_object__o *)this,
                                               v13,
-                                              (const MethodInfo_37984EC *)Method_System_Collections_Generic_List_ScriptSubLayer__get_Item__);
+                                              (const MethodInfo_37A2D54 *)Method_System_Collections_Generic_List_ScriptSubLayer__get_Item__);
           if ( !this )
             break;
           klass = (UnityEngine_Object_o *)this[1].klass;
@@ -637,7 +637,7 @@ void ScriptSubLayerManager__RenderingSubLayer(ScriptSubLayerManager_o *this, con
             this = (ScriptSubLayerManager_o *)System_Collections_Generic_List_object___get_Item(
                                                 (System_Collections_Generic_List_object__o *)this,
                                                 v13,
-                                                (const MethodInfo_37984EC *)Method_System_Collections_Generic_List_ScriptSubLayer__get_Item__);
+                                                (const MethodInfo_37A2D54 *)Method_System_Collections_Generic_List_ScriptSubLayer__get_Item__);
             if ( !this )
               break;
             this = (ScriptSubLayerManager_o *)this->fields.listSubLayer;
@@ -658,7 +658,7 @@ void ScriptSubLayerManager__RenderingSubLayer(ScriptSubLayerManager_o *this, con
             this = (ScriptSubLayerManager_o *)System_Collections_Generic_List_object___get_Item(
                                                 (System_Collections_Generic_List_object__o *)v2->fields.listSubLayer,
                                                 v13,
-                                                (const MethodInfo_37984EC *)Method_System_Collections_Generic_List_ScriptSubLayer__get_Item__);
+                                                (const MethodInfo_37A2D54 *)Method_System_Collections_Generic_List_ScriptSubLayer__get_Item__);
             if ( !this )
               break;
             if ( !v2->fields.listSubLayer )
@@ -667,7 +667,7 @@ void ScriptSubLayerManager__RenderingSubLayer(ScriptSubLayerManager_o *this, con
             this = (ScriptSubLayerManager_o *)System_Collections_Generic_List_object___get_Item(
                                                 (System_Collections_Generic_List_object__o *)v2->fields.listSubLayer,
                                                 v13,
-                                                (const MethodInfo_37984EC *)Method_System_Collections_Generic_List_ScriptSubLayer__get_Item__);
+                                                (const MethodInfo_37A2D54 *)Method_System_Collections_Generic_List_ScriptSubLayer__get_Item__);
             if ( !this || !v23 )
               break;
             monitor = this[1].monitor;
@@ -677,14 +677,14 @@ void ScriptSubLayerManager__RenderingSubLayer(ScriptSubLayerManager_o *this, con
             v55.fields.a = 1.0;
             UnityEngine_Material__SetColor(
               (UnityEngine_Material_o *)v23,
-              (System_String_o *)StringLiteral_16171/*"_Color"*/,
+              (System_String_o *)StringLiteral_16173/*"_Color"*/,
               v55,
               0);
             if ( monitor )
             {
               zero = UnityEngine_Matrix4x4__get_zero(&v46, 0);
               if ( *((_DWORD *)monitor + 6) < 0x10u )
-                sub_1C32E84(zero);
+                sub_1C372BC(zero);
               v26 = *((float *)monitor + 9);
               v27 = *((float *)monitor + 10);
               v28 = *((float *)monitor + 11);
@@ -718,7 +718,7 @@ void ScriptSubLayerManager__RenderingSubLayer(ScriptSubLayerManager_o *this, con
               v45.fields.m33 = v40;
               UnityEngine_Material__SetMatrix(
                 (UnityEngine_Material_o *)v23,
-                (System_String_o *)StringLiteral_16222/*"_FilterParam"*/,
+                (System_String_o *)StringLiteral_16224/*"_FilterParam"*/,
                 &v45,
                 0);
             }
@@ -730,7 +730,7 @@ void ScriptSubLayerManager__RenderingSubLayer(ScriptSubLayerManager_o *this, con
                                                        0);
             if ( !UnityEngine_Graphics_TypeInfo->_2.cctor_finished )
               j_il2cpp_runtime_class_init_0(UnityEngine_Graphics_TypeInfo);
-            UnityEngine_Graphics__Blit_71069324(
+            UnityEngine_Graphics__Blit_71112436(
               targetTexture,
               (UnityEngine_RenderTexture_o *)v22,
               (UnityEngine_Material_o *)v23,
@@ -751,7 +751,7 @@ void ScriptSubLayerManager__RenderingSubLayer(ScriptSubLayerManager_o *this, con
           goto LABEL_76;
       }
 LABEL_93:
-      sub_1C32E7C(this);
+      sub_1C372B4(this);
     }
 LABEL_76:
     if ( m_CancellationTokenSource >= 1 )
@@ -762,7 +762,7 @@ LABEL_76:
         this = (ScriptSubLayerManager_o *)System_Collections_Generic_List_object___get_Item(
                                             (System_Collections_Generic_List_object__o *)this,
                                             v43,
-                                            (const MethodInfo_37984EC *)Method_System_Collections_Generic_List_ScriptSubLayer__get_Item__);
+                                            (const MethodInfo_37A2D54 *)Method_System_Collections_Generic_List_ScriptSubLayer__get_Item__);
         if ( !this )
           goto LABEL_93;
         ScriptSubLayer__SetLayerActive((ScriptSubLayer_o *)this, v44);
@@ -830,7 +830,7 @@ void ScriptSubLayerManager__SetDepth(
 
   SubLayer = ScriptSubLayerManager__GetSubLayer(this, layerKey, 1, v4);
   if ( !SubLayer )
-    sub_1C32E7C(0);
+    sub_1C372B4(0);
   ScriptSubLayer__SetDepth(SubLayer, depth, v7);
 }
 
@@ -846,15 +846,15 @@ void ScriptSubLayerManager__SetSubStretch(ScriptSubLayerManager_o *this, bool in
 
   v3 = this;
   v4 = invalidStretch;
-  if ( (byte_4C39A26 & 1) == 0 )
+  if ( (byte_4C45020 & 1) == 0 )
   {
-    sub_1C32C20(&Method_System_Collections_Generic_List_Enumerator_ScriptSubLayer__Dispose__);
-    sub_1C32C20(&Method_System_Collections_Generic_List_Enumerator_ScriptSubLayer__MoveNext__);
-    sub_1C32C20(&Method_System_Collections_Generic_List_Enumerator_ScriptSubLayer__get_Current__);
-    sub_1C32C20(&Method_System_Collections_Generic_List_ScriptSubLayer__GetEnumerator__);
-    sub_1C32C20(&Method_System_Collections_Generic_List_ScriptSubLayer__get_Count__);
-    this = (ScriptSubLayerManager_o *)sub_1C32C20(&UnityEngine_Object_TypeInfo);
-    byte_4C39A26 = 1;
+    sub_1C37058(&Method_System_Collections_Generic_List_Enumerator_ScriptSubLayer__Dispose__);
+    sub_1C37058(&Method_System_Collections_Generic_List_Enumerator_ScriptSubLayer__MoveNext__);
+    sub_1C37058(&Method_System_Collections_Generic_List_Enumerator_ScriptSubLayer__get_Current__);
+    sub_1C37058(&Method_System_Collections_Generic_List_ScriptSubLayer__GetEnumerator__);
+    sub_1C37058(&Method_System_Collections_Generic_List_ScriptSubLayer__get_Count__);
+    this = (ScriptSubLayerManager_o *)sub_1C37058(&UnityEngine_Object_TypeInfo);
+    byte_4C45020 = 1;
   }
   memset(&v8, 0, sizeof(v8));
   listSubLayer = v3->fields.listSubLayer;
@@ -874,22 +874,22 @@ void ScriptSubLayerManager__SetSubStretch(ScriptSubLayerManager_o *this, bool in
         System_Collections_Generic_List_object___GetEnumerator(
           (System_Collections_Generic_List_Enumerator_T__o *)&v8,
           (System_Collections_Generic_List_object__o *)this,
-          (const MethodInfo_37992B4 *)Method_System_Collections_Generic_List_ScriptSubLayer__GetEnumerator__);
+          (const MethodInfo_37A3B1C *)Method_System_Collections_Generic_List_ScriptSubLayer__GetEnumerator__);
         while ( System_Collections_Generic_List_Enumerator_object___MoveNext(
                   &v8,
-                  (const MethodInfo_3522FA8 *)Method_System_Collections_Generic_List_Enumerator_ScriptSubLayer__MoveNext__) )
+                  (const MethodInfo_352D810 *)Method_System_Collections_Generic_List_Enumerator_ScriptSubLayer__MoveNext__) )
         {
           if ( !v8.fields._current )
-            sub_1C32E7C(0);
+            sub_1C372B4(0);
           ScriptSubLayer__SetStretchObj((ScriptSubLayer_o *)v8.fields._current, v3->fields.stretchObj, v7);
         }
         System_Collections_Generic_List_Enumerator_object___Dispose(
           &v8,
-          (const MethodInfo_3522FA4 *)Method_System_Collections_Generic_List_Enumerator_ScriptSubLayer__Dispose__);
+          (const MethodInfo_352D80C *)Method_System_Collections_Generic_List_Enumerator_ScriptSubLayer__Dispose__);
         return;
       }
 LABEL_16:
-      sub_1C32E7C(this);
+      sub_1C372B4(this);
     }
   }
 }
@@ -925,7 +925,7 @@ void ScriptSubLayerManager__StartSubLayer(
         !v11) )
   {
 LABEL_6:
-    sub_1C32E7C(clearFlags);
+    sub_1C372B4(clearFlags);
   }
   UnityEngine_Camera__set_orthographicSize(v11, orthographicSize, 0);
   ScriptSubLayerManager__CreateSubLayer(this, count, v13);
@@ -938,15 +938,15 @@ void ScriptSubLayerManager___c___cctor(const MethodInfo *method)
   int32_t v2; // w2
   const MethodInfo *v3; // x3
 
-  if ( (byte_4C39A2C & 1) == 0 )
+  if ( (byte_4C45026 & 1) == 0 )
   {
-    sub_1C32C20(&ScriptSubLayerManager___c_TypeInfo);
-    byte_4C39A2C = 1;
+    sub_1C37058(&ScriptSubLayerManager___c_TypeInfo);
+    byte_4C45026 = 1;
   }
-  v1 = (Il2CppObject *)sub_1C32E6C(ScriptSubLayerManager___c_TypeInfo);
+  v1 = (Il2CppObject *)sub_1C372A4(ScriptSubLayerManager___c_TypeInfo);
   System_Object___ctor(v1, 0);
   ScriptSubLayerManager___c_TypeInfo->static_fields->__9 = (struct ScriptSubLayerManager___c_o *)v1;
-  sub_1C32BC4((CGThumbnailListItem_o *)ScriptSubLayerManager___c_TypeInfo->static_fields, (int32_t)v1, v2, v3);
+  sub_1C36FFC((CGThumbnailListItem_o *)ScriptSubLayerManager___c_TypeInfo->static_fields, (int32_t)v1, v2, v3);
 }
 
 
@@ -962,7 +962,7 @@ bool ScriptSubLayerManager___c___GetSubLayer_b__21_1(
         const MethodInfo *method)
 {
   if ( !l )
-    sub_1C32E7C(this);
+    sub_1C372B4(this);
   return System_String__IsNullOrEmpty(l->fields._layerKey_k__BackingField, 0);
 }
 
@@ -981,6 +981,6 @@ bool ScriptSubLayerManager___c__DisplayClass21_0___GetSubLayer_b__0(
         const MethodInfo *method)
 {
   if ( !l )
-    sub_1C32E7C(this);
+    sub_1C372B4(this);
   return System_String__op_Equality(l->fields._layerKey_k__BackingField, this->fields.layerKey, 0);
 }

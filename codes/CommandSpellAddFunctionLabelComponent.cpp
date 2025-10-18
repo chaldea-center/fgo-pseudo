@@ -43,20 +43,20 @@ void CommandSpellAddFunctionLabelComponent__SetData(
   float v27; // s3
   ClassBoardCommandSpellEntity_o *entity; // [xsp+8h] [xbp-48h] BYREF
 
-  if ( (byte_4C3A8C1 & 1) == 0 )
+  if ( (byte_4C45ECE & 1) == 0 )
   {
-    sub_1C32C20(&AtlasManager_TypeInfo);
-    sub_1C32C20(&Method_DataManager_GetMaster_ClassBoardCommandSpellMaster___);
-    sub_1C32C20(&DataManager_TypeInfo);
-    sub_1C32C20(&LocalizationManager_TypeInfo);
-    sub_1C32C20(&StringLiteral_3675/*"COMMAND_SPELL_CAN_NOT_ADD_FUNCTION"*/);
-    sub_1C32C20(&StringLiteral_3674/*"COMMAND_SPELL_CAN_ADD_FUNCTION"*/);
-    byte_4C3A8C1 = 1;
+    sub_1C37058(&AtlasManager_TypeInfo);
+    sub_1C37058(&Method_DataManager_GetMaster_ClassBoardCommandSpellMaster___);
+    sub_1C37058(&DataManager_TypeInfo);
+    sub_1C37058(&LocalizationManager_TypeInfo);
+    sub_1C37058(&StringLiteral_3675/*"COMMAND_SPELL_CAN_NOT_ADD_FUNCTION"*/);
+    sub_1C37058(&StringLiteral_3674/*"COMMAND_SPELL_CAN_ADD_FUNCTION"*/);
+    byte_4C45ECE = 1;
   }
   entity = 0;
   if ( !DataManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-  Master_object = (ClassBoardCommandSpellMaster_o *)DataManager__GetMaster_object_((const MethodInfo_30DD39C *)Method_DataManager_GetMaster_ClassBoardCommandSpellMaster___);
+  Master_object = (ClassBoardCommandSpellMaster_o *)DataManager__GetMaster_object_((const MethodInfo_30E7C04 *)Method_DataManager_GetMaster_ClassBoardCommandSpellMaster___);
   if ( !Master_object )
     goto LABEL_37;
   v10 = Master_object;
@@ -105,7 +105,7 @@ void CommandSpellAddFunctionLabelComponent__SetData(
       while ( 1 )
       {
         if ( v19 >= (unsigned int)max_length )
-          sub_1C32E84(Master_object);
+          sub_1C372BC(Master_object);
         v20 = classBoardAddCommandSpells->m_Items[v19];
         if ( !v20 )
           goto LABEL_37;
@@ -157,7 +157,7 @@ LABEL_32:
       }
     }
 LABEL_37:
-    sub_1C32E7C(Master_object);
+    sub_1C372B4(Master_object);
   }
 LABEL_28:
   Master_object = (ClassBoardCommandSpellMaster_o *)LocalizationManager__Get((System_String_o *)StringLiteral_3675/*"COMMAND_SPELL_CAN_NOT_ADD_FUNCTION"*/, 0);

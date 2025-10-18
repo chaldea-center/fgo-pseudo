@@ -22,52 +22,52 @@ void TitleInfoEventSideItemComponent___cctor(const MethodInfo *method)
   int32_t v25; // w2
   const MethodInfo *v26; // x3
 
-  if ( (byte_4C36312 & 1) == 0 )
+  if ( (byte_4C41900 & 1) == 0 )
   {
-    sub_1C32C20(&string___TypeInfo);
-    sub_1C32C20(&TitleInfoEventSideItemComponent_TypeInfo);
-    sub_1C32C20(&StringLiteral_24082/*"time_status_side_04"*/);
-    sub_1C32C20(&StringLiteral_24079/*"time_status_side_01"*/);
-    sub_1C32C20(&StringLiteral_24081/*"time_status_side_03"*/);
-    sub_1C32C20(&StringLiteral_22728/*"point_status_side"*/);
-    sub_1C32C20(&StringLiteral_24080/*"time_status_side_02"*/);
-    byte_4C36312 = 1;
+    sub_1C37058(&string___TypeInfo);
+    sub_1C37058(&TitleInfoEventSideItemComponent_TypeInfo);
+    sub_1C37058(&StringLiteral_24086/*"time_status_side_04"*/);
+    sub_1C37058(&StringLiteral_24083/*"time_status_side_01"*/);
+    sub_1C37058(&StringLiteral_24085/*"time_status_side_03"*/);
+    sub_1C37058(&StringLiteral_22731/*"point_status_side"*/);
+    sub_1C37058(&StringLiteral_24084/*"time_status_side_02"*/);
+    byte_4C41900 = 1;
   }
   TitleInfoEventSideItemComponent_TypeInfo->static_fields->ADD_LAST_LABEL_POS = (struct UnityEngine_Vector2_o)0x3F800000BF800000LL;
   __asm { FMOV            V0.2S, #1.0 }
   TitleInfoEventSideItemComponent_TypeInfo->static_fields->LAST_LABEL_OUTLINE = _D0;
-  v6 = sub_1C32CC8(string___TypeInfo, 4);
+  v6 = sub_1C37100(string___TypeInfo, 4);
   if ( !v6 )
-    sub_1C32E7C(0);
+    sub_1C372B4(0);
   v9 = v6;
   if ( !*(_DWORD *)(v6 + 24) )
     goto LABEL_9;
-  v10 = StringLiteral_24079/*"time_status_side_01"*/;
-  *(_QWORD *)(v6 + 32) = StringLiteral_24079/*"time_status_side_01"*/;
-  sub_1C32BC4((CGThumbnailListItem_o *)(v6 + 32), v10, v7, v8);
+  v10 = StringLiteral_24083/*"time_status_side_01"*/;
+  *(_QWORD *)(v6 + 32) = StringLiteral_24083/*"time_status_side_01"*/;
+  sub_1C36FFC((CGThumbnailListItem_o *)(v6 + 32), v10, v7, v8);
   if ( *(_DWORD *)(v9 + 24) <= 1u
-    || (v13 = StringLiteral_24081/*"time_status_side_03"*/,
-        *(_QWORD *)(v9 + 40) = StringLiteral_24081/*"time_status_side_03"*/,
-        sub_1C32BC4((CGThumbnailListItem_o *)(v9 + 40), v13, v11, v12),
+    || (v13 = StringLiteral_24085/*"time_status_side_03"*/,
+        *(_QWORD *)(v9 + 40) = StringLiteral_24085/*"time_status_side_03"*/,
+        sub_1C36FFC((CGThumbnailListItem_o *)(v9 + 40), v13, v11, v12),
         *(_DWORD *)(v9 + 24) <= 2u)
-    || (v16 = StringLiteral_24080/*"time_status_side_02"*/,
-        *(_QWORD *)(v9 + 48) = StringLiteral_24080/*"time_status_side_02"*/,
-        sub_1C32BC4((CGThumbnailListItem_o *)(v9 + 48), v16, v14, v15),
+    || (v16 = StringLiteral_24084/*"time_status_side_02"*/,
+        *(_QWORD *)(v9 + 48) = StringLiteral_24084/*"time_status_side_02"*/,
+        sub_1C36FFC((CGThumbnailListItem_o *)(v9 + 48), v16, v14, v15),
         *(_DWORD *)(v9 + 24) <= 3u) )
   {
 LABEL_9:
-    sub_1C32E84(v6);
+    sub_1C372BC(v6);
   }
-  v19 = StringLiteral_24082/*"time_status_side_04"*/;
-  *(_QWORD *)(v9 + 56) = StringLiteral_24082/*"time_status_side_04"*/;
-  sub_1C32BC4((CGThumbnailListItem_o *)(v9 + 56), v19, v17, v18);
+  v19 = StringLiteral_24086/*"time_status_side_04"*/;
+  *(_QWORD *)(v9 + 56) = StringLiteral_24086/*"time_status_side_04"*/;
+  sub_1C36FFC((CGThumbnailListItem_o *)(v9 + 56), v19, v17, v18);
   static_fields = TitleInfoEventSideItemComponent_TypeInfo->static_fields;
   static_fields->TIME_STATUS_SPRITE_NAMES = (struct System_String_array *)v9;
-  sub_1C32BC4((CGThumbnailListItem_o *)&static_fields->TIME_STATUS_SPRITE_NAMES, v9, v21, v22);
-  v23 = StringLiteral_22728/*"point_status_side"*/;
+  sub_1C36FFC((CGThumbnailListItem_o *)&static_fields->TIME_STATUS_SPRITE_NAMES, v9, v21, v22);
+  v23 = StringLiteral_22731/*"point_status_side"*/;
   v24 = TitleInfoEventSideItemComponent_TypeInfo->static_fields;
-  v24->POINT_STATUS_STRING = (struct System_String_o *)StringLiteral_22728/*"point_status_side"*/;
-  sub_1C32BC4((CGThumbnailListItem_o *)&v24->POINT_STATUS_STRING, v23, v25, v26);
+  v24->POINT_STATUS_STRING = (struct System_String_o *)StringLiteral_22731/*"point_status_side"*/;
+  sub_1C36FFC((CGThumbnailListItem_o *)&v24->POINT_STATUS_STRING, v23, v25, v26);
 }
 
 
@@ -91,25 +91,25 @@ SideItemComponent_o *TitleInfoEventSideItemComponent__CreateSideItem(
   UnityEngine_GameObject_o *v10; // x0
   UISprite_o *monitor; // x21
 
-  if ( (byte_4C36311 & 1) == 0 )
+  if ( (byte_4C418FF & 1) == 0 )
   {
-    sub_1C32C20(&AtlasManager_TypeInfo);
-    sub_1C32C20(&Method_UnityEngine_Object_Instantiate_SideItemComponent___);
-    sub_1C32C20(&UnityEngine_Object_TypeInfo);
-    byte_4C36311 = 1;
+    sub_1C37058(&AtlasManager_TypeInfo);
+    sub_1C37058(&Method_UnityEngine_Object_Instantiate_SideItemComponent___);
+    sub_1C37058(&UnityEngine_Object_TypeInfo);
+    byte_4C418FF = 1;
   }
   clone = (Il2CppObject *)this->fields.clone;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   v6 = UnityEngine_Object__Instantiate_object_(
          clone,
-         (const MethodInfo_3169758 *)Method_UnityEngine_Object_Instantiate_SideItemComponent___);
+         (const MethodInfo_3173FC0 *)Method_UnityEngine_Object_Instantiate_SideItemComponent___);
   if ( !v6 )
     goto LABEL_10;
   v7 = (UnityEngine_Component_o *)v6;
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)v6, 0);
   v9 = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
-  GameObjectExtensions__SafeSetParent_36042552(gameObject, v9, 0);
+  GameObjectExtensions__SafeSetParent_36138184(gameObject, v9, 0);
   v10 = UnityEngine_Component__get_gameObject(v7, 0);
   GameObjectExtensions__ResetLocalScale(v10, 0);
   monitor = (UISprite_o *)v7[1].monitor;
@@ -119,7 +119,7 @@ SideItemComponent_o *TitleInfoEventSideItemComponent__CreateSideItem(
   v6 = (Il2CppObject *)v7[1].monitor;
   if ( !v6 )
 LABEL_10:
-    sub_1C32E7C(v6);
+    sub_1C372B4(v6);
   ((void (__fastcall *)(Il2CppObject *, const MethodInfo *))v6->klass->vtable[33].methodPtr)(
     v6,
     v6->klass->vtable[33].method);
@@ -149,20 +149,20 @@ void TitleInfoEventSideItemComponent__Setup(
   EventPointBuffEntity_array *Instance; // x0
   const MethodInfo *v6; // x3
 
-  if ( (byte_4C3630E & 1) == 0 )
+  if ( (byte_4C418FC & 1) == 0 )
   {
-    sub_1C32C20(&Method_DataManager_GetMasterData_EventPointBuffMaster___);
-    sub_1C32C20(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-    byte_4C3630E = 1;
+    sub_1C37058(&Method_DataManager_GetMasterData_EventPointBuffMaster___);
+    sub_1C37058(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    byte_4C418FC = 1;
   }
-  Instance = (EventPointBuffEntity_array *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39E2904 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = (EventPointBuffEntity_array *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39ED16C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance
     || (Instance = (EventPointBuffEntity_array *)DataManager__GetMasterData_object_(
                                                    (DataManager_o *)Instance,
-                                                   (const MethodInfo_30DD3F0 *)Method_DataManager_GetMasterData_EventPointBuffMaster___)) == 0
+                                                   (const MethodInfo_30E7C58 *)Method_DataManager_GetMasterData_EventPointBuffMaster___)) == 0
     || (Instance = EventPointBuffMaster__getEntityList((EventPointBuffMaster_o *)Instance, eventId, 0)) == 0 )
   {
-    sub_1C32E7C(Instance);
+    sub_1C372B4(Instance);
   }
   if ( Instance->max_length )
     TitleInfoEventSideItemComponent__SetupBuffRateUI(this, eventId, Instance, v6);
@@ -255,21 +255,21 @@ void TitleInfoEventSideItemComponent__SetupBuffRateUI(
   __int64 v82; // x0
   __int64 v83; // [xsp+8h] [xbp-68h] BYREF
 
-  if ( (byte_4C36310 & 1) == 0 )
+  if ( (byte_4C418FE & 1) == 0 )
   {
-    sub_1C32C20(&int_TypeInfo);
-    sub_1C32C20(&long_TypeInfo);
-    sub_1C32C20(&LocalizationManager_TypeInfo);
-    sub_1C32C20(&float_TypeInfo);
-    sub_1C32C20(&string___TypeInfo);
-    sub_1C32C20(&TitleInfoEventSideItemComponent_TypeInfo);
-    sub_1C32C20(&StringLiteral_809/*"+{0:0.0}%"*/);
-    sub_1C32C20(&StringLiteral_14816/*"UNIT_REST_NONE"*/);
-    sub_1C32C20(&StringLiteral_25047/*"{0:#,0}"*/);
-    sub_1C32C20(&StringLiteral_810/*"+{0}%"*/);
-    sub_1C32C20(&StringLiteral_16618/*"_{0:00}"*/);
-    sub_1C32C20(&StringLiteral_1122/*"0"*/);
-    byte_4C36310 = 1;
+    sub_1C37058(&int_TypeInfo);
+    sub_1C37058(&long_TypeInfo);
+    sub_1C37058(&LocalizationManager_TypeInfo);
+    sub_1C37058(&float_TypeInfo);
+    sub_1C37058(&string___TypeInfo);
+    sub_1C37058(&TitleInfoEventSideItemComponent_TypeInfo);
+    sub_1C37058(&StringLiteral_809/*"+{0:0.0}%"*/);
+    sub_1C37058(&StringLiteral_14817/*"UNIT_REST_NONE"*/);
+    sub_1C37058(&StringLiteral_25052/*"{0:#,0}"*/);
+    sub_1C37058(&StringLiteral_810/*"+{0}%"*/);
+    sub_1C37058(&StringLiteral_16620/*"_{0:00}"*/);
+    sub_1C37058(&StringLiteral_1122/*"0"*/);
+    byte_4C418FE = 1;
   }
   EventPointNoGroup = UserEventPointMaster__GetEventPointNoGroup(eventId, 0);
   if ( !entitys )
@@ -309,7 +309,7 @@ LABEL_13:
   v15 = value / 10.0;
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-  v16 = LocalizationManager__Get((System_String_o *)StringLiteral_14816/*"UNIT_REST_NONE"*/, 0);
+  v16 = LocalizationManager__Get((System_String_o *)StringLiteral_14817/*"UNIT_REST_NONE"*/, 0);
   v23 = (float)(int)v15;
   if ( v15 == INFINITY )
     v23 = -2147500000.0;
@@ -330,32 +330,32 @@ LABEL_13:
   {
     v83 = v14;
     v34 = (Il2CppObject *)j_il2cpp_value_box_0(long_TypeInfo, &v83, v27, v28, v29, v30, v31, v32);
-    v24 = System_String__Format((System_String_o *)StringLiteral_25047/*"{0:#,0}"*/, v34, 0);
+    v24 = System_String__Format((System_String_o *)StringLiteral_25052/*"{0:#,0}"*/, v34, 0);
   }
-  EventPointNoGroup = sub_1C32CC8(string___TypeInfo, 3);
+  EventPointNoGroup = sub_1C37100(string___TypeInfo, 3);
   if ( !EventPointNoGroup )
     goto LABEL_73;
   v37 = EventPointNoGroup;
   if ( !*(_DWORD *)(EventPointNoGroup + 24)
     || (*(_QWORD *)(EventPointNoGroup + 32) = v33,
-        sub_1C32BC4((CGThumbnailListItem_o *)(EventPointNoGroup + 32), (int32_t)v33, v35, v36),
+        sub_1C36FFC((CGThumbnailListItem_o *)(EventPointNoGroup + 32), (int32_t)v33, v35, v36),
         v83 = v9,
         v44 = (Il2CppObject *)j_il2cpp_value_box_0(long_TypeInfo, &v83, v38, v39, v40, v41, v42, v43),
-        EventPointNoGroup = (__int64)System_String__Format((System_String_o *)StringLiteral_25047/*"{0:#,0}"*/, v44, 0),
+        EventPointNoGroup = (__int64)System_String__Format((System_String_o *)StringLiteral_25052/*"{0:#,0}"*/, v44, 0),
         *(_DWORD *)(v37 + 24) <= 1u)
     || (*(_QWORD *)(v37 + 40) = EventPointNoGroup,
-        sub_1C32BC4((CGThumbnailListItem_o *)(v37 + 40), EventPointNoGroup, v45, v46),
+        sub_1C36FFC((CGThumbnailListItem_o *)(v37 + 40), EventPointNoGroup, v45, v46),
         *(_DWORD *)(v37 + 24) <= 2u) )
   {
 LABEL_74:
-    sub_1C32E84(EventPointNoGroup);
+    sub_1C372BC(EventPointNoGroup);
   }
   *(_QWORD *)(v37 + 48) = v24;
-  sub_1C32BC4((CGThumbnailListItem_o *)(v37 + 48), (int32_t)v24, v47, v48);
+  sub_1C36FFC((CGThumbnailListItem_o *)(v37 + 48), (int32_t)v24, v47, v48);
   sideItems = this->fields.sideItems;
   if ( !sideItems )
 LABEL_73:
-    sub_1C32E7C(EventPointNoGroup);
+    sub_1C372B4(EventPointNoGroup);
   v56 = sideItems->max_length;
   if ( (int)v56 >= 1 )
   {
@@ -373,8 +373,8 @@ LABEL_73:
       POINT_STATUS_STRING = v61->static_fields->POINT_STATUS_STRING;
       LODWORD(v83) = v58 + 1;
       v63 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v83, v49, v50, v51, v52, v53, v54);
-      v64 = System_String__Format((System_String_o *)StringLiteral_16618/*"_{0:00}"*/, v63, 0);
-      v65 = System_String__Concat_63518544(POINT_STATUS_STRING, v64, 0);
+      v64 = System_String__Format((System_String_o *)StringLiteral_16620/*"_{0:00}"*/, v63, 0);
+      v65 = System_String__Concat_63561656(POINT_STATUS_STRING, v64, 0);
       EventPointNoGroup = (__int64)TitleInfoEventSideItemComponent__CreateSideItem(this, v65, v66);
       if ( !EventPointNoGroup )
         break;
@@ -387,7 +387,7 @@ LABEL_73:
         break;
       if ( v58 >= LODWORD(itemPositions->max_length) )
         goto LABEL_74;
-      GameObjectExtensions__SetLocalPosition_36036656(
+      GameObjectExtensions__SetLocalPosition_36132288(
         (UnityEngine_GameObject_o *)EventPointNoGroup,
         *(UnityEngine_Vector2_o *)((char *)itemPositions + i - 4),
         0);
@@ -402,7 +402,7 @@ LABEL_73:
         break;
       if ( v58 >= LODWORD(spritePositions->max_length) )
         goto LABEL_74;
-      GameObjectExtensions__SetLocalPosition_36036656(
+      GameObjectExtensions__SetLocalPosition_36132288(
         (UnityEngine_GameObject_o *)EventPointNoGroup,
         *(UnityEngine_Vector2_o *)((char *)spritePositions + i - 4),
         0);
@@ -441,7 +441,7 @@ LABEL_73:
         break;
       if ( v58 >= LODWORD(labelPositions->max_length) )
         goto LABEL_74;
-      GameObjectExtensions__SetLocalPosition_36036656(
+      GameObjectExtensions__SetLocalPosition_36132288(
         (UnityEngine_GameObject_o *)EventPointNoGroup,
         *(UnityEngine_Vector2_o *)((char *)labelPositions + i - 4),
         0);
@@ -508,16 +508,16 @@ LABEL_73:
       v79 = (unsigned int *)this->fields.sideItems;
       if ( !v79 )
         goto LABEL_73;
-      EventPointNoGroup = sub_1C32D5C(v67, *(_QWORD *)(*(_QWORD *)v79 + 64LL));
+      EventPointNoGroup = sub_1C37194(v67, *(_QWORD *)(*(_QWORD *)v79 + 64LL));
       if ( !EventPointNoGroup )
       {
-        v82 = sub_1C32EA0(0);
-        sub_1C32D48(v82, 0);
+        v82 = sub_1C372D8(0);
+        sub_1C37180(v82, 0);
       }
       if ( v58 >= v79[6] )
         goto LABEL_74;
       *(_QWORD *)&v79[(unsigned __int64)i / 4 - 1] = v67;
-      sub_1C32BC4((CGThumbnailListItem_o *)&v79[(unsigned __int64)i / 4 - 1], v67, v80, v81);
+      sub_1C36FFC((CGThumbnailListItem_o *)&v79[(unsigned __int64)i / 4 - 1], v67, v80, v81);
       v57 += 4LL;
       ++v58;
       if ( v59 == v57 )
@@ -564,20 +564,20 @@ void TitleInfoEventSideItemComponent__SetupTotalPointUI(
   __int64 v32; // x0
   int64_t v34; // [xsp+8h] [xbp-68h] BYREF
 
-  if ( (byte_4C3630F & 1) == 0 )
+  if ( (byte_4C418FD & 1) == 0 )
   {
-    sub_1C32C20(&Method_DataManager_GetMasterData_EventPointGroupMaster___);
-    sub_1C32C20(&long_TypeInfo);
-    sub_1C32C20(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-    sub_1C32C20(&TitleInfoEventSideItemComponent_TypeInfo);
-    sub_1C32C20(&StringLiteral_25047/*"{0:#,0}"*/);
-    byte_4C3630F = 1;
+    sub_1C37058(&Method_DataManager_GetMasterData_EventPointGroupMaster___);
+    sub_1C37058(&long_TypeInfo);
+    sub_1C37058(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    sub_1C37058(&TitleInfoEventSideItemComponent_TypeInfo);
+    sub_1C37058(&StringLiteral_25052/*"{0:#,0}"*/);
+    byte_4C418FD = 1;
   }
-  Instance = (DataManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39E2904 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = (DataManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39ED16C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance
     || (Instance = (DataManager_o *)DataManager__GetMasterData_object_(
                                       Instance,
-                                      (const MethodInfo_30DD3F0 *)Method_DataManager_GetMasterData_EventPointGroupMaster___)) == 0
+                                      (const MethodInfo_30E7C58 *)Method_DataManager_GetMasterData_EventPointGroupMaster___)) == 0
     || (Instance = (DataManager_o *)EventPointGroupMaster__getEntityList(
                                       (EventPointGroupMaster_o *)Instance,
                                       eventId,
@@ -585,7 +585,7 @@ void TitleInfoEventSideItemComponent__SetupTotalPointUI(
         (sideItems = this->fields.sideItems) == 0) )
   {
 LABEL_31:
-    sub_1C32E7C(Instance);
+    sub_1C372B4(Instance);
   }
   v7 = Instance;
   v8 = 0;
@@ -630,7 +630,7 @@ LABEL_31:
       {
         v15 = Instance;
         gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)Instance, 0);
-        GameObjectExtensions__SetLocalPosition_36036864(
+        GameObjectExtensions__SetLocalPosition_36132496(
           gameObject,
           0.0,
           (float)(int)v8 * (float)-this->fields.margin,
@@ -649,7 +649,7 @@ LABEL_31:
             j_il2cpp_runtime_class_init_0(TitleInfoEventSideItemComponent_TypeInfo);
             v24 = TitleInfoEventSideItemComponent_TypeInfo;
           }
-          GameObjectExtensions__AddLocalPosition_36037528(v25, v24->static_fields->ADD_LAST_LABEL_POS, 0);
+          GameObjectExtensions__AddLocalPosition_36133160(v25, v24->static_fields->ADD_LAST_LABEL_POS, 0);
           Instance = (DataManager_o *)v15->fields.datalist;
           if ( !Instance )
             goto LABEL_31;
@@ -665,25 +665,25 @@ LABEL_31:
         datalist = (UILabel_o *)v15->fields.datalist;
         v34 = EventPoint;
         v27 = (Il2CppObject *)j_il2cpp_value_box_0(long_TypeInfo, &v34, v17, v18, v19, v20, v21, v22);
-        Instance = (DataManager_o *)System_String__Format((System_String_o *)StringLiteral_25047/*"{0:#,0}"*/, v27, 0);
+        Instance = (DataManager_o *)System_String__Format((System_String_o *)StringLiteral_25052/*"{0:#,0}"*/, v27, 0);
         if ( datalist )
         {
           UILabel__set_text(datalist, (System_String_o *)Instance, 0);
           v28 = (unsigned int *)this->fields.sideItems;
           if ( v28 )
           {
-            Instance = (DataManager_o *)sub_1C32D5C(v15, *(_QWORD *)(*(_QWORD *)v28 + 64LL));
+            Instance = (DataManager_o *)sub_1C37194(v15, *(_QWORD *)(*(_QWORD *)v28 + 64LL));
             if ( !Instance )
             {
-              v32 = sub_1C32EA0(0);
-              sub_1C32D48(v32, 0);
+              v32 = sub_1C372D8(0);
+              sub_1C37180(v32, 0);
             }
             if ( v8 >= v28[6] )
 LABEL_33:
-              sub_1C32E84(Instance);
+              sub_1C372BC(Instance);
             v31 = &v28[2 * v8];
             *((_QWORD *)v31 + 4) = v15;
-            sub_1C32BC4((CGThumbnailListItem_o *)(v31 + 8), (int32_t)v15, v29, v30);
+            sub_1C36FFC((CGThumbnailListItem_o *)(v31 + 8), (int32_t)v15, v29, v30);
             sideItems = this->fields.sideItems;
             ++v8;
             if ( sideItems )

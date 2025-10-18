@@ -4,7 +4,7 @@ void WarBoardSquareIndexData___ctor(WarBoardSquareIndexData_o *this, const Metho
 }
 
 
-void WarBoardSquareIndexData___ctor_38070256(
+void WarBoardSquareIndexData___ctor_38166008(
         WarBoardSquareIndexData_o *this,
         WarBoardSquareIndexData_SaveData_o *squareIndexData,
         const MethodInfo *method)
@@ -19,14 +19,14 @@ void WarBoardSquareIndexData___ctor_38070256(
 
   System_Object___ctor((Il2CppObject *)this, 0);
   if ( !squareIndexData )
-    sub_1C32E7C(v5);
+    sub_1C372B4(v5);
   this->fields.squareIndex = squareIndexData->fields.squareIndex;
   effectIds = squareIndexData->fields.effectIds;
   this->fields.effectIds = effectIds;
-  sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.effectIds, (int32_t)effectIds, v6, v7);
+  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.effectIds, (int32_t)effectIds, v6, v7);
   script = squareIndexData->fields.script;
   this->fields.script = script;
-  sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.script, (int32_t)script, v10, v11);
+  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.script, (int32_t)script, v10, v11);
 }
 
 
@@ -40,13 +40,13 @@ void WarBoardSquareIndexData_SaveData___ctor(WarBoardSquareIndexData_SaveData_o 
   System_Object___ctor((Il2CppObject *)this, 0);
   this->fields.squareIndex = 0;
   this->fields.effectIds = 0;
-  sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.effectIds, 0, v3, v4);
+  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.effectIds, 0, v3, v4);
   this->fields.script = 0;
-  sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.script, 0, v5, v6);
+  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.script, 0, v5, v6);
 }
 
 
-void WarBoardSquareIndexData_SaveData___ctor_38028632(
+void WarBoardSquareIndexData_SaveData___ctor_38124380(
         WarBoardSquareIndexData_SaveData_o *this,
         WarBoardSquareIndexData_o *squareIndexData,
         const MethodInfo *method)
@@ -61,12 +61,12 @@ void WarBoardSquareIndexData_SaveData___ctor_38028632(
 
   System_Object___ctor((Il2CppObject *)this, 0);
   if ( !squareIndexData )
-    sub_1C32E7C(v5);
+    sub_1C372B4(v5);
   this->fields.squareIndex = squareIndexData->fields.squareIndex;
   effectIds = squareIndexData->fields.effectIds;
   this->fields.effectIds = effectIds;
-  sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.effectIds, (int32_t)effectIds, v6, v7);
+  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.effectIds, (int32_t)effectIds, v6, v7);
   script = squareIndexData->fields.script;
   this->fields.script = script;
-  sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.script, (int32_t)script, v10, v11);
+  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.script, (int32_t)script, v10, v11);
 }

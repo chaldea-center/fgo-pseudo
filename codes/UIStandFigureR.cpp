@@ -7,27 +7,27 @@ void UIStandFigureR___ctor(UIStandFigureR_o *this, const MethodInfo *method)
   int32_t v7; // w2
   const MethodInfo *v8; // x3
 
-  if ( (byte_4C39303 & 1) == 0 )
+  if ( (byte_4C448FD & 1) == 0 )
   {
-    sub_1C32C20(&Method_System_Collections_Generic_List_AssetData___ctor__);
-    sub_1C32C20(&Method_System_Collections_Generic_List_string___ctor__);
-    sub_1C32C20(&System_Collections_Generic_List_string__TypeInfo);
-    sub_1C32C20(&System_Collections_Generic_List_AssetData__TypeInfo);
-    byte_4C39303 = 1;
+    sub_1C37058(&Method_System_Collections_Generic_List_AssetData___ctor__);
+    sub_1C37058(&Method_System_Collections_Generic_List_string___ctor__);
+    sub_1C37058(&System_Collections_Generic_List_string__TypeInfo);
+    sub_1C37058(&System_Collections_Generic_List_AssetData__TypeInfo);
+    byte_4C448FD = 1;
   }
   this->fields.alphaMaskStart = 1.0;
-  v3 = (System_Collections_Generic_List_object__o *)sub_1C32E6C(System_Collections_Generic_List_AssetData__TypeInfo);
+  v3 = (System_Collections_Generic_List_object__o *)sub_1C372A4(System_Collections_Generic_List_AssetData__TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v3,
-    (const MethodInfo_3797F88 *)Method_System_Collections_Generic_List_AssetData___ctor__);
+    (const MethodInfo_37A27F0 *)Method_System_Collections_Generic_List_AssetData___ctor__);
   this->fields.formAssetList = (struct System_Collections_Generic_List_AssetData__o *)v3;
-  sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.formAssetList, (int32_t)v3, v4, v5);
-  v6 = (System_Collections_Generic_List_object__o *)sub_1C32E6C(System_Collections_Generic_List_string__TypeInfo);
+  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.formAssetList, (int32_t)v3, v4, v5);
+  v6 = (System_Collections_Generic_List_object__o *)sub_1C372A4(System_Collections_Generic_List_string__TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v6,
-    (const MethodInfo_3797F88 *)Method_System_Collections_Generic_List_string___ctor__);
+    (const MethodInfo_37A27F0 *)Method_System_Collections_Generic_List_string___ctor__);
   this->fields.loadNameList = (struct System_Collections_Generic_List_string__o *)v6;
-  sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.loadNameList, (int32_t)v6, v7, v8);
+  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.loadNameList, (int32_t)v6, v7, v8);
   UnityEngine_MonoBehaviour___ctor((UnityEngine_MonoBehaviour_o *)this, 0);
 }
 
@@ -38,7 +38,7 @@ void UIStandFigureR__CancelPreloadFormAssets(UIStandFigureR_o *this, const Metho
   const MethodInfo *v3; // x3
 
   this->fields.callbackFuncAfterLoadForms = 0;
-  sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.callbackFuncAfterLoadForms, 0, v2, v3);
+  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.callbackFuncAfterLoadForms, 0, v2, v3);
 }
 
 
@@ -55,20 +55,20 @@ System_Collections_IEnumerator_o *UIStandFigureR__ChangeCrossFade(
   int32_t v11; // w2
   const MethodInfo *v12; // x3
 
-  if ( (byte_4C392FE & 1) == 0 )
+  if ( (byte_4C448F8 & 1) == 0 )
   {
-    sub_1C32C20(&UIStandFigureR__ChangeCrossFade_d__92_TypeInfo);
-    byte_4C392FE = 1;
+    sub_1C37058(&UIStandFigureR__ChangeCrossFade_d__92_TypeInfo);
+    byte_4C448F8 = 1;
   }
-  v7 = sub_1C32E6C(UIStandFigureR__ChangeCrossFade_d__92_TypeInfo);
+  v7 = sub_1C372A4(UIStandFigureR__ChangeCrossFade_d__92_TypeInfo);
   UIStandFigureR__ChangeCrossFade_d__92___ctor((UIStandFigureR__ChangeCrossFade_d__92_o *)v7, 0, 0);
   if ( !v7 )
-    sub_1C32E7C(v8);
+    sub_1C372B4(v8);
   *(_QWORD *)(v7 + 32) = this;
-  sub_1C32BC4((CGThumbnailListItem_o *)(v7 + 32), (int32_t)this, v9, v10);
+  sub_1C36FFC((CGThumbnailListItem_o *)(v7 + 32), (int32_t)this, v9, v10);
   *(float *)(v7 + 40) = time;
   *(_QWORD *)(v7 + 48) = fadeInRenderTex;
-  sub_1C32BC4((CGThumbnailListItem_o *)(v7 + 48), (int32_t)fadeInRenderTex, v11, v12);
+  sub_1C36FFC((CGThumbnailListItem_o *)(v7 + 48), (int32_t)fadeInRenderTex, v11, v12);
   return (System_Collections_IEnumerator_o *)v7;
 }
 
@@ -89,10 +89,10 @@ void UIStandFigureR__EndCrossFade(
   struct UIDrawCall_o *v13; // x8
   const MethodInfo *v14; // x1
 
-  if ( (byte_4C392FF & 1) == 0 )
+  if ( (byte_4C448F9 & 1) == 0 )
   {
-    sub_1C32C20(&UnityEngine_Object_TypeInfo);
-    byte_4C392FF = 1;
+    sub_1C37058(&UnityEngine_Object_TypeInfo);
+    byte_4C448F9 = 1;
   }
   this->fields.isCrossFade = 0;
   bodyTexture = (UnityEngine_Object_o *)this->fields.bodyTexture;
@@ -131,7 +131,7 @@ void UIStandFigureR__EndCrossFade(
         BodyTextureMaterial = v13->fields.mDynamicMat;
         if ( !BodyTextureMaterial )
           goto LABEL_23;
-        UnityEngine_Material__SetTexture_71088452(
+        UnityEngine_Material__SetTexture_71131564(
           BodyTextureMaterial,
           this->fields.mainTexId,
           (UnityEngine_Texture_o *)renderTex,
@@ -148,12 +148,12 @@ void UIStandFigureR__EndCrossFade(
       BodyTextureMaterial = UIStandFigureR__get_BodyTextureMaterial(this, v14);
       if ( BodyTextureMaterial )
       {
-        UnityEngine_Material__SetFloat_71093372(BodyTextureMaterial, this->fields.blendId, 0.0, 0);
+        UnityEngine_Material__SetFloat_71136484(BodyTextureMaterial, this->fields.blendId, 0.0, 0);
         return;
       }
     }
 LABEL_23:
-    sub_1C32E7C(BodyTextureMaterial);
+    sub_1C372B4(BodyTextureMaterial);
   }
 }
 
@@ -179,16 +179,16 @@ void UIStandFigureR__EndLoadAsset(UIStandFigureR_o *this, AssetData_o *assetData
   System_Collections_Generic_List_Enumerator_object__o v20; // [xsp+20h] [xbp-60h] BYREF
 
   v4 = this;
-  if ( (byte_4C392EE & 1) == 0 )
+  if ( (byte_4C448E8 & 1) == 0 )
   {
-    sub_1C32C20(&AssetManager_TypeInfo);
-    sub_1C32C20(&Method_System_Collections_Generic_List_Enumerator_AssetData__Dispose__);
-    sub_1C32C20(&Method_System_Collections_Generic_List_Enumerator_AssetData__MoveNext__);
-    sub_1C32C20(&Method_System_Collections_Generic_List_Enumerator_AssetData__get_Current__);
-    sub_1C32C20(&Method_System_Collections_Generic_List_AssetData__Add__);
-    sub_1C32C20(&Method_System_Collections_Generic_List_AssetData__Clear__);
-    this = (UIStandFigureR_o *)sub_1C32C20(&Method_System_Collections_Generic_List_AssetData__GetEnumerator__);
-    byte_4C392EE = 1;
+    sub_1C37058(&AssetManager_TypeInfo);
+    sub_1C37058(&Method_System_Collections_Generic_List_Enumerator_AssetData__Dispose__);
+    sub_1C37058(&Method_System_Collections_Generic_List_Enumerator_AssetData__MoveNext__);
+    sub_1C37058(&Method_System_Collections_Generic_List_Enumerator_AssetData__get_Current__);
+    sub_1C37058(&Method_System_Collections_Generic_List_AssetData__Add__);
+    sub_1C37058(&Method_System_Collections_Generic_List_AssetData__Clear__);
+    this = (UIStandFigureR_o *)sub_1C37058(&Method_System_Collections_Generic_List_AssetData__GetEnumerator__);
+    byte_4C448E8 = 1;
   }
   memset(&v20, 0, sizeof(v20));
   loadName = v4->fields.loadName;
@@ -199,7 +199,7 @@ void UIStandFigureR__EndLoadAsset(UIStandFigureR_o *this, AssetData_o *assetData
     this = (UIStandFigureR_o *)assetData->fields.name;
     if ( !this )
       goto LABEL_22;
-    if ( !System_String__Equals_63553848((System_String_o *)this, loadName, 0) )
+    if ( !System_String__Equals_63596960((System_String_o *)this, loadName, 0) )
       return;
     this = (UIStandFigureR_o *)v4->fields.formAssetList;
     if ( !this )
@@ -207,20 +207,20 @@ void UIStandFigureR__EndLoadAsset(UIStandFigureR_o *this, AssetData_o *assetData
     System_Collections_Generic_List_object___GetEnumerator(
       (System_Collections_Generic_List_Enumerator_T__o *)&v19,
       (System_Collections_Generic_List_object__o *)this,
-      (const MethodInfo_37992B4 *)Method_System_Collections_Generic_List_AssetData__GetEnumerator__);
+      (const MethodInfo_37A3B1C *)Method_System_Collections_Generic_List_AssetData__GetEnumerator__);
     v20 = v19;
     while ( System_Collections_Generic_List_Enumerator_object___MoveNext(
               &v20,
-              (const MethodInfo_3522FA8 *)Method_System_Collections_Generic_List_Enumerator_AssetData__MoveNext__) )
+              (const MethodInfo_352D810 *)Method_System_Collections_Generic_List_Enumerator_AssetData__MoveNext__) )
     {
       current = v20.fields._current;
       if ( !AssetManager_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(AssetManager_TypeInfo);
-      AssetManager__releaseAsset_40435328((AssetData_o *)current, 0);
+      AssetManager__releaseAsset_40534712((AssetData_o *)current, 0);
     }
     System_Collections_Generic_List_Enumerator_object___Dispose(
       &v20,
-      (const MethodInfo_3522FA4 *)Method_System_Collections_Generic_List_Enumerator_AssetData__Dispose__);
+      (const MethodInfo_352D80C *)Method_System_Collections_Generic_List_Enumerator_AssetData__Dispose__);
     this = (UIStandFigureR_o *)v4->fields.formAssetList;
     if ( !this )
       goto LABEL_22;
@@ -240,26 +240,26 @@ void UIStandFigureR__EndLoadAsset(UIStandFigureR_o *this, AssetData_o *assetData
     ++HIDWORD(this->fields.m_CancellationTokenSource);
     if ( !m_CachedPtr )
 LABEL_22:
-      sub_1C32E7C(this);
+      sub_1C372B4(this);
     m_CancellationTokenSource_low = SLODWORD(this->fields.m_CancellationTokenSource);
     if ( (unsigned int)m_CancellationTokenSource_low >= *(_DWORD *)(m_CachedPtr + 24) )
     {
       System_Collections_Generic_List_object___AddWithResize(
         (System_Collections_Generic_List_object__o *)this,
         (Il2CppObject *)assetData,
-        *(const MethodInfo_37987BC **)(*(_QWORD *)(v11[4] + 192LL) + 112LL));
+        *(const MethodInfo_37A3024 **)(*(_QWORD *)(v11[4] + 192LL) + 112LL));
     }
     else
     {
       v13 = m_CachedPtr + 8 * m_CancellationTokenSource_low;
       LODWORD(this->fields.m_CancellationTokenSource) = m_CancellationTokenSource_low + 1;
       *(_QWORD *)(v13 + 32) = assetData;
-      sub_1C32BC4((CGThumbnailListItem_o *)(v13 + 32), (int32_t)assetData, m_CancellationTokenSource, v7);
+      sub_1C36FFC((CGThumbnailListItem_o *)(v13 + 32), (int32_t)assetData, m_CancellationTokenSource, v7);
     }
     v4->fields.loadName = 0;
-    sub_1C32BC4((CGThumbnailListItem_o *)&v4->fields.loadName, 0, v14, v15);
+    sub_1C36FFC((CGThumbnailListItem_o *)&v4->fields.loadName, 0, v14, v15);
     v4->fields.assetData = assetData;
-    sub_1C32BC4((CGThumbnailListItem_o *)&v4->fields.assetData, (int32_t)assetData, v16, v17);
+    sub_1C36FFC((CGThumbnailListItem_o *)&v4->fields.assetData, (int32_t)assetData, v16, v17);
     v4->fields.isAssetLoaded = 1;
     UIStandFigureR__RequestRenderAsset(v4, v18);
   }
@@ -294,18 +294,18 @@ void UIStandFigureR__EndLoadAssetWithEffect(
   System_Collections_Generic_List_Enumerator_object__o v25; // [xsp+20h] [xbp-60h] BYREF
 
   v6 = this;
-  if ( (byte_4C392EF & 1) == 0 )
+  if ( (byte_4C448E9 & 1) == 0 )
   {
-    sub_1C32C20(&System_Action_TypeInfo);
-    sub_1C32C20(&AssetManager_TypeInfo);
-    sub_1C32C20(&Method_System_Collections_Generic_List_Enumerator_AssetData__Dispose__);
-    sub_1C32C20(&Method_System_Collections_Generic_List_Enumerator_AssetData__MoveNext__);
-    sub_1C32C20(&Method_System_Collections_Generic_List_Enumerator_AssetData__get_Current__);
-    sub_1C32C20(&Method_System_Collections_Generic_List_AssetData__Add__);
-    sub_1C32C20(&Method_System_Collections_Generic_List_AssetData__Clear__);
-    sub_1C32C20(&Method_System_Collections_Generic_List_AssetData__GetEnumerator__);
-    this = (UIStandFigureR_o *)sub_1C32C20(&Method_UIStandFigureR_RequestRenderAssetWithEffect__);
-    byte_4C392EF = 1;
+    sub_1C37058(&System_Action_TypeInfo);
+    sub_1C37058(&AssetManager_TypeInfo);
+    sub_1C37058(&Method_System_Collections_Generic_List_Enumerator_AssetData__Dispose__);
+    sub_1C37058(&Method_System_Collections_Generic_List_Enumerator_AssetData__MoveNext__);
+    sub_1C37058(&Method_System_Collections_Generic_List_Enumerator_AssetData__get_Current__);
+    sub_1C37058(&Method_System_Collections_Generic_List_AssetData__Add__);
+    sub_1C37058(&Method_System_Collections_Generic_List_AssetData__Clear__);
+    sub_1C37058(&Method_System_Collections_Generic_List_AssetData__GetEnumerator__);
+    this = (UIStandFigureR_o *)sub_1C37058(&Method_UIStandFigureR_RequestRenderAssetWithEffect__);
+    byte_4C448E9 = 1;
   }
   memset(&v25, 0, sizeof(v25));
   loadName = v6->fields.loadName;
@@ -316,7 +316,7 @@ void UIStandFigureR__EndLoadAssetWithEffect(
     this = (UIStandFigureR_o *)assetData->fields.name;
     if ( !this )
       goto LABEL_29;
-    if ( System_String__Equals_63553848((System_String_o *)this, loadName, 0) )
+    if ( System_String__Equals_63596960((System_String_o *)this, loadName, 0) )
     {
       this = (UIStandFigureR_o *)v6->fields.formAssetList;
       if ( this )
@@ -324,20 +324,20 @@ void UIStandFigureR__EndLoadAssetWithEffect(
         System_Collections_Generic_List_object___GetEnumerator(
           (System_Collections_Generic_List_Enumerator_T__o *)&v24,
           (System_Collections_Generic_List_object__o *)this,
-          (const MethodInfo_37992B4 *)Method_System_Collections_Generic_List_AssetData__GetEnumerator__);
+          (const MethodInfo_37A3B1C *)Method_System_Collections_Generic_List_AssetData__GetEnumerator__);
         v25 = v24;
         while ( System_Collections_Generic_List_Enumerator_object___MoveNext(
                   &v25,
-                  (const MethodInfo_3522FA8 *)Method_System_Collections_Generic_List_Enumerator_AssetData__MoveNext__) )
+                  (const MethodInfo_352D810 *)Method_System_Collections_Generic_List_Enumerator_AssetData__MoveNext__) )
         {
           current = v25.fields._current;
           if ( !AssetManager_TypeInfo->_2.cctor_finished )
             j_il2cpp_runtime_class_init_0(AssetManager_TypeInfo);
-          AssetManager__releaseAsset_40435328((AssetData_o *)current, 0);
+          AssetManager__releaseAsset_40534712((AssetData_o *)current, 0);
         }
         System_Collections_Generic_List_Enumerator_object___Dispose(
           &v25,
-          (const MethodInfo_3522FA4 *)Method_System_Collections_Generic_List_Enumerator_AssetData__Dispose__);
+          (const MethodInfo_352D80C *)Method_System_Collections_Generic_List_Enumerator_AssetData__Dispose__);
         this = (UIStandFigureR_o *)v6->fields.formAssetList;
         if ( this )
         {
@@ -360,19 +360,19 @@ void UIStandFigureR__EndLoadAssetWithEffect(
                 System_Collections_Generic_List_object___AddWithResize(
                   (System_Collections_Generic_List_object__o *)this,
                   (Il2CppObject *)assetData,
-                  *(const MethodInfo_37987BC **)(*(_QWORD *)(v13[4] + 192LL) + 112LL));
+                  *(const MethodInfo_37A3024 **)(*(_QWORD *)(v13[4] + 192LL) + 112LL));
               }
               else
               {
                 v15 = m_CachedPtr + 8 * m_CancellationTokenSource_low;
                 LODWORD(this->fields.m_CancellationTokenSource) = m_CancellationTokenSource_low + 1;
                 *(_QWORD *)(v15 + 32) = assetData;
-                sub_1C32BC4((CGThumbnailListItem_o *)(v15 + 32), (int32_t)assetData, m_CancellationTokenSource, v9);
+                sub_1C36FFC((CGThumbnailListItem_o *)(v15 + 32), (int32_t)assetData, m_CancellationTokenSource, v9);
               }
               v6->fields.loadName = 0;
-              sub_1C32BC4((CGThumbnailListItem_o *)&v6->fields.loadName, 0, v16, v17);
+              sub_1C36FFC((CGThumbnailListItem_o *)&v6->fields.loadName, 0, v16, v17);
               v6->fields.assetData = assetData;
-              sub_1C32BC4((CGThumbnailListItem_o *)&v6->fields.assetData, (int32_t)assetData, v18, v19);
+              sub_1C36FFC((CGThumbnailListItem_o *)&v6->fields.assetData, (int32_t)assetData, v18, v19);
               v6->fields.isAssetLoaded = 1;
               this = (UIStandFigureR_o *)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)v6, 0);
               if ( this )
@@ -380,10 +380,10 @@ void UIStandFigureR__EndLoadAssetWithEffect(
                 if ( UnityEngine_GameObject__get_activeInHierarchy((UnityEngine_GameObject_o *)this, 0)
                   && waitToStartRenderWhileAssetLoadBusy )
                 {
-                  v21 = (System_Action_o *)sub_1C32E6C(System_Action_TypeInfo);
+                  v21 = (System_Action_o *)sub_1C372A4(System_Action_TypeInfo);
                   System_Action___ctor(v21, (Il2CppObject *)v6, Method_UIStandFigureR_RequestRenderAssetWithEffect__, 0);
                   v23 = UIStandFigureR__WaitWhileLoading(v21, v22);
-                  UnityEngine_MonoBehaviour__StartCoroutine_71209212((UnityEngine_MonoBehaviour_o *)v6, v23, 0);
+                  UnityEngine_MonoBehaviour__StartCoroutine_71252324((UnityEngine_MonoBehaviour_o *)v6, v23, 0);
                 }
                 else
                 {
@@ -396,12 +396,12 @@ void UIStandFigureR__EndLoadAssetWithEffect(
         }
       }
 LABEL_29:
-      sub_1C32E7C(this);
+      sub_1C372B4(this);
     }
   }
   if ( !AssetManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(AssetManager_TypeInfo);
-  AssetManager__releaseAsset_40435328(assetData, 0);
+  AssetManager__releaseAsset_40534712(assetData, 0);
 }
 
 
@@ -427,22 +427,22 @@ void UIStandFigureR__EndLoadFormAsset(UIStandFigureR_o *this, AssetData_o *asset
   const MethodInfo *v22; // x3
   const MethodInfo *v23; // x1
 
-  if ( (byte_4C392F7 & 1) == 0 )
+  if ( (byte_4C448F1 & 1) == 0 )
   {
-    sub_1C32C20(&Method_System_Collections_Generic_List_AssetData__Add__);
-    sub_1C32C20(&Method_System_Collections_Generic_List_AssetData__Exists__);
-    sub_1C32C20(&System_Predicate_AssetData__TypeInfo);
-    sub_1C32C20(&Method_UIStandFigureR___c__DisplayClass80_0__EndLoadFormAsset_b__0__);
-    sub_1C32C20(&UIStandFigureR___c__DisplayClass80_0_TypeInfo);
-    byte_4C392F7 = 1;
+    sub_1C37058(&Method_System_Collections_Generic_List_AssetData__Add__);
+    sub_1C37058(&Method_System_Collections_Generic_List_AssetData__Exists__);
+    sub_1C37058(&System_Predicate_AssetData__TypeInfo);
+    sub_1C37058(&Method_UIStandFigureR___c__DisplayClass80_0__EndLoadFormAsset_b__0__);
+    sub_1C37058(&UIStandFigureR___c__DisplayClass80_0_TypeInfo);
+    byte_4C448F1 = 1;
   }
-  v5 = sub_1C32E6C(UIStandFigureR___c__DisplayClass80_0_TypeInfo);
+  v5 = sub_1C372A4(UIStandFigureR___c__DisplayClass80_0_TypeInfo);
   UIStandFigureR___c__DisplayClass80_0___ctor((UIStandFigureR___c__DisplayClass80_0_o *)v5, 0);
   if ( !v5 )
     goto LABEL_17;
   *(_QWORD *)(v5 + 16) = assetData;
   v9 = (struct AssetData_o **)(v5 + 16);
-  sub_1C32BC4((CGThumbnailListItem_o *)(v5 + 16), (int32_t)assetData, v7, v8);
+  sub_1C36FFC((CGThumbnailListItem_o *)(v5 + 16), (int32_t)assetData, v7, v8);
   loadName = this->fields.loadName;
   if ( loadName )
   {
@@ -451,10 +451,10 @@ void UIStandFigureR__EndLoadFormAsset(UIStandFigureR_o *this, AssetData_o *asset
     name = (System_Collections_Generic_List_object__o *)(*v9)->fields.name;
     if ( !name )
       goto LABEL_17;
-    if ( System_String__Equals_63553848((System_String_o *)name, loadName, 0) )
+    if ( System_String__Equals_63596960((System_String_o *)name, loadName, 0) )
     {
       formAssetList = this->fields.formAssetList;
-      v12 = (System_Predicate_object__o *)sub_1C32E6C(System_Predicate_AssetData__TypeInfo);
+      v12 = (System_Predicate_object__o *)sub_1C372A4(System_Predicate_AssetData__TypeInfo);
       System_Predicate_object____ctor(
         v12,
         (Il2CppObject *)v5,
@@ -465,14 +465,14 @@ void UIStandFigureR__EndLoadFormAsset(UIStandFigureR_o *this, AssetData_o *asset
         if ( System_Collections_Generic_List_object___Exists(
                (System_Collections_Generic_List_object__o *)formAssetList,
                (System_Predicate_T__o *)v12,
-               (const MethodInfo_3798DE8 *)Method_System_Collections_Generic_List_AssetData__Exists__) )
+               (const MethodInfo_37A3650 *)Method_System_Collections_Generic_List_AssetData__Exists__) )
         {
 LABEL_16:
           this->fields.loadName = 0;
-          sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.loadName, 0, v13, v14);
+          sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.loadName, 0, v13, v14);
           v20 = *v9;
           this->fields.assetData = *v9;
-          sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.assetData, (int32_t)v20, v21, v22);
+          sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.assetData, (int32_t)v20, v21, v22);
           UIStandFigureR__RequestRenderAsset(this, v23);
           return;
         }
@@ -491,21 +491,21 @@ LABEL_16:
               System_Collections_Generic_List_object___AddWithResize(
                 name,
                 (Il2CppObject *)v15,
-                *(const MethodInfo_37987BC **)(*(_QWORD *)(v17[4] + 192LL) + 112LL));
+                *(const MethodInfo_37A3024 **)(*(_QWORD *)(v17[4] + 192LL) + 112LL));
             }
             else
             {
               v19 = &items->obj.klass + size;
               name->fields._size = size + 1;
               v19[4] = (Il2CppClass *)v15;
-              sub_1C32BC4((CGThumbnailListItem_o *)(v19 + 4), (int32_t)v15, v13, v14);
+              sub_1C36FFC((CGThumbnailListItem_o *)(v19 + 4), (int32_t)v15, v13, v14);
             }
             goto LABEL_16;
           }
         }
       }
 LABEL_17:
-      sub_1C32E7C(name);
+      sub_1C372B4(name);
     }
   }
 }
@@ -573,11 +573,11 @@ void UIStandFigureR__EndRenderAsset(
   UnityEngine_Vector3_o v58; // 0:s0.4,4:s1.4,8:s2.4
   UnityEngine_Vector3_o v59; // 0:s0.4,4:s1.4,8:s2.4
 
-  if ( (byte_4C392F3 & 1) == 0 )
+  if ( (byte_4C448ED & 1) == 0 )
   {
-    sub_1C32C20(&UnityEngine_Object_TypeInfo);
-    sub_1C32C20(&UIStandFigureRender_TypeInfo);
-    byte_4C392F3 = 1;
+    sub_1C37058(&UnityEngine_Object_TypeInfo);
+    sub_1C37058(&UIStandFigureRender_TypeInfo);
+    byte_4C448ED = 1;
   }
   bodyTexture = (UnityEngine_Object_o *)this->fields.bodyTexture;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -626,21 +626,21 @@ void UIStandFigureR__EndRenderAsset(
           goto LABEL_71;
         v55 = (UnityEngine_Texture_o *)renderTex;
       }
-      UnityEngine_Material__SetTexture_71088452(BodyTextureMaterial, this->fields.mainTexId, v55, 0);
+      UnityEngine_Material__SetTexture_71131564(BodyTextureMaterial, this->fields.mainTexId, v55, 0);
       BodyTextureMaterial = UIStandFigureR__get_BodyTextureMaterial(this, v56);
       if ( !BodyTextureMaterial )
 LABEL_71:
-        sub_1C32E7C(BodyTextureMaterial);
-      UnityEngine_Material__SetTexture_71088452(
+        sub_1C372B4(BodyTextureMaterial);
+      UnityEngine_Material__SetTexture_71131564(
         BodyTextureMaterial,
         this->fields.mainTex2Id,
         (UnityEngine_Texture_o *)renderTex,
         0);
     }
     this->fields.currentBodyTexture = renderTex;
-    sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.currentBodyTexture, (int32_t)renderTex, v10, v11);
+    sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.currentBodyTexture, (int32_t)renderTex, v10, v11);
     this->fields.renderTexture = renderTex;
-    sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.renderTexture, (int32_t)renderTex, v12, v13);
+    sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.renderTexture, (int32_t)renderTex, v12, v13);
     BodyTextureMaterial = (UnityEngine_Material_o *)this->fields.bodyTexture;
     if ( !BodyTextureMaterial )
       goto LABEL_71;
@@ -718,10 +718,10 @@ LABEL_71:
         {
           if ( SLODWORD(withMasterPhotoPosition->max_length) >= 2 )
           {
-            if ( !byte_4C313D1 )
+            if ( !byte_4C3C921 )
             {
-              BodyTextureMaterial = (UnityEngine_Material_o *)sub_1C32C20(&UnityEngine_Vector3_TypeInfo);
-              byte_4C313D1 = 1;
+              BodyTextureMaterial = (UnityEngine_Material_o *)sub_1C37058(&UnityEngine_Vector3_TypeInfo);
+              byte_4C3C921 = 1;
               v35 = this->fields.svtMultiPortraitEntity;
             }
             if ( !v35 )
@@ -749,7 +749,7 @@ LABEL_71:
               goto LABEL_50;
             }
 LABEL_72:
-            sub_1C32E84(BodyTextureMaterial);
+            sub_1C372BC(BodyTextureMaterial);
           }
         }
       }
@@ -794,7 +794,7 @@ LABEL_56:
               if ( callbackFunc )
               {
                 p_callbackFunc->klass = 0;
-                sub_1C32BC4(p_callbackFunc, 0, (int32_t)v45, v46);
+                sub_1C36FFC(p_callbackFunc, 0, (int32_t)v45, v46);
                 ((void (__fastcall *)(intptr_t, intptr_t))v50->fields.invoke_impl)(
                   v50->fields.method_code,
                   v50->fields.method);
@@ -871,11 +871,11 @@ void UIStandFigureR__EndRenderAssetWithEffect(
   UnityEngine_Vector3_o v57; // 0:s0.4,4:s1.4,8:s2.4
   UnityEngine_Vector3_o v58; // 0:s0.4,4:s1.4,8:s2.4
 
-  if ( (byte_4C392F4 & 1) == 0 )
+  if ( (byte_4C448EE & 1) == 0 )
   {
-    sub_1C32C20(&UnityEngine_Object_TypeInfo);
-    sub_1C32C20(&UIStandFigureRender_TypeInfo);
-    byte_4C392F4 = 1;
+    sub_1C37058(&UnityEngine_Object_TypeInfo);
+    sub_1C37058(&UIStandFigureRender_TypeInfo);
+    byte_4C448EE = 1;
   }
   bodyTexture = (UnityEngine_Object_o *)this->fields.bodyTexture;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -919,21 +919,21 @@ void UIStandFigureR__EndRenderAssetWithEffect(
           goto LABEL_67;
         v54 = (UnityEngine_Texture_o *)renderTex;
       }
-      UnityEngine_Material__SetTexture_71088452(BodyTextureMaterial, this->fields.mainTexId, v54, 0);
+      UnityEngine_Material__SetTexture_71131564(BodyTextureMaterial, this->fields.mainTexId, v54, 0);
       BodyTextureMaterial = UIStandFigureR__get_BodyTextureMaterial(this, v55);
       if ( !BodyTextureMaterial )
 LABEL_67:
-        sub_1C32E7C(BodyTextureMaterial);
-      UnityEngine_Material__SetTexture_71088452(
+        sub_1C372B4(BodyTextureMaterial);
+      UnityEngine_Material__SetTexture_71131564(
         BodyTextureMaterial,
         this->fields.mainTex2Id,
         (UnityEngine_Texture_o *)renderTex,
         0);
     }
     this->fields.currentBodyTexture = renderTex;
-    sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.currentBodyTexture, (int32_t)renderTex, v9, v10);
+    sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.currentBodyTexture, (int32_t)renderTex, v9, v10);
     this->fields.renderTexture = renderTex;
-    sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.renderTexture, (int32_t)renderTex, v11, v12);
+    sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.renderTexture, (int32_t)renderTex, v11, v12);
     BodyTextureMaterial = (UnityEngine_Material_o *)this->fields.bodyTexture;
     if ( !BodyTextureMaterial )
       goto LABEL_67;
@@ -1011,10 +1011,10 @@ LABEL_67:
         {
           if ( SLODWORD(withMasterPhotoPosition->max_length) >= 2 )
           {
-            if ( !byte_4C313D1 )
+            if ( !byte_4C3C921 )
             {
-              BodyTextureMaterial = (UnityEngine_Material_o *)sub_1C32C20(&UnityEngine_Vector3_TypeInfo);
-              byte_4C313D1 = 1;
+              BodyTextureMaterial = (UnityEngine_Material_o *)sub_1C37058(&UnityEngine_Vector3_TypeInfo);
+              byte_4C3C921 = 1;
               v34 = this->fields.svtMultiPortraitEntity;
             }
             if ( !v34 )
@@ -1042,7 +1042,7 @@ LABEL_67:
               goto LABEL_46;
             }
 LABEL_68:
-            sub_1C32E84(BodyTextureMaterial);
+            sub_1C372BC(BodyTextureMaterial);
           }
         }
       }
@@ -1087,7 +1087,7 @@ LABEL_52:
               if ( callbackFunc )
               {
                 p_callbackFunc->klass = 0;
-                sub_1C32BC4(p_callbackFunc, 0, (int32_t)v44, v45);
+                sub_1C36FFC(p_callbackFunc, 0, (int32_t)v44, v45);
                 ((void (__fastcall *)(intptr_t, intptr_t))v49->fields.invoke_impl)(
                   v49->fields.method_code,
                   v49->fields.method);
@@ -1116,11 +1116,11 @@ void UIStandFigureR__EnqueueRenderInfo(UIStandFigureR_o *this, const MethodInfo 
   UnityEngine_Texture2D_array *TextureList_k__BackingField; // x26
   StandFigureRenderWaitStatus_EndHandler_o *v12; // x27
 
-  if ( (byte_4C39302 & 1) == 0 )
+  if ( (byte_4C448FC & 1) == 0 )
   {
-    sub_1C32C20(&StandFigureRenderWaitStatus_EndHandler_TypeInfo);
-    sub_1C32C20(&Method_UIStandFigureR_EndRenderAssetWithEffect__);
-    byte_4C39302 = 1;
+    sub_1C37058(&StandFigureRenderWaitStatus_EndHandler_TypeInfo);
+    sub_1C37058(&Method_UIStandFigureR_EndRenderAssetWithEffect__);
+    byte_4C448FC = 1;
   }
   renderInfo = this->fields.renderInfo;
   if ( renderInfo )
@@ -1131,7 +1131,7 @@ void UIStandFigureR__EnqueueRenderInfo(UIStandFigureR_o *this, const MethodInfo 
     FormId_k__BackingField = renderInfo->fields._FormId_k__BackingField;
     MultiPortraitIndex_k__BackingField = renderInfo->fields._MultiPortraitIndex_k__BackingField;
     TextureList_k__BackingField = renderInfo->fields._TextureList_k__BackingField;
-    v12 = (StandFigureRenderWaitStatus_EndHandler_o *)sub_1C32E6C(StandFigureRenderWaitStatus_EndHandler_TypeInfo);
+    v12 = (StandFigureRenderWaitStatus_EndHandler_o *)sub_1C372A4(StandFigureRenderWaitStatus_EndHandler_TypeInfo);
     StandFigureRenderWaitStatus_EndHandler___ctor(
       v12,
       (Il2CppObject *)this,
@@ -1148,7 +1148,7 @@ void UIStandFigureR__EnqueueRenderInfo(UIStandFigureR_o *this, const MethodInfo 
       0);
   }
   this->fields.renderInfo = 0;
-  sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.renderInfo, 0, v2, v3);
+  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.renderInfo, 0, v2, v3);
   *(_WORD *)&this->fields.isCommitEnqueue = 0;
 }
 
@@ -1161,7 +1161,7 @@ void UIStandFigureR__KillLoading(UIStandFigureR_o *this, const MethodInfo *metho
 
   this->fields.loadName = 0;
   p_loadName = &this->fields.loadName;
-  sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.loadName, 0, v2, v3);
+  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.loadName, 0, v2, v3);
   *((_WORD *)p_loadName + 18) = 0;
 }
 
@@ -1201,27 +1201,27 @@ void UIStandFigureR__OnEndPreloadForms(UIStandFigureR_o *this, const MethodInfo 
   int32_t v26; // w2
   const MethodInfo *v27; // x3
 
-  if ( (byte_4C392FA & 1) == 0 )
+  if ( (byte_4C448F4 & 1) == 0 )
   {
-    sub_1C32C20(&AssetManager_TypeInfo);
-    sub_1C32C20(&Method_System_Collections_Generic_List_AssetData__Add__);
-    sub_1C32C20(&Method_System_Collections_Generic_List_string__Clear__);
-    sub_1C32C20(&Method_System_Collections_Generic_List_AssetData__Exists__);
-    sub_1C32C20(&Method_System_Collections_Generic_List_string__ToArray__);
-    sub_1C32C20(&System_Predicate_AssetData__TypeInfo);
-    sub_1C32C20(&Method_UIStandFigureR___c__DisplayClass84_0__OnEndPreloadForms_b__0__);
-    sub_1C32C20(&UIStandFigureR___c__DisplayClass84_0_TypeInfo);
-    byte_4C392FA = 1;
+    sub_1C37058(&AssetManager_TypeInfo);
+    sub_1C37058(&Method_System_Collections_Generic_List_AssetData__Add__);
+    sub_1C37058(&Method_System_Collections_Generic_List_string__Clear__);
+    sub_1C37058(&Method_System_Collections_Generic_List_AssetData__Exists__);
+    sub_1C37058(&Method_System_Collections_Generic_List_string__ToArray__);
+    sub_1C37058(&System_Predicate_AssetData__TypeInfo);
+    sub_1C37058(&Method_UIStandFigureR___c__DisplayClass84_0__OnEndPreloadForms_b__0__);
+    sub_1C37058(&UIStandFigureR___c__DisplayClass84_0_TypeInfo);
+    byte_4C448F4 = 1;
   }
   loadNameList = (System_Collections_Generic_List_object__o *)this->fields.loadNameList;
   if ( !loadNameList )
     goto LABEL_25;
   v4 = (System_String_array *)System_Collections_Generic_List_object___ToArray(
                                 loadNameList,
-                                (const MethodInfo_379A314 *)Method_System_Collections_Generic_List_string__ToArray__);
+                                (const MethodInfo_37A4B7C *)Method_System_Collections_Generic_List_string__ToArray__);
   if ( !AssetManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(AssetManager_TypeInfo);
-  loadNameList = (System_Collections_Generic_List_object__o *)AssetManager__getAssetStorage_40443500(v4, 0);
+  loadNameList = (System_Collections_Generic_List_object__o *)AssetManager__getAssetStorage_40542884(v4, 0);
   if ( !loadNameList )
     goto LABEL_25;
   v5 = loadNameList;
@@ -1230,17 +1230,17 @@ void UIStandFigureR__OnEndPreloadForms(UIStandFigureR_o *this, const MethodInfo 
     v6 = 0;
     while ( 1 )
     {
-      v7 = sub_1C32E6C(UIStandFigureR___c__DisplayClass84_0_TypeInfo);
+      v7 = sub_1C372A4(UIStandFigureR___c__DisplayClass84_0_TypeInfo);
       UIStandFigureR___c__DisplayClass84_0___ctor((UIStandFigureR___c__DisplayClass84_0_o *)v7, 0);
       if ( v6 >= (unsigned int)v5->fields._size )
-        sub_1C32E84(loadNameList);
+        sub_1C372BC(loadNameList);
       if ( !v7 )
         break;
       v10 = *((_QWORD *)&v5->fields._syncRoot + v6);
       *(_QWORD *)(v7 + 16) = v10;
-      sub_1C32BC4((CGThumbnailListItem_o *)(v7 + 16), v10, v8, v9);
+      sub_1C36FFC((CGThumbnailListItem_o *)(v7 + 16), v10, v8, v9);
       formAssetList = this->fields.formAssetList;
-      v12 = (System_Predicate_object__o *)sub_1C32E6C(System_Predicate_AssetData__TypeInfo);
+      v12 = (System_Predicate_object__o *)sub_1C372A4(System_Predicate_AssetData__TypeInfo);
       System_Predicate_object____ctor(
         v12,
         (Il2CppObject *)v7,
@@ -1251,7 +1251,7 @@ void UIStandFigureR__OnEndPreloadForms(UIStandFigureR_o *this, const MethodInfo 
       loadNameList = (System_Collections_Generic_List_object__o *)System_Collections_Generic_List_object___Exists(
                                                                     (System_Collections_Generic_List_object__o *)formAssetList,
                                                                     (System_Predicate_T__o *)v12,
-                                                                    (const MethodInfo_3798DE8 *)Method_System_Collections_Generic_List_AssetData__Exists__);
+                                                                    (const MethodInfo_37A3650 *)Method_System_Collections_Generic_List_AssetData__Exists__);
       if ( ((unsigned __int8)loadNameList & 1) == 0 )
       {
         loadNameList = (System_Collections_Generic_List_object__o *)this->fields.formAssetList;
@@ -1269,21 +1269,21 @@ void UIStandFigureR__OnEndPreloadForms(UIStandFigureR_o *this, const MethodInfo 
           System_Collections_Generic_List_object___AddWithResize(
             loadNameList,
             v15,
-            *(const MethodInfo_37987BC **)(*(_QWORD *)(v17[4] + 192LL) + 112LL));
+            *(const MethodInfo_37A3024 **)(*(_QWORD *)(v17[4] + 192LL) + 112LL));
         }
         else
         {
           v19 = &items->obj.klass + size;
           loadNameList->fields._size = size + 1;
           v19[4] = (Il2CppClass *)v15;
-          sub_1C32BC4((CGThumbnailListItem_o *)(v19 + 4), (int32_t)v15, v13, v14);
+          sub_1C36FFC((CGThumbnailListItem_o *)(v19 + 4), (int32_t)v15, v13, v14);
         }
       }
       if ( (__int64)++v6 >= v5->fields._size )
         goto LABEL_19;
     }
 LABEL_25:
-    sub_1C32E7C(loadNameList);
+    sub_1C372B4(loadNameList);
   }
 LABEL_19:
   v20 = this->fields.loadNameList;
@@ -1302,7 +1302,7 @@ LABEL_19:
   {
     ((void (__fastcall *)(intptr_t, intptr_t))v23->fields.invoke_impl)(v23->fields.method_code, v23->fields.method);
     p_callbackFuncAfterLoadForms->klass = 0;
-    sub_1C32BC4(p_callbackFuncAfterLoadForms, 0, v26, v27);
+    sub_1C36FFC(p_callbackFuncAfterLoadForms, 0, v26, v27);
   }
 }
 
@@ -1318,12 +1318,12 @@ void UIStandFigureR__OnValidate(UIStandFigureR_o *this, const MethodInfo *method
   _BOOL4 useAlphaMask; // w20
   const MethodInfo *v10; // x1
 
-  if ( (byte_4C392E5 & 1) == 0 )
+  if ( (byte_4C448DF & 1) == 0 )
   {
-    sub_1C32C20(&UnityEngine_Application_TypeInfo);
-    sub_1C32C20(&UnityEngine_Object_TypeInfo);
-    sub_1C32C20(&StringLiteral_16384/*"_USE_ALPHA"*/);
-    byte_4C392E5 = 1;
+    sub_1C37058(&UnityEngine_Application_TypeInfo);
+    sub_1C37058(&UnityEngine_Object_TypeInfo);
+    sub_1C37058(&StringLiteral_16386/*"_USE_ALPHA"*/);
+    byte_4C448DF = 1;
   }
   if ( !UnityEngine_Application_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Application_TypeInfo);
@@ -1342,7 +1342,7 @@ void UIStandFigureR__OnValidate(UIStandFigureR_o *this, const MethodInfo *method
         gameObject = UIStandFigureR__get_BodyTextureMaterial(this, v6);
         if ( !gameObject )
           goto LABEL_24;
-        UnityEngine_Material__SetFloat_71093372(
+        UnityEngine_Material__SetFloat_71136484(
           gameObject,
           this->fields.alphaMaskStartId,
           this->fields.alphaMaskStart,
@@ -1350,7 +1350,7 @@ void UIStandFigureR__OnValidate(UIStandFigureR_o *this, const MethodInfo *method
         gameObject = UIStandFigureR__get_BodyTextureMaterial(this, v8);
         if ( !gameObject )
           goto LABEL_24;
-        UnityEngine_Material__SetFloat_71093372(
+        UnityEngine_Material__SetFloat_71136484(
           gameObject,
           this->fields.alphaMaskLengthId,
           this->fields.alphaMaskLength,
@@ -1360,9 +1360,9 @@ void UIStandFigureR__OnValidate(UIStandFigureR_o *this, const MethodInfo *method
         if ( !gameObject )
           goto LABEL_24;
         if ( useAlphaMask )
-          UnityEngine_Material__EnableKeyword(gameObject, (System_String_o *)StringLiteral_16384/*"_USE_ALPHA"*/, 0);
+          UnityEngine_Material__EnableKeyword(gameObject, (System_String_o *)StringLiteral_16386/*"_USE_ALPHA"*/, 0);
         else
-          UnityEngine_Material__DisableKeyword(gameObject, (System_String_o *)StringLiteral_16384/*"_USE_ALPHA"*/, 0);
+          UnityEngine_Material__DisableKeyword(gameObject, (System_String_o *)StringLiteral_16386/*"_USE_ALPHA"*/, 0);
         gameObject = (UnityEngine_Material_o *)this->fields.bodyTexture;
         if ( !gameObject
           || (gameObject = (UnityEngine_Material_o *)UnityEngine_Component__get_gameObject(
@@ -1375,7 +1375,7 @@ void UIStandFigureR__OnValidate(UIStandFigureR_o *this, const MethodInfo *method
                                                        0)) == 0 )
         {
 LABEL_24:
-          sub_1C32E7C(gameObject);
+          sub_1C372B4(gameObject);
         }
         UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)gameObject, 1, 0);
       }
@@ -1397,10 +1397,10 @@ void UIStandFigureR__PlayAnimation(
   const MethodInfo *v12; // x3
   System_Collections_IEnumerator_o *v13; // x1
 
-  if ( (byte_4C39300 & 1) == 0 )
+  if ( (byte_4C448FA & 1) == 0 )
   {
-    sub_1C32C20(&UnityEngine_Object_TypeInfo);
-    byte_4C39300 = 1;
+    sub_1C37058(&UnityEngine_Object_TypeInfo);
+    byte_4C448FA = 1;
   }
   if ( System_String__IsNullOrEmpty(animationName, 0) )
     goto LABEL_12;
@@ -1411,7 +1411,7 @@ void UIStandFigureR__PlayAnimation(
     goto LABEL_12;
   v10 = this->fields.animationComponent;
   if ( !v10 )
-    sub_1C32E7C(0);
+    sub_1C372B4(0);
   Clip = (UnityEngine_Object_o *)UnityEngine_Animation__GetClip(v10, animationName, 0);
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
@@ -1423,7 +1423,7 @@ LABEL_12:
   else
   {
     v13 = UIStandFigureR__PlayAnimationProc(this, animationName, playDelayTime, endCallback, v12);
-    UnityEngine_MonoBehaviour__StartCoroutine_71209212((UnityEngine_MonoBehaviour_o *)this, v13, 0);
+    UnityEngine_MonoBehaviour__StartCoroutine_71252324((UnityEngine_MonoBehaviour_o *)this, v13, 0);
   }
 }
 
@@ -1444,22 +1444,22 @@ System_Collections_IEnumerator_o *UIStandFigureR__PlayAnimationProc(
   int32_t v15; // w2
   const MethodInfo *v16; // x3
 
-  if ( (byte_4C39301 & 1) == 0 )
+  if ( (byte_4C448FB & 1) == 0 )
   {
-    sub_1C32C20(&UIStandFigureR__PlayAnimationProc_d__96_TypeInfo);
-    byte_4C39301 = 1;
+    sub_1C37058(&UIStandFigureR__PlayAnimationProc_d__96_TypeInfo);
+    byte_4C448FB = 1;
   }
-  v9 = sub_1C32E6C(UIStandFigureR__PlayAnimationProc_d__96_TypeInfo);
+  v9 = sub_1C372A4(UIStandFigureR__PlayAnimationProc_d__96_TypeInfo);
   UIStandFigureR__PlayAnimationProc_d__96___ctor((UIStandFigureR__PlayAnimationProc_d__96_o *)v9, 0, 0);
   if ( !v9 )
-    sub_1C32E7C(v10);
+    sub_1C372B4(v10);
   *(_QWORD *)(v9 + 32) = this;
-  sub_1C32BC4((CGThumbnailListItem_o *)(v9 + 32), (int32_t)this, v11, v12);
+  sub_1C36FFC((CGThumbnailListItem_o *)(v9 + 32), (int32_t)this, v11, v12);
   *(_QWORD *)(v9 + 40) = animationName;
-  sub_1C32BC4((CGThumbnailListItem_o *)(v9 + 40), (int32_t)animationName, v13, v14);
+  sub_1C36FFC((CGThumbnailListItem_o *)(v9 + 40), (int32_t)animationName, v13, v14);
   *(float *)(v9 + 48) = playDelayTime;
   *(_QWORD *)(v9 + 64) = endCallback;
-  sub_1C32BC4((CGThumbnailListItem_o *)(v9 + 64), (int32_t)endCallback, v15, v16);
+  sub_1C36FFC((CGThumbnailListItem_o *)(v9 + 64), (int32_t)endCallback, v15, v16);
   return (System_Collections_IEnumerator_o *)v9;
 }
 
@@ -1503,27 +1503,27 @@ void UIStandFigureR__PreloadFormAssets(
   System_Collections_Generic_List_Enumerator_int__o v36; // [xsp+20h] [xbp-80h] BYREF
 
   v6 = this;
-  if ( (byte_4C392F8 & 1) == 0 )
+  if ( (byte_4C448F2 & 1) == 0 )
   {
-    sub_1C32C20(&System_Action_TypeInfo);
-    sub_1C32C20(&AssetManager_TypeInfo);
-    sub_1C32C20(&Method_System_Collections_Generic_List_Enumerator_int__Dispose__);
-    sub_1C32C20(&Method_System_Collections_Generic_List_Enumerator_int__MoveNext__);
-    sub_1C32C20(&Method_System_Collections_Generic_List_Enumerator_int__get_Current__);
-    sub_1C32C20(&Method_System_Collections_Generic_List_string__Add__);
-    sub_1C32C20(&Method_System_Collections_Generic_List_string__Clear__);
-    sub_1C32C20(&Method_System_Collections_Generic_List_AssetData__Exists__);
-    sub_1C32C20(&Method_System_Collections_Generic_List_string__Exists__);
-    sub_1C32C20(&Method_System_Collections_Generic_List_int__GetEnumerator__);
-    sub_1C32C20(&Method_System_Collections_Generic_List_string__ToArray__);
-    sub_1C32C20(&System_Predicate_AssetData__TypeInfo);
-    sub_1C32C20(&System_Predicate_string__TypeInfo);
-    sub_1C32C20(&Method_UIStandFigureR___c__DisplayClass81_0__PreloadFormAssets_b__0__);
-    sub_1C32C20(&Method_UIStandFigureR___c__DisplayClass81_0__PreloadFormAssets_b__1__);
-    sub_1C32C20(&UIStandFigureR___c__DisplayClass81_0_TypeInfo);
-    sub_1C32C20(&Method_UIStandFigureR_OnEndPreloadForms__);
-    this = (UIStandFigureR_o *)sub_1C32C20(&UIStandFigureRender_TypeInfo);
-    byte_4C392F8 = 1;
+    sub_1C37058(&System_Action_TypeInfo);
+    sub_1C37058(&AssetManager_TypeInfo);
+    sub_1C37058(&Method_System_Collections_Generic_List_Enumerator_int__Dispose__);
+    sub_1C37058(&Method_System_Collections_Generic_List_Enumerator_int__MoveNext__);
+    sub_1C37058(&Method_System_Collections_Generic_List_Enumerator_int__get_Current__);
+    sub_1C37058(&Method_System_Collections_Generic_List_string__Add__);
+    sub_1C37058(&Method_System_Collections_Generic_List_string__Clear__);
+    sub_1C37058(&Method_System_Collections_Generic_List_AssetData__Exists__);
+    sub_1C37058(&Method_System_Collections_Generic_List_string__Exists__);
+    sub_1C37058(&Method_System_Collections_Generic_List_int__GetEnumerator__);
+    sub_1C37058(&Method_System_Collections_Generic_List_string__ToArray__);
+    sub_1C37058(&System_Predicate_AssetData__TypeInfo);
+    sub_1C37058(&System_Predicate_string__TypeInfo);
+    sub_1C37058(&Method_UIStandFigureR___c__DisplayClass81_0__PreloadFormAssets_b__0__);
+    sub_1C37058(&Method_UIStandFigureR___c__DisplayClass81_0__PreloadFormAssets_b__1__);
+    sub_1C37058(&UIStandFigureR___c__DisplayClass81_0_TypeInfo);
+    sub_1C37058(&Method_UIStandFigureR_OnEndPreloadForms__);
+    this = (UIStandFigureR_o *)sub_1C37058(&UIStandFigureRender_TypeInfo);
+    byte_4C448F2 = 1;
   }
   memset(&v36, 0, sizeof(v36));
   loadNameList = v6->fields.loadNameList;
@@ -1541,95 +1541,95 @@ void UIStandFigureR__PreloadFormAssets(
   System_Collections_Generic_List_int___GetEnumerator(
     (System_Collections_Generic_List_Enumerator_T__o *)&v35,
     formIdList,
-    (const MethodInfo_377C26C *)Method_System_Collections_Generic_List_int__GetEnumerator__);
+    (const MethodInfo_3786AD4 *)Method_System_Collections_Generic_List_int__GetEnumerator__);
   v36 = v35;
   while ( System_Collections_Generic_List_Enumerator_int___MoveNext(
             &v36,
-            (const MethodInfo_351F190 *)Method_System_Collections_Generic_List_Enumerator_int__MoveNext__) )
+            (const MethodInfo_35299F8 *)Method_System_Collections_Generic_List_Enumerator_int__MoveNext__) )
   {
     current = v36.fields._current;
-    v11 = sub_1C32E6C(UIStandFigureR___c__DisplayClass81_0_TypeInfo);
+    v11 = sub_1C372A4(UIStandFigureR___c__DisplayClass81_0_TypeInfo);
     UIStandFigureR___c__DisplayClass81_0___ctor((UIStandFigureR___c__DisplayClass81_0_o *)v11, 0);
     imageId = v6->fields.imageId;
     if ( !UIStandFigureRender_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(UIStandFigureRender_TypeInfo);
     AssetNameWithForm = UIStandFigureRender__GetAssetNameWithForm(imageId, current, 0);
     if ( !v11 )
-      sub_1C32E7C(AssetNameWithForm);
+      sub_1C372B4(AssetNameWithForm);
     *(_QWORD *)(v11 + 16) = AssetNameWithForm;
-    sub_1C32BC4((CGThumbnailListItem_o *)(v11 + 16), (int32_t)AssetNameWithForm, v14, v15);
+    sub_1C36FFC((CGThumbnailListItem_o *)(v11 + 16), (int32_t)AssetNameWithForm, v14, v15);
     formAssetList = (System_Collections_Generic_List_object__o *)v6->fields.formAssetList;
-    v17 = (System_Predicate_object__o *)sub_1C32E6C(System_Predicate_AssetData__TypeInfo);
+    v17 = (System_Predicate_object__o *)sub_1C372A4(System_Predicate_AssetData__TypeInfo);
     System_Predicate_object____ctor(
       v17,
       (Il2CppObject *)v11,
       Method_UIStandFigureR___c__DisplayClass81_0__PreloadFormAssets_b__0__,
       0);
     if ( !formAssetList )
-      sub_1C32E7C(v18);
+      sub_1C372B4(v18);
     if ( !System_Collections_Generic_List_object___Exists(
             formAssetList,
             (System_Predicate_T__o *)v17,
-            (const MethodInfo_3798DE8 *)Method_System_Collections_Generic_List_AssetData__Exists__) )
+            (const MethodInfo_37A3650 *)Method_System_Collections_Generic_List_AssetData__Exists__) )
     {
       v19 = (System_Collections_Generic_List_object__o *)v6->fields.loadNameList;
-      v20 = (System_Predicate_object__o *)sub_1C32E6C(System_Predicate_string__TypeInfo);
+      v20 = (System_Predicate_object__o *)sub_1C372A4(System_Predicate_string__TypeInfo);
       System_Predicate_object____ctor(
         v20,
         (Il2CppObject *)v11,
         Method_UIStandFigureR___c__DisplayClass81_0__PreloadFormAssets_b__1__,
         0);
       if ( !v19 )
-        sub_1C32E7C(v21);
+        sub_1C372B4(v21);
       if ( !System_Collections_Generic_List_object___Exists(
               v19,
               (System_Predicate_T__o *)v20,
-              (const MethodInfo_3798DE8 *)Method_System_Collections_Generic_List_string__Exists__) )
+              (const MethodInfo_37A3650 *)Method_System_Collections_Generic_List_string__Exists__) )
       {
         v24 = (System_Collections_Generic_List_object__o *)v6->fields.loadNameList;
         if ( !v24 )
-          sub_1C32E7C(0);
+          sub_1C372B4(0);
         v25 = *(Il2CppObject **)(v11 + 16);
         items = v24->fields._items;
         v27 = Method_System_Collections_Generic_List_string__Add__;
         ++v24->fields._version;
         if ( !items )
-          sub_1C32E7C(v24);
+          sub_1C372B4(v24);
         v28 = v24->fields._size;
         if ( (unsigned int)v28 >= LODWORD(items->max_length) )
         {
           System_Collections_Generic_List_object___AddWithResize(
             v24,
             v25,
-            *(const MethodInfo_37987BC **)(*(_QWORD *)(v27[4] + 192LL) + 112LL));
+            *(const MethodInfo_37A3024 **)(*(_QWORD *)(v27[4] + 192LL) + 112LL));
         }
         else
         {
           v29 = &items->obj.klass + v28;
           v24->fields._size = v28 + 1;
           v29[4] = (Il2CppClass *)v25;
-          sub_1C32BC4((CGThumbnailListItem_o *)(v29 + 4), (int32_t)v25, v22, v23);
+          sub_1C36FFC((CGThumbnailListItem_o *)(v29 + 4), (int32_t)v25, v22, v23);
         }
       }
     }
   }
   System_Collections_Generic_List_Enumerator_int___Dispose(
     &v36,
-    (const MethodInfo_351F18C *)Method_System_Collections_Generic_List_Enumerator_int__Dispose__);
+    (const MethodInfo_35299F4 *)Method_System_Collections_Generic_List_Enumerator_int__Dispose__);
   v6->fields.callbackFuncAfterLoadForms = v34;
-  sub_1C32BC4((CGThumbnailListItem_o *)&v6->fields.callbackFuncAfterLoadForms, (int32_t)v34, v30, v31);
+  sub_1C36FFC((CGThumbnailListItem_o *)&v6->fields.callbackFuncAfterLoadForms, (int32_t)v34, v30, v31);
   this = (UIStandFigureR_o *)v6->fields.loadNameList;
   if ( !this )
 LABEL_30:
-    sub_1C32E7C(this);
+    sub_1C372B4(this);
   v32 = (System_String_array *)System_Collections_Generic_List_object___ToArray(
                                  (System_Collections_Generic_List_object__o *)this,
-                                 (const MethodInfo_379A314 *)Method_System_Collections_Generic_List_string__ToArray__);
-  v33 = (System_Action_o *)sub_1C32E6C(System_Action_TypeInfo);
+                                 (const MethodInfo_37A4B7C *)Method_System_Collections_Generic_List_string__ToArray__);
+  v33 = (System_Action_o *)sub_1C372A4(System_Action_TypeInfo);
   System_Action___ctor(v33, (Il2CppObject *)v6, Method_UIStandFigureR_OnEndPreloadForms__, 0);
   if ( !AssetManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(AssetManager_TypeInfo);
-  AssetManager__loadAssetStorage_40442140(v32, v33, 1, 0);
+  AssetManager__loadAssetStorage_40541524(v32, v33, 1, 0);
 }
 
 
@@ -1642,12 +1642,12 @@ void UIStandFigureR__ReleaseBodyRenderTexture(UIStandFigureR_o *this, const Meth
   UnityEngine_RenderTexture_o *v7; // x8
   UnityEngine_RenderTexture_o *renderTexture; // [xsp+8h] [xbp-18h] BYREF
 
-  if ( (byte_4C392E9 & 1) == 0 )
+  if ( (byte_4C448E3 & 1) == 0 )
   {
-    sub_1C32C20(&UnityEngine_Object_TypeInfo);
-    sub_1C32C20(&UnityEngine_RenderTexture_TypeInfo);
-    sub_1C32C20(&StandFigureCamera_TypeInfo);
-    byte_4C392E9 = 1;
+    sub_1C37058(&UnityEngine_Object_TypeInfo);
+    sub_1C37058(&UnityEngine_RenderTexture_TypeInfo);
+    sub_1C37058(&StandFigureCamera_TypeInfo);
+    byte_4C448E3 = 1;
   }
   renderTexture = 0;
   bodyTexture = this->fields.bodyTexture;
@@ -1690,7 +1690,7 @@ void UIStandFigureR__ReleaseBodyRenderTexture(UIStandFigureR_o *this, const Meth
             return;
           }
 LABEL_19:
-          sub_1C32E7C(bodyTexture);
+          sub_1C372B4(bodyTexture);
         }
       }
     }
@@ -1728,17 +1728,17 @@ void UIStandFigureR__ReleaseCharacter(UIStandFigureR_o *this, const MethodInfo *
   int32_t v28; // w2
   int v29; // w8
 
-  if ( (byte_4C392E6 & 1) == 0 )
+  if ( (byte_4C448E0 & 1) == 0 )
   {
-    sub_1C32C20(&AssetManager_TypeInfo);
-    sub_1C32C20(&Method_System_Collections_Generic_List_AssetData__Clear__);
-    sub_1C32C20(&Method_System_Collections_Generic_List_string__Clear__);
-    sub_1C32C20(&Method_System_Collections_Generic_List_string__ToArray__);
-    sub_1C32C20(&Method_System_Collections_Generic_List_AssetData__ToArray__);
-    sub_1C32C20(&Method_System_Collections_Generic_List_string__get_Count__);
-    sub_1C32C20(&UnityEngine_Object_TypeInfo);
-    sub_1C32C20(&Method_SingletonMonoBehaviour_AssetManager__getInstance__);
-    byte_4C392E6 = 1;
+    sub_1C37058(&AssetManager_TypeInfo);
+    sub_1C37058(&Method_System_Collections_Generic_List_AssetData__Clear__);
+    sub_1C37058(&Method_System_Collections_Generic_List_string__Clear__);
+    sub_1C37058(&Method_System_Collections_Generic_List_string__ToArray__);
+    sub_1C37058(&Method_System_Collections_Generic_List_AssetData__ToArray__);
+    sub_1C37058(&Method_System_Collections_Generic_List_string__get_Count__);
+    sub_1C37058(&UnityEngine_Object_TypeInfo);
+    sub_1C37058(&Method_SingletonMonoBehaviour_AssetManager__getInstance__);
+    byte_4C448E0 = 1;
   }
   bodyTexture = (UnityEngine_Object_o *)this->fields.bodyTexture;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -1780,7 +1780,7 @@ void UIStandFigureR__ReleaseCharacter(UIStandFigureR_o *this, const MethodInfo *
   {
     StandFigureManager__Release(*p_renderTexture, 0);
     *p_renderTexture = 0;
-    sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.renderTexture, 0, v9, v10);
+    sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.renderTexture, 0, v9, v10);
   }
   p_currentBodyTexture = &this->fields.currentBodyTexture;
   currentBodyTexture = (UnityEngine_Object_o *)this->fields.currentBodyTexture;
@@ -1790,14 +1790,14 @@ void UIStandFigureR__ReleaseCharacter(UIStandFigureR_o *this, const MethodInfo *
   {
     StandFigureManager__Release(*p_currentBodyTexture, 0);
     *p_currentBodyTexture = 0;
-    sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.currentBodyTexture, 0, v14, v15);
+    sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.currentBodyTexture, 0, v14, v15);
   }
   v16 = *((_QWORD *)Method_SingletonMonoBehaviour_AssetManager__getInstance__ + 4);
   if ( (*(_BYTE *)(v16 + 309) & 1) == 0 )
-    v16 = sub_1C83334(v13);
+    v16 = sub_1C8776C(v13);
   v17 = *(_QWORD *)(*(_QWORD *)(v16 + 192) + 16LL);
   if ( (*(_BYTE *)(v17 + 309) & 1) == 0 )
-    v17 = sub_1C83334(v13);
+    v17 = sub_1C8776C(v13);
   v18 = **(UnityEngine_Object_o ***)(v17 + 184);
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
@@ -1808,10 +1808,10 @@ void UIStandFigureR__ReleaseCharacter(UIStandFigureR_o *this, const MethodInfo *
     {
       v19 = System_Collections_Generic_List_object___ToArray(
               (System_Collections_Generic_List_object__o *)formAssetList,
-              (const MethodInfo_379A314 *)Method_System_Collections_Generic_List_AssetData__ToArray__);
+              (const MethodInfo_37A4B7C *)Method_System_Collections_Generic_List_AssetData__ToArray__);
       if ( !AssetManager_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(AssetManager_TypeInfo);
-      AssetManager__releaseAsset_40435536((AssetData_array *)v19, 0);
+      AssetManager__releaseAsset_40534920((AssetData_array *)v19, 0);
       v21 = this->fields.formAssetList;
       if ( v21 )
       {
@@ -1822,7 +1822,7 @@ void UIStandFigureR__ReleaseCharacter(UIStandFigureR_o *this, const MethodInfo *
         if ( size >= 1 )
           System_Array__Clear((System_Array_o *)v21->fields._items, 0, size, 0);
         this->fields.assetData = 0;
-        sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.assetData, 0, size, v20);
+        sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.assetData, 0, size, v20);
         loadName = this->fields.loadName;
         if ( loadName )
         {
@@ -1830,7 +1830,7 @@ void UIStandFigureR__ReleaseCharacter(UIStandFigureR_o *this, const MethodInfo *
             j_il2cpp_runtime_class_init_0(AssetManager_TypeInfo);
           AssetManager__releaseAssetStorage(loadName, 0);
           this->fields.loadName = 0;
-          sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.loadName, 0, v25, v26);
+          sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.loadName, 0, v25, v26);
         }
         formAssetList = this->fields.loadNameList;
         if ( formAssetList )
@@ -1839,10 +1839,10 @@ void UIStandFigureR__ReleaseCharacter(UIStandFigureR_o *this, const MethodInfo *
             goto LABEL_45;
           v27 = (System_String_array *)System_Collections_Generic_List_object___ToArray(
                                          (System_Collections_Generic_List_object__o *)formAssetList,
-                                         (const MethodInfo_379A314 *)Method_System_Collections_Generic_List_string__ToArray__);
+                                         (const MethodInfo_37A4B7C *)Method_System_Collections_Generic_List_string__ToArray__);
           if ( !AssetManager_TypeInfo->_2.cctor_finished )
             j_il2cpp_runtime_class_init_0(AssetManager_TypeInfo);
-          AssetManager__releaseAssetStorage_40444488(v27, 0);
+          AssetManager__releaseAssetStorage_40543872(v27, 0);
           formAssetList = this->fields.loadNameList;
           if ( formAssetList )
           {
@@ -1859,7 +1859,7 @@ LABEL_45:
       }
     }
 LABEL_48:
-    sub_1C32E7C(formAssetList);
+    sub_1C372B4(formAssetList);
   }
 }
 
@@ -1874,10 +1874,10 @@ void UIStandFigureR__RemoveCallback(UIStandFigureR_o *this, System_Action_o *rem
   System_Delegate_o *v10; // x8
   System_Action_c *v11; // x1
 
-  if ( (byte_4C392F9 & 1) == 0 )
+  if ( (byte_4C448F3 & 1) == 0 )
   {
-    sub_1C32C20(&System_Action_TypeInfo);
-    byte_4C392F9 = 1;
+    sub_1C37058(&System_Action_TypeInfo);
+    byte_4C448F3 = 1;
   }
   callbackFunc = (System_Delegate_o *)this->fields.callbackFunc;
   p_callbackFunc = (CGThumbnailListItem_o *)&this->fields.callbackFunc;
@@ -1889,11 +1889,11 @@ void UIStandFigureR__RemoveCallback(UIStandFigureR_o *this, System_Action_o *rem
   if ( (System_Action_c *)v7->klass != System_Action_TypeInfo
     || (p_callbackFunc->klass = (CGThumbnailListItem_c *)v7, (System_Action_c *)v7->klass != v11) )
   {
-    sub_1C3313C(v7);
+    sub_1C37574(v7);
 LABEL_7:
     p_callbackFunc->klass = (CGThumbnailListItem_c *)v10;
   }
-  sub_1C32BC4(p_callbackFunc, (int32_t)v10, v8, v9);
+  sub_1C36FFC(p_callbackFunc, (int32_t)v10, v8, v9);
 }
 
 
@@ -1911,12 +1911,12 @@ void UIStandFigureR__RequestRenderAsset(UIStandFigureR_o *this, const MethodInfo
   int32_t formId; // w24
   StandFigureRenderWaitStatus_EndHandler_o *v13; // x25
 
-  if ( (byte_4C392F1 & 1) == 0 )
+  if ( (byte_4C448EB & 1) == 0 )
   {
-    sub_1C32C20(&StandFigureRenderWaitStatus_EndHandler_TypeInfo);
-    sub_1C32C20(&Method_UIStandFigureR_EndRenderAsset__);
-    sub_1C32C20(&UIStandFigureRender_TypeInfo);
-    byte_4C392F1 = 1;
+    sub_1C37058(&StandFigureRenderWaitStatus_EndHandler_TypeInfo);
+    sub_1C37058(&Method_UIStandFigureR_EndRenderAsset__);
+    sub_1C37058(&UIStandFigureRender_TypeInfo);
+    byte_4C448EB = 1;
   }
   if ( this->fields.isBusyRender )
   {
@@ -1929,7 +1929,7 @@ void UIStandFigureR__RequestRenderAsset(UIStandFigureR_o *this, const MethodInfo
     this->fields.isBusyRender = 1;
     this->fields.renderTexture = 0;
     *(_QWORD *)&this->fields.oldFaceType = v6;
-    sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.renderTexture, 0, v2, v3);
+    sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.renderTexture, 0, v2, v3);
     assetData = this->fields.assetData;
     if ( !UIStandFigureRender_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(UIStandFigureRender_TypeInfo);
@@ -1938,20 +1938,20 @@ void UIStandFigureR__RequestRenderAsset(UIStandFigureR_o *this, const MethodInfo
       goto LABEL_11;
     v9 = TextureList;
     if ( !LODWORD(TextureList->max_length) )
-      sub_1C32E84(TextureList);
+      sub_1C372BC(TextureList);
     TextureList = (UnityEngine_Texture2D_array *)TextureList->m_Items[0];
     if ( !TextureList )
 LABEL_11:
-      sub_1C32E7C(TextureList);
+      sub_1C372B4(TextureList);
     this->fields.textureHeight = ((__int64 (__fastcall *)(UnityEngine_Texture2D_array *, const MethodInfo *))TextureList->obj.klass->vtable[6].methodPtr)(
                                    TextureList,
                                    TextureList->obj.klass->vtable[6].method);
     imageId = this->fields.imageId;
     faceType = this->fields.faceType;
     formId = this->fields.formId;
-    v13 = (StandFigureRenderWaitStatus_EndHandler_o *)sub_1C32E6C(StandFigureRenderWaitStatus_EndHandler_TypeInfo);
+    v13 = (StandFigureRenderWaitStatus_EndHandler_o *)sub_1C372A4(StandFigureRenderWaitStatus_EndHandler_TypeInfo);
     StandFigureRenderWaitStatus_EndHandler___ctor(v13, (Il2CppObject *)this, Method_UIStandFigureR_EndRenderAsset__, 0);
-    StandFigureManager__Render_40651768(renderTexture, imageId, faceType, formId, v9, v13, 0);
+    StandFigureManager__Render_40751248(renderTexture, imageId, faceType, formId, v9, v13, 0);
   }
 }
 
@@ -1977,13 +1977,13 @@ void UIStandFigureR__RequestRenderAssetWithEffect(UIStandFigureR_o *this, const 
   const MethodInfo *v19; // x3
   StandFigureRenderWaitStatus_EndHandler_o *v20; // x26
 
-  if ( (byte_4C392F2 & 1) == 0 )
+  if ( (byte_4C448EC & 1) == 0 )
   {
-    sub_1C32C20(&StandFigureRenderWaitStatus_EndHandler_TypeInfo);
-    sub_1C32C20(&Method_UIStandFigureR_EndRenderAssetWithEffect__);
-    sub_1C32C20(&UIStandFigureRender_TypeInfo);
-    sub_1C32C20(&UIStandFigureR_WaitRenderInfo_TypeInfo);
-    byte_4C392F2 = 1;
+    sub_1C37058(&StandFigureRenderWaitStatus_EndHandler_TypeInfo);
+    sub_1C37058(&Method_UIStandFigureR_EndRenderAssetWithEffect__);
+    sub_1C37058(&UIStandFigureRender_TypeInfo);
+    sub_1C37058(&UIStandFigureR_WaitRenderInfo_TypeInfo);
+    byte_4C448EC = 1;
   }
   if ( this->fields.isBusyRender )
   {
@@ -1996,7 +1996,7 @@ void UIStandFigureR__RequestRenderAssetWithEffect(UIStandFigureR_o *this, const 
     this->fields.isBusyRender = 1;
     this->fields.renderTexture = 0;
     *(_QWORD *)&this->fields.oldFaceType = v6;
-    sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.renderTexture, 0, v2, v3);
+    sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.renderTexture, 0, v2, v3);
     assetData = this->fields.assetData;
     if ( !UIStandFigureRender_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(UIStandFigureRender_TypeInfo);
@@ -2005,11 +2005,11 @@ void UIStandFigureR__RequestRenderAssetWithEffect(UIStandFigureR_o *this, const 
       goto LABEL_13;
     v9 = TextureList;
     if ( !LODWORD(TextureList->max_length) )
-      sub_1C32E84(TextureList);
+      sub_1C372BC(TextureList);
     TextureList = (UnityEngine_Texture2D_array *)TextureList->m_Items[0];
     if ( !TextureList )
 LABEL_13:
-      sub_1C32E7C(TextureList);
+      sub_1C372B4(TextureList);
     v10 = ((__int64 (__fastcall *)(UnityEngine_Texture2D_array *, const MethodInfo *))TextureList->obj.klass->vtable[6].methodPtr)(
             TextureList,
             TextureList->obj.klass->vtable[6].method);
@@ -2021,7 +2021,7 @@ LABEL_13:
     this->fields.textureHeight = v10;
     if ( isCommitEnqueue )
     {
-      v16 = (UIStandFigureR_WaitRenderInfo_o *)sub_1C32E6C(UIStandFigureR_WaitRenderInfo_TypeInfo);
+      v16 = (UIStandFigureR_WaitRenderInfo_o *)sub_1C372A4(UIStandFigureR_WaitRenderInfo_TypeInfo);
       UIStandFigureR_WaitRenderInfo___ctor(
         v16,
         renderTexture,
@@ -2033,12 +2033,12 @@ LABEL_13:
         0);
       this->fields.renderInfo = v16;
       p_renderInfo = &this->fields.renderInfo;
-      sub_1C32BC4((CGThumbnailListItem_o *)p_renderInfo, (int32_t)v16, v18, v19);
+      sub_1C36FFC((CGThumbnailListItem_o *)p_renderInfo, (int32_t)v16, v18, v19);
       *((_BYTE *)p_renderInfo + 17) = 1;
     }
     else
     {
-      v20 = (StandFigureRenderWaitStatus_EndHandler_o *)sub_1C32E6C(StandFigureRenderWaitStatus_EndHandler_TypeInfo);
+      v20 = (StandFigureRenderWaitStatus_EndHandler_o *)sub_1C372A4(StandFigureRenderWaitStatus_EndHandler_TypeInfo);
       StandFigureRenderWaitStatus_EndHandler___ctor(
         v20,
         (Il2CppObject *)this,
@@ -2066,7 +2066,7 @@ void UIStandFigureR__SetActive(UIStandFigureR_o *this, bool isActive, const Meth
   if ( !bodyTexture
     || (bodyTexture = (UnityEngine_Component_o *)UnityEngine_Component__get_gameObject(bodyTexture, 0)) == 0 )
   {
-    sub_1C32E7C(bodyTexture);
+    sub_1C372B4(bodyTexture);
   }
   UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)bodyTexture, isActive, 0);
 }
@@ -2078,7 +2078,7 @@ void UIStandFigureR__SetAlpha(UIStandFigureR_o *this, float a, const MethodInfo 
 
   bodyTexture = this->fields.bodyTexture;
   if ( !bodyTexture )
-    sub_1C32E7C(0);
+    sub_1C372B4(0);
   ((void (__fastcall *)(struct UITexture_o *, const MethodInfo *, float))bodyTexture->klass->vtable._8_set_alpha.methodPtr)(
     bodyTexture,
     bodyTexture->klass->vtable._8_set_alpha.method,
@@ -2100,15 +2100,15 @@ void UIStandFigureR__SetCharacter(
   const MethodInfo *v15; // x7
   float v16; // s0
 
-  if ( (byte_4C392E7 & 1) == 0 )
+  if ( (byte_4C448E1 & 1) == 0 )
   {
-    sub_1C32C20(&ImageLimitCount_TypeInfo);
-    byte_4C392E7 = 1;
+    sub_1C37058(&ImageLimitCount_TypeInfo);
+    byte_4C448E1 = 1;
   }
   if ( !ImageLimitCount_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(ImageLimitCount_TypeInfo);
   ImageLimitCount = ImageLimitCount__GetImageLimitCount(svtId, limitCount, 0);
-  UIStandFigureR__SetCharacter_43951468(this, svtId, ImageLimitCount, offsetKind, faceType, 0, v16, callbackFunc, v15);
+  UIStandFigureR__SetCharacter_44053572(this, svtId, ImageLimitCount, offsetKind, faceType, 0, v16, callbackFunc, v15);
 }
 
 
@@ -2135,20 +2135,20 @@ bool UIStandFigureR__SetCharacterForImageId(
   System_String_o *loadName; // x20
   AssetLoader_LoadEndDataHandler_o *v26; // x21
 
-  if ( (byte_4C392EB & 1) == 0 )
+  if ( (byte_4C448E5 & 1) == 0 )
   {
-    sub_1C32C20(&System_Action_TypeInfo);
-    sub_1C32C20(&AssetManager_TypeInfo);
-    sub_1C32C20(&AssetLoader_LoadEndDataHandler_TypeInfo);
-    sub_1C32C20(&Method_UIStandFigureR_EndLoadAsset__);
-    sub_1C32C20(&UIStandFigureRender_TypeInfo);
-    byte_4C392EB = 1;
+    sub_1C37058(&System_Action_TypeInfo);
+    sub_1C37058(&AssetManager_TypeInfo);
+    sub_1C37058(&AssetLoader_LoadEndDataHandler_TypeInfo);
+    sub_1C37058(&Method_UIStandFigureR_EndLoadAsset__);
+    sub_1C37058(&UIStandFigureRender_TypeInfo);
+    byte_4C448E5 = 1;
   }
   v15 = isPhotoWithMaster;
-  if ( (byte_4C392ED & 1) == 0 )
+  if ( (byte_4C448E7 & 1) == 0 )
   {
-    sub_1C32C20(&UnityEngine_Object_TypeInfo);
-    byte_4C392ED = 1;
+    sub_1C37058(&UnityEngine_Object_TypeInfo);
+    byte_4C448E7 = 1;
   }
   this->fields.crossFadeTime = 0.0;
   this->fields.imageId = imageId;
@@ -2156,7 +2156,7 @@ bool UIStandFigureR__SetCharacterForImageId(
     j_il2cpp_runtime_class_init_0(UIStandFigureRender_TypeInfo);
   AssetNameWithForm = UIStandFigureRender__GetAssetNameWithForm(imageId, formId, 0);
   this->fields.loadName = AssetNameWithForm;
-  sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.loadName, (int32_t)AssetNameWithForm, v17, v18);
+  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.loadName, (int32_t)AssetNameWithForm, v17, v18);
   this->fields.offsetKind = offsetKind;
   this->fields.faceType = faceType;
   this->fields.formId = formId;
@@ -2175,14 +2175,14 @@ bool UIStandFigureR__SetCharacterForImageId(
         if ( (System_Action_c *)v20->klass == v24 )
           goto LABEL_13;
       }
-      sub_1C3313C(v20);
+      sub_1C37574(v20);
     }
     *p_callbackFunc = (struct System_Action_o *)v23;
 LABEL_13:
-    sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.callbackFunc, (int32_t)v23, v21, v22);
+    sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.callbackFunc, (int32_t)v23, v21, v22);
   }
   loadName = this->fields.loadName;
-  v26 = (AssetLoader_LoadEndDataHandler_o *)sub_1C32E6C(AssetLoader_LoadEndDataHandler_TypeInfo);
+  v26 = (AssetLoader_LoadEndDataHandler_o *)sub_1C372A4(AssetLoader_LoadEndDataHandler_TypeInfo);
   AssetLoader_LoadEndDataHandler___ctor(v26, (Il2CppObject *)this, Method_UIStandFigureR_EndLoadAsset__, 0);
   if ( !AssetManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(AssetManager_TypeInfo);
@@ -2223,30 +2223,30 @@ bool UIStandFigureR__SetCharacterForImageIdWithEffect(
   System_String_o *v34; // x19
   AssetLoader_LoadEndDataHandler_o *v35; // x20
 
-  if ( (byte_4C392EC & 1) == 0 )
+  if ( (byte_4C448E6 & 1) == 0 )
   {
-    sub_1C32C20(&System_Action_TypeInfo);
-    sub_1C32C20(&AssetManager_TypeInfo);
-    sub_1C32C20(&AssetLoader_LoadEndDataHandler_TypeInfo);
-    sub_1C32C20(&Method_UIStandFigureR___c__DisplayClass67_0__SetCharacterForImageIdWithEffect_g__OnLoadFinished_0__);
-    sub_1C32C20(&UIStandFigureR___c__DisplayClass67_0_TypeInfo);
-    sub_1C32C20(&UIStandFigureRender_TypeInfo);
-    byte_4C392EC = 1;
+    sub_1C37058(&System_Action_TypeInfo);
+    sub_1C37058(&AssetManager_TypeInfo);
+    sub_1C37058(&AssetLoader_LoadEndDataHandler_TypeInfo);
+    sub_1C37058(&Method_UIStandFigureR___c__DisplayClass67_0__SetCharacterForImageIdWithEffect_g__OnLoadFinished_0__);
+    sub_1C37058(&UIStandFigureR___c__DisplayClass67_0_TypeInfo);
+    sub_1C37058(&UIStandFigureRender_TypeInfo);
+    byte_4C448E6 = 1;
   }
-  v17 = sub_1C32E6C(UIStandFigureR___c__DisplayClass67_0_TypeInfo);
+  v17 = sub_1C372A4(UIStandFigureR___c__DisplayClass67_0_TypeInfo);
   UIStandFigureR___c__DisplayClass67_0___ctor((UIStandFigureR___c__DisplayClass67_0_o *)v17, 0);
   if ( !v17 )
-    sub_1C32E7C(v18);
+    sub_1C372B4(v18);
   *(_QWORD *)(v17 + 16) = this;
-  sub_1C32BC4((CGThumbnailListItem_o *)(v17 + 16), (int32_t)this, v19, v20);
+  sub_1C36FFC((CGThumbnailListItem_o *)(v17 + 16), (int32_t)this, v19, v20);
   *(_BYTE *)(v17 + 24) = waitToStartRenderWhileAssetLoadBusy;
   this->fields.renderInfo = 0;
   this->fields.isQueuerable = 0;
-  sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.renderInfo, 0, v21, v22);
-  if ( (byte_4C392ED & 1) == 0 )
+  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.renderInfo, 0, v21, v22);
+  if ( (byte_4C448E7 & 1) == 0 )
   {
-    sub_1C32C20(&UnityEngine_Object_TypeInfo);
-    byte_4C392ED = 1;
+    sub_1C37058(&UnityEngine_Object_TypeInfo);
+    byte_4C448E7 = 1;
   }
   this->fields.crossFadeTime = 0.0;
   this->fields.imageId = imageId;
@@ -2255,7 +2255,7 @@ bool UIStandFigureR__SetCharacterForImageIdWithEffect(
   AssetNameWithForm = UIStandFigureRender__GetAssetNameWithForm(imageId, formId, 0);
   this->fields.loadName = AssetNameWithForm;
   p_loadName = &this->fields.loadName;
-  sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.loadName, (int32_t)AssetNameWithForm, v25, v26);
+  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.loadName, (int32_t)AssetNameWithForm, v25, v26);
   this->fields.formId = formId;
   this->fields.isPhotoWithMaster = isPhotoWithMaster;
   this->fields.isCommitEnqueue = isCommitEnqueue;
@@ -2277,14 +2277,14 @@ bool UIStandFigureR__SetCharacterForImageIdWithEffect(
         if ( (System_Action_c *)v29->klass == v33 )
           goto LABEL_14;
       }
-      sub_1C3313C(v29);
+      sub_1C37574(v29);
     }
     p_callbackFunc->klass = (CGThumbnailListItem_c *)v32;
 LABEL_14:
-    sub_1C32BC4(p_callbackFunc, (int32_t)v32, v30, v31);
+    sub_1C36FFC(p_callbackFunc, (int32_t)v32, v30, v31);
   }
   v34 = *p_loadName;
-  v35 = (AssetLoader_LoadEndDataHandler_o *)sub_1C32E6C(AssetLoader_LoadEndDataHandler_TypeInfo);
+  v35 = (AssetLoader_LoadEndDataHandler_o *)sub_1C372A4(AssetLoader_LoadEndDataHandler_TypeInfo);
   AssetLoader_LoadEndDataHandler___ctor(
     v35,
     (Il2CppObject *)v17,
@@ -2328,22 +2328,22 @@ void UIStandFigureR__SetCharacterWithEffect(
   System_String_o *v35; // x19
   AssetLoader_LoadEndDataHandler_o *v36; // x20
 
-  if ( (byte_4C392EA & 1) == 0 )
+  if ( (byte_4C448E4 & 1) == 0 )
   {
-    sub_1C32C20(&System_Action_TypeInfo);
-    sub_1C32C20(&AssetManager_TypeInfo);
-    sub_1C32C20(&AssetLoader_LoadEndDataHandler_TypeInfo);
-    sub_1C32C20(&Method_UIStandFigureR___c__DisplayClass65_0__SetCharacterWithEffect_g__OnLoadFinished_0__);
-    sub_1C32C20(&UIStandFigureR___c__DisplayClass65_0_TypeInfo);
-    sub_1C32C20(&UIStandFigureRender_TypeInfo);
-    byte_4C392EA = 1;
+    sub_1C37058(&System_Action_TypeInfo);
+    sub_1C37058(&AssetManager_TypeInfo);
+    sub_1C37058(&AssetLoader_LoadEndDataHandler_TypeInfo);
+    sub_1C37058(&Method_UIStandFigureR___c__DisplayClass65_0__SetCharacterWithEffect_g__OnLoadFinished_0__);
+    sub_1C37058(&UIStandFigureR___c__DisplayClass65_0_TypeInfo);
+    sub_1C37058(&UIStandFigureRender_TypeInfo);
+    byte_4C448E4 = 1;
   }
-  v18 = sub_1C32E6C(UIStandFigureR___c__DisplayClass65_0_TypeInfo);
+  v18 = sub_1C372A4(UIStandFigureR___c__DisplayClass65_0_TypeInfo);
   UIStandFigureR___c__DisplayClass65_0___ctor((UIStandFigureR___c__DisplayClass65_0_o *)v18, 0);
   if ( !v18 )
-    sub_1C32E7C(v19);
+    sub_1C372B4(v19);
   *(_QWORD *)(v18 + 16) = this;
-  sub_1C32BC4((CGThumbnailListItem_o *)(v18 + 16), (int32_t)this, v20, v21);
+  sub_1C36FFC((CGThumbnailListItem_o *)(v18 + 16), (int32_t)this, v20, v21);
   *(_BYTE *)(v18 + 24) = waitToStartRenderWhileAssetLoadBusy;
   Id = ServantScriptMaster__getId(svtId, imageLimitCount, 0);
   this->fields.imageId = Id;
@@ -2353,11 +2353,11 @@ void UIStandFigureR__SetCharacterWithEffect(
   AssetNameWithForm = UIStandFigureRender__GetAssetNameWithForm(v23, formId, 0);
   this->fields.loadName = AssetNameWithForm;
   p_loadName = &this->fields.loadName;
-  sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.loadName, (int32_t)AssetNameWithForm, v26, v27);
-  if ( (byte_4C392ED & 1) == 0 )
+  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.loadName, (int32_t)AssetNameWithForm, v26, v27);
+  if ( (byte_4C448E7 & 1) == 0 )
   {
-    sub_1C32C20(&UnityEngine_Object_TypeInfo);
-    byte_4C392ED = 1;
+    sub_1C37058(&UnityEngine_Object_TypeInfo);
+    byte_4C448E7 = 1;
   }
   v29 = (System_Delegate_o *)this->fields.callbackFunc;
   p_callbackFunc = &this->fields.callbackFunc;
@@ -2374,13 +2374,13 @@ void UIStandFigureR__SetCharacterWithEffect(
   if ( (System_Action_c *)v30->klass != System_Action_TypeInfo
     || (*p_callbackFunc = (struct System_Action_o *)v30, (System_Action_c *)v30->klass != v34) )
   {
-    sub_1C3313C(v30);
+    sub_1C37574(v30);
 LABEL_12:
     *p_callbackFunc = (struct System_Action_o *)v33;
   }
-  sub_1C32BC4((CGThumbnailListItem_o *)p_callbackFunc, (int32_t)v33, v31, v32);
+  sub_1C36FFC((CGThumbnailListItem_o *)p_callbackFunc, (int32_t)v33, v31, v32);
   v35 = *p_loadName;
-  v36 = (AssetLoader_LoadEndDataHandler_o *)sub_1C32E6C(AssetLoader_LoadEndDataHandler_TypeInfo);
+  v36 = (AssetLoader_LoadEndDataHandler_o *)sub_1C372A4(AssetLoader_LoadEndDataHandler_TypeInfo);
   AssetLoader_LoadEndDataHandler___ctor(
     v36,
     (Il2CppObject *)v18,
@@ -2392,7 +2392,7 @@ LABEL_12:
 }
 
 
-void UIStandFigureR__SetCharacter_43951456(
+void UIStandFigureR__SetCharacter_44053560(
         UIStandFigureR_o *this,
         int32_t svtId,
         int32_t imageLimitCount,
@@ -2404,11 +2404,11 @@ void UIStandFigureR__SetCharacter_43951456(
   const MethodInfo *v7; // x7
   float v8; // s0
 
-  UIStandFigureR__SetCharacter_43951468(this, svtId, imageLimitCount, offsetKind, faceType, 0, v8, callbackFunc, v7);
+  UIStandFigureR__SetCharacter_44053572(this, svtId, imageLimitCount, offsetKind, faceType, 0, v8, callbackFunc, v7);
 }
 
 
-void UIStandFigureR__SetCharacter_43951468(
+void UIStandFigureR__SetCharacter_44053572(
         UIStandFigureR_o *this,
         int32_t svtId,
         int32_t imageLimitCount,
@@ -2434,14 +2434,14 @@ void UIStandFigureR__SetCharacter_43951468(
   System_String_o *loadName; // x20
   AssetLoader_LoadEndDataHandler_o *v29; // x21
 
-  if ( (byte_4C392E8 & 1) == 0 )
+  if ( (byte_4C448E2 & 1) == 0 )
   {
-    sub_1C32C20(&System_Action_TypeInfo);
-    sub_1C32C20(&AssetManager_TypeInfo);
-    sub_1C32C20(&AssetLoader_LoadEndDataHandler_TypeInfo);
-    sub_1C32C20(&Method_UIStandFigureR_EndLoadAsset__);
-    sub_1C32C20(&UIStandFigureRender_TypeInfo);
-    byte_4C392E8 = 1;
+    sub_1C37058(&System_Action_TypeInfo);
+    sub_1C37058(&AssetManager_TypeInfo);
+    sub_1C37058(&AssetLoader_LoadEndDataHandler_TypeInfo);
+    sub_1C37058(&Method_UIStandFigureR_EndLoadAsset__);
+    sub_1C37058(&UIStandFigureRender_TypeInfo);
+    byte_4C448E2 = 1;
   }
   Id = ServantScriptMaster__getId(svtId, imageLimitCount, 0);
   this->fields.imageId = Id;
@@ -2450,11 +2450,11 @@ void UIStandFigureR__SetCharacter_43951468(
     j_il2cpp_runtime_class_init_0(UIStandFigureRender_TypeInfo);
   AssetNameWithForm = UIStandFigureRender__GetAssetNameWithForm(v17, formId, 0);
   this->fields.loadName = AssetNameWithForm;
-  sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.loadName, (int32_t)AssetNameWithForm, v19, v20);
-  if ( (byte_4C392ED & 1) == 0 )
+  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.loadName, (int32_t)AssetNameWithForm, v19, v20);
+  if ( (byte_4C448E7 & 1) == 0 )
   {
-    sub_1C32C20(&UnityEngine_Object_TypeInfo);
-    byte_4C392ED = 1;
+    sub_1C37058(&UnityEngine_Object_TypeInfo);
+    byte_4C448E7 = 1;
   }
   p_callbackFunc = &this->fields.callbackFunc;
   v21 = (System_Delegate_o *)this->fields.callbackFunc;
@@ -2471,13 +2471,13 @@ void UIStandFigureR__SetCharacter_43951468(
   if ( (System_Action_c *)v23->klass != System_Action_TypeInfo
     || (*p_callbackFunc = (struct System_Action_o *)v23, (System_Action_c *)v23->klass != v27) )
   {
-    sub_1C3313C(v23);
+    sub_1C37574(v23);
 LABEL_11:
     *p_callbackFunc = (struct System_Action_o *)v26;
   }
-  sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.callbackFunc, (int32_t)v26, v24, v25);
+  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.callbackFunc, (int32_t)v26, v24, v25);
   loadName = this->fields.loadName;
-  v29 = (AssetLoader_LoadEndDataHandler_o *)sub_1C32E6C(AssetLoader_LoadEndDataHandler_TypeInfo);
+  v29 = (AssetLoader_LoadEndDataHandler_o *)sub_1C372A4(AssetLoader_LoadEndDataHandler_TypeInfo);
   AssetLoader_LoadEndDataHandler___ctor(v29, (Il2CppObject *)this, Method_UIStandFigureR_EndLoadAsset__, 0);
   if ( !AssetManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(AssetManager_TypeInfo);
@@ -2507,15 +2507,15 @@ void UIStandFigureR__SetConstantOffset(UIStandFigureR_o *this, const MethodInfo 
   UnityEngine_Vector3_o localPosition; // 0:s0.4,4:s1.4,8:s2.4
   UnityEngine_Vector3_o v21; // 0:s0.4,4:s1.4,8:s2.4
 
-  if ( (byte_4C392FD & 1) == 0 )
+  if ( (byte_4C448F7 & 1) == 0 )
   {
-    sub_1C32C20(&BalanceConfig_TypeInfo);
-    sub_1C32C20(&Method_BasicHelper_Any_string____78062400);
-    sub_1C32C20(&FSUtility_TypeInfo);
-    sub_1C32C20(&System_Func_string__bool__TypeInfo);
-    sub_1C32C20(&UnityEngine_Object_TypeInfo);
-    sub_1C32C20(&Method_UIStandFigureR__SetConstantOffset_b__90_0__);
-    byte_4C392FD = 1;
+    sub_1C37058(&BalanceConfig_TypeInfo);
+    sub_1C37058(&Method_BasicHelper_Any_string____78108176);
+    sub_1C37058(&FSUtility_TypeInfo);
+    sub_1C37058(&System_Func_string__bool__TypeInfo);
+    sub_1C37058(&UnityEngine_Object_TypeInfo);
+    sub_1C37058(&Method_UIStandFigureR__SetConstantOffset_b__90_0__);
+    byte_4C448F7 = 1;
   }
   *(_QWORD *)result = 0;
   v18 = 0;
@@ -2549,16 +2549,16 @@ void UIStandFigureR__SetConstantOffset(UIStandFigureR_o *this, const MethodInfo 
           v6 = BalanceConfig_TypeInfo;
         }
         UIStandFigureROffsetEffectNames = (System_Object_array *)v6->static_fields->UIStandFigureROffsetEffectNames;
-        v8 = (System_Func_object__bool__o *)sub_1C32E6C(System_Func_string__bool__TypeInfo);
+        v8 = (System_Func_object__bool__o *)sub_1C372A4(System_Func_string__bool__TypeInfo);
         System_Func_object__bool____ctor(
           v8,
           (Il2CppObject *)this,
           Method_UIStandFigureR__SetConstantOffset_b__90_0__,
           0);
-        if ( BasicHelper__Any_object__51144764(
+        if ( BasicHelper__Any_object__51187876(
                UIStandFigureROffsetEffectNames,
                (System_Func_T__bool__o *)v8,
-               (const MethodInfo_30C683C *)Method_BasicHelper_Any_string____78062400) )
+               (const MethodInfo_30D10A4 *)Method_BasicHelper_Any_string____78108176) )
         {
           transform = BalanceConfig_TypeInfo;
           if ( !BalanceConfig_TypeInfo->_2.cctor_finished )
@@ -2577,7 +2577,7 @@ void UIStandFigureR__SetConstantOffset(UIStandFigureR_o *this, const MethodInfo 
             {
               if ( v11 >= v10 )
 LABEL_41:
-                sub_1C32E84(transform);
+                sub_1C372BC(transform);
               transform = *(void **)(v9 + 8LL * (int)v11 + 32);
               if ( !transform )
                 goto LABEL_40;
@@ -2637,7 +2637,7 @@ LABEL_41:
               }
             }
 LABEL_40:
-            sub_1C32E7C(transform);
+            sub_1C372B4(transform);
           }
         }
       }
@@ -2650,10 +2650,10 @@ void UIStandFigureR__SetCrossFadeTime(UIStandFigureR_o *this, float fadeTime, co
 {
   UnityEngine_Object_o *bodyTexture; // x20
 
-  if ( (byte_4C392ED & 1) == 0 )
+  if ( (byte_4C448E7 & 1) == 0 )
   {
-    sub_1C32C20(&UnityEngine_Object_TypeInfo);
-    byte_4C392ED = 1;
+    sub_1C37058(&UnityEngine_Object_TypeInfo);
+    byte_4C448E7 = 1;
   }
   if ( fadeTime <= 0.0
     || this->fields.oldFaceType == this->fields.faceType && this->fields.oldFormId == this->fields.formId )
@@ -2676,7 +2676,7 @@ void UIStandFigureR__SetDepth(UIStandFigureR_o *this, int32_t d, const MethodInf
 
   bodyTexture = (UIWidget_o *)this->fields.bodyTexture;
   if ( !bodyTexture )
-    sub_1C32E7C(0);
+    sub_1C372B4(0);
   UIWidget__set_depth(bodyTexture, d, 0);
 }
 
@@ -2693,7 +2693,7 @@ void UIStandFigureR__SetFace(UIStandFigureR_o *this, int32_t faceType, float fad
 }
 
 
-void UIStandFigureR__SetFace_43959680(
+void UIStandFigureR__SetFace_44061784(
         UIStandFigureR_o *this,
         int32_t faceType,
         System_Action_o *callbackFunc,
@@ -2708,10 +2708,10 @@ void UIStandFigureR__SetFace_43959680(
   System_Action_c *v14; // x1
   const MethodInfo *v15; // x2
 
-  if ( (byte_4C392F5 & 1) == 0 )
+  if ( (byte_4C448EF & 1) == 0 )
   {
-    sub_1C32C20(&System_Action_TypeInfo);
-    byte_4C392F5 = 1;
+    sub_1C37058(&System_Action_TypeInfo);
+    byte_4C448EF = 1;
   }
   p_callbackFunc = &this->fields.callbackFunc;
   v10 = System_Delegate__Combine((System_Delegate_o *)this->fields.callbackFunc, (System_Delegate_o *)callbackFunc, 0);
@@ -2722,16 +2722,16 @@ void UIStandFigureR__SetFace_43959680(
   if ( (System_Action_c *)v10->klass != System_Action_TypeInfo
     || (*p_callbackFunc = (struct System_Action_o *)v10, (System_Action_c *)v10->klass != v14) )
   {
-    sub_1C3313C(v10);
+    sub_1C37574(v10);
 LABEL_7:
     *p_callbackFunc = (struct System_Action_o *)v13;
   }
-  sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.callbackFunc, (int32_t)v13, v11, v12);
+  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.callbackFunc, (int32_t)v13, v11, v12);
   UIStandFigureR__SetFace(this, faceType, fadeTime, v15);
 }
 
 
-void UIStandFigureR__SetFace_43959868(
+void UIStandFigureR__SetFace_44061972(
         UIStandFigureR_o *this,
         int32_t faceType,
         int32_t formId,
@@ -2758,21 +2758,21 @@ void UIStandFigureR__SetFace_43959868(
   System_String_o *loadName; // x20
   AssetLoader_LoadEndDataHandler_o *v28; // x21
 
-  if ( (byte_4C392F6 & 1) == 0 )
+  if ( (byte_4C448F0 & 1) == 0 )
   {
-    sub_1C32C20(&System_Action_TypeInfo);
-    sub_1C32C20(&AssetManager_TypeInfo);
-    sub_1C32C20(&Method_System_Collections_Generic_List_AssetData__Find__);
-    sub_1C32C20(&AssetLoader_LoadEndDataHandler_TypeInfo);
-    sub_1C32C20(&System_Predicate_AssetData__TypeInfo);
-    sub_1C32C20(&Method_UIStandFigureR_EndLoadFormAsset__);
-    sub_1C32C20(&Method_UIStandFigureR__SetFace_b__79_0__);
-    sub_1C32C20(&UIStandFigureRender_TypeInfo);
-    byte_4C392F6 = 1;
+    sub_1C37058(&System_Action_TypeInfo);
+    sub_1C37058(&AssetManager_TypeInfo);
+    sub_1C37058(&Method_System_Collections_Generic_List_AssetData__Find__);
+    sub_1C37058(&AssetLoader_LoadEndDataHandler_TypeInfo);
+    sub_1C37058(&System_Predicate_AssetData__TypeInfo);
+    sub_1C37058(&Method_UIStandFigureR_EndLoadFormAsset__);
+    sub_1C37058(&Method_UIStandFigureR__SetFace_b__79_0__);
+    sub_1C37058(&UIStandFigureRender_TypeInfo);
+    byte_4C448F0 = 1;
   }
   if ( this->fields.formId == formId )
   {
-    UIStandFigureR__SetFace_43959680(this, faceType, callbackFunc, fadeTime, (const MethodInfo *)callbackFunc);
+    UIStandFigureR__SetFace_44061784(this, faceType, callbackFunc, fadeTime, (const MethodInfo *)callbackFunc);
     return;
   }
   if ( callbackFunc )
@@ -2789,11 +2789,11 @@ void UIStandFigureR__SetFace_43959868(
         if ( (System_Action_c *)v12->klass == v16 )
           goto LABEL_11;
       }
-      sub_1C3313C(v12);
+      sub_1C37574(v12);
     }
     *p_callbackFunc = (struct System_Action_o *)v15;
 LABEL_11:
-    sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.callbackFunc, (int32_t)v15, v13, v14);
+    sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.callbackFunc, (int32_t)v15, v13, v14);
   }
   this->fields.faceType = faceType;
   this->fields.formId = formId;
@@ -2802,17 +2802,17 @@ LABEL_11:
     j_il2cpp_runtime_class_init_0(UIStandFigureRender_TypeInfo);
   AssetNameWithForm = UIStandFigureRender__GetAssetNameWithForm(imageId, formId, 0);
   this->fields.loadName = AssetNameWithForm;
-  sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.loadName, (int32_t)AssetNameWithForm, v19, v20);
+  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.loadName, (int32_t)AssetNameWithForm, v19, v20);
   UIStandFigureR__SetCrossFadeTime(this, fadeTime, v21);
   formAssetList = this->fields.formAssetList;
-  v23 = (System_Predicate_object__o *)sub_1C32E6C(System_Predicate_AssetData__TypeInfo);
+  v23 = (System_Predicate_object__o *)sub_1C372A4(System_Predicate_AssetData__TypeInfo);
   System_Predicate_object____ctor(v23, (Il2CppObject *)this, Method_UIStandFigureR__SetFace_b__79_0__, 0);
   if ( !formAssetList )
-    sub_1C32E7C(v24);
+    sub_1C372B4(v24);
   v25 = System_Collections_Generic_List_object___Find(
           (System_Collections_Generic_List_object__o *)formAssetList,
           (System_Predicate_T__o *)v23,
-          (const MethodInfo_3798E24 *)Method_System_Collections_Generic_List_AssetData__Find__);
+          (const MethodInfo_37A368C *)Method_System_Collections_Generic_List_AssetData__Find__);
   if ( v25 )
   {
     UIStandFigureR__EndLoadFormAsset(this, (AssetData_o *)v25, v26);
@@ -2820,7 +2820,7 @@ LABEL_11:
   else
   {
     loadName = this->fields.loadName;
-    v28 = (AssetLoader_LoadEndDataHandler_o *)sub_1C32E6C(AssetLoader_LoadEndDataHandler_TypeInfo);
+    v28 = (AssetLoader_LoadEndDataHandler_o *)sub_1C372A4(AssetLoader_LoadEndDataHandler_TypeInfo);
     AssetLoader_LoadEndDataHandler___ctor(v28, (Il2CppObject *)this, Method_UIStandFigureR_EndLoadFormAsset__, 0);
     if ( !AssetManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(AssetManager_TypeInfo);
@@ -2837,16 +2837,16 @@ void UIStandFigureR__SetLayer(UIStandFigureR_o *this, int32_t layer, const Metho
 
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
   if ( !gameObject )
-    sub_1C32E7C(0);
+    sub_1C372B4(0);
   if ( UnityEngine_GameObject__get_layer(gameObject, 0) != layer )
   {
     transform = UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0);
-    UIStandFigureR__SetLayer_43963028(this, transform, layer, v7);
+    UIStandFigureR__SetLayer_44065132(this, transform, layer, v7);
   }
 }
 
 
-void UIStandFigureR__SetLayer_43963028(
+void UIStandFigureR__SetLayer_44065132(
         UIStandFigureR_o *this,
         UnityEngine_Transform_o *tf,
         int32_t layer,
@@ -2873,20 +2873,20 @@ void UIStandFigureR__SetLayer_43963028(
   __int64 v24; // x0
 
   v6 = this;
-  if ( (byte_4C392FC & 1) == 0 )
+  if ( (byte_4C448F6 & 1) == 0 )
   {
-    sub_1C32C20(&System_IDisposable_TypeInfo);
-    sub_1C32C20(&System_Collections_IEnumerator_TypeInfo);
-    this = (UIStandFigureR_o *)sub_1C32C20(&UnityEngine_Transform_TypeInfo);
-    byte_4C392FC = 1;
+    sub_1C37058(&System_IDisposable_TypeInfo);
+    sub_1C37058(&System_Collections_IEnumerator_TypeInfo);
+    this = (UIStandFigureR_o *)sub_1C37058(&UnityEngine_Transform_TypeInfo);
+    byte_4C448F6 = 1;
   }
   if ( !tf || (this = (UIStandFigureR_o *)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)tf, 0)) == 0 )
 LABEL_33:
-    sub_1C32E7C(this);
+    sub_1C372B4(this);
   UnityEngine_GameObject__set_layer((UnityEngine_GameObject_o *)this, layer, 0);
   Enumerator = UnityEngine_Transform__GetEnumerator(tf, 0);
   if ( !Enumerator )
-    sub_1C32E7C(0);
+    sub_1C372B4(0);
   while ( 1 )
   {
     klass = Enumerator->klass;
@@ -2906,7 +2906,7 @@ LABEL_33:
     else
     {
 LABEL_10:
-      v11 = sub_1C83438(Enumerator, System_Collections_IEnumerator_TypeInfo, 0);
+      v11 = sub_1C87870(Enumerator, System_Collections_IEnumerator_TypeInfo, 0);
     }
     if ( ((*(__int64 (__fastcall **)(System_Collections_IEnumerator_o *, _QWORD))v11)(Enumerator, *(_QWORD *)(v11 + 8))
         & 1) == 0 )
@@ -2928,7 +2928,7 @@ LABEL_10:
     else
     {
 LABEL_17:
-      v15 = sub_1C83438(Enumerator, System_Collections_IEnumerator_TypeInfo, 1);
+      v15 = sub_1C87870(Enumerator, System_Collections_IEnumerator_TypeInfo, 1);
     }
     v16 = (UnityEngine_Transform_o *)(*(__int64 (__fastcall **)(System_Collections_IEnumerator_o *, _QWORD))v15)(
                                        Enumerator,
@@ -2939,13 +2939,13 @@ LABEL_17:
       if ( v16->klass->_2.naturalAligment < (unsigned int)naturalAligment
         || (UnityEngine_Transform_c *)v16->klass->_2.typeHierarchy[naturalAligment - 1] != UnityEngine_Transform_TypeInfo )
       {
-        sub_1C3313C(v16);
+        sub_1C37574(v16);
         goto LABEL_33;
       }
     }
-    UIStandFigureR__SetLayer_43963028(v6, v16, layer, v17);
+    UIStandFigureR__SetLayer_44065132(v6, v16, layer, v17);
   }
-  v19 = sub_1C32D5C(Enumerator, System_IDisposable_TypeInfo);
+  v19 = sub_1C37194(Enumerator, System_IDisposable_TypeInfo);
   if ( v19 )
   {
     v20 = *(_QWORD *)v19;
@@ -2966,7 +2966,7 @@ LABEL_17:
     else
     {
 LABEL_28:
-      v24 = sub_1C83438(v19, System_IDisposable_TypeInfo, 0);
+      v24 = sub_1C87870(v19, System_IDisposable_TypeInfo, 0);
     }
     (*(void (__fastcall **)(__int64, _QWORD))v24)(v21, *(_QWORD *)(v24 + 8));
   }
@@ -2979,26 +2979,26 @@ void UIStandFigureR__SetMaterial(UIStandFigureR_o *this, const MethodInfo *metho
   UnityEngine_Material_o *v4; // x21
   const MethodInfo *v5; // x2
 
-  if ( (byte_4C392FB & 1) == 0 )
+  if ( (byte_4C448F5 & 1) == 0 )
   {
-    sub_1C32C20(&UnityEngine_Material_TypeInfo);
-    sub_1C32C20(&StringLiteral_16263/*"_MainTex2"*/);
-    sub_1C32C20(&StringLiteral_4943/*"Custom/Sprites-StandFigureRender"*/);
-    sub_1C32C20(&StringLiteral_16262/*"_MainTex"*/);
-    sub_1C32C20(&StringLiteral_16122/*"_AlphaMaskLength"*/);
-    sub_1C32C20(&StringLiteral_16135/*"_Blend"*/);
-    sub_1C32C20(&StringLiteral_16123/*"_AlphaMaskStart"*/);
-    byte_4C392FB = 1;
+    sub_1C37058(&UnityEngine_Material_TypeInfo);
+    sub_1C37058(&StringLiteral_16265/*"_MainTex2"*/);
+    sub_1C37058(&StringLiteral_4943/*"Custom/Sprites-StandFigureRender"*/);
+    sub_1C37058(&StringLiteral_16264/*"_MainTex"*/);
+    sub_1C37058(&StringLiteral_16124/*"_AlphaMaskLength"*/);
+    sub_1C37058(&StringLiteral_16137/*"_Blend"*/);
+    sub_1C37058(&StringLiteral_16125/*"_AlphaMaskStart"*/);
+    byte_4C448F5 = 1;
   }
   v3 = UnityEngine_Shader__Find((System_String_o *)StringLiteral_4943/*"Custom/Sprites-StandFigureRender"*/, 0);
-  v4 = (UnityEngine_Material_o *)sub_1C32E6C(UnityEngine_Material_TypeInfo);
+  v4 = (UnityEngine_Material_o *)sub_1C372A4(UnityEngine_Material_TypeInfo);
   UnityEngine_Material___ctor(v4, v3, 0);
   UIStandFigureR__set_BodyTextureMaterial(this, v4, v5);
-  this->fields.blendId = UnityEngine_Shader__PropertyToID((System_String_o *)StringLiteral_16135/*"_Blend"*/, 0);
-  this->fields.mainTexId = UnityEngine_Shader__PropertyToID((System_String_o *)StringLiteral_16262/*"_MainTex"*/, 0);
-  this->fields.mainTex2Id = UnityEngine_Shader__PropertyToID((System_String_o *)StringLiteral_16263/*"_MainTex2"*/, 0);
-  this->fields.alphaMaskStartId = UnityEngine_Shader__PropertyToID((System_String_o *)StringLiteral_16123/*"_AlphaMaskStart"*/, 0);
-  this->fields.alphaMaskLengthId = UnityEngine_Shader__PropertyToID((System_String_o *)StringLiteral_16122/*"_AlphaMaskLength"*/, 0);
+  this->fields.blendId = UnityEngine_Shader__PropertyToID((System_String_o *)StringLiteral_16137/*"_Blend"*/, 0);
+  this->fields.mainTexId = UnityEngine_Shader__PropertyToID((System_String_o *)StringLiteral_16264/*"_MainTex"*/, 0);
+  this->fields.mainTex2Id = UnityEngine_Shader__PropertyToID((System_String_o *)StringLiteral_16265/*"_MainTex2"*/, 0);
+  this->fields.alphaMaskStartId = UnityEngine_Shader__PropertyToID((System_String_o *)StringLiteral_16125/*"_AlphaMaskStart"*/, 0);
+  this->fields.alphaMaskLengthId = UnityEngine_Shader__PropertyToID((System_String_o *)StringLiteral_16124/*"_AlphaMaskLength"*/, 0);
 }
 
 
@@ -3010,7 +3010,7 @@ void UIStandFigureR__SetSvtMultiPortraitEntity(
   const MethodInfo *v3; // x3
 
   this->fields.svtMultiPortraitEntity = entity;
-  sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.svtMultiPortraitEntity, (int32_t)entity, (int32_t)method, v3);
+  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.svtMultiPortraitEntity, (int32_t)entity, (int32_t)method, v3);
 }
 
 
@@ -3026,8 +3026,8 @@ void UIStandFigureR__StartCrossFade(
 
   v5 = UIStandFigureR__ChangeCrossFade(this, fadeTime, fadeInRenderTex, method);
   this->fields.fadeCoroutine = v5;
-  sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.fadeCoroutine, (int32_t)v5, v6, v7);
-  UnityEngine_MonoBehaviour__StartCoroutine_71209212((UnityEngine_MonoBehaviour_o *)this, this->fields.fadeCoroutine, 0);
+  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.fadeCoroutine, (int32_t)v5, v6, v7);
+  UnityEngine_MonoBehaviour__StartCoroutine_71252324((UnityEngine_MonoBehaviour_o *)this, this->fields.fadeCoroutine, 0);
 }
 
 
@@ -3052,17 +3052,17 @@ System_Collections_IEnumerator_o *UIStandFigureR__WaitWhileLoading(
   int32_t v5; // w2
   const MethodInfo *v6; // x3
 
-  if ( (byte_4C392F0 & 1) == 0 )
+  if ( (byte_4C448EA & 1) == 0 )
   {
-    sub_1C32C20(&UIStandFigureR__WaitWhileLoading_d__71_TypeInfo);
-    byte_4C392F0 = 1;
+    sub_1C37058(&UIStandFigureR__WaitWhileLoading_d__71_TypeInfo);
+    byte_4C448EA = 1;
   }
-  v3 = sub_1C32E6C(UIStandFigureR__WaitWhileLoading_d__71_TypeInfo);
+  v3 = sub_1C372A4(UIStandFigureR__WaitWhileLoading_d__71_TypeInfo);
   UIStandFigureR__WaitWhileLoading_d__71___ctor((UIStandFigureR__WaitWhileLoading_d__71_o *)v3, 0, 0);
   if ( !v3 )
-    sub_1C32E7C(v4);
+    sub_1C372B4(v4);
   *(_QWORD *)(v3 + 32) = finishCallback;
-  sub_1C32BC4((CGThumbnailListItem_o *)(v3 + 32), (int32_t)finishCallback, v5, v6);
+  sub_1C36FFC((CGThumbnailListItem_o *)(v3 + 32), (int32_t)finishCallback, v5, v6);
   return (System_Collections_IEnumerator_o *)v3;
 }
 
@@ -3080,7 +3080,7 @@ bool UIStandFigureR___SetConstantOffset_b__90_0(
     || (transform = UnityEngine_Transform__get_parent(transform, 0)) == 0
     || (transform = (UnityEngine_Transform_o *)UnityEngine_Object__get_name((UnityEngine_Object_o *)transform, 0)) == 0 )
   {
-    sub_1C32E7C(transform);
+    sub_1C372B4(transform);
   }
   return System_String__Contains((System_String_o *)transform, offsetEffectName, 0);
 }
@@ -3091,8 +3091,8 @@ bool UIStandFigureR___SetFace_b__79_0(UIStandFigureR_o *this, AssetData_o *a, co
   System_String_o *name; // x8
 
   if ( !a || (name = a->fields.name) == 0 )
-    sub_1C32E7C(this);
-  return System_String__Equals_63553848(name, this->fields.loadName, 0);
+    sub_1C372B4(this);
+  return System_String__Equals_63596960(name, this->fields.loadName, 0);
 }
 
 
@@ -3105,10 +3105,10 @@ UnityEngine_Material_o *UIStandFigureR__get_BodyTextureMaterial(UIStandFigureR_o
   int32_t v7; // w2
   const MethodInfo *v8; // x3
 
-  if ( (byte_4C392E3 & 1) == 0 )
+  if ( (byte_4C448DD & 1) == 0 )
   {
-    sub_1C32C20(&UnityEngine_Object_TypeInfo);
-    byte_4C392E3 = 1;
+    sub_1C37058(&UnityEngine_Object_TypeInfo);
+    byte_4C448DD = 1;
   }
   p_bodyTextureMaterial = &this->fields.bodyTextureMaterial;
   bodyTextureMaterial = (UnityEngine_Object_o *)this->fields.bodyTextureMaterial;
@@ -3118,12 +3118,12 @@ UnityEngine_Material_o *UIStandFigureR__get_BodyTextureMaterial(UIStandFigureR_o
   {
     bodyTexture = this->fields.bodyTexture;
     if ( !bodyTexture )
-      sub_1C32E7C(0);
+      sub_1C372B4(0);
     v6 = ((__int64 (__fastcall *)(struct UITexture_o *, const MethodInfo *))bodyTexture->klass->vtable._24_get_material.methodPtr)(
            bodyTexture,
            bodyTexture->klass->vtable._24_get_material.method);
     *p_bodyTextureMaterial = (UnityEngine_Material_o *)v6;
-    sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.bodyTextureMaterial, v6, v7, v8);
+    sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.bodyTextureMaterial, v6, v7, v8);
   }
   return *p_bodyTextureMaterial;
 }
@@ -3171,10 +3171,10 @@ void UIStandFigureR__set_BodyTextureMaterial(
   UnityEngine_Object_o *v9; // x22
   struct UITexture_o *bodyTexture; // x0
 
-  if ( (byte_4C392E4 & 1) == 0 )
+  if ( (byte_4C448DE & 1) == 0 )
   {
-    sub_1C32C20(&UnityEngine_Object_TypeInfo);
-    byte_4C392E4 = 1;
+    sub_1C37058(&UnityEngine_Object_TypeInfo);
+    byte_4C448DE = 1;
   }
   p_bodyTextureMaterial = &this->fields.bodyTextureMaterial;
   bodyTextureMaterial = (UnityEngine_Object_o *)this->fields.bodyTextureMaterial;
@@ -3185,13 +3185,13 @@ void UIStandFigureR__set_BodyTextureMaterial(
     v9 = (UnityEngine_Object_o *)*p_bodyTextureMaterial;
     if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-    UnityEngine_Object__Destroy_71223640(v9, 0);
+    UnityEngine_Object__Destroy_71266752(v9, 0);
   }
   this->fields.bodyTextureMaterial = value;
-  sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.bodyTextureMaterial, (int32_t)value, v7, v8);
+  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.bodyTextureMaterial, (int32_t)value, v7, v8);
   bodyTexture = this->fields.bodyTexture;
   if ( !bodyTexture )
-    sub_1C32E7C(0);
+    sub_1C372B4(0);
   ((void (__fastcall *)(struct UITexture_o *, struct UnityEngine_Material_o *, const MethodInfo *))bodyTexture->klass->vtable._25_set_material.methodPtr)(
     bodyTexture,
     *p_bodyTextureMaterial,
@@ -3224,14 +3224,14 @@ void UIStandFigureR_WaitRenderInfo___ctor(
   v14 = this;
   System_Object___ctor((Il2CppObject *)this, 0);
   v14->fields._RenderText_k__BackingField = renderText;
-  sub_1C32BC4((CGThumbnailListItem_o *)&v14->fields, (int32_t)renderText, v15, v16);
+  sub_1C36FFC((CGThumbnailListItem_o *)&v14->fields, (int32_t)renderText, v15, v16);
   v14->fields._TextureList_k__BackingField = textureList;
   v14 = (UIStandFigureR_WaitRenderInfo_o *)((char *)v14 + 40);
   v14[-1].fields._FormId_k__BackingField = imageId;
   v14[-1].fields._MultiPortraitIndex_k__BackingField = faceType;
   LODWORD(v14[-1].fields._TextureList_k__BackingField) = formId;
   HIDWORD(v14[-1].fields._TextureList_k__BackingField) = multiPortraitIndex;
-  sub_1C32BC4((CGThumbnailListItem_o *)v14, (int32_t)textureList, v17, v18);
+  sub_1C36FFC((CGThumbnailListItem_o *)v14, (int32_t)textureList, v17, v18);
 }
 
 
@@ -3321,7 +3321,7 @@ void UIStandFigureR_WaitRenderInfo__set_RenderText(
   const MethodInfo *v3; // x3
 
   this->fields._RenderText_k__BackingField = value;
-  sub_1C32BC4((CGThumbnailListItem_o *)&this->fields, (int32_t)value, (int32_t)method, v3);
+  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields, (int32_t)value, (int32_t)method, v3);
 }
 
 
@@ -3333,7 +3333,7 @@ void UIStandFigureR_WaitRenderInfo__set_TextureList(
   const MethodInfo *v3; // x3
 
   this->fields._TextureList_k__BackingField = value;
-  sub_1C32BC4((CGThumbnailListItem_o *)&this->fields._TextureList_k__BackingField, (int32_t)value, (int32_t)method, v3);
+  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields._TextureList_k__BackingField, (int32_t)value, (int32_t)method, v3);
 }
 
 
@@ -3372,11 +3372,11 @@ bool UIStandFigureR__ChangeCrossFade_d__92__MoveNext(
   bool result; // w0
 
   v2 = this;
-  if ( (byte_4C39305 & 1) == 0 )
+  if ( (byte_4C448FF & 1) == 0 )
   {
-    sub_1C32C20(&UnityEngine_Object_TypeInfo);
-    this = (UIStandFigureR__ChangeCrossFade_d__92_o *)sub_1C32C20(&UnityEngine_WaitForFixedUpdate_TypeInfo);
-    byte_4C39305 = 1;
+    sub_1C37058(&UnityEngine_Object_TypeInfo);
+    this = (UIStandFigureR__ChangeCrossFade_d__92_o *)sub_1C37058(&UnityEngine_WaitForFixedUpdate_TypeInfo);
+    byte_4C448FF = 1;
   }
   _1__state = v2->fields.__1__state;
   _4__this = v2->fields.__4__this;
@@ -3393,7 +3393,7 @@ bool UIStandFigureR__ChangeCrossFade_d__92__MoveNext(
       if ( this )
       {
         v8 = v6 / time;
-        UnityEngine_Material__SetFloat_71093372((UnityEngine_Material_o *)this, _4__this->fields.blendId, v8, 0);
+        UnityEngine_Material__SetFloat_71136484((UnityEngine_Material_o *)this, _4__this->fields.blendId, v8, 0);
         bodyTexture = _4__this->fields.bodyTexture;
         if ( bodyTexture )
         {
@@ -3424,7 +3424,7 @@ bool UIStandFigureR__ChangeCrossFade_d__92__MoveNext(
                   this = (UIStandFigureR__ChangeCrossFade_d__92_o *)v15->fields.mDynamicMat;
                   if ( this )
                   {
-                    UnityEngine_Material__SetFloat_71093372(
+                    UnityEngine_Material__SetFloat_71136484(
                       (UnityEngine_Material_o *)this,
                       _4__this->fields.blendId,
                       v8,
@@ -3439,7 +3439,7 @@ bool UIStandFigureR__ChangeCrossFade_d__92__MoveNext(
       }
     }
 LABEL_27:
-    sub_1C32E7C(this);
+    sub_1C372B4(this);
   }
   if ( _1__state )
     return 0;
@@ -3455,11 +3455,11 @@ LABEL_27:
 LABEL_23:
   if ( v2->fields._total_5__2 < v2->fields.time )
   {
-    v16 = (UnityEngine_WaitForFixedUpdate_o *)sub_1C32E6C(UnityEngine_WaitForFixedUpdate_TypeInfo);
+    v16 = (UnityEngine_WaitForFixedUpdate_o *)sub_1C372A4(UnityEngine_WaitForFixedUpdate_TypeInfo);
     UnityEngine_WaitForFixedUpdate___ctor(v16, 0);
     v2->fields.__2__current = (Il2CppObject *)v16;
     p__2__current = (CGThumbnailListItem_o *)&v2->fields.__2__current;
-    sub_1C32BC4(p__2__current, (int32_t)v16, v18, v19);
+    sub_1C36FFC(p__2__current, (int32_t)v16, v18, v19);
     result = 1;
     LODWORD(p__2__current[-1].fields._ThumbnailSpritePath_k__BackingField) = 1;
     return result;
@@ -3485,11 +3485,11 @@ void __noreturn UIStandFigureR__ChangeCrossFade_d__92__System_Collections_IEnume
   System_NotSupportedException_o *v3; // x19
   __int64 v4; // x0
 
-  v2 = sub_1C32C34(&System_NotSupportedException_TypeInfo);
-  v3 = (System_NotSupportedException_o *)sub_1C32E6C(v2);
+  v2 = sub_1C3706C(&System_NotSupportedException_TypeInfo);
+  v3 = (System_NotSupportedException_o *)sub_1C372A4(v2);
   System_NotSupportedException___ctor(v3, 0);
-  v4 = sub_1C32C34(&Method_UIStandFigureR__ChangeCrossFade_d__92_System_Collections_IEnumerator_Reset__);
-  sub_1C32D48(v3, v4);
+  v4 = sub_1C3706C(&Method_UIStandFigureR__ChangeCrossFade_d__92_System_Collections_IEnumerator_Reset__);
+  sub_1C37180(v3, v4);
 }
 
 
@@ -3551,14 +3551,14 @@ bool UIStandFigureR__PlayAnimationProc_d__96__MoveNext(
   const MethodInfo *v27; // x3
 
   v2 = this;
-  if ( (byte_4C39306 & 1) == 0 )
+  if ( (byte_4C44900 & 1) == 0 )
   {
-    sub_1C32C20(&System_Func_bool__TypeInfo);
-    sub_1C32C20(&Method_UIStandFigureR___c__DisplayClass96_0__PlayAnimationProc_b__0__);
-    sub_1C32C20(&UIStandFigureR___c__DisplayClass96_0_TypeInfo);
-    sub_1C32C20(&UnityEngine_WaitForSeconds_TypeInfo);
-    this = (UIStandFigureR__PlayAnimationProc_d__96_o *)sub_1C32C20(&UnityEngine_WaitUntil_TypeInfo);
-    byte_4C39306 = 1;
+    sub_1C37058(&System_Func_bool__TypeInfo);
+    sub_1C37058(&Method_UIStandFigureR___c__DisplayClass96_0__PlayAnimationProc_b__0__);
+    sub_1C37058(&UIStandFigureR___c__DisplayClass96_0_TypeInfo);
+    sub_1C37058(&UnityEngine_WaitForSeconds_TypeInfo);
+    this = (UIStandFigureR__PlayAnimationProc_d__96_o *)sub_1C37058(&UnityEngine_WaitUntil_TypeInfo);
+    byte_4C44900 = 1;
   }
   _1__state = v2->fields.__1__state;
   if ( _1__state == 2 )
@@ -3578,30 +3578,30 @@ LABEL_19:
   if ( !_1__state )
   {
     v2->fields.__1__state = -1;
-    v5 = (Il2CppObject *)sub_1C32E6C(UIStandFigureR___c__DisplayClass96_0_TypeInfo);
+    v5 = (Il2CppObject *)sub_1C372A4(UIStandFigureR___c__DisplayClass96_0_TypeInfo);
     System_Object___ctor(v5, 0);
     v2->fields.__8__1 = (struct UIStandFigureR___c__DisplayClass96_0_o *)v5;
-    sub_1C32BC4((CGThumbnailListItem_o *)&v2->fields.__8__1, (int32_t)v5, v6, v7);
+    sub_1C36FFC((CGThumbnailListItem_o *)&v2->fields.__8__1, (int32_t)v5, v6, v7);
     this = (UIStandFigureR__PlayAnimationProc_d__96_o *)v2->fields.__8__1;
     if ( !this )
       goto LABEL_21;
     v10 = v2->fields.__4__this;
     *(_QWORD *)&this->fields.__1__state = v10;
-    sub_1C32BC4((CGThumbnailListItem_o *)&this->fields, (int32_t)v10, v8, v9);
+    sub_1C36FFC((CGThumbnailListItem_o *)&this->fields, (int32_t)v10, v8, v9);
     this = (UIStandFigureR__PlayAnimationProc_d__96_o *)v2->fields.__8__1;
     if ( !this )
       goto LABEL_21;
     animationName = (Il2CppObject *)v2->fields.animationName;
     this->fields.__2__current = animationName;
-    sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.__2__current, (int32_t)animationName, v11, v12);
+    sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.__2__current, (int32_t)animationName, v11, v12);
     playDelayTime = v2->fields.playDelayTime;
     if ( playDelayTime > 0.0 )
     {
-      v15 = (UnityEngine_WaitForSeconds_o *)sub_1C32E6C(UnityEngine_WaitForSeconds_TypeInfo);
+      v15 = (UnityEngine_WaitForSeconds_o *)sub_1C372A4(UnityEngine_WaitForSeconds_TypeInfo);
       UnityEngine_WaitForSeconds___ctor(v15, playDelayTime, 0);
       v2->fields.__2__current = (Il2CppObject *)v15;
       p__2__current = (CGThumbnailListItem_o *)&v2->fields.__2__current;
-      sub_1C32BC4(p__2__current, (int32_t)v15, v17, v18);
+      sub_1C36FFC(p__2__current, (int32_t)v15, v17, v18);
       result = 1;
       LODWORD(p__2__current[-1].fields._ThumbnailSpritePath_k__BackingField) = 1;
       return result;
@@ -3619,21 +3619,21 @@ LABEL_12:
           this = (UIStandFigureR__PlayAnimationProc_d__96_o *)_4__this->fields.animationComponent;
           if ( this )
           {
-            UnityEngine_Animation__Play_70968924((UnityEngine_Animation_o *)this, _8__1->fields.animationName, 0);
+            UnityEngine_Animation__Play_71012036((UnityEngine_Animation_o *)this, _8__1->fields.animationName, 0);
             if ( v2->fields.endCallback )
             {
               v22 = (Il2CppObject *)v2->fields.__8__1;
-              v23 = (System_Func_bool__o *)sub_1C32E6C(System_Func_bool__TypeInfo);
+              v23 = (System_Func_bool__o *)sub_1C372A4(System_Func_bool__TypeInfo);
               System_Func_bool____ctor(
                 v23,
                 v22,
                 Method_UIStandFigureR___c__DisplayClass96_0__PlayAnimationProc_b__0__,
                 0);
-              v24 = (UnityEngine_WaitUntil_o *)sub_1C32E6C(UnityEngine_WaitUntil_TypeInfo);
+              v24 = (UnityEngine_WaitUntil_o *)sub_1C372A4(UnityEngine_WaitUntil_TypeInfo);
               UnityEngine_WaitUntil___ctor(v24, v23, 0);
               v2->fields.__2__current = (Il2CppObject *)v24;
               v25 = (CGThumbnailListItem_o *)&v2->fields.__2__current;
-              sub_1C32BC4(v25, (int32_t)v24, v26, v27);
+              sub_1C36FFC(v25, (int32_t)v24, v26, v27);
               LODWORD(v25[-1].fields._ThumbnailSpritePath_k__BackingField) = 2;
               return 1;
             }
@@ -3644,7 +3644,7 @@ LABEL_12:
       }
     }
 LABEL_21:
-    sub_1C32E7C(this);
+    sub_1C372B4(this);
   }
   return 0;
 }
@@ -3666,11 +3666,11 @@ void __noreturn UIStandFigureR__PlayAnimationProc_d__96__System_Collections_IEnu
   System_NotSupportedException_o *v3; // x19
   __int64 v4; // x0
 
-  v2 = sub_1C32C34(&System_NotSupportedException_TypeInfo);
-  v3 = (System_NotSupportedException_o *)sub_1C32E6C(v2);
+  v2 = sub_1C3706C(&System_NotSupportedException_TypeInfo);
+  v3 = (System_NotSupportedException_o *)sub_1C372A4(v2);
   System_NotSupportedException___ctor(v3, 0);
-  v4 = sub_1C32C34(&Method_UIStandFigureR__PlayAnimationProc_d__96_System_Collections_IEnumerator_Reset__);
-  sub_1C32D48(v3, v4);
+  v4 = sub_1C3706C(&Method_UIStandFigureR__PlayAnimationProc_d__96_System_Collections_IEnumerator_Reset__);
+  sub_1C37180(v3, v4);
 }
 
 
@@ -3715,12 +3715,12 @@ bool UIStandFigureR__WaitWhileLoading_d__71__MoveNext(
   int32_t v11; // w2
   const MethodInfo *v12; // x3
 
-  if ( (byte_4C39307 & 1) == 0 )
+  if ( (byte_4C44901 & 1) == 0 )
   {
-    sub_1C32C20(&Method_AssetManager_LoadIsBusy__);
-    sub_1C32C20(&System_Func_bool__TypeInfo);
-    sub_1C32C20(&UnityEngine_WaitWhile_TypeInfo);
-    byte_4C39307 = 1;
+    sub_1C37058(&Method_AssetManager_LoadIsBusy__);
+    sub_1C37058(&System_Func_bool__TypeInfo);
+    sub_1C37058(&UnityEngine_WaitWhile_TypeInfo);
+    byte_4C44901 = 1;
   }
   _1__state = this->fields.__1__state;
   if ( _1__state == 2 )
@@ -3740,7 +3740,7 @@ bool UIStandFigureR__WaitWhileLoading_d__71__MoveNext(
       this->fields.__2__current = 0;
       p__2__current = &this->fields.__2__current;
       *((_DWORD *)p__2__current - 2) = -1;
-      sub_1C32BC4((CGThumbnailListItem_o *)p__2__current, 0, v2, v3);
+      sub_1C36FFC((CGThumbnailListItem_o *)p__2__current, 0, v2, v3);
       result = 1;
       *((_DWORD *)p__2__current - 2) = 1;
       return result;
@@ -3748,12 +3748,12 @@ bool UIStandFigureR__WaitWhileLoading_d__71__MoveNext(
     return 0;
   }
   this->fields.__1__state = -1;
-  v9 = (System_Func_bool__o *)sub_1C32E6C(System_Func_bool__TypeInfo);
+  v9 = (System_Func_bool__o *)sub_1C372A4(System_Func_bool__TypeInfo);
   System_Func_bool____ctor(v9, 0, Method_AssetManager_LoadIsBusy__, 0);
-  v10 = (UnityEngine_WaitWhile_o *)sub_1C32E6C(UnityEngine_WaitWhile_TypeInfo);
+  v10 = (UnityEngine_WaitWhile_o *)sub_1C372A4(UnityEngine_WaitWhile_TypeInfo);
   UnityEngine_WaitWhile___ctor(v10, v9, 0);
   this->fields.__2__current = (Il2CppObject *)v10;
-  sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.__2__current, (int32_t)v10, v11, v12);
+  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.__2__current, (int32_t)v10, v11, v12);
   this->fields.__1__state = 2;
   return 1;
 }
@@ -3775,11 +3775,11 @@ void __noreturn UIStandFigureR__WaitWhileLoading_d__71__System_Collections_IEnum
   System_NotSupportedException_o *v3; // x19
   __int64 v4; // x0
 
-  v2 = sub_1C32C34(&System_NotSupportedException_TypeInfo);
-  v3 = (System_NotSupportedException_o *)sub_1C32E6C(v2);
+  v2 = sub_1C3706C(&System_NotSupportedException_TypeInfo);
+  v3 = (System_NotSupportedException_o *)sub_1C372A4(v2);
   System_NotSupportedException___ctor(v3, 0);
-  v4 = sub_1C32C34(&Method_UIStandFigureR__WaitWhileLoading_d__71_System_Collections_IEnumerator_Reset__);
-  sub_1C32D48(v3, v4);
+  v4 = sub_1C3706C(&Method_UIStandFigureR__WaitWhileLoading_d__71_System_Collections_IEnumerator_Reset__);
+  sub_1C37180(v3, v4);
 }
 
 
@@ -3816,7 +3816,7 @@ void UIStandFigureR___c__DisplayClass65_0___SetCharacterWithEffect_g__OnLoadFini
 
   _4__this = this->fields.__4__this;
   if ( !_4__this )
-    sub_1C32E7C(0);
+    sub_1C372B4(0);
   UIStandFigureR__EndLoadAssetWithEffect(_4__this, inAssetData, this->fields.waitToStartRenderWhileAssetLoadBusy, 0);
 }
 
@@ -3838,7 +3838,7 @@ void UIStandFigureR___c__DisplayClass67_0___SetCharacterForImageIdWithEffect_g__
 
   _4__this = this->fields.__4__this;
   if ( !_4__this )
-    sub_1C32E7C(0);
+    sub_1C372B4(0);
   UIStandFigureR__EndLoadAssetWithEffect(_4__this, inAssetData, this->fields.waitToStartRenderWhileAssetLoadBusy, 0);
 }
 
@@ -3862,9 +3862,9 @@ bool UIStandFigureR___c__DisplayClass80_0___EndLoadFormAsset_b__0(
     || (assetData = this->fields.assetData) == 0
     || (this = (UIStandFigureR___c__DisplayClass80_0_o *)a->fields.name) == 0 )
   {
-    sub_1C32E7C(this);
+    sub_1C372B4(this);
   }
-  return System_String__Equals_63553848((System_String_o *)this, assetData->fields.name, 0);
+  return System_String__Equals_63596960((System_String_o *)this, assetData->fields.name, 0);
 }
 
 
@@ -3884,8 +3884,8 @@ bool UIStandFigureR___c__DisplayClass81_0___PreloadFormAssets_b__0(
   System_String_o *name; // x8
 
   if ( !a || (name = a->fields.name) == 0 )
-    sub_1C32E7C(this);
-  return System_String__Equals_63553848(name, this->fields.assetPath, 0);
+    sub_1C372B4(this);
+  return System_String__Equals_63596960(name, this->fields.assetPath, 0);
 }
 
 
@@ -3895,8 +3895,8 @@ bool UIStandFigureR___c__DisplayClass81_0___PreloadFormAssets_b__1(
         const MethodInfo *method)
 {
   if ( !a )
-    sub_1C32E7C(this);
-  return System_String__Equals_63553848(a, this->fields.assetPath, 0);
+    sub_1C372B4(this);
+  return System_String__Equals_63596960(a, this->fields.assetPath, 0);
 }
 
 
@@ -3916,8 +3916,8 @@ bool UIStandFigureR___c__DisplayClass84_0___OnEndPreloadForms_b__0(
   struct AssetData_o *asset; // x8
 
   if ( !a || (asset = this->fields.asset) == 0 || (this = (UIStandFigureR___c__DisplayClass84_0_o *)a->fields.name) == 0 )
-    sub_1C32E7C(this);
-  return System_String__Equals_63553848((System_String_o *)this, asset->fields.name, 0);
+    sub_1C372B4(this);
+  return System_String__Equals_63596960((System_String_o *)this, asset->fields.name, 0);
 }
 
 
@@ -3955,6 +3955,6 @@ bool UIStandFigureR___c__DisplayClass96_0___PlayAnimationProc_b__0(
   v4 = v3->fields.__4__this;
   if ( !v4 || (this = (UIStandFigureR___c__DisplayClass96_0_o *)v4->fields.animationComponent) == 0 )
 LABEL_10:
-    sub_1C32E7C(this);
+    sub_1C372B4(this);
   return !UnityEngine_Animation__get_isPlaying((UnityEngine_Animation_o *)this, 0);
 }

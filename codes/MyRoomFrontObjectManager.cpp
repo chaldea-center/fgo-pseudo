@@ -3,10 +3,10 @@ void MyRoomFrontObjectManager___ctor(MyRoomFrontObjectManager_o *this, const Met
   ManagerConfig_c *v3; // x0
   int HEIGHT; // s0
 
-  if ( (byte_4C32962 & 1) == 0 )
+  if ( (byte_4C3DF4C & 1) == 0 )
   {
-    sub_1C32C20(&ManagerConfig_TypeInfo);
-    byte_4C32962 = 1;
+    sub_1C37058(&ManagerConfig_TypeInfo);
+    byte_4C3DF4C = 1;
   }
   v3 = ManagerConfig_TypeInfo;
   if ( !ManagerConfig_TypeInfo->_2.cctor_finished )
@@ -30,10 +30,10 @@ void MyRoomFrontObjectManager__FrameIn(MyRoomFrontObjectManager_o *this, const M
   const MethodInfo *v5; // x1
   int v6; // s0 OVERLAPPED
 
-  if ( (byte_4C3295E & 1) == 0 )
+  if ( (byte_4C3DF48 & 1) == 0 )
   {
-    sub_1C32C20(&UnityEngine_Object_TypeInfo);
-    byte_4C3295E = 1;
+    sub_1C37058(&UnityEngine_Object_TypeInfo);
+    byte_4C3DF48 = 1;
   }
   dispObject = (UnityEngine_Object_o *)this->fields.dispObject;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -42,7 +42,7 @@ void MyRoomFrontObjectManager__FrameIn(MyRoomFrontObjectManager_o *this, const M
   if ( v4 )
   {
     if ( !this->fields.dispObject )
-      sub_1C32E7C(v4);
+      sub_1C372B4(v4);
     MyRoomFrontObjectManager__MoveDispObject(this, *(UnityEngine_Vector3_o *)&v6, this->fields.BasePosition, v5);
   }
 }
@@ -62,10 +62,10 @@ void MyRoomFrontObjectManager__FrameOut(MyRoomFrontObjectManager_o *this, const 
   float v11; // s5
   int v12; // s4
 
-  if ( (byte_4C3295D & 1) == 0 )
+  if ( (byte_4C3DF47 & 1) == 0 )
   {
-    sub_1C32C20(&UnityEngine_Object_TypeInfo);
-    byte_4C3295D = 1;
+    sub_1C37058(&UnityEngine_Object_TypeInfo);
+    byte_4C3DF47 = 1;
   }
   dispObject = (UnityEngine_Object_o *)this->fields.dispObject;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -75,7 +75,7 @@ void MyRoomFrontObjectManager__FrameOut(MyRoomFrontObjectManager_o *this, const 
   {
     v6 = this->fields.dispObject;
     if ( !v6 )
-      sub_1C32E7C(v4);
+      sub_1C372B4(v4);
     v7.n64_u64[0] = *(unsigned __int64 *)&this->fields.BasePosition.fields.x;
     v8.n64_u64[0] = *(unsigned __int64 *)&v6->fields.frameOutMoveValue.fields.x;
     z = this->fields.BasePosition.fields.z;
@@ -100,10 +100,10 @@ bool MyRoomFrontObjectManager__IsDefferentObjectAlreadyDisplayed(
   _BOOL8 v6; // x0
   struct MyRoomFrontObject_o *v7; // x8
 
-  if ( (byte_4C32961 & 1) == 0 )
+  if ( (byte_4C3DF4B & 1) == 0 )
   {
-    sub_1C32C20(&UnityEngine_Object_TypeInfo);
-    byte_4C32961 = 1;
+    sub_1C37058(&UnityEngine_Object_TypeInfo);
+    byte_4C3DF4B = 1;
   }
   dispObject = (UnityEngine_Object_o *)this->fields.dispObject;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -113,7 +113,7 @@ bool MyRoomFrontObjectManager__IsDefferentObjectAlreadyDisplayed(
     return 0;
   v7 = this->fields.dispObject;
   if ( !v7 )
-    sub_1C32E7C(v6);
+    sub_1C372B4(v6);
   return v7->fields._Id_k__BackingField != id;
 }
 
@@ -127,10 +127,10 @@ bool MyRoomFrontObjectManager__IsSameObjectAlreadyDisplayed(
   _BOOL8 v6; // x0
   struct MyRoomFrontObject_o *v7; // x8
 
-  if ( (byte_4C32960 & 1) == 0 )
+  if ( (byte_4C3DF4A & 1) == 0 )
   {
-    sub_1C32C20(&UnityEngine_Object_TypeInfo);
-    byte_4C32960 = 1;
+    sub_1C37058(&UnityEngine_Object_TypeInfo);
+    byte_4C3DF4A = 1;
   }
   dispObject = (UnityEngine_Object_o *)this->fields.dispObject;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -140,7 +140,7 @@ bool MyRoomFrontObjectManager__IsSameObjectAlreadyDisplayed(
     return 0;
   v7 = this->fields.dispObject;
   if ( !v7 )
-    sub_1C32E7C(v6);
+    sub_1C372B4(v6);
   return v7->fields._Id_k__BackingField == id;
 }
 
@@ -165,10 +165,10 @@ void MyRoomFrontObjectManager__MoveDispObject(
   z = to.fields.z;
   y = to.fields.y;
   x = to.fields.x;
-  if ( (byte_4C3295F & 1) == 0 )
+  if ( (byte_4C3DF49 & 1) == 0 )
   {
-    sub_1C32C20(&UnityEngine_Object_TypeInfo);
-    byte_4C3295F = 1;
+    sub_1C37058(&UnityEngine_Object_TypeInfo);
+    byte_4C3DF49 = 1;
   }
   dispObject = (UnityEngine_Object_o *)this->fields.dispObject;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -196,7 +196,7 @@ void MyRoomFrontObjectManager__MoveDispObject(
         return;
       }
 LABEL_11:
-      sub_1C32E7C(v9);
+      sub_1C372B4(v9);
     }
   }
 }
@@ -219,13 +219,13 @@ void MyRoomFrontObjectManager__ReleaseAll(MyRoomFrontObjectManager_o *this, cons
   UnityEngine_Object_o *gameObject; // x21
   int klass; // [xsp+Ch] [xbp-24h] BYREF
 
-  if ( (byte_4C3295C & 1) == 0 )
+  if ( (byte_4C3DF46 & 1) == 0 )
   {
-    sub_1C32C20(&AssetManager_TypeInfo);
-    sub_1C32C20(&int_TypeInfo);
-    sub_1C32C20(&UnityEngine_Object_TypeInfo);
-    sub_1C32C20(&StringLiteral_9217/*"MyRoom/FrontObject/{0}"*/);
-    byte_4C3295C = 1;
+    sub_1C37058(&AssetManager_TypeInfo);
+    sub_1C37058(&int_TypeInfo);
+    sub_1C37058(&UnityEngine_Object_TypeInfo);
+    sub_1C37058(&StringLiteral_9218/*"MyRoom/FrontObject/{0}"*/);
+    byte_4C3DF46 = 1;
   }
   dispObject = this->fields.dispObject;
   p_dispObject = (UnityEngine_Component_o **)&this->fields.dispObject;
@@ -238,18 +238,18 @@ void MyRoomFrontObjectManager__ReleaseAll(MyRoomFrontObjectManager_o *this, cons
     if ( !*p_dispObject
       || (klass = (int)(*p_dispObject)[2].klass,
           v13 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &klass, v7, v8, v9, v10, v11, v12),
-          v6 = System_String__Format((System_String_o *)StringLiteral_9217/*"MyRoom/FrontObject/{0}"*/, v13, 0),
+          v6 = System_String__Format((System_String_o *)StringLiteral_9218/*"MyRoom/FrontObject/{0}"*/, v13, 0),
           !*p_dispObject) )
     {
-      sub_1C32E7C(v6);
+      sub_1C372B4(v6);
     }
     v14 = v6;
     gameObject = (UnityEngine_Object_o *)UnityEngine_Component__get_gameObject(*p_dispObject, 0);
     if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-    UnityEngine_Object__DestroyImmediate_71223828(gameObject, 0);
+    UnityEngine_Object__DestroyImmediate_71266940(gameObject, 0);
     *p_dispObject = 0;
-    sub_1C32BC4(p_dispObject, 0);
+    sub_1C36FFC(p_dispObject, 0);
     if ( !AssetManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(AssetManager_TypeInfo);
     AssetManager__releaseAssetStorage(v14, 0);
@@ -275,22 +275,22 @@ void MyRoomFrontObjectManager__Setup(MyRoomFrontObjectManager_o *this, int32_t i
   AssetLoader_LoadEndDataHandler_o *v18; // x21
   int v19; // [xsp+Ch] [xbp-24h] BYREF
 
-  if ( (byte_4C3295B & 1) == 0 )
+  if ( (byte_4C3DF45 & 1) == 0 )
   {
-    sub_1C32C20(&AssetManager_TypeInfo);
-    sub_1C32C20(&int_TypeInfo);
-    sub_1C32C20(&AssetLoader_LoadEndDataHandler_TypeInfo);
-    sub_1C32C20(&Method_MyRoomFrontObjectManager___c__DisplayClass6_0__Setup_b__0__);
-    sub_1C32C20(&MyRoomFrontObjectManager___c__DisplayClass6_0_TypeInfo);
-    sub_1C32C20(&StringLiteral_9217/*"MyRoom/FrontObject/{0}"*/);
-    byte_4C3295B = 1;
+    sub_1C37058(&AssetManager_TypeInfo);
+    sub_1C37058(&int_TypeInfo);
+    sub_1C37058(&AssetLoader_LoadEndDataHandler_TypeInfo);
+    sub_1C37058(&Method_MyRoomFrontObjectManager___c__DisplayClass6_0__Setup_b__0__);
+    sub_1C37058(&MyRoomFrontObjectManager___c__DisplayClass6_0_TypeInfo);
+    sub_1C37058(&StringLiteral_9218/*"MyRoom/FrontObject/{0}"*/);
+    byte_4C3DF45 = 1;
   }
-  v5 = sub_1C32E6C(MyRoomFrontObjectManager___c__DisplayClass6_0_TypeInfo);
+  v5 = sub_1C372A4(MyRoomFrontObjectManager___c__DisplayClass6_0_TypeInfo);
   System_Object___ctor((Il2CppObject *)v5, 0);
   if ( !v5 )
-    sub_1C32E7C(v6);
+    sub_1C372B4(v6);
   *(_QWORD *)(v5 + 16) = this;
-  sub_1C32BC4(v5 + 16, this);
+  sub_1C36FFC(v5 + 16, this);
   *(_DWORD *)(v5 + 24) = id;
   if ( !MyRoomFrontObjectManager__IsSameObjectAlreadyDisplayed(this, id, v7) )
   {
@@ -298,8 +298,8 @@ void MyRoomFrontObjectManager__Setup(MyRoomFrontObjectManager_o *this, int32_t i
       MyRoomFrontObjectManager__ReleaseAll(this, v9);
     v19 = *(_DWORD *)(v5 + 24);
     v16 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v19, v10, v11, v12, v13, v14, v15);
-    v17 = System_String__Format((System_String_o *)StringLiteral_9217/*"MyRoom/FrontObject/{0}"*/, v16, 0);
-    v18 = (AssetLoader_LoadEndDataHandler_o *)sub_1C32E6C(AssetLoader_LoadEndDataHandler_TypeInfo);
+    v17 = System_String__Format((System_String_o *)StringLiteral_9218/*"MyRoom/FrontObject/{0}"*/, v16, 0);
+    v18 = (AssetLoader_LoadEndDataHandler_o *)sub_1C372A4(AssetLoader_LoadEndDataHandler_TypeInfo);
     AssetLoader_LoadEndDataHandler___ctor(
       v18,
       (Il2CppObject *)v5,
@@ -318,10 +318,10 @@ int32_t MyRoomFrontObjectManager__get_currentDispId(MyRoomFrontObjectManager_o *
   _BOOL8 v4; // x0
   struct MyRoomFrontObject_o *v5; // x8
 
-  if ( (byte_4C3295A & 1) == 0 )
+  if ( (byte_4C3DF44 & 1) == 0 )
   {
-    sub_1C32C20(&UnityEngine_Object_TypeInfo);
-    byte_4C3295A = 1;
+    sub_1C37058(&UnityEngine_Object_TypeInfo);
+    byte_4C3DF44 = 1;
   }
   dispObject = (UnityEngine_Object_o *)this->fields.dispObject;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -331,7 +331,7 @@ int32_t MyRoomFrontObjectManager__get_currentDispId(MyRoomFrontObjectManager_o *
     return -1;
   v5 = this->fields.dispObject;
   if ( !v5 )
-    sub_1C32E7C(v4);
+    sub_1C372B4(v4);
   return v5->fields._Id_k__BackingField;
 }
 
@@ -349,7 +349,7 @@ void MyRoomFrontObjectManager___c__DisplayClass6_0___Setup_b__0(
         AssetData_o *assetData,
         const MethodInfo *method)
 {
-  Il2CppObject *Object_object__51111776; // x20
+  Il2CppObject *Object_object__51154888; // x20
   UnityEngine_Component_o *_4__this; // x0
   UnityEngine_Transform_o *transform; // x21
   struct MyRoomFrontObjectManager_o *v8; // x20
@@ -357,24 +357,24 @@ void MyRoomFrontObjectManager___c__DisplayClass6_0___Setup_b__0(
   const MethodInfo *v10; // x2
   struct MyRoomFrontObjectManager_o *v11; // x8
 
-  if ( (byte_4C32963 & 1) == 0 )
+  if ( (byte_4C3DF4D & 1) == 0 )
   {
-    sub_1C32C20(&Method_AssetData_GetObject_GameObject____78059392);
-    sub_1C32C20(&Method_UnityEngine_GameObject_GetComponent_MyRoomFrontObject___);
-    sub_1C32C20(&Method_UnityEngine_Object_Instantiate_GameObject____78147088);
-    sub_1C32C20(&UnityEngine_Object_TypeInfo);
-    sub_1C32C20(&StringLiteral_9225/*"MyRoomFrontObj"*/);
-    byte_4C32963 = 1;
+    sub_1C37058(&Method_AssetData_GetObject_GameObject____78105168);
+    sub_1C37058(&Method_UnityEngine_GameObject_GetComponent_MyRoomFrontObject___);
+    sub_1C37058(&Method_UnityEngine_Object_Instantiate_GameObject____78192880);
+    sub_1C37058(&UnityEngine_Object_TypeInfo);
+    sub_1C37058(&StringLiteral_9226/*"MyRoomFrontObj"*/);
+    byte_4C3DF4D = 1;
   }
   if ( assetData )
   {
-    Object_object__51111776 = AssetData__GetObject_object__51111776(
+    Object_object__51154888 = AssetData__GetObject_object__51154888(
                                 assetData,
-                                (System_String_o *)StringLiteral_9225/*"MyRoomFrontObj"*/,
-                                (const MethodInfo_30BE760 *)Method_AssetData_GetObject_GameObject____78059392);
+                                (System_String_o *)StringLiteral_9226/*"MyRoomFrontObj"*/,
+                                (const MethodInfo_30C8FC8 *)Method_AssetData_GetObject_GameObject____78105168);
     if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-    if ( UnityEngine_Object__op_Inequality((UnityEngine_Object_o *)Object_object__51111776, 0, 0) )
+    if ( UnityEngine_Object__op_Inequality((UnityEngine_Object_o *)Object_object__51154888, 0, 0) )
     {
       _4__this = (UnityEngine_Component_o *)this->fields.__4__this;
       if ( !_4__this )
@@ -382,20 +382,20 @@ void MyRoomFrontObjectManager___c__DisplayClass6_0___Setup_b__0(
       transform = UnityEngine_Component__get_transform(_4__this, 0);
       if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-      _4__this = (UnityEngine_Component_o *)UnityEngine_Object__Instantiate_object__51812484(
-                                              Object_object__51111776,
+      _4__this = (UnityEngine_Component_o *)UnityEngine_Object__Instantiate_object__51855596(
+                                              Object_object__51154888,
                                               transform,
-                                              (const MethodInfo_3169884 *)Method_UnityEngine_Object_Instantiate_GameObject____78147088);
+                                              (const MethodInfo_31740EC *)Method_UnityEngine_Object_Instantiate_GameObject____78192880);
       if ( !_4__this )
         goto LABEL_18;
       v8 = this->fields.__4__this;
       _4__this = (UnityEngine_Component_o *)UnityEngine_GameObject__GetComponent_object_(
                                               (UnityEngine_GameObject_o *)_4__this,
-                                              (const MethodInfo_3134970 *)Method_UnityEngine_GameObject_GetComponent_MyRoomFrontObject___);
+                                              (const MethodInfo_313F1D8 *)Method_UnityEngine_GameObject_GetComponent_MyRoomFrontObject___);
       if ( !v8 )
         goto LABEL_18;
       v8->fields.dispObject = (struct MyRoomFrontObject_o *)_4__this;
-      _4__this = (UnityEngine_Component_o *)sub_1C32BC4(&v8->fields.dispObject, _4__this);
+      _4__this = (UnityEngine_Component_o *)sub_1C36FFC(&v8->fields.dispObject, _4__this);
       v9 = this->fields.__4__this;
       if ( !v9 )
         goto LABEL_18;
@@ -416,7 +416,7 @@ void MyRoomFrontObjectManager___c__DisplayClass6_0___Setup_b__0(
           }
         }
 LABEL_18:
-        sub_1C32E7C(_4__this);
+        sub_1C372B4(_4__this);
       }
     }
   }

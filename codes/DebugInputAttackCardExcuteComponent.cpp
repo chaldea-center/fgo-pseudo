@@ -18,33 +18,33 @@ void DebugInputAttackCardExcuteComponent___cctor(const MethodInfo *method)
   int32_t v16; // w2
   const MethodInfo *v17; // x3
 
-  if ( (byte_4C38F7F & 1) == 0 )
+  if ( (byte_4C44578 & 1) == 0 )
   {
-    sub_1C32C20(&bool___TypeInfo);
-    sub_1C32C20(&DebugInputAttackCardExcuteComponent_TypeInfo);
-    sub_1C32C20(&int___TypeInfo);
-    sub_1C32C20(&BattleCommand_TYPE___TypeInfo);
-    sub_1C32C20(&Field__PrivateImplementationDetails__45B8AAA32A382159A53DF88A29858D4A57855F2295AB57F8CF442BB9CB7CBD9D);
-    byte_4C38F7F = 1;
+    sub_1C37058(&bool___TypeInfo);
+    sub_1C37058(&DebugInputAttackCardExcuteComponent_TypeInfo);
+    sub_1C37058(&int___TypeInfo);
+    sub_1C37058(&BattleCommand_TYPE___TypeInfo);
+    sub_1C37058(&Field__PrivateImplementationDetails__45B8AAA32A382159A53DF88A29858D4A57855F2295AB57F8CF442BB9CB7CBD9D);
+    byte_4C44578 = 1;
   }
-  v1 = (struct System_Int32_array *)sub_1C32CC8(int___TypeInfo, 3);
+  v1 = (struct System_Int32_array *)sub_1C37100(int___TypeInfo, 3);
   DebugInputAttackCardExcuteComponent_TypeInfo->static_fields->SelectedServantIdxList = v1;
-  sub_1C32BC4((CGThumbnailListItem_o *)DebugInputAttackCardExcuteComponent_TypeInfo->static_fields, (int32_t)v1, v2, v3);
-  v4 = sub_1C32CC8(BattleCommand_TYPE___TypeInfo, 3);
+  sub_1C36FFC((CGThumbnailListItem_o *)DebugInputAttackCardExcuteComponent_TypeInfo->static_fields, (int32_t)v1, v2, v3);
+  v4 = sub_1C37100(BattleCommand_TYPE___TypeInfo, 3);
   static_fields = DebugInputAttackCardExcuteComponent_TypeInfo->static_fields;
   static_fields->CommandTypeList = (struct BattleCommand_TYPE_array *)v4;
-  sub_1C32BC4((CGThumbnailListItem_o *)&static_fields->CommandTypeList, v4, v6, v7);
-  v8 = sub_1C32CC8(bool___TypeInfo, 3);
+  sub_1C36FFC((CGThumbnailListItem_o *)&static_fields->CommandTypeList, v4, v6, v7);
+  v8 = sub_1C37100(bool___TypeInfo, 3);
   v9 = DebugInputAttackCardExcuteComponent_TypeInfo->static_fields;
   v9->CommandTypeTreasure = (struct System_Boolean_array *)v8;
-  sub_1C32BC4((CGThumbnailListItem_o *)&v9->CommandTypeTreasure, v8, v10, v11);
-  v12 = (System_Array_o *)sub_1C32CC8(int___TypeInfo, 3);
+  sub_1C36FFC((CGThumbnailListItem_o *)&v9->CommandTypeTreasure, v8, v10, v11);
+  v12 = (System_Array_o *)sub_1C37100(int___TypeInfo, 3);
   v13.fields.value = Field__PrivateImplementationDetails__45B8AAA32A382159A53DF88A29858D4A57855F2295AB57F8CF442BB9CB7CBD9D;
   v14 = v12;
-  System_Runtime_CompilerServices_RuntimeHelpers__InitializeArray_64219320(v12, v13, 0);
+  System_Runtime_CompilerServices_RuntimeHelpers__InitializeArray_64262432(v12, v13, 0);
   v15 = DebugInputAttackCardExcuteComponent_TypeInfo->static_fields;
   v15->TreasureNpList = (struct System_Int32_array *)v14;
-  sub_1C32BC4((CGThumbnailListItem_o *)&v15->TreasureNpList, (int32_t)v14, v16, v17);
+  sub_1C36FFC((CGThumbnailListItem_o *)&v15->TreasureNpList, (int32_t)v14, v16, v17);
 }
 
 
@@ -66,7 +66,7 @@ void DebugInputAttackCardExcuteComponent__Cancel(DebugInputAttackCardExcuteCompo
                                                       (UnityEngine_Component_o *)this,
                                                       0)) == 0) )
   {
-    sub_1C32E7C(debugMenuTran);
+    sub_1C372B4(debugMenuTran);
   }
   UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)debugMenuTran, 0, 0);
 }
@@ -76,12 +76,12 @@ System_String_o *DebugInputAttackCardExcuteComponent__GetDefaultCardTypeText(
         DebugInputAttackCardExcuteComponent_o *this,
         const MethodInfo *method)
 {
-  if ( (byte_4C38F76 & 1) == 0 )
+  if ( (byte_4C4456F & 1) == 0 )
   {
-    sub_1C32C20(&StringLiteral_25398/*"カードタイプ指定なし"*/);
-    byte_4C38F76 = 1;
+    sub_1C37058(&StringLiteral_25403/*"カードタイプ指定なし"*/);
+    byte_4C4456F = 1;
   }
-  return (System_String_o *)StringLiteral_25398/*"カードタイプ指定なし"*/;
+  return (System_String_o *)StringLiteral_25403/*"カードタイプ指定なし"*/;
 }
 
 
@@ -89,12 +89,12 @@ System_String_o *DebugInputAttackCardExcuteComponent__GetDefaultServantText(
         DebugInputAttackCardExcuteComponent_o *this,
         const MethodInfo *method)
 {
-  if ( (byte_4C38F75 & 1) == 0 )
+  if ( (byte_4C4456E & 1) == 0 )
   {
-    sub_1C32C20(&StringLiteral_25409/*"サーヴァント指定なし"*/);
-    byte_4C38F75 = 1;
+    sub_1C37058(&StringLiteral_25414/*"サーヴァント指定なし"*/);
+    byte_4C4456E = 1;
   }
-  return (System_String_o *)StringLiteral_25409/*"サーヴァント指定なし"*/;
+  return (System_String_o *)StringLiteral_25414/*"サーヴァント指定なし"*/;
 }
 
 
@@ -117,11 +117,11 @@ void DebugInputAttackCardExcuteComponent__NpLeft(
   int32_t result; // [xsp+Ch] [xbp-44h] BYREF
 
   v4 = this;
-  if ( (byte_4C38F7E & 1) == 0 )
+  if ( (byte_4C44577 & 1) == 0 )
   {
-    sub_1C32C20(&DebugInputAttackCardExcuteComponent_TypeInfo);
-    this = (DebugInputAttackCardExcuteComponent_o *)sub_1C32C20(&System_Math_TypeInfo);
-    byte_4C38F7E = 1;
+    sub_1C37058(&DebugInputAttackCardExcuteComponent_TypeInfo);
+    this = (DebugInputAttackCardExcuteComponent_o *)sub_1C37058(&System_Math_TypeInfo);
+    byte_4C44577 = 1;
   }
   result = 0;
   if ( !cardLabelName )
@@ -152,7 +152,7 @@ void DebugInputAttackCardExcuteComponent__NpLeft(
       *v9 = v10 - 100;
       if ( !System_Math_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(System_Math_TypeInfo);
-      this = (DebugInputAttackCardExcuteComponent_o *)System_Math__Max_65041976(v11, 100, 0);
+      this = (DebugInputAttackCardExcuteComponent_o *)System_Math__Max_65085088(v11, 100, 0);
       if ( v7 >= LODWORD(m_CancellationTokenSource->fields._registeredCallbacksLists) )
         goto LABEL_22;
       *v9 = (_DWORD)this;
@@ -166,7 +166,7 @@ void DebugInputAttackCardExcuteComponent__NpLeft(
         goto LABEL_21;
       if ( v7 >= LODWORD(TreasureNpList->max_length) )
 LABEL_22:
-        sub_1C32E84(this);
+        sub_1C372BC(this);
       v14 = treasureNpLabelList->m_Items[v7];
       this = (DebugInputAttackCardExcuteComponent_o *)System_Int32__ToString(
                                                         (unsigned int)TreasureNpList + 4 * v7 + 32,
@@ -178,7 +178,7 @@ LABEL_22:
       }
     }
 LABEL_21:
-    sub_1C32E7C(this);
+    sub_1C372B4(this);
   }
 }
 
@@ -202,11 +202,11 @@ void DebugInputAttackCardExcuteComponent__NpRight(
   int32_t result; // [xsp+Ch] [xbp-44h] BYREF
 
   v4 = this;
-  if ( (byte_4C38F7D & 1) == 0 )
+  if ( (byte_4C44576 & 1) == 0 )
   {
-    sub_1C32C20(&DebugInputAttackCardExcuteComponent_TypeInfo);
-    this = (DebugInputAttackCardExcuteComponent_o *)sub_1C32C20(&System_Math_TypeInfo);
-    byte_4C38F7D = 1;
+    sub_1C37058(&DebugInputAttackCardExcuteComponent_TypeInfo);
+    this = (DebugInputAttackCardExcuteComponent_o *)sub_1C37058(&System_Math_TypeInfo);
+    byte_4C44576 = 1;
   }
   result = 0;
   if ( !cardLabelName )
@@ -237,7 +237,7 @@ void DebugInputAttackCardExcuteComponent__NpRight(
       *v9 = v10 + 100;
       if ( !System_Math_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(System_Math_TypeInfo);
-      this = (DebugInputAttackCardExcuteComponent_o *)System_Math__Min_65042304(v11, 1000, 0);
+      this = (DebugInputAttackCardExcuteComponent_o *)System_Math__Min_65085416(v11, 1000, 0);
       if ( v7 >= LODWORD(m_CancellationTokenSource->fields._registeredCallbacksLists) )
         goto LABEL_22;
       *v9 = (_DWORD)this;
@@ -251,7 +251,7 @@ void DebugInputAttackCardExcuteComponent__NpRight(
         goto LABEL_21;
       if ( v7 >= LODWORD(TreasureNpList->max_length) )
 LABEL_22:
-        sub_1C32E84(this);
+        sub_1C372BC(this);
       v14 = treasureNpLabelList->m_Items[v7];
       this = (DebugInputAttackCardExcuteComponent_o *)System_Int32__ToString(
                                                         (unsigned int)TreasureNpList + 4 * v7 + 32,
@@ -263,7 +263,7 @@ LABEL_22:
       }
     }
 LABEL_21:
-    sub_1C32E7C(this);
+    sub_1C372B4(this);
   }
 }
 
@@ -274,8 +274,8 @@ void DebugInputAttackCardExcuteComponent__OnEnable(
 {
   __int64 v3; // x25
   int v4; // w29
-  __int64 CommandTypeName; // x0
-  struct System_Int32_array *SelectedServantIdxList; // x8
+  UILabel_o *CommandTypeName; // x0
+  struct System_Int32_array *klass; // x8
   System_String_o *v7; // x0
   struct UILabel_array *servantIdxList; // x8
   System_String_o *v9; // x1
@@ -283,59 +283,59 @@ void DebugInputAttackCardExcuteComponent__OnEnable(
   UILabel_o *v11; // x22
   struct UILabel_array *attackCardTypeNameList; // x8
   UILabel_o *v13; // x22
-  __int64 v14; // x9
-  __int64 v15; // x8
-  __int64 v16; // x9
+  struct UIWidget_OnDimensionsChanged_o *onChange; // x9
+  _DWORD *monitor; // x8
+  intptr_t method_ptr; // x9
   int32_t v17; // w23
   __int64 *v18; // x8
   System_String_o *v19; // x24
   struct UILabel_array *treasureNpLabelList; // x8
   UILabel_o *v21; // x22
-  __int64 v22; // x8
+  intptr_t invoke_impl; // x8
 
-  if ( (byte_4C38F77 & 1) == 0 )
+  if ( (byte_4C44570 & 1) == 0 )
   {
-    sub_1C32C20(&BattleCommand_TypeInfo);
-    sub_1C32C20(&DebugInputAttackCardExcuteComponent_TypeInfo);
-    sub_1C32C20(&StringLiteral_25465/*"宝具"*/);
-    sub_1C32C20(&StringLiteral_25495/*"番目"*/);
-    byte_4C38F77 = 1;
+    sub_1C37058(&BattleCommand_TypeInfo);
+    sub_1C37058(&DebugInputAttackCardExcuteComponent_TypeInfo);
+    sub_1C37058(&StringLiteral_25470/*"宝具"*/);
+    sub_1C37058(&StringLiteral_25500/*"番目"*/);
+    byte_4C44570 = 1;
   }
   v3 = 0;
   v4 = 32;
   do
   {
-    CommandTypeName = (__int64)DebugInputAttackCardExcuteComponent_TypeInfo;
+    CommandTypeName = (UILabel_o *)DebugInputAttackCardExcuteComponent_TypeInfo;
     if ( !DebugInputAttackCardExcuteComponent_TypeInfo->_2.cctor_finished )
     {
       j_il2cpp_runtime_class_init_0(DebugInputAttackCardExcuteComponent_TypeInfo);
-      CommandTypeName = (__int64)DebugInputAttackCardExcuteComponent_TypeInfo;
+      CommandTypeName = (UILabel_o *)DebugInputAttackCardExcuteComponent_TypeInfo;
     }
-    SelectedServantIdxList = **(struct System_Int32_array ***)(CommandTypeName + 184);
-    if ( !SelectedServantIdxList )
+    klass = (struct System_Int32_array *)CommandTypeName->fields.onChange->klass;
+    if ( !klass )
       goto LABEL_45;
-    if ( (unsigned int)v3 >= LODWORD(SelectedServantIdxList->max_length) )
+    if ( (unsigned int)v3 >= LODWORD(klass->max_length) )
       goto LABEL_46;
-    if ( SelectedServantIdxList->m_Items[v3] )
+    if ( klass->m_Items[v3] )
     {
-      if ( !*(_DWORD *)(CommandTypeName + 224) )
+      if ( !LODWORD(CommandTypeName->fields.hitCheck) )
       {
         j_il2cpp_runtime_class_init_0(CommandTypeName);
-        SelectedServantIdxList = DebugInputAttackCardExcuteComponent_TypeInfo->static_fields->SelectedServantIdxList;
-        if ( !SelectedServantIdxList )
+        klass = DebugInputAttackCardExcuteComponent_TypeInfo->static_fields->SelectedServantIdxList;
+        if ( !klass )
           goto LABEL_45;
       }
-      if ( (unsigned int)v3 >= LODWORD(SelectedServantIdxList->max_length) )
+      if ( (unsigned int)v3 >= LODWORD(klass->max_length) )
         goto LABEL_46;
-      v7 = System_Int32__ToString((int)SelectedServantIdxList + v4, 0);
-      CommandTypeName = (__int64)System_String__Concat_63518544(v7, (System_String_o *)StringLiteral_25495/*"番目"*/, 0);
+      v7 = System_Int32__ToString((int)klass + v4, 0);
+      CommandTypeName = (UILabel_o *)System_String__Concat_63561656(v7, (System_String_o *)StringLiteral_25500/*"番目"*/, 0);
       servantIdxList = this->fields.servantIdxList;
       if ( !servantIdxList )
         goto LABEL_45;
       if ( (unsigned int)v3 >= LODWORD(servantIdxList->max_length) )
         goto LABEL_46;
       v9 = (System_String_o *)CommandTypeName;
-      CommandTypeName = (__int64)servantIdxList->m_Items[v3];
+      CommandTypeName = servantIdxList->m_Items[v3];
       if ( !CommandTypeName )
         goto LABEL_45;
     }
@@ -347,57 +347,57 @@ void DebugInputAttackCardExcuteComponent__OnEnable(
       if ( (unsigned int)v3 >= LODWORD(v10->max_length) )
         goto LABEL_46;
       v11 = v10->m_Items[v3];
-      if ( (byte_4C38F75 & 1) == 0 )
+      if ( (byte_4C4456E & 1) == 0 )
       {
-        CommandTypeName = sub_1C32C20(&StringLiteral_25409/*"サーヴァント指定なし"*/);
-        byte_4C38F75 = 1;
+        CommandTypeName = (UILabel_o *)sub_1C37058(&StringLiteral_25414/*"サーヴァント指定なし"*/);
+        byte_4C4456E = 1;
       }
       if ( !v11 )
         goto LABEL_45;
-      CommandTypeName = (__int64)v11;
-      v9 = (System_String_o *)StringLiteral_25409/*"サーヴァント指定なし"*/;
+      CommandTypeName = v11;
+      v9 = (System_String_o *)StringLiteral_25414/*"サーヴァント指定なし"*/;
     }
-    UILabel__set_text((UILabel_o *)CommandTypeName, v9, 0);
+    UILabel__set_text(CommandTypeName, v9, 0);
     attackCardTypeNameList = this->fields.attackCardTypeNameList;
     if ( !attackCardTypeNameList )
       goto LABEL_45;
     if ( (unsigned int)v3 >= LODWORD(attackCardTypeNameList->max_length) )
 LABEL_46:
-      sub_1C32E84(CommandTypeName);
-    CommandTypeName = (__int64)DebugInputAttackCardExcuteComponent_TypeInfo;
+      sub_1C372BC(CommandTypeName);
+    CommandTypeName = (UILabel_o *)DebugInputAttackCardExcuteComponent_TypeInfo;
     v13 = attackCardTypeNameList->m_Items[v3];
     if ( !DebugInputAttackCardExcuteComponent_TypeInfo->_2.cctor_finished )
     {
       j_il2cpp_runtime_class_init_0(DebugInputAttackCardExcuteComponent_TypeInfo);
-      CommandTypeName = (__int64)DebugInputAttackCardExcuteComponent_TypeInfo;
+      CommandTypeName = (UILabel_o *)DebugInputAttackCardExcuteComponent_TypeInfo;
     }
-    v14 = *(_QWORD *)(CommandTypeName + 184);
-    v15 = *(_QWORD *)(v14 + 8);
-    if ( !v15 )
+    onChange = CommandTypeName->fields.onChange;
+    monitor = onChange->monitor;
+    if ( !monitor )
       goto LABEL_45;
-    if ( (unsigned int)v3 >= *(_DWORD *)(v15 + 24) )
+    if ( (unsigned int)v3 >= monitor[6] )
       goto LABEL_46;
-    v16 = *(_QWORD *)(v14 + 16);
-    if ( !v16 )
+    method_ptr = onChange->fields.method_ptr;
+    if ( !method_ptr )
       goto LABEL_45;
-    if ( (unsigned int)v3 >= *(_DWORD *)(v16 + 24) )
+    if ( (unsigned int)v3 >= *(_DWORD *)(method_ptr + 24) )
       goto LABEL_46;
-    v17 = *(_DWORD *)(v15 + 4 * v3 + 32);
-    v18 = &StringLiteral_25465/*"宝具"*/;
-    if ( !*(_BYTE *)(v16 + v3 + 32) )
+    v17 = monitor[v3 + 8];
+    v18 = &StringLiteral_25470/*"宝具"*/;
+    if ( !*(_BYTE *)(method_ptr + v3 + 32) )
     {
-      v18 = &StringLiteral_25398/*"カードタイプ指定なし"*/;
-      if ( (byte_4C38F76 & 1) == 0 )
+      v18 = &StringLiteral_25403/*"カードタイプ指定なし"*/;
+      if ( (byte_4C4456F & 1) == 0 )
       {
-        sub_1C32C20(&StringLiteral_25398/*"カードタイプ指定なし"*/);
-        byte_4C38F76 = 1;
-        v18 = &StringLiteral_25398/*"カードタイプ指定なし"*/;
+        sub_1C37058(&StringLiteral_25403/*"カードタイプ指定なし"*/);
+        byte_4C4456F = 1;
+        v18 = &StringLiteral_25403/*"カードタイプ指定なし"*/;
       }
     }
     v19 = (System_String_o *)*v18;
     if ( !BattleCommand_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(BattleCommand_TypeInfo);
-    CommandTypeName = (__int64)BattleCommand__GetCommandTypeName(v17, v19, 0);
+    CommandTypeName = (UILabel_o *)BattleCommand__GetCommandTypeName(v17, v19, 0);
     if ( !v13 )
       goto LABEL_45;
     UILabel__set_text(v13, (System_String_o *)CommandTypeName, 0);
@@ -406,22 +406,22 @@ LABEL_46:
       goto LABEL_45;
     if ( (unsigned int)v3 >= LODWORD(treasureNpLabelList->max_length) )
       goto LABEL_46;
-    CommandTypeName = (__int64)DebugInputAttackCardExcuteComponent_TypeInfo;
+    CommandTypeName = (UILabel_o *)DebugInputAttackCardExcuteComponent_TypeInfo;
     v21 = treasureNpLabelList->m_Items[v3];
     if ( !DebugInputAttackCardExcuteComponent_TypeInfo->_2.cctor_finished )
     {
       j_il2cpp_runtime_class_init_0(DebugInputAttackCardExcuteComponent_TypeInfo);
-      CommandTypeName = (__int64)DebugInputAttackCardExcuteComponent_TypeInfo;
+      CommandTypeName = (UILabel_o *)DebugInputAttackCardExcuteComponent_TypeInfo;
     }
-    v22 = *(_QWORD *)(*(_QWORD *)(CommandTypeName + 184) + 24LL);
-    if ( !v22 )
+    invoke_impl = CommandTypeName->fields.onChange->fields.invoke_impl;
+    if ( !invoke_impl )
       goto LABEL_45;
-    if ( (unsigned int)v3 >= *(_DWORD *)(v22 + 24) )
+    if ( (unsigned int)v3 >= *(_DWORD *)(invoke_impl + 24) )
       goto LABEL_46;
-    CommandTypeName = (__int64)System_Int32__ToString((int)v22 + v4, 0);
+    CommandTypeName = (UILabel_o *)System_Int32__ToString((int)invoke_impl + v4, 0);
     if ( !v21 )
 LABEL_45:
-      sub_1C32E7C(CommandTypeName);
+      sub_1C372B4(CommandTypeName);
     UILabel__set_text(v21, (System_String_o *)CommandTypeName, 0);
     ++v3;
     v4 += 4;
@@ -441,10 +441,10 @@ void DebugInputAttackCardExcuteComponent__OnSubmitNP(
   struct System_Threading_CancellationTokenSource_o *m_CancellationTokenSource; // x8
   int32_t result[2]; // [xsp+8h] [xbp-28h] BYREF
 
-  if ( (byte_4C38F7C & 1) == 0 )
+  if ( (byte_4C44575 & 1) == 0 )
   {
-    this = (DebugInputAttackCardExcuteComponent_o *)sub_1C32C20(&DebugInputAttackCardExcuteComponent_TypeInfo);
-    byte_4C38F7C = 1;
+    this = (DebugInputAttackCardExcuteComponent_o *)sub_1C37058(&DebugInputAttackCardExcuteComponent_TypeInfo);
+    byte_4C44575 = 1;
   }
   *(_QWORD *)result = 0;
   if ( !cardLabelName )
@@ -473,9 +473,9 @@ void DebugInputAttackCardExcuteComponent__OnSubmitNP(
     v7 = 100;
   if ( !m_CancellationTokenSource )
 LABEL_18:
-    sub_1C32E7C(this);
+    sub_1C372B4(this);
   if ( (unsigned int)(v6 - 1) >= LODWORD(m_CancellationTokenSource->fields._registeredCallbacksLists) )
-    sub_1C32E84(this);
+    sub_1C372BC(this);
   *((_DWORD *)&m_CancellationTokenSource->fields._registeredCallbacksLists + v6 + 1) = v7;
 }
 
@@ -504,10 +504,10 @@ void DebugInputAttackCardExcuteComponent__Open(
     ++v8;
   while ( v8 < max_length );
   this->fields.data = inputData;
-  sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.data, (int32_t)inputData, (int32_t)inputDebugMenuTran, method);
+  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.data, (int32_t)inputData, (int32_t)inputDebugMenuTran, method);
   v7->fields.debugMenuTran = inputDebugMenuTran;
   p_debugMenuTran = (DebugInputAttackCardExcuteComponent_o **)&v7->fields.debugMenuTran;
-  sub_1C32BC4((CGThumbnailListItem_o *)&v7->fields.debugMenuTran, (int32_t)inputDebugMenuTran, v10, v11);
+  sub_1C36FFC((CGThumbnailListItem_o *)&v7->fields.debugMenuTran, (int32_t)inputDebugMenuTran, v10, v11);
   this = (DebugInputAttackCardExcuteComponent_o *)UnityEngine_Component__get_gameObject(
                                                     (UnityEngine_Component_o *)v7,
                                                     0);
@@ -523,7 +523,7 @@ void DebugInputAttackCardExcuteComponent__Open(
                                                           0)) == 0 )
   {
 LABEL_10:
-    sub_1C32E7C(this);
+    sub_1C372B4(this);
   }
   UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)this, 0, 0);
 }
@@ -578,17 +578,17 @@ void DebugInputAttackCardExcuteComponent__OpenAttackCardType(
   System_Action_T1__T2__o *v45; // x22
 
   v4 = this;
-  if ( (byte_4C38F79 & 1) == 0 )
+  if ( (byte_4C44572 & 1) == 0 )
   {
-    sub_1C32C20(&System_Action_int__string__TypeInfo);
-    sub_1C32C20(&BattleCommand_TypeInfo);
-    sub_1C32C20(&Method_DebugInputAttackCardExcuteComponent_TapSelectAttackCardTypeCallback__);
-    sub_1C32C20(&Method_System_Collections_Generic_List_string__Add__);
-    sub_1C32C20(&Method_System_Collections_Generic_List_string___ctor__);
-    sub_1C32C20(&System_Collections_Generic_List_string__TypeInfo);
-    sub_1C32C20(&StringLiteral_2365/*"Arts"*/);
-    this = (DebugInputAttackCardExcuteComponent_o *)sub_1C32C20(&StringLiteral_25465/*"宝具"*/);
-    byte_4C38F79 = 1;
+    sub_1C37058(&System_Action_int__string__TypeInfo);
+    sub_1C37058(&BattleCommand_TypeInfo);
+    sub_1C37058(&Method_DebugInputAttackCardExcuteComponent_TapSelectAttackCardTypeCallback__);
+    sub_1C37058(&Method_System_Collections_Generic_List_string__Add__);
+    sub_1C37058(&Method_System_Collections_Generic_List_string___ctor__);
+    sub_1C37058(&System_Collections_Generic_List_string__TypeInfo);
+    sub_1C37058(&StringLiteral_2365/*"Arts"*/);
+    this = (DebugInputAttackCardExcuteComponent_o *)sub_1C37058(&StringLiteral_25470/*"宝具"*/);
+    byte_4C44572 = 1;
   }
   if ( !parentGameObject )
     goto LABEL_37;
@@ -598,29 +598,29 @@ void DebugInputAttackCardExcuteComponent__OpenAttackCardType(
                                                     0);
   if ( !this || !name )
     goto LABEL_37;
-  v6 = System_String__Substring_63564468(name, LODWORD(this->fields.m_CachedPtr) - 1, 1, 0);
+  v6 = System_String__Substring_63607580(name, LODWORD(this->fields.m_CachedPtr) - 1, 1, 0);
   this = (DebugInputAttackCardExcuteComponent_o *)System_Int32__Parse(v6, 0);
   if ( (int)this < 1 )
     return;
   attackCardTypeSelectButtonList = v4->fields.attackCardTypeSelectButtonList;
   if ( !attackCardTypeSelectButtonList )
 LABEL_37:
-    sub_1C32E7C(this);
+    sub_1C372B4(this);
   if ( (int)this <= SLODWORD(attackCardTypeSelectButtonList->max_length) )
   {
     v4->fields.lastOpenAttackCardSelectButton = (_DWORD)this - 1;
-    v8 = (System_Collections_Generic_List_object__o *)sub_1C32E6C(System_Collections_Generic_List_string__TypeInfo);
+    v8 = (System_Collections_Generic_List_object__o *)sub_1C372A4(System_Collections_Generic_List_string__TypeInfo);
     System_Collections_Generic_List_object____ctor(
       v8,
-      (const MethodInfo_3797F88 *)Method_System_Collections_Generic_List_string___ctor__);
-    if ( (byte_4C38F76 & 1) == 0 )
+      (const MethodInfo_37A27F0 *)Method_System_Collections_Generic_List_string___ctor__);
+    if ( (byte_4C4456F & 1) == 0 )
     {
-      this = (DebugInputAttackCardExcuteComponent_o *)sub_1C32C20(&StringLiteral_25398/*"カードタイプ指定なし"*/);
-      byte_4C38F76 = 1;
+      this = (DebugInputAttackCardExcuteComponent_o *)sub_1C37058(&StringLiteral_25403/*"カードタイプ指定なし"*/);
+      byte_4C4456F = 1;
     }
     if ( v8 )
     {
-      v11 = (Il2CppObject *)StringLiteral_25398/*"カードタイプ指定なし"*/;
+      v11 = (Il2CppObject *)StringLiteral_25403/*"カードタイプ指定なし"*/;
       items = v8->fields._items;
       v13 = Method_System_Collections_Generic_List_string__Add__;
       ++v8->fields._version;
@@ -632,14 +632,14 @@ LABEL_37:
           System_Collections_Generic_List_object___AddWithResize(
             v8,
             v11,
-            *(const MethodInfo_37987BC **)(*(_QWORD *)(v13[4] + 192LL) + 112LL));
+            *(const MethodInfo_37A3024 **)(*(_QWORD *)(v13[4] + 192LL) + 112LL));
         }
         else
         {
           v15 = &items->obj.klass + size;
           v8->fields._size = size + 1;
           v15[4] = (Il2CppClass *)v11;
-          sub_1C32BC4((CGThumbnailListItem_o *)(v15 + 4), (int32_t)v11, v9, v10);
+          sub_1C36FFC((CGThumbnailListItem_o *)(v15 + 4), (int32_t)v11, v9, v10);
         }
         if ( !BattleCommand_TypeInfo->_2.cctor_finished )
           j_il2cpp_runtime_class_init_0(BattleCommand_TypeInfo);
@@ -659,14 +659,14 @@ LABEL_37:
             System_Collections_Generic_List_object___AddWithResize(
               v8,
               (Il2CppObject *)this,
-              *(const MethodInfo_37987BC **)(*(_QWORD *)(v19[4] + 192LL) + 112LL));
+              *(const MethodInfo_37A3024 **)(*(_QWORD *)(v19[4] + 192LL) + 112LL));
           }
           else
           {
             v22 = &v18->obj.klass + v20;
             v8->fields._size = v20 + 1;
             v22[4] = (Il2CppClass *)v21;
-            sub_1C32BC4((CGThumbnailListItem_o *)(v22 + 4), (int32_t)v21, v16, v17);
+            sub_1C36FFC((CGThumbnailListItem_o *)(v22 + 4), (int32_t)v21, v16, v17);
           }
           this = (DebugInputAttackCardExcuteComponent_o *)BattleCommand__GetCommandTypeName(
                                                             2,
@@ -684,14 +684,14 @@ LABEL_37:
               System_Collections_Generic_List_object___AddWithResize(
                 v8,
                 (Il2CppObject *)this,
-                *(const MethodInfo_37987BC **)(*(_QWORD *)(v26[4] + 192LL) + 112LL));
+                *(const MethodInfo_37A3024 **)(*(_QWORD *)(v26[4] + 192LL) + 112LL));
             }
             else
             {
               v29 = &v25->obj.klass + v27;
               v8->fields._size = v27 + 1;
               v29[4] = (Il2CppClass *)v28;
-              sub_1C32BC4((CGThumbnailListItem_o *)(v29 + 4), (int32_t)v28, v23, v24);
+              sub_1C36FFC((CGThumbnailListItem_o *)(v29 + 4), (int32_t)v28, v23, v24);
             }
             this = (DebugInputAttackCardExcuteComponent_o *)BattleCommand__GetCommandTypeName(
                                                               3,
@@ -709,17 +709,17 @@ LABEL_37:
                 System_Collections_Generic_List_object___AddWithResize(
                   v8,
                   (Il2CppObject *)this,
-                  *(const MethodInfo_37987BC **)(*(_QWORD *)(v33[4] + 192LL) + 112LL));
+                  *(const MethodInfo_37A3024 **)(*(_QWORD *)(v33[4] + 192LL) + 112LL));
               }
               else
               {
                 v36 = &v32->obj.klass + v34;
                 v8->fields._size = v34 + 1;
                 v36[4] = (Il2CppClass *)v35;
-                sub_1C32BC4((CGThumbnailListItem_o *)(v36 + 4), (int32_t)v35, v30, v31);
+                sub_1C36FFC((CGThumbnailListItem_o *)(v36 + 4), (int32_t)v35, v30, v31);
               }
               v39 = Method_System_Collections_Generic_List_string__Add__;
-              v40 = (Il2CppObject *)StringLiteral_25465/*"宝具"*/;
+              v40 = (Il2CppObject *)StringLiteral_25470/*"宝具"*/;
               v41 = v8->fields._items;
               ++v8->fields._version;
               if ( v41 )
@@ -730,17 +730,17 @@ LABEL_37:
                   System_Collections_Generic_List_object___AddWithResize(
                     v8,
                     v40,
-                    *(const MethodInfo_37987BC **)(*(_QWORD *)(v39[4] + 192LL) + 112LL));
+                    *(const MethodInfo_37A3024 **)(*(_QWORD *)(v39[4] + 192LL) + 112LL));
                 }
                 else
                 {
                   v43 = &v41->obj.klass + v42;
                   v8->fields._size = v42 + 1;
                   v43[4] = (Il2CppClass *)v40;
-                  sub_1C32BC4((CGThumbnailListItem_o *)(v43 + 4), (int32_t)v40, v37, v38);
+                  sub_1C36FFC((CGThumbnailListItem_o *)(v43 + 4), (int32_t)v40, v37, v38);
                 }
                 attackCardSelectWindow = v4->fields.attackCardSelectWindow;
-                v45 = (System_Action_T1__T2__o *)sub_1C32E6C(System_Action_int__string__TypeInfo);
+                v45 = (System_Action_T1__T2__o *)sub_1C372A4(System_Action_int__string__TypeInfo);
                 System_Action_int__object____ctor(
                   v45,
                   (Il2CppObject *)v4,
@@ -797,15 +797,15 @@ void DebugInputAttackCardExcuteComponent__OpenServantSelect(
   int v27; // [xsp+Ch] [xbp-24h] BYREF
 
   v4 = this;
-  if ( (byte_4C38F78 & 1) == 0 )
+  if ( (byte_4C44571 & 1) == 0 )
   {
-    sub_1C32C20(&System_Action_int__string__TypeInfo);
-    sub_1C32C20(&Method_DebugInputAttackCardExcuteComponent_TapServantSelectCallback__);
-    sub_1C32C20(&Method_System_Collections_Generic_List_string__Add__);
-    sub_1C32C20(&Method_System_Collections_Generic_List_string___ctor__);
-    sub_1C32C20(&System_Collections_Generic_List_string__TypeInfo);
-    this = (DebugInputAttackCardExcuteComponent_o *)sub_1C32C20(&StringLiteral_25495/*"番目"*/);
-    byte_4C38F78 = 1;
+    sub_1C37058(&System_Action_int__string__TypeInfo);
+    sub_1C37058(&Method_DebugInputAttackCardExcuteComponent_TapServantSelectCallback__);
+    sub_1C37058(&Method_System_Collections_Generic_List_string__Add__);
+    sub_1C37058(&Method_System_Collections_Generic_List_string___ctor__);
+    sub_1C37058(&System_Collections_Generic_List_string__TypeInfo);
+    this = (DebugInputAttackCardExcuteComponent_o *)sub_1C37058(&StringLiteral_25500/*"番目"*/);
+    byte_4C44571 = 1;
   }
   if ( !parentGameObject )
     goto LABEL_25;
@@ -815,7 +815,7 @@ void DebugInputAttackCardExcuteComponent__OpenServantSelect(
                                                     0);
   if ( !this || !name )
     goto LABEL_25;
-  v6 = System_String__Substring_63564468(name, LODWORD(this->fields.m_CachedPtr) - 1, 1, 0);
+  v6 = System_String__Substring_63607580(name, LODWORD(this->fields.m_CachedPtr) - 1, 1, 0);
   this = (DebugInputAttackCardExcuteComponent_o *)System_Int32__Parse(v6, 0);
   if ( (int)this < 1 )
     return;
@@ -825,18 +825,18 @@ void DebugInputAttackCardExcuteComponent__OpenServantSelect(
   if ( (int)this > SLODWORD(servantSelectButtonList->max_length) )
     return;
   v4->fields.lastOpenAttackCardSelectButton = (_DWORD)this - 1;
-  v8 = (System_Collections_Generic_List_object__o *)sub_1C32E6C(System_Collections_Generic_List_string__TypeInfo);
+  v8 = (System_Collections_Generic_List_object__o *)sub_1C372A4(System_Collections_Generic_List_string__TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v8,
-    (const MethodInfo_3797F88 *)Method_System_Collections_Generic_List_string___ctor__);
-  if ( (byte_4C38F75 & 1) == 0 )
+    (const MethodInfo_37A27F0 *)Method_System_Collections_Generic_List_string___ctor__);
+  if ( (byte_4C4456E & 1) == 0 )
   {
-    this = (DebugInputAttackCardExcuteComponent_o *)sub_1C32C20(&StringLiteral_25409/*"サーヴァント指定なし"*/);
-    byte_4C38F75 = 1;
+    this = (DebugInputAttackCardExcuteComponent_o *)sub_1C37058(&StringLiteral_25414/*"サーヴァント指定なし"*/);
+    byte_4C4456E = 1;
   }
   if ( !v8 )
     goto LABEL_25;
-  v11 = (Il2CppObject *)StringLiteral_25409/*"サーヴァント指定なし"*/;
+  v11 = (Il2CppObject *)StringLiteral_25414/*"サーヴァント指定なし"*/;
   items = v8->fields._items;
   v13 = Method_System_Collections_Generic_List_string__Add__;
   ++v8->fields._version;
@@ -848,22 +848,22 @@ void DebugInputAttackCardExcuteComponent__OpenServantSelect(
     System_Collections_Generic_List_object___AddWithResize(
       v8,
       v11,
-      *(const MethodInfo_37987BC **)(*(_QWORD *)(v13[4] + 192LL) + 112LL));
+      *(const MethodInfo_37A3024 **)(*(_QWORD *)(v13[4] + 192LL) + 112LL));
   }
   else
   {
     v15 = &items->obj.klass + size;
     v8->fields._size = size + 1;
     v15[4] = (Il2CppClass *)v11;
-    sub_1C32BC4((CGThumbnailListItem_o *)(v15 + 4), (int32_t)v11, v9, v10);
+    sub_1C36FFC((CGThumbnailListItem_o *)(v15 + 4), (int32_t)v11, v9, v10);
   }
   v27 = 1;
   do
   {
     v16 = System_Int32__ToString((int32_t)&v27, 0);
-    this = (DebugInputAttackCardExcuteComponent_o *)System_String__Concat_63518544(
+    this = (DebugInputAttackCardExcuteComponent_o *)System_String__Concat_63561656(
                                                       v16,
-                                                      (System_String_o *)StringLiteral_25495/*"番目"*/,
+                                                      (System_String_o *)StringLiteral_25500/*"番目"*/,
                                                       0);
     v19 = v8->fields._items;
     v20 = Method_System_Collections_Generic_List_string__Add__;
@@ -877,21 +877,21 @@ void DebugInputAttackCardExcuteComponent__OpenServantSelect(
       System_Collections_Generic_List_object___AddWithResize(
         v8,
         (Il2CppObject *)this,
-        *(const MethodInfo_37987BC **)(*(_QWORD *)(v20[4] + 192LL) + 112LL));
+        *(const MethodInfo_37A3024 **)(*(_QWORD *)(v20[4] + 192LL) + 112LL));
     }
     else
     {
       v23 = &v19->obj.klass + v21;
       v8->fields._size = v21 + 1;
       v23[4] = (Il2CppClass *)v22;
-      sub_1C32BC4((CGThumbnailListItem_o *)(v23 + 4), (int32_t)v22, v17, v18);
+      sub_1C36FFC((CGThumbnailListItem_o *)(v23 + 4), (int32_t)v22, v17, v18);
     }
     v24 = v27 - 3 < 0;
     ++v27;
   }
   while ( v24 != __OFSUB__(v27, 4) );
   attackCardSelectWindow = v4->fields.attackCardSelectWindow;
-  v26 = (System_Action_T1__T2__o *)sub_1C32E6C(System_Action_int__string__TypeInfo);
+  v26 = (System_Action_T1__T2__o *)sub_1C372A4(System_Action_int__string__TypeInfo);
   System_Action_int__object____ctor(
     v26,
     (Il2CppObject *)v4,
@@ -899,7 +899,7 @@ void DebugInputAttackCardExcuteComponent__OpenServantSelect(
     0);
   if ( !attackCardSelectWindow )
 LABEL_25:
-    sub_1C32E7C(this);
+    sub_1C372B4(this);
   DebugAttackCardSelectComponent__Open(
     attackCardSelectWindow,
     (System_Action_int__string__o *)v26,
@@ -922,10 +922,10 @@ void DebugInputAttackCardExcuteComponent__SetAttackCardTypeData(
   _DWORD *monitor; // x9
   struct UILabel_array *attackCardTypeNameList; // x9
 
-  if ( (byte_4C38F7B & 1) == 0 )
+  if ( (byte_4C44574 & 1) == 0 )
   {
-    sub_1C32C20(&DebugInputAttackCardExcuteComponent_TypeInfo);
-    byte_4C38F7B = 1;
+    sub_1C37058(&DebugInputAttackCardExcuteComponent_TypeInfo);
+    byte_4C44574 = 1;
   }
   v11 = (UILabel_o *)DebugInputAttackCardExcuteComponent_TypeInfo;
   if ( !DebugInputAttackCardExcuteComponent_TypeInfo->_2.cctor_finished )
@@ -951,11 +951,11 @@ void DebugInputAttackCardExcuteComponent__SetAttackCardTypeData(
     goto LABEL_13;
   if ( LODWORD(attackCardTypeNameList->max_length) <= idx )
 LABEL_14:
-    sub_1C32E84(v11);
+    sub_1C372BC(v11);
   v11 = attackCardTypeNameList->m_Items[idx];
   if ( !v11 )
 LABEL_13:
-    sub_1C32E7C(v11);
+    sub_1C372B4(v11);
   UILabel__set_text(v11, name, 0);
 }
 
@@ -971,10 +971,10 @@ void DebugInputAttackCardExcuteComponent__SetServantData(
   UIWidget_OnDimensionsChanged_c *klass; // x9
   struct UILabel_array *servantIdxList; // x9
 
-  if ( (byte_4C38F7A & 1) == 0 )
+  if ( (byte_4C44573 & 1) == 0 )
   {
-    sub_1C32C20(&DebugInputAttackCardExcuteComponent_TypeInfo);
-    byte_4C38F7A = 1;
+    sub_1C37058(&DebugInputAttackCardExcuteComponent_TypeInfo);
+    byte_4C44573 = 1;
   }
   v9 = (UILabel_o *)DebugInputAttackCardExcuteComponent_TypeInfo;
   if ( !DebugInputAttackCardExcuteComponent_TypeInfo->_2.cctor_finished )
@@ -993,11 +993,11 @@ void DebugInputAttackCardExcuteComponent__SetServantData(
     goto LABEL_11;
   if ( LODWORD(servantIdxList->max_length) <= idx )
 LABEL_12:
-    sub_1C32E84(v9);
+    sub_1C372BC(v9);
   v9 = servantIdxList->m_Items[idx];
   if ( !v9 )
 LABEL_11:
-    sub_1C32E7C(v9);
+    sub_1C372B4(v9);
   UILabel__set_text(v9, name, 0);
 }
 

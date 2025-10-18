@@ -16,10 +16,10 @@ void PhotoLayerChangeComponent__InitDepth(PhotoLayerChangeComponent_o *this, con
   UIPanel_o *v4; // x0
   UnityEngine_Object_o *anotherPanel; // x20
 
-  if ( (byte_4C33031 & 1) == 0 )
+  if ( (byte_4C3E61B & 1) == 0 )
   {
-    sub_1C32C20(&UnityEngine_Object_TypeInfo);
-    byte_4C33031 = 1;
+    sub_1C37058(&UnityEngine_Object_TypeInfo);
+    byte_4C3E61B = 1;
   }
   selfPanel = (UnityEngine_Object_o *)this->fields.selfPanel;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -43,7 +43,7 @@ void PhotoLayerChangeComponent__InitDepth(PhotoLayerChangeComponent_o *this, con
       return;
     }
 LABEL_14:
-    sub_1C32E7C(v4);
+    sub_1C372B4(v4);
   }
 }
 
@@ -59,11 +59,11 @@ void PhotoLayerChangeComponent__OnClick(PhotoLayerChangeComponent_o *this, const
   System_Reflection_MethodBase_o *v9; // x0
   int32_t v10; // w1
 
-  if ( (byte_4C33032 & 1) == 0 )
+  if ( (byte_4C3E61C & 1) == 0 )
   {
-    sub_1C32C20(&UnityEngine_Object_TypeInfo);
-    sub_1C32C20(&Method_PhotoLayerChangeComponent_OnClick__);
-    byte_4C33032 = 1;
+    sub_1C37058(&UnityEngine_Object_TypeInfo);
+    sub_1C37058(&Method_PhotoLayerChangeComponent_OnClick__);
+    byte_4C3E61C = 1;
   }
   selfPanel = (UnityEngine_Object_o *)this->fields.selfPanel;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -86,8 +86,8 @@ void PhotoLayerChangeComponent__OnClick(PhotoLayerChangeComponent_o *this, const
             return;
           v8 = Method_PhotoLayerChangeComponent_OnClick__;
           if ( (*((_BYTE *)Method_PhotoLayerChangeComponent_OnClick__ + 83) & 2) != 0 )
-            v8 = (_QWORD *)sub_1C32C38(Method_PhotoLayerChangeComponent_OnClick__);
-          v9 = (System_Reflection_MethodBase_o *)sub_1C32C04(v8, v8[4]);
+            v8 = (_QWORD *)sub_1C37070(Method_PhotoLayerChangeComponent_OnClick__);
+          v9 = (System_Reflection_MethodBase_o *)sub_1C3703C(v8, v8[4]);
           OverwriteAssetSoundName__PlaySystemSe(v9, 0, 0, 0);
           v5 = this->fields.anotherPanel;
           if ( v5 )
@@ -108,7 +108,7 @@ LABEL_20:
           }
         }
       }
-      sub_1C32E7C(v5);
+      sub_1C372B4(v5);
     }
   }
 }
@@ -122,7 +122,7 @@ void PhotoLayerChangeComponent__SetAnotherPanel(
   const MethodInfo *v3; // x3
 
   this->fields.anotherPanel = another;
-  sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.anotherPanel, (int32_t)another, (int32_t)method, v3);
+  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.anotherPanel, (int32_t)another, (int32_t)method, v3);
 }
 
 
@@ -134,5 +134,5 @@ void PhotoLayerChangeComponent__SetSelfPanel(
   const MethodInfo *v3; // x3
 
   this->fields.selfPanel = self;
-  sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.selfPanel, (int32_t)self, (int32_t)method, v3);
+  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.selfPanel, (int32_t)self, (int32_t)method, v3);
 }

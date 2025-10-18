@@ -12,15 +12,15 @@ void SampleCardListViewItemDraw__AddDepth(SampleCardListViewItemDraw_o *this, in
   System_Object_array *v7; // x20
   unsigned int v8; // w21
 
-  if ( (byte_4C350C9 & 1) == 0 )
+  if ( (byte_4C40756 & 1) == 0 )
   {
-    sub_1C32C20(&Method_UnityEngine_Component_GetComponentsInChildren_UIWidget____78081984);
-    byte_4C350C9 = 1;
+    sub_1C37058(&Method_UnityEngine_Component_GetComponentsInChildren_UIWidget____78127760);
+    byte_4C40756 = 1;
   }
   ComponentsInChildren_object = UnityEngine_Component__GetComponentsInChildren_object_(
                                   (UnityEngine_Component_o *)this,
                                   1,
-                                  (const MethodInfo_30D48E4 *)Method_UnityEngine_Component_GetComponentsInChildren_UIWidget____78081984);
+                                  (const MethodInfo_30DF14C *)Method_UnityEngine_Component_GetComponentsInChildren_UIWidget____78127760);
   if ( !ComponentsInChildren_object )
     goto LABEL_11;
   max_length = ComponentsInChildren_object->max_length;
@@ -31,7 +31,7 @@ void SampleCardListViewItemDraw__AddDepth(SampleCardListViewItemDraw_o *this, in
     while ( 1 )
     {
       if ( v8 >= max_length )
-        sub_1C32E84(ComponentsInChildren_object);
+        sub_1C372BC(ComponentsInChildren_object);
       ComponentsInChildren_object = (System_Object_array *)v7->m_Items[v8];
       if ( !ComponentsInChildren_object )
         break;
@@ -44,7 +44,7 @@ void SampleCardListViewItemDraw__AddDepth(SampleCardListViewItemDraw_o *this, in
         return;
     }
 LABEL_11:
-    sub_1C32E7C(ComponentsInChildren_object);
+    sub_1C372B4(ComponentsInChildren_object);
   }
 }
 
@@ -61,17 +61,17 @@ void SampleCardListViewItemDraw__EndLoadCard(
   struct UITexture_o *cardImageTexture; // x20
   Il2CppObject *Object_object; // x0
 
-  if ( (byte_4C350C8 & 1) == 0 )
+  if ( (byte_4C40755 & 1) == 0 )
   {
-    sub_1C32C20(&Method_AssetData_GetObject_Texture2D___);
-    sub_1C32C20(&AssetManager_TypeInfo);
-    byte_4C350C8 = 1;
+    sub_1C37058(&Method_AssetData_GetObject_Texture2D___);
+    sub_1C37058(&AssetManager_TypeInfo);
+    byte_4C40755 = 1;
   }
   if ( data && System_String__op_Inequality(this->fields.cardFileName, data->fields.name, 0) )
   {
     if ( !AssetManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(AssetManager_TypeInfo);
-    AssetManager__releaseAsset_40435328(data, 0);
+    AssetManager__releaseAsset_40534712(data, 0);
   }
   else
   {
@@ -80,20 +80,20 @@ void SampleCardListViewItemDraw__EndLoadCard(
     {
       if ( !AssetManager_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(AssetManager_TypeInfo);
-      AssetManager__releaseAsset_40435328(cardData, 0);
+      AssetManager__releaseAsset_40534712(cardData, 0);
       this->fields.cardData = 0;
-      sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.cardData, 0, v7, v8);
+      sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.cardData, 0, v7, v8);
     }
     if ( data )
     {
       this->fields.cardData = data;
-      sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.cardData, (int32_t)data, (int32_t)method, v3);
+      sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.cardData, (int32_t)data, (int32_t)method, v3);
       cardImageTexture = this->fields.cardImageTexture;
       Object_object = AssetData__GetObject_object_(
                         data,
-                        (const MethodInfo_30BE658 *)Method_AssetData_GetObject_Texture2D___);
+                        (const MethodInfo_30C8EC0 *)Method_AssetData_GetObject_Texture2D___);
       if ( !cardImageTexture )
-        sub_1C32E7C(Object_object);
+        sub_1C372B4(Object_object);
       ((void (__fastcall *)(struct UITexture_o *, Il2CppObject *, const MethodInfo *))cardImageTexture->klass->vtable._27_set_mainTexture.methodPtr)(
         cardImageTexture,
         Object_object,
@@ -112,24 +112,24 @@ void SampleCardListViewItemDraw__OnDestroy(SampleCardListViewItemDraw_o *this, c
   const MethodInfo *v7; // x3
   struct System_String_o **p_cardFileName; // x19
 
-  if ( (byte_4C350C6 & 1) == 0 )
+  if ( (byte_4C40753 & 1) == 0 )
   {
-    sub_1C32C20(&AssetManager_TypeInfo);
-    byte_4C350C6 = 1;
+    sub_1C37058(&AssetManager_TypeInfo);
+    byte_4C40753 = 1;
   }
   cardData = this->fields.cardData;
   if ( cardData )
   {
     if ( !AssetManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(AssetManager_TypeInfo);
-    AssetManager__releaseAsset_40435328(cardData, 0);
+    AssetManager__releaseAsset_40534712(cardData, 0);
     this->fields.cardData = 0;
-    sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.cardData, 0, v6, v7);
+    sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.cardData, 0, v6, v7);
   }
   this->fields.cardFileName = 0;
   p_cardFileName = &this->fields.cardFileName;
   *((_DWORD *)p_cardFileName - 2) = -1;
-  sub_1C32BC4((CGThumbnailListItem_o *)p_cardFileName, 0, v2, v3);
+  sub_1C36FFC((CGThumbnailListItem_o *)p_cardFileName, 0, v2, v3);
 }
 
 
@@ -161,16 +161,16 @@ void SampleCardListViewItemDraw__SetItem(
   int32_t v24; // [xsp+Ch] [xbp-24h] BYREF
 
   v10 = this;
-  if ( (byte_4C350C7 & 1) == 0 )
+  if ( (byte_4C40754 & 1) == 0 )
   {
-    sub_1C32C20(&AssetManager_TypeInfo);
-    sub_1C32C20(&Method_UnityEngine_GameObject_GetComponent_TweenColor___);
-    sub_1C32C20(&int_TypeInfo);
-    sub_1C32C20(&AssetLoader_LoadEndDataHandler_TypeInfo);
-    sub_1C32C20(&UnityEngine_Object_TypeInfo);
-    sub_1C32C20(&Method_SampleCardListViewItemDraw_EndLoadCard__);
-    this = (SampleCardListViewItemDraw_o *)sub_1C32C20(&StringLiteral_13733/*"Test/card{0:d3}"*/);
-    byte_4C350C7 = 1;
+    sub_1C37058(&AssetManager_TypeInfo);
+    sub_1C37058(&Method_UnityEngine_GameObject_GetComponent_TweenColor___);
+    sub_1C37058(&int_TypeInfo);
+    sub_1C37058(&AssetLoader_LoadEndDataHandler_TypeInfo);
+    sub_1C37058(&UnityEngine_Object_TypeInfo);
+    sub_1C37058(&Method_SampleCardListViewItemDraw_EndLoadCard__);
+    this = (SampleCardListViewItemDraw_o *)sub_1C37058(&StringLiteral_13734/*"Test/card{0:d3}"*/);
+    byte_4C40754 = 1;
   }
   if ( item )
     v11 = mode;
@@ -190,11 +190,11 @@ void SampleCardListViewItemDraw__SetItem(
       v10->fields.cardId = isFront;
       v24 = isFront;
       v13 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v24, *(_QWORD *)&mode, method, v4, v5, v6, v7);
-      v14 = System_String__Format((System_String_o *)StringLiteral_13733/*"Test/card{0:d3}"*/, v13, 0);
+      v14 = System_String__Format((System_String_o *)StringLiteral_13734/*"Test/card{0:d3}"*/, v13, 0);
       v10->fields.cardFileName = v14;
-      sub_1C32BC4((CGThumbnailListItem_o *)&v10->fields.cardFileName, (int32_t)v14, v15, v16);
+      sub_1C36FFC((CGThumbnailListItem_o *)&v10->fields.cardFileName, (int32_t)v14, v15, v16);
       cardFileName = v10->fields.cardFileName;
-      v18 = (AssetLoader_LoadEndDataHandler_o *)sub_1C32E6C(AssetLoader_LoadEndDataHandler_TypeInfo);
+      v18 = (AssetLoader_LoadEndDataHandler_o *)sub_1C372A4(AssetLoader_LoadEndDataHandler_TypeInfo);
       AssetLoader_LoadEndDataHandler___ctor(
         v18,
         (Il2CppObject *)v10,
@@ -217,7 +217,7 @@ void SampleCardListViewItemDraw__SetItem(
     goto LABEL_26;
   Component_object = UnityEngine_GameObject__GetComponent_object_(
                        (UnityEngine_GameObject_o *)this,
-                       (const MethodInfo_3134970 *)Method_UnityEngine_GameObject_GetComponent_TweenColor___);
+                       (const MethodInfo_313F1D8 *)Method_UnityEngine_GameObject_GetComponent_TweenColor___);
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   this = (SampleCardListViewItemDraw_o *)UnityEngine_Object__op_Inequality(
@@ -236,7 +236,7 @@ void SampleCardListViewItemDraw__SetItem(
     v20 = 0.5;
   if ( !this )
 LABEL_26:
-    sub_1C32E7C(this);
+    sub_1C372B4(this);
   v21 = 1.0;
   v22 = v20;
   v23 = v20;

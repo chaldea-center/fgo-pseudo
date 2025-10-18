@@ -1,9 +1,9 @@
 void BattleServantClassBoardSkillEffectListComponent___cctor(const MethodInfo *method)
 {
-  if ( (byte_4C3AFF3 & 1) == 0 )
+  if ( (byte_4C46606 & 1) == 0 )
   {
-    sub_1C32C20(&BattleServantClassBoardSkillEffectListComponent_TypeInfo);
-    byte_4C3AFF3 = 1;
+    sub_1C37058(&BattleServantClassBoardSkillEffectListComponent_TypeInfo);
+    byte_4C46606 = 1;
   }
   LODWORD(BattleServantClassBoardSkillEffectListComponent_TypeInfo->static_fields->DefaultSkillOffset) = (struct BattleServantClassBoardSkillEffectListComponent_StaticFields)-1037828096;
 }
@@ -33,28 +33,28 @@ void BattleServantClassBoardSkillEffectListComponent__Init(
   const MethodInfo *v12; // x3
   ChainableActionParallel_o *v13; // x19
 
-  if ( (byte_4C3AFF1 & 1) == 0 )
+  if ( (byte_4C46604 & 1) == 0 )
   {
-    sub_1C32C20(&System_Action_Action____TypeInfo);
-    sub_1C32C20(&System_Action_Action__TypeInfo);
-    sub_1C32C20(&AtlasManagerUnit_TypeInfo);
-    sub_1C32C20(&Method_BattleServantClassBoardSkillEffectListComponent__Init_b__2_0__);
-    sub_1C32C20(&ChainableActionParallel_TypeInfo);
-    sub_1C32C20(&ClassBoardResourceCatalogAssetBundle_TypeInfo);
-    byte_4C3AFF1 = 1;
+    sub_1C37058(&System_Action_Action____TypeInfo);
+    sub_1C37058(&System_Action_Action__TypeInfo);
+    sub_1C37058(&AtlasManagerUnit_TypeInfo);
+    sub_1C37058(&Method_BattleServantClassBoardSkillEffectListComponent__Init_b__2_0__);
+    sub_1C37058(&ChainableActionParallel_TypeInfo);
+    sub_1C37058(&ClassBoardResourceCatalogAssetBundle_TypeInfo);
+    byte_4C46604 = 1;
   }
   this->fields.skillOffset = 0.0;
-  v3 = (ClassBoardResourceCatalogAssetBundle_o *)sub_1C32E6C(ClassBoardResourceCatalogAssetBundle_TypeInfo);
+  v3 = (ClassBoardResourceCatalogAssetBundle_o *)sub_1C372A4(ClassBoardResourceCatalogAssetBundle_TypeInfo);
   ClassBoardResourceCatalogAssetBundle___ctor(v3, 0);
   if ( !v3 )
     goto LABEL_8;
   IconAtlasPath = ClassBoardResourceCatalogAssetBundle__GetIconAtlasPath(v3, 0);
-  v6 = (AtlasManagerUnit_o *)sub_1C32E6C(AtlasManagerUnit_TypeInfo);
+  v6 = (AtlasManagerUnit_o *)sub_1C372A4(AtlasManagerUnit_TypeInfo);
   AtlasManagerUnit___ctor(v6, IconAtlasPath, 0, 0);
   this->fields.atlasManagerUnit = v6;
-  sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.atlasManagerUnit, (int32_t)v6, v7, v8);
-  v9 = sub_1C32CC8(System_Action_Action____TypeInfo, 1);
-  v10 = (System_Action_object__o *)sub_1C32E6C(System_Action_Action__TypeInfo);
+  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.atlasManagerUnit, (int32_t)v6, v7, v8);
+  v9 = sub_1C37100(System_Action_Action____TypeInfo, 1);
+  v10 = (System_Action_object__o *)sub_1C372A4(System_Action_Action__TypeInfo);
   System_Action_object____ctor(
     v10,
     (Il2CppObject *)this,
@@ -63,14 +63,14 @@ void BattleServantClassBoardSkillEffectListComponent__Init(
   if ( !v9 )
     goto LABEL_8;
   if ( !*(_DWORD *)(v9 + 24) )
-    sub_1C32E84(v4);
+    sub_1C372BC(v4);
   *(_QWORD *)(v9 + 32) = v10;
-  sub_1C32BC4((CGThumbnailListItem_o *)(v9 + 32), (int32_t)v10, v11, v12);
-  v13 = (ChainableActionParallel_o *)sub_1C32E6C(ChainableActionParallel_TypeInfo);
-  ChainableActionParallel___ctor_48998960(v13, (System_Action_Action__array *)v9, 0);
+  sub_1C36FFC((CGThumbnailListItem_o *)(v9 + 32), (int32_t)v10, v11, v12);
+  v13 = (ChainableActionParallel_o *)sub_1C372A4(ChainableActionParallel_TypeInfo);
+  ChainableActionParallel___ctor_49042072(v13, (System_Action_Action__array *)v9, 0);
   if ( !v13 )
 LABEL_8:
-    sub_1C32E7C(v4);
+    sub_1C372B4(v4);
   ChainableActionBase__Execute((ChainableActionBase_o *)v13, 0);
 }
 
@@ -112,9 +112,9 @@ bool BattleServantClassBoardSkillEffectListComponent__SetClassBoardPassiveSkillI
   _BOOL8 v35; // x0
   UnityEngine_GameObject_o *gameObject; // x0
   UnityEngine_Transform_o *v37; // x0
-  __int64 v38; // x0
+  UnityEngine_Transform_o *v38; // x0
   UnityEngine_Transform_o *v39; // x24
-  __int64 v40; // x0
+  UnityEngine_Transform_o *v40; // x0
   UnityEngine_Transform_o *v41; // x24
   __int64 v42; // x0
   __int64 v43; // x2
@@ -133,29 +133,29 @@ bool BattleServantClassBoardSkillEffectListComponent__SetClassBoardPassiveSkillI
   System_Collections_Generic_List_ClassBoardClassEntity__o *entityList; // [xsp+78h] [xbp-68h] BYREF
   UnityEngine_Vector3_o v58; // 0:s0.4,4:s1.4,8:s2.4
 
-  if ( (byte_4C3AFF2 & 1) == 0 )
+  if ( (byte_4C46605 & 1) == 0 )
   {
-    sub_1C32C20(&BattleServantClassBoardSkillEffectListComponent_TypeInfo);
-    sub_1C32C20(&ClassBoardEffectListDialogSkillListComponent_TypeInfo);
-    sub_1C32C20(&Method_DataManager_GetMaster_ClassBoardClassMaster___);
-    sub_1C32C20(&DataManager_TypeInfo);
-    sub_1C32C20(&Method_System_Collections_Generic_List_Enumerator_ClassBoardClassEntity__Dispose__);
-    sub_1C32C20(&Method_System_Collections_Generic_List_Enumerator_ClassBoardEffectListDialogSkillListComponent_SkillDispData__Dispose__);
-    sub_1C32C20(&Method_System_Collections_Generic_List_Enumerator_ClassBoardClassEntity__MoveNext__);
-    sub_1C32C20(&Method_System_Collections_Generic_List_Enumerator_ClassBoardEffectListDialogSkillListComponent_SkillDispData__MoveNext__);
-    sub_1C32C20(&Method_System_Collections_Generic_List_Enumerator_ClassBoardClassEntity__get_Current__);
-    sub_1C32C20(&Method_System_Collections_Generic_List_Enumerator_ClassBoardEffectListDialogSkillListComponent_SkillDispData__get_Current__);
-    sub_1C32C20(&Method_UnityEngine_GameObject_GetComponent_ClassBoardEffectListDialogSkillDetailComponent___);
-    sub_1C32C20(&Method_UnityEngine_GameObject_GetComponentsInChildren_ClassBoardEffectListDialogSkillDetailComponent___);
-    sub_1C32C20(&int_TypeInfo);
-    sub_1C32C20(&Method_System_Collections_Generic_List_ClassBoardEffectListDialogSkillListComponent_SkillDispData__AddRange__);
-    sub_1C32C20(&Method_System_Collections_Generic_List_ClassBoardEffectListDialogSkillListComponent_SkillDispData__GetEnumerator__);
-    sub_1C32C20(&Method_System_Collections_Generic_List_ClassBoardClassEntity__GetEnumerator__);
-    sub_1C32C20(&Method_System_Collections_Generic_List_ClassBoardEffectListDialogSkillListComponent_SkillDispData___ctor__);
-    sub_1C32C20(&System_Collections_Generic_List_ClassBoardEffectListDialogSkillListComponent_SkillDispData__TypeInfo);
-    sub_1C32C20(&UnityEngine_Object_TypeInfo);
-    sub_1C32C20(&StringLiteral_23521/*"skill_{0:D5}"*/);
-    byte_4C3AFF2 = 1;
+    sub_1C37058(&BattleServantClassBoardSkillEffectListComponent_TypeInfo);
+    sub_1C37058(&ClassBoardEffectListDialogSkillListComponent_TypeInfo);
+    sub_1C37058(&Method_DataManager_GetMaster_ClassBoardClassMaster___);
+    sub_1C37058(&DataManager_TypeInfo);
+    sub_1C37058(&Method_System_Collections_Generic_List_Enumerator_ClassBoardClassEntity__Dispose__);
+    sub_1C37058(&Method_System_Collections_Generic_List_Enumerator_ClassBoardEffectListDialogSkillListComponent_SkillDispData__Dispose__);
+    sub_1C37058(&Method_System_Collections_Generic_List_Enumerator_ClassBoardClassEntity__MoveNext__);
+    sub_1C37058(&Method_System_Collections_Generic_List_Enumerator_ClassBoardEffectListDialogSkillListComponent_SkillDispData__MoveNext__);
+    sub_1C37058(&Method_System_Collections_Generic_List_Enumerator_ClassBoardClassEntity__get_Current__);
+    sub_1C37058(&Method_System_Collections_Generic_List_Enumerator_ClassBoardEffectListDialogSkillListComponent_SkillDispData__get_Current__);
+    sub_1C37058(&Method_UnityEngine_GameObject_GetComponent_ClassBoardEffectListDialogSkillDetailComponent___);
+    sub_1C37058(&Method_UnityEngine_GameObject_GetComponentsInChildren_ClassBoardEffectListDialogSkillDetailComponent___);
+    sub_1C37058(&int_TypeInfo);
+    sub_1C37058(&Method_System_Collections_Generic_List_ClassBoardEffectListDialogSkillListComponent_SkillDispData__AddRange__);
+    sub_1C37058(&Method_System_Collections_Generic_List_ClassBoardEffectListDialogSkillListComponent_SkillDispData__GetEnumerator__);
+    sub_1C37058(&Method_System_Collections_Generic_List_ClassBoardClassEntity__GetEnumerator__);
+    sub_1C37058(&Method_System_Collections_Generic_List_ClassBoardEffectListDialogSkillListComponent_SkillDispData___ctor__);
+    sub_1C37058(&System_Collections_Generic_List_ClassBoardEffectListDialogSkillListComponent_SkillDispData__TypeInfo);
+    sub_1C37058(&UnityEngine_Object_TypeInfo);
+    sub_1C37058(&StringLiteral_23525/*"skill_{0:D5}"*/);
+    byte_4C46605 = 1;
   }
   entityList = 0;
   memset(&v56, 0, sizeof(v56));
@@ -164,9 +164,9 @@ bool BattleServantClassBoardSkillEffectListComponent__SetClassBoardPassiveSkillI
   this->fields.skillOffset = 0.0;
   if ( !skillListParent )
     goto LABEL_64;
-  skillListParent = UnityEngine_GameObject__GetComponentsInChildren_object__51598740(
+  skillListParent = UnityEngine_GameObject__GetComponentsInChildren_object__51641852(
                       (UnityEngine_GameObject_o *)skillListParent,
-                      (const MethodInfo_3135594 *)Method_UnityEngine_GameObject_GetComponentsInChildren_ClassBoardEffectListDialogSkillDetailComponent___);
+                      (const MethodInfo_313FDFC *)Method_UnityEngine_GameObject_GetComponentsInChildren_ClassBoardEffectListDialogSkillDetailComponent___);
   if ( !skillListParent )
     goto LABEL_64;
   v9 = *((_DWORD *)skillListParent + 6);
@@ -177,7 +177,7 @@ bool BattleServantClassBoardSkillEffectListComponent__SetClassBoardPassiveSkillI
     while ( 1 )
     {
       if ( v11 >= v9 )
-        sub_1C32E84(skillListParent);
+        sub_1C372BC(skillListParent);
       skillListParent = (void *)*((_QWORD *)v10 + (int)v11 + 4);
       if ( !skillListParent )
         break;
@@ -190,7 +190,7 @@ bool BattleServantClassBoardSkillEffectListComponent__SetClassBoardPassiveSkillI
         goto LABEL_11;
     }
 LABEL_64:
-    sub_1C32E7C(skillListParent);
+    sub_1C372B4(skillListParent);
   }
 LABEL_11:
   if ( !svtData )
@@ -201,7 +201,7 @@ LABEL_11:
   v13 = OriginalClassId;
   if ( !DataManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-  skillListParent = DataManager__GetMaster_object_((const MethodInfo_30DD39C *)Method_DataManager_GetMaster_ClassBoardClassMaster___);
+  skillListParent = DataManager__GetMaster_object_((const MethodInfo_30E7C04 *)Method_DataManager_GetMaster_ClassBoardClassMaster___);
   if ( !skillListParent )
     goto LABEL_64;
   if ( !ClassBoardClassMaster__TryGetEntityListFromClassId(
@@ -210,28 +210,28 @@ LABEL_11:
           v13,
           0) )
     return 0;
-  v14 = (System_Collections_Generic_List_object__o *)sub_1C32E6C(System_Collections_Generic_List_ClassBoardEffectListDialogSkillListComponent_SkillDispData__TypeInfo);
+  v14 = (System_Collections_Generic_List_object__o *)sub_1C372A4(System_Collections_Generic_List_ClassBoardEffectListDialogSkillListComponent_SkillDispData__TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v14,
-    (const MethodInfo_3797F88 *)Method_System_Collections_Generic_List_ClassBoardEffectListDialogSkillListComponent_SkillDispData___ctor__);
+    (const MethodInfo_37A27F0 *)Method_System_Collections_Generic_List_ClassBoardEffectListDialogSkillListComponent_SkillDispData___ctor__);
   skillListParent = entityList;
   if ( !entityList )
     goto LABEL_64;
   System_Collections_Generic_List_object___GetEnumerator(
     (System_Collections_Generic_List_Enumerator_T__o *)&v54,
     (System_Collections_Generic_List_object__o *)entityList,
-    (const MethodInfo_37992B4 *)Method_System_Collections_Generic_List_ClassBoardClassEntity__GetEnumerator__);
+    (const MethodInfo_37A3B1C *)Method_System_Collections_Generic_List_ClassBoardClassEntity__GetEnumerator__);
   v56 = v54;
-  v15 = isGrandScore ? 976LL : 968LL;
+  v15 = isGrandScore ? 984LL : 976LL;
   while ( 1 )
   {
     v16 = System_Collections_Generic_List_Enumerator_object___MoveNext(
             &v56,
-            (const MethodInfo_3522FA8 *)Method_System_Collections_Generic_List_Enumerator_ClassBoardClassEntity__MoveNext__);
+            (const MethodInfo_352D810 *)Method_System_Collections_Generic_List_Enumerator_ClassBoardClassEntity__MoveNext__);
     if ( !v16 )
       break;
     if ( !battleInfoData )
-      sub_1C32E7C(v16);
+      sub_1C372B4(v16);
     current = v56.fields._current;
     v18 = *(System_Collections_ICollection_o **)((char *)&svtData->klass + v15);
     IsForceToApplyBoardSquareIds = BattleInfoData__IsForceToApplyBoardSquareIds(battleInfoData, isGrandScore, 0);
@@ -254,7 +254,7 @@ LABEL_11:
       }
     }
     if ( !current )
-      sub_1C32E7C(IsForceToApplyBoardSquareIds);
+      sub_1C372B4(IsForceToApplyBoardSquareIds);
     klass = (int32_t)current[1].klass;
     IsFollwerSupport = BattleServantData__IsFollwerSupport(svtData, 0);
     ClassStatisticsInfos = BattleInfoData__GetClassStatisticsInfos(battleInfoData, IsFollwerSupport, 0);
@@ -269,15 +269,15 @@ LABEL_11:
                                                                      0,
                                                                      0);
     if ( !v14 )
-      sub_1C32E7C(OpenSkillList);
+      sub_1C372B4(OpenSkillList);
     System_Collections_Generic_List_object___AddRange(
       v14,
       OpenSkillList,
-      (const MethodInfo_37989C8 *)Method_System_Collections_Generic_List_ClassBoardEffectListDialogSkillListComponent_SkillDispData__AddRange__);
+      (const MethodInfo_37A3230 *)Method_System_Collections_Generic_List_ClassBoardEffectListDialogSkillListComponent_SkillDispData__AddRange__);
   }
   System_Collections_Generic_List_Enumerator_object___Dispose(
     &v56,
-    (const MethodInfo_3522FA4 *)Method_System_Collections_Generic_List_Enumerator_ClassBoardClassEntity__Dispose__);
+    (const MethodInfo_352D80C *)Method_System_Collections_Generic_List_Enumerator_ClassBoardClassEntity__Dispose__);
   skillListParent = (void *)BasicHelper__IsNullOrEmpty((System_Collections_ICollection_o *)v14, 0);
   if ( ((unsigned __int8)skillListParent & 1) != 0 )
     return 0;
@@ -286,7 +286,7 @@ LABEL_11:
   System_Collections_Generic_List_object___GetEnumerator(
     (System_Collections_Generic_List_Enumerator_T__o *)&v54,
     v14,
-    (const MethodInfo_37992B4 *)Method_System_Collections_Generic_List_ClassBoardEffectListDialogSkillListComponent_SkillDispData__GetEnumerator__);
+    (const MethodInfo_37A3B1C *)Method_System_Collections_Generic_List_ClassBoardEffectListDialogSkillListComponent_SkillDispData__GetEnumerator__);
   v55 = v54;
   v25 = 0;
   v26 = 0.0;
@@ -294,7 +294,7 @@ LABEL_11:
   {
     v27 = System_Collections_Generic_List_Enumerator_object___MoveNext(
             &v55,
-            (const MethodInfo_3522FA8 *)Method_System_Collections_Generic_List_Enumerator_ClassBoardEffectListDialogSkillListComponent_SkillDispData__MoveNext__);
+            (const MethodInfo_352D810 *)Method_System_Collections_Generic_List_Enumerator_ClassBoardEffectListDialogSkillListComponent_SkillDispData__MoveNext__);
     if ( !v27 )
       break;
     v28 = *((_DWORD *)v10 + 6);
@@ -303,20 +303,20 @@ LABEL_11:
     {
       v31 = this->fields.skillListParent;
       if ( !v31 )
-        sub_1C32E7C(0);
+        sub_1C372B4(0);
       skillInfoPrefab = this->fields.skillInfoPrefab;
       transform = UnityEngine_GameObject__get_transform(v31, 0);
       Object = BaseMonoBehaviour__createObject((BaseMonoBehaviour_o *)this, skillInfoPrefab, transform, 0, 0);
       if ( !Object )
-        sub_1C32E7C(0);
+        sub_1C372B4(0);
       Component_object = UnityEngine_GameObject__GetComponent_object_(
                            Object,
-                           (const MethodInfo_3134970 *)Method_UnityEngine_GameObject_GetComponent_ClassBoardEffectListDialogSkillDetailComponent___);
+                           (const MethodInfo_313F1D8 *)Method_UnityEngine_GameObject_GetComponent_ClassBoardEffectListDialogSkillDetailComponent___);
     }
     else
     {
       if ( v25 >= v28 )
-        sub_1C32E84(v27);
+        sub_1C372BC(v27);
       Component_object = (Il2CppObject *)*((_QWORD *)v10 + (int)v25 + 4);
     }
     if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -325,43 +325,43 @@ LABEL_11:
     if ( !v35 )
     {
       if ( !Component_object )
-        sub_1C32E7C(v35);
+        sub_1C372B4(v35);
       gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)Component_object, 0);
       if ( !gameObject )
-        sub_1C32E7C(0);
+        sub_1C372B4(0);
       UnityEngine_GameObject__SetActive(gameObject, 1, 0);
       v37 = UnityEngine_Component__get_transform((UnityEngine_Component_o *)Component_object, 0);
       if ( !v37 )
-        sub_1C32E7C(0);
+        sub_1C372B4(0);
       v58.fields.x = 0.0;
       v58.fields.z = 0.0;
       v58.fields.y = v26;
       UnityEngine_Transform__set_localPosition(v37, v58, 0);
-      v38 = (__int64)UnityEngine_Component__get_transform((UnityEngine_Component_o *)Component_object, 0);
-      v39 = (UnityEngine_Transform_o *)v38;
-      if ( !byte_4C313D6 )
+      v38 = UnityEngine_Component__get_transform((UnityEngine_Component_o *)Component_object, 0);
+      v39 = v38;
+      if ( !byte_4C3C926 )
       {
-        v38 = sub_1C32C20(&UnityEngine_Vector3_TypeInfo);
-        byte_4C313D6 = 1;
+        v38 = (UnityEngine_Transform_o *)sub_1C37058(&UnityEngine_Vector3_TypeInfo);
+        byte_4C3C926 = 1;
       }
       if ( !v39 )
-        sub_1C32E7C(v38);
+        sub_1C372B4(v38);
       UnityEngine_Transform__set_localScale(v39, UnityEngine_Vector3_TypeInfo->static_fields->oneVector, 0);
-      v40 = (__int64)UnityEngine_Component__get_transform((UnityEngine_Component_o *)Component_object, 0);
-      v41 = (UnityEngine_Transform_o *)v40;
-      if ( !byte_4C313D7 )
+      v40 = UnityEngine_Component__get_transform((UnityEngine_Component_o *)Component_object, 0);
+      v41 = v40;
+      if ( !byte_4C3C927 )
       {
-        v40 = sub_1C32C20(&UnityEngine_Quaternion_TypeInfo);
-        byte_4C313D7 = 1;
+        v40 = (UnityEngine_Transform_o *)sub_1C37058(&UnityEngine_Quaternion_TypeInfo);
+        byte_4C3C927 = 1;
       }
       if ( !v41 )
-        sub_1C32E7C(v40);
+        sub_1C372B4(v40);
       UnityEngine_Transform__set_localRotation(
         v41,
         UnityEngine_Quaternion_TypeInfo->static_fields->identityQuaternion,
         0);
       if ( !v29 )
-        sub_1C32E7C(v42);
+        sub_1C372B4(v42);
       v26 = v26
           - ClassBoardEffectListDialogSkillDetailComponent__SetDetail(
               (ClassBoardEffectListDialogSkillDetailComponent_o *)Component_object,
@@ -373,7 +373,7 @@ LABEL_11:
               0);
       LODWORD(v54.fields._list) = v29[2].monitor;
       v49 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v54, v43, v44, v45, v46, v47, v48);
-      v50 = System_String__Format((System_String_o *)StringLiteral_23521/*"skill_{0:D5}"*/, v49, 0);
+      v50 = System_String__Format((System_String_o *)StringLiteral_23525/*"skill_{0:D5}"*/, v49, 0);
       ClassBoardEffectListDialogSkillDetailComponent__SetIconFromBattleServantWindow(
         (ClassBoardEffectListDialogSkillDetailComponent_o *)Component_object,
         this->fields.atlasManagerUnit,
@@ -384,7 +384,7 @@ LABEL_11:
   }
   System_Collections_Generic_List_Enumerator_object___Dispose(
     &v55,
-    (const MethodInfo_3522FA4 *)Method_System_Collections_Generic_List_Enumerator_ClassBoardEffectListDialogSkillListComponent_SkillDispData__Dispose__);
+    (const MethodInfo_352D80C *)Method_System_Collections_Generic_List_Enumerator_ClassBoardEffectListDialogSkillListComponent_SkillDispData__Dispose__);
   v51 = BattleServantClassBoardSkillEffectListComponent_TypeInfo;
   if ( !BattleServantClassBoardSkillEffectListComponent_TypeInfo->_2.cctor_finished )
   {
@@ -407,6 +407,6 @@ void BattleServantClassBoardSkillEffectListComponent___Init_b__2_0(
 
   atlasManagerUnit = this->fields.atlasManagerUnit;
   if ( !atlasManagerUnit )
-    sub_1C32E7C(0);
+    sub_1C372B4(0);
   AtlasManagerUnit__Load(atlasManagerUnit, f, 1, 0);
 }

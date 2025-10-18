@@ -18,7 +18,7 @@ void BattleDefenceTargetHpGaugeComponent__CompleteDefenceTargetDamageGauge(
     || (UIProgressBar__set_value(damageGauge, (float)nowval / (float)this->fields.maxval, 0),
         (damageGauge = this->fields.damageGauge) == 0) )
   {
-    sub_1C32E7C(damageGauge);
+    sub_1C372B4(damageGauge);
   }
   UIProgressBar__set_alpha(damageGauge, 1.0, 0);
 }
@@ -39,7 +39,7 @@ void BattleDefenceTargetHpGaugeComponent__SetHpGauge(
     || (UIProgressBar__set_value(damageGauge, (float)this->fields.nowval / (float)this->fields.maxval, 0),
         (damageGauge = this->fields.damageGauge) == 0) )
   {
-    sub_1C32E7C(damageGauge);
+    sub_1C372B4(damageGauge);
   }
   UIProgressBar__set_alpha(damageGauge, 1.0, 0);
 }
@@ -71,7 +71,7 @@ void BattleDefenceTargetHpGaugeComponent__UpdateDefenceTargetDamageGauge(
 
   damageGauge = this->fields.damageGauge;
   if ( !damageGauge )
-    sub_1C32E7C(0);
+    sub_1C372B4(0);
   UIProgressBar__set_alpha(damageGauge, 1.0 - per, 0);
 }
 
@@ -152,36 +152,36 @@ void BattleDefenceTargetHpGaugeComponent__UpdateDefenceTargetValue(
   __int64 v73; // [xsp+10h] [xbp-40h] BYREF
   __int64 v74; // [xsp+18h] [xbp-38h] BYREF
 
-  if ( (byte_4C3ADCA & 1) == 0 )
+  if ( (byte_4C463DE & 1) == 0 )
   {
-    sub_1C32C20(&double_TypeInfo);
-    sub_1C32C20(&object___TypeInfo);
-    sub_1C32C20(&float_TypeInfo);
-    sub_1C32C20(&StringLiteral_19689/*"from"*/);
-    sub_1C32C20(&StringLiteral_24067/*"time"*/);
-    sub_1C32C20(&StringLiteral_22435/*"onupdate"*/);
-    sub_1C32C20(&StringLiteral_15184/*"UpdateDefenceTargetDamageGauge"*/);
-    sub_1C32C20(&StringLiteral_18551/*"delay"*/);
-    sub_1C32C20(&StringLiteral_24106/*"to"*/);
-    sub_1C32C20(&StringLiteral_4627/*"CompleteDefenceTargetDamageGauge"*/);
-    sub_1C32C20(&StringLiteral_22427/*"oncomplete"*/);
-    sub_1C32C20(&iTween_TypeInfo);
-    byte_4C3ADCA = 1;
+    sub_1C37058(&double_TypeInfo);
+    sub_1C37058(&object___TypeInfo);
+    sub_1C37058(&float_TypeInfo);
+    sub_1C37058(&StringLiteral_19692/*"from"*/);
+    sub_1C37058(&StringLiteral_24071/*"time"*/);
+    sub_1C37058(&StringLiteral_22438/*"onupdate"*/);
+    sub_1C37058(&StringLiteral_15186/*"UpdateDefenceTargetDamageGauge"*/);
+    sub_1C37058(&StringLiteral_18554/*"delay"*/);
+    sub_1C37058(&StringLiteral_24110/*"to"*/);
+    sub_1C37058(&StringLiteral_4627/*"CompleteDefenceTargetDamageGauge"*/);
+    sub_1C37058(&StringLiteral_22430/*"oncomplete"*/);
+    sub_1C37058(&iTween_TypeInfo);
+    byte_4C463DE = 1;
   }
   this->fields.nowval = nowHp;
   BattleHpGaugeBarComponent__updateNomalGauge((BattleHpGaugeBarComponent_o *)this, nowHp, method);
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
-  v6 = sub_1C32CC8(object___TypeInfo, 12);
+  v6 = sub_1C37100(object___TypeInfo, 12);
   if ( !v6 )
-    sub_1C32E7C(0);
+    sub_1C372B4(0);
   v9 = (System_Object_array *)v6;
-  v10 = StringLiteral_19689/*"from"*/;
-  if ( StringLiteral_19689/*"from"*/ )
+  v10 = StringLiteral_19692/*"from"*/;
+  if ( StringLiteral_19692/*"from"*/ )
   {
-    v10 = sub_1C32D5C(StringLiteral_19689/*"from"*/, v9->obj.klass->_1.element_class);
+    v10 = sub_1C37194(StringLiteral_19692/*"from"*/, v9->obj.klass->_1.element_class);
     if ( !v10 )
       goto LABEL_60;
-    v11 = StringLiteral_19689/*"from"*/;
+    v11 = StringLiteral_19692/*"from"*/;
   }
   else
   {
@@ -190,27 +190,27 @@ void BattleDefenceTargetHpGaugeComponent__UpdateDefenceTargetValue(
   if ( !LODWORD(v9->max_length) )
     goto LABEL_59;
   v9->m_Items[0] = (Il2CppObject *)v11;
-  sub_1C32BC4((CGThumbnailListItem_o *)v9->m_Items, v11, v7, v8);
+  sub_1C36FFC((CGThumbnailListItem_o *)v9->m_Items, v11, v7, v8);
   v74 = 0;
   v10 = j_il2cpp_value_box_0(double_TypeInfo, &v74, v12, v13, v14, v15, v16, v17);
   v20 = (Il2CppObject *)v10;
   if ( v10 )
   {
-    v10 = sub_1C32D5C(v10, v9->obj.klass->_1.element_class);
+    v10 = sub_1C37194(v10, v9->obj.klass->_1.element_class);
     if ( !v10 )
       goto LABEL_60;
   }
   if ( LODWORD(v9->max_length) <= 1 )
     goto LABEL_59;
   v9->m_Items[1] = v20;
-  sub_1C32BC4((CGThumbnailListItem_o *)&v9->m_Items[1], (int32_t)v20, v18, v19);
-  v10 = StringLiteral_24106/*"to"*/;
-  if ( StringLiteral_24106/*"to"*/ )
+  sub_1C36FFC((CGThumbnailListItem_o *)&v9->m_Items[1], (int32_t)v20, v18, v19);
+  v10 = StringLiteral_24110/*"to"*/;
+  if ( StringLiteral_24110/*"to"*/ )
   {
-    v10 = sub_1C32D5C(StringLiteral_24106/*"to"*/, v9->obj.klass->_1.element_class);
+    v10 = sub_1C37194(StringLiteral_24110/*"to"*/, v9->obj.klass->_1.element_class);
     if ( !v10 )
       goto LABEL_60;
-    v23 = StringLiteral_24106/*"to"*/;
+    v23 = StringLiteral_24110/*"to"*/;
   }
   else
   {
@@ -219,27 +219,27 @@ void BattleDefenceTargetHpGaugeComponent__UpdateDefenceTargetValue(
   if ( LODWORD(v9->max_length) <= 2 )
     goto LABEL_59;
   v9->m_Items[2] = (Il2CppObject *)v23;
-  sub_1C32BC4((CGThumbnailListItem_o *)&v9->m_Items[2], v23, v21, v22);
+  sub_1C36FFC((CGThumbnailListItem_o *)&v9->m_Items[2], v23, v21, v22);
   v73 = 0x3FF0000000000000LL;
   v10 = j_il2cpp_value_box_0(double_TypeInfo, &v73, v24, v25, v26, v27, v28, v29);
   v32 = (Il2CppObject *)v10;
   if ( v10 )
   {
-    v10 = sub_1C32D5C(v10, v9->obj.klass->_1.element_class);
+    v10 = sub_1C37194(v10, v9->obj.klass->_1.element_class);
     if ( !v10 )
       goto LABEL_60;
   }
   if ( LODWORD(v9->max_length) <= 3 )
     goto LABEL_59;
   v9->m_Items[3] = v32;
-  sub_1C32BC4((CGThumbnailListItem_o *)&v9->m_Items[3], (int32_t)v32, v30, v31);
-  v10 = StringLiteral_22435/*"onupdate"*/;
-  if ( StringLiteral_22435/*"onupdate"*/ )
+  sub_1C36FFC((CGThumbnailListItem_o *)&v9->m_Items[3], (int32_t)v32, v30, v31);
+  v10 = StringLiteral_22438/*"onupdate"*/;
+  if ( StringLiteral_22438/*"onupdate"*/ )
   {
-    v10 = sub_1C32D5C(StringLiteral_22435/*"onupdate"*/, v9->obj.klass->_1.element_class);
+    v10 = sub_1C37194(StringLiteral_22438/*"onupdate"*/, v9->obj.klass->_1.element_class);
     if ( !v10 )
       goto LABEL_60;
-    v35 = StringLiteral_22435/*"onupdate"*/;
+    v35 = StringLiteral_22438/*"onupdate"*/;
   }
   else
   {
@@ -248,14 +248,14 @@ void BattleDefenceTargetHpGaugeComponent__UpdateDefenceTargetValue(
   if ( LODWORD(v9->max_length) <= 4 )
     goto LABEL_59;
   v9->m_Items[4] = (Il2CppObject *)v35;
-  sub_1C32BC4((CGThumbnailListItem_o *)&v9->m_Items[4], v35, v33, v34);
-  v10 = StringLiteral_15184/*"UpdateDefenceTargetDamageGauge"*/;
-  if ( StringLiteral_15184/*"UpdateDefenceTargetDamageGauge"*/ )
+  sub_1C36FFC((CGThumbnailListItem_o *)&v9->m_Items[4], v35, v33, v34);
+  v10 = StringLiteral_15186/*"UpdateDefenceTargetDamageGauge"*/;
+  if ( StringLiteral_15186/*"UpdateDefenceTargetDamageGauge"*/ )
   {
-    v10 = sub_1C32D5C(StringLiteral_15184/*"UpdateDefenceTargetDamageGauge"*/, v9->obj.klass->_1.element_class);
+    v10 = sub_1C37194(StringLiteral_15186/*"UpdateDefenceTargetDamageGauge"*/, v9->obj.klass->_1.element_class);
     if ( !v10 )
       goto LABEL_60;
-    v38 = StringLiteral_15184/*"UpdateDefenceTargetDamageGauge"*/;
+    v38 = StringLiteral_15186/*"UpdateDefenceTargetDamageGauge"*/;
   }
   else
   {
@@ -264,14 +264,14 @@ void BattleDefenceTargetHpGaugeComponent__UpdateDefenceTargetValue(
   if ( LODWORD(v9->max_length) <= 5 )
     goto LABEL_59;
   v9->m_Items[5] = (Il2CppObject *)v38;
-  sub_1C32BC4((CGThumbnailListItem_o *)&v9->m_Items[5], v38, v36, v37);
-  v10 = StringLiteral_22427/*"oncomplete"*/;
-  if ( StringLiteral_22427/*"oncomplete"*/ )
+  sub_1C36FFC((CGThumbnailListItem_o *)&v9->m_Items[5], v38, v36, v37);
+  v10 = StringLiteral_22430/*"oncomplete"*/;
+  if ( StringLiteral_22430/*"oncomplete"*/ )
   {
-    v10 = sub_1C32D5C(StringLiteral_22427/*"oncomplete"*/, v9->obj.klass->_1.element_class);
+    v10 = sub_1C37194(StringLiteral_22430/*"oncomplete"*/, v9->obj.klass->_1.element_class);
     if ( !v10 )
       goto LABEL_60;
-    v41 = StringLiteral_22427/*"oncomplete"*/;
+    v41 = StringLiteral_22430/*"oncomplete"*/;
   }
   else
   {
@@ -280,11 +280,11 @@ void BattleDefenceTargetHpGaugeComponent__UpdateDefenceTargetValue(
   if ( LODWORD(v9->max_length) <= 6 )
     goto LABEL_59;
   v9->m_Items[6] = (Il2CppObject *)v41;
-  sub_1C32BC4((CGThumbnailListItem_o *)&v9->m_Items[6], v41, v39, v40);
+  sub_1C36FFC((CGThumbnailListItem_o *)&v9->m_Items[6], v41, v39, v40);
   v10 = StringLiteral_4627/*"CompleteDefenceTargetDamageGauge"*/;
   if ( StringLiteral_4627/*"CompleteDefenceTargetDamageGauge"*/ )
   {
-    v10 = sub_1C32D5C(StringLiteral_4627/*"CompleteDefenceTargetDamageGauge"*/, v9->obj.klass->_1.element_class);
+    v10 = sub_1C37194(StringLiteral_4627/*"CompleteDefenceTargetDamageGauge"*/, v9->obj.klass->_1.element_class);
     if ( !v10 )
       goto LABEL_60;
     v44 = StringLiteral_4627/*"CompleteDefenceTargetDamageGauge"*/;
@@ -296,14 +296,14 @@ void BattleDefenceTargetHpGaugeComponent__UpdateDefenceTargetValue(
   if ( LODWORD(v9->max_length) <= 7 )
     goto LABEL_59;
   v9->m_Items[7] = (Il2CppObject *)v44;
-  sub_1C32BC4((CGThumbnailListItem_o *)&v9->m_Items[7], v44, v42, v43);
-  v10 = StringLiteral_18551/*"delay"*/;
-  if ( StringLiteral_18551/*"delay"*/ )
+  sub_1C36FFC((CGThumbnailListItem_o *)&v9->m_Items[7], v44, v42, v43);
+  v10 = StringLiteral_18554/*"delay"*/;
+  if ( StringLiteral_18554/*"delay"*/ )
   {
-    v10 = sub_1C32D5C(StringLiteral_18551/*"delay"*/, v9->obj.klass->_1.element_class);
+    v10 = sub_1C37194(StringLiteral_18554/*"delay"*/, v9->obj.klass->_1.element_class);
     if ( !v10 )
       goto LABEL_60;
-    v47 = StringLiteral_18551/*"delay"*/;
+    v47 = StringLiteral_18554/*"delay"*/;
   }
   else
   {
@@ -312,27 +312,27 @@ void BattleDefenceTargetHpGaugeComponent__UpdateDefenceTargetValue(
   if ( LODWORD(v9->max_length) <= 8 )
     goto LABEL_59;
   v9->m_Items[8] = (Il2CppObject *)v47;
-  sub_1C32BC4((CGThumbnailListItem_o *)&v9->m_Items[8], v47, v45, v46);
+  sub_1C36FFC((CGThumbnailListItem_o *)&v9->m_Items[8], v47, v45, v46);
   v72 = 1056964608;
   v10 = j_il2cpp_value_box_0(float_TypeInfo, &v72, v48, v49, v50, v51, v52, v53);
   v56 = (Il2CppObject *)v10;
   if ( v10 )
   {
-    v10 = sub_1C32D5C(v10, v9->obj.klass->_1.element_class);
+    v10 = sub_1C37194(v10, v9->obj.klass->_1.element_class);
     if ( !v10 )
       goto LABEL_60;
   }
   if ( LODWORD(v9->max_length) <= 9 )
     goto LABEL_59;
   v9->m_Items[9] = v56;
-  sub_1C32BC4((CGThumbnailListItem_o *)&v9->m_Items[9], (int32_t)v56, v54, v55);
-  v10 = StringLiteral_24067/*"time"*/;
-  if ( StringLiteral_24067/*"time"*/ )
+  sub_1C36FFC((CGThumbnailListItem_o *)&v9->m_Items[9], (int32_t)v56, v54, v55);
+  v10 = StringLiteral_24071/*"time"*/;
+  if ( StringLiteral_24071/*"time"*/ )
   {
-    v10 = sub_1C32D5C(StringLiteral_24067/*"time"*/, v9->obj.klass->_1.element_class);
+    v10 = sub_1C37194(StringLiteral_24071/*"time"*/, v9->obj.klass->_1.element_class);
     if ( !v10 )
       goto LABEL_60;
-    v59 = StringLiteral_24067/*"time"*/;
+    v59 = StringLiteral_24071/*"time"*/;
   }
   else
   {
@@ -341,25 +341,25 @@ void BattleDefenceTargetHpGaugeComponent__UpdateDefenceTargetValue(
   if ( LODWORD(v9->max_length) <= 0xA )
     goto LABEL_59;
   v9->m_Items[10] = (Il2CppObject *)v59;
-  sub_1C32BC4((CGThumbnailListItem_o *)&v9->m_Items[10], v59, v57, v58);
+  sub_1C36FFC((CGThumbnailListItem_o *)&v9->m_Items[10], v59, v57, v58);
   v71 = 1065353216;
   v10 = j_il2cpp_value_box_0(float_TypeInfo, &v71, v60, v61, v62, v63, v64, v65);
   v68 = (Il2CppObject *)v10;
   if ( v10 )
   {
-    v10 = sub_1C32D5C(v10, v9->obj.klass->_1.element_class);
+    v10 = sub_1C37194(v10, v9->obj.klass->_1.element_class);
     if ( !v10 )
     {
 LABEL_60:
-      v70 = sub_1C32EA0(v10);
-      sub_1C32D48(v70, 0);
+      v70 = sub_1C372D8(v10);
+      sub_1C37180(v70, 0);
     }
   }
   if ( LODWORD(v9->max_length) <= 0xB )
 LABEL_59:
-    sub_1C32E84(v10);
+    sub_1C372BC(v10);
   v9->m_Items[11] = v68;
-  sub_1C32BC4((CGThumbnailListItem_o *)&v9->m_Items[11], (int32_t)v68, v66, v67);
+  sub_1C36FFC((CGThumbnailListItem_o *)&v9->m_Items[11], (int32_t)v68, v66, v67);
   if ( !iTween_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(iTween_TypeInfo);
   v69 = iTween__Hash(v9, 0);

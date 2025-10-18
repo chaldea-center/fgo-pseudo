@@ -1,9 +1,9 @@
 void RestrictionNotSatisfySlot___cctor(const MethodInfo *method)
 {
-  if ( (byte_4C33767 & 1) == 0 )
+  if ( (byte_4C3ED51 & 1) == 0 )
   {
-    sub_1C32C20(&RestrictionNotSatisfySlot_TypeInfo);
-    byte_4C33767 = 1;
+    sub_1C37058(&RestrictionNotSatisfySlot_TypeInfo);
+    byte_4C3ED51 = 1;
   }
   RestrictionNotSatisfySlot_TypeInfo->static_fields->ICON_MAX_NUM = 4;
 }
@@ -36,49 +36,49 @@ System_String_o *RestrictionNotSatisfySlot__AddColorCodeAndFixMessage(
   const MethodInfo *v17; // x3
   int32_t v18; // w1
 
-  if ( (byte_4C33765 & 1) == 0 )
+  if ( (byte_4C3ED4F & 1) == 0 )
   {
-    sub_1C32C20(&LocalizationManager_TypeInfo);
-    sub_1C32C20(&string___TypeInfo);
-    sub_1C32C20(&StringLiteral_43/*"\n"*/);
-    sub_1C32C20(&StringLiteral_15821/*"[-]"*/);
-    sub_1C32C20(&StringLiteral_11104/*"RESTRICTION_NOT_SATISFY_DIALOG_WHOLE_SUFFIX"*/);
-    sub_1C32C20(&StringLiteral_15924/*"[FFFF00]"*/);
-    byte_4C33765 = 1;
+    sub_1C37058(&LocalizationManager_TypeInfo);
+    sub_1C37058(&string___TypeInfo);
+    sub_1C37058(&StringLiteral_43/*"\n"*/);
+    sub_1C37058(&StringLiteral_15823/*"[-]"*/);
+    sub_1C37058(&StringLiteral_11105/*"RESTRICTION_NOT_SATISFY_DIALOG_WHOLE_SUFFIX"*/);
+    sub_1C37058(&StringLiteral_15926/*"[FFFF00]"*/);
+    byte_4C3ED4F = 1;
   }
-  v4 = (System_String_o *)sub_1C32CC8(string___TypeInfo, 5);
+  v4 = (System_String_o *)sub_1C37100(string___TypeInfo, 5);
   if ( !v4 )
-    sub_1C32E7C(0);
+    sub_1C372B4(0);
   v7 = v4;
   if ( !LODWORD(v4[1].klass) )
     goto LABEL_12;
-  v8 = StringLiteral_15924/*"[FFFF00]"*/;
-  v4[1].monitor = (void *)StringLiteral_15924/*"[FFFF00]"*/;
-  sub_1C32BC4((CGThumbnailListItem_o *)&v4[1].monitor, v8, v5, v6);
+  v8 = StringLiteral_15926/*"[FFFF00]"*/;
+  v4[1].monitor = (void *)StringLiteral_15926/*"[FFFF00]"*/;
+  sub_1C36FFC((CGThumbnailListItem_o *)&v4[1].monitor, v8, v5, v6);
   if ( LODWORD(v7[1].klass) <= 1 )
     goto LABEL_12;
   v7[1].fields = (System_String_Fields)message;
-  sub_1C32BC4((CGThumbnailListItem_o *)&v7[1].fields, (int32_t)message, v9, v10);
+  sub_1C36FFC((CGThumbnailListItem_o *)&v7[1].fields, (int32_t)message, v9, v10);
   if ( LODWORD(v7[1].klass) <= 2 )
     goto LABEL_12;
   v13 = StringLiteral_43/*"\n"*/;
   v7[2].klass = (System_String_c *)StringLiteral_43/*"\n"*/;
-  sub_1C32BC4((CGThumbnailListItem_o *)&v7[2], v13, v11, v12);
+  sub_1C36FFC((CGThumbnailListItem_o *)&v7[2], v13, v11, v12);
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-  v4 = LocalizationManager__Get((System_String_o *)StringLiteral_11104/*"RESTRICTION_NOT_SATISFY_DIALOG_WHOLE_SUFFIX"*/, 0);
+  v4 = LocalizationManager__Get((System_String_o *)StringLiteral_11105/*"RESTRICTION_NOT_SATISFY_DIALOG_WHOLE_SUFFIX"*/, 0);
   if ( LODWORD(v7[1].klass) <= 3
     || (v7[2].monitor = v4,
-        sub_1C32BC4((CGThumbnailListItem_o *)&v7[2].monitor, (int32_t)v4, v14, v15),
+        sub_1C36FFC((CGThumbnailListItem_o *)&v7[2].monitor, (int32_t)v4, v14, v15),
         LODWORD(v7[1].klass) <= 4) )
   {
 LABEL_12:
-    sub_1C32E84(v4);
+    sub_1C372BC(v4);
   }
-  v18 = (int)StringLiteral_15821/*"[-]"*/;
-  v7[2].fields = (System_String_Fields)StringLiteral_15821/*"[-]"*/;
-  sub_1C32BC4((CGThumbnailListItem_o *)&v7[2].fields, v18, v16, v17);
-  return System_String__Concat_63559060((System_String_array *)v7, 0);
+  v18 = (int)StringLiteral_15823/*"[-]"*/;
+  v7[2].fields = (System_String_Fields)StringLiteral_15823/*"[-]"*/;
+  sub_1C36FFC((CGThumbnailListItem_o *)&v7[2].fields, v18, v16, v17);
+  return System_String__Concat_63602172((System_String_array *)v7, 0);
 }
 
 
@@ -121,32 +121,32 @@ void RestrictionNotSatisfySlot__GetIconIdFromIndividuality(
   ServantClassEntity_o *v31; // [xsp+10h] [xbp-70h] BYREF
   Il2CppObject *entity; // [xsp+18h] [xbp-68h] BYREF
 
-  if ( (byte_4C33764 & 1) == 0 )
+  if ( (byte_4C3ED4E & 1) == 0 )
   {
-    sub_1C32C20(&Method_DataManager_GetMaster_ServantClassMaster___);
-    sub_1C32C20(&Method_DataManager_GetMaster_ServantMaster___);
-    sub_1C32C20(&DataManager_TypeInfo);
-    sub_1C32C20(&Method_DataMasterBase_ServantMaster__ServantEntity__int__TryGetEntity__);
-    sub_1C32C20(&Method_System_Collections_Generic_List_int__Add__);
-    sub_1C32C20(&Method_System_Collections_Generic_List_int__ToArray__);
-    sub_1C32C20(&Method_System_Collections_Generic_List_int___ctor__);
-    sub_1C32C20(&System_Collections_Generic_List_int__TypeInfo);
-    byte_4C33764 = 1;
+    sub_1C37058(&Method_DataManager_GetMaster_ServantClassMaster___);
+    sub_1C37058(&Method_DataManager_GetMaster_ServantMaster___);
+    sub_1C37058(&DataManager_TypeInfo);
+    sub_1C37058(&Method_DataMasterBase_ServantMaster__ServantEntity__int__TryGetEntity__);
+    sub_1C37058(&Method_System_Collections_Generic_List_int__Add__);
+    sub_1C37058(&Method_System_Collections_Generic_List_int__ToArray__);
+    sub_1C37058(&Method_System_Collections_Generic_List_int___ctor__);
+    sub_1C37058(&System_Collections_Generic_List_int__TypeInfo);
+    byte_4C3ED4E = 1;
   }
   v31 = 0;
   entity = 0;
   if ( !DataManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-  Master_object = DataManager__GetMaster_object_((const MethodInfo_30DD39C *)Method_DataManager_GetMaster_ServantMaster___);
-  v8 = DataManager__GetMaster_object_((const MethodInfo_30DD39C *)Method_DataManager_GetMaster_ServantClassMaster___);
-  v9 = (System_Collections_Generic_List_int__o *)sub_1C32E6C(System_Collections_Generic_List_int__TypeInfo);
+  Master_object = DataManager__GetMaster_object_((const MethodInfo_30E7C04 *)Method_DataManager_GetMaster_ServantMaster___);
+  v8 = DataManager__GetMaster_object_((const MethodInfo_30E7C04 *)Method_DataManager_GetMaster_ServantClassMaster___);
+  v9 = (System_Collections_Generic_List_int__o *)sub_1C372A4(System_Collections_Generic_List_int__TypeInfo);
   System_Collections_Generic_List_int____ctor(
     v9,
-    (const MethodInfo_377AF44 *)Method_System_Collections_Generic_List_int___ctor__);
-  v10 = (System_Collections_Generic_List_int__o *)sub_1C32E6C(System_Collections_Generic_List_int__TypeInfo);
+    (const MethodInfo_37857AC *)Method_System_Collections_Generic_List_int___ctor__);
+  v10 = (System_Collections_Generic_List_int__o *)sub_1C372A4(System_Collections_Generic_List_int__TypeInfo);
   System_Collections_Generic_List_int____ctor(
     v10,
-    (const MethodInfo_377AF44 *)Method_System_Collections_Generic_List_int___ctor__);
+    (const MethodInfo_37857AC *)Method_System_Collections_Generic_List_int___ctor__);
   if ( !individuality )
     goto LABEL_29;
   max_length = individuality->max_length;
@@ -156,7 +156,7 @@ void RestrictionNotSatisfySlot__GetIconIdFromIndividuality(
     do
     {
       if ( v13 >= (unsigned int)max_length )
-        sub_1C32E84(EntityByIndividuality);
+        sub_1C372BC(EntityByIndividuality);
       if ( !Master_object )
         goto LABEL_29;
       v14 = individuality->m_Items[v13];
@@ -164,7 +164,7 @@ void RestrictionNotSatisfySlot__GetIconIdFromIndividuality(
                                 (DataMasterBase_TMaster__TEntity__PKType__o *)Master_object,
                                 &entity,
                                 v14,
-                                (const MethodInfo_3396884 *)Method_DataMasterBase_ServantMaster__ServantEntity__int__TryGetEntity__);
+                                (const MethodInfo_33A10EC *)Method_DataMasterBase_ServantMaster__ServantEntity__int__TryGetEntity__);
       if ( EntityByIndividuality )
       {
         if ( !v9 )
@@ -184,7 +184,7 @@ LABEL_24:
           System_Collections_Generic_List_int___AddWithResize(
             v23,
             iconImageId,
-            *(const MethodInfo_377B798 **)(*(_QWORD *)(v22 + 192) + 112LL));
+            *(const MethodInfo_3786000 **)(*(_QWORD *)(v22 + 192) + 112LL));
           goto LABEL_25;
         }
         v9->fields._size = size + 1;
@@ -229,19 +229,19 @@ LABEL_25:
   if ( !v9
     || (v24 = System_Collections_Generic_List_int___ToArray(
                 v9,
-                (const MethodInfo_377D250 *)Method_System_Collections_Generic_List_int__ToArray__),
+                (const MethodInfo_3787AB8 *)Method_System_Collections_Generic_List_int__ToArray__),
         *servantIds = v24,
-        sub_1C32BC4((CGThumbnailListItem_o *)servantIds, (int32_t)v24, v25, v26),
+        sub_1C36FFC((CGThumbnailListItem_o *)servantIds, (int32_t)v24, v25, v26),
         !v10) )
   {
 LABEL_29:
-    sub_1C32E7C(EntityByIndividuality);
+    sub_1C372B4(EntityByIndividuality);
   }
   v27 = System_Collections_Generic_List_int___ToArray(
           v10,
-          (const MethodInfo_377D250 *)Method_System_Collections_Generic_List_int__ToArray__);
+          (const MethodInfo_3787AB8 *)Method_System_Collections_Generic_List_int__ToArray__);
   *classImageIds = v27;
-  sub_1C32BC4((CGThumbnailListItem_o *)classImageIds, (int32_t)v27, v28, v29);
+  sub_1C36FFC((CGThumbnailListItem_o *)classImageIds, (int32_t)v27, v28, v29);
 }
 
 
@@ -252,24 +252,24 @@ System_String_o *RestrictionNotSatisfySlot__RemoveColorCode(
 {
   System_String_o *v4; // x0
 
-  if ( (byte_4C33766 & 1) == 0 )
+  if ( (byte_4C3ED50 & 1) == 0 )
   {
-    sub_1C32C20(&System_Text_RegularExpressions_Regex_TypeInfo);
-    sub_1C32C20(&StringLiteral_15953/*"[[]-[\\]]"*/);
-    sub_1C32C20(&StringLiteral_1/*""*/);
-    sub_1C32C20(&StringLiteral_15954/*"[[][0-9A-F]{6}[\\]]"*/);
-    byte_4C33766 = 1;
+    sub_1C37058(&System_Text_RegularExpressions_Regex_TypeInfo);
+    sub_1C37058(&StringLiteral_15955/*"[[]-[\\]]"*/);
+    sub_1C37058(&StringLiteral_1/*""*/);
+    sub_1C37058(&StringLiteral_15956/*"[[][0-9A-F]{6}[\\]]"*/);
+    byte_4C3ED50 = 1;
   }
   if ( !System_Text_RegularExpressions_Regex_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(System_Text_RegularExpressions_Regex_TypeInfo);
   v4 = System_Text_RegularExpressions_Regex__Replace(
          message,
-         (System_String_o *)StringLiteral_15954/*"[[][0-9A-F]{6}[\\]]"*/,
+         (System_String_o *)StringLiteral_15956/*"[[][0-9A-F]{6}[\\]]"*/,
          (System_String_o *)StringLiteral_1/*""*/,
          0);
   return System_Text_RegularExpressions_Regex__Replace(
            v4,
-           (System_String_o *)StringLiteral_15953/*"[[]-[\\]]"*/,
+           (System_String_o *)StringLiteral_15955/*"[[]-[\\]]"*/,
            (System_String_o *)StringLiteral_1/*""*/,
            0);
 }
@@ -484,69 +484,69 @@ void RestrictionNotSatisfySlot__SetItem(
   int32_t pos; // [xsp+ECh] [xbp-64h] BYREF
 
   pos = number;
-  if ( (byte_4C33763 & 1) == 0 )
+  if ( (byte_4C3ED4D & 1) == 0 )
   {
-    sub_1C32C20(&Method_System_Array_Empty_int___);
-    sub_1C32C20(&Method_System_Array_Empty_RestrictionEntity___);
-    sub_1C32C20(&Method_DataManager_GetMasterData_UserServantCollectionMaster___);
-    sub_1C32C20(&Method_DataManager_GetMaster_NpcFollowerMaster___);
-    sub_1C32C20(&Method_DataManager_GetMaster_NpcServantFollowerMaster___);
-    sub_1C32C20(&Method_DataManager_GetMaster_QuestPhaseMaster___);
-    sub_1C32C20(&DataManager_TypeInfo);
-    sub_1C32C20(&Method_System_Collections_Generic_Dictionary_int__FollowerInfo__ContainsKey__);
-    sub_1C32C20(&Method_System_Collections_Generic_Dictionary_int__FollowerInfo___ctor__);
-    sub_1C32C20(&Method_System_Collections_Generic_Dictionary_int__FollowerInfo__get_Item__);
-    sub_1C32C20(&System_Collections_Generic_Dictionary_int__FollowerInfo__TypeInfo);
-    sub_1C32C20(&Method_System_Linq_Enumerable_ToArray_RestrictionEntity___);
-    sub_1C32C20(&Method_System_Linq_Enumerable_Where_RestrictionEntity___);
-    sub_1C32C20(&Method_System_Collections_Generic_List_Enumerator_string__Dispose__);
-    sub_1C32C20(&Method_System_Collections_Generic_List_Enumerator_string__MoveNext__);
-    sub_1C32C20(&Method_System_Collections_Generic_List_Enumerator_string__get_Current__);
-    sub_1C32C20(&System_Func_RestrictionEntity__bool__TypeInfo);
-    sub_1C32C20(&Method_UnityEngine_GameObject_GetComponent_RestrictionNotSatisfySlotIcons___);
-    sub_1C32C20(&Method_System_Collections_Generic_List_int__AddRange__);
-    sub_1C32C20(&Method_System_Collections_Generic_List_int__Add__);
-    sub_1C32C20(&Method_System_Collections_Generic_List_UIWidget__Add__);
-    sub_1C32C20(&Method_System_Collections_Generic_List_bool__Add__);
-    sub_1C32C20(&Method_System_Collections_Generic_List_string__Add__);
-    sub_1C32C20(&Method_System_Collections_Generic_List_bool__Clear__);
-    sub_1C32C20(&Method_System_Collections_Generic_List_int__Clear__);
-    sub_1C32C20(&Method_System_Collections_Generic_List_string__GetEnumerator__);
-    sub_1C32C20(&Method_System_Collections_Generic_List_UIWidget__ToArray__);
-    sub_1C32C20(&Method_System_Collections_Generic_List_int__ToArray__);
-    sub_1C32C20(&Method_System_Collections_Generic_List_bool__ToArray__);
-    sub_1C32C20(&Method_System_Collections_Generic_List_int___ctor__);
-    sub_1C32C20(&Method_System_Collections_Generic_List_bool___ctor__);
-    sub_1C32C20(&Method_System_Collections_Generic_List_UIWidget___ctor__);
-    sub_1C32C20(&Method_System_Collections_Generic_List_string___ctor__);
-    sub_1C32C20(&Method_System_Collections_Generic_List_int___ctor___78010240);
-    sub_1C32C20(&Method_System_Collections_Generic_List_int____get_Count__);
-    sub_1C32C20(&Method_System_Collections_Generic_List_Restriction_RangeType__get_Count__);
-    sub_1C32C20(&Method_System_Collections_Generic_List_string__get_Count__);
-    sub_1C32C20(&Method_System_Collections_Generic_List_string__get_Item__);
-    sub_1C32C20(&Method_System_Collections_Generic_List_int____get_Item__);
-    sub_1C32C20(&Method_System_Collections_Generic_List_Restriction_RangeType__get_Item__);
-    sub_1C32C20(&Method_System_Collections_Generic_List_string__set_Item__);
-    sub_1C32C20(&System_Collections_Generic_List_bool__TypeInfo);
-    sub_1C32C20(&System_Collections_Generic_List_int__TypeInfo);
-    sub_1C32C20(&System_Collections_Generic_List_string__TypeInfo);
-    sub_1C32C20(&System_Collections_Generic_List_UIWidget__TypeInfo);
-    sub_1C32C20(&LocalizationManager_TypeInfo);
-    sub_1C32C20(&NetworkManager_TypeInfo);
-    sub_1C32C20(&Method_UnityEngine_Object_Instantiate_UILabel____78147200);
-    sub_1C32C20(&UnityEngine_Object_TypeInfo);
-    sub_1C32C20(&RestrictionNotSatisfySlot_TypeInfo);
-    sub_1C32C20(&Method_SingletonMonoBehaviour_SwitchParameterDisplayManager__get_Instance__);
-    sub_1C32C20(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-    sub_1C32C20(&Method_RestrictionNotSatisfySlot___c__SetItem_b__14_1__);
-    sub_1C32C20(&Method_RestrictionNotSatisfySlot___c__DisplayClass14_0__SetItem_b__0__);
-    sub_1C32C20(&RestrictionNotSatisfySlot___c__DisplayClass14_0_TypeInfo);
-    sub_1C32C20(&RestrictionNotSatisfySlot___c_TypeInfo);
-    sub_1C32C20(&StringLiteral_43/*"\n"*/);
-    sub_1C32C20(&StringLiteral_21528/*"member_txt_"*/);
-    sub_1C32C20(&StringLiteral_11101/*"RESTRICTION_NOT_SATISFY_DIALOG_REQUIRED"*/);
-    sub_1C32C20(&StringLiteral_1/*""*/);
-    byte_4C33763 = 1;
+    sub_1C37058(&Method_System_Array_Empty_int___);
+    sub_1C37058(&Method_System_Array_Empty_RestrictionEntity___);
+    sub_1C37058(&Method_DataManager_GetMasterData_UserServantCollectionMaster___);
+    sub_1C37058(&Method_DataManager_GetMaster_NpcFollowerMaster___);
+    sub_1C37058(&Method_DataManager_GetMaster_NpcServantFollowerMaster___);
+    sub_1C37058(&Method_DataManager_GetMaster_QuestPhaseMaster___);
+    sub_1C37058(&DataManager_TypeInfo);
+    sub_1C37058(&Method_System_Collections_Generic_Dictionary_int__FollowerInfo__ContainsKey__);
+    sub_1C37058(&Method_System_Collections_Generic_Dictionary_int__FollowerInfo___ctor__);
+    sub_1C37058(&Method_System_Collections_Generic_Dictionary_int__FollowerInfo__get_Item__);
+    sub_1C37058(&System_Collections_Generic_Dictionary_int__FollowerInfo__TypeInfo);
+    sub_1C37058(&Method_System_Linq_Enumerable_ToArray_RestrictionEntity___);
+    sub_1C37058(&Method_System_Linq_Enumerable_Where_RestrictionEntity___);
+    sub_1C37058(&Method_System_Collections_Generic_List_Enumerator_string__Dispose__);
+    sub_1C37058(&Method_System_Collections_Generic_List_Enumerator_string__MoveNext__);
+    sub_1C37058(&Method_System_Collections_Generic_List_Enumerator_string__get_Current__);
+    sub_1C37058(&System_Func_RestrictionEntity__bool__TypeInfo);
+    sub_1C37058(&Method_UnityEngine_GameObject_GetComponent_RestrictionNotSatisfySlotIcons___);
+    sub_1C37058(&Method_System_Collections_Generic_List_int__AddRange__);
+    sub_1C37058(&Method_System_Collections_Generic_List_int__Add__);
+    sub_1C37058(&Method_System_Collections_Generic_List_UIWidget__Add__);
+    sub_1C37058(&Method_System_Collections_Generic_List_bool__Add__);
+    sub_1C37058(&Method_System_Collections_Generic_List_string__Add__);
+    sub_1C37058(&Method_System_Collections_Generic_List_bool__Clear__);
+    sub_1C37058(&Method_System_Collections_Generic_List_int__Clear__);
+    sub_1C37058(&Method_System_Collections_Generic_List_string__GetEnumerator__);
+    sub_1C37058(&Method_System_Collections_Generic_List_UIWidget__ToArray__);
+    sub_1C37058(&Method_System_Collections_Generic_List_int__ToArray__);
+    sub_1C37058(&Method_System_Collections_Generic_List_bool__ToArray__);
+    sub_1C37058(&Method_System_Collections_Generic_List_int___ctor__);
+    sub_1C37058(&Method_System_Collections_Generic_List_bool___ctor__);
+    sub_1C37058(&Method_System_Collections_Generic_List_UIWidget___ctor__);
+    sub_1C37058(&Method_System_Collections_Generic_List_string___ctor__);
+    sub_1C37058(&Method_System_Collections_Generic_List_int___ctor___78055976);
+    sub_1C37058(&Method_System_Collections_Generic_List_int____get_Count__);
+    sub_1C37058(&Method_System_Collections_Generic_List_Restriction_RangeType__get_Count__);
+    sub_1C37058(&Method_System_Collections_Generic_List_string__get_Count__);
+    sub_1C37058(&Method_System_Collections_Generic_List_string__get_Item__);
+    sub_1C37058(&Method_System_Collections_Generic_List_int____get_Item__);
+    sub_1C37058(&Method_System_Collections_Generic_List_Restriction_RangeType__get_Item__);
+    sub_1C37058(&Method_System_Collections_Generic_List_string__set_Item__);
+    sub_1C37058(&System_Collections_Generic_List_bool__TypeInfo);
+    sub_1C37058(&System_Collections_Generic_List_int__TypeInfo);
+    sub_1C37058(&System_Collections_Generic_List_string__TypeInfo);
+    sub_1C37058(&System_Collections_Generic_List_UIWidget__TypeInfo);
+    sub_1C37058(&LocalizationManager_TypeInfo);
+    sub_1C37058(&NetworkManager_TypeInfo);
+    sub_1C37058(&Method_UnityEngine_Object_Instantiate_UILabel____78192992);
+    sub_1C37058(&UnityEngine_Object_TypeInfo);
+    sub_1C37058(&RestrictionNotSatisfySlot_TypeInfo);
+    sub_1C37058(&Method_SingletonMonoBehaviour_SwitchParameterDisplayManager__get_Instance__);
+    sub_1C37058(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    sub_1C37058(&Method_RestrictionNotSatisfySlot___c__SetItem_b__14_1__);
+    sub_1C37058(&Method_RestrictionNotSatisfySlot___c__DisplayClass14_0__SetItem_b__0__);
+    sub_1C37058(&RestrictionNotSatisfySlot___c__DisplayClass14_0_TypeInfo);
+    sub_1C37058(&RestrictionNotSatisfySlot___c_TypeInfo);
+    sub_1C37058(&StringLiteral_43/*"\n"*/);
+    sub_1C37058(&StringLiteral_21531/*"member_txt_"*/);
+    sub_1C37058(&StringLiteral_11102/*"RESTRICTION_NOT_SATISFY_DIALOG_REQUIRED"*/);
+    sub_1C37058(&StringLiteral_1/*""*/);
+    byte_4C3ED4D = 1;
   }
   classImageIds = 0;
   servantIds = 0;
@@ -555,16 +555,16 @@ void RestrictionNotSatisfySlot__SetItem(
   v201 = 0;
   entity = 0;
   npcServantFollowerEntity = 0;
-  v7 = sub_1C32E6C(RestrictionNotSatisfySlot___c__DisplayClass14_0_TypeInfo);
+  v7 = sub_1C372A4(RestrictionNotSatisfySlot___c__DisplayClass14_0_TypeInfo);
   System_Object___ctor((Il2CppObject *)v7, 0);
   if ( !v7 )
     goto LABEL_286;
   *(_QWORD *)(v7 + 16) = memberItem;
   v11 = (PartyOrganizationListViewItem_o **)(v7 + 16);
-  sub_1C32BC4((CGThumbnailListItem_o *)(v7 + 16), (int32_t)memberItem, v9, v10);
+  sub_1C36FFC((CGThumbnailListItem_o *)(v7 + 16), (int32_t)memberItem, v9, v10);
   numberSprite = this->fields.numberSprite;
   v13 = System_Int32__ToString((int32_t)&pos, 0);
-  partyMemberItem = System_String__Concat_63518544((System_String_o *)StringLiteral_21528/*"member_txt_"*/, v13, 0);
+  partyMemberItem = System_String__Concat_63561656((System_String_o *)StringLiteral_21531/*"member_txt_"*/, v13, 0);
   if ( !numberSprite )
     goto LABEL_286;
   UISprite__set_spriteName(numberSprite, partyMemberItem, 0);
@@ -584,29 +584,29 @@ void RestrictionNotSatisfySlot__SetItem(
   v16 = *((_QWORD *)Method_System_Array_Empty_RestrictionEntity___ + 7);
   if ( !v16 )
   {
-    sub_1C83390(Method_System_Array_Empty_RestrictionEntity___);
+    sub_1C877C8(Method_System_Array_Empty_RestrictionEntity___);
     v16 = v15[7];
   }
   v17 = *(_QWORD *)(v16 + 16);
   if ( (*(_BYTE *)(v17 + 309) & 1) == 0 )
-    v17 = sub_1C83334(inited);
+    v17 = sub_1C8776C(inited);
   if ( !*(_DWORD *)(v17 + 224) )
     inited = j_il2cpp_runtime_class_init_0(v17);
   v18 = *(_QWORD *)(v15[7] + 16LL);
   if ( (*(_BYTE *)(v18 + 309) & 1) == 0 )
-    v18 = sub_1C83334(inited);
+    v18 = sub_1C8776C(inited);
   v19 = **(System_Collections_Generic_IEnumerable_TSource__o ***)(v18 + 184);
-  v20 = (System_Collections_Generic_List_object__o *)sub_1C32E6C(System_Collections_Generic_List_string__TypeInfo);
+  v20 = (System_Collections_Generic_List_object__o *)sub_1C372A4(System_Collections_Generic_List_string__TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v20,
-    (const MethodInfo_3797F88 *)Method_System_Collections_Generic_List_string___ctor__);
+    (const MethodInfo_37A27F0 *)Method_System_Collections_Generic_List_string___ctor__);
   if ( !questRestrictionInfo )
     goto LABEL_286;
   partyMemberItem = (System_String_o *)QuestRestrictionInfo__IsUseOldMaster(questRestrictionInfo, 0);
   if ( ((unsigned __int8)partyMemberItem & 1) != 0 )
   {
     restrictionEntityList = (System_Collections_Generic_IEnumerable_TSource__o *)questRestrictionInfo->fields.restrictionEntityList;
-    v22 = (System_Func_object__bool__o *)sub_1C32E6C(System_Func_RestrictionEntity__bool__TypeInfo);
+    v22 = (System_Func_object__bool__o *)sub_1C372A4(System_Func_RestrictionEntity__bool__TypeInfo);
     System_Func_object__bool____ctor(
       v22,
       (Il2CppObject *)v7,
@@ -615,10 +615,10 @@ void RestrictionNotSatisfySlot__SetItem(
     v23 = System_Linq_Enumerable__Where_object_(
             restrictionEntityList,
             (System_Func_TSource__bool__o *)v22,
-            (const MethodInfo_3123BA8 *)Method_System_Linq_Enumerable_Where_RestrictionEntity___);
+            (const MethodInfo_312E410 *)Method_System_Linq_Enumerable_Where_RestrictionEntity___);
     v19 = (System_Collections_Generic_IEnumerable_TSource__o *)System_Linq_Enumerable__ToArray_object_(
                                                                  v23,
-                                                                 (const MethodInfo_311CA8C *)Method_System_Linq_Enumerable_ToArray_RestrictionEntity___);
+                                                                 (const MethodInfo_31272F4 *)Method_System_Linq_Enumerable_ToArray_RestrictionEntity___);
     if ( questRestrictionInfo->fields.isUniqueServant && questRestrictionInfo->fields.isUniqueIndividuality )
     {
       v24 = RestrictionNotSatisfySlot___c_TypeInfo;
@@ -636,21 +636,21 @@ void RestrictionNotSatisfySlot__SetItem(
           v24 = RestrictionNotSatisfySlot___c_TypeInfo;
         }
         v26 = (Il2CppObject *)v24->static_fields->__9;
-        _9__14_1 = (System_Func_object__bool__o *)sub_1C32E6C(System_Func_RestrictionEntity__bool__TypeInfo);
+        _9__14_1 = (System_Func_object__bool__o *)sub_1C372A4(System_Func_RestrictionEntity__bool__TypeInfo);
         System_Func_object__bool____ctor(_9__14_1, v26, Method_RestrictionNotSatisfySlot___c__SetItem_b__14_1__, 0);
         static_fields = RestrictionNotSatisfySlot___c_TypeInfo->static_fields;
         static_fields->__9__14_1 = (struct System_Func_RestrictionEntity__bool__o *)_9__14_1;
-        sub_1C32BC4((CGThumbnailListItem_o *)&static_fields->__9__14_1, (int32_t)_9__14_1, v28, v29);
+        sub_1C36FFC((CGThumbnailListItem_o *)&static_fields->__9__14_1, (int32_t)_9__14_1, v28, v29);
       }
       v30 = System_Linq_Enumerable__Where_object_(
               v19,
               (System_Func_TSource__bool__o *)_9__14_1,
-              (const MethodInfo_3123BA8 *)Method_System_Linq_Enumerable_Where_RestrictionEntity___);
+              (const MethodInfo_312E410 *)Method_System_Linq_Enumerable_Where_RestrictionEntity___);
       v19 = (System_Collections_Generic_IEnumerable_TSource__o *)System_Linq_Enumerable__ToArray_object_(
                                                                    v30,
-                                                                   (const MethodInfo_311CA8C *)Method_System_Linq_Enumerable_ToArray_RestrictionEntity___);
+                                                                   (const MethodInfo_31272F4 *)Method_System_Linq_Enumerable_ToArray_RestrictionEntity___);
     }
-    partyMemberItem = (System_String_o *)QuestRestrictionInfo__GetMessages_43316744(
+    partyMemberItem = (System_String_o *)QuestRestrictionInfo__GetMessages_43418612(
                                            questRestrictionInfo,
                                            (RestrictionEntity_array *)v19,
                                            1,
@@ -703,7 +703,7 @@ void RestrictionNotSatisfySlot__SetItem(
                           v31);
       if ( !partyMemberItem )
         goto LABEL_286;
-      partyMemberItem = System_String__Replace_63565092(
+      partyMemberItem = System_String__Replace_63608204(
                           partyMemberItem,
                           (System_String_o *)StringLiteral_43/*"\n"*/,
                           (System_String_o *)StringLiteral_1/*""*/,
@@ -722,21 +722,21 @@ void RestrictionNotSatisfySlot__SetItem(
         System_Collections_Generic_List_object___AddWithResize(
           v20,
           (Il2CppObject *)partyMemberItem,
-          *(const MethodInfo_37987BC **)(*(_QWORD *)(v38[4] + 192LL) + 112LL));
+          *(const MethodInfo_37A3024 **)(*(_QWORD *)(v38[4] + 192LL) + 112LL));
       }
       else
       {
         v41 = &items->obj.klass + size;
         v20->fields._size = size + 1;
         v41[4] = (Il2CppClass *)v40;
-        sub_1C32BC4((CGThumbnailListItem_o *)(v41 + 4), (int32_t)v40, v35, v36);
+        sub_1C36FFC((CGThumbnailListItem_o *)(v41 + 4), (int32_t)v40, v35, v36);
       }
       LODWORD(klass) = v32[1].klass;
       if ( (__int64)++v34 >= (int)klass )
         goto LABEL_40;
     }
 LABEL_287:
-    sub_1C32E84(partyMemberItem);
+    sub_1C372BC(partyMemberItem);
   }
 LABEL_40:
   partyMemberItem = (System_String_o *)this->fields.notSatisfyWidget;
@@ -830,7 +830,7 @@ LABEL_261:
           {
             if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
               j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-            partyMemberItem = LocalizationManager__Get((System_String_o *)StringLiteral_11101/*"RESTRICTION_NOT_SATISFY_DIALOG_REQUIRED"*/, 0);
+            partyMemberItem = LocalizationManager__Get((System_String_o *)StringLiteral_11102/*"RESTRICTION_NOT_SATISFY_DIALOG_REQUIRED"*/, 0);
             if ( !v20 )
               goto LABEL_286;
             v182 = v20->fields._items;
@@ -845,14 +845,14 @@ LABEL_261:
               System_Collections_Generic_List_object___AddWithResize(
                 v20,
                 (Il2CppObject *)partyMemberItem,
-                *(const MethodInfo_37987BC **)(*(_QWORD *)(v183[4] + 192LL) + 112LL));
+                *(const MethodInfo_37A3024 **)(*(_QWORD *)(v183[4] + 192LL) + 112LL));
             }
             else
             {
               v186 = &v182->obj.klass + v184;
               v20->fields._size = v184 + 1;
               v186[4] = (Il2CppClass *)v185;
-              sub_1C32BC4((CGThumbnailListItem_o *)(v186 + 4), (int32_t)v185, v180, v181);
+              sub_1C36FFC((CGThumbnailListItem_o *)(v186 + 4), (int32_t)v185, v180, v181);
             }
             v187 = 1;
           }
@@ -879,7 +879,7 @@ LABEL_276:
                 Item = System_Collections_Generic_List_object___get_Item(
                          v20,
                          v188,
-                         (const MethodInfo_37984EC *)Method_System_Collections_Generic_List_string__get_Item__);
+                         (const MethodInfo_37A2D54 *)Method_System_Collections_Generic_List_string__get_Item__);
                 fixed = (Il2CppObject *)RestrictionNotSatisfySlot__AddColorCodeAndFixMessage(
                                           (RestrictionNotSatisfySlot_o *)Item,
                                           (System_String_o *)Item,
@@ -888,7 +888,7 @@ LABEL_276:
                   v20,
                   v188++,
                   fixed,
-                  (const MethodInfo_3798540 *)Method_System_Collections_Generic_List_string__set_Item__);
+                  (const MethodInfo_37A2DA8 *)Method_System_Collections_Generic_List_string__set_Item__);
               }
               while ( v188 < v20->fields._size );
             }
@@ -898,69 +898,69 @@ LABEL_276:
     }
   }
   questRestrictionInfoa = questRestrictionInfo;
-  v42 = (System_Collections_Generic_List_object__o *)sub_1C32E6C(System_Collections_Generic_List_UIWidget__TypeInfo);
+  v42 = (System_Collections_Generic_List_object__o *)sub_1C372A4(System_Collections_Generic_List_UIWidget__TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v42,
-    (const MethodInfo_3797F88 *)Method_System_Collections_Generic_List_UIWidget___ctor__);
+    (const MethodInfo_37A27F0 *)Method_System_Collections_Generic_List_UIWidget___ctor__);
   if ( !v20 )
     goto LABEL_286;
   System_Collections_Generic_List_object___GetEnumerator(
     (System_Collections_Generic_List_Enumerator_T__o *)&v199,
     v20,
-    (const MethodInfo_37992B4 *)Method_System_Collections_Generic_List_string__GetEnumerator__);
+    (const MethodInfo_37A3B1C *)Method_System_Collections_Generic_List_string__GetEnumerator__);
   v203 = v199;
   while ( System_Collections_Generic_List_Enumerator_object___MoveNext(
             &v203,
-            (const MethodInfo_3522FA8 *)Method_System_Collections_Generic_List_Enumerator_string__MoveNext__) )
+            (const MethodInfo_352D810 *)Method_System_Collections_Generic_List_Enumerator_string__MoveNext__) )
   {
     restrictionLabelRoot = this->fields.restrictionLabelRoot;
     if ( !restrictionLabelRoot )
-      sub_1C32E7C(0);
+      sub_1C372B4(0);
     current = v203.fields._current;
     restrictionLabel = (Il2CppObject *)this->fields.restrictionLabel;
     transform = UnityEngine_GameObject__get_transform(restrictionLabelRoot, 0);
     if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-    v47 = UnityEngine_Object__Instantiate_object__51812484(
+    v47 = UnityEngine_Object__Instantiate_object__51855596(
             restrictionLabel,
             transform,
-            (const MethodInfo_3169884 *)Method_UnityEngine_Object_Instantiate_UILabel____78147200);
+            (const MethodInfo_31740EC *)Method_UnityEngine_Object_Instantiate_UILabel____78192992);
     v48 = v47;
     if ( !v47 )
-      sub_1C32E7C(0);
+      sub_1C372B4(0);
     UILabel__set_text((UILabel_o *)v47, (System_String_o *)current, 0);
     if ( !v42 )
-      sub_1C32E7C(v49);
+      sub_1C372B4(v49);
     v52 = v42->fields._items;
     v53 = Method_System_Collections_Generic_List_UIWidget__Add__;
     ++v42->fields._version;
     if ( !v52 )
-      sub_1C32E7C(v49);
+      sub_1C372B4(v49);
     v54 = v42->fields._size;
     if ( (unsigned int)v54 >= LODWORD(v52->max_length) )
     {
       System_Collections_Generic_List_object___AddWithResize(
         v42,
         v48,
-        *(const MethodInfo_37987BC **)(*(_QWORD *)(v53[4] + 192LL) + 112LL));
+        *(const MethodInfo_37A3024 **)(*(_QWORD *)(v53[4] + 192LL) + 112LL));
     }
     else
     {
       v55 = &v52->obj.klass + v54;
       v42->fields._size = v54 + 1;
       v55[4] = (Il2CppClass *)v48;
-      sub_1C32BC4((CGThumbnailListItem_o *)(v55 + 4), (int32_t)v48, v50, v51);
+      sub_1C36FFC((CGThumbnailListItem_o *)(v55 + 4), (int32_t)v48, v50, v51);
     }
   }
   System_Collections_Generic_List_Enumerator_object___Dispose(
     &v203,
-    (const MethodInfo_3522FA4 *)Method_System_Collections_Generic_List_Enumerator_string__Dispose__);
+    (const MethodInfo_352D80C *)Method_System_Collections_Generic_List_Enumerator_string__Dispose__);
   if ( !v42 )
     goto LABEL_286;
   switchMessage = this->fields.switchMessage;
   partyMemberItem = (System_String_o *)System_Collections_Generic_List_object___ToArray(
                                          v42,
-                                         (const MethodInfo_379A314 *)Method_System_Collections_Generic_List_UIWidget__ToArray__);
+                                         (const MethodInfo_37A4B7C *)Method_System_Collections_Generic_List_UIWidget__ToArray__);
   if ( !switchMessage )
     goto LABEL_286;
   SwitchUIWidgetComponent__Set(switchMessage, (UIWidget_array *)partyMemberItem, 0, 0);
@@ -968,45 +968,45 @@ LABEL_276:
   v59 = *((_QWORD *)Method_System_Array_Empty_int___ + 7);
   if ( !v59 )
   {
-    sub_1C83390(Method_System_Array_Empty_int___);
+    sub_1C877C8(Method_System_Array_Empty_int___);
     v59 = v58[7];
   }
   v60 = *(_QWORD *)(v59 + 16);
   if ( (*(_BYTE *)(v60 + 309) & 1) == 0 )
-    v60 = sub_1C83334(v57);
+    v60 = sub_1C8776C(v57);
   if ( !*(_DWORD *)(v60 + 224) )
     v57 = j_il2cpp_runtime_class_init_0(v60);
   v61 = *(_QWORD *)(v58[7] + 16LL);
   if ( (*(_BYTE *)(v61 + 309) & 1) == 0 )
-    v61 = sub_1C83334(v57);
+    v61 = sub_1C8776C(v57);
   v62 = Method_System_Array_Empty_int___;
   servantIds = **(System_Int32_array ***)(v61 + 184);
   v63 = *((_QWORD *)Method_System_Array_Empty_int___ + 7);
   if ( !v63 )
   {
-    sub_1C83390(Method_System_Array_Empty_int___);
+    sub_1C877C8(Method_System_Array_Empty_int___);
     v63 = v62[7];
   }
   v64 = *(_QWORD *)(v63 + 16);
   v65 = questRestrictionInfo;
   if ( (*(_BYTE *)(v64 + 309) & 1) == 0 )
-    v64 = sub_1C83334(v57);
+    v64 = sub_1C8776C(v57);
   if ( !*(_DWORD *)(v64 + 224) )
     v57 = j_il2cpp_runtime_class_init_0(v64);
   v66 = *(_QWORD *)(v62[7] + 16LL);
   if ( (*(_BYTE *)(v66 + 309) & 1) == 0 )
-    v66 = sub_1C83334(v57);
+    v66 = sub_1C8776C(v57);
   classImageIds = **(System_Int32_array ***)(v66 + 184);
-  v67 = (System_Collections_Generic_Dictionary_int__object__o *)sub_1C32E6C(System_Collections_Generic_Dictionary_int__FollowerInfo__TypeInfo);
+  v67 = (System_Collections_Generic_Dictionary_int__object__o *)sub_1C372A4(System_Collections_Generic_Dictionary_int__FollowerInfo__TypeInfo);
   System_Collections_Generic_Dictionary_int__object____ctor(
     v67,
-    (const MethodInfo_33EF348 *)Method_System_Collections_Generic_Dictionary_int__FollowerInfo___ctor__);
+    (const MethodInfo_33F9BB0 *)Method_System_Collections_Generic_Dictionary_int__FollowerInfo___ctor__);
   npcInfoDictionary = (System_Collections_Generic_Dictionary_int__FollowerInfo__o *)v67;
   partyMemberItem = (System_String_o *)QuestRestrictionInfo__IsUseOldMaster(questRestrictionInfo, 0);
   if ( !*v11 )
     goto LABEL_286;
   v68 = (char)partyMemberItem;
-  partyMemberItem = (System_String_o *)QuestRestrictionInfo__IsMyServantOrNpcRestriction_43340352(
+  partyMemberItem = (System_String_o *)QuestRestrictionInfo__IsMyServantOrNpcRestriction_43442220(
                                          questRestrictionInfo,
                                          (*v11)->fields._InitPos_k__BackingField,
                                          0);
@@ -1024,7 +1024,7 @@ LABEL_276:
                      0);
       if ( !DataManager_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-      partyMemberItem = (System_String_o *)DataManager__GetMaster_object_((const MethodInfo_30DD39C *)Method_DataManager_GetMaster_QuestPhaseMaster___);
+      partyMemberItem = (System_String_o *)DataManager__GetMaster_object_((const MethodInfo_30E7C04 *)Method_DataManager_GetMaster_QuestPhaseMaster___);
       if ( !partyMemberItem )
         goto LABEL_286;
       partyMemberItem = (System_String_o *)QuestPhaseMaster__TryGetEntity(
@@ -1048,10 +1048,10 @@ LABEL_276:
         goto LABEL_125;
       goto LABEL_100;
     }
-    v80 = (System_Collections_Generic_List_int__o *)sub_1C32E6C(System_Collections_Generic_List_int__TypeInfo);
+    v80 = (System_Collections_Generic_List_int__o *)sub_1C372A4(System_Collections_Generic_List_int__TypeInfo);
     System_Collections_Generic_List_int____ctor(
       v80,
-      (const MethodInfo_377AF44 *)Method_System_Collections_Generic_List_int___ctor__);
+      (const MethodInfo_37857AC *)Method_System_Collections_Generic_List_int___ctor__);
     if ( !*v11 )
       goto LABEL_286;
     partyMemberItem = (System_String_o *)QuestRestrictionInfo__GetNeedIndividualityList(
@@ -1079,19 +1079,19 @@ LABEL_276:
           partyMemberItem = (System_String_o *)System_Collections_Generic_List_Int32Enum___get_Item(
                                                  v83,
                                                  v84,
-                                                 (const MethodInfo_377DCD4 *)Method_System_Collections_Generic_List_Restriction_RangeType__get_Item__);
+                                                 (const MethodInfo_378853C *)Method_System_Collections_Generic_List_Restriction_RangeType__get_Item__);
           if ( (_DWORD)partyMemberItem == 1 )
           {
             partyMemberItem = (System_String_o *)System_Collections_Generic_List_object___get_Item(
                                                    v82,
                                                    v84,
-                                                   (const MethodInfo_37984EC *)Method_System_Collections_Generic_List_int____get_Item__);
+                                                   (const MethodInfo_37A2D54 *)Method_System_Collections_Generic_List_int____get_Item__);
             if ( !v80 )
               goto LABEL_286;
             System_Collections_Generic_List_int___AddRange(
               v80,
               (System_Collections_Generic_IEnumerable_T__o *)partyMemberItem,
-              (const MethodInfo_377B9A4 *)Method_System_Collections_Generic_List_int__AddRange__);
+              (const MethodInfo_378620C *)Method_System_Collections_Generic_List_int__AddRange__);
           }
         }
         if ( ++v84 >= v82->fields._size )
@@ -1104,7 +1104,7 @@ LABEL_122:
       goto LABEL_286;
     partyMemberItem = (System_String_o *)System_Collections_Generic_List_int___ToArray(
                                            v80,
-                                           (const MethodInfo_377D250 *)Method_System_Collections_Generic_List_int__ToArray__);
+                                           (const MethodInfo_3787AB8 *)Method_System_Collections_Generic_List_int__ToArray__);
     v79 = (System_Int32_array *)partyMemberItem;
 LABEL_124:
     RestrictionNotSatisfySlot__GetIconIdFromIndividuality(
@@ -1146,7 +1146,7 @@ LABEL_125:
                  0);
   if ( !DataManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-  partyMemberItem = (System_String_o *)DataManager__GetMaster_object_((const MethodInfo_30DD39C *)Method_DataManager_GetMaster_QuestPhaseMaster___);
+  partyMemberItem = (System_String_o *)DataManager__GetMaster_object_((const MethodInfo_30E7C04 *)Method_DataManager_GetMaster_QuestPhaseMaster___);
   if ( !partyMemberItem )
     goto LABEL_286;
   partyMemberItem = (System_String_o *)QuestPhaseMaster__TryGetEntity(
@@ -1172,11 +1172,11 @@ LABEL_100:
   if ( !IsSelectableNormalSupport || v71->fields.isNpcOnly )
     goto LABEL_125;
   v72 = (System_Collections_Generic_IEnumerable_T__o *)servantIds;
-  v73 = (System_Collections_Generic_List_int__o *)sub_1C32E6C(System_Collections_Generic_List_int__TypeInfo);
-  System_Collections_Generic_List_int____ctor_58175596(
+  v73 = (System_Collections_Generic_List_int__o *)sub_1C372A4(System_Collections_Generic_List_int__TypeInfo);
+  System_Collections_Generic_List_int____ctor_58218708(
     v73,
     v72,
-    (const MethodInfo_377B06C *)Method_System_Collections_Generic_List_int___ctor___78010240);
+    (const MethodInfo_37858D4 *)Method_System_Collections_Generic_List_int___ctor___78055976);
   if ( !v73 )
     goto LABEL_286;
   v74 = v73->fields._items;
@@ -1190,7 +1190,7 @@ LABEL_100:
     System_Collections_Generic_List_int___AddWithResize(
       v73,
       0,
-      *(const MethodInfo_377B798 **)(*(_QWORD *)(v75[4] + 192LL) + 112LL));
+      *(const MethodInfo_3786000 **)(*(_QWORD *)(v75[4] + 192LL) + 112LL));
   }
   else
   {
@@ -1199,7 +1199,7 @@ LABEL_100:
   }
   partyMemberItem = (System_String_o *)System_Collections_Generic_List_int___ToArray(
                                          v73,
-                                         (const MethodInfo_377D250 *)Method_System_Collections_Generic_List_int__ToArray__);
+                                         (const MethodInfo_3787AB8 *)Method_System_Collections_Generic_List_int__ToArray__);
   servantIds = (System_Int32_array *)partyMemberItem;
   if ( !partyMemberItem )
     goto LABEL_286;
@@ -1210,14 +1210,14 @@ LABEL_126:
       goto LABEL_286;
     if ( !classImageIds->max_length )
       goto LABEL_244;
-    v146 = (System_Collections_Generic_List_object__o *)sub_1C32E6C(System_Collections_Generic_List_UIWidget__TypeInfo);
+    v146 = (System_Collections_Generic_List_object__o *)sub_1C372A4(System_Collections_Generic_List_UIWidget__TypeInfo);
     System_Collections_Generic_List_object____ctor(
       v146,
-      (const MethodInfo_3797F88 *)Method_System_Collections_Generic_List_UIWidget___ctor__);
-    v147 = (System_Collections_Generic_List_int__o *)sub_1C32E6C(System_Collections_Generic_List_int__TypeInfo);
+      (const MethodInfo_37A27F0 *)Method_System_Collections_Generic_List_UIWidget___ctor__);
+    v147 = (System_Collections_Generic_List_int__o *)sub_1C372A4(System_Collections_Generic_List_int__TypeInfo);
     System_Collections_Generic_List_int____ctor(
       v147,
-      (const MethodInfo_377AF44 *)Method_System_Collections_Generic_List_int___ctor__);
+      (const MethodInfo_37857AC *)Method_System_Collections_Generic_List_int___ctor__);
     v148 = classImageIds;
     if ( !classImageIds )
       goto LABEL_286;
@@ -1244,7 +1244,7 @@ LABEL_126:
         System_Collections_Generic_List_int___AddWithResize(
           v147,
           v152,
-          *(const MethodInfo_377B798 **)(*(_QWORD *)(v154[4] + 192LL) + 112LL));
+          *(const MethodInfo_3786000 **)(*(_QWORD *)(v154[4] + 192LL) + 112LL));
       }
       else
       {
@@ -1269,10 +1269,10 @@ LABEL_126:
           goto LABEL_286;
         Component_object = (RestrictionNotSatisfySlotIcons_o *)UnityEngine_GameObject__GetComponent_object_(
                                                                  (UnityEngine_GameObject_o *)partyMemberItem,
-                                                                 (const MethodInfo_3134970 *)Method_UnityEngine_GameObject_GetComponent_RestrictionNotSatisfySlotIcons___);
+                                                                 (const MethodInfo_313F1D8 *)Method_UnityEngine_GameObject_GetComponent_RestrictionNotSatisfySlotIcons___);
         partyMemberItem = (System_String_o *)System_Collections_Generic_List_int___ToArray(
                                                v147,
-                                               (const MethodInfo_377D250 *)Method_System_Collections_Generic_List_int__ToArray__);
+                                               (const MethodInfo_3787AB8 *)Method_System_Collections_Generic_List_int__ToArray__);
         if ( !Component_object )
           goto LABEL_286;
         RestrictionNotSatisfySlotIcons__SetClassIcons(Component_object, (System_Int32_array *)partyMemberItem, v157);
@@ -1290,14 +1290,14 @@ LABEL_126:
           System_Collections_Generic_List_object___AddWithResize(
             v146,
             iconsWidget,
-            *(const MethodInfo_37987BC **)(*(_QWORD *)(v162[4] + 192LL) + 112LL));
+            *(const MethodInfo_37A3024 **)(*(_QWORD *)(v162[4] + 192LL) + 112LL));
         }
         else
         {
           v164 = &v161->obj.klass + v163;
           v146->fields._size = v163 + 1;
           v164[4] = (Il2CppClass *)iconsWidget;
-          sub_1C32BC4((CGThumbnailListItem_o *)(v164 + 4), (int32_t)iconsWidget, v158, v159);
+          sub_1C36FFC((CGThumbnailListItem_o *)(v164 + 4), (int32_t)iconsWidget, v158, v159);
         }
         v150 = 0;
         v165 = v147->fields._version + 1;
@@ -1320,10 +1320,10 @@ LABEL_126:
         goto LABEL_286;
       v166 = (RestrictionNotSatisfySlotIcons_o *)UnityEngine_GameObject__GetComponent_object_(
                                                    (UnityEngine_GameObject_o *)partyMemberItem,
-                                                   (const MethodInfo_3134970 *)Method_UnityEngine_GameObject_GetComponent_RestrictionNotSatisfySlotIcons___);
+                                                   (const MethodInfo_313F1D8 *)Method_UnityEngine_GameObject_GetComponent_RestrictionNotSatisfySlotIcons___);
       partyMemberItem = (System_String_o *)System_Collections_Generic_List_int___ToArray(
                                              v147,
-                                             (const MethodInfo_377D250 *)Method_System_Collections_Generic_List_int__ToArray__);
+                                             (const MethodInfo_3787AB8 *)Method_System_Collections_Generic_List_int__ToArray__);
       if ( !v166 )
         goto LABEL_286;
       RestrictionNotSatisfySlotIcons__SetClassIcons(v166, (System_Int32_array *)partyMemberItem, v167);
@@ -1341,14 +1341,14 @@ LABEL_126:
         System_Collections_Generic_List_object___AddWithResize(
           v146,
           v170,
-          *(const MethodInfo_37987BC **)(*(_QWORD *)(v172[4] + 192LL) + 112LL));
+          *(const MethodInfo_37A3024 **)(*(_QWORD *)(v172[4] + 192LL) + 112LL));
       }
       else
       {
         v174 = &v171->obj.klass + v173;
         v146->fields._size = v173 + 1;
         v174[4] = (Il2CppClass *)v170;
-        sub_1C32BC4((CGThumbnailListItem_o *)(v174 + 4), (int32_t)v170, v168, v169);
+        sub_1C36FFC((CGThumbnailListItem_o *)(v174 + 4), (int32_t)v170, v168, v169);
       }
     }
     else
@@ -1360,47 +1360,47 @@ LABEL_237:
     switchIcons = this->fields.switchIcons;
     partyMemberItem = (System_String_o *)System_Collections_Generic_List_object___ToArray(
                                            v146,
-                                           (const MethodInfo_379A314 *)Method_System_Collections_Generic_List_UIWidget__ToArray__);
+                                           (const MethodInfo_37A4B7C *)Method_System_Collections_Generic_List_UIWidget__ToArray__);
     if ( !switchIcons )
       goto LABEL_286;
     v176 = (UIWidget_array *)partyMemberItem;
     v177 = switchIcons;
     goto LABEL_242;
   }
-  partyMemberItem = (System_String_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39E2904 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  partyMemberItem = (System_String_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39ED16C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !partyMemberItem )
     goto LABEL_286;
   MasterData_object = (UserServantCollectionMaster_o *)DataManager__GetMasterData_object_(
                                                          (DataManager_o *)partyMemberItem,
-                                                         (const MethodInfo_30DD3F0 *)Method_DataManager_GetMasterData_UserServantCollectionMaster___);
+                                                         (const MethodInfo_30E7C58 *)Method_DataManager_GetMasterData_UserServantCollectionMaster___);
   if ( !DataManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-  Master_object = (NpcServantFollowerMaster_o *)DataManager__GetMaster_object_((const MethodInfo_30DD39C *)Method_DataManager_GetMaster_NpcServantFollowerMaster___);
-  v192 = (NpcFollowerMaster_o *)DataManager__GetMaster_object_((const MethodInfo_30DD39C *)Method_DataManager_GetMaster_NpcFollowerMaster___);
-  v85 = (System_Collections_Generic_List_object__o *)sub_1C32E6C(System_Collections_Generic_List_UIWidget__TypeInfo);
+  Master_object = (NpcServantFollowerMaster_o *)DataManager__GetMaster_object_((const MethodInfo_30E7C04 *)Method_DataManager_GetMaster_NpcServantFollowerMaster___);
+  v192 = (NpcFollowerMaster_o *)DataManager__GetMaster_object_((const MethodInfo_30E7C04 *)Method_DataManager_GetMaster_NpcFollowerMaster___);
+  v85 = (System_Collections_Generic_List_object__o *)sub_1C372A4(System_Collections_Generic_List_UIWidget__TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v85,
-    (const MethodInfo_3797F88 *)Method_System_Collections_Generic_List_UIWidget___ctor__);
-  v86 = (System_Collections_Generic_List_int__o *)sub_1C32E6C(System_Collections_Generic_List_int__TypeInfo);
+    (const MethodInfo_37A27F0 *)Method_System_Collections_Generic_List_UIWidget___ctor__);
+  v86 = (System_Collections_Generic_List_int__o *)sub_1C372A4(System_Collections_Generic_List_int__TypeInfo);
   System_Collections_Generic_List_int____ctor(
     v86,
-    (const MethodInfo_377AF44 *)Method_System_Collections_Generic_List_int___ctor__);
-  v87 = (System_Collections_Generic_List_int__o *)sub_1C32E6C(System_Collections_Generic_List_int__TypeInfo);
+    (const MethodInfo_37857AC *)Method_System_Collections_Generic_List_int___ctor__);
+  v87 = (System_Collections_Generic_List_int__o *)sub_1C372A4(System_Collections_Generic_List_int__TypeInfo);
   System_Collections_Generic_List_int____ctor(
     v87,
-    (const MethodInfo_377AF44 *)Method_System_Collections_Generic_List_int___ctor__);
-  v88 = (System_Collections_Generic_List_int__o *)sub_1C32E6C(System_Collections_Generic_List_int__TypeInfo);
+    (const MethodInfo_37857AC *)Method_System_Collections_Generic_List_int___ctor__);
+  v88 = (System_Collections_Generic_List_int__o *)sub_1C372A4(System_Collections_Generic_List_int__TypeInfo);
   System_Collections_Generic_List_int____ctor(
     v88,
-    (const MethodInfo_377AF44 *)Method_System_Collections_Generic_List_int___ctor__);
-  v89 = (System_Collections_Generic_List_bool__o *)sub_1C32E6C(System_Collections_Generic_List_bool__TypeInfo);
+    (const MethodInfo_37857AC *)Method_System_Collections_Generic_List_int___ctor__);
+  v89 = (System_Collections_Generic_List_bool__o *)sub_1C372A4(System_Collections_Generic_List_bool__TypeInfo);
   System_Collections_Generic_List_bool____ctor(
     v89,
-    (const MethodInfo_3751B78 *)Method_System_Collections_Generic_List_bool___ctor__);
+    (const MethodInfo_375C3E0 *)Method_System_Collections_Generic_List_bool___ctor__);
   v90 = servantIds;
   if ( !servantIds )
 LABEL_286:
-    sub_1C32E7C(partyMemberItem);
+    sub_1C372B4(partyMemberItem);
   v91 = servantIds->max_length;
   if ( (int)v91 >= 1 )
   {
@@ -1426,7 +1426,7 @@ LABEL_286:
         System_Collections_Generic_List_int___AddWithResize(
           v86,
           v94,
-          *(const MethodInfo_377B798 **)(*(_QWORD *)(v96[4] + 192LL) + 112LL));
+          *(const MethodInfo_3786000 **)(*(_QWORD *)(v96[4] + 192LL) + 112LL));
       }
       else
       {
@@ -1439,7 +1439,7 @@ LABEL_286:
       if ( !System_Collections_Generic_Dictionary_int__object___ContainsKey(
               (System_Collections_Generic_Dictionary_int__object__o *)npcInfoDictionary,
               v94,
-              (const MethodInfo_33EFF10 *)Method_System_Collections_Generic_Dictionary_int__FollowerInfo__ContainsKey__) )
+              (const MethodInfo_33FA778 *)Method_System_Collections_Generic_Dictionary_int__FollowerInfo__ContainsKey__) )
         goto LABEL_294;
       partyMemberItem = (System_String_o *)npcInfoDictionary;
       if ( !npcInfoDictionary )
@@ -1447,7 +1447,7 @@ LABEL_286:
       v98 = System_Collections_Generic_Dictionary_int__object___get_Item(
               (System_Collections_Generic_Dictionary_int__object__o *)npcInfoDictionary,
               v94,
-              (const MethodInfo_33EFC7C *)Method_System_Collections_Generic_Dictionary_int__FollowerInfo__get_Item__);
+              (const MethodInfo_33FA4E4 *)Method_System_Collections_Generic_Dictionary_int__FollowerInfo__get_Item__);
       if ( v98 )
       {
         questId = v65->fields.questId;
@@ -1485,7 +1485,7 @@ LABEL_286:
           System_Collections_Generic_List_bool___AddWithResize(
             v89,
             (unsigned __int8)partyMemberItem & 1,
-            *(const MethodInfo_37523DC **)(*(_QWORD *)(v105[4] + 192LL) + 112LL));
+            *(const MethodInfo_375CC44 **)(*(_QWORD *)(v105[4] + 192LL) + 112LL));
         }
         else
         {
@@ -1495,7 +1495,7 @@ LABEL_286:
         partyMemberItem = (System_String_o *)v192;
         if ( !npcServantFollowerEntity || !v192 )
           goto LABEL_286;
-        partyMemberItem = (System_String_o *)NpcFollowerMaster__GetEntity_42319072(
+        partyMemberItem = (System_String_o *)NpcFollowerMaster__GetEntity_42420940(
                                                v192,
                                                questId,
                                                questPhase,
@@ -1523,10 +1523,10 @@ LABEL_170:
 LABEL_294:
         if ( !NetworkManager_TypeInfo->_2.cctor_finished )
           j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
-        if ( !byte_4C31812 )
+        if ( !byte_4C3CD62 )
         {
-          sub_1C32C20(&NetworkManager_TypeInfo);
-          byte_4C31812 = 1;
+          sub_1C37058(&NetworkManager_TypeInfo);
+          byte_4C3CD62 = 1;
         }
         partyMemberItem = (System_String_o *)NetworkManager_TypeInfo;
         if ( !NetworkManager_TypeInfo->_2.cctor_finished )
@@ -1557,7 +1557,7 @@ LABEL_294:
           System_Collections_Generic_List_bool___AddWithResize(
             v89,
             0,
-            *(const MethodInfo_37523DC **)(*(_QWORD *)(v108[4] + 192LL) + 112LL));
+            *(const MethodInfo_375CC44 **)(*(_QWORD *)(v108[4] + 192LL) + 112LL));
           v110 = 0;
           if ( !v87 )
             goto LABEL_286;
@@ -1582,7 +1582,7 @@ LABEL_294:
         System_Collections_Generic_List_int___AddWithResize(
           v87,
           LimitCount,
-          *(const MethodInfo_377B798 **)(*(_QWORD *)(v112[4] + 192LL) + 112LL));
+          *(const MethodInfo_3786000 **)(*(_QWORD *)(v112[4] + 192LL) + 112LL));
       }
       else
       {
@@ -1602,7 +1602,7 @@ LABEL_294:
         System_Collections_Generic_List_int___AddWithResize(
           v88,
           v110,
-          *(const MethodInfo_377B798 **)(*(_QWORD *)(v115[4] + 192LL) + 112LL));
+          *(const MethodInfo_3786000 **)(*(_QWORD *)(v115[4] + 192LL) + 112LL));
       }
       else
       {
@@ -1627,22 +1627,22 @@ LABEL_294:
           goto LABEL_286;
         v117 = (RestrictionNotSatisfySlotIcons_o *)UnityEngine_GameObject__GetComponent_object_(
                                                      (UnityEngine_GameObject_o *)partyMemberItem,
-                                                     (const MethodInfo_3134970 *)Method_UnityEngine_GameObject_GetComponent_RestrictionNotSatisfySlotIcons___);
+                                                     (const MethodInfo_313F1D8 *)Method_UnityEngine_GameObject_GetComponent_RestrictionNotSatisfySlotIcons___);
         v118 = System_Collections_Generic_List_int___ToArray(
                  v86,
-                 (const MethodInfo_377D250 *)Method_System_Collections_Generic_List_int__ToArray__);
+                 (const MethodInfo_3787AB8 *)Method_System_Collections_Generic_List_int__ToArray__);
         v119 = System_Collections_Generic_List_int___ToArray(
                  v87,
-                 (const MethodInfo_377D250 *)Method_System_Collections_Generic_List_int__ToArray__);
+                 (const MethodInfo_3787AB8 *)Method_System_Collections_Generic_List_int__ToArray__);
         partyMemberItem = (System_String_o *)System_Collections_Generic_List_int___ToArray(
                                                v88,
-                                               (const MethodInfo_377D250 *)Method_System_Collections_Generic_List_int__ToArray__);
+                                               (const MethodInfo_3787AB8 *)Method_System_Collections_Generic_List_int__ToArray__);
         if ( !v89 )
           goto LABEL_286;
         v120 = (System_Int32_array *)partyMemberItem;
         partyMemberItem = (System_String_o *)System_Collections_Generic_List_bool___ToArray(
                                                v89,
-                                               (const MethodInfo_3753EC8 *)Method_System_Collections_Generic_List_bool__ToArray__);
+                                               (const MethodInfo_375E730 *)Method_System_Collections_Generic_List_bool__ToArray__);
         if ( !v117 )
           goto LABEL_286;
         v122 = v120;
@@ -1670,14 +1670,14 @@ LABEL_294:
           System_Collections_Generic_List_object___AddWithResize(
             v85,
             v125,
-            *(const MethodInfo_37987BC **)(*(_QWORD *)(v127[4] + 192LL) + 112LL));
+            *(const MethodInfo_37A3024 **)(*(_QWORD *)(v127[4] + 192LL) + 112LL));
         }
         else
         {
           v129 = &v126->obj.klass + v128;
           v85->fields._size = v128 + 1;
           v129[4] = (Il2CppClass *)v125;
-          sub_1C32BC4((CGThumbnailListItem_o *)(v129 + 4), (int32_t)v125, v123, v124);
+          sub_1C36FFC((CGThumbnailListItem_o *)(v129 + 4), (int32_t)v125, v123, v124);
         }
         v92 = 0;
         v130 = v86->fields._version + 1;
@@ -1709,22 +1709,22 @@ LABEL_294:
       {
         v134 = (RestrictionNotSatisfySlotIcons_o *)UnityEngine_GameObject__GetComponent_object_(
                                                      (UnityEngine_GameObject_o *)partyMemberItem,
-                                                     (const MethodInfo_3134970 *)Method_UnityEngine_GameObject_GetComponent_RestrictionNotSatisfySlotIcons___);
+                                                     (const MethodInfo_313F1D8 *)Method_UnityEngine_GameObject_GetComponent_RestrictionNotSatisfySlotIcons___);
         v135 = System_Collections_Generic_List_int___ToArray(
                  v86,
-                 (const MethodInfo_377D250 *)Method_System_Collections_Generic_List_int__ToArray__);
+                 (const MethodInfo_3787AB8 *)Method_System_Collections_Generic_List_int__ToArray__);
         v136 = System_Collections_Generic_List_int___ToArray(
                  v87,
-                 (const MethodInfo_377D250 *)Method_System_Collections_Generic_List_int__ToArray__);
+                 (const MethodInfo_3787AB8 *)Method_System_Collections_Generic_List_int__ToArray__);
         partyMemberItem = (System_String_o *)System_Collections_Generic_List_int___ToArray(
                                                v88,
-                                               (const MethodInfo_377D250 *)Method_System_Collections_Generic_List_int__ToArray__);
+                                               (const MethodInfo_3787AB8 *)Method_System_Collections_Generic_List_int__ToArray__);
         if ( v89 )
         {
           v137 = (System_Int32_array *)partyMemberItem;
           partyMemberItem = (System_String_o *)System_Collections_Generic_List_bool___ToArray(
                                                  v89,
-                                                 (const MethodInfo_3753EC8 *)Method_System_Collections_Generic_List_bool__ToArray__);
+                                                 (const MethodInfo_375E730 *)Method_System_Collections_Generic_List_bool__ToArray__);
           if ( v134 )
           {
             RestrictionNotSatisfySlotIcons__SetServantIcons(
@@ -1749,14 +1749,14 @@ LABEL_294:
                   System_Collections_Generic_List_object___AddWithResize(
                     v85,
                     v141,
-                    *(const MethodInfo_37987BC **)(*(_QWORD *)(v143[4] + 192LL) + 112LL));
+                    *(const MethodInfo_37A3024 **)(*(_QWORD *)(v143[4] + 192LL) + 112LL));
                 }
                 else
                 {
                   v145 = &v142->obj.klass + v144;
                   v85->fields._size = v144 + 1;
                   v145[4] = (Il2CppClass *)v141;
-                  sub_1C32BC4((CGThumbnailListItem_o *)(v145 + 4), (int32_t)v141, v139, v140);
+                  sub_1C36FFC((CGThumbnailListItem_o *)(v145 + 4), (int32_t)v141, v139, v140);
                 }
                 goto LABEL_235;
               }
@@ -1773,14 +1773,14 @@ LABEL_235:
   v175 = this->fields.switchIcons;
   partyMemberItem = (System_String_o *)System_Collections_Generic_List_object___ToArray(
                                          v85,
-                                         (const MethodInfo_379A314 *)Method_System_Collections_Generic_List_UIWidget__ToArray__);
+                                         (const MethodInfo_37A4B7C *)Method_System_Collections_Generic_List_UIWidget__ToArray__);
   if ( !v175 )
     goto LABEL_286;
   v176 = (UIWidget_array *)partyMemberItem;
   v177 = v175;
 LABEL_242:
   SwitchUIWidgetComponent__Set(v177, v176, 0, 0);
-  partyMemberItem = (System_String_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39E2904 *)Method_SingletonMonoBehaviour_SwitchParameterDisplayManager__get_Instance__);
+  partyMemberItem = (System_String_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39ED16C *)Method_SingletonMonoBehaviour_SwitchParameterDisplayManager__get_Instance__);
   if ( !partyMemberItem )
     goto LABEL_286;
   SwitchParameterDisplayManager__Reset((SwitchParameterDisplayManager_o *)partyMemberItem, 0);
@@ -1798,15 +1798,15 @@ void RestrictionNotSatisfySlot___c___cctor(const MethodInfo *method)
   int32_t v2; // w2
   const MethodInfo *v3; // x3
 
-  if ( (byte_4C33768 & 1) == 0 )
+  if ( (byte_4C3ED52 & 1) == 0 )
   {
-    sub_1C32C20(&RestrictionNotSatisfySlot___c_TypeInfo);
-    byte_4C33768 = 1;
+    sub_1C37058(&RestrictionNotSatisfySlot___c_TypeInfo);
+    byte_4C3ED52 = 1;
   }
-  v1 = (Il2CppObject *)sub_1C32E6C(RestrictionNotSatisfySlot___c_TypeInfo);
+  v1 = (Il2CppObject *)sub_1C372A4(RestrictionNotSatisfySlot___c_TypeInfo);
   System_Object___ctor(v1, 0);
   RestrictionNotSatisfySlot___c_TypeInfo->static_fields->__9 = (struct RestrictionNotSatisfySlot___c_o *)v1;
-  sub_1C32BC4((CGThumbnailListItem_o *)RestrictionNotSatisfySlot___c_TypeInfo->static_fields, (int32_t)v1, v2, v3);
+  sub_1C36FFC((CGThumbnailListItem_o *)RestrictionNotSatisfySlot___c_TypeInfo->static_fields, (int32_t)v1, v2, v3);
 }
 
 
@@ -1822,7 +1822,7 @@ bool RestrictionNotSatisfySlot___c___SetItem_b__14_1(
         const MethodInfo *method)
 {
   if ( !entity )
-    sub_1C32E7C(this);
+    sub_1C372B4(this);
   return entity->fields.type != 15;
 }
 
@@ -1846,10 +1846,10 @@ bool RestrictionNotSatisfySlot___c__DisplayClass14_0___SetItem_b__0(
   unsigned int v7; // w8
 
   v4 = this;
-  if ( (byte_4C33769 & 1) == 0 )
+  if ( (byte_4C3ED53 & 1) == 0 )
   {
-    this = (RestrictionNotSatisfySlot___c__DisplayClass14_0_o *)sub_1C32C20(&Method_System_Linq_Enumerable_Contains_int___);
-    byte_4C33769 = 1;
+    this = (RestrictionNotSatisfySlot___c__DisplayClass14_0_o *)sub_1C37058(&Method_System_Linq_Enumerable_Contains_int___);
+    byte_4C3ED53 = 1;
   }
   if ( !entity )
     goto LABEL_13;
@@ -1859,7 +1859,7 @@ bool RestrictionNotSatisfySlot___c__DisplayClass14_0___SetItem_b__0(
     if ( memberItem )
       goto LABEL_9;
 LABEL_13:
-    sub_1C32E7C(this);
+    sub_1C372B4(this);
   }
   if ( !memberItem )
     goto LABEL_13;
@@ -1872,7 +1872,7 @@ LABEL_9:
   if ( System_Linq_Enumerable__Contains_int_(
          (System_Collections_Generic_IEnumerable_TSource__o *)entity->fields.targetVals2,
          memberItem->fields._InitPos_k__BackingField,
-         (const MethodInfo_30FA3A0 *)Method_System_Linq_Enumerable_Contains_int___)
+         (const MethodInfo_3104C08 *)Method_System_Linq_Enumerable_Contains_int___)
     && (v7 = entity->fields.type - 1, v7 <= 0xF) )
   {
     return (0x8801u >> v7) & 1;

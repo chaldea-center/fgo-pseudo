@@ -1,13 +1,13 @@
 void NpcServantFollowerEntity___ctor(NpcServantFollowerEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_4C37F3E & 1) == 0 )
+  if ( (byte_4C43537 & 1) == 0 )
   {
-    sub_1C32C20(&Method_DataEntityBase_long___ctor__);
-    byte_4C37F3E = 1;
+    sub_1C37058(&Method_DataEntityBase_long___ctor__);
+    byte_4C43537 = 1;
   }
   DataEntityBase_long____ctor(
     (DataEntityBase_long__o *)this,
-    (const MethodInfo_339439C *)Method_DataEntityBase_long___ctor__);
+    (const MethodInfo_339EC04 *)Method_DataEntityBase_long___ctor__);
 }
 
 
@@ -28,11 +28,11 @@ System_String_o *NpcServantFollowerEntity__GetFollowerName(
   bool isChangeName; // [xsp+Ch] [xbp-4h] BYREF
 
   isChangeName = 0;
-  return NpcServantFollowerEntity__GetFollowerName_42321972(this, followerId, questId, questPhase, &isChangeName, v5);
+  return NpcServantFollowerEntity__GetFollowerName_42423840(this, followerId, questId, questPhase, &isChangeName, v5);
 }
 
 
-System_String_o *NpcServantFollowerEntity__GetFollowerName_42321972(
+System_String_o *NpcServantFollowerEntity__GetFollowerName_42423840(
         NpcServantFollowerEntity_o *this,
         int64_t followerId,
         int32_t questId,
@@ -53,18 +53,18 @@ System_String_o *NpcServantFollowerEntity__GetFollowerName_42321972(
   Il2CppObject *Entity; // x0
 
   v10 = this;
-  if ( (byte_4C37F38 & 1) == 0 )
+  if ( (byte_4C43531 & 1) == 0 )
   {
-    sub_1C32C20(&Method_DataManager_GetMasterData_ServantChangeMaster___);
-    sub_1C32C20(&Method_DataManager_GetMasterData_ServantMaster___);
-    sub_1C32C20(&Method_DataMasterBase_ServantMaster__ServantEntity__int__GetEntity__);
-    sub_1C32C20(&LocalizationManager_TypeInfo);
-    sub_1C32C20(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-    sub_1C32C20(&string_TypeInfo);
-    sub_1C32C20(&StringLiteral_11650/*"SERVANT_HIDE_NAME"*/);
-    sub_1C32C20(&StringLiteral_9275/*"NONE"*/);
-    this = (NpcServantFollowerEntity_o *)sub_1C32C20(&StringLiteral_1/*""*/);
-    byte_4C37F38 = 1;
+    sub_1C37058(&Method_DataManager_GetMasterData_ServantChangeMaster___);
+    sub_1C37058(&Method_DataManager_GetMasterData_ServantMaster___);
+    sub_1C37058(&Method_DataMasterBase_ServantMaster__ServantEntity__int__GetEntity__);
+    sub_1C37058(&LocalizationManager_TypeInfo);
+    sub_1C37058(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    sub_1C37058(&string_TypeInfo);
+    sub_1C37058(&StringLiteral_11651/*"SERVANT_HIDE_NAME"*/);
+    sub_1C37058(&StringLiteral_9276/*"NONE"*/);
+    this = (NpcServantFollowerEntity_o *)sub_1C37058(&StringLiteral_1/*""*/);
+    byte_4C43531 = 1;
   }
   *isChangeName = 1;
   if ( (v10->fields.flag & 2) == 0 )
@@ -83,12 +83,12 @@ System_String_o *NpcServantFollowerEntity__GetFollowerName_42321972(
         return OverwriteServantName;
       if ( NpcFollowerEntity__IsExistSvtChangeParam(v13, v15) )
       {
-        Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39E2904 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+        Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39ED16C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
         if ( !Instance )
           goto LABEL_23;
         Instance = DataManager__GetMasterData_object_(
                      (DataManager_o *)Instance,
-                     (const MethodInfo_30DD3F0 *)Method_DataManager_GetMasterData_ServantChangeMaster___);
+                     (const MethodInfo_30E7C58 *)Method_DataManager_GetMasterData_ServantChangeMaster___);
         if ( !Instance )
           goto LABEL_23;
         v17 = ServantChangeMaster__GetEnableEntity((ServantChangeMaster_o *)Instance, v10->fields.svtId, 0);
@@ -105,32 +105,32 @@ System_String_o *NpcServantFollowerEntity__GetFollowerName_42321972(
       }
     }
     name = v10->fields.name;
-    if ( name && System_String__op_Inequality(name, (System_String_o *)StringLiteral_9275/*"NONE"*/, 0) )
+    if ( name && System_String__op_Inequality(name, (System_String_o *)StringLiteral_9276/*"NONE"*/, 0) )
       return v10->fields.name;
     *isChangeName = 0;
-    Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39E2904 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39ED16C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
     if ( Instance )
     {
       Instance = DataManager__GetMasterData_object_(
                    (DataManager_o *)Instance,
-                   (const MethodInfo_30DD3F0 *)Method_DataManager_GetMasterData_ServantMaster___);
+                   (const MethodInfo_30E7C58 *)Method_DataManager_GetMasterData_ServantMaster___);
       if ( Instance )
       {
         Entity = DataMasterBase_object__object__int___GetEntity(
                    (DataMasterBase_TMaster__TEntity__PKType__o *)Instance,
                    v10->fields.svtId,
-                   (const MethodInfo_3396838 *)Method_DataMasterBase_ServantMaster__ServantEntity__int__GetEntity__);
+                   (const MethodInfo_33A10A0 *)Method_DataMasterBase_ServantMaster__ServantEntity__int__GetEntity__);
         if ( Entity )
           return ServantEntity__getName((ServantEntity_o *)Entity, v10->fields.limitCount, -1, 0, 0);
         return (System_String_o *)StringLiteral_1/*""*/;
       }
     }
 LABEL_23:
-    sub_1C32E7C(Instance);
+    sub_1C372B4(Instance);
   }
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-  return LocalizationManager__Get((System_String_o *)StringLiteral_11650/*"SERVANT_HIDE_NAME"*/, 0);
+  return LocalizationManager__Get((System_String_o *)StringLiteral_11651/*"SERVANT_HIDE_NAME"*/, 0);
 }
 
 
@@ -152,13 +152,13 @@ int32_t NpcServantFollowerEntity__GetFollowerTreasureDeviceId(
   int32_t result; // w0
 
   v8 = this;
-  if ( (byte_4C37F39 & 1) == 0 )
+  if ( (byte_4C43532 & 1) == 0 )
   {
-    sub_1C32C20(&Method_DataManager_GetMasterData_ServantChangeMaster___);
-    sub_1C32C20(&Method_DataManager_GetMaster_ServantOverwriteMaster___);
-    sub_1C32C20(&DataManager_TypeInfo);
-    this = (NpcServantFollowerEntity_o *)sub_1C32C20(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-    byte_4C37F39 = 1;
+    sub_1C37058(&Method_DataManager_GetMasterData_ServantChangeMaster___);
+    sub_1C37058(&Method_DataManager_GetMaster_ServantOverwriteMaster___);
+    sub_1C37058(&DataManager_TypeInfo);
+    this = (NpcServantFollowerEntity_o *)sub_1C37058(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    byte_4C43532 = 1;
   }
   NpcFollowerEntity = NpcServantFollowerEntity__GetNpcFollowerEntity(this, followerId, questId, questPhase, method);
   if ( NpcFollowerEntity )
@@ -166,12 +166,12 @@ int32_t NpcServantFollowerEntity__GetFollowerTreasureDeviceId(
     v11 = NpcFollowerEntity;
     if ( NpcFollowerEntity__IsExistSvtChangeParam(NpcFollowerEntity, v10) )
     {
-      Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39E2904 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+      Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39ED16C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
       if ( !Instance )
         goto LABEL_17;
       Instance = DataManager__GetMasterData_object_(
                    (DataManager_o *)Instance,
-                   (const MethodInfo_30DD3F0 *)Method_DataManager_GetMasterData_ServantChangeMaster___);
+                   (const MethodInfo_30E7C58 *)Method_DataManager_GetMasterData_ServantChangeMaster___);
       if ( !Instance )
         goto LABEL_17;
       v14 = ServantChangeMaster__GetEnableEntity((ServantChangeMaster_o *)Instance, v8->fields.svtId, 0);
@@ -187,7 +187,7 @@ int32_t NpcServantFollowerEntity__GetFollowerTreasureDeviceId(
     {
       if ( !DataManager_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-      Instance = DataManager__GetMaster_object_((const MethodInfo_30DD39C *)Method_DataManager_GetMaster_ServantOverwriteMaster___);
+      Instance = DataManager__GetMaster_object_((const MethodInfo_30E7C04 *)Method_DataManager_GetMaster_ServantOverwriteMaster___);
       if ( Instance )
       {
         result = ServantOverwriteMaster__GetServantOverwriteTreasureDeviceId(
@@ -200,7 +200,7 @@ int32_t NpcServantFollowerEntity__GetFollowerTreasureDeviceId(
         return v8->fields.treasureDeviceId;
       }
 LABEL_17:
-      sub_1C32E7C(Instance);
+      sub_1C372B4(Instance);
     }
   }
   return v8->fields.treasureDeviceId;
@@ -218,20 +218,20 @@ NpcFollowerEntity_o *NpcServantFollowerEntity__GetNpcFollowerEntity(
   const MethodInfo *v9; // x5
   NpcFollowerEntity_o *entity; // [xsp+8h] [xbp-38h] BYREF
 
-  if ( (byte_4C37F3A & 1) == 0 )
+  if ( (byte_4C43533 & 1) == 0 )
   {
-    sub_1C32C20(&Method_DataManager_GetMasterData_NpcFollowerMaster___);
-    sub_1C32C20(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-    byte_4C37F3A = 1;
+    sub_1C37058(&Method_DataManager_GetMasterData_NpcFollowerMaster___);
+    sub_1C37058(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    byte_4C43533 = 1;
   }
   entity = 0;
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39E2904 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39ED16C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance
     || (Instance = DataManager__GetMasterData_object_(
                      (DataManager_o *)Instance,
-                     (const MethodInfo_30DD3F0 *)Method_DataManager_GetMasterData_NpcFollowerMaster___)) == 0 )
+                     (const MethodInfo_30E7C58 *)Method_DataManager_GetMasterData_NpcFollowerMaster___)) == 0 )
   {
-    sub_1C32E7C(Instance);
+    sub_1C372B4(Instance);
   }
   NpcFollowerMaster__TryGetEntity((NpcFollowerMaster_o *)Instance, &entity, followerId, questId, questPhase, v9);
   return entity;
@@ -247,44 +247,44 @@ System_Int32_array *NpcServantFollowerEntity__GetOverwriteIndividuality(
   System_Func_object__int__o *v5; // x20
   System_Collections_Generic_IEnumerable_TSource__o *v6; // x0
 
-  if ( (byte_4C37F3D & 1) == 0 )
+  if ( (byte_4C43536 & 1) == 0 )
   {
-    sub_1C32C20(&Method_System_Linq_Enumerable_Select_string__int___);
-    sub_1C32C20(&Method_System_Linq_Enumerable_ToArray_int___);
-    sub_1C32C20(&System_Func_string__int__TypeInfo);
-    sub_1C32C20(&Method_System_Int32_Parse__);
-    sub_1C32C20(&StringLiteral_15802/*"["*/);
-    sub_1C32C20(&StringLiteral_1/*""*/);
-    sub_1C32C20(&StringLiteral_16056/*"]"*/);
-    byte_4C37F3D = 1;
+    sub_1C37058(&Method_System_Linq_Enumerable_Select_string__int___);
+    sub_1C37058(&Method_System_Linq_Enumerable_ToArray_int___);
+    sub_1C37058(&System_Func_string__int__TypeInfo);
+    sub_1C37058(&Method_System_Int32_Parse__);
+    sub_1C37058(&StringLiteral_15804/*"["*/);
+    sub_1C37058(&StringLiteral_1/*""*/);
+    sub_1C37058(&StringLiteral_16058/*"]"*/);
+    byte_4C43536 = 1;
   }
   if ( !NpcServantFollowerEntity__IsOverwriteIndividuality(this, method) )
     return 0;
   individuality = this->fields.individuality;
   if ( !individuality
-    || (individuality = System_String__Replace_63565092(
+    || (individuality = System_String__Replace_63608204(
                           individuality,
-                          (System_String_o *)StringLiteral_15802/*"["*/,
+                          (System_String_o *)StringLiteral_15804/*"["*/,
                           (System_String_o *)StringLiteral_1/*""*/,
                           0)) == 0
-    || (individuality = System_String__Replace_63565092(
+    || (individuality = System_String__Replace_63608204(
                           individuality,
-                          (System_String_o *)StringLiteral_16056/*"]"*/,
+                          (System_String_o *)StringLiteral_16058/*"]"*/,
                           (System_String_o *)StringLiteral_1/*""*/,
                           0)) == 0 )
   {
-    sub_1C32E7C(individuality);
+    sub_1C372B4(individuality);
   }
   v4 = (System_Collections_Generic_IEnumerable_TSource__o *)System_String__Split(individuality, 0x2Cu, 0, 0);
-  v5 = (System_Func_object__int__o *)sub_1C32E6C(System_Func_string__int__TypeInfo);
+  v5 = (System_Func_object__int__o *)sub_1C372A4(System_Func_string__int__TypeInfo);
   System_Func_object__int____ctor(v5, 0, Method_System_Int32_Parse__, 0);
   v6 = (System_Collections_Generic_IEnumerable_TSource__o *)System_Linq_Enumerable__Select_object__int_(
                                                               v4,
                                                               (System_Func_TSource__TResult__o *)v5,
-                                                              (const MethodInfo_31131E0 *)Method_System_Linq_Enumerable_Select_string__int___);
+                                                              (const MethodInfo_311DA48 *)Method_System_Linq_Enumerable_Select_string__int___);
   return System_Linq_Enumerable__ToArray_int_(
            v6,
-           (const MethodInfo_311C8F4 *)Method_System_Linq_Enumerable_ToArray_int___);
+           (const MethodInfo_312715C *)Method_System_Linq_Enumerable_ToArray_int___);
 }
 
 
@@ -356,12 +356,12 @@ bool NpcServantFollowerEntity__IsNpc(int32_t flag, const MethodInfo *method)
 
 bool NpcServantFollowerEntity__IsOverwriteIndividuality(NpcServantFollowerEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_4C37F3C & 1) == 0 )
+  if ( (byte_4C43535 & 1) == 0 )
   {
-    sub_1C32C20(&StringLiteral_9275/*"NONE"*/);
-    byte_4C37F3C = 1;
+    sub_1C37058(&StringLiteral_9276/*"NONE"*/);
+    byte_4C43535 = 1;
   }
-  return System_String__op_Inequality(this->fields.individuality, (System_String_o *)StringLiteral_9275/*"NONE"*/, 0);
+  return System_String__op_Inequality(this->fields.individuality, (System_String_o *)StringLiteral_9276/*"NONE"*/, 0);
 }
 
 
@@ -409,7 +409,7 @@ FollowerInfo_o *NpcServantFollowerEntity__getFollowerInfo(
   const MethodInfo *v44; // x3
   const MethodInfo *v45; // x5
   int v46; // w8
-  System_String_o *FollowerName_42321972; // x0
+  System_String_o *FollowerName_42423840; // x0
   int32_t v48; // w2
   const MethodInfo *v49; // x3
   __int64 v50; // x0
@@ -433,26 +433,26 @@ FollowerInfo_o *NpcServantFollowerEntity__getFollowerInfo(
   System_Int32_array *idList; // [xsp+20h] [xbp-70h] BYREF
   bool isChangeName; // [xsp+2Ch] [xbp-64h] BYREF
 
-  if ( (byte_4C37F3B & 1) == 0 )
+  if ( (byte_4C43534 & 1) == 0 )
   {
-    sub_1C32C20(&AppendPassiveSkillInfo___TypeInfo);
-    sub_1C32C20(&AppendPassiveSkillInfo_TypeInfo);
-    sub_1C32C20(&Method_DataManager_GetMasterData_UserServantCollectionMaster___);
-    sub_1C32C20(&FollowerInfo_TypeInfo);
-    sub_1C32C20(&int___TypeInfo);
-    sub_1C32C20(&NetworkManager_TypeInfo);
-    sub_1C32C20(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
-    sub_1C32C20(&ServantLeaderInfo___TypeInfo);
-    sub_1C32C20(&ServantLeaderInfo_TypeInfo);
-    sub_1C32C20(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-    byte_4C37F3B = 1;
+    sub_1C37058(&AppendPassiveSkillInfo___TypeInfo);
+    sub_1C37058(&AppendPassiveSkillInfo_TypeInfo);
+    sub_1C37058(&Method_DataManager_GetMasterData_UserServantCollectionMaster___);
+    sub_1C37058(&FollowerInfo_TypeInfo);
+    sub_1C37058(&int___TypeInfo);
+    sub_1C37058(&NetworkManager_TypeInfo);
+    sub_1C37058(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
+    sub_1C37058(&ServantLeaderInfo___TypeInfo);
+    sub_1C37058(&ServantLeaderInfo_TypeInfo);
+    sub_1C37058(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    byte_4C43534 = 1;
   }
   titleList = 0;
   idList = 0;
   explanationList = 0;
-  v14 = sub_1C32E6C(FollowerInfo_TypeInfo);
+  v14 = sub_1C372A4(FollowerInfo_TypeInfo);
   FollowerInfo___ctor((FollowerInfo_o *)v14, 0);
-  v15 = sub_1C32E6C(ServantLeaderInfo_TypeInfo);
+  v15 = sub_1C372A4(ServantLeaderInfo_TypeInfo);
   ServantLeaderInfo___ctor((ServantLeaderInfo_o *)v15, 0);
   if ( !v15 )
     goto LABEL_41;
@@ -479,18 +479,18 @@ FollowerInfo_o *NpcServantFollowerEntity__getFollowerInfo(
   *(_QWORD *)(v15 + 76) = *(_QWORD *)&this->fields.hp;
   *(_OWORD *)(v15 + 92) = *(_OWORD *)&this->fields.skillId1;
   *(_QWORD *)(v15 + 108) = *(_QWORD *)&this->fields.skillLv2;
-  Instance = (__int64)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39E2904 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = (__int64)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39ED16C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance )
     goto LABEL_41;
   MasterData_object = DataManager__GetMasterData_object_(
                         (DataManager_o *)Instance,
-                        (const MethodInfo_30DD3F0 *)Method_DataManager_GetMasterData_UserServantCollectionMaster___);
+                        (const MethodInfo_30E7C58 *)Method_DataManager_GetMasterData_UserServantCollectionMaster___);
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
-  if ( !byte_4C31812 )
+  if ( !byte_4C3CD62 )
   {
-    sub_1C32C20(&NetworkManager_TypeInfo);
-    byte_4C31812 = 1;
+    sub_1C37058(&NetworkManager_TypeInfo);
+    byte_4C3CD62 = 1;
   }
   Instance = (__int64)NetworkManager_TypeInfo;
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
@@ -521,7 +521,7 @@ FollowerInfo_o *NpcServantFollowerEntity__getFollowerInfo(
     passiveSkill = idList;
 LABEL_27:
     *(_QWORD *)(v15 + 120) = passiveSkill;
-    sub_1C32BC4((CGThumbnailListItem_o *)(v15 + 120), (int32_t)passiveSkill, v19, v20);
+    sub_1C36FFC((CGThumbnailListItem_o *)(v15 + 120), (int32_t)passiveSkill, v19, v20);
     goto LABEL_28;
   }
   if ( !idList )
@@ -529,10 +529,10 @@ LABEL_27:
   v23 = idList->max_length;
   if ( !v23 )
     goto LABEL_27;
-  v24 = sub_1C32CC8(int___TypeInfo, (unsigned int)(v23 + max_length));
+  v24 = sub_1C37100(int___TypeInfo, (unsigned int)(v23 + max_length));
   *(_QWORD *)(v15 + 120) = v24;
   v25 = (System_Array_o **)(v15 + 120);
-  sub_1C32BC4((CGThumbnailListItem_o *)(v15 + 120), v24, v26, v27);
+  sub_1C36FFC((CGThumbnailListItem_o *)(v15 + 120), v24, v26, v27);
   Instance = (__int64)idList;
   if ( !idList )
     goto LABEL_41;
@@ -556,7 +556,7 @@ LABEL_28:
   appendPassiveSkillIds = this->fields.appendPassiveSkillIds;
   if ( !appendPassiveSkillIds )
     goto LABEL_41;
-  Instance = sub_1C32CC8(AppendPassiveSkillInfo___TypeInfo, LODWORD(appendPassiveSkillIds->max_length));
+  Instance = sub_1C37100(AppendPassiveSkillInfo___TypeInfo, LODWORD(appendPassiveSkillIds->max_length));
   v35 = this->fields.appendPassiveSkillIds;
   if ( !v35 )
     goto LABEL_41;
@@ -568,7 +568,7 @@ LABEL_28:
     v39 = v38 - 8;
     if ( v38 - 8 >= SLODWORD(v35->max_length) )
       break;
-    v40 = (AppendPassiveSkillInfo_o *)sub_1C32E6C(AppendPassiveSkillInfo_TypeInfo);
+    v40 = (AppendPassiveSkillInfo_o *)sub_1C372A4(AppendPassiveSkillInfo_TypeInfo);
     AppendPassiveSkillInfo___ctor(v40, 0);
     v41 = this->fields.appendPassiveSkillIds;
     if ( !v41 )
@@ -586,13 +586,13 @@ LABEL_28:
     v40->fields.skillLv = *((_DWORD *)&appendPassiveSkillLvs->obj.klass + v38);
     if ( !v36 )
       goto LABEL_41;
-    Instance = sub_1C32D5C(v40, *(_QWORD *)(*(_QWORD *)v36 + 64LL));
+    Instance = sub_1C37194(v40, *(_QWORD *)(*(_QWORD *)v36 + 64LL));
     if ( !Instance )
       goto LABEL_54;
     if ( v39 >= v36[6] )
       goto LABEL_53;
     v37->klass = (CGThumbnailListItem_c *)v40;
-    sub_1C32BC4(v37, (int32_t)v40, v43, v44);
+    sub_1C36FFC(v37, (int32_t)v40, v43, v44);
     v35 = this->fields.appendPassiveSkillIds;
     ++v38;
     v37 = (CGThumbnailListItem_o *)((char *)v37 + 8);
@@ -600,55 +600,55 @@ LABEL_28:
       goto LABEL_41;
   }
   *(_QWORD *)(v15 + 224) = v36;
-  sub_1C32BC4((CGThumbnailListItem_o *)(v15 + 224), (int32_t)v36, v33, v34);
+  sub_1C36FFC((CGThumbnailListItem_o *)(v15 + 224), (int32_t)v36, v33, v34);
   if ( !v14 )
     goto LABEL_41;
   *(_QWORD *)(v14 + 16) = v29;
   v46 = (*(_DWORD *)(v15 + 272) & 4) != 0 ? 4 : 3;
   *(_DWORD *)(v14 + 36) = v46;
   isChangeName = 0;
-  FollowerName_42321972 = NpcServantFollowerEntity__GetFollowerName_42321972(
+  FollowerName_42423840 = NpcServantFollowerEntity__GetFollowerName_42423840(
                             this,
                             v29,
                             questIda,
                             v30,
                             &isChangeName,
                             v45);
-  *(_QWORD *)(v14 + 24) = FollowerName_42321972;
-  sub_1C32BC4((CGThumbnailListItem_o *)(v14 + 24), (int32_t)FollowerName_42321972, v48, v49);
+  *(_QWORD *)(v14 + 24) = FollowerName_42423840;
+  sub_1C36FFC((CGThumbnailListItem_o *)(v14 + 24), (int32_t)FollowerName_42423840, v48, v49);
   *(_DWORD *)(v14 + 32) = 0;
-  v50 = sub_1C32CC8(ServantLeaderInfo___TypeInfo, 1);
+  v50 = sub_1C37100(ServantLeaderInfo___TypeInfo, 1);
   *(_QWORD *)(v14 + 40) = v50;
-  sub_1C32BC4((CGThumbnailListItem_o *)(v14 + 40), v50, v51, v52);
+  sub_1C36FFC((CGThumbnailListItem_o *)(v14 + 40), v50, v51, v52);
   v53 = *(_QWORD *)(v14 + 40);
   if ( !v53 )
     goto LABEL_41;
-  Instance = sub_1C32D5C(v15, *(_QWORD *)(*(_QWORD *)v53 + 64LL));
+  Instance = sub_1C37194(v15, *(_QWORD *)(*(_QWORD *)v53 + 64LL));
   if ( !Instance )
     goto LABEL_54;
   if ( !*(_DWORD *)(v53 + 24) )
     goto LABEL_53;
   *(_QWORD *)(v53 + 32) = v15;
-  sub_1C32BC4((CGThumbnailListItem_o *)(v53 + 32), v15, v54, v55);
-  v56 = sub_1C32CC8(ServantLeaderInfo___TypeInfo, 1);
+  sub_1C36FFC((CGThumbnailListItem_o *)(v53 + 32), v15, v54, v55);
+  v56 = sub_1C37100(ServantLeaderInfo___TypeInfo, 1);
   *(_QWORD *)(v14 + 48) = v56;
-  sub_1C32BC4((CGThumbnailListItem_o *)(v14 + 48), v56, v57, v58);
+  sub_1C36FFC((CGThumbnailListItem_o *)(v14 + 48), v56, v57, v58);
   v59 = *(_QWORD *)(v14 + 48);
   if ( !v59 )
 LABEL_41:
-    sub_1C32E7C(Instance);
-  Instance = sub_1C32D5C(v15, *(_QWORD *)(*(_QWORD *)v59 + 64LL));
+    sub_1C372B4(Instance);
+  Instance = sub_1C37194(v15, *(_QWORD *)(*(_QWORD *)v59 + 64LL));
   if ( !Instance )
   {
 LABEL_54:
-    v64 = sub_1C32EA0(Instance);
-    sub_1C32D48(v64, 0);
+    v64 = sub_1C372D8(Instance);
+    sub_1C37180(v64, 0);
   }
   if ( !*(_DWORD *)(v59 + 24) )
 LABEL_53:
-    sub_1C32E84(Instance);
+    sub_1C372BC(Instance);
   *(_QWORD *)(v59 + 32) = v15;
-  sub_1C32BC4((CGThumbnailListItem_o *)(v59 + 32), v15, v60, v61);
+  sub_1C36FFC((CGThumbnailListItem_o *)(v59 + 32), v15, v60, v61);
   id = this->fields.id;
   *(_BYTE *)(v14 + 104) = isMySvtOrNpc;
   *(_BYTE *)(v14 + 105) = isFixedNpc;

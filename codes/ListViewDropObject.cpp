@@ -1,9 +1,9 @@
 void ListViewDropObject___ctor(ListViewDropObject_o *this, const MethodInfo *method)
 {
-  if ( (byte_4C390DA & 1) == 0 )
+  if ( (byte_4C446D4 & 1) == 0 )
   {
-    sub_1C32C20(&ListViewObject_TypeInfo);
-    byte_4C390DA = 1;
+    sub_1C37058(&ListViewObject_TypeInfo);
+    byte_4C446D4 = 1;
   }
   if ( !ListViewObject_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(ListViewObject_TypeInfo);
@@ -21,7 +21,7 @@ bool ListViewDropObject__ClearItem(ListViewDropObject_o *this, const MethodInfo 
   if ( !this->fields.isBusy )
   {
     this->fields.linkItem = 0;
-    sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.linkItem, 0, v2, v3);
+    sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.linkItem, 0, v2, v3);
     ListViewObject__SetVisible((ListViewObject_o *)this, 0, 0);
     ((void (__fastcall *)(ListViewDropObject_o *, _QWORD, const MethodInfo *))this->klass->vtable._9_SetInput.methodPtr)(
       this,
@@ -64,13 +64,13 @@ UnityEngine_GameObject_o *ListViewDropObject__CreateDragObject(ListViewDropObjec
   UnityEngine_Vector3_o localPosition; // 0:s0.4,4:s1.4,8:s2.4
   UnityEngine_Vector3_o v32; // 0:s0.4,4:s1.4,8:s2.4
 
-  if ( (byte_4C390D9 & 1) == 0 )
+  if ( (byte_4C446D3 & 1) == 0 )
   {
-    sub_1C32C20(&Method_UnityEngine_GameObject_GetComponent_ListViewDropObject___);
-    sub_1C32C20(&NGUITools_TypeInfo);
-    sub_1C32C20(&UnityEngine_Object_TypeInfo);
-    sub_1C32C20(&UIDragDropRoot_TypeInfo);
-    byte_4C390D9 = 1;
+    sub_1C37058(&Method_UnityEngine_GameObject_GetComponent_ListViewDropObject___);
+    sub_1C37058(&NGUITools_TypeInfo);
+    sub_1C37058(&UnityEngine_Object_TypeInfo);
+    sub_1C37058(&UIDragDropRoot_TypeInfo);
+    byte_4C446D3 = 1;
   }
   root = (UnityEngine_Object_o *)UIDragDropRoot_TypeInfo->static_fields->root;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -95,19 +95,19 @@ UnityEngine_GameObject_o *ListViewDropObject__CreateDragObject(ListViewDropObjec
   v7 = gameObject;
   if ( !NGUITools_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NGUITools_TypeInfo);
-  transform = (__int64)NGUITools__AddChild_49306416(v7, dragObjectPrefab, 0);
+  transform = (__int64)NGUITools__AddChild_49349528(v7, dragObjectPrefab, 0);
   if ( !transform )
     goto LABEL_29;
   v8 = (UnityEngine_GameObject_o *)transform;
   transform = (__int64)UnityEngine_GameObject__GetComponent_object_(
                          (UnityEngine_GameObject_o *)transform,
-                         (const MethodInfo_3134970 *)Method_UnityEngine_GameObject_GetComponent_ListViewDropObject___);
+                         (const MethodInfo_313F1D8 *)Method_UnityEngine_GameObject_GetComponent_ListViewDropObject___);
   if ( !transform )
     goto LABEL_29;
   linkItem = this->fields.linkItem;
   v12 = (UnityEngine_Component_o *)transform;
   *(_QWORD *)(transform + 56) = linkItem;
-  sub_1C32BC4((CGThumbnailListItem_o *)(transform + 56), (int32_t)linkItem, v9, v10);
+  sub_1C36FFC((CGThumbnailListItem_o *)(transform + 56), (int32_t)linkItem, v9, v10);
   v13 = UnityEngine_Component__get_transform(v12, 0);
   transform = (__int64)UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0);
   if ( !transform )
@@ -126,10 +126,10 @@ UnityEngine_GameObject_o *ListViewDropObject__CreateDragObject(ListViewDropObjec
   UnityEngine_Transform__set_eulerAngles(v14, eulerAngles, 0);
   transform = (__int64)UnityEngine_Component__get_transform(v12, 0);
   v15 = (UnityEngine_Transform_o *)transform;
-  if ( !byte_4C313D6 )
+  if ( !byte_4C3C926 )
   {
-    transform = sub_1C32C20(&UnityEngine_Vector3_TypeInfo);
-    byte_4C313D6 = 1;
+    transform = sub_1C37058(&UnityEngine_Vector3_TypeInfo);
+    byte_4C3C926 = 1;
   }
   if ( !v15 )
     goto LABEL_29;
@@ -137,7 +137,7 @@ UnityEngine_GameObject_o *ListViewDropObject__CreateDragObject(ListViewDropObjec
   transform = (__int64)UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0);
   if ( !transform )
     goto LABEL_29;
-  v27 = UnityEngine_Transform__TransformPoint_71250240((UnityEngine_Transform_o *)transform, 1.0, 1.0, 0.0, 0);
+  v27 = UnityEngine_Transform__TransformPoint_71293352((UnityEngine_Transform_o *)transform, 1.0, 1.0, 0.0, 0);
   x = v27.fields.x;
   y = v27.fields.y;
   z = v27.fields.z;
@@ -171,7 +171,7 @@ UnityEngine_GameObject_o *ListViewDropObject__CreateDragObject(ListViewDropObjec
         (transform = (__int64)UnityEngine_Component__get_transform(v12, 0)) == 0) )
   {
 LABEL_29:
-    sub_1C32E7C(transform);
+    sub_1C372B4(transform);
   }
   v32.fields.z = 0.0;
   v32.fields.x = v22;
@@ -199,7 +199,7 @@ void ListViewDropObject__ReleaseItem(ListViewDropObject_o *this, const MethodInf
   if ( linkItem )
   {
     this->fields.linkItem = 0;
-    sub_1C32BC4((CGThumbnailListItem_o *)p_linkItem, 0, v2, v3);
+    sub_1C36FFC((CGThumbnailListItem_o *)p_linkItem, 0, v2, v3);
     ListViewObject__SetVisible((ListViewObject_o *)this, 0, 0);
     ((void (__fastcall *)(ListViewDropObject_o *, _QWORD, const MethodInfo *))this->klass->vtable._9_SetInput.methodPtr)(
       this,
@@ -219,7 +219,7 @@ void ListViewDropObject__SetItem(ListViewDropObject_o *this, ListViewItem_o *ite
 }
 
 
-void ListViewDropObject__SetItem_43701356(
+void ListViewDropObject__SetItem_43803460(
         ListViewDropObject_o *this,
         ListViewItem_o *item,
         ListViewItemSeed_o *seed,
@@ -227,13 +227,13 @@ void ListViewDropObject__SetItem_43701356(
 {
   UnityEngine_GameObject_o *gameObject; // x0
 
-  if ( (byte_4C390D8 & 1) == 0 )
+  if ( (byte_4C446D2 & 1) == 0 )
   {
-    sub_1C32C20(&StringLiteral_12785/*"SetBaseTransform"*/);
-    byte_4C390D8 = 1;
+    sub_1C37058(&StringLiteral_12786/*"SetBaseTransform"*/);
+    byte_4C446D2 = 1;
   }
   this->fields.linkItem = item;
-  sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.linkItem, (int32_t)item, (int32_t)seed, method);
+  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.linkItem, (int32_t)item, (int32_t)seed, method);
   ListViewObject__SetVisible((ListViewObject_o *)this, 0, 0);
   ((void (__fastcall *)(ListViewDropObject_o *, _QWORD, const MethodInfo *))this->klass->vtable._9_SetInput.methodPtr)(
     this,
@@ -241,6 +241,6 @@ void ListViewDropObject__SetItem_43701356(
     this->klass->vtable._9_SetInput.method);
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
   if ( !gameObject )
-    sub_1C32E7C(0);
-  UnityEngine_GameObject__SendMessage_71205516(gameObject, (System_String_o *)StringLiteral_12785/*"SetBaseTransform"*/, 0);
+    sub_1C372B4(0);
+  UnityEngine_GameObject__SendMessage_71248628(gameObject, (System_String_o *)StringLiteral_12786/*"SetBaseTransform"*/, 0);
 }

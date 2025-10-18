@@ -6,19 +6,19 @@ void AutomaticSaleDlgComponent___cctor(const MethodInfo *method)
   int32_t v4; // w2
   const MethodInfo *v5; // x3
 
-  if ( (byte_4C33D51 & 1) == 0 )
+  if ( (byte_4C3F3C9 & 1) == 0 )
   {
-    sub_1C32C20(&AutomaticSaleDlgComponent_TypeInfo);
-    sub_1C32C20(&int___TypeInfo);
-    sub_1C32C20(&Field__PrivateImplementationDetails__9AB8EA006C25C887223D6AFCA548F88D37A644BA96E801F909C99641FFB609F7);
-    byte_4C33D51 = 1;
+    sub_1C37058(&AutomaticSaleDlgComponent_TypeInfo);
+    sub_1C37058(&int___TypeInfo);
+    sub_1C37058(&Field__PrivateImplementationDetails__9AB8EA006C25C887223D6AFCA548F88D37A644BA96E801F909C99641FFB609F7);
+    byte_4C3F3C9 = 1;
   }
-  v1 = (System_Array_o *)sub_1C32CC8(int___TypeInfo, 9);
+  v1 = (System_Array_o *)sub_1C37100(int___TypeInfo, 9);
   v2.fields.value = Field__PrivateImplementationDetails__9AB8EA006C25C887223D6AFCA548F88D37A644BA96E801F909C99641FFB609F7;
   v3 = (struct System_Int32_array *)v1;
-  System_Runtime_CompilerServices_RuntimeHelpers__InitializeArray_64219320(v1, v2, 0);
+  System_Runtime_CompilerServices_RuntimeHelpers__InitializeArray_64262432(v1, v2, 0);
   AutomaticSaleDlgComponent_TypeInfo->static_fields->settingList = v3;
-  sub_1C32BC4((CGThumbnailListItem_o *)AutomaticSaleDlgComponent_TypeInfo->static_fields, (int32_t)v3, v4, v5);
+  sub_1C36FFC((CGThumbnailListItem_o *)AutomaticSaleDlgComponent_TypeInfo->static_fields, (int32_t)v3, v4, v5);
 }
 
 
@@ -28,19 +28,19 @@ void AutomaticSaleDlgComponent___ctor(AutomaticSaleDlgComponent_o *this, const M
   int32_t v4; // w2
   const MethodInfo *v5; // x3
 
-  if ( (byte_4C33D50 & 1) == 0 )
+  if ( (byte_4C3F3C8 & 1) == 0 )
   {
-    sub_1C32C20(&BaseDialog_TypeInfo);
-    sub_1C32C20(&Method_System_Collections_Generic_List_int___ctor__);
-    sub_1C32C20(&System_Collections_Generic_List_int__TypeInfo);
-    byte_4C33D50 = 1;
+    sub_1C37058(&BaseDialog_TypeInfo);
+    sub_1C37058(&Method_System_Collections_Generic_List_int___ctor__);
+    sub_1C37058(&System_Collections_Generic_List_int__TypeInfo);
+    byte_4C3F3C8 = 1;
   }
-  v3 = (System_Collections_Generic_List_int__o *)sub_1C32E6C(System_Collections_Generic_List_int__TypeInfo);
+  v3 = (System_Collections_Generic_List_int__o *)sub_1C372A4(System_Collections_Generic_List_int__TypeInfo);
   System_Collections_Generic_List_int____ctor(
     v3,
-    (const MethodInfo_377AF44 *)Method_System_Collections_Generic_List_int___ctor__);
+    (const MethodInfo_37857AC *)Method_System_Collections_Generic_List_int___ctor__);
   this->fields.enableList = v3;
-  sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.enableList, (int32_t)v3, v4, v5);
+  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.enableList, (int32_t)v3, v4, v5);
   if ( !BaseDialog_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(BaseDialog_TypeInfo);
   BaseDialog___ctor((BaseDialog_o *)this, 0);
@@ -60,7 +60,7 @@ void AutomaticSaleDlgComponent__Callback(AutomaticSaleDlgComponent_o *this, bool
   if ( callbackFunc )
   {
     p_callbackFunc->klass = 0;
-    sub_1C32BC4(p_callbackFunc, 0, (int32_t)method, v3);
+    sub_1C36FFC(p_callbackFunc, 0, (int32_t)method, v3);
     ((void (__fastcall *)(intptr_t, bool, intptr_t))v5->fields.invoke_impl)(
       v5->fields.method_code,
       result,
@@ -73,11 +73,11 @@ void AutomaticSaleDlgComponent__Close(AutomaticSaleDlgComponent_o *this, const M
 {
   const MethodInfo *v2; // x2
 
-  AutomaticSaleDlgComponent__Close_35244400(this, 0, v2);
+  AutomaticSaleDlgComponent__Close_35422652(this, 0, v2);
 }
 
 
-void AutomaticSaleDlgComponent__Close_35244400(
+void AutomaticSaleDlgComponent__Close_35422652(
         AutomaticSaleDlgComponent_o *this,
         System_Action_o *callback,
         const MethodInfo *method)
@@ -85,16 +85,16 @@ void AutomaticSaleDlgComponent__Close_35244400(
   const MethodInfo *v3; // x3
   System_Action_o *v6; // x20
 
-  if ( (byte_4C33D47 & 1) == 0 )
+  if ( (byte_4C3F3BF & 1) == 0 )
   {
-    sub_1C32C20(&System_Action_TypeInfo);
-    sub_1C32C20(&Method_AutomaticSaleDlgComponent_EndClose__);
-    byte_4C33D47 = 1;
+    sub_1C37058(&System_Action_TypeInfo);
+    sub_1C37058(&Method_AutomaticSaleDlgComponent_EndClose__);
+    byte_4C3F3BF = 1;
   }
   this->fields.closeCallbackFunc = callback;
-  sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.closeCallbackFunc, (int32_t)callback, (int32_t)method, v3);
+  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.closeCallbackFunc, (int32_t)callback, (int32_t)method, v3);
   this->fields.state = 5;
-  v6 = (System_Action_o *)sub_1C32E6C(System_Action_TypeInfo);
+  v6 = (System_Action_o *)sub_1C372A4(System_Action_TypeInfo);
   System_Action___ctor(v6, (Il2CppObject *)this, Method_AutomaticSaleDlgComponent_EndClose__, 0);
   BaseDialog__Close((BaseDialog_o *)this, v6, 0);
 }
@@ -112,7 +112,7 @@ void AutomaticSaleDlgComponent__EndClose(AutomaticSaleDlgComponent_o *this, cons
   AutomaticSaleDlgComponent__Init(this, method);
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
   if ( !gameObject )
-    sub_1C32E7C(0);
+    sub_1C372B4(0);
   UnityEngine_GameObject__SetActive(gameObject, 0, 0);
   closeCallbackFunc = this->fields.closeCallbackFunc;
   p_closeCallbackFunc = (CGThumbnailListItem_o *)&this->fields.closeCallbackFunc;
@@ -120,7 +120,7 @@ void AutomaticSaleDlgComponent__EndClose(AutomaticSaleDlgComponent_o *this, cons
   if ( closeCallbackFunc )
   {
     p_closeCallbackFunc->klass = 0;
-    sub_1C32BC4(p_closeCallbackFunc, 0, v4, v5);
+    sub_1C36FFC(p_closeCallbackFunc, 0, v4, v5);
     ((void (__fastcall *)(intptr_t, intptr_t))v7->fields.invoke_impl)(v7->fields.method_code, v7->fields.method);
   }
 }
@@ -149,15 +149,15 @@ System_Int32_array *AutomaticSaleDlgComponent__GetDisableList(
   bool v12; // nf
 
   v2 = this;
-  if ( (byte_4C33D4F & 1) == 0 )
+  if ( (byte_4C3F3C7 & 1) == 0 )
   {
-    sub_1C32C20(&Method_BasicHelper_Any_int___);
-    sub_1C32C20(&System_Func_int__bool__TypeInfo);
-    sub_1C32C20(&int___TypeInfo);
-    sub_1C32C20(&Method_System_Collections_Generic_List_int__get_Count__);
-    sub_1C32C20(&Method_AutomaticSaleDlgComponent___c__DisplayClass46_0__GetDisableList_b__0__);
-    this = (AutomaticSaleDlgComponent_o *)sub_1C32C20(&AutomaticSaleDlgComponent___c__DisplayClass46_0_TypeInfo);
-    byte_4C33D4F = 1;
+    sub_1C37058(&Method_BasicHelper_Any_int___);
+    sub_1C37058(&System_Func_int__bool__TypeInfo);
+    sub_1C37058(&int___TypeInfo);
+    sub_1C37058(&Method_System_Collections_Generic_List_int__get_Count__);
+    sub_1C37058(&Method_AutomaticSaleDlgComponent___c__DisplayClass46_0__GetDisableList_b__0__);
+    this = (AutomaticSaleDlgComponent_o *)sub_1C37058(&AutomaticSaleDlgComponent___c__DisplayClass46_0_TypeInfo);
+    byte_4C3F3C7 = 1;
   }
   enableList = v2->fields.enableList;
   if ( !enableList )
@@ -165,18 +165,18 @@ System_Int32_array *AutomaticSaleDlgComponent__GetDisableList(
   size = enableList->fields._size;
   if ( size == 9 )
     return 0;
-  v5 = sub_1C32CC8(int___TypeInfo, (unsigned int)(9 - size));
-  v6 = sub_1C32E6C(AutomaticSaleDlgComponent___c__DisplayClass46_0_TypeInfo);
+  v5 = sub_1C37100(int___TypeInfo, (unsigned int)(9 - size));
+  v6 = sub_1C372A4(AutomaticSaleDlgComponent___c__DisplayClass46_0_TypeInfo);
   System_Object___ctor((Il2CppObject *)v6, 0);
   if ( !v6 )
 LABEL_15:
-    sub_1C32E7C(this);
+    sub_1C372B4(this);
   v7 = 0;
   *(_DWORD *)(v6 + 16) = 0;
   do
   {
     v8 = (System_Collections_Generic_List_T__o *)v2->fields.enableList;
-    v9 = (System_Func_int__bool__o *)sub_1C32E6C(System_Func_int__bool__TypeInfo);
+    v9 = (System_Func_int__bool__o *)sub_1C372A4(System_Func_int__bool__TypeInfo);
     System_Func_int__bool____ctor(
       v9,
       (Il2CppObject *)v6,
@@ -185,13 +185,13 @@ LABEL_15:
     this = (AutomaticSaleDlgComponent_o *)BasicHelper__Any_int_(
                                             v8,
                                             (System_Func_T__bool__o *)v9,
-                                            (const MethodInfo_30C6464 *)Method_BasicHelper_Any_int___);
+                                            (const MethodInfo_30D0CCC *)Method_BasicHelper_Any_int___);
     if ( ((unsigned __int8)this & 1) == 0 )
     {
       if ( !v5 )
         goto LABEL_15;
       if ( v7 >= *(_DWORD *)(v5 + 24) )
-        sub_1C32E84(this);
+        sub_1C372BC(this);
       v10 = v5 + 4LL * (int)v7++;
       *(_DWORD *)(v10 + 32) = *(_DWORD *)(v6 + 16);
     }
@@ -210,11 +210,11 @@ void AutomaticSaleDlgComponent__Init(AutomaticSaleDlgComponent_o *this, const Me
   struct System_Collections_Generic_List_int__o *enableList; // x8
   int v5; // w9
 
-  if ( (byte_4C33D45 & 1) == 0 )
+  if ( (byte_4C3F3BD & 1) == 0 )
   {
-    sub_1C32C20(&Method_System_Collections_Generic_List_int__Clear__);
-    sub_1C32C20(&StringLiteral_1/*""*/);
-    byte_4C33D45 = 1;
+    sub_1C37058(&Method_System_Collections_Generic_List_int__Clear__);
+    sub_1C37058(&StringLiteral_1/*""*/);
+    byte_4C3F3BD = 1;
   }
   titleLabel = this->fields.titleLabel;
   if ( !titleLabel )
@@ -249,7 +249,7 @@ void AutomaticSaleDlgComponent__Init(AutomaticSaleDlgComponent_o *this, const Me
         (titleLabel = (UILabel_o *)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0)) == 0) )
   {
 LABEL_13:
-    sub_1C32E7C(titleLabel);
+    sub_1C372B4(titleLabel);
   }
   UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)titleLabel, 0, 0);
   this->fields.state = 0;
@@ -267,17 +267,17 @@ void AutomaticSaleDlgComponent__OnClickButton(
   const MethodInfo *v7; // x2
   const MethodInfo *v8; // x2
 
-  if ( (byte_4C33D4A & 1) == 0 )
+  if ( (byte_4C3F3C2 & 1) == 0 )
   {
-    sub_1C32C20(&Method_AutomaticSaleDlgComponent_OnClickButton__);
-    byte_4C33D4A = 1;
+    sub_1C37058(&Method_AutomaticSaleDlgComponent_OnClickButton__);
+    byte_4C3F3C2 = 1;
   }
   if ( this->fields.state == 2 )
   {
     v5 = Method_AutomaticSaleDlgComponent_OnClickButton__;
     if ( (*((_BYTE *)Method_AutomaticSaleDlgComponent_OnClickButton__ + 83) & 2) != 0 )
-      v5 = (_QWORD *)sub_1C32C38(Method_AutomaticSaleDlgComponent_OnClickButton__);
-    v6 = (System_Reflection_MethodBase_o *)sub_1C32C04(v5, v5[4]);
+      v5 = (_QWORD *)sub_1C37070(Method_AutomaticSaleDlgComponent_OnClickButton__);
+    v6 = (System_Reflection_MethodBase_o *)sub_1C3703C(v5, v5[4]);
     OverwriteAssetSoundName__PlaySystemSe(v6, 0, 0, 0);
     AutomaticSaleDlgComponent__SwitchSelect(this, kind, v7);
     AutomaticSaleDlgComponent__SetButtonSelect(this, kind, v8);
@@ -292,18 +292,18 @@ void AutomaticSaleDlgComponent__OnClickCancel(AutomaticSaleDlgComponent_o *this,
   const MethodInfo *v5; // x2
   const MethodInfo *v6; // x2
 
-  if ( (byte_4C33D49 & 1) == 0 )
+  if ( (byte_4C3F3C1 & 1) == 0 )
   {
-    sub_1C32C20(&Method_AutomaticSaleDlgComponent_OnClickCancel__);
-    byte_4C33D49 = 1;
+    sub_1C37058(&Method_AutomaticSaleDlgComponent_OnClickCancel__);
+    byte_4C3F3C1 = 1;
   }
   if ( this->fields.state == 2 )
   {
     this->fields.state = 4;
     v3 = Method_AutomaticSaleDlgComponent_OnClickCancel__;
     if ( (*((_BYTE *)Method_AutomaticSaleDlgComponent_OnClickCancel__ + 83) & 2) != 0 )
-      v3 = (_QWORD *)sub_1C32C38(Method_AutomaticSaleDlgComponent_OnClickCancel__);
-    v4 = (System_Reflection_MethodBase_o *)sub_1C32C04(v3, v3[4]);
+      v3 = (_QWORD *)sub_1C37070(Method_AutomaticSaleDlgComponent_OnClickCancel__);
+    v4 = (System_Reflection_MethodBase_o *)sub_1C3703C(v3, v3[4]);
     OverwriteAssetSoundName__PlaySystemSe(v4, 1, 0, 0);
     AutomaticSaleDlgComponent__SetButtonEnable(this, 0, v5);
     AutomaticSaleDlgComponent__Callback(this, 0, v6);
@@ -318,18 +318,18 @@ void AutomaticSaleDlgComponent__OnClickDecide(AutomaticSaleDlgComponent_o *this,
   const MethodInfo *v5; // x2
   const MethodInfo *v6; // x1
 
-  if ( (byte_4C33D48 & 1) == 0 )
+  if ( (byte_4C3F3C0 & 1) == 0 )
   {
-    sub_1C32C20(&Method_AutomaticSaleDlgComponent_OnClickDecide__);
-    byte_4C33D48 = 1;
+    sub_1C37058(&Method_AutomaticSaleDlgComponent_OnClickDecide__);
+    byte_4C3F3C0 = 1;
   }
   if ( this->fields.state == 2 )
   {
     this->fields.state = 3;
     v3 = Method_AutomaticSaleDlgComponent_OnClickDecide__;
     if ( (*((_BYTE *)Method_AutomaticSaleDlgComponent_OnClickDecide__ + 83) & 2) != 0 )
-      v3 = (_QWORD *)sub_1C32C38(Method_AutomaticSaleDlgComponent_OnClickDecide__);
-    v4 = (System_Reflection_MethodBase_o *)sub_1C32C04(v3, v3[4]);
+      v3 = (_QWORD *)sub_1C37070(Method_AutomaticSaleDlgComponent_OnClickDecide__);
+    v4 = (System_Reflection_MethodBase_o *)sub_1C3703C(v3, v3[4]);
     OverwriteAssetSoundName__PlaySystemSe(v4, 0, 0, 0);
     AutomaticSaleDlgComponent__SetButtonEnable(this, 0, v5);
     AutomaticSaleDlgComponent__RequestUserStatusFlagSet(this, v6);
@@ -443,40 +443,40 @@ void AutomaticSaleDlgComponent__Open(
   const MethodInfo *v31; // x2
   System_Action_o *v32; // x20
 
-  if ( (byte_4C33D46 & 1) == 0 )
+  if ( (byte_4C3F3BE & 1) == 0 )
   {
-    sub_1C32C20(&System_Action_TypeInfo);
-    sub_1C32C20(&Method_AutomaticSaleDlgComponent_EndOpen__);
-    sub_1C32C20(&AutomaticSaleDlgComponent_TypeInfo);
-    sub_1C32C20(&Method_System_Collections_Generic_List_int__Add__);
-    sub_1C32C20(&LocalizationManager_TypeInfo);
-    sub_1C32C20(&StringLiteral_12416/*"SUMMON_AUTOSALE_FOU_TXT"*/);
-    sub_1C32C20(&StringLiteral_12418/*"SUMMON_AUTOSALE_TITLE"*/);
-    sub_1C32C20(&StringLiteral_11806/*"SERVANT_SORT_FILTER_RARITY_UNCOMMON"*/);
-    sub_1C32C20(&StringLiteral_3686/*"COMMON_CONFIRM_DECIDE"*/);
-    sub_1C32C20(&StringLiteral_12414/*"SUMMON_AUTOSALE_EQUIP_TXT"*/);
-    sub_1C32C20(&StringLiteral_12417/*"SUMMON_AUTOSALE_MSG"*/);
-    sub_1C32C20(&StringLiteral_3685/*"COMMON_CONFIRM_CLOSE"*/);
-    sub_1C32C20(&StringLiteral_11802/*"SERVANT_SORT_FILTER_RARITY_COMMON"*/);
-    sub_1C32C20(&StringLiteral_12415/*"SUMMON_AUTOSALE_EXP_TXT"*/);
-    sub_1C32C20(&StringLiteral_11803/*"SERVANT_SORT_FILTER_RARITY_RARE"*/);
-    byte_4C33D46 = 1;
+    sub_1C37058(&System_Action_TypeInfo);
+    sub_1C37058(&Method_AutomaticSaleDlgComponent_EndOpen__);
+    sub_1C37058(&AutomaticSaleDlgComponent_TypeInfo);
+    sub_1C37058(&Method_System_Collections_Generic_List_int__Add__);
+    sub_1C37058(&LocalizationManager_TypeInfo);
+    sub_1C37058(&StringLiteral_12417/*"SUMMON_AUTOSALE_FOU_TXT"*/);
+    sub_1C37058(&StringLiteral_12419/*"SUMMON_AUTOSALE_TITLE"*/);
+    sub_1C37058(&StringLiteral_11807/*"SERVANT_SORT_FILTER_RARITY_UNCOMMON"*/);
+    sub_1C37058(&StringLiteral_3686/*"COMMON_CONFIRM_DECIDE"*/);
+    sub_1C37058(&StringLiteral_12415/*"SUMMON_AUTOSALE_EQUIP_TXT"*/);
+    sub_1C37058(&StringLiteral_12418/*"SUMMON_AUTOSALE_MSG"*/);
+    sub_1C37058(&StringLiteral_3685/*"COMMON_CONFIRM_CLOSE"*/);
+    sub_1C37058(&StringLiteral_11803/*"SERVANT_SORT_FILTER_RARITY_COMMON"*/);
+    sub_1C37058(&StringLiteral_12416/*"SUMMON_AUTOSALE_EXP_TXT"*/);
+    sub_1C37058(&StringLiteral_11804/*"SERVANT_SORT_FILTER_RARITY_RARE"*/);
+    byte_4C3F3BE = 1;
   }
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
   if ( !gameObject )
     goto LABEL_41;
   UnityEngine_GameObject__SetActive(gameObject, 1, 0);
   this->fields.callbackFunc = callback;
-  sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.callbackFunc, (int32_t)callback, v6, v7);
+  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.callbackFunc, (int32_t)callback, v6, v7);
   titleLabel = this->fields.titleLabel;
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-  gameObject = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)StringLiteral_12418/*"SUMMON_AUTOSALE_TITLE"*/, 0);
+  gameObject = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)StringLiteral_12419/*"SUMMON_AUTOSALE_TITLE"*/, 0);
   if ( !titleLabel )
     goto LABEL_41;
   UILabel__set_text(titleLabel, (System_String_o *)gameObject, 0);
   msgLabel = this->fields.msgLabel;
-  gameObject = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)StringLiteral_12417/*"SUMMON_AUTOSALE_MSG"*/, 0);
+  gameObject = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)StringLiteral_12418/*"SUMMON_AUTOSALE_MSG"*/, 0);
   if ( !msgLabel )
     goto LABEL_41;
   UILabel__set_text(msgLabel, (System_String_o *)gameObject, 0);
@@ -491,17 +491,17 @@ void AutomaticSaleDlgComponent__Open(
     goto LABEL_41;
   UILabel__set_text(cancelLabel, (System_String_o *)gameObject, 0);
   expTitleLb = this->fields.expTitleLb;
-  gameObject = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)StringLiteral_12415/*"SUMMON_AUTOSALE_EXP_TXT"*/, 0);
+  gameObject = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)StringLiteral_12416/*"SUMMON_AUTOSALE_EXP_TXT"*/, 0);
   if ( !expTitleLb )
     goto LABEL_41;
   UILabel__set_text(expTitleLb, (System_String_o *)gameObject, 0);
   fouTitleLb = this->fields.fouTitleLb;
-  gameObject = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)StringLiteral_12416/*"SUMMON_AUTOSALE_FOU_TXT"*/, 0);
+  gameObject = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)StringLiteral_12417/*"SUMMON_AUTOSALE_FOU_TXT"*/, 0);
   if ( !fouTitleLb )
     goto LABEL_41;
   UILabel__set_text(fouTitleLb, (System_String_o *)gameObject, 0);
   equipTitleLb = this->fields.equipTitleLb;
-  gameObject = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)StringLiteral_12414/*"SUMMON_AUTOSALE_EQUIP_TXT"*/, 0);
+  gameObject = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)StringLiteral_12415/*"SUMMON_AUTOSALE_EQUIP_TXT"*/, 0);
   if ( !equipTitleLb )
     goto LABEL_41;
   UILabel__set_text(equipTitleLb, (System_String_o *)gameObject, 0);
@@ -516,7 +516,7 @@ void AutomaticSaleDlgComponent__Open(
     v17 = settingButtonLabel->m_Items[v15];
     if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-    gameObject = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)StringLiteral_11802/*"SERVANT_SORT_FILTER_RARITY_COMMON"*/, 0);
+    gameObject = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)StringLiteral_11803/*"SERVANT_SORT_FILTER_RARITY_COMMON"*/, 0);
     if ( !v17 )
       goto LABEL_41;
     UILabel__set_text(v17, (System_String_o *)gameObject, 0);
@@ -526,7 +526,7 @@ void AutomaticSaleDlgComponent__Open(
     if ( v15 + 1 >= LODWORD(v18->max_length) )
       goto LABEL_42;
     v19 = v18->m_Items[v15 + 1];
-    gameObject = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)StringLiteral_11806/*"SERVANT_SORT_FILTER_RARITY_UNCOMMON"*/, 0);
+    gameObject = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)StringLiteral_11807/*"SERVANT_SORT_FILTER_RARITY_UNCOMMON"*/, 0);
     if ( !v19 )
       goto LABEL_41;
     UILabel__set_text(v19, (System_String_o *)gameObject, 0);
@@ -536,9 +536,9 @@ void AutomaticSaleDlgComponent__Open(
     v21 = v15 + 2;
     if ( v15 + 2 >= LODWORD(v20->max_length) )
 LABEL_42:
-      sub_1C32E84(gameObject);
+      sub_1C372BC(gameObject);
     v22 = v20->m_Items[v15 + 2];
-    gameObject = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)StringLiteral_11803/*"SERVANT_SORT_FILTER_RARITY_RARE"*/, 0);
+    gameObject = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)StringLiteral_11804/*"SERVANT_SORT_FILTER_RARITY_RARE"*/, 0);
     if ( !v22 )
       goto LABEL_41;
     UILabel__set_text(v22, (System_String_o *)gameObject, 0);
@@ -552,7 +552,7 @@ LABEL_42:
         (gameObject = (UnityEngine_GameObject_o *)UserGameMaster__getSelfUserGame(0)) == 0) )
   {
 LABEL_41:
-    sub_1C32E7C(gameObject);
+    sub_1C372B4(gameObject);
   }
   m_CachedPtr = gameObject[10].fields.m_CachedPtr;
   for ( i = 0; i != 9; ++i )
@@ -584,7 +584,7 @@ LABEL_41:
         System_Collections_Generic_List_int___AddWithResize(
           (System_Collections_Generic_List_int__o *)gameObject,
           i,
-          *(const MethodInfo_377B798 **)(*(_QWORD *)(v29[4] + 192LL) + 112LL));
+          *(const MethodInfo_3786000 **)(*(_QWORD *)(v29[4] + 192LL) + 112LL));
       }
       else
       {
@@ -596,7 +596,7 @@ LABEL_41:
   AutomaticSaleDlgComponent__SetButtonSelect(this, 9, v24);
   AutomaticSaleDlgComponent__SetButtonEnable(this, 1, v31);
   this->fields.state = 1;
-  v32 = (System_Action_o *)sub_1C32E6C(System_Action_TypeInfo);
+  v32 = (System_Action_o *)sub_1C372A4(System_Action_TypeInfo);
   System_Action___ctor(v32, (Il2CppObject *)this, Method_AutomaticSaleDlgComponent_EndOpen__, 0);
   BaseDialog__Open((BaseDialog_o *)this, v32, 0, 0, 0);
 }
@@ -611,16 +611,16 @@ void AutomaticSaleDlgComponent__RequestUserStatusFlagSet(AutomaticSaleDlgCompone
   System_Collections_Generic_List_int__o *enableList; // x8
   System_Int32_array *v8; // x19
 
-  if ( (byte_4C33D4D & 1) == 0 )
+  if ( (byte_4C3F3C5 & 1) == 0 )
   {
-    sub_1C32C20(&Method_AutomaticSaleDlgComponent_callbackUsetStatusFlagSet__);
-    sub_1C32C20(&Method_System_Collections_Generic_List_int__ToArray__);
-    sub_1C32C20(&Method_NetworkManager_getRequest_UserStatusFlagSetRequest___);
-    sub_1C32C20(&NetworkManager_TypeInfo);
-    sub_1C32C20(&NetworkManager_ResultCallbackFunc_TypeInfo);
-    byte_4C33D4D = 1;
+    sub_1C37058(&Method_AutomaticSaleDlgComponent_callbackUsetStatusFlagSet__);
+    sub_1C37058(&Method_System_Collections_Generic_List_int__ToArray__);
+    sub_1C37058(&Method_NetworkManager_getRequest_UserStatusFlagSetRequest___);
+    sub_1C37058(&NetworkManager_TypeInfo);
+    sub_1C37058(&NetworkManager_ResultCallbackFunc_TypeInfo);
+    byte_4C3F3C5 = 1;
   }
-  v3 = (NetworkManager_ResultCallbackFunc_o *)sub_1C32E6C(NetworkManager_ResultCallbackFunc_TypeInfo);
+  v3 = (NetworkManager_ResultCallbackFunc_o *)sub_1C372A4(NetworkManager_ResultCallbackFunc_TypeInfo);
   NetworkManager_ResultCallbackFunc___ctor(
     v3,
     (Il2CppObject *)this,
@@ -630,17 +630,17 @@ void AutomaticSaleDlgComponent__RequestUserStatusFlagSet(AutomaticSaleDlgCompone
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
   Request_object = NetworkManager__getRequest_object_(
                      v3,
-                     (const MethodInfo_3168488 *)Method_NetworkManager_getRequest_UserStatusFlagSetRequest___);
+                     (const MethodInfo_3172CF0 *)Method_NetworkManager_getRequest_UserStatusFlagSetRequest___);
   DisableList = AutomaticSaleDlgComponent__GetDisableList(this, v5);
   enableList = this->fields.enableList;
   if ( !enableList
     || (v8 = DisableList,
         DisableList = System_Collections_Generic_List_int___ToArray(
                         enableList,
-                        (const MethodInfo_377D250 *)Method_System_Collections_Generic_List_int__ToArray__),
+                        (const MethodInfo_3787AB8 *)Method_System_Collections_Generic_List_int__ToArray__),
         !Request_object) )
   {
-    sub_1C32E7C(DisableList);
+    sub_1C372B4(DisableList);
   }
   UserStatusFlagSetRequest__beginRequest((UserStatusFlagSetRequest_o *)Request_object, DisableList, v8, 0);
 }
@@ -663,7 +663,7 @@ void AutomaticSaleDlgComponent__SetButtonEnable(
         (decideButton = (UnityEngine_Behaviour_o *)this->fields.cancelButton) == 0) )
   {
 LABEL_9:
-    sub_1C32E7C(decideButton);
+    sub_1C372B4(decideButton);
   }
   UnityEngine_Behaviour__set_enabled(decideButton, v5, 0);
   for ( i = 0; i != 9; ++i )
@@ -672,7 +672,7 @@ LABEL_9:
     if ( !settingButton )
       goto LABEL_9;
     if ( i >= LODWORD(settingButton->max_length) )
-      sub_1C32E84(decideButton);
+      sub_1C372BC(decideButton);
     decideButton = (UnityEngine_Behaviour_o *)settingButton->m_Items[i];
     if ( !decideButton )
       goto LABEL_9;
@@ -703,26 +703,26 @@ void AutomaticSaleDlgComponent__SetButtonSelect(
   System_Func_int__bool__o *v19; // x22
   __int64 *v20; // x8
 
-  if ( (byte_4C33D4B & 1) == 0 )
+  if ( (byte_4C3F3C3 & 1) == 0 )
   {
-    sub_1C32C20(&Method_BasicHelper_Any_int___);
-    sub_1C32C20(&System_Func_int__bool__TypeInfo);
-    sub_1C32C20(&Method_AutomaticSaleDlgComponent___c__DisplayClass41_0__SetButtonSelect_b__0__);
-    sub_1C32C20(&AutomaticSaleDlgComponent___c__DisplayClass41_0_TypeInfo);
-    sub_1C32C20(&Method_AutomaticSaleDlgComponent___c__DisplayClass41_1__SetButtonSelect_b__1__);
-    sub_1C32C20(&AutomaticSaleDlgComponent___c__DisplayClass41_1_TypeInfo);
-    sub_1C32C20(&StringLiteral_17437/*"btn_bg_04"*/);
-    sub_1C32C20(&StringLiteral_17436/*"btn_bg_03"*/);
-    byte_4C33D4B = 1;
+    sub_1C37058(&Method_BasicHelper_Any_int___);
+    sub_1C37058(&System_Func_int__bool__TypeInfo);
+    sub_1C37058(&Method_AutomaticSaleDlgComponent___c__DisplayClass41_0__SetButtonSelect_b__0__);
+    sub_1C37058(&AutomaticSaleDlgComponent___c__DisplayClass41_0_TypeInfo);
+    sub_1C37058(&Method_AutomaticSaleDlgComponent___c__DisplayClass41_1__SetButtonSelect_b__1__);
+    sub_1C37058(&AutomaticSaleDlgComponent___c__DisplayClass41_1_TypeInfo);
+    sub_1C37058(&StringLiteral_17439/*"btn_bg_04"*/);
+    sub_1C37058(&StringLiteral_17438/*"btn_bg_03"*/);
+    byte_4C3F3C3 = 1;
   }
-  v5 = sub_1C32E6C(AutomaticSaleDlgComponent___c__DisplayClass41_0_TypeInfo);
+  v5 = sub_1C372A4(AutomaticSaleDlgComponent___c__DisplayClass41_0_TypeInfo);
   System_Object___ctor((Il2CppObject *)v5, 0);
   if ( !v5 )
     goto LABEL_21;
   *(_DWORD *)(v5 + 16) = kind;
   if ( kind == 9 )
   {
-    v7 = sub_1C32E6C(AutomaticSaleDlgComponent___c__DisplayClass41_1_TypeInfo);
+    v7 = sub_1C372A4(AutomaticSaleDlgComponent___c__DisplayClass41_1_TypeInfo);
     System_Object___ctor((Il2CppObject *)v7, 0);
     if ( v7 )
     {
@@ -737,7 +737,7 @@ void AutomaticSaleDlgComponent__SetButtonSelect(
           goto LABEL_22;
         enableList = (System_Collections_Generic_List_T__o *)this->fields.enableList;
         v11 = settingButtonSprites->m_Items[v8];
-        v12 = (System_Func_int__bool__o *)sub_1C32E6C(System_Func_int__bool__TypeInfo);
+        v12 = (System_Func_int__bool__o *)sub_1C372A4(System_Func_int__bool__TypeInfo);
         System_Func_int__bool____ctor(
           v12,
           (Il2CppObject *)v7,
@@ -746,13 +746,13 @@ void AutomaticSaleDlgComponent__SetButtonSelect(
         v6 = BasicHelper__Any_int_(
                enableList,
                (System_Func_T__bool__o *)v12,
-               (const MethodInfo_30C6464 *)Method_BasicHelper_Any_int___);
+               (const MethodInfo_30D0CCC *)Method_BasicHelper_Any_int___);
         if ( !v11 )
           break;
         if ( v6 )
-          v13 = &StringLiteral_17436/*"btn_bg_03"*/;
+          v13 = &StringLiteral_17438/*"btn_bg_03"*/;
         else
-          v13 = &StringLiteral_17437/*"btn_bg_04"*/;
+          v13 = &StringLiteral_17439/*"btn_bg_04"*/;
         UISprite__set_spriteName(v11, (System_String_o *)*v13, 0);
         v8 = *(_DWORD *)(v7 + 16) + 1;
         v14 = *(_DWORD *)(v7 + 16) - 8 < 0;
@@ -762,18 +762,18 @@ void AutomaticSaleDlgComponent__SetButtonSelect(
       }
     }
 LABEL_21:
-    sub_1C32E7C(v6);
+    sub_1C372B4(v6);
   }
   v15 = this->fields.settingButtonSprites;
   if ( !v15 )
     goto LABEL_21;
   if ( LODWORD(v15->max_length) <= kind )
 LABEL_22:
-    sub_1C32E84(v6);
+    sub_1C372BC(v6);
   v16 = &v15->obj.klass + kind;
   v17 = (System_Collections_Generic_List_T__o *)this->fields.enableList;
   v18 = (UISprite_o *)v16[4];
-  v19 = (System_Func_int__bool__o *)sub_1C32E6C(System_Func_int__bool__TypeInfo);
+  v19 = (System_Func_int__bool__o *)sub_1C372A4(System_Func_int__bool__TypeInfo);
   System_Func_int__bool____ctor(
     v19,
     (Il2CppObject *)v5,
@@ -782,12 +782,12 @@ LABEL_22:
   v6 = BasicHelper__Any_int_(
          v17,
          (System_Func_T__bool__o *)v19,
-         (const MethodInfo_30C6464 *)Method_BasicHelper_Any_int___);
+         (const MethodInfo_30D0CCC *)Method_BasicHelper_Any_int___);
   if ( !v18 )
     goto LABEL_21;
-  v20 = &StringLiteral_17436/*"btn_bg_03"*/;
+  v20 = &StringLiteral_17438/*"btn_bg_03"*/;
   if ( !v6 )
-    v20 = &StringLiteral_17437/*"btn_bg_04"*/;
+    v20 = &StringLiteral_17439/*"btn_bg_04"*/;
   UISprite__set_spriteName(v18, (System_String_o *)*v20, 0);
 }
 
@@ -804,23 +804,23 @@ void AutomaticSaleDlgComponent__SwitchSelect(AutomaticSaleDlgComponent_o *this, 
   _QWORD *v12; // x10
   __int64 size; // x11
 
-  if ( (byte_4C33D4C & 1) == 0 )
+  if ( (byte_4C3F3C4 & 1) == 0 )
   {
-    sub_1C32C20(&Method_BasicHelper_Any_int___);
-    sub_1C32C20(&System_Func_int__bool__TypeInfo);
-    sub_1C32C20(&Method_System_Collections_Generic_List_int__Add__);
-    sub_1C32C20(&Method_System_Collections_Generic_List_int__Remove__);
-    sub_1C32C20(&Method_AutomaticSaleDlgComponent___c__DisplayClass43_0__SwitchSelect_b__0__);
-    sub_1C32C20(&AutomaticSaleDlgComponent___c__DisplayClass43_0_TypeInfo);
-    byte_4C33D4C = 1;
+    sub_1C37058(&Method_BasicHelper_Any_int___);
+    sub_1C37058(&System_Func_int__bool__TypeInfo);
+    sub_1C37058(&Method_System_Collections_Generic_List_int__Add__);
+    sub_1C37058(&Method_System_Collections_Generic_List_int__Remove__);
+    sub_1C37058(&Method_AutomaticSaleDlgComponent___c__DisplayClass43_0__SwitchSelect_b__0__);
+    sub_1C37058(&AutomaticSaleDlgComponent___c__DisplayClass43_0_TypeInfo);
+    byte_4C3F3C4 = 1;
   }
-  v5 = sub_1C32E6C(AutomaticSaleDlgComponent___c__DisplayClass43_0_TypeInfo);
+  v5 = sub_1C372A4(AutomaticSaleDlgComponent___c__DisplayClass43_0_TypeInfo);
   System_Object___ctor((Il2CppObject *)v5, 0);
   if ( !v5 )
     goto LABEL_11;
   *(_DWORD *)(v5 + 16) = kind;
   enableList = (System_Collections_Generic_List_T__o *)this->fields.enableList;
-  v8 = (System_Func_int__bool__o *)sub_1C32E6C(System_Func_int__bool__TypeInfo);
+  v8 = (System_Func_int__bool__o *)sub_1C372A4(System_Func_int__bool__TypeInfo);
   System_Func_int__bool____ctor(
     v8,
     (Il2CppObject *)v5,
@@ -829,7 +829,7 @@ void AutomaticSaleDlgComponent__SwitchSelect(AutomaticSaleDlgComponent_o *this, 
   v6 = BasicHelper__Any_int_(
          enableList,
          (System_Func_T__bool__o *)v8,
-         (const MethodInfo_30C6464 *)Method_BasicHelper_Any_int___);
+         (const MethodInfo_30D0CCC *)Method_BasicHelper_Any_int___);
   v9 = this->fields.enableList;
   if ( !v9 )
     goto LABEL_11;
@@ -839,7 +839,7 @@ void AutomaticSaleDlgComponent__SwitchSelect(AutomaticSaleDlgComponent_o *this, 
     System_Collections_Generic_List_int___Remove(
       v9,
       v10,
-      (const MethodInfo_377CC94 *)Method_System_Collections_Generic_List_int__Remove__);
+      (const MethodInfo_37874FC *)Method_System_Collections_Generic_List_int__Remove__);
     return;
   }
   items = v9->fields._items;
@@ -847,14 +847,14 @@ void AutomaticSaleDlgComponent__SwitchSelect(AutomaticSaleDlgComponent_o *this, 
   ++v9->fields._version;
   if ( !items )
 LABEL_11:
-    sub_1C32E7C(v6);
+    sub_1C372B4(v6);
   size = v9->fields._size;
   if ( (unsigned int)size >= LODWORD(items->max_length) )
   {
     System_Collections_Generic_List_int___AddWithResize(
       v9,
       v10,
-      *(const MethodInfo_377B798 **)(*(_QWORD *)(v12[4] + 192LL) + 112LL));
+      *(const MethodInfo_3786000 **)(*(_QWORD *)(v12[4] + 192LL) + 112LL));
   }
   else
   {
@@ -879,10 +879,10 @@ void AutomaticSaleDlgComponent__add_callbackFunc(
   AutomaticSaleDlgComponent_CallbackFunc_o *v12; // x1
   const MethodInfo *v13; // x2
 
-  if ( (byte_4C33D43 & 1) == 0 )
+  if ( (byte_4C3F3BB & 1) == 0 )
   {
-    sub_1C32C20(&AutomaticSaleDlgComponent_CallbackFunc_TypeInfo);
-    byte_4C33D43 = 1;
+    sub_1C37058(&AutomaticSaleDlgComponent_CallbackFunc_TypeInfo);
+    byte_4C3F3BB = 1;
   }
   callbackFunc = this->fields.callbackFunc;
   p_callbackFunc = &this->fields.callbackFunc;
@@ -895,13 +895,13 @@ void AutomaticSaleDlgComponent__add_callbackFunc(
       if ( (AutomaticSaleDlgComponent_CallbackFunc_c *)v8->klass != AutomaticSaleDlgComponent_CallbackFunc_TypeInfo )
         break;
     }
-    v9 = sub_1C6CE78(p_callbackFunc, v8, v6);
+    v9 = sub_1C712B0(p_callbackFunc, v8, v6);
     v10 = v6 == (System_Delegate_o *)v9;
     v6 = (System_Delegate_o *)v9;
     if ( v10 )
       return;
   }
-  sub_1C3313C(v8);
+  sub_1C37574(v8);
   AutomaticSaleDlgComponent__remove_callbackFunc(v11, v12, v13);
 }
 
@@ -917,14 +917,14 @@ void AutomaticSaleDlgComponent__callbackUsetStatusFlagSet(
   const MethodInfo *v7; // x2
 
   v4 = this;
-  if ( (byte_4C33D4E & 1) == 0 )
+  if ( (byte_4C3F3C6 & 1) == 0 )
   {
-    this = (AutomaticSaleDlgComponent_o *)sub_1C32C20(&StringLiteral_22379/*"ok"*/);
-    byte_4C33D4E = 1;
+    this = (AutomaticSaleDlgComponent_o *)sub_1C37058(&StringLiteral_22382/*"ok"*/);
+    byte_4C3F3C6 = 1;
   }
   if ( !result )
-    sub_1C32E7C(this);
-  v5 = System_String__Equals_63553848(result, (System_String_o *)StringLiteral_22379/*"ok"*/, 0);
+    sub_1C372B4(this);
+  v5 = System_String__Equals_63596960(result, (System_String_o *)StringLiteral_22382/*"ok"*/, 0);
   v4->fields.state = 4;
   AutomaticSaleDlgComponent__SetButtonEnable(v4, 0, v6);
   AutomaticSaleDlgComponent__Callback(v4, v5, v7);
@@ -945,10 +945,10 @@ void AutomaticSaleDlgComponent__remove_callbackFunc(
   AutomaticSaleDlgComponent_o *v11; // x0
   const MethodInfo *v12; // x1
 
-  if ( (byte_4C33D44 & 1) == 0 )
+  if ( (byte_4C3F3BC & 1) == 0 )
   {
-    sub_1C32C20(&AutomaticSaleDlgComponent_CallbackFunc_TypeInfo);
-    byte_4C33D44 = 1;
+    sub_1C37058(&AutomaticSaleDlgComponent_CallbackFunc_TypeInfo);
+    byte_4C3F3BC = 1;
   }
   callbackFunc = this->fields.callbackFunc;
   p_callbackFunc = &this->fields.callbackFunc;
@@ -961,13 +961,13 @@ void AutomaticSaleDlgComponent__remove_callbackFunc(
       if ( (AutomaticSaleDlgComponent_CallbackFunc_c *)v8->klass != AutomaticSaleDlgComponent_CallbackFunc_TypeInfo )
         break;
     }
-    v9 = sub_1C6CE78(p_callbackFunc, v8, v6);
+    v9 = sub_1C712B0(p_callbackFunc, v8, v6);
     v10 = v6 == (System_Delegate_o *)v9;
     v6 = (System_Delegate_o *)v9;
     if ( v10 )
       return;
   }
-  sub_1C3313C(v8);
+  sub_1C37574(v8);
   AutomaticSaleDlgComponent__Init(v11, v12);
 }
 
@@ -987,15 +987,15 @@ void AutomaticSaleDlgComponent_CallbackFunc___ctor(
   this->fields.method = method;
   this->fields.method_ptr = v4;
   this->fields.m_target = object;
-  sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.m_target, (int32_t)object, method, a4);
+  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.m_target, (int32_t)object, method, a4);
   v8 = *(unsigned __int8 *)(method + 82);
   this->fields.method_code = (intptr_t)this;
-  if ( (sub_1C32CE0(method) & 1) == 0 )
+  if ( (sub_1C37118(method) & 1) == 0 )
   {
     if ( !object )
     {
-      v10 = sub_1C32E98(0, "Delegate to an instance method cannot have null 'this'.");
-      sub_1C32D48(v10, 0);
+      v10 = sub_1C372D0(0, "Delegate to an instance method cannot have null 'this'.");
+      sub_1C37180(v10, 0);
     }
     goto LABEL_5;
   }
@@ -1007,9 +1007,9 @@ LABEL_5:
     this->fields.method_code = (intptr_t)m_target;
     goto LABEL_6;
   }
-  this->fields.invoke_impl = (intptr_t)sub_1A72C14;
+  this->fields.invoke_impl = (intptr_t)sub_1A77190;
 LABEL_6:
-  this->fields.extra_arg = (intptr_t)sub_1A72BCC;
+  this->fields.extra_arg = (intptr_t)sub_1A77148;
 }
 
 
@@ -1027,14 +1027,14 @@ System_IAsyncResult_o *AutomaticSaleDlgComponent_CallbackFunc__BeginInvoke(
   bool v13[4]; // [xsp+1Ch] [xbp-34h] BYREF
 
   v13[0] = result;
-  if ( (byte_4C33D52 & 1) == 0 )
+  if ( (byte_4C3F3CA & 1) == 0 )
   {
-    sub_1C32C20(&bool_TypeInfo);
-    byte_4C33D52 = 1;
+    sub_1C37058(&bool_TypeInfo);
+    byte_4C3F3CA = 1;
   }
   v12[1] = 0;
   v12[0] = j_il2cpp_value_box_0(bool_TypeInfo, v13, callback, object, method, v5, v6, v7);
-  return (System_IAsyncResult_o *)sub_1C32BD4(this, v12, callback, object);
+  return (System_IAsyncResult_o *)sub_1C3700C(this, v12, callback, object);
 }
 
 
@@ -1043,7 +1043,7 @@ void AutomaticSaleDlgComponent_CallbackFunc__EndInvoke(
         System_IAsyncResult_o *result,
         const MethodInfo *method)
 {
-  sub_1C32BD8(result, 0, method);
+  sub_1C37010(result, 0, method);
 }
 
 

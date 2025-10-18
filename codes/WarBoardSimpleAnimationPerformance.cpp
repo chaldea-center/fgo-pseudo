@@ -11,9 +11,9 @@ void WarBoardSimpleAnimationPerformance___ctor(
 
   WarBoardTaskBase___ctor((WarBoardTaskBase_o *)this, (const MethodInfo *)animation);
   this->fields.animation = animation;
-  sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.animation, (int32_t)animation, v7, v8);
+  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.animation, (int32_t)animation, v7, v8);
   this->fields.animationName = animationName;
-  sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.animationName, (int32_t)animationName, v9, v10);
+  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.animationName, (int32_t)animationName, v9, v10);
 }
 
 
@@ -25,16 +25,16 @@ System_Collections_IEnumerator_o *WarBoardSimpleAnimationPerformance__Execute(
   int32_t v4; // w2
   const MethodInfo *v5; // x3
 
-  if ( (byte_4C35667 & 1) == 0 )
+  if ( (byte_4C40C52 & 1) == 0 )
   {
-    sub_1C32C20(&WarBoardSimpleAnimationPerformance__Execute_d__5_TypeInfo);
-    byte_4C35667 = 1;
+    sub_1C37058(&WarBoardSimpleAnimationPerformance__Execute_d__5_TypeInfo);
+    byte_4C40C52 = 1;
   }
-  v3 = sub_1C32E6C(WarBoardSimpleAnimationPerformance__Execute_d__5_TypeInfo);
+  v3 = sub_1C372A4(WarBoardSimpleAnimationPerformance__Execute_d__5_TypeInfo);
   System_Object___ctor((Il2CppObject *)v3, 0);
   *(_DWORD *)(v3 + 16) = 0;
   *(_QWORD *)(v3 + 32) = this;
-  sub_1C32BC4((CGThumbnailListItem_o *)(v3 + 32), (int32_t)this, v4, v5);
+  sub_1C36FFC((CGThumbnailListItem_o *)(v3 + 32), (int32_t)this, v4, v5);
   return (System_Collections_IEnumerator_o *)v3;
 }
 
@@ -58,10 +58,10 @@ void WarBoardSimpleAnimationPerformance__OnStart(WarBoardSimpleAnimationPerforma
   UnityEngine_Object_o *animation; // x20
   SimpleAnimation_o *v5; // x0
 
-  if ( (byte_4C35666 & 1) == 0 )
+  if ( (byte_4C40C51 & 1) == 0 )
   {
-    sub_1C32C20(&UnityEngine_Object_TypeInfo);
-    byte_4C35666 = 1;
+    sub_1C37058(&UnityEngine_Object_TypeInfo);
+    byte_4C40C51 = 1;
   }
   StartCallback = this->fields.StartCallback;
   this->fields._isPlaying_k__BackingField = 1;
@@ -77,8 +77,8 @@ void WarBoardSimpleAnimationPerformance__OnStart(WarBoardSimpleAnimationPerforma
   {
     v5 = this->fields.animation;
     if ( !v5 || (SimpleAnimation__Rewind(v5, 0), (v5 = this->fields.animation) == 0) )
-      sub_1C32E7C(v5);
-    if ( SimpleAnimation__Play_66464300(v5, this->fields.animationName, 0) )
+      sub_1C372B4(v5);
+    if ( SimpleAnimation__Play_66507412(v5, this->fields.animationName, 0) )
       this->fields.isStart = 1;
   }
 }
@@ -92,7 +92,7 @@ bool WarBoardSimpleAnimationPerformance___Execute_b__5_0(
 
   animation = this->fields.animation;
   if ( !animation )
-    sub_1C32E7C(0);
+    sub_1C372B4(0);
   return !SimpleAnimation__CheckPlaying(animation, 0) || this->fields.IsForceEnd;
 }
 
@@ -122,12 +122,12 @@ bool WarBoardSimpleAnimationPerformance__Execute_d__5__MoveNext(
   bool result; // w0
 
   v2 = this;
-  if ( (byte_4C35668 & 1) == 0 )
+  if ( (byte_4C40C53 & 1) == 0 )
   {
-    sub_1C32C20(&System_Func_bool__TypeInfo);
-    sub_1C32C20(&UnityEngine_WaitUntil_TypeInfo);
-    this = (WarBoardSimpleAnimationPerformance__Execute_d__5_o *)sub_1C32C20(&Method_WarBoardSimpleAnimationPerformance__Execute_b__5_0__);
-    byte_4C35668 = 1;
+    sub_1C37058(&System_Func_bool__TypeInfo);
+    sub_1C37058(&UnityEngine_WaitUntil_TypeInfo);
+    this = (WarBoardSimpleAnimationPerformance__Execute_d__5_o *)sub_1C37058(&Method_WarBoardSimpleAnimationPerformance__Execute_b__5_0__);
+    byte_4C40C53 = 1;
   }
   _1__state = v2->fields.__1__state;
   if ( _1__state == 1 )
@@ -142,24 +142,24 @@ bool WarBoardSimpleAnimationPerformance__Execute_d__5__MoveNext(
     _4__this = v2->fields.__4__this;
     v2->fields.__1__state = -1;
     if ( !_4__this )
-      sub_1C32E7C(this);
+      sub_1C372B4(this);
     if ( !_4__this->fields.isStart )
     {
       return 0;
     }
     else
     {
-      v5 = (System_Func_bool__o *)sub_1C32E6C(System_Func_bool__TypeInfo);
+      v5 = (System_Func_bool__o *)sub_1C372A4(System_Func_bool__TypeInfo);
       System_Func_bool____ctor(
         v5,
         (Il2CppObject *)_4__this,
         Method_WarBoardSimpleAnimationPerformance__Execute_b__5_0__,
         0);
-      v6 = (UnityEngine_WaitUntil_o *)sub_1C32E6C(UnityEngine_WaitUntil_TypeInfo);
+      v6 = (UnityEngine_WaitUntil_o *)sub_1C372A4(UnityEngine_WaitUntil_TypeInfo);
       UnityEngine_WaitUntil___ctor(v6, v5, 0);
       v2->fields.__2__current = (Il2CppObject *)v6;
       p__2__current = (CGThumbnailListItem_o *)&v2->fields.__2__current;
-      sub_1C32BC4(p__2__current, (int32_t)v6, v8, v9);
+      sub_1C36FFC(p__2__current, (int32_t)v6, v8, v9);
       result = 1;
       LODWORD(p__2__current[-1].fields._ThumbnailSpritePath_k__BackingField) = 1;
     }
@@ -184,11 +184,11 @@ void __noreturn WarBoardSimpleAnimationPerformance__Execute_d__5__System_Collect
   System_NotSupportedException_o *v3; // x19
   __int64 v4; // x0
 
-  v2 = sub_1C32C34(&System_NotSupportedException_TypeInfo);
-  v3 = (System_NotSupportedException_o *)sub_1C32E6C(v2);
+  v2 = sub_1C3706C(&System_NotSupportedException_TypeInfo);
+  v3 = (System_NotSupportedException_o *)sub_1C372A4(v2);
   System_NotSupportedException___ctor(v3, 0);
-  v4 = sub_1C32C34(&Method_WarBoardSimpleAnimationPerformance__Execute_d__5_System_Collections_IEnumerator_Reset__);
-  sub_1C32D48(v3, v4);
+  v4 = sub_1C3706C(&Method_WarBoardSimpleAnimationPerformance__Execute_d__5_System_Collections_IEnumerator_Reset__);
+  sub_1C37180(v3, v4);
 }
 
 

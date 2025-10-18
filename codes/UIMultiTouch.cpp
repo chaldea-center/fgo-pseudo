@@ -7,24 +7,24 @@ void UIMultiTouch___ctor(UIMultiTouch_o *this, const MethodInfo *method)
   int32_t v7; // w2
   const MethodInfo *v8; // x3
 
-  if ( (byte_4C392AC & 1) == 0 )
+  if ( (byte_4C448A6 & 1) == 0 )
   {
-    sub_1C32C20(&Method_System_Collections_Generic_List_EventDelegate___ctor__);
-    sub_1C32C20(&System_Collections_Generic_List_EventDelegate__TypeInfo);
-    byte_4C392AC = 1;
+    sub_1C37058(&Method_System_Collections_Generic_List_EventDelegate___ctor__);
+    sub_1C37058(&System_Collections_Generic_List_EventDelegate__TypeInfo);
+    byte_4C448A6 = 1;
   }
-  v3 = (System_Collections_Generic_List_object__o *)sub_1C32E6C(System_Collections_Generic_List_EventDelegate__TypeInfo);
+  v3 = (System_Collections_Generic_List_object__o *)sub_1C372A4(System_Collections_Generic_List_EventDelegate__TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v3,
-    (const MethodInfo_3797F88 *)Method_System_Collections_Generic_List_EventDelegate___ctor__);
+    (const MethodInfo_37A27F0 *)Method_System_Collections_Generic_List_EventDelegate___ctor__);
   this->fields.onDragUpdate = (struct System_Collections_Generic_List_EventDelegate__o *)v3;
-  sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.onDragUpdate, (int32_t)v3, v4, v5);
-  v6 = (System_Collections_Generic_List_object__o *)sub_1C32E6C(System_Collections_Generic_List_EventDelegate__TypeInfo);
+  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.onDragUpdate, (int32_t)v3, v4, v5);
+  v6 = (System_Collections_Generic_List_object__o *)sub_1C372A4(System_Collections_Generic_List_EventDelegate__TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v6,
-    (const MethodInfo_3797F88 *)Method_System_Collections_Generic_List_EventDelegate___ctor__);
+    (const MethodInfo_37A27F0 *)Method_System_Collections_Generic_List_EventDelegate___ctor__);
   this->fields.onClick = (struct System_Collections_Generic_List_EventDelegate__o *)v6;
-  sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.onClick, (int32_t)v6, v7, v8);
+  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.onClick, (int32_t)v6, v7, v8);
   this->fields.releaseRange = 10.0;
   UnityEngine_MonoBehaviour___ctor((UnityEngine_MonoBehaviour_o *)this, 0);
 }
@@ -40,17 +40,17 @@ void UIMultiTouch__OnClick(UIMultiTouch_o *this, const MethodInfo *method)
 {
   System_Collections_Generic_List_EventDelegate__o *onClick; // x19
 
-  if ( (byte_4C392AB & 1) == 0 )
+  if ( (byte_4C448A5 & 1) == 0 )
   {
-    sub_1C32C20(&EventDelegate_TypeInfo);
-    byte_4C392AB = 1;
+    sub_1C37058(&EventDelegate_TypeInfo);
+    byte_4C448A5 = 1;
   }
   if ( UnityEngine_Behaviour__get_enabled((UnityEngine_Behaviour_o *)this, 0) && !this->fields.isRangeOver )
   {
     onClick = this->fields.onClick;
     if ( !EventDelegate_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(EventDelegate_TypeInfo);
-    EventDelegate__Execute_49177388(onClick, 0);
+    EventDelegate__Execute_49220500(onClick, 0);
   }
 }
 
@@ -63,10 +63,10 @@ void UIMultiTouch__OnDrag(UIMultiTouch_o *this, UnityEngine_Vector2_o v, const M
   float v7; // s0
   float v8; // s2
 
-  if ( (byte_4C392AA & 1) == 0 )
+  if ( (byte_4C448A4 & 1) == 0 )
   {
-    sub_1C32C20(&UICamera_TypeInfo);
-    byte_4C392AA = 1;
+    sub_1C37058(&UICamera_TypeInfo);
+    byte_4C448A4 = 1;
   }
   if ( UnityEngine_Behaviour__get_enabled((UnityEngine_Behaviour_o *)this, 0) && !this->fields.isRangeOver )
   {
@@ -111,11 +111,11 @@ void UIMultiTouch__Update(UIMultiTouch_o *this, const MethodInfo *method)
   struct UnityEngine_Vector2_o lastTouchPosition; // x9
   System_Collections_Generic_List_EventDelegate__o *onDragUpdate; // x19
 
-  if ( (byte_4C392A9 & 1) == 0 )
+  if ( (byte_4C448A3 & 1) == 0 )
   {
-    sub_1C32C20(&EventDelegate_TypeInfo);
-    sub_1C32C20(&UICamera_TypeInfo);
-    byte_4C392A9 = 1;
+    sub_1C37058(&EventDelegate_TypeInfo);
+    sub_1C37058(&UICamera_TypeInfo);
+    byte_4C448A3 = 1;
   }
   if ( UnityEngine_Behaviour__get_enabled((UnityEngine_Behaviour_o *)this, 0) )
   {
@@ -132,7 +132,7 @@ LABEL_20:
         onDragUpdate = this->fields.onDragUpdate;
         if ( !EventDelegate_TypeInfo->_2.cctor_finished )
           j_il2cpp_runtime_class_init_0(EventDelegate_TypeInfo);
-        EventDelegate__Execute_49177388(onDragUpdate, 0);
+        EventDelegate__Execute_49220500(onDragUpdate, 0);
         return;
       }
     }

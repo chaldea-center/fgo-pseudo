@@ -35,17 +35,17 @@ void PropertyBinding__OnValidate(PropertyBinding_o *this, const MethodInfo *meth
   if ( source )
   {
     source->fields.mField = 0;
-    sub_1C32BC4((CGThumbnailListItem_o *)&source->fields.mField, 0, v2, v3);
+    sub_1C36FFC((CGThumbnailListItem_o *)&source->fields.mField, 0, v2, v3);
     source->fields.mProperty = 0;
-    sub_1C32BC4((CGThumbnailListItem_o *)&source->fields.mProperty, 0, v6, v7);
+    sub_1C36FFC((CGThumbnailListItem_o *)&source->fields.mProperty, 0, v6, v7);
   }
   target = this->fields.target;
   if ( target )
   {
     target->fields.mField = 0;
-    sub_1C32BC4((CGThumbnailListItem_o *)&target->fields.mField, 0, v2, v3);
+    sub_1C36FFC((CGThumbnailListItem_o *)&target->fields.mField, 0, v2, v3);
     target->fields.mProperty = 0;
-    sub_1C32BC4((CGThumbnailListItem_o *)&target->fields.mProperty, 0, v9, v10);
+    sub_1C36FFC((CGThumbnailListItem_o *)&target->fields.mProperty, 0, v9, v10);
   }
 }
 
@@ -90,10 +90,10 @@ void PropertyBinding__UpdateTarget(PropertyBinding_o *this, const MethodInfo *me
   int32_t v23; // w2
   const MethodInfo *v24; // x3
 
-  if ( (byte_4C3C1AB & 1) == 0 )
+  if ( (byte_4C47726 & 1) == 0 )
   {
-    sub_1C32C20(&System_Type_TypeInfo);
-    byte_4C3C1AB = 1;
+    sub_1C37058(&System_Type_TypeInfo);
+    byte_4C47726 = 1;
   }
   source = this->fields.source;
   if ( source && this->fields.target && PropertyReference__get_isValid(source, method) )
@@ -120,7 +120,7 @@ void PropertyBinding__UpdateTarget(PropertyBinding_o *this, const MethodInfo *me
           }
         }
 LABEL_32:
-        sub_1C32E7C(target);
+        sub_1C372B4(target);
       }
       v8 = this->fields.source;
       if ( direction == 1 )
@@ -134,7 +134,7 @@ LABEL_32:
             v10 = (Il2CppObject *)target;
             target = v8;
 LABEL_30:
-            PropertyReference__Set_49323704(target, v10, v9);
+            PropertyReference__Set_49366816(target, v10, v9);
             return;
           }
         }
@@ -181,7 +181,7 @@ LABEL_30:
               & 1) != 0 )
             return;
           this->fields.mLastValue = v21;
-          sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.mLastValue, (int32_t)v21, v23, v24);
+          sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.mLastValue, (int32_t)v21, v23, v24);
           target = this->fields.source;
           if ( !target )
             goto LABEL_32;
@@ -189,7 +189,7 @@ LABEL_30:
         else
         {
           this->fields.mLastValue = v21;
-          sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.mLastValue, (int32_t)v21, v17, v18);
+          sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.mLastValue, (int32_t)v21, v17, v18);
           target = this->fields.target;
           if ( !target )
             goto LABEL_32;

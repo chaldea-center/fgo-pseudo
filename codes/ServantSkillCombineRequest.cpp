@@ -10,20 +10,20 @@ void ServantSkillCombineRequest__beginRequest(
   const MethodInfo *v10; // x3
   const MethodInfo *v11; // x1
 
-  if ( (byte_4C395A9 & 1) == 0 )
+  if ( (byte_4C44BA3 & 1) == 0 )
   {
-    sub_1C32C20(&StringLiteral_17047/*"baseUserSvtId"*/);
-    sub_1C32C20(&StringLiteral_22335/*"num"*/);
-    sub_1C32C20(&StringLiteral_23512/*"skillId"*/);
-    byte_4C395A9 = 1;
+    sub_1C37058(&StringLiteral_17049/*"baseUserSvtId"*/);
+    sub_1C37058(&StringLiteral_22338/*"num"*/);
+    sub_1C37058(&StringLiteral_23516/*"skillId"*/);
+    byte_4C44BA3 = 1;
   }
-  RequestBase__addField_44144740(
+  RequestBase__addField_44246844(
     (RequestBase_o *)this,
-    (System_String_o *)StringLiteral_17047/*"baseUserSvtId"*/,
+    (System_String_o *)StringLiteral_17049/*"baseUserSvtId"*/,
     baseUsrSvtId,
     *(const MethodInfo **)&selectSkillId);
-  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_22335/*"num"*/, selectSkillIndex, v9);
-  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_23512/*"skillId"*/, selectSkillId, v10);
+  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_22338/*"num"*/, selectSkillIndex, v9);
+  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_23516/*"skillId"*/, selectSkillId, v10);
   RequestBase__beginRequest((RequestBase_o *)this, v11);
 }
 
@@ -32,16 +32,16 @@ System_String_o *ServantSkillCombineRequest__getURL(ServantSkillCombineRequest_o
 {
   System_String_o *BaseUrl; // x0
 
-  if ( (byte_4C395A8 & 1) == 0 )
+  if ( (byte_4C44BA2 & 1) == 0 )
   {
-    sub_1C32C20(&NetworkManager_TypeInfo);
-    sub_1C32C20(&StringLiteral_17745/*"card/combineSkill"*/);
-    byte_4C395A8 = 1;
+    sub_1C37058(&NetworkManager_TypeInfo);
+    sub_1C37058(&StringLiteral_17747/*"card/combineSkill"*/);
+    byte_4C44BA2 = 1;
   }
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
   BaseUrl = NetworkManager__getBaseUrl(1, 0);
-  return System_String__Concat_63518544(BaseUrl, (System_String_o *)StringLiteral_17745/*"card/combineSkill"*/, 0);
+  return System_String__Concat_63561656(BaseUrl, (System_String_o *)StringLiteral_17747/*"card/combineSkill"*/, 0);
 }
 
 
@@ -58,12 +58,12 @@ void ServantSkillCombineRequest__requestCompleted(
   struct NetworkManager_ResultCallbackFunc_o *CallBack; // x8
   struct NetworkManager_ResultCallbackFunc_o *v11; // x8
 
-  if ( (byte_4C395AA & 1) == 0 )
+  if ( (byte_4C44BA4 & 1) == 0 )
   {
-    sub_1C32C20(&JsonManager_TypeInfo);
-    sub_1C32C20(&ResponseCommandKind_TypeInfo);
-    sub_1C32C20(&StringLiteral_22212/*"ng"*/);
-    byte_4C395AA = 1;
+    sub_1C37058(&JsonManager_TypeInfo);
+    sub_1C37058(&ResponseCommandKind_TypeInfo);
+    sub_1C37058(&StringLiteral_22215/*"ng"*/);
+    byte_4C44BA4 = 1;
   }
   if ( !ResponseCommandKind_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(ResponseCommandKind_TypeInfo);
@@ -87,7 +87,7 @@ void ServantSkillCombineRequest__requestCompleted(
     if ( v11 )
       ((void (__fastcall *)(intptr_t, __int64, intptr_t))v11->fields.invoke_impl)(
         v11->fields.method_code,
-        StringLiteral_22212/*"ng"*/,
+        StringLiteral_22215/*"ng"*/,
         v11->fields.method);
   }
 }

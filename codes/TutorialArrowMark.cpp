@@ -26,11 +26,11 @@ void TutorialArrowMark__Init(TutorialArrowMark_o *this, UnityEngine_Vector2_o po
 
   y = pos.fields.y;
   x = pos.fields.x;
-  if ( (byte_4C36600 & 1) == 0 )
+  if ( (byte_4C41BEE & 1) == 0 )
   {
-    sub_1C32C20(&LocalizationManager_TypeInfo);
-    sub_1C32C20(&StringLiteral_13536/*"TUTORIAL_ARROW_MARK_MESSAGE"*/);
-    byte_4C36600 = 1;
+    sub_1C37058(&LocalizationManager_TypeInfo);
+    sub_1C37058(&StringLiteral_13537/*"TUTORIAL_ARROW_MARK_MESSAGE"*/);
+    byte_4C41BEE = 1;
   }
   messageLabel = (UnityEngine_Component_o *)this->fields.messageLabel;
   if ( !messageLabel )
@@ -54,7 +54,7 @@ void TutorialArrowMark__Init(TutorialArrowMark_o *this, UnityEngine_Vector2_o po
   v9 = this->fields.messageLabel;
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-  messageLabel = (UnityEngine_Component_o *)LocalizationManager__Get((System_String_o *)StringLiteral_13536/*"TUTORIAL_ARROW_MARK_MESSAGE"*/, 0);
+  messageLabel = (UnityEngine_Component_o *)LocalizationManager__Get((System_String_o *)StringLiteral_13537/*"TUTORIAL_ARROW_MARK_MESSAGE"*/, 0);
   if ( !v9 )
     goto LABEL_17;
   UILabel__set_text(v9, (System_String_o *)messageLabel, 0);
@@ -90,7 +90,7 @@ void TutorialArrowMark__Init(TutorialArrowMark_o *this, UnityEngine_Vector2_o po
                                                      0)) == 0) )
   {
 LABEL_17:
-    sub_1C32E7C(messageLabel);
+    sub_1C372B4(messageLabel);
   }
   v21.fields.x = x;
   v21.fields.y = y;

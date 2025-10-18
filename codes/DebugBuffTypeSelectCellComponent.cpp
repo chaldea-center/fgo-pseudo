@@ -16,22 +16,22 @@ void DebugBuffTypeSelectCellComponent__Set(
   System_Enum_o v10; // [xsp+8h] [xbp-48h] BYREF
   int v11; // [xsp+18h] [xbp-38h]
 
-  if ( (byte_4C38F72 & 1) == 0 )
+  if ( (byte_4C4456B & 1) == 0 )
   {
-    sub_1C32C20(&BuffList_TYPE_TypeInfo);
-    byte_4C38F72 = 1;
+    sub_1C37058(&BuffList_TYPE_TypeInfo);
+    byte_4C4456B = 1;
   }
   this->fields.callback = callback;
   p_callback = &this->fields.callback;
   *((_DWORD *)p_callback - 2) = buffType;
-  sub_1C32BC4((CGThumbnailListItem_o *)p_callback, (int32_t)callback, (int32_t)callback, method);
+  sub_1C36FFC((CGThumbnailListItem_o *)p_callback, (int32_t)callback, (int32_t)callback, method);
   v8 = (UILabel_o *)*(p_callback - 2);
   v10.klass = (System_Enum_c *)BuffList_TYPE_TypeInfo;
   v10.monitor = (void *)-1LL;
   v11 = *((_DWORD *)p_callback - 2);
   v9 = System_Enum__ToString(&v10, 0);
   if ( !v8 )
-    sub_1C32E7C(v9);
+    sub_1C372B4(v9);
   UILabel__set_text(v8, v9, 0);
 }
 

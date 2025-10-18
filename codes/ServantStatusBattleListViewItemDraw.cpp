@@ -22,7 +22,7 @@ void ServantStatusBattleListViewItemDraw__SetInput(
     IsSelect = ListViewItem__get_IsSelect((ListViewItem_o *)item, 0);
     baseButton = this->fields.baseButton;
     if ( !baseButton )
-      sub_1C32E7C(IsSelect);
+      sub_1C372B4(IsSelect);
     if ( IsSelect & isEnabled & (unsigned int)v5 )
       UICommonButton__SetColliderEnable(baseButton, 0, 1, 0);
     else
@@ -69,19 +69,19 @@ void ServantStatusBattleListViewItemDraw__SetItem(
   int32_t DispLimitCount; // [xsp+Ch] [xbp-54h] BYREF
   UnityEngine_Color_o v37; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 
-  if ( (byte_4C32E01 & 1) == 0 )
+  if ( (byte_4C3E2A8 & 1) == 0 )
   {
-    sub_1C32C20(&Method_DataManager_GetMasterData_ServantLimitImageMaster___);
-    sub_1C32C20(&LocalizationManager_TypeInfo);
-    sub_1C32C20(&UnityEngine_Object_TypeInfo);
-    sub_1C32C20(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-    sub_1C32C20(&StringLiteral_8274/*"LIMIT_COUNT_SELECT_SEALED"*/);
-    sub_1C32C20(&StringLiteral_11939/*"SERVANT_STATUS_IMAGE_LIMIT_COUNT_LEVEL_"*/);
-    sub_1C32C20(&StringLiteral_17445/*"btn_bg_20"*/);
-    sub_1C32C20(&StringLiteral_11940/*"SERVANT_STATUS_IMAGE_LIMIT_COUNT_LEVEL_CLOSE"*/);
-    sub_1C32C20(&StringLiteral_1/*""*/);
-    sub_1C32C20(&StringLiteral_17446/*"btn_bg_21"*/);
-    byte_4C32E01 = 1;
+    sub_1C37058(&Method_DataManager_GetMasterData_ServantLimitImageMaster___);
+    sub_1C37058(&LocalizationManager_TypeInfo);
+    sub_1C37058(&UnityEngine_Object_TypeInfo);
+    sub_1C37058(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    sub_1C37058(&StringLiteral_8275/*"LIMIT_COUNT_SELECT_SEALED"*/);
+    sub_1C37058(&StringLiteral_11940/*"SERVANT_STATUS_IMAGE_LIMIT_COUNT_LEVEL_"*/);
+    sub_1C37058(&StringLiteral_17447/*"btn_bg_20"*/);
+    sub_1C37058(&StringLiteral_11941/*"SERVANT_STATUS_IMAGE_LIMIT_COUNT_LEVEL_CLOSE"*/);
+    sub_1C37058(&StringLiteral_1/*""*/);
+    sub_1C37058(&StringLiteral_17448/*"btn_bg_21"*/);
+    byte_4C3E2A8 = 1;
   }
   if ( !item || !mode )
     return;
@@ -97,10 +97,10 @@ void ServantStatusBattleListViewItemDraw__SetItem(
     if ( (v12 & 1) != 0 )
     {
 LABEL_7:
-      if ( !byte_4C32195 )
+      if ( !byte_4C3D77F )
       {
-        sub_1C32C20(&LocalizationManager_TypeInfo);
-        byte_4C32195 = 1;
+        sub_1C37058(&LocalizationManager_TypeInfo);
+        byte_4C3D77F = 1;
       }
       v13 = LocalizationManager_TypeInfo;
       if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
@@ -122,10 +122,10 @@ LABEL_7:
     if ( (v12 & 1) != 0 )
       goto LABEL_7;
   }
-  if ( !byte_4C32194 )
+  if ( !byte_4C3D77E )
   {
-    sub_1C32C20(&LocalizationManager_TypeInfo);
-    byte_4C32194 = 1;
+    sub_1C37058(&LocalizationManager_TypeInfo);
+    byte_4C3D77E = 1;
   }
   v19 = LocalizationManager_TypeInfo;
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
@@ -160,7 +160,7 @@ LABEL_18:
     {
       v22 = this->fields.nameRangeLabel;
       v23 = System_Int32__ToString((int32_t)&DispLimitCount, 0);
-      v24 = System_String__Concat_63518544((System_String_o *)StringLiteral_11939/*"SERVANT_STATUS_IMAGE_LIMIT_COUNT_LEVEL_"*/, v23, 0);
+      v24 = System_String__Concat_63561656((System_String_o *)StringLiteral_11940/*"SERVANT_STATUS_IMAGE_LIMIT_COUNT_LEVEL_"*/, v23, 0);
       if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
       v25 = LocalizationManager__Get(v24, 0);
@@ -170,7 +170,7 @@ LABEL_18:
       v22 = this->fields.nameRangeLabel;
       if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-      v25 = (System_String_o *)StringLiteral_11940/*"SERVANT_STATUS_IMAGE_LIMIT_COUNT_LEVEL_CLOSE"*/;
+      v25 = (System_String_o *)StringLiteral_11941/*"SERVANT_STATUS_IMAGE_LIMIT_COUNT_LEVEL_CLOSE"*/;
     }
     nameRangeLabel = (UIRangeLabel_o *)LocalizationManager__Get(v25, 0);
     if ( !v22 )
@@ -182,9 +182,9 @@ LABEL_18:
   nameRangeLabel = (UIRangeLabel_o *)this->fields.baseSpite;
   if ( !nameRangeLabel )
     goto LABEL_67;
-  v27 = &StringLiteral_17446/*"btn_bg_21"*/;
+  v27 = &StringLiteral_17448/*"btn_bg_21"*/;
   if ( !v11 )
-    v27 = &StringLiteral_17445/*"btn_bg_20"*/;
+    v27 = &StringLiteral_17447/*"btn_bg_20"*/;
   UISprite__set_spriteName((UISprite_o *)nameRangeLabel, (System_String_o *)*v27, 0);
   nameRangeLabel = (UIRangeLabel_o *)this->fields.baseButton;
   if ( !nameRangeLabel )
@@ -201,12 +201,12 @@ LABEL_18:
     if ( !isCanSelect )
       goto LABEL_55;
   }
-  nameRangeLabel = (UIRangeLabel_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39E2904 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  nameRangeLabel = (UIRangeLabel_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39ED16C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !nameRangeLabel )
     goto LABEL_67;
   MasterData_object = DataManager__GetMasterData_object_(
                         (DataManager_o *)nameRangeLabel,
-                        (const MethodInfo_30DD3F0 *)Method_DataManager_GetMasterData_ServantLimitImageMaster___);
+                        (const MethodInfo_30E7C58 *)Method_DataManager_GetMasterData_ServantLimitImageMaster___);
   nameRangeLabel = (UIRangeLabel_o *)ServantStatusBattleListViewItem__get_SvtId(item, v29);
   if ( !MasterData_object )
     goto LABEL_67;
@@ -260,7 +260,7 @@ LABEL_55:
     v32 = this->fields.limitSealLabel;
     if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-    nameRangeLabel = (UIRangeLabel_o *)LocalizationManager__Get((System_String_o *)StringLiteral_8274/*"LIMIT_COUNT_SELECT_SEALED"*/, 0);
+    nameRangeLabel = (UIRangeLabel_o *)LocalizationManager__Get((System_String_o *)StringLiteral_8275/*"LIMIT_COUNT_SELECT_SEALED"*/, 0);
     if ( v32 )
     {
       v33 = (System_String_o *)nameRangeLabel;
@@ -270,6 +270,6 @@ LABEL_65:
       return;
     }
 LABEL_67:
-    sub_1C32E7C(nameRangeLabel);
+    sub_1C372B4(nameRangeLabel);
   }
 }

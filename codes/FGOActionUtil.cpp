@@ -15,20 +15,20 @@ UnityEngine_GameObject_o *FGOActionUtil__getEffectObject(
   UnityEngine_GameObject_o *result; // x0
   bool v10; // w8
 
-  if ( (byte_4C39365 & 1) == 0 )
+  if ( (byte_4C4495F & 1) == 0 )
   {
-    sub_1C32C20(&Method_UnityEngine_GameObject_GetComponent_BattleActorControl___);
-    sub_1C32C20(&UnityEngine_GameObject_TypeInfo);
-    sub_1C32C20(&UnityEngine_Object_TypeInfo);
-    sub_1C32C20(&StringLiteral_3088/*"Battle/CommonEffects/"*/);
-    sub_1C32C20(&StringLiteral_18873/*"effect/"*/);
-    byte_4C39365 = 1;
+    sub_1C37058(&Method_UnityEngine_GameObject_GetComponent_BattleActorControl___);
+    sub_1C37058(&UnityEngine_GameObject_TypeInfo);
+    sub_1C37058(&UnityEngine_Object_TypeInfo);
+    sub_1C37058(&StringLiteral_3088/*"Battle/CommonEffects/"*/);
+    sub_1C37058(&StringLiteral_18876/*"effect/"*/);
+    byte_4C4495F = 1;
   }
   if ( folder == 2 )
   {
-    v7 = &StringLiteral_18873/*"effect/"*/;
+    v7 = &StringLiteral_18876/*"effect/"*/;
 LABEL_8:
-    v8 = System_String__Concat_63518544((System_String_o *)*v7, name, 0);
+    v8 = System_String__Concat_63561656((System_String_o *)*v7, name, 0);
     result = (UnityEngine_GameObject_o *)UnityEngine_Resources__Load(v8, 0);
     if ( result )
     {
@@ -53,9 +53,9 @@ LABEL_8:
     if ( !actorObject
       || (result = (UnityEngine_GameObject_o *)UnityEngine_GameObject__GetComponent_object_(
                                                  actorObject,
-                                                 (const MethodInfo_3134970 *)Method_UnityEngine_GameObject_GetComponent_BattleActorControl___)) == 0 )
+                                                 (const MethodInfo_313F1D8 *)Method_UnityEngine_GameObject_GetComponent_BattleActorControl___)) == 0 )
     {
-      sub_1C32E7C(result);
+      sub_1C372B4(result);
     }
     return BattleActorControl__getActorEffect((BattleActorControl_o *)result, name, 0);
   }

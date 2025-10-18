@@ -1,9 +1,9 @@
 void AvalonSceneManager___cctor(const MethodInfo *method)
 {
-  if ( (byte_4C36FBA & 1) == 0 )
+  if ( (byte_4C425AA & 1) == 0 )
   {
-    sub_1C32C20(&AvalonSceneManager_TypeInfo);
-    byte_4C36FBA = 1;
+    sub_1C37058(&AvalonSceneManager_TypeInfo);
+    byte_4C425AA = 1;
   }
   LODWORD(AvalonSceneManager_TypeInfo->static_fields->DEFAULT_FADE_TIME) = (struct AvalonSceneManager_StaticFields)1045220557;
 }
@@ -24,43 +24,43 @@ void AvalonSceneManager___ctor(AvalonSceneManager_o *this, const MethodInfo *met
   int32_t v13; // w2
   const MethodInfo *v14; // x3
 
-  if ( (byte_4C36FB9 & 1) == 0 )
+  if ( (byte_4C425A9 & 1) == 0 )
   {
-    sub_1C32C20(&Method_System_Collections_Generic_Dictionary_SceneList_Type__SceneRootComponent___ctor__);
-    sub_1C32C20(&System_Collections_Generic_Dictionary_SceneList_Type__SceneRootComponent__TypeInfo);
-    sub_1C32C20(&Method_System_Collections_Generic_List_string___ctor__);
-    sub_1C32C20(&System_Collections_Generic_List_string__TypeInfo);
-    sub_1C32C20(&Method_SingletonMonoBehaviour_AvalonSceneManager___ctor__);
-    sub_1C32C20(&Method_System_Collections_Generic_Stack_SceneTemp___ctor__);
-    sub_1C32C20(&System_Collections_Generic_Stack_SceneTemp__TypeInfo);
-    sub_1C32C20(&System_Diagnostics_Stopwatch_TypeInfo);
-    byte_4C36FB9 = 1;
+    sub_1C37058(&Method_System_Collections_Generic_Dictionary_SceneList_Type__SceneRootComponent___ctor__);
+    sub_1C37058(&System_Collections_Generic_Dictionary_SceneList_Type__SceneRootComponent__TypeInfo);
+    sub_1C37058(&Method_System_Collections_Generic_List_string___ctor__);
+    sub_1C37058(&System_Collections_Generic_List_string__TypeInfo);
+    sub_1C37058(&Method_SingletonMonoBehaviour_AvalonSceneManager___ctor__);
+    sub_1C37058(&Method_System_Collections_Generic_Stack_SceneTemp___ctor__);
+    sub_1C37058(&System_Collections_Generic_Stack_SceneTemp__TypeInfo);
+    sub_1C37058(&System_Diagnostics_Stopwatch_TypeInfo);
+    byte_4C425A9 = 1;
   }
-  v3 = (System_Collections_Generic_Dictionary_TKey__TValue__o *)sub_1C32E6C(System_Collections_Generic_Dictionary_SceneList_Type__SceneRootComponent__TypeInfo);
+  v3 = (System_Collections_Generic_Dictionary_TKey__TValue__o *)sub_1C372A4(System_Collections_Generic_Dictionary_SceneList_Type__SceneRootComponent__TypeInfo);
   System_Collections_Generic_Dictionary_Int32Enum__object____ctor(
     v3,
-    (const MethodInfo_34223E4 *)Method_System_Collections_Generic_Dictionary_SceneList_Type__SceneRootComponent___ctor__);
+    (const MethodInfo_342CC4C *)Method_System_Collections_Generic_Dictionary_SceneList_Type__SceneRootComponent___ctor__);
   this->fields.dicRootComponent = (struct System_Collections_Generic_Dictionary_SceneList_Type__SceneRootComponent__o *)v3;
-  sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.dicRootComponent, (int32_t)v3, v4, v5);
-  v6 = (System_Collections_Generic_Stack_T__o *)sub_1C32E6C(System_Collections_Generic_Stack_SceneTemp__TypeInfo);
+  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.dicRootComponent, (int32_t)v3, v4, v5);
+  v6 = (System_Collections_Generic_Stack_T__o *)sub_1C372A4(System_Collections_Generic_Stack_SceneTemp__TypeInfo);
   System_Collections_Generic_Stack_object____ctor(
     v6,
-    (const MethodInfo_39F897C *)Method_System_Collections_Generic_Stack_SceneTemp___ctor__);
+    (const MethodInfo_3A031E4 *)Method_System_Collections_Generic_Stack_SceneTemp___ctor__);
   this->fields.scenestack = (struct System_Collections_Generic_Stack_SceneTemp__o *)v6;
-  sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.scenestack, (int32_t)v6, v7, v8);
-  v9 = (System_Diagnostics_Stopwatch_o *)sub_1C32E6C(System_Diagnostics_Stopwatch_TypeInfo);
+  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.scenestack, (int32_t)v6, v7, v8);
+  v9 = (System_Diagnostics_Stopwatch_o *)sub_1C372A4(System_Diagnostics_Stopwatch_TypeInfo);
   System_Diagnostics_Stopwatch___ctor(v9, 0);
   this->fields._transitionStopwatch = v9;
-  sub_1C32BC4((CGThumbnailListItem_o *)&this->fields._transitionStopwatch, (int32_t)v9, v10, v11);
-  v12 = (System_Collections_Generic_List_object__o *)sub_1C32E6C(System_Collections_Generic_List_string__TypeInfo);
+  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields._transitionStopwatch, (int32_t)v9, v10, v11);
+  v12 = (System_Collections_Generic_List_object__o *)sub_1C372A4(System_Collections_Generic_List_string__TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v12,
-    (const MethodInfo_3797F88 *)Method_System_Collections_Generic_List_string___ctor__);
+    (const MethodInfo_37A27F0 *)Method_System_Collections_Generic_List_string___ctor__);
   this->fields.m_listUnloadScenes = (struct System_Collections_Generic_List_string__o *)v12;
-  sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.m_listUnloadScenes, (int32_t)v12, v13, v14);
+  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.m_listUnloadScenes, (int32_t)v12, v13, v14);
   SingletonMonoBehaviour_object____ctor(
     (SingletonMonoBehaviour_T__o *)this,
-    (const MethodInfo_39E2DEC *)Method_SingletonMonoBehaviour_AvalonSceneManager___ctor__);
+    (const MethodInfo_39ED654 *)Method_SingletonMonoBehaviour_AvalonSceneManager___ctor__);
 }
 
 
@@ -68,7 +68,7 @@ void AvalonSceneManager__DestroyAnySceneIfNeeded_object_(
         AvalonSceneManager_o *this,
         int32_t sceneType,
         bool forceUnload,
-        const MethodInfo_30C4E7C *method)
+        const MethodInfo_30CF6E4 *method)
 {
   UnityEngine_GameObject_o *gameObject; // x0
   long double v9; // q0
@@ -88,18 +88,18 @@ void AvalonSceneManager__DestroyAnySceneIfNeeded_object_(
   System_String_o *v23; // x19
   AvalonSceneManager_o *v24; // x0
   int32_t v25; // w1
-  const MethodInfo_30C50D4 *v26; // x2
+  const MethodInfo_30CF93C *v26; // x2
 
   if ( !method->rgctx_data )
   {
-    sub_1C32C20(&BattleRootComponent_var);
-    sub_1C32C20(&BattleRootComponent_TypeInfo);
-    sub_1C32C20(&Method_System_Collections_Generic_Dictionary_SceneList_Type__SceneRootComponent__set_Item__);
-    sub_1C32C20(&SceneList_TypeInfo);
-    sub_1C32C20(&UnityEngine_SceneManagement_SceneManager_TypeInfo);
-    sub_1C32C20(&System_Type_TypeInfo);
+    sub_1C37058(&BattleRootComponent_var);
+    sub_1C37058(&BattleRootComponent_TypeInfo);
+    sub_1C37058(&Method_System_Collections_Generic_Dictionary_SceneList_Type__SceneRootComponent__set_Item__);
+    sub_1C37058(&SceneList_TypeInfo);
+    sub_1C37058(&UnityEngine_SceneManagement_SceneManager_TypeInfo);
+    sub_1C37058(&System_Type_TypeInfo);
     if ( !method->rgctx_data )
-      sub_1C83390(method);
+      sub_1C877C8(method);
   }
   gameObject = (UnityEngine_GameObject_o *)AvalonSceneManager__checkNowScene(this, sceneType, 0);
   if ( ((unsigned __int8)gameObject & 1) != 0 )
@@ -108,15 +108,15 @@ void AvalonSceneManager__DestroyAnySceneIfNeeded_object_(
     _0_T = method->rgctx_data->_0_T;
     if ( (*(&_0_T->_2.bitflags2 + 2) & 1) == 0 )
     {
-      gameObject = (UnityEngine_GameObject_o *)sub_1C83334(v9);
+      gameObject = (UnityEngine_GameObject_o *)sub_1C8776C(v9);
       _0_T = (Il2CppClass *)gameObject;
     }
     if ( targetRoot )
     {
-      v12 = (UnityEngine_Component_o *)sub_1C32D5C(targetRoot, _0_T);
+      v12 = (UnityEngine_Component_o *)sub_1C37194(targetRoot, _0_T);
       if ( !v12 )
       {
-        sub_1C3313C(targetRoot);
+        sub_1C37574(targetRoot);
         AvalonSceneManager__GetSceneRootComponent_object_(v24, v25, v26);
         return;
       }
@@ -161,17 +161,17 @@ void AvalonSceneManager__DestroyAnySceneIfNeeded_object_(
             dicRootComponent,
             (int32_t)gameObject,
             0,
-            (const MethodInfo_3422DA4 *)Method_System_Collections_Generic_Dictionary_SceneList_Type__SceneRootComponent__set_Item__);
+            (const MethodInfo_342D60C *)Method_System_Collections_Generic_Dictionary_SceneList_Type__SceneRootComponent__set_Item__);
           v23 = SceneRootComponent__getSceneName(v13, 0);
           if ( !UnityEngine_SceneManagement_SceneManager_TypeInfo->_2.cctor_finished )
             j_il2cpp_runtime_class_init_0(UnityEngine_SceneManagement_SceneManager_TypeInfo);
-          UnityEngine_SceneManagement_SceneManager__UnloadSceneAsync_71277528(v23, 0);
+          UnityEngine_SceneManagement_SceneManager__UnloadSceneAsync_71320640(v23, 0);
           return;
         }
       }
     }
 LABEL_26:
-    sub_1C32E7C(gameObject);
+    sub_1C372B4(gameObject);
   }
 }
 
@@ -179,7 +179,7 @@ LABEL_26:
 Il2CppObject *AvalonSceneManager__GetSceneRootComponent_object_(
         AvalonSceneManager_o *this,
         int32_t sceneType,
-        const MethodInfo_30C50D4 *method)
+        const MethodInfo_30CF93C *method)
 {
   System_Collections_Generic_Dictionary_TKey__TValue__o *dicRootComponent; // x0
   long double v7; // q0
@@ -193,34 +193,34 @@ Il2CppObject *AvalonSceneManager__GetSceneRootComponent_object_(
 
   if ( !method->rgctx_data )
   {
-    sub_1C32C20(&Method_System_Collections_Generic_Dictionary_SceneList_Type__SceneRootComponent__TryGetValue__);
+    sub_1C37058(&Method_System_Collections_Generic_Dictionary_SceneList_Type__SceneRootComponent__TryGetValue__);
     if ( !method->rgctx_data )
-      sub_1C83390(method);
+      sub_1C877C8(method);
   }
   value = 0;
   dicRootComponent = (System_Collections_Generic_Dictionary_TKey__TValue__o *)this->fields.dicRootComponent;
   if ( !dicRootComponent )
-    sub_1C32E7C(0);
+    sub_1C372B4(0);
   if ( System_Collections_Generic_Dictionary_Int32Enum__object___TryGetValue(
          dicRootComponent,
          sceneType,
          &value,
-         (const MethodInfo_342452C *)Method_System_Collections_Generic_Dictionary_SceneList_Type__SceneRootComponent__TryGetValue__) )
+         (const MethodInfo_342ED94 *)Method_System_Collections_Generic_Dictionary_SceneList_Type__SceneRootComponent__TryGetValue__) )
   {
     v8 = value;
     _0_T = method->rgctx_data->_0_T;
     if ( (*(&_0_T->_2.bitflags2 + 2) & 1) == 0 )
-      _0_T = (Il2CppClass *)sub_1C83334(v7);
-    v10 = sub_1C32D5C(v8, _0_T);
+      _0_T = (Il2CppClass *)sub_1C8776C(v7);
+    v10 = sub_1C37194(v8, _0_T);
     v12 = method->rgctx_data->_0_T;
     if ( (*(&v12->_2.bitflags2 + 2) & 1) == 0 )
-      v12 = (Il2CppClass *)sub_1C83334(v11);
+      v12 = (Il2CppClass *)sub_1C8776C(v11);
     if ( v10 )
     {
-      result = (Il2CppObject *)sub_1C32D5C(v10, v12);
+      result = (Il2CppObject *)sub_1C37194(v10, v12);
       if ( result )
         return result;
-      sub_1C3313C(v10);
+      sub_1C37574(v10);
     }
   }
   return 0;
@@ -235,14 +235,14 @@ SceneRootComponent_o *AvalonSceneManager__GetStackedRootComponent(AvalonSceneMan
   const MethodInfo *v5; // x2
 
   v2 = this;
-  if ( (byte_4C36FB7 & 1) == 0 )
+  if ( (byte_4C425A7 & 1) == 0 )
   {
-    this = (AvalonSceneManager_o *)sub_1C32C20(&Method_System_Collections_Generic_Stack_SceneTemp__get_Count__);
-    byte_4C36FB7 = 1;
+    this = (AvalonSceneManager_o *)sub_1C37058(&Method_System_Collections_Generic_Stack_SceneTemp__get_Count__);
+    byte_4C425A7 = 1;
   }
   scenestack = v2->fields.scenestack;
   if ( !scenestack )
-    sub_1C32E7C(this);
+    sub_1C372B4(this);
   if ( !scenestack->fields._size )
     return 0;
   StackSceneName = (AvalonSceneManager_o *)AvalonSceneManager__getStackSceneName(v2, method);
@@ -256,14 +256,14 @@ bool AvalonSceneManager__IsNothingUnloadScene(AvalonSceneManager_o *this, const 
   struct System_Collections_Generic_List_string__o *m_listUnloadScenes; // x8
 
   v2 = this;
-  if ( (byte_4C36FA2 & 1) == 0 )
+  if ( (byte_4C42592 & 1) == 0 )
   {
-    this = (AvalonSceneManager_o *)sub_1C32C20(&Method_System_Collections_Generic_List_string__get_Count__);
-    byte_4C36FA2 = 1;
+    this = (AvalonSceneManager_o *)sub_1C37058(&Method_System_Collections_Generic_List_string__get_Count__);
+    byte_4C42592 = 1;
   }
   m_listUnloadScenes = v2->fields.m_listUnloadScenes;
   if ( !m_listUnloadScenes )
-    sub_1C32E7C(this);
+    sub_1C372B4(this);
   return m_listUnloadScenes->fields._size == 0;
 }
 
@@ -274,14 +274,14 @@ bool AvalonSceneManager__IsStackScene(AvalonSceneManager_o *this, const MethodIn
   struct System_Collections_Generic_Stack_SceneTemp__o *scenestack; // x8
 
   v2 = this;
-  if ( (byte_4C36FA6 & 1) == 0 )
+  if ( (byte_4C42596 & 1) == 0 )
   {
-    this = (AvalonSceneManager_o *)sub_1C32C20(&Method_System_Collections_Generic_Stack_SceneTemp__get_Count__);
-    byte_4C36FA6 = 1;
+    this = (AvalonSceneManager_o *)sub_1C37058(&Method_System_Collections_Generic_Stack_SceneTemp__get_Count__);
+    byte_4C42596 = 1;
   }
   scenestack = v2->fields.scenestack;
   if ( !scenestack )
-    sub_1C32E7C(this);
+    sub_1C372B4(this);
   return scenestack->fields._size > 0;
 }
 
@@ -299,7 +299,7 @@ void AvalonSceneManager__StartTransitionTime(AvalonSceneManager_o *this, const M
   transitionStopwatch = this->fields._transitionStopwatch;
   if ( !transitionStopwatch )
 LABEL_5:
-    sub_1C32E7C(transitionStopwatch);
+    sub_1C372B4(transitionStopwatch);
   System_Diagnostics_Stopwatch__Start(transitionStopwatch, 0);
 }
 
@@ -317,13 +317,13 @@ void AvalonSceneManager__StopTransitionTime(
   int64_t ticks; // [xsp+8h] [xbp-38h] BYREF
   double TotalSeconds; // [xsp+18h] [xbp-28h] BYREF
 
-  if ( (byte_4C36FB8 & 1) == 0 )
+  if ( (byte_4C425A8 & 1) == 0 )
   {
-    sub_1C32C20(&Method_SingletonMonoBehaviour_CrashReporter__get_Instance__);
-    sub_1C32C20(&System_TimeSpan_TypeInfo);
-    sub_1C32C20(&StringLiteral_19741/*"game.last_scene_transtime"*/);
-    sub_1C32C20(&StringLiteral_7478/*"IN_"*/);
-    byte_4C36FB8 = 1;
+    sub_1C37058(&Method_SingletonMonoBehaviour_CrashReporter__get_Instance__);
+    sub_1C37058(&System_TimeSpan_TypeInfo);
+    sub_1C37058(&StringLiteral_19744/*"game.last_scene_transtime"*/);
+    sub_1C37058(&StringLiteral_7479/*"IN_"*/);
+    byte_4C425A8 = 1;
   }
   TotalSeconds = 0.0;
   transitionStopwatch = this->fields._transitionStopwatch;
@@ -340,23 +340,23 @@ void AvalonSceneManager__StopTransitionTime(
     j_il2cpp_runtime_class_init_0(System_TimeSpan_TypeInfo);
   v6.fields._ticks = (int64_t)&ticks;
   TotalSeconds = System_TimeSpan__get_TotalSeconds(v6, 0);
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39E2904 *)Method_SingletonMonoBehaviour_CrashReporter__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39ED16C *)Method_SingletonMonoBehaviour_CrashReporter__get_Instance__);
   transitionStopwatch = (System_Diagnostics_Stopwatch_o *)System_Double__ToString(v8, (const MethodInfo *)&TotalSeconds);
   if ( !Instance
     || (CrashReporter__AddCustomKey(
           (CrashReporter_o *)Instance,
-          (System_String_o *)StringLiteral_19741/*"game.last_scene_transtime"*/,
+          (System_String_o *)StringLiteral_19744/*"game.last_scene_transtime"*/,
           (System_String_o *)transitionStopwatch,
           0),
-        v9 = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39E2904 *)Method_SingletonMonoBehaviour_CrashReporter__get_Instance__),
-        transitionStopwatch = (System_Diagnostics_Stopwatch_o *)System_String__Concat_63518544(
-                                                                  (System_String_o *)StringLiteral_7478/*"IN_"*/,
+        v9 = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39ED16C *)Method_SingletonMonoBehaviour_CrashReporter__get_Instance__),
+        transitionStopwatch = (System_Diagnostics_Stopwatch_o *)System_String__Concat_63561656(
+                                                                  (System_String_o *)StringLiteral_7479/*"IN_"*/,
                                                                   strSceneName,
                                                                   0),
         !v9) )
   {
 LABEL_12:
-    sub_1C32E7C(transitionStopwatch);
+    sub_1C372B4(transitionStopwatch);
   }
   CrashReporter__SetNowState((CrashReporter_o *)v9, (System_String_o *)transitionStopwatch, 0);
 }
@@ -365,13 +365,13 @@ LABEL_12:
 System_Collections_IEnumerator_o *AvalonSceneManager__UnloadSceneAsync_object_(
         AvalonSceneManager_o *this,
         System_Action_o *callback,
-        const MethodInfo_30C53F4 *method)
+        const MethodInfo_30CFC5C *method)
 {
   long double v3; // q0
-  const MethodInfo_30C53F4_RGCTXs *rgctx_data; // x8
+  const MethodInfo_30CFC5C_RGCTXs *rgctx_data; // x8
   __int64 _0_AvalonSceneManager__UnloadSceneAsync_d__47_T; // x0
   AvalonSceneManager__UnloadSceneAsync_d__47_T__o *v9; // x0
-  const MethodInfo_30C53F4_RGCTXs *v10; // x8
+  const MethodInfo_30CFC5C_RGCTXs *v10; // x8
   AvalonSceneManager__UnloadSceneAsync_d__47_T__o *v11; // x21
   __int64 v12; // x0
   int32_t v13; // w2
@@ -382,30 +382,30 @@ System_Collections_IEnumerator_o *AvalonSceneManager__UnloadSceneAsync_object_(
   rgctx_data = method->rgctx_data;
   if ( !rgctx_data )
   {
-    sub_1C83390(method);
+    sub_1C877C8(method);
     rgctx_data = method->rgctx_data;
   }
   _0_AvalonSceneManager__UnloadSceneAsync_d__47_T = (__int64)rgctx_data->_0_AvalonSceneManager__UnloadSceneAsync_d__47_T_;
   if ( (*(&rgctx_data->_0_AvalonSceneManager__UnloadSceneAsync_d__47_T_->_2.bitflags2 + 2) & 1) == 0 )
-    _0_AvalonSceneManager__UnloadSceneAsync_d__47_T = sub_1C83334(v3);
-  v9 = (AvalonSceneManager__UnloadSceneAsync_d__47_T__o *)sub_1C32E6C(_0_AvalonSceneManager__UnloadSceneAsync_d__47_T);
+    _0_AvalonSceneManager__UnloadSceneAsync_d__47_T = sub_1C8776C(v3);
+  v9 = (AvalonSceneManager__UnloadSceneAsync_d__47_T__o *)sub_1C372A4(_0_AvalonSceneManager__UnloadSceneAsync_d__47_T);
   v10 = method->rgctx_data;
   v11 = v9;
   AvalonSceneManager__UnloadSceneAsync_d__47_object____ctor(
     v9,
     0,
-    (const MethodInfo_3403A9C *)v10->_1_AvalonSceneManager__UnloadSceneAsync_d__47_T___ctor);
+    (const MethodInfo_340E304 *)v10->_1_AvalonSceneManager__UnloadSceneAsync_d__47_T___ctor);
   if ( !v11 )
-    sub_1C32E7C(v12);
+    sub_1C372B4(v12);
   v11->fields.__4__this = this;
-  sub_1C32BC4((CGThumbnailListItem_o *)&v11->fields.__4__this, (int32_t)this, v13, v14);
+  sub_1C36FFC((CGThumbnailListItem_o *)&v11->fields.__4__this, (int32_t)this, v13, v14);
   v11->fields.callback = callback;
-  sub_1C32BC4((CGThumbnailListItem_o *)&v11->fields.callback, (int32_t)callback, v15, v16);
+  sub_1C36FFC((CGThumbnailListItem_o *)&v11->fields.callback, (int32_t)callback, v15, v16);
   return (System_Collections_IEnumerator_o *)v11;
 }
 
 
-void AvalonSceneManager__UnloadScene_object_(AvalonSceneManager_o *this, const MethodInfo_30C51B8 *method)
+void AvalonSceneManager__UnloadScene_object_(AvalonSceneManager_o *this, const MethodInfo_30CFA20 *method)
 {
   int32_t i; // w21
   int32_t *p_m_Handle; // x0
@@ -424,18 +424,18 @@ void AvalonSceneManager__UnloadScene_object_(AvalonSceneManager_o *this, const M
   System_String_o *v18; // x22
   AvalonSceneManager_o *v19; // x0
   System_Action_o *v20; // x1
-  const MethodInfo_30C53F4 *v21; // x2
+  const MethodInfo_30CFC5C *v21; // x2
   int32_t m_Handle; // [xsp+8h] [xbp-58h] BYREF
 
   if ( !method->rgctx_data )
   {
-    sub_1C32C20(&Method_System_Collections_Generic_Dictionary_SceneList_Type__SceneRootComponent__set_Item__);
-    sub_1C32C20(&Method_GameObjectExtensions_SafeGetComponent_SceneRootComponent___);
-    sub_1C32C20(&UnityEngine_Object_TypeInfo);
-    sub_1C32C20(&SceneList_TypeInfo);
-    sub_1C32C20(&UnityEngine_SceneManagement_SceneManager_TypeInfo);
+    sub_1C37058(&Method_System_Collections_Generic_Dictionary_SceneList_Type__SceneRootComponent__set_Item__);
+    sub_1C37058(&Method_GameObjectExtensions_SafeGetComponent_SceneRootComponent___);
+    sub_1C37058(&UnityEngine_Object_TypeInfo);
+    sub_1C37058(&SceneList_TypeInfo);
+    sub_1C37058(&UnityEngine_SceneManagement_SceneManager_TypeInfo);
     if ( !method->rgctx_data )
-      sub_1C83390(method);
+      sub_1C877C8(method);
   }
   m_Handle = 0;
   if ( !UnityEngine_SceneManagement_SceneManager_TypeInfo->_2.cctor_finished )
@@ -451,27 +451,27 @@ void AvalonSceneManager__UnloadScene_object_(AvalonSceneManager_o *this, const M
                         0);
     if ( !RootGameObjects )
 LABEL_30:
-      sub_1C32E7C(RootGameObjects);
+      sub_1C372B4(RootGameObjects);
     if ( !LODWORD(RootGameObjects->max_length) )
-      sub_1C32E84(RootGameObjects);
+      sub_1C372BC(RootGameObjects);
     Component_object = GameObjectExtensions__SafeGetComponent_object_(
                          RootGameObjects->m_Items[0],
-                         (const MethodInfo_3136458 *)Method_GameObjectExtensions_SafeGetComponent_SceneRootComponent___);
+                         (const MethodInfo_3140CC0 *)Method_GameObjectExtensions_SafeGetComponent_SceneRootComponent___);
     if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
       inited = j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
     _0_T = method->rgctx_data->_0_T;
     if ( (*(&_0_T->_2.bitflags2 + 2) & 1) == 0 )
-      _0_T = (Il2CppClass *)sub_1C83334(inited);
-    v10 = sub_1C32D5C(Component_object, _0_T);
+      _0_T = (Il2CppClass *)sub_1C8776C(inited);
+    v10 = sub_1C37194(Component_object, _0_T);
     v12 = method->rgctx_data->_0_T;
     if ( (*(&v12->_2.bitflags2 + 2) & 1) == 0 )
-      v12 = (Il2CppClass *)sub_1C83334(v11);
+      v12 = (Il2CppClass *)sub_1C8776C(v11);
     if ( v10 )
     {
-      v13 = (UnityEngine_Object_o *)sub_1C32D5C(v10, v12);
+      v13 = (UnityEngine_Object_o *)sub_1C37194(v10, v12);
       if ( !v13 )
       {
-        sub_1C3313C(v10);
+        sub_1C37574(v10);
         AvalonSceneManager__UnloadSceneAsync_object_(v19, v20, v21);
         return;
       }
@@ -494,12 +494,12 @@ LABEL_30:
         dicRootComponent,
         (int32_t)RootGameObjects,
         0,
-        (const MethodInfo_3422DA4 *)Method_System_Collections_Generic_Dictionary_SceneList_Type__SceneRootComponent__set_Item__);
+        (const MethodInfo_342D60C *)Method_System_Collections_Generic_Dictionary_SceneList_Type__SceneRootComponent__set_Item__);
       v17 = &m_Handle;
       v18 = UnityEngine_SceneManagement_Scene__get_name((UnityEngine_SceneManagement_Scene_o)v17, 0);
       if ( !UnityEngine_SceneManagement_SceneManager_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(UnityEngine_SceneManagement_SceneManager_TypeInfo);
-      UnityEngine_SceneManagement_SceneManager__UnloadSceneAsync_71277528(v18, 0);
+      UnityEngine_SceneManagement_SceneManager__UnloadSceneAsync_71320640(v18, 0);
     }
   }
 }
@@ -517,19 +517,19 @@ System_Collections_IEnumerator_o *AvalonSceneManager__changeNextSceneCoroutine(
   int32_t v10; // w2
   const MethodInfo *v11; // x3
 
-  if ( (byte_4C36FB4 & 1) == 0 )
+  if ( (byte_4C425A4 & 1) == 0 )
   {
-    sub_1C32C20(&AvalonSceneManager__changeNextSceneCoroutine_d__41_TypeInfo);
-    byte_4C36FB4 = 1;
+    sub_1C37058(&AvalonSceneManager__changeNextSceneCoroutine_d__41_TypeInfo);
+    byte_4C425A4 = 1;
   }
-  v7 = sub_1C32E6C(AvalonSceneManager__changeNextSceneCoroutine_d__41_TypeInfo);
+  v7 = sub_1C372A4(AvalonSceneManager__changeNextSceneCoroutine_d__41_TypeInfo);
   System_Object___ctor((Il2CppObject *)v7, 0);
   *(_DWORD *)(v7 + 16) = 0;
   *(_QWORD *)(v7 + 32) = this;
-  sub_1C32BC4((CGThumbnailListItem_o *)(v7 + 32), (int32_t)this, v8, v9);
+  sub_1C36FFC((CGThumbnailListItem_o *)(v7 + 32), (int32_t)this, v8, v9);
   *(_DWORD *)(v7 + 48) = changeType;
   *(_QWORD *)(v7 + 40) = scenename;
-  sub_1C32BC4((CGThumbnailListItem_o *)(v7 + 40), (int32_t)scenename, v10, v11);
+  sub_1C36FFC((CGThumbnailListItem_o *)(v7 + 40), (int32_t)scenename, v10, v11);
   return (System_Collections_IEnumerator_o *)v7;
 }
 
@@ -548,20 +548,20 @@ System_Collections_IEnumerator_o *AvalonSceneManager__changePrevSceneCoroutine(
   int32_t v13; // w2
   const MethodInfo *v14; // x3
 
-  if ( (byte_4C36FB3 & 1) == 0 )
+  if ( (byte_4C425A3 & 1) == 0 )
   {
-    sub_1C32C20(&AvalonSceneManager__changePrevSceneCoroutine_d__40_TypeInfo);
-    byte_4C36FB3 = 1;
+    sub_1C37058(&AvalonSceneManager__changePrevSceneCoroutine_d__40_TypeInfo);
+    byte_4C425A3 = 1;
   }
   v9 = fadeTimeSkip;
-  v10 = sub_1C32E6C(AvalonSceneManager__changePrevSceneCoroutine_d__40_TypeInfo);
+  v10 = sub_1C372A4(AvalonSceneManager__changePrevSceneCoroutine_d__40_TypeInfo);
   System_Object___ctor((Il2CppObject *)v10, 0);
   *(_DWORD *)(v10 + 16) = 0;
   *(_QWORD *)(v10 + 32) = this;
-  sub_1C32BC4((CGThumbnailListItem_o *)(v10 + 32), (int32_t)this, v11, v12);
+  sub_1C36FFC((CGThumbnailListItem_o *)(v10 + 32), (int32_t)this, v11, v12);
   *(_DWORD *)(v10 + 44) = changeType;
   *(_QWORD *)(v10 + 48) = scenename;
-  sub_1C32BC4((CGThumbnailListItem_o *)(v10 + 48), (int32_t)scenename, v13, v14);
+  sub_1C36FFC((CGThumbnailListItem_o *)(v10 + 48), (int32_t)scenename, v13, v14);
   *(_BYTE *)(v10 + 40) = v9;
   return (System_Collections_IEnumerator_o *)v10;
 }
@@ -577,15 +577,15 @@ bool AvalonSceneManager__changeScene(
   System_String_o *SceneName; // x2
   const MethodInfo *v10; // x6
 
-  if ( (byte_4C36FAF & 1) == 0 )
+  if ( (byte_4C4259F & 1) == 0 )
   {
-    sub_1C32C20(&SceneList_TypeInfo);
-    byte_4C36FAF = 1;
+    sub_1C37058(&SceneList_TypeInfo);
+    byte_4C4259F = 1;
   }
   if ( !SceneList_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(SceneList_TypeInfo);
   SceneName = SceneList__getSceneName(type, 0);
-  return AvalonSceneManager__changeScene_41058000(this, 2, SceneName, fade, data, 0, v10);
+  return AvalonSceneManager__changeScene_41157480(this, 2, SceneName, fade, data, 0, v10);
 }
 
 
@@ -606,28 +606,28 @@ System_Collections_IEnumerator_o *AvalonSceneManager__changeSceneCoroutine(
   int32_t v17; // w2
   const MethodInfo *v18; // x3
 
-  if ( (byte_4C36FB2 & 1) == 0 )
+  if ( (byte_4C425A2 & 1) == 0 )
   {
-    sub_1C32C20(&AvalonSceneManager__changeSceneCoroutine_d__39_TypeInfo);
-    byte_4C36FB2 = 1;
+    sub_1C37058(&AvalonSceneManager__changeSceneCoroutine_d__39_TypeInfo);
+    byte_4C425A2 = 1;
   }
   v11 = fadeTimeSkip;
-  v12 = sub_1C32E6C(AvalonSceneManager__changeSceneCoroutine_d__39_TypeInfo);
+  v12 = sub_1C372A4(AvalonSceneManager__changeSceneCoroutine_d__39_TypeInfo);
   System_Object___ctor((Il2CppObject *)v12, 0);
   *(_DWORD *)(v12 + 16) = 0;
   *(_QWORD *)(v12 + 40) = this;
-  sub_1C32BC4((CGThumbnailListItem_o *)(v12 + 40), (int32_t)this, v13, v14);
+  sub_1C36FFC((CGThumbnailListItem_o *)(v12 + 40), (int32_t)this, v13, v14);
   *(_DWORD *)(v12 + 48) = changeType;
   *(_QWORD *)(v12 + 32) = scenename;
-  sub_1C32BC4((CGThumbnailListItem_o *)(v12 + 32), (int32_t)scenename, v15, v16);
+  sub_1C36FFC((CGThumbnailListItem_o *)(v12 + 32), (int32_t)scenename, v15, v16);
   *(_BYTE *)(v12 + 52) = v11;
   *(_QWORD *)(v12 + 56) = callback;
-  sub_1C32BC4((CGThumbnailListItem_o *)(v12 + 56), (int32_t)callback, v17, v18);
+  sub_1C36FFC((CGThumbnailListItem_o *)(v12 + 56), (int32_t)callback, v17, v18);
   return (System_Collections_IEnumerator_o *)v12;
 }
 
 
-bool AvalonSceneManager__changeScene_41058000(
+bool AvalonSceneManager__changeScene_41157480(
         AvalonSceneManager_o *this,
         int32_t changeType,
         System_String_o *scenename,
@@ -648,28 +648,28 @@ bool AvalonSceneManager__changeScene_41058000(
   TerminalSceneComponent_c *v23; // x0
   System_Collections_IEnumerator_o *v24; // x0
 
-  if ( (byte_4C36FB0 & 1) == 0 )
+  if ( (byte_4C425A0 & 1) == 0 )
   {
-    sub_1C32C20(&SceneList_TypeInfo);
-    sub_1C32C20(&Method_SingletonMonoBehaviour_CrashReporter__get_Instance__);
-    sub_1C32C20(&TerminalSceneComponent_TypeInfo);
-    sub_1C32C20(&StringLiteral_19740/*"game.last_scene"*/);
-    byte_4C36FB0 = 1;
+    sub_1C37058(&SceneList_TypeInfo);
+    sub_1C37058(&Method_SingletonMonoBehaviour_CrashReporter__get_Instance__);
+    sub_1C37058(&TerminalSceneComponent_TypeInfo);
+    sub_1C37058(&StringLiteral_19743/*"game.last_scene"*/);
+    byte_4C425A0 = 1;
   }
   if ( !scenename || this->fields.isBusySceneChange )
     return 0;
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39E2904 *)Method_SingletonMonoBehaviour_CrashReporter__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39ED16C *)Method_SingletonMonoBehaviour_CrashReporter__get_Instance__);
   if ( !Instance
     || (CrashReporter__LeaveBreadcrumb((CrashReporter_o *)Instance, scenename, 0),
-        (Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39E2904 *)Method_SingletonMonoBehaviour_CrashReporter__get_Instance__)) == 0) )
+        (Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39ED16C *)Method_SingletonMonoBehaviour_CrashReporter__get_Instance__)) == 0) )
   {
-    sub_1C32E7C(Instance);
+    sub_1C372B4(Instance);
   }
-  CrashReporter__AddCustomKey((CrashReporter_o *)Instance, (System_String_o *)StringLiteral_19740/*"game.last_scene"*/, scenename, 0);
+  CrashReporter__AddCustomKey((CrashReporter_o *)Instance, (System_String_o *)StringLiteral_19743/*"game.last_scene"*/, scenename, 0);
   this->fields.sendData = data;
   this->fields.isBusySceneChange = 1;
   this->fields.fadeType = fade;
-  sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.sendData, (int32_t)data, v15, v16);
+  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.sendData, (int32_t)data, v15, v16);
   prevscenetemp = this->fields.prevscenetemp;
   if ( prevscenetemp )
     v18 = prevscenetemp->fields.sceneName;
@@ -703,12 +703,12 @@ bool AvalonSceneManager__changeScene_41058000(
     v23->static_fields->isSummonToTerminalTransition = 1;
   }
   v24 = AvalonSceneManager__changeSceneCoroutine(this, changeType, scenename, fadeTimeSkip, 0, v21);
-  UnityEngine_MonoBehaviour__StartCoroutine_71209212((UnityEngine_MonoBehaviour_o *)this, v24, 0);
+  UnityEngine_MonoBehaviour__StartCoroutine_71252324((UnityEngine_MonoBehaviour_o *)this, v24, 0);
   return 1;
 }
 
 
-bool AvalonSceneManager__changeScene_41058968(
+bool AvalonSceneManager__changeScene_41158448(
         AvalonSceneManager_o *this,
         int32_t changeType,
         System_String_o *scenename,
@@ -729,28 +729,28 @@ bool AvalonSceneManager__changeScene_41058968(
   TerminalSceneComponent_c *v23; // x0
   System_Collections_IEnumerator_o *v24; // x0
 
-  if ( (byte_4C36FB1 & 1) == 0 )
+  if ( (byte_4C425A1 & 1) == 0 )
   {
-    sub_1C32C20(&SceneList_TypeInfo);
-    sub_1C32C20(&Method_SingletonMonoBehaviour_CrashReporter__get_Instance__);
-    sub_1C32C20(&TerminalSceneComponent_TypeInfo);
-    sub_1C32C20(&StringLiteral_19740/*"game.last_scene"*/);
-    byte_4C36FB1 = 1;
+    sub_1C37058(&SceneList_TypeInfo);
+    sub_1C37058(&Method_SingletonMonoBehaviour_CrashReporter__get_Instance__);
+    sub_1C37058(&TerminalSceneComponent_TypeInfo);
+    sub_1C37058(&StringLiteral_19743/*"game.last_scene"*/);
+    byte_4C425A1 = 1;
   }
   if ( !scenename || this->fields.isBusySceneChange )
     return 0;
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39E2904 *)Method_SingletonMonoBehaviour_CrashReporter__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39ED16C *)Method_SingletonMonoBehaviour_CrashReporter__get_Instance__);
   if ( !Instance
     || (CrashReporter__LeaveBreadcrumb((CrashReporter_o *)Instance, scenename, 0),
-        (Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39E2904 *)Method_SingletonMonoBehaviour_CrashReporter__get_Instance__)) == 0) )
+        (Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39ED16C *)Method_SingletonMonoBehaviour_CrashReporter__get_Instance__)) == 0) )
   {
-    sub_1C32E7C(Instance);
+    sub_1C372B4(Instance);
   }
-  CrashReporter__AddCustomKey((CrashReporter_o *)Instance, (System_String_o *)StringLiteral_19740/*"game.last_scene"*/, scenename, 0);
+  CrashReporter__AddCustomKey((CrashReporter_o *)Instance, (System_String_o *)StringLiteral_19743/*"game.last_scene"*/, scenename, 0);
   this->fields.sendData = data;
   this->fields.isBusySceneChange = 1;
   this->fields.fadeType = fade;
-  sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.sendData, (int32_t)data, v15, v16);
+  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.sendData, (int32_t)data, v15, v16);
   prevscenetemp = this->fields.prevscenetemp;
   if ( prevscenetemp )
     v18 = prevscenetemp->fields.sceneName;
@@ -784,12 +784,12 @@ bool AvalonSceneManager__changeScene_41058968(
     v23->static_fields->isSummonToTerminalTransition = 1;
   }
   v24 = AvalonSceneManager__changeSceneCoroutine(this, changeType, scenename, 0, callback, v21);
-  UnityEngine_MonoBehaviour__StartCoroutine_71209212((UnityEngine_MonoBehaviour_o *)this, v24, 0);
+  UnityEngine_MonoBehaviour__StartCoroutine_71252324((UnityEngine_MonoBehaviour_o *)this, v24, 0);
   return 1;
 }
 
 
-bool AvalonSceneManager__changeScene_41059768(
+bool AvalonSceneManager__changeScene_41159248(
         AvalonSceneManager_o *this,
         System_String_o *scenename,
         int32_t fade,
@@ -798,7 +798,7 @@ bool AvalonSceneManager__changeScene_41059768(
 {
   const MethodInfo *v5; // x6
 
-  return AvalonSceneManager__changeScene_41058000(this, 2, scenename, fade, data, 0, v5);
+  return AvalonSceneManager__changeScene_41157480(this, 2, scenename, fade, data, 0, v5);
 }
 
 
@@ -808,11 +808,11 @@ bool AvalonSceneManager__checkLoadedScene(AvalonSceneManager_o *this, int32_t ty
   int32_t *p_m_Handle; // x0
   int32_t m_Handle; // [xsp+8h] [xbp-28h] BYREF
 
-  if ( (byte_4C36FA9 & 1) == 0 )
+  if ( (byte_4C42599 & 1) == 0 )
   {
-    sub_1C32C20(&SceneList_TypeInfo);
-    sub_1C32C20(&UnityEngine_SceneManagement_SceneManager_TypeInfo);
-    byte_4C36FA9 = 1;
+    sub_1C37058(&SceneList_TypeInfo);
+    sub_1C37058(&UnityEngine_SceneManagement_SceneManager_TypeInfo);
+    byte_4C42599 = 1;
   }
   if ( !SceneList_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(SceneList_TypeInfo);
@@ -846,17 +846,17 @@ bool AvalonSceneManager__checkStackScene(AvalonSceneManager_o *this, int32_t typ
   System_Collections_Generic_Stack_T__o *scenestack; // x0
   Il2CppObject *v6; // x0
 
-  if ( (byte_4C36FA8 & 1) == 0 )
+  if ( (byte_4C42598 & 1) == 0 )
   {
-    sub_1C32C20(&Method_System_Collections_Generic_Stack_SceneTemp__Peek__);
-    byte_4C36FA8 = 1;
+    sub_1C37058(&Method_System_Collections_Generic_Stack_SceneTemp__Peek__);
+    byte_4C42598 = 1;
   }
   scenestack = (System_Collections_Generic_Stack_T__o *)this->fields.scenestack;
   if ( !scenestack )
-    sub_1C32E7C(0);
+    sub_1C372B4(0);
   v6 = System_Collections_Generic_Stack_object___Peek(
          scenestack,
-         (const MethodInfo_39F8F00 *)Method_System_Collections_Generic_Stack_SceneTemp__Peek__);
+         (const MethodInfo_3A03768 *)Method_System_Collections_Generic_Stack_SceneTemp__Peek__);
   if ( v6 )
     LOBYTE(v6) = LODWORD(v6[1].monitor) == type;
   return (char)v6;
@@ -871,16 +871,16 @@ System_Collections_IEnumerator_o *AvalonSceneManager__checkUnloadScenes(
   int32_t v4; // w2
   const MethodInfo *v5; // x3
 
-  if ( (byte_4C36FA3 & 1) == 0 )
+  if ( (byte_4C42593 & 1) == 0 )
   {
-    sub_1C32C20(&AvalonSceneManager__checkUnloadScenes_d__18_TypeInfo);
-    byte_4C36FA3 = 1;
+    sub_1C37058(&AvalonSceneManager__checkUnloadScenes_d__18_TypeInfo);
+    byte_4C42593 = 1;
   }
-  v3 = sub_1C32E6C(AvalonSceneManager__checkUnloadScenes_d__18_TypeInfo);
+  v3 = sub_1C372A4(AvalonSceneManager__checkUnloadScenes_d__18_TypeInfo);
   System_Object___ctor((Il2CppObject *)v3, 0);
   *(_DWORD *)(v3 + 16) = 0;
   *(_QWORD *)(v3 + 32) = this;
-  sub_1C32BC4((CGThumbnailListItem_o *)(v3 + 32), (int32_t)this, v4, v5);
+  sub_1C36FFC((CGThumbnailListItem_o *)(v3 + 32), (int32_t)this, v4, v5);
   return (System_Collections_IEnumerator_o *)v3;
 }
 
@@ -910,32 +910,32 @@ void AvalonSceneManager__destroySceneObject(AvalonSceneManager_o *this, const Me
   System_Collections_IEnumerator_o *v23; // x0
   int32_t m_Handle; // [xsp+8h] [xbp-38h] BYREF
 
-  if ( (byte_4C36FA4 & 1) == 0 )
+  if ( (byte_4C42594 & 1) == 0 )
   {
-    sub_1C32C20(&Method_System_Collections_Generic_Dictionary_SceneList_Type__SceneRootComponent__Clear__);
-    sub_1C32C20(&Method_System_Collections_Generic_List_string__Add__);
-    sub_1C32C20(&SceneList_TypeInfo);
-    sub_1C32C20(&UnityEngine_SceneManagement_SceneManager_TypeInfo);
-    sub_1C32C20(&Method_System_Collections_Generic_Stack_SceneTemp__Clear__);
-    byte_4C36FA4 = 1;
+    sub_1C37058(&Method_System_Collections_Generic_Dictionary_SceneList_Type__SceneRootComponent__Clear__);
+    sub_1C37058(&Method_System_Collections_Generic_List_string__Add__);
+    sub_1C37058(&SceneList_TypeInfo);
+    sub_1C37058(&UnityEngine_SceneManagement_SceneManager_TypeInfo);
+    sub_1C37058(&Method_System_Collections_Generic_Stack_SceneTemp__Clear__);
+    byte_4C42594 = 1;
   }
   m_Handle = 0;
   this->fields.prevscenetemp = 0;
-  sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.prevscenetemp, 0, v2, v3);
+  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.prevscenetemp, 0, v2, v3);
   scenestack = (System_Collections_Generic_Stack_T__o *)this->fields.scenestack;
   if ( !scenestack )
     goto LABEL_23;
   System_Collections_Generic_Stack_object___Clear(
     scenestack,
-    (const MethodInfo_39F8B50 *)Method_System_Collections_Generic_Stack_SceneTemp__Clear__);
+    (const MethodInfo_3A033B8 *)Method_System_Collections_Generic_Stack_SceneTemp__Clear__);
   this->fields.targetRoot = 0;
-  sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.targetRoot, 0, v6, v7);
+  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.targetRoot, 0, v6, v7);
   scenestack = (System_Collections_Generic_Stack_T__o *)this->fields.dicRootComponent;
   if ( !scenestack )
     goto LABEL_23;
   System_Collections_Generic_Dictionary_Int32Enum__object___Clear(
     (System_Collections_Generic_Dictionary_TKey__TValue__o *)scenestack,
-    (const MethodInfo_3422F40 *)Method_System_Collections_Generic_Dictionary_SceneList_Type__SceneRootComponent__Clear__);
+    (const MethodInfo_342D7A8 *)Method_System_Collections_Generic_Dictionary_SceneList_Type__SceneRootComponent__Clear__);
   if ( !UnityEngine_SceneManagement_SceneManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_SceneManagement_SceneManager_TypeInfo);
   v9 = UnityEngine_SceneManagement_SceneManager__get_sceneCount(0) - 1;
@@ -959,7 +959,7 @@ void AvalonSceneManager__destroySceneObject(AvalonSceneManager_o *this, const Me
         v13 = UnityEngine_SceneManagement_Scene__get_name((UnityEngine_SceneManagement_Scene_o)v12, 0);
         if ( !UnityEngine_SceneManagement_SceneManager_TypeInfo->_2.cctor_finished )
           j_il2cpp_runtime_class_init_0(UnityEngine_SceneManagement_SceneManager_TypeInfo);
-        UnityEngine_SceneManagement_SceneManager__UnloadSceneAsync_71277528(v13, 0);
+        UnityEngine_SceneManagement_SceneManager__UnloadSceneAsync_71320640(v13, 0);
         m_listUnloadScenes = (System_Collections_Generic_List_object__o *)this->fields.m_listUnloadScenes;
         v15 = &m_Handle;
         scenestack = (System_Collections_Generic_Stack_T__o *)UnityEngine_SceneManagement_Scene__get_name(
@@ -979,25 +979,25 @@ void AvalonSceneManager__destroySceneObject(AvalonSceneManager_o *this, const Me
           System_Collections_Generic_List_object___AddWithResize(
             m_listUnloadScenes,
             (Il2CppObject *)scenestack,
-            *(const MethodInfo_37987BC **)(*(_QWORD *)(v19[4] + 192LL) + 112LL));
+            *(const MethodInfo_37A3024 **)(*(_QWORD *)(v19[4] + 192LL) + 112LL));
         }
         else
         {
           v22 = &items->obj.klass + size;
           m_listUnloadScenes->fields._size = size + 1;
           v22[4] = (Il2CppClass *)v21;
-          sub_1C32BC4((CGThumbnailListItem_o *)(v22 + 4), (int32_t)v21, v16, v17);
+          sub_1C36FFC((CGThumbnailListItem_o *)(v22 + 4), (int32_t)v21, v16, v17);
         }
       }
       if ( --v9 < 0 )
         goto LABEL_22;
     }
 LABEL_23:
-    sub_1C32E7C(scenestack);
+    sub_1C372B4(scenestack);
   }
 LABEL_22:
   v23 = AvalonSceneManager__checkUnloadScenes(this, v8);
-  UnityEngine_MonoBehaviour__StartCoroutine_71209212((UnityEngine_MonoBehaviour_o *)this, v23, 0);
+  UnityEngine_MonoBehaviour__StartCoroutine_71252324((UnityEngine_MonoBehaviour_o *)this, v23, 0);
 }
 
 
@@ -1022,26 +1022,26 @@ void AvalonSceneManager__endInitialize(
   System_String_o *SceneName; // x1
   const MethodInfo *v19; // x2
 
-  if ( (byte_4C36FA5 & 1) == 0 )
+  if ( (byte_4C42595 & 1) == 0 )
   {
-    sub_1C32C20(&Method_BasicHelper_Any_string____78062400);
-    sub_1C32C20(&System_Func_string__bool__TypeInfo);
-    sub_1C32C20(&string___TypeInfo);
-    sub_1C32C20(&Method_AvalonSceneManager___c__DisplayClass20_0__endInitialize_b__0__);
-    sub_1C32C20(&AvalonSceneManager___c__DisplayClass20_0_TypeInfo);
-    sub_1C32C20(&StringLiteral_3125/*"BattleScene"*/);
-    byte_4C36FA5 = 1;
+    sub_1C37058(&Method_BasicHelper_Any_string____78108176);
+    sub_1C37058(&System_Func_string__bool__TypeInfo);
+    sub_1C37058(&string___TypeInfo);
+    sub_1C37058(&Method_AvalonSceneManager___c__DisplayClass20_0__endInitialize_b__0__);
+    sub_1C37058(&AvalonSceneManager___c__DisplayClass20_0_TypeInfo);
+    sub_1C37058(&StringLiteral_3125/*"BattleScene"*/);
+    byte_4C42595 = 1;
   }
-  v5 = sub_1C32E6C(AvalonSceneManager___c__DisplayClass20_0_TypeInfo);
+  v5 = sub_1C372A4(AvalonSceneManager___c__DisplayClass20_0_TypeInfo);
   System_Object___ctor((Il2CppObject *)v5, 0);
   if ( !v5 )
     goto LABEL_10;
   *(_QWORD *)(v5 + 16) = comp;
   v9 = (SceneRootComponent_o **)(v5 + 16);
-  sub_1C32BC4((CGThumbnailListItem_o *)(v5 + 16), (int32_t)comp, v7, v8);
+  sub_1C36FFC((CGThumbnailListItem_o *)(v5 + 16), (int32_t)comp, v7, v8);
   sendData = this->fields.sendData;
   this->fields.sendData = 0;
-  sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.sendData, 0, v11, v12);
+  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.sendData, 0, v11, v12);
   v6 = *(SceneRootComponent_o **)(v5 + 16);
   if ( !v6 )
     goto LABEL_10;
@@ -1049,25 +1049,25 @@ void AvalonSceneManager__endInitialize(
     v6,
     sendData,
     v6->klass->vtable._5_beginStartUp.method);
-  v6 = (SceneRootComponent_o *)sub_1C32CC8(string___TypeInfo, 1);
+  v6 = (SceneRootComponent_o *)sub_1C37100(string___TypeInfo, 1);
   if ( !v6 )
     goto LABEL_10;
   v15 = (System_Object_array *)v6;
   if ( !LODWORD(v6->fields.m_CancellationTokenSource) )
-    sub_1C32E84(v6);
+    sub_1C372BC(v6);
   v16 = StringLiteral_3125/*"BattleScene"*/;
   v6->fields.myFSM = (struct PlayMakerFSM_o *)StringLiteral_3125/*"BattleScene"*/;
-  sub_1C32BC4((CGThumbnailListItem_o *)&v6->fields.myFSM, v16, v13, v14);
-  v17 = (System_Func_object__bool__o *)sub_1C32E6C(System_Func_string__bool__TypeInfo);
+  sub_1C36FFC((CGThumbnailListItem_o *)&v6->fields.myFSM, v16, v13, v14);
+  v17 = (System_Func_object__bool__o *)sub_1C372A4(System_Func_string__bool__TypeInfo);
   System_Func_object__bool____ctor(
     v17,
     (Il2CppObject *)v5,
     Method_AvalonSceneManager___c__DisplayClass20_0__endInitialize_b__0__,
     0);
-  if ( !BasicHelper__Any_object__51144764(
+  if ( !BasicHelper__Any_object__51187876(
           v15,
           (System_Func_T__bool__o *)v17,
-          (const MethodInfo_30C683C *)Method_BasicHelper_Any_string____78062400) )
+          (const MethodInfo_30D10A4 *)Method_BasicHelper_Any_string____78108176) )
   {
     v6 = *v9;
     if ( *v9 )
@@ -1077,7 +1077,7 @@ void AvalonSceneManager__endInitialize(
       return;
     }
 LABEL_10:
-    sub_1C32E7C(v6);
+    sub_1C372B4(v6);
   }
 }
 
@@ -1107,17 +1107,17 @@ System_String_o *AvalonSceneManager__getStackSceneName(AvalonSceneManager_o *thi
   System_Collections_Generic_Stack_T__o *scenestack; // x0
   System_String_o *result; // x0
 
-  if ( (byte_4C36FA7 & 1) == 0 )
+  if ( (byte_4C42597 & 1) == 0 )
   {
-    sub_1C32C20(&Method_System_Collections_Generic_Stack_SceneTemp__Peek__);
-    byte_4C36FA7 = 1;
+    sub_1C37058(&Method_System_Collections_Generic_Stack_SceneTemp__Peek__);
+    byte_4C42597 = 1;
   }
   scenestack = (System_Collections_Generic_Stack_T__o *)this->fields.scenestack;
   if ( !scenestack )
-    sub_1C32E7C(0);
+    sub_1C372B4(0);
   result = (System_String_o *)System_Collections_Generic_Stack_object___Peek(
                                 scenestack,
-                                (const MethodInfo_39F8F00 *)Method_System_Collections_Generic_Stack_SceneTemp__Peek__);
+                                (const MethodInfo_3A03768 *)Method_System_Collections_Generic_Stack_SceneTemp__Peek__);
   if ( result )
     return (System_String_o *)result->fields;
   return result;
@@ -1138,12 +1138,12 @@ SceneRootComponent_o *AvalonSceneManager__getTargetRoot(
   unsigned int v10; // w22
   int32_t m_Handle; // [xsp+8h] [xbp-38h] BYREF
 
-  if ( (byte_4C36FA1 & 1) == 0 )
+  if ( (byte_4C42591 & 1) == 0 )
   {
-    sub_1C32C20(&Method_UnityEngine_GameObject_GetComponent_SceneRootComponent___);
-    sub_1C32C20(&UnityEngine_Object_TypeInfo);
-    sub_1C32C20(&UnityEngine_SceneManagement_SceneManager_TypeInfo);
-    byte_4C36FA1 = 1;
+    sub_1C37058(&Method_UnityEngine_GameObject_GetComponent_SceneRootComponent___);
+    sub_1C37058(&UnityEngine_Object_TypeInfo);
+    sub_1C37058(&UnityEngine_SceneManagement_SceneManager_TypeInfo);
+    byte_4C42591 = 1;
   }
   if ( !UnityEngine_SceneManagement_SceneManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_SceneManagement_SceneManager_TypeInfo);
@@ -1164,13 +1164,13 @@ SceneRootComponent_o *AvalonSceneManager__getTargetRoot(
       while ( 1 )
       {
         if ( v10 >= max_length )
-          sub_1C32E84(RootGameObjects);
+          sub_1C372BC(RootGameObjects);
         RootGameObjects = (UnityEngine_GameObject_array *)v9->m_Items[v10];
         if ( !RootGameObjects )
           break;
         Component_object = UnityEngine_GameObject__GetComponent_object_(
                              (UnityEngine_GameObject_o *)RootGameObjects,
-                             (const MethodInfo_3134970 *)Method_UnityEngine_GameObject_GetComponent_SceneRootComponent___);
+                             (const MethodInfo_313F1D8 *)Method_UnityEngine_GameObject_GetComponent_SceneRootComponent___);
         if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
           j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
         RootGameObjects = (UnityEngine_GameObject_array *)UnityEngine_Object__op_Inequality(
@@ -1193,7 +1193,7 @@ SceneRootComponent_o *AvalonSceneManager__getTargetRoot(
           return 0;
       }
 LABEL_19:
-      sub_1C32E7C(RootGameObjects);
+      sub_1C372B4(RootGameObjects);
     }
     return 0;
   }
@@ -1209,7 +1209,7 @@ bool AvalonSceneManager__popScene(
 {
   const MethodInfo *v4; // x4
 
-  return AvalonSceneManager__popScene_41058492(this, fade, data, 0, v4);
+  return AvalonSceneManager__popScene_41157972(this, fade, data, 0, v4);
 }
 
 
@@ -1221,11 +1221,11 @@ bool AvalonSceneManager__popSceneRefresh(
 {
   const MethodInfo *v4; // x4
 
-  return AvalonSceneManager__popScene_41058492(this, fade, data, 1, v4);
+  return AvalonSceneManager__popScene_41157972(this, fade, data, 1, v4);
 }
 
 
-bool AvalonSceneManager__popScene_41058492(
+bool AvalonSceneManager__popScene_41157972(
         AvalonSceneManager_o *this,
         int32_t fade,
         Il2CppObject *data,
@@ -1237,11 +1237,11 @@ bool AvalonSceneManager__popScene_41058492(
   const MethodInfo *v11; // x6
   int32_t v12; // w1
 
-  if ( (byte_4C36FAB & 1) == 0 )
+  if ( (byte_4C4259B & 1) == 0 )
   {
-    sub_1C32C20(&Method_System_Collections_Generic_Stack_SceneTemp__Pop__);
-    sub_1C32C20(&Method_System_Collections_Generic_Stack_SceneTemp__get_Count__);
-    byte_4C36FAB = 1;
+    sub_1C37058(&Method_System_Collections_Generic_Stack_SceneTemp__Pop__);
+    sub_1C37058(&Method_System_Collections_Generic_Stack_SceneTemp__get_Count__);
+    byte_4C4259B = 1;
   }
   scenestack = this->fields.scenestack;
   if ( !scenestack )
@@ -1251,15 +1251,15 @@ bool AvalonSceneManager__popScene_41058492(
     return v10 > 0;
   scenestack = System_Collections_Generic_Stack_object___Pop(
                  (System_Collections_Generic_Stack_T__o *)scenestack,
-                 (const MethodInfo_39F8F44 *)Method_System_Collections_Generic_Stack_SceneTemp__Pop__);
+                 (const MethodInfo_3A037AC *)Method_System_Collections_Generic_Stack_SceneTemp__Pop__);
   if ( !scenestack )
 LABEL_11:
-    sub_1C32E7C(scenestack);
+    sub_1C372B4(scenestack);
   if ( isRefresh )
     v12 = 5;
   else
     v12 = 4;
-  AvalonSceneManager__changeScene_41058000(this, v12, *((System_String_o **)scenestack + 2), fade, data, 0, v11);
+  AvalonSceneManager__changeScene_41157480(this, v12, *((System_String_o **)scenestack + 2), fade, data, 0, v11);
   return v10 > 0;
 }
 
@@ -1279,13 +1279,13 @@ bool AvalonSceneManager__pushScene(
   const MethodInfo *v14; // x6
   const MethodInfo *v16; // x6
 
-  if ( (byte_4C36FAA & 1) == 0 )
+  if ( (byte_4C4259A & 1) == 0 )
   {
-    sub_1C32C20(&UnityEngine_Object_TypeInfo);
-    sub_1C32C20(&SceneList_TypeInfo);
-    sub_1C32C20(&Method_System_Collections_Generic_Stack_SceneTemp__Pop__);
-    sub_1C32C20(&Method_System_Collections_Generic_Stack_SceneTemp__Push__);
-    byte_4C36FAA = 1;
+    sub_1C37058(&UnityEngine_Object_TypeInfo);
+    sub_1C37058(&SceneList_TypeInfo);
+    sub_1C37058(&Method_System_Collections_Generic_Stack_SceneTemp__Pop__);
+    sub_1C37058(&Method_System_Collections_Generic_Stack_SceneTemp__Push__);
+    byte_4C4259A = 1;
   }
   targetRoot = (UnityEngine_Object_o *)this->fields.targetRoot;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -1303,13 +1303,13 @@ bool AvalonSceneManager__pushScene(
       System_Collections_Generic_Stack_object___Push(
         scenestack,
         (Il2CppObject *)this->fields.prevscenetemp,
-        (const MethodInfo_39F8FA4 *)Method_System_Collections_Generic_Stack_SceneTemp__Push__);
+        (const MethodInfo_3A0380C *)Method_System_Collections_Generic_Stack_SceneTemp__Push__);
     }
   }
   if ( !SceneList_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(SceneList_TypeInfo);
   SceneName = SceneList__getSceneName(type, 0);
-  if ( AvalonSceneManager__changeScene_41058000(this, 3, SceneName, fade, data, 0, v14) )
+  if ( AvalonSceneManager__changeScene_41157480(this, 3, SceneName, fade, data, 0, v14) )
     return 1;
   if ( prevscenetemp )
   {
@@ -1318,12 +1318,12 @@ bool AvalonSceneManager__pushScene(
     {
       System_Collections_Generic_Stack_object___Pop(
         scenestack,
-        (const MethodInfo_39F8F44 *)Method_System_Collections_Generic_Stack_SceneTemp__Pop__);
-      AvalonSceneManager__changeScene_41058000(this, 4, prevscenetemp->fields.sceneName, fade, data, 0, v16);
+        (const MethodInfo_3A037AC *)Method_System_Collections_Generic_Stack_SceneTemp__Pop__);
+      AvalonSceneManager__changeScene_41157480(this, 4, prevscenetemp->fields.sceneName, fade, data, 0, v16);
       return 0;
     }
 LABEL_17:
-    sub_1C32E7C(scenestack);
+    sub_1C372B4(scenestack);
   }
   return 0;
 }
@@ -1341,10 +1341,10 @@ bool AvalonSceneManager__setTargetRootActive(AvalonSceneManager_o *this, bool fl
   UnityEngine_Object_o *targetRoot; // x21
   SceneRootComponent_o *v6; // x0
 
-  if ( (byte_4C36FB6 & 1) == 0 )
+  if ( (byte_4C425A6 & 1) == 0 )
   {
-    sub_1C32C20(&UnityEngine_Object_TypeInfo);
-    byte_4C36FB6 = 1;
+    sub_1C37058(&UnityEngine_Object_TypeInfo);
+    byte_4C425A6 = 1;
   }
   targetRoot = (UnityEngine_Object_o *)this->fields.targetRoot;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -1353,7 +1353,7 @@ bool AvalonSceneManager__setTargetRootActive(AvalonSceneManager_o *this, bool fl
     return 0;
   v6 = this->fields.targetRoot;
   if ( !v6 )
-    sub_1C32E7C(0);
+    sub_1C372B4(0);
   return SceneRootComponent__SetSceneActive(v6, flag, 0);
 }
 
@@ -1362,12 +1362,12 @@ System_Collections_IEnumerator_o *AvalonSceneManager__setupUI(AvalonSceneManager
 {
   __int64 v2; // x19
 
-  if ( (byte_4C36FB5 & 1) == 0 )
+  if ( (byte_4C425A5 & 1) == 0 )
   {
-    sub_1C32C20(&AvalonSceneManager__setupUI_d__42_TypeInfo);
-    byte_4C36FB5 = 1;
+    sub_1C37058(&AvalonSceneManager__setupUI_d__42_TypeInfo);
+    byte_4C425A5 = 1;
   }
-  v2 = sub_1C32E6C(AvalonSceneManager__setupUI_d__42_TypeInfo);
+  v2 = sub_1C372A4(AvalonSceneManager__setupUI_d__42_TypeInfo);
   System_Object___ctor((Il2CppObject *)v2, 0);
   *(_DWORD *)(v2 + 16) = 0;
   return (System_Collections_IEnumerator_o *)v2;
@@ -1384,15 +1384,15 @@ bool AvalonSceneManager__transitionScene(
   System_String_o *SceneName; // x2
   const MethodInfo *v10; // x6
 
-  if ( (byte_4C36FAC & 1) == 0 )
+  if ( (byte_4C4259C & 1) == 0 )
   {
-    sub_1C32C20(&SceneList_TypeInfo);
-    byte_4C36FAC = 1;
+    sub_1C37058(&SceneList_TypeInfo);
+    byte_4C4259C = 1;
   }
   if ( !SceneList_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(SceneList_TypeInfo);
   SceneName = SceneList__getSceneName(type, 0);
-  return AvalonSceneManager__changeScene_41058000(this, 1, SceneName, fade, data, 0, v10);
+  return AvalonSceneManager__changeScene_41157480(this, 1, SceneName, fade, data, 0, v10);
 }
 
 
@@ -1407,19 +1407,19 @@ bool AvalonSceneManager__transitionSceneRefresh(
   System_String_o *SceneName; // x0
   const MethodInfo *v12; // x6
 
-  if ( (byte_4C36FAE & 1) == 0 )
+  if ( (byte_4C4259E & 1) == 0 )
   {
-    sub_1C32C20(&SceneList_TypeInfo);
-    byte_4C36FAE = 1;
+    sub_1C37058(&SceneList_TypeInfo);
+    byte_4C4259E = 1;
   }
   if ( !SceneList_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(SceneList_TypeInfo);
   SceneName = SceneList__getSceneName(type, 0);
-  return AvalonSceneManager__changeScene_41058000(this, 0, SceneName, fade, data, fadeTimeSkip, v12);
+  return AvalonSceneManager__changeScene_41157480(this, 0, SceneName, fade, data, fadeTimeSkip, v12);
 }
 
 
-bool AvalonSceneManager__transitionScene_41058820(
+bool AvalonSceneManager__transitionScene_41158300(
         AvalonSceneManager_o *this,
         int32_t type,
         System_Action_o *callback,
@@ -1430,19 +1430,19 @@ bool AvalonSceneManager__transitionScene_41058820(
   System_String_o *SceneName; // x2
   const MethodInfo *v12; // x6
 
-  if ( (byte_4C36FAD & 1) == 0 )
+  if ( (byte_4C4259D & 1) == 0 )
   {
-    sub_1C32C20(&SceneList_TypeInfo);
-    byte_4C36FAD = 1;
+    sub_1C37058(&SceneList_TypeInfo);
+    byte_4C4259D = 1;
   }
   if ( !SceneList_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(SceneList_TypeInfo);
   SceneName = SceneList__getSceneName(type, 0);
-  return AvalonSceneManager__changeScene_41058968(this, 1, SceneName, fade, data, callback, v12);
+  return AvalonSceneManager__changeScene_41158448(this, 1, SceneName, fade, data, callback, v12);
 }
 
 
-bool AvalonSceneManager__transitionScene_41059744(
+bool AvalonSceneManager__transitionScene_41159224(
         AvalonSceneManager_o *this,
         System_String_o *scenename,
         int32_t fade,
@@ -1451,14 +1451,14 @@ bool AvalonSceneManager__transitionScene_41059744(
 {
   const MethodInfo *v5; // x6
 
-  return AvalonSceneManager__changeScene_41058000(this, 1, scenename, fade, data, 0, v5);
+  return AvalonSceneManager__changeScene_41157480(this, 1, scenename, fade, data, 0, v5);
 }
 
 
 void AvalonSceneManager__UnloadSceneAsync_d__47_object____ctor(
         AvalonSceneManager__UnloadSceneAsync_d__47_T__o *this,
         int32_t 1__state,
-        const MethodInfo_3403A9C *method)
+        const MethodInfo_340E304 *method)
 {
   System_Object___ctor((Il2CppObject *)this, 0);
   this->fields.__1__state = 1__state;
@@ -1467,7 +1467,7 @@ void AvalonSceneManager__UnloadSceneAsync_d__47_object____ctor(
 
 bool AvalonSceneManager__UnloadSceneAsync_d__47_object___MoveNext(
         AvalonSceneManager__UnloadSceneAsync_d__47_T__o *this,
-        const MethodInfo_3403AC8 *method)
+        const MethodInfo_340E330 *method)
 {
   int32_t _1__state; // w8
   bool result; // w0
@@ -1492,17 +1492,17 @@ bool AvalonSceneManager__UnloadSceneAsync_d__47_object___MoveNext(
   const MethodInfo *v24; // x3
   Il2CppObject **p__2__current; // x19
   AvalonSceneManager__UnloadSceneAsync_d__47_T__o *v26; // x0
-  const MethodInfo_3403D84 *v27; // x1
+  const MethodInfo_340E5EC *v27; // x1
   int32_t m_Handle; // [xsp+8h] [xbp-58h] BYREF
 
-  if ( (byte_4C3D498 & 1) == 0 )
+  if ( (byte_4C48A18 & 1) == 0 )
   {
-    sub_1C32C20(&Method_System_Collections_Generic_Dictionary_SceneList_Type__SceneRootComponent__set_Item__);
-    sub_1C32C20(&Method_GameObjectExtensions_SafeGetComponent_SceneRootComponent___);
-    sub_1C32C20(&UnityEngine_Object_TypeInfo);
-    sub_1C32C20(&SceneList_TypeInfo);
-    sub_1C32C20(&UnityEngine_SceneManagement_SceneManager_TypeInfo);
-    byte_4C3D498 = 1;
+    sub_1C37058(&Method_System_Collections_Generic_Dictionary_SceneList_Type__SceneRootComponent__set_Item__);
+    sub_1C37058(&Method_GameObjectExtensions_SafeGetComponent_SceneRootComponent___);
+    sub_1C37058(&UnityEngine_Object_TypeInfo);
+    sub_1C37058(&SceneList_TypeInfo);
+    sub_1C37058(&UnityEngine_SceneManagement_SceneManager_TypeInfo);
+    byte_4C48A18 = 1;
   }
   m_Handle = 0;
   _1__state = this->fields.__1__state;
@@ -1533,25 +1533,25 @@ bool AvalonSceneManager__UnloadSceneAsync_d__47_object___MoveNext(
       if ( !RootGameObjects )
         goto LABEL_37;
       if ( !*((_DWORD *)RootGameObjects + 6) )
-        sub_1C32E84(RootGameObjects);
+        sub_1C372BC(RootGameObjects);
       Component_object = GameObjectExtensions__SafeGetComponent_object_(
                            *((UnityEngine_GameObject_o **)RootGameObjects + 4),
-                           (const MethodInfo_3136458 *)Method_GameObjectExtensions_SafeGetComponent_SceneRootComponent___);
+                           (const MethodInfo_3140CC0 *)Method_GameObjectExtensions_SafeGetComponent_SceneRootComponent___);
       if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
       _1_T = (__int64)method->klass->rgctx_data->_1_T;
       if ( (*(_BYTE *)(_1_T + 309) & 1) == 0 )
-        _1_T = sub_1C83334();
-      v12 = sub_1C32D5C(Component_object, _1_T);
+        _1_T = sub_1C8776C();
+      v12 = sub_1C37194(Component_object, _1_T);
       v13 = (__int64)method->klass->rgctx_data->_1_T;
       if ( (*(_BYTE *)(v13 + 309) & 1) == 0 )
-        v13 = sub_1C83334();
+        v13 = sub_1C8776C();
       if ( v12 )
       {
-        v14 = (UnityEngine_Object_o *)sub_1C32D5C(v12, v13);
+        v14 = (UnityEngine_Object_o *)sub_1C37194(v12, v13);
         if ( !v14 )
         {
-          sub_1C3313C(v12);
+          sub_1C37574(v12);
           return (unsigned __int8)AvalonSceneManager__UnloadSceneAsync_d__47_object___System_Collections_Generic_IEnumerator_System_Object__get_Current(
                                     v26,
                                     v27);
@@ -1579,19 +1579,19 @@ bool AvalonSceneManager__UnloadSceneAsync_d__47_object___MoveNext(
       dicRootComponent,
       (int32_t)RootGameObjects,
       0,
-      (const MethodInfo_3422DA4 *)Method_System_Collections_Generic_Dictionary_SceneList_Type__SceneRootComponent__set_Item__);
+      (const MethodInfo_342D60C *)Method_System_Collections_Generic_Dictionary_SceneList_Type__SceneRootComponent__set_Item__);
     v18 = &m_Handle;
     v19 = UnityEngine_SceneManagement_Scene__get_name((UnityEngine_SceneManagement_Scene_o)v18, 0);
     if ( !UnityEngine_SceneManagement_SceneManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(UnityEngine_SceneManagement_SceneManager_TypeInfo);
-    v20 = UnityEngine_SceneManagement_SceneManager__UnloadSceneAsync_71277528(v19, 0);
+    v20 = UnityEngine_SceneManagement_SceneManager__UnloadSceneAsync_71320640(v19, 0);
     this->fields._asyncOp_5__2 = v20;
-    sub_1C32BC4((CGThumbnailListItem_o *)&this->fields._asyncOp_5__2, (int32_t)v20, v21, v22);
+    sub_1C36FFC((CGThumbnailListItem_o *)&this->fields._asyncOp_5__2, (int32_t)v20, v21, v22);
 LABEL_32:
     RootGameObjects = this->fields._asyncOp_5__2;
     if ( !RootGameObjects )
 LABEL_37:
-      sub_1C32E7C(RootGameObjects);
+      sub_1C372B4(RootGameObjects);
     if ( UnityEngine_AsyncOperation__get_isDone((UnityEngine_AsyncOperation_o *)RootGameObjects, 0) )
     {
 LABEL_34:
@@ -1602,7 +1602,7 @@ LABEL_34:
     {
       this->fields.__2__current = 0;
       p__2__current = &this->fields.__2__current;
-      sub_1C32BC4((CGThumbnailListItem_o *)p__2__current, 0, v23, v24);
+      sub_1C36FFC((CGThumbnailListItem_o *)p__2__current, 0, v23, v24);
       result = 1;
       *((_DWORD *)p__2__current - 2) = 1;
     }
@@ -1613,7 +1613,7 @@ LABEL_34:
 
 Il2CppObject *AvalonSceneManager__UnloadSceneAsync_d__47_object___System_Collections_Generic_IEnumerator_System_Object__get_Current(
         AvalonSceneManager__UnloadSceneAsync_d__47_T__o *this,
-        const MethodInfo_3403D84 *method)
+        const MethodInfo_340E5EC *method)
 {
   return this->fields.__2__current;
 }
@@ -1621,21 +1621,21 @@ Il2CppObject *AvalonSceneManager__UnloadSceneAsync_d__47_object___System_Collect
 
 void __noreturn AvalonSceneManager__UnloadSceneAsync_d__47_object___System_Collections_IEnumerator_Reset(
         AvalonSceneManager__UnloadSceneAsync_d__47_T__o *this,
-        const MethodInfo_3403D8C *method)
+        const MethodInfo_340E5F4 *method)
 {
   __int64 v3; // x0
   System_NotSupportedException_o *v4; // x20
 
-  v3 = sub_1C32C34(&System_NotSupportedException_TypeInfo);
-  v4 = (System_NotSupportedException_o *)sub_1C32E6C(v3);
+  v3 = sub_1C3706C(&System_NotSupportedException_TypeInfo);
+  v4 = (System_NotSupportedException_o *)sub_1C372A4(v3);
   System_NotSupportedException___ctor(v4, 0);
-  sub_1C32D48(v4, method);
+  sub_1C37180(v4, method);
 }
 
 
 Il2CppObject *AvalonSceneManager__UnloadSceneAsync_d__47_object___System_Collections_IEnumerator_get_Current(
         AvalonSceneManager__UnloadSceneAsync_d__47_T__o *this,
-        const MethodInfo_3403DC0 *method)
+        const MethodInfo_340E628 *method)
 {
   return this->fields.__2__current;
 }
@@ -1643,7 +1643,7 @@ Il2CppObject *AvalonSceneManager__UnloadSceneAsync_d__47_object___System_Collect
 
 void AvalonSceneManager__UnloadSceneAsync_d__47_object___System_IDisposable_Dispose(
         AvalonSceneManager__UnloadSceneAsync_d__47_T__o *this,
-        const MethodInfo_3403AC4 *method)
+        const MethodInfo_340E32C *method)
 {
   ;
 }
@@ -1667,7 +1667,7 @@ bool AvalonSceneManager___c__DisplayClass20_0___endInitialize_b__0(
 
   comp = this->fields.comp;
   if ( !comp )
-    sub_1C32E7C(0);
+    sub_1C372B4(0);
   SceneName = SceneRootComponent__getSceneName(comp, 0);
   return System_String__op_Equality(v, SceneName, 0);
 }
@@ -1830,20 +1830,20 @@ bool AvalonSceneManager__changeNextSceneCoroutine_d__41__MoveNext(
   int32_t m_Handle; // [xsp+8h] [xbp-68h] BYREF
 
   v3 = this;
-  if ( (byte_4C36FBB & 1) == 0 )
+  if ( (byte_4C425AB & 1) == 0 )
   {
-    sub_1C32C20(&Method_UnityEngine_Component_GetComponents_Component___);
-    sub_1C32C20(&Method_System_Collections_Generic_Dictionary_SceneList_Type__SceneRootComponent__set_Item__);
-    sub_1C32C20(&Method_UnityEngine_GameObject_GetComponentsInChildren_AudioListener___);
-    sub_1C32C20(&Method_UnityEngine_GameObject_GetComponentsInChildren_PlayMakerGUI___);
-    sub_1C32C20(&UnityEngine_Object_TypeInfo);
-    sub_1C32C20(&SceneList_TypeInfo);
-    sub_1C32C20(&UnityEngine_SceneManagement_SceneManager_TypeInfo);
-    sub_1C32C20(&SceneTemp_TypeInfo);
-    sub_1C32C20(&StringLiteral_3127/*"BattleScriptScene"*/);
-    sub_1C32C20(&StringLiteral_3125/*"BattleScene"*/);
-    this = (AvalonSceneManager__changeNextSceneCoroutine_d__41_o *)sub_1C32C20(&StringLiteral_1/*""*/);
-    byte_4C36FBB = 1;
+    sub_1C37058(&Method_UnityEngine_Component_GetComponents_Component___);
+    sub_1C37058(&Method_System_Collections_Generic_Dictionary_SceneList_Type__SceneRootComponent__set_Item__);
+    sub_1C37058(&Method_UnityEngine_GameObject_GetComponentsInChildren_AudioListener___);
+    sub_1C37058(&Method_UnityEngine_GameObject_GetComponentsInChildren_PlayMakerGUI___);
+    sub_1C37058(&UnityEngine_Object_TypeInfo);
+    sub_1C37058(&SceneList_TypeInfo);
+    sub_1C37058(&UnityEngine_SceneManagement_SceneManager_TypeInfo);
+    sub_1C37058(&SceneTemp_TypeInfo);
+    sub_1C37058(&StringLiteral_3127/*"BattleScriptScene"*/);
+    sub_1C37058(&StringLiteral_3125/*"BattleScene"*/);
+    this = (AvalonSceneManager__changeNextSceneCoroutine_d__41_o *)sub_1C37058(&StringLiteral_1/*""*/);
+    byte_4C425AB = 1;
   }
   m_Handle = 0;
   _4__this = v3->fields.__4__this;
@@ -1855,7 +1855,7 @@ bool AvalonSceneManager__changeNextSceneCoroutine_d__41__MoveNext(
         goto LABEL_112;
       AvalonSceneManager__StartTransitionTime(_4__this, method);
       v3->fields._newTargetRoot_5__2 = 0;
-      sub_1C32BC4((CGThumbnailListItem_o *)&v3->fields._newTargetRoot_5__2, 0, v5, v6);
+      sub_1C36FFC((CGThumbnailListItem_o *)&v3->fields._newTargetRoot_5__2, 0, v5, v6);
       targetRoot = (UnityEngine_Object_o *)_4__this->fields.targetRoot;
       if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
@@ -1875,7 +1875,7 @@ LABEL_11:
 LABEL_12:
         v12 = _4__this->fields.targetRoot;
         v3->fields._newTargetRoot_5__2 = v12;
-        sub_1C32BC4((CGThumbnailListItem_o *)&v3->fields._newTargetRoot_5__2, (int32_t)v12, v10, v11);
+        sub_1C36FFC((CGThumbnailListItem_o *)&v3->fields._newTargetRoot_5__2, (int32_t)v12, v10, v11);
       }
       if ( v3->fields.changeType <= 1u
         && System_String__op_Inequality(v3->fields.scenename, (System_String_o *)StringLiteral_3127/*"BattleScriptScene"*/, 0) )
@@ -1886,7 +1886,7 @@ LABEL_12:
           v15 = AvalonSceneManager__setupUI((AvalonSceneManager_o *)v13, v14);
           v3->fields.__2__current = (Il2CppObject *)v15;
           p__2__current = (CGThumbnailListItem_o *)&v3->fields.__2__current;
-          sub_1C32BC4(p__2__current, (int32_t)v15, v17, v18);
+          sub_1C36FFC(p__2__current, (int32_t)v15, v17, v18);
           v19 = 1;
           LODWORD(p__2__current[-1].fields._ThumbnailSpritePath_k__BackingField) = 1;
           return v19;
@@ -1913,7 +1913,7 @@ LABEL_18:
         goto LABEL_112;
       v25 = AvalonSceneManager__getTargetRoot((AvalonSceneManager_o *)this, v3->fields.scenename, v24);
       v3->fields._newTargetRoot_5__2 = v25;
-      sub_1C32BC4((CGThumbnailListItem_o *)&v3->fields._newTargetRoot_5__2, (int32_t)v25, v26, v27);
+      sub_1C36FFC((CGThumbnailListItem_o *)&v3->fields._newTargetRoot_5__2, (int32_t)v25, v26, v27);
 LABEL_26:
       v28 = *p_newTargetRoot_5__2;
       if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -1968,14 +1968,14 @@ LABEL_68:
                     dicRootComponent,
                     (int32_t)this,
                     0,
-                    (const MethodInfo_3422DA4 *)Method_System_Collections_Generic_Dictionary_SceneList_Type__SceneRootComponent__set_Item__);
+                    (const MethodInfo_342D60C *)Method_System_Collections_Generic_Dictionary_SceneList_Type__SceneRootComponent__set_Item__);
                   this = (AvalonSceneManager__changeNextSceneCoroutine_d__41_o *)_4__this->fields.targetRoot;
                   if ( this )
                   {
                     v81 = SceneRootComponent__getSceneName((SceneRootComponent_o *)this, 0);
                     if ( !UnityEngine_SceneManagement_SceneManager_TypeInfo->_2.cctor_finished )
                       j_il2cpp_runtime_class_init_0(UnityEngine_SceneManagement_SceneManager_TypeInfo);
-                    UnityEngine_SceneManagement_SceneManager__UnloadSceneAsync_71277528(v81, 0);
+                    UnityEngine_SceneManagement_SceneManager__UnloadSceneAsync_71320640(v81, 0);
                     goto LABEL_111;
                   }
                 }
@@ -1995,27 +1995,27 @@ LABEL_68:
 LABEL_111:
                   v3->fields.__2__current = 0;
                   v82 = (CGThumbnailListItem_o *)&v3->fields.__2__current;
-                  sub_1C32BC4(v82, 0, v77, v78);
+                  sub_1C36FFC(v82, 0, v77, v78);
                   LODWORD(v82[-1].fields._ThumbnailSpritePath_k__BackingField) = 3;
                   return 1;
                 }
               }
             }
 LABEL_112:
-            sub_1C32E7C(this);
+            sub_1C372B4(this);
           }
 LABEL_80:
           v59 = v3->fields._newTargetRoot_5__2;
-          v60 = (SceneTemp_o *)sub_1C32E6C(SceneTemp_TypeInfo);
-          SceneTemp___ctor_41382212(v60, v59, 0);
+          v60 = (SceneTemp_o *)sub_1C372A4(SceneTemp_TypeInfo);
+          SceneTemp___ctor_41481692(v60, v59, 0);
           if ( !_4__this )
             goto LABEL_112;
           _4__this->fields.prevscenetemp = v60;
-          sub_1C32BC4((CGThumbnailListItem_o *)&_4__this->fields.prevscenetemp, (int32_t)v60, v61, v62);
+          sub_1C36FFC((CGThumbnailListItem_o *)&_4__this->fields.prevscenetemp, (int32_t)v60, v61, v62);
           v63 = v3->fields._newTargetRoot_5__2;
           _4__this->fields.targetRoot = v63;
           p_targetRoot = (AvalonSceneManager__changeNextSceneCoroutine_d__41_o **)&_4__this->fields.targetRoot;
-          sub_1C32BC4((CGThumbnailListItem_o *)&_4__this->fields.targetRoot, (int32_t)v63, v65, v66);
+          sub_1C36FFC((CGThumbnailListItem_o *)&_4__this->fields.targetRoot, (int32_t)v63, v65, v66);
           this = (AvalonSceneManager__changeNextSceneCoroutine_d__41_o *)v3->fields._newTargetRoot_5__2;
           if ( !this )
             goto LABEL_112;
@@ -2030,7 +2030,7 @@ LABEL_80:
             v67,
             (int32_t)this,
             (Il2CppObject *)v3->fields._newTargetRoot_5__2,
-            (const MethodInfo_3422DA4 *)Method_System_Collections_Generic_Dictionary_SceneList_Type__SceneRootComponent__set_Item__);
+            (const MethodInfo_342D60C *)Method_System_Collections_Generic_Dictionary_SceneList_Type__SceneRootComponent__set_Item__);
           this = *p_targetRoot;
           if ( !*p_targetRoot )
             goto LABEL_112;
@@ -2047,7 +2047,7 @@ LABEL_80:
             p_sendData = (CGThumbnailListItem_o *)&_4__this->fields.sendData;
             v71 = sendData;
             p_sendData->klass = 0;
-            sub_1C32BC4(p_sendData, 0, v69, v70);
+            sub_1C36FFC(p_sendData, 0, v69, v70);
             this = *(AvalonSceneManager__changeNextSceneCoroutine_d__41_o **)&p_sendData[-1].fields.basePosition.fields.y;
             if ( !this )
               goto LABEL_112;
@@ -2075,7 +2075,7 @@ LABEL_80:
       UnityEngine_SceneManagement_SceneManager__LoadScene(v29, 1, 0);
       v3->fields.__2__current = 0;
       v30 = (CGThumbnailListItem_o *)&v3->fields.__2__current;
-      sub_1C32BC4(v30, 0, v31, v32);
+      sub_1C36FFC(v30, 0, v31, v32);
       LODWORD(v30[-1].fields._ThumbnailSpritePath_k__BackingField) = 2;
       return v19;
     case 1:
@@ -2088,7 +2088,7 @@ LABEL_80:
       v33 = AvalonSceneManager__getTargetRoot((AvalonSceneManager_o *)this, v3->fields.scenename, v2);
       v3->fields._newTargetRoot_5__2 = v33;
       p_newTargetRoot_5__2 = (UnityEngine_Object_o **)&v3->fields._newTargetRoot_5__2;
-      sub_1C32BC4((CGThumbnailListItem_o *)&v3->fields._newTargetRoot_5__2, (int32_t)v33, v34, v35);
+      sub_1C36FFC((CGThumbnailListItem_o *)&v3->fields._newTargetRoot_5__2, (int32_t)v33, v34, v35);
       v36 = (UnityEngine_Object_o *)v3->fields._newTargetRoot_5__2;
       if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
@@ -2120,13 +2120,13 @@ LABEL_80:
   {
     if ( v41 >= _2__current )
 LABEL_113:
-      sub_1C32E84(this);
+      sub_1C372BC(this);
     v42 = (UnityEngine_GameObject_o *)*((_QWORD *)&v40->fields.__4__this + (int)v41);
     if ( !v42 )
       goto LABEL_112;
-    this = (AvalonSceneManager__changeNextSceneCoroutine_d__41_o *)UnityEngine_GameObject__GetComponentsInChildren_object__51598740(
+    this = (AvalonSceneManager__changeNextSceneCoroutine_d__41_o *)UnityEngine_GameObject__GetComponentsInChildren_object__51641852(
                                                                      v42,
-                                                                     (const MethodInfo_3135594 *)Method_UnityEngine_GameObject_GetComponentsInChildren_AudioListener___);
+                                                                     (const MethodInfo_313FDFC *)Method_UnityEngine_GameObject_GetComponentsInChildren_AudioListener___);
     if ( !this )
       goto LABEL_112;
     v43 = (int)this->fields.__2__current;
@@ -2141,9 +2141,9 @@ LABEL_113:
         gameObject = (UnityEngine_Component_o *)v46[4];
         if ( !gameObject )
           goto LABEL_112;
-        this = (AvalonSceneManager__changeNextSceneCoroutine_d__41_o *)UnityEngine_Component__GetComponents_object__51201748(
+        this = (AvalonSceneManager__changeNextSceneCoroutine_d__41_o *)UnityEngine_Component__GetComponents_object__51244860(
                                                                          (UnityEngine_Component_o *)v46[4],
-                                                                         (const MethodInfo_30D46D4 *)Method_UnityEngine_Component_GetComponents_Component___);
+                                                                         (const MethodInfo_30DEF3C *)Method_UnityEngine_Component_GetComponents_Component___);
         if ( !this )
           goto LABEL_112;
         if ( LODWORD(this->fields.__2__current) == 1 )
@@ -2162,13 +2162,13 @@ LABEL_53:
           if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
             goto LABEL_53;
         }
-        UnityEngine_Object__DestroyImmediate_71223828((UnityEngine_Object_o *)gameObject, 0);
+        UnityEngine_Object__DestroyImmediate_71266940((UnityEngine_Object_o *)gameObject, 0);
         v43 = (int)v44->fields.__2__current;
       }
     }
-    this = (AvalonSceneManager__changeNextSceneCoroutine_d__41_o *)UnityEngine_GameObject__GetComponentsInChildren_object__51598740(
+    this = (AvalonSceneManager__changeNextSceneCoroutine_d__41_o *)UnityEngine_GameObject__GetComponentsInChildren_object__51641852(
                                                                      v42,
-                                                                     (const MethodInfo_3135594 *)Method_UnityEngine_GameObject_GetComponentsInChildren_PlayMakerGUI___);
+                                                                     (const MethodInfo_313FDFC *)Method_UnityEngine_GameObject_GetComponentsInChildren_PlayMakerGUI___);
     if ( !this )
       goto LABEL_112;
     v49 = (int)this->fields.__2__current;
@@ -2189,9 +2189,9 @@ LABEL_67:
     v53 = (UnityEngine_Component_o *)v52[4];
     if ( !v53 )
       goto LABEL_112;
-    this = (AvalonSceneManager__changeNextSceneCoroutine_d__41_o *)UnityEngine_Component__GetComponents_object__51201748(
+    this = (AvalonSceneManager__changeNextSceneCoroutine_d__41_o *)UnityEngine_Component__GetComponents_object__51244860(
                                                                      (UnityEngine_Component_o *)v52[4],
-                                                                     (const MethodInfo_30D46D4 *)Method_UnityEngine_Component_GetComponents_Component___);
+                                                                     (const MethodInfo_30DEF3C *)Method_UnityEngine_Component_GetComponents_Component___);
     if ( !this )
       goto LABEL_112;
     if ( LODWORD(this->fields.__2__current) == 2 )
@@ -2210,7 +2210,7 @@ LABEL_65:
       if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
         goto LABEL_65;
     }
-    UnityEngine_Object__DestroyImmediate_71223828((UnityEngine_Object_o *)v53, 0);
+    UnityEngine_Object__DestroyImmediate_71266940((UnityEngine_Object_o *)v53, 0);
     v49 = (int)v50->fields.__2__current;
     if ( (int)++v51 >= v49 )
       goto LABEL_67;
@@ -2234,11 +2234,11 @@ void __noreturn AvalonSceneManager__changeNextSceneCoroutine_d__41__System_Colle
   System_NotSupportedException_o *v3; // x19
   __int64 v4; // x0
 
-  v2 = sub_1C32C34(&System_NotSupportedException_TypeInfo);
-  v3 = (System_NotSupportedException_o *)sub_1C32E6C(v2);
+  v2 = sub_1C3706C(&System_NotSupportedException_TypeInfo);
+  v3 = (System_NotSupportedException_o *)sub_1C372A4(v2);
   System_NotSupportedException___ctor(v3, 0);
-  v4 = sub_1C32C34(&Method_AvalonSceneManager__changeNextSceneCoroutine_d__41_System_Collections_IEnumerator_Reset__);
-  sub_1C32D48(v3, v4);
+  v4 = sub_1C3706C(&Method_AvalonSceneManager__changeNextSceneCoroutine_d__41_System_Collections_IEnumerator_Reset__);
+  sub_1C37180(v3, v4);
 }
 
 
@@ -2312,23 +2312,23 @@ bool AvalonSceneManager__changePrevSceneCoroutine_d__40__MoveNext(
   int32_t m_Handle; // [xsp+38h] [xbp-38h] BYREF
 
   v4 = this;
-  if ( (byte_4C36FBC & 1) == 0 )
+  if ( (byte_4C425AC & 1) == 0 )
   {
-    sub_1C32C20(&AvalonSceneManager_TypeInfo);
-    sub_1C32C20(&CommonEffectManager_TypeInfo);
-    sub_1C32C20(&Method_System_Collections_Generic_Dictionary_SceneList_Type__SceneRootComponent__GetEnumerator__);
-    sub_1C32C20(&Method_System_Collections_Generic_Dictionary_Enumerator_SceneList_Type__SceneRootComponent__Dispose__);
-    sub_1C32C20(&Method_System_Collections_Generic_Dictionary_Enumerator_SceneList_Type__SceneRootComponent__MoveNext__);
-    sub_1C32C20(&Method_System_Collections_Generic_Dictionary_Enumerator_SceneList_Type__SceneRootComponent__get_Current__);
-    sub_1C32C20(&Method_System_Collections_Generic_KeyValuePair_SceneList_Type__SceneRootComponent__get_Value__);
-    sub_1C32C20(&UnityEngine_Object_TypeInfo);
-    sub_1C32C20(&SceneList_TypeInfo);
-    sub_1C32C20(&UnityEngine_SceneManagement_SceneManager_TypeInfo);
-    sub_1C32C20(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
-    sub_1C32C20(&Method_SingletonMonoBehaviour_AtlasManager__get_Instance__);
-    sub_1C32C20(&Method_System_Collections_Generic_Stack_SceneTemp__Pop__);
-    this = (AvalonSceneManager__changePrevSceneCoroutine_d__40_o *)sub_1C32C20(&Method_System_Collections_Generic_Stack_SceneTemp__get_Count__);
-    byte_4C36FBC = 1;
+    sub_1C37058(&AvalonSceneManager_TypeInfo);
+    sub_1C37058(&CommonEffectManager_TypeInfo);
+    sub_1C37058(&Method_System_Collections_Generic_Dictionary_SceneList_Type__SceneRootComponent__GetEnumerator__);
+    sub_1C37058(&Method_System_Collections_Generic_Dictionary_Enumerator_SceneList_Type__SceneRootComponent__Dispose__);
+    sub_1C37058(&Method_System_Collections_Generic_Dictionary_Enumerator_SceneList_Type__SceneRootComponent__MoveNext__);
+    sub_1C37058(&Method_System_Collections_Generic_Dictionary_Enumerator_SceneList_Type__SceneRootComponent__get_Current__);
+    sub_1C37058(&Method_System_Collections_Generic_KeyValuePair_SceneList_Type__SceneRootComponent__get_Value__);
+    sub_1C37058(&UnityEngine_Object_TypeInfo);
+    sub_1C37058(&SceneList_TypeInfo);
+    sub_1C37058(&UnityEngine_SceneManagement_SceneManager_TypeInfo);
+    sub_1C37058(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+    sub_1C37058(&Method_SingletonMonoBehaviour_AtlasManager__get_Instance__);
+    sub_1C37058(&Method_System_Collections_Generic_Stack_SceneTemp__Pop__);
+    this = (AvalonSceneManager__changePrevSceneCoroutine_d__40_o *)sub_1C37058(&Method_System_Collections_Generic_Stack_SceneTemp__get_Count__);
+    byte_4C425AC = 1;
   }
   m_Handle = 0;
   memset(&v38, 0, sizeof(v38));
@@ -2352,7 +2352,7 @@ bool AvalonSceneManager__changePrevSceneCoroutine_d__40__MoveNext(
       LODWORD(v4->fields._duration_5__2) = LODWORD(v7->static_fields->DEFAULT_FADE_TIME);
       if ( (unsigned int)(fadeType - 1) > 1 )
         goto LABEL_11;
-      this = (AvalonSceneManager__changePrevSceneCoroutine_d__40_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39E2904 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+      this = (AvalonSceneManager__changePrevSceneCoroutine_d__40_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39ED16C *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
       if ( !this )
         goto LABEL_55;
       CommonUI__SetFadeMaskCollider((CommonUI_o *)this, 1, 0);
@@ -2361,7 +2361,7 @@ LABEL_11:
       {
         v4->fields.__2__current = 0;
         p__2__current = (CGThumbnailListItem_o *)&v4->fields.__2__current;
-        sub_1C32BC4(p__2__current, 0, v2, v3);
+        sub_1C36FFC(p__2__current, 0, v2, v3);
         result = 1;
         LODWORD(p__2__current[-1].fields._ThumbnailSpritePath_k__BackingField) = 1;
         return result;
@@ -2371,7 +2371,7 @@ LABEL_21:
       v14 = _4__this->fields.fadeType;
       if ( v14 == 2 )
       {
-        this = (AvalonSceneManager__changePrevSceneCoroutine_d__40_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39E2904 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+        this = (AvalonSceneManager__changePrevSceneCoroutine_d__40_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39ED16C *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
         if ( !this )
           goto LABEL_55;
         duration_5__2 = v4->fields._duration_5__2;
@@ -2381,7 +2381,7 @@ LABEL_21:
       {
         if ( v14 != 1 )
           goto LABEL_29;
-        this = (AvalonSceneManager__changePrevSceneCoroutine_d__40_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39E2904 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+        this = (AvalonSceneManager__changePrevSceneCoroutine_d__40_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39ED16C *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
         if ( !this )
           goto LABEL_55;
         duration_5__2 = v4->fields._duration_5__2;
@@ -2389,14 +2389,14 @@ LABEL_21:
       }
       CommonUI__maskFadeout((CommonUI_o *)this, v16, duration_5__2, 0, 0);
 LABEL_29:
-      this = (AvalonSceneManager__changePrevSceneCoroutine_d__40_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39E2904 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+      this = (AvalonSceneManager__changePrevSceneCoroutine_d__40_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39ED16C *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
       if ( !this )
         goto LABEL_55;
       if ( CommonUI__maskFadeIsBusy((CommonUI_o *)this, 0) )
       {
         v4->fields.__2__current = 0;
         v8 = (CGThumbnailListItem_o *)&v4->fields.__2__current;
-        sub_1C32BC4(v8, 0, v17, v18);
+        sub_1C36FFC(v8, 0, v17, v18);
         v11 = 2;
 LABEL_32:
         LODWORD(v8[-1].fields._ThumbnailSpritePath_k__BackingField) = v11;
@@ -2404,7 +2404,7 @@ LABEL_32:
       }
 LABEL_33:
       MainMenuBar__setButtonActive(0, 0);
-      this = (AvalonSceneManager__changePrevSceneCoroutine_d__40_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39E2904 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+      this = (AvalonSceneManager__changePrevSceneCoroutine_d__40_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39ED16C *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
       if ( !this )
         goto LABEL_55;
       CommonUI__InitTurotialArrowMark((CommonUI_o *)this, 0);
@@ -2427,7 +2427,7 @@ LABEL_33:
         this->klass->vtable._7_System_Collections_IEnumerator_get_Current.method);
 LABEL_42:
       _4__this->fields.prevscenetemp = 0;
-      sub_1C32BC4((CGThumbnailListItem_o *)&_4__this->fields.prevscenetemp, 0, v23, v24);
+      sub_1C36FFC((CGThumbnailListItem_o *)&_4__this->fields.prevscenetemp, 0, v23, v24);
 LABEL_43:
       this = (AvalonSceneManager__changePrevSceneCoroutine_d__40_o *)_4__this->fields.scenestack;
       if ( !this )
@@ -2436,7 +2436,7 @@ LABEL_43:
       {
         this = (AvalonSceneManager__changePrevSceneCoroutine_d__40_o *)System_Collections_Generic_Stack_object___Pop(
                                                                          (System_Collections_Generic_Stack_T__o *)this,
-                                                                         (const MethodInfo_39F8F44 *)Method_System_Collections_Generic_Stack_SceneTemp__Pop__);
+                                                                         (const MethodInfo_3A037AC *)Method_System_Collections_Generic_Stack_SceneTemp__Pop__);
         if ( !this )
           goto LABEL_55;
         v26 = this;
@@ -2481,7 +2481,7 @@ LABEL_43:
       {
         v4->fields.__2__current = 0;
         v8 = (CGThumbnailListItem_o *)&v4->fields.__2__current;
-        sub_1C32BC4(v8, 0, v20, v21);
+        sub_1C36FFC(v8, 0, v20, v21);
         v11 = 3;
         goto LABEL_32;
       }
@@ -2527,15 +2527,15 @@ LABEL_69:
             (this = (AvalonSceneManager__changePrevSceneCoroutine_d__40_o *)_4__this->fields.dicRootComponent) == 0) )
       {
 LABEL_55:
-        sub_1C32E7C(this);
+        sub_1C372B4(this);
       }
       System_Collections_Generic_Dictionary_Int32Enum__object___GetEnumerator(
         &v38,
         (System_Collections_Generic_Dictionary_TKey__TValue__o *)this,
-        (const MethodInfo_34231F0 *)Method_System_Collections_Generic_Dictionary_SceneList_Type__SceneRootComponent__GetEnumerator__);
+        (const MethodInfo_342DA58 *)Method_System_Collections_Generic_Dictionary_SceneList_Type__SceneRootComponent__GetEnumerator__);
       while ( System_Collections_Generic_Dictionary_Enumerator_Int32Enum__object___MoveNext(
                 &v38,
-                (const MethodInfo_354BF80 *)Method_System_Collections_Generic_Dictionary_Enumerator_SceneList_Type__SceneRootComponent__MoveNext__) )
+                (const MethodInfo_35567E8 *)Method_System_Collections_Generic_Dictionary_Enumerator_SceneList_Type__SceneRootComponent__MoveNext__) )
       {
         value = v38.fields._current.fields.value;
         if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -2544,7 +2544,7 @@ LABEL_55:
         if ( !v36 )
         {
           if ( !value )
-            sub_1C32E7C(v36);
+            sub_1C372B4(v36);
           ((void (__fastcall *)(Il2CppObject *, _QWORD, const MethodInfo *))value->klass->vtable[11].methodPtr)(
             value,
             v34,
@@ -2553,7 +2553,7 @@ LABEL_55:
       }
       System_Collections_Generic_Dictionary_Enumerator_Int32Enum__object___Dispose(
         &v38,
-        (const MethodInfo_354C0A4 *)Method_System_Collections_Generic_Dictionary_Enumerator_SceneList_Type__SceneRootComponent__Dispose__);
+        (const MethodInfo_355690C *)Method_System_Collections_Generic_Dictionary_Enumerator_SceneList_Type__SceneRootComponent__Dispose__);
       return 0;
     case 1:
       v4->fields.__1__state = -1;
@@ -2570,12 +2570,12 @@ LABEL_55:
       AvalonSceneManager__destroySceneObject(_4__this, method);
       v4->fields.__2__current = 0;
       v8 = (CGThumbnailListItem_o *)&v4->fields.__2__current;
-      sub_1C32BC4(v8, 0, v12, v13);
+      sub_1C36FFC(v8, 0, v12, v13);
       v11 = 4;
       goto LABEL_32;
     case 4:
       v4->fields.__1__state = -1;
-      this = (AvalonSceneManager__changePrevSceneCoroutine_d__40_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39E2904 *)Method_SingletonMonoBehaviour_AtlasManager__get_Instance__);
+      this = (AvalonSceneManager__changePrevSceneCoroutine_d__40_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39ED16C *)Method_SingletonMonoBehaviour_AtlasManager__get_Instance__);
       if ( !this )
         goto LABEL_55;
       AtlasManager__ReleaseNoneResidentAtlas((AtlasManager_o *)this, 0);
@@ -2584,7 +2584,7 @@ LABEL_55:
       CommonEffectManager__ReleaseSkinEffects(0);
       v4->fields.__2__current = 0;
       v8 = (CGThumbnailListItem_o *)&v4->fields.__2__current;
-      sub_1C32BC4(v8, 0, v9, v10);
+      sub_1C36FFC(v8, 0, v9, v10);
       v11 = 5;
       goto LABEL_32;
     case 5:
@@ -2612,11 +2612,11 @@ void __noreturn AvalonSceneManager__changePrevSceneCoroutine_d__40__System_Colle
   System_NotSupportedException_o *v3; // x19
   __int64 v4; // x0
 
-  v2 = sub_1C32C34(&System_NotSupportedException_TypeInfo);
-  v3 = (System_NotSupportedException_o *)sub_1C32E6C(v2);
+  v2 = sub_1C3706C(&System_NotSupportedException_TypeInfo);
+  v3 = (System_NotSupportedException_o *)sub_1C372A4(v2);
   System_NotSupportedException___ctor(v3, 0);
-  v4 = sub_1C32C34(&Method_AvalonSceneManager__changePrevSceneCoroutine_d__40_System_Collections_IEnumerator_Reset__);
-  sub_1C32D48(v3, v4);
+  v4 = sub_1C3706C(&Method_AvalonSceneManager__changePrevSceneCoroutine_d__40_System_Collections_IEnumerator_Reset__);
+  sub_1C37180(v3, v4);
 }
 
 
@@ -2683,16 +2683,16 @@ bool AvalonSceneManager__changeSceneCoroutine_d__39__MoveNext(
   const MethodInfo *v32; // x3
 
   v3 = this;
-  if ( (byte_4C36FBD & 1) == 0 )
+  if ( (byte_4C425AD & 1) == 0 )
   {
-    sub_1C32C20(&System_GC_TypeInfo);
-    sub_1C32C20(&SceneList_TypeInfo);
-    sub_1C32C20(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
-    sub_1C32C20(&Method_SingletonMonoBehaviour_AssetManager__get_Instance__);
-    sub_1C32C20(&Method_SingletonTemplate_PartyOrganizationUtility__get_Instance__);
-    sub_1C32C20(&TerminalPramsManager_TypeInfo);
-    this = (AvalonSceneManager__changeSceneCoroutine_d__39_o *)sub_1C32C20(&UnityEngine_WaitForEndOfFrame_TypeInfo);
-    byte_4C36FBD = 1;
+    sub_1C37058(&System_GC_TypeInfo);
+    sub_1C37058(&SceneList_TypeInfo);
+    sub_1C37058(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+    sub_1C37058(&Method_SingletonMonoBehaviour_AssetManager__get_Instance__);
+    sub_1C37058(&Method_SingletonTemplate_PartyOrganizationUtility__get_Instance__);
+    sub_1C37058(&TerminalPramsManager_TypeInfo);
+    this = (AvalonSceneManager__changeSceneCoroutine_d__39_o *)sub_1C37058(&UnityEngine_WaitForEndOfFrame_TypeInfo);
+    byte_4C425AD = 1;
   }
   _4__this = v3->fields.__4__this;
   switch ( v3->fields.__1__state )
@@ -2706,7 +2706,7 @@ bool AvalonSceneManager__changeSceneCoroutine_d__39__MoveNext(
       if ( (unsigned int)(SceneType - 10) > 0x3E
         || ((1LL << ((unsigned __int8)SceneType - 10)) & 0x400C000053400001LL) == 0 )
       {
-        this = (AvalonSceneManager__changeSceneCoroutine_d__39_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39E2904 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+        this = (AvalonSceneManager__changeSceneCoroutine_d__39_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39ED16C *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
         if ( this )
         {
           CommonUI__CheckChangeOtherConnectMarkFromEventId((CommonUI_o *)this, 0, 0, 0);
@@ -2716,7 +2716,7 @@ bool AvalonSceneManager__changeSceneCoroutine_d__39__MoveNext(
         goto LABEL_54;
       }
       v7 = SceneType;
-      this = (AvalonSceneManager__changeSceneCoroutine_d__39_o *)SingletonTemplate_object___get_Instance((const MethodInfo_39E2DF4 *)Method_SingletonTemplate_PartyOrganizationUtility__get_Instance__);
+      this = (AvalonSceneManager__changeSceneCoroutine_d__39_o *)SingletonTemplate_object___get_Instance((const MethodInfo_39ED65C *)Method_SingletonTemplate_PartyOrganizationUtility__get_Instance__);
       if ( !_4__this )
         goto LABEL_54;
       prevscenetemp = _4__this->fields.prevscenetemp;
@@ -2726,7 +2726,7 @@ bool AvalonSceneManager__changeSceneCoroutine_d__39__MoveNext(
       v10 = prevscenetemp->fields.sceneType;
       if ( v7 == 38 && v10 == 10 || (v7 == 10 || v7 == 38) && v10 == 9 )
       {
-        this = (AvalonSceneManager__changeSceneCoroutine_d__39_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39E2904 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+        this = (AvalonSceneManager__changeSceneCoroutine_d__39_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39ED16C *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
         if ( this )
         {
           CommonUI__SetChangeOtherConnectMarkFromPlayerPrefs((CommonUI_o *)this, 0);
@@ -2735,13 +2735,13 @@ bool AvalonSceneManager__changeSceneCoroutine_d__39__MoveNext(
           goto LABEL_52;
         }
 LABEL_54:
-        sub_1C32E7C(this);
+        sub_1C372B4(this);
       }
       if ( v10 == 39 )
       {
         if ( v7 <= 0x3D && ((1LL << v7) & 0x3000010000000000LL) != 0 )
         {
-          this = (AvalonSceneManager__changeSceneCoroutine_d__39_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39E2904 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+          this = (AvalonSceneManager__changeSceneCoroutine_d__39_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39ED16C *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
           if ( !this )
             goto LABEL_54;
           ConnectMarkEventId = 0;
@@ -2751,7 +2751,7 @@ LABEL_54:
       }
       else if ( v7 == 34 && v10 == 9 )
       {
-        this = (AvalonSceneManager__changeSceneCoroutine_d__39_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39E2904 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+        this = (AvalonSceneManager__changeSceneCoroutine_d__39_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39ED16C *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
         if ( !this )
           goto LABEL_54;
         v27 = 1;
@@ -2761,7 +2761,7 @@ LABEL_54:
 LABEL_42:
       if ( this && v7 == 32 && !this[2].fields.fadeTimeSkip )
       {
-        this = (AvalonSceneManager__changeSceneCoroutine_d__39_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39E2904 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+        this = (AvalonSceneManager__changeSceneCoroutine_d__39_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39ED16C *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
         if ( !this )
           goto LABEL_54;
         CommonUI__CheckChangeOtherConnectMarkFromEventId((CommonUI_o *)this, 0, 0, 0);
@@ -2769,7 +2769,7 @@ LABEL_52:
         v9[2].fields.fadeTimeSkip = 0;
         goto LABEL_53;
       }
-      this = (AvalonSceneManager__changeSceneCoroutine_d__39_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39E2904 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+      this = (AvalonSceneManager__changeSceneCoroutine_d__39_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39ED16C *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
       v28 = this;
       if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(TerminalPramsManager_TypeInfo);
@@ -2791,7 +2791,7 @@ LABEL_53:
               v11);
       v3->fields.__2__current = (Il2CppObject *)v29;
       p__2__current = (CGThumbnailListItem_o *)&v3->fields.__2__current;
-      sub_1C32BC4(p__2__current, (int32_t)v29, v31, v32);
+      sub_1C36FFC(p__2__current, (int32_t)v29, v31, v32);
       result = 1;
       LODWORD(p__2__current[-1].fields._ThumbnailSpritePath_k__BackingField) = 1;
       return result;
@@ -2800,29 +2800,29 @@ LABEL_53:
       v3->fields.__1__state = -1;
       if ( changeType )
         goto LABEL_25;
-      v13 = (UnityEngine_WaitForEndOfFrame_o *)sub_1C32E6C(UnityEngine_WaitForEndOfFrame_TypeInfo);
+      v13 = (UnityEngine_WaitForEndOfFrame_o *)sub_1C372A4(UnityEngine_WaitForEndOfFrame_TypeInfo);
       UnityEngine_WaitForEndOfFrame___ctor(v13, 0);
       if ( !System_GC_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(System_GC_TypeInfo);
       System_GC__Collect(0);
       v3->fields.__2__current = (Il2CppObject *)v13;
       v14 = (CGThumbnailListItem_o *)&v3->fields.__2__current;
-      sub_1C32BC4(v14, (int32_t)v13, v15, v16);
+      sub_1C36FFC(v14, (int32_t)v13, v15, v16);
       v17 = 2;
       goto LABEL_27;
     case 2:
       v3->fields.__1__state = -1;
-      this = (AvalonSceneManager__changeSceneCoroutine_d__39_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39E2904 *)Method_SingletonMonoBehaviour_AssetManager__get_Instance__);
+      this = (AvalonSceneManager__changeSceneCoroutine_d__39_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39ED16C *)Method_SingletonMonoBehaviour_AssetManager__get_Instance__);
       if ( !this )
         goto LABEL_54;
       AssetManager__RequestUnloadUnusedAssets((AssetManager_o *)this, 0, 0);
-      this = (AvalonSceneManager__changeSceneCoroutine_d__39_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39E2904 *)Method_SingletonMonoBehaviour_AssetManager__get_Instance__);
+      this = (AvalonSceneManager__changeSceneCoroutine_d__39_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39ED16C *)Method_SingletonMonoBehaviour_AssetManager__get_Instance__);
       if ( !this )
         goto LABEL_54;
       v18 = AssetManager__WaitForExecutionUnloadUnuseAssets((AssetManager_o *)this, 0);
       v3->fields.__2__current = (Il2CppObject *)v18;
       v14 = (CGThumbnailListItem_o *)&v3->fields.__2__current;
-      sub_1C32BC4(v14, (int32_t)v18, v19, v20);
+      sub_1C36FFC(v14, (int32_t)v18, v19, v20);
       v17 = 3;
       goto LABEL_27;
     case 3:
@@ -2833,7 +2833,7 @@ LABEL_25:
       v21 = AvalonSceneManager__changeNextSceneCoroutine(_4__this, v3->fields.changeType, v3->fields.scenename, v2);
       v3->fields.__2__current = (Il2CppObject *)v21;
       v14 = (CGThumbnailListItem_o *)&v3->fields.__2__current;
-      sub_1C32BC4(v14, (int32_t)v21, v22, v23);
+      sub_1C36FFC(v14, (int32_t)v21, v22, v23);
       v17 = 4;
 LABEL_27:
       LODWORD(v14[-1].fields._ThumbnailSpritePath_k__BackingField) = v17;
@@ -2865,11 +2865,11 @@ void __noreturn AvalonSceneManager__changeSceneCoroutine_d__39__System_Collectio
   System_NotSupportedException_o *v3; // x19
   __int64 v4; // x0
 
-  v2 = sub_1C32C34(&System_NotSupportedException_TypeInfo);
-  v3 = (System_NotSupportedException_o *)sub_1C32E6C(v2);
+  v2 = sub_1C3706C(&System_NotSupportedException_TypeInfo);
+  v3 = (System_NotSupportedException_o *)sub_1C372A4(v2);
   System_NotSupportedException___ctor(v3, 0);
-  v4 = sub_1C32C34(&Method_AvalonSceneManager__changeSceneCoroutine_d__39_System_Collections_IEnumerator_Reset__);
-  sub_1C32D48(v3, v4);
+  v4 = sub_1C3706C(&Method_AvalonSceneManager__changeSceneCoroutine_d__39_System_Collections_IEnumerator_Reset__);
+  sub_1C37180(v3, v4);
 }
 
 
@@ -2919,15 +2919,15 @@ bool AvalonSceneManager__checkUnloadScenes_d__18__MoveNext(
   System_Collections_Generic_List_Enumerator_object__o v16; // [xsp+8h] [xbp-48h] BYREF
 
   v2 = this;
-  if ( (byte_4C36FBE & 1) == 0 )
+  if ( (byte_4C425AE & 1) == 0 )
   {
-    sub_1C32C20(&Method_System_Collections_Generic_List_Enumerator_string__Dispose__);
-    sub_1C32C20(&Method_System_Collections_Generic_List_Enumerator_string__MoveNext__);
-    sub_1C32C20(&Method_System_Collections_Generic_List_Enumerator_string__get_Current__);
-    sub_1C32C20(&Method_System_Collections_Generic_List_string__Clear__);
-    sub_1C32C20(&Method_System_Collections_Generic_List_string__GetEnumerator__);
-    this = (AvalonSceneManager__checkUnloadScenes_d__18_o *)sub_1C32C20(&UnityEngine_SceneManagement_SceneManager_TypeInfo);
-    byte_4C36FBE = 1;
+    sub_1C37058(&Method_System_Collections_Generic_List_Enumerator_string__Dispose__);
+    sub_1C37058(&Method_System_Collections_Generic_List_Enumerator_string__MoveNext__);
+    sub_1C37058(&Method_System_Collections_Generic_List_Enumerator_string__get_Current__);
+    sub_1C37058(&Method_System_Collections_Generic_List_string__Clear__);
+    sub_1C37058(&Method_System_Collections_Generic_List_string__GetEnumerator__);
+    this = (AvalonSceneManager__checkUnloadScenes_d__18_o *)sub_1C37058(&UnityEngine_SceneManagement_SceneManager_TypeInfo);
+    byte_4C425AE = 1;
   }
   memset(&v16, 0, sizeof(v16));
   m_Handle = 0;
@@ -2955,7 +2955,7 @@ bool AvalonSceneManager__checkUnloadScenes_d__18__MoveNext(
         }
       }
 LABEL_22:
-      sub_1C32E7C(this);
+      sub_1C372B4(this);
     }
   }
   else
@@ -2975,10 +2975,10 @@ LABEL_22:
   System_Collections_Generic_List_object___GetEnumerator(
     (System_Collections_Generic_List_Enumerator_T__o *)&v16,
     (System_Collections_Generic_List_object__o *)this,
-    (const MethodInfo_37992B4 *)Method_System_Collections_Generic_List_string__GetEnumerator__);
+    (const MethodInfo_37A3B1C *)Method_System_Collections_Generic_List_string__GetEnumerator__);
   while ( System_Collections_Generic_List_Enumerator_object___MoveNext(
             &v16,
-            (const MethodInfo_3522FA8 *)Method_System_Collections_Generic_List_Enumerator_string__MoveNext__) )
+            (const MethodInfo_352D810 *)Method_System_Collections_Generic_List_Enumerator_string__MoveNext__) )
   {
     current = v16.fields._current;
     if ( !UnityEngine_SceneManagement_SceneManager_TypeInfo->_2.cctor_finished )
@@ -2993,10 +2993,10 @@ LABEL_22:
   }
   System_Collections_Generic_List_Enumerator_object___Dispose(
     &v16,
-    (const MethodInfo_3522FA4 *)Method_System_Collections_Generic_List_Enumerator_string__Dispose__);
+    (const MethodInfo_352D80C *)Method_System_Collections_Generic_List_Enumerator_string__Dispose__);
   v2->fields.__2__current = 0;
   p__2__current = (CGThumbnailListItem_o *)&v2->fields.__2__current;
-  sub_1C32BC4(p__2__current, 0, v9, v10);
+  sub_1C36FFC(p__2__current, 0, v9, v10);
   LOBYTE(this) = 1;
   LODWORD(p__2__current[-1].fields._ThumbnailSpritePath_k__BackingField) = 1;
   return (char)this;
@@ -3019,11 +3019,11 @@ void __noreturn AvalonSceneManager__checkUnloadScenes_d__18__System_Collections_
   System_NotSupportedException_o *v3; // x19
   __int64 v4; // x0
 
-  v2 = sub_1C32C34(&System_NotSupportedException_TypeInfo);
-  v3 = (System_NotSupportedException_o *)sub_1C32E6C(v2);
+  v2 = sub_1C3706C(&System_NotSupportedException_TypeInfo);
+  v3 = (System_NotSupportedException_o *)sub_1C372A4(v2);
   System_NotSupportedException___ctor(v3, 0);
-  v4 = sub_1C32C34(&Method_AvalonSceneManager__checkUnloadScenes_d__18_System_Collections_IEnumerator_Reset__);
-  sub_1C32D48(v3, v4);
+  v4 = sub_1C3706C(&Method_AvalonSceneManager__checkUnloadScenes_d__18_System_Collections_IEnumerator_Reset__);
+  sub_1C37180(v3, v4);
 }
 
 
@@ -3071,23 +3071,23 @@ bool AvalonSceneManager__setupUI_d__42__MoveNext(AvalonSceneManager__setupUI_d__
   int32_t v16; // w2
   const MethodInfo *v17; // x3
 
-  if ( (byte_4C36FBF & 1) == 0 )
+  if ( (byte_4C425AF & 1) == 0 )
   {
-    sub_1C32C20(&System_Action_TypeInfo);
-    sub_1C32C20(&AtlasManager_TypeInfo);
-    sub_1C32C20(&CommonEffectManager_TypeInfo);
-    sub_1C32C20(&System_Func_bool__TypeInfo);
-    sub_1C32C20(&OptionManager_TypeInfo);
-    sub_1C32C20(&Method_SingletonMonoBehaviour_AtlasManager__get_Instance__);
-    sub_1C32C20(&Method_AvalonSceneManager___c__DisplayClass42_0__setupUI_b__0__);
-    sub_1C32C20(&Method_AvalonSceneManager___c__DisplayClass42_0__setupUI_b__1__);
-    sub_1C32C20(&Method_AvalonSceneManager___c__DisplayClass42_0__setupUI_b__2__);
-    sub_1C32C20(&Method_AvalonSceneManager___c__DisplayClass42_0__setupUI_b__3__);
-    sub_1C32C20(&Method_AvalonSceneManager___c__DisplayClass42_0__setupUI_b__4__);
-    sub_1C32C20(&Method_AvalonSceneManager___c__DisplayClass42_0__setupUI_b__5__);
-    sub_1C32C20(&AvalonSceneManager___c__DisplayClass42_0_TypeInfo);
-    sub_1C32C20(&UnityEngine_WaitUntil_TypeInfo);
-    byte_4C36FBF = 1;
+    sub_1C37058(&System_Action_TypeInfo);
+    sub_1C37058(&AtlasManager_TypeInfo);
+    sub_1C37058(&CommonEffectManager_TypeInfo);
+    sub_1C37058(&System_Func_bool__TypeInfo);
+    sub_1C37058(&OptionManager_TypeInfo);
+    sub_1C37058(&Method_SingletonMonoBehaviour_AtlasManager__get_Instance__);
+    sub_1C37058(&Method_AvalonSceneManager___c__DisplayClass42_0__setupUI_b__0__);
+    sub_1C37058(&Method_AvalonSceneManager___c__DisplayClass42_0__setupUI_b__1__);
+    sub_1C37058(&Method_AvalonSceneManager___c__DisplayClass42_0__setupUI_b__2__);
+    sub_1C37058(&Method_AvalonSceneManager___c__DisplayClass42_0__setupUI_b__3__);
+    sub_1C37058(&Method_AvalonSceneManager___c__DisplayClass42_0__setupUI_b__4__);
+    sub_1C37058(&Method_AvalonSceneManager___c__DisplayClass42_0__setupUI_b__5__);
+    sub_1C37058(&AvalonSceneManager___c__DisplayClass42_0_TypeInfo);
+    sub_1C37058(&UnityEngine_WaitUntil_TypeInfo);
+    byte_4C425AF = 1;
   }
   _1__state = this->fields.__1__state;
   result = 0;
@@ -3100,7 +3100,7 @@ bool AvalonSceneManager__setupUI_d__42__MoveNext(AvalonSceneManager__setupUI_d__
     if ( _1__state )
       return result;
     this->fields.__1__state = -1;
-    v5 = sub_1C32E6C(AvalonSceneManager___c__DisplayClass42_0_TypeInfo);
+    v5 = sub_1C372A4(AvalonSceneManager___c__DisplayClass42_0_TypeInfo);
     System_Object___ctor((Il2CppObject *)v5, 0);
     if ( !v5 )
       goto LABEL_46;
@@ -3109,7 +3109,7 @@ bool AvalonSceneManager__setupUI_d__42__MoveNext(AvalonSceneManager__setupUI_d__
     if ( !OptionManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(OptionManager_TypeInfo);
     v7 = OptionManager__isSavedMemoryMode(0) ? 1 : 10;
-    Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39E2904 *)Method_SingletonMonoBehaviour_AtlasManager__get_Instance__);
+    Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39ED16C *)Method_SingletonMonoBehaviour_AtlasManager__get_Instance__);
     if ( !Instance )
       goto LABEL_46;
     if ( AtlasManager__isLoadedSkinData((AtlasManager_o *)Instance, 7, 0) )
@@ -3118,13 +3118,13 @@ bool AvalonSceneManager__setupUI_d__42__MoveNext(AvalonSceneManager__setupUI_d__
     }
     else
     {
-      v9 = (System_Action_o *)sub_1C32E6C(System_Action_TypeInfo);
+      v9 = (System_Action_o *)sub_1C372A4(System_Action_TypeInfo);
       System_Action___ctor(v9, (Il2CppObject *)v5, Method_AvalonSceneManager___c__DisplayClass42_0__setupUI_b__0__, 0);
       if ( !AtlasManager_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo);
       AtlasManager__LoadUISkin(v9, 7, v7, 0);
     }
-    Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39E2904 *)Method_SingletonMonoBehaviour_AtlasManager__get_Instance__);
+    Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39ED16C *)Method_SingletonMonoBehaviour_AtlasManager__get_Instance__);
     if ( !Instance )
       goto LABEL_46;
     if ( AtlasManager__isLoadedSkinData((AtlasManager_o *)Instance, 1, 0) )
@@ -3133,13 +3133,13 @@ bool AvalonSceneManager__setupUI_d__42__MoveNext(AvalonSceneManager__setupUI_d__
     }
     else
     {
-      v10 = (System_Action_o *)sub_1C32E6C(System_Action_TypeInfo);
+      v10 = (System_Action_o *)sub_1C372A4(System_Action_TypeInfo);
       System_Action___ctor(v10, (Il2CppObject *)v5, Method_AvalonSceneManager___c__DisplayClass42_0__setupUI_b__1__, 0);
       if ( !AtlasManager_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo);
       AtlasManager__LoadUISkin(v10, 1, v7, 0);
     }
-    Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39E2904 *)Method_SingletonMonoBehaviour_AtlasManager__get_Instance__);
+    Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39ED16C *)Method_SingletonMonoBehaviour_AtlasManager__get_Instance__);
     if ( !Instance )
       goto LABEL_46;
     if ( AtlasManager__isLoadedSkinData((AtlasManager_o *)Instance, 2, 0) )
@@ -3148,23 +3148,23 @@ bool AvalonSceneManager__setupUI_d__42__MoveNext(AvalonSceneManager__setupUI_d__
     }
     else
     {
-      v11 = (System_Action_o *)sub_1C32E6C(System_Action_TypeInfo);
+      v11 = (System_Action_o *)sub_1C372A4(System_Action_TypeInfo);
       System_Action___ctor(v11, (Il2CppObject *)v5, Method_AvalonSceneManager___c__DisplayClass42_0__setupUI_b__2__, 0);
       if ( !AtlasManager_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo);
       AtlasManager__LoadUISkin(v11, 2, v7, 0);
     }
-    Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39E2904 *)Method_SingletonMonoBehaviour_AtlasManager__get_Instance__);
+    Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39ED16C *)Method_SingletonMonoBehaviour_AtlasManager__get_Instance__);
     if ( !Instance )
 LABEL_46:
-      sub_1C32E7C(Instance);
+      sub_1C372B4(Instance);
     if ( AtlasManager__isLoadedSkinData((AtlasManager_o *)Instance, 4, 0) )
     {
       *(_BYTE *)(v5 + 19) = 1;
     }
     else
     {
-      v12 = (System_Action_o *)sub_1C32E6C(System_Action_TypeInfo);
+      v12 = (System_Action_o *)sub_1C372A4(System_Action_TypeInfo);
       System_Action___ctor(v12, (Il2CppObject *)v5, Method_AvalonSceneManager___c__DisplayClass42_0__setupUI_b__3__, 0);
       if ( !AtlasManager_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo);
@@ -3178,22 +3178,22 @@ LABEL_46:
     }
     else
     {
-      v13 = (System_Action_o *)sub_1C32E6C(System_Action_TypeInfo);
+      v13 = (System_Action_o *)sub_1C372A4(System_Action_TypeInfo);
       System_Action___ctor(v13, (Il2CppObject *)v5, Method_AvalonSceneManager___c__DisplayClass42_0__setupUI_b__4__, 0);
       if ( !CommonEffectManager_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(CommonEffectManager_TypeInfo);
       CommonEffectManager__LoadSkinEffects(v13, v7, 0);
     }
-    v14 = (System_Func_bool__o *)sub_1C32E6C(System_Func_bool__TypeInfo);
+    v14 = (System_Func_bool__o *)sub_1C372A4(System_Func_bool__TypeInfo);
     System_Func_bool____ctor(
       v14,
       (Il2CppObject *)v5,
       Method_AvalonSceneManager___c__DisplayClass42_0__setupUI_b__5__,
       0);
-    v15 = (UnityEngine_WaitUntil_o *)sub_1C32E6C(UnityEngine_WaitUntil_TypeInfo);
+    v15 = (UnityEngine_WaitUntil_o *)sub_1C372A4(UnityEngine_WaitUntil_TypeInfo);
     UnityEngine_WaitUntil___ctor(v15, v14, 0);
     this->fields.__2__current = (Il2CppObject *)v15;
-    sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.__2__current, (int32_t)v15, v16, v17);
+    sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.__2__current, (int32_t)v15, v16, v17);
     v8 = 1;
     result = 1;
   }
@@ -3218,11 +3218,11 @@ void __noreturn AvalonSceneManager__setupUI_d__42__System_Collections_IEnumerato
   System_NotSupportedException_o *v3; // x19
   __int64 v4; // x0
 
-  v2 = sub_1C32C34(&System_NotSupportedException_TypeInfo);
-  v3 = (System_NotSupportedException_o *)sub_1C32E6C(v2);
+  v2 = sub_1C3706C(&System_NotSupportedException_TypeInfo);
+  v3 = (System_NotSupportedException_o *)sub_1C372A4(v2);
   System_NotSupportedException___ctor(v3, 0);
-  v4 = sub_1C32C34(&Method_AvalonSceneManager__setupUI_d__42_System_Collections_IEnumerator_Reset__);
-  sub_1C32D48(v3, v4);
+  v4 = sub_1C3706C(&Method_AvalonSceneManager__setupUI_d__42_System_Collections_IEnumerator_Reset__);
+  sub_1C37180(v3, v4);
 }
 
 

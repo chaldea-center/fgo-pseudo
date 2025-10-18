@@ -4,10 +4,10 @@ void SpringPosition___ctor(SpringPosition_o *this, const MethodInfo *method)
   __int64 v4; // d0
   float z; // s1
 
-  if ( !byte_4C313D1 )
+  if ( !byte_4C3C921 )
   {
-    sub_1C32C20(&UnityEngine_Vector3_TypeInfo);
-    byte_4C313D1 = 1;
+    sub_1C37058(&UnityEngine_Vector3_TypeInfo);
+    byte_4C3C921 = 1;
   }
   static_fields = UnityEngine_Vector3_TypeInfo->static_fields;
   v4 = *(_QWORD *)&static_fields->zeroVector.fields.x;
@@ -37,18 +37,18 @@ SpringPosition_o *SpringPosition__Begin(
   y = pos.fields.y;
   x = pos.fields.x;
   v8 = go;
-  if ( (byte_4C3C233 & 1) == 0 )
+  if ( (byte_4C477AE & 1) == 0 )
   {
-    sub_1C32C20(&Method_UnityEngine_GameObject_AddComponent_SpringPosition___);
-    sub_1C32C20(&Method_UnityEngine_GameObject_GetComponent_SpringPosition___);
-    go = (UnityEngine_GameObject_o *)sub_1C32C20(&UnityEngine_Object_TypeInfo);
-    byte_4C3C233 = 1;
+    sub_1C37058(&Method_UnityEngine_GameObject_AddComponent_SpringPosition___);
+    sub_1C37058(&Method_UnityEngine_GameObject_GetComponent_SpringPosition___);
+    go = (UnityEngine_GameObject_o *)sub_1C37058(&UnityEngine_Object_TypeInfo);
+    byte_4C477AE = 1;
   }
   if ( !v8 )
     goto LABEL_12;
   Component_object = (char *)UnityEngine_GameObject__GetComponent_object_(
                                v8,
-                               (const MethodInfo_3134970 *)Method_UnityEngine_GameObject_GetComponent_SpringPosition___);
+                               (const MethodInfo_313F1D8 *)Method_UnityEngine_GameObject_GetComponent_SpringPosition___);
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   go = (UnityEngine_GameObject_o *)UnityEngine_Object__op_Equality((UnityEngine_Object_o *)Component_object, 0, 0);
@@ -56,18 +56,18 @@ SpringPosition_o *SpringPosition__Begin(
   {
     go = (UnityEngine_GameObject_o *)UnityEngine_GameObject__AddComponent_object_(
                                        v8,
-                                       (const MethodInfo_3134888 *)Method_UnityEngine_GameObject_AddComponent_SpringPosition___);
+                                       (const MethodInfo_313F0F0 *)Method_UnityEngine_GameObject_AddComponent_SpringPosition___);
     Component_object = (char *)go;
   }
   if ( !Component_object )
 LABEL_12:
-    sub_1C32E7C(go);
+    sub_1C372B4(go);
   *((float *)Component_object + 8) = x;
   *((float *)Component_object + 9) = y;
   *((float *)Component_object + 10) = z;
   *((float *)Component_object + 11) = strength;
   *((_QWORD *)Component_object + 7) = 0;
-  sub_1C32BC4((CGThumbnailListItem_o *)(Component_object + 56), 0, v10, v11);
+  sub_1C36FFC((CGThumbnailListItem_o *)(Component_object + 56), 0, v10, v11);
   if ( !UnityEngine_Behaviour__get_enabled((UnityEngine_Behaviour_o *)Component_object, 0) )
   {
     *((_DWORD *)Component_object + 22) = 0;
@@ -87,14 +87,14 @@ void SpringPosition__NotifyListeners(SpringPosition_o *this, const MethodInfo *m
   const MethodInfo *v8; // x3
   UnityEngine_GameObject_o *v9; // x0
 
-  if ( (byte_4C3C232 & 1) == 0 )
+  if ( (byte_4C477AD & 1) == 0 )
   {
-    sub_1C32C20(&UnityEngine_Object_TypeInfo);
-    sub_1C32C20(&SpringPosition_TypeInfo);
-    byte_4C3C232 = 1;
+    sub_1C37058(&UnityEngine_Object_TypeInfo);
+    sub_1C37058(&SpringPosition_TypeInfo);
+    byte_4C477AD = 1;
   }
   SpringPosition_TypeInfo->static_fields->current = this;
-  sub_1C32BC4((CGThumbnailListItem_o *)SpringPosition_TypeInfo->static_fields, (int32_t)this, v2, v3);
+  sub_1C36FFC((CGThumbnailListItem_o *)SpringPosition_TypeInfo->static_fields, (int32_t)this, v2, v3);
   onFinished = this->fields.onFinished;
   if ( onFinished )
     ((void (__fastcall *)(intptr_t, intptr_t))onFinished->fields.invoke_impl)(
@@ -108,11 +108,11 @@ void SpringPosition__NotifyListeners(SpringPosition_o *this, const MethodInfo *m
   {
     v9 = this->fields.eventReceiver;
     if ( !v9 )
-      sub_1C32E7C(0);
-    UnityEngine_GameObject__SendMessage_71204432(v9, this->fields.callWhenFinished, (Il2CppObject *)this, 1, 0);
+      sub_1C372B4(0);
+    UnityEngine_GameObject__SendMessage_71247544(v9, this->fields.callWhenFinished, (Il2CppObject *)this, 1, 0);
   }
   SpringPosition_TypeInfo->static_fields->current = 0;
-  sub_1C32BC4((CGThumbnailListItem_o *)SpringPosition_TypeInfo->static_fields, 0, v7, v8);
+  sub_1C36FFC((CGThumbnailListItem_o *)SpringPosition_TypeInfo->static_fields, 0, v7, v8);
 }
 
 
@@ -126,15 +126,15 @@ void SpringPosition__Start(SpringPosition_o *this, const MethodInfo *method)
   int32_t v8; // w2
   const MethodInfo *v9; // x3
 
-  if ( (byte_4C3C230 & 1) == 0 )
+  if ( (byte_4C477AB & 1) == 0 )
   {
-    sub_1C32C20(&Method_NGUITools_FindInParents_UIScrollView___);
-    sub_1C32C20(&NGUITools_TypeInfo);
-    byte_4C3C230 = 1;
+    sub_1C37058(&Method_NGUITools_FindInParents_UIScrollView___);
+    sub_1C37058(&NGUITools_TypeInfo);
+    byte_4C477AB = 1;
   }
   transform = UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0);
   this->fields.mTrans = transform;
-  sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.mTrans, (int32_t)transform, v4, v5);
+  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.mTrans, (int32_t)transform, v4, v5);
   if ( this->fields.updateScrollView )
   {
     gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
@@ -142,9 +142,9 @@ void SpringPosition__Start(SpringPosition_o *this, const MethodInfo *method)
       j_il2cpp_runtime_class_init_0(NGUITools_TypeInfo);
     v7 = NGUITools__FindInParents_object_(
            gameObject,
-           (const MethodInfo_31676B4 *)Method_NGUITools_FindInParents_UIScrollView___);
+           (const MethodInfo_3171F1C *)Method_NGUITools_FindInParents_UIScrollView___);
     this->fields.mSv = (struct UIScrollView_o *)v7;
-    sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.mSv, (int32_t)v7, v8, v9);
+    sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.mSv, (int32_t)v7, v8, v9);
   }
 }
 
@@ -182,10 +182,10 @@ void SpringPosition__Update(SpringPosition_o *this, const MethodInfo *method)
   UnityEngine_Vector3_o v31; // 0:s0.4,4:s1.4,8:s2.4
   UnityEngine_Vector3_o v32; // 0:s0.4,4:s1.4,8:s2.4
 
-  if ( (byte_4C3C231 & 1) == 0 )
+  if ( (byte_4C477AC & 1) == 0 )
   {
-    sub_1C32C20(&UnityEngine_Object_TypeInfo);
-    byte_4C3C231 = 1;
+    sub_1C37058(&UnityEngine_Object_TypeInfo);
+    byte_4C477AC = 1;
   }
   if ( this->fields.ignoreTimeScale )
     deltaTime = RealTime__get_deltaTime(0);
@@ -213,7 +213,7 @@ void SpringPosition__Update(SpringPosition_o *this, const MethodInfo *method)
     if ( v10 )
     {
       v26 = UnityEngine_Transform__get_position(this->fields.mTrans, 0);
-      v27 = NGUIMath__SpringLerp_49258892(v26, this->fields.target, this->fields.strength, v5, 0);
+      v27 = NGUIMath__SpringLerp_49302004(v26, this->fields.target, this->fields.strength, v5, 0);
       UnityEngine_Transform__set_position(v10, v27, 0);
       mTrans = this->fields.mTrans;
       if ( mTrans )
@@ -235,7 +235,7 @@ void SpringPosition__Update(SpringPosition_o *this, const MethodInfo *method)
       }
     }
 LABEL_30:
-    sub_1C32E7C(mTrans);
+    sub_1C372B4(mTrans);
   }
   if ( mThreshold == 0.0 )
   {
@@ -258,7 +258,7 @@ LABEL_30:
   if ( !v19 )
     goto LABEL_30;
   v30 = UnityEngine_Transform__get_localPosition(this->fields.mTrans, 0);
-  v31 = NGUIMath__SpringLerp_49258892(v30, this->fields.target, this->fields.strength, v5, 0);
+  v31 = NGUIMath__SpringLerp_49302004(v30, this->fields.target, this->fields.strength, v5, 0);
   UnityEngine_Transform__set_localPosition(v19, v31, 0);
   mTrans = this->fields.mTrans;
   if ( !mTrans )
@@ -314,15 +314,15 @@ void SpringPosition_OnFinished___ctor(
   this->fields.method = method;
   this->fields.method_ptr = v4;
   this->fields.m_target = object;
-  sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.m_target, (int32_t)object, method, a4);
+  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.m_target, (int32_t)object, method, a4);
   v8 = *(unsigned __int8 *)(method + 82);
   this->fields.method_code = (intptr_t)this;
-  if ( (sub_1C32CE0(method) & 1) == 0 )
+  if ( (sub_1C37118(method) & 1) == 0 )
   {
     if ( !object )
     {
-      v10 = sub_1C32E98(0, "Delegate to an instance method cannot have null 'this'.");
-      sub_1C32D48(v10, 0);
+      v10 = sub_1C372D0(0, "Delegate to an instance method cannot have null 'this'.");
+      sub_1C37180(v10, 0);
     }
     goto LABEL_5;
   }
@@ -334,9 +334,9 @@ LABEL_5:
     this->fields.method_code = (intptr_t)m_target;
     goto LABEL_6;
   }
-  this->fields.invoke_impl = (intptr_t)sub_1A7EF60;
+  this->fields.invoke_impl = (intptr_t)sub_1A83068;
 LABEL_6:
-  this->fields.extra_arg = (intptr_t)sub_1A7EF20;
+  this->fields.extra_arg = (intptr_t)sub_1A83028;
 }
 
 
@@ -349,7 +349,7 @@ System_IAsyncResult_o *SpringPosition_OnFinished__BeginInvoke(
   __int64 v5; // [xsp+8h] [xbp-8h] BYREF
 
   v5 = 0;
-  return (System_IAsyncResult_o *)sub_1C32BD4(this, &v5, callback, object);
+  return (System_IAsyncResult_o *)sub_1C3700C(this, &v5, callback, object);
 }
 
 
@@ -358,7 +358,7 @@ void SpringPosition_OnFinished__EndInvoke(
         System_IAsyncResult_o *result,
         const MethodInfo *method)
 {
-  sub_1C32BD8(result, 0, method);
+  sub_1C37010(result, 0, method);
 }
 
 

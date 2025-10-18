@@ -26,29 +26,29 @@ QuestReleaseEntity_o *EventInfoDiggingEventPointControl__GetNextQuestReleaseEnti
   System_Collections_Generic_List_Enumerator_object__o v20; // [xsp+20h] [xbp-70h] BYREF
   Il2CppObject *entity; // [xsp+48h] [xbp-48h] BYREF
 
-  if ( (byte_4C38EB1 & 1) == 0 )
+  if ( (byte_4C444AA & 1) == 0 )
   {
-    sub_1C32C20(&System_Comparison_QuestReleaseEntity__TypeInfo);
-    sub_1C32C20(&CondType_TypeInfo);
-    sub_1C32C20(&Method_DataManager_GetMaster_QuestMaster___);
-    sub_1C32C20(&Method_DataManager_GetMaster_QuestReleaseMaster___);
-    sub_1C32C20(&DataManager_TypeInfo);
-    sub_1C32C20(&Method_DataMasterBase_QuestMaster__QuestEntity__int__TryGetEntity__);
-    sub_1C32C20(&Method_System_Linq_Enumerable_Any_QuestReleaseEntity___);
-    sub_1C32C20(&Method_System_Collections_Generic_List_Enumerator_QuestReleaseEntity__Dispose__);
-    sub_1C32C20(&Method_System_Collections_Generic_List_Enumerator_QuestReleaseEntity__MoveNext__);
-    sub_1C32C20(&Method_System_Collections_Generic_List_Enumerator_QuestReleaseEntity__get_Current__);
-    sub_1C32C20(&Method_System_Collections_Generic_List_QuestReleaseEntity__GetEnumerator__);
-    sub_1C32C20(&Method_System_Collections_Generic_List_QuestReleaseEntity__Sort__);
-    sub_1C32C20(&Method_EventInfoDiggingEventPointControl___c__GetNextQuestReleaseEntity_b__14_0__);
-    sub_1C32C20(&EventInfoDiggingEventPointControl___c_TypeInfo);
-    byte_4C38EB1 = 1;
+    sub_1C37058(&System_Comparison_QuestReleaseEntity__TypeInfo);
+    sub_1C37058(&CondType_TypeInfo);
+    sub_1C37058(&Method_DataManager_GetMaster_QuestMaster___);
+    sub_1C37058(&Method_DataManager_GetMaster_QuestReleaseMaster___);
+    sub_1C37058(&DataManager_TypeInfo);
+    sub_1C37058(&Method_DataMasterBase_QuestMaster__QuestEntity__int__TryGetEntity__);
+    sub_1C37058(&Method_System_Linq_Enumerable_Any_QuestReleaseEntity___);
+    sub_1C37058(&Method_System_Collections_Generic_List_Enumerator_QuestReleaseEntity__Dispose__);
+    sub_1C37058(&Method_System_Collections_Generic_List_Enumerator_QuestReleaseEntity__MoveNext__);
+    sub_1C37058(&Method_System_Collections_Generic_List_Enumerator_QuestReleaseEntity__get_Current__);
+    sub_1C37058(&Method_System_Collections_Generic_List_QuestReleaseEntity__GetEnumerator__);
+    sub_1C37058(&Method_System_Collections_Generic_List_QuestReleaseEntity__Sort__);
+    sub_1C37058(&Method_EventInfoDiggingEventPointControl___c__GetNextQuestReleaseEntity_b__14_0__);
+    sub_1C37058(&EventInfoDiggingEventPointControl___c_TypeInfo);
+    byte_4C444AA = 1;
   }
   memset(&v20, 0, sizeof(v20));
   entity = 0;
   if ( !DataManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-  Master_object = DataManager__GetMaster_object_((const MethodInfo_30DD39C *)Method_DataManager_GetMaster_QuestReleaseMaster___);
+  Master_object = DataManager__GetMaster_object_((const MethodInfo_30E7C04 *)Method_DataManager_GetMaster_QuestReleaseMaster___);
   if ( !eventUiEnt || !Master_object )
     goto LABEL_34;
   ListByTargetAndCondType = QuestReleaseMaster__getListByTargetAndCondType(
@@ -59,7 +59,7 @@ QuestReleaseEntity_o *EventInfoDiggingEventPointControl__GetNextQuestReleaseEnti
   v8 = 0;
   if ( !System_Linq_Enumerable__Any_object_(
           (System_Collections_Generic_IEnumerable_TSource__o *)ListByTargetAndCondType,
-          (const MethodInfo_30E8F68 *)Method_System_Linq_Enumerable_Any_QuestReleaseEntity___) )
+          (const MethodInfo_30F37D0 *)Method_System_Linq_Enumerable_Any_QuestReleaseEntity___) )
     return v8;
   Master_object = EventInfoDiggingEventPointControl___c_TypeInfo;
   if ( !EventInfoDiggingEventPointControl___c_TypeInfo->_2.cctor_finished )
@@ -76,7 +76,7 @@ QuestReleaseEntity_o *EventInfoDiggingEventPointControl__GetNextQuestReleaseEnti
       Master_object = EventInfoDiggingEventPointControl___c_TypeInfo;
     }
     v10 = (Il2CppObject *)**((_QWORD **)Master_object + 23);
-    v9 = (System_Comparison_T__o *)sub_1C32E6C(System_Comparison_QuestReleaseEntity__TypeInfo);
+    v9 = (System_Comparison_T__o *)sub_1C372A4(System_Comparison_QuestReleaseEntity__TypeInfo);
     System_Comparison_object____ctor(
       v9,
       v10,
@@ -84,22 +84,22 @@ QuestReleaseEntity_o *EventInfoDiggingEventPointControl__GetNextQuestReleaseEnti
       0);
     static_fields = EventInfoDiggingEventPointControl___c_TypeInfo->static_fields;
     static_fields->__9__14_0 = (struct System_Comparison_QuestReleaseEntity__o *)v9;
-    sub_1C32BC4((CGThumbnailListItem_o *)&static_fields->__9__14_0, (int32_t)v9, v12, v13);
+    sub_1C36FFC((CGThumbnailListItem_o *)&static_fields->__9__14_0, (int32_t)v9, v12, v13);
   }
   if ( !ListByTargetAndCondType )
 LABEL_34:
-    sub_1C32E7C(Master_object);
-  System_Collections_Generic_List_object___Sort_58303104(
+    sub_1C372B4(Master_object);
+  System_Collections_Generic_List_object___Sort_58346216(
     (System_Collections_Generic_List_object__o *)ListByTargetAndCondType,
     v9,
-    (const MethodInfo_379A280 *)Method_System_Collections_Generic_List_QuestReleaseEntity__Sort__);
+    (const MethodInfo_37A4AE8 *)Method_System_Collections_Generic_List_QuestReleaseEntity__Sort__);
   if ( !DataManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-  v14 = DataManager__GetMaster_object_((const MethodInfo_30DD39C *)Method_DataManager_GetMaster_QuestMaster___);
+  v14 = DataManager__GetMaster_object_((const MethodInfo_30E7C04 *)Method_DataManager_GetMaster_QuestMaster___);
   System_Collections_Generic_List_object___GetEnumerator(
     (System_Collections_Generic_List_Enumerator_T__o *)&v19,
     (System_Collections_Generic_List_object__o *)ListByTargetAndCondType,
-    (const MethodInfo_37992B4 *)Method_System_Collections_Generic_List_QuestReleaseEntity__GetEnumerator__);
+    (const MethodInfo_37A3B1C *)Method_System_Collections_Generic_List_QuestReleaseEntity__GetEnumerator__);
   v20 = v19;
   current = 0;
 LABEL_18:
@@ -108,22 +108,22 @@ LABEL_18:
   {
     v16 = System_Collections_Generic_List_Enumerator_object___MoveNext(
             &v20,
-            (const MethodInfo_3522FA8 *)Method_System_Collections_Generic_List_Enumerator_QuestReleaseEntity__MoveNext__);
+            (const MethodInfo_352D810 *)Method_System_Collections_Generic_List_Enumerator_QuestReleaseEntity__MoveNext__);
     if ( !v16 )
       break;
     current = v20.fields._current;
     if ( !v20.fields._current )
-      sub_1C32E7C(v16);
+      sub_1C372B4(v16);
     if ( !v14 )
-      sub_1C32E7C(v16);
+      sub_1C372B4(v16);
     if ( DataMasterBase_object__object__int___TryGetEntity(
            (DataMasterBase_TMaster__TEntity__PKType__o *)v14,
            &entity,
            (int32_t)v20.fields._current[1].klass,
-           (const MethodInfo_3396884 *)Method_DataMasterBase_QuestMaster__QuestEntity__int__TryGetEntity__) )
+           (const MethodInfo_33A10EC *)Method_DataMasterBase_QuestMaster__QuestEntity__int__TryGetEntity__) )
     {
       if ( !entity )
-        sub_1C32E7C(0);
+        sub_1C372B4(0);
       if ( QuestEntity__GetTypeFlag((QuestEntity_o *)entity, 0) == 2 )
       {
         if ( (__int64)current[2].klass > userEventPoint )
@@ -139,7 +139,7 @@ LABEL_18:
   }
   System_Collections_Generic_List_Enumerator_object___Dispose(
     &v20,
-    (const MethodInfo_3522FA4 *)Method_System_Collections_Generic_List_Enumerator_QuestReleaseEntity__Dispose__);
+    (const MethodInfo_352D80C *)Method_System_Collections_Generic_List_Enumerator_QuestReleaseEntity__Dispose__);
   return v8;
 }
 
@@ -163,24 +163,24 @@ void EventInfoDiggingEventPointControl__Initialization(
   System_Action_o *v7; // x21
   struct UISprite_o *userPointBgSprite; // x0
 
-  if ( (byte_4C38EAD & 1) == 0 )
+  if ( (byte_4C444A6 & 1) == 0 )
   {
-    sub_1C32C20(&System_Action_TypeInfo);
-    sub_1C32C20(&Method_EventInfoDiggingEventPointControl__Initialization_b__7_0__);
-    sub_1C32C20(&StringLiteral_19224/*"event_point_bg_8036701"*/);
-    sub_1C32C20(&StringLiteral_19225/*"event_point_bg_8036702"*/);
-    byte_4C38EAD = 1;
+    sub_1C37058(&System_Action_TypeInfo);
+    sub_1C37058(&Method_EventInfoDiggingEventPointControl__Initialization_b__7_0__);
+    sub_1C37058(&StringLiteral_19227/*"event_point_bg_8036701"*/);
+    sub_1C37058(&StringLiteral_19228/*"event_point_bg_8036702"*/);
+    byte_4C444A6 = 1;
   }
   this->fields.eventUiEntity = entity;
-  sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.eventUiEntity, (int32_t)entity, (int32_t)method, v3);
+  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.eventUiEntity, (int32_t)entity, (int32_t)method, v3);
   eventUiEntity = this->fields.eventUiEntity;
-  v7 = (System_Action_o *)sub_1C32E6C(System_Action_TypeInfo);
+  v7 = (System_Action_o *)sub_1C372A4(System_Action_TypeInfo);
   System_Action___ctor(v7, (Il2CppObject *)this, Method_EventInfoDiggingEventPointControl__Initialization_b__7_0__, 0);
   EventInfoUIBase__LoadEventUIAssetData((EventInfoUIBase_o *)this, eventUiEntity, v7, 0);
   EventInfoUIBase__SetSpriteByLocalAtlas(
     (EventInfoUIBase_o *)this,
     this->fields.userPointBgSprite,
-    (System_String_o *)StringLiteral_19224/*"event_point_bg_8036701"*/,
+    (System_String_o *)StringLiteral_19227/*"event_point_bg_8036701"*/,
     0);
   userPointBgSprite = this->fields.userPointBgSprite;
   if ( !userPointBgSprite
@@ -190,11 +190,11 @@ void EventInfoDiggingEventPointControl__Initialization(
         EventInfoUIBase__SetSpriteByLocalAtlas(
           (EventInfoUIBase_o *)this,
           this->fields.nextPointBgSprite,
-          (System_String_o *)StringLiteral_19225/*"event_point_bg_8036702"*/,
+          (System_String_o *)StringLiteral_19228/*"event_point_bg_8036702"*/,
           0),
         (userPointBgSprite = this->fields.nextPointBgSprite) == 0) )
   {
-    sub_1C32E7C(userPointBgSprite);
+    sub_1C372B4(userPointBgSprite);
   }
   ((void (__fastcall *)(struct UISprite_o *, const MethodInfo *))userPointBgSprite->klass->vtable._33_MakePixelPerfect.methodPtr)(
     userPointBgSprite,
@@ -208,7 +208,7 @@ void EventInfoDiggingEventPointControl__OnDestroy(EventInfoDiggingEventPointCont
 
   eventUiEntity = this->fields.eventUiEntity;
   if ( !eventUiEntity )
-    sub_1C32E7C(this);
+    sub_1C372B4(this);
   EventInfoUIBase__ReleaseEventUIAssetData((EventInfoUIBase_o *)this, eventUiEntity->fields.eventId, 0);
   EventInfoUIBase__ReleaseLocalAtlas((EventInfoUIBase_o *)this, 0);
 }
@@ -227,11 +227,11 @@ void EventInfoDiggingEventPointControl__Redisplay(EventInfoDiggingEventPointCont
   UILabel_o *nextPointLabel; // x19
 
   v2 = this;
-  if ( (byte_4C38EAE & 1) == 0 )
+  if ( (byte_4C444A7 & 1) == 0 )
   {
-    sub_1C32C20(&LocalizationManager_TypeInfo);
-    this = (EventInfoDiggingEventPointControl_o *)sub_1C32C20(&StringLiteral_5639/*"EVENT_POINT_COMMON_FORMAT_COUNT_STOP"*/);
-    byte_4C38EAE = 1;
+    sub_1C37058(&LocalizationManager_TypeInfo);
+    this = (EventInfoDiggingEventPointControl_o *)sub_1C37058(&StringLiteral_5640/*"EVENT_POINT_COMMON_FORMAT_COUNT_STOP"*/);
+    byte_4C444A7 = 1;
   }
   if ( v2->fields.eventUiValueEntityList )
   {
@@ -257,10 +257,10 @@ void EventInfoDiggingEventPointControl__Redisplay(EventInfoDiggingEventPointCont
     nextPointLabel = v2->fields.nextPointLabel;
     if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-    this = (EventInfoDiggingEventPointControl_o *)LocalizationManager__Get((System_String_o *)StringLiteral_5639/*"EVENT_POINT_COMMON_FORMAT_COUNT_STOP"*/, 0);
+    this = (EventInfoDiggingEventPointControl_o *)LocalizationManager__Get((System_String_o *)StringLiteral_5640/*"EVENT_POINT_COMMON_FORMAT_COUNT_STOP"*/, 0);
     if ( !nextPointLabel )
 LABEL_12:
-      sub_1C32E7C(this);
+      sub_1C372B4(this);
     UILabel__set_text(nextPointLabel, (System_String_o *)this, 0);
   }
 }
@@ -284,13 +284,13 @@ void EventInfoDiggingEventPointControl__SetNextEventPointLabel(
   System_String_o *v15; // x0
   int64_t v16; // [xsp+8h] [xbp-28h] BYREF
 
-  if ( (byte_4C38EB0 & 1) == 0 )
+  if ( (byte_4C444A9 & 1) == 0 )
   {
-    sub_1C32C20(&long_TypeInfo);
-    sub_1C32C20(&LocalizationManager_TypeInfo);
-    sub_1C32C20(&UnityEngine_Object_TypeInfo);
-    sub_1C32C20(&StringLiteral_5638/*"EVENT_POINT_COMMON_FORMAT"*/);
-    byte_4C38EB0 = 1;
+    sub_1C37058(&long_TypeInfo);
+    sub_1C37058(&LocalizationManager_TypeInfo);
+    sub_1C37058(&UnityEngine_Object_TypeInfo);
+    sub_1C37058(&StringLiteral_5639/*"EVENT_POINT_COMMON_FORMAT"*/);
+    byte_4C444A9 = 1;
   }
   nextPointLabel = (UnityEngine_Object_o *)this->fields.nextPointLabel;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -300,12 +300,12 @@ void EventInfoDiggingEventPointControl__SetNextEventPointLabel(
     v6 = this->fields.nextPointLabel;
     if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-    v7 = LocalizationManager__Get((System_String_o *)StringLiteral_5638/*"EVENT_POINT_COMMON_FORMAT"*/, 0);
+    v7 = LocalizationManager__Get((System_String_o *)StringLiteral_5639/*"EVENT_POINT_COMMON_FORMAT"*/, 0);
     v16 = point;
     v14 = (Il2CppObject *)j_il2cpp_value_box_0(long_TypeInfo, &v16, v8, v9, v10, v11, v12, v13);
     v15 = System_String__Format(v7, v14, 0);
     if ( !v6 )
-      sub_1C32E7C(v15);
+      sub_1C372B4(v15);
     UILabel__set_text(v6, v15, 0);
   }
 }
@@ -329,13 +329,13 @@ void EventInfoDiggingEventPointControl__SetUserEventPointLabel(
   System_String_o *v15; // x0
   int64_t v16; // [xsp+8h] [xbp-28h] BYREF
 
-  if ( (byte_4C38EAF & 1) == 0 )
+  if ( (byte_4C444A8 & 1) == 0 )
   {
-    sub_1C32C20(&long_TypeInfo);
-    sub_1C32C20(&LocalizationManager_TypeInfo);
-    sub_1C32C20(&UnityEngine_Object_TypeInfo);
-    sub_1C32C20(&StringLiteral_5638/*"EVENT_POINT_COMMON_FORMAT"*/);
-    byte_4C38EAF = 1;
+    sub_1C37058(&long_TypeInfo);
+    sub_1C37058(&LocalizationManager_TypeInfo);
+    sub_1C37058(&UnityEngine_Object_TypeInfo);
+    sub_1C37058(&StringLiteral_5639/*"EVENT_POINT_COMMON_FORMAT"*/);
+    byte_4C444A8 = 1;
   }
   userPointLabel = (UnityEngine_Object_o *)this->fields.userPointLabel;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -345,12 +345,12 @@ void EventInfoDiggingEventPointControl__SetUserEventPointLabel(
     v6 = this->fields.userPointLabel;
     if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-    v7 = LocalizationManager__Get((System_String_o *)StringLiteral_5638/*"EVENT_POINT_COMMON_FORMAT"*/, 0);
+    v7 = LocalizationManager__Get((System_String_o *)StringLiteral_5639/*"EVENT_POINT_COMMON_FORMAT"*/, 0);
     v16 = point;
     v14 = (Il2CppObject *)j_il2cpp_value_box_0(long_TypeInfo, &v16, v8, v9, v10, v11, v12, v13);
     v15 = System_String__Format(v7, v14, 0);
     if ( !v6 )
-      sub_1C32E7C(v15);
+      sub_1C372B4(v15);
     UILabel__set_text(v6, v15, 0);
   }
 }
@@ -374,7 +374,7 @@ void EventInfoDiggingEventPointControl__SetValue(
   if ( valType == 4 && HasMatchedType )
   {
     if ( !val )
-      sub_1C32E7C(HasMatchedType);
+      sub_1C372B4(HasMatchedType);
     v10 = (System_String_o *)((__int64 (__fastcall *)(Il2CppObject *, const MethodInfo *))val->klass->vtable[3].methodPtr)(
                                val,
                                val->klass->vtable[3].method);
@@ -394,7 +394,7 @@ void EventInfoDiggingEventPointControl__Setup(
   if ( entitys )
   {
     this->fields.eventUiValueEntityList = entitys;
-    sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.eventUiValueEntityList, (int32_t)entitys, (int32_t)method, v3);
+    sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.eventUiValueEntityList, (int32_t)entitys, (int32_t)method, v3);
     ((void (__fastcall *)(EventInfoDiggingEventPointControl_o *, const MethodInfo *))this->klass->vtable._10_Redisplay.methodPtr)(
       this,
       this->klass->vtable._10_Redisplay.method);
@@ -410,7 +410,7 @@ void EventInfoDiggingEventPointControl___Initialization_b__7_0(
 
   eventUiEntity = this->fields.eventUiEntity;
   if ( !eventUiEntity )
-    sub_1C32E7C(this);
+    sub_1C372B4(this);
   EventInfoUIBase__LoadLocalAtlas((EventInfoUIBase_o *)this, eventUiEntity->fields.eventId, 0);
 }
 
@@ -421,15 +421,15 @@ void EventInfoDiggingEventPointControl___c___cctor(const MethodInfo *method)
   int32_t v2; // w2
   const MethodInfo *v3; // x3
 
-  if ( (byte_4C38EB2 & 1) == 0 )
+  if ( (byte_4C444AB & 1) == 0 )
   {
-    sub_1C32C20(&EventInfoDiggingEventPointControl___c_TypeInfo);
-    byte_4C38EB2 = 1;
+    sub_1C37058(&EventInfoDiggingEventPointControl___c_TypeInfo);
+    byte_4C444AB = 1;
   }
-  v1 = (Il2CppObject *)sub_1C32E6C(EventInfoDiggingEventPointControl___c_TypeInfo);
+  v1 = (Il2CppObject *)sub_1C372A4(EventInfoDiggingEventPointControl___c_TypeInfo);
   System_Object___ctor(v1, 0);
   EventInfoDiggingEventPointControl___c_TypeInfo->static_fields->__9 = (struct EventInfoDiggingEventPointControl___c_o *)v1;
-  sub_1C32BC4(
+  sub_1C36FFC(
     (CGThumbnailListItem_o *)EventInfoDiggingEventPointControl___c_TypeInfo->static_fields,
     (int32_t)v1,
     v2,
@@ -452,7 +452,7 @@ int32_t EventInfoDiggingEventPointControl___c___GetNextQuestReleaseEntity_b__14_
         const MethodInfo *method)
 {
   if ( !b || !a )
-    sub_1C32E7C(this);
+    sub_1C372B4(this);
   if ( b->fields.value - a->fields.value < 0 )
     return -1;
   else

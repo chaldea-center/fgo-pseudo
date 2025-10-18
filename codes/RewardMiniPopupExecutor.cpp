@@ -2,22 +2,22 @@ void RewardMiniPopupExecutor___ctor(RewardMiniPopupExecutor_o *this, const Metho
 {
   System_Collections_Generic_Queue_T__o *v3; // x20
 
-  if ( (byte_4C31A37 & 1) == 0 )
+  if ( (byte_4C3CF87 & 1) == 0 )
   {
-    sub_1C32C20(&Method_System_Collections_Generic_Queue_Action___ctor__);
-    sub_1C32C20(&System_Collections_Generic_Queue_Action__TypeInfo);
-    sub_1C32C20(&Method_SingletonTemplate_RewardMiniPopupExecutor___ctor__);
-    byte_4C31A37 = 1;
+    sub_1C37058(&Method_System_Collections_Generic_Queue_Action___ctor__);
+    sub_1C37058(&System_Collections_Generic_Queue_Action__TypeInfo);
+    sub_1C37058(&Method_SingletonTemplate_RewardMiniPopupExecutor___ctor__);
+    byte_4C3CF87 = 1;
   }
-  v3 = (System_Collections_Generic_Queue_T__o *)sub_1C32E6C(System_Collections_Generic_Queue_Action__TypeInfo);
+  v3 = (System_Collections_Generic_Queue_T__o *)sub_1C372A4(System_Collections_Generic_Queue_Action__TypeInfo);
   System_Collections_Generic_Queue_object____ctor(
     v3,
-    (const MethodInfo_393F3D8 *)Method_System_Collections_Generic_Queue_Action___ctor__);
+    (const MethodInfo_3949C40 *)Method_System_Collections_Generic_Queue_Action___ctor__);
   this->fields.playerActionQueue = (struct System_Collections_Generic_Queue_Action__o *)v3;
-  sub_1C32BC4(&this->fields, v3);
+  sub_1C36FFC(&this->fields, v3);
   SingletonTemplate_object____ctor(
     (SingletonTemplate_CLASS__o *)this,
-    (const MethodInfo_39E2EEC *)Method_SingletonTemplate_RewardMiniPopupExecutor___ctor__);
+    (const MethodInfo_39ED754 *)Method_SingletonTemplate_RewardMiniPopupExecutor___ctor__);
 }
 
 
@@ -26,13 +26,13 @@ void RewardMiniPopupExecutor__AddTaskOnBattleToTerminal(RewardMiniPopupExecutor_
   System_Action_o *v3; // x20
   const MethodInfo *v4; // x2
 
-  if ( (byte_4C31A2B & 1) == 0 )
+  if ( (byte_4C3CF7B & 1) == 0 )
   {
-    sub_1C32C20(&System_Action_TypeInfo);
-    sub_1C32C20(&Method_RewardMiniPopupExecutor__AddTaskOnBattleToTerminal_g__Action_2_0__);
-    byte_4C31A2B = 1;
+    sub_1C37058(&System_Action_TypeInfo);
+    sub_1C37058(&Method_RewardMiniPopupExecutor__AddTaskOnBattleToTerminal_g__Action_2_0__);
+    byte_4C3CF7B = 1;
   }
-  v3 = (System_Action_o *)sub_1C32E6C(System_Action_TypeInfo);
+  v3 = (System_Action_o *)sub_1C372A4(System_Action_TypeInfo);
   System_Action___ctor(
     v3,
     (Il2CppObject *)this,
@@ -47,13 +47,13 @@ void RewardMiniPopupExecutor__AddTaskOnReBattle(RewardMiniPopupExecutor_o *this,
   System_Action_o *v3; // x20
   const MethodInfo *v4; // x2
 
-  if ( (byte_4C31A2E & 1) == 0 )
+  if ( (byte_4C3CF7E & 1) == 0 )
   {
-    sub_1C32C20(&System_Action_TypeInfo);
-    sub_1C32C20(&Method_RewardMiniPopupExecutor__AddTaskOnReBattle_g__Action_5_0__);
-    byte_4C31A2E = 1;
+    sub_1C37058(&System_Action_TypeInfo);
+    sub_1C37058(&Method_RewardMiniPopupExecutor__AddTaskOnReBattle_g__Action_5_0__);
+    byte_4C3CF7E = 1;
   }
-  v3 = (System_Action_o *)sub_1C32E6C(System_Action_TypeInfo);
+  v3 = (System_Action_o *)sub_1C372A4(System_Action_TypeInfo);
   System_Action___ctor(v3, (Il2CppObject *)this, Method_RewardMiniPopupExecutor__AddTaskOnReBattle_g__Action_5_0__, 0);
   RewardMiniPopupExecutor__EnqueueActionAndInvokeIfFirst(this, v3, v4);
 }
@@ -66,13 +66,13 @@ void RewardMiniPopupExecutor__AddTaskOnReBattleOrdealCallFreeQuest(
   System_Action_o *v3; // x20
   const MethodInfo *v4; // x2
 
-  if ( (byte_4C31A2D & 1) == 0 )
+  if ( (byte_4C3CF7D & 1) == 0 )
   {
-    sub_1C32C20(&System_Action_TypeInfo);
-    sub_1C32C20(&Method_RewardMiniPopupExecutor__AddTaskOnReBattleOrdealCallFreeQuest_g__Action_4_0__);
-    byte_4C31A2D = 1;
+    sub_1C37058(&System_Action_TypeInfo);
+    sub_1C37058(&Method_RewardMiniPopupExecutor__AddTaskOnReBattleOrdealCallFreeQuest_g__Action_4_0__);
+    byte_4C3CF7D = 1;
   }
-  v3 = (System_Action_o *)sub_1C32E6C(System_Action_TypeInfo);
+  v3 = (System_Action_o *)sub_1C372A4(System_Action_TypeInfo);
   System_Action___ctor(
     v3,
     (Il2CppObject *)this,
@@ -93,21 +93,21 @@ RewardMiniPopup_PopupInfoBase_o *RewardMiniPopupExecutor__CreatePopupInfoByUseAd
   struct RewardMiniPopupExecutor___c_StaticFields *static_fields; // x0
   RewardMiniPopup_PopupInfoByUseAddRewardItem_o *v8; // x21
 
-  if ( (byte_4C31A36 & 1) == 0 )
+  if ( (byte_4C3CF86 & 1) == 0 )
   {
-    sub_1C32C20(&System_Action_TypeInfo);
-    sub_1C32C20(&RewardMiniPopup_PopupInfoByUseAddRewardItem_TypeInfo);
-    sub_1C32C20(&TerminalPramsManager_TypeInfo);
-    sub_1C32C20(&Method_RewardMiniPopupExecutor___c__CreatePopupInfoByUseAddRewardItem_b__14_0__);
-    sub_1C32C20(&RewardMiniPopupExecutor___c_TypeInfo);
-    byte_4C31A36 = 1;
+    sub_1C37058(&System_Action_TypeInfo);
+    sub_1C37058(&RewardMiniPopup_PopupInfoByUseAddRewardItem_TypeInfo);
+    sub_1C37058(&TerminalPramsManager_TypeInfo);
+    sub_1C37058(&Method_RewardMiniPopupExecutor___c__CreatePopupInfoByUseAddRewardItem_b__14_0__);
+    sub_1C37058(&RewardMiniPopupExecutor___c_TypeInfo);
+    byte_4C3CF86 = 1;
   }
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(TerminalPramsManager_TypeInfo);
-  if ( !byte_4C31A99 )
+  if ( !byte_4C3CFE9 )
   {
-    sub_1C32C20(&TerminalPramsManager_TypeInfo);
-    byte_4C31A99 = 1;
+    sub_1C37058(&TerminalPramsManager_TypeInfo);
+    byte_4C3CFE9 = 1;
   }
   v1 = TerminalPramsManager_TypeInfo;
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -119,10 +119,10 @@ RewardMiniPopup_PopupInfoBase_o *RewardMiniPopupExecutor__CreatePopupInfoByUseAd
     return 0;
   if ( !v1->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(v1);
-  if ( !byte_4C31A99 )
+  if ( !byte_4C3CFE9 )
   {
-    sub_1C32C20(&TerminalPramsManager_TypeInfo);
-    byte_4C31A99 = 1;
+    sub_1C37058(&TerminalPramsManager_TypeInfo);
+    byte_4C3CFE9 = 1;
   }
   v2 = TerminalPramsManager_TypeInfo;
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -146,7 +146,7 @@ RewardMiniPopup_PopupInfoBase_o *RewardMiniPopupExecutor__CreatePopupInfoByUseAd
       v3 = RewardMiniPopupExecutor___c_TypeInfo;
     }
     v6 = (Il2CppObject *)v3->static_fields->__9;
-    _9__14_0 = (System_Action_o *)sub_1C32E6C(System_Action_TypeInfo);
+    _9__14_0 = (System_Action_o *)sub_1C372A4(System_Action_TypeInfo);
     System_Action___ctor(
       _9__14_0,
       v6,
@@ -154,9 +154,9 @@ RewardMiniPopup_PopupInfoBase_o *RewardMiniPopupExecutor__CreatePopupInfoByUseAd
       0);
     static_fields = RewardMiniPopupExecutor___c_TypeInfo->static_fields;
     static_fields->__9__14_0 = _9__14_0;
-    sub_1C32BC4(&static_fields->__9__14_0, _9__14_0);
+    sub_1C36FFC(&static_fields->__9__14_0, _9__14_0);
   }
-  v8 = (RewardMiniPopup_PopupInfoByUseAddRewardItem_o *)sub_1C32E6C(RewardMiniPopup_PopupInfoByUseAddRewardItem_TypeInfo);
+  v8 = (RewardMiniPopup_PopupInfoByUseAddRewardItem_o *)sub_1C372A4(RewardMiniPopup_PopupInfoByUseAddRewardItem_TypeInfo);
   RewardMiniPopup_PopupInfoByUseAddRewardItem___ctor(v8, UseAddRewardItemRewardInfos_k__BackingField, _9__14_0, 0);
   return (RewardMiniPopup_PopupInfoBase_o *)v8;
 }
@@ -172,14 +172,14 @@ RewardMiniPopup_PopupInfoBase_o *RewardMiniPopupExecutor__CreatePopupInfoQuestPh
   struct RewardMiniPopupExecutor___c_StaticFields *static_fields; // x0
   RewardMiniPopup_PopupInfoQuestPhaseClear_o *v7; // x21
 
-  if ( (byte_4C31A34 & 1) == 0 )
+  if ( (byte_4C3CF84 & 1) == 0 )
   {
-    sub_1C32C20(&System_Action_TypeInfo);
-    sub_1C32C20(&RewardMiniPopup_PopupInfoQuestPhaseClear_TypeInfo);
-    sub_1C32C20(&TerminalPramsManager_TypeInfo);
-    sub_1C32C20(&Method_RewardMiniPopupExecutor___c__CreatePopupInfoQuestPhaseReward_b__12_0__);
-    sub_1C32C20(&RewardMiniPopupExecutor___c_TypeInfo);
-    byte_4C31A34 = 1;
+    sub_1C37058(&System_Action_TypeInfo);
+    sub_1C37058(&RewardMiniPopup_PopupInfoQuestPhaseClear_TypeInfo);
+    sub_1C37058(&TerminalPramsManager_TypeInfo);
+    sub_1C37058(&Method_RewardMiniPopupExecutor___c__CreatePopupInfoQuestPhaseReward_b__12_0__);
+    sub_1C37058(&RewardMiniPopupExecutor___c_TypeInfo);
+    byte_4C3CF84 = 1;
   }
   v1 = TerminalPramsManager_TypeInfo;
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -210,13 +210,13 @@ RewardMiniPopup_PopupInfoBase_o *RewardMiniPopupExecutor__CreatePopupInfoQuestPh
       v3 = RewardMiniPopupExecutor___c_TypeInfo;
     }
     v5 = (Il2CppObject *)v3->static_fields->__9;
-    _9__12_0 = (System_Action_o *)sub_1C32E6C(System_Action_TypeInfo);
+    _9__12_0 = (System_Action_o *)sub_1C372A4(System_Action_TypeInfo);
     System_Action___ctor(_9__12_0, v5, Method_RewardMiniPopupExecutor___c__CreatePopupInfoQuestPhaseReward_b__12_0__, 0);
     static_fields = RewardMiniPopupExecutor___c_TypeInfo->static_fields;
     static_fields->__9__12_0 = _9__12_0;
-    sub_1C32BC4(&static_fields->__9__12_0, _9__12_0);
+    sub_1C36FFC(&static_fields->__9__12_0, _9__12_0);
   }
-  v7 = (RewardMiniPopup_PopupInfoQuestPhaseClear_o *)sub_1C32E6C(RewardMiniPopup_PopupInfoQuestPhaseClear_TypeInfo);
+  v7 = (RewardMiniPopup_PopupInfoQuestPhaseClear_o *)sub_1C372A4(RewardMiniPopup_PopupInfoQuestPhaseClear_TypeInfo);
   RewardMiniPopup_PopupInfoQuestPhaseClear___ctor(v7, mQuestPhaseRewardInfos, _9__12_0, 0);
   return (RewardMiniPopup_PopupInfoBase_o *)v7;
 }
@@ -232,14 +232,14 @@ RewardMiniPopup_PopupInfoBase_o *RewardMiniPopupExecutor__CreatePopupInfoQuestRe
   struct RewardMiniPopupExecutor___c_StaticFields *static_fields; // x0
   RewardMiniPopup_PopupInfoQuestClear_o *v7; // x21
 
-  if ( (byte_4C31A35 & 1) == 0 )
+  if ( (byte_4C3CF85 & 1) == 0 )
   {
-    sub_1C32C20(&System_Action_TypeInfo);
-    sub_1C32C20(&RewardMiniPopup_PopupInfoQuestClear_TypeInfo);
-    sub_1C32C20(&TerminalPramsManager_TypeInfo);
-    sub_1C32C20(&Method_RewardMiniPopupExecutor___c__CreatePopupInfoQuestReward_b__13_0__);
-    sub_1C32C20(&RewardMiniPopupExecutor___c_TypeInfo);
-    byte_4C31A35 = 1;
+    sub_1C37058(&System_Action_TypeInfo);
+    sub_1C37058(&RewardMiniPopup_PopupInfoQuestClear_TypeInfo);
+    sub_1C37058(&TerminalPramsManager_TypeInfo);
+    sub_1C37058(&Method_RewardMiniPopupExecutor___c__CreatePopupInfoQuestReward_b__13_0__);
+    sub_1C37058(&RewardMiniPopupExecutor___c_TypeInfo);
+    byte_4C3CF85 = 1;
   }
   v1 = TerminalPramsManager_TypeInfo;
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -270,13 +270,13 @@ RewardMiniPopup_PopupInfoBase_o *RewardMiniPopupExecutor__CreatePopupInfoQuestRe
       v3 = RewardMiniPopupExecutor___c_TypeInfo;
     }
     v5 = (Il2CppObject *)v3->static_fields->__9;
-    _9__13_0 = (System_Action_o *)sub_1C32E6C(System_Action_TypeInfo);
+    _9__13_0 = (System_Action_o *)sub_1C372A4(System_Action_TypeInfo);
     System_Action___ctor(_9__13_0, v5, Method_RewardMiniPopupExecutor___c__CreatePopupInfoQuestReward_b__13_0__, 0);
     static_fields = RewardMiniPopupExecutor___c_TypeInfo->static_fields;
     static_fields->__9__13_0 = _9__13_0;
-    sub_1C32BC4(&static_fields->__9__13_0, _9__13_0);
+    sub_1C36FFC(&static_fields->__9__13_0, _9__13_0);
   }
-  v7 = (RewardMiniPopup_PopupInfoQuestClear_o *)sub_1C32E6C(RewardMiniPopup_PopupInfoQuestClear_TypeInfo);
+  v7 = (RewardMiniPopup_PopupInfoQuestClear_o *)sub_1C372A4(RewardMiniPopup_PopupInfoQuestClear_TypeInfo);
   RewardMiniPopup_PopupInfoQuestClear___ctor(v7, mQuestRewardInfos, _9__13_0, 0);
   return (RewardMiniPopup_PopupInfoBase_o *)v7;
 }
@@ -289,11 +289,11 @@ void RewardMiniPopupExecutor__DequeueCurrentAndInvokeNext(RewardMiniPopupExecuto
   Il2CppObject *result; // [xsp+8h] [xbp-28h] BYREF
   Il2CppObject *v6; // [xsp+18h] [xbp-18h] BYREF
 
-  if ( (byte_4C31A33 & 1) == 0 )
+  if ( (byte_4C3CF83 & 1) == 0 )
   {
-    sub_1C32C20(&Method_System_Collections_Generic_Queue_Action__TryDequeue__);
-    sub_1C32C20(&Method_System_Collections_Generic_Queue_Action__TryPeek__);
-    byte_4C31A33 = 1;
+    sub_1C37058(&Method_System_Collections_Generic_Queue_Action__TryDequeue__);
+    sub_1C37058(&Method_System_Collections_Generic_Queue_Action__TryPeek__);
+    byte_4C3CF83 = 1;
   }
   v6 = 0;
   result = 0;
@@ -302,18 +302,18 @@ void RewardMiniPopupExecutor__DequeueCurrentAndInvokeNext(RewardMiniPopupExecuto
     || (System_Collections_Generic_Queue_object___TryDequeue(
           playerActionQueue,
           &result,
-          (const MethodInfo_393FBCC *)Method_System_Collections_Generic_Queue_Action__TryDequeue__),
+          (const MethodInfo_394A434 *)Method_System_Collections_Generic_Queue_Action__TryDequeue__),
         this->fields.currentPlayer = 0,
         p_currentPlayer = &this->fields.currentPlayer,
-        sub_1C32BC4(p_currentPlayer, 0),
+        sub_1C36FFC(p_currentPlayer, 0),
         (playerActionQueue = (System_Collections_Generic_Queue_T__o *)*(p_currentPlayer - 1)) == 0) )
   {
-    sub_1C32E7C(playerActionQueue);
+    sub_1C372B4(playerActionQueue);
   }
   System_Collections_Generic_Queue_object___TryPeek(
     playerActionQueue,
     &v6,
-    (const MethodInfo_393FCD8 *)Method_System_Collections_Generic_Queue_Action__TryPeek__);
+    (const MethodInfo_394A540 *)Method_System_Collections_Generic_Queue_Action__TryPeek__);
   if ( v6 )
     ((void (__fastcall *)(Il2CppClass *, void *))v6[1].monitor)(v6[4].klass, v6[2].monitor);
 }
@@ -328,15 +328,15 @@ void RewardMiniPopupExecutor__EnqueueActionAndInvokeIfFirst(
   System_Collections_Generic_Queue_T__o *playerActionQueue; // x8
   bool v7; // w20
 
-  if ( (byte_4C31A32 & 1) == 0 )
+  if ( (byte_4C3CF82 & 1) == 0 )
   {
-    sub_1C32C20(&Method_System_Linq_Enumerable_Any_Action___);
-    sub_1C32C20(&Method_System_Collections_Generic_Queue_Action__Enqueue__);
-    byte_4C31A32 = 1;
+    sub_1C37058(&Method_System_Linq_Enumerable_Any_Action___);
+    sub_1C37058(&Method_System_Collections_Generic_Queue_Action__Enqueue__);
+    byte_4C3CF82 = 1;
   }
   v5 = System_Linq_Enumerable__Any_object_(
          (System_Collections_Generic_IEnumerable_TSource__o *)this->fields.playerActionQueue,
-         (const MethodInfo_30E8F68 *)Method_System_Linq_Enumerable_Any_Action___);
+         (const MethodInfo_30F37D0 *)Method_System_Linq_Enumerable_Any_Action___);
   playerActionQueue = (System_Collections_Generic_Queue_T__o *)this->fields.playerActionQueue;
   if ( !playerActionQueue )
     goto LABEL_7;
@@ -344,12 +344,12 @@ void RewardMiniPopupExecutor__EnqueueActionAndInvokeIfFirst(
   System_Collections_Generic_Queue_object___Enqueue(
     playerActionQueue,
     (Il2CppObject *)action,
-    (const MethodInfo_393F9A0 *)Method_System_Collections_Generic_Queue_Action__Enqueue__);
+    (const MethodInfo_394A208 *)Method_System_Collections_Generic_Queue_Action__Enqueue__);
   if ( v7 )
     return;
   if ( !action )
 LABEL_7:
-    sub_1C32E7C(v5);
+    sub_1C372B4(v5);
   ((void (__fastcall *)(intptr_t, intptr_t))action->fields.invoke_impl)(
     action->fields.method_code,
     action->fields.method);
@@ -361,10 +361,10 @@ bool RewardMiniPopupExecutor__HasRewardsOnBattleToTerminal(RewardMiniPopupExecut
   TerminalPramsManager_c *v2; // x0
   TerminalPramsManager_c *v4; // x0
 
-  if ( (byte_4C31A2C & 1) == 0 )
+  if ( (byte_4C3CF7C & 1) == 0 )
   {
-    sub_1C32C20(&TerminalPramsManager_TypeInfo);
-    byte_4C31A2C = 1;
+    sub_1C37058(&TerminalPramsManager_TypeInfo);
+    byte_4C3CF7C = 1;
   }
   v2 = TerminalPramsManager_TypeInfo;
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -376,10 +376,10 @@ bool RewardMiniPopupExecutor__HasRewardsOnBattleToTerminal(RewardMiniPopupExecut
     return 1;
   if ( !v2->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(v2);
-  if ( !byte_4C31A99 )
+  if ( !byte_4C3CFE9 )
   {
-    sub_1C32C20(&TerminalPramsManager_TypeInfo);
-    byte_4C31A99 = 1;
+    sub_1C37058(&TerminalPramsManager_TypeInfo);
+    byte_4C3CFE9 = 1;
   }
   v4 = TerminalPramsManager_TypeInfo;
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -408,28 +408,28 @@ void RewardMiniPopupExecutor__Kill(RewardMiniPopupExecutor_o *this, bool strong,
 {
   System_Collections_Generic_Queue_T__o *playerActionQueue; // x0
 
-  if ( (byte_4C31A2F & 1) == 0 )
+  if ( (byte_4C3CF7F & 1) == 0 )
   {
-    sub_1C32C20(&Method_System_Collections_Generic_Queue_Action__Clear__);
-    sub_1C32C20(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
-    byte_4C31A2F = 1;
+    sub_1C37058(&Method_System_Collections_Generic_Queue_Action__Clear__);
+    sub_1C37058(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+    byte_4C3CF7F = 1;
   }
   playerActionQueue = (System_Collections_Generic_Queue_T__o *)this->fields.playerActionQueue;
   if ( !playerActionQueue )
     goto LABEL_8;
   System_Collections_Generic_Queue_object___Clear(
     playerActionQueue,
-    (const MethodInfo_393F660 *)Method_System_Collections_Generic_Queue_Action__Clear__);
+    (const MethodInfo_3949EC8 *)Method_System_Collections_Generic_Queue_Action__Clear__);
   if ( strong )
   {
-    playerActionQueue = (System_Collections_Generic_Queue_T__o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39E2904 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+    playerActionQueue = (System_Collections_Generic_Queue_T__o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39ED16C *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
     if ( playerActionQueue )
     {
       CommonUI__DestoryQuestPhaseReward((CommonUI_o *)playerActionQueue, 0, 0);
       return;
     }
 LABEL_8:
-    sub_1C32E7C(playerActionQueue);
+    sub_1C372B4(playerActionQueue);
   }
 }
 
@@ -446,29 +446,29 @@ void RewardMiniPopupExecutor__Play(
   RewardMiniPopupExecutor_o *v9; // x0
   const MethodInfo *v10; // x1
 
-  if ( (byte_4C31A31 & 1) == 0 )
+  if ( (byte_4C3CF81 & 1) == 0 )
   {
-    sub_1C32C20(&System_Action_TypeInfo);
-    sub_1C32C20(&Method_RewardMiniPopupExecutor_DequeueCurrentAndInvokeNext__);
-    byte_4C31A31 = 1;
+    sub_1C37058(&System_Action_TypeInfo);
+    sub_1C37058(&Method_RewardMiniPopupExecutor_DequeueCurrentAndInvokeNext__);
+    byte_4C3CF81 = 1;
   }
   this->fields.currentPlayer = newPlayer;
-  v5 = sub_1C32BC4(&this->fields.currentPlayer, newPlayer);
+  v5 = sub_1C36FFC(&this->fields.currentPlayer, newPlayer);
   if ( !newPlayer )
-    sub_1C32E7C(v5);
+    sub_1C372B4(v5);
   FinishCallback_k__BackingField = (System_Delegate_o *)newPlayer->fields._FinishCallback_k__BackingField;
-  v7 = (System_Action_o *)sub_1C32E6C(System_Action_TypeInfo);
+  v7 = (System_Action_o *)sub_1C372A4(System_Action_TypeInfo);
   System_Action___ctor(v7, (Il2CppObject *)this, Method_RewardMiniPopupExecutor_DequeueCurrentAndInvokeNext__, 0);
   v8 = System_Delegate__Combine(FinishCallback_k__BackingField, (System_Delegate_o *)v7, 0);
   if ( v8 && (System_Action_c *)v8->klass != System_Action_TypeInfo )
   {
-    v9 = (RewardMiniPopupExecutor_o *)sub_1C3313C(v8);
+    v9 = (RewardMiniPopupExecutor_o *)sub_1C37574(v8);
     RewardMiniPopupExecutor__DequeueCurrentAndInvokeNext(v9, v10);
   }
   else
   {
     newPlayer->fields._FinishCallback_k__BackingField = (struct System_Action_o *)v8;
-    sub_1C32BC4(&newPlayer->fields._FinishCallback_k__BackingField, v8);
+    sub_1C36FFC(&newPlayer->fields._FinishCallback_k__BackingField, v8);
     ((void (__fastcall *)(RewardMiniPopup_RewardMiniPopupPlayerBase_o *, const MethodInfo *))newPlayer->klass->vtable._4_unknown.methodPtr)(
       newPlayer,
       newPlayer->klass->vtable._4_unknown.method);
@@ -484,12 +484,12 @@ void RewardMiniPopupExecutor__PlaySimultaneous(
   RewardMiniPopup_RewardMiniPopupPlayerSimultaneous_o *v5; // x21
   const MethodInfo *v6; // x2
 
-  if ( (byte_4C31A30 & 1) == 0 )
+  if ( (byte_4C3CF80 & 1) == 0 )
   {
-    sub_1C32C20(&RewardMiniPopup_RewardMiniPopupPlayerSimultaneous_TypeInfo);
-    byte_4C31A30 = 1;
+    sub_1C37058(&RewardMiniPopup_RewardMiniPopupPlayerSimultaneous_TypeInfo);
+    byte_4C3CF80 = 1;
   }
-  v5 = (RewardMiniPopup_RewardMiniPopupPlayerSimultaneous_o *)sub_1C32E6C(RewardMiniPopup_RewardMiniPopupPlayerSimultaneous_TypeInfo);
+  v5 = (RewardMiniPopup_RewardMiniPopupPlayerSimultaneous_o *)sub_1C372A4(RewardMiniPopup_RewardMiniPopupPlayerSimultaneous_TypeInfo);
   RewardMiniPopup_RewardMiniPopupPlayerSimultaneous___ctor(v5, popupInfoArray, 0);
   RewardMiniPopupExecutor__Play(this, (RewardMiniPopup_RewardMiniPopupPlayerBase_o *)v5, v6);
 }
@@ -509,21 +509,21 @@ void RewardMiniPopupExecutor___AddTaskOnBattleToTerminal_g__Action_2_0(
   const MethodInfo *v10; // x2
   __int64 v11; // x0
 
-  if ( (byte_4C31A38 & 1) == 0 )
+  if ( (byte_4C3CF88 & 1) == 0 )
   {
-    sub_1C32C20(&Method_BasicHelper_ExcludeNull_PopupInfoBase___);
-    sub_1C32C20(&Method_System_Linq_Enumerable_ToArray_PopupInfoBase___);
-    sub_1C32C20(&RewardMiniPopup_PopupInfoBase___TypeInfo);
-    byte_4C31A38 = 1;
+    sub_1C37058(&Method_BasicHelper_ExcludeNull_PopupInfoBase___);
+    sub_1C37058(&Method_System_Linq_Enumerable_ToArray_PopupInfoBase___);
+    sub_1C37058(&RewardMiniPopup_PopupInfoBase___TypeInfo);
+    byte_4C3CF88 = 1;
   }
-  v3 = sub_1C32CC8(RewardMiniPopup_PopupInfoBase___TypeInfo, 2);
+  v3 = sub_1C37100(RewardMiniPopup_PopupInfoBase___TypeInfo, 2);
   PopupInfoQuestPhaseReward = RewardMiniPopupExecutor__CreatePopupInfoQuestPhaseReward((const MethodInfo *)v3);
   if ( !v3 )
-    sub_1C32E7C(PopupInfoQuestPhaseReward);
+    sub_1C372B4(PopupInfoQuestPhaseReward);
   v5 = PopupInfoQuestPhaseReward;
   if ( PopupInfoQuestPhaseReward )
   {
-    PopupInfoQuestPhaseReward = (RewardMiniPopup_PopupInfoBase_o *)sub_1C32D5C(
+    PopupInfoQuestPhaseReward = (RewardMiniPopup_PopupInfoBase_o *)sub_1C37194(
                                                                      PopupInfoQuestPhaseReward,
                                                                      *(_QWORD *)(*(_QWORD *)v3 + 64LL));
     if ( !PopupInfoQuestPhaseReward )
@@ -532,32 +532,32 @@ void RewardMiniPopupExecutor___AddTaskOnBattleToTerminal_g__Action_2_0(
   if ( !*(_DWORD *)(v3 + 24) )
     goto LABEL_11;
   *(_QWORD *)(v3 + 32) = v5;
-  v6 = (const MethodInfo *)sub_1C32BC4(v3 + 32, v5);
+  v6 = (const MethodInfo *)sub_1C36FFC(v3 + 32, v5);
   PopupInfoQuestPhaseReward = RewardMiniPopupExecutor__CreatePopupInfoByUseAddRewardItem(v6);
   v7 = PopupInfoQuestPhaseReward;
   if ( PopupInfoQuestPhaseReward )
   {
-    PopupInfoQuestPhaseReward = (RewardMiniPopup_PopupInfoBase_o *)sub_1C32D5C(
+    PopupInfoQuestPhaseReward = (RewardMiniPopup_PopupInfoBase_o *)sub_1C37194(
                                                                      PopupInfoQuestPhaseReward,
                                                                      *(_QWORD *)(*(_QWORD *)v3 + 64LL));
     if ( !PopupInfoQuestPhaseReward )
     {
 LABEL_12:
-      v11 = sub_1C32EA0();
-      sub_1C32D48(v11, 0);
+      v11 = sub_1C372D8();
+      sub_1C37180(v11, 0);
     }
   }
   if ( *(_DWORD *)(v3 + 24) <= 1u )
 LABEL_11:
-    sub_1C32E84(PopupInfoQuestPhaseReward);
+    sub_1C372BC(PopupInfoQuestPhaseReward);
   *(_QWORD *)(v3 + 40) = v7;
-  sub_1C32BC4(v3 + 40, v7);
+  sub_1C36FFC(v3 + 40, v7);
   v8 = BasicHelper__ExcludeNull_object_(
          (System_Collections_Generic_IEnumerable_T__o *)v3,
-         (const MethodInfo_30C70E4 *)Method_BasicHelper_ExcludeNull_PopupInfoBase___);
+         (const MethodInfo_30D194C *)Method_BasicHelper_ExcludeNull_PopupInfoBase___);
   v9 = System_Linq_Enumerable__ToArray_object_(
          (System_Collections_Generic_IEnumerable_TSource__o *)v8,
-         (const MethodInfo_311CA8C *)Method_System_Linq_Enumerable_ToArray_PopupInfoBase___);
+         (const MethodInfo_31272F4 *)Method_System_Linq_Enumerable_ToArray_PopupInfoBase___);
   RewardMiniPopupExecutor__PlaySimultaneous(this, (RewardMiniPopup_PopupInfoBase_array *)v9, v10);
 }
 
@@ -576,21 +576,21 @@ void RewardMiniPopupExecutor___AddTaskOnReBattleOrdealCallFreeQuest_g__Action_4_
   const MethodInfo *v10; // x2
   __int64 v11; // x0
 
-  if ( (byte_4C31A39 & 1) == 0 )
+  if ( (byte_4C3CF89 & 1) == 0 )
   {
-    sub_1C32C20(&Method_BasicHelper_ExcludeNull_PopupInfoBase___);
-    sub_1C32C20(&Method_System_Linq_Enumerable_ToArray_PopupInfoBase___);
-    sub_1C32C20(&RewardMiniPopup_PopupInfoBase___TypeInfo);
-    byte_4C31A39 = 1;
+    sub_1C37058(&Method_BasicHelper_ExcludeNull_PopupInfoBase___);
+    sub_1C37058(&Method_System_Linq_Enumerable_ToArray_PopupInfoBase___);
+    sub_1C37058(&RewardMiniPopup_PopupInfoBase___TypeInfo);
+    byte_4C3CF89 = 1;
   }
-  v3 = sub_1C32CC8(RewardMiniPopup_PopupInfoBase___TypeInfo, 2);
+  v3 = sub_1C37100(RewardMiniPopup_PopupInfoBase___TypeInfo, 2);
   PopupInfoQuestReward = RewardMiniPopupExecutor__CreatePopupInfoQuestReward((const MethodInfo *)v3);
   if ( !v3 )
-    sub_1C32E7C(PopupInfoQuestReward);
+    sub_1C372B4(PopupInfoQuestReward);
   v5 = PopupInfoQuestReward;
   if ( PopupInfoQuestReward )
   {
-    PopupInfoQuestReward = (RewardMiniPopup_PopupInfoBase_o *)sub_1C32D5C(
+    PopupInfoQuestReward = (RewardMiniPopup_PopupInfoBase_o *)sub_1C37194(
                                                                 PopupInfoQuestReward,
                                                                 *(_QWORD *)(*(_QWORD *)v3 + 64LL));
     if ( !PopupInfoQuestReward )
@@ -599,32 +599,32 @@ void RewardMiniPopupExecutor___AddTaskOnReBattleOrdealCallFreeQuest_g__Action_4_
   if ( !*(_DWORD *)(v3 + 24) )
     goto LABEL_11;
   *(_QWORD *)(v3 + 32) = v5;
-  v6 = (const MethodInfo *)sub_1C32BC4(v3 + 32, v5);
+  v6 = (const MethodInfo *)sub_1C36FFC(v3 + 32, v5);
   PopupInfoQuestReward = RewardMiniPopupExecutor__CreatePopupInfoByUseAddRewardItem(v6);
   v7 = PopupInfoQuestReward;
   if ( PopupInfoQuestReward )
   {
-    PopupInfoQuestReward = (RewardMiniPopup_PopupInfoBase_o *)sub_1C32D5C(
+    PopupInfoQuestReward = (RewardMiniPopup_PopupInfoBase_o *)sub_1C37194(
                                                                 PopupInfoQuestReward,
                                                                 *(_QWORD *)(*(_QWORD *)v3 + 64LL));
     if ( !PopupInfoQuestReward )
     {
 LABEL_12:
-      v11 = sub_1C32EA0();
-      sub_1C32D48(v11, 0);
+      v11 = sub_1C372D8();
+      sub_1C37180(v11, 0);
     }
   }
   if ( *(_DWORD *)(v3 + 24) <= 1u )
 LABEL_11:
-    sub_1C32E84(PopupInfoQuestReward);
+    sub_1C372BC(PopupInfoQuestReward);
   *(_QWORD *)(v3 + 40) = v7;
-  sub_1C32BC4(v3 + 40, v7);
+  sub_1C36FFC(v3 + 40, v7);
   v8 = BasicHelper__ExcludeNull_object_(
          (System_Collections_Generic_IEnumerable_T__o *)v3,
-         (const MethodInfo_30C70E4 *)Method_BasicHelper_ExcludeNull_PopupInfoBase___);
+         (const MethodInfo_30D194C *)Method_BasicHelper_ExcludeNull_PopupInfoBase___);
   v9 = System_Linq_Enumerable__ToArray_object_(
          (System_Collections_Generic_IEnumerable_TSource__o *)v8,
-         (const MethodInfo_311CA8C *)Method_System_Linq_Enumerable_ToArray_PopupInfoBase___);
+         (const MethodInfo_31272F4 *)Method_System_Linq_Enumerable_ToArray_PopupInfoBase___);
   RewardMiniPopupExecutor__PlaySimultaneous(this, (RewardMiniPopup_PopupInfoBase_array *)v9, v10);
 }
 
@@ -641,39 +641,39 @@ void RewardMiniPopupExecutor___AddTaskOnReBattle_g__Action_5_0(
   const MethodInfo *v8; // x2
   __int64 v9; // x0
 
-  if ( (byte_4C31A3A & 1) == 0 )
+  if ( (byte_4C3CF8A & 1) == 0 )
   {
-    sub_1C32C20(&Method_BasicHelper_ExcludeNull_PopupInfoBase___);
-    sub_1C32C20(&Method_System_Linq_Enumerable_ToArray_PopupInfoBase___);
-    sub_1C32C20(&RewardMiniPopup_PopupInfoBase___TypeInfo);
-    byte_4C31A3A = 1;
+    sub_1C37058(&Method_BasicHelper_ExcludeNull_PopupInfoBase___);
+    sub_1C37058(&Method_System_Linq_Enumerable_ToArray_PopupInfoBase___);
+    sub_1C37058(&RewardMiniPopup_PopupInfoBase___TypeInfo);
+    byte_4C3CF8A = 1;
   }
-  v3 = sub_1C32CC8(RewardMiniPopup_PopupInfoBase___TypeInfo, 1);
+  v3 = sub_1C37100(RewardMiniPopup_PopupInfoBase___TypeInfo, 1);
   PopupInfoByUseAddRewardItem = RewardMiniPopupExecutor__CreatePopupInfoByUseAddRewardItem((const MethodInfo *)v3);
   if ( !v3 )
-    sub_1C32E7C(PopupInfoByUseAddRewardItem);
+    sub_1C372B4(PopupInfoByUseAddRewardItem);
   v5 = PopupInfoByUseAddRewardItem;
   if ( PopupInfoByUseAddRewardItem )
   {
-    PopupInfoByUseAddRewardItem = (RewardMiniPopup_PopupInfoBase_o *)sub_1C32D5C(
+    PopupInfoByUseAddRewardItem = (RewardMiniPopup_PopupInfoBase_o *)sub_1C37194(
                                                                        PopupInfoByUseAddRewardItem,
                                                                        *(_QWORD *)(*(_QWORD *)v3 + 64LL));
     if ( !PopupInfoByUseAddRewardItem )
     {
-      v9 = sub_1C32EA0();
-      sub_1C32D48(v9, 0);
+      v9 = sub_1C372D8();
+      sub_1C37180(v9, 0);
     }
   }
   if ( !*(_DWORD *)(v3 + 24) )
-    sub_1C32E84(PopupInfoByUseAddRewardItem);
+    sub_1C372BC(PopupInfoByUseAddRewardItem);
   *(_QWORD *)(v3 + 32) = v5;
-  sub_1C32BC4(v3 + 32, v5);
+  sub_1C36FFC(v3 + 32, v5);
   v6 = BasicHelper__ExcludeNull_object_(
          (System_Collections_Generic_IEnumerable_T__o *)v3,
-         (const MethodInfo_30C70E4 *)Method_BasicHelper_ExcludeNull_PopupInfoBase___);
+         (const MethodInfo_30D194C *)Method_BasicHelper_ExcludeNull_PopupInfoBase___);
   v7 = System_Linq_Enumerable__ToArray_object_(
          (System_Collections_Generic_IEnumerable_TSource__o *)v6,
-         (const MethodInfo_311CA8C *)Method_System_Linq_Enumerable_ToArray_PopupInfoBase___);
+         (const MethodInfo_31272F4 *)Method_System_Linq_Enumerable_ToArray_PopupInfoBase___);
   RewardMiniPopupExecutor__PlaySimultaneous(this, (RewardMiniPopup_PopupInfoBase_array *)v7, v8);
 }
 
@@ -682,15 +682,15 @@ void RewardMiniPopupExecutor___c___cctor(const MethodInfo *method)
 {
   Il2CppObject *v1; // x19
 
-  if ( (byte_4C31A3B & 1) == 0 )
+  if ( (byte_4C3CF8B & 1) == 0 )
   {
-    sub_1C32C20(&RewardMiniPopupExecutor___c_TypeInfo);
-    byte_4C31A3B = 1;
+    sub_1C37058(&RewardMiniPopupExecutor___c_TypeInfo);
+    byte_4C3CF8B = 1;
   }
-  v1 = (Il2CppObject *)sub_1C32E6C(RewardMiniPopupExecutor___c_TypeInfo);
+  v1 = (Il2CppObject *)sub_1C372A4(RewardMiniPopupExecutor___c_TypeInfo);
   System_Object___ctor(v1, 0);
   RewardMiniPopupExecutor___c_TypeInfo->static_fields->__9 = (struct RewardMiniPopupExecutor___c_o *)v1;
-  sub_1C32BC4(RewardMiniPopupExecutor___c_TypeInfo->static_fields, v1);
+  sub_1C36FFC(RewardMiniPopupExecutor___c_TypeInfo->static_fields, v1);
 }
 
 
@@ -707,17 +707,17 @@ void RewardMiniPopupExecutor___c___CreatePopupInfoByUseAddRewardItem_b__14_0(
   TerminalPramsManager_c *v2; // x0
   struct QuestRewardInfo_array **p_UseAddRewardItemRewardInfos_k__BackingField; // x0
 
-  if ( (byte_4C31A3E & 1) == 0 )
+  if ( (byte_4C3CF8E & 1) == 0 )
   {
-    sub_1C32C20(&TerminalPramsManager_TypeInfo);
-    byte_4C31A3E = 1;
+    sub_1C37058(&TerminalPramsManager_TypeInfo);
+    byte_4C3CF8E = 1;
   }
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(TerminalPramsManager_TypeInfo);
-  if ( !byte_4C31A9A )
+  if ( !byte_4C3CFEA )
   {
-    sub_1C32C20(&TerminalPramsManager_TypeInfo);
-    byte_4C31A9A = 1;
+    sub_1C37058(&TerminalPramsManager_TypeInfo);
+    byte_4C3CFEA = 1;
   }
   v2 = TerminalPramsManager_TypeInfo;
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -727,7 +727,7 @@ void RewardMiniPopupExecutor___c___CreatePopupInfoByUseAddRewardItem_b__14_0(
   }
   p_UseAddRewardItemRewardInfos_k__BackingField = &v2->static_fields->_UseAddRewardItemRewardInfos_k__BackingField;
   *p_UseAddRewardItemRewardInfos_k__BackingField = 0;
-  sub_1C32BC4(p_UseAddRewardItemRewardInfos_k__BackingField, 0);
+  sub_1C36FFC(p_UseAddRewardItemRewardInfos_k__BackingField, 0);
 }
 
 
@@ -738,10 +738,10 @@ void RewardMiniPopupExecutor___c___CreatePopupInfoQuestPhaseReward_b__12_0(
   TerminalPramsManager_c *v2; // x0
   struct QuestRewardInfo_array **p_mQuestPhaseRewardInfos; // x0
 
-  if ( (byte_4C31A3C & 1) == 0 )
+  if ( (byte_4C3CF8C & 1) == 0 )
   {
-    sub_1C32C20(&TerminalPramsManager_TypeInfo);
-    byte_4C31A3C = 1;
+    sub_1C37058(&TerminalPramsManager_TypeInfo);
+    byte_4C3CF8C = 1;
   }
   v2 = TerminalPramsManager_TypeInfo;
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -751,7 +751,7 @@ void RewardMiniPopupExecutor___c___CreatePopupInfoQuestPhaseReward_b__12_0(
   }
   p_mQuestPhaseRewardInfos = &v2->static_fields->mQuestPhaseRewardInfos;
   *p_mQuestPhaseRewardInfos = 0;
-  sub_1C32BC4(p_mQuestPhaseRewardInfos, 0);
+  sub_1C36FFC(p_mQuestPhaseRewardInfos, 0);
 }
 
 
@@ -762,10 +762,10 @@ void RewardMiniPopupExecutor___c___CreatePopupInfoQuestReward_b__13_0(
   TerminalPramsManager_c *v2; // x0
   struct QuestRewardInfo_array **p_mQuestRewardInfos; // x0
 
-  if ( (byte_4C31A3D & 1) == 0 )
+  if ( (byte_4C3CF8D & 1) == 0 )
   {
-    sub_1C32C20(&TerminalPramsManager_TypeInfo);
-    byte_4C31A3D = 1;
+    sub_1C37058(&TerminalPramsManager_TypeInfo);
+    byte_4C3CF8D = 1;
   }
   v2 = TerminalPramsManager_TypeInfo;
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -775,5 +775,5 @@ void RewardMiniPopupExecutor___c___CreatePopupInfoQuestReward_b__13_0(
   }
   p_mQuestRewardInfos = &v2->static_fields->mQuestRewardInfos;
   *p_mQuestRewardInfos = 0;
-  sub_1C32BC4(p_mQuestRewardInfos, 0);
+  sub_1C36FFC(p_mQuestRewardInfos, 0);
 }

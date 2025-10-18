@@ -7,9 +7,9 @@ void ScriptBackLogListViewItem___ctor(
   int32_t v6; // w2
   const MethodInfo *v7; // x3
 
-  ListViewItem___ctor_43702564((ListViewItem_o *)this, index, 0);
+  ListViewItem___ctor_43804668((ListViewItem_o *)this, index, 0);
   this->fields.label = label;
-  sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.label, (int32_t)label, v6, v7);
+  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.label, (int32_t)label, v6, v7);
 }
 
 
@@ -28,12 +28,12 @@ System_String_o *ScriptBackLogListViewItem__ToString(ScriptBackLogListViewItem_o
   __int64 v6; // x11
 
   v2 = this;
-  if ( (byte_4C398EB & 1) == 0 )
+  if ( (byte_4C44EE5 & 1) == 0 )
   {
-    sub_1C32C20(&StringLiteral_21397/*"mainText "*/);
-    sub_1C32C20(&StringLiteral_20289/*"imageText "*/);
-    this = (ScriptBackLogListViewItem_o *)sub_1C32C20(&StringLiteral_1/*""*/);
-    byte_4C398EB = 1;
+    sub_1C37058(&StringLiteral_21400/*"mainText "*/);
+    sub_1C37058(&StringLiteral_20292/*"imageText "*/);
+    this = (ScriptBackLogListViewItem_o *)sub_1C37058(&StringLiteral_1/*""*/);
+    byte_4C44EE5 = 1;
   }
   label = v2->fields.label;
   if ( !label
@@ -43,15 +43,15 @@ System_String_o *ScriptBackLogListViewItem__ToString(ScriptBackLogListViewItem_o
                                                 0),
         (v4 = v2->fields.label) == 0) )
   {
-    sub_1C32E7C(this);
+    sub_1C372B4(this);
   }
-  v5 = (System_String_o **)&StringLiteral_20289/*"imageText "*/;
+  v5 = (System_String_o **)&StringLiteral_20292/*"imageText "*/;
   v6 = 120;
   if ( ((unsigned __int8)this & 1) != 0 )
     v6 = 136;
   else
-    v5 = (System_String_o **)&StringLiteral_21397/*"mainText "*/;
-  return System_String__Concat_63518544(*v5, *(System_String_o **)((char *)&v4->klass + v6), 0);
+    v5 = (System_String_o **)&StringLiteral_21400/*"mainText "*/;
+  return System_String__Concat_63561656(*v5, *(System_String_o **)((char *)&v4->klass + v6), 0);
 }
 
 

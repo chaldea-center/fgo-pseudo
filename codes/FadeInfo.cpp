@@ -31,18 +31,18 @@ void FadeInfo__OnGUI(FadeInfo_o *this, const MethodInfo *method)
   UnityEngine_Rect_o v24; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
   UnityEngine_Rect_o v25; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 
-  if ( (byte_4C36DBD & 1) == 0 )
+  if ( (byte_4C423AD & 1) == 0 )
   {
-    sub_1C32C20(&UnityEngine_Application_TypeInfo);
-    sub_1C32C20(&FadeLogger_TypeInfo);
-    sub_1C32C20(&UnityEngine_GUI_TypeInfo);
-    sub_1C32C20(&string___TypeInfo);
-    sub_1C32C20(&StringLiteral_1724/*"<size="*/);
-    sub_1C32C20(&StringLiteral_15919/*"[FADE]\n"*/);
-    sub_1C32C20(&StringLiteral_1/*""*/);
-    sub_1C32C20(&StringLiteral_1527/*"</size>"*/);
-    sub_1C32C20(&StringLiteral_1750/*">"*/);
-    byte_4C36DBD = 1;
+    sub_1C37058(&UnityEngine_Application_TypeInfo);
+    sub_1C37058(&FadeLogger_TypeInfo);
+    sub_1C37058(&UnityEngine_GUI_TypeInfo);
+    sub_1C37058(&string___TypeInfo);
+    sub_1C37058(&StringLiteral_1724/*"<size="*/);
+    sub_1C37058(&StringLiteral_15921/*"[FADE]\n"*/);
+    sub_1C37058(&StringLiteral_1/*""*/);
+    sub_1C37058(&StringLiteral_1527/*"</size>"*/);
+    sub_1C37058(&StringLiteral_1750/*">"*/);
+    byte_4C423AD = 1;
   }
   if ( !UnityEngine_Application_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Application_TypeInfo);
@@ -52,7 +52,7 @@ void FadeInfo__OnGUI(FadeInfo_o *this, const MethodInfo *method)
     if ( !FadeLogger_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(FadeLogger_TypeInfo);
     FadeLog = FadeLogger__GetFadeLog((const MethodInfo *)v3);
-    v5 = System_String__Concat_63518544((System_String_o *)StringLiteral_15919/*"[FADE]\n"*/, FadeLog, 0);
+    v5 = System_String__Concat_63561656((System_String_o *)StringLiteral_15921/*"[FADE]\n"*/, FadeLog, 0);
     v6 = this->fields.baseScale * (float)((float)UnityEngine_Screen__get_width(0) * 0.00097656);
     if ( !UnityEngine_GUI_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(UnityEngine_GUI_TypeInfo);
@@ -61,36 +61,36 @@ void FadeInfo__OnGUI(FadeInfo_o *this, const MethodInfo *method)
     v24.fields.m_Width = v6 * 660.0;
     v24.fields.m_Height = v6 * 825.0;
     UnityEngine_GUI__Box(v24, (System_String_o *)StringLiteral_1/*""*/, 0);
-    v7 = (System_String_o *)sub_1C32CC8(string___TypeInfo, 5);
+    v7 = (System_String_o *)sub_1C37100(string___TypeInfo, 5);
     if ( !v7 )
-      sub_1C32E7C(0);
+      sub_1C372B4(0);
     v10 = v7;
     if ( !LODWORD(v7[1].klass) )
       goto LABEL_18;
     v11 = StringLiteral_1724/*"<size="*/;
     v7[1].monitor = (void *)StringLiteral_1724/*"<size="*/;
-    sub_1C32BC4((CGThumbnailListItem_o *)&v7[1].monitor, v11, v8, v9);
+    sub_1C36FFC((CGThumbnailListItem_o *)&v7[1].monitor, v11, v8, v9);
     v23 = v6 * 18.0;
     v7 = System_Single__ToString(v6 * 18.0, (const MethodInfo *)&v23);
     if ( LODWORD(v10[1].klass) <= 1
       || (v10[1].fields = (System_String_Fields)v7,
-          sub_1C32BC4((CGThumbnailListItem_o *)&v10[1].fields, (int32_t)v7, v12, v13),
+          sub_1C36FFC((CGThumbnailListItem_o *)&v10[1].fields, (int32_t)v7, v12, v13),
           LODWORD(v10[1].klass) <= 2)
       || (v16 = StringLiteral_1750/*">"*/,
           v10[2].klass = (System_String_c *)StringLiteral_1750/*">"*/,
-          sub_1C32BC4((CGThumbnailListItem_o *)&v10[2], v16, v14, v15),
+          sub_1C36FFC((CGThumbnailListItem_o *)&v10[2], v16, v14, v15),
           LODWORD(v10[1].klass) <= 3)
       || (v10[2].monitor = v5,
-          sub_1C32BC4((CGThumbnailListItem_o *)&v10[2].monitor, (int32_t)v5, v17, v18),
+          sub_1C36FFC((CGThumbnailListItem_o *)&v10[2].monitor, (int32_t)v5, v17, v18),
           LODWORD(v10[1].klass) <= 4) )
     {
 LABEL_18:
-      sub_1C32E84(v7);
+      sub_1C372BC(v7);
     }
     v21 = StringLiteral_1527/*"</size>"*/;
     v10[2].fields = (System_String_Fields)StringLiteral_1527/*"</size>"*/;
-    sub_1C32BC4((CGThumbnailListItem_o *)&v10[2].fields, v21, v19, v20);
-    v22 = System_String__Concat_63559060((System_String_array *)v10, 0);
+    sub_1C36FFC((CGThumbnailListItem_o *)&v10[2].fields, v21, v19, v20);
+    v22 = System_String__Concat_63602172((System_String_array *)v10, 0);
     v25.fields.m_XMin = 10.0;
     v25.fields.m_YMin = 5.0;
     v25.fields.m_Width = v6 * 800.0;

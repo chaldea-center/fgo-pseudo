@@ -2,10 +2,10 @@ void EventTradePopularSweetsNotificationDialogComponent___ctor(
         EventTradePopularSweetsNotificationDialogComponent_o *this,
         const MethodInfo *method)
 {
-  if ( (byte_4C32440 & 1) == 0 )
+  if ( (byte_4C3DA2A & 1) == 0 )
   {
-    sub_1C32C20(&BaseDialog_TypeInfo);
-    byte_4C32440 = 1;
+    sub_1C37058(&BaseDialog_TypeInfo);
+    byte_4C3DA2A = 1;
   }
   if ( !BaseDialog_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(BaseDialog_TypeInfo);
@@ -28,7 +28,7 @@ void EventTradePopularSweetsNotificationDialogComponent__EndClose(
   if ( closeCallbackFunc )
   {
     *p_closeCallbackFunc = 0;
-    sub_1C32BC4(p_closeCallbackFunc, 0);
+    sub_1C36FFC(p_closeCallbackFunc, 0);
     ((void (__fastcall *)(intptr_t, intptr_t))v4->fields.invoke_impl)(v4->fields.method_code, v4->fields.method);
   }
 }
@@ -43,7 +43,7 @@ void EventTradePopularSweetsNotificationDialogComponent__Init(
 
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
   if ( !gameObject )
-    sub_1C32E7C(0);
+    sub_1C372B4(0);
   UnityEngine_GameObject__SetActive(gameObject, 0, 0);
   EventTradeListViewItemManager__CheckIsSerializeFieldNotNull((Il2CppObject *)this, v4);
   BaseDialog__Init((BaseDialog_o *)this, 0);
@@ -58,19 +58,19 @@ void EventTradePopularSweetsNotificationDialogComponent__OnClickCloseButton(
   System_Reflection_MethodBase_o *v4; // x0
   System_Action_o *v5; // x20
 
-  if ( (byte_4C3243E & 1) == 0 )
+  if ( (byte_4C3DA28 & 1) == 0 )
   {
-    sub_1C32C20(&System_Action_TypeInfo);
-    sub_1C32C20(&Method_EventTradePopularSweetsNotificationDialogComponent_EndClose__);
-    sub_1C32C20(&Method_EventTradePopularSweetsNotificationDialogComponent_OnClickCloseButton__);
-    byte_4C3243E = 1;
+    sub_1C37058(&System_Action_TypeInfo);
+    sub_1C37058(&Method_EventTradePopularSweetsNotificationDialogComponent_EndClose__);
+    sub_1C37058(&Method_EventTradePopularSweetsNotificationDialogComponent_OnClickCloseButton__);
+    byte_4C3DA28 = 1;
   }
   v3 = Method_EventTradePopularSweetsNotificationDialogComponent_OnClickCloseButton__;
   if ( (*((_BYTE *)Method_EventTradePopularSweetsNotificationDialogComponent_OnClickCloseButton__ + 83) & 2) != 0 )
-    v3 = (_QWORD *)sub_1C32C38(Method_EventTradePopularSweetsNotificationDialogComponent_OnClickCloseButton__);
-  v4 = (System_Reflection_MethodBase_o *)sub_1C32C04(v3, v3[4]);
+    v3 = (_QWORD *)sub_1C37070(Method_EventTradePopularSweetsNotificationDialogComponent_OnClickCloseButton__);
+  v4 = (System_Reflection_MethodBase_o *)sub_1C3703C(v3, v3[4]);
   OverwriteAssetSoundName__PlaySystemSe(v4, 0, 0, 0);
-  v5 = (System_Action_o *)sub_1C32E6C(System_Action_TypeInfo);
+  v5 = (System_Action_o *)sub_1C372A4(System_Action_TypeInfo);
   System_Action___ctor(
     v5,
     (Il2CppObject *)this,
@@ -86,13 +86,13 @@ void EventTradePopularSweetsNotificationDialogComponent__OnEnable(
 {
   UnityEngine_Transform_o *transform; // x0
 
-  if ( (byte_4C3243F & 1) == 0 )
+  if ( (byte_4C3DA29 & 1) == 0 )
   {
-    sub_1C32C20(&StringLiteral_15641/*"Window/CloseButton"*/);
-    byte_4C3243F = 1;
+    sub_1C37058(&StringLiteral_15643/*"Window/CloseButton"*/);
+    byte_4C3DA29 = 1;
   }
   transform = UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0);
-  AndroidBackKeyManager__AddBackBtn_44857896(transform, (System_String_o *)StringLiteral_15641/*"Window/CloseButton"*/, 0);
+  AndroidBackKeyManager__AddBackBtn_44960000(transform, (System_String_o *)StringLiteral_15643/*"Window/CloseButton"*/, 0);
 }
 
 
@@ -162,28 +162,28 @@ void EventTradePopularSweetsNotificationDialogComponent__Open(
   uint64_t v65; // [xsp+10h] [xbp-70h] BYREF
   uint64_t dateData; // [xsp+18h] [xbp-68h] BYREF
 
-  if ( (byte_4C3243D & 1) == 0 )
+  if ( (byte_4C3DA27 & 1) == 0 )
   {
-    sub_1C32C20(&System_Action_UISprite__TypeInfo);
-    sub_1C32C20(&AtlasManager_TypeInfo);
-    sub_1C32C20(&Method_BasicHelper_ForEach_UISprite___);
-    sub_1C32C20(&System_DateTime_TypeInfo);
-    sub_1C32C20(&EventTradeTimeCalculation_TypeInfo);
-    sub_1C32C20(&int_TypeInfo);
-    sub_1C32C20(&LocalizationManager_TypeInfo);
-    sub_1C32C20(&NetworkManager_TypeInfo);
-    sub_1C32C20(&object___TypeInfo);
-    sub_1C32C20(&Method_EventTradePopularSweetsNotificationDialogComponent___c__Open_b__8_0__);
-    sub_1C32C20(&EventTradePopularSweetsNotificationDialogComponent___c_TypeInfo);
-    sub_1C32C20(&StringLiteral_13482/*"TRADE_EVENT_POPULAR_NOTIFICATION_DIALOG_PICKUP_LIST_TITLE"*/);
-    sub_1C32C20(&StringLiteral_13483/*"TRADE_EVENT_POPULAR_NOTIFICATION_DIALOG_TITLE"*/);
-    sub_1C32C20(&StringLiteral_13481/*"TRADE_EVENT_POPULAR_NOTIFICATION_DIALOG_MESSAGE"*/);
-    sub_1C32C20(&StringLiteral_20493/*"img_popularitem_{0}"*/);
-    sub_1C32C20(&StringLiteral_3685/*"COMMON_CONFIRM_CLOSE"*/);
-    sub_1C32C20(&StringLiteral_18497/*"ddd"*/);
-    sub_1C32C20(&StringLiteral_20214/*"icon_popularitem_unknown"*/);
-    sub_1C32C20(&StringLiteral_25580/*"？？？"*/);
-    byte_4C3243D = 1;
+    sub_1C37058(&System_Action_UISprite__TypeInfo);
+    sub_1C37058(&AtlasManager_TypeInfo);
+    sub_1C37058(&Method_BasicHelper_ForEach_UISprite___);
+    sub_1C37058(&System_DateTime_TypeInfo);
+    sub_1C37058(&EventTradeTimeCalculation_TypeInfo);
+    sub_1C37058(&int_TypeInfo);
+    sub_1C37058(&LocalizationManager_TypeInfo);
+    sub_1C37058(&NetworkManager_TypeInfo);
+    sub_1C37058(&object___TypeInfo);
+    sub_1C37058(&Method_EventTradePopularSweetsNotificationDialogComponent___c__Open_b__8_0__);
+    sub_1C37058(&EventTradePopularSweetsNotificationDialogComponent___c_TypeInfo);
+    sub_1C37058(&StringLiteral_13483/*"TRADE_EVENT_POPULAR_NOTIFICATION_DIALOG_PICKUP_LIST_TITLE"*/);
+    sub_1C37058(&StringLiteral_13484/*"TRADE_EVENT_POPULAR_NOTIFICATION_DIALOG_TITLE"*/);
+    sub_1C37058(&StringLiteral_13482/*"TRADE_EVENT_POPULAR_NOTIFICATION_DIALOG_MESSAGE"*/);
+    sub_1C37058(&StringLiteral_20496/*"img_popularitem_{0}"*/);
+    sub_1C37058(&StringLiteral_3685/*"COMMON_CONFIRM_CLOSE"*/);
+    sub_1C37058(&StringLiteral_18500/*"ddd"*/);
+    sub_1C37058(&StringLiteral_20217/*"icon_popularitem_unknown"*/);
+    sub_1C37058(&StringLiteral_25585/*"？？？"*/);
+    byte_4C3DA27 = 1;
   }
   v65 = 0;
   Month = 0;
@@ -194,13 +194,13 @@ void EventTradePopularSweetsNotificationDialogComponent__Open(
   titleLabel = this->fields.titleLabel;
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-  gameObject = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)StringLiteral_13483/*"TRADE_EVENT_POPULAR_NOTIFICATION_DIALOG_TITLE"*/, 0);
+  gameObject = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)StringLiteral_13484/*"TRADE_EVENT_POPULAR_NOTIFICATION_DIALOG_TITLE"*/, 0);
   if ( !titleLabel )
     goto LABEL_69;
   UILabel__set_text(titleLabel, (System_String_o *)gameObject, 0);
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
-  v11.fields._dateData = NetworkManager__getLocalDateTime_41267832(updateTime, 0).fields._dateData;
+  v11.fields._dateData = NetworkManager__getLocalDateTime_41367312(updateTime, 0).fields._dateData;
   v12 = EventTradeTimeCalculation_TypeInfo;
   dateData = v11.fields._dateData;
   if ( !EventTradeTimeCalculation_TypeInfo->_2.cctor_finished )
@@ -214,8 +214,8 @@ void EventTradePopularSweetsNotificationDialogComponent__Open(
   v14.fields._dateData = (uint64_t)&dateData;
   v65 = System_DateTime__AddSeconds(v14, (double)ONE_DAY_SECOND, 0).fields._dateData;
   detailLabel = this->fields.detailLabel;
-  v16 = LocalizationManager__Get((System_String_o *)StringLiteral_13481/*"TRADE_EVENT_POPULAR_NOTIFICATION_DIALOG_MESSAGE"*/, 0);
-  v17 = (System_Object_array *)sub_1C32CC8(object___TypeInfo, 6);
+  v16 = LocalizationManager__Get((System_String_o *)StringLiteral_13482/*"TRADE_EVENT_POPULAR_NOTIFICATION_DIALOG_MESSAGE"*/, 0);
+  v17 = (System_Object_array *)sub_1C37100(object___TypeInfo, 6);
   v18.fields._dateData = (uint64_t)&dateData;
   Month = System_DateTime__get_Month(v18, 0);
   gameObject = (UnityEngine_GameObject_o *)System_Int32__ToString((int32_t)&Month, 0);
@@ -224,94 +224,94 @@ void EventTradePopularSweetsNotificationDialogComponent__Open(
   v19 = (Il2CppObject *)gameObject;
   if ( gameObject )
   {
-    gameObject = (UnityEngine_GameObject_o *)sub_1C32D5C(gameObject, v17->obj.klass->_1.element_class);
+    gameObject = (UnityEngine_GameObject_o *)sub_1C37194(gameObject, v17->obj.klass->_1.element_class);
     if ( !gameObject )
       goto LABEL_71;
   }
   if ( !LODWORD(v17->max_length) )
     goto LABEL_70;
   v17->m_Items[0] = v19;
-  sub_1C32BC4(v17->m_Items, v19);
+  sub_1C36FFC(v17->m_Items, v19);
   v20.fields._dateData = (uint64_t)&dateData;
   Month = System_DateTime__get_Day(v20, 0);
   gameObject = (UnityEngine_GameObject_o *)System_Int32__ToString((int32_t)&Month, 0);
   v21 = (Il2CppObject *)gameObject;
   if ( gameObject )
   {
-    gameObject = (UnityEngine_GameObject_o *)sub_1C32D5C(gameObject, v17->obj.klass->_1.element_class);
+    gameObject = (UnityEngine_GameObject_o *)sub_1C37194(gameObject, v17->obj.klass->_1.element_class);
     if ( !gameObject )
       goto LABEL_71;
   }
   if ( LODWORD(v17->max_length) <= 1 )
     goto LABEL_70;
   v17->m_Items[1] = v21;
-  sub_1C32BC4(&v17->m_Items[1], v21);
+  sub_1C36FFC(&v17->m_Items[1], v21);
   v22.fields._dateData = (uint64_t)&dateData;
-  gameObject = (UnityEngine_GameObject_o *)System_DateTime__ToString_64918340(
+  gameObject = (UnityEngine_GameObject_o *)System_DateTime__ToString_64961452(
                                              v22,
-                                             (System_String_o *)StringLiteral_18497/*"ddd"*/,
+                                             (System_String_o *)StringLiteral_18500/*"ddd"*/,
                                              0);
   v23 = (Il2CppObject *)gameObject;
   if ( gameObject )
   {
-    gameObject = (UnityEngine_GameObject_o *)sub_1C32D5C(gameObject, v17->obj.klass->_1.element_class);
+    gameObject = (UnityEngine_GameObject_o *)sub_1C37194(gameObject, v17->obj.klass->_1.element_class);
     if ( !gameObject )
       goto LABEL_71;
   }
   if ( LODWORD(v17->max_length) <= 2 )
     goto LABEL_70;
   v17->m_Items[2] = v23;
-  sub_1C32BC4(&v17->m_Items[2], v23);
+  sub_1C36FFC(&v17->m_Items[2], v23);
   v24.fields._dateData = (uint64_t)&v65;
   Month = System_DateTime__get_Month(v24, 0);
   gameObject = (UnityEngine_GameObject_o *)System_Int32__ToString((int32_t)&Month, 0);
   v25 = (Il2CppObject *)gameObject;
   if ( gameObject )
   {
-    gameObject = (UnityEngine_GameObject_o *)sub_1C32D5C(gameObject, v17->obj.klass->_1.element_class);
+    gameObject = (UnityEngine_GameObject_o *)sub_1C37194(gameObject, v17->obj.klass->_1.element_class);
     if ( !gameObject )
       goto LABEL_71;
   }
   if ( LODWORD(v17->max_length) <= 3 )
     goto LABEL_70;
   v17->m_Items[3] = v25;
-  sub_1C32BC4(&v17->m_Items[3], v25);
+  sub_1C36FFC(&v17->m_Items[3], v25);
   v26.fields._dateData = (uint64_t)&v65;
   Month = System_DateTime__get_Day(v26, 0);
   gameObject = (UnityEngine_GameObject_o *)System_Int32__ToString((int32_t)&Month, 0);
   v27 = (Il2CppObject *)gameObject;
   if ( gameObject )
   {
-    gameObject = (UnityEngine_GameObject_o *)sub_1C32D5C(gameObject, v17->obj.klass->_1.element_class);
+    gameObject = (UnityEngine_GameObject_o *)sub_1C37194(gameObject, v17->obj.klass->_1.element_class);
     if ( !gameObject )
       goto LABEL_71;
   }
   if ( LODWORD(v17->max_length) <= 4 )
     goto LABEL_70;
   v17->m_Items[4] = v27;
-  sub_1C32BC4(&v17->m_Items[4], v27);
+  sub_1C36FFC(&v17->m_Items[4], v27);
   v28.fields._dateData = (uint64_t)&v65;
-  gameObject = (UnityEngine_GameObject_o *)System_DateTime__ToString_64918340(
+  gameObject = (UnityEngine_GameObject_o *)System_DateTime__ToString_64961452(
                                              v28,
-                                             (System_String_o *)StringLiteral_18497/*"ddd"*/,
+                                             (System_String_o *)StringLiteral_18500/*"ddd"*/,
                                              0);
   v29 = (Il2CppObject *)gameObject;
   if ( gameObject )
   {
-    gameObject = (UnityEngine_GameObject_o *)sub_1C32D5C(gameObject, v17->obj.klass->_1.element_class);
+    gameObject = (UnityEngine_GameObject_o *)sub_1C37194(gameObject, v17->obj.klass->_1.element_class);
     if ( !gameObject )
     {
 LABEL_71:
-      v61 = sub_1C32EA0();
-      sub_1C32D48(v61, 0);
+      v61 = sub_1C372D8();
+      sub_1C37180(v61, 0);
     }
   }
   if ( LODWORD(v17->max_length) <= 5 )
 LABEL_70:
-    sub_1C32E84(gameObject);
+    sub_1C372BC(gameObject);
   v17->m_Items[5] = v29;
-  sub_1C32BC4(&v17->m_Items[5], v29);
-  gameObject = (UnityEngine_GameObject_o *)System_String__Format_63559972(v16, v17, 0);
+  sub_1C36FFC(&v17->m_Items[5], v29);
+  gameObject = (UnityEngine_GameObject_o *)System_String__Format_63603084(v16, v17, 0);
   if ( !detailLabel )
     goto LABEL_69;
   UILabel__set_text(detailLabel, (System_String_o *)gameObject, 0);
@@ -321,7 +321,7 @@ LABEL_70:
     goto LABEL_69;
   UILabel__set_text(closeButtonLb, (System_String_o *)gameObject, 0);
   pickupListLabel = this->fields.pickupListLabel;
-  gameObject = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)StringLiteral_13482/*"TRADE_EVENT_POPULAR_NOTIFICATION_DIALOG_PICKUP_LIST_TITLE"*/, 0);
+  gameObject = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)StringLiteral_13483/*"TRADE_EVENT_POPULAR_NOTIFICATION_DIALOG_PICKUP_LIST_TITLE"*/, 0);
   if ( !pickupListLabel )
     goto LABEL_69;
   UILabel__set_text(pickupListLabel, (System_String_o *)gameObject, 0);
@@ -342,7 +342,7 @@ LABEL_70:
       v32 = EventTradePopularSweetsNotificationDialogComponent___c_TypeInfo;
     }
     v35 = (Il2CppObject *)v32->static_fields->__9;
-    _9__8_0 = (System_Action_object__o *)sub_1C32E6C(System_Action_UISprite__TypeInfo);
+    _9__8_0 = (System_Action_object__o *)sub_1C372A4(System_Action_UISprite__TypeInfo);
     System_Action_object____ctor(
       _9__8_0,
       v35,
@@ -350,12 +350,12 @@ LABEL_70:
       0);
     static_fields = EventTradePopularSweetsNotificationDialogComponent___c_TypeInfo->static_fields;
     static_fields->__9__8_0 = (struct System_Action_UISprite__o *)_9__8_0;
-    sub_1C32BC4(&static_fields->__9__8_0, _9__8_0);
+    sub_1C36FFC(&static_fields->__9__8_0, _9__8_0);
   }
   BasicHelper__ForEach_object_(
     iconSpriteList,
     (System_Action_T__o *)_9__8_0,
-    (const MethodInfo_30C93B0 *)Method_BasicHelper_ForEach_UISprite___);
+    (const MethodInfo_30D3C18 *)Method_BasicHelper_ForEach_UISprite___);
   if ( !itemList )
     goto LABEL_69;
   if ( SLODWORD(itemList->max_length) >= 1 )
@@ -391,13 +391,13 @@ LABEL_70:
           break;
         v63 = fields[10];
         v51 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v63, v39, v40, v41, v42, v43, v44);
-        gameObject = (UnityEngine_GameObject_o *)System_String__Format((System_String_o *)StringLiteral_20493/*"img_popularitem_{0}"*/, v51, 0);
+        gameObject = (UnityEngine_GameObject_o *)System_String__Format((System_String_o *)StringLiteral_20496/*"img_popularitem_{0}"*/, v51, 0);
         max_length = itemList->max_length;
         v52 = (System_String_o *)gameObject;
       }
       else
       {
-        v52 = (System_String_o *)StringLiteral_20214/*"icon_popularitem_unknown"*/;
+        v52 = (System_String_o *)StringLiteral_20217/*"icon_popularitem_unknown"*/;
       }
       if ( v37 >= max_length )
         goto LABEL_70;
@@ -413,7 +413,7 @@ LABEL_70:
       }
       else
       {
-        v55 = (System_String_o **)&StringLiteral_25580/*"？？？"*/;
+        v55 = (System_String_o **)&StringLiteral_25585/*"？？？"*/;
       }
       v56 = this->fields.iconSpriteList;
       if ( !v56 )
@@ -425,7 +425,7 @@ LABEL_70:
       v59 = v56->m_Items[v37];
       if ( !AtlasManager_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo);
-      gameObject = (UnityEngine_GameObject_o *)AtlasManager__SetEventUI_40507600(v57, v59, v52, 0);
+      gameObject = (UnityEngine_GameObject_o *)AtlasManager__SetEventUI_40606984(v57, v59, v52, 0);
       nameLabelList = this->fields.nameLabelList;
       if ( !nameLabelList )
         break;
@@ -439,11 +439,11 @@ LABEL_70:
         goto LABEL_68;
     }
 LABEL_69:
-    sub_1C32E7C(gameObject);
+    sub_1C372B4(gameObject);
   }
 LABEL_68:
   this->fields.closeCallbackFunc = v62;
-  sub_1C32BC4(&this->fields.closeCallbackFunc, v62);
+  sub_1C36FFC(&this->fields.closeCallbackFunc, v62);
   BaseDialog__Open((BaseDialog_o *)this, 0, 0, 0, 0);
 }
 
@@ -452,15 +452,15 @@ void EventTradePopularSweetsNotificationDialogComponent___c___cctor(const Method
 {
   Il2CppObject *v1; // x19
 
-  if ( (byte_4C32441 & 1) == 0 )
+  if ( (byte_4C3DA2B & 1) == 0 )
   {
-    sub_1C32C20(&EventTradePopularSweetsNotificationDialogComponent___c_TypeInfo);
-    byte_4C32441 = 1;
+    sub_1C37058(&EventTradePopularSweetsNotificationDialogComponent___c_TypeInfo);
+    byte_4C3DA2B = 1;
   }
-  v1 = (Il2CppObject *)sub_1C32E6C(EventTradePopularSweetsNotificationDialogComponent___c_TypeInfo);
+  v1 = (Il2CppObject *)sub_1C372A4(EventTradePopularSweetsNotificationDialogComponent___c_TypeInfo);
   System_Object___ctor(v1, 0);
   EventTradePopularSweetsNotificationDialogComponent___c_TypeInfo->static_fields->__9 = (struct EventTradePopularSweetsNotificationDialogComponent___c_o *)v1;
-  sub_1C32BC4(EventTradePopularSweetsNotificationDialogComponent___c_TypeInfo->static_fields, v1);
+  sub_1C36FFC(EventTradePopularSweetsNotificationDialogComponent___c_TypeInfo->static_fields, v1);
 }
 
 
@@ -482,7 +482,7 @@ void EventTradePopularSweetsNotificationDialogComponent___c___Open_b__8_0(
                                                                              (UnityEngine_Component_o *)obj,
                                                                              0)) == 0 )
   {
-    sub_1C32E7C(this);
+    sub_1C372B4(this);
   }
   UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)this, 0, 0);
 }

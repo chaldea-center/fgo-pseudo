@@ -26,17 +26,17 @@ TweenColor_o *TweenColor__Begin(
   b = color.fields.b;
   g = color.fields.g;
   r = color.fields.r;
-  if ( (byte_4C3C23B & 1) == 0 )
+  if ( (byte_4C477B6 & 1) == 0 )
   {
-    sub_1C32C20(&Method_UITweener_Begin_TweenColor___);
-    byte_4C3C23B = 1;
+    sub_1C37058(&Method_UITweener_Begin_TweenColor___);
+    byte_4C477B6 = 1;
   }
   v10 = (TweenColor_o *)UITweener__Begin_object_(
                           go,
                           duration,
-                          (const MethodInfo_3198D08 *)Method_UITweener_Begin_TweenColor___);
+                          (const MethodInfo_31A3570 *)Method_UITweener_Begin_TweenColor___);
   if ( !v10 )
-    sub_1C32E7C(0);
+    sub_1C372B4(0);
   v12 = v10;
   v10->fields.from = TweenColor__get_value(v10, v11);
   v12->fields.to.fields.r = r;
@@ -73,24 +73,24 @@ void TweenColor__Cache(TweenColor_o *this, const MethodInfo *method)
   int32_t v19; // w2
   const MethodInfo *v20; // x3
   UnityEngine_Object_o *mLight; // x21
-  Il2CppObject *ComponentInChildren_object__51199524; // x0
+  Il2CppObject *ComponentInChildren_object__51242636; // x0
 
-  if ( (byte_4C3C238 & 1) == 0 )
+  if ( (byte_4C477B3 & 1) == 0 )
   {
-    sub_1C32C20(&Method_UnityEngine_Component_GetComponentInChildren_UIWidget___);
-    sub_1C32C20(&Method_UnityEngine_Component_GetComponent_Light___);
-    sub_1C32C20(&Method_UnityEngine_Component_GetComponent_Renderer___);
-    sub_1C32C20(&Method_UnityEngine_Component_GetComponent_SpriteRenderer___);
-    sub_1C32C20(&Method_UnityEngine_Component_GetComponent_UIWidget___);
-    sub_1C32C20(&UnityEngine_Object_TypeInfo);
-    byte_4C3C238 = 1;
+    sub_1C37058(&Method_UnityEngine_Component_GetComponentInChildren_UIWidget___);
+    sub_1C37058(&Method_UnityEngine_Component_GetComponent_Light___);
+    sub_1C37058(&Method_UnityEngine_Component_GetComponent_Renderer___);
+    sub_1C37058(&Method_UnityEngine_Component_GetComponent_SpriteRenderer___);
+    sub_1C37058(&Method_UnityEngine_Component_GetComponent_UIWidget___);
+    sub_1C37058(&UnityEngine_Object_TypeInfo);
+    byte_4C477B3 = 1;
   }
   this->fields.mCached = 1;
   Component_object = UnityEngine_Component__GetComponent_object_(
                        (UnityEngine_Component_o *)this,
-                       (const MethodInfo_30D3BC0 *)Method_UnityEngine_Component_GetComponent_UIWidget___);
+                       (const MethodInfo_30DE428 *)Method_UnityEngine_Component_GetComponent_UIWidget___);
   this->fields.mWidget = (struct UIWidget_o *)Component_object;
-  sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.mWidget, (int32_t)Component_object, v4, v5);
+  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.mWidget, (int32_t)Component_object, v4, v5);
   mWidget = (UnityEngine_Object_o *)this->fields.mWidget;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
@@ -98,9 +98,9 @@ void TweenColor__Cache(TweenColor_o *this, const MethodInfo *method)
   {
     v7 = UnityEngine_Component__GetComponent_object_(
            (UnityEngine_Component_o *)this,
-           (const MethodInfo_30D3BC0 *)Method_UnityEngine_Component_GetComponent_SpriteRenderer___);
+           (const MethodInfo_30DE428 *)Method_UnityEngine_Component_GetComponent_SpriteRenderer___);
     this->fields.mSr = (struct UnityEngine_SpriteRenderer_o *)v7;
-    sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.mSr, (int32_t)v7, v8, v9);
+    sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.mSr, (int32_t)v7, v8, v9);
     mSr = (UnityEngine_Object_o *)this->fields.mSr;
     if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
@@ -108,14 +108,14 @@ void TweenColor__Cache(TweenColor_o *this, const MethodInfo *method)
     {
       v11 = UnityEngine_Component__GetComponent_object_(
               (UnityEngine_Component_o *)this,
-              (const MethodInfo_30D3BC0 *)Method_UnityEngine_Component_GetComponent_Renderer___);
+              (const MethodInfo_30DE428 *)Method_UnityEngine_Component_GetComponent_Renderer___);
       if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
       v12 = UnityEngine_Object__op_Inequality((UnityEngine_Object_o *)v11, 0, 0);
       if ( v12 )
       {
         if ( !v11 )
-          sub_1C32E7C(v12);
+          sub_1C372B4(v12);
         material = UnityEngine_Renderer__get_material((UnityEngine_Renderer_o *)v11, 0);
         this->fields.mMat = material;
         v16 = (int)material;
@@ -125,22 +125,22 @@ void TweenColor__Cache(TweenColor_o *this, const MethodInfo *method)
       {
         v18 = UnityEngine_Component__GetComponent_object_(
                 (UnityEngine_Component_o *)this,
-                (const MethodInfo_30D3BC0 *)Method_UnityEngine_Component_GetComponent_Light___);
+                (const MethodInfo_30DE428 *)Method_UnityEngine_Component_GetComponent_Light___);
         this->fields.mLight = (struct UnityEngine_Light_o *)v18;
-        sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.mLight, (int32_t)v18, v19, v20);
+        sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.mLight, (int32_t)v18, v19, v20);
         mLight = (UnityEngine_Object_o *)this->fields.mLight;
         if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
           j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
         if ( !UnityEngine_Object__op_Equality(mLight, 0, 0) )
           return;
-        ComponentInChildren_object__51199524 = UnityEngine_Component__GetComponentInChildren_object__51199524(
+        ComponentInChildren_object__51242636 = UnityEngine_Component__GetComponentInChildren_object__51242636(
                                                  (UnityEngine_Component_o *)this,
-                                                 (const MethodInfo_30D3E24 *)Method_UnityEngine_Component_GetComponentInChildren_UIWidget___);
-        v16 = (int)ComponentInChildren_object__51199524;
-        this->fields.mWidget = (struct UIWidget_o *)ComponentInChildren_object__51199524;
+                                                 (const MethodInfo_30DE68C *)Method_UnityEngine_Component_GetComponentInChildren_UIWidget___);
+        v16 = (int)ComponentInChildren_object__51242636;
+        this->fields.mWidget = (struct UIWidget_o *)ComponentInChildren_object__51242636;
         p_mMat = (CGThumbnailListItem_o *)&this->fields.mWidget;
       }
-      sub_1C32BC4(p_mMat, v16, v14, v15);
+      sub_1C36FFC(p_mMat, v16, v14, v15);
     }
   }
 }
@@ -214,10 +214,10 @@ UnityEngine_Color_o TweenColor__get_value(TweenColor_o *this, const MethodInfo *
   UnityEngine_Object_o *mLight; // x20
   UnityEngine_Color_o result; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 
-  if ( (byte_4C3C239 & 1) == 0 )
+  if ( (byte_4C477B4 & 1) == 0 )
   {
-    sub_1C32C20(&UnityEngine_Object_TypeInfo);
-    byte_4C3C239 = 1;
+    sub_1C37058(&UnityEngine_Object_TypeInfo);
+    byte_4C477B4 = 1;
   }
   if ( !this->fields.mCached )
     TweenColor__Cache(this, method);
@@ -275,7 +275,7 @@ UnityEngine_Color_o TweenColor__get_value(TweenColor_o *this, const MethodInfo *
       }
     }
 LABEL_26:
-    sub_1C32E7C(v4);
+    sub_1C372B4(v4);
   }
   v5 = this->fields.mWidget;
   if ( !v5 )
@@ -321,10 +321,10 @@ void TweenColor__set_value(TweenColor_o *this, UnityEngine_Color_o value, const 
   b = value.fields.b;
   g = value.fields.g;
   r = value.fields.r;
-  if ( (byte_4C3C23A & 1) == 0 )
+  if ( (byte_4C477B5 & 1) == 0 )
   {
-    sub_1C32C20(&UnityEngine_Object_TypeInfo);
-    byte_4C3C23A = 1;
+    sub_1C37058(&UnityEngine_Object_TypeInfo);
+    byte_4C477B5 = 1;
   }
   if ( !this->fields.mCached )
     TweenColor__Cache(this, method);
@@ -344,7 +344,7 @@ void TweenColor__set_value(TweenColor_o *this, UnityEngine_Color_o value, const 
       return;
     }
 LABEL_27:
-    sub_1C32E7C(v10);
+    sub_1C372B4(v10);
   }
   mMat = (UnityEngine_Object_o *)this->fields.mMat;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )

@@ -13,35 +13,35 @@ void FSAnchor___ctor(FSAnchor_o *this, const MethodInfo *method)
   int32_t v13; // w2
   const MethodInfo *v14; // x3
 
-  if ( (byte_4C39382 & 1) == 0 )
+  if ( (byte_4C4497C & 1) == 0 )
   {
-    sub_1C32C20(&FSAnchor_Absolute_TypeInfo);
-    byte_4C39382 = 1;
+    sub_1C37058(&FSAnchor_Absolute_TypeInfo);
+    byte_4C4497C = 1;
   }
-  v3 = sub_1C32E6C(FSAnchor_Absolute_TypeInfo);
+  v3 = sub_1C372A4(FSAnchor_Absolute_TypeInfo);
   System_Object___ctor((Il2CppObject *)v3, 0);
   *(_BYTE *)(v3 + 16) = 1;
   *(_QWORD *)(v3 + 20) = 0x4400000000LL;
   this->fields.leftAbsolute = (struct FSAnchor_Absolute_o *)v3;
-  sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.leftAbsolute, v3, v4, v5);
-  v6 = sub_1C32E6C(FSAnchor_Absolute_TypeInfo);
+  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.leftAbsolute, v3, v4, v5);
+  v6 = sub_1C372A4(FSAnchor_Absolute_TypeInfo);
   System_Object___ctor((Il2CppObject *)v6, 0);
   *(_BYTE *)(v6 + 16) = 1;
   *(_QWORD *)(v6 + 20) = 0xFFFFFFBC00000000LL;
   this->fields.rightAbsolute = (struct FSAnchor_Absolute_o *)v6;
-  sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.rightAbsolute, v6, v7, v8);
-  v9 = sub_1C32E6C(FSAnchor_Absolute_TypeInfo);
+  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.rightAbsolute, v6, v7, v8);
+  v9 = sub_1C372A4(FSAnchor_Absolute_TypeInfo);
   System_Object___ctor((Il2CppObject *)v9, 0);
   *(_BYTE *)(v9 + 16) = 0;
   *(_QWORD *)(v9 + 20) = 0;
   this->fields.bottomAbsolute = (struct FSAnchor_Absolute_o *)v9;
-  sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.bottomAbsolute, v9, v10, v11);
-  v12 = sub_1C32E6C(FSAnchor_Absolute_TypeInfo);
+  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.bottomAbsolute, v9, v10, v11);
+  v12 = sub_1C372A4(FSAnchor_Absolute_TypeInfo);
   System_Object___ctor((Il2CppObject *)v12, 0);
   *(_BYTE *)(v12 + 16) = 0;
   *(_QWORD *)(v12 + 20) = 0;
   this->fields.topAbsolute = (struct FSAnchor_Absolute_o *)v12;
-  sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.topAbsolute, v12, v13, v14);
+  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.topAbsolute, v12, v13, v14);
   UnityEngine_MonoBehaviour___ctor((UnityEngine_MonoBehaviour_o *)this, 0);
 }
 
@@ -109,10 +109,10 @@ void FSAnchor__SetAnchor(FSAnchor_o *this, const MethodInfo *method)
   struct UIWidget_o *v52; // x9
   struct UIRect_AnchorPoint_o *v53; // x9
 
-  if ( (byte_4C39381 & 1) == 0 )
+  if ( (byte_4C4497B & 1) == 0 )
   {
-    sub_1C32C20(&UnityEngine_Object_TypeInfo);
-    byte_4C39381 = 1;
+    sub_1C37058(&UnityEngine_Object_TypeInfo);
+    byte_4C4497B = 1;
   }
   widget = (UnityEngine_Object_o *)this->fields.widget;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -165,10 +165,10 @@ void FSAnchor__SetAnchor(FSAnchor_o *this, const MethodInfo *method)
         bottomAnchor->fields.absolute = vista;
         if ( v7 < 1.7778 )
         {
-          if ( !byte_4C313D0 )
+          if ( !byte_4C3C920 )
           {
-            sub_1C32C20(&System_Math_TypeInfo);
-            byte_4C313D0 = 1;
+            sub_1C37058(&System_Math_TypeInfo);
+            byte_4C3C920 = 1;
           }
           v17 = (float)((float)((float)(1.7778 - v7) * 576.0) * 16.0) / 9.0;
           height = System_Math_TypeInfo;
@@ -198,10 +198,10 @@ void FSAnchor__SetAnchor(FSAnchor_o *this, const MethodInfo *method)
             if ( v7 < 1.7778 )
             {
               v24 = (float)((float)(1.7778 - v7) * 576.0) * 16.0;
-              if ( !byte_4C313D0 )
+              if ( !byte_4C3C920 )
               {
-                sub_1C32C20(&System_Math_TypeInfo);
-                byte_4C313D0 = 1;
+                sub_1C37058(&System_Math_TypeInfo);
+                byte_4C3C920 = 1;
               }
               v25 = v24 / 9.0;
               if ( !System_Math_TypeInfo->_2.cctor_finished )
@@ -230,10 +230,10 @@ void FSAnchor__SetAnchor(FSAnchor_o *this, const MethodInfo *method)
       v29->fields.absolute = leftAbsolute->fields.scope;
       if ( v7 > 2.3333 )
       {
-        if ( !byte_4C313D0 )
+        if ( !byte_4C3C920 )
         {
-          sub_1C32C20(&System_Math_TypeInfo);
-          byte_4C313D0 = 1;
+          sub_1C37058(&System_Math_TypeInfo);
+          byte_4C3C920 = 1;
         }
         v30 = (float)((float)((float)(v7 + -2.3333) * 512.0) * 9.0) * 0.0625;
         height = System_Math_TypeInfo;
@@ -281,10 +281,10 @@ LABEL_61:
     if ( v7 <= 2.3333 )
       goto LABEL_80;
     v40 = (float)((float)(v7 + -2.3333) * 512.0) * 9.0;
-    if ( !byte_4C313D0 )
+    if ( !byte_4C3C920 )
     {
-      sub_1C32C20(&System_Math_TypeInfo);
-      byte_4C313D0 = 1;
+      sub_1C37058(&System_Math_TypeInfo);
+      byte_4C3C920 = 1;
     }
     v41 = v40 * 0.0625;
     height = System_Math_TypeInfo;
@@ -341,7 +341,7 @@ LABEL_80:
           }
         }
 LABEL_91:
-        sub_1C32E7C(height);
+        sub_1C372B4(height);
       }
       v47 = v45->fields.absolute - v44;
     }

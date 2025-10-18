@@ -1,9 +1,9 @@
 void ContinueDeviceInputMenu___ctor(ContinueDeviceInputMenu_o *this, const MethodInfo *method)
 {
-  if ( (byte_4C328D3 & 1) == 0 )
+  if ( (byte_4C3DEBD & 1) == 0 )
   {
-    sub_1C32C20(&BaseMenu_TypeInfo);
-    byte_4C328D3 = 1;
+    sub_1C37058(&BaseMenu_TypeInfo);
+    byte_4C3DEBD = 1;
   }
   if ( !BaseMenu_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(BaseMenu_TypeInfo);
@@ -26,7 +26,7 @@ void ContinueDeviceInputMenu__Callback(
   if ( callbackFunc )
   {
     *p_callbackFunc = 0;
-    sub_1C32BC4(p_callbackFunc, 0);
+    sub_1C36FFC(p_callbackFunc, 0);
     ((void (__fastcall *)(intptr_t, System_String_o *, intptr_t))v4->fields.invoke_impl)(
       v4->fields.method_code,
       result,
@@ -39,11 +39,11 @@ void ContinueDeviceInputMenu__Close(ContinueDeviceInputMenu_o *this, const Metho
 {
   const MethodInfo *v2; // x2
 
-  ContinueDeviceInputMenu__Close_32965928(this, 0, v2);
+  ContinueDeviceInputMenu__Close_33061560(this, 0, v2);
 }
 
 
-void ContinueDeviceInputMenu__Close_32965928(
+void ContinueDeviceInputMenu__Close_33061560(
         ContinueDeviceInputMenu_o *this,
         System_Action_o *callback,
         const MethodInfo *method)
@@ -53,41 +53,41 @@ void ContinueDeviceInputMenu__Close_32965928(
   UnityEngine_Component_o *v7; // x20
   System_Action_o *v8; // x20
 
-  if ( (byte_4C328CF & 1) == 0 )
+  if ( (byte_4C3DEB9 & 1) == 0 )
   {
-    sub_1C32C20(&System_Action_TypeInfo);
-    sub_1C32C20(&Method_UnityEngine_Component_GetComponent_Collider___);
-    sub_1C32C20(&Method_UnityEngine_Component_GetComponent_UIInput___);
-    sub_1C32C20(&Method_ContinueDeviceInputMenu_EndClose__);
-    byte_4C328CF = 1;
+    sub_1C37058(&System_Action_TypeInfo);
+    sub_1C37058(&Method_UnityEngine_Component_GetComponent_Collider___);
+    sub_1C37058(&Method_UnityEngine_Component_GetComponent_UIInput___);
+    sub_1C37058(&Method_ContinueDeviceInputMenu_EndClose__);
+    byte_4C3DEB9 = 1;
   }
   this->fields.closeCallbackFunc = callback;
-  sub_1C32BC4(&this->fields.closeCallbackFunc, callback);
+  sub_1C36FFC(&this->fields.closeCallbackFunc, callback);
   passward1Input = (UnityEngine_Component_o *)this->fields.passward1Input;
   this->fields.state = 4;
   if ( !passward1Input
     || (passward1Input = (UnityEngine_Component_o *)UnityEngine_Component__GetComponent_object_(
                                                       passward1Input,
-                                                      (const MethodInfo_30D3BC0 *)Method_UnityEngine_Component_GetComponent_UIInput___),
+                                                      (const MethodInfo_30DE428 *)Method_UnityEngine_Component_GetComponent_UIInput___),
         !this->fields.passward2Input)
     || (v6 = passward1Input,
         passward1Input = (UnityEngine_Component_o *)UnityEngine_Component__GetComponent_object_(
                                                       (UnityEngine_Component_o *)this->fields.passward2Input,
-                                                      (const MethodInfo_30D3BC0 *)Method_UnityEngine_Component_GetComponent_UIInput___),
+                                                      (const MethodInfo_30DE428 *)Method_UnityEngine_Component_GetComponent_UIInput___),
         !v6)
     || (v7 = passward1Input,
         (passward1Input = (UnityEngine_Component_o *)UnityEngine_Component__GetComponent_object_(
                                                        v6,
-                                                       (const MethodInfo_30D3BC0 *)Method_UnityEngine_Component_GetComponent_Collider___)) == 0)
+                                                       (const MethodInfo_30DE428 *)Method_UnityEngine_Component_GetComponent_Collider___)) == 0)
     || (UnityEngine_Collider__set_enabled((UnityEngine_Collider_o *)passward1Input, 0, 0), !v7)
     || (passward1Input = (UnityEngine_Component_o *)UnityEngine_Component__GetComponent_object_(
                                                       v7,
-                                                      (const MethodInfo_30D3BC0 *)Method_UnityEngine_Component_GetComponent_Collider___)) == 0 )
+                                                      (const MethodInfo_30DE428 *)Method_UnityEngine_Component_GetComponent_Collider___)) == 0 )
   {
-    sub_1C32E7C(passward1Input);
+    sub_1C372B4(passward1Input);
   }
   UnityEngine_Collider__set_enabled((UnityEngine_Collider_o *)passward1Input, 0, 0);
-  v8 = (System_Action_o *)sub_1C32E6C(System_Action_TypeInfo);
+  v8 = (System_Action_o *)sub_1C372A4(System_Action_TypeInfo);
   System_Action___ctor(v8, (Il2CppObject *)this, Method_ContinueDeviceInputMenu_EndClose__, 0);
   BaseMenu__Close((BaseMenu_o *)this, v8, 0);
 }
@@ -103,7 +103,7 @@ void ContinueDeviceInputMenu__EndClose(ContinueDeviceInputMenu_o *this, const Me
   ContinueDeviceInputMenu__Init(this, method);
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
   if ( !gameObject )
-    sub_1C32E7C(0);
+    sub_1C372B4(0);
   UnityEngine_GameObject__SetActive(gameObject, 0, 0);
   closeCallbackFunc = this->fields.closeCallbackFunc;
   p_closeCallbackFunc = &this->fields.closeCallbackFunc;
@@ -111,7 +111,7 @@ void ContinueDeviceInputMenu__EndClose(ContinueDeviceInputMenu_o *this, const Me
   if ( closeCallbackFunc )
   {
     *p_closeCallbackFunc = 0;
-    sub_1C32BC4(p_closeCallbackFunc, 0);
+    sub_1C36FFC(p_closeCallbackFunc, 0);
     ((void (__fastcall *)(intptr_t, intptr_t))v5->fields.invoke_impl)(v5->fields.method_code, v5->fields.method);
   }
 }
@@ -123,34 +123,34 @@ void ContinueDeviceInputMenu__EndOpen(ContinueDeviceInputMenu_o *this, const Met
   UnityEngine_Component_o *v4; // x20
   UnityEngine_Component_o *v5; // x19
 
-  if ( (byte_4C328CE & 1) == 0 )
+  if ( (byte_4C3DEB8 & 1) == 0 )
   {
-    sub_1C32C20(&Method_UnityEngine_Component_GetComponent_Collider___);
-    sub_1C32C20(&Method_UnityEngine_Component_GetComponent_UIInput___);
-    byte_4C328CE = 1;
+    sub_1C37058(&Method_UnityEngine_Component_GetComponent_Collider___);
+    sub_1C37058(&Method_UnityEngine_Component_GetComponent_UIInput___);
+    byte_4C3DEB8 = 1;
   }
   passward1Input = (UnityEngine_Component_o *)this->fields.passward1Input;
   this->fields.state = 2;
   if ( !passward1Input
     || (passward1Input = (UnityEngine_Component_o *)UnityEngine_Component__GetComponent_object_(
                                                       passward1Input,
-                                                      (const MethodInfo_30D3BC0 *)Method_UnityEngine_Component_GetComponent_UIInput___),
+                                                      (const MethodInfo_30DE428 *)Method_UnityEngine_Component_GetComponent_UIInput___),
         !this->fields.passward2Input)
     || (v4 = passward1Input,
         passward1Input = (UnityEngine_Component_o *)UnityEngine_Component__GetComponent_object_(
                                                       (UnityEngine_Component_o *)this->fields.passward2Input,
-                                                      (const MethodInfo_30D3BC0 *)Method_UnityEngine_Component_GetComponent_UIInput___),
+                                                      (const MethodInfo_30DE428 *)Method_UnityEngine_Component_GetComponent_UIInput___),
         !v4)
     || (v5 = passward1Input,
         (passward1Input = (UnityEngine_Component_o *)UnityEngine_Component__GetComponent_object_(
                                                        v4,
-                                                       (const MethodInfo_30D3BC0 *)Method_UnityEngine_Component_GetComponent_Collider___)) == 0)
+                                                       (const MethodInfo_30DE428 *)Method_UnityEngine_Component_GetComponent_Collider___)) == 0)
     || (UnityEngine_Collider__set_enabled((UnityEngine_Collider_o *)passward1Input, 1, 0), !v5)
     || (passward1Input = (UnityEngine_Component_o *)UnityEngine_Component__GetComponent_object_(
                                                       v5,
-                                                      (const MethodInfo_30D3BC0 *)Method_UnityEngine_Component_GetComponent_Collider___)) == 0 )
+                                                      (const MethodInfo_30DE428 *)Method_UnityEngine_Component_GetComponent_Collider___)) == 0 )
   {
-    sub_1C32E7C(passward1Input);
+    sub_1C372B4(passward1Input);
   }
   UnityEngine_Collider__set_enabled((UnityEngine_Collider_o *)passward1Input, 1, 0);
 }
@@ -162,12 +162,12 @@ void ContinueDeviceInputMenu__Init(ContinueDeviceInputMenu_o *this, const Method
   UIInput_o *v4; // x21
   UIInput_o *v5; // x20
 
-  if ( (byte_4C328CC & 1) == 0 )
+  if ( (byte_4C3DEB6 & 1) == 0 )
   {
-    sub_1C32C20(&Method_UnityEngine_Component_GetComponent_Collider___);
-    sub_1C32C20(&Method_UnityEngine_Component_GetComponent_UIInput___);
-    sub_1C32C20(&StringLiteral_1/*""*/);
-    byte_4C328CC = 1;
+    sub_1C37058(&Method_UnityEngine_Component_GetComponent_Collider___);
+    sub_1C37058(&Method_UnityEngine_Component_GetComponent_UIInput___);
+    sub_1C37058(&StringLiteral_1/*""*/);
+    byte_4C3DEB6 = 1;
   }
   titleLabel = this->fields.titleLabel;
   if ( !titleLabel )
@@ -190,13 +190,13 @@ void ContinueDeviceInputMenu__Init(ContinueDeviceInputMenu_o *this, const Method
     goto LABEL_15;
   titleLabel = (UILabel_o *)UnityEngine_Component__GetComponent_object_(
                               (UnityEngine_Component_o *)titleLabel,
-                              (const MethodInfo_30D3BC0 *)Method_UnityEngine_Component_GetComponent_UIInput___);
+                              (const MethodInfo_30DE428 *)Method_UnityEngine_Component_GetComponent_UIInput___);
   if ( !this->fields.passward2Input )
     goto LABEL_15;
   v4 = (UIInput_o *)titleLabel;
   titleLabel = (UILabel_o *)UnityEngine_Component__GetComponent_object_(
                               (UnityEngine_Component_o *)this->fields.passward2Input,
-                              (const MethodInfo_30D3BC0 *)Method_UnityEngine_Component_GetComponent_UIInput___);
+                              (const MethodInfo_30DE428 *)Method_UnityEngine_Component_GetComponent_UIInput___);
   if ( !v4 )
     goto LABEL_15;
   v5 = (UIInput_o *)titleLabel;
@@ -205,16 +205,16 @@ void ContinueDeviceInputMenu__Init(ContinueDeviceInputMenu_o *this, const Method
     || (UIInput__set_value(v5, (System_String_o *)StringLiteral_1/*""*/, 0),
         (titleLabel = (UILabel_o *)UnityEngine_Component__GetComponent_object_(
                                      (UnityEngine_Component_o *)v4,
-                                     (const MethodInfo_30D3BC0 *)Method_UnityEngine_Component_GetComponent_Collider___)) == 0)
+                                     (const MethodInfo_30DE428 *)Method_UnityEngine_Component_GetComponent_Collider___)) == 0)
     || (UnityEngine_Collider__set_enabled((UnityEngine_Collider_o *)titleLabel, 0, 0),
         (titleLabel = (UILabel_o *)UnityEngine_Component__GetComponent_object_(
                                      (UnityEngine_Component_o *)v5,
-                                     (const MethodInfo_30D3BC0 *)Method_UnityEngine_Component_GetComponent_Collider___)) == 0)
+                                     (const MethodInfo_30DE428 *)Method_UnityEngine_Component_GetComponent_Collider___)) == 0)
     || (UnityEngine_Collider__set_enabled((UnityEngine_Collider_o *)titleLabel, 0, 0),
         (titleLabel = (UILabel_o *)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0)) == 0) )
   {
 LABEL_15:
-    sub_1C32E7C(titleLabel);
+    sub_1C372B4(titleLabel);
   }
   UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)titleLabel, 0, 0);
   this->fields.state = 0;
@@ -239,13 +239,13 @@ void ContinueDeviceInputMenu__OnChangeInput(ContinueDeviceInputMenu_o *this, con
   System_String_o *v15; // x0
   __int64 v16; // x1
 
-  if ( (byte_4C328D0 & 1) == 0 )
+  if ( (byte_4C3DEBA & 1) == 0 )
   {
-    sub_1C32C20(&LocalizationManager_TypeInfo);
-    sub_1C32C20(&StringLiteral_3816/*"CONTINUE_DEVICE_INPUT_PASSWARD_LOW"*/);
-    sub_1C32C20(&StringLiteral_3815/*"CONTINUE_DEVICE_INPUT_PASSWARD_DIFFERENT"*/);
-    sub_1C32C20(&StringLiteral_3823/*"CONTINUE_DEVICE_WARNING_MESSAGE"*/);
-    byte_4C328D0 = 1;
+    sub_1C37058(&LocalizationManager_TypeInfo);
+    sub_1C37058(&StringLiteral_3816/*"CONTINUE_DEVICE_INPUT_PASSWARD_LOW"*/);
+    sub_1C37058(&StringLiteral_3815/*"CONTINUE_DEVICE_INPUT_PASSWARD_DIFFERENT"*/);
+    sub_1C37058(&StringLiteral_3823/*"CONTINUE_DEVICE_WARNING_MESSAGE"*/);
+    byte_4C3DEBA = 1;
   }
   passward1Input = this->fields.passward1Input;
   if ( !passward1Input )
@@ -313,7 +313,7 @@ LABEL_19:
       goto LABEL_30;
     }
 LABEL_38:
-    sub_1C32E7C(passward1Input);
+    sub_1C372B4(passward1Input);
   }
   if ( !passward1Input )
     goto LABEL_38;
@@ -349,18 +349,18 @@ void ContinueDeviceInputMenu__OnClickCancel(ContinueDeviceInputMenu_o *this, con
   System_Reflection_MethodBase_o *v4; // x0
   const MethodInfo *v5; // x2
 
-  if ( (byte_4C328D2 & 1) == 0 )
+  if ( (byte_4C3DEBC & 1) == 0 )
   {
-    sub_1C32C20(&Method_ContinueDeviceInputMenu_OnClickCancel__);
-    byte_4C328D2 = 1;
+    sub_1C37058(&Method_ContinueDeviceInputMenu_OnClickCancel__);
+    byte_4C3DEBC = 1;
   }
   if ( this->fields.state == 2 )
   {
     this->fields.state = 3;
     v3 = Method_ContinueDeviceInputMenu_OnClickCancel__;
     if ( (*((_BYTE *)Method_ContinueDeviceInputMenu_OnClickCancel__ + 83) & 2) != 0 )
-      v3 = (_QWORD *)sub_1C32C38(Method_ContinueDeviceInputMenu_OnClickCancel__);
-    v4 = (System_Reflection_MethodBase_o *)sub_1C32C04(v3, v3[4]);
+      v3 = (_QWORD *)sub_1C37070(Method_ContinueDeviceInputMenu_OnClickCancel__);
+    v4 = (System_Reflection_MethodBase_o *)sub_1C3703C(v3, v3[4]);
     OverwriteAssetSoundName__PlaySystemSe(v4, 1, 0, 0);
     ContinueDeviceInputMenu__Callback(this, 0, v5);
   }
@@ -376,23 +376,23 @@ void ContinueDeviceInputMenu__OnClickDecide(ContinueDeviceInputMenu_o *this, con
   System_Reflection_MethodBase_o *v7; // x0
   const MethodInfo *v8; // x2
 
-  if ( (byte_4C328D1 & 1) == 0 )
+  if ( (byte_4C3DEBB & 1) == 0 )
   {
-    sub_1C32C20(&Method_ContinueDeviceInputMenu_OnClickDecide__);
-    byte_4C328D1 = 1;
+    sub_1C37058(&Method_ContinueDeviceInputMenu_OnClickDecide__);
+    byte_4C3DEBB = 1;
   }
   if ( this->fields.state == 2 )
   {
     passward1Input = this->fields.passward1Input;
     if ( !passward1Input )
-      sub_1C32E7C(0);
+      sub_1C372B4(0);
     Text = UILineInput__GetText(passward1Input, 0);
     this->fields.state = 3;
     v5 = Text;
     v6 = Method_ContinueDeviceInputMenu_OnClickDecide__;
     if ( (*((_BYTE *)Method_ContinueDeviceInputMenu_OnClickDecide__ + 83) & 2) != 0 )
-      v6 = (_QWORD *)sub_1C32C38(Method_ContinueDeviceInputMenu_OnClickDecide__);
-    v7 = (System_Reflection_MethodBase_o *)sub_1C32C04(v6, v6[4]);
+      v6 = (_QWORD *)sub_1C37070(Method_ContinueDeviceInputMenu_OnClickDecide__);
+    v7 = (System_Reflection_MethodBase_o *)sub_1C3703C(v6, v6[4]);
     OverwriteAssetSoundName__PlaySystemSe(v7, 0, 0, 0);
     ContinueDeviceInputMenu__Callback(this, v5, v8);
   }
@@ -418,33 +418,33 @@ void ContinueDeviceInputMenu__Open(
   System_Action_o *v16; // x20
   const MethodInfo *v17; // x1
 
-  if ( (byte_4C328CD & 1) == 0 )
+  if ( (byte_4C3DEB7 & 1) == 0 )
   {
-    sub_1C32C20(&System_Action_TypeInfo);
-    sub_1C32C20(&Method_UnityEngine_Component_GetComponent_Collider___);
-    sub_1C32C20(&Method_UnityEngine_Component_GetComponent_UIInput___);
-    sub_1C32C20(&Method_ContinueDeviceInputMenu_EndOpen__);
-    sub_1C32C20(&LocalizationManager_TypeInfo);
-    sub_1C32C20(&StringLiteral_3814/*"CONTINUE_DEVICE_INPUT_EXPLANATIOIN3"*/);
-    sub_1C32C20(&StringLiteral_3811/*"CONTINUE_DEVICE_INPUT_DECIDE"*/);
-    sub_1C32C20(&StringLiteral_3812/*"CONTINUE_DEVICE_INPUT_EXPLANATIOIN1"*/);
-    sub_1C32C20(&StringLiteral_3817/*"CONTINUE_DEVICE_INPUT_TITLE"*/);
-    sub_1C32C20(&StringLiteral_3813/*"CONTINUE_DEVICE_INPUT_EXPLANATIOIN2"*/);
-    sub_1C32C20(&StringLiteral_1/*""*/);
-    sub_1C32C20(&StringLiteral_3823/*"CONTINUE_DEVICE_WARNING_MESSAGE"*/);
-    byte_4C328CD = 1;
+    sub_1C37058(&System_Action_TypeInfo);
+    sub_1C37058(&Method_UnityEngine_Component_GetComponent_Collider___);
+    sub_1C37058(&Method_UnityEngine_Component_GetComponent_UIInput___);
+    sub_1C37058(&Method_ContinueDeviceInputMenu_EndOpen__);
+    sub_1C37058(&LocalizationManager_TypeInfo);
+    sub_1C37058(&StringLiteral_3814/*"CONTINUE_DEVICE_INPUT_EXPLANATIOIN3"*/);
+    sub_1C37058(&StringLiteral_3811/*"CONTINUE_DEVICE_INPUT_DECIDE"*/);
+    sub_1C37058(&StringLiteral_3812/*"CONTINUE_DEVICE_INPUT_EXPLANATIOIN1"*/);
+    sub_1C37058(&StringLiteral_3817/*"CONTINUE_DEVICE_INPUT_TITLE"*/);
+    sub_1C37058(&StringLiteral_3813/*"CONTINUE_DEVICE_INPUT_EXPLANATIOIN2"*/);
+    sub_1C37058(&StringLiteral_1/*""*/);
+    sub_1C37058(&StringLiteral_3823/*"CONTINUE_DEVICE_WARNING_MESSAGE"*/);
+    byte_4C3DEB7 = 1;
   }
   state = this->fields.state;
   if ( state == 3 )
   {
     this->fields.callbackFunc = callback;
-    sub_1C32BC4(&this->fields.callbackFunc, callback);
+    sub_1C36FFC(&this->fields.callbackFunc, callback);
     ContinueDeviceInputMenu__EndOpen(this, v17);
   }
   else if ( !state )
   {
     this->fields.callbackFunc = callback;
-    sub_1C32BC4(&this->fields.callbackFunc, callback);
+    sub_1C36FFC(&this->fields.callbackFunc, callback);
     decideButton = (System_String_o *)this->fields.decideButton;
     if ( !decideButton )
       goto LABEL_23;
@@ -490,33 +490,33 @@ void ContinueDeviceInputMenu__Open(
       goto LABEL_23;
     decideButton = (System_String_o *)UnityEngine_Component__GetComponent_object_(
                                         (UnityEngine_Component_o *)decideButton,
-                                        (const MethodInfo_30D3BC0 *)Method_UnityEngine_Component_GetComponent_UIInput___);
+                                        (const MethodInfo_30DE428 *)Method_UnityEngine_Component_GetComponent_UIInput___);
     if ( !this->fields.passward2Input )
       goto LABEL_23;
     v13 = (UIInput_o *)decideButton;
     decideButton = (System_String_o *)UnityEngine_Component__GetComponent_object_(
                                         (UnityEngine_Component_o *)this->fields.passward2Input,
-                                        (const MethodInfo_30D3BC0 *)Method_UnityEngine_Component_GetComponent_UIInput___);
+                                        (const MethodInfo_30DE428 *)Method_UnityEngine_Component_GetComponent_UIInput___);
     if ( !v13
       || (v14 = (UIInput_o *)decideButton, UIInput__set_value(v13, (System_String_o *)StringLiteral_1/*""*/, 0), !v14)
       || (UIInput__set_value(v14, (System_String_o *)StringLiteral_1/*""*/, 0),
           (decideButton = (System_String_o *)UnityEngine_Component__GetComponent_object_(
                                                (UnityEngine_Component_o *)v13,
-                                               (const MethodInfo_30D3BC0 *)Method_UnityEngine_Component_GetComponent_Collider___)) == 0)
+                                               (const MethodInfo_30DE428 *)Method_UnityEngine_Component_GetComponent_Collider___)) == 0)
       || (UnityEngine_Collider__set_enabled((UnityEngine_Collider_o *)decideButton, 0, 0),
           (decideButton = (System_String_o *)UnityEngine_Component__GetComponent_object_(
                                                (UnityEngine_Component_o *)v14,
-                                               (const MethodInfo_30D3BC0 *)Method_UnityEngine_Component_GetComponent_Collider___)) == 0) )
+                                               (const MethodInfo_30DE428 *)Method_UnityEngine_Component_GetComponent_Collider___)) == 0) )
     {
 LABEL_23:
-      sub_1C32E7C(decideButton);
+      sub_1C372B4(decideButton);
     }
     UnityEngine_Collider__set_enabled((UnityEngine_Collider_o *)decideButton, 0, 0);
     v15 = LocalizationManager__Get((System_String_o *)StringLiteral_3814/*"CONTINUE_DEVICE_INPUT_EXPLANATIOIN3"*/, 0);
     UIInput__set_defaultText(v13, v15, 0);
     UIInput__set_defaultText(v14, v15, 0);
     this->fields.state = 1;
-    v16 = (System_Action_o *)sub_1C32E6C(System_Action_TypeInfo);
+    v16 = (System_Action_o *)sub_1C372A4(System_Action_TypeInfo);
     System_Action___ctor(v16, (Il2CppObject *)this, Method_ContinueDeviceInputMenu_EndOpen__, 0);
     BaseMenu__Open((BaseMenu_o *)this, v16, 0);
   }
@@ -538,10 +538,10 @@ void ContinueDeviceInputMenu__add_callbackFunc(
   ContinueDeviceInputMenu_CallbackFunc_o *v12; // x1
   const MethodInfo *v13; // x2
 
-  if ( (byte_4C328CA & 1) == 0 )
+  if ( (byte_4C3DEB4 & 1) == 0 )
   {
-    sub_1C32C20(&ContinueDeviceInputMenu_CallbackFunc_TypeInfo);
-    byte_4C328CA = 1;
+    sub_1C37058(&ContinueDeviceInputMenu_CallbackFunc_TypeInfo);
+    byte_4C3DEB4 = 1;
   }
   callbackFunc = this->fields.callbackFunc;
   p_callbackFunc = &this->fields.callbackFunc;
@@ -554,13 +554,13 @@ void ContinueDeviceInputMenu__add_callbackFunc(
       if ( (ContinueDeviceInputMenu_CallbackFunc_c *)v8->klass != ContinueDeviceInputMenu_CallbackFunc_TypeInfo )
         break;
     }
-    v9 = sub_1C6CE78(p_callbackFunc, v8, v6);
+    v9 = sub_1C712B0(p_callbackFunc, v8, v6);
     v10 = v6 == (System_Delegate_o *)v9;
     v6 = (System_Delegate_o *)v9;
     if ( v10 )
       return;
   }
-  v11 = (ContinueDeviceInputMenu_o *)sub_1C3313C(v8);
+  v11 = (ContinueDeviceInputMenu_o *)sub_1C37574(v8);
   ContinueDeviceInputMenu__remove_callbackFunc(v11, v12, v13);
 }
 
@@ -579,10 +579,10 @@ void ContinueDeviceInputMenu__remove_callbackFunc(
   ContinueDeviceInputMenu_o *v11; // x0
   const MethodInfo *v12; // x1
 
-  if ( (byte_4C328CB & 1) == 0 )
+  if ( (byte_4C3DEB5 & 1) == 0 )
   {
-    sub_1C32C20(&ContinueDeviceInputMenu_CallbackFunc_TypeInfo);
-    byte_4C328CB = 1;
+    sub_1C37058(&ContinueDeviceInputMenu_CallbackFunc_TypeInfo);
+    byte_4C3DEB5 = 1;
   }
   callbackFunc = this->fields.callbackFunc;
   p_callbackFunc = &this->fields.callbackFunc;
@@ -595,13 +595,13 @@ void ContinueDeviceInputMenu__remove_callbackFunc(
       if ( (ContinueDeviceInputMenu_CallbackFunc_c *)v8->klass != ContinueDeviceInputMenu_CallbackFunc_TypeInfo )
         break;
     }
-    v9 = sub_1C6CE78(p_callbackFunc, v8, v6);
+    v9 = sub_1C712B0(p_callbackFunc, v8, v6);
     v10 = v6 == (System_Delegate_o *)v9;
     v6 = (System_Delegate_o *)v9;
     if ( v10 )
       return;
   }
-  v11 = (ContinueDeviceInputMenu_o *)sub_1C3313C(v8);
+  v11 = (ContinueDeviceInputMenu_o *)sub_1C37574(v8);
   ContinueDeviceInputMenu__EndOpen(v11, v12);
 }
 
@@ -622,14 +622,14 @@ void ContinueDeviceInputMenu_CallbackFunc___ctor(
   this->fields.method = method;
   this->fields.method_ptr = v4;
   this->fields.m_target = object;
-  sub_1C32BC4(&this->fields.m_target, object);
+  sub_1C36FFC(&this->fields.m_target, object);
   v8 = *(unsigned __int8 *)(method + 82);
   this->fields.method_code = (intptr_t)this;
-  if ( (sub_1C32CE0(method) & 1) != 0 )
+  if ( (sub_1C37118(method) & 1) != 0 )
   {
     if ( v8 == 1 )
     {
-      v9 = sub_1A6FD24;
+      v9 = sub_1A74054;
 LABEL_8:
       this->fields.invoke_impl = (intptr_t)v9;
       goto LABEL_9;
@@ -639,20 +639,20 @@ LABEL_8:
   {
     if ( !v8 )
     {
-      v9 = sub_1A6FD04;
+      v9 = sub_1A74034;
       goto LABEL_8;
     }
     if ( !object )
     {
-      v11 = sub_1C32E98(0, "Delegate to an instance method cannot have null 'this'.");
-      sub_1C32D48(v11, 0);
+      v11 = sub_1C372D0(0, "Delegate to an instance method cannot have null 'this'.");
+      sub_1C37180(v11, 0);
     }
   }
   m_target = this->fields.m_target;
   this->fields.invoke_impl = this->fields.method_ptr;
   this->fields.method_code = (intptr_t)m_target;
 LABEL_9:
-  this->fields.extra_arg = (intptr_t)sub_1A6FCBC;
+  this->fields.extra_arg = (intptr_t)sub_1A73FEC;
 }
 
 
@@ -666,7 +666,7 @@ System_IAsyncResult_o *ContinueDeviceInputMenu_CallbackFunc__BeginInvoke(
   System_String_o *v6; // [xsp+0h] [xbp-20h] BYREF
 
   v6 = result;
-  return (System_IAsyncResult_o *)sub_1C32BD4(this, &v6, callback, object);
+  return (System_IAsyncResult_o *)sub_1C3700C(this, &v6, callback, object);
 }
 
 
@@ -675,7 +675,7 @@ void ContinueDeviceInputMenu_CallbackFunc__EndInvoke(
         System_IAsyncResult_o *result,
         const MethodInfo *method)
 {
-  sub_1C32BD8(result, 0, method);
+  sub_1C37010(result, 0, method);
 }
 
 

@@ -14,14 +14,14 @@ void ShopTopListViewItem___ctor(
   int32_t v16; // w2
   const MethodInfo *v17; // x3
 
-  ListViewItem___ctor_43702564((ListViewItem_o *)this, index, 0);
+  ListViewItem___ctor_43804668((ListViewItem_o *)this, index, 0);
   this->fields.info = info;
-  sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.info, (int32_t)info, v12, v13);
+  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.info, (int32_t)info, v12, v13);
   this->fields._IsUse_k__BackingField = isUse;
   this->fields.shopListNotice = shopListNotice;
-  sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.shopListNotice, (int32_t)shopListNotice, v14, v15);
+  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.shopListNotice, (int32_t)shopListNotice, v14, v15);
   this->fields._ShopNoticeTween_k__BackingField = shopNoticeTween;
-  sub_1C32BC4(
+  sub_1C36FFC(
     (CGThumbnailListItem_o *)&this->fields._ShopNoticeTween_k__BackingField,
     (int32_t)shopNoticeTween,
     v16,
@@ -37,7 +37,7 @@ void ShopTopListViewItem__SetShopListNotice(
   const MethodInfo *v3; // x3
 
   this->fields.shopListNotice = shopListNotice;
-  sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.shopListNotice, (int32_t)shopListNotice, (int32_t)method, v3);
+  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.shopListNotice, (int32_t)shopListNotice, (int32_t)method, v3);
 }
 
 
@@ -71,7 +71,7 @@ System_String_o *ShopTopListViewItem__get_ImageName(ShopTopListViewItem_o *this,
 
   info = this->fields.info;
   if ( !info )
-    sub_1C32E7C(this);
+    sub_1C372B4(this);
   return info->fields._ImageName_k__BackingField;
 }
 
@@ -83,14 +83,14 @@ System_String_o *ShopTopListViewItem__get_InfoText(ShopTopListViewItem_o *this, 
   System_String_o *TextCode_k__BackingField; // x19
 
   v2 = this;
-  if ( (byte_4C33D0C & 1) == 0 )
+  if ( (byte_4C3F384 & 1) == 0 )
   {
-    this = (ShopTopListViewItem_o *)sub_1C32C20(&LocalizationManager_TypeInfo);
-    byte_4C33D0C = 1;
+    this = (ShopTopListViewItem_o *)sub_1C37058(&LocalizationManager_TypeInfo);
+    byte_4C3F384 = 1;
   }
   info = v2->fields.info;
   if ( !info )
-    sub_1C32E7C(this);
+    sub_1C372B4(this);
   TextCode_k__BackingField = info->fields._TextCode_k__BackingField;
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
@@ -104,7 +104,7 @@ bool ShopTopListViewItem__get_IsBlank(ShopTopListViewItem_o *this, const MethodI
 
   info = this->fields.info;
   if ( !info )
-    sub_1C32E7C(this);
+    sub_1C372B4(this);
   return info->fields._Kind_k__BackingField == 24;
 }
 
@@ -124,28 +124,28 @@ bool ShopTopListViewItem__get_IsPeriod(ShopTopListViewItem_o *this, const Method
   struct ShopTopItemInfo_o *info; // x8
 
   v2 = this;
-  if ( (byte_4C33D0D & 1) == 0 )
+  if ( (byte_4C3F385 & 1) == 0 )
   {
-    sub_1C32C20(&Method_DataManager_GetMasterData_EventMaster___);
-    this = (ShopTopListViewItem_o *)sub_1C32C20(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-    byte_4C33D0D = 1;
+    sub_1C37058(&Method_DataManager_GetMasterData_EventMaster___);
+    this = (ShopTopListViewItem_o *)sub_1C37058(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    byte_4C3F385 = 1;
   }
   info = v2->fields.info;
   if ( !info )
     goto LABEL_9;
   if ( info->fields._Kind_k__BackingField == 5 )
   {
-    this = (ShopTopListViewItem_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39E2904 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    this = (ShopTopListViewItem_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39ED16C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
     if ( this )
     {
       this = (ShopTopListViewItem_o *)DataManager__GetMasterData_object_(
                                         (DataManager_o *)this,
-                                        (const MethodInfo_30DD3F0 *)Method_DataManager_GetMasterData_EventMaster___);
+                                        (const MethodInfo_30E7C58 *)Method_DataManager_GetMasterData_EventMaster___);
       if ( this )
         return EventMaster__IsEnableEventShop((EventMaster_o *)this, 0);
     }
 LABEL_9:
-    sub_1C32E7C(this);
+    sub_1C372B4(this);
   }
   return 0;
 }
@@ -225,7 +225,7 @@ int32_t ShopTopListViewItem__get_ShopType(ShopTopListViewItem_o *this, const Met
 
   info = this->fields.info;
   if ( !info )
-    sub_1C32E7C(this);
+    sub_1C372B4(this);
   return info->fields._ShopType_k__BackingField;
 }
 
@@ -236,7 +236,7 @@ int32_t ShopTopListViewItem__get_State(ShopTopListViewItem_o *this, const Method
 
   info = this->fields.info;
   if ( !info )
-    sub_1C32E7C(this);
+    sub_1C372B4(this);
   return info->fields._State_k__BackingField;
 }
 
@@ -255,7 +255,7 @@ void ShopTopListViewItem__set_ShopNoticeTween(
   const MethodInfo *v3; // x3
 
   this->fields._ShopNoticeTween_k__BackingField = value;
-  sub_1C32BC4(
+  sub_1C36FFC(
     (CGThumbnailListItem_o *)&this->fields._ShopNoticeTween_k__BackingField,
     (int32_t)value,
     (int32_t)method,

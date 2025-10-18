@@ -1,9 +1,9 @@
 void SvtClassAttri___cctor(const MethodInfo *method)
 {
-  if ( (byte_4C368E6 & 1) == 0 )
+  if ( (byte_4C41ED6 & 1) == 0 )
   {
-    sub_1C32C20(&SvtClassAttri_TypeInfo);
-    byte_4C368E6 = 1;
+    sub_1C37058(&SvtClassAttri_TypeInfo);
+    byte_4C41ED6 = 1;
   }
   SvtClassAttri_TypeInfo->static_fields->MAX_EXP_UP_RARITY = 5;
 }
@@ -58,19 +58,19 @@ float SvtClassAttri__getMagnification(int32_t attack, int32_t defense, const Met
   int32_t RelationId; // w20
   int32_t v8; // w1
 
-  if ( (byte_4C368E5 & 1) == 0 )
+  if ( (byte_4C41ED5 & 1) == 0 )
   {
-    sub_1C32C20(&Method_DataManager_GetMasterData_ServantClassMaster___);
-    sub_1C32C20(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-    byte_4C368E5 = 1;
+    sub_1C37058(&Method_DataManager_GetMasterData_ServantClassMaster___);
+    sub_1C37058(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    byte_4C41ED5 = 1;
   }
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39E2904 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39ED16C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance
     || (Instance = DataManager__GetMasterData_object_(
                      (DataManager_o *)Instance,
-                     (const MethodInfo_30DD3F0 *)Method_DataManager_GetMasterData_ServantClassMaster___)) == 0 )
+                     (const MethodInfo_30E7C58 *)Method_DataManager_GetMasterData_ServantClassMaster___)) == 0 )
   {
-    sub_1C32E7C(Instance);
+    sub_1C372B4(Instance);
   }
   v6 = (ServantClassMaster_o *)Instance;
   RelationId = ServantClassMaster__getRelationId((ServantClassMaster_o *)Instance, attack, 0);

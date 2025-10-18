@@ -1,9 +1,9 @@
 void UISprite___ctor(UISprite_o *this, const MethodInfo *method)
 {
-  if ( (byte_4C3C311 & 1) == 0 )
+  if ( (byte_4C4788C & 1) == 0 )
   {
-    sub_1C32C20(&UIBasicSprite_TypeInfo);
-    byte_4C3C311 = 1;
+    sub_1C37058(&UIBasicSprite_TypeInfo);
+    byte_4C4788C = 1;
   }
   this->fields.mFillCenter = 1;
   if ( !UIBasicSprite_TypeInfo->_2.cctor_finished )
@@ -32,19 +32,19 @@ UISpriteData_o *UISprite__GetAtlasSprite(UISprite_o *this, const MethodInfo *met
   System_String_o *v18; // x0
   Il2CppObject *v19; // x19
 
-  if ( (byte_4C3C30D & 1) == 0 )
+  if ( (byte_4C47888 & 1) == 0 )
   {
-    sub_1C32C20(&UnityEngine_Debug_TypeInfo);
-    sub_1C32C20(&Method_System_Collections_Generic_List_UISpriteData__get_Count__);
-    sub_1C32C20(&Method_System_Collections_Generic_List_UISpriteData__get_Item__);
-    sub_1C32C20(&UnityEngine_Object_TypeInfo);
-    sub_1C32C20(&StringLiteral_298/*" seems to have a null sprite!"*/);
-    byte_4C3C30D = 1;
+    sub_1C37058(&UnityEngine_Debug_TypeInfo);
+    sub_1C37058(&Method_System_Collections_Generic_List_UISpriteData__get_Count__);
+    sub_1C37058(&Method_System_Collections_Generic_List_UISpriteData__get_Item__);
+    sub_1C37058(&UnityEngine_Object_TypeInfo);
+    sub_1C37058(&StringLiteral_298/*" seems to have a null sprite!"*/);
+    byte_4C47888 = 1;
   }
   if ( !this->fields.mSpriteSet )
   {
     this->fields.mSprite = 0;
-    sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.mSprite, 0, v2, v3);
+    sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.mSprite, 0, v2, v3);
   }
   if ( this->fields.mSprite )
     return this->fields.mSprite;
@@ -83,7 +83,7 @@ UISpriteData_o *UISprite__GetAtlasSprite(UISprite_o *this, const MethodInfo *met
   result = (UISpriteData_o *)System_Collections_Generic_List_object___get_Item(
                                (System_Collections_Generic_List_object__o *)spriteList,
                                0,
-                               (const MethodInfo_37984EC *)Method_System_Collections_Generic_List_UISpriteData__get_Item__);
+                               (const MethodInfo_37A2D54 *)Method_System_Collections_Generic_List_UISpriteData__get_Item__);
   if ( !result )
     return result;
   UISprite__SetAtlasSprite(this, result, v13);
@@ -92,15 +92,15 @@ UISpriteData_o *UISprite__GetAtlasSprite(UISprite_o *this, const MethodInfo *met
   {
     name = mSprite->fields.name;
     *p_mSpriteName = name;
-    sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.mSpriteName, (int32_t)name, v14, v15);
+    sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.mSpriteName, (int32_t)name, v14, v15);
     return this->fields.mSprite;
   }
   spriteList = this->fields.mAtlas;
   if ( !spriteList )
 LABEL_28:
-    sub_1C32E7C(spriteList);
+    sub_1C372B4(spriteList);
   v18 = UnityEngine_Object__get_name((UnityEngine_Object_o *)spriteList, 0);
-  v19 = (Il2CppObject *)System_String__Concat_63518544(v18, (System_String_o *)StringLiteral_298/*" seems to have a null sprite!"*/, 0);
+  v19 = (Il2CppObject *)System_String__Concat_63561656(v18, (System_String_o *)StringLiteral_298/*" seems to have a null sprite!"*/, 0);
   if ( !UnityEngine_Debug_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Debug_TypeInfo);
   UnityEngine_Debug__LogError(v19, 0);
@@ -137,10 +137,10 @@ void UISprite__MakePixelPerfect(UISprite_o *this, const MethodInfo *method)
   int32_t v27; // w20
   double iptr; // [xsp+8h] [xbp-48h] BYREF
 
-  if ( (byte_4C3C30F & 1) == 0 )
+  if ( (byte_4C4788A & 1) == 0 )
   {
-    sub_1C32C20(&UnityEngine_Object_TypeInfo);
-    byte_4C3C30F = 1;
+    sub_1C37058(&UnityEngine_Object_TypeInfo);
+    byte_4C4788A = 1;
   }
   if ( UISprite__GetAtlasSprite(this, method) )
   {
@@ -170,10 +170,10 @@ void UISprite__MakePixelPerfect(UISprite_o *this, const MethodInfo *method)
                      this->klass->vtable._42_get_pixelSize.method);
               v9 = *(float *)&v8;
               v10 = (float)(v5->fields.paddingLeft + v5->fields.width + v5->fields.paddingRight);
-              if ( !byte_4C32B16 )
+              if ( !byte_4C3E100 )
               {
-                sub_1C32C20(&System_Math_TypeInfo);
-                byte_4C32B16 = 1;
+                sub_1C37058(&System_Math_TypeInfo);
+                byte_4C3E100 = 1;
               }
               v11 = v9 * v10;
               if ( !System_Math_TypeInfo->_2.cctor_finished )
@@ -213,10 +213,10 @@ LABEL_30:
                                  this,
                                  this->klass->vtable._42_get_pixelSize.method));
               v19 = (float)(v5->fields.paddingTop + v5->fields.height + v5->fields.paddingBottom);
-              if ( !byte_4C32B16 )
+              if ( !byte_4C3E100 )
               {
-                sub_1C32C20(&System_Math_TypeInfo);
-                byte_4C32B16 = 1;
+                sub_1C37058(&System_Math_TypeInfo);
+                byte_4C3E100 = 1;
               }
               v20 = v18 * v19;
               if ( !System_Math_TypeInfo->_2.cctor_finished )
@@ -271,9 +271,9 @@ void UISprite__OnDestroy(UISprite_o *this, const MethodInfo *method)
   const MethodInfo *v6; // x3
 
   this->fields.mAtlas = 0;
-  sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.mAtlas, 0, v2, v3);
+  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.mAtlas, 0, v2, v3);
   this->fields.mSprite = 0;
-  sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.mSprite, 0, v5, v6);
+  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.mSprite, 0, v5, v6);
 }
 
 
@@ -322,10 +322,10 @@ void UISprite__OnFill(
   UnityEngine_Rect_o v44; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
   UnityEngine_Rect_o v45; // 0:s4.4,4:s5.4,8:s6.4,12:s7.4
 
-  if ( (byte_4C3C310 & 1) == 0 )
+  if ( (byte_4C4788B & 1) == 0 )
   {
-    sub_1C32C20(&UnityEngine_Object_TypeInfo);
-    byte_4C3C310 = 1;
+    sub_1C37058(&UnityEngine_Object_TypeInfo);
+    byte_4C4788B = 1;
   }
   v9 = (UnityEngine_Object_o *)((__int64 (__fastcall *)(UISprite_o *, const MethodInfo *, BetterList_Vector2__o *, BetterList_Color32__o *, const MethodInfo *))this->klass->vtable._26_get_mainTexture.methodPtr)(
                                  this,
@@ -346,7 +346,7 @@ void UISprite__OnFill(
         goto LABEL_14;
       Sprite = UIAtlas__GetSprite(mAtlas, this->fields.mSpriteName, v11);
       this->fields.mSprite = Sprite;
-      sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.mSprite, (int32_t)Sprite, v14, v15);
+      sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.mSprite, (int32_t)Sprite, v14, v15);
       mSprite = this->fields.mSprite;
       if ( !mSprite )
         return;
@@ -412,7 +412,7 @@ void UISprite__OnFill(
       }
     }
 LABEL_14:
-    sub_1C32E7C(mAtlas);
+    sub_1C372B4(mAtlas);
   }
 }
 
@@ -438,7 +438,7 @@ void UISprite__OnUpdate(UISprite_o *this, const MethodInfo *method)
   {
     this->fields.mSpriteSet = 1;
     this->fields.mSprite = 0;
-    sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.mSprite, 0, v3, v4);
+    sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.mSprite, 0, v3, v4);
     this->fields.mChanged = 1;
   }
 }
@@ -457,10 +457,10 @@ void UISprite__SetAtlasSprite(UISprite_o *this, UISpriteData_o *sp, const Method
   struct System_String_o **p_name; // x8
   struct System_String_o *v14; // x1
 
-  if ( (byte_4C3C30E & 1) == 0 )
+  if ( (byte_4C47889 & 1) == 0 )
   {
-    sub_1C32C20(&StringLiteral_1/*""*/);
-    byte_4C3C30E = 1;
+    sub_1C37058(&StringLiteral_1/*""*/);
+    byte_4C47889 = 1;
   }
   p_mSprite = &this->fields.mSprite;
   this->fields.mChanged = 1;
@@ -468,9 +468,9 @@ void UISprite__SetAtlasSprite(UISprite_o *this, UISpriteData_o *sp, const Method
   if ( sp )
   {
     *p_mSprite = sp;
-    sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.mSprite, (int32_t)sp, (int32_t)method, v3);
+    sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.mSprite, (int32_t)sp, (int32_t)method, v3);
     if ( !*p_mSprite )
-      sub_1C32E7C(v7);
+      sub_1C372B4(v7);
     name = (*p_mSprite)->fields.name;
     p_mSpriteName = (CGThumbnailListItem_o *)&this->fields.mSpriteName;
     this->fields.mSpriteName = name;
@@ -484,12 +484,12 @@ void UISprite__SetAtlasSprite(UISprite_o *this, UISpriteData_o *sp, const Method
       p_name = (struct System_String_o **)&StringLiteral_1/*""*/;
     v14 = *p_name;
     this->fields.mSpriteName = *p_name;
-    sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.mSpriteName, (int32_t)v14, (int32_t)method, v3);
+    sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.mSpriteName, (int32_t)v14, (int32_t)method, v3);
     this->fields.mSprite = 0;
     p_mSpriteName = (CGThumbnailListItem_o *)&this->fields.mSprite;
     LODWORD(name) = 0;
   }
-  sub_1C32BC4(p_mSpriteName, (int32_t)name, v8, v9);
+  sub_1C36FFC(p_mSpriteName, (int32_t)name, v8, v9);
 }
 
 
@@ -591,10 +591,10 @@ UnityEngine_Vector4_o UISprite__get_drawingDimensions(UISprite_o *this, const Me
   float v60; // s3
   UnityEngine_Vector4_o result; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 
-  if ( (byte_4C3C30B & 1) == 0 )
+  if ( (byte_4C47886 & 1) == 0 )
   {
-    sub_1C32C20(&UnityEngine_Object_TypeInfo);
-    byte_4C3C30B = 1;
+    sub_1C37058(&UnityEngine_Object_TypeInfo);
+    byte_4C47886 = 1;
   }
   pivotOffset = UIWidget__get_pivotOffset((UIWidget_o *)this, 0);
   mWidth = (float)this->fields.mWidth;
@@ -611,7 +611,7 @@ UnityEngine_Vector4_o UISprite__get_drawingDimensions(UISprite_o *this, const Me
     {
       mSprite = this->fields.mSprite;
       if ( !mSprite )
-        sub_1C32E7C(AtlasSprite);
+        sub_1C372B4(AtlasSprite);
       paddingLeft = mSprite->fields.paddingLeft;
       paddingRight = mSprite->fields.paddingRight;
       paddingTop = mSprite->fields.paddingTop;
@@ -678,10 +678,10 @@ UnityEngine_Vector4_o UISprite__get_drawingDimensions(UISprite_o *this, const Me
   }
   else
   {
-    if ( !byte_4C316D7 )
+    if ( !byte_4C3CC27 )
     {
-      sub_1C32C20(&UnityEngine_Vector4_TypeInfo);
-      byte_4C316D7 = 1;
+      sub_1C37058(&UnityEngine_Vector4_TypeInfo);
+      byte_4C3CC27 = 1;
     }
     static_fields = UnityEngine_Vector4_TypeInfo->static_fields;
     x = static_fields->zeroVector.fields.x;
@@ -747,10 +747,10 @@ UnityEngine_Material_o *UISprite__get_material(UISprite_o *this, const MethodInf
   const MethodInfo *v4; // x1
   UIAtlas_o *v5; // x0
 
-  if ( (byte_4C3C307 & 1) == 0 )
+  if ( (byte_4C47882 & 1) == 0 )
   {
-    sub_1C32C20(&UnityEngine_Object_TypeInfo);
-    byte_4C3C307 = 1;
+    sub_1C37058(&UnityEngine_Object_TypeInfo);
+    byte_4C47882 = 1;
   }
   mAtlas = (UnityEngine_Object_o *)this->fields.mAtlas;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -759,7 +759,7 @@ UnityEngine_Material_o *UISprite__get_material(UISprite_o *this, const MethodInf
     return 0;
   v5 = this->fields.mAtlas;
   if ( !v5 )
-    sub_1C32E7C(0);
+    sub_1C372B4(0);
   return UIAtlas__get_spriteMaterial(v5, v4);
 }
 
@@ -804,10 +804,10 @@ int32_t UISprite__get_minHeight(UISprite_o *this, const MethodInfo *method)
          this->klass->vtable._42_get_pixelSize.method);
   v8 = v4 * v7;
   v9 = v6 * v7;
-  if ( !byte_4C32B16 )
+  if ( !byte_4C3E100 )
   {
-    sub_1C32C20(&System_Math_TypeInfo);
-    byte_4C32B16 = 1;
+    sub_1C37058(&System_Math_TypeInfo);
+    byte_4C3E100 = 1;
   }
   v10 = v8 + v9;
   if ( !System_Math_TypeInfo->_2.cctor_finished )
@@ -893,10 +893,10 @@ int32_t UISprite__get_minWidth(UISprite_o *this, const MethodInfo *method)
          this->klass->vtable._42_get_pixelSize.method);
   v7 = v3 * v6;
   v8 = v5 * v6;
-  if ( !byte_4C32B16 )
+  if ( !byte_4C3E100 )
   {
-    sub_1C32C20(&System_Math_TypeInfo);
-    byte_4C32B16 = 1;
+    sub_1C37058(&System_Math_TypeInfo);
+    byte_4C3E100 = 1;
   }
   v9 = v7 + v8;
   if ( !System_Math_TypeInfo->_2.cctor_finished )
@@ -948,10 +948,10 @@ float UISprite__get_pixelSize(UISprite_o *this, const MethodInfo *method)
   const MethodInfo *v4; // x1
   UIAtlas_o *v5; // x0
 
-  if ( (byte_4C3C30A & 1) == 0 )
+  if ( (byte_4C47885 & 1) == 0 )
   {
-    sub_1C32C20(&UnityEngine_Object_TypeInfo);
-    byte_4C3C30A = 1;
+    sub_1C37058(&UnityEngine_Object_TypeInfo);
+    byte_4C47885 = 1;
   }
   mAtlas = (UnityEngine_Object_o *)this->fields.mAtlas;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -960,7 +960,7 @@ float UISprite__get_pixelSize(UISprite_o *this, const MethodInfo *method)
     return 1.0;
   v5 = this->fields.mAtlas;
   if ( !v5 )
-    sub_1C32E7C(0);
+    sub_1C372B4(0);
   return UIAtlas__get_pixelSize(v5, v4);
 }
 
@@ -971,10 +971,10 @@ bool UISprite__get_premultipliedAlpha(UISprite_o *this, const MethodInfo *method
   const MethodInfo *v4; // x1
   UIAtlas_o *v5; // x0
 
-  if ( (byte_4C3C30C & 1) == 0 )
+  if ( (byte_4C47887 & 1) == 0 )
   {
-    sub_1C32C20(&UnityEngine_Object_TypeInfo);
-    byte_4C3C30C = 1;
+    sub_1C37058(&UnityEngine_Object_TypeInfo);
+    byte_4C47887 = 1;
   }
   mAtlas = (UnityEngine_Object_o *)this->fields.mAtlas;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -983,7 +983,7 @@ bool UISprite__get_premultipliedAlpha(UISprite_o *this, const MethodInfo *method
     return 0;
   v5 = this->fields.mAtlas;
   if ( !v5 )
-    sub_1C32E7C(0);
+    sub_1C372B4(0);
   return UIAtlas__get_premultipliedAlpha(v5, v4);
 }
 
@@ -1019,13 +1019,13 @@ void UISprite__set_atlas(UISprite_o *this, UIAtlas_o *value, const MethodInfo *m
   int32_t v25; // w1
   const MethodInfo *v26; // x2
 
-  if ( (byte_4C3C308 & 1) == 0 )
+  if ( (byte_4C47883 & 1) == 0 )
   {
-    sub_1C32C20(&Method_System_Collections_Generic_List_UISpriteData__get_Count__);
-    sub_1C32C20(&Method_System_Collections_Generic_List_UISpriteData__get_Item__);
-    sub_1C32C20(&UnityEngine_Object_TypeInfo);
-    sub_1C32C20(&StringLiteral_1/*""*/);
-    byte_4C3C308 = 1;
+    sub_1C37058(&Method_System_Collections_Generic_List_UISpriteData__get_Count__);
+    sub_1C37058(&Method_System_Collections_Generic_List_UISpriteData__get_Item__);
+    sub_1C37058(&UnityEngine_Object_TypeInfo);
+    sub_1C37058(&StringLiteral_1/*""*/);
+    byte_4C47883 = 1;
   }
   mAtlas = (UnityEngine_Object_o *)this->fields.mAtlas;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -1035,10 +1035,10 @@ void UISprite__set_atlas(UISprite_o *this, UIAtlas_o *value, const MethodInfo *m
     p_mAtlas = &this->fields.mAtlas;
     UIWidget__RemoveFromPanel((UIWidget_o *)this, 0);
     this->fields.mAtlas = value;
-    sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.mAtlas, (int32_t)value, v7, v8);
+    sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.mAtlas, (int32_t)value, v7, v8);
     this->fields.mSpriteSet = 0;
     this->fields.mSprite = 0;
-    sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.mSprite, 0, v9, v10);
+    sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.mSprite, 0, v9, v10);
     p_mSpriteName = &this->fields.mSpriteName;
     if ( !System_String__IsNullOrEmpty(this->fields.mSpriteName, 0) )
       goto LABEL_17;
@@ -1064,21 +1064,21 @@ void UISprite__set_atlas(UISprite_o *this, UIAtlas_o *value, const MethodInfo *m
             Item = System_Collections_Generic_List_object___get_Item(
                      (System_Collections_Generic_List_object__o *)spriteList,
                      0,
-                     (const MethodInfo_37984EC *)Method_System_Collections_Generic_List_UISpriteData__get_Item__);
+                     (const MethodInfo_37A2D54 *)Method_System_Collections_Generic_List_UISpriteData__get_Item__);
             UISprite__SetAtlasSprite(this, (UISpriteData_o *)Item, v17);
             mSprite = this->fields.mSprite;
             if ( mSprite )
             {
               name = mSprite->fields.name;
               *p_mSpriteName = name;
-              sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.mSpriteName, (int32_t)name, v18, v19);
+              sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.mSpriteName, (int32_t)name, v18, v19);
 LABEL_17:
               if ( !System_String__IsNullOrEmpty(*p_mSpriteName, 0) )
               {
                 mSpriteName = this->fields.mSpriteName;
                 v25 = StringLiteral_1/*""*/;
                 this->fields.mSpriteName = (struct System_String_o *)StringLiteral_1/*""*/;
-                sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.mSpriteName, v25, v22, v23);
+                sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.mSpriteName, v25, v22, v23);
                 UISprite__set_spriteName(this, mSpriteName, v26);
                 ((void (__fastcall *)(UISprite_o *, const MethodInfo *))this->klass->vtable._30_MarkAsChanged.methodPtr)(
                   this,
@@ -1090,7 +1090,7 @@ LABEL_17:
         }
       }
     }
-    sub_1C32E7C(spriteList);
+    sub_1C372B4(spriteList);
   }
 }
 
@@ -1121,10 +1121,10 @@ void UISprite__set_spriteName(UISprite_o *this, System_String_o *value, const Me
   int32_t v11; // w2
   const MethodInfo *v12; // x3
 
-  if ( (byte_4C3C309 & 1) == 0 )
+  if ( (byte_4C47884 & 1) == 0 )
   {
-    sub_1C32C20(&StringLiteral_1/*""*/);
-    byte_4C3C309 = 1;
+    sub_1C37058(&StringLiteral_1/*""*/);
+    byte_4C47884 = 1;
   }
   IsNullOrEmpty = System_String__IsNullOrEmpty(value, 0);
   mSpriteName = this->fields.mSpriteName;
@@ -1144,9 +1144,9 @@ void UISprite__set_spriteName(UISprite_o *this, System_String_o *value, const Me
     v10 = (int)value;
     this->fields.mSpriteName = value;
   }
-  sub_1C32BC4((CGThumbnailListItem_o *)p_mSpriteName, v10, v7, v8);
+  sub_1C36FFC((CGThumbnailListItem_o *)p_mSpriteName, v10, v7, v8);
   this->fields.mSprite = 0;
-  sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.mSprite, 0, v11, v12);
+  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.mSprite, 0, v11, v12);
   this->fields.mChanged = 1;
   this->fields.mSpriteSet = 0;
 }

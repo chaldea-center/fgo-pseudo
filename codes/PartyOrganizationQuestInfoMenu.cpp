@@ -1,9 +1,9 @@
 void PartyOrganizationQuestInfoMenu___ctor(PartyOrganizationQuestInfoMenu_o *this, const MethodInfo *method)
 {
-  if ( (byte_4C334C0 & 1) == 0 )
+  if ( (byte_4C3EAAA & 1) == 0 )
   {
-    sub_1C32C20(&BaseDialog_TypeInfo);
-    byte_4C334C0 = 1;
+    sub_1C37058(&BaseDialog_TypeInfo);
+    byte_4C3EAAA = 1;
   }
   if ( !BaseDialog_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(BaseDialog_TypeInfo);
@@ -17,7 +17,7 @@ void PartyOrganizationQuestInfoMenu__Close(PartyOrganizationQuestInfoMenu_o *thi
 
   callbackFunc = this->fields.callbackFunc;
   if ( !callbackFunc )
-    sub_1C32E7C(this);
+    sub_1C372B4(this);
   ((void (__fastcall *)(intptr_t, _QWORD, intptr_t))callbackFunc->fields.invoke_impl)(
     callbackFunc->fields.method_code,
     0,
@@ -25,7 +25,7 @@ void PartyOrganizationQuestInfoMenu__Close(PartyOrganizationQuestInfoMenu_o *thi
 }
 
 
-void PartyOrganizationQuestInfoMenu__Close_34233800(
+void PartyOrganizationQuestInfoMenu__Close_34329432(
         PartyOrganizationQuestInfoMenu_o *this,
         System_Action_o *onFinishedClose,
         const MethodInfo *method)
@@ -33,15 +33,15 @@ void PartyOrganizationQuestInfoMenu__Close_34233800(
   const MethodInfo *v3; // x3
   System_Action_o *v6; // x20
 
-  if ( (byte_4C334BE & 1) == 0 )
+  if ( (byte_4C3EAA8 & 1) == 0 )
   {
-    sub_1C32C20(&System_Action_TypeInfo);
-    sub_1C32C20(&Method_PartyOrganizationQuestInfoMenu_EndClose__);
-    byte_4C334BE = 1;
+    sub_1C37058(&System_Action_TypeInfo);
+    sub_1C37058(&Method_PartyOrganizationQuestInfoMenu_EndClose__);
+    byte_4C3EAA8 = 1;
   }
   this->fields.onfinishedClose = onFinishedClose;
-  sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.onfinishedClose, (int32_t)onFinishedClose, (int32_t)method, v3);
-  v6 = (System_Action_o *)sub_1C32E6C(System_Action_TypeInfo);
+  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.onfinishedClose, (int32_t)onFinishedClose, (int32_t)method, v3);
+  v6 = (System_Action_o *)sub_1C372A4(System_Action_TypeInfo);
   System_Action___ctor(v6, (Il2CppObject *)this, Method_PartyOrganizationQuestInfoMenu_EndClose__, 0);
   BaseDialog__Close((BaseDialog_o *)this, v6, 0);
 }
@@ -65,7 +65,7 @@ void PartyOrganizationQuestInfoMenu__Init(PartyOrganizationQuestInfoMenu_o *this
 
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
   if ( !gameObject )
-    sub_1C32E7C(0);
+    sub_1C372B4(0);
   UnityEngine_GameObject__SetActive(gameObject, 0, 0);
   BaseDialog__Init((BaseDialog_o *)this, 0);
 }
@@ -82,23 +82,23 @@ void PartyOrganizationQuestInfoMenu__Open(
   System_Action_o *v9; // x22
   System_Action_o *v10; // x23
 
-  if ( (byte_4C334BC & 1) == 0 )
+  if ( (byte_4C3EAA6 & 1) == 0 )
   {
-    sub_1C32C20(&System_Action_TypeInfo);
-    sub_1C32C20(&Method_PartyOrganizationQuestInfoMenu_Close__);
-    sub_1C32C20(&Method_PartyOrganizationQuestInfoMenu_Open__);
-    byte_4C334BC = 1;
+    sub_1C37058(&System_Action_TypeInfo);
+    sub_1C37058(&Method_PartyOrganizationQuestInfoMenu_Close__);
+    sub_1C37058(&Method_PartyOrganizationQuestInfoMenu_Open__);
+    byte_4C3EAA6 = 1;
   }
   this->fields.callbackFunc = callback;
-  sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.callbackFunc, (int32_t)callback, (int32_t)callback, method);
+  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.callbackFunc, (int32_t)callback, (int32_t)callback, method);
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
   if ( !gameObject )
     goto LABEL_9;
   UnityEngine_GameObject__SetActive(gameObject, 1, 0);
   questInfoWindow = this->fields.questInfoWindow;
-  v9 = (System_Action_o *)sub_1C32E6C(System_Action_TypeInfo);
+  v9 = (System_Action_o *)sub_1C372A4(System_Action_TypeInfo);
   System_Action___ctor(v9, (Il2CppObject *)this, Method_PartyOrganizationQuestInfoMenu_Open__, 0);
-  v10 = (System_Action_o *)sub_1C32E6C(System_Action_TypeInfo);
+  v10 = (System_Action_o *)sub_1C372A4(System_Action_TypeInfo);
   System_Action___ctor(v10, (Il2CppObject *)this, Method_PartyOrganizationQuestInfoMenu_Close__, 0);
   if ( !questInfoWindow )
     goto LABEL_9;
@@ -111,22 +111,22 @@ void PartyOrganizationQuestInfoMenu__Open(
       return;
     }
 LABEL_9:
-    sub_1C32E7C(gameObject);
+    sub_1C372B4(gameObject);
   }
 }
 
 
-void PartyOrganizationQuestInfoMenu__Open_34233616(PartyOrganizationQuestInfoMenu_o *this, const MethodInfo *method)
+void PartyOrganizationQuestInfoMenu__Open_34329248(PartyOrganizationQuestInfoMenu_o *this, const MethodInfo *method)
 {
   System_Action_o *v3; // x20
 
-  if ( (byte_4C334BD & 1) == 0 )
+  if ( (byte_4C3EAA7 & 1) == 0 )
   {
-    sub_1C32C20(&System_Action_TypeInfo);
-    sub_1C32C20(&Method_PartyOrganizationQuestInfoMenu_EndOpen__);
-    byte_4C334BD = 1;
+    sub_1C37058(&System_Action_TypeInfo);
+    sub_1C37058(&Method_PartyOrganizationQuestInfoMenu_EndOpen__);
+    byte_4C3EAA7 = 1;
   }
-  v3 = (System_Action_o *)sub_1C32E6C(System_Action_TypeInfo);
+  v3 = (System_Action_o *)sub_1C372A4(System_Action_TypeInfo);
   System_Action___ctor(v3, (Il2CppObject *)this, Method_PartyOrganizationQuestInfoMenu_EndOpen__, 0);
   BaseDialog__Open((BaseDialog_o *)this, v3, 0, 0, 0);
 }
@@ -147,10 +147,10 @@ void PartyOrganizationQuestInfoMenu__add_callbackFunc(
   PartyOrganizationQuestInfoMenu_CallbackFunc_o *v12; // x1
   const MethodInfo *v13; // x2
 
-  if ( (byte_4C334BA & 1) == 0 )
+  if ( (byte_4C3EAA4 & 1) == 0 )
   {
-    sub_1C32C20(&PartyOrganizationQuestInfoMenu_CallbackFunc_TypeInfo);
-    byte_4C334BA = 1;
+    sub_1C37058(&PartyOrganizationQuestInfoMenu_CallbackFunc_TypeInfo);
+    byte_4C3EAA4 = 1;
   }
   callbackFunc = this->fields.callbackFunc;
   p_callbackFunc = &this->fields.callbackFunc;
@@ -163,13 +163,13 @@ void PartyOrganizationQuestInfoMenu__add_callbackFunc(
       if ( (PartyOrganizationQuestInfoMenu_CallbackFunc_c *)v8->klass != PartyOrganizationQuestInfoMenu_CallbackFunc_TypeInfo )
         break;
     }
-    v9 = sub_1C6CE78(p_callbackFunc, v8, v6);
+    v9 = sub_1C712B0(p_callbackFunc, v8, v6);
     v10 = v6 == (System_Delegate_o *)v9;
     v6 = (System_Delegate_o *)v9;
     if ( v10 )
       return;
   }
-  v11 = (PartyOrganizationQuestInfoMenu_o *)sub_1C3313C(v8);
+  v11 = (PartyOrganizationQuestInfoMenu_o *)sub_1C37574(v8);
   PartyOrganizationQuestInfoMenu__remove_callbackFunc(v11, v12, v13);
 }
 
@@ -178,12 +178,12 @@ System_String_o *PartyOrganizationQuestInfoMenu__get_closeBtnPath(
         PartyOrganizationQuestInfoMenu_o *this,
         const MethodInfo *method)
 {
-  if ( (byte_4C334BF & 1) == 0 )
+  if ( (byte_4C3EAA9 & 1) == 0 )
   {
-    sub_1C32C20(&StringLiteral_10928/*"QuestInfoWindowPrefab/QuestInfo/BgSp/CloseButton"*/);
-    byte_4C334BF = 1;
+    sub_1C37058(&StringLiteral_10929/*"QuestInfoWindowPrefab/QuestInfo/BgSp/CloseButton"*/);
+    byte_4C3EAA9 = 1;
   }
-  return (System_String_o *)StringLiteral_10928/*"QuestInfoWindowPrefab/QuestInfo/BgSp/CloseButton"*/;
+  return (System_String_o *)StringLiteral_10929/*"QuestInfoWindowPrefab/QuestInfo/BgSp/CloseButton"*/;
 }
 
 
@@ -201,10 +201,10 @@ void PartyOrganizationQuestInfoMenu__remove_callbackFunc(
   PartyOrganizationQuestInfoMenu_o *v11; // x0
   const MethodInfo *v12; // x1
 
-  if ( (byte_4C334BB & 1) == 0 )
+  if ( (byte_4C3EAA5 & 1) == 0 )
   {
-    sub_1C32C20(&PartyOrganizationQuestInfoMenu_CallbackFunc_TypeInfo);
-    byte_4C334BB = 1;
+    sub_1C37058(&PartyOrganizationQuestInfoMenu_CallbackFunc_TypeInfo);
+    byte_4C3EAA5 = 1;
   }
   callbackFunc = this->fields.callbackFunc;
   p_callbackFunc = &this->fields.callbackFunc;
@@ -217,13 +217,13 @@ void PartyOrganizationQuestInfoMenu__remove_callbackFunc(
       if ( (PartyOrganizationQuestInfoMenu_CallbackFunc_c *)v8->klass != PartyOrganizationQuestInfoMenu_CallbackFunc_TypeInfo )
         break;
     }
-    v9 = sub_1C6CE78(p_callbackFunc, v8, v6);
+    v9 = sub_1C712B0(p_callbackFunc, v8, v6);
     v10 = v6 == (System_Delegate_o *)v9;
     v6 = (System_Delegate_o *)v9;
     if ( v10 )
       return;
   }
-  v11 = (PartyOrganizationQuestInfoMenu_o *)sub_1C3313C(v8);
+  v11 = (PartyOrganizationQuestInfoMenu_o *)sub_1C37574(v8);
   PartyOrganizationQuestInfoMenu__Init(v11, v12);
 }
 
@@ -243,15 +243,15 @@ void PartyOrganizationQuestInfoMenu_CallbackFunc___ctor(
   this->fields.method = method;
   this->fields.method_ptr = v4;
   this->fields.m_target = object;
-  sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.m_target, (int32_t)object, method, a4);
+  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.m_target, (int32_t)object, method, a4);
   v8 = *(unsigned __int8 *)(method + 82);
   this->fields.method_code = (intptr_t)this;
-  if ( (sub_1C32CE0(method) & 1) == 0 )
+  if ( (sub_1C37118(method) & 1) == 0 )
   {
     if ( !object )
     {
-      v10 = sub_1C32E98(0, "Delegate to an instance method cannot have null 'this'.");
-      sub_1C32D48(v10, 0);
+      v10 = sub_1C372D0(0, "Delegate to an instance method cannot have null 'this'.");
+      sub_1C37180(v10, 0);
     }
     goto LABEL_5;
   }
@@ -263,9 +263,9 @@ LABEL_5:
     this->fields.method_code = (intptr_t)m_target;
     goto LABEL_6;
   }
-  this->fields.invoke_impl = (intptr_t)sub_1A71D44;
+  this->fields.invoke_impl = (intptr_t)sub_1A76074;
 LABEL_6:
-  this->fields.extra_arg = (intptr_t)sub_1A71CFC;
+  this->fields.extra_arg = (intptr_t)sub_1A7602C;
 }
 
 
@@ -283,14 +283,14 @@ System_IAsyncResult_o *PartyOrganizationQuestInfoMenu_CallbackFunc__BeginInvoke(
   bool v13[4]; // [xsp+1Ch] [xbp-34h] BYREF
 
   v13[0] = result;
-  if ( (byte_4C334C1 & 1) == 0 )
+  if ( (byte_4C3EAAB & 1) == 0 )
   {
-    sub_1C32C20(&bool_TypeInfo);
-    byte_4C334C1 = 1;
+    sub_1C37058(&bool_TypeInfo);
+    byte_4C3EAAB = 1;
   }
   v12[1] = 0;
   v12[0] = j_il2cpp_value_box_0(bool_TypeInfo, v13, callback, object, method, v5, v6, v7);
-  return (System_IAsyncResult_o *)sub_1C32BD4(this, v12, callback, object);
+  return (System_IAsyncResult_o *)sub_1C3700C(this, v12, callback, object);
 }
 
 
@@ -299,7 +299,7 @@ void PartyOrganizationQuestInfoMenu_CallbackFunc__EndInvoke(
         System_IAsyncResult_o *result,
         const MethodInfo *method)
 {
-  sub_1C32BD8(result, 0, method);
+  sub_1C37010(result, 0, method);
 }
 
 

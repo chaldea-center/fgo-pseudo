@@ -60,13 +60,13 @@ void ExUIGrid__ResetPosition(
   UnityEngine_Vector3_o v53; // 0:s0.4,4:s1.4,8:s2.4
   UnityEngine_Vector3_o v54; // 0:s0.4,4:s1.4,8:s2.4
 
-  if ( (byte_4C390C5 & 1) == 0 )
+  if ( (byte_4C446BF & 1) == 0 )
   {
-    sub_1C32C20(&UnityEngine_Application_TypeInfo);
-    sub_1C32C20(&Method_System_Collections_Generic_List_Transform__GetRange__);
-    sub_1C32C20(&Method_System_Collections_Generic_List_Transform__get_Count__);
-    sub_1C32C20(&Method_System_Collections_Generic_List_Transform__get_Item__);
-    byte_4C390C5 = 1;
+    sub_1C37058(&UnityEngine_Application_TypeInfo);
+    sub_1C37058(&Method_System_Collections_Generic_List_Transform__GetRange__);
+    sub_1C37058(&Method_System_Collections_Generic_List_Transform__get_Count__);
+    sub_1C37058(&Method_System_Collections_Generic_List_Transform__get_Item__);
+    byte_4C446BF = 1;
   }
   IsNullOrEmpty = BasicHelper__IsNullOrEmpty((System_Collections_ICollection_o *)list, 0);
   if ( (IsNullOrEmpty & 1) == 0 )
@@ -81,13 +81,13 @@ void ExUIGrid__ResetPosition(
       this->fields.mReposition = 0;
       if ( !list )
 LABEL_72:
-        sub_1C32E7C(IsNullOrEmpty);
+        sub_1C372B4(IsNullOrEmpty);
       v7 = (float)maxPerLine;
       size = (float)list->fields._size;
-      if ( !byte_4C31A98 )
+      if ( !byte_4C3CFE8 )
       {
-        sub_1C32C20(&System_Math_TypeInfo);
-        byte_4C31A98 = 1;
+        sub_1C37058(&System_Math_TypeInfo);
+        byte_4C3CFE8 = 1;
       }
       v9 = size / v7;
       if ( !System_Math_TypeInfo->_2.cctor_finished )
@@ -118,12 +118,12 @@ LABEL_72:
                                      (System_Collections_Generic_List_object__o *)list,
                                      v16 * v14,
                                      v17,
-                                     (const MethodInfo_379938C *)Method_System_Collections_Generic_List_Transform__GetRange__);
+                                     (const MethodInfo_37A3BF4 *)Method_System_Collections_Generic_List_Transform__GetRange__);
           v18 = (System_Collections_Generic_List_object__o *)IsNullOrEmpty;
-          if ( !byte_4C313D1 )
+          if ( !byte_4C3C921 )
           {
-            IsNullOrEmpty = sub_1C32C20(&UnityEngine_Vector3_TypeInfo);
-            byte_4C313D1 = 1;
+            IsNullOrEmpty = sub_1C37058(&UnityEngine_Vector3_TypeInfo);
+            byte_4C3C921 = 1;
           }
           static_fields = UnityEngine_Vector3_TypeInfo->static_fields;
           z = static_fields->zeroVector.fields.z;
@@ -158,7 +158,7 @@ LABEL_69:
           IsNullOrEmpty = (__int64)System_Collections_Generic_List_object___get_Item(
                                      v18,
                                      v25,
-                                     (const MethodInfo_37984EC *)Method_System_Collections_Generic_List_Transform__get_Item__);
+                                     (const MethodInfo_37A2D54 *)Method_System_Collections_Generic_List_Transform__get_Item__);
           if ( !IsNullOrEmpty )
             goto LABEL_72;
           v27 = (UnityEngine_Component_o *)IsNullOrEmpty;

@@ -69,26 +69,26 @@ void SoundInfo__OnGUI(SoundInfo_o *this, const MethodInfo *method)
   UnityEngine_Rect_o v62; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
   UnityEngine_Rect_o v63; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 
-  if ( (byte_4C36F61 & 1) == 0 )
+  if ( (byte_4C42551 & 1) == 0 )
   {
-    sub_1C32C20(&UnityEngine_Application_TypeInfo);
-    sub_1C32C20(&BgmManager_TypeInfo);
-    sub_1C32C20(&UnityEngine_GUI_TypeInfo);
-    sub_1C32C20(&int_TypeInfo);
-    sub_1C32C20(&SoundLogger_TypeInfo);
-    sub_1C32C20(&string___TypeInfo);
-    sub_1C32C20(&StringLiteral_47/*"\n\n\n[Detail Last]\n"*/);
-    sub_1C32C20(&StringLiteral_15893/*"[BGM]\n"*/);
-    sub_1C32C20(&StringLiteral_5255/*"Detail:{0}"*/);
-    sub_1C32C20(&StringLiteral_1724/*"<size="*/);
-    sub_1C32C20(&StringLiteral_45/*"\n\n\n"*/);
-    sub_1C32C20(&StringLiteral_5254/*"Detail: OFF"*/);
-    sub_1C32C20(&StringLiteral_65/*"\n[SE]\n"*/);
-    sub_1C32C20(&StringLiteral_1/*""*/);
-    sub_1C32C20(&StringLiteral_1527/*"</size>"*/);
-    sub_1C32C20(&StringLiteral_66/*"\n[VOICE]\n"*/);
-    sub_1C32C20(&StringLiteral_1750/*">"*/);
-    byte_4C36F61 = 1;
+    sub_1C37058(&UnityEngine_Application_TypeInfo);
+    sub_1C37058(&BgmManager_TypeInfo);
+    sub_1C37058(&UnityEngine_GUI_TypeInfo);
+    sub_1C37058(&int_TypeInfo);
+    sub_1C37058(&SoundLogger_TypeInfo);
+    sub_1C37058(&string___TypeInfo);
+    sub_1C37058(&StringLiteral_47/*"\n\n\n[Detail Last]\n"*/);
+    sub_1C37058(&StringLiteral_15895/*"[BGM]\n"*/);
+    sub_1C37058(&StringLiteral_5256/*"Detail:{0}"*/);
+    sub_1C37058(&StringLiteral_1724/*"<size="*/);
+    sub_1C37058(&StringLiteral_45/*"\n\n\n"*/);
+    sub_1C37058(&StringLiteral_5255/*"Detail: OFF"*/);
+    sub_1C37058(&StringLiteral_65/*"\n[SE]\n"*/);
+    sub_1C37058(&StringLiteral_1/*""*/);
+    sub_1C37058(&StringLiteral_1527/*"</size>"*/);
+    sub_1C37058(&StringLiteral_66/*"\n[VOICE]\n"*/);
+    sub_1C37058(&StringLiteral_1750/*">"*/);
+    byte_4C42551 = 1;
   }
   if ( !UnityEngine_Application_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Application_TypeInfo);
@@ -99,16 +99,16 @@ void SoundInfo__OnGUI(SoundInfo_o *this, const MethodInfo *method)
     if ( !SoundLogger_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(SoundLogger_TypeInfo);
     LogBgm = SoundLogger__getLogBgm((const MethodInfo *)v4);
-    v7 = System_String__Concat_63518544((System_String_o *)StringLiteral_15893/*"[BGM]\n"*/, LogBgm, 0);
+    v7 = System_String__Concat_63561656((System_String_o *)StringLiteral_15895/*"[BGM]\n"*/, LogBgm, 0);
     if ( bgmIndex < 0 )
     {
       v11 = SoundLogger_TypeInfo;
       if ( !SoundLogger_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(SoundLogger_TypeInfo);
       LogBgmDetailLast = SoundLogger__GetLogBgmDetailLast((const MethodInfo *)v11);
-      v13 = System_String__Concat_63556792(v7, (System_String_o *)StringLiteral_47/*"\n\n\n[Detail Last]\n"*/, LogBgmDetailLast, 0);
+      v13 = System_String__Concat_63599904(v7, (System_String_o *)StringLiteral_47/*"\n\n\n[Detail Last]\n"*/, LogBgmDetailLast, 0);
       LogVoice = SoundLogger__getLogVoice((const MethodInfo *)v13);
-      v7 = System_String__Concat_63556792(v13, (System_String_o *)StringLiteral_66/*"\n[VOICE]\n"*/, LogVoice, 0);
+      v7 = System_String__Concat_63599904(v13, (System_String_o *)StringLiteral_66/*"\n[VOICE]\n"*/, LogVoice, 0);
       LogSe = SoundLogger__getLogSe((const MethodInfo *)v7);
       v10 = &StringLiteral_65/*"\n[SE]\n"*/;
     }
@@ -120,7 +120,7 @@ void SoundInfo__OnGUI(SoundInfo_o *this, const MethodInfo *method)
       LogSe = SoundLogger__GetLogBgmDetail(v8, v6);
       v10 = &StringLiteral_45/*"\n\n\n"*/;
     }
-    v15 = System_String__Concat_63556792(v7, (System_String_o *)*v10, LogSe, 0);
+    v15 = System_String__Concat_63599904(v7, (System_String_o *)*v10, LogSe, 0);
     v16 = this->fields.baseScale * (float)((float)UnityEngine_Screen__get_width(0) * 0.00097656);
     if ( !UnityEngine_GUI_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(UnityEngine_GUI_TypeInfo);
@@ -129,7 +129,7 @@ void SoundInfo__OnGUI(SoundInfo_o *this, const MethodInfo *method)
     v61.fields.m_Width = v16 * 310.0;
     v61.fields.m_Height = v16 * 825.0;
     UnityEngine_GUI__Box(v61, (System_String_o *)StringLiteral_1/*""*/, 0);
-    v17 = (System_String_o *)sub_1C32CC8(string___TypeInfo, 5);
+    v17 = (System_String_o *)sub_1C37100(string___TypeInfo, 5);
     if ( v17 )
     {
       v20 = v17;
@@ -137,28 +137,28 @@ void SoundInfo__OnGUI(SoundInfo_o *this, const MethodInfo *method)
         goto LABEL_40;
       v21 = StringLiteral_1724/*"<size="*/;
       v17[1].monitor = (void *)StringLiteral_1724/*"<size="*/;
-      sub_1C32BC4((CGThumbnailListItem_o *)&v17[1].monitor, v21, v18, v19);
+      sub_1C36FFC((CGThumbnailListItem_o *)&v17[1].monitor, v21, v18, v19);
       v60[0] = v16 * 18.0;
       v17 = System_Single__ToString(18.0, (const MethodInfo *)v60);
       if ( LODWORD(v20[1].klass) <= 1 )
         goto LABEL_40;
       v20[1].fields = (System_String_Fields)v17;
-      sub_1C32BC4((CGThumbnailListItem_o *)&v20[1].fields, (int32_t)v17, v22, v23);
+      sub_1C36FFC((CGThumbnailListItem_o *)&v20[1].fields, (int32_t)v17, v22, v23);
       if ( LODWORD(v20[1].klass) <= 2 )
         goto LABEL_40;
       v26 = StringLiteral_1750/*">"*/;
       v20[2].klass = (System_String_c *)StringLiteral_1750/*">"*/;
-      sub_1C32BC4((CGThumbnailListItem_o *)&v20[2], v26, v24, v25);
+      sub_1C36FFC((CGThumbnailListItem_o *)&v20[2], v26, v24, v25);
       if ( LODWORD(v20[1].klass) <= 3 )
         goto LABEL_40;
       v20[2].monitor = v15;
-      sub_1C32BC4((CGThumbnailListItem_o *)&v20[2].monitor, (int32_t)v15, v27, v28);
+      sub_1C36FFC((CGThumbnailListItem_o *)&v20[2].monitor, (int32_t)v15, v27, v28);
       if ( LODWORD(v20[1].klass) <= 4 )
         goto LABEL_40;
       v31 = StringLiteral_1527/*"</size>"*/;
       v20[2].fields = (System_String_Fields)StringLiteral_1527/*"</size>"*/;
-      sub_1C32BC4((CGThumbnailListItem_o *)&v20[2].fields, v31, v29, v30);
-      v32 = System_String__Concat_63559060((System_String_array *)v20, 0);
+      sub_1C36FFC((CGThumbnailListItem_o *)&v20[2].fields, v31, v29, v30);
+      v32 = System_String__Concat_63602172((System_String_array *)v20, 0);
       v62.fields.m_XMin = 10.0;
       v62.fields.m_YMin = 5.0;
       v62.fields.m_Width = v16 * 1000.0;
@@ -166,15 +166,15 @@ void SoundInfo__OnGUI(SoundInfo_o *this, const MethodInfo *method)
       UnityEngine_GUI__Label(v62, v32, 0);
       if ( bgmIndex < 0 )
       {
-        v40 = (System_String_o *)StringLiteral_5254/*"Detail: OFF"*/;
+        v40 = (System_String_o *)StringLiteral_5255/*"Detail: OFF"*/;
       }
       else
       {
         v59 = this->fields.bgmIndex;
         v39 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v59, v33, v34, v35, v36, v37, v38);
-        v40 = System_String__Format((System_String_o *)StringLiteral_5255/*"Detail:{0}"*/, v39, 0);
+        v40 = System_String__Format((System_String_o *)StringLiteral_5256/*"Detail:{0}"*/, v39, 0);
       }
-      v17 = (System_String_o *)sub_1C32CC8(string___TypeInfo, 5);
+      v17 = (System_String_o *)sub_1C37100(string___TypeInfo, 5);
       if ( v17 )
       {
         v43 = v17;
@@ -182,28 +182,28 @@ void SoundInfo__OnGUI(SoundInfo_o *this, const MethodInfo *method)
         {
           v44 = StringLiteral_1724/*"<size="*/;
           v17[1].monitor = (void *)StringLiteral_1724/*"<size="*/;
-          sub_1C32BC4((CGThumbnailListItem_o *)&v17[1].monitor, v44, v41, v42);
+          sub_1C36FFC((CGThumbnailListItem_o *)&v17[1].monitor, v44, v41, v42);
           v60[0] = v16 * 18.0;
           v17 = System_Single__ToString(v45, (const MethodInfo *)v60);
           if ( LODWORD(v43[1].klass) > 1 )
           {
             v43[1].fields = (System_String_Fields)v17;
-            sub_1C32BC4((CGThumbnailListItem_o *)&v43[1].fields, (int32_t)v17, v46, v47);
+            sub_1C36FFC((CGThumbnailListItem_o *)&v43[1].fields, (int32_t)v17, v46, v47);
             if ( LODWORD(v43[1].klass) > 2 )
             {
               v50 = StringLiteral_1750/*">"*/;
               v43[2].klass = (System_String_c *)StringLiteral_1750/*">"*/;
-              sub_1C32BC4((CGThumbnailListItem_o *)&v43[2], v50, v48, v49);
+              sub_1C36FFC((CGThumbnailListItem_o *)&v43[2], v50, v48, v49);
               if ( LODWORD(v43[1].klass) > 3 )
               {
                 v43[2].monitor = v40;
-                sub_1C32BC4((CGThumbnailListItem_o *)&v43[2].monitor, (int32_t)v40, v51, v52);
+                sub_1C36FFC((CGThumbnailListItem_o *)&v43[2].monitor, (int32_t)v40, v51, v52);
                 if ( LODWORD(v43[1].klass) > 4 )
                 {
                   v55 = StringLiteral_1527/*"</size>"*/;
                   v43[2].fields = (System_String_Fields)StringLiteral_1527/*"</size>"*/;
-                  sub_1C32BC4((CGThumbnailListItem_o *)&v43[2].fields, v55, v53, v54);
-                  v56 = System_String__Concat_63559060((System_String_array *)v43, 0);
+                  sub_1C36FFC((CGThumbnailListItem_o *)&v43[2].fields, v55, v53, v54);
+                  v56 = System_String__Concat_63602172((System_String_array *)v43, 0);
                   if ( !UnityEngine_GUI_TypeInfo->_2.cctor_finished )
                     j_il2cpp_runtime_class_init_0(UnityEngine_GUI_TypeInfo);
                   v63.fields.m_XMin = 10.0;
@@ -230,10 +230,10 @@ void SoundInfo__OnGUI(SoundInfo_o *this, const MethodInfo *method)
           }
         }
 LABEL_40:
-        sub_1C32E84(v17);
+        sub_1C372BC(v17);
       }
     }
-    sub_1C32E7C(v17);
+    sub_1C372B4(v17);
   }
 }
 

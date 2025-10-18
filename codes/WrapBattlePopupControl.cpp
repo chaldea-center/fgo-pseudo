@@ -6,7 +6,7 @@ void WrapBattlePopupControl___ctor(
   const MethodInfo *v3; // x3
 
   if ( !inPerf )
-    sub_1C32E7C(this);
+    sub_1C372B4(this);
   WrapBaseBattlePopupControl___ctor((WrapBaseBattlePopupControl_o *)this, inPerf->fields.popupTr, inPerf, v3);
 }
 
@@ -25,7 +25,7 @@ UnityEngine_GameObject_o *WrapBattlePopupControl__GetAvoidResetDamageObject(
   IsNullOrEmpty = System_String__IsNullOrEmpty(text, 0);
   perf = this->fields.perf;
   if ( !perf || (effectcontrol = perf->fields.effectcontrol) == 0 )
-    sub_1C32E7C(IsNullOrEmpty);
+    sub_1C372B4(IsNullOrEmpty);
   if ( IsNullOrEmpty )
     return WrapBaseBattlePopupControl__CreatePopupObject(
              (WrapBaseBattlePopupControl_o *)this,
@@ -52,7 +52,7 @@ UnityEngine_GameObject_o *WrapBattlePopupControl__GetAvoidanceObject(
 
   perf = this->fields.perf;
   if ( !perf || (effectcontrol = perf->fields.effectcontrol) == 0 )
-    sub_1C32E7C(this);
+    sub_1C372B4(this);
   return WrapBaseBattlePopupControl__CreatePopupObject(
            (WrapBaseBattlePopupControl_o *)this,
            effectcontrol->fields.avoidanceObject,
@@ -71,7 +71,7 @@ UnityEngine_GameObject_o *WrapBattlePopupControl__GetAvoidanceTextObject(
 
   perf = this->fields.perf;
   if ( !perf || (effectcontrol = perf->fields.effectcontrol) == 0 )
-    sub_1C32E7C(this);
+    sub_1C372B4(this);
   return WrapBaseBattlePopupControl__CreatePopupObject(
            (WrapBaseBattlePopupControl_o *)this,
            effectcontrol->fields.avoidanceTextObject,
@@ -89,7 +89,7 @@ UnityEngine_GameObject_o *WrapBattlePopupControl__GetBuffTextClassIconObject(
 
   perf = this->fields.perf;
   if ( !perf || (this = (WrapBattlePopupControl_o *)perf->fields.effectcontrol) == 0 )
-    sub_1C32E7C(this);
+    sub_1C372B4(this);
   return BattleEffectControl__getBuffTextClassIconObject((BattleEffectControl_o *)this, color, 0);
 }
 
@@ -103,7 +103,7 @@ UnityEngine_GameObject_o *WrapBattlePopupControl__GetBuffTextObject(
 
   perf = this->fields.perf;
   if ( !perf || (this = (WrapBattlePopupControl_o *)perf->fields.effectcontrol) == 0 )
-    sub_1C32E7C(this);
+    sub_1C372B4(this);
   return BattleEffectControl__getBuffTextObject((BattleEffectControl_o *)this, color, 0);
 }
 
@@ -119,7 +119,7 @@ UnityEngine_GameObject_o *WrapBattlePopupControl__GetDamageObject(
 
   perf = this->fields.perf;
   if ( !perf || (this = (WrapBattlePopupControl_o *)perf->fields.effectcontrol) == 0 )
-    sub_1C32E7C(this);
+    sub_1C372B4(this);
   return BattleEffectControl__getDamageObject((BattleEffectControl_o *)this, critical, week, resist, 0);
 }
 
@@ -133,7 +133,7 @@ UnityEngine_GameObject_o *WrapBattlePopupControl__GetEffectInstantiateLocal(
 
   perf = this->fields.perf;
   if ( !perf || (this = (WrapBattlePopupControl_o *)perf->fields.effectcontrol) == 0 )
-    sub_1C32E7C(this);
+    sub_1C372B4(this);
   return BattleEffectControl__getEffectInstantiate((BattleEffectControl_o *)this, id, 0);
 }
 
@@ -148,7 +148,7 @@ UnityEngine_GameObject_o *WrapBattlePopupControl__GetInvincibleObject(
 
   perf = this->fields.perf;
   if ( !perf || (effectcontrol = perf->fields.effectcontrol) == 0 )
-    sub_1C32E7C(this);
+    sub_1C372B4(this);
   return WrapBaseBattlePopupControl__CreatePopupObject(
            (WrapBaseBattlePopupControl_o *)this,
            effectcontrol->fields.invincibleObject,
@@ -167,7 +167,7 @@ UnityEngine_GameObject_o *WrapBattlePopupControl__GetSpecialInvincibleObject(
 
   perf = this->fields.perf;
   if ( !perf || (effectcontrol = perf->fields.effectcontrol) == 0 )
-    sub_1C32E7C(this);
+    sub_1C372B4(this);
   return WrapBaseBattlePopupControl__CreatePopupObject(
            (WrapBaseBattlePopupControl_o *)this,
            effectcontrol->fields._specialInvincibleObject_k__BackingField,
@@ -185,6 +185,6 @@ UnityEngine_GameObject_o *WrapBattlePopupControl__SetBuffIconObject(
 
   perf = this->fields.perf;
   if ( !perf || (this = (WrapBattlePopupControl_o *)perf->fields.effectcontrol) == 0 )
-    sub_1C32E7C(this);
+    sub_1C372B4(this);
   return BattleEffectControl__SetBuffIconObject((BattleEffectControl_o *)this, buffList, 0);
 }

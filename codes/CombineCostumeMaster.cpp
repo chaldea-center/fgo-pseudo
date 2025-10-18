@@ -1,14 +1,14 @@
 void CombineCostumeMaster___ctor(CombineCostumeMaster_o *this, const MethodInfo *method)
 {
-  if ( (byte_4C3775C & 1) == 0 )
+  if ( (byte_4C42D53 & 1) == 0 )
   {
-    sub_1C32C20(&Method_DataMasterBase_CombineCostumeMaster__CombineCostumeEntity__string___ctor__);
-    byte_4C3775C = 1;
+    sub_1C37058(&Method_DataMasterBase_CombineCostumeMaster__CombineCostumeEntity__string___ctor__);
+    byte_4C42D53 = 1;
   }
   DataMasterBase_object__object__object____ctor(
     (DataMasterBase_TMaster__TEntity__PKType__o *)this,
     209,
-    (const MethodInfo_3398FCC *)Method_DataMasterBase_CombineCostumeMaster__CombineCostumeEntity__string___ctor__);
+    (const MethodInfo_33A3834 *)Method_DataMasterBase_CombineCostumeMaster__CombineCostumeEntity__string___ctor__);
 }
 
 
@@ -35,9 +35,9 @@ void CombineCostumeMaster__CheckNeedCombineInfo(
 
   entity = 0;
   *itemIds = 0;
-  sub_1C32BC4((CGThumbnailListItem_o *)itemIds, 0, costumeId, (const MethodInfo *)itemIds);
+  sub_1C36FFC((CGThumbnailListItem_o *)itemIds, 0, costumeId, (const MethodInfo *)itemIds);
   *itemNums = 0;
-  sub_1C32BC4((CGThumbnailListItem_o *)itemNums, 0, v13, v14);
+  sub_1C36FFC((CGThumbnailListItem_o *)itemNums, 0, v13, v14);
   *qp = 0;
   v16 = CombineCostumeMaster__TryGetEntity(this, &entity, svtId, costumeId, v15);
   if ( v16 )
@@ -45,14 +45,14 @@ void CombineCostumeMaster__CheckNeedCombineInfo(
     if ( !entity
       || (v19 = entity->fields.itemIds,
           *itemIds = v19,
-          sub_1C32BC4((CGThumbnailListItem_o *)itemIds, (int32_t)v19, v17, v18),
+          sub_1C36FFC((CGThumbnailListItem_o *)itemIds, (int32_t)v19, v17, v18),
           !entity)
       || (v22 = entity->fields.itemNums,
           *itemNums = v22,
-          sub_1C32BC4((CGThumbnailListItem_o *)itemNums, (int32_t)v22, v20, v21),
+          sub_1C36FFC((CGThumbnailListItem_o *)itemNums, (int32_t)v22, v20, v21),
           !entity) )
     {
-      sub_1C32E7C(v16);
+      sub_1C372B4(v16);
     }
     *qp = entity->fields.qp;
   }
@@ -68,16 +68,16 @@ CombineCostumeEntity_o *CombineCostumeMaster__GetEntity(
 {
   Il2CppObject *PK; // x1
 
-  if ( (byte_4C3775A & 1) == 0 )
+  if ( (byte_4C42D51 & 1) == 0 )
   {
-    sub_1C32C20(&Method_DataMasterBase_CombineCostumeMaster__CombineCostumeEntity__string__GetEntity__);
-    byte_4C3775A = 1;
+    sub_1C37058(&Method_DataMasterBase_CombineCostumeMaster__CombineCostumeEntity__string__GetEntity__);
+    byte_4C42D51 = 1;
   }
   PK = (Il2CppObject *)CombineCostumeEntity__CreatePK(svtId, costumeId, *(const MethodInfo **)&costumeId);
   return (CombineCostumeEntity_o *)DataMasterBase_object__object__object___GetEntity(
                                      (DataMasterBase_TMaster__TEntity__PKType__o *)this,
                                      PK,
-                                     (const MethodInfo_339B2F0 *)Method_DataMasterBase_CombineCostumeMaster__CombineCostumeEntity__string__GetEntity__);
+                                     (const MethodInfo_33A5B58 *)Method_DataMasterBase_CombineCostumeMaster__CombineCostumeEntity__string__GetEntity__);
 }
 
 
@@ -99,11 +99,11 @@ bool CombineCostumeMaster__IsClearCombineCondition(
   UserItemEntity_o *v17; // [xsp+8h] [xbp-48h] BYREF
   CombineCostumeEntity_o *entity; // [xsp+18h] [xbp-38h] BYREF
 
-  if ( (byte_4C3775D & 1) == 0 )
+  if ( (byte_4C42D54 & 1) == 0 )
   {
-    sub_1C32C20(&Method_DataManager_GetMasterData_UserItemMaster___);
-    sub_1C32C20(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-    byte_4C3775D = 1;
+    sub_1C37058(&Method_DataManager_GetMasterData_UserItemMaster___);
+    sub_1C37058(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    byte_4C42D54 = 1;
   }
   entity = 0;
   v17 = 0;
@@ -125,12 +125,12 @@ bool CombineCostumeMaster__IsClearCombineCondition(
         v13 = 0;
         while ( 1 )
         {
-          Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39E2904 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+          Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39ED16C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
           if ( !Instance )
             break;
           Instance = DataManager__GetMasterData_object_(
                        (DataManager_o *)Instance,
-                       (const MethodInfo_30DD3F0 *)Method_DataManager_GetMasterData_UserItemMaster___);
+                       (const MethodInfo_30E7C58 *)Method_DataManager_GetMasterData_UserItemMaster___);
           if ( !SelfUserGame )
             break;
           if ( !entity )
@@ -160,14 +160,14 @@ bool CombineCostumeMaster__IsClearCombineCondition(
             break;
           if ( v13 >= LODWORD(itemNums->max_length) )
 LABEL_29:
-            sub_1C32E84(Instance);
+            sub_1C372BC(Instance);
           if ( v17->fields.num < itemNums->m_Items[v13] )
             return 0;
           if ( (_DWORD)max_length == ++v13 )
             return SelfUserGame->fields.qp >= v10->fields.qp;
         }
 LABEL_28:
-        sub_1C32E7C(Instance);
+        sub_1C372B4(Instance);
       }
     }
   }
@@ -187,15 +187,15 @@ bool CombineCostumeMaster__TryGetEntity(
 {
   Il2CppObject *PK; // x2
 
-  if ( (byte_4C3775B & 1) == 0 )
+  if ( (byte_4C42D52 & 1) == 0 )
   {
-    sub_1C32C20(&Method_DataMasterBase_CombineCostumeMaster__CombineCostumeEntity__string__TryGetEntity__);
-    byte_4C3775B = 1;
+    sub_1C37058(&Method_DataMasterBase_CombineCostumeMaster__CombineCostumeEntity__string__TryGetEntity__);
+    byte_4C42D52 = 1;
   }
   PK = (Il2CppObject *)CombineCostumeEntity__CreatePK(svtId, costumeId, *(const MethodInfo **)&svtId);
   return DataMasterBase_object__object__object___TryGetEntity(
            (DataMasterBase_TMaster__TEntity__PKType__o *)this,
            (Il2CppObject **)entity,
            PK,
-           (const MethodInfo_339B33C *)Method_DataMasterBase_CombineCostumeMaster__CombineCostumeEntity__string__TryGetEntity__);
+           (const MethodInfo_33A5BA4 *)Method_DataMasterBase_CombineCostumeMaster__CombineCostumeEntity__string__TryGetEntity__);
 }

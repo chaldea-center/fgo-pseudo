@@ -5,33 +5,33 @@ void AccountLinkageUnlinkConfirmDialog___cctor(const MethodInfo *method)
   __int64 v3; // x1
   struct AccountLinkageUnlinkConfirmDialog_StaticFields *v4; // x0
 
-  if ( (byte_4C3173E & 1) == 0 )
+  if ( (byte_4C3CC8E & 1) == 0 )
   {
-    sub_1C32C20(&AccountLinkageUnlinkConfirmDialog_TypeInfo);
-    sub_1C32C20(&StringLiteral_421/*"#E60000"*/);
-    sub_1C32C20(&StringLiteral_414/*"#787878"*/);
-    sub_1C32C20(&StringLiteral_417/*"#B30000"*/);
-    byte_4C3173E = 1;
+    sub_1C37058(&AccountLinkageUnlinkConfirmDialog_TypeInfo);
+    sub_1C37058(&StringLiteral_421/*"#E60000"*/);
+    sub_1C37058(&StringLiteral_414/*"#787878"*/);
+    sub_1C37058(&StringLiteral_417/*"#B30000"*/);
+    byte_4C3CC8E = 1;
   }
   AccountLinkageUnlinkConfirmDialog_TypeInfo->static_fields->PUSH_BUTTON_DISABLED_COLOR_CODE = (struct System_String_o *)StringLiteral_414/*"#787878"*/;
-  sub_1C32BC4(AccountLinkageUnlinkConfirmDialog_TypeInfo->static_fields, StringLiteral_414/*"#787878"*/);
+  sub_1C36FFC(AccountLinkageUnlinkConfirmDialog_TypeInfo->static_fields, StringLiteral_414/*"#787878"*/);
   v1 = StringLiteral_421/*"#E60000"*/;
   static_fields = AccountLinkageUnlinkConfirmDialog_TypeInfo->static_fields;
   static_fields->DECIDE_BUTTON_LABEL_OPEN_COLOR_CODE = (struct System_String_o *)StringLiteral_421/*"#E60000"*/;
-  sub_1C32BC4(&static_fields->DECIDE_BUTTON_LABEL_OPEN_COLOR_CODE, v1);
+  sub_1C36FFC(&static_fields->DECIDE_BUTTON_LABEL_OPEN_COLOR_CODE, v1);
   v3 = StringLiteral_417/*"#B30000"*/;
   v4 = AccountLinkageUnlinkConfirmDialog_TypeInfo->static_fields;
   v4->DECIDE_BUTTON_LABEL_LOCK_COLOR_CODE = (struct System_String_o *)StringLiteral_417/*"#B30000"*/;
-  sub_1C32BC4(&v4->DECIDE_BUTTON_LABEL_LOCK_COLOR_CODE, v3);
+  sub_1C36FFC(&v4->DECIDE_BUTTON_LABEL_LOCK_COLOR_CODE, v3);
 }
 
 
 void AccountLinkageUnlinkConfirmDialog___ctor(AccountLinkageUnlinkConfirmDialog_o *this, const MethodInfo *method)
 {
-  if ( (byte_4C3173D & 1) == 0 )
+  if ( (byte_4C3CC8D & 1) == 0 )
   {
-    sub_1C32C20(&BaseDialog_TypeInfo);
-    byte_4C3173D = 1;
+    sub_1C37058(&BaseDialog_TypeInfo);
+    byte_4C3CC8D = 1;
   }
   this->fields.DEFULT_MESSAGE_WIDGET_SIZE = (struct UnityEngine_Vector2Int_o)0xF0000002BCLL;
   if ( !BaseDialog_TypeInfo->_2.cctor_finished )
@@ -44,11 +44,11 @@ void AccountLinkageUnlinkConfirmDialog__Close(AccountLinkageUnlinkConfirmDialog_
 {
   const MethodInfo *v2; // x2
 
-  AccountLinkageUnlinkConfirmDialog__Close_31101340(this, 0, v2);
+  AccountLinkageUnlinkConfirmDialog__Close_31118804(this, 0, v2);
 }
 
 
-void AccountLinkageUnlinkConfirmDialog__Close_31101340(
+void AccountLinkageUnlinkConfirmDialog__Close_31118804(
         AccountLinkageUnlinkConfirmDialog_o *this,
         System_Action_o *callback,
         const MethodInfo *method)
@@ -56,16 +56,16 @@ void AccountLinkageUnlinkConfirmDialog__Close_31101340(
   System_Action_o *v5; // x20
   const MethodInfo *v6; // x2
 
-  if ( (byte_4C31738 & 1) == 0 )
+  if ( (byte_4C3CC88 & 1) == 0 )
   {
-    sub_1C32C20(&Method_AccountLinkageUnlinkConfirmDialog_EndClose__);
-    sub_1C32C20(&System_Action_TypeInfo);
-    byte_4C31738 = 1;
+    sub_1C37058(&Method_AccountLinkageUnlinkConfirmDialog_EndClose__);
+    sub_1C37058(&System_Action_TypeInfo);
+    byte_4C3CC88 = 1;
   }
   this->fields.closeCallbackFunc = callback;
-  sub_1C32BC4(&this->fields.closeCallbackFunc, callback);
+  sub_1C36FFC(&this->fields.closeCallbackFunc, callback);
   this->fields.isButtonEnable = 0;
-  v5 = (System_Action_o *)sub_1C32E6C(System_Action_TypeInfo);
+  v5 = (System_Action_o *)sub_1C372A4(System_Action_TypeInfo);
   System_Action___ctor(v5, (Il2CppObject *)this, Method_AccountLinkageUnlinkConfirmDialog_EndClose__, 0);
   BaseDialog__Close((BaseDialog_o *)this, v5, v6);
 }
@@ -81,7 +81,7 @@ void AccountLinkageUnlinkConfirmDialog__EndClose(AccountLinkageUnlinkConfirmDial
   AccountLinkageUnlinkConfirmDialog__Init(this, method);
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
   if ( !gameObject )
-    sub_1C32E7C(0);
+    sub_1C372B4(0);
   UnityEngine_GameObject__SetActive(gameObject, 0, 0);
   closeCallbackFunc = this->fields.closeCallbackFunc;
   p_closeCallbackFunc = &this->fields.closeCallbackFunc;
@@ -89,7 +89,7 @@ void AccountLinkageUnlinkConfirmDialog__EndClose(AccountLinkageUnlinkConfirmDial
   if ( closeCallbackFunc )
   {
     *p_closeCallbackFunc = 0;
-    sub_1C32BC4(p_closeCallbackFunc, 0);
+    sub_1C36FFC(p_closeCallbackFunc, 0);
     ((void (__fastcall *)(intptr_t, intptr_t))v5->fields.invoke_impl)(v5->fields.method_code, v5->fields.method);
   }
 }
@@ -110,11 +110,11 @@ void AccountLinkageUnlinkConfirmDialog__Init(AccountLinkageUnlinkConfirmDialog_o
   UnityEngine_Object_o *buttonCancelLabel; // x20
   const MethodInfo *v8; // x1
 
-  if ( (byte_4C31736 & 1) == 0 )
+  if ( (byte_4C3CC86 & 1) == 0 )
   {
-    sub_1C32C20(&UnityEngine_Object_TypeInfo);
-    sub_1C32C20(&StringLiteral_1/*""*/);
-    byte_4C31736 = 1;
+    sub_1C37058(&UnityEngine_Object_TypeInfo);
+    sub_1C37058(&StringLiteral_1/*""*/);
+    byte_4C3CC86 = 1;
   }
   titleLabel = (UnityEngine_Object_o *)this->fields.titleLabel;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -160,7 +160,7 @@ void AccountLinkageUnlinkConfirmDialog__Init(AccountLinkageUnlinkConfirmDialog_o
   gameObject = (UILabel_o *)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
   if ( !gameObject )
 LABEL_25:
-    sub_1C32E7C(gameObject);
+    sub_1C372B4(gameObject);
   UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)gameObject, 0, 0);
   BaseDialog__Init((BaseDialog_o *)this, v8);
 }
@@ -198,19 +198,19 @@ void AccountLinkageUnlinkConfirmDialog__OnClickCancel(
   System_Reflection_MethodBase_o *v28; // x0
   struct AccountLinkageUnlinkConfirmDialog_ClickDelegate_o *clickFunc; // x8
 
-  if ( (byte_4C3173A & 1) == 0 )
+  if ( (byte_4C3CC8A & 1) == 0 )
   {
-    sub_1C32C20(&Method_AccountLinkageUnlinkConfirmDialog_OnClickCancel__);
-    sub_1C32C20(&Method_System_Collections_Generic_List_string__Add__);
-    sub_1C32C20(&Method_System_Collections_Generic_List_string___ctor__);
-    sub_1C32C20(&System_Collections_Generic_List_string__TypeInfo);
-    sub_1C32C20(&LocalizationManager_TypeInfo);
-    sub_1C32C20(&UnityEngine_Object_TypeInfo);
-    sub_1C32C20(&StringLiteral_3684/*"COMMON_CONFIRM_CANCEL"*/);
-    sub_1C32C20(&StringLiteral_3685/*"COMMON_CONFIRM_CLOSE"*/);
-    sub_1C32C20(&StringLiteral_3688/*"COMMON_CONFIRM_NO"*/);
-    sub_1C32C20(&StringLiteral_10390/*"PLAY_OPENING_CONFIRM_CANCEL"*/);
-    byte_4C3173A = 1;
+    sub_1C37058(&Method_AccountLinkageUnlinkConfirmDialog_OnClickCancel__);
+    sub_1C37058(&Method_System_Collections_Generic_List_string__Add__);
+    sub_1C37058(&Method_System_Collections_Generic_List_string___ctor__);
+    sub_1C37058(&System_Collections_Generic_List_string__TypeInfo);
+    sub_1C37058(&LocalizationManager_TypeInfo);
+    sub_1C37058(&UnityEngine_Object_TypeInfo);
+    sub_1C37058(&StringLiteral_3684/*"COMMON_CONFIRM_CANCEL"*/);
+    sub_1C37058(&StringLiteral_3685/*"COMMON_CONFIRM_CLOSE"*/);
+    sub_1C37058(&StringLiteral_3688/*"COMMON_CONFIRM_NO"*/);
+    sub_1C37058(&StringLiteral_10391/*"PLAY_OPENING_CONFIRM_CANCEL"*/);
+    byte_4C3CC8A = 1;
   }
   if ( this->fields.isButtonEnable )
   {
@@ -218,12 +218,12 @@ void AccountLinkageUnlinkConfirmDialog__OnClickCancel(
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
     v3 = (Il2CppObject *)LocalizationManager__Get((System_String_o *)StringLiteral_3685/*"COMMON_CONFIRM_CLOSE"*/, 0);
     v4 = (Il2CppObject *)LocalizationManager__Get((System_String_o *)StringLiteral_3684/*"COMMON_CONFIRM_CANCEL"*/, 0);
-    v5 = (Il2CppObject *)LocalizationManager__Get((System_String_o *)StringLiteral_10390/*"PLAY_OPENING_CONFIRM_CANCEL"*/, 0);
+    v5 = (Il2CppObject *)LocalizationManager__Get((System_String_o *)StringLiteral_10391/*"PLAY_OPENING_CONFIRM_CANCEL"*/, 0);
     v6 = (Il2CppObject *)LocalizationManager__Get((System_String_o *)StringLiteral_3688/*"COMMON_CONFIRM_NO"*/, 0);
-    v7 = (System_Collections_Generic_List_object__o *)sub_1C32E6C(System_Collections_Generic_List_string__TypeInfo);
+    v7 = (System_Collections_Generic_List_object__o *)sub_1C372A4(System_Collections_Generic_List_string__TypeInfo);
     System_Collections_Generic_List_object____ctor(
       v7,
-      (const MethodInfo_3797F88 *)Method_System_Collections_Generic_List_string___ctor__);
+      (const MethodInfo_37A27F0 *)Method_System_Collections_Generic_List_string___ctor__);
     if ( !v7 )
       goto LABEL_34;
     items = v7->fields._items;
@@ -237,14 +237,14 @@ void AccountLinkageUnlinkConfirmDialog__OnClickCancel(
       System_Collections_Generic_List_object___AddWithResize(
         v7,
         v3,
-        *(const MethodInfo_37987BC **)(*(_QWORD *)(v10[4] + 192LL) + 112LL));
+        *(const MethodInfo_37A3024 **)(*(_QWORD *)(v10[4] + 192LL) + 112LL));
     }
     else
     {
       v12 = &items->obj.klass + size;
       v7->fields._size = size + 1;
       v12[4] = (Il2CppClass *)v3;
-      v8 = sub_1C32BC4(v12 + 4, v3);
+      v8 = sub_1C36FFC(v12 + 4, v3);
     }
     v13 = v7->fields._items;
     v14 = Method_System_Collections_Generic_List_string__Add__;
@@ -257,14 +257,14 @@ void AccountLinkageUnlinkConfirmDialog__OnClickCancel(
       System_Collections_Generic_List_object___AddWithResize(
         v7,
         v4,
-        *(const MethodInfo_37987BC **)(*(_QWORD *)(v14[4] + 192LL) + 112LL));
+        *(const MethodInfo_37A3024 **)(*(_QWORD *)(v14[4] + 192LL) + 112LL));
     }
     else
     {
       v16 = &v13->obj.klass + v15;
       v7->fields._size = v15 + 1;
       v16[4] = (Il2CppClass *)v4;
-      v8 = sub_1C32BC4(v16 + 4, v4);
+      v8 = sub_1C36FFC(v16 + 4, v4);
     }
     v17 = v7->fields._items;
     v18 = Method_System_Collections_Generic_List_string__Add__;
@@ -277,35 +277,35 @@ void AccountLinkageUnlinkConfirmDialog__OnClickCancel(
       System_Collections_Generic_List_object___AddWithResize(
         v7,
         v5,
-        *(const MethodInfo_37987BC **)(*(_QWORD *)(v18[4] + 192LL) + 112LL));
+        *(const MethodInfo_37A3024 **)(*(_QWORD *)(v18[4] + 192LL) + 112LL));
     }
     else
     {
       v20 = &v17->obj.klass + v19;
       v7->fields._size = v19 + 1;
       v20[4] = (Il2CppClass *)v5;
-      v8 = sub_1C32BC4(v20 + 4, v5);
+      v8 = sub_1C36FFC(v20 + 4, v5);
     }
     v21 = v7->fields._items;
     v22 = Method_System_Collections_Generic_List_string__Add__;
     ++v7->fields._version;
     if ( !v21 )
 LABEL_34:
-      sub_1C32E7C(v8);
+      sub_1C372B4(v8);
     v23 = v7->fields._size;
     if ( (unsigned int)v23 >= LODWORD(v21->max_length) )
     {
       System_Collections_Generic_List_object___AddWithResize(
         v7,
         v6,
-        *(const MethodInfo_37987BC **)(*(_QWORD *)(v22[4] + 192LL) + 112LL));
+        *(const MethodInfo_37A3024 **)(*(_QWORD *)(v22[4] + 192LL) + 112LL));
     }
     else
     {
       v24 = &v21->obj.klass + v23;
       v7->fields._size = v23 + 1;
       v24[4] = (Il2CppClass *)v6;
-      sub_1C32BC4(v24 + 4, v6);
+      sub_1C36FFC(v24 + 4, v6);
     }
     buttonDecide = (UnityEngine_Object_o *)this->fields.buttonDecide;
     if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -319,8 +319,8 @@ LABEL_34:
     }
     v27 = Method_AccountLinkageUnlinkConfirmDialog_OnClickCancel__;
     if ( (*((_BYTE *)Method_AccountLinkageUnlinkConfirmDialog_OnClickCancel__ + 83) & 2) != 0 )
-      v27 = (_QWORD *)sub_1C32C38();
-    v28 = (System_Reflection_MethodBase_o *)sub_1C32C04(v27, v27[4]);
+      v27 = (_QWORD *)sub_1C37070();
+    v28 = (System_Reflection_MethodBase_o *)sub_1C3703C(v27, v27[4]);
     OverwriteAssetSoundName__PlaySystemSe(v28, 1, 0, 0);
     clickFunc = this->fields.clickFunc;
     this->fields.isButtonEnable = 0;
@@ -345,23 +345,23 @@ void AccountLinkageUnlinkConfirmDialog__OnClickDecide(
   System_Reflection_MethodBase_o *v8; // x0
   struct AccountLinkageUnlinkConfirmDialog_ClickDelegate_o *clickFunc; // x8
 
-  if ( (byte_4C31739 & 1) == 0 )
+  if ( (byte_4C3CC89 & 1) == 0 )
   {
-    sub_1C32C20(&Method_AccountLinkageUnlinkConfirmDialog_OnClickDecide__);
-    byte_4C31739 = 1;
+    sub_1C37058(&Method_AccountLinkageUnlinkConfirmDialog_OnClickDecide__);
+    byte_4C3CC89 = 1;
   }
   if ( this->fields.isButtonEnable )
   {
     checkSlider = (UIProgressBar_o *)this->fields.checkSlider;
     if ( !checkSlider )
-      sub_1C32E7C(0);
+      sub_1C372B4(0);
     if ( UIProgressBar__get_value(checkSlider, 0) >= 1.0 )
     {
       v6 = Method_AccountLinkageUnlinkConfirmDialog_OnClickDecide__;
       isDecideBtnSe = this->fields.isDecideBtnSe;
       if ( (*((_BYTE *)Method_AccountLinkageUnlinkConfirmDialog_OnClickDecide__ + 83) & 2) != 0 )
-        v6 = (_QWORD *)sub_1C32C38();
-      v8 = (System_Reflection_MethodBase_o *)sub_1C32C04(v6, v6[4]);
+        v6 = (_QWORD *)sub_1C37070();
+      v8 = (System_Reflection_MethodBase_o *)sub_1C3703C(v6, v6[4]);
       OverwriteAssetSoundName__PlaySystemSe(v8, 8 * isDecideBtnSe, 0, 0);
       clickFunc = this->fields.clickFunc;
       this->fields.isButtonEnable = 0;
@@ -375,8 +375,8 @@ void AccountLinkageUnlinkConfirmDialog__OnClickDecide(
     {
       v4 = Method_AccountLinkageUnlinkConfirmDialog_OnClickDecide__;
       if ( (*((_BYTE *)Method_AccountLinkageUnlinkConfirmDialog_OnClickDecide__ + 83) & 2) != 0 )
-        v4 = (_QWORD *)sub_1C32C38();
-      v5 = (System_Reflection_MethodBase_o *)sub_1C32C04(v4, v4[4]);
+        v4 = (_QWORD *)sub_1C37070();
+      v5 = (System_Reflection_MethodBase_o *)sub_1C3703C(v4, v4[4]);
       OverwriteAssetSoundName__PlaySystemSe(v5, 2, 0, 0);
     }
   }
@@ -387,13 +387,13 @@ void AccountLinkageUnlinkConfirmDialog__OnEnable(AccountLinkageUnlinkConfirmDial
 {
   UnityEngine_Transform_o *transform; // x0
 
-  if ( (byte_4C3173C & 1) == 0 )
+  if ( (byte_4C3CC8C & 1) == 0 )
   {
-    sub_1C32C20(&StringLiteral_4598/*"CommonConfirmDialog/Window/CancelButton"*/);
-    byte_4C3173C = 1;
+    sub_1C37058(&StringLiteral_4598/*"CommonConfirmDialog/Window/CancelButton"*/);
+    byte_4C3CC8C = 1;
   }
   transform = UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0);
-  AndroidBackKeyManager__AddBackBtn_44857896(transform, (System_String_o *)StringLiteral_4598/*"CommonConfirmDialog/Window/CancelButton"*/, 0);
+  AndroidBackKeyManager__AddBackBtn_44960000(transform, (System_String_o *)StringLiteral_4598/*"CommonConfirmDialog/Window/CancelButton"*/, 0);
 }
 
 
@@ -413,7 +413,7 @@ void AccountLinkageUnlinkConfirmDialog__OnSliderDragFinished(
     || (value = UIProgressBar__get_value(checkSlider, 0),
         (checkSlider = (UIProgressBar_o *)this->fields.checkSlider) == 0) )
   {
-    sub_1C32E7C(checkSlider);
+    sub_1C372B4(checkSlider);
   }
   v5 = value < 0.9;
   if ( value >= 0.9 )
@@ -510,13 +510,13 @@ void AccountLinkageUnlinkConfirmDialog__SetSlider(
   UnityEngine_Color_o v15; // [xsp+0h] [xbp-50h] BYREF
   UnityEngine_Color_o color; // [xsp+10h] [xbp-40h] BYREF
 
-  if ( (byte_4C3173B & 1) == 0 )
+  if ( (byte_4C3CC8B & 1) == 0 )
   {
-    sub_1C32C20(&AccountLinkageUnlinkConfirmDialog_TypeInfo);
-    sub_1C32C20(&Method_UnityEngine_GameObject_GetComponent_UIButtonColor___);
-    sub_1C32C20(&StringLiteral_20579/*"img_slider_thumb_locked"*/);
-    sub_1C32C20(&StringLiteral_20578/*"img_slider_thumb"*/);
-    byte_4C3173B = 1;
+    sub_1C37058(&AccountLinkageUnlinkConfirmDialog_TypeInfo);
+    sub_1C37058(&Method_UnityEngine_GameObject_GetComponent_UIButtonColor___);
+    sub_1C37058(&StringLiteral_20582/*"img_slider_thumb_locked"*/);
+    sub_1C37058(&StringLiteral_20581/*"img_slider_thumb"*/);
+    byte_4C3CC8B = 1;
   }
   *(_QWORD *)&color.fields.r = 0;
   *(_QWORD *)&color.fields.b = 0;
@@ -525,9 +525,9 @@ void AccountLinkageUnlinkConfirmDialog__SetSlider(
   sliderSprite = this->fields.sliderSprite;
   if ( !sliderSprite )
     goto LABEL_25;
-  v6 = (System_String_o **)&StringLiteral_20578/*"img_slider_thumb"*/;
+  v6 = (System_String_o **)&StringLiteral_20581/*"img_slider_thumb"*/;
   if ( !sliderOn )
-    v6 = (System_String_o **)&StringLiteral_20579/*"img_slider_thumb_locked"*/;
+    v6 = (System_String_o **)&StringLiteral_20582/*"img_slider_thumb_locked"*/;
   UISprite__set_spriteName(sliderSprite, *v6, 0);
   v7 = AccountLinkageUnlinkConfirmDialog_TypeInfo;
   if ( !AccountLinkageUnlinkConfirmDialog_TypeInfo->_2.cctor_finished )
@@ -541,7 +541,7 @@ void AccountLinkageUnlinkConfirmDialog__SetSlider(
     goto LABEL_25;
   sliderSprite = (UISprite_o *)UnityEngine_GameObject__GetComponent_object_(
                                  (UnityEngine_GameObject_o *)sliderSprite,
-                                 (const MethodInfo_3134970 *)Method_UnityEngine_GameObject_GetComponent_UIButtonColor___);
+                                 (const MethodInfo_313F1D8 *)Method_UnityEngine_GameObject_GetComponent_UIButtonColor___);
   if ( !sliderSprite )
     goto LABEL_25;
   v8 = sliderOn ? 0LL : 3LL;
@@ -555,7 +555,7 @@ void AccountLinkageUnlinkConfirmDialog__SetSlider(
     goto LABEL_25;
   sliderSprite = (UISprite_o *)UnityEngine_GameObject__GetComponent_object_(
                                  (UnityEngine_GameObject_o *)sliderSprite,
-                                 (const MethodInfo_3134970 *)Method_UnityEngine_GameObject_GetComponent_UIButtonColor___);
+                                 (const MethodInfo_313F1D8 *)Method_UnityEngine_GameObject_GetComponent_UIButtonColor___);
   a = 1.0;
   b = 1.0;
   g = 1.0;
@@ -575,7 +575,7 @@ void AccountLinkageUnlinkConfirmDialog__SetSlider(
     goto LABEL_25;
   sliderSprite = (UISprite_o *)UnityEngine_GameObject__GetComponent_object_(
                                  (UnityEngine_GameObject_o *)sliderSprite,
-                                 (const MethodInfo_3134970 *)Method_UnityEngine_GameObject_GetComponent_UIButtonColor___);
+                                 (const MethodInfo_313F1D8 *)Method_UnityEngine_GameObject_GetComponent_UIButtonColor___);
   if ( !sliderSprite )
     goto LABEL_25;
   ((void (__fastcall *)(UISprite_o *, bool, const MethodInfo *))sliderSprite->klass->vtable._5_get_isAnchoredVertically.methodPtr)(
@@ -598,7 +598,7 @@ void AccountLinkageUnlinkConfirmDialog__SetSlider(
   sliderSprite = (UISprite_o *)this->fields.buttonDecideLabel;
   if ( !sliderSprite )
 LABEL_25:
-    sub_1C32E7C(sliderSprite);
+    sub_1C372B4(sliderSprite);
   UIWidget__set_color((UIWidget_o *)sliderSprite, v15, 0);
 }
 
@@ -678,27 +678,27 @@ void AccountLinkageUnlinkConfirmDialog__Setup(
   UnityEngine_Color_o v81; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 
   v29 = titleFontSize;
-  if ( (byte_4C31737 & 1) == 0 )
+  if ( (byte_4C3CC87 & 1) == 0 )
   {
-    sub_1C32C20(&Method_AccountLinkageUnlinkConfirmDialog_EndOpen__);
-    sub_1C32C20(&Method_AccountLinkageUnlinkConfirmDialog_OnSliderDragFinished__);
-    sub_1C32C20(&System_Action_TypeInfo);
-    sub_1C32C20(&BalanceConfig_TypeInfo);
-    sub_1C32C20(&Method_UnityEngine_GameObject_GetComponent_UISkinSprite___);
-    sub_1C32C20(&LocalizationManager_TypeInfo);
-    sub_1C32C20(&Method_System_Nullable_float__GetValueOrDefault__);
-    sub_1C32C20(&Method_System_Nullable_Color__GetValueOrDefault__);
-    sub_1C32C20(&Method_System_Nullable_float__get_HasValue__);
-    sub_1C32C20(&Method_System_Nullable_Color__get_HasValue__);
-    sub_1C32C20(&UnityEngine_Object_TypeInfo);
-    sub_1C32C20(&UIProgressBar_OnDragFinished_TypeInfo);
-    sub_1C32C20(&StringLiteral_3688/*"COMMON_CONFIRM_NO"*/);
-    sub_1C32C20(&StringLiteral_3693/*"COMMON_CONFIRM_YES"*/);
-    sub_1C32C20(&StringLiteral_1/*""*/);
-    byte_4C31737 = 1;
+    sub_1C37058(&Method_AccountLinkageUnlinkConfirmDialog_EndOpen__);
+    sub_1C37058(&Method_AccountLinkageUnlinkConfirmDialog_OnSliderDragFinished__);
+    sub_1C37058(&System_Action_TypeInfo);
+    sub_1C37058(&BalanceConfig_TypeInfo);
+    sub_1C37058(&Method_UnityEngine_GameObject_GetComponent_UISkinSprite___);
+    sub_1C37058(&LocalizationManager_TypeInfo);
+    sub_1C37058(&Method_System_Nullable_float__GetValueOrDefault__);
+    sub_1C37058(&Method_System_Nullable_Color__GetValueOrDefault__);
+    sub_1C37058(&Method_System_Nullable_float__get_HasValue__);
+    sub_1C37058(&Method_System_Nullable_Color__get_HasValue__);
+    sub_1C37058(&UnityEngine_Object_TypeInfo);
+    sub_1C37058(&UIProgressBar_OnDragFinished_TypeInfo);
+    sub_1C37058(&StringLiteral_3688/*"COMMON_CONFIRM_NO"*/);
+    sub_1C37058(&StringLiteral_3693/*"COMMON_CONFIRM_YES"*/);
+    sub_1C37058(&StringLiteral_1/*""*/);
+    byte_4C3CC87 = 1;
   }
   this->fields.clickFunc = func;
-  sub_1C32BC4(&this->fields.clickFunc, func);
+  sub_1C36FFC(&this->fields.clickFunc, func);
   titleLabel = (UnityEngine_Object_o *)this->fields.titleLabel;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
@@ -946,7 +946,7 @@ void AccountLinkageUnlinkConfirmDialog__Setup(
     goto LABEL_101;
   Component_object = UnityEngine_GameObject__GetComponent_object_(
                        (UnityEngine_GameObject_o *)baseWindow,
-                       (const MethodInfo_3134970 *)Method_UnityEngine_GameObject_GetComponent_UISkinSprite___);
+                       (const MethodInfo_313F1D8 *)Method_UnityEngine_GameObject_GetComponent_UISkinSprite___);
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   baseWindow = (void *)UnityEngine_Object__op_Inequality((UnityEngine_Object_o *)Component_object, 0, 0);
@@ -964,7 +964,7 @@ void AccountLinkageUnlinkConfirmDialog__Setup(
   if ( !baseWindow
     || (UIProgressBar__set_value((UIProgressBar_o *)baseWindow, 0.0, 0),
         checkSlider = this->fields.checkSlider,
-        v72 = (UIProgressBar_OnDragFinished_o *)sub_1C32E6C(UIProgressBar_OnDragFinished_TypeInfo),
+        v72 = (UIProgressBar_OnDragFinished_o *)sub_1C372A4(UIProgressBar_OnDragFinished_TypeInfo),
         UIProgressBar_OnDragFinished___ctor(
           v72,
           (Il2CppObject *)this,
@@ -973,12 +973,12 @@ void AccountLinkageUnlinkConfirmDialog__Setup(
         !checkSlider) )
   {
 LABEL_101:
-    sub_1C32E7C(baseWindow);
+    sub_1C372B4(baseWindow);
   }
   checkSlider->fields.onDragFinished = v72;
-  sub_1C32BC4(&checkSlider->fields.onDragFinished, v72);
+  sub_1C36FFC(&checkSlider->fields.onDragFinished, v72);
   AccountLinkageUnlinkConfirmDialog__SetSlider(this, 0, v73);
-  v74 = (System_Action_o *)sub_1C32E6C(System_Action_TypeInfo);
+  v74 = (System_Action_o *)sub_1C372A4(System_Action_TypeInfo);
   System_Action___ctor(v74, (Il2CppObject *)this, Method_AccountLinkageUnlinkConfirmDialog_EndOpen__, 0);
   BaseDialog__Open((BaseDialog_o *)this, v74, maskType, 0, v75);
 }
@@ -999,15 +999,15 @@ void AccountLinkageUnlinkConfirmDialog_ClickDelegate___ctor(
   this->fields.method = method;
   this->fields.method_ptr = v4;
   this->fields.m_target = object;
-  sub_1C32BC4(&this->fields.m_target, object);
+  sub_1C36FFC(&this->fields.m_target, object);
   v8 = *(unsigned __int8 *)(method + 82);
   this->fields.method_code = (intptr_t)this;
-  if ( (sub_1C32CE0(method) & 1) == 0 )
+  if ( (sub_1C37118(method) & 1) == 0 )
   {
     if ( !object )
     {
-      v10 = sub_1C32E98(0, "Delegate to an instance method cannot have null 'this'.");
-      sub_1C32D48(v10, 0);
+      v10 = sub_1C372D0(0, "Delegate to an instance method cannot have null 'this'.");
+      sub_1C37180(v10, 0);
     }
     goto LABEL_5;
   }
@@ -1019,9 +1019,9 @@ LABEL_5:
     this->fields.method_code = (intptr_t)m_target;
     goto LABEL_6;
   }
-  this->fields.invoke_impl = (intptr_t)sub_1A6E228;
+  this->fields.invoke_impl = (intptr_t)sub_1A72310;
 LABEL_6:
-  this->fields.extra_arg = (intptr_t)sub_1A6E1E0;
+  this->fields.extra_arg = (intptr_t)sub_1A722C8;
 }
 
 
@@ -1039,14 +1039,14 @@ System_IAsyncResult_o *AccountLinkageUnlinkConfirmDialog_ClickDelegate__BeginInv
   bool v13[4]; // [xsp+1Ch] [xbp-34h] BYREF
 
   v13[0] = isDecide;
-  if ( (byte_4C3173F & 1) == 0 )
+  if ( (byte_4C3CC8F & 1) == 0 )
   {
-    sub_1C32C20(&bool_TypeInfo);
-    byte_4C3173F = 1;
+    sub_1C37058(&bool_TypeInfo);
+    byte_4C3CC8F = 1;
   }
   v12[1] = 0;
   v12[0] = j_il2cpp_value_box_0(bool_TypeInfo, v13, callback, object, method, v5, v6, v7);
-  return (System_IAsyncResult_o *)sub_1C32BD4(this, v12, callback, object);
+  return (System_IAsyncResult_o *)sub_1C3700C(this, v12, callback, object);
 }
 
 
@@ -1055,7 +1055,7 @@ void AccountLinkageUnlinkConfirmDialog_ClickDelegate__EndInvoke(
         System_IAsyncResult_o *result,
         const MethodInfo *method)
 {
-  sub_1C32BD8(result, 0, method);
+  sub_1C37010(result, 0, method);
 }
 
 

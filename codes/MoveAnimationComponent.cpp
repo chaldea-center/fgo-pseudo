@@ -6,10 +6,10 @@ void MoveAnimationComponent___ctor(MoveAnimationComponent_o *this, const MethodI
   struct UnityEngine_Vector3_StaticFields *v6; // x8
   float v7; // s1
 
-  if ( !byte_4C313D1 )
+  if ( !byte_4C3C921 )
   {
-    sub_1C32C20(&UnityEngine_Vector3_TypeInfo);
-    byte_4C313D1 = 1;
+    sub_1C37058(&UnityEngine_Vector3_TypeInfo);
+    byte_4C3C921 = 1;
   }
   v3 = UnityEngine_Vector3_TypeInfo;
   static_fields = UnityEngine_Vector3_TypeInfo->static_fields;
@@ -65,11 +65,11 @@ void MoveAnimationComponent__PlayAnimation(
   v10.fields.z = *p_z;
   v10.fields.y = *p_y;
   v10.fields.x = p_endPosition->fields.x;
-  MoveAnimationComponent__PlayAnimation_47946964(this, animationType, v10, v11, onFinish, method);
+  MoveAnimationComponent__PlayAnimation_47969620(this, animationType, v10, v11, onFinish, method);
 }
 
 
-void MoveAnimationComponent__PlayAnimation_47946964(
+void MoveAnimationComponent__PlayAnimation_47969620(
         MoveAnimationComponent_o *this,
         int32_t animationType,
         UnityEngine_Vector3_o fromPosition,
@@ -97,10 +97,10 @@ void MoveAnimationComponent__PlayAnimation_47946964(
   v10 = fromPosition.fields.z;
   v11 = fromPosition.fields.y;
   v12 = fromPosition.fields.x;
-  if ( (byte_4C3B4FE & 1) == 0 )
+  if ( (byte_4C46A43 & 1) == 0 )
   {
-    sub_1C32C20(&UnityEngine_Object_TypeInfo);
-    byte_4C3B4FE = 1;
+    sub_1C37058(&UnityEngine_Object_TypeInfo);
+    byte_4C46A43 = 1;
   }
   Target = (UnityEngine_Object_o *)TweenAnimationComponent__get_Target((TweenAnimationComponent_o *)this, 0);
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -110,7 +110,7 @@ void MoveAnimationComponent__PlayAnimation_47946964(
   transform = TweenAnimationComponent__get_Target((TweenAnimationComponent_o *)this, 0);
   if ( !transform || (transform = (UnityEngine_GameObject_o *)UnityEngine_GameObject__get_transform(transform, 0)) == 0 )
 LABEL_16:
-    sub_1C32E7C(transform);
+    sub_1C372B4(transform);
   v19.fields.x = v12;
   v19.fields.y = v11;
   v19.fields.z = v10;
@@ -169,7 +169,7 @@ void MoveAnimationComponent__SetBeginWorldPosition(
         (Target = TweenAnimationComponent__get_Target((TweenAnimationComponent_o *)this, 0)) == 0)
     || (Target = (UnityEngine_GameObject_o *)UnityEngine_GameObject__get_transform(Target, 0)) == 0 )
   {
-    sub_1C32E7C(Target);
+    sub_1C372B4(Target);
   }
   this->fields.beginPosition = UnityEngine_Transform__get_localPosition((UnityEngine_Transform_o *)Target, 0);
 }

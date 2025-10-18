@@ -7,26 +7,26 @@ void EventBannerControl___ctor(EventBannerControl_o *this, const MethodInfo *met
   int32_t v7; // w2
   const MethodInfo *v8; // x3
 
-  if ( (byte_4C3B8E7 & 1) == 0 )
+  if ( (byte_4C46EFA & 1) == 0 )
   {
-    sub_1C32C20(&Method_System_Collections_Generic_List_int___ctor__);
-    sub_1C32C20(&Method_System_Collections_Generic_List_GameObject___ctor__);
-    sub_1C32C20(&System_Collections_Generic_List_int__TypeInfo);
-    sub_1C32C20(&System_Collections_Generic_List_GameObject__TypeInfo);
-    byte_4C3B8E7 = 1;
+    sub_1C37058(&Method_System_Collections_Generic_List_int___ctor__);
+    sub_1C37058(&Method_System_Collections_Generic_List_GameObject___ctor__);
+    sub_1C37058(&System_Collections_Generic_List_int__TypeInfo);
+    sub_1C37058(&System_Collections_Generic_List_GameObject__TypeInfo);
+    byte_4C46EFA = 1;
   }
-  v3 = (System_Collections_Generic_List_int__o *)sub_1C32E6C(System_Collections_Generic_List_int__TypeInfo);
+  v3 = (System_Collections_Generic_List_int__o *)sub_1C372A4(System_Collections_Generic_List_int__TypeInfo);
   System_Collections_Generic_List_int____ctor(
     v3,
-    (const MethodInfo_377AF44 *)Method_System_Collections_Generic_List_int___ctor__);
+    (const MethodInfo_37857AC *)Method_System_Collections_Generic_List_int___ctor__);
   this->fields.bannerIdList = v3;
-  sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.bannerIdList, (int32_t)v3, v4, v5);
-  v6 = (System_Collections_Generic_List_object__o *)sub_1C32E6C(System_Collections_Generic_List_GameObject__TypeInfo);
+  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.bannerIdList, (int32_t)v3, v4, v5);
+  v6 = (System_Collections_Generic_List_object__o *)sub_1C372A4(System_Collections_Generic_List_GameObject__TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v6,
-    (const MethodInfo_3797F88 *)Method_System_Collections_Generic_List_GameObject___ctor__);
+    (const MethodInfo_37A27F0 *)Method_System_Collections_Generic_List_GameObject___ctor__);
   this->fields.bannerObjList = (struct System_Collections_Generic_List_GameObject__o *)v6;
-  sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.bannerObjList, (int32_t)v6, v7, v8);
+  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.bannerObjList, (int32_t)v6, v7, v8);
   BaseMonoBehaviour___ctor((BaseMonoBehaviour_o *)this, 0);
 }
 
@@ -39,13 +39,13 @@ void EventBannerControl__ClearBanner(EventBannerControl_o *this, const MethodInf
   int32_t v6; // w2
   int v7; // w8
 
-  if ( (byte_4C3B8E5 & 1) == 0 )
+  if ( (byte_4C46EF8 & 1) == 0 )
   {
-    sub_1C32C20(&Method_System_Collections_Generic_List_GameObject__Clear__);
-    sub_1C32C20(&Method_System_Collections_Generic_List_GameObject__get_Count__);
-    sub_1C32C20(&Method_System_Collections_Generic_List_GameObject__get_Item__);
-    sub_1C32C20(&UnityEngine_Object_TypeInfo);
-    byte_4C3B8E5 = 1;
+    sub_1C37058(&Method_System_Collections_Generic_List_GameObject__Clear__);
+    sub_1C37058(&Method_System_Collections_Generic_List_GameObject__get_Count__);
+    sub_1C37058(&Method_System_Collections_Generic_List_GameObject__get_Item__);
+    sub_1C37058(&UnityEngine_Object_TypeInfo);
+    byte_4C46EF8 = 1;
   }
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
   if ( !gameObject
@@ -53,7 +53,7 @@ void EventBannerControl__ClearBanner(EventBannerControl_o *this, const MethodInf
         (gameObject = this->fields.bannerObjList) == 0) )
   {
 LABEL_14:
-    sub_1C32E7C(gameObject);
+    sub_1C372B4(gameObject);
   }
   if ( *((int *)gameObject + 6) >= 1 )
   {
@@ -63,10 +63,10 @@ LABEL_14:
       Item = System_Collections_Generic_List_object___get_Item(
                (System_Collections_Generic_List_object__o *)gameObject,
                v4,
-               (const MethodInfo_37984EC *)Method_System_Collections_Generic_List_GameObject__get_Item__);
+               (const MethodInfo_37A2D54 *)Method_System_Collections_Generic_List_GameObject__get_Item__);
       if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-      UnityEngine_Object__Destroy_71223640((UnityEngine_Object_o *)Item, 0);
+      UnityEngine_Object__Destroy_71266752((UnityEngine_Object_o *)Item, 0);
       gameObject = this->fields.bannerObjList;
       if ( !gameObject )
         goto LABEL_14;
@@ -107,12 +107,12 @@ void EventBannerControl__setBannerList(EventBannerControl_o *this, const MethodI
   intptr_t v21; // x8
 
   v2 = this;
-  if ( (byte_4C3B8E6 & 1) == 0 )
+  if ( (byte_4C46EF9 & 1) == 0 )
   {
-    sub_1C32C20(&Method_UnityEngine_GameObject_GetComponent_BannerComponent___);
-    sub_1C32C20(&Method_System_Collections_Generic_List_int__Add__);
-    this = (EventBannerControl_o *)sub_1C32C20(&Method_System_Collections_Generic_List_GameObject__Add__);
-    byte_4C3B8E6 = 1;
+    sub_1C37058(&Method_UnityEngine_GameObject_GetComponent_BannerComponent___);
+    sub_1C37058(&Method_System_Collections_Generic_List_int__Add__);
+    this = (EventBannerControl_o *)sub_1C37058(&Method_System_Collections_Generic_List_GameObject__Add__);
+    byte_4C46EF9 = 1;
   }
   combineData = v2->fields.combineData;
   if ( !combineData )
@@ -131,7 +131,7 @@ void EventBannerControl__setBannerList(EventBannerControl_o *this, const MethodI
       while ( 1 )
       {
         if ( (unsigned int)v6 >= max_length )
-          sub_1C32E84(this);
+          sub_1C372BC(this);
         v7 = combineEventList->m_Items[v6];
         if ( !v7 )
           break;
@@ -152,7 +152,7 @@ void EventBannerControl__setBannerList(EventBannerControl_o *this, const MethodI
             System_Collections_Generic_List_int___AddWithResize(
               (System_Collections_Generic_List_int__o *)this,
               bannerId,
-              *(const MethodInfo_377B798 **)(*(_QWORD *)(v10[4] + 192LL) + 112LL));
+              *(const MethodInfo_3786000 **)(*(_QWORD *)(v10[4] + 192LL) + 112LL));
           }
           else
           {
@@ -175,10 +175,10 @@ void EventBannerControl__setBannerList(EventBannerControl_o *this, const MethodI
           v14 = this;
           this = (EventBannerControl_o *)UnityEngine_GameObject__get_transform((UnityEngine_GameObject_o *)this, 0);
           v15 = this;
-          if ( !byte_4C313D6 )
+          if ( !byte_4C3C926 )
           {
-            this = (EventBannerControl_o *)sub_1C32C20(&UnityEngine_Vector3_TypeInfo);
-            byte_4C313D6 = 1;
+            this = (EventBannerControl_o *)sub_1C37058(&UnityEngine_Vector3_TypeInfo);
+            byte_4C3C926 = 1;
           }
           if ( !v15 )
             break;
@@ -188,7 +188,7 @@ void EventBannerControl__setBannerList(EventBannerControl_o *this, const MethodI
             0);
           this = (EventBannerControl_o *)UnityEngine_GameObject__GetComponent_object_(
                                            (UnityEngine_GameObject_o *)v14,
-                                           (const MethodInfo_3134970 *)Method_UnityEngine_GameObject_GetComponent_BannerComponent___);
+                                           (const MethodInfo_313F1D8 *)Method_UnityEngine_GameObject_GetComponent_BannerComponent___);
           if ( !this )
             break;
           BannerComponent__SetBanner((BannerComponent_o *)this, v7, 0);
@@ -206,14 +206,14 @@ void EventBannerControl__setBannerList(EventBannerControl_o *this, const MethodI
             System_Collections_Generic_List_object___AddWithResize(
               (System_Collections_Generic_List_object__o *)this,
               (Il2CppObject *)v14,
-              *(const MethodInfo_37987BC **)(*(_QWORD *)(v19[4] + 192LL) + 112LL));
+              *(const MethodInfo_37A3024 **)(*(_QWORD *)(v19[4] + 192LL) + 112LL));
           }
           else
           {
             v21 = v18 + 8 * v20;
             LODWORD(this->fields.m_CancellationTokenSource) = v20 + 1;
             *(_QWORD *)(v21 + 32) = v14;
-            sub_1C32BC4((CGThumbnailListItem_o *)(v21 + 32), (int32_t)v14, v16, v17);
+            sub_1C36FFC((CGThumbnailListItem_o *)(v21 + 32), (int32_t)v14, v16, v17);
           }
         }
         max_length = combineEventList->max_length;
@@ -221,7 +221,7 @@ void EventBannerControl__setBannerList(EventBannerControl_o *this, const MethodI
           goto LABEL_28;
       }
 LABEL_31:
-      sub_1C32E7C(this);
+      sub_1C372B4(this);
     }
 LABEL_28:
     this = (EventBannerControl_o *)v2->fields.bannerGrid;

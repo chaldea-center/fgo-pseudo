@@ -4,15 +4,15 @@ void UIRect___cctor(const MethodInfo *method)
   int32_t v2; // w2
   const MethodInfo *v3; // x3
 
-  if ( (byte_4C3C206 & 1) == 0 )
+  if ( (byte_4C47781 & 1) == 0 )
   {
-    sub_1C32C20(&UIRect_TypeInfo);
-    sub_1C32C20(&UnityEngine_Vector3___TypeInfo);
-    byte_4C3C206 = 1;
+    sub_1C37058(&UIRect_TypeInfo);
+    sub_1C37058(&UnityEngine_Vector3___TypeInfo);
+    byte_4C47781 = 1;
   }
-  v1 = (struct UnityEngine_Vector3_array *)sub_1C32CC8(UnityEngine_Vector3___TypeInfo, 4);
+  v1 = (struct UnityEngine_Vector3_array *)sub_1C37100(UnityEngine_Vector3___TypeInfo, 4);
   UIRect_TypeInfo->static_fields->mSides = v1;
-  sub_1C32BC4((CGThumbnailListItem_o *)UIRect_TypeInfo->static_fields, (int32_t)v1, v2, v3);
+  sub_1C36FFC((CGThumbnailListItem_o *)UIRect_TypeInfo->static_fields, (int32_t)v1, v2, v3);
 }
 
 
@@ -34,36 +34,36 @@ void UIRect___ctor(UIRect_o *this, const MethodInfo *method)
   int32_t v16; // w2
   const MethodInfo *v17; // x3
 
-  if ( (byte_4C3C205 & 1) == 0 )
+  if ( (byte_4C47780 & 1) == 0 )
   {
-    sub_1C32C20(&UIRect_AnchorPoint_TypeInfo);
-    sub_1C32C20(&Method_BetterList_UIRect___ctor__);
-    sub_1C32C20(&BetterList_UIRect__TypeInfo);
-    byte_4C3C205 = 1;
+    sub_1C37058(&UIRect_AnchorPoint_TypeInfo);
+    sub_1C37058(&Method_BetterList_UIRect___ctor__);
+    sub_1C37058(&BetterList_UIRect__TypeInfo);
+    byte_4C47780 = 1;
   }
-  v3 = (Il2CppObject *)sub_1C32E6C(UIRect_AnchorPoint_TypeInfo);
+  v3 = (Il2CppObject *)sub_1C372A4(UIRect_AnchorPoint_TypeInfo);
   System_Object___ctor(v3, 0);
   this->fields.leftAnchor = (struct UIRect_AnchorPoint_o *)v3;
-  sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.leftAnchor, (int32_t)v3, v4, v5);
-  v6 = sub_1C32E6C(UIRect_AnchorPoint_TypeInfo);
+  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.leftAnchor, (int32_t)v3, v4, v5);
+  v6 = sub_1C372A4(UIRect_AnchorPoint_TypeInfo);
   System_Object___ctor((Il2CppObject *)v6, 0);
   *(_DWORD *)(v6 + 24) = 1065353216;
   this->fields.rightAnchor = (struct UIRect_AnchorPoint_o *)v6;
-  sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.rightAnchor, v6, v7, v8);
-  v9 = (Il2CppObject *)sub_1C32E6C(UIRect_AnchorPoint_TypeInfo);
+  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.rightAnchor, v6, v7, v8);
+  v9 = (Il2CppObject *)sub_1C372A4(UIRect_AnchorPoint_TypeInfo);
   System_Object___ctor(v9, 0);
   this->fields.bottomAnchor = (struct UIRect_AnchorPoint_o *)v9;
-  sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.bottomAnchor, (int32_t)v9, v10, v11);
-  v12 = sub_1C32E6C(UIRect_AnchorPoint_TypeInfo);
+  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.bottomAnchor, (int32_t)v9, v10, v11);
+  v12 = sub_1C372A4(UIRect_AnchorPoint_TypeInfo);
   System_Object___ctor((Il2CppObject *)v12, 0);
   *(_DWORD *)(v12 + 24) = 1065353216;
   this->fields.topAnchor = (struct UIRect_AnchorPoint_o *)v12;
-  sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.topAnchor, v12, v13, v14);
+  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.topAnchor, v12, v13, v14);
   this->fields.updateAnchors = 1;
-  v15 = (BetterList_T__o *)sub_1C32E6C(BetterList_UIRect__TypeInfo);
-  BetterList_object____ctor(v15, (const MethodInfo_330FEAC *)Method_BetterList_UIRect___ctor__);
+  v15 = (BetterList_T__o *)sub_1C372A4(BetterList_UIRect__TypeInfo);
+  BetterList_object____ctor(v15, (const MethodInfo_331A714 *)Method_BetterList_UIRect___ctor__);
   this->fields.mChildren = (struct BetterList_UIRect__o *)v15;
-  sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.mChildren, (int32_t)v15, v16, v17);
+  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.mChildren, (int32_t)v15, v16, v17);
   this->fields.mChanged = 1;
   this->fields.mUpdateAnchors = 1;
   this->fields.mUpdateFrame = -1;
@@ -83,11 +83,11 @@ void UIRect__FindCameraFor(UIRect_o *this, UIRect_AnchorPoint_o *ap, const Metho
   int32_t layer; // w20
   struct UnityEngine_Camera_o *CameraForLayer; // x0
 
-  if ( (byte_4C3C203 & 1) == 0 )
+  if ( (byte_4C4777E & 1) == 0 )
   {
-    sub_1C32C20(&NGUITools_TypeInfo);
-    this = (UIRect_o *)sub_1C32C20(&UnityEngine_Object_TypeInfo);
-    byte_4C3C203 = 1;
+    sub_1C37058(&NGUITools_TypeInfo);
+    this = (UIRect_o *)sub_1C37058(&UnityEngine_Object_TypeInfo);
+    byte_4C4777E = 1;
   }
   if ( !ap )
     goto LABEL_17;
@@ -110,7 +110,7 @@ LABEL_10:
   this = (UIRect_o *)ap->fields.target;
   if ( !this || (this = (UIRect_o *)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0)) == 0 )
 LABEL_17:
-    sub_1C32E7C(this);
+    sub_1C372B4(this);
   layer = UnityEngine_GameObject__get_layer((UnityEngine_GameObject_o *)this, 0);
   if ( !NGUITools_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NGUITools_TypeInfo);
@@ -119,7 +119,7 @@ LABEL_17:
   v9 = (int)CameraForLayer;
   p_targetCam = &ap->fields.targetCam;
 LABEL_16:
-  sub_1C32BC4((CGThumbnailListItem_o *)p_targetCam, v9, v5, v6);
+  sub_1C36FFC((CGThumbnailListItem_o *)p_targetCam, v9, v5, v6);
 }
 
 
@@ -152,10 +152,10 @@ UnityEngine_Vector3_o UIRect__GetLocalPos(
   UnityEngine_Vector3_o v27; // 0:s0.4,4:s1.4,8:s2.4
   UnityEngine_Rect_o rect; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 
-  if ( (byte_4C3C1FB & 1) == 0 )
+  if ( (byte_4C47776 & 1) == 0 )
   {
-    sub_1C32C20(&UnityEngine_Object_TypeInfo);
-    byte_4C3C1FB = 1;
+    sub_1C37058(&UnityEngine_Object_TypeInfo);
+    byte_4C47776 = 1;
   }
   if ( !this->fields.mAnchorsCached )
     UIRect__ResetAnchors(this, (const MethodInfo *)ac);
@@ -187,13 +187,13 @@ UnityEngine_Vector3_o UIRect__GetLocalPos(
           position = UnityEngine_Transform__get_position((UnityEngine_Transform_o *)target, 0);
           if ( v12 )
           {
-            v24 = UnityEngine_Camera__WorldToViewportPoint_71029916(v12, position, 0);
+            v24 = UnityEngine_Camera__WorldToViewportPoint_71073028(v12, position, 0);
             target = this->fields.mCam;
             if ( target )
             {
               v17 = m_YMin + (float)(m_Height * v24.fields.y);
               v18 = m_XMin + (float)(m_Width * v24.fields.x);
-              v25 = UnityEngine_Camera__ViewportToWorldPoint_71029924(target, v24, 0);
+              v25 = UnityEngine_Camera__ViewportToWorldPoint_71073036(target, v24, 0);
               x = v25.fields.x;
               y = v25.fields.y;
               z = v25.fields.z;
@@ -221,7 +221,7 @@ LABEL_23:
         }
       }
 LABEL_25:
-      sub_1C32E7C(target);
+      sub_1C372B4(target);
     }
   }
   target = (UnityEngine_Camera_o *)UIRect__get_cachedTransform(this, v9);
@@ -261,12 +261,12 @@ UnityEngine_Vector3_array *UIRect__GetSides(
   UnityEngine_Vector3_o position; // 0:s0.4,4:s1.4,8:s2.4
   UnityEngine_Vector3_o v24; // 0:s0.4,4:s1.4,8:s2.4
 
-  if ( (byte_4C3C1FA & 1) == 0 )
+  if ( (byte_4C47775 & 1) == 0 )
   {
-    sub_1C32C20(&NGUITools_TypeInfo);
-    sub_1C32C20(&UnityEngine_Object_TypeInfo);
-    sub_1C32C20(&UIRect_TypeInfo);
-    byte_4C3C1FA = 1;
+    sub_1C37058(&NGUITools_TypeInfo);
+    sub_1C37058(&UnityEngine_Object_TypeInfo);
+    sub_1C37058(&UIRect_TypeInfo);
+    byte_4C47775 = 1;
   }
   if ( !this->fields.mAnchorsCached )
     UIRect__ResetAnchors(this, (const MethodInfo *)relativeTo);
@@ -279,12 +279,12 @@ UnityEngine_Vector3_array *UIRect__GetSides(
     cameraRayDistance = UIRect__get_cameraRayDistance(this, v6);
     if ( !NGUITools_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(NGUITools_TypeInfo);
-    return NGUITools__GetSides_49319040(v7, cameraRayDistance, relativeTo, 0);
+    return NGUITools__GetSides_49362152(v7, cameraRayDistance, relativeTo, 0);
   }
   cachedTransform = UIRect__get_cachedTransform(this, v6);
   if ( !cachedTransform )
 LABEL_32:
-    sub_1C32E7C(cachedTransform);
+    sub_1C372B4(cachedTransform);
   position = UnityEngine_Transform__get_position(cachedTransform, 0);
   x = position.fields.x;
   y = position.fields.y;
@@ -304,7 +304,7 @@ LABEL_32:
       goto LABEL_32;
     if ( v15 >= *(unsigned int *)(v16 + 24) )
 LABEL_33:
-      sub_1C32E84(cachedTransform);
+      sub_1C372BC(cachedTransform);
     ++v15;
     v17 = (float *)(v16 + v14);
     v14 += 12;
@@ -365,7 +365,7 @@ void UIRect__Invalidate(UIRect_o *this, bool includeChildren, const MethodInfo *
     v4 = this;
     if ( !mChildren )
 LABEL_9:
-      sub_1C32E7C(this);
+      sub_1C372B4(this);
     v5 = 0;
     while ( (int)v5 < mChildren->fields.size )
     {
@@ -373,7 +373,7 @@ LABEL_9:
       if ( buffer )
       {
         if ( (unsigned int)v5 >= LODWORD(buffer->max_length) )
-          sub_1C32E84(this);
+          sub_1C372BC(this);
         this = buffer->m_Items[v5];
         if ( this )
         {
@@ -411,13 +411,13 @@ void UIRect__OnDisable(UIRect_o *this, const MethodInfo *method)
   int32_t v16; // w2
   const MethodInfo *v17; // x3
 
-  if ( (byte_4C3C1FE & 1) == 0 )
+  if ( (byte_4C47779 & 1) == 0 )
   {
-    sub_1C32C20(&UnityEngine_Application_TypeInfo);
-    sub_1C32C20(&Method_BetterList_UIRect__Remove__);
-    sub_1C32C20(&UnityEngine_Object_TypeInfo);
-    sub_1C32C20(&Method_SingletonMonoBehaviour_UIRectUpdater__getInstance__);
-    byte_4C3C1FE = 1;
+    sub_1C37058(&UnityEngine_Application_TypeInfo);
+    sub_1C37058(&Method_BetterList_UIRect__Remove__);
+    sub_1C37058(&UnityEngine_Object_TypeInfo);
+    sub_1C37058(&Method_SingletonMonoBehaviour_UIRectUpdater__getInstance__);
+    byte_4C47779 = 1;
   }
   if ( !UnityEngine_Application_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Application_TypeInfo);
@@ -425,10 +425,10 @@ void UIRect__OnDisable(UIRect_o *this, const MethodInfo *method)
   {
     v4 = *((_QWORD *)Method_SingletonMonoBehaviour_UIRectUpdater__getInstance__ + 4);
     if ( (*(_BYTE *)(v4 + 309) & 1) == 0 )
-      v4 = sub_1C83334(v3);
+      v4 = sub_1C8776C(v3);
     v5 = *(_QWORD *)(*(_QWORD *)(v4 + 192) + 16LL);
     if ( (*(_BYTE *)(v5 + 309) & 1) == 0 )
-      v5 = sub_1C83334(v3);
+      v5 = sub_1C8776C(v3);
     v6 = **(UnityEngine_Object_o ***)(v5 + 184);
     if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
@@ -436,10 +436,10 @@ void UIRect__OnDisable(UIRect_o *this, const MethodInfo *method)
     {
       v8 = *((_QWORD *)Method_SingletonMonoBehaviour_UIRectUpdater__getInstance__ + 4);
       if ( (*(_BYTE *)(v8 + 309) & 1) == 0 )
-        v8 = sub_1C83334(v7);
+        v8 = sub_1C8776C(v7);
       v9 = *(_QWORD *)(*(_QWORD *)(v8 + 192) + 16LL);
       if ( (*(_BYTE *)(v9 + 309) & 1) == 0 )
-        v9 = sub_1C83334(v7);
+        v9 = sub_1C8776C(v7);
       mChildren = **(UIRectUpdater_o ***)(v9 + 184);
       if ( !mChildren )
         goto LABEL_26;
@@ -461,19 +461,19 @@ void UIRect__OnDisable(UIRect_o *this, const MethodInfo *method)
         BetterList_object___Remove(
           (BetterList_T__o *)mChildren,
           (Il2CppObject *)this,
-          (const MethodInfo_330FA38 *)Method_BetterList_UIRect__Remove__);
+          (const MethodInfo_331A2A0 *)Method_BetterList_UIRect__Remove__);
         goto LABEL_25;
       }
     }
 LABEL_26:
-    sub_1C32E7C(mChildren);
+    sub_1C372B4(mChildren);
   }
 LABEL_25:
   this->fields.mParent = 0;
-  sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.mParent, 0, v13, v14);
+  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.mParent, 0, v13, v14);
   this->fields.mRoot = 0;
   p_mRoot = &this->fields.mRoot;
-  sub_1C32BC4((CGThumbnailListItem_o *)p_mRoot, 0, v16, v17);
+  sub_1C36FFC((CGThumbnailListItem_o *)p_mRoot, 0, v16, v17);
   *((_BYTE *)p_mRoot + 16) = 0;
   *((_BYTE *)p_mRoot - 14) = 0;
 }
@@ -491,12 +491,12 @@ void UIRect__OnEnable(UIRect_o *this, const MethodInfo *method)
   UIRectUpdater_o *v10; // x0
   int32_t updateAnchors; // w8
 
-  if ( (byte_4C3C1FC & 1) == 0 )
+  if ( (byte_4C47777 & 1) == 0 )
   {
-    sub_1C32C20(&UnityEngine_Application_TypeInfo);
-    sub_1C32C20(&UnityEngine_Object_TypeInfo);
-    sub_1C32C20(&Method_SingletonMonoBehaviour_UIRectUpdater__getInstance__);
-    byte_4C3C1FC = 1;
+    sub_1C37058(&UnityEngine_Application_TypeInfo);
+    sub_1C37058(&UnityEngine_Object_TypeInfo);
+    sub_1C37058(&Method_SingletonMonoBehaviour_UIRectUpdater__getInstance__);
+    byte_4C47777 = 1;
   }
   if ( !UnityEngine_Application_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Application_TypeInfo);
@@ -504,10 +504,10 @@ void UIRect__OnEnable(UIRect_o *this, const MethodInfo *method)
   {
     v4 = *((_QWORD *)Method_SingletonMonoBehaviour_UIRectUpdater__getInstance__ + 4);
     if ( (*(_BYTE *)(v4 + 309) & 1) == 0 )
-      v4 = sub_1C83334(v3);
+      v4 = sub_1C8776C(v3);
     v5 = *(_QWORD *)(*(_QWORD *)(v4 + 192) + 16LL);
     if ( (*(_BYTE *)(v5 + 309) & 1) == 0 )
-      v5 = sub_1C83334(v3);
+      v5 = sub_1C8776C(v3);
     v6 = **(UnityEngine_Object_o ***)(v5 + 184);
     if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
@@ -515,13 +515,13 @@ void UIRect__OnEnable(UIRect_o *this, const MethodInfo *method)
     {
       v8 = *((_QWORD *)Method_SingletonMonoBehaviour_UIRectUpdater__getInstance__ + 4);
       if ( (*(_BYTE *)(v8 + 309) & 1) == 0 )
-        v8 = sub_1C83334(v7);
+        v8 = sub_1C8776C(v7);
       v9 = *(_QWORD *)(*(_QWORD *)(v8 + 192) + 16LL);
       if ( (*(_BYTE *)(v9 + 309) & 1) == 0 )
-        v9 = sub_1C83334(v7);
+        v9 = sub_1C8776C(v7);
       v10 = **(UIRectUpdater_o ***)(v9 + 184);
       if ( !v10 )
-        sub_1C32E7C(0);
+        sub_1C372B4(0);
       UIRectUpdater__Register(v10, this, 0);
     }
   }
@@ -546,11 +546,11 @@ void UIRect__OnInit(UIRect_o *this, const MethodInfo *method)
   BetterList_T__o *enabled; // x0
   struct UIRect_o *mParent; // x8
 
-  if ( (byte_4C3C1FD & 1) == 0 )
+  if ( (byte_4C47778 & 1) == 0 )
   {
-    sub_1C32C20(&Method_BetterList_UIRect__Add__);
-    sub_1C32C20(&UnityEngine_Object_TypeInfo);
-    byte_4C3C1FD = 1;
+    sub_1C37058(&Method_BetterList_UIRect__Add__);
+    sub_1C37058(&UnityEngine_Object_TypeInfo);
+    byte_4C47778 = 1;
   }
   this->fields.mRootSet = 0;
   this->fields.mChanged = 1;
@@ -565,11 +565,11 @@ void UIRect__OnInit(UIRect_o *this, const MethodInfo *method)
     {
       mParent = this->fields.mParent;
       if ( !mParent || (enabled = (BetterList_T__o *)mParent->fields.mChildren) == 0 )
-        sub_1C32E7C(enabled);
+        sub_1C372B4(enabled);
       BetterList_object___Add(
         enabled,
         (Il2CppObject *)this,
-        (const MethodInfo_330F780 *)Method_BetterList_UIRect__Add__);
+        (const MethodInfo_3319FE8 *)Method_BetterList_UIRect__Add__);
     }
   }
 }
@@ -594,14 +594,14 @@ void UIRect__ParentHasChanged(UIRect_o *this, const MethodInfo *method)
   const MethodInfo *v11; // x3
   UnityEngine_Object_o *v12; // x21
 
-  if ( (byte_4C3C204 & 1) == 0 )
+  if ( (byte_4C4777F & 1) == 0 )
   {
-    sub_1C32C20(&Method_BetterList_UIRect__Add__);
-    sub_1C32C20(&Method_BetterList_UIRect__Remove__);
-    sub_1C32C20(&Method_NGUITools_FindInParents_UIRect____78144208);
-    sub_1C32C20(&NGUITools_TypeInfo);
-    sub_1C32C20(&UnityEngine_Object_TypeInfo);
-    byte_4C3C204 = 1;
+    sub_1C37058(&Method_BetterList_UIRect__Add__);
+    sub_1C37058(&Method_BetterList_UIRect__Remove__);
+    sub_1C37058(&Method_NGUITools_FindInParents_UIRect____78190000);
+    sub_1C37058(&NGUITools_TypeInfo);
+    sub_1C37058(&UnityEngine_Object_TypeInfo);
+    byte_4C4777F = 1;
   }
   this->fields.mParentFound = 0;
   cachedTransform = UIRect__get_cachedTransform(this, method);
@@ -610,9 +610,9 @@ void UIRect__ParentHasChanged(UIRect_o *this, const MethodInfo *method)
   parent = UnityEngine_Transform__get_parent(cachedTransform, 0);
   if ( !NGUITools_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NGUITools_TypeInfo);
-  v5 = NGUITools__FindInParents_object__51804172(
+  v5 = NGUITools__FindInParents_object__51847284(
          parent,
-         (const MethodInfo_316780C *)Method_NGUITools_FindInParents_UIRect____78144208);
+         (const MethodInfo_3172074 *)Method_NGUITools_FindInParents_UIRect____78190000);
   p_mParent = &this->fields.mParent;
   mParent = (UnityEngine_Object_o *)this->fields.mParent;
   v8 = (UnityEngine_Object_o *)v5;
@@ -634,10 +634,10 @@ void UIRect__ParentHasChanged(UIRect_o *this, const MethodInfo *method)
       BetterList_object___Remove(
         (BetterList_T__o *)cachedTransform,
         (Il2CppObject *)this,
-        (const MethodInfo_330FA38 *)Method_BetterList_UIRect__Remove__);
+        (const MethodInfo_331A2A0 *)Method_BetterList_UIRect__Remove__);
     }
     *p_mParent = (struct UIRect_o *)v8;
-    sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.mParent, (int32_t)v8, v10, v11);
+    sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.mParent, (int32_t)v8, v10, v11);
     v12 = (UnityEngine_Object_o *)*p_mParent;
     if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
@@ -656,14 +656,14 @@ void UIRect__ParentHasChanged(UIRect_o *this, const MethodInfo *method)
         BetterList_object___Add(
           (BetterList_T__o *)cachedTransform,
           (Il2CppObject *)this,
-          (const MethodInfo_330F780 *)Method_BetterList_UIRect__Add__);
+          (const MethodInfo_3319FE8 *)Method_BetterList_UIRect__Add__);
 LABEL_23:
         this->fields.mRootSet = 0;
         return;
       }
     }
 LABEL_25:
-    sub_1C32E7C(cachedTransform);
+    sub_1C372B4(cachedTransform);
   }
 }
 
@@ -711,12 +711,12 @@ void UIRect__ResetAnchors(UIRect_o *this, const MethodInfo *method)
   const MethodInfo *v40; // x2
 
   v2 = this;
-  if ( (byte_4C3C202 & 1) == 0 )
+  if ( (byte_4C4777D & 1) == 0 )
   {
-    sub_1C32C20(&Method_UnityEngine_Component_GetComponent_UIRect___);
-    sub_1C32C20(&NGUITools_TypeInfo);
-    this = (UIRect_o *)sub_1C32C20(&UnityEngine_Object_TypeInfo);
-    byte_4C3C202 = 1;
+    sub_1C37058(&Method_UnityEngine_Component_GetComponent_UIRect___);
+    sub_1C37058(&NGUITools_TypeInfo);
+    this = (UIRect_o *)sub_1C37058(&UnityEngine_Object_TypeInfo);
+    byte_4C4777D = 1;
   }
   leftAnchor = v2->fields.leftAnchor;
   v2->fields.mAnchorsCached = 1;
@@ -737,10 +737,10 @@ void UIRect__ResetAnchors(UIRect_o *this, const MethodInfo *method)
       goto LABEL_35;
     Component_object = UnityEngine_Component__GetComponent_object_(
                          (UnityEngine_Component_o *)this,
-                         (const MethodInfo_30D3BC0 *)Method_UnityEngine_Component_GetComponent_UIRect___);
+                         (const MethodInfo_30DE428 *)Method_UnityEngine_Component_GetComponent_UIRect___);
   }
   leftAnchor->fields.rect = (struct UIRect_o *)Component_object;
-  sub_1C32BC4((CGThumbnailListItem_o *)&leftAnchor->fields.rect, (int32_t)Component_object, v5, v6);
+  sub_1C36FFC((CGThumbnailListItem_o *)&leftAnchor->fields.rect, (int32_t)Component_object, v5, v6);
   bottomAnchor = v2->fields.bottomAnchor;
   if ( !bottomAnchor )
     goto LABEL_35;
@@ -759,10 +759,10 @@ void UIRect__ResetAnchors(UIRect_o *this, const MethodInfo *method)
       goto LABEL_35;
     v13 = UnityEngine_Component__GetComponent_object_(
             (UnityEngine_Component_o *)this,
-            (const MethodInfo_30D3BC0 *)Method_UnityEngine_Component_GetComponent_UIRect___);
+            (const MethodInfo_30DE428 *)Method_UnityEngine_Component_GetComponent_UIRect___);
   }
   bottomAnchor->fields.rect = (struct UIRect_o *)v13;
-  sub_1C32BC4((CGThumbnailListItem_o *)&bottomAnchor->fields.rect, (int32_t)v13, v11, v12);
+  sub_1C36FFC((CGThumbnailListItem_o *)&bottomAnchor->fields.rect, (int32_t)v13, v11, v12);
   rightAnchor = v2->fields.rightAnchor;
   if ( !rightAnchor )
     goto LABEL_35;
@@ -781,10 +781,10 @@ void UIRect__ResetAnchors(UIRect_o *this, const MethodInfo *method)
       goto LABEL_35;
     v19 = UnityEngine_Component__GetComponent_object_(
             (UnityEngine_Component_o *)this,
-            (const MethodInfo_30D3BC0 *)Method_UnityEngine_Component_GetComponent_UIRect___);
+            (const MethodInfo_30DE428 *)Method_UnityEngine_Component_GetComponent_UIRect___);
   }
   rightAnchor->fields.rect = (struct UIRect_o *)v19;
-  sub_1C32BC4((CGThumbnailListItem_o *)&rightAnchor->fields.rect, (int32_t)v19, v17, v18);
+  sub_1C36FFC((CGThumbnailListItem_o *)&rightAnchor->fields.rect, (int32_t)v19, v17, v18);
   topAnchor = v2->fields.topAnchor;
   if ( !topAnchor )
     goto LABEL_35;
@@ -803,16 +803,16 @@ void UIRect__ResetAnchors(UIRect_o *this, const MethodInfo *method)
       {
         v25 = UnityEngine_Component__GetComponent_object_(
                 (UnityEngine_Component_o *)this,
-                (const MethodInfo_30D3BC0 *)Method_UnityEngine_Component_GetComponent_UIRect___);
+                (const MethodInfo_30DE428 *)Method_UnityEngine_Component_GetComponent_UIRect___);
         goto LABEL_31;
       }
     }
 LABEL_35:
-    sub_1C32E7C(this);
+    sub_1C372B4(this);
   }
 LABEL_31:
   topAnchor->fields.rect = (struct UIRect_o *)v25;
-  sub_1C32BC4((CGThumbnailListItem_o *)&topAnchor->fields.rect, (int32_t)v25, v23, v24);
+  sub_1C36FFC((CGThumbnailListItem_o *)&topAnchor->fields.rect, (int32_t)v25, v23, v24);
   this = (UIRect_o *)UIRect__get_cachedGameObject(v2, v27);
   if ( !this )
     goto LABEL_35;
@@ -822,7 +822,7 @@ LABEL_31:
   CameraForLayer = NGUITools__FindCameraForLayer(layer, 0);
   v2->fields.mCam = CameraForLayer;
   p_mCam = (CGThumbnailListItem_o *)&v2->fields.mCam;
-  sub_1C32BC4(p_mCam, (int32_t)CameraForLayer, v31, v32);
+  sub_1C36FFC(p_mCam, (int32_t)CameraForLayer, v31, v32);
   UIRect__FindCameraFor(v33, (UIRect_AnchorPoint_o *)p_mCam[-1].fields.sortValue0B, v34);
   UIRect__FindCameraFor(v35, (UIRect_AnchorPoint_o *)p_mCam[-1].fields.sortStr1, v36);
   UIRect__FindCameraFor(v37, (UIRect_AnchorPoint_o *)p_mCam[-1].fields.sortValue1, v38);
@@ -857,27 +857,27 @@ void UIRect__SetAnchor(UIRect_o *this, UnityEngine_Transform_o *t, const MethodI
   if ( !leftAnchor )
     goto LABEL_6;
   leftAnchor->fields.target = t;
-  sub_1C32BC4((CGThumbnailListItem_o *)&leftAnchor->fields, (int32_t)t, (int32_t)method, v3);
+  sub_1C36FFC((CGThumbnailListItem_o *)&leftAnchor->fields, (int32_t)t, (int32_t)method, v3);
   leftAnchor = this->fields.rightAnchor;
   if ( !leftAnchor
     || (leftAnchor->fields.target = t,
-        sub_1C32BC4((CGThumbnailListItem_o *)&leftAnchor->fields, (int32_t)t, v7, v8),
+        sub_1C36FFC((CGThumbnailListItem_o *)&leftAnchor->fields, (int32_t)t, v7, v8),
         (leftAnchor = this->fields.topAnchor) == 0)
     || (leftAnchor->fields.target = t,
-        sub_1C32BC4((CGThumbnailListItem_o *)&leftAnchor->fields, (int32_t)t, v9, v10),
+        sub_1C36FFC((CGThumbnailListItem_o *)&leftAnchor->fields, (int32_t)t, v9, v10),
         (leftAnchor = this->fields.bottomAnchor) == 0) )
   {
 LABEL_6:
-    sub_1C32E7C(leftAnchor);
+    sub_1C372B4(leftAnchor);
   }
   leftAnchor->fields.target = t;
-  sub_1C32BC4((CGThumbnailListItem_o *)&leftAnchor->fields, (int32_t)t, v11, v12);
+  sub_1C36FFC((CGThumbnailListItem_o *)&leftAnchor->fields, (int32_t)t, v11, v12);
   UIRect__ResetAnchors(this, v13);
   UIRect__UpdateAnchors(this, v14);
 }
 
 
-void UIRect__SetAnchor_49369292(UIRect_o *this, UnityEngine_GameObject_o *go, const MethodInfo *method)
+void UIRect__SetAnchor_49412404(UIRect_o *this, UnityEngine_GameObject_o *go, const MethodInfo *method)
 {
   struct UIRect_AnchorPoint_o *leftAnchor; // x0
   int32_t v6; // w2
@@ -892,10 +892,10 @@ void UIRect__SetAnchor_49369292(UIRect_o *this, UnityEngine_GameObject_o *go, co
   const MethodInfo *v15; // x1
   const MethodInfo *v16; // x1
 
-  if ( (byte_4C3C200 & 1) == 0 )
+  if ( (byte_4C4777B & 1) == 0 )
   {
-    sub_1C32C20(&UnityEngine_Object_TypeInfo);
-    byte_4C3C200 = 1;
+    sub_1C37058(&UnityEngine_Object_TypeInfo);
+    byte_4C4777B = 1;
   }
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
@@ -911,27 +911,27 @@ void UIRect__SetAnchor_49369292(UIRect_o *this, UnityEngine_GameObject_o *go, co
   if ( !leftAnchor )
     goto LABEL_13;
   leftAnchor->fields.target = transform;
-  sub_1C32BC4((CGThumbnailListItem_o *)&leftAnchor->fields, (int32_t)transform, v6, v7);
+  sub_1C36FFC((CGThumbnailListItem_o *)&leftAnchor->fields, (int32_t)transform, v6, v7);
   leftAnchor = this->fields.rightAnchor;
   if ( !leftAnchor
     || (leftAnchor->fields.target = transform,
-        sub_1C32BC4((CGThumbnailListItem_o *)&leftAnchor->fields, (int32_t)transform, v9, v10),
+        sub_1C36FFC((CGThumbnailListItem_o *)&leftAnchor->fields, (int32_t)transform, v9, v10),
         (leftAnchor = this->fields.topAnchor) == 0)
     || (leftAnchor->fields.target = transform,
-        sub_1C32BC4((CGThumbnailListItem_o *)&leftAnchor->fields, (int32_t)transform, v11, v12),
+        sub_1C36FFC((CGThumbnailListItem_o *)&leftAnchor->fields, (int32_t)transform, v11, v12),
         (leftAnchor = this->fields.bottomAnchor) == 0) )
   {
 LABEL_13:
-    sub_1C32E7C(leftAnchor);
+    sub_1C372B4(leftAnchor);
   }
   leftAnchor->fields.target = transform;
-  sub_1C32BC4((CGThumbnailListItem_o *)&leftAnchor->fields, (int32_t)transform, v13, v14);
+  sub_1C36FFC((CGThumbnailListItem_o *)&leftAnchor->fields, (int32_t)transform, v13, v14);
   UIRect__ResetAnchors(this, v15);
   UIRect__UpdateAnchors(this, v16);
 }
 
 
-void UIRect__SetAnchor_49369524(
+void UIRect__SetAnchor_49412636(
         UIRect_o *this,
         UnityEngine_GameObject_o *go,
         int32_t left,
@@ -957,10 +957,10 @@ void UIRect__SetAnchor_49369524(
   struct UIRect_AnchorPoint_o *topAnchor; // x11
   const MethodInfo *v28; // x1
 
-  if ( (byte_4C3C201 & 1) == 0 )
+  if ( (byte_4C4777C & 1) == 0 )
   {
-    sub_1C32C20(&UnityEngine_Object_TypeInfo);
-    byte_4C3C201 = 1;
+    sub_1C37058(&UnityEngine_Object_TypeInfo);
+    byte_4C4777C = 1;
   }
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
@@ -976,22 +976,22 @@ void UIRect__SetAnchor_49369524(
   if ( !leftAnchor )
     goto LABEL_17;
   leftAnchor->fields.target = transform;
-  sub_1C32BC4((CGThumbnailListItem_o *)&leftAnchor->fields, (int32_t)transform, v14, v15);
+  sub_1C36FFC((CGThumbnailListItem_o *)&leftAnchor->fields, (int32_t)transform, v14, v15);
   leftAnchor = this->fields.rightAnchor;
   if ( !leftAnchor )
     goto LABEL_17;
   leftAnchor->fields.target = transform;
-  sub_1C32BC4((CGThumbnailListItem_o *)&leftAnchor->fields, (int32_t)transform, v17, v18);
+  sub_1C36FFC((CGThumbnailListItem_o *)&leftAnchor->fields, (int32_t)transform, v17, v18);
   leftAnchor = this->fields.topAnchor;
   if ( !leftAnchor )
     goto LABEL_17;
   leftAnchor->fields.target = transform;
-  sub_1C32BC4((CGThumbnailListItem_o *)&leftAnchor->fields, (int32_t)transform, v19, v20);
+  sub_1C36FFC((CGThumbnailListItem_o *)&leftAnchor->fields, (int32_t)transform, v19, v20);
   leftAnchor = this->fields.bottomAnchor;
   if ( !leftAnchor )
     goto LABEL_17;
   leftAnchor->fields.target = transform;
-  sub_1C32BC4((CGThumbnailListItem_o *)&leftAnchor->fields, (int32_t)transform, v21, v22);
+  sub_1C36FFC((CGThumbnailListItem_o *)&leftAnchor->fields, (int32_t)transform, v21, v22);
   v24 = this->fields.leftAnchor;
   if ( !v24
     || (v24->fields.relative = 0.0, (rightAnchor = this->fields.rightAnchor) == 0)
@@ -999,7 +999,7 @@ void UIRect__SetAnchor_49369524(
     || (bottomAnchor->fields.relative = 0.0, (topAnchor = this->fields.topAnchor) == 0) )
   {
 LABEL_17:
-    sub_1C32E7C(leftAnchor);
+    sub_1C372B4(leftAnchor);
   }
   topAnchor->fields.relative = 1.0;
   v24->fields.absolute = left;
@@ -1065,10 +1065,10 @@ void UIRect__UpdateMe(UIRect_o *this, const MethodInfo *method)
   const MethodInfo *v28; // x1
   struct UIRect_AnchorPoint_o *v29; // x8
 
-  if ( (byte_4C3C1FF & 1) == 0 )
+  if ( (byte_4C4777A & 1) == 0 )
   {
-    sub_1C32C20(&UnityEngine_Object_TypeInfo);
-    byte_4C3C1FF = 1;
+    sub_1C37058(&UnityEngine_Object_TypeInfo);
+    byte_4C4777A = 1;
   }
   if ( !this->fields.mAnchorsCached )
     UIRect__ResetAnchors(this, method);
@@ -1218,7 +1218,7 @@ LABEL_61:
       }
     }
 LABEL_63:
-    sub_1C32E7C(frameCount);
+    sub_1C372B4(frameCount);
   }
 }
 
@@ -1238,10 +1238,10 @@ UnityEngine_GameObject_o *UIRect__get_cachedGameObject(UIRect_o *this, const Met
   int32_t v5; // w2
   const MethodInfo *v6; // x3
 
-  if ( (byte_4C3C1F1 & 1) == 0 )
+  if ( (byte_4C4776C & 1) == 0 )
   {
-    sub_1C32C20(&UnityEngine_Object_TypeInfo);
-    byte_4C3C1F1 = 1;
+    sub_1C37058(&UnityEngine_Object_TypeInfo);
+    byte_4C4776C = 1;
   }
   mGo = (UnityEngine_Object_o *)this->fields.mGo;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -1250,7 +1250,7 @@ UnityEngine_GameObject_o *UIRect__get_cachedGameObject(UIRect_o *this, const Met
   {
     gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
     this->fields.mGo = gameObject;
-    sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.mGo, (int32_t)gameObject, v5, v6);
+    sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.mGo, (int32_t)gameObject, v5, v6);
   }
   return this->fields.mGo;
 }
@@ -1263,10 +1263,10 @@ UnityEngine_Transform_o *UIRect__get_cachedTransform(UIRect_o *this, const Metho
   int32_t v5; // w2
   const MethodInfo *v6; // x3
 
-  if ( (byte_4C3C1F2 & 1) == 0 )
+  if ( (byte_4C4776D & 1) == 0 )
   {
-    sub_1C32C20(&UnityEngine_Object_TypeInfo);
-    byte_4C3C1F2 = 1;
+    sub_1C37058(&UnityEngine_Object_TypeInfo);
+    byte_4C4776D = 1;
   }
   mTrans = (UnityEngine_Object_o *)this->fields.mTrans;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -1275,7 +1275,7 @@ UnityEngine_Transform_o *UIRect__get_cachedTransform(UIRect_o *this, const Metho
   {
     transform = UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0);
     this->fields.mTrans = transform;
-    sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.mTrans, (int32_t)transform, v5, v6);
+    sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.mTrans, (int32_t)transform, v5, v6);
   }
   return this->fields.mTrans;
 }
@@ -1341,10 +1341,10 @@ float UIRect__get_cameraRayDistance(UIRect_o *this, const MethodInfo *method)
   UnityEngine_Quaternion_o v58; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
   UnityEngine_Quaternion_o v59; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 
-  if ( (byte_4C3C1F9 & 1) == 0 )
+  if ( (byte_4C47774 & 1) == 0 )
   {
-    sub_1C32C20(&UnityEngine_Object_TypeInfo);
-    byte_4C3C1F9 = 1;
+    sub_1C37058(&UnityEngine_Object_TypeInfo);
+    byte_4C47774 = 1;
   }
   if ( !this->fields.mAnchorsCached )
     UIRect__ResetAnchors(this, method);
@@ -1375,16 +1375,16 @@ float UIRect__get_cameraRayDistance(UIRect_o *this, const MethodInfo *method)
     y = rotation.fields.y;
     z = rotation.fields.z;
     w = rotation.fields.w;
-    if ( !byte_4C341EF )
+    if ( !byte_4C3F7D9 )
     {
-      sub_1C32C20(&UnityEngine_Vector3_TypeInfo);
-      byte_4C341EF = 1;
+      sub_1C37058(&UnityEngine_Vector3_TypeInfo);
+      byte_4C3F7D9 = 1;
     }
     v57.fields.x = x;
     v57.fields.y = y;
     v57.fields.z = z;
     v57.fields.w = w;
-    v52 = UnityEngine_Quaternion__op_Multiply_71162940(v57, UnityEngine_Vector3_TypeInfo->static_fields->backVector, 0);
+    v52 = UnityEngine_Quaternion__op_Multiply_71206052(v57, UnityEngine_Vector3_TypeInfo->static_fields->backVector, 0);
     v15 = v52.fields.x;
     v16 = v52.fields.y;
     v17 = v52.fields.z;
@@ -1392,10 +1392,10 @@ float UIRect__get_cameraRayDistance(UIRect_o *this, const MethodInfo *method)
     v18 = position.fields.x;
     v19 = position.fields.y;
     v50 = position.fields.z;
-    if ( !byte_4C313D4 )
+    if ( !byte_4C3C924 )
     {
-      sub_1C32C20(&System_Math_TypeInfo);
-      byte_4C313D4 = 1;
+      sub_1C37058(&System_Math_TypeInfo);
+      byte_4C3C924 = 1;
     }
     cachedTransform = (UnityEngine_Camera_o *)System_Math_TypeInfo;
     if ( !System_Math_TypeInfo->_2.cctor_finished )
@@ -1403,10 +1403,10 @@ float UIRect__get_cameraRayDistance(UIRect_o *this, const MethodInfo *method)
     v20 = sqrtf((float)(v17 * v17) + (float)((float)(v15 * v15) + (float)(v16 * v16)));
     if ( v20 <= 0.00001 )
     {
-      if ( !byte_4C313D1 )
+      if ( !byte_4C3C921 )
       {
-        cachedTransform = (UnityEngine_Camera_o *)sub_1C32C20(&UnityEngine_Vector3_TypeInfo);
-        byte_4C313D1 = 1;
+        cachedTransform = (UnityEngine_Camera_o *)sub_1C37058(&UnityEngine_Vector3_TypeInfo);
+        byte_4C3C921 = 1;
       }
       static_fields = UnityEngine_Vector3_TypeInfo->static_fields;
       v21 = static_fields->zeroVector.fields.y;
@@ -1431,10 +1431,10 @@ float UIRect__get_cameraRayDistance(UIRect_o *this, const MethodInfo *method)
     v25 = v58.fields.y;
     v26 = v58.fields.z;
     v27 = v58.fields.w;
-    if ( !byte_4C313DA )
+    if ( !byte_4C3C92A )
     {
-      sub_1C32C20(&UnityEngine_Vector3_TypeInfo);
-      byte_4C313DA = 1;
+      sub_1C37058(&UnityEngine_Vector3_TypeInfo);
+      byte_4C3C92A = 1;
     }
     v59.fields.y = v25;
     v59.fields.z = v26;
@@ -1443,17 +1443,17 @@ float UIRect__get_cameraRayDistance(UIRect_o *this, const MethodInfo *method)
     v59.fields.w = v27;
     v48 = v21;
     v29 = v19 * v21;
-    v55 = UnityEngine_Quaternion__op_Multiply_71162940(
+    v55 = UnityEngine_Quaternion__op_Multiply_71206052(
             v59,
             UnityEngine_Vector3_TypeInfo->static_fields->forwardVector,
             0);
     v30 = v55.fields.x;
     v31 = v55.fields.y;
     v32 = v55.fields.z;
-    if ( !byte_4C313D4 )
+    if ( !byte_4C3C924 )
     {
-      sub_1C32C20(&System_Math_TypeInfo);
-      byte_4C313D4 = 1;
+      sub_1C37058(&System_Math_TypeInfo);
+      byte_4C3C924 = 1;
     }
     if ( !System_Math_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(System_Math_TypeInfo);
@@ -1461,10 +1461,10 @@ float UIRect__get_cameraRayDistance(UIRect_o *this, const MethodInfo *method)
     if ( v33 <= 0.00001 )
     {
       v35 = v46;
-      if ( !byte_4C313D1 )
+      if ( !byte_4C3C921 )
       {
-        sub_1C32C20(&UnityEngine_Vector3_TypeInfo);
-        byte_4C313D1 = 1;
+        sub_1C37058(&UnityEngine_Vector3_TypeInfo);
+        byte_4C3C921 = 1;
       }
       v34 = v47;
       v39 = UnityEngine_Vector3_TypeInfo->static_fields;
@@ -1484,10 +1484,10 @@ float UIRect__get_cameraRayDistance(UIRect_o *this, const MethodInfo *method)
     v41 = (float)(v49 * v38) + (float)((float)(v51 * v36) + (float)(v48 * v37));
     v42 = (float)((float)(v50 * v49) + (float)(v28 + v29))
         - (float)((float)(v49 * v34) + (float)(v40 + (float)(v48 * v45)));
-    if ( !byte_4C313D5 )
+    if ( !byte_4C3C925 )
     {
-      sub_1C32C20(&UnityEngine_Mathf_TypeInfo);
-      byte_4C313D5 = 1;
+      sub_1C37058(&UnityEngine_Mathf_TypeInfo);
+      byte_4C3C925 = 1;
     }
     v43 = UnityEngine_Mathf_TypeInfo->static_fields;
     v44 = fmaxf(fabsf(v41), 0.0) * 0.000001;
@@ -1506,7 +1506,7 @@ LABEL_10:
           return v8 + (float)((float)(UnityEngine_Camera__get_farClipPlane(cachedTransform, 0) - v8) * 0.5);
       }
 LABEL_45:
-      sub_1C32E7C(cachedTransform);
+      sub_1C372B4(cachedTransform);
     }
   }
   return result;
@@ -1532,10 +1532,10 @@ bool UIRect__get_isAnchored(UIRect_o *this, const MethodInfo *method)
   UnityEngine_Object_o *v10; // x20
 
   v2 = this;
-  if ( (byte_4C3C1F8 & 1) == 0 )
+  if ( (byte_4C47773 & 1) == 0 )
   {
-    this = (UIRect_o *)sub_1C32C20(&UnityEngine_Object_TypeInfo);
-    byte_4C3C1F8 = 1;
+    this = (UIRect_o *)sub_1C37058(&UnityEngine_Object_TypeInfo);
+    byte_4C47773 = 1;
   }
   leftAnchor = v2->fields.leftAnchor;
   if ( !leftAnchor )
@@ -1573,7 +1573,7 @@ bool UIRect__get_isAnchored(UIRect_o *this, const MethodInfo *method)
   bottomAnchor = v2->fields.bottomAnchor;
   if ( !bottomAnchor )
 LABEL_21:
-    sub_1C32E7C(this);
+    sub_1C372B4(this);
   v10 = (UnityEngine_Object_o *)bottomAnchor->fields.target;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
@@ -1594,10 +1594,10 @@ bool UIRect__get_isAnchoredHorizontally(UIRect_o *this, const MethodInfo *method
   UnityEngine_Object_o *v7; // x19
 
   v2 = this;
-  if ( (byte_4C3C1F4 & 1) == 0 )
+  if ( (byte_4C4776F & 1) == 0 )
   {
-    this = (UIRect_o *)sub_1C32C20(&UnityEngine_Object_TypeInfo);
-    byte_4C3C1F4 = 1;
+    this = (UIRect_o *)sub_1C37058(&UnityEngine_Object_TypeInfo);
+    byte_4C4776F = 1;
   }
   leftAnchor = v2->fields.leftAnchor;
   if ( !leftAnchor )
@@ -1611,7 +1611,7 @@ bool UIRect__get_isAnchoredHorizontally(UIRect_o *this, const MethodInfo *method
   rightAnchor = v2->fields.rightAnchor;
   if ( !rightAnchor )
 LABEL_12:
-    sub_1C32E7C(this);
+    sub_1C372B4(this);
   v7 = (UnityEngine_Object_o *)rightAnchor->fields.target;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
@@ -1628,10 +1628,10 @@ bool UIRect__get_isAnchoredVertically(UIRect_o *this, const MethodInfo *method)
   UnityEngine_Object_o *v7; // x19
 
   v2 = this;
-  if ( (byte_4C3C1F5 & 1) == 0 )
+  if ( (byte_4C47770 & 1) == 0 )
   {
-    this = (UIRect_o *)sub_1C32C20(&UnityEngine_Object_TypeInfo);
-    byte_4C3C1F5 = 1;
+    this = (UIRect_o *)sub_1C37058(&UnityEngine_Object_TypeInfo);
+    byte_4C47770 = 1;
   }
   bottomAnchor = v2->fields.bottomAnchor;
   if ( !bottomAnchor )
@@ -1645,7 +1645,7 @@ bool UIRect__get_isAnchoredVertically(UIRect_o *this, const MethodInfo *method)
   topAnchor = v2->fields.topAnchor;
   if ( !topAnchor )
 LABEL_12:
-    sub_1C32E7C(this);
+    sub_1C372B4(this);
   v7 = (UnityEngine_Object_o *)topAnchor->fields.target;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
@@ -1666,10 +1666,10 @@ bool UIRect__get_isFullyAnchored(UIRect_o *this, const MethodInfo *method)
   UnityEngine_Object_o *v10; // x19
 
   v2 = this;
-  if ( (byte_4C3C1F3 & 1) == 0 )
+  if ( (byte_4C4776E & 1) == 0 )
   {
-    this = (UIRect_o *)sub_1C32C20(&UnityEngine_Object_TypeInfo);
-    byte_4C3C1F3 = 1;
+    this = (UIRect_o *)sub_1C37058(&UnityEngine_Object_TypeInfo);
+    byte_4C4776E = 1;
   }
   leftAnchor = v2->fields.leftAnchor;
   if ( !leftAnchor )
@@ -1701,7 +1701,7 @@ bool UIRect__get_isFullyAnchored(UIRect_o *this, const MethodInfo *method)
   bottomAnchor = v2->fields.bottomAnchor;
   if ( !bottomAnchor )
 LABEL_20:
-    sub_1C32E7C(this);
+    sub_1C372B4(this);
   v10 = (UnityEngine_Object_o *)bottomAnchor->fields.target;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
@@ -1717,26 +1717,26 @@ UIRect_o *UIRect__get_parent(UIRect_o *this, const MethodInfo *method)
   int32_t v6; // w2
   const MethodInfo *v7; // x3
 
-  if ( (byte_4C3C1F6 & 1) == 0 )
+  if ( (byte_4C47771 & 1) == 0 )
   {
-    sub_1C32C20(&Method_NGUITools_FindInParents_UIRect____78144208);
-    sub_1C32C20(&NGUITools_TypeInfo);
-    byte_4C3C1F6 = 1;
+    sub_1C37058(&Method_NGUITools_FindInParents_UIRect____78190000);
+    sub_1C37058(&NGUITools_TypeInfo);
+    byte_4C47771 = 1;
   }
   if ( !this->fields.mParentFound )
   {
     this->fields.mParentFound = 1;
     cachedTransform = UIRect__get_cachedTransform(this, method);
     if ( !cachedTransform )
-      sub_1C32E7C(0);
+      sub_1C372B4(0);
     parent = UnityEngine_Transform__get_parent(cachedTransform, 0);
     if ( !NGUITools_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(NGUITools_TypeInfo);
-    v5 = NGUITools__FindInParents_object__51804172(
+    v5 = NGUITools__FindInParents_object__51847284(
            parent,
-           (const MethodInfo_316780C *)Method_NGUITools_FindInParents_UIRect____78144208);
+           (const MethodInfo_3172074 *)Method_NGUITools_FindInParents_UIRect____78190000);
     this->fields.mParent = (struct UIRect_o *)v5;
-    sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.mParent, (int32_t)v5, v6, v7);
+    sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.mParent, (int32_t)v5, v6, v7);
   }
   return this->fields.mParent;
 }
@@ -1753,12 +1753,12 @@ UIRoot_o *UIRect__get_root(UIRect_o *this, const MethodInfo *method)
 
   while ( 1 )
   {
-    if ( (byte_4C3C1F7 & 1) == 0 )
+    if ( (byte_4C47772 & 1) == 0 )
     {
-      sub_1C32C20(&Method_NGUITools_FindInParents_UIRoot____78144224);
-      sub_1C32C20(&NGUITools_TypeInfo);
-      sub_1C32C20(&UnityEngine_Object_TypeInfo);
-      byte_4C3C1F7 = 1;
+      sub_1C37058(&Method_NGUITools_FindInParents_UIRoot____78190016);
+      sub_1C37058(&NGUITools_TypeInfo);
+      sub_1C37058(&UnityEngine_Object_TypeInfo);
+      byte_4C47772 = 1;
     }
     parent = (UnityEngine_Object_o *)UIRect__get_parent(this, method);
     if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -1768,7 +1768,7 @@ UIRoot_o *UIRect__get_root(UIRect_o *this, const MethodInfo *method)
       break;
     this = this->fields.mParent;
     if ( !this )
-      sub_1C32E7C(v4);
+      sub_1C372B4(v4);
   }
   if ( !this->fields.mRootSet )
   {
@@ -1776,11 +1776,11 @@ UIRoot_o *UIRect__get_root(UIRect_o *this, const MethodInfo *method)
     cachedTransform = UIRect__get_cachedTransform(this, method);
     if ( !NGUITools_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(NGUITools_TypeInfo);
-    v6 = NGUITools__FindInParents_object__51804172(
+    v6 = NGUITools__FindInParents_object__51847284(
            cachedTransform,
-           (const MethodInfo_316780C *)Method_NGUITools_FindInParents_UIRoot____78144224);
+           (const MethodInfo_3172074 *)Method_NGUITools_FindInParents_UIRoot____78190016);
     this->fields.mRoot = (struct UIRoot_o *)v6;
-    sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.mRoot, (int32_t)v6, v7, v8);
+    sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.mRoot, (int32_t)v6, v7, v8);
   }
   return this->fields.mRoot;
 }
@@ -1798,7 +1798,7 @@ void UIRect_AnchorPoint___ctor(UIRect_AnchorPoint_o *this, const MethodInfo *met
 }
 
 
-void UIRect_AnchorPoint___ctor_49370948(UIRect_AnchorPoint_o *this, float relative, const MethodInfo *method)
+void UIRect_AnchorPoint___ctor_49414060(UIRect_AnchorPoint_o *this, float relative, const MethodInfo *method)
 {
   System_Object___ctor((Il2CppObject *)this, 0);
   this->fields.relative = relative;
@@ -1816,12 +1816,12 @@ UnityEngine_Vector3_array *UIRect_AnchorPoint__GetSides(
   Il2CppObject *Component_object; // x21
   Il2CppObject *v10; // x20
 
-  if ( (byte_4C3C209 & 1) == 0 )
+  if ( (byte_4C47784 & 1) == 0 )
   {
-    sub_1C32C20(&Method_UnityEngine_Component_GetComponent_Camera___);
-    sub_1C32C20(&NGUITools_TypeInfo);
-    sub_1C32C20(&UnityEngine_Object_TypeInfo);
-    byte_4C3C209 = 1;
+    sub_1C37058(&Method_UnityEngine_Component_GetComponent_Camera___);
+    sub_1C37058(&NGUITools_TypeInfo);
+    sub_1C37058(&UnityEngine_Object_TypeInfo);
+    byte_4C47784 = 1;
   }
   target = (UnityEngine_Object_o *)this->fields.target;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -1840,14 +1840,14 @@ UnityEngine_Vector3_array *UIRect_AnchorPoint__GetSides(
                                             relativeTo,
                                             v7->klass[1]._1.methods);
 LABEL_20:
-    sub_1C32E7C(v7);
+    sub_1C372B4(v7);
   }
   v7 = (UnityEngine_Component_o *)this->fields.target;
   if ( !v7 )
     goto LABEL_20;
   Component_object = UnityEngine_Component__GetComponent_object_(
                        v7,
-                       (const MethodInfo_30D3BC0 *)Method_UnityEngine_Component_GetComponent_Camera___);
+                       (const MethodInfo_30DE428 *)Method_UnityEngine_Component_GetComponent_Camera___);
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   if ( !UnityEngine_Object__op_Inequality((UnityEngine_Object_o *)Component_object, 0, 0) )
@@ -1857,10 +1857,10 @@ LABEL_20:
     goto LABEL_20;
   v10 = UnityEngine_Component__GetComponent_object_(
           v7,
-          (const MethodInfo_30D3BC0 *)Method_UnityEngine_Component_GetComponent_Camera___);
+          (const MethodInfo_30DE428 *)Method_UnityEngine_Component_GetComponent_Camera___);
   if ( !NGUITools_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NGUITools_TypeInfo);
-  return NGUITools__GetSides_49320276((UnityEngine_Camera_o *)v10, relativeTo, 0);
+  return NGUITools__GetSides_49363388((UnityEngine_Camera_o *)v10, relativeTo, 0);
 }
 
 
@@ -1869,10 +1869,10 @@ void UIRect_AnchorPoint__Set(UIRect_AnchorPoint_o *this, float relative, float a
   int32_t v6; // w8
 
   this->fields.relative = relative;
-  if ( !byte_4C313D0 )
+  if ( !byte_4C3C920 )
   {
-    sub_1C32C20(&System_Math_TypeInfo);
-    byte_4C313D0 = 1;
+    sub_1C37058(&System_Math_TypeInfo);
+    byte_4C3C920 = 1;
   }
   if ( !System_Math_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(System_Math_TypeInfo);
@@ -1904,10 +1904,10 @@ void UIRect_AnchorPoint__SetHorizontal(
   UnityEngine_Vector3_o position; // 0:s0.4,4:s1.4,8:s2.4
   UnityEngine_Vector3_o v20; // 0:s0.4,4:s1.4,8:s2.4
 
-  if ( (byte_4C3C207 & 1) == 0 )
+  if ( (byte_4C47782 & 1) == 0 )
   {
-    sub_1C32C20(&UnityEngine_Object_TypeInfo);
-    byte_4C3C207 = 1;
+    sub_1C37058(&UnityEngine_Object_TypeInfo);
+    byte_4C47782 = 1;
   }
   rect = (UnityEngine_Object_o *)this->fields.rect;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -1924,7 +1924,7 @@ void UIRect_AnchorPoint__SetHorizontal(
       if ( target )
       {
         if ( LODWORD(target[1].klass) <= 2 )
-          sub_1C32E84(target);
+          sub_1C372BC(target);
         relative = this->fields.relative;
         v10 = *(float *)&target[1].monitor;
         v11 = fminf(relative, 1.0);
@@ -1933,17 +1933,17 @@ void UIRect_AnchorPoint__SetHorizontal(
         else
           v12 = v11;
         v13 = (float)(*(float *)&target[2].monitor - v10) * v12;
-        if ( !byte_4C313D0 )
+        if ( !byte_4C3C920 )
         {
-          sub_1C32C20(&System_Math_TypeInfo);
-          byte_4C313D0 = 1;
+          sub_1C37058(&System_Math_TypeInfo);
+          byte_4C3C920 = 1;
         }
         x = v10 + v13;
         goto LABEL_23;
       }
     }
 LABEL_28:
-    sub_1C32E7C(target);
+    sub_1C372B4(target);
   }
   target = this->fields.target;
   if ( !target )
@@ -1964,10 +1964,10 @@ LABEL_28:
     v20.fields.z = z;
     LODWORD(x) = (unsigned int)UnityEngine_Transform__InverseTransformPoint(parent, v20, 0);
   }
-  if ( !byte_4C313D0 )
+  if ( !byte_4C3C920 )
   {
-    sub_1C32C20(&System_Math_TypeInfo);
-    byte_4C313D0 = 1;
+    sub_1C37058(&System_Math_TypeInfo);
+    byte_4C3C920 = 1;
   }
 LABEL_23:
   if ( !System_Math_TypeInfo->_2.cctor_finished )
@@ -1987,11 +1987,11 @@ void UIRect_AnchorPoint__SetToNearest(
         float abs2,
         const MethodInfo *method)
 {
-  UIRect_AnchorPoint__SetToNearest_49371424(this, 0.0, 0.5, 1.0, abs0, abs1, abs2, method);
+  UIRect_AnchorPoint__SetToNearest_49414536(this, 0.0, 0.5, 1.0, abs0, abs1, abs2, method);
 }
 
 
-void UIRect_AnchorPoint__SetToNearest_49371424(
+void UIRect_AnchorPoint__SetToNearest_49414536(
         UIRect_AnchorPoint_o *this,
         float rel0,
         float rel1,
@@ -2052,10 +2052,10 @@ void UIRect_AnchorPoint__SetVertical(
   UnityEngine_Vector3_o v20; // 0:s0.4,4:s1.4,8:s2.4
   UnityEngine_Vector3_o v21; // 0:s0.4,4:s1.4,8:s2.4
 
-  if ( (byte_4C3C208 & 1) == 0 )
+  if ( (byte_4C47783 & 1) == 0 )
   {
-    sub_1C32C20(&UnityEngine_Object_TypeInfo);
-    byte_4C3C208 = 1;
+    sub_1C37058(&UnityEngine_Object_TypeInfo);
+    byte_4C47783 = 1;
   }
   rect = (UnityEngine_Object_o *)this->fields.rect;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -2072,7 +2072,7 @@ void UIRect_AnchorPoint__SetVertical(
       if ( target )
       {
         if ( LODWORD(target[1].klass) <= 3 )
-          sub_1C32E84(target);
+          sub_1C372BC(target);
         relative = this->fields.relative;
         v10 = *(float *)&target[3].klass;
         v11 = fminf(relative, 1.0);
@@ -2081,17 +2081,17 @@ void UIRect_AnchorPoint__SetVertical(
         else
           v12 = v11;
         v13 = (float)(*(float *)&target[2].klass - v10) * v12;
-        if ( !byte_4C313D0 )
+        if ( !byte_4C3C920 )
         {
-          sub_1C32C20(&System_Math_TypeInfo);
-          byte_4C313D0 = 1;
+          sub_1C37058(&System_Math_TypeInfo);
+          byte_4C3C920 = 1;
         }
         y = v10 + v13;
         goto LABEL_23;
       }
     }
 LABEL_28:
-    sub_1C32E7C(target);
+    sub_1C372B4(target);
   }
   target = this->fields.target;
   if ( !target )
@@ -2113,10 +2113,10 @@ LABEL_28:
     v21 = UnityEngine_Transform__InverseTransformPoint(parent, v20, 0);
     y = v21.fields.y;
   }
-  if ( !byte_4C313D0 )
+  if ( !byte_4C3C920 )
   {
-    sub_1C32C20(&System_Math_TypeInfo);
-    byte_4C313D0 = 1;
+    sub_1C37058(&System_Math_TypeInfo);
+    byte_4C3C920 = 1;
   }
 LABEL_23:
   if ( !System_Math_TypeInfo->_2.cctor_finished )
@@ -2129,7 +2129,7 @@ LABEL_23:
 }
 
 
-void UIRect_AnchorPoint__Set_49371240(
+void UIRect_AnchorPoint__Set_49414352(
         UIRect_AnchorPoint_o *this,
         UnityEngine_Transform_o *target,
         float relative,
@@ -2142,12 +2142,12 @@ void UIRect_AnchorPoint__Set_49371240(
 
   this->fields.target = target;
   p_fields = &this->fields;
-  sub_1C32BC4((CGThumbnailListItem_o *)&this->fields, (int32_t)target, (int32_t)method, v5);
+  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields, (int32_t)target, (int32_t)method, v5);
   p_fields->relative = relative;
-  if ( !byte_4C313D0 )
+  if ( !byte_4C3C920 )
   {
-    sub_1C32C20(&System_Math_TypeInfo);
-    byte_4C313D0 = 1;
+    sub_1C37058(&System_Math_TypeInfo);
+    byte_4C3C920 = 1;
   }
   if ( !System_Math_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(System_Math_TypeInfo);

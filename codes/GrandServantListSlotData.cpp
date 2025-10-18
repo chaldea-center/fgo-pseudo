@@ -8,12 +8,12 @@ void GrandServantListSlotData___ctor(
   Il2CppObject *v8; // x1
   Il2CppObject *entity; // [xsp+8h] [xbp-28h] BYREF
 
-  if ( (byte_4C32805 & 1) == 0 )
+  if ( (byte_4C3DDEF & 1) == 0 )
   {
-    sub_1C32C20(&Method_DataManager_GetMaster_GrandGraphMaster___);
-    sub_1C32C20(&DataManager_TypeInfo);
-    sub_1C32C20(&Method_DataMasterBase_GrandGraphMaster__GrandGraphEntity__int__TryGetEntity__);
-    byte_4C32805 = 1;
+    sub_1C37058(&Method_DataManager_GetMaster_GrandGraphMaster___);
+    sub_1C37058(&DataManager_TypeInfo);
+    sub_1C37058(&Method_DataMasterBase_GrandGraphMaster__GrandGraphEntity__int__TryGetEntity__);
+    byte_4C3DDEF = 1;
   }
   entity = 0;
   System_Object___ctor((Il2CppObject *)this, 0);
@@ -22,28 +22,28 @@ void GrandServantListSlotData___ctor(
   {
     if ( !DataManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-    Master_object = DataManager__GetMaster_object_((const MethodInfo_30DD39C *)Method_DataManager_GetMaster_GrandGraphMaster___);
+    Master_object = DataManager__GetMaster_object_((const MethodInfo_30E7C04 *)Method_DataManager_GetMaster_GrandGraphMaster___);
     if ( !Master_object )
       goto LABEL_11;
     if ( !DataMasterBase_object__object__int___TryGetEntity(
             (DataMasterBase_TMaster__TEntity__PKType__o *)Master_object,
             &entity,
             this->fields._GrandGraphId_k__BackingField,
-            (const MethodInfo_3396884 *)Method_DataMasterBase_GrandGraphMaster__GrandGraphEntity__int__TryGetEntity__) )
+            (const MethodInfo_33A10EC *)Method_DataMasterBase_GrandGraphMaster__GrandGraphEntity__int__TryGetEntity__) )
       return;
     Master_object = entity;
     if ( !entity )
 LABEL_11:
-      sub_1C32E7C(Master_object);
+      sub_1C372B4(Master_object);
     this->fields.isOpen = GrandGraphEntity__IsOpen((GrandGraphEntity_o *)entity, 0);
     v8 = entity;
     this->fields._GrandGraphEntity_k__BackingField = (struct GrandGraphEntity_o *)entity;
-    sub_1C32BC4(&this->fields._GrandGraphEntity_k__BackingField, v8);
+    sub_1C36FFC(&this->fields._GrandGraphEntity_k__BackingField, v8);
   }
 }
 
 
-void GrandServantListSlotData___ctor_32857916(
+void GrandServantListSlotData___ctor_32953548(
         GrandServantListSlotData_o *this,
         int32_t grandGraphId,
         int64_t userServantId,
@@ -74,39 +74,39 @@ void GrandServantListSlotData___ctor_32857916(
   Il2CppObject *v31; // [xsp+48h] [xbp-58h] BYREF
   Il2CppObject *entity; // [xsp+58h] [xbp-48h] BYREF
 
-  if ( (byte_4C32806 & 1) == 0 )
+  if ( (byte_4C3DDF0 & 1) == 0 )
   {
-    sub_1C32C20(&Method_DataManager_GetMaster_GrandGraphMaster___);
-    sub_1C32C20(&Method_DataManager_GetMaster_UserServantMaster___);
-    sub_1C32C20(&DataManager_TypeInfo);
-    sub_1C32C20(&Method_DataMasterBase_UserServantMaster__UserServantEntity__long__TryGetEntity__);
-    sub_1C32C20(&Method_DataMasterBase_GrandGraphMaster__GrandGraphEntity__int__TryGetEntity__);
-    sub_1C32C20(&Method_System_Linq_Enumerable_Select_long__UserServantEntity___);
-    sub_1C32C20(&Method_System_Linq_Enumerable_Select_UserServantEntity__long___);
-    sub_1C32C20(&Method_System_Linq_Enumerable_ToArray_long___);
-    sub_1C32C20(&Method_System_Linq_Enumerable_ToArray_UserServantEntity___);
-    sub_1C32C20(&System_Func_UserServantEntity__long__TypeInfo);
-    sub_1C32C20(&System_Func_long__UserServantEntity__TypeInfo);
-    sub_1C32C20(&CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo);
-    sub_1C32C20(&Method_GrandServantListSlotData___c___ctor_b__35_1__);
-    sub_1C32C20(&Method_GrandServantListSlotData___c__DisplayClass35_0___ctor_b__0__);
-    sub_1C32C20(&GrandServantListSlotData___c__DisplayClass35_0_TypeInfo);
-    sub_1C32C20(&GrandServantListSlotData___c_TypeInfo);
-    byte_4C32806 = 1;
+    sub_1C37058(&Method_DataManager_GetMaster_GrandGraphMaster___);
+    sub_1C37058(&Method_DataManager_GetMaster_UserServantMaster___);
+    sub_1C37058(&DataManager_TypeInfo);
+    sub_1C37058(&Method_DataMasterBase_UserServantMaster__UserServantEntity__long__TryGetEntity__);
+    sub_1C37058(&Method_DataMasterBase_GrandGraphMaster__GrandGraphEntity__int__TryGetEntity__);
+    sub_1C37058(&Method_System_Linq_Enumerable_Select_long__UserServantEntity___);
+    sub_1C37058(&Method_System_Linq_Enumerable_Select_UserServantEntity__long___);
+    sub_1C37058(&Method_System_Linq_Enumerable_ToArray_long___);
+    sub_1C37058(&Method_System_Linq_Enumerable_ToArray_UserServantEntity___);
+    sub_1C37058(&System_Func_UserServantEntity__long__TypeInfo);
+    sub_1C37058(&System_Func_long__UserServantEntity__TypeInfo);
+    sub_1C37058(&CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo);
+    sub_1C37058(&Method_GrandServantListSlotData___c___ctor_b__35_1__);
+    sub_1C37058(&Method_GrandServantListSlotData___c__DisplayClass35_0___ctor_b__0__);
+    sub_1C37058(&GrandServantListSlotData___c__DisplayClass35_0_TypeInfo);
+    sub_1C37058(&GrandServantListSlotData___c_TypeInfo);
+    byte_4C3DDF0 = 1;
   }
   entity = 0;
   v31 = 0;
   System_Object___ctor((Il2CppObject *)this, 0);
-  v11 = (Il2CppObject *)sub_1C32E6C(GrandServantListSlotData___c__DisplayClass35_0_TypeInfo);
+  v11 = (Il2CppObject *)sub_1C372A4(GrandServantListSlotData___c__DisplayClass35_0_TypeInfo);
   System_Object___ctor(v11, 0);
   this->fields._EquipFriendShipSkillChange_k__BackingField = equipFriendShipSkillChange;
   if ( !DataManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-  Master_object = (DataMasterBase_TMaster__TEntity__PKType__o *)DataManager__GetMaster_object_((const MethodInfo_30DD39C *)Method_DataManager_GetMaster_UserServantMaster___);
+  Master_object = (DataMasterBase_TMaster__TEntity__PKType__o *)DataManager__GetMaster_object_((const MethodInfo_30E7C04 *)Method_DataManager_GetMaster_UserServantMaster___);
   if ( !v11 )
     goto LABEL_29;
   v11[1].klass = (Il2CppClass *)Master_object;
-  sub_1C32BC4(&v11[1], Master_object);
+  sub_1C36FFC(&v11[1], Master_object);
   Master_object = (DataMasterBase_TMaster__TEntity__PKType__o *)v11[1].klass;
   if ( !Master_object )
     goto LABEL_29;
@@ -114,11 +114,11 @@ void GrandServantListSlotData___ctor_32857916(
          Master_object,
          &entity,
          userServantId,
-         (const MethodInfo_3398DE0 *)Method_DataMasterBase_UserServantMaster__UserServantEntity__long__TryGetEntity__) )
+         (const MethodInfo_33A3648 *)Method_DataMasterBase_UserServantMaster__UserServantEntity__long__TryGetEntity__) )
   {
     v13 = entity;
     this->fields._UserServantEntity_k__BackingField = (struct UserServantEntity_o *)entity;
-    sub_1C32BC4(&this->fields._UserServantEntity_k__BackingField, v13);
+    sub_1C36FFC(&this->fields._UserServantEntity_k__BackingField, v13);
     UserServantEntity_k__BackingField = this->fields._UserServantEntity_k__BackingField;
     this->fields.userServantId = userServantId;
     if ( !UserServantEntity_k__BackingField )
@@ -127,17 +127,17 @@ void GrandServantListSlotData___ctor_32857916(
     p_GrandGraphId_k__BackingField = &this->fields._GrandGraphId_k__BackingField;
     if ( equipUserServantIds )
     {
-      v16 = (System_Func_T__TResult__o *)sub_1C32E6C(System_Func_long__UserServantEntity__TypeInfo);
+      v16 = (System_Func_T__TResult__o *)sub_1C372A4(System_Func_long__UserServantEntity__TypeInfo);
       System_Func_long__object____ctor(v16, v11, Method_GrandServantListSlotData___c__DisplayClass35_0___ctor_b__0__, 0);
       v17 = (System_Collections_Generic_IEnumerable_TSource__o *)System_Linq_Enumerable__Select_long__object_(
                                                                    (System_Collections_Generic_IEnumerable_TSource__o *)equipUserServantIds,
                                                                    (System_Func_TSource__TResult__o *)v16,
-                                                                   (const MethodInfo_31125A0 *)Method_System_Linq_Enumerable_Select_long__UserServantEntity___);
+                                                                   (const MethodInfo_311CE08 *)Method_System_Linq_Enumerable_Select_long__UserServantEntity___);
       v18 = System_Linq_Enumerable__ToArray_object_(
               v17,
-              (const MethodInfo_311CA8C *)Method_System_Linq_Enumerable_ToArray_UserServantEntity___);
+              (const MethodInfo_31272F4 *)Method_System_Linq_Enumerable_ToArray_UserServantEntity___);
       this->fields._EquipUserServantEntities_k__BackingField = (struct UserServantEntity_array *)v18;
-      sub_1C32BC4(&this->fields._EquipUserServantEntities_k__BackingField, v18);
+      sub_1C36FFC(&this->fields._EquipUserServantEntities_k__BackingField, v18);
       EquipUserServantEntities_k__BackingField = (System_Collections_Generic_IEnumerable_TSource__o *)this->fields._EquipUserServantEntities_k__BackingField;
       v20 = GrandServantListSlotData___c_TypeInfo;
       if ( !GrandServantListSlotData___c_TypeInfo->_2.cctor_finished )
@@ -154,21 +154,21 @@ void GrandServantListSlotData___ctor_32857916(
           v20 = GrandServantListSlotData___c_TypeInfo;
         }
         v22 = (Il2CppObject *)v20->static_fields->__9;
-        _9__35_1 = (System_Func_object__long__o *)sub_1C32E6C(System_Func_UserServantEntity__long__TypeInfo);
+        _9__35_1 = (System_Func_object__long__o *)sub_1C372A4(System_Func_UserServantEntity__long__TypeInfo);
         System_Func_object__long____ctor(_9__35_1, v22, Method_GrandServantListSlotData___c___ctor_b__35_1__, 0);
         static_fields = GrandServantListSlotData___c_TypeInfo->static_fields;
         static_fields->__9__35_1 = (struct System_Func_UserServantEntity__long__o *)_9__35_1;
-        sub_1C32BC4(&static_fields->__9__35_1, _9__35_1);
+        sub_1C36FFC(&static_fields->__9__35_1, _9__35_1);
       }
       v24 = (System_Collections_Generic_IEnumerable_TSource__o *)System_Linq_Enumerable__Select_object__long_(
                                                                    EquipUserServantEntities_k__BackingField,
                                                                    (System_Func_TSource__TResult__o *)_9__35_1,
-                                                                   (const MethodInfo_31137C8 *)Method_System_Linq_Enumerable_Select_UserServantEntity__long___);
+                                                                   (const MethodInfo_311E030 *)Method_System_Linq_Enumerable_Select_UserServantEntity__long___);
       v25 = System_Linq_Enumerable__ToArray_long_(
               v24,
-              (const MethodInfo_311CA04 *)Method_System_Linq_Enumerable_ToArray_long___);
+              (const MethodInfo_312726C *)Method_System_Linq_Enumerable_ToArray_long___);
       this->fields._EquipUserServantIds_k__BackingField = v25;
-      sub_1C32BC4(&this->fields._EquipUserServantIds_k__BackingField, v25);
+      sub_1C36FFC(&this->fields._EquipUserServantIds_k__BackingField, v25);
     }
   }
   else
@@ -180,18 +180,18 @@ void GrandServantListSlotData___ctor_32857916(
   }
   if ( !DataManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-  Master_object = (DataMasterBase_TMaster__TEntity__PKType__o *)DataManager__GetMaster_object_((const MethodInfo_30DD39C *)Method_DataManager_GetMaster_GrandGraphMaster___);
+  Master_object = (DataMasterBase_TMaster__TEntity__PKType__o *)DataManager__GetMaster_object_((const MethodInfo_30E7C04 *)Method_DataManager_GetMaster_GrandGraphMaster___);
   if ( !Master_object )
     goto LABEL_29;
   if ( !DataMasterBase_object__object__int___TryGetEntity(
           Master_object,
           &v31,
           *p_GrandGraphId_k__BackingField,
-          (const MethodInfo_3396884 *)Method_DataMasterBase_GrandGraphMaster__GrandGraphEntity__int__TryGetEntity__) )
+          (const MethodInfo_33A10EC *)Method_DataMasterBase_GrandGraphMaster__GrandGraphEntity__int__TryGetEntity__) )
     return;
   v26 = v31;
   this->fields._GrandGraphEntity_k__BackingField = (struct GrandGraphEntity_o *)v31;
-  sub_1C32BC4(&this->fields._GrandGraphEntity_k__BackingField, v26);
+  sub_1C36FFC(&this->fields._GrandGraphEntity_k__BackingField, v26);
   this->fields.isOpen = 1;
   Master_object = (DataMasterBase_TMaster__TEntity__PKType__o *)UserGameMaster__getSelfUserGame(0);
   if ( !entity )
@@ -203,17 +203,17 @@ void GrandServantListSlotData___ctor_32857916(
   if ( !CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo);
   v29 = v30;
-  Master_object = (DataMasterBase_TMaster__TEntity__PKType__o *)CodeStage_AntiCheat_ObscuredTypes_ObscuredLong__op_Implicit_48891308(
+  Master_object = (DataMasterBase_TMaster__TEntity__PKType__o *)CodeStage_AntiCheat_ObscuredTypes_ObscuredLong__op_Implicit_48934420(
                                                                   &v29,
                                                                   0);
   if ( !v28 )
 LABEL_29:
-    sub_1C32E7C(Master_object);
+    sub_1C372B4(Master_object);
   this->fields._IsPushServant_k__BackingField = Master_object == (DataMasterBase_TMaster__TEntity__PKType__o *)v28[1].fields.seriazlier;
 }
 
 
-void GrandServantListSlotData___ctor_32859352(
+void GrandServantListSlotData___ctor_32954984(
         GrandServantListSlotData_o *this,
         int32_t grandGraphId,
         ServantLeaderInfo_o *servantLeaderInfo,
@@ -231,18 +231,18 @@ void GrandServantListSlotData___ctor_32859352(
   struct System_Int64_array *v17; // x0
   struct System_Int64_array **p_EquipUserServantIds_k__BackingField; // x20
 
-  if ( (byte_4C32807 & 1) == 0 )
+  if ( (byte_4C3DDF1 & 1) == 0 )
   {
-    sub_1C32C20(&Method_System_Linq_Enumerable_Select_EquipTargetInfo__long___);
-    sub_1C32C20(&Method_System_Linq_Enumerable_ToArray_long___);
-    sub_1C32C20(&System_Func_EquipTargetInfo__long__TypeInfo);
-    sub_1C32C20(&Method_GrandServantListSlotData___c___ctor_b__36_0__);
-    sub_1C32C20(&GrandServantListSlotData___c_TypeInfo);
-    byte_4C32807 = 1;
+    sub_1C37058(&Method_System_Linq_Enumerable_Select_EquipTargetInfo__long___);
+    sub_1C37058(&Method_System_Linq_Enumerable_ToArray_long___);
+    sub_1C37058(&System_Func_EquipTargetInfo__long__TypeInfo);
+    sub_1C37058(&Method_GrandServantListSlotData___c___ctor_b__36_0__);
+    sub_1C37058(&GrandServantListSlotData___c_TypeInfo);
+    byte_4C3DDF1 = 1;
   }
   System_Object___ctor((Il2CppObject *)this, 0);
   this->fields._ServantLeaderInfo_k__BackingField = servantLeaderInfo;
-  ServantLeaderInfo_k__BackingField = (ServantLeaderInfo_o *)sub_1C32BC4(
+  ServantLeaderInfo_k__BackingField = (ServantLeaderInfo_o *)sub_1C36FFC(
                                                                &this->fields._ServantLeaderInfo_k__BackingField,
                                                                servantLeaderInfo);
   if ( this->fields._ServantLeaderInfo_k__BackingField )
@@ -256,7 +256,7 @@ void GrandServantListSlotData___ctor_32859352(
           ServantLeaderInfo__SetSkillChangeInfo(servantLeaderInfo, 0),
           (ServantLeaderInfo_k__BackingField = this->fields._ServantLeaderInfo_k__BackingField) == 0) )
     {
-      sub_1C32E7C(ServantLeaderInfo_k__BackingField);
+      sub_1C372B4(ServantLeaderInfo_k__BackingField);
     }
     EquipTargetInfoList = ServantLeaderInfo__GetEquipTargetInfoList(ServantLeaderInfo_k__BackingField, 0);
     v11 = GrandServantListSlotData___c_TypeInfo;
@@ -275,22 +275,22 @@ void GrandServantListSlotData___ctor_32859352(
         v11 = GrandServantListSlotData___c_TypeInfo;
       }
       v14 = (Il2CppObject *)v11->static_fields->__9;
-      _9__36_0 = (System_Func_object__long__o *)sub_1C32E6C(System_Func_EquipTargetInfo__long__TypeInfo);
+      _9__36_0 = (System_Func_object__long__o *)sub_1C372A4(System_Func_EquipTargetInfo__long__TypeInfo);
       System_Func_object__long____ctor(_9__36_0, v14, Method_GrandServantListSlotData___c___ctor_b__36_0__, 0);
       static_fields = GrandServantListSlotData___c_TypeInfo->static_fields;
       static_fields->__9__36_0 = (struct System_Func_EquipTargetInfo__long__o *)_9__36_0;
-      sub_1C32BC4(&static_fields->__9__36_0, _9__36_0);
+      sub_1C36FFC(&static_fields->__9__36_0, _9__36_0);
     }
     v16 = (System_Collections_Generic_IEnumerable_TSource__o *)System_Linq_Enumerable__Select_object__long_(
                                                                  v12,
                                                                  (System_Func_TSource__TResult__o *)_9__36_0,
-                                                                 (const MethodInfo_31137C8 *)Method_System_Linq_Enumerable_Select_EquipTargetInfo__long___);
+                                                                 (const MethodInfo_311E030 *)Method_System_Linq_Enumerable_Select_EquipTargetInfo__long___);
     v17 = System_Linq_Enumerable__ToArray_long_(
             v16,
-            (const MethodInfo_311CA04 *)Method_System_Linq_Enumerable_ToArray_long___);
+            (const MethodInfo_312726C *)Method_System_Linq_Enumerable_ToArray_long___);
     this->fields._EquipUserServantIds_k__BackingField = v17;
     p_EquipUserServantIds_k__BackingField = &this->fields._EquipUserServantIds_k__BackingField;
-    sub_1C32BC4(p_EquipUserServantIds_k__BackingField, v17);
+    sub_1C36FFC(p_EquipUserServantIds_k__BackingField, v17);
     *((_BYTE *)p_EquipUserServantIds_k__BackingField - 16) = 1;
     *((_BYTE *)p_EquipUserServantIds_k__BackingField + 40) = isPushServant;
   }
@@ -303,24 +303,24 @@ int32_t GrandServantListSlotData__GetParentClassBoardBaseId(GrandServantListSlot
   UserServantEntity_o *UserServantEntity_k__BackingField; // x8
   ClassBoardClassMaster_o *v5; // x19
 
-  if ( (byte_4C32808 & 1) == 0 )
+  if ( (byte_4C3DDF2 & 1) == 0 )
   {
-    sub_1C32C20(&Method_DataManager_GetMaster_ClassBoardClassMaster___);
-    sub_1C32C20(&DataManager_TypeInfo);
-    byte_4C32808 = 1;
+    sub_1C37058(&Method_DataManager_GetMaster_ClassBoardClassMaster___);
+    sub_1C37058(&DataManager_TypeInfo);
+    byte_4C3DDF2 = 1;
   }
   if ( !this->fields._UserServantEntity_k__BackingField )
     return 0;
   if ( !DataManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-  Master_object = DataManager__GetMaster_object_((const MethodInfo_30DD39C *)Method_DataManager_GetMaster_ClassBoardClassMaster___);
+  Master_object = DataManager__GetMaster_object_((const MethodInfo_30E7C04 *)Method_DataManager_GetMaster_ClassBoardClassMaster___);
   UserServantEntity_k__BackingField = this->fields._UserServantEntity_k__BackingField;
   if ( !UserServantEntity_k__BackingField
     || (v5 = (ClassBoardClassMaster_o *)Master_object,
         Master_object = (Il2CppObject *)UserServantEntity__getSvtClassId(UserServantEntity_k__BackingField, 0, 0, 0),
         !v5) )
   {
-    sub_1C32E7C(Master_object);
+    sub_1C372B4(Master_object);
   }
   return ClassBoardClassMaster__GetClassBoardBaseId(v5, (int32_t)Master_object, 0);
 }
@@ -338,7 +338,7 @@ bool GrandServantListSlotData__IsEmptyEquip(GrandServantListSlotData_o *this, in
   if ( max_length <= index )
     return 1;
   if ( max_length <= (unsigned int)index )
-    sub_1C32E84(this);
+    sub_1C372BC(this);
   return EquipUserServantIds_k__BackingField->m_Items[index] == 0;
 }
 
@@ -430,7 +430,7 @@ void GrandServantListSlotData__set_EquipUserServantEntities(
         const MethodInfo *method)
 {
   this->fields._EquipUserServantEntities_k__BackingField = value;
-  sub_1C32BC4(&this->fields._EquipUserServantEntities_k__BackingField, value);
+  sub_1C36FFC(&this->fields._EquipUserServantEntities_k__BackingField, value);
 }
 
 
@@ -440,7 +440,7 @@ void GrandServantListSlotData__set_EquipUserServantIds(
         const MethodInfo *method)
 {
   this->fields._EquipUserServantIds_k__BackingField = value;
-  sub_1C32BC4(&this->fields._EquipUserServantIds_k__BackingField, value);
+  sub_1C36FFC(&this->fields._EquipUserServantIds_k__BackingField, value);
 }
 
 
@@ -450,7 +450,7 @@ void GrandServantListSlotData__set_GrandGraphEntity(
         const MethodInfo *method)
 {
   this->fields._GrandGraphEntity_k__BackingField = value;
-  sub_1C32BC4(&this->fields._GrandGraphEntity_k__BackingField, value);
+  sub_1C36FFC(&this->fields._GrandGraphEntity_k__BackingField, value);
 }
 
 
@@ -478,7 +478,7 @@ void GrandServantListSlotData__set_ServantLeaderInfo(
         const MethodInfo *method)
 {
   this->fields._ServantLeaderInfo_k__BackingField = value;
-  sub_1C32BC4(&this->fields._ServantLeaderInfo_k__BackingField, value);
+  sub_1C36FFC(&this->fields._ServantLeaderInfo_k__BackingField, value);
 }
 
 
@@ -488,7 +488,7 @@ void GrandServantListSlotData__set_UserServantEntity(
         const MethodInfo *method)
 {
   this->fields._UserServantEntity_k__BackingField = value;
-  sub_1C32BC4(&this->fields._UserServantEntity_k__BackingField, value);
+  sub_1C36FFC(&this->fields._UserServantEntity_k__BackingField, value);
 }
 
 
@@ -496,15 +496,15 @@ void GrandServantListSlotData___c___cctor(const MethodInfo *method)
 {
   Il2CppObject *v1; // x19
 
-  if ( (byte_4C32809 & 1) == 0 )
+  if ( (byte_4C3DDF3 & 1) == 0 )
   {
-    sub_1C32C20(&GrandServantListSlotData___c_TypeInfo);
-    byte_4C32809 = 1;
+    sub_1C37058(&GrandServantListSlotData___c_TypeInfo);
+    byte_4C3DDF3 = 1;
   }
-  v1 = (Il2CppObject *)sub_1C32E6C(GrandServantListSlotData___c_TypeInfo);
+  v1 = (Il2CppObject *)sub_1C372A4(GrandServantListSlotData___c_TypeInfo);
   System_Object___ctor(v1, 0);
   GrandServantListSlotData___c_TypeInfo->static_fields->__9 = (struct GrandServantListSlotData___c_o *)v1;
-  sub_1C32BC4(GrandServantListSlotData___c_TypeInfo->static_fields, v1);
+  sub_1C36FFC(GrandServantListSlotData___c_TypeInfo->static_fields, v1);
 }
 
 
@@ -524,10 +524,10 @@ int64_t GrandServantListSlotData___c____ctor_b__35_1(
   CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_o v7; // [xsp+20h] [xbp-60h] BYREF
   CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_o v8; // [xsp+40h] [xbp-40h]
 
-  if ( (byte_4C3280A & 1) == 0 )
+  if ( (byte_4C3DDF4 & 1) == 0 )
   {
-    sub_1C32C20(&CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo);
-    byte_4C3280A = 1;
+    sub_1C37058(&CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo);
+    byte_4C3DDF4 = 1;
   }
   if ( e )
   {
@@ -545,7 +545,7 @@ int64_t GrandServantListSlotData___c____ctor_b__35_1(
   if ( !CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo);
   v6 = v8;
-  return CodeStage_AntiCheat_ObscuredTypes_ObscuredLong__op_Implicit_48891308(&v6, 0);
+  return CodeStage_AntiCheat_ObscuredTypes_ObscuredLong__op_Implicit_48934420(&v6, 0);
 }
 
 
@@ -559,10 +559,10 @@ int64_t GrandServantListSlotData___c____ctor_b__36_0(
   CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_o v7; // [xsp+20h] [xbp-60h] BYREF
   CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_o v8; // [xsp+40h] [xbp-40h]
 
-  if ( (byte_4C3280B & 1) == 0 )
+  if ( (byte_4C3DDF5 & 1) == 0 )
   {
-    sub_1C32C20(&CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo);
-    byte_4C3280B = 1;
+    sub_1C37058(&CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo);
+    byte_4C3DDF5 = 1;
   }
   if ( e )
   {
@@ -580,7 +580,7 @@ int64_t GrandServantListSlotData___c____ctor_b__36_0(
   if ( !CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo);
   v6 = v8;
-  return CodeStage_AntiCheat_ObscuredTypes_ObscuredLong__op_Implicit_48891308(&v6, 0);
+  return CodeStage_AntiCheat_ObscuredTypes_ObscuredLong__op_Implicit_48934420(&v6, 0);
 }
 
 
@@ -600,20 +600,20 @@ UserServantEntity_o *GrandServantListSlotData___c__DisplayClass35_0____ctor_b__0
   DataMasterBase_TMaster__TEntity__PKType__o *userServantMaster; // x0
   Il2CppObject *entity; // [xsp+8h] [xbp-28h] BYREF
 
-  if ( (byte_4C3280C & 1) == 0 )
+  if ( (byte_4C3DDF6 & 1) == 0 )
   {
-    sub_1C32C20(&Method_DataMasterBase_UserServantMaster__UserServantEntity__long__TryGetEntity__);
-    byte_4C3280C = 1;
+    sub_1C37058(&Method_DataMasterBase_UserServantMaster__UserServantEntity__long__TryGetEntity__);
+    byte_4C3DDF6 = 1;
   }
   entity = 0;
   userServantMaster = (DataMasterBase_TMaster__TEntity__PKType__o *)this->fields.userServantMaster;
   if ( !userServantMaster )
-    sub_1C32E7C(0);
+    sub_1C372B4(0);
   if ( DataMasterBase_object__object__long___TryGetEntity(
          userServantMaster,
          &entity,
          id,
-         (const MethodInfo_3398DE0 *)Method_DataMasterBase_UserServantMaster__UserServantEntity__long__TryGetEntity__) )
+         (const MethodInfo_33A3648 *)Method_DataMasterBase_UserServantMaster__UserServantEntity__long__TryGetEntity__) )
   {
     return (UserServantEntity_o *)entity;
   }

@@ -1,9 +1,9 @@
 void ServantCombineResultInfoComponent___ctor(ServantCombineResultInfoComponent_o *this, const MethodInfo *method)
 {
-  if ( (byte_4C3BB22 & 1) == 0 )
+  if ( (byte_4C47137 & 1) == 0 )
   {
-    sub_1C32C20(&BaseDialog_TypeInfo);
-    byte_4C3BB22 = 1;
+    sub_1C37058(&BaseDialog_TypeInfo);
+    byte_4C47137 = 1;
   }
   if ( !BaseDialog_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(BaseDialog_TypeInfo);
@@ -17,32 +17,32 @@ void ServantCombineResultInfoComponent__Close(ServantCombineResultInfoComponent_
   System_Action_o *v4; // x1
   const MethodInfo *v5; // x2
 
-  if ( (byte_4C3BB20 & 1) == 0 )
+  if ( (byte_4C47135 & 1) == 0 )
   {
-    sub_1C32C20(&System_Action_TypeInfo);
-    sub_1C32C20(&Method_ServantCombineResultInfoComponent_EndClose__);
-    byte_4C3BB20 = 1;
+    sub_1C37058(&System_Action_TypeInfo);
+    sub_1C37058(&Method_ServantCombineResultInfoComponent_EndClose__);
+    byte_4C47135 = 1;
   }
-  v3 = (System_Action_o *)sub_1C32E6C(System_Action_TypeInfo);
+  v3 = (System_Action_o *)sub_1C372A4(System_Action_TypeInfo);
   System_Action___ctor(v3, (Il2CppObject *)this, Method_ServantCombineResultInfoComponent_EndClose__, 0);
-  ServantCombineResultInfoComponent__Close_48642604(this, v4, v5);
+  ServantCombineResultInfoComponent__Close_48763804(this, v4, v5);
 }
 
 
-void ServantCombineResultInfoComponent__Close_48642604(
+void ServantCombineResultInfoComponent__Close_48763804(
         ServantCombineResultInfoComponent_o *this,
         System_Action_o *callback,
         const MethodInfo *method)
 {
   System_Action_o *v4; // x20
 
-  if ( (byte_4C3BB21 & 1) == 0 )
+  if ( (byte_4C47136 & 1) == 0 )
   {
-    sub_1C32C20(&System_Action_TypeInfo);
-    sub_1C32C20(&Method_ServantCombineResultInfoComponent_EndClose__);
-    byte_4C3BB21 = 1;
+    sub_1C37058(&System_Action_TypeInfo);
+    sub_1C37058(&Method_ServantCombineResultInfoComponent_EndClose__);
+    byte_4C47136 = 1;
   }
-  v4 = (System_Action_o *)sub_1C32E6C(System_Action_TypeInfo);
+  v4 = (System_Action_o *)sub_1C372A4(System_Action_TypeInfo);
   System_Action___ctor(v4, (Il2CppObject *)this, Method_ServantCombineResultInfoComponent_EndClose__, 0);
   BaseDialog__Close((BaseDialog_o *)this, v4, 0);
 }
@@ -55,7 +55,7 @@ void ServantCombineResultInfoComponent__EndClose(ServantCombineResultInfoCompone
   ServantCombineResultInfoComponent__Init(this, method);
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
   if ( !gameObject )
-    sub_1C32E7C(0);
+    sub_1C372B4(0);
   UnityEngine_GameObject__SetActive(gameObject, 0, 0);
 }
 
@@ -74,7 +74,7 @@ void ServantCombineResultInfoComponent__EndOpen(ServantCombineResultInfoComponen
   if ( openCallBack )
   {
     p_openCallBack->klass = 0;
-    sub_1C32BC4(p_openCallBack, 0, v2, v3);
+    sub_1C36FFC(p_openCallBack, 0, v2, v3);
     ((void (__fastcall *)(intptr_t, intptr_t))v5->fields.invoke_impl)(v5->fields.method_code, v5->fields.method);
   }
 }
@@ -85,10 +85,10 @@ void ServantCombineResultInfoComponent__Init(ServantCombineResultInfoComponent_o
   UnityEngine_GameObject_o *gameObject; // x0
   const MethodInfo *v4; // x1
 
-  if ( (byte_4C3BB1B & 1) == 0 )
+  if ( (byte_4C47130 & 1) == 0 )
   {
-    sub_1C32C20(&StringLiteral_1/*""*/);
-    byte_4C3BB1B = 1;
+    sub_1C37058(&StringLiteral_1/*""*/);
+    byte_4C47130 = 1;
   }
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
   if ( !gameObject )
@@ -117,7 +117,7 @@ void ServantCombineResultInfoComponent__Init(ServantCombineResultInfoComponent_o
         (gameObject = (UnityEngine_GameObject_o *)this->fields.increAtkLb) == 0) )
   {
 LABEL_12:
-    sub_1C32E7C(gameObject);
+    sub_1C372B4(gameObject);
   }
   UILabel__set_text((UILabel_o *)gameObject, (System_String_o *)StringLiteral_1/*""*/, 0);
   this->fields.state = 0;
@@ -172,18 +172,18 @@ void ServantCombineResultInfoComponent__OpenLevelUpInfo(
   int32_t increHpVal; // [xsp+18h] [xbp-38h] BYREF
   int32_t oldLv; // [xsp+1Ch] [xbp-34h] BYREF
 
-  if ( (byte_4C3BB1D & 1) == 0 )
+  if ( (byte_4C47132 & 1) == 0 )
   {
-    sub_1C32C20(&System_Action_TypeInfo);
-    sub_1C32C20(&int_TypeInfo);
-    sub_1C32C20(&LocalizationManager_TypeInfo);
-    sub_1C32C20(&Method_ServantCombineResultInfoComponent_EndOpen__);
-    sub_1C32C20(&Method_ServantCombineResultInfoComponent_OpenLevelUpInfo__);
-    sub_1C32C20(&StringLiteral_8262/*"LEVEL_INFO"*/);
-    sub_1C32C20(&StringLiteral_8259/*"LEVELUP_NOTICE_TITLE"*/);
-    sub_1C32C20(&StringLiteral_7437/*"INCREMENT_SVTLEVEL"*/);
-    sub_1C32C20(&StringLiteral_1/*""*/);
-    byte_4C3BB1D = 1;
+    sub_1C37058(&System_Action_TypeInfo);
+    sub_1C37058(&int_TypeInfo);
+    sub_1C37058(&LocalizationManager_TypeInfo);
+    sub_1C37058(&Method_ServantCombineResultInfoComponent_EndOpen__);
+    sub_1C37058(&Method_ServantCombineResultInfoComponent_OpenLevelUpInfo__);
+    sub_1C37058(&StringLiteral_8263/*"LEVEL_INFO"*/);
+    sub_1C37058(&StringLiteral_8260/*"LEVELUP_NOTICE_TITLE"*/);
+    sub_1C37058(&StringLiteral_7438/*"INCREMENT_SVTLEVEL"*/);
+    sub_1C37058(&StringLiteral_1/*""*/);
+    byte_4C47132 = 1;
   }
   if ( !this->fields.state )
   {
@@ -196,7 +196,7 @@ void ServantCombineResultInfoComponent__OpenLevelUpInfo(
       goto LABEL_25;
     UnityEngine_GameObject__SetActive(gameObject, 1, 0);
     this->fields.openCallBack = callback;
-    sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.openCallBack, (int32_t)callback, v8, v9);
+    sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.openCallBack, (int32_t)callback, v8, v9);
     gameObject = (UnityEngine_GameObject_o *)this->fields.levelUpTitleLb;
     if ( !gameObject )
       goto LABEL_25;
@@ -208,20 +208,20 @@ void ServantCombineResultInfoComponent__OpenLevelUpInfo(
       levelUpTitleLb = this->fields.levelUpTitleLb;
       if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-      gameObject = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)StringLiteral_8259/*"LEVELUP_NOTICE_TITLE"*/, 0);
+      gameObject = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)StringLiteral_8260/*"LEVELUP_NOTICE_TITLE"*/, 0);
       if ( !levelUpTitleLb )
         goto LABEL_25;
       UILabel__set_text(levelUpTitleLb, (System_String_o *)gameObject, 0);
       v11 = Method_ServantCombineResultInfoComponent_OpenLevelUpInfo__;
       if ( (*((_BYTE *)Method_ServantCombineResultInfoComponent_OpenLevelUpInfo__ + 83) & 2) != 0 )
-        v11 = (_QWORD *)sub_1C32C38(Method_ServantCombineResultInfoComponent_OpenLevelUpInfo__);
-      v12 = (System_Reflection_MethodBase_o *)sub_1C32C04(v11, v11[4]);
+        v11 = (_QWORD *)sub_1C37070(Method_ServantCombineResultInfoComponent_OpenLevelUpInfo__);
+      v12 = (System_Reflection_MethodBase_o *)sub_1C3703C(v11, v11[4]);
       OverwriteAssetSoundName__PlaySystemSe(v12, 5, 0, 0);
     }
     befLevelLb = this->fields.befLevelLb;
     if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-    v14 = LocalizationManager__Get((System_String_o *)StringLiteral_8262/*"LEVEL_INFO"*/, 0);
+    v14 = LocalizationManager__Get((System_String_o *)StringLiteral_8263/*"LEVEL_INFO"*/, 0);
     oldLv = infoData->fields.oldLv;
     v21 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &oldLv, v15, v16, v17, v18, v19, v20);
     gameObject = (UnityEngine_GameObject_o *)System_String__Format(v14, v21, 0);
@@ -239,7 +239,7 @@ void ServantCombineResultInfoComponent__OpenLevelUpInfo(
         {
           UILabel__set_text(currentHpLb, (System_String_o *)gameObject, 0);
           increHpLb = this->fields.increHpLb;
-          v25 = LocalizationManager__Get((System_String_o *)StringLiteral_7437/*"INCREMENT_SVTLEVEL"*/, 0);
+          v25 = LocalizationManager__Get((System_String_o *)StringLiteral_7438/*"INCREMENT_SVTLEVEL"*/, 0);
           increHpVal = infoData->fields.increHpVal;
           v32 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &increHpVal, v26, v27, v28, v29, v30, v31);
           gameObject = (UnityEngine_GameObject_o *)System_String__Format(v25, v32, 0);
@@ -252,14 +252,14 @@ void ServantCombineResultInfoComponent__OpenLevelUpInfo(
             {
               UILabel__set_text(currentAtkLb, (System_String_o *)gameObject, 0);
               increAtkLb = this->fields.increAtkLb;
-              v35 = LocalizationManager__Get((System_String_o *)StringLiteral_7437/*"INCREMENT_SVTLEVEL"*/, 0);
+              v35 = LocalizationManager__Get((System_String_o *)StringLiteral_7438/*"INCREMENT_SVTLEVEL"*/, 0);
               increAtkVal = infoData->fields.increAtkVal;
               v42 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &increAtkVal, v36, v37, v38, v39, v40, v41);
               gameObject = (UnityEngine_GameObject_o *)System_String__Format(v35, v42, 0);
               if ( increAtkLb )
               {
                 UILabel__set_text(increAtkLb, (System_String_o *)gameObject, 0);
-                v43 = (System_Action_o *)sub_1C32E6C(System_Action_TypeInfo);
+                v43 = (System_Action_o *)sub_1C372A4(System_Action_TypeInfo);
                 System_Action___ctor(v43, (Il2CppObject *)this, Method_ServantCombineResultInfoComponent_EndOpen__, 0);
                 BaseDialog__Open((BaseDialog_o *)this, v43, 0, 0, 0);
                 return;
@@ -270,7 +270,7 @@ void ServantCombineResultInfoComponent__OpenLevelUpInfo(
       }
     }
 LABEL_25:
-    sub_1C32E7C(gameObject);
+    sub_1C372B4(gameObject);
   }
 }
 
@@ -302,21 +302,21 @@ void ServantCombineResultInfoComponent__OpenResultInfo(
   System_Action_o *v25; // x20
   UnityEngine_Vector3_o v26; // 0:s0.4,4:s1.4,8:s2.4
 
-  if ( (byte_4C3BB1C & 1) == 0 )
+  if ( (byte_4C47131 & 1) == 0 )
   {
-    sub_1C32C20(&System_Action_TypeInfo);
-    sub_1C32C20(&Method_System_Collections_Generic_List_GameObject__get_Count__);
-    sub_1C32C20(&Method_System_Collections_Generic_List_GameObject__get_Item__);
-    sub_1C32C20(&Method_ServantCombineResultInfoComponent_EndOpen__);
-    sub_1C32C20(&Method_ServantCombineResultInfoComponent_OpenResultInfo__);
-    byte_4C3BB1C = 1;
+    sub_1C37058(&System_Action_TypeInfo);
+    sub_1C37058(&Method_System_Collections_Generic_List_GameObject__get_Count__);
+    sub_1C37058(&Method_System_Collections_Generic_List_GameObject__get_Item__);
+    sub_1C37058(&Method_ServantCombineResultInfoComponent_EndOpen__);
+    sub_1C37058(&Method_ServantCombineResultInfoComponent_OpenResultInfo__);
+    byte_4C47131 = 1;
   }
   if ( !this->fields.state )
   {
     v7 = Method_ServantCombineResultInfoComponent_OpenResultInfo__;
     if ( (*((_BYTE *)Method_ServantCombineResultInfoComponent_OpenResultInfo__ + 83) & 2) != 0 )
-      v7 = (_QWORD *)sub_1C32C38(Method_ServantCombineResultInfoComponent_OpenResultInfo__);
-    v8 = (System_Reflection_MethodBase_o *)sub_1C32C04(v7, v7[4]);
+      v7 = (_QWORD *)sub_1C37070(Method_ServantCombineResultInfoComponent_OpenResultInfo__);
+    v8 = (System_Reflection_MethodBase_o *)sub_1C3703C(v7, v7[4]);
     OverwriteAssetSoundName__PlaySystemSe(v8, 6, 0, 0);
     gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
     if ( !gameObject )
@@ -324,9 +324,9 @@ void ServantCombineResultInfoComponent__OpenResultInfo(
     UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)gameObject, 1, 0);
     this->fields.resInfoList = resInfo;
     p_resInfoList = &this->fields.resInfoList;
-    sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.resInfoList, (int32_t)resInfo, v11, v12);
+    sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.resInfoList, (int32_t)resInfo, v11, v12);
     this->fields.openCallBack = callback;
-    sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.openCallBack, (int32_t)callback, v13, v14);
+    sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.openCallBack, (int32_t)callback, v13, v14);
     ServantCombineResultInfoComponent__setCenter(this, v15);
     gameObject = this->fields.resultInfoGrid;
     if ( !gameObject )
@@ -348,7 +348,7 @@ void ServantCombineResultInfoComponent__OpenResultInfo(
       gameObject = System_Collections_Generic_List_object___get_Item(
                      (System_Collections_Generic_List_object__o *)gameObject,
                      v19,
-                     (const MethodInfo_37984EC *)Method_System_Collections_Generic_List_GameObject__get_Item__);
+                     (const MethodInfo_37A2D54 *)Method_System_Collections_Generic_List_GameObject__get_Item__);
       if ( this->fields.resultInfoGrid )
       {
         v22 = (UnityEngine_GameObject_o *)gameObject;
@@ -375,10 +375,10 @@ void ServantCombineResultInfoComponent__OpenResultInfo(
           (gameObject = this->fields.resultInfoGrid) == 0) )
     {
 LABEL_20:
-      sub_1C32E7C(gameObject);
+      sub_1C372B4(gameObject);
     }
     UIGrid__set_repositionNow((UIGrid_o *)gameObject, 1, 0);
-    v25 = (System_Action_o *)sub_1C32E6C(System_Action_TypeInfo);
+    v25 = (System_Action_o *)sub_1C372A4(System_Action_TypeInfo);
     System_Action___ctor(v25, (Il2CppObject *)this, Method_ServantCombineResultInfoComponent_EndOpen__, 0);
     BaseDialog__Open((BaseDialog_o *)this, v25, 0, 0, 0);
   }
@@ -396,17 +396,17 @@ void ServantCombineResultInfoComponent__clearInfoGrid(
   int32_t v7; // w2
   const MethodInfo *v8; // x3
 
-  if ( (byte_4C3BB1F & 1) == 0 )
+  if ( (byte_4C47134 & 1) == 0 )
   {
-    sub_1C32C20(&UnityEngine_Object_TypeInfo);
-    byte_4C3BB1F = 1;
+    sub_1C37058(&UnityEngine_Object_TypeInfo);
+    byte_4C47134 = 1;
   }
   resultInfoGrid = (UnityEngine_Component_o *)this->fields.resultInfoGrid;
   if ( !resultInfoGrid
     || (resultInfoGrid = (UnityEngine_Component_o *)UnityEngine_Component__get_transform(resultInfoGrid, 0)) == 0 )
   {
 LABEL_14:
-    sub_1C32E7C(resultInfoGrid);
+    sub_1C372B4(resultInfoGrid);
   }
   childCount = UnityEngine_Transform__get_childCount((UnityEngine_Transform_o *)resultInfoGrid, 0);
   v5 = childCount - 1;
@@ -429,12 +429,12 @@ LABEL_14:
       gameObject = (UnityEngine_Object_o *)UnityEngine_Component__get_gameObject(resultInfoGrid, 0);
       if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-      UnityEngine_Object__Destroy_71223640(gameObject, 0);
+      UnityEngine_Object__Destroy_71266752(gameObject, 0);
       --v5;
     }
     while ( v5 >= 0 );
     this->fields.resInfoList = 0;
-    sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.resInfoList, 0, v7, v8);
+    sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.resInfoList, 0, v7, v8);
   }
 }
 
@@ -456,10 +456,10 @@ void ServantCombineResultInfoComponent__setCenter(ServantCombineResultInfoCompon
   UnityEngine_Vector3_o v15; // 0:s0.4,4:s1.4,8:s2.4
   UnityEngine_Vector3_o v16; // 0:s0.4,4:s1.4,8:s2.4
 
-  if ( (byte_4C3BB1E & 1) == 0 )
+  if ( (byte_4C47133 & 1) == 0 )
   {
-    sub_1C32C20(&UnityEngine_Object_TypeInfo);
-    byte_4C3BB1E = 1;
+    sub_1C37058(&UnityEngine_Object_TypeInfo);
+    byte_4C47133 = 1;
   }
   basePanel = (UnityEngine_Object_o *)this->fields.basePanel;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -485,7 +485,7 @@ void ServantCombineResultInfoComponent__setCenter(ServantCombineResultInfoCompon
                                                  basePanel->klass[1]._1.klass)) == 0 )
   {
 LABEL_20:
-    sub_1C32E7C(transform);
+    sub_1C372B4(transform);
   }
   klass = (unsigned int)transform[1].klass;
   v8 = (float32x2_t *)transform;
@@ -515,7 +515,7 @@ LABEL_20:
   while ( v9 != 4 );
   if ( klass <= 2 )
 LABEL_19:
-    sub_1C32E84(transform);
+    sub_1C372BC(transform);
   v14 = v8[5].n64_f32[0] + (float)((float)(v8[8].n64_f32[0] - v8[5].n64_f32[0]) * 0.5);
   *(float32x2_t *)&this->fields.center.fields.x = vadd_f32(
                                                     v8[4],

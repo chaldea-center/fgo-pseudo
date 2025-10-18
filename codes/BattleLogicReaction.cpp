@@ -26,19 +26,19 @@ BattleLogicTask_array *BattleLogicReaction__CheckEnemyPlayerTurnEndAfter(
   __int64 size; // x10
   Il2CppClass **v19; // x0
 
-  if ( (byte_4C3AAF8 & 1) == 0 )
+  if ( (byte_4C461EF & 1) == 0 )
   {
-    sub_1C32C20(&BattleLogicTask_TypeInfo);
-    sub_1C32C20(&Method_System_Collections_Generic_List_BattleLogicTask__Add__);
-    sub_1C32C20(&Method_System_Collections_Generic_List_BattleLogicTask__ToArray__);
-    sub_1C32C20(&Method_System_Collections_Generic_List_BattleLogicTask___ctor__);
-    sub_1C32C20(&System_Collections_Generic_List_BattleLogicTask__TypeInfo);
-    byte_4C3AAF8 = 1;
+    sub_1C37058(&BattleLogicTask_TypeInfo);
+    sub_1C37058(&Method_System_Collections_Generic_List_BattleLogicTask__Add__);
+    sub_1C37058(&Method_System_Collections_Generic_List_BattleLogicTask__ToArray__);
+    sub_1C37058(&Method_System_Collections_Generic_List_BattleLogicTask___ctor__);
+    sub_1C37058(&System_Collections_Generic_List_BattleLogicTask__TypeInfo);
+    byte_4C461EF = 1;
   }
-  v5 = (System_Collections_Generic_List_object__o *)sub_1C32E6C(System_Collections_Generic_List_BattleLogicTask__TypeInfo);
+  v5 = (System_Collections_Generic_List_object__o *)sub_1C372A4(System_Collections_Generic_List_BattleLogicTask__TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v5,
-    (const MethodInfo_3797F88 *)Method_System_Collections_Generic_List_BattleLogicTask___ctor__);
+    (const MethodInfo_37A27F0 *)Method_System_Collections_Generic_List_BattleLogicTask___ctor__);
   FieldEnemyServantList = this->fields.data;
   if ( !FieldEnemyServantList )
     goto LABEL_22;
@@ -53,7 +53,7 @@ BattleLogicTask_array *BattleLogicReaction__CheckEnemyPlayerTurnEndAfter(
     while ( 1 )
     {
       if ( v9 >= v7 )
-        sub_1C32E84(FieldEnemyServantList);
+        sub_1C372BC(FieldEnemyServantList);
       v10 = (BattleServantData_o *)*((_QWORD *)v8 + (int)v9 + 4);
       if ( !v10 )
         break;
@@ -71,7 +71,7 @@ BattleLogicTask_array *BattleLogicReaction__CheckEnemyPlayerTurnEndAfter(
                                             0);
           if ( ((unsigned __int8)FieldEnemyServantList & 1) != 0 )
           {
-            v11 = (BattleLogicTask_o *)sub_1C32E6C(BattleLogicTask_TypeInfo);
+            v11 = (BattleLogicTask_o *)sub_1C372A4(BattleLogicTask_TypeInfo);
             BattleLogicTask___ctor(v11, v12);
             if ( !v11 )
               break;
@@ -90,14 +90,14 @@ BattleLogicTask_array *BattleLogicReaction__CheckEnemyPlayerTurnEndAfter(
               System_Collections_Generic_List_object___AddWithResize(
                 v5,
                 (Il2CppObject *)v11,
-                *(const MethodInfo_37987BC **)(*(_QWORD *)(v17[4] + 192LL) + 112LL));
+                *(const MethodInfo_37A3024 **)(*(_QWORD *)(v17[4] + 192LL) + 112LL));
             }
             else
             {
               v19 = &items->obj.klass + size;
               v5->fields._size = size + 1;
               v19[4] = (Il2CppClass *)v11;
-              sub_1C32BC4((CGThumbnailListItem_o *)(v19 + 4), (int32_t)v11, v14, v15);
+              sub_1C36FFC((CGThumbnailListItem_o *)(v19 + 4), (int32_t)v11, v14, v15);
             }
           }
         }
@@ -107,14 +107,14 @@ BattleLogicTask_array *BattleLogicReaction__CheckEnemyPlayerTurnEndAfter(
         goto LABEL_20;
     }
 LABEL_22:
-    sub_1C32E7C(FieldEnemyServantList);
+    sub_1C372B4(FieldEnemyServantList);
   }
 LABEL_20:
   if ( !v5 )
     goto LABEL_22;
   return (BattleLogicTask_array *)System_Collections_Generic_List_object___ToArray(
                                     v5,
-                                    (const MethodInfo_379A314 *)Method_System_Collections_Generic_List_BattleLogicTask__ToArray__);
+                                    (const MethodInfo_37A4B7C *)Method_System_Collections_Generic_List_BattleLogicTask__ToArray__);
 }
 
 
@@ -144,19 +144,19 @@ BattleLogicTask_array *BattleLogicReaction__CheckEnemyShiftAfter(
   _QWORD *v23; // x20
   unsigned __int64 v24; // x21
 
-  if ( (byte_4C3AAF7 & 1) == 0 )
+  if ( (byte_4C461EE & 1) == 0 )
   {
-    sub_1C32C20(&BattleLogicTask_TypeInfo);
-    sub_1C32C20(&Method_System_Collections_Generic_List_BattleLogicTask__Add__);
-    sub_1C32C20(&Method_System_Collections_Generic_List_BattleLogicTask__ToArray__);
-    sub_1C32C20(&Method_System_Collections_Generic_List_BattleLogicTask___ctor__);
-    sub_1C32C20(&System_Collections_Generic_List_BattleLogicTask__TypeInfo);
-    byte_4C3AAF7 = 1;
+    sub_1C37058(&BattleLogicTask_TypeInfo);
+    sub_1C37058(&Method_System_Collections_Generic_List_BattleLogicTask__Add__);
+    sub_1C37058(&Method_System_Collections_Generic_List_BattleLogicTask__ToArray__);
+    sub_1C37058(&Method_System_Collections_Generic_List_BattleLogicTask___ctor__);
+    sub_1C37058(&System_Collections_Generic_List_BattleLogicTask__TypeInfo);
+    byte_4C461EE = 1;
   }
-  v6 = (System_Collections_Generic_List_object__o *)sub_1C32E6C(System_Collections_Generic_List_BattleLogicTask__TypeInfo);
+  v6 = (System_Collections_Generic_List_object__o *)sub_1C372A4(System_Collections_Generic_List_BattleLogicTask__TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v6,
-    (const MethodInfo_3797F88 *)Method_System_Collections_Generic_List_BattleLogicTask___ctor__);
+    (const MethodInfo_37A27F0 *)Method_System_Collections_Generic_List_BattleLogicTask___ctor__);
   FieldEnemyServantList = this->fields.data;
   if ( !FieldEnemyServantList )
     goto LABEL_34;
@@ -190,7 +190,7 @@ BattleLogicTask_array *BattleLogicReaction__CheckEnemyShiftAfter(
                                             0);
           if ( ((unsigned __int8)FieldEnemyServantList & 1) != 0 )
           {
-            v13 = (BattleLogicTask_o *)sub_1C32E6C(BattleLogicTask_TypeInfo);
+            v13 = (BattleLogicTask_o *)sub_1C372A4(BattleLogicTask_TypeInfo);
             BattleLogicTask___ctor(v13, v14);
             if ( !v13 )
               goto LABEL_34;
@@ -209,14 +209,14 @@ BattleLogicTask_array *BattleLogicReaction__CheckEnemyShiftAfter(
               System_Collections_Generic_List_object___AddWithResize(
                 v6,
                 (Il2CppObject *)v13,
-                *(const MethodInfo_37987BC **)(*(_QWORD *)(v19[4] + 192LL) + 112LL));
+                *(const MethodInfo_37A3024 **)(*(_QWORD *)(v19[4] + 192LL) + 112LL));
             }
             else
             {
               v21 = &items->obj.klass + size;
               v6->fields._size = size + 1;
               v21[4] = (Il2CppClass *)v13;
-              sub_1C32BC4((CGThumbnailListItem_o *)(v21 + 4), (int32_t)v13, v16, v17);
+              sub_1C36FFC((CGThumbnailListItem_o *)(v21 + 4), (int32_t)v13, v16, v17);
             }
           }
           v11 = 1;
@@ -231,7 +231,7 @@ BattleLogicTask_array *BattleLogicReaction__CheckEnemyShiftAfter(
       FieldEnemyServantList = this->fields.logic;
       if ( FieldEnemyServantList )
       {
-        BattleLogic__updateConditionsBuffAll((BattleLogic_o *)FieldEnemyServantList, 0, 0);
+        BattleLogic__updateConditionsBuffAll((BattleLogic_o *)FieldEnemyServantList, 0, 0, 0);
         if ( data )
         {
           FieldEnemyServantList = BattleData__getFieldServantList(data, 0, 0);
@@ -252,14 +252,14 @@ BattleLogicTask_array *BattleLogicReaction__CheckEnemyShiftAfter(
                   goto LABEL_32;
               }
 LABEL_35:
-              sub_1C32E84(FieldEnemyServantList);
+              sub_1C372BC(FieldEnemyServantList);
             }
             goto LABEL_32;
           }
         }
       }
 LABEL_34:
-      sub_1C32E7C(FieldEnemyServantList);
+      sub_1C372B4(FieldEnemyServantList);
     }
   }
 LABEL_32:
@@ -267,7 +267,7 @@ LABEL_32:
     goto LABEL_34;
   return (BattleLogicTask_array *)System_Collections_Generic_List_object___ToArray(
                                     v6,
-                                    (const MethodInfo_379A314 *)Method_System_Collections_Generic_List_BattleLogicTask__ToArray__);
+                                    (const MethodInfo_37A4B7C *)Method_System_Collections_Generic_List_BattleLogicTask__ToArray__);
 }
 
 
@@ -277,7 +277,7 @@ bool BattleLogicReaction__CheckExecutableDead(
         const MethodInfo *method)
 {
   if ( !svtData )
-    sub_1C32E7C(this);
+    sub_1C372B4(this);
   return !BattleServantData__isAlive(svtData, 0, 0)
       && !BattleServantData__isOverKill(svtData, 0)
       && !svtData->fields.isDeadAnime;
@@ -293,12 +293,12 @@ bool BattleLogicReaction__CheckExecutableResurrection(
   BattleBuffData_BuffData_o *gutsBuff; // [xsp+8h] [xbp-8h] BYREF
 
   gutsBuff = 0;
-  return BattleLogicReaction__CheckExecutableResurrection_46800520(this, svtData, &gutsBuff, 1, v3);
+  return BattleLogicReaction__CheckExecutableResurrection_47023400(this, svtData, &gutsBuff, 1, v3);
 }
 
 
 // local variable allocation has failed, the output may be wrong!
-bool BattleLogicReaction__CheckExecutableResurrection_46800520(
+bool BattleLogicReaction__CheckExecutableResurrection_47023400(
         BattleLogicReaction_o *this,
         BattleServantData_o *svtData,
         BattleBuffData_BuffData_o **gutsBuff,
@@ -310,7 +310,7 @@ bool BattleLogicReaction__CheckExecutableResurrection_46800520(
   bool result; // w0
 
   *gutsBuff = 0;
-  sub_1C32BC4((CGThumbnailListItem_o *)gutsBuff, 0, (int32_t)gutsBuff, (const MethodInfo *)isCheckOnly);
+  sub_1C36FFC((CGThumbnailListItem_o *)gutsBuff, 0, (int32_t)gutsBuff, (const MethodInfo *)isCheckOnly);
   if ( !svtData )
     goto LABEL_12;
   isAlive = BattleServantData__isAlive(svtData, 0, 0);
@@ -319,7 +319,7 @@ bool BattleLogicReaction__CheckExecutableResurrection_46800520(
     return result;
   if ( !BattleServantData__isOverKill(svtData, 0) )
   {
-    if ( BattleServantData__isGuts_46178860(svtData, gutsBuff, 0) )
+    if ( BattleServantData__isGuts_46291792(svtData, gutsBuff, 0) )
       return 1;
     if ( isCheckOnly )
       goto LABEL_9;
@@ -332,7 +332,7 @@ LABEL_9:
       return 0;
     }
 LABEL_12:
-    sub_1C32E7C(logic);
+    sub_1C372B4(logic);
   }
   return 0;
 }
@@ -351,15 +351,15 @@ BattleLogicTask_array *BattleLogicReaction__CheckPlayerActionStart(
   ServantReactTaskCreator_o *v9; // x0
   const MethodInfo *v10; // x2
 
-  if ( (byte_4C3AAED & 1) == 0 )
+  if ( (byte_4C461E4 & 1) == 0 )
   {
-    sub_1C32C20(&AliveServantReactTaskCreator_TypeInfo);
-    byte_4C3AAED = 1;
+    sub_1C37058(&AliveServantReactTaskCreator_TypeInfo);
+    byte_4C461E4 = 1;
   }
-  v5 = (ServantReactTaskCreator_o *)sub_1C32E6C(AliveServantReactTaskCreator_TypeInfo);
+  v5 = (ServantReactTaskCreator_o *)sub_1C372A4(AliveServantReactTaskCreator_TypeInfo);
   ServantReactTaskCreator___ctor(v5, 12, v6);
   if ( !v5 )
-    sub_1C32E7C(v7);
+    sub_1C372B4(v7);
   v9 = ServantReactTaskCreator__OrderNPE(v5, v8);
   return ServantReactTaskCreator__CreateTasks(v9, this->fields.logic, v10);
 }
@@ -376,15 +376,15 @@ BattleLogicTask_array *BattleLogicReaction__CheckPlayerSkillAfterAction(
   ServantReactTaskCreator_o *v7; // x0
   const MethodInfo *v8; // x2
 
-  if ( (byte_4C3AAEE & 1) == 0 )
+  if ( (byte_4C461E5 & 1) == 0 )
   {
-    sub_1C32C20(&AliveServantReactTaskCreator_TypeInfo);
-    byte_4C3AAEE = 1;
+    sub_1C37058(&AliveServantReactTaskCreator_TypeInfo);
+    byte_4C461E5 = 1;
   }
-  v3 = (ServantReactTaskCreator_o *)sub_1C32E6C(AliveServantReactTaskCreator_TypeInfo);
+  v3 = (ServantReactTaskCreator_o *)sub_1C372A4(AliveServantReactTaskCreator_TypeInfo);
   ServantReactTaskCreator___ctor(v3, 19, v4);
   if ( !v3 )
-    sub_1C32E7C(v5);
+    sub_1C372B4(v5);
   v7 = ServantReactTaskCreator__OrderNPE(v3, v6);
   return ServantReactTaskCreator__CreateTasks(v7, this->fields.logic, v8);
 }
@@ -401,15 +401,15 @@ BattleLogicTask_array *BattleLogicReaction__CheckServantAiTurnStart(
   ServantReactTaskCreator_o *v7; // x0
   const MethodInfo *v8; // x2
 
-  if ( (byte_4C3AAF3 & 1) == 0 )
+  if ( (byte_4C461EA & 1) == 0 )
   {
-    sub_1C32C20(&AliveServantExistReactTaskCreator_TypeInfo);
-    byte_4C3AAF3 = 1;
+    sub_1C37058(&AliveServantExistReactTaskCreator_TypeInfo);
+    byte_4C461EA = 1;
   }
-  v3 = (ServantReactTaskCreator_o *)sub_1C32E6C(AliveServantExistReactTaskCreator_TypeInfo);
+  v3 = (ServantReactTaskCreator_o *)sub_1C372A4(AliveServantExistReactTaskCreator_TypeInfo);
   ServantReactTaskCreator___ctor(v3, 16, v4);
   if ( !v3 )
-    sub_1C32E7C(v5);
+    sub_1C372B4(v5);
   v7 = ServantReactTaskCreator__OrderNPE(v3, v6);
   return ServantReactTaskCreator__CreateTasks(v7, this->fields.logic, v8);
 }
@@ -427,15 +427,15 @@ BattleLogicTask_array *BattleLogicReaction__CheckServantAiWave(
   ServantReactTaskCreator_o *v9; // x0
   const MethodInfo *v10; // x2
 
-  if ( (byte_4C3AAF2 & 1) == 0 )
+  if ( (byte_4C461E9 & 1) == 0 )
   {
-    sub_1C32C20(&AliveServantExistReactTaskCreator_TypeInfo);
-    byte_4C3AAF2 = 1;
+    sub_1C37058(&AliveServantExistReactTaskCreator_TypeInfo);
+    byte_4C461E9 = 1;
   }
-  v5 = (ServantReactTaskCreator_o *)sub_1C32E6C(AliveServantExistReactTaskCreator_TypeInfo);
+  v5 = (ServantReactTaskCreator_o *)sub_1C372A4(AliveServantExistReactTaskCreator_TypeInfo);
   ServantReactTaskCreator___ctor(v5, procState, v6);
   if ( !v5 )
-    sub_1C32E7C(v7);
+    sub_1C372B4(v7);
   v9 = ServantReactTaskCreator__OrderNPE(v5, v8);
   return ServantReactTaskCreator__CreateTasks(v9, this->fields.logic, v10);
 }
@@ -452,12 +452,12 @@ void BattleLogicReaction__CleanupAfterServantDeath(
 
   data = this->fields.data;
   if ( !data )
-    goto LABEL_14;
+    goto LABEL_15;
   data = (BattleData_o *)BattleData__IsWarBoard(data, 0);
   if ( ((unsigned __int8)data & 1) == 0 )
     goto LABEL_5;
   if ( !svtData )
-    goto LABEL_14;
+    goto LABEL_15;
   data = (BattleData_o *)BattleServantData__getDefeatPoint(svtData, 0);
   if ( (int)data <= 0 )
   {
@@ -487,18 +487,22 @@ LABEL_5:
         }
       }
     }
-LABEL_14:
-    sub_1C32E7C(data);
+LABEL_15:
+    sub_1C372B4(data);
   }
 LABEL_11:
   data = this->fields.data;
   if ( !data )
-    goto LABEL_14;
-  BattleData__SubBuffFromPT_45600156(data, svtData, 0);
+    goto LABEL_15;
+  BattleData__SubBuffFromPT_45724592(data, svtData, 0);
   data = (BattleData_o *)this->fields.logic;
   if ( !data )
-    goto LABEL_14;
+    goto LABEL_15;
   BattleLogic__updateFieldBuff((BattleLogic_o *)data, 0);
+  data = (BattleData_o *)this->fields.logic;
+  if ( !data )
+    goto LABEL_15;
+  BattleLogic__UpdateCondBuffValueFlag((BattleLogic_o *)data, 0);
 }
 
 
@@ -508,7 +512,7 @@ BattleLogicTask_array *BattleLogicReaction__CreateAiTask(
         const MethodInfo *method)
 {
   if ( !task )
-    sub_1C32E7C(this);
+    sub_1C372B4(this);
   return (BattleLogicTask_array *)((__int64 (__fastcall *)(BattleLogicTask_o *, struct BattleLogic_o *, const MethodInfo *))task->klass->vtable._5_MakeActionTask.methodPtr)(
                                     task,
                                     this->fields.logic,
@@ -527,15 +531,15 @@ BattleLogicTask_array *BattleLogicReaction__CreateServantAiTaskArrayWhenEntryAny
   ServantReactTaskCreator_o *v7; // x0
   const MethodInfo *v8; // x2
 
-  if ( (byte_4C3AAF4 & 1) == 0 )
+  if ( (byte_4C461EB & 1) == 0 )
   {
-    sub_1C32C20(&AliveServantReactTaskCreator_TypeInfo);
-    byte_4C3AAF4 = 1;
+    sub_1C37058(&AliveServantReactTaskCreator_TypeInfo);
+    byte_4C461EB = 1;
   }
-  v3 = (ServantReactTaskCreator_o *)sub_1C32E6C(AliveServantReactTaskCreator_TypeInfo);
+  v3 = (ServantReactTaskCreator_o *)sub_1C372A4(AliveServantReactTaskCreator_TypeInfo);
   ServantReactTaskCreator___ctor(v3, 27, v4);
   if ( !v3 )
-    sub_1C32E7C(v5);
+    sub_1C372B4(v5);
   v7 = ServantReactTaskCreator__OrderNEP(v3, v6);
   return ServantReactTaskCreator__CreateTasks(v7, this->fields.logic, v8);
 }
@@ -577,22 +581,22 @@ BattleLogicTask_array *BattleLogicReaction__CreateTaskResurrection(
   const MethodInfo *v34; // [xsp+8h] [xbp-58h]
   BattleBuffData_BuffData_o *gutsBuff; // [xsp+18h] [xbp-48h] BYREF
 
-  if ( (byte_4C3AAE4 & 1) == 0 )
+  if ( (byte_4C461DB & 1) == 0 )
   {
-    sub_1C32C20(&BattleLogicTask_TypeInfo);
-    sub_1C32C20(&BattleSkillInfoData_TypeInfo);
-    sub_1C32C20(&int___TypeInfo);
-    sub_1C32C20(&Method_System_Collections_Generic_List_BattleLogicTask__AddRange__);
-    sub_1C32C20(&Method_System_Collections_Generic_List_BattleLogicTask__Add__);
-    sub_1C32C20(&Method_System_Collections_Generic_List_BattleLogicTask__ToArray__);
-    sub_1C32C20(&Method_System_Collections_Generic_List_BattleLogicTask___ctor__);
-    sub_1C32C20(&System_Collections_Generic_List_BattleLogicTask__TypeInfo);
-    byte_4C3AAE4 = 1;
+    sub_1C37058(&BattleLogicTask_TypeInfo);
+    sub_1C37058(&BattleSkillInfoData_TypeInfo);
+    sub_1C37058(&int___TypeInfo);
+    sub_1C37058(&Method_System_Collections_Generic_List_BattleLogicTask__AddRange__);
+    sub_1C37058(&Method_System_Collections_Generic_List_BattleLogicTask__Add__);
+    sub_1C37058(&Method_System_Collections_Generic_List_BattleLogicTask__ToArray__);
+    sub_1C37058(&Method_System_Collections_Generic_List_BattleLogicTask___ctor__);
+    sub_1C37058(&System_Collections_Generic_List_BattleLogicTask__TypeInfo);
+    byte_4C461DB = 1;
   }
-  v5 = (System_Collections_Generic_List_object__o *)sub_1C32E6C(System_Collections_Generic_List_BattleLogicTask__TypeInfo);
+  v5 = (System_Collections_Generic_List_object__o *)sub_1C372A4(System_Collections_Generic_List_BattleLogicTask__TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v5,
-    (const MethodInfo_3797F88 *)Method_System_Collections_Generic_List_BattleLogicTask___ctor__);
+    (const MethodInfo_37A27F0 *)Method_System_Collections_Generic_List_BattleLogicTask___ctor__);
   gutsBuff = 0;
   if ( !baseTask )
     goto LABEL_41;
@@ -613,7 +617,7 @@ BattleLogicTask_array *BattleLogicReaction__CreateTaskResurrection(
       goto LABEL_41;
   }
   ServantData = BattleData__getServantData((BattleData_o *)data, v8, 0);
-  data = BattleLogicReaction__CheckExecutableResurrection_46800520(this, ServantData, &gutsBuff, 0, v10);
+  data = BattleLogicReaction__CheckExecutableResurrection_47023400(this, ServantData, &gutsBuff, 0, v10);
   if ( !ServantData )
     goto LABEL_41;
   if ( (data & 1) != 0 )
@@ -624,8 +628,8 @@ BattleLogicTask_array *BattleLogicReaction__CreateTaskResurrection(
       System_Collections_Generic_List_object___AddRange(
         v5,
         (System_Collections_Generic_IEnumerable_T__o *)data,
-        (const MethodInfo_37989C8 *)Method_System_Collections_Generic_List_BattleLogicTask__AddRange__);
-      v12 = (BattleLogicTask_o *)sub_1C32E6C(BattleLogicTask_TypeInfo);
+        (const MethodInfo_37A3230 *)Method_System_Collections_Generic_List_BattleLogicTask__AddRange__);
+      v12 = (BattleLogicTask_o *)sub_1C372A4(BattleLogicTask_TypeInfo);
       BattleLogicTask___ctor(v12, v13);
       if ( v12 )
       {
@@ -642,14 +646,14 @@ BattleLogicTask_array *BattleLogicReaction__CreateTaskResurrection(
             System_Collections_Generic_List_object___AddWithResize(
               v5,
               (Il2CppObject *)v12,
-              *(const MethodInfo_37987BC **)(*(_QWORD *)(v18[4] + 192LL) + 112LL));
+              *(const MethodInfo_37A3024 **)(*(_QWORD *)(v18[4] + 192LL) + 112LL));
           }
           else
           {
             v20 = &items->obj.klass + size;
             v5->fields._size = size + 1;
             v20[4] = (Il2CppClass *)v12;
-            sub_1C32BC4((CGThumbnailListItem_o *)(v20 + 4), (int32_t)v12, v15, v16);
+            sub_1C36FFC((CGThumbnailListItem_o *)(v20 + 4), (int32_t)v12, v15, v16);
           }
           logic = this->fields.logic;
           if ( logic )
@@ -669,12 +673,12 @@ LABEL_39:
                 System_Collections_Generic_List_object___AddRange(
                   v5,
                   TaskGuts,
-                  (const MethodInfo_37989C8 *)Method_System_Collections_Generic_List_BattleLogicTask__AddRange__);
+                  (const MethodInfo_37A3230 *)Method_System_Collections_Generic_List_BattleLogicTask__AddRange__);
                 return (BattleLogicTask_array *)System_Collections_Generic_List_object___ToArray(
                                                   v5,
-                                                  (const MethodInfo_379A314 *)Method_System_Collections_Generic_List_BattleLogicTask__ToArray__);
+                                                  (const MethodInfo_37A4B7C *)Method_System_Collections_Generic_List_BattleLogicTask__ToArray__);
               }
-              v23 = (BattleSkillInfoData_o *)sub_1C32E6C(BattleSkillInfoData_TypeInfo);
+              v23 = (BattleSkillInfoData_o *)sub_1C372A4(BattleSkillInfoData_TypeInfo);
               BattleSkillInfoData___ctor(v23, 0);
               if ( v23 )
               {
@@ -714,7 +718,7 @@ LABEL_39:
                         else
                         {
                           v27 = RevengeTargetUniqueId;
-                          data = sub_1C32CC8(int___TypeInfo, 1);
+                          data = sub_1C37100(int___TypeInfo, 1);
                           if ( !data )
                             goto LABEL_41;
                           TargetIds = (System_Int32_array *)data;
@@ -724,7 +728,7 @@ LABEL_39:
                           *(_DWORD *)(data + 32) = v27;
                         }
                         logicskill = this->fields.logicskill;
-                        data = sub_1C32CC8(int___TypeInfo, 1);
+                        data = sub_1C37100(int___TypeInfo, 1);
                         if ( !data )
                           goto LABEL_41;
                         if ( *(_DWORD *)(data + 24) )
@@ -746,11 +750,11 @@ LABEL_39:
                           System_Collections_Generic_List_object___AddRange(
                             v5,
                             v31,
-                            (const MethodInfo_37989C8 *)Method_System_Collections_Generic_List_BattleLogicTask__AddRange__);
+                            (const MethodInfo_37A3230 *)Method_System_Collections_Generic_List_BattleLogicTask__AddRange__);
                           goto LABEL_39;
                         }
 LABEL_42:
-                        sub_1C32E84(data);
+                        sub_1C372BC(data);
                       }
                     }
                   }
@@ -762,14 +766,14 @@ LABEL_42:
       }
     }
 LABEL_41:
-    sub_1C32E7C(data);
+    sub_1C372B4(data);
   }
   ServantData->fields.status = 0;
   if ( !v5 )
     goto LABEL_41;
   return (BattleLogicTask_array *)System_Collections_Generic_List_object___ToArray(
                                     v5,
-                                    (const MethodInfo_379A314 *)Method_System_Collections_Generic_List_BattleLogicTask__ToArray__);
+                                    (const MethodInfo_37A4B7C *)Method_System_Collections_Generic_List_BattleLogicTask__ToArray__);
 }
 
 
@@ -779,7 +783,7 @@ BattleLogicTask_array *BattleLogicReaction__CreateTasks(
         const MethodInfo *method)
 {
   if ( !creator )
-    sub_1C32E7C(this);
+    sub_1C372B4(this);
   return ServantReactTaskCreator__CreateTasks(creator, this->fields.logic, method);
 }
 
@@ -792,30 +796,30 @@ System_String_o *BattleLogicReaction__GetDisappearDeadMotionName(
   System_String_o **v4; // x8
   bool IsDeadExplosion; // w0
 
-  if ( (byte_4C3AAE9 & 1) == 0 )
+  if ( (byte_4C461E0 & 1) == 0 )
   {
-    sub_1C32C20(&StringLiteral_8748/*"MOTION_DEAD"*/);
-    sub_1C32C20(&StringLiteral_8749/*"MOTION_DEAD_CRYSTAL"*/);
-    sub_1C32C20(&StringLiteral_8751/*"MOTION_DEAD_EXPLOSION"*/);
-    this = (BattleLogicReaction_o *)sub_1C32C20(&StringLiteral_8750/*"MOTION_DEAD_ENERGY"*/);
-    byte_4C3AAE9 = 1;
+    sub_1C37058(&StringLiteral_8749/*"MOTION_DEAD"*/);
+    sub_1C37058(&StringLiteral_8750/*"MOTION_DEAD_CRYSTAL"*/);
+    sub_1C37058(&StringLiteral_8752/*"MOTION_DEAD_EXPLOSION"*/);
+    this = (BattleLogicReaction_o *)sub_1C37058(&StringLiteral_8751/*"MOTION_DEAD_ENERGY"*/);
+    byte_4C461E0 = 1;
   }
   if ( !svtData )
-    sub_1C32E7C(this);
+    sub_1C372B4(this);
   if ( BattleServantData__IsDeadEnergy(svtData, 0) )
   {
-    v4 = (System_String_o **)&StringLiteral_8750/*"MOTION_DEAD_ENERGY"*/;
+    v4 = (System_String_o **)&StringLiteral_8751/*"MOTION_DEAD_ENERGY"*/;
   }
   else if ( BattleServantData__IsDeadCrystal(svtData, 0) )
   {
-    v4 = (System_String_o **)&StringLiteral_8749/*"MOTION_DEAD_CRYSTAL"*/;
+    v4 = (System_String_o **)&StringLiteral_8750/*"MOTION_DEAD_CRYSTAL"*/;
   }
   else
   {
     IsDeadExplosion = BattleServantData__IsDeadExplosion(svtData, 0);
-    v4 = (System_String_o **)&StringLiteral_8748/*"MOTION_DEAD"*/;
+    v4 = (System_String_o **)&StringLiteral_8749/*"MOTION_DEAD"*/;
     if ( IsDeadExplosion )
-      v4 = (System_String_o **)&StringLiteral_8751/*"MOTION_DEAD_EXPLOSION"*/;
+      v4 = (System_String_o **)&StringLiteral_8752/*"MOTION_DEAD_EXPLOSION"*/;
   }
   return *v4;
 }
@@ -832,44 +836,44 @@ void BattleLogicReaction__SetReactionFunction(
   BattleLogic_reactionFunction_o *v8; // x21
   BattleLogic_reactionFunction_o *v9; // x21
 
-  if ( (byte_4C3AAE2 & 1) == 0 )
+  if ( (byte_4C461D9 & 1) == 0 )
   {
-    sub_1C32C20(&Method_BattleLogicReaction_CreateAiTask__);
-    sub_1C32C20(&Method_BattleLogicReaction_CreateTaskResurrection__);
-    sub_1C32C20(&Method_System_Collections_Generic_Dictionary_BattleLogicTask_ACTIONTYPE__BattleLogic_reactionFunction__Add__);
-    sub_1C32C20(&BattleLogic_reactionFunction_TypeInfo);
-    byte_4C3AAE2 = 1;
+    sub_1C37058(&Method_BattleLogicReaction_CreateAiTask__);
+    sub_1C37058(&Method_BattleLogicReaction_CreateTaskResurrection__);
+    sub_1C37058(&Method_System_Collections_Generic_Dictionary_BattleLogicTask_ACTIONTYPE__BattleLogic_reactionFunction__Add__);
+    sub_1C37058(&BattleLogic_reactionFunction_TypeInfo);
+    byte_4C461D9 = 1;
   }
-  v5 = (BattleLogic_reactionFunction_o *)sub_1C32E6C(BattleLogic_reactionFunction_TypeInfo);
+  v5 = (BattleLogic_reactionFunction_o *)sub_1C372A4(BattleLogic_reactionFunction_TypeInfo);
   BattleLogic_reactionFunction___ctor(v5, (Il2CppObject *)this, Method_BattleLogicReaction_CreateTaskResurrection__, 0);
   if ( !list )
-    sub_1C32E7C(v6);
+    sub_1C372B4(v6);
   System_Collections_Generic_Dictionary_Int32Enum__object___Add(
     (System_Collections_Generic_Dictionary_TKey__TValue__o *)list,
     53,
     (Il2CppObject *)v5,
-    (const MethodInfo_3422DB8 *)Method_System_Collections_Generic_Dictionary_BattleLogicTask_ACTIONTYPE__BattleLogic_reactionFunction__Add__);
-  v7 = (BattleLogic_reactionFunction_o *)sub_1C32E6C(BattleLogic_reactionFunction_TypeInfo);
+    (const MethodInfo_342D620 *)Method_System_Collections_Generic_Dictionary_BattleLogicTask_ACTIONTYPE__BattleLogic_reactionFunction__Add__);
+  v7 = (BattleLogic_reactionFunction_o *)sub_1C372A4(BattleLogic_reactionFunction_TypeInfo);
   BattleLogic_reactionFunction___ctor(v7, (Il2CppObject *)this, Method_BattleLogicReaction_CreateAiTask__, 0);
   System_Collections_Generic_Dictionary_Int32Enum__object___Add(
     (System_Collections_Generic_Dictionary_TKey__TValue__o *)list,
     57,
     (Il2CppObject *)v7,
-    (const MethodInfo_3422DB8 *)Method_System_Collections_Generic_Dictionary_BattleLogicTask_ACTIONTYPE__BattleLogic_reactionFunction__Add__);
-  v8 = (BattleLogic_reactionFunction_o *)sub_1C32E6C(BattleLogic_reactionFunction_TypeInfo);
+    (const MethodInfo_342D620 *)Method_System_Collections_Generic_Dictionary_BattleLogicTask_ACTIONTYPE__BattleLogic_reactionFunction__Add__);
+  v8 = (BattleLogic_reactionFunction_o *)sub_1C372A4(BattleLogic_reactionFunction_TypeInfo);
   BattleLogic_reactionFunction___ctor(v8, (Il2CppObject *)this, Method_BattleLogicReaction_CreateAiTask__, 0);
   System_Collections_Generic_Dictionary_Int32Enum__object___Add(
     (System_Collections_Generic_Dictionary_TKey__TValue__o *)list,
     59,
     (Il2CppObject *)v8,
-    (const MethodInfo_3422DB8 *)Method_System_Collections_Generic_Dictionary_BattleLogicTask_ACTIONTYPE__BattleLogic_reactionFunction__Add__);
-  v9 = (BattleLogic_reactionFunction_o *)sub_1C32E6C(BattleLogic_reactionFunction_TypeInfo);
+    (const MethodInfo_342D620 *)Method_System_Collections_Generic_Dictionary_BattleLogicTask_ACTIONTYPE__BattleLogic_reactionFunction__Add__);
+  v9 = (BattleLogic_reactionFunction_o *)sub_1C372A4(BattleLogic_reactionFunction_TypeInfo);
   BattleLogic_reactionFunction___ctor(v9, (Il2CppObject *)this, Method_BattleLogicReaction_CreateAiTask__, 0);
   System_Collections_Generic_Dictionary_Int32Enum__object___Add(
     (System_Collections_Generic_Dictionary_TKey__TValue__o *)list,
     68,
     (Il2CppObject *)v9,
-    (const MethodInfo_3422DB8 *)Method_System_Collections_Generic_Dictionary_BattleLogicTask_ACTIONTYPE__BattleLogic_reactionFunction__Add__);
+    (const MethodInfo_342D620 *)Method_System_Collections_Generic_Dictionary_BattleLogicTask_ACTIONTYPE__BattleLogic_reactionFunction__Add__);
 }
 
 
@@ -894,30 +898,30 @@ BattleLogicTask_array *BattleLogicReaction__checkChangeApp(BattleLogicReaction_o
   System_Collections_Generic_List_Enumerator_object__o v20; // [xsp+8h] [xbp-78h] BYREF
   System_Collections_Generic_List_Enumerator_object__o v21; // [xsp+20h] [xbp-60h] BYREF
 
-  if ( (byte_4C3AAF9 & 1) == 0 )
+  if ( (byte_4C461F0 & 1) == 0 )
   {
-    sub_1C32C20(&Method_System_Collections_Generic_List_Enumerator_BattleServantData__Dispose__);
-    sub_1C32C20(&Method_System_Collections_Generic_List_Enumerator_BattleServantData__MoveNext__);
-    sub_1C32C20(&Method_System_Collections_Generic_List_Enumerator_BattleServantData__get_Current__);
-    sub_1C32C20(&Method_System_Collections_Generic_List_BattleServantData__AddRange__);
-    sub_1C32C20(&Method_System_Collections_Generic_List_BattleLogicTask__Add__);
-    sub_1C32C20(&Method_System_Collections_Generic_List_BattleServantData__GetEnumerator__);
-    sub_1C32C20(&Method_System_Collections_Generic_List_BattleLogicTask__ToArray__);
-    sub_1C32C20(&Method_System_Collections_Generic_List_BattleServantData___ctor__);
-    sub_1C32C20(&Method_System_Collections_Generic_List_BattleLogicTask___ctor__);
-    sub_1C32C20(&System_Collections_Generic_List_BattleLogicTask__TypeInfo);
-    sub_1C32C20(&System_Collections_Generic_List_BattleServantData__TypeInfo);
-    byte_4C3AAF9 = 1;
+    sub_1C37058(&Method_System_Collections_Generic_List_Enumerator_BattleServantData__Dispose__);
+    sub_1C37058(&Method_System_Collections_Generic_List_Enumerator_BattleServantData__MoveNext__);
+    sub_1C37058(&Method_System_Collections_Generic_List_Enumerator_BattleServantData__get_Current__);
+    sub_1C37058(&Method_System_Collections_Generic_List_BattleServantData__AddRange__);
+    sub_1C37058(&Method_System_Collections_Generic_List_BattleLogicTask__Add__);
+    sub_1C37058(&Method_System_Collections_Generic_List_BattleServantData__GetEnumerator__);
+    sub_1C37058(&Method_System_Collections_Generic_List_BattleLogicTask__ToArray__);
+    sub_1C37058(&Method_System_Collections_Generic_List_BattleServantData___ctor__);
+    sub_1C37058(&Method_System_Collections_Generic_List_BattleLogicTask___ctor__);
+    sub_1C37058(&System_Collections_Generic_List_BattleLogicTask__TypeInfo);
+    sub_1C37058(&System_Collections_Generic_List_BattleServantData__TypeInfo);
+    byte_4C461F0 = 1;
   }
   memset(&v21, 0, sizeof(v21));
-  v3 = (System_Collections_Generic_List_object__o *)sub_1C32E6C(System_Collections_Generic_List_BattleLogicTask__TypeInfo);
+  v3 = (System_Collections_Generic_List_object__o *)sub_1C372A4(System_Collections_Generic_List_BattleLogicTask__TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v3,
-    (const MethodInfo_3797F88 *)Method_System_Collections_Generic_List_BattleLogicTask___ctor__);
-  v4 = (System_Collections_Generic_List_object__o *)sub_1C32E6C(System_Collections_Generic_List_BattleServantData__TypeInfo);
+    (const MethodInfo_37A27F0 *)Method_System_Collections_Generic_List_BattleLogicTask___ctor__);
+  v4 = (System_Collections_Generic_List_object__o *)sub_1C372A4(System_Collections_Generic_List_BattleServantData__TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v4,
-    (const MethodInfo_3797F88 *)Method_System_Collections_Generic_List_BattleServantData___ctor__);
+    (const MethodInfo_37A27F0 *)Method_System_Collections_Generic_List_BattleServantData___ctor__);
   data = this->fields.data;
   if ( !data )
     goto LABEL_26;
@@ -929,7 +933,7 @@ BattleLogicTask_array *BattleLogicReaction__checkChangeApp(BattleLogicReaction_o
     System_Collections_Generic_List_object___AddRange(
       v4,
       (System_Collections_Generic_IEnumerable_T__o *)data,
-      (const MethodInfo_37989C8 *)Method_System_Collections_Generic_List_BattleServantData__AddRange__);
+      (const MethodInfo_37A3230 *)Method_System_Collections_Generic_List_BattleServantData__AddRange__);
     data = this->fields.data;
     if ( !data )
       goto LABEL_26;
@@ -945,7 +949,7 @@ BattleLogicTask_array *BattleLogicReaction__checkChangeApp(BattleLogicReaction_o
     System_Collections_Generic_List_object___AddRange(
       v4,
       (System_Collections_Generic_IEnumerable_T__o *)data,
-      (const MethodInfo_37989C8 *)Method_System_Collections_Generic_List_BattleServantData__AddRange__);
+      (const MethodInfo_37A3230 *)Method_System_Collections_Generic_List_BattleServantData__AddRange__);
     data = this->fields.data;
     if ( !data )
       goto LABEL_26;
@@ -957,22 +961,22 @@ BattleLogicTask_array *BattleLogicReaction__checkChangeApp(BattleLogicReaction_o
   System_Collections_Generic_List_object___AddRange(
     v4,
     FieldPlayerServantList,
-    (const MethodInfo_37989C8 *)Method_System_Collections_Generic_List_BattleServantData__AddRange__);
+    (const MethodInfo_37A3230 *)Method_System_Collections_Generic_List_BattleServantData__AddRange__);
   System_Collections_Generic_List_object___GetEnumerator(
     (System_Collections_Generic_List_Enumerator_T__o *)&v20,
     v4,
-    (const MethodInfo_37992B4 *)Method_System_Collections_Generic_List_BattleServantData__GetEnumerator__);
+    (const MethodInfo_37A3B1C *)Method_System_Collections_Generic_List_BattleServantData__GetEnumerator__);
   v21 = v20;
   while ( 1 )
   {
     v7 = System_Collections_Generic_List_Enumerator_object___MoveNext(
            &v21,
-           (const MethodInfo_3522FA8 *)Method_System_Collections_Generic_List_Enumerator_BattleServantData__MoveNext__);
+           (const MethodInfo_352D810 *)Method_System_Collections_Generic_List_Enumerator_BattleServantData__MoveNext__);
     if ( !v7 )
       break;
     current = v21.fields._current;
     if ( !v21.fields._current )
-      sub_1C32E7C(v7);
+      sub_1C372B4(v7);
     if ( !HIDWORD(v21.fields._current[31].klass) )
     {
       v9 = BattleServantData__isChangeAppearance((BattleServantData_o *)v21.fields._current, 0);
@@ -985,39 +989,39 @@ BattleLogicTask_array *BattleLogicReaction__checkChangeApp(BattleLogicReaction_o
                                 v10);
         v14 = v11;
         if ( !v3 )
-          sub_1C32E7C(v11);
+          sub_1C372B4(v11);
         items = v3->fields._items;
         v16 = Method_System_Collections_Generic_List_BattleLogicTask__Add__;
         ++v3->fields._version;
         if ( !items )
-          sub_1C32E7C(v11);
+          sub_1C372B4(v11);
         size = v3->fields._size;
         if ( (unsigned int)size >= LODWORD(items->max_length) )
         {
           System_Collections_Generic_List_object___AddWithResize(
             v3,
             v11,
-            *(const MethodInfo_37987BC **)(*(_QWORD *)(v16[4] + 192LL) + 112LL));
+            *(const MethodInfo_37A3024 **)(*(_QWORD *)(v16[4] + 192LL) + 112LL));
         }
         else
         {
           v18 = &items->obj.klass + size;
           v3->fields._size = size + 1;
           v18[4] = (Il2CppClass *)v14;
-          sub_1C32BC4((CGThumbnailListItem_o *)(v18 + 4), (int32_t)v14, v12, v13);
+          sub_1C36FFC((CGThumbnailListItem_o *)(v18 + 4), (int32_t)v14, v12, v13);
         }
       }
     }
   }
   System_Collections_Generic_List_Enumerator_object___Dispose(
     &v21,
-    (const MethodInfo_3522FA4 *)Method_System_Collections_Generic_List_Enumerator_BattleServantData__Dispose__);
+    (const MethodInfo_352D80C *)Method_System_Collections_Generic_List_Enumerator_BattleServantData__Dispose__);
   if ( !v3 )
 LABEL_26:
-    sub_1C32E7C(data);
+    sub_1C372B4(data);
   return (BattleLogicTask_array *)System_Collections_Generic_List_object___ToArray(
                                     v3,
-                                    (const MethodInfo_379A314 *)Method_System_Collections_Generic_List_BattleLogicTask__ToArray__);
+                                    (const MethodInfo_37A4B7C *)Method_System_Collections_Generic_List_BattleLogicTask__ToArray__);
 }
 
 
@@ -1065,32 +1069,32 @@ BattleLogicTask_array *BattleLogicReaction__checkDead(BattleLogicReaction_o *thi
   System_Collections_Generic_List_Enumerator_object__o v43; // [xsp+8h] [xbp-98h] BYREF
   System_Collections_Generic_List_Enumerator_object__o v44; // [xsp+20h] [xbp-80h] BYREF
 
-  if ( (byte_4C3AAE7 & 1) == 0 )
+  if ( (byte_4C461DE & 1) == 0 )
   {
-    sub_1C32C20(&BattleLogicTask_TypeInfo);
-    sub_1C32C20(&BeforeDeadServantAiTask_TypeInfo);
-    sub_1C32C20(&Method_System_Collections_Generic_List_Enumerator_BattleServantData__Dispose__);
-    sub_1C32C20(&Method_System_Collections_Generic_List_Enumerator_BattleServantData__MoveNext__);
-    sub_1C32C20(&Method_System_Collections_Generic_List_Enumerator_BattleServantData__get_Current__);
-    sub_1C32C20(&Method_System_Collections_Generic_List_BattleServantData__AddRange__);
-    sub_1C32C20(&Method_System_Collections_Generic_List_BattleLogicTask__Add__);
-    sub_1C32C20(&Method_System_Collections_Generic_List_BattleServantData__GetEnumerator__);
-    sub_1C32C20(&Method_System_Collections_Generic_List_BattleLogicTask__ToArray__);
-    sub_1C32C20(&Method_System_Collections_Generic_List_BattleServantData___ctor__);
-    sub_1C32C20(&Method_System_Collections_Generic_List_BattleLogicTask___ctor__);
-    sub_1C32C20(&System_Collections_Generic_List_BattleLogicTask__TypeInfo);
-    sub_1C32C20(&System_Collections_Generic_List_BattleServantData__TypeInfo);
-    byte_4C3AAE7 = 1;
+    sub_1C37058(&BattleLogicTask_TypeInfo);
+    sub_1C37058(&BeforeDeadServantAiTask_TypeInfo);
+    sub_1C37058(&Method_System_Collections_Generic_List_Enumerator_BattleServantData__Dispose__);
+    sub_1C37058(&Method_System_Collections_Generic_List_Enumerator_BattleServantData__MoveNext__);
+    sub_1C37058(&Method_System_Collections_Generic_List_Enumerator_BattleServantData__get_Current__);
+    sub_1C37058(&Method_System_Collections_Generic_List_BattleServantData__AddRange__);
+    sub_1C37058(&Method_System_Collections_Generic_List_BattleLogicTask__Add__);
+    sub_1C37058(&Method_System_Collections_Generic_List_BattleServantData__GetEnumerator__);
+    sub_1C37058(&Method_System_Collections_Generic_List_BattleLogicTask__ToArray__);
+    sub_1C37058(&Method_System_Collections_Generic_List_BattleServantData___ctor__);
+    sub_1C37058(&Method_System_Collections_Generic_List_BattleLogicTask___ctor__);
+    sub_1C37058(&System_Collections_Generic_List_BattleLogicTask__TypeInfo);
+    sub_1C37058(&System_Collections_Generic_List_BattleServantData__TypeInfo);
+    byte_4C461DE = 1;
   }
   memset(&v44, 0, sizeof(v44));
-  v3 = (System_Collections_Generic_List_object__o *)sub_1C32E6C(System_Collections_Generic_List_BattleLogicTask__TypeInfo);
+  v3 = (System_Collections_Generic_List_object__o *)sub_1C372A4(System_Collections_Generic_List_BattleLogicTask__TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v3,
-    (const MethodInfo_3797F88 *)Method_System_Collections_Generic_List_BattleLogicTask___ctor__);
-  v4 = (System_Collections_Generic_List_object__o *)sub_1C32E6C(System_Collections_Generic_List_BattleServantData__TypeInfo);
+    (const MethodInfo_37A27F0 *)Method_System_Collections_Generic_List_BattleLogicTask___ctor__);
+  v4 = (System_Collections_Generic_List_object__o *)sub_1C372A4(System_Collections_Generic_List_BattleServantData__TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v4,
-    (const MethodInfo_3797F88 *)Method_System_Collections_Generic_List_BattleServantData___ctor__);
+    (const MethodInfo_37A27F0 *)Method_System_Collections_Generic_List_BattleServantData___ctor__);
   data = this->fields.data;
   if ( !data )
     goto LABEL_43;
@@ -1102,7 +1106,7 @@ BattleLogicTask_array *BattleLogicReaction__checkDead(BattleLogicReaction_o *thi
     System_Collections_Generic_List_object___AddRange(
       v4,
       (System_Collections_Generic_IEnumerable_T__o *)data,
-      (const MethodInfo_37989C8 *)Method_System_Collections_Generic_List_BattleServantData__AddRange__);
+      (const MethodInfo_37A3230 *)Method_System_Collections_Generic_List_BattleServantData__AddRange__);
     data = this->fields.data;
     if ( !data )
       goto LABEL_43;
@@ -1118,7 +1122,7 @@ BattleLogicTask_array *BattleLogicReaction__checkDead(BattleLogicReaction_o *thi
     System_Collections_Generic_List_object___AddRange(
       v4,
       (System_Collections_Generic_IEnumerable_T__o *)data,
-      (const MethodInfo_37989C8 *)Method_System_Collections_Generic_List_BattleServantData__AddRange__);
+      (const MethodInfo_37A3230 *)Method_System_Collections_Generic_List_BattleServantData__AddRange__);
     data = this->fields.data;
     if ( !data )
       goto LABEL_43;
@@ -1130,22 +1134,22 @@ BattleLogicTask_array *BattleLogicReaction__checkDead(BattleLogicReaction_o *thi
   System_Collections_Generic_List_object___AddRange(
     v4,
     FieldPlayerServantList,
-    (const MethodInfo_37989C8 *)Method_System_Collections_Generic_List_BattleServantData__AddRange__);
+    (const MethodInfo_37A3230 *)Method_System_Collections_Generic_List_BattleServantData__AddRange__);
   System_Collections_Generic_List_object___GetEnumerator(
     (System_Collections_Generic_List_Enumerator_T__o *)&v43,
     v4,
-    (const MethodInfo_37992B4 *)Method_System_Collections_Generic_List_BattleServantData__GetEnumerator__);
+    (const MethodInfo_37A3B1C *)Method_System_Collections_Generic_List_BattleServantData__GetEnumerator__);
   v44 = v43;
   while ( 1 )
   {
     v7 = System_Collections_Generic_List_Enumerator_object___MoveNext(
            &v44,
-           (const MethodInfo_3522FA8 *)Method_System_Collections_Generic_List_Enumerator_BattleServantData__MoveNext__);
+           (const MethodInfo_352D810 *)Method_System_Collections_Generic_List_Enumerator_BattleServantData__MoveNext__);
     if ( !v7 )
       break;
     current = (BattleServantData_o *)v44.fields._current;
     if ( !v44.fields._current )
-      sub_1C32E7C(v7);
+      sub_1C372B4(v7);
     if ( !HIDWORD(v44.fields._current[31].klass)
       && BattleLogicReaction__CheckExecutableDead(
            (BattleLogicReaction_o *)v7,
@@ -1161,29 +1165,29 @@ BattleLogicTask_array *BattleLogicReaction__checkDead(BattleLogicReaction_o *thi
           & 1) != 0 )
       {
         logic = this->fields.logic;
-        v11 = (BattleLogicServantAiTask_o *)sub_1C32E6C(BeforeDeadServantAiTask_TypeInfo);
+        v11 = (BattleLogicServantAiTask_o *)sub_1C372A4(BeforeDeadServantAiTask_TypeInfo);
         BattleLogicServantAiTask___ctor(v11, 17, current, logic, v12);
         if ( !v3 )
-          sub_1C32E7C(v13);
+          sub_1C372B4(v13);
         items = v3->fields._items;
         v17 = Method_System_Collections_Generic_List_BattleLogicTask__Add__;
         ++v3->fields._version;
         if ( !items )
-          sub_1C32E7C(v13);
+          sub_1C372B4(v13);
         size = v3->fields._size;
         if ( (unsigned int)size >= LODWORD(items->max_length) )
         {
           System_Collections_Generic_List_object___AddWithResize(
             v3,
             (Il2CppObject *)v11,
-            *(const MethodInfo_37987BC **)(*(_QWORD *)(v17[4] + 192LL) + 112LL));
+            *(const MethodInfo_37A3024 **)(*(_QWORD *)(v17[4] + 192LL) + 112LL));
         }
         else
         {
           v19 = &items->obj.klass + size;
           v3->fields._size = size + 1;
           v19[4] = (Il2CppClass *)v11;
-          sub_1C32BC4((CGThumbnailListItem_o *)(v19 + 4), (int32_t)v11, v14, v15);
+          sub_1C36FFC((CGThumbnailListItem_o *)(v19 + 4), (int32_t)v11, v14, v15);
         }
       }
       isAppearanceId = BattleServantData__isAppearanceId(current, 0);
@@ -1196,33 +1200,33 @@ BattleLogicTask_array *BattleLogicReaction__checkDead(BattleLogicReaction_o *thi
                                 v21);
         v25 = v22;
         if ( !v3 )
-          sub_1C32E7C(v22);
+          sub_1C372B4(v22);
         v26 = v3->fields._items;
         v27 = Method_System_Collections_Generic_List_BattleLogicTask__Add__;
         ++v3->fields._version;
         if ( !v26 )
-          sub_1C32E7C(v22);
+          sub_1C372B4(v22);
         v28 = v3->fields._size;
         if ( (unsigned int)v28 >= LODWORD(v26->max_length) )
         {
           System_Collections_Generic_List_object___AddWithResize(
             v3,
             v22,
-            *(const MethodInfo_37987BC **)(*(_QWORD *)(v27[4] + 192LL) + 112LL));
+            *(const MethodInfo_37A3024 **)(*(_QWORD *)(v27[4] + 192LL) + 112LL));
         }
         else
         {
           v29 = &v26->obj.klass + v28;
           v3->fields._size = v28 + 1;
           v29[4] = (Il2CppClass *)v25;
-          sub_1C32BC4((CGThumbnailListItem_o *)(v29 + 4), (int32_t)v25, v23, v24);
+          sub_1C36FFC((CGThumbnailListItem_o *)(v29 + 4), (int32_t)v25, v23, v24);
         }
       }
       current->fields.status = 2;
-      v30 = (BattleLogicTask_o *)sub_1C32E6C(BattleLogicTask_TypeInfo);
+      v30 = (BattleLogicTask_o *)sub_1C372A4(BattleLogicTask_TypeInfo);
       BattleLogicTask___ctor(v30, v31);
       if ( !v30 )
-        sub_1C32E7C(v32);
+        sub_1C372B4(v32);
       v30->fields.actiontype = 14;
       uniqueId = current->fields.uniqueId;
       if ( current->fields.isEnemy )
@@ -1230,38 +1234,38 @@ BattleLogicTask_array *BattleLogicReaction__checkDead(BattleLogicReaction_o *thi
       else
         BattleLogicTask__setActor(v30, 2, uniqueId, v33);
       if ( !v3 )
-        sub_1C32E7C(v35);
+        sub_1C372B4(v35);
       v38 = v3->fields._items;
       v39 = Method_System_Collections_Generic_List_BattleLogicTask__Add__;
       ++v3->fields._version;
       if ( !v38 )
-        sub_1C32E7C(v35);
+        sub_1C372B4(v35);
       v40 = v3->fields._size;
       if ( (unsigned int)v40 >= LODWORD(v38->max_length) )
       {
         System_Collections_Generic_List_object___AddWithResize(
           v3,
           (Il2CppObject *)v30,
-          *(const MethodInfo_37987BC **)(*(_QWORD *)(v39[4] + 192LL) + 112LL));
+          *(const MethodInfo_37A3024 **)(*(_QWORD *)(v39[4] + 192LL) + 112LL));
       }
       else
       {
         v41 = &v38->obj.klass + v40;
         v3->fields._size = v40 + 1;
         v41[4] = (Il2CppClass *)v30;
-        sub_1C32BC4((CGThumbnailListItem_o *)(v41 + 4), (int32_t)v30, v36, v37);
+        sub_1C36FFC((CGThumbnailListItem_o *)(v41 + 4), (int32_t)v30, v36, v37);
       }
     }
   }
   System_Collections_Generic_List_Enumerator_object___Dispose(
     &v44,
-    (const MethodInfo_3522FA4 *)Method_System_Collections_Generic_List_Enumerator_BattleServantData__Dispose__);
+    (const MethodInfo_352D80C *)Method_System_Collections_Generic_List_Enumerator_BattleServantData__Dispose__);
   if ( !v3 )
 LABEL_43:
-    sub_1C32E7C(data);
+    sub_1C372B4(data);
   return (BattleLogicTask_array *)System_Collections_Generic_List_object___ToArray(
                                     v3,
-                                    (const MethodInfo_379A314 *)Method_System_Collections_Generic_List_BattleLogicTask__ToArray__);
+                                    (const MethodInfo_37A4B7C *)Method_System_Collections_Generic_List_BattleLogicTask__ToArray__);
 }
 
 
@@ -1278,15 +1282,15 @@ BattleLogicTask_array *BattleLogicReaction__checkEnemyEndTurn(
   ServantReactTaskCreator_o *v9; // x0
   const MethodInfo *v10; // x2
 
-  if ( (byte_4C3AAF1 & 1) == 0 )
+  if ( (byte_4C461E8 & 1) == 0 )
   {
-    sub_1C32C20(&AliveServantReactTaskCreator_TypeInfo);
-    byte_4C3AAF1 = 1;
+    sub_1C37058(&AliveServantReactTaskCreator_TypeInfo);
+    byte_4C461E8 = 1;
   }
-  v5 = (ServantReactTaskCreator_o *)sub_1C32E6C(AliveServantReactTaskCreator_TypeInfo);
+  v5 = (ServantReactTaskCreator_o *)sub_1C372A4(AliveServantReactTaskCreator_TypeInfo);
   ServantReactTaskCreator___ctor(v5, 5, v6);
   if ( !v5 )
-    sub_1C32E7C(v7);
+    sub_1C372B4(v7);
   v9 = ServantReactTaskCreator__OrderNEP(v5, v8);
   return ServantReactTaskCreator__CreateTasks(v9, this->fields.logic, v10);
 }
@@ -1307,31 +1311,31 @@ BattleLogicTask_array *BattleLogicReaction__checkEnemyStartTurn(
   const MethodInfo *v11; // x2
   System_Collections_Generic_IEnumerable_T__o *Tasks; // x0
 
-  if ( (byte_4C3AAF0 & 1) == 0 )
+  if ( (byte_4C461E7 & 1) == 0 )
   {
-    sub_1C32C20(&AliveServantReactTaskCreator_TypeInfo);
-    sub_1C32C20(&Method_System_Collections_Generic_List_BattleLogicTask__AddRange__);
-    sub_1C32C20(&Method_System_Collections_Generic_List_BattleLogicTask__ToArray__);
-    sub_1C32C20(&Method_System_Collections_Generic_List_BattleLogicTask___ctor__);
-    sub_1C32C20(&System_Collections_Generic_List_BattleLogicTask__TypeInfo);
-    byte_4C3AAF0 = 1;
+    sub_1C37058(&AliveServantReactTaskCreator_TypeInfo);
+    sub_1C37058(&Method_System_Collections_Generic_List_BattleLogicTask__AddRange__);
+    sub_1C37058(&Method_System_Collections_Generic_List_BattleLogicTask__ToArray__);
+    sub_1C37058(&Method_System_Collections_Generic_List_BattleLogicTask___ctor__);
+    sub_1C37058(&System_Collections_Generic_List_BattleLogicTask__TypeInfo);
+    byte_4C461E7 = 1;
   }
-  v5 = (System_Collections_Generic_List_object__o *)sub_1C32E6C(System_Collections_Generic_List_BattleLogicTask__TypeInfo);
+  v5 = (System_Collections_Generic_List_object__o *)sub_1C372A4(System_Collections_Generic_List_BattleLogicTask__TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v5,
-    (const MethodInfo_3797F88 *)Method_System_Collections_Generic_List_BattleLogicTask___ctor__);
+    (const MethodInfo_37A27F0 *)Method_System_Collections_Generic_List_BattleLogicTask___ctor__);
   logic = this->fields.logic;
   if ( !logic
     || (logic = (BattleLogic_o *)BattleLogic__GetTurnStartTaskArray(logic, 0, 0), !v5)
     || (System_Collections_Generic_List_object___AddRange(
           v5,
           (System_Collections_Generic_IEnumerable_T__o *)logic,
-          (const MethodInfo_37989C8 *)Method_System_Collections_Generic_List_BattleLogicTask__AddRange__),
-        v7 = (ServantReactTaskCreator_o *)sub_1C32E6C(AliveServantReactTaskCreator_TypeInfo),
+          (const MethodInfo_37A3230 *)Method_System_Collections_Generic_List_BattleLogicTask__AddRange__),
+        v7 = (ServantReactTaskCreator_o *)sub_1C372A4(AliveServantReactTaskCreator_TypeInfo),
         ServantReactTaskCreator___ctor(v7, 4, v8),
         !v7) )
   {
-    sub_1C32E7C(logic);
+    sub_1C372B4(logic);
   }
   v10 = ServantReactTaskCreator__OrderNEP(v7, v9);
   Tasks = (System_Collections_Generic_IEnumerable_T__o *)ServantReactTaskCreator__CreateTasks(
@@ -1341,10 +1345,10 @@ BattleLogicTask_array *BattleLogicReaction__checkEnemyStartTurn(
   System_Collections_Generic_List_object___AddRange(
     v5,
     Tasks,
-    (const MethodInfo_37989C8 *)Method_System_Collections_Generic_List_BattleLogicTask__AddRange__);
+    (const MethodInfo_37A3230 *)Method_System_Collections_Generic_List_BattleLogicTask__AddRange__);
   return (BattleLogicTask_array *)System_Collections_Generic_List_object___ToArray(
                                     v5,
-                                    (const MethodInfo_379A314 *)Method_System_Collections_Generic_List_BattleLogicTask__ToArray__);
+                                    (const MethodInfo_37A4B7C *)Method_System_Collections_Generic_List_BattleLogicTask__ToArray__);
 }
 
 
@@ -1361,15 +1365,15 @@ BattleLogicTask_array *BattleLogicReaction__checkPlayerActionEnd(
   ServantReactTaskCreator_o *v9; // x0
   const MethodInfo *v10; // x2
 
-  if ( (byte_4C3AAEF & 1) == 0 )
+  if ( (byte_4C461E6 & 1) == 0 )
   {
-    sub_1C32C20(&AliveServantReactTaskCreator_TypeInfo);
-    byte_4C3AAEF = 1;
+    sub_1C37058(&AliveServantReactTaskCreator_TypeInfo);
+    byte_4C461E6 = 1;
   }
-  v5 = (ServantReactTaskCreator_o *)sub_1C32E6C(AliveServantReactTaskCreator_TypeInfo);
+  v5 = (ServantReactTaskCreator_o *)sub_1C372A4(AliveServantReactTaskCreator_TypeInfo);
   ServantReactTaskCreator___ctor(v5, 3, v6);
   if ( !v5 )
-    sub_1C32E7C(v7);
+    sub_1C372B4(v7);
   v9 = ServantReactTaskCreator__OrderNPE(v5, v8);
   return ServantReactTaskCreator__CreateTasks(v9, this->fields.logic, v10);
 }
@@ -1403,20 +1407,20 @@ BattleLogicTask_array *BattleLogicReaction__checkResurrection(BattleLogicReactio
   Il2CppClass **v26; // x0
   BattleBuffData_BuffData_o *gutsBuff; // [xsp+8h] [xbp-68h] BYREF
 
-  if ( (byte_4C3AAE3 & 1) == 0 )
+  if ( (byte_4C461DA & 1) == 0 )
   {
-    sub_1C32C20(&BattleLogicServantTask_TypeInfo);
-    sub_1C32C20(&BeforeResurrectionServantAiTask_TypeInfo);
-    sub_1C32C20(&Method_System_Collections_Generic_List_BattleLogicTask__Add__);
-    sub_1C32C20(&Method_System_Collections_Generic_List_BattleLogicTask__ToArray__);
-    sub_1C32C20(&Method_System_Collections_Generic_List_BattleLogicTask___ctor__);
-    sub_1C32C20(&System_Collections_Generic_List_BattleLogicTask__TypeInfo);
-    byte_4C3AAE3 = 1;
+    sub_1C37058(&BattleLogicServantTask_TypeInfo);
+    sub_1C37058(&BeforeResurrectionServantAiTask_TypeInfo);
+    sub_1C37058(&Method_System_Collections_Generic_List_BattleLogicTask__Add__);
+    sub_1C37058(&Method_System_Collections_Generic_List_BattleLogicTask__ToArray__);
+    sub_1C37058(&Method_System_Collections_Generic_List_BattleLogicTask___ctor__);
+    sub_1C37058(&System_Collections_Generic_List_BattleLogicTask__TypeInfo);
+    byte_4C461DA = 1;
   }
-  v3 = (System_Collections_Generic_List_object__o *)sub_1C32E6C(System_Collections_Generic_List_BattleLogicTask__TypeInfo);
+  v3 = (System_Collections_Generic_List_object__o *)sub_1C372A4(System_Collections_Generic_List_BattleLogicTask__TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v3,
-    (const MethodInfo_3797F88 *)Method_System_Collections_Generic_List_BattleLogicTask___ctor__);
+    (const MethodInfo_37A27F0 *)Method_System_Collections_Generic_List_BattleLogicTask___ctor__);
   data = this->fields.data;
   if ( !data )
     goto LABEL_25;
@@ -1431,14 +1435,14 @@ BattleLogicTask_array *BattleLogicReaction__checkResurrection(BattleLogicReactio
     while ( 1 )
     {
       if ( v8 >= v6 )
-        sub_1C32E84(data);
+        sub_1C372BC(data);
       v9 = (BattleServantData_o *)*((_QWORD *)v7 + (int)v8 + 4);
       if ( !v9 )
         break;
       if ( !v9->fields.status )
       {
         gutsBuff = 0;
-        data = (void *)BattleLogicReaction__CheckExecutableResurrection_46800520(this, v9, &gutsBuff, 1, v5);
+        data = (void *)BattleLogicReaction__CheckExecutableResurrection_47023400(this, v9, &gutsBuff, 1, v5);
         if ( ((unsigned __int8)data & 1) != 0 )
         {
           if ( (((__int64 (__fastcall *)(BattleServantData_o *, struct BattleLogic_o *, __int64, _QWORD, const MethodInfo *))v9->klass->vtable._19_ExistAiThinking.methodPtr)(
@@ -1450,7 +1454,7 @@ BattleLogicTask_array *BattleLogicReaction__checkResurrection(BattleLogicReactio
               & 1) != 0 )
           {
             logic = this->fields.logic;
-            v11 = (BattleLogicServantAiTask_o *)sub_1C32E6C(BeforeResurrectionServantAiTask_TypeInfo);
+            v11 = (BattleLogicServantAiTask_o *)sub_1C372A4(BeforeResurrectionServantAiTask_TypeInfo);
             BattleLogicServantAiTask___ctor(v11, 18, v9, logic, v12);
             if ( !v3 )
               break;
@@ -1465,18 +1469,18 @@ BattleLogicTask_array *BattleLogicReaction__checkResurrection(BattleLogicReactio
               System_Collections_Generic_List_object___AddWithResize(
                 v3,
                 (Il2CppObject *)v11,
-                *(const MethodInfo_37987BC **)(*(_QWORD *)(v16[4] + 192LL) + 112LL));
+                *(const MethodInfo_37A3024 **)(*(_QWORD *)(v16[4] + 192LL) + 112LL));
             }
             else
             {
               v18 = &items->obj.klass + size;
               v3->fields._size = size + 1;
               v18[4] = (Il2CppClass *)v11;
-              sub_1C32BC4((CGThumbnailListItem_o *)(v18 + 4), (int32_t)v11, v13, v14);
+              sub_1C36FFC((CGThumbnailListItem_o *)(v18 + 4), (int32_t)v11, v13, v14);
             }
           }
           v9->fields.status = 1;
-          v19 = (BattleLogicServantTask_o *)sub_1C32E6C(BattleLogicServantTask_TypeInfo);
+          v19 = (BattleLogicServantTask_o *)sub_1C372A4(BattleLogicServantTask_TypeInfo);
           BattleLogicServantTask___ctor(v19, 53, v9, v20);
           if ( !v3 )
             break;
@@ -1491,14 +1495,14 @@ BattleLogicTask_array *BattleLogicReaction__checkResurrection(BattleLogicReactio
             System_Collections_Generic_List_object___AddWithResize(
               v3,
               (Il2CppObject *)v19,
-              *(const MethodInfo_37987BC **)(*(_QWORD *)(v24[4] + 192LL) + 112LL));
+              *(const MethodInfo_37A3024 **)(*(_QWORD *)(v24[4] + 192LL) + 112LL));
           }
           else
           {
             v26 = &v23->obj.klass + v25;
             v3->fields._size = v25 + 1;
             v26[4] = (Il2CppClass *)v19;
-            sub_1C32BC4((CGThumbnailListItem_o *)(v26 + 4), (int32_t)v19, v21, v22);
+            sub_1C36FFC((CGThumbnailListItem_o *)(v26 + 4), (int32_t)v19, v21, v22);
           }
         }
       }
@@ -1507,14 +1511,14 @@ BattleLogicTask_array *BattleLogicReaction__checkResurrection(BattleLogicReactio
         goto LABEL_23;
     }
 LABEL_25:
-    sub_1C32E7C(data);
+    sub_1C372B4(data);
   }
 LABEL_23:
   if ( !v3 )
     goto LABEL_25;
   return (BattleLogicTask_array *)System_Collections_Generic_List_object___ToArray(
                                     v3,
-                                    (const MethodInfo_379A314 *)Method_System_Collections_Generic_List_BattleLogicTask__ToArray__);
+                                    (const MethodInfo_37A4B7C *)Method_System_Collections_Generic_List_BattleLogicTask__ToArray__);
 }
 
 
@@ -1541,31 +1545,31 @@ BattleLogicTask_array *BattleLogicReaction__checkWithdraw(BattleLogicReaction_o 
   System_Collections_Generic_List_Enumerator_object__o v22; // [xsp+8h] [xbp-98h] BYREF
   System_Collections_Generic_List_Enumerator_object__o v23; // [xsp+20h] [xbp-80h] BYREF
 
-  if ( (byte_4C3AAF5 & 1) == 0 )
+  if ( (byte_4C461EC & 1) == 0 )
   {
-    sub_1C32C20(&BattleLogicTask_TypeInfo);
-    sub_1C32C20(&Method_System_Collections_Generic_List_Enumerator_BattleServantData__Dispose__);
-    sub_1C32C20(&Method_System_Collections_Generic_List_Enumerator_BattleServantData__MoveNext__);
-    sub_1C32C20(&Method_System_Collections_Generic_List_Enumerator_BattleServantData__get_Current__);
-    sub_1C32C20(&Method_System_Collections_Generic_List_BattleServantData__AddRange__);
-    sub_1C32C20(&Method_System_Collections_Generic_List_BattleLogicTask__Add__);
-    sub_1C32C20(&Method_System_Collections_Generic_List_BattleServantData__GetEnumerator__);
-    sub_1C32C20(&Method_System_Collections_Generic_List_BattleLogicTask__ToArray__);
-    sub_1C32C20(&Method_System_Collections_Generic_List_BattleServantData___ctor__);
-    sub_1C32C20(&Method_System_Collections_Generic_List_BattleLogicTask___ctor__);
-    sub_1C32C20(&System_Collections_Generic_List_BattleLogicTask__TypeInfo);
-    sub_1C32C20(&System_Collections_Generic_List_BattleServantData__TypeInfo);
-    byte_4C3AAF5 = 1;
+    sub_1C37058(&BattleLogicTask_TypeInfo);
+    sub_1C37058(&Method_System_Collections_Generic_List_Enumerator_BattleServantData__Dispose__);
+    sub_1C37058(&Method_System_Collections_Generic_List_Enumerator_BattleServantData__MoveNext__);
+    sub_1C37058(&Method_System_Collections_Generic_List_Enumerator_BattleServantData__get_Current__);
+    sub_1C37058(&Method_System_Collections_Generic_List_BattleServantData__AddRange__);
+    sub_1C37058(&Method_System_Collections_Generic_List_BattleLogicTask__Add__);
+    sub_1C37058(&Method_System_Collections_Generic_List_BattleServantData__GetEnumerator__);
+    sub_1C37058(&Method_System_Collections_Generic_List_BattleLogicTask__ToArray__);
+    sub_1C37058(&Method_System_Collections_Generic_List_BattleServantData___ctor__);
+    sub_1C37058(&Method_System_Collections_Generic_List_BattleLogicTask___ctor__);
+    sub_1C37058(&System_Collections_Generic_List_BattleLogicTask__TypeInfo);
+    sub_1C37058(&System_Collections_Generic_List_BattleServantData__TypeInfo);
+    byte_4C461EC = 1;
   }
   memset(&v23, 0, sizeof(v23));
-  v3 = (System_Collections_Generic_List_object__o *)sub_1C32E6C(System_Collections_Generic_List_BattleLogicTask__TypeInfo);
+  v3 = (System_Collections_Generic_List_object__o *)sub_1C372A4(System_Collections_Generic_List_BattleLogicTask__TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v3,
-    (const MethodInfo_3797F88 *)Method_System_Collections_Generic_List_BattleLogicTask___ctor__);
-  v4 = (System_Collections_Generic_List_object__o *)sub_1C32E6C(System_Collections_Generic_List_BattleServantData__TypeInfo);
+    (const MethodInfo_37A27F0 *)Method_System_Collections_Generic_List_BattleLogicTask___ctor__);
+  v4 = (System_Collections_Generic_List_object__o *)sub_1C372A4(System_Collections_Generic_List_BattleServantData__TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v4,
-    (const MethodInfo_3797F88 *)Method_System_Collections_Generic_List_BattleServantData___ctor__);
+    (const MethodInfo_37A27F0 *)Method_System_Collections_Generic_List_BattleServantData___ctor__);
   data = this->fields.data;
   if ( !data )
     goto LABEL_31;
@@ -1577,7 +1581,7 @@ BattleLogicTask_array *BattleLogicReaction__checkWithdraw(BattleLogicReaction_o 
     System_Collections_Generic_List_object___AddRange(
       v4,
       (System_Collections_Generic_IEnumerable_T__o *)data,
-      (const MethodInfo_37989C8 *)Method_System_Collections_Generic_List_BattleServantData__AddRange__);
+      (const MethodInfo_37A3230 *)Method_System_Collections_Generic_List_BattleServantData__AddRange__);
     data = this->fields.data;
     if ( !data )
       goto LABEL_31;
@@ -1593,7 +1597,7 @@ BattleLogicTask_array *BattleLogicReaction__checkWithdraw(BattleLogicReaction_o 
     System_Collections_Generic_List_object___AddRange(
       v4,
       (System_Collections_Generic_IEnumerable_T__o *)data,
-      (const MethodInfo_37989C8 *)Method_System_Collections_Generic_List_BattleServantData__AddRange__);
+      (const MethodInfo_37A3230 *)Method_System_Collections_Generic_List_BattleServantData__AddRange__);
     data = this->fields.data;
     if ( !data )
       goto LABEL_31;
@@ -1605,29 +1609,29 @@ BattleLogicTask_array *BattleLogicReaction__checkWithdraw(BattleLogicReaction_o 
   System_Collections_Generic_List_object___AddRange(
     v4,
     FieldPlayerServantList,
-    (const MethodInfo_37989C8 *)Method_System_Collections_Generic_List_BattleServantData__AddRange__);
+    (const MethodInfo_37A3230 *)Method_System_Collections_Generic_List_BattleServantData__AddRange__);
   System_Collections_Generic_List_object___GetEnumerator(
     (System_Collections_Generic_List_Enumerator_T__o *)&v22,
     v4,
-    (const MethodInfo_37992B4 *)Method_System_Collections_Generic_List_BattleServantData__GetEnumerator__);
+    (const MethodInfo_37A3B1C *)Method_System_Collections_Generic_List_BattleServantData__GetEnumerator__);
   v23 = v22;
   while ( 1 )
   {
     v7 = System_Collections_Generic_List_Enumerator_object___MoveNext(
            &v23,
-           (const MethodInfo_3522FA8 *)Method_System_Collections_Generic_List_Enumerator_BattleServantData__MoveNext__);
+           (const MethodInfo_352D810 *)Method_System_Collections_Generic_List_Enumerator_BattleServantData__MoveNext__);
     if ( !v7 )
       break;
     current = v23.fields._current;
     if ( !v23.fields._current )
-      sub_1C32E7C(v7);
+      sub_1C372B4(v7);
     if ( !HIDWORD(v23.fields._current[31].klass) && BYTE1(v23.fields._current[53].monitor) )
     {
       HIDWORD(v23.fields._current[31].klass) = 3;
-      v9 = (BattleLogicTask_o *)sub_1C32E6C(BattleLogicTask_TypeInfo);
+      v9 = (BattleLogicTask_o *)sub_1C372A4(BattleLogicTask_TypeInfo);
       BattleLogicTask___ctor(v9, v10);
       if ( !v9 )
-        sub_1C32E7C(v11);
+        sub_1C372B4(v11);
       v9->fields.actiontype = 38;
       monitor = (int32_t)current[1].monitor;
       if ( BYTE3(current[31].monitor) )
@@ -1635,38 +1639,38 @@ BattleLogicTask_array *BattleLogicReaction__checkWithdraw(BattleLogicReaction_o 
       else
         BattleLogicTask__setActor(v9, 2, monitor, v12);
       if ( !v3 )
-        sub_1C32E7C(v14);
+        sub_1C372B4(v14);
       items = v3->fields._items;
       v18 = Method_System_Collections_Generic_List_BattleLogicTask__Add__;
       ++v3->fields._version;
       if ( !items )
-        sub_1C32E7C(v14);
+        sub_1C372B4(v14);
       size = v3->fields._size;
       if ( (unsigned int)size >= LODWORD(items->max_length) )
       {
         System_Collections_Generic_List_object___AddWithResize(
           v3,
           (Il2CppObject *)v9,
-          *(const MethodInfo_37987BC **)(*(_QWORD *)(v18[4] + 192LL) + 112LL));
+          *(const MethodInfo_37A3024 **)(*(_QWORD *)(v18[4] + 192LL) + 112LL));
       }
       else
       {
         v20 = &items->obj.klass + size;
         v3->fields._size = size + 1;
         v20[4] = (Il2CppClass *)v9;
-        sub_1C32BC4((CGThumbnailListItem_o *)(v20 + 4), (int32_t)v9, v15, v16);
+        sub_1C36FFC((CGThumbnailListItem_o *)(v20 + 4), (int32_t)v9, v15, v16);
       }
     }
   }
   System_Collections_Generic_List_Enumerator_object___Dispose(
     &v23,
-    (const MethodInfo_3522FA4 *)Method_System_Collections_Generic_List_Enumerator_BattleServantData__Dispose__);
+    (const MethodInfo_352D80C *)Method_System_Collections_Generic_List_Enumerator_BattleServantData__Dispose__);
   if ( !v3 )
 LABEL_31:
-    sub_1C32E7C(data);
+    sub_1C372B4(data);
   return (BattleLogicTask_array *)System_Collections_Generic_List_object___ToArray(
                                     v3,
-                                    (const MethodInfo_379A314 *)Method_System_Collections_Generic_List_BattleLogicTask__ToArray__);
+                                    (const MethodInfo_37A4B7C *)Method_System_Collections_Generic_List_BattleLogicTask__ToArray__);
 }
 
 
@@ -1685,21 +1689,21 @@ BattleActionData_o *BattleLogicReaction__createChangeApp(
   int32_t v11; // w1
 
   v4 = this;
-  if ( (byte_4C3AAFB & 1) == 0 )
+  if ( (byte_4C461F2 & 1) == 0 )
   {
-    sub_1C32C20(&BattleActionData_TypeInfo);
-    this = (BattleLogicReaction_o *)sub_1C32C20(&StringLiteral_8741/*"MOTION_APP"*/);
-    byte_4C3AAFB = 1;
+    sub_1C37058(&BattleActionData_TypeInfo);
+    this = (BattleLogicReaction_o *)sub_1C37058(&StringLiteral_8742/*"MOTION_APP"*/);
+    byte_4C461F2 = 1;
   }
   if ( !task )
 LABEL_14:
-    sub_1C32E7C(this);
+    sub_1C372B4(this);
   actorIdlist = task->fields.actorIdlist;
   this = (BattleLogicReaction_o *)v4->fields.data;
   if ( actorIdlist )
   {
     if ( !LODWORD(actorIdlist->max_length) )
-      sub_1C32E84(this);
+      sub_1C372BC(this);
     v6 = actorIdlist->m_Items[0];
     if ( !this )
       goto LABEL_14;
@@ -1716,14 +1720,14 @@ LABEL_14:
   v7 = this;
   if ( HIDWORD(this[6].fields.logicfieldai) == 4 )
     HIDWORD(this[6].fields.logicfieldai) = 0;
-  v8 = sub_1C32E6C(BattleActionData_TypeInfo);
+  v8 = sub_1C372A4(BattleActionData_TypeInfo);
   BattleActionData___ctor((BattleActionData_o *)v8, 0);
   if ( !v8 )
     goto LABEL_14;
   *(_DWORD *)(v8 + 32) = v7->fields.logic;
-  v11 = StringLiteral_8741/*"MOTION_APP"*/;
-  *(_QWORD *)(v8 + 72) = StringLiteral_8741/*"MOTION_APP"*/;
-  sub_1C32BC4((CGThumbnailListItem_o *)(v8 + 72), v11, v9, v10);
+  v11 = StringLiteral_8742/*"MOTION_APP"*/;
+  *(_QWORD *)(v8 + 72) = StringLiteral_8742/*"MOTION_APP"*/;
+  sub_1C36FFC((CGThumbnailListItem_o *)(v8 + 72), v11, v9, v10);
   return (BattleActionData_o *)v8;
 }
 
@@ -1770,15 +1774,15 @@ BattleActionData_o *BattleLogicReaction__createDeadMotion(
   bool isFirstAdd; // [xsp+1Ch] [xbp-64h] BYREF
 
   v4 = this;
-  if ( (byte_4C3AAE8 & 1) == 0 )
+  if ( (byte_4C461DF & 1) == 0 )
   {
-    sub_1C32C20(&BattleActionData_TypeInfo);
-    sub_1C32C20(&int___TypeInfo);
-    sub_1C32C20(&StringLiteral_8773/*"MOTION_STAND_DEAD"*/);
-    sub_1C32C20(&StringLiteral_8753/*"MOTION_EFFECT_DEAD"*/);
-    sub_1C32C20(&StringLiteral_8776/*"MOTION_WAIT_DEAD"*/);
-    this = (BattleLogicReaction_o *)sub_1C32C20(&StringLiteral_8762/*"MOTION_NO_DEAD"*/);
-    byte_4C3AAE8 = 1;
+    sub_1C37058(&BattleActionData_TypeInfo);
+    sub_1C37058(&int___TypeInfo);
+    sub_1C37058(&StringLiteral_8774/*"MOTION_STAND_DEAD"*/);
+    sub_1C37058(&StringLiteral_8754/*"MOTION_EFFECT_DEAD"*/);
+    sub_1C37058(&StringLiteral_8777/*"MOTION_WAIT_DEAD"*/);
+    this = (BattleLogicReaction_o *)sub_1C37058(&StringLiteral_8763/*"MOTION_NO_DEAD"*/);
+    byte_4C461DF = 1;
   }
   isFirstAdd = 0;
   if ( !task )
@@ -1814,7 +1818,7 @@ BattleActionData_o *BattleLogicReaction__createDeadMotion(
     BattleLogicReaction__CleanupAfterServantDeath(v4, v7, v8);
     return 0;
   }
-  v10 = sub_1C32E6C(BattleActionData_TypeInfo);
+  v10 = sub_1C372A4(BattleActionData_TypeInfo);
   BattleActionData___ctor((BattleActionData_o *)v10, 0);
   this = (BattleLogicReaction_o *)v4->fields.perf;
   if ( !this )
@@ -1834,17 +1838,17 @@ BattleActionData_o *BattleLogicReaction__createDeadMotion(
     goto LABEL_19;
   if ( BattleServantData__isDeadStand(v7, 0) )
   {
-    v14 = &StringLiteral_8773/*"MOTION_STAND_DEAD"*/;
+    v14 = &StringLiteral_8774/*"MOTION_STAND_DEAD"*/;
     goto LABEL_26;
   }
   if ( BattleServantData__isDeadEffect(v7, 0) )
   {
-    v14 = &StringLiteral_8753/*"MOTION_EFFECT_DEAD"*/;
+    v14 = &StringLiteral_8754/*"MOTION_EFFECT_DEAD"*/;
     goto LABEL_26;
   }
   if ( BattleServantData__isDeadWait(v7, 0) )
   {
-    v14 = &StringLiteral_8776/*"MOTION_WAIT_DEAD"*/;
+    v14 = &StringLiteral_8777/*"MOTION_WAIT_DEAD"*/;
     goto LABEL_26;
   }
   this = (BattleLogicReaction_o *)v4->fields.data;
@@ -1857,7 +1861,7 @@ BattleActionData_o *BattleLogicReaction__createDeadMotion(
     if ( (int)IsWarBoard >= 1 )
     {
 LABEL_19:
-      v14 = &StringLiteral_8762/*"MOTION_NO_DEAD"*/;
+      v14 = &StringLiteral_8763/*"MOTION_NO_DEAD"*/;
 LABEL_26:
       DisappearDeadMotionName = (System_String_o *)*v14;
       goto LABEL_27;
@@ -1866,7 +1870,7 @@ LABEL_26:
   DisappearDeadMotionName = BattleLogicReaction__GetDisappearDeadMotionName(IsWarBoard, v7, v12);
 LABEL_27:
   *(_QWORD *)(v10 + 72) = DisappearDeadMotionName;
-  sub_1C32BC4((CGThumbnailListItem_o *)(v10 + 72), (int32_t)DisappearDeadMotionName, (int32_t)v12, v13);
+  sub_1C36FFC((CGThumbnailListItem_o *)(v10 + 72), (int32_t)DisappearDeadMotionName, (int32_t)v12, v13);
   data = v4->fields.data;
   if ( !data )
     goto LABEL_75;
@@ -1921,14 +1925,14 @@ LABEL_27:
         FunctionSkillInfoData = BattleServantData__CreateFunctionSkillInfoData(v22, v23->m_Items[v25], 0);
         logicskill = v4->fields.logicskill;
         v28 = FunctionSkillInfoData;
-        this = (BattleLogicReaction_o *)sub_1C32CC8(int___TypeInfo, 1);
+        this = (BattleLogicReaction_o *)sub_1C37100(int___TypeInfo, 1);
         if ( !this )
           goto LABEL_75;
         v29 = this;
         if ( !LODWORD(this->fields.logic) )
           goto LABEL_76;
         LODWORD(this->fields.perf) = v20;
-        this = (BattleLogicReaction_o *)sub_1C32CC8(int___TypeInfo, 1);
+        this = (BattleLogicReaction_o *)sub_1C37100(int___TypeInfo, 1);
         if ( !this )
           goto LABEL_75;
         if ( !LODWORD(this->fields.logic) )
@@ -1983,14 +1987,14 @@ LABEL_64:
           this = (BattleLogicReaction_o *)v4->fields.perf;
           if ( !this )
             goto LABEL_75;
-          BattlePerformance__addActionData_44964940((BattlePerformance_o *)this, v34, 0);
+          BattlePerformance__addActionData_45067044((BattlePerformance_o *)this, v34, 0);
         }
         LODWORD(logic) = v30->fields.logic;
         if ( (__int64)++v33 >= (int)logic )
           goto LABEL_64;
       }
 LABEL_76:
-      sub_1C32E84(this);
+      sub_1C372BC(this);
     }
   }
 LABEL_65:
@@ -2000,7 +2004,7 @@ LABEL_65:
         (this = (BattleLogicReaction_o *)v22->fields.buffData) == 0) )
   {
 LABEL_75:
-    sub_1C32E7C(this);
+    sub_1C372B4(this);
   }
   BattleBuffData__usedProgressing((BattleBuffData_o *)this, 0);
 LABEL_68:
@@ -2032,24 +2036,24 @@ BattleActionData_o *BattleLogicReaction__createResurrection(
   BattleBuffData_BuffData_o *buff; // [xsp+18h] [xbp-28h] BYREF
 
   v4 = this;
-  if ( (byte_4C3AAE5 & 1) == 0 )
+  if ( (byte_4C461DC & 1) == 0 )
   {
-    sub_1C32C20(&Method_DataManager_GetMasterData_BuffMaster___);
-    sub_1C32C20(&Method_DataMasterBase_BuffMaster__BuffEntity__int__GetEntity__);
-    this = (BattleLogicReaction_o *)sub_1C32C20(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-    byte_4C3AAE5 = 1;
+    sub_1C37058(&Method_DataManager_GetMasterData_BuffMaster___);
+    sub_1C37058(&Method_DataMasterBase_BuffMaster__BuffEntity__int__GetEntity__);
+    this = (BattleLogicReaction_o *)sub_1C37058(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    byte_4C461DC = 1;
   }
   buff = 0;
   motionName = 0;
   if ( !task )
 LABEL_15:
-    sub_1C32E7C(this);
+    sub_1C372B4(this);
   actorIdlist = task->fields.actorIdlist;
   this = (BattleLogicReaction_o *)v4->fields.data;
   if ( actorIdlist )
   {
     if ( !LODWORD(actorIdlist->max_length) )
-      sub_1C32E84(this);
+      sub_1C372BC(this);
     v6 = actorIdlist->m_Items[0];
     if ( !this )
       goto LABEL_15;
@@ -2064,13 +2068,13 @@ LABEL_15:
   if ( !this )
     goto LABEL_15;
   v7 = (BattleServantData_o *)this;
-  BattleServantData__isGuts_46178860((BattleServantData_o *)this, &buff, 0);
-  this = (BattleLogicReaction_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39E2904 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  BattleServantData__isGuts_46291792((BattleServantData_o *)this, &buff, 0);
+  this = (BattleLogicReaction_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39ED16C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !this )
     goto LABEL_15;
   this = (BattleLogicReaction_o *)DataManager__GetMasterData_object_(
                                     (DataManager_o *)this,
-                                    (const MethodInfo_30DD3F0 *)Method_DataManager_GetMasterData_BuffMaster___);
+                                    (const MethodInfo_30E7C58 *)Method_DataManager_GetMasterData_BuffMaster___);
   if ( !buff )
     goto LABEL_15;
   if ( !this )
@@ -2078,7 +2082,7 @@ LABEL_15:
   Entity = DataMasterBase_object__object__int___GetEntity(
              (DataMasterBase_TMaster__TEntity__PKType__o *)this,
              buff->fields.buffId,
-             (const MethodInfo_3396838 *)Method_DataMasterBase_BuffMaster__BuffEntity__int__GetEntity__);
+             (const MethodInfo_33A10A0 *)Method_DataMasterBase_BuffMaster__BuffEntity__int__GetEntity__);
   motionName = 0;
   v9 = (BuffEntity_o *)Entity;
   this = (BattleLogicReaction_o *)BattleServantData__useGuts(v7, v7->fields.maxhp, &motionName, 0);
@@ -2130,14 +2134,14 @@ BattleActionData_o *BattleLogicReaction__createResurrectionCommon(
   int32_t v38; // w1
   int32_t digit; // [xsp+Ch] [xbp-54h] BYREF
 
-  if ( (byte_4C3AAE6 & 1) == 0 )
+  if ( (byte_4C461DD & 1) == 0 )
   {
-    sub_1C32C20(&Method_System_Array_Empty_int___);
-    sub_1C32C20(&BattleActionData_TypeInfo);
-    sub_1C32C20(&BattleActionData_BuffData_TypeInfo);
-    sub_1C32C20(&StringLiteral_1/*""*/);
-    this = (BattleLogicReaction_o *)sub_1C32C20(&StringLiteral_8767/*"MOTION_RESURRECTION"*/);
-    byte_4C3AAE6 = 1;
+    sub_1C37058(&Method_System_Array_Empty_int___);
+    sub_1C37058(&BattleActionData_TypeInfo);
+    sub_1C37058(&BattleActionData_BuffData_TypeInfo);
+    sub_1C37058(&StringLiteral_1/*""*/);
+    this = (BattleLogicReaction_o *)sub_1C37058(&StringLiteral_8768/*"MOTION_RESURRECTION"*/);
+    byte_4C461DD = 1;
   }
   digit = 0;
   if ( !svtData )
@@ -2154,7 +2158,7 @@ BattleActionData_o *BattleLogicReaction__createResurrectionCommon(
     svtData,
     0,
     svtData->klass->vtable._12_set_reducedhp.method);
-  v12 = sub_1C32E6C(BattleActionData_TypeInfo);
+  v12 = sub_1C372A4(BattleActionData_TypeInfo);
   BattleActionData___ctor((BattleActionData_o *)v12, 0);
   if ( !v12 )
     goto LABEL_26;
@@ -2167,51 +2171,51 @@ BattleActionData_o *BattleLogicReaction__createResurrectionCommon(
     v16 = BattleActionData_TypeInfo;
   }
   *(_DWORD *)(v12 + 60) = v16->static_fields->TYPE_RESURRECTION;
-  v17 = StringLiteral_8767/*"MOTION_RESURRECTION"*/;
-  *(_QWORD *)(v12 + 72) = StringLiteral_8767/*"MOTION_RESURRECTION"*/;
-  sub_1C32BC4((CGThumbnailListItem_o *)(v12 + 72), v17, v13, v14);
+  v17 = StringLiteral_8768/*"MOTION_RESURRECTION"*/;
+  *(_QWORD *)(v12 + 72) = StringLiteral_8768/*"MOTION_RESURRECTION"*/;
+  sub_1C36FFC((CGThumbnailListItem_o *)(v12 + 72), v17, v13, v14);
   *(_BYTE *)(v12 + 249) = v15;
-  v18 = sub_1C32E6C(BattleActionData_BuffData_TypeInfo);
+  v18 = sub_1C372A4(BattleActionData_BuffData_TypeInfo);
   BattleActionData_BuffData___ctor((BattleActionData_BuffData_o *)v18, 0);
   if ( !v18 )
     goto LABEL_26;
   uniqueId = svtData->fields.uniqueId;
   *(_DWORD *)(v18 + 16) = 0;
-  *(_QWORD *)(v18 + 40) = uniqueId;
+  *(_QWORD *)(v18 + 44) = uniqueId;
   if ( !buffEntity )
     goto LABEL_26;
   GutsText = BuffEntity__getGutsText(buffEntity, 0);
   *(_QWORD *)(v18 + 56) = GutsText;
-  sub_1C32BC4((CGThumbnailListItem_o *)(v18 + 56), (int32_t)GutsText, v21, v22);
+  sub_1C36FFC((CGThumbnailListItem_o *)(v18 + 56), (int32_t)GutsText, v21, v22);
   *(_DWORD *)(v18 + 64) = BuffEntity__getGutsIcon(buffEntity, 0);
   *(_DWORD *)(v18 + 68) = BuffEntity__getgutsTextColor(buffEntity, 0);
-  *(_DWORD *)(v18 + 28) = 2;
+  *(_DWORD *)(v18 + 32) = 2;
   v26 = Method_System_Array_Empty_int___;
   v27 = *((_QWORD *)Method_System_Array_Empty_int___ + 7);
   if ( !v27 )
   {
-    sub_1C83390(Method_System_Array_Empty_int___);
+    sub_1C877C8(Method_System_Array_Empty_int___);
     v27 = v26[7];
   }
   v28 = *(_QWORD *)(v27 + 16);
   if ( (*(_BYTE *)(v28 + 309) & 1) == 0 )
-    v28 = sub_1C83334(inited);
+    v28 = sub_1C8776C(inited);
   if ( !*(_DWORD *)(v28 + 224) )
     inited = j_il2cpp_runtime_class_init_0(v28);
   v29 = *(_QWORD *)(v26[7] + 16LL);
   if ( (*(_BYTE *)(v29 + 309) & 1) == 0 )
-    v29 = sub_1C83334(inited);
+    v29 = sub_1C8776C(inited);
   v30 = *(__int64 **)(v29 + 184);
   v31 = *v30;
   *(_QWORD *)(v18 + 72) = *v30;
-  sub_1C32BC4((CGThumbnailListItem_o *)(v18 + 72), v31, v23, v24);
+  sub_1C36FFC((CGThumbnailListItem_o *)(v18 + 72), v31, v23, v24);
   if ( !System_String__IsNullOrEmpty(overrideName, 0) )
   {
     *(_QWORD *)(v12 + 72) = overrideName;
-    sub_1C32BC4((CGThumbnailListItem_o *)(v12 + 72), (int32_t)overrideName, v32, v33);
+    sub_1C36FFC((CGThumbnailListItem_o *)(v12 + 72), (int32_t)overrideName, v32, v33);
     v34 = StringLiteral_1/*""*/;
     *(_QWORD *)(v18 + 56) = StringLiteral_1/*""*/;
-    sub_1C32BC4((CGThumbnailListItem_o *)(v18 + 56), v34, v35, v36);
+    sub_1C36FFC((CGThumbnailListItem_o *)(v18 + 56), v34, v35, v36);
   }
   digit = 1000;
   v37 = BattleServantData__getUpDownGutsHp(svtData, &digit, 0) * (__int64)val;
@@ -2229,11 +2233,11 @@ BattleActionData_o *BattleLogicReaction__createResurrectionCommon(
       goto LABEL_25;
     }
 LABEL_26:
-    sub_1C32E7C(this);
+    sub_1C372B4(this);
   }
 LABEL_25:
   svtData->fields.isGutsSleepRelease = 1;
-  BattleActionData__setBuffData((BattleActionData_o *)v12, (BattleActionData_BuffData_o *)v18, 0, 0);
+  BattleActionData__setBuffData((BattleActionData_o *)v12, (BattleActionData_BuffData_o *)v18, 0, 0, 0);
   svtData->fields.status = 0;
   return (BattleActionData_o *)v12;
 }
@@ -2282,26 +2286,26 @@ BattleLogicTask_array *BattleLogicReaction__createTaskDead(
   System_Collections_Generic_IEnumerable_T__o *DeadActionTask; // x0
   const MethodInfo *v42; // [xsp+8h] [xbp-68h]
 
-  if ( (byte_4C3AAEB & 1) == 0 )
+  if ( (byte_4C461E2 & 1) == 0 )
   {
-    sub_1C32C20(&BattleLogicTask_TypeInfo);
-    sub_1C32C20(&BattleSkillInfoData_TypeInfo);
-    sub_1C32C20(&Method_DataManager_GetMasterData_BuffMaster___);
-    sub_1C32C20(&Method_DataMasterBase_BuffMaster__BuffEntity__int__GetEntity__);
-    sub_1C32C20(&DeadServantAiTask_TypeInfo);
-    sub_1C32C20(&int___TypeInfo);
-    sub_1C32C20(&Method_System_Collections_Generic_List_BattleLogicTask__AddRange__);
-    sub_1C32C20(&Method_System_Collections_Generic_List_BattleLogicTask__Add__);
-    sub_1C32C20(&Method_System_Collections_Generic_List_BattleLogicTask__ToArray__);
-    sub_1C32C20(&Method_System_Collections_Generic_List_BattleLogicTask___ctor__);
-    sub_1C32C20(&System_Collections_Generic_List_BattleLogicTask__TypeInfo);
-    sub_1C32C20(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-    byte_4C3AAEB = 1;
+    sub_1C37058(&BattleLogicTask_TypeInfo);
+    sub_1C37058(&BattleSkillInfoData_TypeInfo);
+    sub_1C37058(&Method_DataManager_GetMasterData_BuffMaster___);
+    sub_1C37058(&Method_DataMasterBase_BuffMaster__BuffEntity__int__GetEntity__);
+    sub_1C37058(&DeadServantAiTask_TypeInfo);
+    sub_1C37058(&int___TypeInfo);
+    sub_1C37058(&Method_System_Collections_Generic_List_BattleLogicTask__AddRange__);
+    sub_1C37058(&Method_System_Collections_Generic_List_BattleLogicTask__Add__);
+    sub_1C37058(&Method_System_Collections_Generic_List_BattleLogicTask__ToArray__);
+    sub_1C37058(&Method_System_Collections_Generic_List_BattleLogicTask___ctor__);
+    sub_1C37058(&System_Collections_Generic_List_BattleLogicTask__TypeInfo);
+    sub_1C37058(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    byte_4C461E2 = 1;
   }
-  v5 = (System_Collections_Generic_List_object__o *)sub_1C32E6C(System_Collections_Generic_List_BattleLogicTask__TypeInfo);
+  v5 = (System_Collections_Generic_List_object__o *)sub_1C372A4(System_Collections_Generic_List_BattleLogicTask__TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v5,
-    (const MethodInfo_3797F88 *)Method_System_Collections_Generic_List_BattleLogicTask___ctor__);
+    (const MethodInfo_37A27F0 *)Method_System_Collections_Generic_List_BattleLogicTask___ctor__);
   data = (__int64)this->fields.data;
   if ( !data )
     goto LABEL_45;
@@ -2312,12 +2316,12 @@ BattleLogicTask_array *BattleLogicReaction__createTaskDead(
     if ( ServantData )
     {
       DeadBufflist = BattleServantData__getDeadBufflist(ServantData, this->fields.data, 0, 0, 0);
-      data = (__int64)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39E2904 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+      data = (__int64)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39ED16C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
       if ( data )
       {
         data = (__int64)DataManager__GetMasterData_object_(
                           (DataManager_o *)data,
-                          (const MethodInfo_30DD3F0 *)Method_DataManager_GetMasterData_BuffMaster___);
+                          (const MethodInfo_30E7C58 *)Method_DataManager_GetMasterData_BuffMaster___);
         if ( DeadBufflist )
         {
           max_length = DeadBufflist->max_length;
@@ -2335,8 +2339,8 @@ BattleLogicTask_array *BattleLogicReaction__createTaskDead(
               DataMasterBase_object__object__int___GetEntity(
                 v11,
                 v13->fields.buffId,
-                (const MethodInfo_3396838 *)Method_DataMasterBase_BuffMaster__BuffEntity__int__GetEntity__);
-              v14 = (BattleSkillInfoData_o *)sub_1C32E6C(BattleSkillInfoData_TypeInfo);
+                (const MethodInfo_33A10A0 *)Method_DataMasterBase_BuffMaster__BuffEntity__int__GetEntity__);
+              v14 = (BattleSkillInfoData_o *)sub_1C372A4(BattleSkillInfoData_TypeInfo);
               BattleSkillInfoData___ctor(v14, 0);
               if ( !v14 )
                 goto LABEL_45;
@@ -2372,7 +2376,7 @@ BattleLogicTask_array *BattleLogicReaction__createTaskDead(
               else
               {
                 v18 = v17;
-                data = sub_1C32CC8(int___TypeInfo, 1);
+                data = sub_1C37100(int___TypeInfo, 1);
                 if ( !data )
                   goto LABEL_45;
                 TargetIds = (System_Int32_array *)data;
@@ -2382,7 +2386,7 @@ BattleLogicTask_array *BattleLogicReaction__createTaskDead(
                 *(_DWORD *)(data + 32) = v18;
               }
               logicskill = this->fields.logicskill;
-              data = sub_1C32CC8(int___TypeInfo, 1);
+              data = sub_1C37100(int___TypeInfo, 1);
               if ( !data )
                 goto LABEL_45;
               if ( !*(_DWORD *)(data + 24) )
@@ -2406,19 +2410,19 @@ BattleLogicTask_array *BattleLogicReaction__createTaskDead(
               System_Collections_Generic_List_object___AddRange(
                 v5,
                 (System_Collections_Generic_IEnumerable_T__o *)data,
-                (const MethodInfo_37989C8 *)Method_System_Collections_Generic_List_BattleLogicTask__AddRange__);
+                (const MethodInfo_37A3230 *)Method_System_Collections_Generic_List_BattleLogicTask__AddRange__);
               max_length = DeadBufflist->max_length;
               if ( (int)++v12 >= max_length )
                 goto LABEL_28;
             }
-            sub_1C32E84(data);
+            sub_1C372BC(data);
           }
 LABEL_28:
           data = (__int64)ServantData->fields.buffData;
           if ( data )
           {
             BattleBuffData__usedProgressing((BattleBuffData_o *)data, 0);
-            v22 = (BattleLogicTask_o *)sub_1C32E6C(BattleLogicTask_TypeInfo);
+            v22 = (BattleLogicTask_o *)sub_1C372A4(BattleLogicTask_TypeInfo);
             BattleLogicTask___ctor(v22, v23);
             if ( v22 )
             {
@@ -2437,17 +2441,17 @@ LABEL_28:
                     System_Collections_Generic_List_object___AddWithResize(
                       v5,
                       (Il2CppObject *)v22,
-                      *(const MethodInfo_37987BC **)(*(_QWORD *)(v28[4] + 192LL) + 112LL));
+                      *(const MethodInfo_37A3024 **)(*(_QWORD *)(v28[4] + 192LL) + 112LL));
                   }
                   else
                   {
                     v30 = &items->obj.klass + size;
                     v5->fields._size = size + 1;
                     v30[4] = (Il2CppClass *)v22;
-                    sub_1C32BC4((CGThumbnailListItem_o *)(v30 + 4), (int32_t)v22, v25, v26);
+                    sub_1C36FFC((CGThumbnailListItem_o *)(v30 + 4), (int32_t)v22, v25, v26);
                   }
                   logic = this->fields.logic;
-                  v32 = (BattleLogicServantAiTask_o *)sub_1C32E6C(DeadServantAiTask_TypeInfo);
+                  v32 = (BattleLogicServantAiTask_o *)sub_1C372A4(DeadServantAiTask_TypeInfo);
                   BattleLogicServantAiTask___ctor(v32, 2, ServantData, logic, v33);
                   v36 = v5->fields._items;
                   v37 = Method_System_Collections_Generic_List_BattleLogicTask__Add__;
@@ -2460,14 +2464,14 @@ LABEL_28:
                       System_Collections_Generic_List_object___AddWithResize(
                         v5,
                         (Il2CppObject *)v32,
-                        *(const MethodInfo_37987BC **)(*(_QWORD *)(v37[4] + 192LL) + 112LL));
+                        *(const MethodInfo_37A3024 **)(*(_QWORD *)(v37[4] + 192LL) + 112LL));
                     }
                     else
                     {
                       v39 = &v36->obj.klass + v38;
                       v5->fields._size = v38 + 1;
                       v39[4] = (Il2CppClass *)v32;
-                      sub_1C32BC4((CGThumbnailListItem_o *)(v39 + 4), (int32_t)v32, v34, v35);
+                      sub_1C36FFC((CGThumbnailListItem_o *)(v39 + 4), (int32_t)v32, v34, v35);
                     }
                     data = (__int64)this->fields.logicfieldai;
                     if ( data )
@@ -2478,10 +2482,10 @@ LABEL_28:
                       System_Collections_Generic_List_object___AddRange(
                         v5,
                         DeadActionTask,
-                        (const MethodInfo_37989C8 *)Method_System_Collections_Generic_List_BattleLogicTask__AddRange__);
+                        (const MethodInfo_37A3230 *)Method_System_Collections_Generic_List_BattleLogicTask__AddRange__);
                       return (BattleLogicTask_array *)System_Collections_Generic_List_object___ToArray(
                                                         v5,
-                                                        (const MethodInfo_379A314 *)Method_System_Collections_Generic_List_BattleLogicTask__ToArray__);
+                                                        (const MethodInfo_37A4B7C *)Method_System_Collections_Generic_List_BattleLogicTask__ToArray__);
                     }
                   }
                 }
@@ -2492,7 +2496,7 @@ LABEL_28:
       }
     }
 LABEL_45:
-    sub_1C32E7C(data);
+    sub_1C372B4(data);
   }
   if ( !ServantData )
     goto LABEL_45;
@@ -2501,7 +2505,7 @@ LABEL_45:
     goto LABEL_45;
   return (BattleLogicTask_array *)System_Collections_Generic_List_object___ToArray(
                                     v5,
-                                    (const MethodInfo_379A314 *)Method_System_Collections_Generic_List_BattleLogicTask__ToArray__);
+                                    (const MethodInfo_37A4B7C *)Method_System_Collections_Generic_List_BattleLogicTask__ToArray__);
 }
 
 
@@ -2541,25 +2545,25 @@ BattleLogicTask_array *BattleLogicReaction__createTaskGuts(
   const MethodInfo *v35; // [xsp+8h] [xbp-78h]
   bool isFirstAdd; // [xsp+1Ch] [xbp-64h] BYREF
 
-  if ( (byte_4C3AAEC & 1) == 0 )
+  if ( (byte_4C461E3 & 1) == 0 )
   {
-    sub_1C32C20(&System_Action_BattleLogicTask__TypeInfo);
-    sub_1C32C20(&Method_System_Array_Empty_BattleBuffData_BuffData___);
-    sub_1C32C20(&Method_BasicHelper_ForEach_BattleLogicTask___);
-    sub_1C32C20(&BattleSkillInfoData_TypeInfo);
-    sub_1C32C20(&int___TypeInfo);
-    sub_1C32C20(&Method_System_Collections_Generic_List_BattleLogicTask__AddRange__);
-    sub_1C32C20(&Method_System_Collections_Generic_List_BattleLogicTask__ToArray__);
-    sub_1C32C20(&Method_System_Collections_Generic_List_BattleLogicTask___ctor__);
-    sub_1C32C20(&System_Collections_Generic_List_BattleLogicTask__TypeInfo);
-    sub_1C32C20(&Method_BattleLogicReaction___c__createTaskGuts_b__24_0__);
-    sub_1C32C20(&BattleLogicReaction___c_TypeInfo);
-    byte_4C3AAEC = 1;
+    sub_1C37058(&System_Action_BattleLogicTask__TypeInfo);
+    sub_1C37058(&Method_System_Array_Empty_BattleBuffData_BuffData___);
+    sub_1C37058(&Method_BasicHelper_ForEach_BattleLogicTask___);
+    sub_1C37058(&BattleSkillInfoData_TypeInfo);
+    sub_1C37058(&int___TypeInfo);
+    sub_1C37058(&Method_System_Collections_Generic_List_BattleLogicTask__AddRange__);
+    sub_1C37058(&Method_System_Collections_Generic_List_BattleLogicTask__ToArray__);
+    sub_1C37058(&Method_System_Collections_Generic_List_BattleLogicTask___ctor__);
+    sub_1C37058(&System_Collections_Generic_List_BattleLogicTask__TypeInfo);
+    sub_1C37058(&Method_BattleLogicReaction___c__createTaskGuts_b__24_0__);
+    sub_1C37058(&BattleLogicReaction___c_TypeInfo);
+    byte_4C461E3 = 1;
   }
-  v7 = (System_Collections_Generic_List_object__o *)sub_1C32E6C(System_Collections_Generic_List_BattleLogicTask__TypeInfo);
+  v7 = (System_Collections_Generic_List_object__o *)sub_1C372A4(System_Collections_Generic_List_BattleLogicTask__TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v7,
-    (const MethodInfo_3797F88 *)Method_System_Collections_Generic_List_BattleLogicTask___ctor__);
+    (const MethodInfo_37A27F0 *)Method_System_Collections_Generic_List_BattleLogicTask___ctor__);
   data = (BattleBuffData_BuffData_array *)this->fields.data;
   if ( !data )
     goto LABEL_50;
@@ -2582,17 +2586,17 @@ BattleLogicTask_array *BattleLogicReaction__createTaskGuts(
     v14 = *((_QWORD *)Method_System_Array_Empty_BattleBuffData_BuffData___ + 7);
     if ( !v14 )
     {
-      sub_1C83390(Method_System_Array_Empty_BattleBuffData_BuffData___);
+      sub_1C877C8(Method_System_Array_Empty_BattleBuffData_BuffData___);
       v14 = v13[7];
     }
     v15 = *(_QWORD *)(v14 + 16);
     if ( (*(_BYTE *)(v15 + 309) & 1) == 0 )
-      v15 = sub_1C83334(inited);
+      v15 = sub_1C8776C(inited);
     if ( !*(_DWORD *)(v15 + 224) )
       inited = j_il2cpp_runtime_class_init_0(v15);
     data = *(BattleBuffData_BuffData_array **)(v13[7] + 16LL);
     if ( (BYTE5(data->m_Items[34]) & 1) == 0 )
-      data = (BattleBuffData_BuffData_array *)sub_1C83334(inited);
+      data = (BattleBuffData_BuffData_array *)sub_1C8776C(inited);
     klass = (BattleBuffData_BuffData_array *)data->m_Items[19]->klass;
     isFirstAdd = 1;
     if ( !klass )
@@ -2605,7 +2609,7 @@ BattleLogicTask_array *BattleLogicReaction__createTaskGuts(
     while ( v17 < max_length )
     {
       v18 = klass->m_Items[v17];
-      v19 = (BattleSkillInfoData_o *)sub_1C32E6C(BattleSkillInfoData_TypeInfo);
+      v19 = (BattleSkillInfoData_o *)sub_1C372A4(BattleSkillInfoData_TypeInfo);
       BattleSkillInfoData___ctor(v19, 0);
       if ( !v19 )
         goto LABEL_50;
@@ -2643,7 +2647,7 @@ BattleLogicTask_array *BattleLogicReaction__createTaskGuts(
       else
       {
         v23 = v22;
-        data = (BattleBuffData_BuffData_array *)sub_1C32CC8(int___TypeInfo, 1);
+        data = (BattleBuffData_BuffData_array *)sub_1C37100(int___TypeInfo, 1);
         if ( !data )
           goto LABEL_50;
         TargetIds = (System_Int32_array *)data;
@@ -2653,7 +2657,7 @@ BattleLogicTask_array *BattleLogicReaction__createTaskGuts(
         LODWORD(data->m_Items[0]) = v23;
       }
       logicskill = this->fields.logicskill;
-      data = (BattleBuffData_BuffData_array *)sub_1C32CC8(int___TypeInfo, 1);
+      data = (BattleBuffData_BuffData_array *)sub_1C37100(int___TypeInfo, 1);
       if ( !data )
         goto LABEL_50;
       if ( !LODWORD(data->max_length) )
@@ -2699,28 +2703,28 @@ BattleLogicTask_array *BattleLogicReaction__createTaskGuts(
             v28 = BattleLogicReaction___c_TypeInfo;
           }
           v30 = (Il2CppObject *)v28->static_fields->__9;
-          _9__24_0 = (System_Action_object__o *)sub_1C32E6C(System_Action_BattleLogicTask__TypeInfo);
+          _9__24_0 = (System_Action_object__o *)sub_1C372A4(System_Action_BattleLogicTask__TypeInfo);
           System_Action_object____ctor(_9__24_0, v30, Method_BattleLogicReaction___c__createTaskGuts_b__24_0__, 0);
           static_fields = BattleLogicReaction___c_TypeInfo->static_fields;
           static_fields->__9__24_0 = (struct System_Action_BattleLogicTask__o *)_9__24_0;
-          sub_1C32BC4((CGThumbnailListItem_o *)&static_fields->__9__24_0, (int32_t)_9__24_0, v32, v33);
+          sub_1C36FFC((CGThumbnailListItem_o *)&static_fields->__9__24_0, (int32_t)_9__24_0, v32, v33);
         }
         BasicHelper__ForEach_object_(
           v27,
           (System_Action_T__o *)_9__24_0,
-          (const MethodInfo_30C93B0 *)Method_BasicHelper_ForEach_BattleLogicTask___);
+          (const MethodInfo_30D3C18 *)Method_BasicHelper_ForEach_BattleLogicTask___);
       }
       if ( !v7 )
         goto LABEL_50;
       System_Collections_Generic_List_object___AddRange(
         v7,
         v27,
-        (const MethodInfo_37989C8 *)Method_System_Collections_Generic_List_BattleLogicTask__AddRange__);
+        (const MethodInfo_37A3230 *)Method_System_Collections_Generic_List_BattleLogicTask__AddRange__);
       max_length = klass->max_length;
       if ( (int)++v17 >= max_length )
         goto LABEL_47;
     }
-    sub_1C32E84(data);
+    sub_1C372BC(data);
   }
 LABEL_47:
   data = (BattleBuffData_BuffData_array *)this->fields.logic;
@@ -2733,11 +2737,11 @@ LABEL_47:
         !v7) )
   {
 LABEL_50:
-    sub_1C32E7C(data);
+    sub_1C372B4(data);
   }
   return (BattleLogicTask_array *)System_Collections_Generic_List_object___ToArray(
                                     v7,
-                                    (const MethodInfo_379A314 *)Method_System_Collections_Generic_List_BattleLogicTask__ToArray__);
+                                    (const MethodInfo_37A4B7C *)Method_System_Collections_Generic_List_BattleLogicTask__ToArray__);
 }
 
 
@@ -2759,24 +2763,24 @@ BattleLogicTask_array *BattleLogicReaction__createTaskProcBuffDead(
   __int64 size; // x10
   Il2CppClass **v16; // x0
 
-  if ( (byte_4C3AAEA & 1) == 0 )
+  if ( (byte_4C461E1 & 1) == 0 )
   {
-    sub_1C32C20(&BattleLogicTask_TypeInfo);
-    sub_1C32C20(&Method_System_Collections_Generic_List_BattleLogicTask__Add__);
-    sub_1C32C20(&Method_System_Collections_Generic_List_BattleLogicTask__ToArray__);
-    sub_1C32C20(&Method_System_Collections_Generic_List_BattleLogicTask___ctor__);
-    sub_1C32C20(&System_Collections_Generic_List_BattleLogicTask__TypeInfo);
-    byte_4C3AAEA = 1;
+    sub_1C37058(&BattleLogicTask_TypeInfo);
+    sub_1C37058(&Method_System_Collections_Generic_List_BattleLogicTask__Add__);
+    sub_1C37058(&Method_System_Collections_Generic_List_BattleLogicTask__ToArray__);
+    sub_1C37058(&Method_System_Collections_Generic_List_BattleLogicTask___ctor__);
+    sub_1C37058(&System_Collections_Generic_List_BattleLogicTask__TypeInfo);
+    byte_4C461E1 = 1;
   }
-  v5 = (System_Collections_Generic_List_object__o *)sub_1C32E6C(System_Collections_Generic_List_BattleLogicTask__TypeInfo);
+  v5 = (System_Collections_Generic_List_object__o *)sub_1C372A4(System_Collections_Generic_List_BattleLogicTask__TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v5,
-    (const MethodInfo_3797F88 *)Method_System_Collections_Generic_List_BattleLogicTask___ctor__);
+    (const MethodInfo_37A27F0 *)Method_System_Collections_Generic_List_BattleLogicTask___ctor__);
   data = this->fields.data;
   if ( !data )
     goto LABEL_12;
   ServantData = BattleData__getServantData(data, uniqueId, 0);
-  v8 = (BattleLogicTask_o *)sub_1C32E6C(BattleLogicTask_TypeInfo);
+  v8 = (BattleLogicTask_o *)sub_1C372A4(BattleLogicTask_TypeInfo);
   BattleLogicTask___ctor(v8, v9);
   if ( !v8
     || (v8->fields.actiontype = 16, !ServantData)
@@ -2787,7 +2791,7 @@ BattleLogicTask_array *BattleLogicReaction__createTaskProcBuffDead(
         !items) )
   {
 LABEL_12:
-    sub_1C32E7C(data);
+    sub_1C372B4(data);
   }
   size = v5->fields._size;
   if ( (unsigned int)size >= LODWORD(items->max_length) )
@@ -2795,18 +2799,18 @@ LABEL_12:
     System_Collections_Generic_List_object___AddWithResize(
       v5,
       (Il2CppObject *)v8,
-      *(const MethodInfo_37987BC **)(*(_QWORD *)(v14[4] + 192LL) + 112LL));
+      *(const MethodInfo_37A3024 **)(*(_QWORD *)(v14[4] + 192LL) + 112LL));
   }
   else
   {
     v16 = &items->obj.klass + size;
     v5->fields._size = size + 1;
     v16[4] = (Il2CppClass *)v8;
-    sub_1C32BC4((CGThumbnailListItem_o *)(v16 + 4), (int32_t)v8, v11, v12);
+    sub_1C36FFC((CGThumbnailListItem_o *)(v16 + 4), (int32_t)v8, v11, v12);
   }
   return (BattleLogicTask_array *)System_Collections_Generic_List_object___ToArray(
                                     v5,
-                                    (const MethodInfo_379A314 *)Method_System_Collections_Generic_List_BattleLogicTask__ToArray__);
+                                    (const MethodInfo_37A4B7C *)Method_System_Collections_Generic_List_BattleLogicTask__ToArray__);
 }
 
 
@@ -2832,21 +2836,21 @@ BattleActionData_o *BattleLogicReaction__createWithdraw(
   int32_t v18; // w1
 
   v4 = this;
-  if ( (byte_4C3AAF6 & 1) == 0 )
+  if ( (byte_4C461ED & 1) == 0 )
   {
-    sub_1C32C20(&BattleActionData_TypeInfo);
-    this = (BattleLogicReaction_o *)sub_1C32C20(&StringLiteral_8740/*"MOTION_501"*/);
-    byte_4C3AAF6 = 1;
+    sub_1C37058(&BattleActionData_TypeInfo);
+    this = (BattleLogicReaction_o *)sub_1C37058(&StringLiteral_8741/*"MOTION_501"*/);
+    byte_4C461ED = 1;
   }
   if ( !task )
 LABEL_25:
-    sub_1C32E7C(this);
+    sub_1C372B4(this);
   actorIdlist = task->fields.actorIdlist;
   this = (BattleLogicReaction_o *)v4->fields.data;
   if ( actorIdlist )
   {
     if ( !LODWORD(actorIdlist->max_length) )
-      sub_1C32E84(this);
+      sub_1C372BC(this);
     v6 = actorIdlist->m_Items[0];
     if ( !this )
       goto LABEL_25;
@@ -2897,7 +2901,7 @@ LABEL_25:
   v14 = 0;
   if ( !v7->fields.isAnimPlayedWithdraw )
   {
-    v14 = sub_1C32E6C(BattleActionData_TypeInfo);
+    v14 = sub_1C372A4(BattleActionData_TypeInfo);
     BattleActionData___ctor((BattleActionData_o *)v14, 0);
     if ( !v14 )
       goto LABEL_25;
@@ -2909,9 +2913,9 @@ LABEL_25:
       v17 = BattleActionData_TypeInfo;
     }
     *(_DWORD *)(v14 + 60) = v17->static_fields->TYPE_BACKSTEP;
-    v18 = StringLiteral_8740/*"MOTION_501"*/;
-    *(_QWORD *)(v14 + 72) = StringLiteral_8740/*"MOTION_501"*/;
-    sub_1C32BC4((CGThumbnailListItem_o *)(v14 + 72), v18, v15, v16);
+    v18 = StringLiteral_8741/*"MOTION_501"*/;
+    *(_QWORD *)(v14 + 72) = StringLiteral_8741/*"MOTION_501"*/;
+    sub_1C36FFC((CGThumbnailListItem_o *)(v14 + 72), v18, v15, v16);
   }
   return (BattleActionData_o *)v14;
 }
@@ -2928,18 +2932,18 @@ BattleLogicTask_o *BattleLogicReaction__getChangeAppearance(
   const MethodInfo *v7; // x3
   int32_t v8; // w1
 
-  if ( (byte_4C3AAFA & 1) == 0 )
+  if ( (byte_4C461F1 & 1) == 0 )
   {
-    this = (BattleLogicReaction_o *)sub_1C32C20(&BattleLogicTask_TypeInfo);
-    byte_4C3AAFA = 1;
+    this = (BattleLogicReaction_o *)sub_1C37058(&BattleLogicTask_TypeInfo);
+    byte_4C461F1 = 1;
   }
   if ( !svtData
     || (svtData->fields.status = 4,
-        v5 = (BattleLogicTask_o *)sub_1C32E6C(BattleLogicTask_TypeInfo),
+        v5 = (BattleLogicTask_o *)sub_1C372A4(BattleLogicTask_TypeInfo),
         BattleLogicTask___ctor(v5, v6),
         !v5) )
   {
-    sub_1C32E7C(this);
+    sub_1C372B4(this);
   }
   v5->fields.actiontype = 40;
   if ( svtData->fields.isEnemy )
@@ -2963,15 +2967,15 @@ void BattleLogicReaction___c___cctor(const MethodInfo *method)
   int32_t v2; // w2
   const MethodInfo *v3; // x3
 
-  if ( (byte_4C3AAFC & 1) == 0 )
+  if ( (byte_4C461F3 & 1) == 0 )
   {
-    sub_1C32C20(&BattleLogicReaction___c_TypeInfo);
-    byte_4C3AAFC = 1;
+    sub_1C37058(&BattleLogicReaction___c_TypeInfo);
+    byte_4C461F3 = 1;
   }
-  v1 = (Il2CppObject *)sub_1C32E6C(BattleLogicReaction___c_TypeInfo);
+  v1 = (Il2CppObject *)sub_1C372A4(BattleLogicReaction___c_TypeInfo);
   System_Object___ctor(v1, 0);
   BattleLogicReaction___c_TypeInfo->static_fields->__9 = (struct BattleLogicReaction___c_o *)v1;
-  sub_1C32BC4((CGThumbnailListItem_o *)BattleLogicReaction___c_TypeInfo->static_fields, (int32_t)v1, v2, v3);
+  sub_1C36FFC((CGThumbnailListItem_o *)BattleLogicReaction___c_TypeInfo->static_fields, (int32_t)v1, v2, v3);
 }
 
 
@@ -2987,6 +2991,6 @@ void BattleLogicReaction___c___createTaskGuts_b__24_0(
         const MethodInfo *method)
 {
   if ( !task )
-    sub_1C32E7C(this);
+    sub_1C372B4(this);
   task->fields.checkAlive = 0;
 }

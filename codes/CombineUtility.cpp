@@ -7,10 +7,10 @@ int32_t CombineUtility__CalculateAtk(
 {
   BalanceConfig_c *v9; // x0
 
-  if ( (byte_4C3B816 & 1) == 0 )
+  if ( (byte_4C46E29 & 1) == 0 )
   {
-    sub_1C32C20(&BalanceConfig_TypeInfo);
-    byte_4C3B816 = 1;
+    sub_1C37058(&BalanceConfig_TypeInfo);
+    byte_4C46E29 = 1;
   }
   v9 = BalanceConfig_TypeInfo;
   if ( !BalanceConfig_TypeInfo->_2.cctor_finished )
@@ -31,10 +31,10 @@ int32_t CombineUtility__CalculateHp(
 {
   BalanceConfig_c *v9; // x0
 
-  if ( (byte_4C3B815 & 1) == 0 )
+  if ( (byte_4C46E28 & 1) == 0 )
   {
-    sub_1C32C20(&BalanceConfig_TypeInfo);
-    byte_4C3B815 = 1;
+    sub_1C37058(&BalanceConfig_TypeInfo);
+    byte_4C46E28 = 1;
   }
   v9 = BalanceConfig_TypeInfo;
   if ( !BalanceConfig_TypeInfo->_2.cctor_finished )
@@ -58,21 +58,21 @@ bool CombineUtility__CheckCombineNeedItemsEnough(
   int64_t v12; // x0
   il2cpp_array_size_t max_length; // x8
   bool v14; // w10
-  const MethodInfo_30DD39C **v15; // x25
-  const MethodInfo_3396838 **v16; // x27
+  const MethodInfo_30E7C04 **v15; // x25
+  const MethodInfo_33A10A0 **v16; // x27
   unsigned __int64 v17; // x28
   int v18; // w29
   int32_t *m_Items; // x23
   int32_t v20; // w24
   UserServantEntity_o *v21; // x8
-  const MethodInfo_3396838 **v22; // x22
+  const MethodInfo_33A10A0 **v22; // x22
   UserServantEntity_o *v23; // x27
   int v24; // w23
   System_Int32_array *v25; // x29
   Il2CppObject *v26; // x19
   __int128 v27; // q0
   System_Int32_array *v28; // x21
-  const MethodInfo_30DD39C **v29; // x20
+  const MethodInfo_30E7C04 **v29; // x20
   int64_t v30; // x0
   __int64 v31; // x25
   __int64 v32; // x26
@@ -92,33 +92,33 @@ bool CombineUtility__CheckCombineNeedItemsEnough(
   UserItemEntity_o *v47; // [xsp+98h] [xbp-68h] BYREF
   CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o v48; // 0:x0.16
 
-  if ( (byte_4C3B812 & 1) == 0 )
+  if ( (byte_4C46E25 & 1) == 0 )
   {
-    sub_1C32C20(&Method_DataManager_GetMaster_ItemMaster___);
-    sub_1C32C20(&Method_DataManager_GetMaster_UserItemMaster___);
-    sub_1C32C20(&Method_DataManager_GetMaster_UserSvtCoinMaster___);
-    sub_1C32C20(&DataManager_TypeInfo);
-    sub_1C32C20(&Method_DataMasterBase_ItemMaster__ItemEntity__int__GetEntity__);
-    sub_1C32C20(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
-    sub_1C32C20(&CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo);
-    byte_4C3B812 = 1;
+    sub_1C37058(&Method_DataManager_GetMaster_ItemMaster___);
+    sub_1C37058(&Method_DataManager_GetMaster_UserItemMaster___);
+    sub_1C37058(&Method_DataManager_GetMaster_UserSvtCoinMaster___);
+    sub_1C37058(&DataManager_TypeInfo);
+    sub_1C37058(&Method_DataMasterBase_ItemMaster__ItemEntity__int__GetEntity__);
+    sub_1C37058(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
+    sub_1C37058(&CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo);
+    byte_4C46E25 = 1;
   }
   entity = 0;
   v47 = 0;
   if ( !DataManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-  Master_object = DataManager__GetMaster_object_((const MethodInfo_30DD39C *)Method_DataManager_GetMaster_UserItemMaster___);
-  v12 = (int64_t)DataManager__GetMaster_object_((const MethodInfo_30DD39C *)Method_DataManager_GetMaster_UserSvtCoinMaster___);
+  Master_object = DataManager__GetMaster_object_((const MethodInfo_30E7C04 *)Method_DataManager_GetMaster_UserItemMaster___);
+  v12 = (int64_t)DataManager__GetMaster_object_((const MethodInfo_30E7C04 *)Method_DataManager_GetMaster_UserSvtCoinMaster___);
   v39 = (UserSvtCoinMaster_o *)v12;
   if ( !needItemIds )
 LABEL_38:
-    sub_1C32E7C(v12);
+    sub_1C372B4(v12);
   max_length = needItemIds->max_length;
   v14 = needQp > haveQp;
   if ( (int)max_length >= 1 )
   {
-    v15 = (const MethodInfo_30DD39C **)&Method_DataManager_GetMaster_ItemMaster___;
-    v16 = (const MethodInfo_3396838 **)&Method_DataMasterBase_ItemMaster__ItemEntity__int__GetEntity__;
+    v15 = (const MethodInfo_30E7C04 **)&Method_DataManager_GetMaster_ItemMaster___;
+    v16 = (const MethodInfo_33A10A0 **)&Method_DataMasterBase_ItemMaster__ItemEntity__int__GetEntity__;
     v17 = 0;
     v18 = needQp != 0 && v14;
     m_Items = needItemNums->m_Items;
@@ -133,7 +133,7 @@ LABEL_38:
         goto LABEL_38;
       if ( v17 >= LODWORD(needItemNums->max_length) )
 LABEL_39:
-        sub_1C32E84(v12);
+        sub_1C372BC(v12);
       if ( (v18 & 1) != 0 )
         break;
       v20 = v41[v17];
@@ -165,7 +165,7 @@ LABEL_39:
         if ( !CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo->_2.cctor_finished )
           j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo);
         v43 = v45;
-        v30 = CodeStage_AntiCheat_ObscuredTypes_ObscuredLong__op_Implicit_48891308(&v43, 0);
+        v30 = CodeStage_AntiCheat_ObscuredTypes_ObscuredLong__op_Implicit_48934420(&v43, 0);
         v32 = *(_QWORD *)&v23->fields.svtId.fields.currentCryptoKey;
         v31 = *(_QWORD *)&v23->fields.svtId.fields.fakeValue;
         v33 = v30;
@@ -173,7 +173,7 @@ LABEL_39:
           j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
         *(_QWORD *)&v48.fields.currentCryptoKey = v32;
         *(_QWORD *)&v48.fields.fakeValue = v31;
-        v34 = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_48887784(v48, 0);
+        v34 = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_48930896(v48, 0);
         v12 = (int64_t)v39;
         if ( !v39 )
           goto LABEL_38;
@@ -204,7 +204,7 @@ LABEL_39:
         if ( !CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo->_2.cctor_finished )
           j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo);
         v44 = v45;
-        v12 = CodeStage_AntiCheat_ObscuredTypes_ObscuredLong__op_Implicit_48891308(&v44, 0);
+        v12 = CodeStage_AntiCheat_ObscuredTypes_ObscuredLong__op_Implicit_48934420(&v44, 0);
         if ( !Master_object )
           goto LABEL_38;
         v12 = UserItemMaster__TryGetEntity((UserItemMaster_o *)Master_object, &v47, v12, v20, 0);
@@ -236,33 +236,33 @@ System_String_o *CombineUtility__GetServantShortName(int32_t svtId, const Method
   Il2CppObject *v11; // [xsp+10h] [xbp-40h] BYREF
   ServantLimitAddEntity_o *entity; // [xsp+18h] [xbp-38h] BYREF
 
-  if ( (byte_4C3B814 & 1) == 0 )
+  if ( (byte_4C46E27 & 1) == 0 )
   {
-    sub_1C32C20(&Method_DataManager_GetMaster_ServantAddMaster___);
-    sub_1C32C20(&Method_DataManager_GetMaster_ServantChangeMaster___);
-    sub_1C32C20(&Method_DataManager_GetMaster_ServantLimitAddMaster___);
-    sub_1C32C20(&Method_DataManager_GetMaster_ServantLimitImageMaster___);
-    sub_1C32C20(&Method_DataManager_GetMaster_ServantMaster___);
-    sub_1C32C20(&Method_DataManager_GetMaster_UserServantCollectionMaster___);
-    sub_1C32C20(&DataManager_TypeInfo);
-    sub_1C32C20(&Method_DataMasterBase_ServantMaster__ServantEntity__int__TryGetEntity__);
-    sub_1C32C20(&Method_DataMasterBase_ServantAddMaster__ServantAddEntity__int__TryGetEntity__);
-    sub_1C32C20(&NetworkManager_TypeInfo);
-    sub_1C32C20(&string_TypeInfo);
-    byte_4C3B814 = 1;
+    sub_1C37058(&Method_DataManager_GetMaster_ServantAddMaster___);
+    sub_1C37058(&Method_DataManager_GetMaster_ServantChangeMaster___);
+    sub_1C37058(&Method_DataManager_GetMaster_ServantLimitAddMaster___);
+    sub_1C37058(&Method_DataManager_GetMaster_ServantLimitImageMaster___);
+    sub_1C37058(&Method_DataManager_GetMaster_ServantMaster___);
+    sub_1C37058(&Method_DataManager_GetMaster_UserServantCollectionMaster___);
+    sub_1C37058(&DataManager_TypeInfo);
+    sub_1C37058(&Method_DataMasterBase_ServantMaster__ServantEntity__int__TryGetEntity__);
+    sub_1C37058(&Method_DataMasterBase_ServantAddMaster__ServantAddEntity__int__TryGetEntity__);
+    sub_1C37058(&NetworkManager_TypeInfo);
+    sub_1C37058(&string_TypeInfo);
+    byte_4C46E27 = 1;
   }
   v11 = 0;
   entity = 0;
   v10 = 0;
   if ( !DataManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-  Master_object = DataManager__GetMaster_object_((const MethodInfo_30DD39C *)Method_DataManager_GetMaster_UserServantCollectionMaster___);
+  Master_object = DataManager__GetMaster_object_((const MethodInfo_30E7C04 *)Method_DataManager_GetMaster_UserServantCollectionMaster___);
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
-  if ( !byte_4C31812 )
+  if ( !byte_4C3CD62 )
   {
-    sub_1C32C20(&NetworkManager_TypeInfo);
-    byte_4C31812 = 1;
+    sub_1C37058(&NetworkManager_TypeInfo);
+    byte_4C3CD62 = 1;
   }
   v4 = (ServantChangeMaster_o *)NetworkManager_TypeInfo;
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
@@ -284,7 +284,7 @@ System_String_o *CombineUtility__GetServantShortName(int32_t svtId, const Method
   Empty = string_TypeInfo->static_fields->Empty;
   if ( !DataManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-  v4 = (ServantChangeMaster_o *)DataManager__GetMaster_object_((const MethodInfo_30DD39C *)Method_DataManager_GetMaster_ServantChangeMaster___);
+  v4 = (ServantChangeMaster_o *)DataManager__GetMaster_object_((const MethodInfo_30E7C04 *)Method_DataManager_GetMaster_ServantChangeMaster___);
   if ( !v4 )
     goto LABEL_44;
   v8 = ServantChangeMaster__GetEnableEntity(v4, svtId, 0);
@@ -294,7 +294,7 @@ System_String_o *CombineUtility__GetServantShortName(int32_t svtId, const Method
   {
     if ( !DataManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-    v4 = (ServantChangeMaster_o *)DataManager__GetMaster_object_((const MethodInfo_30DD39C *)Method_DataManager_GetMaster_ServantLimitAddMaster___);
+    v4 = (ServantChangeMaster_o *)DataManager__GetMaster_object_((const MethodInfo_30E7C04 *)Method_DataManager_GetMaster_ServantLimitAddMaster___);
     if ( !v4 )
       goto LABEL_44;
     if ( ServantLimitAddMaster__TryGetEntity((ServantLimitAddMaster_o *)v4, &entity, svtId, maxLimitCount, 0) )
@@ -309,14 +309,14 @@ System_String_o *CombineUtility__GetServantShortName(int32_t svtId, const Method
   {
     if ( !DataManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-    v4 = (ServantChangeMaster_o *)DataManager__GetMaster_object_((const MethodInfo_30DD39C *)Method_DataManager_GetMaster_ServantAddMaster___);
+    v4 = (ServantChangeMaster_o *)DataManager__GetMaster_object_((const MethodInfo_30E7C04 *)Method_DataManager_GetMaster_ServantAddMaster___);
     if ( !v4 )
       goto LABEL_44;
     if ( DataMasterBase_object__object__int___TryGetEntity(
            (DataMasterBase_TMaster__TEntity__PKType__o *)v4,
            &v11,
            svtId,
-           (const MethodInfo_3396884 *)Method_DataMasterBase_ServantAddMaster__ServantAddEntity__int__TryGetEntity__) )
+           (const MethodInfo_33A10EC *)Method_DataMasterBase_ServantAddMaster__ServantAddEntity__int__TryGetEntity__) )
     {
       v4 = (ServantChangeMaster_o *)v11;
       if ( !v11 )
@@ -328,18 +328,18 @@ System_String_o *CombineUtility__GetServantShortName(int32_t svtId, const Method
   {
     if ( !DataManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-    v4 = (ServantChangeMaster_o *)DataManager__GetMaster_object_((const MethodInfo_30DD39C *)Method_DataManager_GetMaster_ServantMaster___);
+    v4 = (ServantChangeMaster_o *)DataManager__GetMaster_object_((const MethodInfo_30E7C04 *)Method_DataManager_GetMaster_ServantMaster___);
     if ( !v4 )
       goto LABEL_44;
     if ( DataMasterBase_object__object__int___TryGetEntity(
            (DataMasterBase_TMaster__TEntity__PKType__o *)v4,
            &v10,
            svtId,
-           (const MethodInfo_3396884 *)Method_DataMasterBase_ServantMaster__ServantEntity__int__TryGetEntity__) )
+           (const MethodInfo_33A10EC *)Method_DataMasterBase_ServantMaster__ServantEntity__int__TryGetEntity__) )
     {
       if ( !DataManager_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-      v4 = (ServantChangeMaster_o *)DataManager__GetMaster_object_((const MethodInfo_30DD39C *)Method_DataManager_GetMaster_ServantLimitImageMaster___);
+      v4 = (ServantChangeMaster_o *)DataManager__GetMaster_object_((const MethodInfo_30E7C04 *)Method_DataManager_GetMaster_ServantLimitImageMaster___);
       if ( v4 )
         return ServantLimitImageMaster__GetLimitCountSealedServantName(
                  (ServantLimitImageMaster_o *)v4,
@@ -348,7 +348,7 @@ System_String_o *CombineUtility__GetServantShortName(int32_t svtId, const Method
                  0,
                  0);
 LABEL_44:
-      sub_1C32E7C(v4);
+      sub_1C372B4(v4);
     }
   }
   return Empty;
@@ -371,17 +371,17 @@ void CombineUtility__SetCommandCodeEquippedInfoLabel(
   float v15; // s8
   UnityEngine_GameObject_o *v16; // x0
 
-  if ( (byte_4C3B813 & 1) == 0 )
+  if ( (byte_4C46E26 & 1) == 0 )
   {
-    sub_1C32C20(&LocalizationManager_TypeInfo);
-    sub_1C32C20(&string_TypeInfo);
-    sub_1C32C20(&StringLiteral_43/*"\n"*/);
-    sub_1C32C20(&StringLiteral_9316/*"NOT_SELECT_EQUIPED"*/);
-    byte_4C3B813 = 1;
+    sub_1C37058(&LocalizationManager_TypeInfo);
+    sub_1C37058(&string_TypeInfo);
+    sub_1C37058(&StringLiteral_43/*"\n"*/);
+    sub_1C37058(&StringLiteral_9317/*"NOT_SELECT_EQUIPED"*/);
+    byte_4C46E26 = 1;
   }
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-  v9 = LocalizationManager__Get((System_String_o *)StringLiteral_9316/*"NOT_SELECT_EQUIPED"*/, 0);
+  v9 = LocalizationManager__Get((System_String_o *)StringLiteral_9317/*"NOT_SELECT_EQUIPED"*/, 0);
   if ( !equipLabel )
     goto LABEL_13;
   UILabel__set_text(equipLabel, v9, 0);
@@ -393,14 +393,14 @@ void CombineUtility__SetCommandCodeEquippedInfoLabel(
   UILabel__set_spacingX(nameLabel, -2, 0);
   if ( !dispName )
     return;
-  v11 = System_String__Concat_63518544(equipLabel->fields.mText, (System_String_o *)StringLiteral_43/*"\n"*/, 0);
+  v11 = System_String__Concat_63561656(equipLabel->fields.mText, (System_String_o *)StringLiteral_43/*"\n"*/, 0);
   UILabel__set_text(equipLabel, v11, 0);
   ServantShortName = CombineUtility__GetServantShortName(attachSvtId, v12);
-  v14 = System_String__Concat_63518544((System_String_o *)StringLiteral_43/*"\n"*/, ServantShortName, 0);
+  v14 = System_String__Concat_63561656((System_String_o *)StringLiteral_43/*"\n"*/, ServantShortName, 0);
   UILabel__set_text(nameLabel, v14, 0);
   if ( !ServantShortName )
 LABEL_13:
-    sub_1C32E7C(v9);
+    sub_1C372B4(v9);
   if ( ServantShortName->fields._stringLength >= 7 )
   {
     v15 = 110.0 / (float)nameLabel->fields.mWidth;

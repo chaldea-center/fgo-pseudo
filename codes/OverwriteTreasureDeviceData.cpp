@@ -16,7 +16,7 @@ void OverwriteTreasureDeviceData__Overwrite(
         const MethodInfo *method)
 {
   if ( !svtData )
-    sub_1C32E7C(this);
+    sub_1C372B4(this);
   BattleServantData__OverwriteTreasureDevice(svtData, this->fields.id, this->fields.lv, 0);
 }
 
@@ -27,6 +27,6 @@ void OverwriteTreasureDeviceData__Reset(
         const MethodInfo *method)
 {
   if ( !svtData )
-    sub_1C32E7C(this);
+    sub_1C372B4(this);
   BattleServantData__ResetOverwriteTreasureDevice(svtData, 0);
 }

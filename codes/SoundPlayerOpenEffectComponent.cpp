@@ -1,9 +1,9 @@
 void SoundPlayerOpenEffectComponent___ctor(SoundPlayerOpenEffectComponent_o *this, const MethodInfo *method)
 {
-  if ( (byte_4C33133 & 1) == 0 )
+  if ( (byte_4C3E71D & 1) == 0 )
   {
-    sub_1C32C20(&CommonEffectComponent_TypeInfo);
-    byte_4C33133 = 1;
+    sub_1C37058(&CommonEffectComponent_TypeInfo);
+    byte_4C3E71D = 1;
   }
   if ( !CommonEffectComponent_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(CommonEffectComponent_TypeInfo);
@@ -49,7 +49,7 @@ void SoundPlayerOpenEffectComponent__setAnimEndCallback(
   const MethodInfo *v3; // x3
 
   this->fields.animEndCallback = callback;
-  sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.animEndCallback, (int32_t)callback, (int32_t)method, v3);
+  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.animEndCallback, (int32_t)callback, (int32_t)method, v3);
 }
 
 
@@ -61,7 +61,7 @@ void SoundPlayerOpenEffectComponent__setChangeUiCallback(
   const MethodInfo *v3; // x3
 
   this->fields.changeUiCallback = callback;
-  sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.changeUiCallback, (int32_t)callback, (int32_t)method, v3);
+  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.changeUiCallback, (int32_t)callback, (int32_t)method, v3);
 }
 
 
@@ -73,5 +73,5 @@ void SoundPlayerOpenEffectComponent__setPlayIconAnimCallBack(
   const MethodInfo *v3; // x3
 
   this->fields.playIconAnimCallback = callback;
-  sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.playIconAnimCallback, (int32_t)callback, (int32_t)method, v3);
+  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.playIconAnimCallback, (int32_t)callback, (int32_t)method, v3);
 }

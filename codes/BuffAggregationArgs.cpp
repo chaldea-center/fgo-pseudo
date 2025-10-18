@@ -12,26 +12,26 @@ void BuffAggregationArgs___cctor(const MethodInfo *method)
   int32_t v10; // w2
   const MethodInfo *v11; // x3
 
-  if ( (byte_4C3A240 & 1) == 0 )
+  if ( (byte_4C45931 & 1) == 0 )
   {
-    sub_1C32C20(&BuffAggregationArgs_TypeInfo);
-    byte_4C3A240 = 1;
+    sub_1C37058(&BuffAggregationArgs_TypeInfo);
+    byte_4C45931 = 1;
   }
-  v1 = sub_1C32E6C(BuffAggregationArgs_TypeInfo);
+  v1 = sub_1C372A4(BuffAggregationArgs_TypeInfo);
   *(_BYTE *)(v1 + 16) = 1;
   *(_WORD *)(v1 + 18) = 257;
   System_Object___ctor((Il2CppObject *)v1, 0);
   *(_WORD *)(v1 + 16) = 256;
   BuffAggregationArgs_TypeInfo->static_fields->DisplaySet = (struct BuffAggregationArgs_o *)v1;
-  sub_1C32BC4((CGThumbnailListItem_o *)BuffAggregationArgs_TypeInfo->static_fields, v1, v2, v3);
-  v4 = sub_1C32E6C(BuffAggregationArgs_TypeInfo);
+  sub_1C36FFC((CGThumbnailListItem_o *)BuffAggregationArgs_TypeInfo->static_fields, v1, v2, v3);
+  v4 = sub_1C372A4(BuffAggregationArgs_TypeInfo);
   *(_BYTE *)(v4 + 16) = 1;
   *(_WORD *)(v4 + 18) = 257;
   System_Object___ctor((Il2CppObject *)v4, 0);
   static_fields = BuffAggregationArgs_TypeInfo->static_fields;
   static_fields->LogicSet = (struct BuffAggregationArgs_o *)v4;
-  sub_1C32BC4((CGThumbnailListItem_o *)&static_fields->LogicSet, v4, v6, v7);
-  v8 = sub_1C32E6C(BuffAggregationArgs_TypeInfo);
+  sub_1C36FFC((CGThumbnailListItem_o *)&static_fields->LogicSet, v4, v6, v7);
+  v8 = sub_1C372A4(BuffAggregationArgs_TypeInfo);
   *(_BYTE *)(v8 + 16) = 1;
   *(_WORD *)(v8 + 18) = 257;
   System_Object___ctor((Il2CppObject *)v8, 0);
@@ -39,7 +39,7 @@ void BuffAggregationArgs___cctor(const MethodInfo *method)
   *(_BYTE *)(v8 + 19) = 0;
   v9 = BuffAggregationArgs_TypeInfo->static_fields;
   v9->EndMotionDisplaySet = (struct BuffAggregationArgs_o *)v8;
-  sub_1C32BC4((CGThumbnailListItem_o *)&v9->EndMotionDisplaySet, v8, v10, v11);
+  sub_1C36FFC((CGThumbnailListItem_o *)&v9->EndMotionDisplaySet, v8, v10, v11);
 }
 
 

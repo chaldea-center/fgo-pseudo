@@ -13,10 +13,10 @@ BattleLogicTask_array *PlayerComboEndServantAiTask__MakeActionTask(
   int v12; // w9
   BattleLogicTask_o *v13; // x11
 
-  if ( (byte_4C3AB71 & 1) == 0 )
+  if ( (byte_4C46268 & 1) == 0 )
   {
-    sub_1C32C20(&Method_System_Array_Empty_BattleLogicTask___);
-    byte_4C3AB71 = 1;
+    sub_1C37058(&Method_System_Array_Empty_BattleLogicTask___);
+    byte_4C46268 = 1;
   }
   result = BattleLogicServantAiTask__MakeActionTask((BattleLogicServantAiTask_o *)this, logic, method);
   if ( !result )
@@ -25,17 +25,17 @@ BattleLogicTask_array *PlayerComboEndServantAiTask__MakeActionTask(
     v8 = *((_QWORD *)Method_System_Array_Empty_BattleLogicTask___ + 7);
     if ( !v8 )
     {
-      sub_1C83390(Method_System_Array_Empty_BattleLogicTask___);
+      sub_1C877C8(Method_System_Array_Empty_BattleLogicTask___);
       v8 = v7[7];
     }
     v9 = *(_QWORD *)(v8 + 16);
     if ( (*(_BYTE *)(v9 + 309) & 1) == 0 )
-      v9 = sub_1C83334(inited);
+      v9 = sub_1C8776C(inited);
     if ( !*(_DWORD *)(v9 + 224) )
       inited = j_il2cpp_runtime_class_init_0(v9);
     v10 = *(_QWORD *)(v7[7] + 16LL);
     if ( (*(_BYTE *)(v10 + 309) & 1) == 0 )
-      v10 = sub_1C83334(inited);
+      v10 = sub_1C8776C(inited);
     result = **(BattleLogicTask_array ***)(v10 + 184);
     if ( !result )
       goto LABEL_19;
@@ -47,7 +47,7 @@ BattleLogicTask_array *PlayerComboEndServantAiTask__MakeActionTask(
     while ( 1 )
     {
       if ( max_length == v12 )
-        sub_1C32E84(result);
+        sub_1C372BC(result);
       v13 = result->m_Items[v12];
       if ( !v13 )
         break;
@@ -59,7 +59,7 @@ BattleLogicTask_array *PlayerComboEndServantAiTask__MakeActionTask(
         return result;
     }
 LABEL_19:
-    sub_1C32E7C(result);
+    sub_1C372B4(result);
   }
   return result;
 }

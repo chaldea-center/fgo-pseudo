@@ -2,14 +2,14 @@ void NpcServantFollowerIndividualityEntity___ctor(
         NpcServantFollowerIndividualityEntity_o *this,
         const MethodInfo *method)
 {
-  if ( (byte_4C37F42 & 1) == 0 )
+  if ( (byte_4C4353B & 1) == 0 )
   {
-    sub_1C32C20(&Method_DataEntityBase_long___ctor__);
-    byte_4C37F42 = 1;
+    sub_1C37058(&Method_DataEntityBase_long___ctor__);
+    byte_4C4353B = 1;
   }
   DataEntityBase_long____ctor(
     (DataEntityBase_long__o *)this,
-    (const MethodInfo_339439C *)Method_DataEntityBase_long___ctor__);
+    (const MethodInfo_339EC04 *)Method_DataEntityBase_long___ctor__);
 }
 
 
@@ -35,18 +35,18 @@ System_Int32_array *NpcServantFollowerIndividualityEntity__GetAddIndividuality(
   _QWORD *v10; // x9
   __int64 size; // x10
 
-  if ( (byte_4C37F40 & 1) == 0 )
+  if ( (byte_4C43539 & 1) == 0 )
   {
-    sub_1C32C20(&Method_System_Collections_Generic_List_int__Add__);
-    sub_1C32C20(&Method_System_Collections_Generic_List_int__ToArray__);
-    sub_1C32C20(&Method_System_Collections_Generic_List_int___ctor__);
-    sub_1C32C20(&System_Collections_Generic_List_int__TypeInfo);
-    byte_4C37F40 = 1;
+    sub_1C37058(&Method_System_Collections_Generic_List_int__Add__);
+    sub_1C37058(&Method_System_Collections_Generic_List_int__ToArray__);
+    sub_1C37058(&Method_System_Collections_Generic_List_int___ctor__);
+    sub_1C37058(&System_Collections_Generic_List_int__TypeInfo);
+    byte_4C43539 = 1;
   }
-  v3 = (System_Collections_Generic_List_int__o *)sub_1C32E6C(System_Collections_Generic_List_int__TypeInfo);
+  v3 = (System_Collections_Generic_List_int__o *)sub_1C372A4(System_Collections_Generic_List_int__TypeInfo);
   System_Collections_Generic_List_int____ctor(
     v3,
-    (const MethodInfo_377AF44 *)Method_System_Collections_Generic_List_int___ctor__);
+    (const MethodInfo_37857AC *)Method_System_Collections_Generic_List_int___ctor__);
   individuality = this->fields.individuality;
   if ( !individuality )
     goto LABEL_16;
@@ -57,7 +57,7 @@ System_Int32_array *NpcServantFollowerIndividualityEntity__GetAddIndividuality(
     do
     {
       if ( v7 >= (unsigned int)max_length )
-        sub_1C32E84(v4);
+        sub_1C372BC(v4);
       v8 = individuality->m_Items[v7];
       if ( v8 >= 1 )
       {
@@ -74,7 +74,7 @@ System_Int32_array *NpcServantFollowerIndividualityEntity__GetAddIndividuality(
           System_Collections_Generic_List_int___AddWithResize(
             v3,
             v8,
-            *(const MethodInfo_377B798 **)(*(_QWORD *)(v10[4] + 192LL) + 112LL));
+            *(const MethodInfo_3786000 **)(*(_QWORD *)(v10[4] + 192LL) + 112LL));
         }
         else
         {
@@ -88,10 +88,10 @@ System_Int32_array *NpcServantFollowerIndividualityEntity__GetAddIndividuality(
   }
   if ( !v3 )
 LABEL_16:
-    sub_1C32E7C(v4);
+    sub_1C372B4(v4);
   return System_Collections_Generic_List_int___ToArray(
            v3,
-           (const MethodInfo_377D250 *)Method_System_Collections_Generic_List_int__ToArray__);
+           (const MethodInfo_3787AB8 *)Method_System_Collections_Generic_List_int__ToArray__);
 }
 
 
@@ -111,23 +111,23 @@ System_Int32_array *NpcServantFollowerIndividualityEntity__GetExcludedIndividual
   _QWORD *v13; // x9
   __int64 size; // x10
 
-  if ( (byte_4C37F41 & 1) == 0 )
+  if ( (byte_4C4353A & 1) == 0 )
   {
-    sub_1C32C20(&Method_System_Collections_Generic_List_int__Add__);
-    sub_1C32C20(&Method_System_Collections_Generic_List_int__Contains__);
-    sub_1C32C20(&Method_System_Collections_Generic_List_int__ToArray__);
-    sub_1C32C20(&Method_System_Collections_Generic_List_int___ctor__);
-    sub_1C32C20(&Method_System_Collections_Generic_List_int__get_Count__);
-    sub_1C32C20(&System_Collections_Generic_List_int__TypeInfo);
-    byte_4C37F41 = 1;
+    sub_1C37058(&Method_System_Collections_Generic_List_int__Add__);
+    sub_1C37058(&Method_System_Collections_Generic_List_int__Contains__);
+    sub_1C37058(&Method_System_Collections_Generic_List_int__ToArray__);
+    sub_1C37058(&Method_System_Collections_Generic_List_int___ctor__);
+    sub_1C37058(&Method_System_Collections_Generic_List_int__get_Count__);
+    sub_1C37058(&System_Collections_Generic_List_int__TypeInfo);
+    byte_4C4353A = 1;
   }
   SubIndividuality = NpcServantFollowerIndividualityEntity__GetSubIndividuality(
                        this,
                        (const MethodInfo *)individualities);
-  v6 = (System_Collections_Generic_List_int__o *)sub_1C32E6C(System_Collections_Generic_List_int__TypeInfo);
+  v6 = (System_Collections_Generic_List_int__o *)sub_1C372A4(System_Collections_Generic_List_int__TypeInfo);
   System_Collections_Generic_List_int____ctor(
     v6,
-    (const MethodInfo_377AF44 *)Method_System_Collections_Generic_List_int___ctor__);
+    (const MethodInfo_37857AC *)Method_System_Collections_Generic_List_int___ctor__);
   if ( !SubIndividuality || SubIndividuality->fields._size < 1 )
     return individualities;
   if ( !individualities )
@@ -141,11 +141,11 @@ System_Int32_array *NpcServantFollowerIndividualityEntity__GetExcludedIndividual
     {
       if ( v9 >= (unsigned int)max_length )
 LABEL_20:
-        sub_1C32E84(v7);
+        sub_1C372BC(v7);
       v7 = System_Collections_Generic_List_int___Contains(
              SubIndividuality,
              m_Items[v9],
-             (const MethodInfo_377BB10 *)Method_System_Collections_Generic_List_int__Contains__);
+             (const MethodInfo_3786378 *)Method_System_Collections_Generic_List_int__Contains__);
       if ( !v7 )
       {
         if ( v9 >= LODWORD(individualities->max_length) )
@@ -164,7 +164,7 @@ LABEL_20:
           System_Collections_Generic_List_int___AddWithResize(
             v6,
             v11,
-            *(const MethodInfo_377B798 **)(*(_QWORD *)(v13[4] + 192LL) + 112LL));
+            *(const MethodInfo_3786000 **)(*(_QWORD *)(v13[4] + 192LL) + 112LL));
         }
         else
         {
@@ -178,10 +178,10 @@ LABEL_20:
   }
   if ( !v6 )
 LABEL_21:
-    sub_1C32E7C(v7);
+    sub_1C372B4(v7);
   return System_Collections_Generic_List_int___ToArray(
            v6,
-           (const MethodInfo_377D250 *)Method_System_Collections_Generic_List_int__ToArray__);
+           (const MethodInfo_3787AB8 *)Method_System_Collections_Generic_List_int__ToArray__);
 }
 
 
@@ -200,29 +200,29 @@ System_Collections_Generic_List_int__o *NpcServantFollowerIndividualityEntity__G
   _QWORD *v11; // x9
   __int64 size; // x10
 
-  if ( (byte_4C37F3F & 1) == 0 )
+  if ( (byte_4C43538 & 1) == 0 )
   {
-    sub_1C32C20(&Method_System_Collections_Generic_List_int__Add__);
-    sub_1C32C20(&Method_System_Collections_Generic_List_int___ctor__);
-    sub_1C32C20(&System_Collections_Generic_List_int__TypeInfo);
-    sub_1C32C20(&System_Math_TypeInfo);
-    byte_4C37F3F = 1;
+    sub_1C37058(&Method_System_Collections_Generic_List_int__Add__);
+    sub_1C37058(&Method_System_Collections_Generic_List_int___ctor__);
+    sub_1C37058(&System_Collections_Generic_List_int__TypeInfo);
+    sub_1C37058(&System_Math_TypeInfo);
+    byte_4C43538 = 1;
   }
-  v3 = (System_Collections_Generic_List_int__o *)sub_1C32E6C(System_Collections_Generic_List_int__TypeInfo);
+  v3 = (System_Collections_Generic_List_int__o *)sub_1C372A4(System_Collections_Generic_List_int__TypeInfo);
   System_Collections_Generic_List_int____ctor(
     v3,
-    (const MethodInfo_377AF44 *)Method_System_Collections_Generic_List_int___ctor__);
+    (const MethodInfo_37857AC *)Method_System_Collections_Generic_List_int___ctor__);
   individuality = this->fields.individuality;
   if ( !individuality )
 LABEL_21:
-    sub_1C32E7C(v4);
+    sub_1C372B4(v4);
   max_length = individuality->max_length;
   if ( (int)max_length >= 1 )
   {
     for ( i = 0; (__int64)i < (int)max_length; ++i )
     {
       if ( i >= (unsigned int)max_length )
-        sub_1C32E84(v4);
+        sub_1C372BC(v4);
       v8 = individuality->m_Items[i];
       if ( v8 < 0 )
       {
@@ -246,7 +246,7 @@ LABEL_21:
           System_Collections_Generic_List_int___AddWithResize(
             v3,
             v9,
-            *(const MethodInfo_377B798 **)(*(_QWORD *)(v11[4] + 192LL) + 112LL));
+            *(const MethodInfo_3786000 **)(*(_QWORD *)(v11[4] + 192LL) + 112LL));
         }
         else
         {

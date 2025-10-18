@@ -7,28 +7,28 @@ void MaterialServantLimitCountManager___cctor(const MethodInfo *method)
   int32_t v5; // w2
   const MethodInfo *v6; // x3
 
-  if ( (byte_4C38CEA & 1) == 0 )
+  if ( (byte_4C442E3 & 1) == 0 )
   {
-    sub_1C32C20(&Method_System_Collections_Generic_List_MaterialServantLimitCountManager_ServantLimitCountInfo___ctor__);
-    sub_1C32C20(&System_Collections_Generic_List_MaterialServantLimitCountManager_ServantLimitCountInfo__TypeInfo);
-    sub_1C32C20(&MaterialServantLimitCountManager_TypeInfo);
-    sub_1C32C20(&StringLiteral_6675/*"Fgo_20191017"*/);
-    byte_4C38CEA = 1;
+    sub_1C37058(&Method_System_Collections_Generic_List_MaterialServantLimitCountManager_ServantLimitCountInfo___ctor__);
+    sub_1C37058(&System_Collections_Generic_List_MaterialServantLimitCountManager_ServantLimitCountInfo__TypeInfo);
+    sub_1C37058(&MaterialServantLimitCountManager_TypeInfo);
+    sub_1C37058(&StringLiteral_6676/*"Fgo_20191017"*/);
+    byte_4C442E3 = 1;
   }
-  MaterialServantLimitCountManager_TypeInfo->static_fields->SAVE_DATA_VERSION = (struct System_String_o *)StringLiteral_6675/*"Fgo_20191017"*/;
-  sub_1C32BC4(
+  MaterialServantLimitCountManager_TypeInfo->static_fields->SAVE_DATA_VERSION = (struct System_String_o *)StringLiteral_6676/*"Fgo_20191017"*/;
+  sub_1C36FFC(
     (CGThumbnailListItem_o *)MaterialServantLimitCountManager_TypeInfo->static_fields,
-    StringLiteral_6675/*"Fgo_20191017"*/,
+    StringLiteral_6676/*"Fgo_20191017"*/,
     v1,
     v2);
   *(_WORD *)&MaterialServantLimitCountManager_TypeInfo->static_fields->isModfiy = 0;
-  v3 = (System_Collections_Generic_List_object__o *)sub_1C32E6C(System_Collections_Generic_List_MaterialServantLimitCountManager_ServantLimitCountInfo__TypeInfo);
+  v3 = (System_Collections_Generic_List_object__o *)sub_1C372A4(System_Collections_Generic_List_MaterialServantLimitCountManager_ServantLimitCountInfo__TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v3,
-    (const MethodInfo_3797F88 *)Method_System_Collections_Generic_List_MaterialServantLimitCountManager_ServantLimitCountInfo___ctor__);
+    (const MethodInfo_37A27F0 *)Method_System_Collections_Generic_List_MaterialServantLimitCountManager_ServantLimitCountInfo___ctor__);
   static_fields = MaterialServantLimitCountManager_TypeInfo->static_fields;
   static_fields->limitCountList = (struct System_Collections_Generic_List_MaterialServantLimitCountManager_ServantLimitCountInfo__o *)v3;
-  sub_1C32BC4((CGThumbnailListItem_o *)&static_fields->limitCountList, (int32_t)v3, v5, v6);
+  sub_1C36FFC((CGThumbnailListItem_o *)&static_fields->limitCountList, (int32_t)v3, v5, v6);
 }
 
 
@@ -45,12 +45,12 @@ void MaterialServantLimitCountManager__ClearSaveDataList(const MethodInfo *metho
   int32_t size; // w2
   int v4; // w9
 
-  if ( (byte_4C38CE5 & 1) == 0 )
+  if ( (byte_4C442DE & 1) == 0 )
   {
-    sub_1C32C20(&Method_System_Collections_Generic_List_MaterialServantLimitCountManager_ServantLimitCountInfo__Clear__);
-    sub_1C32C20(&Method_System_Collections_Generic_List_MaterialServantLimitCountManager_ServantLimitCountInfo__get_Count__);
-    sub_1C32C20(&MaterialServantLimitCountManager_TypeInfo);
-    byte_4C38CE5 = 1;
+    sub_1C37058(&Method_System_Collections_Generic_List_MaterialServantLimitCountManager_ServantLimitCountInfo__Clear__);
+    sub_1C37058(&Method_System_Collections_Generic_List_MaterialServantLimitCountManager_ServantLimitCountInfo__get_Count__);
+    sub_1C37058(&MaterialServantLimitCountManager_TypeInfo);
+    byte_4C442DE = 1;
   }
   v1 = MaterialServantLimitCountManager_TypeInfo;
   if ( !MaterialServantLimitCountManager_TypeInfo->_2.cctor_finished )
@@ -70,7 +70,7 @@ void MaterialServantLimitCountManager__ClearSaveDataList(const MethodInfo *metho
     limitCountList = MaterialServantLimitCountManager_TypeInfo->static_fields->limitCountList;
     if ( !limitCountList )
 LABEL_14:
-      sub_1C32E7C(v1);
+      sub_1C372B4(v1);
   }
   size = limitCountList->fields._size;
   v4 = limitCountList->fields._version + 1;
@@ -97,10 +97,10 @@ void MaterialServantLimitCountManager__DeleteSaveData(const MethodInfo *method)
   System_String_o *SaveFileName; // x19
   MaterialServantLimitCountManager_c *v3; // x0
 
-  if ( (byte_4C38CE3 & 1) == 0 )
+  if ( (byte_4C442DC & 1) == 0 )
   {
-    sub_1C32C20(&MaterialServantLimitCountManager_TypeInfo);
-    byte_4C38CE3 = 1;
+    sub_1C37058(&MaterialServantLimitCountManager_TypeInfo);
+    byte_4C442DC = 1;
   }
   v1 = MaterialServantLimitCountManager_TypeInfo;
   if ( !MaterialServantLimitCountManager_TypeInfo->_2.cctor_finished )
@@ -123,12 +123,12 @@ int32_t MaterialServantLimitCountManager__GetLimitCount(int32_t servantId, const
   int v6; // w22
   int32_t i; // w20
 
-  if ( (byte_4C38CE7 & 1) == 0 )
+  if ( (byte_4C442E0 & 1) == 0 )
   {
-    sub_1C32C20(&Method_System_Collections_Generic_List_MaterialServantLimitCountManager_ServantLimitCountInfo__get_Count__);
-    sub_1C32C20(&Method_System_Collections_Generic_List_MaterialServantLimitCountManager_ServantLimitCountInfo__get_Item__);
-    sub_1C32C20(&MaterialServantLimitCountManager_TypeInfo);
-    byte_4C38CE7 = 1;
+    sub_1C37058(&Method_System_Collections_Generic_List_MaterialServantLimitCountManager_ServantLimitCountInfo__get_Count__);
+    sub_1C37058(&Method_System_Collections_Generic_List_MaterialServantLimitCountManager_ServantLimitCountInfo__get_Item__);
+    sub_1C37058(&MaterialServantLimitCountManager_TypeInfo);
+    byte_4C442E0 = 1;
   }
   Item = MaterialServantLimitCountManager_TypeInfo;
   if ( !MaterialServantLimitCountManager_TypeInfo->_2.cctor_finished )
@@ -139,7 +139,7 @@ int32_t MaterialServantLimitCountManager__GetLimitCount(int32_t servantId, const
   v4 = *(_QWORD *)(*((_QWORD *)Item + 23) + 16LL);
   if ( !v4 )
 LABEL_17:
-    sub_1C32E7C(Item);
+    sub_1C372B4(Item);
   v5 = *(_DWORD *)(v4 + 24);
   v6 = v5 - 1;
   if ( v5 < 1 )
@@ -157,7 +157,7 @@ LABEL_17:
     Item = System_Collections_Generic_List_object___get_Item(
              (System_Collections_Generic_List_object__o *)Item,
              i,
-             (const MethodInfo_37984EC *)Method_System_Collections_Generic_List_MaterialServantLimitCountManager_ServantLimitCountInfo__get_Item__);
+             (const MethodInfo_37A2D54 *)Method_System_Collections_Generic_List_MaterialServantLimitCountManager_ServantLimitCountInfo__get_Item__);
     if ( !Item )
       goto LABEL_17;
     if ( *((_DWORD *)Item + 4) == servantId )
@@ -175,12 +175,12 @@ System_String_o *MaterialServantLimitCountManager__GetSaveFileName(const MethodI
   System_String_o *DatFileSavePath; // x19
   System_String_o *FileName; // x2
 
-  if ( (byte_4C38CE2 & 1) == 0 )
+  if ( (byte_4C442DB & 1) == 0 )
   {
-    sub_1C32C20(&AndroidUtil_TypeInfo);
-    sub_1C32C20(&DatFileName_TypeInfo);
-    sub_1C32C20(&StringLiteral_1048/*"/"*/);
-    byte_4C38CE2 = 1;
+    sub_1C37058(&AndroidUtil_TypeInfo);
+    sub_1C37058(&DatFileName_TypeInfo);
+    sub_1C37058(&StringLiteral_1048/*"/"*/);
+    byte_4C442DB = 1;
   }
   if ( !AndroidUtil_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(AndroidUtil_TypeInfo);
@@ -188,7 +188,7 @@ System_String_o *MaterialServantLimitCountManager__GetSaveFileName(const MethodI
   if ( !DatFileName_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DatFileName_TypeInfo);
   FileName = DatFileName__getFileName(26, 0);
-  return System_String__Concat_63556792(DatFileSavePath, (System_String_o *)StringLiteral_1048/*"/"*/, FileName, 0);
+  return System_String__Concat_63599904(DatFileSavePath, (System_String_o *)StringLiteral_1048/*"/"*/, FileName, 0);
 }
 
 
@@ -196,10 +196,10 @@ void MaterialServantLimitCountManager__Initialize(const MethodInfo *method)
 {
   MaterialServantLimitCountManager_c *v1; // x0
 
-  if ( (byte_4C38CE4 & 1) == 0 )
+  if ( (byte_4C442DD & 1) == 0 )
   {
-    sub_1C32C20(&MaterialServantLimitCountManager_TypeInfo);
-    byte_4C38CE4 = 1;
+    sub_1C37058(&MaterialServantLimitCountManager_TypeInfo);
+    byte_4C442DD = 1;
   }
   v1 = MaterialServantLimitCountManager_TypeInfo;
   if ( !MaterialServantLimitCountManager_TypeInfo->_2.cctor_finished )
@@ -242,15 +242,15 @@ bool MaterialServantLimitCountManager__ReadData(const MethodInfo *method)
   __int64 v31; // x0
   MaterialServantLimitCountManager_c *v32; // x0
 
-  if ( (byte_4C38CE8 & 1) == 0 )
+  if ( (byte_4C442E1 & 1) == 0 )
   {
-    sub_1C32C20(&System_IO_BinaryReader_TypeInfo);
-    sub_1C32C20(&System_IDisposable_TypeInfo);
-    sub_1C32C20(&Method_System_Collections_Generic_List_MaterialServantLimitCountManager_ServantLimitCountInfo__Add__);
-    sub_1C32C20(&ManagerConfig_TypeInfo);
-    sub_1C32C20(&MaterialServantLimitCountManager_TypeInfo);
-    sub_1C32C20(&MaterialServantLimitCountManager_ServantLimitCountInfo_TypeInfo);
-    byte_4C38CE8 = 1;
+    sub_1C37058(&System_IO_BinaryReader_TypeInfo);
+    sub_1C37058(&System_IDisposable_TypeInfo);
+    sub_1C37058(&Method_System_Collections_Generic_List_MaterialServantLimitCountManager_ServantLimitCountInfo__Add__);
+    sub_1C37058(&ManagerConfig_TypeInfo);
+    sub_1C37058(&MaterialServantLimitCountManager_TypeInfo);
+    sub_1C37058(&MaterialServantLimitCountManager_ServantLimitCountInfo_TypeInfo);
+    byte_4C442E1 = 1;
   }
   v1 = MaterialServantLimitCountManager_TypeInfo;
   if ( !MaterialServantLimitCountManager_TypeInfo->_2.cctor_finished )
@@ -278,10 +278,10 @@ bool MaterialServantLimitCountManager__ReadData(const MethodInfo *method)
         j_il2cpp_runtime_class_init_0(MaterialServantLimitCountManager_TypeInfo);
       MaterialServantLimitCountManager__ClearSaveDataList((const MethodInfo *)v6);
       v7 = (System_IO_Stream_o *)System_IO_File__OpenRead(SaveFileName, 0);
-      v8 = (System_IO_BinaryReader_o *)sub_1C32E6C(System_IO_BinaryReader_TypeInfo);
+      v8 = (System_IO_BinaryReader_o *)sub_1C372A4(System_IO_BinaryReader_TypeInfo);
       System_IO_BinaryReader___ctor(v8, v7, 0);
       if ( !v8 )
-        sub_1C32E7C(v9);
+        sub_1C372B4(v9);
       v10 = (System_String_o *)((__int64 (__fastcall *)(System_IO_BinaryReader_o *, const MethodInfo *))v8->klass->vtable._22_ReadString.methodPtr)(
                                  v8,
                                  v8->klass->vtable._22_ReadString.method);
@@ -320,10 +320,10 @@ bool MaterialServantLimitCountManager__ReadData(const MethodInfo *method)
             v17 = ((__int64 (__fastcall *)(System_IO_BinaryReader_o *, const MethodInfo *))v8->klass->vtable._15_ReadInt32.methodPtr)(
                     v8,
                     v8->klass->vtable._15_ReadInt32.method);
-            v18 = sub_1C32E6C(MaterialServantLimitCountManager_ServantLimitCountInfo_TypeInfo);
+            v18 = sub_1C372A4(MaterialServantLimitCountManager_ServantLimitCountInfo_TypeInfo);
             System_Object___ctor((Il2CppObject *)v18, 0);
             if ( !v18 )
-              sub_1C32E7C(v19);
+              sub_1C372B4(v19);
             *(_DWORD *)(v18 + 16) = v16;
             *(_DWORD *)(v18 + 20) = v17;
             v22 = MaterialServantLimitCountManager_TypeInfo;
@@ -334,26 +334,26 @@ bool MaterialServantLimitCountManager__ReadData(const MethodInfo *method)
             }
             limitCountList = (System_Collections_Generic_List_object__o *)v22->static_fields->limitCountList;
             if ( !limitCountList )
-              sub_1C32E7C(0);
+              sub_1C372B4(0);
             items = limitCountList->fields._items;
             v25 = Method_System_Collections_Generic_List_MaterialServantLimitCountManager_ServantLimitCountInfo__Add__;
             ++limitCountList->fields._version;
             if ( !items )
-              sub_1C32E7C(limitCountList);
+              sub_1C372B4(limitCountList);
             size = limitCountList->fields._size;
             if ( (unsigned int)size >= LODWORD(items->max_length) )
             {
               System_Collections_Generic_List_object___AddWithResize(
                 limitCountList,
                 (Il2CppObject *)v18,
-                *(const MethodInfo_37987BC **)(*(_QWORD *)(v25[4] + 192LL) + 112LL));
+                *(const MethodInfo_37A3024 **)(*(_QWORD *)(v25[4] + 192LL) + 112LL));
             }
             else
             {
               v27 = &items->obj.klass + size;
               limitCountList->fields._size = size + 1;
               v27[4] = (Il2CppClass *)v18;
-              sub_1C32BC4((CGThumbnailListItem_o *)(v27 + 4), v18, v20, v21);
+              sub_1C36FFC((CGThumbnailListItem_o *)(v27 + 4), v18, v20, v21);
             }
             --v15;
           }
@@ -378,7 +378,7 @@ bool MaterialServantLimitCountManager__ReadData(const MethodInfo *method)
       else
       {
 LABEL_36:
-        v31 = sub_1C83438(v8, System_IDisposable_TypeInfo, 0);
+        v31 = sub_1C87870(v8, System_IDisposable_TypeInfo, 0);
       }
       (*(void (__fastcall **)(System_IO_BinaryReader_o *, _QWORD))v31)(v8, *(_QWORD *)(v31 + 8));
       if ( (v12 | 8) == 8 )
@@ -414,14 +414,14 @@ void MaterialServantLimitCountManager__SetLimitCount(int32_t servantId, int32_t 
   __int64 v17; // x8
   MaterialServantLimitCountManager_c *v18; // x0
 
-  if ( (byte_4C38CE6 & 1) == 0 )
+  if ( (byte_4C442DF & 1) == 0 )
   {
-    sub_1C32C20(&Method_System_Collections_Generic_List_MaterialServantLimitCountManager_ServantLimitCountInfo__Add__);
-    sub_1C32C20(&Method_System_Collections_Generic_List_MaterialServantLimitCountManager_ServantLimitCountInfo__get_Count__);
-    sub_1C32C20(&Method_System_Collections_Generic_List_MaterialServantLimitCountManager_ServantLimitCountInfo__get_Item__);
-    sub_1C32C20(&MaterialServantLimitCountManager_TypeInfo);
-    sub_1C32C20(&MaterialServantLimitCountManager_ServantLimitCountInfo_TypeInfo);
-    byte_4C38CE6 = 1;
+    sub_1C37058(&Method_System_Collections_Generic_List_MaterialServantLimitCountManager_ServantLimitCountInfo__Add__);
+    sub_1C37058(&Method_System_Collections_Generic_List_MaterialServantLimitCountManager_ServantLimitCountInfo__get_Count__);
+    sub_1C37058(&Method_System_Collections_Generic_List_MaterialServantLimitCountManager_ServantLimitCountInfo__get_Item__);
+    sub_1C37058(&MaterialServantLimitCountManager_TypeInfo);
+    sub_1C37058(&MaterialServantLimitCountManager_ServantLimitCountInfo_TypeInfo);
+    byte_4C442DF = 1;
   }
   limitCountList = (System_Collections_Generic_List_object__o *)MaterialServantLimitCountManager_TypeInfo;
   if ( !MaterialServantLimitCountManager_TypeInfo->_2.cctor_finished )
@@ -437,7 +437,7 @@ void MaterialServantLimitCountManager__SetLimitCount(int32_t servantId, int32_t 
   if ( v7 < 1 )
   {
 LABEL_15:
-    v10 = sub_1C32E6C(MaterialServantLimitCountManager_ServantLimitCountInfo_TypeInfo);
+    v10 = sub_1C372A4(MaterialServantLimitCountManager_ServantLimitCountInfo_TypeInfo);
     System_Object___ctor((Il2CppObject *)v10, 0);
     if ( v10 )
     {
@@ -463,21 +463,21 @@ LABEL_15:
             System_Collections_Generic_List_object___AddWithResize(
               limitCountList,
               (Il2CppObject *)v10,
-              *(const MethodInfo_37987BC **)(*(_QWORD *)(v15[4] + 192LL) + 112LL));
+              *(const MethodInfo_37A3024 **)(*(_QWORD *)(v15[4] + 192LL) + 112LL));
           }
           else
           {
             v17 = (__int64)items + 8 * size;
             limitCountList->fields._size = size + 1;
             *(_QWORD *)(v17 + 32) = v10;
-            sub_1C32BC4((CGThumbnailListItem_o *)(v17 + 32), v10, v11, v12);
+            sub_1C36FFC((CGThumbnailListItem_o *)(v17 + 32), v10, v11, v12);
           }
           goto LABEL_23;
         }
       }
     }
 LABEL_29:
-    sub_1C32E7C(limitCountList);
+    sub_1C372B4(limitCountList);
   }
   for ( i = 0; ; ++i )
   {
@@ -492,7 +492,7 @@ LABEL_29:
     limitCountList = (System_Collections_Generic_List_object__o *)System_Collections_Generic_List_object___get_Item(
                                                                     limitCountList,
                                                                     i,
-                                                                    (const MethodInfo_37984EC *)Method_System_Collections_Generic_List_MaterialServantLimitCountManager_ServantLimitCountInfo__get_Item__);
+                                                                    (const MethodInfo_37A2D54 *)Method_System_Collections_Generic_List_MaterialServantLimitCountManager_ServantLimitCountInfo__get_Item__);
     if ( !limitCountList )
       goto LABEL_29;
     if ( LODWORD(limitCountList->fields._items) == servantId )
@@ -539,15 +539,15 @@ bool MaterialServantLimitCountManager__WriteData(const MethodInfo *method)
   int32_t *p_offset; // x10
   __int64 v21; // x0
 
-  if ( (byte_4C38CE9 & 1) == 0 )
+  if ( (byte_4C442E2 & 1) == 0 )
   {
-    sub_1C32C20(&System_IO_BinaryWriter_TypeInfo);
-    sub_1C32C20(&System_IDisposable_TypeInfo);
-    sub_1C32C20(&Method_System_Collections_Generic_List_MaterialServantLimitCountManager_ServantLimitCountInfo__get_Count__);
-    sub_1C32C20(&Method_System_Collections_Generic_List_MaterialServantLimitCountManager_ServantLimitCountInfo__get_Item__);
-    sub_1C32C20(&ManagerConfig_TypeInfo);
-    sub_1C32C20(&MaterialServantLimitCountManager_TypeInfo);
-    byte_4C38CE9 = 1;
+    sub_1C37058(&System_IO_BinaryWriter_TypeInfo);
+    sub_1C37058(&System_IDisposable_TypeInfo);
+    sub_1C37058(&Method_System_Collections_Generic_List_MaterialServantLimitCountManager_ServantLimitCountInfo__get_Count__);
+    sub_1C37058(&Method_System_Collections_Generic_List_MaterialServantLimitCountManager_ServantLimitCountInfo__get_Item__);
+    sub_1C37058(&ManagerConfig_TypeInfo);
+    sub_1C37058(&MaterialServantLimitCountManager_TypeInfo);
+    byte_4C442E2 = 1;
   }
   v1 = MaterialServantLimitCountManager_TypeInfo;
   if ( !MaterialServantLimitCountManager_TypeInfo->_2.cctor_finished )
@@ -577,8 +577,8 @@ bool MaterialServantLimitCountManager__WriteData(const MethodInfo *method)
     j_il2cpp_runtime_class_init_0(MaterialServantLimitCountManager_TypeInfo);
   SaveFileName = MaterialServantLimitCountManager__GetSaveFileName((const MethodInfo *)v5);
   v7 = (System_IO_Stream_o *)System_IO_File__OpenWrite(SaveFileName, 0);
-  v8 = (System_IO_BinaryWriter_o *)sub_1C32E6C(System_IO_BinaryWriter_TypeInfo);
-  System_IO_BinaryWriter___ctor_64429848(v8, v7, 0);
+  v8 = (System_IO_BinaryWriter_o *)sub_1C372A4(System_IO_BinaryWriter_TypeInfo);
+  System_IO_BinaryWriter___ctor_64472960(v8, v7, 0);
   v9 = MaterialServantLimitCountManager_TypeInfo;
   if ( !MaterialServantLimitCountManager_TypeInfo->_2.cctor_finished )
   {
@@ -588,9 +588,9 @@ bool MaterialServantLimitCountManager__WriteData(const MethodInfo *method)
   v10 = v9->static_fields;
   limitCountList = v10->limitCountList;
   if ( !limitCountList )
-    sub_1C32E7C(v9);
+    sub_1C372B4(v9);
   if ( !v8 )
-    sub_1C32E7C(v9);
+    sub_1C372B4(v9);
   size = limitCountList->fields._size;
   ((void (__fastcall *)(System_IO_BinaryWriter_o *, struct System_String_o *, const MethodInfo *))v8->klass->vtable._22_Write.methodPtr)(
     v8,
@@ -616,14 +616,14 @@ bool MaterialServantLimitCountManager__WriteData(const MethodInfo *method)
       }
       v15 = (System_Collections_Generic_List_object__o *)v14->static_fields->limitCountList;
       if ( !v15 )
-        sub_1C32E7C(0);
+        sub_1C372B4(0);
       Item = System_Collections_Generic_List_object___get_Item(
                v15,
                i,
-               (const MethodInfo_37984EC *)Method_System_Collections_Generic_List_MaterialServantLimitCountManager_ServantLimitCountInfo__get_Item__);
+               (const MethodInfo_37A2D54 *)Method_System_Collections_Generic_List_MaterialServantLimitCountManager_ServantLimitCountInfo__get_Item__);
       v17 = Item;
       if ( !Item )
-        sub_1C32E7C(0);
+        sub_1C372B4(0);
       ((void (__fastcall *)(System_IO_BinaryWriter_o *, _QWORD, const MethodInfo *))v8->klass->vtable._17_Write.methodPtr)(
         v8,
         LODWORD(Item[1].klass),
@@ -651,7 +651,7 @@ bool MaterialServantLimitCountManager__WriteData(const MethodInfo *method)
   else
   {
 LABEL_29:
-    v21 = sub_1C83438(v8, System_IDisposable_TypeInfo, 0);
+    v21 = sub_1C87870(v8, System_IDisposable_TypeInfo, 0);
   }
   (*(void (__fastcall **)(System_IO_BinaryWriter_o *, _QWORD))v21)(v8, *(_QWORD *)(v21 + 8));
   return 1;

@@ -83,222 +83,222 @@ void SetGameOptionComponent__CreateContentsArrayIfNotYet(SetGameOptionComponent_
   const MethodInfo *v71; // x3
   __int64 v72; // x0
 
-  if ( (byte_4C32A07 & 1) == 0 )
+  if ( (byte_4C3DFF1 & 1) == 0 )
   {
-    sub_1C32C20(&GameOptionContentBase___TypeInfo);
-    byte_4C32A07 = 1;
+    sub_1C37058(&GameOptionContentBase___TypeInfo);
+    byte_4C3DFF1 = 1;
   }
   if ( !this->fields.contentsArray )
   {
-    v3 = sub_1C32CC8(GameOptionContentBase___TypeInfo, 21);
+    v3 = sub_1C37100(GameOptionContentBase___TypeInfo, 21);
     if ( !v3 )
-      sub_1C32E7C(0);
+      sub_1C372B4(0);
     setResolutionOptionCtr = this->fields.setResolutionOptionCtr;
     v7 = v3;
     if ( !setResolutionOptionCtr
-      || (v3 = sub_1C32D5C(this->fields.setResolutionOptionCtr, *(_QWORD *)(*(_QWORD *)v3 + 64LL))) != 0 )
+      || (v3 = sub_1C37194(this->fields.setResolutionOptionCtr, *(_QWORD *)(*(_QWORD *)v3 + 64LL))) != 0 )
     {
       v8 = (_DWORD *)(v7 + 24);
       if ( !*(_DWORD *)(v7 + 24) )
         goto LABEL_69;
       *(_QWORD *)(v7 + 32) = setResolutionOptionCtr;
-      sub_1C32BC4((CGThumbnailListItem_o *)(v7 + 32), (int32_t)setResolutionOptionCtr, v4, v5);
+      sub_1C36FFC((CGThumbnailListItem_o *)(v7 + 32), (int32_t)setResolutionOptionCtr, v4, v5);
       setSmoothnessCtr = this->fields.setSmoothnessCtr;
       if ( !setSmoothnessCtr
-        || (v3 = sub_1C32D5C(this->fields.setSmoothnessCtr, *(_QWORD *)(*(_QWORD *)v7 + 64LL))) != 0 )
+        || (v3 = sub_1C37194(this->fields.setSmoothnessCtr, *(_QWORD *)(*(_QWORD *)v7 + 64LL))) != 0 )
       {
         if ( *v8 <= 1u )
           goto LABEL_69;
         *(_QWORD *)(v7 + 40) = setSmoothnessCtr;
-        sub_1C32BC4((CGThumbnailListItem_o *)(v7 + 40), (int32_t)setSmoothnessCtr, v9, v10);
+        sub_1C36FFC((CGThumbnailListItem_o *)(v7 + 40), (int32_t)setSmoothnessCtr, v9, v10);
         setVolCtr = this->fields.setVolCtr;
-        if ( !setVolCtr || (v3 = sub_1C32D5C(this->fields.setVolCtr, *(_QWORD *)(*(_QWORD *)v7 + 64LL))) != 0 )
+        if ( !setVolCtr || (v3 = sub_1C37194(this->fields.setVolCtr, *(_QWORD *)(*(_QWORD *)v7 + 64LL))) != 0 )
         {
           if ( *v8 <= 2u )
             goto LABEL_69;
           *(_QWORD *)(v7 + 48) = setVolCtr;
-          sub_1C32BC4((CGThumbnailListItem_o *)(v7 + 48), (int32_t)setVolCtr, v12, v13);
+          sub_1C36FFC((CGThumbnailListItem_o *)(v7 + 48), (int32_t)setVolCtr, v12, v13);
           setScenarioTextSpeedCtr = this->fields.setScenarioTextSpeedCtr;
           if ( !setScenarioTextSpeedCtr
-            || (v3 = sub_1C32D5C(this->fields.setScenarioTextSpeedCtr, *(_QWORD *)(*(_QWORD *)v7 + 64LL))) != 0 )
+            || (v3 = sub_1C37194(this->fields.setScenarioTextSpeedCtr, *(_QWORD *)(*(_QWORD *)v7 + 64LL))) != 0 )
           {
             if ( *v8 <= 3u )
               goto LABEL_69;
             *(_QWORD *)(v7 + 56) = setScenarioTextSpeedCtr;
-            sub_1C32BC4((CGThumbnailListItem_o *)(v7 + 56), (int32_t)setScenarioTextSpeedCtr, v15, v16);
+            sub_1C36FFC((CGThumbnailListItem_o *)(v7 + 56), (int32_t)setScenarioTextSpeedCtr, v15, v16);
             setScenarioCtr = this->fields.setScenarioCtr;
             if ( !setScenarioCtr
-              || (v3 = sub_1C32D5C(this->fields.setScenarioCtr, *(_QWORD *)(*(_QWORD *)v7 + 64LL))) != 0 )
+              || (v3 = sub_1C37194(this->fields.setScenarioCtr, *(_QWORD *)(*(_QWORD *)v7 + 64LL))) != 0 )
             {
               if ( *v8 <= 4u )
                 goto LABEL_69;
               *(_QWORD *)(v7 + 64) = setScenarioCtr;
-              sub_1C32BC4((CGThumbnailListItem_o *)(v7 + 64), (int32_t)setScenarioCtr, v18, v19);
+              sub_1C36FFC((CGThumbnailListItem_o *)(v7 + 64), (int32_t)setScenarioCtr, v18, v19);
               setSpoilerProtectionCtr = this->fields.setSpoilerProtectionCtr;
               if ( !setSpoilerProtectionCtr
-                || (v3 = sub_1C32D5C(this->fields.setSpoilerProtectionCtr, *(_QWORD *)(*(_QWORD *)v7 + 64LL))) != 0 )
+                || (v3 = sub_1C37194(this->fields.setSpoilerProtectionCtr, *(_QWORD *)(*(_QWORD *)v7 + 64LL))) != 0 )
               {
                 if ( *v8 <= 5u )
                   goto LABEL_69;
                 *(_QWORD *)(v7 + 72) = setSpoilerProtectionCtr;
-                sub_1C32BC4((CGThumbnailListItem_o *)(v7 + 72), (int32_t)setSpoilerProtectionCtr, v21, v22);
+                sub_1C36FFC((CGThumbnailListItem_o *)(v7 + 72), (int32_t)setSpoilerProtectionCtr, v21, v22);
                 setSwitchCtr = this->fields.setSwitchCtr;
                 if ( !setSwitchCtr
-                  || (v3 = sub_1C32D5C(this->fields.setSwitchCtr, *(_QWORD *)(*(_QWORD *)v7 + 64LL))) != 0 )
+                  || (v3 = sub_1C37194(this->fields.setSwitchCtr, *(_QWORD *)(*(_QWORD *)v7 + 64LL))) != 0 )
                 {
                   if ( *v8 <= 6u )
                     goto LABEL_69;
                   *(_QWORD *)(v7 + 80) = setSwitchCtr;
-                  sub_1C32BC4((CGThumbnailListItem_o *)(v7 + 80), (int32_t)setSwitchCtr, v24, v25);
+                  sub_1C36FFC((CGThumbnailListItem_o *)(v7 + 80), (int32_t)setSwitchCtr, v24, v25);
                   setSwitch2Ctr = this->fields.setSwitch2Ctr;
                   if ( !setSwitch2Ctr
-                    || (v3 = sub_1C32D5C(this->fields.setSwitch2Ctr, *(_QWORD *)(*(_QWORD *)v7 + 64LL))) != 0 )
+                    || (v3 = sub_1C37194(this->fields.setSwitch2Ctr, *(_QWORD *)(*(_QWORD *)v7 + 64LL))) != 0 )
                   {
                     if ( *v8 <= 7u )
                       goto LABEL_69;
                     *(_QWORD *)(v7 + 88) = setSwitch2Ctr;
-                    sub_1C32BC4((CGThumbnailListItem_o *)(v7 + 88), (int32_t)setSwitch2Ctr, v27, v28);
+                    sub_1C36FFC((CGThumbnailListItem_o *)(v7 + 88), (int32_t)setSwitch2Ctr, v27, v28);
                     setPreBattleFormationCtr = this->fields.setPreBattleFormationCtr;
                     if ( !setPreBattleFormationCtr
-                      || (v3 = sub_1C32D5C(this->fields.setPreBattleFormationCtr, *(_QWORD *)(*(_QWORD *)v7 + 64LL))) != 0 )
+                      || (v3 = sub_1C37194(this->fields.setPreBattleFormationCtr, *(_QWORD *)(*(_QWORD *)v7 + 64LL))) != 0 )
                     {
                       if ( *v8 <= 8u )
                         goto LABEL_69;
                       *(_QWORD *)(v7 + 96) = setPreBattleFormationCtr;
-                      sub_1C32BC4((CGThumbnailListItem_o *)(v7 + 96), (int32_t)setPreBattleFormationCtr, v30, v31);
+                      sub_1C36FFC((CGThumbnailListItem_o *)(v7 + 96), (int32_t)setPreBattleFormationCtr, v30, v31);
                       setAdvantageClassAutoCtr = this->fields.setAdvantageClassAutoCtr;
                       if ( !setAdvantageClassAutoCtr
-                        || (v3 = sub_1C32D5C(this->fields.setAdvantageClassAutoCtr, *(_QWORD *)(*(_QWORD *)v7 + 64LL))) != 0 )
+                        || (v3 = sub_1C37194(this->fields.setAdvantageClassAutoCtr, *(_QWORD *)(*(_QWORD *)v7 + 64LL))) != 0 )
                       {
                         if ( *v8 <= 9u )
                           goto LABEL_69;
                         *(_QWORD *)(v7 + 104) = setAdvantageClassAutoCtr;
-                        sub_1C32BC4((CGThumbnailListItem_o *)(v7 + 104), (int32_t)setAdvantageClassAutoCtr, v33, v34);
+                        sub_1C36FFC((CGThumbnailListItem_o *)(v7 + 104), (int32_t)setAdvantageClassAutoCtr, v33, v34);
                         setAutoSelectPartyCtr = this->fields.setAutoSelectPartyCtr;
                         if ( !setAutoSelectPartyCtr
-                          || (v3 = sub_1C32D5C(this->fields.setAutoSelectPartyCtr, *(_QWORD *)(*(_QWORD *)v7 + 64LL))) != 0 )
+                          || (v3 = sub_1C37194(this->fields.setAutoSelectPartyCtr, *(_QWORD *)(*(_QWORD *)v7 + 64LL))) != 0 )
                         {
                           if ( *v8 <= 0xAu )
                             goto LABEL_69;
                           *(_QWORD *)(v7 + 112) = setAutoSelectPartyCtr;
-                          sub_1C32BC4((CGThumbnailListItem_o *)(v7 + 112), (int32_t)setAutoSelectPartyCtr, v36, v37);
+                          sub_1C36FFC((CGThumbnailListItem_o *)(v7 + 112), (int32_t)setAutoSelectPartyCtr, v36, v37);
                           setAutoOpenAutoOrganizationDialogCtr = this->fields.setAutoOpenAutoOrganizationDialogCtr;
                           if ( !setAutoOpenAutoOrganizationDialogCtr
-                            || (v3 = sub_1C32D5C(
+                            || (v3 = sub_1C37194(
                                        this->fields.setAutoOpenAutoOrganizationDialogCtr,
                                        *(_QWORD *)(*(_QWORD *)v7 + 64LL))) != 0 )
                           {
                             if ( *v8 <= 0xBu )
                               goto LABEL_69;
                             *(_QWORD *)(v7 + 120) = setAutoOpenAutoOrganizationDialogCtr;
-                            sub_1C32BC4(
+                            sub_1C36FFC(
                               (CGThumbnailListItem_o *)(v7 + 120),
                               (int32_t)setAutoOpenAutoOrganizationDialogCtr,
                               v39,
                               v40);
                             setTDPlaySpeedCtr = this->fields.setTDPlaySpeedCtr;
                             if ( !setTDPlaySpeedCtr
-                              || (v3 = sub_1C32D5C(this->fields.setTDPlaySpeedCtr, *(_QWORD *)(*(_QWORD *)v7 + 64LL))) != 0 )
+                              || (v3 = sub_1C37194(this->fields.setTDPlaySpeedCtr, *(_QWORD *)(*(_QWORD *)v7 + 64LL))) != 0 )
                             {
                               if ( *v8 <= 0xCu )
                                 goto LABEL_69;
                               *(_QWORD *)(v7 + 128) = setTDPlaySpeedCtr;
-                              sub_1C32BC4((CGThumbnailListItem_o *)(v7 + 128), (int32_t)setTDPlaySpeedCtr, v42, v43);
+                              sub_1C36FFC((CGThumbnailListItem_o *)(v7 + 128), (int32_t)setTDPlaySpeedCtr, v42, v43);
                               setRandomLimitCountCtr = this->fields.setRandomLimitCountCtr;
                               if ( !setRandomLimitCountCtr
-                                || (v3 = sub_1C32D5C(
+                                || (v3 = sub_1C37194(
                                            this->fields.setRandomLimitCountCtr,
                                            *(_QWORD *)(*(_QWORD *)v7 + 64LL))) != 0 )
                               {
                                 if ( *v8 <= 0xDu )
                                   goto LABEL_69;
                                 *(_QWORD *)(v7 + 136) = setRandomLimitCountCtr;
-                                sub_1C32BC4(
+                                sub_1C36FFC(
                                   (CGThumbnailListItem_o *)(v7 + 136),
                                   (int32_t)setRandomLimitCountCtr,
                                   v45,
                                   v46);
                                 setRandomLimitCountResetCtr = this->fields.setRandomLimitCountResetCtr;
                                 if ( !setRandomLimitCountResetCtr
-                                  || (v3 = sub_1C32D5C(
+                                  || (v3 = sub_1C37194(
                                              this->fields.setRandomLimitCountResetCtr,
                                              *(_QWORD *)(*(_QWORD *)v7 + 64LL))) != 0 )
                                 {
                                   if ( *v8 <= 0xEu )
                                     goto LABEL_69;
                                   *(_QWORD *)(v7 + 144) = setRandomLimitCountResetCtr;
-                                  sub_1C32BC4(
+                                  sub_1C36FFC(
                                     (CGThumbnailListItem_o *)(v7 + 144),
                                     (int32_t)setRandomLimitCountResetCtr,
                                     v48,
                                     v49);
                                   setSvtRandCtr = this->fields.setSvtRandCtr;
                                   if ( !setSvtRandCtr
-                                    || (v3 = sub_1C32D5C(this->fields.setSvtRandCtr, *(_QWORD *)(*(_QWORD *)v7 + 64LL))) != 0 )
+                                    || (v3 = sub_1C37194(this->fields.setSvtRandCtr, *(_QWORD *)(*(_QWORD *)v7 + 64LL))) != 0 )
                                   {
                                     if ( *v8 <= 0xFu )
                                       goto LABEL_69;
                                     *(_QWORD *)(v7 + 152) = setSvtRandCtr;
-                                    sub_1C32BC4((CGThumbnailListItem_o *)(v7 + 152), (int32_t)setSvtRandCtr, v51, v52);
+                                    sub_1C36FFC((CGThumbnailListItem_o *)(v7 + 152), (int32_t)setSvtRandCtr, v51, v52);
                                     setMessageDispCtr = this->fields.setMessageDispCtr;
                                     if ( !setMessageDispCtr
-                                      || (v3 = sub_1C32D5C(
+                                      || (v3 = sub_1C37194(
                                                  this->fields.setMessageDispCtr,
                                                  *(_QWORD *)(*(_QWORD *)v7 + 64LL))) != 0 )
                                     {
                                       if ( *v8 <= 0x10u )
                                         goto LABEL_69;
                                       *(_QWORD *)(v7 + 160) = setMessageDispCtr;
-                                      sub_1C32BC4(
+                                      sub_1C36FFC(
                                         (CGThumbnailListItem_o *)(v7 + 160),
                                         (int32_t)setMessageDispCtr,
                                         v54,
                                         v55);
                                       setNoticeCtr = this->fields.setNoticeCtr;
                                       if ( !setNoticeCtr
-                                        || (v3 = sub_1C32D5C(
+                                        || (v3 = sub_1C37194(
                                                    this->fields.setNoticeCtr,
                                                    *(_QWORD *)(*(_QWORD *)v7 + 64LL))) != 0 )
                                       {
                                         if ( *v8 <= 0x11u )
                                           goto LABEL_69;
                                         *(_QWORD *)(v7 + 168) = setNoticeCtr;
-                                        sub_1C32BC4(
+                                        sub_1C36FFC(
                                           (CGThumbnailListItem_o *)(v7 + 168),
                                           (int32_t)setNoticeCtr,
                                           v57,
                                           v58);
                                         setPlayOpeningMovieCtr = this->fields.setPlayOpeningMovieCtr;
                                         if ( !setPlayOpeningMovieCtr
-                                          || (v3 = sub_1C32D5C(
+                                          || (v3 = sub_1C37194(
                                                      this->fields.setPlayOpeningMovieCtr,
                                                      *(_QWORD *)(*(_QWORD *)v7 + 64LL))) != 0 )
                                         {
                                           if ( *v8 <= 0x12u )
                                             goto LABEL_69;
                                           *(_QWORD *)(v7 + 176) = setPlayOpeningMovieCtr;
-                                          sub_1C32BC4(
+                                          sub_1C36FFC(
                                             (CGThumbnailListItem_o *)(v7 + 176),
                                             (int32_t)setPlayOpeningMovieCtr,
                                             v60,
                                             v61);
                                           fullDlCtr = this->fields.fullDlCtr;
                                           if ( !fullDlCtr
-                                            || (v3 = sub_1C32D5C(
+                                            || (v3 = sub_1C37194(
                                                        this->fields.fullDlCtr,
                                                        *(_QWORD *)(*(_QWORD *)v7 + 64LL))) != 0 )
                                           {
                                             if ( *v8 <= 0x13u )
                                               goto LABEL_69;
                                             *(_QWORD *)(v7 + 184) = fullDlCtr;
-                                            sub_1C32BC4(
+                                            sub_1C36FFC(
                                               (CGThumbnailListItem_o *)(v7 + 184),
                                               (int32_t)fullDlCtr,
                                               v63,
                                               v64);
                                             setBlackListCtr = this->fields.setBlackListCtr;
                                             if ( !setBlackListCtr
-                                              || (v3 = sub_1C32D5C(
+                                              || (v3 = sub_1C37194(
                                                          this->fields.setBlackListCtr,
                                                          *(_QWORD *)(*(_QWORD *)v7 + 64LL))) != 0 )
                                             {
@@ -306,17 +306,17 @@ void SetGameOptionComponent__CreateContentsArrayIfNotYet(SetGameOptionComponent_
                                               {
                                                 *(_QWORD *)(v7 + 192) = setBlackListCtr;
                                                 p_contentsArray = (CGThumbnailListItem_o *)&this->fields.contentsArray;
-                                                sub_1C32BC4(
+                                                sub_1C36FFC(
                                                   (CGThumbnailListItem_o *)(v7 + 192),
                                                   (int32_t)setBlackListCtr,
                                                   v66,
                                                   v67);
                                                 p_contentsArray->klass = (CGThumbnailListItem_c *)v7;
-                                                sub_1C32BC4(p_contentsArray, v7, v70, v71);
+                                                sub_1C36FFC(p_contentsArray, v7, v70, v71);
                                                 return;
                                               }
 LABEL_69:
-                                              sub_1C32E84(v3);
+                                              sub_1C372BC(v3);
                                             }
                                           }
                                         }
@@ -338,8 +338,8 @@ LABEL_69:
         }
       }
     }
-    v72 = sub_1C32EA0();
-    sub_1C32D48(v72, 0);
+    v72 = sub_1C372D8();
+    sub_1C37180(v72, 0);
   }
 }
 
@@ -362,10 +362,10 @@ void SetGameOptionComponent__InitGameOption(SetGameOptionComponent_o *this, cons
   UnityEngine_Vector3_o v16; // 0:s0.4,4:s1.4,8:s2.4
   UnityEngine_Vector3_o v17; // 0:s0.4,4:s1.4,8:s2.4
 
-  if ( (byte_4C32A08 & 1) == 0 )
+  if ( (byte_4C3DFF2 & 1) == 0 )
   {
-    sub_1C32C20(&UnityEngine_Object_TypeInfo);
-    byte_4C32A08 = 1;
+    sub_1C37058(&UnityEngine_Object_TypeInfo);
+    byte_4C3DFF2 = 1;
   }
   SetGameOptionComponent__CreateContentsArrayIfNotYet(this, method);
   contentsArray = this->fields.contentsArray;
@@ -379,7 +379,7 @@ void SetGameOptionComponent__InitGameOption(SetGameOptionComponent_o *this, cons
     while ( 1 )
     {
       if ( v6 >= max_length )
-        sub_1C32E84(gameObject);
+        sub_1C372BC(gameObject);
       v8 = contentsArray->m_Items[v6];
       if ( !v8 )
         break;
@@ -400,7 +400,7 @@ void SetGameOptionComponent__InitGameOption(SetGameOptionComponent_o *this, cons
         goto LABEL_13;
     }
 LABEL_21:
-    sub_1C32E7C(gameObject);
+    sub_1C372B4(gameObject);
   }
   v7 = 160.0;
 LABEL_13:
@@ -440,7 +440,7 @@ void SetGameOptionComponent__SetMaskEnabled(SetGameOptionComponent_o *this, bool
 
   optionMask = this->fields.optionMask;
   if ( !optionMask )
-    sub_1C32E7C(0);
+    sub_1C372B4(0);
   UnityEngine_GameObject__SetActive(optionMask, isEnabled, 0);
 }
 
@@ -457,10 +457,10 @@ void SetGameOptionComponent__hideGameOption(SetGameOptionComponent_o *this, cons
   UnityEngine_GameObject_o *optionObj; // x20
   UnityEngine_Vector3_o localPosition; // 0:s0.4,4:s1.4,8:s2.4
 
-  if ( (byte_4C32A09 & 1) == 0 )
+  if ( (byte_4C3DFF3 & 1) == 0 )
   {
-    sub_1C32C20(&AtlasManager_TypeInfo);
-    byte_4C32A09 = 1;
+    sub_1C37058(&AtlasManager_TypeInfo);
+    byte_4C3DFF3 = 1;
   }
   hidePos = this->fields.hidePos;
   if ( !hidePos
@@ -472,7 +472,7 @@ void SetGameOptionComponent__hideGameOption(SetGameOptionComponent_o *this, cons
     || (UnityEngine_GameObject__SetActive(hidePos, 0, 0),
         (hidePos = (UnityEngine_GameObject_o *)this->fields.optionScroll) == 0) )
   {
-    sub_1C32E7C(hidePos);
+    sub_1C372B4(hidePos);
   }
   ((void (__fastcall *)(UnityEngine_GameObject_o *, _QWORD, Il2CppClass *, float, float))hidePos->klass[1]._1.declaringType)(
     hidePos,
@@ -507,18 +507,18 @@ void SetGameOptionComponent__reflectionGameOption(
   int32_t v18; // w2
   const MethodInfo *v19; // x3
 
-  if ( (byte_4C32A0A & 1) == 0 )
+  if ( (byte_4C3DFF4 & 1) == 0 )
   {
-    sub_1C32C20(&System_Action_GameOptionContentBase__TypeInfo);
-    sub_1C32C20(&Method_BasicHelper_ForEach_GameOptionContentBase___);
-    sub_1C32C20(&Method_System_Linq_Enumerable_Where_GameOptionContentBase___);
-    sub_1C32C20(&System_Func_GameOptionContentBase__bool__TypeInfo);
-    sub_1C32C20(&OptionManager_TypeInfo);
-    sub_1C32C20(&SoundManager_TypeInfo);
-    sub_1C32C20(&Method_SetGameOptionComponent___c__reflectionGameOption_b__40_0__);
-    sub_1C32C20(&Method_SetGameOptionComponent___c__reflectionGameOption_b__40_1__);
-    sub_1C32C20(&SetGameOptionComponent___c_TypeInfo);
-    byte_4C32A0A = 1;
+    sub_1C37058(&System_Action_GameOptionContentBase__TypeInfo);
+    sub_1C37058(&Method_BasicHelper_ForEach_GameOptionContentBase___);
+    sub_1C37058(&Method_System_Linq_Enumerable_Where_GameOptionContentBase___);
+    sub_1C37058(&System_Func_GameOptionContentBase__bool__TypeInfo);
+    sub_1C37058(&OptionManager_TypeInfo);
+    sub_1C37058(&SoundManager_TypeInfo);
+    sub_1C37058(&Method_SetGameOptionComponent___c__reflectionGameOption_b__40_0__);
+    sub_1C37058(&Method_SetGameOptionComponent___c__reflectionGameOption_b__40_1__);
+    sub_1C37058(&SetGameOptionComponent___c_TypeInfo);
+    byte_4C3DFF4 = 1;
   }
   v5 = SetGameOptionComponent___c_TypeInfo;
   contentsArray = (System_Collections_Generic_IEnumerable_TSource__o *)this->fields.contentsArray;
@@ -536,16 +536,16 @@ void SetGameOptionComponent__reflectionGameOption(
       v5 = SetGameOptionComponent___c_TypeInfo;
     }
     v8 = (Il2CppObject *)v5->static_fields->__9;
-    _9__40_0 = (System_Func_object__bool__o *)sub_1C32E6C(System_Func_GameOptionContentBase__bool__TypeInfo);
+    _9__40_0 = (System_Func_object__bool__o *)sub_1C372A4(System_Func_GameOptionContentBase__bool__TypeInfo);
     System_Func_object__bool____ctor(_9__40_0, v8, Method_SetGameOptionComponent___c__reflectionGameOption_b__40_0__, 0);
     static_fields = SetGameOptionComponent___c_TypeInfo->static_fields;
     static_fields->__9__40_0 = (struct System_Func_GameOptionContentBase__bool__o *)_9__40_0;
-    sub_1C32BC4((CGThumbnailListItem_o *)&static_fields->__9__40_0, (int32_t)_9__40_0, v10, v11);
+    sub_1C36FFC((CGThumbnailListItem_o *)&static_fields->__9__40_0, (int32_t)_9__40_0, v10, v11);
   }
   v12 = System_Linq_Enumerable__Where_object_(
           contentsArray,
           (System_Func_TSource__bool__o *)_9__40_0,
-          (const MethodInfo_3123BA8 *)Method_System_Linq_Enumerable_Where_GameOptionContentBase___);
+          (const MethodInfo_312E410 *)Method_System_Linq_Enumerable_Where_GameOptionContentBase___);
   v13 = SetGameOptionComponent___c_TypeInfo;
   v14 = (System_Collections_Generic_IEnumerable_T__o *)v12;
   if ( !SetGameOptionComponent___c_TypeInfo->_2.cctor_finished )
@@ -562,16 +562,16 @@ void SetGameOptionComponent__reflectionGameOption(
       v13 = SetGameOptionComponent___c_TypeInfo;
     }
     v16 = (Il2CppObject *)v13->static_fields->__9;
-    _9__40_1 = (System_Action_object__o *)sub_1C32E6C(System_Action_GameOptionContentBase__TypeInfo);
+    _9__40_1 = (System_Action_object__o *)sub_1C372A4(System_Action_GameOptionContentBase__TypeInfo);
     System_Action_object____ctor(_9__40_1, v16, Method_SetGameOptionComponent___c__reflectionGameOption_b__40_1__, 0);
     v17 = SetGameOptionComponent___c_TypeInfo->static_fields;
     v17->__9__40_1 = (struct System_Action_GameOptionContentBase__o *)_9__40_1;
-    sub_1C32BC4((CGThumbnailListItem_o *)&v17->__9__40_1, (int32_t)_9__40_1, v18, v19);
+    sub_1C36FFC((CGThumbnailListItem_o *)&v17->__9__40_1, (int32_t)_9__40_1, v18, v19);
   }
   BasicHelper__ForEach_object_(
     v14,
     (System_Action_T__o *)_9__40_1,
-    (const MethodInfo_30C93B0 *)Method_BasicHelper_ForEach_GameOptionContentBase___);
+    (const MethodInfo_30D3C18 *)Method_BasicHelper_ForEach_GameOptionContentBase___);
   if ( !SoundManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(SoundManager_TypeInfo);
   SoundManager__stopSe(0.0, 0);
@@ -596,12 +596,12 @@ void SetGameOptionComponent__showGameOption(SetGameOptionComponent_o *this, cons
   UnityEngine_GameObject_o *gameObject; // x20
   System_Action_o *v5; // x20
 
-  if ( (byte_4C32A06 & 1) == 0 )
+  if ( (byte_4C3DFF0 & 1) == 0 )
   {
-    sub_1C32C20(&System_Action_TypeInfo);
-    sub_1C32C20(&AtlasManager_TypeInfo);
-    sub_1C32C20(&Method_SetGameOptionComponent__showGameOption_b__36_0__);
-    byte_4C32A06 = 1;
+    sub_1C37058(&System_Action_TypeInfo);
+    sub_1C37058(&AtlasManager_TypeInfo);
+    sub_1C37058(&Method_SetGameOptionComponent__showGameOption_b__36_0__);
+    byte_4C3DFF0 = 1;
   }
   bgTxtSprite = this->fields.bgTxtSprite;
   if ( !bgTxtSprite
@@ -609,10 +609,10 @@ void SetGameOptionComponent__showGameOption(SetGameOptionComponent_o *this, cons
         bgTxtSprite = (struct UISprite_o *)BgTxtManager__IsActiveBgTxt(0),
         !gameObject) )
   {
-    sub_1C32E7C(bgTxtSprite);
+    sub_1C372B4(bgTxtSprite);
   }
   UnityEngine_GameObject__SetActive(gameObject, (unsigned __int8)bgTxtSprite & 1, 0);
-  v5 = (System_Action_o *)sub_1C32E6C(System_Action_TypeInfo);
+  v5 = (System_Action_o *)sub_1C372A4(System_Action_TypeInfo);
   System_Action___ctor(v5, (Il2CppObject *)this, Method_SetGameOptionComponent__showGameOption_b__36_0__, 0);
   if ( !AtlasManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo);
@@ -626,15 +626,15 @@ void SetGameOptionComponent___c___cctor(const MethodInfo *method)
   int32_t v2; // w2
   const MethodInfo *v3; // x3
 
-  if ( (byte_4C32A0B & 1) == 0 )
+  if ( (byte_4C3DFF5 & 1) == 0 )
   {
-    sub_1C32C20(&SetGameOptionComponent___c_TypeInfo);
-    byte_4C32A0B = 1;
+    sub_1C37058(&SetGameOptionComponent___c_TypeInfo);
+    byte_4C3DFF5 = 1;
   }
-  v1 = (Il2CppObject *)sub_1C32E6C(SetGameOptionComponent___c_TypeInfo);
+  v1 = (Il2CppObject *)sub_1C372A4(SetGameOptionComponent___c_TypeInfo);
   System_Object___ctor(v1, 0);
   SetGameOptionComponent___c_TypeInfo->static_fields->__9 = (struct SetGameOptionComponent___c_o *)v1;
-  sub_1C32BC4((CGThumbnailListItem_o *)SetGameOptionComponent___c_TypeInfo->static_fields, (int32_t)v1, v2, v3);
+  sub_1C36FFC((CGThumbnailListItem_o *)SetGameOptionComponent___c_TypeInfo->static_fields, (int32_t)v1, v2, v3);
 }
 
 
@@ -650,7 +650,7 @@ bool SetGameOptionComponent___c___reflectionGameOption_b__40_0(
         const MethodInfo *method)
 {
   if ( !x )
-    sub_1C32E7C(this);
+    sub_1C372B4(this);
   return ((__int64 (__fastcall *)(GameOptionContentBase_o *, const MethodInfo *))x->klass->vtable._6_IsAvailable.methodPtr)(
            x,
            x->klass->vtable._6_IsAvailable.method);
@@ -663,7 +663,7 @@ void SetGameOptionComponent___c___reflectionGameOption_b__40_1(
         const MethodInfo *method)
 {
   if ( !x )
-    sub_1C32E7C(this);
+    sub_1C372B4(this);
   ((void (__fastcall *)(GameOptionContentBase_o *, const MethodInfo *))x->klass->vtable._5_Reflection.methodPtr)(
     x,
     x->klass->vtable._5_Reflection.method);

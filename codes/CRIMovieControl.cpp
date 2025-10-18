@@ -10,10 +10,10 @@ void CRIMovieControl__Awake(CRIMovieControl_o *this, const MethodInfo *method)
   UnityEngine_Transform_o *v4; // x20
   const MethodInfo *v5; // x1
 
-  if ( (byte_4C31B5A & 1) == 0 )
+  if ( (byte_4C3D144 & 1) == 0 )
   {
-    sub_1C32C20(&StringLiteral_886/*"--:--"*/);
-    byte_4C31B5A = 1;
+    sub_1C37058(&StringLiteral_886/*"--:--"*/);
+    byte_4C3D144 = 1;
   }
   nowTime = this->fields.nowTime;
   if ( !nowTime )
@@ -32,14 +32,14 @@ void CRIMovieControl__Awake(CRIMovieControl_o *this, const MethodInfo *method)
     goto LABEL_11;
   nowTime = (UILabel_o *)UnityEngine_Component__get_transform((UnityEngine_Component_o *)nowTime, 0);
   v4 = (UnityEngine_Transform_o *)nowTime;
-  if ( !byte_4C313D6 )
+  if ( !byte_4C3C926 )
   {
-    nowTime = (UILabel_o *)sub_1C32C20(&UnityEngine_Vector3_TypeInfo);
-    byte_4C313D6 = 1;
+    nowTime = (UILabel_o *)sub_1C37058(&UnityEngine_Vector3_TypeInfo);
+    byte_4C3C926 = 1;
   }
   if ( !v4 )
 LABEL_11:
-    sub_1C32E7C(nowTime);
+    sub_1C372B4(nowTime);
   UnityEngine_Transform__set_localScale(v4, UnityEngine_Vector3_TypeInfo->static_fields->oneVector, 0);
   CRIMovieControl__Closed(this, v5);
 }
@@ -50,21 +50,21 @@ void CRIMovieControl__Close(CRIMovieControl_o *this, const MethodInfo *method)
   UnityEngine_GameObject_o *window; // x0
   const MethodInfo *v4; // x2
 
-  if ( (byte_4C31B5C & 1) == 0 )
+  if ( (byte_4C3D146 & 1) == 0 )
   {
-    sub_1C32C20(&Method_ActionExtensions_Call_bool___);
-    byte_4C31B5C = 1;
+    sub_1C37058(&Method_ActionExtensions_Call_bool___);
+    byte_4C3D146 = 1;
   }
   window = this->fields.window;
   this->fields.status = 3;
   if ( !window )
-    sub_1C32E7C(0);
+    sub_1C372B4(0);
   UnityEngine_GameObject__SetActive(window, 1, 0);
   CRIMovieControl__EnableControl(this, 0, v4);
   ActionExtensions__Call_bool_(
     (System_Action_T__o *)this->fields.enableControlCallBack,
     0,
-    (const MethodInfo_3029BF0 *)Method_ActionExtensions_Call_bool___);
+    (const MethodInfo_3034458 *)Method_ActionExtensions_Call_bool___);
 }
 
 
@@ -80,7 +80,7 @@ void CRIMovieControl__Closed(CRIMovieControl_o *this, const MethodInfo *method)
         CRIMovieControl__EnableControl(this, 0, v4),
         (window = (UnityEngine_GameObject_o *)this->fields.panel) == 0) )
   {
-    sub_1C32E7C(window);
+    sub_1C372B4(window);
   }
   ((void (__fastcall *)(UnityEngine_GameObject_o *, Il2CppClass *, float))window->klass[1]._1.element_class)(
     window,
@@ -97,7 +97,7 @@ void CRIMovieControl__EnableControl(CRIMovieControl_o *this, bool flag, const Me
   if ( !foreground
     || (foreground = (UnityEngine_Component_o *)UnityEngine_Component__get_gameObject(foreground, 0)) == 0 )
   {
-    sub_1C32E7C(foreground);
+    sub_1C372B4(foreground);
   }
   UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)foreground, !flag, 0);
 }
@@ -126,25 +126,25 @@ System_String_o *CRIMovieControl__FrameToTimeString(CRIMovieControl_o *this, int
   int v23; // [xsp+Ch] [xbp-34h] BYREF
 
   v4 = this;
-  if ( (byte_4C31B5E & 1) == 0 )
+  if ( (byte_4C3D148 & 1) == 0 )
   {
-    sub_1C32C20(&int_TypeInfo);
-    this = (CRIMovieControl_o *)sub_1C32C20(&StringLiteral_25170/*"{0}:{1:00}"*/);
-    byte_4C31B5E = 1;
+    sub_1C37058(&int_TypeInfo);
+    this = (CRIMovieControl_o *)sub_1C37058(&StringLiteral_25175/*"{0}:{1:00}"*/);
+    byte_4C3D148 = 1;
   }
   player = v4->fields.player;
   if ( !player
     || (this = (CRIMovieControl_o *)player->fields._player_k__BackingField) == 0
     || (this = (CRIMovieControl_o *)CriMana_Player__get_frameInfo((CriMana_Player_o *)this, 0)) == 0 )
   {
-    sub_1C32E7C(this);
+    sub_1C372B4(this);
   }
   v12 = 1000LL * frame / (unsigned __int64)this->fields.window;
   v23 = (int)v12 / 60;
   v13 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v23, v6, v7, v8, v9, v10, v11);
   v22 = (int)v12 % 60;
   v20 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v22, v14, v15, v16, v17, v18, v19);
-  return System_String__Format_63559836((System_String_o *)StringLiteral_25170/*"{0}:{1:00}"*/, v13, v20, 0);
+  return System_String__Format_63602948((System_String_o *)StringLiteral_25175/*"{0}:{1:00}"*/, v13, v20, 0);
 }
 
 
@@ -157,10 +157,10 @@ void CRIMovieControl__OnClickEndButton(CRIMovieControl_o *this, const MethodInfo
   const MethodInfo *v7; // x1
   System_Action_o *endFullScreenAction; // x0
 
-  if ( (byte_4C31B67 & 1) == 0 )
+  if ( (byte_4C3D151 & 1) == 0 )
   {
-    sub_1C32C20(&UnityEngine_Object_TypeInfo);
-    byte_4C31B67 = 1;
+    sub_1C37058(&UnityEngine_Object_TypeInfo);
+    byte_4C3D151 = 1;
   }
   player = (UnityEngine_Object_o *)this->fields.player;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -184,7 +184,7 @@ void CRIMovieControl__OnClickEndButton(CRIMovieControl_o *this, const MethodInfo
         goto LABEL_13;
       }
 LABEL_14:
-      sub_1C32E7C(v4);
+      sub_1C372B4(v4);
     }
   }
 LABEL_13:
@@ -202,10 +202,10 @@ void CRIMovieControl__OnClickForwardButton(CRIMovieControl_o *this, const Method
   CriMana_Player_o *player_k__BackingField; // x0
   const MethodInfo *v7; // x2
 
-  if ( (byte_4C31B66 & 1) == 0 )
+  if ( (byte_4C3D150 & 1) == 0 )
   {
-    sub_1C32C20(&UnityEngine_Object_TypeInfo);
-    byte_4C31B66 = 1;
+    sub_1C37058(&UnityEngine_Object_TypeInfo);
+    byte_4C3D150 = 1;
   }
   player = (UnityEngine_Object_o *)this->fields.player;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -229,7 +229,7 @@ void CRIMovieControl__OnClickForwardButton(CRIMovieControl_o *this, const Method
         goto LABEL_13;
       }
 LABEL_14:
-      sub_1C32E7C(v4);
+      sub_1C372B4(v4);
     }
   }
 LABEL_13:
@@ -244,10 +244,10 @@ void CRIMovieControl__OnClickPauseButton(CRIMovieControl_o *this, const MethodIn
   struct CRIMoviePlayer_o *v5; // x20
   CriMana_Player_o *player_k__BackingField; // x0
 
-  if ( (byte_4C31B65 & 1) == 0 )
+  if ( (byte_4C3D14F & 1) == 0 )
   {
-    sub_1C32C20(&UnityEngine_Object_TypeInfo);
-    byte_4C31B65 = 1;
+    sub_1C37058(&UnityEngine_Object_TypeInfo);
+    byte_4C3D14F = 1;
   }
   player = (UnityEngine_Object_o *)this->fields.player;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -293,7 +293,7 @@ void CRIMovieControl__OnClickPauseButton(CRIMovieControl_o *this, const MethodIn
         }
       }
 LABEL_18:
-      sub_1C32E7C(playButton);
+      sub_1C372B4(playButton);
     }
   }
 LABEL_17:
@@ -308,10 +308,10 @@ void CRIMovieControl__OnClickPlayButton(CRIMovieControl_o *this, const MethodInf
   struct CRIMoviePlayer_o *v5; // x20
   CriMana_Player_o *player_k__BackingField; // x0
 
-  if ( (byte_4C31B64 & 1) == 0 )
+  if ( (byte_4C3D14E & 1) == 0 )
   {
-    sub_1C32C20(&UnityEngine_Object_TypeInfo);
-    byte_4C31B64 = 1;
+    sub_1C37058(&UnityEngine_Object_TypeInfo);
+    byte_4C3D14E = 1;
   }
   player = (UnityEngine_Object_o *)this->fields.player;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -357,7 +357,7 @@ void CRIMovieControl__OnClickPlayButton(CRIMovieControl_o *this, const MethodInf
         }
       }
 LABEL_18:
-      sub_1C32E7C(playButton);
+      sub_1C372B4(playButton);
     }
   }
 LABEL_17:
@@ -373,10 +373,10 @@ void CRIMovieControl__OnClickRewindButton(CRIMovieControl_o *this, const MethodI
   CriMana_Player_o *player_k__BackingField; // x0
   const MethodInfo *v7; // x2
 
-  if ( (byte_4C31B63 & 1) == 0 )
+  if ( (byte_4C3D14D & 1) == 0 )
   {
-    sub_1C32C20(&UnityEngine_Object_TypeInfo);
-    byte_4C31B63 = 1;
+    sub_1C37058(&UnityEngine_Object_TypeInfo);
+    byte_4C3D14D = 1;
   }
   player = (UnityEngine_Object_o *)this->fields.player;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -400,7 +400,7 @@ void CRIMovieControl__OnClickRewindButton(CRIMovieControl_o *this, const MethodI
         goto LABEL_13;
       }
 LABEL_14:
-      sub_1C32E7C(v4);
+      sub_1C372B4(v4);
     }
   }
 LABEL_13:
@@ -416,10 +416,10 @@ void CRIMovieControl__OnClickStartButton(CRIMovieControl_o *this, const MethodIn
   CriMana_Player_o *player_k__BackingField; // x0
   const MethodInfo *v7; // x2
 
-  if ( (byte_4C31B62 & 1) == 0 )
+  if ( (byte_4C3D14C & 1) == 0 )
   {
-    sub_1C32C20(&UnityEngine_Object_TypeInfo);
-    byte_4C31B62 = 1;
+    sub_1C37058(&UnityEngine_Object_TypeInfo);
+    byte_4C3D14C = 1;
   }
   player = (UnityEngine_Object_o *)this->fields.player;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -443,7 +443,7 @@ void CRIMovieControl__OnClickStartButton(CRIMovieControl_o *this, const MethodIn
         goto LABEL_13;
       }
 LABEL_14:
-      sub_1C32E7C(v4);
+      sub_1C372B4(v4);
     }
   }
 LABEL_13:
@@ -459,10 +459,10 @@ void CRIMovieControl__OnClickTouch(CRIMovieControl_o *this, const MethodInfo *me
   CriMana_Player_o *player_k__BackingField; // x0
   const MethodInfo *v7; // x1
 
-  if ( (byte_4C31B5F & 1) == 0 )
+  if ( (byte_4C3D149 & 1) == 0 )
   {
-    sub_1C32C20(&UnityEngine_Object_TypeInfo);
-    byte_4C31B5F = 1;
+    sub_1C37058(&UnityEngine_Object_TypeInfo);
+    byte_4C3D149 = 1;
   }
   player = (UnityEngine_Object_o *)this->fields.player;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -487,7 +487,7 @@ void CRIMovieControl__OnClickTouch(CRIMovieControl_o *this, const MethodInfo *me
             return;
           }
 LABEL_14:
-          sub_1C32E7C(v4);
+          sub_1C372B4(v4);
         }
       }
     }
@@ -502,10 +502,10 @@ void CRIMovieControl__OnDoubleClickTouch(CRIMovieControl_o *this, const MethodIn
   struct CRIMoviePlayer_o *v5; // x8
   CriMana_Player_o *player_k__BackingField; // x0
 
-  if ( (byte_4C31B61 & 1) == 0 )
+  if ( (byte_4C3D14B & 1) == 0 )
   {
-    sub_1C32C20(&UnityEngine_Object_TypeInfo);
-    byte_4C31B61 = 1;
+    sub_1C37058(&UnityEngine_Object_TypeInfo);
+    byte_4C3D14B = 1;
   }
   player = (UnityEngine_Object_o *)this->fields.player;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -515,7 +515,7 @@ void CRIMovieControl__OnDoubleClickTouch(CRIMovieControl_o *this, const MethodIn
   {
     v5 = this->fields.player;
     if ( !v5 )
-      sub_1C32E7C(v4);
+      sub_1C372B4(v4);
     if ( v5->fields._isCanControl_k__BackingField )
     {
       player_k__BackingField = v5->fields._player_k__BackingField;
@@ -536,10 +536,10 @@ void CRIMovieControl__OnPressDownSeekBar(CRIMovieControl_o *this, const MethodIn
   struct CRIMoviePlayer_o *v8; // x8
   CriManaMovieMaterial_o *v9; // x8
 
-  if ( (byte_4C31B68 & 1) == 0 )
+  if ( (byte_4C3D152 & 1) == 0 )
   {
-    sub_1C32C20(&UnityEngine_Object_TypeInfo);
-    byte_4C31B68 = 1;
+    sub_1C37058(&UnityEngine_Object_TypeInfo);
+    byte_4C3D152 = 1;
   }
   player = (UnityEngine_Object_o *)this->fields.player;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -587,7 +587,7 @@ void CRIMovieControl__OnPressDownSeekBar(CRIMovieControl_o *this, const MethodIn
           }
         }
 LABEL_18:
-        sub_1C32E7C(status);
+        sub_1C372B4(status);
       }
     }
   }
@@ -611,10 +611,10 @@ void CRIMovieControl__OnPressUpSeekBar(CRIMovieControl_o *this, const MethodInfo
   float v13; // s0
   int32_t v14; // w1
 
-  if ( (byte_4C31B69 & 1) == 0 )
+  if ( (byte_4C3D153 & 1) == 0 )
   {
-    sub_1C32C20(&UnityEngine_Object_TypeInfo);
-    byte_4C31B69 = 1;
+    sub_1C37058(&UnityEngine_Object_TypeInfo);
+    byte_4C3D153 = 1;
   }
   player = (UnityEngine_Object_o *)this->fields.player;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -655,7 +655,7 @@ void CRIMovieControl__OnPressUpSeekBar(CRIMovieControl_o *this, const MethodInfo
       || (v12 = status, (status = (UnityEngine_Component_o *)this->fields.player) == 0) )
     {
 LABEL_24:
-      sub_1C32E7C(status);
+      sub_1C372B4(status);
     }
     v13 = v10 * (float)LODWORD(v12[2].klass);
     if ( v13 == INFINITY )
@@ -678,10 +678,10 @@ void CRIMovieControl__OnSingleClickTouch(CRIMovieControl_o *this, const MethodIn
   const MethodInfo *v7; // x1
   int32_t status; // w8
 
-  if ( (byte_4C31B60 & 1) == 0 )
+  if ( (byte_4C3D14A & 1) == 0 )
   {
-    sub_1C32C20(&UnityEngine_Object_TypeInfo);
-    byte_4C31B60 = 1;
+    sub_1C37058(&UnityEngine_Object_TypeInfo);
+    byte_4C3D14A = 1;
   }
   player = (UnityEngine_Object_o *)this->fields.player;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -691,7 +691,7 @@ void CRIMovieControl__OnSingleClickTouch(CRIMovieControl_o *this, const MethodIn
   {
     v5 = this->fields.player;
     if ( !v5 )
-      sub_1C32E7C(v4);
+      sub_1C372B4(v4);
     if ( v5->fields._isCanControl_k__BackingField )
     {
       player_k__BackingField = v5->fields._player_k__BackingField;
@@ -727,10 +727,10 @@ void CRIMovieControl__OnValueChangeSeekBar(CRIMovieControl_o *this, const Method
   float v12; // s0
   int32_t v13; // w1
 
-  if ( (byte_4C31B6A & 1) == 0 )
+  if ( (byte_4C3D154 & 1) == 0 )
   {
-    sub_1C32C20(&UnityEngine_Object_TypeInfo);
-    byte_4C31B6A = 1;
+    sub_1C37058(&UnityEngine_Object_TypeInfo);
+    byte_4C3D154 = 1;
   }
   player = (UnityEngine_Object_o *)this->fields.player;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -775,7 +775,7 @@ void CRIMovieControl__OnValueChangeSeekBar(CRIMovieControl_o *this, const Method
         }
       }
 LABEL_21:
-      sub_1C32E7C(seekBar);
+      sub_1C372B4(seekBar);
     }
   }
 }
@@ -787,10 +787,10 @@ void CRIMovieControl__Open(CRIMovieControl_o *this, const MethodInfo *method)
   const MethodInfo *v4; // x2
   struct UISlider_o *seekBar; // x8
 
-  if ( (byte_4C31B5D & 1) == 0 )
+  if ( (byte_4C3D147 & 1) == 0 )
   {
-    sub_1C32C20(&Method_ActionExtensions_Call_bool___);
-    byte_4C31B5D = 1;
+    sub_1C37058(&Method_ActionExtensions_Call_bool___);
+    byte_4C3D147 = 1;
   }
   window = this->fields.window;
   this->fields.status = 1;
@@ -801,7 +801,7 @@ void CRIMovieControl__Open(CRIMovieControl_o *this, const MethodInfo *method)
   ActionExtensions__Call_bool_(
     (System_Action_T__o *)this->fields.enableControlCallBack,
     1,
-    (const MethodInfo_3029BF0 *)Method_ActionExtensions_Call_bool___);
+    (const MethodInfo_3034458 *)Method_ActionExtensions_Call_bool___);
   seekBar = this->fields.seekBar;
   this->fields.dispTime = 0.0;
   this->fields.isSeeking = 0;
@@ -810,7 +810,7 @@ void CRIMovieControl__Open(CRIMovieControl_o *this, const MethodInfo *method)
     || (window = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)window, 0)) == 0 )
   {
 LABEL_8:
-    sub_1C32E7C(window);
+    sub_1C372B4(window);
   }
   UnityEngine_GameObject__SetActive(window, 0, 0);
 }
@@ -828,7 +828,7 @@ void CRIMovieControl__Opened(CRIMovieControl_o *this, const MethodInfo *method)
         CRIMovieControl__EnableControl(this, 1, v4),
         (window = (UnityEngine_GameObject_o *)this->fields.panel) == 0) )
   {
-    sub_1C32E7C(window);
+    sub_1C372B4(window);
   }
   ((void (__fastcall *)(UnityEngine_GameObject_o *, Il2CppClass *, float))window->klass[1]._1.element_class)(
     window,
@@ -843,7 +843,7 @@ void CRIMovieControl__SetEnableControlCallBack(
         const MethodInfo *method)
 {
   this->fields.enableControlCallBack = action;
-  sub_1C32BC4(&this->fields.enableControlCallBack, action);
+  sub_1C36FFC(&this->fields.enableControlCallBack, action);
 }
 
 
@@ -853,7 +853,7 @@ void CRIMovieControl__SetEndFullScreenAction(
         const MethodInfo *method)
 {
   this->fields.endFullScreenAction = action;
-  sub_1C32BC4(&this->fields.endFullScreenAction, action);
+  sub_1C36FFC(&this->fields.endFullScreenAction, action);
 }
 
 
@@ -885,10 +885,10 @@ void CRIMovieControl__Update(CRIMovieControl_o *this, const MethodInfo *method)
   UILabel_o *endTime; // x20
 
   v2 = this;
-  if ( (byte_4C31B5B & 1) == 0 )
+  if ( (byte_4C3D145 & 1) == 0 )
   {
-    this = (CRIMovieControl_o *)sub_1C32C20(&UnityEngine_Object_TypeInfo);
-    byte_4C31B5B = 1;
+    this = (CRIMovieControl_o *)sub_1C37058(&UnityEngine_Object_TypeInfo);
+    byte_4C3D145 = 1;
   }
   status = v2->fields.status;
   switch ( status )
@@ -1044,7 +1044,7 @@ LABEL_12:
           }
         }
 LABEL_45:
-        sub_1C32E7C(this);
+        sub_1C372B4(this);
       }
     }
   }

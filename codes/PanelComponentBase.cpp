@@ -17,7 +17,7 @@ void PanelComponentBase__ClickPanel(PanelComponentBase_o *this, const MethodInfo
 void PanelComponentBase__Initialize(PanelComponentBase_o *this, const MethodInfo *method)
 {
   this->fields._OnClickPanel_k__BackingField = 0;
-  sub_1C32BC4(&this->fields._OnClickPanel_k__BackingField, 0);
+  sub_1C36FFC(&this->fields._OnClickPanel_k__BackingField, 0);
 }
 
 
@@ -26,10 +26,10 @@ void PanelComponentBase__SetClosedPanelVisible(PanelComponentBase_o *this, bool 
   UnityEngine_Object_o *closedPanel; // x21
   UnityEngine_GameObject_o *v6; // x0
 
-  if ( (byte_4C321C6 & 1) == 0 )
+  if ( (byte_4C3D7B0 & 1) == 0 )
   {
-    sub_1C32C20(&UnityEngine_Object_TypeInfo);
-    byte_4C321C6 = 1;
+    sub_1C37058(&UnityEngine_Object_TypeInfo);
+    byte_4C3D7B0 = 1;
   }
   closedPanel = (UnityEngine_Object_o *)this->fields.closedPanel;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -38,7 +38,7 @@ void PanelComponentBase__SetClosedPanelVisible(PanelComponentBase_o *this, bool 
   {
     v6 = this->fields.closedPanel;
     if ( !v6 )
-      sub_1C32E7C(0);
+      sub_1C372B4(0);
     UnityEngine_GameObject__SetActive(v6, value, 0);
   }
 }
@@ -50,7 +50,7 @@ void PanelComponentBase__SetTheCallBackWhenClickPanel(
         const MethodInfo *method)
 {
   this->fields._OnClickPanel_k__BackingField = callback;
-  sub_1C32BC4(&this->fields._OnClickPanel_k__BackingField, callback);
+  sub_1C36FFC(&this->fields._OnClickPanel_k__BackingField, callback);
 }
 
 
@@ -63,5 +63,5 @@ System_Action_o *PanelComponentBase__get_OnClickPanel(PanelComponentBase_o *this
 void PanelComponentBase__set_OnClickPanel(PanelComponentBase_o *this, System_Action_o *value, const MethodInfo *method)
 {
   this->fields._OnClickPanel_k__BackingField = value;
-  sub_1C32BC4(&this->fields._OnClickPanel_k__BackingField, value);
+  sub_1C36FFC(&this->fields._OnClickPanel_k__BackingField, value);
 }

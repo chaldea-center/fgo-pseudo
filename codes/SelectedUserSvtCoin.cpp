@@ -12,32 +12,32 @@ void SelectedUserSvtCoin___ctor(
   SelectedUserSvtCoin_Fields *p_fields; // x20
   __int64 v13; // x0
 
-  if ( (byte_4C3B635 & 1) == 0 )
+  if ( (byte_4C46C48 & 1) == 0 )
   {
-    sub_1C32C20(&CoinRoomCoinIconItem_TypeInfo);
-    byte_4C3B635 = 1;
+    sub_1C37058(&CoinRoomCoinIconItem_TypeInfo);
+    byte_4C46C48 = 1;
   }
   System_Object___ctor((Il2CppObject *)this, 0);
   if ( !iconObject )
 LABEL_9:
-    sub_1C32E7C(v7);
+    sub_1C372B4(v7);
   linkItem = iconObject->fields.linkItem;
   if ( !linkItem )
   {
     this->fields.iconObject = iconObject;
-    sub_1C32BC4((CGThumbnailListItem_o *)&this->fields, (int32_t)iconObject, v8, v9);
-    sub_1C32E7C(v13);
+    sub_1C36FFC((CGThumbnailListItem_o *)&this->fields, (int32_t)iconObject, v8, v9);
+    sub_1C372B4(v13);
   }
   naturalAligment = CoinRoomCoinIconItem_TypeInfo->_2.naturalAligment;
   if ( linkItem->klass->_2.naturalAligment < (unsigned int)naturalAligment
     || (CoinRoomCoinIconItem_c *)linkItem->klass->_2.typeHierarchy[naturalAligment - 1] != CoinRoomCoinIconItem_TypeInfo )
   {
-    sub_1C3313C(iconObject->fields.linkItem);
+    sub_1C37574(iconObject->fields.linkItem);
     goto LABEL_9;
   }
   this->fields.iconObject = iconObject;
   p_fields = &this->fields;
-  sub_1C32BC4((CGThumbnailListItem_o *)p_fields, (int32_t)iconObject, v8, v9);
+  sub_1C36FFC((CGThumbnailListItem_o *)p_fields, (int32_t)iconObject, v8, v9);
   p_fields->_itemId_k__BackingField = HIDWORD(linkItem[1].klass);
   p_fields->_num_k__BackingField = num;
 }

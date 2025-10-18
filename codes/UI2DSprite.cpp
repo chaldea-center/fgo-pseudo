@@ -1,14 +1,14 @@
 void UI2DSprite___ctor(UI2DSprite_o *this, const MethodInfo *method)
 {
-  if ( (byte_4C3C267 & 1) == 0 )
+  if ( (byte_4C477E2 & 1) == 0 )
   {
-    sub_1C32C20(&UIBasicSprite_TypeInfo);
-    byte_4C3C267 = 1;
+    sub_1C37058(&UIBasicSprite_TypeInfo);
+    byte_4C477E2 = 1;
   }
-  if ( !byte_4C316D7 )
+  if ( !byte_4C3CC27 )
   {
-    sub_1C32C20(&UnityEngine_Vector4_TypeInfo);
-    byte_4C316D7 = 1;
+    sub_1C37058(&UnityEngine_Vector4_TypeInfo);
+    byte_4C3CC27 = 1;
   }
   this->fields.mBorder = UnityEngine_Vector4_TypeInfo->static_fields->zeroVector;
   this->fields.mPixelSize = 1.0;
@@ -44,10 +44,10 @@ void UI2DSprite__MakePixelPerfect(UI2DSprite_o *this, const MethodInfo *method)
   double iptr; // [xsp+8h] [xbp-48h] BYREF
   UnityEngine_Rect_o rect; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 
-  if ( (byte_4C3C265 & 1) == 0 )
+  if ( (byte_4C477E0 & 1) == 0 )
   {
-    sub_1C32C20(&UnityEngine_Object_TypeInfo);
-    byte_4C3C265 = 1;
+    sub_1C37058(&UnityEngine_Object_TypeInfo);
+    byte_4C477E0 = 1;
   }
   UIWidget__MakePixelPerfect((UIWidget_o *)this, method);
   if ( this->fields.mType != 2 )
@@ -68,14 +68,14 @@ void UI2DSprite__MakePixelPerfect(UI2DSprite_o *this, const MethodInfo *method)
         {
           mSprite = this->fields.mSprite;
           if ( !mSprite )
-            sub_1C32E7C(0);
+            sub_1C372B4(0);
           rect = UnityEngine_Sprite__get_rect(mSprite, 0);
           m_Width = rect.fields.m_Width;
           m_Height = rect.fields.m_Height;
-          if ( !byte_4C32B16 )
+          if ( !byte_4C3E100 )
           {
-            sub_1C32C20(&System_Math_TypeInfo);
-            byte_4C32B16 = 1;
+            sub_1C37058(&System_Math_TypeInfo);
+            byte_4C3E100 = 1;
           }
           if ( !System_Math_TypeInfo->_2.cctor_finished )
             j_il2cpp_runtime_class_init_0(System_Math_TypeInfo);
@@ -109,10 +109,10 @@ LABEL_29:
             v13 = 0x80000000;
           else
             v13 = (int)v10;
-          if ( !byte_4C32B16 )
+          if ( !byte_4C3E100 )
           {
-            sub_1C32C20(&System_Math_TypeInfo);
-            byte_4C32B16 = 1;
+            sub_1C37058(&System_Math_TypeInfo);
+            byte_4C3E100 = 1;
           }
           if ( !System_Math_TypeInfo->_2.cctor_finished )
             j_il2cpp_runtime_class_init_0(System_Math_TypeInfo);
@@ -187,10 +187,10 @@ void UI2DSprite__OnFill(
   UnityEngine_Rect_o v30; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
   UnityEngine_Rect_o v31; // 0:s4.4,4:s5.4,8:s6.4,12:s7.4
 
-  if ( (byte_4C3C266 & 1) == 0 )
+  if ( (byte_4C477E1 & 1) == 0 )
   {
-    sub_1C32C20(&UnityEngine_Object_TypeInfo);
-    byte_4C3C266 = 1;
+    sub_1C37058(&UnityEngine_Object_TypeInfo);
+    byte_4C477E1 = 1;
   }
   v9 = (UnityEngine_Object_o *)((__int64 (__fastcall *)(UI2DSprite_o *, const MethodInfo *, BetterList_Vector2__o *, BetterList_Color32__o *, const MethodInfo *))this->klass->vtable._26_get_mainTexture.methodPtr)(
                                  this,
@@ -295,7 +295,7 @@ void UI2DSprite__OnFill(
       }
     }
 LABEL_18:
-    sub_1C32E7C(v11);
+    sub_1C372B4(v11);
   }
 }
 
@@ -377,10 +377,10 @@ void UI2DSprite__OnUpdate(UI2DSprite_o *this, const MethodInfo *method)
   UnityEngine_Rect_o v74; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
   UnityEngine_Rect_o v75; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 
-  if ( (byte_4C3C264 & 1) == 0 )
+  if ( (byte_4C477DF & 1) == 0 )
   {
-    sub_1C32C20(&UnityEngine_Object_TypeInfo);
-    byte_4C3C264 = 1;
+    sub_1C37058(&UnityEngine_Object_TypeInfo);
+    byte_4C477DF = 1;
   }
   nextSprite = (UnityEngine_Object_o *)this->fields.nextSprite;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -394,7 +394,7 @@ void UI2DSprite__OnUpdate(UI2DSprite_o *this, const MethodInfo *method)
     if ( UnityEngine_Object__op_Inequality(v5, mSprite, 0) )
       UI2DSprite__set_sprite2D(this, this->fields.nextSprite, v7);
     this->fields.nextSprite = 0;
-    sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.nextSprite, 0, (int32_t)v7, v8);
+    sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.nextSprite, 0, (int32_t)v7, v8);
   }
   UIWidget__OnUpdate((UIWidget_o *)this, v4);
   if ( this->fields.mFixedAspect )
@@ -411,10 +411,10 @@ void UI2DSprite__OnUpdate(UI2DSprite_o *this, const MethodInfo *method)
         goto LABEL_131;
       rect = UnityEngine_Sprite__get_rect(v10, 0);
       m_Width = rect.fields.m_Width;
-      if ( !byte_4C32B16 )
+      if ( !byte_4C3E100 )
       {
-        sub_1C32C20(&System_Math_TypeInfo);
-        byte_4C32B16 = 1;
+        sub_1C37058(&System_Math_TypeInfo);
+        byte_4C3E100 = 1;
       }
       if ( !System_Math_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(System_Math_TypeInfo);
@@ -453,10 +453,10 @@ LABEL_31:
         goto LABEL_131;
       v71 = UnityEngine_Sprite__get_rect(v10, 0);
       m_Height = v71.fields.m_Height;
-      if ( !byte_4C32B16 )
+      if ( !byte_4C3E100 )
       {
-        sub_1C32C20(&System_Math_TypeInfo);
-        byte_4C32B16 = 1;
+        sub_1C37058(&System_Math_TypeInfo);
+        byte_4C3E100 = 1;
       }
       if ( !System_Math_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(System_Math_TypeInfo);
@@ -494,10 +494,10 @@ LABEL_49:
       if ( !v10 )
         goto LABEL_131;
       LODWORD(v25) = *(_QWORD *)&UnityEngine_Sprite__get_textureRectOffset(v10, 0);
-      if ( !byte_4C32B16 )
+      if ( !byte_4C3E100 )
       {
-        sub_1C32C20(&System_Math_TypeInfo);
-        byte_4C32B16 = 1;
+        sub_1C37058(&System_Math_TypeInfo);
+        byte_4C3E100 = 1;
       }
       if ( !System_Math_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(System_Math_TypeInfo);
@@ -535,10 +535,10 @@ LABEL_67:
       if ( !v10 )
         goto LABEL_131;
       y = UnityEngine_Sprite__get_textureRectOffset(v10, 0).fields.y;
-      if ( !byte_4C32B16 )
+      if ( !byte_4C3E100 )
       {
-        sub_1C32C20(&System_Math_TypeInfo);
-        byte_4C32B16 = 1;
+        sub_1C37058(&System_Math_TypeInfo);
+        byte_4C3E100 = 1;
       }
       if ( !System_Math_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(System_Math_TypeInfo);
@@ -587,10 +587,10 @@ LABEL_85:
       v40 = textureRect.fields.m_Width;
       LODWORD(v41) = *(_QWORD *)&UnityEngine_Sprite__get_textureRectOffset(v10, 0);
       v42 = v39 - v40;
-      if ( !byte_4C32B16 )
+      if ( !byte_4C3E100 )
       {
-        sub_1C32C20(&System_Math_TypeInfo);
-        byte_4C32B16 = 1;
+        sub_1C37058(&System_Math_TypeInfo);
+        byte_4C3E100 = 1;
       }
       v43 = v42 - v41;
       if ( !System_Math_TypeInfo->_2.cctor_finished )
@@ -640,10 +640,10 @@ LABEL_105:
             v51 = v75.fields.m_Height;
             v52 = UnityEngine_Sprite__get_textureRectOffset(v10, 0).fields.y;
             v53 = v50 - v51;
-            if ( !byte_4C32B16 )
+            if ( !byte_4C3E100 )
             {
-              sub_1C32C20(&System_Math_TypeInfo);
-              byte_4C32B16 = 1;
+              sub_1C37058(&System_Math_TypeInfo);
+              byte_4C3E100 = 1;
             }
             v54 = v53 - v52;
             if ( !System_Math_TypeInfo->_2.cctor_finished )
@@ -701,7 +701,7 @@ LABEL_125:
         }
       }
 LABEL_131:
-      sub_1C32E7C(v10);
+      sub_1C372B4(v10);
     }
   }
 }
@@ -836,10 +836,10 @@ UnityEngine_Vector4_o UI2DSprite__get_drawingDimensions(UI2DSprite_o *this, cons
   UnityEngine_Rect_o v113; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
   UnityEngine_Vector4_o result; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 
-  if ( (byte_4C3C263 & 1) == 0 )
+  if ( (byte_4C477DE & 1) == 0 )
   {
-    sub_1C32C20(&UnityEngine_Object_TypeInfo);
-    byte_4C3C263 = 1;
+    sub_1C37058(&UnityEngine_Object_TypeInfo);
+    byte_4C477DE = 1;
   }
   PivotOffset = NGUIMath__GetPivotOffset(this->fields.mPivot, 0);
   mSprite = (UnityEngine_Object_o *)this->fields.mSprite;
@@ -858,10 +858,10 @@ UnityEngine_Vector4_o UI2DSprite__get_drawingDimensions(UI2DSprite_o *this, cons
       goto LABEL_144;
     rect = UnityEngine_Sprite__get_rect(v11, 0);
     m_Width = rect.fields.m_Width;
-    if ( !byte_4C32B16 )
+    if ( !byte_4C3E100 )
     {
-      sub_1C32C20(&System_Math_TypeInfo);
-      byte_4C32B16 = 1;
+      sub_1C37058(&System_Math_TypeInfo);
+      byte_4C3E100 = 1;
     }
     if ( !System_Math_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(System_Math_TypeInfo);
@@ -900,10 +900,10 @@ LABEL_22:
       goto LABEL_144;
     v109 = UnityEngine_Sprite__get_rect(v11, 0);
     m_Height = v109.fields.m_Height;
-    if ( !byte_4C32B16 )
+    if ( !byte_4C3E100 )
     {
-      sub_1C32C20(&System_Math_TypeInfo);
-      byte_4C32B16 = 1;
+      sub_1C37058(&System_Math_TypeInfo);
+      byte_4C3E100 = 1;
     }
     if ( !System_Math_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(System_Math_TypeInfo);
@@ -941,10 +941,10 @@ LABEL_40:
     if ( !v11 )
       goto LABEL_144;
     LODWORD(v26) = *(_QWORD *)&UnityEngine_Sprite__get_textureRectOffset(v11, 0);
-    if ( !byte_4C32B16 )
+    if ( !byte_4C3E100 )
     {
-      sub_1C32C20(&System_Math_TypeInfo);
-      byte_4C32B16 = 1;
+      sub_1C37058(&System_Math_TypeInfo);
+      byte_4C3E100 = 1;
     }
     if ( !System_Math_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(System_Math_TypeInfo);
@@ -982,10 +982,10 @@ LABEL_58:
     if ( !v11 )
       goto LABEL_144;
     y = UnityEngine_Sprite__get_textureRectOffset(v11, 0).fields.y;
-    if ( !byte_4C32B16 )
+    if ( !byte_4C3E100 )
     {
-      sub_1C32C20(&System_Math_TypeInfo);
-      byte_4C32B16 = 1;
+      sub_1C37058(&System_Math_TypeInfo);
+      byte_4C3E100 = 1;
     }
     if ( !System_Math_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(System_Math_TypeInfo);
@@ -1035,10 +1035,10 @@ LABEL_76:
     v42 = textureRect.fields.m_Width;
     LODWORD(v43) = *(_QWORD *)&UnityEngine_Sprite__get_textureRectOffset(v11, 0);
     v44 = v41 - v42;
-    if ( !byte_4C32B16 )
+    if ( !byte_4C3E100 )
     {
-      sub_1C32C20(&System_Math_TypeInfo);
-      byte_4C32B16 = 1;
+      sub_1C37058(&System_Math_TypeInfo);
+      byte_4C3E100 = 1;
     }
     v45 = v44 - v43;
     if ( !System_Math_TypeInfo->_2.cctor_finished )
@@ -1088,10 +1088,10 @@ LABEL_96:
           v53 = v113.fields.m_Height;
           v54 = UnityEngine_Sprite__get_textureRectOffset(v11, 0).fields.y;
           v55 = v52 - v53;
-          if ( !byte_4C32B16 )
+          if ( !byte_4C3E100 )
           {
-            sub_1C32C20(&System_Math_TypeInfo);
-            byte_4C32B16 = 1;
+            sub_1C37058(&System_Math_TypeInfo);
+            byte_4C3E100 = 1;
           }
           v56 = v55 - v54;
           if ( !System_Math_TypeInfo->_2.cctor_finished )
@@ -1169,7 +1169,7 @@ LABEL_116:
       }
     }
 LABEL_144:
-    sub_1C32E7C(v11);
+    sub_1C372B4(v11);
   }
 LABEL_130:
   v74 = 0.0;
@@ -1243,10 +1243,10 @@ UnityEngine_Texture_o *UI2DSprite__get_mainTexture(UI2DSprite_o *this, const Met
   UnityEngine_Sprite_o *v4; // x0
   UnityEngine_Object_o *mMat; // x20
 
-  if ( (byte_4C3C261 & 1) == 0 )
+  if ( (byte_4C477DC & 1) == 0 )
   {
-    sub_1C32C20(&UnityEngine_Object_TypeInfo);
-    byte_4C3C261 = 1;
+    sub_1C37058(&UnityEngine_Object_TypeInfo);
+    byte_4C477DC = 1;
   }
   mSprite = (UnityEngine_Object_o *)this->fields.mSprite;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -1257,7 +1257,7 @@ UnityEngine_Texture_o *UI2DSprite__get_mainTexture(UI2DSprite_o *this, const Met
     if ( v4 )
       return (UnityEngine_Texture_o *)UnityEngine_Sprite__get_texture(v4, 0);
 LABEL_14:
-    sub_1C32E7C(v4);
+    sub_1C372B4(v4);
   }
   mMat = (UnityEngine_Object_o *)this->fields.mMat;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -1290,11 +1290,11 @@ bool UI2DSprite__get_premultipliedAlpha(UI2DSprite_o *this, const MethodInfo *me
   System_String_o *name; // x0
   int v6; // w20
 
-  if ( (byte_4C3C262 & 1) == 0 )
+  if ( (byte_4C477DD & 1) == 0 )
   {
-    sub_1C32C20(&UnityEngine_Object_TypeInfo);
-    sub_1C32C20(&StringLiteral_10724/*"Premultiplied"*/);
-    byte_4C3C262 = 1;
+    sub_1C37058(&UnityEngine_Object_TypeInfo);
+    sub_1C37058(&StringLiteral_10725/*"Premultiplied"*/);
+    byte_4C477DD = 1;
   }
   mPMA = this->fields.mPMA;
   if ( mPMA == -1 )
@@ -1309,10 +1309,10 @@ bool UI2DSprite__get_premultipliedAlpha(UI2DSprite_o *this, const MethodInfo *me
     {
       if ( !v4
         || (v6 = (int)name, (name = UnityEngine_Object__get_name(v4, 0)) == 0)
-        || (name = (System_String_o *)System_String__Contains(name, (System_String_o *)StringLiteral_10724/*"Premultiplied"*/, 0), !this)
+        || (name = (System_String_o *)System_String__Contains(name, (System_String_o *)StringLiteral_10725/*"Premultiplied"*/, 0), !this)
         || ((v6 ^ 1) & 1) != 0 )
       {
-        sub_1C32E7C(name);
+        sub_1C372B4(name);
       }
       mPMA = (unsigned __int8)name & 1;
     }
@@ -1336,11 +1336,11 @@ UnityEngine_Shader_o *UI2DSprite__get_shader(UI2DSprite_o *this, const MethodInf
   int32_t v9; // w2
   const MethodInfo *v10; // x3
 
-  if ( (byte_4C3C25F & 1) == 0 )
+  if ( (byte_4C477DA & 1) == 0 )
   {
-    sub_1C32C20(&UnityEngine_Object_TypeInfo);
-    sub_1C32C20(&StringLiteral_15131/*"Unlit/Transparent Colored"*/);
-    byte_4C3C25F = 1;
+    sub_1C37058(&UnityEngine_Object_TypeInfo);
+    sub_1C37058(&StringLiteral_15133/*"Unlit/Transparent Colored"*/);
+    byte_4C477DA = 1;
   }
   mMat = (UnityEngine_Object_o *)this->fields.mMat;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -1349,7 +1349,7 @@ UnityEngine_Shader_o *UI2DSprite__get_shader(UI2DSprite_o *this, const MethodInf
   {
     v4 = this->fields.mMat;
     if ( !v4 )
-      sub_1C32E7C(0);
+      sub_1C372B4(0);
     return UnityEngine_Material__get_shader(v4, 0);
   }
   else
@@ -1360,9 +1360,9 @@ UnityEngine_Shader_o *UI2DSprite__get_shader(UI2DSprite_o *this, const MethodInf
     p_mShader = (CGThumbnailListItem_o *)&this->fields.mShader;
     if ( UnityEngine_Object__op_Equality(mShader, 0, 0) )
     {
-      v8 = UnityEngine_Shader__Find((System_String_o *)StringLiteral_15131/*"Unlit/Transparent Colored"*/, 0);
+      v8 = UnityEngine_Shader__Find((System_String_o *)StringLiteral_15133/*"Unlit/Transparent Colored"*/, 0);
       p_mShader->klass = (CGThumbnailListItem_c *)v8;
-      sub_1C32BC4(p_mShader, (int32_t)v8, v9, v10);
+      sub_1C36FFC(p_mShader, (int32_t)v8, v9, v10);
     }
     return (UnityEngine_Shader_o *)p_mShader->klass;
   }
@@ -1405,10 +1405,10 @@ void UI2DSprite__set_material(UI2DSprite_o *this, UnityEngine_Material_o *value,
   const MethodInfo *v8; // x3
   UI2DSprite_c *klass; // x8
 
-  if ( (byte_4C3C25E & 1) == 0 )
+  if ( (byte_4C477D9 & 1) == 0 )
   {
-    sub_1C32C20(&UnityEngine_Object_TypeInfo);
-    byte_4C3C25E = 1;
+    sub_1C37058(&UnityEngine_Object_TypeInfo);
+    byte_4C477D9 = 1;
   }
   mMat = (UnityEngine_Object_o *)this->fields.mMat;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -1417,7 +1417,7 @@ void UI2DSprite__set_material(UI2DSprite_o *this, UnityEngine_Material_o *value,
   {
     UIWidget__RemoveFromPanel((UIWidget_o *)this, v6);
     this->fields.mMat = value;
-    sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.mMat, (int32_t)value, v7, v8);
+    sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.mMat, (int32_t)value, v7, v8);
     klass = this->klass;
     this->fields.mPMA = -1;
     ((void (__fastcall *)(UI2DSprite_o *, const MethodInfo *))klass->vtable._30_MarkAsChanged.methodPtr)(
@@ -1436,10 +1436,10 @@ void UI2DSprite__set_shader(UI2DSprite_o *this, UnityEngine_Shader_o *value, con
   UnityEngine_Object_o *mMat; // x20
   UI2DSprite_c *klass; // x8
 
-  if ( (byte_4C3C260 & 1) == 0 )
+  if ( (byte_4C477DB & 1) == 0 )
   {
-    sub_1C32C20(&UnityEngine_Object_TypeInfo);
-    byte_4C3C260 = 1;
+    sub_1C37058(&UnityEngine_Object_TypeInfo);
+    byte_4C477DB = 1;
   }
   mShader = (UnityEngine_Object_o *)this->fields.mShader;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -1448,7 +1448,7 @@ void UI2DSprite__set_shader(UI2DSprite_o *this, UnityEngine_Shader_o *value, con
   {
     UIWidget__RemoveFromPanel((UIWidget_o *)this, v6);
     this->fields.mShader = value;
-    sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.mShader, (int32_t)value, v7, v8);
+    sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.mShader, (int32_t)value, v7, v8);
     mMat = (UnityEngine_Object_o *)this->fields.mMat;
     if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
@@ -1474,10 +1474,10 @@ void UI2DSprite__set_sprite2D(UI2DSprite_o *this, UnityEngine_Sprite_o *value, c
   const MethodInfo *v10; // x3
   const MethodInfo *v11; // x1
 
-  if ( (byte_4C3C25D & 1) == 0 )
+  if ( (byte_4C477D8 & 1) == 0 )
   {
-    sub_1C32C20(&UnityEngine_Object_TypeInfo);
-    byte_4C3C25D = 1;
+    sub_1C37058(&UnityEngine_Object_TypeInfo);
+    byte_4C477D8 = 1;
   }
   mSprite = (UnityEngine_Object_o *)this->fields.mSprite;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -1486,9 +1486,9 @@ void UI2DSprite__set_sprite2D(UI2DSprite_o *this, UnityEngine_Sprite_o *value, c
   {
     UIWidget__RemoveFromPanel((UIWidget_o *)this, v6);
     this->fields.mSprite = value;
-    sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.mSprite, (int32_t)value, v7, v8);
+    sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.mSprite, (int32_t)value, v7, v8);
     this->fields.nextSprite = 0;
-    sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.nextSprite, 0, v9, v10);
+    sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.nextSprite, 0, v9, v10);
     UIWidget__CreatePanel((UIWidget_o *)this, v11);
   }
 }

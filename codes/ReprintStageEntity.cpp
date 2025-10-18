@@ -1,33 +1,33 @@
 void ReprintStageEntity___ctor(ReprintStageEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_4C3819C & 1) == 0 )
+  if ( (byte_4C43795 & 1) == 0 )
   {
-    sub_1C32C20(&Method_DataEntityBase_string___ctor__);
-    byte_4C3819C = 1;
+    sub_1C37058(&Method_DataEntityBase_string___ctor__);
+    byte_4C43795 = 1;
   }
   DataEntityBase_object____ctor(
     (DataEntityBase_PKType__o *)this,
-    (const MethodInfo_33943CC *)Method_DataEntityBase_string___ctor__);
+    (const MethodInfo_339EC34 *)Method_DataEntityBase_string___ctor__);
 }
 
 
-void ReprintStageEntity___ctor_42480356(
+void ReprintStageEntity___ctor_42582224(
         ReprintStageEntity_o *this,
         ReprintStageEntity_o *cSrc,
         const MethodInfo *method)
 {
   __int64 v5; // x0
 
-  if ( (byte_4C3819D & 1) == 0 )
+  if ( (byte_4C43796 & 1) == 0 )
   {
-    sub_1C32C20(&Method_DataEntityBase_string___ctor__);
-    byte_4C3819D = 1;
+    sub_1C37058(&Method_DataEntityBase_string___ctor__);
+    byte_4C43796 = 1;
   }
   DataEntityBase_object____ctor(
     (DataEntityBase_PKType__o *)this,
-    (const MethodInfo_33943CC *)Method_DataEntityBase_string___ctor__);
+    (const MethodInfo_339EC34 *)Method_DataEntityBase_string___ctor__);
   if ( !cSrc )
-    sub_1C32E7C(v5);
+    sub_1C372B4(v5);
   *(_OWORD *)&this->fields.questId = *(_OWORD *)&cSrc->fields.questId;
   *(_QWORD *)&this->fields.remapPhase = *(_QWORD *)&cSrc->fields.remapPhase;
 }
@@ -39,16 +39,16 @@ System_String_o *ReprintStageEntity__CreatePK(
         int32_t wave,
         const MethodInfo *method)
 {
-  if ( (byte_4C3819B & 1) == 0 )
+  if ( (byte_4C43794 & 1) == 0 )
   {
-    sub_1C32C20(&Method_DataEntityBase_CreateMultiplePK_int__int__int___);
-    byte_4C3819B = 1;
+    sub_1C37058(&Method_DataEntityBase_CreateMultiplePK_int__int__int___);
+    byte_4C43794 = 1;
   }
   return DataEntityBase__CreateMultiplePK_int__int__int_(
            questId,
            questPhase,
            wave,
-           (const MethodInfo_30DBA08 *)Method_DataEntityBase_CreateMultiplePK_int__int__int___);
+           (const MethodInfo_30E6270 *)Method_DataEntityBase_CreateMultiplePK_int__int__int___);
 }
 
 

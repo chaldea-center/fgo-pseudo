@@ -7,10 +7,10 @@ void CriMonoBehaviour___ctor(CriMonoBehaviour_o *this, const MethodInfo *method)
 
 void CriMonoBehaviour__OnDisable(CriMonoBehaviour_o *this, const MethodInfo *method)
 {
-  if ( (byte_4C31291 & 1) == 0 )
+  if ( (byte_4C3C7E1 & 1) == 0 )
   {
-    sub_1C32C20(&CriMonoBehaviourManager_TypeInfo);
-    byte_4C31291 = 1;
+    sub_1C37058(&CriMonoBehaviourManager_TypeInfo);
+    byte_4C3C7E1 = 1;
   }
   if ( !CriMonoBehaviourManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(CriMonoBehaviourManager_TypeInfo);
@@ -24,17 +24,17 @@ void CriMonoBehaviour__OnEnable(CriMonoBehaviour_o *this, const MethodInfo *meth
   CriMonoBehaviourManager_o *instance; // x0
   const MethodInfo *v5; // x2
 
-  if ( (byte_4C31290 & 1) == 0 )
+  if ( (byte_4C3C7E0 & 1) == 0 )
   {
-    sub_1C32C20(&CriMonoBehaviourManager_TypeInfo);
-    byte_4C31290 = 1;
+    sub_1C37058(&CriMonoBehaviourManager_TypeInfo);
+    byte_4C3C7E0 = 1;
   }
   inited = CriMonoBehaviourManager_TypeInfo;
   if ( !CriMonoBehaviourManager_TypeInfo->_2.cctor_finished )
     inited = (CriMonoBehaviourManager_c *)j_il2cpp_runtime_class_init_0(CriMonoBehaviourManager_TypeInfo);
   instance = CriMonoBehaviourManager__get_instance((const MethodInfo *)inited);
   if ( !instance )
-    sub_1C32E7C(0);
+    sub_1C372B4(0);
   CriMonoBehaviourManager__Register(instance, this, v5);
 }
 

@@ -30,10 +30,10 @@ void AnimatedWidget__LateUpdate(AnimatedWidget_o *this, const MethodInfo *method
   int32_t v22; // w1
   double iptr; // [xsp+18h] [xbp-28h] BYREF
 
-  if ( (byte_4C3C22F & 1) == 0 )
+  if ( (byte_4C477AA & 1) == 0 )
   {
-    sub_1C32C20(&UnityEngine_Object_TypeInfo);
-    byte_4C3C22F = 1;
+    sub_1C37058(&UnityEngine_Object_TypeInfo);
+    byte_4C477AA = 1;
   }
   mWidget = (UnityEngine_Object_o *)this->fields.mWidget;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -42,10 +42,10 @@ void AnimatedWidget__LateUpdate(AnimatedWidget_o *this, const MethodInfo *method
   {
     v4 = this->fields.mWidget;
     width = this->fields.width;
-    if ( !byte_4C32B16 )
+    if ( !byte_4C3E100 )
     {
-      sub_1C32C20(&System_Math_TypeInfo);
-      byte_4C32B16 = 1;
+      sub_1C37058(&System_Math_TypeInfo);
+      byte_4C3E100 = 1;
     }
     if ( !System_Math_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(System_Math_TypeInfo);
@@ -84,10 +84,10 @@ LABEL_21:
     UIWidget__set_width(v4, v13, v8);
     v14 = this->fields.mWidget;
     height = this->fields.height;
-    if ( !byte_4C32B16 )
+    if ( !byte_4C3E100 )
     {
-      sub_1C32C20(&System_Math_TypeInfo);
-      byte_4C32B16 = 1;
+      sub_1C37058(&System_Math_TypeInfo);
+      byte_4C3E100 = 1;
     }
     if ( !System_Math_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(System_Math_TypeInfo);
@@ -127,7 +127,7 @@ LABEL_39:
       return;
     }
 LABEL_44:
-    sub_1C32E7C(v7);
+    sub_1C372B4(v7);
   }
 }
 
@@ -139,15 +139,15 @@ void AnimatedWidget__OnEnable(AnimatedWidget_o *this, const MethodInfo *method)
   const MethodInfo *v5; // x3
   const MethodInfo *v6; // x1
 
-  if ( (byte_4C3C22E & 1) == 0 )
+  if ( (byte_4C477A9 & 1) == 0 )
   {
-    sub_1C32C20(&Method_UnityEngine_Component_GetComponent_UIWidget___);
-    byte_4C3C22E = 1;
+    sub_1C37058(&Method_UnityEngine_Component_GetComponent_UIWidget___);
+    byte_4C477A9 = 1;
   }
   Component_object = UnityEngine_Component__GetComponent_object_(
                        (UnityEngine_Component_o *)this,
-                       (const MethodInfo_30D3BC0 *)Method_UnityEngine_Component_GetComponent_UIWidget___);
+                       (const MethodInfo_30DE428 *)Method_UnityEngine_Component_GetComponent_UIWidget___);
   this->fields.mWidget = (struct UIWidget_o *)Component_object;
-  sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.mWidget, (int32_t)Component_object, v4, v5);
+  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.mWidget, (int32_t)Component_object, v4, v5);
   AnimatedWidget__LateUpdate(this, v6);
 }

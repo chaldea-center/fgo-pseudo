@@ -16,7 +16,7 @@ void FollowObjectPositionComponent__SetObj(
   this->fields.TargetObj = obj;
   p_TargetObj = &this->fields.TargetObj;
   v5 = IsInversion;
-  sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.TargetObj, (int32_t)obj, IsInversion, method);
+  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.TargetObj, (int32_t)obj, IsInversion, method);
   *((_BYTE *)p_TargetObj + 8) = v5;
 }
 
@@ -32,10 +32,10 @@ void FollowObjectPositionComponent__Update(FollowObjectPositionComponent_o *this
   UnityEngine_Vector3_o localPosition; // 0:s0.4,4:s1.4,8:s2.4
   UnityEngine_Vector3_o v10; // 0:s0.4,4:s1.4,8:s2.4
 
-  if ( (byte_4C36DC6 & 1) == 0 )
+  if ( (byte_4C423B6 & 1) == 0 )
   {
-    sub_1C32C20(&UnityEngine_Object_TypeInfo);
-    byte_4C36DC6 = 1;
+    sub_1C37058(&UnityEngine_Object_TypeInfo);
+    byte_4C423B6 = 1;
   }
   TargetObj = (UnityEngine_Object_o *)this->fields.TargetObj;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -80,6 +80,6 @@ LABEL_14:
         }
       }
     }
-    sub_1C32E7C(transform);
+    sub_1C372B4(transform);
   }
 }

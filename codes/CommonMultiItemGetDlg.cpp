@@ -1,9 +1,9 @@
 void CommonMultiItemGetDlg___ctor(CommonMultiItemGetDlg_o *this, const MethodInfo *method)
 {
-  if ( (byte_4C36456 & 1) == 0 )
+  if ( (byte_4C41A44 & 1) == 0 )
   {
-    sub_1C32C20(&BaseDialog_TypeInfo);
-    byte_4C36456 = 1;
+    sub_1C37058(&BaseDialog_TypeInfo);
+    byte_4C41A44 = 1;
   }
   if ( !BaseDialog_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(BaseDialog_TypeInfo);
@@ -18,19 +18,19 @@ void CommonMultiItemGetDlg__Close(CommonMultiItemGetDlg_o *this, System_Action_o
   const MethodInfo *v7; // x3
   System_Action_o *v8; // x20
 
-  if ( (byte_4C36455 & 1) == 0 )
+  if ( (byte_4C41A43 & 1) == 0 )
   {
-    sub_1C32C20(&System_Action_TypeInfo);
-    sub_1C32C20(&Method_CommonMultiItemGetDlg_endClose__);
-    byte_4C36455 = 1;
+    sub_1C37058(&System_Action_TypeInfo);
+    sub_1C37058(&Method_CommonMultiItemGetDlg_endClose__);
+    byte_4C41A43 = 1;
   }
   itemWindow = this->fields.itemWindow;
   if ( !itemWindow )
-    sub_1C32E7C(0);
+    sub_1C372B4(0);
   CommonMultiItemGetList__setHide(itemWindow, (const MethodInfo *)callback);
   this->fields.onEndClose = callback;
-  sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.onEndClose, (int32_t)callback, v6, v7);
-  v8 = (System_Action_o *)sub_1C32E6C(System_Action_TypeInfo);
+  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.onEndClose, (int32_t)callback, v6, v7);
+  v8 = (System_Action_o *)sub_1C372A4(System_Action_TypeInfo);
   System_Action___ctor(v8, (Il2CppObject *)this, Method_CommonMultiItemGetDlg_endClose__, 0);
   BaseDialog__Close((BaseDialog_o *)this, v8, 0);
 }
@@ -40,14 +40,14 @@ void CommonMultiItemGetDlg__DialogCallBack(CommonMultiItemGetDlg_o *this, bool f
 {
   Il2CppObject *Instance; // x0
 
-  if ( (byte_4C36452 & 1) == 0 )
+  if ( (byte_4C41A40 & 1) == 0 )
   {
-    sub_1C32C20(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
-    byte_4C36452 = 1;
+    sub_1C37058(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+    byte_4C41A40 = 1;
   }
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39E2904 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39ED16C *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
   if ( !Instance )
-    sub_1C32E7C(0);
+    sub_1C372B4(0);
   CommonUI__CloseServantStatusDialog((CommonUI_o *)Instance, 0, 0);
 }
 
@@ -58,7 +58,7 @@ void CommonMultiItemGetDlg__Init(CommonMultiItemGetDlg_o *this, const MethodInfo
 
   itemDialog = this->fields.itemDialog;
   if ( !itemDialog )
-    sub_1C32E7C(0);
+    sub_1C372B4(0);
   ItemDetailInfoComponent__Init(itemDialog, 0);
 }
 
@@ -69,7 +69,7 @@ void CommonMultiItemGetDlg__OnClickCancel(CommonMultiItemGetDlg_o *this, const M
 
   onclick = this->fields.onclick;
   if ( !onclick )
-    sub_1C32E7C(this);
+    sub_1C372B4(this);
   ((void (__fastcall *)(intptr_t, _QWORD, intptr_t))onclick->fields.invoke_impl)(
     onclick->fields.method_code,
     0,
@@ -83,7 +83,7 @@ void CommonMultiItemGetDlg__OnClickDecide(CommonMultiItemGetDlg_o *this, const M
 
   onclick = this->fields.onclick;
   if ( !onclick )
-    sub_1C32E7C(this);
+    sub_1C372B4(this);
   ((void (__fastcall *)(intptr_t, __int64, intptr_t))onclick->fields.invoke_impl)(
     onclick->fields.method_code,
     1,
@@ -111,13 +111,13 @@ void CommonMultiItemGetDlg__Open(
   const MethodInfo *v23; // x1
   System_Action_o *v24; // x20
 
-  if ( (byte_4C36450 & 1) == 0 )
+  if ( (byte_4C41A3E & 1) == 0 )
   {
-    sub_1C32C20(&System_Action_TypeInfo);
-    sub_1C32C20(&GiftListViewItemIcon_ClickDelegate_TypeInfo);
-    sub_1C32C20(&Method_CommonMultiItemGetDlg_endOpen__);
-    sub_1C32C20(&Method_CommonMultiItemGetDlg_setShowConf__);
-    byte_4C36450 = 1;
+    sub_1C37058(&System_Action_TypeInfo);
+    sub_1C37058(&GiftListViewItemIcon_ClickDelegate_TypeInfo);
+    sub_1C37058(&Method_CommonMultiItemGetDlg_endOpen__);
+    sub_1C37058(&Method_CommonMultiItemGetDlg_setShowConf__);
+    byte_4C41A3E = 1;
   }
   titleConfLabel = this->fields.titleConfLabel;
   if ( !titleConfLabel )
@@ -136,19 +136,19 @@ void CommonMultiItemGetDlg__Open(
     goto LABEL_10;
   UILabel__set_text(titleConfLabel, closeMsg, 0);
   this->fields.onclick = callback;
-  sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.onclick, (int32_t)callback, v18, v19);
+  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.onclick, (int32_t)callback, v18, v19);
   itemWindow = this->fields.itemWindow;
-  v21 = (GiftListViewItemIcon_ClickDelegate_o *)sub_1C32E6C(GiftListViewItemIcon_ClickDelegate_TypeInfo);
+  v21 = (GiftListViewItemIcon_ClickDelegate_o *)sub_1C372A4(GiftListViewItemIcon_ClickDelegate_TypeInfo);
   GiftListViewItemIcon_ClickDelegate___ctor(v21, (Il2CppObject *)this, Method_CommonMultiItemGetDlg_setShowConf__, 0);
   if ( !itemWindow
     || (CommonMultiItemGetList__setListData(itemWindow, giftList, columnCount, v21, v22),
         (titleConfLabel = (UILabel_o *)this->fields.itemWindow) == 0) )
   {
 LABEL_10:
-    sub_1C32E7C(titleConfLabel);
+    sub_1C372B4(titleConfLabel);
   }
   CommonMultiItemGetList__setHide((CommonMultiItemGetList_o *)titleConfLabel, v23);
-  v24 = (System_Action_o *)sub_1C32E6C(System_Action_TypeInfo);
+  v24 = (System_Action_o *)sub_1C372A4(System_Action_TypeInfo);
   System_Action___ctor(v24, (Il2CppObject *)this, Method_CommonMultiItemGetDlg_endOpen__, 0);
   BaseDialog__Open((BaseDialog_o *)this, v24, 0, 0, 0);
 }
@@ -161,7 +161,7 @@ void CommonMultiItemGetDlg__endClose(CommonMultiItemGetDlg_o *this, const Method
 
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
   if ( !gameObject || (UnityEngine_GameObject__SetActive(gameObject, 0, 0), (onEndClose = this->fields.onEndClose) == 0) )
-    sub_1C32E7C(gameObject);
+    sub_1C372B4(gameObject);
   ((void (__fastcall *)(intptr_t, intptr_t))onEndClose->fields.invoke_impl)(
     onEndClose->fields.method_code,
     onEndClose->fields.method);
@@ -174,7 +174,7 @@ void CommonMultiItemGetDlg__endOpen(CommonMultiItemGetDlg_o *this, const MethodI
 
   itemWindow = this->fields.itemWindow;
   if ( !itemWindow )
-    sub_1C32E7C(0);
+    sub_1C372B4(0);
   CommonMultiItemGetList__setShow(itemWindow, method);
 }
 
@@ -185,20 +185,20 @@ void CommonMultiItemGetDlg__itemDialogCallBack(CommonMultiItemGetDlg_o *this, bo
   System_Reflection_MethodBase_o *v5; // x0
   ItemDetailInfoComponent_o *itemDialog; // x0
 
-  if ( (byte_4C36454 & 1) == 0 )
+  if ( (byte_4C41A42 & 1) == 0 )
   {
-    sub_1C32C20(&Method_CommonMultiItemGetDlg_itemDialogCallBack__);
-    byte_4C36454 = 1;
+    sub_1C37058(&Method_CommonMultiItemGetDlg_itemDialogCallBack__);
+    byte_4C41A42 = 1;
   }
   v4 = Method_CommonMultiItemGetDlg_itemDialogCallBack__;
   if ( (*((_BYTE *)Method_CommonMultiItemGetDlg_itemDialogCallBack__ + 83) & 2) != 0 )
-    v4 = (_QWORD *)sub_1C32C38(Method_CommonMultiItemGetDlg_itemDialogCallBack__);
-  v5 = (System_Reflection_MethodBase_o *)sub_1C32C04(v4, v4[4]);
+    v4 = (_QWORD *)sub_1C37070(Method_CommonMultiItemGetDlg_itemDialogCallBack__);
+  v5 = (System_Reflection_MethodBase_o *)sub_1C3703C(v4, v4[4]);
   OverwriteAssetSoundName__PlaySystemSe(v5, 0, 0, 0);
   itemDialog = this->fields.itemDialog;
   if ( !itemDialog )
-    sub_1C32E7C(0);
-  ItemDetailInfoComponent__Close_33115948(itemDialog, 0, 0);
+    sub_1C372B4(0);
+  ItemDetailInfoComponent__Close_33211580(itemDialog, 0, 0);
 }
 
 
@@ -208,7 +208,7 @@ void CommonMultiItemGetDlg__setShowConf(CommonMultiItemGetDlg_o *this, GiftEntit
   const MethodInfo *v6; // x2
 
   if ( !item )
-    sub_1C32E7C(this);
+    sub_1C372B4(this);
   type = item->fields.type;
   if ( Gift__IsServant(type, 0) )
   {
@@ -229,27 +229,27 @@ void CommonMultiItemGetDlg__setShowItemConf(CommonMultiItemGetDlg_o *this, int32
   ItemEntity_o *v8; // x21
   ItemDetailInfoComponent_CallbackFunc_o *v9; // x22
 
-  if ( (byte_4C36453 & 1) == 0 )
+  if ( (byte_4C41A41 & 1) == 0 )
   {
-    sub_1C32C20(&ItemDetailInfoComponent_CallbackFunc_TypeInfo);
-    sub_1C32C20(&Method_CommonMultiItemGetDlg_itemDialogCallBack__);
-    sub_1C32C20(&Method_DataManager_GetMasterData_ItemMaster___);
-    sub_1C32C20(&Method_DataMasterBase_ItemMaster__ItemEntity__int__GetEntity__);
-    sub_1C32C20(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-    byte_4C36453 = 1;
+    sub_1C37058(&ItemDetailInfoComponent_CallbackFunc_TypeInfo);
+    sub_1C37058(&Method_CommonMultiItemGetDlg_itemDialogCallBack__);
+    sub_1C37058(&Method_DataManager_GetMasterData_ItemMaster___);
+    sub_1C37058(&Method_DataMasterBase_ItemMaster__ItemEntity__int__GetEntity__);
+    sub_1C37058(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    byte_4C41A41 = 1;
   }
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39E2904 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39ED16C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance
     || (Instance = DataManager__GetMasterData_object_(
                      (DataManager_o *)Instance,
-                     (const MethodInfo_30DD3F0 *)Method_DataManager_GetMasterData_ItemMaster___)) == 0
+                     (const MethodInfo_30E7C58 *)Method_DataManager_GetMasterData_ItemMaster___)) == 0
     || (Entity = DataMasterBase_object__object__int___GetEntity(
                    (DataMasterBase_TMaster__TEntity__PKType__o *)Instance,
                    itemId,
-                   (const MethodInfo_3396838 *)Method_DataMasterBase_ItemMaster__ItemEntity__int__GetEntity__),
+                   (const MethodInfo_33A10A0 *)Method_DataMasterBase_ItemMaster__ItemEntity__int__GetEntity__),
         itemDialog = this->fields.itemDialog,
         v8 = (ItemEntity_o *)Entity,
-        v9 = (ItemDetailInfoComponent_CallbackFunc_o *)sub_1C32E6C(ItemDetailInfoComponent_CallbackFunc_TypeInfo),
+        v9 = (ItemDetailInfoComponent_CallbackFunc_o *)sub_1C372A4(ItemDetailInfoComponent_CallbackFunc_TypeInfo),
         ItemDetailInfoComponent_CallbackFunc___ctor(
           v9,
           (Il2CppObject *)this,
@@ -257,7 +257,7 @@ void CommonMultiItemGetDlg__setShowItemConf(CommonMultiItemGetDlg_o *this, int32
           0),
         !itemDialog) )
   {
-    sub_1C32E7C(Instance);
+    sub_1C372B4(Instance);
   }
   ItemDetailInfoComponent__Open(itemDialog, v8, v9, 50, 0);
 }
@@ -272,19 +272,19 @@ void CommonMultiItemGetDlg__setShowServantConf(
   ServantStatusDialog_EndDelegate_o *v6; // x22
   __int64 v7; // x0
 
-  if ( (byte_4C36451 & 1) == 0 )
+  if ( (byte_4C41A3F & 1) == 0 )
   {
-    sub_1C32C20(&Method_CommonMultiItemGetDlg_DialogCallBack__);
-    sub_1C32C20(&ServantStatusDialog_EndDelegate_TypeInfo);
-    sub_1C32C20(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
-    byte_4C36451 = 1;
+    sub_1C37058(&Method_CommonMultiItemGetDlg_DialogCallBack__);
+    sub_1C37058(&ServantStatusDialog_EndDelegate_TypeInfo);
+    sub_1C37058(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+    byte_4C41A3F = 1;
   }
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39E2904 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
-  v6 = (ServantStatusDialog_EndDelegate_o *)sub_1C32E6C(ServantStatusDialog_EndDelegate_TypeInfo);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39ED16C *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+  v6 = (ServantStatusDialog_EndDelegate_o *)sub_1C372A4(ServantStatusDialog_EndDelegate_TypeInfo);
   ServantStatusDialog_EndDelegate___ctor(v6, (Il2CppObject *)this, Method_CommonMultiItemGetDlg_DialogCallBack__, 0);
   if ( !Instance )
-    sub_1C32E7C(v7);
-  CommonUI__OpenServantStatusDialog_31204632((CommonUI_o *)Instance, 0, gift, v6, 0);
+    sub_1C372B4(v7);
+  CommonUI__OpenServantStatusDialog_31222096((CommonUI_o *)Instance, 0, gift, v6, 0);
 }
 
 
@@ -303,15 +303,15 @@ void CommonMultiItemGetDlg_OnClickDelegate___ctor(
   this->fields.method = method;
   this->fields.method_ptr = v4;
   this->fields.m_target = object;
-  sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.m_target, (int32_t)object, method, a4);
+  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.m_target, (int32_t)object, method, a4);
   v8 = *(unsigned __int8 *)(method + 82);
   this->fields.method_code = (intptr_t)this;
-  if ( (sub_1C32CE0(method) & 1) == 0 )
+  if ( (sub_1C37118(method) & 1) == 0 )
   {
     if ( !object )
     {
-      v10 = sub_1C32E98(0, "Delegate to an instance method cannot have null 'this'.");
-      sub_1C32D48(v10, 0);
+      v10 = sub_1C372D0(0, "Delegate to an instance method cannot have null 'this'.");
+      sub_1C37180(v10, 0);
     }
     goto LABEL_5;
   }
@@ -323,9 +323,9 @@ LABEL_5:
     this->fields.method_code = (intptr_t)m_target;
     goto LABEL_6;
   }
-  this->fields.invoke_impl = (intptr_t)sub_1A7663C;
+  this->fields.invoke_impl = (intptr_t)sub_1A7A96C;
 LABEL_6:
-  this->fields.extra_arg = (intptr_t)sub_1A765F4;
+  this->fields.extra_arg = (intptr_t)sub_1A7A924;
 }
 
 
@@ -343,14 +343,14 @@ System_IAsyncResult_o *CommonMultiItemGetDlg_OnClickDelegate__BeginInvoke(
   bool v13[4]; // [xsp+1Ch] [xbp-34h] BYREF
 
   v13[0] = isDecide;
-  if ( (byte_4C36457 & 1) == 0 )
+  if ( (byte_4C41A45 & 1) == 0 )
   {
-    sub_1C32C20(&bool_TypeInfo);
-    byte_4C36457 = 1;
+    sub_1C37058(&bool_TypeInfo);
+    byte_4C41A45 = 1;
   }
   v12[1] = 0;
   v12[0] = j_il2cpp_value_box_0(bool_TypeInfo, v13, callback, object, method, v5, v6, v7);
-  return (System_IAsyncResult_o *)sub_1C32BD4(this, v12, callback, object);
+  return (System_IAsyncResult_o *)sub_1C3700C(this, v12, callback, object);
 }
 
 
@@ -359,7 +359,7 @@ void CommonMultiItemGetDlg_OnClickDelegate__EndInvoke(
         System_IAsyncResult_o *result,
         const MethodInfo *method)
 {
-  sub_1C32BD8(result, 0, method);
+  sub_1C37010(result, 0, method);
 }
 
 

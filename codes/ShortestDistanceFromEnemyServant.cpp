@@ -25,11 +25,11 @@ float ShortestDistanceFromEnemyServant__GetRatingBase(
   struct WarBoardRatingBaseEntity_o *ratingBase; // x8
 
   v10 = this;
-  if ( (byte_4C35330 & 1) == 0 )
+  if ( (byte_4C4091B & 1) == 0 )
   {
-    sub_1C32C20(&AStarSearch_TypeInfo);
-    this = (ShortestDistanceFromEnemyServant_o *)sub_1C32C20(&WarBoardAIManager_TypeInfo);
-    byte_4C35330 = 1;
+    sub_1C37058(&AStarSearch_TypeInfo);
+    this = (ShortestDistanceFromEnemyServant_o *)sub_1C37058(&WarBoardAIManager_TypeInfo);
+    byte_4C4091B = 1;
   }
   if ( !targetSquare )
     goto LABEL_18;
@@ -66,7 +66,7 @@ float ShortestDistanceFromEnemyServant__GetRatingBase(
                            - ratingBase->fields.adjustmentValueA2 * ((int)max_length - 1)),
                      0.0);
 LABEL_18:
-          sub_1C32E7C(this);
+          sub_1C372B4(this);
         }
       }
     }

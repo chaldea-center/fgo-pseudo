@@ -14,14 +14,14 @@ void SummonEffectSceneRootComponent__beginInitialize(SummonEffectSceneRootCompon
 {
   Il2CppObject *Instance; // x0
 
-  if ( (byte_4C350B1 & 1) == 0 )
+  if ( (byte_4C4073E & 1) == 0 )
   {
-    sub_1C32C20(&Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__);
-    byte_4C350B1 = 1;
+    sub_1C37058(&Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__);
+    byte_4C4073E = 1;
   }
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39E2904 *)Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39ED16C *)Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__);
   if ( !Instance )
-    sub_1C32E7C(0);
+    sub_1C372B4(0);
   AvalonSceneManager__endInitialize((AvalonSceneManager_o *)Instance, (SceneRootComponent_o *)this, 0);
 }
 
@@ -30,20 +30,20 @@ void SummonEffectSceneRootComponent__beginStartUp(SummonEffectSceneRootComponent
 {
   UnityEngine_Component_o *summonInstance; // x0
 
-  if ( (byte_4C350B2 & 1) == 0 )
+  if ( (byte_4C4073F & 1) == 0 )
   {
-    sub_1C32C20(&Method_UnityEngine_Component_GetComponent_PlayMakerFSM___);
-    sub_1C32C20(&StringLiteral_12320/*"START_EFFECT"*/);
-    byte_4C350B2 = 1;
+    sub_1C37058(&Method_UnityEngine_Component_GetComponent_PlayMakerFSM___);
+    sub_1C37058(&StringLiteral_12321/*"START_EFFECT"*/);
+    byte_4C4073F = 1;
   }
-  SceneRootComponent__beginStartUp_41381708((SceneRootComponent_o *)this, 0);
+  SceneRootComponent__beginStartUp_41481188((SceneRootComponent_o *)this, 0);
   summonInstance = (UnityEngine_Component_o *)this->fields.summonInstance;
   if ( !summonInstance
     || (summonInstance = (UnityEngine_Component_o *)UnityEngine_Component__GetComponent_object_(
                                                       summonInstance,
-                                                      (const MethodInfo_30D3BC0 *)Method_UnityEngine_Component_GetComponent_PlayMakerFSM___)) == 0 )
+                                                      (const MethodInfo_30DE428 *)Method_UnityEngine_Component_GetComponent_PlayMakerFSM___)) == 0 )
   {
-    sub_1C32E7C(summonInstance);
+    sub_1C372B4(summonInstance);
   }
-  PlayMakerFSM__SendEvent((PlayMakerFSM_o *)summonInstance, (System_String_o *)StringLiteral_12320/*"START_EFFECT"*/, 0);
+  PlayMakerFSM__SendEvent((PlayMakerFSM_o *)summonInstance, (System_String_o *)StringLiteral_12321/*"START_EFFECT"*/, 0);
 }

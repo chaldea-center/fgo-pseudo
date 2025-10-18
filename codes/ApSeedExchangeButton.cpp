@@ -1,9 +1,9 @@
 void ApSeedExchangeButton___cctor(const MethodInfo *method)
 {
-  if ( (byte_4C31760 & 1) == 0 )
+  if ( (byte_4C3CCB0 & 1) == 0 )
   {
-    sub_1C32C20(&ApSeedExchangeButton_TypeInfo);
-    byte_4C31760 = 1;
+    sub_1C37058(&ApSeedExchangeButton_TypeInfo);
+    byte_4C3CCB0 = 1;
   }
   ApSeedExchangeButton_TypeInfo->static_fields->EXCHENGE_DISP_LIMIT = 99;
 }
@@ -20,15 +20,15 @@ void ApSeedExchangeButton__OnClickButton(ApSeedExchangeButton_o *this, const Met
   _QWORD *v3; // x0
   System_Reflection_MethodBase_o *v4; // x0
 
-  if ( (byte_4C3175F & 1) == 0 )
+  if ( (byte_4C3CCAF & 1) == 0 )
   {
-    sub_1C32C20(&Method_ApSeedExchangeButton_OnClickButton__);
-    byte_4C3175F = 1;
+    sub_1C37058(&Method_ApSeedExchangeButton_OnClickButton__);
+    byte_4C3CCAF = 1;
   }
   v3 = Method_ApSeedExchangeButton_OnClickButton__;
   if ( (*((_BYTE *)Method_ApSeedExchangeButton_OnClickButton__ + 83) & 2) != 0 )
-    v3 = (_QWORD *)sub_1C32C38();
-  v4 = (System_Reflection_MethodBase_o *)sub_1C32C04(v3, v3[4]);
+    v3 = (_QWORD *)sub_1C37070();
+  v4 = (System_Reflection_MethodBase_o *)sub_1C3703C(v3, v3[4]);
   OverwriteAssetSoundName__PlaySystemSe(v4, 0, 0, 0);
   ActionExtensions__Call(this->fields.onClickCallback, 0);
 }
@@ -47,11 +47,11 @@ void ApSeedExchangeButton__SetupBtn(
   UISprite_o *buttonSprite; // x20
   const MethodInfo *v12; // x1
 
-  if ( (byte_4C3175D & 1) == 0 )
+  if ( (byte_4C3CCAD & 1) == 0 )
   {
-    sub_1C32C20(&AtlasManager_TypeInfo);
-    sub_1C32C20(&StringLiteral_17481/*"btn_event_fruit"*/);
-    byte_4C3175D = 1;
+    sub_1C37058(&AtlasManager_TypeInfo);
+    sub_1C37058(&StringLiteral_17483/*"btn_event_fruit"*/);
+    byte_4C3CCAD = 1;
   }
   if ( !shopEntity )
   {
@@ -62,15 +62,15 @@ void ApSeedExchangeButton__SetupBtn(
       return;
     }
 LABEL_12:
-    sub_1C32E7C(gameObject);
+    sub_1C372B4(gameObject);
   }
   this->fields.shopEntity = shopEntity;
-  sub_1C32BC4(&this->fields.shopEntity, shopEntity);
+  sub_1C36FFC(&this->fields.shopEntity, shopEntity);
   this->fields.onClickCallback = onClickCallback;
-  sub_1C32BC4(&this->fields.onClickCallback, onClickCallback);
+  sub_1C36FFC(&this->fields.onClickCallback, onClickCallback);
   SelfUserGame = UserGameMaster__getSelfUserGame(0);
   this->fields.userEnt = SelfUserGame;
-  sub_1C32BC4(&this->fields.userEnt, SelfUserGame);
+  sub_1C36FFC(&this->fields.userEnt, SelfUserGame);
   userEnt = this->fields.userEnt;
   if ( userEnt )
     this->fields.currentAp = UserGameEntity__getAct(userEnt, 0);
@@ -80,11 +80,11 @@ LABEL_12:
   UnityEngine_GameObject__SetActive(gameObject, 1, 0);
   CommonConsumeEntities = ShopEntity__GetCommonConsumeEntities(shopEntity, 0);
   this->fields.commonConsumeEntities = CommonConsumeEntities;
-  sub_1C32BC4(&this->fields.commonConsumeEntities, CommonConsumeEntities);
+  sub_1C36FFC(&this->fields.commonConsumeEntities, CommonConsumeEntities);
   buttonSprite = this->fields.buttonSprite;
   if ( !AtlasManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo);
-  AtlasManager__SetEventSprite(buttonSprite, (System_String_o *)StringLiteral_17481/*"btn_event_fruit"*/, 0);
+  AtlasManager__SetEventSprite(buttonSprite, (System_String_o *)StringLiteral_17483/*"btn_event_fruit"*/, 0);
   AtlasManager__SetItem(this->fields.icon, 104, 0);
   ApSeedExchangeButton__UpdateExchangeCount(this, v12);
 }
@@ -99,7 +99,7 @@ void ApSeedExchangeButton__Update(ApSeedExchangeButton_o *this, const MethodInfo
 
   SelfUserGame = UserGameMaster__getSelfUserGame(0);
   this->fields.userEnt = SelfUserGame;
-  sub_1C32BC4(&this->fields.userEnt, SelfUserGame);
+  sub_1C36FFC(&this->fields.userEnt, SelfUserGame);
   userEnt = this->fields.userEnt;
   if ( userEnt )
   {
@@ -126,10 +126,10 @@ void ApSeedExchangeButton__UpdateExchangeCount(ApSeedExchangeButton_o *this, con
   int32_t v11; // [xsp+8h] [xbp-28h] BYREF
   int32_t v12; // [xsp+Ch] [xbp-24h] BYREF
 
-  if ( (byte_4C3175E & 1) == 0 )
+  if ( (byte_4C3CCAE & 1) == 0 )
   {
-    sub_1C32C20(&ApSeedExchangeButton_TypeInfo);
-    byte_4C3175E = 1;
+    sub_1C37058(&ApSeedExchangeButton_TypeInfo);
+    byte_4C3CCAE = 1;
   }
   v11 = 0;
   shopEntity = this->fields.shopEntity;
@@ -194,6 +194,6 @@ LABEL_17:
         }
       }
     }
-    sub_1C32E7C(convertLimit);
+    sub_1C372B4(convertLimit);
   }
 }

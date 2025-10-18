@@ -13,7 +13,7 @@ void TimeSyncAlphaSwitcher__Clear(TimeSyncAlphaSwitcher_o *this, const MethodInf
   widget = this->fields.widget;
   *(_QWORD *)&this->fields.toggleNum = 1;
   if ( !widget )
-    sub_1C32E7C(0);
+    sub_1C372B4(0);
   ((void (__fastcall *)(struct UIWidget_o *, const MethodInfo *, float))widget->klass->vtable._8_set_alpha.methodPtr)(
     widget,
     widget->klass->vtable._8_set_alpha.method,
@@ -121,7 +121,7 @@ LABEL_15:
         return;
       }
     }
-    sub_1C32E7C(v5);
+    sub_1C372B4(v5);
   }
 }
 

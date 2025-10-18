@@ -9,30 +9,30 @@ void SetUserBirthDayRequest__beginRequest(
   Il2CppObject *Instance; // x0
   System_DateTime_o v12; // x0
   System_DateTime_o v13; // x0
-  int64_t Time_41266888; // x0
+  int64_t Time_41366368; // x0
   const MethodInfo *v15; // x3
   const MethodInfo *v16; // x1
   System_DateTime_o dateTime; // [xsp+8h] [xbp-48h] BYREF
 
-  if ( (byte_4C395B5 & 1) == 0 )
+  if ( (byte_4C44BAF & 1) == 0 )
   {
-    sub_1C32C20(&NetworkManager_TypeInfo);
-    sub_1C32C20(&Method_SingletonMonoBehaviour_NetworkManager__get_Instance__);
-    sub_1C32C20(&StringLiteral_17160/*"birthDay"*/);
-    byte_4C395B5 = 1;
+    sub_1C37058(&NetworkManager_TypeInfo);
+    sub_1C37058(&Method_SingletonMonoBehaviour_NetworkManager__get_Instance__);
+    sub_1C37058(&StringLiteral_17162/*"birthDay"*/);
+    byte_4C44BAF = 1;
   }
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39E2904 *)Method_SingletonMonoBehaviour_NetworkManager__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39ED16C *)Method_SingletonMonoBehaviour_NetworkManager__get_Instance__);
   if ( !Instance )
-    sub_1C32E7C(0);
-  NetworkManager__SetSignup_41257592((NetworkManager_o *)Instance, normalName, genderType, month, day, 0);
+    sub_1C372B4(0);
+  NetworkManager__SetSignup_41357072((NetworkManager_o *)Instance, normalName, genderType, month, day, 0);
   v12.fields._dateData = (uint64_t)&dateTime;
   dateTime.fields._dateData = 0;
-  System_DateTime___ctor_64905272(v12, 2000, month, day, 0, 0, 0, 1, 0);
+  System_DateTime___ctor_64948384(v12, 2000, month, day, 0, 0, 0, 1, 0);
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
   v13.fields._dateData = dateTime.fields._dateData;
-  Time_41266888 = NetworkManager__getTime_41266888(v13, 0);
-  RequestBase__addField_44144740((RequestBase_o *)this, (System_String_o *)StringLiteral_17160/*"birthDay"*/, Time_41266888, v15);
+  Time_41366368 = NetworkManager__getTime_41366368(v13, 0);
+  RequestBase__addField_44246844((RequestBase_o *)this, (System_String_o *)StringLiteral_17162/*"birthDay"*/, Time_41366368, v15);
   RequestBase__beginRequest((RequestBase_o *)this, v16);
 }
 
@@ -41,16 +41,16 @@ System_String_o *SetUserBirthDayRequest__getURL(SetUserBirthDayRequest_o *this, 
 {
   System_String_o *BaseUrl; // x0
 
-  if ( (byte_4C395B4 & 1) == 0 )
+  if ( (byte_4C44BAE & 1) == 0 )
   {
-    sub_1C32C20(&NetworkManager_TypeInfo);
-    sub_1C32C20(&StringLiteral_22786/*"profile/editBirth"*/);
-    byte_4C395B4 = 1;
+    sub_1C37058(&NetworkManager_TypeInfo);
+    sub_1C37058(&StringLiteral_22790/*"profile/editBirth"*/);
+    byte_4C44BAE = 1;
   }
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
   BaseUrl = NetworkManager__getBaseUrl(1, 0);
-  return System_String__Concat_63518544(BaseUrl, (System_String_o *)StringLiteral_22786/*"profile/editBirth"*/, 0);
+  return System_String__Concat_63561656(BaseUrl, (System_String_o *)StringLiteral_22790/*"profile/editBirth"*/, 0);
 }
 
 
@@ -78,15 +78,15 @@ void SetUserBirthDayRequest__requestCompleted(
   struct NetworkManager_ResultCallbackFunc_o *v21; // x8
   uint64_t dateData; // [xsp+8h] [xbp-48h] BYREF
 
-  if ( (byte_4C395B6 & 1) == 0 )
+  if ( (byte_4C44BB0 & 1) == 0 )
   {
-    sub_1C32C20(&System_DateTime_TypeInfo);
-    sub_1C32C20(&JsonManager_TypeInfo);
-    sub_1C32C20(&NetworkManager_TypeInfo);
-    sub_1C32C20(&ResponseCommandKind_TypeInfo);
-    sub_1C32C20(&Method_SingletonMonoBehaviour_NetworkManager__get_Instance__);
-    sub_1C32C20(&StringLiteral_22212/*"ng"*/);
-    byte_4C395B6 = 1;
+    sub_1C37058(&System_DateTime_TypeInfo);
+    sub_1C37058(&JsonManager_TypeInfo);
+    sub_1C37058(&NetworkManager_TypeInfo);
+    sub_1C37058(&ResponseCommandKind_TypeInfo);
+    sub_1C37058(&Method_SingletonMonoBehaviour_NetworkManager__get_Instance__);
+    sub_1C37058(&StringLiteral_22215/*"ng"*/);
+    byte_4C44BB0 = 1;
   }
   if ( !ResponseCommandKind_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(ResponseCommandKind_TypeInfo);
@@ -100,8 +100,8 @@ void SetUserBirthDayRequest__requestCompleted(
     mAndroidApiKey = (int64_t)SelfUserGame->fields.mAndroidApiKey;
     if ( !NetworkManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
-    dateData = NetworkManager__getDateTime_41267668(mAndroidApiKey, 0).fields._dateData;
-    Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39E2904 *)Method_SingletonMonoBehaviour_NetworkManager__get_Instance__);
+    dateData = NetworkManager__getDateTime_41367148(mAndroidApiKey, 0).fields._dateData;
+    Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39ED16C *)Method_SingletonMonoBehaviour_NetworkManager__get_Instance__);
     m_CancellationTokenSource = (System_String_o *)v9->fields.m_CancellationTokenSource;
     mAuGameServerPublicKey_high = HIDWORD(v9->fields.mAuGameServerPublicKey);
     v14 = (NetworkManager_o *)Instance;
@@ -112,17 +112,17 @@ void SetUserBirthDayRequest__requestCompleted(
     v17.fields._dateData = (uint64_t)&dateData;
     SelfUserGame = (NetworkManager_o *)System_DateTime__get_Day(v17, 0);
     if ( !v14
-      || (NetworkManager__SetSignup_41257592(
+      || (NetworkManager__SetSignup_41357072(
             v14,
             m_CancellationTokenSource,
             mAuGameServerPublicKey_high,
             Month,
             (int32_t)SelfUserGame,
             0),
-          (SelfUserGame = (NetworkManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39E2904 *)Method_SingletonMonoBehaviour_NetworkManager__get_Instance__)) == 0) )
+          (SelfUserGame = (NetworkManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39ED16C *)Method_SingletonMonoBehaviour_NetworkManager__get_Instance__)) == 0) )
     {
 LABEL_21:
-      sub_1C32E7C(SelfUserGame);
+      sub_1C372B4(SelfUserGame);
     }
     NetworkManager__WriteSignup(SelfUserGame, 0);
     success = (Il2CppObject *)v7->fields.success;
@@ -142,7 +142,7 @@ LABEL_21:
     if ( v21 )
       ((void (__fastcall *)(intptr_t, __int64, intptr_t))v21->fields.invoke_impl)(
         v21->fields.method_code,
-        StringLiteral_22212/*"ng"*/,
+        StringLiteral_22215/*"ng"*/,
         v21->fields.method);
   }
 }

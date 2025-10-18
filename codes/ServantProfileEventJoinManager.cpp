@@ -7,28 +7,28 @@ void ServantProfileEventJoinManager___cctor(const MethodInfo *method)
   int32_t v5; // w2
   const MethodInfo *v6; // x3
 
-  if ( (byte_4C38DE1 & 1) == 0 )
+  if ( (byte_4C443DA & 1) == 0 )
   {
-    sub_1C32C20(&Method_System_Collections_Generic_List_ServantProfileEventJoinManager_ServantEventJoinInfo___ctor__);
-    sub_1C32C20(&System_Collections_Generic_List_ServantProfileEventJoinManager_ServantEventJoinInfo__TypeInfo);
-    sub_1C32C20(&ServantProfileEventJoinManager_TypeInfo);
-    sub_1C32C20(&StringLiteral_6677/*"Fgo_20191115"*/);
-    byte_4C38DE1 = 1;
+    sub_1C37058(&Method_System_Collections_Generic_List_ServantProfileEventJoinManager_ServantEventJoinInfo___ctor__);
+    sub_1C37058(&System_Collections_Generic_List_ServantProfileEventJoinManager_ServantEventJoinInfo__TypeInfo);
+    sub_1C37058(&ServantProfileEventJoinManager_TypeInfo);
+    sub_1C37058(&StringLiteral_6678/*"Fgo_20191115"*/);
+    byte_4C443DA = 1;
   }
-  ServantProfileEventJoinManager_TypeInfo->static_fields->SAVE_DATA_VERSION = (struct System_String_o *)StringLiteral_6677/*"Fgo_20191115"*/;
-  sub_1C32BC4(
+  ServantProfileEventJoinManager_TypeInfo->static_fields->SAVE_DATA_VERSION = (struct System_String_o *)StringLiteral_6678/*"Fgo_20191115"*/;
+  sub_1C36FFC(
     (CGThumbnailListItem_o *)ServantProfileEventJoinManager_TypeInfo->static_fields,
-    StringLiteral_6677/*"Fgo_20191115"*/,
+    StringLiteral_6678/*"Fgo_20191115"*/,
     v1,
     v2);
   *(_WORD *)&ServantProfileEventJoinManager_TypeInfo->static_fields->isModified = 0;
-  v3 = (System_Collections_Generic_List_object__o *)sub_1C32E6C(System_Collections_Generic_List_ServantProfileEventJoinManager_ServantEventJoinInfo__TypeInfo);
+  v3 = (System_Collections_Generic_List_object__o *)sub_1C372A4(System_Collections_Generic_List_ServantProfileEventJoinManager_ServantEventJoinInfo__TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v3,
-    (const MethodInfo_3797F88 *)Method_System_Collections_Generic_List_ServantProfileEventJoinManager_ServantEventJoinInfo___ctor__);
+    (const MethodInfo_37A27F0 *)Method_System_Collections_Generic_List_ServantProfileEventJoinManager_ServantEventJoinInfo___ctor__);
   static_fields = ServantProfileEventJoinManager_TypeInfo->static_fields;
   static_fields->infoList = (struct System_Collections_Generic_List_ServantProfileEventJoinManager_ServantEventJoinInfo__o *)v3;
-  sub_1C32BC4((CGThumbnailListItem_o *)&static_fields->infoList, (int32_t)v3, v5, v6);
+  sub_1C36FFC((CGThumbnailListItem_o *)&static_fields->infoList, (int32_t)v3, v5, v6);
 }
 
 
@@ -45,12 +45,12 @@ void ServantProfileEventJoinManager__ClearSaveDataList(const MethodInfo *method)
   int32_t size; // w2
   int v4; // w9
 
-  if ( (byte_4C38DDA & 1) == 0 )
+  if ( (byte_4C443D3 & 1) == 0 )
   {
-    sub_1C32C20(&Method_System_Collections_Generic_List_ServantProfileEventJoinManager_ServantEventJoinInfo__Clear__);
-    sub_1C32C20(&Method_System_Collections_Generic_List_ServantProfileEventJoinManager_ServantEventJoinInfo__get_Count__);
-    sub_1C32C20(&ServantProfileEventJoinManager_TypeInfo);
-    byte_4C38DDA = 1;
+    sub_1C37058(&Method_System_Collections_Generic_List_ServantProfileEventJoinManager_ServantEventJoinInfo__Clear__);
+    sub_1C37058(&Method_System_Collections_Generic_List_ServantProfileEventJoinManager_ServantEventJoinInfo__get_Count__);
+    sub_1C37058(&ServantProfileEventJoinManager_TypeInfo);
+    byte_4C443D3 = 1;
   }
   v1 = ServantProfileEventJoinManager_TypeInfo;
   if ( !ServantProfileEventJoinManager_TypeInfo->_2.cctor_finished )
@@ -70,7 +70,7 @@ void ServantProfileEventJoinManager__ClearSaveDataList(const MethodInfo *method)
     infoList = ServantProfileEventJoinManager_TypeInfo->static_fields->infoList;
     if ( !infoList )
 LABEL_14:
-      sub_1C32E7C(v1);
+      sub_1C372B4(v1);
   }
   size = infoList->fields._size;
   v4 = infoList->fields._version + 1;
@@ -96,10 +96,10 @@ void ServantProfileEventJoinManager__DeleteSaveData(const MethodInfo *method)
   ServantProfileEventJoinManager_c *v1; // x0
   System_String_o *SaveFileName; // x19
 
-  if ( (byte_4C38DD9 & 1) == 0 )
+  if ( (byte_4C443D2 & 1) == 0 )
   {
-    sub_1C32C20(&ServantProfileEventJoinManager_TypeInfo);
-    byte_4C38DD9 = 1;
+    sub_1C37058(&ServantProfileEventJoinManager_TypeInfo);
+    byte_4C443D2 = 1;
   }
   v1 = ServantProfileEventJoinManager_TypeInfo;
   if ( !ServantProfileEventJoinManager_TypeInfo->_2.cctor_finished )
@@ -133,31 +133,31 @@ bool ServantProfileEventJoinManager__GetIsNeedToCheckEventJoinName(
   Il2CppObject *v20; // x0
   CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o v21; // 0:x0.16
 
-  if ( (byte_4C38DDD & 1) == 0 )
+  if ( (byte_4C443D6 & 1) == 0 )
   {
-    sub_1C32C20(&Method_DataManager_GetMasterData_ServantProfileMaster___);
-    sub_1C32C20(&Method_System_Collections_Generic_List_ServantProfileEventJoinManager_ServantEventJoinInfo__Find__);
-    sub_1C32C20(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
-    sub_1C32C20(&System_Predicate_ServantProfileEventJoinManager_ServantEventJoinInfo__TypeInfo);
-    sub_1C32C20(&ServantProfileEventJoinManager_TypeInfo);
-    sub_1C32C20(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-    sub_1C32C20(&Method_ServantProfileEventJoinManager___c__DisplayClass10_0__GetIsNeedToCheckEventJoinName_b__0__);
-    sub_1C32C20(&ServantProfileEventJoinManager___c__DisplayClass10_0_TypeInfo);
-    byte_4C38DDD = 1;
+    sub_1C37058(&Method_DataManager_GetMasterData_ServantProfileMaster___);
+    sub_1C37058(&Method_System_Collections_Generic_List_ServantProfileEventJoinManager_ServantEventJoinInfo__Find__);
+    sub_1C37058(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
+    sub_1C37058(&System_Predicate_ServantProfileEventJoinManager_ServantEventJoinInfo__TypeInfo);
+    sub_1C37058(&ServantProfileEventJoinManager_TypeInfo);
+    sub_1C37058(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    sub_1C37058(&Method_ServantProfileEventJoinManager___c__DisplayClass10_0__GetIsNeedToCheckEventJoinName_b__0__);
+    sub_1C37058(&ServantProfileEventJoinManager___c__DisplayClass10_0_TypeInfo);
+    byte_4C443D6 = 1;
   }
-  v3 = sub_1C32E6C(ServantProfileEventJoinManager___c__DisplayClass10_0_TypeInfo);
+  v3 = sub_1C372A4(ServantProfileEventJoinManager___c__DisplayClass10_0_TypeInfo);
   System_Object___ctor((Il2CppObject *)v3, 0);
   if ( !v3 )
     goto LABEL_27;
   *(_QWORD *)(v3 + 16) = servantEntity;
   v7 = (ServantProfileEntity_array **)(v3 + 16);
-  sub_1C32BC4((CGThumbnailListItem_o *)(v3 + 16), (int32_t)servantEntity, v5, v6);
-  Instance = (ServantProfileEntity_array *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39E2904 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  sub_1C36FFC((CGThumbnailListItem_o *)(v3 + 16), (int32_t)servantEntity, v5, v6);
+  Instance = (ServantProfileEntity_array *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39ED16C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance )
     goto LABEL_27;
   Instance = (ServantProfileEntity_array *)DataManager__GetMasterData_object_(
                                              (DataManager_o *)Instance,
-                                             (const MethodInfo_30DD3F0 *)Method_DataManager_GetMasterData_ServantProfileMaster___);
+                                             (const MethodInfo_30E7C58 *)Method_DataManager_GetMasterData_ServantProfileMaster___);
   if ( !Instance )
     goto LABEL_27;
   Instance = ServantProfileMaster__GetServantProfileEntities((ServantProfileMaster_o *)Instance, 21, 0);
@@ -171,7 +171,7 @@ bool ServantProfileEventJoinManager__GetIsNeedToCheckEventJoinName(
   while ( 1 )
   {
     if ( v10 >= max_length )
-      sub_1C32E84(Instance);
+      sub_1C372BC(Instance);
     v11 = v9->m_Items[v10];
     if ( !v11 )
       goto LABEL_27;
@@ -185,7 +185,7 @@ bool ServantProfileEventJoinManager__GetIsNeedToCheckEventJoinName(
       j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
     *(_QWORD *)&v21.fields.currentCryptoKey = bounds;
     *(_QWORD *)&v21.fields.fakeValue = v14;
-    Instance = (ServantProfileEntity_array *)CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_48887784(v21, 0);
+    Instance = (ServantProfileEntity_array *)CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_48930896(v21, 0);
     if ( svtId == (_DWORD)Instance )
       break;
     max_length = v9->max_length;
@@ -201,7 +201,7 @@ bool ServantProfileEventJoinManager__GetIsNeedToCheckEventJoinName(
     if ( *v7 )
       return ServantEntity__GetIsNeedToCheckEventJoinName((ServantEntity_o *)Instance, 0);
 LABEL_27:
-    sub_1C32E7C(Instance);
+    sub_1C372B4(Instance);
   }
   v17 = ServantProfileEventJoinManager_TypeInfo;
   if ( !ServantProfileEventJoinManager_TypeInfo->_2.cctor_finished )
@@ -210,7 +210,7 @@ LABEL_27:
     v17 = ServantProfileEventJoinManager_TypeInfo;
   }
   infoList = (System_Collections_Generic_List_object__o *)v17->static_fields->infoList;
-  v19 = (System_Predicate_object__o *)sub_1C32E6C(System_Predicate_ServantProfileEventJoinManager_ServantEventJoinInfo__TypeInfo);
+  v19 = (System_Predicate_object__o *)sub_1C372A4(System_Predicate_ServantProfileEventJoinManager_ServantEventJoinInfo__TypeInfo);
   System_Predicate_object____ctor(
     v19,
     (Il2CppObject *)v3,
@@ -221,7 +221,7 @@ LABEL_27:
   v20 = System_Collections_Generic_List_object___Find(
           infoList,
           (System_Predicate_T__o *)v19,
-          (const MethodInfo_3798E24 *)Method_System_Collections_Generic_List_ServantProfileEventJoinManager_ServantEventJoinInfo__Find__);
+          (const MethodInfo_37A368C *)Method_System_Collections_Generic_List_ServantProfileEventJoinManager_ServantEventJoinInfo__Find__);
   return !v20 || BYTE4(v20[1].klass) != 0;
 }
 
@@ -231,12 +231,12 @@ System_String_o *ServantProfileEventJoinManager__GetSaveFileName(const MethodInf
   System_String_o *DatFileSavePath; // x19
   System_String_o *FileName; // x2
 
-  if ( (byte_4C38DD8 & 1) == 0 )
+  if ( (byte_4C443D1 & 1) == 0 )
   {
-    sub_1C32C20(&AndroidUtil_TypeInfo);
-    sub_1C32C20(&DatFileName_TypeInfo);
-    sub_1C32C20(&StringLiteral_1048/*"/"*/);
-    byte_4C38DD8 = 1;
+    sub_1C37058(&AndroidUtil_TypeInfo);
+    sub_1C37058(&DatFileName_TypeInfo);
+    sub_1C37058(&StringLiteral_1048/*"/"*/);
+    byte_4C443D1 = 1;
   }
   if ( !AndroidUtil_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(AndroidUtil_TypeInfo);
@@ -244,7 +244,7 @@ System_String_o *ServantProfileEventJoinManager__GetSaveFileName(const MethodInf
   if ( !DatFileName_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DatFileName_TypeInfo);
   FileName = DatFileName__getFileName(28, 0);
-  return System_String__Concat_63556792(DatFileSavePath, (System_String_o *)StringLiteral_1048/*"/"*/, FileName, 0);
+  return System_String__Concat_63599904(DatFileSavePath, (System_String_o *)StringLiteral_1048/*"/"*/, FileName, 0);
 }
 
 
@@ -252,10 +252,10 @@ void ServantProfileEventJoinManager__Initialize(const MethodInfo *method)
 {
   ServantProfileEventJoinManager_c *v1; // x0
 
-  if ( (byte_4C38DDB & 1) == 0 )
+  if ( (byte_4C443D4 & 1) == 0 )
   {
-    sub_1C32C20(&ServantProfileEventJoinManager_TypeInfo);
-    byte_4C38DDB = 1;
+    sub_1C37058(&ServantProfileEventJoinManager_TypeInfo);
+    byte_4C443D4 = 1;
   }
   v1 = ServantProfileEventJoinManager_TypeInfo;
   if ( !ServantProfileEventJoinManager_TypeInfo->_2.cctor_finished )
@@ -295,15 +295,15 @@ bool ServantProfileEventJoinManager__ReadData(const MethodInfo *method)
   int32_t *p_offset; // x10
   __int64 v29; // x0
 
-  if ( (byte_4C38DDF & 1) == 0 )
+  if ( (byte_4C443D8 & 1) == 0 )
   {
-    sub_1C32C20(&System_IO_BinaryReader_TypeInfo);
-    sub_1C32C20(&System_IDisposable_TypeInfo);
-    sub_1C32C20(&Method_System_Collections_Generic_List_ServantProfileEventJoinManager_ServantEventJoinInfo__Add__);
-    sub_1C32C20(&ManagerConfig_TypeInfo);
-    sub_1C32C20(&ServantProfileEventJoinManager_ServantEventJoinInfo_TypeInfo);
-    sub_1C32C20(&ServantProfileEventJoinManager_TypeInfo);
-    byte_4C38DDF = 1;
+    sub_1C37058(&System_IO_BinaryReader_TypeInfo);
+    sub_1C37058(&System_IDisposable_TypeInfo);
+    sub_1C37058(&Method_System_Collections_Generic_List_ServantProfileEventJoinManager_ServantEventJoinInfo__Add__);
+    sub_1C37058(&ManagerConfig_TypeInfo);
+    sub_1C37058(&ServantProfileEventJoinManager_ServantEventJoinInfo_TypeInfo);
+    sub_1C37058(&ServantProfileEventJoinManager_TypeInfo);
+    byte_4C443D8 = 1;
   }
   v1 = ServantProfileEventJoinManager_TypeInfo;
   if ( !ServantProfileEventJoinManager_TypeInfo->_2.cctor_finished )
@@ -328,7 +328,7 @@ bool ServantProfileEventJoinManager__ReadData(const MethodInfo *method)
   if ( !System_IO_File__Exists(SaveFileName, 0) )
     return 0;
   v6 = (System_IO_Stream_o *)System_IO_File__OpenRead(SaveFileName, 0);
-  v7 = (System_IO_BinaryReader_o *)sub_1C32E6C(System_IO_BinaryReader_TypeInfo);
+  v7 = (System_IO_BinaryReader_o *)sub_1C372A4(System_IO_BinaryReader_TypeInfo);
   System_IO_BinaryReader___ctor(v7, v6, 0);
   v8 = ServantProfileEventJoinManager_TypeInfo;
   if ( !ServantProfileEventJoinManager_TypeInfo->_2.cctor_finished )
@@ -337,7 +337,7 @@ bool ServantProfileEventJoinManager__ReadData(const MethodInfo *method)
     v8 = ServantProfileEventJoinManager_TypeInfo;
   }
   if ( !v7 )
-    sub_1C32E7C(v8);
+    sub_1C372B4(v8);
   SAVE_DATA_VERSION = v8->static_fields->SAVE_DATA_VERSION;
   v10 = (System_String_o *)((__int64 (__fastcall *)(System_IO_BinaryReader_o *, const MethodInfo *))v7->klass->vtable._22_ReadString.methodPtr)(
                              v7,
@@ -372,39 +372,39 @@ bool ServantProfileEventJoinManager__ReadData(const MethodInfo *method)
           v15 = ServantProfileEventJoinManager_TypeInfo;
         }
         infoList = (System_Collections_Generic_List_object__o *)v15->static_fields->infoList;
-        v17 = sub_1C32E6C(ServantProfileEventJoinManager_ServantEventJoinInfo_TypeInfo);
+        v17 = sub_1C372A4(ServantProfileEventJoinManager_ServantEventJoinInfo_TypeInfo);
         System_Object___ctor((Il2CppObject *)v17, 0);
         v18 = ((__int64 (__fastcall *)(System_IO_BinaryReader_o *, const MethodInfo *))v7->klass->vtable._15_ReadInt32.methodPtr)(
                 v7,
                 v7->klass->vtable._15_ReadInt32.method);
         if ( !v17 )
-          sub_1C32E7C(v18);
+          sub_1C372B4(v18);
         *(_DWORD *)(v17 + 16) = v18;
         v19 = ((__int64 (__fastcall *)(System_IO_BinaryReader_o *, const MethodInfo *))v7->klass->vtable._9_ReadBoolean.methodPtr)(
                 v7,
                 v7->klass->vtable._9_ReadBoolean.method);
         *(_BYTE *)(v17 + 20) = v19 & 1;
         if ( !infoList )
-          sub_1C32E7C(v19);
+          sub_1C372B4(v19);
         items = infoList->fields._items;
         v23 = Method_System_Collections_Generic_List_ServantProfileEventJoinManager_ServantEventJoinInfo__Add__;
         ++infoList->fields._version;
         if ( !items )
-          sub_1C32E7C(v19);
+          sub_1C372B4(v19);
         size = infoList->fields._size;
         if ( (unsigned int)size >= LODWORD(items->max_length) )
         {
           System_Collections_Generic_List_object___AddWithResize(
             infoList,
             (Il2CppObject *)v17,
-            *(const MethodInfo_37987BC **)(*(_QWORD *)(v23[4] + 192LL) + 112LL));
+            *(const MethodInfo_37A3024 **)(*(_QWORD *)(v23[4] + 192LL) + 112LL));
         }
         else
         {
           v25 = &items->obj.klass + size;
           infoList->fields._size = size + 1;
           v25[4] = (Il2CppClass *)v17;
-          sub_1C32BC4((CGThumbnailListItem_o *)(v25 + 4), v17, v20, v21);
+          sub_1C36FFC((CGThumbnailListItem_o *)(v25 + 4), v17, v20, v21);
         }
         --v14;
       }
@@ -429,7 +429,7 @@ bool ServantProfileEventJoinManager__ReadData(const MethodInfo *method)
   else
   {
 LABEL_34:
-    v29 = sub_1C83438(v7, System_IDisposable_TypeInfo, 0);
+    v29 = sub_1C87870(v7, System_IDisposable_TypeInfo, 0);
   }
   (*(void (__fastcall **)(System_IO_BinaryReader_o *, _QWORD))v29)(v7, *(_QWORD *)(v29 + 8));
   return (v11 | 8) == 8;
@@ -460,18 +460,18 @@ void ServantProfileEventJoinManager__SetIsNeedToCheckEventJoinNameExist(
   __int64 size; // x10
   Il2CppClass **v22; // x0
 
-  if ( (byte_4C38DDE & 1) == 0 )
+  if ( (byte_4C443D7 & 1) == 0 )
   {
-    sub_1C32C20(&Method_System_Collections_Generic_List_ServantProfileEventJoinManager_ServantEventJoinInfo__Add__);
-    sub_1C32C20(&Method_System_Collections_Generic_List_ServantProfileEventJoinManager_ServantEventJoinInfo__Find__);
-    sub_1C32C20(&System_Predicate_ServantProfileEventJoinManager_ServantEventJoinInfo__TypeInfo);
-    sub_1C32C20(&ServantProfileEventJoinManager_ServantEventJoinInfo_TypeInfo);
-    sub_1C32C20(&ServantProfileEventJoinManager_TypeInfo);
-    sub_1C32C20(&Method_ServantProfileEventJoinManager___c__DisplayClass11_0__SetIsNeedToCheckEventJoinNameExist_b__0__);
-    sub_1C32C20(&ServantProfileEventJoinManager___c__DisplayClass11_0_TypeInfo);
-    byte_4C38DDE = 1;
+    sub_1C37058(&Method_System_Collections_Generic_List_ServantProfileEventJoinManager_ServantEventJoinInfo__Add__);
+    sub_1C37058(&Method_System_Collections_Generic_List_ServantProfileEventJoinManager_ServantEventJoinInfo__Find__);
+    sub_1C37058(&System_Predicate_ServantProfileEventJoinManager_ServantEventJoinInfo__TypeInfo);
+    sub_1C37058(&ServantProfileEventJoinManager_ServantEventJoinInfo_TypeInfo);
+    sub_1C37058(&ServantProfileEventJoinManager_TypeInfo);
+    sub_1C37058(&Method_ServantProfileEventJoinManager___c__DisplayClass11_0__SetIsNeedToCheckEventJoinNameExist_b__0__);
+    sub_1C37058(&ServantProfileEventJoinManager___c__DisplayClass11_0_TypeInfo);
+    byte_4C443D7 = 1;
   }
-  v5 = sub_1C32E6C(ServantProfileEventJoinManager___c__DisplayClass11_0_TypeInfo);
+  v5 = sub_1C372A4(ServantProfileEventJoinManager___c__DisplayClass11_0_TypeInfo);
   System_Object___ctor((Il2CppObject *)v5, 0);
   if ( !v5 )
     goto LABEL_17;
@@ -485,7 +485,7 @@ void ServantProfileEventJoinManager__SetIsNeedToCheckEventJoinNameExist(
   static_fields = v7->static_fields;
   static_fields->isModified = 1;
   infoList = (System_Collections_Generic_List_object__o *)static_fields->infoList;
-  v10 = (System_Predicate_object__o *)sub_1C32E6C(System_Predicate_ServantProfileEventJoinManager_ServantEventJoinInfo__TypeInfo);
+  v10 = (System_Predicate_object__o *)sub_1C372A4(System_Predicate_ServantProfileEventJoinManager_ServantEventJoinInfo__TypeInfo);
   System_Predicate_object____ctor(
     v10,
     (Il2CppObject *)v5,
@@ -497,7 +497,7 @@ void ServantProfileEventJoinManager__SetIsNeedToCheckEventJoinNameExist(
   v12 = System_Collections_Generic_List_object___Find(
           infoList,
           (System_Predicate_T__o *)v10,
-          (const MethodInfo_3798E24 *)Method_System_Collections_Generic_List_ServantProfileEventJoinManager_ServantEventJoinInfo__Find__);
+          (const MethodInfo_37A368C *)Method_System_Collections_Generic_List_ServantProfileEventJoinManager_ServantEventJoinInfo__Find__);
   if ( v12 )
   {
     BYTE4(v12[1].klass) = v11;
@@ -510,7 +510,7 @@ void ServantProfileEventJoinManager__SetIsNeedToCheckEventJoinNameExist(
     v13 = ServantProfileEventJoinManager_TypeInfo;
   }
   v14 = (System_Collections_Generic_List_object__o *)v13->static_fields->infoList;
-  v15 = sub_1C32E6C(ServantProfileEventJoinManager_ServantEventJoinInfo_TypeInfo);
+  v15 = sub_1C372A4(ServantProfileEventJoinManager_ServantEventJoinInfo_TypeInfo);
   System_Object___ctor((Il2CppObject *)v15, 0);
   if ( !v15
     || (v18 = *(_DWORD *)(v5 + 16), *(_BYTE *)(v15 + 20) = v11, *(_DWORD *)(v15 + 16) = v18, !v14)
@@ -520,7 +520,7 @@ void ServantProfileEventJoinManager__SetIsNeedToCheckEventJoinNameExist(
         !items) )
   {
 LABEL_17:
-    sub_1C32E7C(v6);
+    sub_1C372B4(v6);
   }
   size = v14->fields._size;
   if ( (unsigned int)size >= LODWORD(items->max_length) )
@@ -528,14 +528,14 @@ LABEL_17:
     System_Collections_Generic_List_object___AddWithResize(
       v14,
       (Il2CppObject *)v15,
-      *(const MethodInfo_37987BC **)(*(_QWORD *)(v20[4] + 192LL) + 112LL));
+      *(const MethodInfo_37A3024 **)(*(_QWORD *)(v20[4] + 192LL) + 112LL));
   }
   else
   {
     v22 = &items->obj.klass + size;
     v14->fields._size = size + 1;
     v22[4] = (Il2CppClass *)v15;
-    sub_1C32BC4((CGThumbnailListItem_o *)(v22 + 4), v15, v16, v17);
+    sub_1C36FFC((CGThumbnailListItem_o *)(v22 + 4), v15, v16, v17);
   }
 }
 
@@ -581,36 +581,36 @@ void ServantProfileEventJoinManager__UpdateProfileServantEventJoin(const MethodI
   CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o v37; // 0:x0.16
   CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o v38; // 0:x0.16
 
-  if ( (byte_4C38DDC & 1) == 0 )
+  if ( (byte_4C443D5 & 1) == 0 )
   {
-    sub_1C32C20(&Method_DataManager_GetMasterData_EventServantMaster___);
-    sub_1C32C20(&Method_DataManager_GetMasterData_ServantProfileMaster___);
-    sub_1C32C20(&Method_DataManager_GetMasterData_UserServantCollectionMaster___);
-    sub_1C32C20(&Method_DataManager_GetMasterData_UserServantMaster___);
-    sub_1C32C20(&EventServantEntity_TypeInfo);
-    sub_1C32C20(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
-    sub_1C32C20(&ServantProfileEventJoinManager_TypeInfo);
-    sub_1C32C20(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-    byte_4C38DDC = 1;
+    sub_1C37058(&Method_DataManager_GetMasterData_EventServantMaster___);
+    sub_1C37058(&Method_DataManager_GetMasterData_ServantProfileMaster___);
+    sub_1C37058(&Method_DataManager_GetMasterData_UserServantCollectionMaster___);
+    sub_1C37058(&Method_DataManager_GetMasterData_UserServantMaster___);
+    sub_1C37058(&EventServantEntity_TypeInfo);
+    sub_1C37058(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
+    sub_1C37058(&ServantProfileEventJoinManager_TypeInfo);
+    sub_1C37058(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    byte_4C443D5 = 1;
   }
-  Instance = (DataManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39E2904 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = (DataManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39ED16C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance )
     goto LABEL_60;
   MasterData_object = DataManager__GetMasterData_object_(
                         Instance,
-                        (const MethodInfo_30DD3F0 *)Method_DataManager_GetMasterData_ServantProfileMaster___);
-  Instance = (DataManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39E2904 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+                        (const MethodInfo_30E7C58 *)Method_DataManager_GetMasterData_ServantProfileMaster___);
+  Instance = (DataManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39ED16C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance )
     goto LABEL_60;
   v3 = DataManager__GetMasterData_object_(
          Instance,
-         (const MethodInfo_30DD3F0 *)Method_DataManager_GetMasterData_UserServantMaster___);
-  Instance = (DataManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39E2904 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+         (const MethodInfo_30E7C58 *)Method_DataManager_GetMasterData_UserServantMaster___);
+  Instance = (DataManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39ED16C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance )
     goto LABEL_60;
   Instance = (DataManager_o *)DataManager__GetMasterData_object_(
                                 Instance,
-                                (const MethodInfo_30DD3F0 *)Method_DataManager_GetMasterData_UserServantCollectionMaster___);
+                                (const MethodInfo_30E7C58 *)Method_DataManager_GetMasterData_UserServantCollectionMaster___);
   if ( !v3 )
     goto LABEL_60;
   v4 = (UserServantCollectionMaster_o *)Instance;
@@ -618,10 +618,10 @@ void ServantProfileEventJoinManager__UpdateProfileServantEventJoin(const MethodI
   if ( !v4
     || (v5 = Instance,
         List = UserServantCollectionMaster__getList(v4, 2, 0),
-        (Instance = (DataManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39E2904 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__)) == 0)
+        (Instance = (DataManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39ED16C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__)) == 0)
     || (Instance = (DataManager_o *)DataManager__GetMasterData_object_(
                                       Instance,
-                                      (const MethodInfo_30DD3F0 *)Method_DataManager_GetMasterData_EventServantMaster___),
+                                      (const MethodInfo_30E7C58 *)Method_DataManager_GetMasterData_EventServantMaster___),
         !MasterData_object)
     || (v7 = (EventServantMaster_o *)Instance,
         (Instance = (DataManager_o *)ServantProfileMaster__GetServantProfileEntities(
@@ -630,7 +630,7 @@ void ServantProfileEventJoinManager__UpdateProfileServantEventJoin(const MethodI
                                        0)) == 0) )
   {
 LABEL_60:
-    sub_1C32E7C(Instance);
+    sub_1C372B4(Instance);
   }
   m_CancellationTokenSource = Instance->fields.m_CancellationTokenSource;
   if ( (int)m_CancellationTokenSource >= 1 )
@@ -663,7 +663,7 @@ LABEL_60:
           j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
         *(_QWORD *)&v37.fields.currentCryptoKey = v17;
         *(_QWORD *)&v37.fields.fakeValue = v16;
-        Instance = (DataManager_o *)CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_48887784(v37, 0);
+        Instance = (DataManager_o *)CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_48930896(v37, 0);
         if ( !v12 )
           goto LABEL_60;
         if ( (_DWORD)Instance == *(_DWORD *)(v12 + 16) )
@@ -706,7 +706,7 @@ LABEL_60:
           goto LABEL_35;
         }
 LABEL_61:
-        sub_1C32E84(Instance);
+        sub_1C372BC(Instance);
       }
 LABEL_35:
       v23 = *(_DWORD *)(v12 + 16);
@@ -738,7 +738,7 @@ LABEL_38:
             j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
           *(_QWORD *)&v38.fields.currentCryptoKey = v31;
           *(_QWORD *)&v38.fields.fakeValue = v30;
-          Instance = (DataManager_o *)CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_48887784(v38, 0);
+          Instance = (DataManager_o *)CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_48930896(v38, 0);
           if ( !v12 )
             goto LABEL_60;
           v32 = *(_DWORD *)(v12 + 16);
@@ -800,18 +800,18 @@ bool ServantProfileEventJoinManager__WriteData(const MethodInfo *method)
   System_Collections_Generic_List_Enumerator_object__o v20; // [xsp+8h] [xbp-68h] BYREF
   System_Collections_Generic_List_Enumerator_object__o v21; // [xsp+20h] [xbp-50h] BYREF
 
-  if ( (byte_4C38DE0 & 1) == 0 )
+  if ( (byte_4C443D9 & 1) == 0 )
   {
-    sub_1C32C20(&System_IO_BinaryWriter_TypeInfo);
-    sub_1C32C20(&Method_System_Collections_Generic_List_Enumerator_ServantProfileEventJoinManager_ServantEventJoinInfo__Dispose__);
-    sub_1C32C20(&Method_System_Collections_Generic_List_Enumerator_ServantProfileEventJoinManager_ServantEventJoinInfo__MoveNext__);
-    sub_1C32C20(&Method_System_Collections_Generic_List_Enumerator_ServantProfileEventJoinManager_ServantEventJoinInfo__get_Current__);
-    sub_1C32C20(&System_IDisposable_TypeInfo);
-    sub_1C32C20(&Method_System_Collections_Generic_List_ServantProfileEventJoinManager_ServantEventJoinInfo__GetEnumerator__);
-    sub_1C32C20(&Method_System_Collections_Generic_List_ServantProfileEventJoinManager_ServantEventJoinInfo__get_Count__);
-    sub_1C32C20(&ManagerConfig_TypeInfo);
-    sub_1C32C20(&ServantProfileEventJoinManager_TypeInfo);
-    byte_4C38DE0 = 1;
+    sub_1C37058(&System_IO_BinaryWriter_TypeInfo);
+    sub_1C37058(&Method_System_Collections_Generic_List_Enumerator_ServantProfileEventJoinManager_ServantEventJoinInfo__Dispose__);
+    sub_1C37058(&Method_System_Collections_Generic_List_Enumerator_ServantProfileEventJoinManager_ServantEventJoinInfo__MoveNext__);
+    sub_1C37058(&Method_System_Collections_Generic_List_Enumerator_ServantProfileEventJoinManager_ServantEventJoinInfo__get_Current__);
+    sub_1C37058(&System_IDisposable_TypeInfo);
+    sub_1C37058(&Method_System_Collections_Generic_List_ServantProfileEventJoinManager_ServantEventJoinInfo__GetEnumerator__);
+    sub_1C37058(&Method_System_Collections_Generic_List_ServantProfileEventJoinManager_ServantEventJoinInfo__get_Count__);
+    sub_1C37058(&ManagerConfig_TypeInfo);
+    sub_1C37058(&ServantProfileEventJoinManager_TypeInfo);
+    byte_4C443D9 = 1;
   }
   v1 = ServantProfileEventJoinManager_TypeInfo;
   memset(&v21, 0, sizeof(v21));
@@ -842,13 +842,13 @@ bool ServantProfileEventJoinManager__WriteData(const MethodInfo *method)
     j_il2cpp_runtime_class_init_0(ServantProfileEventJoinManager_TypeInfo);
   SaveFileName = ServantProfileEventJoinManager__GetSaveFileName((const MethodInfo *)v5);
   v7 = (System_IO_Stream_o *)System_IO_File__OpenWrite(SaveFileName, 0);
-  v8 = (System_IO_BinaryWriter_o *)sub_1C32E6C(System_IO_BinaryWriter_TypeInfo);
-  System_IO_BinaryWriter___ctor_64429848(v8, v7, 0);
+  v8 = (System_IO_BinaryWriter_o *)sub_1C372A4(System_IO_BinaryWriter_TypeInfo);
+  System_IO_BinaryWriter___ctor_64472960(v8, v7, 0);
   v10 = ServantProfileEventJoinManager_TypeInfo;
   if ( !ServantProfileEventJoinManager_TypeInfo->_2.cctor_finished )
     inited = j_il2cpp_runtime_class_init_0(ServantProfileEventJoinManager_TypeInfo);
   if ( !v8 )
-    sub_1C32E7C(v10);
+    sub_1C372B4(v10);
   ((void (__fastcall *)(System_IO_BinaryWriter_o *, struct System_String_o *, const MethodInfo *, long double))v8->klass->vtable._22_Write.methodPtr)(
     v8,
     ServantProfileEventJoinManager_TypeInfo->static_fields->SAVE_DATA_VERSION,
@@ -860,29 +860,29 @@ bool ServantProfileEventJoinManager__WriteData(const MethodInfo *method)
           v8->klass->vtable._8_Write.method);
   infoList = ServantProfileEventJoinManager_TypeInfo->static_fields->infoList;
   if ( !infoList )
-    sub_1C32E7C(v11);
+    sub_1C372B4(v11);
   ((void (__fastcall *)(System_IO_BinaryWriter_o *, _QWORD, const MethodInfo *))v8->klass->vtable._17_Write.methodPtr)(
     v8,
     (unsigned int)infoList->fields._size,
     v8->klass->vtable._17_Write.method);
   v13 = (System_Collections_Generic_List_object__o *)ServantProfileEventJoinManager_TypeInfo->static_fields->infoList;
   if ( !v13 )
-    sub_1C32E7C(0);
+    sub_1C372B4(0);
   System_Collections_Generic_List_object___GetEnumerator(
     (System_Collections_Generic_List_Enumerator_T__o *)&v20,
     v13,
-    (const MethodInfo_37992B4 *)Method_System_Collections_Generic_List_ServantProfileEventJoinManager_ServantEventJoinInfo__GetEnumerator__);
+    (const MethodInfo_37A3B1C *)Method_System_Collections_Generic_List_ServantProfileEventJoinManager_ServantEventJoinInfo__GetEnumerator__);
   v21 = v20;
   while ( 1 )
   {
     v14 = System_Collections_Generic_List_Enumerator_object___MoveNext(
             &v21,
-            (const MethodInfo_3522FA8 *)Method_System_Collections_Generic_List_Enumerator_ServantProfileEventJoinManager_ServantEventJoinInfo__MoveNext__);
+            (const MethodInfo_352D810 *)Method_System_Collections_Generic_List_Enumerator_ServantProfileEventJoinManager_ServantEventJoinInfo__MoveNext__);
     if ( !v14 )
       break;
     current = v21.fields._current;
     if ( !v21.fields._current )
-      sub_1C32E7C(v14);
+      sub_1C372B4(v14);
     ((void (__fastcall *)(System_IO_BinaryWriter_o *, _QWORD, const MethodInfo *))v8->klass->vtable._17_Write.methodPtr)(
       v8,
       LODWORD(v21.fields._current[1].klass),
@@ -894,7 +894,7 @@ bool ServantProfileEventJoinManager__WriteData(const MethodInfo *method)
   }
   System_Collections_Generic_List_Enumerator_object___Dispose(
     &v21,
-    (const MethodInfo_3522FA4 *)Method_System_Collections_Generic_List_Enumerator_ServantProfileEventJoinManager_ServantEventJoinInfo__Dispose__);
+    (const MethodInfo_352D80C *)Method_System_Collections_Generic_List_Enumerator_ServantProfileEventJoinManager_ServantEventJoinInfo__Dispose__);
   klass = v8->klass;
   v17 = *(unsigned __int16 *)&v8->klass->_2.rank;
   if ( *(_WORD *)&v8->klass->_2.rank )
@@ -912,7 +912,7 @@ bool ServantProfileEventJoinManager__WriteData(const MethodInfo *method)
   else
   {
 LABEL_27:
-    v19 = sub_1C83438(v8, System_IDisposable_TypeInfo, 0);
+    v19 = sub_1C87870(v8, System_IDisposable_TypeInfo, 0);
   }
   (*(void (__fastcall **)(System_IO_BinaryWriter_o *, _QWORD))v19)(v8, *(_QWORD *)(v19 + 8));
   return 1;
@@ -948,13 +948,13 @@ bool ServantProfileEventJoinManager___c__DisplayClass10_0___GetIsNeedToCheckEven
   CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o v10; // 0:x0.16
 
   v4 = this;
-  if ( (byte_4C38DE2 & 1) == 0 )
+  if ( (byte_4C443DB & 1) == 0 )
   {
-    this = (ServantProfileEventJoinManager___c__DisplayClass10_0_o *)sub_1C32C20(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
-    byte_4C38DE2 = 1;
+    this = (ServantProfileEventJoinManager___c__DisplayClass10_0_o *)sub_1C37058(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
+    byte_4C443DB = 1;
   }
   if ( !i || (servantEntity = v4->fields.servantEntity) == 0 )
-    sub_1C32E7C(this);
+    sub_1C372B4(this);
   servantId = i->fields.servantId;
   v8 = *(_QWORD *)&servantEntity->fields.id.fields.currentCryptoKey;
   v7 = *(_QWORD *)&servantEntity->fields.id.fields.fakeValue;
@@ -962,7 +962,7 @@ bool ServantProfileEventJoinManager___c__DisplayClass10_0___GetIsNeedToCheckEven
     j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
   *(_QWORD *)&v10.fields.currentCryptoKey = v8;
   *(_QWORD *)&v10.fields.fakeValue = v7;
-  return servantId == CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_48887784(v10, 0);
+  return servantId == CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_48930896(v10, 0);
 }
 
 
@@ -980,6 +980,6 @@ bool ServantProfileEventJoinManager___c__DisplayClass11_0___SetIsNeedToCheckEven
         const MethodInfo *method)
 {
   if ( !i )
-    sub_1C32E7C(this);
+    sub_1C372B4(this);
   return i->fields.servantId == this->fields.servantId;
 }

@@ -44,11 +44,11 @@ System_Nullable_Color__o *ColorHelper__ParseColorCode(
   UnityEngine_Color_o v6; // [xsp+0h] [xbp-30h] BYREF
   UnityEngine_Color_o v7; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 
-  if ( (byte_4C393B6 & 1) == 0 )
+  if ( (byte_4C449B0 & 1) == 0 )
   {
-    sub_1C32C20(&Method_System_Nullable_Color___ctor__);
-    sub_1C32C20(&StringLiteral_370/*"#"*/);
-    byte_4C393B6 = 1;
+    sub_1C37058(&Method_System_Nullable_Color___ctor__);
+    sub_1C37058(&StringLiteral_370/*"#"*/);
+    byte_4C449B0 = 1;
   }
   *(_QWORD *)&v6.fields.r = 0;
   *(_QWORD *)&v6.fields.b = 0;
@@ -56,9 +56,9 @@ System_Nullable_Color__o *ColorHelper__ParseColorCode(
   if ( ((unsigned __int8)result & 1) != 0 )
     goto LABEL_9;
   if ( !colorCode )
-    sub_1C32E7C(result);
+    sub_1C372B4(result);
   if ( !System_String__StartsWith(colorCode, (System_String_o *)StringLiteral_370/*"#"*/, 0) )
-    colorCode = System_String__Concat_63518544((System_String_o *)StringLiteral_370/*"#"*/, colorCode, 0);
+    colorCode = System_String__Concat_63561656((System_String_o *)StringLiteral_370/*"#"*/, colorCode, 0);
   result = (System_Nullable_Color__o *)UnityEngine_ColorUtility__TryParseHtmlString(colorCode, &v6, 0);
   if ( ((unsigned __int8)result & 1) == 0 )
   {
@@ -73,7 +73,7 @@ LABEL_9:
     *(_QWORD *)&retstr->fields.hasValue = 0;
     *(_QWORD *)&retstr->fields.value.fields.g = 0;
     retstr->fields.value.fields.a = 0.0;
-    System_Nullable_Color____ctor(retstr, v7, (const MethodInfo_38BB478 *)Method_System_Nullable_Color___ctor__);
+    System_Nullable_Color____ctor(retstr, v7, (const MethodInfo_38C5CE0 *)Method_System_Nullable_Color___ctor__);
   }
   return result;
 }
@@ -83,18 +83,18 @@ float ColorHelper___GetClamped_g__Clamp_0_0(float value, const MethodInfo *metho
 {
   float result; // s0
 
-  if ( (byte_4C393B7 & 1) == 0 )
+  if ( (byte_4C449B1 & 1) == 0 )
   {
-    sub_1C32C20(&System_Math_TypeInfo);
-    byte_4C393B7 = 1;
+    sub_1C37058(&System_Math_TypeInfo);
+    byte_4C449B1 = 1;
   }
   if ( !System_Math_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(System_Math_TypeInfo);
-  if ( !byte_4C39555 )
+  if ( !byte_4C44B4F )
   {
-    sub_1C32C20(&Method_System_Math_ThrowMinMaxException_float___);
-    sub_1C32C20(&System_Math_TypeInfo);
-    byte_4C39555 = 1;
+    sub_1C37058(&Method_System_Math_ThrowMinMaxException_float___);
+    sub_1C37058(&System_Math_TypeInfo);
+    byte_4C44B4F = 1;
   }
   result = 0.0;
   if ( value >= 0.0 )

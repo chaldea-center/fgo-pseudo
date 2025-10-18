@@ -13,7 +13,7 @@ void SwitchUIWidgetComponent__Clear(SwitchUIWidgetComponent_o *this, const Metho
 
   this->fields.isEnableSingle = 0;
   this->fields.componentList = 0;
-  sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.componentList, 0, v2, v3);
+  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.componentList, 0, v2, v3);
   SwitchUIWidgetComponent__ClearParam(this, v5);
 }
 
@@ -24,7 +24,7 @@ void SwitchUIWidgetComponent__ClearParam(SwitchUIWidgetComponent_o *this, const 
 
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
   if ( !gameObject )
-    sub_1C32E7C(0);
+    sub_1C372B4(0);
   UnityEngine_GameObject__SetActive(gameObject, 0, 0);
 }
 
@@ -43,10 +43,10 @@ bool SwitchUIWidgetComponent__ParameterChange(SwitchUIWidgetComponent_o *this, i
 
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
   if ( !gameObject )
-    sub_1C32E7C(0);
+    sub_1C372B4(0);
   activeSelf = UnityEngine_GameObject__get_activeSelf(gameObject, 0);
   if ( activeSelf )
-    SwitchUIWidgetComponent__Set_41031688(this, count, v6);
+    SwitchUIWidgetComponent__Set_41131168(this, count, v6);
   return activeSelf;
 }
 
@@ -63,34 +63,34 @@ void SwitchUIWidgetComponent__Set(
   const MethodInfo *v9; // x1
 
   v6 = isEnableSingleFade;
-  if ( (byte_4C36F77 & 1) == 0 )
+  if ( (byte_4C42567 & 1) == 0 )
   {
-    sub_1C32C20(&Method_SingletonMonoBehaviour_SwitchParameterDisplayManager__get_Instance__);
-    byte_4C36F77 = 1;
+    sub_1C37058(&Method_SingletonMonoBehaviour_SwitchParameterDisplayManager__get_Instance__);
+    byte_4C42567 = 1;
   }
   this->fields.isEnableSingle = v6;
   if ( componentList )
   {
     this->fields.componentList = componentList;
-    sub_1C32BC4(
+    sub_1C36FFC(
       (CGThumbnailListItem_o *)&this->fields.componentList,
       (int32_t)componentList,
       isEnableSingleFade,
       method);
-    Instance = (SwitchParameterDisplayManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39E2904 *)Method_SingletonMonoBehaviour_SwitchParameterDisplayManager__get_Instance__);
+    Instance = (SwitchParameterDisplayManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39ED16C *)Method_SingletonMonoBehaviour_SwitchParameterDisplayManager__get_Instance__);
     if ( !Instance
       || (SwitchParameterDisplayManager__AddComponent(Instance, (SwitchParameterDisplayComponent_o *)this, 0),
-          (Instance = (SwitchParameterDisplayManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39E2904 *)Method_SingletonMonoBehaviour_SwitchParameterDisplayManager__get_Instance__)) == 0) )
+          (Instance = (SwitchParameterDisplayManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39ED16C *)Method_SingletonMonoBehaviour_SwitchParameterDisplayManager__get_Instance__)) == 0) )
     {
-      sub_1C32E7C(Instance);
+      sub_1C372B4(Instance);
     }
-    SwitchUIWidgetComponent__Set_41031688(this, Instance->fields.count, v8);
+    SwitchUIWidgetComponent__Set_41131168(this, Instance->fields.count, v8);
   }
   else
   {
     this->fields.isEnableSingle = 0;
     this->fields.componentList = 0;
-    sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.componentList, 0, isEnableSingleFade, method);
+    sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.componentList, 0, isEnableSingleFade, method);
     SwitchUIWidgetComponent__ClearParam(this, v9);
   }
 }
@@ -104,10 +104,10 @@ void SwitchUIWidgetComponent__SetAlpha(SwitchUIWidgetComponent_o *this, float al
   struct UIWidget_o *v6; // x0
 
   v3 = *(long double *)&alpha;
-  if ( (byte_4C36F79 & 1) == 0 )
+  if ( (byte_4C42569 & 1) == 0 )
   {
-    sub_1C32C20(&UnityEngine_Object_TypeInfo);
-    byte_4C36F79 = 1;
+    sub_1C37058(&UnityEngine_Object_TypeInfo);
+    byte_4C42569 = 1;
   }
   this->fields._Alpha_k__BackingField = *(float *)&v3;
   component = (UnityEngine_Object_o *)this->fields.component;
@@ -117,7 +117,7 @@ void SwitchUIWidgetComponent__SetAlpha(SwitchUIWidgetComponent_o *this, float al
   {
     v6 = this->fields.component;
     if ( !v6 )
-      sub_1C32E7C(0);
+      sub_1C372B4(0);
     ((void (__fastcall *)(struct UIWidget_o *, const MethodInfo *, long double))v6->klass->vtable._8_set_alpha.methodPtr)(
       v6,
       v6->klass->vtable._8_set_alpha.method,
@@ -138,21 +138,21 @@ void SwitchUIWidgetComponent__SetParam(SwitchUIWidgetComponent_o *this, int32_t 
   if ( !componentList )
     goto LABEL_5;
   if ( LODWORD(componentList->max_length) <= num )
-    sub_1C32E84(this);
+    sub_1C372BC(this);
   v4 = componentList->m_Items[num];
   v5 = this;
   this = (SwitchUIWidgetComponent_o *)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
   if ( !this )
 LABEL_5:
-    sub_1C32E7C(this);
+    sub_1C372B4(this);
   UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)this, 1, 0);
   v5->fields.component = v4;
-  sub_1C32BC4((CGThumbnailListItem_o *)&v5->fields.component, (int32_t)v4, v6, v7);
+  sub_1C36FFC((CGThumbnailListItem_o *)&v5->fields.component, (int32_t)v4, v6, v7);
 }
 
 
 // local variable allocation has failed, the output may be wrong!
-void SwitchUIWidgetComponent__Set_41031688(SwitchUIWidgetComponent_o *this, int32_t count, const MethodInfo *method)
+void SwitchUIWidgetComponent__Set_41131168(SwitchUIWidgetComponent_o *this, int32_t count, const MethodInfo *method)
 {
   struct UIWidget_array *componentList; // x8
   il2cpp_array_size_t v6; // x8
@@ -164,10 +164,10 @@ void SwitchUIWidgetComponent__Set_41031688(SwitchUIWidgetComponent_o *this, int3
   unsigned __int64 v12; // x21
   const MethodInfo *v13; // x1
 
-  if ( (byte_4C36F78 & 1) == 0 )
+  if ( (byte_4C42568 & 1) == 0 )
   {
-    sub_1C32C20(&Method_SingletonMonoBehaviour_SwitchParameterDisplayManager__get_Instance__);
-    byte_4C36F78 = 1;
+    sub_1C37058(&Method_SingletonMonoBehaviour_SwitchParameterDisplayManager__get_Instance__);
+    byte_4C42568 = 1;
   }
   componentList = this->fields.componentList;
   if ( componentList && (v6 = componentList->max_length) != 0 )
@@ -181,7 +181,7 @@ void SwitchUIWidgetComponent__Set_41031688(SwitchUIWidgetComponent_o *this, int3
     {
       v7 = count % (int)v6;
       SwitchUIWidgetComponent__SetParam(this, v7, method);
-      Instance = (float *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39E2904 *)Method_SingletonMonoBehaviour_SwitchParameterDisplayManager__get_Instance__);
+      Instance = (float *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39ED16C *)Method_SingletonMonoBehaviour_SwitchParameterDisplayManager__get_Instance__);
       if ( !Instance )
         goto LABEL_19;
       SwitchUIWidgetComponent__SetAlpha(this, Instance[13], v9);
@@ -197,7 +197,7 @@ void SwitchUIWidgetComponent__Set_41031688(SwitchUIWidgetComponent_o *this, int3
           if ( v7 != v12 )
           {
             if ( v12 >= (unsigned int)max_length )
-              sub_1C32E84(Instance);
+              sub_1C372BC(Instance);
             Instance = (float *)v10->m_Items[v12];
             if ( !Instance )
               break;
@@ -214,7 +214,7 @@ void SwitchUIWidgetComponent__Set_41031688(SwitchUIWidgetComponent_o *this, int3
             return;
         }
 LABEL_19:
-        sub_1C32E7C(Instance);
+        sub_1C372B4(Instance);
       }
     }
   }

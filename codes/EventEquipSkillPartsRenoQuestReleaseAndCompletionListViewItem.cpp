@@ -8,9 +8,9 @@ void EventEquipSkillPartsRenoQuestReleaseAndCompletionListViewItem___ctor(
   System_Object___ctor((Il2CppObject *)this, 0);
   this->fields._SkillId_k__BackingField = skillId;
   this->fields._Name_k__BackingField = name;
-  sub_1C32BC4(&this->fields._Name_k__BackingField, name);
+  sub_1C36FFC(&this->fields._Name_k__BackingField, name);
   this->fields._Detail_k__BackingField = detail;
-  sub_1C32BC4(&this->fields._Detail_k__BackingField, detail);
+  sub_1C36FFC(&this->fields._Detail_k__BackingField, detail);
 }
 
 
@@ -44,7 +44,7 @@ void EventEquipSkillPartsRenoQuestReleaseAndCompletionListViewItem__set_Detail(
         const MethodInfo *method)
 {
   this->fields._Detail_k__BackingField = value;
-  sub_1C32BC4(&this->fields._Detail_k__BackingField, value);
+  sub_1C36FFC(&this->fields._Detail_k__BackingField, value);
 }
 
 
@@ -54,7 +54,7 @@ void EventEquipSkillPartsRenoQuestReleaseAndCompletionListViewItem__set_Name(
         const MethodInfo *method)
 {
   this->fields._Name_k__BackingField = value;
-  sub_1C32BC4(&this->fields._Name_k__BackingField, value);
+  sub_1C36FFC(&this->fields._Name_k__BackingField, value);
 }
 
 

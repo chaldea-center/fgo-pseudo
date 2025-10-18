@@ -1,13 +1,13 @@
 void WarBoardEventEntity___ctor(WarBoardEventEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_4C38B23 & 1) == 0 )
+  if ( (byte_4C4411C & 1) == 0 )
   {
-    sub_1C32C20(&Method_DataEntityBase_int___ctor__);
-    byte_4C38B23 = 1;
+    sub_1C37058(&Method_DataEntityBase_int___ctor__);
+    byte_4C4411C = 1;
   }
   DataEntityBase_int____ctor(
     (DataEntityBase_int__o *)this,
-    (const MethodInfo_3394354 *)Method_DataEntityBase_int___ctor__);
+    (const MethodInfo_339EBBC *)Method_DataEntityBase_int___ctor__);
 }
 
 
@@ -19,12 +19,12 @@ int32_t WarBoardEventEntity__CreatePrimaryKey(WarBoardEventEntity_o *this, const
 
 System_Int32_array *WarBoardEventEntity__GetSquareIndicesToAdd(WarBoardEventEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_4C38B20 & 1) == 0 )
+  if ( (byte_4C44119 & 1) == 0 )
   {
-    sub_1C32C20(&StringLiteral_16680/*"addSquareIndex"*/);
-    byte_4C38B20 = 1;
+    sub_1C37058(&StringLiteral_16682/*"addSquareIndex"*/);
+    byte_4C44119 = 1;
   }
-  return EntityScriptUtil__GetIntArray(this->fields.script, (System_String_o *)StringLiteral_16680/*"addSquareIndex"*/, 0, 0);
+  return EntityScriptUtil__GetIntArray(this->fields.script, (System_String_o *)StringLiteral_16682/*"addSquareIndex"*/, 0, 0);
 }
 
 
@@ -44,7 +44,7 @@ bool WarBoardEventEntity__IsCorrectEntity(WarBoardEventEntity_o *this, const Met
   warBoardCommonReleaseIds = this->fields.warBoardCommonReleaseIds;
   if ( !warBoardCommonReleaseIds )
 LABEL_7:
-    sub_1C32E7C(this);
+    sub_1C372B4(this);
   v5 = warBoardCommonReleaseIds->max_length;
   if ( v5 >= 1 )
     return max_length == v5;
@@ -54,23 +54,23 @@ LABEL_7:
 
 bool WarBoardEventEntity__IsIncludeInvolvedAttacker(WarBoardEventEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_4C38B21 & 1) == 0 )
+  if ( (byte_4C4411A & 1) == 0 )
   {
-    sub_1C32C20(&StringLiteral_20743/*"includeInvolvedAttacker"*/);
-    byte_4C38B21 = 1;
+    sub_1C37058(&StringLiteral_20746/*"includeInvolvedAttacker"*/);
+    byte_4C4411A = 1;
   }
-  return EntityScriptUtil__GetIntValue(this->fields.script, (System_String_o *)StringLiteral_20743/*"includeInvolvedAttacker"*/, 0, 0) == 1;
+  return EntityScriptUtil__GetIntValue(this->fields.script, (System_String_o *)StringLiteral_20746/*"includeInvolvedAttacker"*/, 0, 0) == 1;
 }
 
 
 bool WarBoardEventEntity__IsIncludeInvolvedDefender(WarBoardEventEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_4C38B22 & 1) == 0 )
+  if ( (byte_4C4411B & 1) == 0 )
   {
-    sub_1C32C20(&StringLiteral_20744/*"includeInvolvedDefender"*/);
-    byte_4C38B22 = 1;
+    sub_1C37058(&StringLiteral_20747/*"includeInvolvedDefender"*/);
+    byte_4C4411B = 1;
   }
-  return EntityScriptUtil__GetIntValue(this->fields.script, (System_String_o *)StringLiteral_20744/*"includeInvolvedDefender"*/, 0, 0) == 1;
+  return EntityScriptUtil__GetIntValue(this->fields.script, (System_String_o *)StringLiteral_20747/*"includeInvolvedDefender"*/, 0, 0) == 1;
 }
 
 
@@ -91,14 +91,14 @@ bool WarBoardEventEntity__IsPlayableEvent(WarBoardEventEntity_o *this, const Met
   int32_t frequencyType; // w8
   int32_t latestPlayedTurn_k__BackingField; // w19
 
-  if ( (byte_4C38B1F & 1) == 0 )
+  if ( (byte_4C44118 & 1) == 0 )
   {
-    sub_1C32C20(&Method_SingletonMonoBehaviour_WarBoardManager__get_Instance__);
-    byte_4C38B1F = 1;
+    sub_1C37058(&Method_SingletonMonoBehaviour_WarBoardManager__get_Instance__);
+    byte_4C44118 = 1;
   }
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39E2904 *)Method_SingletonMonoBehaviour_WarBoardManager__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39ED16C *)Method_SingletonMonoBehaviour_WarBoardManager__get_Instance__);
   if ( !Instance || (monitor = (WarBoardData_o *)Instance[27].monitor) == 0 )
-    sub_1C32E7C(Instance);
+    sub_1C372B4(Instance);
   PlayedEventData = WarBoardData__GetPlayedEventData((WarBoardData_o *)Instance[27].monitor, this->fields.id, 0);
   if ( !PlayedEventData )
     return 1;

@@ -1,13 +1,13 @@
 void StoneShopEntity___ctor(StoneShopEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_4C38648 & 1) == 0 )
+  if ( (byte_4C43C41 & 1) == 0 )
   {
-    sub_1C32C20(&Method_DataEntityBase_int___ctor__);
-    byte_4C38648 = 1;
+    sub_1C37058(&Method_DataEntityBase_int___ctor__);
+    byte_4C43C41 = 1;
   }
   DataEntityBase_int____ctor(
     (DataEntityBase_int__o *)this,
-    (const MethodInfo_3394354 *)Method_DataEntityBase_int___ctor__);
+    (const MethodInfo_339EBBC *)Method_DataEntityBase_int___ctor__);
 }
 
 
@@ -19,10 +19,10 @@ int32_t StoneShopEntity__CreatePrimaryKey(StoneShopEntity_o *this, const MethodI
 
 System_String_o *StoneShopEntity__GetCountText(StoneShopEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_4C38647 & 1) == 0 )
+  if ( (byte_4C43C40 & 1) == 0 )
   {
-    sub_1C32C20(&LocalizationManager_TypeInfo);
-    byte_4C38647 = 1;
+    sub_1C37058(&LocalizationManager_TypeInfo);
+    byte_4C43C40 = 1;
   }
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
@@ -52,10 +52,10 @@ bool StoneShopEntity__IsClosed(StoneShopEntity_o *this, int64_t nowTime, const M
 {
   int64_t closedAt; // x8
 
-  if ( (byte_4C38646 & 1) == 0 )
+  if ( (byte_4C43C3F & 1) == 0 )
   {
-    sub_1C32C20(&NetworkManager_TypeInfo);
-    byte_4C38646 = 1;
+    sub_1C37058(&NetworkManager_TypeInfo);
+    byte_4C43C3F = 1;
   }
   if ( !nowTime )
   {
@@ -73,10 +73,10 @@ bool StoneShopEntity__IsEnable(StoneShopEntity_o *this, int64_t nowTime, const M
   int64_t closedAt; // x8
   bool result; // w0
 
-  if ( (byte_4C38644 & 1) == 0 )
+  if ( (byte_4C43C3D & 1) == 0 )
   {
-    sub_1C32C20(&NetworkManager_TypeInfo);
-    byte_4C38644 = 1;
+    sub_1C37058(&NetworkManager_TypeInfo);
+    byte_4C43C3D = 1;
   }
   if ( !nowTime )
   {
@@ -99,10 +99,10 @@ bool StoneShopEntity__IsEnable(StoneShopEntity_o *this, int64_t nowTime, const M
 
 bool StoneShopEntity__IsOpened(StoneShopEntity_o *this, int64_t nowTime, const MethodInfo *method)
 {
-  if ( (byte_4C38645 & 1) == 0 )
+  if ( (byte_4C43C3E & 1) == 0 )
   {
-    sub_1C32C20(&NetworkManager_TypeInfo);
-    byte_4C38645 = 1;
+    sub_1C37058(&NetworkManager_TypeInfo);
+    byte_4C43C3E = 1;
   }
   if ( !nowTime )
   {

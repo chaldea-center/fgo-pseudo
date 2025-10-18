@@ -14,25 +14,25 @@ void TopLoginRequest__AddAppCheckField(TopLoginRequest_o *this, const MethodInfo
   FirebaseScript_c *v14; // x0
   FirebaseScript_c *v15; // x0
   System_String_o *AppCheckPrevMessageKey_k__BackingField; // x21
-  System_String_o *String_71182452; // x0
+  System_String_o *String_71225564; // x0
   const MethodInfo *v18; // x3
   FirebaseScript_c *v19; // x0
 
-  if ( (byte_4C395D4 & 1) == 0 )
+  if ( (byte_4C44BCE & 1) == 0 )
   {
-    sub_1C32C20(&FirebaseScript_TypeInfo);
-    sub_1C32C20(&StringLiteral_14264/*"The token wasn't created in time"*/);
-    sub_1C32C20(&StringLiteral_16811/*"appCheckToken"*/);
-    sub_1C32C20(&StringLiteral_16809/*"appCheckErrorMessage"*/);
-    sub_1C32C20(&StringLiteral_6750/*"Firebase wasn't available"*/);
-    byte_4C395D4 = 1;
+    sub_1C37058(&FirebaseScript_TypeInfo);
+    sub_1C37058(&StringLiteral_14265/*"The token wasn't created in time"*/);
+    sub_1C37058(&StringLiteral_16813/*"appCheckToken"*/);
+    sub_1C37058(&StringLiteral_16811/*"appCheckErrorMessage"*/);
+    sub_1C37058(&StringLiteral_6751/*"Firebase wasn't available"*/);
+    byte_4C44BCE = 1;
   }
   if ( !FirebaseScript_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(FirebaseScript_TypeInfo);
-  if ( !byte_4C31811 )
+  if ( !byte_4C3CD61 )
   {
-    sub_1C32C20(&FirebaseScript_TypeInfo);
-    byte_4C31811 = 1;
+    sub_1C37058(&FirebaseScript_TypeInfo);
+    byte_4C3CD61 = 1;
   }
   v4 = FirebaseScript_TypeInfo;
   if ( !FirebaseScript_TypeInfo->_2.cctor_finished )
@@ -44,10 +44,10 @@ void TopLoginRequest__AddAppCheckField(TopLoginRequest_o *this, const MethodInfo
     goto LABEL_76;
   if ( !v4->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(v4);
-  if ( !byte_4C37269 )
+  if ( !byte_4C42859 )
   {
-    sub_1C32C20(&FirebaseScript_TypeInfo);
-    byte_4C37269 = 1;
+    sub_1C37058(&FirebaseScript_TypeInfo);
+    byte_4C42859 = 1;
   }
   v4 = FirebaseScript_TypeInfo;
   if ( !FirebaseScript_TypeInfo->_2.cctor_finished )
@@ -60,10 +60,10 @@ void TopLoginRequest__AddAppCheckField(TopLoginRequest_o *this, const MethodInfo
 LABEL_76:
     if ( !v4->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(v4);
-    if ( !byte_4C3726C )
+    if ( !byte_4C4285C )
     {
-      sub_1C32C20(&FirebaseScript_TypeInfo);
-      byte_4C3726C = 1;
+      sub_1C37058(&FirebaseScript_TypeInfo);
+      byte_4C4285C = 1;
     }
     v5 = FirebaseScript_TypeInfo;
     if ( !FirebaseScript_TypeInfo->_2.cctor_finished )
@@ -77,10 +77,10 @@ LABEL_76:
       if ( IsNullOrEmpty )
       {
 LABEL_18:
-        if ( !byte_4C3726D )
+        if ( !byte_4C4285D )
         {
-          sub_1C32C20(&FirebaseScript_TypeInfo);
-          byte_4C3726D = 1;
+          sub_1C37058(&FirebaseScript_TypeInfo);
+          byte_4C4285D = 1;
         }
         v7 = FirebaseScript_TypeInfo;
         if ( !FirebaseScript_TypeInfo->_2.cctor_finished )
@@ -90,20 +90,20 @@ LABEL_18:
         }
         if ( System_String__IsNullOrEmpty(v7->static_fields->_AppCheckTokenError_k__BackingField, 0) )
         {
-          RequestBase__addField_44145196(
+          RequestBase__addField_44247300(
             (RequestBase_o *)this,
-            (System_String_o *)StringLiteral_16809/*"appCheckErrorMessage"*/,
-            (System_String_o *)StringLiteral_14264/*"The token wasn't created in time"*/,
+            (System_String_o *)StringLiteral_16811/*"appCheckErrorMessage"*/,
+            (System_String_o *)StringLiteral_14265/*"The token wasn't created in time"*/,
             v2);
           v8 = 0;
           goto LABEL_47;
         }
         if ( !FirebaseScript_TypeInfo->_2.cctor_finished )
           j_il2cpp_runtime_class_init_0(FirebaseScript_TypeInfo);
-        if ( !byte_4C3726D )
+        if ( !byte_4C4285D )
         {
-          sub_1C32C20(&FirebaseScript_TypeInfo);
-          byte_4C3726D = 1;
+          sub_1C37058(&FirebaseScript_TypeInfo);
+          byte_4C4285D = 1;
         }
         v13 = FirebaseScript_TypeInfo;
         if ( !FirebaseScript_TypeInfo->_2.cctor_finished )
@@ -111,7 +111,7 @@ LABEL_18:
           j_il2cpp_runtime_class_init_0(FirebaseScript_TypeInfo);
           v13 = FirebaseScript_TypeInfo;
         }
-        v12 = &StringLiteral_16809/*"appCheckErrorMessage"*/;
+        v12 = &StringLiteral_16811/*"appCheckErrorMessage"*/;
         AppCheckTokenError_k__BackingField = v13->static_fields->_AppCheckTokenError_k__BackingField;
         goto LABEL_45;
       }
@@ -122,10 +122,10 @@ LABEL_18:
       if ( IsNullOrEmpty )
         goto LABEL_18;
     }
-    if ( !byte_4C3726C )
+    if ( !byte_4C4285C )
     {
-      sub_1C32C20(&FirebaseScript_TypeInfo);
-      byte_4C3726C = 1;
+      sub_1C37058(&FirebaseScript_TypeInfo);
+      byte_4C4285C = 1;
     }
     v11 = FirebaseScript_TypeInfo;
     if ( !FirebaseScript_TypeInfo->_2.cctor_finished )
@@ -133,24 +133,24 @@ LABEL_18:
       j_il2cpp_runtime_class_init_0(FirebaseScript_TypeInfo);
       v11 = FirebaseScript_TypeInfo;
     }
-    v12 = &StringLiteral_16811/*"appCheckToken"*/;
+    v12 = &StringLiteral_16813/*"appCheckToken"*/;
     AppCheckTokenError_k__BackingField = v11->static_fields->_AppCheckToken_k__BackingField;
 LABEL_45:
     v9 = (System_String_o *)*v12;
     goto LABEL_46;
   }
-  v9 = (System_String_o *)StringLiteral_16809/*"appCheckErrorMessage"*/;
-  AppCheckTokenError_k__BackingField = (System_String_o *)StringLiteral_6750/*"Firebase wasn't available"*/;
+  v9 = (System_String_o *)StringLiteral_16811/*"appCheckErrorMessage"*/;
+  AppCheckTokenError_k__BackingField = (System_String_o *)StringLiteral_6751/*"Firebase wasn't available"*/;
 LABEL_46:
-  RequestBase__addField_44145196((RequestBase_o *)this, v9, AppCheckTokenError_k__BackingField, v2);
+  RequestBase__addField_44247300((RequestBase_o *)this, v9, AppCheckTokenError_k__BackingField, v2);
   v8 = 1;
 LABEL_47:
   if ( !FirebaseScript_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(FirebaseScript_TypeInfo);
-  if ( !byte_4C37268 )
+  if ( !byte_4C42858 )
   {
-    sub_1C32C20(&FirebaseScript_TypeInfo);
-    byte_4C37268 = 1;
+    sub_1C37058(&FirebaseScript_TypeInfo);
+    byte_4C42858 = 1;
   }
   v14 = FirebaseScript_TypeInfo;
   if ( !FirebaseScript_TypeInfo->_2.cctor_finished )
@@ -159,11 +159,11 @@ LABEL_47:
     v14 = FirebaseScript_TypeInfo;
   }
   v14->static_fields->_IsSendAppCheckToken_k__BackingField = v8;
-  if ( !byte_4C3726B )
+  if ( !byte_4C4285B )
   {
-    sub_1C32C20(&FirebaseScript_TypeInfo);
+    sub_1C37058(&FirebaseScript_TypeInfo);
     v14 = FirebaseScript_TypeInfo;
-    byte_4C3726B = 1;
+    byte_4C4285B = 1;
   }
   if ( !v14->_2.cctor_finished )
   {
@@ -174,10 +174,10 @@ LABEL_47:
   {
     if ( !FirebaseScript_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(FirebaseScript_TypeInfo);
-    if ( !byte_4C3726B )
+    if ( !byte_4C4285B )
     {
-      sub_1C32C20(&FirebaseScript_TypeInfo);
-      byte_4C3726B = 1;
+      sub_1C37058(&FirebaseScript_TypeInfo);
+      byte_4C4285B = 1;
     }
     v15 = FirebaseScript_TypeInfo;
     if ( FirebaseScript_TypeInfo->_2.cctor_finished )
@@ -189,11 +189,11 @@ LABEL_47:
       j_il2cpp_runtime_class_init_0(FirebaseScript_TypeInfo);
       v15 = FirebaseScript_TypeInfo;
       AppCheckPrevMessageKey_k__BackingField = FirebaseScript_TypeInfo->static_fields->_AppCheckPrevMessageKey_k__BackingField;
-      if ( !byte_4C3726B )
+      if ( !byte_4C4285B )
       {
-        sub_1C32C20(&FirebaseScript_TypeInfo);
+        sub_1C37058(&FirebaseScript_TypeInfo);
         v15 = FirebaseScript_TypeInfo;
-        byte_4C3726B = 1;
+        byte_4C4285B = 1;
       }
     }
     if ( !v15->_2.cctor_finished )
@@ -201,14 +201,14 @@ LABEL_47:
       j_il2cpp_runtime_class_init_0(v15);
       v15 = FirebaseScript_TypeInfo;
     }
-    String_71182452 = UnityEngine_PlayerPrefs__GetString_71182452(
+    String_71225564 = UnityEngine_PlayerPrefs__GetString_71225564(
                         v15->static_fields->_AppCheckPrevMessageKey_k__BackingField,
                         0);
-    RequestBase__addField_44145196((RequestBase_o *)this, AppCheckPrevMessageKey_k__BackingField, String_71182452, v18);
-    if ( !byte_4C3726B )
+    RequestBase__addField_44247300((RequestBase_o *)this, AppCheckPrevMessageKey_k__BackingField, String_71225564, v18);
+    if ( !byte_4C4285B )
     {
-      sub_1C32C20(&FirebaseScript_TypeInfo);
-      byte_4C3726B = 1;
+      sub_1C37058(&FirebaseScript_TypeInfo);
+      byte_4C4285B = 1;
     }
     v19 = FirebaseScript_TypeInfo;
     if ( !FirebaseScript_TypeInfo->_2.cctor_finished )
@@ -223,10 +223,10 @@ LABEL_47:
 
 void TopLoginRequest__ResetAccesTime(const MethodInfo *method)
 {
-  if ( (byte_4C395D3 & 1) == 0 )
+  if ( (byte_4C44BCD & 1) == 0 )
   {
-    sub_1C32C20(&TopLoginRequest_TypeInfo);
-    byte_4C395D3 = 1;
+    sub_1C37058(&TopLoginRequest_TypeInfo);
+    byte_4C44BCD = 1;
   }
   TopLoginRequest_TypeInfo->static_fields->accessTime = 0;
 }
@@ -251,26 +251,26 @@ void TopLoginRequest__beginRequest(TopLoginRequest_o *this, const MethodInfo *me
   const MethodInfo *v17; // x3
   const MethodInfo *v18; // x1
 
-  if ( (byte_4C395D1 & 1) == 0 )
+  if ( (byte_4C44BCB & 1) == 0 )
   {
-    sub_1C32C20(&Crc32_TypeInfo);
-    sub_1C32C20(&Method_System_Collections_Generic_Dictionary_string__string__get_Item__);
-    sub_1C32C20(&NetworkManager_TypeInfo);
-    sub_1C32C20(&StringLiteral_16913/*"assetbundleFolder"*/);
-    sub_1C32C20(&StringLiteral_24567/*"userState"*/);
-    sub_1C32C20(&StringLiteral_21168/*"lastAccessTime"*/);
-    sub_1C32C20(&StringLiteral_20960/*"isTerminalLogin"*/);
-    byte_4C395D1 = 1;
+    sub_1C37058(&Crc32_TypeInfo);
+    sub_1C37058(&Method_System_Collections_Generic_Dictionary_string__string__get_Item__);
+    sub_1C37058(&NetworkManager_TypeInfo);
+    sub_1C37058(&StringLiteral_16915/*"assetbundleFolder"*/);
+    sub_1C37058(&StringLiteral_24572/*"userState"*/);
+    sub_1C37058(&StringLiteral_21171/*"lastAccessTime"*/);
+    sub_1C37058(&StringLiteral_20963/*"isTerminalLogin"*/);
+    byte_4C44BCB = 1;
   }
   RequestBase__addBaseField((RequestBase_o *)this, method);
   RequestBase__AddSignatureField((RequestBase_o *)this, v3);
   RequestBase__addDeviceInfoField((RequestBase_o *)this, v4);
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
-  if ( !byte_4C34F47 )
+  if ( !byte_4C40532 )
   {
-    sub_1C32C20(&NetworkManager_TypeInfo);
-    byte_4C34F47 = 1;
+    sub_1C37058(&NetworkManager_TypeInfo);
+    byte_4C40532 = 1;
   }
   v5 = NetworkManager_TypeInfo;
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
@@ -289,10 +289,10 @@ void TopLoginRequest__beginRequest(TopLoginRequest_o *this, const MethodInfo *me
   if ( !Crc32_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(Crc32_TypeInfo);
   v9 = Crc32__Compute(v8, 0);
-  if ( !byte_4C31812 )
+  if ( !byte_4C3CD62 )
   {
-    sub_1C32C20(&NetworkManager_TypeInfo);
-    byte_4C31812 = 1;
+    sub_1C37058(&NetworkManager_TypeInfo);
+    byte_4C3CD62 = 1;
   }
   UTF8 = &NetworkManager_TypeInfo->_1.image;
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
@@ -302,25 +302,25 @@ void TopLoginRequest__beginRequest(TopLoginRequest_o *this, const MethodInfo *me
   }
   if ( !this->fields.paramString )
 LABEL_21:
-    sub_1C32E7C(UTF8);
+    sub_1C372B4(UTF8);
   v10 = *(_QWORD *)(UTF8[23] + 64LL);
   Item = System_Collections_Generic_Dictionary_object__object___get_Item(
            (System_Collections_Generic_Dictionary_object__object__o *)this->fields.paramString,
-           (Il2CppObject *)StringLiteral_21168/*"lastAccessTime"*/,
-           (const MethodInfo_3458D48 *)Method_System_Collections_Generic_Dictionary_string__string__get_Item__);
+           (Il2CppObject *)StringLiteral_21171/*"lastAccessTime"*/,
+           (const MethodInfo_34635B0 *)Method_System_Collections_Generic_Dictionary_string__string__get_Item__);
   v12 = System_Int64__Parse((System_String_o *)Item, 0);
   if ( v12 < 0 )
     v14 = ~v12;
   else
     v14 = -v12;
-  RequestBase__addField_44144740(
+  RequestBase__addField_44246844(
     (RequestBase_o *)this,
-    (System_String_o *)StringLiteral_24567/*"userState"*/,
+    (System_String_o *)StringLiteral_24572/*"userState"*/,
     (unsigned int)v10 & v9 ^ (unsigned __int64)(v14 >> 2),
     v13);
-  RequestBase__addField_44145196((RequestBase_o *)this, (System_String_o *)StringLiteral_16913/*"assetbundleFolder"*/, dataServerFolder, v15);
+  RequestBase__addField_44247300((RequestBase_o *)this, (System_String_o *)StringLiteral_16915/*"assetbundleFolder"*/, dataServerFolder, v15);
   TerminalDispState = NetworkManager__GetTerminalDispState(0);
-  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_20960/*"isTerminalLogin"*/, TerminalDispState, v17);
+  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_20963/*"isTerminalLogin"*/, TerminalDispState, v17);
   TopLoginRequest__AddAppCheckField(this, v18);
   NetworkManager__RequestStart((RequestBase_o *)this, 0);
 }
@@ -331,11 +331,11 @@ bool TopLoginRequest__checkExpirationDate(TopLoginRequest_o *this, const MethodI
   int64_t Time; // x0
   struct TopLoginRequest_StaticFields *static_fields; // x8
 
-  if ( (byte_4C395D0 & 1) == 0 )
+  if ( (byte_4C44BCA & 1) == 0 )
   {
-    sub_1C32C20(&NetworkManager_TypeInfo);
-    sub_1C32C20(&TopLoginRequest_TypeInfo);
-    byte_4C395D0 = 1;
+    sub_1C37058(&NetworkManager_TypeInfo);
+    sub_1C37058(&TopLoginRequest_TypeInfo);
+    byte_4C44BCA = 1;
   }
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
@@ -347,15 +347,15 @@ bool TopLoginRequest__checkExpirationDate(TopLoginRequest_o *this, const MethodI
 
 System_String_o *TopLoginRequest__getMockData(TopLoginRequest_o *this, const MethodInfo *method)
 {
-  if ( (byte_4C395CF & 1) == 0 )
+  if ( (byte_4C44BC9 & 1) == 0 )
   {
-    sub_1C32C20(&NetworkManager_TypeInfo);
-    sub_1C32C20(&StringLiteral_9141/*"MockTopLoginRequest"*/);
-    byte_4C395CF = 1;
+    sub_1C37058(&NetworkManager_TypeInfo);
+    sub_1C37058(&StringLiteral_9142/*"MockTopLoginRequest"*/);
+    byte_4C44BC9 = 1;
   }
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
-  return NetworkManager__getMockFile((System_String_o *)StringLiteral_9141/*"MockTopLoginRequest"*/, 0);
+  return NetworkManager__getMockFile((System_String_o *)StringLiteral_9142/*"MockTopLoginRequest"*/, 0);
 }
 
 
@@ -363,16 +363,16 @@ System_String_o *TopLoginRequest__getURL(TopLoginRequest_o *this, const MethodIn
 {
   System_String_o *BaseUrl; // x0
 
-  if ( (byte_4C395CE & 1) == 0 )
+  if ( (byte_4C44BC8 & 1) == 0 )
   {
-    sub_1C32C20(&NetworkManager_TypeInfo);
-    sub_1C32C20(&StringLiteral_21339/*"login/top"*/);
-    byte_4C395CE = 1;
+    sub_1C37058(&NetworkManager_TypeInfo);
+    sub_1C37058(&StringLiteral_21342/*"login/top"*/);
+    byte_4C44BC8 = 1;
   }
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
   BaseUrl = NetworkManager__getBaseUrl(1, 0);
-  return System_String__Concat_63518544(BaseUrl, (System_String_o *)StringLiteral_21339/*"login/top"*/, 0);
+  return System_String__Concat_63561656(BaseUrl, (System_String_o *)StringLiteral_21342/*"login/top"*/, 0);
 }
 
 
@@ -399,7 +399,7 @@ void TopLoginRequest__requestCompleted(
   int64_t p_fields; // x22
   Il2CppObject *v21; // x21
   BalanceConfig_c *v22; // x0
-  int64_t NextDayTime_41268696; // x21
+  int64_t NextDayTime_41368176; // x21
   int64_t v24; // x0
   int64_t v25; // x9
   Il2CppObject *success; // x20
@@ -411,37 +411,37 @@ void TopLoginRequest__requestCompleted(
   struct NetworkManager_ResultCallbackFunc_o *v32; // x8
   uint64_t dateData; // [xsp+8h] [xbp-58h] BYREF
 
-  if ( (byte_4C395D2 & 1) == 0 )
+  if ( (byte_4C44BCC & 1) == 0 )
   {
-    sub_1C32C20(&BalanceConfig_TypeInfo);
-    sub_1C32C20(&System_DateTime_TypeInfo);
-    sub_1C32C20(&JsonManager_TypeInfo);
-    sub_1C32C20(&ManagerConfig_TypeInfo);
-    sub_1C32C20(&NetworkManager_TypeInfo);
-    sub_1C32C20(&OtherUserNewManager_TypeInfo);
-    sub_1C32C20(&ResponseCommandKind_TypeInfo);
-    sub_1C32C20(&ResponseFailData_TypeInfo);
-    sub_1C32C20(&ServantCommentManager_TypeInfo);
-    sub_1C32C20(&ServantProfileEventJoinManager_TypeInfo);
-    sub_1C32C20(&ServantProfileLimitCountManager_TypeInfo);
-    sub_1C32C20(&Method_SingletonMonoBehaviour_CrashReporter__get_Instance__);
-    sub_1C32C20(&Method_SingletonMonoBehaviour_AdManager__get_Instance__);
-    sub_1C32C20(&Method_SingletonMonoBehaviour_NetworkManager__get_Instance__);
-    sub_1C32C20(&TopLoginRequest_TypeInfo);
-    sub_1C32C20(&UserCommandCodeCollectionManager_TypeInfo);
-    sub_1C32C20(&UserCommandCodeNewManager_TypeInfo);
-    sub_1C32C20(&UserEquipNewManager_TypeInfo);
-    sub_1C32C20(&UserServantCollectionManager_TypeInfo);
-    sub_1C32C20(&UserServantNewManager_TypeInfo);
-    sub_1C32C20(&StringLiteral_22212/*"ng"*/);
-    sub_1C32C20(&StringLiteral_18657/*"do_signup"*/);
-    byte_4C395D2 = 1;
+    sub_1C37058(&BalanceConfig_TypeInfo);
+    sub_1C37058(&System_DateTime_TypeInfo);
+    sub_1C37058(&JsonManager_TypeInfo);
+    sub_1C37058(&ManagerConfig_TypeInfo);
+    sub_1C37058(&NetworkManager_TypeInfo);
+    sub_1C37058(&OtherUserNewManager_TypeInfo);
+    sub_1C37058(&ResponseCommandKind_TypeInfo);
+    sub_1C37058(&ResponseFailData_TypeInfo);
+    sub_1C37058(&ServantCommentManager_TypeInfo);
+    sub_1C37058(&ServantProfileEventJoinManager_TypeInfo);
+    sub_1C37058(&ServantProfileLimitCountManager_TypeInfo);
+    sub_1C37058(&Method_SingletonMonoBehaviour_CrashReporter__get_Instance__);
+    sub_1C37058(&Method_SingletonMonoBehaviour_AdManager__get_Instance__);
+    sub_1C37058(&Method_SingletonMonoBehaviour_NetworkManager__get_Instance__);
+    sub_1C37058(&TopLoginRequest_TypeInfo);
+    sub_1C37058(&UserCommandCodeCollectionManager_TypeInfo);
+    sub_1C37058(&UserCommandCodeNewManager_TypeInfo);
+    sub_1C37058(&UserEquipNewManager_TypeInfo);
+    sub_1C37058(&UserServantCollectionManager_TypeInfo);
+    sub_1C37058(&UserServantNewManager_TypeInfo);
+    sub_1C37058(&StringLiteral_22215/*"ng"*/);
+    sub_1C37058(&StringLiteral_18660/*"do_signup"*/);
+    byte_4C44BCC = 1;
   }
   dateData = 0;
-  if ( (byte_4C395C4 & 1) == 0 )
+  if ( (byte_4C44BBE & 1) == 0 )
   {
-    sub_1C32C20(&TopHomeRequest_TypeInfo);
-    byte_4C395C4 = 1;
+    sub_1C37058(&TopHomeRequest_TypeInfo);
+    byte_4C44BBE = 1;
   }
   TopHomeRequest_TypeInfo->static_fields->accessTime = 0;
   if ( !ResponseCommandKind_TypeInfo->_2.cctor_finished )
@@ -464,7 +464,7 @@ void TopLoginRequest__requestCompleted(
       }
       if ( v10->static_fields->UseDebugCommand )
       {
-        Instance = (NetworkManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39E2904 *)Method_SingletonMonoBehaviour_NetworkManager__get_Instance__);
+        Instance = (NetworkManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39ED16C *)Method_SingletonMonoBehaviour_NetworkManager__get_Instance__);
         if ( !Instance )
           goto LABEL_68;
         if ( !NetworkManager__ReadSignup(Instance, 0) )
@@ -472,8 +472,8 @@ void TopLoginRequest__requestCompleted(
           birthDay = v9->fields.birthDay;
           if ( !NetworkManager_TypeInfo->_2.cctor_finished )
             j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
-          dateData = NetworkManager__getDateTime_41267668(birthDay, 0).fields._dateData;
-          v13 = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39E2904 *)Method_SingletonMonoBehaviour_NetworkManager__get_Instance__);
+          dateData = NetworkManager__getDateTime_41367148(birthDay, 0).fields._dateData;
+          v13 = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39ED16C *)Method_SingletonMonoBehaviour_NetworkManager__get_Instance__);
           name = v9->fields.name;
           genderType = v9->fields.genderType;
           v16 = (NetworkManager_o *)v13;
@@ -485,41 +485,41 @@ void TopLoginRequest__requestCompleted(
           Instance = (NetworkManager_o *)System_DateTime__get_Day(v19, 0);
           if ( !v16 )
             goto LABEL_68;
-          NetworkManager__SetSignup_41257592(v16, name, genderType, Month, (int32_t)Instance, 0);
-          Instance = (NetworkManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39E2904 *)Method_SingletonMonoBehaviour_NetworkManager__get_Instance__);
+          NetworkManager__SetSignup_41357072(v16, name, genderType, Month, (int32_t)Instance, 0);
+          Instance = (NetworkManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39ED16C *)Method_SingletonMonoBehaviour_NetworkManager__get_Instance__);
           if ( !Instance )
             goto LABEL_68;
           NetworkManager__WriteSignup(Instance, 0);
         }
       }
-      Instance = (NetworkManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39E2904 *)Method_SingletonMonoBehaviour_NetworkManager__get_Instance__);
+      Instance = (NetworkManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39ED16C *)Method_SingletonMonoBehaviour_NetworkManager__get_Instance__);
       if ( !Instance )
         goto LABEL_68;
       if ( !NetworkManager__ReadFriendCode(Instance, 0) )
       {
-        Instance = (NetworkManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39E2904 *)Method_SingletonMonoBehaviour_NetworkManager__get_Instance__);
+        Instance = (NetworkManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39ED16C *)Method_SingletonMonoBehaviour_NetworkManager__get_Instance__);
         if ( !Instance )
           goto LABEL_68;
         NetworkManager__SetFriendCode(Instance, v9->fields.friendCode, 0);
-        Instance = (NetworkManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39E2904 *)Method_SingletonMonoBehaviour_NetworkManager__get_Instance__);
+        Instance = (NetworkManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39ED16C *)Method_SingletonMonoBehaviour_NetworkManager__get_Instance__);
         if ( !Instance )
           goto LABEL_68;
         NetworkManager__WriteFriendCode(Instance, 0);
       }
-      Instance = (NetworkManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39E2904 *)Method_SingletonMonoBehaviour_AdManager__get_Instance__);
+      Instance = (NetworkManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39ED16C *)Method_SingletonMonoBehaviour_AdManager__get_Instance__);
       if ( Instance )
       {
         AdManager__SetUserId((AdManager_o *)Instance, v9->fields.userId, 0);
-        Instance = (NetworkManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39E2904 *)Method_SingletonMonoBehaviour_AdManager__get_Instance__);
+        Instance = (NetworkManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39ED16C *)Method_SingletonMonoBehaviour_AdManager__get_Instance__);
         if ( Instance )
         {
           AdManager__SetFriendCode((AdManager_o *)Instance, v9->fields.friendCode, 0);
-          Instance = (NetworkManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39E2904 *)Method_SingletonMonoBehaviour_CrashReporter__get_Instance__);
+          Instance = (NetworkManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39ED16C *)Method_SingletonMonoBehaviour_CrashReporter__get_Instance__);
           if ( Instance )
           {
             p_fields = (int64_t)&v9->fields;
             CrashReporter__SetFriendCode((CrashReporter_o *)Instance, v9->fields.friendCode, 0);
-            v21 = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39E2904 *)Method_SingletonMonoBehaviour_CrashReporter__get_Instance__);
+            v21 = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39ED16C *)Method_SingletonMonoBehaviour_CrashReporter__get_Instance__);
             Instance = (NetworkManager_o *)System_Int64__ToString(p_fields, 0);
             if ( v21 )
             {
@@ -533,14 +533,14 @@ void TopLoginRequest__requestCompleted(
                 j_il2cpp_runtime_class_init_0(BalanceConfig_TypeInfo);
                 v22 = BalanceConfig_TypeInfo;
               }
-              NextDayTime_41268696 = NetworkManager__getNextDayTime_41268696(
+              NextDayTime_41368176 = NetworkManager__getNextDayTime_41368176(
                                        v22->static_fields->RequestTopLoginResetTime1,
                                        0);
-              v24 = NetworkManager__getNextDayTime_41268696(
+              v24 = NetworkManager__getNextDayTime_41368176(
                       BalanceConfig_TypeInfo->static_fields->RequestTopLoginResetTime2,
                       0);
-              if ( NextDayTime_41268696 <= v24 )
-                v25 = NextDayTime_41268696;
+              if ( NextDayTime_41368176 <= v24 )
+                v25 = NextDayTime_41368176;
               else
                 v25 = v24;
               TopLoginRequest_TypeInfo->static_fields->accessTime = v25;
@@ -593,7 +593,7 @@ LABEL_64:
         }
       }
 LABEL_68:
-      sub_1C32E7C(Instance);
+      sub_1C372B4(Instance);
     }
 LABEL_65:
     TopLoginRequest_TypeInfo->static_fields->accessTime = 0;
@@ -601,21 +601,21 @@ LABEL_65:
     if ( v32 )
       ((void (__fastcall *)(intptr_t, __int64, intptr_t))v32->fields.invoke_impl)(
         v32->fields.method_code,
-        StringLiteral_22212/*"ng"*/,
+        StringLiteral_22215/*"ng"*/,
         v32->fields.method);
     return;
   }
-  v30 = (ResponseFailData_o *)sub_1C32E6C(ResponseFailData_TypeInfo);
+  v30 = (ResponseFailData_o *)sub_1C372A4(ResponseFailData_TypeInfo);
   ResponseFailData___ctor(v30, v7, v31);
   TopLoginRequest_TypeInfo->static_fields->accessTime = 0;
   if ( !v30 )
     goto LABEL_68;
-  if ( !System_String__op_Equality(v30->fields.action, (System_String_o *)StringLiteral_18657/*"do_signup"*/, 0) )
+  if ( !System_String__op_Equality(v30->fields.action, (System_String_o *)StringLiteral_18660/*"do_signup"*/, 0) )
     goto LABEL_65;
   CallBack = this->fields.CallBack;
   if ( CallBack )
   {
-    v29 = StringLiteral_18657/*"do_signup"*/;
+    v29 = StringLiteral_18660/*"do_signup"*/;
     goto LABEL_64;
   }
 }

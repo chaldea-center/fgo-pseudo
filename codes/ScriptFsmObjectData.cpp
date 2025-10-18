@@ -12,25 +12,25 @@ void ScriptFsmObjectData___ctor(
   const MethodInfo *v12; // x3
   AssetLoader_LoadEndDataHandler_o *v13; // x20
 
-  if ( (byte_4C3991C & 1) == 0 )
+  if ( (byte_4C44F16 & 1) == 0 )
   {
-    sub_1C32C20(&AssetManager_TypeInfo);
-    sub_1C32C20(&AssetLoader_LoadEndDataHandler_TypeInfo);
-    sub_1C32C20(&Method_ScriptFsmObjectData___c__DisplayClass5_0___ctor_b__0__);
-    sub_1C32C20(&ScriptFsmObjectData___c__DisplayClass5_0_TypeInfo);
-    byte_4C3991C = 1;
+    sub_1C37058(&AssetManager_TypeInfo);
+    sub_1C37058(&AssetLoader_LoadEndDataHandler_TypeInfo);
+    sub_1C37058(&Method_ScriptFsmObjectData___c__DisplayClass5_0___ctor_b__0__);
+    sub_1C37058(&ScriptFsmObjectData___c__DisplayClass5_0_TypeInfo);
+    byte_4C44F16 = 1;
   }
-  v7 = sub_1C32E6C(ScriptFsmObjectData___c__DisplayClass5_0_TypeInfo);
+  v7 = sub_1C372A4(ScriptFsmObjectData___c__DisplayClass5_0_TypeInfo);
   System_Object___ctor((Il2CppObject *)v7, 0);
   if ( !v7 )
-    sub_1C32E7C(v8);
+    sub_1C372B4(v8);
   *(_QWORD *)(v7 + 24) = objectName;
-  sub_1C32BC4((CGThumbnailListItem_o *)(v7 + 24), (int32_t)objectName, v9, v10);
+  sub_1C36FFC((CGThumbnailListItem_o *)(v7 + 24), (int32_t)objectName, v9, v10);
   System_Object___ctor((Il2CppObject *)this, 0);
   *(_QWORD *)(v7 + 16) = this;
-  sub_1C32BC4((CGThumbnailListItem_o *)(v7 + 16), (int32_t)this, v11, v12);
+  sub_1C36FFC((CGThumbnailListItem_o *)(v7 + 16), (int32_t)this, v11, v12);
   this->fields.isLoading = 1;
-  v13 = (AssetLoader_LoadEndDataHandler_o *)sub_1C32E6C(AssetLoader_LoadEndDataHandler_TypeInfo);
+  v13 = (AssetLoader_LoadEndDataHandler_o *)sub_1C372A4(AssetLoader_LoadEndDataHandler_TypeInfo);
   AssetLoader_LoadEndDataHandler___ctor(
     v13,
     (Il2CppObject *)v7,
@@ -51,11 +51,11 @@ void ScriptFsmObjectData__Destroy(ScriptFsmObjectData_o *this, const MethodInfo 
   UnityEngine_Object_o *gameObject; // x21
   AssetData_o *loadedAssetData; // x19
 
-  if ( (byte_4C39925 & 1) == 0 )
+  if ( (byte_4C44F1F & 1) == 0 )
   {
-    sub_1C32C20(&AssetManager_TypeInfo);
-    sub_1C32C20(&UnityEngine_Object_TypeInfo);
-    byte_4C39925 = 1;
+    sub_1C37058(&AssetManager_TypeInfo);
+    sub_1C37058(&UnityEngine_Object_TypeInfo);
+    byte_4C44F1F = 1;
   }
   p_fields = (UnityEngine_Component_o **)&this->fields;
   fsmObject = (UnityEngine_Object_o *)this->fields.fsmObject;
@@ -64,18 +64,18 @@ void ScriptFsmObjectData__Destroy(ScriptFsmObjectData_o *this, const MethodInfo 
   if ( UnityEngine_Object__op_Inequality(fsmObject, 0, 0) )
   {
     if ( !*p_fields )
-      sub_1C32E7C(0);
+      sub_1C372B4(0);
     gameObject = (UnityEngine_Object_o *)UnityEngine_Component__get_gameObject(*p_fields, 0);
     if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-    UnityEngine_Object__Destroy_71223640(gameObject, 0);
+    UnityEngine_Object__Destroy_71266752(gameObject, 0);
   }
   this->fields.fsmObject = 0;
-  sub_1C32BC4((CGThumbnailListItem_o *)&this->fields, 0, v5, v6);
+  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields, 0, v5, v6);
   loadedAssetData = this->fields.loadedAssetData;
   if ( !AssetManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(AssetManager_TypeInfo);
-  AssetManager__releaseAsset_40435328(loadedAssetData, 0);
+  AssetManager__releaseAsset_40534712(loadedAssetData, 0);
 }
 
 
@@ -91,10 +91,10 @@ bool ScriptFsmObjectData__IsPlaying(ScriptFsmObjectData_o *this, const MethodInf
   _BOOL8 v4; // x0
   struct ScriptFsmObject_o *v5; // x8
 
-  if ( (byte_4C3991B & 1) == 0 )
+  if ( (byte_4C44F15 & 1) == 0 )
   {
-    sub_1C32C20(&UnityEngine_Object_TypeInfo);
-    byte_4C3991B = 1;
+    sub_1C37058(&UnityEngine_Object_TypeInfo);
+    byte_4C44F15 = 1;
   }
   fsmObject = (UnityEngine_Object_o *)this->fields.fsmObject;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -104,7 +104,7 @@ bool ScriptFsmObjectData__IsPlaying(ScriptFsmObjectData_o *this, const MethodInf
     return 0;
   v5 = this->fields.fsmObject;
   if ( !v5 )
-    sub_1C32E7C(v4);
+    sub_1C372B4(v4);
   return v5->fields.isPlaying;
 }
 
@@ -115,10 +115,10 @@ void ScriptFsmObjectData__SendEvent(ScriptFsmObjectData_o *this, System_String_o
   const MethodInfo *v6; // x2
   ScriptFsmObject_o *v7; // x0
 
-  if ( (byte_4C39920 & 1) == 0 )
+  if ( (byte_4C44F1A & 1) == 0 )
   {
-    sub_1C32C20(&UnityEngine_Object_TypeInfo);
-    byte_4C39920 = 1;
+    sub_1C37058(&UnityEngine_Object_TypeInfo);
+    byte_4C44F1A = 1;
   }
   fsmObject = (UnityEngine_Object_o *)this->fields.fsmObject;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -127,7 +127,7 @@ void ScriptFsmObjectData__SendEvent(ScriptFsmObjectData_o *this, System_String_o
   {
     v7 = this->fields.fsmObject;
     if ( !v7 )
-      sub_1C32E7C(0);
+      sub_1C372B4(0);
     ScriptFsmObject__SendEvent(v7, eventName, v6);
   }
 }
@@ -143,10 +143,10 @@ void ScriptFsmObjectData__SetBool(
   const MethodInfo *v8; // x3
   ScriptFsmObject_o *v9; // x0
 
-  if ( (byte_4C39923 & 1) == 0 )
+  if ( (byte_4C44F1D & 1) == 0 )
   {
-    sub_1C32C20(&UnityEngine_Object_TypeInfo);
-    byte_4C39923 = 1;
+    sub_1C37058(&UnityEngine_Object_TypeInfo);
+    byte_4C44F1D = 1;
   }
   fsmObject = (UnityEngine_Object_o *)this->fields.fsmObject;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -155,7 +155,7 @@ void ScriptFsmObjectData__SetBool(
   {
     v9 = this->fields.fsmObject;
     if ( !v9 )
-      sub_1C32E7C(0);
+      sub_1C372B4(0);
     ScriptFsmObject__SetBool(v9, name, value, v8);
   }
 }
@@ -171,10 +171,10 @@ void ScriptFsmObjectData__SetFloat(
   const MethodInfo *v8; // x2
   ScriptFsmObject_o *v9; // x0
 
-  if ( (byte_4C39922 & 1) == 0 )
+  if ( (byte_4C44F1C & 1) == 0 )
   {
-    sub_1C32C20(&UnityEngine_Object_TypeInfo);
-    byte_4C39922 = 1;
+    sub_1C37058(&UnityEngine_Object_TypeInfo);
+    byte_4C44F1C = 1;
   }
   fsmObject = (UnityEngine_Object_o *)this->fields.fsmObject;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -183,7 +183,7 @@ void ScriptFsmObjectData__SetFloat(
   {
     v9 = this->fields.fsmObject;
     if ( !v9 )
-      sub_1C32E7C(0);
+      sub_1C372B4(0);
     ScriptFsmObject__SetFloat(v9, name, value, v8);
   }
 }
@@ -199,10 +199,10 @@ void ScriptFsmObjectData__SetParent(
   UnityEngine_Transform_o *v7; // x21
   UnityEngine_GameObject_o *gameObject; // x0
 
-  if ( (byte_4C3991D & 1) == 0 )
+  if ( (byte_4C44F17 & 1) == 0 )
   {
-    sub_1C32C20(&UnityEngine_Object_TypeInfo);
-    byte_4C3991D = 1;
+    sub_1C37058(&UnityEngine_Object_TypeInfo);
+    byte_4C44F17 = 1;
   }
   fsmObject = (UnityEngine_Object_o *)this->fields.fsmObject;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -226,7 +226,7 @@ void ScriptFsmObjectData__SetParent(
       || (transform = (UnityEngine_Component_o *)UnityEngine_Component__get_gameObject(transform, 0)) == 0 )
     {
 LABEL_14:
-      sub_1C32E7C(transform);
+      sub_1C372B4(transform);
     }
     UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)transform, 1, 0);
   }
@@ -239,10 +239,10 @@ void ScriptFsmObjectData__SetPosition(ScriptFsmObjectData_o *this, float x, floa
   UnityEngine_Component_o *v8; // x0
   UnityEngine_GameObject_o *gameObject; // x0
 
-  if ( (byte_4C3991E & 1) == 0 )
+  if ( (byte_4C44F18 & 1) == 0 )
   {
-    sub_1C32C20(&UnityEngine_Object_TypeInfo);
-    byte_4C3991E = 1;
+    sub_1C37058(&UnityEngine_Object_TypeInfo);
+    byte_4C44F18 = 1;
   }
   fsmObject = (UnityEngine_Object_o *)this->fields.fsmObject;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -251,9 +251,9 @@ void ScriptFsmObjectData__SetPosition(ScriptFsmObjectData_o *this, float x, floa
   {
     v8 = (UnityEngine_Component_o *)this->fields.fsmObject;
     if ( !v8 )
-      sub_1C32E7C(0);
+      sub_1C372B4(0);
     gameObject = UnityEngine_Component__get_gameObject(v8, 0);
-    GameObjectExtensions__SetLocalPosition_36036760(gameObject, x, y, 0);
+    GameObjectExtensions__SetLocalPosition_36132392(gameObject, x, y, 0);
   }
 }
 
@@ -264,10 +264,10 @@ void ScriptFsmObjectData__SetState(ScriptFsmObjectData_o *this, System_String_o 
   const MethodInfo *v6; // x2
   ScriptFsmObject_o *v7; // x0
 
-  if ( (byte_4C3991F & 1) == 0 )
+  if ( (byte_4C44F19 & 1) == 0 )
   {
-    sub_1C32C20(&UnityEngine_Object_TypeInfo);
-    byte_4C3991F = 1;
+    sub_1C37058(&UnityEngine_Object_TypeInfo);
+    byte_4C44F19 = 1;
   }
   fsmObject = (UnityEngine_Object_o *)this->fields.fsmObject;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -276,7 +276,7 @@ void ScriptFsmObjectData__SetState(ScriptFsmObjectData_o *this, System_String_o 
   {
     v7 = this->fields.fsmObject;
     if ( !v7 )
-      sub_1C32E7C(0);
+      sub_1C372B4(0);
     ScriptFsmObject__SetState(v7, stateName, v6);
   }
 }
@@ -292,10 +292,10 @@ void ScriptFsmObjectData__SetString(
   const MethodInfo *v8; // x3
   ScriptFsmObject_o *v9; // x0
 
-  if ( (byte_4C39921 & 1) == 0 )
+  if ( (byte_4C44F1B & 1) == 0 )
   {
-    sub_1C32C20(&UnityEngine_Object_TypeInfo);
-    byte_4C39921 = 1;
+    sub_1C37058(&UnityEngine_Object_TypeInfo);
+    byte_4C44F1B = 1;
   }
   fsmObject = (UnityEngine_Object_o *)this->fields.fsmObject;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -304,7 +304,7 @@ void ScriptFsmObjectData__SetString(
   {
     v9 = this->fields.fsmObject;
     if ( !v9 )
-      sub_1C32E7C(0);
+      sub_1C372B4(0);
     ScriptFsmObject__SetString(v9, name, value, v8);
   }
 }
@@ -316,10 +316,10 @@ void ScriptFsmObjectData__Skip(ScriptFsmObjectData_o *this, const MethodInfo *me
   const MethodInfo *v4; // x1
   ScriptFsmObject_o *v5; // x0
 
-  if ( (byte_4C39924 & 1) == 0 )
+  if ( (byte_4C44F1E & 1) == 0 )
   {
-    sub_1C32C20(&UnityEngine_Object_TypeInfo);
-    byte_4C39924 = 1;
+    sub_1C37058(&UnityEngine_Object_TypeInfo);
+    byte_4C44F1E = 1;
   }
   fsmObject = (UnityEngine_Object_o *)this->fields.fsmObject;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -328,7 +328,7 @@ void ScriptFsmObjectData__Skip(ScriptFsmObjectData_o *this, const MethodInfo *me
   {
     v5 = this->fields.fsmObject;
     if ( !v5 )
-      sub_1C32E7C(0);
+      sub_1C372B4(0);
     ScriptFsmObject__Skip(v5, v4);
   }
 }
@@ -349,7 +349,7 @@ void ScriptFsmObjectData___c__DisplayClass5_0____ctor_b__0(
 {
   const MethodInfo *v3; // x3
   char *_4__this; // x0
-  UnityEngine_Object_o *Object_40411212; // x20
+  UnityEngine_Object_o *Object_40510596; // x20
   Il2CppObject *v8; // x0
   UnityEngine_GameObject_o *v9; // x20
   struct ScriptFsmObjectData_o *v10; // x21
@@ -357,47 +357,47 @@ void ScriptFsmObjectData___c__DisplayClass5_0____ctor_b__0(
   const MethodInfo *v12; // x3
   struct ScriptFsmObjectData_o *v13; // x8
 
-  if ( (byte_4C39926 & 1) == 0 )
+  if ( (byte_4C44F20 & 1) == 0 )
   {
-    sub_1C32C20(&Method_UnityEngine_GameObject_GetComponent_ScriptFsmObject___);
-    sub_1C32C20(&UnityEngine_GameObject_TypeInfo);
-    sub_1C32C20(&Method_UnityEngine_Object_Instantiate_GameObject___);
-    sub_1C32C20(&UnityEngine_Object_TypeInfo);
-    byte_4C39926 = 1;
+    sub_1C37058(&Method_UnityEngine_GameObject_GetComponent_ScriptFsmObject___);
+    sub_1C37058(&UnityEngine_GameObject_TypeInfo);
+    sub_1C37058(&Method_UnityEngine_Object_Instantiate_GameObject___);
+    sub_1C37058(&UnityEngine_Object_TypeInfo);
+    byte_4C44F20 = 1;
   }
   _4__this = (char *)this->fields.__4__this;
   if ( !_4__this )
     goto LABEL_16;
   *((_QWORD *)_4__this + 4) = assetData;
-  sub_1C32BC4((CGThumbnailListItem_o *)(_4__this + 32), (int32_t)assetData, (int32_t)method, v3);
+  sub_1C36FFC((CGThumbnailListItem_o *)(_4__this + 32), (int32_t)assetData, (int32_t)method, v3);
   if ( !assetData )
     goto LABEL_16;
-  Object_40411212 = AssetData__GetObject_40411212(assetData, this->fields.objectName, 0);
+  Object_40510596 = AssetData__GetObject_40510596(assetData, this->fields.objectName, 0);
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-  if ( Object_40411212 )
-    v8 = (UnityEngine_GameObject_c *)Object_40411212->klass == UnityEngine_GameObject_TypeInfo
-       ? (Il2CppObject *)Object_40411212
+  if ( Object_40510596 )
+    v8 = (UnityEngine_GameObject_c *)Object_40510596->klass == UnityEngine_GameObject_TypeInfo
+       ? (Il2CppObject *)Object_40510596
        : 0LL;
   else
     v8 = 0;
   _4__this = (char *)UnityEngine_Object__Instantiate_object_(
                        v8,
-                       (const MethodInfo_3169758 *)Method_UnityEngine_Object_Instantiate_GameObject___);
+                       (const MethodInfo_3173FC0 *)Method_UnityEngine_Object_Instantiate_GameObject___);
   if ( !_4__this
     || (v9 = (UnityEngine_GameObject_o *)_4__this,
         UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)_4__this, 0, 0),
         v10 = this->fields.__4__this,
         _4__this = (char *)UnityEngine_GameObject__GetComponent_object_(
                              v9,
-                             (const MethodInfo_3134970 *)Method_UnityEngine_GameObject_GetComponent_ScriptFsmObject___),
+                             (const MethodInfo_313F1D8 *)Method_UnityEngine_GameObject_GetComponent_ScriptFsmObject___),
         !v10)
     || (v10->fields.fsmObject = (struct ScriptFsmObject_o *)_4__this,
-        sub_1C32BC4((CGThumbnailListItem_o *)&v10->fields, (int32_t)_4__this, v11, v12),
+        sub_1C36FFC((CGThumbnailListItem_o *)&v10->fields, (int32_t)_4__this, v11, v12),
         (v13 = this->fields.__4__this) == 0) )
   {
 LABEL_16:
-    sub_1C32E7C(_4__this);
+    sub_1C372B4(_4__this);
   }
   v13->fields.isLoading = 0;
 }

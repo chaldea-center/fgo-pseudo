@@ -15,10 +15,10 @@ BattlePlayAnimationComponent_SaveData_o *BattlePlayAnimationComponent__GetSaveDa
   const MethodInfo *v7; // x1
   const MethodInfo *v8; // x3
 
-  if ( (byte_4C3AFB4 & 1) == 0 )
+  if ( (byte_4C465C8 & 1) == 0 )
   {
-    sub_1C32C20(&BattlePlayAnimationComponent_SaveData_TypeInfo);
-    byte_4C3AFB4 = 1;
+    sub_1C37058(&BattlePlayAnimationComponent_SaveData_TypeInfo);
+    byte_4C465C8 = 1;
   }
   WrapAnimation = (System_String_o *)BattlePlayAnimationComponent__get_WrapAnimation(this, method);
   if ( !WrapAnimation )
@@ -29,12 +29,12 @@ BattlePlayAnimationComponent_SaveData_o *BattlePlayAnimationComponent__GetSaveDa
   if ( !v4 )
     return 0;
   v5 = (WrapBattleBaseAnimation_SimpleData_o *)v4;
-  v6 = (BattlePlayAnimationComponent_SaveData_o *)sub_1C32E6C(BattlePlayAnimationComponent_SaveData_TypeInfo);
+  v6 = (BattlePlayAnimationComponent_SaveData_o *)sub_1C372A4(BattlePlayAnimationComponent_SaveData_TypeInfo);
   BattlePlayAnimationComponent_SaveData___ctor(v6, v7);
   WrapAnimation = UnityEngine_Object__get_name((UnityEngine_Object_o *)this, 0);
   if ( !v6 )
 LABEL_9:
-    sub_1C32E7C(WrapAnimation);
+    sub_1C372B4(WrapAnimation);
   BattlePlayAnimationComponent_SaveData__Init(v6, WrapAnimation, v5, v8);
   return v6;
 }
@@ -68,7 +68,7 @@ void BattlePlayAnimationComponent__PlayAnimation(
   v4 = *(long double *)&timeline;
   WrapAnimation = BattlePlayAnimationComponent__get_WrapAnimation(this, (const MethodInfo *)animName);
   if ( !WrapAnimation )
-    sub_1C32E7C(0);
+    sub_1C372B4(0);
   ((void (__fastcall *)(WrapBattleBaseAnimation_o *, System_String_o *, const MethodInfo *, long double))WrapAnimation->klass->vtable._4_PlayAnimation.methodPtr)(
     WrapAnimation,
     animName,
@@ -109,7 +109,7 @@ WrapBattleBaseAnimation_o *BattlePlayAnimationComponent__get_WrapAnimation(
     gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
     wrapAnimation = WrapBattleBaseAnimation__MakeWrapAnimation(gameObject, 0);
     this->fields._wrapAnimation = wrapAnimation;
-    sub_1C32BC4((CGThumbnailListItem_o *)p_wrapAnimation, (int32_t)wrapAnimation, v6, v7);
+    sub_1C36FFC((CGThumbnailListItem_o *)p_wrapAnimation, (int32_t)wrapAnimation, v6, v7);
   }
   return wrapAnimation;
 }
@@ -126,17 +126,17 @@ void BattlePlayAnimationComponent_SaveData___ctor(
   int32_t v7; // w2
   const MethodInfo *v8; // x3
 
-  if ( (byte_4C3AFB5 & 1) == 0 )
+  if ( (byte_4C465C9 & 1) == 0 )
   {
-    sub_1C32C20(&StringLiteral_1/*""*/);
-    byte_4C3AFB5 = 1;
+    sub_1C37058(&StringLiteral_1/*""*/);
+    byte_4C465C9 = 1;
   }
   v5 = StringLiteral_1/*""*/;
   this->fields.componentName = (struct System_String_o *)StringLiteral_1/*""*/;
-  sub_1C32BC4((CGThumbnailListItem_o *)&this->fields, v5, v2, v3);
+  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields, v5, v2, v3);
   v6 = StringLiteral_1/*""*/;
   this->fields.animName = (struct System_String_o *)StringLiteral_1/*""*/;
-  sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.animName, v6, v7, v8);
+  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.animName, v6, v7, v8);
   System_Object___ctor((Il2CppObject *)this, 0);
 }
 
@@ -154,12 +154,12 @@ BattlePlayAnimationComponent_SaveData_o *BattlePlayAnimationComponent_SaveData__
   BattlePlayAnimationComponent_SaveData_o *result; // x0
 
   this->fields.componentName = objName;
-  sub_1C32BC4((CGThumbnailListItem_o *)&this->fields, (int32_t)objName, (int32_t)data, method);
+  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields, (int32_t)objName, (int32_t)data, method);
   if ( !data )
-    sub_1C32E7C(v6);
+    sub_1C372B4(v6);
   animName = data->fields.animName;
   this->fields.animName = animName;
-  sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.animName, (int32_t)animName, v7, v8);
+  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.animName, (int32_t)animName, v7, v8);
   result = this;
   this->fields.timeline = data->fields.timeline;
   return result;

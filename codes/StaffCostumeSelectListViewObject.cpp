@@ -1,9 +1,9 @@
 void StaffCostumeSelectListViewObject___ctor(StaffCostumeSelectListViewObject_o *this, const MethodInfo *method)
 {
-  if ( (byte_4C33076 & 1) == 0 )
+  if ( (byte_4C3E660 & 1) == 0 )
   {
-    sub_1C32C20(&ListViewObject_TypeInfo);
-    byte_4C33076 = 1;
+    sub_1C37058(&ListViewObject_TypeInfo);
+    byte_4C3E660 = 1;
   }
   if ( !ListViewObject_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(ListViewObject_TypeInfo);
@@ -18,20 +18,20 @@ void StaffCostumeSelectListViewObject__Awake(StaffCostumeSelectListViewObject_o 
   int32_t v5; // w2
   const MethodInfo *v6; // x3
 
-  if ( (byte_4C3306E & 1) == 0 )
+  if ( (byte_4C3E658 & 1) == 0 )
   {
-    sub_1C32C20(&Method_UnityEngine_GameObject_GetComponent_StaffCostumeSelectListViewItemDraw___);
-    byte_4C3306E = 1;
+    sub_1C37058(&Method_UnityEngine_GameObject_GetComponent_StaffCostumeSelectListViewItemDraw___);
+    byte_4C3E658 = 1;
   }
   ListViewObject__Awake((ListViewObject_o *)this, 0);
   dispObject = this->fields.dispObject;
   if ( !dispObject )
-    sub_1C32E7C(0);
+    sub_1C372B4(0);
   Component_object = UnityEngine_GameObject__GetComponent_object_(
                        dispObject,
-                       (const MethodInfo_3134970 *)Method_UnityEngine_GameObject_GetComponent_StaffCostumeSelectListViewItemDraw___);
+                       (const MethodInfo_313F1D8 *)Method_UnityEngine_GameObject_GetComponent_StaffCostumeSelectListViewItemDraw___);
   this->fields.itemDraw = (struct StaffCostumeSelectListViewItemDraw_o *)Component_object;
-  sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.itemDraw, (int32_t)Component_object, v5, v6);
+  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.itemDraw, (int32_t)Component_object, v5, v6);
 }
 
 
@@ -43,19 +43,19 @@ UnityEngine_GameObject_o *StaffCostumeSelectListViewObject__CreateDragObject(
   UnityEngine_GameObject_o *v4; // x19
   const MethodInfo *v5; // x3
 
-  if ( (byte_4C33072 & 1) == 0 )
+  if ( (byte_4C3E65C & 1) == 0 )
   {
-    sub_1C32C20(&Method_UnityEngine_GameObject_GetComponent_StaffCostumeSelectListViewObject___);
-    byte_4C33072 = 1;
+    sub_1C37058(&Method_UnityEngine_GameObject_GetComponent_StaffCostumeSelectListViewObject___);
+    byte_4C3E65C = 1;
   }
   DragObject = ListViewObject__CreateDragObject((ListViewObject_o *)this, 0);
   if ( !DragObject
     || (v4 = DragObject,
         (DragObject = (UnityEngine_GameObject_o *)UnityEngine_GameObject__GetComponent_object_(
                                                     DragObject,
-                                                    (const MethodInfo_3134970 *)Method_UnityEngine_GameObject_GetComponent_StaffCostumeSelectListViewObject___)) == 0) )
+                                                    (const MethodInfo_313F1D8 *)Method_UnityEngine_GameObject_GetComponent_StaffCostumeSelectListViewObject___)) == 0) )
   {
-    sub_1C32E7C(DragObject);
+    sub_1C372B4(DragObject);
   }
   StaffCostumeSelectListViewObject__Init((StaffCostumeSelectListViewObject_o *)DragObject, 2, 0, v5);
   return v4;
@@ -69,10 +69,10 @@ StaffCostumeSelectListViewItem_o *StaffCostumeSelectListViewObject__GetItem(
   struct ListViewItem_o *linkItem; // x8
   __int64 naturalAligment; // x11
 
-  if ( (byte_4C33070 & 1) == 0 )
+  if ( (byte_4C3E65A & 1) == 0 )
   {
-    sub_1C32C20(&StaffCostumeSelectListViewItem_TypeInfo);
-    byte_4C33070 = 1;
+    sub_1C37058(&StaffCostumeSelectListViewItem_TypeInfo);
+    byte_4C3E65A = 1;
   }
   linkItem = this->fields.linkItem;
   if ( !linkItem )
@@ -102,10 +102,10 @@ void StaffCostumeSelectListViewObject__Init(
   const MethodInfo *v14; // x1
   int32_t v15; // w8
 
-  if ( (byte_4C33073 & 1) == 0 )
+  if ( (byte_4C3E65D & 1) == 0 )
   {
-    sub_1C32C20(&StaffCostumeSelectListViewItem_TypeInfo);
-    byte_4C33073 = 1;
+    sub_1C37058(&StaffCostumeSelectListViewItem_TypeInfo);
+    byte_4C3E65D = 1;
   }
   linkItem = this->fields.linkItem;
   if ( linkItem
@@ -162,7 +162,7 @@ LABEL_20:
 }
 
 
-void StaffCostumeSelectListViewObject__Init_33759124(
+void StaffCostumeSelectListViewObject__Init_33854756(
         StaffCostumeSelectListViewObject_o *this,
         int32_t initMode,
         const MethodInfo *method)
@@ -179,17 +179,17 @@ void StaffCostumeSelectListViewObject__OnClickSelect(
 {
   UnityEngine_Component_o *manager; // x0
 
-  if ( (byte_4C33075 & 1) == 0 )
+  if ( (byte_4C3E65F & 1) == 0 )
   {
-    sub_1C32C20(&StringLiteral_9867/*"OnClickSelectListView"*/);
-    byte_4C33075 = 1;
+    sub_1C37058(&StringLiteral_9868/*"OnClickSelectListView"*/);
+    byte_4C3E65F = 1;
   }
   if ( this->fields.linkItem )
   {
     manager = (UnityEngine_Component_o *)this->fields.manager;
     if ( !manager )
-      sub_1C32E7C(0);
-    UnityEngine_Component__SendMessage(manager, (System_String_o *)StringLiteral_9867/*"OnClickSelectListView"*/, (Il2CppObject *)this, 0);
+      sub_1C372B4(0);
+    UnityEngine_Component__SendMessage(manager, (System_String_o *)StringLiteral_9868/*"OnClickSelectListView"*/, (Il2CppObject *)this, 0);
   }
 }
 
@@ -203,11 +203,11 @@ void StaffCostumeSelectListViewObject__OnDestroy(StaffCostumeSelectListViewObjec
   int32_t v7; // w2
   const MethodInfo *v8; // x3
 
-  if ( (byte_4C3306F & 1) == 0 )
+  if ( (byte_4C3E659 & 1) == 0 )
   {
-    sub_1C32C20(&NGUITools_TypeInfo);
-    sub_1C32C20(&UnityEngine_Object_TypeInfo);
-    byte_4C3306F = 1;
+    sub_1C37058(&NGUITools_TypeInfo);
+    sub_1C37058(&UnityEngine_Object_TypeInfo);
+    byte_4C3E659 = 1;
   }
   dragObject = this->fields.dragObject;
   p_dragObject = (CGThumbnailListItem_o *)&this->fields.dragObject;
@@ -221,7 +221,7 @@ void StaffCostumeSelectListViewObject__OnDestroy(StaffCostumeSelectListViewObjec
       j_il2cpp_runtime_class_init_0(NGUITools_TypeInfo);
     NGUITools__Destroy(klass, 0);
     p_dragObject->klass = 0;
-    sub_1C32BC4(p_dragObject, 0, v7, v8);
+    sub_1C36FFC(p_dragObject, 0, v7, v8);
   }
 }
 
@@ -238,11 +238,11 @@ void StaffCostumeSelectListViewObject__SetInput(
   struct ListViewItem_o *v9; // x1
   StaffCostumeSelectListViewItemDraw_o *v10; // x0
 
-  if ( (byte_4C33071 & 1) == 0 )
+  if ( (byte_4C3E65B & 1) == 0 )
   {
-    sub_1C32C20(&UnityEngine_Object_TypeInfo);
-    sub_1C32C20(&StaffCostumeSelectListViewItem_TypeInfo);
-    byte_4C33071 = 1;
+    sub_1C37058(&UnityEngine_Object_TypeInfo);
+    sub_1C37058(&StaffCostumeSelectListViewItem_TypeInfo);
+    byte_4C3E65B = 1;
   }
   ListViewObject__SetInput((ListViewObject_o *)this, isInput, 0);
   itemDraw = (UnityEngine_Object_o *)this->fields.itemDraw;
@@ -266,7 +266,7 @@ void StaffCostumeSelectListViewObject__SetInput(
     }
     v10 = this->fields.itemDraw;
     if ( !v10 )
-      sub_1C32E7C(0);
+      sub_1C372B4(0);
     StaffCostumeSelectListViewItemDraw__SetInput(v10, (StaffCostumeSelectListViewItem_o *)v9, isInput, v6);
   }
 }
@@ -278,12 +278,12 @@ void StaffCostumeSelectListViewObject__SetItem(
         ListViewItemSeed_o *seed,
         const MethodInfo *method)
 {
-  ListViewObject__SetItem_43729388((ListViewObject_o *)this, item, seed, 0);
+  ListViewObject__SetItem_43831492((ListViewObject_o *)this, item, seed, 0);
   this->fields.state = 0;
 }
 
 
-void StaffCostumeSelectListViewObject__SetItem_33761140(
+void StaffCostumeSelectListViewObject__SetItem_33856772(
         StaffCostumeSelectListViewObject_o *this,
         ListViewItem_o *item,
         const MethodInfo *method)
@@ -302,11 +302,11 @@ void StaffCostumeSelectListViewObject__SetupDisp(StaffCostumeSelectListViewObjec
   const MethodInfo *v7; // x2
   StaffCostumeSelectListViewItemDraw_o *v8; // x0
 
-  if ( (byte_4C33074 & 1) == 0 )
+  if ( (byte_4C3E65E & 1) == 0 )
   {
-    sub_1C32C20(&UnityEngine_Object_TypeInfo);
-    sub_1C32C20(&StaffCostumeSelectListViewItem_TypeInfo);
-    byte_4C33074 = 1;
+    sub_1C37058(&UnityEngine_Object_TypeInfo);
+    sub_1C37058(&StaffCostumeSelectListViewItem_TypeInfo);
+    byte_4C3E65E = 1;
   }
   linkItem = this->fields.linkItem;
   if ( !linkItem )
@@ -330,7 +330,7 @@ LABEL_8:
   {
     v8 = this->fields.itemDraw;
     if ( !v8 )
-      sub_1C32E7C(0);
+      sub_1C372B4(0);
     if ( linkItem )
     {
       if ( this->fields.dispMode )

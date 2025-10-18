@@ -1,14 +1,14 @@
 void UserPaymentLimitMaster___ctor(UserPaymentLimitMaster_o *this, const MethodInfo *method)
 {
-  if ( (byte_4C38CC4 & 1) == 0 )
+  if ( (byte_4C442BD & 1) == 0 )
   {
-    sub_1C32C20(&Method_DataMasterBase_UserPaymentLimitMaster__UserPaymentLimitEntity__string___ctor__);
-    byte_4C38CC4 = 1;
+    sub_1C37058(&Method_DataMasterBase_UserPaymentLimitMaster__UserPaymentLimitEntity__string___ctor__);
+    byte_4C442BD = 1;
   }
   DataMasterBase_object__object__object____ctor(
     (DataMasterBase_TMaster__TEntity__PKType__o *)this,
     516,
-    (const MethodInfo_3398FCC *)Method_DataMasterBase_UserPaymentLimitMaster__UserPaymentLimitEntity__string___ctor__);
+    (const MethodInfo_33A3834 *)Method_DataMasterBase_UserPaymentLimitMaster__UserPaymentLimitEntity__string___ctor__);
 }
 
 
@@ -21,16 +21,16 @@ UserPaymentLimitEntity_o *UserPaymentLimitMaster__GetEntity(
 {
   Il2CppObject *PK; // x1
 
-  if ( (byte_4C38CC5 & 1) == 0 )
+  if ( (byte_4C442BE & 1) == 0 )
   {
-    sub_1C32C20(&Method_DataMasterBase_UserPaymentLimitMaster__UserPaymentLimitEntity__string__GetEntity__);
-    byte_4C38CC5 = 1;
+    sub_1C37058(&Method_DataMasterBase_UserPaymentLimitMaster__UserPaymentLimitEntity__string__GetEntity__);
+    byte_4C442BE = 1;
   }
   PK = (Il2CppObject *)UserPaymentLimitEntity__CreatePK(userId, paymentLimitId, *(const MethodInfo **)&paymentLimitId);
   return (UserPaymentLimitEntity_o *)DataMasterBase_object__object__object___GetEntity(
                                        (DataMasterBase_TMaster__TEntity__PKType__o *)this,
                                        PK,
-                                       (const MethodInfo_339B2F0 *)Method_DataMasterBase_UserPaymentLimitMaster__UserPaymentLimitEntity__string__GetEntity__);
+                                       (const MethodInfo_33A5B58 *)Method_DataMasterBase_UserPaymentLimitMaster__UserPaymentLimitEntity__string__GetEntity__);
 }
 
 
@@ -43,15 +43,15 @@ bool UserPaymentLimitMaster__TryGetEntity(
 {
   Il2CppObject *PK; // x2
 
-  if ( (byte_4C38CC6 & 1) == 0 )
+  if ( (byte_4C442BF & 1) == 0 )
   {
-    sub_1C32C20(&Method_DataMasterBase_UserPaymentLimitMaster__UserPaymentLimitEntity__string__TryGetEntity__);
-    byte_4C38CC6 = 1;
+    sub_1C37058(&Method_DataMasterBase_UserPaymentLimitMaster__UserPaymentLimitEntity__string__TryGetEntity__);
+    byte_4C442BF = 1;
   }
   PK = (Il2CppObject *)UserPaymentLimitEntity__CreatePK(userId, paymentLimitId, (const MethodInfo *)userId);
   return DataMasterBase_object__object__object___TryGetEntity(
            (DataMasterBase_TMaster__TEntity__PKType__o *)this,
            (Il2CppObject **)entity,
            PK,
-           (const MethodInfo_339B33C *)Method_DataMasterBase_UserPaymentLimitMaster__UserPaymentLimitEntity__string__TryGetEntity__);
+           (const MethodInfo_33A5BA4 *)Method_DataMasterBase_UserPaymentLimitMaster__UserPaymentLimitEntity__string__TryGetEntity__);
 }

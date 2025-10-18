@@ -1,11 +1,11 @@
 void MovieConfirmDialog___ctor(MovieConfirmDialog_o *this, const MethodInfo *method)
 {
-  if ( (byte_4C3B507 & 1) == 0 )
+  if ( (byte_4C46A4C & 1) == 0 )
   {
-    sub_1C32C20(&BaseDialog_TypeInfo);
-    byte_4C3B507 = 1;
+    sub_1C37058(&BaseDialog_TypeInfo);
+    byte_4C46A4C = 1;
   }
-  *(_OWORD *)&this->fields.PLAY_MAIN_LABEL_Y = xmmword_C0C040;
+  *(_OWORD *)&this->fields.PLAY_MAIN_LABEL_Y = xmmword_C0DFC0;
   if ( !BaseDialog_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(BaseDialog_TypeInfo);
   BaseDialog___ctor((BaseDialog_o *)this, 0);
@@ -16,11 +16,11 @@ void MovieConfirmDialog__Close(MovieConfirmDialog_o *this, const MethodInfo *met
 {
   const MethodInfo *v2; // x2
 
-  MovieConfirmDialog__Close_47949236(this, 0, v2);
+  MovieConfirmDialog__Close_47971892(this, 0, v2);
 }
 
 
-void MovieConfirmDialog__Close_47949236(
+void MovieConfirmDialog__Close_47971892(
         MovieConfirmDialog_o *this,
         System_Action_o *callback,
         const MethodInfo *method)
@@ -28,16 +28,16 @@ void MovieConfirmDialog__Close_47949236(
   const MethodInfo *v3; // x3
   System_Action_o *v6; // x20
 
-  if ( (byte_4C3B501 & 1) == 0 )
+  if ( (byte_4C46A46 & 1) == 0 )
   {
-    sub_1C32C20(&System_Action_TypeInfo);
-    sub_1C32C20(&Method_MovieConfirmDialog_EndClose__);
-    byte_4C3B501 = 1;
+    sub_1C37058(&System_Action_TypeInfo);
+    sub_1C37058(&Method_MovieConfirmDialog_EndClose__);
+    byte_4C46A46 = 1;
   }
   this->fields.closeCallbackFunc = callback;
-  sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.closeCallbackFunc, (int32_t)callback, (int32_t)method, v3);
+  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.closeCallbackFunc, (int32_t)callback, (int32_t)method, v3);
   this->fields.isButtonEnable = 0;
-  v6 = (System_Action_o *)sub_1C32E6C(System_Action_TypeInfo);
+  v6 = (System_Action_o *)sub_1C372A4(System_Action_TypeInfo);
   System_Action___ctor(v6, (Il2CppObject *)this, Method_MovieConfirmDialog_EndClose__, 0);
   BaseDialog__Close((BaseDialog_o *)this, v6, 0);
 }
@@ -55,7 +55,7 @@ void MovieConfirmDialog__EndClose(MovieConfirmDialog_o *this, const MethodInfo *
   MovieConfirmDialog__Init(this, method);
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
   if ( !gameObject )
-    sub_1C32E7C(0);
+    sub_1C372B4(0);
   UnityEngine_GameObject__SetActive(gameObject, 0, 0);
   closeCallbackFunc = this->fields.closeCallbackFunc;
   p_closeCallbackFunc = (CGThumbnailListItem_o *)&this->fields.closeCallbackFunc;
@@ -63,7 +63,7 @@ void MovieConfirmDialog__EndClose(MovieConfirmDialog_o *this, const MethodInfo *
   if ( closeCallbackFunc )
   {
     p_closeCallbackFunc->klass = 0;
-    sub_1C32BC4(p_closeCallbackFunc, 0, v4, v5);
+    sub_1C36FFC(p_closeCallbackFunc, 0, v4, v5);
     ((void (__fastcall *)(intptr_t, intptr_t))v7->fields.invoke_impl)(v7->fields.method_code, v7->fields.method);
   }
 }
@@ -83,11 +83,11 @@ void MovieConfirmDialog__Init(MovieConfirmDialog_o *this, const MethodInfo *meth
   UnityEngine_Object_o *buttonDecideLabel; // x20
   UnityEngine_Object_o *buttonCancelLabel; // x20
 
-  if ( (byte_4C3B4FF & 1) == 0 )
+  if ( (byte_4C46A44 & 1) == 0 )
   {
-    sub_1C32C20(&UnityEngine_Object_TypeInfo);
-    sub_1C32C20(&StringLiteral_1/*""*/);
-    byte_4C3B4FF = 1;
+    sub_1C37058(&UnityEngine_Object_TypeInfo);
+    sub_1C37058(&StringLiteral_1/*""*/);
+    byte_4C46A44 = 1;
   }
   titleLabel = (UnityEngine_Object_o *)this->fields.titleLabel;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -133,7 +133,7 @@ void MovieConfirmDialog__Init(MovieConfirmDialog_o *this, const MethodInfo *meth
   gameObject = (UILabel_o *)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
   if ( !gameObject )
 LABEL_25:
-    sub_1C32E7C(gameObject);
+    sub_1C372B4(gameObject);
   UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)gameObject, 0, 0);
   BaseDialog__Init((BaseDialog_o *)this, 0);
 }
@@ -145,17 +145,17 @@ void MovieConfirmDialog__OnClickCancel(MovieConfirmDialog_o *this, const MethodI
   System_Reflection_MethodBase_o *v4; // x0
   struct CommonConfirmDialog_ClickDelegate_o *clickFunc; // x8
 
-  if ( (byte_4C3B504 & 1) == 0 )
+  if ( (byte_4C46A49 & 1) == 0 )
   {
-    sub_1C32C20(&Method_MovieConfirmDialog_OnClickCancel__);
-    byte_4C3B504 = 1;
+    sub_1C37058(&Method_MovieConfirmDialog_OnClickCancel__);
+    byte_4C46A49 = 1;
   }
   if ( this->fields.isButtonEnable )
   {
     v3 = Method_MovieConfirmDialog_OnClickCancel__;
     if ( (*((_BYTE *)Method_MovieConfirmDialog_OnClickCancel__ + 83) & 2) != 0 )
-      v3 = (_QWORD *)sub_1C32C38(Method_MovieConfirmDialog_OnClickCancel__);
-    v4 = (System_Reflection_MethodBase_o *)sub_1C32C04(v3, v3[4]);
+      v3 = (_QWORD *)sub_1C37070(Method_MovieConfirmDialog_OnClickCancel__);
+    v4 = (System_Reflection_MethodBase_o *)sub_1C3703C(v3, v3[4]);
     OverwriteAssetSoundName__PlaySystemSe(v4, 1, 0, 0);
     clickFunc = this->fields.clickFunc;
     this->fields.isButtonEnable = 0;
@@ -174,17 +174,17 @@ void MovieConfirmDialog__OnClickClose(MovieConfirmDialog_o *this, const MethodIn
   System_Reflection_MethodBase_o *v4; // x0
   struct CommonConfirmDialog_ClickDelegate_o *clickFunc; // x8
 
-  if ( (byte_4C3B505 & 1) == 0 )
+  if ( (byte_4C46A4A & 1) == 0 )
   {
-    sub_1C32C20(&Method_MovieConfirmDialog_OnClickClose__);
-    byte_4C3B505 = 1;
+    sub_1C37058(&Method_MovieConfirmDialog_OnClickClose__);
+    byte_4C46A4A = 1;
   }
   if ( this->fields.isButtonEnable )
   {
     v3 = Method_MovieConfirmDialog_OnClickClose__;
     if ( (*((_BYTE *)Method_MovieConfirmDialog_OnClickClose__ + 83) & 2) != 0 )
-      v3 = (_QWORD *)sub_1C32C38(Method_MovieConfirmDialog_OnClickClose__);
-    v4 = (System_Reflection_MethodBase_o *)sub_1C32C04(v3, v3[4]);
+      v3 = (_QWORD *)sub_1C37070(Method_MovieConfirmDialog_OnClickClose__);
+    v4 = (System_Reflection_MethodBase_o *)sub_1C3703C(v3, v3[4]);
     OverwriteAssetSoundName__PlaySystemSe(v4, 0, 0, 0);
     clickFunc = this->fields.clickFunc;
     this->fields.isButtonEnable = 0;
@@ -204,18 +204,18 @@ void MovieConfirmDialog__OnClickDecide(MovieConfirmDialog_o *this, const MethodI
   System_Reflection_MethodBase_o *v5; // x0
   struct CommonConfirmDialog_ClickDelegate_o *clickFunc; // x8
 
-  if ( (byte_4C3B502 & 1) == 0 )
+  if ( (byte_4C46A47 & 1) == 0 )
   {
-    sub_1C32C20(&Method_MovieConfirmDialog_OnClickDecide__);
-    byte_4C3B502 = 1;
+    sub_1C37058(&Method_MovieConfirmDialog_OnClickDecide__);
+    byte_4C46A47 = 1;
   }
   if ( this->fields.isButtonEnable )
   {
     isDecideBtnSe = this->fields.isDecideBtnSe;
     v4 = Method_MovieConfirmDialog_OnClickDecide__;
     if ( (*((_BYTE *)Method_MovieConfirmDialog_OnClickDecide__ + 83) & 2) != 0 )
-      v4 = (_QWORD *)sub_1C32C38(Method_MovieConfirmDialog_OnClickDecide__);
-    v5 = (System_Reflection_MethodBase_o *)sub_1C32C04(v4, v4[4]);
+      v4 = (_QWORD *)sub_1C37070(Method_MovieConfirmDialog_OnClickDecide__);
+    v5 = (System_Reflection_MethodBase_o *)sub_1C3703C(v4, v4[4]);
     OverwriteAssetSoundName__PlaySystemSe(v5, 8 * isDecideBtnSe, 0, 0);
     clickFunc = this->fields.clickFunc;
     this->fields.isButtonEnable = 0;
@@ -234,17 +234,17 @@ void MovieConfirmDialog__OnClickDecide2(MovieConfirmDialog_o *this, const Method
   System_Reflection_MethodBase_o *v4; // x0
   struct CommonConfirmDialog_ClickDelegate_o *clickFunc; // x8
 
-  if ( (byte_4C3B503 & 1) == 0 )
+  if ( (byte_4C46A48 & 1) == 0 )
   {
-    sub_1C32C20(&Method_MovieConfirmDialog_OnClickDecide2__);
-    byte_4C3B503 = 1;
+    sub_1C37058(&Method_MovieConfirmDialog_OnClickDecide2__);
+    byte_4C46A48 = 1;
   }
   if ( this->fields.isButtonEnable )
   {
     v3 = Method_MovieConfirmDialog_OnClickDecide2__;
     if ( (*((_BYTE *)Method_MovieConfirmDialog_OnClickDecide2__ + 83) & 2) != 0 )
-      v3 = (_QWORD *)sub_1C32C38(Method_MovieConfirmDialog_OnClickDecide2__);
-    v4 = (System_Reflection_MethodBase_o *)sub_1C32C04(v3, v3[4]);
+      v3 = (_QWORD *)sub_1C37070(Method_MovieConfirmDialog_OnClickDecide2__);
+    v4 = (System_Reflection_MethodBase_o *)sub_1C3703C(v3, v3[4]);
     OverwriteAssetSoundName__PlaySystemSe(v4, 8, 0, 0);
     clickFunc = this->fields.clickFunc;
     this->fields.isButtonEnable = 0;
@@ -284,12 +284,12 @@ void MovieConfirmDialog__SetModeParam(
   int32_t v13; // w2
   const MethodInfo *v14; // x3
 
-  if ( (byte_4C3B506 & 1) == 0 )
+  if ( (byte_4C46A4B & 1) == 0 )
   {
-    sub_1C32C20(&LocalizationManager_TypeInfo);
-    sub_1C32C20(&StringLiteral_10889/*"QUEST_MESSAGE_DLG_MOVIE_DOWNLOAD_SUB_MESSAGE"*/);
-    sub_1C32C20(&StringLiteral_10891/*"QUEST_MESSAGE_DLG_MOVIE_PLAY_SUB_MESSAGE"*/);
-    byte_4C3B506 = 1;
+    sub_1C37058(&LocalizationManager_TypeInfo);
+    sub_1C37058(&StringLiteral_10890/*"QUEST_MESSAGE_DLG_MOVIE_DOWNLOAD_SUB_MESSAGE"*/);
+    sub_1C37058(&StringLiteral_10892/*"QUEST_MESSAGE_DLG_MOVIE_PLAY_SUB_MESSAGE"*/);
+    byte_4C46A4B = 1;
   }
   if ( mode == 1 )
   {
@@ -297,7 +297,7 @@ void MovieConfirmDialog__SetModeParam(
     *subY = this->fields.DOWNLOAD_SUB_LABEL_Y;
     if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-    v11 = &StringLiteral_10889/*"QUEST_MESSAGE_DLG_MOVIE_DOWNLOAD_SUB_MESSAGE"*/;
+    v11 = &StringLiteral_10890/*"QUEST_MESSAGE_DLG_MOVIE_DOWNLOAD_SUB_MESSAGE"*/;
   }
   else
   {
@@ -305,11 +305,11 @@ void MovieConfirmDialog__SetModeParam(
     *subY = this->fields.PLAY_SUB_LABEL_Y;
     if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-    v11 = &StringLiteral_10891/*"QUEST_MESSAGE_DLG_MOVIE_PLAY_SUB_MESSAGE"*/;
+    v11 = &StringLiteral_10892/*"QUEST_MESSAGE_DLG_MOVIE_PLAY_SUB_MESSAGE"*/;
   }
   v12 = LocalizationManager__Get((System_String_o *)*v11, 0);
   *subMessage = v12;
-  sub_1C32BC4((CGThumbnailListItem_o *)subMessage, (int32_t)v12, v13, v14);
+  sub_1C36FFC((CGThumbnailListItem_o *)subMessage, (int32_t)v12, v13, v14);
 }
 
 
@@ -343,23 +343,23 @@ void MovieConfirmDialog__Setup(
   System_String_o *v31; // [xsp+0h] [xbp-60h] BYREF
   __int64 subY; // [xsp+8h] [xbp-58h] BYREF
 
-  if ( (byte_4C3B500 & 1) == 0 )
+  if ( (byte_4C46A45 & 1) == 0 )
   {
-    sub_1C32C20(&System_Action_TypeInfo);
-    sub_1C32C20(&LocalizationManager_TypeInfo);
-    sub_1C32C20(&Method_MovieConfirmDialog_EndOpen__);
-    sub_1C32C20(&UnityEngine_Object_TypeInfo);
-    sub_1C32C20(&StringLiteral_43/*"\n"*/);
-    sub_1C32C20(&StringLiteral_10888/*"QUEST_MESSAGE_DLG_MOVIE_DOWNLOAD_DECIDE"*/);
-    sub_1C32C20(&StringLiteral_10883/*"QUEST_MESSAGE_DLG_CANCEL"*/);
-    sub_1C32C20(&StringLiteral_16042/*"\\n"*/);
-    sub_1C32C20(&StringLiteral_1/*""*/);
-    byte_4C3B500 = 1;
+    sub_1C37058(&System_Action_TypeInfo);
+    sub_1C37058(&LocalizationManager_TypeInfo);
+    sub_1C37058(&Method_MovieConfirmDialog_EndOpen__);
+    sub_1C37058(&UnityEngine_Object_TypeInfo);
+    sub_1C37058(&StringLiteral_43/*"\n"*/);
+    sub_1C37058(&StringLiteral_10889/*"QUEST_MESSAGE_DLG_MOVIE_DOWNLOAD_DECIDE"*/);
+    sub_1C37058(&StringLiteral_10884/*"QUEST_MESSAGE_DLG_CANCEL"*/);
+    sub_1C37058(&StringLiteral_16044/*"\\n"*/);
+    sub_1C37058(&StringLiteral_1/*""*/);
+    byte_4C46A45 = 1;
   }
   v31 = 0;
   subY = 0;
   this->fields.clickFunc = func;
-  sub_1C32BC4(
+  sub_1C36FFC(
     (CGThumbnailListItem_o *)&this->fields.clickFunc,
     (int32_t)func,
     (int32_t)message,
@@ -387,9 +387,9 @@ void MovieConfirmDialog__Setup(
   {
     if ( !message )
       goto LABEL_45;
-    v17 = (UILabel_o *)System_String__Replace_63565092(
+    v17 = (UILabel_o *)System_String__Replace_63608204(
                          message,
-                         (System_String_o *)StringLiteral_16042/*"\\n"*/,
+                         (System_String_o *)StringLiteral_16044/*"\\n"*/,
                          (System_String_o *)StringLiteral_43/*"\n"*/,
                          0);
     v20 = this->fields.mainLabel;
@@ -427,7 +427,7 @@ void MovieConfirmDialog__Setup(
     v27 = this->fields.buttonDecideLabel;
     if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-    v17 = (UILabel_o *)LocalizationManager__Get((System_String_o *)StringLiteral_10888/*"QUEST_MESSAGE_DLG_MOVIE_DOWNLOAD_DECIDE"*/, 0);
+    v17 = (UILabel_o *)LocalizationManager__Get((System_String_o *)StringLiteral_10889/*"QUEST_MESSAGE_DLG_MOVIE_DOWNLOAD_DECIDE"*/, 0);
     if ( !v27 )
       goto LABEL_45;
     UILabel__set_text(v27, (System_String_o *)v17, 0);
@@ -440,19 +440,19 @@ void MovieConfirmDialog__Setup(
     v29 = this->fields.buttonCancelLabel;
     if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-    v17 = (UILabel_o *)LocalizationManager__Get((System_String_o *)StringLiteral_10883/*"QUEST_MESSAGE_DLG_CANCEL"*/, 0);
+    v17 = (UILabel_o *)LocalizationManager__Get((System_String_o *)StringLiteral_10884/*"QUEST_MESSAGE_DLG_CANCEL"*/, 0);
     if ( v29 )
     {
       UILabel__set_text(v29, (System_String_o *)v17, 0);
       goto LABEL_44;
     }
 LABEL_45:
-    sub_1C32E7C(v17);
+    sub_1C372B4(v17);
   }
 LABEL_44:
   *(_WORD *)&this->fields.isButtonEnable = 256;
   BaseDialog__SetMaskTouchCloseEnabled((BaseDialog_o *)this, canMaskTouchClose, 0);
-  v30 = (System_Action_o *)sub_1C32E6C(System_Action_TypeInfo);
+  v30 = (System_Action_o *)sub_1C372A4(System_Action_TypeInfo);
   System_Action___ctor(v30, (Il2CppObject *)this, Method_MovieConfirmDialog_EndOpen__, 0);
   BaseDialog__Open((BaseDialog_o *)this, v30, maskType, 0, 0);
 }

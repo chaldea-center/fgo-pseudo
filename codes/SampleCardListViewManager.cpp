@@ -6,19 +6,19 @@ void SampleCardListViewManager___cctor(const MethodInfo *method)
   int32_t v4; // w2
   const MethodInfo *v5; // x3
 
-  if ( (byte_4C350D9 & 1) == 0 )
+  if ( (byte_4C40766 & 1) == 0 )
   {
-    sub_1C32C20(&int___TypeInfo);
-    sub_1C32C20(&SampleCardListViewManager_TypeInfo);
-    sub_1C32C20(&Field__PrivateImplementationDetails__040FA467EEBC312075F7BF093BA7D0374B9217A3FB344624D6D7CDA05C641D90);
-    byte_4C350D9 = 1;
+    sub_1C37058(&int___TypeInfo);
+    sub_1C37058(&SampleCardListViewManager_TypeInfo);
+    sub_1C37058(&Field__PrivateImplementationDetails__040FA467EEBC312075F7BF093BA7D0374B9217A3FB344624D6D7CDA05C641D90);
+    byte_4C40766 = 1;
   }
-  v1 = (System_Array_o *)sub_1C32CC8(int___TypeInfo, 3);
+  v1 = (System_Array_o *)sub_1C37100(int___TypeInfo, 3);
   v2.fields.value = Field__PrivateImplementationDetails__040FA467EEBC312075F7BF093BA7D0374B9217A3FB344624D6D7CDA05C641D90;
   v3 = (struct System_Int32_array *)v1;
-  System_Runtime_CompilerServices_RuntimeHelpers__InitializeArray_64219320(v1, v2, 0);
+  System_Runtime_CompilerServices_RuntimeHelpers__InitializeArray_64262432(v1, v2, 0);
   SampleCardListViewManager_TypeInfo->static_fields->deckData = v3;
-  sub_1C32BC4((CGThumbnailListItem_o *)SampleCardListViewManager_TypeInfo->static_fields, (int32_t)v3, v4, v5);
+  sub_1C36FFC((CGThumbnailListItem_o *)SampleCardListViewManager_TypeInfo->static_fields, (int32_t)v3, v4, v5);
 }
 
 
@@ -56,17 +56,17 @@ void SampleCardListViewManager__CreateList(SampleCardListViewManager_o *this, in
   int32_t v28; // w2
   const MethodInfo *v29; // x3
 
-  if ( (byte_4C350CE & 1) == 0 )
+  if ( (byte_4C4075B & 1) == 0 )
   {
-    sub_1C32C20(&Method_System_Collections_Generic_List_ListViewItem__Add__);
-    sub_1C32C20(&Method_System_Collections_Generic_List_ListViewDropObject__get_Count__);
-    sub_1C32C20(&Method_System_Collections_Generic_List_ListViewItem__get_Item__);
-    sub_1C32C20(&Method_System_Collections_Generic_List_ListViewDropObject__get_Item__);
-    sub_1C32C20(&UnityEngine_Object_TypeInfo);
-    sub_1C32C20(&SampleCardListViewDropObject_TypeInfo);
-    sub_1C32C20(&SampleCardListViewItem_TypeInfo);
-    sub_1C32C20(&SampleCardListViewManager_TypeInfo);
-    byte_4C350CE = 1;
+    sub_1C37058(&Method_System_Collections_Generic_List_ListViewItem__Add__);
+    sub_1C37058(&Method_System_Collections_Generic_List_ListViewDropObject__get_Count__);
+    sub_1C37058(&Method_System_Collections_Generic_List_ListViewItem__get_Item__);
+    sub_1C37058(&Method_System_Collections_Generic_List_ListViewDropObject__get_Item__);
+    sub_1C37058(&UnityEngine_Object_TypeInfo);
+    sub_1C37058(&SampleCardListViewDropObject_TypeInfo);
+    sub_1C37058(&SampleCardListViewItem_TypeInfo);
+    sub_1C37058(&SampleCardListViewManager_TypeInfo);
+    byte_4C4075B = 1;
   }
   ListViewManager__CreateList((ListViewManager_o *)this, sum, 0);
   if ( sum >= 1 )
@@ -74,8 +74,8 @@ void SampleCardListViewManager__CreateList(SampleCardListViewManager_o *this, in
     v5 = 0;
     do
     {
-      v6 = sub_1C32E6C(SampleCardListViewItem_TypeInfo);
-      ListViewItem___ctor_43702564((ListViewItem_o *)v6, v5, 0);
+      v6 = sub_1C372A4(SampleCardListViewItem_TypeInfo);
+      ListViewItem___ctor_43804668((ListViewItem_o *)v6, v5, 0);
       *(_DWORD *)(v6 + 120) = v5 % 3 + 1;
       itemList = (System_Collections_Generic_List_object__o *)SampleCardListViewManager_TypeInfo;
       v10 = 0;
@@ -101,7 +101,7 @@ void SampleCardListViewManager__CreateList(SampleCardListViewManager_o *this, in
           goto LABEL_45;
         if ( v10 >= *(_DWORD *)(v12 + 24) )
 LABEL_47:
-          sub_1C32E84(itemList);
+          sub_1C372BC(itemList);
         v13 = *(_DWORD *)(v12 + 4LL * (int)v10++ + 32);
       }
       while ( v5 != v13 );
@@ -115,7 +115,7 @@ LABEL_16:
             !items) )
       {
 LABEL_45:
-        sub_1C32E7C(itemList);
+        sub_1C372B4(itemList);
       }
       size = itemList->fields._size;
       if ( (unsigned int)size >= LODWORD(items->max_length) )
@@ -123,14 +123,14 @@ LABEL_45:
         System_Collections_Generic_List_object___AddWithResize(
           itemList,
           (Il2CppObject *)v6,
-          *(const MethodInfo_37987BC **)(*(_QWORD *)(v15[4] + 192LL) + 112LL));
+          *(const MethodInfo_37A3024 **)(*(_QWORD *)(v15[4] + 192LL) + 112LL));
       }
       else
       {
         v17 = (__int64)items + 8 * size;
         itemList->fields._size = size + 1;
         *(_QWORD *)(v17 + 32) = v6;
-        sub_1C32BC4((CGThumbnailListItem_o *)(v17 + 32), v6, v7, v8);
+        sub_1C36FFC((CGThumbnailListItem_o *)(v17 + 32), v6, v7, v8);
       }
       ++v5;
     }
@@ -146,7 +146,7 @@ LABEL_45:
       Item = System_Collections_Generic_List_object___get_Item(
                itemList,
                v18,
-               (const MethodInfo_37984EC *)Method_System_Collections_Generic_List_ListViewDropObject__get_Item__);
+               (const MethodInfo_37A2D54 *)Method_System_Collections_Generic_List_ListViewDropObject__get_Item__);
       if ( Item
         && (naturalAligment = SampleCardListViewDropObject_TypeInfo->_2.naturalAligment,
             Item->klass->_2.naturalAligment >= (unsigned int)naturalAligment) )
@@ -190,7 +190,7 @@ LABEL_45:
           itemList = (System_Collections_Generic_List_object__o *)System_Collections_Generic_List_object___get_Item(
                                                                     itemList,
                                                                     v23,
-                                                                    (const MethodInfo_37984EC *)Method_System_Collections_Generic_List_ListViewItem__get_Item__);
+                                                                    (const MethodInfo_37A2D54 *)Method_System_Collections_Generic_List_ListViewItem__get_Item__);
           v24 = itemList;
           if ( !v21 )
             goto LABEL_45;
@@ -200,10 +200,10 @@ LABEL_45:
           v24,
           v21->klass[1]._1.namespaze);
         v21[1].fields.m_CachedPtr = (intptr_t)this;
-        sub_1C32BC4((CGThumbnailListItem_o *)&v21[1].fields, (int32_t)this, v25, v26);
+        sub_1C36FFC((CGThumbnailListItem_o *)&v21[1].fields, (int32_t)this, v25, v26);
         dropDragPrefab = this->fields.dropDragPrefab;
         v21[2].klass = (UnityEngine_Object_c *)dropDragPrefab;
-        sub_1C32BC4((CGThumbnailListItem_o *)&v21[2], (int32_t)dropDragPrefab, v28, v29);
+        sub_1C36FFC((CGThumbnailListItem_o *)&v21[2], (int32_t)dropDragPrefab, v28, v29);
       }
       itemList = (System_Collections_Generic_List_object__o *)this->fields.dropObjectList;
       ++v18;
@@ -228,11 +228,11 @@ SampleCardListViewItem_o *SampleCardListViewManager__GetItem(
   SampleCardListViewItem_o *result; // x0
   __int64 naturalAligment; // x10
 
-  if ( (byte_4C350CF & 1) == 0 )
+  if ( (byte_4C4075C & 1) == 0 )
   {
-    sub_1C32C20(&Method_System_Collections_Generic_List_ListViewItem__get_Item__);
-    sub_1C32C20(&SampleCardListViewItem_TypeInfo);
-    byte_4C350CF = 1;
+    sub_1C37058(&Method_System_Collections_Generic_List_ListViewItem__get_Item__);
+    sub_1C37058(&SampleCardListViewItem_TypeInfo);
+    byte_4C4075C = 1;
   }
   result = (SampleCardListViewItem_o *)this->fields.itemList;
   if ( result )
@@ -240,7 +240,7 @@ SampleCardListViewItem_o *SampleCardListViewManager__GetItem(
     result = (SampleCardListViewItem_o *)System_Collections_Generic_List_object___get_Item(
                                            (System_Collections_Generic_List_object__o *)result,
                                            index,
-                                           (const MethodInfo_37984EC *)Method_System_Collections_Generic_List_ListViewItem__get_Item__);
+                                           (const MethodInfo_37A2D54 *)Method_System_Collections_Generic_List_ListViewItem__get_Item__);
     if ( result )
     {
       naturalAligment = SampleCardListViewItem_TypeInfo->_2.naturalAligment;
@@ -270,12 +270,12 @@ bool SampleCardListViewManager__IsDropDropSurface(
   Il2CppObject *Component_object; // x20
   const MethodInfo *v8; // x1
 
-  if ( (byte_4C350D8 & 1) == 0 )
+  if ( (byte_4C40765 & 1) == 0 )
   {
-    sub_1C32C20(&Method_UnityEngine_Component_GetComponent_SampleCardListViewDropObject___);
-    sub_1C32C20(&Method_UnityEngine_GameObject_GetComponent_SampleCardUIDragDropListViewSurface___);
-    this = (SampleCardListViewManager_o *)sub_1C32C20(&UnityEngine_Object_TypeInfo);
-    byte_4C350D8 = 1;
+    sub_1C37058(&Method_UnityEngine_Component_GetComponent_SampleCardListViewDropObject___);
+    sub_1C37058(&Method_UnityEngine_GameObject_GetComponent_SampleCardUIDragDropListViewSurface___);
+    this = (SampleCardListViewManager_o *)sub_1C37058(&UnityEngine_Object_TypeInfo);
+    byte_4C40765 = 1;
   }
   if ( !info )
     goto LABEL_19;
@@ -289,14 +289,14 @@ bool SampleCardListViewManager__IsDropDropSurface(
     goto LABEL_19;
   this = (SampleCardListViewManager_o *)UnityEngine_Component__GetComponent_object_(
                                           (UnityEngine_Component_o *)this,
-                                          (const MethodInfo_30D3BC0 *)Method_UnityEngine_Component_GetComponent_SampleCardListViewDropObject___);
+                                          (const MethodInfo_30DE428 *)Method_UnityEngine_Component_GetComponent_SampleCardListViewDropObject___);
   v5 = info->fields.dropSurfaceObject;
   if ( !v5 )
     goto LABEL_19;
   v6 = (UnityEngine_Object_o *)this;
   Component_object = UnityEngine_GameObject__GetComponent_object_(
                        v5,
-                       (const MethodInfo_3134970 *)Method_UnityEngine_GameObject_GetComponent_SampleCardUIDragDropListViewSurface___);
+                       (const MethodInfo_313F1D8 *)Method_UnityEngine_GameObject_GetComponent_SampleCardUIDragDropListViewSurface___);
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   if ( !UnityEngine_Object__op_Inequality(v6, 0, 0) )
@@ -311,7 +311,7 @@ bool SampleCardListViewManager__IsDropDropSurface(
     return 0;
   if ( !v6 )
 LABEL_19:
-    sub_1C32E7C(this);
+    sub_1C372B4(this);
   return SampleCardListViewDropObject__GetItem((SampleCardListViewDropObject_o *)v6, v8) != 0;
 }
 
@@ -328,12 +328,12 @@ bool SampleCardListViewManager__IsItemDropSurface(
   const MethodInfo *v8; // x1
   SampleCardListViewItem_o *Item; // x0
 
-  if ( (byte_4C350D7 & 1) == 0 )
+  if ( (byte_4C40764 & 1) == 0 )
   {
-    sub_1C32C20(&Method_UnityEngine_Component_GetComponent_SampleCardListViewObject___);
-    sub_1C32C20(&Method_UnityEngine_GameObject_GetComponent_SampleCardUIDragDropListViewSurface___);
-    this = (SampleCardListViewManager_o *)sub_1C32C20(&UnityEngine_Object_TypeInfo);
-    byte_4C350D7 = 1;
+    sub_1C37058(&Method_UnityEngine_Component_GetComponent_SampleCardListViewObject___);
+    sub_1C37058(&Method_UnityEngine_GameObject_GetComponent_SampleCardUIDragDropListViewSurface___);
+    this = (SampleCardListViewManager_o *)sub_1C37058(&UnityEngine_Object_TypeInfo);
+    byte_4C40764 = 1;
   }
   if ( !info )
     goto LABEL_20;
@@ -347,14 +347,14 @@ bool SampleCardListViewManager__IsItemDropSurface(
     goto LABEL_20;
   this = (SampleCardListViewManager_o *)UnityEngine_Component__GetComponent_object_(
                                           (UnityEngine_Component_o *)this,
-                                          (const MethodInfo_30D3BC0 *)Method_UnityEngine_Component_GetComponent_SampleCardListViewObject___);
+                                          (const MethodInfo_30DE428 *)Method_UnityEngine_Component_GetComponent_SampleCardListViewObject___);
   v5 = info->fields.dropSurfaceObject;
   if ( !v5 )
     goto LABEL_20;
   v6 = (UnityEngine_Object_o *)this;
   Component_object = UnityEngine_GameObject__GetComponent_object_(
                        v5,
-                       (const MethodInfo_3134970 *)Method_UnityEngine_GameObject_GetComponent_SampleCardUIDragDropListViewSurface___);
+                       (const MethodInfo_313F1D8 *)Method_UnityEngine_GameObject_GetComponent_SampleCardUIDragDropListViewSurface___);
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   if ( !UnityEngine_Object__op_Inequality(v6, 0, 0) )
@@ -369,7 +369,7 @@ bool SampleCardListViewManager__IsItemDropSurface(
     return 0;
   if ( !v6 )
 LABEL_20:
-    sub_1C32E7C(this);
+    sub_1C372B4(this);
   Item = SampleCardListViewObject__GetItem((SampleCardListViewObject_o *)v6, v8);
   return Item && !Item->fields.isDeck;
 }
@@ -395,10 +395,10 @@ void SampleCardListViewManager__OnMoveEnd(SampleCardListViewManager_o *this, con
   struct UIScrollView_o *v9; // x0
   struct System_Action_o *callbackFunc; // x20
 
-  if ( (byte_4C350D6 & 1) == 0 )
+  if ( (byte_4C40763 & 1) == 0 )
   {
-    sub_1C32C20(&UnityEngine_Object_TypeInfo);
-    byte_4C350D6 = 1;
+    sub_1C37058(&UnityEngine_Object_TypeInfo);
+    byte_4C40763 = 1;
   }
   callbackCount = this->fields.callbackCount;
   v4 = __OFSUB__(callbackCount, 1);
@@ -415,7 +415,7 @@ void SampleCardListViewManager__OnMoveEnd(SampleCardListViewManager_o *this, con
       {
         v9 = this->fields.scrollView;
         if ( !v9 )
-          sub_1C32E7C(0);
+          sub_1C372B4(0);
         ((void (__fastcall *)(struct UIScrollView_o *, __int64, const MethodInfo *))v9->klass->vtable._8_UpdateScrollbars.methodPtr)(
           v9,
           1,
@@ -425,7 +425,7 @@ void SampleCardListViewManager__OnMoveEnd(SampleCardListViewManager_o *this, con
       if ( callbackFunc )
       {
         this->fields.callbackFunc = 0;
-        sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.callbackFunc, 0, v7, v8);
+        sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.callbackFunc, 0, v7, v8);
         ((void (__fastcall *)(intptr_t, intptr_t))callbackFunc->fields.invoke_impl)(
           callbackFunc->fields.method_code,
           callbackFunc->fields.method);
@@ -450,17 +450,17 @@ void SampleCardListViewManager__RequestDropObject(
   System_Collections_Generic_List_Enumerator_object__o v13; // [xsp+8h] [xbp-98h] BYREF
   System_Collections_Generic_List_Enumerator_object__o v14; // [xsp+20h] [xbp-80h] BYREF
 
-  if ( (byte_4C350D4 & 1) == 0 )
+  if ( (byte_4C40761 & 1) == 0 )
   {
-    sub_1C32C20(&System_Action_TypeInfo);
-    sub_1C32C20(&Method_System_Collections_Generic_List_Enumerator_ListViewDropObject__Dispose__);
-    sub_1C32C20(&Method_System_Collections_Generic_List_Enumerator_ListViewDropObject__MoveNext__);
-    sub_1C32C20(&Method_System_Collections_Generic_List_Enumerator_ListViewDropObject__get_Current__);
-    sub_1C32C20(&Method_System_Collections_Generic_List_ListViewDropObject__GetEnumerator__);
-    sub_1C32C20(&UnityEngine_Object_TypeInfo);
-    sub_1C32C20(&SampleCardListViewDropObject_TypeInfo);
-    sub_1C32C20(&Method_SampleCardListViewManager_OnMoveEnd__);
-    byte_4C350D4 = 1;
+    sub_1C37058(&System_Action_TypeInfo);
+    sub_1C37058(&Method_System_Collections_Generic_List_Enumerator_ListViewDropObject__Dispose__);
+    sub_1C37058(&Method_System_Collections_Generic_List_Enumerator_ListViewDropObject__MoveNext__);
+    sub_1C37058(&Method_System_Collections_Generic_List_Enumerator_ListViewDropObject__get_Current__);
+    sub_1C37058(&Method_System_Collections_Generic_List_ListViewDropObject__GetEnumerator__);
+    sub_1C37058(&UnityEngine_Object_TypeInfo);
+    sub_1C37058(&SampleCardListViewDropObject_TypeInfo);
+    sub_1C37058(&Method_SampleCardListViewManager_OnMoveEnd__);
+    byte_4C40761 = 1;
   }
   memset(&v14, 0, sizeof(v14));
   dropObjectList = (System_Collections_Generic_List_object__o *)this->fields.dropObjectList;
@@ -469,11 +469,11 @@ void SampleCardListViewManager__RequestDropObject(
     System_Collections_Generic_List_object___GetEnumerator(
       (System_Collections_Generic_List_Enumerator_T__o *)&v13,
       dropObjectList,
-      (const MethodInfo_37992B4 *)Method_System_Collections_Generic_List_ListViewDropObject__GetEnumerator__);
+      (const MethodInfo_37A3B1C *)Method_System_Collections_Generic_List_ListViewDropObject__GetEnumerator__);
     v14 = v13;
     while ( System_Collections_Generic_List_Enumerator_object___MoveNext(
               &v14,
-              (const MethodInfo_3522FA8 *)Method_System_Collections_Generic_List_Enumerator_ListViewDropObject__MoveNext__) )
+              (const MethodInfo_352D810 *)Method_System_Collections_Generic_List_Enumerator_ListViewDropObject__MoveNext__) )
     {
       current = v14.fields._current;
       if ( v14.fields._current )
@@ -482,30 +482,30 @@ void SampleCardListViewManager__RequestDropObject(
         if ( v14.fields._current->klass->_2.naturalAligment < (unsigned int)naturalAligment
           || (SampleCardListViewDropObject_c *)v14.fields._current->klass->_2.typeHierarchy[naturalAligment - 1] != SampleCardListViewDropObject_TypeInfo )
         {
-          sub_1C3313C(v14.fields._current);
+          sub_1C37574(v14.fields._current);
 LABEL_17:
-          sub_1C32E7C(v11);
+          sub_1C372B4(v11);
         }
       }
       if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
       if ( UnityEngine_Object__op_Inequality((UnityEngine_Object_o *)current, 0, 0) )
       {
-        v10 = (System_Action_o *)sub_1C32E6C(System_Action_TypeInfo);
+        v10 = (System_Action_o *)sub_1C372A4(System_Action_TypeInfo);
         System_Action___ctor(v10, (Il2CppObject *)this, Method_SampleCardListViewManager_OnMoveEnd__, 0);
         if ( !current )
           goto LABEL_17;
-        SampleCardListViewDropObject__Init_37465148((SampleCardListViewDropObject_o *)current, mode, v10, delay, v12);
+        SampleCardListViewDropObject__Init_37637696((SampleCardListViewDropObject_o *)current, mode, v10, delay, v12);
       }
     }
     System_Collections_Generic_List_Enumerator_object___Dispose(
       &v14,
-      (const MethodInfo_3522FA4 *)Method_System_Collections_Generic_List_Enumerator_ListViewDropObject__Dispose__);
+      (const MethodInfo_352D80C *)Method_System_Collections_Generic_List_Enumerator_ListViewDropObject__Dispose__);
   }
 }
 
 
-void SampleCardListViewManager__RequestDropObject_37472400(
+void SampleCardListViewManager__RequestDropObject_37644948(
         SampleCardListViewManager_o *this,
         int32_t mode,
         const MethodInfo *method)
@@ -519,17 +519,17 @@ void SampleCardListViewManager__RequestDropObject_37472400(
   System_Collections_Generic_List_Enumerator_object__o v11; // [xsp+8h] [xbp-98h] BYREF
   System_Collections_Generic_List_Enumerator_object__o v12; // [xsp+20h] [xbp-80h] BYREF
 
-  if ( (byte_4C350D5 & 1) == 0 )
+  if ( (byte_4C40762 & 1) == 0 )
   {
-    sub_1C32C20(&System_Action_TypeInfo);
-    sub_1C32C20(&Method_System_Collections_Generic_List_Enumerator_ListViewDropObject__Dispose__);
-    sub_1C32C20(&Method_System_Collections_Generic_List_Enumerator_ListViewDropObject__MoveNext__);
-    sub_1C32C20(&Method_System_Collections_Generic_List_Enumerator_ListViewDropObject__get_Current__);
-    sub_1C32C20(&Method_System_Collections_Generic_List_ListViewDropObject__GetEnumerator__);
-    sub_1C32C20(&UnityEngine_Object_TypeInfo);
-    sub_1C32C20(&SampleCardListViewDropObject_TypeInfo);
-    sub_1C32C20(&Method_SampleCardListViewManager_OnMoveEnd__);
-    byte_4C350D5 = 1;
+    sub_1C37058(&System_Action_TypeInfo);
+    sub_1C37058(&Method_System_Collections_Generic_List_Enumerator_ListViewDropObject__Dispose__);
+    sub_1C37058(&Method_System_Collections_Generic_List_Enumerator_ListViewDropObject__MoveNext__);
+    sub_1C37058(&Method_System_Collections_Generic_List_Enumerator_ListViewDropObject__get_Current__);
+    sub_1C37058(&Method_System_Collections_Generic_List_ListViewDropObject__GetEnumerator__);
+    sub_1C37058(&UnityEngine_Object_TypeInfo);
+    sub_1C37058(&SampleCardListViewDropObject_TypeInfo);
+    sub_1C37058(&Method_SampleCardListViewManager_OnMoveEnd__);
+    byte_4C40762 = 1;
   }
   memset(&v12, 0, sizeof(v12));
   dropObjectList = (System_Collections_Generic_List_object__o *)this->fields.dropObjectList;
@@ -538,11 +538,11 @@ void SampleCardListViewManager__RequestDropObject_37472400(
     System_Collections_Generic_List_object___GetEnumerator(
       (System_Collections_Generic_List_Enumerator_T__o *)&v11,
       dropObjectList,
-      (const MethodInfo_37992B4 *)Method_System_Collections_Generic_List_ListViewDropObject__GetEnumerator__);
+      (const MethodInfo_37A3B1C *)Method_System_Collections_Generic_List_ListViewDropObject__GetEnumerator__);
     v12 = v11;
     while ( System_Collections_Generic_List_Enumerator_object___MoveNext(
               &v12,
-              (const MethodInfo_3522FA8 *)Method_System_Collections_Generic_List_Enumerator_ListViewDropObject__MoveNext__) )
+              (const MethodInfo_352D810 *)Method_System_Collections_Generic_List_Enumerator_ListViewDropObject__MoveNext__) )
     {
       current = v12.fields._current;
       if ( v12.fields._current )
@@ -551,25 +551,25 @@ void SampleCardListViewManager__RequestDropObject_37472400(
         if ( v12.fields._current->klass->_2.naturalAligment < (unsigned int)naturalAligment
           || (SampleCardListViewDropObject_c *)v12.fields._current->klass->_2.typeHierarchy[naturalAligment - 1] != SampleCardListViewDropObject_TypeInfo )
         {
-          sub_1C3313C(v12.fields._current);
+          sub_1C37574(v12.fields._current);
 LABEL_17:
-          sub_1C32E7C(v9);
+          sub_1C372B4(v9);
         }
       }
       if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
       if ( UnityEngine_Object__op_Inequality((UnityEngine_Object_o *)current, 0, 0) )
       {
-        v8 = (System_Action_o *)sub_1C32E6C(System_Action_TypeInfo);
+        v8 = (System_Action_o *)sub_1C372A4(System_Action_TypeInfo);
         System_Action___ctor(v8, (Il2CppObject *)this, Method_SampleCardListViewManager_OnMoveEnd__, 0);
         if ( !current )
           goto LABEL_17;
-        SampleCardListViewDropObject__Init_37465272((SampleCardListViewDropObject_o *)current, mode, v8, v10);
+        SampleCardListViewDropObject__Init_37637820((SampleCardListViewDropObject_o *)current, mode, v8, v10);
       }
     }
     System_Collections_Generic_List_Enumerator_object___Dispose(
       &v12,
-      (const MethodInfo_3522FA4 *)Method_System_Collections_Generic_List_Enumerator_ListViewDropObject__Dispose__);
+      (const MethodInfo_352D80C *)Method_System_Collections_Generic_List_Enumerator_ListViewDropObject__Dispose__);
   }
 }
 
@@ -589,31 +589,31 @@ void SampleCardListViewManager__RequestListObject(
   const MethodInfo *v12; // x3
   System_Collections_Generic_List_Enumerator_object__o v13; // [xsp+8h] [xbp-68h] BYREF
 
-  if ( (byte_4C350D2 & 1) == 0 )
+  if ( (byte_4C4075F & 1) == 0 )
   {
-    sub_1C32C20(&System_Action_TypeInfo);
-    sub_1C32C20(&Method_System_Collections_Generic_List_Enumerator_SampleCardListViewObject__Dispose__);
-    sub_1C32C20(&Method_System_Collections_Generic_List_Enumerator_SampleCardListViewObject__MoveNext__);
-    sub_1C32C20(&Method_System_Collections_Generic_List_Enumerator_SampleCardListViewObject__get_Current__);
-    sub_1C32C20(&Method_System_Collections_Generic_List_SampleCardListViewObject__GetEnumerator__);
-    sub_1C32C20(&Method_System_Collections_Generic_List_SampleCardListViewObject__get_Count__);
-    sub_1C32C20(&Method_SampleCardListViewManager_OnMoveEnd__);
-    sub_1C32C20(&StringLiteral_9941/*"OnMoveEnd"*/);
-    byte_4C350D2 = 1;
+    sub_1C37058(&System_Action_TypeInfo);
+    sub_1C37058(&Method_System_Collections_Generic_List_Enumerator_SampleCardListViewObject__Dispose__);
+    sub_1C37058(&Method_System_Collections_Generic_List_Enumerator_SampleCardListViewObject__MoveNext__);
+    sub_1C37058(&Method_System_Collections_Generic_List_Enumerator_SampleCardListViewObject__get_Current__);
+    sub_1C37058(&Method_System_Collections_Generic_List_SampleCardListViewObject__GetEnumerator__);
+    sub_1C37058(&Method_System_Collections_Generic_List_SampleCardListViewObject__get_Count__);
+    sub_1C37058(&Method_SampleCardListViewManager_OnMoveEnd__);
+    sub_1C37058(&StringLiteral_9942/*"OnMoveEnd"*/);
+    byte_4C4075F = 1;
   }
   memset(&v13, 0, sizeof(v13));
   ObjectList = (System_Collections_Generic_List_object__o *)SampleCardListViewManager__get_ObjectList(
                                                               this,
                                                               *(const MethodInfo **)&mode);
   if ( !ObjectList )
-    sub_1C32E7C(0);
+    sub_1C372B4(0);
   size = ObjectList->fields._size;
   if ( size < 1 )
   {
     this->fields.callbackCount = 1;
     UnityEngine_MonoBehaviour__Invoke(
       (UnityEngine_MonoBehaviour_o *)this,
-      (System_String_o *)StringLiteral_9941/*"OnMoveEnd"*/,
+      (System_String_o *)StringLiteral_9942/*"OnMoveEnd"*/,
       delay,
       0);
   }
@@ -623,27 +623,27 @@ void SampleCardListViewManager__RequestListObject(
     System_Collections_Generic_List_object___GetEnumerator(
       (System_Collections_Generic_List_Enumerator_T__o *)&v13,
       ObjectList,
-      (const MethodInfo_37992B4 *)Method_System_Collections_Generic_List_SampleCardListViewObject__GetEnumerator__);
+      (const MethodInfo_37A3B1C *)Method_System_Collections_Generic_List_SampleCardListViewObject__GetEnumerator__);
     while ( System_Collections_Generic_List_Enumerator_object___MoveNext(
               &v13,
-              (const MethodInfo_3522FA8 *)Method_System_Collections_Generic_List_Enumerator_SampleCardListViewObject__MoveNext__) )
+              (const MethodInfo_352D810 *)Method_System_Collections_Generic_List_Enumerator_SampleCardListViewObject__MoveNext__) )
     {
       current = v13.fields._current;
-      v10 = (System_Action_o *)sub_1C32E6C(System_Action_TypeInfo);
+      v10 = (System_Action_o *)sub_1C372A4(System_Action_TypeInfo);
       System_Action___ctor(v10, (Il2CppObject *)this, Method_SampleCardListViewManager_OnMoveEnd__, 0);
       if ( !current )
-        sub_1C32E7C(v11);
-      SampleCardListViewObject__Init_37471796((SampleCardListViewObject_o *)current, mode, v10, delay, v12);
+        sub_1C372B4(v11);
+      SampleCardListViewObject__Init_37644344((SampleCardListViewObject_o *)current, mode, v10, delay, v12);
     }
     System_Collections_Generic_List_Enumerator_object___Dispose(
       &v13,
-      (const MethodInfo_3522FA4 *)Method_System_Collections_Generic_List_Enumerator_SampleCardListViewObject__Dispose__);
+      (const MethodInfo_352D80C *)Method_System_Collections_Generic_List_Enumerator_SampleCardListViewObject__Dispose__);
   }
 }
 
 
 // local variable allocation has failed, the output may be wrong!
-void SampleCardListViewManager__RequestListObject_37471896(
+void SampleCardListViewManager__RequestListObject_37644444(
         SampleCardListViewManager_o *this,
         int32_t mode,
         const MethodInfo *method)
@@ -656,31 +656,31 @@ void SampleCardListViewManager__RequestListObject_37471896(
   const MethodInfo *v10; // x3
   System_Collections_Generic_List_Enumerator_object__o v11; // [xsp+8h] [xbp-68h] BYREF
 
-  if ( (byte_4C350D3 & 1) == 0 )
+  if ( (byte_4C40760 & 1) == 0 )
   {
-    sub_1C32C20(&System_Action_TypeInfo);
-    sub_1C32C20(&Method_System_Collections_Generic_List_Enumerator_SampleCardListViewObject__Dispose__);
-    sub_1C32C20(&Method_System_Collections_Generic_List_Enumerator_SampleCardListViewObject__MoveNext__);
-    sub_1C32C20(&Method_System_Collections_Generic_List_Enumerator_SampleCardListViewObject__get_Current__);
-    sub_1C32C20(&Method_System_Collections_Generic_List_SampleCardListViewObject__GetEnumerator__);
-    sub_1C32C20(&Method_System_Collections_Generic_List_SampleCardListViewObject__get_Count__);
-    sub_1C32C20(&Method_SampleCardListViewManager_OnMoveEnd__);
-    sub_1C32C20(&StringLiteral_9941/*"OnMoveEnd"*/);
-    byte_4C350D3 = 1;
+    sub_1C37058(&System_Action_TypeInfo);
+    sub_1C37058(&Method_System_Collections_Generic_List_Enumerator_SampleCardListViewObject__Dispose__);
+    sub_1C37058(&Method_System_Collections_Generic_List_Enumerator_SampleCardListViewObject__MoveNext__);
+    sub_1C37058(&Method_System_Collections_Generic_List_Enumerator_SampleCardListViewObject__get_Current__);
+    sub_1C37058(&Method_System_Collections_Generic_List_SampleCardListViewObject__GetEnumerator__);
+    sub_1C37058(&Method_System_Collections_Generic_List_SampleCardListViewObject__get_Count__);
+    sub_1C37058(&Method_SampleCardListViewManager_OnMoveEnd__);
+    sub_1C37058(&StringLiteral_9942/*"OnMoveEnd"*/);
+    byte_4C40760 = 1;
   }
   memset(&v11, 0, sizeof(v11));
   ObjectList = (System_Collections_Generic_List_object__o *)SampleCardListViewManager__get_ObjectList(
                                                               this,
                                                               *(const MethodInfo **)&mode);
   if ( !ObjectList )
-    sub_1C32E7C(0);
+    sub_1C372B4(0);
   size = ObjectList->fields._size;
   if ( size < 1 )
   {
     this->fields.callbackCount = 1;
     UnityEngine_MonoBehaviour__Invoke(
       (UnityEngine_MonoBehaviour_o *)this,
-      (System_String_o *)StringLiteral_9941/*"OnMoveEnd"*/,
+      (System_String_o *)StringLiteral_9942/*"OnMoveEnd"*/,
       0.0,
       0);
   }
@@ -690,21 +690,21 @@ void SampleCardListViewManager__RequestListObject_37471896(
     System_Collections_Generic_List_object___GetEnumerator(
       (System_Collections_Generic_List_Enumerator_T__o *)&v11,
       ObjectList,
-      (const MethodInfo_37992B4 *)Method_System_Collections_Generic_List_SampleCardListViewObject__GetEnumerator__);
+      (const MethodInfo_37A3B1C *)Method_System_Collections_Generic_List_SampleCardListViewObject__GetEnumerator__);
     while ( System_Collections_Generic_List_Enumerator_object___MoveNext(
               &v11,
-              (const MethodInfo_3522FA8 *)Method_System_Collections_Generic_List_Enumerator_SampleCardListViewObject__MoveNext__) )
+              (const MethodInfo_352D810 *)Method_System_Collections_Generic_List_Enumerator_SampleCardListViewObject__MoveNext__) )
     {
       current = v11.fields._current;
-      v8 = (System_Action_o *)sub_1C32E6C(System_Action_TypeInfo);
+      v8 = (System_Action_o *)sub_1C372A4(System_Action_TypeInfo);
       System_Action___ctor(v8, (Il2CppObject *)this, Method_SampleCardListViewManager_OnMoveEnd__, 0);
       if ( !current )
-        sub_1C32E7C(v9);
-      SampleCardListViewObject__Init_37473508((SampleCardListViewObject_o *)current, mode, v8, v10);
+        sub_1C372B4(v9);
+      SampleCardListViewObject__Init_37646056((SampleCardListViewObject_o *)current, mode, v8, v10);
     }
     System_Collections_Generic_List_Enumerator_object___Dispose(
       &v11,
-      (const MethodInfo_3522FA4 *)Method_System_Collections_Generic_List_Enumerator_SampleCardListViewObject__Dispose__);
+      (const MethodInfo_352D80C *)Method_System_Collections_Generic_List_Enumerator_SampleCardListViewObject__Dispose__);
   }
 }
 
@@ -713,11 +713,11 @@ void SampleCardListViewManager__SetMode(SampleCardListViewManager_o *this, int32
 {
   const MethodInfo *v3; // x3
 
-  SampleCardListViewManager__SetMode_37470916(this, mode, 0, v3);
+  SampleCardListViewManager__SetMode_37643464(this, mode, 0, v3);
 }
 
 
-void SampleCardListViewManager__SetMode_37470916(
+void SampleCardListViewManager__SetMode_37643464(
         SampleCardListViewManager_o *this,
         int32_t mode,
         System_Action_o *callback,
@@ -744,36 +744,36 @@ void SampleCardListViewManager__SetMode_37470916(
   const MethodInfo *v25; // x2
   int32_t v26; // w1
 
-  if ( (byte_4C350D1 & 1) == 0 )
+  if ( (byte_4C4075E & 1) == 0 )
   {
-    sub_1C32C20(&System_Action_TypeInfo);
-    sub_1C32C20(&Method_System_Collections_Generic_List_SampleCardListViewObject__get_Count__);
-    sub_1C32C20(&Method_System_Collections_Generic_List_ListViewDropObject__get_Count__);
-    sub_1C32C20(&Method_System_Collections_Generic_List_ListViewDropObject__get_Item__);
-    sub_1C32C20(&Method_System_Collections_Generic_List_SampleCardListViewObject__get_Item__);
-    sub_1C32C20(&UnityEngine_Object_TypeInfo);
-    sub_1C32C20(&SampleCardListViewDropObject_TypeInfo);
-    sub_1C32C20(&Method_SampleCardListViewManager_OnMoveEnd__);
-    sub_1C32C20(&StringLiteral_9941/*"OnMoveEnd"*/);
-    byte_4C350D1 = 1;
+    sub_1C37058(&System_Action_TypeInfo);
+    sub_1C37058(&Method_System_Collections_Generic_List_SampleCardListViewObject__get_Count__);
+    sub_1C37058(&Method_System_Collections_Generic_List_ListViewDropObject__get_Count__);
+    sub_1C37058(&Method_System_Collections_Generic_List_ListViewDropObject__get_Item__);
+    sub_1C37058(&Method_System_Collections_Generic_List_SampleCardListViewObject__get_Item__);
+    sub_1C37058(&UnityEngine_Object_TypeInfo);
+    sub_1C37058(&SampleCardListViewDropObject_TypeInfo);
+    sub_1C37058(&Method_SampleCardListViewManager_OnMoveEnd__);
+    sub_1C37058(&StringLiteral_9942/*"OnMoveEnd"*/);
+    byte_4C4075E = 1;
   }
   this->fields.initMode = mode;
   this->fields.callbackFunc = callback;
-  sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.callbackFunc, (int32_t)callback, (int32_t)callback, method);
+  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.callbackFunc, (int32_t)callback, (int32_t)callback, method);
   this->fields.callbackCount = ListViewManager__get_ObjectSum((ListViewManager_o *)this, 0);
   ListViewManager__set_IsInput((ListViewManager_o *)this, mode == 3, 0);
   switch ( mode )
   {
     case 3:
       this->fields.callbackCount = 0;
-      SampleCardListViewManager__RequestListObject_37471896(this, 6, v8);
+      SampleCardListViewManager__RequestListObject_37644444(this, 6, v8);
       v26 = 6;
 LABEL_32:
-      SampleCardListViewManager__RequestDropObject_37472400(this, v26, v25);
+      SampleCardListViewManager__RequestDropObject_37644948(this, v26, v25);
       return;
     case 2:
       this->fields.callbackCount = 0;
-      SampleCardListViewManager__RequestListObject_37471896(this, 5, v8);
+      SampleCardListViewManager__RequestListObject_37644444(this, 5, v8);
       v26 = 5;
       goto LABEL_32;
     case 1:
@@ -791,7 +791,7 @@ LABEL_32:
         this->fields.callbackCount = 1;
         UnityEngine_MonoBehaviour__Invoke(
           (UnityEngine_MonoBehaviour_o *)this,
-          (System_String_o *)StringLiteral_9941/*"OnMoveEnd"*/,
+          (System_String_o *)StringLiteral_9942/*"OnMoveEnd"*/,
           0.0,
           0);
       }
@@ -805,12 +805,12 @@ LABEL_32:
             Item = System_Collections_Generic_List_object___get_Item(
                      v11,
                      v13,
-                     (const MethodInfo_37984EC *)Method_System_Collections_Generic_List_SampleCardListViewObject__get_Item__);
-            v15 = (System_Action_o *)sub_1C32E6C(System_Action_TypeInfo);
+                     (const MethodInfo_37A2D54 *)Method_System_Collections_Generic_List_SampleCardListViewObject__get_Item__);
+            v15 = (System_Action_o *)sub_1C372A4(System_Action_TypeInfo);
             System_Action___ctor(v15, (Il2CppObject *)this, Method_SampleCardListViewManager_OnMoveEnd__, 0);
             if ( !Item )
               break;
-            SampleCardListViewObject__Init_37471796(
+            SampleCardListViewObject__Init_37644344(
               (SampleCardListViewObject_o *)Item,
               4,
               v15,
@@ -820,7 +820,7 @@ LABEL_32:
               goto LABEL_12;
           }
 LABEL_28:
-          sub_1C32E7C(ClippingObjectList);
+          sub_1C372B4(ClippingObjectList);
         }
 LABEL_12:
         ClippingObjectList = (System_Collections_Generic_List_object__o *)this->fields.dropObjectList;
@@ -833,7 +833,7 @@ LABEL_12:
             v19 = System_Collections_Generic_List_object___get_Item(
                     ClippingObjectList,
                     v18,
-                    (const MethodInfo_37984EC *)Method_System_Collections_Generic_List_ListViewDropObject__get_Item__);
+                    (const MethodInfo_37A2D54 *)Method_System_Collections_Generic_List_ListViewDropObject__get_Item__);
             if ( v19
               && (naturalAligment = SampleCardListViewDropObject_TypeInfo->_2.naturalAligment,
                   v19->klass->_2.naturalAligment >= (unsigned int)naturalAligment) )
@@ -851,12 +851,12 @@ LABEL_12:
               j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
             if ( UnityEngine_Object__op_Inequality((UnityEngine_Object_o *)v21, 0, 0) )
             {
-              v22 = (System_Action_o *)sub_1C32E6C(System_Action_TypeInfo);
+              v22 = (System_Action_o *)sub_1C372A4(System_Action_TypeInfo);
               System_Action___ctor(v22, (Il2CppObject *)this, Method_SampleCardListViewManager_OnMoveEnd__, 0);
               dropObjectList = this->fields.dropObjectList;
               if ( !dropObjectList || !v21 )
                 goto LABEL_28;
-              SampleCardListViewDropObject__Init_37465148(
+              SampleCardListViewDropObject__Init_37637696(
                 v21,
                 4,
                 v22,
@@ -887,17 +887,17 @@ void SampleCardListViewManager__SetObjectItem(
   int32_t v7; // w1
 
   v5 = this;
-  if ( (byte_4C350D0 & 1) == 0 )
+  if ( (byte_4C4075D & 1) == 0 )
   {
-    this = (SampleCardListViewManager_o *)sub_1C32C20(&SampleCardListViewObject_TypeInfo);
-    byte_4C350D0 = 1;
+    this = (SampleCardListViewManager_o *)sub_1C37058(&SampleCardListViewObject_TypeInfo);
+    byte_4C4075D = 1;
   }
   if ( !obj
     || (naturalAligment = SampleCardListViewObject_TypeInfo->_2.naturalAligment,
         obj->klass->_2.naturalAligment < (unsigned int)naturalAligment)
     || (SampleCardListViewObject_c *)obj->klass->_2.typeHierarchy[naturalAligment - 1] != SampleCardListViewObject_TypeInfo )
   {
-    sub_1C32E7C(this);
+    sub_1C372B4(this);
   }
   if ( v5->fields.initMode == 3 )
   {
@@ -908,7 +908,7 @@ void SampleCardListViewManager__SetObjectItem(
   {
     v7 = 2;
   }
-  SampleCardListViewObject__Init_37470832((SampleCardListViewObject_o *)obj, v7, (const MethodInfo *)item);
+  SampleCardListViewObject__Init_37643380((SampleCardListViewObject_o *)obj, v7, (const MethodInfo *)item);
 }
 
 
@@ -926,10 +926,10 @@ void SampleCardListViewManager__add_callbackFunc(
   System_Action_o *v11; // x1
   const MethodInfo *v12; // x2
 
-  if ( (byte_4C350CA & 1) == 0 )
+  if ( (byte_4C40757 & 1) == 0 )
   {
-    sub_1C32C20(&System_Action_TypeInfo);
-    byte_4C350CA = 1;
+    sub_1C37058(&System_Action_TypeInfo);
+    byte_4C40757 = 1;
   }
   callbackFunc = (System_Delegate_o *)this->fields.callbackFunc;
   p_callbackFunc = &this->fields.callbackFunc;
@@ -941,13 +941,13 @@ void SampleCardListViewManager__add_callbackFunc(
       if ( (System_Action_c *)v7->klass != System_Action_TypeInfo )
         break;
     }
-    v8 = sub_1C6CE78(p_callbackFunc, v7, callbackFunc);
+    v8 = sub_1C712B0(p_callbackFunc, v7, callbackFunc);
     v9 = callbackFunc == (System_Delegate_o *)v8;
     callbackFunc = (System_Delegate_o *)v8;
     if ( v9 )
       return;
   }
-  sub_1C3313C(v7);
+  sub_1C37574(v7);
   SampleCardListViewManager__remove_callbackFunc(v10, v11, v12);
 }
 
@@ -974,35 +974,35 @@ System_Collections_Generic_List_SampleCardListViewObject__o *SampleCardListViewM
   System_Collections_Generic_List_Enumerator_object__o v19; // [xsp+8h] [xbp-88h] BYREF
   System_Collections_Generic_List_Enumerator_object__o v20; // [xsp+20h] [xbp-70h] BYREF
 
-  if ( (byte_4C350CD & 1) == 0 )
+  if ( (byte_4C4075A & 1) == 0 )
   {
-    sub_1C32C20(&Method_System_Collections_Generic_List_Enumerator_GameObject__Dispose__);
-    sub_1C32C20(&Method_System_Collections_Generic_List_Enumerator_GameObject__MoveNext__);
-    sub_1C32C20(&Method_System_Collections_Generic_List_Enumerator_GameObject__get_Current__);
-    sub_1C32C20(&Method_UnityEngine_GameObject_GetComponent_SampleCardListViewObject___);
-    sub_1C32C20(&Method_System_Collections_Generic_List_SampleCardListViewObject__Add__);
-    sub_1C32C20(&Method_System_Collections_Generic_List_GameObject__GetEnumerator__);
-    sub_1C32C20(&Method_System_Collections_Generic_List_SampleCardListViewObject___ctor__);
-    sub_1C32C20(&System_Collections_Generic_List_SampleCardListViewObject__TypeInfo);
-    sub_1C32C20(&UnityEngine_Object_TypeInfo);
-    byte_4C350CD = 1;
+    sub_1C37058(&Method_System_Collections_Generic_List_Enumerator_GameObject__Dispose__);
+    sub_1C37058(&Method_System_Collections_Generic_List_Enumerator_GameObject__MoveNext__);
+    sub_1C37058(&Method_System_Collections_Generic_List_Enumerator_GameObject__get_Current__);
+    sub_1C37058(&Method_UnityEngine_GameObject_GetComponent_SampleCardListViewObject___);
+    sub_1C37058(&Method_System_Collections_Generic_List_SampleCardListViewObject__Add__);
+    sub_1C37058(&Method_System_Collections_Generic_List_GameObject__GetEnumerator__);
+    sub_1C37058(&Method_System_Collections_Generic_List_SampleCardListViewObject___ctor__);
+    sub_1C37058(&System_Collections_Generic_List_SampleCardListViewObject__TypeInfo);
+    sub_1C37058(&UnityEngine_Object_TypeInfo);
+    byte_4C4075A = 1;
   }
   memset(&v20, 0, sizeof(v20));
-  v3 = (System_Collections_Generic_List_object__o *)sub_1C32E6C(System_Collections_Generic_List_SampleCardListViewObject__TypeInfo);
+  v3 = (System_Collections_Generic_List_object__o *)sub_1C372A4(System_Collections_Generic_List_SampleCardListViewObject__TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v3,
-    (const MethodInfo_3797F88 *)Method_System_Collections_Generic_List_SampleCardListViewObject___ctor__);
+    (const MethodInfo_37A27F0 *)Method_System_Collections_Generic_List_SampleCardListViewObject___ctor__);
   objectList = this->fields.objectList;
   if ( !objectList )
-    sub_1C32E7C(0);
+    sub_1C372B4(0);
   System_Collections_Generic_List_object___GetEnumerator(
     (System_Collections_Generic_List_Enumerator_T__o *)&v19,
     (System_Collections_Generic_List_object__o *)objectList,
-    (const MethodInfo_37992B4 *)Method_System_Collections_Generic_List_GameObject__GetEnumerator__);
+    (const MethodInfo_37A3B1C *)Method_System_Collections_Generic_List_GameObject__GetEnumerator__);
   v20 = v19;
   while ( System_Collections_Generic_List_Enumerator_object___MoveNext(
             &v20,
-            (const MethodInfo_3522FA8 *)Method_System_Collections_Generic_List_Enumerator_GameObject__MoveNext__) )
+            (const MethodInfo_352D810 *)Method_System_Collections_Generic_List_Enumerator_GameObject__MoveNext__) )
   {
     current = v20.fields._current;
     if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -1011,28 +1011,28 @@ System_Collections_Generic_List_SampleCardListViewObject__o *SampleCardListViewM
     if ( v6 )
     {
       if ( !current )
-        sub_1C32E7C(v6);
+        sub_1C372B4(v6);
       Component_object = UnityEngine_GameObject__GetComponent_object_(
                            (UnityEngine_GameObject_o *)current,
-                           (const MethodInfo_3134970 *)Method_UnityEngine_GameObject_GetComponent_SampleCardListViewObject___);
+                           (const MethodInfo_313F1D8 *)Method_UnityEngine_GameObject_GetComponent_SampleCardListViewObject___);
       v9 = Component_object;
       if ( !Component_object )
-        sub_1C32E7C(0);
+        sub_1C372B4(0);
       Item = (ListViewItem_o *)SampleCardListViewObject__GetItem((SampleCardListViewObject_o *)Component_object, v8);
       if ( !Item )
-        sub_1C32E7C(0);
+        sub_1C372B4(0);
       if ( Item->fields.isTermination )
       {
-        v13 = ListViewManager__ClippingItem_43718444((ListViewManager_o *)this, Item, 0);
+        v13 = ListViewManager__ClippingItem_43820548((ListViewManager_o *)this, Item, 0);
         if ( v13 )
         {
           if ( !v3 )
-            sub_1C32E7C(v13);
+            sub_1C372B4(v13);
           items = v3->fields._items;
           v15 = Method_System_Collections_Generic_List_SampleCardListViewObject__Add__;
           ++v3->fields._version;
           if ( !items )
-            sub_1C32E7C(v13);
+            sub_1C372B4(v13);
           size = v3->fields._size;
           if ( (unsigned int)size < LODWORD(items->max_length) )
             goto LABEL_17;
@@ -1040,18 +1040,18 @@ LABEL_21:
           System_Collections_Generic_List_object___AddWithResize(
             v3,
             v9,
-            *(const MethodInfo_37987BC **)(*(_QWORD *)(v15[4] + 192LL) + 112LL));
+            *(const MethodInfo_37A3024 **)(*(_QWORD *)(v15[4] + 192LL) + 112LL));
         }
       }
       else
       {
         if ( !v3 )
-          sub_1C32E7C(Item);
+          sub_1C372B4(Item);
         items = v3->fields._items;
         v15 = Method_System_Collections_Generic_List_SampleCardListViewObject__Add__;
         ++v3->fields._version;
         if ( !items )
-          sub_1C32E7C(Item);
+          sub_1C372B4(Item);
         size = v3->fields._size;
         if ( (unsigned int)size >= LODWORD(items->max_length) )
           goto LABEL_21;
@@ -1059,13 +1059,13 @@ LABEL_17:
         v17 = &items->obj.klass + size;
         v3->fields._size = size + 1;
         v17[4] = (Il2CppClass *)v9;
-        sub_1C32BC4((CGThumbnailListItem_o *)(v17 + 4), (int32_t)v9, v11, v12);
+        sub_1C36FFC((CGThumbnailListItem_o *)(v17 + 4), (int32_t)v9, v11, v12);
       }
     }
   }
   System_Collections_Generic_List_Enumerator_object___Dispose(
     &v20,
-    (const MethodInfo_3522FA4 *)Method_System_Collections_Generic_List_Enumerator_GameObject__Dispose__);
+    (const MethodInfo_352D80C *)Method_System_Collections_Generic_List_Enumerator_GameObject__Dispose__);
   return (System_Collections_Generic_List_SampleCardListViewObject__o *)v3;
 }
 
@@ -1089,35 +1089,35 @@ System_Collections_Generic_List_SampleCardListViewObject__o *SampleCardListViewM
   System_Collections_Generic_List_Enumerator_object__o v16; // [xsp+8h] [xbp-78h] BYREF
   System_Collections_Generic_List_Enumerator_object__o v17; // [xsp+20h] [xbp-60h] BYREF
 
-  if ( (byte_4C350CC & 1) == 0 )
+  if ( (byte_4C40759 & 1) == 0 )
   {
-    sub_1C32C20(&Method_System_Collections_Generic_List_Enumerator_GameObject__Dispose__);
-    sub_1C32C20(&Method_System_Collections_Generic_List_Enumerator_GameObject__MoveNext__);
-    sub_1C32C20(&Method_System_Collections_Generic_List_Enumerator_GameObject__get_Current__);
-    sub_1C32C20(&Method_UnityEngine_GameObject_GetComponent_SampleCardListViewObject___);
-    sub_1C32C20(&Method_System_Collections_Generic_List_SampleCardListViewObject__Add__);
-    sub_1C32C20(&Method_System_Collections_Generic_List_GameObject__GetEnumerator__);
-    sub_1C32C20(&Method_System_Collections_Generic_List_SampleCardListViewObject___ctor__);
-    sub_1C32C20(&System_Collections_Generic_List_SampleCardListViewObject__TypeInfo);
-    sub_1C32C20(&UnityEngine_Object_TypeInfo);
-    byte_4C350CC = 1;
+    sub_1C37058(&Method_System_Collections_Generic_List_Enumerator_GameObject__Dispose__);
+    sub_1C37058(&Method_System_Collections_Generic_List_Enumerator_GameObject__MoveNext__);
+    sub_1C37058(&Method_System_Collections_Generic_List_Enumerator_GameObject__get_Current__);
+    sub_1C37058(&Method_UnityEngine_GameObject_GetComponent_SampleCardListViewObject___);
+    sub_1C37058(&Method_System_Collections_Generic_List_SampleCardListViewObject__Add__);
+    sub_1C37058(&Method_System_Collections_Generic_List_GameObject__GetEnumerator__);
+    sub_1C37058(&Method_System_Collections_Generic_List_SampleCardListViewObject___ctor__);
+    sub_1C37058(&System_Collections_Generic_List_SampleCardListViewObject__TypeInfo);
+    sub_1C37058(&UnityEngine_Object_TypeInfo);
+    byte_4C40759 = 1;
   }
   memset(&v17, 0, sizeof(v17));
-  v3 = (System_Collections_Generic_List_object__o *)sub_1C32E6C(System_Collections_Generic_List_SampleCardListViewObject__TypeInfo);
+  v3 = (System_Collections_Generic_List_object__o *)sub_1C372A4(System_Collections_Generic_List_SampleCardListViewObject__TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v3,
-    (const MethodInfo_3797F88 *)Method_System_Collections_Generic_List_SampleCardListViewObject___ctor__);
+    (const MethodInfo_37A27F0 *)Method_System_Collections_Generic_List_SampleCardListViewObject___ctor__);
   objectList = this->fields.objectList;
   if ( !objectList )
-    sub_1C32E7C(0);
+    sub_1C372B4(0);
   System_Collections_Generic_List_object___GetEnumerator(
     (System_Collections_Generic_List_Enumerator_T__o *)&v16,
     (System_Collections_Generic_List_object__o *)objectList,
-    (const MethodInfo_37992B4 *)Method_System_Collections_Generic_List_GameObject__GetEnumerator__);
+    (const MethodInfo_37A3B1C *)Method_System_Collections_Generic_List_GameObject__GetEnumerator__);
   v17 = v16;
   while ( System_Collections_Generic_List_Enumerator_object___MoveNext(
             &v17,
-            (const MethodInfo_3522FA8 *)Method_System_Collections_Generic_List_Enumerator_GameObject__MoveNext__) )
+            (const MethodInfo_352D810 *)Method_System_Collections_Generic_List_Enumerator_GameObject__MoveNext__) )
   {
     current = v17.fields._current;
     if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -1126,38 +1126,38 @@ System_Collections_Generic_List_SampleCardListViewObject__o *SampleCardListViewM
     if ( v6 )
     {
       if ( !current )
-        sub_1C32E7C(v6);
+        sub_1C372B4(v6);
       Component_object = UnityEngine_GameObject__GetComponent_object_(
                            (UnityEngine_GameObject_o *)current,
-                           (const MethodInfo_3134970 *)Method_UnityEngine_GameObject_GetComponent_SampleCardListViewObject___);
+                           (const MethodInfo_313F1D8 *)Method_UnityEngine_GameObject_GetComponent_SampleCardListViewObject___);
       v10 = Component_object;
       if ( !v3 )
-        sub_1C32E7C(Component_object);
+        sub_1C372B4(Component_object);
       items = v3->fields._items;
       v12 = Method_System_Collections_Generic_List_SampleCardListViewObject__Add__;
       ++v3->fields._version;
       if ( !items )
-        sub_1C32E7C(Component_object);
+        sub_1C372B4(Component_object);
       size = v3->fields._size;
       if ( (unsigned int)size >= LODWORD(items->max_length) )
       {
         System_Collections_Generic_List_object___AddWithResize(
           v3,
           Component_object,
-          *(const MethodInfo_37987BC **)(*(_QWORD *)(v12[4] + 192LL) + 112LL));
+          *(const MethodInfo_37A3024 **)(*(_QWORD *)(v12[4] + 192LL) + 112LL));
       }
       else
       {
         v14 = &items->obj.klass + size;
         v3->fields._size = size + 1;
         v14[4] = (Il2CppClass *)v10;
-        sub_1C32BC4((CGThumbnailListItem_o *)(v14 + 4), (int32_t)v10, v8, v9);
+        sub_1C36FFC((CGThumbnailListItem_o *)(v14 + 4), (int32_t)v10, v8, v9);
       }
     }
   }
   System_Collections_Generic_List_Enumerator_object___Dispose(
     &v17,
-    (const MethodInfo_3522FA4 *)Method_System_Collections_Generic_List_Enumerator_GameObject__Dispose__);
+    (const MethodInfo_352D80C *)Method_System_Collections_Generic_List_Enumerator_GameObject__Dispose__);
   return (System_Collections_Generic_List_SampleCardListViewObject__o *)v3;
 }
 
@@ -1175,10 +1175,10 @@ void SampleCardListViewManager__remove_callbackFunc(
   SampleCardListViewManager_o *v10; // x0
   const MethodInfo *v11; // x1
 
-  if ( (byte_4C350CB & 1) == 0 )
+  if ( (byte_4C40758 & 1) == 0 )
   {
-    sub_1C32C20(&System_Action_TypeInfo);
-    byte_4C350CB = 1;
+    sub_1C37058(&System_Action_TypeInfo);
+    byte_4C40758 = 1;
   }
   callbackFunc = (System_Delegate_o *)this->fields.callbackFunc;
   p_callbackFunc = &this->fields.callbackFunc;
@@ -1190,12 +1190,12 @@ void SampleCardListViewManager__remove_callbackFunc(
       if ( (System_Action_c *)v7->klass != System_Action_TypeInfo )
         break;
     }
-    v8 = sub_1C6CE78(p_callbackFunc, v7, callbackFunc);
+    v8 = sub_1C712B0(p_callbackFunc, v7, callbackFunc);
     v9 = callbackFunc == (System_Delegate_o *)v8;
     callbackFunc = (System_Delegate_o *)v8;
     if ( v9 )
       return;
   }
-  sub_1C3313C(v7);
+  sub_1C37574(v7);
   SampleCardListViewManager__get_ObjectList(v10, v11);
 }

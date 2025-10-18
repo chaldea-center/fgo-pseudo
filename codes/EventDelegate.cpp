@@ -1,17 +1,17 @@
 void EventDelegate___cctor(const MethodInfo *method)
 {
-  if ( (byte_4C3C111 & 1) == 0 )
+  if ( (byte_4C4768C & 1) == 0 )
   {
-    sub_1C32C20(&EventDelegate_TypeInfo);
-    sub_1C32C20(&StringLiteral_6209/*"EventDelegate"*/);
-    byte_4C3C111 = 1;
+    sub_1C37058(&EventDelegate_TypeInfo);
+    sub_1C37058(&StringLiteral_6210/*"EventDelegate"*/);
+    byte_4C4768C = 1;
   }
-  if ( !StringLiteral_6209/*"EventDelegate"*/ )
-    sub_1C32E7C(0);
-  EventDelegate_TypeInfo->static_fields->s_Hash = (*(__int64 (__fastcall **)(void *, _QWORD))(*(_QWORD *)StringLiteral_6209/*"EventDelegate"*/
+  if ( !StringLiteral_6210/*"EventDelegate"*/ )
+    sub_1C372B4(0);
+  EventDelegate_TypeInfo->static_fields->s_Hash = (*(__int64 (__fastcall **)(void *, _QWORD))(*(_QWORD *)StringLiteral_6210/*"EventDelegate"*/
                                                                                             + 344LL))(
-                                                    StringLiteral_6209/*"EventDelegate"*/,
-                                                    *(_QWORD *)(*(_QWORD *)StringLiteral_6209/*"EventDelegate"*/ + 352LL));
+                                                    StringLiteral_6210/*"EventDelegate"*/,
+                                                    *(_QWORD *)(*(_QWORD *)StringLiteral_6210/*"EventDelegate"*/ + 352LL));
 }
 
 
@@ -21,7 +21,7 @@ void EventDelegate___ctor(EventDelegate_o *this, const MethodInfo *method)
 }
 
 
-void EventDelegate___ctor_49230836(EventDelegate_o *this, EventDelegate_Callback_o *call, const MethodInfo *method)
+void EventDelegate___ctor_49273948(EventDelegate_o *this, EventDelegate_Callback_o *call, const MethodInfo *method)
 {
   const MethodInfo *v5; // x2
 
@@ -30,7 +30,7 @@ void EventDelegate___ctor_49230836(EventDelegate_o *this, EventDelegate_Callback
 }
 
 
-void EventDelegate___ctor_49231324(
+void EventDelegate___ctor_49274436(
         EventDelegate_o *this,
         UnityEngine_MonoBehaviour_o *target,
         System_String_o *methodName,
@@ -39,7 +39,7 @@ void EventDelegate___ctor_49231324(
   const MethodInfo *v7; // x3
 
   System_Object___ctor((Il2CppObject *)this, 0);
-  EventDelegate__Set_49231376(this, target, methodName, v7);
+  EventDelegate__Set_49274488(this, target, methodName, v7);
 }
 
 
@@ -50,18 +50,18 @@ EventDelegate_o *EventDelegate__Add(
 {
   const MethodInfo *v3; // x3
 
-  if ( (byte_4C3C10B & 1) == 0 )
+  if ( (byte_4C47686 & 1) == 0 )
   {
-    sub_1C32C20(&EventDelegate_TypeInfo);
-    byte_4C3C10B = 1;
+    sub_1C37058(&EventDelegate_TypeInfo);
+    byte_4C47686 = 1;
   }
   if ( !EventDelegate_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(EventDelegate_TypeInfo);
-  return EventDelegate__Add_49235496(list, callback, 0, v3);
+  return EventDelegate__Add_49278608(list, callback, 0, v3);
 }
 
 
-EventDelegate_o *EventDelegate__Add_49235496(
+EventDelegate_o *EventDelegate__Add_49278608(
         System_Collections_Generic_List_EventDelegate__o *list,
         EventDelegate_Callback_o *callback,
         bool oneShot,
@@ -80,15 +80,15 @@ EventDelegate_o *EventDelegate__Add_49235496(
   __int64 v17; // x10
   Il2CppClass **v18; // x0
 
-  if ( (byte_4C3C10C & 1) == 0 )
+  if ( (byte_4C47687 & 1) == 0 )
   {
-    sub_1C32C20(&UnityEngine_Debug_TypeInfo);
-    sub_1C32C20(&EventDelegate_TypeInfo);
-    sub_1C32C20(&Method_System_Collections_Generic_List_EventDelegate__Add__);
-    sub_1C32C20(&Method_System_Collections_Generic_List_EventDelegate__get_Count__);
-    sub_1C32C20(&Method_System_Collections_Generic_List_EventDelegate__get_Item__);
-    sub_1C32C20(&StringLiteral_2462/*"Attempting to add a callback to a list that's null"*/);
-    byte_4C3C10C = 1;
+    sub_1C37058(&UnityEngine_Debug_TypeInfo);
+    sub_1C37058(&EventDelegate_TypeInfo);
+    sub_1C37058(&Method_System_Collections_Generic_List_EventDelegate__Add__);
+    sub_1C37058(&Method_System_Collections_Generic_List_EventDelegate__get_Count__);
+    sub_1C37058(&Method_System_Collections_Generic_List_EventDelegate__get_Item__);
+    sub_1C37058(&StringLiteral_2462/*"Attempting to add a callback to a list that's null"*/);
+    byte_4C47687 = 1;
   }
   if ( list )
   {
@@ -96,7 +96,7 @@ EventDelegate_o *EventDelegate__Add_49235496(
     if ( size < 1 )
     {
 LABEL_9:
-      v10 = sub_1C32E6C(EventDelegate_TypeInfo);
+      v10 = sub_1C372A4(EventDelegate_TypeInfo);
       System_Object___ctor((Il2CppObject *)v10, 0);
       EventDelegate__Set((EventDelegate_o *)v10, callback, v11);
       if ( !v10
@@ -106,7 +106,7 @@ LABEL_9:
             ++list->fields._version,
             !items) )
       {
-        sub_1C32E7C(v12);
+        sub_1C372B4(v12);
       }
       v17 = list->fields._size;
       if ( (unsigned int)v17 >= LODWORD(items->max_length) )
@@ -114,14 +114,14 @@ LABEL_9:
         System_Collections_Generic_List_object___AddWithResize(
           (System_Collections_Generic_List_object__o *)list,
           (Il2CppObject *)v10,
-          *(const MethodInfo_37987BC **)(*(_QWORD *)(v16[4] + 192LL) + 112LL));
+          *(const MethodInfo_37A3024 **)(*(_QWORD *)(v16[4] + 192LL) + 112LL));
       }
       else
       {
         v18 = &items->obj.klass + v17;
         list->fields._size = v17 + 1;
         v18[4] = (Il2CppClass *)v10;
-        sub_1C32BC4((CGThumbnailListItem_o *)(v18 + 4), v10, v13, v14);
+        sub_1C36FFC((CGThumbnailListItem_o *)(v18 + 4), v10, v13, v14);
       }
     }
     else
@@ -132,7 +132,7 @@ LABEL_9:
         Item = System_Collections_Generic_List_object___get_Item(
                  (System_Collections_Generic_List_object__o *)list,
                  v8,
-                 (const MethodInfo_37984EC *)Method_System_Collections_Generic_List_EventDelegate__get_Item__);
+                 (const MethodInfo_37A2D54 *)Method_System_Collections_Generic_List_EventDelegate__get_Item__);
         if ( Item )
         {
           v10 = (__int64)Item;
@@ -159,7 +159,7 @@ LABEL_9:
 }
 
 
-void EventDelegate__Add_49235932(
+void EventDelegate__Add_49279044(
         System_Collections_Generic_List_EventDelegate__o *list,
         EventDelegate_o *ev,
         const MethodInfo *method)
@@ -169,21 +169,21 @@ void EventDelegate__Add_49235932(
   _BOOL4 oneShot; // w21
 
   v5 = list;
-  if ( (byte_4C3C10D & 1) == 0 )
+  if ( (byte_4C47688 & 1) == 0 )
   {
-    list = (System_Collections_Generic_List_EventDelegate__o *)sub_1C32C20(&EventDelegate_TypeInfo);
-    byte_4C3C10D = 1;
+    list = (System_Collections_Generic_List_EventDelegate__o *)sub_1C37058(&EventDelegate_TypeInfo);
+    byte_4C47688 = 1;
   }
   if ( !ev )
-    sub_1C32E7C(list);
+    sub_1C372B4(list);
   oneShot = ev->fields.oneShot;
   if ( !EventDelegate_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(EventDelegate_TypeInfo);
-  EventDelegate__Add_49236044(v5, ev, oneShot, v3);
+  EventDelegate__Add_49279156(v5, ev, oneShot, v3);
 }
 
 
-void EventDelegate__Add_49236044(
+void EventDelegate__Add_49279156(
         System_Collections_Generic_List_EventDelegate__o *list,
         EventDelegate_o *ev,
         bool oneShot,
@@ -220,17 +220,17 @@ void EventDelegate__Add_49236044(
   __int64 v34; // x0
 
   v6 = list;
-  if ( (byte_4C3C10E & 1) == 0 )
+  if ( (byte_4C47689 & 1) == 0 )
   {
-    sub_1C32C20(&UnityEngine_Debug_TypeInfo);
-    sub_1C32C20(&EventDelegate_TypeInfo);
-    sub_1C32C20(&Method_System_Collections_Generic_List_EventDelegate__Add__);
-    sub_1C32C20(&Method_System_Collections_Generic_List_EventDelegate__get_Count__);
-    sub_1C32C20(&Method_System_Collections_Generic_List_EventDelegate__get_Item__);
-    sub_1C32C20(&UnityEngine_Object_TypeInfo);
-    sub_1C32C20(&EventDelegate_Parameter___TypeInfo);
-    list = (System_Collections_Generic_List_EventDelegate__o *)sub_1C32C20(&StringLiteral_2462/*"Attempting to add a callback to a list that's null"*/);
-    byte_4C3C10E = 1;
+    sub_1C37058(&UnityEngine_Debug_TypeInfo);
+    sub_1C37058(&EventDelegate_TypeInfo);
+    sub_1C37058(&Method_System_Collections_Generic_List_EventDelegate__Add__);
+    sub_1C37058(&Method_System_Collections_Generic_List_EventDelegate__get_Count__);
+    sub_1C37058(&Method_System_Collections_Generic_List_EventDelegate__get_Item__);
+    sub_1C37058(&UnityEngine_Object_TypeInfo);
+    sub_1C37058(&EventDelegate_Parameter___TypeInfo);
+    list = (System_Collections_Generic_List_EventDelegate__o *)sub_1C37058(&StringLiteral_2462/*"Attempting to add a callback to a list that's null"*/);
+    byte_4C47689 = 1;
   }
   if ( !ev )
     goto LABEL_30;
@@ -245,7 +245,7 @@ LABEL_9:
     mCachedCallback = ev->fields.mCachedCallback;
     if ( !EventDelegate_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(EventDelegate_TypeInfo);
-    EventDelegate__Add_49235496(v6, mCachedCallback, oneShot, method);
+    EventDelegate__Add_49278608(v6, mCachedCallback, oneShot, method);
     return;
   }
   if ( !v6 )
@@ -261,9 +261,9 @@ LABEL_9:
 LABEL_18:
     v12 = ev->fields.mTarget;
     mMethodName = ev->fields.mMethodName;
-    v14 = sub_1C32E6C(EventDelegate_TypeInfo);
+    v14 = sub_1C372A4(EventDelegate_TypeInfo);
     System_Object___ctor((Il2CppObject *)v14, 0);
-    EventDelegate__Set_49231376((EventDelegate_o *)v14, v12, mMethodName, v15);
+    EventDelegate__Set_49274488((EventDelegate_o *)v14, v12, mMethodName, v15);
     if ( !v14 )
       goto LABEL_30;
     *(_BYTE *)(v14 + 40) = oneShot;
@@ -273,10 +273,10 @@ LABEL_18:
       max_length = mParameters->max_length;
       if ( max_length )
       {
-        v20 = sub_1C32CC8(EventDelegate_Parameter___TypeInfo, max_length);
+        v20 = sub_1C37100(EventDelegate_Parameter___TypeInfo, max_length);
         *(_QWORD *)(v14 + 32) = v20;
         v21 = (unsigned int **)(v14 + 32);
-        sub_1C32BC4((CGThumbnailListItem_o *)(v14 + 32), v20, v22, v23);
+        sub_1C36FFC((CGThumbnailListItem_o *)(v14 + 32), v20, v22, v23);
         v24 = ev->fields.mParameters;
         if ( !v24 )
           goto LABEL_30;
@@ -295,20 +295,20 @@ LABEL_18:
             v29 = v24->m_Items[v25];
             if ( v29 )
             {
-              list = (System_Collections_Generic_List_EventDelegate__o *)sub_1C32D5C(
+              list = (System_Collections_Generic_List_EventDelegate__o *)sub_1C37194(
                                                                            v29,
                                                                            *(_QWORD *)(*(_QWORD *)v28 + 64LL));
               if ( !list )
               {
-                v34 = sub_1C32EA0(0);
-                sub_1C32D48(v34, 0);
+                v34 = sub_1C372D8(0);
+                sub_1C37180(v34, 0);
               }
             }
             if ( v25 >= v28[6] )
 LABEL_39:
-              sub_1C32E84(list);
+              sub_1C372BC(list);
             *(_QWORD *)&v28[v26] = v29;
-            sub_1C32BC4((CGThumbnailListItem_o *)&v28[v26], (int32_t)v29, v16, v17);
+            sub_1C36FFC((CGThumbnailListItem_o *)&v28[v26], (int32_t)v29, v16, v17);
             v24 = ev->fields.mParameters;
             ++v25;
             v26 += 2;
@@ -330,19 +330,19 @@ LABEL_39:
         System_Collections_Generic_List_object___AddWithResize(
           (System_Collections_Generic_List_object__o *)v6,
           (Il2CppObject *)v14,
-          *(const MethodInfo_37987BC **)(*(_QWORD *)(v31[4] + 192LL) + 112LL));
+          *(const MethodInfo_37A3024 **)(*(_QWORD *)(v31[4] + 192LL) + 112LL));
       }
       else
       {
         v33 = &items->obj.klass + v32;
         v6->fields._size = v32 + 1;
         v33[4] = (Il2CppClass *)v14;
-        sub_1C32BC4((CGThumbnailListItem_o *)(v33 + 4), v14, v16, v17);
+        sub_1C36FFC((CGThumbnailListItem_o *)(v33 + 4), v14, v16, v17);
       }
       return;
     }
 LABEL_30:
-    sub_1C32E7C(list);
+    sub_1C372B4(list);
   }
   v10 = 0;
   while ( 1 )
@@ -350,7 +350,7 @@ LABEL_30:
     Item = System_Collections_Generic_List_object___get_Item(
              (System_Collections_Generic_List_object__o *)v6,
              v10,
-             (const MethodInfo_37984EC *)Method_System_Collections_Generic_List_EventDelegate__get_Item__);
+             (const MethodInfo_37A2D54 *)Method_System_Collections_Generic_List_EventDelegate__get_Item__);
     if ( Item )
     {
       if ( (((__int64 (__fastcall *)(Il2CppObject *, EventDelegate_o *, const MethodInfo *))Item->klass->vtable[0].methodPtr)(
@@ -386,7 +386,7 @@ void EventDelegate__Cache(EventDelegate_o *this, const MethodInfo *method)
   int32_t v18; // w2
   const MethodInfo *v19; // x3
   _BOOL8 v20; // x0
-  System_Reflection_MethodInfo_o *Method_65145452; // x0
+  System_Reflection_MethodInfo_o *Method_65188564; // x0
   int32_t v22; // w2
   const MethodInfo *v23; // x3
   struct System_String_o *mMethodName; // x20
@@ -415,7 +415,7 @@ void EventDelegate__Cache(EventDelegate_o *this, const MethodInfo *method)
   Il2CppObject *v47; // x20
   System_RuntimeTypeHandle_o v48; // x0
   System_Type_o *v49; // x0
-  System_Delegate_o *Delegate_65344372; // x0
+  System_Delegate_o *Delegate_65387484; // x0
   int32_t v51; // w2
   const MethodInfo *v52; // x3
   EventDelegate_Callback_c *v53; // x1
@@ -442,23 +442,23 @@ void EventDelegate__Cache(EventDelegate_o *this, const MethodInfo *method)
   const MethodInfo *v74; // x3
   __int64 v75; // x0
 
-  if ( (byte_4C3C104 & 1) == 0 )
+  if ( (byte_4C4767F & 1) == 0 )
   {
-    sub_1C32C20(&EventDelegate_Callback_var);
-    sub_1C32C20(&EventDelegate_Callback_TypeInfo);
-    sub_1C32C20(&UnityEngine_Debug_TypeInfo);
-    sub_1C32C20(&EventDelegate_TypeInfo);
-    sub_1C32C20(&UnityEngine_MonoBehaviour_TypeInfo);
-    sub_1C32C20(&UnityEngine_Object_TypeInfo);
-    sub_1C32C20(&EventDelegate_Parameter___TypeInfo);
-    sub_1C32C20(&EventDelegate_Parameter_TypeInfo);
-    sub_1C32C20(&System_Type_TypeInfo);
-    sub_1C32C20(&void_var);
-    sub_1C32C20(&StringLiteral_551/*"' on "*/);
-    sub_1C32C20(&StringLiteral_279/*" must have a 'void' return type."*/);
-    sub_1C32C20(&StringLiteral_4789/*"Could not find method '"*/);
-    sub_1C32C20(&StringLiteral_988/*"."*/);
-    byte_4C3C104 = 1;
+    sub_1C37058(&EventDelegate_Callback_var);
+    sub_1C37058(&EventDelegate_Callback_TypeInfo);
+    sub_1C37058(&UnityEngine_Debug_TypeInfo);
+    sub_1C37058(&EventDelegate_TypeInfo);
+    sub_1C37058(&UnityEngine_MonoBehaviour_TypeInfo);
+    sub_1C37058(&UnityEngine_Object_TypeInfo);
+    sub_1C37058(&EventDelegate_Parameter___TypeInfo);
+    sub_1C37058(&EventDelegate_Parameter_TypeInfo);
+    sub_1C37058(&System_Type_TypeInfo);
+    sub_1C37058(&void_var);
+    sub_1C37058(&StringLiteral_551/*"' on "*/);
+    sub_1C37058(&StringLiteral_279/*" must have a 'void' return type."*/);
+    sub_1C37058(&StringLiteral_4789/*"Could not find method '"*/);
+    sub_1C37058(&StringLiteral_988/*"."*/);
+    byte_4C4767F = 1;
   }
   mRawDelegate = this->fields.mRawDelegate;
   this->fields.mCached = 1;
@@ -514,7 +514,7 @@ LABEL_18:
     this->fields.mMethod = 0;
     p_mMethod = &this->fields.mMethod;
     v17 = Type;
-    sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.mMethod, 0, v18, v19);
+    sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.mMethod, 0, v18, v19);
     while ( 1 )
     {
       if ( !System_Type_TypeInfo->_2.cctor_finished )
@@ -523,10 +523,10 @@ LABEL_18:
       if ( !v20 )
         break;
       if ( !v17 )
-        sub_1C32E7C(v20);
-      Method_65145452 = System_Type__GetMethod_65145452(v17, this->fields.mMethodName, 52, 0);
-      *p_mMethod = Method_65145452;
-      sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.mMethod, (int32_t)Method_65145452, v22, v23);
+        sub_1C372B4(v20);
+      Method_65188564 = System_Type__GetMethod_65188564(v17, this->fields.mMethodName, 52, 0);
+      *p_mMethod = Method_65188564;
+      sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.mMethod, (int32_t)Method_65188564, v22, v23);
       if ( System_Reflection_MethodInfo__op_Inequality(*p_mMethod, 0, 0) )
         break;
       v17 = (System_Type_o *)((__int64 (__fastcall *)(System_Type_o *, const MethodInfo *))v17->klass->vtable._115_unknown.methodPtr)(
@@ -552,12 +552,12 @@ LABEL_18:
         v35 = mMethodName;
         v34 = (System_String_o *)v26;
 LABEL_53:
-        v45 = System_String__Concat_63558796(v33, v35, v34, v28, 0);
+        v45 = System_String__Concat_63601908(v33, v35, v34, v28, 0);
         v46 = (UnityEngine_Object_o *)this->fields.mTarget;
         v47 = (Il2CppObject *)v45;
         if ( !UnityEngine_Debug_TypeInfo->_2.cctor_finished )
           j_il2cpp_runtime_class_init_0(UnityEngine_Debug_TypeInfo);
-        UnityEngine_Debug__LogError_71036192(v47, v46, 0);
+        UnityEngine_Debug__LogError_71079304(v47, v46, 0);
         return;
       }
       goto LABEL_82;
@@ -589,7 +589,7 @@ LABEL_53:
         goto LABEL_53;
       }
 LABEL_82:
-      sub_1C32E7C(v14);
+      sub_1C372B4(v14);
     }
     v14 = *p_mMethod;
     if ( !*p_mMethod )
@@ -599,13 +599,13 @@ LABEL_82:
                                                             v14->klass->vtable._16_unknown.method);
     this->fields.mParameterInfos = v36;
     p_mParameterInfos = (__int64 *)&this->fields.mParameterInfos;
-    sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.mParameterInfos, (int32_t)v36, v38, v39);
+    sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.mParameterInfos, (int32_t)v36, v38, v39);
     if ( !this->fields.mParameterInfos )
       goto LABEL_82;
     if ( this->fields.mParameterInfos->max_length )
     {
       this->fields.mCachedCallback = 0;
-      sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.mCachedCallback, 0, v40, v41);
+      sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.mCachedCallback, 0, v40, v41);
       mParameters = this->fields.mParameters;
       this = (EventDelegate_o *)((char *)this + 32);
       klass = (EventDelegate_c *)mParameters;
@@ -641,7 +641,7 @@ LABEL_72:
                 if ( v68 )
                 {
                   *(_QWORD *)(v68 + 40) = v14;
-                  sub_1C32BC4((CGThumbnailListItem_o *)(v68 + 40), (int32_t)v14, v69, v70);
+                  sub_1C36FFC((CGThumbnailListItem_o *)(v68 + 40), (int32_t)v14, v69, v70);
                   v65 = v67 + 1;
                   if ( namespaze == v67 + 1 )
                     return;
@@ -653,14 +653,14 @@ LABEL_72:
               goto LABEL_82;
             }
 LABEL_85:
-            sub_1C32E84(v14);
+            sub_1C372BC(v14);
           }
           goto LABEL_82;
         }
 LABEL_63:
-        v54 = (EventDelegate_c *)sub_1C32CC8(EventDelegate_Parameter___TypeInfo, *(unsigned int *)(v44 + 24));
+        v54 = (EventDelegate_c *)sub_1C37100(EventDelegate_Parameter___TypeInfo, *(unsigned int *)(v44 + 24));
         this->klass = v54;
-        sub_1C32BC4((CGThumbnailListItem_o *)this, (int32_t)v54, v55, v56);
+        sub_1C36FFC((CGThumbnailListItem_o *)this, (int32_t)v54, v55, v56);
         klass = this->klass;
         if ( !this->klass )
           goto LABEL_82;
@@ -671,23 +671,23 @@ LABEL_63:
           v59 = 32;
           do
           {
-            v60 = (EventDelegate_Parameter_o *)sub_1C32E6C(EventDelegate_Parameter_TypeInfo);
+            v60 = (EventDelegate_Parameter_o *)sub_1C372A4(EventDelegate_Parameter_TypeInfo);
             EventDelegate_Parameter___ctor(v60, v61);
             if ( !klass )
               goto LABEL_82;
             if ( v60 )
             {
-              v14 = (System_Reflection_MethodInfo_o *)sub_1C32D5C(v60, *((_QWORD *)klass->_1.image + 8));
+              v14 = (System_Reflection_MethodInfo_o *)sub_1C37194(v60, *((_QWORD *)klass->_1.image + 8));
               if ( !v14 )
               {
-                v75 = sub_1C32EA0(0);
-                sub_1C32D48(v75, 0);
+                v75 = sub_1C372D8(0);
+                sub_1C37180(v75, 0);
               }
             }
             if ( v57 >= LODWORD(klass->_1.namespaze) )
               goto LABEL_85;
             *(void **)((char *)&klass->_1.image + v59) = v60;
-            sub_1C32BC4((CGThumbnailListItem_o *)((char *)klass + v59), (int32_t)v60, v62, v63);
+            sub_1C36FFC((CGThumbnailListItem_o *)((char *)klass + v59), (int32_t)v60, v62, v63);
             klass = this->klass;
             ++v57;
             v59 += 8;
@@ -708,19 +708,19 @@ LABEL_62:
       j_il2cpp_runtime_class_init_0(System_Type_TypeInfo);
     v48.fields.value = (intptr_t)p_mParameterInfos;
     v49 = System_Type__GetTypeFromHandle(v48, 0);
-    Delegate_65344372 = System_Delegate__CreateDelegate_65344372(
+    Delegate_65387484 = System_Delegate__CreateDelegate_65387484(
                           v49,
                           (Il2CppObject *)this->fields.mTarget,
                           this->fields.mMethodName,
                           0);
-    if ( Delegate_65344372 )
+    if ( Delegate_65387484 )
     {
       v53 = EventDelegate_Callback_TypeInfo;
-      if ( (EventDelegate_Callback_c *)Delegate_65344372->klass != EventDelegate_Callback_TypeInfo
-        || (*p_mCachedCallback = (struct EventDelegate_Callback_o *)Delegate_65344372,
-            (EventDelegate_Callback_c *)Delegate_65344372->klass != v53) )
+      if ( (EventDelegate_Callback_c *)Delegate_65387484->klass != EventDelegate_Callback_TypeInfo
+        || (*p_mCachedCallback = (struct EventDelegate_Callback_o *)Delegate_65387484,
+            (EventDelegate_Callback_c *)Delegate_65387484->klass != v53) )
       {
-        sub_1C3313C(Delegate_65344372);
+        sub_1C37574(Delegate_65387484);
         goto LABEL_62;
       }
     }
@@ -728,11 +728,11 @@ LABEL_62:
     {
       *p_mCachedCallback = 0;
     }
-    sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.mCachedCallback, (int32_t)Delegate_65344372, v51, v52);
+    sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.mCachedCallback, (int32_t)Delegate_65387484, v51, v52);
     this->fields.mArgs = 0;
-    sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.mArgs, 0, v71, v72);
+    sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.mArgs, 0, v71, v72);
     this->fields.mParameters = 0;
-    sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.mParameters, 0, v73, v74);
+    sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.mParameters, 0, v73, v74);
   }
 }
 
@@ -755,21 +755,21 @@ void EventDelegate__Clear(EventDelegate_o *this, const MethodInfo *method)
   const MethodInfo *v16; // x3
 
   this->fields.mTarget = 0;
-  sub_1C32BC4((CGThumbnailListItem_o *)&this->fields, 0, v2, v3);
+  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields, 0, v2, v3);
   this->fields.mMethodName = 0;
-  sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.mMethodName, 0, v5, v6);
+  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.mMethodName, 0, v5, v6);
   this->fields.mRawDelegate = 0;
   this->fields.mCachedCallback = 0;
-  sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.mCachedCallback, 0, v7, v8);
+  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.mCachedCallback, 0, v7, v8);
   this->fields.mParameters = 0;
-  sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.mParameters, 0, v9, v10);
+  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.mParameters, 0, v9, v10);
   this->fields.mCached = 0;
   this->fields.mMethod = 0;
-  sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.mMethod, 0, v11, v12);
+  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.mMethod, 0, v11, v12);
   this->fields.mParameterInfos = 0;
-  sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.mParameterInfos, 0, v13, v14);
+  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.mParameterInfos, 0, v13, v14);
   this->fields.mArgs = 0;
-  sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.mArgs, 0, v15, v16);
+  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.mArgs, 0, v15, v16);
 }
 
 
@@ -788,13 +788,13 @@ bool EventDelegate__Equals(EventDelegate_o *this, Il2CppObject *obj, const Metho
   const MethodInfo *v16; // x1
   struct System_String_o *v17; // x20
 
-  if ( (byte_4C3C101 & 1) == 0 )
+  if ( (byte_4C4767C & 1) == 0 )
   {
-    sub_1C32C20(&EventDelegate_Callback_TypeInfo);
-    sub_1C32C20(&EventDelegate_TypeInfo);
-    sub_1C32C20(&UnityEngine_MonoBehaviour_TypeInfo);
-    sub_1C32C20(&UnityEngine_Object_TypeInfo);
-    byte_4C3C101 = 1;
+    sub_1C37058(&EventDelegate_Callback_TypeInfo);
+    sub_1C37058(&EventDelegate_TypeInfo);
+    sub_1C37058(&UnityEngine_MonoBehaviour_TypeInfo);
+    sub_1C37058(&UnityEngine_Object_TypeInfo);
+    byte_4C4767C = 1;
   }
   if ( obj )
   {
@@ -813,7 +813,7 @@ bool EventDelegate__Equals(EventDelegate_o *this, Il2CppObject *obj, const Metho
         {
           mMethodName = this->fields.mMethodName;
           monitor = (System_String_o *)obj[1].monitor;
-          return System_String__Equals_63554576(mMethodName, monitor, 0);
+          return System_String__Equals_63597688(mMethodName, monitor, 0);
         }
       }
       return 0;
@@ -848,7 +848,7 @@ bool EventDelegate__Equals(EventDelegate_o *this, Il2CppObject *obj, const Metho
           j_il2cpp_runtime_class_init_0(EventDelegate_TypeInfo);
         monitor = EventDelegate__GetMethodName((EventDelegate_Callback_o *)obj, v16);
         mMethodName = v17;
-        return System_String__Equals_63554576(mMethodName, monitor, 0);
+        return System_String__Equals_63597688(mMethodName, monitor, 0);
       }
       return 0;
     }
@@ -894,10 +894,10 @@ bool EventDelegate__Execute(EventDelegate_o *this, const MethodInfo *method)
   Il2CppClass **v32; // x0
   __int64 v33; // x0
 
-  if ( (byte_4C3C105 & 1) == 0 )
+  if ( (byte_4C47680 & 1) == 0 )
   {
-    sub_1C32C20(&object___TypeInfo);
-    byte_4C3C105 = 1;
+    sub_1C37058(&object___TypeInfo);
+    byte_4C47680 = 1;
   }
   if ( !this->fields.mCached )
     EventDelegate__Cache(this, method);
@@ -918,9 +918,9 @@ bool EventDelegate__Execute(EventDelegate_o *this, const MethodInfo *method)
       p_mArgs = &this->fields.mArgs;
       mArgs = this->fields.mArgs;
       if ( mArgs && LODWORD(mArgs->max_length) == (_DWORD)max_length_low
-        || (v10 = (struct System_Object_array *)sub_1C32CC8(object___TypeInfo, max_length_low),
+        || (v10 = (struct System_Object_array *)sub_1C37100(object___TypeInfo, max_length_low),
             this->fields.mArgs = v10,
-            sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.mArgs, (int32_t)v10, v11, v12),
+            sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.mArgs, (int32_t)v10, v11, v12),
             (mParameters = this->fields.mParameters) != 0) )
       {
         max_length = mParameters->max_length;
@@ -929,7 +929,7 @@ bool EventDelegate__Execute(EventDelegate_o *this, const MethodInfo *method)
 LABEL_28:
           mMethod = (System_Reflection_MethodBase_o *)this->fields.mMethod;
           if ( !mMethod )
-            sub_1C32E7C(0);
+            sub_1C372B4(0);
           IsOut = (__int64)System_Reflection_MethodBase__Invoke(
                              mMethod,
                              (Il2CppObject *)this->fields.mTarget,
@@ -981,7 +981,7 @@ LABEL_40:
                   break;
                 v30 = v29->m_Items[v23];
                 *(_QWORD *)(IsOut + 32) = v30;
-                sub_1C32BC4((CGThumbnailListItem_o *)(IsOut + 32), (int32_t)v30, v25, v26);
+                sub_1C36FFC((CGThumbnailListItem_o *)(IsOut + 32), (int32_t)v30, v25, v26);
               }
               v31 = *p_mArgs;
               if ( !*p_mArgs )
@@ -990,7 +990,7 @@ LABEL_40:
                 goto LABEL_52;
               v32 = &v31->obj.klass + (int)v23;
               v32[4] = 0;
-              sub_1C32BC4((CGThumbnailListItem_o *)(v32 + 4), 0, v25, v26);
+              sub_1C36FFC((CGThumbnailListItem_o *)(v32 + 4), 0, v25, v26);
               if ( v22 == ++v23 )
                 return 1;
             }
@@ -1014,19 +1014,19 @@ LABEL_40:
             v19 = IsOut;
             if ( IsOut )
             {
-              IsOut = sub_1C32D5C(IsOut, v16->obj.klass->_1.element_class);
+              IsOut = sub_1C37194(IsOut, v16->obj.klass->_1.element_class);
               if ( !IsOut )
               {
-                v33 = sub_1C32EA0(0);
-                sub_1C32D48(v33, 0);
+                v33 = sub_1C372D8(0);
+                sub_1C37180(v33, 0);
               }
             }
             if ( (unsigned int)v15 >= LODWORD(v16->max_length) )
 LABEL_52:
-              sub_1C32E84(IsOut);
+              sub_1C372BC(IsOut);
             v20 = &v16->obj.klass + v15;
             v20[4] = (Il2CppClass *)v19;
-            sub_1C32BC4((CGThumbnailListItem_o *)(v20 + 4), v19, v17, v18);
+            sub_1C36FFC((CGThumbnailListItem_o *)(v20 + 4), v19, v17, v18);
             v14 = v15 + 1;
             if ( max_length == (_DWORD)v15 + 1 )
               goto LABEL_28;
@@ -1049,13 +1049,13 @@ LABEL_52:
         return 1;
       }
     }
-    sub_1C32E7C(IsOut);
+    sub_1C372B4(IsOut);
   }
   return 0;
 }
 
 
-void EventDelegate__Execute_49177388(System_Collections_Generic_List_EventDelegate__o *list, const MethodInfo *method)
+void EventDelegate__Execute_49220500(System_Collections_Generic_List_EventDelegate__o *list, const MethodInfo *method)
 {
   int32_t v3; // w20
   Il2CppObject *Item; // x0
@@ -1063,12 +1063,12 @@ void EventDelegate__Execute_49177388(System_Collections_Generic_List_EventDelega
   Il2CppObject *v6; // x23
   int32_t size; // w8
 
-  if ( (byte_4C3C107 & 1) == 0 )
+  if ( (byte_4C47682 & 1) == 0 )
   {
-    sub_1C32C20(&Method_System_Collections_Generic_List_EventDelegate__RemoveAt__);
-    sub_1C32C20(&Method_System_Collections_Generic_List_EventDelegate__get_Count__);
-    sub_1C32C20(&Method_System_Collections_Generic_List_EventDelegate__get_Item__);
-    byte_4C3C107 = 1;
+    sub_1C37058(&Method_System_Collections_Generic_List_EventDelegate__RemoveAt__);
+    sub_1C37058(&Method_System_Collections_Generic_List_EventDelegate__get_Count__);
+    sub_1C37058(&Method_System_Collections_Generic_List_EventDelegate__get_Item__);
+    byte_4C47682 = 1;
   }
   if ( list && list->fields._size >= 1 )
   {
@@ -1078,7 +1078,7 @@ void EventDelegate__Execute_49177388(System_Collections_Generic_List_EventDelega
       Item = System_Collections_Generic_List_object___get_Item(
                (System_Collections_Generic_List_object__o *)list,
                v3,
-               (const MethodInfo_37984EC *)Method_System_Collections_Generic_List_EventDelegate__get_Item__);
+               (const MethodInfo_37A2D54 *)Method_System_Collections_Generic_List_EventDelegate__get_Item__);
       if ( !Item )
         break;
       v6 = Item;
@@ -1088,14 +1088,14 @@ void EventDelegate__Execute_49177388(System_Collections_Generic_List_EventDelega
       if ( System_Collections_Generic_List_object___get_Item(
              (System_Collections_Generic_List_object__o *)list,
              v3,
-             (const MethodInfo_37984EC *)Method_System_Collections_Generic_List_EventDelegate__get_Item__) == v6 )
+             (const MethodInfo_37A2D54 *)Method_System_Collections_Generic_List_EventDelegate__get_Item__) == v6 )
       {
         if ( !LOBYTE(v6[2].monitor) )
           break;
         System_Collections_Generic_List_object___RemoveAt(
           (System_Collections_Generic_List_object__o *)list,
           v3,
-          (const MethodInfo_3799F90 *)Method_System_Collections_Generic_List_EventDelegate__RemoveAt__);
+          (const MethodInfo_37A47F8 *)Method_System_Collections_Generic_List_EventDelegate__RemoveAt__);
       }
       size = list->fields._size;
 LABEL_12:
@@ -1113,10 +1113,10 @@ int32_t EventDelegate__GetHashCode(EventDelegate_o *this, const MethodInfo *meth
 {
   EventDelegate_c *v2; // x0
 
-  if ( (byte_4C3C102 & 1) == 0 )
+  if ( (byte_4C4767D & 1) == 0 )
   {
-    sub_1C32C20(&EventDelegate_TypeInfo);
-    byte_4C3C102 = 1;
+    sub_1C37058(&EventDelegate_TypeInfo);
+    byte_4C4767D = 1;
   }
   v2 = EventDelegate_TypeInfo;
   if ( !EventDelegate_TypeInfo->_2.cctor_finished )
@@ -1133,7 +1133,7 @@ System_String_o *EventDelegate__GetMethodName(EventDelegate_Callback_o *callback
   if ( !callback
     || (callback = (EventDelegate_Callback_o *)System_Delegate__get_Method((System_Delegate_o *)callback, 0)) == 0 )
   {
-    sub_1C32E7C(callback);
+    sub_1C372B4(callback);
   }
   return (System_String_o *)((__int64 (__fastcall *)(EventDelegate_Callback_o *, const MethodInfo *))callback->klass->vtable._8_GetObjectData.methodPtr)(
                               callback,
@@ -1154,18 +1154,18 @@ bool EventDelegate__IsValid(EventDelegate_Callback_o *callback, const MethodInfo
 }
 
 
-bool EventDelegate__IsValid_49205960(System_Collections_Generic_List_EventDelegate__o *list, const MethodInfo *method)
+bool EventDelegate__IsValid_49249072(System_Collections_Generic_List_EventDelegate__o *list, const MethodInfo *method)
 {
   int32_t size; // w21
   int32_t v4; // w20
   Il2CppObject *Item; // x0
   const MethodInfo *v6; // x1
 
-  if ( (byte_4C3C108 & 1) == 0 )
+  if ( (byte_4C47683 & 1) == 0 )
   {
-    sub_1C32C20(&Method_System_Collections_Generic_List_EventDelegate__get_Count__);
-    sub_1C32C20(&Method_System_Collections_Generic_List_EventDelegate__get_Item__);
-    byte_4C3C108 = 1;
+    sub_1C37058(&Method_System_Collections_Generic_List_EventDelegate__get_Count__);
+    sub_1C37058(&Method_System_Collections_Generic_List_EventDelegate__get_Item__);
+    byte_4C47683 = 1;
   }
   if ( !list )
     return 0;
@@ -1178,7 +1178,7 @@ bool EventDelegate__IsValid_49205960(System_Collections_Generic_List_EventDelega
     Item = System_Collections_Generic_List_object___get_Item(
              (System_Collections_Generic_List_object__o *)list,
              v4,
-             (const MethodInfo_37984EC *)Method_System_Collections_Generic_List_EventDelegate__get_Item__);
+             (const MethodInfo_37A2D54 *)Method_System_Collections_Generic_List_EventDelegate__get_Item__);
     if ( Item )
     {
       if ( EventDelegate__get_isValid((EventDelegate_o *)Item, v6) )
@@ -1200,12 +1200,12 @@ bool EventDelegate__Remove(
   int32_t v6; // w21
   Il2CppObject *Item; // x0
 
-  if ( (byte_4C3C10F & 1) == 0 )
+  if ( (byte_4C4768A & 1) == 0 )
   {
-    sub_1C32C20(&Method_System_Collections_Generic_List_EventDelegate__RemoveAt__);
-    sub_1C32C20(&Method_System_Collections_Generic_List_EventDelegate__get_Count__);
-    sub_1C32C20(&Method_System_Collections_Generic_List_EventDelegate__get_Item__);
-    byte_4C3C10F = 1;
+    sub_1C37058(&Method_System_Collections_Generic_List_EventDelegate__RemoveAt__);
+    sub_1C37058(&Method_System_Collections_Generic_List_EventDelegate__get_Count__);
+    sub_1C37058(&Method_System_Collections_Generic_List_EventDelegate__get_Item__);
+    byte_4C4768A = 1;
   }
   if ( !list )
     return 0;
@@ -1218,7 +1218,7 @@ bool EventDelegate__Remove(
     Item = System_Collections_Generic_List_object___get_Item(
              (System_Collections_Generic_List_object__o *)list,
              v6,
-             (const MethodInfo_37984EC *)Method_System_Collections_Generic_List_EventDelegate__get_Item__);
+             (const MethodInfo_37A2D54 *)Method_System_Collections_Generic_List_EventDelegate__get_Item__);
     if ( Item )
     {
       if ( (((__int64 (__fastcall *)(Il2CppObject *, EventDelegate_Callback_o *, const MethodInfo *))Item->klass->vtable[0].methodPtr)(
@@ -1234,12 +1234,12 @@ bool EventDelegate__Remove(
   System_Collections_Generic_List_object___RemoveAt(
     (System_Collections_Generic_List_object__o *)list,
     v6,
-    (const MethodInfo_3799F90 *)Method_System_Collections_Generic_List_EventDelegate__RemoveAt__);
+    (const MethodInfo_37A47F8 *)Method_System_Collections_Generic_List_EventDelegate__RemoveAt__);
   return 1;
 }
 
 
-bool EventDelegate__Remove_49236880(
+bool EventDelegate__Remove_49279992(
         System_Collections_Generic_List_EventDelegate__o *list,
         EventDelegate_o *ev,
         const MethodInfo *method)
@@ -1248,12 +1248,12 @@ bool EventDelegate__Remove_49236880(
   int32_t v6; // w21
   Il2CppObject *Item; // x0
 
-  if ( (byte_4C3C110 & 1) == 0 )
+  if ( (byte_4C4768B & 1) == 0 )
   {
-    sub_1C32C20(&Method_System_Collections_Generic_List_EventDelegate__RemoveAt__);
-    sub_1C32C20(&Method_System_Collections_Generic_List_EventDelegate__get_Count__);
-    sub_1C32C20(&Method_System_Collections_Generic_List_EventDelegate__get_Item__);
-    byte_4C3C110 = 1;
+    sub_1C37058(&Method_System_Collections_Generic_List_EventDelegate__RemoveAt__);
+    sub_1C37058(&Method_System_Collections_Generic_List_EventDelegate__get_Count__);
+    sub_1C37058(&Method_System_Collections_Generic_List_EventDelegate__get_Item__);
+    byte_4C4768B = 1;
   }
   if ( !list )
     return 0;
@@ -1266,7 +1266,7 @@ bool EventDelegate__Remove_49236880(
     Item = System_Collections_Generic_List_object___get_Item(
              (System_Collections_Generic_List_object__o *)list,
              v6,
-             (const MethodInfo_37984EC *)Method_System_Collections_Generic_List_EventDelegate__get_Item__);
+             (const MethodInfo_37A2D54 *)Method_System_Collections_Generic_List_EventDelegate__get_Item__);
     if ( Item )
     {
       if ( (((__int64 (__fastcall *)(Il2CppObject *, EventDelegate_o *, const MethodInfo *))Item->klass->vtable[0].methodPtr)(
@@ -1282,7 +1282,7 @@ bool EventDelegate__Remove_49236880(
   System_Collections_Generic_List_object___RemoveAt(
     (System_Collections_Generic_List_object__o *)list,
     v6,
-    (const MethodInfo_3799F90 *)Method_System_Collections_Generic_List_EventDelegate__RemoveAt__);
+    (const MethodInfo_37A47F8 *)Method_System_Collections_Generic_List_EventDelegate__RemoveAt__);
   return 1;
 }
 
@@ -1309,12 +1309,12 @@ void EventDelegate__Set(EventDelegate_o *this, EventDelegate_Callback_o *call, c
   int32_t v22; // w2
   const MethodInfo *v23; // x3
 
-  if ( (byte_4C3C103 & 1) == 0 )
+  if ( (byte_4C4767E & 1) == 0 )
   {
-    sub_1C32C20(&EventDelegate_TypeInfo);
-    sub_1C32C20(&UnityEngine_MonoBehaviour_TypeInfo);
-    sub_1C32C20(&UnityEngine_Object_TypeInfo);
-    byte_4C3C103 = 1;
+    sub_1C37058(&EventDelegate_TypeInfo);
+    sub_1C37058(&UnityEngine_MonoBehaviour_TypeInfo);
+    sub_1C37058(&UnityEngine_Object_TypeInfo);
+    byte_4C4767E = 1;
   }
   EventDelegate__Clear(this, (const MethodInfo *)call);
   if ( call )
@@ -1360,7 +1360,7 @@ void EventDelegate__Set(EventDelegate_o *this, EventDelegate_Callback_o *call, c
         this->fields.mTarget = 0;
         p_fields = (CGThumbnailListItem_o *)&this->fields;
       }
-      sub_1C32BC4(p_fields, v12, v6, v7);
+      sub_1C36FFC(p_fields, v12, v6, v7);
       klass = (UnityEngine_Object_o *)p_fields->klass;
       if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
@@ -1368,9 +1368,9 @@ void EventDelegate__Set(EventDelegate_o *this, EventDelegate_Callback_o *call, c
       {
         this->fields.mRawDelegate = 1;
         this->fields.mCachedCallback = call;
-        sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.mCachedCallback, (int32_t)call, v16, v17);
+        sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.mCachedCallback, (int32_t)call, v16, v17);
         this->fields.mMethodName = 0;
-        sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.mMethodName, 0, v18, v19);
+        sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.mMethodName, 0, v18, v19);
       }
       else
       {
@@ -1379,7 +1379,7 @@ void EventDelegate__Set(EventDelegate_o *this, EventDelegate_Callback_o *call, c
         MethodName = EventDelegate__GetMethodName(call, v15);
         this->fields.mMethodName = MethodName;
         p_mMethodName = &this->fields.mMethodName;
-        sub_1C32BC4((CGThumbnailListItem_o *)p_mMethodName, (int32_t)MethodName, v22, v23);
+        sub_1C36FFC((CGThumbnailListItem_o *)p_mMethodName, (int32_t)MethodName, v22, v23);
         *((_BYTE *)p_mMethodName + 32) = 0;
       }
     }
@@ -1387,7 +1387,7 @@ void EventDelegate__Set(EventDelegate_o *this, EventDelegate_Callback_o *call, c
 }
 
 
-EventDelegate_o *EventDelegate__Set_49215508(
+EventDelegate_o *EventDelegate__Set_49258620(
         System_Collections_Generic_List_EventDelegate__o *list,
         EventDelegate_Callback_o *callback,
         const MethodInfo *method)
@@ -1403,16 +1403,16 @@ EventDelegate_o *EventDelegate__Set_49215508(
   _QWORD *v13; // x11
   Il2CppClass **v14; // x0
 
-  if ( (byte_4C3C109 & 1) == 0 )
+  if ( (byte_4C47684 & 1) == 0 )
   {
-    sub_1C32C20(&EventDelegate_TypeInfo);
-    sub_1C32C20(&Method_System_Collections_Generic_List_EventDelegate__Add__);
-    sub_1C32C20(&Method_System_Collections_Generic_List_EventDelegate__Clear__);
-    byte_4C3C109 = 1;
+    sub_1C37058(&EventDelegate_TypeInfo);
+    sub_1C37058(&Method_System_Collections_Generic_List_EventDelegate__Add__);
+    sub_1C37058(&Method_System_Collections_Generic_List_EventDelegate__Clear__);
+    byte_4C47684 = 1;
   }
   if ( !list )
     return 0;
-  v5 = (Il2CppObject *)sub_1C32E6C(EventDelegate_TypeInfo);
+  v5 = (Il2CppObject *)sub_1C372A4(EventDelegate_TypeInfo);
   System_Object___ctor(v5, 0);
   EventDelegate__Set((EventDelegate_o *)v5, callback, v6);
   size = list->fields._size;
@@ -1433,26 +1433,26 @@ EventDelegate_o *EventDelegate__Set_49215508(
   v13 = Method_System_Collections_Generic_List_EventDelegate__Add__;
   list->fields._version = version + 1;
   if ( !items )
-    sub_1C32E7C(v7);
+    sub_1C372B4(v7);
   if ( (unsigned int)v11 >= LODWORD(items->max_length) )
   {
     System_Collections_Generic_List_object___AddWithResize(
       (System_Collections_Generic_List_object__o *)list,
       v5,
-      *(const MethodInfo_37987BC **)(*(_QWORD *)(v13[4] + 192LL) + 112LL));
+      *(const MethodInfo_37A3024 **)(*(_QWORD *)(v13[4] + 192LL) + 112LL));
   }
   else
   {
     v14 = &items->obj.klass + v11;
     list->fields._size = v11 + 1;
     v14[4] = (Il2CppClass *)v5;
-    sub_1C32BC4((CGThumbnailListItem_o *)(v14 + 4), (int32_t)v5, size, v8);
+    sub_1C36FFC((CGThumbnailListItem_o *)(v14 + 4), (int32_t)v5, size, v8);
   }
   return (EventDelegate_o *)v5;
 }
 
 
-void EventDelegate__Set_49231376(
+void EventDelegate__Set_49274488(
         EventDelegate_o *this,
         UnityEngine_MonoBehaviour_o *target,
         System_String_o *methodName,
@@ -1465,13 +1465,13 @@ void EventDelegate__Set_49231376(
 
   EventDelegate__Clear(this, (const MethodInfo *)target);
   this->fields.mTarget = target;
-  sub_1C32BC4((CGThumbnailListItem_o *)&this->fields, (int32_t)target, v7, v8);
+  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields, (int32_t)target, v7, v8);
   this->fields.mMethodName = methodName;
-  sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.mMethodName, (int32_t)methodName, v9, v10);
+  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.mMethodName, (int32_t)methodName, v9, v10);
 }
 
 
-void EventDelegate__Set_49235264(
+void EventDelegate__Set_49278376(
         System_Collections_Generic_List_EventDelegate__o *list,
         EventDelegate_o *del,
         const MethodInfo *method)
@@ -1486,11 +1486,11 @@ void EventDelegate__Set_49235264(
   Il2CppClass **v11; // x0
 
   v5 = list;
-  if ( (byte_4C3C10A & 1) == 0 )
+  if ( (byte_4C47685 & 1) == 0 )
   {
-    sub_1C32C20(&Method_System_Collections_Generic_List_EventDelegate__Add__);
-    list = (System_Collections_Generic_List_EventDelegate__o *)sub_1C32C20(&Method_System_Collections_Generic_List_EventDelegate__Clear__);
-    byte_4C3C10A = 1;
+    sub_1C37058(&Method_System_Collections_Generic_List_EventDelegate__Add__);
+    list = (System_Collections_Generic_List_EventDelegate__o *)sub_1C37058(&Method_System_Collections_Generic_List_EventDelegate__Clear__);
+    byte_4C47685 = 1;
   }
   if ( v5 )
   {
@@ -1512,20 +1512,20 @@ void EventDelegate__Set_49235264(
     v10 = Method_System_Collections_Generic_List_EventDelegate__Add__;
     v5->fields._version = version + 1;
     if ( !items )
-      sub_1C32E7C(list);
+      sub_1C372B4(list);
     if ( (unsigned int)v8 >= LODWORD(items->max_length) )
     {
       System_Collections_Generic_List_object___AddWithResize(
         (System_Collections_Generic_List_object__o *)v5,
         (Il2CppObject *)del,
-        *(const MethodInfo_37987BC **)(*(_QWORD *)(v10[4] + 192LL) + 112LL));
+        *(const MethodInfo_37A3024 **)(*(_QWORD *)(v10[4] + 192LL) + 112LL));
     }
     else
     {
       v11 = &items->obj.klass + v8;
       v5->fields._size = v8 + 1;
       v11[4] = (Il2CppClass *)del;
-      sub_1C32BC4((CGThumbnailListItem_o *)(v11 + 4), (int32_t)del, size, v3);
+      sub_1C36FFC((CGThumbnailListItem_o *)(v11 + 4), (int32_t)del, size, v3);
     }
   }
 }
@@ -1538,13 +1538,13 @@ System_String_o *EventDelegate__ToString(EventDelegate_o *this, const MethodInfo
   System_String_o *v5; // x20
   int32_t IndexOf; // w0
 
-  if ( (byte_4C3C106 & 1) == 0 )
+  if ( (byte_4C47681 & 1) == 0 )
   {
-    sub_1C32C20(&UnityEngine_Object_TypeInfo);
-    sub_1C32C20(&StringLiteral_15972/*"[delegate]"*/);
-    sub_1C32C20(&StringLiteral_1048/*"/"*/);
-    sub_1C32C20(&StringLiteral_1093/*"/[delegate]"*/);
-    byte_4C3C106 = 1;
+    sub_1C37058(&UnityEngine_Object_TypeInfo);
+    sub_1C37058(&StringLiteral_15974/*"[delegate]"*/);
+    sub_1C37058(&StringLiteral_1048/*"/"*/);
+    sub_1C37058(&StringLiteral_1093/*"/[delegate]"*/);
+    byte_4C47681 = 1;
   }
   mTarget = (UnityEngine_Object_o *)this->fields.mTarget;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -1558,20 +1558,20 @@ System_String_o *EventDelegate__ToString(EventDelegate_o *this, const MethodInfo
                                    Type,
                                    Type->klass->vtable[3].method)) == 0 )
     {
-      sub_1C32E7C(Type);
+      sub_1C372B4(Type);
     }
     v5 = (System_String_o *)Type;
     IndexOf = System_String__LastIndexOf((System_String_o *)Type, 0x2Eu, 0);
     if ( IndexOf >= 1 )
       v5 = System_String__Substring(v5, IndexOf + 1, 0);
     if ( System_String__IsNullOrEmpty(this->fields.mMethodName, 0) )
-      return System_String__Concat_63518544(v5, (System_String_o *)StringLiteral_1093/*"/[delegate]"*/, 0);
+      return System_String__Concat_63561656(v5, (System_String_o *)StringLiteral_1093/*"/[delegate]"*/, 0);
     else
-      return System_String__Concat_63556792(v5, (System_String_o *)StringLiteral_1048/*"/"*/, this->fields.mMethodName, 0);
+      return System_String__Concat_63599904(v5, (System_String_o *)StringLiteral_1048/*"/"*/, this->fields.mMethodName, 0);
   }
   else if ( this->fields.mRawDelegate )
   {
-    return (System_String_o *)StringLiteral_15972/*"[delegate]"*/;
+    return (System_String_o *)StringLiteral_15974/*"[delegate]"*/;
   }
   else
   {
@@ -1586,10 +1586,10 @@ bool EventDelegate__get_isEnabled(EventDelegate_o *this, const MethodInfo *metho
   UnityEngine_Object_o *v5; // x19
   _BOOL8 v6; // x0
 
-  if ( (byte_4C3C100 & 1) == 0 )
+  if ( (byte_4C4767B & 1) == 0 )
   {
-    sub_1C32C20(&UnityEngine_Object_TypeInfo);
-    byte_4C3C100 = 1;
+    sub_1C37058(&UnityEngine_Object_TypeInfo);
+    byte_4C4767B = 1;
   }
   if ( !this->fields.mCached )
     EventDelegate__Cache(this, method);
@@ -1607,7 +1607,7 @@ bool EventDelegate__get_isEnabled(EventDelegate_o *this, const MethodInfo *metho
   if ( v6 )
     return 1;
   if ( !v5 )
-    sub_1C32E7C(v6);
+    sub_1C372B4(v6);
   return UnityEngine_Behaviour__get_enabled((UnityEngine_Behaviour_o *)v5, 0);
 }
 
@@ -1616,10 +1616,10 @@ bool EventDelegate__get_isValid(EventDelegate_o *this, const MethodInfo *method)
 {
   UnityEngine_Object_o *mTarget; // x20
 
-  if ( (byte_4C3C0FF & 1) == 0 )
+  if ( (byte_4C4767A & 1) == 0 )
   {
-    sub_1C32C20(&UnityEngine_Object_TypeInfo);
-    byte_4C3C0FF = 1;
+    sub_1C37058(&UnityEngine_Object_TypeInfo);
+    byte_4C4767A = 1;
   }
   if ( !this->fields.mCached )
     EventDelegate__Cache(this, method);
@@ -1671,16 +1671,16 @@ void EventDelegate__set_methodName(EventDelegate_o *this, System_String_o *value
   const MethodInfo *v12; // x3
 
   this->fields.mMethodName = value;
-  sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.mMethodName, (int32_t)value, (int32_t)method, v3);
+  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.mMethodName, (int32_t)value, (int32_t)method, v3);
   this->fields.mCachedCallback = 0;
-  sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.mCachedCallback, 0, v5, v6);
+  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.mCachedCallback, 0, v5, v6);
   *(_WORD *)&this->fields.mRawDelegate = 0;
   this->fields.mMethod = 0;
-  sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.mMethod, 0, v7, v8);
+  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.mMethod, 0, v7, v8);
   this->fields.mParameterInfos = 0;
-  sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.mParameterInfos, 0, v9, v10);
+  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.mParameterInfos, 0, v9, v10);
   this->fields.mParameters = 0;
-  sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.mParameters, 0, v11, v12);
+  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.mParameters, 0, v11, v12);
 }
 
 
@@ -1697,16 +1697,16 @@ void EventDelegate__set_target(EventDelegate_o *this, UnityEngine_MonoBehaviour_
   const MethodInfo *v12; // x3
 
   this->fields.mTarget = value;
-  sub_1C32BC4((CGThumbnailListItem_o *)&this->fields, (int32_t)value, (int32_t)method, v3);
+  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields, (int32_t)value, (int32_t)method, v3);
   this->fields.mCachedCallback = 0;
-  sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.mCachedCallback, 0, v5, v6);
+  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.mCachedCallback, 0, v5, v6);
   *(_WORD *)&this->fields.mRawDelegate = 0;
   this->fields.mMethod = 0;
-  sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.mMethod, 0, v7, v8);
+  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.mMethod, 0, v7, v8);
   this->fields.mParameterInfos = 0;
-  sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.mParameterInfos, 0, v9, v10);
+  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.mParameterInfos, 0, v9, v10);
   this->fields.mParameters = 0;
-  sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.mParameters, 0, v11, v12);
+  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.mParameters, 0, v11, v12);
 }
 
 
@@ -1725,15 +1725,15 @@ void EventDelegate_Callback___ctor(
   this->fields.method = method;
   this->fields.method_ptr = v4;
   this->fields.m_target = object;
-  sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.m_target, (int32_t)object, method, a4);
+  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.m_target, (int32_t)object, method, a4);
   v8 = *(unsigned __int8 *)(method + 82);
   this->fields.method_code = (intptr_t)this;
-  if ( (sub_1C32CE0(method) & 1) == 0 )
+  if ( (sub_1C37118(method) & 1) == 0 )
   {
     if ( !object )
     {
-      v10 = sub_1C32E98(0, "Delegate to an instance method cannot have null 'this'.");
-      sub_1C32D48(v10, 0);
+      v10 = sub_1C372D0(0, "Delegate to an instance method cannot have null 'this'.");
+      sub_1C37180(v10, 0);
     }
     goto LABEL_5;
   }
@@ -1745,9 +1745,9 @@ LABEL_5:
     this->fields.method_code = (intptr_t)m_target;
     goto LABEL_6;
   }
-  this->fields.invoke_impl = (intptr_t)sub_1A7E448;
+  this->fields.invoke_impl = (intptr_t)sub_1A82550;
 LABEL_6:
-  this->fields.extra_arg = (intptr_t)sub_1A7E408;
+  this->fields.extra_arg = (intptr_t)sub_1A82510;
 }
 
 
@@ -1760,7 +1760,7 @@ System_IAsyncResult_o *EventDelegate_Callback__BeginInvoke(
   __int64 v5; // [xsp+8h] [xbp-8h] BYREF
 
   v5 = 0;
-  return (System_IAsyncResult_o *)sub_1C32BD4(this, &v5, callback, object);
+  return (System_IAsyncResult_o *)sub_1C3700C(this, &v5, callback, object);
 }
 
 
@@ -1769,7 +1769,7 @@ void EventDelegate_Callback__EndInvoke(
         System_IAsyncResult_o *result,
         const MethodInfo *method)
 {
-  sub_1C32BD8(result, 0, method);
+  sub_1C37010(result, 0, method);
 }
 
 
@@ -1787,11 +1787,11 @@ void EventDelegate_Parameter___ctor(EventDelegate_Parameter_o *this, const Metho
   int32_t v6; // w2
   const MethodInfo *v7; // x3
 
-  if ( (byte_4C3C112 & 1) == 0 )
+  if ( (byte_4C4768D & 1) == 0 )
   {
-    sub_1C32C20(&System_Type_TypeInfo);
-    sub_1C32C20(&void_var);
-    byte_4C3C112 = 1;
+    sub_1C37058(&System_Type_TypeInfo);
+    sub_1C37058(&void_var);
+    byte_4C4768D = 1;
   }
   v3 = void_var;
   if ( !System_Type_TypeInfo->_2.cctor_finished )
@@ -1799,12 +1799,12 @@ void EventDelegate_Parameter___ctor(EventDelegate_Parameter_o *this, const Metho
   v4.fields.value = (intptr_t)v3;
   TypeFromHandle = System_Type__GetTypeFromHandle(v4, 0);
   this->fields.expectedType = TypeFromHandle;
-  sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.expectedType, (int32_t)TypeFromHandle, v6, v7);
+  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.expectedType, (int32_t)TypeFromHandle, v6, v7);
   System_Object___ctor((Il2CppObject *)this, 0);
 }
 
 
-void EventDelegate_Parameter___ctor_49237204(
+void EventDelegate_Parameter___ctor_49280316(
         EventDelegate_Parameter_o *this,
         UnityEngine_Object_o *obj,
         System_String_o *field,
@@ -1820,11 +1820,11 @@ void EventDelegate_Parameter___ctor_49237204(
   int32_t v14; // w2
   const MethodInfo *v15; // x3
 
-  if ( (byte_4C3C113 & 1) == 0 )
+  if ( (byte_4C4768E & 1) == 0 )
   {
-    sub_1C32C20(&System_Type_TypeInfo);
-    sub_1C32C20(&void_var);
-    byte_4C3C113 = 1;
+    sub_1C37058(&System_Type_TypeInfo);
+    sub_1C37058(&void_var);
+    byte_4C4768E = 1;
   }
   v7 = void_var;
   if ( !System_Type_TypeInfo->_2.cctor_finished )
@@ -1832,16 +1832,16 @@ void EventDelegate_Parameter___ctor_49237204(
   v8.fields.value = (intptr_t)v7;
   TypeFromHandle = System_Type__GetTypeFromHandle(v8, 0);
   this->fields.expectedType = TypeFromHandle;
-  sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.expectedType, (int32_t)TypeFromHandle, v10, v11);
+  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.expectedType, (int32_t)TypeFromHandle, v10, v11);
   System_Object___ctor((Il2CppObject *)this, 0);
   this->fields.obj = obj;
-  sub_1C32BC4((CGThumbnailListItem_o *)&this->fields, (int32_t)obj, v12, v13);
+  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields, (int32_t)obj, v12, v13);
   this->fields.field = field;
-  sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.field, (int32_t)field, v14, v15);
+  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.field, (int32_t)field, v14, v15);
 }
 
 
-void EventDelegate_Parameter___ctor_49237400(
+void EventDelegate_Parameter___ctor_49280512(
         EventDelegate_Parameter_o *this,
         Il2CppObject *val,
         const MethodInfo *method)
@@ -1854,11 +1854,11 @@ void EventDelegate_Parameter___ctor_49237400(
   int32_t v10; // w2
   const MethodInfo *v11; // x3
 
-  if ( (byte_4C3C114 & 1) == 0 )
+  if ( (byte_4C4768F & 1) == 0 )
   {
-    sub_1C32C20(&System_Type_TypeInfo);
-    sub_1C32C20(&void_var);
-    byte_4C3C114 = 1;
+    sub_1C37058(&System_Type_TypeInfo);
+    sub_1C37058(&void_var);
+    byte_4C4768F = 1;
   }
   v5 = void_var;
   if ( !System_Type_TypeInfo->_2.cctor_finished )
@@ -1866,10 +1866,10 @@ void EventDelegate_Parameter___ctor_49237400(
   v6.fields.value = (intptr_t)v5;
   TypeFromHandle = System_Type__GetTypeFromHandle(v6, 0);
   this->fields.expectedType = TypeFromHandle;
-  sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.expectedType, (int32_t)TypeFromHandle, v8, v9);
+  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.expectedType, (int32_t)TypeFromHandle, v8, v9);
   System_Object___ctor((Il2CppObject *)this, 0);
   this->fields.mValue = val;
-  sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.mValue, (int32_t)val, v10, v11);
+  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.mValue, (int32_t)val, v10, v11);
 }
 
 
@@ -1880,12 +1880,12 @@ System_Type_o *EventDelegate_Parameter__get_type(EventDelegate_Parameter_o *this
   Il2CppType *v5; // x19
   System_RuntimeTypeHandle_o v6; // x0
 
-  if ( (byte_4C3C116 & 1) == 0 )
+  if ( (byte_4C47691 & 1) == 0 )
   {
-    sub_1C32C20(&UnityEngine_Object_TypeInfo);
-    sub_1C32C20(&System_Type_TypeInfo);
-    sub_1C32C20(&void_var);
-    byte_4C3C116 = 1;
+    sub_1C37058(&UnityEngine_Object_TypeInfo);
+    sub_1C37058(&System_Type_TypeInfo);
+    sub_1C37058(&void_var);
+    byte_4C47691 = 1;
   }
   mValue = this->fields.mValue;
   if ( mValue )
@@ -1897,7 +1897,7 @@ System_Type_o *EventDelegate_Parameter__get_type(EventDelegate_Parameter_o *this
   {
     mValue = (Il2CppObject *)this->fields.obj;
     if ( !mValue )
-      sub_1C32E7C(0);
+      sub_1C372B4(0);
     return System_Object__GetType(mValue, 0);
   }
   v5 = void_var;
@@ -1929,12 +1929,12 @@ Il2CppObject *EventDelegate_Parameter__get_value(EventDelegate_Parameter_o *this
   bool IsValueType; // w8
   System_Type_o *v20; // x19
 
-  if ( (byte_4C3C115 & 1) == 0 )
+  if ( (byte_4C47690 & 1) == 0 )
   {
-    sub_1C32C20(&System_Convert_TypeInfo);
-    sub_1C32C20(&UnityEngine_Object_TypeInfo);
-    sub_1C32C20(&System_Type_TypeInfo);
-    byte_4C3C115 = 1;
+    sub_1C37058(&System_Convert_TypeInfo);
+    sub_1C37058(&UnityEngine_Object_TypeInfo);
+    sub_1C37058(&System_Type_TypeInfo);
+    byte_4C47690 = 1;
   }
   result = this->fields.mValue;
   if ( !result )
@@ -1943,9 +1943,9 @@ Il2CppObject *EventDelegate_Parameter__get_value(EventDelegate_Parameter_o *this
     {
       this->fields.cached = 1;
       this->fields.fieldInfo = 0;
-      sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.fieldInfo, 0, v2, v3);
+      sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.fieldInfo, 0, v2, v3);
       this->fields.propInfo = 0;
-      sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.propInfo, 0, v6, v7);
+      sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.propInfo, 0, v6, v7);
       obj = this->fields.obj;
       if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
@@ -1960,12 +1960,12 @@ Il2CppObject *EventDelegate_Parameter__get_value(EventDelegate_Parameter_o *this
         v10 = (System_Type_o *)Type;
         Property = System_Type__GetProperty((System_Type_o *)Type, this->fields.field, 0);
         this->fields.propInfo = Property;
-        sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.propInfo, (int32_t)Property, v12, v13);
+        sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.propInfo, (int32_t)Property, v12, v13);
         if ( System_Reflection_PropertyInfo__op_Equality(this->fields.propInfo, 0, 0) )
         {
           Field = System_Type__GetField(v10, this->fields.field, 0);
           this->fields.fieldInfo = Field;
-          sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.fieldInfo, (int32_t)Field, v15, v16);
+          sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.fieldInfo, (int32_t)Field, v15, v16);
         }
       }
     }
@@ -2004,7 +2004,7 @@ Il2CppObject *EventDelegate_Parameter__get_value(EventDelegate_Parameter_o *this
         v20 = this->fields.expectedType;
         if ( !System_Convert_TypeInfo->_2.cctor_finished )
           j_il2cpp_runtime_class_init_0(System_Convert_TypeInfo);
-        return System_Convert__ChangeType_64594364(0, v20, 0);
+        return System_Convert__ChangeType_64637476(0, v20, 0);
       }
       Type = (Il2CppObject *)this->fields.fieldInfo;
       if ( Type )
@@ -2014,7 +2014,7 @@ Il2CppObject *EventDelegate_Parameter__get_value(EventDelegate_Parameter_o *this
                                  Type->klass->vtable[25].method);
     }
 LABEL_32:
-    sub_1C32E7C(Type);
+    sub_1C372B4(Type);
   }
   return result;
 }
@@ -2025,5 +2025,5 @@ void EventDelegate_Parameter__set_value(EventDelegate_Parameter_o *this, Il2CppO
   const MethodInfo *v3; // x3
 
   this->fields.mValue = value;
-  sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.mValue, (int32_t)value, (int32_t)method, v3);
+  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.mValue, (int32_t)value, (int32_t)method, v3);
 }

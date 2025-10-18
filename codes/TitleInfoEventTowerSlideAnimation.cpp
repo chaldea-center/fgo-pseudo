@@ -13,7 +13,7 @@ void TitleInfoEventTowerSlideAnimation__SetPotision(
   this->fields.slideOutPosition.fields.y = this->fields.slideInPosition.fields.y;
   transform = UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0);
   if ( !transform )
-    sub_1C32E7C(0);
+    sub_1C372B4(0);
   UnityEngine_Transform__set_localPosition(transform, this->fields.slideOutPosition, 0);
 }
 
@@ -98,24 +98,24 @@ void TitleInfoEventTowerSlideAnimation__StartSlideAnim(
   z = afterPosition.fields.z;
   y = afterPosition.fields.y;
   x = afterPosition.fields.x;
-  if ( (byte_4C3636D & 1) == 0 )
+  if ( (byte_4C4195B & 1) == 0 )
   {
-    sub_1C32C20(&bool_TypeInfo);
-    sub_1C32C20(&object___TypeInfo);
-    sub_1C32C20(&float_TypeInfo);
-    sub_1C32C20(&UnityEngine_Vector3_TypeInfo);
-    sub_1C32C20(&StringLiteral_22414/*"onMoveComplete"*/);
-    sub_1C32C20(&StringLiteral_24067/*"time"*/);
-    sub_1C32C20(&StringLiteral_22429/*"oncompletetarget"*/);
-    sub_1C32C20(&StringLiteral_22736/*"position"*/);
-    sub_1C32C20(&StringLiteral_20927/*"isLocal"*/);
-    sub_1C32C20(&StringLiteral_18750/*"easeType"*/);
-    sub_1C32C20(&StringLiteral_22427/*"oncomplete"*/);
-    sub_1C32C20(&iTween_TypeInfo);
-    byte_4C3636D = 1;
+    sub_1C37058(&bool_TypeInfo);
+    sub_1C37058(&object___TypeInfo);
+    sub_1C37058(&float_TypeInfo);
+    sub_1C37058(&UnityEngine_Vector3_TypeInfo);
+    sub_1C37058(&StringLiteral_22417/*"onMoveComplete"*/);
+    sub_1C37058(&StringLiteral_24071/*"time"*/);
+    sub_1C37058(&StringLiteral_22432/*"oncompletetarget"*/);
+    sub_1C37058(&StringLiteral_22740/*"position"*/);
+    sub_1C37058(&StringLiteral_20930/*"isLocal"*/);
+    sub_1C37058(&StringLiteral_18753/*"easeType"*/);
+    sub_1C37058(&StringLiteral_22430/*"oncomplete"*/);
+    sub_1C37058(&iTween_TypeInfo);
+    byte_4C4195B = 1;
   }
   this->fields.endCallback = callback;
-  sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.endCallback, (int32_t)callback, (int32_t)method, v4);
+  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.endCallback, (int32_t)callback, (int32_t)method, v4);
   this->fields.slideInPosition.fields.x = x;
   this->fields.slideInPosition.fields.y = y;
   this->fields.slideInPosition.fields.z = z;
@@ -124,18 +124,18 @@ void TitleInfoEventTowerSlideAnimation__StartSlideAnim(
     || (localPosition = UnityEngine_Transform__get_localPosition(transform, 0),
         this->fields.slideOutPosition.fields.y = localPosition.fields.y,
         gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0),
-        (transform = (UnityEngine_Transform_o *)sub_1C32CC8(object___TypeInfo, 12)) == 0) )
+        (transform = (UnityEngine_Transform_o *)sub_1C37100(object___TypeInfo, 12)) == 0) )
   {
-    sub_1C32E7C(transform);
+    sub_1C372B4(transform);
   }
   v14 = (System_Object_array *)transform;
-  v15 = StringLiteral_20927/*"isLocal"*/;
-  if ( StringLiteral_20927/*"isLocal"*/ )
+  v15 = StringLiteral_20930/*"isLocal"*/;
+  if ( StringLiteral_20930/*"isLocal"*/ )
   {
-    v15 = sub_1C32D5C(StringLiteral_20927/*"isLocal"*/, v14->obj.klass->_1.element_class);
+    v15 = sub_1C37194(StringLiteral_20930/*"isLocal"*/, v14->obj.klass->_1.element_class);
     if ( !v15 )
       goto LABEL_59;
-    v16 = StringLiteral_20927/*"isLocal"*/;
+    v16 = StringLiteral_20930/*"isLocal"*/;
   }
   else
   {
@@ -144,27 +144,27 @@ void TitleInfoEventTowerSlideAnimation__StartSlideAnim(
   if ( !LODWORD(v14->max_length) )
     goto LABEL_58;
   v14->m_Items[0] = (Il2CppObject *)v16;
-  sub_1C32BC4((CGThumbnailListItem_o *)v14->m_Items, v16, v12, v13);
+  sub_1C36FFC((CGThumbnailListItem_o *)v14->m_Items, v16, v12, v13);
   v74[0] = 1;
   v15 = j_il2cpp_value_box_0(bool_TypeInfo, v74, v17, v18, v19, v20, v21, v22);
   v25 = (Il2CppObject *)v15;
   if ( v15 )
   {
-    v15 = sub_1C32D5C(v15, v14->obj.klass->_1.element_class);
+    v15 = sub_1C37194(v15, v14->obj.klass->_1.element_class);
     if ( !v15 )
       goto LABEL_59;
   }
   if ( LODWORD(v14->max_length) <= 1 )
     goto LABEL_58;
   v14->m_Items[1] = v25;
-  sub_1C32BC4((CGThumbnailListItem_o *)&v14->m_Items[1], (int32_t)v25, v23, v24);
-  v15 = StringLiteral_22736/*"position"*/;
-  if ( StringLiteral_22736/*"position"*/ )
+  sub_1C36FFC((CGThumbnailListItem_o *)&v14->m_Items[1], (int32_t)v25, v23, v24);
+  v15 = StringLiteral_22740/*"position"*/;
+  if ( StringLiteral_22740/*"position"*/ )
   {
-    v15 = sub_1C32D5C(StringLiteral_22736/*"position"*/, v14->obj.klass->_1.element_class);
+    v15 = sub_1C37194(StringLiteral_22740/*"position"*/, v14->obj.klass->_1.element_class);
     if ( !v15 )
       goto LABEL_59;
-    v28 = StringLiteral_22736/*"position"*/;
+    v28 = StringLiteral_22740/*"position"*/;
   }
   else
   {
@@ -173,7 +173,7 @@ void TitleInfoEventTowerSlideAnimation__StartSlideAnim(
   if ( LODWORD(v14->max_length) <= 2 )
     goto LABEL_58;
   v14->m_Items[2] = (Il2CppObject *)v28;
-  sub_1C32BC4((CGThumbnailListItem_o *)&v14->m_Items[2], v28, v26, v27);
+  sub_1C36FFC((CGThumbnailListItem_o *)&v14->m_Items[2], v28, v26, v27);
   v29 = *(_QWORD *)&this->fields.slideOutPosition.fields.x;
   v72 = this->fields.slideOutPosition.fields.z;
   v71 = v29;
@@ -181,21 +181,21 @@ void TitleInfoEventTowerSlideAnimation__StartSlideAnim(
   v38 = (Il2CppObject *)v15;
   if ( v15 )
   {
-    v15 = sub_1C32D5C(v15, v14->obj.klass->_1.element_class);
+    v15 = sub_1C37194(v15, v14->obj.klass->_1.element_class);
     if ( !v15 )
       goto LABEL_59;
   }
   if ( LODWORD(v14->max_length) <= 3 )
     goto LABEL_58;
   v14->m_Items[3] = v38;
-  sub_1C32BC4((CGThumbnailListItem_o *)&v14->m_Items[3], (int32_t)v38, v36, v37);
-  v15 = StringLiteral_18750/*"easeType"*/;
-  if ( StringLiteral_18750/*"easeType"*/ )
+  sub_1C36FFC((CGThumbnailListItem_o *)&v14->m_Items[3], (int32_t)v38, v36, v37);
+  v15 = StringLiteral_18753/*"easeType"*/;
+  if ( StringLiteral_18753/*"easeType"*/ )
   {
-    v15 = sub_1C32D5C(StringLiteral_18750/*"easeType"*/, v14->obj.klass->_1.element_class);
+    v15 = sub_1C37194(StringLiteral_18753/*"easeType"*/, v14->obj.klass->_1.element_class);
     if ( !v15 )
       goto LABEL_59;
-    v41 = StringLiteral_18750/*"easeType"*/;
+    v41 = StringLiteral_18753/*"easeType"*/;
   }
   else
   {
@@ -204,25 +204,25 @@ void TitleInfoEventTowerSlideAnimation__StartSlideAnim(
   if ( LODWORD(v14->max_length) <= 4 )
     goto LABEL_58;
   v14->m_Items[4] = (Il2CppObject *)v41;
-  sub_1C32BC4((CGThumbnailListItem_o *)&v14->m_Items[4], v41, v39, v40);
+  sub_1C36FFC((CGThumbnailListItem_o *)&v14->m_Items[4], v41, v39, v40);
   easeTypeOut = this->fields.easeTypeOut;
   if ( easeTypeOut )
   {
-    v15 = sub_1C32D5C(this->fields.easeTypeOut, v14->obj.klass->_1.element_class);
+    v15 = sub_1C37194(this->fields.easeTypeOut, v14->obj.klass->_1.element_class);
     if ( !v15 )
       goto LABEL_59;
   }
   if ( LODWORD(v14->max_length) <= 5 )
     goto LABEL_58;
   v14->m_Items[5] = (Il2CppObject *)easeTypeOut;
-  sub_1C32BC4((CGThumbnailListItem_o *)&v14->m_Items[5], (int32_t)easeTypeOut, v42, v43);
-  v15 = StringLiteral_24067/*"time"*/;
-  if ( StringLiteral_24067/*"time"*/ )
+  sub_1C36FFC((CGThumbnailListItem_o *)&v14->m_Items[5], (int32_t)easeTypeOut, v42, v43);
+  v15 = StringLiteral_24071/*"time"*/;
+  if ( StringLiteral_24071/*"time"*/ )
   {
-    v15 = sub_1C32D5C(StringLiteral_24067/*"time"*/, v14->obj.klass->_1.element_class);
+    v15 = sub_1C37194(StringLiteral_24071/*"time"*/, v14->obj.klass->_1.element_class);
     if ( !v15 )
       goto LABEL_59;
-    v47 = StringLiteral_24067/*"time"*/;
+    v47 = StringLiteral_24071/*"time"*/;
   }
   else
   {
@@ -231,27 +231,27 @@ void TitleInfoEventTowerSlideAnimation__StartSlideAnim(
   if ( LODWORD(v14->max_length) <= 6 )
     goto LABEL_58;
   v14->m_Items[6] = (Il2CppObject *)v47;
-  sub_1C32BC4((CGThumbnailListItem_o *)&v14->m_Items[6], v47, v45, v46);
+  sub_1C36FFC((CGThumbnailListItem_o *)&v14->m_Items[6], v47, v45, v46);
   slideOutTime = this->fields.slideOutTime;
   v15 = j_il2cpp_value_box_0(float_TypeInfo, &slideOutTime, v48, v49, v50, v51, v52, v53);
   v56 = (Il2CppObject *)v15;
   if ( v15 )
   {
-    v15 = sub_1C32D5C(v15, v14->obj.klass->_1.element_class);
+    v15 = sub_1C37194(v15, v14->obj.klass->_1.element_class);
     if ( !v15 )
       goto LABEL_59;
   }
   if ( LODWORD(v14->max_length) <= 7 )
     goto LABEL_58;
   v14->m_Items[7] = v56;
-  sub_1C32BC4((CGThumbnailListItem_o *)&v14->m_Items[7], (int32_t)v56, v54, v55);
-  v15 = StringLiteral_22427/*"oncomplete"*/;
-  if ( StringLiteral_22427/*"oncomplete"*/ )
+  sub_1C36FFC((CGThumbnailListItem_o *)&v14->m_Items[7], (int32_t)v56, v54, v55);
+  v15 = StringLiteral_22430/*"oncomplete"*/;
+  if ( StringLiteral_22430/*"oncomplete"*/ )
   {
-    v15 = sub_1C32D5C(StringLiteral_22427/*"oncomplete"*/, v14->obj.klass->_1.element_class);
+    v15 = sub_1C37194(StringLiteral_22430/*"oncomplete"*/, v14->obj.klass->_1.element_class);
     if ( !v15 )
       goto LABEL_59;
-    v59 = StringLiteral_22427/*"oncomplete"*/;
+    v59 = StringLiteral_22430/*"oncomplete"*/;
   }
   else
   {
@@ -260,14 +260,14 @@ void TitleInfoEventTowerSlideAnimation__StartSlideAnim(
   if ( LODWORD(v14->max_length) <= 8 )
     goto LABEL_58;
   v14->m_Items[8] = (Il2CppObject *)v59;
-  sub_1C32BC4((CGThumbnailListItem_o *)&v14->m_Items[8], v59, v57, v58);
-  v15 = StringLiteral_22414/*"onMoveComplete"*/;
-  if ( StringLiteral_22414/*"onMoveComplete"*/ )
+  sub_1C36FFC((CGThumbnailListItem_o *)&v14->m_Items[8], v59, v57, v58);
+  v15 = StringLiteral_22417/*"onMoveComplete"*/;
+  if ( StringLiteral_22417/*"onMoveComplete"*/ )
   {
-    v15 = sub_1C32D5C(StringLiteral_22414/*"onMoveComplete"*/, v14->obj.klass->_1.element_class);
+    v15 = sub_1C37194(StringLiteral_22417/*"onMoveComplete"*/, v14->obj.klass->_1.element_class);
     if ( !v15 )
       goto LABEL_59;
-    v62 = StringLiteral_22414/*"onMoveComplete"*/;
+    v62 = StringLiteral_22417/*"onMoveComplete"*/;
   }
   else
   {
@@ -276,14 +276,14 @@ void TitleInfoEventTowerSlideAnimation__StartSlideAnim(
   if ( LODWORD(v14->max_length) <= 9 )
     goto LABEL_58;
   v14->m_Items[9] = (Il2CppObject *)v62;
-  sub_1C32BC4((CGThumbnailListItem_o *)&v14->m_Items[9], v62, v60, v61);
-  v15 = StringLiteral_22429/*"oncompletetarget"*/;
-  if ( StringLiteral_22429/*"oncompletetarget"*/ )
+  sub_1C36FFC((CGThumbnailListItem_o *)&v14->m_Items[9], v62, v60, v61);
+  v15 = StringLiteral_22432/*"oncompletetarget"*/;
+  if ( StringLiteral_22432/*"oncompletetarget"*/ )
   {
-    v15 = sub_1C32D5C(StringLiteral_22429/*"oncompletetarget"*/, v14->obj.klass->_1.element_class);
+    v15 = sub_1C37194(StringLiteral_22432/*"oncompletetarget"*/, v14->obj.klass->_1.element_class);
     if ( !v15 )
       goto LABEL_59;
-    v65 = StringLiteral_22429/*"oncompletetarget"*/;
+    v65 = StringLiteral_22432/*"oncompletetarget"*/;
   }
   else
   {
@@ -292,28 +292,28 @@ void TitleInfoEventTowerSlideAnimation__StartSlideAnim(
   if ( LODWORD(v14->max_length) <= 0xA )
     goto LABEL_58;
   v14->m_Items[10] = (Il2CppObject *)v65;
-  sub_1C32BC4((CGThumbnailListItem_o *)&v14->m_Items[10], v65, v63, v64);
+  sub_1C36FFC((CGThumbnailListItem_o *)&v14->m_Items[10], v65, v63, v64);
   v15 = (__int64)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
   v68 = (Il2CppObject *)v15;
   if ( v15 )
   {
-    v15 = sub_1C32D5C(v15, v14->obj.klass->_1.element_class);
+    v15 = sub_1C37194(v15, v14->obj.klass->_1.element_class);
     if ( !v15 )
     {
 LABEL_59:
-      v70 = sub_1C32EA0(v15);
-      sub_1C32D48(v70, 0);
+      v70 = sub_1C372D8(v15);
+      sub_1C37180(v70, 0);
     }
   }
   if ( LODWORD(v14->max_length) <= 0xB )
 LABEL_58:
-    sub_1C32E84(v15);
+    sub_1C372BC(v15);
   v14->m_Items[11] = v68;
-  sub_1C32BC4((CGThumbnailListItem_o *)&v14->m_Items[11], (int32_t)v68, v66, v67);
+  sub_1C36FFC((CGThumbnailListItem_o *)&v14->m_Items[11], (int32_t)v68, v66, v67);
   if ( !iTween_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(iTween_TypeInfo);
   v69 = iTween__Hash(v14, 0);
-  iTween__MoveTo_63156108(gameObject, v69, 0);
+  iTween__MoveTo_63199220(gameObject, v69, 0);
 }
 
 
@@ -331,7 +331,7 @@ void TitleInfoEventTowerSlideAnimation__onAnimEnd(TitleInfoEventTowerSlideAnimat
   if ( endCallback )
   {
     p_endCallback->klass = 0;
-    sub_1C32BC4(p_endCallback, 0, v2, v3);
+    sub_1C36FFC(p_endCallback, 0, v2, v3);
     ((void (__fastcall *)(intptr_t, intptr_t))v5->fields.invoke_impl)(v5->fields.method_code, v5->fields.method);
   }
 }
@@ -410,24 +410,24 @@ void TitleInfoEventTowerSlideAnimation__onMoveComplete(
   float z; // [xsp+18h] [xbp-38h]
   char v70[4]; // [xsp+1Ch] [xbp-34h] BYREF
 
-  if ( (byte_4C3636E & 1) == 0 )
+  if ( (byte_4C4195C & 1) == 0 )
   {
-    sub_1C32C20(&System_Action_TypeInfo);
-    sub_1C32C20(&bool_TypeInfo);
-    sub_1C32C20(&Method_UnityEngine_GameObject_GetComponent_TitleInfoEventTower___);
-    sub_1C32C20(&object___TypeInfo);
-    sub_1C32C20(&float_TypeInfo);
-    sub_1C32C20(&Method_TitleInfoEventTowerSlideAnimation__onMoveComplete_b__8_0__);
-    sub_1C32C20(&UnityEngine_Vector3_TypeInfo);
-    sub_1C32C20(&StringLiteral_24067/*"time"*/);
-    sub_1C32C20(&StringLiteral_22429/*"oncompletetarget"*/);
-    sub_1C32C20(&StringLiteral_22736/*"position"*/);
-    sub_1C32C20(&StringLiteral_22390/*"onAnimEnd"*/);
-    sub_1C32C20(&StringLiteral_20927/*"isLocal"*/);
-    sub_1C32C20(&StringLiteral_18750/*"easeType"*/);
-    sub_1C32C20(&StringLiteral_22427/*"oncomplete"*/);
-    sub_1C32C20(&iTween_TypeInfo);
-    byte_4C3636E = 1;
+    sub_1C37058(&System_Action_TypeInfo);
+    sub_1C37058(&bool_TypeInfo);
+    sub_1C37058(&Method_UnityEngine_GameObject_GetComponent_TitleInfoEventTower___);
+    sub_1C37058(&object___TypeInfo);
+    sub_1C37058(&float_TypeInfo);
+    sub_1C37058(&Method_TitleInfoEventTowerSlideAnimation__onMoveComplete_b__8_0__);
+    sub_1C37058(&UnityEngine_Vector3_TypeInfo);
+    sub_1C37058(&StringLiteral_24071/*"time"*/);
+    sub_1C37058(&StringLiteral_22432/*"oncompletetarget"*/);
+    sub_1C37058(&StringLiteral_22740/*"position"*/);
+    sub_1C37058(&StringLiteral_22393/*"onAnimEnd"*/);
+    sub_1C37058(&StringLiteral_20930/*"isLocal"*/);
+    sub_1C37058(&StringLiteral_18753/*"easeType"*/);
+    sub_1C37058(&StringLiteral_22430/*"oncomplete"*/);
+    sub_1C37058(&iTween_TypeInfo);
+    byte_4C4195C = 1;
   }
   transform = UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0);
   if ( !transform )
@@ -439,8 +439,8 @@ void TitleInfoEventTowerSlideAnimation__onMoveComplete(
                                                  0)) == 0
     || (Component_object = UnityEngine_GameObject__GetComponent_object_(
                              (UnityEngine_GameObject_o *)transform,
-                             (const MethodInfo_3134970 *)Method_UnityEngine_GameObject_GetComponent_TitleInfoEventTower___),
-        v5 = (System_Action_o *)sub_1C32E6C(System_Action_TypeInfo),
+                             (const MethodInfo_313F1D8 *)Method_UnityEngine_GameObject_GetComponent_TitleInfoEventTower___),
+        v5 = (System_Action_o *)sub_1C372A4(System_Action_TypeInfo),
         System_Action___ctor(
           v5,
           (Il2CppObject *)this,
@@ -449,19 +449,19 @@ void TitleInfoEventTowerSlideAnimation__onMoveComplete(
         !Component_object)
     || (TitleInfoEventTower__Open((TitleInfoEventTower_o *)Component_object, v5, 0, 0, v6),
         gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0),
-        (transform = (UnityEngine_Transform_o *)sub_1C32CC8(object___TypeInfo, 12)) == 0) )
+        (transform = (UnityEngine_Transform_o *)sub_1C37100(object___TypeInfo, 12)) == 0) )
   {
 LABEL_63:
-    sub_1C32E7C(transform);
+    sub_1C372B4(transform);
   }
   v10 = (System_Object_array *)transform;
-  v11 = StringLiteral_20927/*"isLocal"*/;
-  if ( StringLiteral_20927/*"isLocal"*/ )
+  v11 = StringLiteral_20930/*"isLocal"*/;
+  if ( StringLiteral_20930/*"isLocal"*/ )
   {
-    v11 = sub_1C32D5C(StringLiteral_20927/*"isLocal"*/, v10->obj.klass->_1.element_class);
+    v11 = sub_1C37194(StringLiteral_20930/*"isLocal"*/, v10->obj.klass->_1.element_class);
     if ( !v11 )
       goto LABEL_62;
-    v12 = StringLiteral_20927/*"isLocal"*/;
+    v12 = StringLiteral_20930/*"isLocal"*/;
   }
   else
   {
@@ -470,27 +470,27 @@ LABEL_63:
   if ( !LODWORD(v10->max_length) )
     goto LABEL_61;
   v10->m_Items[0] = (Il2CppObject *)v12;
-  sub_1C32BC4((CGThumbnailListItem_o *)v10->m_Items, v12, v8, v9);
+  sub_1C36FFC((CGThumbnailListItem_o *)v10->m_Items, v12, v8, v9);
   v70[0] = 1;
   v11 = j_il2cpp_value_box_0(bool_TypeInfo, v70, v13, v14, v15, v16, v17, v18);
   v21 = (Il2CppObject *)v11;
   if ( v11 )
   {
-    v11 = sub_1C32D5C(v11, v10->obj.klass->_1.element_class);
+    v11 = sub_1C37194(v11, v10->obj.klass->_1.element_class);
     if ( !v11 )
       goto LABEL_62;
   }
   if ( LODWORD(v10->max_length) <= 1 )
     goto LABEL_61;
   v10->m_Items[1] = v21;
-  sub_1C32BC4((CGThumbnailListItem_o *)&v10->m_Items[1], (int32_t)v21, v19, v20);
-  v11 = StringLiteral_22736/*"position"*/;
-  if ( StringLiteral_22736/*"position"*/ )
+  sub_1C36FFC((CGThumbnailListItem_o *)&v10->m_Items[1], (int32_t)v21, v19, v20);
+  v11 = StringLiteral_22740/*"position"*/;
+  if ( StringLiteral_22740/*"position"*/ )
   {
-    v11 = sub_1C32D5C(StringLiteral_22736/*"position"*/, v10->obj.klass->_1.element_class);
+    v11 = sub_1C37194(StringLiteral_22740/*"position"*/, v10->obj.klass->_1.element_class);
     if ( !v11 )
       goto LABEL_62;
-    v24 = StringLiteral_22736/*"position"*/;
+    v24 = StringLiteral_22740/*"position"*/;
   }
   else
   {
@@ -499,7 +499,7 @@ LABEL_63:
   if ( LODWORD(v10->max_length) <= 2 )
     goto LABEL_61;
   v10->m_Items[2] = (Il2CppObject *)v24;
-  sub_1C32BC4((CGThumbnailListItem_o *)&v10->m_Items[2], v24, v22, v23);
+  sub_1C36FFC((CGThumbnailListItem_o *)&v10->m_Items[2], v24, v22, v23);
   v25 = *(_QWORD *)&this->fields.slideInPosition.fields.x;
   z = this->fields.slideInPosition.fields.z;
   v68 = v25;
@@ -507,21 +507,21 @@ LABEL_63:
   v34 = (Il2CppObject *)v11;
   if ( v11 )
   {
-    v11 = sub_1C32D5C(v11, v10->obj.klass->_1.element_class);
+    v11 = sub_1C37194(v11, v10->obj.klass->_1.element_class);
     if ( !v11 )
       goto LABEL_62;
   }
   if ( LODWORD(v10->max_length) <= 3 )
     goto LABEL_61;
   v10->m_Items[3] = v34;
-  sub_1C32BC4((CGThumbnailListItem_o *)&v10->m_Items[3], (int32_t)v34, v32, v33);
-  v11 = StringLiteral_18750/*"easeType"*/;
-  if ( StringLiteral_18750/*"easeType"*/ )
+  sub_1C36FFC((CGThumbnailListItem_o *)&v10->m_Items[3], (int32_t)v34, v32, v33);
+  v11 = StringLiteral_18753/*"easeType"*/;
+  if ( StringLiteral_18753/*"easeType"*/ )
   {
-    v11 = sub_1C32D5C(StringLiteral_18750/*"easeType"*/, v10->obj.klass->_1.element_class);
+    v11 = sub_1C37194(StringLiteral_18753/*"easeType"*/, v10->obj.klass->_1.element_class);
     if ( !v11 )
       goto LABEL_62;
-    v37 = StringLiteral_18750/*"easeType"*/;
+    v37 = StringLiteral_18753/*"easeType"*/;
   }
   else
   {
@@ -530,25 +530,25 @@ LABEL_63:
   if ( LODWORD(v10->max_length) <= 4 )
     goto LABEL_61;
   v10->m_Items[4] = (Il2CppObject *)v37;
-  sub_1C32BC4((CGThumbnailListItem_o *)&v10->m_Items[4], v37, v35, v36);
+  sub_1C36FFC((CGThumbnailListItem_o *)&v10->m_Items[4], v37, v35, v36);
   easeTypeIn = this->fields.easeTypeIn;
   if ( easeTypeIn )
   {
-    v11 = sub_1C32D5C(this->fields.easeTypeIn, v10->obj.klass->_1.element_class);
+    v11 = sub_1C37194(this->fields.easeTypeIn, v10->obj.klass->_1.element_class);
     if ( !v11 )
       goto LABEL_62;
   }
   if ( LODWORD(v10->max_length) <= 5 )
     goto LABEL_61;
   v10->m_Items[5] = (Il2CppObject *)easeTypeIn;
-  sub_1C32BC4((CGThumbnailListItem_o *)&v10->m_Items[5], (int32_t)easeTypeIn, v38, v39);
-  v11 = StringLiteral_24067/*"time"*/;
-  if ( StringLiteral_24067/*"time"*/ )
+  sub_1C36FFC((CGThumbnailListItem_o *)&v10->m_Items[5], (int32_t)easeTypeIn, v38, v39);
+  v11 = StringLiteral_24071/*"time"*/;
+  if ( StringLiteral_24071/*"time"*/ )
   {
-    v11 = sub_1C32D5C(StringLiteral_24067/*"time"*/, v10->obj.klass->_1.element_class);
+    v11 = sub_1C37194(StringLiteral_24071/*"time"*/, v10->obj.klass->_1.element_class);
     if ( !v11 )
       goto LABEL_62;
-    v43 = StringLiteral_24067/*"time"*/;
+    v43 = StringLiteral_24071/*"time"*/;
   }
   else
   {
@@ -557,27 +557,27 @@ LABEL_63:
   if ( LODWORD(v10->max_length) <= 6 )
     goto LABEL_61;
   v10->m_Items[6] = (Il2CppObject *)v43;
-  sub_1C32BC4((CGThumbnailListItem_o *)&v10->m_Items[6], v43, v41, v42);
+  sub_1C36FFC((CGThumbnailListItem_o *)&v10->m_Items[6], v43, v41, v42);
   slideInTime = this->fields.slideInTime;
   v11 = j_il2cpp_value_box_0(float_TypeInfo, &slideInTime, v44, v45, v46, v47, v48, v49);
   v52 = (Il2CppObject *)v11;
   if ( v11 )
   {
-    v11 = sub_1C32D5C(v11, v10->obj.klass->_1.element_class);
+    v11 = sub_1C37194(v11, v10->obj.klass->_1.element_class);
     if ( !v11 )
       goto LABEL_62;
   }
   if ( LODWORD(v10->max_length) <= 7 )
     goto LABEL_61;
   v10->m_Items[7] = v52;
-  sub_1C32BC4((CGThumbnailListItem_o *)&v10->m_Items[7], (int32_t)v52, v50, v51);
-  v11 = StringLiteral_22427/*"oncomplete"*/;
-  if ( StringLiteral_22427/*"oncomplete"*/ )
+  sub_1C36FFC((CGThumbnailListItem_o *)&v10->m_Items[7], (int32_t)v52, v50, v51);
+  v11 = StringLiteral_22430/*"oncomplete"*/;
+  if ( StringLiteral_22430/*"oncomplete"*/ )
   {
-    v11 = sub_1C32D5C(StringLiteral_22427/*"oncomplete"*/, v10->obj.klass->_1.element_class);
+    v11 = sub_1C37194(StringLiteral_22430/*"oncomplete"*/, v10->obj.klass->_1.element_class);
     if ( !v11 )
       goto LABEL_62;
-    v55 = StringLiteral_22427/*"oncomplete"*/;
+    v55 = StringLiteral_22430/*"oncomplete"*/;
   }
   else
   {
@@ -586,14 +586,14 @@ LABEL_63:
   if ( LODWORD(v10->max_length) <= 8 )
     goto LABEL_61;
   v10->m_Items[8] = (Il2CppObject *)v55;
-  sub_1C32BC4((CGThumbnailListItem_o *)&v10->m_Items[8], v55, v53, v54);
-  v11 = StringLiteral_22390/*"onAnimEnd"*/;
-  if ( StringLiteral_22390/*"onAnimEnd"*/ )
+  sub_1C36FFC((CGThumbnailListItem_o *)&v10->m_Items[8], v55, v53, v54);
+  v11 = StringLiteral_22393/*"onAnimEnd"*/;
+  if ( StringLiteral_22393/*"onAnimEnd"*/ )
   {
-    v11 = sub_1C32D5C(StringLiteral_22390/*"onAnimEnd"*/, v10->obj.klass->_1.element_class);
+    v11 = sub_1C37194(StringLiteral_22393/*"onAnimEnd"*/, v10->obj.klass->_1.element_class);
     if ( !v11 )
       goto LABEL_62;
-    v58 = StringLiteral_22390/*"onAnimEnd"*/;
+    v58 = StringLiteral_22393/*"onAnimEnd"*/;
   }
   else
   {
@@ -602,14 +602,14 @@ LABEL_63:
   if ( LODWORD(v10->max_length) <= 9 )
     goto LABEL_61;
   v10->m_Items[9] = (Il2CppObject *)v58;
-  sub_1C32BC4((CGThumbnailListItem_o *)&v10->m_Items[9], v58, v56, v57);
-  v11 = StringLiteral_22429/*"oncompletetarget"*/;
-  if ( StringLiteral_22429/*"oncompletetarget"*/ )
+  sub_1C36FFC((CGThumbnailListItem_o *)&v10->m_Items[9], v58, v56, v57);
+  v11 = StringLiteral_22432/*"oncompletetarget"*/;
+  if ( StringLiteral_22432/*"oncompletetarget"*/ )
   {
-    v11 = sub_1C32D5C(StringLiteral_22429/*"oncompletetarget"*/, v10->obj.klass->_1.element_class);
+    v11 = sub_1C37194(StringLiteral_22432/*"oncompletetarget"*/, v10->obj.klass->_1.element_class);
     if ( !v11 )
       goto LABEL_62;
-    v61 = StringLiteral_22429/*"oncompletetarget"*/;
+    v61 = StringLiteral_22432/*"oncompletetarget"*/;
   }
   else
   {
@@ -618,26 +618,26 @@ LABEL_63:
   if ( LODWORD(v10->max_length) <= 0xA )
     goto LABEL_61;
   v10->m_Items[10] = (Il2CppObject *)v61;
-  sub_1C32BC4((CGThumbnailListItem_o *)&v10->m_Items[10], v61, v59, v60);
+  sub_1C36FFC((CGThumbnailListItem_o *)&v10->m_Items[10], v61, v59, v60);
   v11 = (__int64)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
   v64 = (Il2CppObject *)v11;
   if ( v11 )
   {
-    v11 = sub_1C32D5C(v11, v10->obj.klass->_1.element_class);
+    v11 = sub_1C37194(v11, v10->obj.klass->_1.element_class);
     if ( !v11 )
     {
 LABEL_62:
-      v66 = sub_1C32EA0(v11);
-      sub_1C32D48(v66, 0);
+      v66 = sub_1C372D8(v11);
+      sub_1C37180(v66, 0);
     }
   }
   if ( LODWORD(v10->max_length) <= 0xB )
 LABEL_61:
-    sub_1C32E84(v11);
+    sub_1C372BC(v11);
   v10->m_Items[11] = v64;
-  sub_1C32BC4((CGThumbnailListItem_o *)&v10->m_Items[11], (int32_t)v64, v62, v63);
+  sub_1C36FFC((CGThumbnailListItem_o *)&v10->m_Items[11], (int32_t)v64, v62, v63);
   if ( !iTween_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(iTween_TypeInfo);
   v65 = iTween__Hash(v10, 0);
-  iTween__MoveTo_63156108(gameObject, v65, 0);
+  iTween__MoveTo_63199220(gameObject, v65, 0);
 }

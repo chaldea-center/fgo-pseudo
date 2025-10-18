@@ -3,14 +3,14 @@ void EventPointVsResultAction___cctor(const MethodInfo *method)
   int32_t v1; // w2
   const MethodInfo *v2; // x3
 
-  if ( (byte_4C343FB & 1) == 0 )
+  if ( (byte_4C3F9E5 & 1) == 0 )
   {
-    sub_1C32C20(&EventPointVsResultAction_TypeInfo);
-    sub_1C32C20(&StringLiteral_17289/*"bit_vs_result_"*/);
-    byte_4C343FB = 1;
+    sub_1C37058(&EventPointVsResultAction_TypeInfo);
+    sub_1C37058(&StringLiteral_17291/*"bit_vs_result_"*/);
+    byte_4C3F9E5 = 1;
   }
-  EventPointVsResultAction_TypeInfo->static_fields->ANIMATION_NAME = (struct System_String_o *)StringLiteral_17289/*"bit_vs_result_"*/;
-  sub_1C32BC4((CGThumbnailListItem_o *)EventPointVsResultAction_TypeInfo->static_fields, StringLiteral_17289/*"bit_vs_result_"*/, v1, v2);
+  EventPointVsResultAction_TypeInfo->static_fields->ANIMATION_NAME = (struct System_String_o *)StringLiteral_17291/*"bit_vs_result_"*/;
+  sub_1C36FFC((CGThumbnailListItem_o *)EventPointVsResultAction_TypeInfo->static_fields, StringLiteral_17291/*"bit_vs_result_"*/, v1, v2);
 }
 
 
@@ -44,32 +44,32 @@ void EventPointVsResultAction__Awake(EventPointVsResultAction_o *this, const Met
   int32_t v22; // w2
   const MethodInfo *v23; // x3
 
-  if ( (byte_4C343F3 & 1) == 0 )
+  if ( (byte_4C3F9DD & 1) == 0 )
   {
-    sub_1C32C20(&Method_CStateManager_EventPointVsResultAction___ctor__);
-    sub_1C32C20(&Method_CStateManager_EventPointVsResultAction__add__);
-    sub_1C32C20(&CStateManager_EventPointVsResultAction__TypeInfo);
-    sub_1C32C20(&Method_UnityEngine_GameObject_GetComponentInChildren_UIUnityRenderer___);
-    sub_1C32C20(&Method_UnityEngine_Object_Instantiate_GameObject___);
-    sub_1C32C20(&UnityEngine_Object_TypeInfo);
-    sub_1C32C20(&EventPointVsResultAction_StateNone_TypeInfo);
-    sub_1C32C20(&EventPointVsResultAction_StatePlay_TypeInfo);
-    sub_1C32C20(&EventPointVsResultAction_StateTouchWait_TypeInfo);
-    byte_4C343F3 = 1;
+    sub_1C37058(&Method_CStateManager_EventPointVsResultAction___ctor__);
+    sub_1C37058(&Method_CStateManager_EventPointVsResultAction__add__);
+    sub_1C37058(&CStateManager_EventPointVsResultAction__TypeInfo);
+    sub_1C37058(&Method_UnityEngine_GameObject_GetComponentInChildren_UIUnityRenderer___);
+    sub_1C37058(&Method_UnityEngine_Object_Instantiate_GameObject___);
+    sub_1C37058(&UnityEngine_Object_TypeInfo);
+    sub_1C37058(&EventPointVsResultAction_StateNone_TypeInfo);
+    sub_1C37058(&EventPointVsResultAction_StatePlay_TypeInfo);
+    sub_1C37058(&EventPointVsResultAction_StateTouchWait_TypeInfo);
+    byte_4C3F9DD = 1;
   }
   p_mFSM = &this->fields.mFSM;
   if ( !this->fields.mFSM )
   {
-    v4 = (CStateManager_T__o *)sub_1C32E6C(CStateManager_EventPointVsResultAction__TypeInfo);
+    v4 = (CStateManager_T__o *)sub_1C372A4(CStateManager_EventPointVsResultAction__TypeInfo);
     CStateManager_object____ctor(
       v4,
       (Il2CppObject *)this,
       3,
-      (const MethodInfo_3322708 *)Method_CStateManager_EventPointVsResultAction___ctor__);
+      (const MethodInfo_332CF70 *)Method_CStateManager_EventPointVsResultAction___ctor__);
     this->fields.mFSM = (struct CStateManager_EventPointVsResultAction__o *)v4;
-    sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.mFSM, (int32_t)v4, v5, v6);
+    sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.mFSM, (int32_t)v4, v5, v6);
     mFSM = (CStateManager_T__o *)this->fields.mFSM;
-    v8 = (Il2CppObject *)sub_1C32E6C(EventPointVsResultAction_StateNone_TypeInfo);
+    v8 = (Il2CppObject *)sub_1C372A4(EventPointVsResultAction_StateNone_TypeInfo);
     System_Object___ctor(v8, 0);
     if ( !mFSM )
       goto LABEL_23;
@@ -77,9 +77,9 @@ void EventPointVsResultAction__Awake(EventPointVsResultAction_o *this, const Met
       mFSM,
       0,
       (IState_T__o *)v8,
-      (const MethodInfo_33227B0 *)Method_CStateManager_EventPointVsResultAction__add__);
+      (const MethodInfo_332D018 *)Method_CStateManager_EventPointVsResultAction__add__);
     v10 = (CStateManager_T__o *)*p_mFSM;
-    v11 = (Il2CppObject *)sub_1C32E6C(EventPointVsResultAction_StatePlay_TypeInfo);
+    v11 = (Il2CppObject *)sub_1C372A4(EventPointVsResultAction_StatePlay_TypeInfo);
     System_Object___ctor(v11, 0);
     if ( !v10 )
       goto LABEL_23;
@@ -87,9 +87,9 @@ void EventPointVsResultAction__Awake(EventPointVsResultAction_o *this, const Met
       v10,
       1,
       (IState_T__o *)v11,
-      (const MethodInfo_33227B0 *)Method_CStateManager_EventPointVsResultAction__add__);
+      (const MethodInfo_332D018 *)Method_CStateManager_EventPointVsResultAction__add__);
     v12 = (CStateManager_T__o *)*p_mFSM;
-    v13 = (Il2CppObject *)sub_1C32E6C(EventPointVsResultAction_StateTouchWait_TypeInfo);
+    v13 = (Il2CppObject *)sub_1C372A4(EventPointVsResultAction_StateTouchWait_TypeInfo);
     System_Object___ctor(v13, 0);
     if ( !v12 )
       goto LABEL_23;
@@ -97,7 +97,7 @@ void EventPointVsResultAction__Awake(EventPointVsResultAction_o *this, const Met
       v12,
       2,
       (IState_T__o *)v13,
-      (const MethodInfo_33227B0 *)Method_CStateManager_EventPointVsResultAction__add__);
+      (const MethodInfo_332D018 *)Method_CStateManager_EventPointVsResultAction__add__);
     EventPointVsResultAction__SetState(this, 0, v14);
   }
   p_particleObj = (CGThumbnailListItem_o *)&this->fields.particleObj;
@@ -116,14 +116,14 @@ void EventPointVsResultAction__Awake(EventPointVsResultAction_o *this, const Met
         j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
       v19 = UnityEngine_Object__Instantiate_object_(
               v18,
-              (const MethodInfo_3169758 *)Method_UnityEngine_Object_Instantiate_GameObject___);
+              (const MethodInfo_3173FC0 *)Method_UnityEngine_Object_Instantiate_GameObject___);
       if ( UnityEngine_Object__op_Inequality((UnityEngine_Object_o *)v19, 0, 0) )
       {
         GameObjectExtensions__SafeSetParent((UnityEngine_GameObject_o *)v19, (UnityEngine_Component_o *)this, v20);
-        if ( !byte_4C313D1 )
+        if ( !byte_4C3C921 )
         {
-          sub_1C32C20(&UnityEngine_Vector3_TypeInfo);
-          byte_4C313D1 = 1;
+          sub_1C37058(&UnityEngine_Vector3_TypeInfo);
+          byte_4C3C921 = 1;
         }
         GameObjectExtensions__SetLocalPosition(
           (UnityEngine_GameObject_o *)v19,
@@ -133,17 +133,17 @@ void EventPointVsResultAction__Awake(EventPointVsResultAction_o *this, const Met
         {
           ComponentInChildren_object = UnityEngine_GameObject__GetComponentInChildren_object_(
                                          (UnityEngine_GameObject_o *)v19,
-                                         (const MethodInfo_3134BD4 *)Method_UnityEngine_GameObject_GetComponentInChildren_UIUnityRenderer___);
+                                         (const MethodInfo_313F43C *)Method_UnityEngine_GameObject_GetComponentInChildren_UIUnityRenderer___);
           if ( ComponentInChildren_object )
           {
             UIWidget__set_depth((UIWidget_o *)ComponentInChildren_object, 0, 0);
             p_particleObj->klass = (CGThumbnailListItem_c *)v19;
-            sub_1C32BC4(p_particleObj, (int32_t)v19, v22, v23);
+            sub_1C36FFC(p_particleObj, (int32_t)v19, v22, v23);
             return;
           }
         }
 LABEL_23:
-        sub_1C32E7C(ComponentInChildren_object);
+        sub_1C372B4(ComponentInChildren_object);
       }
     }
   }
@@ -162,14 +162,14 @@ int32_t EventPointVsResultAction__GetState(EventPointVsResultAction_o *this, con
   struct CStateManager_EventPointVsResultAction__o *mFSM; // x8
 
   v2 = this;
-  if ( (byte_4C343F9 & 1) == 0 )
+  if ( (byte_4C3F9E3 & 1) == 0 )
   {
-    this = (EventPointVsResultAction_o *)sub_1C32C20(&Method_CStateManager_EventPointVsResultAction__getState__);
-    byte_4C343F9 = 1;
+    this = (EventPointVsResultAction_o *)sub_1C37058(&Method_CStateManager_EventPointVsResultAction__getState__);
+    byte_4C3F9E3 = 1;
   }
   mFSM = v2->fields.mFSM;
   if ( !mFSM )
-    sub_1C32E7C(this);
+    sub_1C372B4(this);
   return mFSM->fields.m_state;
 }
 
@@ -208,30 +208,30 @@ void EventPointVsResultAction__LoadSvts(
 
   while ( 1 )
   {
-    if ( (byte_4C343F8 & 1) == 0 )
+    if ( (byte_4C3F9E2 & 1) == 0 )
     {
-      sub_1C32C20(&System_Action_TypeInfo);
-      sub_1C32C20(&Method_EventPointVsResultAction___c__DisplayClass23_0__LoadSvts_b__0__);
-      sub_1C32C20(&EventPointVsResultAction___c__DisplayClass23_0_TypeInfo);
-      byte_4C343F8 = 1;
+      sub_1C37058(&System_Action_TypeInfo);
+      sub_1C37058(&Method_EventPointVsResultAction___c__DisplayClass23_0__LoadSvts_b__0__);
+      sub_1C37058(&EventPointVsResultAction___c__DisplayClass23_0_TypeInfo);
+      byte_4C3F9E2 = 1;
     }
-    v13 = sub_1C32E6C(EventPointVsResultAction___c__DisplayClass23_0_TypeInfo);
+    v13 = sub_1C372A4(EventPointVsResultAction___c__DisplayClass23_0_TypeInfo);
     System_Object___ctor((Il2CppObject *)v13, 0);
     if ( !v13 )
       goto LABEL_18;
     *(_QWORD *)(v13 + 16) = this;
-    sub_1C32BC4((CGThumbnailListItem_o *)(v13 + 16), (int32_t)this, v15, v16);
+    sub_1C36FFC((CGThumbnailListItem_o *)(v13 + 16), (int32_t)this, v15, v16);
     *(_DWORD *)(v13 + 24) = cnt;
     *(_QWORD *)(v13 + 32) = servants;
     v17 = (System_Int32_array **)(v13 + 32);
-    sub_1C32BC4((CGThumbnailListItem_o *)(v13 + 32), (int32_t)servants, v18, v19);
+    sub_1C36FFC((CGThumbnailListItem_o *)(v13 + 32), (int32_t)servants, v18, v19);
     *(_QWORD *)(v13 + 40) = faces;
     v20 = (Face_Type_array **)(v13 + 40);
-    sub_1C32BC4((CGThumbnailListItem_o *)(v13 + 40), (int32_t)faces, v21, v22);
+    sub_1C36FFC((CGThumbnailListItem_o *)(v13 + 40), (int32_t)faces, v21, v22);
     *(_QWORD *)(v13 + 56) = callBack;
     v23 = (System_Action_o **)(v13 + 56);
     *(_DWORD *)(v13 + 48) = winType;
-    sub_1C32BC4((CGThumbnailListItem_o *)(v13 + 56), (int32_t)callBack, v24, v25);
+    sub_1C36FFC((CGThumbnailListItem_o *)(v13 + 56), (int32_t)callBack, v24, v25);
     v26 = *(int *)(v13 + 24);
     if ( (int)v26 > 2 )
       goto LABEL_10;
@@ -264,12 +264,12 @@ LABEL_10:
     goto LABEL_18;
   if ( (unsigned int)v26 >= LODWORD(v29->max_length) )
 LABEL_19:
-    sub_1C32E84(v14);
+    sub_1C372BC(v14);
   v30 = (char *)servants + 4 * v26;
   v31 = v29->m_Items[v26];
   v32 = SvtComponents->m_Items[v26];
   v33 = *((_DWORD *)v30 + 8);
-  v34 = (System_Action_o *)sub_1C32E6C(System_Action_TypeInfo);
+  v34 = (System_Action_o *)sub_1C372A4(System_Action_TypeInfo);
   System_Action___ctor(
     v34,
     (Il2CppObject *)v13,
@@ -277,8 +277,8 @@ LABEL_19:
     0);
   if ( !v32 )
 LABEL_18:
-    sub_1C32E7C(v14);
-  UIStandFigureR__SetCharacter_43951456(v32, v33 / 10, v33 % 10, 0, v31, v34, 0);
+    sub_1C372B4(v14);
+  UIStandFigureR__SetCharacter_44053560(v32, v33 / 10, v33 % 10, 0, v31, v34, 0);
 }
 
 
@@ -306,19 +306,19 @@ void EventPointVsResultAction__Play(
   AvalonSceneManager_c *v23; // x0
   System_Action_o *v24; // x21
 
-  if ( (byte_4C343F7 & 1) == 0 )
+  if ( (byte_4C3F9E1 & 1) == 0 )
   {
-    sub_1C32C20(&System_Action_TypeInfo);
-    sub_1C32C20(&AvalonSceneManager_TypeInfo);
-    sub_1C32C20(&Method_EventPointVsResultAction__Play_b__22_0__);
-    sub_1C32C20(&UnityEngine_Object_TypeInfo);
-    sub_1C32C20(&SimpleAnimation_State_TypeInfo);
-    byte_4C343F7 = 1;
+    sub_1C37058(&System_Action_TypeInfo);
+    sub_1C37058(&AvalonSceneManager_TypeInfo);
+    sub_1C37058(&Method_EventPointVsResultAction__Play_b__22_0__);
+    sub_1C37058(&UnityEngine_Object_TypeInfo);
+    sub_1C37058(&SimpleAnimation_State_TypeInfo);
+    byte_4C3F9E1 = 1;
   }
   this->fields.mEndAct = end_act;
-  sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.mEndAct, (int32_t)end_act, (int32_t)maskFade, method);
+  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.mEndAct, (int32_t)end_act, (int32_t)maskFade, method);
   this->fields.localMask = maskFade;
-  sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.localMask, (int32_t)maskFade, v9, v10);
+  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.localMask, (int32_t)maskFade, v9, v10);
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
   if ( !gameObject )
     goto LABEL_30;
@@ -357,7 +357,7 @@ void EventPointVsResultAction__Play(
     else
     {
 LABEL_14:
-      v19 = sub_1C83438(gameObject, SimpleAnimation_State_TypeInfo, 8);
+      v19 = sub_1C87870(gameObject, SimpleAnimation_State_TypeInfo, 8);
     }
     (*(void (__fastcall **)(UnityEngine_GameObject_o *, _QWORD, float))v19)(v16, *(_QWORD *)(v19 + 8), 0.0);
   }
@@ -392,11 +392,11 @@ LABEL_14:
     }
     fade_in_time = v23->static_fields->DEFAULT_FADE_TIME;
   }
-  v24 = (System_Action_o *)sub_1C32E6C(System_Action_TypeInfo);
+  v24 = (System_Action_o *)sub_1C372A4(System_Action_TypeInfo);
   System_Action___ctor(v24, (Il2CppObject *)this, Method_EventPointVsResultAction__Play_b__22_0__, 0);
   if ( !maskFade )
 LABEL_30:
-    sub_1C32E7C(gameObject);
+    sub_1C372B4(gameObject);
   MaskFade__Fadein(maskFade, fade_in_time, v24, 0);
 }
 
@@ -405,18 +405,18 @@ void EventPointVsResultAction__SetState(EventPointVsResultAction_o *this, int32_
 {
   CStateManager_T__o *mFSM; // x0
 
-  if ( (byte_4C343FA & 1) == 0 )
+  if ( (byte_4C3F9E4 & 1) == 0 )
   {
-    sub_1C32C20(&Method_CStateManager_EventPointVsResultAction__setState__);
-    byte_4C343FA = 1;
+    sub_1C37058(&Method_CStateManager_EventPointVsResultAction__setState__);
+    byte_4C3F9E4 = 1;
   }
   mFSM = (CStateManager_T__o *)this->fields.mFSM;
   if ( !mFSM )
-    sub_1C32E7C(0);
+    sub_1C372B4(0);
   CStateManager_object___setState(
     mFSM,
     state,
-    (const MethodInfo_332283C *)Method_CStateManager_EventPointVsResultAction__setState__);
+    (const MethodInfo_332D0A4 *)Method_CStateManager_EventPointVsResultAction__setState__);
 }
 
 
@@ -441,36 +441,36 @@ void EventPointVsResultAction__Setup(
   System_Action_o *v20; // x24
   const MethodInfo *v21; // x6
 
-  if ( (byte_4C343F5 & 1) == 0 )
+  if ( (byte_4C3F9DF & 1) == 0 )
   {
-    sub_1C32C20(&System_Action_TypeInfo);
-    sub_1C32C20(&Method_EventPointVsResultAction___c__DisplayClass19_0__Setup_b__0__);
-    sub_1C32C20(&EventPointVsResultAction___c__DisplayClass19_0_TypeInfo);
-    byte_4C343F5 = 1;
+    sub_1C37058(&System_Action_TypeInfo);
+    sub_1C37058(&Method_EventPointVsResultAction___c__DisplayClass19_0__Setup_b__0__);
+    sub_1C37058(&EventPointVsResultAction___c__DisplayClass19_0_TypeInfo);
+    byte_4C3F9DF = 1;
   }
-  v9 = sub_1C32E6C(EventPointVsResultAction___c__DisplayClass19_0_TypeInfo);
+  v9 = sub_1C372A4(EventPointVsResultAction___c__DisplayClass19_0_TypeInfo);
   System_Object___ctor((Il2CppObject *)v9, 0);
   if ( !v9 )
     goto LABEL_8;
   *(_QWORD *)(v9 + 16) = this;
-  sub_1C32BC4((CGThumbnailListItem_o *)(v9 + 16), (int32_t)this, v11, v12);
+  sub_1C36FFC((CGThumbnailListItem_o *)(v9 + 16), (int32_t)this, v11, v12);
   *(_QWORD *)(v9 + 32) = callBack;
   *(_DWORD *)(v9 + 24) = resultNo;
-  sub_1C32BC4((CGThumbnailListItem_o *)(v9 + 32), (int32_t)callBack, v13, v14);
+  sub_1C36FFC((CGThumbnailListItem_o *)(v9 + 32), (int32_t)callBack, v13, v14);
   resultSvts = this->fields.resultSvts;
   this->fields.winType = winType;
   if ( !resultSvts )
     goto LABEL_8;
   v16 = *(_DWORD *)(v9 + 24) - 1;
   if ( (unsigned int)v16 >= LODWORD(resultSvts->max_length) )
-    sub_1C32E84(v10);
+    sub_1C372BC(v10);
   v17 = resultSvts->m_Items[v16];
   if ( !v17 )
 LABEL_8:
-    sub_1C32E7C(v10);
+    sub_1C372B4(v10);
   servIds = v17->fields.servIds;
   FaceIds = v17->fields.FaceIds;
-  v20 = (System_Action_o *)sub_1C32E6C(System_Action_TypeInfo);
+  v20 = (System_Action_o *)sub_1C372A4(System_Action_TypeInfo);
   System_Action___ctor(v20, (Il2CppObject *)v9, Method_EventPointVsResultAction___c__DisplayClass19_0__Setup_b__0__, 0);
   EventPointVsResultAction__LoadSvts(this, 0, servIds, FaceIds, winType, v20, v21);
 }
@@ -480,16 +480,16 @@ void EventPointVsResultAction__Update(EventPointVsResultAction_o *this, const Me
 {
   CStateManager_T__o *mFSM; // x0
 
-  if ( (byte_4C343F4 & 1) == 0 )
+  if ( (byte_4C3F9DE & 1) == 0 )
   {
-    sub_1C32C20(&Method_CStateManager_EventPointVsResultAction__update__);
-    byte_4C343F4 = 1;
+    sub_1C37058(&Method_CStateManager_EventPointVsResultAction__update__);
+    byte_4C3F9DE = 1;
   }
   mFSM = (CStateManager_T__o *)this->fields.mFSM;
   if ( mFSM )
     CStateManager_object___update(
       mFSM,
-      (const MethodInfo_3322818 *)Method_CStateManager_EventPointVsResultAction__update__);
+      (const MethodInfo_332D080 *)Method_CStateManager_EventPointVsResultAction__update__);
 }
 
 
@@ -507,7 +507,7 @@ void EventPointVsResultAction__setupLocal(
         const MethodInfo *method)
 {
   UnityEngine_Component_o *transform; // x0
-  Il2CppObject *ComponentInChildren_object__51199524; // x0
+  Il2CppObject *ComponentInChildren_object__51242636; // x0
   int32_t v7; // w2
   const MethodInfo *v8; // x3
   Il2CppObject *v9; // x0
@@ -527,44 +527,44 @@ void EventPointVsResultAction__setupLocal(
   const MethodInfo *v23; // x3
   int32_t winType; // [xsp+Ch] [xbp-34h] BYREF
 
-  if ( (byte_4C343F6 & 1) == 0 )
+  if ( (byte_4C3F9E0 & 1) == 0 )
   {
-    sub_1C32C20(&Method_UnityEngine_Component_GetComponentInChildren_Animation___);
-    sub_1C32C20(&Method_UnityEngine_Component_GetComponentInChildren_CommonEffectComponent___);
-    sub_1C32C20(&Method_UnityEngine_Component_GetComponentInChildren_SimpleAnimation___);
-    sub_1C32C20(&EventPointVsResultAction_TypeInfo);
-    sub_1C32C20(&Method_UnityEngine_GameObject_GetComponent_ScreenTouchInformationComponent___);
-    sub_1C32C20(&UnityEngine_Object_TypeInfo);
-    sub_1C32C20(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
-    byte_4C343F6 = 1;
+    sub_1C37058(&Method_UnityEngine_Component_GetComponentInChildren_Animation___);
+    sub_1C37058(&Method_UnityEngine_Component_GetComponentInChildren_CommonEffectComponent___);
+    sub_1C37058(&Method_UnityEngine_Component_GetComponentInChildren_SimpleAnimation___);
+    sub_1C37058(&EventPointVsResultAction_TypeInfo);
+    sub_1C37058(&Method_UnityEngine_GameObject_GetComponent_ScreenTouchInformationComponent___);
+    sub_1C37058(&UnityEngine_Object_TypeInfo);
+    sub_1C37058(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+    byte_4C3F9E0 = 1;
   }
   winType = 0;
   transform = (UnityEngine_Component_o *)UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0);
   if ( !transform )
     goto LABEL_19;
-  ComponentInChildren_object__51199524 = UnityEngine_Component__GetComponentInChildren_object__51199524(
+  ComponentInChildren_object__51242636 = UnityEngine_Component__GetComponentInChildren_object__51242636(
                                            transform,
-                                           (const MethodInfo_30D3E24 *)Method_UnityEngine_Component_GetComponentInChildren_SimpleAnimation___);
-  this->fields.mSimpleAnimation = (struct SimpleAnimation_o *)ComponentInChildren_object__51199524;
-  sub_1C32BC4(
+                                           (const MethodInfo_30DE68C *)Method_UnityEngine_Component_GetComponentInChildren_SimpleAnimation___);
+  this->fields.mSimpleAnimation = (struct SimpleAnimation_o *)ComponentInChildren_object__51242636;
+  sub_1C36FFC(
     (CGThumbnailListItem_o *)&this->fields.mSimpleAnimation,
-    (int32_t)ComponentInChildren_object__51199524,
+    (int32_t)ComponentInChildren_object__51242636,
     v7,
     v8);
   transform = (UnityEngine_Component_o *)UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0);
   if ( !transform )
     goto LABEL_19;
-  v9 = UnityEngine_Component__GetComponentInChildren_object__51199524(
+  v9 = UnityEngine_Component__GetComponentInChildren_object__51242636(
          transform,
-         (const MethodInfo_30D3E24 *)Method_UnityEngine_Component_GetComponentInChildren_Animation___);
+         (const MethodInfo_30DE68C *)Method_UnityEngine_Component_GetComponentInChildren_Animation___);
   this->fields.mAnimation = (struct UnityEngine_Animation_o *)v9;
-  sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.mAnimation, (int32_t)v9, v10, v11);
+  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.mAnimation, (int32_t)v9, v10, v11);
   transform = (UnityEngine_Component_o *)UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0);
   if ( !transform )
     goto LABEL_19;
-  transform = (UnityEngine_Component_o *)UnityEngine_Component__GetComponentInChildren_object__51199524(
+  transform = (UnityEngine_Component_o *)UnityEngine_Component__GetComponentInChildren_object__51242636(
                                            transform,
-                                           (const MethodInfo_30D3E24 *)Method_UnityEngine_Component_GetComponentInChildren_CommonEffectComponent___);
+                                           (const MethodInfo_30DE68C *)Method_UnityEngine_Component_GetComponentInChildren_CommonEffectComponent___);
   if ( !transform )
     goto LABEL_19;
   BYTE5(transform[4].monitor) = 1;
@@ -577,7 +577,7 @@ void EventPointVsResultAction__setupLocal(
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   if ( UnityEngine_Object__op_Equality(mScreenTouchInfo, 0, 0) )
   {
-    Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39E2904 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+    Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39ED16C *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
     transform = (UnityEngine_Component_o *)UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0);
     if ( !Instance )
       goto LABEL_19;
@@ -590,9 +590,9 @@ void EventPointVsResultAction__setupLocal(
       goto LABEL_19;
     Component_object = UnityEngine_GameObject__GetComponent_object_(
                          (UnityEngine_GameObject_o *)transform,
-                         (const MethodInfo_3134970 *)Method_UnityEngine_GameObject_GetComponent_ScreenTouchInformationComponent___);
+                         (const MethodInfo_313F1D8 *)Method_UnityEngine_GameObject_GetComponent_ScreenTouchInformationComponent___);
     this->fields.mScreenTouchInfo = (struct ScreenTouchInformationComponent_o *)Component_object;
-    sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.mScreenTouchInfo, (int32_t)Component_object, v15, v16);
+    sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.mScreenTouchInfo, (int32_t)Component_object, v15, v16);
   }
   v17 = EventPointVsResultAction_TypeInfo;
   if ( !EventPointVsResultAction_TypeInfo->_2.cctor_finished )
@@ -603,14 +603,14 @@ void EventPointVsResultAction__setupLocal(
   ANIMATION_NAME = v17->static_fields->ANIMATION_NAME;
   winType = this->fields.winType;
   v19 = System_Int32__ToString((int32_t)&winType, 0);
-  v20 = System_String__Concat_63518544(ANIMATION_NAME, v19, 0);
+  v20 = System_String__Concat_63561656(ANIMATION_NAME, v19, 0);
   this->fields.animationName = v20;
   p_animationName = &this->fields.animationName;
-  sub_1C32BC4((CGThumbnailListItem_o *)p_animationName, (int32_t)v20, v22, v23);
+  sub_1C36FFC((CGThumbnailListItem_o *)p_animationName, (int32_t)v20, v22, v23);
   transform = (UnityEngine_Component_o *)*(p_animationName - 3);
   if ( !transform || (transform = (UnityEngine_Component_o *)UnityEngine_Component__get_gameObject(transform, 0)) == 0 )
 LABEL_19:
-    sub_1C32E7C(transform);
+    sub_1C372B4(transform);
   UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)transform, 0, 0);
   ActionExtensions__Call(callBack, 0);
 }
@@ -690,11 +690,11 @@ void EventPointVsResultAction_StatePlay__begin(
   __int64 v31; // x0
 
   v4 = this;
-  if ( (byte_4C343FC & 1) == 0 )
+  if ( (byte_4C3F9E6 & 1) == 0 )
   {
-    sub_1C32C20(&UnityEngine_Object_TypeInfo);
-    this = (EventPointVsResultAction_StatePlay_o *)sub_1C32C20(&SimpleAnimation_State_TypeInfo);
-    byte_4C343FC = 1;
+    sub_1C37058(&UnityEngine_Object_TypeInfo);
+    this = (EventPointVsResultAction_StatePlay_o *)sub_1C37058(&SimpleAnimation_State_TypeInfo);
+    byte_4C3F9E6 = 1;
   }
   if ( !that )
     goto LABEL_43;
@@ -711,14 +711,14 @@ void EventPointVsResultAction_StatePlay__begin(
     this = (EventPointVsResultAction_StatePlay_o *)that->fields.mAnimation;
     if ( this )
     {
-      UnityEngine_Animation__Play_70968924((UnityEngine_Animation_o *)this, that->fields.animationName, 0);
+      UnityEngine_Animation__Play_71012036((UnityEngine_Animation_o *)this, that->fields.animationName, 0);
       this = (EventPointVsResultAction_StatePlay_o *)that->fields.mAnimation;
       if ( this )
       {
         Item = UnityEngine_Animation__get_Item((UnityEngine_Animation_o *)this, that->fields.animationName, 0);
         v4->fields.mAnimState = Item;
         p_mAnimState = (CGThumbnailListItem_o *)&v4->fields.mAnimState;
-        sub_1C32BC4(p_mAnimState, (int32_t)Item, v19, v20);
+        sub_1C36FFC(p_mAnimState, (int32_t)Item, v19, v20);
         this = (EventPointVsResultAction_StatePlay_o *)p_mAnimState->klass;
         if ( p_mAnimState->klass )
         {
@@ -745,19 +745,19 @@ void EventPointVsResultAction_StatePlay__begin(
       }
     }
 LABEL_43:
-    sub_1C32E7C(this);
+    sub_1C372B4(this);
   }
   this = (EventPointVsResultAction_StatePlay_o *)that->fields.mSimpleAnimation;
   if ( !this )
     goto LABEL_43;
-  SimpleAnimation__Play_66464300((SimpleAnimation_o *)this, that->fields.animationName, 0);
+  SimpleAnimation__Play_66507412((SimpleAnimation_o *)this, that->fields.animationName, 0);
   this = (EventPointVsResultAction_StatePlay_o *)that->fields.mSimpleAnimation;
   if ( !this )
     goto LABEL_43;
   v6 = SimpleAnimation__get_Item((SimpleAnimation_o *)this, that->fields.animationName, 0);
   v4->fields.mSimpleAnimState = v6;
   p_fields = (CGThumbnailListItem_o *)&v4->fields;
-  sub_1C32BC4(p_fields, (int32_t)v6, v8, v9);
+  sub_1C36FFC(p_fields, (int32_t)v6, v8, v9);
   klass = p_fields->klass;
   if ( !p_fields->klass )
     goto LABEL_43;
@@ -779,7 +779,7 @@ LABEL_43:
   else
   {
 LABEL_14:
-    v15 = sub_1C83438(p_fields->klass, SimpleAnimation_State_TypeInfo, 14);
+    v15 = sub_1C87870(p_fields->klass, SimpleAnimation_State_TypeInfo, 14);
   }
   this = (EventPointVsResultAction_StatePlay_o *)(*(__int64 (__fastcall **)(CGThumbnailListItem_c *, _QWORD))v15)(
                                                    klass,
@@ -807,7 +807,7 @@ LABEL_14:
   else
   {
 LABEL_33:
-    v26 = sub_1C83438(p_fields->klass, SimpleAnimation_State_TypeInfo, 6);
+    v26 = sub_1C87870(p_fields->klass, SimpleAnimation_State_TypeInfo, 6);
   }
   this = (EventPointVsResultAction_StatePlay_o *)(*(__int64 (__fastcall **)(CGThumbnailListItem_c *, _QWORD, float))v26)(
                                                    v22,
@@ -833,7 +833,7 @@ LABEL_33:
   else
   {
 LABEL_40:
-    v31 = sub_1C83438(v27, SimpleAnimation_State_TypeInfo, 8);
+    v31 = sub_1C87870(v27, SimpleAnimation_State_TypeInfo, 8);
   }
   (*(void (__fastcall **)(CGThumbnailListItem_c *, _QWORD, float))v31)(v27, *(_QWORD *)(v31 + 8), 1.0);
 }
@@ -870,10 +870,10 @@ void EventPointVsResultAction_StatePlay__update(
   const MethodInfo *v19; // x2
   struct MaskFade_o *localMask; // x8
 
-  if ( (byte_4C343FD & 1) == 0 )
+  if ( (byte_4C3F9E7 & 1) == 0 )
   {
-    sub_1C32C20(&SimpleAnimation_State_TypeInfo);
-    byte_4C343FD = 1;
+    sub_1C37058(&SimpleAnimation_State_TypeInfo);
+    byte_4C3F9E7 = 1;
   }
   mSimpleAnimState = this->fields.mSimpleAnimState;
   if ( mSimpleAnimState )
@@ -895,7 +895,7 @@ void EventPointVsResultAction_StatePlay__update(
     else
     {
 LABEL_8:
-      v9 = sub_1C83438(this->fields.mSimpleAnimState, SimpleAnimation_State_TypeInfo, 3);
+      v9 = sub_1C87870(this->fields.mSimpleAnimState, SimpleAnimation_State_TypeInfo, 3);
     }
     mAnimState = (UnityEngine_AnimationState_o *)(*(__int64 (__fastcall **)(struct SimpleAnimation_State_o *, _QWORD))v9)(
                                                    mSimpleAnimState,
@@ -921,7 +921,7 @@ LABEL_8:
     else
     {
 LABEL_20:
-      v18 = sub_1C83438(v14, SimpleAnimation_State_TypeInfo, 14);
+      v18 = sub_1C87870(v14, SimpleAnimation_State_TypeInfo, 14);
     }
     mAnimState = (UnityEngine_AnimationState_o *)(*(__int64 (__fastcall **)(struct SimpleAnimation_State_o *, _QWORD))v18)(
                                                    v14,
@@ -949,7 +949,7 @@ LABEL_20:
     return;
   if ( !that || (localMask = that->fields.localMask) == 0 )
 LABEL_29:
-    sub_1C32E7C(mAnimState);
+    sub_1C372B4(mAnimState);
   if ( !localMask->fields.isExecuteMask )
     EventPointVsResultAction__SetState(that, 2, v19);
 }
@@ -974,7 +974,7 @@ void EventPointVsResultAction_StateTouchWait__begin(
                                                               (UnityEngine_Component_o *)this,
                                                               0)) == 0 )
   {
-    sub_1C32E7C(this);
+    sub_1C372B4(this);
   }
   UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)this, 1, 0);
 }
@@ -1007,23 +1007,23 @@ void EventPointVsResultAction_StateTouchWait__update(
   System_Action_o *v14; // x22
   const MethodInfo *v15; // x2
 
-  if ( (byte_4C343FE & 1) == 0 )
+  if ( (byte_4C3F9E8 & 1) == 0 )
   {
-    sub_1C32C20(&System_Action_TypeInfo);
-    sub_1C32C20(&AvalonSceneManager_TypeInfo);
-    sub_1C32C20(&CTouch_TypeInfo);
-    sub_1C32C20(&Method_EventPointVsResultAction_StateTouchWait_update__);
-    sub_1C32C20(&Method_EventPointVsResultAction_StateTouchWait___c__DisplayClass1_0__update_b__0__);
-    sub_1C32C20(&EventPointVsResultAction_StateTouchWait___c__DisplayClass1_0_TypeInfo);
-    byte_4C343FE = 1;
+    sub_1C37058(&System_Action_TypeInfo);
+    sub_1C37058(&AvalonSceneManager_TypeInfo);
+    sub_1C37058(&CTouch_TypeInfo);
+    sub_1C37058(&Method_EventPointVsResultAction_StateTouchWait_update__);
+    sub_1C37058(&Method_EventPointVsResultAction_StateTouchWait___c__DisplayClass1_0__update_b__0__);
+    sub_1C37058(&EventPointVsResultAction_StateTouchWait___c__DisplayClass1_0_TypeInfo);
+    byte_4C3F9E8 = 1;
   }
-  v4 = sub_1C32E6C(EventPointVsResultAction_StateTouchWait___c__DisplayClass1_0_TypeInfo);
+  v4 = sub_1C372A4(EventPointVsResultAction_StateTouchWait___c__DisplayClass1_0_TypeInfo);
   System_Object___ctor((Il2CppObject *)v4, 0);
   if ( !v4 )
     goto LABEL_19;
   *(_QWORD *)(v4 + 16) = that;
   v8 = v4 + 16;
-  sub_1C32BC4((CGThumbnailListItem_o *)(v4 + 16), (int32_t)that, v6, v7);
+  sub_1C36FFC((CGThumbnailListItem_o *)(v4 + 16), (int32_t)that, v6, v7);
   if ( !CTouch_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(CTouch_TypeInfo);
   isTouchPush = (UnityEngine_GameObject_o *)CTouch__isTouchPush(0);
@@ -1040,8 +1040,8 @@ void EventPointVsResultAction_StateTouchWait__update(
           UnityEngine_GameObject__SetActive(isTouchPush, 0, 0);
           v9 = Method_EventPointVsResultAction_StateTouchWait_update__;
           if ( (*((_BYTE *)Method_EventPointVsResultAction_StateTouchWait_update__ + 83) & 2) != 0 )
-            v9 = (_QWORD *)sub_1C32C38(Method_EventPointVsResultAction_StateTouchWait_update__);
-          v10 = (System_Reflection_MethodBase_o *)sub_1C32C04(v9, v9[4]);
+            v9 = (_QWORD *)sub_1C37070(Method_EventPointVsResultAction_StateTouchWait_update__);
+          v10 = (System_Reflection_MethodBase_o *)sub_1C3703C(v9, v9[4]);
           OverwriteAssetSoundName__PlaySystemSe(v10, 0, 0, 0);
           if ( *(_QWORD *)v8 )
           {
@@ -1053,7 +1053,7 @@ void EventPointVsResultAction_StateTouchWait__update(
               v12 = AvalonSceneManager_TypeInfo;
             }
             DEFAULT_FADE_TIME = v12->static_fields->DEFAULT_FADE_TIME;
-            v14 = (System_Action_o *)sub_1C32E6C(System_Action_TypeInfo);
+            v14 = (System_Action_o *)sub_1C372A4(System_Action_TypeInfo);
             System_Action___ctor(
               v14,
               (Il2CppObject *)v4,
@@ -1074,7 +1074,7 @@ void EventPointVsResultAction_StateTouchWait__update(
       }
     }
 LABEL_19:
-    sub_1C32E7C(isTouchPush);
+    sub_1C372B4(isTouchPush);
   }
 }
 
@@ -1095,7 +1095,7 @@ void EventPointVsResultAction_StateTouchWait___c__DisplayClass1_0___update_b__0(
 
   that = this->fields.that;
   if ( !that )
-    sub_1C32E7C(this);
+    sub_1C372B4(this);
   ActionExtensions__Call(that->fields.mEndAct, 0);
 }
 
@@ -1132,13 +1132,13 @@ void EventPointVsResultAction___c__DisplayClass19_0___Setup_b__0(
   int32_t v19; // [xsp+Ch] [xbp-34h] BYREF
 
   v8 = this;
-  if ( (byte_4C343FF & 1) == 0 )
+  if ( (byte_4C3F9E9 & 1) == 0 )
   {
-    sub_1C32C20(&System_Action_TypeInfo);
-    sub_1C32C20(&int_TypeInfo);
-    sub_1C32C20(&Method_EventPointVsResultAction___c__DisplayClass19_0__Setup_b__1__);
-    this = (EventPointVsResultAction___c__DisplayClass19_0_o *)sub_1C32C20(&StringLiteral_3032/*"Back/back{0}"*/);
-    byte_4C343FF = 1;
+    sub_1C37058(&System_Action_TypeInfo);
+    sub_1C37058(&int_TypeInfo);
+    sub_1C37058(&Method_EventPointVsResultAction___c__DisplayClass19_0__Setup_b__1__);
+    this = (EventPointVsResultAction___c__DisplayClass19_0_o *)sub_1C37058(&StringLiteral_3032/*"Back/back{0}"*/);
+    byte_4C3F9E9 = 1;
   }
   _4__this = v8->fields.__4__this;
   if ( !_4__this )
@@ -1148,7 +1148,7 @@ void EventPointVsResultAction___c__DisplayClass19_0___Setup_b__0(
     goto LABEL_13;
   v11 = v8->fields.resultNo - 1;
   if ( (unsigned int)v11 >= LODWORD(bgs->max_length) )
-    sub_1C32E84(this);
+    sub_1C372BC(this);
   mBg = _4__this->fields.mBg;
   v19 = bgs->m_Items[v11];
   v13 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v19, v2, v3, v4, v5, v6, v7);
@@ -1160,14 +1160,14 @@ void EventPointVsResultAction___c__DisplayClass19_0___Setup_b__0(
   v15 = this;
   if ( !_9__1 )
   {
-    _9__1 = (System_Action_o *)sub_1C32E6C(System_Action_TypeInfo);
+    _9__1 = (System_Action_o *)sub_1C372A4(System_Action_TypeInfo);
     System_Action___ctor(
       _9__1,
       (Il2CppObject *)v8,
       Method_EventPointVsResultAction___c__DisplayClass19_0__Setup_b__1__,
       0);
     v8->fields.__9__1 = _9__1;
-    sub_1C32BC4((CGThumbnailListItem_o *)&v8->fields.__9__1, (int32_t)_9__1, v16, v17);
+    sub_1C36FFC((CGThumbnailListItem_o *)&v8->fields.__9__1, (int32_t)_9__1, v16, v17);
   }
   if ( !mBg )
     goto LABEL_13;
@@ -1176,7 +1176,7 @@ void EventPointVsResultAction___c__DisplayClass19_0___Setup_b__0(
   this = (EventPointVsResultAction___c__DisplayClass19_0_o *)v8->fields.__4__this;
   if ( !this )
 LABEL_13:
-    sub_1C32E7C(this);
+    sub_1C372B4(this);
   EventPointVsResultAction__setupLocal((EventPointVsResultAction_o *)this, v8->fields.callBack, v18);
 }
 
@@ -1188,7 +1188,7 @@ void EventPointVsResultAction___c__DisplayClass19_0___Setup_b__1(
   const MethodInfo *v2; // x2
 
   if ( !this->fields.__4__this )
-    sub_1C32E7C(this);
+    sub_1C372B4(this);
   EventPointVsResultAction__setupLocal(this->fields.__4__this, this->fields.callBack, v2);
 }
 
@@ -1210,7 +1210,7 @@ void EventPointVsResultAction___c__DisplayClass23_0___LoadSvts_b__0(
 
   _4__this = this->fields.__4__this;
   if ( !_4__this )
-    sub_1C32E7C(0);
+    sub_1C372B4(0);
   EventPointVsResultAction__LoadSvts(
     _4__this,
     this->fields.cnt + 1,

@@ -3,16 +3,16 @@ void BoardOptionEventTargetListViewItemDraw___cctor(const MethodInfo *method)
   int32_t v1; // w2
   const MethodInfo *v2; // x3
 
-  if ( (byte_4C34251 & 1) == 0 )
+  if ( (byte_4C3F83B & 1) == 0 )
   {
-    sub_1C32C20(&BoardOptionEventTargetListViewItemDraw_TypeInfo);
-    sub_1C32C20(&StringLiteral_21624/*"missiontarget_bg"*/);
-    byte_4C34251 = 1;
+    sub_1C37058(&BoardOptionEventTargetListViewItemDraw_TypeInfo);
+    sub_1C37058(&StringLiteral_21627/*"missiontarget_bg"*/);
+    byte_4C3F83B = 1;
   }
-  BoardOptionEventTargetListViewItemDraw_TypeInfo->static_fields->BASE_SPRITE_NAME = (struct System_String_o *)StringLiteral_21624/*"missiontarget_bg"*/;
-  sub_1C32BC4(
+  BoardOptionEventTargetListViewItemDraw_TypeInfo->static_fields->BASE_SPRITE_NAME = (struct System_String_o *)StringLiteral_21627/*"missiontarget_bg"*/;
+  sub_1C36FFC(
     (CGThumbnailListItem_o *)BoardOptionEventTargetListViewItemDraw_TypeInfo->static_fields,
-    StringLiteral_21624/*"missiontarget_bg"*/,
+    StringLiteral_21627/*"missiontarget_bg"*/,
     v1,
     v2);
 }
@@ -22,10 +22,10 @@ void BoardOptionEventTargetListViewItemDraw___ctor(
         BoardOptionEventTargetListViewItemDraw_o *this,
         const MethodInfo *method)
 {
-  if ( (byte_4C34250 & 1) == 0 )
+  if ( (byte_4C3F83A & 1) == 0 )
   {
-    sub_1C32C20(&QuestInformationListViewItemDraw_TypeInfo);
-    byte_4C34250 = 1;
+    sub_1C37058(&QuestInformationListViewItemDraw_TypeInfo);
+    byte_4C3F83A = 1;
   }
   if ( !QuestInformationListViewItemDraw_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(QuestInformationListViewItemDraw_TypeInfo);
@@ -43,7 +43,7 @@ UnityEngine_Material_o *BoardOptionEventTargetListViewItemDraw__GetNewChocoMater
 
   eventTargetComponent = this->fields.eventTargetComponent;
   if ( !eventTargetComponent )
-    sub_1C32E7C(0);
+    sub_1C372B4(0);
   if ( isSprite )
     return BoardOptionEventTargetComponent__NewChocoMaterialForSprite(
              eventTargetComponent,
@@ -65,7 +65,7 @@ UnityEngine_Material_o *BoardOptionEventTargetListViewItemDraw__GetNewColorShado
 
   eventTargetComponent = this->fields.eventTargetComponent;
   if ( !eventTargetComponent )
-    sub_1C32E7C(0);
+    sub_1C372B4(0);
   if ( isSprite )
     return BoardOptionEventTargetComponent__NewColorShadowMaterialForSprite(
              eventTargetComponent,
@@ -86,7 +86,7 @@ void BoardOptionEventTargetListViewItemDraw__SetAlpha(
 
   iconBaseSprite = this->fields.iconBaseSprite;
   if ( !iconBaseSprite )
-    sub_1C32E7C(0);
+    sub_1C372B4(0);
   ((void (__fastcall *)(struct UISprite_o *, const MethodInfo *, float))iconBaseSprite->klass->vtable._8_set_alpha.methodPtr)(
     iconBaseSprite,
     iconBaseSprite->klass->vtable._8_set_alpha.method,
@@ -103,11 +103,11 @@ void BoardOptionEventTargetListViewItemDraw__SetFrame(
   System_String_o *BASE_SPRITE_NAME; // x21
   struct UISprite_o *v6; // x0
 
-  if ( (byte_4C3424F & 1) == 0 )
+  if ( (byte_4C3F839 & 1) == 0 )
   {
-    sub_1C32C20(&AtlasManager_TypeInfo);
-    sub_1C32C20(&BoardOptionEventTargetListViewItemDraw_TypeInfo);
-    byte_4C3424F = 1;
+    sub_1C37058(&AtlasManager_TypeInfo);
+    sub_1C37058(&BoardOptionEventTargetListViewItemDraw_TypeInfo);
+    byte_4C3F839 = 1;
   }
   v3 = BoardOptionEventTargetListViewItemDraw_TypeInfo;
   iconBaseSprite = this->fields.iconBaseSprite;
@@ -122,7 +122,7 @@ void BoardOptionEventTargetListViewItemDraw__SetFrame(
   AtlasManager__SetEventUI(iconBaseSprite, BASE_SPRITE_NAME, 0);
   v6 = this->fields.iconBaseSprite;
   if ( !v6 )
-    sub_1C32E7C(0);
+    sub_1C372B4(0);
   ((void (__fastcall *)(struct UISprite_o *, const MethodInfo *))v6->klass->vtable._33_MakePixelPerfect.methodPtr)(
     v6,
     v6->klass->vtable._33_MakePixelPerfect.method);
@@ -164,26 +164,26 @@ void BoardOptionEventTargetListViewItemDraw__SetItem(
   QuestInformationListViewItem_o *v33; // x20
   System_Action_o *v34; // x22
 
-  if ( (byte_4C3424E & 1) == 0 )
+  if ( (byte_4C3F838 & 1) == 0 )
   {
-    sub_1C32C20(&System_Action_TypeInfo);
-    sub_1C32C20(&AtlasManager_TypeInfo);
-    sub_1C32C20(&QuestInformationListViewItemDraw_TypeInfo);
-    sub_1C32C20(&ServantAssetLoadManager_TypeInfo);
-    sub_1C32C20(&TerminalSceneComponent_TypeInfo);
-    sub_1C32C20(&Method_BoardOptionEventTargetListViewItemDraw___c__DisplayClass3_0__SetItem_b__0__);
-    sub_1C32C20(&BoardOptionEventTargetListViewItemDraw___c__DisplayClass3_0_TypeInfo);
-    byte_4C3424E = 1;
+    sub_1C37058(&System_Action_TypeInfo);
+    sub_1C37058(&AtlasManager_TypeInfo);
+    sub_1C37058(&QuestInformationListViewItemDraw_TypeInfo);
+    sub_1C37058(&ServantAssetLoadManager_TypeInfo);
+    sub_1C37058(&TerminalSceneComponent_TypeInfo);
+    sub_1C37058(&Method_BoardOptionEventTargetListViewItemDraw___c__DisplayClass3_0__SetItem_b__0__);
+    sub_1C37058(&BoardOptionEventTargetListViewItemDraw___c__DisplayClass3_0_TypeInfo);
+    byte_4C3F838 = 1;
   }
-  v7 = sub_1C32E6C(BoardOptionEventTargetListViewItemDraw___c__DisplayClass3_0_TypeInfo);
+  v7 = sub_1C372A4(BoardOptionEventTargetListViewItemDraw___c__DisplayClass3_0_TypeInfo);
   System_Object___ctor((Il2CppObject *)v7, 0);
   if ( !v7 )
     goto LABEL_52;
   *(_QWORD *)(v7 + 16) = this;
-  sub_1C32BC4((CGThumbnailListItem_o *)(v7 + 16), (int32_t)this, v9, v10);
+  sub_1C36FFC((CGThumbnailListItem_o *)(v7 + 16), (int32_t)this, v9, v10);
   *(_QWORD *)(v7 + 24) = item;
   v11 = (QuestInformationListViewItem_o **)(v7 + 24);
-  sub_1C32BC4((CGThumbnailListItem_o *)(v7 + 24), (int32_t)item, v12, v13);
+  sub_1C36FFC((CGThumbnailListItem_o *)(v7 + 24), (int32_t)item, v12, v13);
   BoardOptionEventTargetListViewItemDraw__SetFrame(this, v14);
   v15 = *(QuestInformationListViewItem_o **)(v7 + 24);
   if ( !v15 )
@@ -229,10 +229,10 @@ LABEL_28:
               enemySp = (UISprite_o *)this->fields.enemySp;
               if ( !TerminalSceneComponent_TypeInfo->_2.cctor_finished )
                 j_il2cpp_runtime_class_init_0(TerminalSceneComponent_TypeInfo);
-              if ( !byte_4C319B6 )
+              if ( !byte_4C3CF06 )
               {
-                sub_1C32C20(&TerminalSceneComponent_TypeInfo);
-                byte_4C319B6 = 1;
+                sub_1C37058(&TerminalSceneComponent_TypeInfo);
+                byte_4C3CF06 = 1;
               }
               SvtImg = (UnityEngine_Component_o *)TerminalSceneComponent_TypeInfo;
               if ( !TerminalSceneComponent_TypeInfo->_2.cctor_finished )
@@ -301,10 +301,10 @@ LABEL_50:
         j_il2cpp_runtime_class_init_0(ServantAssetLoadManager_TypeInfo);
       Manager__loadCommandCard = ServantAssetLoadManager__loadCommandCard(v25, targetId, targetCnt, targetCnt, 0);
       *p_SvtImg = Manager__loadCommandCard;
-      sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.SvtImg, (int32_t)Manager__loadCommandCard, v29, v30);
+      sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.SvtImg, (int32_t)Manager__loadCommandCard, v29, v30);
       if ( !*v11 )
         goto LABEL_52;
-      QuestInformationListViewItemDraw__SetDispType_36466304(
+      QuestInformationListViewItemDraw__SetDispType_36561936(
         (QuestInformationListViewItemDraw_o *)this,
         (*v11)->fields.dispType,
         this->fields.SvtImg,
@@ -346,10 +346,10 @@ LABEL_50:
         }
       }
 LABEL_52:
-      sub_1C32E7C(SvtImg);
+      sub_1C372B4(SvtImg);
     }
     v33 = *(QuestInformationListViewItem_o **)(v7 + 24);
-    v34 = (System_Action_o *)sub_1C32E6C(System_Action_TypeInfo);
+    v34 = (System_Action_o *)sub_1C372A4(System_Action_TypeInfo);
     System_Action___ctor(
       v34,
       (Il2CppObject *)v7,
@@ -389,7 +389,7 @@ void BoardOptionEventTargetListViewItemDraw___c__DisplayClass3_0___SetItem_b__0(
     || (this = (BoardOptionEventTargetListViewItemDraw___c__DisplayClass3_0_o *)v3->fields.__4__this) == 0 )
   {
 LABEL_8:
-    sub_1C32E7C(this);
+    sub_1C372B4(this);
   }
   QuestInformationListViewItemDraw__SetDispTypeEnemyTex(
     (QuestInformationListViewItemDraw_o *)this,

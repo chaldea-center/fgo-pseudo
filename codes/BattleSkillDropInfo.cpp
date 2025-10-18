@@ -7,10 +7,10 @@ void BattleSkillDropInfo___ctor(
   FunctionEntity_o *funcEnt; // x0
   struct BattleSkillDropInfo_JsonConvertData_o **p_data; // x20
 
-  if ( (byte_4C3A6E2 & 1) == 0 )
+  if ( (byte_4C45CEF & 1) == 0 )
   {
-    sub_1C32C20(&Method_EnumUtility_CastToEnum_DropInfo_DropEffectType___);
-    byte_4C3A6E2 = 1;
+    sub_1C37058(&Method_EnumUtility_CastToEnum_DropInfo_DropEffectType___);
+    byte_4C45CEF = 1;
   }
   DropInfo___ctor((DropInfo_o *)this, 0);
   this->fields.dropperUniqueId = uniqueId;
@@ -30,11 +30,11 @@ void BattleSkillDropInfo___ctor(
       this->fields.effectType = EnumUtility__CastToEnum_Int32Enum_(
                                   (*p_data)->fields.dropEffectType,
                                   0,
-                                  (const MethodInfo_30E43B4 *)Method_EnumUtility_CastToEnum_DropInfo_DropEffectType___);
+                                  (const MethodInfo_30EEC1C *)Method_EnumUtility_CastToEnum_DropInfo_DropEffectType___);
       goto LABEL_8;
     }
 LABEL_9:
-    sub_1C32E7C(funcEnt);
+    sub_1C372B4(funcEnt);
   }
 LABEL_8:
   this->fields.rarity = 1000;
@@ -50,7 +50,7 @@ void BattleSkillDropInfo__SetBattleMoveObject(
   const MethodInfo *v3; // x3
 
   this->fields._BattleMoveObject_k__BackingField = moveObject;
-  sub_1C32BC4(
+  sub_1C36FFC(
     (CGThumbnailListItem_o *)&this->fields._BattleMoveObject_k__BackingField,
     (int32_t)moveObject,
     (int32_t)method,
@@ -141,7 +141,7 @@ void BattleSkillDropInfo__set_BattleMoveObject(
   const MethodInfo *v3; // x3
 
   this->fields._BattleMoveObject_k__BackingField = value;
-  sub_1C32BC4(
+  sub_1C36FFC(
     (CGThumbnailListItem_o *)&this->fields._BattleMoveObject_k__BackingField,
     (int32_t)value,
     (int32_t)method,

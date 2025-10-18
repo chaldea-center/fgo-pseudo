@@ -11,21 +11,21 @@ void CoinRoomLobbyComponent__EndLoadAsset(
 {
   System_Collections_Generic_List_UIAtlas__o *DownloadAtlas; // x0
 
-  if ( (byte_4C3B748 & 1) == 0 )
+  if ( (byte_4C46D5B & 1) == 0 )
   {
-    sub_1C32C20(&CoinRoomUtility_TypeInfo);
-    sub_1C32C20(&Method_System_Linq_Enumerable_Any_UIAtlas___);
-    sub_1C32C20(&StringLiteral_5336/*"DownloadCoinRoomAtlas"*/);
-    byte_4C3B748 = 1;
+    sub_1C37058(&CoinRoomUtility_TypeInfo);
+    sub_1C37058(&Method_System_Linq_Enumerable_Any_UIAtlas___);
+    sub_1C37058(&StringLiteral_5337/*"DownloadCoinRoomAtlas"*/);
+    byte_4C46D5B = 1;
   }
   if ( assetData )
   {
     if ( !CoinRoomUtility_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(CoinRoomUtility_TypeInfo);
-    DownloadAtlas = CoinRoomUtility__GetDownloadAtlas(assetData, (System_String_o *)StringLiteral_5336/*"DownloadCoinRoomAtlas"*/, method);
+    DownloadAtlas = CoinRoomUtility__GetDownloadAtlas(assetData, (System_String_o *)StringLiteral_5337/*"DownloadCoinRoomAtlas"*/, method);
     System_Linq_Enumerable__Any_object_(
       (System_Collections_Generic_IEnumerable_TSource__o *)DownloadAtlas,
-      (const MethodInfo_30E8F68 *)Method_System_Linq_Enumerable_Any_UIAtlas___);
+      (const MethodInfo_30F37D0 *)Method_System_Linq_Enumerable_Any_UIAtlas___);
   }
 }
 
@@ -39,19 +39,19 @@ void CoinRoomLobbyComponent__OnClickBack(CoinRoomLobbyComponent_o *this, const M
   System_Action_o *v7; // x21
   SceneJumpInfo_o *v8; // x19
 
-  if ( (byte_4C3B749 & 1) == 0 )
+  if ( (byte_4C46D5C & 1) == 0 )
   {
-    sub_1C32C20(&System_Action_TypeInfo);
-    sub_1C32C20(&Method_CoinRoomLobbyComponent_OnClickBack__);
-    sub_1C32C20(&Method_CoinRoomLobbyComponent__OnClickBack_b__12_0__);
-    sub_1C32C20(&SceneJumpInfo_TypeInfo);
-    sub_1C32C20(&Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__);
-    byte_4C3B749 = 1;
+    sub_1C37058(&System_Action_TypeInfo);
+    sub_1C37058(&Method_CoinRoomLobbyComponent_OnClickBack__);
+    sub_1C37058(&Method_CoinRoomLobbyComponent__OnClickBack_b__12_0__);
+    sub_1C37058(&SceneJumpInfo_TypeInfo);
+    sub_1C37058(&Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__);
+    byte_4C46D5C = 1;
   }
   v3 = Method_CoinRoomLobbyComponent_OnClickBack__;
   if ( (*((_BYTE *)Method_CoinRoomLobbyComponent_OnClickBack__ + 83) & 2) != 0 )
-    v3 = (_QWORD *)sub_1C32C38(Method_CoinRoomLobbyComponent_OnClickBack__);
-  v4 = (System_Reflection_MethodBase_o *)sub_1C32C04(v3, v3[4]);
+    v3 = (_QWORD *)sub_1C37070(Method_CoinRoomLobbyComponent_OnClickBack__);
+  v4 = (System_Reflection_MethodBase_o *)sub_1C3703C(v3, v3[4]);
   OverwriteAssetSoundName__PlaySystemSe(v4, 1, 0, 0);
   maskCollider = (UnityEngine_Collider_o *)this->fields.maskCollider;
   if ( !maskCollider )
@@ -62,7 +62,7 @@ void CoinRoomLobbyComponent__OnClickBack(CoinRoomLobbyComponent_o *this, const M
     goto LABEL_13;
   if ( coinRoomSelectCoinComponent->fields.isOpen )
   {
-    v7 = (System_Action_o *)sub_1C32E6C(System_Action_TypeInfo);
+    v7 = (System_Action_o *)sub_1C372A4(System_Action_TypeInfo);
     System_Action___ctor(v7, (Il2CppObject *)this, Method_CoinRoomLobbyComponent__OnClickBack_b__12_0__, 0);
     BaseMenu__Close(coinRoomSelectCoinComponent, v7, 0);
     return;
@@ -70,14 +70,14 @@ void CoinRoomLobbyComponent__OnClickBack(CoinRoomLobbyComponent_o *this, const M
   maskCollider = (UnityEngine_Collider_o *)this->fields.coinListPanel;
   if ( !maskCollider
     || (UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)maskCollider, 0, 0),
-        v8 = (SceneJumpInfo_o *)sub_1C32E6C(SceneJumpInfo_TypeInfo),
+        v8 = (SceneJumpInfo_o *)sub_1C372A4(SceneJumpInfo_TypeInfo),
         SceneJumpInfo___ctor(v8, 0),
         !v8)
     || (SceneJumpInfo__SetReturnNowScene(v8, 0),
-        (maskCollider = (UnityEngine_Collider_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39E2904 *)Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__)) == 0) )
+        (maskCollider = (UnityEngine_Collider_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39ED16C *)Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__)) == 0) )
   {
 LABEL_13:
-    sub_1C32E7C(maskCollider);
+    sub_1C372B4(maskCollider);
   }
   AvalonSceneManager__transitionScene((AvalonSceneManager_o *)maskCollider, 22, 1, (Il2CppObject *)v8, 0);
 }
@@ -88,15 +88,15 @@ void CoinRoomLobbyComponent__OnClickHelp(CoinRoomLobbyComponent_o *this, const M
   _QWORD *v2; // x0
   System_Reflection_MethodBase_o *v3; // x0
 
-  if ( (byte_4C3B74A & 1) == 0 )
+  if ( (byte_4C46D5D & 1) == 0 )
   {
-    sub_1C32C20(&Method_CoinRoomLobbyComponent_OnClickHelp__);
-    byte_4C3B74A = 1;
+    sub_1C37058(&Method_CoinRoomLobbyComponent_OnClickHelp__);
+    byte_4C46D5D = 1;
   }
   v2 = Method_CoinRoomLobbyComponent_OnClickHelp__;
   if ( (*((_BYTE *)Method_CoinRoomLobbyComponent_OnClickHelp__ + 83) & 2) != 0 )
-    v2 = (_QWORD *)sub_1C32C38(Method_CoinRoomLobbyComponent_OnClickHelp__);
-  v3 = (System_Reflection_MethodBase_o *)sub_1C32C04(v2, v2[4]);
+    v2 = (_QWORD *)sub_1C37070(Method_CoinRoomLobbyComponent_OnClickHelp__);
+  v3 = (System_Reflection_MethodBase_o *)sub_1C3703C(v2, v2[4]);
   OverwriteAssetSoundName__PlaySystemSe(v3, 0, 0, 0);
   EventTutorialMaster__ShowTutorialWithoutCheck(-1, 73, 0, 0, 0);
 }
@@ -109,15 +109,15 @@ void CoinRoomLobbyComponent__OnClickSelectCoin(CoinRoomLobbyComponent_o *this, c
   TitleInfoControl_o *titleInfoControl; // x0
   const MethodInfo *v6; // x1
 
-  if ( (byte_4C3B74C & 1) == 0 )
+  if ( (byte_4C46D5F & 1) == 0 )
   {
-    sub_1C32C20(&Method_CoinRoomLobbyComponent_OnClickSelectCoin__);
-    byte_4C3B74C = 1;
+    sub_1C37058(&Method_CoinRoomLobbyComponent_OnClickSelectCoin__);
+    byte_4C46D5F = 1;
   }
   v3 = Method_CoinRoomLobbyComponent_OnClickSelectCoin__;
   if ( (*((_BYTE *)Method_CoinRoomLobbyComponent_OnClickSelectCoin__ + 83) & 2) != 0 )
-    v3 = (_QWORD *)sub_1C32C38(Method_CoinRoomLobbyComponent_OnClickSelectCoin__);
-  v4 = (System_Reflection_MethodBase_o *)sub_1C32C04(v3, v3[4]);
+    v3 = (_QWORD *)sub_1C37070(Method_CoinRoomLobbyComponent_OnClickSelectCoin__);
+  v4 = (System_Reflection_MethodBase_o *)sub_1C3703C(v3, v3[4]);
   OverwriteAssetSoundName__PlaySystemSe(v4, 0, 0, 0);
   titleInfoControl = this->fields.titleInfoControl;
   if ( !titleInfoControl
@@ -125,7 +125,7 @@ void CoinRoomLobbyComponent__OnClickSelectCoin(CoinRoomLobbyComponent_o *this, c
         MainMenuBar__setMenuActive(0, 0, 0),
         (titleInfoControl = (TitleInfoControl_o *)this->fields.coinRoomSelectCoinComponent) == 0) )
   {
-    sub_1C32E7C(titleInfoControl);
+    sub_1C372B4(titleInfoControl);
   }
   CoinRoomSelectCoinComponent__OpenSelectCoinList((CoinRoomSelectCoinComponent_o *)titleInfoControl, v6);
 }
@@ -178,19 +178,19 @@ void CoinRoomLobbyComponent__OpenLobby(CoinRoomLobbyComponent_o *this, PlayMaker
   UnityEngine_ParticleSystem_MinMaxCurve_o v47; // [xsp+30h] [xbp-70h] BYREF
   struct UnityEngine_ParticleSystem_o *m_ParticleSystem; // [xsp+58h] [xbp-48h] BYREF
 
-  if ( (byte_4C3B747 & 1) == 0 )
+  if ( (byte_4C46D5A & 1) == 0 )
   {
-    sub_1C32C20(&CoinRoomUtility_TypeInfo);
-    sub_1C32C20(&Method_UnityEngine_GameObject_GetComponent_CoinRoomControlEffect___);
-    sub_1C32C20(&Method_UnityEngine_GameObject_GetComponent_ParticleSystem___);
-    sub_1C32C20(&Method_UnityEngine_GameObject_GetComponent_SimpleAnimation___);
-    sub_1C32C20(&Method_UnityEngine_GameObject_GetComponent_UISlider___);
-    sub_1C32C20(&int_TypeInfo);
-    sub_1C32C20(&LocalizationManager_TypeInfo);
-    sub_1C32C20(&StringLiteral_18930/*"effect_Circle_loop"*/);
-    sub_1C32C20(&StringLiteral_3546/*"COIN_ROOM_LOBBY_INFO"*/);
-    sub_1C32C20(&StringLiteral_3547/*"COIN_ROOM_LOBBY_TIME_INFO"*/);
-    byte_4C3B747 = 1;
+    sub_1C37058(&CoinRoomUtility_TypeInfo);
+    sub_1C37058(&Method_UnityEngine_GameObject_GetComponent_CoinRoomControlEffect___);
+    sub_1C37058(&Method_UnityEngine_GameObject_GetComponent_ParticleSystem___);
+    sub_1C37058(&Method_UnityEngine_GameObject_GetComponent_SimpleAnimation___);
+    sub_1C37058(&Method_UnityEngine_GameObject_GetComponent_UISlider___);
+    sub_1C37058(&int_TypeInfo);
+    sub_1C37058(&LocalizationManager_TypeInfo);
+    sub_1C37058(&StringLiteral_18933/*"effect_Circle_loop"*/);
+    sub_1C37058(&StringLiteral_3546/*"COIN_ROOM_LOBBY_INFO"*/);
+    sub_1C37058(&StringLiteral_3547/*"COIN_ROOM_LOBBY_TIME_INFO"*/);
+    byte_4C46D5A = 1;
   }
   EventTutorialMaster__CheckTutorial(0, 73, 0, 0, 0, 0, 0, 0);
   gaugeBarObject = this->fields.gaugeBarObject;
@@ -198,7 +198,7 @@ void CoinRoomLobbyComponent__OpenLobby(CoinRoomLobbyComponent_o *this, PlayMaker
     goto LABEL_27;
   Component_object = UnityEngine_GameObject__GetComponent_object_(
                        gaugeBarObject,
-                       (const MethodInfo_3134970 *)Method_UnityEngine_GameObject_GetComponent_UISlider___);
+                       (const MethodInfo_313F1D8 *)Method_UnityEngine_GameObject_GetComponent_UISlider___);
   v7 = (UIProgressBar_o *)Component_object;
   if ( !CoinRoomUtility_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(CoinRoomUtility_TypeInfo);
@@ -215,13 +215,13 @@ void CoinRoomLobbyComponent__OpenLobby(CoinRoomLobbyComponent_o *this, PlayMaker
     goto LABEL_27;
   gaugeBarObject = (UnityEngine_GameObject_o *)UnityEngine_GameObject__GetComponent_object_(
                                                  gaugeBarObject,
-                                                 (const MethodInfo_3134970 *)Method_UnityEngine_GameObject_GetComponent_ParticleSystem___);
+                                                 (const MethodInfo_313F1D8 *)Method_UnityEngine_GameObject_GetComponent_ParticleSystem___);
   if ( !this->fields.effectCircleObject )
     goto LABEL_27;
   v12 = (UnityEngine_ParticleSystem_o *)gaugeBarObject;
   gaugeBarObject = (UnityEngine_GameObject_o *)UnityEngine_GameObject__GetComponent_object_(
                                                  this->fields.effectCircleObject,
-                                                 (const MethodInfo_3134970 *)Method_UnityEngine_GameObject_GetComponent_CoinRoomControlEffect___);
+                                                 (const MethodInfo_313F1D8 *)Method_UnityEngine_GameObject_GetComponent_CoinRoomControlEffect___);
   if ( !gaugeBarObject )
     goto LABEL_27;
   if ( !v12 )
@@ -248,7 +248,7 @@ void CoinRoomLobbyComponent__OpenLobby(CoinRoomLobbyComponent_o *this, PlayMaker
   v23 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v47, v17, v18, v19, v20, v21, v22);
   v45 = v11;
   v30 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v45, v24, v25, v26, v27, v28, v29);
-  gaugeBarObject = (UnityEngine_GameObject_o *)System_String__Format_63559836(v15, v23, v30, 0);
+  gaugeBarObject = (UnityEngine_GameObject_o *)System_String__Format_63602948(v15, v23, v30, 0);
   if ( !lobbyInfoLabel )
     goto LABEL_27;
   UILabel__set_text(lobbyInfoLabel, (System_String_o *)gaugeBarObject, 0);
@@ -259,7 +259,7 @@ void CoinRoomLobbyComponent__OpenLobby(CoinRoomLobbyComponent_o *this, PlayMaker
   lobbyTimeLabel = this->fields.lobbyTimeLabel;
   v44 = v33;
   v43 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v44, v37, v38, v39, v40, v41, v42);
-  gaugeBarObject = (UnityEngine_GameObject_o *)System_String__Format_63559836(v31, v43, v35, 0);
+  gaugeBarObject = (UnityEngine_GameObject_o *)System_String__Format_63602948(v31, v43, v35, 0);
   if ( !lobbyTimeLabel )
     goto LABEL_27;
   UILabel__set_text(lobbyTimeLabel, (System_String_o *)gaugeBarObject, 0);
@@ -270,7 +270,7 @@ void CoinRoomLobbyComponent__OpenLobby(CoinRoomLobbyComponent_o *this, PlayMaker
   gaugeBarObject = (UnityEngine_GameObject_o *)this->fields.titleInfoControl;
   if ( !gaugeBarObject )
     goto LABEL_27;
-  TitleInfoControl__setBackBtnSprite_39743540((TitleInfoControl_o *)gaugeBarObject, 1, 0, 0, 0);
+  TitleInfoControl__setBackBtnSprite_39841600((TitleInfoControl_o *)gaugeBarObject, 1, 0, 0, 0);
   gaugeBarObject = (UnityEngine_GameObject_o *)this->fields.titleInfoControl;
   if ( !gaugeBarObject )
     goto LABEL_27;
@@ -294,12 +294,12 @@ void CoinRoomLobbyComponent__OpenLobby(CoinRoomLobbyComponent_o *this, PlayMaker
   if ( !gaugeBarObject
     || (gaugeBarObject = (UnityEngine_GameObject_o *)UnityEngine_GameObject__GetComponent_object_(
                                                        gaugeBarObject,
-                                                       (const MethodInfo_3134970 *)Method_UnityEngine_GameObject_GetComponent_SimpleAnimation___)) == 0 )
+                                                       (const MethodInfo_313F1D8 *)Method_UnityEngine_GameObject_GetComponent_SimpleAnimation___)) == 0 )
   {
 LABEL_27:
-    sub_1C32E7C(gaugeBarObject);
+    sub_1C372B4(gaugeBarObject);
   }
-  SimpleAnimation__Play_66464300((SimpleAnimation_o *)gaugeBarObject, (System_String_o *)StringLiteral_18930/*"effect_Circle_loop"*/, 0);
+  SimpleAnimation__Play_66507412((SimpleAnimation_o *)gaugeBarObject, (System_String_o *)StringLiteral_18933/*"effect_Circle_loop"*/, 0);
 }
 
 
@@ -309,7 +309,7 @@ void CoinRoomLobbyComponent__SetMaskCollider(CoinRoomLobbyComponent_o *this, boo
 
   maskCollider = (UnityEngine_Collider_o *)this->fields.maskCollider;
   if ( !maskCollider )
-    sub_1C32E7C(0);
+    sub_1C372B4(0);
   UnityEngine_Collider__set_enabled(maskCollider, flag, 0);
 }
 
@@ -329,44 +329,44 @@ void CoinRoomLobbyComponent__SetSpriteAtlas(
   System_Collections_Generic_List_Enumerator_object__o v13; // [xsp+8h] [xbp-78h] BYREF
   System_Collections_Generic_List_Enumerator_object__o v14; // [xsp+20h] [xbp-60h] BYREF
 
-  if ( (byte_4C3B74D & 1) == 0 )
+  if ( (byte_4C46D60 & 1) == 0 )
   {
-    sub_1C32C20(&Method_System_Collections_Generic_List_Enumerator_UIAtlas__Dispose__);
-    sub_1C32C20(&Method_System_Collections_Generic_List_Enumerator_UIAtlas__MoveNext__);
-    sub_1C32C20(&Method_System_Collections_Generic_List_Enumerator_UIAtlas__get_Current__);
-    sub_1C32C20(&Method_UnityEngine_GameObject_GetComponent_UISprite___);
-    this = (CoinRoomLobbyComponent_o *)sub_1C32C20(&Method_System_Collections_Generic_List_UIAtlas__GetEnumerator__);
-    byte_4C3B74D = 1;
+    sub_1C37058(&Method_System_Collections_Generic_List_Enumerator_UIAtlas__Dispose__);
+    sub_1C37058(&Method_System_Collections_Generic_List_Enumerator_UIAtlas__MoveNext__);
+    sub_1C37058(&Method_System_Collections_Generic_List_Enumerator_UIAtlas__get_Current__);
+    sub_1C37058(&Method_UnityEngine_GameObject_GetComponent_UISprite___);
+    this = (CoinRoomLobbyComponent_o *)sub_1C37058(&Method_System_Collections_Generic_List_UIAtlas__GetEnumerator__);
+    byte_4C46D60 = 1;
   }
   memset(&v14, 0, sizeof(v14));
   if ( !atlasList )
-    sub_1C32E7C(this);
+    sub_1C372B4(this);
   System_Collections_Generic_List_object___GetEnumerator(
     (System_Collections_Generic_List_Enumerator_T__o *)&v13,
     (System_Collections_Generic_List_object__o *)atlasList,
-    (const MethodInfo_37992B4 *)Method_System_Collections_Generic_List_UIAtlas__GetEnumerator__);
+    (const MethodInfo_37A3B1C *)Method_System_Collections_Generic_List_UIAtlas__GetEnumerator__);
   v14 = v13;
   while ( 1 )
   {
     v8 = System_Collections_Generic_List_Enumerator_object___MoveNext(
            &v14,
-           (const MethodInfo_3522FA8 *)Method_System_Collections_Generic_List_Enumerator_UIAtlas__MoveNext__);
+           (const MethodInfo_352D810 *)Method_System_Collections_Generic_List_Enumerator_UIAtlas__MoveNext__);
     if ( !v8 )
       break;
     if ( !gameObject )
-      sub_1C32E7C(v8);
+      sub_1C372B4(v8);
     current = v14.fields._current;
     Component_object = UnityEngine_GameObject__GetComponent_object_(
                          gameObject,
-                         (const MethodInfo_3134970 *)Method_UnityEngine_GameObject_GetComponent_UISprite___);
+                         (const MethodInfo_313F1D8 *)Method_UnityEngine_GameObject_GetComponent_UISprite___);
     if ( !current )
-      sub_1C32E7C(Component_object);
+      sub_1C372B4(Component_object);
     v11 = (UISprite_o *)Component_object;
     Sprite = UIAtlas__GetSprite((UIAtlas_o *)current, name, 0);
     if ( Sprite )
     {
       if ( !v11 )
-        sub_1C32E7C(Sprite);
+        sub_1C372B4(Sprite);
       UISprite__set_atlas(v11, (UIAtlas_o *)current, 0);
       UISprite__set_spriteName(v11, name, 0);
       break;
@@ -374,7 +374,7 @@ void CoinRoomLobbyComponent__SetSpriteAtlas(
   }
   System_Collections_Generic_List_Enumerator_object___Dispose(
     &v14,
-    (const MethodInfo_3522FA4 *)Method_System_Collections_Generic_List_Enumerator_UIAtlas__Dispose__);
+    (const MethodInfo_352D80C *)Method_System_Collections_Generic_List_Enumerator_UIAtlas__Dispose__);
 }
 
 
@@ -385,13 +385,13 @@ System_String_o *CoinRoomLobbyComponent__SetTimeLabel(CoinRoomLobbyComponent_o *
   System_String_o *RestTime5; // x0
   System_String_o *v5; // x19
 
-  if ( (byte_4C3B74B & 1) == 0 )
+  if ( (byte_4C46D5E & 1) == 0 )
   {
-    sub_1C32C20(&CoinRoomUtility_TypeInfo);
-    sub_1C32C20(&LocalizationManager_TypeInfo);
-    sub_1C32C20(&StringLiteral_1/*""*/);
-    sub_1C32C20(&StringLiteral_25379/*"あと "*/);
-    byte_4C3B74B = 1;
+    sub_1C37058(&CoinRoomUtility_TypeInfo);
+    sub_1C37058(&LocalizationManager_TypeInfo);
+    sub_1C37058(&StringLiteral_1/*""*/);
+    sub_1C37058(&StringLiteral_25384/*"あと "*/);
+    byte_4C46D5E = 1;
   }
   v2 = CoinRoomUtility_TypeInfo;
   if ( !CoinRoomUtility_TypeInfo->_2.cctor_finished )
@@ -401,12 +401,12 @@ System_String_o *CoinRoomLobbyComponent__SetTimeLabel(CoinRoomLobbyComponent_o *
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   RestTime5 = LocalizationManager__GetRestTime5(MonthUnixTime, -1, 0);
   if ( !RestTime5 )
-    sub_1C32E7C(0);
+    sub_1C372B4(0);
   v5 = RestTime5;
-  if ( System_String__Contains(RestTime5, (System_String_o *)StringLiteral_25379/*"あと "*/, 0) )
-    return System_String__Replace_63565092(
+  if ( System_String__Contains(RestTime5, (System_String_o *)StringLiteral_25384/*"あと "*/, 0) )
+    return System_String__Replace_63608204(
              v5,
-             (System_String_o *)StringLiteral_25379/*"あと "*/,
+             (System_String_o *)StringLiteral_25384/*"あと "*/,
              (System_String_o *)StringLiteral_1/*""*/,
              0);
   else
@@ -425,7 +425,7 @@ void CoinRoomLobbyComponent___OnClickBack_b__12_0(CoinRoomLobbyComponent_o *this
     || (TitleInfoControl__SetHelpBtn((TitleInfoControl_o *)coinRoomSelectCoinComponent, 1, 0),
         (coinRoomSelectCoinComponent = (CoinRoomSelectCoinComponent_o *)this->fields.maskCollider) == 0) )
   {
-    sub_1C32E7C(coinRoomSelectCoinComponent);
+    sub_1C372B4(coinRoomSelectCoinComponent);
   }
   UnityEngine_Collider__set_enabled((UnityEngine_Collider_o *)coinRoomSelectCoinComponent, 0, 0);
   MainMenuBar__setMenuActive(1, 0, 0);

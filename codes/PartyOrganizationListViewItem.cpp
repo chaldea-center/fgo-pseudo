@@ -10,33 +10,33 @@ void PartyOrganizationListViewItem___ctor(
   int32_t v9; // w2
   const MethodInfo *v10; // x3
 
-  if ( (byte_4C3341C & 1) == 0 )
+  if ( (byte_4C3EA06 & 1) == 0 )
   {
-    sub_1C32C20(&Method_System_Collections_Generic_List_UserServantEntity___ctor__);
-    sub_1C32C20(&Method_System_Collections_Generic_List_ServantEntity___ctor__);
-    sub_1C32C20(&System_Collections_Generic_List_ServantEntity__TypeInfo);
-    sub_1C32C20(&System_Collections_Generic_List_UserServantEntity__TypeInfo);
-    byte_4C3341C = 1;
+    sub_1C37058(&Method_System_Collections_Generic_List_UserServantEntity___ctor__);
+    sub_1C37058(&Method_System_Collections_Generic_List_ServantEntity___ctor__);
+    sub_1C37058(&System_Collections_Generic_List_ServantEntity__TypeInfo);
+    sub_1C37058(&System_Collections_Generic_List_UserServantEntity__TypeInfo);
+    byte_4C3EA06 = 1;
   }
-  v5 = (System_Collections_Generic_List_object__o *)sub_1C32E6C(System_Collections_Generic_List_UserServantEntity__TypeInfo);
+  v5 = (System_Collections_Generic_List_object__o *)sub_1C372A4(System_Collections_Generic_List_UserServantEntity__TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v5,
-    (const MethodInfo_3797F88 *)Method_System_Collections_Generic_List_UserServantEntity___ctor__);
+    (const MethodInfo_37A27F0 *)Method_System_Collections_Generic_List_UserServantEntity___ctor__);
   this->fields.equipUserServantEntityList = (struct System_Collections_Generic_List_UserServantEntity__o *)v5;
-  sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.equipUserServantEntityList, (int32_t)v5, v6, v7);
-  v8 = (System_Collections_Generic_List_object__o *)sub_1C32E6C(System_Collections_Generic_List_ServantEntity__TypeInfo);
+  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.equipUserServantEntityList, (int32_t)v5, v6, v7);
+  v8 = (System_Collections_Generic_List_object__o *)sub_1C372A4(System_Collections_Generic_List_ServantEntity__TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v8,
-    (const MethodInfo_3797F88 *)Method_System_Collections_Generic_List_ServantEntity___ctor__);
+    (const MethodInfo_37A27F0 *)Method_System_Collections_Generic_List_ServantEntity___ctor__);
   this->fields.equipServantEntityList = (struct System_Collections_Generic_List_ServantEntity__o *)v8;
-  sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.equipServantEntityList, (int32_t)v8, v9, v10);
+  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.equipServantEntityList, (int32_t)v8, v9, v10);
   *(_QWORD *)&this->fields.nameLimitCount = -1;
   this->fields.warBoardPieceIndex = -1;
-  ListViewItem___ctor_43702564((ListViewItem_o *)this, index, 0);
+  ListViewItem___ctor_43804668((ListViewItem_o *)this, index, 0);
 }
 
 
-void PartyOrganizationListViewItem___ctor_34107020(
+void PartyOrganizationListViewItem___ctor_34202652(
         PartyOrganizationListViewItem_o *this,
         int32_t index,
         FollowerInfo_o *follower,
@@ -151,57 +151,57 @@ void PartyOrganizationListViewItem___ctor_34107020(
   CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o v118; // 0:x0.16
   CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o v119; // 0:x0.16
 
-  if ( (byte_4C3341E & 1) == 0 )
+  if ( (byte_4C3EA08 & 1) == 0 )
   {
-    sub_1C32C20(&Method_DataManager_GetMasterData_ServantMaster___);
-    sub_1C32C20(&Method_DataManager_GetMasterData_UserServantMaster___);
-    sub_1C32C20(&Method_DataManager_GetMaster_EventServantPointRankMaster___);
-    sub_1C32C20(&Method_DataManager_GetMaster_QuestPhaseMaster___);
-    sub_1C32C20(&Method_DataManager_GetMaster_UserEventDataLostMaster___);
-    sub_1C32C20(&DataManager_TypeInfo);
-    sub_1C32C20(&Method_DataMasterBase_ServantMaster__ServantEntity__int__GetEntity__);
-    sub_1C32C20(&Method_System_Collections_Generic_List_UserServantEntity___ctor__);
-    sub_1C32C20(&Method_System_Collections_Generic_List_ServantEntity___ctor__);
-    sub_1C32C20(&System_Collections_Generic_List_ServantEntity__TypeInfo);
-    sub_1C32C20(&System_Collections_Generic_List_UserServantEntity__TypeInfo);
-    sub_1C32C20(&NetworkManager_TypeInfo);
-    sub_1C32C20(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
-    sub_1C32C20(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-    byte_4C3341E = 1;
+    sub_1C37058(&Method_DataManager_GetMasterData_ServantMaster___);
+    sub_1C37058(&Method_DataManager_GetMasterData_UserServantMaster___);
+    sub_1C37058(&Method_DataManager_GetMaster_EventServantPointRankMaster___);
+    sub_1C37058(&Method_DataManager_GetMaster_QuestPhaseMaster___);
+    sub_1C37058(&Method_DataManager_GetMaster_UserEventDataLostMaster___);
+    sub_1C37058(&DataManager_TypeInfo);
+    sub_1C37058(&Method_DataMasterBase_ServantMaster__ServantEntity__int__GetEntity__);
+    sub_1C37058(&Method_System_Collections_Generic_List_UserServantEntity___ctor__);
+    sub_1C37058(&Method_System_Collections_Generic_List_ServantEntity___ctor__);
+    sub_1C37058(&System_Collections_Generic_List_ServantEntity__TypeInfo);
+    sub_1C37058(&System_Collections_Generic_List_UserServantEntity__TypeInfo);
+    sub_1C37058(&NetworkManager_TypeInfo);
+    sub_1C37058(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
+    sub_1C37058(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    byte_4C3EA08 = 1;
   }
   isWhole = 0;
   v113 = 0;
   entity = 0;
   v112 = 0;
-  v20 = (System_Collections_Generic_List_object__o *)sub_1C32E6C(System_Collections_Generic_List_UserServantEntity__TypeInfo);
+  v20 = (System_Collections_Generic_List_object__o *)sub_1C372A4(System_Collections_Generic_List_UserServantEntity__TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v20,
-    (const MethodInfo_3797F88 *)Method_System_Collections_Generic_List_UserServantEntity___ctor__);
+    (const MethodInfo_37A27F0 *)Method_System_Collections_Generic_List_UserServantEntity___ctor__);
   this->fields.equipUserServantEntityList = (struct System_Collections_Generic_List_UserServantEntity__o *)v20;
-  sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.equipUserServantEntityList, (int32_t)v20, v21, v22);
-  v23 = (System_Collections_Generic_List_object__o *)sub_1C32E6C(System_Collections_Generic_List_ServantEntity__TypeInfo);
+  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.equipUserServantEntityList, (int32_t)v20, v21, v22);
+  v23 = (System_Collections_Generic_List_object__o *)sub_1C372A4(System_Collections_Generic_List_ServantEntity__TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v23,
-    (const MethodInfo_3797F88 *)Method_System_Collections_Generic_List_ServantEntity___ctor__);
+    (const MethodInfo_37A27F0 *)Method_System_Collections_Generic_List_ServantEntity___ctor__);
   this->fields.equipServantEntityList = (struct System_Collections_Generic_List_ServantEntity__o *)v23;
-  sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.equipServantEntityList, (int32_t)v23, v24, v25);
+  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.equipServantEntityList, (int32_t)v23, v24, v25);
   *(_QWORD *)&this->fields.nameLimitCount = -1;
   this->fields.warBoardPieceIndex = -1;
-  ListViewItem___ctor_43702564((ListViewItem_o *)this, index, 0);
+  ListViewItem___ctor_43804668((ListViewItem_o *)this, index, 0);
   this->fields.userServantEntity = 0;
-  sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.userServantEntity, 0, v26, v27);
+  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.userServantEntity, 0, v26, v27);
   this->fields.questRestrictionInfo = questRestrictionInfo;
   p_questRestrictionInfo = &this->fields.questRestrictionInfo;
-  sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.questRestrictionInfo, (int32_t)questRestrictionInfo, v29, v30);
+  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.questRestrictionInfo, (int32_t)questRestrictionInfo, v29, v30);
   this->fields.friendPointCampaignEntityList = friendPointCampaignEntityList;
-  sub_1C32BC4(
+  sub_1C36FFC(
     (CGThumbnailListItem_o *)&this->fields.friendPointCampaignEntityList,
     (int32_t)friendPointCampaignEntityList,
     v31,
     v32);
   this->fields.followerInfo = follower;
   p_followerInfo = &this->fields.followerInfo;
-  sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.followerInfo, (int32_t)follower, v34, v35);
+  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.followerInfo, (int32_t)follower, v34, v35);
   this->fields.isFixNpc = isFixNpc;
   followerInfo = this->fields.followerInfo;
   this->fields.isFollower = 1;
@@ -232,7 +232,7 @@ void PartyOrganizationListViewItem___ctor_34107020(
   v39 = FollowerInfo__getIndex(followerInfo, followerClassId, v38, followerDeckId, followerGrandGraphId, 0);
   this->fields.setupInfo = setupInfo;
   this->fields.followerIndex = v39;
-  sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.setupInfo, (int32_t)setupInfo, v40, v41);
+  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.setupInfo, (int32_t)setupInfo, v40, v41);
   followerIndex = this->fields.followerIndex;
   v43 = this->fields.followerInfo;
   if ( this->fields.followerGrandGraphId <= 0 )
@@ -266,12 +266,12 @@ void PartyOrganizationListViewItem___ctor_34107020(
                                                    0);
   *(_WORD *)&this->fields._IsTempGrandServant_k__BackingField = 0;
   this->fields._EquipFriendShipSkillChange_k__BackingField = ServantLeaderInfo__IsChangeFriendShipSvtEquipSkill(v45, 0);
-  ReturnTypeByQuestId = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39E2904 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  ReturnTypeByQuestId = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39ED16C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !ReturnTypeByQuestId )
     goto LABEL_148;
   ReturnTypeByQuestId = DataManager__GetMasterData_object_(
                           (DataManager_o *)ReturnTypeByQuestId,
-                          (const MethodInfo_30DD3F0 *)Method_DataManager_GetMasterData_ServantMaster___);
+                          (const MethodInfo_30E7C58 *)Method_DataManager_GetMasterData_ServantMaster___);
   v46 = this->fields.followerIndex;
   v47 = this->fields.followerInfo;
   v48 = (DataMasterBase_TMaster__TEntity__PKType__o *)ReturnTypeByQuestId;
@@ -303,10 +303,10 @@ void PartyOrganizationListViewItem___ctor_34107020(
   v50 = DataMasterBase_object__object__int___GetEntity(
           v48,
           (int32_t)ReturnTypeByQuestId,
-          (const MethodInfo_3396838 *)Method_DataMasterBase_ServantMaster__ServantEntity__int__GetEntity__);
+          (const MethodInfo_33A10A0 *)Method_DataMasterBase_ServantMaster__ServantEntity__int__GetEntity__);
   this->fields.servantEntity = (struct ServantEntity_o *)v50;
   p_servantEntity = &this->fields.servantEntity;
-  sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.servantEntity, (int32_t)v50, v52, v53);
+  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.servantEntity, (int32_t)v50, v52, v53);
   this->fields.cost = 0;
   ReturnTypeByQuestId = ServantLeaderInfo__GetOverwriteStatus(v45, 0);
   if ( !ReturnTypeByQuestId )
@@ -375,7 +375,7 @@ void PartyOrganizationListViewItem___ctor_34107020(
   }
   CommandCodeIdList = FollowerInfo__getCommandCodeIdList(v62, v61, v63, 0);
   this->fields.commandCodeIdList = CommandCodeIdList;
-  sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.commandCodeIdList, (int32_t)CommandCodeIdList, v65, v66);
+  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.commandCodeIdList, (int32_t)CommandCodeIdList, v65, v66);
   ReturnTypeByQuestId = PartyOrganizationListViewItem__get_ServantLeader(this, v67);
   if ( ReturnTypeByQuestId && *p_questRestrictionInfo )
   {
@@ -394,7 +394,7 @@ void PartyOrganizationListViewItem___ctor_34107020(
       if ( !v69 )
         goto LABEL_148;
     }
-    this->fields.isQuestRestriction = FollowerInfo__GetQuestRestriction_41649980(
+    this->fields.isQuestRestriction = FollowerInfo__GetQuestRestriction_41749788(
                                         v69,
                                         questRestrictionInfo,
                                         v68,
@@ -418,7 +418,7 @@ void PartyOrganizationListViewItem___ctor_34107020(
   this->fields._InitPos_k__BackingField = v71;
   *(_WORD *)&this->fields.isMyServantOrNpcRestriction = 0;
   if ( questRestrictionInfo
-    && (ReturnTypeByQuestId = (void *)QuestRestrictionInfo__IsMyServantOrNpcRestriction_43340352(
+    && (ReturnTypeByQuestId = (void *)QuestRestrictionInfo__IsMyServantOrNpcRestriction_43442220(
                                         questRestrictionInfo,
                                         v71,
                                         0),
@@ -428,12 +428,12 @@ void PartyOrganizationListViewItem___ctor_34107020(
     if ( !follower )
       goto LABEL_148;
     this->fields.npcFollowerSvtId = follower->fields.npcFollowerSvtId;
-    ReturnTypeByQuestId = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39E2904 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    ReturnTypeByQuestId = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39ED16C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
     if ( !ReturnTypeByQuestId )
       goto LABEL_148;
     ReturnTypeByQuestId = DataManager__GetMasterData_object_(
                             (DataManager_o *)ReturnTypeByQuestId,
-                            (const MethodInfo_30DD3F0 *)Method_DataManager_GetMasterData_UserServantMaster___);
+                            (const MethodInfo_30E7C58 *)Method_DataManager_GetMasterData_UserServantMaster___);
     if ( !ReturnTypeByQuestId )
       goto LABEL_148;
     ReturnTypeByQuestId = UserServantMaster__getOrganizationList((UserServantMaster_o *)ReturnTypeByQuestId, 0);
@@ -447,7 +447,7 @@ void PartyOrganizationListViewItem___ctor_34107020(
       while ( 1 )
       {
         if ( v74 >= v72 )
-          sub_1C32E84(ReturnTypeByQuestId);
+          sub_1C372BC(ReturnTypeByQuestId);
         v75 = *((_QWORD *)v73 + (int)v74 + 4);
         if ( !v75 )
           goto LABEL_148;
@@ -457,8 +457,8 @@ void PartyOrganizationListViewItem___ctor_34107020(
           j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
         *(_QWORD *)&v116.fields.currentCryptoKey = v77;
         *(_QWORD *)&v116.fields.fakeValue = v76;
-        v78 = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_48887784(v116, 0);
-        v79 = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_48887784(
+        v78 = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_48930896(v116, 0);
+        v79 = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_48930896(
                 *(CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o *)(v75 + 96),
                 0);
         DispLimitCount = UserServantEntity__getDispLimitCount((UserServantEntity_o *)v75, 0, 0);
@@ -469,7 +469,7 @@ void PartyOrganizationListViewItem___ctor_34107020(
                                  DispLimitCount,
                                  0);
         Rarity = UserServantEntity__getRarity((UserServantEntity_o *)v75, 0);
-        ReturnTypeByQuestId = (void *)QuestRestrictionInfo__IsRestriction_43321380(
+        ReturnTypeByQuestId = (void *)QuestRestrictionInfo__IsRestriction_43423248(
                                         questRestrictionInfo,
                                         &isWhole,
                                         ServantIndividuality,
@@ -480,7 +480,7 @@ void PartyOrganizationListViewItem___ctor_34107020(
                                         0);
         if ( ((unsigned __int8)ReturnTypeByQuestId & 1) == 0 )
         {
-          ReturnTypeByQuestId = (void *)QuestRestrictionInfo__IsRestrictionServantIndividuality_43343396(
+          ReturnTypeByQuestId = (void *)QuestRestrictionInfo__IsRestrictionServantIndividuality_43445264(
                                           questRestrictionInfo,
                                           ServantIndividuality,
                                           this->fields._InitPos_k__BackingField,
@@ -533,7 +533,7 @@ LABEL_84:
   {
     if ( !DataManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-    ReturnTypeByQuestId = DataManager__GetMaster_object_((const MethodInfo_30DD39C *)Method_DataManager_GetMaster_QuestPhaseMaster___);
+    ReturnTypeByQuestId = DataManager__GetMaster_object_((const MethodInfo_30E7C04 *)Method_DataManager_GetMaster_QuestPhaseMaster___);
     if ( !ReturnTypeByQuestId )
       goto LABEL_148;
     if ( QuestPhaseMaster__TryGetEntity(
@@ -557,13 +557,13 @@ LABEL_84:
   {
     if ( !DataManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-    Master_object = DataManager__GetMaster_object_((const MethodInfo_30DD39C *)Method_DataManager_GetMaster_UserEventDataLostMaster___);
+    Master_object = DataManager__GetMaster_object_((const MethodInfo_30E7C04 *)Method_DataManager_GetMaster_UserEventDataLostMaster___);
     if ( !NetworkManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
-    if ( !byte_4C31812 )
+    if ( !byte_4C3CD62 )
     {
-      sub_1C32C20(&NetworkManager_TypeInfo);
-      byte_4C31812 = 1;
+      sub_1C37058(&NetworkManager_TypeInfo);
+      byte_4C3CD62 = 1;
     }
     ReturnTypeByQuestId = NetworkManager_TypeInfo;
     if ( !NetworkManager_TypeInfo->_2.cctor_finished )
@@ -591,7 +591,7 @@ LABEL_84:
         j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
       *(_QWORD *)&v117.fields.currentCryptoKey = v89;
       *(_QWORD *)&v117.fields.fakeValue = v88;
-      ReturnTypeByQuestId = (void *)CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_48887784(v117, 0);
+      ReturnTypeByQuestId = (void *)CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_48930896(v117, 0);
       if ( !v87 )
         goto LABEL_148;
       ReturnTypeByQuestId = (void *)UserEventDataLostEntity__IsRestart(v87, (int32_t)ReturnTypeByQuestId, 0);
@@ -606,7 +606,7 @@ LABEL_84:
         j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
       *(_QWORD *)&v118.fields.currentCryptoKey = v94;
       *(_QWORD *)&v118.fields.fakeValue = v93;
-      ReturnTypeByQuestId = (void *)CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_48887784(v118, 0);
+      ReturnTypeByQuestId = (void *)CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_48930896(v118, 0);
       if ( !v92 )
         goto LABEL_148;
       if ( (v91 & 1) != 0 )
@@ -634,7 +634,7 @@ LABEL_84:
     eventId = v95->fields.eventId;
     if ( !DataManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-    ReturnTypeByQuestId = DataManager__GetMaster_object_((const MethodInfo_30DD39C *)Method_DataManager_GetMaster_EventServantPointRankMaster___);
+    ReturnTypeByQuestId = DataManager__GetMaster_object_((const MethodInfo_30E7C04 *)Method_DataManager_GetMaster_EventServantPointRankMaster___);
     if ( !ReturnTypeByQuestId )
       goto LABEL_148;
     v97 = (EventServantPointRankMaster_o *)ReturnTypeByQuestId;
@@ -662,7 +662,7 @@ LABEL_84:
             j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
           *(_QWORD *)&v119.fields.currentCryptoKey = v104;
           *(_QWORD *)&v119.fields.fakeValue = v103;
-          v105 = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_48887784(v119, 0);
+          v105 = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_48930896(v119, 0);
           EnableEntity = EventServantPointRankMaster__GetEnableEntity(v97, eventId, v102, v105, 0);
           if ( EnableEntity )
             this->fields._SvtPointRank_k__BackingField = EnableEntity->fields.svtPointRank;
@@ -683,7 +683,7 @@ LABEL_84:
     {
       if ( !DataManager_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-      ReturnTypeByQuestId = DataManager__GetMaster_object_((const MethodInfo_30DD39C *)Method_DataManager_GetMaster_QuestPhaseMaster___);
+      ReturnTypeByQuestId = DataManager__GetMaster_object_((const MethodInfo_30E7C04 *)Method_DataManager_GetMaster_QuestPhaseMaster___);
       if ( *p_questRestrictionInfo && ReturnTypeByQuestId )
       {
         if ( QuestPhaseMaster__TryGetEntity(
@@ -711,7 +711,7 @@ LABEL_84:
         }
       }
 LABEL_148:
-      sub_1C32E7C(ReturnTypeByQuestId);
+      sub_1C372B4(ReturnTypeByQuestId);
     }
   }
   else
@@ -727,7 +727,7 @@ LABEL_147:
 }
 
 
-void PartyOrganizationListViewItem___ctor_34133596(
+void PartyOrganizationListViewItem___ctor_34229228(
         PartyOrganizationListViewItem_o *this,
         int32_t index,
         UserServantEntity_o *userServantEntity,
@@ -874,77 +874,77 @@ void PartyOrganizationListViewItem___ctor_34133596(
   CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o v150; // 0:x0.16
   CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o v151; // 0:x0.16
 
-  if ( (byte_4C3341D & 1) == 0 )
+  if ( (byte_4C3EA07 & 1) == 0 )
   {
-    sub_1C32C20(&Method_DataManager_GetMasterData_ServantLimitMaster___);
-    sub_1C32C20(&Method_DataManager_GetMasterData_ServantMaster___);
-    sub_1C32C20(&Method_DataManager_GetMasterData_UserEventAlloutBattleMaster___);
-    sub_1C32C20(&Method_DataManager_GetMasterData_UserEventServantFatigueMaster___);
-    sub_1C32C20(&Method_DataManager_GetMaster_EventServantPointRankMaster___);
-    sub_1C32C20(&Method_DataManager_GetMaster_QuestPhaseMaster___);
-    sub_1C32C20(&Method_DataManager_GetMaster_UserEventDataLostMaster___);
-    sub_1C32C20(&Method_DataManager_GetMaster_UserEventServantPointMaster___);
-    sub_1C32C20(&Method_DataManager_GetMaster_UserServantMaster___);
-    sub_1C32C20(&DataManager_TypeInfo);
-    sub_1C32C20(&Method_DataMasterBase_ServantMaster__ServantEntity__int__GetEntity__);
-    sub_1C32C20(&Method_DataMasterBase_UserServantMaster__UserServantEntity__long__isEntityExistsFromId__);
-    sub_1C32C20(&int___TypeInfo);
-    sub_1C32C20(&long___TypeInfo);
-    sub_1C32C20(&Method_System_Collections_Generic_List_UserServantEntity___ctor__);
-    sub_1C32C20(&Method_System_Collections_Generic_List_ServantEntity___ctor__);
-    sub_1C32C20(&System_Collections_Generic_List_ServantEntity__TypeInfo);
-    sub_1C32C20(&System_Collections_Generic_List_UserServantEntity__TypeInfo);
-    sub_1C32C20(&NetworkManager_TypeInfo);
-    sub_1C32C20(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
-    sub_1C32C20(&CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo);
-    sub_1C32C20(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-    byte_4C3341D = 1;
+    sub_1C37058(&Method_DataManager_GetMasterData_ServantLimitMaster___);
+    sub_1C37058(&Method_DataManager_GetMasterData_ServantMaster___);
+    sub_1C37058(&Method_DataManager_GetMasterData_UserEventAlloutBattleMaster___);
+    sub_1C37058(&Method_DataManager_GetMasterData_UserEventServantFatigueMaster___);
+    sub_1C37058(&Method_DataManager_GetMaster_EventServantPointRankMaster___);
+    sub_1C37058(&Method_DataManager_GetMaster_QuestPhaseMaster___);
+    sub_1C37058(&Method_DataManager_GetMaster_UserEventDataLostMaster___);
+    sub_1C37058(&Method_DataManager_GetMaster_UserEventServantPointMaster___);
+    sub_1C37058(&Method_DataManager_GetMaster_UserServantMaster___);
+    sub_1C37058(&DataManager_TypeInfo);
+    sub_1C37058(&Method_DataMasterBase_ServantMaster__ServantEntity__int__GetEntity__);
+    sub_1C37058(&Method_DataMasterBase_UserServantMaster__UserServantEntity__long__isEntityExistsFromId__);
+    sub_1C37058(&int___TypeInfo);
+    sub_1C37058(&long___TypeInfo);
+    sub_1C37058(&Method_System_Collections_Generic_List_UserServantEntity___ctor__);
+    sub_1C37058(&Method_System_Collections_Generic_List_ServantEntity___ctor__);
+    sub_1C37058(&System_Collections_Generic_List_ServantEntity__TypeInfo);
+    sub_1C37058(&System_Collections_Generic_List_UserServantEntity__TypeInfo);
+    sub_1C37058(&NetworkManager_TypeInfo);
+    sub_1C37058(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
+    sub_1C37058(&CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo);
+    sub_1C37058(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    byte_4C3EA07 = 1;
   }
   entity = 0;
   recoverAt = 0;
   isWhole = 0;
   v138 = 0;
   v139 = 0;
-  v19 = (System_Collections_Generic_List_object__o *)sub_1C32E6C(System_Collections_Generic_List_UserServantEntity__TypeInfo);
+  v19 = (System_Collections_Generic_List_object__o *)sub_1C372A4(System_Collections_Generic_List_UserServantEntity__TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v19,
-    (const MethodInfo_3797F88 *)Method_System_Collections_Generic_List_UserServantEntity___ctor__);
+    (const MethodInfo_37A27F0 *)Method_System_Collections_Generic_List_UserServantEntity___ctor__);
   this->fields.equipUserServantEntityList = (struct System_Collections_Generic_List_UserServantEntity__o *)v19;
-  sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.equipUserServantEntityList, (int32_t)v19, v20, v21);
-  v22 = (System_Collections_Generic_List_object__o *)sub_1C32E6C(System_Collections_Generic_List_ServantEntity__TypeInfo);
+  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.equipUserServantEntityList, (int32_t)v19, v20, v21);
+  v22 = (System_Collections_Generic_List_object__o *)sub_1C372A4(System_Collections_Generic_List_ServantEntity__TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v22,
-    (const MethodInfo_3797F88 *)Method_System_Collections_Generic_List_ServantEntity___ctor__);
+    (const MethodInfo_37A27F0 *)Method_System_Collections_Generic_List_ServantEntity___ctor__);
   this->fields.equipServantEntityList = (struct System_Collections_Generic_List_ServantEntity__o *)v22;
-  sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.equipServantEntityList, (int32_t)v22, v23, v24);
+  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.equipServantEntityList, (int32_t)v22, v23, v24);
   *(_QWORD *)&this->fields.nameLimitCount = -1;
   this->fields.warBoardPieceIndex = -1;
-  ListViewItem___ctor_43702564((ListViewItem_o *)this, index, 0);
+  ListViewItem___ctor_43804668((ListViewItem_o *)this, index, 0);
   this->fields.userServantEntity = userServantEntity;
   p_userServantEntity = (CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o **)&this->fields.userServantEntity;
-  sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.userServantEntity, (int32_t)userServantEntity, v26, v27);
+  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.userServantEntity, (int32_t)userServantEntity, v26, v27);
   this->fields.questRestrictionInfo = questRestrictionInfo;
-  sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.questRestrictionInfo, (int32_t)questRestrictionInfo, v28, v29);
+  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.questRestrictionInfo, (int32_t)questRestrictionInfo, v28, v29);
   this->fields.friendPointCampaignEntityList = friendPointCampaignEntityList;
-  sub_1C32BC4(
+  sub_1C36FFC(
     (CGThumbnailListItem_o *)&this->fields.friendPointCampaignEntityList,
     (int32_t)friendPointCampaignEntityList,
     v30,
     v31);
   this->fields.followerInfo = 0;
-  sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.followerInfo, 0, v32, v33);
+  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.followerInfo, 0, v32, v33);
   this->fields.setupInfo = setupInfo;
   *(_WORD *)&this->fields.isFollower = 0;
   *(_QWORD *)&this->fields.followerClassId = 0;
   this->fields.followerIndex = 0;
-  sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.setupInfo, (int32_t)setupInfo, v34, v35);
+  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.setupInfo, (int32_t)setupInfo, v34, v35);
   this->fields._EquipFriendShipSkillChange_k__BackingField = isChangeFriendShipSvtEquipSkill;
-  Instance = (__int64)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39E2904 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = (__int64)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39ED16C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance )
     goto LABEL_153;
   Instance = (__int64)DataManager__GetMasterData_object_(
                         (DataManager_o *)Instance,
-                        (const MethodInfo_30DD3F0 *)Method_DataManager_GetMasterData_ServantMaster___);
+                        (const MethodInfo_30E7C58 *)Method_DataManager_GetMasterData_ServantMaster___);
   v37 = *p_userServantEntity;
   if ( !*p_userServantEntity )
     goto LABEL_153;
@@ -955,30 +955,30 @@ void PartyOrganizationListViewItem___ctor_34133596(
     j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
   *(_QWORD *)&v143.fields.currentCryptoKey = v40;
   *(_QWORD *)&v143.fields.fakeValue = v39;
-  Instance = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_48887784(v143, 0);
+  Instance = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_48930896(v143, 0);
   if ( !v38 )
     goto LABEL_153;
   v41 = DataMasterBase_object__object__int___GetEntity(
           v38,
           Instance,
-          (const MethodInfo_3396838 *)Method_DataMasterBase_ServantMaster__ServantEntity__int__GetEntity__);
+          (const MethodInfo_33A10A0 *)Method_DataMasterBase_ServantMaster__ServantEntity__int__GetEntity__);
   this->fields.servantEntity = (struct ServantEntity_o *)v41;
   p_servantEntity = &this->fields.servantEntity;
-  sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.servantEntity, (int32_t)v41, v43, v44);
-  Instance = (__int64)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39E2904 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.servantEntity, (int32_t)v41, v43, v44);
+  Instance = (__int64)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39ED16C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance )
     goto LABEL_153;
   Instance = (__int64)DataManager__GetMasterData_object_(
                         (DataManager_o *)Instance,
-                        (const MethodInfo_30DD3F0 *)Method_DataManager_GetMasterData_ServantLimitMaster___);
+                        (const MethodInfo_30E7C58 *)Method_DataManager_GetMasterData_ServantLimitMaster___);
   if ( !*p_userServantEntity )
     goto LABEL_153;
   v45 = (ServantLimitMaster_o *)Instance;
-  Instance = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_48887784((*p_userServantEntity)[5], 0);
+  Instance = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_48930896((*p_userServantEntity)[5], 0);
   if ( !*p_userServantEntity )
     goto LABEL_153;
   v46 = Instance;
-  Instance = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_48887784((*p_userServantEntity)[6], 0);
+  Instance = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_48930896((*p_userServantEntity)[6], 0);
   if ( !v45 )
     goto LABEL_153;
   ServantLimitMaster__GetEntity(v45, v46, Instance, 0);
@@ -995,7 +995,7 @@ void PartyOrganizationListViewItem___ctor_34133596(
     p_equipSvtIdList = &this->fields.equipSvtIdList;
 LABEL_21:
     p_questRestrictionInfo = &this->fields.questRestrictionInfo;
-    sub_1C32BC4((CGThumbnailListItem_o *)p_equipSvtIdList, v55, v47, v48);
+    sub_1C36FFC((CGThumbnailListItem_o *)p_equipSvtIdList, v55, v47, v48);
     if ( !userServantEntity )
       goto LABEL_153;
     Instance = (__int64)UserServantEntity__GetOverwriteStatus(userServantEntity, questRestrictionInfo, 0);
@@ -1020,14 +1020,14 @@ LABEL_21:
       j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
     *(_QWORD *)&v144.fields.currentCryptoKey = v60;
     *(_QWORD *)&v144.fields.fakeValue = v59;
-    Instance = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_48887784(v144, 0);
+    Instance = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_48930896(v144, 0);
     v61 = this->fields.userServantEntity;
     this->fields.svtLimitCount = Instance;
     if ( !v61 )
       goto LABEL_153;
     CommandCodeIdList = UserServantEntity__getCommandCodeIdList(v61, 0);
     this->fields.commandCodeIdList = CommandCodeIdList;
-    sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.commandCodeIdList, (int32_t)CommandCodeIdList, v63, v64);
+    sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.commandCodeIdList, (int32_t)CommandCodeIdList, v63, v64);
     v65 = this->fields.questRestrictionInfo;
     if ( v65 )
     {
@@ -1040,18 +1040,18 @@ LABEL_21:
         j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
       *(_QWORD *)&v145.fields.currentCryptoKey = v68;
       *(_QWORD *)&v145.fields.fakeValue = v67;
-      Instance = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_48887784(v145, 0);
+      Instance = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_48930896(v145, 0);
       if ( !*p_userServantEntity )
         goto LABEL_153;
       v69 = Instance;
-      Instance = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_48887784((*p_userServantEntity)[6], 0);
+      Instance = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_48930896((*p_userServantEntity)[6], 0);
       if ( !*p_userServantEntity )
         goto LABEL_153;
       v70 = Instance;
       Instance = UserServantEntity__getDispLimitCount((UserServantEntity_o *)*p_userServantEntity, 0, 0);
       if ( !*p_userServantEntity )
         goto LABEL_153;
-      Instance = QuestRestrictionInfo__IsRestriction_43321100(
+      Instance = QuestRestrictionInfo__IsRestriction_43422968(
                    v65,
                    &this->fields.isQuestRestrictionWhole,
                    v69,
@@ -1077,7 +1077,7 @@ LABEL_21:
           j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
         *(_QWORD *)&v146.fields.currentCryptoKey = v74;
         *(_QWORD *)&v146.fields.fakeValue = v73;
-        v75 = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_48887784(v146, 0);
+        v75 = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_48930896(v146, 0);
         IsConvertOverwriteImage = QuestRestrictionInfo__IsConvertOverwriteImage(v71, v75, 0);
       }
       else
@@ -1115,12 +1115,12 @@ LABEL_21:
       goto LABEL_152;
     if ( v78->fields.isFatigure )
     {
-      Instance = (__int64)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39E2904 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+      Instance = (__int64)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39ED16C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
       if ( !Instance )
         goto LABEL_153;
       Instance = (__int64)DataManager__GetMasterData_object_(
                             (DataManager_o *)Instance,
-                            (const MethodInfo_30DD3F0 *)Method_DataManager_GetMasterData_UserEventServantFatigueMaster___);
+                            (const MethodInfo_30E7C58 *)Method_DataManager_GetMasterData_UserEventServantFatigueMaster___);
       if ( !*p_questRestrictionInfo )
         goto LABEL_153;
       v79 = (UserServantEntity_o *)*p_userServantEntity;
@@ -1134,7 +1134,7 @@ LABEL_21:
         j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
       *(_QWORD *)&v147.fields.currentCryptoKey = v83;
       *(_QWORD *)&v147.fields.fakeValue = v82;
-      Instance = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_48887784(v147, 0);
+      Instance = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_48930896(v147, 0);
       if ( !v80 )
         goto LABEL_153;
       Instance = UserEventServantFatigueMaster__GetFatigueInfo(
@@ -1160,12 +1160,12 @@ LABEL_21:
     if ( v85->fields.isAllOutBattle )
     {
       allOutBattleGroupNo = v85->fields.allOutBattleGroupNo;
-      Instance = (__int64)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39E2904 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+      Instance = (__int64)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39ED16C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
       if ( !Instance )
         goto LABEL_153;
       Instance = (__int64)DataManager__GetMasterData_object_(
                             (DataManager_o *)Instance,
-                            (const MethodInfo_30DD3F0 *)Method_DataManager_GetMasterData_UserEventAlloutBattleMaster___);
+                            (const MethodInfo_30E7C58 *)Method_DataManager_GetMasterData_UserEventAlloutBattleMaster___);
       v87 = (UserServantEntity_o *)*p_userServantEntity;
       if ( !*p_userServantEntity )
         goto LABEL_153;
@@ -1176,7 +1176,7 @@ LABEL_21:
         j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
       *(_QWORD *)&v148.fields.currentCryptoKey = v90;
       *(_QWORD *)&v148.fields.fakeValue = v89;
-      Instance = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_48887784(v148, 0);
+      Instance = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_48930896(v148, 0);
       if ( !*p_questRestrictionInfo || !v88 )
         goto LABEL_153;
       Instance = UserEventAlloutBattleMaster__IsAlreadyUsedServant(
@@ -1194,13 +1194,13 @@ LABEL_21:
     {
       if ( !DataManager_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-      Master_object = DataManager__GetMaster_object_((const MethodInfo_30DD39C *)Method_DataManager_GetMaster_UserEventDataLostMaster___);
+      Master_object = DataManager__GetMaster_object_((const MethodInfo_30E7C04 *)Method_DataManager_GetMaster_UserEventDataLostMaster___);
       if ( !NetworkManager_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
-      if ( !byte_4C31812 )
+      if ( !byte_4C3CD62 )
       {
-        sub_1C32C20(&NetworkManager_TypeInfo);
-        byte_4C31812 = 1;
+        sub_1C37058(&NetworkManager_TypeInfo);
+        byte_4C3CD62 = 1;
       }
       Instance = (__int64)NetworkManager_TypeInfo;
       if ( !NetworkManager_TypeInfo->_2.cctor_finished )
@@ -1228,7 +1228,7 @@ LABEL_21:
           j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
         *(_QWORD *)&v149.fields.currentCryptoKey = v95;
         *(_QWORD *)&v149.fields.fakeValue = v94;
-        Instance = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_48887784(v149, 0);
+        Instance = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_48930896(v149, 0);
         if ( !v93 )
           goto LABEL_153;
         Instance = UserEventDataLostEntity__IsRestart(v93, Instance, 0);
@@ -1243,7 +1243,7 @@ LABEL_21:
           j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
         *(_QWORD *)&v150.fields.currentCryptoKey = v100;
         *(_QWORD *)&v150.fields.fakeValue = v99;
-        Instance = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_48887784(v150, 0);
+        Instance = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_48930896(v150, 0);
         if ( !v98 )
           goto LABEL_153;
         if ( (v97 & 1) != 0 )
@@ -1262,7 +1262,7 @@ LABEL_21:
     *(_WORD *)&this->fields.isMyServantOrNpcRestriction = 0;
     if ( questRestrictionInfo )
     {
-      if ( QuestRestrictionInfo__IsMyServantOrNpcRestriction_43340352(
+      if ( QuestRestrictionInfo__IsMyServantOrNpcRestriction_43442220(
              questRestrictionInfo,
              this->fields._InitPos_k__BackingField,
              0) )
@@ -1270,7 +1270,7 @@ LABEL_21:
         this->fields.isMyServantOrNpcRestriction = 1;
         if ( !DataManager_TypeInfo->_2.cctor_finished )
           j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-        Instance = (__int64)DataManager__GetMaster_object_((const MethodInfo_30DD39C *)Method_DataManager_GetMaster_UserServantMaster___);
+        Instance = (__int64)DataManager__GetMaster_object_((const MethodInfo_30E7C04 *)Method_DataManager_GetMaster_UserServantMaster___);
         if ( !Instance )
           goto LABEL_153;
         Instance = (__int64)UserServantMaster__getOrganizationList((UserServantMaster_o *)Instance, 0);
@@ -1294,8 +1294,8 @@ LABEL_21:
               j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
             *(_QWORD *)&v151.fields.currentCryptoKey = v106;
             *(_QWORD *)&v151.fields.fakeValue = v105;
-            v107 = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_48887784(v151, 0);
-            v108 = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_48887784(
+            v107 = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_48930896(v151, 0);
+            v108 = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_48930896(
                      *(CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o *)(v104 + 96),
                      0);
             DispLimitCount = UserServantEntity__getDispLimitCount((UserServantEntity_o *)v104, 0, 0);
@@ -1306,7 +1306,7 @@ LABEL_21:
                                      DispLimitCount,
                                      0);
             Rarity = UserServantEntity__getRarity((UserServantEntity_o *)v104, 0);
-            Instance = QuestRestrictionInfo__IsRestriction_43321380(
+            Instance = QuestRestrictionInfo__IsRestriction_43423248(
                          questRestrictionInfo,
                          &isWhole,
                          ServantIndividuality,
@@ -1317,7 +1317,7 @@ LABEL_21:
                          0);
             if ( (Instance & 1) == 0 )
             {
-              Instance = QuestRestrictionInfo__IsRestrictionServantIndividuality_43343396(
+              Instance = QuestRestrictionInfo__IsRestrictionServantIndividuality_43445264(
                            questRestrictionInfo,
                            ServantIndividuality,
                            this->fields._InitPos_k__BackingField,
@@ -1342,7 +1342,7 @@ LABEL_107:
         this->fields.isRestrictionGrandServant = 1;
         if ( !DataManager_TypeInfo->_2.cctor_finished )
           j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-        Instance = (__int64)DataManager__GetMaster_object_((const MethodInfo_30DD39C *)Method_DataManager_GetMaster_QuestPhaseMaster___);
+        Instance = (__int64)DataManager__GetMaster_object_((const MethodInfo_30E7C04 *)Method_DataManager_GetMaster_QuestPhaseMaster___);
         if ( !Instance )
           goto LABEL_153;
         Instance = QuestPhaseMaster__TryGetEntity(
@@ -1367,7 +1367,7 @@ LABEL_107:
     v113 = (*p_questRestrictionInfo)->fields.eventId;
     if ( !DataManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-    Instance = (__int64)DataManager__GetMaster_object_((const MethodInfo_30DD39C *)Method_DataManager_GetMaster_EventServantPointRankMaster___);
+    Instance = (__int64)DataManager__GetMaster_object_((const MethodInfo_30E7C04 *)Method_DataManager_GetMaster_EventServantPointRankMaster___);
     if ( !Instance )
       goto LABEL_153;
     v114 = (EventServantPointRankMaster_o *)Instance;
@@ -1377,7 +1377,7 @@ LABEL_107:
       this->fields._IsDispSvtPoint_k__BackingField = 1;
       if ( !DataManager_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-      Instance = (__int64)DataManager__GetMaster_object_((const MethodInfo_30DD39C *)Method_DataManager_GetMaster_UserEventServantPointMaster___);
+      Instance = (__int64)DataManager__GetMaster_object_((const MethodInfo_30E7C04 *)Method_DataManager_GetMaster_UserEventServantPointMaster___);
       v115 = (UserServantEntity_o *)*p_userServantEntity;
       if ( !*p_userServantEntity )
         goto LABEL_153;
@@ -1388,7 +1388,7 @@ LABEL_107:
       if ( !CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo);
       v136 = v137;
-      Instance = CodeStage_AntiCheat_ObscuredTypes_ObscuredLong__op_Implicit_48891308(&v136, 0);
+      Instance = CodeStage_AntiCheat_ObscuredTypes_ObscuredLong__op_Implicit_48934420(&v136, 0);
       if ( !*p_userServantEntity )
         goto LABEL_153;
       v118 = Instance;
@@ -1422,12 +1422,12 @@ LABEL_107:
     if ( !CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo);
     v135 = v137;
-    if ( CodeStage_AntiCheat_ObscuredTypes_ObscuredLong__op_Implicit_48891308(&v135, 0) >= 1 )
+    if ( CodeStage_AntiCheat_ObscuredTypes_ObscuredLong__op_Implicit_48934420(&v135, 0) >= 1 )
     {
       if ( !DataManager_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-      v126 = DataManager__GetMaster_object_((const MethodInfo_30DD39C *)Method_DataManager_GetMaster_UserServantMaster___);
-      Instance = sub_1C32CC8(long___TypeInfo, 1);
+      v126 = DataManager__GetMaster_object_((const MethodInfo_30E7C04 *)Method_DataManager_GetMaster_UserServantMaster___);
+      Instance = sub_1C37100(long___TypeInfo, 1);
       v127 = (UserServantEntity_o *)*p_userServantEntity;
       if ( !*p_userServantEntity )
         goto LABEL_153;
@@ -1438,19 +1438,19 @@ LABEL_107:
       if ( !CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo);
       v134 = v137;
-      Instance = CodeStage_AntiCheat_ObscuredTypes_ObscuredLong__op_Implicit_48891308(&v134, 0);
+      Instance = CodeStage_AntiCheat_ObscuredTypes_ObscuredLong__op_Implicit_48934420(&v134, 0);
       if ( !v129 )
         goto LABEL_153;
       if ( !*(_DWORD *)(v129 + 24) )
 LABEL_154:
-        sub_1C32E84(Instance);
+        sub_1C372BC(Instance);
       *(_QWORD *)(v129 + 32) = Instance;
       if ( !v126 )
         goto LABEL_153;
       if ( !DataMasterBase_object__object__long___isEntityExistsFromId(
               (DataMasterBase_TMaster__TEntity__PKType__o *)v126,
               (System_Int64_array *)v129,
-              (const MethodInfo_3398370 *)Method_DataMasterBase_UserServantMaster__UserServantEntity__long__isEntityExistsFromId__) )
+              (const MethodInfo_33A2BD8 *)Method_DataMasterBase_UserServantMaster__UserServantEntity__long__isEntityExistsFromId__) )
       {
 LABEL_151:
         this->fields._IsDisappearSvt_k__BackingField = 1;
@@ -1467,27 +1467,27 @@ LABEL_152:
       return;
     }
 LABEL_153:
-    sub_1C32E7C(Instance);
+    sub_1C372B4(Instance);
   }
   v51 = v50;
-  v52 = (struct System_Int32_array *)sub_1C32D5C(v50, int___TypeInfo);
+  v52 = (struct System_Int32_array *)sub_1C37194(v50, int___TypeInfo);
   if ( v52 )
   {
     this->fields.equipSvtIdList = v52;
     p_equipSvtIdList = &this->fields.equipSvtIdList;
-    v54 = sub_1C32D5C(v51, int___TypeInfo);
+    v54 = sub_1C37194(v51, int___TypeInfo);
     if ( v54 )
     {
       v55 = v54;
       goto LABEL_21;
     }
   }
-  v130 = (PartyOrganizationListViewItem_o *)sub_1C3313C(v51);
+  v130 = (PartyOrganizationListViewItem_o *)sub_1C37574(v51);
   PartyOrganizationListViewItem__SetCanGetBuddyPoint(v130, v131, v132);
 }
 
 
-void PartyOrganizationListViewItem___ctor_34144300(
+void PartyOrganizationListViewItem___ctor_34239932(
         PartyOrganizationListViewItem_o *this,
         int32_t index,
         bool isFollower,
@@ -1538,51 +1538,51 @@ void PartyOrganizationListViewItem___ctor_34144300(
   CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o v53; // 0:x0.16
 
   v13 = isFollower;
-  if ( (byte_4C3341F & 1) == 0 )
+  if ( (byte_4C3EA09 & 1) == 0 )
   {
-    sub_1C32C20(&Method_DataManager_GetMasterData_UserServantMaster___);
-    sub_1C32C20(&Method_DataManager_GetMaster_EventServantPointRankMaster___);
-    sub_1C32C20(&Method_DataManager_GetMaster_QuestPhaseMaster___);
-    sub_1C32C20(&DataManager_TypeInfo);
-    sub_1C32C20(&Method_System_Collections_Generic_List_UserServantEntity___ctor__);
-    sub_1C32C20(&Method_System_Collections_Generic_List_ServantEntity___ctor__);
-    sub_1C32C20(&System_Collections_Generic_List_ServantEntity__TypeInfo);
-    sub_1C32C20(&System_Collections_Generic_List_UserServantEntity__TypeInfo);
-    sub_1C32C20(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
-    sub_1C32C20(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-    byte_4C3341F = 1;
+    sub_1C37058(&Method_DataManager_GetMasterData_UserServantMaster___);
+    sub_1C37058(&Method_DataManager_GetMaster_EventServantPointRankMaster___);
+    sub_1C37058(&Method_DataManager_GetMaster_QuestPhaseMaster___);
+    sub_1C37058(&DataManager_TypeInfo);
+    sub_1C37058(&Method_System_Collections_Generic_List_UserServantEntity___ctor__);
+    sub_1C37058(&Method_System_Collections_Generic_List_ServantEntity___ctor__);
+    sub_1C37058(&System_Collections_Generic_List_ServantEntity__TypeInfo);
+    sub_1C37058(&System_Collections_Generic_List_UserServantEntity__TypeInfo);
+    sub_1C37058(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
+    sub_1C37058(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    byte_4C3EA09 = 1;
   }
   isWhole = 0;
   entity = 0;
-  v14 = (System_Collections_Generic_List_object__o *)sub_1C32E6C(System_Collections_Generic_List_UserServantEntity__TypeInfo);
+  v14 = (System_Collections_Generic_List_object__o *)sub_1C372A4(System_Collections_Generic_List_UserServantEntity__TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v14,
-    (const MethodInfo_3797F88 *)Method_System_Collections_Generic_List_UserServantEntity___ctor__);
+    (const MethodInfo_37A27F0 *)Method_System_Collections_Generic_List_UserServantEntity___ctor__);
   this->fields.equipUserServantEntityList = (struct System_Collections_Generic_List_UserServantEntity__o *)v14;
-  sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.equipUserServantEntityList, (int32_t)v14, v15, v16);
-  v17 = (System_Collections_Generic_List_object__o *)sub_1C32E6C(System_Collections_Generic_List_ServantEntity__TypeInfo);
+  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.equipUserServantEntityList, (int32_t)v14, v15, v16);
+  v17 = (System_Collections_Generic_List_object__o *)sub_1C372A4(System_Collections_Generic_List_ServantEntity__TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v17,
-    (const MethodInfo_3797F88 *)Method_System_Collections_Generic_List_ServantEntity___ctor__);
+    (const MethodInfo_37A27F0 *)Method_System_Collections_Generic_List_ServantEntity___ctor__);
   this->fields.equipServantEntityList = (struct System_Collections_Generic_List_ServantEntity__o *)v17;
-  sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.equipServantEntityList, (int32_t)v17, v18, v19);
+  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.equipServantEntityList, (int32_t)v17, v18, v19);
   *(_QWORD *)&this->fields.nameLimitCount = -1;
   this->fields.warBoardPieceIndex = -1;
-  ListViewItem___ctor_43702564((ListViewItem_o *)this, index, 0);
+  ListViewItem___ctor_43804668((ListViewItem_o *)this, index, 0);
   this->fields.userServantEntity = 0;
-  sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.userServantEntity, 0, v20, v21);
+  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.userServantEntity, 0, v20, v21);
   this->fields.followerInfo = 0;
-  sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.followerInfo, 0, v22, v23);
+  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.followerInfo, 0, v22, v23);
   this->fields.questRestrictionInfo = questRestrictionInfo;
-  sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.questRestrictionInfo, (int32_t)questRestrictionInfo, v24, v25);
+  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.questRestrictionInfo, (int32_t)questRestrictionInfo, v24, v25);
   this->fields.isFollower = v13;
   this->fields.isFixNpc = 0;
   *(_QWORD *)&this->fields.followerGrandGraphId = 0;
   this->fields.followerClassId = 0;
   this->fields.setupInfo = setupInfo;
-  sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.setupInfo, (int32_t)setupInfo, v26, v27);
+  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.setupInfo, (int32_t)setupInfo, v26, v27);
   this->fields.servantEntity = 0;
-  sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.servantEntity, 0, v28, v29);
+  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.servantEntity, 0, v28, v29);
   if ( initPos )
     v32 = initPos;
   else
@@ -1597,16 +1597,16 @@ void PartyOrganizationListViewItem___ctor_34144300(
   this->fields._EquipFriendShipSkillChange_k__BackingField = 0;
   if ( !questRestrictionInfo )
     goto LABEL_38;
-  if ( QuestRestrictionInfo__IsMyServantOrNpcRestriction_43340352(questRestrictionInfo, v32, 0) )
+  if ( QuestRestrictionInfo__IsMyServantOrNpcRestriction_43442220(questRestrictionInfo, v32, 0) )
   {
     this->fields.frameType = 9;
     this->fields.isMyServantOrNpcRestriction = 1;
-    Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39E2904 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39ED16C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
     if ( !Instance )
       goto LABEL_49;
     Instance = DataManager__GetMasterData_object_(
                  (DataManager_o *)Instance,
-                 (const MethodInfo_30DD3F0 *)Method_DataManager_GetMasterData_UserServantMaster___);
+                 (const MethodInfo_30E7C58 *)Method_DataManager_GetMasterData_UserServantMaster___);
     if ( !Instance )
       goto LABEL_49;
     Instance = UserServantMaster__getOrganizationList((UserServantMaster_o *)Instance, 0);
@@ -1620,7 +1620,7 @@ void PartyOrganizationListViewItem___ctor_34144300(
       while ( 1 )
       {
         if ( v36 >= v34 )
-          sub_1C32E84(Instance);
+          sub_1C372BC(Instance);
         v37 = *((_QWORD *)v35 + (int)v36 + 4);
         this->fields._IsGrandServant_k__BackingField = 0;
         this->fields._IsUseGrandBoard_k__BackingField = 0;
@@ -1632,8 +1632,8 @@ void PartyOrganizationListViewItem___ctor_34144300(
           j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
         *(_QWORD *)&v53.fields.currentCryptoKey = v39;
         *(_QWORD *)&v53.fields.fakeValue = v38;
-        v40 = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_48887784(v53, 0);
-        v41 = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_48887784(
+        v40 = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_48930896(v53, 0);
+        v41 = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_48930896(
                 *(CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o *)(v37 + 96),
                 0);
         DispLimitCount = UserServantEntity__getDispLimitCount((UserServantEntity_o *)v37, 0, 0);
@@ -1644,7 +1644,7 @@ void PartyOrganizationListViewItem___ctor_34144300(
                                  DispLimitCount,
                                  0);
         Rarity = UserServantEntity__getRarity((UserServantEntity_o *)v37, 0);
-        Instance = (void *)QuestRestrictionInfo__IsRestriction_43321380(
+        Instance = (void *)QuestRestrictionInfo__IsRestriction_43423248(
                              questRestrictionInfo,
                              &isWhole,
                              ServantIndividuality,
@@ -1655,7 +1655,7 @@ void PartyOrganizationListViewItem___ctor_34144300(
                              0);
         if ( ((unsigned __int8)Instance & 1) == 0 )
         {
-          Instance = (void *)QuestRestrictionInfo__IsRestrictionServantIndividuality_43343396(
+          Instance = (void *)QuestRestrictionInfo__IsRestrictionServantIndividuality_43445264(
                                questRestrictionInfo,
                                ServantIndividuality,
                                this->fields._InitPos_k__BackingField,
@@ -1698,7 +1698,7 @@ LABEL_38:
   this->fields.isRestrictionGrandServant = 1;
   if ( !DataManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-  Instance = DataManager__GetMaster_object_((const MethodInfo_30DD39C *)Method_DataManager_GetMaster_QuestPhaseMaster___);
+  Instance = DataManager__GetMaster_object_((const MethodInfo_30E7C04 *)Method_DataManager_GetMaster_QuestPhaseMaster___);
   if ( !Instance )
     goto LABEL_49;
   if ( QuestPhaseMaster__TryGetEntity(
@@ -1718,7 +1718,7 @@ LABEL_39:
   this->fields.commandCodeIdList = 0;
   this->fields.isFixMultipleNpc = 0;
   this->fields.svtLimitCount = 0;
-  sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.commandCodeIdList, 0, v30, v31);
+  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.commandCodeIdList, 0, v30, v31);
   this->fields.fatigureTime = -1;
   v47 = this->fields.questRestrictionInfo;
   *(_WORD *)&this->fields.isRestrictionMyServantPos = 0;
@@ -1740,10 +1740,10 @@ LABEL_39:
   eventId = v47->fields.eventId;
   if ( !DataManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-  Instance = DataManager__GetMaster_object_((const MethodInfo_30DD39C *)Method_DataManager_GetMaster_EventServantPointRankMaster___);
+  Instance = DataManager__GetMaster_object_((const MethodInfo_30E7C04 *)Method_DataManager_GetMaster_EventServantPointRankMaster___);
   if ( !Instance )
 LABEL_49:
-    sub_1C32E7C(Instance);
+    sub_1C372B4(Instance);
   if ( EventServantPointRankMaster__IsEnableEvent((EventServantPointRankMaster_o *)Instance, eventId, 0) )
   {
     this->fields._IsDispSvtPoint_k__BackingField = !isFollower;
@@ -1754,7 +1754,7 @@ LABEL_45:
 }
 
 
-void PartyOrganizationListViewItem___ctor_34145636(
+void PartyOrganizationListViewItem___ctor_34241268(
         PartyOrganizationListViewItem_o *this,
         int32_t index,
         int32_t svtId,
@@ -1794,66 +1794,66 @@ void PartyOrganizationListViewItem___ctor_34145636(
   const MethodInfo *v42; // x2
   int v43; // w9
 
-  if ( (byte_4C33420 & 1) == 0 )
+  if ( (byte_4C3EA0A & 1) == 0 )
   {
-    sub_1C32C20(&Method_DataManager_GetMasterData_ServantExceedMaster___);
-    sub_1C32C20(&Method_DataManager_GetMasterData_ServantLimitMaster___);
-    sub_1C32C20(&Method_DataManager_GetMasterData_ServantMaster___);
-    sub_1C32C20(&Method_DataMasterBase_ServantMaster__ServantEntity__int__GetEntity__);
-    sub_1C32C20(&Method_System_Collections_Generic_List_UserServantEntity___ctor__);
-    sub_1C32C20(&Method_System_Collections_Generic_List_ServantEntity___ctor__);
-    sub_1C32C20(&System_Collections_Generic_List_ServantEntity__TypeInfo);
-    sub_1C32C20(&System_Collections_Generic_List_UserServantEntity__TypeInfo);
-    sub_1C32C20(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-    byte_4C33420 = 1;
+    sub_1C37058(&Method_DataManager_GetMasterData_ServantExceedMaster___);
+    sub_1C37058(&Method_DataManager_GetMasterData_ServantLimitMaster___);
+    sub_1C37058(&Method_DataManager_GetMasterData_ServantMaster___);
+    sub_1C37058(&Method_DataMasterBase_ServantMaster__ServantEntity__int__GetEntity__);
+    sub_1C37058(&Method_System_Collections_Generic_List_UserServantEntity___ctor__);
+    sub_1C37058(&Method_System_Collections_Generic_List_ServantEntity___ctor__);
+    sub_1C37058(&System_Collections_Generic_List_ServantEntity__TypeInfo);
+    sub_1C37058(&System_Collections_Generic_List_UserServantEntity__TypeInfo);
+    sub_1C37058(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    byte_4C3EA0A = 1;
   }
-  v17 = (System_Collections_Generic_List_object__o *)sub_1C32E6C(System_Collections_Generic_List_UserServantEntity__TypeInfo);
+  v17 = (System_Collections_Generic_List_object__o *)sub_1C372A4(System_Collections_Generic_List_UserServantEntity__TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v17,
-    (const MethodInfo_3797F88 *)Method_System_Collections_Generic_List_UserServantEntity___ctor__);
+    (const MethodInfo_37A27F0 *)Method_System_Collections_Generic_List_UserServantEntity___ctor__);
   this->fields.equipUserServantEntityList = (struct System_Collections_Generic_List_UserServantEntity__o *)v17;
-  sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.equipUserServantEntityList, (int32_t)v17, v18, v19);
-  v20 = (System_Collections_Generic_List_object__o *)sub_1C32E6C(System_Collections_Generic_List_ServantEntity__TypeInfo);
+  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.equipUserServantEntityList, (int32_t)v17, v18, v19);
+  v20 = (System_Collections_Generic_List_object__o *)sub_1C372A4(System_Collections_Generic_List_ServantEntity__TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v20,
-    (const MethodInfo_3797F88 *)Method_System_Collections_Generic_List_ServantEntity___ctor__);
+    (const MethodInfo_37A27F0 *)Method_System_Collections_Generic_List_ServantEntity___ctor__);
   this->fields.equipServantEntityList = (struct System_Collections_Generic_List_ServantEntity__o *)v20;
-  sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.equipServantEntityList, (int32_t)v20, v21, v22);
+  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.equipServantEntityList, (int32_t)v20, v21, v22);
   *(_QWORD *)&this->fields.nameLimitCount = -1;
   this->fields.warBoardPieceIndex = -1;
-  ListViewItem___ctor_43702564((ListViewItem_o *)this, index, 0);
+  ListViewItem___ctor_43804668((ListViewItem_o *)this, index, 0);
   this->fields.userServantEntity = 0;
-  sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.userServantEntity, 0, v23, v24);
+  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.userServantEntity, 0, v23, v24);
   this->fields.questRestrictionInfo = questRestriction;
-  sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.questRestrictionInfo, (int32_t)questRestriction, v25, v26);
+  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.questRestrictionInfo, (int32_t)questRestriction, v25, v26);
   this->fields.followerInfo = follower;
-  sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.followerInfo, (int32_t)follower, v27, v28);
+  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.followerInfo, (int32_t)follower, v27, v28);
   this->fields.setupInfo = eventUpValSetupInfo;
   *(_WORD *)&this->fields.isFollower = follower != 0;
   *(_QWORD *)&this->fields.followerClassId = 0;
   this->fields.followerIndex = 0;
-  sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.setupInfo, (int32_t)eventUpValSetupInfo, v29, v30);
-  Instance = (DataManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39E2904 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.setupInfo, (int32_t)eventUpValSetupInfo, v29, v30);
+  Instance = (DataManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39ED16C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance )
     goto LABEL_15;
   Instance = (DataManager_o *)DataManager__GetMasterData_object_(
                                 Instance,
-                                (const MethodInfo_30DD3F0 *)Method_DataManager_GetMasterData_ServantMaster___);
+                                (const MethodInfo_30E7C58 *)Method_DataManager_GetMasterData_ServantMaster___);
   if ( !Instance )
     goto LABEL_15;
   Entity = DataMasterBase_object__object__int___GetEntity(
              (DataMasterBase_TMaster__TEntity__PKType__o *)Instance,
              svtId,
-             (const MethodInfo_3396838 *)Method_DataMasterBase_ServantMaster__ServantEntity__int__GetEntity__);
+             (const MethodInfo_33A10A0 *)Method_DataMasterBase_ServantMaster__ServantEntity__int__GetEntity__);
   this->fields.servantEntity = (struct ServantEntity_o *)Entity;
   p_servantEntity = &this->fields.servantEntity;
-  sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.servantEntity, (int32_t)Entity, v34, v35);
-  Instance = (DataManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39E2904 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.servantEntity, (int32_t)Entity, v34, v35);
+  Instance = (DataManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39ED16C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance )
     goto LABEL_15;
   Instance = (DataManager_o *)DataManager__GetMasterData_object_(
                                 Instance,
-                                (const MethodInfo_30DD3F0 *)Method_DataManager_GetMasterData_ServantLimitMaster___);
+                                (const MethodInfo_30E7C58 *)Method_DataManager_GetMasterData_ServantLimitMaster___);
   if ( !Instance )
     goto LABEL_15;
   Instance = (DataManager_o *)ServantLimitMaster__GetEntity((ServantLimitMaster_o *)Instance, svtId, limitCount, 0);
@@ -1872,15 +1872,15 @@ void PartyOrganizationListViewItem___ctor_34145636(
     || (m_CancellationTokenSource = (int32_t)v37->fields.m_CancellationTokenSource,
         this->fields.rarityId = m_CancellationTokenSource,
         this->fields.actualRarity = m_CancellationTokenSource,
-        (Instance = (DataManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39E2904 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__)) == 0)
+        (Instance = (DataManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39ED16C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__)) == 0)
     || (Instance = (DataManager_o *)DataManager__GetMasterData_object_(
                                       Instance,
-                                      (const MethodInfo_30DD3F0 *)Method_DataManager_GetMasterData_ServantExceedMaster___)) == 0 )
+                                      (const MethodInfo_30E7C58 *)Method_DataManager_GetMasterData_ServantExceedMaster___)) == 0 )
   {
 LABEL_15:
-    sub_1C32E7C(Instance);
+    sub_1C372B4(Instance);
   }
-  this->fields.frameType = ServantExceedMaster__GetFrameType_42582276(
+  this->fields.frameType = ServantExceedMaster__GetFrameType_42684144(
                              (ServantExceedMaster_o *)Instance,
                              svtId,
                              limitCount,
@@ -1889,7 +1889,7 @@ LABEL_15:
                              0);
   this->fields.svtLimitCount = limitCount;
   this->fields.commandCodeIdList = 0;
-  sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.commandCodeIdList, 0, v40, v41);
+  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.commandCodeIdList, 0, v40, v41);
   v43 = initPosition;
   this->fields.fatigureTime = -1;
   *(_DWORD *)&this->fields.isConvertOverwriteImage = 0;
@@ -1997,48 +1997,48 @@ void PartyOrganizationListViewItem__AddFriendshipUpCampaignInfo(
   CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o v79; // 0:x0.16
 
   v4 = &DataManager_TypeInfo;
-  if ( (byte_4C33451 & 1) == 0 )
+  if ( (byte_4C3EA3B & 1) == 0 )
   {
-    sub_1C32C20(&Method_DataManager_GetMaster_EventCampaignMaster___);
-    sub_1C32C20(&Method_DataManager_GetMaster_EventMaster___);
-    sub_1C32C20(&Method_DataManager_GetMaster_EventQuestMaster___);
-    sub_1C32C20(&Method_DataManager_GetMaster_UserServantMaster___);
-    sub_1C32C20(&DataManager_TypeInfo);
-    sub_1C32C20(&Method_DataMasterBase_EventMaster__EventEntity__int__GetEntity__);
-    sub_1C32C20(&Method_System_Linq_Enumerable_Contains_int___);
-    sub_1C32C20(&Method_System_Linq_Enumerable_Select_EventEntity_ScriptData__string___);
-    sub_1C32C20(&Method_System_Linq_Enumerable_Single_string___);
-    sub_1C32C20(&Method_System_Collections_Generic_List_Enumerator_EventCampaignEntity__Dispose__);
-    sub_1C32C20(&Method_System_Collections_Generic_List_Enumerator_EventCampaignEntity__MoveNext__);
-    sub_1C32C20(&Method_System_Collections_Generic_List_Enumerator_EventCampaignEntity__get_Current__);
-    sub_1C32C20(&EventMargeItemUpValInfo_TypeInfo);
-    sub_1C32C20(&System_Func_EventEntity_ScriptData__string__TypeInfo);
-    sub_1C32C20(&System_Func_string__bool__TypeInfo);
-    sub_1C32C20(&Method_System_Collections_Generic_List_EventMargeItemUpValInfo__Add__);
-    sub_1C32C20(&Method_System_Collections_Generic_List_EventCampaignEntity__GetEnumerator__);
-    sub_1C32C20(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
-    sub_1C32C20(&Method_SingletonTemplate_PartyOrganizationUtility__get_Instance__);
-    sub_1C32C20(&Method_PartyOrganizationListViewItem___c__AddFriendshipUpCampaignInfo_b__357_0__);
-    sub_1C32C20(&Method_PartyOrganizationListViewItem___c__AddFriendshipUpCampaignInfo_b__357_1__);
-    sub_1C32C20(&Method_PartyOrganizationListViewItem___c__AddFriendshipUpCampaignInfo_b__357_2__);
-    sub_1C32C20(&Method_PartyOrganizationListViewItem___c__AddFriendshipUpCampaignInfo_b__357_3__);
-    sub_1C32C20(&PartyOrganizationListViewItem___c_TypeInfo);
-    sub_1C32C20(&StringLiteral_1/*""*/);
-    byte_4C33451 = 1;
+    sub_1C37058(&Method_DataManager_GetMaster_EventCampaignMaster___);
+    sub_1C37058(&Method_DataManager_GetMaster_EventMaster___);
+    sub_1C37058(&Method_DataManager_GetMaster_EventQuestMaster___);
+    sub_1C37058(&Method_DataManager_GetMaster_UserServantMaster___);
+    sub_1C37058(&DataManager_TypeInfo);
+    sub_1C37058(&Method_DataMasterBase_EventMaster__EventEntity__int__GetEntity__);
+    sub_1C37058(&Method_System_Linq_Enumerable_Contains_int___);
+    sub_1C37058(&Method_System_Linq_Enumerable_Select_EventEntity_ScriptData__string___);
+    sub_1C37058(&Method_System_Linq_Enumerable_Single_string___);
+    sub_1C37058(&Method_System_Collections_Generic_List_Enumerator_EventCampaignEntity__Dispose__);
+    sub_1C37058(&Method_System_Collections_Generic_List_Enumerator_EventCampaignEntity__MoveNext__);
+    sub_1C37058(&Method_System_Collections_Generic_List_Enumerator_EventCampaignEntity__get_Current__);
+    sub_1C37058(&EventMargeItemUpValInfo_TypeInfo);
+    sub_1C37058(&System_Func_EventEntity_ScriptData__string__TypeInfo);
+    sub_1C37058(&System_Func_string__bool__TypeInfo);
+    sub_1C37058(&Method_System_Collections_Generic_List_EventMargeItemUpValInfo__Add__);
+    sub_1C37058(&Method_System_Collections_Generic_List_EventCampaignEntity__GetEnumerator__);
+    sub_1C37058(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
+    sub_1C37058(&Method_SingletonTemplate_PartyOrganizationUtility__get_Instance__);
+    sub_1C37058(&Method_PartyOrganizationListViewItem___c__AddFriendshipUpCampaignInfo_b__357_0__);
+    sub_1C37058(&Method_PartyOrganizationListViewItem___c__AddFriendshipUpCampaignInfo_b__357_1__);
+    sub_1C37058(&Method_PartyOrganizationListViewItem___c__AddFriendshipUpCampaignInfo_b__357_2__);
+    sub_1C37058(&Method_PartyOrganizationListViewItem___c__AddFriendshipUpCampaignInfo_b__357_3__);
+    sub_1C37058(&PartyOrganizationListViewItem___c_TypeInfo);
+    sub_1C37058(&StringLiteral_1/*""*/);
+    byte_4C3EA3B = 1;
   }
   memset(&v77, 0, sizeof(v77));
   if ( !DataManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-  Master_object = DataManager__GetMaster_object_((const MethodInfo_30DD39C *)Method_DataManager_GetMaster_EventMaster___);
-  v6 = DataManager__GetMaster_object_((const MethodInfo_30DD39C *)Method_DataManager_GetMaster_EventCampaignMaster___);
-  Instance = SingletonTemplate_object___get_Instance((const MethodInfo_39E2DF4 *)Method_SingletonTemplate_PartyOrganizationUtility__get_Instance__);
+  Master_object = DataManager__GetMaster_object_((const MethodInfo_30E7C04 *)Method_DataManager_GetMaster_EventMaster___);
+  v6 = DataManager__GetMaster_object_((const MethodInfo_30E7C04 *)Method_DataManager_GetMaster_EventCampaignMaster___);
+  Instance = SingletonTemplate_object___get_Instance((const MethodInfo_39ED65C *)Method_SingletonTemplate_PartyOrganizationUtility__get_Instance__);
   if ( !Instance || !v6 )
-    sub_1C32E7C(Instance);
+    sub_1C372B4(Instance);
   FriendshipUpCampaigns = (System_Collections_Generic_List_object__o *)EventCampaignMaster__GetFriendshipUpCampaigns(
                                                                          (EventCampaignMaster_o *)v6,
                                                                          (int64_t)Instance[7].klass,
                                                                          0);
-  v9 = DataManager__GetMaster_object_((const MethodInfo_30DD39C *)Method_DataManager_GetMaster_EventQuestMaster___);
+  v9 = DataManager__GetMaster_object_((const MethodInfo_30E7C04 *)Method_DataManager_GetMaster_EventQuestMaster___);
   v10 = (DataMasterBase_TMaster__TEntity__PKType__o *)Master_object;
   if ( FriendshipUpCampaigns )
   {
@@ -2046,7 +2046,7 @@ void PartyOrganizationListViewItem__AddFriendshipUpCampaignInfo(
     System_Collections_Generic_List_object___GetEnumerator(
       (System_Collections_Generic_List_Enumerator_T__o *)&v76,
       FriendshipUpCampaigns,
-      (const MethodInfo_37992B4 *)Method_System_Collections_Generic_List_EventCampaignEntity__GetEnumerator__);
+      (const MethodInfo_37A3B1C *)Method_System_Collections_Generic_List_EventCampaignEntity__GetEnumerator__);
     v77 = v76;
     while ( 1 )
     {
@@ -2054,42 +2054,42 @@ void PartyOrganizationListViewItem__AddFriendshipUpCampaignInfo(
       {
         v11 = System_Collections_Generic_List_Enumerator_object___MoveNext(
                 &v77,
-                (const MethodInfo_3522FA8 *)Method_System_Collections_Generic_List_Enumerator_EventCampaignEntity__MoveNext__);
+                (const MethodInfo_352D810 *)Method_System_Collections_Generic_List_Enumerator_EventCampaignEntity__MoveNext__);
         if ( !v11 )
         {
           System_Collections_Generic_List_Enumerator_object___Dispose(
             &v77,
-            (const MethodInfo_3522FA4 *)Method_System_Collections_Generic_List_Enumerator_EventCampaignEntity__Dispose__);
+            (const MethodInfo_352D80C *)Method_System_Collections_Generic_List_Enumerator_EventCampaignEntity__Dispose__);
           return;
         }
         current = (EventCampaignEntity_o *)v77.fields._current;
         if ( !v77.fields._current )
-          sub_1C32E7C(v11);
+          sub_1C372B4(v11);
         monitor = (System_Collections_Generic_IEnumerable_TSource__o *)v77.fields._current[2].monitor;
         if ( !monitor || !monitor[1].monitor )
           goto LABEL_29;
         userServantEntity = this->fields.userServantEntity;
         if ( !userServantEntity )
-          sub_1C32E7C(v11);
+          sub_1C372B4(v11);
         v15 = *(_QWORD *)&userServantEntity->fields.svtId.fields.currentCryptoKey;
         v16 = *(_QWORD *)&userServantEntity->fields.svtId.fields.fakeValue;
         if ( !CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo->_2.cctor_finished )
           j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
         *(_QWORD *)&v78.fields.currentCryptoKey = v15;
         *(_QWORD *)&v78.fields.fakeValue = v16;
-        v17 = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_48887784(v78, 0);
+        v17 = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_48930896(v78, 0);
         if ( System_Linq_Enumerable__Contains_int_(
                monitor,
                v17,
-               (const MethodInfo_30FA3A0 *)Method_System_Linq_Enumerable_Contains_int___) )
+               (const MethodInfo_3104C08 *)Method_System_Linq_Enumerable_Contains_int___) )
         {
 LABEL_29:
           if ( !(*v4)->_2.cctor_finished )
             j_il2cpp_runtime_class_init_0(*v4);
-          v18 = DataManager__GetMaster_object_((const MethodInfo_30DD39C *)Method_DataManager_GetMaster_UserServantMaster___);
+          v18 = DataManager__GetMaster_object_((const MethodInfo_30E7C04 *)Method_DataManager_GetMaster_UserServantMaster___);
           v19 = this->fields.userServantEntity;
           if ( !v19 )
-            sub_1C32E7C(v18);
+            sub_1C372B4(v18);
           v20 = (UserServantMaster_o *)v18;
           v21 = *(_QWORD *)&v19->fields.svtId.fields.currentCryptoKey;
           v22 = *(_QWORD *)&v19->fields.svtId.fields.fakeValue;
@@ -2097,9 +2097,9 @@ LABEL_29:
             j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
           *(_QWORD *)&v79.fields.currentCryptoKey = v21;
           *(_QWORD *)&v79.fields.fakeValue = v22;
-          v23 = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_48887784(v79, 0);
+          v23 = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_48930896(v79, 0);
           if ( !v20 )
-            sub_1C32E7C(v23);
+            sub_1C372B4(v23);
           HeroineData = UserServantMaster__getHeroineData(v20, v23, 0);
           if ( !HeroineData
             || (HeroineData = (UserServantEntity_o *)UserServantEntity__IsAddFriendShipHeroine(HeroineData, 0),
@@ -2110,35 +2110,35 @@ LABEL_29:
               break;
             questRestrictionInfo = this->fields.questRestrictionInfo;
             if ( !questRestrictionInfo )
-              sub_1C32E7C(HeroineData);
+              sub_1C372B4(HeroineData);
             questId = questRestrictionInfo->fields.questId;
             questPhase = questRestrictionInfo->fields.questPhase;
-            v29 = SingletonTemplate_object___get_Instance((const MethodInfo_39E2DF4 *)Method_SingletonTemplate_PartyOrganizationUtility__get_Instance__);
+            v29 = SingletonTemplate_object___get_Instance((const MethodInfo_39ED65C *)Method_SingletonTemplate_PartyOrganizationUtility__get_Instance__);
             if ( !v29 )
-              sub_1C32E7C(0);
+              sub_1C372B4(0);
             if ( !v72 )
-              sub_1C32E7C(v29);
+              sub_1C372B4(v29);
             if ( !EventQuestMaster__IsEventNotIncluded(v72, eventId, questId, questPhase, 7, (int64_t)v29[7].klass, 0) )
               break;
           }
         }
       }
-      v30 = (EventMargeItemUpValInfo_o *)sub_1C32E6C(EventMargeItemUpValInfo_TypeInfo);
-      EventMargeItemUpValInfo___ctor_41618368(v30, eventId, 0);
+      v30 = (EventMargeItemUpValInfo_o *)sub_1C372A4(EventMargeItemUpValInfo_TypeInfo);
+      EventMargeItemUpValInfo___ctor_41718176(v30, eventId, 0);
       OnlyMaxFuncGroupId = EventCampaignEntity__GetOnlyMaxFuncGroupId(current, 0);
       if ( !v10 )
-        sub_1C32E7C(OnlyMaxFuncGroupId);
+        sub_1C372B4(OnlyMaxFuncGroupId);
       v32 = OnlyMaxFuncGroupId;
       Entity = DataMasterBase_object__object__int___GetEntity(
                  v10,
                  eventId,
-                 (const MethodInfo_3396838 *)Method_DataMasterBase_EventMaster__EventEntity__int__GetEntity__);
+                 (const MethodInfo_33A10A0 *)Method_DataMasterBase_EventMaster__EventEntity__int__GetEntity__);
       if ( !Entity )
-        sub_1C32E7C(0);
+        sub_1C372B4(0);
       v34 = v4;
       v35 = (System_Collections_Generic_IEnumerable_TSource__o *)Entity[7].monitor;
       if ( !v35 )
-        sub_1C32E7C(Entity);
+        sub_1C372B4(Entity);
       if ( !v35[1].monitor )
         break;
       v36 = PartyOrganizationListViewItem___c_TypeInfo;
@@ -2156,7 +2156,7 @@ LABEL_29:
           v36 = PartyOrganizationListViewItem___c_TypeInfo;
         }
         v38 = (Il2CppObject *)v36->static_fields->__9;
-        _9__357_0 = (System_Func_object__object__o *)sub_1C32E6C(System_Func_EventEntity_ScriptData__string__TypeInfo);
+        _9__357_0 = (System_Func_object__object__o *)sub_1C372A4(System_Func_EventEntity_ScriptData__string__TypeInfo);
         System_Func_object__object____ctor(
           _9__357_0,
           v38,
@@ -2164,12 +2164,12 @@ LABEL_29:
           0);
         static_fields = PartyOrganizationListViewItem___c_TypeInfo->static_fields;
         static_fields->__9__357_0 = (struct System_Func_EventEntity_ScriptData__string__o *)_9__357_0;
-        sub_1C32BC4((CGThumbnailListItem_o *)&static_fields->__9__357_0, (int32_t)_9__357_0, v40, v41);
+        sub_1C36FFC((CGThumbnailListItem_o *)&static_fields->__9__357_0, (int32_t)_9__357_0, v40, v41);
       }
       v42 = (System_Collections_Generic_IEnumerable_TSource__o *)System_Linq_Enumerable__Select_object__object_(
                                                                    v35,
                                                                    (System_Func_TSource__TResult__o *)_9__357_0,
-                                                                   (const MethodInfo_3113ABC *)Method_System_Linq_Enumerable_Select_EventEntity_ScriptData__string___);
+                                                                   (const MethodInfo_311E324 *)Method_System_Linq_Enumerable_Select_EventEntity_ScriptData__string___);
       v43 = PartyOrganizationListViewItem___c_TypeInfo;
       if ( !PartyOrganizationListViewItem___c_TypeInfo->_2.cctor_finished )
       {
@@ -2185,7 +2185,7 @@ LABEL_29:
           v43 = PartyOrganizationListViewItem___c_TypeInfo;
         }
         v45 = (Il2CppObject *)v43->static_fields->__9;
-        _9__357_1 = (System_Func_object__bool__o *)sub_1C32E6C(System_Func_string__bool__TypeInfo);
+        _9__357_1 = (System_Func_object__bool__o *)sub_1C372A4(System_Func_string__bool__TypeInfo);
         System_Func_object__bool____ctor(
           _9__357_1,
           v45,
@@ -2193,12 +2193,12 @@ LABEL_29:
           0);
         v46 = PartyOrganizationListViewItem___c_TypeInfo->static_fields;
         v46->__9__357_1 = (struct System_Func_string__bool__o *)_9__357_1;
-        sub_1C32BC4((CGThumbnailListItem_o *)&v46->__9__357_1, (int32_t)_9__357_1, v47, v48);
+        sub_1C36FFC((CGThumbnailListItem_o *)&v46->__9__357_1, (int32_t)_9__357_1, v47, v48);
       }
-      v49 = System_Linq_Enumerable__Single_object__51482796(
+      v49 = System_Linq_Enumerable__Single_object__51525908(
               v42,
               (System_Func_TSource__bool__o *)_9__357_1,
-              (const MethodInfo_31190AC *)Method_System_Linq_Enumerable_Single_string___);
+              (const MethodInfo_3123914 *)Method_System_Linq_Enumerable_Single_string___);
       if ( !v35[1].monitor )
         goto LABEL_61;
       v50 = PartyOrganizationListViewItem___c_TypeInfo;
@@ -2216,7 +2216,7 @@ LABEL_29:
           v50 = PartyOrganizationListViewItem___c_TypeInfo;
         }
         v52 = (Il2CppObject *)v50->static_fields->__9;
-        _9__357_2 = (System_Func_object__object__o *)sub_1C32E6C(System_Func_EventEntity_ScriptData__string__TypeInfo);
+        _9__357_2 = (System_Func_object__object__o *)sub_1C372A4(System_Func_EventEntity_ScriptData__string__TypeInfo);
         System_Func_object__object____ctor(
           _9__357_2,
           v52,
@@ -2224,12 +2224,12 @@ LABEL_29:
           0);
         v53 = PartyOrganizationListViewItem___c_TypeInfo->static_fields;
         v53->__9__357_2 = (struct System_Func_EventEntity_ScriptData__string__o *)_9__357_2;
-        sub_1C32BC4((CGThumbnailListItem_o *)&v53->__9__357_2, (int32_t)_9__357_2, v54, v55);
+        sub_1C36FFC((CGThumbnailListItem_o *)&v53->__9__357_2, (int32_t)_9__357_2, v54, v55);
       }
       v56 = (System_Collections_Generic_IEnumerable_TSource__o *)System_Linq_Enumerable__Select_object__object_(
                                                                    v35,
                                                                    (System_Func_TSource__TResult__o *)_9__357_2,
-                                                                   (const MethodInfo_3113ABC *)Method_System_Linq_Enumerable_Select_EventEntity_ScriptData__string___);
+                                                                   (const MethodInfo_311E324 *)Method_System_Linq_Enumerable_Select_EventEntity_ScriptData__string___);
       v57 = PartyOrganizationListViewItem___c_TypeInfo;
       if ( !PartyOrganizationListViewItem___c_TypeInfo->_2.cctor_finished )
       {
@@ -2245,7 +2245,7 @@ LABEL_29:
           v57 = PartyOrganizationListViewItem___c_TypeInfo;
         }
         v59 = (Il2CppObject *)v57->static_fields->__9;
-        _9__357_3 = (System_Func_object__bool__o *)sub_1C32E6C(System_Func_string__bool__TypeInfo);
+        _9__357_3 = (System_Func_object__bool__o *)sub_1C372A4(System_Func_string__bool__TypeInfo);
         System_Func_object__bool____ctor(
           _9__357_3,
           v59,
@@ -2253,19 +2253,19 @@ LABEL_29:
           0);
         v60 = PartyOrganizationListViewItem___c_TypeInfo->static_fields;
         v60->__9__357_3 = (struct System_Func_string__bool__o *)_9__357_3;
-        sub_1C32BC4((CGThumbnailListItem_o *)&v60->__9__357_3, (int32_t)_9__357_3, v61, v62);
+        sub_1C36FFC((CGThumbnailListItem_o *)&v60->__9__357_3, (int32_t)_9__357_3, v61, v62);
       }
-      v63 = System_Linq_Enumerable__Single_object__51482796(
+      v63 = System_Linq_Enumerable__Single_object__51525908(
               v56,
               (System_Func_TSource__bool__o *)_9__357_3,
-              (const MethodInfo_31190AC *)Method_System_Linq_Enumerable_Single_string___);
+              (const MethodInfo_3123914 *)Method_System_Linq_Enumerable_Single_string___);
 LABEL_62:
       v4 = v34;
       FriendshipBonusValue = EventCampaignEntity__GetFriendshipBonusValue(current, 0);
       v10 = (DataMasterBase_TMaster__TEntity__PKType__o *)Master_object;
       if ( !v30 )
-        sub_1C32E7C(FriendshipBonusValue);
-      EventMargeItemUpValInfo__SetFriendshipUpBonus_41618472(
+        sub_1C372B4(FriendshipBonusValue);
+      EventMargeItemUpValInfo__SetFriendshipUpBonus_41718280(
         v30,
         eventId,
         FriendshipBonusValue,
@@ -2276,26 +2276,26 @@ LABEL_62:
         0);
       v67 = (System_Collections_Generic_List_object__o *)*infoList;
       if ( !*infoList )
-        sub_1C32E7C(0);
+        sub_1C372B4(0);
       items = v67->fields._items;
       v69 = Method_System_Collections_Generic_List_EventMargeItemUpValInfo__Add__;
       ++v67->fields._version;
       if ( !items )
-        sub_1C32E7C(v67);
+        sub_1C372B4(v67);
       size = v67->fields._size;
       if ( (unsigned int)size >= LODWORD(items->max_length) )
       {
         System_Collections_Generic_List_object___AddWithResize(
           v67,
           (Il2CppObject *)v30,
-          *(const MethodInfo_37987BC **)(*(_QWORD *)(v69[4] + 192LL) + 112LL));
+          *(const MethodInfo_37A3024 **)(*(_QWORD *)(v69[4] + 192LL) + 112LL));
       }
       else
       {
         v71 = &items->obj.klass + size;
         v67->fields._size = size + 1;
         v71[4] = (Il2CppClass *)v30;
-        sub_1C32BC4((CGThumbnailListItem_o *)(v71 + 4), (int32_t)v30, v65, v66);
+        sub_1C36FFC((CGThumbnailListItem_o *)(v71 + 4), (int32_t)v30, v65, v66);
       }
     }
     v49 = (Il2CppObject *)StringLiteral_1/*""*/;
@@ -2335,20 +2335,20 @@ System_Int64_array *PartyOrganizationListViewItem__CheckDuplicationGrandServantE
   const MethodInfo *v26; // x3
   System_Collections_Generic_IEnumerable_TSource__o *v27; // x0
 
-  if ( (byte_4C33453 & 1) == 0 )
+  if ( (byte_4C3EA3D & 1) == 0 )
   {
-    sub_1C32C20(&Method_System_Linq_Enumerable_GroupBy_long__long___);
-    sub_1C32C20(&Method_System_Linq_Enumerable_Select_IGrouping_long__long___long___);
-    sub_1C32C20(&Method_System_Linq_Enumerable_ToArray_long___);
-    sub_1C32C20(&Method_System_Linq_Enumerable_Where_IGrouping_long__long____);
-    sub_1C32C20(&System_Func_long__long__TypeInfo);
-    sub_1C32C20(&System_Func_IGrouping_long__long___long__TypeInfo);
-    sub_1C32C20(&System_Func_IGrouping_long__long___bool__TypeInfo);
-    sub_1C32C20(&Method_PartyOrganizationListViewItem___c__CheckDuplicationGrandServantEquipment_b__361_0__);
-    sub_1C32C20(&Method_PartyOrganizationListViewItem___c__CheckDuplicationGrandServantEquipment_b__361_1__);
-    sub_1C32C20(&Method_PartyOrganizationListViewItem___c__CheckDuplicationGrandServantEquipment_b__361_2__);
-    sub_1C32C20(&PartyOrganizationListViewItem___c_TypeInfo);
-    byte_4C33453 = 1;
+    sub_1C37058(&Method_System_Linq_Enumerable_GroupBy_long__long___);
+    sub_1C37058(&Method_System_Linq_Enumerable_Select_IGrouping_long__long___long___);
+    sub_1C37058(&Method_System_Linq_Enumerable_ToArray_long___);
+    sub_1C37058(&Method_System_Linq_Enumerable_Where_IGrouping_long__long____);
+    sub_1C37058(&System_Func_long__long__TypeInfo);
+    sub_1C37058(&System_Func_IGrouping_long__long___long__TypeInfo);
+    sub_1C37058(&System_Func_IGrouping_long__long___bool__TypeInfo);
+    sub_1C37058(&Method_PartyOrganizationListViewItem___c__CheckDuplicationGrandServantEquipment_b__361_0__);
+    sub_1C37058(&Method_PartyOrganizationListViewItem___c__CheckDuplicationGrandServantEquipment_b__361_1__);
+    sub_1C37058(&Method_PartyOrganizationListViewItem___c__CheckDuplicationGrandServantEquipment_b__361_2__);
+    sub_1C37058(&PartyOrganizationListViewItem___c_TypeInfo);
+    byte_4C3EA3D = 1;
   }
   if ( this->fields.isFollower
     || !this->fields._IsGrandServant_k__BackingField && !this->fields._IsTempGrandServant_k__BackingField
@@ -2372,7 +2372,7 @@ System_Int64_array *PartyOrganizationListViewItem__CheckDuplicationGrandServantE
       v5 = PartyOrganizationListViewItem___c_TypeInfo;
     }
     v7 = (Il2CppObject *)v5->static_fields->__9;
-    _9__361_0 = (System_Func_long__long__o *)sub_1C32E6C(System_Func_long__long__TypeInfo);
+    _9__361_0 = (System_Func_long__long__o *)sub_1C372A4(System_Func_long__long__TypeInfo);
     System_Func_long__long____ctor(
       _9__361_0,
       v7,
@@ -2380,12 +2380,12 @@ System_Int64_array *PartyOrganizationListViewItem__CheckDuplicationGrandServantE
       0);
     static_fields = PartyOrganizationListViewItem___c_TypeInfo->static_fields;
     static_fields->__9__361_0 = _9__361_0;
-    sub_1C32BC4((CGThumbnailListItem_o *)&static_fields->__9__361_0, (int32_t)_9__361_0, v9, v10);
+    sub_1C36FFC((CGThumbnailListItem_o *)&static_fields->__9__361_0, (int32_t)_9__361_0, v9, v10);
   }
   v11 = System_Linq_Enumerable__GroupBy_long__long_(
           equipIdList,
           (System_Func_TSource__TKey__o *)_9__361_0,
-          (const MethodInfo_31076A8 *)Method_System_Linq_Enumerable_GroupBy_long__long___);
+          (const MethodInfo_3111F10 *)Method_System_Linq_Enumerable_GroupBy_long__long___);
   v12 = PartyOrganizationListViewItem___c_TypeInfo;
   v13 = (System_Collections_Generic_IEnumerable_TSource__o *)v11;
   if ( !PartyOrganizationListViewItem___c_TypeInfo->_2.cctor_finished )
@@ -2402,7 +2402,7 @@ System_Int64_array *PartyOrganizationListViewItem__CheckDuplicationGrandServantE
       v12 = PartyOrganizationListViewItem___c_TypeInfo;
     }
     v15 = (Il2CppObject *)v12->static_fields->__9;
-    _9__361_1 = (System_Func_object__bool__o *)sub_1C32E6C(System_Func_IGrouping_long__long___bool__TypeInfo);
+    _9__361_1 = (System_Func_object__bool__o *)sub_1C372A4(System_Func_IGrouping_long__long___bool__TypeInfo);
     System_Func_object__bool____ctor(
       _9__361_1,
       v15,
@@ -2410,12 +2410,12 @@ System_Int64_array *PartyOrganizationListViewItem__CheckDuplicationGrandServantE
       0);
     v16 = PartyOrganizationListViewItem___c_TypeInfo->static_fields;
     v16->__9__361_1 = (struct System_Func_IGrouping_long__long___bool__o *)_9__361_1;
-    sub_1C32BC4((CGThumbnailListItem_o *)&v16->__9__361_1, (int32_t)_9__361_1, v17, v18);
+    sub_1C36FFC((CGThumbnailListItem_o *)&v16->__9__361_1, (int32_t)_9__361_1, v17, v18);
   }
   v19 = System_Linq_Enumerable__Where_object_(
           v13,
           (System_Func_TSource__bool__o *)_9__361_1,
-          (const MethodInfo_3123BA8 *)Method_System_Linq_Enumerable_Where_IGrouping_long__long____);
+          (const MethodInfo_312E410 *)Method_System_Linq_Enumerable_Where_IGrouping_long__long____);
   v20 = PartyOrganizationListViewItem___c_TypeInfo;
   v21 = v19;
   if ( !PartyOrganizationListViewItem___c_TypeInfo->_2.cctor_finished )
@@ -2432,7 +2432,7 @@ System_Int64_array *PartyOrganizationListViewItem__CheckDuplicationGrandServantE
       v20 = PartyOrganizationListViewItem___c_TypeInfo;
     }
     v23 = (Il2CppObject *)v20->static_fields->__9;
-    _9__361_2 = (System_Func_object__long__o *)sub_1C32E6C(System_Func_IGrouping_long__long___long__TypeInfo);
+    _9__361_2 = (System_Func_object__long__o *)sub_1C372A4(System_Func_IGrouping_long__long___long__TypeInfo);
     System_Func_object__long____ctor(
       _9__361_2,
       v23,
@@ -2440,15 +2440,15 @@ System_Int64_array *PartyOrganizationListViewItem__CheckDuplicationGrandServantE
       0);
     v24 = PartyOrganizationListViewItem___c_TypeInfo->static_fields;
     v24->__9__361_2 = (struct System_Func_IGrouping_long__long___long__o *)_9__361_2;
-    sub_1C32BC4((CGThumbnailListItem_o *)&v24->__9__361_2, (int32_t)_9__361_2, v25, v26);
+    sub_1C36FFC((CGThumbnailListItem_o *)&v24->__9__361_2, (int32_t)_9__361_2, v25, v26);
   }
   v27 = (System_Collections_Generic_IEnumerable_TSource__o *)System_Linq_Enumerable__Select_object__long_(
                                                                v21,
                                                                (System_Func_TSource__TResult__o *)_9__361_2,
-                                                               (const MethodInfo_31137C8 *)Method_System_Linq_Enumerable_Select_IGrouping_long__long___long___);
+                                                               (const MethodInfo_311E030 *)Method_System_Linq_Enumerable_Select_IGrouping_long__long___long___);
   return System_Linq_Enumerable__ToArray_long_(
            v27,
-           (const MethodInfo_311CA04 *)Method_System_Linq_Enumerable_ToArray_long___);
+           (const MethodInfo_312726C *)Method_System_Linq_Enumerable_ToArray_long___);
 }
 
 
@@ -2495,7 +2495,7 @@ void PartyOrganizationListViewItem__CheckRestriction(
   const MethodInfo *v41; // x1
   int32_t v42; // w24
   UserServantEntity_o *v43; // x8
-  bool IsUniqueIndividualityRestriction_43073808; // w0
+  bool IsUniqueIndividualityRestriction_43175676; // w0
   const MethodInfo *v45; // x1
   QuestRestrictionInfo_o *v46; // x21
   CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o v47; // kr00_16
@@ -2520,11 +2520,11 @@ void PartyOrganizationListViewItem__CheckRestriction(
   FollowerInfo_o *v66; // x24
   struct QuestRestrictionInfo_o *v67; // x23
   int32_t v68; // w5
-  bool IsUniqueIndividualityRestriction_41650648; // w0
+  bool IsUniqueIndividualityRestriction_41750456; // w0
   const MethodInfo *v70; // x1
   QuestRestrictionInfo_o *v71; // x22
   ServantLeaderInfo_o *ServantLeader; // x0
-  bool IsFixedSupportPosition_43327472; // w0
+  bool IsFixedSupportPosition_43429340; // w0
   QuestRestrictionInfo_o *v74; // x8
   const MethodInfo *v75; // x1
   QuestRestrictionInfo_o *v76; // x21
@@ -2538,10 +2538,10 @@ void PartyOrganizationListViewItem__CheckRestriction(
   CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o v84; // 0:x0.16
   CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o v85; // 0:x0.16
 
-  if ( (byte_4C3342D & 1) == 0 )
+  if ( (byte_4C3EA17 & 1) == 0 )
   {
-    sub_1C32C20(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
-    byte_4C3342D = 1;
+    sub_1C37058(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
+    byte_4C3EA17 = 1;
   }
   userServantEntity = (ServantLeaderInfo_o *)this->fields.userServantEntity;
   if ( !userServantEntity )
@@ -2569,7 +2569,7 @@ void PartyOrganizationListViewItem__CheckRestriction(
         j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
       *(_QWORD *)&v84.fields.currentCryptoKey = v26;
       *(_QWORD *)&v84.fields.fakeValue = v25;
-      v27 = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_48887784(v84, 0);
+      v27 = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_48930896(v84, 0);
       userServantEntity = PartyOrganizationListViewItem__get_ServantLeader(this, v28);
       if ( !userServantEntity )
         goto LABEL_92;
@@ -2583,7 +2583,7 @@ void PartyOrganizationListViewItem__CheckRestriction(
       userServantEntity = PartyOrganizationListViewItem__get_ServantLeader(this, v34);
       if ( !userServantEntity )
         goto LABEL_92;
-      userServantEntity = (ServantLeaderInfo_o *)QuestRestrictionInfo__IsRestriction_43321100(
+      userServantEntity = (ServantLeaderInfo_o *)QuestRestrictionInfo__IsRestriction_43422968(
                                                    v24,
                                                    &this->fields.isQuestRestrictionWhole,
                                                    v27,
@@ -2600,7 +2600,7 @@ void PartyOrganizationListViewItem__CheckRestriction(
         userServantEntity = (ServantLeaderInfo_o *)this->fields.questRestrictionInfo;
         if ( !userServantEntity )
           goto LABEL_92;
-        userServantEntity = (ServantLeaderInfo_o *)QuestRestrictionInfo__IsMyServantOrNpcRestriction_43340352(
+        userServantEntity = (ServantLeaderInfo_o *)QuestRestrictionInfo__IsMyServantOrNpcRestriction_43442220(
                                                      (QuestRestrictionInfo_o *)userServantEntity,
                                                      this->fields._InitPos_k__BackingField,
                                                      0);
@@ -2616,7 +2616,7 @@ void PartyOrganizationListViewItem__CheckRestriction(
             j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
           *(_QWORD *)&v85.fields.currentCryptoKey = v38;
           *(_QWORD *)&v85.fields.fakeValue = v37;
-          v39 = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_48887784(v85, 0);
+          v39 = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_48930896(v85, 0);
           userServantEntity = PartyOrganizationListViewItem__get_ServantLeader(this, v40);
           if ( !userServantEntity )
             goto LABEL_92;
@@ -2666,7 +2666,7 @@ LABEL_49:
         userServantEntity = PartyOrganizationListViewItem__get_ServantLeader(this, v59);
         if ( !userServantEntity || !v56 )
           goto LABEL_92;
-        userServantEntity = (ServantLeaderInfo_o *)QuestRestrictionInfo__IsRestriction_43321380(
+        userServantEntity = (ServantLeaderInfo_o *)QuestRestrictionInfo__IsRestriction_43423248(
                                                      v56,
                                                      &this->fields.isQuestRestrictionWhole,
                                                      v58,
@@ -2681,7 +2681,7 @@ LABEL_49:
           userServantEntity = (ServantLeaderInfo_o *)this->fields.questRestrictionInfo;
           if ( !userServantEntity )
             goto LABEL_92;
-          userServantEntity = (ServantLeaderInfo_o *)QuestRestrictionInfo__IsMyServantOrNpcRestriction_43340352(
+          userServantEntity = (ServantLeaderInfo_o *)QuestRestrictionInfo__IsMyServantOrNpcRestriction_43442220(
                                                        (QuestRestrictionInfo_o *)userServantEntity,
                                                        this->fields._InitPos_k__BackingField,
                                                        0);
@@ -2690,7 +2690,7 @@ LABEL_49:
             userServantEntity = (ServantLeaderInfo_o *)this->fields.questRestrictionInfo;
             if ( !userServantEntity )
               goto LABEL_92;
-            userServantEntity = (ServantLeaderInfo_o *)QuestRestrictionInfo__IsRestrictionServantIndividuality_43343396(
+            userServantEntity = (ServantLeaderInfo_o *)QuestRestrictionInfo__IsRestrictionServantIndividuality_43445264(
                                                          (QuestRestrictionInfo_o *)userServantEntity,
                                                          v58,
                                                          this->fields._InitPos_k__BackingField,
@@ -2731,7 +2731,7 @@ LABEL_62:
       if ( !v61 )
         goto LABEL_92;
     }
-    userServantEntity = (ServantLeaderInfo_o *)FollowerInfo__getUniqueSvtRestriction_41650456(
+    userServantEntity = (ServantLeaderInfo_o *)FollowerInfo__getUniqueSvtRestriction_41750264(
                                                  v61,
                                                  v62,
                                                  followerIndex,
@@ -2766,7 +2766,7 @@ LABEL_62:
       if ( !v66 )
         goto LABEL_92;
     }
-    IsUniqueIndividualityRestriction_41650648 = FollowerInfo__IsUniqueIndividualityRestriction_41650648(
+    IsUniqueIndividualityRestriction_41750456 = FollowerInfo__IsUniqueIndividualityRestriction_41750456(
                                                   v66,
                                                   v67,
                                                   v65,
@@ -2775,17 +2775,17 @@ LABEL_62:
                                                   v68,
                                                   0);
     v71 = this->fields.questRestrictionInfo;
-    this->fields.isUniqueIndividualityRestriction = IsUniqueIndividualityRestriction_41650648;
+    this->fields.isUniqueIndividualityRestriction = IsUniqueIndividualityRestriction_41750456;
     if ( v71 )
     {
       ServantLeader = PartyOrganizationListViewItem__get_ServantLeader(this, v70);
-      IsFixedSupportPosition_43327472 = QuestRestrictionInfo__IsFixedSupportPosition_43327472(
+      IsFixedSupportPosition_43429340 = QuestRestrictionInfo__IsFixedSupportPosition_43429340(
                                           v71,
                                           num,
                                           ServantLeader,
                                           0);
       v74 = this->fields.questRestrictionInfo;
-      this->fields.isFixedSupportPositionRestriction = IsFixedSupportPosition_43327472;
+      this->fields.isFixedSupportPositionRestriction = IsFixedSupportPosition_43429340;
       if ( v74 )
       {
         userServantEntity = (ServantLeaderInfo_o *)QuestRestrictionInfo__IsUseOldMaster(v74, 0);
@@ -2808,7 +2808,7 @@ LABEL_86:
           SvtId = PartyOrganizationListViewItem__get_SvtId(this, v75);
           if ( !CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo->_2.cctor_finished )
             j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
-          v78 = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_48887784(SvtId, 0);
+          v78 = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_48930896(SvtId, 0);
           svtLimitCount = this->fields.svtLimitCount;
           v80 = v78;
           userServantEntity = (ServantLeaderInfo_o *)PartyOrganizationListViewItem__GetDispImageLimitCount(this, v81);
@@ -2849,14 +2849,14 @@ LABEL_86:
       j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
     *(_QWORD *)&v82.fields.currentCryptoKey = v10;
     *(_QWORD *)&v82.fields.fakeValue = v9;
-    userServantEntity = (ServantLeaderInfo_o *)CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_48887784(
+    userServantEntity = (ServantLeaderInfo_o *)CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_48930896(
                                                  v82,
                                                  0);
     v11 = this->fields.userServantEntity;
     if ( v11 )
     {
       v12 = (int)userServantEntity;
-      userServantEntity = (ServantLeaderInfo_o *)CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_48887784(
+      userServantEntity = (ServantLeaderInfo_o *)CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_48930896(
                                                    v11->fields.limitCount,
                                                    0);
       if ( this->fields.userServantEntity )
@@ -2869,7 +2869,7 @@ LABEL_86:
         v14 = this->fields.userServantEntity;
         if ( v14 )
         {
-          userServantEntity = (ServantLeaderInfo_o *)QuestRestrictionInfo__IsRestriction_43321100(
+          userServantEntity = (ServantLeaderInfo_o *)QuestRestrictionInfo__IsRestriction_43422968(
                                                        v8,
                                                        &this->fields.isQuestRestrictionWhole,
                                                        v12,
@@ -2893,14 +2893,14 @@ LABEL_86:
               j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
             *(_QWORD *)&v83.fields.currentCryptoKey = v19;
             *(_QWORD *)&v83.fields.fakeValue = v18;
-            userServantEntity = (ServantLeaderInfo_o *)CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_48887784(
+            userServantEntity = (ServantLeaderInfo_o *)CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_48930896(
                                                          v83,
                                                          0);
             v20 = this->fields.userServantEntity;
             if ( v20 )
             {
               v21 = (int)userServantEntity;
-              userServantEntity = (ServantLeaderInfo_o *)CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_48887784(
+              userServantEntity = (ServantLeaderInfo_o *)CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_48930896(
                                                            v20->fields.limitCount,
                                                            0);
               if ( this->fields.userServantEntity )
@@ -2934,11 +2934,11 @@ LABEL_18:
       }
     }
 LABEL_92:
-    sub_1C32E7C(userServantEntity);
+    sub_1C372B4(userServantEntity);
   }
   *(_WORD *)&this->fields.isQuestRestriction = 0;
 LABEL_42:
-  userServantEntity = (ServantLeaderInfo_o *)UserServantEntity__getUniqueSvtRestriction_43073428(
+  userServantEntity = (ServantLeaderInfo_o *)UserServantEntity__getUniqueSvtRestriction_43175296(
                                                (UserServantEntity_o *)userServantEntity,
                                                this->fields.questRestrictionInfo,
                                                partyItem,
@@ -2949,7 +2949,7 @@ LABEL_42:
   this->fields.isUniqueSvtRestriction = (unsigned __int8)userServantEntity & 1;
   if ( !v43 )
     goto LABEL_92;
-  IsUniqueIndividualityRestriction_43073808 = UserServantEntity__IsUniqueIndividualityRestriction_43073808(
+  IsUniqueIndividualityRestriction_43175676 = UserServantEntity__IsUniqueIndividualityRestriction_43175676(
                                                 v43,
                                                 this->fields.questRestrictionInfo,
                                                 partyItem,
@@ -2957,13 +2957,13 @@ LABEL_42:
                                                 -1,
                                                 0);
   v46 = this->fields.questRestrictionInfo;
-  this->fields.isUniqueIndividualityRestriction = IsUniqueIndividualityRestriction_43073808;
+  this->fields.isUniqueIndividualityRestriction = IsUniqueIndividualityRestriction_43175676;
   if ( v46 )
   {
     v47 = PartyOrganizationListViewItem__get_SvtId(this, v45);
     if ( !CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
-    v48 = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_48887784(v47, 0);
+    v48 = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_48930896(v47, 0);
     v49 = this->fields.svtLimitCount;
     v50 = v48;
     DispImageLimitCount = PartyOrganizationListViewItem__GetDispImageLimitCount(this, v51);
@@ -2998,10 +2998,10 @@ int32_t PartyOrganizationListViewItem__ClearEquip(PartyOrganizationListViewItem_
   struct System_Int64_array *v6; // x1
 
   v2 = this;
-  if ( (byte_4C3342C & 1) == 0 )
+  if ( (byte_4C3EA16 & 1) == 0 )
   {
-    this = (PartyOrganizationListViewItem_o *)sub_1C32C20(&Method_System_Collections_Generic_List_ServantEntity__get_Item__);
-    byte_4C3342C = 1;
+    this = (PartyOrganizationListViewItem_o *)sub_1C37058(&Method_System_Collections_Generic_List_ServantEntity__get_Item__);
+    byte_4C3EA16 = 1;
   }
   equipIdList = v2->fields.equipIdList;
   if ( equipIdList )
@@ -3025,7 +3025,7 @@ int32_t PartyOrganizationListViewItem__ClearEquip(PartyOrganizationListViewItem_
         this = (PartyOrganizationListViewItem_o *)System_Collections_Generic_List_object___get_Item(
                                                     (System_Collections_Generic_List_object__o *)this,
                                                     0,
-                                                    (const MethodInfo_37984EC *)Method_System_Collections_Generic_List_ServantEntity__get_Item__);
+                                                    (const MethodInfo_37A2D54 *)Method_System_Collections_Generic_List_ServantEntity__get_Item__);
         if ( !this )
           goto LABEL_17;
         v5 = (int32_t)this->fields.equipIdList;
@@ -3040,10 +3040,10 @@ int32_t PartyOrganizationListViewItem__ClearEquip(PartyOrganizationListViewItem_
           return v5;
         }
 LABEL_16:
-        sub_1C32E84(this);
+        sub_1C372BC(this);
       }
 LABEL_17:
-      sub_1C32E7C(this);
+      sub_1C372B4(this);
     }
   }
   return 0;
@@ -3062,7 +3062,7 @@ void PartyOrganizationListViewItem__ClearFollower(PartyOrganizationListViewItem_
   const MethodInfo *v3; // x3
 
   this->fields.followerInfo = 0;
-  sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.followerInfo, 0, v2, v3);
+  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.followerInfo, 0, v2, v3);
 }
 
 
@@ -3077,18 +3077,18 @@ PartyOrganizationListViewItem_o *PartyOrganizationListViewItem__Clone(
   __int64 v8; // x0
   const MethodInfo *v9; // x2
 
-  if ( (byte_4C33421 & 1) == 0 )
+  if ( (byte_4C3EA0B & 1) == 0 )
   {
-    sub_1C32C20(&PartyOrganizationListViewItem_TypeInfo);
-    byte_4C33421 = 1;
+    sub_1C37058(&PartyOrganizationListViewItem_TypeInfo);
+    byte_4C3EA0B = 1;
   }
   index = idx;
   if ( idx < 0 )
     index = this->fields.index;
-  v6 = (PartyOrganizationListViewItem_o *)sub_1C32E6C(PartyOrganizationListViewItem_TypeInfo);
+  v6 = (PartyOrganizationListViewItem_o *)sub_1C372A4(PartyOrganizationListViewItem_TypeInfo);
   PartyOrganizationListViewItem___ctor(v6, index, v7);
   if ( !v6 )
-    sub_1C32E7C(v8);
+    sub_1C372B4(v8);
   PartyOrganizationListViewItem__Set(v6, this, v9);
   if ( (idx & 0x80000000) == 0 )
   {
@@ -3121,10 +3121,10 @@ bool PartyOrganizationListViewItem__CompMember(
   CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_o v18; // [xsp+40h] [xbp-40h]
 
   v4 = this;
-  if ( (byte_4C3342F & 1) == 0 )
+  if ( (byte_4C3EA19 & 1) == 0 )
   {
-    this = (PartyOrganizationListViewItem_o *)sub_1C32C20(&CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo);
-    byte_4C3342F = 1;
+    this = (PartyOrganizationListViewItem_o *)sub_1C37058(&CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo);
+    byte_4C3EA19 = 1;
   }
   if ( !item )
     goto LABEL_29;
@@ -3158,7 +3158,7 @@ LABEL_15:
           while ( 1 )
           {
             if ( max_length == v15 )
-              sub_1C32E84(this);
+              sub_1C372BC(this);
             if ( equipIdList->m_Items[v15] != v13->m_Items[v15] )
               break;
             if ( max_length == ++v15 )
@@ -3180,7 +3180,7 @@ LABEL_15:
     if ( !CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo);
     v17 = v18;
-    this = (PartyOrganizationListViewItem_o *)CodeStage_AntiCheat_ObscuredTypes_ObscuredLong__op_Implicit_48891308(
+    this = (PartyOrganizationListViewItem_o *)CodeStage_AntiCheat_ObscuredTypes_ObscuredLong__op_Implicit_48934420(
                                                 &v17,
                                                 0);
     v9 = item->fields.userServantEntity;
@@ -3190,7 +3190,7 @@ LABEL_15:
       v11 = this;
       *(_OWORD *)&v16.fields.currentCryptoKey = *(_OWORD *)&v9->fields.id.fields.currentCryptoKey;
       *(_OWORD *)&v16.fields.fakeValue = v10;
-      this = (PartyOrganizationListViewItem_o *)CodeStage_AntiCheat_ObscuredTypes_ObscuredLong__op_Implicit_48891308(
+      this = (PartyOrganizationListViewItem_o *)CodeStage_AntiCheat_ObscuredTypes_ObscuredLong__op_Implicit_48934420(
                                                   &v16,
                                                   0);
       if ( v11 != this )
@@ -3198,7 +3198,7 @@ LABEL_15:
       goto LABEL_15;
     }
 LABEL_29:
-    sub_1C32E7C(this);
+    sub_1C372B4(this);
   }
   return result;
 }
@@ -3219,23 +3219,23 @@ void PartyOrganizationListViewItem__Empty(PartyOrganizationListViewItem_o *this,
   const MethodInfo *v13; // x2
 
   this->fields.userServantEntity = 0;
-  sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.userServantEntity, 0, v2, v3);
+  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.userServantEntity, 0, v2, v3);
   this->fields.followerInfo = 0;
-  sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.followerInfo, 0, v5, v6);
+  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.followerInfo, 0, v5, v6);
   this->fields.isFollower = 0;
   this->fields.npcFollowerSvtId = 0;
   *(_QWORD *)&this->fields.followerIndex = 0;
   *(_QWORD *)&this->fields.followerClassId = 0;
   HIDWORD(this->fields.equipIdList) = 0;
-  sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.equipIdList, 0, v7, v8);
+  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.equipIdList, 0, v7, v8);
   this->fields.servantEntity = 0;
-  sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.servantEntity, 0, v9, v10);
+  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.servantEntity, 0, v9, v10);
   *(_QWORD *)&this->fields.cost = 0;
   *(_QWORD *)&this->fields.atk = 0;
   *(_QWORD *)&this->fields.rarityId = 0;
   *(_QWORD *)&this->fields.frameType = 9;
   this->fields.commandCodeIdList = 0;
-  sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.commandCodeIdList, 0, v11, v12);
+  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.commandCodeIdList, 0, v11, v12);
   this->fields.fatigureTime = -1;
   *(_DWORD *)&this->fields.isQuestRestriction = 0;
   this->fields.isFatigureRecover = 0;
@@ -3269,14 +3269,14 @@ bool PartyOrganizationListViewItem__EnableDisplayLimitCountSprite(
   struct QuestRestrictionInfo_o *questRestrictionInfo; // x8
   CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o v16; // 0:x0.16
 
-  if ( (byte_4C33450 & 1) == 0 )
+  if ( (byte_4C3EA3A & 1) == 0 )
   {
-    sub_1C32C20(&Method_System_Collections_Generic_List_ServantEntity__get_Count__);
-    sub_1C32C20(&Method_System_Collections_Generic_List_UserServantEntity__get_Count__);
-    sub_1C32C20(&Method_System_Collections_Generic_List_UserServantEntity__get_Item__);
-    sub_1C32C20(&Method_System_Collections_Generic_List_ServantEntity__get_Item__);
-    sub_1C32C20(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
-    byte_4C33450 = 1;
+    sub_1C37058(&Method_System_Collections_Generic_List_ServantEntity__get_Count__);
+    sub_1C37058(&Method_System_Collections_Generic_List_UserServantEntity__get_Count__);
+    sub_1C37058(&Method_System_Collections_Generic_List_UserServantEntity__get_Item__);
+    sub_1C37058(&Method_System_Collections_Generic_List_ServantEntity__get_Item__);
+    sub_1C37058(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
+    byte_4C3EA3A = 1;
   }
   equipServantEntityList = (System_Collections_Generic_List_object__o *)this->fields.equipServantEntityList;
   if ( !equipServantEntityList )
@@ -3290,7 +3290,7 @@ bool PartyOrganizationListViewItem__EnableDisplayLimitCountSprite(
     equipServantEntityList = (System_Collections_Generic_List_object__o *)System_Collections_Generic_List_object___get_Item(
                                                                             equipServantEntityList,
                                                                             index,
-                                                                            (const MethodInfo_37984EC *)Method_System_Collections_Generic_List_ServantEntity__get_Item__);
+                                                                            (const MethodInfo_37A2D54 *)Method_System_Collections_Generic_List_ServantEntity__get_Item__);
     if ( !equipServantEntityList )
       goto LABEL_23;
     monitor = (int32_t)equipServantEntityList[2].monitor;
@@ -3333,17 +3333,17 @@ bool PartyOrganizationListViewItem__EnableDisplayLimitCountSprite(
   equipServantEntityList = (System_Collections_Generic_List_object__o *)System_Collections_Generic_List_object___get_Item(
                                                                           equipServantEntityList,
                                                                           index,
-                                                                          (const MethodInfo_37984EC *)Method_System_Collections_Generic_List_UserServantEntity__get_Item__);
+                                                                          (const MethodInfo_37A2D54 *)Method_System_Collections_Generic_List_UserServantEntity__get_Item__);
   if ( !equipServantEntityList )
 LABEL_23:
-    sub_1C32E7C(equipServantEntityList);
+    sub_1C372B4(equipServantEntityList);
   items = equipServantEntityList[2].fields._items;
   v7 = *(_QWORD *)&equipServantEntityList[2].fields._size;
   if ( !CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
   *(_QWORD *)&v16.fields.currentCryptoKey = items;
   *(_QWORD *)&v16.fields.fakeValue = v7;
-  EquipLimitCount = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_48887784(v16, 0);
+  EquipLimitCount = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_48930896(v16, 0);
   return monitor > 0 && EquipLimitCount >= monitor;
 }
 
@@ -3388,11 +3388,11 @@ System_String_o *PartyOrganizationListViewItem__GetAssetName(
   int32_t CardImageLimitCount; // w19
   CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o v23; // 0:x0.16
 
-  if ( (byte_4C33447 & 1) == 0 )
+  if ( (byte_4C3EA31 & 1) == 0 )
   {
-    sub_1C32C20(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
-    sub_1C32C20(&UINarrowFigureRender_TypeInfo);
-    byte_4C33447 = 1;
+    sub_1C37058(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
+    sub_1C37058(&UINarrowFigureRender_TypeInfo);
+    byte_4C3EA31 = 1;
   }
   userServantEntity = this->fields.userServantEntity;
   if ( !userServantEntity )
@@ -3453,11 +3453,11 @@ System_String_o *PartyOrganizationListViewItem__GetAssetName(
     j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
   *(_QWORD *)&v23.fields.currentCryptoKey = v5;
   *(_QWORD *)&v23.fields.fakeValue = v4;
-  SvtId = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_48887784(v23, 0);
+  SvtId = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_48930896(v23, 0);
   v7 = this->fields.userServantEntity;
   if ( !v7 )
 LABEL_27:
-    sub_1C32E7C(SvtId);
+    sub_1C372B4(SvtId);
   v8 = SvtId;
   v9 = UserServantEntity__getCardImageLimitCount(v7, 0, 0);
   if ( !UINarrowFigureRender_TypeInfo->_2.cctor_finished )
@@ -3483,7 +3483,7 @@ System_Collections_Generic_List_UserServantGrandEntity__o *PartyOrganizationList
   System_Collections_IEnumerator_c **v11; // x22
   System_Collections_Generic_IEnumerator_UserServantGrandEntity__c **v12; // x29
   PartyOrganizationListViewItem___c__DisplayClass365_0_c **v13; // x21
-  const MethodInfo_3398DE0 **v14; // x20
+  const MethodInfo_33A3648 **v14; // x20
   System_Collections_Generic_IEnumerator_T__o *v15; // x19
   System_Collections_Generic_IEnumerator_T__c *klass; // x8
   System_Collections_IEnumerator_c *v17; // x1
@@ -3499,7 +3499,7 @@ System_Collections_Generic_List_UserServantGrandEntity__o *PartyOrganizationList
   __int64 v27; // x25
   __int64 v28; // x0
   DataMasterBase_TMaster__TEntity__PKType__o *v29; // x19
-  const MethodInfo_3398DE0 **v30; // x23
+  const MethodInfo_33A3648 **v30; // x23
   PartyOrganizationListViewItem___c__DisplayClass365_0_c **v31; // x20
   System_Collections_IEnumerator_c **v32; // x21
   System_Collections_Generic_IEnumerator_UserServantGrandEntity__c **v33; // x22
@@ -3508,7 +3508,7 @@ System_Collections_Generic_List_UserServantGrandEntity__o *PartyOrganizationList
   int32_t v36; // w28
   int32_t v37; // w29
   ServantOverwriteStatus_o *OverwriteStatus; // x0
-  _BOOL8 IsRestriction_43319868; // x0
+  _BOOL8 IsRestriction_43421736; // x0
   void *v40; // x27
   Il2CppClass *v41; // x28
   QuestRestrictionInfo_o *v42; // x26
@@ -3539,26 +3539,26 @@ System_Collections_Generic_List_UserServantGrandEntity__o *PartyOrganizationList
   Il2CppObject *entity; // [xsp+28h] [xbp-68h] BYREF
   CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o v69; // 0:x0.16
 
-  if ( (byte_4C33455 & 1) == 0 )
+  if ( (byte_4C3EA3F & 1) == 0 )
   {
-    sub_1C32C20(&Method_BasicHelper_Any_int____78062168);
-    sub_1C32C20(&Method_System_Collections_ObjectModel_Collection_UserServantGrandEntity__GetEnumerator__);
-    sub_1C32C20(&Method_DataManager_GetMaster_UserServantGrandMaster___);
-    sub_1C32C20(&Method_DataManager_GetMaster_UserServantMaster___);
-    sub_1C32C20(&DataManager_TypeInfo);
-    sub_1C32C20(&Method_DataMasterBase_UserServantMaster__UserServantEntity__long__TryGetEntity__);
-    sub_1C32C20(&Method_DataMasterBase_UserServantGrandMaster__UserServantGrandEntity__string__getEntityList__);
-    sub_1C32C20(&System_Func_int__bool__TypeInfo);
-    sub_1C32C20(&System_IDisposable_TypeInfo);
-    sub_1C32C20(&System_Collections_Generic_IEnumerator_UserServantGrandEntity__TypeInfo);
-    sub_1C32C20(&System_Collections_IEnumerator_TypeInfo);
-    sub_1C32C20(&Method_System_Collections_Generic_List_UserServantGrandEntity__Add__);
-    sub_1C32C20(&Method_System_Collections_Generic_List_UserServantGrandEntity___ctor__);
-    sub_1C32C20(&System_Collections_Generic_List_UserServantGrandEntity__TypeInfo);
-    sub_1C32C20(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
-    sub_1C32C20(&Method_PartyOrganizationListViewItem___c__DisplayClass365_0__GetCanOrganizationGrandSvtIdList_b__0__);
-    sub_1C32C20(&PartyOrganizationListViewItem___c__DisplayClass365_0_TypeInfo);
-    byte_4C33455 = 1;
+    sub_1C37058(&Method_BasicHelper_Any_int____78107944);
+    sub_1C37058(&Method_System_Collections_ObjectModel_Collection_UserServantGrandEntity__GetEnumerator__);
+    sub_1C37058(&Method_DataManager_GetMaster_UserServantGrandMaster___);
+    sub_1C37058(&Method_DataManager_GetMaster_UserServantMaster___);
+    sub_1C37058(&DataManager_TypeInfo);
+    sub_1C37058(&Method_DataMasterBase_UserServantMaster__UserServantEntity__long__TryGetEntity__);
+    sub_1C37058(&Method_DataMasterBase_UserServantGrandMaster__UserServantGrandEntity__string__getEntityList__);
+    sub_1C37058(&System_Func_int__bool__TypeInfo);
+    sub_1C37058(&System_IDisposable_TypeInfo);
+    sub_1C37058(&System_Collections_Generic_IEnumerator_UserServantGrandEntity__TypeInfo);
+    sub_1C37058(&System_Collections_IEnumerator_TypeInfo);
+    sub_1C37058(&Method_System_Collections_Generic_List_UserServantGrandEntity__Add__);
+    sub_1C37058(&Method_System_Collections_Generic_List_UserServantGrandEntity___ctor__);
+    sub_1C37058(&System_Collections_Generic_List_UserServantGrandEntity__TypeInfo);
+    sub_1C37058(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
+    sub_1C37058(&Method_PartyOrganizationListViewItem___c__DisplayClass365_0__GetCanOrganizationGrandSvtIdList_b__0__);
+    sub_1C37058(&PartyOrganizationListViewItem___c__DisplayClass365_0_TypeInfo);
+    byte_4C3EA3F = 1;
   }
   entity = 0;
   questRestrictionInfo = this->fields.questRestrictionInfo;
@@ -3570,7 +3570,7 @@ System_Collections_Generic_List_UserServantGrandEntity__o *PartyOrganizationList
                                     0);
   if ( !DataManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-  Master_object = DataManager__GetMaster_object_((const MethodInfo_30DD39C *)Method_DataManager_GetMaster_UserServantGrandMaster___);
+  Master_object = DataManager__GetMaster_object_((const MethodInfo_30E7C04 *)Method_DataManager_GetMaster_UserServantGrandMaster___);
   if ( !Master_object )
     goto LABEL_75;
   monitor = (System_Collections_ICollection_o *)Master_object[2].monitor;
@@ -3578,29 +3578,29 @@ System_Collections_Generic_List_UserServantGrandEntity__o *PartyOrganizationList
   v7 = 0;
   if ( !GrandServantRestrictionEntity || IsNullOrEmpty )
     return v7;
-  v8 = (System_Collections_Generic_List_object__o *)sub_1C32E6C(System_Collections_Generic_List_UserServantGrandEntity__TypeInfo);
+  v8 = (System_Collections_Generic_List_object__o *)sub_1C372A4(System_Collections_Generic_List_UserServantGrandEntity__TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v8,
-    (const MethodInfo_3797F88 *)Method_System_Collections_Generic_List_UserServantGrandEntity___ctor__);
+    (const MethodInfo_37A27F0 *)Method_System_Collections_Generic_List_UserServantGrandEntity___ctor__);
   if ( !DataManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-  Master_object = DataManager__GetMaster_object_((const MethodInfo_30DD39C *)Method_DataManager_GetMaster_UserServantMaster___);
+  Master_object = DataManager__GetMaster_object_((const MethodInfo_30E7C04 *)Method_DataManager_GetMaster_UserServantMaster___);
   if ( !monitor )
 LABEL_75:
-    sub_1C32E7C(Master_object);
+    sub_1C372B4(Master_object);
   v64 = v8;
   v67 = this;
   v9 = (DataMasterBase_TMaster__TEntity__PKType__o *)Master_object;
   Enumerator = System_Collections_ObjectModel_Collection_object___GetEnumerator(
                  (System_Collections_ObjectModel_Collection_T__o *)monitor,
-                 (const MethodInfo_3330280 *)Method_System_Collections_ObjectModel_Collection_UserServantGrandEntity__GetEnumerator__);
+                 (const MethodInfo_333AAE8 *)Method_System_Collections_ObjectModel_Collection_UserServantGrandEntity__GetEnumerator__);
   v66 = Enumerator;
   if ( !Enumerator )
-    sub_1C32E7C(0);
+    sub_1C372B4(0);
   v11 = &System_Collections_IEnumerator_TypeInfo;
   v12 = &System_Collections_Generic_IEnumerator_UserServantGrandEntity__TypeInfo;
   v13 = &PartyOrganizationListViewItem___c__DisplayClass365_0_TypeInfo;
-  v14 = (const MethodInfo_3398DE0 **)&Method_DataMasterBase_UserServantMaster__UserServantEntity__long__TryGetEntity__;
+  v14 = (const MethodInfo_33A3648 **)&Method_DataMasterBase_UserServantMaster__UserServantEntity__long__TryGetEntity__;
   v15 = Enumerator;
   while ( 1 )
   {
@@ -3622,7 +3622,7 @@ LABEL_75:
     else
     {
 LABEL_18:
-      v20 = sub_1C83438(v15, v17, 0);
+      v20 = sub_1C87870(v15, v17, 0);
     }
     if ( ((*(__int64 (__fastcall **)(System_Collections_Generic_IEnumerator_T__o *, _QWORD))v20)(
             v15,
@@ -3647,23 +3647,23 @@ LABEL_18:
     else
     {
 LABEL_25:
-      v25 = sub_1C83438(v15, v22, 0);
+      v25 = sub_1C87870(v15, v22, 0);
     }
     v26 = (*(__int64 (__fastcall **)(System_Collections_Generic_IEnumerator_T__o *, _QWORD))v25)(
             v15,
             *(_QWORD *)(v25 + 8));
-    v27 = sub_1C32E6C(*v13);
+    v27 = sub_1C372A4(*v13);
     PartyOrganizationListViewItem___c__DisplayClass365_0___ctor(
       (PartyOrganizationListViewItem___c__DisplayClass365_0_o *)v27,
       0);
     if ( !v26 )
-      sub_1C32E7C(v28);
+      sub_1C372B4(v28);
     if ( !v9 )
-      sub_1C32E7C(v28);
+      sub_1C372B4(v28);
     if ( DataMasterBase_object__object__long___TryGetEntity(v9, &entity, *(_QWORD *)(v26 + 32), *v14) )
     {
       if ( !entity )
-        sub_1C32E7C(0);
+        sub_1C372B4(0);
       v29 = v9;
       v30 = v14;
       v31 = v13;
@@ -3675,10 +3675,10 @@ LABEL_25:
       v37 = *(_DWORD *)(v26 + 48);
       OverwriteStatus = UserServantEntity__GetOverwriteStatus((UserServantEntity_o *)entity, 0, 0);
       if ( !OverwriteStatus )
-        sub_1C32E7C(0);
+        sub_1C372B4(0);
       if ( !v34 )
-        sub_1C32E7C(OverwriteStatus);
-      IsRestriction_43319868 = QuestRestrictionInfo__IsRestriction_43319868(
+        sub_1C372B4(OverwriteStatus);
+      IsRestriction_43421736 = QuestRestrictionInfo__IsRestriction_43421736(
                                  v34,
                                  v35,
                                  v36,
@@ -3693,10 +3693,10 @@ LABEL_25:
       v14 = v30;
       v9 = v29;
       v15 = v66;
-      if ( !IsRestriction_43319868 )
+      if ( !IsRestriction_43421736 )
       {
         if ( !entity )
-          sub_1C32E7C(IsRestriction_43319868);
+          sub_1C372B4(IsRestriction_43421736);
         v41 = entity[5].klass;
         v40 = entity[5].monitor;
         v42 = v67->fields.questRestrictionInfo;
@@ -3704,23 +3704,23 @@ LABEL_25:
           j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
         *(_QWORD *)&v69.fields.currentCryptoKey = v41;
         *(_QWORD *)&v69.fields.fakeValue = v40;
-        v43 = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_48887784(v69, 0);
+        v43 = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_48930896(v69, 0);
         if ( !entity )
-          sub_1C32E7C(v43);
+          sub_1C372B4(v43);
         v44 = v43;
-        v45 = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_48887784(
+        v45 = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_48930896(
                 (CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o)entity[6],
                 0);
         if ( !entity )
-          sub_1C32E7C(0);
+          sub_1C372B4(0);
         DispLimitCount = UserServantEntity__getDispLimitCount((UserServantEntity_o *)entity, 0, 0);
         if ( !v42 )
-          sub_1C32E7C(DispLimitCount);
+          sub_1C372B4(DispLimitCount);
         ServantIndividuality = QuestRestrictionInfo__GetServantIndividuality(v42, v44, v45, DispLimitCount, 0);
         if ( !v27 )
-          sub_1C32E7C(ServantIndividuality);
+          sub_1C372B4(ServantIndividuality);
         *(_QWORD *)(v27 + 16) = ServantIndividuality;
-        sub_1C32BC4((CGThumbnailListItem_o *)(v27 + 16), (int32_t)ServantIndividuality, v48, v49);
+        sub_1C36FFC((CGThumbnailListItem_o *)(v27 + 16), (int32_t)ServantIndividuality, v48, v49);
         v50 = BasicHelper__IsNullOrEmpty(
                 (System_Collections_ICollection_o *)GrandServantRestrictionEntity->fields.targetVals,
                 0);
@@ -3728,43 +3728,43 @@ LABEL_25:
           goto LABEL_46;
         targetVals = GrandServantRestrictionEntity->fields.targetVals;
         if ( !targetVals )
-          sub_1C32E7C(v50);
+          sub_1C372B4(v50);
         if ( !LODWORD(targetVals->max_length) )
-          sub_1C32E84(v50);
+          sub_1C372BC(v50);
         if ( !targetVals->m_Items[0]
-          || (v54 = (System_Func_int__bool__o *)sub_1C32E6C(System_Func_int__bool__TypeInfo),
+          || (v54 = (System_Func_int__bool__o *)sub_1C372A4(System_Func_int__bool__TypeInfo),
               System_Func_int__bool____ctor(
                 v54,
                 (Il2CppObject *)v27,
                 Method_PartyOrganizationListViewItem___c__DisplayClass365_0__GetCanOrganizationGrandSvtIdList_b__0__,
                 0),
-              v50 = BasicHelper__Any_int__51143952(
+              v50 = BasicHelper__Any_int__51187064(
                       targetVals,
                       (System_Func_T__bool__o *)v54,
-                      (const MethodInfo_30C6510 *)Method_BasicHelper_Any_int____78062168)) )
+                      (const MethodInfo_30D0D78 *)Method_BasicHelper_Any_int____78107944)) )
         {
 LABEL_46:
           if ( !v64 )
-            sub_1C32E7C(v50);
+            sub_1C372B4(v50);
           items = v64->fields._items;
           v56 = Method_System_Collections_Generic_List_UserServantGrandEntity__Add__;
           ++v64->fields._version;
           if ( !items )
-            sub_1C32E7C(v50);
+            sub_1C372B4(v50);
           size = v64->fields._size;
           if ( (unsigned int)size >= LODWORD(items->max_length) )
           {
             System_Collections_Generic_List_object___AddWithResize(
               v64,
               (Il2CppObject *)v26,
-              *(const MethodInfo_37987BC **)(*(_QWORD *)(v56[4] + 192LL) + 112LL));
+              *(const MethodInfo_37A3024 **)(*(_QWORD *)(v56[4] + 192LL) + 112LL));
           }
           else
           {
             v58 = &items->obj.klass + size;
             v64->fields._size = size + 1;
             v58[4] = (Il2CppClass *)v26;
-            sub_1C32BC4((CGThumbnailListItem_o *)(v58 + 4), v26, v51, v52);
+            sub_1C36FFC((CGThumbnailListItem_o *)(v58 + 4), v26, v51, v52);
           }
         }
       }
@@ -3790,7 +3790,7 @@ LABEL_46:
     else
     {
 LABEL_57:
-      v62 = sub_1C83438(v15, System_IDisposable_TypeInfo, 0);
+      v62 = sub_1C87870(v15, System_IDisposable_TypeInfo, 0);
     }
     (*(void (__fastcall **)(System_Collections_Generic_IEnumerator_T__o *, _QWORD))v62)(v15, *(_QWORD *)(v62 + 8));
   }
@@ -3811,10 +3811,10 @@ int32_t PartyOrganizationListViewItem__GetCardImageLimitCount(
   BalanceConfig_c *v9; // x0
   struct QuestRestrictionInfo_o *v10; // x8
 
-  if ( (byte_4C33449 & 1) == 0 )
+  if ( (byte_4C3EA33 & 1) == 0 )
   {
-    sub_1C32C20(&BalanceConfig_TypeInfo);
-    byte_4C33449 = 1;
+    sub_1C37058(&BalanceConfig_TypeInfo);
+    byte_4C3EA33 = 1;
   }
   if ( this->fields.userServantEntity )
   {
@@ -3838,7 +3838,7 @@ int32_t PartyOrganizationListViewItem__GetCardImageLimitCount(
 LABEL_7:
       questRestrictionInfo = this->fields.questRestrictionInfo;
       if ( !questRestrictionInfo
-        || (result = QuestRestrictionInfo__ConvertOverwriteImageLimitCount_43337428(
+        || (result = QuestRestrictionInfo__ConvertOverwriteImageLimitCount_43439296(
                        questRestrictionInfo,
                        this->fields.userServantEntity,
                        0),
@@ -3848,7 +3848,7 @@ LABEL_7:
         if ( userServantEntity )
           return UserServantEntity__getCardImageLimitCount(userServantEntity, 0, 0);
 LABEL_23:
-        sub_1C32E7C(userServantEntity);
+        sub_1C372B4(userServantEntity);
       }
     }
   }
@@ -3899,12 +3899,12 @@ int32_t PartyOrganizationListViewItem__GetCommandCardLimitCount(
     questRestrictionInfo = this->fields.questRestrictionInfo;
     if ( questRestrictionInfo )
     {
-      v5 = QuestRestrictionInfo__ConvertOverwriteImageLimitCount_43337428(questRestrictionInfo, userServantEntity, 0);
+      v5 = QuestRestrictionInfo__ConvertOverwriteImageLimitCount_43439296(questRestrictionInfo, userServantEntity, 0);
       if ( (v5 & 0x80000000) == 0 )
         return v5;
       userServantEntity = this->fields.userServantEntity;
       if ( !userServantEntity )
-        sub_1C32E7C(v5);
+        sub_1C372B4(v5);
     }
     LODWORD(v5) = UserServantEntity__getCommandCardLimitCount(userServantEntity, 0, 0);
   }
@@ -3949,19 +3949,19 @@ System_Int32_array *PartyOrganizationListViewItem__GetCommandCardList(
   unsigned __int64 i; // x9
   unsigned int v9; // w13
 
-  if ( (byte_4C33446 & 1) == 0 )
+  if ( (byte_4C3EA30 & 1) == 0 )
   {
-    sub_1C32C20(&int___TypeInfo);
-    byte_4C33446 = 1;
+    sub_1C37058(&int___TypeInfo);
+    byte_4C3EA30 = 1;
   }
   servantEntity = this->fields.servantEntity;
   if ( !servantEntity || !servantEntity->fields.cardIds )
     return 0;
-  result = (System_Int32_array *)sub_1C32CC8(int___TypeInfo, 3);
+  result = (System_Int32_array *)sub_1C37100(int___TypeInfo, 3);
   v5 = this->fields.servantEntity;
   if ( !v5 || (cardIds = v5->fields.cardIds) == 0 )
 LABEL_15:
-    sub_1C32E7C(result);
+    sub_1C372B4(result);
   max_length_low = LODWORD(cardIds->max_length);
   for ( i = 0; (__int64)i < (int)max_length_low; ++i )
   {
@@ -3974,7 +3974,7 @@ LABEL_15:
         goto LABEL_15;
       if ( v9 >= LODWORD(result->max_length) )
 LABEL_18:
-        sub_1C32E84(result);
+        sub_1C372BC(result);
       ++result->m_Items[v9];
     }
   }
@@ -3998,10 +3998,10 @@ int32_t PartyOrganizationListViewItem__GetCorrectionIconId(
   CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o SvtId; // kr00_16
   int32_t v5; // w0
 
-  if ( (byte_4C33448 & 1) == 0 )
+  if ( (byte_4C3EA32 & 1) == 0 )
   {
-    sub_1C32C20(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
-    byte_4C33448 = 1;
+    sub_1C37058(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
+    byte_4C3EA32 = 1;
   }
   questRestrictionInfo = this->fields.questRestrictionInfo;
   if ( !questRestrictionInfo )
@@ -4009,7 +4009,7 @@ int32_t PartyOrganizationListViewItem__GetCorrectionIconId(
   SvtId = PartyOrganizationListViewItem__get_SvtId(this, method);
   if ( !CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
-  v5 = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_48887784(SvtId, 0);
+  v5 = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_48930896(SvtId, 0);
   return QuestRestrictionInfo__GetCorrectionIconId(questRestrictionInfo, v5, this->fields.isFollower, 0);
 }
 
@@ -4032,12 +4032,12 @@ int32_t PartyOrganizationListViewItem__GetDispImageLimitCount(
     questRestrictionInfo = this->fields.questRestrictionInfo;
     if ( questRestrictionInfo )
     {
-      v5 = QuestRestrictionInfo__ConvertOverwriteImageLimitCount_43337428(questRestrictionInfo, userServantEntity, 0);
+      v5 = QuestRestrictionInfo__ConvertOverwriteImageLimitCount_43439296(questRestrictionInfo, userServantEntity, 0);
       if ( (v5 & 0x80000000) == 0 )
         return v5;
       userServantEntity = this->fields.userServantEntity;
       if ( !userServantEntity )
-        sub_1C32E7C(v5);
+        sub_1C372B4(v5);
     }
     LODWORD(v5) = UserServantEntity__getDispLimitCount(userServantEntity, 0, 0);
   }
@@ -4085,16 +4085,16 @@ System_String_o *PartyOrganizationListViewItem__GetEquipFrameName(
   unsigned int v12; // [xsp+Ch] [xbp-24h] BYREF
 
   v4 = this;
-  if ( (byte_4C33454 & 1) == 0 )
+  if ( (byte_4C3EA3E & 1) == 0 )
   {
-    sub_1C32C20(&LocalizationManager_TypeInfo);
-    sub_1C32C20(&string_TypeInfo);
-    this = (PartyOrganizationListViewItem_o *)sub_1C32C20(&StringLiteral_7006/*"GRAND_SERVANT_EQUIP_FRAME_"*/);
-    byte_4C33454 = 1;
+    sub_1C37058(&LocalizationManager_TypeInfo);
+    sub_1C37058(&string_TypeInfo);
+    this = (PartyOrganizationListViewItem_o *)sub_1C37058(&StringLiteral_7007/*"GRAND_SERVANT_EQUIP_FRAME_"*/);
+    byte_4C3EA3E = 1;
   }
   equipIdList = v4->fields.equipIdList;
   if ( !equipIdList )
-    sub_1C32E7C(this);
+    sub_1C372B4(this);
   max_length = equipIdList->max_length;
   v7 = 0;
   do
@@ -4102,13 +4102,13 @@ System_String_o *PartyOrganizationListViewItem__GetEquipFrameName(
     if ( (int)v7 >= (int)max_length )
       return string_TypeInfo->static_fields->Empty;
     if ( v7 >= max_length )
-      sub_1C32E84(this);
+      sub_1C372BC(this);
     v8 = equipIdList->m_Items[v7++];
   }
   while ( v8 != userSvtId );
   v12 = v7;
   v9 = System_Int32__ToString((int32_t)&v12, 0);
-  v10 = System_String__Concat_63518544((System_String_o *)StringLiteral_7006/*"GRAND_SERVANT_EQUIP_FRAME_"*/, v9, 0);
+  v10 = System_String__Concat_63561656((System_String_o *)StringLiteral_7007/*"GRAND_SERVANT_EQUIP_FRAME_"*/, v9, 0);
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   return LocalizationManager__Get(v10, 0);
@@ -4128,11 +4128,11 @@ System_Int64_array *PartyOrganizationListViewItem__GetEquipList(
   bool v9; // w2
   const MethodInfo *v10; // x3
 
-  if ( (byte_4C33430 & 1) == 0 )
+  if ( (byte_4C3EA1A & 1) == 0 )
   {
-    sub_1C32C20(&BalanceConfig_TypeInfo);
-    sub_1C32C20(&long___TypeInfo);
-    byte_4C33430 = 1;
+    sub_1C37058(&BalanceConfig_TypeInfo);
+    sub_1C37058(&long___TypeInfo);
+    byte_4C3EA1A = 1;
   }
   equipIdList = (System_Array_o *)this->fields.equipIdList;
   if ( equipIdList )
@@ -4141,10 +4141,10 @@ System_Int64_array *PartyOrganizationListViewItem__GetEquipList(
     if ( result )
     {
       v5 = result;
-      result = (System_Int64_array *)sub_1C32D5C(result, long___TypeInfo);
+      result = (System_Int64_array *)sub_1C37194(result, long___TypeInfo);
       if ( !result )
       {
-        v7 = (PartyOrganizationListViewItem_o *)sub_1C3313C(v5);
+        v7 = (PartyOrganizationListViewItem_o *)sub_1C37574(v5);
         PartyOrganizationListViewItem__AddFriendshipUpCampaignInfo(v7, v8, v9, v10);
       }
     }
@@ -4157,7 +4157,7 @@ System_Int64_array *PartyOrganizationListViewItem__GetEquipList(
       j_il2cpp_runtime_class_init_0(BalanceConfig_TypeInfo);
       v6 = BalanceConfig_TypeInfo;
     }
-    return (System_Int64_array *)sub_1C32CC8(long___TypeInfo, (unsigned int)v6->static_fields->SvtEquipMax);
+    return (System_Int64_array *)sub_1C37100(long___TypeInfo, (unsigned int)v6->static_fields->SvtEquipMax);
   }
   return result;
 }
@@ -4203,20 +4203,20 @@ int64_t PartyOrganizationListViewItem__GetEquipUserSvtIdByIndex(
   CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_o v8; // [xsp+0h] [xbp-60h] BYREF
   CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_o v9; // [xsp+20h] [xbp-40h]
 
-  if ( (byte_4C3343B & 1) == 0 )
+  if ( (byte_4C3EA25 & 1) == 0 )
   {
-    sub_1C32C20(&Method_System_Collections_Generic_List_UserServantEntity__get_Item__);
-    sub_1C32C20(&CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo);
-    byte_4C3343B = 1;
+    sub_1C37058(&Method_System_Collections_Generic_List_UserServantEntity__get_Item__);
+    sub_1C37058(&CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo);
+    byte_4C3EA25 = 1;
   }
   equipUserServantEntityList = (System_Collections_Generic_List_object__o *)this->fields.equipUserServantEntityList;
   if ( !equipUserServantEntityList
     || (equipUserServantEntityList = (System_Collections_Generic_List_object__o *)System_Collections_Generic_List_object___get_Item(
                                                                                     equipUserServantEntityList,
                                                                                     index,
-                                                                                    (const MethodInfo_37984EC *)Method_System_Collections_Generic_List_UserServantEntity__get_Item__)) == 0 )
+                                                                                    (const MethodInfo_37A2D54 *)Method_System_Collections_Generic_List_UserServantEntity__get_Item__)) == 0 )
   {
-    sub_1C32E7C(equipUserServantEntityList);
+    sub_1C372B4(equipUserServantEntityList);
   }
   v6 = *(_OWORD *)&equipUserServantEntityList->fields._syncRoot;
   *(_OWORD *)&v9.fields.currentCryptoKey = *(_OWORD *)&equipUserServantEntityList->fields._items;
@@ -4224,7 +4224,7 @@ int64_t PartyOrganizationListViewItem__GetEquipUserSvtIdByIndex(
   if ( !CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo);
   v8 = v9;
-  return CodeStage_AntiCheat_ObscuredTypes_ObscuredLong__op_Implicit_48891308(&v8, 0);
+  return CodeStage_AntiCheat_ObscuredTypes_ObscuredLong__op_Implicit_48934420(&v8, 0);
 }
 
 
@@ -4238,7 +4238,7 @@ bool PartyOrganizationListViewItem__GetEventUpVal(
 
   v4 = this->fields.eventUpValInfo;
   *eventUpValInfo = v4;
-  sub_1C32BC4((CGThumbnailListItem_o *)eventUpValInfo, (int32_t)v4, (int32_t)method, v3);
+  sub_1C36FFC((CGThumbnailListItem_o *)eventUpValInfo, (int32_t)v4, (int32_t)method, v3);
   return this->fields.isEventUpVal;
 }
 
@@ -4249,10 +4249,10 @@ System_String_o *PartyOrganizationListViewItem__GetFixedServantPositionRestricti
 {
   QuestRestrictionInfo_o *questRestrictionInfo; // x0
 
-  if ( (byte_4C33445 & 1) == 0 )
+  if ( (byte_4C3EA2F & 1) == 0 )
   {
-    sub_1C32C20(&StringLiteral_1/*""*/);
-    byte_4C33445 = 1;
+    sub_1C37058(&StringLiteral_1/*""*/);
+    byte_4C3EA2F = 1;
   }
   questRestrictionInfo = this->fields.questRestrictionInfo;
   if ( questRestrictionInfo )
@@ -4268,10 +4268,10 @@ System_String_o *PartyOrganizationListViewItem__GetFixedSupportPositionRestricti
 {
   QuestRestrictionInfo_o *questRestrictionInfo; // x0
 
-  if ( (byte_4C33444 & 1) == 0 )
+  if ( (byte_4C3EA2E & 1) == 0 )
   {
-    sub_1C32C20(&StringLiteral_1/*""*/);
-    byte_4C33444 = 1;
+    sub_1C37058(&StringLiteral_1/*""*/);
+    byte_4C3EA2E = 1;
   }
   questRestrictionInfo = this->fields.questRestrictionInfo;
   if ( questRestrictionInfo )
@@ -4301,10 +4301,10 @@ UserServantGrandInfo_o *PartyOrganizationListViewItem__GetGrandServantInfo(
   struct QuestRestrictionInfo_o *questRestrictionInfo; // x8
   UserServantGrandInfo_c *v9; // x0
 
-  if ( (byte_4C33452 & 1) == 0 )
+  if ( (byte_4C3EA3C & 1) == 0 )
   {
-    sub_1C32C20(&UserServantGrandInfo_TypeInfo);
-    byte_4C33452 = 1;
+    sub_1C37058(&UserServantGrandInfo_TypeInfo);
+    byte_4C3EA3C = 1;
   }
   userServantEntity = this->fields.userServantEntity;
   if ( this->fields._IsTempGrandServant_k__BackingField )
@@ -4355,12 +4355,12 @@ int32_t PartyOrganizationListViewItem__GetIconLimitCount(
     questRestrictionInfo = this->fields.questRestrictionInfo;
     if ( questRestrictionInfo )
     {
-      v5 = QuestRestrictionInfo__ConvertOverwriteImageLimitCount_43337428(questRestrictionInfo, userServantEntity, 0);
+      v5 = QuestRestrictionInfo__ConvertOverwriteImageLimitCount_43439296(questRestrictionInfo, userServantEntity, 0);
       if ( (v5 & 0x80000000) == 0 )
         return v5;
       userServantEntity = this->fields.userServantEntity;
       if ( !userServantEntity )
-        sub_1C32E7C(v5);
+        sub_1C372B4(v5);
     }
     LODWORD(v5) = UserServantEntity__getIconLimitCount(userServantEntity, 0, 0);
   }
@@ -4407,10 +4407,10 @@ System_String_o *PartyOrganizationListViewItem__GetMyServantOrNpcRestrictionMess
 {
   QuestRestrictionInfo_o *questRestrictionInfo; // x0
 
-  if ( (byte_4C3344B & 1) == 0 )
+  if ( (byte_4C3EA35 & 1) == 0 )
   {
-    sub_1C32C20(&StringLiteral_1/*""*/);
-    byte_4C3344B = 1;
+    sub_1C37058(&StringLiteral_1/*""*/);
+    byte_4C3EA35 = 1;
   }
   questRestrictionInfo = this->fields.questRestrictionInfo;
   if ( questRestrictionInfo )
@@ -4430,10 +4430,10 @@ System_String_o *PartyOrganizationListViewItem__GetMyServantOrSupportRestriction
 {
   QuestRestrictionInfo_o *questRestrictionInfo; // x0
 
-  if ( (byte_4C3344C & 1) == 0 )
+  if ( (byte_4C3EA36 & 1) == 0 )
   {
-    sub_1C32C20(&StringLiteral_1/*""*/);
-    byte_4C3344C = 1;
+    sub_1C37058(&StringLiteral_1/*""*/);
+    byte_4C3EA36 = 1;
   }
   questRestrictionInfo = this->fields.questRestrictionInfo;
   if ( questRestrictionInfo )
@@ -4472,12 +4472,12 @@ int32_t PartyOrganizationListViewItem__GetPortraitLimitCount(
   questRestrictionInfo = this->fields.questRestrictionInfo;
   if ( questRestrictionInfo )
   {
-    v5 = QuestRestrictionInfo__ConvertOverwriteImageLimitCount_43337428(questRestrictionInfo, userServantEntity, 0);
+    v5 = QuestRestrictionInfo__ConvertOverwriteImageLimitCount_43439296(questRestrictionInfo, userServantEntity, 0);
     if ( (v5 & 0x80000000) == 0 )
       return v5;
     userServantEntity = this->fields.userServantEntity;
     if ( !userServantEntity )
-      sub_1C32E7C(v5);
+      sub_1C372B4(v5);
   }
   LODWORD(v5) = UserServantEntity__getPortraitLimitCount(userServantEntity, 0, 0);
   return v5;
@@ -4495,12 +4495,12 @@ System_String_o *PartyOrganizationListViewItem__GetQuestRestrictionMessage(
   System_String_o *ConfirmRestrictionMessage; // x1
   int32_t InitPos_k__BackingField; // w1
 
-  if ( (byte_4C33441 & 1) == 0 )
+  if ( (byte_4C3EA2B & 1) == 0 )
   {
-    sub_1C32C20(&LocalizationManager_TypeInfo);
-    sub_1C32C20(&StringLiteral_10263/*"PARTY_ORGANIZATION_QUEST_RESTRICTION_EXPLANATION_COLOR"*/);
-    sub_1C32C20(&StringLiteral_1/*""*/);
-    byte_4C33441 = 1;
+    sub_1C37058(&LocalizationManager_TypeInfo);
+    sub_1C37058(&StringLiteral_10264/*"PARTY_ORGANIZATION_QUEST_RESTRICTION_EXPLANATION_COLOR"*/);
+    sub_1C37058(&StringLiteral_1/*""*/);
+    byte_4C3EA2B = 1;
   }
   questRestrictionInfo = this->fields.questRestrictionInfo;
   if ( !questRestrictionInfo )
@@ -4511,7 +4511,7 @@ System_String_o *PartyOrganizationListViewItem__GetQuestRestrictionMessage(
     if ( v4 )
       return QuestRestrictionInfo__GetSupportOnlyRestrictionMessage(v4, 0);
 LABEL_32:
-    sub_1C32E7C(v4);
+    sub_1C372B4(v4);
   }
   if ( this->fields.index >= 1 )
   {
@@ -4547,7 +4547,7 @@ LABEL_32:
   {
     if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-    v4 = (QuestRestrictionInfo_o *)LocalizationManager__Get((System_String_o *)StringLiteral_10263/*"PARTY_ORGANIZATION_QUEST_RESTRICTION_EXPLANATION_COLOR"*/, 0);
+    v4 = (QuestRestrictionInfo_o *)LocalizationManager__Get((System_String_o *)StringLiteral_10264/*"PARTY_ORGANIZATION_QUEST_RESTRICTION_EXPLANATION_COLOR"*/, 0);
     if ( !this->fields.questRestrictionInfo )
       goto LABEL_32;
     v7 = (System_String_o *)v4;
@@ -4557,7 +4557,7 @@ LABEL_32:
                                   this->fields.index + 1,
                                   1,
                                   0);
-    return System_String__Concat_63518544(v7, ConfirmRestrictionMessage, 0);
+    return System_String__Concat_63561656(v7, ConfirmRestrictionMessage, 0);
   }
   else
   {
@@ -4600,14 +4600,14 @@ System_String_o *PartyOrganizationListViewItem__GetServantName(
   CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o v23; // 0:x0.16
 
   maxLimitCount = limitCount;
-  if ( (byte_4C33435 & 1) == 0 )
+  if ( (byte_4C3EA1F & 1) == 0 )
   {
-    sub_1C32C20(&Method_DataManager_GetMaster_ServantLimitImageMaster___);
-    sub_1C32C20(&Method_DataManager_GetMaster_UserServantCollectionMaster___);
-    sub_1C32C20(&DataManager_TypeInfo);
-    sub_1C32C20(&NetworkManager_TypeInfo);
-    sub_1C32C20(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
-    byte_4C33435 = 1;
+    sub_1C37058(&Method_DataManager_GetMaster_ServantLimitImageMaster___);
+    sub_1C37058(&Method_DataManager_GetMaster_UserServantCollectionMaster___);
+    sub_1C37058(&DataManager_TypeInfo);
+    sub_1C37058(&NetworkManager_TypeInfo);
+    sub_1C37058(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
+    byte_4C3EA1F = 1;
   }
   entity = 0;
   userServantEntity = this->fields.userServantEntity;
@@ -4619,7 +4619,7 @@ System_String_o *PartyOrganizationListViewItem__GetServantName(
       j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
     *(_QWORD *)&v21.fields.currentCryptoKey = v7;
     *(_QWORD *)&v21.fields.fakeValue = v6;
-    maxLimitCount = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_48887784(v21, 0);
+    maxLimitCount = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_48930896(v21, 0);
   }
   if ( PartyOrganizationListViewItem__get_ServantLeader(this, *(const MethodInfo **)&limitCount) )
   {
@@ -4632,13 +4632,13 @@ System_String_o *PartyOrganizationListViewItem__GetServantName(
     goto LABEL_26;
   if ( !DataManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-  Master_object = DataManager__GetMaster_object_((const MethodInfo_30DD39C *)Method_DataManager_GetMaster_UserServantCollectionMaster___);
+  Master_object = DataManager__GetMaster_object_((const MethodInfo_30E7C04 *)Method_DataManager_GetMaster_UserServantCollectionMaster___);
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
-  if ( !byte_4C31812 )
+  if ( !byte_4C3CD62 )
   {
-    sub_1C32C20(&NetworkManager_TypeInfo);
-    byte_4C31812 = 1;
+    sub_1C37058(&NetworkManager_TypeInfo);
+    byte_4C3CD62 = 1;
   }
   ServantLeader = NetworkManager_TypeInfo;
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
@@ -4656,10 +4656,10 @@ System_String_o *PartyOrganizationListViewItem__GetServantName(
     j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
   *(_QWORD *)&v22.fields.currentCryptoKey = v13;
   *(_QWORD *)&v22.fields.fakeValue = v12;
-  ServantLeader = (void *)CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_48887784(v22, 0);
+  ServantLeader = (void *)CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_48930896(v22, 0);
   if ( !Master_object )
 LABEL_36:
-    sub_1C32E7C(ServantLeader);
+    sub_1C372B4(ServantLeader);
   ServantLeader = (void *)UserServantCollectionMaster__TryGetEntity(
                             (UserServantCollectionMaster_o *)Master_object,
                             &entity,
@@ -4679,7 +4679,7 @@ LABEL_36:
 LABEL_26:
   if ( !DataManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-  ServantLeader = DataManager__GetMaster_object_((const MethodInfo_30DD39C *)Method_DataManager_GetMaster_ServantLimitImageMaster___);
+  ServantLeader = DataManager__GetMaster_object_((const MethodInfo_30E7C04 *)Method_DataManager_GetMaster_ServantLimitImageMaster___);
   v15 = this->fields.servantEntity;
   if ( !v15 )
     goto LABEL_36;
@@ -4690,7 +4690,7 @@ LABEL_26:
     j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
   *(_QWORD *)&v23.fields.currentCryptoKey = v18;
   *(_QWORD *)&v23.fields.fakeValue = v17;
-  ServantLeader = (void *)CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_48887784(v23, 0);
+  ServantLeader = (void *)CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_48930896(v23, 0);
   if ( !v16 )
     goto LABEL_36;
   return ServantLimitImageMaster__GetLimitCountSealedServantName(v16, (int32_t)ServantLeader, maxLimitCount, 0, 0);
@@ -4706,13 +4706,13 @@ System_String_o *PartyOrganizationListViewItem__GetUniqueIndividualityRestrictio
   System_String_o *UniqueIndividualityRestrictionMessage; // x20
   System_String_o *v7; // x0
 
-  if ( (byte_4C33443 & 1) == 0 )
+  if ( (byte_4C3EA2D & 1) == 0 )
   {
-    sub_1C32C20(&LocalizationManager_TypeInfo);
-    sub_1C32C20(&StringLiteral_44/*"\n\n"*/);
-    sub_1C32C20(&StringLiteral_1/*""*/);
-    sub_1C32C20(&StringLiteral_10301/*"PARTY_ORGANIZATION_SERVANT_QUEST_RESTRICTION_MY_SERVANT_OR_NPC"*/);
-    byte_4C33443 = 1;
+    sub_1C37058(&LocalizationManager_TypeInfo);
+    sub_1C37058(&StringLiteral_44/*"\n\n"*/);
+    sub_1C37058(&StringLiteral_1/*""*/);
+    sub_1C37058(&StringLiteral_10302/*"PARTY_ORGANIZATION_SERVANT_QUEST_RESTRICTION_MY_SERVANT_OR_NPC"*/);
+    byte_4C3EA2D = 1;
   }
   questRestrictionInfo = this->fields.questRestrictionInfo;
   if ( !questRestrictionInfo )
@@ -4725,8 +4725,8 @@ System_String_o *PartyOrganizationListViewItem__GetUniqueIndividualityRestrictio
     return UniqueIndividualityRestrictionMessage;
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-  v7 = LocalizationManager__Get((System_String_o *)StringLiteral_10301/*"PARTY_ORGANIZATION_SERVANT_QUEST_RESTRICTION_MY_SERVANT_OR_NPC"*/, 0);
-  return System_String__Concat_63556792(
+  v7 = LocalizationManager__Get((System_String_o *)StringLiteral_10302/*"PARTY_ORGANIZATION_SERVANT_QUEST_RESTRICTION_MY_SERVANT_OR_NPC"*/, 0);
+  return System_String__Concat_63599904(
            v7,
            (System_String_o *)StringLiteral_44/*"\n\n"*/,
            UniqueIndividualityRestrictionMessage,
@@ -4740,10 +4740,10 @@ System_String_o *PartyOrganizationListViewItem__GetUniqueSvtRestrictionMessage(
 {
   QuestRestrictionInfo_o *questRestrictionInfo; // x0
 
-  if ( (byte_4C33442 & 1) == 0 )
+  if ( (byte_4C3EA2C & 1) == 0 )
   {
-    sub_1C32C20(&StringLiteral_1/*""*/);
-    byte_4C33442 = 1;
+    sub_1C37058(&StringLiteral_1/*""*/);
+    byte_4C3EA2C = 1;
   }
   questRestrictionInfo = this->fields.questRestrictionInfo;
   if ( questRestrictionInfo )
@@ -4762,7 +4762,7 @@ bool PartyOrganizationListViewItem__HasAtkBoost(PartyOrganizationListViewItem_o 
     return 1;
   GrandServantInfo = PartyOrganizationListViewItem__GetGrandServantInfo(this, v3);
   if ( !GrandServantInfo )
-    sub_1C32E7C(0);
+    sub_1C372B4(0);
   return UserServantGrandInfo__get_AddedAtk(GrandServantInfo, 0) > 0;
 }
 
@@ -4776,7 +4776,7 @@ bool PartyOrganizationListViewItem__HasHpBoost(PartyOrganizationListViewItem_o *
     return 1;
   GrandServantInfo = PartyOrganizationListViewItem__GetGrandServantInfo(this, v3);
   if ( !GrandServantInfo )
-    sub_1C32E7C(0);
+    sub_1C372B4(0);
   return UserServantGrandInfo__get_AddedHp(GrandServantInfo, 0) > 0;
 }
 
@@ -4816,7 +4816,7 @@ bool PartyOrganizationListViewItem__IsEditablePos(PartyOrganizationListViewItem_
         && !this->fields.isMyServantOrNpcRestriction;
   v5 = this->fields.questRestrictionInfo;
   if ( !v5 )
-    sub_1C32E7C(0);
+    sub_1C372B4(0);
   return QuestRestrictionInfo__IsEditablePos(v5, this->fields._InitPos_k__BackingField, 0);
 }
 
@@ -4835,7 +4835,7 @@ bool PartyOrganizationListViewItem__IsEnabledChangeGrandSvt(
 {
   System_Collections_ICollection_o *CanOrganizationGrandSvtIdList; // x20
   _BOOL8 IsNullOrEmpty; // x0
-  const MethodInfo_30DD39C **v6; // x22
+  const MethodInfo_30E7C04 **v6; // x22
   int v7; // w23
   bool v8; // w19
   Il2CppObject *current; // x21
@@ -4846,28 +4846,28 @@ bool PartyOrganizationListViewItem__IsEnabledChangeGrandSvt(
   int32_t v14; // w2
   const MethodInfo *v15; // x3
   System_Collections_Generic_List_UserServantEntity__o *v16; // x21
-  const MethodInfo_30DD39C **v17; // x29
+  const MethodInfo_30E7C04 **v17; // x29
   System_Func_object__bool__o *v18; // x22
   int v19; // w20
   System_Collections_Generic_List_Enumerator_object__o v20; // [xsp+0h] [xbp-A0h] BYREF
   System_Collections_Generic_List_UserServantEntity__o *userServantList; // [xsp+18h] [xbp-88h] BYREF
   System_Collections_Generic_List_Enumerator_object__o v22; // [xsp+20h] [xbp-80h] BYREF
 
-  if ( (byte_4C33456 & 1) == 0 )
+  if ( (byte_4C3EA40 & 1) == 0 )
   {
-    sub_1C32C20(&Method_DataManager_GetMaster_GrandGraphMaster___);
-    sub_1C32C20(&Method_DataManager_GetMaster_UserServantMaster___);
-    sub_1C32C20(&DataManager_TypeInfo);
-    sub_1C32C20(&Method_DataMasterBase_GrandGraphMaster__GrandGraphEntity__int__GetEntity__);
-    sub_1C32C20(&Method_System_Linq_Enumerable_Count_UserServantEntity___);
-    sub_1C32C20(&Method_System_Collections_Generic_List_Enumerator_UserServantGrandEntity__Dispose__);
-    sub_1C32C20(&Method_System_Collections_Generic_List_Enumerator_UserServantGrandEntity__MoveNext__);
-    sub_1C32C20(&Method_System_Collections_Generic_List_Enumerator_UserServantGrandEntity__get_Current__);
-    sub_1C32C20(&System_Func_UserServantEntity__bool__TypeInfo);
-    sub_1C32C20(&Method_System_Collections_Generic_List_UserServantGrandEntity__GetEnumerator__);
-    sub_1C32C20(&Method_PartyOrganizationListViewItem___c__DisplayClass366_0__IsEnabledChangeGrandSvt_b__0__);
-    sub_1C32C20(&PartyOrganizationListViewItem___c__DisplayClass366_0_TypeInfo);
-    byte_4C33456 = 1;
+    sub_1C37058(&Method_DataManager_GetMaster_GrandGraphMaster___);
+    sub_1C37058(&Method_DataManager_GetMaster_UserServantMaster___);
+    sub_1C37058(&DataManager_TypeInfo);
+    sub_1C37058(&Method_DataMasterBase_GrandGraphMaster__GrandGraphEntity__int__GetEntity__);
+    sub_1C37058(&Method_System_Linq_Enumerable_Count_UserServantEntity___);
+    sub_1C37058(&Method_System_Collections_Generic_List_Enumerator_UserServantGrandEntity__Dispose__);
+    sub_1C37058(&Method_System_Collections_Generic_List_Enumerator_UserServantGrandEntity__MoveNext__);
+    sub_1C37058(&Method_System_Collections_Generic_List_Enumerator_UserServantGrandEntity__get_Current__);
+    sub_1C37058(&System_Func_UserServantEntity__bool__TypeInfo);
+    sub_1C37058(&Method_System_Collections_Generic_List_UserServantGrandEntity__GetEnumerator__);
+    sub_1C37058(&Method_PartyOrganizationListViewItem___c__DisplayClass366_0__IsEnabledChangeGrandSvt_b__0__);
+    sub_1C37058(&PartyOrganizationListViewItem___c__DisplayClass366_0_TypeInfo);
+    byte_4C3EA40 = 1;
   }
   memset(&v22, 0, sizeof(v22));
   userServantList = 0;
@@ -4882,33 +4882,33 @@ bool PartyOrganizationListViewItem__IsEnabledChangeGrandSvt(
   if ( !this->fields.userServantEntity && !this->fields.isFollower )
     return 1;
   if ( !CanOrganizationGrandSvtIdList )
-    sub_1C32E7C(IsNullOrEmpty);
+    sub_1C372B4(IsNullOrEmpty);
   System_Collections_Generic_List_object___GetEnumerator(
     (System_Collections_Generic_List_Enumerator_T__o *)&v20,
     (System_Collections_Generic_List_object__o *)CanOrganizationGrandSvtIdList,
-    (const MethodInfo_37992B4 *)Method_System_Collections_Generic_List_UserServantGrandEntity__GetEnumerator__);
-  v6 = (const MethodInfo_30DD39C **)&Method_DataManager_GetMaster_GrandGraphMaster___;
+    (const MethodInfo_37A3B1C *)Method_System_Collections_Generic_List_UserServantGrandEntity__GetEnumerator__);
+  v6 = (const MethodInfo_30E7C04 **)&Method_DataManager_GetMaster_GrandGraphMaster___;
   v7 = 2;
   v22 = v20;
   while ( 1 )
   {
     v8 = System_Collections_Generic_List_Enumerator_object___MoveNext(
            &v22,
-           (const MethodInfo_3522FA8 *)Method_System_Collections_Generic_List_Enumerator_UserServantGrandEntity__MoveNext__);
+           (const MethodInfo_352D810 *)Method_System_Collections_Generic_List_Enumerator_UserServantGrandEntity__MoveNext__);
     if ( !v8 )
       break;
     current = v22.fields._current;
-    v10 = sub_1C32E6C(PartyOrganizationListViewItem___c__DisplayClass366_0_TypeInfo);
+    v10 = sub_1C372A4(PartyOrganizationListViewItem___c__DisplayClass366_0_TypeInfo);
     PartyOrganizationListViewItem___c__DisplayClass366_0___ctor(
       (PartyOrganizationListViewItem___c__DisplayClass366_0_o *)v10,
       0);
     if ( !DataManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-    Master_object = DataManager__GetMaster_object_((const MethodInfo_30DD39C *)Method_DataManager_GetMaster_UserServantMaster___);
+    Master_object = DataManager__GetMaster_object_((const MethodInfo_30E7C04 *)Method_DataManager_GetMaster_UserServantMaster___);
     if ( !current )
-      sub_1C32E7C(Master_object);
+      sub_1C372B4(Master_object);
     if ( !Master_object )
-      sub_1C32E7C(0);
+      sub_1C372B4(0);
     if ( UserServantMaster__TryGetEntityListBySvtId(
            (UserServantMaster_o *)Master_object,
            &userServantList,
@@ -4920,27 +4920,27 @@ bool PartyOrganizationListViewItem__IsEnabledChangeGrandSvt(
         j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
       v12 = DataManager__GetMaster_object_(*v6);
       if ( !v12 )
-        sub_1C32E7C(0);
+        sub_1C372B4(0);
       Entity = DataMasterBase_object__object__int___GetEntity(
                  (DataMasterBase_TMaster__TEntity__PKType__o *)v12,
                  (int32_t)current[1].monitor,
-                 (const MethodInfo_3396838 *)Method_DataMasterBase_GrandGraphMaster__GrandGraphEntity__int__GetEntity__);
+                 (const MethodInfo_33A10A0 *)Method_DataMasterBase_GrandGraphMaster__GrandGraphEntity__int__GetEntity__);
       if ( !v10 )
-        sub_1C32E7C(Entity);
+        sub_1C372B4(Entity);
       *(_QWORD *)(v10 + 16) = Entity;
-      sub_1C32BC4((CGThumbnailListItem_o *)(v10 + 16), (int32_t)Entity, v14, v15);
+      sub_1C36FFC((CGThumbnailListItem_o *)(v10 + 16), (int32_t)Entity, v14, v15);
       v16 = userServantList;
       v17 = v6;
-      v18 = (System_Func_object__bool__o *)sub_1C32E6C(System_Func_UserServantEntity__bool__TypeInfo);
+      v18 = (System_Func_object__bool__o *)sub_1C372A4(System_Func_UserServantEntity__bool__TypeInfo);
       System_Func_object__bool____ctor(
         v18,
         (Il2CppObject *)v10,
         Method_PartyOrganizationListViewItem___c__DisplayClass366_0__IsEnabledChangeGrandSvt_b__0__,
         0);
-      v7 -= System_Linq_Enumerable__Count_object__51376204(
+      v7 -= System_Linq_Enumerable__Count_object__51419316(
               (System_Collections_Generic_IEnumerable_TSource__o *)v16,
               (System_Func_TSource__bool__o *)v18,
-              (const MethodInfo_30FF04C *)Method_System_Linq_Enumerable_Count_UserServantEntity___);
+              (const MethodInfo_31098B4 *)Method_System_Linq_Enumerable_Count_UserServantEntity___);
       v6 = v17;
       if ( v7 <= 0 )
       {
@@ -4953,7 +4953,7 @@ bool PartyOrganizationListViewItem__IsEnabledChangeGrandSvt(
 LABEL_24:
   System_Collections_Generic_List_Enumerator_object___Dispose(
     &v22,
-    (const MethodInfo_3522FA4 *)Method_System_Collections_Generic_List_Enumerator_UserServantGrandEntity__Dispose__);
+    (const MethodInfo_352D80C *)Method_System_Collections_Generic_List_Enumerator_UserServantGrandEntity__Dispose__);
   return v8 && v19 == 7;
 }
 
@@ -4968,7 +4968,7 @@ bool PartyOrganizationListViewItem__IsFixCostume(PartyOrganizationListViewItem_o
   {
     questRestrictionInfo = this->fields.questRestrictionInfo;
     if ( questRestrictionInfo )
-      LOBYTE(questRestrictionInfo) = QuestRestrictionInfo__ConvertOverwriteImageLimitCount_43337428(
+      LOBYTE(questRestrictionInfo) = QuestRestrictionInfo__ConvertOverwriteImageLimitCount_43439296(
                                        questRestrictionInfo,
                                        userServantEntity,
                                        0) >= 0;
@@ -5008,13 +5008,13 @@ bool PartyOrganizationListViewItem__IsModifyFixCostume(PartyOrganizationListView
   questRestrictionInfo = this->fields.questRestrictionInfo;
   if ( !questRestrictionInfo )
     return 0;
-  v5 = QuestRestrictionInfo__ConvertOverwriteImageLimitCount_43337428(questRestrictionInfo, userServantEntity, 0);
+  v5 = QuestRestrictionInfo__ConvertOverwriteImageLimitCount_43439296(questRestrictionInfo, userServantEntity, 0);
   if ( v5 < 0 )
     return 0;
   v6 = v5;
   v7 = this->fields.userServantEntity;
   if ( !v7 )
-    sub_1C32E7C(0);
+    sub_1C372B4(0);
   return UserServantEntity__getDispLimitCount(v7, 0, 0) != v6;
 }
 
@@ -5077,14 +5077,14 @@ void PartyOrganizationListViewItem__Modify(PartyOrganizationListViewItem_o *this
   CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_o v21; // [xsp+20h] [xbp-50h]
   QuestPhaseEntity_o *entity; // [xsp+48h] [xbp-28h] BYREF
 
-  if ( (byte_4C33426 & 1) == 0 )
+  if ( (byte_4C3EA10 & 1) == 0 )
   {
-    sub_1C32C20(&Method_DataManager_GetMaster_QuestPhaseMaster___);
-    sub_1C32C20(&Method_DataManager_GetMaster_UserServantMaster___);
-    sub_1C32C20(&DataManager_TypeInfo);
-    sub_1C32C20(&Method_DataMasterBase_UserServantMaster__UserServantEntity__long__TryGetEntity__);
-    sub_1C32C20(&CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo);
-    byte_4C33426 = 1;
+    sub_1C37058(&Method_DataManager_GetMaster_QuestPhaseMaster___);
+    sub_1C37058(&Method_DataManager_GetMaster_UserServantMaster___);
+    sub_1C37058(&DataManager_TypeInfo);
+    sub_1C37058(&Method_DataMasterBase_UserServantMaster__UserServantEntity__long__TryGetEntity__);
+    sub_1C37058(&CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo);
+    byte_4C3EA10 = 1;
   }
   entity = 0;
   userServantEntity = this->fields.userServantEntity;
@@ -5096,20 +5096,20 @@ void PartyOrganizationListViewItem__Modify(PartyOrganizationListViewItem_o *this
     if ( !CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo);
     v20 = v21;
-    v5 = CodeStage_AntiCheat_ObscuredTypes_ObscuredLong__op_Implicit_48891308(&v20, 0);
+    v5 = CodeStage_AntiCheat_ObscuredTypes_ObscuredLong__op_Implicit_48934420(&v20, 0);
     if ( !this->fields._IsDisappearSvt_k__BackingField )
     {
       v6 = v5;
       if ( !DataManager_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-      Master_object = DataManager__GetMaster_object_((const MethodInfo_30DD39C *)Method_DataManager_GetMaster_UserServantMaster___);
+      Master_object = DataManager__GetMaster_object_((const MethodInfo_30E7C04 *)Method_DataManager_GetMaster_UserServantMaster___);
       if ( !Master_object )
         goto LABEL_34;
       DataMasterBase_object__object__long___TryGetEntity(
         (DataMasterBase_TMaster__TEntity__PKType__o *)Master_object,
         (Il2CppObject **)&this->fields.userServantEntity,
         v6,
-        (const MethodInfo_3398DE0 *)Method_DataMasterBase_UserServantMaster__UserServantEntity__long__TryGetEntity__);
+        (const MethodInfo_33A3648 *)Method_DataMasterBase_UserServantMaster__UserServantEntity__long__TryGetEntity__);
     }
     Master_object = this->fields.userServantEntity;
     if ( !Master_object )
@@ -5141,7 +5141,7 @@ void PartyOrganizationListViewItem__Modify(PartyOrganizationListViewItem_o *this
     {
       if ( !DataManager_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-      Master_object = DataManager__GetMaster_object_((const MethodInfo_30DD39C *)Method_DataManager_GetMaster_QuestPhaseMaster___);
+      Master_object = DataManager__GetMaster_object_((const MethodInfo_30E7C04 *)Method_DataManager_GetMaster_QuestPhaseMaster___);
       v14 = this->fields.questRestrictionInfo;
       if ( !v14 || !Master_object )
         goto LABEL_34;
@@ -5198,7 +5198,7 @@ LABEL_32:
       }
     }
 LABEL_34:
-    sub_1C32E7C(Master_object);
+    sub_1C372B4(Master_object);
   }
 }
 
@@ -5213,15 +5213,15 @@ void PartyOrganizationListViewItem__ModifyFromWarBoard(
   const MethodInfo *v7; // x2
 
   if ( !item )
-    sub_1C32E7C(this);
+    sub_1C372B4(this);
   setupInfo = item->fields.setupInfo;
   this->fields.setupInfo = setupInfo;
-  sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.setupInfo, (int32_t)setupInfo, (int32_t)method, v3);
-  PartyOrganizationListViewItem__Modify_34151644(this, item, v7);
+  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.setupInfo, (int32_t)setupInfo, (int32_t)method, v3);
+  PartyOrganizationListViewItem__Modify_34247276(this, item, v7);
 }
 
 
-void PartyOrganizationListViewItem__Modify_34151644(
+void PartyOrganizationListViewItem__Modify_34247276(
         PartyOrganizationListViewItem_o *this,
         PartyServantListViewItem_o *item,
         const MethodInfo *method)
@@ -5265,26 +5265,26 @@ void PartyOrganizationListViewItem__Modify_34151644(
   CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o v40; // 0:x0.16
 
   v5 = this;
-  if ( (byte_4C33427 & 1) == 0 )
+  if ( (byte_4C3EA11 & 1) == 0 )
   {
-    sub_1C32C20(&Method_DataManager_GetMasterData_ServantMaster___);
-    sub_1C32C20(&Method_DataMasterBase_ServantMaster__ServantEntity__int__GetEntity__);
-    sub_1C32C20(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
-    this = (PartyOrganizationListViewItem_o *)sub_1C32C20(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-    byte_4C33427 = 1;
+    sub_1C37058(&Method_DataManager_GetMasterData_ServantMaster___);
+    sub_1C37058(&Method_DataMasterBase_ServantMaster__ServantEntity__int__GetEntity__);
+    sub_1C37058(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
+    this = (PartyOrganizationListViewItem_o *)sub_1C37058(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    byte_4C3EA11 = 1;
   }
   if ( !item )
     goto LABEL_26;
   userServantEntity = item->fields.userServantEntity;
   v5->fields.userServantEntity = userServantEntity;
   p_userServantEntity = &v5->fields.userServantEntity;
-  sub_1C32BC4((CGThumbnailListItem_o *)&v5->fields.userServantEntity, (int32_t)userServantEntity, (int32_t)method, v3);
-  this = (PartyOrganizationListViewItem_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39E2904 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  sub_1C36FFC((CGThumbnailListItem_o *)&v5->fields.userServantEntity, (int32_t)userServantEntity, (int32_t)method, v3);
+  this = (PartyOrganizationListViewItem_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39ED16C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !this )
     goto LABEL_26;
   this = (PartyOrganizationListViewItem_o *)DataManager__GetMasterData_object_(
                                               (DataManager_o *)this,
-                                              (const MethodInfo_30DD3F0 *)Method_DataManager_GetMasterData_ServantMaster___);
+                                              (const MethodInfo_30E7C58 *)Method_DataManager_GetMasterData_ServantMaster___);
   v8 = *p_userServantEntity;
   if ( !*p_userServantEntity )
     goto LABEL_26;
@@ -5295,15 +5295,15 @@ void PartyOrganizationListViewItem__Modify_34151644(
     j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
   *(_QWORD *)&v39.fields.currentCryptoKey = v11;
   *(_QWORD *)&v39.fields.fakeValue = v10;
-  this = (PartyOrganizationListViewItem_o *)CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_48887784(v39, 0);
+  this = (PartyOrganizationListViewItem_o *)CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_48930896(v39, 0);
   if ( !v9 )
     goto LABEL_26;
   Entity = DataMasterBase_object__object__int___GetEntity(
              v9,
              (int32_t)this,
-             (const MethodInfo_3396838 *)Method_DataMasterBase_ServantMaster__ServantEntity__int__GetEntity__);
+             (const MethodInfo_33A10A0 *)Method_DataMasterBase_ServantMaster__ServantEntity__int__GetEntity__);
   v5->fields.servantEntity = (struct ServantEntity_o *)Entity;
-  sub_1C32BC4((CGThumbnailListItem_o *)&v5->fields.servantEntity, (int32_t)Entity, v13, v14);
+  sub_1C36FFC((CGThumbnailListItem_o *)&v5->fields.servantEntity, (int32_t)Entity, v13, v14);
   v5->fields.classId = item->fields.classId;
   *(_QWORD *)&v5->fields.cost = *(_QWORD *)&item->fields.cost;
   v5->fields.atk = item->fields.atk;
@@ -5312,7 +5312,7 @@ void PartyOrganizationListViewItem__Modify_34151644(
   v5->fields.frameType = item->fields.frameType;
   if ( !v15 )
     goto LABEL_26;
-  this = (PartyOrganizationListViewItem_o *)CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_48887784(
+  this = (PartyOrganizationListViewItem_o *)CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_48930896(
                                               v15[6],
                                               0);
   v16 = v5->fields.userServantEntity;
@@ -5321,7 +5321,7 @@ void PartyOrganizationListViewItem__Modify_34151644(
     goto LABEL_26;
   CommandCodeIdList = UserServantEntity__getCommandCodeIdList(v16, 0);
   v5->fields.commandCodeIdList = CommandCodeIdList;
-  sub_1C32BC4((CGThumbnailListItem_o *)&v5->fields.commandCodeIdList, (int32_t)CommandCodeIdList, v18, v19);
+  sub_1C36FFC((CGThumbnailListItem_o *)&v5->fields.commandCodeIdList, (int32_t)CommandCodeIdList, v18, v19);
   questRestrictionInfo = v5->fields.questRestrictionInfo;
   v5->fields.isQuestRestriction = item->fields.isQuestRestriction;
   v5->fields.isQuestRestrictionWhole = item->fields.isQuestRestrictionWhole;
@@ -5338,7 +5338,7 @@ void PartyOrganizationListViewItem__Modify_34151644(
       j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
     *(_QWORD *)&v40.fields.currentCryptoKey = v25;
     *(_QWORD *)&v40.fields.fakeValue = v24;
-    v26 = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_48887784(v40, 0);
+    v26 = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_48930896(v40, 0);
     IsConvertOverwriteImage = QuestRestrictionInfo__IsConvertOverwriteImage(questRestrictionInfo, v26, 0);
   }
   else
@@ -5361,14 +5361,14 @@ void PartyOrganizationListViewItem__Modify_34151644(
   {
     v5->fields.followerInfo = 0;
     v5->fields.isFollower = 0;
-    sub_1C32BC4((CGThumbnailListItem_o *)&v5->fields.followerInfo, 0, v20, v21);
+    sub_1C36FFC((CGThumbnailListItem_o *)&v5->fields.followerInfo, 0, v20, v21);
   }
   this = (PartyOrganizationListViewItem_o *)v5->fields.userServantEntity;
   *(_WORD *)&v5->fields._IsClearedWave_k__BackingField = 0;
   v5->fields._IsDisappearEquip_k__BackingField = 0;
   if ( !this )
 LABEL_26:
-    sub_1C32E7C(this);
+    sub_1C372B4(this);
   IsGrandServant = UserServantEntity__IsGrandServant((UserServantEntity_o *)this, 0);
   v5->fields._IsGrandServant_k__BackingField = IsGrandServant;
   IsGrandSameServant_k__BackingField = item->fields._IsGrandSameServant_k__BackingField;
@@ -5414,13 +5414,13 @@ void PartyOrganizationListViewItem__MoveBondEquip(PartyOrganizationListViewItem_
   int32_t v14; // w9
   __int64 v15; // [xsp+8h] [xbp-28h] BYREF
 
-  if ( (byte_4C3342A & 1) == 0 )
+  if ( (byte_4C3EA14 & 1) == 0 )
   {
-    sub_1C32C20(&BalanceConfig_TypeInfo);
-    sub_1C32C20(&Method_System_Nullable_int__GetValueOrDefault__);
-    sub_1C32C20(&Method_System_Nullable_int___ctor__);
-    sub_1C32C20(&Method_System_Nullable_int__get_HasValue__);
-    byte_4C3342A = 1;
+    sub_1C37058(&BalanceConfig_TypeInfo);
+    sub_1C37058(&Method_System_Nullable_int__GetValueOrDefault__);
+    sub_1C37058(&Method_System_Nullable_int___ctor__);
+    sub_1C37058(&Method_System_Nullable_int__get_HasValue__);
+    byte_4C3EA14 = 1;
   }
   equipIdList = this->fields.equipIdList;
   if ( equipIdList )
@@ -5430,7 +5430,7 @@ void PartyOrganizationListViewItem__MoveBondEquip(PartyOrganizationListViewItem_
     System_Nullable_int____ctor(
       v5,
       equipIdList->max_length,
-      (const MethodInfo_38BDF3C *)Method_System_Nullable_int___ctor__);
+      (const MethodInfo_38C87A4 *)Method_System_Nullable_int___ctor__);
     v6 = v15;
   }
   else
@@ -5462,7 +5462,7 @@ void PartyOrganizationListViewItem__MoveBondEquip(PartyOrganizationListViewItem_
     System_Nullable_int____ctor(
       v11,
       equipSvtIdList->max_length,
-      (const MethodInfo_38BDF3C *)Method_System_Nullable_int___ctor__);
+      (const MethodInfo_38C87A4 *)Method_System_Nullable_int___ctor__);
     v12 = v15;
     v7 = BalanceConfig_TypeInfo;
   }
@@ -5488,10 +5488,10 @@ void PartyOrganizationListViewItem__MoveBondEquip(PartyOrganizationListViewItem_
         goto LABEL_23;
       }
 LABEL_24:
-      sub_1C32E84(v7);
+      sub_1C372BC(v7);
     }
 LABEL_25:
-    sub_1C32E7C(v7);
+    sub_1C372B4(v7);
   }
 LABEL_23:
   PartyOrganizationListViewItem__SetEquipStatus(this, this->fields.equipIdList, v2);
@@ -5517,13 +5517,13 @@ bool PartyOrganizationListViewItem__RemoveEquipDuplication(
   Il2CppClass *v15; // t1
   __int64 v16; // [xsp+8h] [xbp-28h] BYREF
 
-  if ( (byte_4C3342B & 1) == 0 )
+  if ( (byte_4C3EA15 & 1) == 0 )
   {
-    sub_1C32C20(&BalanceConfig_TypeInfo);
-    sub_1C32C20(&Method_System_Nullable_int__GetValueOrDefault__);
-    sub_1C32C20(&Method_System_Nullable_int___ctor__);
-    sub_1C32C20(&Method_System_Nullable_int__get_HasValue__);
-    byte_4C3342B = 1;
+    sub_1C37058(&BalanceConfig_TypeInfo);
+    sub_1C37058(&Method_System_Nullable_int__GetValueOrDefault__);
+    sub_1C37058(&Method_System_Nullable_int___ctor__);
+    sub_1C37058(&Method_System_Nullable_int__get_HasValue__);
+    byte_4C3EA15 = 1;
   }
   if ( !this->fields.userServantEntity && !this->fields.isFollower )
     return 0;
@@ -5535,7 +5535,7 @@ bool PartyOrganizationListViewItem__RemoveEquipDuplication(
     System_Nullable_int____ctor(
       v5,
       equipIdList->max_length,
-      (const MethodInfo_38BDF3C *)Method_System_Nullable_int___ctor__);
+      (const MethodInfo_38C87A4 *)Method_System_Nullable_int___ctor__);
     v6 = v16;
   }
   else
@@ -5553,10 +5553,10 @@ bool PartyOrganizationListViewItem__RemoveEquipDuplication(
   {
     v9 = this->fields.equipIdList;
     if ( !v9 )
-      sub_1C32E7C(0);
+      sub_1C372B4(0);
     max_length = v9->max_length;
     if ( !max_length )
-      sub_1C32E84(0);
+      sub_1C372BC(0);
     v11 = v9->m_Items[0];
     result = 0;
     if ( v11 )
@@ -5597,11 +5597,11 @@ int32_t PartyOrganizationListViewItem__RemoveEquipUserServantId(
   int32_t v10; // w21
   struct System_Int64_array *v11; // x1
 
-  if ( (byte_4C33431 & 1) == 0 )
+  if ( (byte_4C3EA1B & 1) == 0 )
   {
-    sub_1C32C20(&Method_System_Array_IndexOf_long___);
-    sub_1C32C20(&Method_System_Collections_Generic_List_ServantEntity__get_Item__);
-    byte_4C33431 = 1;
+    sub_1C37058(&Method_System_Array_IndexOf_long___);
+    sub_1C37058(&Method_System_Collections_Generic_List_ServantEntity__get_Item__);
+    byte_4C3EA1B = 1;
   }
   equipIdList = this->fields.equipIdList;
   if ( !equipIdList )
@@ -5609,7 +5609,7 @@ int32_t PartyOrganizationListViewItem__RemoveEquipUserServantId(
   v6 = System_Array__IndexOf_long_(
          equipIdList,
          userSvtId,
-         (const MethodInfo_31E4580 *)Method_System_Array_IndexOf_long___);
+         (const MethodInfo_31EEDE8 *)Method_System_Array_IndexOf_long___);
   if ( v6 < 0 )
     return 0;
   v7 = v6;
@@ -5624,10 +5624,10 @@ int32_t PartyOrganizationListViewItem__RemoveEquipUserServantId(
       || (IsNullOrEmpty = System_Collections_Generic_List_object___get_Item(
                             (System_Collections_Generic_List_object__o *)IsNullOrEmpty,
                             0,
-                            (const MethodInfo_37984EC *)Method_System_Collections_Generic_List_ServantEntity__get_Item__)) == 0 )
+                            (const MethodInfo_37A2D54 *)Method_System_Collections_Generic_List_ServantEntity__get_Item__)) == 0 )
     {
 LABEL_15:
-      sub_1C32E7C(IsNullOrEmpty);
+      sub_1C372B4(IsNullOrEmpty);
     }
     v10 = *((_DWORD *)IsNullOrEmpty + 38);
   }
@@ -5635,7 +5635,7 @@ LABEL_15:
   if ( !v11 )
     goto LABEL_15;
   if ( v7 >= LODWORD(v11->max_length) )
-    sub_1C32E84(IsNullOrEmpty);
+    sub_1C372BC(IsNullOrEmpty);
   v11->m_Items[v7] = 0;
   PartyOrganizationListViewItem__SetEquipStatus(this, v11, v9);
   return v10;
@@ -5722,20 +5722,20 @@ void PartyOrganizationListViewItem__Set(
   System_Int32_array *v41; // x1
   const MethodInfo *v42; // x2
 
-  if ( (byte_4C33424 & 1) == 0 )
+  if ( (byte_4C3EA0E & 1) == 0 )
   {
-    sub_1C32C20(&int___TypeInfo);
-    byte_4C33424 = 1;
+    sub_1C37058(&int___TypeInfo);
+    byte_4C3EA0E = 1;
   }
   ListViewItem__Set((ListViewItem_o *)this, (ListViewItem_o *)item, 0);
   if ( !item )
-    sub_1C32E7C(v5);
+    sub_1C372B4(v5);
   userServantEntity = item->fields.userServantEntity;
   this->fields.userServantEntity = userServantEntity;
-  sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.userServantEntity, (int32_t)userServantEntity, v6, v7);
+  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.userServantEntity, (int32_t)userServantEntity, v6, v7);
   followerInfo = item->fields.followerInfo;
   this->fields.followerInfo = followerInfo;
-  sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.followerInfo, (int32_t)followerInfo, v10, v11);
+  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.followerInfo, (int32_t)followerInfo, v10, v11);
   this->fields.isFollower = item->fields.isFollower;
   this->fields.isRestrictionGrandServant = item->fields.isRestrictionGrandServant;
   this->fields.isFixNpc = item->fields.isFixNpc;
@@ -5743,25 +5743,25 @@ void PartyOrganizationListViewItem__Set(
   this->fields.followerIndex = item->fields.followerIndex;
   setupInfo = item->fields.setupInfo;
   this->fields.setupInfo = setupInfo;
-  sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.setupInfo, (int32_t)setupInfo, v13, v14);
+  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.setupInfo, (int32_t)setupInfo, v13, v14);
   questRestrictionInfo = item->fields.questRestrictionInfo;
   this->fields.questRestrictionInfo = questRestrictionInfo;
-  sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.questRestrictionInfo, (int32_t)questRestrictionInfo, v16, v17);
+  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.questRestrictionInfo, (int32_t)questRestrictionInfo, v16, v17);
   friendPointCampaignEntityList = item->fields.friendPointCampaignEntityList;
   this->fields.friendPointCampaignEntityList = friendPointCampaignEntityList;
-  sub_1C32BC4(
+  sub_1C36FFC(
     (CGThumbnailListItem_o *)&this->fields.friendPointCampaignEntityList,
     (int32_t)friendPointCampaignEntityList,
     v19,
     v20);
   servantEntity = item->fields.servantEntity;
   this->fields.servantEntity = servantEntity;
-  sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.servantEntity, (int32_t)servantEntity, v22, v23);
+  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.servantEntity, (int32_t)servantEntity, v22, v23);
   *(_OWORD *)&this->fields.cost = *(_OWORD *)&item->fields.cost;
   *(_OWORD *)&this->fields.rarityId = *(_OWORD *)&item->fields.rarityId;
   commandCodeIdList = item->fields.commandCodeIdList;
   this->fields.commandCodeIdList = commandCodeIdList;
-  sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.commandCodeIdList, (int32_t)commandCodeIdList, v25, v26);
+  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.commandCodeIdList, (int32_t)commandCodeIdList, v25, v26);
   this->fields.isServantNumRestriction = item->fields.isServantNumRestriction;
   this->fields.isFixMultipleNpcRestriction = item->fields.isFixMultipleNpcRestriction;
   this->fields.isFixMultipleNpc = item->fields.isFixMultipleNpc;
@@ -5786,7 +5786,7 @@ void PartyOrganizationListViewItem__Set(
   this->fields._IsNotClassBoardNpc_k__BackingField = item->fields._IsNotClassBoardNpc_k__BackingField;
   WaveEnemyClassIds_k__BackingField = item->fields._WaveEnemyClassIds_k__BackingField;
   this->fields._WaveEnemyClassIds_k__BackingField = WaveEnemyClassIds_k__BackingField;
-  sub_1C32BC4(
+  sub_1C36FFC(
     (CGThumbnailListItem_o *)&this->fields._WaveEnemyClassIds_k__BackingField,
     (int32_t)WaveEnemyClassIds_k__BackingField,
     v28,
@@ -5807,26 +5807,26 @@ void PartyOrganizationListViewItem__Set(
     goto LABEL_10;
   }
   v34 = v33;
-  v35 = (struct System_Int32_array *)sub_1C32D5C(v33, int___TypeInfo);
+  v35 = (struct System_Int32_array *)sub_1C37194(v33, int___TypeInfo);
   if ( v35 )
   {
     this->fields.equipSvtIdList = v35;
     p_equipSvtIdList = &this->fields.equipSvtIdList;
-    v37 = sub_1C32D5C(v34, int___TypeInfo);
+    v37 = sub_1C37194(v34, int___TypeInfo);
     if ( v37 )
     {
       v38 = v37;
 LABEL_10:
-      sub_1C32BC4((CGThumbnailListItem_o *)p_equipSvtIdList, v38, v30, v31);
+      sub_1C36FFC((CGThumbnailListItem_o *)p_equipSvtIdList, v38, v30, v31);
       PartyOrganizationListViewItem__SetEquipStatus(this, item->fields.equipIdList, v39);
       return;
     }
   }
   else
   {
-    sub_1C3313C(v34);
+    sub_1C37574(v34);
   }
-  v40 = (PartyOrganizationListViewItem_o *)sub_1C3313C(v34);
+  v40 = (PartyOrganizationListViewItem_o *)sub_1C37574(v34);
   PartyOrganizationListViewItem__SetWaveEnemyClassIconIds(v40, v41, v42);
 }
 
@@ -5848,14 +5848,14 @@ void PartyOrganizationListViewItem__SetCanGetBuddyPoint(
   Il2CppObject *Master_object; // x22
 
   v4 = this;
-  if ( (byte_4C33423 & 1) == 0 )
+  if ( (byte_4C3EA0D & 1) == 0 )
   {
-    sub_1C32C20(&Method_DataManager_GetMaster_EventBuddyPointMaster___);
-    sub_1C32C20(&Method_DataManager_GetMaster_QuestMaster___);
-    sub_1C32C20(&Method_DataManager_GetMaster_UserQuestMaster___);
-    sub_1C32C20(&DataManager_TypeInfo);
-    this = (PartyOrganizationListViewItem_o *)sub_1C32C20(&NetworkManager_TypeInfo);
-    byte_4C33423 = 1;
+    sub_1C37058(&Method_DataManager_GetMaster_EventBuddyPointMaster___);
+    sub_1C37058(&Method_DataManager_GetMaster_QuestMaster___);
+    sub_1C37058(&Method_DataManager_GetMaster_UserQuestMaster___);
+    sub_1C37058(&DataManager_TypeInfo);
+    this = (PartyOrganizationListViewItem_o *)sub_1C37058(&NetworkManager_TypeInfo);
+    byte_4C3EA0D = 1;
   }
   if ( !v4->fields.isFollower )
   {
@@ -5884,7 +5884,7 @@ void PartyOrganizationListViewItem__SetCanGetBuddyPoint(
   questId = v6->fields.questId;
   if ( !DataManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-  this = (PartyOrganizationListViewItem_o *)DataManager__GetMaster_object_((const MethodInfo_30DD39C *)Method_DataManager_GetMaster_EventBuddyPointMaster___);
+  this = (PartyOrganizationListViewItem_o *)DataManager__GetMaster_object_((const MethodInfo_30E7C04 *)Method_DataManager_GetMaster_EventBuddyPointMaster___);
   v8 = v4->fields.questRestrictionInfo;
   if ( !v8 || !this )
     goto LABEL_35;
@@ -5903,20 +5903,20 @@ void PartyOrganizationListViewItem__SetCanGetBuddyPoint(
     goto LABEL_34;
   if ( !DataManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-  this = (PartyOrganizationListViewItem_o *)DataManager__GetMaster_object_((const MethodInfo_30DD39C *)Method_DataManager_GetMaster_QuestMaster___);
+  this = (PartyOrganizationListViewItem_o *)DataManager__GetMaster_object_((const MethodInfo_30E7C04 *)Method_DataManager_GetMaster_QuestMaster___);
   if ( !this )
     goto LABEL_35;
   this = (PartyOrganizationListViewItem_o *)QuestMaster__getQuestEntity((QuestMaster_o *)this, questId, 0);
   if ( !this )
     goto LABEL_35;
   HasFlag = QuestEntity__HasFlag((QuestEntity_o *)this, 0x20000, 0);
-  Master_object = DataManager__GetMaster_object_((const MethodInfo_30DD39C *)Method_DataManager_GetMaster_UserQuestMaster___);
+  Master_object = DataManager__GetMaster_object_((const MethodInfo_30E7C04 *)Method_DataManager_GetMaster_UserQuestMaster___);
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
-  if ( !byte_4C31812 )
+  if ( !byte_4C3CD62 )
   {
-    sub_1C32C20(&NetworkManager_TypeInfo);
-    byte_4C31812 = 1;
+    sub_1C37058(&NetworkManager_TypeInfo);
+    byte_4C3CD62 = 1;
   }
   this = (PartyOrganizationListViewItem_o *)NetworkManager_TypeInfo;
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
@@ -5926,7 +5926,7 @@ void PartyOrganizationListViewItem__SetCanGetBuddyPoint(
   }
   if ( !Master_object )
 LABEL_35:
-    sub_1C32E7C(this);
+    sub_1C372B4(this);
   if ( UserQuestMaster__getClearCountsFromId(
          (UserQuestMaster_o *)Master_object,
          (int64_t)this->fields.questRestrictionInfo->fields.supportPositionList,
@@ -5967,24 +5967,24 @@ void PartyOrganizationListViewItem__SetDuplicationGrandQuestEquipmentMarkFlag(
   unsigned int v22; // w10
   char v23; // w10
 
-  if ( (byte_4C3342E & 1) == 0 )
+  if ( (byte_4C3EA18 & 1) == 0 )
   {
-    sub_1C32C20(&Method_System_Array_FindIndex_long___);
-    sub_1C32C20(&BalanceConfig_TypeInfo);
-    sub_1C32C20(&bool___TypeInfo);
-    sub_1C32C20(&System_Predicate_long__TypeInfo);
-    sub_1C32C20(&Method_PartyOrganizationListViewItem___c__DisplayClass177_0__SetDuplicationGrandQuestEquipmentMarkFlag_b__0__);
-    sub_1C32C20(&PartyOrganizationListViewItem___c__DisplayClass177_0_TypeInfo);
-    byte_4C3342E = 1;
+    sub_1C37058(&Method_System_Array_FindIndex_long___);
+    sub_1C37058(&BalanceConfig_TypeInfo);
+    sub_1C37058(&bool___TypeInfo);
+    sub_1C37058(&System_Predicate_long__TypeInfo);
+    sub_1C37058(&Method_PartyOrganizationListViewItem___c__DisplayClass177_0__SetDuplicationGrandQuestEquipmentMarkFlag_b__0__);
+    sub_1C37058(&PartyOrganizationListViewItem___c__DisplayClass177_0_TypeInfo);
+    byte_4C3EA18 = 1;
   }
-  v5 = sub_1C32E6C(PartyOrganizationListViewItem___c__DisplayClass177_0_TypeInfo);
+  v5 = sub_1C372A4(PartyOrganizationListViewItem___c__DisplayClass177_0_TypeInfo);
   PartyOrganizationListViewItem___c__DisplayClass177_0___ctor(
     (PartyOrganizationListViewItem___c__DisplayClass177_0_o *)v5,
     0);
   if ( !v5 )
     goto LABEL_28;
   *(_QWORD *)(v5 + 16) = this;
-  sub_1C32BC4((CGThumbnailListItem_o *)(v5 + 16), (int32_t)this, v7, v8);
+  sub_1C36FFC((CGThumbnailListItem_o *)(v5 + 16), (int32_t)this, v7, v8);
   if ( this->fields._IsGrandServant_k__BackingField || this->fields._IsTempGrandServant_k__BackingField )
   {
     v9 = BalanceConfig_TypeInfo;
@@ -6005,14 +6005,14 @@ void PartyOrganizationListViewItem__SetDuplicationGrandQuestEquipmentMarkFlag(
     }
     v10 = 48;
   }
-  IsNullOrEmpty = (struct System_Boolean_array *)sub_1C32CC8(
+  IsNullOrEmpty = (struct System_Boolean_array *)sub_1C37100(
                                                    bool___TypeInfo,
                                                    *(unsigned int *)((char *)&v9->static_fields->CriticalRateToAddByQuickFirstBonus
                                                                    + v10));
   if ( !this )
     goto LABEL_28;
   this->fields._DuplicationEquipmentFlagList_k__BackingField = IsNullOrEmpty;
-  sub_1C32BC4(
+  sub_1C36FFC(
     (CGThumbnailListItem_o *)&this->fields._DuplicationEquipmentFlagList_k__BackingField,
     (int32_t)IsNullOrEmpty,
     v11,
@@ -6027,7 +6027,7 @@ void PartyOrganizationListViewItem__SetDuplicationGrandQuestEquipmentMarkFlag(
   equipIdList = this->fields.equipIdList;
   if ( !equipIdList )
 LABEL_28:
-    sub_1C32E7C(IsNullOrEmpty);
+    sub_1C372B4(IsNullOrEmpty);
   v15 = 0;
   v16 = (System_Predicate_long__o **)(v5 + 32);
   while ( 1 )
@@ -6042,19 +6042,19 @@ LABEL_28:
       v18 = *v16;
       if ( !*v16 )
       {
-        v18 = (System_Predicate_long__o *)sub_1C32E6C(System_Predicate_long__TypeInfo);
+        v18 = (System_Predicate_long__o *)sub_1C372A4(System_Predicate_long__TypeInfo);
         System_Predicate_long____ctor(
           v18,
           (Il2CppObject *)v5,
           Method_PartyOrganizationListViewItem___c__DisplayClass177_0__SetDuplicationGrandQuestEquipmentMarkFlag_b__0__,
           0);
         *(_QWORD *)(v5 + 32) = v18;
-        sub_1C32BC4((CGThumbnailListItem_o *)(v5 + 32), (int32_t)v18, v19, v20);
+        sub_1C36FFC((CGThumbnailListItem_o *)(v5 + 32), (int32_t)v18, v19, v20);
       }
       IsNullOrEmpty = (struct System_Boolean_array *)System_Array__FindIndex_long_(
                                                        (System_Int64_array *)duplicatedEquipmentUserSvtIdList,
                                                        (System_Predicate_T__o *)v18,
-                                                       (const MethodInfo_31E30BC *)Method_System_Array_FindIndex_long___);
+                                                       (const MethodInfo_31ED924 *)Method_System_Array_FindIndex_long___);
       DuplicationEquipmentFlagList_k__BackingField = this->fields._DuplicationEquipmentFlagList_k__BackingField;
       if ( !DuplicationEquipmentFlagList_k__BackingField )
         goto LABEL_28;
@@ -6064,7 +6064,7 @@ LABEL_28:
       {
         if ( v15 >= v22 )
 LABEL_32:
-          sub_1C32E84(IsNullOrEmpty);
+          sub_1C372BC(IsNullOrEmpty);
         v23 = 0;
       }
       else
@@ -6189,7 +6189,7 @@ void PartyOrganizationListViewItem__SetEquipStatus(
   struct System_Int32_array *v103; // x8
   UserServantEntity_o *userServantEntity; // x24
   System_Int64_array *EquipList; // x25
-  bool EventUpVal_43070308; // w0
+  bool EventUpVal_43172176; // w0
   struct QuestRestrictionInfo_o *v107; // x8
   System_Collections_Generic_List_object__o *v108; // x23
   System_Collections_Generic_IEnumerable_TSource__o *v109; // x24
@@ -6218,7 +6218,7 @@ void PartyOrganizationListViewItem__SetEquipStatus(
   __int64 v132; // x10
   Il2CppClass **v133; // x0
   System_Collections_Generic_List_object__o *v134; // x23
-  const MethodInfo_39E2DF4 *v135; // x0
+  const MethodInfo_39ED65C *v135; // x0
   const MethodInfo *v136; // x3
   EventUpValInfo_o **v137; // x25
   struct EventMargeItemUpValInfo_array *v138; // x0
@@ -6358,54 +6358,54 @@ void PartyOrganizationListViewItem__SetEquipStatus(
   CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o v272; // 0:x0.16
   CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o v273; // 0:x0.16
 
-  if ( (byte_4C33422 & 1) == 0 )
+  if ( (byte_4C3EA0C & 1) == 0 )
   {
-    sub_1C32C20(&BalanceConfig_TypeInfo);
-    sub_1C32C20(&Method_DataManager_GetMasterData_EventDetailMaster___);
-    sub_1C32C20(&Method_DataManager_GetMasterData_ServantMaster___);
-    sub_1C32C20(&Method_DataManager_GetMasterData_UserServantMaster___);
-    sub_1C32C20(&Method_DataManager_GetMaster_UserServantCollectionMaster___);
-    sub_1C32C20(&DataManager_TypeInfo);
-    sub_1C32C20(&Method_DataMasterBase_ServantMaster__ServantEntity__int__GetEntity__);
-    sub_1C32C20(&Method_DataMasterBase_EventDetailMaster__EventDetailEntity__int__GetEntity__);
-    sub_1C32C20(&Method_DataMasterBase_UserServantMaster__UserServantEntity__long__TryGetEntity__);
-    sub_1C32C20(&Method_System_Linq_Enumerable_Distinct_int___);
-    sub_1C32C20(&Method_System_Linq_Enumerable_Select_EventDropUpValInfo__int___);
-    sub_1C32C20(&Method_System_Linq_Enumerable_ToArray_int___);
-    sub_1C32C20(&Method_System_Collections_Generic_List_Enumerator_int__Dispose__);
-    sub_1C32C20(&Method_System_Collections_Generic_List_Enumerator_EventDropUpValInfo__Dispose__);
-    sub_1C32C20(&Method_System_Collections_Generic_List_Enumerator_int__MoveNext__);
-    sub_1C32C20(&Method_System_Collections_Generic_List_Enumerator_EventDropUpValInfo__MoveNext__);
-    sub_1C32C20(&Method_System_Collections_Generic_List_Enumerator_int__get_Current__);
-    sub_1C32C20(&Method_System_Collections_Generic_List_Enumerator_EventDropUpValInfo__get_Current__);
-    sub_1C32C20(&EventPersonalMargeUpValInfo_TypeInfo);
-    sub_1C32C20(&EventUpValSetupInfo_TypeInfo);
-    sub_1C32C20(&System_Func_EventDropUpValInfo__int__TypeInfo);
-    sub_1C32C20(&int___TypeInfo);
-    sub_1C32C20(&long___TypeInfo);
-    sub_1C32C20(&Method_System_Collections_Generic_List_EventMargeItemUpValInfo__AddRange__);
-    sub_1C32C20(&Method_System_Collections_Generic_List_EventDropUpValInfo__Add__);
-    sub_1C32C20(&Method_System_Collections_Generic_List_ServantEntity__Add__);
-    sub_1C32C20(&Method_System_Collections_Generic_List_EventMargeItemUpValInfo__Add__);
-    sub_1C32C20(&Method_System_Collections_Generic_List_UserServantEntity__Add__);
-    sub_1C32C20(&Method_System_Collections_Generic_List_EventDropUpValInfo__GetEnumerator__);
-    sub_1C32C20(&Method_System_Collections_Generic_List_int__GetEnumerator__);
-    sub_1C32C20(&Method_System_Collections_Generic_List_EventMargeItemUpValInfo___ctor__);
-    sub_1C32C20(&Method_System_Collections_Generic_List_UserServantEntity___ctor__);
-    sub_1C32C20(&Method_System_Collections_Generic_List_ServantEntity___ctor__);
-    sub_1C32C20(&System_Collections_Generic_List_ServantEntity__TypeInfo);
-    sub_1C32C20(&System_Collections_Generic_List_UserServantEntity__TypeInfo);
-    sub_1C32C20(&System_Collections_Generic_List_EventMargeItemUpValInfo__TypeInfo);
-    sub_1C32C20(&NetworkManager_TypeInfo);
-    sub_1C32C20(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
-    sub_1C32C20(&ServantEntity_TypeInfo);
-    sub_1C32C20(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-    sub_1C32C20(&Method_SingletonTemplate_PartyOrganizationUtility__get_Instance__);
-    sub_1C32C20(&Method_PartyOrganizationListViewItem___c__SetEquipStatus_b__161_0__);
-    sub_1C32C20(&Method_PartyOrganizationListViewItem___c__SetEquipStatus_b__161_1__);
-    sub_1C32C20(&PartyOrganizationListViewItem___c_TypeInfo);
-    sub_1C32C20(&UserServantEntity_TypeInfo);
-    byte_4C33422 = 1;
+    sub_1C37058(&BalanceConfig_TypeInfo);
+    sub_1C37058(&Method_DataManager_GetMasterData_EventDetailMaster___);
+    sub_1C37058(&Method_DataManager_GetMasterData_ServantMaster___);
+    sub_1C37058(&Method_DataManager_GetMasterData_UserServantMaster___);
+    sub_1C37058(&Method_DataManager_GetMaster_UserServantCollectionMaster___);
+    sub_1C37058(&DataManager_TypeInfo);
+    sub_1C37058(&Method_DataMasterBase_ServantMaster__ServantEntity__int__GetEntity__);
+    sub_1C37058(&Method_DataMasterBase_EventDetailMaster__EventDetailEntity__int__GetEntity__);
+    sub_1C37058(&Method_DataMasterBase_UserServantMaster__UserServantEntity__long__TryGetEntity__);
+    sub_1C37058(&Method_System_Linq_Enumerable_Distinct_int___);
+    sub_1C37058(&Method_System_Linq_Enumerable_Select_EventDropUpValInfo__int___);
+    sub_1C37058(&Method_System_Linq_Enumerable_ToArray_int___);
+    sub_1C37058(&Method_System_Collections_Generic_List_Enumerator_int__Dispose__);
+    sub_1C37058(&Method_System_Collections_Generic_List_Enumerator_EventDropUpValInfo__Dispose__);
+    sub_1C37058(&Method_System_Collections_Generic_List_Enumerator_int__MoveNext__);
+    sub_1C37058(&Method_System_Collections_Generic_List_Enumerator_EventDropUpValInfo__MoveNext__);
+    sub_1C37058(&Method_System_Collections_Generic_List_Enumerator_int__get_Current__);
+    sub_1C37058(&Method_System_Collections_Generic_List_Enumerator_EventDropUpValInfo__get_Current__);
+    sub_1C37058(&EventPersonalMargeUpValInfo_TypeInfo);
+    sub_1C37058(&EventUpValSetupInfo_TypeInfo);
+    sub_1C37058(&System_Func_EventDropUpValInfo__int__TypeInfo);
+    sub_1C37058(&int___TypeInfo);
+    sub_1C37058(&long___TypeInfo);
+    sub_1C37058(&Method_System_Collections_Generic_List_EventMargeItemUpValInfo__AddRange__);
+    sub_1C37058(&Method_System_Collections_Generic_List_EventDropUpValInfo__Add__);
+    sub_1C37058(&Method_System_Collections_Generic_List_ServantEntity__Add__);
+    sub_1C37058(&Method_System_Collections_Generic_List_EventMargeItemUpValInfo__Add__);
+    sub_1C37058(&Method_System_Collections_Generic_List_UserServantEntity__Add__);
+    sub_1C37058(&Method_System_Collections_Generic_List_EventDropUpValInfo__GetEnumerator__);
+    sub_1C37058(&Method_System_Collections_Generic_List_int__GetEnumerator__);
+    sub_1C37058(&Method_System_Collections_Generic_List_EventMargeItemUpValInfo___ctor__);
+    sub_1C37058(&Method_System_Collections_Generic_List_UserServantEntity___ctor__);
+    sub_1C37058(&Method_System_Collections_Generic_List_ServantEntity___ctor__);
+    sub_1C37058(&System_Collections_Generic_List_ServantEntity__TypeInfo);
+    sub_1C37058(&System_Collections_Generic_List_UserServantEntity__TypeInfo);
+    sub_1C37058(&System_Collections_Generic_List_EventMargeItemUpValInfo__TypeInfo);
+    sub_1C37058(&NetworkManager_TypeInfo);
+    sub_1C37058(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
+    sub_1C37058(&ServantEntity_TypeInfo);
+    sub_1C37058(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    sub_1C37058(&Method_SingletonTemplate_PartyOrganizationUtility__get_Instance__);
+    sub_1C37058(&Method_PartyOrganizationListViewItem___c__SetEquipStatus_b__161_0__);
+    sub_1C37058(&Method_PartyOrganizationListViewItem___c__SetEquipStatus_b__161_1__);
+    sub_1C37058(&PartyOrganizationListViewItem___c_TypeInfo);
+    sub_1C37058(&UserServantEntity_TypeInfo);
+    byte_4C3EA0C = 1;
   }
   memset(&v271, 0, sizeof(v271));
   v270 = 0;
@@ -6418,32 +6418,32 @@ void PartyOrganizationListViewItem__SetEquipStatus(
   v263 = 0;
   v262 = 0;
   memset(&v261, 0, sizeof(v261));
-  v5 = (System_Collections_Generic_List_object__o *)sub_1C32E6C(System_Collections_Generic_List_UserServantEntity__TypeInfo);
+  v5 = (System_Collections_Generic_List_object__o *)sub_1C372A4(System_Collections_Generic_List_UserServantEntity__TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v5,
-    (const MethodInfo_3797F88 *)Method_System_Collections_Generic_List_UserServantEntity___ctor__);
+    (const MethodInfo_37A27F0 *)Method_System_Collections_Generic_List_UserServantEntity___ctor__);
   p_equipUserServantEntityList = (FollowerInfo_o *)&this->fields.equipUserServantEntityList;
   this->fields.equipUserServantEntityList = (struct System_Collections_Generic_List_UserServantEntity__o *)v5;
-  sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.equipUserServantEntityList, (int32_t)v5, v7, v8);
-  v9 = (System_Collections_Generic_List_object__o *)sub_1C32E6C(System_Collections_Generic_List_ServantEntity__TypeInfo);
+  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.equipUserServantEntityList, (int32_t)v5, v7, v8);
+  v9 = (System_Collections_Generic_List_object__o *)sub_1C372A4(System_Collections_Generic_List_ServantEntity__TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v9,
-    (const MethodInfo_3797F88 *)Method_System_Collections_Generic_List_ServantEntity___ctor__);
+    (const MethodInfo_37A27F0 *)Method_System_Collections_Generic_List_ServantEntity___ctor__);
   p_equipServantEntityList = &this->fields.equipServantEntityList;
   this->fields.equipServantEntityList = (struct System_Collections_Generic_List_ServantEntity__o *)v9;
-  sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.equipServantEntityList, (int32_t)v9, v11, v12);
+  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.equipServantEntityList, (int32_t)v9, v11, v12);
   p_eventUpValInfo = &this->fields.eventUpValInfo;
   this->fields.isEventUpVal = 0;
   this->fields.eventUpValInfo = 0;
-  sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.eventUpValInfo, 0, v14, v15);
+  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.eventUpValInfo, 0, v14, v15);
   this->fields.eventUpValItemList = 0;
-  sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.eventUpValItemList, 0, v16, v17);
+  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.eventUpValItemList, 0, v16, v17);
   isFollower = this->fields.isFollower;
   this->fields._IsDisappearEquip_k__BackingField = 0;
   if ( isFollower )
   {
     this->fields.equipIdList = 0;
-    sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.equipIdList, 0, v20, v21);
+    sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.equipIdList, 0, v20, v21);
     p_equipUserServantEntityList = this->fields.followerInfo;
     if ( !p_equipUserServantEntityList )
       return;
@@ -6501,83 +6501,83 @@ LABEL_20:
         System_Collections_Generic_List_int___GetEnumerator(
           (System_Collections_Generic_List_Enumerator_T__o *)&v260,
           (System_Collections_Generic_List_int__o *)EquipSvtIds,
-          (const MethodInfo_377C26C *)Method_System_Collections_Generic_List_int__GetEnumerator__);
+          (const MethodInfo_3786AD4 *)Method_System_Collections_Generic_List_int__GetEnumerator__);
         v271 = v260;
         while ( System_Collections_Generic_List_Enumerator_int___MoveNext(
                   (System_Collections_Generic_List_Enumerator_int__o *)&v271,
-                  (const MethodInfo_351F190 *)Method_System_Collections_Generic_List_Enumerator_int__MoveNext__) )
+                  (const MethodInfo_35299F8 *)Method_System_Collections_Generic_List_Enumerator_int__MoveNext__) )
         {
           current = (int32_t)v271.fields._current;
           v179 = (System_Collections_Generic_List_object__o *)*p_equipServantEntityList;
           if ( LODWORD(v271.fields._current) )
           {
-            Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39E2904 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+            Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39ED16C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
             if ( !Instance )
-              sub_1C32E7C(0);
+              sub_1C372B4(0);
             MasterData_object = DataManager__GetMasterData_object_(
                                   (DataManager_o *)Instance,
-                                  (const MethodInfo_30DD3F0 *)Method_DataManager_GetMasterData_ServantMaster___);
+                                  (const MethodInfo_30E7C58 *)Method_DataManager_GetMasterData_ServantMaster___);
             if ( !MasterData_object )
-              sub_1C32E7C(0);
+              sub_1C372B4(0);
             v182 = DataMasterBase_object__object__int___GetEntity(
                      (DataMasterBase_TMaster__TEntity__PKType__o *)MasterData_object,
                      current,
-                     (const MethodInfo_3396838 *)Method_DataMasterBase_ServantMaster__ServantEntity__int__GetEntity__);
+                     (const MethodInfo_33A10A0 *)Method_DataMasterBase_ServantMaster__ServantEntity__int__GetEntity__);
             v185 = v182;
             if ( !v179 )
-              sub_1C32E7C(v182);
+              sub_1C372B4(v182);
             items = v179->fields._items;
             v187 = Method_System_Collections_Generic_List_ServantEntity__Add__;
             ++v179->fields._version;
             if ( !items )
-              sub_1C32E7C(v182);
+              sub_1C372B4(v182);
             size = v179->fields._size;
             if ( (unsigned int)size >= LODWORD(items->max_length) )
             {
               System_Collections_Generic_List_object___AddWithResize(
                 v179,
                 v182,
-                *(const MethodInfo_37987BC **)(*(_QWORD *)(v187[4] + 192LL) + 112LL));
+                *(const MethodInfo_37A3024 **)(*(_QWORD *)(v187[4] + 192LL) + 112LL));
             }
             else
             {
               v189 = &items->obj.klass + size;
               v179->fields._size = size + 1;
               v189[4] = (Il2CppClass *)v185;
-              sub_1C32BC4((CGThumbnailListItem_o *)(v189 + 4), (int32_t)v185, v183, v184);
+              sub_1C36FFC((CGThumbnailListItem_o *)(v189 + 4), (int32_t)v185, v183, v184);
             }
           }
           else
           {
-            v190 = (ServantEntity_o *)sub_1C32E6C(ServantEntity_TypeInfo);
+            v190 = (ServantEntity_o *)sub_1C372A4(ServantEntity_TypeInfo);
             ServantEntity___ctor(v190, 0);
             if ( !v179 )
-              sub_1C32E7C(v191);
+              sub_1C372B4(v191);
             v194 = v179->fields._items;
             v195 = Method_System_Collections_Generic_List_ServantEntity__Add__;
             ++v179->fields._version;
             if ( !v194 )
-              sub_1C32E7C(v191);
+              sub_1C372B4(v191);
             v196 = v179->fields._size;
             if ( (unsigned int)v196 >= LODWORD(v194->max_length) )
             {
               System_Collections_Generic_List_object___AddWithResize(
                 v179,
                 (Il2CppObject *)v190,
-                *(const MethodInfo_37987BC **)(*(_QWORD *)(v195[4] + 192LL) + 112LL));
+                *(const MethodInfo_37A3024 **)(*(_QWORD *)(v195[4] + 192LL) + 112LL));
             }
             else
             {
               v197 = &v194->obj.klass + v196;
               v179->fields._size = v196 + 1;
               v197[4] = (Il2CppClass *)v190;
-              sub_1C32BC4((CGThumbnailListItem_o *)(v197 + 4), (int32_t)v190, v192, v193);
+              sub_1C36FFC((CGThumbnailListItem_o *)(v197 + 4), (int32_t)v190, v192, v193);
             }
           }
         }
         System_Collections_Generic_List_Enumerator_int___Dispose(
           (System_Collections_Generic_List_Enumerator_int__o *)&v271,
-          (const MethodInfo_351F18C *)Method_System_Collections_Generic_List_Enumerator_int__Dispose__);
+          (const MethodInfo_35299F4 *)Method_System_Collections_Generic_List_Enumerator_int__Dispose__);
         p_eventUpValInfo = &this->fields.eventUpValInfo;
       }
     }
@@ -6608,12 +6608,12 @@ LABEL_20:
       if ( (int)IsGrandServant >= 1 )
       {
         v209 = (System_Collections_Generic_List_object__o *)*p_equipServantEntityList;
-        IsGrandServant = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39E2904 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+        IsGrandServant = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39ED16C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
         if ( !IsGrandServant )
           goto LABEL_288;
         IsGrandServant = DataManager__GetMasterData_object_(
                            (DataManager_o *)IsGrandServant,
-                           (const MethodInfo_30DD3F0 *)Method_DataManager_GetMasterData_ServantMaster___);
+                           (const MethodInfo_30E7C58 *)Method_DataManager_GetMasterData_ServantMaster___);
         v210 = this->fields.followerIndex;
         v211 = this->fields.followerInfo;
         v212 = (DataMasterBase_TMaster__TEntity__PKType__o *)IsGrandServant;
@@ -6642,7 +6642,7 @@ LABEL_20:
         IsGrandServant = DataMasterBase_object__object__int___GetEntity(
                            v212,
                            (int32_t)IsGrandServant,
-                           (const MethodInfo_3396838 *)Method_DataMasterBase_ServantMaster__ServantEntity__int__GetEntity__);
+                           (const MethodInfo_33A10A0 *)Method_DataMasterBase_ServantMaster__ServantEntity__int__GetEntity__);
         if ( !v209 )
           goto LABEL_288;
         v217 = v209->fields._items;
@@ -6657,14 +6657,14 @@ LABEL_20:
           System_Collections_Generic_List_object___AddWithResize(
             v209,
             (Il2CppObject *)IsGrandServant,
-            *(const MethodInfo_37987BC **)(*(_QWORD *)(v218[4] + 192LL) + 112LL));
+            *(const MethodInfo_37A3024 **)(*(_QWORD *)(v218[4] + 192LL) + 112LL));
         }
         else
         {
           v221 = &v217->obj.klass + v219;
           v209->fields._size = v219 + 1;
           v221[4] = v220;
-          sub_1C32BC4((CGThumbnailListItem_o *)(v221 + 4), (int32_t)v220, v215, v216);
+          sub_1C36FFC((CGThumbnailListItem_o *)(v221 + 4), (int32_t)v220, v215, v216);
         }
       }
     }
@@ -6697,17 +6697,17 @@ LABEL_20:
         }
         if ( !v225 )
           goto LABEL_288;
-        this->fields.isEventUpVal = FollowerInfo__getEventUpVal_41649572(
+        this->fields.isEventUpVal = FollowerInfo__getEventUpVal_41749380(
                                       v225,
                                       p_eventUpValInfo,
                                       setupInfo,
                                       v224,
                                       v226,
                                       0);
-        v228 = (System_Collections_Generic_List_object__o *)sub_1C32E6C(System_Collections_Generic_List_EventMargeItemUpValInfo__TypeInfo);
+        v228 = (System_Collections_Generic_List_object__o *)sub_1C372A4(System_Collections_Generic_List_EventMargeItemUpValInfo__TypeInfo);
         System_Collections_Generic_List_object____ctor(
           v228,
-          (const MethodInfo_3797F88 *)Method_System_Collections_Generic_List_EventMargeItemUpValInfo___ctor__);
+          (const MethodInfo_37A27F0 *)Method_System_Collections_Generic_List_EventMargeItemUpValInfo___ctor__);
         eventUpValInfo = this->fields.eventUpValInfo;
         if ( !eventUpValInfo )
           goto LABEL_288;
@@ -6727,7 +6727,7 @@ LABEL_20:
             v231 = PartyOrganizationListViewItem___c_TypeInfo;
           }
           v233 = (Il2CppObject *)v231->static_fields->__9;
-          _9__161_0 = (System_Func_object__int__o *)sub_1C32E6C(System_Func_EventDropUpValInfo__int__TypeInfo);
+          _9__161_0 = (System_Func_object__int__o *)sub_1C372A4(System_Func_EventDropUpValInfo__int__TypeInfo);
           System_Func_object__int____ctor(
             _9__161_0,
             v233,
@@ -6735,18 +6735,18 @@ LABEL_20:
             0);
           static_fields = PartyOrganizationListViewItem___c_TypeInfo->static_fields;
           static_fields->__9__161_0 = (struct System_Func_EventDropUpValInfo__int__o *)_9__161_0;
-          sub_1C32BC4((CGThumbnailListItem_o *)&static_fields->__9__161_0, (int32_t)_9__161_0, v235, v236);
+          sub_1C36FFC((CGThumbnailListItem_o *)&static_fields->__9__161_0, (int32_t)_9__161_0, v235, v236);
         }
         v237 = (System_Collections_Generic_IEnumerable_TSource__o *)System_Linq_Enumerable__Select_object__int_(
                                                                       dropList,
                                                                       (System_Func_TSource__TResult__o *)_9__161_0,
-                                                                      (const MethodInfo_31131E0 *)Method_System_Linq_Enumerable_Select_EventDropUpValInfo__int___);
+                                                                      (const MethodInfo_311DA48 *)Method_System_Linq_Enumerable_Select_EventDropUpValInfo__int___);
         v238 = System_Linq_Enumerable__Distinct_int_(
                  v237,
-                 (const MethodInfo_31005DC *)Method_System_Linq_Enumerable_Distinct_int___);
+                 (const MethodInfo_310AE44 *)Method_System_Linq_Enumerable_Distinct_int___);
         IsGrandServant = System_Linq_Enumerable__ToArray_int_(
                            v238,
-                           (const MethodInfo_311C8F4 *)Method_System_Linq_Enumerable_ToArray_int___);
+                           (const MethodInfo_312715C *)Method_System_Linq_Enumerable_ToArray_int___);
         if ( !IsGrandServant )
           goto LABEL_288;
         v239 = *((_QWORD *)IsGrandServant + 3);
@@ -6760,7 +6760,7 @@ LABEL_20:
               goto LABEL_289;
             servantEntity = this->fields.servantEntity;
             v243 = v240[v241 + 8];
-            v244 = (EventPersonalMargeUpValInfo_o *)sub_1C32E6C(EventPersonalMargeUpValInfo_TypeInfo);
+            v244 = (EventPersonalMargeUpValInfo_o *)sub_1C372A4(EventPersonalMargeUpValInfo_TypeInfo);
             EventPersonalMargeUpValInfo___ctor(v244, v243, servantEntity, 0);
             IsGrandServant = this->fields.eventUpValInfo;
             if ( !IsGrandServant )
@@ -6802,14 +6802,14 @@ LABEL_283:
               System_Collections_Generic_List_object___AddWithResize(
                 v228,
                 v250,
-                *(const MethodInfo_37987BC **)(*(_QWORD *)(v252[4] + 192LL) + 112LL));
+                *(const MethodInfo_37A3024 **)(*(_QWORD *)(v252[4] + 192LL) + 112LL));
             }
             else
             {
               v254 = &v251->obj.klass + v253;
               v228->fields._size = v253 + 1;
               v254[4] = (Il2CppClass *)v250;
-              sub_1C32BC4((CGThumbnailListItem_o *)(v254 + 4), (int32_t)v250, v245, v246);
+              sub_1C36FFC((CGThumbnailListItem_o *)(v254 + 4), (int32_t)v250, v245, v246);
             }
             LODWORD(v247) = *((_DWORD *)v248 + 6);
             if ( (__int64)++v249 >= (int)v247 )
@@ -6818,11 +6818,11 @@ LABEL_283:
           goto LABEL_289;
         }
 LABEL_284:
-        IsGrandServant = SingletonTemplate_object___get_Instance((const MethodInfo_39E2DF4 *)Method_SingletonTemplate_PartyOrganizationUtility__get_Instance__);
+        IsGrandServant = SingletonTemplate_object___get_Instance((const MethodInfo_39ED65C *)Method_SingletonTemplate_PartyOrganizationUtility__get_Instance__);
         if ( !IsGrandServant )
           goto LABEL_288;
         AdjustUpValInfoArray = (System_Collections_Generic_IEnumerable_EventMargeItemUpValInfo__o *)PartyOrganizationUtility__GetAdjustUpValInfoArray((PartyOrganizationUtility_o *)IsGrandServant, &v270, (System_Collections_Generic_List_EventMargeItemUpValInfo__o *)v228, 0);
-        IsGrandServant = SingletonTemplate_object___get_Instance((const MethodInfo_39E2DF4 *)Method_SingletonTemplate_PartyOrganizationUtility__get_Instance__);
+        IsGrandServant = SingletonTemplate_object___get_Instance((const MethodInfo_39ED65C *)Method_SingletonTemplate_PartyOrganizationUtility__get_Instance__);
         if ( !IsGrandServant )
           goto LABEL_288;
         AddUpValInfos = PartyOrganizationUtility__GetAddUpValInfos(
@@ -6830,7 +6830,7 @@ LABEL_284:
                           AdjustUpValInfoArray,
                           0);
         this->fields.eventUpValItemList = AddUpValInfos;
-        sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.eventUpValItemList, (int32_t)AddUpValInfos, v257, v258);
+        sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.eventUpValItemList, (int32_t)AddUpValInfos, v257, v258);
         this->fields._IsDuplicateBonus_k__BackingField = v270;
       }
     }
@@ -6852,10 +6852,10 @@ LABEL_284:
       j_il2cpp_runtime_class_init_0(BalanceConfig_TypeInfo);
       v33 = BalanceConfig_TypeInfo;
     }
-    v29 = (struct System_Int64_array *)sub_1C32CC8(long___TypeInfo, (unsigned int)v33->static_fields->SvtEquipMax);
+    v29 = (struct System_Int64_array *)sub_1C37100(long___TypeInfo, (unsigned int)v33->static_fields->SvtEquipMax);
 LABEL_26:
     this->fields.equipIdList = v29;
-    sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.equipIdList, (int32_t)v29, v27, v28);
+    sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.equipIdList, (int32_t)v29, v27, v28);
     v25 = this->fields.equipIdList;
     goto LABEL_27;
   }
@@ -6866,10 +6866,10 @@ LABEL_26:
     if ( v26 )
     {
       v23 = v26;
-      v29 = (struct System_Int64_array *)sub_1C32D5C(v26, long___TypeInfo);
+      v29 = (struct System_Int64_array *)sub_1C37194(v26, long___TypeInfo);
       if ( !v29 )
       {
-        sub_1C3313C(v23);
+        sub_1C37574(v23);
         goto LABEL_13;
       }
     }
@@ -6892,12 +6892,12 @@ LABEL_27:
       goto LABEL_289;
     if ( v25->m_Items[v38] < 1 )
       goto LABEL_63;
-    IsGrandServant = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39E2904 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    IsGrandServant = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39ED16C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
     if ( !IsGrandServant )
       goto LABEL_288;
     IsGrandServant = DataManager__GetMasterData_object_(
                        (DataManager_o *)IsGrandServant,
-                       (const MethodInfo_30DD3F0 *)Method_DataManager_GetMasterData_UserServantMaster___);
+                       (const MethodInfo_30E7C58 *)Method_DataManager_GetMasterData_UserServantMaster___);
     v40 = this->fields.equipIdList;
     if ( !v40 )
       goto LABEL_288;
@@ -6909,7 +6909,7 @@ LABEL_27:
                                (DataMasterBase_TMaster__TEntity__PKType__o *)IsGrandServant,
                                &entity,
                                v40->m_Items[v38],
-                               (const MethodInfo_3398DE0 *)Method_DataMasterBase_UserServantMaster__UserServantEntity__long__TryGetEntity__);
+                               (const MethodInfo_33A3648 *)Method_DataMasterBase_UserServantMaster__UserServantEntity__long__TryGetEntity__);
     if ( ((unsigned __int8)IsGrandServant & 1) != 0 )
     {
       IsGrandServant = p_equipUserServantEntityList->klass;
@@ -6927,14 +6927,14 @@ LABEL_27:
         System_Collections_Generic_List_object___AddWithResize(
           (System_Collections_Generic_List_object__o *)IsGrandServant,
           v43,
-          *(const MethodInfo_37987BC **)(*(_QWORD *)(v45[4] + 192LL) + 112LL));
+          *(const MethodInfo_37A3024 **)(*(_QWORD *)(v45[4] + 192LL) + 112LL));
       }
       else
       {
         v47 = v44 + 8 * v46;
         *((_DWORD *)IsGrandServant + 6) = v46 + 1;
         *(_QWORD *)(v47 + 32) = v43;
-        sub_1C32BC4((CGThumbnailListItem_o *)(v47 + 32), (int32_t)v43, v41, v42);
+        sub_1C36FFC((CGThumbnailListItem_o *)(v47 + 32), (int32_t)v43, v41, v42);
       }
       if ( !entity )
         goto LABEL_288;
@@ -6944,19 +6944,19 @@ LABEL_27:
         j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
       *(_QWORD *)&v272.fields.currentCryptoKey = klass;
       *(_QWORD *)&v272.fields.fakeValue = monitor;
-      if ( CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_48887784(v272, 0) <= 0 )
+      if ( CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_48930896(v272, 0) <= 0 )
       {
-        v86 = (Il2CppObject *)sub_1C32E6C(ServantEntity_TypeInfo);
+        v86 = (Il2CppObject *)sub_1C372A4(ServantEntity_TypeInfo);
         ServantEntity___ctor((ServantEntity_o *)v86, 0);
       }
       else
       {
-        IsGrandServant = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39E2904 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+        IsGrandServant = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39ED16C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
         if ( !IsGrandServant )
           goto LABEL_288;
         IsGrandServant = DataManager__GetMasterData_object_(
                            (DataManager_o *)IsGrandServant,
-                           (const MethodInfo_30DD3F0 *)Method_DataManager_GetMasterData_ServantMaster___);
+                           (const MethodInfo_30E7C58 *)Method_DataManager_GetMasterData_ServantMaster___);
         if ( !entity )
           goto LABEL_288;
         v83 = (DataMasterBase_TMaster__TEntity__PKType__o *)IsGrandServant;
@@ -6966,13 +6966,13 @@ LABEL_27:
           j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
         *(_QWORD *)&v273.fields.currentCryptoKey = v85;
         *(_QWORD *)&v273.fields.fakeValue = v84;
-        IsGrandServant = (void *)CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_48887784(v273, 0);
+        IsGrandServant = (void *)CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_48930896(v273, 0);
         if ( !v83 )
           goto LABEL_288;
         v86 = DataMasterBase_object__object__int___GetEntity(
                 v83,
                 (int32_t)IsGrandServant,
-                (const MethodInfo_3396838 *)Method_DataMasterBase_ServantMaster__ServantEntity__int__GetEntity__);
+                (const MethodInfo_33A10A0 *)Method_DataMasterBase_ServantMaster__ServantEntity__int__GetEntity__);
       }
       IsGrandServant = *p_equipServantEntityList;
       if ( !*p_equipServantEntityList )
@@ -7005,13 +7005,13 @@ LABEL_27:
       goto LABEL_60;
     if ( !DataManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-    Master_object = DataManager__GetMaster_object_((const MethodInfo_30DD39C *)Method_DataManager_GetMaster_UserServantCollectionMaster___);
+    Master_object = DataManager__GetMaster_object_((const MethodInfo_30E7C04 *)Method_DataManager_GetMaster_UserServantCollectionMaster___);
     if ( !NetworkManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
-    if ( !byte_4C31812 )
+    if ( !byte_4C3CD62 )
     {
-      sub_1C32C20(&NetworkManager_TypeInfo);
-      byte_4C31812 = 1;
+      sub_1C37058(&NetworkManager_TypeInfo);
+      byte_4C3CD62 = 1;
     }
     IsGrandServant = NetworkManager_TypeInfo;
     if ( !NetworkManager_TypeInfo->_2.cctor_finished )
@@ -7043,7 +7043,7 @@ LABEL_60:
       v60->m_Items[v38] = 0;
 LABEL_63:
       v61 = (System_Collections_Generic_List_object__o *)p_equipUserServantEntityList->klass;
-      v62 = (UserServantEntity_o *)sub_1C32E6C(UserServantEntity_TypeInfo);
+      v62 = (UserServantEntity_o *)sub_1C372A4(UserServantEntity_TypeInfo);
       UserServantEntity___ctor(v62, 0);
       if ( !v61 )
         goto LABEL_288;
@@ -7058,17 +7058,17 @@ LABEL_63:
         System_Collections_Generic_List_object___AddWithResize(
           v61,
           (Il2CppObject *)v62,
-          *(const MethodInfo_37987BC **)(*(_QWORD *)(v66[4] + 192LL) + 112LL));
+          *(const MethodInfo_37A3024 **)(*(_QWORD *)(v66[4] + 192LL) + 112LL));
       }
       else
       {
         v68 = &v65->obj.klass + v67;
         v61->fields._size = v67 + 1;
         v68[4] = (Il2CppClass *)v62;
-        sub_1C32BC4((CGThumbnailListItem_o *)(v68 + 4), (int32_t)v62, v63, v64);
+        sub_1C36FFC((CGThumbnailListItem_o *)(v68 + 4), (int32_t)v62, v63, v64);
       }
       v69 = *p_equipServantEntityList;
-      v70 = (ServantEntity_o *)sub_1C32E6C(ServantEntity_TypeInfo);
+      v70 = (ServantEntity_o *)sub_1C372A4(ServantEntity_TypeInfo);
       ServantEntity___ctor(v70, 0);
       if ( !v69 )
         goto LABEL_288;
@@ -7087,7 +7087,7 @@ LABEL_91:
         System_Collections_Generic_List_object___AddWithResize(
           (System_Collections_Generic_List_object__o *)IsGrandServant,
           v80,
-          *(const MethodInfo_37987BC **)(*(_QWORD *)(v79 + 192) + 112LL));
+          *(const MethodInfo_37A3024 **)(*(_QWORD *)(v79 + 192) + 112LL));
         goto LABEL_92;
       }
       v76 = (__int64)v73 + 8 * v75;
@@ -7096,13 +7096,13 @@ LABEL_91:
       v77 = (CGThumbnailListItem_o *)(v76 + 32);
       v78 = (int)v70;
 LABEL_89:
-      sub_1C32BC4(v77, v78, v71, v72);
+      sub_1C36FFC(v77, v78, v71, v72);
       goto LABEL_92;
     }
     v51 = (System_Collections_Generic_List_object__o *)p_equipUserServantEntityList->klass;
     v52 = v268;
-    v53 = (UserServantEntity_o *)sub_1C32E6C(UserServantEntity_TypeInfo);
-    UserServantEntity___ctor_43055668(v53, v52, 0, 0);
+    v53 = (UserServantEntity_o *)sub_1C372A4(UserServantEntity_TypeInfo);
+    UserServantEntity___ctor_43157536(v53, v52, 0, 0);
     if ( !v51 )
       goto LABEL_288;
     v56 = v51->fields._items;
@@ -7116,22 +7116,22 @@ LABEL_89:
       System_Collections_Generic_List_object___AddWithResize(
         v51,
         (Il2CppObject *)v53,
-        *(const MethodInfo_37987BC **)(*(_QWORD *)(v57[4] + 192LL) + 112LL));
+        *(const MethodInfo_37A3024 **)(*(_QWORD *)(v57[4] + 192LL) + 112LL));
     }
     else
     {
       v59 = &v56->obj.klass + v58;
       v51->fields._size = v58 + 1;
       v59[4] = (Il2CppClass *)v53;
-      sub_1C32BC4((CGThumbnailListItem_o *)(v59 + 4), (int32_t)v53, v54, v55);
+      sub_1C36FFC((CGThumbnailListItem_o *)(v59 + 4), (int32_t)v53, v54, v55);
     }
     v91 = (System_Collections_Generic_List_object__o *)*p_equipServantEntityList;
-    IsGrandServant = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39E2904 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    IsGrandServant = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39ED16C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
     if ( !IsGrandServant )
       goto LABEL_288;
     IsGrandServant = DataManager__GetMasterData_object_(
                        (DataManager_o *)IsGrandServant,
-                       (const MethodInfo_30DD3F0 *)Method_DataManager_GetMasterData_ServantMaster___);
+                       (const MethodInfo_30E7C58 *)Method_DataManager_GetMasterData_ServantMaster___);
     v92 = this->fields.equipSvtIdList;
     if ( !v92 )
       goto LABEL_288;
@@ -7142,7 +7142,7 @@ LABEL_89:
     IsGrandServant = DataMasterBase_object__object__int___GetEntity(
                        (DataMasterBase_TMaster__TEntity__PKType__o *)IsGrandServant,
                        v92->m_Items[v38],
-                       (const MethodInfo_3396838 *)Method_DataMasterBase_ServantMaster__ServantEntity__int__GetEntity__);
+                       (const MethodInfo_33A10A0 *)Method_DataMasterBase_ServantMaster__ServantEntity__int__GetEntity__);
     if ( !v91 )
       goto LABEL_288;
     v95 = v91->fields._items;
@@ -7157,14 +7157,14 @@ LABEL_89:
       System_Collections_Generic_List_object___AddWithResize(
         v91,
         (Il2CppObject *)IsGrandServant,
-        *(const MethodInfo_37987BC **)(*(_QWORD *)(v96[4] + 192LL) + 112LL));
+        *(const MethodInfo_37A3024 **)(*(_QWORD *)(v96[4] + 192LL) + 112LL));
     }
     else
     {
       v99 = &v95->obj.klass + v97;
       v91->fields._size = v97 + 1;
       v99[4] = v98;
-      sub_1C32BC4((CGThumbnailListItem_o *)(v99 + 4), (int32_t)v98, v93, v94);
+      sub_1C36FFC((CGThumbnailListItem_o *)(v99 + 4), (int32_t)v98, v93, v94);
     }
     this->fields._IsDisappearEquip_k__BackingField = 1;
 LABEL_92:
@@ -7184,15 +7184,15 @@ LABEL_92:
   if ( !v103->max_length )
   {
 LABEL_138:
-    v134 = (System_Collections_Generic_List_object__o *)sub_1C32E6C(System_Collections_Generic_List_EventMargeItemUpValInfo__TypeInfo);
+    v134 = (System_Collections_Generic_List_object__o *)sub_1C372A4(System_Collections_Generic_List_EventMargeItemUpValInfo__TypeInfo);
     System_Collections_Generic_List_object____ctor(
       v134,
-      (const MethodInfo_3797F88 *)Method_System_Collections_Generic_List_EventMargeItemUpValInfo___ctor__);
+      (const MethodInfo_37A27F0 *)Method_System_Collections_Generic_List_EventMargeItemUpValInfo___ctor__);
     v264 = (System_Collections_Generic_List_EventMargeItemUpValInfo__o *)v134;
     if ( this->fields.questRestrictionInfo )
     {
       PartyOrganizationListViewItem__AddFriendshipUpCampaignInfo(this, &v264, 1, v136);
-      IsGrandServant = SingletonTemplate_object___get_Instance((const MethodInfo_39E2DF4 *)Method_SingletonTemplate_PartyOrganizationUtility__get_Instance__);
+      IsGrandServant = SingletonTemplate_object___get_Instance((const MethodInfo_39ED65C *)Method_SingletonTemplate_PartyOrganizationUtility__get_Instance__);
       v137 = &this->fields.eventUpValInfo;
       if ( !IsGrandServant )
         goto LABEL_288;
@@ -7202,14 +7202,14 @@ LABEL_138:
                                                             (System_Collections_Generic_List_EventMargeItemUpValInfo__o *)v134,
                                                             0);
       this->fields._IsDuplicateBonus_k__BackingField = v263;
-      IsGrandServant = SingletonTemplate_object___get_Instance((const MethodInfo_39E2DF4 *)Method_SingletonTemplate_PartyOrganizationUtility__get_Instance__);
+      IsGrandServant = SingletonTemplate_object___get_Instance((const MethodInfo_39ED65C *)Method_SingletonTemplate_PartyOrganizationUtility__get_Instance__);
       if ( !IsGrandServant )
         goto LABEL_288;
     }
     else
     {
       PartyOrganizationListViewItem__AddFriendshipUpCampaignInfo(this, &v264, 0, v136);
-      v135 = (const MethodInfo_39E2DF4 *)Method_SingletonTemplate_PartyOrganizationUtility__get_Instance__;
+      v135 = (const MethodInfo_39ED65C *)Method_SingletonTemplate_PartyOrganizationUtility__get_Instance__;
 LABEL_143:
       IsGrandServant = SingletonTemplate_object___get_Instance(v135);
       v137 = &this->fields.eventUpValInfo;
@@ -7224,10 +7224,10 @@ LABEL_143:
   }
   userServantEntity = this->fields.userServantEntity;
   EquipList = PartyOrganizationListViewItem__GetEquipList(this, v19);
-  IsGrandServant = SingletonTemplate_object___get_Instance((const MethodInfo_39E2DF4 *)Method_SingletonTemplate_PartyOrganizationUtility__get_Instance__);
+  IsGrandServant = SingletonTemplate_object___get_Instance((const MethodInfo_39ED65C *)Method_SingletonTemplate_PartyOrganizationUtility__get_Instance__);
   if ( !IsGrandServant || !userServantEntity )
     goto LABEL_288;
-  EventUpVal_43070308 = UserServantEntity__getEventUpVal_43070308(
+  EventUpVal_43172176 = UserServantEntity__getEventUpVal_43172176(
                           userServantEntity,
                           eventUpVallInfo,
                           v101,
@@ -7235,13 +7235,13 @@ LABEL_143:
                           *((_QWORD *)IsGrandServant + 14),
                           0);
   v107 = this->fields.questRestrictionInfo;
-  this->fields.isEventUpVal = EventUpVal_43070308;
+  this->fields.isEventUpVal = EventUpVal_43172176;
   if ( v107 )
   {
-    v108 = (System_Collections_Generic_List_object__o *)sub_1C32E6C(System_Collections_Generic_List_EventMargeItemUpValInfo__TypeInfo);
+    v108 = (System_Collections_Generic_List_object__o *)sub_1C372A4(System_Collections_Generic_List_EventMargeItemUpValInfo__TypeInfo);
     System_Collections_Generic_List_object____ctor(
       v108,
-      (const MethodInfo_3797F88 *)Method_System_Collections_Generic_List_EventMargeItemUpValInfo___ctor__);
+      (const MethodInfo_37A27F0 *)Method_System_Collections_Generic_List_EventMargeItemUpValInfo___ctor__);
     infoList = (System_Collections_Generic_List_EventMargeItemUpValInfo__o *)v108;
     if ( *eventUpVallInfo )
     {
@@ -7261,7 +7261,7 @@ LABEL_143:
           v110 = PartyOrganizationListViewItem___c_TypeInfo;
         }
         v112 = (Il2CppObject *)v110->static_fields->__9;
-        _9__161_1 = (System_Func_object__int__o *)sub_1C32E6C(System_Func_EventDropUpValInfo__int__TypeInfo);
+        _9__161_1 = (System_Func_object__int__o *)sub_1C372A4(System_Func_EventDropUpValInfo__int__TypeInfo);
         System_Func_object__int____ctor(
           _9__161_1,
           v112,
@@ -7269,18 +7269,18 @@ LABEL_143:
           0);
         v113 = PartyOrganizationListViewItem___c_TypeInfo->static_fields;
         v113->__9__161_1 = (struct System_Func_EventDropUpValInfo__int__o *)_9__161_1;
-        sub_1C32BC4((CGThumbnailListItem_o *)&v113->__9__161_1, (int32_t)_9__161_1, v114, v115);
+        sub_1C36FFC((CGThumbnailListItem_o *)&v113->__9__161_1, (int32_t)_9__161_1, v114, v115);
       }
       v116 = (System_Collections_Generic_IEnumerable_TSource__o *)System_Linq_Enumerable__Select_object__int_(
                                                                     v109,
                                                                     (System_Func_TSource__TResult__o *)_9__161_1,
-                                                                    (const MethodInfo_31131E0 *)Method_System_Linq_Enumerable_Select_EventDropUpValInfo__int___);
+                                                                    (const MethodInfo_311DA48 *)Method_System_Linq_Enumerable_Select_EventDropUpValInfo__int___);
       v117 = System_Linq_Enumerable__Distinct_int_(
                v116,
-               (const MethodInfo_31005DC *)Method_System_Linq_Enumerable_Distinct_int___);
+               (const MethodInfo_310AE44 *)Method_System_Linq_Enumerable_Distinct_int___);
       IsGrandServant = System_Linq_Enumerable__ToArray_int_(
                          v117,
-                         (const MethodInfo_311C8F4 *)Method_System_Linq_Enumerable_ToArray_int___);
+                         (const MethodInfo_312715C *)Method_System_Linq_Enumerable_ToArray_int___);
       if ( IsGrandServant )
       {
         v119 = *((_QWORD *)IsGrandServant + 3);
@@ -7294,7 +7294,7 @@ LABEL_143:
               goto LABEL_289;
             v122 = this->fields.servantEntity;
             v123 = v120[v121 + 8];
-            v124 = (EventPersonalMargeUpValInfo_o *)sub_1C32E6C(EventPersonalMargeUpValInfo_TypeInfo);
+            v124 = (EventPersonalMargeUpValInfo_o *)sub_1C372A4(EventPersonalMargeUpValInfo_TypeInfo);
             EventPersonalMargeUpValInfo___ctor(v124, v123, v122, 0);
             IsGrandServant = this->fields.eventUpValInfo;
             if ( !IsGrandServant )
@@ -7336,14 +7336,14 @@ LABEL_135:
               System_Collections_Generic_List_object___AddWithResize(
                 v108,
                 v129,
-                *(const MethodInfo_37987BC **)(*(_QWORD *)(v131[4] + 192LL) + 112LL));
+                *(const MethodInfo_37A3024 **)(*(_QWORD *)(v131[4] + 192LL) + 112LL));
             }
             else
             {
               v133 = &v130->obj.klass + v132;
               v108->fields._size = v132 + 1;
               v133[4] = (Il2CppClass *)v129;
-              sub_1C32BC4((CGThumbnailListItem_o *)(v133 + 4), (int32_t)v129, v125, v118);
+              sub_1C36FFC((CGThumbnailListItem_o *)(v133 + 4), (int32_t)v129, v125, v118);
             }
             LODWORD(v126) = *((_DWORD *)v127 + 6);
             if ( (__int64)++v128 >= (int)v126 )
@@ -7353,7 +7353,7 @@ LABEL_135:
         }
 LABEL_136:
         PartyOrganizationListViewItem__AddFriendshipUpCampaignInfo(this, &infoList, 1, v118);
-        IsGrandServant = SingletonTemplate_object___get_Instance((const MethodInfo_39E2DF4 *)Method_SingletonTemplate_PartyOrganizationUtility__get_Instance__);
+        IsGrandServant = SingletonTemplate_object___get_Instance((const MethodInfo_39ED65C *)Method_SingletonTemplate_PartyOrganizationUtility__get_Instance__);
         if ( IsGrandServant )
         {
           v134 = (System_Collections_Generic_List_object__o *)PartyOrganizationUtility__GetAdjustUpValInfoArray(
@@ -7362,23 +7362,23 @@ LABEL_136:
                                                                 (System_Collections_Generic_List_EventMargeItemUpValInfo__o *)v108,
                                                                 0);
           this->fields._IsDuplicateBonus_k__BackingField = isDuplicate;
-          v135 = (const MethodInfo_39E2DF4 *)Method_SingletonTemplate_PartyOrganizationUtility__get_Instance__;
+          v135 = (const MethodInfo_39ED65C *)Method_SingletonTemplate_PartyOrganizationUtility__get_Instance__;
           goto LABEL_143;
         }
       }
     }
     goto LABEL_288;
   }
-  IsGrandServant = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39E2904 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  IsGrandServant = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39ED16C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !IsGrandServant )
     goto LABEL_288;
   v158 = DataManager__GetMasterData_object_(
            (DataManager_o *)IsGrandServant,
-           (const MethodInfo_30DD3F0 *)Method_DataManager_GetMasterData_EventDetailMaster___);
-  v159 = (System_Collections_Generic_List_object__o *)sub_1C32E6C(System_Collections_Generic_List_EventMargeItemUpValInfo__TypeInfo);
+           (const MethodInfo_30E7C58 *)Method_DataManager_GetMasterData_EventDetailMaster___);
+  v159 = (System_Collections_Generic_List_object__o *)sub_1C372A4(System_Collections_Generic_List_EventMargeItemUpValInfo__TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v159,
-    (const MethodInfo_3797F88 *)Method_System_Collections_Generic_List_EventMargeItemUpValInfo___ctor__);
+    (const MethodInfo_37A27F0 *)Method_System_Collections_Generic_List_EventMargeItemUpValInfo___ctor__);
   v267 = (System_Collections_Generic_List_EventMargeItemUpValInfo__o *)v159;
   if ( !*p_setupInfo )
     goto LABEL_288;
@@ -7399,13 +7399,13 @@ LABEL_136:
       v165 = DataMasterBase_object__object__int___GetEntity(
                (DataMasterBase_TMaster__TEntity__PKType__o *)v158,
                v164,
-               (const MethodInfo_3396838 *)Method_DataMasterBase_EventDetailMaster__EventDetailEntity__int__GetEntity__);
+               (const MethodInfo_33A10A0 *)Method_DataMasterBase_EventDetailMaster__EventDetailEntity__int__GetEntity__);
       if ( !v165
         || (IsGrandServant = (void *)EventDetailEntity__HasFlag((EventDetailEntity_o *)v165, 0x800000000LL, 0),
             ((unsigned __int8)IsGrandServant & 1) == 0) )
       {
         v166 = this->fields.servantEntity;
-        v167 = (EventPersonalMargeUpValInfo_o *)sub_1C32E6C(EventPersonalMargeUpValInfo_TypeInfo);
+        v167 = (EventPersonalMargeUpValInfo_o *)sub_1C372A4(EventPersonalMargeUpValInfo_TypeInfo);
         EventPersonalMargeUpValInfo___ctor(v167, v164, v166, 0);
         IsGrandServant = this->fields.eventUpValInfo;
         if ( !IsGrandServant )
@@ -7448,25 +7448,25 @@ LABEL_185:
         System_Collections_Generic_List_object___AddWithResize(
           v159,
           v172,
-          *(const MethodInfo_37987BC **)(*(_QWORD *)(v174[4] + 192LL) + 112LL));
+          *(const MethodInfo_37A3024 **)(*(_QWORD *)(v174[4] + 192LL) + 112LL));
       }
       else
       {
         v176 = &v173->obj.klass + v175;
         v159->fields._size = v175 + 1;
         v176[4] = (Il2CppClass *)v172;
-        sub_1C32BC4((CGThumbnailListItem_o *)(v176 + 4), (int32_t)v172, v168, v160);
+        sub_1C36FFC((CGThumbnailListItem_o *)(v176 + 4), (int32_t)v172, v168, v160);
       }
       LODWORD(v169) = *((_DWORD *)v170 + 6);
       if ( (__int64)++v171 >= (int)v169 )
         goto LABEL_185;
     }
 LABEL_289:
-    sub_1C32E84(IsGrandServant);
+    sub_1C372BC(IsGrandServant);
   }
 LABEL_186:
   PartyOrganizationListViewItem__AddFriendshipUpCampaignInfo(this, &v267, 0, v160);
-  IsGrandServant = SingletonTemplate_object___get_Instance((const MethodInfo_39E2DF4 *)Method_SingletonTemplate_PartyOrganizationUtility__get_Instance__);
+  IsGrandServant = SingletonTemplate_object___get_Instance((const MethodInfo_39ED65C *)Method_SingletonTemplate_PartyOrganizationUtility__get_Instance__);
   if ( !IsGrandServant )
     goto LABEL_288;
   v138 = PartyOrganizationUtility__GetAddUpValInfos(
@@ -7477,16 +7477,16 @@ LABEL_186:
   v137 = &this->fields.eventUpValInfo;
 LABEL_145:
   this->fields.eventUpValItemList = v138;
-  sub_1C32BC4((CGThumbnailListItem_o *)p_eventUpValItemList, (int32_t)v138, v139, v140);
+  sub_1C36FFC((CGThumbnailListItem_o *)p_eventUpValItemList, (int32_t)v138, v139, v140);
   if ( !this->fields.questRestrictionInfo )
     return;
   if ( !*p_setupInfo )
   {
-    v142 = (System_Int32_array *)sub_1C32CC8(int___TypeInfo, 1);
-    v143 = (EventUpValSetupInfo_o *)sub_1C32E6C(EventUpValSetupInfo_TypeInfo);
-    EventUpValSetupInfo___ctor_41638188(v143, v142, 0, 0, 0, 0);
+    v142 = (System_Int32_array *)sub_1C37100(int___TypeInfo, 1);
+    v143 = (EventUpValSetupInfo_o *)sub_1C372A4(EventUpValSetupInfo_TypeInfo);
+    EventUpValSetupInfo___ctor_41737996(v143, v142, 0, 0, 0, 0);
     *p_setupInfo = v143;
-    sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.setupInfo, (int32_t)v143, v144, v145);
+    sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.setupInfo, (int32_t)v143, v144, v145);
   }
   if ( this->fields.isEventUpVal && *v137 )
   {
@@ -7514,45 +7514,45 @@ LABEL_145:
     System_Collections_Generic_List_object___GetEnumerator(
       (System_Collections_Generic_List_Enumerator_T__o *)&v260,
       (System_Collections_Generic_List_object__o *)IsGrandServant,
-      (const MethodInfo_37992B4 *)Method_System_Collections_Generic_List_EventDropUpValInfo__GetEnumerator__);
+      (const MethodInfo_37A3B1C *)Method_System_Collections_Generic_List_EventDropUpValInfo__GetEnumerator__);
     v261 = v260;
     while ( 1 )
     {
       v149 = System_Collections_Generic_List_Enumerator_object___MoveNext(
                &v261,
-               (const MethodInfo_3522FA8 *)Method_System_Collections_Generic_List_Enumerator_EventDropUpValInfo__MoveNext__);
+               (const MethodInfo_352D810 *)Method_System_Collections_Generic_List_Enumerator_EventDropUpValInfo__MoveNext__);
       if ( !v149 )
         break;
       if ( !*v137 )
-        sub_1C32E7C(v149);
+        sub_1C372B4(v149);
       v152 = (System_Collections_Generic_List_object__o *)(*v137)->fields.dropList;
       if ( !v152 )
-        sub_1C32E7C(0);
+        sub_1C372B4(0);
       v153 = v261.fields._current;
       v154 = v152->fields._items;
       v155 = Method_System_Collections_Generic_List_EventDropUpValInfo__Add__;
       ++v152->fields._version;
       if ( !v154 )
-        sub_1C32E7C(v152);
+        sub_1C372B4(v152);
       v156 = v152->fields._size;
       if ( (unsigned int)v156 >= LODWORD(v154->max_length) )
       {
         System_Collections_Generic_List_object___AddWithResize(
           v152,
           v153,
-          *(const MethodInfo_37987BC **)(*(_QWORD *)(v155[4] + 192LL) + 112LL));
+          *(const MethodInfo_37A3024 **)(*(_QWORD *)(v155[4] + 192LL) + 112LL));
       }
       else
       {
         v157 = &v154->obj.klass + v156;
         v152->fields._size = v156 + 1;
         v157[4] = (Il2CppClass *)v153;
-        sub_1C32BC4((CGThumbnailListItem_o *)(v157 + 4), (int32_t)v153, v150, v151);
+        sub_1C36FFC((CGThumbnailListItem_o *)(v157 + 4), (int32_t)v153, v150, v151);
       }
     }
     System_Collections_Generic_List_Enumerator_object___Dispose(
       &v261,
-      (const MethodInfo_3522FA4 *)Method_System_Collections_Generic_List_Enumerator_EventDropUpValInfo__Dispose__);
+      (const MethodInfo_352D80C *)Method_System_Collections_Generic_List_Enumerator_EventDropUpValInfo__Dispose__);
   }
   else
   {
@@ -7572,7 +7572,7 @@ LABEL_145:
                                   0);
   }
   v201 = this->fields.servantEntity;
-  v202 = (EventPersonalMargeUpValInfo_o *)sub_1C32E6C(EventPersonalMargeUpValInfo_TypeInfo);
+  v202 = (EventPersonalMargeUpValInfo_o *)sub_1C372A4(EventPersonalMargeUpValInfo_TypeInfo);
   EventPersonalMargeUpValInfo___ctor(v202, 0, v201, 0);
   IsGrandServant = this->fields.eventUpValInfo;
   if ( !IsGrandServant )
@@ -7583,10 +7583,10 @@ LABEL_145:
   EventPersonalMargeUpValInfo__Add(v202, (EventDropItemUpValInfo_array *)IsGrandServant, 0);
   if ( EventPersonalMargeUpValInfo__IsEmpty(v202, 0) )
     return;
-  v203 = (System_Collections_Generic_List_object__o *)sub_1C32E6C(System_Collections_Generic_List_EventMargeItemUpValInfo__TypeInfo);
+  v203 = (System_Collections_Generic_List_object__o *)sub_1C372A4(System_Collections_Generic_List_EventMargeItemUpValInfo__TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v203,
-    (const MethodInfo_3797F88 *)Method_System_Collections_Generic_List_EventMargeItemUpValInfo___ctor__);
+    (const MethodInfo_37A27F0 *)Method_System_Collections_Generic_List_EventMargeItemUpValInfo___ctor__);
   if ( *p_eventUpValItemList )
   {
     if ( !v203 )
@@ -7594,7 +7594,7 @@ LABEL_145:
     System_Collections_Generic_List_object___AddRange(
       v203,
       (System_Collections_Generic_IEnumerable_T__o *)*p_eventUpValItemList,
-      (const MethodInfo_37989C8 *)Method_System_Collections_Generic_List_EventMargeItemUpValInfo__AddRange__);
+      (const MethodInfo_37A3230 *)Method_System_Collections_Generic_List_EventMargeItemUpValInfo__AddRange__);
     IsGrandServant = EventPersonalMargeUpValInfo__GetList(v202, 0);
   }
   else
@@ -7606,11 +7606,11 @@ LABEL_145:
   System_Collections_Generic_List_object___AddRange(
     v203,
     (System_Collections_Generic_IEnumerable_T__o *)IsGrandServant,
-    (const MethodInfo_37989C8 *)Method_System_Collections_Generic_List_EventMargeItemUpValInfo__AddRange__);
-  IsGrandServant = SingletonTemplate_object___get_Instance((const MethodInfo_39E2DF4 *)Method_SingletonTemplate_PartyOrganizationUtility__get_Instance__);
+    (const MethodInfo_37A3230 *)Method_System_Collections_Generic_List_EventMargeItemUpValInfo__AddRange__);
+  IsGrandServant = SingletonTemplate_object___get_Instance((const MethodInfo_39ED65C *)Method_SingletonTemplate_PartyOrganizationUtility__get_Instance__);
   if ( !IsGrandServant )
 LABEL_288:
-    sub_1C32E7C(IsGrandServant);
+    sub_1C372B4(IsGrandServant);
   v204 = PartyOrganizationUtility__GetAddUpValInfos(
            (PartyOrganizationUtility_o *)IsGrandServant,
            (System_Collections_Generic_IEnumerable_EventMargeItemUpValInfo__o *)v203,
@@ -7619,7 +7619,7 @@ LABEL_288:
   *p_eventUpValItemList = v204;
   p_equipIdList = (struct System_Int64_array **)p_eventUpValItemList;
 LABEL_229:
-  sub_1C32BC4((CGThumbnailListItem_o *)p_equipIdList, v32, v20, v21);
+  sub_1C36FFC((CGThumbnailListItem_o *)p_equipIdList, v32, v20, v21);
 }
 
 
@@ -7636,10 +7636,10 @@ void PartyOrganizationListViewItem__SetEquipUserServantId(
   if ( equipIdList )
   {
     if ( LODWORD(equipIdList->max_length) <= index )
-      sub_1C32E84(this);
+      sub_1C372BC(this);
     equipIdList->m_Items[index] = userSvtId;
     this->fields.equipSvtIdList = 0;
-    sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.equipSvtIdList, 0, index, method);
+    sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.equipSvtIdList, 0, index, method);
     PartyOrganizationListViewItem__SetEquipStatus(this, this->fields.equipIdList, v6);
   }
 }
@@ -7658,9 +7658,9 @@ void PartyOrganizationListViewItem__SetEquipUserServantIdList(
 
   this->fields.equipIdList = userSvtIdList;
   p_equipIdList = &this->fields.equipIdList;
-  sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.equipIdList, (int32_t)userSvtIdList, (int32_t)method, v3);
+  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.equipIdList, (int32_t)userSvtIdList, (int32_t)method, v3);
   this->fields.equipSvtIdList = 0;
-  sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.equipSvtIdList, 0, v6, v7);
+  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.equipSvtIdList, 0, v6, v7);
   PartyOrganizationListViewItem__SetEquipStatus(this, *p_equipIdList, v8);
 }
 
@@ -7698,7 +7698,7 @@ void PartyOrganizationListViewItem__SetWaveEnemyClassIconIds(
   const MethodInfo *v3; // x3
 
   this->fields._WaveEnemyClassIds_k__BackingField = classIds;
-  sub_1C32BC4(
+  sub_1C36FFC(
     (CGThumbnailListItem_o *)&this->fields._WaveEnemyClassIds_k__BackingField,
     (int32_t)classIds,
     (int32_t)method,
@@ -7706,7 +7706,7 @@ void PartyOrganizationListViewItem__SetWaveEnemyClassIconIds(
 }
 
 
-void PartyOrganizationListViewItem__Set_34149928(
+void PartyOrganizationListViewItem__Set_34245560(
         PartyOrganizationListViewItem_o *this,
         PartyServantListViewItem_o *item,
         const MethodInfo *method)
@@ -7743,13 +7743,13 @@ void PartyOrganizationListViewItem__Set_34149928(
   const MethodInfo *v34; // x1
   CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o v35; // 0:x0.16
 
-  if ( (byte_4C33425 & 1) == 0 )
+  if ( (byte_4C3EA0F & 1) == 0 )
   {
-    sub_1C32C20(&Method_DataManager_GetMasterData_ServantMaster___);
-    sub_1C32C20(&Method_DataMasterBase_ServantMaster__ServantEntity__int__GetEntity__);
-    sub_1C32C20(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
-    sub_1C32C20(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-    byte_4C33425 = 1;
+    sub_1C37058(&Method_DataManager_GetMasterData_ServantMaster___);
+    sub_1C37058(&Method_DataMasterBase_ServantMaster__ServantEntity__int__GetEntity__);
+    sub_1C37058(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
+    sub_1C37058(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    byte_4C3EA0F = 1;
   }
   ListViewItem__Set((ListViewItem_o *)this, (ListViewItem_o *)item, 0);
   if ( !item )
@@ -7757,17 +7757,17 @@ void PartyOrganizationListViewItem__Set_34149928(
   userServantEntity = item->fields.userServantEntity;
   this->fields.userServantEntity = userServantEntity;
   p_userServantEntity = &this->fields.userServantEntity;
-  sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.userServantEntity, (int32_t)userServantEntity, v6, v7);
+  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.userServantEntity, (int32_t)userServantEntity, v6, v7);
   this->fields.followerInfo = 0;
-  sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.followerInfo, 0, v10, v11);
+  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.followerInfo, 0, v10, v11);
   *(_QWORD *)&this->fields.followerGrandGraphId = 0;
   this->fields.followerClassId = 0;
-  Instance = (DataManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39E2904 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = (DataManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39ED16C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance )
     goto LABEL_17;
   Instance = (DataManager_o *)DataManager__GetMasterData_object_(
                                 Instance,
-                                (const MethodInfo_30DD3F0 *)Method_DataManager_GetMasterData_ServantMaster___);
+                                (const MethodInfo_30E7C58 *)Method_DataManager_GetMasterData_ServantMaster___);
   v12 = *p_userServantEntity;
   if ( !*p_userServantEntity )
     goto LABEL_17;
@@ -7778,15 +7778,15 @@ void PartyOrganizationListViewItem__Set_34149928(
     j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
   *(_QWORD *)&v35.fields.currentCryptoKey = v15;
   *(_QWORD *)&v35.fields.fakeValue = v14;
-  Instance = (DataManager_o *)CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_48887784(v35, 0);
+  Instance = (DataManager_o *)CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_48930896(v35, 0);
   if ( !v13 )
     goto LABEL_17;
   Entity = DataMasterBase_object__object__int___GetEntity(
              v13,
              (int32_t)Instance,
-             (const MethodInfo_3396838 *)Method_DataMasterBase_ServantMaster__ServantEntity__int__GetEntity__);
+             (const MethodInfo_33A10A0 *)Method_DataMasterBase_ServantMaster__ServantEntity__int__GetEntity__);
   this->fields.servantEntity = (struct ServantEntity_o *)Entity;
-  sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.servantEntity, (int32_t)Entity, v17, v18);
+  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.servantEntity, (int32_t)Entity, v17, v18);
   this->fields.classId = item->fields.classId;
   *(_QWORD *)&this->fields.cost = *(_QWORD *)&item->fields.cost;
   this->fields.atk = item->fields.atk;
@@ -7795,7 +7795,7 @@ void PartyOrganizationListViewItem__Set_34149928(
   this->fields.frameType = item->fields.frameType;
   if ( !v19 )
     goto LABEL_17;
-  Instance = (DataManager_o *)CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_48887784(
+  Instance = (DataManager_o *)CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_48930896(
                                 v19->fields.limitCount,
                                 0);
   v20 = this->fields.userServantEntity;
@@ -7804,7 +7804,7 @@ void PartyOrganizationListViewItem__Set_34149928(
     goto LABEL_17;
   CommandCodeIdList = UserServantEntity__getCommandCodeIdList(v20, 0);
   this->fields.commandCodeIdList = CommandCodeIdList;
-  sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.commandCodeIdList, (int32_t)CommandCodeIdList, v22, v23);
+  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.commandCodeIdList, (int32_t)CommandCodeIdList, v22, v23);
   Instance = (DataManager_o *)this->fields.userServantEntity;
   this->fields.isQuestRestriction = item->fields.isQuestRestriction;
   this->fields.isQuestRestrictionWhole = item->fields.isQuestRestrictionWhole;
@@ -7848,7 +7848,7 @@ void PartyOrganizationListViewItem__Set_34149928(
       }
     }
 LABEL_17:
-    sub_1C32E7C(Instance);
+    sub_1C372B4(Instance);
   }
 LABEL_16:
   PartyOrganizationListViewItem__SetEquipStatus(this, this->fields.equipIdList, v28);
@@ -7950,10 +7950,10 @@ void PartyOrganizationListViewItem__Swap(
   int64_t fatigureTime; // [xsp+D8h] [xbp-A8h]
   bool haveIndividualityServant; // [xsp+E8h] [xbp-98h]
 
-  if ( (byte_4C33428 & 1) == 0 )
+  if ( (byte_4C3EA12 & 1) == 0 )
   {
-    sub_1C32C20(&int___TypeInfo);
-    byte_4C33428 = 1;
+    sub_1C37058(&int___TypeInfo);
+    byte_4C3EA12 = 1;
   }
   p_userServantEntity = &this->fields.userServantEntity;
   userServantEntity = this->fields.userServantEntity;
@@ -7980,7 +7980,7 @@ void PartyOrganizationListViewItem__Swap(
   haveIndividualityServant = this->fields.haveIndividualityServant;
   v15 = *(_QWORD *)&this->fields._SvtPoint_k__BackingField;
   if ( !item )
-    sub_1C32E7C(p_userServantEntity);
+    sub_1C372B4(p_userServantEntity);
   IsDispSvtPoint_k__BackingField = this->fields._IsDispSvtPoint_k__BackingField;
   equipIdList = this->fields.equipIdList;
   equipSvtIdList = (System_Array_o *)this->fields.equipSvtIdList;
@@ -8005,22 +8005,22 @@ void PartyOrganizationListViewItem__Swap(
   EquipFriendShipSkillChange_k__BackingField = this->fields._EquipFriendShipSkillChange_k__BackingField;
   v16 = item->fields.userServantEntity;
   this->fields.userServantEntity = v16;
-  sub_1C32BC4((CGThumbnailListItem_o *)p_userServantEntity, (int32_t)v16, notChangeInitPos, method);
+  sub_1C36FFC((CGThumbnailListItem_o *)p_userServantEntity, (int32_t)v16, notChangeInitPos, method);
   v17 = item->fields.followerInfo;
   this->fields.followerInfo = v17;
-  sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.followerInfo, (int32_t)v17, v18, v19);
+  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.followerInfo, (int32_t)v17, v18, v19);
   this->fields.isFollower = item->fields.isFollower;
   this->fields.isFixNpc = item->fields.isFixNpc;
   *(_QWORD *)&this->fields.followerClassId = *(_QWORD *)&item->fields.followerClassId;
   this->fields.followerIndex = item->fields.followerIndex;
   v20 = item->fields.servantEntity;
   this->fields.servantEntity = v20;
-  sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.servantEntity, (int32_t)v20, v21, v22);
+  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.servantEntity, (int32_t)v20, v21, v22);
   *(_OWORD *)&this->fields.cost = *(_OWORD *)&item->fields.cost;
   *(_OWORD *)&this->fields.rarityId = *(_OWORD *)&item->fields.rarityId;
   v23 = item->fields.commandCodeIdList;
   this->fields.commandCodeIdList = v23;
-  sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.commandCodeIdList, (int32_t)v23, v24, v25);
+  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.commandCodeIdList, (int32_t)v23, v24, v25);
   this->fields.isServantNumRestriction = item->fields.isServantNumRestriction;
   this->fields.isFixMultipleNpcRestriction = item->fields.isFixMultipleNpcRestriction;
   this->fields.isFixMultipleNpc = item->fields.isFixMultipleNpc;
@@ -8044,24 +8044,24 @@ void PartyOrganizationListViewItem__Swap(
   v57 = (char)v13;
   v13 = &int___TypeInfo;
   v31 = v30;
-  v32 = sub_1C32D5C(v30, int___TypeInfo);
+  v32 = sub_1C37194(v30, int___TypeInfo);
   if ( !v32
     || (*p_equipSvtIdList = (struct System_Int32_array *)v32,
-        v33 = sub_1C32D5C(v31, int___TypeInfo),
+        v33 = sub_1C37194(v31, int___TypeInfo),
         LOBYTE(v13) = v57,
         v34 = v33,
         !v33) )
   {
-    sub_1C3313C(v31);
+    sub_1C37574(v31);
 LABEL_9:
     v34 = 0;
     *p_equipSvtIdList = 0;
   }
-  sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.equipSvtIdList, v34, v26, v27);
+  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.equipSvtIdList, v34, v26, v27);
   PartyOrganizationListViewItem__SetEquipStatus(this, item->fields.equipIdList, v35);
   v36 = item->fields.friendPointCampaignEntityList;
   this->fields.friendPointCampaignEntityList = v36;
-  sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.friendPointCampaignEntityList, (int32_t)v36, v37, v38);
+  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.friendPointCampaignEntityList, (int32_t)v36, v37, v38);
   this->fields._IsDispSvtPoint_k__BackingField = item->fields._IsDispSvtPoint_k__BackingField;
   *(_QWORD *)&this->fields._SvtPoint_k__BackingField = *(_QWORD *)&item->fields._SvtPoint_k__BackingField;
   this->fields._IsAllOutBattle_k__BackingField = item->fields._IsAllOutBattle_k__BackingField;
@@ -8080,21 +8080,21 @@ LABEL_9:
   this->fields._IsUseGrandBoard_k__BackingField = item->fields._IsUseGrandBoard_k__BackingField;
   this->fields._EquipFriendShipSkillChange_k__BackingField = item->fields._EquipFriendShipSkillChange_k__BackingField;
   item->fields.userServantEntity = userServantEntity;
-  sub_1C32BC4((CGThumbnailListItem_o *)&item->fields.userServantEntity, (int32_t)userServantEntity, v39, v40);
+  sub_1C36FFC((CGThumbnailListItem_o *)&item->fields.userServantEntity, (int32_t)userServantEntity, v39, v40);
   item->fields.followerInfo = followerInfo;
-  sub_1C32BC4((CGThumbnailListItem_o *)&item->fields.followerInfo, (int32_t)followerInfo, v41, v42);
+  sub_1C36FFC((CGThumbnailListItem_o *)&item->fields.followerInfo, (int32_t)followerInfo, v41, v42);
   *(_QWORD *)&item->fields.followerClassId = v7;
   item->fields.isFollower = isFollower;
   item->fields.servantEntity = servantEntity;
   item->fields.isFixNpc = isFixNpc;
   item->fields.followerIndex = followerIndex;
-  sub_1C32BC4((CGThumbnailListItem_o *)&item->fields.servantEntity, (int32_t)servantEntity, v43, v44);
+  sub_1C36FFC((CGThumbnailListItem_o *)&item->fields.servantEntity, (int32_t)servantEntity, v43, v44);
   *(_QWORD *)&item->fields.cost = v10;
   *(_QWORD *)&item->fields.atk = v9;
   *(_QWORD *)&item->fields.rarityId = v12;
   *(_QWORD *)&item->fields.frameType = v11;
   item->fields.commandCodeIdList = commandCodeIdList;
-  sub_1C32BC4((CGThumbnailListItem_o *)&item->fields.commandCodeIdList, (int32_t)commandCodeIdList, v45, v46);
+  sub_1C36FFC((CGThumbnailListItem_o *)&item->fields.commandCodeIdList, (int32_t)commandCodeIdList, v45, v46);
   *(_QWORD *)&item->fields.isQuestRestriction = v14;
   item->fields.isFatigureRecover = (char)v13;
   item->fields.isServantNumRestriction = isServantNumRestriction;
@@ -8114,18 +8114,18 @@ LABEL_9:
   if ( !v49 )
     goto LABEL_17;
   v50 = v49;
-  v51 = sub_1C32D5C(v49, int___TypeInfo);
-  if ( !v51 || (*v29 = (struct System_Int32_array *)v51, v52 = sub_1C32D5C(v50, int___TypeInfo), v53 = v52, !v52) )
+  v51 = sub_1C37194(v49, int___TypeInfo);
+  if ( !v51 || (*v29 = (struct System_Int32_array *)v51, v52 = sub_1C37194(v50, int___TypeInfo), v53 = v52, !v52) )
   {
-    sub_1C3313C(v50);
+    sub_1C37574(v50);
 LABEL_17:
     v53 = 0;
     *v29 = 0;
   }
-  sub_1C32BC4((CGThumbnailListItem_o *)&item->fields.equipSvtIdList, v53, v47, v48);
+  sub_1C36FFC((CGThumbnailListItem_o *)&item->fields.equipSvtIdList, v53, v47, v48);
   PartyOrganizationListViewItem__SetEquipStatus(item, equipIdList, v54);
   item->fields.friendPointCampaignEntityList = friendPointCampaignEntityList;
-  sub_1C32BC4(
+  sub_1C36FFC(
     (CGThumbnailListItem_o *)&item->fields.friendPointCampaignEntityList,
     (int32_t)friendPointCampaignEntityList,
     v55,
@@ -8181,19 +8181,19 @@ void PartyOrganizationListViewItem__SwapEquip(
   int32_t v28; // w11
   const MethodInfo *v29; // x2
 
-  if ( (byte_4C33429 & 1) == 0 )
+  if ( (byte_4C3EA13 & 1) == 0 )
   {
-    sub_1C32C20(&int___TypeInfo);
-    sub_1C32C20(&long___TypeInfo);
-    byte_4C33429 = 1;
+    sub_1C37058(&int___TypeInfo);
+    sub_1C37058(&long___TypeInfo);
+    byte_4C3EA13 = 1;
   }
   p_equipIdList = &this->fields.equipIdList;
   IsNullOrEmpty = BasicHelper__IsNullOrEmpty((System_Collections_ICollection_o *)this->fields.equipIdList, 0);
   if ( IsNullOrEmpty )
   {
-    v7 = sub_1C32CC8(long___TypeInfo, 1);
+    v7 = sub_1C37100(long___TypeInfo, 1);
     *p_equipIdList = (struct System_Int64_array *)v7;
-    sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.equipIdList, v7, v8, v9);
+    sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.equipIdList, v7, v8, v9);
   }
   if ( !item )
     goto LABEL_22;
@@ -8201,9 +8201,9 @@ void PartyOrganizationListViewItem__SwapEquip(
   IsNullOrEmpty = BasicHelper__IsNullOrEmpty((System_Collections_ICollection_o *)item->fields.equipIdList, 0);
   if ( IsNullOrEmpty )
   {
-    v11 = sub_1C32CC8(long___TypeInfo, 1);
+    v11 = sub_1C37100(long___TypeInfo, 1);
     *v10 = (struct System_Int64_array *)v11;
-    sub_1C32BC4((CGThumbnailListItem_o *)&item->fields.equipIdList, v11, v12, v13);
+    sub_1C36FFC((CGThumbnailListItem_o *)&item->fields.equipIdList, v11, v12, v13);
   }
   v14 = *p_equipIdList;
   if ( !*p_equipIdList )
@@ -8217,23 +8217,23 @@ void PartyOrganizationListViewItem__SwapEquip(
     || (v16 = v14->m_Items[0], v14->m_Items[0] = v15->m_Items[0], !LODWORD(v15->max_length)) )
   {
 LABEL_23:
-    sub_1C32E84(IsNullOrEmpty);
+    sub_1C372BC(IsNullOrEmpty);
   }
   v15->m_Items[0] = v16;
   p_equipSvtIdList = &this->fields.equipSvtIdList;
   if ( BasicHelper__IsNullOrEmpty((System_Collections_ICollection_o *)this->fields.equipSvtIdList, 0) )
   {
-    v18 = sub_1C32CC8(int___TypeInfo, 1);
+    v18 = sub_1C37100(int___TypeInfo, 1);
     *p_equipSvtIdList = (struct System_Int32_array *)v18;
-    sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.equipSvtIdList, v18, v19, v20);
+    sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.equipSvtIdList, v18, v19, v20);
   }
   v21 = &item->fields.equipSvtIdList;
   IsNullOrEmpty = BasicHelper__IsNullOrEmpty((System_Collections_ICollection_o *)item->fields.equipSvtIdList, 0);
   if ( IsNullOrEmpty )
   {
-    v23 = sub_1C32CC8(int___TypeInfo, 1);
+    v23 = sub_1C37100(int___TypeInfo, 1);
     *v21 = (struct System_Int32_array *)v23;
-    sub_1C32BC4((CGThumbnailListItem_o *)&item->fields.equipSvtIdList, v23, v24, v25);
+    sub_1C36FFC((CGThumbnailListItem_o *)&item->fields.equipSvtIdList, v23, v24, v25);
   }
   v26 = *p_equipSvtIdList;
   if ( !*p_equipSvtIdList )
@@ -8243,7 +8243,7 @@ LABEL_23:
   v27 = *v21;
   if ( !*v21 )
 LABEL_22:
-    sub_1C32E7C(IsNullOrEmpty);
+    sub_1C372B4(IsNullOrEmpty);
   if ( !LODWORD(v27->max_length) )
     goto LABEL_23;
   v28 = v26->m_Items[0];
@@ -8302,20 +8302,20 @@ void PartyOrganizationListViewItem__UpdateServantInfo(PartyOrganizationListViewI
   QuestPhaseEntity_o *entity; // [xsp+B8h] [xbp-68h] BYREF
   CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o v39; // 0:x0.16
 
-  if ( (byte_4C3344F & 1) == 0 )
+  if ( (byte_4C3EA39 & 1) == 0 )
   {
-    sub_1C32C20(&Method_DataManager_GetMaster_QuestPhaseMaster___);
-    sub_1C32C20(&Method_DataManager_GetMaster_UserServantMaster___);
-    sub_1C32C20(&DataManager_TypeInfo);
-    sub_1C32C20(&Method_DataMasterBase_UserServantMaster__UserServantEntity__long__GetEntity__);
-    sub_1C32C20(&Method_DataMasterBase_UserServantMaster__UserServantEntity__long__isEntityExistsFromId__);
-    sub_1C32C20(&long___TypeInfo);
-    sub_1C32C20(&Method_System_Collections_Generic_List_UserServantEntity__get_Count__);
-    sub_1C32C20(&Method_System_Collections_Generic_List_UserServantEntity__get_Item__);
-    sub_1C32C20(&Method_System_Collections_Generic_List_UserServantEntity__set_Item__);
-    sub_1C32C20(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
-    sub_1C32C20(&CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo);
-    byte_4C3344F = 1;
+    sub_1C37058(&Method_DataManager_GetMaster_QuestPhaseMaster___);
+    sub_1C37058(&Method_DataManager_GetMaster_UserServantMaster___);
+    sub_1C37058(&DataManager_TypeInfo);
+    sub_1C37058(&Method_DataMasterBase_UserServantMaster__UserServantEntity__long__GetEntity__);
+    sub_1C37058(&Method_DataMasterBase_UserServantMaster__UserServantEntity__long__isEntityExistsFromId__);
+    sub_1C37058(&long___TypeInfo);
+    sub_1C37058(&Method_System_Collections_Generic_List_UserServantEntity__get_Count__);
+    sub_1C37058(&Method_System_Collections_Generic_List_UserServantEntity__get_Item__);
+    sub_1C37058(&Method_System_Collections_Generic_List_UserServantEntity__set_Item__);
+    sub_1C37058(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
+    sub_1C37058(&CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo);
+    byte_4C3EA39 = 1;
   }
   entity = 0;
   IsNullOrEmpty = BasicHelper__IsNullOrEmpty(
@@ -8331,15 +8331,15 @@ void PartyOrganizationListViewItem__UpdateServantInfo(PartyOrganizationListViewI
     {
       if ( !DataManager_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-      Master_object = DataManager__GetMaster_object_((const MethodInfo_30DD39C *)Method_DataManager_GetMaster_UserServantMaster___);
-      IsNullOrEmpty = sub_1C32CC8(long___TypeInfo, 1);
+      Master_object = DataManager__GetMaster_object_((const MethodInfo_30E7C04 *)Method_DataManager_GetMaster_UserServantMaster___);
+      IsNullOrEmpty = sub_1C37100(long___TypeInfo, 1);
       if ( !this->fields.equipUserServantEntityList )
         goto LABEL_44;
       v12 = IsNullOrEmpty;
       IsNullOrEmpty = (__int64)System_Collections_Generic_List_object___get_Item(
                                  (System_Collections_Generic_List_object__o *)this->fields.equipUserServantEntityList,
                                  v10,
-                                 (const MethodInfo_37984EC *)Method_System_Collections_Generic_List_UserServantEntity__get_Item__);
+                                 (const MethodInfo_37A2D54 *)Method_System_Collections_Generic_List_UserServantEntity__get_Item__);
       if ( !IsNullOrEmpty )
         goto LABEL_44;
       v13 = *(_OWORD *)(IsNullOrEmpty + 32);
@@ -8348,7 +8348,7 @@ void PartyOrganizationListViewItem__UpdateServantInfo(PartyOrganizationListViewI
       if ( !CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo);
       v36 = v37;
-      IsNullOrEmpty = CodeStage_AntiCheat_ObscuredTypes_ObscuredLong__op_Implicit_48891308(&v36, 0);
+      IsNullOrEmpty = CodeStage_AntiCheat_ObscuredTypes_ObscuredLong__op_Implicit_48934420(&v36, 0);
       if ( !v12 )
         goto LABEL_44;
       if ( !*(_DWORD *)(v12 + 24) )
@@ -8359,20 +8359,20 @@ void PartyOrganizationListViewItem__UpdateServantInfo(PartyOrganizationListViewI
       IsNullOrEmpty = DataMasterBase_object__object__long___isEntityExistsFromId(
                         (DataMasterBase_TMaster__TEntity__PKType__o *)Master_object,
                         (System_Int64_array *)v12,
-                        (const MethodInfo_3398370 *)Method_DataMasterBase_UserServantMaster__UserServantEntity__long__isEntityExistsFromId__);
+                        (const MethodInfo_33A2BD8 *)Method_DataMasterBase_UserServantMaster__UserServantEntity__long__isEntityExistsFromId__);
       if ( (IsNullOrEmpty & 1) != 0 )
       {
         v14 = this->fields.equipUserServantEntityList;
         if ( !DataManager_TypeInfo->_2.cctor_finished )
           j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-        IsNullOrEmpty = (__int64)DataManager__GetMaster_object_((const MethodInfo_30DD39C *)Method_DataManager_GetMaster_UserServantMaster___);
+        IsNullOrEmpty = (__int64)DataManager__GetMaster_object_((const MethodInfo_30E7C04 *)Method_DataManager_GetMaster_UserServantMaster___);
         if ( !this->fields.equipUserServantEntityList )
           goto LABEL_44;
         v15 = (DataMasterBase_TMaster__TEntity__PKType__o *)IsNullOrEmpty;
         IsNullOrEmpty = (__int64)System_Collections_Generic_List_object___get_Item(
                                    (System_Collections_Generic_List_object__o *)this->fields.equipUserServantEntityList,
                                    v10,
-                                   (const MethodInfo_37984EC *)Method_System_Collections_Generic_List_UserServantEntity__get_Item__);
+                                   (const MethodInfo_37A2D54 *)Method_System_Collections_Generic_List_UserServantEntity__get_Item__);
         if ( !IsNullOrEmpty )
           goto LABEL_44;
         v16 = *(_OWORD *)(IsNullOrEmpty + 32);
@@ -8381,20 +8381,20 @@ void PartyOrganizationListViewItem__UpdateServantInfo(PartyOrganizationListViewI
         if ( !CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo->_2.cctor_finished )
           j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo);
         v35 = v37;
-        IsNullOrEmpty = CodeStage_AntiCheat_ObscuredTypes_ObscuredLong__op_Implicit_48891308(&v35, 0);
+        IsNullOrEmpty = CodeStage_AntiCheat_ObscuredTypes_ObscuredLong__op_Implicit_48934420(&v35, 0);
         if ( !v15 )
           goto LABEL_44;
         IsNullOrEmpty = (__int64)DataMasterBase_object__object__long___GetEntity(
                                    v15,
                                    IsNullOrEmpty,
-                                   (const MethodInfo_3398D94 *)Method_DataMasterBase_UserServantMaster__UserServantEntity__long__GetEntity__);
+                                   (const MethodInfo_33A35FC *)Method_DataMasterBase_UserServantMaster__UserServantEntity__long__GetEntity__);
         if ( !v14 )
           goto LABEL_44;
         System_Collections_Generic_List_object___set_Item(
           (System_Collections_Generic_List_object__o *)v14,
           v10,
           (Il2CppObject *)IsNullOrEmpty,
-          (const MethodInfo_3798540 *)Method_System_Collections_Generic_List_UserServantEntity__set_Item__);
+          (const MethodInfo_37A2DA8 *)Method_System_Collections_Generic_List_UserServantEntity__set_Item__);
       }
       else
       {
@@ -8411,8 +8411,8 @@ void PartyOrganizationListViewItem__UpdateServantInfo(PartyOrganizationListViewI
   {
     if ( !DataManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-    v5 = DataManager__GetMaster_object_((const MethodInfo_30DD39C *)Method_DataManager_GetMaster_UserServantMaster___);
-    IsNullOrEmpty = sub_1C32CC8(long___TypeInfo, 1);
+    v5 = DataManager__GetMaster_object_((const MethodInfo_30E7C04 *)Method_DataManager_GetMaster_UserServantMaster___);
+    IsNullOrEmpty = sub_1C37100(long___TypeInfo, 1);
     v6 = *p_userServantEntity;
     if ( !*p_userServantEntity )
       goto LABEL_44;
@@ -8423,19 +8423,19 @@ void PartyOrganizationListViewItem__UpdateServantInfo(PartyOrganizationListViewI
     if ( !CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo);
     v34 = v37;
-    IsNullOrEmpty = CodeStage_AntiCheat_ObscuredTypes_ObscuredLong__op_Implicit_48891308(&v34, 0);
+    IsNullOrEmpty = CodeStage_AntiCheat_ObscuredTypes_ObscuredLong__op_Implicit_48934420(&v34, 0);
     if ( !v8 )
       goto LABEL_44;
     if ( !*(_DWORD *)(v8 + 24) )
 LABEL_69:
-      sub_1C32E84(IsNullOrEmpty);
+      sub_1C372BC(IsNullOrEmpty);
     *(_QWORD *)(v8 + 32) = IsNullOrEmpty;
     if ( !v5 )
       goto LABEL_44;
     if ( !DataMasterBase_object__object__long___isEntityExistsFromId(
             (DataMasterBase_TMaster__TEntity__PKType__o *)v5,
             (System_Int64_array *)v8,
-            (const MethodInfo_3398370 *)Method_DataMasterBase_UserServantMaster__UserServantEntity__long__isEntityExistsFromId__) )
+            (const MethodInfo_33A2BD8 *)Method_DataMasterBase_UserServantMaster__UserServantEntity__long__isEntityExistsFromId__) )
     {
 LABEL_18:
       this->fields._IsDisappearSvt_k__BackingField = 1;
@@ -8448,7 +8448,7 @@ LABEL_18:
       goto LABEL_18;
     if ( !DataManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-    IsNullOrEmpty = (__int64)DataManager__GetMaster_object_((const MethodInfo_30DD39C *)Method_DataManager_GetMaster_UserServantMaster___);
+    IsNullOrEmpty = (__int64)DataManager__GetMaster_object_((const MethodInfo_30E7C04 *)Method_DataManager_GetMaster_UserServantMaster___);
     v17 = *p_userServantEntity;
     if ( !*p_userServantEntity )
       goto LABEL_44;
@@ -8459,15 +8459,15 @@ LABEL_18:
     if ( !CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo);
     v33 = v37;
-    IsNullOrEmpty = CodeStage_AntiCheat_ObscuredTypes_ObscuredLong__op_Implicit_48891308(&v33, 0);
+    IsNullOrEmpty = CodeStage_AntiCheat_ObscuredTypes_ObscuredLong__op_Implicit_48934420(&v33, 0);
     if ( !v19 )
       goto LABEL_44;
     v20 = DataMasterBase_object__object__long___GetEntity(
             v19,
             IsNullOrEmpty,
-            (const MethodInfo_3398D94 *)Method_DataMasterBase_UserServantMaster__UserServantEntity__long__GetEntity__);
+            (const MethodInfo_33A35FC *)Method_DataMasterBase_UserServantMaster__UserServantEntity__long__GetEntity__);
     this->fields.userServantEntity = (struct UserServantEntity_o *)v20;
-    sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.userServantEntity, (int32_t)v20, v21, v22);
+    sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.userServantEntity, (int32_t)v20, v21, v22);
     IsNullOrEmpty = (__int64)this->fields.userServantEntity;
     if ( !IsNullOrEmpty )
       goto LABEL_44;
@@ -8496,21 +8496,21 @@ LABEL_18:
       j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
     *(_QWORD *)&v39.fields.currentCryptoKey = v26;
     *(_QWORD *)&v39.fields.fakeValue = v25;
-    IsNullOrEmpty = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_48887784(v39, 0);
+    IsNullOrEmpty = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_48930896(v39, 0);
     v27 = this->fields.userServantEntity;
     this->fields.svtLimitCount = IsNullOrEmpty;
     if ( !v27 )
       goto LABEL_44;
     CommandCodeIdList = UserServantEntity__getCommandCodeIdList(v27, 0);
     this->fields.commandCodeIdList = CommandCodeIdList;
-    sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.commandCodeIdList, (int32_t)CommandCodeIdList, v29, v30);
+    sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.commandCodeIdList, (int32_t)CommandCodeIdList, v29, v30);
     IsNullOrEmpty = (__int64)this->fields.userServantEntity;
     if ( !IsNullOrEmpty )
       goto LABEL_44;
     this->fields._IsGrandServant_k__BackingField = UserServantEntity__IsGrandServant(
                                                      (UserServantEntity_o *)IsNullOrEmpty,
                                                      0);
-    IsNullOrEmpty = (__int64)DataManager__GetMaster_object_((const MethodInfo_30DD39C *)Method_DataManager_GetMaster_QuestPhaseMaster___);
+    IsNullOrEmpty = (__int64)DataManager__GetMaster_object_((const MethodInfo_30E7C04 *)Method_DataManager_GetMaster_QuestPhaseMaster___);
     questRestrictionInfo = this->fields.questRestrictionInfo;
     if ( !questRestrictionInfo || !IsNullOrEmpty )
       goto LABEL_44;
@@ -8545,7 +8545,7 @@ LABEL_67:
         }
       }
 LABEL_44:
-      sub_1C32E7C(IsNullOrEmpty);
+      sub_1C372B4(IsNullOrEmpty);
     }
   }
 }
@@ -8562,11 +8562,11 @@ void PartyOrganizationListViewItem__UpdateStartingMemberFriendshipUp(
   PartyServantListViewItem_o *v7; // x1
   const MethodInfo *v8; // x2
 
-  if ( (byte_4C3344E & 1) == 0 )
+  if ( (byte_4C3EA38 & 1) == 0 )
   {
-    sub_1C32C20(&UnityEngine_Object_TypeInfo);
-    this = (PartyOrganizationListViewItem_o *)sub_1C32C20(&PartyOrganizationListViewObject_TypeInfo);
-    byte_4C3344E = 1;
+    sub_1C37058(&UnityEngine_Object_TypeInfo);
+    this = (PartyOrganizationListViewItem_o *)sub_1C37058(&PartyOrganizationListViewObject_TypeInfo);
+    byte_4C3EA38 = 1;
   }
   if ( !item )
     goto LABEL_13;
@@ -8576,8 +8576,8 @@ void PartyOrganizationListViewItem__UpdateStartingMemberFriendshipUp(
          viewObject->klass->_2.naturalAligment < (unsigned int)naturalAligment)
      || (PartyOrganizationListViewObject_c *)viewObject->klass->_2.typeHierarchy[naturalAligment - 1] != PartyOrganizationListViewObject_TypeInfo) )
   {
-    v6 = (PartyOrganizationListViewItem_o *)sub_1C3313C(item->fields.viewObject);
-    PartyOrganizationListViewItem__Modify_34151644(v6, v7, v8);
+    v6 = (PartyOrganizationListViewItem_o *)sub_1C37574(item->fields.viewObject);
+    PartyOrganizationListViewItem__Modify_34247276(v6, v7, v8);
   }
   else
   {
@@ -8595,7 +8595,7 @@ void PartyOrganizationListViewItem__UpdateStartingMemberFriendshipUp(
         return;
       }
 LABEL_13:
-      sub_1C32E7C(this);
+      sub_1C372B4(this);
     }
   }
 }
@@ -8698,41 +8698,41 @@ System_String_o *PartyOrganizationListViewItem__get_CostumeName(
   ServantCostumeEntity_o *Entity; // x0
   LocalizationManager_c *v11; // x0
 
-  if ( (byte_4C3344A & 1) == 0 )
+  if ( (byte_4C3EA34 & 1) == 0 )
   {
-    sub_1C32C20(&Method_DataManager_GetMasterData_ServantCostumeMaster___);
-    sub_1C32C20(&LocalizationManager_TypeInfo);
-    sub_1C32C20(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
-    sub_1C32C20(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-    byte_4C3344A = 1;
+    sub_1C37058(&Method_DataManager_GetMasterData_ServantCostumeMaster___);
+    sub_1C37058(&LocalizationManager_TypeInfo);
+    sub_1C37058(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
+    sub_1C37058(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    byte_4C3EA34 = 1;
   }
   DispImageLimitCount = PartyOrganizationListViewItem__GetDispImageLimitCount(this, method);
   if ( DispImageLimitCount >= 11 )
   {
     v4 = DispImageLimitCount;
-    Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39E2904 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39ED16C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
     if ( !Instance )
       goto LABEL_17;
     MasterData_object = DataManager__GetMasterData_object_(
                           (DataManager_o *)Instance,
-                          (const MethodInfo_30DD3F0 *)Method_DataManager_GetMasterData_ServantCostumeMaster___);
+                          (const MethodInfo_30E7C58 *)Method_DataManager_GetMasterData_ServantCostumeMaster___);
     SvtId = PartyOrganizationListViewItem__get_SvtId(this, v7);
     if ( !CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
-    Instance = (Il2CppObject *)CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_48887784(SvtId, 0);
+    Instance = (Il2CppObject *)CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_48930896(SvtId, 0);
     if ( !MasterData_object )
 LABEL_17:
-      sub_1C32E7C(Instance);
+      sub_1C372B4(Instance);
     Entity = ServantCostumeMaster__GetEntity((ServantCostumeMaster_o *)MasterData_object, (int32_t)Instance, v4, 0);
     if ( Entity )
       return ServantCostumeEntity__getShortName(Entity, 0);
   }
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-  if ( !byte_4C32D4C )
+  if ( !byte_4C3E2C9 )
   {
-    sub_1C32C20(&LocalizationManager_TypeInfo);
-    byte_4C32D4C = 1;
+    sub_1C37058(&LocalizationManager_TypeInfo);
+    byte_4C3E2C9 = 1;
   }
   v11 = LocalizationManager_TypeInfo;
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
@@ -8796,10 +8796,10 @@ int32_t PartyOrganizationListViewItem__get_EquipCost(PartyOrganizationListViewIt
 {
   void *equipServantEntityList; // x0
 
-  if ( (byte_4C33439 & 1) == 0 )
+  if ( (byte_4C3EA23 & 1) == 0 )
   {
-    sub_1C32C20(&Method_System_Collections_Generic_List_ServantEntity__get_Item__);
-    byte_4C33439 = 1;
+    sub_1C37058(&Method_System_Collections_Generic_List_ServantEntity__get_Item__);
+    byte_4C3EA23 = 1;
   }
   if ( this->fields.isFollower
     || !this->fields.servantEntity
@@ -8812,9 +8812,9 @@ int32_t PartyOrganizationListViewItem__get_EquipCost(PartyOrganizationListViewIt
     || (equipServantEntityList = System_Collections_Generic_List_object___get_Item(
                                    (System_Collections_Generic_List_object__o *)equipServantEntityList,
                                    0,
-                                   (const MethodInfo_37984EC *)Method_System_Collections_Generic_List_ServantEntity__get_Item__)) == 0 )
+                                   (const MethodInfo_37A2D54 *)Method_System_Collections_Generic_List_ServantEntity__get_Item__)) == 0 )
   {
-    sub_1C32E7C(equipServantEntityList);
+    sub_1C372B4(equipServantEntityList);
   }
   return *((_DWORD *)equipServantEntityList + 38);
 }
@@ -8852,12 +8852,12 @@ int32_t PartyOrganizationListViewItem__get_EquipLimitCount(
   struct QuestRestrictionInfo_o *questRestrictionInfo; // x8
   CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o v14; // 0:x0.16
 
-  if ( (byte_4C3343E & 1) == 0 )
+  if ( (byte_4C3EA28 & 1) == 0 )
   {
-    sub_1C32C20(&Method_System_Collections_Generic_List_ServantEntity__get_Count__);
-    sub_1C32C20(&Method_System_Collections_Generic_List_UserServantEntity__get_Item__);
-    sub_1C32C20(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
-    byte_4C3343E = 1;
+    sub_1C37058(&Method_System_Collections_Generic_List_ServantEntity__get_Count__);
+    sub_1C37058(&Method_System_Collections_Generic_List_UserServantEntity__get_Item__);
+    sub_1C37058(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
+    byte_4C3EA28 = 1;
   }
   IsNullOrEmpty = (System_Collections_Generic_List_object__o *)BasicHelper__IsNullOrEmpty(
                                                                  (System_Collections_ICollection_o *)this->fields.equipUserServantEntityList,
@@ -8904,9 +8904,9 @@ int32_t PartyOrganizationListViewItem__get_EquipLimitCount(
           (IsNullOrEmpty = (System_Collections_Generic_List_object__o *)System_Collections_Generic_List_object___get_Item(
                                                                           IsNullOrEmpty,
                                                                           v9,
-                                                                          (const MethodInfo_37984EC *)Method_System_Collections_Generic_List_UserServantEntity__get_Item__)) == 0) )
+                                                                          (const MethodInfo_37A2D54 *)Method_System_Collections_Generic_List_UserServantEntity__get_Item__)) == 0) )
     {
-      sub_1C32E7C(IsNullOrEmpty);
+      sub_1C372B4(IsNullOrEmpty);
     }
     items = IsNullOrEmpty[2].fields._items;
     v10 = *(_QWORD *)&IsNullOrEmpty[2].fields._size;
@@ -8914,7 +8914,7 @@ int32_t PartyOrganizationListViewItem__get_EquipLimitCount(
       j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
     *(_QWORD *)&v14.fields.currentCryptoKey = items;
     *(_QWORD *)&v14.fields.fakeValue = v10;
-    return CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_48887784(v14, 0);
+    return CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_48930896(v14, 0);
   }
 }
 
@@ -8925,10 +8925,10 @@ int32_t PartyOrganizationListViewItem__get_EquipLimitCountMax(
 {
   void *equipServantEntityList; // x0
 
-  if ( (byte_4C3343F & 1) == 0 )
+  if ( (byte_4C3EA29 & 1) == 0 )
   {
-    sub_1C32C20(&Method_System_Collections_Generic_List_ServantEntity__get_Item__);
-    byte_4C3343F = 1;
+    sub_1C37058(&Method_System_Collections_Generic_List_ServantEntity__get_Item__);
+    byte_4C3EA29 = 1;
   }
   if ( BasicHelper__IsNullOrEmpty((System_Collections_ICollection_o *)this->fields.equipServantEntityList, 0) )
     return 0;
@@ -8937,9 +8937,9 @@ int32_t PartyOrganizationListViewItem__get_EquipLimitCountMax(
     || (equipServantEntityList = System_Collections_Generic_List_object___get_Item(
                                    (System_Collections_Generic_List_object__o *)equipServantEntityList,
                                    0,
-                                   (const MethodInfo_37984EC *)Method_System_Collections_Generic_List_ServantEntity__get_Item__)) == 0 )
+                                   (const MethodInfo_37A2D54 *)Method_System_Collections_Generic_List_ServantEntity__get_Item__)) == 0 )
   {
-    sub_1C32E7C(equipServantEntityList);
+    sub_1C372B4(equipServantEntityList);
   }
   return *((_DWORD *)equipServantEntityList + 22);
 }
@@ -8952,11 +8952,11 @@ System_String_o *PartyOrganizationListViewItem__get_EquipName(
   System_String_o *v3; // x20
   System_Collections_Generic_List_object__o *equipServantEntityList; // x0
 
-  if ( (byte_4C33440 & 1) == 0 )
+  if ( (byte_4C3EA2A & 1) == 0 )
   {
-    sub_1C32C20(&Method_System_Collections_Generic_List_ServantEntity__get_Item__);
-    sub_1C32C20(&StringLiteral_1/*""*/);
-    byte_4C33440 = 1;
+    sub_1C37058(&Method_System_Collections_Generic_List_ServantEntity__get_Item__);
+    sub_1C37058(&StringLiteral_1/*""*/);
+    byte_4C3EA2A = 1;
   }
   v3 = (System_String_o *)StringLiteral_1/*""*/;
   if ( BasicHelper__IsNullOrEmpty((System_Collections_ICollection_o *)this->fields.equipServantEntityList, 0) )
@@ -8966,9 +8966,9 @@ System_String_o *PartyOrganizationListViewItem__get_EquipName(
     || (equipServantEntityList = (System_Collections_Generic_List_object__o *)System_Collections_Generic_List_object___get_Item(
                                                                                 equipServantEntityList,
                                                                                 0,
-                                                                                (const MethodInfo_37984EC *)Method_System_Collections_Generic_List_ServantEntity__get_Item__)) == 0 )
+                                                                                (const MethodInfo_37A2D54 *)Method_System_Collections_Generic_List_ServantEntity__get_Item__)) == 0 )
   {
-    sub_1C32E7C(equipServantEntityList);
+    sub_1C372B4(equipServantEntityList);
   }
   return ServantEntity__getName((ServantEntity_o *)equipServantEntityList, -1, -1, 0, 0);
 }
@@ -8988,12 +8988,12 @@ CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o PartyOrganizationListViewItem__g
   __int64 v9; // x1
   CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o result; // 0:x0.16
 
-  if ( (byte_4C3343C & 1) == 0 )
+  if ( (byte_4C3EA26 & 1) == 0 )
   {
-    sub_1C32C20(&Method_System_Collections_Generic_List_ServantEntity__get_Count__);
-    sub_1C32C20(&Method_System_Collections_Generic_List_ServantEntity__get_Item__);
-    sub_1C32C20(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
-    byte_4C3343C = 1;
+    sub_1C37058(&Method_System_Collections_Generic_List_ServantEntity__get_Count__);
+    sub_1C37058(&Method_System_Collections_Generic_List_ServantEntity__get_Item__);
+    sub_1C37058(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
+    byte_4C3EA26 = 1;
   }
   if ( !CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
@@ -9010,9 +9010,9 @@ CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o PartyOrganizationListViewItem__g
           (equipServantEntityList = (System_Collections_Generic_List_object__o *)System_Collections_Generic_List_object___get_Item(
                                                                                    equipServantEntityList,
                                                                                    DisplayEquipIndex_k__BackingField,
-                                                                                   (const MethodInfo_37984EC *)Method_System_Collections_Generic_List_ServantEntity__get_Item__)) == 0) )
+                                                                                   (const MethodInfo_37A2D54 *)Method_System_Collections_Generic_List_ServantEntity__get_Item__)) == 0) )
     {
-      sub_1C32E7C(equipServantEntityList);
+      sub_1C372B4(equipServantEntityList);
     }
     items = equipServantEntityList->fields._items;
     v5 = *(_QWORD *)&equipServantEntityList->fields._size;
@@ -9041,34 +9041,34 @@ System_Collections_Generic_List_int__o *PartyOrganizationListViewItem__get_Equip
   System_Collections_Generic_List_Enumerator_object__o v13; // [xsp+20h] [xbp-60h] BYREF
   CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o v14; // 0:x0.16
 
-  if ( (byte_4C3343D & 1) == 0 )
+  if ( (byte_4C3EA27 & 1) == 0 )
   {
-    sub_1C32C20(&Method_System_Collections_Generic_List_Enumerator_ServantEntity__Dispose__);
-    sub_1C32C20(&Method_System_Collections_Generic_List_Enumerator_ServantEntity__MoveNext__);
-    sub_1C32C20(&Method_System_Collections_Generic_List_Enumerator_ServantEntity__get_Current__);
-    sub_1C32C20(&Method_System_Collections_Generic_List_int__Add__);
-    sub_1C32C20(&Method_System_Collections_Generic_List_ServantEntity__GetEnumerator__);
-    sub_1C32C20(&Method_System_Collections_Generic_List_int___ctor__);
-    sub_1C32C20(&System_Collections_Generic_List_int__TypeInfo);
-    sub_1C32C20(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
-    byte_4C3343D = 1;
+    sub_1C37058(&Method_System_Collections_Generic_List_Enumerator_ServantEntity__Dispose__);
+    sub_1C37058(&Method_System_Collections_Generic_List_Enumerator_ServantEntity__MoveNext__);
+    sub_1C37058(&Method_System_Collections_Generic_List_Enumerator_ServantEntity__get_Current__);
+    sub_1C37058(&Method_System_Collections_Generic_List_int__Add__);
+    sub_1C37058(&Method_System_Collections_Generic_List_ServantEntity__GetEnumerator__);
+    sub_1C37058(&Method_System_Collections_Generic_List_int___ctor__);
+    sub_1C37058(&System_Collections_Generic_List_int__TypeInfo);
+    sub_1C37058(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
+    byte_4C3EA27 = 1;
   }
   memset(&v13, 0, sizeof(v13));
-  v3 = (System_Collections_Generic_List_int__o *)sub_1C32E6C(System_Collections_Generic_List_int__TypeInfo);
+  v3 = (System_Collections_Generic_List_int__o *)sub_1C372A4(System_Collections_Generic_List_int__TypeInfo);
   System_Collections_Generic_List_int____ctor(
     v3,
-    (const MethodInfo_377AF44 *)Method_System_Collections_Generic_List_int___ctor__);
+    (const MethodInfo_37857AC *)Method_System_Collections_Generic_List_int___ctor__);
   equipServantEntityList = this->fields.equipServantEntityList;
   if ( !equipServantEntityList )
-    sub_1C32E7C(0);
+    sub_1C372B4(0);
   System_Collections_Generic_List_object___GetEnumerator(
     (System_Collections_Generic_List_Enumerator_T__o *)&v12,
     (System_Collections_Generic_List_object__o *)equipServantEntityList,
-    (const MethodInfo_37992B4 *)Method_System_Collections_Generic_List_ServantEntity__GetEnumerator__);
+    (const MethodInfo_37A3B1C *)Method_System_Collections_Generic_List_ServantEntity__GetEnumerator__);
   v13 = v12;
   while ( System_Collections_Generic_List_Enumerator_object___MoveNext(
             &v13,
-            (const MethodInfo_3522FA8 *)Method_System_Collections_Generic_List_Enumerator_ServantEntity__MoveNext__) )
+            (const MethodInfo_352D810 *)Method_System_Collections_Generic_List_Enumerator_ServantEntity__MoveNext__) )
   {
     if ( v13.fields._current )
     {
@@ -9078,21 +9078,21 @@ System_Collections_Generic_List_int__o *PartyOrganizationListViewItem__get_Equip
         j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
       *(_QWORD *)&v14.fields.currentCryptoKey = klass;
       *(_QWORD *)&v14.fields.fakeValue = monitor;
-      v7 = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_48887784(v14, 0);
+      v7 = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_48930896(v14, 0);
       if ( !v3 )
-        sub_1C32E7C(v7);
+        sub_1C372B4(v7);
       items = v3->fields._items;
       v9 = Method_System_Collections_Generic_List_int__Add__;
       ++v3->fields._version;
       if ( !items )
-        sub_1C32E7C(v7);
+        sub_1C372B4(v7);
       size = v3->fields._size;
       if ( (unsigned int)size >= LODWORD(items->max_length) )
       {
         System_Collections_Generic_List_int___AddWithResize(
           v3,
           v7,
-          *(const MethodInfo_377B798 **)(*(_QWORD *)(v9[4] + 192LL) + 112LL));
+          *(const MethodInfo_3786000 **)(*(_QWORD *)(v9[4] + 192LL) + 112LL));
       }
       else
       {
@@ -9103,7 +9103,7 @@ System_Collections_Generic_List_int__o *PartyOrganizationListViewItem__get_Equip
   }
   System_Collections_Generic_List_Enumerator_object___Dispose(
     &v13,
-    (const MethodInfo_3522FA4 *)Method_System_Collections_Generic_List_Enumerator_ServantEntity__Dispose__);
+    (const MethodInfo_352D80C *)Method_System_Collections_Generic_List_Enumerator_ServantEntity__Dispose__);
   return v3;
 }
 
@@ -9157,12 +9157,12 @@ int64_t PartyOrganizationListViewItem__get_EquipUserSvtId(
   CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_o v8; // [xsp+0h] [xbp-60h] BYREF
   CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_o v9; // [xsp+20h] [xbp-40h]
 
-  if ( (byte_4C3343A & 1) == 0 )
+  if ( (byte_4C3EA24 & 1) == 0 )
   {
-    sub_1C32C20(&Method_System_Collections_Generic_List_UserServantEntity__get_Count__);
-    sub_1C32C20(&Method_System_Collections_Generic_List_UserServantEntity__get_Item__);
-    sub_1C32C20(&CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo);
-    byte_4C3343A = 1;
+    sub_1C37058(&Method_System_Collections_Generic_List_UserServantEntity__get_Count__);
+    sub_1C37058(&Method_System_Collections_Generic_List_UserServantEntity__get_Item__);
+    sub_1C37058(&CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo);
+    byte_4C3EA24 = 1;
   }
   IsNullOrEmpty = BasicHelper__IsNullOrEmpty(
                     (System_Collections_ICollection_o *)this->fields.equipUserServantEntityList,
@@ -9178,9 +9178,9 @@ int64_t PartyOrganizationListViewItem__get_EquipUserSvtId(
           (equipUserServantEntityList = (System_Collections_Generic_List_object__o *)System_Collections_Generic_List_object___get_Item(
                                                                                        equipUserServantEntityList,
                                                                                        DisplayEquipIndex_k__BackingField,
-                                                                                       (const MethodInfo_37984EC *)Method_System_Collections_Generic_List_UserServantEntity__get_Item__)) == 0) )
+                                                                                       (const MethodInfo_37A2D54 *)Method_System_Collections_Generic_List_UserServantEntity__get_Item__)) == 0) )
     {
-      sub_1C32E7C(equipUserServantEntityList);
+      sub_1C372B4(equipUserServantEntityList);
     }
     v7 = *(_OWORD *)&equipUserServantEntityList->fields._syncRoot;
     *(_OWORD *)&v9.fields.currentCryptoKey = *(_OWORD *)&equipUserServantEntityList->fields._items;
@@ -9188,7 +9188,7 @@ int64_t PartyOrganizationListViewItem__get_EquipUserSvtId(
     if ( !CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo);
     v8 = v9;
-    return CodeStage_AntiCheat_ObscuredTypes_ObscuredLong__op_Implicit_48891308(&v8, 0);
+    return CodeStage_AntiCheat_ObscuredTypes_ObscuredLong__op_Implicit_48934420(&v8, 0);
   }
   return result;
 }
@@ -9565,10 +9565,10 @@ bool PartyOrganizationListViewItem__get_IsStartingMember(
   BalanceConfig_c *v3; // x0
   int32_t NowPos_k__BackingField; // w19
 
-  if ( (byte_4C3344D & 1) == 0 )
+  if ( (byte_4C3EA37 & 1) == 0 )
   {
-    sub_1C32C20(&BalanceConfig_TypeInfo);
-    byte_4C3344D = 1;
+    sub_1C37058(&BalanceConfig_TypeInfo);
+    byte_4C3EA37 = 1;
   }
   v3 = BalanceConfig_TypeInfo;
   NowPos_k__BackingField = this->fields._NowPos_k__BackingField;
@@ -9692,13 +9692,13 @@ int32_t PartyOrganizationListViewItem__get_MargeAtk(PartyOrganizationListViewIte
   struct QuestRestrictionInfo_o *questRestrictionInfo; // x8
   System_Collections_Generic_List_Enumerator_object__o v11; // [xsp+8h] [xbp-48h] BYREF
 
-  if ( (byte_4C33436 & 1) == 0 )
+  if ( (byte_4C3EA20 & 1) == 0 )
   {
-    sub_1C32C20(&Method_System_Collections_Generic_List_Enumerator_UserServantEntity__Dispose__);
-    sub_1C32C20(&Method_System_Collections_Generic_List_Enumerator_UserServantEntity__MoveNext__);
-    sub_1C32C20(&Method_System_Collections_Generic_List_Enumerator_UserServantEntity__get_Current__);
-    sub_1C32C20(&Method_System_Collections_Generic_List_UserServantEntity__GetEnumerator__);
-    byte_4C33436 = 1;
+    sub_1C37058(&Method_System_Collections_Generic_List_Enumerator_UserServantEntity__Dispose__);
+    sub_1C37058(&Method_System_Collections_Generic_List_Enumerator_UserServantEntity__MoveNext__);
+    sub_1C37058(&Method_System_Collections_Generic_List_Enumerator_UserServantEntity__get_Current__);
+    sub_1C37058(&Method_System_Collections_Generic_List_UserServantEntity__GetEnumerator__);
+    byte_4C3EA20 = 1;
   }
   memset(&v11, 0, sizeof(v11));
   if ( this->fields.userServantEntity )
@@ -9711,22 +9711,22 @@ int32_t PartyOrganizationListViewItem__get_MargeAtk(PartyOrganizationListViewIte
       System_Collections_Generic_List_object___GetEnumerator(
         (System_Collections_Generic_List_Enumerator_T__o *)&v11,
         (System_Collections_Generic_List_object__o *)equipUserServantEntityList,
-        (const MethodInfo_37992B4 *)Method_System_Collections_Generic_List_UserServantEntity__GetEnumerator__);
+        (const MethodInfo_37A3B1C *)Method_System_Collections_Generic_List_UserServantEntity__GetEnumerator__);
       v8 = 0;
       while ( System_Collections_Generic_List_Enumerator_object___MoveNext(
                 &v11,
-                (const MethodInfo_3522FA8 *)Method_System_Collections_Generic_List_Enumerator_UserServantEntity__MoveNext__) )
+                (const MethodInfo_352D810 *)Method_System_Collections_Generic_List_Enumerator_UserServantEntity__MoveNext__) )
       {
         if ( v11.fields._current )
           v8 += *(_DWORD *)((char *)&v11.fields._current->klass + (unsigned __int64)&qword_108);
       }
       System_Collections_Generic_List_Enumerator_object___Dispose(
         &v11,
-        (const MethodInfo_3522FA4 *)Method_System_Collections_Generic_List_Enumerator_UserServantEntity__Dispose__);
+        (const MethodInfo_352D80C *)Method_System_Collections_Generic_List_Enumerator_UserServantEntity__Dispose__);
       return this->fields.atk + v8;
     }
 LABEL_23:
-    sub_1C32E7C(equipUserServantEntityList);
+    sub_1C372B4(equipUserServantEntityList);
   }
   if ( !this->fields.followerInfo )
     return 0;
@@ -9772,10 +9772,10 @@ int32_t PartyOrganizationListViewItem__get_MargeCost(PartyOrganizationListViewIt
   bool IsNullOrEmpty; // w0
   System_Collections_Generic_List_object__o *equipServantEntityList; // x0
 
-  if ( (byte_4C33438 & 1) == 0 )
+  if ( (byte_4C3EA22 & 1) == 0 )
   {
-    sub_1C32C20(&Method_System_Collections_Generic_List_ServantEntity__get_Item__);
-    byte_4C33438 = 1;
+    sub_1C37058(&Method_System_Collections_Generic_List_ServantEntity__get_Item__);
+    byte_4C3EA22 = 1;
   }
   if ( this->fields.isFollower || !this->fields.servantEntity )
     return 0;
@@ -9788,9 +9788,9 @@ int32_t PartyOrganizationListViewItem__get_MargeCost(PartyOrganizationListViewIt
       || (equipServantEntityList = (System_Collections_Generic_List_object__o *)System_Collections_Generic_List_object___get_Item(
                                                                                   equipServantEntityList,
                                                                                   0,
-                                                                                  (const MethodInfo_37984EC *)Method_System_Collections_Generic_List_ServantEntity__get_Item__)) == 0 )
+                                                                                  (const MethodInfo_37A2D54 *)Method_System_Collections_Generic_List_ServantEntity__get_Item__)) == 0 )
     {
-      sub_1C32E7C(equipServantEntityList);
+      sub_1C372B4(equipServantEntityList);
     }
     cost += LODWORD(equipServantEntityList[3].fields._syncRoot);
   }
@@ -9809,13 +9809,13 @@ int32_t PartyOrganizationListViewItem__get_MargeHp(PartyOrganizationListViewItem
   struct QuestRestrictionInfo_o *questRestrictionInfo; // x8
   System_Collections_Generic_List_Enumerator_object__o v11; // [xsp+8h] [xbp-48h] BYREF
 
-  if ( (byte_4C33437 & 1) == 0 )
+  if ( (byte_4C3EA21 & 1) == 0 )
   {
-    sub_1C32C20(&Method_System_Collections_Generic_List_Enumerator_UserServantEntity__Dispose__);
-    sub_1C32C20(&Method_System_Collections_Generic_List_Enumerator_UserServantEntity__MoveNext__);
-    sub_1C32C20(&Method_System_Collections_Generic_List_Enumerator_UserServantEntity__get_Current__);
-    sub_1C32C20(&Method_System_Collections_Generic_List_UserServantEntity__GetEnumerator__);
-    byte_4C33437 = 1;
+    sub_1C37058(&Method_System_Collections_Generic_List_Enumerator_UserServantEntity__Dispose__);
+    sub_1C37058(&Method_System_Collections_Generic_List_Enumerator_UserServantEntity__MoveNext__);
+    sub_1C37058(&Method_System_Collections_Generic_List_Enumerator_UserServantEntity__get_Current__);
+    sub_1C37058(&Method_System_Collections_Generic_List_UserServantEntity__GetEnumerator__);
+    byte_4C3EA21 = 1;
   }
   memset(&v11, 0, sizeof(v11));
   if ( this->fields.userServantEntity )
@@ -9828,22 +9828,22 @@ int32_t PartyOrganizationListViewItem__get_MargeHp(PartyOrganizationListViewItem
       System_Collections_Generic_List_object___GetEnumerator(
         (System_Collections_Generic_List_Enumerator_T__o *)&v11,
         (System_Collections_Generic_List_object__o *)equipUserServantEntityList,
-        (const MethodInfo_37992B4 *)Method_System_Collections_Generic_List_UserServantEntity__GetEnumerator__);
+        (const MethodInfo_37A3B1C *)Method_System_Collections_Generic_List_UserServantEntity__GetEnumerator__);
       v8 = 0;
       while ( System_Collections_Generic_List_Enumerator_object___MoveNext(
                 &v11,
-                (const MethodInfo_3522FA8 *)Method_System_Collections_Generic_List_Enumerator_UserServantEntity__MoveNext__) )
+                (const MethodInfo_352D810 *)Method_System_Collections_Generic_List_Enumerator_UserServantEntity__MoveNext__) )
       {
         if ( v11.fields._current )
           v8 += *(_DWORD *)((char *)&v11.fields._current->klass + (unsigned __int64)&qword_108 + 4);
       }
       System_Collections_Generic_List_Enumerator_object___Dispose(
         &v11,
-        (const MethodInfo_3522FA4 *)Method_System_Collections_Generic_List_Enumerator_UserServantEntity__Dispose__);
+        (const MethodInfo_352D80C *)Method_System_Collections_Generic_List_Enumerator_UserServantEntity__Dispose__);
       return this->fields.hp + v8;
     }
 LABEL_23:
-    sub_1C32E7C(equipUserServantEntityList);
+    sub_1C372B4(equipUserServantEntityList);
   }
   if ( !this->fields.followerInfo )
     return 0;
@@ -9981,27 +9981,27 @@ System_String_o *PartyOrganizationListViewItem__get_ServantName(
   const MethodInfo *v8; // x2
   System_String_o *ServantName; // x0
 
-  if ( (byte_4C33433 & 1) == 0 )
+  if ( (byte_4C3EA1D & 1) == 0 )
   {
-    sub_1C32C20(&Method_DataManager_GetMaster_ServantAddMaster___);
-    sub_1C32C20(&DataManager_TypeInfo);
-    sub_1C32C20(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
-    sub_1C32C20(&StringLiteral_1/*""*/);
-    byte_4C33433 = 1;
+    sub_1C37058(&Method_DataManager_GetMaster_ServantAddMaster___);
+    sub_1C37058(&DataManager_TypeInfo);
+    sub_1C37058(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
+    sub_1C37058(&StringLiteral_1/*""*/);
+    byte_4C3EA1D = 1;
   }
   if ( !DataManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-  Master_object = DataManager__GetMaster_object_((const MethodInfo_30DD39C *)Method_DataManager_GetMaster_ServantAddMaster___);
+  Master_object = DataManager__GetMaster_object_((const MethodInfo_30E7C04 *)Method_DataManager_GetMaster_ServantAddMaster___);
   if ( !this->fields.servantEntity )
     return (System_String_o *)StringLiteral_1/*""*/;
   v5 = (ServantAddMaster_o *)Master_object;
   SvtId = PartyOrganizationListViewItem__get_SvtId(this, v4);
   if ( !CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
-  v7 = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_48887784(SvtId, 0);
+  v7 = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_48930896(SvtId, 0);
   ServantName = PartyOrganizationListViewItem__GetServantName(this, -1, v8);
   if ( !v5 )
-    sub_1C32E7C(ServantName);
+    sub_1C372B4(ServantName);
   return ServantAddMaster__AddIdentifyText(v5, v7, ServantName, 0);
 }
 
@@ -10017,10 +10017,10 @@ CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o PartyOrganizationListViewItem__g
   struct ServantEntity_o *servantEntity; // x8
   CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o result; // 0:x0.16
 
-  if ( (byte_4C33432 & 1) == 0 )
+  if ( (byte_4C3EA1C & 1) == 0 )
   {
-    sub_1C32C20(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
-    byte_4C33432 = 1;
+    sub_1C37058(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
+    byte_4C3EA1C = 1;
   }
   if ( !CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
@@ -10056,17 +10056,17 @@ System_String_o *PartyOrganizationListViewItem__get_SvtNameText(
   _BOOL8 IsNpc; // x0
   struct FollowerInfo_o *v6; // x8
 
-  if ( (byte_4C33434 & 1) == 0 )
+  if ( (byte_4C3EA1E & 1) == 0 )
   {
-    sub_1C32C20(&StringLiteral_19066/*"error"*/);
-    byte_4C33434 = 1;
+    sub_1C37058(&StringLiteral_19069/*"error"*/);
+    byte_4C3EA1E = 1;
   }
   followerInfo = this->fields.followerInfo;
   if ( followerInfo && (IsNpc = FollowerInfo__get_IsNpc(followerInfo, 0)) )
   {
     v6 = this->fields.followerInfo;
     if ( !v6 )
-      sub_1C32E7C(IsNpc);
+      sub_1C372B4(IsNpc);
     return v6->fields.userName;
   }
   else if ( this->fields.servantEntity )
@@ -10075,7 +10075,7 @@ System_String_o *PartyOrganizationListViewItem__get_SvtNameText(
   }
   else
   {
-    return (System_String_o *)StringLiteral_19066/*"error"*/;
+    return (System_String_o *)StringLiteral_19069/*"error"*/;
   }
 }
 
@@ -10152,7 +10152,7 @@ void PartyOrganizationListViewItem__set_DuplicationEquipmentFlagList(
   const MethodInfo *v3; // x3
 
   this->fields._DuplicationEquipmentFlagList_k__BackingField = value;
-  sub_1C32BC4(
+  sub_1C36FFC(
     (CGThumbnailListItem_o *)&this->fields._DuplicationEquipmentFlagList_k__BackingField,
     (int32_t)value,
     (int32_t)method,
@@ -10357,7 +10357,7 @@ void PartyOrganizationListViewItem__set_WaveEnemyClassIds(
   const MethodInfo *v3; // x3
 
   this->fields._WaveEnemyClassIds_k__BackingField = value;
-  sub_1C32BC4(
+  sub_1C36FFC(
     (CGThumbnailListItem_o *)&this->fields._WaveEnemyClassIds_k__BackingField,
     (int32_t)value,
     (int32_t)method,
@@ -10371,15 +10371,15 @@ void PartyOrganizationListViewItem___c___cctor(const MethodInfo *method)
   int32_t v2; // w2
   const MethodInfo *v3; // x3
 
-  if ( (byte_4C33457 & 1) == 0 )
+  if ( (byte_4C3EA41 & 1) == 0 )
   {
-    sub_1C32C20(&PartyOrganizationListViewItem___c_TypeInfo);
-    byte_4C33457 = 1;
+    sub_1C37058(&PartyOrganizationListViewItem___c_TypeInfo);
+    byte_4C3EA41 = 1;
   }
-  v1 = (Il2CppObject *)sub_1C32E6C(PartyOrganizationListViewItem___c_TypeInfo);
+  v1 = (Il2CppObject *)sub_1C372A4(PartyOrganizationListViewItem___c_TypeInfo);
   System_Object___ctor(v1, 0);
   PartyOrganizationListViewItem___c_TypeInfo->static_fields->__9 = (struct PartyOrganizationListViewItem___c_o *)v1;
-  sub_1C32BC4((CGThumbnailListItem_o *)PartyOrganizationListViewItem___c_TypeInfo->static_fields, (int32_t)v1, v2, v3);
+  sub_1C36FFC((CGThumbnailListItem_o *)PartyOrganizationListViewItem___c_TypeInfo->static_fields, (int32_t)v1, v2, v3);
 }
 
 
@@ -10395,7 +10395,7 @@ System_String_o *PartyOrganizationListViewItem___c___AddFriendshipUpCampaignInfo
         const MethodInfo *method)
 {
   if ( !script )
-    sub_1C32E7C(this);
+    sub_1C372B4(this);
   return script->fields.eventCampaignBonusDetailNameTotal;
 }
 
@@ -10405,10 +10405,10 @@ bool PartyOrganizationListViewItem___c___AddFriendshipUpCampaignInfo_b__357_1(
         System_String_o *names,
         const MethodInfo *method)
 {
-  if ( (byte_4C33458 & 1) == 0 )
+  if ( (byte_4C3EA42 & 1) == 0 )
   {
-    sub_1C32C20(&StringLiteral_1/*""*/);
-    byte_4C33458 = 1;
+    sub_1C37058(&StringLiteral_1/*""*/);
+    byte_4C3EA42 = 1;
   }
   return System_String__op_Inequality(names, (System_String_o *)StringLiteral_1/*""*/, 0);
 }
@@ -10420,7 +10420,7 @@ System_String_o *PartyOrganizationListViewItem___c___AddFriendshipUpCampaignInfo
         const MethodInfo *method)
 {
   if ( !script )
-    sub_1C32E7C(this);
+    sub_1C372B4(this);
   return script->fields.eventCampaignBonusDetailName;
 }
 
@@ -10430,10 +10430,10 @@ bool PartyOrganizationListViewItem___c___AddFriendshipUpCampaignInfo_b__357_3(
         System_String_o *names,
         const MethodInfo *method)
 {
-  if ( (byte_4C33459 & 1) == 0 )
+  if ( (byte_4C3EA43 & 1) == 0 )
   {
-    sub_1C32C20(&StringLiteral_1/*""*/);
-    byte_4C33459 = 1;
+    sub_1C37058(&StringLiteral_1/*""*/);
+    byte_4C3EA43 = 1;
   }
   return System_String__op_Inequality(names, (System_String_o *)StringLiteral_1/*""*/, 0);
 }
@@ -10458,14 +10458,14 @@ bool PartyOrganizationListViewItem___c___CheckDuplicationGrandServantEquipment_b
   int32_t *p_offset; // x10
   __int64 v7; // x0
 
-  if ( (byte_4C3345A & 1) == 0 )
+  if ( (byte_4C3EA44 & 1) == 0 )
   {
-    sub_1C32C20(&Method_System_Linq_Enumerable_Count_long___);
-    this = (PartyOrganizationListViewItem___c_o *)sub_1C32C20(&System_Linq_IGrouping_long__long__TypeInfo);
-    byte_4C3345A = 1;
+    sub_1C37058(&Method_System_Linq_Enumerable_Count_long___);
+    this = (PartyOrganizationListViewItem___c_o *)sub_1C37058(&System_Linq_IGrouping_long__long__TypeInfo);
+    byte_4C3EA44 = 1;
   }
   if ( !id )
-    sub_1C32E7C(this);
+    sub_1C372B4(this);
   klass = id->klass;
   v5 = *(unsigned __int16 *)&id->klass->_2.rank;
   if ( *(_WORD *)&id->klass->_2.rank )
@@ -10483,12 +10483,12 @@ bool PartyOrganizationListViewItem___c___CheckDuplicationGrandServantEquipment_b
   else
   {
 LABEL_8:
-    v7 = sub_1C83438(id, System_Linq_IGrouping_long__long__TypeInfo, 0);
+    v7 = sub_1C87870(id, System_Linq_IGrouping_long__long__TypeInfo, 0);
   }
   return (*(__int64 (__fastcall **)(System_Linq_IGrouping_long__long__o *, _QWORD))v7)(id, *(_QWORD *)(v7 + 8)) >= 1
       && System_Linq_Enumerable__Count_long_(
            (System_Collections_Generic_IEnumerable_TSource__o *)id,
-           (const MethodInfo_30FD3AC *)Method_System_Linq_Enumerable_Count_long___) > 1;
+           (const MethodInfo_3107C14 *)Method_System_Linq_Enumerable_Count_long___) > 1;
 }
 
 
@@ -10502,13 +10502,13 @@ int64_t PartyOrganizationListViewItem___c___CheckDuplicationGrandServantEquipmen
   int32_t *p_offset; // x10
   __int64 v7; // x0
 
-  if ( (byte_4C3345B & 1) == 0 )
+  if ( (byte_4C3EA45 & 1) == 0 )
   {
-    this = (PartyOrganizationListViewItem___c_o *)sub_1C32C20(&System_Linq_IGrouping_long__long__TypeInfo);
-    byte_4C3345B = 1;
+    this = (PartyOrganizationListViewItem___c_o *)sub_1C37058(&System_Linq_IGrouping_long__long__TypeInfo);
+    byte_4C3EA45 = 1;
   }
   if ( !group )
-    sub_1C32E7C(this);
+    sub_1C372B4(this);
   klass = group->klass;
   v5 = *(unsigned __int16 *)&group->klass->_2.rank;
   if ( *(_WORD *)&group->klass->_2.rank )
@@ -10526,7 +10526,7 @@ int64_t PartyOrganizationListViewItem___c___CheckDuplicationGrandServantEquipmen
   else
   {
 LABEL_8:
-    v7 = sub_1C83438(group, System_Linq_IGrouping_long__long__TypeInfo, 0);
+    v7 = sub_1C87870(group, System_Linq_IGrouping_long__long__TypeInfo, 0);
   }
   return (*(__int64 (__fastcall **)(System_Linq_IGrouping_long__long__o *, _QWORD))v7)(group, *(_QWORD *)(v7 + 8));
 }
@@ -10538,7 +10538,7 @@ int32_t PartyOrganizationListViewItem___c___SetEquipStatus_b__161_0(
         const MethodInfo *method)
 {
   if ( !drop )
-    sub_1C32E7C(this);
+    sub_1C372B4(this);
   return drop->fields.eventId;
 }
 
@@ -10549,7 +10549,7 @@ int32_t PartyOrganizationListViewItem___c___SetEquipStatus_b__161_1(
         const MethodInfo *method)
 {
   if ( !drop )
-    sub_1C32E7C(this);
+    sub_1C372B4(this);
   return drop->fields.eventId;
 }
 
@@ -10573,10 +10573,10 @@ bool PartyOrganizationListViewItem___c__DisplayClass177_0___SetDuplicationGrandQ
 
   _4__this = this->fields.__4__this;
   if ( !_4__this || (equipIdList = _4__this->fields.equipIdList) == 0 )
-    sub_1C32E7C(this);
+    sub_1C372B4(this);
   i = this->fields.i;
   if ( (unsigned int)i >= LODWORD(equipIdList->max_length) )
-    sub_1C32E84(this);
+    sub_1C372BC(this);
   return equipIdList->m_Items[i] == id;
 }
 
@@ -10599,30 +10599,30 @@ bool PartyOrganizationListViewItem___c__DisplayClass365_0___GetCanOrganizationGr
   System_Int32_array *individuality; // x19
   System_Func_int__bool__o *v8; // x20
 
-  if ( (byte_4C3345C & 1) == 0 )
+  if ( (byte_4C3EA46 & 1) == 0 )
   {
-    sub_1C32C20(&Method_BasicHelper_Any_int____78062168);
-    sub_1C32C20(&System_Func_int__bool__TypeInfo);
-    sub_1C32C20(&Method_PartyOrganizationListViewItem___c__DisplayClass365_1__GetCanOrganizationGrandSvtIdList_b__1__);
-    sub_1C32C20(&PartyOrganizationListViewItem___c__DisplayClass365_1_TypeInfo);
-    byte_4C3345C = 1;
+    sub_1C37058(&Method_BasicHelper_Any_int____78107944);
+    sub_1C37058(&System_Func_int__bool__TypeInfo);
+    sub_1C37058(&Method_PartyOrganizationListViewItem___c__DisplayClass365_1__GetCanOrganizationGrandSvtIdList_b__1__);
+    sub_1C37058(&PartyOrganizationListViewItem___c__DisplayClass365_1_TypeInfo);
+    byte_4C3EA46 = 1;
   }
-  v5 = sub_1C32E6C(PartyOrganizationListViewItem___c__DisplayClass365_1_TypeInfo);
+  v5 = sub_1C372A4(PartyOrganizationListViewItem___c__DisplayClass365_1_TypeInfo);
   System_Object___ctor((Il2CppObject *)v5, 0);
   if ( !v5 )
-    sub_1C32E7C(v6);
+    sub_1C372B4(v6);
   *(_DWORD *)(v5 + 16) = classIndividuality;
   individuality = this->fields.individuality;
-  v8 = (System_Func_int__bool__o *)sub_1C32E6C(System_Func_int__bool__TypeInfo);
+  v8 = (System_Func_int__bool__o *)sub_1C372A4(System_Func_int__bool__TypeInfo);
   System_Func_int__bool____ctor(
     v8,
     (Il2CppObject *)v5,
     Method_PartyOrganizationListViewItem___c__DisplayClass365_1__GetCanOrganizationGrandSvtIdList_b__1__,
     0);
-  return BasicHelper__Any_int__51143952(
+  return BasicHelper__Any_int__51187064(
            individuality,
            (System_Func_T__bool__o *)v8,
-           (const MethodInfo_30C6510 *)Method_BasicHelper_Any_int____78062168);
+           (const MethodInfo_30D0D78 *)Method_BasicHelper_Any_int____78107944);
 }
 
 
@@ -10660,6 +10660,6 @@ bool PartyOrganizationListViewItem___c__DisplayClass366_0___IsEnabledChangeGrand
 
   grandGraphEntity = this->fields.grandGraphEntity;
   if ( !grandGraphEntity )
-    sub_1C32E7C(0);
+    sub_1C372B4(0);
   return GrandGraphEntity__CanSelectToGrand(grandGraphEntity, x, 0);
 }

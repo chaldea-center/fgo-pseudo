@@ -1,19 +1,57 @@
 void EffectEntity___ctor(EffectEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_4C37822 & 1) == 0 )
+  if ( (byte_4C42E1A & 1) == 0 )
   {
-    sub_1C32C20(&Method_DataEntityBase_int___ctor__);
-    byte_4C37822 = 1;
+    sub_1C37058(&Method_DataEntityBase_int___ctor__);
+    byte_4C42E1A = 1;
   }
   DataEntityBase_int____ctor(
     (DataEntityBase_int__o *)this,
-    (const MethodInfo_3394354 *)Method_DataEntityBase_int___ctor__);
+    (const MethodInfo_339EBBC *)Method_DataEntityBase_int___ctor__);
 }
 
 
 int32_t EffectEntity__CreatePrimaryKey(EffectEntity_o *this, const MethodInfo *method)
 {
   return this->fields.id;
+}
+
+
+bool EffectEntity__IsUseNodePositionOnly(
+        EffectEntity_o *this,
+        int32_t svtId,
+        int32_t limitCount,
+        const MethodInfo *method)
+{
+  int32_t IntValue; // w22
+  bool v8; // w23
+  AuraEffectPosOverwriteMaster_o *Master_object; // x0
+  AuraEffectPosOverwriteEntity_o *entity; // [xsp+8h] [xbp-38h] BYREF
+
+  if ( (byte_4C42E19 & 1) == 0 )
+  {
+    sub_1C37058(&Method_DataManager_GetMaster_AuraEffectPosOverwriteMaster___);
+    sub_1C37058(&DataManager_TypeInfo);
+    sub_1C37058(&StringLiteral_24485/*"useNodePositionOnly"*/);
+    byte_4C42E19 = 1;
+  }
+  entity = 0;
+  IntValue = EntityScriptUtil__GetIntValue(this->fields.script, (System_String_o *)StringLiteral_24485/*"useNodePositionOnly"*/, 0, 0);
+  v8 = IntValue == 1;
+  if ( !DataManager_TypeInfo->_2.cctor_finished )
+    j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
+  Master_object = (AuraEffectPosOverwriteMaster_o *)DataManager__GetMaster_object_((const MethodInfo_30E7C04 *)Method_DataManager_GetMaster_AuraEffectPosOverwriteMaster___);
+  if ( !Master_object )
+    goto LABEL_10;
+  if ( AuraEffectPosOverwriteMaster__TryGetEntity(Master_object, &entity, this->fields.id, svtId, limitCount, 0) )
+  {
+    Master_object = (AuraEffectPosOverwriteMaster_o *)entity;
+    if ( entity )
+      return AuraEffectPosOverwriteEntity__IsUseNodePositionOnly(entity, IntValue == 1, 0);
+LABEL_10:
+    sub_1C372B4(Master_object);
+  }
+  return v8;
 }
 
 

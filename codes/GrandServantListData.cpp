@@ -19,36 +19,36 @@ void GrandServantListData___ctor(GrandServantListData_o *this, const MethodInfo 
   __int64 monitor_low; // x10
   void **v20; // x8
 
-  if ( (byte_4C32792 & 1) == 0 )
+  if ( (byte_4C3DD7C & 1) == 0 )
   {
-    sub_1C32C20(&Method_DataManager_GetMaster_GrandGraphMaster___);
-    sub_1C32C20(&Method_DataManager_GetMaster_UserServantGrandMaster___);
-    sub_1C32C20(&DataManager_TypeInfo);
-    sub_1C32C20(&Method_DataMasterBase_UserServantGrandMaster__UserServantGrandEntity__string__getEntitys__);
-    sub_1C32C20(&GrandServantListSlotData_TypeInfo);
-    sub_1C32C20(&Method_System_Collections_Generic_List_GrandServantListSlotData__Add__);
-    sub_1C32C20(&Method_System_Collections_Generic_List_GrandServantListSlotData___ctor__);
-    sub_1C32C20(&System_Collections_Generic_List_GrandServantListSlotData__TypeInfo);
-    byte_4C32792 = 1;
+    sub_1C37058(&Method_DataManager_GetMaster_GrandGraphMaster___);
+    sub_1C37058(&Method_DataManager_GetMaster_UserServantGrandMaster___);
+    sub_1C37058(&DataManager_TypeInfo);
+    sub_1C37058(&Method_DataMasterBase_UserServantGrandMaster__UserServantGrandEntity__string__getEntitys__);
+    sub_1C37058(&GrandServantListSlotData_TypeInfo);
+    sub_1C37058(&Method_System_Collections_Generic_List_GrandServantListSlotData__Add__);
+    sub_1C37058(&Method_System_Collections_Generic_List_GrandServantListSlotData___ctor__);
+    sub_1C37058(&System_Collections_Generic_List_GrandServantListSlotData__TypeInfo);
+    byte_4C3DD7C = 1;
   }
-  v3 = (System_Collections_Generic_List_object__o *)sub_1C32E6C(System_Collections_Generic_List_GrandServantListSlotData__TypeInfo);
+  v3 = (System_Collections_Generic_List_object__o *)sub_1C372A4(System_Collections_Generic_List_GrandServantListSlotData__TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v3,
-    (const MethodInfo_3797F88 *)Method_System_Collections_Generic_List_GrandServantListSlotData___ctor__);
+    (const MethodInfo_37A27F0 *)Method_System_Collections_Generic_List_GrandServantListSlotData___ctor__);
   this->fields.slotDataList = (struct System_Collections_Generic_List_GrandServantListSlotData__o *)v3;
   p_fields = &this->fields;
-  sub_1C32BC4(&this->fields, v3);
+  sub_1C36FFC(&this->fields, v3);
   System_Object___ctor((Il2CppObject *)this, 0);
   this->fields._Kind_k__BackingField = 0;
   if ( !DataManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-  Master_object = DataManager__GetMaster_object_((const MethodInfo_30DD39C *)Method_DataManager_GetMaster_UserServantGrandMaster___);
+  Master_object = DataManager__GetMaster_object_((const MethodInfo_30E7C04 *)Method_DataManager_GetMaster_UserServantGrandMaster___);
   if ( !Master_object )
     goto LABEL_19;
   Entitys = DataMasterBase_object__object__object___getEntitys(
               (DataMasterBase_TMaster__TEntity__PKType__o *)Master_object,
-              (const MethodInfo_339A574 *)Method_DataMasterBase_UserServantGrandMaster__UserServantGrandEntity__string__getEntitys__);
-  Master_object = DataManager__GetMaster_object_((const MethodInfo_30DD39C *)Method_DataManager_GetMaster_GrandGraphMaster___);
+              (const MethodInfo_33A4DDC *)Method_DataMasterBase_UserServantGrandMaster__UserServantGrandEntity__string__getEntitys__);
+  Master_object = DataManager__GetMaster_object_((const MethodInfo_30E7C04 *)Method_DataManager_GetMaster_GrandGraphMaster___);
   if ( !Entitys )
     goto LABEL_19;
   max_length = Entitys->max_length;
@@ -58,7 +58,7 @@ void GrandServantListData___ctor(GrandServantListData_o *this, const MethodInfo 
     while ( 1 )
     {
       if ( v8 >= max_length )
-        sub_1C32E84(Master_object);
+        sub_1C372BC(Master_object);
       v9 = &Entitys->obj.klass + (int)v8;
       v10 = (UserServantGrandEntity_o *)v9[4];
       if ( !v10 )
@@ -69,8 +69,8 @@ void GrandServantListData___ctor(GrandServantListData_o *this, const MethodInfo 
         grandGraphId = v10->fields.grandGraphId;
         EquipUserServantIdList = UserServantGrandEntity__GetEquipUserServantIdList((UserServantGrandEntity_o *)v9[4], 0);
         v14 = UserServantGrandEntity__IsChangeFriendShipSvtEquipSkill(v10, 0);
-        v15 = (GrandServantListSlotData_o *)sub_1C32E6C(GrandServantListSlotData_TypeInfo);
-        GrandServantListSlotData___ctor_32857916(v15, grandGraphId, userSvtId, EquipUserServantIdList, v14, v16);
+        v15 = (GrandServantListSlotData_o *)sub_1C372A4(GrandServantListSlotData_TypeInfo);
+        GrandServantListSlotData___ctor_32953548(v15, grandGraphId, userSvtId, EquipUserServantIdList, v14, v16);
         Master_object = (Il2CppObject *)p_fields->slotDataList;
         if ( !p_fields->slotDataList )
           break;
@@ -85,14 +85,14 @@ void GrandServantListData___ctor(GrandServantListData_o *this, const MethodInfo 
           System_Collections_Generic_List_object___AddWithResize(
             (System_Collections_Generic_List_object__o *)Master_object,
             (Il2CppObject *)v15,
-            *(const MethodInfo_37987BC **)(*(_QWORD *)(v18[4] + 192LL) + 112LL));
+            *(const MethodInfo_37A3024 **)(*(_QWORD *)(v18[4] + 192LL) + 112LL));
         }
         else
         {
           v20 = &klass->_1.image + monitor_low;
           LODWORD(Master_object[1].monitor) = monitor_low + 1;
           v20[4] = v15;
-          Master_object = (Il2CppObject *)sub_1C32BC4(v20 + 4, v15);
+          Master_object = (Il2CppObject *)sub_1C36FFC(v20 + 4, v15);
         }
       }
       max_length = Entitys->max_length;
@@ -100,12 +100,12 @@ void GrandServantListData___ctor(GrandServantListData_o *this, const MethodInfo 
         return;
     }
 LABEL_19:
-    sub_1C32E7C(Master_object);
+    sub_1C372B4(Master_object);
   }
 }
 
 
-void GrandServantListData___ctor_32858896(
+void GrandServantListData___ctor_32954528(
         GrandServantListData_o *this,
         FollowerInfo_o *followerInfo,
         bool isUseGrandSupport,
@@ -130,21 +130,21 @@ void GrandServantListData___ctor_32858896(
   __int64 size; // x10
   Il2CppClass **v24; // x0
 
-  if ( (byte_4C32793 & 1) == 0 )
+  if ( (byte_4C3DD7D & 1) == 0 )
   {
-    sub_1C32C20(&GrandServantListSlotData_TypeInfo);
-    sub_1C32C20(&Method_System_Collections_Generic_List_GrandServantListSlotData__Add__);
-    sub_1C32C20(&Method_System_Collections_Generic_List_GrandServantListSlotData___ctor__);
-    sub_1C32C20(&System_Collections_Generic_List_GrandServantListSlotData__TypeInfo);
-    byte_4C32793 = 1;
+    sub_1C37058(&GrandServantListSlotData_TypeInfo);
+    sub_1C37058(&Method_System_Collections_Generic_List_GrandServantListSlotData__Add__);
+    sub_1C37058(&Method_System_Collections_Generic_List_GrandServantListSlotData___ctor__);
+    sub_1C37058(&System_Collections_Generic_List_GrandServantListSlotData__TypeInfo);
+    byte_4C3DD7D = 1;
   }
-  v7 = (System_Collections_Generic_List_object__o *)sub_1C32E6C(System_Collections_Generic_List_GrandServantListSlotData__TypeInfo);
+  v7 = (System_Collections_Generic_List_object__o *)sub_1C372A4(System_Collections_Generic_List_GrandServantListSlotData__TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v7,
-    (const MethodInfo_3797F88 *)Method_System_Collections_Generic_List_GrandServantListSlotData___ctor__);
+    (const MethodInfo_37A27F0 *)Method_System_Collections_Generic_List_GrandServantListSlotData___ctor__);
   this->fields.slotDataList = (struct System_Collections_Generic_List_GrandServantListSlotData__o *)v7;
   p_fields = &this->fields;
-  sub_1C32BC4(&this->fields, v7);
+  sub_1C36FFC(&this->fields, v7);
   System_Object___ctor((Il2CppObject *)this, 0);
   if ( isUseGrandSupport )
     v10 = 1;
@@ -164,7 +164,7 @@ void GrandServantListData___ctor_32858896(
     while ( 1 )
     {
       if ( v13 >= max_length )
-        sub_1C32E84(v9);
+        sub_1C372BC(v9);
       v14 = userSvtGrandHash->m_Items[v13];
       if ( !v14 )
         break;
@@ -174,8 +174,8 @@ void GrandServantListData___ctor_32858896(
         slotDataList = (System_Collections_Generic_List_object__o *)p_fields->slotDataList;
         grandGraphId = v14->fields.grandGraphId;
         pushUserSvtId = followerInfo->fields.pushUserSvtId;
-        v19 = (GrandServantListSlotData_o *)sub_1C32E6C(GrandServantListSlotData_TypeInfo);
-        GrandServantListSlotData___ctor_32859352(v19, grandGraphId, v14, userSvtId == pushUserSvtId, v20);
+        v19 = (GrandServantListSlotData_o *)sub_1C372A4(GrandServantListSlotData_TypeInfo);
+        GrandServantListSlotData___ctor_32954984(v19, grandGraphId, v14, userSvtId == pushUserSvtId, v20);
         if ( !slotDataList )
           break;
         items = slotDataList->fields._items;
@@ -189,14 +189,14 @@ void GrandServantListData___ctor_32858896(
           System_Collections_Generic_List_object___AddWithResize(
             slotDataList,
             (Il2CppObject *)v19,
-            *(const MethodInfo_37987BC **)(*(_QWORD *)(v22[4] + 192LL) + 112LL));
+            *(const MethodInfo_37A3024 **)(*(_QWORD *)(v22[4] + 192LL) + 112LL));
         }
         else
         {
           v24 = &items->obj.klass + size;
           slotDataList->fields._size = size + 1;
           v24[4] = (Il2CppClass *)v19;
-          v9 = sub_1C32BC4(v24 + 4, v19);
+          v9 = sub_1C36FFC(v24 + 4, v19);
         }
       }
       max_length = userSvtGrandHash->max_length;
@@ -204,12 +204,12 @@ void GrandServantListData___ctor_32858896(
         return;
     }
 LABEL_20:
-    sub_1C32E7C(v9);
+    sub_1C372B4(v9);
   }
 }
 
 
-void GrandServantListData___ctor_32859808(
+void GrandServantListData___ctor_32955440(
         GrandServantListData_o *this,
         OtherUserGameEntity_o *otherUserInfo,
         const MethodInfo *method)
@@ -232,21 +232,21 @@ void GrandServantListData___ctor_32859808(
   __int64 size; // x10
   Il2CppClass **v21; // x0
 
-  if ( (byte_4C32794 & 1) == 0 )
+  if ( (byte_4C3DD7E & 1) == 0 )
   {
-    sub_1C32C20(&GrandServantListSlotData_TypeInfo);
-    sub_1C32C20(&Method_System_Collections_Generic_List_GrandServantListSlotData__Add__);
-    sub_1C32C20(&Method_System_Collections_Generic_List_GrandServantListSlotData___ctor__);
-    sub_1C32C20(&System_Collections_Generic_List_GrandServantListSlotData__TypeInfo);
-    byte_4C32794 = 1;
+    sub_1C37058(&GrandServantListSlotData_TypeInfo);
+    sub_1C37058(&Method_System_Collections_Generic_List_GrandServantListSlotData__Add__);
+    sub_1C37058(&Method_System_Collections_Generic_List_GrandServantListSlotData___ctor__);
+    sub_1C37058(&System_Collections_Generic_List_GrandServantListSlotData__TypeInfo);
+    byte_4C3DD7E = 1;
   }
-  v5 = (System_Collections_Generic_List_object__o *)sub_1C32E6C(System_Collections_Generic_List_GrandServantListSlotData__TypeInfo);
+  v5 = (System_Collections_Generic_List_object__o *)sub_1C372A4(System_Collections_Generic_List_GrandServantListSlotData__TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v5,
-    (const MethodInfo_3797F88 *)Method_System_Collections_Generic_List_GrandServantListSlotData___ctor__);
+    (const MethodInfo_37A27F0 *)Method_System_Collections_Generic_List_GrandServantListSlotData___ctor__);
   this->fields.slotDataList = (struct System_Collections_Generic_List_GrandServantListSlotData__o *)v5;
   p_fields = &this->fields;
-  sub_1C32BC4(&this->fields, v5);
+  sub_1C36FFC(&this->fields, v5);
   System_Object___ctor((Il2CppObject *)this, 0);
   *(_WORD *)&this->fields._IsOtherUserData_k__BackingField = 513;
   if ( !otherUserInfo )
@@ -261,7 +261,7 @@ void GrandServantListData___ctor_32859808(
     while ( 1 )
     {
       if ( v10 >= max_length )
-        sub_1C32E84(v7);
+        sub_1C372BC(v7);
       v11 = userSvtGrandHash->m_Items[v10];
       if ( !v11 )
         break;
@@ -272,8 +272,8 @@ void GrandServantListData___ctor_32859808(
         grandGraphId = v11->fields.grandGraphId;
         userSvtId = v11->fields.userSvtId;
         pushUserSvtId = otherUserInfo->fields.pushUserSvtId;
-        v16 = (GrandServantListSlotData_o *)sub_1C32E6C(GrandServantListSlotData_TypeInfo);
-        GrandServantListSlotData___ctor_32859352(v16, grandGraphId, v11, userSvtId == pushUserSvtId, v17);
+        v16 = (GrandServantListSlotData_o *)sub_1C372A4(GrandServantListSlotData_TypeInfo);
+        GrandServantListSlotData___ctor_32954984(v16, grandGraphId, v11, userSvtId == pushUserSvtId, v17);
         if ( !slotDataList )
           break;
         items = slotDataList->fields._items;
@@ -287,14 +287,14 @@ void GrandServantListData___ctor_32859808(
           System_Collections_Generic_List_object___AddWithResize(
             slotDataList,
             (Il2CppObject *)v16,
-            *(const MethodInfo_37987BC **)(*(_QWORD *)(v19[4] + 192LL) + 112LL));
+            *(const MethodInfo_37A3024 **)(*(_QWORD *)(v19[4] + 192LL) + 112LL));
         }
         else
         {
           v21 = &items->obj.klass + size;
           slotDataList->fields._size = size + 1;
           v21[4] = (Il2CppClass *)v16;
-          v7 = sub_1C32BC4(v21 + 4, v16);
+          v7 = sub_1C36FFC(v21 + 4, v16);
         }
       }
       max_length = userSvtGrandHash->max_length;
@@ -302,7 +302,7 @@ void GrandServantListData___ctor_32859808(
         return;
     }
 LABEL_17:
-    sub_1C32E7C(v7);
+    sub_1C372B4(v7);
   }
 }
 
@@ -325,37 +325,37 @@ GrandServantListSlotData_o *GrandServantListData__GetSlotData(
   __int64 size; // x10
   Il2CppClass **v16; // x8
 
-  if ( (byte_4C32795 & 1) == 0 )
+  if ( (byte_4C3DD7F & 1) == 0 )
   {
-    sub_1C32C20(&Method_System_Linq_Enumerable_FirstOrDefault_GrandServantListSlotData___);
-    sub_1C32C20(&System_Func_GrandServantListSlotData__bool__TypeInfo);
-    sub_1C32C20(&GrandServantListSlotData_TypeInfo);
-    sub_1C32C20(&Method_System_Collections_Generic_List_GrandServantListSlotData__Add__);
-    sub_1C32C20(&Method_GrandServantListData___c__DisplayClass17_0__GetSlotData_b__0__);
-    sub_1C32C20(&GrandServantListData___c__DisplayClass17_0_TypeInfo);
-    byte_4C32795 = 1;
+    sub_1C37058(&Method_System_Linq_Enumerable_FirstOrDefault_GrandServantListSlotData___);
+    sub_1C37058(&System_Func_GrandServantListSlotData__bool__TypeInfo);
+    sub_1C37058(&GrandServantListSlotData_TypeInfo);
+    sub_1C37058(&Method_System_Collections_Generic_List_GrandServantListSlotData__Add__);
+    sub_1C37058(&Method_GrandServantListData___c__DisplayClass17_0__GetSlotData_b__0__);
+    sub_1C37058(&GrandServantListData___c__DisplayClass17_0_TypeInfo);
+    byte_4C3DD7F = 1;
   }
-  v5 = sub_1C32E6C(GrandServantListData___c__DisplayClass17_0_TypeInfo);
+  v5 = sub_1C372A4(GrandServantListData___c__DisplayClass17_0_TypeInfo);
   System_Object___ctor((Il2CppObject *)v5, 0);
   if ( !v5 )
     goto LABEL_11;
   *(_DWORD *)(v5 + 16) = grandGraphId;
   slotDataList = this->fields.slotDataList;
-  v8 = (System_Func_object__bool__o *)sub_1C32E6C(System_Func_GrandServantListSlotData__bool__TypeInfo);
+  v8 = (System_Func_object__bool__o *)sub_1C372A4(System_Func_GrandServantListSlotData__bool__TypeInfo);
   System_Func_object__bool____ctor(
     v8,
     (Il2CppObject *)v5,
     Method_GrandServantListData___c__DisplayClass17_0__GetSlotData_b__0__,
     0);
-  v9 = System_Linq_Enumerable__FirstOrDefault_object__51408536(
+  v9 = System_Linq_Enumerable__FirstOrDefault_object__51451648(
          (System_Collections_Generic_IEnumerable_TSource__o *)slotDataList,
          (System_Func_TSource__bool__o *)v8,
-         (const MethodInfo_3106E98 *)Method_System_Linq_Enumerable_FirstOrDefault_GrandServantListSlotData___);
+         (const MethodInfo_3111700 *)Method_System_Linq_Enumerable_FirstOrDefault_GrandServantListSlotData___);
   if ( v9 )
     return (GrandServantListSlotData_o *)v9;
   v10 = *(_DWORD *)(v5 + 16);
   IsOtherUserData_k__BackingField = this->fields._IsOtherUserData_k__BackingField;
-  v9 = (Il2CppObject *)sub_1C32E6C(GrandServantListSlotData_TypeInfo);
+  v9 = (Il2CppObject *)sub_1C372A4(GrandServantListSlotData_TypeInfo);
   GrandServantListSlotData___ctor((GrandServantListSlotData_o *)v9, v10, IsOtherUserData_k__BackingField, v12);
   v6 = (System_Collections_Generic_List_object__o *)this->fields.slotDataList;
   if ( !v6
@@ -365,7 +365,7 @@ GrandServantListSlotData_o *GrandServantListData__GetSlotData(
         !items) )
   {
 LABEL_11:
-    sub_1C32E7C(v6);
+    sub_1C372B4(v6);
   }
   size = v6->fields._size;
   if ( (unsigned int)size >= LODWORD(items->max_length) )
@@ -373,14 +373,14 @@ LABEL_11:
     System_Collections_Generic_List_object___AddWithResize(
       v6,
       v9,
-      *(const MethodInfo_37987BC **)(*(_QWORD *)(v14[4] + 192LL) + 112LL));
+      *(const MethodInfo_37A3024 **)(*(_QWORD *)(v14[4] + 192LL) + 112LL));
   }
   else
   {
     v16 = &items->obj.klass + size;
     v6->fields._size = size + 1;
     v16[4] = (Il2CppClass *)v9;
-    sub_1C32BC4(v16 + 4, v9);
+    sub_1C36FFC(v16 + 4, v9);
   }
   return (GrandServantListSlotData_o *)v9;
 }
@@ -392,7 +392,7 @@ void GrandServantListData__SetQuestData(
         const MethodInfo *method)
 {
   this->fields._QuestData_k__BackingField = questData;
-  sub_1C32BC4(&this->fields._QuestData_k__BackingField, questData);
+  sub_1C36FFC(&this->fields._QuestData_k__BackingField, questData);
 }
 
 
@@ -434,7 +434,7 @@ void GrandServantListData__set_QuestData(
         const MethodInfo *method)
 {
   this->fields._QuestData_k__BackingField = value;
-  sub_1C32BC4(&this->fields._QuestData_k__BackingField, value);
+  sub_1C36FFC(&this->fields._QuestData_k__BackingField, value);
 }
 
 
@@ -452,6 +452,6 @@ bool GrandServantListData___c__DisplayClass17_0___GetSlotData_b__0(
         const MethodInfo *method)
 {
   if ( !d )
-    sub_1C32E7C(this);
+    sub_1C372B4(this);
   return d->fields._GrandGraphId_k__BackingField == this->fields.grandGraphId;
 }

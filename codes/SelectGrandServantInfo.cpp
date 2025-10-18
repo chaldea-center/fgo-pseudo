@@ -23,28 +23,28 @@ void SelectGrandServantInfo___ctor(
   GrandGraphDetailEntity_o *entity; // [xsp+8h] [xbp-48h] BYREF
   CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o v24; // 0:x0.16
 
-  if ( (byte_4C326A5 & 1) == 0 )
+  if ( (byte_4C3DC8F & 1) == 0 )
   {
-    sub_1C32C20(&Method_DataManager_GetMaster_GrandGraphDetailMaster___);
-    sub_1C32C20(&Method_DataManager_GetMaster_UserServantGrandMaster___);
-    sub_1C32C20(&DataManager_TypeInfo);
-    sub_1C32C20(&Method_System_Linq_Enumerable_Any_UserServantEntity___);
-    sub_1C32C20(&System_Func_UserServantEntity__bool__TypeInfo);
-    sub_1C32C20(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
-    sub_1C32C20(&Method_SelectGrandServantInfo___c__DisplayClass28_0___ctor_b__0__);
-    sub_1C32C20(&SelectGrandServantInfo___c__DisplayClass28_0_TypeInfo);
-    byte_4C326A5 = 1;
+    sub_1C37058(&Method_DataManager_GetMaster_GrandGraphDetailMaster___);
+    sub_1C37058(&Method_DataManager_GetMaster_UserServantGrandMaster___);
+    sub_1C37058(&DataManager_TypeInfo);
+    sub_1C37058(&Method_System_Linq_Enumerable_Any_UserServantEntity___);
+    sub_1C37058(&System_Func_UserServantEntity__bool__TypeInfo);
+    sub_1C37058(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
+    sub_1C37058(&Method_SelectGrandServantInfo___c__DisplayClass28_0___ctor_b__0__);
+    sub_1C37058(&SelectGrandServantInfo___c__DisplayClass28_0_TypeInfo);
+    byte_4C3DC8F = 1;
   }
   entity = 0;
   System_Object___ctor((Il2CppObject *)this, 0);
-  v7 = sub_1C32E6C(SelectGrandServantInfo___c__DisplayClass28_0_TypeInfo);
+  v7 = sub_1C372A4(SelectGrandServantInfo___c__DisplayClass28_0_TypeInfo);
   System_Object___ctor((Il2CppObject *)v7, 0);
   this->fields._UserServantEntity_k__BackingField = userServantEntity;
   p_fields = &this->fields;
-  sub_1C32BC4(&this->fields, userServantEntity);
+  sub_1C36FFC(&this->fields, userServantEntity);
   if ( !DataManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-  Master_object = (GrandGraphDetailMaster_o *)DataManager__GetMaster_object_((const MethodInfo_30DD39C *)Method_DataManager_GetMaster_GrandGraphDetailMaster___);
+  Master_object = (GrandGraphDetailMaster_o *)DataManager__GetMaster_object_((const MethodInfo_30E7C04 *)Method_DataManager_GetMaster_GrandGraphDetailMaster___);
   if ( !grandGraphEntity )
     goto LABEL_31;
   v10 = Master_object;
@@ -63,7 +63,7 @@ void SelectGrandServantInfo___ctor(
   {
     v12 = entity;
     this->fields._GrandGraphDetailEntity_k__BackingField = entity;
-    sub_1C32BC4(&this->fields._GrandGraphDetailEntity_k__BackingField, v12);
+    sub_1C36FFC(&this->fields._GrandGraphDetailEntity_k__BackingField, v12);
     this->fields._IsValid_k__BackingField = GrandGraphEntity__CanSelectToGrand(
                                               grandGraphEntity,
                                               this->fields._UserServantEntity_k__BackingField,
@@ -71,7 +71,7 @@ void SelectGrandServantInfo___ctor(
   }
   if ( !DataManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-  Master_object = (GrandGraphDetailMaster_o *)DataManager__GetMaster_object_((const MethodInfo_30DD39C *)Method_DataManager_GetMaster_UserServantGrandMaster___);
+  Master_object = (GrandGraphDetailMaster_o *)DataManager__GetMaster_object_((const MethodInfo_30E7C04 *)Method_DataManager_GetMaster_UserServantGrandMaster___);
   if ( this->fields._IsValid_k__BackingField )
   {
     UserServantEntity_k__BackingField = p_fields->_UserServantEntity_k__BackingField;
@@ -84,7 +84,7 @@ void SelectGrandServantInfo___ctor(
       j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
     *(_QWORD *)&v24.fields.currentCryptoKey = v16;
     *(_QWORD *)&v24.fields.fakeValue = v15;
-    Master_object = (GrandGraphDetailMaster_o *)CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_48887784(
+    Master_object = (GrandGraphDetailMaster_o *)CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_48930896(
                                                   v24,
                                                   0);
     if ( !v14 )
@@ -111,16 +111,16 @@ void SelectGrandServantInfo___ctor(
           {
             *(_DWORD *)(v7 + 16) = (_DWORD)Master_object;
             UserServantEntities = UserServantGrandMaster__GetUserServantEntities(v14, 0);
-            v19 = (System_Func_object__bool__o *)sub_1C32E6C(System_Func_UserServantEntity__bool__TypeInfo);
+            v19 = (System_Func_object__bool__o *)sub_1C372A4(System_Func_UserServantEntity__bool__TypeInfo);
             System_Func_object__bool____ctor(
               v19,
               (Il2CppObject *)v7,
               Method_SelectGrandServantInfo___c__DisplayClass28_0___ctor_b__0__,
               0);
-            v20 = System_Linq_Enumerable__Any_object__51293756(
+            v20 = System_Linq_Enumerable__Any_object__51336868(
                     (System_Collections_Generic_IEnumerable_TSource__o *)UserServantEntities,
                     (System_Func_TSource__bool__o *)v19,
-                    (const MethodInfo_30EAE3C *)Method_System_Linq_Enumerable_Any_UserServantEntity___);
+                    (const MethodInfo_30F56A4 *)Method_System_Linq_Enumerable_Any_UserServantEntity___);
             Master_object = (GrandGraphDetailMaster_o *)this->fields._UserServantEntity_k__BackingField;
             v21 = !this->fields._IsClose_k__BackingField;
             this->fields._IsSameClass_k__BackingField = v20;
@@ -147,7 +147,7 @@ LABEL_29:
         }
       }
 LABEL_31:
-      sub_1C32E7C(Master_object);
+      sub_1C372B4(Master_object);
     }
   }
 }
@@ -217,7 +217,7 @@ void SelectGrandServantInfo__set_GrandGraphDetailEntity(
         const MethodInfo *method)
 {
   this->fields._GrandGraphDetailEntity_k__BackingField = value;
-  sub_1C32BC4(&this->fields._GrandGraphDetailEntity_k__BackingField, value);
+  sub_1C36FFC(&this->fields._GrandGraphDetailEntity_k__BackingField, value);
 }
 
 
@@ -245,7 +245,7 @@ void SelectGrandServantInfo__set_UserServantEntity(
         const MethodInfo *method)
 {
   this->fields._UserServantEntity_k__BackingField = value;
-  sub_1C32BC4(&this->fields, value);
+  sub_1C36FFC(&this->fields, value);
 }
 
 
@@ -263,6 +263,6 @@ bool SelectGrandServantInfo___c__DisplayClass28_0____ctor_b__0(
         const MethodInfo *method)
 {
   if ( !e )
-    sub_1C32E7C(this);
+    sub_1C372B4(this);
   return UserServantEntity__getSvtClassId(e, 1, 0, 0) == this->fields.checkClassId;
 }

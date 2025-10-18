@@ -11,19 +11,19 @@ void BattleScenarioRequest__beginRequest(
         System_Int32_array *routeSelect,
         const MethodInfo *method)
 {
-  if ( (byte_4C39419 & 1) == 0 )
+  if ( (byte_4C44A13 & 1) == 0 )
   {
-    sub_1C32C20(&int___TypeInfo);
-    sub_1C32C20(&StringLiteral_23150/*"routeSelect"*/);
-    sub_1C32C20(&StringLiteral_22861/*"questPhase"*/);
-    sub_1C32C20(&StringLiteral_22857/*"questId"*/);
-    byte_4C39419 = 1;
+    sub_1C37058(&int___TypeInfo);
+    sub_1C37058(&StringLiteral_23154/*"routeSelect"*/);
+    sub_1C37058(&StringLiteral_22865/*"questPhase"*/);
+    sub_1C37058(&StringLiteral_22861/*"questId"*/);
+    byte_4C44A13 = 1;
   }
   if ( !routeSelect )
-    routeSelect = (System_Int32_array *)sub_1C32CC8(int___TypeInfo, 0);
-  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_22857/*"questId"*/, questId, 0);
-  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_22861/*"questPhase"*/, questPhase, 0);
-  RequestBase__addField_44145300((RequestBase_o *)this, (System_String_o *)StringLiteral_23150/*"routeSelect"*/, &routeSelect->obj, 0);
+    routeSelect = (System_Int32_array *)sub_1C37100(int___TypeInfo, 0);
+  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_22861/*"questId"*/, questId, 0);
+  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_22865/*"questPhase"*/, questPhase, 0);
+  RequestBase__addField_44247404((RequestBase_o *)this, (System_String_o *)StringLiteral_23154/*"routeSelect"*/, &routeSelect->obj, 0);
   RequestBase__beginRequest((RequestBase_o *)this, 0);
 }
 
@@ -32,16 +32,16 @@ System_String_o *BattleScenarioRequest__getURL(BattleScenarioRequest_o *this, co
 {
   System_String_o *BaseUrl; // x0
 
-  if ( (byte_4C39418 & 1) == 0 )
+  if ( (byte_4C44A12 & 1) == 0 )
   {
-    sub_1C32C20(&NetworkManager_TypeInfo);
-    sub_1C32C20(&StringLiteral_17057/*"battle/scenario"*/);
-    byte_4C39418 = 1;
+    sub_1C37058(&NetworkManager_TypeInfo);
+    sub_1C37058(&StringLiteral_17059/*"battle/scenario"*/);
+    byte_4C44A12 = 1;
   }
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
   BaseUrl = NetworkManager__getBaseUrl(1, 0);
-  return System_String__Concat_63518544(BaseUrl, (System_String_o *)StringLiteral_17057/*"battle/scenario"*/, 0);
+  return System_String__Concat_63561656(BaseUrl, (System_String_o *)StringLiteral_17059/*"battle/scenario"*/, 0);
 }
 
 
@@ -54,18 +54,18 @@ void BattleScenarioRequest__requestCompleted(
   Il2CppObject *success; // x20
   System_String_o *v7; // x1
 
-  if ( (byte_4C3941A & 1) == 0 )
+  if ( (byte_4C44A14 & 1) == 0 )
   {
-    sub_1C32C20(&JsonManager_TypeInfo);
-    sub_1C32C20(&ResponseCommandKind_TypeInfo);
-    sub_1C32C20(&ServantCommentManager_TypeInfo);
-    byte_4C3941A = 1;
+    sub_1C37058(&JsonManager_TypeInfo);
+    sub_1C37058(&ResponseCommandKind_TypeInfo);
+    sub_1C37058(&ServantCommentManager_TypeInfo);
+    byte_4C44A14 = 1;
   }
   if ( !ResponseCommandKind_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(ResponseCommandKind_TypeInfo);
   v5 = ResponseCommandKind__SearchData(52, responseList, 0);
   if ( !v5 )
-    sub_1C32E7C(0);
+    sub_1C372B4(0);
   success = (Il2CppObject *)v5->fields.success;
   if ( !ServantCommentManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(ServantCommentManager_TypeInfo);

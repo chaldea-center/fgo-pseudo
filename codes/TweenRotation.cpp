@@ -21,14 +21,14 @@ TweenRotation_o *TweenRotation__Begin(
   z = rot.fields.z;
   y = rot.fields.y;
   x = rot.fields.x;
-  if ( (byte_4C3C249 & 1) == 0 )
+  if ( (byte_4C477C4 & 1) == 0 )
   {
-    sub_1C32C20(&Method_UITweener_Begin_TweenRotation___);
-    byte_4C3C249 = 1;
+    sub_1C37058(&Method_UITweener_Begin_TweenRotation___);
+    byte_4C477C4 = 1;
   }
-  v10 = UITweener__Begin_object_(go, duration, (const MethodInfo_3198D08 *)Method_UITweener_Begin_TweenRotation___);
+  v10 = UITweener__Begin_object_(go, duration, (const MethodInfo_31A3570 *)Method_UITweener_Begin_TweenRotation___);
   if ( !v10 )
-    sub_1C32E7C(0);
+    sub_1C372B4(0);
   v12 = v10;
   value = TweenRotation__get_value((TweenRotation_o *)v10, v11);
   v15 = UnityEngine_Quaternion__Internal_ToEulerRad(value, 0);
@@ -180,10 +180,10 @@ UnityEngine_Transform_o *TweenRotation__get_cachedTransform(TweenRotation_o *thi
   int32_t v5; // w2
   const MethodInfo *v6; // x3
 
-  if ( (byte_4C3C248 & 1) == 0 )
+  if ( (byte_4C477C3 & 1) == 0 )
   {
-    sub_1C32C20(&UnityEngine_Object_TypeInfo);
-    byte_4C3C248 = 1;
+    sub_1C37058(&UnityEngine_Object_TypeInfo);
+    byte_4C477C3 = 1;
   }
   mTrans = (UnityEngine_Object_o *)this->fields.mTrans;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -192,7 +192,7 @@ UnityEngine_Transform_o *TweenRotation__get_cachedTransform(TweenRotation_o *thi
   {
     transform = UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0);
     this->fields.mTrans = transform;
-    sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.mTrans, (int32_t)transform, v5, v6);
+    sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.mTrans, (int32_t)transform, v5, v6);
   }
   return this->fields.mTrans;
 }
@@ -211,7 +211,7 @@ UnityEngine_Quaternion_o TweenRotation__get_value(TweenRotation_o *this, const M
 
   cachedTransform = TweenRotation__get_cachedTransform(this, method);
   if ( !cachedTransform )
-    sub_1C32E7C(0);
+    sub_1C372B4(0);
   return UnityEngine_Transform__get_localRotation(cachedTransform, 0);
 }
 
@@ -238,7 +238,7 @@ void TweenRotation__set_value(TweenRotation_o *this, UnityEngine_Quaternion_o va
   x = value.fields.x;
   cachedTransform = TweenRotation__get_cachedTransform(this, method);
   if ( !cachedTransform )
-    sub_1C32E7C(0);
+    sub_1C372B4(0);
   v8.fields.z = z;
   v8.fields.w = w;
   v8.fields.x = x;

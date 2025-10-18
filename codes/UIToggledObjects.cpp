@@ -19,18 +19,18 @@ void UIToggledObjects__Awake(UIToggledObjects_o *this, const MethodInfo *method)
   const MethodInfo *v13; // x2
   _QWORD *v14; // x9
   __int64 v15; // x8
-  const MethodInfo_37987BC *v16; // x2
+  const MethodInfo_37A3024 *v16; // x2
 
-  if ( (byte_4C3C0DA & 1) == 0 )
+  if ( (byte_4C47655 & 1) == 0 )
   {
-    sub_1C32C20(&EventDelegate_Callback_TypeInfo);
-    sub_1C32C20(&Method_UnityEngine_Component_GetComponent_UIToggle___);
-    sub_1C32C20(&EventDelegate_TypeInfo);
-    sub_1C32C20(&Method_System_Collections_Generic_List_GameObject__Add__);
-    sub_1C32C20(&Method_System_Collections_Generic_List_GameObject__get_Count__);
-    sub_1C32C20(&UnityEngine_Object_TypeInfo);
-    sub_1C32C20(&Method_UIToggledObjects_Toggle__);
-    byte_4C3C0DA = 1;
+    sub_1C37058(&EventDelegate_Callback_TypeInfo);
+    sub_1C37058(&Method_UnityEngine_Component_GetComponent_UIToggle___);
+    sub_1C37058(&EventDelegate_TypeInfo);
+    sub_1C37058(&Method_System_Collections_Generic_List_GameObject__Add__);
+    sub_1C37058(&Method_System_Collections_Generic_List_GameObject__get_Count__);
+    sub_1C37058(&UnityEngine_Object_TypeInfo);
+    sub_1C37058(&Method_UIToggledObjects_Toggle__);
+    byte_4C47655 = 1;
   }
   target = (UnityEngine_Object_o *)this->fields.target;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -52,7 +52,7 @@ LABEL_10:
       LODWORD(v9) = 0;
       this->fields.target = 0;
 LABEL_11:
-      sub_1C32BC4((CGThumbnailListItem_o *)p_target, (int32_t)v9, v4, v5);
+      sub_1C36FFC((CGThumbnailListItem_o *)p_target, (int32_t)v9, v4, v5);
       goto LABEL_12;
     }
     v9 = (Il2CppObject *)this->fields.target;
@@ -71,7 +71,7 @@ LABEL_11:
           goto LABEL_11;
         }
         activate = (char *)deactivate;
-        v16 = *(const MethodInfo_37987BC **)(*(_QWORD *)(v14[4] + 192LL) + 112LL);
+        v16 = *(const MethodInfo_37A3024 **)(*(_QWORD *)(v14[4] + 192LL) + 112LL);
         goto LABEL_25;
       }
     }
@@ -88,7 +88,7 @@ LABEL_11:
           p_target = (struct UnityEngine_GameObject_o **)(v15 + 32);
           goto LABEL_11;
         }
-        v16 = *(const MethodInfo_37987BC **)(*(_QWORD *)(v14[4] + 192LL) + 112LL);
+        v16 = *(const MethodInfo_37A3024 **)(*(_QWORD *)(v14[4] + 192LL) + 112LL);
 LABEL_25:
         System_Collections_Generic_List_object___AddWithResize(
           (System_Collections_Generic_List_object__o *)activate,
@@ -98,16 +98,16 @@ LABEL_25:
       }
     }
 LABEL_26:
-    sub_1C32E7C(activate);
+    sub_1C372B4(activate);
   }
 LABEL_12:
   activate = (char *)UnityEngine_Component__GetComponent_object_(
                        (UnityEngine_Component_o *)this,
-                       (const MethodInfo_30D3BC0 *)Method_UnityEngine_Component_GetComponent_UIToggle___);
+                       (const MethodInfo_30DE428 *)Method_UnityEngine_Component_GetComponent_UIToggle___);
   if ( !activate )
     goto LABEL_26;
   v10 = (System_Collections_Generic_List_EventDelegate__o *)*((_QWORD *)activate + 8);
-  v11 = (EventDelegate_Callback_o *)sub_1C32E6C(EventDelegate_Callback_TypeInfo);
+  v11 = (EventDelegate_Callback_o *)sub_1C372A4(EventDelegate_Callback_TypeInfo);
   EventDelegate_Callback___ctor(v11, (Il2CppObject *)this, Method_UIToggledObjects_Toggle__, v12);
   if ( !EventDelegate_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(EventDelegate_TypeInfo);
@@ -121,11 +121,11 @@ void UIToggledObjects__Set(
         bool state,
         const MethodInfo *method)
 {
-  if ( (byte_4C3C0DC & 1) == 0 )
+  if ( (byte_4C47657 & 1) == 0 )
   {
-    sub_1C32C20(&NGUITools_TypeInfo);
-    sub_1C32C20(&UnityEngine_Object_TypeInfo);
-    byte_4C3C0DC = 1;
+    sub_1C37058(&NGUITools_TypeInfo);
+    sub_1C37058(&UnityEngine_Object_TypeInfo);
+    byte_4C47657 = 1;
   }
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
@@ -151,12 +151,12 @@ void UIToggledObjects__Toggle(UIToggledObjects_o *this, const MethodInfo *method
   Il2CppObject *v11; // x0
   const MethodInfo *v12; // x3
 
-  if ( (byte_4C3C0DB & 1) == 0 )
+  if ( (byte_4C47656 & 1) == 0 )
   {
-    sub_1C32C20(&Method_System_Collections_Generic_List_GameObject__get_Count__);
-    sub_1C32C20(&Method_System_Collections_Generic_List_GameObject__get_Item__);
-    sub_1C32C20(&UIToggle_TypeInfo);
-    byte_4C3C0DB = 1;
+    sub_1C37058(&Method_System_Collections_Generic_List_GameObject__get_Count__);
+    sub_1C37058(&Method_System_Collections_Generic_List_GameObject__get_Item__);
+    sub_1C37058(&UIToggle_TypeInfo);
+    byte_4C47656 = 1;
   }
   activate = (System_Collections_Generic_List_object__o *)UIToggle_TypeInfo;
   if ( !UIToggle_TypeInfo->_2.cctor_finished )
@@ -182,7 +182,7 @@ void UIToggledObjects__Toggle(UIToggledObjects_o *this, const MethodInfo *method
     Item = System_Collections_Generic_List_object___get_Item(
              activate,
              v7,
-             (const MethodInfo_37984EC *)Method_System_Collections_Generic_List_GameObject__get_Item__);
+             (const MethodInfo_37A2D54 *)Method_System_Collections_Generic_List_GameObject__get_Item__);
     UIToggledObjects__Set((UIToggledObjects_o *)Item, (UnityEngine_GameObject_o *)Item, v6 != 0, v9);
     activate = (System_Collections_Generic_List_object__o *)this->fields.activate;
     ++v7;
@@ -192,14 +192,14 @@ void UIToggledObjects__Toggle(UIToggledObjects_o *this, const MethodInfo *method
   activate = (System_Collections_Generic_List_object__o *)this->fields.deactivate;
   if ( !activate )
 LABEL_18:
-    sub_1C32E7C(activate);
+    sub_1C372B4(activate);
   v10 = 0;
   while ( v10 < activate->fields._size )
   {
     v11 = System_Collections_Generic_List_object___get_Item(
             activate,
             v10,
-            (const MethodInfo_37984EC *)Method_System_Collections_Generic_List_GameObject__get_Item__);
+            (const MethodInfo_37A2D54 *)Method_System_Collections_Generic_List_GameObject__get_Item__);
     UIToggledObjects__Set((UIToggledObjects_o *)v11, (UnityEngine_GameObject_o *)v11, v6 == 0, v12);
     activate = (System_Collections_Generic_List_object__o *)this->fields.deactivate;
     ++v10;

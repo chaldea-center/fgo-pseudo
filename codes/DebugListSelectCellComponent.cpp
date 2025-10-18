@@ -19,15 +19,15 @@ void DebugListSelectCellComponent__Set(
 
   this->fields.id = id;
   p_id = &this->fields.id;
-  sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.id, (int32_t)id, index, (const MethodInfo *)callback);
+  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.id, (int32_t)id, index, (const MethodInfo *)callback);
   v9 = (UILabel_o *)*(p_id - 1);
   if ( !v9 )
-    sub_1C32E7C(0);
+    sub_1C372B4(0);
   UILabel__set_text(v9, this->fields.id, 0);
   this->fields.callback = callback;
   p_callback = &this->fields.callback;
   *((_DWORD *)p_callback - 2) = index;
-  sub_1C32BC4((CGThumbnailListItem_o *)p_callback, (int32_t)callback, v11, v12);
+  sub_1C36FFC((CGThumbnailListItem_o *)p_callback, (int32_t)callback, v11, v12);
 }
 
 

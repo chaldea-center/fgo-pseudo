@@ -6,18 +6,18 @@ void WarBoardServantPiecePartyBuffComponent___ctor(
   int32_t v4; // w2
   const MethodInfo *v5; // x3
 
-  if ( (byte_4C352DB & 1) == 0 )
+  if ( (byte_4C408C6 & 1) == 0 )
   {
-    sub_1C32C20(&Method_System_Collections_Generic_List_GameObject___ctor__);
-    sub_1C32C20(&System_Collections_Generic_List_GameObject__TypeInfo);
-    byte_4C352DB = 1;
+    sub_1C37058(&Method_System_Collections_Generic_List_GameObject___ctor__);
+    sub_1C37058(&System_Collections_Generic_List_GameObject__TypeInfo);
+    byte_4C408C6 = 1;
   }
-  v3 = (System_Collections_Generic_List_object__o *)sub_1C32E6C(System_Collections_Generic_List_GameObject__TypeInfo);
+  v3 = (System_Collections_Generic_List_object__o *)sub_1C372A4(System_Collections_Generic_List_GameObject__TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v3,
-    (const MethodInfo_3797F88 *)Method_System_Collections_Generic_List_GameObject___ctor__);
+    (const MethodInfo_37A27F0 *)Method_System_Collections_Generic_List_GameObject___ctor__);
   this->fields.objList = (struct System_Collections_Generic_List_GameObject__o *)v3;
-  sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.objList, (int32_t)v3, v4, v5);
+  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.objList, (int32_t)v3, v4, v5);
   UnityEngine_MonoBehaviour___ctor((UnityEngine_MonoBehaviour_o *)this, 0);
 }
 
@@ -33,15 +33,15 @@ void WarBoardServantPiecePartyBuffComponent__ClearArrowObject(
   int v7; // w9
   System_Collections_Generic_List_Enumerator_object__o v8; // [xsp+8h] [xbp-48h] BYREF
 
-  if ( (byte_4C352D9 & 1) == 0 )
+  if ( (byte_4C408C4 & 1) == 0 )
   {
-    sub_1C32C20(&Method_System_Collections_Generic_List_Enumerator_GameObject__Dispose__);
-    sub_1C32C20(&Method_System_Collections_Generic_List_Enumerator_GameObject__MoveNext__);
-    sub_1C32C20(&Method_System_Collections_Generic_List_Enumerator_GameObject__get_Current__);
-    sub_1C32C20(&Method_System_Collections_Generic_List_GameObject__Clear__);
-    sub_1C32C20(&Method_System_Collections_Generic_List_GameObject__GetEnumerator__);
-    sub_1C32C20(&UnityEngine_Object_TypeInfo);
-    byte_4C352D9 = 1;
+    sub_1C37058(&Method_System_Collections_Generic_List_Enumerator_GameObject__Dispose__);
+    sub_1C37058(&Method_System_Collections_Generic_List_Enumerator_GameObject__MoveNext__);
+    sub_1C37058(&Method_System_Collections_Generic_List_Enumerator_GameObject__get_Current__);
+    sub_1C37058(&Method_System_Collections_Generic_List_GameObject__Clear__);
+    sub_1C37058(&Method_System_Collections_Generic_List_GameObject__GetEnumerator__);
+    sub_1C37058(&UnityEngine_Object_TypeInfo);
+    byte_4C408C4 = 1;
   }
   memset(&v8, 0, sizeof(v8));
   objList = this->fields.objList;
@@ -50,10 +50,10 @@ void WarBoardServantPiecePartyBuffComponent__ClearArrowObject(
   System_Collections_Generic_List_object___GetEnumerator(
     (System_Collections_Generic_List_Enumerator_T__o *)&v8,
     (System_Collections_Generic_List_object__o *)objList,
-    (const MethodInfo_37992B4 *)Method_System_Collections_Generic_List_GameObject__GetEnumerator__);
+    (const MethodInfo_37A3B1C *)Method_System_Collections_Generic_List_GameObject__GetEnumerator__);
   while ( System_Collections_Generic_List_Enumerator_object___MoveNext(
             &v8,
-            (const MethodInfo_3522FA8 *)Method_System_Collections_Generic_List_Enumerator_GameObject__MoveNext__) )
+            (const MethodInfo_352D810 *)Method_System_Collections_Generic_List_Enumerator_GameObject__MoveNext__) )
   {
     current = v8.fields._current;
     if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -62,16 +62,16 @@ void WarBoardServantPiecePartyBuffComponent__ClearArrowObject(
     {
       if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-      UnityEngine_Object__DestroyImmediate_71223828((UnityEngine_Object_o *)current, 0);
+      UnityEngine_Object__DestroyImmediate_71266940((UnityEngine_Object_o *)current, 0);
     }
   }
   System_Collections_Generic_List_Enumerator_object___Dispose(
     &v8,
-    (const MethodInfo_3522FA4 *)Method_System_Collections_Generic_List_Enumerator_GameObject__Dispose__);
+    (const MethodInfo_352D80C *)Method_System_Collections_Generic_List_Enumerator_GameObject__Dispose__);
   v5 = this->fields.objList;
   if ( !v5 )
 LABEL_16:
-    sub_1C32E7C(objList);
+    sub_1C372B4(objList);
   size = v5->fields._size;
   v7 = v5->fields._version + 1;
   v5->fields._size = 0;
@@ -115,11 +115,11 @@ UnityEngine_GameObject_o *WarBoardServantPiecePartyBuffComponent__CreateObject(
   UnityEngine_Quaternion_o v22; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
   UnityEngine_Quaternion_o v23; // 0:s3.4,4:s4.4,8:s5.4,12:s6.4
 
-  if ( (byte_4C352DA & 1) == 0 )
+  if ( (byte_4C408C5 & 1) == 0 )
   {
-    sub_1C32C20(&Method_UnityEngine_Object_Instantiate_GameObject____78147232);
-    sub_1C32C20(&UnityEngine_Object_TypeInfo);
-    byte_4C352DA = 1;
+    sub_1C37058(&Method_UnityEngine_Object_Instantiate_GameObject____78193024);
+    sub_1C37058(&UnityEngine_Object_TypeInfo);
+    byte_4C408C5 = 1;
   }
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
@@ -143,11 +143,11 @@ UnityEngine_GameObject_o *WarBoardServantPiecePartyBuffComponent__CreateObject(
     v23.fields.y = y;
     v23.fields.z = z;
     v23.fields.w = w;
-    transform = (UnityEngine_GameObject_o *)UnityEngine_Object__Instantiate_object__51812788(
+    transform = (UnityEngine_GameObject_o *)UnityEngine_Object__Instantiate_object__51855900(
                                               (Il2CppObject *)prefab,
                                               v17,
                                               v23,
-                                              (const MethodInfo_31699B4 *)Method_UnityEngine_Object_Instantiate_GameObject____78147232);
+                                              (const MethodInfo_317421C *)Method_UnityEngine_Object_Instantiate_GameObject____78193024);
     if ( !transform )
       goto LABEL_18;
     v8 = transform;
@@ -190,7 +190,7 @@ UnityEngine_GameObject_o *WarBoardServantPiecePartyBuffComponent__CreateObject(
         }
       }
 LABEL_18:
-      sub_1C32E7C(transform);
+      sub_1C372B4(transform);
     }
   }
   return v8;
@@ -212,7 +212,7 @@ void WarBoardServantPiecePartyBuffComponent__SetActive(
         UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)partyBuffLabelSprite, v6, 0),
         (partyBuffLabelSprite = (UnityEngine_Component_o *)this->fields.arrowListObject) == 0) )
   {
-    sub_1C32E7C(partyBuffLabelSprite);
+    sub_1C372B4(partyBuffLabelSprite);
   }
   UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)partyBuffLabelSprite, v6, 0);
 }
@@ -236,11 +236,11 @@ void WarBoardServantPiecePartyBuffComponent__SetPartyBuffLevel(
   Il2CppClass **v15; // x8
   UnityEngine_Vector3_o v16; // 0:s0.4,4:s1.4,8:s2.4
 
-  if ( (byte_4C352D8 & 1) == 0 )
+  if ( (byte_4C408C3 & 1) == 0 )
   {
-    sub_1C32C20(&Method_System_Collections_Generic_List_GameObject__Add__);
-    sub_1C32C20(&UnityEngine_Object_TypeInfo);
-    byte_4C352D8 = 1;
+    sub_1C37058(&Method_System_Collections_Generic_List_GameObject__Add__);
+    sub_1C37058(&UnityEngine_Object_TypeInfo);
+    byte_4C408C3 = 1;
   }
   WarBoardServantPiecePartyBuffComponent__SetActive(this, 1, method);
   if ( level >= 1 )
@@ -271,7 +271,7 @@ void WarBoardServantPiecePartyBuffComponent__SetPartyBuffLevel(
               ++objList->fields._version,
               !items) )
         {
-          sub_1C32E7C(objList);
+          sub_1C372B4(objList);
         }
         size = objList->fields._size;
         if ( (unsigned int)size >= LODWORD(items->max_length) )
@@ -279,14 +279,14 @@ void WarBoardServantPiecePartyBuffComponent__SetPartyBuffLevel(
           System_Collections_Generic_List_object___AddWithResize(
             objList,
             (Il2CppObject *)Object,
-            *(const MethodInfo_37987BC **)(*(_QWORD *)(v13[4] + 192LL) + 112LL));
+            *(const MethodInfo_37A3024 **)(*(_QWORD *)(v13[4] + 192LL) + 112LL));
         }
         else
         {
           v15 = &items->obj.klass + size;
           objList->fields._size = size + 1;
           v15[4] = (Il2CppClass *)Object;
-          sub_1C32BC4((CGThumbnailListItem_o *)(v15 + 4), (int32_t)Object, v10, v11);
+          sub_1C36FFC((CGThumbnailListItem_o *)(v15 + 4), (int32_t)Object, v10, v11);
         }
       }
       ++v7;

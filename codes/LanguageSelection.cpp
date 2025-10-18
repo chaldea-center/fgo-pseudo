@@ -11,16 +11,16 @@ void LanguageSelection__Awake(LanguageSelection_o *this, const MethodInfo *metho
   const MethodInfo *v5; // x3
   const MethodInfo *v6; // x1
 
-  if ( (byte_4C3BFBC & 1) == 0 )
+  if ( (byte_4C47537 & 1) == 0 )
   {
-    sub_1C32C20(&Method_UnityEngine_Component_GetComponent_UIPopupList___);
-    byte_4C3BFBC = 1;
+    sub_1C37058(&Method_UnityEngine_Component_GetComponent_UIPopupList___);
+    byte_4C47537 = 1;
   }
   Component_object = UnityEngine_Component__GetComponent_object_(
                        (UnityEngine_Component_o *)this,
-                       (const MethodInfo_30D3BC0 *)Method_UnityEngine_Component_GetComponent_UIPopupList___);
+                       (const MethodInfo_30DE428 *)Method_UnityEngine_Component_GetComponent_UIPopupList___);
   this->fields.mList = (struct UIPopupList_o *)Component_object;
-  sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.mList, (int32_t)Component_object, v4, v5);
+  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.mList, (int32_t)Component_object, v4, v5);
   LanguageSelection__Refresh(this, v6);
 }
 
@@ -45,13 +45,13 @@ void LanguageSelection__Refresh(LanguageSelection_o *this, const MethodInfo *met
   __int64 v18; // x10
   Il2CppClass **v19; // x0
 
-  if ( (byte_4C3BFBE & 1) == 0 )
+  if ( (byte_4C47539 & 1) == 0 )
   {
-    sub_1C32C20(&Method_System_Collections_Generic_List_string__Add__);
-    sub_1C32C20(&Method_System_Collections_Generic_List_string__Clear__);
-    sub_1C32C20(&Localization_TypeInfo);
-    sub_1C32C20(&UnityEngine_Object_TypeInfo);
-    byte_4C3BFBE = 1;
+    sub_1C37058(&Method_System_Collections_Generic_List_string__Add__);
+    sub_1C37058(&Method_System_Collections_Generic_List_string__Clear__);
+    sub_1C37058(&Localization_TypeInfo);
+    sub_1C37058(&UnityEngine_Object_TypeInfo);
+    byte_4C47539 = 1;
   }
   mList = (UnityEngine_Object_o *)this->fields.mList;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -94,7 +94,7 @@ void LanguageSelection__Refresh(LanguageSelection_o *this, const MethodInfo *met
           if ( !knownLanguages )
             break;
           if ( v10 >= LODWORD(knownLanguages[1].klass) )
-            sub_1C32E84(knownLanguages);
+            sub_1C372BC(knownLanguages);
           if ( !v12 )
             break;
           v15 = (Il2CppObject *)*((_QWORD *)&knownLanguages[1].monitor + v10);
@@ -109,21 +109,21 @@ void LanguageSelection__Refresh(LanguageSelection_o *this, const MethodInfo *met
             System_Collections_Generic_List_object___AddWithResize(
               v12,
               v15,
-              *(const MethodInfo_37987BC **)(*(_QWORD *)(v17[4] + 192LL) + 112LL));
+              *(const MethodInfo_37A3024 **)(*(_QWORD *)(v17[4] + 192LL) + 112LL));
           }
           else
           {
             v19 = &v16->obj.klass + v18;
             v12->fields._size = v18 + 1;
             v19[4] = (Il2CppClass *)v15;
-            sub_1C32BC4((CGThumbnailListItem_o *)(v19 + 4), (int32_t)v15, v13, v14);
+            sub_1C36FFC((CGThumbnailListItem_o *)(v19 + 4), (int32_t)v15, v13, v14);
           }
           v9 = this->fields.mList;
           if ( klass == ++v10 )
             goto LABEL_29;
         }
 LABEL_34:
-        sub_1C32E7C(knownLanguages);
+        sub_1C372B4(knownLanguages);
       }
 LABEL_29:
       if ( !Localization_TypeInfo->_2.cctor_finished )
@@ -150,17 +150,17 @@ void LanguageSelection__Start(LanguageSelection_o *this, const MethodInfo *metho
   const MethodInfo *v10; // x3
 
   v2 = this;
-  if ( (byte_4C3BFBD & 1) == 0 )
+  if ( (byte_4C47538 & 1) == 0 )
   {
-    sub_1C32C20(&EventDelegate_Callback_TypeInfo);
-    sub_1C32C20(&EventDelegate_TypeInfo);
-    sub_1C32C20(&Method_LanguageSelection___c__Start_b__2_0__);
-    this = (LanguageSelection_o *)sub_1C32C20(&LanguageSelection___c_TypeInfo);
-    byte_4C3BFBD = 1;
+    sub_1C37058(&EventDelegate_Callback_TypeInfo);
+    sub_1C37058(&EventDelegate_TypeInfo);
+    sub_1C37058(&Method_LanguageSelection___c__Start_b__2_0__);
+    this = (LanguageSelection_o *)sub_1C37058(&LanguageSelection___c_TypeInfo);
+    byte_4C47538 = 1;
   }
   mList = v2->fields.mList;
   if ( !mList )
-    sub_1C32E7C(this);
+    sub_1C372B4(this);
   onChange = mList->fields.onChange;
   v5 = LanguageSelection___c_TypeInfo;
   if ( !LanguageSelection___c_TypeInfo->_2.cctor_finished )
@@ -177,11 +177,11 @@ void LanguageSelection__Start(LanguageSelection_o *this, const MethodInfo *metho
       v5 = LanguageSelection___c_TypeInfo;
     }
     v7 = (Il2CppObject *)v5->static_fields->__9;
-    _9__2_0 = (EventDelegate_Callback_o *)sub_1C32E6C(EventDelegate_Callback_TypeInfo);
+    _9__2_0 = (EventDelegate_Callback_o *)sub_1C372A4(EventDelegate_Callback_TypeInfo);
     EventDelegate_Callback___ctor(_9__2_0, v7, Method_LanguageSelection___c__Start_b__2_0__, 0);
     static_fields = LanguageSelection___c_TypeInfo->static_fields;
     static_fields->__9__2_0 = _9__2_0;
-    sub_1C32BC4((CGThumbnailListItem_o *)&static_fields->__9__2_0, (int32_t)_9__2_0, v9, v10);
+    sub_1C36FFC((CGThumbnailListItem_o *)&static_fields->__9__2_0, (int32_t)_9__2_0, v9, v10);
   }
   if ( !EventDelegate_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(EventDelegate_TypeInfo);
@@ -195,15 +195,15 @@ void LanguageSelection___c___cctor(const MethodInfo *method)
   int32_t v2; // w2
   const MethodInfo *v3; // x3
 
-  if ( (byte_4C3BFBF & 1) == 0 )
+  if ( (byte_4C4753A & 1) == 0 )
   {
-    sub_1C32C20(&LanguageSelection___c_TypeInfo);
-    byte_4C3BFBF = 1;
+    sub_1C37058(&LanguageSelection___c_TypeInfo);
+    byte_4C4753A = 1;
   }
-  v1 = (Il2CppObject *)sub_1C32E6C(LanguageSelection___c_TypeInfo);
+  v1 = (Il2CppObject *)sub_1C372A4(LanguageSelection___c_TypeInfo);
   System_Object___ctor(v1, 0);
   LanguageSelection___c_TypeInfo->static_fields->__9 = (struct LanguageSelection___c_o *)v1;
-  sub_1C32BC4((CGThumbnailListItem_o *)LanguageSelection___c_TypeInfo->static_fields, (int32_t)v1, v2, v3);
+  sub_1C36FFC((CGThumbnailListItem_o *)LanguageSelection___c_TypeInfo->static_fields, (int32_t)v1, v2, v3);
 }
 
 
@@ -218,15 +218,15 @@ void LanguageSelection___c___Start_b__2_0(LanguageSelection___c_o *this, const M
   struct UIPopupList_o *current; // x8
   System_String_o *mSelectedItem; // x19
 
-  if ( (byte_4C3BFC0 & 1) == 0 )
+  if ( (byte_4C4753B & 1) == 0 )
   {
-    sub_1C32C20(&Localization_TypeInfo);
-    this = (LanguageSelection___c_o *)sub_1C32C20(&UIPopupList_TypeInfo);
-    byte_4C3BFC0 = 1;
+    sub_1C37058(&Localization_TypeInfo);
+    this = (LanguageSelection___c_o *)sub_1C37058(&UIPopupList_TypeInfo);
+    byte_4C4753B = 1;
   }
   current = UIPopupList_TypeInfo->static_fields->current;
   if ( !current )
-    sub_1C32E7C(this);
+    sub_1C372B4(this);
   mSelectedItem = current->fields.mSelectedItem;
   if ( !Localization_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(Localization_TypeInfo);

@@ -1,9 +1,9 @@
 void EventInfoProductivityGrowthDialog___ctor(EventInfoProductivityGrowthDialog_o *this, const MethodInfo *method)
 {
-  if ( (byte_4C38F2A & 1) == 0 )
+  if ( (byte_4C44523 & 1) == 0 )
   {
-    sub_1C32C20(&BaseDialog_TypeInfo);
-    byte_4C38F2A = 1;
+    sub_1C37058(&BaseDialog_TypeInfo);
+    byte_4C44523 = 1;
   }
   if ( !BaseDialog_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(BaseDialog_TypeInfo);
@@ -21,12 +21,12 @@ void EventInfoProductivityGrowthDialog__Init(EventInfoProductivityGrowthDialog_o
   int max_length; // w8
   unsigned int v9; // w21
 
-  if ( (byte_4C38F27 & 1) == 0 )
+  if ( (byte_4C44520 & 1) == 0 )
   {
-    sub_1C32C20(&LocalizationManager_TypeInfo);
-    sub_1C32C20(&StringLiteral_3685/*"COMMON_CONFIRM_CLOSE"*/);
-    sub_1C32C20(&StringLiteral_1/*""*/);
-    byte_4C38F27 = 1;
+    sub_1C37058(&LocalizationManager_TypeInfo);
+    sub_1C37058(&StringLiteral_3685/*"COMMON_CONFIRM_CLOSE"*/);
+    sub_1C37058(&StringLiteral_1/*""*/);
+    byte_4C44520 = 1;
   }
   BaseDialog__Init((BaseDialog_o *)this, 0);
   titleLabel = this->fields.titleLabel;
@@ -50,7 +50,7 @@ void EventInfoProductivityGrowthDialog__Init(EventInfoProductivityGrowthDialog_o
     while ( 1 )
     {
       if ( v9 >= max_length )
-        sub_1C32E84(titleLabel);
+        sub_1C372BC(titleLabel);
       titleLabel = (UILabel_o *)dispObjList->m_Items[v9];
       if ( !titleLabel )
         break;
@@ -60,11 +60,11 @@ void EventInfoProductivityGrowthDialog__Init(EventInfoProductivityGrowthDialog_o
         goto LABEL_13;
     }
 LABEL_14:
-    sub_1C32E7C(titleLabel);
+    sub_1C372B4(titleLabel);
   }
 LABEL_13:
   this->fields.closeAction = 0;
-  sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.closeAction, 0, v5, v6);
+  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.closeAction, 0, v5, v6);
 }
 
 
@@ -76,19 +76,19 @@ void EventInfoProductivityGrowthDialog__OnClickCloseButton(
   System_Reflection_MethodBase_o *v4; // x0
   System_Action_o *v5; // x20
 
-  if ( (byte_4C38F29 & 1) == 0 )
+  if ( (byte_4C44522 & 1) == 0 )
   {
-    sub_1C32C20(&System_Action_TypeInfo);
-    sub_1C32C20(&Method_EventInfoProductivityGrowthDialog_OnClickCloseButton__);
-    sub_1C32C20(&Method_EventInfoProductivityGrowthDialog__OnClickCloseButton_b__17_0__);
-    byte_4C38F29 = 1;
+    sub_1C37058(&System_Action_TypeInfo);
+    sub_1C37058(&Method_EventInfoProductivityGrowthDialog_OnClickCloseButton__);
+    sub_1C37058(&Method_EventInfoProductivityGrowthDialog__OnClickCloseButton_b__17_0__);
+    byte_4C44522 = 1;
   }
   v3 = Method_EventInfoProductivityGrowthDialog_OnClickCloseButton__;
   if ( (*((_BYTE *)Method_EventInfoProductivityGrowthDialog_OnClickCloseButton__ + 83) & 2) != 0 )
-    v3 = (_QWORD *)sub_1C32C38(Method_EventInfoProductivityGrowthDialog_OnClickCloseButton__);
-  v4 = (System_Reflection_MethodBase_o *)sub_1C32C04(v3, v3[4]);
+    v3 = (_QWORD *)sub_1C37070(Method_EventInfoProductivityGrowthDialog_OnClickCloseButton__);
+  v4 = (System_Reflection_MethodBase_o *)sub_1C3703C(v3, v3[4]);
   OverwriteAssetSoundName__PlaySystemSe(v4, 1, 0, 0);
-  v5 = (System_Action_o *)sub_1C32E6C(System_Action_TypeInfo);
+  v5 = (System_Action_o *)sub_1C372A4(System_Action_TypeInfo);
   System_Action___ctor(
     v5,
     (Il2CppObject *)this,
@@ -171,27 +171,27 @@ void EventInfoProductivityGrowthDialog__Open(
   int32_t productAdd; // [xsp+28h] [xbp-68h] BYREF
   int32_t productNum; // [xsp+2Ch] [xbp-64h] BYREF
 
-  if ( (byte_4C38F28 & 1) == 0 )
+  if ( (byte_4C44521 & 1) == 0 )
   {
-    sub_1C32C20(&GiftEntity_TypeInfo);
-    sub_1C32C20(&int_TypeInfo);
-    sub_1C32C20(&Method_System_Collections_Generic_List_GiftEntity__Add__);
-    sub_1C32C20(&Method_System_Collections_Generic_List_string__Add__);
-    sub_1C32C20(&Method_System_Collections_Generic_List_GiftEntity___ctor__);
-    sub_1C32C20(&Method_System_Collections_Generic_List_string___ctor__);
-    sub_1C32C20(&Method_System_Collections_Generic_List_GiftEntity__get_Count__);
-    sub_1C32C20(&Method_System_Collections_Generic_List_GiftEntity__get_Item__);
-    sub_1C32C20(&Method_System_Collections_Generic_List_string__get_Item__);
-    sub_1C32C20(&System_Collections_Generic_List_GiftEntity__TypeInfo);
-    sub_1C32C20(&System_Collections_Generic_List_string__TypeInfo);
-    sub_1C32C20(&LocalizationManager_TypeInfo);
-    sub_1C32C20(&System_Text_StringBuilder_TypeInfo);
-    sub_1C32C20(&TerminalPramsManager_TypeInfo);
-    sub_1C32C20(&StringLiteral_5579/*"EVENT_CONQUEST_UP_MESSAGE"*/);
-    sub_1C32C20(&StringLiteral_5578/*"EVENT_CONQUEST_UP_ITEM_FORMAT"*/);
-    sub_1C32C20(&StringLiteral_5577/*"EVENT_CONQUEST_UP_ITEM_ADD_FORMAT"*/);
-    sub_1C32C20(&StringLiteral_5580/*"EVENT_CONQUEST_UP_TITLE"*/);
-    byte_4C38F28 = 1;
+    sub_1C37058(&GiftEntity_TypeInfo);
+    sub_1C37058(&int_TypeInfo);
+    sub_1C37058(&Method_System_Collections_Generic_List_GiftEntity__Add__);
+    sub_1C37058(&Method_System_Collections_Generic_List_string__Add__);
+    sub_1C37058(&Method_System_Collections_Generic_List_GiftEntity___ctor__);
+    sub_1C37058(&Method_System_Collections_Generic_List_string___ctor__);
+    sub_1C37058(&Method_System_Collections_Generic_List_GiftEntity__get_Count__);
+    sub_1C37058(&Method_System_Collections_Generic_List_GiftEntity__get_Item__);
+    sub_1C37058(&Method_System_Collections_Generic_List_string__get_Item__);
+    sub_1C37058(&System_Collections_Generic_List_GiftEntity__TypeInfo);
+    sub_1C37058(&System_Collections_Generic_List_string__TypeInfo);
+    sub_1C37058(&LocalizationManager_TypeInfo);
+    sub_1C37058(&System_Text_StringBuilder_TypeInfo);
+    sub_1C37058(&TerminalPramsManager_TypeInfo);
+    sub_1C37058(&StringLiteral_5580/*"EVENT_CONQUEST_UP_MESSAGE"*/);
+    sub_1C37058(&StringLiteral_5579/*"EVENT_CONQUEST_UP_ITEM_FORMAT"*/);
+    sub_1C37058(&StringLiteral_5578/*"EVENT_CONQUEST_UP_ITEM_ADD_FORMAT"*/);
+    sub_1C37058(&StringLiteral_5581/*"EVENT_CONQUEST_UP_TITLE"*/);
+    byte_4C44521 = 1;
   }
   v5 = TerminalPramsManager_TypeInfo;
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -204,14 +204,14 @@ void EventInfoProductivityGrowthDialog__Open(
   {
     action = closeAction;
     v69 = this;
-    v7 = (System_Collections_Generic_List_object__o *)sub_1C32E6C(System_Collections_Generic_List_GiftEntity__TypeInfo);
+    v7 = (System_Collections_Generic_List_object__o *)sub_1C372A4(System_Collections_Generic_List_GiftEntity__TypeInfo);
     System_Collections_Generic_List_object____ctor(
       v7,
-      (const MethodInfo_3797F88 *)Method_System_Collections_Generic_List_GiftEntity___ctor__);
-    v8 = (System_Collections_Generic_List_object__o *)sub_1C32E6C(System_Collections_Generic_List_string__TypeInfo);
+      (const MethodInfo_37A27F0 *)Method_System_Collections_Generic_List_GiftEntity___ctor__);
+    v8 = (System_Collections_Generic_List_object__o *)sub_1C372A4(System_Collections_Generic_List_string__TypeInfo);
     System_Collections_Generic_List_object____ctor(
       v8,
-      (const MethodInfo_3797F88 *)Method_System_Collections_Generic_List_string___ctor__);
+      (const MethodInfo_37A27F0 *)Method_System_Collections_Generic_List_string___ctor__);
     max_length = eventConquestInfos->max_length;
     if ( max_length >= 1 )
     {
@@ -220,9 +220,9 @@ void EventInfoProductivityGrowthDialog__Open(
       {
         if ( (unsigned int)v13 >= max_length )
 LABEL_64:
-          sub_1C32E84(Item);
+          sub_1C372BC(Item);
         v14 = eventConquestInfos->m_Items[v13];
-        v15 = sub_1C32E6C(GiftEntity_TypeInfo);
+        v15 = sub_1C372A4(GiftEntity_TypeInfo);
         GiftEntity___ctor((GiftEntity_o *)v15, 0);
         if ( !v14 )
           break;
@@ -243,20 +243,20 @@ LABEL_64:
           System_Collections_Generic_List_object___AddWithResize(
             v7,
             (Il2CppObject *)v15,
-            *(const MethodInfo_37987BC **)(*(_QWORD *)(v19[4] + 192LL) + 112LL));
+            *(const MethodInfo_37A3024 **)(*(_QWORD *)(v19[4] + 192LL) + 112LL));
         }
         else
         {
           v21 = &items->obj.klass + size;
           v7->fields._size = size + 1;
           v21[4] = (Il2CppClass *)v15;
-          sub_1C32BC4((CGThumbnailListItem_o *)(v21 + 4), v15, v16, v17);
+          sub_1C36FFC((CGThumbnailListItem_o *)(v21 + 4), v15, v16, v17);
         }
-        v22 = (System_Text_StringBuilder_o *)sub_1C32E6C(System_Text_StringBuilder_TypeInfo);
+        v22 = (System_Text_StringBuilder_o *)sub_1C372A4(System_Text_StringBuilder_TypeInfo);
         System_Text_StringBuilder___ctor(v22, 0);
         if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
           j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-        v23 = LocalizationManager__Get((System_String_o *)StringLiteral_5578/*"EVENT_CONQUEST_UP_ITEM_FORMAT"*/, 0);
+        v23 = LocalizationManager__Get((System_String_o *)StringLiteral_5579/*"EVENT_CONQUEST_UP_ITEM_FORMAT"*/, 0);
         productNum = v14->fields.productNum;
         Item = j_il2cpp_value_box_0(int_TypeInfo, &productNum, v24, v25, v26, v27, v28, v29);
         if ( !v22 )
@@ -266,7 +266,7 @@ LABEL_64:
         {
           if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
             j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-          v30 = LocalizationManager__Get((System_String_o *)StringLiteral_5577/*"EVENT_CONQUEST_UP_ITEM_ADD_FORMAT"*/, 0);
+          v30 = LocalizationManager__Get((System_String_o *)StringLiteral_5578/*"EVENT_CONQUEST_UP_ITEM_ADD_FORMAT"*/, 0);
           productAdd = v14->fields.productAdd;
           v37 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &productAdd, v31, v32, v33, v34, v35, v36);
           System_Text_StringBuilder__AppendFormat(v22, v30, v37, 0);
@@ -288,21 +288,21 @@ LABEL_64:
           System_Collections_Generic_List_object___AddWithResize(
             v8,
             (Il2CppObject *)Item,
-            *(const MethodInfo_37987BC **)(*(_QWORD *)(v41[4] + 192LL) + 112LL));
+            *(const MethodInfo_37A3024 **)(*(_QWORD *)(v41[4] + 192LL) + 112LL));
         }
         else
         {
           v44 = &v40->obj.klass + v42;
           v8->fields._size = v42 + 1;
           v44[4] = (Il2CppClass *)v43;
-          sub_1C32BC4((CGThumbnailListItem_o *)(v44 + 4), v43, v38, v39);
+          sub_1C36FFC((CGThumbnailListItem_o *)(v44 + 4), v43, v38, v39);
         }
         max_length = eventConquestInfos->max_length;
         if ( (int)++v13 >= max_length )
           goto LABEL_32;
       }
 LABEL_63:
-      sub_1C32E7C(Item);
+      sub_1C372B4(Item);
     }
     if ( !v7 )
       goto LABEL_63;
@@ -355,7 +355,7 @@ LABEL_39:
           v47->fields.messageLabel = v53;
           p_messageLabel = &v47->fields.messageLabel;
           v67 = v54;
-          sub_1C32BC4((CGThumbnailListItem_o *)&v47->fields.messageLabel, (int32_t)v53, v10, v11);
+          sub_1C36FFC((CGThumbnailListItem_o *)&v47->fields.messageLabel, (int32_t)v53, v10, v11);
           v56 = 0;
           break;
         default:
@@ -363,7 +363,7 @@ LABEL_39:
       }
       do
       {
-        v57 = (System_Text_StringBuilder_o *)sub_1C32E6C(System_Text_StringBuilder_TypeInfo);
+        v57 = (System_Text_StringBuilder_o *)sub_1C372A4(System_Text_StringBuilder_TypeInfo);
         System_Text_StringBuilder___ctor(v57, 0);
         if ( !v52 )
           goto LABEL_63;
@@ -373,7 +373,7 @@ LABEL_39:
         Item = (__int64)System_Collections_Generic_List_object___get_Item(
                           v7,
                           v56,
-                          (const MethodInfo_37984EC *)Method_System_Collections_Generic_List_GiftEntity__get_Item__);
+                          (const MethodInfo_37A2D54 *)Method_System_Collections_Generic_List_GiftEntity__get_Item__);
         if ( !v55 )
           goto LABEL_63;
         if ( (unsigned int)v56 >= LODWORD(v55->max_length) )
@@ -382,13 +382,13 @@ LABEL_39:
           goto LABEL_63;
         v59 = v55->m_Items[v56];
         v60 = *(int *)(Item + 28) <= 1 ? -1 : *(_DWORD *)(Item + 28);
-        ItemIconComponent__SetGift_40822420(v58, *(_DWORD *)(Item + 20), *(_DWORD *)(Item + 24), v60, 0, 0);
+        ItemIconComponent__SetGift_40921900(v58, *(_DWORD *)(Item + 20), *(_DWORD *)(Item + 24), v60, 0, 0);
         if ( !v8 )
           goto LABEL_63;
         Item = (__int64)System_Collections_Generic_List_object___get_Item(
                           v8,
                           v56,
-                          (const MethodInfo_37984EC *)Method_System_Collections_Generic_List_string__get_Item__);
+                          (const MethodInfo_37A2D54 *)Method_System_Collections_Generic_List_string__get_Item__);
         if ( !v59 )
           goto LABEL_63;
         UILabel__set_text(v59, (System_String_o *)Item, 0);
@@ -404,17 +404,17 @@ LABEL_39:
       titleLabel = v69->fields.titleLabel;
       if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-      Item = (__int64)LocalizationManager__Get((System_String_o *)StringLiteral_5580/*"EVENT_CONQUEST_UP_TITLE"*/, 0);
+      Item = (__int64)LocalizationManager__Get((System_String_o *)StringLiteral_5581/*"EVENT_CONQUEST_UP_TITLE"*/, 0);
       if ( !titleLabel )
         goto LABEL_63;
       UILabel__set_text(titleLabel, (System_String_o *)Item, 0);
       v63 = *p_messageLabel;
-      Item = (__int64)LocalizationManager__Get((System_String_o *)StringLiteral_5579/*"EVENT_CONQUEST_UP_MESSAGE"*/, 0);
+      Item = (__int64)LocalizationManager__Get((System_String_o *)StringLiteral_5580/*"EVENT_CONQUEST_UP_MESSAGE"*/, 0);
       if ( !v63 )
         goto LABEL_63;
       UILabel__set_text(v63, (System_String_o *)Item, 0);
       v69->fields.closeAction = action;
-      sub_1C32BC4((CGThumbnailListItem_o *)&v69->fields.closeAction, (int32_t)action, v64, v65);
+      sub_1C36FFC((CGThumbnailListItem_o *)&v69->fields.closeAction, (int32_t)action, v64, v65);
     }
   }
   else

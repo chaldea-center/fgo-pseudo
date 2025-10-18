@@ -4,16 +4,16 @@ void WarBoardZoomSwitchButton___ctor(WarBoardZoomSwitchButton_o *this, const Met
   int32_t v4; // w2
   const MethodInfo *v5; // x3
 
-  if ( (byte_4C35721 & 1) == 0 )
+  if ( (byte_4C40D0C & 1) == 0 )
   {
-    sub_1C32C20(&WarBoardZoomSwitchButton_ZoomSpritePair___TypeInfo);
-    byte_4C35721 = 1;
+    sub_1C37058(&WarBoardZoomSwitchButton_ZoomSpritePair___TypeInfo);
+    byte_4C40D0C = 1;
   }
-  v3 = (struct WarBoardZoomSwitchButton_ZoomSpritePair_array *)sub_1C32CC8(
+  v3 = (struct WarBoardZoomSwitchButton_ZoomSpritePair_array *)sub_1C37100(
                                                                  WarBoardZoomSwitchButton_ZoomSpritePair___TypeInfo,
                                                                  0);
   this->fields.zoomSpritePairArray = v3;
-  sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.zoomSpritePairArray, (int32_t)v3, v4, v5);
+  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.zoomSpritePairArray, (int32_t)v3, v4, v5);
   UnityEngine_MonoBehaviour___ctor((UnityEngine_MonoBehaviour_o *)this, 0);
 }
 
@@ -23,10 +23,10 @@ void WarBoardZoomSwitchButton__ApplyFsOffsetAdjustment(WarBoardZoomSwitchButton_
   UnityEngine_Object_o *fsOffset; // x20
   FSOffset_o *v4; // x0
 
-  if ( (byte_4C35720 & 1) == 0 )
+  if ( (byte_4C40D0B & 1) == 0 )
   {
-    sub_1C32C20(&UnityEngine_Object_TypeInfo);
-    byte_4C35720 = 1;
+    sub_1C37058(&UnityEngine_Object_TypeInfo);
+    byte_4C40D0B = 1;
   }
   fsOffset = (UnityEngine_Object_o *)this->fields.fsOffset;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -35,7 +35,7 @@ void WarBoardZoomSwitchButton__ApplyFsOffsetAdjustment(WarBoardZoomSwitchButton_
   {
     v4 = this->fields.fsOffset;
     if ( !v4 || (FSOffset__AddOffsetX(v4, 0), (v4 = this->fields.fsOffset) == 0) )
-      sub_1C32E7C(v4);
+      sub_1C372B4(v4);
     FSOffset__AddBottomY(v4, 0);
   }
 }
@@ -61,11 +61,11 @@ void WarBoardZoomSwitchButton__ClickButton(WarBoardZoomSwitchButton_o *this, con
   const MethodInfo *v9; // x1
 
   v2 = this;
-  if ( (byte_4C3571C & 1) == 0 )
+  if ( (byte_4C40D07 & 1) == 0 )
   {
-    sub_1C32C20(&Method_ActionExtensions_Call_float___);
-    this = (WarBoardZoomSwitchButton_o *)sub_1C32C20(&Method_WarBoardZoomSwitchButton_ClickButton__);
-    byte_4C3571C = 1;
+    sub_1C37058(&Method_ActionExtensions_Call_float___);
+    this = (WarBoardZoomSwitchButton_o *)sub_1C37058(&Method_WarBoardZoomSwitchButton_ClickButton__);
+    byte_4C40D07 = 1;
   }
   zoomSpritePairArray = v2->fields.zoomSpritePairArray;
   if ( !zoomSpritePairArray )
@@ -73,23 +73,23 @@ void WarBoardZoomSwitchButton__ClickButton(WarBoardZoomSwitchButton_o *this, con
   v2->fields.currentZoomIndex = (v2->fields.currentZoomIndex + 1) % SLODWORD(zoomSpritePairArray->max_length);
   v4 = Method_WarBoardZoomSwitchButton_ClickButton__;
   if ( (*((_BYTE *)Method_WarBoardZoomSwitchButton_ClickButton__ + 83) & 2) != 0 )
-    v4 = (_QWORD *)sub_1C32C38(Method_WarBoardZoomSwitchButton_ClickButton__);
-  v5 = (System_Reflection_MethodBase_o *)sub_1C32C04(v4, v4[4]);
+    v4 = (_QWORD *)sub_1C37070(Method_WarBoardZoomSwitchButton_ClickButton__);
+  v5 = (System_Reflection_MethodBase_o *)sub_1C3703C(v4, v4[4]);
   OverwriteAssetSoundName__PlaySystemSe(v5, 0, 0, 0);
   v6 = v2->fields.zoomSpritePairArray;
   if ( !v6 )
     goto LABEL_10;
   currentZoomIndex = v2->fields.currentZoomIndex;
   if ( (unsigned int)currentZoomIndex >= LODWORD(v6->max_length) )
-    sub_1C32E84(this);
+    sub_1C372BC(this);
   v8 = v6->m_Items[currentZoomIndex];
   if ( !v8 )
 LABEL_10:
-    sub_1C32E7C(this);
+    sub_1C372B4(this);
   ActionExtensions__Call_float_(
     (System_Action_T__o *)v2->fields.OnButtonClicked,
     v8->fields.zoom,
-    (const MethodInfo_3029D30 *)Method_ActionExtensions_Call_float___);
+    (const MethodInfo_3034598 *)Method_ActionExtensions_Call_float___);
   WarBoardZoomSwitchButton__UpdateUI(v2, v9);
 }
 
@@ -101,13 +101,13 @@ void WarBoardZoomSwitchButton__CloseRuleDialog(WarBoardZoomSwitchButton_o *this,
   int32_t winCondId; // w19
   WarBoardManager_c *v5; // x0
 
-  if ( (byte_4C3571B & 1) == 0 )
+  if ( (byte_4C40D06 & 1) == 0 )
   {
-    sub_1C32C20(&Method_SingletonMonoBehaviour_WarBoardManager__get_Instance__);
-    sub_1C32C20(&WarBoardManager_TypeInfo);
-    byte_4C3571B = 1;
+    sub_1C37058(&Method_SingletonMonoBehaviour_WarBoardManager__get_Instance__);
+    sub_1C37058(&WarBoardManager_TypeInfo);
+    byte_4C40D06 = 1;
   }
-  Instance = (WarBoardManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39E2904 *)Method_SingletonMonoBehaviour_WarBoardManager__get_Instance__);
+  Instance = (WarBoardManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39ED16C *)Method_SingletonMonoBehaviour_WarBoardManager__get_Instance__);
   if ( !Instance )
     goto LABEL_10;
   warBoardData_k__BackingField = Instance->fields._warBoardData_k__BackingField;
@@ -122,13 +122,13 @@ void WarBoardZoomSwitchButton__CloseRuleDialog(WarBoardZoomSwitchButton_o *this,
   }
   UnityEngine_PlayerPrefs__SetInt(v5->static_fields->SAVE_KEY_WAR_BOARD_CONFIRMED_RULE, winCondId, 0);
   UnityEngine_PlayerPrefs__Save(0);
-  Instance = (WarBoardManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39E2904 *)Method_SingletonMonoBehaviour_WarBoardManager__get_Instance__);
+  Instance = (WarBoardManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39ED16C *)Method_SingletonMonoBehaviour_WarBoardManager__get_Instance__);
   if ( !Instance
     || (WarBoardManager__UpdateRuleButton(Instance, 0),
-        (Instance = (WarBoardManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39E2904 *)Method_SingletonMonoBehaviour_WarBoardManager__get_Instance__)) == 0) )
+        (Instance = (WarBoardManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39ED16C *)Method_SingletonMonoBehaviour_WarBoardManager__get_Instance__)) == 0) )
   {
 LABEL_10:
-    sub_1C32E7C(Instance);
+    sub_1C372B4(Instance);
   }
   WarBoardManager__SetMapTouchEnable(Instance, 1, 0, 0);
 }
@@ -146,10 +146,10 @@ System_String_o *WarBoardZoomSwitchButton__GetCurrentButtonSpriteName(
   System_String_o **p_freeZoomSpriteName; // x8
 
   v2 = this;
-  if ( (byte_4C3571F & 1) == 0 )
+  if ( (byte_4C40D0A & 1) == 0 )
   {
-    this = (WarBoardZoomSwitchButton_o *)sub_1C32C20(&StringLiteral_1/*""*/);
-    byte_4C3571F = 1;
+    this = (WarBoardZoomSwitchButton_o *)sub_1C37058(&StringLiteral_1/*""*/);
+    byte_4C40D0A = 1;
   }
   currentZoomIndex = (unsigned int)v2->fields.currentZoomIndex;
   if ( (_DWORD)currentZoomIndex == -1 )
@@ -170,11 +170,11 @@ LABEL_10:
     return *p_freeZoomSpriteName;
   }
   if ( (unsigned int)currentZoomIndex >= max_length )
-    sub_1C32E84(this);
+    sub_1C372BC(this);
   v6 = zoomSpritePairArray->m_Items[currentZoomIndex];
   if ( !v6 )
 LABEL_13:
-    sub_1C32E7C(this);
+    sub_1C372B4(this);
   p_freeZoomSpriteName = &v6->fields.spriteName;
   return *p_freeZoomSpriteName;
 }
@@ -191,13 +191,13 @@ void WarBoardZoomSwitchButton__OnClickRuleButton(WarBoardZoomSwitchButton_o *thi
   System_Action_o *v3; // x20
   const MethodInfo *v4; // x1
 
-  if ( (byte_4C3571A & 1) == 0 )
+  if ( (byte_4C40D05 & 1) == 0 )
   {
-    sub_1C32C20(&System_Action_TypeInfo);
-    sub_1C32C20(&Method_WarBoardZoomSwitchButton_CloseRuleDialog__);
-    byte_4C3571A = 1;
+    sub_1C37058(&System_Action_TypeInfo);
+    sub_1C37058(&Method_WarBoardZoomSwitchButton_CloseRuleDialog__);
+    byte_4C40D05 = 1;
   }
-  v3 = (System_Action_o *)sub_1C32E6C(System_Action_TypeInfo);
+  v3 = (System_Action_o *)sub_1C372A4(System_Action_TypeInfo);
   System_Action___ctor(v3, (Il2CppObject *)this, Method_WarBoardZoomSwitchButton_CloseRuleDialog__, 0);
   WarBoardUIUtility__ShowRuleDialog(v3, v4);
 }
@@ -211,10 +211,10 @@ void WarBoardZoomSwitchButton__SetEnable(WarBoardZoomSwitchButton_o *this, bool 
   _BOOL4 HideOnDisable_k__BackingField; // w21
 
   v5 = value;
-  if ( (byte_4C3571D & 1) == 0 )
+  if ( (byte_4C40D08 & 1) == 0 )
   {
-    sub_1C32C20(&UnityEngine_Object_TypeInfo);
-    byte_4C3571D = 1;
+    sub_1C37058(&UnityEngine_Object_TypeInfo);
+    byte_4C40D08 = 1;
   }
   if ( this->fields.isEnabled != v5 )
   {
@@ -240,7 +240,7 @@ void WarBoardZoomSwitchButton__SetEnable(WarBoardZoomSwitchButton_o *this, bool 
       return;
     }
 LABEL_11:
-    sub_1C32E7C(gameObject);
+    sub_1C372B4(gameObject);
   }
 }
 
@@ -258,7 +258,7 @@ void WarBoardZoomSwitchButton__SetUpPositionForConfigurationMode(
         WarBoardZoomSwitchButton__ApplyFsOffsetAdjustment(this, v4),
         (transform = (UnityEngine_Transform_o *)this->fields.ruleButtonObj) == 0) )
   {
-    sub_1C32E7C(transform);
+    sub_1C372B4(transform);
   }
   UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)transform, 0, 0);
 }
@@ -275,7 +275,7 @@ void WarBoardZoomSwitchButton__SetUpPositionForPlayMode(WarBoardZoomSwitchButton
         WarBoardZoomSwitchButton__ApplyFsOffsetAdjustment(this, v4),
         (transform = (UnityEngine_Transform_o *)this->fields.ruleButtonObj) == 0) )
   {
-    sub_1C32E7C(transform);
+    sub_1C372B4(transform);
   }
   UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)transform, 1, 0);
 }
@@ -297,12 +297,12 @@ void WarBoardZoomSwitchButton__UpdateRuleButton(WarBoardZoomSwitchButton_o *this
   UISprite_o *Instance; // x0
   UnityEngine_GameObject_o *newRuleObject; // x19
 
-  if ( (byte_4C35719 & 1) == 0 )
+  if ( (byte_4C40D04 & 1) == 0 )
   {
-    sub_1C32C20(&AtlasManager_TypeInfo);
-    sub_1C32C20(&Method_SingletonMonoBehaviour_WarBoardManager__get_Instance__);
-    sub_1C32C20(&StringLiteral_20207/*"icon_noticebg_01"*/);
-    byte_4C35719 = 1;
+    sub_1C37058(&AtlasManager_TypeInfo);
+    sub_1C37058(&Method_SingletonMonoBehaviour_WarBoardManager__get_Instance__);
+    sub_1C37058(&StringLiteral_20210/*"icon_noticebg_01"*/);
+    byte_4C40D04 = 1;
   }
   newRuleBg = this->fields.newRuleBg;
   if ( !AtlasManager_TypeInfo->_2.cctor_finished )
@@ -310,13 +310,13 @@ void WarBoardZoomSwitchButton__UpdateRuleButton(WarBoardZoomSwitchButton_o *this
   AtlasManager__SetCommon(newRuleBg, 0);
   Instance = this->fields.newRuleBg;
   if ( !Instance
-    || (UISprite__set_spriteName(Instance, (System_String_o *)StringLiteral_20207/*"icon_noticebg_01"*/, 0),
+    || (UISprite__set_spriteName(Instance, (System_String_o *)StringLiteral_20210/*"icon_noticebg_01"*/, 0),
         newRuleObject = this->fields.newRuleObject,
-        (Instance = (UISprite_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39E2904 *)Method_SingletonMonoBehaviour_WarBoardManager__get_Instance__)) == 0)
+        (Instance = (UISprite_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39ED16C *)Method_SingletonMonoBehaviour_WarBoardManager__get_Instance__)) == 0)
     || (Instance = *(UISprite_o **)&Instance->fields.mOuterUV.fields.m_Height) == 0
     || (Instance = (UISprite_o *)WarBoardData__HasNewWinCond((WarBoardData_o *)Instance, 0), !newRuleObject) )
   {
-    sub_1C32E7C(Instance);
+    sub_1C372B4(Instance);
   }
   UnityEngine_GameObject__SetActive(newRuleObject, (unsigned __int8)Instance & 1, 0);
 }
@@ -329,10 +329,10 @@ void WarBoardZoomSwitchButton__UpdateUI(WarBoardZoomSwitchButton_o *this, const 
   UISprite_o *v5; // x20
   System_String_o *CurrentButtonSpriteName; // x0
 
-  if ( (byte_4C3571E & 1) == 0 )
+  if ( (byte_4C40D09 & 1) == 0 )
   {
-    sub_1C32C20(&UnityEngine_Object_TypeInfo);
-    byte_4C3571E = 1;
+    sub_1C37058(&UnityEngine_Object_TypeInfo);
+    byte_4C40D09 = 1;
   }
   buttonSprite = (UnityEngine_Object_o *)this->fields.buttonSprite;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -342,7 +342,7 @@ void WarBoardZoomSwitchButton__UpdateUI(WarBoardZoomSwitchButton_o *this, const 
     v5 = this->fields.buttonSprite;
     CurrentButtonSpriteName = WarBoardZoomSwitchButton__GetCurrentButtonSpriteName(this, v4);
     if ( !v5 )
-      sub_1C32E7C(CurrentButtonSpriteName);
+      sub_1C372B4(CurrentButtonSpriteName);
     UISprite__set_spriteName(v5, CurrentButtonSpriteName, 0);
   }
 }

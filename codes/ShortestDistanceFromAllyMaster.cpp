@@ -25,25 +25,25 @@ float ShortestDistanceFromAllyMaster__GetRatingBase(
   struct WarBoardRatingBaseEntity_o *ratingBase; // x8
 
   v11 = this;
-  if ( (byte_4C3532D & 1) == 0 )
+  if ( (byte_4C40918 & 1) == 0 )
   {
-    sub_1C32C20(&AStarSearch_TypeInfo);
-    sub_1C32C20(&Method_System_Collections_Generic_Dictionary_int__uint__ContainsKey__);
-    sub_1C32C20(&Method_System_Collections_Generic_Dictionary_int__uint__get_Item__);
-    this = (ShortestDistanceFromAllyMaster_o *)sub_1C32C20(&WarBoardAIManager_TypeInfo);
-    byte_4C3532D = 1;
+    sub_1C37058(&AStarSearch_TypeInfo);
+    sub_1C37058(&Method_System_Collections_Generic_Dictionary_int__uint__ContainsKey__);
+    sub_1C37058(&Method_System_Collections_Generic_Dictionary_int__uint__get_Item__);
+    this = (ShortestDistanceFromAllyMaster_o *)sub_1C37058(&WarBoardAIManager_TypeInfo);
+    byte_4C40918 = 1;
   }
   if ( !targetSquare || !dicPiecePlaceData )
     goto LABEL_20;
   if ( System_Collections_Generic_Dictionary_int__uint___ContainsKey(
          dicPiecePlaceData,
          targetSquare->fields._squareIndex_k__BackingField,
-         (const MethodInfo_3414364 *)Method_System_Collections_Generic_Dictionary_int__uint__ContainsKey__) )
+         (const MethodInfo_341EBCC *)Method_System_Collections_Generic_Dictionary_int__uint__ContainsKey__) )
   {
     Item = System_Collections_Generic_Dictionary_int__uint___get_Item(
              dicPiecePlaceData,
              targetSquare->fields._squareIndex_k__BackingField,
-             (const MethodInfo_34140DC *)Method_System_Collections_Generic_Dictionary_int__uint__get_Item__);
+             (const MethodInfo_341E944 *)Method_System_Collections_Generic_Dictionary_int__uint__get_Item__);
     if ( !WarBoardAIManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(WarBoardAIManager_TypeInfo);
     PieceUnique = WarBoardAIManager__GetPieceUnique(Item, 0);
@@ -76,7 +76,7 @@ float ShortestDistanceFromAllyMaster__GetRatingBase(
                              - ratingBase->fields.adjustmentValueA2 * ((int)max_length - 1)),
                        0.0);
 LABEL_20:
-            sub_1C32E7C(this);
+            sub_1C372B4(this);
           }
         }
       }

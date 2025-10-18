@@ -12,18 +12,18 @@ void CommandCardExceedRequest__beginRequest(
         System_Collections_Generic_Dictionary_int__int__o *useItems,
         const MethodInfo *method)
 {
-  if ( (byte_4C39477 & 1) == 0 )
+  if ( (byte_4C44A71 & 1) == 0 )
   {
-    sub_1C32C20(&StringLiteral_24582/*"userSvtId"*/);
-    sub_1C32C20(&StringLiteral_24479/*"useItems"*/);
-    sub_1C32C20(&StringLiteral_20264/*"idx"*/);
-    byte_4C39477 = 1;
+    sub_1C37058(&StringLiteral_24587/*"userSvtId"*/);
+    sub_1C37058(&StringLiteral_24483/*"useItems"*/);
+    sub_1C37058(&StringLiteral_20267/*"idx"*/);
+    byte_4C44A71 = 1;
   }
-  RequestBase__addField_44144740((RequestBase_o *)this, (System_String_o *)StringLiteral_24582/*"userSvtId"*/, userServantId, 0);
-  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_20264/*"idx"*/, index, 0);
-  RequestBase__addField_44145300(
+  RequestBase__addField_44246844((RequestBase_o *)this, (System_String_o *)StringLiteral_24587/*"userSvtId"*/, userServantId, 0);
+  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_20267/*"idx"*/, index, 0);
+  RequestBase__addField_44247404(
     (RequestBase_o *)this,
-    (System_String_o *)StringLiteral_24479/*"useItems"*/,
+    (System_String_o *)StringLiteral_24483/*"useItems"*/,
     (Il2CppObject *)useItems,
     0);
   RequestBase__beginRequest((RequestBase_o *)this, 0);
@@ -34,16 +34,16 @@ System_String_o *CommandCardExceedRequest__getURL(CommandCardExceedRequest_o *th
 {
   System_String_o *BaseUrl; // x0
 
-  if ( (byte_4C39476 & 1) == 0 )
+  if ( (byte_4C44A70 & 1) == 0 )
   {
-    sub_1C32C20(&NetworkManager_TypeInfo);
-    sub_1C32C20(&StringLiteral_17747/*"card/commandCardExceed"*/);
-    byte_4C39476 = 1;
+    sub_1C37058(&NetworkManager_TypeInfo);
+    sub_1C37058(&StringLiteral_17749/*"card/commandCardExceed"*/);
+    byte_4C44A70 = 1;
   }
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
   BaseUrl = NetworkManager__getBaseUrl(1, 0);
-  return System_String__Concat_63518544(BaseUrl, (System_String_o *)StringLiteral_17747/*"card/commandCardExceed"*/, 0);
+  return System_String__Concat_63561656(BaseUrl, (System_String_o *)StringLiteral_17749/*"card/commandCardExceed"*/, 0);
 }
 
 
@@ -57,17 +57,17 @@ void CommandCardExceedRequest__requestCompleted(
   Il2CppObject *success; // x20
   System_String_o *v8; // x1
 
-  if ( (byte_4C39478 & 1) == 0 )
+  if ( (byte_4C44A72 & 1) == 0 )
   {
-    sub_1C32C20(&JsonManager_TypeInfo);
-    sub_1C32C20(&ResponseCommandKind_TypeInfo);
-    sub_1C32C20(&StringLiteral_22212/*"ng"*/);
-    byte_4C39478 = 1;
+    sub_1C37058(&JsonManager_TypeInfo);
+    sub_1C37058(&ResponseCommandKind_TypeInfo);
+    sub_1C37058(&StringLiteral_22215/*"ng"*/);
+    byte_4C44A72 = 1;
   }
   if ( !ResponseCommandKind_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(ResponseCommandKind_TypeInfo);
   v5 = ResponseCommandKind__SearchData(84, responseList, 0);
-  if ( v5 && (v6 = v5, ResponseData__checkError_44140424(v5, 0)) )
+  if ( v5 && (v6 = v5, ResponseData__checkError_44242528(v5, 0)) )
   {
     success = (Il2CppObject *)v6->fields.success;
     if ( !JsonManager_TypeInfo->_2.cctor_finished )
@@ -76,7 +76,7 @@ void CommandCardExceedRequest__requestCompleted(
   }
   else
   {
-    v8 = (System_String_o *)StringLiteral_22212/*"ng"*/;
+    v8 = (System_String_o *)StringLiteral_22215/*"ng"*/;
   }
   RequestBase__completed((RequestBase_o *)this, v8, 0);
 }

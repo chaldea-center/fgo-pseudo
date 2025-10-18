@@ -1,9 +1,9 @@
 void EventInfoMakeFarmGrowthDialog___ctor(EventInfoMakeFarmGrowthDialog_o *this, const MethodInfo *method)
 {
-  if ( (byte_4C38EE6 & 1) == 0 )
+  if ( (byte_4C444DF & 1) == 0 )
   {
-    sub_1C32C20(&BaseDialog_TypeInfo);
-    byte_4C38EE6 = 1;
+    sub_1C37058(&BaseDialog_TypeInfo);
+    byte_4C444DF = 1;
   }
   if ( !BaseDialog_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(BaseDialog_TypeInfo);
@@ -24,7 +24,7 @@ void EventInfoMakeFarmGrowthDialog__Init(EventInfoMakeFarmGrowthDialog_o *this, 
 
   BaseDialog__Init((BaseDialog_o *)this, 0);
   this->fields.closeCallback = 0;
-  sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.closeCallback, 0, v3, v4);
+  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.closeCallback, 0, v3, v4);
 }
 
 
@@ -34,19 +34,19 @@ void EventInfoMakeFarmGrowthDialog__OnClickCloseButton(EventInfoMakeFarmGrowthDi
   System_Reflection_MethodBase_o *v4; // x0
   System_Action_o *v5; // x20
 
-  if ( (byte_4C38EE5 & 1) == 0 )
+  if ( (byte_4C444DE & 1) == 0 )
   {
-    sub_1C32C20(&System_Action_TypeInfo);
-    sub_1C32C20(&Method_EventInfoMakeFarmGrowthDialog_OnClickCloseButton__);
-    sub_1C32C20(&Method_EventInfoMakeFarmGrowthDialog__OnClickCloseButton_b__10_0__);
-    byte_4C38EE5 = 1;
+    sub_1C37058(&System_Action_TypeInfo);
+    sub_1C37058(&Method_EventInfoMakeFarmGrowthDialog_OnClickCloseButton__);
+    sub_1C37058(&Method_EventInfoMakeFarmGrowthDialog__OnClickCloseButton_b__10_0__);
+    byte_4C444DE = 1;
   }
   v3 = Method_EventInfoMakeFarmGrowthDialog_OnClickCloseButton__;
   if ( (*((_BYTE *)Method_EventInfoMakeFarmGrowthDialog_OnClickCloseButton__ + 83) & 2) != 0 )
-    v3 = (_QWORD *)sub_1C32C38(Method_EventInfoMakeFarmGrowthDialog_OnClickCloseButton__);
-  v4 = (System_Reflection_MethodBase_o *)sub_1C32C04(v3, v3[4]);
+    v3 = (_QWORD *)sub_1C37070(Method_EventInfoMakeFarmGrowthDialog_OnClickCloseButton__);
+  v4 = (System_Reflection_MethodBase_o *)sub_1C3703C(v3, v3[4]);
   OverwriteAssetSoundName__PlaySystemSe(v4, 0, 0, 0);
-  v5 = (System_Action_o *)sub_1C32E6C(System_Action_TypeInfo);
+  v5 = (System_Action_o *)sub_1C372A4(System_Action_TypeInfo);
   System_Action___ctor(v5, (Il2CppObject *)this, Method_EventInfoMakeFarmGrowthDialog__OnClickCloseButton_b__10_0__, 0);
   BaseDialog__Close((BaseDialog_o *)this, v5, 0);
 }
@@ -89,20 +89,20 @@ void EventInfoMakeFarmGrowthDialog__Open(
   int32_t v34; // [xsp+8h] [xbp-48h] BYREF
   int32_t v35; // [xsp+Ch] [xbp-44h] BYREF
 
-  if ( (byte_4C38EE4 & 1) == 0 )
+  if ( (byte_4C444DD & 1) == 0 )
   {
-    sub_1C32C20(&Method_System_Linq_Enumerable_First_EventConquestInfo___);
-    sub_1C32C20(&int_TypeInfo);
-    sub_1C32C20(&LocalizationManager_TypeInfo);
-    sub_1C32C20(&System_Text_StringBuilder_TypeInfo);
-    sub_1C32C20(&TerminalPramsManager_TypeInfo);
-    sub_1C32C20(&StringLiteral_5576/*"EVENT_CONQUEST_UP_FARM_TITLE"*/);
-    sub_1C32C20(&StringLiteral_5572/*"EVENT_CONQUEST_UP_FARM_ITEM_ADD_FORMAT"*/);
-    sub_1C32C20(&StringLiteral_5575/*"EVENT_CONQUEST_UP_FARM_MESSAGE"*/);
-    sub_1C32C20(&StringLiteral_5573/*"EVENT_CONQUEST_UP_FARM_ITEM_FORMAT"*/);
-    sub_1C32C20(&StringLiteral_3685/*"COMMON_CONFIRM_CLOSE"*/);
-    sub_1C32C20(&StringLiteral_5574/*"EVENT_CONQUEST_UP_FARM_ITEM_HEADER"*/);
-    byte_4C38EE4 = 1;
+    sub_1C37058(&Method_System_Linq_Enumerable_First_EventConquestInfo___);
+    sub_1C37058(&int_TypeInfo);
+    sub_1C37058(&LocalizationManager_TypeInfo);
+    sub_1C37058(&System_Text_StringBuilder_TypeInfo);
+    sub_1C37058(&TerminalPramsManager_TypeInfo);
+    sub_1C37058(&StringLiteral_5577/*"EVENT_CONQUEST_UP_FARM_TITLE"*/);
+    sub_1C37058(&StringLiteral_5573/*"EVENT_CONQUEST_UP_FARM_ITEM_ADD_FORMAT"*/);
+    sub_1C37058(&StringLiteral_5576/*"EVENT_CONQUEST_UP_FARM_MESSAGE"*/);
+    sub_1C37058(&StringLiteral_5574/*"EVENT_CONQUEST_UP_FARM_ITEM_FORMAT"*/);
+    sub_1C37058(&StringLiteral_3685/*"COMMON_CONFIRM_CLOSE"*/);
+    sub_1C37058(&StringLiteral_5575/*"EVENT_CONQUEST_UP_FARM_ITEM_HEADER"*/);
+    byte_4C444DD = 1;
   }
   v5 = TerminalPramsManager_TypeInfo;
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -115,22 +115,22 @@ void EventInfoMakeFarmGrowthDialog__Open(
   {
     BaseDialog__Init((BaseDialog_o *)this, 0);
     this->fields.closeCallback = 0;
-    sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.closeCallback, 0, v7, v8);
+    sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.closeCallback, 0, v7, v8);
     object = (ItemIconComponent_o *)System_Linq_Enumerable__First_object_(
                                       eventConquestInfos,
-                                      (const MethodInfo_3103CC8 *)Method_System_Linq_Enumerable_First_EventConquestInfo___);
+                                      (const MethodInfo_310E530 *)Method_System_Linq_Enumerable_First_EventConquestInfo___);
     if ( !object )
       goto LABEL_25;
     v10 = (int32_t *)object;
     object = this->fields.countIcon;
     if ( !object )
       goto LABEL_25;
-    ItemIconComponent__SetGift_40822420(object, v10[4], v10[5], -1, 0, 0);
-    v11 = (System_Text_StringBuilder_o *)sub_1C32E6C(System_Text_StringBuilder_TypeInfo);
+    ItemIconComponent__SetGift_40921900(object, v10[4], v10[5], -1, 0, 0);
+    v11 = (System_Text_StringBuilder_o *)sub_1C372A4(System_Text_StringBuilder_TypeInfo);
     System_Text_StringBuilder___ctor(v11, 0);
     if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-    v12 = LocalizationManager__Get((System_String_o *)StringLiteral_5573/*"EVENT_CONQUEST_UP_FARM_ITEM_FORMAT"*/, 0);
+    v12 = LocalizationManager__Get((System_String_o *)StringLiteral_5574/*"EVENT_CONQUEST_UP_FARM_ITEM_FORMAT"*/, 0);
     v35 = v10[8];
     object = (ItemIconComponent_o *)j_il2cpp_value_box_0(int_TypeInfo, &v35, v13, v14, v15, v16, v17, v18);
     if ( !v11 )
@@ -140,7 +140,7 @@ void EventInfoMakeFarmGrowthDialog__Open(
     {
       if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-      v19 = LocalizationManager__Get((System_String_o *)StringLiteral_5572/*"EVENT_CONQUEST_UP_FARM_ITEM_ADD_FORMAT"*/, 0);
+      v19 = LocalizationManager__Get((System_String_o *)StringLiteral_5573/*"EVENT_CONQUEST_UP_FARM_ITEM_ADD_FORMAT"*/, 0);
       v34 = v10[9];
       v26 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v34, v20, v21, v22, v23, v24, v25);
       System_Text_StringBuilder__AppendFormat(v11, v19, v26, 0);
@@ -155,16 +155,16 @@ void EventInfoMakeFarmGrowthDialog__Open(
     headerLabel = this->fields.headerLabel;
     if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-    object = (ItemIconComponent_o *)LocalizationManager__Get((System_String_o *)StringLiteral_5574/*"EVENT_CONQUEST_UP_FARM_ITEM_HEADER"*/, 0);
+    object = (ItemIconComponent_o *)LocalizationManager__Get((System_String_o *)StringLiteral_5575/*"EVENT_CONQUEST_UP_FARM_ITEM_HEADER"*/, 0);
     if ( !headerLabel )
       goto LABEL_25;
     UILabel__set_text(headerLabel, (System_String_o *)object, 0);
     titleLabel = this->fields.titleLabel;
-    object = (ItemIconComponent_o *)LocalizationManager__Get((System_String_o *)StringLiteral_5576/*"EVENT_CONQUEST_UP_FARM_TITLE"*/, 0);
+    object = (ItemIconComponent_o *)LocalizationManager__Get((System_String_o *)StringLiteral_5577/*"EVENT_CONQUEST_UP_FARM_TITLE"*/, 0);
     if ( !titleLabel
       || (UILabel__set_text(titleLabel, (System_String_o *)object, 0),
           messageLabel = this->fields.messageLabel,
-          object = (ItemIconComponent_o *)LocalizationManager__Get((System_String_o *)StringLiteral_5575/*"EVENT_CONQUEST_UP_FARM_MESSAGE"*/, 0),
+          object = (ItemIconComponent_o *)LocalizationManager__Get((System_String_o *)StringLiteral_5576/*"EVENT_CONQUEST_UP_FARM_MESSAGE"*/, 0),
           !messageLabel)
       || (UILabel__set_text(messageLabel, (System_String_o *)object, 0),
           closeLabel = this->fields.closeLabel,
@@ -172,12 +172,12 @@ void EventInfoMakeFarmGrowthDialog__Open(
           !closeLabel) )
     {
 LABEL_25:
-      sub_1C32E7C(object);
+      sub_1C372B4(object);
     }
     UILabel__set_text(closeLabel, (System_String_o *)object, 0);
     BaseDialog__Open((BaseDialog_o *)this, 0, 0, 0, 0);
     this->fields.closeCallback = closeAction;
-    sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.closeCallback, (int32_t)closeAction, v32, v33);
+    sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.closeCallback, (int32_t)closeAction, v32, v33);
   }
   else
   {

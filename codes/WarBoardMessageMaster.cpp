@@ -1,14 +1,14 @@
 void WarBoardMessageMaster___ctor(WarBoardMessageMaster_o *this, const MethodInfo *method)
 {
-  if ( (byte_4C38B67 & 1) == 0 )
+  if ( (byte_4C44160 & 1) == 0 )
   {
-    sub_1C32C20(&Method_DataMasterBase_WarBoardMessageMaster__WarBoardMessageEntity__string___ctor__);
-    byte_4C38B67 = 1;
+    sub_1C37058(&Method_DataMasterBase_WarBoardMessageMaster__WarBoardMessageEntity__string___ctor__);
+    byte_4C44160 = 1;
   }
   DataMasterBase_object__object__object____ctor(
     (DataMasterBase_TMaster__TEntity__PKType__o *)this,
     419,
-    (const MethodInfo_3398FCC *)Method_DataMasterBase_WarBoardMessageMaster__WarBoardMessageEntity__string___ctor__);
+    (const MethodInfo_33A3834 *)Method_DataMasterBase_WarBoardMessageMaster__WarBoardMessageEntity__string___ctor__);
 }
 
 
@@ -26,7 +26,7 @@ bool WarBoardMessageMaster__CheckCondition(
 
   if ( !entity )
 LABEL_24:
-    sub_1C32E7C(this);
+    sub_1C372B4(this);
   this = (WarBoardMessageMaster_o *)BasicHelper__IsNullOrEmpty(
                                       (System_Collections_ICollection_o *)entity->fields.playCondValues,
                                       0);
@@ -79,7 +79,7 @@ LABEL_21:
         goto LABEL_24;
       if ( !LODWORD(v11->max_length) )
 LABEL_25:
-        sub_1C32E84(this);
+        sub_1C372BC(this);
       result = v11->m_Items[0] <= checkValue;
       break;
     default:
@@ -129,32 +129,32 @@ System_Collections_Generic_List_WarBoardTaskBase__o *WarBoardMessageMaster__GetM
   const MethodInfo *v40; // x2
   System_Collections_Generic_List_object__o *v42; // x19
 
-  if ( (byte_4C38B68 & 1) == 0 )
+  if ( (byte_4C44161 & 1) == 0 )
   {
-    sub_1C32C20(&Method_System_Collections_ObjectModel_Collection_WarBoardMessageEntity__GetEnumerator__);
-    sub_1C32C20(&Method_System_Linq_Enumerable_Any_WarBoardMessageEntity___);
-    sub_1C32C20(&System_IDisposable_TypeInfo);
-    sub_1C32C20(&System_Collections_Generic_IEnumerator_WarBoardMessageEntity__TypeInfo);
-    sub_1C32C20(&System_Collections_IEnumerator_TypeInfo);
-    sub_1C32C20(&Method_System_Collections_Generic_List_WarBoardMessageEntity__Add__);
-    sub_1C32C20(&Method_System_Collections_Generic_List_WarBoardMessageEntity___ctor__);
-    sub_1C32C20(&Method_System_Collections_Generic_List_WarBoardTaskBase___ctor__);
-    sub_1C32C20(&System_Collections_Generic_List_WarBoardTaskBase__TypeInfo);
-    sub_1C32C20(&System_Collections_Generic_List_WarBoardMessageEntity__TypeInfo);
-    byte_4C38B68 = 1;
+    sub_1C37058(&Method_System_Collections_ObjectModel_Collection_WarBoardMessageEntity__GetEnumerator__);
+    sub_1C37058(&Method_System_Linq_Enumerable_Any_WarBoardMessageEntity___);
+    sub_1C37058(&System_IDisposable_TypeInfo);
+    sub_1C37058(&System_Collections_Generic_IEnumerator_WarBoardMessageEntity__TypeInfo);
+    sub_1C37058(&System_Collections_IEnumerator_TypeInfo);
+    sub_1C37058(&Method_System_Collections_Generic_List_WarBoardMessageEntity__Add__);
+    sub_1C37058(&Method_System_Collections_Generic_List_WarBoardMessageEntity___ctor__);
+    sub_1C37058(&Method_System_Collections_Generic_List_WarBoardTaskBase___ctor__);
+    sub_1C37058(&System_Collections_Generic_List_WarBoardTaskBase__TypeInfo);
+    sub_1C37058(&System_Collections_Generic_List_WarBoardMessageEntity__TypeInfo);
+    byte_4C44161 = 1;
   }
-  v11 = (System_Collections_Generic_List_object__o *)sub_1C32E6C(System_Collections_Generic_List_WarBoardMessageEntity__TypeInfo);
+  v11 = (System_Collections_Generic_List_object__o *)sub_1C372A4(System_Collections_Generic_List_WarBoardMessageEntity__TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v11,
-    (const MethodInfo_3797F88 *)Method_System_Collections_Generic_List_WarBoardMessageEntity___ctor__);
+    (const MethodInfo_37A27F0 *)Method_System_Collections_Generic_List_WarBoardMessageEntity___ctor__);
   list = (System_Collections_ObjectModel_Collection_T__o *)this->fields.list;
   if ( !list )
-    sub_1C32E7C(0);
+    sub_1C372B4(0);
   Enumerator = System_Collections_ObjectModel_Collection_object___GetEnumerator(
                  list,
-                 (const MethodInfo_3330280 *)Method_System_Collections_ObjectModel_Collection_WarBoardMessageEntity__GetEnumerator__);
+                 (const MethodInfo_333AAE8 *)Method_System_Collections_ObjectModel_Collection_WarBoardMessageEntity__GetEnumerator__);
   if ( !Enumerator )
-    sub_1C32E7C(0);
+    sub_1C372B4(0);
   v14 = isValueByPlayer;
   while ( 1 )
   {
@@ -175,7 +175,7 @@ System_Collections_Generic_List_WarBoardTaskBase__o *WarBoardMessageMaster__GetM
     else
     {
 LABEL_10:
-      v18 = sub_1C83438(Enumerator, System_Collections_IEnumerator_TypeInfo, 0);
+      v18 = sub_1C87870(Enumerator, System_Collections_IEnumerator_TypeInfo, 0);
     }
     if ( ((*(__int64 (__fastcall **)(System_Collections_Generic_IEnumerator_T__o *, _QWORD))v18)(
             Enumerator,
@@ -199,14 +199,14 @@ LABEL_10:
     else
     {
 LABEL_17:
-      v22 = sub_1C83438(Enumerator, System_Collections_Generic_IEnumerator_WarBoardMessageEntity__TypeInfo, 0);
+      v22 = sub_1C87870(Enumerator, System_Collections_Generic_IEnumerator_WarBoardMessageEntity__TypeInfo, 0);
     }
     v23 = (*(__int64 (__fastcall **)(System_Collections_Generic_IEnumerator_T__o *, _QWORD))v22)(
             Enumerator,
             *(_QWORD *)(v22 + 8));
     v25 = (Il2CppObject *)v23;
     if ( !v23 )
-      sub_1C32E7C(0);
+      sub_1C372B4(0);
     if ( *(_DWORD *)(v23 + 16) == stageId && *(_DWORD *)(v23 + 20) == type )
     {
       v26 = WarBoardMessageMaster__CheckCondition(
@@ -218,26 +218,26 @@ LABEL_17:
       if ( v26 )
       {
         if ( !v11 )
-          sub_1C32E7C(v26);
+          sub_1C372B4(v26);
         items = v11->fields._items;
         v30 = Method_System_Collections_Generic_List_WarBoardMessageEntity__Add__;
         ++v11->fields._version;
         if ( !items )
-          sub_1C32E7C(v26);
+          sub_1C372B4(v26);
         size = v11->fields._size;
         if ( (unsigned int)size >= LODWORD(items->max_length) )
         {
           System_Collections_Generic_List_object___AddWithResize(
             v11,
             v25,
-            *(const MethodInfo_37987BC **)(*(_QWORD *)(v30[4] + 192LL) + 112LL));
+            *(const MethodInfo_37A3024 **)(*(_QWORD *)(v30[4] + 192LL) + 112LL));
         }
         else
         {
           v32 = &items->obj.klass + size;
           v11->fields._size = size + 1;
           v32[4] = (Il2CppClass *)v25;
-          sub_1C32BC4((CGThumbnailListItem_o *)(v32 + 4), (int32_t)v25, v27, v28);
+          sub_1C36FFC((CGThumbnailListItem_o *)(v32 + 4), (int32_t)v25, v27, v28);
         }
       }
     }
@@ -259,12 +259,12 @@ LABEL_17:
   else
   {
 LABEL_32:
-    v36 = sub_1C83438(Enumerator, System_IDisposable_TypeInfo, 0);
+    v36 = sub_1C87870(Enumerator, System_IDisposable_TypeInfo, 0);
   }
   (*(void (__fastcall **)(System_Collections_Generic_IEnumerator_T__o *, _QWORD))v36)(Enumerator, *(_QWORD *)(v36 + 8));
   v37 = System_Linq_Enumerable__Any_object_(
           (System_Collections_Generic_IEnumerable_TSource__o *)v11,
-          (const MethodInfo_30E8F68 *)Method_System_Linq_Enumerable_Any_WarBoardMessageEntity___);
+          (const MethodInfo_30F37D0 *)Method_System_Linq_Enumerable_Any_WarBoardMessageEntity___);
   if ( v37 )
   {
     v39 = WarBoardMessageMaster__Lottery(
@@ -275,10 +275,10 @@ LABEL_32:
   }
   else
   {
-    v42 = (System_Collections_Generic_List_object__o *)sub_1C32E6C(System_Collections_Generic_List_WarBoardTaskBase__TypeInfo);
+    v42 = (System_Collections_Generic_List_object__o *)sub_1C372A4(System_Collections_Generic_List_WarBoardTaskBase__TypeInfo);
     System_Collections_Generic_List_object____ctor(
       v42,
-      (const MethodInfo_3797F88 *)Method_System_Collections_Generic_List_WarBoardTaskBase___ctor__);
+      (const MethodInfo_37A27F0 *)Method_System_Collections_Generic_List_WarBoardTaskBase___ctor__);
     return (System_Collections_Generic_List_WarBoardTaskBase__o *)v42;
   }
 }
@@ -305,18 +305,18 @@ System_Collections_Generic_List_WarBoardTaskBase__o *WarBoardMessageMaster__GetT
   __int64 size; // x10
   Il2CppClass **v18; // x0
 
-  if ( (byte_4C38B6A & 1) == 0 )
+  if ( (byte_4C44163 & 1) == 0 )
   {
-    sub_1C32C20(&Method_System_Collections_Generic_List_WarBoardTaskBase__Add__);
-    sub_1C32C20(&Method_System_Collections_Generic_List_WarBoardTaskBase___ctor__);
-    sub_1C32C20(&System_Collections_Generic_List_WarBoardTaskBase__TypeInfo);
-    sub_1C32C20(&WarBoardFaceMessagePerformance_TypeInfo);
-    byte_4C38B6A = 1;
+    sub_1C37058(&Method_System_Collections_Generic_List_WarBoardTaskBase__Add__);
+    sub_1C37058(&Method_System_Collections_Generic_List_WarBoardTaskBase___ctor__);
+    sub_1C37058(&System_Collections_Generic_List_WarBoardTaskBase__TypeInfo);
+    sub_1C37058(&WarBoardFaceMessagePerformance_TypeInfo);
+    byte_4C44163 = 1;
   }
-  v4 = (System_Collections_Generic_List_object__o *)sub_1C32E6C(System_Collections_Generic_List_WarBoardTaskBase__TypeInfo);
+  v4 = (System_Collections_Generic_List_object__o *)sub_1C372A4(System_Collections_Generic_List_WarBoardTaskBase__TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v4,
-    (const MethodInfo_3797F88 *)Method_System_Collections_Generic_List_WarBoardTaskBase___ctor__);
+    (const MethodInfo_37A27F0 *)Method_System_Collections_Generic_List_WarBoardTaskBase___ctor__);
   if ( !result )
     goto LABEL_15;
   scriptIds = result->fields.scriptIds;
@@ -329,11 +329,11 @@ System_Collections_Generic_List_WarBoardTaskBase__o *WarBoardMessageMaster__GetT
     while ( 1 )
     {
       if ( v8 >= (unsigned int)max_length )
-        sub_1C32E84(v5);
+        sub_1C372BC(v5);
       v9 = scriptIds->m_Items[v8];
       stageId = result->fields.stageId;
       sceneType = result->fields.sceneType;
-      v12 = (WarBoardFaceMessagePerformance_o *)sub_1C32E6C(WarBoardFaceMessagePerformance_TypeInfo);
+      v12 = (WarBoardFaceMessagePerformance_o *)sub_1C372A4(WarBoardFaceMessagePerformance_TypeInfo);
       WarBoardFaceMessagePerformance___ctor(v12, stageId, sceneType, v9, 0);
       if ( !v4 )
         break;
@@ -348,21 +348,21 @@ System_Collections_Generic_List_WarBoardTaskBase__o *WarBoardMessageMaster__GetT
         System_Collections_Generic_List_object___AddWithResize(
           v4,
           (Il2CppObject *)v12,
-          *(const MethodInfo_37987BC **)(*(_QWORD *)(v16[4] + 192LL) + 112LL));
+          *(const MethodInfo_37A3024 **)(*(_QWORD *)(v16[4] + 192LL) + 112LL));
       }
       else
       {
         v18 = &items->obj.klass + size;
         v4->fields._size = size + 1;
         v18[4] = (Il2CppClass *)v12;
-        sub_1C32BC4((CGThumbnailListItem_o *)(v18 + 4), (int32_t)v12, v13, v14);
+        sub_1C36FFC((CGThumbnailListItem_o *)(v18 + 4), (int32_t)v12, v13, v14);
       }
       LODWORD(max_length) = scriptIds->max_length;
       if ( (__int64)++v8 >= (int)max_length )
         return (System_Collections_Generic_List_WarBoardTaskBase__o *)v4;
     }
 LABEL_15:
-    sub_1C32E7C(v5);
+    sub_1C372B4(v5);
   }
   return (System_Collections_Generic_List_WarBoardTaskBase__o *)v4;
 }
@@ -383,20 +383,20 @@ WarBoardMessageEntity_o *WarBoardMessageMaster__Lottery(
   System_Int32_array *v11; // x0
   __int64 RandomRangeIndex; // x0
 
-  if ( (byte_4C38B69 & 1) == 0 )
+  if ( (byte_4C44162 & 1) == 0 )
   {
-    sub_1C32C20(&Method_System_Linq_Enumerable_Any_WarBoardMessageEntity___);
-    sub_1C32C20(&Method_System_Linq_Enumerable_Select_WarBoardMessageEntity__int___);
-    sub_1C32C20(&Method_System_Linq_Enumerable_ToArray_int___);
-    sub_1C32C20(&System_Func_WarBoardMessageEntity__int__TypeInfo);
-    sub_1C32C20(&Method_System_Collections_Generic_List_WarBoardMessageEntity__get_Item__);
-    sub_1C32C20(&Method_WarBoardMessageMaster___c__Lottery_b__4_0__);
-    sub_1C32C20(&WarBoardMessageMaster___c_TypeInfo);
-    byte_4C38B69 = 1;
+    sub_1C37058(&Method_System_Linq_Enumerable_Any_WarBoardMessageEntity___);
+    sub_1C37058(&Method_System_Linq_Enumerable_Select_WarBoardMessageEntity__int___);
+    sub_1C37058(&Method_System_Linq_Enumerable_ToArray_int___);
+    sub_1C37058(&System_Func_WarBoardMessageEntity__int__TypeInfo);
+    sub_1C37058(&Method_System_Collections_Generic_List_WarBoardMessageEntity__get_Item__);
+    sub_1C37058(&Method_WarBoardMessageMaster___c__Lottery_b__4_0__);
+    sub_1C37058(&WarBoardMessageMaster___c_TypeInfo);
+    byte_4C44162 = 1;
   }
   if ( !System_Linq_Enumerable__Any_object_(
           (System_Collections_Generic_IEnumerable_TSource__o *)entities,
-          (const MethodInfo_30E8F68 *)Method_System_Linq_Enumerable_Any_WarBoardMessageEntity___) )
+          (const MethodInfo_30F37D0 *)Method_System_Linq_Enumerable_Any_WarBoardMessageEntity___) )
     return 0;
   v4 = WarBoardMessageMaster___c_TypeInfo;
   if ( !WarBoardMessageMaster___c_TypeInfo->_2.cctor_finished )
@@ -413,26 +413,26 @@ WarBoardMessageEntity_o *WarBoardMessageMaster__Lottery(
       v4 = WarBoardMessageMaster___c_TypeInfo;
     }
     v6 = (Il2CppObject *)v4->static_fields->__9;
-    _9__4_0 = (System_Func_object__int__o *)sub_1C32E6C(System_Func_WarBoardMessageEntity__int__TypeInfo);
+    _9__4_0 = (System_Func_object__int__o *)sub_1C372A4(System_Func_WarBoardMessageEntity__int__TypeInfo);
     System_Func_object__int____ctor(_9__4_0, v6, Method_WarBoardMessageMaster___c__Lottery_b__4_0__, 0);
     static_fields = WarBoardMessageMaster___c_TypeInfo->static_fields;
     static_fields->__9__4_0 = (struct System_Func_WarBoardMessageEntity__int__o *)_9__4_0;
-    sub_1C32BC4((CGThumbnailListItem_o *)&static_fields->__9__4_0, (int32_t)_9__4_0, v8, v9);
+    sub_1C36FFC((CGThumbnailListItem_o *)&static_fields->__9__4_0, (int32_t)_9__4_0, v8, v9);
   }
   v10 = (System_Collections_Generic_IEnumerable_TSource__o *)System_Linq_Enumerable__Select_object__int_(
                                                                (System_Collections_Generic_IEnumerable_TSource__o *)entities,
                                                                (System_Func_TSource__TResult__o *)_9__4_0,
-                                                               (const MethodInfo_31131E0 *)Method_System_Linq_Enumerable_Select_WarBoardMessageEntity__int___);
+                                                               (const MethodInfo_311DA48 *)Method_System_Linq_Enumerable_Select_WarBoardMessageEntity__int___);
   v11 = System_Linq_Enumerable__ToArray_int_(
           v10,
-          (const MethodInfo_311C8F4 *)Method_System_Linq_Enumerable_ToArray_int___);
+          (const MethodInfo_312715C *)Method_System_Linq_Enumerable_ToArray_int___);
   RandomRangeIndex = RandomUtility__GetRandomRangeIndex(v11, 0, 0);
   if ( !entities )
-    sub_1C32E7C(RandomRangeIndex);
+    sub_1C372B4(RandomRangeIndex);
   return (WarBoardMessageEntity_o *)System_Collections_Generic_List_object___get_Item(
                                       (System_Collections_Generic_List_object__o *)entities,
                                       RandomRangeIndex,
-                                      (const MethodInfo_37984EC *)Method_System_Collections_Generic_List_WarBoardMessageEntity__get_Item__);
+                                      (const MethodInfo_37A2D54 *)Method_System_Collections_Generic_List_WarBoardMessageEntity__get_Item__);
 }
 
 
@@ -442,15 +442,15 @@ void WarBoardMessageMaster___c___cctor(const MethodInfo *method)
   int32_t v2; // w2
   const MethodInfo *v3; // x3
 
-  if ( (byte_4C38B6B & 1) == 0 )
+  if ( (byte_4C44164 & 1) == 0 )
   {
-    sub_1C32C20(&WarBoardMessageMaster___c_TypeInfo);
-    byte_4C38B6B = 1;
+    sub_1C37058(&WarBoardMessageMaster___c_TypeInfo);
+    byte_4C44164 = 1;
   }
-  v1 = (Il2CppObject *)sub_1C32E6C(WarBoardMessageMaster___c_TypeInfo);
+  v1 = (Il2CppObject *)sub_1C372A4(WarBoardMessageMaster___c_TypeInfo);
   System_Object___ctor(v1, 0);
   WarBoardMessageMaster___c_TypeInfo->static_fields->__9 = (struct WarBoardMessageMaster___c_o *)v1;
-  sub_1C32BC4((CGThumbnailListItem_o *)WarBoardMessageMaster___c_TypeInfo->static_fields, (int32_t)v1, v2, v3);
+  sub_1C36FFC((CGThumbnailListItem_o *)WarBoardMessageMaster___c_TypeInfo->static_fields, (int32_t)v1, v2, v3);
 }
 
 
@@ -466,6 +466,6 @@ int32_t WarBoardMessageMaster___c___Lottery_b__4_0(
         const MethodInfo *method)
 {
   if ( !ent )
-    sub_1C32E7C(this);
+    sub_1C372B4(this);
   return ent->fields.playProbabirity;
 }

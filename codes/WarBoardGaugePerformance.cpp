@@ -14,7 +14,7 @@ void WarBoardGaugePerformance___ctor(
   WarBoardTaskBase___ctor((WarBoardTaskBase_o *)this, (const MethodInfo *)target);
   v10->fields.target = target;
   v10 = (WarBoardGaugePerformance_o *)((char *)v10 + 56);
-  sub_1C32BC4((CGThumbnailListItem_o *)v10, (int32_t)target, v11, v12);
+  sub_1C36FFC((CGThumbnailListItem_o *)v10, (int32_t)target, v11, v12);
   *(float *)&v10->monitor = startValue;
   *((float *)&v10->monitor + 1) = endValue;
   *(float *)&v10->fields.Key = duration;
@@ -29,16 +29,16 @@ System_Collections_IEnumerator_o *WarBoardGaugePerformance__Execute(
   int32_t v4; // w2
   const MethodInfo *v5; // x3
 
-  if ( (byte_4C3564D & 1) == 0 )
+  if ( (byte_4C40C38 & 1) == 0 )
   {
-    sub_1C32C20(&WarBoardGaugePerformance__Execute_d__6_TypeInfo);
-    byte_4C3564D = 1;
+    sub_1C37058(&WarBoardGaugePerformance__Execute_d__6_TypeInfo);
+    byte_4C40C38 = 1;
   }
-  v3 = sub_1C32E6C(WarBoardGaugePerformance__Execute_d__6_TypeInfo);
+  v3 = sub_1C372A4(WarBoardGaugePerformance__Execute_d__6_TypeInfo);
   System_Object___ctor((Il2CppObject *)v3, 0);
   *(_DWORD *)(v3 + 16) = 0;
   *(_QWORD *)(v3 + 32) = this;
-  sub_1C32BC4((CGThumbnailListItem_o *)(v3 + 32), (int32_t)this, v4, v5);
+  sub_1C36FFC((CGThumbnailListItem_o *)(v3 + 32), (int32_t)this, v4, v5);
   return (System_Collections_IEnumerator_o *)v3;
 }
 
@@ -50,7 +50,7 @@ void WarBoardGaugePerformance__OnEnd(WarBoardGaugePerformance_o *this, const Met
 
   target = (UIBasicSprite_o *)this->fields.target;
   if ( !target )
-    sub_1C32E7C(0);
+    sub_1C372B4(0);
   UIBasicSprite__set_fillAmount(target, this->fields.endValue, 0);
   EndCallback = this->fields.EndCallback;
   this->fields._isPlaying_k__BackingField = 0;
@@ -74,7 +74,7 @@ void WarBoardGaugePerformance__OnStart(WarBoardGaugePerformance_o *this, const M
       StartCallback->fields.method);
   target = (UIBasicSprite_o *)this->fields.target;
   if ( !target )
-    sub_1C32E7C(0);
+    sub_1C372B4(0);
   UIBasicSprite__set_fillAmount(target, this->fields.startValue, 0);
 }
 
@@ -127,7 +127,7 @@ bool WarBoardGaugePerformance__Execute_d__6__MoveNext(
       v13 = 0.0;
       if ( !v12 )
         v13 = v11;
-      v14 = Easing__Func_49010964(_4__this->fields.startValue, _4__this->fields.endValue, v13, 0, 0);
+      v14 = Easing__Func_49054076(_4__this->fields.startValue, _4__this->fields.endValue, v13, 0, 0);
       if ( target )
       {
         UIBasicSprite__set_fillAmount(target, v14, 0);
@@ -135,7 +135,7 @@ bool WarBoardGaugePerformance__Execute_d__6__MoveNext(
       }
     }
 LABEL_12:
-    sub_1C32E7C(this);
+    sub_1C372B4(this);
   }
   this->fields.__1__state = -1;
   this->fields._now_5__2 = 0.0;
@@ -146,7 +146,7 @@ LABEL_9:
   {
     this->fields.__2__current = 0;
     p__2__current = &this->fields.__2__current;
-    sub_1C32BC4((CGThumbnailListItem_o *)p__2__current, 0, v2, v3);
+    sub_1C36FFC((CGThumbnailListItem_o *)p__2__current, 0, v2, v3);
     result = 1;
     *((_DWORD *)p__2__current - 2) = 1;
     return result;
@@ -171,11 +171,11 @@ void __noreturn WarBoardGaugePerformance__Execute_d__6__System_Collections_IEnum
   System_NotSupportedException_o *v3; // x19
   __int64 v4; // x0
 
-  v2 = sub_1C32C34(&System_NotSupportedException_TypeInfo);
-  v3 = (System_NotSupportedException_o *)sub_1C32E6C(v2);
+  v2 = sub_1C3706C(&System_NotSupportedException_TypeInfo);
+  v3 = (System_NotSupportedException_o *)sub_1C372A4(v2);
   System_NotSupportedException___ctor(v3, 0);
-  v4 = sub_1C32C34(&Method_WarBoardGaugePerformance__Execute_d__6_System_Collections_IEnumerator_Reset__);
-  sub_1C32D48(v3, v4);
+  v4 = sub_1C3706C(&Method_WarBoardGaugePerformance__Execute_d__6_System_Collections_IEnumerator_Reset__);
+  sub_1C37180(v3, v4);
 }
 
 

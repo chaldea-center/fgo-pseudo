@@ -9,10 +9,10 @@ void NotificationDialog___cctor(const MethodInfo *method)
   struct NotificationDialog_StaticFields *v7; // x9
   struct NotificationDialog_StaticFields *v8; // x9
 
-  if ( (byte_4C3B521 & 1) == 0 )
+  if ( (byte_4C46A66 & 1) == 0 )
   {
-    sub_1C32C20(&NotificationDialog_TypeInfo);
-    byte_4C3B521 = 1;
+    sub_1C37058(&NotificationDialog_TypeInfo);
+    byte_4C46A66 = 1;
   }
   static_fields = NotificationDialog_TypeInfo->static_fields;
   static_fields->BANNER_RETRY_MAX = 3;
@@ -29,7 +29,7 @@ void NotificationDialog___cctor(const MethodInfo *method)
   *(_QWORD *)&v5->MESSAGE_LINE_POS.fields.x = 0x40A0000000000000LL;
   v5->MESSAGE_LINE_POS.fields.z = 0.0;
   v6 = v2->static_fields;
-  *(_OWORD *)&v6->MESSAGE_BASE_SIZE_X = xmmword_C0C6C0;
+  *(_OWORD *)&v6->MESSAGE_BASE_SIZE_X = xmmword_C0E630;
   *(_QWORD *)&v6->IMAGE_BASE_POS.fields.y = 0;
   v6->IMAGE_BASE_POS.fields.x = 0.0;
   v7 = v2->static_fields;
@@ -44,10 +44,10 @@ void NotificationDialog___cctor(const MethodInfo *method)
 
 void NotificationDialog___ctor(NotificationDialog_o *this, const MethodInfo *method)
 {
-  if ( (byte_4C3B520 & 1) == 0 )
+  if ( (byte_4C46A65 & 1) == 0 )
   {
-    sub_1C32C20(&BaseDialog_TypeInfo);
-    byte_4C3B520 = 1;
+    sub_1C37058(&BaseDialog_TypeInfo);
+    byte_4C46A65 = 1;
   }
   this->fields.MESSAGE_FONT_SIZE = 30;
   this->fields.isInitPanelDepth = 1;
@@ -99,16 +99,16 @@ void NotificationDialog__AdjustMessageLabel(
   z = messagePos.fields.z;
   y = messagePos.fields.y;
   x = messagePos.fields.x;
-  if ( (byte_4C3B516 & 1) == 0 )
+  if ( (byte_4C46A5B & 1) == 0 )
   {
-    sub_1C32C20(&Method_UnityEngine_Component_TryGetComponent_BoxCollider___);
-    sub_1C32C20(&Method_UnityEngine_Component_TryGetComponent_UISprite___);
-    sub_1C32C20(&Method_UnityEngine_GameObject_TryGetComponent_UISkinSprite___);
-    sub_1C32C20(&System_Math_TypeInfo);
-    sub_1C32C20(&NotificationDialog_TypeInfo);
-    sub_1C32C20(&UnityEngine_Object_TypeInfo);
-    sub_1C32C20(&string_TypeInfo);
-    byte_4C3B516 = 1;
+    sub_1C37058(&Method_UnityEngine_Component_TryGetComponent_BoxCollider___);
+    sub_1C37058(&Method_UnityEngine_Component_TryGetComponent_UISprite___);
+    sub_1C37058(&Method_UnityEngine_GameObject_TryGetComponent_UISkinSprite___);
+    sub_1C37058(&System_Math_TypeInfo);
+    sub_1C37058(&NotificationDialog_TypeInfo);
+    sub_1C37058(&UnityEngine_Object_TypeInfo);
+    sub_1C37058(&string_TypeInfo);
+    byte_4C46A5B = 1;
   }
   v43 = 0;
   v41 = 0;
@@ -129,7 +129,7 @@ void NotificationDialog__AdjustMessageLabel(
       if ( !UnityEngine_GameObject__TryGetComponent_object_(
               baseWindow,
               &component,
-              (const MethodInfo_3135C00 *)Method_UnityEngine_GameObject_TryGetComponent_UISkinSprite___) )
+              (const MethodInfo_3140468 *)Method_UnityEngine_GameObject_TryGetComponent_UISkinSprite___) )
         goto LABEL_30;
       baseWindow = (UnityEngine_GameObject_o *)this->fields.okBtnLabel;
       if ( !baseWindow )
@@ -147,7 +147,7 @@ void NotificationDialog__AdjustMessageLabel(
       baseWindow = (UnityEngine_GameObject_o *)UnityEngine_Component__TryGetComponent_object_(
                                                  (UnityEngine_Component_o *)baseWindow,
                                                  &v41,
-                                                 (const MethodInfo_30D4CBC *)Method_UnityEngine_Component_TryGetComponent_UISprite___);
+                                                 (const MethodInfo_30DF524 *)Method_UnityEngine_Component_TryGetComponent_UISprite___);
       if ( ((unsigned __int8)baseWindow & 1) != 0 )
       {
         if ( !component || !v41 )
@@ -187,7 +187,7 @@ LABEL_30:
           baseWindow = (UnityEngine_GameObject_o *)UnityEngine_Component__TryGetComponent_object_(
                                                      (UnityEngine_Component_o *)baseWindow,
                                                      &v40,
-                                                     (const MethodInfo_30D4CBC *)Method_UnityEngine_Component_TryGetComponent_BoxCollider___);
+                                                     (const MethodInfo_30DF524 *)Method_UnityEngine_Component_TryGetComponent_BoxCollider___);
           if ( ((unsigned __int8)baseWindow & 1) == 0 )
             goto LABEL_38;
           baseWindow = (UnityEngine_GameObject_o *)v40;
@@ -197,7 +197,7 @@ LABEL_30:
         }
       }
 LABEL_54:
-      sub_1C32E7C(baseWindow);
+      sub_1C372B4(baseWindow);
     }
   }
   messageLabel = this->fields.messageLabel;
@@ -217,7 +217,7 @@ LABEL_54:
         baseWindow = (UnityEngine_GameObject_o *)UnityEngine_Component__TryGetComponent_object_(
                                                    (UnityEngine_Component_o *)baseWindow,
                                                    (Il2CppObject **)&v39,
-                                                   (const MethodInfo_30D4CBC *)Method_UnityEngine_Component_TryGetComponent_BoxCollider___);
+                                                   (const MethodInfo_30DF524 *)Method_UnityEngine_Component_TryGetComponent_BoxCollider___);
         if ( ((unsigned __int8)baseWindow & 1) == 0 )
           goto LABEL_38;
         baseWindow = v39;
@@ -233,7 +233,7 @@ LABEL_37:
 LABEL_38:
   if ( message )
   {
-    baseWindow = (UnityEngine_GameObject_o *)System_String__Trim_63574704(message, 0xAu, 0);
+    baseWindow = (UnityEngine_GameObject_o *)System_String__Trim_63617816(message, 0xAu, 0);
     Empty = (System_String_o *)baseWindow;
     if ( !messageLabel )
       goto LABEL_54;
@@ -253,7 +253,7 @@ LABEL_38:
   if ( UnityEngine_Component__TryGetComponent_object_(
          (UnityEngine_Component_o *)messageLabel,
          &v43,
-         (const MethodInfo_30D4CBC *)Method_UnityEngine_Component_TryGetComponent_BoxCollider___) )
+         (const MethodInfo_30DF524 *)Method_UnityEngine_Component_TryGetComponent_BoxCollider___) )
   {
     baseWindow = (UnityEngine_GameObject_o *)v43;
     if ( !v43 )
@@ -308,13 +308,13 @@ void NotificationDialog__AdjustScriptMessageLabel(
   z = messagePos.fields.z;
   y = messagePos.fields.y;
   x = messagePos.fields.x;
-  if ( (byte_4C3B517 & 1) == 0 )
+  if ( (byte_4C46A5C & 1) == 0 )
   {
-    sub_1C32C20(&NotificationDialog_TypeInfo);
-    sub_1C32C20(&UnityEngine_Object_TypeInfo);
-    sub_1C32C20(&string_TypeInfo);
-    sub_1C32C20(&StringLiteral_21549/*"messageOffset"*/);
-    byte_4C3B517 = 1;
+    sub_1C37058(&NotificationDialog_TypeInfo);
+    sub_1C37058(&UnityEngine_Object_TypeInfo);
+    sub_1C37058(&string_TypeInfo);
+    sub_1C37058(&StringLiteral_21552/*"messageOffset"*/);
+    byte_4C46A5C = 1;
   }
   if ( isNoTitle )
   {
@@ -354,7 +354,7 @@ LABEL_16:
     UILabel__set_text(messageLabel, Empty, 0);
   }
   if ( message )
-    v23 = System_String__Trim_63574704(message, 0xAu, 0);
+    v23 = System_String__Trim_63617816(message, 0xAu, 0);
   else
     v23 = string_TypeInfo->static_fields->Empty;
   messageLabel = (UILabel_o *)NotificationDialog_TypeInfo;
@@ -384,7 +384,7 @@ LABEL_16:
     VectFromScript = NotificationDialog__getVectFromScript(
                        gameObject,
                        script,
-                       (System_String_o *)StringLiteral_21549/*"messageOffset"*/,
+                       (System_String_o *)StringLiteral_21552/*"messageOffset"*/,
                        v26);
     VectFromScript.fields.x = x + VectFromScript.fields.x;
     VectFromScript.fields.y = y + VectFromScript.fields.y;
@@ -400,7 +400,7 @@ LABEL_16:
     if ( messageLabel )
     {
       v28 = (NotificationDialog_o *)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)messageLabel, 0);
-      v31 = NotificationDialog__getVectFromScript(v28, script, (System_String_o *)StringLiteral_21549/*"messageOffset"*/, v29);
+      v31 = NotificationDialog__getVectFromScript(v28, script, (System_String_o *)StringLiteral_21552/*"messageOffset"*/, v29);
       v31.fields.x = x + v31.fields.x;
       v31.fields.z = z + v31.fields.z;
       v31.fields.y = y + v31.fields.y;
@@ -408,7 +408,7 @@ LABEL_16:
       return;
     }
 LABEL_34:
-    sub_1C32E7C(messageLabel);
+    sub_1C372B4(messageLabel);
   }
 }
 
@@ -416,7 +416,7 @@ LABEL_34:
 // local variable allocation has failed, the output may be wrong!
 void NotificationDialog__CachedTitleLabel(NotificationDialog_o *this, const MethodInfo *method)
 {
-  const MethodInfo_38C26A0 *v2; // x3
+  const MethodInfo_38CCF08 *v2; // x3
   NotificationDialog_o *v3; // x19
   struct UILabel_o *titleLabel; // x8
   __int64 v5; // x1 OVERLAPPED
@@ -427,17 +427,17 @@ void NotificationDialog__CachedTitleLabel(NotificationDialog_o *this, const Meth
   int32_t v10; // [xsp+8h] [xbp-28h]
 
   v3 = this;
-  if ( (byte_4C3B512 & 1) == 0 )
+  if ( (byte_4C46A57 & 1) == 0 )
   {
-    sub_1C32C20(&Method_System_Nullable_Vector2Int___ctor__);
-    this = (NotificationDialog_o *)sub_1C32C20(&Method_System_Nullable_Vector2Int__get_HasValue__);
-    byte_4C3B512 = 1;
+    sub_1C37058(&Method_System_Nullable_Vector2Int___ctor__);
+    this = (NotificationDialog_o *)sub_1C37058(&Method_System_Nullable_Vector2Int__get_HasValue__);
+    byte_4C46A57 = 1;
   }
   if ( !v3->fields.titleLabelDefaultSize.fields.hasValue )
   {
     titleLabel = v3->fields.titleLabel;
     if ( !titleLabel )
-      sub_1C32E7C(this);
+      sub_1C372B4(this);
     v5 = *(_QWORD *)&titleLabel->fields.mWidth;
     v6 = &v9;
     v10 = 0;
@@ -455,11 +455,11 @@ void NotificationDialog__Close(NotificationDialog_o *this, const MethodInfo *met
 {
   const MethodInfo *v2; // x2
 
-  NotificationDialog__Close_47964460(this, 0, v2);
+  NotificationDialog__Close_47987116(this, 0, v2);
 }
 
 
-void NotificationDialog__Close_47964460(
+void NotificationDialog__Close_47987116(
         NotificationDialog_o *this,
         System_Action_o *callback,
         const MethodInfo *method)
@@ -467,16 +467,16 @@ void NotificationDialog__Close_47964460(
   const MethodInfo *v3; // x3
   System_Action_o *v6; // x20
 
-  if ( (byte_4C3B51C & 1) == 0 )
+  if ( (byte_4C46A61 & 1) == 0 )
   {
-    sub_1C32C20(&System_Action_TypeInfo);
-    sub_1C32C20(&Method_NotificationDialog_EndClose__);
-    byte_4C3B51C = 1;
+    sub_1C37058(&System_Action_TypeInfo);
+    sub_1C37058(&Method_NotificationDialog_EndClose__);
+    byte_4C46A61 = 1;
   }
   this->fields.closeEndFunc = callback;
-  sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.closeEndFunc, (int32_t)callback, (int32_t)method, v3);
+  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.closeEndFunc, (int32_t)callback, (int32_t)method, v3);
   this->fields.isButtonEnable = 0;
-  v6 = (System_Action_o *)sub_1C32E6C(System_Action_TypeInfo);
+  v6 = (System_Action_o *)sub_1C372A4(System_Action_TypeInfo);
   System_Action___ctor(v6, (Il2CppObject *)this, Method_NotificationDialog_EndClose__, 0);
   BaseDialog__Close((BaseDialog_o *)this, v6, 0);
 }
@@ -497,7 +497,7 @@ void NotificationDialog__EndClose(NotificationDialog_o *this, const MethodInfo *
   if ( closeEndFunc )
   {
     p_closeEndFunc->klass = 0;
-    sub_1C32BC4(p_closeEndFunc, 0, v3, v4);
+    sub_1C36FFC(p_closeEndFunc, 0, v3, v4);
     ((void (__fastcall *)(intptr_t, intptr_t))v6->fields.invoke_impl)(v6->fields.method_code, v6->fields.method);
   }
 }
@@ -513,10 +513,10 @@ void NotificationDialog__Init(NotificationDialog_o *this, const MethodInfo *meth
 {
   __int64 titleLabel; // x0
   UnityEngine_Object_o *v4; // x20
-  const MethodInfo_38C26B8 *v5; // x2
+  const MethodInfo_38CCF20 *v5; // x2
   UIWidget_o *v6; // x21
   UIWidget_o *v7; // x21
-  const MethodInfo_38C26B8 *v8; // x2
+  const MethodInfo_38CCF20 *v8; // x2
   UnityEngine_Transform_o *v9; // x20
   UnityEngine_Object_o *messageLabel; // x20
   UnityEngine_Object_o *noTitleMessageLabel; // x20
@@ -548,23 +548,23 @@ void NotificationDialog__Init(NotificationDialog_o *this, const MethodInfo *meth
   System_Nullable_Vector2Int__o v37; // 0:x0.12
   System_Nullable_Vector2Int__o v38; // 0:x0.12
 
-  if ( (byte_4C3B511 & 1) == 0 )
+  if ( (byte_4C46A56 & 1) == 0 )
   {
-    sub_1C32C20(&Method_System_Collections_Generic_List_LinkableTexture__Clear__);
-    sub_1C32C20(&Method_System_Collections_Generic_List_LinkableSprite__Clear__);
-    sub_1C32C20(&Method_System_Collections_Generic_List_LinkableSprite___ctor__);
-    sub_1C32C20(&Method_System_Collections_Generic_List_LinkableTexture___ctor__);
-    sub_1C32C20(&Method_System_Collections_Generic_List_LinkableTexture__get_Count__);
-    sub_1C32C20(&Method_System_Collections_Generic_List_LinkableSprite__get_Count__);
-    sub_1C32C20(&Method_System_Collections_Generic_List_LinkableTexture__get_Item__);
-    sub_1C32C20(&Method_System_Collections_Generic_List_LinkableSprite__get_Item__);
-    sub_1C32C20(&System_Collections_Generic_List_LinkableSprite__TypeInfo);
-    sub_1C32C20(&System_Collections_Generic_List_LinkableTexture__TypeInfo);
-    sub_1C32C20(&Method_System_Nullable_Vector2Int__get_HasValue__);
-    sub_1C32C20(&Method_System_Nullable_Vector2Int__get_Value__);
-    sub_1C32C20(&UnityEngine_Object_TypeInfo);
-    sub_1C32C20(&StringLiteral_1/*""*/);
-    byte_4C3B511 = 1;
+    sub_1C37058(&Method_System_Collections_Generic_List_LinkableTexture__Clear__);
+    sub_1C37058(&Method_System_Collections_Generic_List_LinkableSprite__Clear__);
+    sub_1C37058(&Method_System_Collections_Generic_List_LinkableSprite___ctor__);
+    sub_1C37058(&Method_System_Collections_Generic_List_LinkableTexture___ctor__);
+    sub_1C37058(&Method_System_Collections_Generic_List_LinkableTexture__get_Count__);
+    sub_1C37058(&Method_System_Collections_Generic_List_LinkableSprite__get_Count__);
+    sub_1C37058(&Method_System_Collections_Generic_List_LinkableTexture__get_Item__);
+    sub_1C37058(&Method_System_Collections_Generic_List_LinkableSprite__get_Item__);
+    sub_1C37058(&System_Collections_Generic_List_LinkableSprite__TypeInfo);
+    sub_1C37058(&System_Collections_Generic_List_LinkableTexture__TypeInfo);
+    sub_1C37058(&Method_System_Nullable_Vector2Int__get_HasValue__);
+    sub_1C37058(&Method_System_Nullable_Vector2Int__get_Value__);
+    sub_1C37058(&UnityEngine_Object_TypeInfo);
+    sub_1C37058(&StringLiteral_1/*""*/);
+    byte_4C46A56 = 1;
   }
   if ( !this->fields.refuseInit )
   {
@@ -607,10 +607,10 @@ void NotificationDialog__Init(NotificationDialog_o *this, const MethodInfo *meth
         goto LABEL_73;
       titleLabel = (__int64)UnityEngine_Component__get_transform((UnityEngine_Component_o *)titleLabel, 0);
       v9 = (UnityEngine_Transform_o *)titleLabel;
-      if ( !byte_4C313D6 )
+      if ( !byte_4C3C926 )
       {
-        titleLabel = sub_1C32C20(&UnityEngine_Vector3_TypeInfo);
-        byte_4C313D6 = 1;
+        titleLabel = sub_1C37058(&UnityEngine_Vector3_TypeInfo);
+        byte_4C3C926 = 1;
       }
       if ( !v9 )
         goto LABEL_73;
@@ -651,7 +651,7 @@ void NotificationDialog__Init(NotificationDialog_o *this, const MethodInfo *meth
     {
       UnityEngine_Networking_UnityWebRequest__Dispose(mBannerWWW, 0);
       this->fields.mBannerWWW = 0;
-      sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.mBannerWWW, 0, v14, v15);
+      sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.mBannerWWW, 0, v14, v15);
     }
     lnkTexture = (UnityEngine_Object_o *)this->fields.lnkTexture;
     if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -670,7 +670,7 @@ void NotificationDialog__Init(NotificationDialog_o *this, const MethodInfo *meth
                                       *(_QWORD *)(*(_QWORD *)titleLabel + 736LL));
       if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-      UnityEngine_Object__Destroy_71223640(v18, 0);
+      UnityEngine_Object__Destroy_71266752(v18, 0);
       v19 = this->fields.lnkTexture;
       if ( !v19 )
         goto LABEL_73;
@@ -695,7 +695,7 @@ void NotificationDialog__Init(NotificationDialog_o *this, const MethodInfo *meth
         titleLabel = (__int64)System_Collections_Generic_List_object___get_Item(
                                 (System_Collections_Generic_List_object__o *)titleLabel,
                                 v21,
-                                (const MethodInfo_37984EC *)Method_System_Collections_Generic_List_LinkableSprite__get_Item__);
+                                (const MethodInfo_37A2D54 *)Method_System_Collections_Generic_List_LinkableSprite__get_Item__);
         if ( titleLabel )
         {
           gameObject = (UnityEngine_Object_o *)UnityEngine_Component__get_gameObject(
@@ -703,7 +703,7 @@ void NotificationDialog__Init(NotificationDialog_o *this, const MethodInfo *meth
                                                  0);
           if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
             j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-          UnityEngine_Object__Destroy_71223640(gameObject, 0);
+          UnityEngine_Object__Destroy_71266752(gameObject, 0);
           titleLabel = (__int64)*p_additionalSprites;
           ++v21;
           if ( *p_additionalSprites )
@@ -719,12 +719,12 @@ void NotificationDialog__Init(NotificationDialog_o *this, const MethodInfo *meth
     }
     else
     {
-      v25 = (System_Collections_Generic_List_object__o *)sub_1C32E6C(System_Collections_Generic_List_LinkableSprite__TypeInfo);
+      v25 = (System_Collections_Generic_List_object__o *)sub_1C372A4(System_Collections_Generic_List_LinkableSprite__TypeInfo);
       System_Collections_Generic_List_object____ctor(
         v25,
-        (const MethodInfo_3797F88 *)Method_System_Collections_Generic_List_LinkableSprite___ctor__);
+        (const MethodInfo_37A27F0 *)Method_System_Collections_Generic_List_LinkableSprite___ctor__);
       *p_additionalSprites = (struct System_Collections_Generic_List_LinkableSprite__o *)v25;
-      sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.additionalSprites, (int32_t)v25, v26, v27);
+      sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.additionalSprites, (int32_t)v25, v26, v27);
     }
     p_additionalTextures = &this->fields.additionalTextures;
     titleLabel = (__int64)this->fields.additionalTextures;
@@ -739,7 +739,7 @@ void NotificationDialog__Init(NotificationDialog_o *this, const MethodInfo *meth
         titleLabel = (__int64)System_Collections_Generic_List_object___get_Item(
                                 (System_Collections_Generic_List_object__o *)titleLabel,
                                 v29,
-                                (const MethodInfo_37984EC *)Method_System_Collections_Generic_List_LinkableTexture__get_Item__);
+                                (const MethodInfo_37A2D54 *)Method_System_Collections_Generic_List_LinkableTexture__get_Item__);
         if ( titleLabel )
         {
           titleLabel = *(_QWORD *)(titleLabel + 48);
@@ -750,20 +750,20 @@ void NotificationDialog__Init(NotificationDialog_o *this, const MethodInfo *meth
                                             *(_QWORD *)(*(_QWORD *)titleLabel + 736LL));
             if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
               j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-            UnityEngine_Object__Destroy_71223640(v31, 0);
+            UnityEngine_Object__Destroy_71266752(v31, 0);
             titleLabel = (__int64)*p_additionalTextures;
             if ( *p_additionalTextures )
             {
               titleLabel = (__int64)System_Collections_Generic_List_object___get_Item(
                                       (System_Collections_Generic_List_object__o *)titleLabel,
                                       v29,
-                                      (const MethodInfo_37984EC *)Method_System_Collections_Generic_List_LinkableTexture__get_Item__);
+                                      (const MethodInfo_37A2D54 *)Method_System_Collections_Generic_List_LinkableTexture__get_Item__);
               if ( titleLabel )
               {
                 v32 = (UnityEngine_Object_o *)UnityEngine_Component__get_gameObject(
                                                 (UnityEngine_Component_o *)titleLabel,
                                                 0);
-                UnityEngine_Object__Destroy_71223640(v32, 0);
+                UnityEngine_Object__Destroy_71266752(v32, 0);
                 titleLabel = (__int64)*p_additionalTextures;
                 ++v29;
                 if ( *p_additionalTextures )
@@ -782,12 +782,12 @@ void NotificationDialog__Init(NotificationDialog_o *this, const MethodInfo *meth
     }
     else
     {
-      v34 = (System_Collections_Generic_List_object__o *)sub_1C32E6C(System_Collections_Generic_List_LinkableTexture__TypeInfo);
+      v34 = (System_Collections_Generic_List_object__o *)sub_1C372A4(System_Collections_Generic_List_LinkableTexture__TypeInfo);
       System_Collections_Generic_List_object____ctor(
         v34,
-        (const MethodInfo_3797F88 *)Method_System_Collections_Generic_List_LinkableTexture___ctor__);
+        (const MethodInfo_37A27F0 *)Method_System_Collections_Generic_List_LinkableTexture___ctor__);
       *p_additionalTextures = (struct System_Collections_Generic_List_LinkableTexture__o *)v34;
-      sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.additionalTextures, (int32_t)v34, v35, v36);
+      sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.additionalTextures, (int32_t)v34, v35, v36);
     }
     titleLabel = (__int64)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
     if ( titleLabel )
@@ -797,7 +797,7 @@ void NotificationDialog__Init(NotificationDialog_o *this, const MethodInfo *meth
       return;
     }
 LABEL_73:
-    sub_1C32E7C(titleLabel);
+    sub_1C372B4(titleLabel);
   }
 }
 
@@ -809,10 +809,10 @@ void NotificationDialog__LoadBanners(NotificationDialog_o *this, System_Action_o
   System_Collections_IEnumerator_o *started; // x1
 
   this->fields.mAfterLoad = callback;
-  sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.mAfterLoad, (int32_t)callback, (int32_t)method, v3);
+  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.mAfterLoad, (int32_t)callback, (int32_t)method, v3);
   this->fields.mLoadingIdx = 0;
   started = NotificationDialog__StartDownloadBanner(this, v5);
-  UnityEngine_MonoBehaviour__StartCoroutine_71209212((UnityEngine_MonoBehaviour_o *)this, started, 0);
+  UnityEngine_MonoBehaviour__StartCoroutine_71252324((UnityEngine_MonoBehaviour_o *)this, started, 0);
 }
 
 
@@ -826,7 +826,7 @@ void NotificationDialog__LoadNext(NotificationDialog_o *this, const MethodInfo *
   v3 = this->fields.mLoadingIdx + 1;
   this->fields.mLoadingIdx = v3;
   if ( !banners )
-    sub_1C32E7C(this);
+    sub_1C372B4(this);
   if ( v3 >= SLODWORD(banners->max_length) )
   {
     ActionExtensions__Call(this->fields.mAfterLoad, 0);
@@ -834,7 +834,7 @@ void NotificationDialog__LoadNext(NotificationDialog_o *this, const MethodInfo *
   else
   {
     started = NotificationDialog__StartDownloadBanner(this, method);
-    UnityEngine_MonoBehaviour__StartCoroutine_71209212((UnityEngine_MonoBehaviour_o *)this, started, 0);
+    UnityEngine_MonoBehaviour__StartCoroutine_71252324((UnityEngine_MonoBehaviour_o *)this, started, 0);
   }
 }
 
@@ -845,17 +845,17 @@ void NotificationDialog__OnClickOk(NotificationDialog_o *this, const MethodInfo 
   System_Reflection_MethodBase_o *v4; // x0
   struct NotificationDialog_ClickDelegate_o *clickFunc; // x8
 
-  if ( (byte_4C3B51D & 1) == 0 )
+  if ( (byte_4C46A62 & 1) == 0 )
   {
-    sub_1C32C20(&Method_NotificationDialog_OnClickOk__);
-    byte_4C3B51D = 1;
+    sub_1C37058(&Method_NotificationDialog_OnClickOk__);
+    byte_4C46A62 = 1;
   }
   if ( this->fields.isButtonEnable )
   {
     v3 = Method_NotificationDialog_OnClickOk__;
     if ( (*((_BYTE *)Method_NotificationDialog_OnClickOk__ + 83) & 2) != 0 )
-      v3 = (_QWORD *)sub_1C32C38(Method_NotificationDialog_OnClickOk__);
-    v4 = (System_Reflection_MethodBase_o *)sub_1C32C04(v3, v3[4]);
+      v3 = (_QWORD *)sub_1C37070(Method_NotificationDialog_OnClickOk__);
+    v4 = (System_Reflection_MethodBase_o *)sub_1C3703C(v3, v3[4]);
     OverwriteAssetSoundName__PlaySystemSe(v4, this->fields.onClickOkSeKind, 0, 0);
     clickFunc = this->fields.clickFunc;
     if ( clickFunc )
@@ -953,7 +953,7 @@ void NotificationDialog__Open(
   v30 = onClickOkSeKind;
   v31 = messageFontSize;
   v32 = canMaskTouchClose;
-  if ( (byte_4C3B513 & 1) == 0 )
+  if ( (byte_4C46A58 & 1) == 0 )
   {
     v69 = maxLine;
     v61 = panelDepth;
@@ -961,9 +961,9 @@ void NotificationDialog__Open(
     v55 = title;
     v58 = message;
     v53 = isLineDraw;
-    sub_1C32C20(&NotificationDialog_TypeInfo);
-    sub_1C32C20(&Method_System_Nullable_float__GetValueOrDefault__);
-    sub_1C32C20(&Method_System_Nullable_float__get_HasValue__);
+    sub_1C37058(&NotificationDialog_TypeInfo);
+    sub_1C37058(&Method_System_Nullable_float__GetValueOrDefault__);
+    sub_1C37058(&Method_System_Nullable_float__get_HasValue__);
     v26 = buttonWidgetSizeX;
     v24 = buttonWidgetSizeY;
     isLineDraw = v53;
@@ -978,7 +978,7 @@ void NotificationDialog__Open(
     v27 = messageWidgetSizeY;
     v25 = buttonPosY;
     v23 = useTitleCondensedScale;
-    byte_4C3B513 = 1;
+    byte_4C46A58 = 1;
   }
   if ( messagePosY.fields.hasValue )
   {
@@ -1176,22 +1176,22 @@ void NotificationDialog__OpenDialog(
   UnityEngine_Vector3_o v86; // 0:s0.4,4:s1.4,8:s2.4
   UnityEngine_Vector3_o size; // 0:s0.4,4:s1.4,8:s2.4
 
-  if ( (byte_4C3B514 & 1) == 0 )
+  if ( (byte_4C46A59 & 1) == 0 )
   {
-    sub_1C32C20(&System_Action_TypeInfo);
-    sub_1C32C20(&Method_UnityEngine_GameObject_GetComponent_BoxCollider___);
-    sub_1C32C20(&Method_UnityEngine_GameObject_GetComponent_UISprite___);
-    sub_1C32C20(&LocalizationManager_TypeInfo);
-    sub_1C32C20(&Method_NotificationDialog_EndOpen__);
-    sub_1C32C20(&NotificationDialog_TypeInfo);
-    sub_1C32C20(&Method_System_Nullable_float__GetValueOrDefault__);
-    sub_1C32C20(&Method_System_Nullable_int__GetValueOrDefault__);
-    sub_1C32C20(&Method_System_Nullable_float__get_HasValue__);
-    sub_1C32C20(&Method_System_Nullable_int__get_HasValue__);
-    sub_1C32C20(&UnityEngine_Object_TypeInfo);
-    sub_1C32C20(&StringLiteral_3685/*"COMMON_CONFIRM_CLOSE"*/);
-    sub_1C32C20(&StringLiteral_1/*""*/);
-    byte_4C3B514 = 1;
+    sub_1C37058(&System_Action_TypeInfo);
+    sub_1C37058(&Method_UnityEngine_GameObject_GetComponent_BoxCollider___);
+    sub_1C37058(&Method_UnityEngine_GameObject_GetComponent_UISprite___);
+    sub_1C37058(&LocalizationManager_TypeInfo);
+    sub_1C37058(&Method_NotificationDialog_EndOpen__);
+    sub_1C37058(&NotificationDialog_TypeInfo);
+    sub_1C37058(&Method_System_Nullable_float__GetValueOrDefault__);
+    sub_1C37058(&Method_System_Nullable_int__GetValueOrDefault__);
+    sub_1C37058(&Method_System_Nullable_float__get_HasValue__);
+    sub_1C37058(&Method_System_Nullable_int__get_HasValue__);
+    sub_1C37058(&UnityEngine_Object_TypeInfo);
+    sub_1C37058(&StringLiteral_3685/*"COMMON_CONFIRM_CLOSE"*/);
+    sub_1C37058(&StringLiteral_1/*""*/);
+    byte_4C46A59 = 1;
   }
   TargetPanel = BaseDialog__get_TargetPanel((BaseDialog_o *)this, 0);
   isInitPanelDepth = this->fields.isInitPanelDepth;
@@ -1211,7 +1211,7 @@ void NotificationDialog__OpenDialog(
     }
   }
   this->fields.clickFunc = func;
-  sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.clickFunc, (int32_t)func, v32, v33);
+  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.clickFunc, (int32_t)func, v32, v33);
   titleLabel = (UnityEngine_Object_o *)this->fields.titleLabel;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
@@ -1445,10 +1445,10 @@ void NotificationDialog__OpenDialog(
     v70 = (UnityEngine_GameObject_o *)transform;
     Component_object = UnityEngine_GameObject__GetComponent_object_(
                          (UnityEngine_GameObject_o *)transform,
-                         (const MethodInfo_3134970 *)Method_UnityEngine_GameObject_GetComponent_UISprite___);
+                         (const MethodInfo_313F1D8 *)Method_UnityEngine_GameObject_GetComponent_UISprite___);
     v72 = UnityEngine_GameObject__GetComponent_object_(
             v70,
-            (const MethodInfo_3134970 *)Method_UnityEngine_GameObject_GetComponent_BoxCollider___);
+            (const MethodInfo_313F1D8 *)Method_UnityEngine_GameObject_GetComponent_BoxCollider___);
     if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
     if ( UnityEngine_Object__op_Inequality((UnityEngine_Object_o *)Component_object, 0, 0) )
@@ -1515,18 +1515,18 @@ void NotificationDialog__OpenDialog(
       goto LABEL_113;
     }
 LABEL_114:
-    sub_1C32E7C(transform);
+    sub_1C372B4(transform);
   }
 LABEL_113:
   this->fields.isButtonEnable = 0;
   BaseDialog__SetMaskTouchCloseEnabled((BaseDialog_o *)this, canMaskTouchClose, 0);
-  v76 = (System_Action_o *)sub_1C32E6C(System_Action_TypeInfo);
+  v76 = (System_Action_o *)sub_1C372A4(System_Action_TypeInfo);
   System_Action___ctor(v76, (Il2CppObject *)this, Method_NotificationDialog_EndOpen__, 0);
   BaseDialog__Open((BaseDialog_o *)this, v76, 0, 0, 0);
 }
 
 
-void NotificationDialog__Open_47958488(
+void NotificationDialog__Open_47981144(
         NotificationDialog_o *this,
         System_String_o *title,
         System_String_o *message,
@@ -1576,7 +1576,7 @@ void NotificationDialog__Open_47958488(
 }
 
 
-void NotificationDialog__Open_47959852(
+void NotificationDialog__Open_47982508(
         NotificationDialog_o *this,
         System_String_o *title,
         System_String_o *message,
@@ -1699,35 +1699,35 @@ void NotificationDialog__Open_47959852(
   UnityEngine_Vector3_o v126; // 0:s0.4,4:s1.4,8:s2.4
   UnityEngine_Vector3_o v127; // 0:s0.4,4:s1.4,8:s2.4
 
-  if ( (byte_4C3B515 & 1) == 0 )
+  if ( (byte_4C46A5A & 1) == 0 )
   {
-    sub_1C32C20(&System_Action_TypeInfo);
-    sub_1C32C20(&AtlasManager_TypeInfo);
-    sub_1C32C20(&Method_System_Collections_Generic_Dictionary_string__object__TryGetValue__);
-    sub_1C32C20(&System_Collections_Generic_Dictionary_string__object__TypeInfo);
-    sub_1C32C20(&Method_UnityEngine_GameObject_GetComponent_LinkableSprite___);
-    sub_1C32C20(&Method_System_Collections_Generic_List_LinkableSprite__Add__);
-    sub_1C32C20(&Method_System_Collections_Generic_List_object__ToArray__);
-    sub_1C32C20(&System_Collections_Generic_List_object__TypeInfo);
-    sub_1C32C20(&LocalizationManager_TypeInfo);
-    sub_1C32C20(&Method_NotificationDialog_EndOpen__);
-    sub_1C32C20(&Method_NotificationDialog__Open_b__44_0__);
-    sub_1C32C20(&NotificationDialog_TypeInfo);
-    sub_1C32C20(&Method_UnityEngine_Object_Instantiate_GameObject___);
-    sub_1C32C20(&UnityEngine_Object_TypeInfo);
-    sub_1C32C20(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
-    sub_1C32C20(&StringLiteral_17029/*"banners"*/);
-    sub_1C32C20(&StringLiteral_23505/*"size"*/);
-    sub_1C32C20(&StringLiteral_24458/*"urlOpenType"*/);
-    sub_1C32C20(&StringLiteral_22365/*"offset"*/);
-    sub_1C32C20(&StringLiteral_24097/*"titleOffset"*/);
-    sub_1C32C20(&StringLiteral_23613/*"spriteName"*/);
-    sub_1C32C20(&StringLiteral_3685/*"COMMON_CONFIRM_CLOSE"*/);
-    sub_1C32C20(&StringLiteral_24457/*"urlLink"*/);
-    sub_1C32C20(&StringLiteral_17637/*"buttonOffset"*/);
-    sub_1C32C20(&StringLiteral_1/*""*/);
-    sub_1C32C20(&StringLiteral_23614/*"sprites"*/);
-    byte_4C3B515 = 1;
+    sub_1C37058(&System_Action_TypeInfo);
+    sub_1C37058(&AtlasManager_TypeInfo);
+    sub_1C37058(&Method_System_Collections_Generic_Dictionary_string__object__TryGetValue__);
+    sub_1C37058(&System_Collections_Generic_Dictionary_string__object__TypeInfo);
+    sub_1C37058(&Method_UnityEngine_GameObject_GetComponent_LinkableSprite___);
+    sub_1C37058(&Method_System_Collections_Generic_List_LinkableSprite__Add__);
+    sub_1C37058(&Method_System_Collections_Generic_List_object__ToArray__);
+    sub_1C37058(&System_Collections_Generic_List_object__TypeInfo);
+    sub_1C37058(&LocalizationManager_TypeInfo);
+    sub_1C37058(&Method_NotificationDialog_EndOpen__);
+    sub_1C37058(&Method_NotificationDialog__Open_b__44_0__);
+    sub_1C37058(&NotificationDialog_TypeInfo);
+    sub_1C37058(&Method_UnityEngine_Object_Instantiate_GameObject___);
+    sub_1C37058(&UnityEngine_Object_TypeInfo);
+    sub_1C37058(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+    sub_1C37058(&StringLiteral_17031/*"banners"*/);
+    sub_1C37058(&StringLiteral_23509/*"size"*/);
+    sub_1C37058(&StringLiteral_24462/*"urlOpenType"*/);
+    sub_1C37058(&StringLiteral_22368/*"offset"*/);
+    sub_1C37058(&StringLiteral_24101/*"titleOffset"*/);
+    sub_1C37058(&StringLiteral_23617/*"spriteName"*/);
+    sub_1C37058(&StringLiteral_3685/*"COMMON_CONFIRM_CLOSE"*/);
+    sub_1C37058(&StringLiteral_24461/*"urlLink"*/);
+    sub_1C37058(&StringLiteral_17639/*"buttonOffset"*/);
+    sub_1C37058(&StringLiteral_1/*""*/);
+    sub_1C37058(&StringLiteral_23618/*"sprites"*/);
+    byte_4C46A5A = 1;
   }
   value = 0;
   TargetPanel = BaseDialog__get_TargetPanel((BaseDialog_o *)this, 0);
@@ -1748,7 +1748,7 @@ void NotificationDialog__Open_47959852(
     }
   }
   this->fields.clickFunc = func;
-  sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.clickFunc, (int32_t)func, v20, v21);
+  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.clickFunc, (int32_t)func, v20, v21);
   titleLabel = (UnityEngine_Object_o *)this->fields.titleLabel;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
@@ -1784,7 +1784,7 @@ void NotificationDialog__Open_47959852(
     VectFromScript = NotificationDialog__getVectFromScript(
                        gameObject,
                        script,
-                       (System_String_o *)StringLiteral_24097/*"titleOffset"*/,
+                       (System_String_o *)StringLiteral_24101/*"titleOffset"*/,
                        v29);
     VectFromScript.fields.x = v33 + VectFromScript.fields.x;
     VectFromScript.fields.y = v34 + VectFromScript.fields.y;
@@ -1850,9 +1850,9 @@ void NotificationDialog__Open_47959852(
       goto LABEL_138;
     transform = (UILabel_o *)System_Collections_Generic_Dictionary_object__object___TryGetValue(
                                (System_Collections_Generic_Dictionary_object__object__o *)script,
-                               (Il2CppObject *)StringLiteral_23614/*"sprites"*/,
+                               (Il2CppObject *)StringLiteral_23618/*"sprites"*/,
                                &value,
-                               (const MethodInfo_345A5D4 *)Method_System_Collections_Generic_Dictionary_string__object__TryGetValue__);
+                               (const MethodInfo_3464E3C *)Method_System_Collections_Generic_Dictionary_string__object__TryGetValue__);
     if ( ((unsigned __int8)transform & 1) == 0 )
       goto LABEL_95;
     if ( !value )
@@ -1865,10 +1865,10 @@ void NotificationDialog__Open_47959852(
     }
     v50 = System_Collections_Generic_List_object___ToArray(
             (System_Collections_Generic_List_object__o *)value,
-            (const MethodInfo_379A314 *)Method_System_Collections_Generic_List_object__ToArray__);
+            (const MethodInfo_37A4B7C *)Method_System_Collections_Generic_List_object__ToArray__);
     this->fields.sprites = v50;
     p_sprites = &this->fields.sprites;
-    sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.sprites, (int32_t)v50, v52, v53);
+    sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.sprites, (int32_t)v50, v52, v53);
     if ( this->fields.sprites && (max_length = this->fields.sprites->max_length) != 0 )
     {
       if ( (int)max_length >= 1 )
@@ -1888,7 +1888,7 @@ void NotificationDialog__Open_47959852(
               j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
             transform = (UILabel_o *)UnityEngine_Object__Instantiate_object_(
                                        v57,
-                                       (const MethodInfo_3169758 *)Method_UnityEngine_Object_Instantiate_GameObject___);
+                                       (const MethodInfo_3173FC0 *)Method_UnityEngine_Object_Instantiate_GameObject___);
             if ( !this->fields.lnkSprite )
               break;
             v58 = (UnityEngine_GameObject_o *)transform;
@@ -1901,17 +1901,17 @@ void NotificationDialog__Open_47959852(
                                                   (UnityEngine_Transform_o *)transform,
                                                   0);
             GameObjectExtensions__SetParent(v58, parent, 0);
-            if ( !byte_4C313D6 )
+            if ( !byte_4C3C926 )
             {
-              sub_1C32C20(&UnityEngine_Vector3_TypeInfo);
-              byte_4C313D6 = 1;
+              sub_1C37058(&UnityEngine_Vector3_TypeInfo);
+              byte_4C3C926 = 1;
             }
             GameObjectExtensions__SetLocalScale(v58, UnityEngine_Vector3_TypeInfo->static_fields->oneVector, 0);
             if ( !v58 )
               break;
             transform = (UILabel_o *)UnityEngine_GameObject__GetComponent_object_(
                                        v58,
-                                       (const MethodInfo_3134970 *)Method_UnityEngine_GameObject_GetComponent_LinkableSprite___);
+                                       (const MethodInfo_313F1D8 *)Method_UnityEngine_GameObject_GetComponent_LinkableSprite___);
             additionalSprites = (System_Collections_Generic_List_object__o *)this->fields.additionalSprites;
             if ( !additionalSprites )
               break;
@@ -1927,21 +1927,21 @@ void NotificationDialog__Open_47959852(
               System_Collections_Generic_List_object___AddWithResize(
                 additionalSprites,
                 (Il2CppObject *)transform,
-                *(const MethodInfo_37987BC **)(*(_QWORD *)(v64[4] + 192LL) + 112LL));
+                *(const MethodInfo_37A3024 **)(*(_QWORD *)(v64[4] + 192LL) + 112LL));
             }
             else
             {
               v66 = &items->obj.klass + size;
               additionalSprites->fields._size = size + 1;
               v66[4] = (Il2CppClass *)v55;
-              sub_1C32BC4((CGThumbnailListItem_o *)(v66 + 4), (int32_t)v55, v60, v61);
+              sub_1C36FFC((CGThumbnailListItem_o *)(v66 + 4), (int32_t)v55, v60, v61);
             }
           }
           v67 = *p_sprites;
           if ( !*p_sprites )
             break;
           if ( v56 >= LODWORD(v67->max_length) )
-            sub_1C32E84(transform);
+            sub_1C372BC(transform);
           v68 = (System_Collections_Generic_Dictionary_string__object__o *)v67->m_Items[v56];
           if ( v68
             && (v69 = System_Collections_Generic_Dictionary_string__object__TypeInfo->_2.naturalAligment,
@@ -1967,7 +1967,7 @@ void NotificationDialog__Open_47959852(
           StringFromScript = NotificationDialog__getStringFromScript(
                                v72,
                                v70,
-                               (System_String_o *)StringLiteral_23613/*"spriteName"*/,
+                               (System_String_o *)StringLiteral_23617/*"spriteName"*/,
                                v75);
           if ( !AtlasManager_TypeInfo->_2.cctor_finished )
             j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo);
@@ -1989,19 +1989,19 @@ void NotificationDialog__Open_47959852(
           v82 = v81[17];
           v83 = v81[18];
           v84 = v81[19];
-          v125 = NotificationDialog__getVectFromScript(v77, v70, (System_String_o *)StringLiteral_22365/*"offset"*/, v78);
+          v125 = NotificationDialog__getVectFromScript(v77, v70, (System_String_o *)StringLiteral_22368/*"offset"*/, v78);
           v125.fields.x = v82 + v125.fields.x;
           v125.fields.y = v83 + v125.fields.y;
           v125.fields.z = v84 + v125.fields.z;
           GameObjectExtensions__SetLocalPosition(v80, v125, 0);
-          v126 = NotificationDialog__getVectFromScript(v85, v70, (System_String_o *)StringLiteral_23505/*"size"*/, v86);
+          v126 = NotificationDialog__getVectFromScript(v85, v70, (System_String_o *)StringLiteral_23509/*"size"*/, v86);
           x = v126.fields.x;
           y = v126.fields.y;
           z = v126.fields.z;
-          if ( !byte_4C313D1 )
+          if ( !byte_4C3C921 )
           {
-            sub_1C32C20(&UnityEngine_Vector3_TypeInfo);
-            byte_4C313D1 = 1;
+            sub_1C37058(&UnityEngine_Vector3_TypeInfo);
+            byte_4C3C921 = 1;
           }
           static_fields = UnityEngine_Vector3_TypeInfo->static_fields;
           if ( x == static_fields->zeroVector.fields.x
@@ -2019,10 +2019,10 @@ void NotificationDialog__Open_47959852(
           IntFromScript = (NotificationDialog_o *)NotificationDialog__getIntFromScript(
                                                     v91,
                                                     v70,
-                                                    (System_String_o *)StringLiteral_24458/*"urlOpenType"*/,
+                                                    (System_String_o *)StringLiteral_24462/*"urlOpenType"*/,
                                                     v92);
           v96 = (int)IntFromScript;
-          v98 = NotificationDialog__getStringFromScript(IntFromScript, v70, (System_String_o *)StringLiteral_24457/*"urlLink"*/, v97);
+          v98 = NotificationDialog__getStringFromScript(IntFromScript, v70, (System_String_o *)StringLiteral_24461/*"urlLink"*/, v97);
           LinkableSprite__SetUp((LinkableSprite_o *)v55, v96, v98, 0);
           if ( !*p_sprites )
             break;
@@ -2030,7 +2030,7 @@ void NotificationDialog__Open_47959852(
             goto LABEL_98;
         }
 LABEL_138:
-        sub_1C32E7C(transform);
+        sub_1C372B4(transform);
       }
     }
     else
@@ -2056,9 +2056,9 @@ LABEL_98:
       goto LABEL_138;
     transform = (UILabel_o *)System_Collections_Generic_Dictionary_object__object___TryGetValue(
                                (System_Collections_Generic_Dictionary_object__object__o *)script,
-                               (Il2CppObject *)StringLiteral_17029/*"banners"*/,
+                               (Il2CppObject *)StringLiteral_17031/*"banners"*/,
                                &value,
-                               (const MethodInfo_345A5D4 *)Method_System_Collections_Generic_Dictionary_string__object__TryGetValue__);
+                               (const MethodInfo_3464E3C *)Method_System_Collections_Generic_Dictionary_string__object__TryGetValue__);
     if ( ((unsigned __int8)transform & 1) != 0 )
     {
       if ( !value )
@@ -2071,9 +2071,9 @@ LABEL_98:
       }
       v101 = System_Collections_Generic_List_object___ToArray(
                (System_Collections_Generic_List_object__o *)value,
-               (const MethodInfo_379A314 *)Method_System_Collections_Generic_List_object__ToArray__);
+               (const MethodInfo_37A4B7C *)Method_System_Collections_Generic_List_object__ToArray__);
       this->fields.banners = v101;
-      sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.banners, (int32_t)v101, v102, v103);
+      sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.banners, (int32_t)v101, v102, v103);
       banners = this->fields.banners;
       if ( banners )
       {
@@ -2127,7 +2127,7 @@ LABEL_113:
     v113 = v112[20];
     v114 = v112[21];
     v115 = v112[22];
-    v127 = NotificationDialog__getVectFromScript(v108, script, (System_String_o *)StringLiteral_17637/*"buttonOffset"*/, v109);
+    v127 = NotificationDialog__getVectFromScript(v108, script, (System_String_o *)StringLiteral_17639/*"buttonOffset"*/, v109);
     v127.fields.x = v113 + v127.fields.x;
     v127.fields.y = v114 + v127.fields.y;
     v127.fields.z = v115 + v127.fields.z;
@@ -2149,13 +2149,13 @@ LABEL_113:
   BaseDialog__SetMaskTouchCloseEnabled((BaseDialog_o *)this, canMaskTouchClose, 0);
   if ( v105 )
   {
-    v117 = (System_Action_o *)sub_1C32E6C(System_Action_TypeInfo);
+    v117 = (System_Action_o *)sub_1C372A4(System_Action_TypeInfo);
     System_Action___ctor(v117, (Il2CppObject *)this, Method_NotificationDialog_EndOpen__, 0);
     BaseDialog__Open((BaseDialog_o *)this, v117, 0, 0, 0);
   }
   else
   {
-    transform = (UILabel_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39E2904 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+    transform = (UILabel_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39ED16C *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
     if ( !transform )
       goto LABEL_138;
     CommonUI__SetLoadMode((CommonUI_o *)transform, 1, 0);
@@ -2167,7 +2167,7 @@ LABEL_113:
     if ( !transform )
       goto LABEL_138;
     UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)transform, 0, 0);
-    v118 = (System_Action_o *)sub_1C32E6C(System_Action_TypeInfo);
+    v118 = (System_Action_o *)sub_1C372A4(System_Action_TypeInfo);
     System_Action___ctor(v118, (Il2CppObject *)this, Method_NotificationDialog__Open_b__44_0__, 0);
     NotificationDialog__LoadBanners(this, v118, v119);
   }
@@ -2179,14 +2179,14 @@ void NotificationDialog__SetCondensedScaleTitle(NotificationDialog_o *this, cons
   UnityEngine_Object_o *titleLabel; // x20
   struct UILabel_o *Value; // x0
   UILabel_o *v5; // x20
-  const MethodInfo_38C26B8 *v6; // x2
+  const MethodInfo_38CCF20 *v6; // x2
   System_Nullable_Vector2Int__o v7; // 0:x0.12
 
-  if ( (byte_4C3B51B & 1) == 0 )
+  if ( (byte_4C46A60 & 1) == 0 )
   {
-    sub_1C32C20(&Method_System_Nullable_Vector2Int__get_Value__);
-    sub_1C32C20(&UnityEngine_Object_TypeInfo);
-    byte_4C3B51B = 1;
+    sub_1C37058(&Method_System_Nullable_Vector2Int__get_Value__);
+    sub_1C37058(&UnityEngine_Object_TypeInfo);
+    byte_4C46A60 = 1;
   }
   titleLabel = (UnityEngine_Object_o *)this->fields.titleLabel;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -2204,7 +2204,7 @@ void NotificationDialog__SetCondensedScaleTitle(NotificationDialog_o *this, cons
           Value = (struct UILabel_o *)System_Nullable_Vector2Int___get_Value(v7, v6),
           !v5) )
     {
-      sub_1C32E7C(Value);
+      sub_1C372B4(Value);
     }
     UILabel__SetCondensedScale(v5, (int32_t)Value, 0, 0);
   }
@@ -2219,16 +2219,16 @@ System_Collections_IEnumerator_o *NotificationDialog__StartDownloadBanner(
   int32_t v4; // w2
   const MethodInfo *v5; // x3
 
-  if ( (byte_4C3B51E & 1) == 0 )
+  if ( (byte_4C46A63 & 1) == 0 )
   {
-    sub_1C32C20(&NotificationDialog__StartDownloadBanner_d__57_TypeInfo);
-    byte_4C3B51E = 1;
+    sub_1C37058(&NotificationDialog__StartDownloadBanner_d__57_TypeInfo);
+    byte_4C46A63 = 1;
   }
-  v3 = sub_1C32E6C(NotificationDialog__StartDownloadBanner_d__57_TypeInfo);
+  v3 = sub_1C372A4(NotificationDialog__StartDownloadBanner_d__57_TypeInfo);
   System_Object___ctor((Il2CppObject *)v3, 0);
   *(_DWORD *)(v3 + 16) = 0;
   *(_QWORD *)(v3 + 32) = this;
-  sub_1C32BC4((CGThumbnailListItem_o *)(v3 + 32), (int32_t)this, v4, v5);
+  sub_1C36FFC((CGThumbnailListItem_o *)(v3 + 32), (int32_t)this, v4, v5);
   return (System_Collections_IEnumerator_o *)v3;
 }
 
@@ -2238,22 +2238,22 @@ void NotificationDialog___Open_b__44_0(NotificationDialog_o *this, const MethodI
   UnityEngine_GameObject_o *baseWindow; // x0
   System_Action_o *v4; // x20
 
-  if ( (byte_4C3B522 & 1) == 0 )
+  if ( (byte_4C46A67 & 1) == 0 )
   {
-    sub_1C32C20(&System_Action_TypeInfo);
-    sub_1C32C20(&Method_NotificationDialog_EndOpen__);
-    sub_1C32C20(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
-    byte_4C3B522 = 1;
+    sub_1C37058(&System_Action_TypeInfo);
+    sub_1C37058(&Method_NotificationDialog_EndOpen__);
+    sub_1C37058(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+    byte_4C46A67 = 1;
   }
   baseWindow = this->fields.baseWindow;
   if ( !baseWindow
     || (UnityEngine_GameObject__SetActive(baseWindow, 1, 0),
-        (baseWindow = (UnityEngine_GameObject_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39E2904 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__)) == 0) )
+        (baseWindow = (UnityEngine_GameObject_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39ED16C *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__)) == 0) )
   {
-    sub_1C32E7C(baseWindow);
+    sub_1C372B4(baseWindow);
   }
   CommonUI__SetLoadMode((CommonUI_o *)baseWindow, 0, 0);
-  v4 = (System_Action_o *)sub_1C32E6C(System_Action_TypeInfo);
+  v4 = (System_Action_o *)sub_1C372A4(System_Action_TypeInfo);
   System_Action___ctor(v4, (Il2CppObject *)this, Method_NotificationDialog_EndOpen__, 0);
   BaseDialog__Open((BaseDialog_o *)this, v4, 0, 0, 0);
 }
@@ -2268,21 +2268,21 @@ void NotificationDialog___StartDownloadBanner_b__57_0(
   System_Collections_IEnumerator_o *started; // x1
   Il2CppObject *Instance; // x0
 
-  if ( (byte_4C3B523 & 1) == 0 )
+  if ( (byte_4C46A68 & 1) == 0 )
   {
-    sub_1C32C20(&Method_SingletonMonoBehaviour_ManagementManager__get_Instance__);
-    byte_4C3B523 = 1;
+    sub_1C37058(&Method_SingletonMonoBehaviour_ManagementManager__get_Instance__);
+    byte_4C46A68 = 1;
   }
   if ( isDecide )
   {
     started = NotificationDialog__StartDownloadBanner(this, (const MethodInfo *)isDecide);
-    UnityEngine_MonoBehaviour__StartCoroutine_71209212((UnityEngine_MonoBehaviour_o *)this, started, 0);
+    UnityEngine_MonoBehaviour__StartCoroutine_71252324((UnityEngine_MonoBehaviour_o *)this, started, 0);
   }
   else
   {
-    Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39E2904 *)Method_SingletonMonoBehaviour_ManagementManager__get_Instance__);
+    Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39ED16C *)Method_SingletonMonoBehaviour_ManagementManager__get_Instance__);
     if ( !Instance )
-      sub_1C32E7C(0);
+      sub_1C372B4(0);
     ManagementManager__reboot((ManagementManager_o *)Instance, 0, 1, 0);
   }
 }
@@ -2297,20 +2297,20 @@ int32_t NotificationDialog__getIntFromScript(
   Il2CppObject *v6; // x19
   Il2CppObject *value; // [xsp+8h] [xbp-28h] BYREF
 
-  if ( (byte_4C3B51A & 1) == 0 )
+  if ( (byte_4C46A5F & 1) == 0 )
   {
-    sub_1C32C20(&System_Convert_TypeInfo);
-    this = (NotificationDialog_o *)sub_1C32C20(&Method_System_Collections_Generic_Dictionary_string__object__TryGetValue__);
-    byte_4C3B51A = 1;
+    sub_1C37058(&System_Convert_TypeInfo);
+    this = (NotificationDialog_o *)sub_1C37058(&Method_System_Collections_Generic_Dictionary_string__object__TryGetValue__);
+    byte_4C46A5F = 1;
   }
   value = 0;
   if ( !script )
-    sub_1C32E7C(this);
+    sub_1C372B4(this);
   if ( !System_Collections_Generic_Dictionary_object__object___TryGetValue(
           (System_Collections_Generic_Dictionary_object__object__o *)script,
           (Il2CppObject *)key,
           &value,
-          (const MethodInfo_345A5D4 *)Method_System_Collections_Generic_Dictionary_string__object__TryGetValue__) )
+          (const MethodInfo_3464E3C *)Method_System_Collections_Generic_Dictionary_string__object__TryGetValue__) )
     return 0;
   v6 = value;
   if ( !System_Convert_TypeInfo->_2.cctor_finished )
@@ -2327,21 +2327,21 @@ System_String_o *NotificationDialog__getStringFromScript(
 {
   Il2CppObject *value; // [xsp+8h] [xbp-28h] BYREF
 
-  if ( (byte_4C3B519 & 1) == 0 )
+  if ( (byte_4C46A5E & 1) == 0 )
   {
-    sub_1C32C20(&Method_System_Collections_Generic_Dictionary_string__object__TryGetValue__);
-    sub_1C32C20(&string_TypeInfo);
-    this = (NotificationDialog_o *)sub_1C32C20(&StringLiteral_1/*""*/);
-    byte_4C3B519 = 1;
+    sub_1C37058(&Method_System_Collections_Generic_Dictionary_string__object__TryGetValue__);
+    sub_1C37058(&string_TypeInfo);
+    this = (NotificationDialog_o *)sub_1C37058(&StringLiteral_1/*""*/);
+    byte_4C46A5E = 1;
   }
   value = 0;
   if ( !script )
-    sub_1C32E7C(this);
+    sub_1C372B4(this);
   if ( !System_Collections_Generic_Dictionary_object__object___TryGetValue(
           (System_Collections_Generic_Dictionary_object__object__o *)script,
           (Il2CppObject *)key,
           &value,
-          (const MethodInfo_345A5D4 *)Method_System_Collections_Generic_Dictionary_string__object__TryGetValue__) )
+          (const MethodInfo_3464E3C *)Method_System_Collections_Generic_Dictionary_string__object__TryGetValue__) )
     return (System_String_o *)StringLiteral_1/*""*/;
   if ( !value )
     return 0;
@@ -2370,23 +2370,23 @@ UnityEngine_Vector3_o NotificationDialog__getVectFromScript(
   Il2CppObject *value; // [xsp+8h] [xbp-28h] BYREF
   UnityEngine_Vector3_o result; // 0:s0.4,4:s1.4,8:s2.4
 
-  if ( (byte_4C3B518 & 1) == 0 )
+  if ( (byte_4C46A5D & 1) == 0 )
   {
-    sub_1C32C20(&System_Convert_TypeInfo);
-    sub_1C32C20(&Method_System_Collections_Generic_Dictionary_string__object__TryGetValue__);
-    sub_1C32C20(&Method_System_Collections_Generic_List_object__get_Count__);
-    sub_1C32C20(&Method_System_Collections_Generic_List_object__get_Item__);
-    this = (NotificationDialog_o *)sub_1C32C20(&System_Collections_Generic_List_object__TypeInfo);
-    byte_4C3B518 = 1;
+    sub_1C37058(&System_Convert_TypeInfo);
+    sub_1C37058(&Method_System_Collections_Generic_Dictionary_string__object__TryGetValue__);
+    sub_1C37058(&Method_System_Collections_Generic_List_object__get_Count__);
+    sub_1C37058(&Method_System_Collections_Generic_List_object__get_Item__);
+    this = (NotificationDialog_o *)sub_1C37058(&System_Collections_Generic_List_object__TypeInfo);
+    byte_4C46A5D = 1;
   }
   value = 0;
   if ( !script )
-    sub_1C32E7C(this);
+    sub_1C372B4(this);
   if ( System_Collections_Generic_Dictionary_object__object___TryGetValue(
          (System_Collections_Generic_Dictionary_object__object__o *)script,
          (Il2CppObject *)key,
          &value,
-         (const MethodInfo_345A5D4 *)Method_System_Collections_Generic_Dictionary_string__object__TryGetValue__)
+         (const MethodInfo_3464E3C *)Method_System_Collections_Generic_Dictionary_string__object__TryGetValue__)
     && (v6 = value) != 0
     && (naturalAligment = System_Collections_Generic_List_object__TypeInfo->_2.naturalAligment,
         value->klass->_2.naturalAligment >= (unsigned int)naturalAligment)
@@ -2396,14 +2396,14 @@ UnityEngine_Vector3_o NotificationDialog__getVectFromScript(
     Item = System_Collections_Generic_List_object___get_Item(
              (System_Collections_Generic_List_object__o *)value,
              0,
-             (const MethodInfo_37984EC *)Method_System_Collections_Generic_List_object__get_Item__);
+             (const MethodInfo_37A2D54 *)Method_System_Collections_Generic_List_object__get_Item__);
     if ( !System_Convert_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(System_Convert_TypeInfo);
     v13 = System_Convert__ToDouble(Item, 0);
     v14 = System_Collections_Generic_List_object___get_Item(
             (System_Collections_Generic_List_object__o *)v6,
             1,
-            (const MethodInfo_37984EC *)Method_System_Collections_Generic_List_object__get_Item__);
+            (const MethodInfo_37A2D54 *)Method_System_Collections_Generic_List_object__get_Item__);
     v15 = System_Convert__ToDouble(v14, 0);
     x = v13;
     y = v15;
@@ -2411,10 +2411,10 @@ UnityEngine_Vector3_o NotificationDialog__getVectFromScript(
   }
   else
   {
-    if ( !byte_4C313D1 )
+    if ( !byte_4C3C921 )
     {
-      sub_1C32C20(&UnityEngine_Vector3_TypeInfo);
-      byte_4C313D1 = 1;
+      sub_1C37058(&UnityEngine_Vector3_TypeInfo);
+      byte_4C3C921 = 1;
     }
     static_fields = UnityEngine_Vector3_TypeInfo->static_fields;
     x = static_fields->zeroVector.fields.x;
@@ -2430,12 +2430,12 @@ UnityEngine_Vector3_o NotificationDialog__getVectFromScript(
 
 System_String_o *NotificationDialog__get_closeBtnPath(NotificationDialog_o *this, const MethodInfo *method)
 {
-  if ( (byte_4C3B51F & 1) == 0 )
+  if ( (byte_4C46A64 & 1) == 0 )
   {
-    sub_1C32C20(&StringLiteral_15650/*"Window/OkBtn"*/);
-    byte_4C3B51F = 1;
+    sub_1C37058(&StringLiteral_15652/*"Window/OkBtn"*/);
+    byte_4C46A64 = 1;
   }
-  return (System_String_o *)StringLiteral_15650/*"Window/OkBtn"*/;
+  return (System_String_o *)StringLiteral_15652/*"Window/OkBtn"*/;
 }
 
 
@@ -2454,15 +2454,15 @@ void NotificationDialog_ClickDelegate___ctor(
   this->fields.method = method;
   this->fields.method_ptr = v4;
   this->fields.m_target = object;
-  sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.m_target, (int32_t)object, method, a4);
+  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.m_target, (int32_t)object, method, a4);
   v8 = *(unsigned __int8 *)(method + 82);
   this->fields.method_code = (intptr_t)this;
-  if ( (sub_1C32CE0(method) & 1) == 0 )
+  if ( (sub_1C37118(method) & 1) == 0 )
   {
     if ( !object )
     {
-      v10 = sub_1C32E98(0, "Delegate to an instance method cannot have null 'this'.");
-      sub_1C32D48(v10, 0);
+      v10 = sub_1C372D0(0, "Delegate to an instance method cannot have null 'this'.");
+      sub_1C37180(v10, 0);
     }
     goto LABEL_5;
   }
@@ -2474,9 +2474,9 @@ LABEL_5:
     this->fields.method_code = (intptr_t)m_target;
     goto LABEL_6;
   }
-  this->fields.invoke_impl = (intptr_t)sub_1A7B8FC;
+  this->fields.invoke_impl = (intptr_t)sub_1A7FBE8;
 LABEL_6:
-  this->fields.extra_arg = (intptr_t)sub_1A7B8B4;
+  this->fields.extra_arg = (intptr_t)sub_1A7FBA0;
 }
 
 
@@ -2494,14 +2494,14 @@ System_IAsyncResult_o *NotificationDialog_ClickDelegate__BeginInvoke(
   bool v13[4]; // [xsp+1Ch] [xbp-34h] BYREF
 
   v13[0] = isOk;
-  if ( (byte_4C3B524 & 1) == 0 )
+  if ( (byte_4C46A69 & 1) == 0 )
   {
-    sub_1C32C20(&bool_TypeInfo);
-    byte_4C3B524 = 1;
+    sub_1C37058(&bool_TypeInfo);
+    byte_4C46A69 = 1;
   }
   v12[1] = 0;
   v12[0] = j_il2cpp_value_box_0(bool_TypeInfo, v13, callback, object, method, v5, v6, v7);
-  return (System_IAsyncResult_o *)sub_1C32BD4(this, v12, callback, object);
+  return (System_IAsyncResult_o *)sub_1C3700C(this, v12, callback, object);
 }
 
 
@@ -2510,7 +2510,7 @@ void NotificationDialog_ClickDelegate__EndInvoke(
         System_IAsyncResult_o *result,
         const MethodInfo *method)
 {
-  sub_1C32BD8(result, 0, method);
+  sub_1C37010(result, 0, method);
 }
 
 
@@ -2627,30 +2627,30 @@ bool NotificationDialog__StartDownloadBanner_d__57__MoveNext(
   UnityEngine_Vector3_o v87; // 0:s0.4,4:s1.4,8:s2.4
 
   v4 = this;
-  if ( (byte_4C3B525 & 1) == 0 )
+  if ( (byte_4C46A6A & 1) == 0 )
   {
-    sub_1C32C20(&ErrorDialog_ClickDelegate_TypeInfo);
-    sub_1C32C20(&System_Collections_Generic_Dictionary_string__object__TypeInfo);
-    sub_1C32C20(&UnityEngine_Networking_DownloadHandlerTexture_TypeInfo);
-    sub_1C32C20(&Method_UnityEngine_GameObject_GetComponent_LinkableTexture___);
-    sub_1C32C20(&Method_System_Collections_Generic_List_LinkableTexture__Add__);
-    sub_1C32C20(&LocalizationManager_TypeInfo);
-    sub_1C32C20(&NetworkManager_TypeInfo);
-    sub_1C32C20(&Method_NotificationDialog__StartDownloadBanner_b__57_0__);
-    sub_1C32C20(&NotificationDialog_TypeInfo);
-    sub_1C32C20(&Method_UnityEngine_Object_Instantiate_GameObject___);
-    sub_1C32C20(&UnityEngine_Object_TypeInfo);
-    sub_1C32C20(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
-    sub_1C32C20(&UnityEngine_Texture2D_TypeInfo);
-    sub_1C32C20(&UnityEngine_Networking_UnityWebRequest_TypeInfo);
-    sub_1C32C20(&StringLiteral_17022/*"bannerUrl"*/);
-    sub_1C32C20(&StringLiteral_23505/*"size"*/);
-    sub_1C32C20(&StringLiteral_24458/*"urlOpenType"*/);
-    sub_1C32C20(&StringLiteral_22365/*"offset"*/);
-    sub_1C32C20(&StringLiteral_24457/*"urlLink"*/);
-    sub_1C32C20(&StringLiteral_1/*""*/);
-    this = (NotificationDialog__StartDownloadBanner_d__57_o *)sub_1C32C20(&StringLiteral_9259/*"NETWORK_ERROR_TIME_OVER_MESSAGE"*/);
-    byte_4C3B525 = 1;
+    sub_1C37058(&ErrorDialog_ClickDelegate_TypeInfo);
+    sub_1C37058(&System_Collections_Generic_Dictionary_string__object__TypeInfo);
+    sub_1C37058(&UnityEngine_Networking_DownloadHandlerTexture_TypeInfo);
+    sub_1C37058(&Method_UnityEngine_GameObject_GetComponent_LinkableTexture___);
+    sub_1C37058(&Method_System_Collections_Generic_List_LinkableTexture__Add__);
+    sub_1C37058(&LocalizationManager_TypeInfo);
+    sub_1C37058(&NetworkManager_TypeInfo);
+    sub_1C37058(&Method_NotificationDialog__StartDownloadBanner_b__57_0__);
+    sub_1C37058(&NotificationDialog_TypeInfo);
+    sub_1C37058(&Method_UnityEngine_Object_Instantiate_GameObject___);
+    sub_1C37058(&UnityEngine_Object_TypeInfo);
+    sub_1C37058(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+    sub_1C37058(&UnityEngine_Texture2D_TypeInfo);
+    sub_1C37058(&UnityEngine_Networking_UnityWebRequest_TypeInfo);
+    sub_1C37058(&StringLiteral_17024/*"bannerUrl"*/);
+    sub_1C37058(&StringLiteral_23509/*"size"*/);
+    sub_1C37058(&StringLiteral_24462/*"urlOpenType"*/);
+    sub_1C37058(&StringLiteral_22368/*"offset"*/);
+    sub_1C37058(&StringLiteral_24461/*"urlLink"*/);
+    sub_1C37058(&StringLiteral_1/*""*/);
+    this = (NotificationDialog__StartDownloadBanner_d__57_o *)sub_1C37058(&StringLiteral_9260/*"NETWORK_ERROR_TIME_OVER_MESSAGE"*/);
+    byte_4C46A6A = 1;
   }
   _1__state = v4->fields.__1__state;
   _4__this = v4->fields.__4__this;
@@ -2708,13 +2708,13 @@ bool NotificationDialog__StartDownloadBanner_d__57__MoveNext(
       if ( !this )
         goto LABEL_94;
       format = UnityEngine_Texture2D__get_format((UnityEngine_Texture2D_o *)this, 0);
-      v20 = (UnityEngine_Texture2D_o *)sub_1C32E6C(UnityEngine_Texture2D_TypeInfo);
-      UnityEngine_Texture2D___ctor_71111856(v20, v17, v18, format, 0, 0);
+      v20 = (UnityEngine_Texture2D_o *)sub_1C372A4(UnityEngine_Texture2D_TypeInfo);
+      UnityEngine_Texture2D___ctor_71154968(v20, v17, v18, format, 0, 0);
       this = (NotificationDialog__StartDownloadBanner_d__57_o *)v4->fields._texDl_5__3;
       if ( !this )
         goto LABEL_94;
       data = UnityEngine_Networking_DownloadHandler__get_data((UnityEngine_Networking_DownloadHandler_o *)this, 0);
-      UnityEngine_ImageConversion__LoadImage_71331960(v20, data, 0);
+      UnityEngine_ImageConversion__LoadImage_71375072(v20, data, 0);
     }
     else
     {
@@ -2756,7 +2756,7 @@ LABEL_25:
           j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
         this = (NotificationDialog__StartDownloadBanner_d__57_o *)UnityEngine_Object__Instantiate_object_(
                                                                     gameObject,
-                                                                    (const MethodInfo_3169758 *)Method_UnityEngine_Object_Instantiate_GameObject___);
+                                                                    (const MethodInfo_3173FC0 *)Method_UnityEngine_Object_Instantiate_GameObject___);
         if ( !_4__this->fields.lnkSprite )
           goto LABEL_94;
         v53 = this;
@@ -2767,10 +2767,10 @@ LABEL_25:
           goto LABEL_94;
         parent = (UnityEngine_Component_o *)UnityEngine_Transform__get_parent((UnityEngine_Transform_o *)this, 0);
         GameObjectExtensions__SetParent((UnityEngine_GameObject_o *)v53, parent, 0);
-        if ( !byte_4C313D6 )
+        if ( !byte_4C3C926 )
         {
-          sub_1C32C20(&UnityEngine_Vector3_TypeInfo);
-          byte_4C313D6 = 1;
+          sub_1C37058(&UnityEngine_Vector3_TypeInfo);
+          byte_4C3C926 = 1;
         }
         GameObjectExtensions__SetLocalScale(
           (UnityEngine_GameObject_o *)v53,
@@ -2780,7 +2780,7 @@ LABEL_25:
           goto LABEL_94;
         this = (NotificationDialog__StartDownloadBanner_d__57_o *)UnityEngine_GameObject__GetComponent_object_(
                                                                     (UnityEngine_GameObject_o *)v53,
-                                                                    (const MethodInfo_3134970 *)Method_UnityEngine_GameObject_GetComponent_LinkableTexture___);
+                                                                    (const MethodInfo_313F1D8 *)Method_UnityEngine_GameObject_GetComponent_LinkableTexture___);
         additionalTextures = (System_Collections_Generic_List_object__o *)_4__this->fields.additionalTextures;
         if ( !additionalTextures )
           goto LABEL_94;
@@ -2796,14 +2796,14 @@ LABEL_25:
           System_Collections_Generic_List_object___AddWithResize(
             additionalTextures,
             (Il2CppObject *)this,
-            *(const MethodInfo_37987BC **)(*(_QWORD *)(v59[4] + 192LL) + 112LL));
+            *(const MethodInfo_37A3024 **)(*(_QWORD *)(v59[4] + 192LL) + 112LL));
         }
         else
         {
           v61 = &items->obj.klass + size;
           additionalTextures->fields._size = size + 1;
           v61[4] = (Il2CppClass *)lnkTexture;
-          sub_1C32BC4((CGThumbnailListItem_o *)(v61 + 4), (int32_t)lnkTexture, v55, v56);
+          sub_1C36FFC((CGThumbnailListItem_o *)(v61 + 4), (int32_t)lnkTexture, v55, v56);
         }
       }
       if ( !lnkTexture )
@@ -2836,7 +2836,7 @@ LABEL_25:
       VectFromScript = NotificationDialog__getVectFromScript(
                          v62,
                          v4->fields._banner_5__2,
-                         (System_String_o *)StringLiteral_22365/*"offset"*/,
+                         (System_String_o *)StringLiteral_22368/*"offset"*/,
                          v63);
       VectFromScript.fields.x = v67 + VectFromScript.fields.x;
       VectFromScript.fields.y = v68 + VectFromScript.fields.y;
@@ -2845,15 +2845,15 @@ LABEL_25:
       v87 = NotificationDialog__getVectFromScript(
               v70,
               v4->fields._banner_5__2,
-              (System_String_o *)StringLiteral_23505/*"size"*/,
+              (System_String_o *)StringLiteral_23509/*"size"*/,
               v71);
       x = v87.fields.x;
       y = v87.fields.y;
       z = v87.fields.z;
-      if ( !byte_4C313D1 )
+      if ( !byte_4C3C921 )
       {
-        sub_1C32C20(&UnityEngine_Vector3_TypeInfo);
-        byte_4C313D1 = 1;
+        sub_1C37058(&UnityEngine_Vector3_TypeInfo);
+        byte_4C3C921 = 1;
       }
       static_fields = UnityEngine_Vector3_TypeInfo->static_fields;
       if ( x == static_fields->zeroVector.fields.x
@@ -2877,14 +2877,14 @@ LABEL_25:
       IntFromScript = (NotificationDialog_o *)NotificationDialog__getIntFromScript(
                                                 v76,
                                                 v4->fields._banner_5__2,
-                                                (System_String_o *)StringLiteral_24458/*"urlOpenType"*/,
+                                                (System_String_o *)StringLiteral_24462/*"urlOpenType"*/,
                                                 v77);
       banner_5__2 = v4->fields._banner_5__2;
       v82 = (int)IntFromScript;
       StringFromScript = NotificationDialog__getStringFromScript(
                            IntFromScript,
                            banner_5__2,
-                           (System_String_o *)StringLiteral_24457/*"urlLink"*/,
+                           (System_String_o *)StringLiteral_24461/*"urlLink"*/,
                            v83);
       LinkableTexture__SetUp((LinkableTexture_o *)lnkTexture, v82, StringFromScript, 0);
       NotificationDialog__LoadNext(_4__this, v85);
@@ -2903,16 +2903,16 @@ LABEL_35:
       if ( v24 <= v25->static_fields->BANNER_RETRY_MAX )
       {
         started = NotificationDialog__StartDownloadBanner(_4__this, method);
-        UnityEngine_MonoBehaviour__StartCoroutine_71209212((UnityEngine_MonoBehaviour_o *)_4__this, started, 0);
+        UnityEngine_MonoBehaviour__StartCoroutine_71252324((UnityEngine_MonoBehaviour_o *)_4__this, started, 0);
       }
       else
       {
         _4__this->fields.mBannerRetryCount = 0;
-        Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39E2904 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+        Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39ED16C *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
         if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
           j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-        v27 = LocalizationManager__Get((System_String_o *)StringLiteral_9259/*"NETWORK_ERROR_TIME_OVER_MESSAGE"*/, 0);
-        v28 = (ErrorDialog_ClickDelegate_o *)sub_1C32E6C(ErrorDialog_ClickDelegate_TypeInfo);
+        v27 = LocalizationManager__Get((System_String_o *)StringLiteral_9260/*"NETWORK_ERROR_TIME_OVER_MESSAGE"*/, 0);
+        v28 = (ErrorDialog_ClickDelegate_o *)sub_1C372A4(ErrorDialog_ClickDelegate_TypeInfo);
         ErrorDialog_ClickDelegate___ctor(
           v28,
           (Il2CppObject *)_4__this,
@@ -2929,7 +2929,7 @@ LABEL_35:
     {
       UnityEngine_Networking_UnityWebRequest__Dispose(v30, 0);
       *p_mBannerWWW = 0;
-      sub_1C32BC4((CGThumbnailListItem_o *)&_4__this->fields.mBannerWWW, 0, v31, v32);
+      sub_1C36FFC((CGThumbnailListItem_o *)&_4__this->fields.mBannerWWW, 0, v31, v32);
     }
   }
   else if ( !_1__state )
@@ -2942,7 +2942,7 @@ LABEL_35:
       {
         mLoadingIdx = _4__this->fields.mLoadingIdx;
         if ( (unsigned int)mLoadingIdx >= LODWORD(banners->max_length) )
-          sub_1C32E84(this);
+          sub_1C372BC(this);
         v9 = banners->m_Items[mLoadingIdx];
         if ( v9 )
         {
@@ -2969,23 +2969,23 @@ LABEL_35:
           v4->fields._banner_5__2 = 0;
           p_banner_5__2 = (CGThumbnailListItem_o *)&v4->fields._banner_5__2;
         }
-        sub_1C32BC4(p_banner_5__2, v34, v2, v3);
+        sub_1C36FFC(p_banner_5__2, v34, v2, v3);
         v38 = NotificationDialog__getStringFromScript(
                 v36,
                 (System_Collections_Generic_Dictionary_string__object__o *)p_banner_5__2->klass,
-                (System_String_o *)StringLiteral_17022/*"bannerUrl"*/,
+                (System_String_o *)StringLiteral_17024/*"bannerUrl"*/,
                 v37);
         if ( !NetworkManager_TypeInfo->_2.cctor_finished )
           j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
         WebViewFullAddress = NetworkManager__getWebViewFullAddress(v38, 0);
-        v40 = (UnityEngine_Networking_UnityWebRequest_o *)sub_1C32E6C(UnityEngine_Networking_UnityWebRequest_TypeInfo);
+        v40 = (UnityEngine_Networking_UnityWebRequest_o *)sub_1C372A4(UnityEngine_Networking_UnityWebRequest_TypeInfo);
         UnityEngine_Networking_UnityWebRequest___ctor(v40, WebViewFullAddress, 0);
         _4__this->fields.mBannerWWW = v40;
-        sub_1C32BC4((CGThumbnailListItem_o *)&_4__this->fields.mBannerWWW, (int32_t)v40, v41, v42);
-        v43 = (UnityEngine_Networking_DownloadHandlerTexture_o *)sub_1C32E6C(UnityEngine_Networking_DownloadHandlerTexture_TypeInfo);
+        sub_1C36FFC((CGThumbnailListItem_o *)&_4__this->fields.mBannerWWW, (int32_t)v40, v41, v42);
+        v43 = (UnityEngine_Networking_DownloadHandlerTexture_o *)sub_1C372A4(UnityEngine_Networking_DownloadHandlerTexture_TypeInfo);
         UnityEngine_Networking_DownloadHandlerTexture___ctor(v43, 0, 0);
         v4->fields._texDl_5__3 = v43;
-        sub_1C32BC4((CGThumbnailListItem_o *)&v4->fields._texDl_5__3, (int32_t)v43, v44, v45);
+        sub_1C36FFC((CGThumbnailListItem_o *)&v4->fields._texDl_5__3, (int32_t)v43, v44, v45);
         this = (NotificationDialog__StartDownloadBanner_d__57_o *)_4__this->fields.mBannerWWW;
         if ( this )
         {
@@ -3003,7 +3003,7 @@ LABEL_35:
                     0);
             v4->fields.__2__current = (Il2CppObject *)v46;
             p__2__current = (CGThumbnailListItem_o *)&v4->fields.__2__current;
-            sub_1C32BC4(p__2__current, (int32_t)v46, v48, v49);
+            sub_1C36FFC(p__2__current, (int32_t)v46, v48, v49);
             LODWORD(p__2__current[-1].fields._ThumbnailSpritePath_k__BackingField) = 1;
             return v33;
           }
@@ -3011,7 +3011,7 @@ LABEL_35:
       }
     }
 LABEL_94:
-    sub_1C32E7C(this);
+    sub_1C372B4(this);
   }
   return 0;
 }
@@ -3033,11 +3033,11 @@ void __noreturn NotificationDialog__StartDownloadBanner_d__57__System_Collection
   System_NotSupportedException_o *v3; // x19
   __int64 v4; // x0
 
-  v2 = sub_1C32C34(&System_NotSupportedException_TypeInfo);
-  v3 = (System_NotSupportedException_o *)sub_1C32E6C(v2);
+  v2 = sub_1C3706C(&System_NotSupportedException_TypeInfo);
+  v3 = (System_NotSupportedException_o *)sub_1C372A4(v2);
   System_NotSupportedException___ctor(v3, 0);
-  v4 = sub_1C32C34(&Method_NotificationDialog__StartDownloadBanner_d__57_System_Collections_IEnumerator_Reset__);
-  sub_1C32D48(v3, v4);
+  v4 = sub_1C3706C(&Method_NotificationDialog__StartDownloadBanner_d__57_System_Collections_IEnumerator_Reset__);
+  sub_1C37180(v3, v4);
 }
 
 

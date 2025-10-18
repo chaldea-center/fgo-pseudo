@@ -1,9 +1,9 @@
 void ScriptStoryOpenDialog___ctor(ScriptStoryOpenDialog_o *this, const MethodInfo *method)
 {
-  if ( (byte_4C39A14 & 1) == 0 )
+  if ( (byte_4C4500E & 1) == 0 )
   {
-    sub_1C32C20(&BaseDialog_TypeInfo);
-    byte_4C39A14 = 1;
+    sub_1C37058(&BaseDialog_TypeInfo);
+    byte_4C4500E = 1;
   }
   if ( !BaseDialog_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(BaseDialog_TypeInfo);
@@ -25,7 +25,7 @@ void ScriptStoryOpenDialog__Callback(ScriptStoryOpenDialog_o *this, const Method
   if ( callbackFunc )
   {
     p_callbackFunc->klass = 0;
-    sub_1C32BC4(p_callbackFunc, 0, v2, v3);
+    sub_1C36FFC(p_callbackFunc, 0, v2, v3);
     ((void (__fastcall *)(intptr_t, intptr_t))v5->fields.invoke_impl)(v5->fields.method_code, v5->fields.method);
   }
 }
@@ -35,11 +35,11 @@ void ScriptStoryOpenDialog__Close(ScriptStoryOpenDialog_o *this, const MethodInf
 {
   const MethodInfo *v2; // x2
 
-  ScriptStoryOpenDialog__Close_44791468(this, 0, v2);
+  ScriptStoryOpenDialog__Close_44893572(this, 0, v2);
 }
 
 
-void ScriptStoryOpenDialog__Close_44791468(
+void ScriptStoryOpenDialog__Close_44893572(
         ScriptStoryOpenDialog_o *this,
         System_Action_o *callback,
         const MethodInfo *method)
@@ -47,16 +47,16 @@ void ScriptStoryOpenDialog__Close_44791468(
   const MethodInfo *v3; // x3
   System_Action_o *v6; // x20
 
-  if ( (byte_4C39A12 & 1) == 0 )
+  if ( (byte_4C4500C & 1) == 0 )
   {
-    sub_1C32C20(&System_Action_TypeInfo);
-    sub_1C32C20(&Method_ScriptStoryOpenDialog_EndClose__);
-    byte_4C39A12 = 1;
+    sub_1C37058(&System_Action_TypeInfo);
+    sub_1C37058(&Method_ScriptStoryOpenDialog_EndClose__);
+    byte_4C4500C = 1;
   }
   this->fields.closeCallbackFunc = callback;
-  sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.closeCallbackFunc, (int32_t)callback, (int32_t)method, v3);
+  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.closeCallbackFunc, (int32_t)callback, (int32_t)method, v3);
   this->fields.state = 4;
-  v6 = (System_Action_o *)sub_1C32E6C(System_Action_TypeInfo);
+  v6 = (System_Action_o *)sub_1C372A4(System_Action_TypeInfo);
   System_Action___ctor(v6, (Il2CppObject *)this, Method_ScriptStoryOpenDialog_EndClose__, 0);
   BaseDialog__Close((BaseDialog_o *)this, v6, 0);
 }
@@ -77,7 +77,7 @@ void ScriptStoryOpenDialog__EndClose(ScriptStoryOpenDialog_o *this, const Method
   if ( closeCallbackFunc )
   {
     p_closeCallbackFunc->klass = 0;
-    sub_1C32BC4(p_closeCallbackFunc, 0, v3, v4);
+    sub_1C36FFC(p_closeCallbackFunc, 0, v3, v4);
     ((void (__fastcall *)(intptr_t, intptr_t))v6->fields.invoke_impl)(v6->fields.method_code, v6->fields.method);
   }
 }
@@ -93,10 +93,10 @@ void ScriptStoryOpenDialog__Init(ScriptStoryOpenDialog_o *this, const MethodInfo
 {
   UILabel_o *titleLabel; // x0
 
-  if ( (byte_4C39A10 & 1) == 0 )
+  if ( (byte_4C4500A & 1) == 0 )
   {
-    sub_1C32C20(&StringLiteral_1/*""*/);
-    byte_4C39A10 = 1;
+    sub_1C37058(&StringLiteral_1/*""*/);
+    byte_4C4500A = 1;
   }
   titleLabel = this->fields.titleLabel;
   if ( !titleLabel
@@ -105,7 +105,7 @@ void ScriptStoryOpenDialog__Init(ScriptStoryOpenDialog_o *this, const MethodInfo
     || (UILabel__set_text(titleLabel, (System_String_o *)StringLiteral_1/*""*/, 0), (titleLabel = this->fields.closeLabel) == 0)
     || (UILabel__set_text(titleLabel, (System_String_o *)StringLiteral_1/*""*/, 0), (titleLabel = this->fields.infoLabel) == 0) )
   {
-    sub_1C32E7C(titleLabel);
+    sub_1C372B4(titleLabel);
   }
   UILabel__set_text(titleLabel, (System_String_o *)StringLiteral_1/*""*/, 0);
   this->fields.state = 0;
@@ -119,17 +119,17 @@ void ScriptStoryOpenDialog__OnClickClose(ScriptStoryOpenDialog_o *this, const Me
   System_Reflection_MethodBase_o *v4; // x0
   const MethodInfo *v5; // x1
 
-  if ( (byte_4C39A13 & 1) == 0 )
+  if ( (byte_4C4500D & 1) == 0 )
   {
-    sub_1C32C20(&Method_ScriptStoryOpenDialog_OnClickClose__);
-    byte_4C39A13 = 1;
+    sub_1C37058(&Method_ScriptStoryOpenDialog_OnClickClose__);
+    byte_4C4500D = 1;
   }
   if ( this->fields.state == 2 )
   {
     v3 = Method_ScriptStoryOpenDialog_OnClickClose__;
     if ( (*((_BYTE *)Method_ScriptStoryOpenDialog_OnClickClose__ + 83) & 2) != 0 )
-      v3 = (_QWORD *)sub_1C32C38(Method_ScriptStoryOpenDialog_OnClickClose__);
-    v4 = (System_Reflection_MethodBase_o *)sub_1C32C04(v3, v3[4]);
+      v3 = (_QWORD *)sub_1C37070(Method_ScriptStoryOpenDialog_OnClickClose__);
+    v4 = (System_Reflection_MethodBase_o *)sub_1C3703C(v3, v3[4]);
     OverwriteAssetSoundName__PlaySystemSe(v4, 0, 0, 0);
     this->fields.state = 3;
     ScriptStoryOpenDialog__Callback(this, v5);
@@ -150,19 +150,19 @@ void ScriptStoryOpenDialog__Open(
   UILabel_o *infoLabel; // x21
   System_Action_o *v14; // x20
 
-  if ( (byte_4C39A11 & 1) == 0 )
+  if ( (byte_4C4500B & 1) == 0 )
   {
-    sub_1C32C20(&System_Action_TypeInfo);
-    sub_1C32C20(&LocalizationManager_TypeInfo);
-    sub_1C32C20(&Method_ScriptStoryOpenDialog_EndOpen__);
-    sub_1C32C20(&StringLiteral_3685/*"COMMON_CONFIRM_CLOSE"*/);
-    sub_1C32C20(&StringLiteral_12457/*"SUMMON_OPEN_FRIENDQUEST_INFO"*/);
-    byte_4C39A11 = 1;
+    sub_1C37058(&System_Action_TypeInfo);
+    sub_1C37058(&LocalizationManager_TypeInfo);
+    sub_1C37058(&Method_ScriptStoryOpenDialog_EndOpen__);
+    sub_1C37058(&StringLiteral_3685/*"COMMON_CONFIRM_CLOSE"*/);
+    sub_1C37058(&StringLiteral_12458/*"SUMMON_OPEN_FRIENDQUEST_INFO"*/);
+    byte_4C4500B = 1;
   }
   if ( !this->fields.state )
   {
     this->fields.callbackFunc = callback;
-    sub_1C32BC4(
+    sub_1C36FFC(
       (CGThumbnailListItem_o *)&this->fields.callbackFunc,
       (int32_t)callback,
       (int32_t)message,
@@ -194,13 +194,13 @@ void ScriptStoryOpenDialog__Open(
       {
         UILabel__set_text(closeLabel, (System_String_o *)closeButton, 0);
         infoLabel = this->fields.infoLabel;
-        closeButton = (UILabel_o *)LocalizationManager__Get((System_String_o *)StringLiteral_12457/*"SUMMON_OPEN_FRIENDQUEST_INFO"*/, 0);
+        closeButton = (UILabel_o *)LocalizationManager__Get((System_String_o *)StringLiteral_12458/*"SUMMON_OPEN_FRIENDQUEST_INFO"*/, 0);
         if ( infoLabel )
         {
           UILabel__set_text(infoLabel, (System_String_o *)closeButton, 0);
           BaseDialog__SetMaskTouchCloseEnabled((BaseDialog_o *)this, canMaskTouchClose, 0);
           this->fields.state = 1;
-          v14 = (System_Action_o *)sub_1C32E6C(System_Action_TypeInfo);
+          v14 = (System_Action_o *)sub_1C372A4(System_Action_TypeInfo);
           System_Action___ctor(v14, (Il2CppObject *)this, Method_ScriptStoryOpenDialog_EndOpen__, 0);
           BaseDialog__Open((BaseDialog_o *)this, v14, 0, 0, 0);
           return;
@@ -208,7 +208,7 @@ void ScriptStoryOpenDialog__Open(
       }
     }
 LABEL_14:
-    sub_1C32E7C(closeButton);
+    sub_1C372B4(closeButton);
   }
 }
 
@@ -228,10 +228,10 @@ void ScriptStoryOpenDialog__add_callbackFunc(
   ScriptStoryOpenDialog_CallbackFunc_o *v12; // x1
   const MethodInfo *v13; // x2
 
-  if ( (byte_4C39A0E & 1) == 0 )
+  if ( (byte_4C45008 & 1) == 0 )
   {
-    sub_1C32C20(&ScriptStoryOpenDialog_CallbackFunc_TypeInfo);
-    byte_4C39A0E = 1;
+    sub_1C37058(&ScriptStoryOpenDialog_CallbackFunc_TypeInfo);
+    byte_4C45008 = 1;
   }
   callbackFunc = this->fields.callbackFunc;
   p_callbackFunc = &this->fields.callbackFunc;
@@ -244,13 +244,13 @@ void ScriptStoryOpenDialog__add_callbackFunc(
       if ( (ScriptStoryOpenDialog_CallbackFunc_c *)v8->klass != ScriptStoryOpenDialog_CallbackFunc_TypeInfo )
         break;
     }
-    v9 = sub_1C6CE78(p_callbackFunc, v8, v6);
+    v9 = sub_1C712B0(p_callbackFunc, v8, v6);
     v10 = v6 == (System_Delegate_o *)v9;
     v6 = (System_Delegate_o *)v9;
     if ( v10 )
       return;
   }
-  sub_1C3313C(v8);
+  sub_1C37574(v8);
   ScriptStoryOpenDialog__remove_callbackFunc(v11, v12, v13);
 }
 
@@ -269,10 +269,10 @@ void ScriptStoryOpenDialog__remove_callbackFunc(
   ScriptStoryOpenDialog_o *v11; // x0
   const MethodInfo *v12; // x1
 
-  if ( (byte_4C39A0F & 1) == 0 )
+  if ( (byte_4C45009 & 1) == 0 )
   {
-    sub_1C32C20(&ScriptStoryOpenDialog_CallbackFunc_TypeInfo);
-    byte_4C39A0F = 1;
+    sub_1C37058(&ScriptStoryOpenDialog_CallbackFunc_TypeInfo);
+    byte_4C45009 = 1;
   }
   callbackFunc = this->fields.callbackFunc;
   p_callbackFunc = &this->fields.callbackFunc;
@@ -285,13 +285,13 @@ void ScriptStoryOpenDialog__remove_callbackFunc(
       if ( (ScriptStoryOpenDialog_CallbackFunc_c *)v8->klass != ScriptStoryOpenDialog_CallbackFunc_TypeInfo )
         break;
     }
-    v9 = sub_1C6CE78(p_callbackFunc, v8, v6);
+    v9 = sub_1C712B0(p_callbackFunc, v8, v6);
     v10 = v6 == (System_Delegate_o *)v9;
     v6 = (System_Delegate_o *)v9;
     if ( v10 )
       return;
   }
-  sub_1C3313C(v8);
+  sub_1C37574(v8);
   ScriptStoryOpenDialog__Init(v11, v12);
 }
 
@@ -311,15 +311,15 @@ void ScriptStoryOpenDialog_CallbackFunc___ctor(
   this->fields.method = method;
   this->fields.method_ptr = v4;
   this->fields.m_target = object;
-  sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.m_target, (int32_t)object, method, a4);
+  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.m_target, (int32_t)object, method, a4);
   v8 = *(unsigned __int8 *)(method + 82);
   this->fields.method_code = (intptr_t)this;
-  if ( (sub_1C32CE0(method) & 1) == 0 )
+  if ( (sub_1C37118(method) & 1) == 0 )
   {
     if ( !object )
     {
-      v10 = sub_1C32E98(0, "Delegate to an instance method cannot have null 'this'.");
-      sub_1C32D48(v10, 0);
+      v10 = sub_1C372D0(0, "Delegate to an instance method cannot have null 'this'.");
+      sub_1C37180(v10, 0);
     }
     goto LABEL_5;
   }
@@ -331,9 +331,9 @@ LABEL_5:
     this->fields.method_code = (intptr_t)m_target;
     goto LABEL_6;
   }
-  this->fields.invoke_impl = (intptr_t)sub_1A794D8;
+  this->fields.invoke_impl = (intptr_t)sub_1A7D808;
 LABEL_6:
-  this->fields.extra_arg = (intptr_t)sub_1A79498;
+  this->fields.extra_arg = (intptr_t)sub_1A7D7C8;
 }
 
 
@@ -346,7 +346,7 @@ System_IAsyncResult_o *ScriptStoryOpenDialog_CallbackFunc__BeginInvoke(
   __int64 v5; // [xsp+8h] [xbp-8h] BYREF
 
   v5 = 0;
-  return (System_IAsyncResult_o *)sub_1C32BD4(this, &v5, callback, object);
+  return (System_IAsyncResult_o *)sub_1C3700C(this, &v5, callback, object);
 }
 
 
@@ -355,7 +355,7 @@ void ScriptStoryOpenDialog_CallbackFunc__EndInvoke(
         System_IAsyncResult_o *result,
         const MethodInfo *method)
 {
-  sub_1C32BD8(result, 0, method);
+  sub_1C37010(result, 0, method);
 }
 
 

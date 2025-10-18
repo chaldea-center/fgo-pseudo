@@ -16,28 +16,28 @@ void ContinueDeviceComponent__callbackCodeInput(
   const MethodInfo *v9; // x2
   Il2CppObject *entity; // [xsp+8h] [xbp-28h] BYREF
 
-  if ( (byte_4C328B8 & 1) == 0 )
+  if ( (byte_4C3DEA2 & 1) == 0 )
   {
-    sub_1C32C20(&System_Action_TypeInfo);
-    sub_1C32C20(&Method_ContinueDeviceComponent_onNextDispOpen__);
-    sub_1C32C20(&Method_DataManager_GetMaster_UserContinueMaster___);
-    sub_1C32C20(&DataManager_TypeInfo);
-    sub_1C32C20(&Method_DataMasterBase_UserContinueMaster__UserContinueEntity__long__TryGetSingleEntity__);
-    sub_1C32C20(&StringLiteral_22212/*"ng"*/);
-    byte_4C328B8 = 1;
+    sub_1C37058(&System_Action_TypeInfo);
+    sub_1C37058(&Method_ContinueDeviceComponent_onNextDispOpen__);
+    sub_1C37058(&Method_DataManager_GetMaster_UserContinueMaster___);
+    sub_1C37058(&DataManager_TypeInfo);
+    sub_1C37058(&Method_DataMasterBase_UserContinueMaster__UserContinueEntity__long__TryGetSingleEntity__);
+    sub_1C37058(&StringLiteral_22215/*"ng"*/);
+    byte_4C3DEA2 = 1;
   }
   entity = 0;
-  if ( !System_String__op_Inequality(result, (System_String_o *)StringLiteral_22212/*"ng"*/, 0) )
+  if ( !System_String__op_Inequality(result, (System_String_o *)StringLiteral_22215/*"ng"*/, 0) )
     goto LABEL_10;
   if ( !DataManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-  Master_object = (DataMasterBase_TMaster__TEntity__PKType__o *)DataManager__GetMaster_object_((const MethodInfo_30DD39C *)Method_DataManager_GetMaster_UserContinueMaster___);
+  Master_object = (DataMasterBase_TMaster__TEntity__PKType__o *)DataManager__GetMaster_object_((const MethodInfo_30E7C04 *)Method_DataManager_GetMaster_UserContinueMaster___);
   if ( !Master_object )
     goto LABEL_15;
   Master_object = (DataMasterBase_TMaster__TEntity__PKType__o *)DataMasterBase_object__object__long___TryGetSingleEntity(
                                                                   Master_object,
                                                                   &entity,
-                                                                  (const MethodInfo_3398EC0 *)Method_DataMasterBase_UserContinueMaster__UserContinueEntity__long__TryGetSingleEntity__);
+                                                                  (const MethodInfo_33A3728 *)Method_DataMasterBase_UserContinueMaster__UserContinueEntity__long__TryGetSingleEntity__);
   if ( ((unsigned __int8)Master_object & 1) == 0 )
     goto LABEL_10;
   if ( !entity )
@@ -57,18 +57,18 @@ LABEL_10:
       }
     }
 LABEL_15:
-    sub_1C32E7C(Master_object);
+    sub_1C372B4(Master_object);
   }
   klass = entity[2].klass;
   this->fields.continueCode = (struct System_String_o *)klass;
-  sub_1C32BC4(&this->fields.continueCode, klass);
+  sub_1C36FFC(&this->fields.continueCode, klass);
   continueDeviceInputMenu = this->fields.continueDeviceInputMenu;
   *(_QWORD *)&this->fields.state = 0x100000000LL;
-  v8 = (System_Action_o *)sub_1C32E6C(System_Action_TypeInfo);
+  v8 = (System_Action_o *)sub_1C372A4(System_Action_TypeInfo);
   System_Action___ctor(v8, (Il2CppObject *)this, Method_ContinueDeviceComponent_onNextDispOpen__, 0);
   if ( !continueDeviceInputMenu )
     goto LABEL_15;
-  ContinueDeviceInputMenu__Close_32965928(continueDeviceInputMenu, v8, v9);
+  ContinueDeviceInputMenu__Close_33061560(continueDeviceInputMenu, v8, v9);
 }
 
 
@@ -90,57 +90,57 @@ bool ContinueDeviceComponent__closeMenu(ContinueDeviceComponent_o *this, const M
   CommonConfirmDialog_o *continueDeviceConfirmDialog; // x20
   System_Action_o *v17; // x21
 
-  if ( (byte_4C328B4 & 1) == 0 )
+  if ( (byte_4C3DE9E & 1) == 0 )
   {
-    sub_1C32C20(&System_Action_TypeInfo);
-    sub_1C32C20(&Method_ContinueDeviceComponent_onClose__);
-    byte_4C328B4 = 1;
+    sub_1C37058(&System_Action_TypeInfo);
+    sub_1C37058(&Method_ContinueDeviceComponent_onClose__);
+    byte_4C3DE9E = 1;
   }
   switch ( this->fields.state )
   {
     case 1:
       this->fields.closeCount = 1;
       continueDeviceInputMenu = this->fields.continueDeviceInputMenu;
-      v4 = (System_Action_o *)sub_1C32E6C(System_Action_TypeInfo);
+      v4 = (System_Action_o *)sub_1C372A4(System_Action_TypeInfo);
       System_Action___ctor(v4, (Il2CppObject *)this, Method_ContinueDeviceComponent_onClose__, 0);
       if ( !continueDeviceInputMenu )
         goto LABEL_16;
-      ContinueDeviceInputMenu__Close_32965928(continueDeviceInputMenu, v4, v6);
+      ContinueDeviceInputMenu__Close_33061560(continueDeviceInputMenu, v4, v6);
       return 1;
     case 2:
       this->fields.closeCount = 2;
       v7 = this->fields.continueDeviceInputMenu;
-      v8 = (System_Action_o *)sub_1C32E6C(System_Action_TypeInfo);
+      v8 = (System_Action_o *)sub_1C372A4(System_Action_TypeInfo);
       System_Action___ctor(v8, (Il2CppObject *)this, Method_ContinueDeviceComponent_onClose__, 0);
       if ( !v7 )
         goto LABEL_16;
-      ContinueDeviceInputMenu__Close_32965928(v7, v8, v9);
+      ContinueDeviceInputMenu__Close_33061560(v7, v8, v9);
       goto LABEL_13;
     case 4:
       this->fields.closeCount = 1;
       continueDeviceDispMenu = this->fields.continueDeviceDispMenu;
-      v11 = (System_Action_o *)sub_1C32E6C(System_Action_TypeInfo);
+      v11 = (System_Action_o *)sub_1C372A4(System_Action_TypeInfo);
       System_Action___ctor(v11, (Il2CppObject *)this, Method_ContinueDeviceComponent_onClose__, 0);
       if ( !continueDeviceDispMenu )
         goto LABEL_16;
-      ContinueDeviceDispMenu__Close_32966244(continueDeviceDispMenu, v11, v12);
+      ContinueDeviceDispMenu__Close_33061876(continueDeviceDispMenu, v11, v12);
       return 1;
     case 5:
       this->fields.closeCount = 2;
       v13 = this->fields.continueDeviceDispMenu;
-      v14 = (System_Action_o *)sub_1C32E6C(System_Action_TypeInfo);
+      v14 = (System_Action_o *)sub_1C372A4(System_Action_TypeInfo);
       System_Action___ctor(v14, (Il2CppObject *)this, Method_ContinueDeviceComponent_onClose__, 0);
       if ( !v13 )
         goto LABEL_16;
-      ContinueDeviceDispMenu__Close_32966244(v13, v14, v15);
+      ContinueDeviceDispMenu__Close_33061876(v13, v14, v15);
 LABEL_13:
       continueDeviceConfirmDialog = this->fields.continueDeviceConfirmDialog;
-      v17 = (System_Action_o *)sub_1C32E6C(System_Action_TypeInfo);
+      v17 = (System_Action_o *)sub_1C372A4(System_Action_TypeInfo);
       System_Action___ctor(v17, (Il2CppObject *)this, Method_ContinueDeviceComponent_onClose__, 0);
       if ( !continueDeviceConfirmDialog )
 LABEL_16:
-        sub_1C32E7C(v5);
-      CommonConfirmDialog__Close_31166716(continueDeviceConfirmDialog, v17, 0);
+        sub_1C372B4(v5);
+      CommonConfirmDialog__Close_31184180(continueDeviceConfirmDialog, v17, 0);
       return 1;
     default:
       this->fields.closeCount = 0;
@@ -167,7 +167,7 @@ void ContinueDeviceComponent__hideMenu(ContinueDeviceComponent_o *this, const Me
                                                                   (UnityEngine_Component_o *)this,
                                                                   0)) == 0) )
   {
-    sub_1C32E7C(continueDeviceInputMenu);
+    sub_1C372B4(continueDeviceInputMenu);
   }
   UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)continueDeviceInputMenu, 0, 0);
 }
@@ -178,10 +178,10 @@ void ContinueDeviceComponent__onClose(ContinueDeviceComponent_o *this, const Met
   int32_t v3; // w8
   PlayMakerFSM_o *myRoomFsm; // x0
 
-  if ( (byte_4C328B5 & 1) == 0 )
+  if ( (byte_4C3DE9F & 1) == 0 )
   {
-    sub_1C32C20(&StringLiteral_3514/*"CLOSE_MENU"*/);
-    byte_4C328B5 = 1;
+    sub_1C37058(&StringLiteral_3514/*"CLOSE_MENU"*/);
+    byte_4C3DE9F = 1;
   }
   v3 = this->fields.closeCount - 1;
   this->fields.closeCount = v3;
@@ -189,7 +189,7 @@ void ContinueDeviceComponent__onClose(ContinueDeviceComponent_o *this, const Met
   {
     myRoomFsm = this->fields.myRoomFsm;
     if ( !myRoomFsm )
-      sub_1C32E7C(0);
+      sub_1C372B4(0);
     PlayMakerFSM__SendEvent(myRoomFsm, (System_String_o *)StringLiteral_3514/*"CLOSE_MENU"*/, 0);
   }
 }
@@ -199,14 +199,14 @@ void ContinueDeviceComponent__onCloseDialog(ContinueDeviceComponent_o *this, boo
 {
   PlayMakerFSM_o *myRoomFsm; // x0
 
-  if ( (byte_4C328BD & 1) == 0 )
+  if ( (byte_4C3DEA7 & 1) == 0 )
   {
-    sub_1C32C20(&StringLiteral_3518/*"CLOSE_SERIAL_CODE"*/);
-    byte_4C328BD = 1;
+    sub_1C37058(&StringLiteral_3518/*"CLOSE_SERIAL_CODE"*/);
+    byte_4C3DEA7 = 1;
   }
   myRoomFsm = this->fields.myRoomFsm;
   if ( !myRoomFsm )
-    sub_1C32E7C(0);
+    sub_1C372B4(0);
   PlayMakerFSM__SendEvent(myRoomFsm, (System_String_o *)StringLiteral_3518/*"CLOSE_SERIAL_CODE"*/, 0);
 }
 
@@ -215,17 +215,17 @@ void ContinueDeviceComponent__onCloseMenu(ContinueDeviceComponent_o *this, int32
 {
   CommonUI_o *Instance; // x0
 
-  if ( (byte_4C328BE & 1) == 0 )
+  if ( (byte_4C3DEA8 & 1) == 0 )
   {
-    sub_1C32C20(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
-    sub_1C32C20(&StringLiteral_3518/*"CLOSE_SERIAL_CODE"*/);
-    byte_4C328BE = 1;
+    sub_1C37058(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+    sub_1C37058(&StringLiteral_3518/*"CLOSE_SERIAL_CODE"*/);
+    byte_4C3DEA8 = 1;
   }
-  Instance = (CommonUI_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39E2904 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+  Instance = (CommonUI_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39ED16C *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
   if ( !Instance
     || (CommonUI__ClosePresentBoxNotificationMenu(Instance, 0), (Instance = (CommonUI_o *)this->fields.myRoomFsm) == 0) )
   {
-    sub_1C32E7C(Instance);
+    sub_1C372B4(Instance);
   }
   PlayMakerFSM__SendEvent((PlayMakerFSM_o *)Instance, (System_String_o *)StringLiteral_3518/*"CLOSE_SERIAL_CODE"*/, 0);
 }
@@ -240,20 +240,20 @@ void ContinueDeviceComponent__onConfirmCode(ContinueDeviceComponent_o *this, boo
   const MethodInfo *v9; // x3
   const MethodInfo *v10; // x2
 
-  if ( (byte_4C328B7 & 1) == 0 )
+  if ( (byte_4C3DEA1 & 1) == 0 )
   {
-    sub_1C32C20(&ContinueDeviceInputMenu_CallbackFunc_TypeInfo);
-    sub_1C32C20(&Method_ContinueDeviceComponent_callbackCodeInput__);
-    sub_1C32C20(&Method_ContinueDeviceComponent_onInputCode__);
-    sub_1C32C20(&Method_NetworkManager_getRequest_ContinuePrepareRequest___);
-    sub_1C32C20(&NetworkManager_TypeInfo);
-    sub_1C32C20(&NetworkManager_ResultCallbackFunc_TypeInfo);
-    byte_4C328B7 = 1;
+    sub_1C37058(&ContinueDeviceInputMenu_CallbackFunc_TypeInfo);
+    sub_1C37058(&Method_ContinueDeviceComponent_callbackCodeInput__);
+    sub_1C37058(&Method_ContinueDeviceComponent_onInputCode__);
+    sub_1C37058(&Method_NetworkManager_getRequest_ContinuePrepareRequest___);
+    sub_1C37058(&NetworkManager_TypeInfo);
+    sub_1C37058(&NetworkManager_ResultCallbackFunc_TypeInfo);
+    byte_4C3DEA1 = 1;
   }
   if ( isDecide )
   {
     this->fields.state = 3;
-    v5 = (NetworkManager_ResultCallbackFunc_o *)sub_1C32E6C(NetworkManager_ResultCallbackFunc_TypeInfo);
+    v5 = (NetworkManager_ResultCallbackFunc_o *)sub_1C372A4(NetworkManager_ResultCallbackFunc_TypeInfo);
     NetworkManager_ResultCallbackFunc___ctor(
       v5,
       (Il2CppObject *)this,
@@ -263,14 +263,14 @@ void ContinueDeviceComponent__onConfirmCode(ContinueDeviceComponent_o *this, boo
       j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
     Request_object = (ContinuePrepareRequest_o *)NetworkManager__getRequest_object_(
                                                    v5,
-                                                   (const MethodInfo_3168488 *)Method_NetworkManager_getRequest_ContinuePrepareRequest___);
+                                                   (const MethodInfo_3172CF0 *)Method_NetworkManager_getRequest_ContinuePrepareRequest___);
     if ( Request_object )
     {
       ContinuePrepareRequest__beginRequest(Request_object, this->fields.passwardCode, 0);
       return;
     }
 LABEL_11:
-    sub_1C32E7C(Request_object);
+    sub_1C372B4(Request_object);
   }
   Request_object = (ContinuePrepareRequest_o *)this->fields.continueDeviceConfirmDialog;
   this->fields.state = 1;
@@ -278,7 +278,7 @@ LABEL_11:
     goto LABEL_11;
   CommonConfirmDialog__Close((CommonConfirmDialog_o *)Request_object, 0);
   continueDeviceInputMenu = this->fields.continueDeviceInputMenu;
-  v8 = (ContinueDeviceInputMenu_CallbackFunc_o *)sub_1C32E6C(ContinueDeviceInputMenu_CallbackFunc_TypeInfo);
+  v8 = (ContinueDeviceInputMenu_CallbackFunc_o *)sub_1C372A4(ContinueDeviceInputMenu_CallbackFunc_TypeInfo);
   ContinueDeviceInputMenu_CallbackFunc___ctor(
     v8,
     (Il2CppObject *)this,
@@ -304,34 +304,34 @@ void ContinueDeviceComponent__onConfirmRetry(ContinueDeviceComponent_o *this, bo
   const MethodInfo *v14; // x3
   const MethodInfo *v15; // x3
 
-  if ( (byte_4C328BB & 1) == 0 )
+  if ( (byte_4C3DEA5 & 1) == 0 )
   {
-    sub_1C32C20(&System_Action_TypeInfo);
-    sub_1C32C20(&ContinueDeviceDispMenu_CallbackFunc_TypeInfo);
-    sub_1C32C20(&Method_ContinueDeviceComponent_onDispCode__);
-    sub_1C32C20(&Method_ContinueDeviceComponent_onNextRetryOpen__);
-    byte_4C328BB = 1;
+    sub_1C37058(&System_Action_TypeInfo);
+    sub_1C37058(&ContinueDeviceDispMenu_CallbackFunc_TypeInfo);
+    sub_1C37058(&Method_ContinueDeviceComponent_onDispCode__);
+    sub_1C37058(&Method_ContinueDeviceComponent_onNextRetryOpen__);
+    byte_4C3DEA5 = 1;
   }
   if ( isDecide )
   {
     *(_QWORD *)&this->fields.state = 0x200000000LL;
     continueDeviceDispMenu = this->fields.continueDeviceDispMenu;
-    v6 = (System_Action_o *)sub_1C32E6C(System_Action_TypeInfo);
+    v6 = (System_Action_o *)sub_1C372A4(System_Action_TypeInfo);
     System_Action___ctor(v6, (Il2CppObject *)this, Method_ContinueDeviceComponent_onNextRetryOpen__, 0);
     if ( continueDeviceDispMenu )
     {
-      ContinueDeviceDispMenu__Close_32966244(continueDeviceDispMenu, v6, v8);
+      ContinueDeviceDispMenu__Close_33061876(continueDeviceDispMenu, v6, v8);
       continueDeviceConfirmDialog = this->fields.continueDeviceConfirmDialog;
-      v10 = (System_Action_o *)sub_1C32E6C(System_Action_TypeInfo);
+      v10 = (System_Action_o *)sub_1C372A4(System_Action_TypeInfo);
       System_Action___ctor(v10, (Il2CppObject *)this, Method_ContinueDeviceComponent_onNextRetryOpen__, 0);
       if ( continueDeviceConfirmDialog )
       {
-        CommonConfirmDialog__Close_31166716(continueDeviceConfirmDialog, v10, 0);
+        CommonConfirmDialog__Close_31184180(continueDeviceConfirmDialog, v10, 0);
         return;
       }
     }
 LABEL_10:
-    sub_1C32E7C(v7);
+    sub_1C372B4(v7);
   }
   v7 = this->fields.continueDeviceConfirmDialog;
   this->fields.state = 4;
@@ -340,7 +340,7 @@ LABEL_10:
   CommonConfirmDialog__Close(v7, 0);
   v11 = this->fields.continueDeviceDispMenu;
   continueCode = this->fields.continueCode;
-  v13 = (ContinueDeviceDispMenu_CallbackFunc_o *)sub_1C32E6C(ContinueDeviceDispMenu_CallbackFunc_TypeInfo);
+  v13 = (ContinueDeviceDispMenu_CallbackFunc_o *)sub_1C372A4(ContinueDeviceDispMenu_CallbackFunc_TypeInfo);
   ContinueDeviceDispMenu_CallbackFunc___ctor(
     v13,
     (Il2CppObject *)this,
@@ -359,14 +359,14 @@ void ContinueDeviceComponent__onDispCode(ContinueDeviceComponent_o *this, bool i
   CommonConfirmDialog_ClickDelegate_o *v7; // x22
   PlayMakerFSM_o *myRoomFsm; // x0
 
-  if ( (byte_4C328BA & 1) == 0 )
+  if ( (byte_4C3DEA4 & 1) == 0 )
   {
-    sub_1C32C20(&CommonConfirmDialog_ClickDelegate_TypeInfo);
-    sub_1C32C20(&Method_ContinueDeviceComponent_onConfirmRetry__);
-    sub_1C32C20(&LocalizationManager_TypeInfo);
-    sub_1C32C20(&StringLiteral_3804/*"CONTINUE_DEVICE_CONFIRM_MESSAGE2"*/);
-    sub_1C32C20(&StringLiteral_3504/*"CLOSE_CONTINUE_DEVICE"*/);
-    byte_4C328BA = 1;
+    sub_1C37058(&CommonConfirmDialog_ClickDelegate_TypeInfo);
+    sub_1C37058(&Method_ContinueDeviceComponent_onConfirmRetry__);
+    sub_1C37058(&LocalizationManager_TypeInfo);
+    sub_1C37058(&StringLiteral_3804/*"CONTINUE_DEVICE_CONFIRM_MESSAGE2"*/);
+    sub_1C37058(&StringLiteral_3504/*"CLOSE_CONTINUE_DEVICE"*/);
+    byte_4C3DEA4 = 1;
   }
   if ( isDecide )
   {
@@ -375,7 +375,7 @@ void ContinueDeviceComponent__onDispCode(ContinueDeviceComponent_o *this, bool i
     if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
     v6 = LocalizationManager__Get((System_String_o *)StringLiteral_3804/*"CONTINUE_DEVICE_CONFIRM_MESSAGE2"*/, 0);
-    v7 = (CommonConfirmDialog_ClickDelegate_o *)sub_1C32E6C(CommonConfirmDialog_ClickDelegate_TypeInfo);
+    v7 = (CommonConfirmDialog_ClickDelegate_o *)sub_1C372A4(CommonConfirmDialog_ClickDelegate_TypeInfo);
     CommonConfirmDialog_ClickDelegate___ctor(
       v7,
       (Il2CppObject *)this,
@@ -387,7 +387,7 @@ void ContinueDeviceComponent__onDispCode(ContinueDeviceComponent_o *this, bool i
       return;
     }
 LABEL_10:
-    sub_1C32E7C(myRoomFsm);
+    sub_1C372B4(myRoomFsm);
   }
   myRoomFsm = this->fields.myRoomFsm;
   if ( !myRoomFsm )
@@ -404,21 +404,21 @@ void ContinueDeviceComponent__onInputCode(
   NetworkManager_ResultCallbackFunc_o *v5; // x20
   ContinuePrepareRequest_o *Request_object; // x0
 
-  if ( (byte_4C328B6 & 1) == 0 )
+  if ( (byte_4C3DEA0 & 1) == 0 )
   {
-    sub_1C32C20(&Method_ContinueDeviceComponent_callbackCodeInput__);
-    sub_1C32C20(&Method_NetworkManager_getRequest_ContinuePrepareRequest___);
-    sub_1C32C20(&NetworkManager_TypeInfo);
-    sub_1C32C20(&NetworkManager_ResultCallbackFunc_TypeInfo);
-    sub_1C32C20(&StringLiteral_3504/*"CLOSE_CONTINUE_DEVICE"*/);
-    byte_4C328B6 = 1;
+    sub_1C37058(&Method_ContinueDeviceComponent_callbackCodeInput__);
+    sub_1C37058(&Method_NetworkManager_getRequest_ContinuePrepareRequest___);
+    sub_1C37058(&NetworkManager_TypeInfo);
+    sub_1C37058(&NetworkManager_ResultCallbackFunc_TypeInfo);
+    sub_1C37058(&StringLiteral_3504/*"CLOSE_CONTINUE_DEVICE"*/);
+    byte_4C3DEA0 = 1;
   }
   if ( code )
   {
     this->fields.passwardCode = code;
-    sub_1C32BC4(&this->fields.passwardCode, code);
+    sub_1C36FFC(&this->fields.passwardCode, code);
     this->fields.state = 3;
-    v5 = (NetworkManager_ResultCallbackFunc_o *)sub_1C32E6C(NetworkManager_ResultCallbackFunc_TypeInfo);
+    v5 = (NetworkManager_ResultCallbackFunc_o *)sub_1C372A4(NetworkManager_ResultCallbackFunc_TypeInfo);
     NetworkManager_ResultCallbackFunc___ctor(
       v5,
       (Il2CppObject *)this,
@@ -428,7 +428,7 @@ void ContinueDeviceComponent__onInputCode(
       j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
     Request_object = (ContinuePrepareRequest_o *)NetworkManager__getRequest_object_(
                                                    v5,
-                                                   (const MethodInfo_3168488 *)Method_NetworkManager_getRequest_ContinuePrepareRequest___);
+                                                   (const MethodInfo_3172CF0 *)Method_NetworkManager_getRequest_ContinuePrepareRequest___);
     if ( Request_object )
     {
       ContinuePrepareRequest__beginRequest(Request_object, this->fields.passwardCode, 0);
@@ -440,7 +440,7 @@ void ContinueDeviceComponent__onInputCode(
       }
     }
 LABEL_11:
-    sub_1C32E7C(Request_object);
+    sub_1C372B4(Request_object);
   }
   Request_object = (ContinuePrepareRequest_o *)this->fields.myRoomFsm;
   if ( !Request_object )
@@ -459,11 +459,11 @@ void ContinueDeviceComponent__onNextDispOpen(ContinueDeviceComponent_o *this, co
   MyRoomControl_o *myRoomCtrl; // x0
   const MethodInfo *v9; // x3
 
-  if ( (byte_4C328B9 & 1) == 0 )
+  if ( (byte_4C3DEA3 & 1) == 0 )
   {
-    sub_1C32C20(&ContinueDeviceDispMenu_CallbackFunc_TypeInfo);
-    sub_1C32C20(&Method_ContinueDeviceComponent_onDispCode__);
-    byte_4C328B9 = 1;
+    sub_1C37058(&ContinueDeviceDispMenu_CallbackFunc_TypeInfo);
+    sub_1C37058(&Method_ContinueDeviceComponent_onDispCode__);
+    byte_4C3DEA3 = 1;
   }
   v3 = this->fields.closeCount - 1;
   this->fields.closeCount = v3;
@@ -472,7 +472,7 @@ void ContinueDeviceComponent__onNextDispOpen(ContinueDeviceComponent_o *this, co
     this->fields.state = 4;
     continueDeviceDispMenu = this->fields.continueDeviceDispMenu;
     continueCode = this->fields.continueCode;
-    v6 = (ContinueDeviceDispMenu_CallbackFunc_o *)sub_1C32E6C(ContinueDeviceDispMenu_CallbackFunc_TypeInfo);
+    v6 = (ContinueDeviceDispMenu_CallbackFunc_o *)sub_1C372A4(ContinueDeviceDispMenu_CallbackFunc_TypeInfo);
     ContinueDeviceDispMenu_CallbackFunc___ctor(
       v6,
       (Il2CppObject *)this,
@@ -482,7 +482,7 @@ void ContinueDeviceComponent__onNextDispOpen(ContinueDeviceComponent_o *this, co
       || (ContinueDeviceDispMenu__Open(continueDeviceDispMenu, continueCode, v6, v9),
           (myRoomCtrl = this->fields.myRoomCtrl) == 0) )
     {
-      sub_1C32E7C(myRoomCtrl);
+      sub_1C372B4(myRoomCtrl);
     }
     MyRoomControl__SetBackButtonIgnore(myRoomCtrl, 0, 0);
   }
@@ -500,12 +500,12 @@ void ContinueDeviceComponent__onNextRetryOpen(ContinueDeviceComponent_o *this, c
   __int64 v9; // x0
   const MethodInfo *v10; // x2
 
-  if ( (byte_4C328BC & 1) == 0 )
+  if ( (byte_4C3DEA6 & 1) == 0 )
   {
-    sub_1C32C20(&ContinueDeviceInputMenu_CallbackFunc_TypeInfo);
-    sub_1C32C20(&Method_ContinueDeviceComponent_onInputCode__);
-    sub_1C32C20(&StringLiteral_1/*""*/);
-    byte_4C328BC = 1;
+    sub_1C37058(&ContinueDeviceInputMenu_CallbackFunc_TypeInfo);
+    sub_1C37058(&Method_ContinueDeviceComponent_onInputCode__);
+    sub_1C37058(&StringLiteral_1/*""*/);
+    byte_4C3DEA6 = 1;
   }
   v3 = this->fields.closeCount - 1;
   this->fields.closeCount = v3;
@@ -514,19 +514,19 @@ void ContinueDeviceComponent__onNextRetryOpen(ContinueDeviceComponent_o *this, c
     this->fields.state = 1;
     v4 = StringLiteral_1/*""*/;
     this->fields.passwardCode = (struct System_String_o *)StringLiteral_1/*""*/;
-    sub_1C32BC4(&this->fields.passwardCode, v4);
+    sub_1C36FFC(&this->fields.passwardCode, v4);
     v5 = StringLiteral_1/*""*/;
     this->fields.continueCode = (struct System_String_o *)StringLiteral_1/*""*/;
-    sub_1C32BC4(&this->fields.continueCode, v5);
+    sub_1C36FFC(&this->fields.continueCode, v5);
     continueDeviceInputMenu = this->fields.continueDeviceInputMenu;
-    v7 = (ContinueDeviceInputMenu_CallbackFunc_o *)sub_1C32E6C(ContinueDeviceInputMenu_CallbackFunc_TypeInfo);
+    v7 = (ContinueDeviceInputMenu_CallbackFunc_o *)sub_1C372A4(ContinueDeviceInputMenu_CallbackFunc_TypeInfo);
     ContinueDeviceInputMenu_CallbackFunc___ctor(
       v7,
       (Il2CppObject *)this,
       Method_ContinueDeviceComponent_onInputCode__,
       v8);
     if ( !continueDeviceInputMenu )
-      sub_1C32E7C(v9);
+      sub_1C372B4(v9);
     ContinueDeviceInputMenu__Open(continueDeviceInputMenu, v7, v10);
   }
 }
@@ -551,36 +551,36 @@ bool ContinueDeviceComponent__openMenu(ContinueDeviceComponent_o *this, const Me
   const MethodInfo *v18; // x3
   Il2CppObject *entity; // [xsp+8h] [xbp-38h] BYREF
 
-  if ( (byte_4C328B3 & 1) == 0 )
+  if ( (byte_4C3DE9D & 1) == 0 )
   {
-    sub_1C32C20(&ContinueDeviceInputMenu_CallbackFunc_TypeInfo);
-    sub_1C32C20(&ContinueDeviceDispMenu_CallbackFunc_TypeInfo);
-    sub_1C32C20(&Method_ContinueDeviceComponent_onDispCode__);
-    sub_1C32C20(&Method_ContinueDeviceComponent_onInputCode__);
-    sub_1C32C20(&Method_DataManager_GetMasterData_UserContinueMaster___);
-    sub_1C32C20(&Method_DataMasterBase_UserContinueMaster__UserContinueEntity__long__TryGetEntity__);
-    sub_1C32C20(&NetworkManager_TypeInfo);
-    sub_1C32C20(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-    sub_1C32C20(&StringLiteral_1/*""*/);
-    byte_4C328B3 = 1;
+    sub_1C37058(&ContinueDeviceInputMenu_CallbackFunc_TypeInfo);
+    sub_1C37058(&ContinueDeviceDispMenu_CallbackFunc_TypeInfo);
+    sub_1C37058(&Method_ContinueDeviceComponent_onDispCode__);
+    sub_1C37058(&Method_ContinueDeviceComponent_onInputCode__);
+    sub_1C37058(&Method_DataManager_GetMasterData_UserContinueMaster___);
+    sub_1C37058(&Method_DataMasterBase_UserContinueMaster__UserContinueEntity__long__TryGetEntity__);
+    sub_1C37058(&NetworkManager_TypeInfo);
+    sub_1C37058(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    sub_1C37058(&StringLiteral_1/*""*/);
+    byte_4C3DE9D = 1;
   }
   entity = 0;
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
   if ( !gameObject )
     goto LABEL_21;
   UnityEngine_GameObject__SetActive(gameObject, 1, 0);
-  gameObject = (UnityEngine_GameObject_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39E2904 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  gameObject = (UnityEngine_GameObject_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39ED16C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !gameObject )
     goto LABEL_21;
   MasterData_object = DataManager__GetMasterData_object_(
                         (DataManager_o *)gameObject,
-                        (const MethodInfo_30DD3F0 *)Method_DataManager_GetMasterData_UserContinueMaster___);
+                        (const MethodInfo_30E7C58 *)Method_DataManager_GetMasterData_UserContinueMaster___);
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
-  if ( !byte_4C31812 )
+  if ( !byte_4C3CD62 )
   {
-    sub_1C32C20(&NetworkManager_TypeInfo);
-    byte_4C31812 = 1;
+    sub_1C37058(&NetworkManager_TypeInfo);
+    byte_4C3CD62 = 1;
   }
   gameObject = (UnityEngine_GameObject_o *)NetworkManager_TypeInfo;
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
@@ -594,7 +594,7 @@ bool ContinueDeviceComponent__openMenu(ContinueDeviceComponent_o *this, const Me
                                              (DataMasterBase_TMaster__TEntity__PKType__o *)MasterData_object,
                                              &entity,
                                              *(_QWORD *)(gameObject[7].fields.m_CachedPtr + 64),
-                                             (const MethodInfo_3398DE0 *)Method_DataMasterBase_UserContinueMaster__UserContinueEntity__long__TryGetEntity__);
+                                             (const MethodInfo_33A3648 *)Method_DataMasterBase_UserContinueMaster__UserContinueEntity__long__TryGetEntity__);
   if ( ((unsigned __int8)gameObject & 1) != 0 )
   {
     if ( !entity )
@@ -604,15 +604,15 @@ bool ContinueDeviceComponent__openMenu(ContinueDeviceComponent_o *this, const Me
       this->fields.state = 4;
       v12 = StringLiteral_1/*""*/;
       this->fields.passwardCode = (struct System_String_o *)StringLiteral_1/*""*/;
-      gameObject = (UnityEngine_GameObject_o *)sub_1C32BC4(&this->fields.passwardCode, v12);
+      gameObject = (UnityEngine_GameObject_o *)sub_1C36FFC(&this->fields.passwardCode, v12);
       if ( entity )
       {
         klass = entity[2].klass;
         this->fields.continueCode = (struct System_String_o *)klass;
-        sub_1C32BC4(&this->fields.continueCode, klass);
+        sub_1C36FFC(&this->fields.continueCode, klass);
         continueDeviceDispMenu = this->fields.continueDeviceDispMenu;
         continueCode = this->fields.continueCode;
-        v16 = (ContinueDeviceDispMenu_CallbackFunc_o *)sub_1C32E6C(ContinueDeviceDispMenu_CallbackFunc_TypeInfo);
+        v16 = (ContinueDeviceDispMenu_CallbackFunc_o *)sub_1C372A4(ContinueDeviceDispMenu_CallbackFunc_TypeInfo);
         ContinueDeviceDispMenu_CallbackFunc___ctor(
           v16,
           (Il2CppObject *)this,
@@ -625,18 +625,18 @@ bool ContinueDeviceComponent__openMenu(ContinueDeviceComponent_o *this, const Me
         }
       }
 LABEL_21:
-      sub_1C32E7C(gameObject);
+      sub_1C372B4(gameObject);
     }
   }
   this->fields.state = 1;
   v5 = StringLiteral_1/*""*/;
   this->fields.passwardCode = (struct System_String_o *)StringLiteral_1/*""*/;
-  sub_1C32BC4(&this->fields.passwardCode, v5);
+  sub_1C36FFC(&this->fields.passwardCode, v5);
   v6 = StringLiteral_1/*""*/;
   this->fields.continueCode = (struct System_String_o *)StringLiteral_1/*""*/;
-  sub_1C32BC4(&this->fields.continueCode, v6);
+  sub_1C36FFC(&this->fields.continueCode, v6);
   continueDeviceInputMenu = this->fields.continueDeviceInputMenu;
-  v8 = (ContinueDeviceInputMenu_CallbackFunc_o *)sub_1C32E6C(ContinueDeviceInputMenu_CallbackFunc_TypeInfo);
+  v8 = (ContinueDeviceInputMenu_CallbackFunc_o *)sub_1C372A4(ContinueDeviceInputMenu_CallbackFunc_TypeInfo);
   ContinueDeviceInputMenu_CallbackFunc___ctor(
     v8,
     (Il2CppObject *)this,
@@ -666,7 +666,7 @@ void ContinueDeviceComponent__showMenu(ContinueDeviceComponent_o *this, const Me
     || (ContinueDeviceDispMenu__Init((ContinueDeviceDispMenu_o *)gameObject, v5),
         (gameObject = (UnityEngine_GameObject_o *)this->fields.continueDeviceConfirmDialog) == 0) )
   {
-    sub_1C32E7C(gameObject);
+    sub_1C372B4(gameObject);
   }
   CommonConfirmDialog__Init((CommonConfirmDialog_o *)gameObject, 0);
 }

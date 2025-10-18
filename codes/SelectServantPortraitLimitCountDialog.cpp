@@ -2,10 +2,10 @@ void SelectServantPortraitLimitCountDialog___ctor(
         SelectServantPortraitLimitCountDialog_o *this,
         const MethodInfo *method)
 {
-  if ( (byte_4C3203C & 1) == 0 )
+  if ( (byte_4C3D626 & 1) == 0 )
   {
-    sub_1C32C20(&BaseDialog_TypeInfo);
-    byte_4C3203C = 1;
+    sub_1C37058(&BaseDialog_TypeInfo);
+    byte_4C3D626 = 1;
   }
   if ( !BaseDialog_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(BaseDialog_TypeInfo);
@@ -19,26 +19,26 @@ void SelectServantPortraitLimitCountDialog__Close(
 {
   const MethodInfo *v2; // x2
 
-  SelectServantPortraitLimitCountDialog__Close_31989956(this, 0, v2);
+  SelectServantPortraitLimitCountDialog__Close_32085588(this, 0, v2);
 }
 
 
-void SelectServantPortraitLimitCountDialog__Close_31989956(
+void SelectServantPortraitLimitCountDialog__Close_32085588(
         SelectServantPortraitLimitCountDialog_o *this,
         System_Action_o *callback,
         const MethodInfo *method)
 {
   System_Action_o *v5; // x20
 
-  if ( (byte_4C32039 & 1) == 0 )
+  if ( (byte_4C3D623 & 1) == 0 )
   {
-    sub_1C32C20(&System_Action_TypeInfo);
-    sub_1C32C20(&Method_SelectServantPortraitLimitCountDialog_EndClose__);
-    byte_4C32039 = 1;
+    sub_1C37058(&System_Action_TypeInfo);
+    sub_1C37058(&Method_SelectServantPortraitLimitCountDialog_EndClose__);
+    byte_4C3D623 = 1;
   }
   this->fields.closeEndFunc = callback;
-  sub_1C32BC4(&this->fields.closeEndFunc, callback);
-  v5 = (System_Action_o *)sub_1C32E6C(System_Action_TypeInfo);
+  sub_1C36FFC(&this->fields.closeEndFunc, callback);
+  v5 = (System_Action_o *)sub_1C372A4(System_Action_TypeInfo);
   System_Action___ctor(v5, (Il2CppObject *)this, Method_SelectServantPortraitLimitCountDialog_EndClose__, 0);
   BaseDialog__Close((BaseDialog_o *)this, v5, 0);
 }
@@ -55,10 +55,10 @@ void SelectServantPortraitLimitCountDialog__EndClose(
   struct System_Action_o *v7; // x20
   struct System_Action_o *closeEndFunc; // t1
 
-  if ( (byte_4C3203A & 1) == 0 )
+  if ( (byte_4C3D624 & 1) == 0 )
   {
-    sub_1C32C20(&AssetManager_TypeInfo);
-    byte_4C3203A = 1;
+    sub_1C37058(&AssetManager_TypeInfo);
+    byte_4C3D624 = 1;
   }
   if ( this->fields.statusAssetData )
   {
@@ -70,13 +70,13 @@ void SelectServantPortraitLimitCountDialog__EndClose(
         j_il2cpp_runtime_class_init_0(AssetManager_TypeInfo);
       AssetManager__releaseAssetStorage(v4, 0);
       *p_statusAssetFolderName = 0;
-      sub_1C32BC4(&this->fields.statusAssetFolderName, 0);
+      sub_1C36FFC(&this->fields.statusAssetFolderName, 0);
     }
   }
   SelectServantPortraitLimitCountDialog__Init(this, method);
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
   if ( !gameObject )
-    sub_1C32E7C(0);
+    sub_1C372B4(0);
   UnityEngine_GameObject__SetActive(gameObject, 0, 0);
   closeEndFunc = this->fields.closeEndFunc;
   p_closeEndFunc = &this->fields.closeEndFunc;
@@ -84,7 +84,7 @@ void SelectServantPortraitLimitCountDialog__EndClose(
   if ( closeEndFunc )
   {
     *p_closeEndFunc = 0;
-    sub_1C32BC4(p_closeEndFunc, 0);
+    sub_1C36FFC(p_closeEndFunc, 0);
     ((void (__fastcall *)(intptr_t, intptr_t))v7->fields.invoke_impl)(v7->fields.method_code, v7->fields.method);
   }
 }
@@ -99,21 +99,21 @@ void SelectServantPortraitLimitCountDialog__EndStatusLoad(
   ServantStatusListViewManager_o *v6; // x20
   ServantStatusListViewManager_CallbackFunc_o *v7; // x21
 
-  if ( (byte_4C32035 & 1) == 0 )
+  if ( (byte_4C3D61F & 1) == 0 )
   {
-    sub_1C32C20(&ServantStatusListViewManager_CallbackFunc_TypeInfo);
-    sub_1C32C20(&Method_SelectServantPortraitLimitCountDialog_OnSelectPortraitLimitCount__);
-    byte_4C32035 = 1;
+    sub_1C37058(&ServantStatusListViewManager_CallbackFunc_TypeInfo);
+    sub_1C37058(&Method_SelectServantPortraitLimitCountDialog_OnSelectPortraitLimitCount__);
+    byte_4C3D61F = 1;
   }
   this->fields.statusAssetData = data;
-  sub_1C32BC4(&this->fields.statusAssetData, data);
+  sub_1C36FFC(&this->fields.statusAssetData, data);
   portraitStatusList = this->fields.portraitStatusList;
   if ( !portraitStatusList
     || (ServantStatusListViewManager__CreateList(portraitStatusList, this->fields.listViewItem, 0),
         (portraitStatusList = this->fields.portraitStatusList) == 0)
-    || (ServantStatusListViewManager__SetMode_37497808(portraitStatusList, 6, 0),
+    || (ServantStatusListViewManager__SetMode_37504412(portraitStatusList, 6, 0),
         v6 = this->fields.portraitStatusList,
-        v7 = (ServantStatusListViewManager_CallbackFunc_o *)sub_1C32E6C(ServantStatusListViewManager_CallbackFunc_TypeInfo),
+        v7 = (ServantStatusListViewManager_CallbackFunc_o *)sub_1C372A4(ServantStatusListViewManager_CallbackFunc_TypeInfo),
         ServantStatusListViewManager_CallbackFunc___ctor(
           v7,
           (Il2CppObject *)this,
@@ -121,7 +121,7 @@ void SelectServantPortraitLimitCountDialog__EndStatusLoad(
           0),
         !v6) )
   {
-    sub_1C32E7C(portraitStatusList);
+    sub_1C372B4(portraitStatusList);
   }
   ServantStatusListViewManager__SetMode(v6, 1, v7, 0);
 }
@@ -139,10 +139,10 @@ int32_t SelectServantPortraitLimitCountDialog__GetCostumeIds(
   struct System_Int32_array *v8; // x20
 
   v4 = this;
-  if ( (byte_4C32037 & 1) == 0 )
+  if ( (byte_4C3D621 & 1) == 0 )
   {
-    this = (SelectServantPortraitLimitCountDialog_o *)sub_1C32C20(&ImageLimitCount_TypeInfo);
-    byte_4C32037 = 1;
+    this = (SelectServantPortraitLimitCountDialog_o *)sub_1C37058(&ImageLimitCount_TypeInfo);
+    byte_4C3D621 = 1;
   }
   listViewItem = v4->fields.listViewItem;
   if ( !listViewItem )
@@ -165,12 +165,12 @@ int32_t SelectServantPortraitLimitCountDialog__GetCostumeIds(
         if ( v8 )
         {
           if ( (unsigned int)(ImgIndex - (_DWORD)this) >= LODWORD(v8->max_length) )
-            sub_1C32E84(this);
+            sub_1C372BC(this);
           return v8->m_Items[ImgIndex - (int)this];
         }
       }
 LABEL_15:
-      sub_1C32E7C(this);
+      sub_1C372B4(this);
     }
   }
   return ImgIndex;
@@ -189,11 +189,11 @@ void SelectServantPortraitLimitCountDialog__Init(
   UILabel_o *v8; // x20
   System_String_o *cancelTextCode; // x21
 
-  if ( (byte_4C32032 & 1) == 0 )
+  if ( (byte_4C3D61C & 1) == 0 )
   {
-    sub_1C32C20(&LocalizationManager_TypeInfo);
-    sub_1C32C20(&UnityEngine_Object_TypeInfo);
-    byte_4C32032 = 1;
+    sub_1C37058(&LocalizationManager_TypeInfo);
+    sub_1C37058(&UnityEngine_Object_TypeInfo);
+    byte_4C3D61C = 1;
   }
   titleLabel = (UnityEngine_Object_o *)this->fields.titleLabel;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -227,13 +227,13 @@ void SelectServantPortraitLimitCountDialog__Init(
       goto LABEL_19;
     }
 LABEL_22:
-    sub_1C32E7C(v6);
+    sub_1C372B4(v6);
   }
 LABEL_19:
   if ( !System_String__IsNullOrEmpty(this->fields.statusAssetFolderName, 0) )
   {
     this->fields.statusAssetFolderName = 0;
-    sub_1C32BC4(&this->fields.statusAssetFolderName, 0);
+    sub_1C36FFC(&this->fields.statusAssetFolderName, 0);
   }
   BaseDialog__Init((BaseDialog_o *)this, 0);
 }
@@ -247,17 +247,17 @@ void SelectServantPortraitLimitCountDialog__OnClickClose(
   System_Reflection_MethodBase_o *v4; // x0
   const MethodInfo *v5; // x2
 
-  if ( (byte_4C32038 & 1) == 0 )
+  if ( (byte_4C3D622 & 1) == 0 )
   {
-    sub_1C32C20(&Method_SelectServantPortraitLimitCountDialog_OnClickClose__);
-    byte_4C32038 = 1;
+    sub_1C37058(&Method_SelectServantPortraitLimitCountDialog_OnClickClose__);
+    byte_4C3D622 = 1;
   }
   v3 = Method_SelectServantPortraitLimitCountDialog_OnClickClose__;
   if ( (*((_BYTE *)Method_SelectServantPortraitLimitCountDialog_OnClickClose__ + 83) & 2) != 0 )
-    v3 = (_QWORD *)sub_1C32C38(Method_SelectServantPortraitLimitCountDialog_OnClickClose__);
-  v4 = (System_Reflection_MethodBase_o *)sub_1C32C04(v3, v3[4]);
+    v3 = (_QWORD *)sub_1C37070(Method_SelectServantPortraitLimitCountDialog_OnClickClose__);
+  v4 = (System_Reflection_MethodBase_o *)sub_1C3703C(v3, v3[4]);
   OverwriteAssetSoundName__PlaySystemSe(v4, 1, 0, 0);
-  SelectServantPortraitLimitCountDialog__Close_31989956(this, 0, v5);
+  SelectServantPortraitLimitCountDialog__Close_32085588(this, 0, v5);
 }
 
 
@@ -272,16 +272,16 @@ void SelectServantPortraitLimitCountDialog__OnSelectPortraitLimitCount(
   const MethodInfo *v8; // x2
   struct System_Action_int__o *selectPortraitLimitCountCallback; // x8
 
-  if ( (byte_4C32036 & 1) == 0 )
+  if ( (byte_4C3D620 & 1) == 0 )
   {
-    sub_1C32C20(&ImageLimitCount_TypeInfo);
-    sub_1C32C20(&Method_SelectServantPortraitLimitCountDialog_OnSelectPortraitLimitCount__);
-    byte_4C32036 = 1;
+    sub_1C37058(&ImageLimitCount_TypeInfo);
+    sub_1C37058(&Method_SelectServantPortraitLimitCountDialog_OnSelectPortraitLimitCount__);
+    byte_4C3D620 = 1;
   }
   v6 = Method_SelectServantPortraitLimitCountDialog_OnSelectPortraitLimitCount__;
   if ( (*((_BYTE *)Method_SelectServantPortraitLimitCountDialog_OnSelectPortraitLimitCount__ + 83) & 2) != 0 )
-    v6 = (_QWORD *)sub_1C32C38(Method_SelectServantPortraitLimitCountDialog_OnSelectPortraitLimitCount__);
-  v7 = (System_Reflection_MethodBase_o *)sub_1C32C04(v6, v6[4]);
+    v6 = (_QWORD *)sub_1C37070(Method_SelectServantPortraitLimitCountDialog_OnSelectPortraitLimitCount__);
+  v7 = (System_Reflection_MethodBase_o *)sub_1C3703C(v6, v6[4]);
   OverwriteAssetSoundName__PlaySystemSe(v7, 0, 0, 0);
   if ( !ImageLimitCount_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(ImageLimitCount_TypeInfo);
@@ -293,7 +293,7 @@ void SelectServantPortraitLimitCountDialog__OnSelectPortraitLimitCount(
       selectPortraitLimitCountCallback->fields.method_code,
       (unsigned int)portraitImgIndex,
       selectPortraitLimitCountCallback->fields.method);
-  SelectServantPortraitLimitCountDialog__Close_31989956(this, 0, v8);
+  SelectServantPortraitLimitCountDialog__Close_32085588(this, 0, v8);
 }
 
 
@@ -306,17 +306,17 @@ void SelectServantPortraitLimitCountDialog__Open(
   System_Action_o *v7; // x20
   const MethodInfo *v8; // x2
 
-  if ( (byte_4C32033 & 1) == 0 )
+  if ( (byte_4C3D61D & 1) == 0 )
   {
-    sub_1C32C20(&System_Action_TypeInfo);
-    sub_1C32C20(&Method_SelectServantPortraitLimitCountDialog__Open_b__14_0__);
-    byte_4C32033 = 1;
+    sub_1C37058(&System_Action_TypeInfo);
+    sub_1C37058(&Method_SelectServantPortraitLimitCountDialog__Open_b__14_0__);
+    byte_4C3D61D = 1;
   }
   this->fields.userSvtCollectionEnt = userSvtCollectionEnt;
-  sub_1C32BC4(&this->fields.userSvtCollectionEnt, userSvtCollectionEnt);
+  sub_1C36FFC(&this->fields.userSvtCollectionEnt, userSvtCollectionEnt);
   this->fields.selectPortraitLimitCountCallback = selectPortraitLimitCountCallback;
-  sub_1C32BC4(&this->fields.selectPortraitLimitCountCallback, selectPortraitLimitCountCallback);
-  v7 = (System_Action_o *)sub_1C32E6C(System_Action_TypeInfo);
+  sub_1C36FFC(&this->fields.selectPortraitLimitCountCallback, selectPortraitLimitCountCallback);
+  v7 = (System_Action_o *)sub_1C372A4(System_Action_TypeInfo);
   System_Action___ctor(v7, (Il2CppObject *)this, Method_SelectServantPortraitLimitCountDialog__Open_b__14_0__, 0);
   SelectServantPortraitLimitCountDialog__Setup(this, v7, v8);
 }
@@ -341,31 +341,31 @@ void SelectServantPortraitLimitCountDialog__Setup(
   System_String_o *v16; // x19
   AssetLoader_LoadEndDataHandler_o *v17; // x22
 
-  if ( (byte_4C32034 & 1) == 0 )
+  if ( (byte_4C3D61E & 1) == 0 )
   {
-    sub_1C32C20(&AssetManager_TypeInfo);
-    sub_1C32C20(&AssetLoader_LoadEndDataHandler_TypeInfo);
-    sub_1C32C20(&ServantAssetLoadManager_TypeInfo);
-    sub_1C32C20(&ServantStatusListViewItem_TypeInfo);
-    sub_1C32C20(&Method_SelectServantPortraitLimitCountDialog___c__DisplayClass15_0__Setup_b__0__);
-    sub_1C32C20(&SelectServantPortraitLimitCountDialog___c__DisplayClass15_0_TypeInfo);
-    byte_4C32034 = 1;
+    sub_1C37058(&AssetManager_TypeInfo);
+    sub_1C37058(&AssetLoader_LoadEndDataHandler_TypeInfo);
+    sub_1C37058(&ServantAssetLoadManager_TypeInfo);
+    sub_1C37058(&ServantStatusListViewItem_TypeInfo);
+    sub_1C37058(&Method_SelectServantPortraitLimitCountDialog___c__DisplayClass15_0__Setup_b__0__);
+    sub_1C37058(&SelectServantPortraitLimitCountDialog___c__DisplayClass15_0_TypeInfo);
+    byte_4C3D61E = 1;
   }
-  v5 = (Il2CppObject *)sub_1C32E6C(SelectServantPortraitLimitCountDialog___c__DisplayClass15_0_TypeInfo);
+  v5 = (Il2CppObject *)sub_1C372A4(SelectServantPortraitLimitCountDialog___c__DisplayClass15_0_TypeInfo);
   System_Object___ctor(v5, 0);
   if ( !v5 )
     goto LABEL_14;
   v5[1].klass = (Il2CppClass *)this;
-  sub_1C32BC4(&v5[1], this);
+  sub_1C36FFC(&v5[1], this);
   v5[1].monitor = onSetupEndCallback;
   p_monitor = &v5[1].monitor;
-  sub_1C32BC4(&v5[1].monitor, onSetupEndCallback);
+  sub_1C36FFC(&v5[1].monitor, onSetupEndCallback);
   userSvtCollectionEnt = this->fields.userSvtCollectionEnt;
-  v9 = (ServantStatusListViewItem_o *)sub_1C32E6C(ServantStatusListViewItem_TypeInfo);
-  ServantStatusListViewItem___ctor_35361908(v9, userSvtCollectionEnt, 0, 0, 0);
+  v9 = (ServantStatusListViewItem_o *)sub_1C372A4(ServantStatusListViewItem_TypeInfo);
+  ServantStatusListViewItem___ctor_35372052(v9, userSvtCollectionEnt, 0, 0, 0);
   this->fields.listViewItem = v9;
   p_listViewItem = &this->fields.listViewItem;
-  sub_1C32BC4(&this->fields.listViewItem, v9);
+  sub_1C36FFC(&this->fields.listViewItem, v9);
   listViewItem = this->fields.listViewItem;
   if ( !listViewItem
     || (listViewItem->fields.portraitLimitCount = -1,
@@ -373,7 +373,7 @@ void SelectServantPortraitLimitCountDialog__Setup(
         (v11 = *p_listViewItem) == 0) )
   {
 LABEL_14:
-    sub_1C32E7C(listViewItem);
+    sub_1C372B4(listViewItem);
   }
   v12 = (int)listViewItem;
   LimitCount = ServantStatusListViewItem__get_LimitCount(v11, 0);
@@ -382,9 +382,9 @@ LABEL_14:
   StatusImageFolderName = ServantAssetLoadManager__getStatusImageFolderName(v12, LimitCount, 0);
   this->fields.statusAssetFolderName = StatusImageFolderName;
   p_statusAssetFolderName = &this->fields.statusAssetFolderName;
-  sub_1C32BC4(p_statusAssetFolderName, StatusImageFolderName);
+  sub_1C36FFC(p_statusAssetFolderName, StatusImageFolderName);
   v16 = *p_statusAssetFolderName;
-  v17 = (AssetLoader_LoadEndDataHandler_o *)sub_1C32E6C(AssetLoader_LoadEndDataHandler_TypeInfo);
+  v17 = (AssetLoader_LoadEndDataHandler_o *)sub_1C372A4(AssetLoader_LoadEndDataHandler_TypeInfo);
   AssetLoader_LoadEndDataHandler___ctor(
     v17,
     v5,
@@ -412,13 +412,13 @@ void SelectServantPortraitLimitCountDialog___Open_b__14_0(
   struct SelectServantPortraitLimitCountDialog___c_StaticFields *static_fields; // x0
   UnityEngine_Object_o *scrollView; // x20
 
-  if ( (byte_4C3203D & 1) == 0 )
+  if ( (byte_4C3D627 & 1) == 0 )
   {
-    sub_1C32C20(&System_Action_TypeInfo);
-    sub_1C32C20(&UnityEngine_Object_TypeInfo);
-    sub_1C32C20(&Method_SelectServantPortraitLimitCountDialog___c__Open_b__14_1__);
-    sub_1C32C20(&SelectServantPortraitLimitCountDialog___c_TypeInfo);
-    byte_4C3203D = 1;
+    sub_1C37058(&System_Action_TypeInfo);
+    sub_1C37058(&UnityEngine_Object_TypeInfo);
+    sub_1C37058(&Method_SelectServantPortraitLimitCountDialog___c__Open_b__14_1__);
+    sub_1C37058(&SelectServantPortraitLimitCountDialog___c_TypeInfo);
+    byte_4C3D627 = 1;
   }
   v3 = SelectServantPortraitLimitCountDialog___c_TypeInfo;
   if ( !SelectServantPortraitLimitCountDialog___c_TypeInfo->_2.cctor_finished )
@@ -435,11 +435,11 @@ void SelectServantPortraitLimitCountDialog___Open_b__14_0(
       v3 = SelectServantPortraitLimitCountDialog___c_TypeInfo;
     }
     v5 = (Il2CppObject *)**((_QWORD **)v3 + 23);
-    v4 = (System_Action_o *)sub_1C32E6C(System_Action_TypeInfo);
+    v4 = (System_Action_o *)sub_1C372A4(System_Action_TypeInfo);
     System_Action___ctor(v4, v5, Method_SelectServantPortraitLimitCountDialog___c__Open_b__14_1__, 0);
     static_fields = SelectServantPortraitLimitCountDialog___c_TypeInfo->static_fields;
     static_fields->__9__14_1 = v4;
-    v3 = (void *)sub_1C32BC4(&static_fields->__9__14_1, v4);
+    v3 = (void *)sub_1C36FFC(&static_fields->__9__14_1, v4);
   }
   if ( !this )
     goto LABEL_16;
@@ -456,7 +456,7 @@ void SelectServantPortraitLimitCountDialog___Open_b__14_0(
       return;
     }
 LABEL_16:
-    sub_1C32E7C(v3);
+    sub_1C372B4(v3);
   }
 }
 
@@ -468,10 +468,10 @@ UnityEngine_GameObject_o *SelectServantPortraitLimitCountDialog__get_closeBtnObj
   UnityEngine_Object_o *closeButton; // x20
   UnityEngine_Component_o *v5; // x0
 
-  if ( (byte_4C3203B & 1) == 0 )
+  if ( (byte_4C3D625 & 1) == 0 )
   {
-    sub_1C32C20(&UnityEngine_Object_TypeInfo);
-    byte_4C3203B = 1;
+    sub_1C37058(&UnityEngine_Object_TypeInfo);
+    byte_4C3D625 = 1;
   }
   closeButton = (UnityEngine_Object_o *)this->fields.closeButton;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -480,7 +480,7 @@ UnityEngine_GameObject_o *SelectServantPortraitLimitCountDialog__get_closeBtnObj
     return 0;
   v5 = (UnityEngine_Component_o *)this->fields.closeButton;
   if ( !v5 )
-    sub_1C32E7C(0);
+    sub_1C372B4(0);
   return UnityEngine_Component__get_gameObject(v5, 0);
 }
 
@@ -489,15 +489,15 @@ void SelectServantPortraitLimitCountDialog___c___cctor(const MethodInfo *method)
 {
   Il2CppObject *v1; // x19
 
-  if ( (byte_4C3203E & 1) == 0 )
+  if ( (byte_4C3D628 & 1) == 0 )
   {
-    sub_1C32C20(&SelectServantPortraitLimitCountDialog___c_TypeInfo);
-    byte_4C3203E = 1;
+    sub_1C37058(&SelectServantPortraitLimitCountDialog___c_TypeInfo);
+    byte_4C3D628 = 1;
   }
-  v1 = (Il2CppObject *)sub_1C32E6C(SelectServantPortraitLimitCountDialog___c_TypeInfo);
+  v1 = (Il2CppObject *)sub_1C372A4(SelectServantPortraitLimitCountDialog___c_TypeInfo);
   System_Object___ctor(v1, 0);
   SelectServantPortraitLimitCountDialog___c_TypeInfo->static_fields->__9 = (struct SelectServantPortraitLimitCountDialog___c_o *)v1;
-  sub_1C32BC4(SelectServantPortraitLimitCountDialog___c_TypeInfo->static_fields, v1);
+  sub_1C36FFC(SelectServantPortraitLimitCountDialog___c_TypeInfo->static_fields, v1);
 }
 
 
@@ -535,7 +535,7 @@ void SelectServantPortraitLimitCountDialog___c__DisplayClass15_0___Setup_b__0(
 
   _4__this = this->fields.__4__this;
   if ( !_4__this )
-    sub_1C32E7C(0);
+    sub_1C372B4(0);
   SelectServantPortraitLimitCountDialog__EndStatusLoad(_4__this, assetData, method);
   onSetupEndCallback = this->fields.onSetupEndCallback;
   if ( onSetupEndCallback )

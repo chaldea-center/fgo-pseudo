@@ -4,19 +4,19 @@ void iTween___cctor(const MethodInfo *method)
   int32_t v2; // w2
   const MethodInfo *v3; // x3
 
-  if ( (byte_4C3EA4A & 1) == 0 )
+  if ( (byte_4C49FCA & 1) == 0 )
   {
-    sub_1C32C20(&Method_System_Collections_Generic_List_Hashtable___ctor__);
-    sub_1C32C20(&System_Collections_Generic_List_Hashtable__TypeInfo);
-    sub_1C32C20(&iTween_TypeInfo);
-    byte_4C3EA4A = 1;
+    sub_1C37058(&Method_System_Collections_Generic_List_Hashtable___ctor__);
+    sub_1C37058(&System_Collections_Generic_List_Hashtable__TypeInfo);
+    sub_1C37058(&iTween_TypeInfo);
+    byte_4C49FCA = 1;
   }
-  v1 = (System_Collections_Generic_List_object__o *)sub_1C32E6C(System_Collections_Generic_List_Hashtable__TypeInfo);
+  v1 = (System_Collections_Generic_List_object__o *)sub_1C372A4(System_Collections_Generic_List_Hashtable__TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v1,
-    (const MethodInfo_3797F88 *)Method_System_Collections_Generic_List_Hashtable___ctor__);
+    (const MethodInfo_37A27F0 *)Method_System_Collections_Generic_List_Hashtable___ctor__);
   iTween_TypeInfo->static_fields->tweens = (struct System_Collections_Generic_List_Hashtable__o *)v1;
-  sub_1C32BC4((CGThumbnailListItem_o *)iTween_TypeInfo->static_fields, (int32_t)v1, v2, v3);
+  sub_1C36FFC((CGThumbnailListItem_o *)iTween_TypeInfo->static_fields, (int32_t)v1, v2, v3);
 }
 
 
@@ -27,7 +27,7 @@ void iTween___ctor(iTween_o *this, System_Collections_Hashtable_o *h, const Meth
 
   UnityEngine_MonoBehaviour___ctor((UnityEngine_MonoBehaviour_o *)this, 0);
   this->fields.tweenArguments = h;
-  sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.tweenArguments, (int32_t)h, v5, v6);
+  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.tweenArguments, (int32_t)h, v5, v6);
 }
 
 
@@ -46,22 +46,22 @@ void iTween__AddOrRecycleTweenComponent(UnityEngine_GameObject_o *target, const 
   const MethodInfo *v12; // x1
 
   v2 = target;
-  if ( (byte_4C3E98D & 1) == 0 )
+  if ( (byte_4C49F0D & 1) == 0 )
   {
-    sub_1C32C20(&Method_System_Linq_Enumerable_FirstOrDefault_iTween___);
-    sub_1C32C20(&System_Func_iTween__bool__TypeInfo);
-    sub_1C32C20(&Method_UnityEngine_GameObject_AddComponent_iTween___);
-    sub_1C32C20(&Method_UnityEngine_GameObject_GetComponents_iTween___);
-    sub_1C32C20(&UnityEngine_Object_TypeInfo);
-    sub_1C32C20(&Method_iTween___c__AddOrRecycleTweenComponent_b__6_0__);
-    target = (UnityEngine_GameObject_o *)sub_1C32C20(&iTween___c_TypeInfo);
-    byte_4C3E98D = 1;
+    sub_1C37058(&Method_System_Linq_Enumerable_FirstOrDefault_iTween___);
+    sub_1C37058(&System_Func_iTween__bool__TypeInfo);
+    sub_1C37058(&Method_UnityEngine_GameObject_AddComponent_iTween___);
+    sub_1C37058(&Method_UnityEngine_GameObject_GetComponents_iTween___);
+    sub_1C37058(&UnityEngine_Object_TypeInfo);
+    sub_1C37058(&Method_iTween___c__AddOrRecycleTweenComponent_b__6_0__);
+    target = (UnityEngine_GameObject_o *)sub_1C37058(&iTween___c_TypeInfo);
+    byte_4C49F0D = 1;
   }
   if ( !v2 )
     goto LABEL_16;
   Components_object = UnityEngine_GameObject__GetComponents_object_(
                         v2,
-                        (const MethodInfo_31352CC *)Method_UnityEngine_GameObject_GetComponents_iTween___);
+                        (const MethodInfo_313FB34 *)Method_UnityEngine_GameObject_GetComponents_iTween___);
   v4 = iTween___c_TypeInfo;
   v5 = (System_Collections_Generic_IEnumerable_TSource__o *)Components_object;
   if ( !iTween___c_TypeInfo->_2.cctor_finished )
@@ -78,16 +78,16 @@ void iTween__AddOrRecycleTweenComponent(UnityEngine_GameObject_o *target, const 
       v4 = iTween___c_TypeInfo;
     }
     v7 = (Il2CppObject *)v4->static_fields->__9;
-    _9__6_0 = (System_Func_object__bool__o *)sub_1C32E6C(System_Func_iTween__bool__TypeInfo);
+    _9__6_0 = (System_Func_object__bool__o *)sub_1C372A4(System_Func_iTween__bool__TypeInfo);
     System_Func_object__bool____ctor(_9__6_0, v7, Method_iTween___c__AddOrRecycleTweenComponent_b__6_0__, 0);
     static_fields = iTween___c_TypeInfo->static_fields;
     static_fields->__9__6_0 = (struct System_Func_iTween__bool__o *)_9__6_0;
-    sub_1C32BC4((CGThumbnailListItem_o *)&static_fields->__9__6_0, (int32_t)_9__6_0, v9, v10);
+    sub_1C36FFC((CGThumbnailListItem_o *)&static_fields->__9__6_0, (int32_t)_9__6_0, v9, v10);
   }
-  v11 = System_Linq_Enumerable__FirstOrDefault_object__51408536(
+  v11 = System_Linq_Enumerable__FirstOrDefault_object__51451648(
           v5,
           (System_Func_TSource__bool__o *)_9__6_0,
-          (const MethodInfo_3106E98 *)Method_System_Linq_Enumerable_FirstOrDefault_iTween___);
+          (const MethodInfo_3111700 *)Method_System_Linq_Enumerable_FirstOrDefault_iTween___);
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   target = (UnityEngine_GameObject_o *)UnityEngine_Object__op_Inequality((UnityEngine_Object_o *)v11, 0, 0);
@@ -102,11 +102,11 @@ void iTween__AddOrRecycleTweenComponent(UnityEngine_GameObject_o *target, const 
       return;
     }
 LABEL_16:
-    sub_1C32E7C(target);
+    sub_1C372B4(target);
   }
   UnityEngine_GameObject__AddComponent_object_(
     v2,
-    (const MethodInfo_3134888 *)Method_UnityEngine_GameObject_AddComponent_iTween___);
+    (const MethodInfo_313F0F0 *)Method_UnityEngine_GameObject_AddComponent_iTween___);
 }
 
 
@@ -173,7 +173,7 @@ void iTween__ApplyAudioToTargets(iTween_o *this, const MethodInfo *method)
     goto LABEL_24;
   if ( LODWORD(v10->max_length) <= 2 )
 LABEL_25:
-    sub_1C32E84(this);
+    sub_1C372BC(this);
   this = (iTween_o *)v4->fields.audioSource;
   if ( !this )
     goto LABEL_24;
@@ -201,7 +201,7 @@ LABEL_25:
           return;
         }
 LABEL_24:
-        sub_1C32E7C(this);
+        sub_1C372B4(this);
       }
     }
     goto LABEL_25;
@@ -245,11 +245,11 @@ void iTween__ApplyColorTargets(iTween_o *this, const MethodInfo *method)
   UnityEngine_Color_o v33; // [xsp+0h] [xbp-40h] BYREF
 
   v2 = this;
-  if ( (byte_4C3E9E0 & 1) == 0 )
+  if ( (byte_4C49F60 & 1) == 0 )
   {
-    sub_1C32C20(&UnityEngine_Color_TypeInfo);
-    this = (iTween_o *)sub_1C32C20(&StringLiteral_22436/*"onupdateparams"*/);
-    byte_4C3E9E0 = 1;
+    sub_1C37058(&UnityEngine_Color_TypeInfo);
+    this = (iTween_o *)sub_1C37058(&StringLiteral_22439/*"onupdateparams"*/);
+    byte_4C49F60 = 1;
   }
   colors = v2->fields.colors;
   if ( !colors )
@@ -317,7 +317,7 @@ void iTween__ApplyColorTargets(iTween_o *this, const MethodInfo *method)
   v22 = v21->bounds;
   if ( !LODWORD(v22->length) || LODWORD(v22[1].length) <= 2 )
 LABEL_31:
-    sub_1C32E84(this);
+    sub_1C372BC(this);
   tweenArguments = v2->fields.tweenArguments;
   v33 = v21->m_Items[2];
   this = (iTween_o *)j_il2cpp_value_box_0(UnityEngine_Color_TypeInfo, &v33, v15, v16, v17, v18, v19, v20);
@@ -325,7 +325,7 @@ LABEL_31:
     goto LABEL_30;
   this = (iTween_o *)((__int64 (__fastcall *)(struct System_Collections_Hashtable_o *, __int64, iTween_o *, const MethodInfo *))tweenArguments->klass->vtable._29_set_Item.methodPtr)(
                        tweenArguments,
-                       StringLiteral_22436/*"onupdateparams"*/,
+                       StringLiteral_22439/*"onupdateparams"*/,
                        this,
                        tweenArguments->klass->vtable._29_set_Item.method);
   if ( v2->fields.percentage != 1.0 )
@@ -333,7 +333,7 @@ LABEL_31:
   v30 = v2->fields.colors;
   if ( !v30 )
 LABEL_30:
-    sub_1C32E7C(this);
+    sub_1C372B4(this);
   v31 = v30->bounds;
   if ( !LODWORD(v31->length) || LODWORD(v31[1].length) <= 1 )
     goto LABEL_31;
@@ -344,7 +344,7 @@ LABEL_30:
     goto LABEL_30;
   ((void (__fastcall *)(struct System_Collections_Hashtable_o *, __int64, iTween_o *, const MethodInfo *))v32->klass->vtable._29_set_Item.methodPtr)(
     v32,
-    StringLiteral_22436/*"onupdateparams"*/,
+    StringLiteral_22439/*"onupdateparams"*/,
     this,
     v32->klass->vtable._29_set_Item.method);
 }
@@ -391,13 +391,13 @@ void iTween__ApplyColorToTargets(iTween_o *this, const MethodInfo *method)
   System_Enum_o v39; // [xsp+8h] [xbp-68h] BYREF
   int32_t namedcolorvalue; // [xsp+18h] [xbp-58h]
 
-  if ( (byte_4C3E9E4 & 1) == 0 )
+  if ( (byte_4C49F64 & 1) == 0 )
   {
-    sub_1C32C20(&Method_UnityEngine_Component_GetComponent_Light___);
-    sub_1C32C20(&Method_UnityEngine_Component_GetComponent_Renderer___);
-    sub_1C32C20(&iTween_NamedValueColor_TypeInfo);
-    sub_1C32C20(&UnityEngine_Object_TypeInfo);
-    byte_4C3E9E4 = 1;
+    sub_1C37058(&Method_UnityEngine_Component_GetComponent_Light___);
+    sub_1C37058(&Method_UnityEngine_Component_GetComponent_Renderer___);
+    sub_1C37058(&iTween_NamedValueColor_TypeInfo);
+    sub_1C37058(&UnityEngine_Object_TypeInfo);
+    byte_4C49F64 = 1;
   }
   colors = (System_Array_o *)this->fields.colors;
   if ( !colors )
@@ -489,7 +489,7 @@ void iTween__ApplyColorToTargets(iTween_o *this, const MethodInfo *method)
   }
   Component_object = UnityEngine_Component__GetComponent_object_(
                        (UnityEngine_Component_o *)this,
-                       (const MethodInfo_30D3BC0 *)Method_UnityEngine_Component_GetComponent_Renderer___);
+                       (const MethodInfo_30DE428 *)Method_UnityEngine_Component_GetComponent_Renderer___);
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   if ( UnityEngine_Object__op_Implicit((UnityEngine_Object_o *)Component_object, 0) )
@@ -502,7 +502,7 @@ void iTween__ApplyColorToTargets(iTween_o *this, const MethodInfo *method)
     {
       colors = (System_Array_o *)UnityEngine_Component__GetComponent_object_(
                                    (UnityEngine_Component_o *)this,
-                                   (const MethodInfo_30D3BC0 *)Method_UnityEngine_Component_GetComponent_Renderer___);
+                                   (const MethodInfo_30DE428 *)Method_UnityEngine_Component_GetComponent_Renderer___);
       if ( !colors )
         goto LABEL_72;
       colors = (System_Array_o *)UnityEngine_Renderer__get_materials((UnityEngine_Renderer_o *)colors, 0);
@@ -539,14 +539,14 @@ void iTween__ApplyColorToTargets(iTween_o *this, const MethodInfo *method)
   {
     v27 = UnityEngine_Component__GetComponent_object_(
             (UnityEngine_Component_o *)this,
-            (const MethodInfo_30D3BC0 *)Method_UnityEngine_Component_GetComponent_Light___);
+            (const MethodInfo_30DE428 *)Method_UnityEngine_Component_GetComponent_Light___);
     if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
     if ( UnityEngine_Object__op_Implicit((UnityEngine_Object_o *)v27, 0) )
     {
       colors = (System_Array_o *)UnityEngine_Component__GetComponent_object_(
                                    (UnityEngine_Component_o *)this,
-                                   (const MethodInfo_30D3BC0 *)Method_UnityEngine_Component_GetComponent_Light___);
+                                   (const MethodInfo_30DE428 *)Method_UnityEngine_Component_GetComponent_Light___);
       v28 = this->fields.colors;
       if ( !v28 )
         goto LABEL_72;
@@ -562,25 +562,25 @@ void iTween__ApplyColorToTargets(iTween_o *this, const MethodInfo *method)
     return;
   v30 = UnityEngine_Component__GetComponent_object_(
           (UnityEngine_Component_o *)this,
-          (const MethodInfo_30D3BC0 *)Method_UnityEngine_Component_GetComponent_Renderer___);
+          (const MethodInfo_30DE428 *)Method_UnityEngine_Component_GetComponent_Renderer___);
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   if ( !UnityEngine_Object__op_Implicit((UnityEngine_Object_o *)v30, 0) )
   {
     v36 = UnityEngine_Component__GetComponent_object_(
             (UnityEngine_Component_o *)this,
-            (const MethodInfo_30D3BC0 *)Method_UnityEngine_Component_GetComponent_Light___);
+            (const MethodInfo_30DE428 *)Method_UnityEngine_Component_GetComponent_Light___);
     if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
     if ( !UnityEngine_Object__op_Implicit((UnityEngine_Object_o *)v36, 0) )
       return;
     colors = (System_Array_o *)UnityEngine_Component__GetComponent_object_(
                                  (UnityEngine_Component_o *)this,
-                                 (const MethodInfo_30D3BC0 *)Method_UnityEngine_Component_GetComponent_Light___);
+                                 (const MethodInfo_30DE428 *)Method_UnityEngine_Component_GetComponent_Light___);
     v37 = this->fields.colors;
     if ( !v37 )
 LABEL_72:
-      sub_1C32E7C(colors);
+      sub_1C372B4(colors);
     v38 = v37->bounds;
     if ( LODWORD(v38->length) && LODWORD(v38[1].length) > 1 )
     {
@@ -592,7 +592,7 @@ LABEL_72:
       goto LABEL_72;
     }
 LABEL_73:
-    sub_1C32E84(colors);
+    sub_1C372BC(colors);
   }
   colors = (System_Array_o *)this->fields.colors;
   if ( !colors )
@@ -602,7 +602,7 @@ LABEL_73:
   {
     colors = (System_Array_o *)UnityEngine_Component__GetComponent_object_(
                                  (UnityEngine_Component_o *)this,
-                                 (const MethodInfo_30D3BC0 *)Method_UnityEngine_Component_GetComponent_Renderer___);
+                                 (const MethodInfo_30DE428 *)Method_UnityEngine_Component_GetComponent_Renderer___);
     if ( !colors )
       goto LABEL_72;
     colors = (System_Array_o *)UnityEngine_Renderer__get_materials((UnityEngine_Renderer_o *)colors, 0);
@@ -663,11 +663,11 @@ void iTween__ApplyFloatTargets(iTween_o *this, const MethodInfo *method)
   float v23; // [xsp+Ch] [xbp-24h] BYREF
 
   v2 = this;
-  if ( (byte_4C3E9E3 & 1) == 0 )
+  if ( (byte_4C49F63 & 1) == 0 )
   {
-    sub_1C32C20(&float_TypeInfo);
-    this = (iTween_o *)sub_1C32C20(&StringLiteral_22436/*"onupdateparams"*/);
-    byte_4C3E9E3 = 1;
+    sub_1C37058(&float_TypeInfo);
+    this = (iTween_o *)sub_1C37058(&StringLiteral_22439/*"onupdateparams"*/);
+    byte_4C49F63 = 1;
   }
   floats = v2->fields.floats;
   if ( !floats )
@@ -691,7 +691,7 @@ void iTween__ApplyFloatTargets(iTween_o *this, const MethodInfo *method)
     goto LABEL_16;
   if ( LODWORD(v12->max_length) <= 2 )
 LABEL_17:
-    sub_1C32E84(this);
+    sub_1C372BC(this);
   tweenArguments = v2->fields.tweenArguments;
   v23 = v12->m_Items[2];
   this = (iTween_o *)j_il2cpp_value_box_0(float_TypeInfo, &v23, v5, v6, v7, v8, v9, v10);
@@ -699,7 +699,7 @@ LABEL_17:
     goto LABEL_16;
   this = (iTween_o *)((__int64 (__fastcall *)(struct System_Collections_Hashtable_o *, __int64, iTween_o *, const MethodInfo *))tweenArguments->klass->vtable._29_set_Item.methodPtr)(
                        tweenArguments,
-                       StringLiteral_22436/*"onupdateparams"*/,
+                       StringLiteral_22439/*"onupdateparams"*/,
                        this,
                        tweenArguments->klass->vtable._29_set_Item.method);
   if ( v2->fields.percentage != 1.0 )
@@ -707,7 +707,7 @@ LABEL_17:
   v20 = v2->fields.floats;
   if ( !v20 )
 LABEL_16:
-    sub_1C32E7C(this);
+    sub_1C372B4(this);
   if ( LODWORD(v20->max_length) <= 1 )
     goto LABEL_17;
   v21 = v2->fields.tweenArguments;
@@ -717,7 +717,7 @@ LABEL_16:
     goto LABEL_16;
   ((void (__fastcall *)(struct System_Collections_Hashtable_o *, __int64, iTween_o *, const MethodInfo *))v21->klass->vtable._29_set_Item.methodPtr)(
     v21,
-    StringLiteral_22436/*"onupdateparams"*/,
+    StringLiteral_22439/*"onupdateparams"*/,
     this,
     v21->klass->vtable._29_set_Item.method);
 }
@@ -798,7 +798,7 @@ void iTween__ApplyLookToTargets(iTween_o *this, const MethodInfo *method)
     goto LABEL_20;
   if ( LODWORD(v12->max_length) <= 2 )
 LABEL_19:
-    sub_1C32E84(this);
+    sub_1C372BC(this);
   isLocal = v4->fields.isLocal;
   thisTransform = v4->fields.thisTransform;
   v15.fields.x = v12->m_Items[2].fields.x * 0.017453;
@@ -807,7 +807,7 @@ LABEL_19:
   v16 = UnityEngine_Quaternion__Internal_FromEulerRad(v15, 0);
   if ( !thisTransform )
 LABEL_20:
-    sub_1C32E7C(this);
+    sub_1C372B4(this);
   if ( isLocal )
     UnityEngine_Transform__set_localRotation(thisTransform, v16, 0);
   else
@@ -843,18 +843,18 @@ void iTween__ApplyMoveByTargets(iTween_o *this, const MethodInfo *method)
   UnityEngine_Vector3_o v25; // 0:s0.4,4:s1.4,8:s2.4
   UnityEngine_Vector3_o position; // 0:s0.4,4:s1.4,8:s2.4
 
-  if ( (byte_4C3E9E7 & 1) == 0 )
+  if ( (byte_4C49F67 & 1) == 0 )
   {
-    sub_1C32C20(&Method_UnityEngine_Component_GetComponent_Rigidbody___);
-    sub_1C32C20(&StringLiteral_21348/*"looktarget"*/);
-    byte_4C3E9E7 = 1;
+    sub_1C37058(&Method_UnityEngine_Component_GetComponent_Rigidbody___);
+    sub_1C37058(&StringLiteral_21351/*"looktarget"*/);
+    byte_4C49F67 = 1;
   }
   tweenArguments = (__int64)this->fields.tweenArguments;
   if ( !tweenArguments )
     goto LABEL_37;
   tweenArguments = (*(__int64 (__fastcall **)(__int64, __int64, _QWORD))(*(_QWORD *)tweenArguments + 712LL))(
                      tweenArguments,
-                     StringLiteral_21348/*"looktarget"*/,
+                     StringLiteral_21351/*"looktarget"*/,
                      *(_QWORD *)(*(_QWORD *)tweenArguments + 720LL));
   x = 0.0;
   y = 0.0;
@@ -870,7 +870,7 @@ void iTween__ApplyMoveByTargets(iTween_o *this, const MethodInfo *method)
       goto LABEL_37;
     if ( LODWORD(vector3s->max_length) <= 4 )
 LABEL_36:
-      sub_1C32E84(tweenArguments);
+      sub_1C372BC(tweenArguments);
     tweenArguments = (__int64)this->fields.thisTransform;
     if ( !tweenArguments )
       goto LABEL_37;
@@ -959,7 +959,7 @@ LABEL_36:
     goto LABEL_37;
   if ( ((*(__int64 (__fastcall **)(__int64, __int64, _QWORD))(*(_QWORD *)tweenArguments + 712LL))(
           tweenArguments,
-          StringLiteral_21348/*"looktarget"*/,
+          StringLiteral_21351/*"looktarget"*/,
           *(_QWORD *)(*(_QWORD *)tweenArguments + 720LL))
       & 1) != 0 )
   {
@@ -974,7 +974,7 @@ LABEL_36:
   tweenArguments = (__int64)this->fields.thisTransform;
   if ( !tweenArguments )
 LABEL_37:
-    sub_1C32E7C(tweenArguments);
+    sub_1C372B4(tweenArguments);
   position = UnityEngine_Transform__get_position((UnityEngine_Transform_o *)tweenArguments, 0);
   physics = this->fields.physics;
   this->fields.postUpdate = position;
@@ -982,7 +982,7 @@ LABEL_37:
   {
     tweenArguments = (__int64)UnityEngine_Component__GetComponent_object_(
                                 (UnityEngine_Component_o *)this,
-                                (const MethodInfo_30D3BC0 *)Method_UnityEngine_Component_GetComponent_Rigidbody___);
+                                (const MethodInfo_30DE428 *)Method_UnityEngine_Component_GetComponent_Rigidbody___);
     if ( tweenArguments )
     {
       UnityEngine_Rigidbody__MovePosition((UnityEngine_Rigidbody_o *)tweenArguments, this->fields.postUpdate, 0);
@@ -1026,17 +1026,17 @@ void iTween__ApplyMoveToPathTargets(iTween_o *this, const MethodInfo *method)
   UnityEngine_Vector3_o position; // 0:s0.4,4:s1.4,8:s2.4
 
   v2 = this;
-  if ( (byte_4C3E9E5 & 1) == 0 )
+  if ( (byte_4C49F65 & 1) == 0 )
   {
-    sub_1C32C20(&bool_TypeInfo);
-    sub_1C32C20(&Method_UnityEngine_Component_GetComponent_Rigidbody___);
-    sub_1C32C20(&iTween_Defaults_TypeInfo);
-    sub_1C32C20(&float_TypeInfo);
-    sub_1C32C20(&UnityEngine_Vector3_TypeInfo);
-    sub_1C32C20(&StringLiteral_21348/*"looktarget"*/);
-    sub_1C32C20(&StringLiteral_22492/*"orienttopath"*/);
-    this = (iTween_o *)sub_1C32C20(&StringLiteral_21347/*"lookahead"*/);
-    byte_4C3E9E5 = 1;
+    sub_1C37058(&bool_TypeInfo);
+    sub_1C37058(&Method_UnityEngine_Component_GetComponent_Rigidbody___);
+    sub_1C37058(&iTween_Defaults_TypeInfo);
+    sub_1C37058(&float_TypeInfo);
+    sub_1C37058(&UnityEngine_Vector3_TypeInfo);
+    sub_1C37058(&StringLiteral_21351/*"looktarget"*/);
+    sub_1C37058(&StringLiteral_22495/*"orienttopath"*/);
+    this = (iTween_o *)sub_1C37058(&StringLiteral_21350/*"lookahead"*/);
+    byte_4C49F65 = 1;
   }
   ease = v2->fields.ease;
   if ( !ease )
@@ -1066,7 +1066,7 @@ void iTween__ApplyMoveToPathTargets(iTween_o *this, const MethodInfo *method)
     goto LABEL_39;
   if ( (((__int64 (__fastcall *)(iTween_o *, __int64, Il2CppMethodPointer))this->klass[1].vtable._1_Finalize.method)(
           this,
-          StringLiteral_22492/*"orienttopath"*/,
+          StringLiteral_22495/*"orienttopath"*/,
           this->klass[1].vtable._2_GetHashCode.methodPtr)
       & 1) == 0 )
     goto LABEL_34;
@@ -1075,7 +1075,7 @@ void iTween__ApplyMoveToPathTargets(iTween_o *this, const MethodInfo *method)
     goto LABEL_39;
   this = (iTween_o *)((__int64 (__fastcall *)(iTween_o *, __int64, const char *))this->klass[2]._1.gc_desc)(
                        this,
-                       StringLiteral_22492/*"orienttopath"*/,
+                       StringLiteral_22495/*"orienttopath"*/,
                        this->klass[2]._1.name);
   if ( !this )
     goto LABEL_39;
@@ -1088,7 +1088,7 @@ void iTween__ApplyMoveToPathTargets(iTween_o *this, const MethodInfo *method)
     goto LABEL_39;
   if ( (((__int64 (__fastcall *)(iTween_o *, __int64, Il2CppMethodPointer))this->klass[1].vtable._1_Finalize.method)(
           this,
-          StringLiteral_21347/*"lookahead"*/,
+          StringLiteral_21350/*"lookahead"*/,
           this->klass[1].vtable._2_GetHashCode.methodPtr)
       & 1) == 0 )
   {
@@ -1106,14 +1106,14 @@ void iTween__ApplyMoveToPathTargets(iTween_o *this, const MethodInfo *method)
     goto LABEL_39;
   this = (iTween_o *)((__int64 (__fastcall *)(iTween_o *, __int64, const char *))this->klass[2]._1.gc_desc)(
                        this,
-                       StringLiteral_21347/*"lookahead"*/,
+                       StringLiteral_21350/*"lookahead"*/,
                        this->klass[2]._1.name);
   if ( !this )
     goto LABEL_39;
   if ( this->klass->_1.element_class != float_TypeInfo->_1.element_class )
   {
 LABEL_40:
-    sub_1C3313C(this);
+    sub_1C37574(this);
     iTween__ApplyMoveToTargets(v26, v27);
     return;
   }
@@ -1140,7 +1140,7 @@ LABEL_27:
     goto LABEL_39;
   ((void (__fastcall *)(struct System_Collections_Hashtable_o *, __int64, iTween_o *, const MethodInfo *))tweenArguments->klass->vtable._29_set_Item.methodPtr)(
     tweenArguments,
-    StringLiteral_21348/*"looktarget"*/,
+    StringLiteral_21351/*"looktarget"*/,
     this,
     tweenArguments->klass->vtable._29_set_Item.method);
 LABEL_34:
@@ -1154,10 +1154,10 @@ LABEL_34:
     return;
   this = (iTween_o *)UnityEngine_Component__GetComponent_object_(
                        (UnityEngine_Component_o *)v2,
-                       (const MethodInfo_30D3BC0 *)Method_UnityEngine_Component_GetComponent_Rigidbody___);
+                       (const MethodInfo_30DE428 *)Method_UnityEngine_Component_GetComponent_Rigidbody___);
   if ( !this )
 LABEL_39:
-    sub_1C32E7C(this);
+    sub_1C372B4(this);
   UnityEngine_Rigidbody__MovePosition((UnityEngine_Rigidbody_o *)this, v2->fields.postUpdate, 0);
 }
 
@@ -1187,10 +1187,10 @@ void iTween__ApplyMoveToTargets(iTween_o *this, const MethodInfo *method)
   UnityEngine_Vector3_o position; // 0:s0.4,4:s1.4,8:s2.4
 
   v2 = this;
-  if ( (byte_4C3E9E6 & 1) == 0 )
+  if ( (byte_4C49F66 & 1) == 0 )
   {
-    this = (iTween_o *)sub_1C32C20(&Method_UnityEngine_Component_GetComponent_Rigidbody___);
-    byte_4C3E9E6 = 1;
+    this = (iTween_o *)sub_1C37058(&Method_UnityEngine_Component_GetComponent_Rigidbody___);
+    byte_4C49F66 = 1;
   }
   vector3s = v2->fields.vector3s;
   if ( !vector3s )
@@ -1265,7 +1265,7 @@ void iTween__ApplyMoveToTargets(iTween_o *this, const MethodInfo *method)
     goto LABEL_34;
   if ( LODWORD(v16->max_length) <= 1 )
 LABEL_33:
-    sub_1C32E84(this);
+    sub_1C372BC(this);
   this = (iTween_o *)v2->fields.thisTransform;
   if ( !this )
     goto LABEL_34;
@@ -1287,14 +1287,14 @@ LABEL_28:
   {
     this = (iTween_o *)UnityEngine_Component__GetComponent_object_(
                          (UnityEngine_Component_o *)v2,
-                         (const MethodInfo_30D3BC0 *)Method_UnityEngine_Component_GetComponent_Rigidbody___);
+                         (const MethodInfo_30DE428 *)Method_UnityEngine_Component_GetComponent_Rigidbody___);
     if ( this )
     {
       UnityEngine_Rigidbody__MovePosition((UnityEngine_Rigidbody_o *)this, v2->fields.postUpdate, 0);
       return;
     }
 LABEL_34:
-    sub_1C32E7C(this);
+    sub_1C372B4(this);
   }
 }
 
@@ -1340,18 +1340,18 @@ void iTween__ApplyPunchPositionTargets(iTween_o *this, const MethodInfo *method)
   UnityEngine_Vector3_o v38; // 0:s0.4,4:s1.4,8:s2.4
   UnityEngine_Vector3_o position; // 0:s0.4,4:s1.4,8:s2.4
 
-  if ( (byte_4C3E9EC & 1) == 0 )
+  if ( (byte_4C49F6C & 1) == 0 )
   {
-    sub_1C32C20(&Method_UnityEngine_Component_GetComponent_Rigidbody___);
-    sub_1C32C20(&StringLiteral_21348/*"looktarget"*/);
-    byte_4C3E9EC = 1;
+    sub_1C37058(&Method_UnityEngine_Component_GetComponent_Rigidbody___);
+    sub_1C37058(&StringLiteral_21351/*"looktarget"*/);
+    byte_4C49F6C = 1;
   }
   tweenArguments = (UnityEngine_Transform_o *)this->fields.tweenArguments;
   if ( !tweenArguments )
     goto LABEL_65;
   tweenArguments = (UnityEngine_Transform_o *)((__int64 (__fastcall *)(UnityEngine_Transform_o *, __int64, Il2CppMethodPointer))tweenArguments->klass[1].vtable._0_Equals.method)(
                                                 tweenArguments,
-                                                StringLiteral_21348/*"looktarget"*/,
+                                                StringLiteral_21351/*"looktarget"*/,
                                                 tweenArguments->klass[1].vtable._1_Finalize.methodPtr);
   x = 0.0;
   y = 0.0;
@@ -1395,7 +1395,7 @@ void iTween__ApplyPunchPositionTargets(iTween_o *this, const MethodInfo *method)
     }
     if ( max_length <= 2 )
 LABEL_66:
-      sub_1C32E84(tweenArguments);
+      sub_1C372BC(tweenArguments);
     v12 = -v15;
   }
   else
@@ -1497,7 +1497,7 @@ LABEL_52:
     goto LABEL_65;
   if ( (((__int64 (__fastcall *)(UnityEngine_Transform_o *, __int64, Il2CppMethodPointer))tweenArguments->klass[1].vtable._0_Equals.method)(
           tweenArguments,
-          StringLiteral_21348/*"looktarget"*/,
+          StringLiteral_21351/*"looktarget"*/,
           tweenArguments->klass[1].vtable._1_Finalize.methodPtr)
       & 1) != 0 )
   {
@@ -1512,7 +1512,7 @@ LABEL_52:
   tweenArguments = this->fields.thisTransform;
   if ( !tweenArguments )
 LABEL_65:
-    sub_1C32E7C(tweenArguments);
+    sub_1C372B4(tweenArguments);
   position = UnityEngine_Transform__get_position(tweenArguments, 0);
   physics = this->fields.physics;
   this->fields.postUpdate = position;
@@ -1520,7 +1520,7 @@ LABEL_65:
   {
     tweenArguments = (UnityEngine_Transform_o *)UnityEngine_Component__GetComponent_object_(
                                                   (UnityEngine_Component_o *)this,
-                                                  (const MethodInfo_30D3BC0 *)Method_UnityEngine_Component_GetComponent_Rigidbody___);
+                                                  (const MethodInfo_30DE428 *)Method_UnityEngine_Component_GetComponent_Rigidbody___);
     if ( tweenArguments )
     {
       UnityEngine_Rigidbody__MovePosition((UnityEngine_Rigidbody_o *)tweenArguments, this->fields.postUpdate, 0);
@@ -1570,10 +1570,10 @@ void iTween__ApplyPunchRotationTargets(iTween_o *this, const MethodInfo *method)
   UnityEngine_Quaternion_o v35; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 
   v2 = this;
-  if ( (byte_4C3E9ED & 1) == 0 )
+  if ( (byte_4C49F6D & 1) == 0 )
   {
-    this = (iTween_o *)sub_1C32C20(&Method_UnityEngine_Component_GetComponent_Rigidbody___);
-    byte_4C3E9ED = 1;
+    this = (iTween_o *)sub_1C37058(&Method_UnityEngine_Component_GetComponent_Rigidbody___);
+    byte_4C49F6D = 1;
   }
   vector3s = v2->fields.vector3s;
   if ( !vector3s )
@@ -1595,7 +1595,7 @@ void iTween__ApplyPunchRotationTargets(iTween_o *this, const MethodInfo *method)
     }
     if ( max_length <= 2 )
 LABEL_54:
-      sub_1C32E84(this);
+      sub_1C372BC(this);
     v7 = -v10;
   }
   else
@@ -1707,7 +1707,7 @@ LABEL_45:
   {
     Component_object = UnityEngine_Component__GetComponent_object_(
                          (UnityEngine_Component_o *)v2,
-                         (const MethodInfo_30D3BC0 *)Method_UnityEngine_Component_GetComponent_Rigidbody___);
+                         (const MethodInfo_30DE428 *)Method_UnityEngine_Component_GetComponent_Rigidbody___);
     v34.fields.x = v2->fields.postUpdate.fields.x * 0.017453;
     v34.fields.y = v2->fields.postUpdate.fields.y * 0.017453;
     v34.fields.z = v2->fields.postUpdate.fields.z * 0.017453;
@@ -1718,7 +1718,7 @@ LABEL_45:
       return;
     }
 LABEL_55:
-    sub_1C32E7C(this);
+    sub_1C372B4(this);
   }
 }
 
@@ -1757,7 +1757,7 @@ void iTween__ApplyPunchScaleTargets(iTween_o *this, const MethodInfo *method)
   vector3s = (float32x2_t *)this->fields.vector3s;
   if ( !vector3s )
 LABEL_46:
-    sub_1C32E7C(this);
+    sub_1C372B4(this);
   v3 = vector3s[3].n64_u32[0];
   if ( v3 <= 1 )
     goto LABEL_45;
@@ -1776,7 +1776,7 @@ LABEL_46:
     }
     if ( v3 <= 2 )
 LABEL_45:
-      sub_1C32E84(this);
+      sub_1C372BC(this);
     v7 = -v10;
   }
   else
@@ -1900,11 +1900,11 @@ void iTween__ApplyRectTargets(iTween_o *this, const MethodInfo *method)
   UnityEngine_Rect_o v31; // [xsp+0h] [xbp-40h] BYREF
 
   v2 = this;
-  if ( (byte_4C3E9DF & 1) == 0 )
+  if ( (byte_4C49F5F & 1) == 0 )
   {
-    sub_1C32C20(&UnityEngine_Rect_TypeInfo);
-    this = (iTween_o *)sub_1C32C20(&StringLiteral_22436/*"onupdateparams"*/);
-    byte_4C3E9DF = 1;
+    sub_1C37058(&UnityEngine_Rect_TypeInfo);
+    this = (iTween_o *)sub_1C37058(&StringLiteral_22439/*"onupdateparams"*/);
+    byte_4C49F5F = 1;
   }
   rects = v2->fields.rects;
   if ( !rects )
@@ -1979,7 +1979,7 @@ void iTween__ApplyRectTargets(iTween_o *this, const MethodInfo *method)
     goto LABEL_29;
   if ( LODWORD(v21->max_length) <= 2 )
 LABEL_28:
-    sub_1C32E84(this);
+    sub_1C372BC(this);
   tweenArguments = v2->fields.tweenArguments;
   v31 = v21->m_Items[2];
   this = (iTween_o *)j_il2cpp_value_box_0(UnityEngine_Rect_TypeInfo, &v31, v14, v15, v16, v17, v18, v19);
@@ -1987,7 +1987,7 @@ LABEL_28:
     goto LABEL_29;
   this = (iTween_o *)((__int64 (__fastcall *)(struct System_Collections_Hashtable_o *, __int64, iTween_o *, const MethodInfo *))tweenArguments->klass->vtable._29_set_Item.methodPtr)(
                        tweenArguments,
-                       StringLiteral_22436/*"onupdateparams"*/,
+                       StringLiteral_22439/*"onupdateparams"*/,
                        this,
                        tweenArguments->klass->vtable._29_set_Item.method);
   if ( v2->fields.percentage != 1.0 )
@@ -1995,7 +1995,7 @@ LABEL_28:
   v29 = v2->fields.rects;
   if ( !v29 )
 LABEL_29:
-    sub_1C32E7C(this);
+    sub_1C372B4(this);
   if ( LODWORD(v29->max_length) <= 1 )
     goto LABEL_28;
   v30 = v2->fields.tweenArguments;
@@ -2005,7 +2005,7 @@ LABEL_29:
     goto LABEL_29;
   ((void (__fastcall *)(struct System_Collections_Hashtable_o *, __int64, iTween_o *, const MethodInfo *))v30->klass->vtable._29_set_Item.methodPtr)(
     v30,
-    StringLiteral_22436/*"onupdateparams"*/,
+    StringLiteral_22439/*"onupdateparams"*/,
     this,
     v30->klass->vtable._29_set_Item.method);
 }
@@ -2037,10 +2037,10 @@ void iTween__ApplyRotateAddTargets(iTween_o *this, const MethodInfo *method)
   UnityEngine_Quaternion_o v22; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 
   v2 = this;
-  if ( (byte_4C3E9E9 & 1) == 0 )
+  if ( (byte_4C49F69 & 1) == 0 )
   {
-    this = (iTween_o *)sub_1C32C20(&Method_UnityEngine_Component_GetComponent_Rigidbody___);
-    byte_4C3E9E9 = 1;
+    this = (iTween_o *)sub_1C37058(&Method_UnityEngine_Component_GetComponent_Rigidbody___);
+    byte_4C49F69 = 1;
   }
   vector3s = v2->fields.vector3s;
   if ( !vector3s )
@@ -2114,7 +2114,7 @@ void iTween__ApplyRotateAddTargets(iTween_o *this, const MethodInfo *method)
     goto LABEL_26;
   if ( LODWORD(v16->max_length) < 4 )
 LABEL_25:
-    sub_1C32E84(this);
+    sub_1C372BC(this);
   z = v16->m_Items[2].fields.z;
   *(_QWORD *)&v16->m_Items[3].fields.x = *(_QWORD *)&v16->m_Items[2].fields.x;
   v16->m_Items[3].fields.z = z;
@@ -2128,7 +2128,7 @@ LABEL_25:
   {
     Component_object = UnityEngine_Component__GetComponent_object_(
                          (UnityEngine_Component_o *)v2,
-                         (const MethodInfo_30D3BC0 *)Method_UnityEngine_Component_GetComponent_Rigidbody___);
+                         (const MethodInfo_30DE428 *)Method_UnityEngine_Component_GetComponent_Rigidbody___);
     v21.fields.x = v2->fields.postUpdate.fields.x * 0.017453;
     v21.fields.y = v2->fields.postUpdate.fields.y * 0.017453;
     v21.fields.z = v2->fields.postUpdate.fields.z * 0.017453;
@@ -2139,7 +2139,7 @@ LABEL_25:
       return;
     }
 LABEL_26:
-    sub_1C32E7C(this);
+    sub_1C372B4(this);
   }
 }
 
@@ -2173,10 +2173,10 @@ void iTween__ApplyRotateToTargets(iTween_o *this, const MethodInfo *method)
   UnityEngine_Quaternion_o v26; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 
   v2 = this;
-  if ( (byte_4C3E9E8 & 1) == 0 )
+  if ( (byte_4C49F68 & 1) == 0 )
   {
-    this = (iTween_o *)sub_1C32C20(&Method_UnityEngine_Component_GetComponent_Rigidbody___);
-    byte_4C3E9E8 = 1;
+    this = (iTween_o *)sub_1C37058(&Method_UnityEngine_Component_GetComponent_Rigidbody___);
+    byte_4C49F68 = 1;
   }
   vector3s = v2->fields.vector3s;
   if ( !vector3s )
@@ -2253,7 +2253,7 @@ void iTween__ApplyRotateToTargets(iTween_o *this, const MethodInfo *method)
     goto LABEL_34;
   if ( LODWORD(v15->max_length) <= 1 )
 LABEL_33:
-    sub_1C32E84(this);
+    sub_1C372BC(this);
   v16 = v2->fields.isLocal;
   v17 = v2->fields.thisTransform;
   v21.fields.x = v15->m_Items[1].fields.x * 0.017453;
@@ -2277,7 +2277,7 @@ LABEL_28:
   {
     Component_object = UnityEngine_Component__GetComponent_object_(
                          (UnityEngine_Component_o *)v2,
-                         (const MethodInfo_30D3BC0 *)Method_UnityEngine_Component_GetComponent_Rigidbody___);
+                         (const MethodInfo_30DE428 *)Method_UnityEngine_Component_GetComponent_Rigidbody___);
     v23.fields.x = v2->fields.postUpdate.fields.x * 0.017453;
     v23.fields.y = v2->fields.postUpdate.fields.y * 0.017453;
     v23.fields.z = v2->fields.postUpdate.fields.z * 0.017453;
@@ -2288,7 +2288,7 @@ LABEL_28:
       return;
     }
 LABEL_34:
-    sub_1C32E7C(this);
+    sub_1C372B4(this);
   }
 }
 
@@ -2365,7 +2365,7 @@ void iTween__ApplyScaleToTargets(iTween_o *this, const MethodInfo *method)
     goto LABEL_23;
   if ( LODWORD(v12->max_length) <= 2 )
 LABEL_22:
-    sub_1C32E84(this);
+    sub_1C372BC(this);
   this = (iTween_o *)v4->fields.thisTransform;
   if ( !this )
     goto LABEL_23;
@@ -2384,7 +2384,7 @@ LABEL_22:
         return;
       }
 LABEL_23:
-      sub_1C32E7C(this);
+      sub_1C372B4(this);
     }
     goto LABEL_22;
   }
@@ -2423,18 +2423,18 @@ void iTween__ApplyShakePositionTargets(iTween_o *this, const MethodInfo *method)
   UnityEngine_Vector3_o v29; // 0:s0.4,4:s1.4,8:s2.4
   UnityEngine_Vector3_o v30; // 0:s0.4,4:s1.4,8:s2.4
 
-  if ( (byte_4C3E9EA & 1) == 0 )
+  if ( (byte_4C49F6A & 1) == 0 )
   {
-    sub_1C32C20(&Method_UnityEngine_Component_GetComponent_Rigidbody___);
-    sub_1C32C20(&StringLiteral_21348/*"looktarget"*/);
-    byte_4C3E9EA = 1;
+    sub_1C37058(&Method_UnityEngine_Component_GetComponent_Rigidbody___);
+    sub_1C37058(&StringLiteral_21351/*"looktarget"*/);
+    byte_4C49F6A = 1;
   }
   tweenArguments = (UnityEngine_Transform_o *)this->fields.tweenArguments;
   if ( !tweenArguments )
     goto LABEL_47;
   tweenArguments = (UnityEngine_Transform_o *)((__int64 (__fastcall *)(UnityEngine_Transform_o *, __int64, Il2CppMethodPointer))tweenArguments->klass[1].vtable._0_Equals.method)(
                                                 tweenArguments,
-                                                StringLiteral_21348/*"looktarget"*/,
+                                                StringLiteral_21351/*"looktarget"*/,
                                                 tweenArguments->klass[1].vtable._1_Finalize.methodPtr);
   x = 0.0;
   y = 0.0;
@@ -2512,7 +2512,7 @@ void iTween__ApplyShakePositionTargets(iTween_o *this, const MethodInfo *method)
         LODWORD(v18->max_length) <= 2) )
   {
 LABEL_48:
-    sub_1C32E84(tweenArguments);
+    sub_1C372BC(tweenArguments);
   }
   v18->m_Items[2].fields.z = v19;
   thisTransform = this->fields.thisTransform;
@@ -2550,7 +2550,7 @@ LABEL_38:
     goto LABEL_47;
   if ( (((__int64 (__fastcall *)(UnityEngine_Transform_o *, __int64, Il2CppMethodPointer))tweenArguments->klass[1].vtable._0_Equals.method)(
           tweenArguments,
-          StringLiteral_21348/*"looktarget"*/,
+          StringLiteral_21351/*"looktarget"*/,
           tweenArguments->klass[1].vtable._1_Finalize.methodPtr)
       & 1) != 0 )
   {
@@ -2565,7 +2565,7 @@ LABEL_38:
   tweenArguments = this->fields.thisTransform;
   if ( !tweenArguments )
 LABEL_47:
-    sub_1C32E7C(tweenArguments);
+    sub_1C372B4(tweenArguments);
   v30 = UnityEngine_Transform__get_position(tweenArguments, 0);
   physics = this->fields.physics;
   this->fields.postUpdate = v30;
@@ -2573,7 +2573,7 @@ LABEL_47:
   {
     tweenArguments = (UnityEngine_Transform_o *)UnityEngine_Component__GetComponent_object_(
                                                   (UnityEngine_Component_o *)this,
-                                                  (const MethodInfo_30D3BC0 *)Method_UnityEngine_Component_GetComponent_Rigidbody___);
+                                                  (const MethodInfo_30DE428 *)Method_UnityEngine_Component_GetComponent_Rigidbody___);
     if ( tweenArguments )
     {
       UnityEngine_Rigidbody__MovePosition((UnityEngine_Rigidbody_o *)tweenArguments, this->fields.postUpdate, 0);
@@ -2604,10 +2604,10 @@ void iTween__ApplyShakeRotationTargets(iTween_o *this, const MethodInfo *method)
   UnityEngine_Quaternion_o v17; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 
   v2 = this;
-  if ( (byte_4C3E9EB & 1) == 0 )
+  if ( (byte_4C49F6B & 1) == 0 )
   {
-    this = (iTween_o *)sub_1C32C20(&Method_UnityEngine_Component_GetComponent_Rigidbody___);
-    byte_4C3E9EB = 1;
+    this = (iTween_o *)sub_1C37058(&Method_UnityEngine_Component_GetComponent_Rigidbody___);
+    byte_4C49F6B = 1;
   }
   if ( v2->fields.percentage == 0.0 )
   {
@@ -2663,7 +2663,7 @@ void iTween__ApplyShakeRotationTargets(iTween_o *this, const MethodInfo *method)
     goto LABEL_28;
   if ( LODWORD(v12->max_length) <= 2 )
 LABEL_29:
-    sub_1C32E84(this);
+    sub_1C372BC(this);
   this = (iTween_o *)v2->fields.thisTransform;
   if ( !this )
     goto LABEL_28;
@@ -2678,7 +2678,7 @@ LABEL_29:
   {
     Component_object = UnityEngine_Component__GetComponent_object_(
                          (UnityEngine_Component_o *)v2,
-                         (const MethodInfo_30D3BC0 *)Method_UnityEngine_Component_GetComponent_Rigidbody___);
+                         (const MethodInfo_30DE428 *)Method_UnityEngine_Component_GetComponent_Rigidbody___);
     v16.fields.x = v2->fields.postUpdate.fields.x * 0.017453;
     v16.fields.y = v2->fields.postUpdate.fields.y * 0.017453;
     v16.fields.z = v2->fields.postUpdate.fields.z * 0.017453;
@@ -2689,7 +2689,7 @@ LABEL_29:
       return;
     }
 LABEL_28:
-    sub_1C32E7C(this);
+    sub_1C372B4(this);
   }
 }
 
@@ -2760,7 +2760,7 @@ void iTween__ApplyShakeScaleTargets(iTween_o *this, const MethodInfo *method)
         LODWORD(v10->max_length) <= 2) )
   {
 LABEL_23:
-    sub_1C32E84(this);
+    sub_1C372BC(this);
   }
   v10->m_Items[2].fields.z = v11;
   thisTransform = v2->fields.thisTransform;
@@ -2768,7 +2768,7 @@ LABEL_23:
     || (localScale = UnityEngine_Transform__get_localScale(v2->fields.thisTransform, 0), (v13 = v2->fields.vector3s) == 0) )
   {
 LABEL_22:
-    sub_1C32E7C(this);
+    sub_1C372B4(this);
   }
   if ( LODWORD(v13->max_length) <= 2 )
     goto LABEL_23;
@@ -2813,11 +2813,11 @@ void iTween__ApplyVector2Targets(iTween_o *this, const MethodInfo *method)
   UnityEngine_Vector2_o v25; // [xsp+8h] [xbp-28h] BYREF
 
   v2 = this;
-  if ( (byte_4C3E9E2 & 1) == 0 )
+  if ( (byte_4C49F62 & 1) == 0 )
   {
-    sub_1C32C20(&UnityEngine_Vector2_TypeInfo);
-    this = (iTween_o *)sub_1C32C20(&StringLiteral_22436/*"onupdateparams"*/);
-    byte_4C3E9E2 = 1;
+    sub_1C37058(&UnityEngine_Vector2_TypeInfo);
+    this = (iTween_o *)sub_1C37058(&StringLiteral_22439/*"onupdateparams"*/);
+    byte_4C49F62 = 1;
   }
   vector2s = v2->fields.vector2s;
   if ( !vector2s )
@@ -2858,7 +2858,7 @@ void iTween__ApplyVector2Targets(iTween_o *this, const MethodInfo *method)
     goto LABEL_21;
   if ( LODWORD(v15->max_length) <= 2 )
 LABEL_20:
-    sub_1C32E84(this);
+    sub_1C372BC(this);
   tweenArguments = v2->fields.tweenArguments;
   v25 = v15->m_Items[2];
   this = (iTween_o *)j_il2cpp_value_box_0(UnityEngine_Vector2_TypeInfo, &v25, v8, v9, v10, v11, v12, v13);
@@ -2866,7 +2866,7 @@ LABEL_20:
     goto LABEL_21;
   this = (iTween_o *)((__int64 (__fastcall *)(struct System_Collections_Hashtable_o *, __int64, iTween_o *, const MethodInfo *))tweenArguments->klass->vtable._29_set_Item.methodPtr)(
                        tweenArguments,
-                       StringLiteral_22436/*"onupdateparams"*/,
+                       StringLiteral_22439/*"onupdateparams"*/,
                        this,
                        tweenArguments->klass->vtable._29_set_Item.method);
   if ( v2->fields.percentage != 1.0 )
@@ -2874,7 +2874,7 @@ LABEL_20:
   v23 = v2->fields.vector2s;
   if ( !v23 )
 LABEL_21:
-    sub_1C32E7C(this);
+    sub_1C372B4(this);
   if ( LODWORD(v23->max_length) <= 1 )
     goto LABEL_20;
   v24 = v2->fields.tweenArguments;
@@ -2884,7 +2884,7 @@ LABEL_21:
     goto LABEL_21;
   ((void (__fastcall *)(struct System_Collections_Hashtable_o *, __int64, iTween_o *, const MethodInfo *))v24->klass->vtable._29_set_Item.methodPtr)(
     v24,
-    StringLiteral_22436/*"onupdateparams"*/,
+    StringLiteral_22439/*"onupdateparams"*/,
     this,
     v24->klass->vtable._29_set_Item.method);
 }
@@ -2924,11 +2924,11 @@ void iTween__ApplyVector3Targets(iTween_o *this, const MethodInfo *method)
   float v31; // [xsp+8h] [xbp-38h]
 
   v2 = this;
-  if ( (byte_4C3E9E1 & 1) == 0 )
+  if ( (byte_4C49F61 & 1) == 0 )
   {
-    sub_1C32C20(&UnityEngine_Vector3_TypeInfo);
-    this = (iTween_o *)sub_1C32C20(&StringLiteral_22436/*"onupdateparams"*/);
-    byte_4C3E9E1 = 1;
+    sub_1C37058(&UnityEngine_Vector3_TypeInfo);
+    this = (iTween_o *)sub_1C37058(&StringLiteral_22439/*"onupdateparams"*/);
+    byte_4C49F61 = 1;
   }
   vector3s = v2->fields.vector3s;
   if ( !vector3s )
@@ -2986,7 +2986,7 @@ void iTween__ApplyVector3Targets(iTween_o *this, const MethodInfo *method)
     goto LABEL_25;
   if ( LODWORD(v18->max_length) <= 2 )
 LABEL_24:
-    sub_1C32E84(this);
+    sub_1C372BC(this);
   z = v18->m_Items[2].fields.z;
   tweenArguments = v2->fields.tweenArguments;
   v30 = *(_QWORD *)&v18->m_Items[2].fields.x;
@@ -2996,7 +2996,7 @@ LABEL_24:
     goto LABEL_25;
   this = (iTween_o *)((__int64 (__fastcall *)(struct System_Collections_Hashtable_o *, __int64, iTween_o *, const MethodInfo *))tweenArguments->klass->vtable._29_set_Item.methodPtr)(
                        tweenArguments,
-                       StringLiteral_22436/*"onupdateparams"*/,
+                       StringLiteral_22439/*"onupdateparams"*/,
                        this,
                        tweenArguments->klass->vtable._29_set_Item.method);
   if ( v2->fields.percentage != 1.0 )
@@ -3004,7 +3004,7 @@ LABEL_24:
   v27 = v2->fields.vector3s;
   if ( !v27 )
 LABEL_25:
-    sub_1C32E7C(this);
+    sub_1C372B4(this);
   if ( LODWORD(v27->max_length) <= 1 )
     goto LABEL_24;
   v28 = v27->m_Items[1].fields.z;
@@ -3016,7 +3016,7 @@ LABEL_25:
     goto LABEL_25;
   ((void (__fastcall *)(struct System_Collections_Hashtable_o *, __int64, iTween_o *, const MethodInfo *))v29->klass->vtable._29_set_Item.methodPtr)(
     v29,
-    StringLiteral_22436/*"onupdateparams"*/,
+    StringLiteral_22439/*"onupdateparams"*/,
     this,
     v29->klass->vtable._29_set_Item.method);
 }
@@ -3076,27 +3076,27 @@ void iTween__AudioFrom(
   float v53; // [xsp+18h] [xbp-48h] BYREF
   float v54; // [xsp+1Ch] [xbp-44h] BYREF
 
-  if ( (byte_4C3E998 & 1) == 0 )
+  if ( (byte_4C49F18 & 1) == 0 )
   {
-    sub_1C32C20(&object___TypeInfo);
-    sub_1C32C20(&float_TypeInfo);
-    sub_1C32C20(&StringLiteral_24067/*"time"*/);
-    sub_1C32C20(&StringLiteral_22703/*"pitch"*/);
-    sub_1C32C20(&StringLiteral_24710/*"volume"*/);
-    sub_1C32C20(&iTween_TypeInfo);
-    byte_4C3E998 = 1;
+    sub_1C37058(&object___TypeInfo);
+    sub_1C37058(&float_TypeInfo);
+    sub_1C37058(&StringLiteral_24071/*"time"*/);
+    sub_1C37058(&StringLiteral_22706/*"pitch"*/);
+    sub_1C37058(&StringLiteral_24715/*"volume"*/);
+    sub_1C37058(&iTween_TypeInfo);
+    byte_4C49F18 = 1;
   }
-  v9 = sub_1C32CC8(object___TypeInfo, 6);
+  v9 = sub_1C37100(object___TypeInfo, 6);
   if ( !v9 )
-    sub_1C32E7C(0);
+    sub_1C372B4(0);
   v12 = v9;
-  v13 = StringLiteral_24710/*"volume"*/;
-  if ( StringLiteral_24710/*"volume"*/ )
+  v13 = StringLiteral_24715/*"volume"*/;
+  if ( StringLiteral_24715/*"volume"*/ )
   {
-    v13 = sub_1C32D5C(StringLiteral_24710/*"volume"*/);
+    v13 = sub_1C37194(StringLiteral_24715/*"volume"*/);
     if ( !v13 )
       goto LABEL_32;
-    v14 = StringLiteral_24710/*"volume"*/;
+    v14 = StringLiteral_24715/*"volume"*/;
   }
   else
   {
@@ -3105,27 +3105,27 @@ void iTween__AudioFrom(
   if ( !*(_DWORD *)(v12 + 24) )
     goto LABEL_31;
   *(_QWORD *)(v12 + 32) = v14;
-  sub_1C32BC4((CGThumbnailListItem_o *)(v12 + 32), v14, v10, v11);
+  sub_1C36FFC((CGThumbnailListItem_o *)(v12 + 32), v14, v10, v11);
   v54 = volume;
   v13 = j_il2cpp_value_box_0(float_TypeInfo, &v54, v15, v16, v17, v18, v19, v20);
   v23 = v13;
   if ( v13 )
   {
-    v13 = sub_1C32D5C(v13);
+    v13 = sub_1C37194(v13);
     if ( !v13 )
       goto LABEL_32;
   }
   if ( *(_DWORD *)(v12 + 24) <= 1u )
     goto LABEL_31;
   *(_QWORD *)(v12 + 40) = v23;
-  sub_1C32BC4((CGThumbnailListItem_o *)(v12 + 40), v23, v21, v22);
-  v13 = StringLiteral_22703/*"pitch"*/;
-  if ( StringLiteral_22703/*"pitch"*/ )
+  sub_1C36FFC((CGThumbnailListItem_o *)(v12 + 40), v23, v21, v22);
+  v13 = StringLiteral_22706/*"pitch"*/;
+  if ( StringLiteral_22706/*"pitch"*/ )
   {
-    v13 = sub_1C32D5C(StringLiteral_22703/*"pitch"*/);
+    v13 = sub_1C37194(StringLiteral_22706/*"pitch"*/);
     if ( !v13 )
       goto LABEL_32;
-    v26 = StringLiteral_22703/*"pitch"*/;
+    v26 = StringLiteral_22706/*"pitch"*/;
   }
   else
   {
@@ -3134,27 +3134,27 @@ void iTween__AudioFrom(
   if ( *(_DWORD *)(v12 + 24) <= 2u )
     goto LABEL_31;
   *(_QWORD *)(v12 + 48) = v26;
-  sub_1C32BC4((CGThumbnailListItem_o *)(v12 + 48), v26, v24, v25);
+  sub_1C36FFC((CGThumbnailListItem_o *)(v12 + 48), v26, v24, v25);
   v53 = pitch;
   v13 = j_il2cpp_value_box_0(float_TypeInfo, &v53, v27, v28, v29, v30, v31, v32);
   v35 = v13;
   if ( v13 )
   {
-    v13 = sub_1C32D5C(v13);
+    v13 = sub_1C37194(v13);
     if ( !v13 )
       goto LABEL_32;
   }
   if ( *(_DWORD *)(v12 + 24) <= 3u )
     goto LABEL_31;
   *(_QWORD *)(v12 + 56) = v35;
-  sub_1C32BC4((CGThumbnailListItem_o *)(v12 + 56), v35, v33, v34);
-  v13 = StringLiteral_24067/*"time"*/;
-  if ( StringLiteral_24067/*"time"*/ )
+  sub_1C36FFC((CGThumbnailListItem_o *)(v12 + 56), v35, v33, v34);
+  v13 = StringLiteral_24071/*"time"*/;
+  if ( StringLiteral_24071/*"time"*/ )
   {
-    v13 = sub_1C32D5C(StringLiteral_24067/*"time"*/);
+    v13 = sub_1C37194(StringLiteral_24071/*"time"*/);
     if ( !v13 )
       goto LABEL_32;
-    v38 = StringLiteral_24067/*"time"*/;
+    v38 = StringLiteral_24071/*"time"*/;
   }
   else
   {
@@ -3163,33 +3163,33 @@ void iTween__AudioFrom(
   if ( *(_DWORD *)(v12 + 24) <= 4u )
     goto LABEL_31;
   *(_QWORD *)(v12 + 64) = v38;
-  sub_1C32BC4((CGThumbnailListItem_o *)(v12 + 64), v38, v36, v37);
+  sub_1C36FFC((CGThumbnailListItem_o *)(v12 + 64), v38, v36, v37);
   v52 = time;
   v13 = j_il2cpp_value_box_0(float_TypeInfo, &v52, v39, v40, v41, v42, v43, v44);
   v47 = v13;
   if ( v13 )
   {
-    v13 = sub_1C32D5C(v13);
+    v13 = sub_1C37194(v13);
     if ( !v13 )
     {
 LABEL_32:
-      v51 = sub_1C32EA0(v13);
-      sub_1C32D48(v51, 0);
+      v51 = sub_1C372D8(v13);
+      sub_1C37180(v51, 0);
     }
   }
   if ( *(_DWORD *)(v12 + 24) <= 5u )
 LABEL_31:
-    sub_1C32E84(v13);
+    sub_1C372BC(v13);
   *(_QWORD *)(v12 + 72) = v47;
-  sub_1C32BC4((CGThumbnailListItem_o *)(v12 + 72), v47, v45, v46);
+  sub_1C36FFC((CGThumbnailListItem_o *)(v12 + 72), v47, v45, v46);
   if ( !iTween_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(iTween_TypeInfo);
   v49 = iTween__Hash((System_Object_array *)v12, v48);
-  iTween__AudioFrom_63148904(target, v49, v50);
+  iTween__AudioFrom_63192016(target, v49, v50);
 }
 
 
-void iTween__AudioFrom_63148904(
+void iTween__AudioFrom_63192016(
         UnityEngine_GameObject_o *target,
         System_Collections_Hashtable_o *args,
         const MethodInfo *method)
@@ -3237,25 +3237,25 @@ void iTween__AudioFrom_63148904(
   float v45; // [xsp+8h] [xbp-88h] BYREF
   float v46; // [xsp+Ch] [xbp-84h] BYREF
 
-  if ( (byte_4C3E999 & 1) == 0 )
+  if ( (byte_4C49F19 & 1) == 0 )
   {
-    sub_1C32C20(&UnityEngine_AudioSource_TypeInfo);
-    sub_1C32C20(&UnityEngine_Debug_TypeInfo);
-    sub_1C32C20(&iTween_EaseType_TypeInfo);
-    sub_1C32C20(&Method_UnityEngine_GameObject_GetComponent_AudioSource___);
-    sub_1C32C20(&UnityEngine_Object_TypeInfo);
-    sub_1C32C20(&float_TypeInfo);
-    sub_1C32C20(&StringLiteral_18751/*"easetype"*/);
-    sub_1C32C20(&StringLiteral_21560/*"method"*/);
-    sub_1C32C20(&StringLiteral_20095/*"iTween Error: AudioFrom requires an AudioSource."*/);
-    sub_1C32C20(&StringLiteral_24106/*"to"*/);
-    sub_1C32C20(&StringLiteral_16940/*"audiosource"*/);
-    sub_1C32C20(&StringLiteral_16937/*"audio"*/);
-    sub_1C32C20(&StringLiteral_22703/*"pitch"*/);
-    sub_1C32C20(&StringLiteral_24710/*"volume"*/);
-    sub_1C32C20(&StringLiteral_24241/*"type"*/);
-    sub_1C32C20(&iTween_TypeInfo);
-    byte_4C3E999 = 1;
+    sub_1C37058(&UnityEngine_AudioSource_TypeInfo);
+    sub_1C37058(&UnityEngine_Debug_TypeInfo);
+    sub_1C37058(&iTween_EaseType_TypeInfo);
+    sub_1C37058(&Method_UnityEngine_GameObject_GetComponent_AudioSource___);
+    sub_1C37058(&UnityEngine_Object_TypeInfo);
+    sub_1C37058(&float_TypeInfo);
+    sub_1C37058(&StringLiteral_18754/*"easetype"*/);
+    sub_1C37058(&StringLiteral_21563/*"method"*/);
+    sub_1C37058(&StringLiteral_20098/*"iTween Error: AudioFrom requires an AudioSource."*/);
+    sub_1C37058(&StringLiteral_24110/*"to"*/);
+    sub_1C37058(&StringLiteral_16942/*"audiosource"*/);
+    sub_1C37058(&StringLiteral_16939/*"audio"*/);
+    sub_1C37058(&StringLiteral_22706/*"pitch"*/);
+    sub_1C37058(&StringLiteral_24715/*"volume"*/);
+    sub_1C37058(&StringLiteral_24245/*"type"*/);
+    sub_1C37058(&iTween_TypeInfo);
+    byte_4C49F19 = 1;
   }
   if ( !iTween_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(iTween_TypeInfo);
@@ -3265,13 +3265,13 @@ void iTween__AudioFrom_63148904(
   v6 = (System_Collections_Hashtable_o *)v5;
   v5 = (*(__int64 (__fastcall **)(__int64, __int64, _QWORD))(*(_QWORD *)v5 + 712LL))(
          v5,
-         StringLiteral_16940/*"audiosource"*/,
+         StringLiteral_16942/*"audiosource"*/,
          *(_QWORD *)(*(_QWORD *)v5 + 720LL));
   if ( (v5 & 1) != 0 )
   {
     v5 = ((__int64 (__fastcall *)(System_Collections_Hashtable_o *, __int64, const MethodInfo *))v6->klass->vtable._28_get_Item.methodPtr)(
            v6,
-           StringLiteral_16940/*"audiosource"*/,
+           StringLiteral_16942/*"audiosource"*/,
            v6->klass->vtable._28_get_Item.method);
     if ( !v5 )
       goto LABEL_31;
@@ -3284,13 +3284,13 @@ LABEL_15:
       v11 = volume;
       if ( (((__int64 (__fastcall *)(System_Collections_Hashtable_o *, __int64, const MethodInfo *))v6->klass->vtable._25_Contains.methodPtr)(
               v6,
-              StringLiteral_24710/*"volume"*/,
+              StringLiteral_24715/*"volume"*/,
               v6->klass->vtable._25_Contains.method)
           & 1) != 0 )
       {
         v5 = ((__int64 (__fastcall *)(System_Collections_Hashtable_o *, __int64, const MethodInfo *))v6->klass->vtable._28_get_Item.methodPtr)(
                v6,
-               StringLiteral_24710/*"volume"*/,
+               StringLiteral_24715/*"volume"*/,
                v6->klass->vtable._28_get_Item.method);
         if ( !v5 )
           goto LABEL_31;
@@ -3301,7 +3301,7 @@ LABEL_15:
       v14 = pitch;
       if ( (((__int64 (__fastcall *)(System_Collections_Hashtable_o *, __int64, const MethodInfo *))v6->klass->vtable._25_Contains.methodPtr)(
               v6,
-              StringLiteral_22703/*"pitch"*/,
+              StringLiteral_22706/*"pitch"*/,
               v6->klass->vtable._25_Contains.method)
           & 1) == 0 )
       {
@@ -3312,19 +3312,19 @@ LABEL_23:
         v23 = j_il2cpp_value_box_0(float_TypeInfo, &v46, v17, v18, v19, v20, v21, v22);
         ((void (__fastcall *)(System_Collections_Hashtable_o *, __int64, __int64, const MethodInfo *))v6->klass->vtable._29_set_Item.methodPtr)(
           v6,
-          StringLiteral_24710/*"volume"*/,
+          StringLiteral_24715/*"volume"*/,
           v23,
           v6->klass->vtable._29_set_Item.method);
         v45 = pitch;
         v30 = j_il2cpp_value_box_0(float_TypeInfo, &v45, v24, v25, v26, v27, v28, v29);
         ((void (__fastcall *)(System_Collections_Hashtable_o *, __int64, __int64, const MethodInfo *))v6->klass->vtable._29_set_Item.methodPtr)(
           v6,
-          StringLiteral_22703/*"pitch"*/,
+          StringLiteral_22706/*"pitch"*/,
           v30,
           v6->klass->vtable._29_set_Item.method);
         if ( (((__int64 (__fastcall *)(System_Collections_Hashtable_o *, __int64, const MethodInfo *))v6->klass->vtable._25_Contains.methodPtr)(
                 v6,
-                StringLiteral_18751/*"easetype"*/,
+                StringLiteral_18754/*"easetype"*/,
                 v6->klass->vtable._25_Contains.method)
             & 1) == 0 )
         {
@@ -3332,19 +3332,19 @@ LABEL_23:
           v37 = j_il2cpp_value_box_0(iTween_EaseType_TypeInfo, &v44, v31, v32, v33, v34, v35, v36);
           ((void (__fastcall *)(System_Collections_Hashtable_o *, __int64, __int64, const MethodInfo *))v6->klass->vtable._22_Add.methodPtr)(
             v6,
-            StringLiteral_18751/*"easetype"*/,
+            StringLiteral_18754/*"easetype"*/,
             v37,
             v6->klass->vtable._22_Add.method);
         }
         ((void (__fastcall *)(System_Collections_Hashtable_o *, __int64, __int64, const MethodInfo *))v6->klass->vtable._29_set_Item.methodPtr)(
           v6,
-          StringLiteral_24241/*"type"*/,
-          StringLiteral_16937/*"audio"*/,
+          StringLiteral_24245/*"type"*/,
+          StringLiteral_16939/*"audio"*/,
           v6->klass->vtable._29_set_Item.method);
         ((void (__fastcall *)(System_Collections_Hashtable_o *, __int64, __int64, const MethodInfo *))v6->klass->vtable._29_set_Item.methodPtr)(
           v6,
-          StringLiteral_21560/*"method"*/,
-          StringLiteral_24106/*"to"*/,
+          StringLiteral_21563/*"method"*/,
+          StringLiteral_24110/*"to"*/,
           v6->klass->vtable._29_set_Item.method);
         if ( !iTween_TypeInfo->_2.cctor_finished )
           j_il2cpp_runtime_class_init_0(iTween_TypeInfo);
@@ -3353,7 +3353,7 @@ LABEL_23:
       }
       v5 = ((__int64 (__fastcall *)(System_Collections_Hashtable_o *, __int64, const MethodInfo *))v6->klass->vtable._28_get_Item.methodPtr)(
              v6,
-             StringLiteral_22703/*"pitch"*/,
+             StringLiteral_22706/*"pitch"*/,
              v6->klass->vtable._28_get_Item.method);
       if ( v5 )
       {
@@ -3363,27 +3363,27 @@ LABEL_23:
           goto LABEL_23;
         }
 LABEL_32:
-        v41 = sub_1C3313C(v5);
+        v41 = sub_1C37574(v5);
         iTween__AudioTo(v39, *(float *)&v41, v42, v43, v40);
         return;
       }
 LABEL_31:
-      sub_1C32E7C(v5);
+      sub_1C372B4(v5);
     }
-    sub_1C3313C(v5);
+    sub_1C37574(v5);
   }
   if ( !target )
     goto LABEL_31;
   Component_object = UnityEngine_GameObject__GetComponent_object_(
                        target,
-                       (const MethodInfo_3134970 *)Method_UnityEngine_GameObject_GetComponent_AudioSource___);
+                       (const MethodInfo_313F1D8 *)Method_UnityEngine_GameObject_GetComponent_AudioSource___);
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   if ( UnityEngine_Object__op_Implicit((UnityEngine_Object_o *)Component_object, 0) )
   {
     v5 = (__int64)UnityEngine_GameObject__GetComponent_object_(
                     target,
-                    (const MethodInfo_3134970 *)Method_UnityEngine_GameObject_GetComponent_AudioSource___);
+                    (const MethodInfo_313F1D8 *)Method_UnityEngine_GameObject_GetComponent_AudioSource___);
     v7 = (UnityEngine_AudioSource_o *)v5;
     if ( !v5 )
       goto LABEL_31;
@@ -3391,7 +3391,7 @@ LABEL_31:
   }
   if ( !UnityEngine_Debug_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Debug_TypeInfo);
-  UnityEngine_Debug__LogError((Il2CppObject *)StringLiteral_20095/*"iTween Error: AudioFrom requires an AudioSource."*/, 0);
+  UnityEngine_Debug__LogError((Il2CppObject *)StringLiteral_20098/*"iTween Error: AudioFrom requires an AudioSource."*/, 0);
 }
 
 
@@ -3444,27 +3444,27 @@ void iTween__AudioTo(UnityEngine_GameObject_o *target, float volume, float pitch
   float v53; // [xsp+18h] [xbp-48h] BYREF
   float v54; // [xsp+1Ch] [xbp-44h] BYREF
 
-  if ( (byte_4C3E99A & 1) == 0 )
+  if ( (byte_4C49F1A & 1) == 0 )
   {
-    sub_1C32C20(&object___TypeInfo);
-    sub_1C32C20(&float_TypeInfo);
-    sub_1C32C20(&StringLiteral_24067/*"time"*/);
-    sub_1C32C20(&StringLiteral_22703/*"pitch"*/);
-    sub_1C32C20(&StringLiteral_24710/*"volume"*/);
-    sub_1C32C20(&iTween_TypeInfo);
-    byte_4C3E99A = 1;
+    sub_1C37058(&object___TypeInfo);
+    sub_1C37058(&float_TypeInfo);
+    sub_1C37058(&StringLiteral_24071/*"time"*/);
+    sub_1C37058(&StringLiteral_22706/*"pitch"*/);
+    sub_1C37058(&StringLiteral_24715/*"volume"*/);
+    sub_1C37058(&iTween_TypeInfo);
+    byte_4C49F1A = 1;
   }
-  v9 = sub_1C32CC8(object___TypeInfo, 6);
+  v9 = sub_1C37100(object___TypeInfo, 6);
   if ( !v9 )
-    sub_1C32E7C(0);
+    sub_1C372B4(0);
   v12 = v9;
-  v13 = StringLiteral_24710/*"volume"*/;
-  if ( StringLiteral_24710/*"volume"*/ )
+  v13 = StringLiteral_24715/*"volume"*/;
+  if ( StringLiteral_24715/*"volume"*/ )
   {
-    v13 = sub_1C32D5C(StringLiteral_24710/*"volume"*/);
+    v13 = sub_1C37194(StringLiteral_24715/*"volume"*/);
     if ( !v13 )
       goto LABEL_32;
-    v14 = StringLiteral_24710/*"volume"*/;
+    v14 = StringLiteral_24715/*"volume"*/;
   }
   else
   {
@@ -3473,27 +3473,27 @@ void iTween__AudioTo(UnityEngine_GameObject_o *target, float volume, float pitch
   if ( !*(_DWORD *)(v12 + 24) )
     goto LABEL_31;
   *(_QWORD *)(v12 + 32) = v14;
-  sub_1C32BC4((CGThumbnailListItem_o *)(v12 + 32), v14, v10, v11);
+  sub_1C36FFC((CGThumbnailListItem_o *)(v12 + 32), v14, v10, v11);
   v54 = volume;
   v13 = j_il2cpp_value_box_0(float_TypeInfo, &v54, v15, v16, v17, v18, v19, v20);
   v23 = v13;
   if ( v13 )
   {
-    v13 = sub_1C32D5C(v13);
+    v13 = sub_1C37194(v13);
     if ( !v13 )
       goto LABEL_32;
   }
   if ( *(_DWORD *)(v12 + 24) <= 1u )
     goto LABEL_31;
   *(_QWORD *)(v12 + 40) = v23;
-  sub_1C32BC4((CGThumbnailListItem_o *)(v12 + 40), v23, v21, v22);
-  v13 = StringLiteral_22703/*"pitch"*/;
-  if ( StringLiteral_22703/*"pitch"*/ )
+  sub_1C36FFC((CGThumbnailListItem_o *)(v12 + 40), v23, v21, v22);
+  v13 = StringLiteral_22706/*"pitch"*/;
+  if ( StringLiteral_22706/*"pitch"*/ )
   {
-    v13 = sub_1C32D5C(StringLiteral_22703/*"pitch"*/);
+    v13 = sub_1C37194(StringLiteral_22706/*"pitch"*/);
     if ( !v13 )
       goto LABEL_32;
-    v26 = StringLiteral_22703/*"pitch"*/;
+    v26 = StringLiteral_22706/*"pitch"*/;
   }
   else
   {
@@ -3502,27 +3502,27 @@ void iTween__AudioTo(UnityEngine_GameObject_o *target, float volume, float pitch
   if ( *(_DWORD *)(v12 + 24) <= 2u )
     goto LABEL_31;
   *(_QWORD *)(v12 + 48) = v26;
-  sub_1C32BC4((CGThumbnailListItem_o *)(v12 + 48), v26, v24, v25);
+  sub_1C36FFC((CGThumbnailListItem_o *)(v12 + 48), v26, v24, v25);
   v53 = pitch;
   v13 = j_il2cpp_value_box_0(float_TypeInfo, &v53, v27, v28, v29, v30, v31, v32);
   v35 = v13;
   if ( v13 )
   {
-    v13 = sub_1C32D5C(v13);
+    v13 = sub_1C37194(v13);
     if ( !v13 )
       goto LABEL_32;
   }
   if ( *(_DWORD *)(v12 + 24) <= 3u )
     goto LABEL_31;
   *(_QWORD *)(v12 + 56) = v35;
-  sub_1C32BC4((CGThumbnailListItem_o *)(v12 + 56), v35, v33, v34);
-  v13 = StringLiteral_24067/*"time"*/;
-  if ( StringLiteral_24067/*"time"*/ )
+  sub_1C36FFC((CGThumbnailListItem_o *)(v12 + 56), v35, v33, v34);
+  v13 = StringLiteral_24071/*"time"*/;
+  if ( StringLiteral_24071/*"time"*/ )
   {
-    v13 = sub_1C32D5C(StringLiteral_24067/*"time"*/);
+    v13 = sub_1C37194(StringLiteral_24071/*"time"*/);
     if ( !v13 )
       goto LABEL_32;
-    v38 = StringLiteral_24067/*"time"*/;
+    v38 = StringLiteral_24071/*"time"*/;
   }
   else
   {
@@ -3531,33 +3531,33 @@ void iTween__AudioTo(UnityEngine_GameObject_o *target, float volume, float pitch
   if ( *(_DWORD *)(v12 + 24) <= 4u )
     goto LABEL_31;
   *(_QWORD *)(v12 + 64) = v38;
-  sub_1C32BC4((CGThumbnailListItem_o *)(v12 + 64), v38, v36, v37);
+  sub_1C36FFC((CGThumbnailListItem_o *)(v12 + 64), v38, v36, v37);
   v52 = time;
   v13 = j_il2cpp_value_box_0(float_TypeInfo, &v52, v39, v40, v41, v42, v43, v44);
   v47 = v13;
   if ( v13 )
   {
-    v13 = sub_1C32D5C(v13);
+    v13 = sub_1C37194(v13);
     if ( !v13 )
     {
 LABEL_32:
-      v51 = sub_1C32EA0(v13);
-      sub_1C32D48(v51, 0);
+      v51 = sub_1C372D8(v13);
+      sub_1C37180(v51, 0);
     }
   }
   if ( *(_DWORD *)(v12 + 24) <= 5u )
 LABEL_31:
-    sub_1C32E84(v13);
+    sub_1C372BC(v13);
   *(_QWORD *)(v12 + 72) = v47;
-  sub_1C32BC4((CGThumbnailListItem_o *)(v12 + 72), v47, v45, v46);
+  sub_1C36FFC((CGThumbnailListItem_o *)(v12 + 72), v47, v45, v46);
   if ( !iTween_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(iTween_TypeInfo);
   v49 = iTween__Hash((System_Object_array *)v12, v48);
-  iTween__AudioTo_63150768(target, v49, v50);
+  iTween__AudioTo_63193880(target, v49, v50);
 }
 
 
-void iTween__AudioTo_63150768(
+void iTween__AudioTo_63193880(
         UnityEngine_GameObject_o *target,
         System_Collections_Hashtable_o *args,
         const MethodInfo *method)
@@ -3574,26 +3574,26 @@ void iTween__AudioTo_63150768(
   const MethodInfo *v14; // x2
   int v15; // [xsp+Ch] [xbp-44h] BYREF
 
-  if ( (byte_4C3E99B & 1) == 0 )
+  if ( (byte_4C49F1B & 1) == 0 )
   {
-    sub_1C32C20(&iTween_EaseType_TypeInfo);
-    sub_1C32C20(&StringLiteral_18751/*"easetype"*/);
-    sub_1C32C20(&StringLiteral_21560/*"method"*/);
-    sub_1C32C20(&StringLiteral_24106/*"to"*/);
-    sub_1C32C20(&StringLiteral_16937/*"audio"*/);
-    sub_1C32C20(&StringLiteral_24241/*"type"*/);
-    sub_1C32C20(&iTween_TypeInfo);
-    byte_4C3E99B = 1;
+    sub_1C37058(&iTween_EaseType_TypeInfo);
+    sub_1C37058(&StringLiteral_18754/*"easetype"*/);
+    sub_1C37058(&StringLiteral_21563/*"method"*/);
+    sub_1C37058(&StringLiteral_24110/*"to"*/);
+    sub_1C37058(&StringLiteral_16939/*"audio"*/);
+    sub_1C37058(&StringLiteral_24245/*"type"*/);
+    sub_1C37058(&iTween_TypeInfo);
+    byte_4C49F1B = 1;
   }
   if ( !iTween_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(iTween_TypeInfo);
   v5 = iTween__CleanArgs(args, (const MethodInfo *)args);
   if ( !v5 )
-    sub_1C32E7C(0);
+    sub_1C372B4(0);
   v6 = v5;
   if ( (((__int64 (__fastcall *)(System_Collections_Hashtable_o *, __int64, const MethodInfo *))v5->klass->vtable._25_Contains.methodPtr)(
           v5,
-          StringLiteral_18751/*"easetype"*/,
+          StringLiteral_18754/*"easetype"*/,
           v5->klass->vtable._25_Contains.method)
       & 1) == 0 )
   {
@@ -3601,19 +3601,19 @@ void iTween__AudioTo_63150768(
     v13 = j_il2cpp_value_box_0(iTween_EaseType_TypeInfo, &v15, v7, v8, v9, v10, v11, v12);
     ((void (__fastcall *)(System_Collections_Hashtable_o *, __int64, __int64, const MethodInfo *))v6->klass->vtable._22_Add.methodPtr)(
       v6,
-      StringLiteral_18751/*"easetype"*/,
+      StringLiteral_18754/*"easetype"*/,
       v13,
       v6->klass->vtable._22_Add.method);
   }
   ((void (__fastcall *)(System_Collections_Hashtable_o *, __int64, __int64, const MethodInfo *))v6->klass->vtable._29_set_Item.methodPtr)(
     v6,
-    StringLiteral_24241/*"type"*/,
-    StringLiteral_16937/*"audio"*/,
+    StringLiteral_24245/*"type"*/,
+    StringLiteral_16939/*"audio"*/,
     v6->klass->vtable._29_set_Item.method);
   ((void (__fastcall *)(System_Collections_Hashtable_o *, __int64, __int64, const MethodInfo *))v6->klass->vtable._29_set_Item.methodPtr)(
     v6,
-    StringLiteral_21560/*"method"*/,
-    StringLiteral_24106/*"to"*/,
+    StringLiteral_21563/*"method"*/,
+    StringLiteral_24110/*"to"*/,
     v6->klass->vtable._29_set_Item.method);
   if ( !iTween_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(iTween_TypeInfo);
@@ -3662,39 +3662,39 @@ void iTween__AudioUpdate(
   float v38; // s1
   float v39; // s2
 
-  if ( (byte_4C3E9F9 & 1) == 0 )
+  if ( (byte_4C49F79 & 1) == 0 )
   {
-    sub_1C32C20(&UnityEngine_AudioSource_TypeInfo);
-    sub_1C32C20(&UnityEngine_Debug_TypeInfo);
-    sub_1C32C20(&iTween_Defaults_TypeInfo);
-    sub_1C32C20(&Method_UnityEngine_GameObject_GetComponent_AudioSource___);
-    sub_1C32C20(&UnityEngine_Object_TypeInfo);
-    sub_1C32C20(&float_TypeInfo);
-    sub_1C32C20(&UnityEngine_Vector2___TypeInfo);
-    sub_1C32C20(&StringLiteral_24067/*"time"*/);
-    sub_1C32C20(&StringLiteral_16940/*"audiosource"*/);
-    sub_1C32C20(&StringLiteral_20097/*"iTween Error: AudioUpdate requires an AudioSource."*/);
-    sub_1C32C20(&StringLiteral_22703/*"pitch"*/);
-    sub_1C32C20(&StringLiteral_24710/*"volume"*/);
-    sub_1C32C20(&iTween_TypeInfo);
-    byte_4C3E9F9 = 1;
+    sub_1C37058(&UnityEngine_AudioSource_TypeInfo);
+    sub_1C37058(&UnityEngine_Debug_TypeInfo);
+    sub_1C37058(&iTween_Defaults_TypeInfo);
+    sub_1C37058(&Method_UnityEngine_GameObject_GetComponent_AudioSource___);
+    sub_1C37058(&UnityEngine_Object_TypeInfo);
+    sub_1C37058(&float_TypeInfo);
+    sub_1C37058(&UnityEngine_Vector2___TypeInfo);
+    sub_1C37058(&StringLiteral_24071/*"time"*/);
+    sub_1C37058(&StringLiteral_16942/*"audiosource"*/);
+    sub_1C37058(&StringLiteral_20100/*"iTween Error: AudioUpdate requires an AudioSource."*/);
+    sub_1C37058(&StringLiteral_22706/*"pitch"*/);
+    sub_1C37058(&StringLiteral_24715/*"volume"*/);
+    sub_1C37058(&iTween_TypeInfo);
+    byte_4C49F79 = 1;
   }
   if ( !iTween_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(iTween_TypeInfo);
   iTween__CleanArgs(args, (const MethodInfo *)args);
-  v5 = sub_1C32CC8(UnityEngine_Vector2___TypeInfo, 4);
+  v5 = sub_1C37100(UnityEngine_Vector2___TypeInfo, 4);
   if ( !args )
     goto LABEL_55;
   v6 = v5;
   if ( (((__int64 (__fastcall *)(System_Collections_Hashtable_o *, __int64, const MethodInfo *))args->klass->vtable._25_Contains.methodPtr)(
           args,
-          StringLiteral_24067/*"time"*/,
+          StringLiteral_24071/*"time"*/,
           args->klass->vtable._25_Contains.method)
       & 1) != 0 )
   {
     v5 = ((__int64 (__fastcall *)(System_Collections_Hashtable_o *, __int64, const MethodInfo *))args->klass->vtable._28_get_Item.methodPtr)(
            args,
-           StringLiteral_24067/*"time"*/,
+           StringLiteral_24071/*"time"*/,
            args->klass->vtable._28_get_Item.method);
     if ( !v5 )
       goto LABEL_55;
@@ -3721,13 +3721,13 @@ void iTween__AudioUpdate(
   }
   v5 = ((__int64 (__fastcall *)(System_Collections_Hashtable_o *, __int64, const MethodInfo *))args->klass->vtable._25_Contains.methodPtr)(
          args,
-         StringLiteral_16940/*"audiosource"*/,
+         StringLiteral_16942/*"audiosource"*/,
          args->klass->vtable._25_Contains.method);
   if ( (v5 & 1) != 0 )
   {
     v5 = ((__int64 (__fastcall *)(System_Collections_Hashtable_o *, __int64, const MethodInfo *))args->klass->vtable._28_get_Item.methodPtr)(
            args,
-           StringLiteral_16940/*"audiosource"*/,
+           StringLiteral_16942/*"audiosource"*/,
            args->klass->vtable._28_get_Item.method);
     if ( !v5 )
       goto LABEL_55;
@@ -3747,13 +3747,13 @@ LABEL_24:
       *(float *)(v6 + 36) = pitch;
       if ( (((__int64 (__fastcall *)(System_Collections_Hashtable_o *, __int64, const MethodInfo *))args->klass->vtable._25_Contains.methodPtr)(
               args,
-              StringLiteral_24710/*"volume"*/,
+              StringLiteral_24715/*"volume"*/,
               args->klass->vtable._25_Contains.method)
           & 1) == 0 )
         goto LABEL_31;
       v5 = ((__int64 (__fastcall *)(System_Collections_Hashtable_o *, __int64, const MethodInfo *))args->klass->vtable._28_get_Item.methodPtr)(
              args,
-             StringLiteral_24710/*"volume"*/,
+             StringLiteral_24715/*"volume"*/,
              args->klass->vtable._28_get_Item.method);
       if ( !v5 )
         goto LABEL_55;
@@ -3766,7 +3766,7 @@ LABEL_24:
 LABEL_31:
         v5 = ((__int64 (__fastcall *)(System_Collections_Hashtable_o *, __int64, const MethodInfo *))args->klass->vtable._25_Contains.methodPtr)(
                args,
-               StringLiteral_22703/*"pitch"*/,
+               StringLiteral_22706/*"pitch"*/,
                args->klass->vtable._25_Contains.method);
         if ( (v5 & 1) == 0 )
         {
@@ -3775,7 +3775,7 @@ LABEL_31:
         }
         v5 = ((__int64 (__fastcall *)(System_Collections_Hashtable_o *, __int64, const MethodInfo *))args->klass->vtable._28_get_Item.methodPtr)(
                args,
-               StringLiteral_22703/*"pitch"*/,
+               StringLiteral_22706/*"pitch"*/,
                args->klass->vtable._28_get_Item.method);
         if ( v5 )
         {
@@ -3797,7 +3797,7 @@ LABEL_37:
               if ( v24 < 0.0 )
                 v25 = 0.0;
               v26 = v25 <= 180.0 ? v25 : v25 + -360.0;
-              v27 = UnityEngine_Mathf__SmoothDamp_71168496(
+              v27 = UnityEngine_Mathf__SmoothDamp_71211608(
                       v21,
                       v21 + v26,
                       (float *)(v6 + 48),
@@ -3817,7 +3817,7 @@ LABEL_37:
                   v32 = 0.0;
                 if ( v32 > 180.0 )
                   v32 = v32 + -360.0;
-                v33 = UnityEngine_Mathf__SmoothDamp_71168496(
+                v33 = UnityEngine_Mathf__SmoothDamp_71211608(
                         v28,
                         v28 + v32,
                         (float *)(v6 + 52),
@@ -3839,32 +3839,32 @@ LABEL_37:
               }
             }
 LABEL_54:
-            sub_1C32E84(v5);
+            sub_1C372BC(v5);
           }
           goto LABEL_56;
         }
 LABEL_55:
-        sub_1C32E7C(v5);
+        sub_1C372B4(v5);
       }
 LABEL_56:
-      v37 = sub_1C3313C(v5);
-      iTween__AudioUpdate_63230700(v35, *(float *)&v37, v38, v39, v36);
+      v37 = sub_1C37574(v5);
+      iTween__AudioUpdate_63273812(v35, *(float *)&v37, v38, v39, v36);
       return;
     }
-    sub_1C3313C(v5);
+    sub_1C37574(v5);
   }
   if ( !target )
     goto LABEL_55;
   Component_object = UnityEngine_GameObject__GetComponent_object_(
                        target,
-                       (const MethodInfo_3134970 *)Method_UnityEngine_GameObject_GetComponent_AudioSource___);
+                       (const MethodInfo_313F1D8 *)Method_UnityEngine_GameObject_GetComponent_AudioSource___);
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   if ( UnityEngine_Object__op_Implicit((UnityEngine_Object_o *)Component_object, 0) )
   {
     v5 = (__int64)UnityEngine_GameObject__GetComponent_object_(
                     target,
-                    (const MethodInfo_3134970 *)Method_UnityEngine_GameObject_GetComponent_AudioSource___);
+                    (const MethodInfo_313F1D8 *)Method_UnityEngine_GameObject_GetComponent_AudioSource___);
     target = (UnityEngine_GameObject_o *)v5;
     if ( !v5 )
       goto LABEL_55;
@@ -3872,11 +3872,11 @@ LABEL_56:
   }
   if ( !UnityEngine_Debug_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Debug_TypeInfo);
-  UnityEngine_Debug__LogError((Il2CppObject *)StringLiteral_20097/*"iTween Error: AudioUpdate requires an AudioSource."*/, 0);
+  UnityEngine_Debug__LogError((Il2CppObject *)StringLiteral_20100/*"iTween Error: AudioUpdate requires an AudioSource."*/, 0);
 }
 
 
-void iTween__AudioUpdate_63230700(
+void iTween__AudioUpdate_63273812(
         UnityEngine_GameObject_o *target,
         float volume,
         float pitch,
@@ -3930,27 +3930,27 @@ void iTween__AudioUpdate_63230700(
   float v53; // [xsp+18h] [xbp-48h] BYREF
   float v54; // [xsp+1Ch] [xbp-44h] BYREF
 
-  if ( (byte_4C3E9FA & 1) == 0 )
+  if ( (byte_4C49F7A & 1) == 0 )
   {
-    sub_1C32C20(&object___TypeInfo);
-    sub_1C32C20(&float_TypeInfo);
-    sub_1C32C20(&StringLiteral_24067/*"time"*/);
-    sub_1C32C20(&StringLiteral_22703/*"pitch"*/);
-    sub_1C32C20(&StringLiteral_24710/*"volume"*/);
-    sub_1C32C20(&iTween_TypeInfo);
-    byte_4C3E9FA = 1;
+    sub_1C37058(&object___TypeInfo);
+    sub_1C37058(&float_TypeInfo);
+    sub_1C37058(&StringLiteral_24071/*"time"*/);
+    sub_1C37058(&StringLiteral_22706/*"pitch"*/);
+    sub_1C37058(&StringLiteral_24715/*"volume"*/);
+    sub_1C37058(&iTween_TypeInfo);
+    byte_4C49F7A = 1;
   }
-  v9 = sub_1C32CC8(object___TypeInfo, 6);
+  v9 = sub_1C37100(object___TypeInfo, 6);
   if ( !v9 )
-    sub_1C32E7C(0);
+    sub_1C372B4(0);
   v12 = v9;
-  v13 = StringLiteral_24710/*"volume"*/;
-  if ( StringLiteral_24710/*"volume"*/ )
+  v13 = StringLiteral_24715/*"volume"*/;
+  if ( StringLiteral_24715/*"volume"*/ )
   {
-    v13 = sub_1C32D5C(StringLiteral_24710/*"volume"*/);
+    v13 = sub_1C37194(StringLiteral_24715/*"volume"*/);
     if ( !v13 )
       goto LABEL_32;
-    v14 = StringLiteral_24710/*"volume"*/;
+    v14 = StringLiteral_24715/*"volume"*/;
   }
   else
   {
@@ -3959,27 +3959,27 @@ void iTween__AudioUpdate_63230700(
   if ( !*(_DWORD *)(v12 + 24) )
     goto LABEL_31;
   *(_QWORD *)(v12 + 32) = v14;
-  sub_1C32BC4((CGThumbnailListItem_o *)(v12 + 32), v14, v10, v11);
+  sub_1C36FFC((CGThumbnailListItem_o *)(v12 + 32), v14, v10, v11);
   v54 = volume;
   v13 = j_il2cpp_value_box_0(float_TypeInfo, &v54, v15, v16, v17, v18, v19, v20);
   v23 = v13;
   if ( v13 )
   {
-    v13 = sub_1C32D5C(v13);
+    v13 = sub_1C37194(v13);
     if ( !v13 )
       goto LABEL_32;
   }
   if ( *(_DWORD *)(v12 + 24) <= 1u )
     goto LABEL_31;
   *(_QWORD *)(v12 + 40) = v23;
-  sub_1C32BC4((CGThumbnailListItem_o *)(v12 + 40), v23, v21, v22);
-  v13 = StringLiteral_22703/*"pitch"*/;
-  if ( StringLiteral_22703/*"pitch"*/ )
+  sub_1C36FFC((CGThumbnailListItem_o *)(v12 + 40), v23, v21, v22);
+  v13 = StringLiteral_22706/*"pitch"*/;
+  if ( StringLiteral_22706/*"pitch"*/ )
   {
-    v13 = sub_1C32D5C(StringLiteral_22703/*"pitch"*/);
+    v13 = sub_1C37194(StringLiteral_22706/*"pitch"*/);
     if ( !v13 )
       goto LABEL_32;
-    v26 = StringLiteral_22703/*"pitch"*/;
+    v26 = StringLiteral_22706/*"pitch"*/;
   }
   else
   {
@@ -3988,27 +3988,27 @@ void iTween__AudioUpdate_63230700(
   if ( *(_DWORD *)(v12 + 24) <= 2u )
     goto LABEL_31;
   *(_QWORD *)(v12 + 48) = v26;
-  sub_1C32BC4((CGThumbnailListItem_o *)(v12 + 48), v26, v24, v25);
+  sub_1C36FFC((CGThumbnailListItem_o *)(v12 + 48), v26, v24, v25);
   v53 = pitch;
   v13 = j_il2cpp_value_box_0(float_TypeInfo, &v53, v27, v28, v29, v30, v31, v32);
   v35 = v13;
   if ( v13 )
   {
-    v13 = sub_1C32D5C(v13);
+    v13 = sub_1C37194(v13);
     if ( !v13 )
       goto LABEL_32;
   }
   if ( *(_DWORD *)(v12 + 24) <= 3u )
     goto LABEL_31;
   *(_QWORD *)(v12 + 56) = v35;
-  sub_1C32BC4((CGThumbnailListItem_o *)(v12 + 56), v35, v33, v34);
-  v13 = StringLiteral_24067/*"time"*/;
-  if ( StringLiteral_24067/*"time"*/ )
+  sub_1C36FFC((CGThumbnailListItem_o *)(v12 + 56), v35, v33, v34);
+  v13 = StringLiteral_24071/*"time"*/;
+  if ( StringLiteral_24071/*"time"*/ )
   {
-    v13 = sub_1C32D5C(StringLiteral_24067/*"time"*/);
+    v13 = sub_1C37194(StringLiteral_24071/*"time"*/);
     if ( !v13 )
       goto LABEL_32;
-    v38 = StringLiteral_24067/*"time"*/;
+    v38 = StringLiteral_24071/*"time"*/;
   }
   else
   {
@@ -4017,25 +4017,25 @@ void iTween__AudioUpdate_63230700(
   if ( *(_DWORD *)(v12 + 24) <= 4u )
     goto LABEL_31;
   *(_QWORD *)(v12 + 64) = v38;
-  sub_1C32BC4((CGThumbnailListItem_o *)(v12 + 64), v38, v36, v37);
+  sub_1C36FFC((CGThumbnailListItem_o *)(v12 + 64), v38, v36, v37);
   v52 = time;
   v13 = j_il2cpp_value_box_0(float_TypeInfo, &v52, v39, v40, v41, v42, v43, v44);
   v47 = v13;
   if ( v13 )
   {
-    v13 = sub_1C32D5C(v13);
+    v13 = sub_1C37194(v13);
     if ( !v13 )
     {
 LABEL_32:
-      v51 = sub_1C32EA0(v13);
-      sub_1C32D48(v51, 0);
+      v51 = sub_1C372D8(v13);
+      sub_1C37180(v51, 0);
     }
   }
   if ( *(_DWORD *)(v12 + 24) <= 5u )
 LABEL_31:
-    sub_1C32E84(v13);
+    sub_1C372BC(v13);
   *(_QWORD *)(v12 + 72) = v47;
-  sub_1C32BC4((CGThumbnailListItem_o *)(v12 + 72), v47, v45, v46);
+  sub_1C36FFC((CGThumbnailListItem_o *)(v12 + 72), v47, v45, v46);
   if ( !iTween_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(iTween_TypeInfo);
   v49 = iTween__Hash((System_Object_array *)v12, v48);
@@ -4059,7 +4059,7 @@ void iTween__Awake(iTween_o *this, const MethodInfo *method)
     {
       transform = UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0);
       this->fields.thisTransform = transform;
-      sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.thisTransform, (int32_t)transform, v5, v6);
+      sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.thisTransform, (int32_t)transform, v5, v6);
       iTween__RetrieveArgs(this, v7);
       this->fields.lastRealTime = UnityEngine_Time__get_realtimeSinceStartup(0);
     }
@@ -4084,19 +4084,19 @@ void iTween__CallBack(iTween_o *this, System_String_o *callbackType, const Metho
   iTween_o *v17; // x0
   const MethodInfo *v18; // x1
 
-  if ( (byte_4C3EA46 & 1) == 0 )
+  if ( (byte_4C49FC6 & 1) == 0 )
   {
-    sub_1C32C20(&UnityEngine_Debug_TypeInfo);
-    sub_1C32C20(&UnityEngine_GameObject_TypeInfo);
-    sub_1C32C20(&UnityEngine_Object_TypeInfo);
-    sub_1C32C20(&string_var);
-    sub_1C32C20(&string_TypeInfo);
-    sub_1C32C20(&System_Type_TypeInfo);
-    sub_1C32C20(&StringLiteral_20968/*"ischild"*/);
-    sub_1C32C20(&StringLiteral_23988/*"target"*/);
-    sub_1C32C20(&StringLiteral_22632/*"params"*/);
-    sub_1C32C20(&StringLiteral_20098/*"iTween Error: Callback method references must be passed as a String!"*/);
-    byte_4C3EA46 = 1;
+    sub_1C37058(&UnityEngine_Debug_TypeInfo);
+    sub_1C37058(&UnityEngine_GameObject_TypeInfo);
+    sub_1C37058(&UnityEngine_Object_TypeInfo);
+    sub_1C37058(&string_var);
+    sub_1C37058(&string_TypeInfo);
+    sub_1C37058(&System_Type_TypeInfo);
+    sub_1C37058(&StringLiteral_20971/*"ischild"*/);
+    sub_1C37058(&StringLiteral_23992/*"target"*/);
+    sub_1C37058(&StringLiteral_22635/*"params"*/);
+    sub_1C37058(&StringLiteral_20101/*"iTween Error: Callback method references must be passed as a String!"*/);
+    byte_4C49FC6 = 1;
   }
   tweenArguments = (Il2CppObject *)this->fields.tweenArguments;
   if ( !tweenArguments )
@@ -4112,14 +4112,14 @@ void iTween__CallBack(iTween_o *this, System_String_o *callbackType, const Metho
     goto LABEL_31;
   if ( (((__int64 (__fastcall *)(Il2CppObject *, __int64, const MethodInfo *))tweenArguments->klass->vtable[25].methodPtr)(
           tweenArguments,
-          StringLiteral_20968/*"ischild"*/,
+          StringLiteral_20971/*"ischild"*/,
           tweenArguments->klass->vtable[25].method)
       & 1) != 0 )
     return;
   v6 = this->fields.tweenArguments;
-  tweenArguments = (Il2CppObject *)System_String__Concat_63518544(
+  tweenArguments = (Il2CppObject *)System_String__Concat_63561656(
                                      callbackType,
-                                     (System_String_o *)StringLiteral_23988/*"target"*/,
+                                     (System_String_o *)StringLiteral_23992/*"target"*/,
                                      0);
   if ( !v6 )
     goto LABEL_31;
@@ -4130,9 +4130,9 @@ void iTween__CallBack(iTween_o *this, System_String_o *callbackType, const Metho
       & 1) == 0 )
     goto LABEL_14;
   v7 = this->fields.tweenArguments;
-  tweenArguments = (Il2CppObject *)System_String__Concat_63518544(
+  tweenArguments = (Il2CppObject *)System_String__Concat_63561656(
                                      callbackType,
-                                     (System_String_o *)StringLiteral_23988/*"target"*/,
+                                     (System_String_o *)StringLiteral_23992/*"target"*/,
                                      0);
   if ( !v7 )
     goto LABEL_31;
@@ -4143,7 +4143,7 @@ void iTween__CallBack(iTween_o *this, System_String_o *callbackType, const Metho
   gameObject = (UnityEngine_GameObject_o *)v8;
   if ( v8 && *v8 != UnityEngine_GameObject_TypeInfo )
   {
-    sub_1C3313C(v8);
+    sub_1C37574(v8);
 LABEL_14:
     gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
   }
@@ -4173,9 +4173,9 @@ LABEL_14:
               tweenArguments->klass->vtable[28].method);
       v15 = this->fields.tweenArguments;
       v16 = (System_String_o *)v14;
-      tweenArguments = (Il2CppObject *)System_String__Concat_63518544(
+      tweenArguments = (Il2CppObject *)System_String__Concat_63561656(
                                          callbackType,
-                                         (System_String_o *)StringLiteral_22632/*"params"*/,
+                                         (System_String_o *)StringLiteral_22635/*"params"*/,
                                          0);
       if ( v15 )
       {
@@ -4187,26 +4187,26 @@ LABEL_14:
         {
           if ( v16 && v16->klass != string_TypeInfo )
           {
-            sub_1C3313C(v16);
+            sub_1C37574(v16);
             iTween__ConflictCheck(v17, v18);
           }
           else
           {
-            UnityEngine_GameObject__SendMessage_71204432(gameObject, v16, tweenArguments, 1, 0);
+            UnityEngine_GameObject__SendMessage_71247544(gameObject, v16, tweenArguments, 1, 0);
           }
           return;
         }
       }
     }
 LABEL_31:
-    sub_1C32E7C(tweenArguments);
+    sub_1C372B4(tweenArguments);
   }
   if ( !UnityEngine_Debug_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Debug_TypeInfo);
-  UnityEngine_Debug__LogError((Il2CppObject *)StringLiteral_20098/*"iTween Error: Callback method references must be passed as a String!"*/, 0);
+  UnityEngine_Debug__LogError((Il2CppObject *)StringLiteral_20101/*"iTween Error: Callback method references must be passed as a String!"*/, 0);
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-  UnityEngine_Object__Destroy_71223640((UnityEngine_Object_o *)this, 0);
+  UnityEngine_Object__Destroy_71266752((UnityEngine_Object_o *)this, 0);
 }
 
 
@@ -4309,37 +4309,37 @@ System_Collections_Hashtable_o *iTween__CleanArgs(System_Collections_Hashtable_o
   float v97; // [xsp+Ch] [xbp-64h] BYREF
 
   v2 = args;
-  if ( (byte_4C3EA43 & 1) == 0 )
+  if ( (byte_4C49FC3 & 1) == 0 )
   {
-    sub_1C32C20(&System_Collections_DictionaryEntry_TypeInfo);
-    sub_1C32C20(&double_var);
-    sub_1C32C20(&double_TypeInfo);
-    sub_1C32C20(&System_Collections_Hashtable_TypeInfo);
-    sub_1C32C20(&System_IDisposable_TypeInfo);
-    sub_1C32C20(&System_Collections_IEnumerator_TypeInfo);
-    sub_1C32C20(&int_var);
-    sub_1C32C20(&int_TypeInfo);
-    sub_1C32C20(&float_TypeInfo);
-    args = (System_Collections_Hashtable_o *)sub_1C32C20(&System_Type_TypeInfo);
-    byte_4C3EA43 = 1;
+    sub_1C37058(&System_Collections_DictionaryEntry_TypeInfo);
+    sub_1C37058(&double_var);
+    sub_1C37058(&double_TypeInfo);
+    sub_1C37058(&System_Collections_Hashtable_TypeInfo);
+    sub_1C37058(&System_IDisposable_TypeInfo);
+    sub_1C37058(&System_Collections_IEnumerator_TypeInfo);
+    sub_1C37058(&int_var);
+    sub_1C37058(&int_TypeInfo);
+    sub_1C37058(&float_TypeInfo);
+    args = (System_Collections_Hashtable_o *)sub_1C37058(&System_Type_TypeInfo);
+    byte_4C49FC3 = 1;
   }
   if ( !v2 )
     goto LABEL_108;
   v3 = ((__int64 (__fastcall *)(System_Collections_Hashtable_o *, const MethodInfo *))v2->klass->vtable._39_get_Count.methodPtr)(
          v2,
          v2->klass->vtable._39_get_Count.method);
-  v4 = (System_Collections_Hashtable_o *)sub_1C32E6C(System_Collections_Hashtable_TypeInfo);
-  System_Collections_Hashtable___ctor_64883468(v4, v3, 0);
+  v4 = (System_Collections_Hashtable_o *)sub_1C372A4(System_Collections_Hashtable_TypeInfo);
+  System_Collections_Hashtable___ctor_64926580(v4, v3, 0);
   v5 = ((__int64 (__fastcall *)(System_Collections_Hashtable_o *, const MethodInfo *))v2->klass->vtable._39_get_Count.methodPtr)(
          v2,
          v2->klass->vtable._39_get_Count.method);
-  v6 = (System_Collections_Hashtable_o *)sub_1C32E6C(System_Collections_Hashtable_TypeInfo);
-  System_Collections_Hashtable___ctor_64883468(v6, v5, 0);
+  v6 = (System_Collections_Hashtable_o *)sub_1C372A4(System_Collections_Hashtable_TypeInfo);
+  System_Collections_Hashtable___ctor_64926580(v6, v5, 0);
   v7 = ((__int64 (__fastcall *)(System_Collections_Hashtable_o *, const MethodInfo *))v2->klass->vtable._30_GetEnumerator.methodPtr)(
          v2,
          v2->klass->vtable._30_GetEnumerator.method);
   if ( !v7 )
-    sub_1C32E7C(0);
+    sub_1C372B4(0);
   while ( 1 )
   {
     v8 = *(_QWORD *)v7;
@@ -4359,7 +4359,7 @@ System_Collections_Hashtable_o *iTween__CleanArgs(System_Collections_Hashtable_o
     else
     {
 LABEL_9:
-      v11 = sub_1C83438(v7, System_Collections_IEnumerator_TypeInfo, 0);
+      v11 = sub_1C87870(v7, System_Collections_IEnumerator_TypeInfo, 0);
     }
     if ( ((*(__int64 (__fastcall **)(__int64, _QWORD))v11)(v7, *(_QWORD *)(v11 + 8)) & 1) == 0 )
       break;
@@ -4380,20 +4380,20 @@ LABEL_9:
     else
     {
 LABEL_16:
-      v15 = sub_1C83438(v7, System_Collections_IEnumerator_TypeInfo, 1);
+      v15 = sub_1C87870(v7, System_Collections_IEnumerator_TypeInfo, 1);
     }
     v16 = (*(__int64 (__fastcall **)(__int64, _QWORD))v15)(v7, *(_QWORD *)(v15 + 8));
     if ( !v16 )
-      sub_1C32E7C(0);
+      sub_1C372B4(0);
     if ( *(Il2CppClass **)(*(_QWORD *)v16 + 64LL) != System_Collections_DictionaryEntry_TypeInfo->_1.element_class )
     {
-      sub_1C3313C(v16);
+      sub_1C37574(v16);
 LABEL_98:
-      sub_1C32E7C(v87);
+      sub_1C372B4(v87);
     }
     v19 = (_QWORD *)j_il2cpp_object_unbox_0(v16, System_Collections_DictionaryEntry_TypeInfo, v17, v18);
     if ( !v4 )
-      sub_1C32E7C(v19);
+      sub_1C372B4(v19);
     ((void (__fastcall *)(System_Collections_Hashtable_o *, _QWORD, _QWORD, const MethodInfo *))v4->klass->vtable._22_Add.methodPtr)(
       v4,
       *v19,
@@ -4401,7 +4401,7 @@ LABEL_98:
       v4->klass->vtable._22_Add.method);
   }
   v20 = 0;
-  args = (System_Collections_Hashtable_o *)sub_1C32D5C(v7, System_IDisposable_TypeInfo);
+  args = (System_Collections_Hashtable_o *)sub_1C37194(v7, System_IDisposable_TypeInfo);
   if ( args )
   {
     klass = args->klass;
@@ -4422,7 +4422,7 @@ LABEL_98:
     else
     {
 LABEL_27:
-      v25 = sub_1C83438(args, System_IDisposable_TypeInfo, 0);
+      v25 = sub_1C87870(args, System_IDisposable_TypeInfo, 0);
     }
     args = (System_Collections_Hashtable_o *)(*(__int64 (__fastcall **)(System_Collections_Hashtable_o *, _QWORD))v25)(
                                                v22,
@@ -4434,7 +4434,7 @@ LABEL_27:
           v4,
           v4->klass->vtable._30_GetEnumerator.method);
   if ( !v26 )
-    sub_1C32E7C(0);
+    sub_1C372B4(0);
   while ( 1 )
   {
     v27 = *(_QWORD *)v26;
@@ -4454,7 +4454,7 @@ LABEL_27:
     else
     {
 LABEL_36:
-      v30 = sub_1C83438(v26, System_Collections_IEnumerator_TypeInfo, 0);
+      v30 = sub_1C87870(v26, System_Collections_IEnumerator_TypeInfo, 0);
     }
     if ( ((*(__int64 (__fastcall **)(__int64, _QWORD))v30)(v26, *(_QWORD *)(v30 + 8)) & 1) == 0 )
       break;
@@ -4475,25 +4475,25 @@ LABEL_36:
     else
     {
 LABEL_43:
-      v34 = sub_1C83438(v26, System_Collections_IEnumerator_TypeInfo, 1);
+      v34 = sub_1C87870(v26, System_Collections_IEnumerator_TypeInfo, 1);
     }
     v35 = (*(__int64 (__fastcall **)(__int64, _QWORD))v34)(v26, *(_QWORD *)(v34 + 8));
     if ( !v35 )
-      sub_1C32E7C(0);
+      sub_1C372B4(0);
     if ( *(Il2CppClass **)(*(_QWORD *)v35 + 64LL) != System_Collections_DictionaryEntry_TypeInfo->_1.element_class )
     {
-      sub_1C3313C(v35);
+      sub_1C37574(v35);
 LABEL_106:
-      sub_1C3313C(v20);
+      sub_1C37574(v20);
 LABEL_107:
-      sub_1C3313C(v20);
+      sub_1C37574(v20);
 LABEL_108:
-      sub_1C32E7C(args);
+      sub_1C372B4(args);
     }
     v38 = j_il2cpp_object_unbox_0(v35, System_Collections_DictionaryEntry_TypeInfo, v36, v37);
     v20 = *(Il2CppObject **)(v38 + 8);
     if ( !v20 )
-      sub_1C32E7C(v38);
+      sub_1C372B4(v38);
     v39 = *(_QWORD *)v38;
     Type = System_Object__GetType(*(Il2CppObject **)(v38 + 8), 0);
     v41 = int_var;
@@ -4533,7 +4533,7 @@ LABEL_108:
         v2->klass->vtable._29_set_Item.method);
     }
   }
-  v67 = sub_1C32D5C(v26, System_IDisposable_TypeInfo);
+  v67 = sub_1C37194(v26, System_IDisposable_TypeInfo);
   if ( v67 )
   {
     v68 = *(_QWORD *)v67;
@@ -4554,7 +4554,7 @@ LABEL_108:
     else
     {
 LABEL_63:
-      v72 = sub_1C83438(v67, System_IDisposable_TypeInfo, 0);
+      v72 = sub_1C87870(v67, System_IDisposable_TypeInfo, 0);
     }
     (*(void (__fastcall **)(__int64, _QWORD))v72)(v69, *(_QWORD *)(v72 + 8));
   }
@@ -4562,7 +4562,7 @@ LABEL_63:
           v2,
           v2->klass->vtable._30_GetEnumerator.method);
   if ( !v73 )
-    sub_1C32E7C(0);
+    sub_1C372B4(0);
   while ( 1 )
   {
     v74 = *(_QWORD *)v73;
@@ -4582,7 +4582,7 @@ LABEL_63:
     else
     {
 LABEL_71:
-      v77 = sub_1C83438(v73, System_Collections_IEnumerator_TypeInfo, 0);
+      v77 = sub_1C87870(v73, System_Collections_IEnumerator_TypeInfo, 0);
     }
     if ( ((*(__int64 (__fastcall **)(__int64, _QWORD))v77)(v73, *(_QWORD *)(v77 + 8)) & 1) == 0 )
       break;
@@ -4603,20 +4603,20 @@ LABEL_71:
     else
     {
 LABEL_78:
-      v81 = sub_1C83438(v73, System_Collections_IEnumerator_TypeInfo, 1);
+      v81 = sub_1C87870(v73, System_Collections_IEnumerator_TypeInfo, 1);
     }
     v82 = (*(__int64 (__fastcall **)(__int64, _QWORD))v81)(v73, *(_QWORD *)(v81 + 8));
     if ( !v82 )
       goto LABEL_101;
     if ( *(Il2CppClass **)(*(_QWORD *)v82 + 64LL) != System_Collections_DictionaryEntry_TypeInfo->_1.element_class )
     {
-      sub_1C3313C(v82);
+      sub_1C37574(v82);
 LABEL_101:
-      sub_1C32E7C(v82);
+      sub_1C372B4(v82);
     }
     v85 = (_QWORD *)j_il2cpp_object_unbox_0(v82, System_Collections_DictionaryEntry_TypeInfo, v83, v84);
     if ( !*v85 )
-      sub_1C32E7C(v85);
+      sub_1C372B4(v85);
     v86 = v85[1];
     v87 = (System_String_o *)(*(__int64 (__fastcall **)(_QWORD, _QWORD))(*(_QWORD *)*v85 + 360LL))(
                                *v85,
@@ -4625,14 +4625,14 @@ LABEL_101:
       goto LABEL_98;
     v88 = System_String__ToLower(v87, 0);
     if ( !v6 )
-      sub_1C32E7C(v88);
+      sub_1C372B4(v88);
     ((void (__fastcall *)(System_Collections_Hashtable_o *, System_String_o *, __int64, const MethodInfo *))v6->klass->vtable._22_Add.methodPtr)(
       v6,
       v88,
       v86,
       v6->klass->vtable._22_Add.method);
   }
-  v89 = sub_1C32D5C(v73, System_IDisposable_TypeInfo);
+  v89 = sub_1C37194(v73, System_IDisposable_TypeInfo);
   if ( v89 )
   {
     v90 = *(_QWORD *)v89;
@@ -4653,7 +4653,7 @@ LABEL_101:
     else
     {
 LABEL_91:
-      v94 = sub_1C83438(v89, System_IDisposable_TypeInfo, 0);
+      v94 = sub_1C87870(v89, System_IDisposable_TypeInfo, 0);
     }
     (*(void (__fastcall **)(__int64, _QWORD))v94)(v91, *(_QWORD *)(v94 + 8));
   }
@@ -4709,27 +4709,27 @@ void iTween__ColorFrom(
   b = color.fields.b;
   g = color.fields.g;
   r = color.fields.r;
-  if ( (byte_4C3E994 & 1) == 0 )
+  if ( (byte_4C49F14 & 1) == 0 )
   {
-    sub_1C32C20(&UnityEngine_Color_TypeInfo);
-    sub_1C32C20(&object___TypeInfo);
-    sub_1C32C20(&float_TypeInfo);
-    sub_1C32C20(&StringLiteral_24067/*"time"*/);
-    sub_1C32C20(&StringLiteral_18051/*"color"*/);
-    sub_1C32C20(&iTween_TypeInfo);
-    byte_4C3E994 = 1;
+    sub_1C37058(&UnityEngine_Color_TypeInfo);
+    sub_1C37058(&object___TypeInfo);
+    sub_1C37058(&float_TypeInfo);
+    sub_1C37058(&StringLiteral_24071/*"time"*/);
+    sub_1C37058(&StringLiteral_18053/*"color"*/);
+    sub_1C37058(&iTween_TypeInfo);
+    byte_4C49F14 = 1;
   }
-  v10 = sub_1C32CC8(object___TypeInfo, 4);
+  v10 = sub_1C37100(object___TypeInfo, 4);
   if ( !v10 )
-    sub_1C32E7C(0);
+    sub_1C372B4(0);
   v13 = v10;
-  v14 = StringLiteral_18051/*"color"*/;
-  if ( StringLiteral_18051/*"color"*/ )
+  v14 = StringLiteral_18053/*"color"*/;
+  if ( StringLiteral_18053/*"color"*/ )
   {
-    v14 = sub_1C32D5C(StringLiteral_18051/*"color"*/);
+    v14 = sub_1C37194(StringLiteral_18053/*"color"*/);
     if ( !v14 )
       goto LABEL_24;
-    v15 = StringLiteral_18051/*"color"*/;
+    v15 = StringLiteral_18053/*"color"*/;
   }
   else
   {
@@ -4738,7 +4738,7 @@ void iTween__ColorFrom(
   if ( !*(_DWORD *)(v13 + 24) )
     goto LABEL_23;
   *(_QWORD *)(v13 + 32) = v15;
-  sub_1C32BC4((CGThumbnailListItem_o *)(v13 + 32), v15, v11, v12);
+  sub_1C36FFC((CGThumbnailListItem_o *)(v13 + 32), v15, v11, v12);
   *(float *)v42 = r;
   *(float *)&v42[1] = g;
   *(float *)&v42[2] = b;
@@ -4747,21 +4747,21 @@ void iTween__ColorFrom(
   v24 = v14;
   if ( v14 )
   {
-    v14 = sub_1C32D5C(v14);
+    v14 = sub_1C37194(v14);
     if ( !v14 )
       goto LABEL_24;
   }
   if ( *(_DWORD *)(v13 + 24) <= 1u )
     goto LABEL_23;
   *(_QWORD *)(v13 + 40) = v24;
-  sub_1C32BC4((CGThumbnailListItem_o *)(v13 + 40), v24, v22, v23);
-  v14 = StringLiteral_24067/*"time"*/;
-  if ( StringLiteral_24067/*"time"*/ )
+  sub_1C36FFC((CGThumbnailListItem_o *)(v13 + 40), v24, v22, v23);
+  v14 = StringLiteral_24071/*"time"*/;
+  if ( StringLiteral_24071/*"time"*/ )
   {
-    v14 = sub_1C32D5C(StringLiteral_24067/*"time"*/);
+    v14 = sub_1C37194(StringLiteral_24071/*"time"*/);
     if ( !v14 )
       goto LABEL_24;
-    v27 = StringLiteral_24067/*"time"*/;
+    v27 = StringLiteral_24071/*"time"*/;
   }
   else
   {
@@ -4770,33 +4770,33 @@ void iTween__ColorFrom(
   if ( *(_DWORD *)(v13 + 24) <= 2u )
     goto LABEL_23;
   *(_QWORD *)(v13 + 48) = v27;
-  sub_1C32BC4((CGThumbnailListItem_o *)(v13 + 48), v27, v25, v26);
+  sub_1C36FFC((CGThumbnailListItem_o *)(v13 + 48), v27, v25, v26);
   v41 = time;
   v14 = j_il2cpp_value_box_0(float_TypeInfo, &v41, v28, v29, v30, v31, v32, v33);
   v36 = v14;
   if ( v14 )
   {
-    v14 = sub_1C32D5C(v14);
+    v14 = sub_1C37194(v14);
     if ( !v14 )
     {
 LABEL_24:
-      v40 = sub_1C32EA0(v14);
-      sub_1C32D48(v40, 0);
+      v40 = sub_1C372D8(v14);
+      sub_1C37180(v40, 0);
     }
   }
   if ( *(_DWORD *)(v13 + 24) <= 3u )
 LABEL_23:
-    sub_1C32E84(v14);
+    sub_1C372BC(v14);
   *(_QWORD *)(v13 + 56) = v36;
-  sub_1C32BC4((CGThumbnailListItem_o *)(v13 + 56), v36, v34, v35);
+  sub_1C36FFC((CGThumbnailListItem_o *)(v13 + 56), v36, v34, v35);
   if ( !iTween_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(iTween_TypeInfo);
   v38 = iTween__Hash((System_Object_array *)v13, v37);
-  iTween__ColorFrom_63142092(target, v38, v39);
+  iTween__ColorFrom_63185204(target, v38, v39);
 }
 
 
-void iTween__ColorFrom_63142092(
+void iTween__ColorFrom_63185204(
         UnityEngine_GameObject_o *target,
         System_Collections_Hashtable_o *args,
         const MethodInfo *method)
@@ -4883,34 +4883,34 @@ void iTween__ColorFrom_63142092(
   UnityEngine_Color_o v84; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
   UnityEngine_Color_o v85; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 
-  if ( (byte_4C3E995 & 1) == 0 )
+  if ( (byte_4C49F15 & 1) == 0 )
   {
-    sub_1C32C20(&bool_TypeInfo);
-    sub_1C32C20(&UnityEngine_Color_TypeInfo);
-    sub_1C32C20(&iTween_EaseType_TypeInfo);
-    sub_1C32C20(&Method_UnityEngine_GameObject_GetComponent_Light___);
-    sub_1C32C20(&Method_UnityEngine_GameObject_GetComponent_Renderer___);
-    sub_1C32C20(&System_Collections_Hashtable_TypeInfo);
-    sub_1C32C20(&System_IDisposable_TypeInfo);
-    sub_1C32C20(&System_Collections_IEnumerator_TypeInfo);
-    sub_1C32C20(&UnityEngine_Object_TypeInfo);
-    sub_1C32C20(&float_TypeInfo);
-    sub_1C32C20(&UnityEngine_Transform_TypeInfo);
-    sub_1C32C20(&StringLiteral_16739/*"alpha"*/);
-    sub_1C32C20(&StringLiteral_16629/*"a"*/);
-    sub_1C32C20(&StringLiteral_18751/*"easetype"*/);
-    sub_1C32C20(&StringLiteral_20968/*"ischild"*/);
-    sub_1C32C20(&StringLiteral_19720/*"g"*/);
-    sub_1C32C20(&StringLiteral_16967/*"b"*/);
-    sub_1C32C20(&StringLiteral_16745/*"amount"*/);
-    sub_1C32C20(&StringLiteral_21560/*"method"*/);
-    sub_1C32C20(&StringLiteral_22915/*"r"*/);
-    sub_1C32C20(&StringLiteral_24106/*"to"*/);
-    sub_1C32C20(&StringLiteral_20746/*"includechildren"*/);
-    sub_1C32C20(&StringLiteral_18051/*"color"*/);
-    sub_1C32C20(&StringLiteral_24241/*"type"*/);
-    sub_1C32C20(&iTween_TypeInfo);
-    byte_4C3E995 = 1;
+    sub_1C37058(&bool_TypeInfo);
+    sub_1C37058(&UnityEngine_Color_TypeInfo);
+    sub_1C37058(&iTween_EaseType_TypeInfo);
+    sub_1C37058(&Method_UnityEngine_GameObject_GetComponent_Light___);
+    sub_1C37058(&Method_UnityEngine_GameObject_GetComponent_Renderer___);
+    sub_1C37058(&System_Collections_Hashtable_TypeInfo);
+    sub_1C37058(&System_IDisposable_TypeInfo);
+    sub_1C37058(&System_Collections_IEnumerator_TypeInfo);
+    sub_1C37058(&UnityEngine_Object_TypeInfo);
+    sub_1C37058(&float_TypeInfo);
+    sub_1C37058(&UnityEngine_Transform_TypeInfo);
+    sub_1C37058(&StringLiteral_16741/*"alpha"*/);
+    sub_1C37058(&StringLiteral_16631/*"a"*/);
+    sub_1C37058(&StringLiteral_18754/*"easetype"*/);
+    sub_1C37058(&StringLiteral_20971/*"ischild"*/);
+    sub_1C37058(&StringLiteral_19723/*"g"*/);
+    sub_1C37058(&StringLiteral_16969/*"b"*/);
+    sub_1C37058(&StringLiteral_16747/*"amount"*/);
+    sub_1C37058(&StringLiteral_21563/*"method"*/);
+    sub_1C37058(&StringLiteral_22919/*"r"*/);
+    sub_1C37058(&StringLiteral_24110/*"to"*/);
+    sub_1C37058(&StringLiteral_20749/*"includechildren"*/);
+    sub_1C37058(&StringLiteral_18053/*"color"*/);
+    sub_1C37058(&StringLiteral_24245/*"type"*/);
+    sub_1C37058(&iTween_TypeInfo);
+    byte_4C49F15 = 1;
   }
   if ( !iTween_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(iTween_TypeInfo);
@@ -4920,13 +4920,13 @@ void iTween__ColorFrom_63142092(
   v6 = (System_Collections_Hashtable_o *)transform;
   transform = (*(__int64 (__fastcall **)(__int64, __int64, _QWORD))(*(_QWORD *)transform + 712LL))(
                 transform,
-                StringLiteral_20746/*"includechildren"*/,
+                StringLiteral_20749/*"includechildren"*/,
                 *(_QWORD *)(*(_QWORD *)transform + 720LL));
   if ( (transform & 1) == 0 )
     goto LABEL_109;
   transform = ((__int64 (__fastcall *)(System_Collections_Hashtable_o *, __int64, const MethodInfo *))v6->klass->vtable._28_get_Item.methodPtr)(
                 v6,
-                StringLiteral_20746/*"includechildren"*/,
+                StringLiteral_20749/*"includechildren"*/,
                 v6->klass->vtable._28_get_Item.method);
   if ( !transform )
     goto LABEL_104;
@@ -4945,7 +4945,7 @@ LABEL_109:
     v10 = Enumerator;
     if ( !Enumerator )
 LABEL_106:
-      sub_1C32E7C(Enumerator);
+      sub_1C372B4(Enumerator);
     while ( 1 )
     {
       klass = v10->klass;
@@ -4965,7 +4965,7 @@ LABEL_106:
       else
       {
 LABEL_17:
-        v14 = sub_1C83438(v10, System_Collections_IEnumerator_TypeInfo, 0);
+        v14 = sub_1C87870(v10, System_Collections_IEnumerator_TypeInfo, 0);
       }
       if ( ((*(__int64 (__fastcall **)(System_Collections_IEnumerator_o *, _QWORD))v14)(v10, *(_QWORD *)(v14 + 8)) & 1) == 0 )
         break;
@@ -4986,7 +4986,7 @@ LABEL_17:
       else
       {
 LABEL_24:
-        v18 = sub_1C83438(v10, System_Collections_IEnumerator_TypeInfo, 1);
+        v18 = sub_1C87870(v10, System_Collections_IEnumerator_TypeInfo, 1);
       }
       v19 = (UnityEngine_Component_o *)(*(__int64 (__fastcall **)(System_Collections_IEnumerator_o *, _QWORD))v18)(
                                          v10,
@@ -5010,27 +5010,27 @@ LABEL_24:
         goto LABEL_102;
       v30 = ((__int64 (__fastcall *)(System_Collections_Hashtable_o *, __int64, __int64, const MethodInfo *))v27->klass->vtable._29_set_Item.methodPtr)(
               v27,
-              StringLiteral_20968/*"ischild"*/,
+              StringLiteral_20971/*"ischild"*/,
               v29,
               v27->klass->vtable._29_set_Item.method);
       if ( !v19 )
-        sub_1C32E7C(v30);
+        sub_1C372B4(v30);
       v31 = UnityEngine_Transform_TypeInfo->_2.naturalAligment;
       if ( v19->klass->_2.naturalAligment < (unsigned int)v31
         || (UnityEngine_Transform_c *)v19->klass->_2.typeHierarchy[v31 - 1] != UnityEngine_Transform_TypeInfo )
       {
-        sub_1C3313C(v19);
+        sub_1C37574(v19);
 LABEL_101:
-        sub_1C3313C(v27);
+        sub_1C37574(v27);
 LABEL_102:
-        sub_1C32E7C(v29);
+        sub_1C372B4(v29);
       }
       gameObject = UnityEngine_Component__get_gameObject(v19, 0);
       if ( !iTween_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(iTween_TypeInfo);
-      iTween__ColorFrom_63142092(gameObject, v27, v32);
+      iTween__ColorFrom_63185204(gameObject, v27, v32);
     }
-    v34 = sub_1C32D5C(v10, System_IDisposable_TypeInfo);
+    v34 = sub_1C37194(v10, System_IDisposable_TypeInfo);
     if ( v34 )
     {
       v35 = *(_QWORD *)v34;
@@ -5051,14 +5051,14 @@ LABEL_102:
       else
       {
 LABEL_41:
-        v39 = sub_1C83438(v34, System_IDisposable_TypeInfo, 0);
+        v39 = sub_1C87870(v34, System_IDisposable_TypeInfo, 0);
       }
       (*(void (__fastcall **)(__int64, _QWORD))v39)(v36, *(_QWORD *)(v39 + 8));
     }
   }
   transform = ((__int64 (__fastcall *)(System_Collections_Hashtable_o *, __int64, const MethodInfo *))v6->klass->vtable._25_Contains.methodPtr)(
                 v6,
-                StringLiteral_18751/*"easetype"*/,
+                StringLiteral_18754/*"easetype"*/,
                 v6->klass->vtable._25_Contains.method);
   if ( (transform & 1) == 0 )
   {
@@ -5066,7 +5066,7 @@ LABEL_41:
     v46 = j_il2cpp_value_box_0(iTween_EaseType_TypeInfo, v82, v40, v41, v42, v43, v44, v45);
     transform = ((__int64 (__fastcall *)(System_Collections_Hashtable_o *, __int64, __int64, const MethodInfo *))v6->klass->vtable._22_Add.methodPtr)(
                   v6,
-                  StringLiteral_18751/*"easetype"*/,
+                  StringLiteral_18754/*"easetype"*/,
                   v46,
                   v6->klass->vtable._22_Add.method);
   }
@@ -5074,14 +5074,14 @@ LABEL_41:
     goto LABEL_104;
   Component_object = UnityEngine_GameObject__GetComponent_object_(
                        target,
-                       (const MethodInfo_3134970 *)Method_UnityEngine_GameObject_GetComponent_Renderer___);
+                       (const MethodInfo_313F1D8 *)Method_UnityEngine_GameObject_GetComponent_Renderer___);
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   if ( UnityEngine_Object__op_Implicit((UnityEngine_Object_o *)Component_object, 0) )
   {
     transform = (__int64)UnityEngine_GameObject__GetComponent_object_(
                            target,
-                           (const MethodInfo_3134970 *)Method_UnityEngine_GameObject_GetComponent_Renderer___);
+                           (const MethodInfo_313F1D8 *)Method_UnityEngine_GameObject_GetComponent_Renderer___);
     if ( !transform )
       goto LABEL_104;
     transform = (__int64)UnityEngine_Renderer__get_material((UnityEngine_Renderer_o *)transform, 0);
@@ -5092,7 +5092,7 @@ LABEL_41:
   }
   v48 = UnityEngine_GameObject__GetComponent_object_(
           target,
-          (const MethodInfo_3134970 *)Method_UnityEngine_GameObject_GetComponent_Light___);
+          (const MethodInfo_313F1D8 *)Method_UnityEngine_GameObject_GetComponent_Light___);
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   r = 0.0;
@@ -5103,7 +5103,7 @@ LABEL_41:
   {
     transform = (__int64)UnityEngine_GameObject__GetComponent_object_(
                            target,
-                           (const MethodInfo_3134970 *)Method_UnityEngine_GameObject_GetComponent_Light___);
+                           (const MethodInfo_313F1D8 *)Method_UnityEngine_GameObject_GetComponent_Light___);
     if ( !transform )
       goto LABEL_104;
     color = UnityEngine_Light__get_color((UnityEngine_Light_o *)transform, 0);
@@ -5115,20 +5115,20 @@ LABEL_58:
   }
   if ( (((__int64 (__fastcall *)(System_Collections_Hashtable_o *, __int64, const MethodInfo *))v6->klass->vtable._25_Contains.methodPtr)(
           v6,
-          StringLiteral_18051/*"color"*/,
+          StringLiteral_18053/*"color"*/,
           v6->klass->vtable._25_Contains.method)
       & 1) == 0 )
   {
     v56 = r;
     if ( (((__int64 (__fastcall *)(System_Collections_Hashtable_o *, __int64, const MethodInfo *))v6->klass->vtable._25_Contains.methodPtr)(
             v6,
-            StringLiteral_22915/*"r"*/,
+            StringLiteral_22919/*"r"*/,
             v6->klass->vtable._25_Contains.method)
         & 1) != 0 )
     {
       transform = ((__int64 (__fastcall *)(System_Collections_Hashtable_o *, __int64, const MethodInfo *))v6->klass->vtable._28_get_Item.methodPtr)(
                     v6,
-                    StringLiteral_22915/*"r"*/,
+                    StringLiteral_22919/*"r"*/,
                     v6->klass->vtable._28_get_Item.method);
       if ( !transform )
         goto LABEL_104;
@@ -5139,13 +5139,13 @@ LABEL_58:
     v57 = g;
     if ( (((__int64 (__fastcall *)(System_Collections_Hashtable_o *, __int64, const MethodInfo *))v6->klass->vtable._25_Contains.methodPtr)(
             v6,
-            StringLiteral_19720/*"g"*/,
+            StringLiteral_19723/*"g"*/,
             v6->klass->vtable._25_Contains.method)
         & 1) != 0 )
     {
       transform = ((__int64 (__fastcall *)(System_Collections_Hashtable_o *, __int64, const MethodInfo *))v6->klass->vtable._28_get_Item.methodPtr)(
                     v6,
-                    StringLiteral_19720/*"g"*/,
+                    StringLiteral_19723/*"g"*/,
                     v6->klass->vtable._28_get_Item.method);
       if ( !transform )
         goto LABEL_104;
@@ -5156,13 +5156,13 @@ LABEL_58:
     v58 = b;
     if ( (((__int64 (__fastcall *)(System_Collections_Hashtable_o *, __int64, const MethodInfo *))v6->klass->vtable._25_Contains.methodPtr)(
             v6,
-            StringLiteral_16967/*"b"*/,
+            StringLiteral_16969/*"b"*/,
             v6->klass->vtable._25_Contains.method)
         & 1) != 0 )
     {
       transform = ((__int64 (__fastcall *)(System_Collections_Hashtable_o *, __int64, const MethodInfo *))v6->klass->vtable._28_get_Item.methodPtr)(
                     v6,
-                    StringLiteral_16967/*"b"*/,
+                    StringLiteral_16969/*"b"*/,
                     v6->klass->vtable._28_get_Item.method);
       if ( !transform )
         goto LABEL_104;
@@ -5172,7 +5172,7 @@ LABEL_58:
     }
     if ( (((__int64 (__fastcall *)(System_Collections_Hashtable_o *, __int64, const MethodInfo *))v6->klass->vtable._25_Contains.methodPtr)(
             v6,
-            StringLiteral_16629/*"a"*/,
+            StringLiteral_16631/*"a"*/,
             v6->klass->vtable._25_Contains.method)
         & 1) == 0 )
     {
@@ -5181,7 +5181,7 @@ LABEL_58:
     }
     transform = ((__int64 (__fastcall *)(System_Collections_Hashtable_o *, __int64, const MethodInfo *))v6->klass->vtable._28_get_Item.methodPtr)(
                   v6,
-                  StringLiteral_16629/*"a"*/,
+                  StringLiteral_16631/*"a"*/,
                   v6->klass->vtable._28_get_Item.method);
     if ( !transform )
       goto LABEL_104;
@@ -5191,12 +5191,12 @@ LABEL_58:
       goto LABEL_79;
     }
 LABEL_105:
-    sub_1C3313C(transform);
+    sub_1C37574(transform);
     goto LABEL_106;
   }
   transform = ((__int64 (__fastcall *)(System_Collections_Hashtable_o *, __int64, const MethodInfo *))v6->klass->vtable._28_get_Item.methodPtr)(
                 v6,
-                StringLiteral_18051/*"color"*/,
+                StringLiteral_18053/*"color"*/,
                 v6->klass->vtable._28_get_Item.method);
   if ( !transform )
     goto LABEL_104;
@@ -5210,16 +5210,16 @@ LABEL_105:
 LABEL_79:
   v68 = *v59;
 LABEL_81:
-  v69 = &StringLiteral_16745/*"amount"*/;
+  v69 = &StringLiteral_16747/*"amount"*/;
   if ( (((__int64 (__fastcall *)(System_Collections_Hashtable_o *, __int64, const MethodInfo *))v6->klass->vtable._25_Contains.methodPtr)(
           v6,
-          StringLiteral_16745/*"amount"*/,
+          StringLiteral_16747/*"amount"*/,
           v6->klass->vtable._25_Contains.method)
       & 1) != 0
-    || (v69 = &StringLiteral_16739/*"alpha"*/,
+    || (v69 = &StringLiteral_16741/*"alpha"*/,
         (((__int64 (__fastcall *)(System_Collections_Hashtable_o *, __int64, const MethodInfo *))v6->klass->vtable._25_Contains.methodPtr)(
            v6,
-           StringLiteral_16739/*"alpha"*/,
+           StringLiteral_16741/*"alpha"*/,
            v6->klass->vtable._25_Contains.method)
        & 1) != 0) )
   {
@@ -5243,14 +5243,14 @@ LABEL_81:
 LABEL_86:
   v72 = UnityEngine_GameObject__GetComponent_object_(
           target,
-          (const MethodInfo_3134970 *)Method_UnityEngine_GameObject_GetComponent_Renderer___);
+          (const MethodInfo_313F1D8 *)Method_UnityEngine_GameObject_GetComponent_Renderer___);
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   if ( UnityEngine_Object__op_Implicit((UnityEngine_Object_o *)v72, 0) )
   {
     transform = (__int64)UnityEngine_GameObject__GetComponent_object_(
                            target,
-                           (const MethodInfo_3134970 *)Method_UnityEngine_GameObject_GetComponent_Renderer___);
+                           (const MethodInfo_313F1D8 *)Method_UnityEngine_GameObject_GetComponent_Renderer___);
     if ( transform )
     {
       transform = (__int64)UnityEngine_Renderer__get_material((UnityEngine_Renderer_o *)transform, 0);
@@ -5265,18 +5265,18 @@ LABEL_86:
       }
     }
 LABEL_104:
-    sub_1C32E7C(transform);
+    sub_1C372B4(transform);
   }
   v79 = UnityEngine_GameObject__GetComponent_object_(
           target,
-          (const MethodInfo_3134970 *)Method_UnityEngine_GameObject_GetComponent_Light___);
+          (const MethodInfo_313F1D8 *)Method_UnityEngine_GameObject_GetComponent_Light___);
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   if ( UnityEngine_Object__op_Implicit((UnityEngine_Object_o *)v79, 0) )
   {
     transform = (__int64)UnityEngine_GameObject__GetComponent_object_(
                            target,
-                           (const MethodInfo_3134970 *)Method_UnityEngine_GameObject_GetComponent_Light___);
+                           (const MethodInfo_313F1D8 *)Method_UnityEngine_GameObject_GetComponent_Light___);
     if ( !transform )
       goto LABEL_104;
     v85.fields.r = v56;
@@ -5293,18 +5293,18 @@ LABEL_97:
   v80 = j_il2cpp_value_box_0(UnityEngine_Color_TypeInfo, v82, v73, v74, v75, v76, v77, v78);
   ((void (__fastcall *)(System_Collections_Hashtable_o *, __int64, __int64, const MethodInfo *))v6->klass->vtable._29_set_Item.methodPtr)(
     v6,
-    StringLiteral_18051/*"color"*/,
+    StringLiteral_18053/*"color"*/,
     v80,
     v6->klass->vtable._29_set_Item.method);
   ((void (__fastcall *)(System_Collections_Hashtable_o *, __int64, __int64, const MethodInfo *))v6->klass->vtable._29_set_Item.methodPtr)(
     v6,
-    StringLiteral_24241/*"type"*/,
-    StringLiteral_18051/*"color"*/,
+    StringLiteral_24245/*"type"*/,
+    StringLiteral_18053/*"color"*/,
     v6->klass->vtable._29_set_Item.method);
   ((void (__fastcall *)(System_Collections_Hashtable_o *, __int64, __int64, const MethodInfo *))v6->klass->vtable._29_set_Item.methodPtr)(
     v6,
-    StringLiteral_21560/*"method"*/,
-    StringLiteral_24106/*"to"*/,
+    StringLiteral_21563/*"method"*/,
+    StringLiteral_24110/*"to"*/,
     v6->klass->vtable._29_set_Item.method);
   if ( !iTween_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(iTween_TypeInfo);
@@ -5356,27 +5356,27 @@ void iTween__ColorTo(UnityEngine_GameObject_o *target, UnityEngine_Color_o color
   b = color.fields.b;
   g = color.fields.g;
   r = color.fields.r;
-  if ( (byte_4C3E996 & 1) == 0 )
+  if ( (byte_4C49F16 & 1) == 0 )
   {
-    sub_1C32C20(&UnityEngine_Color_TypeInfo);
-    sub_1C32C20(&object___TypeInfo);
-    sub_1C32C20(&float_TypeInfo);
-    sub_1C32C20(&StringLiteral_24067/*"time"*/);
-    sub_1C32C20(&StringLiteral_18051/*"color"*/);
-    sub_1C32C20(&iTween_TypeInfo);
-    byte_4C3E996 = 1;
+    sub_1C37058(&UnityEngine_Color_TypeInfo);
+    sub_1C37058(&object___TypeInfo);
+    sub_1C37058(&float_TypeInfo);
+    sub_1C37058(&StringLiteral_24071/*"time"*/);
+    sub_1C37058(&StringLiteral_18053/*"color"*/);
+    sub_1C37058(&iTween_TypeInfo);
+    byte_4C49F16 = 1;
   }
-  v10 = sub_1C32CC8(object___TypeInfo, 4);
+  v10 = sub_1C37100(object___TypeInfo, 4);
   if ( !v10 )
-    sub_1C32E7C(0);
+    sub_1C372B4(0);
   v13 = v10;
-  v14 = StringLiteral_18051/*"color"*/;
-  if ( StringLiteral_18051/*"color"*/ )
+  v14 = StringLiteral_18053/*"color"*/;
+  if ( StringLiteral_18053/*"color"*/ )
   {
-    v14 = sub_1C32D5C(StringLiteral_18051/*"color"*/);
+    v14 = sub_1C37194(StringLiteral_18053/*"color"*/);
     if ( !v14 )
       goto LABEL_24;
-    v15 = StringLiteral_18051/*"color"*/;
+    v15 = StringLiteral_18053/*"color"*/;
   }
   else
   {
@@ -5385,7 +5385,7 @@ void iTween__ColorTo(UnityEngine_GameObject_o *target, UnityEngine_Color_o color
   if ( !*(_DWORD *)(v13 + 24) )
     goto LABEL_23;
   *(_QWORD *)(v13 + 32) = v15;
-  sub_1C32BC4((CGThumbnailListItem_o *)(v13 + 32), v15, v11, v12);
+  sub_1C36FFC((CGThumbnailListItem_o *)(v13 + 32), v15, v11, v12);
   *(float *)v42 = r;
   *(float *)&v42[1] = g;
   *(float *)&v42[2] = b;
@@ -5394,21 +5394,21 @@ void iTween__ColorTo(UnityEngine_GameObject_o *target, UnityEngine_Color_o color
   v24 = v14;
   if ( v14 )
   {
-    v14 = sub_1C32D5C(v14);
+    v14 = sub_1C37194(v14);
     if ( !v14 )
       goto LABEL_24;
   }
   if ( *(_DWORD *)(v13 + 24) <= 1u )
     goto LABEL_23;
   *(_QWORD *)(v13 + 40) = v24;
-  sub_1C32BC4((CGThumbnailListItem_o *)(v13 + 40), v24, v22, v23);
-  v14 = StringLiteral_24067/*"time"*/;
-  if ( StringLiteral_24067/*"time"*/ )
+  sub_1C36FFC((CGThumbnailListItem_o *)(v13 + 40), v24, v22, v23);
+  v14 = StringLiteral_24071/*"time"*/;
+  if ( StringLiteral_24071/*"time"*/ )
   {
-    v14 = sub_1C32D5C(StringLiteral_24067/*"time"*/);
+    v14 = sub_1C37194(StringLiteral_24071/*"time"*/);
     if ( !v14 )
       goto LABEL_24;
-    v27 = StringLiteral_24067/*"time"*/;
+    v27 = StringLiteral_24071/*"time"*/;
   }
   else
   {
@@ -5417,33 +5417,33 @@ void iTween__ColorTo(UnityEngine_GameObject_o *target, UnityEngine_Color_o color
   if ( *(_DWORD *)(v13 + 24) <= 2u )
     goto LABEL_23;
   *(_QWORD *)(v13 + 48) = v27;
-  sub_1C32BC4((CGThumbnailListItem_o *)(v13 + 48), v27, v25, v26);
+  sub_1C36FFC((CGThumbnailListItem_o *)(v13 + 48), v27, v25, v26);
   v41 = time;
   v14 = j_il2cpp_value_box_0(float_TypeInfo, &v41, v28, v29, v30, v31, v32, v33);
   v36 = v14;
   if ( v14 )
   {
-    v14 = sub_1C32D5C(v14);
+    v14 = sub_1C37194(v14);
     if ( !v14 )
     {
 LABEL_24:
-      v40 = sub_1C32EA0(v14);
-      sub_1C32D48(v40, 0);
+      v40 = sub_1C372D8(v14);
+      sub_1C37180(v40, 0);
     }
   }
   if ( *(_DWORD *)(v13 + 24) <= 3u )
 LABEL_23:
-    sub_1C32E84(v14);
+    sub_1C372BC(v14);
   *(_QWORD *)(v13 + 56) = v36;
-  sub_1C32BC4((CGThumbnailListItem_o *)(v13 + 56), v36, v34, v35);
+  sub_1C36FFC((CGThumbnailListItem_o *)(v13 + 56), v36, v34, v35);
   if ( !iTween_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(iTween_TypeInfo);
   v38 = iTween__Hash((System_Object_array *)v13, v37);
-  iTween__ColorTo_63145580(target, v38, v39);
+  iTween__ColorTo_63188692(target, v38, v39);
 }
 
 
-void iTween__ColorTo_63145580(
+void iTween__ColorTo_63188692(
         UnityEngine_GameObject_o *target,
         System_Collections_Hashtable_o *args,
         const MethodInfo *method)
@@ -5503,23 +5503,23 @@ void iTween__ColorTo_63145580(
   int v57; // [xsp+8h] [xbp-68h] BYREF
   char v58[4]; // [xsp+Ch] [xbp-64h] BYREF
 
-  if ( (byte_4C3E997 & 1) == 0 )
+  if ( (byte_4C49F17 & 1) == 0 )
   {
-    sub_1C32C20(&bool_TypeInfo);
-    sub_1C32C20(&iTween_EaseType_TypeInfo);
-    sub_1C32C20(&System_Collections_Hashtable_TypeInfo);
-    sub_1C32C20(&System_IDisposable_TypeInfo);
-    sub_1C32C20(&System_Collections_IEnumerator_TypeInfo);
-    sub_1C32C20(&UnityEngine_Transform_TypeInfo);
-    sub_1C32C20(&StringLiteral_18751/*"easetype"*/);
-    sub_1C32C20(&StringLiteral_20968/*"ischild"*/);
-    sub_1C32C20(&StringLiteral_21560/*"method"*/);
-    sub_1C32C20(&StringLiteral_24106/*"to"*/);
-    sub_1C32C20(&StringLiteral_20746/*"includechildren"*/);
-    sub_1C32C20(&StringLiteral_18051/*"color"*/);
-    sub_1C32C20(&StringLiteral_24241/*"type"*/);
-    sub_1C32C20(&iTween_TypeInfo);
-    byte_4C3E997 = 1;
+    sub_1C37058(&bool_TypeInfo);
+    sub_1C37058(&iTween_EaseType_TypeInfo);
+    sub_1C37058(&System_Collections_Hashtable_TypeInfo);
+    sub_1C37058(&System_IDisposable_TypeInfo);
+    sub_1C37058(&System_Collections_IEnumerator_TypeInfo);
+    sub_1C37058(&UnityEngine_Transform_TypeInfo);
+    sub_1C37058(&StringLiteral_18754/*"easetype"*/);
+    sub_1C37058(&StringLiteral_20971/*"ischild"*/);
+    sub_1C37058(&StringLiteral_21563/*"method"*/);
+    sub_1C37058(&StringLiteral_24110/*"to"*/);
+    sub_1C37058(&StringLiteral_20749/*"includechildren"*/);
+    sub_1C37058(&StringLiteral_18053/*"color"*/);
+    sub_1C37058(&StringLiteral_24245/*"type"*/);
+    sub_1C37058(&iTween_TypeInfo);
+    byte_4C49F17 = 1;
   }
   if ( !iTween_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(iTween_TypeInfo);
@@ -5529,23 +5529,23 @@ void iTween__ColorTo_63145580(
   v7 = (System_Collections_Hashtable_o *)transform;
   transform = (*(__int64 (__fastcall **)(__int64, __int64, _QWORD))(*(_QWORD *)transform + 712LL))(
                 transform,
-                StringLiteral_20746/*"includechildren"*/,
+                StringLiteral_20749/*"includechildren"*/,
                 *(_QWORD *)(*(_QWORD *)transform + 720LL));
   if ( (transform & 1) != 0 )
   {
     transform = ((__int64 (__fastcall *)(System_Collections_Hashtable_o *, __int64, const MethodInfo *))v7->klass->vtable._28_get_Item.methodPtr)(
                   v7,
-                  StringLiteral_20746/*"includechildren"*/,
+                  StringLiteral_20749/*"includechildren"*/,
                   v7->klass->vtable._28_get_Item.method);
     if ( !transform )
       goto LABEL_55;
     if ( *(Il2CppClass **)(*(_QWORD *)transform + 64LL) != bool_TypeInfo->_1.element_class )
     {
-      sub_1C3313C(transform);
+      sub_1C37574(transform);
       target = v56;
       if ( v49 != 1 )
       {
-        v50 = sub_1C32D5C(Enumerator);
+        v50 = sub_1C37194(Enumerator);
         v51 = v50;
         if ( v50 )
         {
@@ -5566,11 +5566,11 @@ void iTween__ColorTo_63145580(
           else
           {
 LABEL_65:
-            v55 = sub_1C83438(v50, System_IDisposable_TypeInfo, 0);
+            v55 = sub_1C87870(v50, System_IDisposable_TypeInfo, 0);
           }
           (*(void (__fastcall **)(__int64, _QWORD))v55)(v51, *(_QWORD *)(v55 + 8));
         }
-        sub_1D1BD54();
+        sub_1D2018C();
       }
       v33 = *(_QWORD *)__cxa_begin_catch(v48);
       __cxa_end_catch();
@@ -5582,10 +5582,10 @@ LABEL_65:
   }
   if ( !target || (transform = (__int64)UnityEngine_GameObject__get_transform(target, 0)) == 0 )
 LABEL_55:
-    sub_1C32E7C(transform);
+    sub_1C372B4(transform);
   Enumerator = UnityEngine_Transform__GetEnumerator((UnityEngine_Transform_o *)transform, 0);
   if ( !Enumerator )
-    sub_1C32E7C(0);
+    sub_1C372B4(0);
   while ( 1 )
   {
     klass = Enumerator->klass;
@@ -5605,7 +5605,7 @@ LABEL_55:
     else
     {
 LABEL_17:
-      v13 = sub_1C83438(Enumerator, System_Collections_IEnumerator_TypeInfo, 0);
+      v13 = sub_1C87870(Enumerator, System_Collections_IEnumerator_TypeInfo, 0);
     }
     if ( ((*(__int64 (__fastcall **)(System_Collections_IEnumerator_o *, _QWORD))v13)(Enumerator, *(_QWORD *)(v13 + 8))
         & 1) == 0 )
@@ -5627,7 +5627,7 @@ LABEL_17:
     else
     {
 LABEL_24:
-      v17 = sub_1C83438(Enumerator, System_Collections_IEnumerator_TypeInfo, 1);
+      v17 = sub_1C87870(Enumerator, System_Collections_IEnumerator_TypeInfo, 1);
     }
     v18 = (UnityEngine_Component_o *)(*(__int64 (__fastcall **)(System_Collections_IEnumerator_o *, _QWORD))v17)(
                                        Enumerator,
@@ -5651,29 +5651,29 @@ LABEL_24:
       goto LABEL_53;
     v29 = ((__int64 (__fastcall *)(System_Collections_Hashtable_o *, __int64, __int64, const MethodInfo *))v26->klass->vtable._29_set_Item.methodPtr)(
             v26,
-            StringLiteral_20968/*"ischild"*/,
+            StringLiteral_20971/*"ischild"*/,
             v28,
             v26->klass->vtable._29_set_Item.method);
     if ( !v18 )
-      sub_1C32E7C(v29);
+      sub_1C372B4(v29);
     v30 = UnityEngine_Transform_TypeInfo->_2.naturalAligment;
     if ( v18->klass->_2.naturalAligment < (unsigned int)v30
       || (UnityEngine_Transform_c *)v18->klass->_2.typeHierarchy[v30 - 1] != UnityEngine_Transform_TypeInfo )
     {
-      sub_1C3313C(v18);
+      sub_1C37574(v18);
 LABEL_52:
-      sub_1C3313C(v26);
+      sub_1C37574(v26);
 LABEL_53:
-      sub_1C32E7C(v28);
+      sub_1C372B4(v28);
     }
     gameObject = UnityEngine_Component__get_gameObject(v18, 0);
     if ( !iTween_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(iTween_TypeInfo);
-    iTween__ColorTo_63145580(gameObject, v26, v31);
+    iTween__ColorTo_63188692(gameObject, v26, v31);
   }
   v33 = 0;
 LABEL_37:
-  v34 = sub_1C32D5C(Enumerator);
+  v34 = sub_1C37194(Enumerator);
   if ( v34 )
   {
     v35 = *(_QWORD *)v34;
@@ -5694,16 +5694,16 @@ LABEL_37:
     else
     {
 LABEL_42:
-      v39 = sub_1C83438(v34, System_IDisposable_TypeInfo, 0);
+      v39 = sub_1C87870(v34, System_IDisposable_TypeInfo, 0);
     }
     (*(void (__fastcall **)(__int64, _QWORD))v39)(v36, *(_QWORD *)(v39 + 8));
   }
   if ( v33 )
-    sub_1C32E74(v33);
+    sub_1C372AC(v33);
 LABEL_46:
   if ( (((__int64 (__fastcall *)(System_Collections_Hashtable_o *, __int64, const MethodInfo *))v7->klass->vtable._25_Contains.methodPtr)(
           v7,
-          StringLiteral_18751/*"easetype"*/,
+          StringLiteral_18754/*"easetype"*/,
           v7->klass->vtable._25_Contains.method)
       & 1) == 0 )
   {
@@ -5711,19 +5711,19 @@ LABEL_46:
     v46 = j_il2cpp_value_box_0(iTween_EaseType_TypeInfo, &v57, v40, v41, v42, v43, v44, v45);
     ((void (__fastcall *)(System_Collections_Hashtable_o *, __int64, __int64, const MethodInfo *))v7->klass->vtable._22_Add.methodPtr)(
       v7,
-      StringLiteral_18751/*"easetype"*/,
+      StringLiteral_18754/*"easetype"*/,
       v46,
       v7->klass->vtable._22_Add.method);
   }
   ((void (__fastcall *)(System_Collections_Hashtable_o *, __int64, __int64, const MethodInfo *))v7->klass->vtable._29_set_Item.methodPtr)(
     v7,
-    StringLiteral_24241/*"type"*/,
-    StringLiteral_18051/*"color"*/,
+    StringLiteral_24245/*"type"*/,
+    StringLiteral_18053/*"color"*/,
     v7->klass->vtable._29_set_Item.method);
   ((void (__fastcall *)(System_Collections_Hashtable_o *, __int64, __int64, const MethodInfo *))v7->klass->vtable._29_set_Item.methodPtr)(
     v7,
-    StringLiteral_21560/*"method"*/,
-    StringLiteral_24106/*"to"*/,
+    StringLiteral_21563/*"method"*/,
+    StringLiteral_24110/*"to"*/,
     v7->klass->vtable._29_set_Item.method);
   if ( !iTween_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(iTween_TypeInfo);
@@ -5796,45 +5796,45 @@ void iTween__ColorUpdate(
   Il2CppObject *v62; // x21
   UnityEngine_Color_o color; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 
-  if ( (byte_4C3E9F7 & 1) == 0 )
+  if ( (byte_4C49F77 & 1) == 0 )
   {
-    sub_1C32C20(&bool_TypeInfo);
-    sub_1C32C20(&UnityEngine_Color___TypeInfo);
-    sub_1C32C20(&UnityEngine_Color_TypeInfo);
-    sub_1C32C20(&iTween_Defaults_TypeInfo);
-    sub_1C32C20(&Method_UnityEngine_GameObject_GetComponent_Light___);
-    sub_1C32C20(&Method_UnityEngine_GameObject_GetComponent_Renderer___);
-    sub_1C32C20(&System_IDisposable_TypeInfo);
-    sub_1C32C20(&System_Collections_IEnumerator_TypeInfo);
-    sub_1C32C20(&UnityEngine_Object_TypeInfo);
-    sub_1C32C20(&float_TypeInfo);
-    sub_1C32C20(&UnityEngine_Transform_TypeInfo);
-    sub_1C32C20(&StringLiteral_16629/*"a"*/);
-    sub_1C32C20(&StringLiteral_19720/*"g"*/);
-    sub_1C32C20(&StringLiteral_16967/*"b"*/);
-    sub_1C32C20(&StringLiteral_24067/*"time"*/);
-    sub_1C32C20(&StringLiteral_22915/*"r"*/);
-    sub_1C32C20(&StringLiteral_20746/*"includechildren"*/);
-    sub_1C32C20(&StringLiteral_18051/*"color"*/);
-    sub_1C32C20(&iTween_TypeInfo);
-    byte_4C3E9F7 = 1;
+    sub_1C37058(&bool_TypeInfo);
+    sub_1C37058(&UnityEngine_Color___TypeInfo);
+    sub_1C37058(&UnityEngine_Color_TypeInfo);
+    sub_1C37058(&iTween_Defaults_TypeInfo);
+    sub_1C37058(&Method_UnityEngine_GameObject_GetComponent_Light___);
+    sub_1C37058(&Method_UnityEngine_GameObject_GetComponent_Renderer___);
+    sub_1C37058(&System_IDisposable_TypeInfo);
+    sub_1C37058(&System_Collections_IEnumerator_TypeInfo);
+    sub_1C37058(&UnityEngine_Object_TypeInfo);
+    sub_1C37058(&float_TypeInfo);
+    sub_1C37058(&UnityEngine_Transform_TypeInfo);
+    sub_1C37058(&StringLiteral_16631/*"a"*/);
+    sub_1C37058(&StringLiteral_19723/*"g"*/);
+    sub_1C37058(&StringLiteral_16969/*"b"*/);
+    sub_1C37058(&StringLiteral_24071/*"time"*/);
+    sub_1C37058(&StringLiteral_22919/*"r"*/);
+    sub_1C37058(&StringLiteral_20749/*"includechildren"*/);
+    sub_1C37058(&StringLiteral_18053/*"color"*/);
+    sub_1C37058(&iTween_TypeInfo);
+    byte_4C49F77 = 1;
   }
   if ( !iTween_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(iTween_TypeInfo);
   iTween__CleanArgs(args, (const MethodInfo *)args);
-  transform = sub_1C32CC8(UnityEngine_Color___TypeInfo, 4);
+  transform = sub_1C37100(UnityEngine_Color___TypeInfo, 4);
   if ( !args )
     goto LABEL_116;
   v6 = transform;
   transform = ((__int64 (__fastcall *)(System_Collections_Hashtable_o *, __int64, const MethodInfo *))args->klass->vtable._25_Contains.methodPtr)(
                 args,
-                StringLiteral_20746/*"includechildren"*/,
+                StringLiteral_20749/*"includechildren"*/,
                 args->klass->vtable._25_Contains.method);
   if ( (transform & 1) == 0 )
     goto LABEL_122;
   transform = ((__int64 (__fastcall *)(System_Collections_Hashtable_o *, __int64, const MethodInfo *))args->klass->vtable._28_get_Item.methodPtr)(
                 args,
-                StringLiteral_20746/*"includechildren"*/,
+                StringLiteral_20749/*"includechildren"*/,
                 args->klass->vtable._28_get_Item.method);
   if ( !transform )
     goto LABEL_116;
@@ -5872,7 +5872,7 @@ LABEL_122:
       else
       {
 LABEL_17:
-        v14 = sub_1C83438(v10, System_Collections_IEnumerator_TypeInfo, 0);
+        v14 = sub_1C87870(v10, System_Collections_IEnumerator_TypeInfo, 0);
       }
       if ( ((*(__int64 (__fastcall **)(System_Collections_IEnumerator_o *, _QWORD))v14)(v10, *(_QWORD *)(v14 + 8)) & 1) == 0 )
         break;
@@ -5893,7 +5893,7 @@ LABEL_17:
       else
       {
 LABEL_24:
-        v18 = sub_1C83438(v10, System_Collections_IEnumerator_TypeInfo, 1);
+        v18 = sub_1C87870(v10, System_Collections_IEnumerator_TypeInfo, 1);
       }
       v19 = (UnityEngine_Component_o *)(*(__int64 (__fastcall **)(System_Collections_IEnumerator_o *, _QWORD))v18)(
                                          v10,
@@ -5904,16 +5904,16 @@ LABEL_24:
       if ( v19->klass->_2.naturalAligment < (unsigned int)naturalAligment
         || (UnityEngine_Transform_c *)v19->klass->_2.typeHierarchy[naturalAligment - 1] != UnityEngine_Transform_TypeInfo )
       {
-        sub_1C3313C(v19);
+        sub_1C37574(v19);
 LABEL_115:
-        sub_1C32E7C(v19);
+        sub_1C372B4(v19);
       }
       gameObject = UnityEngine_Component__get_gameObject(v19, 0);
       if ( !iTween_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(iTween_TypeInfo);
       iTween__ColorUpdate(gameObject, args, v21);
     }
-    v23 = sub_1C32D5C(v10);
+    v23 = sub_1C37194(v10);
     if ( v23 )
     {
       v24 = *(_QWORD *)v23;
@@ -5934,20 +5934,20 @@ LABEL_115:
       else
       {
 LABEL_37:
-        v28 = sub_1C83438(v23, System_IDisposable_TypeInfo, 0);
+        v28 = sub_1C87870(v23, System_IDisposable_TypeInfo, 0);
       }
       (*(void (__fastcall **)(__int64, _QWORD))v28)(v25, *(_QWORD *)(v28 + 8));
     }
   }
   if ( (((__int64 (__fastcall *)(System_Collections_Hashtable_o *, __int64, const MethodInfo *))args->klass->vtable._25_Contains.methodPtr)(
           args,
-          StringLiteral_24067/*"time"*/,
+          StringLiteral_24071/*"time"*/,
           args->klass->vtable._25_Contains.method)
       & 1) != 0 )
   {
     transform = ((__int64 (__fastcall *)(System_Collections_Hashtable_o *, __int64, const MethodInfo *))args->klass->vtable._28_get_Item.methodPtr)(
                   args,
-                  StringLiteral_24067/*"time"*/,
+                  StringLiteral_24071/*"time"*/,
                   args->klass->vtable._28_get_Item.method);
     if ( !transform )
       goto LABEL_116;
@@ -5976,14 +5976,14 @@ LABEL_37:
     goto LABEL_116;
   Component_object = UnityEngine_GameObject__GetComponent_object_(
                        target,
-                       (const MethodInfo_3134970 *)Method_UnityEngine_GameObject_GetComponent_Renderer___);
+                       (const MethodInfo_313F1D8 *)Method_UnityEngine_GameObject_GetComponent_Renderer___);
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   if ( UnityEngine_Object__op_Implicit((UnityEngine_Object_o *)Component_object, 0) )
   {
     transform = (__int64)UnityEngine_GameObject__GetComponent_object_(
                            target,
-                           (const MethodInfo_3134970 *)Method_UnityEngine_GameObject_GetComponent_Renderer___);
+                           (const MethodInfo_313F1D8 *)Method_UnityEngine_GameObject_GetComponent_Renderer___);
     if ( !transform )
       goto LABEL_116;
     transform = (__int64)UnityEngine_Renderer__get_material((UnityEngine_Renderer_o *)transform, 0);
@@ -5996,17 +5996,17 @@ LABEL_37:
   }
   v34 = UnityEngine_GameObject__GetComponent_object_(
           target,
-          (const MethodInfo_3134970 *)Method_UnityEngine_GameObject_GetComponent_Light___);
+          (const MethodInfo_313F1D8 *)Method_UnityEngine_GameObject_GetComponent_Light___);
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   if ( !UnityEngine_Object__op_Implicit((UnityEngine_Object_o *)v34, 0) )
     goto LABEL_64;
   transform = (__int64)UnityEngine_GameObject__GetComponent_object_(
                          target,
-                         (const MethodInfo_3134970 *)Method_UnityEngine_GameObject_GetComponent_Light___);
+                         (const MethodInfo_313F1D8 *)Method_UnityEngine_GameObject_GetComponent_Light___);
   if ( !transform || (color = UnityEngine_Light__get_color((UnityEngine_Light_o *)transform, 0), !v6) )
 LABEL_116:
-    sub_1C32E7C(transform);
+    sub_1C372B4(transform);
 LABEL_62:
   if ( *(_DWORD *)(v6 + 24) <= 1u )
     goto LABEL_117;
@@ -6015,13 +6015,13 @@ LABEL_62:
 LABEL_64:
   if ( (((__int64 (__fastcall *)(System_Collections_Hashtable_o *, __int64, const MethodInfo *))args->klass->vtable._25_Contains.methodPtr)(
           args,
-          StringLiteral_18051/*"color"*/,
+          StringLiteral_18053/*"color"*/,
           args->klass->vtable._25_Contains.method)
       & 1) != 0 )
   {
     transform = ((__int64 (__fastcall *)(System_Collections_Hashtable_o *, __int64, const MethodInfo *))args->klass->vtable._28_get_Item.methodPtr)(
                   args,
-                  StringLiteral_18051/*"color"*/,
+                  StringLiteral_18053/*"color"*/,
                   args->klass->vtable._28_get_Item.method);
     if ( !v6 || !transform )
       goto LABEL_116;
@@ -6037,7 +6037,7 @@ LABEL_64:
   }
   transform = ((__int64 (__fastcall *)(System_Collections_Hashtable_o *, __int64, const MethodInfo *))args->klass->vtable._25_Contains.methodPtr)(
                 args,
-                StringLiteral_22915/*"r"*/,
+                StringLiteral_22919/*"r"*/,
                 args->klass->vtable._25_Contains.method);
   if ( (transform & 1) != 0 )
   {
@@ -6045,7 +6045,7 @@ LABEL_64:
       goto LABEL_116;
     transform = ((__int64 (__fastcall *)(System_Collections_Hashtable_o *, __int64, const MethodInfo *))args->klass->vtable._28_get_Item.methodPtr)(
                   args,
-                  StringLiteral_22915/*"r"*/,
+                  StringLiteral_22919/*"r"*/,
                   args->klass->vtable._28_get_Item.method);
     if ( !transform )
       goto LABEL_116;
@@ -6058,7 +6058,7 @@ LABEL_64:
   }
   transform = ((__int64 (__fastcall *)(System_Collections_Hashtable_o *, __int64, const MethodInfo *))args->klass->vtable._25_Contains.methodPtr)(
                 args,
-                StringLiteral_19720/*"g"*/,
+                StringLiteral_19723/*"g"*/,
                 args->klass->vtable._25_Contains.method);
   if ( (transform & 1) != 0 )
   {
@@ -6066,7 +6066,7 @@ LABEL_64:
       goto LABEL_116;
     transform = ((__int64 (__fastcall *)(System_Collections_Hashtable_o *, __int64, const MethodInfo *))args->klass->vtable._28_get_Item.methodPtr)(
                   args,
-                  StringLiteral_19720/*"g"*/,
+                  StringLiteral_19723/*"g"*/,
                   args->klass->vtable._28_get_Item.method);
     if ( !transform )
       goto LABEL_116;
@@ -6079,7 +6079,7 @@ LABEL_64:
   }
   transform = ((__int64 (__fastcall *)(System_Collections_Hashtable_o *, __int64, const MethodInfo *))args->klass->vtable._25_Contains.methodPtr)(
                 args,
-                StringLiteral_16967/*"b"*/,
+                StringLiteral_16969/*"b"*/,
                 args->klass->vtable._25_Contains.method);
   if ( (transform & 1) == 0 )
     goto LABEL_88;
@@ -6087,16 +6087,16 @@ LABEL_64:
     goto LABEL_116;
   transform = ((__int64 (__fastcall *)(System_Collections_Hashtable_o *, __int64, const MethodInfo *))args->klass->vtable._28_get_Item.methodPtr)(
                 args,
-                StringLiteral_16967/*"b"*/,
+                StringLiteral_16969/*"b"*/,
                 args->klass->vtable._28_get_Item.method);
   if ( !transform )
     goto LABEL_116;
   if ( *(Il2CppClass **)(*(_QWORD *)transform + 64LL) != float_TypeInfo->_1.element_class )
   {
 LABEL_118:
-    sub_1C3313C(transform);
+    sub_1C37574(transform);
 LABEL_119:
-    sub_1C32E7C(Enumerator);
+    sub_1C372B4(Enumerator);
   }
   transform = j_il2cpp_object_unbox_0(transform, float_TypeInfo, v41, v42);
   if ( *(_DWORD *)(v6 + 24) <= 1u )
@@ -6105,7 +6105,7 @@ LABEL_119:
 LABEL_88:
   transform = ((__int64 (__fastcall *)(System_Collections_Hashtable_o *, __int64, const MethodInfo *))args->klass->vtable._25_Contains.methodPtr)(
                 args,
-                StringLiteral_16629/*"a"*/,
+                StringLiteral_16631/*"a"*/,
                 args->klass->vtable._25_Contains.method);
   if ( (transform & 1) == 0 )
   {
@@ -6117,7 +6117,7 @@ LABEL_88:
     goto LABEL_116;
   transform = ((__int64 (__fastcall *)(System_Collections_Hashtable_o *, __int64, const MethodInfo *))args->klass->vtable._28_get_Item.methodPtr)(
                 args,
-                StringLiteral_16629/*"a"*/,
+                StringLiteral_16631/*"a"*/,
                 args->klass->vtable._28_get_Item.method);
   if ( !transform )
     goto LABEL_116;
@@ -6133,41 +6133,41 @@ LABEL_95:
   v45 = *(float *)(v6 + 32);
   v46 = *(float *)(v6 + 48);
   deltaTime = UnityEngine_Time__get_deltaTime(0);
-  v48 = UnityEngine_Mathf__SmoothDamp_71168496(v45, v46, (float *)(v6 + 64), v32, INFINITY, deltaTime, 0);
+  v48 = UnityEngine_Mathf__SmoothDamp_71211608(v45, v46, (float *)(v6 + 64), v32, INFINITY, deltaTime, 0);
   if ( *(_DWORD *)(v6 + 24) <= 3u )
     goto LABEL_117;
   v49 = *(float *)(v6 + 36);
   v50 = *(float *)(v6 + 52);
   *(float *)(v6 + 80) = v48;
   v51 = UnityEngine_Time__get_deltaTime(0);
-  v52 = UnityEngine_Mathf__SmoothDamp_71168496(v49, v50, (float *)(v6 + 68), v32, INFINITY, v51, 0);
+  v52 = UnityEngine_Mathf__SmoothDamp_71211608(v49, v50, (float *)(v6 + 68), v32, INFINITY, v51, 0);
   if ( *(_DWORD *)(v6 + 24) <= 3u )
     goto LABEL_117;
   v53 = *(float *)(v6 + 40);
   v54 = *(float *)(v6 + 56);
   *(float *)(v6 + 84) = v52;
   v55 = UnityEngine_Time__get_deltaTime(0);
-  v56 = UnityEngine_Mathf__SmoothDamp_71168496(v53, v54, (float *)(v6 + 72), v32, INFINITY, v55, 0);
+  v56 = UnityEngine_Mathf__SmoothDamp_71211608(v53, v54, (float *)(v6 + 72), v32, INFINITY, v55, 0);
   if ( *(_DWORD *)(v6 + 24) <= 3u )
     goto LABEL_117;
   v57 = *(float *)(v6 + 44);
   v58 = *(float *)(v6 + 60);
   *(float *)(v6 + 88) = v56;
   v59 = UnityEngine_Time__get_deltaTime(0);
-  v60 = UnityEngine_Mathf__SmoothDamp_71168496(v57, v58, (float *)(v6 + 76), v32, INFINITY, v59, 0);
+  v60 = UnityEngine_Mathf__SmoothDamp_71211608(v57, v58, (float *)(v6 + 76), v32, INFINITY, v59, 0);
   if ( *(_DWORD *)(v6 + 24) <= 3u )
     goto LABEL_117;
   *(float *)(v6 + 92) = v60;
   v61 = UnityEngine_GameObject__GetComponent_object_(
           target,
-          (const MethodInfo_3134970 *)Method_UnityEngine_GameObject_GetComponent_Renderer___);
+          (const MethodInfo_313F1D8 *)Method_UnityEngine_GameObject_GetComponent_Renderer___);
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   if ( UnityEngine_Object__op_Implicit((UnityEngine_Object_o *)v61, 0) )
   {
     transform = (__int64)UnityEngine_GameObject__GetComponent_object_(
                            target,
-                           (const MethodInfo_3134970 *)Method_UnityEngine_GameObject_GetComponent_Renderer___);
+                           (const MethodInfo_313F1D8 *)Method_UnityEngine_GameObject_GetComponent_Renderer___);
     if ( !transform )
       goto LABEL_116;
     transform = (__int64)UnityEngine_Renderer__get_material((UnityEngine_Renderer_o *)transform, 0);
@@ -6179,18 +6179,18 @@ LABEL_95:
       return;
     }
 LABEL_117:
-    sub_1C32E84(transform);
+    sub_1C372BC(transform);
   }
   v62 = UnityEngine_GameObject__GetComponent_object_(
           target,
-          (const MethodInfo_3134970 *)Method_UnityEngine_GameObject_GetComponent_Light___);
+          (const MethodInfo_313F1D8 *)Method_UnityEngine_GameObject_GetComponent_Light___);
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   if ( !UnityEngine_Object__op_Implicit((UnityEngine_Object_o *)v62, 0) )
     return;
   transform = (__int64)UnityEngine_GameObject__GetComponent_object_(
                          target,
-                         (const MethodInfo_3134970 *)Method_UnityEngine_GameObject_GetComponent_Light___);
+                         (const MethodInfo_313F1D8 *)Method_UnityEngine_GameObject_GetComponent_Light___);
   if ( *(_DWORD *)(v6 + 24) <= 3u )
     goto LABEL_117;
   if ( !transform )
@@ -6199,7 +6199,7 @@ LABEL_117:
 }
 
 
-void iTween__ColorUpdate_63228744(
+void iTween__ColorUpdate_63271856(
         UnityEngine_GameObject_o *target,
         UnityEngine_Color_o color,
         float time,
@@ -6247,27 +6247,27 @@ void iTween__ColorUpdate_63228744(
   b = color.fields.b;
   g = color.fields.g;
   r = color.fields.r;
-  if ( (byte_4C3E9F8 & 1) == 0 )
+  if ( (byte_4C49F78 & 1) == 0 )
   {
-    sub_1C32C20(&UnityEngine_Color_TypeInfo);
-    sub_1C32C20(&object___TypeInfo);
-    sub_1C32C20(&float_TypeInfo);
-    sub_1C32C20(&StringLiteral_24067/*"time"*/);
-    sub_1C32C20(&StringLiteral_18051/*"color"*/);
-    sub_1C32C20(&iTween_TypeInfo);
-    byte_4C3E9F8 = 1;
+    sub_1C37058(&UnityEngine_Color_TypeInfo);
+    sub_1C37058(&object___TypeInfo);
+    sub_1C37058(&float_TypeInfo);
+    sub_1C37058(&StringLiteral_24071/*"time"*/);
+    sub_1C37058(&StringLiteral_18053/*"color"*/);
+    sub_1C37058(&iTween_TypeInfo);
+    byte_4C49F78 = 1;
   }
-  v10 = sub_1C32CC8(object___TypeInfo, 4);
+  v10 = sub_1C37100(object___TypeInfo, 4);
   if ( !v10 )
-    sub_1C32E7C(0);
+    sub_1C372B4(0);
   v13 = v10;
-  v14 = StringLiteral_18051/*"color"*/;
-  if ( StringLiteral_18051/*"color"*/ )
+  v14 = StringLiteral_18053/*"color"*/;
+  if ( StringLiteral_18053/*"color"*/ )
   {
-    v14 = sub_1C32D5C(StringLiteral_18051/*"color"*/);
+    v14 = sub_1C37194(StringLiteral_18053/*"color"*/);
     if ( !v14 )
       goto LABEL_24;
-    v15 = StringLiteral_18051/*"color"*/;
+    v15 = StringLiteral_18053/*"color"*/;
   }
   else
   {
@@ -6276,7 +6276,7 @@ void iTween__ColorUpdate_63228744(
   if ( !*(_DWORD *)(v13 + 24) )
     goto LABEL_23;
   *(_QWORD *)(v13 + 32) = v15;
-  sub_1C32BC4((CGThumbnailListItem_o *)(v13 + 32), v15, v11, v12);
+  sub_1C36FFC((CGThumbnailListItem_o *)(v13 + 32), v15, v11, v12);
   *(float *)v42 = r;
   *(float *)&v42[1] = g;
   *(float *)&v42[2] = b;
@@ -6285,21 +6285,21 @@ void iTween__ColorUpdate_63228744(
   v24 = v14;
   if ( v14 )
   {
-    v14 = sub_1C32D5C(v14);
+    v14 = sub_1C37194(v14);
     if ( !v14 )
       goto LABEL_24;
   }
   if ( *(_DWORD *)(v13 + 24) <= 1u )
     goto LABEL_23;
   *(_QWORD *)(v13 + 40) = v24;
-  sub_1C32BC4((CGThumbnailListItem_o *)(v13 + 40), v24, v22, v23);
-  v14 = StringLiteral_24067/*"time"*/;
-  if ( StringLiteral_24067/*"time"*/ )
+  sub_1C36FFC((CGThumbnailListItem_o *)(v13 + 40), v24, v22, v23);
+  v14 = StringLiteral_24071/*"time"*/;
+  if ( StringLiteral_24071/*"time"*/ )
   {
-    v14 = sub_1C32D5C(StringLiteral_24067/*"time"*/);
+    v14 = sub_1C37194(StringLiteral_24071/*"time"*/);
     if ( !v14 )
       goto LABEL_24;
-    v27 = StringLiteral_24067/*"time"*/;
+    v27 = StringLiteral_24071/*"time"*/;
   }
   else
   {
@@ -6308,25 +6308,25 @@ void iTween__ColorUpdate_63228744(
   if ( *(_DWORD *)(v13 + 24) <= 2u )
     goto LABEL_23;
   *(_QWORD *)(v13 + 48) = v27;
-  sub_1C32BC4((CGThumbnailListItem_o *)(v13 + 48), v27, v25, v26);
+  sub_1C36FFC((CGThumbnailListItem_o *)(v13 + 48), v27, v25, v26);
   v41 = time;
   v14 = j_il2cpp_value_box_0(float_TypeInfo, &v41, v28, v29, v30, v31, v32, v33);
   v36 = v14;
   if ( v14 )
   {
-    v14 = sub_1C32D5C(v14);
+    v14 = sub_1C37194(v14);
     if ( !v14 )
     {
 LABEL_24:
-      v40 = sub_1C32EA0(v14);
-      sub_1C32D48(v40, 0);
+      v40 = sub_1C372D8(v14);
+      sub_1C37180(v40, 0);
     }
   }
   if ( *(_DWORD *)(v13 + 24) <= 3u )
 LABEL_23:
-    sub_1C32E84(v14);
+    sub_1C372BC(v14);
   *(_QWORD *)(v13 + 56) = v36;
-  sub_1C32BC4((CGThumbnailListItem_o *)(v13 + 56), v36, v34, v35);
+  sub_1C36FFC((CGThumbnailListItem_o *)(v13 + 56), v36, v34, v35);
   if ( !iTween_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(iTween_TypeInfo);
   v38 = iTween__Hash((System_Object_array *)v13, v37);
@@ -6337,7 +6337,7 @@ LABEL_23:
 void iTween__ConflictCheck(iTween_o *this, const MethodInfo *method)
 {
   System_String_o *v2; // x23
-  System_Object_array *Components_object__51201748; // x0
+  System_Object_array *Components_object__51244860; // x0
   iTween___c_c *v5; // x8
   System_Collections_Generic_IEnumerable_TSource__o *v6; // x19
   System_Func_object__bool__o *_9__253_0; // x21
@@ -6415,28 +6415,28 @@ void iTween__ConflictCheck(iTween_o *this, const MethodInfo *method)
   __int64 v79; // x0
 
   v2 = (System_String_o *)&iTween___c_TypeInfo;
-  if ( (byte_4C3EA48 & 1) == 0 )
+  if ( (byte_4C49FC8 & 1) == 0 )
   {
-    sub_1C32C20(&Method_UnityEngine_Component_GetComponents_iTween___);
-    sub_1C32C20(&System_Collections_DictionaryEntry_TypeInfo);
-    sub_1C32C20(&Method_System_Linq_Enumerable_Where_iTween___);
-    sub_1C32C20(&System_Func_iTween__bool__TypeInfo);
-    sub_1C32C20(&System_IDisposable_TypeInfo);
-    sub_1C32C20(&System_Collections_Generic_IEnumerable_iTween__TypeInfo);
-    sub_1C32C20(&System_Collections_Generic_IEnumerator_iTween__TypeInfo);
-    sub_1C32C20(&System_Collections_IEnumerator_TypeInfo);
-    sub_1C32C20(&string_TypeInfo);
-    sub_1C32C20(&Method_iTween___c__ConflictCheck_b__253_0__);
-    sub_1C32C20(&iTween___c_TypeInfo);
-    sub_1C32C20(&StringLiteral_24629/*"value"*/);
-    sub_1C32C20(&StringLiteral_20251/*"id"*/);
-    byte_4C3EA48 = 1;
+    sub_1C37058(&Method_UnityEngine_Component_GetComponents_iTween___);
+    sub_1C37058(&System_Collections_DictionaryEntry_TypeInfo);
+    sub_1C37058(&Method_System_Linq_Enumerable_Where_iTween___);
+    sub_1C37058(&System_Func_iTween__bool__TypeInfo);
+    sub_1C37058(&System_IDisposable_TypeInfo);
+    sub_1C37058(&System_Collections_Generic_IEnumerable_iTween__TypeInfo);
+    sub_1C37058(&System_Collections_Generic_IEnumerator_iTween__TypeInfo);
+    sub_1C37058(&System_Collections_IEnumerator_TypeInfo);
+    sub_1C37058(&string_TypeInfo);
+    sub_1C37058(&Method_iTween___c__ConflictCheck_b__253_0__);
+    sub_1C37058(&iTween___c_TypeInfo);
+    sub_1C37058(&StringLiteral_24634/*"value"*/);
+    sub_1C37058(&StringLiteral_20254/*"id"*/);
+    byte_4C49FC8 = 1;
   }
-  Components_object__51201748 = UnityEngine_Component__GetComponents_object__51201748(
+  Components_object__51244860 = UnityEngine_Component__GetComponents_object__51244860(
                                   (UnityEngine_Component_o *)this,
-                                  (const MethodInfo_30D46D4 *)Method_UnityEngine_Component_GetComponents_iTween___);
+                                  (const MethodInfo_30DEF3C *)Method_UnityEngine_Component_GetComponents_iTween___);
   v5 = iTween___c_TypeInfo;
-  v6 = (System_Collections_Generic_IEnumerable_TSource__o *)Components_object__51201748;
+  v6 = (System_Collections_Generic_IEnumerable_TSource__o *)Components_object__51244860;
   if ( !iTween___c_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(iTween___c_TypeInfo);
@@ -6451,18 +6451,18 @@ void iTween__ConflictCheck(iTween_o *this, const MethodInfo *method)
       v5 = iTween___c_TypeInfo;
     }
     v8 = (Il2CppObject *)v5->static_fields->__9;
-    _9__253_0 = (System_Func_object__bool__o *)sub_1C32E6C(System_Func_iTween__bool__TypeInfo);
+    _9__253_0 = (System_Func_object__bool__o *)sub_1C372A4(System_Func_iTween__bool__TypeInfo);
     System_Func_object__bool____ctor(_9__253_0, v8, Method_iTween___c__ConflictCheck_b__253_0__, 0);
     static_fields = iTween___c_TypeInfo->static_fields;
     static_fields->__9__253_0 = (struct System_Func_iTween__bool__o *)_9__253_0;
-    sub_1C32BC4((CGThumbnailListItem_o *)&static_fields->__9__253_0, (int32_t)_9__253_0, v10, v11);
+    sub_1C36FFC((CGThumbnailListItem_o *)&static_fields->__9__253_0, (int32_t)_9__253_0, v10, v11);
   }
   v12 = System_Linq_Enumerable__Where_object_(
           v6,
           (System_Func_TSource__bool__o *)_9__253_0,
-          (const MethodInfo_3123BA8 *)Method_System_Linq_Enumerable_Where_iTween___);
+          (const MethodInfo_312E410 *)Method_System_Linq_Enumerable_Where_iTween___);
   if ( !v12 )
-    sub_1C32E7C(0);
+    sub_1C372B4(0);
   klass = v12->klass;
   v14 = v12;
   v15 = *(unsigned __int16 *)&v12->klass->_2.rank;
@@ -6481,13 +6481,13 @@ void iTween__ConflictCheck(iTween_o *this, const MethodInfo *method)
   else
   {
 LABEL_14:
-    v17 = sub_1C83438(v12, System_Collections_Generic_IEnumerable_iTween__TypeInfo, 0);
+    v17 = sub_1C87870(v12, System_Collections_Generic_IEnumerable_iTween__TypeInfo, 0);
   }
   v18 = (*(__int64 (__fastcall **)(System_Collections_Generic_IEnumerable_TSource__o *, _QWORD))v17)(
           v14,
           *(_QWORD *)(v17 + 8));
   if ( !v18 )
-    sub_1C32E7C(0);
+    sub_1C372B4(0);
   while ( 1 )
   {
     v19 = *(_QWORD *)v18;
@@ -6507,7 +6507,7 @@ LABEL_14:
     else
     {
 LABEL_21:
-      v22 = sub_1C83438(v18, System_Collections_IEnumerator_TypeInfo, 0);
+      v22 = sub_1C87870(v18, System_Collections_IEnumerator_TypeInfo, 0);
     }
     if ( ((*(__int64 (__fastcall **)(__int64, _QWORD))v22)(v18, *(_QWORD *)(v22 + 8)) & 1) == 0 )
       break;
@@ -6528,13 +6528,13 @@ LABEL_21:
     else
     {
 LABEL_28:
-      v26 = sub_1C83438(v18, System_Collections_Generic_IEnumerator_iTween__TypeInfo, 0);
+      v26 = sub_1C87870(v18, System_Collections_Generic_IEnumerator_iTween__TypeInfo, 0);
     }
     v27 = (*(__int64 (__fastcall **)(__int64, _QWORD))v26)(v18, *(_QWORD *)(v26 + 8));
     v28 = (iTween_o *)v27;
     if ( !v27 )
-      sub_1C32E7C(0);
-    if ( System_String__op_Equality(*(System_String_o **)(v27 + 48), (System_String_o *)StringLiteral_24629/*"value"*/, 0) )
+      sub_1C372B4(0);
+    if ( System_String__op_Equality(*(System_String_o **)(v27 + 48), (System_String_o *)StringLiteral_24634/*"value"*/, 0) )
       break;
     if ( v28->fields.isRunning && System_String__op_Equality(v28->fields.type, this->fields.type, 0) )
     {
@@ -6542,25 +6542,25 @@ LABEL_28:
       {
         tweenArguments = v28->fields.tweenArguments;
         if ( !tweenArguments )
-          sub_1C32E7C(0);
+          sub_1C372B4(0);
         v30 = ((__int64 (__fastcall *)(struct System_Collections_Hashtable_o *, const MethodInfo *))tweenArguments->klass->vtable._39_get_Count.methodPtr)(
                 tweenArguments,
                 tweenArguments->klass->vtable._39_get_Count.method);
         v31 = this->fields.tweenArguments;
         if ( !v31 )
-          sub_1C32E7C(0);
+          sub_1C372B4(0);
         if ( v30 == ((unsigned int (__fastcall *)(struct System_Collections_Hashtable_o *, const MethodInfo *))v31->klass->vtable._39_get_Count.methodPtr)(
                       v31,
                       v31->klass->vtable._39_get_Count.method) )
         {
           v33 = this->fields.tweenArguments;
           if ( !v33 )
-            sub_1C32E7C(0);
+            sub_1C372B4(0);
           v34 = ((__int64 (__fastcall *)(struct System_Collections_Hashtable_o *, const MethodInfo *))v33->klass->vtable._30_GetEnumerator.methodPtr)(
                   v33,
                   v33->klass->vtable._30_GetEnumerator.method);
           if ( !v34 )
-            sub_1C32E7C(0);
+            sub_1C372B4(0);
           while ( 1 )
           {
             v35 = *(_QWORD *)v34;
@@ -6580,7 +6580,7 @@ LABEL_28:
             else
             {
 LABEL_44:
-              v38 = sub_1C83438(v34, System_Collections_IEnumerator_TypeInfo, 0);
+              v38 = sub_1C87870(v34, System_Collections_IEnumerator_TypeInfo, 0);
             }
             if ( ((*(__int64 (__fastcall **)(__int64, _QWORD))v38)(v34, *(_QWORD *)(v38 + 8)) & 1) == 0 )
             {
@@ -6605,14 +6605,14 @@ LABEL_44:
             else
             {
 LABEL_51:
-              v42 = sub_1C83438(v34, System_Collections_IEnumerator_TypeInfo, 1);
+              v42 = sub_1C87870(v34, System_Collections_IEnumerator_TypeInfo, 1);
             }
             v43 = (*(__int64 (__fastcall **)(__int64, _QWORD))v42)(v34, *(_QWORD *)(v42 + 8));
             if ( !v43 )
-              sub_1C32E7C(0);
+              sub_1C372B4(0);
             if ( *(Il2CppClass **)(*(_QWORD *)v43 + 64LL) != System_Collections_DictionaryEntry_TypeInfo->_1.element_class )
             {
-              sub_1C3313C(v43);
+              sub_1C37574(v43);
               goto LABEL_112;
             }
             v46 = (System_String_o **)j_il2cpp_object_unbox_0(
@@ -6622,7 +6622,7 @@ LABEL_51:
                                         v45);
             v47 = v28->fields.tweenArguments;
             if ( !v47 )
-              sub_1C32E7C(0);
+              sub_1C372B4(0);
             v2 = *v46;
             if ( (((__int64 (__fastcall *)(struct System_Collections_Hashtable_o *, System_String_o *, const MethodInfo *))v47->klass->vtable._25_Contains.methodPtr)(
                     v47,
@@ -6632,20 +6632,20 @@ LABEL_51:
               break;
             v49 = v28->fields.tweenArguments;
             if ( !v49 )
-              sub_1C32E7C(0);
+              sub_1C372B4(0);
             v50 = ((__int64 (__fastcall *)(struct System_Collections_Hashtable_o *, System_String_o *, const MethodInfo *))v49->klass->vtable._28_get_Item.methodPtr)(
                     v49,
                     v2,
                     v49->klass->vtable._28_get_Item.method);
             v51 = this->fields.tweenArguments;
             if ( !v51 )
-              sub_1C32E7C(0);
+              sub_1C372B4(0);
             v52 = ((__int64 (__fastcall *)(struct System_Collections_Hashtable_o *, System_String_o *, const MethodInfo *))v51->klass->vtable._28_get_Item.methodPtr)(
                     v51,
                     v2,
                     v51->klass->vtable._28_get_Item.method);
             if ( !v50 )
-              sub_1C32E7C(v52);
+              sub_1C372B4(v52);
             if ( ((*(__int64 (__fastcall **)(__int64, __int64, _QWORD))(*(_QWORD *)v50 + 312LL))(
                     v50,
                     v52,
@@ -6654,11 +6654,11 @@ LABEL_51:
             {
               if ( v2 && v2->klass != string_TypeInfo )
               {
-                sub_1C3313C(v2);
+                sub_1C37574(v2);
 LABEL_112:
                 v74 = v62;
                 v75 = v61;
-                v68 = sub_1C32D5C(v34);
+                v68 = sub_1C37194(v34);
                 v69 = v68;
                 if ( v68 )
                 {
@@ -6679,12 +6679,12 @@ LABEL_112:
                   else
                   {
 LABEL_100:
-                    v73 = sub_1C83438(v68, System_IDisposable_TypeInfo, 0);
+                    v73 = sub_1C87870(v68, System_IDisposable_TypeInfo, 0);
                   }
                   (*(void (__fastcall **)(__int64, _QWORD))v73)(v69, *(_QWORD *)(v73 + 8));
                 }
                 if ( v2 )
-                  sub_1C32E74(v2);
+                  sub_1C372AC(v2);
                 if ( v74 != 1 )
                 {
                   v76 = *(_QWORD *)v18;
@@ -6704,16 +6704,16 @@ LABEL_100:
                   else
                   {
 LABEL_119:
-                    v79 = sub_1C83438(v18, System_IDisposable_TypeInfo, 0);
+                    v79 = sub_1C87870(v18, System_IDisposable_TypeInfo, 0);
                   }
                   (*(void (__fastcall **)(__int64, _QWORD))v79)(v18, *(_QWORD *)(v79 + 8));
-                  sub_1D1BD54();
+                  sub_1D2018C();
                 }
                 v63 = *(_QWORD *)__cxa_begin_catch(v75);
                 __cxa_end_catch();
                 goto LABEL_87;
               }
-              if ( System_String__op_Inequality(v2, (System_String_o *)StringLiteral_20251/*"id"*/, 0) )
+              if ( System_String__op_Inequality(v2, (System_String_o *)StringLiteral_20254/*"id"*/, 0) )
                 break;
             }
           }
@@ -6721,7 +6721,7 @@ LABEL_119:
           v2 = 0;
           v53 = 6;
 LABEL_67:
-          v54 = sub_1C32D5C(v34);
+          v54 = sub_1C37194(v34);
           v56 = v54;
           if ( v54 )
           {
@@ -6742,7 +6742,7 @@ LABEL_67:
             else
             {
 LABEL_72:
-              v60 = sub_1C83438(v54, System_IDisposable_TypeInfo, 0);
+              v60 = sub_1C87870(v54, System_IDisposable_TypeInfo, 0);
             }
             (*(void (__fastcall **)(__int64, _QWORD))v60)(v56, *(_QWORD *)(v60 + 8));
           }
@@ -6779,11 +6779,11 @@ LABEL_87:
   else
   {
 LABEL_91:
-    v67 = sub_1C83438(v18, System_IDisposable_TypeInfo, 0);
+    v67 = sub_1C87870(v18, System_IDisposable_TypeInfo, 0);
   }
   (*(void (__fastcall **)(__int64, _QWORD))v67)(v18, *(_QWORD *)(v67 + 8));
   if ( v63 )
-    sub_1C32E74(v63);
+    sub_1C372AC(v63);
 }
 
 
@@ -6792,11 +6792,11 @@ int32_t iTween__Count(const MethodInfo *method)
   iTween_c *v1; // x0
   struct System_Collections_Generic_List_Hashtable__o *tweens; // x8
 
-  if ( (byte_4C3EA2F & 1) == 0 )
+  if ( (byte_4C49FAF & 1) == 0 )
   {
-    sub_1C32C20(&Method_System_Collections_Generic_List_Hashtable__get_Count__);
-    sub_1C32C20(&iTween_TypeInfo);
-    byte_4C3EA2F = 1;
+    sub_1C37058(&Method_System_Collections_Generic_List_Hashtable__get_Count__);
+    sub_1C37058(&iTween_TypeInfo);
+    byte_4C49FAF = 1;
   }
   v1 = iTween_TypeInfo;
   if ( !iTween_TypeInfo->_2.cctor_finished )
@@ -6806,12 +6806,12 @@ int32_t iTween__Count(const MethodInfo *method)
   }
   tweens = v1->static_fields->tweens;
   if ( !tweens )
-    sub_1C32E7C(v1);
+    sub_1C372B4(v1);
   return tweens->fields._size;
 }
 
 
-int32_t iTween__Count_63264144(System_String_o *type, const MethodInfo *method)
+int32_t iTween__Count_63307256(System_String_o *type, const MethodInfo *method)
 {
   int32_t v3; // w21
   int32_t v4; // w20
@@ -6826,15 +6826,15 @@ int32_t iTween__Count_63264144(System_String_o *type, const MethodInfo *method)
   UnityEngine_GameObject_o *v14; // x0
   const MethodInfo *v15; // x1
 
-  if ( (byte_4C3EA30 & 1) == 0 )
+  if ( (byte_4C49FB0 & 1) == 0 )
   {
-    sub_1C32C20(&Method_System_Collections_Generic_List_Hashtable__get_Count__);
-    sub_1C32C20(&Method_System_Collections_Generic_List_Hashtable__get_Item__);
-    sub_1C32C20(&string_TypeInfo);
-    sub_1C32C20(&StringLiteral_21560/*"method"*/);
-    sub_1C32C20(&StringLiteral_24241/*"type"*/);
-    sub_1C32C20(&iTween_TypeInfo);
-    byte_4C3EA30 = 1;
+    sub_1C37058(&Method_System_Collections_Generic_List_Hashtable__get_Count__);
+    sub_1C37058(&Method_System_Collections_Generic_List_Hashtable__get_Item__);
+    sub_1C37058(&string_TypeInfo);
+    sub_1C37058(&StringLiteral_21563/*"method"*/);
+    sub_1C37058(&StringLiteral_24245/*"type"*/);
+    sub_1C37058(&iTween_TypeInfo);
+    byte_4C49FB0 = 1;
   }
   v3 = 0;
   v4 = 0;
@@ -6849,7 +6849,7 @@ int32_t iTween__Count_63264144(System_String_o *type, const MethodInfo *method)
     tweens = **(System_Collections_Generic_List_object__o ***)&Item[7].fields;
     if ( !tweens )
 LABEL_20:
-      sub_1C32E7C(Item);
+      sub_1C372B4(Item);
     if ( v3 >= tweens->fields._size )
       return v4;
     if ( !LODWORD(Item[9].monitor) )
@@ -6862,17 +6862,17 @@ LABEL_20:
     Item = (System_String_o *)System_Collections_Generic_List_object___get_Item(
                                 tweens,
                                 v3,
-                                (const MethodInfo_37984EC *)Method_System_Collections_Generic_List_Hashtable__get_Item__);
+                                (const MethodInfo_37A2D54 *)Method_System_Collections_Generic_List_Hashtable__get_Item__);
     if ( !Item )
       goto LABEL_20;
     v7 = Item;
     v8 = (System_String_o *)((__int64 (__fastcall *)(System_String_o *, __int64, const char *))Item->klass[1]._1.name)(
                               Item,
-                              StringLiteral_24241/*"type"*/,
+                              StringLiteral_24245/*"type"*/,
                               Item->klass[1]._1.namespaze);
     v9 = (System_String_o *)((__int64 (__fastcall *)(System_String_o *, __int64, const char *))v7->klass[1]._1.name)(
                               v7,
-                              StringLiteral_21560/*"method"*/,
+                              StringLiteral_21563/*"method"*/,
                               v7->klass[1]._1.namespaze);
     v10 = v9;
     if ( v8 )
@@ -6882,12 +6882,12 @@ LABEL_20:
     }
     if ( v9 && v9->klass != string_TypeInfo )
       goto LABEL_22;
-    Item = System_String__Concat_63518544(v8, v9, 0);
+    Item = System_String__Concat_63561656(v8, v9, 0);
     if ( !type )
       goto LABEL_20;
     if ( !Item )
       goto LABEL_20;
-    Item = System_String__Substring_63564468(Item, 0, type->fields._stringLength, 0);
+    Item = System_String__Substring_63607580(Item, 0, type->fields._stringLength, 0);
     if ( !Item )
       goto LABEL_20;
     v11 = System_String__ToLower(Item, 0);
@@ -6895,14 +6895,14 @@ LABEL_20:
     v4 += System_String__op_Equality(v11, v12, 0);
     ++v3;
   }
-  sub_1C3313C(v8);
+  sub_1C37574(v8);
 LABEL_22:
-  sub_1C3313C(v10);
-  return iTween__Count_63264648(v14, v15);
+  sub_1C37574(v10);
+  return iTween__Count_63307760(v14, v15);
 }
 
 
-int32_t iTween__Count_63264648(UnityEngine_GameObject_o *target, const MethodInfo *method)
+int32_t iTween__Count_63307760(UnityEngine_GameObject_o *target, const MethodInfo *method)
 {
   UnityEngine_GameObject_o *v2; // x19
   System_Object_array *Components_object; // x0
@@ -6915,20 +6915,20 @@ int32_t iTween__Count_63264648(UnityEngine_GameObject_o *target, const MethodInf
   const MethodInfo *v10; // x3
 
   v2 = target;
-  if ( (byte_4C3EA31 & 1) == 0 )
+  if ( (byte_4C49FB1 & 1) == 0 )
   {
-    sub_1C32C20(&Method_System_Linq_Enumerable_Count_iTween___);
-    sub_1C32C20(&System_Func_iTween__bool__TypeInfo);
-    sub_1C32C20(&Method_UnityEngine_GameObject_GetComponents_iTween___);
-    sub_1C32C20(&Method_iTween___c__Count_b__220_0__);
-    target = (UnityEngine_GameObject_o *)sub_1C32C20(&iTween___c_TypeInfo);
-    byte_4C3EA31 = 1;
+    sub_1C37058(&Method_System_Linq_Enumerable_Count_iTween___);
+    sub_1C37058(&System_Func_iTween__bool__TypeInfo);
+    sub_1C37058(&Method_UnityEngine_GameObject_GetComponents_iTween___);
+    sub_1C37058(&Method_iTween___c__Count_b__220_0__);
+    target = (UnityEngine_GameObject_o *)sub_1C37058(&iTween___c_TypeInfo);
+    byte_4C49FB1 = 1;
   }
   if ( !v2 )
-    sub_1C32E7C(target);
+    sub_1C372B4(target);
   Components_object = UnityEngine_GameObject__GetComponents_object_(
                         v2,
-                        (const MethodInfo_31352CC *)Method_UnityEngine_GameObject_GetComponents_iTween___);
+                        (const MethodInfo_313FB34 *)Method_UnityEngine_GameObject_GetComponents_iTween___);
   v4 = iTween___c_TypeInfo;
   v5 = (System_Collections_Generic_IEnumerable_TSource__o *)Components_object;
   if ( !iTween___c_TypeInfo->_2.cctor_finished )
@@ -6945,20 +6945,20 @@ int32_t iTween__Count_63264648(UnityEngine_GameObject_o *target, const MethodInf
       v4 = iTween___c_TypeInfo;
     }
     v7 = (Il2CppObject *)v4->static_fields->__9;
-    _9__220_0 = (System_Func_object__bool__o *)sub_1C32E6C(System_Func_iTween__bool__TypeInfo);
+    _9__220_0 = (System_Func_object__bool__o *)sub_1C372A4(System_Func_iTween__bool__TypeInfo);
     System_Func_object__bool____ctor(_9__220_0, v7, Method_iTween___c__Count_b__220_0__, 0);
     static_fields = iTween___c_TypeInfo->static_fields;
     static_fields->__9__220_0 = (struct System_Func_iTween__bool__o *)_9__220_0;
-    sub_1C32BC4((CGThumbnailListItem_o *)&static_fields->__9__220_0, (int32_t)_9__220_0, v9, v10);
+    sub_1C36FFC((CGThumbnailListItem_o *)&static_fields->__9__220_0, (int32_t)_9__220_0, v9, v10);
   }
-  return System_Linq_Enumerable__Count_object__51376204(
+  return System_Linq_Enumerable__Count_object__51419316(
            v5,
            (System_Func_TSource__bool__o *)_9__220_0,
-           (const MethodInfo_30FF04C *)Method_System_Linq_Enumerable_Count_iTween___);
+           (const MethodInfo_31098B4 *)Method_System_Linq_Enumerable_Count_iTween___);
 }
 
 
-int32_t iTween__Count_63264948(UnityEngine_GameObject_o *target, System_String_o *type, const MethodInfo *method)
+int32_t iTween__Count_63308060(UnityEngine_GameObject_o *target, System_String_o *type, const MethodInfo *method)
 {
   UnityEngine_GameObject_o *v4; // x19
   System_Object_array *Components_object; // x0
@@ -6995,24 +6995,24 @@ int32_t iTween__Count_63264948(UnityEngine_GameObject_o *target, System_String_o
   __int64 v36; // x0
 
   v4 = target;
-  if ( (byte_4C3EA32 & 1) == 0 )
+  if ( (byte_4C49FB2 & 1) == 0 )
   {
-    sub_1C32C20(&Method_System_Linq_Enumerable_Where_iTween___);
-    sub_1C32C20(&System_Func_iTween__bool__TypeInfo);
-    sub_1C32C20(&Method_UnityEngine_GameObject_GetComponents_iTween___);
-    sub_1C32C20(&System_IDisposable_TypeInfo);
-    sub_1C32C20(&System_Collections_Generic_IEnumerable_iTween__TypeInfo);
-    sub_1C32C20(&System_Collections_Generic_IEnumerator_iTween__TypeInfo);
-    sub_1C32C20(&System_Collections_IEnumerator_TypeInfo);
-    sub_1C32C20(&Method_iTween___c__Count_b__221_0__);
-    target = (UnityEngine_GameObject_o *)sub_1C32C20(&iTween___c_TypeInfo);
-    byte_4C3EA32 = 1;
+    sub_1C37058(&Method_System_Linq_Enumerable_Where_iTween___);
+    sub_1C37058(&System_Func_iTween__bool__TypeInfo);
+    sub_1C37058(&Method_UnityEngine_GameObject_GetComponents_iTween___);
+    sub_1C37058(&System_IDisposable_TypeInfo);
+    sub_1C37058(&System_Collections_Generic_IEnumerable_iTween__TypeInfo);
+    sub_1C37058(&System_Collections_Generic_IEnumerator_iTween__TypeInfo);
+    sub_1C37058(&System_Collections_IEnumerator_TypeInfo);
+    sub_1C37058(&Method_iTween___c__Count_b__221_0__);
+    target = (UnityEngine_GameObject_o *)sub_1C37058(&iTween___c_TypeInfo);
+    byte_4C49FB2 = 1;
   }
   if ( !v4 )
     goto LABEL_48;
   Components_object = UnityEngine_GameObject__GetComponents_object_(
                         v4,
-                        (const MethodInfo_31352CC *)Method_UnityEngine_GameObject_GetComponents_iTween___);
+                        (const MethodInfo_313FB34 *)Method_UnityEngine_GameObject_GetComponents_iTween___);
   v6 = iTween___c_TypeInfo;
   v7 = (System_Collections_Generic_IEnumerable_TSource__o *)Components_object;
   if ( !iTween___c_TypeInfo->_2.cctor_finished )
@@ -7029,19 +7029,19 @@ int32_t iTween__Count_63264948(UnityEngine_GameObject_o *target, System_String_o
       v6 = iTween___c_TypeInfo;
     }
     v9 = (Il2CppObject *)v6->static_fields->__9;
-    _9__221_0 = (System_Func_object__bool__o *)sub_1C32E6C(System_Func_iTween__bool__TypeInfo);
+    _9__221_0 = (System_Func_object__bool__o *)sub_1C372A4(System_Func_iTween__bool__TypeInfo);
     System_Func_object__bool____ctor(_9__221_0, v9, Method_iTween___c__Count_b__221_0__, 0);
     static_fields = iTween___c_TypeInfo->static_fields;
     static_fields->__9__221_0 = (struct System_Func_iTween__bool__o *)_9__221_0;
-    sub_1C32BC4((CGThumbnailListItem_o *)&static_fields->__9__221_0, (int32_t)_9__221_0, v11, v12);
+    sub_1C36FFC((CGThumbnailListItem_o *)&static_fields->__9__221_0, (int32_t)_9__221_0, v11, v12);
   }
   target = (UnityEngine_GameObject_o *)System_Linq_Enumerable__Where_object_(
                                          v7,
                                          (System_Func_TSource__bool__o *)_9__221_0,
-                                         (const MethodInfo_3123BA8 *)Method_System_Linq_Enumerable_Where_iTween___);
+                                         (const MethodInfo_312E410 *)Method_System_Linq_Enumerable_Where_iTween___);
   if ( !target )
 LABEL_48:
-    sub_1C32E7C(target);
+    sub_1C372B4(target);
   klass = target->klass;
   v14 = target;
   v15 = *(unsigned __int16 *)&target->klass->_2.rank;
@@ -7060,11 +7060,11 @@ LABEL_48:
   else
   {
 LABEL_15:
-    v17 = sub_1C83438(target, System_Collections_Generic_IEnumerable_iTween__TypeInfo, 0);
+    v17 = sub_1C87870(target, System_Collections_Generic_IEnumerable_iTween__TypeInfo, 0);
   }
   v18 = (*(__int64 (__fastcall **)(UnityEngine_GameObject_o *, _QWORD))v17)(v14, *(_QWORD *)(v17 + 8));
   if ( !v18 )
-    sub_1C32E7C(0);
+    sub_1C372B4(0);
   for ( i = 0; ; i += System_String__op_Equality(v31, v32, 0) )
   {
     v20 = *(_QWORD *)v18;
@@ -7084,7 +7084,7 @@ LABEL_15:
     else
     {
 LABEL_23:
-      v23 = sub_1C83438(v18, System_Collections_IEnumerator_TypeInfo, 0);
+      v23 = sub_1C87870(v18, System_Collections_IEnumerator_TypeInfo, 0);
     }
     if ( ((*(__int64 (__fastcall **)(__int64, _QWORD))v23)(v18, *(_QWORD *)(v23 + 8)) & 1) == 0 )
       break;
@@ -7105,19 +7105,19 @@ LABEL_23:
     else
     {
 LABEL_30:
-      v27 = sub_1C83438(v18, System_Collections_Generic_IEnumerator_iTween__TypeInfo, 0);
+      v27 = sub_1C87870(v18, System_Collections_Generic_IEnumerator_iTween__TypeInfo, 0);
     }
     v28 = (*(__int64 (__fastcall **)(__int64, _QWORD))v27)(v18, *(_QWORD *)(v27 + 8));
     if ( !v28 )
-      sub_1C32E7C(0);
-    v29 = System_String__Concat_63518544(*(System_String_o **)(v28 + 48), *(System_String_o **)(v28 + 56), 0);
+      sub_1C372B4(0);
+    v29 = System_String__Concat_63561656(*(System_String_o **)(v28 + 48), *(System_String_o **)(v28 + 56), 0);
     if ( !type )
-      sub_1C32E7C(v29);
+      sub_1C372B4(v29);
     if ( !v29 )
-      sub_1C32E7C(0);
-    v30 = System_String__Substring_63564468(v29, 0, type->fields._stringLength, 0);
+      sub_1C372B4(0);
+    v30 = System_String__Substring_63607580(v29, 0, type->fields._stringLength, 0);
     if ( !v30 )
-      sub_1C32E7C(0);
+      sub_1C372B4(0);
     v31 = System_String__ToLower(v30, 0);
     v32 = System_String__ToLower(type, 0);
   }
@@ -7138,7 +7138,7 @@ LABEL_30:
   else
   {
 LABEL_41:
-    v36 = sub_1C83438(v18, System_IDisposable_TypeInfo, 0);
+    v36 = sub_1C87870(v18, System_IDisposable_TypeInfo, 0);
   }
   (*(void (__fastcall **)(__int64, _QWORD))v36)(v18, *(_QWORD *)(v36 + 8));
   return i;
@@ -7164,15 +7164,15 @@ void iTween__Dispose(iTween_o *this, const MethodInfo *method)
   float v11; // s1
   float v12; // s2
 
-  if ( (byte_4C3EA47 & 1) == 0 )
+  if ( (byte_4C49FC7 & 1) == 0 )
   {
-    sub_1C32C20(&Method_System_Collections_Generic_List_Hashtable__RemoveAt__);
-    sub_1C32C20(&Method_System_Collections_Generic_List_Hashtable__get_Count__);
-    sub_1C32C20(&Method_System_Collections_Generic_List_Hashtable__get_Item__);
-    sub_1C32C20(&string_TypeInfo);
-    sub_1C32C20(&StringLiteral_20251/*"id"*/);
-    sub_1C32C20(&iTween_TypeInfo);
-    byte_4C3EA47 = 1;
+    sub_1C37058(&Method_System_Collections_Generic_List_Hashtable__RemoveAt__);
+    sub_1C37058(&Method_System_Collections_Generic_List_Hashtable__get_Count__);
+    sub_1C37058(&Method_System_Collections_Generic_List_Hashtable__get_Item__);
+    sub_1C37058(&string_TypeInfo);
+    sub_1C37058(&StringLiteral_20254/*"id"*/);
+    sub_1C37058(&iTween_TypeInfo);
+    byte_4C49FC7 = 1;
   }
   for ( i = 0; ; ++i )
   {
@@ -7197,16 +7197,16 @@ void iTween__Dispose(iTween_o *this, const MethodInfo *method)
     Item = (System_Collections_Generic_List_object__o *)System_Collections_Generic_List_object___get_Item(
                                                           tweens,
                                                           i,
-                                                          (const MethodInfo_37984EC *)Method_System_Collections_Generic_List_Hashtable__get_Item__);
+                                                          (const MethodInfo_37A2D54 *)Method_System_Collections_Generic_List_Hashtable__get_Item__);
     if ( !Item )
       goto LABEL_20;
     v6 = (System_String_o *)((__int64 (__fastcall *)(System_Collections_Generic_List_object__o *, __int64, const MethodInfo *))Item->klass->vtable._28_RemoveAt.methodPtr)(
                               Item,
-                              StringLiteral_20251/*"id"*/,
+                              StringLiteral_20254/*"id"*/,
                               Item->klass->vtable._28_RemoveAt.method);
     if ( v6 && v6->klass != string_TypeInfo )
     {
-      v10 = sub_1C3313C(v6);
+      v10 = sub_1C37574(v6);
       iTween__clerp(v8, *(float *)&v10, v11, v12, v9);
       return;
     }
@@ -7222,11 +7222,11 @@ void iTween__Dispose(iTween_o *this, const MethodInfo *method)
   Item = (System_Collections_Generic_List_object__o *)v7->static_fields->tweens;
   if ( !Item )
 LABEL_20:
-    sub_1C32E7C(Item);
+    sub_1C372B4(Item);
   System_Collections_Generic_List_object___RemoveAt(
     Item,
     i,
-    (const MethodInfo_3799F90 *)Method_System_Collections_Generic_List_Hashtable__RemoveAt__);
+    (const MethodInfo_37A47F8 *)Method_System_Collections_Generic_List_Hashtable__RemoveAt__);
 LABEL_19:
   iTween__SemiDestroy(this, method);
 }
@@ -7245,15 +7245,15 @@ void iTween__DrawLine(UnityEngine_Vector3_array *line, const MethodInfo *method)
   UnityEngine_Color_o v10; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 
   v3 = line;
-  if ( (byte_4C3EA0A & 1) == 0 )
+  if ( (byte_4C49F8A & 1) == 0 )
   {
-    sub_1C32C20(&iTween_Defaults_TypeInfo);
-    sub_1C32C20(&StringLiteral_19870/*"gizmos"*/);
-    line = (UnityEngine_Vector3_array *)sub_1C32C20(&iTween_TypeInfo);
-    byte_4C3EA0A = 1;
+    sub_1C37058(&iTween_Defaults_TypeInfo);
+    sub_1C37058(&StringLiteral_19873/*"gizmos"*/);
+    line = (UnityEngine_Vector3_array *)sub_1C37058(&iTween_TypeInfo);
+    byte_4C49F8A = 1;
   }
   if ( !v3 )
-    sub_1C32E7C(line);
+    sub_1C372B4(line);
   if ( v3->max_length )
   {
     v4 = iTween_Defaults_TypeInfo;
@@ -7273,7 +7273,7 @@ void iTween__DrawLine(UnityEngine_Vector3_array *line, const MethodInfo *method)
     v10.fields.a = v8;
     v10.fields.r = v7;
     v10.fields.b = v9;
-    iTween__DrawLineHelper(v3, v10, (System_String_o *)StringLiteral_19870/*"gizmos"*/, v2);
+    iTween__DrawLineHelper(v3, v10, (System_String_o *)StringLiteral_19873/*"gizmos"*/, v2);
   }
 }
 
@@ -7291,15 +7291,15 @@ void iTween__DrawLineGizmos(UnityEngine_Vector3_array *line, const MethodInfo *m
   UnityEngine_Color_o v10; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 
   v3 = line;
-  if ( (byte_4C3EA0E & 1) == 0 )
+  if ( (byte_4C49F8E & 1) == 0 )
   {
-    sub_1C32C20(&iTween_Defaults_TypeInfo);
-    sub_1C32C20(&StringLiteral_19870/*"gizmos"*/);
-    line = (UnityEngine_Vector3_array *)sub_1C32C20(&iTween_TypeInfo);
-    byte_4C3EA0E = 1;
+    sub_1C37058(&iTween_Defaults_TypeInfo);
+    sub_1C37058(&StringLiteral_19873/*"gizmos"*/);
+    line = (UnityEngine_Vector3_array *)sub_1C37058(&iTween_TypeInfo);
+    byte_4C49F8E = 1;
   }
   if ( !v3 )
-    sub_1C32E7C(line);
+    sub_1C372B4(line);
   if ( v3->max_length )
   {
     v4 = iTween_Defaults_TypeInfo;
@@ -7319,12 +7319,12 @@ void iTween__DrawLineGizmos(UnityEngine_Vector3_array *line, const MethodInfo *m
     v10.fields.a = v8;
     v10.fields.r = v7;
     v10.fields.b = v9;
-    iTween__DrawLineHelper(v3, v10, (System_String_o *)StringLiteral_19870/*"gizmos"*/, v2);
+    iTween__DrawLineHelper(v3, v10, (System_String_o *)StringLiteral_19873/*"gizmos"*/, v2);
   }
 }
 
 
-void iTween__DrawLineGizmos_63246492(
+void iTween__DrawLineGizmos_63289604(
         UnityEngine_Vector3_array *line,
         UnityEngine_Color_o color,
         const MethodInfo *method)
@@ -7342,14 +7342,14 @@ void iTween__DrawLineGizmos_63246492(
   g = color.fields.g;
   r = color.fields.r;
   v8 = line;
-  if ( (byte_4C3EA0F & 1) == 0 )
+  if ( (byte_4C49F8F & 1) == 0 )
   {
-    sub_1C32C20(&StringLiteral_19870/*"gizmos"*/);
-    line = (UnityEngine_Vector3_array *)sub_1C32C20(&iTween_TypeInfo);
-    byte_4C3EA0F = 1;
+    sub_1C37058(&StringLiteral_19873/*"gizmos"*/);
+    line = (UnityEngine_Vector3_array *)sub_1C37058(&iTween_TypeInfo);
+    byte_4C49F8F = 1;
   }
   if ( !v8 )
-    sub_1C32E7C(line);
+    sub_1C372B4(line);
   if ( v8->max_length )
   {
     if ( !iTween_TypeInfo->_2.cctor_finished )
@@ -7358,12 +7358,12 @@ void iTween__DrawLineGizmos_63246492(
     v9.fields.a = a;
     v9.fields.r = r;
     v9.fields.g = g;
-    iTween__DrawLineHelper(v8, v9, (System_String_o *)StringLiteral_19870/*"gizmos"*/, v3);
+    iTween__DrawLineHelper(v8, v9, (System_String_o *)StringLiteral_19873/*"gizmos"*/, v3);
   }
 }
 
 
-void iTween__DrawLineGizmos_63246684(UnityEngine_Transform_array *line, const MethodInfo *method)
+void iTween__DrawLineGizmos_63289796(UnityEngine_Transform_array *line, const MethodInfo *method)
 {
   UnityEngine_Transform_array *v2; // x19
   il2cpp_array_size_t max_length; // x1
@@ -7382,20 +7382,20 @@ void iTween__DrawLineGizmos_63246684(UnityEngine_Transform_array *line, const Me
   UnityEngine_Color_o v16; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 
   v2 = line;
-  if ( (byte_4C3EA10 & 1) == 0 )
+  if ( (byte_4C49F90 & 1) == 0 )
   {
-    sub_1C32C20(&iTween_Defaults_TypeInfo);
-    sub_1C32C20(&UnityEngine_Vector3___TypeInfo);
-    sub_1C32C20(&StringLiteral_19870/*"gizmos"*/);
-    line = (UnityEngine_Transform_array *)sub_1C32C20(&iTween_TypeInfo);
-    byte_4C3EA10 = 1;
+    sub_1C37058(&iTween_Defaults_TypeInfo);
+    sub_1C37058(&UnityEngine_Vector3___TypeInfo);
+    sub_1C37058(&StringLiteral_19873/*"gizmos"*/);
+    line = (UnityEngine_Transform_array *)sub_1C37058(&iTween_TypeInfo);
+    byte_4C49F90 = 1;
   }
   if ( !v2 )
     goto LABEL_18;
   max_length = v2->max_length;
   if ( max_length )
   {
-    line = (UnityEngine_Transform_array *)sub_1C32CC8(UnityEngine_Vector3___TypeInfo, max_length);
+    line = (UnityEngine_Transform_array *)sub_1C37100(UnityEngine_Vector3___TypeInfo, max_length);
     v5 = v2->max_length;
     v6 = line;
     if ( v5 >= 1 )
@@ -7406,7 +7406,7 @@ void iTween__DrawLineGizmos_63246684(UnityEngine_Transform_array *line, const Me
       {
         if ( (unsigned int)v7 >= v5 )
 LABEL_19:
-          sub_1C32E84(line);
+          sub_1C372BC(line);
         line = (UnityEngine_Transform_array *)v2->m_Items[v7];
         if ( !line )
           break;
@@ -7422,7 +7422,7 @@ LABEL_19:
           goto LABEL_12;
       }
 LABEL_18:
-      sub_1C32E7C(line);
+      sub_1C372B4(line);
     }
 LABEL_12:
     v9 = iTween_Defaults_TypeInfo;
@@ -7442,12 +7442,12 @@ LABEL_12:
     v16.fields.a = v13;
     v16.fields.r = v12;
     v16.fields.b = v14;
-    iTween__DrawLineHelper((UnityEngine_Vector3_array *)v6, v16, (System_String_o *)StringLiteral_19870/*"gizmos"*/, v4);
+    iTween__DrawLineHelper((UnityEngine_Vector3_array *)v6, v16, (System_String_o *)StringLiteral_19873/*"gizmos"*/, v4);
   }
 }
 
 
-void iTween__DrawLineGizmos_63247048(
+void iTween__DrawLineGizmos_63290160(
         UnityEngine_Transform_array *line,
         UnityEngine_Color_o color,
         const MethodInfo *method)
@@ -7471,19 +7471,19 @@ void iTween__DrawLineGizmos_63247048(
   g = color.fields.g;
   r = color.fields.r;
   v7 = line;
-  if ( (byte_4C3EA11 & 1) == 0 )
+  if ( (byte_4C49F91 & 1) == 0 )
   {
-    sub_1C32C20(&UnityEngine_Vector3___TypeInfo);
-    sub_1C32C20(&StringLiteral_19870/*"gizmos"*/);
-    line = (UnityEngine_Transform_array *)sub_1C32C20(&iTween_TypeInfo);
-    byte_4C3EA11 = 1;
+    sub_1C37058(&UnityEngine_Vector3___TypeInfo);
+    sub_1C37058(&StringLiteral_19873/*"gizmos"*/);
+    line = (UnityEngine_Transform_array *)sub_1C37058(&iTween_TypeInfo);
+    byte_4C49F91 = 1;
   }
   if ( !v7 )
     goto LABEL_16;
   max_length = v7->max_length;
   if ( max_length )
   {
-    line = (UnityEngine_Transform_array *)sub_1C32CC8(UnityEngine_Vector3___TypeInfo, max_length);
+    line = (UnityEngine_Transform_array *)sub_1C37100(UnityEngine_Vector3___TypeInfo, max_length);
     v10 = v7->max_length;
     v11 = line;
     if ( v10 >= 1 )
@@ -7494,7 +7494,7 @@ void iTween__DrawLineGizmos_63247048(
       {
         if ( (unsigned int)v12 >= v10 )
 LABEL_17:
-          sub_1C32E84(line);
+          sub_1C372BC(line);
         line = (UnityEngine_Transform_array *)v7->m_Items[v12];
         if ( !line )
           break;
@@ -7510,7 +7510,7 @@ LABEL_17:
           goto LABEL_12;
       }
 LABEL_16:
-      sub_1C32E7C(line);
+      sub_1C372B4(line);
     }
 LABEL_12:
     if ( !iTween_TypeInfo->_2.cctor_finished )
@@ -7519,7 +7519,7 @@ LABEL_12:
     v15.fields.a = a;
     v15.fields.r = r;
     v15.fields.g = g;
-    iTween__DrawLineHelper((UnityEngine_Vector3_array *)v11, v15, (System_String_o *)StringLiteral_19870/*"gizmos"*/, v9);
+    iTween__DrawLineHelper((UnityEngine_Vector3_array *)v11, v15, (System_String_o *)StringLiteral_19873/*"gizmos"*/, v9);
   }
 }
 
@@ -7537,15 +7537,15 @@ void iTween__DrawLineHandles(UnityEngine_Vector3_array *line, const MethodInfo *
   UnityEngine_Color_o v10; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 
   v3 = line;
-  if ( (byte_4C3EA12 & 1) == 0 )
+  if ( (byte_4C49F92 & 1) == 0 )
   {
-    sub_1C32C20(&iTween_Defaults_TypeInfo);
-    sub_1C32C20(&StringLiteral_19932/*"handles"*/);
-    line = (UnityEngine_Vector3_array *)sub_1C32C20(&iTween_TypeInfo);
-    byte_4C3EA12 = 1;
+    sub_1C37058(&iTween_Defaults_TypeInfo);
+    sub_1C37058(&StringLiteral_19935/*"handles"*/);
+    line = (UnityEngine_Vector3_array *)sub_1C37058(&iTween_TypeInfo);
+    byte_4C49F92 = 1;
   }
   if ( !v3 )
-    sub_1C32E7C(line);
+    sub_1C372B4(line);
   if ( v3->max_length )
   {
     v4 = iTween_Defaults_TypeInfo;
@@ -7565,12 +7565,12 @@ void iTween__DrawLineHandles(UnityEngine_Vector3_array *line, const MethodInfo *
     v10.fields.a = v8;
     v10.fields.r = v7;
     v10.fields.b = v9;
-    iTween__DrawLineHelper(v3, v10, (System_String_o *)StringLiteral_19932/*"handles"*/, v2);
+    iTween__DrawLineHelper(v3, v10, (System_String_o *)StringLiteral_19935/*"handles"*/, v2);
   }
 }
 
 
-void iTween__DrawLineHandles_63247604(
+void iTween__DrawLineHandles_63290716(
         UnityEngine_Vector3_array *line,
         UnityEngine_Color_o color,
         const MethodInfo *method)
@@ -7588,14 +7588,14 @@ void iTween__DrawLineHandles_63247604(
   g = color.fields.g;
   r = color.fields.r;
   v8 = line;
-  if ( (byte_4C3EA13 & 1) == 0 )
+  if ( (byte_4C49F93 & 1) == 0 )
   {
-    sub_1C32C20(&StringLiteral_19932/*"handles"*/);
-    line = (UnityEngine_Vector3_array *)sub_1C32C20(&iTween_TypeInfo);
-    byte_4C3EA13 = 1;
+    sub_1C37058(&StringLiteral_19935/*"handles"*/);
+    line = (UnityEngine_Vector3_array *)sub_1C37058(&iTween_TypeInfo);
+    byte_4C49F93 = 1;
   }
   if ( !v8 )
-    sub_1C32E7C(line);
+    sub_1C372B4(line);
   if ( v8->max_length )
   {
     if ( !iTween_TypeInfo->_2.cctor_finished )
@@ -7604,12 +7604,12 @@ void iTween__DrawLineHandles_63247604(
     v9.fields.a = a;
     v9.fields.r = r;
     v9.fields.g = g;
-    iTween__DrawLineHelper(v8, v9, (System_String_o *)StringLiteral_19932/*"handles"*/, v3);
+    iTween__DrawLineHelper(v8, v9, (System_String_o *)StringLiteral_19935/*"handles"*/, v3);
   }
 }
 
 
-void iTween__DrawLineHandles_63247796(UnityEngine_Transform_array *line, const MethodInfo *method)
+void iTween__DrawLineHandles_63290908(UnityEngine_Transform_array *line, const MethodInfo *method)
 {
   UnityEngine_Transform_array *v2; // x19
   il2cpp_array_size_t max_length; // x1
@@ -7628,20 +7628,20 @@ void iTween__DrawLineHandles_63247796(UnityEngine_Transform_array *line, const M
   UnityEngine_Color_o v16; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 
   v2 = line;
-  if ( (byte_4C3EA14 & 1) == 0 )
+  if ( (byte_4C49F94 & 1) == 0 )
   {
-    sub_1C32C20(&iTween_Defaults_TypeInfo);
-    sub_1C32C20(&UnityEngine_Vector3___TypeInfo);
-    sub_1C32C20(&StringLiteral_19932/*"handles"*/);
-    line = (UnityEngine_Transform_array *)sub_1C32C20(&iTween_TypeInfo);
-    byte_4C3EA14 = 1;
+    sub_1C37058(&iTween_Defaults_TypeInfo);
+    sub_1C37058(&UnityEngine_Vector3___TypeInfo);
+    sub_1C37058(&StringLiteral_19935/*"handles"*/);
+    line = (UnityEngine_Transform_array *)sub_1C37058(&iTween_TypeInfo);
+    byte_4C49F94 = 1;
   }
   if ( !v2 )
     goto LABEL_18;
   max_length = v2->max_length;
   if ( max_length )
   {
-    line = (UnityEngine_Transform_array *)sub_1C32CC8(UnityEngine_Vector3___TypeInfo, max_length);
+    line = (UnityEngine_Transform_array *)sub_1C37100(UnityEngine_Vector3___TypeInfo, max_length);
     v5 = v2->max_length;
     v6 = line;
     if ( v5 >= 1 )
@@ -7652,7 +7652,7 @@ void iTween__DrawLineHandles_63247796(UnityEngine_Transform_array *line, const M
       {
         if ( (unsigned int)v7 >= v5 )
 LABEL_19:
-          sub_1C32E84(line);
+          sub_1C372BC(line);
         line = (UnityEngine_Transform_array *)v2->m_Items[v7];
         if ( !line )
           break;
@@ -7668,7 +7668,7 @@ LABEL_19:
           goto LABEL_12;
       }
 LABEL_18:
-      sub_1C32E7C(line);
+      sub_1C372B4(line);
     }
 LABEL_12:
     v9 = iTween_Defaults_TypeInfo;
@@ -7688,12 +7688,12 @@ LABEL_12:
     v16.fields.a = v13;
     v16.fields.r = v12;
     v16.fields.b = v14;
-    iTween__DrawLineHelper((UnityEngine_Vector3_array *)v6, v16, (System_String_o *)StringLiteral_19932/*"handles"*/, v4);
+    iTween__DrawLineHelper((UnityEngine_Vector3_array *)v6, v16, (System_String_o *)StringLiteral_19935/*"handles"*/, v4);
   }
 }
 
 
-void iTween__DrawLineHandles_63248160(
+void iTween__DrawLineHandles_63291272(
         UnityEngine_Transform_array *line,
         UnityEngine_Color_o color,
         const MethodInfo *method)
@@ -7717,19 +7717,19 @@ void iTween__DrawLineHandles_63248160(
   g = color.fields.g;
   r = color.fields.r;
   v7 = line;
-  if ( (byte_4C3EA15 & 1) == 0 )
+  if ( (byte_4C49F95 & 1) == 0 )
   {
-    sub_1C32C20(&UnityEngine_Vector3___TypeInfo);
-    sub_1C32C20(&StringLiteral_19932/*"handles"*/);
-    line = (UnityEngine_Transform_array *)sub_1C32C20(&iTween_TypeInfo);
-    byte_4C3EA15 = 1;
+    sub_1C37058(&UnityEngine_Vector3___TypeInfo);
+    sub_1C37058(&StringLiteral_19935/*"handles"*/);
+    line = (UnityEngine_Transform_array *)sub_1C37058(&iTween_TypeInfo);
+    byte_4C49F95 = 1;
   }
   if ( !v7 )
     goto LABEL_16;
   max_length = v7->max_length;
   if ( max_length )
   {
-    line = (UnityEngine_Transform_array *)sub_1C32CC8(UnityEngine_Vector3___TypeInfo, max_length);
+    line = (UnityEngine_Transform_array *)sub_1C37100(UnityEngine_Vector3___TypeInfo, max_length);
     v10 = v7->max_length;
     v11 = line;
     if ( v10 >= 1 )
@@ -7740,7 +7740,7 @@ void iTween__DrawLineHandles_63248160(
       {
         if ( (unsigned int)v12 >= v10 )
 LABEL_17:
-          sub_1C32E84(line);
+          sub_1C372BC(line);
         line = (UnityEngine_Transform_array *)v7->m_Items[v12];
         if ( !line )
           break;
@@ -7756,7 +7756,7 @@ LABEL_17:
           goto LABEL_12;
       }
 LABEL_16:
-      sub_1C32E7C(line);
+      sub_1C372B4(line);
     }
 LABEL_12:
     if ( !iTween_TypeInfo->_2.cctor_finished )
@@ -7765,7 +7765,7 @@ LABEL_12:
     v15.fields.a = a;
     v15.fields.r = r;
     v15.fields.g = g;
-    iTween__DrawLineHelper((UnityEngine_Vector3_array *)v11, v15, (System_String_o *)StringLiteral_19932/*"handles"*/, v9);
+    iTween__DrawLineHelper((UnityEngine_Vector3_array *)v11, v15, (System_String_o *)StringLiteral_19935/*"handles"*/, v9);
   }
 }
 
@@ -7792,13 +7792,13 @@ void iTween__DrawLineHelper(
   b = color.fields.b;
   g = color.fields.g;
   r = color.fields.r;
-  if ( (byte_4C3EA3F & 1) == 0 )
+  if ( (byte_4C49FBF & 1) == 0 )
   {
-    sub_1C32C20(&UnityEngine_Debug_TypeInfo);
-    sub_1C32C20(&StringLiteral_19870/*"gizmos"*/);
-    sub_1C32C20(&StringLiteral_19932/*"handles"*/);
-    sub_1C32C20(&StringLiteral_20099/*"iTween Error: Drawing a line with Handles is temporarily disabled because of compatability issues with Unity 2.6!"*/);
-    byte_4C3EA3F = 1;
+    sub_1C37058(&UnityEngine_Debug_TypeInfo);
+    sub_1C37058(&StringLiteral_19873/*"gizmos"*/);
+    sub_1C37058(&StringLiteral_19935/*"handles"*/);
+    sub_1C37058(&StringLiteral_20102/*"iTween Error: Drawing a line with Handles is temporarily disabled because of compatability issues with Unity 2.6!"*/);
+    byte_4C49FBF = 1;
   }
   v16.fields.r = r;
   v16.fields.g = g;
@@ -7806,7 +7806,7 @@ void iTween__DrawLineHelper(
   v16.fields.a = a;
   UnityEngine_Gizmos__set_color(v16, 0);
   if ( !line )
-    sub_1C32E7C(v10);
+    sub_1C372B4(v10);
   if ( (signed __int64)((line->max_length << 32) - 0x100000000LL) >= 1 )
   {
     v11 = 0;
@@ -7814,19 +7814,19 @@ void iTween__DrawLineHelper(
     v13 = 0x100000000LL;
     do
     {
-      v14 = System_String__op_Equality(method, (System_String_o *)StringLiteral_19870/*"gizmos"*/, 0);
+      v14 = System_String__op_Equality(method, (System_String_o *)StringLiteral_19873/*"gizmos"*/, 0);
       if ( v14 )
       {
         max_length_low = LODWORD(line->max_length);
         if ( v11 >= max_length_low || v11 + 1 >= max_length_low )
-          sub_1C32E84(v14);
+          sub_1C372BC(v14);
         UnityEngine_Gizmos__DrawLine(*(UnityEngine_Vector3_o *)(p_z - 2), line->m_Items[v13 >> 32], 0);
       }
-      else if ( System_String__op_Equality(method, (System_String_o *)StringLiteral_19932/*"handles"*/, 0) )
+      else if ( System_String__op_Equality(method, (System_String_o *)StringLiteral_19935/*"handles"*/, 0) )
       {
         if ( !UnityEngine_Debug_TypeInfo->_2.cctor_finished )
           j_il2cpp_runtime_class_init_0(UnityEngine_Debug_TypeInfo);
-        UnityEngine_Debug__LogError((Il2CppObject *)StringLiteral_20099/*"iTween Error: Drawing a line with Handles is temporarily disabled because of compatability issues with Unity 2.6!"*/, 0);
+        UnityEngine_Debug__LogError((Il2CppObject *)StringLiteral_20102/*"iTween Error: Drawing a line with Handles is temporarily disabled because of compatability issues with Unity 2.6!"*/, 0);
       }
       ++v11;
       v13 += 0x100000000LL;
@@ -7837,7 +7837,7 @@ void iTween__DrawLineHelper(
 }
 
 
-void iTween__DrawLine_63245380(UnityEngine_Vector3_array *line, UnityEngine_Color_o color, const MethodInfo *method)
+void iTween__DrawLine_63288492(UnityEngine_Vector3_array *line, UnityEngine_Color_o color, const MethodInfo *method)
 {
   const MethodInfo *v3; // x2
   float a; // s8
@@ -7852,14 +7852,14 @@ void iTween__DrawLine_63245380(UnityEngine_Vector3_array *line, UnityEngine_Colo
   g = color.fields.g;
   r = color.fields.r;
   v8 = line;
-  if ( (byte_4C3EA0B & 1) == 0 )
+  if ( (byte_4C49F8B & 1) == 0 )
   {
-    sub_1C32C20(&StringLiteral_19870/*"gizmos"*/);
-    line = (UnityEngine_Vector3_array *)sub_1C32C20(&iTween_TypeInfo);
-    byte_4C3EA0B = 1;
+    sub_1C37058(&StringLiteral_19873/*"gizmos"*/);
+    line = (UnityEngine_Vector3_array *)sub_1C37058(&iTween_TypeInfo);
+    byte_4C49F8B = 1;
   }
   if ( !v8 )
-    sub_1C32E7C(line);
+    sub_1C372B4(line);
   if ( v8->max_length )
   {
     if ( !iTween_TypeInfo->_2.cctor_finished )
@@ -7868,12 +7868,12 @@ void iTween__DrawLine_63245380(UnityEngine_Vector3_array *line, UnityEngine_Colo
     v9.fields.a = a;
     v9.fields.r = r;
     v9.fields.g = g;
-    iTween__DrawLineHelper(v8, v9, (System_String_o *)StringLiteral_19870/*"gizmos"*/, v3);
+    iTween__DrawLineHelper(v8, v9, (System_String_o *)StringLiteral_19873/*"gizmos"*/, v3);
   }
 }
 
 
-void iTween__DrawLine_63245572(UnityEngine_Transform_array *line, const MethodInfo *method)
+void iTween__DrawLine_63288684(UnityEngine_Transform_array *line, const MethodInfo *method)
 {
   UnityEngine_Transform_array *v2; // x19
   il2cpp_array_size_t max_length; // x1
@@ -7892,20 +7892,20 @@ void iTween__DrawLine_63245572(UnityEngine_Transform_array *line, const MethodIn
   UnityEngine_Color_o v16; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 
   v2 = line;
-  if ( (byte_4C3EA0C & 1) == 0 )
+  if ( (byte_4C49F8C & 1) == 0 )
   {
-    sub_1C32C20(&iTween_Defaults_TypeInfo);
-    sub_1C32C20(&UnityEngine_Vector3___TypeInfo);
-    sub_1C32C20(&StringLiteral_19870/*"gizmos"*/);
-    line = (UnityEngine_Transform_array *)sub_1C32C20(&iTween_TypeInfo);
-    byte_4C3EA0C = 1;
+    sub_1C37058(&iTween_Defaults_TypeInfo);
+    sub_1C37058(&UnityEngine_Vector3___TypeInfo);
+    sub_1C37058(&StringLiteral_19873/*"gizmos"*/);
+    line = (UnityEngine_Transform_array *)sub_1C37058(&iTween_TypeInfo);
+    byte_4C49F8C = 1;
   }
   if ( !v2 )
     goto LABEL_18;
   max_length = v2->max_length;
   if ( max_length )
   {
-    line = (UnityEngine_Transform_array *)sub_1C32CC8(UnityEngine_Vector3___TypeInfo, max_length);
+    line = (UnityEngine_Transform_array *)sub_1C37100(UnityEngine_Vector3___TypeInfo, max_length);
     v5 = v2->max_length;
     v6 = line;
     if ( v5 >= 1 )
@@ -7916,7 +7916,7 @@ void iTween__DrawLine_63245572(UnityEngine_Transform_array *line, const MethodIn
       {
         if ( (unsigned int)v7 >= v5 )
 LABEL_19:
-          sub_1C32E84(line);
+          sub_1C372BC(line);
         line = (UnityEngine_Transform_array *)v2->m_Items[v7];
         if ( !line )
           break;
@@ -7932,7 +7932,7 @@ LABEL_19:
           goto LABEL_12;
       }
 LABEL_18:
-      sub_1C32E7C(line);
+      sub_1C372B4(line);
     }
 LABEL_12:
     v9 = iTween_Defaults_TypeInfo;
@@ -7952,12 +7952,12 @@ LABEL_12:
     v16.fields.a = v13;
     v16.fields.r = v12;
     v16.fields.b = v14;
-    iTween__DrawLineHelper((UnityEngine_Vector3_array *)v6, v16, (System_String_o *)StringLiteral_19870/*"gizmos"*/, v4);
+    iTween__DrawLineHelper((UnityEngine_Vector3_array *)v6, v16, (System_String_o *)StringLiteral_19873/*"gizmos"*/, v4);
   }
 }
 
 
-void iTween__DrawLine_63245936(UnityEngine_Transform_array *line, UnityEngine_Color_o color, const MethodInfo *method)
+void iTween__DrawLine_63289048(UnityEngine_Transform_array *line, UnityEngine_Color_o color, const MethodInfo *method)
 {
   float a; // s8
   float b; // s9
@@ -7978,19 +7978,19 @@ void iTween__DrawLine_63245936(UnityEngine_Transform_array *line, UnityEngine_Co
   g = color.fields.g;
   r = color.fields.r;
   v7 = line;
-  if ( (byte_4C3EA0D & 1) == 0 )
+  if ( (byte_4C49F8D & 1) == 0 )
   {
-    sub_1C32C20(&UnityEngine_Vector3___TypeInfo);
-    sub_1C32C20(&StringLiteral_19870/*"gizmos"*/);
-    line = (UnityEngine_Transform_array *)sub_1C32C20(&iTween_TypeInfo);
-    byte_4C3EA0D = 1;
+    sub_1C37058(&UnityEngine_Vector3___TypeInfo);
+    sub_1C37058(&StringLiteral_19873/*"gizmos"*/);
+    line = (UnityEngine_Transform_array *)sub_1C37058(&iTween_TypeInfo);
+    byte_4C49F8D = 1;
   }
   if ( !v7 )
     goto LABEL_16;
   max_length = v7->max_length;
   if ( max_length )
   {
-    line = (UnityEngine_Transform_array *)sub_1C32CC8(UnityEngine_Vector3___TypeInfo, max_length);
+    line = (UnityEngine_Transform_array *)sub_1C37100(UnityEngine_Vector3___TypeInfo, max_length);
     v10 = v7->max_length;
     v11 = line;
     if ( v10 >= 1 )
@@ -8001,7 +8001,7 @@ void iTween__DrawLine_63245936(UnityEngine_Transform_array *line, UnityEngine_Co
       {
         if ( (unsigned int)v12 >= v10 )
 LABEL_17:
-          sub_1C32E84(line);
+          sub_1C372BC(line);
         line = (UnityEngine_Transform_array *)v7->m_Items[v12];
         if ( !line )
           break;
@@ -8017,7 +8017,7 @@ LABEL_17:
           goto LABEL_12;
       }
 LABEL_16:
-      sub_1C32E7C(line);
+      sub_1C372B4(line);
     }
 LABEL_12:
     if ( !iTween_TypeInfo->_2.cctor_finished )
@@ -8026,7 +8026,7 @@ LABEL_12:
     v15.fields.a = a;
     v15.fields.r = r;
     v15.fields.g = g;
-    iTween__DrawLineHelper((UnityEngine_Vector3_array *)v11, v15, (System_String_o *)StringLiteral_19870/*"gizmos"*/, v9);
+    iTween__DrawLineHelper((UnityEngine_Vector3_array *)v11, v15, (System_String_o *)StringLiteral_19873/*"gizmos"*/, v9);
   }
 }
 
@@ -8044,15 +8044,15 @@ void iTween__DrawPath(UnityEngine_Vector3_array *path, const MethodInfo *method)
   UnityEngine_Color_o v10; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 
   v3 = path;
-  if ( (byte_4C3EA17 & 1) == 0 )
+  if ( (byte_4C49F97 & 1) == 0 )
   {
-    sub_1C32C20(&iTween_Defaults_TypeInfo);
-    sub_1C32C20(&StringLiteral_19870/*"gizmos"*/);
-    path = (UnityEngine_Vector3_array *)sub_1C32C20(&iTween_TypeInfo);
-    byte_4C3EA17 = 1;
+    sub_1C37058(&iTween_Defaults_TypeInfo);
+    sub_1C37058(&StringLiteral_19873/*"gizmos"*/);
+    path = (UnityEngine_Vector3_array *)sub_1C37058(&iTween_TypeInfo);
+    byte_4C49F97 = 1;
   }
   if ( !v3 )
-    sub_1C32E7C(path);
+    sub_1C372B4(path);
   if ( v3->max_length )
   {
     v4 = iTween_Defaults_TypeInfo;
@@ -8072,7 +8072,7 @@ void iTween__DrawPath(UnityEngine_Vector3_array *path, const MethodInfo *method)
     v10.fields.a = v8;
     v10.fields.r = v7;
     v10.fields.b = v9;
-    iTween__DrawPathHelper(v3, v10, (System_String_o *)StringLiteral_19870/*"gizmos"*/, v2);
+    iTween__DrawPathHelper(v3, v10, (System_String_o *)StringLiteral_19873/*"gizmos"*/, v2);
   }
 }
 
@@ -8090,15 +8090,15 @@ void iTween__DrawPathGizmos(UnityEngine_Vector3_array *path, const MethodInfo *m
   UnityEngine_Color_o v10; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 
   v3 = path;
-  if ( (byte_4C3EA1B & 1) == 0 )
+  if ( (byte_4C49F9B & 1) == 0 )
   {
-    sub_1C32C20(&iTween_Defaults_TypeInfo);
-    sub_1C32C20(&StringLiteral_19870/*"gizmos"*/);
-    path = (UnityEngine_Vector3_array *)sub_1C32C20(&iTween_TypeInfo);
-    byte_4C3EA1B = 1;
+    sub_1C37058(&iTween_Defaults_TypeInfo);
+    sub_1C37058(&StringLiteral_19873/*"gizmos"*/);
+    path = (UnityEngine_Vector3_array *)sub_1C37058(&iTween_TypeInfo);
+    byte_4C49F9B = 1;
   }
   if ( !v3 )
-    sub_1C32E7C(path);
+    sub_1C372B4(path);
   if ( v3->max_length )
   {
     v4 = iTween_Defaults_TypeInfo;
@@ -8118,12 +8118,12 @@ void iTween__DrawPathGizmos(UnityEngine_Vector3_array *path, const MethodInfo *m
     v10.fields.a = v8;
     v10.fields.r = v7;
     v10.fields.b = v9;
-    iTween__DrawPathHelper(v3, v10, (System_String_o *)StringLiteral_19870/*"gizmos"*/, v2);
+    iTween__DrawPathHelper(v3, v10, (System_String_o *)StringLiteral_19873/*"gizmos"*/, v2);
   }
 }
 
 
-void iTween__DrawPathGizmos_63250448(
+void iTween__DrawPathGizmos_63293560(
         UnityEngine_Vector3_array *path,
         UnityEngine_Color_o color,
         const MethodInfo *method)
@@ -8141,14 +8141,14 @@ void iTween__DrawPathGizmos_63250448(
   g = color.fields.g;
   r = color.fields.r;
   v8 = path;
-  if ( (byte_4C3EA1C & 1) == 0 )
+  if ( (byte_4C49F9C & 1) == 0 )
   {
-    sub_1C32C20(&StringLiteral_19870/*"gizmos"*/);
-    path = (UnityEngine_Vector3_array *)sub_1C32C20(&iTween_TypeInfo);
-    byte_4C3EA1C = 1;
+    sub_1C37058(&StringLiteral_19873/*"gizmos"*/);
+    path = (UnityEngine_Vector3_array *)sub_1C37058(&iTween_TypeInfo);
+    byte_4C49F9C = 1;
   }
   if ( !v8 )
-    sub_1C32E7C(path);
+    sub_1C372B4(path);
   if ( v8->max_length )
   {
     if ( !iTween_TypeInfo->_2.cctor_finished )
@@ -8157,12 +8157,12 @@ void iTween__DrawPathGizmos_63250448(
     v9.fields.a = a;
     v9.fields.r = r;
     v9.fields.g = g;
-    iTween__DrawPathHelper(v8, v9, (System_String_o *)StringLiteral_19870/*"gizmos"*/, v3);
+    iTween__DrawPathHelper(v8, v9, (System_String_o *)StringLiteral_19873/*"gizmos"*/, v3);
   }
 }
 
 
-void iTween__DrawPathGizmos_63250640(UnityEngine_Transform_array *path, const MethodInfo *method)
+void iTween__DrawPathGizmos_63293752(UnityEngine_Transform_array *path, const MethodInfo *method)
 {
   UnityEngine_Transform_array *v2; // x19
   il2cpp_array_size_t max_length; // x1
@@ -8181,20 +8181,20 @@ void iTween__DrawPathGizmos_63250640(UnityEngine_Transform_array *path, const Me
   UnityEngine_Color_o v16; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 
   v2 = path;
-  if ( (byte_4C3EA1D & 1) == 0 )
+  if ( (byte_4C49F9D & 1) == 0 )
   {
-    sub_1C32C20(&iTween_Defaults_TypeInfo);
-    sub_1C32C20(&UnityEngine_Vector3___TypeInfo);
-    sub_1C32C20(&StringLiteral_19870/*"gizmos"*/);
-    path = (UnityEngine_Transform_array *)sub_1C32C20(&iTween_TypeInfo);
-    byte_4C3EA1D = 1;
+    sub_1C37058(&iTween_Defaults_TypeInfo);
+    sub_1C37058(&UnityEngine_Vector3___TypeInfo);
+    sub_1C37058(&StringLiteral_19873/*"gizmos"*/);
+    path = (UnityEngine_Transform_array *)sub_1C37058(&iTween_TypeInfo);
+    byte_4C49F9D = 1;
   }
   if ( !v2 )
     goto LABEL_18;
   max_length = v2->max_length;
   if ( max_length )
   {
-    path = (UnityEngine_Transform_array *)sub_1C32CC8(UnityEngine_Vector3___TypeInfo, max_length);
+    path = (UnityEngine_Transform_array *)sub_1C37100(UnityEngine_Vector3___TypeInfo, max_length);
     v5 = v2->max_length;
     v6 = path;
     if ( v5 >= 1 )
@@ -8205,7 +8205,7 @@ void iTween__DrawPathGizmos_63250640(UnityEngine_Transform_array *path, const Me
       {
         if ( (unsigned int)v7 >= v5 )
 LABEL_19:
-          sub_1C32E84(path);
+          sub_1C372BC(path);
         path = (UnityEngine_Transform_array *)v2->m_Items[v7];
         if ( !path )
           break;
@@ -8221,7 +8221,7 @@ LABEL_19:
           goto LABEL_12;
       }
 LABEL_18:
-      sub_1C32E7C(path);
+      sub_1C372B4(path);
     }
 LABEL_12:
     v9 = iTween_Defaults_TypeInfo;
@@ -8241,12 +8241,12 @@ LABEL_12:
     v16.fields.a = v13;
     v16.fields.r = v12;
     v16.fields.b = v14;
-    iTween__DrawPathHelper((UnityEngine_Vector3_array *)v6, v16, (System_String_o *)StringLiteral_19870/*"gizmos"*/, v4);
+    iTween__DrawPathHelper((UnityEngine_Vector3_array *)v6, v16, (System_String_o *)StringLiteral_19873/*"gizmos"*/, v4);
   }
 }
 
 
-void iTween__DrawPathGizmos_63251004(
+void iTween__DrawPathGizmos_63294116(
         UnityEngine_Transform_array *path,
         UnityEngine_Color_o color,
         const MethodInfo *method)
@@ -8270,19 +8270,19 @@ void iTween__DrawPathGizmos_63251004(
   g = color.fields.g;
   r = color.fields.r;
   v7 = path;
-  if ( (byte_4C3EA1E & 1) == 0 )
+  if ( (byte_4C49F9E & 1) == 0 )
   {
-    sub_1C32C20(&UnityEngine_Vector3___TypeInfo);
-    sub_1C32C20(&StringLiteral_19870/*"gizmos"*/);
-    path = (UnityEngine_Transform_array *)sub_1C32C20(&iTween_TypeInfo);
-    byte_4C3EA1E = 1;
+    sub_1C37058(&UnityEngine_Vector3___TypeInfo);
+    sub_1C37058(&StringLiteral_19873/*"gizmos"*/);
+    path = (UnityEngine_Transform_array *)sub_1C37058(&iTween_TypeInfo);
+    byte_4C49F9E = 1;
   }
   if ( !v7 )
     goto LABEL_16;
   max_length = v7->max_length;
   if ( max_length )
   {
-    path = (UnityEngine_Transform_array *)sub_1C32CC8(UnityEngine_Vector3___TypeInfo, max_length);
+    path = (UnityEngine_Transform_array *)sub_1C37100(UnityEngine_Vector3___TypeInfo, max_length);
     v10 = v7->max_length;
     v11 = path;
     if ( v10 >= 1 )
@@ -8293,7 +8293,7 @@ void iTween__DrawPathGizmos_63251004(
       {
         if ( (unsigned int)v12 >= v10 )
 LABEL_17:
-          sub_1C32E84(path);
+          sub_1C372BC(path);
         path = (UnityEngine_Transform_array *)v7->m_Items[v12];
         if ( !path )
           break;
@@ -8309,7 +8309,7 @@ LABEL_17:
           goto LABEL_12;
       }
 LABEL_16:
-      sub_1C32E7C(path);
+      sub_1C372B4(path);
     }
 LABEL_12:
     if ( !iTween_TypeInfo->_2.cctor_finished )
@@ -8318,7 +8318,7 @@ LABEL_12:
     v15.fields.a = a;
     v15.fields.r = r;
     v15.fields.g = g;
-    iTween__DrawPathHelper((UnityEngine_Vector3_array *)v11, v15, (System_String_o *)StringLiteral_19870/*"gizmos"*/, v9);
+    iTween__DrawPathHelper((UnityEngine_Vector3_array *)v11, v15, (System_String_o *)StringLiteral_19873/*"gizmos"*/, v9);
   }
 }
 
@@ -8336,15 +8336,15 @@ void iTween__DrawPathHandles(UnityEngine_Vector3_array *path, const MethodInfo *
   UnityEngine_Color_o v10; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 
   v3 = path;
-  if ( (byte_4C3EA1F & 1) == 0 )
+  if ( (byte_4C49F9F & 1) == 0 )
   {
-    sub_1C32C20(&iTween_Defaults_TypeInfo);
-    sub_1C32C20(&StringLiteral_19932/*"handles"*/);
-    path = (UnityEngine_Vector3_array *)sub_1C32C20(&iTween_TypeInfo);
-    byte_4C3EA1F = 1;
+    sub_1C37058(&iTween_Defaults_TypeInfo);
+    sub_1C37058(&StringLiteral_19935/*"handles"*/);
+    path = (UnityEngine_Vector3_array *)sub_1C37058(&iTween_TypeInfo);
+    byte_4C49F9F = 1;
   }
   if ( !v3 )
-    sub_1C32E7C(path);
+    sub_1C372B4(path);
   if ( v3->max_length )
   {
     v4 = iTween_Defaults_TypeInfo;
@@ -8364,12 +8364,12 @@ void iTween__DrawPathHandles(UnityEngine_Vector3_array *path, const MethodInfo *
     v10.fields.a = v8;
     v10.fields.r = v7;
     v10.fields.b = v9;
-    iTween__DrawPathHelper(v3, v10, (System_String_o *)StringLiteral_19932/*"handles"*/, v2);
+    iTween__DrawPathHelper(v3, v10, (System_String_o *)StringLiteral_19935/*"handles"*/, v2);
   }
 }
 
 
-void iTween__DrawPathHandles_63251560(
+void iTween__DrawPathHandles_63294672(
         UnityEngine_Vector3_array *path,
         UnityEngine_Color_o color,
         const MethodInfo *method)
@@ -8387,14 +8387,14 @@ void iTween__DrawPathHandles_63251560(
   g = color.fields.g;
   r = color.fields.r;
   v8 = path;
-  if ( (byte_4C3EA20 & 1) == 0 )
+  if ( (byte_4C49FA0 & 1) == 0 )
   {
-    sub_1C32C20(&StringLiteral_19932/*"handles"*/);
-    path = (UnityEngine_Vector3_array *)sub_1C32C20(&iTween_TypeInfo);
-    byte_4C3EA20 = 1;
+    sub_1C37058(&StringLiteral_19935/*"handles"*/);
+    path = (UnityEngine_Vector3_array *)sub_1C37058(&iTween_TypeInfo);
+    byte_4C49FA0 = 1;
   }
   if ( !v8 )
-    sub_1C32E7C(path);
+    sub_1C372B4(path);
   if ( v8->max_length )
   {
     if ( !iTween_TypeInfo->_2.cctor_finished )
@@ -8403,12 +8403,12 @@ void iTween__DrawPathHandles_63251560(
     v9.fields.a = a;
     v9.fields.r = r;
     v9.fields.g = g;
-    iTween__DrawPathHelper(v8, v9, (System_String_o *)StringLiteral_19932/*"handles"*/, v3);
+    iTween__DrawPathHelper(v8, v9, (System_String_o *)StringLiteral_19935/*"handles"*/, v3);
   }
 }
 
 
-void iTween__DrawPathHandles_63251752(UnityEngine_Transform_array *path, const MethodInfo *method)
+void iTween__DrawPathHandles_63294864(UnityEngine_Transform_array *path, const MethodInfo *method)
 {
   UnityEngine_Transform_array *v2; // x19
   il2cpp_array_size_t max_length; // x1
@@ -8427,20 +8427,20 @@ void iTween__DrawPathHandles_63251752(UnityEngine_Transform_array *path, const M
   UnityEngine_Color_o v16; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 
   v2 = path;
-  if ( (byte_4C3EA21 & 1) == 0 )
+  if ( (byte_4C49FA1 & 1) == 0 )
   {
-    sub_1C32C20(&iTween_Defaults_TypeInfo);
-    sub_1C32C20(&UnityEngine_Vector3___TypeInfo);
-    sub_1C32C20(&StringLiteral_19932/*"handles"*/);
-    path = (UnityEngine_Transform_array *)sub_1C32C20(&iTween_TypeInfo);
-    byte_4C3EA21 = 1;
+    sub_1C37058(&iTween_Defaults_TypeInfo);
+    sub_1C37058(&UnityEngine_Vector3___TypeInfo);
+    sub_1C37058(&StringLiteral_19935/*"handles"*/);
+    path = (UnityEngine_Transform_array *)sub_1C37058(&iTween_TypeInfo);
+    byte_4C49FA1 = 1;
   }
   if ( !v2 )
     goto LABEL_18;
   max_length = v2->max_length;
   if ( max_length )
   {
-    path = (UnityEngine_Transform_array *)sub_1C32CC8(UnityEngine_Vector3___TypeInfo, max_length);
+    path = (UnityEngine_Transform_array *)sub_1C37100(UnityEngine_Vector3___TypeInfo, max_length);
     v5 = v2->max_length;
     v6 = path;
     if ( v5 >= 1 )
@@ -8451,7 +8451,7 @@ void iTween__DrawPathHandles_63251752(UnityEngine_Transform_array *path, const M
       {
         if ( (unsigned int)v7 >= v5 )
 LABEL_19:
-          sub_1C32E84(path);
+          sub_1C372BC(path);
         path = (UnityEngine_Transform_array *)v2->m_Items[v7];
         if ( !path )
           break;
@@ -8467,7 +8467,7 @@ LABEL_19:
           goto LABEL_12;
       }
 LABEL_18:
-      sub_1C32E7C(path);
+      sub_1C372B4(path);
     }
 LABEL_12:
     v9 = iTween_Defaults_TypeInfo;
@@ -8487,12 +8487,12 @@ LABEL_12:
     v16.fields.a = v13;
     v16.fields.r = v12;
     v16.fields.b = v14;
-    iTween__DrawPathHelper((UnityEngine_Vector3_array *)v6, v16, (System_String_o *)StringLiteral_19932/*"handles"*/, v4);
+    iTween__DrawPathHelper((UnityEngine_Vector3_array *)v6, v16, (System_String_o *)StringLiteral_19935/*"handles"*/, v4);
   }
 }
 
 
-void iTween__DrawPathHandles_63252116(
+void iTween__DrawPathHandles_63295228(
         UnityEngine_Transform_array *path,
         UnityEngine_Color_o color,
         const MethodInfo *method)
@@ -8516,19 +8516,19 @@ void iTween__DrawPathHandles_63252116(
   g = color.fields.g;
   r = color.fields.r;
   v7 = path;
-  if ( (byte_4C3EA22 & 1) == 0 )
+  if ( (byte_4C49FA2 & 1) == 0 )
   {
-    sub_1C32C20(&UnityEngine_Vector3___TypeInfo);
-    sub_1C32C20(&StringLiteral_19932/*"handles"*/);
-    path = (UnityEngine_Transform_array *)sub_1C32C20(&iTween_TypeInfo);
-    byte_4C3EA22 = 1;
+    sub_1C37058(&UnityEngine_Vector3___TypeInfo);
+    sub_1C37058(&StringLiteral_19935/*"handles"*/);
+    path = (UnityEngine_Transform_array *)sub_1C37058(&iTween_TypeInfo);
+    byte_4C49FA2 = 1;
   }
   if ( !v7 )
     goto LABEL_16;
   max_length = v7->max_length;
   if ( max_length )
   {
-    path = (UnityEngine_Transform_array *)sub_1C32CC8(UnityEngine_Vector3___TypeInfo, max_length);
+    path = (UnityEngine_Transform_array *)sub_1C37100(UnityEngine_Vector3___TypeInfo, max_length);
     v10 = v7->max_length;
     v11 = path;
     if ( v10 >= 1 )
@@ -8539,7 +8539,7 @@ void iTween__DrawPathHandles_63252116(
       {
         if ( (unsigned int)v12 >= v10 )
 LABEL_17:
-          sub_1C32E84(path);
+          sub_1C372BC(path);
         path = (UnityEngine_Transform_array *)v7->m_Items[v12];
         if ( !path )
           break;
@@ -8555,7 +8555,7 @@ LABEL_17:
           goto LABEL_12;
       }
 LABEL_16:
-      sub_1C32E7C(path);
+      sub_1C372B4(path);
     }
 LABEL_12:
     if ( !iTween_TypeInfo->_2.cctor_finished )
@@ -8564,7 +8564,7 @@ LABEL_12:
     v15.fields.a = a;
     v15.fields.r = r;
     v15.fields.g = g;
-    iTween__DrawPathHelper((UnityEngine_Vector3_array *)v11, v15, (System_String_o *)StringLiteral_19932/*"handles"*/, v9);
+    iTween__DrawPathHelper((UnityEngine_Vector3_array *)v11, v15, (System_String_o *)StringLiteral_19935/*"handles"*/, v9);
   }
 }
 
@@ -8603,14 +8603,14 @@ void iTween__DrawPathHelper(
   b = color.fields.b;
   g = color.fields.g;
   r = color.fields.r;
-  if ( (byte_4C3EA40 & 1) == 0 )
+  if ( (byte_4C49FC0 & 1) == 0 )
   {
-    sub_1C32C20(&UnityEngine_Debug_TypeInfo);
-    sub_1C32C20(&StringLiteral_20100/*"iTween Error: Drawing a path with Handles is temporarily disabled because of compatability issues with Unity 2.6!"*/);
-    sub_1C32C20(&StringLiteral_19870/*"gizmos"*/);
-    sub_1C32C20(&StringLiteral_19932/*"handles"*/);
-    sub_1C32C20(&iTween_TypeInfo);
-    byte_4C3EA40 = 1;
+    sub_1C37058(&UnityEngine_Debug_TypeInfo);
+    sub_1C37058(&StringLiteral_20103/*"iTween Error: Drawing a path with Handles is temporarily disabled because of compatability issues with Unity 2.6!"*/);
+    sub_1C37058(&StringLiteral_19873/*"gizmos"*/);
+    sub_1C37058(&StringLiteral_19935/*"handles"*/);
+    sub_1C37058(&iTween_TypeInfo);
+    byte_4C49FC0 = 1;
   }
   if ( !iTween_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(iTween_TypeInfo);
@@ -8625,7 +8625,7 @@ void iTween__DrawPathHelper(
   v28.fields.a = a;
   UnityEngine_Gizmos__set_color(v28, 0);
   if ( !path )
-    sub_1C32E7C(v15);
+    sub_1C372B4(v15);
   v17 = 20 * LODWORD(path->max_length);
   if ( v17 >= 1 )
   {
@@ -8646,7 +8646,7 @@ void iTween__DrawPathHelper(
       x = v25.fields.x;
       y = v25.fields.y;
       z = v25.fields.z;
-      if ( System_String__op_Equality(method, (System_String_o *)StringLiteral_19870/*"gizmos"*/, 0) )
+      if ( System_String__op_Equality(method, (System_String_o *)StringLiteral_19873/*"gizmos"*/, 0) )
       {
         v26.fields.x = x;
         v26.fields.y = y;
@@ -8656,18 +8656,18 @@ void iTween__DrawPathHelper(
         v27.fields.z = v22;
         UnityEngine_Gizmos__DrawLine(v26, v27, 0);
       }
-      else if ( System_String__op_Equality(method, (System_String_o *)StringLiteral_19932/*"handles"*/, 0) )
+      else if ( System_String__op_Equality(method, (System_String_o *)StringLiteral_19935/*"handles"*/, 0) )
       {
         if ( !UnityEngine_Debug_TypeInfo->_2.cctor_finished )
           j_il2cpp_runtime_class_init_0(UnityEngine_Debug_TypeInfo);
-        UnityEngine_Debug__LogError((Il2CppObject *)StringLiteral_20100/*"iTween Error: Drawing a path with Handles is temporarily disabled because of compatability issues with Unity 2.6!"*/, 0);
+        UnityEngine_Debug__LogError((Il2CppObject *)StringLiteral_20103/*"iTween Error: Drawing a path with Handles is temporarily disabled because of compatability issues with Unity 2.6!"*/, 0);
       }
     }
   }
 }
 
 
-void iTween__DrawPath_63249336(UnityEngine_Vector3_array *path, UnityEngine_Color_o color, const MethodInfo *method)
+void iTween__DrawPath_63292448(UnityEngine_Vector3_array *path, UnityEngine_Color_o color, const MethodInfo *method)
 {
   const MethodInfo *v3; // x2
   float a; // s8
@@ -8682,14 +8682,14 @@ void iTween__DrawPath_63249336(UnityEngine_Vector3_array *path, UnityEngine_Colo
   g = color.fields.g;
   r = color.fields.r;
   v8 = path;
-  if ( (byte_4C3EA18 & 1) == 0 )
+  if ( (byte_4C49F98 & 1) == 0 )
   {
-    sub_1C32C20(&StringLiteral_19870/*"gizmos"*/);
-    path = (UnityEngine_Vector3_array *)sub_1C32C20(&iTween_TypeInfo);
-    byte_4C3EA18 = 1;
+    sub_1C37058(&StringLiteral_19873/*"gizmos"*/);
+    path = (UnityEngine_Vector3_array *)sub_1C37058(&iTween_TypeInfo);
+    byte_4C49F98 = 1;
   }
   if ( !v8 )
-    sub_1C32E7C(path);
+    sub_1C372B4(path);
   if ( v8->max_length )
   {
     if ( !iTween_TypeInfo->_2.cctor_finished )
@@ -8698,12 +8698,12 @@ void iTween__DrawPath_63249336(UnityEngine_Vector3_array *path, UnityEngine_Colo
     v9.fields.a = a;
     v9.fields.r = r;
     v9.fields.g = g;
-    iTween__DrawPathHelper(v8, v9, (System_String_o *)StringLiteral_19870/*"gizmos"*/, v3);
+    iTween__DrawPathHelper(v8, v9, (System_String_o *)StringLiteral_19873/*"gizmos"*/, v3);
   }
 }
 
 
-void iTween__DrawPath_63249528(UnityEngine_Transform_array *path, const MethodInfo *method)
+void iTween__DrawPath_63292640(UnityEngine_Transform_array *path, const MethodInfo *method)
 {
   UnityEngine_Transform_array *v2; // x19
   il2cpp_array_size_t max_length; // x1
@@ -8722,20 +8722,20 @@ void iTween__DrawPath_63249528(UnityEngine_Transform_array *path, const MethodIn
   UnityEngine_Color_o v16; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 
   v2 = path;
-  if ( (byte_4C3EA19 & 1) == 0 )
+  if ( (byte_4C49F99 & 1) == 0 )
   {
-    sub_1C32C20(&iTween_Defaults_TypeInfo);
-    sub_1C32C20(&UnityEngine_Vector3___TypeInfo);
-    sub_1C32C20(&StringLiteral_19870/*"gizmos"*/);
-    path = (UnityEngine_Transform_array *)sub_1C32C20(&iTween_TypeInfo);
-    byte_4C3EA19 = 1;
+    sub_1C37058(&iTween_Defaults_TypeInfo);
+    sub_1C37058(&UnityEngine_Vector3___TypeInfo);
+    sub_1C37058(&StringLiteral_19873/*"gizmos"*/);
+    path = (UnityEngine_Transform_array *)sub_1C37058(&iTween_TypeInfo);
+    byte_4C49F99 = 1;
   }
   if ( !v2 )
     goto LABEL_18;
   max_length = v2->max_length;
   if ( max_length )
   {
-    path = (UnityEngine_Transform_array *)sub_1C32CC8(UnityEngine_Vector3___TypeInfo, max_length);
+    path = (UnityEngine_Transform_array *)sub_1C37100(UnityEngine_Vector3___TypeInfo, max_length);
     v5 = v2->max_length;
     v6 = path;
     if ( v5 >= 1 )
@@ -8746,7 +8746,7 @@ void iTween__DrawPath_63249528(UnityEngine_Transform_array *path, const MethodIn
       {
         if ( (unsigned int)v7 >= v5 )
 LABEL_19:
-          sub_1C32E84(path);
+          sub_1C372BC(path);
         path = (UnityEngine_Transform_array *)v2->m_Items[v7];
         if ( !path )
           break;
@@ -8762,7 +8762,7 @@ LABEL_19:
           goto LABEL_12;
       }
 LABEL_18:
-      sub_1C32E7C(path);
+      sub_1C372B4(path);
     }
 LABEL_12:
     v9 = iTween_Defaults_TypeInfo;
@@ -8782,12 +8782,12 @@ LABEL_12:
     v16.fields.a = v13;
     v16.fields.r = v12;
     v16.fields.b = v14;
-    iTween__DrawPathHelper((UnityEngine_Vector3_array *)v6, v16, (System_String_o *)StringLiteral_19870/*"gizmos"*/, v4);
+    iTween__DrawPathHelper((UnityEngine_Vector3_array *)v6, v16, (System_String_o *)StringLiteral_19873/*"gizmos"*/, v4);
   }
 }
 
 
-void iTween__DrawPath_63249892(UnityEngine_Transform_array *path, UnityEngine_Color_o color, const MethodInfo *method)
+void iTween__DrawPath_63293004(UnityEngine_Transform_array *path, UnityEngine_Color_o color, const MethodInfo *method)
 {
   float a; // s8
   float b; // s9
@@ -8808,19 +8808,19 @@ void iTween__DrawPath_63249892(UnityEngine_Transform_array *path, UnityEngine_Co
   g = color.fields.g;
   r = color.fields.r;
   v7 = path;
-  if ( (byte_4C3EA1A & 1) == 0 )
+  if ( (byte_4C49F9A & 1) == 0 )
   {
-    sub_1C32C20(&UnityEngine_Vector3___TypeInfo);
-    sub_1C32C20(&StringLiteral_19870/*"gizmos"*/);
-    path = (UnityEngine_Transform_array *)sub_1C32C20(&iTween_TypeInfo);
-    byte_4C3EA1A = 1;
+    sub_1C37058(&UnityEngine_Vector3___TypeInfo);
+    sub_1C37058(&StringLiteral_19873/*"gizmos"*/);
+    path = (UnityEngine_Transform_array *)sub_1C37058(&iTween_TypeInfo);
+    byte_4C49F9A = 1;
   }
   if ( !v7 )
     goto LABEL_16;
   max_length = v7->max_length;
   if ( max_length )
   {
-    path = (UnityEngine_Transform_array *)sub_1C32CC8(UnityEngine_Vector3___TypeInfo, max_length);
+    path = (UnityEngine_Transform_array *)sub_1C37100(UnityEngine_Vector3___TypeInfo, max_length);
     v10 = v7->max_length;
     v11 = path;
     if ( v10 >= 1 )
@@ -8831,7 +8831,7 @@ void iTween__DrawPath_63249892(UnityEngine_Transform_array *path, UnityEngine_Co
       {
         if ( (unsigned int)v12 >= v10 )
 LABEL_17:
-          sub_1C32E84(path);
+          sub_1C372BC(path);
         path = (UnityEngine_Transform_array *)v7->m_Items[v12];
         if ( !path )
           break;
@@ -8847,7 +8847,7 @@ LABEL_17:
           goto LABEL_12;
       }
 LABEL_16:
-      sub_1C32E7C(path);
+      sub_1C372B4(path);
     }
 LABEL_12:
     if ( !iTween_TypeInfo->_2.cctor_finished )
@@ -8856,7 +8856,7 @@ LABEL_12:
     v15.fields.a = a;
     v15.fields.r = r;
     v15.fields.g = g;
-    iTween__DrawPathHelper((UnityEngine_Vector3_array *)v11, v15, (System_String_o *)StringLiteral_19870/*"gizmos"*/, v9);
+    iTween__DrawPathHelper((UnityEngine_Vector3_array *)v11, v15, (System_String_o *)StringLiteral_19873/*"gizmos"*/, v9);
   }
 }
 
@@ -8903,26 +8903,26 @@ void iTween__FadeFrom(UnityEngine_GameObject_o *target, float alpha, float time,
   float v38; // [xsp+8h] [xbp-48h] BYREF
   float v39; // [xsp+Ch] [xbp-44h] BYREF
 
-  if ( (byte_4C3E990 & 1) == 0 )
+  if ( (byte_4C49F10 & 1) == 0 )
   {
-    sub_1C32C20(&object___TypeInfo);
-    sub_1C32C20(&float_TypeInfo);
-    sub_1C32C20(&StringLiteral_16739/*"alpha"*/);
-    sub_1C32C20(&StringLiteral_24067/*"time"*/);
-    sub_1C32C20(&iTween_TypeInfo);
-    byte_4C3E990 = 1;
+    sub_1C37058(&object___TypeInfo);
+    sub_1C37058(&float_TypeInfo);
+    sub_1C37058(&StringLiteral_16741/*"alpha"*/);
+    sub_1C37058(&StringLiteral_24071/*"time"*/);
+    sub_1C37058(&iTween_TypeInfo);
+    byte_4C49F10 = 1;
   }
-  v7 = sub_1C32CC8(object___TypeInfo, 4);
+  v7 = sub_1C37100(object___TypeInfo, 4);
   if ( !v7 )
-    sub_1C32E7C(0);
+    sub_1C372B4(0);
   v10 = (System_Object_array *)v7;
-  v11 = StringLiteral_16739/*"alpha"*/;
-  if ( StringLiteral_16739/*"alpha"*/ )
+  v11 = StringLiteral_16741/*"alpha"*/;
+  if ( StringLiteral_16741/*"alpha"*/ )
   {
-    v11 = sub_1C32D5C(StringLiteral_16739/*"alpha"*/, v10->obj.klass->_1.element_class);
+    v11 = sub_1C37194(StringLiteral_16741/*"alpha"*/, v10->obj.klass->_1.element_class);
     if ( !v11 )
       goto LABEL_24;
-    v12 = StringLiteral_16739/*"alpha"*/;
+    v12 = StringLiteral_16741/*"alpha"*/;
   }
   else
   {
@@ -8931,27 +8931,27 @@ void iTween__FadeFrom(UnityEngine_GameObject_o *target, float alpha, float time,
   if ( !LODWORD(v10->max_length) )
     goto LABEL_23;
   v10->m_Items[0] = (Il2CppObject *)v12;
-  sub_1C32BC4((CGThumbnailListItem_o *)v10->m_Items, v12, v8, v9);
+  sub_1C36FFC((CGThumbnailListItem_o *)v10->m_Items, v12, v8, v9);
   v39 = alpha;
   v11 = j_il2cpp_value_box_0(float_TypeInfo, &v39, v13, v14, v15, v16, v17, v18);
   v21 = (Il2CppObject *)v11;
   if ( v11 )
   {
-    v11 = sub_1C32D5C(v11, v10->obj.klass->_1.element_class);
+    v11 = sub_1C37194(v11, v10->obj.klass->_1.element_class);
     if ( !v11 )
       goto LABEL_24;
   }
   if ( LODWORD(v10->max_length) <= 1 )
     goto LABEL_23;
   v10->m_Items[1] = v21;
-  sub_1C32BC4((CGThumbnailListItem_o *)&v10->m_Items[1], (int32_t)v21, v19, v20);
-  v11 = StringLiteral_24067/*"time"*/;
-  if ( StringLiteral_24067/*"time"*/ )
+  sub_1C36FFC((CGThumbnailListItem_o *)&v10->m_Items[1], (int32_t)v21, v19, v20);
+  v11 = StringLiteral_24071/*"time"*/;
+  if ( StringLiteral_24071/*"time"*/ )
   {
-    v11 = sub_1C32D5C(StringLiteral_24067/*"time"*/, v10->obj.klass->_1.element_class);
+    v11 = sub_1C37194(StringLiteral_24071/*"time"*/, v10->obj.klass->_1.element_class);
     if ( !v11 )
       goto LABEL_24;
-    v24 = StringLiteral_24067/*"time"*/;
+    v24 = StringLiteral_24071/*"time"*/;
   }
   else
   {
@@ -8960,45 +8960,45 @@ void iTween__FadeFrom(UnityEngine_GameObject_o *target, float alpha, float time,
   if ( LODWORD(v10->max_length) <= 2 )
     goto LABEL_23;
   v10->m_Items[2] = (Il2CppObject *)v24;
-  sub_1C32BC4((CGThumbnailListItem_o *)&v10->m_Items[2], v24, v22, v23);
+  sub_1C36FFC((CGThumbnailListItem_o *)&v10->m_Items[2], v24, v22, v23);
   v38 = time;
   v11 = j_il2cpp_value_box_0(float_TypeInfo, &v38, v25, v26, v27, v28, v29, v30);
   v33 = (Il2CppObject *)v11;
   if ( v11 )
   {
-    v11 = sub_1C32D5C(v11, v10->obj.klass->_1.element_class);
+    v11 = sub_1C37194(v11, v10->obj.klass->_1.element_class);
     if ( !v11 )
     {
 LABEL_24:
-      v37 = sub_1C32EA0(v11);
-      sub_1C32D48(v37, 0);
+      v37 = sub_1C372D8(v11);
+      sub_1C37180(v37, 0);
     }
   }
   if ( LODWORD(v10->max_length) <= 3 )
 LABEL_23:
-    sub_1C32E84(v11);
+    sub_1C372BC(v11);
   v10->m_Items[3] = v33;
-  sub_1C32BC4((CGThumbnailListItem_o *)&v10->m_Items[3], (int32_t)v33, v31, v32);
+  sub_1C36FFC((CGThumbnailListItem_o *)&v10->m_Items[3], (int32_t)v33, v31, v32);
   if ( !iTween_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(iTween_TypeInfo);
   v35 = iTween__Hash(v10, v34);
-  iTween__FadeFrom_63141992(target, v35, v36);
+  iTween__FadeFrom_63185104(target, v35, v36);
 }
 
 
-void iTween__FadeFrom_63141992(
+void iTween__FadeFrom_63185104(
         UnityEngine_GameObject_o *target,
         System_Collections_Hashtable_o *args,
         const MethodInfo *method)
 {
-  if ( (byte_4C3E991 & 1) == 0 )
+  if ( (byte_4C49F11 & 1) == 0 )
   {
-    sub_1C32C20(&iTween_TypeInfo);
-    byte_4C3E991 = 1;
+    sub_1C37058(&iTween_TypeInfo);
+    byte_4C49F11 = 1;
   }
   if ( !iTween_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(iTween_TypeInfo);
-  iTween__ColorFrom_63142092(target, args, method);
+  iTween__ColorFrom_63185204(target, args, method);
 }
 
 
@@ -9038,26 +9038,26 @@ void iTween__FadeTo(UnityEngine_GameObject_o *target, float alpha, float time, c
   float v38; // [xsp+8h] [xbp-48h] BYREF
   float v39; // [xsp+Ch] [xbp-44h] BYREF
 
-  if ( (byte_4C3E992 & 1) == 0 )
+  if ( (byte_4C49F12 & 1) == 0 )
   {
-    sub_1C32C20(&object___TypeInfo);
-    sub_1C32C20(&float_TypeInfo);
-    sub_1C32C20(&StringLiteral_16739/*"alpha"*/);
-    sub_1C32C20(&StringLiteral_24067/*"time"*/);
-    sub_1C32C20(&iTween_TypeInfo);
-    byte_4C3E992 = 1;
+    sub_1C37058(&object___TypeInfo);
+    sub_1C37058(&float_TypeInfo);
+    sub_1C37058(&StringLiteral_16741/*"alpha"*/);
+    sub_1C37058(&StringLiteral_24071/*"time"*/);
+    sub_1C37058(&iTween_TypeInfo);
+    byte_4C49F12 = 1;
   }
-  v7 = sub_1C32CC8(object___TypeInfo, 4);
+  v7 = sub_1C37100(object___TypeInfo, 4);
   if ( !v7 )
-    sub_1C32E7C(0);
+    sub_1C372B4(0);
   v10 = (System_Object_array *)v7;
-  v11 = StringLiteral_16739/*"alpha"*/;
-  if ( StringLiteral_16739/*"alpha"*/ )
+  v11 = StringLiteral_16741/*"alpha"*/;
+  if ( StringLiteral_16741/*"alpha"*/ )
   {
-    v11 = sub_1C32D5C(StringLiteral_16739/*"alpha"*/, v10->obj.klass->_1.element_class);
+    v11 = sub_1C37194(StringLiteral_16741/*"alpha"*/, v10->obj.klass->_1.element_class);
     if ( !v11 )
       goto LABEL_24;
-    v12 = StringLiteral_16739/*"alpha"*/;
+    v12 = StringLiteral_16741/*"alpha"*/;
   }
   else
   {
@@ -9066,27 +9066,27 @@ void iTween__FadeTo(UnityEngine_GameObject_o *target, float alpha, float time, c
   if ( !LODWORD(v10->max_length) )
     goto LABEL_23;
   v10->m_Items[0] = (Il2CppObject *)v12;
-  sub_1C32BC4((CGThumbnailListItem_o *)v10->m_Items, v12, v8, v9);
+  sub_1C36FFC((CGThumbnailListItem_o *)v10->m_Items, v12, v8, v9);
   v39 = alpha;
   v11 = j_il2cpp_value_box_0(float_TypeInfo, &v39, v13, v14, v15, v16, v17, v18);
   v21 = (Il2CppObject *)v11;
   if ( v11 )
   {
-    v11 = sub_1C32D5C(v11, v10->obj.klass->_1.element_class);
+    v11 = sub_1C37194(v11, v10->obj.klass->_1.element_class);
     if ( !v11 )
       goto LABEL_24;
   }
   if ( LODWORD(v10->max_length) <= 1 )
     goto LABEL_23;
   v10->m_Items[1] = v21;
-  sub_1C32BC4((CGThumbnailListItem_o *)&v10->m_Items[1], (int32_t)v21, v19, v20);
-  v11 = StringLiteral_24067/*"time"*/;
-  if ( StringLiteral_24067/*"time"*/ )
+  sub_1C36FFC((CGThumbnailListItem_o *)&v10->m_Items[1], (int32_t)v21, v19, v20);
+  v11 = StringLiteral_24071/*"time"*/;
+  if ( StringLiteral_24071/*"time"*/ )
   {
-    v11 = sub_1C32D5C(StringLiteral_24067/*"time"*/, v10->obj.klass->_1.element_class);
+    v11 = sub_1C37194(StringLiteral_24071/*"time"*/, v10->obj.klass->_1.element_class);
     if ( !v11 )
       goto LABEL_24;
-    v24 = StringLiteral_24067/*"time"*/;
+    v24 = StringLiteral_24071/*"time"*/;
   }
   else
   {
@@ -9095,45 +9095,45 @@ void iTween__FadeTo(UnityEngine_GameObject_o *target, float alpha, float time, c
   if ( LODWORD(v10->max_length) <= 2 )
     goto LABEL_23;
   v10->m_Items[2] = (Il2CppObject *)v24;
-  sub_1C32BC4((CGThumbnailListItem_o *)&v10->m_Items[2], v24, v22, v23);
+  sub_1C36FFC((CGThumbnailListItem_o *)&v10->m_Items[2], v24, v22, v23);
   v38 = time;
   v11 = j_il2cpp_value_box_0(float_TypeInfo, &v38, v25, v26, v27, v28, v29, v30);
   v33 = (Il2CppObject *)v11;
   if ( v11 )
   {
-    v11 = sub_1C32D5C(v11, v10->obj.klass->_1.element_class);
+    v11 = sub_1C37194(v11, v10->obj.klass->_1.element_class);
     if ( !v11 )
     {
 LABEL_24:
-      v37 = sub_1C32EA0(v11);
-      sub_1C32D48(v37, 0);
+      v37 = sub_1C372D8(v11);
+      sub_1C37180(v37, 0);
     }
   }
   if ( LODWORD(v10->max_length) <= 3 )
 LABEL_23:
-    sub_1C32E84(v11);
+    sub_1C372BC(v11);
   v10->m_Items[3] = v33;
-  sub_1C32BC4((CGThumbnailListItem_o *)&v10->m_Items[3], (int32_t)v33, v31, v32);
+  sub_1C36FFC((CGThumbnailListItem_o *)&v10->m_Items[3], (int32_t)v33, v31, v32);
   if ( !iTween_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(iTween_TypeInfo);
   v35 = iTween__Hash(v10, v34);
-  iTween__FadeTo_63145480(target, v35, v36);
+  iTween__FadeTo_63188592(target, v35, v36);
 }
 
 
-void iTween__FadeTo_63145480(
+void iTween__FadeTo_63188592(
         UnityEngine_GameObject_o *target,
         System_Collections_Hashtable_o *args,
         const MethodInfo *method)
 {
-  if ( (byte_4C3E993 & 1) == 0 )
+  if ( (byte_4C49F13 & 1) == 0 )
   {
-    sub_1C32C20(&iTween_TypeInfo);
-    byte_4C3E993 = 1;
+    sub_1C37058(&iTween_TypeInfo);
+    byte_4C49F13 = 1;
   }
   if ( !iTween_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(iTween_TypeInfo);
-  iTween__ColorTo_63145580(target, args, method);
+  iTween__ColorTo_63188692(target, args, method);
 }
 
 
@@ -9147,22 +9147,22 @@ void iTween__FadeUpdate(
   const MethodInfo *v6; // x2
 
   v4 = target;
-  if ( (byte_4C3E9F5 & 1) == 0 )
+  if ( (byte_4C49F75 & 1) == 0 )
   {
-    sub_1C32C20(&StringLiteral_16739/*"alpha"*/);
-    sub_1C32C20(&StringLiteral_16629/*"a"*/);
-    target = (UnityEngine_GameObject_o *)sub_1C32C20(&iTween_TypeInfo);
-    byte_4C3E9F5 = 1;
+    sub_1C37058(&StringLiteral_16741/*"alpha"*/);
+    sub_1C37058(&StringLiteral_16631/*"a"*/);
+    target = (UnityEngine_GameObject_o *)sub_1C37058(&iTween_TypeInfo);
+    byte_4C49F75 = 1;
   }
   if ( !args )
-    sub_1C32E7C(target);
+    sub_1C372B4(target);
   v5 = ((__int64 (__fastcall *)(System_Collections_Hashtable_o *, __int64, const MethodInfo *))args->klass->vtable._28_get_Item.methodPtr)(
          args,
-         StringLiteral_16739/*"alpha"*/,
+         StringLiteral_16741/*"alpha"*/,
          args->klass->vtable._28_get_Item.method);
   ((void (__fastcall *)(System_Collections_Hashtable_o *, __int64, __int64, const MethodInfo *))args->klass->vtable._29_set_Item.methodPtr)(
     args,
-    StringLiteral_16629/*"a"*/,
+    StringLiteral_16631/*"a"*/,
     v5,
     args->klass->vtable._29_set_Item.method);
   if ( !iTween_TypeInfo->_2.cctor_finished )
@@ -9171,7 +9171,7 @@ void iTween__FadeUpdate(
 }
 
 
-void iTween__FadeUpdate_63228232(UnityEngine_GameObject_o *target, float alpha, float time, const MethodInfo *method)
+void iTween__FadeUpdate_63271344(UnityEngine_GameObject_o *target, float alpha, float time, const MethodInfo *method)
 {
   __int64 v7; // x0
   int32_t v8; // w2
@@ -9207,26 +9207,26 @@ void iTween__FadeUpdate_63228232(UnityEngine_GameObject_o *target, float alpha, 
   float v38; // [xsp+8h] [xbp-48h] BYREF
   float v39; // [xsp+Ch] [xbp-44h] BYREF
 
-  if ( (byte_4C3E9F6 & 1) == 0 )
+  if ( (byte_4C49F76 & 1) == 0 )
   {
-    sub_1C32C20(&object___TypeInfo);
-    sub_1C32C20(&float_TypeInfo);
-    sub_1C32C20(&StringLiteral_16739/*"alpha"*/);
-    sub_1C32C20(&StringLiteral_24067/*"time"*/);
-    sub_1C32C20(&iTween_TypeInfo);
-    byte_4C3E9F6 = 1;
+    sub_1C37058(&object___TypeInfo);
+    sub_1C37058(&float_TypeInfo);
+    sub_1C37058(&StringLiteral_16741/*"alpha"*/);
+    sub_1C37058(&StringLiteral_24071/*"time"*/);
+    sub_1C37058(&iTween_TypeInfo);
+    byte_4C49F76 = 1;
   }
-  v7 = sub_1C32CC8(object___TypeInfo, 4);
+  v7 = sub_1C37100(object___TypeInfo, 4);
   if ( !v7 )
-    sub_1C32E7C(0);
+    sub_1C372B4(0);
   v10 = v7;
-  v11 = StringLiteral_16739/*"alpha"*/;
-  if ( StringLiteral_16739/*"alpha"*/ )
+  v11 = StringLiteral_16741/*"alpha"*/;
+  if ( StringLiteral_16741/*"alpha"*/ )
   {
-    v11 = sub_1C32D5C(StringLiteral_16739/*"alpha"*/);
+    v11 = sub_1C37194(StringLiteral_16741/*"alpha"*/);
     if ( !v11 )
       goto LABEL_24;
-    v12 = StringLiteral_16739/*"alpha"*/;
+    v12 = StringLiteral_16741/*"alpha"*/;
   }
   else
   {
@@ -9235,27 +9235,27 @@ void iTween__FadeUpdate_63228232(UnityEngine_GameObject_o *target, float alpha, 
   if ( !*(_DWORD *)(v10 + 24) )
     goto LABEL_23;
   *(_QWORD *)(v10 + 32) = v12;
-  sub_1C32BC4((CGThumbnailListItem_o *)(v10 + 32), v12, v8, v9);
+  sub_1C36FFC((CGThumbnailListItem_o *)(v10 + 32), v12, v8, v9);
   v39 = alpha;
   v11 = j_il2cpp_value_box_0(float_TypeInfo, &v39, v13, v14, v15, v16, v17, v18);
   v21 = v11;
   if ( v11 )
   {
-    v11 = sub_1C32D5C(v11);
+    v11 = sub_1C37194(v11);
     if ( !v11 )
       goto LABEL_24;
   }
   if ( *(_DWORD *)(v10 + 24) <= 1u )
     goto LABEL_23;
   *(_QWORD *)(v10 + 40) = v21;
-  sub_1C32BC4((CGThumbnailListItem_o *)(v10 + 40), v21, v19, v20);
-  v11 = StringLiteral_24067/*"time"*/;
-  if ( StringLiteral_24067/*"time"*/ )
+  sub_1C36FFC((CGThumbnailListItem_o *)(v10 + 40), v21, v19, v20);
+  v11 = StringLiteral_24071/*"time"*/;
+  if ( StringLiteral_24071/*"time"*/ )
   {
-    v11 = sub_1C32D5C(StringLiteral_24067/*"time"*/);
+    v11 = sub_1C37194(StringLiteral_24071/*"time"*/);
     if ( !v11 )
       goto LABEL_24;
-    v24 = StringLiteral_24067/*"time"*/;
+    v24 = StringLiteral_24071/*"time"*/;
   }
   else
   {
@@ -9264,25 +9264,25 @@ void iTween__FadeUpdate_63228232(UnityEngine_GameObject_o *target, float alpha, 
   if ( *(_DWORD *)(v10 + 24) <= 2u )
     goto LABEL_23;
   *(_QWORD *)(v10 + 48) = v24;
-  sub_1C32BC4((CGThumbnailListItem_o *)(v10 + 48), v24, v22, v23);
+  sub_1C36FFC((CGThumbnailListItem_o *)(v10 + 48), v24, v22, v23);
   v38 = time;
   v11 = j_il2cpp_value_box_0(float_TypeInfo, &v38, v25, v26, v27, v28, v29, v30);
   v33 = v11;
   if ( v11 )
   {
-    v11 = sub_1C32D5C(v11);
+    v11 = sub_1C37194(v11);
     if ( !v11 )
     {
 LABEL_24:
-      v37 = sub_1C32EA0(v11);
-      sub_1C32D48(v37, 0);
+      v37 = sub_1C372D8(v11);
+      sub_1C37180(v37, 0);
     }
   }
   if ( *(_DWORD *)(v10 + 24) <= 3u )
 LABEL_23:
-    sub_1C32E84(v11);
+    sub_1C372BC(v11);
   *(_QWORD *)(v10 + 56) = v33;
-  sub_1C32BC4((CGThumbnailListItem_o *)(v10 + 56), v33, v31, v32);
+  sub_1C36FFC((CGThumbnailListItem_o *)(v10 + 56), v33, v31, v32);
   if ( !iTween_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(iTween_TypeInfo);
   v35 = iTween__Hash((System_Object_array *)v10, v34);
@@ -9352,30 +9352,30 @@ void iTween__GenerateAudioToTargets(iTween_o *this, const MethodInfo *method)
   iTween_o *v28; // x0
   const MethodInfo *v29; // x1
 
-  if ( (byte_4C3E9CD & 1) == 0 )
+  if ( (byte_4C49F4D & 1) == 0 )
   {
-    sub_1C32C20(&UnityEngine_AudioSource_TypeInfo);
-    sub_1C32C20(&Method_UnityEngine_Component_GetComponent_AudioSource___);
-    sub_1C32C20(&UnityEngine_Debug_TypeInfo);
-    sub_1C32C20(&UnityEngine_Object_TypeInfo);
-    sub_1C32C20(&float_TypeInfo);
-    sub_1C32C20(&UnityEngine_Vector2___TypeInfo);
-    sub_1C32C20(&StringLiteral_20096/*"iTween Error: AudioTo requires an AudioSource."*/);
-    sub_1C32C20(&StringLiteral_16940/*"audiosource"*/);
-    sub_1C32C20(&StringLiteral_22703/*"pitch"*/);
-    sub_1C32C20(&StringLiteral_24710/*"volume"*/);
-    byte_4C3E9CD = 1;
+    sub_1C37058(&UnityEngine_AudioSource_TypeInfo);
+    sub_1C37058(&Method_UnityEngine_Component_GetComponent_AudioSource___);
+    sub_1C37058(&UnityEngine_Debug_TypeInfo);
+    sub_1C37058(&UnityEngine_Object_TypeInfo);
+    sub_1C37058(&float_TypeInfo);
+    sub_1C37058(&UnityEngine_Vector2___TypeInfo);
+    sub_1C37058(&StringLiteral_20099/*"iTween Error: AudioTo requires an AudioSource."*/);
+    sub_1C37058(&StringLiteral_16942/*"audiosource"*/);
+    sub_1C37058(&StringLiteral_22706/*"pitch"*/);
+    sub_1C37058(&StringLiteral_24715/*"volume"*/);
+    byte_4C49F4D = 1;
   }
-  v3 = (struct UnityEngine_Vector2_array *)sub_1C32CC8(UnityEngine_Vector2___TypeInfo, 3);
+  v3 = (struct UnityEngine_Vector2_array *)sub_1C37100(UnityEngine_Vector2___TypeInfo, 3);
   this->fields.vector2s = v3;
   p_vector2s = &this->fields.vector2s;
-  sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.vector2s, (int32_t)v3, v5, v6);
+  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.vector2s, (int32_t)v3, v5, v6);
   tweenArguments = (__int64)this->fields.tweenArguments;
   if ( !tweenArguments )
     goto LABEL_41;
   if ( ((*(__int64 (__fastcall **)(__int64, __int64, _QWORD))(*(_QWORD *)tweenArguments + 712LL))(
           tweenArguments,
-          StringLiteral_16940/*"audiosource"*/,
+          StringLiteral_16942/*"audiosource"*/,
           *(_QWORD *)(*(_QWORD *)tweenArguments + 720LL))
       & 1) != 0 )
   {
@@ -9385,7 +9385,7 @@ void iTween__GenerateAudioToTargets(iTween_o *this, const MethodInfo *method)
     v8 = (struct UnityEngine_AudioSource_o *)(*(__int64 (__fastcall **)(__int64, __int64, _QWORD))(*(_QWORD *)tweenArguments
                                                                                                  + 760LL))(
                                                tweenArguments,
-                                               StringLiteral_16940/*"audiosource"*/,
+                                               StringLiteral_16942/*"audiosource"*/,
                                                *(_QWORD *)(*(_QWORD *)tweenArguments + 768LL));
     v11 = v8;
     if ( v8 )
@@ -9394,7 +9394,7 @@ void iTween__GenerateAudioToTargets(iTween_o *this, const MethodInfo *method)
       if ( v8->klass != UnityEngine_AudioSource_TypeInfo
         || (this->fields.audioSource = v8, p_audioSource = &this->fields.audioSource, v11->klass != v12) )
       {
-        sub_1C3313C(v11);
+        sub_1C37574(v11);
         goto LABEL_10;
       }
     }
@@ -9409,24 +9409,24 @@ void iTween__GenerateAudioToTargets(iTween_o *this, const MethodInfo *method)
 LABEL_10:
   Component_object = UnityEngine_Component__GetComponent_object_(
                        (UnityEngine_Component_o *)this,
-                       (const MethodInfo_30D3BC0 *)Method_UnityEngine_Component_GetComponent_AudioSource___);
+                       (const MethodInfo_30DE428 *)Method_UnityEngine_Component_GetComponent_AudioSource___);
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   if ( UnityEngine_Object__op_Implicit((UnityEngine_Object_o *)Component_object, 0) )
   {
     v15 = UnityEngine_Component__GetComponent_object_(
             (UnityEngine_Component_o *)this,
-            (const MethodInfo_30D3BC0 *)Method_UnityEngine_Component_GetComponent_AudioSource___);
+            (const MethodInfo_30DE428 *)Method_UnityEngine_Component_GetComponent_AudioSource___);
     v16 = (int)v15;
     this->fields.audioSource = (struct UnityEngine_AudioSource_o *)v15;
     p_audioSource = &this->fields.audioSource;
 LABEL_19:
-    sub_1C32BC4((CGThumbnailListItem_o *)p_audioSource, v16, v9, v10);
+    sub_1C36FFC((CGThumbnailListItem_o *)p_audioSource, v16, v9, v10);
     goto LABEL_20;
   }
   if ( !UnityEngine_Debug_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Debug_TypeInfo);
-  UnityEngine_Debug__LogError((Il2CppObject *)StringLiteral_20096/*"iTween Error: AudioTo requires an AudioSource."*/, 0);
+  UnityEngine_Debug__LogError((Il2CppObject *)StringLiteral_20099/*"iTween Error: AudioTo requires an AudioSource."*/, 0);
   iTween__Dispose(this, v17);
 LABEL_20:
   tweenArguments = (__int64)this->fields.audioSource;
@@ -9452,7 +9452,7 @@ LABEL_20:
     goto LABEL_41;
   tweenArguments = (*(__int64 (__fastcall **)(__int64, __int64, _QWORD))(*(_QWORD *)tweenArguments + 712LL))(
                      tweenArguments,
-                     StringLiteral_24710/*"volume"*/,
+                     StringLiteral_24715/*"volume"*/,
                      *(_QWORD *)(*(_QWORD *)tweenArguments + 720LL));
   if ( (tweenArguments & 1) != 0 )
   {
@@ -9464,14 +9464,14 @@ LABEL_20:
       goto LABEL_41;
     tweenArguments = (*(__int64 (__fastcall **)(__int64, __int64, _QWORD))(*(_QWORD *)tweenArguments + 760LL))(
                        tweenArguments,
-                       StringLiteral_24710/*"volume"*/,
+                       StringLiteral_24715/*"volume"*/,
                        *(_QWORD *)(*(_QWORD *)tweenArguments + 768LL));
     if ( !tweenArguments )
       goto LABEL_41;
     if ( *(Il2CppClass **)(*(_QWORD *)tweenArguments + 64LL) != float_TypeInfo->_1.element_class )
     {
 LABEL_43:
-      sub_1C3313C(tweenArguments);
+      sub_1C37574(tweenArguments);
       iTween__GenerateMoveToPathTargets(v28, v29);
       return;
     }
@@ -9485,7 +9485,7 @@ LABEL_43:
     goto LABEL_41;
   tweenArguments = (*(__int64 (__fastcall **)(__int64, __int64, _QWORD))(*(_QWORD *)tweenArguments + 712LL))(
                      tweenArguments,
-                     StringLiteral_22703/*"pitch"*/,
+                     StringLiteral_22706/*"pitch"*/,
                      *(_QWORD *)(*(_QWORD *)tweenArguments + 720LL));
   if ( (tweenArguments & 1) == 0 )
     return;
@@ -9494,18 +9494,18 @@ LABEL_43:
     || (tweenArguments = (__int64)this->fields.tweenArguments) == 0
     || (tweenArguments = (*(__int64 (__fastcall **)(__int64, __int64, _QWORD))(*(_QWORD *)tweenArguments + 760LL))(
                            tweenArguments,
-                           StringLiteral_22703/*"pitch"*/,
+                           StringLiteral_22706/*"pitch"*/,
                            *(_QWORD *)(*(_QWORD *)tweenArguments + 768LL))) == 0 )
   {
 LABEL_41:
-    sub_1C32E7C(tweenArguments);
+    sub_1C372B4(tweenArguments);
   }
   if ( *(Il2CppClass **)(*(_QWORD *)tweenArguments + 64LL) != float_TypeInfo->_1.element_class )
     goto LABEL_43;
   tweenArguments = j_il2cpp_object_unbox_0(tweenArguments, float_TypeInfo, v26, v27);
   if ( LODWORD(v25->max_length) <= 1 )
 LABEL_42:
-    sub_1C32E84(tweenArguments);
+    sub_1C372BC(tweenArguments);
   v25->m_Items[1].fields.y = *(float *)tweenArguments;
 }
 
@@ -9529,25 +9529,25 @@ void iTween__GenerateColorTargets(iTween_o *this, const MethodInfo *method)
   const MethodInfo *v17; // x1
   __int128 v18; // [xsp+0h] [xbp-30h] BYREF
 
-  if ( (byte_4C3E9C8 & 1) == 0 )
+  if ( (byte_4C49F48 & 1) == 0 )
   {
-    sub_1C32C20(&UnityEngine_Color____TypeInfo);
-    sub_1C32C20(&UnityEngine_Color_TypeInfo);
-    sub_1C32C20(&StringLiteral_19689/*"from"*/);
-    sub_1C32C20(&StringLiteral_24106/*"to"*/);
-    byte_4C3E9C8 = 1;
+    sub_1C37058(&UnityEngine_Color____TypeInfo);
+    sub_1C37058(&UnityEngine_Color_TypeInfo);
+    sub_1C37058(&StringLiteral_19692/*"from"*/);
+    sub_1C37058(&StringLiteral_24110/*"to"*/);
+    byte_4C49F48 = 1;
   }
-  v18 = xmmword_C0C960;
-  v3 = (struct UnityEngine_Color_array *)sub_1C32CD0(UnityEngine_Color____TypeInfo, &v18);
+  v18 = xmmword_C0E8E0;
+  v3 = (struct UnityEngine_Color_array *)sub_1C37108(UnityEngine_Color____TypeInfo, &v18);
   this->fields.colors = v3;
-  sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.colors, (int32_t)v3, v4, v5);
+  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.colors, (int32_t)v3, v4, v5);
   tweenArguments = this->fields.tweenArguments;
   if ( !tweenArguments )
     goto LABEL_16;
   colors = this->fields.colors;
   tweenArguments = (struct System_Collections_Hashtable_o *)((__int64 (__fastcall *)(struct System_Collections_Hashtable_o *, __int64, const MethodInfo *))tweenArguments->klass->vtable._28_get_Item.methodPtr)(
                                                               tweenArguments,
-                                                              StringLiteral_19689/*"from"*/,
+                                                              StringLiteral_19692/*"from"*/,
                                                               tweenArguments->klass->vtable._28_get_Item.method);
   if ( !colors || !tweenArguments )
     goto LABEL_16;
@@ -9563,13 +9563,13 @@ void iTween__GenerateColorTargets(iTween_o *this, const MethodInfo *method)
     || (v12 = this->fields.colors,
         tweenArguments = (struct System_Collections_Hashtable_o *)((__int64 (__fastcall *)(struct System_Collections_Hashtable_o *, __int64, const MethodInfo *))tweenArguments->klass->vtable._28_get_Item.methodPtr)(
                                                                     tweenArguments,
-                                                                    StringLiteral_24106/*"to"*/,
+                                                                    StringLiteral_24110/*"to"*/,
                                                                     tweenArguments->klass->vtable._28_get_Item.method),
         !v12)
     || !tweenArguments )
   {
 LABEL_16:
-    sub_1C32E7C(tweenArguments);
+    sub_1C372B4(tweenArguments);
   }
   if ( tweenArguments->klass->_1.element_class == UnityEngine_Color_TypeInfo->_1.element_class )
   {
@@ -9581,10 +9581,10 @@ LABEL_16:
       return;
     }
 LABEL_17:
-    sub_1C32E84(v10);
+    sub_1C372BC(v10);
   }
 LABEL_18:
-  sub_1C3313C(tweenArguments);
+  sub_1C37574(tweenArguments);
   iTween__GenerateRectTargets(v16, v17);
 }
 
@@ -9697,28 +9697,28 @@ void iTween__GenerateColorToTargets(iTween_o *this, const MethodInfo *method)
   UnityEngine_Color_o Color; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
   UnityEngine_Color_o v106; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 
-  if ( (byte_4C3E9CC & 1) == 0 )
+  if ( (byte_4C49F4C & 1) == 0 )
   {
-    sub_1C32C20(&UnityEngine_Color____TypeInfo);
-    sub_1C32C20(&UnityEngine_Color_TypeInfo);
-    sub_1C32C20(&Method_UnityEngine_Component_GetComponent_Image___);
-    sub_1C32C20(&Method_UnityEngine_Component_GetComponent_Light___);
-    sub_1C32C20(&Method_UnityEngine_Component_GetComponent_Renderer___);
-    sub_1C32C20(&Method_UnityEngine_Component_GetComponent_Text___);
-    sub_1C32C20(&UnityEngine_UI_Image_var);
-    sub_1C32C20(&iTween_NamedValueColor_TypeInfo);
-    sub_1C32C20(&UnityEngine_Object_TypeInfo);
-    sub_1C32C20(&float_TypeInfo);
-    sub_1C32C20(&UnityEngine_UI_Text_var);
-    sub_1C32C20(&System_Type_TypeInfo);
-    sub_1C32C20(&StringLiteral_16739/*"alpha"*/);
-    sub_1C32C20(&StringLiteral_16629/*"a"*/);
-    sub_1C32C20(&StringLiteral_19720/*"g"*/);
-    sub_1C32C20(&StringLiteral_16967/*"b"*/);
-    sub_1C32C20(&StringLiteral_16745/*"amount"*/);
-    sub_1C32C20(&StringLiteral_22915/*"r"*/);
-    sub_1C32C20(&StringLiteral_18051/*"color"*/);
-    byte_4C3E9CC = 1;
+    sub_1C37058(&UnityEngine_Color____TypeInfo);
+    sub_1C37058(&UnityEngine_Color_TypeInfo);
+    sub_1C37058(&Method_UnityEngine_Component_GetComponent_Image___);
+    sub_1C37058(&Method_UnityEngine_Component_GetComponent_Light___);
+    sub_1C37058(&Method_UnityEngine_Component_GetComponent_Renderer___);
+    sub_1C37058(&Method_UnityEngine_Component_GetComponent_Text___);
+    sub_1C37058(&UnityEngine_UI_Image_var);
+    sub_1C37058(&iTween_NamedValueColor_TypeInfo);
+    sub_1C37058(&UnityEngine_Object_TypeInfo);
+    sub_1C37058(&float_TypeInfo);
+    sub_1C37058(&UnityEngine_UI_Text_var);
+    sub_1C37058(&System_Type_TypeInfo);
+    sub_1C37058(&StringLiteral_16741/*"alpha"*/);
+    sub_1C37058(&StringLiteral_16631/*"a"*/);
+    sub_1C37058(&StringLiteral_19723/*"g"*/);
+    sub_1C37058(&StringLiteral_16969/*"b"*/);
+    sub_1C37058(&StringLiteral_16747/*"amount"*/);
+    sub_1C37058(&StringLiteral_22919/*"r"*/);
+    sub_1C37058(&StringLiteral_18053/*"color"*/);
+    byte_4C49F4C = 1;
   }
   v3 = UnityEngine_UI_Image_var;
   if ( !System_Type_TypeInfo->_2.cctor_finished )
@@ -9733,14 +9733,14 @@ void iTween__GenerateColorToTargets(iTween_o *this, const MethodInfo *method)
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   if ( UnityEngine_Object__op_Implicit(Component, 0) )
   {
-    v103 = (System_Enum_o)xmmword_C0C960;
-    v7 = (struct UnityEngine_Color_array *)sub_1C32CD0(UnityEngine_Color____TypeInfo, &v103);
+    v103 = (System_Enum_o)xmmword_C0E8E0;
+    v7 = (struct UnityEngine_Color_array *)sub_1C37108(UnityEngine_Color____TypeInfo, &v103);
     this->fields.colors = v7;
-    sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.colors, (int32_t)v7, v8, v9);
+    sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.colors, (int32_t)v7, v8, v9);
     colors = this->fields.colors;
     Component_object = (__int64)UnityEngine_Component__GetComponent_object_(
                                   (UnityEngine_Component_o *)this,
-                                  (const MethodInfo_30D3BC0 *)Method_UnityEngine_Component_GetComponent_Image___);
+                                  (const MethodInfo_30DE428 *)Method_UnityEngine_Component_GetComponent_Image___);
     if ( !Component_object )
       goto LABEL_145;
     Component_object = (*(__int64 (__fastcall **)(__int64, _QWORD))(*(_QWORD *)Component_object + 664LL))(
@@ -9761,14 +9761,14 @@ void iTween__GenerateColorToTargets(iTween_o *this, const MethodInfo *method)
       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
     if ( UnityEngine_Object__op_Implicit(v19, 0) )
     {
-      v103 = (System_Enum_o)xmmword_C0C960;
-      v20 = (struct UnityEngine_Color_array *)sub_1C32CD0(UnityEngine_Color____TypeInfo, &v103);
+      v103 = (System_Enum_o)xmmword_C0E8E0;
+      v20 = (struct UnityEngine_Color_array *)sub_1C37108(UnityEngine_Color____TypeInfo, &v103);
       this->fields.colors = v20;
-      sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.colors, (int32_t)v20, v21, v22);
+      sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.colors, (int32_t)v20, v21, v22);
       colors = this->fields.colors;
       Component_object = (__int64)UnityEngine_Component__GetComponent_object_(
                                     (UnityEngine_Component_o *)this,
-                                    (const MethodInfo_30D3BC0 *)Method_UnityEngine_Component_GetComponent_Text___);
+                                    (const MethodInfo_30DE428 *)Method_UnityEngine_Component_GetComponent_Text___);
       if ( !Component_object )
         goto LABEL_145;
       Component_object = (*(__int64 (__fastcall **)(__int64, _QWORD))(*(_QWORD *)Component_object + 824LL))(
@@ -9784,14 +9784,14 @@ void iTween__GenerateColorToTargets(iTween_o *this, const MethodInfo *method)
     {
       v23 = UnityEngine_Component__GetComponent_object_(
               (UnityEngine_Component_o *)this,
-              (const MethodInfo_30D3BC0 *)Method_UnityEngine_Component_GetComponent_Renderer___);
+              (const MethodInfo_30DE428 *)Method_UnityEngine_Component_GetComponent_Renderer___);
       if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
       if ( UnityEngine_Object__op_Implicit((UnityEngine_Object_o *)v23, 0) )
       {
         Component_object = (__int64)UnityEngine_Component__GetComponent_object_(
                                       (UnityEngine_Component_o *)this,
-                                      (const MethodInfo_30D3BC0 *)Method_UnityEngine_Component_GetComponent_Renderer___);
+                                      (const MethodInfo_30DE428 *)Method_UnityEngine_Component_GetComponent_Renderer___);
         if ( Component_object )
         {
           Component_object = (__int64)UnityEngine_Renderer__get_materials((UnityEngine_Renderer_o *)Component_object, 0);
@@ -9799,12 +9799,12 @@ void iTween__GenerateColorToTargets(iTween_o *this, const MethodInfo *method)
           {
             v103.klass = (System_Enum_c *)*(int *)(Component_object + 24);
             v103.monitor = &dword_0 + 3;
-            v24 = (struct UnityEngine_Color_array *)sub_1C32CD0(UnityEngine_Color____TypeInfo, &v103);
+            v24 = (struct UnityEngine_Color_array *)sub_1C37108(UnityEngine_Color____TypeInfo, &v103);
             this->fields.colors = v24;
-            sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.colors, (int32_t)v24, v25, v26);
+            sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.colors, (int32_t)v24, v25, v26);
             Component_object = (__int64)UnityEngine_Component__GetComponent_object_(
                                           (UnityEngine_Component_o *)this,
-                                          (const MethodInfo_30D3BC0 *)Method_UnityEngine_Component_GetComponent_Renderer___);
+                                          (const MethodInfo_30DE428 *)Method_UnityEngine_Component_GetComponent_Renderer___);
             if ( Component_object )
             {
               v27 = 0;
@@ -9820,7 +9820,7 @@ void iTween__GenerateColorToTargets(iTween_o *this, const MethodInfo *method)
                 v28 = this->fields.colors;
                 Component_object = (__int64)UnityEngine_Component__GetComponent_object_(
                                               (UnityEngine_Component_o *)this,
-                                              (const MethodInfo_30D3BC0 *)Method_UnityEngine_Component_GetComponent_Renderer___);
+                                              (const MethodInfo_30DE428 *)Method_UnityEngine_Component_GetComponent_Renderer___);
                 if ( !Component_object )
                   break;
                 Component_object = (__int64)UnityEngine_Renderer__get_materials(
@@ -9850,7 +9850,7 @@ void iTween__GenerateColorToTargets(iTween_o *this, const MethodInfo *method)
                 v32 = this->fields.colors;
                 Component_object = (__int64)UnityEngine_Component__GetComponent_object_(
                                               (UnityEngine_Component_o *)this,
-                                              (const MethodInfo_30D3BC0 *)Method_UnityEngine_Component_GetComponent_Renderer___);
+                                              (const MethodInfo_30DE428 *)Method_UnityEngine_Component_GetComponent_Renderer___);
                 if ( !Component_object )
                   break;
                 Component_object = (__int64)UnityEngine_Renderer__get_materials(
@@ -9879,7 +9879,7 @@ void iTween__GenerateColorToTargets(iTween_o *this, const MethodInfo *method)
                 v32->m_Items[v35 * v27 + 1] = v106;
                 Component_object = (__int64)UnityEngine_Component__GetComponent_object_(
                                               (UnityEngine_Component_o *)this,
-                                              (const MethodInfo_30D3BC0 *)Method_UnityEngine_Component_GetComponent_Renderer___);
+                                              (const MethodInfo_30DE428 *)Method_UnityEngine_Component_GetComponent_Renderer___);
                 ++v27;
                 if ( !Component_object )
                   goto LABEL_145;
@@ -9891,25 +9891,25 @@ void iTween__GenerateColorToTargets(iTween_o *this, const MethodInfo *method)
       }
       v36 = UnityEngine_Component__GetComponent_object_(
               (UnityEngine_Component_o *)this,
-              (const MethodInfo_30D3BC0 *)Method_UnityEngine_Component_GetComponent_Light___);
+              (const MethodInfo_30DE428 *)Method_UnityEngine_Component_GetComponent_Light___);
       if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
       if ( !UnityEngine_Object__op_Implicit((UnityEngine_Object_o *)v36, 0) )
       {
-        v103 = (System_Enum_o)xmmword_C0C960;
-        v96 = (struct UnityEngine_Color_array *)sub_1C32CD0(UnityEngine_Color____TypeInfo, &v103);
+        v103 = (System_Enum_o)xmmword_C0E8E0;
+        v96 = (struct UnityEngine_Color_array *)sub_1C37108(UnityEngine_Color____TypeInfo, &v103);
         this->fields.colors = v96;
-        sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.colors, (int32_t)v96, v97, v98);
+        sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.colors, (int32_t)v96, v97, v98);
         goto LABEL_55;
       }
-      v103 = (System_Enum_o)xmmword_C0C960;
-      v37 = (struct UnityEngine_Color_array *)sub_1C32CD0(UnityEngine_Color____TypeInfo, &v103);
+      v103 = (System_Enum_o)xmmword_C0E8E0;
+      v37 = (struct UnityEngine_Color_array *)sub_1C37108(UnityEngine_Color____TypeInfo, &v103);
       this->fields.colors = v37;
-      sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.colors, (int32_t)v37, v38, v39);
+      sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.colors, (int32_t)v37, v38, v39);
       colors = this->fields.colors;
       Component_object = (__int64)UnityEngine_Component__GetComponent_object_(
                                     (UnityEngine_Component_o *)this,
-                                    (const MethodInfo_30D3BC0 *)Method_UnityEngine_Component_GetComponent_Light___);
+                                    (const MethodInfo_30DE428 *)Method_UnityEngine_Component_GetComponent_Light___);
       if ( !Component_object )
         goto LABEL_145;
       *(UnityEngine_Color_o *)&v12 = UnityEngine_Light__get_color((UnityEngine_Light_o *)Component_object, 0);
@@ -9928,7 +9928,7 @@ void iTween__GenerateColorToTargets(iTween_o *this, const MethodInfo *method)
     || !LODWORD(v40[1].length) )
   {
 LABEL_148:
-    sub_1C32E84(Component_object);
+    sub_1C372BC(Component_object);
   }
   colors->m_Items[0].fields.r = v12;
   colors->m_Items[0].fields.g = v13;
@@ -9940,7 +9940,7 @@ LABEL_55:
     goto LABEL_145;
   if ( ((*(__int64 (__fastcall **)(__int64, __int64, _QWORD))(*(_QWORD *)Component_object + 712LL))(
           Component_object,
-          StringLiteral_18051/*"color"*/,
+          StringLiteral_18053/*"color"*/,
           *(_QWORD *)(*(_QWORD *)Component_object + 720LL))
       & 1) != 0 )
   {
@@ -9956,7 +9956,7 @@ LABEL_55:
       v42 = this->fields.colors;
       Component_object = (*(__int64 (__fastcall **)(__int64, __int64, _QWORD))(*(_QWORD *)Component_object + 760LL))(
                            Component_object,
-                           StringLiteral_18051/*"color"*/,
+                           StringLiteral_18053/*"color"*/,
                            *(_QWORD *)(*(_QWORD *)Component_object + 768LL));
       if ( !v42 || !Component_object )
         goto LABEL_145;
@@ -9982,7 +9982,7 @@ LABEL_55:
     goto LABEL_145;
   if ( ((*(__int64 (__fastcall **)(__int64, __int64, _QWORD))(*(_QWORD *)Component_object + 712LL))(
           Component_object,
-          StringLiteral_22915/*"r"*/,
+          StringLiteral_22919/*"r"*/,
           *(_QWORD *)(*(_QWORD *)Component_object + 720LL))
       & 1) != 0 )
   {
@@ -10009,7 +10009,7 @@ LABEL_55:
         goto LABEL_145;
       Component_object = (*(__int64 (__fastcall **)(__int64, __int64, _QWORD))(*(_QWORD *)Component_object + 760LL))(
                            Component_object,
-                           StringLiteral_22915/*"r"*/,
+                           StringLiteral_22919/*"r"*/,
                            *(_QWORD *)(*(_QWORD *)Component_object + 768LL));
       if ( !Component_object )
         goto LABEL_145;
@@ -10023,7 +10023,7 @@ LABEL_55:
         goto LABEL_145;
     }
 LABEL_149:
-    sub_1C3313C(Component_object);
+    sub_1C37574(Component_object);
     iTween__GenerateAudioToTargets(v99, v100);
     return;
   }
@@ -10033,7 +10033,7 @@ LABEL_81:
     goto LABEL_145;
   if ( ((*(__int64 (__fastcall **)(__int64, __int64, _QWORD))(*(_QWORD *)Component_object + 712LL))(
           Component_object,
-          StringLiteral_19720/*"g"*/,
+          StringLiteral_19723/*"g"*/,
           *(_QWORD *)(*(_QWORD *)Component_object + 720LL))
       & 1) != 0 )
   {
@@ -10060,7 +10060,7 @@ LABEL_81:
       {
         Component_object = (*(__int64 (__fastcall **)(__int64, __int64, _QWORD))(*(_QWORD *)Component_object + 760LL))(
                              Component_object,
-                             StringLiteral_19720/*"g"*/,
+                             StringLiteral_19723/*"g"*/,
                              *(_QWORD *)(*(_QWORD *)Component_object + 768LL));
         if ( Component_object )
         {
@@ -10082,7 +10082,7 @@ LABEL_81:
     goto LABEL_145;
   if ( ((*(__int64 (__fastcall **)(__int64, __int64, _QWORD))(*(_QWORD *)Component_object + 712LL))(
           Component_object,
-          StringLiteral_16967/*"b"*/,
+          StringLiteral_16969/*"b"*/,
           *(_QWORD *)(*(_QWORD *)Component_object + 720LL))
       & 1) != 0 )
   {
@@ -10109,7 +10109,7 @@ LABEL_81:
       {
         Component_object = (*(__int64 (__fastcall **)(__int64, __int64, _QWORD))(*(_QWORD *)Component_object + 760LL))(
                              Component_object,
-                             StringLiteral_16967/*"b"*/,
+                             StringLiteral_16969/*"b"*/,
                              *(_QWORD *)(*(_QWORD *)Component_object + 768LL));
         if ( Component_object )
         {
@@ -10129,10 +10129,10 @@ LABEL_81:
   Component_object = (__int64)this->fields.tweenArguments;
   if ( !Component_object )
 LABEL_145:
-    sub_1C32E7C(Component_object);
+    sub_1C372B4(Component_object);
   if ( ((*(__int64 (__fastcall **)(__int64, __int64, _QWORD))(*(_QWORD *)Component_object + 712LL))(
           Component_object,
-          StringLiteral_16629/*"a"*/,
+          StringLiteral_16631/*"a"*/,
           *(_QWORD *)(*(_QWORD *)Component_object + 720LL))
       & 1) != 0 )
   {
@@ -10159,7 +10159,7 @@ LABEL_145:
       {
         Component_object = (*(__int64 (__fastcall **)(__int64, __int64, _QWORD))(*(_QWORD *)Component_object + 760LL))(
                              Component_object,
-                             StringLiteral_16629/*"a"*/,
+                             StringLiteral_16631/*"a"*/,
                              *(_QWORD *)(*(_QWORD *)Component_object + 768LL));
         if ( Component_object )
         {
@@ -10182,7 +10182,7 @@ LABEL_120:
     goto LABEL_145;
   if ( ((*(__int64 (__fastcall **)(__int64, __int64, _QWORD))(*(_QWORD *)Component_object + 712LL))(
           Component_object,
-          StringLiteral_16745/*"amount"*/,
+          StringLiteral_16747/*"amount"*/,
           *(_QWORD *)(*(_QWORD *)Component_object + 720LL))
       & 1) != 0 )
   {
@@ -10209,7 +10209,7 @@ LABEL_120:
       {
         Component_object = (*(__int64 (__fastcall **)(__int64, __int64, _QWORD))(*(_QWORD *)Component_object + 760LL))(
                              Component_object,
-                             StringLiteral_16745/*"amount"*/,
+                             StringLiteral_16747/*"amount"*/,
                              *(_QWORD *)(*(_QWORD *)Component_object + 768LL));
         if ( Component_object )
         {
@@ -10233,7 +10233,7 @@ LABEL_120:
       goto LABEL_145;
     if ( ((*(__int64 (__fastcall **)(__int64, __int64, _QWORD))(*(_QWORD *)Component_object + 712LL))(
             Component_object,
-            StringLiteral_16739/*"alpha"*/,
+            StringLiteral_16741/*"alpha"*/,
             *(_QWORD *)(*(_QWORD *)Component_object + 720LL))
         & 1) != 0 )
     {
@@ -10260,7 +10260,7 @@ LABEL_120:
         {
           Component_object = (*(__int64 (__fastcall **)(__int64, __int64, _QWORD))(*(_QWORD *)Component_object + 760LL))(
                                Component_object,
-                               StringLiteral_16739/*"alpha"*/,
+                               StringLiteral_16741/*"alpha"*/,
                                *(_QWORD *)(*(_QWORD *)Component_object + 768LL));
           if ( Component_object )
           {
@@ -10303,27 +10303,27 @@ void iTween__GenerateFloatTargets(iTween_o *this, const MethodInfo *method)
   iTween_o *v20; // x0
   const MethodInfo *v21; // x1
 
-  if ( (byte_4C3E9CB & 1) == 0 )
+  if ( (byte_4C49F4B & 1) == 0 )
   {
-    sub_1C32C20(&System_Math_TypeInfo);
-    sub_1C32C20(&float___TypeInfo);
-    sub_1C32C20(&float_TypeInfo);
-    sub_1C32C20(&StringLiteral_19689/*"from"*/);
-    sub_1C32C20(&StringLiteral_23592/*"speed"*/);
-    sub_1C32C20(&StringLiteral_24106/*"to"*/);
-    byte_4C3E9CB = 1;
+    sub_1C37058(&System_Math_TypeInfo);
+    sub_1C37058(&float___TypeInfo);
+    sub_1C37058(&float_TypeInfo);
+    sub_1C37058(&StringLiteral_19692/*"from"*/);
+    sub_1C37058(&StringLiteral_23596/*"speed"*/);
+    sub_1C37058(&StringLiteral_24110/*"to"*/);
+    byte_4C49F4B = 1;
   }
-  v3 = (struct System_Single_array *)sub_1C32CC8(float___TypeInfo, 3);
+  v3 = (struct System_Single_array *)sub_1C37100(float___TypeInfo, 3);
   this->fields.floats = v3;
   p_floats = &this->fields.floats;
-  sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.floats, (int32_t)v3, v5, v6);
+  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.floats, (int32_t)v3, v5, v6);
   tweenArguments = (__int64)this->fields.tweenArguments;
   if ( !tweenArguments )
     goto LABEL_24;
   v8 = *p_floats;
   tweenArguments = (*(__int64 (__fastcall **)(__int64, __int64, _QWORD))(*(_QWORD *)tweenArguments + 760LL))(
                      tweenArguments,
-                     StringLiteral_19689/*"from"*/,
+                     StringLiteral_19692/*"from"*/,
                      *(_QWORD *)(*(_QWORD *)tweenArguments + 768LL));
   if ( !v8 || !tweenArguments )
     goto LABEL_24;
@@ -10339,35 +10339,35 @@ void iTween__GenerateFloatTargets(iTween_o *this, const MethodInfo *method)
   floats = this->fields.floats;
   tweenArguments = (*(__int64 (__fastcall **)(__int64, __int64, _QWORD))(*(_QWORD *)tweenArguments + 760LL))(
                      tweenArguments,
-                     StringLiteral_24106/*"to"*/,
+                     StringLiteral_24110/*"to"*/,
                      *(_QWORD *)(*(_QWORD *)tweenArguments + 768LL));
   if ( !floats || !tweenArguments )
     goto LABEL_24;
   if ( *(Il2CppClass **)(*(_QWORD *)tweenArguments + 64LL) != float_TypeInfo->_1.element_class )
   {
 LABEL_26:
-    sub_1C3313C(tweenArguments);
+    sub_1C37574(tweenArguments);
     iTween__GenerateVector2Targets(v20, v21);
     return;
   }
   tweenArguments = j_il2cpp_object_unbox_0(tweenArguments, float_TypeInfo, v12, v13);
   if ( LODWORD(floats->max_length) <= 1 )
 LABEL_25:
-    sub_1C32E84(tweenArguments);
+    sub_1C372BC(tweenArguments);
   floats->m_Items[1] = *(float *)tweenArguments;
   tweenArguments = (__int64)this->fields.tweenArguments;
   if ( !tweenArguments )
     goto LABEL_24;
   tweenArguments = (*(__int64 (__fastcall **)(__int64, __int64, _QWORD))(*(_QWORD *)tweenArguments + 712LL))(
                      tweenArguments,
-                     StringLiteral_23592/*"speed"*/,
+                     StringLiteral_23596/*"speed"*/,
                      *(_QWORD *)(*(_QWORD *)tweenArguments + 720LL));
   if ( (tweenArguments & 1) == 0 )
     return;
   v15 = (float *)*p_floats;
   if ( !*p_floats )
 LABEL_24:
-    sub_1C32E7C(tweenArguments);
+    sub_1C372B4(tweenArguments);
   if ( *((_DWORD *)v15 + 6) < 2u )
     goto LABEL_25;
   v16 = v15[8];
@@ -10379,7 +10379,7 @@ LABEL_24:
     goto LABEL_24;
   tweenArguments = (*(__int64 (__fastcall **)(__int64, __int64, _QWORD, long double))(*(_QWORD *)tweenArguments + 760LL))(
                      tweenArguments,
-                     StringLiteral_23592/*"speed"*/,
+                     StringLiteral_23596/*"speed"*/,
                      *(_QWORD *)(*(_QWORD *)tweenArguments + 768LL),
                      inited);
   if ( !tweenArguments )
@@ -10486,37 +10486,37 @@ void iTween__GenerateLookToTargets(iTween_o *this, const MethodInfo *method)
   UnityEngine_Vector3_o v80; // 0:s3.4,4:s4.4,8:s5.4
 
   v76 = *(_QWORD *)(_ReadStatusReg(TPIDR_EL0) + 40);
-  if ( (byte_4C3E9CF & 1) == 0 )
+  if ( (byte_4C49F4F & 1) == 0 )
   {
-    sub_1C32C20(&UnityEngine_Debug_TypeInfo);
-    sub_1C32C20(&iTween_Defaults_TypeInfo);
-    sub_1C32C20(&System_Math_TypeInfo);
-    sub_1C32C20(&Method_System_Nullable_Vector3__GetValueOrDefault__);
-    sub_1C32C20(&Method_System_Nullable_Vector3__get_HasValue__);
-    sub_1C32C20(&System_Nullable_Vector3__TypeInfo);
-    sub_1C32C20(&float_TypeInfo);
-    sub_1C32C20(&string_TypeInfo);
-    sub_1C32C20(&UnityEngine_Transform_var);
-    sub_1C32C20(&UnityEngine_Transform_TypeInfo);
-    sub_1C32C20(&System_Type_TypeInfo);
-    sub_1C32C20(&UnityEngine_Vector3___TypeInfo);
-    sub_1C32C20(&UnityEngine_Vector3_var);
-    sub_1C32C20(&UnityEngine_Vector3_TypeInfo);
-    sub_1C32C20(&StringLiteral_24859/*"x"*/);
-    sub_1C32C20(&StringLiteral_24428/*"up"*/);
-    sub_1C32C20(&StringLiteral_23592/*"speed"*/);
-    sub_1C32C20(&StringLiteral_21348/*"looktarget"*/);
-    sub_1C32C20(&StringLiteral_24961/*"y"*/);
-    sub_1C32C20(&StringLiteral_25008/*"z"*/);
-    sub_1C32C20(&StringLiteral_20101/*"iTween Error: LookTo needs a 'looktarget' property!"*/);
-    sub_1C32C20(&StringLiteral_16960/*"axis"*/);
-    byte_4C3E9CF = 1;
+    sub_1C37058(&UnityEngine_Debug_TypeInfo);
+    sub_1C37058(&iTween_Defaults_TypeInfo);
+    sub_1C37058(&System_Math_TypeInfo);
+    sub_1C37058(&Method_System_Nullable_Vector3__GetValueOrDefault__);
+    sub_1C37058(&Method_System_Nullable_Vector3__get_HasValue__);
+    sub_1C37058(&System_Nullable_Vector3__TypeInfo);
+    sub_1C37058(&float_TypeInfo);
+    sub_1C37058(&string_TypeInfo);
+    sub_1C37058(&UnityEngine_Transform_var);
+    sub_1C37058(&UnityEngine_Transform_TypeInfo);
+    sub_1C37058(&System_Type_TypeInfo);
+    sub_1C37058(&UnityEngine_Vector3___TypeInfo);
+    sub_1C37058(&UnityEngine_Vector3_var);
+    sub_1C37058(&UnityEngine_Vector3_TypeInfo);
+    sub_1C37058(&StringLiteral_24864/*"x"*/);
+    sub_1C37058(&StringLiteral_24432/*"up"*/);
+    sub_1C37058(&StringLiteral_23596/*"speed"*/);
+    sub_1C37058(&StringLiteral_21351/*"looktarget"*/);
+    sub_1C37058(&StringLiteral_24966/*"y"*/);
+    sub_1C37058(&StringLiteral_25013/*"z"*/);
+    sub_1C37058(&StringLiteral_20104/*"iTween Error: LookTo needs a 'looktarget' property!"*/);
+    sub_1C37058(&StringLiteral_16962/*"axis"*/);
+    byte_4C49F4F = 1;
   }
   v3 = (UnityEngine_Transform_o *)v68;
-  v4 = (struct UnityEngine_Vector3_array *)sub_1C32CC8(UnityEngine_Vector3___TypeInfo, 3);
+  v4 = (struct UnityEngine_Vector3_array *)sub_1C37100(UnityEngine_Vector3___TypeInfo, 3);
   this->fields.vector3s = v4;
   p_vector3s = &this->fields.vector3s;
-  sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.vector3s, (int32_t)v4, v6, v7);
+  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.vector3s, (int32_t)v4, v6, v7);
   thisTransform = (__int64)this->fields.thisTransform;
   if ( !thisTransform )
     goto LABEL_100;
@@ -10532,13 +10532,13 @@ void iTween__GenerateLookToTargets(iTween_o *this, const MethodInfo *method)
     goto LABEL_100;
   if ( ((*(__int64 (__fastcall **)(__int64, __int64, _QWORD))(*(_QWORD *)thisTransform + 712LL))(
           thisTransform,
-          StringLiteral_21348/*"looktarget"*/,
+          StringLiteral_21351/*"looktarget"*/,
           *(_QWORD *)(*(_QWORD *)thisTransform + 720LL))
       & 1) == 0 )
   {
     if ( !UnityEngine_Debug_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(UnityEngine_Debug_TypeInfo);
-    UnityEngine_Debug__LogError((Il2CppObject *)StringLiteral_20101/*"iTween Error: LookTo needs a 'looktarget' property!"*/, 0);
+    UnityEngine_Debug__LogError((Il2CppObject *)StringLiteral_20104/*"iTween Error: LookTo needs a 'looktarget' property!"*/, 0);
     iTween__Dispose(this, v22);
     goto LABEL_29;
   }
@@ -10547,7 +10547,7 @@ void iTween__GenerateLookToTargets(iTween_o *this, const MethodInfo *method)
     goto LABEL_100;
   thisTransform = (*(__int64 (__fastcall **)(__int64, __int64, _QWORD))(*(_QWORD *)thisTransform + 760LL))(
                     thisTransform,
-                    StringLiteral_21348/*"looktarget"*/,
+                    StringLiteral_21351/*"looktarget"*/,
                     *(_QWORD *)(*(_QWORD *)thisTransform + 768LL));
   if ( !thisTransform )
     goto LABEL_100;
@@ -10565,7 +10565,7 @@ void iTween__GenerateLookToTargets(iTween_o *this, const MethodInfo *method)
     v3 = this->fields.thisTransform;
     thisTransform = (*(__int64 (__fastcall **)(__int64, __int64, _QWORD))(*(_QWORD *)thisTransform + 760LL))(
                       thisTransform,
-                      StringLiteral_21348/*"looktarget"*/,
+                      StringLiteral_21351/*"looktarget"*/,
                       *(_QWORD *)(*(_QWORD *)thisTransform + 768LL));
     tweenArguments = this->fields.tweenArguments;
     if ( !tweenArguments )
@@ -10574,11 +10574,11 @@ void iTween__GenerateLookToTargets(iTween_o *this, const MethodInfo *method)
     v16 = (Il2CppClass **)((Il2CppClass **(__fastcall *)(struct System_Collections_Hashtable_o *__return_ptr, struct System_Collections_Hashtable_o *, __int64, const MethodInfo *))tweenArguments->klass->vtable._28_get_Item.methodPtr)(
                             tweenArguments,
                             this->fields.tweenArguments,
-                            StringLiteral_24428/*"up"*/,
+                            StringLiteral_24432/*"up"*/,
                             tweenArguments->klass->vtable._28_get_Item.method);
     if ( !v16 || *v16 == System_Nullable_Vector3__TypeInfo->_1.element_class )
     {
-      thisTransform = sub_1C32D68(v16, System_Nullable_Vector3__TypeInfo, &v72);
+      thisTransform = sub_1C371A0(v16, System_Nullable_Vector3__TypeInfo, &v72);
       v17 = v73;
       v18 = v74;
       v19 = v75;
@@ -10606,18 +10606,18 @@ void iTween__GenerateLookToTargets(iTween_o *this, const MethodInfo *method)
         goto LABEL_29;
       }
 LABEL_102:
-      sub_1C3313C(v15);
+      sub_1C37574(v15);
       goto LABEL_103;
     }
 LABEL_105:
-    sub_1C3313C(v16);
+    sub_1C37574(v16);
   }
   thisTransform = (__int64)this->fields.tweenArguments;
   if ( !thisTransform )
     goto LABEL_100;
   thisTransform = (*(__int64 (__fastcall **)(__int64, __int64, _QWORD))(*(_QWORD *)thisTransform + 760LL))(
                     thisTransform,
-                    StringLiteral_21348/*"looktarget"*/,
+                    StringLiteral_21351/*"looktarget"*/,
                     *(_QWORD *)(*(_QWORD *)thisTransform + 768LL));
   if ( !thisTransform )
     goto LABEL_100;
@@ -10635,7 +10635,7 @@ LABEL_105:
   v31 = this->fields.thisTransform;
   thisTransform = (*(__int64 (__fastcall **)(__int64, __int64, _QWORD))(*(_QWORD *)thisTransform + 760LL))(
                     thisTransform,
-                    StringLiteral_21348/*"looktarget"*/,
+                    StringLiteral_21351/*"looktarget"*/,
                     *(_QWORD *)(*(_QWORD *)thisTransform + 768LL));
   v32 = this->fields.tweenArguments;
   if ( !v32 )
@@ -10644,11 +10644,11 @@ LABEL_105:
   v16 = (Il2CppClass **)((Il2CppClass **(__fastcall *)(struct System_Collections_Hashtable_o *__return_ptr, struct System_Collections_Hashtable_o *, __int64, const MethodInfo *))v32->klass->vtable._28_get_Item.methodPtr)(
                           v32,
                           this->fields.tweenArguments,
-                          StringLiteral_24428/*"up"*/,
+                          StringLiteral_24432/*"up"*/,
                           v32->klass->vtable._28_get_Item.method);
   if ( v16 && *v16 != System_Nullable_Vector3__TypeInfo->_1.element_class )
     goto LABEL_105;
-  thisTransform = sub_1C32D68(v16, System_Nullable_Vector3__TypeInfo, v68);
+  thisTransform = sub_1C371A0(v16, System_Nullable_Vector3__TypeInfo, v68);
   if ( !v15 )
     goto LABEL_100;
   if ( v15->klass->_1.element_class != UnityEngine_Vector3_TypeInfo->_1.element_class )
@@ -10682,7 +10682,7 @@ LABEL_105:
   v80.fields.x = v36;
   v80.fields.y = v37;
   v80.fields.z = v38;
-  UnityEngine_Transform__LookAt_71249040(v31, v79, v80, 0);
+  UnityEngine_Transform__LookAt_71292152(v31, v79, v80, 0);
 LABEL_29:
   thisTransform = (__int64)this->fields.thisTransform;
   if ( !thisTransform )
@@ -10699,7 +10699,7 @@ LABEL_29:
     goto LABEL_100;
   if ( !LODWORD(v24->max_length) )
 LABEL_101:
-    sub_1C32E84(thisTransform);
+    sub_1C372BC(thisTransform);
   thisTransform = (__int64)this->fields.thisTransform;
   if ( !thisTransform )
     goto LABEL_100;
@@ -10709,7 +10709,7 @@ LABEL_101:
     goto LABEL_100;
   thisTransform = (*(__int64 (__fastcall **)(__int64, __int64, _QWORD))(*(_QWORD *)thisTransform + 712LL))(
                     thisTransform,
-                    StringLiteral_16960/*"axis"*/,
+                    StringLiteral_16962/*"axis"*/,
                     *(_QWORD *)(*(_QWORD *)thisTransform + 720LL));
   if ( (thisTransform & 1) != 0 )
   {
@@ -10718,12 +10718,12 @@ LABEL_101:
       goto LABEL_100;
     v25 = (System_String_o *)(*(__int64 (__fastcall **)(__int64, __int64, _QWORD))(*(_QWORD *)thisTransform + 760LL))(
                                thisTransform,
-                               StringLiteral_16960/*"axis"*/,
+                               StringLiteral_16962/*"axis"*/,
                                *(_QWORD *)(*(_QWORD *)thisTransform + 768LL));
     v3 = (UnityEngine_Transform_o *)v25;
     if ( !v25 || v25->klass == string_TypeInfo )
     {
-      thisTransform = System_String__op_Equality(v25, (System_String_o *)StringLiteral_24859/*"x"*/, 0);
+      thisTransform = System_String__op_Equality(v25, (System_String_o *)StringLiteral_24864/*"x"*/, 0);
       if ( (thisTransform & 1) != 0 )
       {
         v26 = *p_vector3s;
@@ -10735,7 +10735,7 @@ LABEL_101:
       }
       else
       {
-        thisTransform = System_String__op_Equality((System_String_o *)v3, (System_String_o *)StringLiteral_24961/*"y"*/, 0);
+        thisTransform = System_String__op_Equality((System_String_o *)v3, (System_String_o *)StringLiteral_24966/*"y"*/, 0);
         if ( (thisTransform & 1) != 0 )
         {
           v43 = *p_vector3s;
@@ -10749,7 +10749,7 @@ LABEL_101:
         }
         else
         {
-          thisTransform = System_String__op_Equality((System_String_o *)v3, (System_String_o *)StringLiteral_25008/*"z"*/, 0);
+          thisTransform = System_String__op_Equality((System_String_o *)v3, (System_String_o *)StringLiteral_25013/*"z"*/, 0);
           if ( (thisTransform & 1) != 0 )
           {
             v45 = *p_vector3s;
@@ -10823,14 +10823,14 @@ LABEL_69:
     goto LABEL_100;
   thisTransform = (*(__int64 (__fastcall **)(__int64, __int64, _QWORD))(*(_QWORD *)thisTransform + 712LL))(
                     thisTransform,
-                    StringLiteral_23592/*"speed"*/,
+                    StringLiteral_23596/*"speed"*/,
                     *(_QWORD *)(*(_QWORD *)thisTransform + 720LL));
   if ( (thisTransform & 1) == 0 )
     return;
   v59 = *p_vector3s;
   if ( !*p_vector3s )
 LABEL_100:
-    sub_1C32E7C(thisTransform);
+    sub_1C372B4(thisTransform);
   if ( LODWORD(v59->max_length) < 2 )
     goto LABEL_101;
   v60 = v59->m_Items[0].fields.x;
@@ -10839,10 +10839,10 @@ LABEL_100:
   v63 = v59->m_Items[1].fields.x;
   v65 = v59->m_Items[1].fields.y;
   v64 = v59->m_Items[1].fields.z;
-  if ( !byte_4C313CF )
+  if ( !byte_4C3C91F )
   {
-    sub_1C32C20(&System_Math_TypeInfo);
-    byte_4C313CF = 1;
+    sub_1C37058(&System_Math_TypeInfo);
+    byte_4C3C91F = 1;
   }
   if ( !System_Math_TypeInfo->_2.cctor_finished )
   {
@@ -10855,14 +10855,14 @@ LABEL_100:
     goto LABEL_100;
   thisTransform = (*(__int64 (__fastcall **)(__int64, __int64, _QWORD))(*(_QWORD *)thisTransform + 760LL))(
                     thisTransform,
-                    StringLiteral_23592/*"speed"*/,
+                    StringLiteral_23596/*"speed"*/,
                     *(_QWORD *)(*(_QWORD *)thisTransform + 768LL));
   if ( !thisTransform )
     goto LABEL_100;
   if ( *(Il2CppClass **)(*(_QWORD *)thisTransform + 64LL) != float_TypeInfo->_1.element_class )
   {
 LABEL_104:
-    sub_1C3313C(thisTransform);
+    sub_1C37574(thisTransform);
     goto LABEL_105;
   }
   this->fields.time = fabsf(
@@ -10931,26 +10931,26 @@ void iTween__GenerateMoveByTargets(iTween_o *this, const MethodInfo *method)
   UnityEngine_Vector3_o position; // 0:s0.4,4:s1.4,8:s2.4
   UnityEngine_Vector3_o v56; // 0:s0.4,4:s1.4,8:s2.4
 
-  if ( (byte_4C3E9D2 & 1) == 0 )
+  if ( (byte_4C49F52 & 1) == 0 )
   {
-    sub_1C32C20(&bool_TypeInfo);
-    sub_1C32C20(&System_Math_TypeInfo);
-    sub_1C32C20(&float_TypeInfo);
-    sub_1C32C20(&UnityEngine_Vector3___TypeInfo);
-    sub_1C32C20(&UnityEngine_Vector3_TypeInfo);
-    sub_1C32C20(&StringLiteral_24859/*"x"*/);
-    sub_1C32C20(&StringLiteral_23592/*"speed"*/);
-    sub_1C32C20(&StringLiteral_21348/*"looktarget"*/);
-    sub_1C32C20(&StringLiteral_22492/*"orienttopath"*/);
-    sub_1C32C20(&StringLiteral_16745/*"amount"*/);
-    sub_1C32C20(&StringLiteral_24961/*"y"*/);
-    sub_1C32C20(&StringLiteral_25008/*"z"*/);
-    byte_4C3E9D2 = 1;
+    sub_1C37058(&bool_TypeInfo);
+    sub_1C37058(&System_Math_TypeInfo);
+    sub_1C37058(&float_TypeInfo);
+    sub_1C37058(&UnityEngine_Vector3___TypeInfo);
+    sub_1C37058(&UnityEngine_Vector3_TypeInfo);
+    sub_1C37058(&StringLiteral_24864/*"x"*/);
+    sub_1C37058(&StringLiteral_23596/*"speed"*/);
+    sub_1C37058(&StringLiteral_21351/*"looktarget"*/);
+    sub_1C37058(&StringLiteral_22495/*"orienttopath"*/);
+    sub_1C37058(&StringLiteral_16747/*"amount"*/);
+    sub_1C37058(&StringLiteral_24966/*"y"*/);
+    sub_1C37058(&StringLiteral_25013/*"z"*/);
+    byte_4C49F52 = 1;
   }
-  v3 = (struct UnityEngine_Vector3_array *)sub_1C32CC8(UnityEngine_Vector3___TypeInfo, 6);
+  v3 = (struct UnityEngine_Vector3_array *)sub_1C37100(UnityEngine_Vector3___TypeInfo, 6);
   this->fields.vector3s = v3;
   p_vector3s = &this->fields.vector3s;
-  sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.vector3s, (int32_t)v3, v5, v6);
+  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.vector3s, (int32_t)v3, v5, v6);
   thisTransform = (__int64)this->fields.thisTransform;
   if ( !thisTransform )
     goto LABEL_79;
@@ -10980,7 +10980,7 @@ void iTween__GenerateMoveByTargets(iTween_o *this, const MethodInfo *method)
     goto LABEL_79;
   thisTransform = (*(__int64 (__fastcall **)(__int64, __int64, _QWORD))(*(_QWORD *)thisTransform + 712LL))(
                     thisTransform,
-                    StringLiteral_16745/*"amount"*/,
+                    StringLiteral_16747/*"amount"*/,
                     *(_QWORD *)(*(_QWORD *)thisTransform + 720LL));
   if ( (thisTransform & 1) != 0 )
   {
@@ -10996,7 +10996,7 @@ void iTween__GenerateMoveByTargets(iTween_o *this, const MethodInfo *method)
     z = v10->m_Items[0].fields.z;
     thisTransform = (*(__int64 (__fastcall **)(__int64, __int64, _QWORD))(*(_QWORD *)thisTransform + 760LL))(
                       thisTransform,
-                      StringLiteral_16745/*"amount"*/,
+                      StringLiteral_16747/*"amount"*/,
                       *(_QWORD *)(*(_QWORD *)thisTransform + 768LL));
     if ( !thisTransform )
       goto LABEL_79;
@@ -11016,7 +11016,7 @@ LABEL_45:
     goto LABEL_79;
   thisTransform = (*(__int64 (__fastcall **)(__int64, void *, _QWORD))(*(_QWORD *)thisTransform + 712LL))(
                     thisTransform,
-                    StringLiteral_24859/*"x"*/,
+                    StringLiteral_24864/*"x"*/,
                     *(_QWORD *)(*(_QWORD *)thisTransform + 720LL));
   if ( (thisTransform & 1) != 0 )
   {
@@ -11031,7 +11031,7 @@ LABEL_45:
     x = v16->m_Items[0].fields.x;
     thisTransform = (*(__int64 (__fastcall **)(__int64, void *, _QWORD))(*(_QWORD *)thisTransform + 760LL))(
                       thisTransform,
-                      StringLiteral_24859/*"x"*/,
+                      StringLiteral_24864/*"x"*/,
                       *(_QWORD *)(*(_QWORD *)thisTransform + 768LL));
     if ( !thisTransform )
       goto LABEL_79;
@@ -11047,7 +11047,7 @@ LABEL_45:
     goto LABEL_79;
   thisTransform = (*(__int64 (__fastcall **)(__int64, __int64, _QWORD))(*(_QWORD *)thisTransform + 712LL))(
                     thisTransform,
-                    StringLiteral_24961/*"y"*/,
+                    StringLiteral_24966/*"y"*/,
                     *(_QWORD *)(*(_QWORD *)thisTransform + 720LL));
   if ( (thisTransform & 1) != 0 )
   {
@@ -11062,7 +11062,7 @@ LABEL_45:
     y = v20->m_Items[0].fields.y;
     thisTransform = (*(__int64 (__fastcall **)(__int64, __int64, _QWORD))(*(_QWORD *)thisTransform + 760LL))(
                       thisTransform,
-                      StringLiteral_24961/*"y"*/,
+                      StringLiteral_24966/*"y"*/,
                       *(_QWORD *)(*(_QWORD *)thisTransform + 768LL));
     if ( !thisTransform )
       goto LABEL_79;
@@ -11078,7 +11078,7 @@ LABEL_45:
     goto LABEL_79;
   thisTransform = (*(__int64 (__fastcall **)(__int64, __int64, _QWORD))(*(_QWORD *)thisTransform + 712LL))(
                     thisTransform,
-                    StringLiteral_25008/*"z"*/,
+                    StringLiteral_25013/*"z"*/,
                     *(_QWORD *)(*(_QWORD *)thisTransform + 720LL));
   if ( (thisTransform & 1) != 0 )
   {
@@ -11093,7 +11093,7 @@ LABEL_45:
     v24 = v10->m_Items[0].fields.z;
     thisTransform = (*(__int64 (__fastcall **)(__int64, __int64, _QWORD))(*(_QWORD *)thisTransform + 760LL))(
                       thisTransform,
-                      StringLiteral_25008/*"z"*/,
+                      StringLiteral_25013/*"z"*/,
                       *(_QWORD *)(*(_QWORD *)thisTransform + 768LL));
     if ( !thisTransform )
       goto LABEL_79;
@@ -11139,7 +11139,7 @@ LABEL_46:
     goto LABEL_79;
   if ( ((*(__int64 (__fastcall **)(__int64, __int64, _QWORD))(*(_QWORD *)thisTransform + 712LL))(
           thisTransform,
-          StringLiteral_22492/*"orienttopath"*/,
+          StringLiteral_22495/*"orienttopath"*/,
           *(_QWORD *)(*(_QWORD *)thisTransform + 720LL))
       & 1) != 0 )
   {
@@ -11148,7 +11148,7 @@ LABEL_46:
       goto LABEL_79;
     thisTransform = (*(__int64 (__fastcall **)(__int64, __int64, _QWORD))(*(_QWORD *)thisTransform + 760LL))(
                       thisTransform,
-                      StringLiteral_22492/*"orienttopath"*/,
+                      StringLiteral_22495/*"orienttopath"*/,
                       *(_QWORD *)(*(_QWORD *)thisTransform + 768LL));
     if ( !thisTransform )
       goto LABEL_79;
@@ -11171,16 +11171,16 @@ LABEL_46:
           goto LABEL_79;
         ((void (__fastcall *)(struct System_Collections_Hashtable_o *, __int64, __int64, const MethodInfo *))tweenArguments->klass->vtable._29_set_Item.methodPtr)(
           tweenArguments,
-          StringLiteral_21348/*"looktarget"*/,
+          StringLiteral_21351/*"looktarget"*/,
           thisTransform,
           tweenArguments->klass->vtable._29_set_Item.method);
         goto LABEL_65;
       }
 LABEL_80:
-      sub_1C32E84(thisTransform);
+      sub_1C372BC(thisTransform);
     }
 LABEL_81:
-    sub_1C3313C(thisTransform);
+    sub_1C37574(thisTransform);
     iTween__GenerateScaleToTargets(v50, v51);
     return;
   }
@@ -11190,14 +11190,14 @@ LABEL_65:
     goto LABEL_79;
   thisTransform = (*(__int64 (__fastcall **)(__int64, __int64, _QWORD))(*(_QWORD *)thisTransform + 712LL))(
                     thisTransform,
-                    StringLiteral_23592/*"speed"*/,
+                    StringLiteral_23596/*"speed"*/,
                     *(_QWORD *)(*(_QWORD *)thisTransform + 720LL));
   if ( (thisTransform & 1) == 0 )
     return;
   v41 = *p_vector3s;
   if ( !*p_vector3s )
 LABEL_79:
-    sub_1C32E7C(thisTransform);
+    sub_1C372B4(thisTransform);
   if ( LODWORD(v41->max_length) < 2 )
     goto LABEL_80;
   v42 = v41->m_Items[0].fields.x;
@@ -11206,10 +11206,10 @@ LABEL_79:
   v45 = v41->m_Items[1].fields.x;
   v47 = v41->m_Items[1].fields.y;
   v46 = v41->m_Items[1].fields.z;
-  if ( !byte_4C313CF )
+  if ( !byte_4C3C91F )
   {
-    sub_1C32C20(&System_Math_TypeInfo);
-    byte_4C313CF = 1;
+    sub_1C37058(&System_Math_TypeInfo);
+    byte_4C3C91F = 1;
   }
   if ( !System_Math_TypeInfo->_2.cctor_finished )
   {
@@ -11222,7 +11222,7 @@ LABEL_79:
     goto LABEL_79;
   thisTransform = (*(__int64 (__fastcall **)(__int64, __int64, _QWORD))(*(_QWORD *)thisTransform + 760LL))(
                     thisTransform,
-                    StringLiteral_23592/*"speed"*/,
+                    StringLiteral_23596/*"speed"*/,
                     *(_QWORD *)(*(_QWORD *)thisTransform + 768LL));
   if ( !thisTransform )
     goto LABEL_79;
@@ -11312,29 +11312,29 @@ void iTween__GenerateMoveToPathTargets(iTween_o *this, const MethodInfo *method)
   UnityEngine_Vector3_o v73; // 0:s0.4,4:s1.4,8:s2.4
   UnityEngine_Vector3_o v74; // 0:s0.4,4:s1.4,8:s2.4
 
-  if ( (byte_4C3E9D0 & 1) == 0 )
+  if ( (byte_4C49F50 & 1) == 0 )
   {
-    sub_1C32C20(&bool_TypeInfo);
-    sub_1C32C20(&iTween_CRSpline_TypeInfo);
-    sub_1C32C20(&UnityEngine_Debug_TypeInfo);
-    sub_1C32C20(&float_TypeInfo);
-    sub_1C32C20(&UnityEngine_Transform___TypeInfo);
-    sub_1C32C20(&System_Type_TypeInfo);
-    sub_1C32C20(&UnityEngine_Vector3___var);
-    sub_1C32C20(&UnityEngine_Vector3___TypeInfo);
-    sub_1C32C20(&StringLiteral_23592/*"speed"*/);
-    sub_1C32C20(&StringLiteral_21664/*"movetopath"*/);
-    sub_1C32C20(&StringLiteral_20094/*"iTween Error: Attempting a path movement with MoveTo requires an array of more than 1 entry!"*/);
-    sub_1C32C20(&StringLiteral_22649/*"path"*/);
-    sub_1C32C20(&iTween_TypeInfo);
-    byte_4C3E9D0 = 1;
+    sub_1C37058(&bool_TypeInfo);
+    sub_1C37058(&iTween_CRSpline_TypeInfo);
+    sub_1C37058(&UnityEngine_Debug_TypeInfo);
+    sub_1C37058(&float_TypeInfo);
+    sub_1C37058(&UnityEngine_Transform___TypeInfo);
+    sub_1C37058(&System_Type_TypeInfo);
+    sub_1C37058(&UnityEngine_Vector3___var);
+    sub_1C37058(&UnityEngine_Vector3___TypeInfo);
+    sub_1C37058(&StringLiteral_23596/*"speed"*/);
+    sub_1C37058(&StringLiteral_21667/*"movetopath"*/);
+    sub_1C37058(&StringLiteral_20097/*"iTween Error: Attempting a path movement with MoveTo requires an array of more than 1 entry!"*/);
+    sub_1C37058(&StringLiteral_22652/*"path"*/);
+    sub_1C37058(&iTween_TypeInfo);
+    byte_4C49F50 = 1;
   }
   tweenArguments = (__int64)this->fields.tweenArguments;
   if ( !tweenArguments )
     goto LABEL_69;
   tweenArguments = (*(__int64 (__fastcall **)(__int64, __int64, _QWORD))(*(_QWORD *)tweenArguments + 760LL))(
                      tweenArguments,
-                     StringLiteral_22649/*"path"*/,
+                     StringLiteral_22652/*"path"*/,
                      *(_QWORD *)(*(_QWORD *)tweenArguments + 768LL));
   if ( !tweenArguments )
     goto LABEL_69;
@@ -11352,14 +11352,14 @@ void iTween__GenerateMoveToPathTargets(iTween_o *this, const MethodInfo *method)
   v10 = tweenArguments;
   tweenArguments = ((__int64 (__fastcall *)(struct System_Collections_Hashtable_o *, __int64, const MethodInfo *))v9->klass->vtable._28_get_Item.methodPtr)(
                      this->fields.tweenArguments,
-                     StringLiteral_22649/*"path"*/,
+                     StringLiteral_22652/*"path"*/,
                      v9->klass->vtable._28_get_Item.method);
   v11 = tweenArguments;
   if ( (v10 & 1) != 0 )
   {
     if ( !tweenArguments )
       goto LABEL_69;
-    v12 = sub_1C32D5C(tweenArguments);
+    v12 = sub_1C37194(tweenArguments);
     if ( v12 )
     {
       v13 = *(unsigned int *)(v12 + 24);
@@ -11368,12 +11368,12 @@ void iTween__GenerateMoveToPathTargets(iTween_o *this, const MethodInfo *method)
       {
         if ( !UnityEngine_Debug_TypeInfo->_2.cctor_finished )
           j_il2cpp_runtime_class_init_0(UnityEngine_Debug_TypeInfo);
-        UnityEngine_Debug__LogError((Il2CppObject *)StringLiteral_20094/*"iTween Error: Attempting a path movement with MoveTo requires an array of more than 1 entry!"*/, 0);
+        UnityEngine_Debug__LogError((Il2CppObject *)StringLiteral_20097/*"iTween Error: Attempting a path movement with MoveTo requires an array of more than 1 entry!"*/, 0);
         iTween__Dispose(this, v15);
         v13 = *(unsigned int *)(v14 + 24);
       }
-      v16 = sub_1C32CC8(UnityEngine_Vector3___TypeInfo, v13);
-      System_Array__Copy_65184580((System_Array_o *)v14, (System_Array_o *)v16, *(_DWORD *)(v14 + 24), 0);
+      v16 = sub_1C37100(UnityEngine_Vector3___TypeInfo, v13);
+      System_Array__Copy_65227692((System_Array_o *)v14, (System_Array_o *)v16, *(_DWORD *)(v14 + 24), 0);
       goto LABEL_29;
     }
 LABEL_71:
@@ -11382,7 +11382,7 @@ LABEL_71:
   }
   if ( !tweenArguments )
     goto LABEL_69;
-  v17 = sub_1C32D5C(tweenArguments);
+  v17 = sub_1C37194(tweenArguments);
   if ( !v17 )
     goto LABEL_71;
   v18 = *(unsigned int *)(v17 + 24);
@@ -11391,11 +11391,11 @@ LABEL_71:
   {
     if ( !UnityEngine_Debug_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(UnityEngine_Debug_TypeInfo);
-    UnityEngine_Debug__LogError((Il2CppObject *)StringLiteral_20094/*"iTween Error: Attempting a path movement with MoveTo requires an array of more than 1 entry!"*/, 0);
+    UnityEngine_Debug__LogError((Il2CppObject *)StringLiteral_20097/*"iTween Error: Attempting a path movement with MoveTo requires an array of more than 1 entry!"*/, 0);
     iTween__Dispose(this, v20);
     v18 = *(unsigned int *)(v19 + 24);
   }
-  tweenArguments = sub_1C32CC8(UnityEngine_Vector3___TypeInfo, v18);
+  tweenArguments = sub_1C37100(UnityEngine_Vector3___TypeInfo, v18);
   v21 = *(_QWORD *)(v19 + 24);
   v16 = tweenArguments;
   if ( (int)v21 >= 1 )
@@ -11445,7 +11445,7 @@ LABEL_29:
       goto LABEL_69;
     if ( ((*(__int64 (__fastcall **)(__int64, __int64, _QWORD))(*(_QWORD *)tweenArguments + 712LL))(
             tweenArguments,
-            StringLiteral_21664/*"movetopath"*/,
+            StringLiteral_21667/*"movetopath"*/,
             *(_QWORD *)(*(_QWORD *)tweenArguments + 720LL))
         & 1) != 0 )
     {
@@ -11454,14 +11454,14 @@ LABEL_29:
         goto LABEL_69;
       tweenArguments = (*(__int64 (__fastcall **)(__int64, __int64, _QWORD))(*(_QWORD *)tweenArguments + 760LL))(
                          tweenArguments,
-                         StringLiteral_21664/*"movetopath"*/,
+                         StringLiteral_21667/*"movetopath"*/,
                          *(_QWORD *)(*(_QWORD *)tweenArguments + 768LL));
       if ( !tweenArguments )
         goto LABEL_69;
       if ( *(Il2CppClass **)(*(_QWORD *)tweenArguments + 64LL) != bool_TypeInfo->_1.element_class )
       {
 LABEL_72:
-        sub_1C3313C(tweenArguments);
+        sub_1C37574(tweenArguments);
         iTween__GenerateMoveToTargets(v70, v71);
         return;
       }
@@ -11478,12 +11478,12 @@ LABEL_72:
       v28 = 3;
     }
   }
-  v29 = (struct UnityEngine_Vector3_array *)sub_1C32CC8(
+  v29 = (struct UnityEngine_Vector3_array *)sub_1C37100(
                                               UnityEngine_Vector3___TypeInfo,
                                               (unsigned int)(v28 + *(_DWORD *)(v16 + 24)));
   this->fields.vector3s = v29;
   p_vector3s = (System_Array_o **)&this->fields.vector3s;
-  sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.vector3s, (int32_t)v29, v31, v32);
+  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.vector3s, (int32_t)v29, v31, v32);
   if ( v27 )
   {
     tweenArguments = (__int64)this->fields.thisTransform;
@@ -11502,7 +11502,7 @@ LABEL_72:
   {
     v34 = 1;
   }
-  System_Array__Copy_65180592((System_Array_o *)v16, 0, *p_vector3s, v34, *(_DWORD *)(v16 + 24), 0);
+  System_Array__Copy_65223704((System_Array_o *)v16, 0, *p_vector3s, v34, *(_DWORD *)(v16 + 24), 0);
   v35 = *p_vector3s;
   if ( !*p_vector3s )
     goto LABEL_69;
@@ -11544,11 +11544,11 @@ LABEL_72:
                              * (float)(*((float *)&v46[2].monitor + 1) - *((float *)v48 + 8)))
                      + *(float *)&v50)) < 1.0e-10 )
   {
-    tweenArguments = sub_1C32CC8(UnityEngine_Vector3___TypeInfo, v47);
+    tweenArguments = sub_1C37100(UnityEngine_Vector3___TypeInfo, v47);
     if ( !*p_vector3s )
       goto LABEL_69;
     v51 = tweenArguments;
-    System_Array__Copy_65184580(*p_vector3s, (System_Array_o *)tweenArguments, (int32_t)(*p_vector3s)[1].monitor, 0);
+    System_Array__Copy_65227692(*p_vector3s, (System_Array_o *)tweenArguments, (int32_t)(*p_vector3s)[1].monitor, 0);
     if ( !v51 )
       goto LABEL_69;
     v52 = *(_QWORD *)(v51 + 24);
@@ -11563,44 +11563,44 @@ LABEL_72:
       v57 = *(_DWORD *)(v51 + 64);
       *(_QWORD *)v55 = v56;
       *(_DWORD *)(v55 + 8) = v57;
-      v58 = sub_1C32CC8(UnityEngine_Vector3___TypeInfo, *(unsigned int *)(v51 + 24));
+      v58 = sub_1C37100(UnityEngine_Vector3___TypeInfo, *(unsigned int *)(v51 + 24));
       *p_vector3s = (System_Array_o *)v58;
-      sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.vector3s, v58, v59, v60);
-      System_Array__Copy_65184580((System_Array_o *)v51, *p_vector3s, *(_DWORD *)(v51 + 24), 0);
+      sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.vector3s, v58, v59, v60);
+      System_Array__Copy_65227692((System_Array_o *)v51, *p_vector3s, *(_DWORD *)(v51 + 24), 0);
       v46 = *p_vector3s;
       goto LABEL_60;
     }
 LABEL_70:
-    sub_1C32E84(tweenArguments);
+    sub_1C372BC(tweenArguments);
   }
 LABEL_60:
-  v61 = (iTween_CRSpline_o *)sub_1C32E6C(iTween_CRSpline_TypeInfo);
+  v61 = (iTween_CRSpline_o *)sub_1C372A4(iTween_CRSpline_TypeInfo);
   iTween_CRSpline___ctor(v61, (UnityEngine_Vector3_array *)v46, 0);
   this->fields.path = v61;
-  sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.path, (int32_t)v61, v62, v63);
+  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.path, (int32_t)v61, v62, v63);
   tweenArguments = (__int64)this->fields.tweenArguments;
   if ( !tweenArguments )
     goto LABEL_69;
   if ( ((*(__int64 (__fastcall **)(__int64, __int64, _QWORD))(*(_QWORD *)tweenArguments + 712LL))(
           tweenArguments,
-          StringLiteral_23592/*"speed"*/,
+          StringLiteral_23596/*"speed"*/,
           *(_QWORD *)(*(_QWORD *)tweenArguments + 720LL))
       & 1) == 0 )
     return;
   v65 = *p_vector3s;
   if ( !iTween_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(iTween_TypeInfo);
-  v66 = iTween__PathLength_63207340((UnityEngine_Vector3_array *)v65, v64);
+  v66 = iTween__PathLength_63250452((UnityEngine_Vector3_array *)v65, v64);
   tweenArguments = (__int64)this->fields.tweenArguments;
   if ( !tweenArguments
     || (v67 = v66,
         (tweenArguments = (*(__int64 (__fastcall **)(__int64, __int64, _QWORD))(*(_QWORD *)tweenArguments + 760LL))(
                             tweenArguments,
-                            StringLiteral_23592/*"speed"*/,
+                            StringLiteral_23596/*"speed"*/,
                             *(_QWORD *)(*(_QWORD *)tweenArguments + 768LL))) == 0) )
   {
 LABEL_69:
-    sub_1C32E7C(tweenArguments);
+    sub_1C372B4(tweenArguments);
   }
   if ( *(Il2CppClass **)(*(_QWORD *)tweenArguments + 64LL) != float_TypeInfo->_1.element_class )
     goto LABEL_72;
@@ -11669,30 +11669,30 @@ void iTween__GenerateMoveToTargets(iTween_o *this, const MethodInfo *method)
   UnityEngine_Vector3_o localPosition; // 0:s0.4,4:s1.4,8:s2.4
   UnityEngine_Vector3_o position; // 0:s0.4,4:s1.4,8:s2.4
 
-  if ( (byte_4C3E9D1 & 1) == 0 )
+  if ( (byte_4C49F51 & 1) == 0 )
   {
-    sub_1C32C20(&bool_TypeInfo);
-    sub_1C32C20(&System_Math_TypeInfo);
-    sub_1C32C20(&float_TypeInfo);
-    sub_1C32C20(&UnityEngine_Transform_var);
-    sub_1C32C20(&UnityEngine_Transform_TypeInfo);
-    sub_1C32C20(&System_Type_TypeInfo);
-    sub_1C32C20(&UnityEngine_Vector3___TypeInfo);
-    sub_1C32C20(&UnityEngine_Vector3_var);
-    sub_1C32C20(&UnityEngine_Vector3_TypeInfo);
-    sub_1C32C20(&StringLiteral_24859/*"x"*/);
-    sub_1C32C20(&StringLiteral_23592/*"speed"*/);
-    sub_1C32C20(&StringLiteral_21348/*"looktarget"*/);
-    sub_1C32C20(&StringLiteral_22492/*"orienttopath"*/);
-    sub_1C32C20(&StringLiteral_22736/*"position"*/);
-    sub_1C32C20(&StringLiteral_24961/*"y"*/);
-    sub_1C32C20(&StringLiteral_25008/*"z"*/);
-    byte_4C3E9D1 = 1;
+    sub_1C37058(&bool_TypeInfo);
+    sub_1C37058(&System_Math_TypeInfo);
+    sub_1C37058(&float_TypeInfo);
+    sub_1C37058(&UnityEngine_Transform_var);
+    sub_1C37058(&UnityEngine_Transform_TypeInfo);
+    sub_1C37058(&System_Type_TypeInfo);
+    sub_1C37058(&UnityEngine_Vector3___TypeInfo);
+    sub_1C37058(&UnityEngine_Vector3_var);
+    sub_1C37058(&UnityEngine_Vector3_TypeInfo);
+    sub_1C37058(&StringLiteral_24864/*"x"*/);
+    sub_1C37058(&StringLiteral_23596/*"speed"*/);
+    sub_1C37058(&StringLiteral_21351/*"looktarget"*/);
+    sub_1C37058(&StringLiteral_22495/*"orienttopath"*/);
+    sub_1C37058(&StringLiteral_22740/*"position"*/);
+    sub_1C37058(&StringLiteral_24966/*"y"*/);
+    sub_1C37058(&StringLiteral_25013/*"z"*/);
+    byte_4C49F51 = 1;
   }
-  v3 = (struct UnityEngine_Vector3_array *)sub_1C32CC8(UnityEngine_Vector3___TypeInfo, 3);
+  v3 = (struct UnityEngine_Vector3_array *)sub_1C37100(UnityEngine_Vector3___TypeInfo, 3);
   this->fields.vector3s = v3;
   p_vector3s = &this->fields.vector3s;
-  sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.vector3s, (int32_t)v3, v5, v6);
+  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.vector3s, (int32_t)v3, v5, v6);
   thisTransform = (__int64)this->fields.thisTransform;
   if ( !thisTransform )
     goto LABEL_80;
@@ -11711,7 +11711,7 @@ void iTween__GenerateMoveToTargets(iTween_o *this, const MethodInfo *method)
   }
   if ( LODWORD(v8->max_length) <= 1 )
 LABEL_81:
-    sub_1C32E84(thisTransform);
+    sub_1C372BC(thisTransform);
   v8->m_Items[1].fields.y = localPosition.fields.y;
   v8->m_Items[1].fields.z = localPosition.fields.z;
   v8->m_Items[0] = localPosition;
@@ -11721,7 +11721,7 @@ LABEL_81:
     goto LABEL_80;
   thisTransform = (*(__int64 (__fastcall **)(__int64, __int64, _QWORD))(*(_QWORD *)thisTransform + 712LL))(
                     thisTransform,
-                    StringLiteral_22736/*"position"*/,
+                    StringLiteral_22740/*"position"*/,
                     *(_QWORD *)(*(_QWORD *)thisTransform + 720LL));
   tweenArguments = this->fields.tweenArguments;
   if ( !tweenArguments )
@@ -11731,7 +11731,7 @@ LABEL_81:
     thisTransform = (__int64)((__int64 (__fastcall *)(struct System_Collections_Hashtable_o *__return_ptr, struct System_Collections_Hashtable_o *, __int64, const MethodInfo *))tweenArguments->klass->vtable._28_get_Item.methodPtr)(
                                tweenArguments,
                                this->fields.tweenArguments,
-                               StringLiteral_22736/*"position"*/,
+                               StringLiteral_22740/*"position"*/,
                                tweenArguments->klass->vtable._28_get_Item.method);
     if ( !thisTransform )
       goto LABEL_80;
@@ -11749,7 +11749,7 @@ LABEL_81:
     thisTransform = (__int64)((__int64 (__fastcall *)(struct System_Collections_Hashtable_o *__return_ptr, struct System_Collections_Hashtable_o *, __int64, const MethodInfo *))v14->klass->vtable._28_get_Item.methodPtr)(
                                v14,
                                this->fields.tweenArguments,
-                               StringLiteral_22736/*"position"*/,
+                               StringLiteral_22740/*"position"*/,
                                v14->klass->vtable._28_get_Item.method);
     if ( (v15 & 1) != 0 )
     {
@@ -11787,7 +11787,7 @@ LABEL_81:
         vector3s = this->fields.vector3s;
         thisTransform = (*(__int64 (__fastcall **)(__int64, __int64, _QWORD))(*(_QWORD *)thisTransform + 760LL))(
                           thisTransform,
-                          StringLiteral_22736/*"position"*/,
+                          StringLiteral_22740/*"position"*/,
                           *(_QWORD *)(*(_QWORD *)thisTransform + 768LL));
         if ( !vector3s || !thisTransform )
           goto LABEL_80;
@@ -11807,7 +11807,7 @@ LABEL_81:
     thisTransform = (__int64)((__int64 (__fastcall *)(struct System_Collections_Hashtable_o *__return_ptr, struct System_Collections_Hashtable_o *, void *, const MethodInfo *))tweenArguments->klass->vtable._25_Contains.methodPtr)(
                                tweenArguments,
                                this->fields.tweenArguments,
-                               StringLiteral_24859/*"x"*/,
+                               StringLiteral_24864/*"x"*/,
                                tweenArguments->klass->vtable._25_Contains.method);
     if ( (thisTransform & 1) != 0 )
     {
@@ -11819,7 +11819,7 @@ LABEL_81:
         goto LABEL_80;
       thisTransform = (*(__int64 (__fastcall **)(__int64, void *, _QWORD))(*(_QWORD *)thisTransform + 760LL))(
                         thisTransform,
-                        StringLiteral_24859/*"x"*/,
+                        StringLiteral_24864/*"x"*/,
                         *(_QWORD *)(*(_QWORD *)thisTransform + 768LL));
       if ( !thisTransform )
         goto LABEL_80;
@@ -11835,7 +11835,7 @@ LABEL_81:
       goto LABEL_80;
     thisTransform = (*(__int64 (__fastcall **)(__int64, __int64, _QWORD))(*(_QWORD *)thisTransform + 712LL))(
                       thisTransform,
-                      StringLiteral_24961/*"y"*/,
+                      StringLiteral_24966/*"y"*/,
                       *(_QWORD *)(*(_QWORD *)thisTransform + 720LL));
     if ( (thisTransform & 1) != 0 )
     {
@@ -11847,7 +11847,7 @@ LABEL_81:
         goto LABEL_80;
       thisTransform = (*(__int64 (__fastcall **)(__int64, __int64, _QWORD))(*(_QWORD *)thisTransform + 760LL))(
                         thisTransform,
-                        StringLiteral_24961/*"y"*/,
+                        StringLiteral_24966/*"y"*/,
                         *(_QWORD *)(*(_QWORD *)thisTransform + 768LL));
       if ( !thisTransform )
         goto LABEL_80;
@@ -11863,7 +11863,7 @@ LABEL_81:
       goto LABEL_80;
     thisTransform = (*(__int64 (__fastcall **)(__int64, __int64, _QWORD))(*(_QWORD *)thisTransform + 712LL))(
                       thisTransform,
-                      StringLiteral_25008/*"z"*/,
+                      StringLiteral_25013/*"z"*/,
                       *(_QWORD *)(*(_QWORD *)thisTransform + 720LL));
     if ( (thisTransform & 1) != 0 )
     {
@@ -11875,7 +11875,7 @@ LABEL_81:
         goto LABEL_80;
       thisTransform = (*(__int64 (__fastcall **)(__int64, __int64, _QWORD))(*(_QWORD *)thisTransform + 760LL))(
                         thisTransform,
-                        StringLiteral_25008/*"z"*/,
+                        StringLiteral_25013/*"z"*/,
                         *(_QWORD *)(*(_QWORD *)thisTransform + 768LL));
       if ( !thisTransform )
         goto LABEL_80;
@@ -11892,7 +11892,7 @@ LABEL_81:
     goto LABEL_80;
   if ( ((*(__int64 (__fastcall **)(__int64, __int64, _QWORD))(*(_QWORD *)thisTransform + 712LL))(
           thisTransform,
-          StringLiteral_22492/*"orienttopath"*/,
+          StringLiteral_22495/*"orienttopath"*/,
           *(_QWORD *)(*(_QWORD *)thisTransform + 720LL))
       & 1) != 0 )
   {
@@ -11901,7 +11901,7 @@ LABEL_81:
       goto LABEL_80;
     thisTransform = (*(__int64 (__fastcall **)(__int64, __int64, _QWORD))(*(_QWORD *)thisTransform + 760LL))(
                       thisTransform,
-                      StringLiteral_22492/*"orienttopath"*/,
+                      StringLiteral_22495/*"orienttopath"*/,
                       *(_QWORD *)(*(_QWORD *)thisTransform + 768LL));
     if ( !thisTransform )
       goto LABEL_80;
@@ -11924,7 +11924,7 @@ LABEL_81:
         goto LABEL_80;
       ((void (__fastcall *)(struct System_Collections_Hashtable_o *, __int64, __int64, const MethodInfo *))v45->klass->vtable._29_set_Item.methodPtr)(
         v45,
-        StringLiteral_21348/*"looktarget"*/,
+        StringLiteral_21351/*"looktarget"*/,
         thisTransform,
         v45->klass->vtable._29_set_Item.method);
     }
@@ -11934,7 +11934,7 @@ LABEL_81:
     goto LABEL_80;
   thisTransform = (*(__int64 (__fastcall **)(__int64, __int64, _QWORD))(*(_QWORD *)thisTransform + 712LL))(
                     thisTransform,
-                    StringLiteral_23592/*"speed"*/,
+                    StringLiteral_23596/*"speed"*/,
                     *(_QWORD *)(*(_QWORD *)thisTransform + 720LL));
   if ( (thisTransform & 1) != 0 )
   {
@@ -11949,10 +11949,10 @@ LABEL_81:
       v50 = v46->m_Items[1].fields.x;
       v52 = v46->m_Items[1].fields.y;
       v51 = v46->m_Items[1].fields.z;
-      if ( !byte_4C313CF )
+      if ( !byte_4C3C91F )
       {
-        sub_1C32C20(&System_Math_TypeInfo);
-        byte_4C313CF = 1;
+        sub_1C37058(&System_Math_TypeInfo);
+        byte_4C3C91F = 1;
       }
       if ( !System_Math_TypeInfo->_2.cctor_finished )
       {
@@ -11965,7 +11965,7 @@ LABEL_81:
       {
         thisTransform = (*(__int64 (__fastcall **)(__int64, __int64, _QWORD))(*(_QWORD *)thisTransform + 760LL))(
                           thisTransform,
-                          StringLiteral_23592/*"speed"*/,
+                          StringLiteral_23596/*"speed"*/,
                           *(_QWORD *)(*(_QWORD *)thisTransform + 768LL));
         if ( thisTransform )
         {
@@ -11980,13 +11980,13 @@ LABEL_81:
             return;
           }
 LABEL_82:
-          sub_1C3313C(thisTransform);
+          sub_1C37574(thisTransform);
           iTween__GenerateMoveByTargets(v55, v56);
           return;
         }
       }
 LABEL_80:
-      sub_1C32E7C(thisTransform);
+      sub_1C372B4(thisTransform);
     }
     goto LABEL_81;
   }
@@ -12024,21 +12024,21 @@ void iTween__GeneratePunchPositionTargets(iTween_o *this, const MethodInfo *meth
   UnityEngine_Vector3_o eulerAngles; // 0:s0.4,4:s1.4,8:s2.4
   UnityEngine_Vector3_o position; // 0:s0.4,4:s1.4,8:s2.4
 
-  if ( (byte_4C3E9DC & 1) == 0 )
+  if ( (byte_4C49F5C & 1) == 0 )
   {
-    sub_1C32C20(&float_TypeInfo);
-    sub_1C32C20(&UnityEngine_Vector3___TypeInfo);
-    sub_1C32C20(&UnityEngine_Vector3_TypeInfo);
-    sub_1C32C20(&StringLiteral_24859/*"x"*/);
-    sub_1C32C20(&StringLiteral_16745/*"amount"*/);
-    sub_1C32C20(&StringLiteral_24961/*"y"*/);
-    sub_1C32C20(&StringLiteral_25008/*"z"*/);
-    byte_4C3E9DC = 1;
+    sub_1C37058(&float_TypeInfo);
+    sub_1C37058(&UnityEngine_Vector3___TypeInfo);
+    sub_1C37058(&UnityEngine_Vector3_TypeInfo);
+    sub_1C37058(&StringLiteral_24864/*"x"*/);
+    sub_1C37058(&StringLiteral_16747/*"amount"*/);
+    sub_1C37058(&StringLiteral_24966/*"y"*/);
+    sub_1C37058(&StringLiteral_25013/*"z"*/);
+    byte_4C49F5C = 1;
   }
-  v3 = (struct UnityEngine_Vector3_array *)sub_1C32CC8(UnityEngine_Vector3___TypeInfo, 5);
+  v3 = (struct UnityEngine_Vector3_array *)sub_1C37100(UnityEngine_Vector3___TypeInfo, 5);
   this->fields.vector3s = v3;
   p_vector3s = &this->fields.vector3s;
-  sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.vector3s, (int32_t)v3, v5, v6);
+  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.vector3s, (int32_t)v3, v5, v6);
   thisTransform = (__int64)this->fields.thisTransform;
   if ( !thisTransform )
     goto LABEL_47;
@@ -12060,10 +12060,10 @@ void iTween__GeneratePunchPositionTargets(iTween_o *this, const MethodInfo *meth
     goto LABEL_48;
   vector3s->m_Items[0] = position;
   v10 = *p_vector3s;
-  if ( !byte_4C313D1 )
+  if ( !byte_4C3C921 )
   {
-    thisTransform = sub_1C32C20(&UnityEngine_Vector3_TypeInfo);
-    byte_4C313D1 = 1;
+    thisTransform = sub_1C37058(&UnityEngine_Vector3_TypeInfo);
+    byte_4C3C921 = 1;
   }
   if ( !v10 )
     goto LABEL_47;
@@ -12084,7 +12084,7 @@ void iTween__GeneratePunchPositionTargets(iTween_o *this, const MethodInfo *meth
     goto LABEL_47;
   if ( ((*(__int64 (__fastcall **)(__int64, __int64, _QWORD))(*(_QWORD *)thisTransform + 712LL))(
           thisTransform,
-          StringLiteral_16745/*"amount"*/,
+          StringLiteral_16747/*"amount"*/,
           *(_QWORD *)(*(_QWORD *)thisTransform + 720LL))
       & 1) == 0 )
   {
@@ -12093,7 +12093,7 @@ void iTween__GeneratePunchPositionTargets(iTween_o *this, const MethodInfo *meth
       goto LABEL_47;
     thisTransform = (*(__int64 (__fastcall **)(__int64, void *, _QWORD))(*(_QWORD *)thisTransform + 712LL))(
                       thisTransform,
-                      StringLiteral_24859/*"x"*/,
+                      StringLiteral_24864/*"x"*/,
                       *(_QWORD *)(*(_QWORD *)thisTransform + 720LL));
     if ( (thisTransform & 1) != 0 )
     {
@@ -12105,7 +12105,7 @@ void iTween__GeneratePunchPositionTargets(iTween_o *this, const MethodInfo *meth
         goto LABEL_47;
       thisTransform = (*(__int64 (__fastcall **)(__int64, void *, _QWORD))(*(_QWORD *)thisTransform + 760LL))(
                         thisTransform,
-                        StringLiteral_24859/*"x"*/,
+                        StringLiteral_24864/*"x"*/,
                         *(_QWORD *)(*(_QWORD *)thisTransform + 768LL));
       if ( !thisTransform )
         goto LABEL_47;
@@ -12121,7 +12121,7 @@ void iTween__GeneratePunchPositionTargets(iTween_o *this, const MethodInfo *meth
       goto LABEL_47;
     thisTransform = (*(__int64 (__fastcall **)(__int64, __int64, _QWORD))(*(_QWORD *)thisTransform + 712LL))(
                       thisTransform,
-                      StringLiteral_24961/*"y"*/,
+                      StringLiteral_24966/*"y"*/,
                       *(_QWORD *)(*(_QWORD *)thisTransform + 720LL));
     if ( (thisTransform & 1) == 0 )
     {
@@ -12131,7 +12131,7 @@ LABEL_37:
       {
         thisTransform = (*(__int64 (__fastcall **)(__int64, __int64, _QWORD))(*(_QWORD *)thisTransform + 712LL))(
                           thisTransform,
-                          StringLiteral_25008/*"z"*/,
+                          StringLiteral_25013/*"z"*/,
                           *(_QWORD *)(*(_QWORD *)thisTransform + 720LL));
         if ( (thisTransform & 1) == 0 )
           return;
@@ -12143,7 +12143,7 @@ LABEL_37:
           {
             thisTransform = (*(__int64 (__fastcall **)(__int64, __int64, _QWORD))(*(_QWORD *)thisTransform + 760LL))(
                               thisTransform,
-                              StringLiteral_25008/*"z"*/,
+                              StringLiteral_25013/*"z"*/,
                               *(_QWORD *)(*(_QWORD *)thisTransform + 768LL));
             if ( thisTransform )
             {
@@ -12161,7 +12161,7 @@ LABEL_37:
         }
       }
 LABEL_47:
-      sub_1C32E7C(thisTransform);
+      sub_1C372B4(thisTransform);
     }
     v22 = *p_vector3s;
     if ( !*p_vector3s )
@@ -12171,7 +12171,7 @@ LABEL_47:
       goto LABEL_47;
     thisTransform = (*(__int64 (__fastcall **)(__int64, __int64, _QWORD))(*(_QWORD *)thisTransform + 760LL))(
                       thisTransform,
-                      StringLiteral_24961/*"y"*/,
+                      StringLiteral_24966/*"y"*/,
                       *(_QWORD *)(*(_QWORD *)thisTransform + 768LL));
     if ( !thisTransform )
       goto LABEL_47;
@@ -12184,7 +12184,7 @@ LABEL_47:
       goto LABEL_37;
     }
 LABEL_48:
-    sub_1C32E84(thisTransform);
+    sub_1C372BC(thisTransform);
   }
   thisTransform = (__int64)this->fields.tweenArguments;
   if ( !thisTransform )
@@ -12192,14 +12192,14 @@ LABEL_48:
   v15 = this->fields.vector3s;
   thisTransform = (*(__int64 (__fastcall **)(__int64, __int64, _QWORD))(*(_QWORD *)thisTransform + 760LL))(
                     thisTransform,
-                    StringLiteral_16745/*"amount"*/,
+                    StringLiteral_16747/*"amount"*/,
                     *(_QWORD *)(*(_QWORD *)thisTransform + 768LL));
   if ( !v15 || !thisTransform )
     goto LABEL_47;
   if ( *(Il2CppClass **)(*(_QWORD *)thisTransform + 64LL) != UnityEngine_Vector3_TypeInfo->_1.element_class )
   {
 LABEL_49:
-    sub_1C3313C(thisTransform);
+    sub_1C37574(thisTransform);
     iTween__GeneratePunchRotationTargets(v27, v28);
     return;
   }
@@ -12242,21 +12242,21 @@ void iTween__GeneratePunchRotationTargets(iTween_o *this, const MethodInfo *meth
   const MethodInfo *v27; // x1
   UnityEngine_Vector3_o eulerAngles; // 0:s0.4,4:s1.4,8:s2.4
 
-  if ( (byte_4C3E9DD & 1) == 0 )
+  if ( (byte_4C49F5D & 1) == 0 )
   {
-    sub_1C32C20(&float_TypeInfo);
-    sub_1C32C20(&UnityEngine_Vector3___TypeInfo);
-    sub_1C32C20(&UnityEngine_Vector3_TypeInfo);
-    sub_1C32C20(&StringLiteral_24859/*"x"*/);
-    sub_1C32C20(&StringLiteral_16745/*"amount"*/);
-    sub_1C32C20(&StringLiteral_24961/*"y"*/);
-    sub_1C32C20(&StringLiteral_25008/*"z"*/);
-    byte_4C3E9DD = 1;
+    sub_1C37058(&float_TypeInfo);
+    sub_1C37058(&UnityEngine_Vector3___TypeInfo);
+    sub_1C37058(&UnityEngine_Vector3_TypeInfo);
+    sub_1C37058(&StringLiteral_24864/*"x"*/);
+    sub_1C37058(&StringLiteral_16747/*"amount"*/);
+    sub_1C37058(&StringLiteral_24966/*"y"*/);
+    sub_1C37058(&StringLiteral_25013/*"z"*/);
+    byte_4C49F5D = 1;
   }
-  v3 = (struct UnityEngine_Vector3_array *)sub_1C32CC8(UnityEngine_Vector3___TypeInfo, 4);
+  v3 = (struct UnityEngine_Vector3_array *)sub_1C37100(UnityEngine_Vector3___TypeInfo, 4);
   this->fields.vector3s = v3;
   p_vector3s = &this->fields.vector3s;
-  sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.vector3s, (int32_t)v3, v5, v6);
+  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.vector3s, (int32_t)v3, v5, v6);
   thisTransform = (__int64)this->fields.thisTransform;
   if ( !thisTransform )
     goto LABEL_44;
@@ -12268,10 +12268,10 @@ void iTween__GeneratePunchRotationTargets(iTween_o *this, const MethodInfo *meth
     goto LABEL_45;
   v8->m_Items[0] = eulerAngles;
   v9 = *p_vector3s;
-  if ( !byte_4C313D1 )
+  if ( !byte_4C3C921 )
   {
-    thisTransform = sub_1C32C20(&UnityEngine_Vector3_TypeInfo);
-    byte_4C313D1 = 1;
+    thisTransform = sub_1C37058(&UnityEngine_Vector3_TypeInfo);
+    byte_4C3C921 = 1;
   }
   if ( !v9 )
     goto LABEL_44;
@@ -12292,7 +12292,7 @@ void iTween__GeneratePunchRotationTargets(iTween_o *this, const MethodInfo *meth
     goto LABEL_44;
   if ( ((*(__int64 (__fastcall **)(__int64, __int64, _QWORD))(*(_QWORD *)thisTransform + 712LL))(
           thisTransform,
-          StringLiteral_16745/*"amount"*/,
+          StringLiteral_16747/*"amount"*/,
           *(_QWORD *)(*(_QWORD *)thisTransform + 720LL))
       & 1) == 0 )
   {
@@ -12301,7 +12301,7 @@ void iTween__GeneratePunchRotationTargets(iTween_o *this, const MethodInfo *meth
       goto LABEL_44;
     thisTransform = (*(__int64 (__fastcall **)(__int64, void *, _QWORD))(*(_QWORD *)thisTransform + 712LL))(
                       thisTransform,
-                      StringLiteral_24859/*"x"*/,
+                      StringLiteral_24864/*"x"*/,
                       *(_QWORD *)(*(_QWORD *)thisTransform + 720LL));
     if ( (thisTransform & 1) != 0 )
     {
@@ -12313,7 +12313,7 @@ void iTween__GeneratePunchRotationTargets(iTween_o *this, const MethodInfo *meth
         goto LABEL_44;
       thisTransform = (*(__int64 (__fastcall **)(__int64, void *, _QWORD))(*(_QWORD *)thisTransform + 760LL))(
                         thisTransform,
-                        StringLiteral_24859/*"x"*/,
+                        StringLiteral_24864/*"x"*/,
                         *(_QWORD *)(*(_QWORD *)thisTransform + 768LL));
       if ( !thisTransform )
         goto LABEL_44;
@@ -12329,7 +12329,7 @@ void iTween__GeneratePunchRotationTargets(iTween_o *this, const MethodInfo *meth
       goto LABEL_44;
     thisTransform = (*(__int64 (__fastcall **)(__int64, __int64, _QWORD))(*(_QWORD *)thisTransform + 712LL))(
                       thisTransform,
-                      StringLiteral_24961/*"y"*/,
+                      StringLiteral_24966/*"y"*/,
                       *(_QWORD *)(*(_QWORD *)thisTransform + 720LL));
     if ( (thisTransform & 1) == 0 )
     {
@@ -12339,7 +12339,7 @@ LABEL_34:
       {
         thisTransform = (*(__int64 (__fastcall **)(__int64, __int64, _QWORD))(*(_QWORD *)thisTransform + 712LL))(
                           thisTransform,
-                          StringLiteral_25008/*"z"*/,
+                          StringLiteral_25013/*"z"*/,
                           *(_QWORD *)(*(_QWORD *)thisTransform + 720LL));
         if ( (thisTransform & 1) == 0 )
           return;
@@ -12351,7 +12351,7 @@ LABEL_34:
           {
             thisTransform = (*(__int64 (__fastcall **)(__int64, __int64, _QWORD))(*(_QWORD *)thisTransform + 760LL))(
                               thisTransform,
-                              StringLiteral_25008/*"z"*/,
+                              StringLiteral_25013/*"z"*/,
                               *(_QWORD *)(*(_QWORD *)thisTransform + 768LL));
             if ( thisTransform )
             {
@@ -12369,7 +12369,7 @@ LABEL_34:
         }
       }
 LABEL_44:
-      sub_1C32E7C(thisTransform);
+      sub_1C372B4(thisTransform);
     }
     v21 = *p_vector3s;
     if ( !*p_vector3s )
@@ -12379,7 +12379,7 @@ LABEL_44:
       goto LABEL_44;
     thisTransform = (*(__int64 (__fastcall **)(__int64, __int64, _QWORD))(*(_QWORD *)thisTransform + 760LL))(
                       thisTransform,
-                      StringLiteral_24961/*"y"*/,
+                      StringLiteral_24966/*"y"*/,
                       *(_QWORD *)(*(_QWORD *)thisTransform + 768LL));
     if ( !thisTransform )
       goto LABEL_44;
@@ -12392,7 +12392,7 @@ LABEL_44:
       goto LABEL_34;
     }
 LABEL_45:
-    sub_1C32E84(thisTransform);
+    sub_1C372BC(thisTransform);
   }
   thisTransform = (__int64)this->fields.tweenArguments;
   if ( !thisTransform )
@@ -12400,14 +12400,14 @@ LABEL_45:
   vector3s = this->fields.vector3s;
   thisTransform = (*(__int64 (__fastcall **)(__int64, __int64, _QWORD))(*(_QWORD *)thisTransform + 760LL))(
                     thisTransform,
-                    StringLiteral_16745/*"amount"*/,
+                    StringLiteral_16747/*"amount"*/,
                     *(_QWORD *)(*(_QWORD *)thisTransform + 768LL));
   if ( !vector3s || !thisTransform )
     goto LABEL_44;
   if ( *(Il2CppClass **)(*(_QWORD *)thisTransform + 64LL) != UnityEngine_Vector3_TypeInfo->_1.element_class )
   {
 LABEL_46:
-    sub_1C3313C(thisTransform);
+    sub_1C37574(thisTransform);
     iTween__GeneratePunchScaleTargets(v26, v27);
     return;
   }
@@ -12448,21 +12448,21 @@ void iTween__GeneratePunchScaleTargets(iTween_o *this, const MethodInfo *method)
   const MethodInfo *v25; // x1
   UnityEngine_Vector3_o localScale; // 0:s0.4,4:s1.4,8:s2.4
 
-  if ( (byte_4C3E9DE & 1) == 0 )
+  if ( (byte_4C49F5E & 1) == 0 )
   {
-    sub_1C32C20(&float_TypeInfo);
-    sub_1C32C20(&UnityEngine_Vector3___TypeInfo);
-    sub_1C32C20(&UnityEngine_Vector3_TypeInfo);
-    sub_1C32C20(&StringLiteral_24859/*"x"*/);
-    sub_1C32C20(&StringLiteral_16745/*"amount"*/);
-    sub_1C32C20(&StringLiteral_24961/*"y"*/);
-    sub_1C32C20(&StringLiteral_25008/*"z"*/);
-    byte_4C3E9DE = 1;
+    sub_1C37058(&float_TypeInfo);
+    sub_1C37058(&UnityEngine_Vector3___TypeInfo);
+    sub_1C37058(&UnityEngine_Vector3_TypeInfo);
+    sub_1C37058(&StringLiteral_24864/*"x"*/);
+    sub_1C37058(&StringLiteral_16747/*"amount"*/);
+    sub_1C37058(&StringLiteral_24966/*"y"*/);
+    sub_1C37058(&StringLiteral_25013/*"z"*/);
+    byte_4C49F5E = 1;
   }
-  v3 = (struct UnityEngine_Vector3_array *)sub_1C32CC8(UnityEngine_Vector3___TypeInfo, 3);
+  v3 = (struct UnityEngine_Vector3_array *)sub_1C37100(UnityEngine_Vector3___TypeInfo, 3);
   this->fields.vector3s = v3;
   p_vector3s = &this->fields.vector3s;
-  sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.vector3s, (int32_t)v3, v5, v6);
+  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.vector3s, (int32_t)v3, v5, v6);
   thisTransform = (__int64)this->fields.thisTransform;
   if ( !thisTransform )
     goto LABEL_44;
@@ -12474,10 +12474,10 @@ void iTween__GeneratePunchScaleTargets(iTween_o *this, const MethodInfo *method)
     goto LABEL_45;
   v8->m_Items[0] = localScale;
   v9 = *p_vector3s;
-  if ( !byte_4C313D1 )
+  if ( !byte_4C3C921 )
   {
-    thisTransform = sub_1C32C20(&UnityEngine_Vector3_TypeInfo);
-    byte_4C313D1 = 1;
+    thisTransform = sub_1C37058(&UnityEngine_Vector3_TypeInfo);
+    byte_4C3C921 = 1;
   }
   if ( !v9 )
     goto LABEL_44;
@@ -12492,7 +12492,7 @@ void iTween__GeneratePunchScaleTargets(iTween_o *this, const MethodInfo *method)
     goto LABEL_44;
   if ( ((*(__int64 (__fastcall **)(__int64, __int64, _QWORD))(*(_QWORD *)thisTransform + 712LL))(
           thisTransform,
-          StringLiteral_16745/*"amount"*/,
+          StringLiteral_16747/*"amount"*/,
           *(_QWORD *)(*(_QWORD *)thisTransform + 720LL))
       & 1) == 0 )
   {
@@ -12501,7 +12501,7 @@ void iTween__GeneratePunchScaleTargets(iTween_o *this, const MethodInfo *method)
       goto LABEL_44;
     thisTransform = (*(__int64 (__fastcall **)(__int64, void *, _QWORD))(*(_QWORD *)thisTransform + 712LL))(
                       thisTransform,
-                      StringLiteral_24859/*"x"*/,
+                      StringLiteral_24864/*"x"*/,
                       *(_QWORD *)(*(_QWORD *)thisTransform + 720LL));
     if ( (thisTransform & 1) != 0 )
     {
@@ -12513,7 +12513,7 @@ void iTween__GeneratePunchScaleTargets(iTween_o *this, const MethodInfo *method)
         goto LABEL_44;
       thisTransform = (*(__int64 (__fastcall **)(__int64, void *, _QWORD))(*(_QWORD *)thisTransform + 760LL))(
                         thisTransform,
-                        StringLiteral_24859/*"x"*/,
+                        StringLiteral_24864/*"x"*/,
                         *(_QWORD *)(*(_QWORD *)thisTransform + 768LL));
       if ( !thisTransform )
         goto LABEL_44;
@@ -12529,7 +12529,7 @@ void iTween__GeneratePunchScaleTargets(iTween_o *this, const MethodInfo *method)
       goto LABEL_44;
     thisTransform = (*(__int64 (__fastcall **)(__int64, __int64, _QWORD))(*(_QWORD *)thisTransform + 712LL))(
                       thisTransform,
-                      StringLiteral_24961/*"y"*/,
+                      StringLiteral_24966/*"y"*/,
                       *(_QWORD *)(*(_QWORD *)thisTransform + 720LL));
     if ( (thisTransform & 1) == 0 )
     {
@@ -12539,7 +12539,7 @@ LABEL_34:
       {
         thisTransform = (*(__int64 (__fastcall **)(__int64, __int64, _QWORD))(*(_QWORD *)thisTransform + 712LL))(
                           thisTransform,
-                          StringLiteral_25008/*"z"*/,
+                          StringLiteral_25013/*"z"*/,
                           *(_QWORD *)(*(_QWORD *)thisTransform + 720LL));
         if ( (thisTransform & 1) == 0 )
           return;
@@ -12551,7 +12551,7 @@ LABEL_34:
           {
             thisTransform = (*(__int64 (__fastcall **)(__int64, __int64, _QWORD))(*(_QWORD *)thisTransform + 760LL))(
                               thisTransform,
-                              StringLiteral_25008/*"z"*/,
+                              StringLiteral_25013/*"z"*/,
                               *(_QWORD *)(*(_QWORD *)thisTransform + 768LL));
             if ( thisTransform )
             {
@@ -12569,7 +12569,7 @@ LABEL_34:
         }
       }
 LABEL_44:
-      sub_1C32E7C(thisTransform);
+      sub_1C372B4(thisTransform);
     }
     v19 = *p_vector3s;
     if ( !*p_vector3s )
@@ -12579,7 +12579,7 @@ LABEL_44:
       goto LABEL_44;
     thisTransform = (*(__int64 (__fastcall **)(__int64, __int64, _QWORD))(*(_QWORD *)thisTransform + 760LL))(
                       thisTransform,
-                      StringLiteral_24961/*"y"*/,
+                      StringLiteral_24966/*"y"*/,
                       *(_QWORD *)(*(_QWORD *)thisTransform + 768LL));
     if ( !thisTransform )
       goto LABEL_44;
@@ -12592,7 +12592,7 @@ LABEL_44:
       goto LABEL_34;
     }
 LABEL_45:
-    sub_1C32E84(thisTransform);
+    sub_1C372BC(thisTransform);
   }
   thisTransform = (__int64)this->fields.tweenArguments;
   if ( !thisTransform )
@@ -12600,14 +12600,14 @@ LABEL_45:
   vector3s = this->fields.vector3s;
   thisTransform = (*(__int64 (__fastcall **)(__int64, __int64, _QWORD))(*(_QWORD *)thisTransform + 760LL))(
                     thisTransform,
-                    StringLiteral_16745/*"amount"*/,
+                    StringLiteral_16747/*"amount"*/,
                     *(_QWORD *)(*(_QWORD *)thisTransform + 768LL));
   if ( !vector3s || !thisTransform )
     goto LABEL_44;
   if ( *(Il2CppClass **)(*(_QWORD *)thisTransform + 64LL) != UnityEngine_Vector3_TypeInfo->_1.element_class )
   {
 LABEL_46:
-    sub_1C3313C(thisTransform);
+    sub_1C37574(thisTransform);
     iTween__GenerateLookToTargets(v24, v25);
     return;
   }
@@ -12635,33 +12635,33 @@ void iTween__GenerateRectTargets(iTween_o *this, const MethodInfo *method)
   __int64 v12; // x2
   __int64 v13; // x3
 
-  if ( (byte_4C3E9C7 & 1) == 0 )
+  if ( (byte_4C49F47 & 1) == 0 )
   {
-    sub_1C32C20(&UnityEngine_Rect___TypeInfo);
-    sub_1C32C20(&UnityEngine_Rect_TypeInfo);
-    sub_1C32C20(&StringLiteral_19689/*"from"*/);
-    sub_1C32C20(&StringLiteral_24106/*"to"*/);
-    byte_4C3E9C7 = 1;
+    sub_1C37058(&UnityEngine_Rect___TypeInfo);
+    sub_1C37058(&UnityEngine_Rect_TypeInfo);
+    sub_1C37058(&StringLiteral_19692/*"from"*/);
+    sub_1C37058(&StringLiteral_24110/*"to"*/);
+    byte_4C49F47 = 1;
   }
-  v3 = (struct UnityEngine_Rect_array *)sub_1C32CC8(UnityEngine_Rect___TypeInfo, 3);
+  v3 = (struct UnityEngine_Rect_array *)sub_1C37100(UnityEngine_Rect___TypeInfo, 3);
   this->fields.rects = v3;
-  sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.rects, (int32_t)v3, v4, v5);
+  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.rects, (int32_t)v3, v4, v5);
   tweenArguments = this->fields.tweenArguments;
   if ( !tweenArguments )
     goto LABEL_14;
   rects = this->fields.rects;
   tweenArguments = (struct System_Collections_Hashtable_o *)((__int64 (__fastcall *)(struct System_Collections_Hashtable_o *, __int64, const MethodInfo *))tweenArguments->klass->vtable._28_get_Item.methodPtr)(
                                                               tweenArguments,
-                                                              StringLiteral_19689/*"from"*/,
+                                                              StringLiteral_19692/*"from"*/,
                                                               tweenArguments->klass->vtable._28_get_Item.method);
   if ( !rects || !tweenArguments )
     goto LABEL_14;
   if ( tweenArguments->klass->_1.element_class != UnityEngine_Rect_TypeInfo->_1.element_class )
   {
 LABEL_15:
-    sub_1C3313C(tweenArguments);
+    sub_1C37574(tweenArguments);
 LABEL_16:
-    sub_1C32E84(v10);
+    sub_1C372BC(v10);
   }
   v10 = (UnityEngine_Rect_o *)j_il2cpp_object_unbox_0(tweenArguments, UnityEngine_Rect_TypeInfo, v8, v9);
   if ( !LODWORD(rects->max_length) )
@@ -12672,13 +12672,13 @@ LABEL_16:
     || (v11 = this->fields.rects,
         tweenArguments = (struct System_Collections_Hashtable_o *)((__int64 (__fastcall *)(struct System_Collections_Hashtable_o *, __int64, const MethodInfo *))tweenArguments->klass->vtable._28_get_Item.methodPtr)(
                                                                     tweenArguments,
-                                                                    StringLiteral_24106/*"to"*/,
+                                                                    StringLiteral_24110/*"to"*/,
                                                                     tweenArguments->klass->vtable._28_get_Item.method),
         !v11)
     || !tweenArguments )
   {
 LABEL_14:
-    sub_1C32E7C(tweenArguments);
+    sub_1C372B4(tweenArguments);
   }
   if ( tweenArguments->klass->_1.element_class != UnityEngine_Rect_TypeInfo->_1.element_class )
     goto LABEL_15;
@@ -12729,23 +12729,23 @@ void iTween__GenerateRotateAddTargets(iTween_o *this, const MethodInfo *method)
   const MethodInfo *v38; // x1
   UnityEngine_Vector3_o eulerAngles; // 0:s0.4,4:s1.4,8:s2.4
 
-  if ( (byte_4C3E9D7 & 1) == 0 )
+  if ( (byte_4C49F57 & 1) == 0 )
   {
-    sub_1C32C20(&System_Math_TypeInfo);
-    sub_1C32C20(&float_TypeInfo);
-    sub_1C32C20(&UnityEngine_Vector3___TypeInfo);
-    sub_1C32C20(&UnityEngine_Vector3_TypeInfo);
-    sub_1C32C20(&StringLiteral_24859/*"x"*/);
-    sub_1C32C20(&StringLiteral_23592/*"speed"*/);
-    sub_1C32C20(&StringLiteral_16745/*"amount"*/);
-    sub_1C32C20(&StringLiteral_24961/*"y"*/);
-    sub_1C32C20(&StringLiteral_25008/*"z"*/);
-    byte_4C3E9D7 = 1;
+    sub_1C37058(&System_Math_TypeInfo);
+    sub_1C37058(&float_TypeInfo);
+    sub_1C37058(&UnityEngine_Vector3___TypeInfo);
+    sub_1C37058(&UnityEngine_Vector3_TypeInfo);
+    sub_1C37058(&StringLiteral_24864/*"x"*/);
+    sub_1C37058(&StringLiteral_23596/*"speed"*/);
+    sub_1C37058(&StringLiteral_16747/*"amount"*/);
+    sub_1C37058(&StringLiteral_24966/*"y"*/);
+    sub_1C37058(&StringLiteral_25013/*"z"*/);
+    byte_4C49F57 = 1;
   }
-  v3 = (struct UnityEngine_Vector3_array *)sub_1C32CC8(UnityEngine_Vector3___TypeInfo, 5);
+  v3 = (struct UnityEngine_Vector3_array *)sub_1C37100(UnityEngine_Vector3___TypeInfo, 5);
   this->fields.vector3s = v3;
   p_vector3s = &this->fields.vector3s;
-  sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.vector3s, (int32_t)v3, v5, v6);
+  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.vector3s, (int32_t)v3, v5, v6);
   thisTransform = (__int64)this->fields.thisTransform;
   if ( !thisTransform )
     goto LABEL_52;
@@ -12765,7 +12765,7 @@ void iTween__GenerateRotateAddTargets(iTween_o *this, const MethodInfo *method)
     goto LABEL_52;
   thisTransform = (*(__int64 (__fastcall **)(__int64, __int64, _QWORD))(*(_QWORD *)thisTransform + 712LL))(
                     thisTransform,
-                    StringLiteral_16745/*"amount"*/,
+                    StringLiteral_16747/*"amount"*/,
                     *(_QWORD *)(*(_QWORD *)thisTransform + 720LL));
   if ( (thisTransform & 1) != 0 )
   {
@@ -12781,7 +12781,7 @@ void iTween__GenerateRotateAddTargets(iTween_o *this, const MethodInfo *method)
       z = v9->m_Items[1].fields.z;
       thisTransform = (*(__int64 (__fastcall **)(__int64, __int64, _QWORD))(*(_QWORD *)thisTransform + 760LL))(
                         thisTransform,
-                        StringLiteral_16745/*"amount"*/,
+                        StringLiteral_16747/*"amount"*/,
                         *(_QWORD *)(*(_QWORD *)thisTransform + 768LL));
       if ( !thisTransform )
         goto LABEL_52;
@@ -12794,7 +12794,7 @@ void iTween__GenerateRotateAddTargets(iTween_o *this, const MethodInfo *method)
         goto LABEL_38;
       }
 LABEL_54:
-      sub_1C3313C(thisTransform);
+      sub_1C37574(thisTransform);
       iTween__GenerateRotateByTargets(v37, v38);
       return;
     }
@@ -12805,7 +12805,7 @@ LABEL_54:
     goto LABEL_52;
   thisTransform = (*(__int64 (__fastcall **)(__int64, void *, _QWORD))(*(_QWORD *)thisTransform + 712LL))(
                     thisTransform,
-                    StringLiteral_24859/*"x"*/,
+                    StringLiteral_24864/*"x"*/,
                     *(_QWORD *)(*(_QWORD *)thisTransform + 720LL));
   if ( (thisTransform & 1) != 0 )
   {
@@ -12820,7 +12820,7 @@ LABEL_54:
     x = v16->m_Items[1].fields.x;
     thisTransform = (*(__int64 (__fastcall **)(__int64, void *, _QWORD))(*(_QWORD *)thisTransform + 760LL))(
                       thisTransform,
-                      StringLiteral_24859/*"x"*/,
+                      StringLiteral_24864/*"x"*/,
                       *(_QWORD *)(*(_QWORD *)thisTransform + 768LL));
     if ( !thisTransform )
       goto LABEL_52;
@@ -12833,7 +12833,7 @@ LABEL_54:
     goto LABEL_52;
   thisTransform = (*(__int64 (__fastcall **)(__int64, __int64, _QWORD))(*(_QWORD *)thisTransform + 712LL))(
                     thisTransform,
-                    StringLiteral_24961/*"y"*/,
+                    StringLiteral_24966/*"y"*/,
                     *(_QWORD *)(*(_QWORD *)thisTransform + 720LL));
   if ( (thisTransform & 1) != 0 )
   {
@@ -12848,7 +12848,7 @@ LABEL_54:
     y = v20->m_Items[1].fields.y;
     thisTransform = (*(__int64 (__fastcall **)(__int64, __int64, _QWORD))(*(_QWORD *)thisTransform + 760LL))(
                       thisTransform,
-                      StringLiteral_24961/*"y"*/,
+                      StringLiteral_24966/*"y"*/,
                       *(_QWORD *)(*(_QWORD *)thisTransform + 768LL));
     if ( !thisTransform )
       goto LABEL_52;
@@ -12861,7 +12861,7 @@ LABEL_54:
     goto LABEL_52;
   thisTransform = (*(__int64 (__fastcall **)(__int64, __int64, _QWORD))(*(_QWORD *)thisTransform + 712LL))(
                     thisTransform,
-                    StringLiteral_25008/*"z"*/,
+                    StringLiteral_25013/*"z"*/,
                     *(_QWORD *)(*(_QWORD *)thisTransform + 720LL));
   if ( (thisTransform & 1) != 0 )
   {
@@ -12876,7 +12876,7 @@ LABEL_54:
       v25 = v24->m_Items[1].fields.z;
       thisTransform = (*(__int64 (__fastcall **)(__int64, __int64, _QWORD))(*(_QWORD *)thisTransform + 760LL))(
                         thisTransform,
-                        StringLiteral_25008/*"z"*/,
+                        StringLiteral_25013/*"z"*/,
                         *(_QWORD *)(*(_QWORD *)thisTransform + 768LL));
       if ( !thisTransform )
         goto LABEL_52;
@@ -12888,7 +12888,7 @@ LABEL_54:
       goto LABEL_54;
     }
 LABEL_53:
-    sub_1C32E84(thisTransform);
+    sub_1C372BC(thisTransform);
   }
 LABEL_38:
   thisTransform = (__int64)this->fields.tweenArguments;
@@ -12896,14 +12896,14 @@ LABEL_38:
     goto LABEL_52;
   thisTransform = (*(__int64 (__fastcall **)(__int64, __int64, _QWORD))(*(_QWORD *)thisTransform + 712LL))(
                     thisTransform,
-                    StringLiteral_23592/*"speed"*/,
+                    StringLiteral_23596/*"speed"*/,
                     *(_QWORD *)(*(_QWORD *)thisTransform + 720LL));
   if ( (thisTransform & 1) == 0 )
     return;
   v28 = *p_vector3s;
   if ( !*p_vector3s )
 LABEL_52:
-    sub_1C32E7C(thisTransform);
+    sub_1C372B4(thisTransform);
   if ( LODWORD(v28->max_length) < 2 )
     goto LABEL_53;
   v29 = v28->m_Items[0].fields.x;
@@ -12912,10 +12912,10 @@ LABEL_52:
   v32 = v28->m_Items[1].fields.x;
   v34 = v28->m_Items[1].fields.y;
   v33 = v28->m_Items[1].fields.z;
-  if ( !byte_4C313CF )
+  if ( !byte_4C3C91F )
   {
-    sub_1C32C20(&System_Math_TypeInfo);
-    byte_4C313CF = 1;
+    sub_1C37058(&System_Math_TypeInfo);
+    byte_4C3C91F = 1;
   }
   if ( !System_Math_TypeInfo->_2.cctor_finished )
   {
@@ -12928,7 +12928,7 @@ LABEL_52:
     goto LABEL_52;
   thisTransform = (*(__int64 (__fastcall **)(__int64, __int64, _QWORD))(*(_QWORD *)thisTransform + 760LL))(
                     thisTransform,
-                    StringLiteral_23592/*"speed"*/,
+                    StringLiteral_23596/*"speed"*/,
                     *(_QWORD *)(*(_QWORD *)thisTransform + 768LL));
   if ( !thisTransform )
     goto LABEL_52;
@@ -12983,23 +12983,23 @@ void iTween__GenerateRotateByTargets(iTween_o *this, const MethodInfo *method)
   const MethodInfo *v38; // x1
   UnityEngine_Vector3_o eulerAngles; // 0:s0.4,4:s1.4,8:s2.4
 
-  if ( (byte_4C3E9D8 & 1) == 0 )
+  if ( (byte_4C49F58 & 1) == 0 )
   {
-    sub_1C32C20(&System_Math_TypeInfo);
-    sub_1C32C20(&float_TypeInfo);
-    sub_1C32C20(&UnityEngine_Vector3___TypeInfo);
-    sub_1C32C20(&UnityEngine_Vector3_TypeInfo);
-    sub_1C32C20(&StringLiteral_24859/*"x"*/);
-    sub_1C32C20(&StringLiteral_23592/*"speed"*/);
-    sub_1C32C20(&StringLiteral_16745/*"amount"*/);
-    sub_1C32C20(&StringLiteral_24961/*"y"*/);
-    sub_1C32C20(&StringLiteral_25008/*"z"*/);
-    byte_4C3E9D8 = 1;
+    sub_1C37058(&System_Math_TypeInfo);
+    sub_1C37058(&float_TypeInfo);
+    sub_1C37058(&UnityEngine_Vector3___TypeInfo);
+    sub_1C37058(&UnityEngine_Vector3_TypeInfo);
+    sub_1C37058(&StringLiteral_24864/*"x"*/);
+    sub_1C37058(&StringLiteral_23596/*"speed"*/);
+    sub_1C37058(&StringLiteral_16747/*"amount"*/);
+    sub_1C37058(&StringLiteral_24966/*"y"*/);
+    sub_1C37058(&StringLiteral_25013/*"z"*/);
+    byte_4C49F58 = 1;
   }
-  v3 = (struct UnityEngine_Vector3_array *)sub_1C32CC8(UnityEngine_Vector3___TypeInfo, 4);
+  v3 = (struct UnityEngine_Vector3_array *)sub_1C37100(UnityEngine_Vector3___TypeInfo, 4);
   this->fields.vector3s = v3;
   p_vector3s = &this->fields.vector3s;
-  sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.vector3s, (int32_t)v3, v5, v6);
+  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.vector3s, (int32_t)v3, v5, v6);
   thisTransform = (__int64)this->fields.thisTransform;
   if ( !thisTransform )
     goto LABEL_52;
@@ -13019,7 +13019,7 @@ void iTween__GenerateRotateByTargets(iTween_o *this, const MethodInfo *method)
     goto LABEL_52;
   thisTransform = (*(__int64 (__fastcall **)(__int64, __int64, _QWORD))(*(_QWORD *)thisTransform + 712LL))(
                     thisTransform,
-                    StringLiteral_16745/*"amount"*/,
+                    StringLiteral_16747/*"amount"*/,
                     *(_QWORD *)(*(_QWORD *)thisTransform + 720LL));
   if ( (thisTransform & 1) != 0 )
   {
@@ -13035,7 +13035,7 @@ void iTween__GenerateRotateByTargets(iTween_o *this, const MethodInfo *method)
       z = v9->m_Items[1].fields.z;
       thisTransform = (*(__int64 (__fastcall **)(__int64, __int64, _QWORD))(*(_QWORD *)thisTransform + 760LL))(
                         thisTransform,
-                        StringLiteral_16745/*"amount"*/,
+                        StringLiteral_16747/*"amount"*/,
                         *(_QWORD *)(*(_QWORD *)thisTransform + 768LL));
       if ( !thisTransform )
         goto LABEL_52;
@@ -13050,7 +13050,7 @@ void iTween__GenerateRotateByTargets(iTween_o *this, const MethodInfo *method)
         goto LABEL_38;
       }
 LABEL_54:
-      sub_1C3313C(thisTransform);
+      sub_1C37574(thisTransform);
       iTween__GenerateShakePositionTargets(v37, v38);
       return;
     }
@@ -13061,7 +13061,7 @@ LABEL_54:
     goto LABEL_52;
   thisTransform = (*(__int64 (__fastcall **)(__int64, void *, _QWORD))(*(_QWORD *)thisTransform + 712LL))(
                     thisTransform,
-                    StringLiteral_24859/*"x"*/,
+                    StringLiteral_24864/*"x"*/,
                     *(_QWORD *)(*(_QWORD *)thisTransform + 720LL));
   if ( (thisTransform & 1) != 0 )
   {
@@ -13076,7 +13076,7 @@ LABEL_54:
     x = v16->m_Items[1].fields.x;
     thisTransform = (*(__int64 (__fastcall **)(__int64, void *, _QWORD))(*(_QWORD *)thisTransform + 760LL))(
                       thisTransform,
-                      StringLiteral_24859/*"x"*/,
+                      StringLiteral_24864/*"x"*/,
                       *(_QWORD *)(*(_QWORD *)thisTransform + 768LL));
     if ( !thisTransform )
       goto LABEL_52;
@@ -13090,7 +13090,7 @@ LABEL_54:
     goto LABEL_52;
   thisTransform = (*(__int64 (__fastcall **)(__int64, __int64, _QWORD))(*(_QWORD *)thisTransform + 712LL))(
                     thisTransform,
-                    StringLiteral_24961/*"y"*/,
+                    StringLiteral_24966/*"y"*/,
                     *(_QWORD *)(*(_QWORD *)thisTransform + 720LL));
   if ( (thisTransform & 1) != 0 )
   {
@@ -13105,7 +13105,7 @@ LABEL_54:
     y = v20->m_Items[1].fields.y;
     thisTransform = (*(__int64 (__fastcall **)(__int64, __int64, _QWORD))(*(_QWORD *)thisTransform + 760LL))(
                       thisTransform,
-                      StringLiteral_24961/*"y"*/,
+                      StringLiteral_24966/*"y"*/,
                       *(_QWORD *)(*(_QWORD *)thisTransform + 768LL));
     if ( !thisTransform )
       goto LABEL_52;
@@ -13119,7 +13119,7 @@ LABEL_54:
     goto LABEL_52;
   thisTransform = (*(__int64 (__fastcall **)(__int64, __int64, _QWORD))(*(_QWORD *)thisTransform + 712LL))(
                     thisTransform,
-                    StringLiteral_25008/*"z"*/,
+                    StringLiteral_25013/*"z"*/,
                     *(_QWORD *)(*(_QWORD *)thisTransform + 720LL));
   if ( (thisTransform & 1) != 0 )
   {
@@ -13134,7 +13134,7 @@ LABEL_54:
       v25 = v24->m_Items[1].fields.z;
       thisTransform = (*(__int64 (__fastcall **)(__int64, __int64, _QWORD))(*(_QWORD *)thisTransform + 760LL))(
                         thisTransform,
-                        StringLiteral_25008/*"z"*/,
+                        StringLiteral_25013/*"z"*/,
                         *(_QWORD *)(*(_QWORD *)thisTransform + 768LL));
       if ( !thisTransform )
         goto LABEL_52;
@@ -13148,7 +13148,7 @@ LABEL_54:
       goto LABEL_54;
     }
 LABEL_53:
-    sub_1C32E84(thisTransform);
+    sub_1C372BC(thisTransform);
   }
 LABEL_38:
   thisTransform = (__int64)this->fields.tweenArguments;
@@ -13156,14 +13156,14 @@ LABEL_38:
     goto LABEL_52;
   thisTransform = (*(__int64 (__fastcall **)(__int64, __int64, _QWORD))(*(_QWORD *)thisTransform + 712LL))(
                     thisTransform,
-                    StringLiteral_23592/*"speed"*/,
+                    StringLiteral_23596/*"speed"*/,
                     *(_QWORD *)(*(_QWORD *)thisTransform + 720LL));
   if ( (thisTransform & 1) == 0 )
     return;
   v28 = *p_vector3s;
   if ( !*p_vector3s )
 LABEL_52:
-    sub_1C32E7C(thisTransform);
+    sub_1C372B4(thisTransform);
   if ( LODWORD(v28->max_length) < 2 )
     goto LABEL_53;
   v29 = v28->m_Items[0].fields.x;
@@ -13172,10 +13172,10 @@ LABEL_52:
   v32 = v28->m_Items[1].fields.x;
   v34 = v28->m_Items[1].fields.y;
   v33 = v28->m_Items[1].fields.z;
-  if ( !byte_4C313CF )
+  if ( !byte_4C3C91F )
   {
-    sub_1C32C20(&System_Math_TypeInfo);
-    byte_4C313CF = 1;
+    sub_1C37058(&System_Math_TypeInfo);
+    byte_4C3C91F = 1;
   }
   if ( !System_Math_TypeInfo->_2.cctor_finished )
   {
@@ -13188,7 +13188,7 @@ LABEL_52:
     goto LABEL_52;
   thisTransform = (*(__int64 (__fastcall **)(__int64, __int64, _QWORD))(*(_QWORD *)thisTransform + 760LL))(
                     thisTransform,
-                    StringLiteral_23592/*"speed"*/,
+                    StringLiteral_23596/*"speed"*/,
                     *(_QWORD *)(*(_QWORD *)thisTransform + 768LL));
   if ( !thisTransform )
     goto LABEL_52;
@@ -13264,27 +13264,27 @@ void iTween__GenerateRotateToTargets(iTween_o *this, const MethodInfo *method)
   UnityEngine_Vector3_o localEulerAngles; // 0:s0.4,4:s1.4,8:s2.4
   UnityEngine_Vector3_o eulerAngles; // 0:s0.4,4:s1.4,8:s2.4
 
-  if ( (byte_4C3E9D6 & 1) == 0 )
+  if ( (byte_4C49F56 & 1) == 0 )
   {
-    sub_1C32C20(&System_Math_TypeInfo);
-    sub_1C32C20(&float_TypeInfo);
-    sub_1C32C20(&UnityEngine_Transform_var);
-    sub_1C32C20(&UnityEngine_Transform_TypeInfo);
-    sub_1C32C20(&System_Type_TypeInfo);
-    sub_1C32C20(&UnityEngine_Vector3___TypeInfo);
-    sub_1C32C20(&UnityEngine_Vector3_var);
-    sub_1C32C20(&UnityEngine_Vector3_TypeInfo);
-    sub_1C32C20(&StringLiteral_24859/*"x"*/);
-    sub_1C32C20(&StringLiteral_23592/*"speed"*/);
-    sub_1C32C20(&StringLiteral_23148/*"rotation"*/);
-    sub_1C32C20(&StringLiteral_24961/*"y"*/);
-    sub_1C32C20(&StringLiteral_25008/*"z"*/);
-    byte_4C3E9D6 = 1;
+    sub_1C37058(&System_Math_TypeInfo);
+    sub_1C37058(&float_TypeInfo);
+    sub_1C37058(&UnityEngine_Transform_var);
+    sub_1C37058(&UnityEngine_Transform_TypeInfo);
+    sub_1C37058(&System_Type_TypeInfo);
+    sub_1C37058(&UnityEngine_Vector3___TypeInfo);
+    sub_1C37058(&UnityEngine_Vector3_var);
+    sub_1C37058(&UnityEngine_Vector3_TypeInfo);
+    sub_1C37058(&StringLiteral_24864/*"x"*/);
+    sub_1C37058(&StringLiteral_23596/*"speed"*/);
+    sub_1C37058(&StringLiteral_23152/*"rotation"*/);
+    sub_1C37058(&StringLiteral_24966/*"y"*/);
+    sub_1C37058(&StringLiteral_25013/*"z"*/);
+    byte_4C49F56 = 1;
   }
-  v3 = (struct UnityEngine_Vector3_array *)sub_1C32CC8(UnityEngine_Vector3___TypeInfo, 3);
+  v3 = (struct UnityEngine_Vector3_array *)sub_1C37100(UnityEngine_Vector3___TypeInfo, 3);
   this->fields.vector3s = v3;
   p_vector3s = &this->fields.vector3s;
-  sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.vector3s, (int32_t)v3, v5, v6);
+  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.vector3s, (int32_t)v3, v5, v6);
   thisTransform = (__int64)this->fields.thisTransform;
   if ( !thisTransform )
     goto LABEL_87;
@@ -13312,7 +13312,7 @@ void iTween__GenerateRotateToTargets(iTween_o *this, const MethodInfo *method)
     goto LABEL_87;
   thisTransform = (*(__int64 (__fastcall **)(__int64, __int64, _QWORD))(*(_QWORD *)thisTransform + 712LL))(
                     thisTransform,
-                    StringLiteral_23148/*"rotation"*/,
+                    StringLiteral_23152/*"rotation"*/,
                     *(_QWORD *)(*(_QWORD *)thisTransform + 720LL));
   tweenArguments = this->fields.tweenArguments;
   if ( !tweenArguments )
@@ -13322,7 +13322,7 @@ void iTween__GenerateRotateToTargets(iTween_o *this, const MethodInfo *method)
     thisTransform = (__int64)((__int64 (__fastcall *)(struct System_Collections_Hashtable_o *__return_ptr, struct System_Collections_Hashtable_o *, void *, const MethodInfo *))tweenArguments->klass->vtable._25_Contains.methodPtr)(
                                tweenArguments,
                                this->fields.tweenArguments,
-                               StringLiteral_24859/*"x"*/,
+                               StringLiteral_24864/*"x"*/,
                                tweenArguments->klass->vtable._25_Contains.method);
     if ( (thisTransform & 1) != 0 )
     {
@@ -13334,7 +13334,7 @@ void iTween__GenerateRotateToTargets(iTween_o *this, const MethodInfo *method)
         goto LABEL_87;
       thisTransform = (*(__int64 (__fastcall **)(__int64, void *, _QWORD))(*(_QWORD *)thisTransform + 760LL))(
                         thisTransform,
-                        StringLiteral_24859/*"x"*/,
+                        StringLiteral_24864/*"x"*/,
                         *(_QWORD *)(*(_QWORD *)thisTransform + 768LL));
       if ( !thisTransform )
         goto LABEL_87;
@@ -13350,7 +13350,7 @@ void iTween__GenerateRotateToTargets(iTween_o *this, const MethodInfo *method)
       goto LABEL_87;
     thisTransform = (*(__int64 (__fastcall **)(__int64, __int64, _QWORD))(*(_QWORD *)thisTransform + 712LL))(
                       thisTransform,
-                      StringLiteral_24961/*"y"*/,
+                      StringLiteral_24966/*"y"*/,
                       *(_QWORD *)(*(_QWORD *)thisTransform + 720LL));
     if ( (thisTransform & 1) != 0 )
     {
@@ -13362,7 +13362,7 @@ void iTween__GenerateRotateToTargets(iTween_o *this, const MethodInfo *method)
         goto LABEL_87;
       thisTransform = (*(__int64 (__fastcall **)(__int64, __int64, _QWORD))(*(_QWORD *)thisTransform + 760LL))(
                         thisTransform,
-                        StringLiteral_24961/*"y"*/,
+                        StringLiteral_24966/*"y"*/,
                         *(_QWORD *)(*(_QWORD *)thisTransform + 768LL));
       if ( !thisTransform )
         goto LABEL_87;
@@ -13378,7 +13378,7 @@ void iTween__GenerateRotateToTargets(iTween_o *this, const MethodInfo *method)
       goto LABEL_87;
     thisTransform = (*(__int64 (__fastcall **)(__int64, __int64, _QWORD))(*(_QWORD *)thisTransform + 712LL))(
                       thisTransform,
-                      StringLiteral_25008/*"z"*/,
+                      StringLiteral_25013/*"z"*/,
                       *(_QWORD *)(*(_QWORD *)thisTransform + 720LL));
     if ( (thisTransform & 1) == 0 )
       goto LABEL_56;
@@ -13390,7 +13390,7 @@ void iTween__GenerateRotateToTargets(iTween_o *this, const MethodInfo *method)
       goto LABEL_87;
     thisTransform = (*(__int64 (__fastcall **)(__int64, __int64, _QWORD))(*(_QWORD *)thisTransform + 760LL))(
                       thisTransform,
-                      StringLiteral_25008/*"z"*/,
+                      StringLiteral_25013/*"z"*/,
                       *(_QWORD *)(*(_QWORD *)thisTransform + 768LL));
     if ( !thisTransform )
       goto LABEL_87;
@@ -13403,14 +13403,14 @@ void iTween__GenerateRotateToTargets(iTween_o *this, const MethodInfo *method)
       goto LABEL_56;
     }
 LABEL_89:
-    sub_1C3313C(thisTransform);
+    sub_1C37574(thisTransform);
     iTween__GenerateRotateAddTargets(v57, v58);
     return;
   }
   thisTransform = (__int64)((__int64 (__fastcall *)(struct System_Collections_Hashtable_o *__return_ptr, struct System_Collections_Hashtable_o *, __int64, const MethodInfo *))tweenArguments->klass->vtable._28_get_Item.methodPtr)(
                              tweenArguments,
                              this->fields.tweenArguments,
-                             StringLiteral_23148/*"rotation"*/,
+                             StringLiteral_23152/*"rotation"*/,
                              tweenArguments->klass->vtable._28_get_Item.method);
   if ( !thisTransform )
     goto LABEL_87;
@@ -13424,12 +13424,12 @@ LABEL_89:
   v14 = this->fields.tweenArguments;
   if ( !v14 )
 LABEL_87:
-    sub_1C32E7C(thisTransform);
+    sub_1C372B4(thisTransform);
   v15 = thisTransform;
   thisTransform = (__int64)((__int64 (__fastcall *)(struct System_Collections_Hashtable_o *__return_ptr, struct System_Collections_Hashtable_o *, __int64, const MethodInfo *))v14->klass->vtable._28_get_Item.methodPtr)(
                              v14,
                              this->fields.tweenArguments,
-                             StringLiteral_23148/*"rotation"*/,
+                             StringLiteral_23152/*"rotation"*/,
                              v14->klass->vtable._28_get_Item.method);
   if ( (v15 & 1) == 0 )
   {
@@ -13450,7 +13450,7 @@ LABEL_87:
     vector3s = this->fields.vector3s;
     thisTransform = (*(__int64 (__fastcall **)(__int64, __int64, _QWORD))(*(_QWORD *)thisTransform + 760LL))(
                       thisTransform,
-                      StringLiteral_23148/*"rotation"*/,
+                      StringLiteral_23152/*"rotation"*/,
                       *(_QWORD *)(*(_QWORD *)thisTransform + 768LL));
     if ( !vector3s || !thisTransform )
       goto LABEL_87;
@@ -13537,7 +13537,7 @@ LABEL_56:
     goto LABEL_87;
   thisTransform = (*(__int64 (__fastcall **)(__int64, __int64, _QWORD))(*(_QWORD *)thisTransform + 712LL))(
                     thisTransform,
-                    StringLiteral_23592/*"speed"*/,
+                    StringLiteral_23596/*"speed"*/,
                     *(_QWORD *)(*(_QWORD *)thisTransform + 720LL));
   if ( (thisTransform & 1) == 0 )
     return;
@@ -13546,17 +13546,17 @@ LABEL_56:
     goto LABEL_87;
   if ( LODWORD(v48->max_length) < 2 )
 LABEL_88:
-    sub_1C32E84(thisTransform);
+    sub_1C372BC(thisTransform);
   v49 = v48->m_Items[0].fields.x;
   v50 = v48->m_Items[0].fields.y;
   v51 = v48->m_Items[0].fields.z;
   v52 = v48->m_Items[1].fields.x;
   v54 = v48->m_Items[1].fields.y;
   v53 = v48->m_Items[1].fields.z;
-  if ( !byte_4C313CF )
+  if ( !byte_4C3C91F )
   {
-    sub_1C32C20(&System_Math_TypeInfo);
-    byte_4C313CF = 1;
+    sub_1C37058(&System_Math_TypeInfo);
+    byte_4C3C91F = 1;
   }
   if ( !System_Math_TypeInfo->_2.cctor_finished )
   {
@@ -13569,7 +13569,7 @@ LABEL_88:
     goto LABEL_87;
   thisTransform = (*(__int64 (__fastcall **)(__int64, __int64, _QWORD))(*(_QWORD *)thisTransform + 760LL))(
                     thisTransform,
-                    StringLiteral_23592/*"speed"*/,
+                    StringLiteral_23596/*"speed"*/,
                     *(_QWORD *)(*(_QWORD *)thisTransform + 768LL));
   if ( !thisTransform )
     goto LABEL_87;
@@ -13624,23 +13624,23 @@ void iTween__GenerateScaleAddTargets(iTween_o *this, const MethodInfo *method)
   const MethodInfo *v38; // x1
   UnityEngine_Vector3_o localScale; // 0:s0.4,4:s1.4,8:s2.4
 
-  if ( (byte_4C3E9D5 & 1) == 0 )
+  if ( (byte_4C49F55 & 1) == 0 )
   {
-    sub_1C32C20(&System_Math_TypeInfo);
-    sub_1C32C20(&float_TypeInfo);
-    sub_1C32C20(&UnityEngine_Vector3___TypeInfo);
-    sub_1C32C20(&UnityEngine_Vector3_TypeInfo);
-    sub_1C32C20(&StringLiteral_24859/*"x"*/);
-    sub_1C32C20(&StringLiteral_23592/*"speed"*/);
-    sub_1C32C20(&StringLiteral_16745/*"amount"*/);
-    sub_1C32C20(&StringLiteral_24961/*"y"*/);
-    sub_1C32C20(&StringLiteral_25008/*"z"*/);
-    byte_4C3E9D5 = 1;
+    sub_1C37058(&System_Math_TypeInfo);
+    sub_1C37058(&float_TypeInfo);
+    sub_1C37058(&UnityEngine_Vector3___TypeInfo);
+    sub_1C37058(&UnityEngine_Vector3_TypeInfo);
+    sub_1C37058(&StringLiteral_24864/*"x"*/);
+    sub_1C37058(&StringLiteral_23596/*"speed"*/);
+    sub_1C37058(&StringLiteral_16747/*"amount"*/);
+    sub_1C37058(&StringLiteral_24966/*"y"*/);
+    sub_1C37058(&StringLiteral_25013/*"z"*/);
+    byte_4C49F55 = 1;
   }
-  v3 = (struct UnityEngine_Vector3_array *)sub_1C32CC8(UnityEngine_Vector3___TypeInfo, 3);
+  v3 = (struct UnityEngine_Vector3_array *)sub_1C37100(UnityEngine_Vector3___TypeInfo, 3);
   this->fields.vector3s = v3;
   p_vector3s = &this->fields.vector3s;
-  sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.vector3s, (int32_t)v3, v5, v6);
+  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.vector3s, (int32_t)v3, v5, v6);
   thisTransform = (__int64)this->fields.thisTransform;
   if ( !thisTransform )
     goto LABEL_52;
@@ -13659,7 +13659,7 @@ void iTween__GenerateScaleAddTargets(iTween_o *this, const MethodInfo *method)
     goto LABEL_52;
   thisTransform = (*(__int64 (__fastcall **)(__int64, __int64, _QWORD))(*(_QWORD *)thisTransform + 712LL))(
                     thisTransform,
-                    StringLiteral_16745/*"amount"*/,
+                    StringLiteral_16747/*"amount"*/,
                     *(_QWORD *)(*(_QWORD *)thisTransform + 720LL));
   if ( (thisTransform & 1) != 0 )
   {
@@ -13675,7 +13675,7 @@ void iTween__GenerateScaleAddTargets(iTween_o *this, const MethodInfo *method)
       z = v9->m_Items[1].fields.z;
       thisTransform = (*(__int64 (__fastcall **)(__int64, __int64, _QWORD))(*(_QWORD *)thisTransform + 760LL))(
                         thisTransform,
-                        StringLiteral_16745/*"amount"*/,
+                        StringLiteral_16747/*"amount"*/,
                         *(_QWORD *)(*(_QWORD *)thisTransform + 768LL));
       if ( !thisTransform )
         goto LABEL_52;
@@ -13688,7 +13688,7 @@ void iTween__GenerateScaleAddTargets(iTween_o *this, const MethodInfo *method)
         goto LABEL_38;
       }
 LABEL_54:
-      sub_1C3313C(thisTransform);
+      sub_1C37574(thisTransform);
       iTween__GenerateRotateToTargets(v37, v38);
       return;
     }
@@ -13699,7 +13699,7 @@ LABEL_54:
     goto LABEL_52;
   thisTransform = (*(__int64 (__fastcall **)(__int64, void *, _QWORD))(*(_QWORD *)thisTransform + 712LL))(
                     thisTransform,
-                    StringLiteral_24859/*"x"*/,
+                    StringLiteral_24864/*"x"*/,
                     *(_QWORD *)(*(_QWORD *)thisTransform + 720LL));
   if ( (thisTransform & 1) != 0 )
   {
@@ -13714,7 +13714,7 @@ LABEL_54:
     x = v16->m_Items[1].fields.x;
     thisTransform = (*(__int64 (__fastcall **)(__int64, void *, _QWORD))(*(_QWORD *)thisTransform + 760LL))(
                       thisTransform,
-                      StringLiteral_24859/*"x"*/,
+                      StringLiteral_24864/*"x"*/,
                       *(_QWORD *)(*(_QWORD *)thisTransform + 768LL));
     if ( !thisTransform )
       goto LABEL_52;
@@ -13727,7 +13727,7 @@ LABEL_54:
     goto LABEL_52;
   thisTransform = (*(__int64 (__fastcall **)(__int64, __int64, _QWORD))(*(_QWORD *)thisTransform + 712LL))(
                     thisTransform,
-                    StringLiteral_24961/*"y"*/,
+                    StringLiteral_24966/*"y"*/,
                     *(_QWORD *)(*(_QWORD *)thisTransform + 720LL));
   if ( (thisTransform & 1) != 0 )
   {
@@ -13742,7 +13742,7 @@ LABEL_54:
     y = v20->m_Items[1].fields.y;
     thisTransform = (*(__int64 (__fastcall **)(__int64, __int64, _QWORD))(*(_QWORD *)thisTransform + 760LL))(
                       thisTransform,
-                      StringLiteral_24961/*"y"*/,
+                      StringLiteral_24966/*"y"*/,
                       *(_QWORD *)(*(_QWORD *)thisTransform + 768LL));
     if ( !thisTransform )
       goto LABEL_52;
@@ -13755,7 +13755,7 @@ LABEL_54:
     goto LABEL_52;
   thisTransform = (*(__int64 (__fastcall **)(__int64, __int64, _QWORD))(*(_QWORD *)thisTransform + 712LL))(
                     thisTransform,
-                    StringLiteral_25008/*"z"*/,
+                    StringLiteral_25013/*"z"*/,
                     *(_QWORD *)(*(_QWORD *)thisTransform + 720LL));
   if ( (thisTransform & 1) != 0 )
   {
@@ -13770,7 +13770,7 @@ LABEL_54:
       v25 = v24->m_Items[1].fields.z;
       thisTransform = (*(__int64 (__fastcall **)(__int64, __int64, _QWORD))(*(_QWORD *)thisTransform + 760LL))(
                         thisTransform,
-                        StringLiteral_25008/*"z"*/,
+                        StringLiteral_25013/*"z"*/,
                         *(_QWORD *)(*(_QWORD *)thisTransform + 768LL));
       if ( !thisTransform )
         goto LABEL_52;
@@ -13782,7 +13782,7 @@ LABEL_54:
       goto LABEL_54;
     }
 LABEL_53:
-    sub_1C32E84(thisTransform);
+    sub_1C372BC(thisTransform);
   }
 LABEL_38:
   thisTransform = (__int64)this->fields.tweenArguments;
@@ -13790,14 +13790,14 @@ LABEL_38:
     goto LABEL_52;
   thisTransform = (*(__int64 (__fastcall **)(__int64, __int64, _QWORD))(*(_QWORD *)thisTransform + 712LL))(
                     thisTransform,
-                    StringLiteral_23592/*"speed"*/,
+                    StringLiteral_23596/*"speed"*/,
                     *(_QWORD *)(*(_QWORD *)thisTransform + 720LL));
   if ( (thisTransform & 1) == 0 )
     return;
   v28 = *p_vector3s;
   if ( !*p_vector3s )
 LABEL_52:
-    sub_1C32E7C(thisTransform);
+    sub_1C372B4(thisTransform);
   if ( LODWORD(v28->max_length) < 2 )
     goto LABEL_53;
   v29 = v28->m_Items[0].fields.x;
@@ -13806,10 +13806,10 @@ LABEL_52:
   v32 = v28->m_Items[1].fields.x;
   v34 = v28->m_Items[1].fields.y;
   v33 = v28->m_Items[1].fields.z;
-  if ( !byte_4C313CF )
+  if ( !byte_4C3C91F )
   {
-    sub_1C32C20(&System_Math_TypeInfo);
-    byte_4C313CF = 1;
+    sub_1C37058(&System_Math_TypeInfo);
+    byte_4C3C91F = 1;
   }
   if ( !System_Math_TypeInfo->_2.cctor_finished )
   {
@@ -13822,7 +13822,7 @@ LABEL_52:
     goto LABEL_52;
   thisTransform = (*(__int64 (__fastcall **)(__int64, __int64, _QWORD))(*(_QWORD *)thisTransform + 760LL))(
                     thisTransform,
-                    StringLiteral_23592/*"speed"*/,
+                    StringLiteral_23596/*"speed"*/,
                     *(_QWORD *)(*(_QWORD *)thisTransform + 768LL));
   if ( !thisTransform )
     goto LABEL_52;
@@ -13875,23 +13875,23 @@ void iTween__GenerateScaleByTargets(iTween_o *this, const MethodInfo *method)
   const MethodInfo *v36; // x1
   UnityEngine_Vector3_o localScale; // 0:s0.4,4:s1.4,8:s2.4
 
-  if ( (byte_4C3E9D4 & 1) == 0 )
+  if ( (byte_4C49F54 & 1) == 0 )
   {
-    sub_1C32C20(&System_Math_TypeInfo);
-    sub_1C32C20(&float_TypeInfo);
-    sub_1C32C20(&UnityEngine_Vector3___TypeInfo);
-    sub_1C32C20(&UnityEngine_Vector3_TypeInfo);
-    sub_1C32C20(&StringLiteral_24859/*"x"*/);
-    sub_1C32C20(&StringLiteral_23592/*"speed"*/);
-    sub_1C32C20(&StringLiteral_16745/*"amount"*/);
-    sub_1C32C20(&StringLiteral_24961/*"y"*/);
-    sub_1C32C20(&StringLiteral_25008/*"z"*/);
-    byte_4C3E9D4 = 1;
+    sub_1C37058(&System_Math_TypeInfo);
+    sub_1C37058(&float_TypeInfo);
+    sub_1C37058(&UnityEngine_Vector3___TypeInfo);
+    sub_1C37058(&UnityEngine_Vector3_TypeInfo);
+    sub_1C37058(&StringLiteral_24864/*"x"*/);
+    sub_1C37058(&StringLiteral_23596/*"speed"*/);
+    sub_1C37058(&StringLiteral_16747/*"amount"*/);
+    sub_1C37058(&StringLiteral_24966/*"y"*/);
+    sub_1C37058(&StringLiteral_25013/*"z"*/);
+    byte_4C49F54 = 1;
   }
-  v3 = (struct UnityEngine_Vector3_array *)sub_1C32CC8(UnityEngine_Vector3___TypeInfo, 3);
+  v3 = (struct UnityEngine_Vector3_array *)sub_1C37100(UnityEngine_Vector3___TypeInfo, 3);
   this->fields.vector3s = v3;
   p_vector3s = &this->fields.vector3s;
-  sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.vector3s, (int32_t)v3, v5, v6);
+  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.vector3s, (int32_t)v3, v5, v6);
   thisTransform = (__int64)this->fields.thisTransform;
   if ( !thisTransform )
     goto LABEL_54;
@@ -13910,7 +13910,7 @@ void iTween__GenerateScaleByTargets(iTween_o *this, const MethodInfo *method)
     goto LABEL_54;
   thisTransform = (*(__int64 (__fastcall **)(__int64, __int64, _QWORD))(*(_QWORD *)thisTransform + 712LL))(
                     thisTransform,
-                    StringLiteral_16745/*"amount"*/,
+                    StringLiteral_16747/*"amount"*/,
                     *(_QWORD *)(*(_QWORD *)thisTransform + 720LL));
   if ( (thisTransform & 1) != 0 )
   {
@@ -13926,7 +13926,7 @@ void iTween__GenerateScaleByTargets(iTween_o *this, const MethodInfo *method)
       z = v9->m_Items[1].fields.z;
       thisTransform = (*(__int64 (__fastcall **)(__int64, __int64, _QWORD))(*(_QWORD *)thisTransform + 760LL))(
                         thisTransform,
-                        StringLiteral_16745/*"amount"*/,
+                        StringLiteral_16747/*"amount"*/,
                         *(_QWORD *)(*(_QWORD *)thisTransform + 768LL));
       if ( !thisTransform )
         goto LABEL_54;
@@ -13948,7 +13948,7 @@ void iTween__GenerateScaleByTargets(iTween_o *this, const MethodInfo *method)
     goto LABEL_54;
   thisTransform = (*(__int64 (__fastcall **)(__int64, void *, _QWORD))(*(_QWORD *)thisTransform + 712LL))(
                     thisTransform,
-                    StringLiteral_24859/*"x"*/,
+                    StringLiteral_24864/*"x"*/,
                     *(_QWORD *)(*(_QWORD *)thisTransform + 720LL));
   if ( (thisTransform & 1) != 0 )
   {
@@ -13963,7 +13963,7 @@ void iTween__GenerateScaleByTargets(iTween_o *this, const MethodInfo *method)
     x = v15->m_Items[1].fields.x;
     thisTransform = (*(__int64 (__fastcall **)(__int64, void *, _QWORD))(*(_QWORD *)thisTransform + 760LL))(
                       thisTransform,
-                      StringLiteral_24859/*"x"*/,
+                      StringLiteral_24864/*"x"*/,
                       *(_QWORD *)(*(_QWORD *)thisTransform + 768LL));
     if ( !thisTransform )
       goto LABEL_54;
@@ -13976,7 +13976,7 @@ void iTween__GenerateScaleByTargets(iTween_o *this, const MethodInfo *method)
     goto LABEL_54;
   thisTransform = (*(__int64 (__fastcall **)(__int64, __int64, _QWORD))(*(_QWORD *)thisTransform + 712LL))(
                     thisTransform,
-                    StringLiteral_24961/*"y"*/,
+                    StringLiteral_24966/*"y"*/,
                     *(_QWORD *)(*(_QWORD *)thisTransform + 720LL));
   if ( (thisTransform & 1) != 0 )
   {
@@ -13991,7 +13991,7 @@ void iTween__GenerateScaleByTargets(iTween_o *this, const MethodInfo *method)
     y = v19->m_Items[1].fields.y;
     thisTransform = (*(__int64 (__fastcall **)(__int64, __int64, _QWORD))(*(_QWORD *)thisTransform + 760LL))(
                       thisTransform,
-                      StringLiteral_24961/*"y"*/,
+                      StringLiteral_24966/*"y"*/,
                       *(_QWORD *)(*(_QWORD *)thisTransform + 768LL));
     if ( !thisTransform )
       goto LABEL_54;
@@ -14004,7 +14004,7 @@ void iTween__GenerateScaleByTargets(iTween_o *this, const MethodInfo *method)
     goto LABEL_54;
   thisTransform = (*(__int64 (__fastcall **)(__int64, __int64, _QWORD))(*(_QWORD *)thisTransform + 712LL))(
                     thisTransform,
-                    StringLiteral_25008/*"z"*/,
+                    StringLiteral_25013/*"z"*/,
                     *(_QWORD *)(*(_QWORD *)thisTransform + 720LL));
   if ( (thisTransform & 1) != 0 )
   {
@@ -14019,7 +14019,7 @@ void iTween__GenerateScaleByTargets(iTween_o *this, const MethodInfo *method)
       v23 = v9->m_Items[1].fields.z;
       thisTransform = (*(__int64 (__fastcall **)(__int64, __int64, _QWORD))(*(_QWORD *)thisTransform + 760LL))(
                         thisTransform,
-                        StringLiteral_25008/*"z"*/,
+                        StringLiteral_25013/*"z"*/,
                         *(_QWORD *)(*(_QWORD *)thisTransform + 768LL));
       if ( !thisTransform )
         goto LABEL_54;
@@ -14031,12 +14031,12 @@ LABEL_39:
         goto LABEL_40;
       }
 LABEL_56:
-      sub_1C3313C(thisTransform);
+      sub_1C37574(thisTransform);
       iTween__GenerateScaleAddTargets(v35, v36);
       return;
     }
 LABEL_55:
-    sub_1C32E84(thisTransform);
+    sub_1C372BC(thisTransform);
   }
 LABEL_40:
   thisTransform = (__int64)this->fields.tweenArguments;
@@ -14044,14 +14044,14 @@ LABEL_40:
     goto LABEL_54;
   thisTransform = (*(__int64 (__fastcall **)(__int64, __int64, _QWORD))(*(_QWORD *)thisTransform + 712LL))(
                     thisTransform,
-                    StringLiteral_23592/*"speed"*/,
+                    StringLiteral_23596/*"speed"*/,
                     *(_QWORD *)(*(_QWORD *)thisTransform + 720LL));
   if ( (thisTransform & 1) == 0 )
     return;
   v26 = *p_vector3s;
   if ( !*p_vector3s )
 LABEL_54:
-    sub_1C32E7C(thisTransform);
+    sub_1C372B4(thisTransform);
   if ( LODWORD(v26->max_length) < 2 )
     goto LABEL_55;
   v27 = v26->m_Items[0].fields.x;
@@ -14060,10 +14060,10 @@ LABEL_54:
   v30 = v26->m_Items[1].fields.x;
   v32 = v26->m_Items[1].fields.y;
   v31 = v26->m_Items[1].fields.z;
-  if ( !byte_4C313CF )
+  if ( !byte_4C3C91F )
   {
-    sub_1C32C20(&System_Math_TypeInfo);
-    byte_4C313CF = 1;
+    sub_1C37058(&System_Math_TypeInfo);
+    byte_4C3C91F = 1;
   }
   if ( !System_Math_TypeInfo->_2.cctor_finished )
   {
@@ -14076,7 +14076,7 @@ LABEL_54:
     goto LABEL_54;
   thisTransform = (*(__int64 (__fastcall **)(__int64, __int64, _QWORD))(*(_QWORD *)thisTransform + 760LL))(
                     thisTransform,
-                    StringLiteral_23592/*"speed"*/,
+                    StringLiteral_23596/*"speed"*/,
                     *(_QWORD *)(*(_QWORD *)thisTransform + 768LL));
   if ( !thisTransform )
     goto LABEL_54;
@@ -14139,27 +14139,27 @@ void iTween__GenerateScaleToTargets(iTween_o *this, const MethodInfo *method)
   UnityEngine_Vector3_o localScale; // 0:s0.4,4:s1.4,8:s2.4
   UnityEngine_Vector3_o v47; // 0:s0.4,4:s1.4,8:s2.4
 
-  if ( (byte_4C3E9D3 & 1) == 0 )
+  if ( (byte_4C49F53 & 1) == 0 )
   {
-    sub_1C32C20(&System_Math_TypeInfo);
-    sub_1C32C20(&float_TypeInfo);
-    sub_1C32C20(&UnityEngine_Transform_var);
-    sub_1C32C20(&UnityEngine_Transform_TypeInfo);
-    sub_1C32C20(&System_Type_TypeInfo);
-    sub_1C32C20(&UnityEngine_Vector3___TypeInfo);
-    sub_1C32C20(&UnityEngine_Vector3_var);
-    sub_1C32C20(&UnityEngine_Vector3_TypeInfo);
-    sub_1C32C20(&StringLiteral_24859/*"x"*/);
-    sub_1C32C20(&StringLiteral_23592/*"speed"*/);
-    sub_1C32C20(&StringLiteral_24961/*"y"*/);
-    sub_1C32C20(&StringLiteral_25008/*"z"*/);
-    sub_1C32C20(&StringLiteral_23191/*"scale"*/);
-    byte_4C3E9D3 = 1;
+    sub_1C37058(&System_Math_TypeInfo);
+    sub_1C37058(&float_TypeInfo);
+    sub_1C37058(&UnityEngine_Transform_var);
+    sub_1C37058(&UnityEngine_Transform_TypeInfo);
+    sub_1C37058(&System_Type_TypeInfo);
+    sub_1C37058(&UnityEngine_Vector3___TypeInfo);
+    sub_1C37058(&UnityEngine_Vector3_var);
+    sub_1C37058(&UnityEngine_Vector3_TypeInfo);
+    sub_1C37058(&StringLiteral_24864/*"x"*/);
+    sub_1C37058(&StringLiteral_23596/*"speed"*/);
+    sub_1C37058(&StringLiteral_24966/*"y"*/);
+    sub_1C37058(&StringLiteral_25013/*"z"*/);
+    sub_1C37058(&StringLiteral_23195/*"scale"*/);
+    byte_4C49F53 = 1;
   }
-  v3 = (struct UnityEngine_Vector3_array *)sub_1C32CC8(UnityEngine_Vector3___TypeInfo, 3);
+  v3 = (struct UnityEngine_Vector3_array *)sub_1C37100(UnityEngine_Vector3___TypeInfo, 3);
   this->fields.vector3s = v3;
   p_vector3s = &this->fields.vector3s;
-  sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.vector3s, (int32_t)v3, v5, v6);
+  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.vector3s, (int32_t)v3, v5, v6);
   thisTransform = (__int64)this->fields.thisTransform;
   if ( !thisTransform )
     goto LABEL_67;
@@ -14178,7 +14178,7 @@ void iTween__GenerateScaleToTargets(iTween_o *this, const MethodInfo *method)
     goto LABEL_67;
   thisTransform = (*(__int64 (__fastcall **)(__int64, __int64, _QWORD))(*(_QWORD *)thisTransform + 712LL))(
                     thisTransform,
-                    StringLiteral_23191/*"scale"*/,
+                    StringLiteral_23195/*"scale"*/,
                     *(_QWORD *)(*(_QWORD *)thisTransform + 720LL));
   tweenArguments = this->fields.tweenArguments;
   if ( !tweenArguments )
@@ -14188,7 +14188,7 @@ void iTween__GenerateScaleToTargets(iTween_o *this, const MethodInfo *method)
     thisTransform = (__int64)((__int64 (__fastcall *)(struct System_Collections_Hashtable_o *__return_ptr, struct System_Collections_Hashtable_o *, void *, const MethodInfo *))tweenArguments->klass->vtable._25_Contains.methodPtr)(
                                tweenArguments,
                                this->fields.tweenArguments,
-                               StringLiteral_24859/*"x"*/,
+                               StringLiteral_24864/*"x"*/,
                                tweenArguments->klass->vtable._25_Contains.method);
     if ( (thisTransform & 1) != 0 )
     {
@@ -14200,7 +14200,7 @@ void iTween__GenerateScaleToTargets(iTween_o *this, const MethodInfo *method)
         goto LABEL_67;
       thisTransform = (*(__int64 (__fastcall **)(__int64, void *, _QWORD))(*(_QWORD *)thisTransform + 760LL))(
                         thisTransform,
-                        StringLiteral_24859/*"x"*/,
+                        StringLiteral_24864/*"x"*/,
                         *(_QWORD *)(*(_QWORD *)thisTransform + 768LL));
       if ( !thisTransform )
         goto LABEL_67;
@@ -14216,7 +14216,7 @@ void iTween__GenerateScaleToTargets(iTween_o *this, const MethodInfo *method)
       goto LABEL_67;
     thisTransform = (*(__int64 (__fastcall **)(__int64, __int64, _QWORD))(*(_QWORD *)thisTransform + 712LL))(
                       thisTransform,
-                      StringLiteral_24961/*"y"*/,
+                      StringLiteral_24966/*"y"*/,
                       *(_QWORD *)(*(_QWORD *)thisTransform + 720LL));
     if ( (thisTransform & 1) != 0 )
     {
@@ -14228,7 +14228,7 @@ void iTween__GenerateScaleToTargets(iTween_o *this, const MethodInfo *method)
         goto LABEL_67;
       thisTransform = (*(__int64 (__fastcall **)(__int64, __int64, _QWORD))(*(_QWORD *)thisTransform + 760LL))(
                         thisTransform,
-                        StringLiteral_24961/*"y"*/,
+                        StringLiteral_24966/*"y"*/,
                         *(_QWORD *)(*(_QWORD *)thisTransform + 768LL));
       if ( !thisTransform )
         goto LABEL_67;
@@ -14244,7 +14244,7 @@ void iTween__GenerateScaleToTargets(iTween_o *this, const MethodInfo *method)
       goto LABEL_67;
     thisTransform = (*(__int64 (__fastcall **)(__int64, __int64, _QWORD))(*(_QWORD *)thisTransform + 712LL))(
                       thisTransform,
-                      StringLiteral_25008/*"z"*/,
+                      StringLiteral_25013/*"z"*/,
                       *(_QWORD *)(*(_QWORD *)thisTransform + 720LL));
     if ( (thisTransform & 1) == 0 )
       goto LABEL_53;
@@ -14256,7 +14256,7 @@ void iTween__GenerateScaleToTargets(iTween_o *this, const MethodInfo *method)
       goto LABEL_67;
     thisTransform = (*(__int64 (__fastcall **)(__int64, __int64, _QWORD))(*(_QWORD *)thisTransform + 760LL))(
                       thisTransform,
-                      StringLiteral_25008/*"z"*/,
+                      StringLiteral_25013/*"z"*/,
                       *(_QWORD *)(*(_QWORD *)thisTransform + 768LL));
     if ( !thisTransform )
       goto LABEL_67;
@@ -14269,14 +14269,14 @@ void iTween__GenerateScaleToTargets(iTween_o *this, const MethodInfo *method)
       goto LABEL_53;
     }
 LABEL_69:
-    sub_1C3313C(thisTransform);
+    sub_1C37574(thisTransform);
     iTween__GenerateScaleByTargets(v44, v45);
     return;
   }
   thisTransform = (__int64)((__int64 (__fastcall *)(struct System_Collections_Hashtable_o *__return_ptr, struct System_Collections_Hashtable_o *, __int64, const MethodInfo *))tweenArguments->klass->vtable._28_get_Item.methodPtr)(
                              tweenArguments,
                              this->fields.tweenArguments,
-                             StringLiteral_23191/*"scale"*/,
+                             StringLiteral_23195/*"scale"*/,
                              tweenArguments->klass->vtable._28_get_Item.method);
   if ( !thisTransform )
     goto LABEL_67;
@@ -14294,7 +14294,7 @@ LABEL_69:
   thisTransform = (__int64)((__int64 (__fastcall *)(struct System_Collections_Hashtable_o *__return_ptr, struct System_Collections_Hashtable_o *, __int64, const MethodInfo *))v14->klass->vtable._28_get_Item.methodPtr)(
                              v14,
                              this->fields.tweenArguments,
-                             StringLiteral_23191/*"scale"*/,
+                             StringLiteral_23195/*"scale"*/,
                              v14->klass->vtable._28_get_Item.method);
   if ( (v15 & 1) == 0 )
   {
@@ -14314,7 +14314,7 @@ LABEL_69:
     vector3s = this->fields.vector3s;
     thisTransform = (*(__int64 (__fastcall **)(__int64, __int64, _QWORD))(*(_QWORD *)thisTransform + 760LL))(
                       thisTransform,
-                      StringLiteral_23191/*"scale"*/,
+                      StringLiteral_23195/*"scale"*/,
                       *(_QWORD *)(*(_QWORD *)thisTransform + 768LL));
     if ( !vector3s || !thisTransform )
       goto LABEL_67;
@@ -14342,7 +14342,7 @@ LABEL_69:
   v47 = UnityEngine_Transform__get_localScale((UnityEngine_Transform_o *)thisTransform, 0);
   if ( !v17 )
 LABEL_67:
-    sub_1C32E7C(thisTransform);
+    sub_1C372B4(thisTransform);
   if ( LODWORD(v17->max_length) <= 1 )
     goto LABEL_68;
   v17->m_Items[1] = v47;
@@ -14352,7 +14352,7 @@ LABEL_53:
     goto LABEL_67;
   thisTransform = (*(__int64 (__fastcall **)(__int64, __int64, _QWORD))(*(_QWORD *)thisTransform + 712LL))(
                     thisTransform,
-                    StringLiteral_23592/*"speed"*/,
+                    StringLiteral_23596/*"speed"*/,
                     *(_QWORD *)(*(_QWORD *)thisTransform + 720LL));
   if ( (thisTransform & 1) == 0 )
     return;
@@ -14361,17 +14361,17 @@ LABEL_53:
     goto LABEL_67;
   if ( LODWORD(v35->max_length) < 2 )
 LABEL_68:
-    sub_1C32E84(thisTransform);
+    sub_1C372BC(thisTransform);
   x = v35->m_Items[0].fields.x;
   y = v35->m_Items[0].fields.y;
   z = v35->m_Items[0].fields.z;
   v39 = v35->m_Items[1].fields.x;
   v41 = v35->m_Items[1].fields.y;
   v40 = v35->m_Items[1].fields.z;
-  if ( !byte_4C313CF )
+  if ( !byte_4C3C91F )
   {
-    sub_1C32C20(&System_Math_TypeInfo);
-    byte_4C313CF = 1;
+    sub_1C37058(&System_Math_TypeInfo);
+    byte_4C3C91F = 1;
   }
   if ( !System_Math_TypeInfo->_2.cctor_finished )
   {
@@ -14384,7 +14384,7 @@ LABEL_68:
     goto LABEL_67;
   thisTransform = (*(__int64 (__fastcall **)(__int64, __int64, _QWORD))(*(_QWORD *)thisTransform + 760LL))(
                     thisTransform,
-                    StringLiteral_23592/*"speed"*/,
+                    StringLiteral_23596/*"speed"*/,
                     *(_QWORD *)(*(_QWORD *)thisTransform + 768LL));
   if ( !thisTransform )
     goto LABEL_67;
@@ -14425,21 +14425,21 @@ void iTween__GenerateShakePositionTargets(iTween_o *this, const MethodInfo *meth
   UnityEngine_Vector3_o eulerAngles; // 0:s0.4,4:s1.4,8:s2.4
   UnityEngine_Vector3_o position; // 0:s0.4,4:s1.4,8:s2.4
 
-  if ( (byte_4C3E9D9 & 1) == 0 )
+  if ( (byte_4C49F59 & 1) == 0 )
   {
-    sub_1C32C20(&float_TypeInfo);
-    sub_1C32C20(&UnityEngine_Vector3___TypeInfo);
-    sub_1C32C20(&UnityEngine_Vector3_TypeInfo);
-    sub_1C32C20(&StringLiteral_24859/*"x"*/);
-    sub_1C32C20(&StringLiteral_16745/*"amount"*/);
-    sub_1C32C20(&StringLiteral_24961/*"y"*/);
-    sub_1C32C20(&StringLiteral_25008/*"z"*/);
-    byte_4C3E9D9 = 1;
+    sub_1C37058(&float_TypeInfo);
+    sub_1C37058(&UnityEngine_Vector3___TypeInfo);
+    sub_1C37058(&UnityEngine_Vector3_TypeInfo);
+    sub_1C37058(&StringLiteral_24864/*"x"*/);
+    sub_1C37058(&StringLiteral_16747/*"amount"*/);
+    sub_1C37058(&StringLiteral_24966/*"y"*/);
+    sub_1C37058(&StringLiteral_25013/*"z"*/);
+    byte_4C49F59 = 1;
   }
-  v3 = (struct UnityEngine_Vector3_array *)sub_1C32CC8(UnityEngine_Vector3___TypeInfo, 4);
+  v3 = (struct UnityEngine_Vector3_array *)sub_1C37100(UnityEngine_Vector3___TypeInfo, 4);
   this->fields.vector3s = v3;
   p_vector3s = &this->fields.vector3s;
-  sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.vector3s, (int32_t)v3, v5, v6);
+  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.vector3s, (int32_t)v3, v5, v6);
   thisTransform = (__int64)this->fields.thisTransform;
   if ( !thisTransform )
     goto LABEL_43;
@@ -14465,7 +14465,7 @@ void iTween__GenerateShakePositionTargets(iTween_o *this, const MethodInfo *meth
     goto LABEL_43;
   if ( ((*(__int64 (__fastcall **)(__int64, __int64, _QWORD))(*(_QWORD *)thisTransform + 712LL))(
           thisTransform,
-          StringLiteral_16745/*"amount"*/,
+          StringLiteral_16747/*"amount"*/,
           *(_QWORD *)(*(_QWORD *)thisTransform + 720LL))
       & 1) == 0 )
   {
@@ -14474,7 +14474,7 @@ void iTween__GenerateShakePositionTargets(iTween_o *this, const MethodInfo *meth
       goto LABEL_43;
     thisTransform = (*(__int64 (__fastcall **)(__int64, void *, _QWORD))(*(_QWORD *)thisTransform + 712LL))(
                       thisTransform,
-                      StringLiteral_24859/*"x"*/,
+                      StringLiteral_24864/*"x"*/,
                       *(_QWORD *)(*(_QWORD *)thisTransform + 720LL));
     if ( (thisTransform & 1) != 0 )
     {
@@ -14486,7 +14486,7 @@ void iTween__GenerateShakePositionTargets(iTween_o *this, const MethodInfo *meth
         goto LABEL_43;
       thisTransform = (*(__int64 (__fastcall **)(__int64, void *, _QWORD))(*(_QWORD *)thisTransform + 760LL))(
                         thisTransform,
-                        StringLiteral_24859/*"x"*/,
+                        StringLiteral_24864/*"x"*/,
                         *(_QWORD *)(*(_QWORD *)thisTransform + 768LL));
       if ( !thisTransform )
         goto LABEL_43;
@@ -14502,7 +14502,7 @@ void iTween__GenerateShakePositionTargets(iTween_o *this, const MethodInfo *meth
       goto LABEL_43;
     thisTransform = (*(__int64 (__fastcall **)(__int64, __int64, _QWORD))(*(_QWORD *)thisTransform + 712LL))(
                       thisTransform,
-                      StringLiteral_24961/*"y"*/,
+                      StringLiteral_24966/*"y"*/,
                       *(_QWORD *)(*(_QWORD *)thisTransform + 720LL));
     if ( (thisTransform & 1) == 0 )
     {
@@ -14512,7 +14512,7 @@ LABEL_33:
       {
         thisTransform = (*(__int64 (__fastcall **)(__int64, __int64, _QWORD))(*(_QWORD *)thisTransform + 712LL))(
                           thisTransform,
-                          StringLiteral_25008/*"z"*/,
+                          StringLiteral_25013/*"z"*/,
                           *(_QWORD *)(*(_QWORD *)thisTransform + 720LL));
         if ( (thisTransform & 1) == 0 )
           return;
@@ -14524,7 +14524,7 @@ LABEL_33:
           {
             thisTransform = (*(__int64 (__fastcall **)(__int64, __int64, _QWORD))(*(_QWORD *)thisTransform + 760LL))(
                               thisTransform,
-                              StringLiteral_25008/*"z"*/,
+                              StringLiteral_25013/*"z"*/,
                               *(_QWORD *)(*(_QWORD *)thisTransform + 768LL));
             if ( thisTransform )
             {
@@ -14542,7 +14542,7 @@ LABEL_33:
         }
       }
 LABEL_43:
-      sub_1C32E7C(thisTransform);
+      sub_1C372B4(thisTransform);
     }
     v17 = *p_vector3s;
     if ( !*p_vector3s )
@@ -14552,7 +14552,7 @@ LABEL_43:
       goto LABEL_43;
     thisTransform = (*(__int64 (__fastcall **)(__int64, __int64, _QWORD))(*(_QWORD *)thisTransform + 760LL))(
                       thisTransform,
-                      StringLiteral_24961/*"y"*/,
+                      StringLiteral_24966/*"y"*/,
                       *(_QWORD *)(*(_QWORD *)thisTransform + 768LL));
     if ( !thisTransform )
       goto LABEL_43;
@@ -14565,7 +14565,7 @@ LABEL_43:
       goto LABEL_33;
     }
 LABEL_44:
-    sub_1C32E84(thisTransform);
+    sub_1C372BC(thisTransform);
   }
   thisTransform = (__int64)this->fields.tweenArguments;
   if ( !thisTransform )
@@ -14573,14 +14573,14 @@ LABEL_44:
   v10 = this->fields.vector3s;
   thisTransform = (*(__int64 (__fastcall **)(__int64, __int64, _QWORD))(*(_QWORD *)thisTransform + 760LL))(
                     thisTransform,
-                    StringLiteral_16745/*"amount"*/,
+                    StringLiteral_16747/*"amount"*/,
                     *(_QWORD *)(*(_QWORD *)thisTransform + 768LL));
   if ( !v10 || !thisTransform )
     goto LABEL_43;
   if ( *(Il2CppClass **)(*(_QWORD *)thisTransform + 64LL) != UnityEngine_Vector3_TypeInfo->_1.element_class )
   {
 LABEL_45:
-    sub_1C3313C(thisTransform);
+    sub_1C37574(thisTransform);
     iTween__GenerateShakeScaleTargets(v22, v23);
     return;
   }
@@ -14618,21 +14618,21 @@ void iTween__GenerateShakeRotationTargets(iTween_o *this, const MethodInfo *meth
   const MethodInfo *v22; // x1
   UnityEngine_Vector3_o eulerAngles; // 0:s0.4,4:s1.4,8:s2.4
 
-  if ( (byte_4C3E9DB & 1) == 0 )
+  if ( (byte_4C49F5B & 1) == 0 )
   {
-    sub_1C32C20(&float_TypeInfo);
-    sub_1C32C20(&UnityEngine_Vector3___TypeInfo);
-    sub_1C32C20(&UnityEngine_Vector3_TypeInfo);
-    sub_1C32C20(&StringLiteral_24859/*"x"*/);
-    sub_1C32C20(&StringLiteral_16745/*"amount"*/);
-    sub_1C32C20(&StringLiteral_24961/*"y"*/);
-    sub_1C32C20(&StringLiteral_25008/*"z"*/);
-    byte_4C3E9DB = 1;
+    sub_1C37058(&float_TypeInfo);
+    sub_1C37058(&UnityEngine_Vector3___TypeInfo);
+    sub_1C37058(&UnityEngine_Vector3_TypeInfo);
+    sub_1C37058(&StringLiteral_24864/*"x"*/);
+    sub_1C37058(&StringLiteral_16747/*"amount"*/);
+    sub_1C37058(&StringLiteral_24966/*"y"*/);
+    sub_1C37058(&StringLiteral_25013/*"z"*/);
+    byte_4C49F5B = 1;
   }
-  v3 = (struct UnityEngine_Vector3_array *)sub_1C32CC8(UnityEngine_Vector3___TypeInfo, 3);
+  v3 = (struct UnityEngine_Vector3_array *)sub_1C37100(UnityEngine_Vector3___TypeInfo, 3);
   this->fields.vector3s = v3;
   p_vector3s = &this->fields.vector3s;
-  sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.vector3s, (int32_t)v3, v5, v6);
+  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.vector3s, (int32_t)v3, v5, v6);
   thisTransform = (__int64)this->fields.thisTransform;
   if ( !thisTransform )
     goto LABEL_40;
@@ -14648,7 +14648,7 @@ void iTween__GenerateShakeRotationTargets(iTween_o *this, const MethodInfo *meth
     goto LABEL_40;
   if ( ((*(__int64 (__fastcall **)(__int64, __int64, _QWORD))(*(_QWORD *)thisTransform + 712LL))(
           thisTransform,
-          StringLiteral_16745/*"amount"*/,
+          StringLiteral_16747/*"amount"*/,
           *(_QWORD *)(*(_QWORD *)thisTransform + 720LL))
       & 1) == 0 )
   {
@@ -14657,7 +14657,7 @@ void iTween__GenerateShakeRotationTargets(iTween_o *this, const MethodInfo *meth
       goto LABEL_40;
     thisTransform = (*(__int64 (__fastcall **)(__int64, void *, _QWORD))(*(_QWORD *)thisTransform + 712LL))(
                       thisTransform,
-                      StringLiteral_24859/*"x"*/,
+                      StringLiteral_24864/*"x"*/,
                       *(_QWORD *)(*(_QWORD *)thisTransform + 720LL));
     if ( (thisTransform & 1) != 0 )
     {
@@ -14669,7 +14669,7 @@ void iTween__GenerateShakeRotationTargets(iTween_o *this, const MethodInfo *meth
         goto LABEL_40;
       thisTransform = (*(__int64 (__fastcall **)(__int64, void *, _QWORD))(*(_QWORD *)thisTransform + 760LL))(
                         thisTransform,
-                        StringLiteral_24859/*"x"*/,
+                        StringLiteral_24864/*"x"*/,
                         *(_QWORD *)(*(_QWORD *)thisTransform + 768LL));
       if ( !thisTransform )
         goto LABEL_40;
@@ -14685,7 +14685,7 @@ void iTween__GenerateShakeRotationTargets(iTween_o *this, const MethodInfo *meth
       goto LABEL_40;
     thisTransform = (*(__int64 (__fastcall **)(__int64, __int64, _QWORD))(*(_QWORD *)thisTransform + 712LL))(
                       thisTransform,
-                      StringLiteral_24961/*"y"*/,
+                      StringLiteral_24966/*"y"*/,
                       *(_QWORD *)(*(_QWORD *)thisTransform + 720LL));
     if ( (thisTransform & 1) == 0 )
     {
@@ -14695,7 +14695,7 @@ LABEL_30:
       {
         thisTransform = (*(__int64 (__fastcall **)(__int64, __int64, _QWORD))(*(_QWORD *)thisTransform + 712LL))(
                           thisTransform,
-                          StringLiteral_25008/*"z"*/,
+                          StringLiteral_25013/*"z"*/,
                           *(_QWORD *)(*(_QWORD *)thisTransform + 720LL));
         if ( (thisTransform & 1) == 0 )
           return;
@@ -14707,7 +14707,7 @@ LABEL_30:
           {
             thisTransform = (*(__int64 (__fastcall **)(__int64, __int64, _QWORD))(*(_QWORD *)thisTransform + 760LL))(
                               thisTransform,
-                              StringLiteral_25008/*"z"*/,
+                              StringLiteral_25013/*"z"*/,
                               *(_QWORD *)(*(_QWORD *)thisTransform + 768LL));
             if ( thisTransform )
             {
@@ -14725,7 +14725,7 @@ LABEL_30:
         }
       }
 LABEL_40:
-      sub_1C32E7C(thisTransform);
+      sub_1C372B4(thisTransform);
     }
     v16 = *p_vector3s;
     if ( !*p_vector3s )
@@ -14735,7 +14735,7 @@ LABEL_40:
       goto LABEL_40;
     thisTransform = (*(__int64 (__fastcall **)(__int64, __int64, _QWORD))(*(_QWORD *)thisTransform + 760LL))(
                       thisTransform,
-                      StringLiteral_24961/*"y"*/,
+                      StringLiteral_24966/*"y"*/,
                       *(_QWORD *)(*(_QWORD *)thisTransform + 768LL));
     if ( !thisTransform )
       goto LABEL_40;
@@ -14748,7 +14748,7 @@ LABEL_40:
       goto LABEL_30;
     }
 LABEL_41:
-    sub_1C32E84(thisTransform);
+    sub_1C372BC(thisTransform);
   }
   thisTransform = (__int64)this->fields.tweenArguments;
   if ( !thisTransform )
@@ -14756,14 +14756,14 @@ LABEL_41:
   vector3s = this->fields.vector3s;
   thisTransform = (*(__int64 (__fastcall **)(__int64, __int64, _QWORD))(*(_QWORD *)thisTransform + 760LL))(
                     thisTransform,
-                    StringLiteral_16745/*"amount"*/,
+                    StringLiteral_16747/*"amount"*/,
                     *(_QWORD *)(*(_QWORD *)thisTransform + 768LL));
   if ( !vector3s || !thisTransform )
     goto LABEL_40;
   if ( *(Il2CppClass **)(*(_QWORD *)thisTransform + 64LL) != UnityEngine_Vector3_TypeInfo->_1.element_class )
   {
 LABEL_42:
-    sub_1C3313C(thisTransform);
+    sub_1C37574(thisTransform);
     iTween__GeneratePunchPositionTargets(v21, v22);
     return;
   }
@@ -14801,21 +14801,21 @@ void iTween__GenerateShakeScaleTargets(iTween_o *this, const MethodInfo *method)
   const MethodInfo *v22; // x1
   UnityEngine_Vector3_o localScale; // 0:s0.4,4:s1.4,8:s2.4
 
-  if ( (byte_4C3E9DA & 1) == 0 )
+  if ( (byte_4C49F5A & 1) == 0 )
   {
-    sub_1C32C20(&float_TypeInfo);
-    sub_1C32C20(&UnityEngine_Vector3___TypeInfo);
-    sub_1C32C20(&UnityEngine_Vector3_TypeInfo);
-    sub_1C32C20(&StringLiteral_24859/*"x"*/);
-    sub_1C32C20(&StringLiteral_16745/*"amount"*/);
-    sub_1C32C20(&StringLiteral_24961/*"y"*/);
-    sub_1C32C20(&StringLiteral_25008/*"z"*/);
-    byte_4C3E9DA = 1;
+    sub_1C37058(&float_TypeInfo);
+    sub_1C37058(&UnityEngine_Vector3___TypeInfo);
+    sub_1C37058(&UnityEngine_Vector3_TypeInfo);
+    sub_1C37058(&StringLiteral_24864/*"x"*/);
+    sub_1C37058(&StringLiteral_16747/*"amount"*/);
+    sub_1C37058(&StringLiteral_24966/*"y"*/);
+    sub_1C37058(&StringLiteral_25013/*"z"*/);
+    byte_4C49F5A = 1;
   }
-  v3 = (struct UnityEngine_Vector3_array *)sub_1C32CC8(UnityEngine_Vector3___TypeInfo, 3);
+  v3 = (struct UnityEngine_Vector3_array *)sub_1C37100(UnityEngine_Vector3___TypeInfo, 3);
   this->fields.vector3s = v3;
   p_vector3s = &this->fields.vector3s;
-  sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.vector3s, (int32_t)v3, v5, v6);
+  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.vector3s, (int32_t)v3, v5, v6);
   thisTransform = (__int64)this->fields.thisTransform;
   if ( !thisTransform )
     goto LABEL_40;
@@ -14831,7 +14831,7 @@ void iTween__GenerateShakeScaleTargets(iTween_o *this, const MethodInfo *method)
     goto LABEL_40;
   if ( ((*(__int64 (__fastcall **)(__int64, __int64, _QWORD))(*(_QWORD *)thisTransform + 712LL))(
           thisTransform,
-          StringLiteral_16745/*"amount"*/,
+          StringLiteral_16747/*"amount"*/,
           *(_QWORD *)(*(_QWORD *)thisTransform + 720LL))
       & 1) == 0 )
   {
@@ -14840,7 +14840,7 @@ void iTween__GenerateShakeScaleTargets(iTween_o *this, const MethodInfo *method)
       goto LABEL_40;
     thisTransform = (*(__int64 (__fastcall **)(__int64, void *, _QWORD))(*(_QWORD *)thisTransform + 712LL))(
                       thisTransform,
-                      StringLiteral_24859/*"x"*/,
+                      StringLiteral_24864/*"x"*/,
                       *(_QWORD *)(*(_QWORD *)thisTransform + 720LL));
     if ( (thisTransform & 1) != 0 )
     {
@@ -14852,7 +14852,7 @@ void iTween__GenerateShakeScaleTargets(iTween_o *this, const MethodInfo *method)
         goto LABEL_40;
       thisTransform = (*(__int64 (__fastcall **)(__int64, void *, _QWORD))(*(_QWORD *)thisTransform + 760LL))(
                         thisTransform,
-                        StringLiteral_24859/*"x"*/,
+                        StringLiteral_24864/*"x"*/,
                         *(_QWORD *)(*(_QWORD *)thisTransform + 768LL));
       if ( !thisTransform )
         goto LABEL_40;
@@ -14868,7 +14868,7 @@ void iTween__GenerateShakeScaleTargets(iTween_o *this, const MethodInfo *method)
       goto LABEL_40;
     thisTransform = (*(__int64 (__fastcall **)(__int64, __int64, _QWORD))(*(_QWORD *)thisTransform + 712LL))(
                       thisTransform,
-                      StringLiteral_24961/*"y"*/,
+                      StringLiteral_24966/*"y"*/,
                       *(_QWORD *)(*(_QWORD *)thisTransform + 720LL));
     if ( (thisTransform & 1) == 0 )
     {
@@ -14878,7 +14878,7 @@ LABEL_30:
       {
         thisTransform = (*(__int64 (__fastcall **)(__int64, __int64, _QWORD))(*(_QWORD *)thisTransform + 712LL))(
                           thisTransform,
-                          StringLiteral_25008/*"z"*/,
+                          StringLiteral_25013/*"z"*/,
                           *(_QWORD *)(*(_QWORD *)thisTransform + 720LL));
         if ( (thisTransform & 1) == 0 )
           return;
@@ -14890,7 +14890,7 @@ LABEL_30:
           {
             thisTransform = (*(__int64 (__fastcall **)(__int64, __int64, _QWORD))(*(_QWORD *)thisTransform + 760LL))(
                               thisTransform,
-                              StringLiteral_25008/*"z"*/,
+                              StringLiteral_25013/*"z"*/,
                               *(_QWORD *)(*(_QWORD *)thisTransform + 768LL));
             if ( thisTransform )
             {
@@ -14908,7 +14908,7 @@ LABEL_30:
         }
       }
 LABEL_40:
-      sub_1C32E7C(thisTransform);
+      sub_1C372B4(thisTransform);
     }
     v16 = *p_vector3s;
     if ( !*p_vector3s )
@@ -14918,7 +14918,7 @@ LABEL_40:
       goto LABEL_40;
     thisTransform = (*(__int64 (__fastcall **)(__int64, __int64, _QWORD))(*(_QWORD *)thisTransform + 760LL))(
                       thisTransform,
-                      StringLiteral_24961/*"y"*/,
+                      StringLiteral_24966/*"y"*/,
                       *(_QWORD *)(*(_QWORD *)thisTransform + 768LL));
     if ( !thisTransform )
       goto LABEL_40;
@@ -14931,7 +14931,7 @@ LABEL_40:
       goto LABEL_30;
     }
 LABEL_41:
-    sub_1C32E84(thisTransform);
+    sub_1C372BC(thisTransform);
   }
   thisTransform = (__int64)this->fields.tweenArguments;
   if ( !thisTransform )
@@ -14939,14 +14939,14 @@ LABEL_41:
   vector3s = this->fields.vector3s;
   thisTransform = (*(__int64 (__fastcall **)(__int64, __int64, _QWORD))(*(_QWORD *)thisTransform + 760LL))(
                     thisTransform,
-                    StringLiteral_16745/*"amount"*/,
+                    StringLiteral_16747/*"amount"*/,
                     *(_QWORD *)(*(_QWORD *)thisTransform + 768LL));
   if ( !vector3s || !thisTransform )
     goto LABEL_40;
   if ( *(Il2CppClass **)(*(_QWORD *)thisTransform + 64LL) != UnityEngine_Vector3_TypeInfo->_1.element_class )
   {
 LABEL_42:
-    sub_1C3313C(thisTransform);
+    sub_1C37574(thisTransform);
     iTween__GenerateShakeRotationTargets(v21, v22);
     return;
   }
@@ -14988,26 +14988,26 @@ void iTween__GenerateStabTargets(iTween_o *this, const MethodInfo *method)
   iTween_o *v26; // x0
   const MethodInfo *v27; // x1
 
-  if ( (byte_4C3E9CE & 1) == 0 )
+  if ( (byte_4C49F4E & 1) == 0 )
   {
-    sub_1C32C20(&UnityEngine_AudioClip_TypeInfo);
-    sub_1C32C20(&UnityEngine_AudioSource_TypeInfo);
-    sub_1C32C20(&Method_UnityEngine_Component_GetComponent_AudioSource___);
-    sub_1C32C20(&Method_UnityEngine_GameObject_AddComponent_AudioSource___);
-    sub_1C32C20(&UnityEngine_Object_TypeInfo);
-    sub_1C32C20(&float_TypeInfo);
-    sub_1C32C20(&StringLiteral_16939/*"audioclip"*/);
-    sub_1C32C20(&StringLiteral_16940/*"audiosource"*/);
-    sub_1C32C20(&StringLiteral_22703/*"pitch"*/);
-    sub_1C32C20(&StringLiteral_24710/*"volume"*/);
-    byte_4C3E9CE = 1;
+    sub_1C37058(&UnityEngine_AudioClip_TypeInfo);
+    sub_1C37058(&UnityEngine_AudioSource_TypeInfo);
+    sub_1C37058(&Method_UnityEngine_Component_GetComponent_AudioSource___);
+    sub_1C37058(&Method_UnityEngine_GameObject_AddComponent_AudioSource___);
+    sub_1C37058(&UnityEngine_Object_TypeInfo);
+    sub_1C37058(&float_TypeInfo);
+    sub_1C37058(&StringLiteral_16941/*"audioclip"*/);
+    sub_1C37058(&StringLiteral_16942/*"audiosource"*/);
+    sub_1C37058(&StringLiteral_22706/*"pitch"*/);
+    sub_1C37058(&StringLiteral_24715/*"volume"*/);
+    byte_4C49F4E = 1;
   }
   tweenArguments = (UnityEngine_GameObject_o *)this->fields.tweenArguments;
   if ( !tweenArguments )
     goto LABEL_42;
   if ( (((__int64 (__fastcall *)(UnityEngine_GameObject_o *, __int64, Il2CppMethodPointer))tweenArguments->klass[1].vtable._1_Finalize.method)(
           tweenArguments,
-          StringLiteral_16940/*"audiosource"*/,
+          StringLiteral_16942/*"audiosource"*/,
           tweenArguments->klass[1].vtable._2_GetHashCode.methodPtr)
       & 1) != 0 )
   {
@@ -15016,7 +15016,7 @@ void iTween__GenerateStabTargets(iTween_o *this, const MethodInfo *method)
       goto LABEL_42;
     v4 = (struct UnityEngine_AudioSource_o *)((__int64 (__fastcall *)(UnityEngine_GameObject_o *, __int64, const char *))tweenArguments->klass[2]._1.gc_desc)(
                                                tweenArguments,
-                                               StringLiteral_16940/*"audiosource"*/,
+                                               StringLiteral_16942/*"audiosource"*/,
                                                tweenArguments->klass[2]._1.name);
     v7 = (UnityEngine_GameObject_o *)v4;
     if ( v4 )
@@ -15039,19 +15039,19 @@ void iTween__GenerateStabTargets(iTween_o *this, const MethodInfo *method)
   }
   Component_object = UnityEngine_Component__GetComponent_object_(
                        (UnityEngine_Component_o *)this,
-                       (const MethodInfo_30D3BC0 *)Method_UnityEngine_Component_GetComponent_AudioSource___);
+                       (const MethodInfo_30DE428 *)Method_UnityEngine_Component_GetComponent_AudioSource___);
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   if ( UnityEngine_Object__op_Implicit((UnityEngine_Object_o *)Component_object, 0) )
   {
     v11 = UnityEngine_Component__GetComponent_object_(
             (UnityEngine_Component_o *)this,
-            (const MethodInfo_30D3BC0 *)Method_UnityEngine_Component_GetComponent_AudioSource___);
+            (const MethodInfo_30DE428 *)Method_UnityEngine_Component_GetComponent_AudioSource___);
     v12 = (int)v11;
     this->fields.audioSource = (struct UnityEngine_AudioSource_o *)v11;
     p_audioSource = &this->fields.audioSource;
 LABEL_19:
-    sub_1C32BC4((CGThumbnailListItem_o *)p_audioSource, v12, v5, v6);
+    sub_1C36FFC((CGThumbnailListItem_o *)p_audioSource, v12, v5, v6);
     goto LABEL_20;
   }
   tweenArguments = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
@@ -15059,12 +15059,12 @@ LABEL_19:
     goto LABEL_42;
   UnityEngine_GameObject__AddComponent_object_(
     tweenArguments,
-    (const MethodInfo_3134888 *)Method_UnityEngine_GameObject_AddComponent_AudioSource___);
+    (const MethodInfo_313F0F0 *)Method_UnityEngine_GameObject_AddComponent_AudioSource___);
   v13 = UnityEngine_Component__GetComponent_object_(
           (UnityEngine_Component_o *)this,
-          (const MethodInfo_30D3BC0 *)Method_UnityEngine_Component_GetComponent_AudioSource___);
+          (const MethodInfo_30DE428 *)Method_UnityEngine_Component_GetComponent_AudioSource___);
   this->fields.audioSource = (struct UnityEngine_AudioSource_o *)v13;
-  sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.audioSource, (int32_t)v13, v14, v15);
+  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.audioSource, (int32_t)v13, v14, v15);
   tweenArguments = (UnityEngine_GameObject_o *)this->fields.audioSource;
   if ( !tweenArguments )
     goto LABEL_42;
@@ -15076,7 +15076,7 @@ LABEL_20:
   audioSource = this->fields.audioSource;
   tweenArguments = (UnityEngine_GameObject_o *)((__int64 (__fastcall *)(UnityEngine_GameObject_o *, __int64, const char *))tweenArguments->klass[2]._1.gc_desc)(
                                                  tweenArguments,
-                                                 StringLiteral_16939/*"audioclip"*/,
+                                                 StringLiteral_16941/*"audioclip"*/,
                                                  tweenArguments->klass[2]._1.name);
   if ( !audioSource )
     goto LABEL_42;
@@ -15091,10 +15091,10 @@ LABEL_43:
   tweenArguments = (UnityEngine_GameObject_o *)this->fields.tweenArguments;
   if ( !tweenArguments )
 LABEL_42:
-    sub_1C32E7C(tweenArguments);
+    sub_1C372B4(tweenArguments);
   if ( (((__int64 (__fastcall *)(UnityEngine_GameObject_o *, __int64, Il2CppMethodPointer))tweenArguments->klass[1].vtable._1_Finalize.method)(
           tweenArguments,
-          StringLiteral_22703/*"pitch"*/,
+          StringLiteral_22706/*"pitch"*/,
           tweenArguments->klass[1].vtable._2_GetHashCode.methodPtr)
       & 1) != 0 )
   {
@@ -15104,7 +15104,7 @@ LABEL_42:
     v17 = this->fields.audioSource;
     tweenArguments = (UnityEngine_GameObject_o *)((__int64 (__fastcall *)(UnityEngine_GameObject_o *, __int64, const char *))tweenArguments->klass[2]._1.gc_desc)(
                                                    tweenArguments,
-                                                   StringLiteral_22703/*"pitch"*/,
+                                                   StringLiteral_22706/*"pitch"*/,
                                                    tweenArguments->klass[2]._1.name);
     if ( !v17 || !tweenArguments )
       goto LABEL_42;
@@ -15118,7 +15118,7 @@ LABEL_42:
     goto LABEL_42;
   if ( (((__int64 (__fastcall *)(UnityEngine_GameObject_o *, __int64, Il2CppMethodPointer))tweenArguments->klass[1].vtable._1_Finalize.method)(
           tweenArguments,
-          StringLiteral_24710/*"volume"*/,
+          StringLiteral_24715/*"volume"*/,
           tweenArguments->klass[1].vtable._2_GetHashCode.methodPtr)
       & 1) == 0 )
     goto LABEL_38;
@@ -15128,7 +15128,7 @@ LABEL_42:
   v21 = this->fields.audioSource;
   tweenArguments = (UnityEngine_GameObject_o *)((__int64 (__fastcall *)(UnityEngine_GameObject_o *, __int64, const char *))tweenArguments->klass[2]._1.gc_desc)(
                                                  tweenArguments,
-                                                 StringLiteral_24710/*"volume"*/,
+                                                 StringLiteral_24715/*"volume"*/,
                                                  tweenArguments->klass[2]._1.name);
   if ( !v21 || !tweenArguments )
     goto LABEL_42;
@@ -15158,7 +15158,7 @@ LABEL_38:
     goto LABEL_42;
   }
 LABEL_44:
-  sub_1C3313C(tweenArguments);
+  sub_1C37574(tweenArguments);
   iTween__Dispose(v26, v27);
 }
 
@@ -15203,85 +15203,85 @@ void iTween__GenerateTargets(iTween_o *this, const MethodInfo *method)
   const MethodInfo *v38; // x1
   const MethodInfo *v39; // x1
 
-  if ( (byte_4C3E9C6 & 1) == 0 )
+  if ( (byte_4C49F46 & 1) == 0 )
   {
-    sub_1C32C20(&iTween_ApplyTween_TypeInfo);
-    sub_1C32C20(&StringLiteral_17669/*"by"*/);
-    sub_1C32C20(&StringLiteral_23146/*"rotate"*/);
-    sub_1C32C20(&StringLiteral_23417/*"shake"*/);
-    sub_1C32C20(&StringLiteral_24629/*"value"*/);
-    sub_1C32C20(&StringLiteral_23148/*"rotation"*/);
-    sub_1C32C20(&StringLiteral_21346/*"look"*/);
-    sub_1C32C20(&StringLiteral_16665/*"add"*/);
-    sub_1C32C20(&StringLiteral_23640/*"stab"*/);
-    sub_1C32C20(&StringLiteral_22987/*"rect"*/);
-    sub_1C32C20(&StringLiteral_24646/*"vector2"*/);
-    sub_1C32C20(&StringLiteral_22736/*"position"*/);
-    sub_1C32C20(&StringLiteral_24106/*"to"*/);
-    sub_1C32C20(&StringLiteral_22815/*"punch"*/);
-    sub_1C32C20(&StringLiteral_24647/*"vector3"*/);
-    sub_1C32C20(&StringLiteral_16937/*"audio"*/);
-    sub_1C32C20(&StringLiteral_18051/*"color"*/);
-    sub_1C32C20(&StringLiteral_19499/*"float"*/);
-    sub_1C32C20(&StringLiteral_21659/*"move"*/);
-    sub_1C32C20(&StringLiteral_23191/*"scale"*/);
-    sub_1C32C20(&StringLiteral_22649/*"path"*/);
-    sub_1C32C20(&Method_iTween_ApplyAudioToTargets__);
-    sub_1C32C20(&Method_iTween_ApplyColorTargets__);
-    sub_1C32C20(&Method_iTween_ApplyColorToTargets__);
-    sub_1C32C20(&Method_iTween_ApplyFloatTargets__);
-    sub_1C32C20(&Method_iTween_ApplyLookToTargets__);
-    sub_1C32C20(&Method_iTween_ApplyMoveByTargets__);
-    sub_1C32C20(&Method_iTween_ApplyMoveToPathTargets__);
-    sub_1C32C20(&Method_iTween_ApplyMoveToTargets__);
-    sub_1C32C20(&Method_iTween_ApplyPunchPositionTargets__);
-    sub_1C32C20(&Method_iTween_ApplyPunchRotationTargets__);
-    sub_1C32C20(&Method_iTween_ApplyPunchScaleTargets__);
-    sub_1C32C20(&Method_iTween_ApplyRectTargets__);
-    sub_1C32C20(&Method_iTween_ApplyRotateAddTargets__);
-    sub_1C32C20(&Method_iTween_ApplyRotateToTargets__);
-    sub_1C32C20(&Method_iTween_ApplyScaleToTargets__);
-    sub_1C32C20(&Method_iTween_ApplyShakePositionTargets__);
-    sub_1C32C20(&Method_iTween_ApplyShakeRotationTargets__);
-    sub_1C32C20(&Method_iTween_ApplyShakeScaleTargets__);
-    sub_1C32C20(&Method_iTween_ApplyStabTargets__);
-    sub_1C32C20(&Method_iTween_ApplyVector2Targets__);
-    sub_1C32C20(&Method_iTween_ApplyVector3Targets__);
-    byte_4C3E9C6 = 1;
+    sub_1C37058(&iTween_ApplyTween_TypeInfo);
+    sub_1C37058(&StringLiteral_17671/*"by"*/);
+    sub_1C37058(&StringLiteral_23150/*"rotate"*/);
+    sub_1C37058(&StringLiteral_23421/*"shake"*/);
+    sub_1C37058(&StringLiteral_24634/*"value"*/);
+    sub_1C37058(&StringLiteral_23152/*"rotation"*/);
+    sub_1C37058(&StringLiteral_21349/*"look"*/);
+    sub_1C37058(&StringLiteral_16667/*"add"*/);
+    sub_1C37058(&StringLiteral_23644/*"stab"*/);
+    sub_1C37058(&StringLiteral_22991/*"rect"*/);
+    sub_1C37058(&StringLiteral_24651/*"vector2"*/);
+    sub_1C37058(&StringLiteral_22740/*"position"*/);
+    sub_1C37058(&StringLiteral_24110/*"to"*/);
+    sub_1C37058(&StringLiteral_22819/*"punch"*/);
+    sub_1C37058(&StringLiteral_24652/*"vector3"*/);
+    sub_1C37058(&StringLiteral_16939/*"audio"*/);
+    sub_1C37058(&StringLiteral_18053/*"color"*/);
+    sub_1C37058(&StringLiteral_19502/*"float"*/);
+    sub_1C37058(&StringLiteral_21662/*"move"*/);
+    sub_1C37058(&StringLiteral_23195/*"scale"*/);
+    sub_1C37058(&StringLiteral_22652/*"path"*/);
+    sub_1C37058(&Method_iTween_ApplyAudioToTargets__);
+    sub_1C37058(&Method_iTween_ApplyColorTargets__);
+    sub_1C37058(&Method_iTween_ApplyColorToTargets__);
+    sub_1C37058(&Method_iTween_ApplyFloatTargets__);
+    sub_1C37058(&Method_iTween_ApplyLookToTargets__);
+    sub_1C37058(&Method_iTween_ApplyMoveByTargets__);
+    sub_1C37058(&Method_iTween_ApplyMoveToPathTargets__);
+    sub_1C37058(&Method_iTween_ApplyMoveToTargets__);
+    sub_1C37058(&Method_iTween_ApplyPunchPositionTargets__);
+    sub_1C37058(&Method_iTween_ApplyPunchRotationTargets__);
+    sub_1C37058(&Method_iTween_ApplyPunchScaleTargets__);
+    sub_1C37058(&Method_iTween_ApplyRectTargets__);
+    sub_1C37058(&Method_iTween_ApplyRotateAddTargets__);
+    sub_1C37058(&Method_iTween_ApplyRotateToTargets__);
+    sub_1C37058(&Method_iTween_ApplyScaleToTargets__);
+    sub_1C37058(&Method_iTween_ApplyShakePositionTargets__);
+    sub_1C37058(&Method_iTween_ApplyShakeRotationTargets__);
+    sub_1C37058(&Method_iTween_ApplyShakeScaleTargets__);
+    sub_1C37058(&Method_iTween_ApplyStabTargets__);
+    sub_1C37058(&Method_iTween_ApplyVector2Targets__);
+    sub_1C37058(&Method_iTween_ApplyVector3Targets__);
+    byte_4C49F46 = 1;
   }
   type = this->fields.type;
-  v4 = PrivateImplementationDetails___ComputeStringHash_63287788(type, 0);
+  v4 = PrivateImplementationDetails___ComputeStringHash_63330900(type, 0);
   if ( v4 > 0x8CBF70A3 )
   {
     if ( v4 > 0xBD8BB2F5 )
     {
       if ( v4 == -530499175 )
       {
-        if ( System_String__op_Equality(type, (System_String_o *)StringLiteral_16937/*"audio"*/, 0)
-          && System_String__op_Equality(this->fields.method, (System_String_o *)StringLiteral_24106/*"to"*/, 0) )
+        if ( System_String__op_Equality(type, (System_String_o *)StringLiteral_16939/*"audio"*/, 0)
+          && System_String__op_Equality(this->fields.method, (System_String_o *)StringLiteral_24110/*"to"*/, 0) )
         {
           iTween__GenerateAudioToTargets(this, v22);
-          v6 = (iTween_ApplyTween_o *)sub_1C32E6C(iTween_ApplyTween_TypeInfo);
+          v6 = (iTween_ApplyTween_o *)sub_1C372A4(iTween_ApplyTween_TypeInfo);
           v7 = &Method_iTween_ApplyAudioToTargets__;
           goto LABEL_71;
         }
       }
       else if ( v4 == -516208479 )
       {
-        if ( System_String__op_Equality(type, (System_String_o *)StringLiteral_23640/*"stab"*/, 0) )
+        if ( System_String__op_Equality(type, (System_String_o *)StringLiteral_23644/*"stab"*/, 0) )
         {
           iTween__GenerateStabTargets(this, v23);
-          v6 = (iTween_ApplyTween_o *)sub_1C32E6C(iTween_ApplyTween_TypeInfo);
+          v6 = (iTween_ApplyTween_o *)sub_1C372A4(iTween_ApplyTween_TypeInfo);
           v7 = &Method_iTween_ApplyStabTargets__;
           goto LABEL_71;
         }
       }
       else if ( v4 == -420522346
-             && System_String__op_Equality(type, (System_String_o *)StringLiteral_21346/*"look"*/, 0)
-             && System_String__op_Equality(this->fields.method, (System_String_o *)StringLiteral_24106/*"to"*/, 0) )
+             && System_String__op_Equality(type, (System_String_o *)StringLiteral_21349/*"look"*/, 0)
+             && System_String__op_Equality(this->fields.method, (System_String_o *)StringLiteral_24110/*"to"*/, 0) )
       {
         iTween__GenerateLookToTargets(this, v12);
-        v6 = (iTween_ApplyTween_o *)sub_1C32E6C(iTween_ApplyTween_TypeInfo);
+        v6 = (iTween_ApplyTween_o *)sub_1C372A4(iTween_ApplyTween_TypeInfo);
         v7 = &Method_iTween_ApplyLookToTargets__;
         goto LABEL_71;
       }
@@ -15290,51 +15290,51 @@ void iTween__GenerateTargets(iTween_o *this, const MethodInfo *method)
     {
       if ( v4 == -1510671094 )
       {
-        if ( !System_String__op_Equality(type, (System_String_o *)StringLiteral_23146/*"rotate"*/, 0) )
+        if ( !System_String__op_Equality(type, (System_String_o *)StringLiteral_23150/*"rotate"*/, 0) )
           return;
         v16 = this->fields.method;
-        if ( System_String__op_Equality(v16, (System_String_o *)StringLiteral_24106/*"to"*/, 0) )
+        if ( System_String__op_Equality(v16, (System_String_o *)StringLiteral_24110/*"to"*/, 0) )
         {
           iTween__GenerateRotateToTargets(this, v17);
-          v6 = (iTween_ApplyTween_o *)sub_1C32E6C(iTween_ApplyTween_TypeInfo);
+          v6 = (iTween_ApplyTween_o *)sub_1C372A4(iTween_ApplyTween_TypeInfo);
           v7 = &Method_iTween_ApplyRotateToTargets__;
           goto LABEL_71;
         }
-        if ( System_String__op_Equality(v16, (System_String_o *)StringLiteral_16665/*"add"*/, 0) )
+        if ( System_String__op_Equality(v16, (System_String_o *)StringLiteral_16667/*"add"*/, 0) )
         {
           iTween__GenerateRotateAddTargets(this, v26);
         }
         else
         {
-          if ( !System_String__op_Equality(v16, (System_String_o *)StringLiteral_17669/*"by"*/, 0) )
+          if ( !System_String__op_Equality(v16, (System_String_o *)StringLiteral_17671/*"by"*/, 0) )
             return;
           iTween__GenerateRotateByTargets(this, v31);
         }
-        v6 = (iTween_ApplyTween_o *)sub_1C32E6C(iTween_ApplyTween_TypeInfo);
+        v6 = (iTween_ApplyTween_o *)sub_1C372A4(iTween_ApplyTween_TypeInfo);
         v7 = &Method_iTween_ApplyRotateAddTargets__;
         goto LABEL_71;
       }
-      if ( v4 == -1114918155 && System_String__op_Equality(type, (System_String_o *)StringLiteral_23417/*"shake"*/, 0) )
+      if ( v4 == -1114918155 && System_String__op_Equality(type, (System_String_o *)StringLiteral_23421/*"shake"*/, 0) )
       {
         v8 = this->fields.method;
-        if ( System_String__op_Equality(v8, (System_String_o *)StringLiteral_22736/*"position"*/, 0) )
+        if ( System_String__op_Equality(v8, (System_String_o *)StringLiteral_22740/*"position"*/, 0) )
         {
           iTween__GenerateShakePositionTargets(this, v9);
-          v6 = (iTween_ApplyTween_o *)sub_1C32E6C(iTween_ApplyTween_TypeInfo);
+          v6 = (iTween_ApplyTween_o *)sub_1C372A4(iTween_ApplyTween_TypeInfo);
           v7 = &Method_iTween_ApplyShakePositionTargets__;
           goto LABEL_71;
         }
-        if ( System_String__op_Equality(v8, (System_String_o *)StringLiteral_23191/*"scale"*/, 0) )
+        if ( System_String__op_Equality(v8, (System_String_o *)StringLiteral_23195/*"scale"*/, 0) )
         {
           iTween__GenerateShakeScaleTargets(this, v24);
-          v6 = (iTween_ApplyTween_o *)sub_1C32E6C(iTween_ApplyTween_TypeInfo);
+          v6 = (iTween_ApplyTween_o *)sub_1C372A4(iTween_ApplyTween_TypeInfo);
           v7 = &Method_iTween_ApplyShakeScaleTargets__;
           goto LABEL_71;
         }
-        if ( System_String__op_Equality(v8, (System_String_o *)StringLiteral_23148/*"rotation"*/, 0) )
+        if ( System_String__op_Equality(v8, (System_String_o *)StringLiteral_23152/*"rotation"*/, 0) )
         {
           iTween__GenerateShakeRotationTargets(this, v30);
-          v6 = (iTween_ApplyTween_o *)sub_1C32E6C(iTween_ApplyTween_TypeInfo);
+          v6 = (iTween_ApplyTween_o *)sub_1C372A4(iTween_ApplyTween_TypeInfo);
           v7 = &Method_iTween_ApplyShakeRotationTargets__;
           goto LABEL_71;
         }
@@ -15345,90 +15345,90 @@ void iTween__GenerateTargets(iTween_o *this, const MethodInfo *method)
   {
     if ( v4 == -2104025999 )
     {
-      if ( !System_String__op_Equality(type, (System_String_o *)StringLiteral_23191/*"scale"*/, 0) )
+      if ( !System_String__op_Equality(type, (System_String_o *)StringLiteral_23195/*"scale"*/, 0) )
         return;
       v18 = this->fields.method;
-      if ( System_String__op_Equality(v18, (System_String_o *)StringLiteral_24106/*"to"*/, 0) )
+      if ( System_String__op_Equality(v18, (System_String_o *)StringLiteral_24110/*"to"*/, 0) )
       {
         iTween__GenerateScaleToTargets(this, v19);
       }
-      else if ( System_String__op_Equality(v18, (System_String_o *)StringLiteral_17669/*"by"*/, 0) )
+      else if ( System_String__op_Equality(v18, (System_String_o *)StringLiteral_17671/*"by"*/, 0) )
       {
         iTween__GenerateScaleByTargets(this, v28);
       }
       else
       {
-        if ( !System_String__op_Equality(v18, (System_String_o *)StringLiteral_16665/*"add"*/, 0) )
+        if ( !System_String__op_Equality(v18, (System_String_o *)StringLiteral_16667/*"add"*/, 0) )
           return;
         iTween__GenerateScaleAddTargets(this, v33);
       }
-      v6 = (iTween_ApplyTween_o *)sub_1C32E6C(iTween_ApplyTween_TypeInfo);
+      v6 = (iTween_ApplyTween_o *)sub_1C372A4(iTween_ApplyTween_TypeInfo);
       v7 = &Method_iTween_ApplyScaleToTargets__;
       goto LABEL_71;
     }
     if ( v4 == -1933610845 )
     {
-      if ( System_String__op_Equality(type, (System_String_o *)StringLiteral_22815/*"punch"*/, 0) )
+      if ( System_String__op_Equality(type, (System_String_o *)StringLiteral_22819/*"punch"*/, 0) )
       {
         v20 = this->fields.method;
-        if ( System_String__op_Equality(v20, (System_String_o *)StringLiteral_22736/*"position"*/, 0) )
+        if ( System_String__op_Equality(v20, (System_String_o *)StringLiteral_22740/*"position"*/, 0) )
         {
           iTween__GeneratePunchPositionTargets(this, v21);
-          v6 = (iTween_ApplyTween_o *)sub_1C32E6C(iTween_ApplyTween_TypeInfo);
+          v6 = (iTween_ApplyTween_o *)sub_1C372A4(iTween_ApplyTween_TypeInfo);
           v7 = &Method_iTween_ApplyPunchPositionTargets__;
           goto LABEL_71;
         }
-        if ( System_String__op_Equality(v20, (System_String_o *)StringLiteral_23148/*"rotation"*/, 0) )
+        if ( System_String__op_Equality(v20, (System_String_o *)StringLiteral_23152/*"rotation"*/, 0) )
         {
           iTween__GeneratePunchRotationTargets(this, v29);
-          v6 = (iTween_ApplyTween_o *)sub_1C32E6C(iTween_ApplyTween_TypeInfo);
+          v6 = (iTween_ApplyTween_o *)sub_1C372A4(iTween_ApplyTween_TypeInfo);
           v7 = &Method_iTween_ApplyPunchRotationTargets__;
           goto LABEL_71;
         }
-        if ( System_String__op_Equality(v20, (System_String_o *)StringLiteral_23191/*"scale"*/, 0) )
+        if ( System_String__op_Equality(v20, (System_String_o *)StringLiteral_23195/*"scale"*/, 0) )
         {
           iTween__GeneratePunchScaleTargets(this, v37);
-          v6 = (iTween_ApplyTween_o *)sub_1C32E6C(iTween_ApplyTween_TypeInfo);
+          v6 = (iTween_ApplyTween_o *)sub_1C372A4(iTween_ApplyTween_TypeInfo);
           v7 = &Method_iTween_ApplyPunchScaleTargets__;
           goto LABEL_71;
         }
       }
     }
-    else if ( v4 == 1113510858 && System_String__op_Equality(type, (System_String_o *)StringLiteral_24629/*"value"*/, 0) )
+    else if ( v4 == 1113510858 && System_String__op_Equality(type, (System_String_o *)StringLiteral_24634/*"value"*/, 0) )
     {
       v10 = this->fields.method;
-      if ( System_String__op_Equality(v10, (System_String_o *)StringLiteral_19499/*"float"*/, 0) )
+      if ( System_String__op_Equality(v10, (System_String_o *)StringLiteral_19502/*"float"*/, 0) )
       {
         iTween__GenerateFloatTargets(this, v11);
-        v6 = (iTween_ApplyTween_o *)sub_1C32E6C(iTween_ApplyTween_TypeInfo);
+        v6 = (iTween_ApplyTween_o *)sub_1C372A4(iTween_ApplyTween_TypeInfo);
         v7 = &Method_iTween_ApplyFloatTargets__;
         goto LABEL_71;
       }
-      if ( System_String__op_Equality(v10, (System_String_o *)StringLiteral_24646/*"vector2"*/, 0) )
+      if ( System_String__op_Equality(v10, (System_String_o *)StringLiteral_24651/*"vector2"*/, 0) )
       {
         iTween__GenerateVector2Targets(this, v27);
-        v6 = (iTween_ApplyTween_o *)sub_1C32E6C(iTween_ApplyTween_TypeInfo);
+        v6 = (iTween_ApplyTween_o *)sub_1C372A4(iTween_ApplyTween_TypeInfo);
         v7 = &Method_iTween_ApplyVector2Targets__;
         goto LABEL_71;
       }
-      if ( System_String__op_Equality(v10, (System_String_o *)StringLiteral_24647/*"vector3"*/, 0) )
+      if ( System_String__op_Equality(v10, (System_String_o *)StringLiteral_24652/*"vector3"*/, 0) )
       {
         iTween__GenerateVector3Targets(this, v32);
-        v6 = (iTween_ApplyTween_o *)sub_1C32E6C(iTween_ApplyTween_TypeInfo);
+        v6 = (iTween_ApplyTween_o *)sub_1C372A4(iTween_ApplyTween_TypeInfo);
         v7 = &Method_iTween_ApplyVector3Targets__;
         goto LABEL_71;
       }
-      if ( System_String__op_Equality(v10, (System_String_o *)StringLiteral_18051/*"color"*/, 0) )
+      if ( System_String__op_Equality(v10, (System_String_o *)StringLiteral_18053/*"color"*/, 0) )
       {
         iTween__GenerateColorTargets(this, v38);
-        v6 = (iTween_ApplyTween_o *)sub_1C32E6C(iTween_ApplyTween_TypeInfo);
+        v6 = (iTween_ApplyTween_o *)sub_1C372A4(iTween_ApplyTween_TypeInfo);
         v7 = &Method_iTween_ApplyColorTargets__;
         goto LABEL_71;
       }
-      if ( System_String__op_Equality(v10, (System_String_o *)StringLiteral_22987/*"rect"*/, 0) )
+      if ( System_String__op_Equality(v10, (System_String_o *)StringLiteral_22991/*"rect"*/, 0) )
       {
         iTween__GenerateRectTargets(this, v39);
-        v6 = (iTween_ApplyTween_o *)sub_1C32E6C(iTween_ApplyTween_TypeInfo);
+        v6 = (iTween_ApplyTween_o *)sub_1C372A4(iTween_ApplyTween_TypeInfo);
         v7 = &Method_iTween_ApplyRectTargets__;
         goto LABEL_71;
       }
@@ -15436,54 +15436,54 @@ void iTween__GenerateTargets(iTween_o *this, const MethodInfo *method)
   }
   else if ( v4 == 407568404 )
   {
-    if ( System_String__op_Equality(type, (System_String_o *)StringLiteral_21659/*"move"*/, 0) )
+    if ( System_String__op_Equality(type, (System_String_o *)StringLiteral_21662/*"move"*/, 0) )
     {
       v13 = this->fields.method;
-      if ( System_String__op_Equality(v13, (System_String_o *)StringLiteral_24106/*"to"*/, 0) )
+      if ( System_String__op_Equality(v13, (System_String_o *)StringLiteral_24110/*"to"*/, 0) )
       {
         tweenArguments = this->fields.tweenArguments;
         if ( !tweenArguments )
-          sub_1C32E7C(0);
+          sub_1C372B4(0);
         if ( (((__int64 (__fastcall *)(struct System_Collections_Hashtable_o *, __int64, const MethodInfo *))tweenArguments->klass->vtable._25_Contains.methodPtr)(
                 tweenArguments,
-                StringLiteral_22649/*"path"*/,
+                StringLiteral_22652/*"path"*/,
                 tweenArguments->klass->vtable._25_Contains.method)
             & 1) != 0 )
         {
           iTween__GenerateMoveToPathTargets(this, v15);
-          v6 = (iTween_ApplyTween_o *)sub_1C32E6C(iTween_ApplyTween_TypeInfo);
+          v6 = (iTween_ApplyTween_o *)sub_1C372A4(iTween_ApplyTween_TypeInfo);
           v7 = &Method_iTween_ApplyMoveToPathTargets__;
         }
         else
         {
           iTween__GenerateMoveToTargets(this, v15);
-          v6 = (iTween_ApplyTween_o *)sub_1C32E6C(iTween_ApplyTween_TypeInfo);
+          v6 = (iTween_ApplyTween_o *)sub_1C372A4(iTween_ApplyTween_TypeInfo);
           v7 = &Method_iTween_ApplyMoveToTargets__;
         }
         goto LABEL_71;
       }
-      if ( System_String__op_Equality(v13, (System_String_o *)StringLiteral_17669/*"by"*/, 0)
-        || System_String__op_Equality(v13, (System_String_o *)StringLiteral_16665/*"add"*/, 0) )
+      if ( System_String__op_Equality(v13, (System_String_o *)StringLiteral_17671/*"by"*/, 0)
+        || System_String__op_Equality(v13, (System_String_o *)StringLiteral_16667/*"add"*/, 0) )
       {
         iTween__GenerateMoveByTargets(this, v25);
-        v6 = (iTween_ApplyTween_o *)sub_1C32E6C(iTween_ApplyTween_TypeInfo);
+        v6 = (iTween_ApplyTween_o *)sub_1C372A4(iTween_ApplyTween_TypeInfo);
         v7 = &Method_iTween_ApplyMoveByTargets__;
         goto LABEL_71;
       }
     }
   }
   else if ( v4 == 1031692888
-         && System_String__op_Equality(type, (System_String_o *)StringLiteral_18051/*"color"*/, 0)
-         && System_String__op_Equality(this->fields.method, (System_String_o *)StringLiteral_24106/*"to"*/, 0) )
+         && System_String__op_Equality(type, (System_String_o *)StringLiteral_18053/*"color"*/, 0)
+         && System_String__op_Equality(this->fields.method, (System_String_o *)StringLiteral_24110/*"to"*/, 0) )
   {
     iTween__GenerateColorToTargets(this, v5);
-    v6 = (iTween_ApplyTween_o *)sub_1C32E6C(iTween_ApplyTween_TypeInfo);
+    v6 = (iTween_ApplyTween_o *)sub_1C372A4(iTween_ApplyTween_TypeInfo);
     v7 = &Method_iTween_ApplyColorToTargets__;
 LABEL_71:
     v34 = v6;
     iTween_ApplyTween___ctor(v6, (Il2CppObject *)this, *v7, 0);
     this->fields.apply = v34;
-    sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.apply, (int32_t)v34, v35, v36);
+    sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.apply, (int32_t)v34, v35, v36);
   }
 }
 
@@ -15511,28 +15511,28 @@ void iTween__GenerateVector2Targets(iTween_o *this, const MethodInfo *method)
   iTween_o *v21; // x0
   const MethodInfo *v22; // x1
 
-  if ( (byte_4C3E9CA & 1) == 0 )
+  if ( (byte_4C49F4A & 1) == 0 )
   {
-    sub_1C32C20(&System_Math_TypeInfo);
-    sub_1C32C20(&float_TypeInfo);
-    sub_1C32C20(&UnityEngine_Vector2___TypeInfo);
-    sub_1C32C20(&UnityEngine_Vector2_TypeInfo);
-    sub_1C32C20(&StringLiteral_19689/*"from"*/);
-    sub_1C32C20(&StringLiteral_23592/*"speed"*/);
-    sub_1C32C20(&StringLiteral_24106/*"to"*/);
-    byte_4C3E9CA = 1;
+    sub_1C37058(&System_Math_TypeInfo);
+    sub_1C37058(&float_TypeInfo);
+    sub_1C37058(&UnityEngine_Vector2___TypeInfo);
+    sub_1C37058(&UnityEngine_Vector2_TypeInfo);
+    sub_1C37058(&StringLiteral_19692/*"from"*/);
+    sub_1C37058(&StringLiteral_23596/*"speed"*/);
+    sub_1C37058(&StringLiteral_24110/*"to"*/);
+    byte_4C49F4A = 1;
   }
-  v3 = (struct UnityEngine_Vector2_array *)sub_1C32CC8(UnityEngine_Vector2___TypeInfo, 3);
+  v3 = (struct UnityEngine_Vector2_array *)sub_1C37100(UnityEngine_Vector2___TypeInfo, 3);
   this->fields.vector2s = v3;
   p_vector2s = &this->fields.vector2s;
-  sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.vector2s, (int32_t)v3, v5, v6);
+  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.vector2s, (int32_t)v3, v5, v6);
   tweenArguments = (__int64)this->fields.tweenArguments;
   if ( !tweenArguments )
     goto LABEL_27;
   v8 = *p_vector2s;
   tweenArguments = (*(__int64 (__fastcall **)(__int64, __int64, _QWORD))(*(_QWORD *)tweenArguments + 760LL))(
                      tweenArguments,
-                     StringLiteral_19689/*"from"*/,
+                     StringLiteral_19692/*"from"*/,
                      *(_QWORD *)(*(_QWORD *)tweenArguments + 768LL));
   if ( !v8 || !tweenArguments )
     goto LABEL_27;
@@ -15548,45 +15548,45 @@ void iTween__GenerateVector2Targets(iTween_o *this, const MethodInfo *method)
   vector2s = this->fields.vector2s;
   tweenArguments = (*(__int64 (__fastcall **)(__int64, __int64, _QWORD))(*(_QWORD *)tweenArguments + 760LL))(
                      tweenArguments,
-                     StringLiteral_24106/*"to"*/,
+                     StringLiteral_24110/*"to"*/,
                      *(_QWORD *)(*(_QWORD *)tweenArguments + 768LL));
   if ( !vector2s || !tweenArguments )
     goto LABEL_27;
   if ( *(Il2CppClass **)(*(_QWORD *)tweenArguments + 64LL) != UnityEngine_Vector2_TypeInfo->_1.element_class )
   {
 LABEL_29:
-    sub_1C3313C(tweenArguments);
+    sub_1C37574(tweenArguments);
     iTween__GenerateVector3Targets(v21, v22);
     return;
   }
   tweenArguments = j_il2cpp_object_unbox_0(tweenArguments, UnityEngine_Vector2_TypeInfo, v12, v13);
   if ( LODWORD(vector2s->max_length) <= 1 )
 LABEL_28:
-    sub_1C32E84(tweenArguments);
+    sub_1C372BC(tweenArguments);
   vector2s->m_Items[1] = *(UnityEngine_Vector2_o *)tweenArguments;
   tweenArguments = (__int64)this->fields.tweenArguments;
   if ( !tweenArguments )
     goto LABEL_27;
   tweenArguments = (*(__int64 (__fastcall **)(__int64, __int64, _QWORD))(*(_QWORD *)tweenArguments + 712LL))(
                      tweenArguments,
-                     StringLiteral_23592/*"speed"*/,
+                     StringLiteral_23596/*"speed"*/,
                      *(_QWORD *)(*(_QWORD *)tweenArguments + 720LL));
   if ( (tweenArguments & 1) == 0 )
     return;
   v14 = *p_vector2s;
   if ( !*p_vector2s )
 LABEL_27:
-    sub_1C32E7C(tweenArguments);
+    sub_1C372B4(tweenArguments);
   if ( LODWORD(v14->max_length) < 2 )
     goto LABEL_28;
   x = v14->m_Items[0].fields.x;
   y = v14->m_Items[0].fields.y;
   v18 = v14->m_Items[1].fields.x;
   v17 = v14->m_Items[1].fields.y;
-  if ( !byte_4C313CF )
+  if ( !byte_4C3C91F )
   {
-    sub_1C32C20(&System_Math_TypeInfo);
-    byte_4C313CF = 1;
+    sub_1C37058(&System_Math_TypeInfo);
+    byte_4C3C91F = 1;
   }
   if ( !System_Math_TypeInfo->_2.cctor_finished )
   {
@@ -15599,7 +15599,7 @@ LABEL_27:
     goto LABEL_27;
   tweenArguments = (*(__int64 (__fastcall **)(__int64, __int64, _QWORD))(*(_QWORD *)tweenArguments + 760LL))(
                      tweenArguments,
-                     StringLiteral_23592/*"speed"*/,
+                     StringLiteral_23596/*"speed"*/,
                      *(_QWORD *)(*(_QWORD *)tweenArguments + 768LL));
   if ( !tweenArguments )
     goto LABEL_27;
@@ -15641,28 +15641,28 @@ void iTween__GenerateVector3Targets(iTween_o *this, const MethodInfo *method)
   iTween_o *v25; // x0
   const MethodInfo *v26; // x1
 
-  if ( (byte_4C3E9C9 & 1) == 0 )
+  if ( (byte_4C49F49 & 1) == 0 )
   {
-    sub_1C32C20(&System_Math_TypeInfo);
-    sub_1C32C20(&float_TypeInfo);
-    sub_1C32C20(&UnityEngine_Vector3___TypeInfo);
-    sub_1C32C20(&UnityEngine_Vector3_TypeInfo);
-    sub_1C32C20(&StringLiteral_19689/*"from"*/);
-    sub_1C32C20(&StringLiteral_23592/*"speed"*/);
-    sub_1C32C20(&StringLiteral_24106/*"to"*/);
-    byte_4C3E9C9 = 1;
+    sub_1C37058(&System_Math_TypeInfo);
+    sub_1C37058(&float_TypeInfo);
+    sub_1C37058(&UnityEngine_Vector3___TypeInfo);
+    sub_1C37058(&UnityEngine_Vector3_TypeInfo);
+    sub_1C37058(&StringLiteral_19692/*"from"*/);
+    sub_1C37058(&StringLiteral_23596/*"speed"*/);
+    sub_1C37058(&StringLiteral_24110/*"to"*/);
+    byte_4C49F49 = 1;
   }
-  v3 = (struct UnityEngine_Vector3_array *)sub_1C32CC8(UnityEngine_Vector3___TypeInfo, 3);
+  v3 = (struct UnityEngine_Vector3_array *)sub_1C37100(UnityEngine_Vector3___TypeInfo, 3);
   this->fields.vector3s = v3;
   p_vector3s = &this->fields.vector3s;
-  sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.vector3s, (int32_t)v3, v5, v6);
+  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.vector3s, (int32_t)v3, v5, v6);
   tweenArguments = (__int64)this->fields.tweenArguments;
   if ( !tweenArguments )
     goto LABEL_27;
   v8 = *p_vector3s;
   tweenArguments = (*(__int64 (__fastcall **)(__int64, __int64, _QWORD))(*(_QWORD *)tweenArguments + 760LL))(
                      tweenArguments,
-                     StringLiteral_19689/*"from"*/,
+                     StringLiteral_19692/*"from"*/,
                      *(_QWORD *)(*(_QWORD *)tweenArguments + 768LL));
   if ( !v8 || !tweenArguments )
     goto LABEL_27;
@@ -15680,21 +15680,21 @@ void iTween__GenerateVector3Targets(iTween_o *this, const MethodInfo *method)
   vector3s = this->fields.vector3s;
   tweenArguments = (*(__int64 (__fastcall **)(__int64, __int64, _QWORD))(*(_QWORD *)tweenArguments + 760LL))(
                      tweenArguments,
-                     StringLiteral_24106/*"to"*/,
+                     StringLiteral_24110/*"to"*/,
                      *(_QWORD *)(*(_QWORD *)tweenArguments + 768LL));
   if ( !vector3s || !tweenArguments )
     goto LABEL_27;
   if ( *(Il2CppClass **)(*(_QWORD *)tweenArguments + 64LL) != UnityEngine_Vector3_TypeInfo->_1.element_class )
   {
 LABEL_29:
-    sub_1C3313C(tweenArguments);
+    sub_1C37574(tweenArguments);
     iTween__GenerateColorTargets(v25, v26);
     return;
   }
   tweenArguments = j_il2cpp_object_unbox_0(tweenArguments, UnityEngine_Vector3_TypeInfo, v13, v14);
   if ( LODWORD(vector3s->max_length) <= 1 )
 LABEL_28:
-    sub_1C32E84(tweenArguments);
+    sub_1C372BC(tweenArguments);
   v15 = *(float *)(tweenArguments + 8);
   *(_QWORD *)&vector3s->m_Items[1].fields.x = *(_QWORD *)tweenArguments;
   vector3s->m_Items[1].fields.z = v15;
@@ -15703,14 +15703,14 @@ LABEL_28:
     goto LABEL_27;
   tweenArguments = (*(__int64 (__fastcall **)(__int64, __int64, _QWORD))(*(_QWORD *)tweenArguments + 712LL))(
                      tweenArguments,
-                     StringLiteral_23592/*"speed"*/,
+                     StringLiteral_23596/*"speed"*/,
                      *(_QWORD *)(*(_QWORD *)tweenArguments + 720LL));
   if ( (tweenArguments & 1) == 0 )
     return;
   v16 = *p_vector3s;
   if ( !*p_vector3s )
 LABEL_27:
-    sub_1C32E7C(tweenArguments);
+    sub_1C372B4(tweenArguments);
   if ( LODWORD(v16->max_length) < 2 )
     goto LABEL_28;
   x = v16->m_Items[0].fields.x;
@@ -15719,10 +15719,10 @@ LABEL_27:
   v20 = v16->m_Items[1].fields.x;
   v22 = v16->m_Items[1].fields.y;
   v21 = v16->m_Items[1].fields.z;
-  if ( !byte_4C313CF )
+  if ( !byte_4C3C91F )
   {
-    sub_1C32C20(&System_Math_TypeInfo);
-    byte_4C313CF = 1;
+    sub_1C37058(&System_Math_TypeInfo);
+    byte_4C3C91F = 1;
   }
   if ( !System_Math_TypeInfo->_2.cctor_finished )
   {
@@ -15735,7 +15735,7 @@ LABEL_27:
     goto LABEL_27;
   tweenArguments = (*(__int64 (__fastcall **)(__int64, __int64, _QWORD))(*(_QWORD *)tweenArguments + 760LL))(
                      tweenArguments,
-                     StringLiteral_23592/*"speed"*/,
+                     StringLiteral_23596/*"speed"*/,
                      *(_QWORD *)(*(_QWORD *)tweenArguments + 768LL));
   if ( !tweenArguments )
     goto LABEL_27;
@@ -15759,42 +15759,42 @@ void iTween__GetEasingFunction(iTween_o *this, const MethodInfo *method)
   int32_t v7; // w2
   const MethodInfo *v8; // x3
 
-  if ( (byte_4C3EA45 & 1) == 0 )
+  if ( (byte_4C49FC5 & 1) == 0 )
   {
-    sub_1C32C20(&iTween_EasingFunction_TypeInfo);
-    sub_1C32C20(&Method_iTween_easeInBack__);
-    sub_1C32C20(&Method_iTween_easeInBounce__);
-    sub_1C32C20(&Method_iTween_easeInCirc__);
-    sub_1C32C20(&Method_iTween_easeInCubic__);
-    sub_1C32C20(&Method_iTween_easeInElastic__);
-    sub_1C32C20(&Method_iTween_easeInExpo__);
-    sub_1C32C20(&Method_iTween_easeInOutBack__);
-    sub_1C32C20(&Method_iTween_easeInOutBounce__);
-    sub_1C32C20(&Method_iTween_easeInOutCirc__);
-    sub_1C32C20(&Method_iTween_easeInOutCubic__);
-    sub_1C32C20(&Method_iTween_easeInOutElastic__);
-    sub_1C32C20(&Method_iTween_easeInOutExpo__);
-    sub_1C32C20(&Method_iTween_easeInOutQuad__);
-    sub_1C32C20(&Method_iTween_easeInOutQuart__);
-    sub_1C32C20(&Method_iTween_easeInOutQuint__);
-    sub_1C32C20(&Method_iTween_easeInOutSine__);
-    sub_1C32C20(&Method_iTween_easeInQuad__);
-    sub_1C32C20(&Method_iTween_easeInQuart__);
-    sub_1C32C20(&Method_iTween_easeInQuint__);
-    sub_1C32C20(&Method_iTween_easeInSine__);
-    sub_1C32C20(&Method_iTween_easeOutBack__);
-    sub_1C32C20(&Method_iTween_easeOutBounce__);
-    sub_1C32C20(&Method_iTween_easeOutCirc__);
-    sub_1C32C20(&Method_iTween_easeOutCubic__);
-    sub_1C32C20(&Method_iTween_easeOutElastic__);
-    sub_1C32C20(&Method_iTween_easeOutExpo__);
-    sub_1C32C20(&Method_iTween_easeOutQuad__);
-    sub_1C32C20(&Method_iTween_easeOutQuart__);
-    sub_1C32C20(&Method_iTween_easeOutQuint__);
-    sub_1C32C20(&Method_iTween_easeOutSine__);
-    sub_1C32C20(&Method_iTween_linear__);
-    sub_1C32C20(&Method_iTween_spring__);
-    byte_4C3EA45 = 1;
+    sub_1C37058(&iTween_EasingFunction_TypeInfo);
+    sub_1C37058(&Method_iTween_easeInBack__);
+    sub_1C37058(&Method_iTween_easeInBounce__);
+    sub_1C37058(&Method_iTween_easeInCirc__);
+    sub_1C37058(&Method_iTween_easeInCubic__);
+    sub_1C37058(&Method_iTween_easeInElastic__);
+    sub_1C37058(&Method_iTween_easeInExpo__);
+    sub_1C37058(&Method_iTween_easeInOutBack__);
+    sub_1C37058(&Method_iTween_easeInOutBounce__);
+    sub_1C37058(&Method_iTween_easeInOutCirc__);
+    sub_1C37058(&Method_iTween_easeInOutCubic__);
+    sub_1C37058(&Method_iTween_easeInOutElastic__);
+    sub_1C37058(&Method_iTween_easeInOutExpo__);
+    sub_1C37058(&Method_iTween_easeInOutQuad__);
+    sub_1C37058(&Method_iTween_easeInOutQuart__);
+    sub_1C37058(&Method_iTween_easeInOutQuint__);
+    sub_1C37058(&Method_iTween_easeInOutSine__);
+    sub_1C37058(&Method_iTween_easeInQuad__);
+    sub_1C37058(&Method_iTween_easeInQuart__);
+    sub_1C37058(&Method_iTween_easeInQuint__);
+    sub_1C37058(&Method_iTween_easeInSine__);
+    sub_1C37058(&Method_iTween_easeOutBack__);
+    sub_1C37058(&Method_iTween_easeOutBounce__);
+    sub_1C37058(&Method_iTween_easeOutCirc__);
+    sub_1C37058(&Method_iTween_easeOutCubic__);
+    sub_1C37058(&Method_iTween_easeOutElastic__);
+    sub_1C37058(&Method_iTween_easeOutExpo__);
+    sub_1C37058(&Method_iTween_easeOutQuad__);
+    sub_1C37058(&Method_iTween_easeOutQuart__);
+    sub_1C37058(&Method_iTween_easeOutQuint__);
+    sub_1C37058(&Method_iTween_easeOutSine__);
+    sub_1C37058(&Method_iTween_linear__);
+    sub_1C37058(&Method_iTween_spring__);
+    byte_4C49FC5 = 1;
   }
   v3 = &Method_iTween_easeInQuad__;
   switch ( this->fields.easeType )
@@ -15894,12 +15894,12 @@ void iTween__GetEasingFunction(iTween_o *this, const MethodInfo *method)
     case 0x1F:
       v3 = &Method_iTween_easeInOutElastic__;
 LABEL_35:
-      v4 = (iTween_EasingFunction_o *)sub_1C32E6C(iTween_EasingFunction_TypeInfo);
+      v4 = (iTween_EasingFunction_o *)sub_1C372A4(iTween_EasingFunction_TypeInfo);
       v5 = *v3;
       v6 = v4;
       iTween_EasingFunction___ctor(v4, (Il2CppObject *)this, v5, 0);
       this->fields.ease = v6;
-      sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.ease, (int32_t)v6, v7, v8);
+      sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.ease, (int32_t)v6, v7, v8);
       break;
     default:
       return;
@@ -15916,23 +15916,23 @@ System_Collections_Hashtable_o *iTween__Hash(System_Object_array *args, const Me
   unsigned int v6; // w21
 
   v2 = args;
-  if ( (byte_4C3EA3C & 1) == 0 )
+  if ( (byte_4C49FBC & 1) == 0 )
   {
-    sub_1C32C20(&UnityEngine_Debug_TypeInfo);
-    sub_1C32C20(&System_Collections_Hashtable_TypeInfo);
-    args = (System_Object_array *)sub_1C32C20(&StringLiteral_14620/*"Tween Error: Hash requires an even number of arguments!"*/);
-    byte_4C3EA3C = 1;
+    sub_1C37058(&UnityEngine_Debug_TypeInfo);
+    sub_1C37058(&System_Collections_Hashtable_TypeInfo);
+    args = (System_Object_array *)sub_1C37058(&StringLiteral_14621/*"Tween Error: Hash requires an even number of arguments!"*/);
+    byte_4C49FBC = 1;
   }
   if ( !v2 )
     goto LABEL_17;
-  v3 = (System_Collections_Hashtable_o *)sub_1C32E6C(System_Collections_Hashtable_TypeInfo);
-  System_Collections_Hashtable___ctor_64883468(v3, SLODWORD(v2->max_length) / 2, 0);
+  v3 = (System_Collections_Hashtable_o *)sub_1C372A4(System_Collections_Hashtable_TypeInfo);
+  System_Collections_Hashtable___ctor_64926580(v3, SLODWORD(v2->max_length) / 2, 0);
   max_length = v2->max_length;
   if ( (max_length & 1) != 0 )
   {
     if ( !UnityEngine_Debug_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(UnityEngine_Debug_TypeInfo);
-    UnityEngine_Debug__LogError((Il2CppObject *)StringLiteral_14620/*"Tween Error: Hash requires an even number of arguments!"*/, 0);
+    UnityEngine_Debug__LogError((Il2CppObject *)StringLiteral_14621/*"Tween Error: Hash requires an even number of arguments!"*/, 0);
     return 0;
   }
   else if ( (int)max_length - 1 >= 1 )
@@ -15941,7 +15941,7 @@ System_Collections_Hashtable_o *iTween__Hash(System_Object_array *args, const Me
     while ( 1 )
     {
       if ( v5 >= (unsigned int)max_length || (v6 = v5 + 1, v5 + 1 >= (unsigned int)max_length) )
-        sub_1C32E84(args);
+        sub_1C372BC(args);
       if ( !v3 )
         break;
       args = (System_Object_array *)((__int64 (__fastcall *)(System_Collections_Hashtable_o *, Il2CppObject *, Il2CppObject *, const MethodInfo *))v3->klass->vtable._22_Add.methodPtr)(
@@ -15955,7 +15955,7 @@ System_Collections_Hashtable_o *iTween__Hash(System_Object_array *args, const Me
         return v3;
     }
 LABEL_17:
-    sub_1C32E7C(args);
+    sub_1C372B4(args);
   }
   return v3;
 }
@@ -15969,15 +15969,15 @@ void iTween__Init(UnityEngine_GameObject_o *target, const MethodInfo *method)
   float z; // s10
   UnityEngine_Vector3_o v7; // 0:s0.4,4:s1.4,8:s2.4
 
-  if ( (byte_4C3E98E & 1) == 0 )
+  if ( (byte_4C49F0E & 1) == 0 )
   {
-    sub_1C32C20(&iTween_TypeInfo);
-    byte_4C3E98E = 1;
+    sub_1C37058(&iTween_TypeInfo);
+    byte_4C49F0E = 1;
   }
-  if ( !byte_4C313D1 )
+  if ( !byte_4C3C921 )
   {
-    sub_1C32C20(&UnityEngine_Vector3_TypeInfo);
-    byte_4C313D1 = 1;
+    sub_1C37058(&UnityEngine_Vector3_TypeInfo);
+    byte_4C3C921 = 1;
   }
   static_fields = UnityEngine_Vector3_TypeInfo->static_fields;
   x = static_fields->zeroVector.fields.x;
@@ -16028,12 +16028,12 @@ UnityEngine_Vector3_o iTween__Interp(UnityEngine_Vector3_array *pts, float t, co
   UnityEngine_Vector3_o result; // 0:s0.4,4:s1.4,8:s2.4
 
   if ( !pts )
-    sub_1C32E7C(0);
+    sub_1C372B4(0);
   max_length = pts->max_length;
-  if ( !byte_4C313D0 )
+  if ( !byte_4C3C920 )
   {
-    sub_1C32C20(&System_Math_TypeInfo);
-    byte_4C313D0 = 1;
+    sub_1C37058(&System_Math_TypeInfo);
+    byte_4C3C920 = 1;
   }
   v6 = (float)(max_length - 3) * t;
   v7 = System_Math_TypeInfo;
@@ -16048,7 +16048,7 @@ UnityEngine_Vector3_o iTween__Interp(UnityEngine_Vector3_array *pts, float t, co
   else
     v10 = v8;
   if ( v10 >= v9 || v10 + 1 >= v9 || v10 + 2 >= v9 || v10 + 3 >= v9 )
-    sub_1C32E84(v7);
+    sub_1C372BC(v7);
   v11 = (char *)pts + 12 * v10;
   v12 = (char *)&pts->obj.monitor + 12 * v10 + 4;
   v13 = (char *)&pts->max_length + 12 * v10;
@@ -16111,27 +16111,27 @@ void iTween__LateUpdate(iTween_o *this, const MethodInfo *method)
   System_Collections_Hashtable_o *v6; // x19
   UnityEngine_GameObject_o *v7; // x20
 
-  if ( (byte_4C3EA3E & 1) == 0 )
+  if ( (byte_4C49FBE & 1) == 0 )
   {
-    sub_1C32C20(&StringLiteral_21348/*"looktarget"*/);
-    sub_1C32C20(&StringLiteral_23417/*"shake"*/);
-    sub_1C32C20(&StringLiteral_22815/*"punch"*/);
-    sub_1C32C20(&StringLiteral_21659/*"move"*/);
-    sub_1C32C20(&iTween_TypeInfo);
-    byte_4C3EA3E = 1;
+    sub_1C37058(&StringLiteral_21351/*"looktarget"*/);
+    sub_1C37058(&StringLiteral_23421/*"shake"*/);
+    sub_1C37058(&StringLiteral_22819/*"punch"*/);
+    sub_1C37058(&StringLiteral_21662/*"move"*/);
+    sub_1C37058(&iTween_TypeInfo);
+    byte_4C49FBE = 1;
   }
   tweenArguments = this->fields.tweenArguments;
   if ( !tweenArguments )
-    sub_1C32E7C(0);
+    sub_1C372B4(0);
   if ( (((__int64 (__fastcall *)(struct System_Collections_Hashtable_o *, __int64, const MethodInfo *))tweenArguments->klass->vtable._25_Contains.methodPtr)(
           tweenArguments,
-          StringLiteral_21348/*"looktarget"*/,
+          StringLiteral_21351/*"looktarget"*/,
           tweenArguments->klass->vtable._25_Contains.method)
       & 1) != 0
     && this->fields.isRunning
-    && (System_String__op_Equality(this->fields.type, (System_String_o *)StringLiteral_21659/*"move"*/, 0)
-     || System_String__op_Equality(this->fields.type, (System_String_o *)StringLiteral_23417/*"shake"*/, 0)
-     || System_String__op_Equality(this->fields.type, (System_String_o *)StringLiteral_22815/*"punch"*/, 0)) )
+    && (System_String__op_Equality(this->fields.type, (System_String_o *)StringLiteral_21662/*"move"*/, 0)
+     || System_String__op_Equality(this->fields.type, (System_String_o *)StringLiteral_23421/*"shake"*/, 0)
+     || System_String__op_Equality(this->fields.type, (System_String_o *)StringLiteral_22819/*"punch"*/, 0)) )
   {
     gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
     v6 = this->fields.tweenArguments;
@@ -16154,19 +16154,19 @@ void iTween__Launch(UnityEngine_GameObject_o *target, System_Collections_Hashtab
   System_Guid_o v10; // 0:x0.16
 
   v4 = target;
-  if ( (byte_4C3EA42 & 1) == 0 )
+  if ( (byte_4C49FC2 & 1) == 0 )
   {
-    sub_1C32C20(&Method_System_Collections_Generic_List_Hashtable__Insert__);
-    sub_1C32C20(&StringLiteral_23988/*"target"*/);
-    sub_1C32C20(&StringLiteral_20251/*"id"*/);
-    target = (UnityEngine_GameObject_o *)sub_1C32C20(&iTween_TypeInfo);
-    byte_4C3EA42 = 1;
+    sub_1C37058(&Method_System_Collections_Generic_List_Hashtable__Insert__);
+    sub_1C37058(&StringLiteral_23992/*"target"*/);
+    sub_1C37058(&StringLiteral_20254/*"id"*/);
+    target = (UnityEngine_GameObject_o *)sub_1C37058(&iTween_TypeInfo);
+    byte_4C49FC2 = 1;
   }
   if ( !args )
     goto LABEL_14;
   if ( (((__int64 (__fastcall *)(System_Collections_Hashtable_o *, __int64, const MethodInfo *))args->klass->vtable._25_Contains.methodPtr)(
           args,
-          StringLiteral_20251/*"id"*/,
+          StringLiteral_20254/*"id"*/,
           args->klass->vtable._25_Contains.method)
       & 1) == 0 )
   {
@@ -16178,18 +16178,18 @@ void iTween__Launch(UnityEngine_GameObject_o *target, System_Collections_Hashtab
     v6 = System_Guid__ToString(v10, v5);
     ((void (__fastcall *)(System_Collections_Hashtable_o *, __int64, System_String_o *, const MethodInfo *))args->klass->vtable._29_set_Item.methodPtr)(
       args,
-      StringLiteral_20251/*"id"*/,
+      StringLiteral_20254/*"id"*/,
       v6,
       args->klass->vtable._29_set_Item.method);
   }
   if ( (((__int64 (__fastcall *)(System_Collections_Hashtable_o *, __int64, const MethodInfo *))args->klass->vtable._25_Contains.methodPtr)(
           args,
-          StringLiteral_23988/*"target"*/,
+          StringLiteral_23992/*"target"*/,
           args->klass->vtable._25_Contains.method)
       & 1) == 0 )
     ((void (__fastcall *)(System_Collections_Hashtable_o *, __int64, UnityEngine_GameObject_o *, const MethodInfo *))args->klass->vtable._29_set_Item.methodPtr)(
       args,
-      StringLiteral_23988/*"target"*/,
+      StringLiteral_23992/*"target"*/,
       v4,
       args->klass->vtable._29_set_Item.method);
   v7 = iTween_TypeInfo;
@@ -16201,12 +16201,12 @@ void iTween__Launch(UnityEngine_GameObject_o *target, System_Collections_Hashtab
   target = (UnityEngine_GameObject_o *)v7->static_fields->tweens;
   if ( !target )
 LABEL_14:
-    sub_1C32E7C(target);
+    sub_1C372B4(target);
   System_Collections_Generic_List_object___Insert(
     (System_Collections_Generic_List_object__o *)target,
     0,
     (Il2CppObject *)args,
-    (const MethodInfo_379956C *)Method_System_Collections_Generic_List_Hashtable__Insert__);
+    (const MethodInfo_37A3DD4 *)Method_System_Collections_Generic_List_Hashtable__Insert__);
   iTween__AddOrRecycleTweenComponent(v4, v8);
 }
 
@@ -16257,27 +16257,27 @@ void iTween__LookFrom(
   z = looktarget.fields.z;
   y = looktarget.fields.y;
   x = looktarget.fields.x;
-  if ( (byte_4C3E99E & 1) == 0 )
+  if ( (byte_4C49F1E & 1) == 0 )
   {
-    sub_1C32C20(&object___TypeInfo);
-    sub_1C32C20(&float_TypeInfo);
-    sub_1C32C20(&UnityEngine_Vector3_TypeInfo);
-    sub_1C32C20(&StringLiteral_21348/*"looktarget"*/);
-    sub_1C32C20(&StringLiteral_24067/*"time"*/);
-    sub_1C32C20(&iTween_TypeInfo);
-    byte_4C3E99E = 1;
+    sub_1C37058(&object___TypeInfo);
+    sub_1C37058(&float_TypeInfo);
+    sub_1C37058(&UnityEngine_Vector3_TypeInfo);
+    sub_1C37058(&StringLiteral_21351/*"looktarget"*/);
+    sub_1C37058(&StringLiteral_24071/*"time"*/);
+    sub_1C37058(&iTween_TypeInfo);
+    byte_4C49F1E = 1;
   }
-  v9 = sub_1C32CC8(object___TypeInfo, 4);
+  v9 = sub_1C37100(object___TypeInfo, 4);
   if ( !v9 )
-    sub_1C32E7C(0);
+    sub_1C372B4(0);
   v12 = v9;
-  v13 = StringLiteral_21348/*"looktarget"*/;
-  if ( StringLiteral_21348/*"looktarget"*/ )
+  v13 = StringLiteral_21351/*"looktarget"*/;
+  if ( StringLiteral_21351/*"looktarget"*/ )
   {
-    v13 = sub_1C32D5C(StringLiteral_21348/*"looktarget"*/);
+    v13 = sub_1C37194(StringLiteral_21351/*"looktarget"*/);
     if ( !v13 )
       goto LABEL_24;
-    v14 = StringLiteral_21348/*"looktarget"*/;
+    v14 = StringLiteral_21351/*"looktarget"*/;
   }
   else
   {
@@ -16286,7 +16286,7 @@ void iTween__LookFrom(
   if ( !*(_DWORD *)(v12 + 24) )
     goto LABEL_23;
   *(_QWORD *)(v12 + 32) = v14;
-  sub_1C32BC4((CGThumbnailListItem_o *)(v12 + 32), v14, v10, v11);
+  sub_1C36FFC((CGThumbnailListItem_o *)(v12 + 32), v14, v10, v11);
   *(float *)v40 = x;
   *(float *)&v40[1] = y;
   *(float *)&v40[2] = z;
@@ -16294,21 +16294,21 @@ void iTween__LookFrom(
   v23 = v13;
   if ( v13 )
   {
-    v13 = sub_1C32D5C(v13);
+    v13 = sub_1C37194(v13);
     if ( !v13 )
       goto LABEL_24;
   }
   if ( *(_DWORD *)(v12 + 24) <= 1u )
     goto LABEL_23;
   *(_QWORD *)(v12 + 40) = v23;
-  sub_1C32BC4((CGThumbnailListItem_o *)(v12 + 40), v23, v21, v22);
-  v13 = StringLiteral_24067/*"time"*/;
-  if ( StringLiteral_24067/*"time"*/ )
+  sub_1C36FFC((CGThumbnailListItem_o *)(v12 + 40), v23, v21, v22);
+  v13 = StringLiteral_24071/*"time"*/;
+  if ( StringLiteral_24071/*"time"*/ )
   {
-    v13 = sub_1C32D5C(StringLiteral_24067/*"time"*/);
+    v13 = sub_1C37194(StringLiteral_24071/*"time"*/);
     if ( !v13 )
       goto LABEL_24;
-    v26 = StringLiteral_24067/*"time"*/;
+    v26 = StringLiteral_24071/*"time"*/;
   }
   else
   {
@@ -16317,34 +16317,34 @@ void iTween__LookFrom(
   if ( *(_DWORD *)(v12 + 24) <= 2u )
     goto LABEL_23;
   *(_QWORD *)(v12 + 48) = v26;
-  sub_1C32BC4((CGThumbnailListItem_o *)(v12 + 48), v26, v24, v25);
+  sub_1C36FFC((CGThumbnailListItem_o *)(v12 + 48), v26, v24, v25);
   v41 = time;
   v13 = j_il2cpp_value_box_0(float_TypeInfo, &v41, v27, v28, v29, v30, v31, v32);
   v35 = v13;
   if ( v13 )
   {
-    v13 = sub_1C32D5C(v13);
+    v13 = sub_1C37194(v13);
     if ( !v13 )
     {
 LABEL_24:
-      v39 = sub_1C32EA0(v13);
-      sub_1C32D48(v39, 0);
+      v39 = sub_1C372D8(v13);
+      sub_1C37180(v39, 0);
     }
   }
   if ( *(_DWORD *)(v12 + 24) <= 3u )
 LABEL_23:
-    sub_1C32E84(v13);
+    sub_1C372BC(v13);
   *(_QWORD *)(v12 + 56) = v35;
-  sub_1C32BC4((CGThumbnailListItem_o *)(v12 + 56), v35, v33, v34);
+  sub_1C36FFC((CGThumbnailListItem_o *)(v12 + 56), v35, v33, v34);
   if ( !iTween_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(iTween_TypeInfo);
   v37 = iTween__Hash((System_Object_array *)v12, v36);
-  iTween__LookFrom_63152400(target, v37, v38);
+  iTween__LookFrom_63195512(target, v37, v38);
 }
 
 
 // local variable allocation has failed, the output may be wrong!
-void iTween__LookFrom_63152400(
+void iTween__LookFrom_63195512(
         UnityEngine_GameObject_o *target,
         System_Collections_Hashtable_o *args,
         const MethodInfo *method)
@@ -16420,31 +16420,31 @@ void iTween__LookFrom_63152400(
   UnityEngine_Vector3_o v73; // 0:s3.4,4:s4.4,8:s5.4
 
   v68 = *(_QWORD *)(_ReadStatusReg(TPIDR_EL0) + 40);
-  if ( (byte_4C3E99F & 1) == 0 )
+  if ( (byte_4C49F1F & 1) == 0 )
   {
-    sub_1C32C20(&iTween_Defaults_TypeInfo);
-    sub_1C32C20(&Method_System_Nullable_Vector3__GetValueOrDefault__);
-    sub_1C32C20(&Method_System_Nullable_Vector3__get_HasValue__);
-    sub_1C32C20(&System_Nullable_Vector3__TypeInfo);
-    sub_1C32C20(&string_TypeInfo);
-    sub_1C32C20(&UnityEngine_Transform_var);
-    sub_1C32C20(&UnityEngine_Transform_TypeInfo);
-    sub_1C32C20(&System_Type_TypeInfo);
-    sub_1C32C20(&UnityEngine_Vector3_var);
-    sub_1C32C20(&UnityEngine_Vector3_TypeInfo);
-    sub_1C32C20(&StringLiteral_24859/*"x"*/);
-    sub_1C32C20(&StringLiteral_24428/*"up"*/);
-    sub_1C32C20(&StringLiteral_23146/*"rotate"*/);
-    sub_1C32C20(&StringLiteral_21348/*"looktarget"*/);
-    sub_1C32C20(&StringLiteral_23148/*"rotation"*/);
-    sub_1C32C20(&StringLiteral_21560/*"method"*/);
-    sub_1C32C20(&StringLiteral_24961/*"y"*/);
-    sub_1C32C20(&StringLiteral_25008/*"z"*/);
-    sub_1C32C20(&StringLiteral_24106/*"to"*/);
-    sub_1C32C20(&StringLiteral_16960/*"axis"*/);
-    sub_1C32C20(&StringLiteral_24241/*"type"*/);
-    sub_1C32C20(&iTween_TypeInfo);
-    byte_4C3E99F = 1;
+    sub_1C37058(&iTween_Defaults_TypeInfo);
+    sub_1C37058(&Method_System_Nullable_Vector3__GetValueOrDefault__);
+    sub_1C37058(&Method_System_Nullable_Vector3__get_HasValue__);
+    sub_1C37058(&System_Nullable_Vector3__TypeInfo);
+    sub_1C37058(&string_TypeInfo);
+    sub_1C37058(&UnityEngine_Transform_var);
+    sub_1C37058(&UnityEngine_Transform_TypeInfo);
+    sub_1C37058(&System_Type_TypeInfo);
+    sub_1C37058(&UnityEngine_Vector3_var);
+    sub_1C37058(&UnityEngine_Vector3_TypeInfo);
+    sub_1C37058(&StringLiteral_24864/*"x"*/);
+    sub_1C37058(&StringLiteral_24432/*"up"*/);
+    sub_1C37058(&StringLiteral_23150/*"rotate"*/);
+    sub_1C37058(&StringLiteral_21351/*"looktarget"*/);
+    sub_1C37058(&StringLiteral_23152/*"rotation"*/);
+    sub_1C37058(&StringLiteral_21563/*"method"*/);
+    sub_1C37058(&StringLiteral_24966/*"y"*/);
+    sub_1C37058(&StringLiteral_25013/*"z"*/);
+    sub_1C37058(&StringLiteral_24110/*"to"*/);
+    sub_1C37058(&StringLiteral_16962/*"axis"*/);
+    sub_1C37058(&StringLiteral_24245/*"type"*/);
+    sub_1C37058(&iTween_TypeInfo);
+    byte_4C49F1F = 1;
   }
   v5 = (UnityEngine_Transform_o *)&v58;
   if ( !iTween_TypeInfo->_2.cctor_finished )
@@ -16464,7 +16464,7 @@ void iTween__LookFrom_63152400(
   z = eulerAngles.fields.z;
   transform = (void *)((__int64 (__fastcall *)(System_Collections_Hashtable_o *, __int64, const MethodInfo *))v7->klass->vtable._28_get_Item.methodPtr)(
                         v7,
-                        StringLiteral_21348/*"looktarget"*/,
+                        StringLiteral_21351/*"looktarget"*/,
                         v7->klass->vtable._28_get_Item.method);
   if ( !transform )
     goto LABEL_54;
@@ -16480,15 +16480,15 @@ void iTween__LookFrom_63152400(
     v5 = UnityEngine_GameObject__get_transform(target, 0);
     v16 = (UnityEngine_Transform_o *)((__int64 (__fastcall *)(System_Collections_Hashtable_o *, __int64, const MethodInfo *))v7->klass->vtable._28_get_Item.methodPtr)(
                                        v7,
-                                       StringLiteral_21348/*"looktarget"*/,
+                                       StringLiteral_21351/*"looktarget"*/,
                                        v7->klass->vtable._28_get_Item.method);
     v17 = (Il2CppClass **)((__int64 (__fastcall *)(System_Collections_Hashtable_o *, __int64, const MethodInfo *))v7->klass->vtable._28_get_Item.methodPtr)(
                             v7,
-                            StringLiteral_24428/*"up"*/,
+                            StringLiteral_24432/*"up"*/,
                             v7->klass->vtable._28_get_Item.method);
     if ( v17 && *v17 != System_Nullable_Vector3__TypeInfo->_1.element_class )
       goto LABEL_56;
-    transform = (void *)sub_1C32D68();
+    transform = (void *)sub_1C371A0();
     v18 = v63;
     v19 = v64;
     v20 = v65;
@@ -16519,7 +16519,7 @@ void iTween__LookFrom_63152400(
   }
   transform = (void *)((__int64 (__fastcall *)(System_Collections_Hashtable_o *, __int64, const MethodInfo *))v7->klass->vtable._28_get_Item.methodPtr)(
                         v7,
-                        StringLiteral_21348/*"looktarget"*/,
+                        StringLiteral_21351/*"looktarget"*/,
                         v7->klass->vtable._28_get_Item.method);
   if ( !transform )
     goto LABEL_54;
@@ -16534,19 +16534,19 @@ void iTween__LookFrom_63152400(
   v27 = UnityEngine_GameObject__get_transform(target, 0);
   v16 = (UnityEngine_Transform_o *)((__int64 (__fastcall *)(System_Collections_Hashtable_o *, __int64, const MethodInfo *))v7->klass->vtable._28_get_Item.methodPtr)(
                                      v7,
-                                     StringLiteral_21348/*"looktarget"*/,
+                                     StringLiteral_21351/*"looktarget"*/,
                                      v7->klass->vtable._28_get_Item.method);
   v17 = (Il2CppClass **)((__int64 (__fastcall *)(System_Collections_Hashtable_o *, __int64, const MethodInfo *))v7->klass->vtable._28_get_Item.methodPtr)(
                           v7,
-                          StringLiteral_24428/*"up"*/,
+                          StringLiteral_24432/*"up"*/,
                           v7->klass->vtable._28_get_Item.method);
   if ( v17 && *v17 != System_Nullable_Vector3__TypeInfo->_1.element_class )
   {
 LABEL_56:
-    sub_1C3313C(v17);
+    sub_1C37574(v17);
     goto LABEL_57;
   }
-  transform = (void *)sub_1C32D68();
+  transform = (void *)sub_1C371A0();
   if ( !v16 )
     goto LABEL_54;
   klass = v16->klass;
@@ -16554,7 +16554,7 @@ LABEL_56:
   if ( klass->_1.element_class != UnityEngine_Vector3_TypeInfo->_1.element_class )
   {
 LABEL_55:
-    sub_1C3313C(v16);
+    sub_1C37574(v16);
     goto LABEL_56;
   }
   v31 = y;
@@ -16587,43 +16587,43 @@ LABEL_55:
   v73.fields.x = v33;
   v73.fields.y = v34;
   v73.fields.z = v35;
-  UnityEngine_Transform__LookAt_71249040(v27, v70, v73, 0);
+  UnityEngine_Transform__LookAt_71292152(v27, v70, v73, 0);
   z = v66;
   y = v31;
 LABEL_37:
   if ( (((__int64 (__fastcall *)(System_Collections_Hashtable_o *, __int64, const MethodInfo *))v7->klass->vtable._25_Contains.methodPtr)(
           v7,
-          StringLiteral_16960/*"axis"*/,
+          StringLiteral_16962/*"axis"*/,
           v7->klass->vtable._25_Contains.method)
       & 1) == 0 )
     goto LABEL_51;
   transform = UnityEngine_GameObject__get_transform(target, 0);
   if ( !transform )
 LABEL_54:
-    sub_1C32E7C(transform);
+    sub_1C372B4(transform);
   v71 = UnityEngine_Transform__get_eulerAngles((UnityEngine_Transform_o *)transform, 0);
   v46 = v71.fields.x;
   methodPtr = (__int64 (__fastcall *)(System_Collections_Hashtable_o *, __int64, const MethodInfo *))v7->klass->vtable._28_get_Item.methodPtr;
   v48 = v7->klass->vtable._28_get_Item.method;
   v49 = v71.fields.y;
   v66 = v71.fields.z;
-  v50 = (System_String_o *)methodPtr(v7, StringLiteral_16960/*"axis"*/, v48);
+  v50 = (System_String_o *)methodPtr(v7, StringLiteral_16962/*"axis"*/, v48);
   v5 = (UnityEngine_Transform_o *)v50;
   if ( v50 && v50->klass != string_TypeInfo )
 LABEL_57:
-    sub_1C3313C(v5);
+    sub_1C37574(v5);
   v51 = z;
   v52 = z;
   v53 = y;
   v54 = v46;
-  if ( !System_String__op_Equality(v50, (System_String_o *)StringLiteral_24859/*"x"*/, 0) )
+  if ( !System_String__op_Equality(v50, (System_String_o *)StringLiteral_24864/*"x"*/, 0) )
   {
     v52 = v51;
     y = v49;
     v54 = x;
-    if ( !System_String__op_Equality((System_String_o *)v5, (System_String_o *)StringLiteral_24961/*"y"*/, 0) )
+    if ( !System_String__op_Equality((System_String_o *)v5, (System_String_o *)StringLiteral_24966/*"y"*/, 0) )
     {
-      v55 = System_String__op_Equality((System_String_o *)v5, (System_String_o *)StringLiteral_25008/*"z"*/, 0);
+      v55 = System_String__op_Equality((System_String_o *)v5, (System_String_o *)StringLiteral_25013/*"z"*/, 0);
       v52 = v66;
       if ( v55 )
         y = v53;
@@ -16651,18 +16651,18 @@ LABEL_51:
   v56 = j_il2cpp_value_box_0(UnityEngine_Vector3_TypeInfo, v67, v40, v41, v42, v43, v44, v45);
   ((void (__fastcall *)(System_Collections_Hashtable_o *, __int64, __int64, const MethodInfo *))v7->klass->vtable._29_set_Item.methodPtr)(
     v7,
-    StringLiteral_23148/*"rotation"*/,
+    StringLiteral_23152/*"rotation"*/,
     v56,
     v7->klass->vtable._29_set_Item.method);
   ((void (__fastcall *)(System_Collections_Hashtable_o *, __int64, __int64, const MethodInfo *))v7->klass->vtable._29_set_Item.methodPtr)(
     v7,
-    StringLiteral_24241/*"type"*/,
-    StringLiteral_23146/*"rotate"*/,
+    StringLiteral_24245/*"type"*/,
+    StringLiteral_23150/*"rotate"*/,
     v7->klass->vtable._29_set_Item.method);
   ((void (__fastcall *)(System_Collections_Hashtable_o *, __int64, __int64, const MethodInfo *))v7->klass->vtable._29_set_Item.methodPtr)(
     v7,
-    StringLiteral_21560/*"method"*/,
-    StringLiteral_24106/*"to"*/,
+    StringLiteral_21563/*"method"*/,
+    StringLiteral_24110/*"to"*/,
     v7->klass->vtable._29_set_Item.method);
   if ( !iTween_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(iTween_TypeInfo);
@@ -16716,27 +16716,27 @@ void iTween__LookTo(
   z = looktarget.fields.z;
   y = looktarget.fields.y;
   x = looktarget.fields.x;
-  if ( (byte_4C3E9A0 & 1) == 0 )
+  if ( (byte_4C49F20 & 1) == 0 )
   {
-    sub_1C32C20(&object___TypeInfo);
-    sub_1C32C20(&float_TypeInfo);
-    sub_1C32C20(&UnityEngine_Vector3_TypeInfo);
-    sub_1C32C20(&StringLiteral_21348/*"looktarget"*/);
-    sub_1C32C20(&StringLiteral_24067/*"time"*/);
-    sub_1C32C20(&iTween_TypeInfo);
-    byte_4C3E9A0 = 1;
+    sub_1C37058(&object___TypeInfo);
+    sub_1C37058(&float_TypeInfo);
+    sub_1C37058(&UnityEngine_Vector3_TypeInfo);
+    sub_1C37058(&StringLiteral_21351/*"looktarget"*/);
+    sub_1C37058(&StringLiteral_24071/*"time"*/);
+    sub_1C37058(&iTween_TypeInfo);
+    byte_4C49F20 = 1;
   }
-  v9 = sub_1C32CC8(object___TypeInfo, 4);
+  v9 = sub_1C37100(object___TypeInfo, 4);
   if ( !v9 )
-    sub_1C32E7C(0);
+    sub_1C372B4(0);
   v12 = v9;
-  v13 = StringLiteral_21348/*"looktarget"*/;
-  if ( StringLiteral_21348/*"looktarget"*/ )
+  v13 = StringLiteral_21351/*"looktarget"*/;
+  if ( StringLiteral_21351/*"looktarget"*/ )
   {
-    v13 = sub_1C32D5C(StringLiteral_21348/*"looktarget"*/);
+    v13 = sub_1C37194(StringLiteral_21351/*"looktarget"*/);
     if ( !v13 )
       goto LABEL_24;
-    v14 = StringLiteral_21348/*"looktarget"*/;
+    v14 = StringLiteral_21351/*"looktarget"*/;
   }
   else
   {
@@ -16745,7 +16745,7 @@ void iTween__LookTo(
   if ( !*(_DWORD *)(v12 + 24) )
     goto LABEL_23;
   *(_QWORD *)(v12 + 32) = v14;
-  sub_1C32BC4((CGThumbnailListItem_o *)(v12 + 32), v14, v10, v11);
+  sub_1C36FFC((CGThumbnailListItem_o *)(v12 + 32), v14, v10, v11);
   *(float *)v40 = x;
   *(float *)&v40[1] = y;
   *(float *)&v40[2] = z;
@@ -16753,21 +16753,21 @@ void iTween__LookTo(
   v23 = v13;
   if ( v13 )
   {
-    v13 = sub_1C32D5C(v13);
+    v13 = sub_1C37194(v13);
     if ( !v13 )
       goto LABEL_24;
   }
   if ( *(_DWORD *)(v12 + 24) <= 1u )
     goto LABEL_23;
   *(_QWORD *)(v12 + 40) = v23;
-  sub_1C32BC4((CGThumbnailListItem_o *)(v12 + 40), v23, v21, v22);
-  v13 = StringLiteral_24067/*"time"*/;
-  if ( StringLiteral_24067/*"time"*/ )
+  sub_1C36FFC((CGThumbnailListItem_o *)(v12 + 40), v23, v21, v22);
+  v13 = StringLiteral_24071/*"time"*/;
+  if ( StringLiteral_24071/*"time"*/ )
   {
-    v13 = sub_1C32D5C(StringLiteral_24067/*"time"*/);
+    v13 = sub_1C37194(StringLiteral_24071/*"time"*/);
     if ( !v13 )
       goto LABEL_24;
-    v26 = StringLiteral_24067/*"time"*/;
+    v26 = StringLiteral_24071/*"time"*/;
   }
   else
   {
@@ -16776,34 +16776,34 @@ void iTween__LookTo(
   if ( *(_DWORD *)(v12 + 24) <= 2u )
     goto LABEL_23;
   *(_QWORD *)(v12 + 48) = v26;
-  sub_1C32BC4((CGThumbnailListItem_o *)(v12 + 48), v26, v24, v25);
+  sub_1C36FFC((CGThumbnailListItem_o *)(v12 + 48), v26, v24, v25);
   v41 = time;
   v13 = j_il2cpp_value_box_0(float_TypeInfo, &v41, v27, v28, v29, v30, v31, v32);
   v35 = v13;
   if ( v13 )
   {
-    v13 = sub_1C32D5C(v13);
+    v13 = sub_1C37194(v13);
     if ( !v13 )
     {
 LABEL_24:
-      v39 = sub_1C32EA0(v13);
-      sub_1C32D48(v39, 0);
+      v39 = sub_1C372D8(v13);
+      sub_1C37180(v39, 0);
     }
   }
   if ( *(_DWORD *)(v12 + 24) <= 3u )
 LABEL_23:
-    sub_1C32E84(v13);
+    sub_1C372BC(v13);
   *(_QWORD *)(v12 + 56) = v35;
-  sub_1C32BC4((CGThumbnailListItem_o *)(v12 + 56), v35, v33, v34);
+  sub_1C36FFC((CGThumbnailListItem_o *)(v12 + 56), v35, v33, v34);
   if ( !iTween_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(iTween_TypeInfo);
   v37 = iTween__Hash((System_Object_array *)v12, v36);
-  iTween__LookTo_63154728(target, v37, v38);
+  iTween__LookTo_63197840(target, v37, v38);
 }
 
 
 // local variable allocation has failed, the output may be wrong!
-void iTween__LookTo_63154728(
+void iTween__LookTo_63197840(
         UnityEngine_GameObject_o *target,
         System_Collections_Hashtable_o *args,
         const MethodInfo *method)
@@ -16846,21 +16846,21 @@ void iTween__LookTo_63154728(
   UnityEngine_Vector3_o v40; // 0:s0.4,4:s1.4,8:s2.4
   UnityEngine_Vector3_o v41; // 0:s0.4,4:s1.4,8:s2.4
 
-  if ( (byte_4C3E9A1 & 1) == 0 )
+  if ( (byte_4C49F21 & 1) == 0 )
   {
-    sub_1C32C20(&UnityEngine_Transform_var);
-    sub_1C32C20(&UnityEngine_Transform_TypeInfo);
-    sub_1C32C20(&System_Type_TypeInfo);
-    sub_1C32C20(&UnityEngine_Vector3_TypeInfo);
-    sub_1C32C20(&StringLiteral_21348/*"looktarget"*/);
-    sub_1C32C20(&StringLiteral_23148/*"rotation"*/);
-    sub_1C32C20(&StringLiteral_21346/*"look"*/);
-    sub_1C32C20(&StringLiteral_21560/*"method"*/);
-    sub_1C32C20(&StringLiteral_22736/*"position"*/);
-    sub_1C32C20(&StringLiteral_24106/*"to"*/);
-    sub_1C32C20(&StringLiteral_24241/*"type"*/);
-    sub_1C32C20(&iTween_TypeInfo);
-    byte_4C3E9A1 = 1;
+    sub_1C37058(&UnityEngine_Transform_var);
+    sub_1C37058(&UnityEngine_Transform_TypeInfo);
+    sub_1C37058(&System_Type_TypeInfo);
+    sub_1C37058(&UnityEngine_Vector3_TypeInfo);
+    sub_1C37058(&StringLiteral_21351/*"looktarget"*/);
+    sub_1C37058(&StringLiteral_23152/*"rotation"*/);
+    sub_1C37058(&StringLiteral_21349/*"look"*/);
+    sub_1C37058(&StringLiteral_21563/*"method"*/);
+    sub_1C37058(&StringLiteral_22740/*"position"*/);
+    sub_1C37058(&StringLiteral_24110/*"to"*/);
+    sub_1C37058(&StringLiteral_24245/*"type"*/);
+    sub_1C37058(&iTween_TypeInfo);
+    byte_4C49F21 = 1;
   }
   if ( !iTween_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(iTween_TypeInfo);
@@ -16870,13 +16870,13 @@ void iTween__LookTo_63154728(
   v6 = (System_Collections_Hashtable_o *)v5;
   if ( (((__int64 (__fastcall *)(Il2CppObject *, __int64, const MethodInfo *))v5->klass->vtable[25].methodPtr)(
           v5,
-          StringLiteral_21348/*"looktarget"*/,
+          StringLiteral_21351/*"looktarget"*/,
           v5->klass->vtable[25].method)
       & 1) == 0 )
     goto LABEL_15;
   v5 = (Il2CppObject *)((__int64 (__fastcall *)(System_Collections_Hashtable_o *, __int64, const MethodInfo *))v6->klass->vtable._28_get_Item.methodPtr)(
                          v6,
-                         StringLiteral_21348/*"looktarget"*/,
+                         StringLiteral_21351/*"looktarget"*/,
                          v6->klass->vtable._28_get_Item.method);
   if ( !v5 )
     goto LABEL_18;
@@ -16890,17 +16890,17 @@ void iTween__LookTo_63154728(
     goto LABEL_15;
   v5 = (Il2CppObject *)((__int64 (__fastcall *)(System_Collections_Hashtable_o *, __int64, const MethodInfo *))v6->klass->vtable._28_get_Item.methodPtr)(
                          v6,
-                         StringLiteral_21348/*"looktarget"*/,
+                         StringLiteral_21351/*"looktarget"*/,
                          v6->klass->vtable._28_get_Item.method);
   if ( !v5 )
 LABEL_18:
-    sub_1C32E7C(v5);
+    sub_1C372B4(v5);
   v11 = (UnityEngine_Transform_o *)v5;
   naturalAligment = UnityEngine_Transform_TypeInfo->_2.naturalAligment;
   if ( v5->klass->_2.naturalAligment < (unsigned int)naturalAligment
     || (UnityEngine_Transform_c *)v5->klass->_2.typeHierarchy[naturalAligment - 1] != UnityEngine_Transform_TypeInfo )
   {
-    v34 = sub_1C3313C(v5);
+    v34 = sub_1C37574(v5);
     iTween__MoveTo(v32, *(UnityEngine_Vector3_o *)&v34, v35, v33);
     return;
   }
@@ -16914,7 +16914,7 @@ LABEL_18:
   v21 = j_il2cpp_value_box_0(UnityEngine_Vector3_TypeInfo, v37, v15, v16, v17, v18, v19, v20);
   ((void (__fastcall *)(System_Collections_Hashtable_o *, __int64, __int64, const MethodInfo *))v6->klass->vtable._29_set_Item.methodPtr)(
     v6,
-    StringLiteral_22736/*"position"*/,
+    StringLiteral_22740/*"position"*/,
     v21,
     v6->klass->vtable._29_set_Item.method);
   eulerAngles = (unsigned int)UnityEngine_Transform__get_eulerAngles(v11, 0);
@@ -16927,19 +16927,19 @@ LABEL_18:
   v30 = j_il2cpp_value_box_0(UnityEngine_Vector3_TypeInfo, v36, v24, v25, v26, v27, v28, v29);
   ((void (__fastcall *)(System_Collections_Hashtable_o *, __int64, __int64, const MethodInfo *))v6->klass->vtable._29_set_Item.methodPtr)(
     v6,
-    StringLiteral_23148/*"rotation"*/,
+    StringLiteral_23152/*"rotation"*/,
     v30,
     v6->klass->vtable._29_set_Item.method);
 LABEL_15:
   ((void (__fastcall *)(System_Collections_Hashtable_o *, __int64, __int64, const MethodInfo *))v6->klass->vtable._29_set_Item.methodPtr)(
     v6,
-    StringLiteral_24241/*"type"*/,
-    StringLiteral_21346/*"look"*/,
+    StringLiteral_24245/*"type"*/,
+    StringLiteral_21349/*"look"*/,
     v6->klass->vtable._29_set_Item.method);
   ((void (__fastcall *)(System_Collections_Hashtable_o *, __int64, __int64, const MethodInfo *))v6->klass->vtable._29_set_Item.methodPtr)(
     v6,
-    StringLiteral_21560/*"method"*/,
-    StringLiteral_24106/*"to"*/,
+    StringLiteral_21563/*"method"*/,
+    StringLiteral_24110/*"to"*/,
     v6->klass->vtable._29_set_Item.method);
   if ( !iTween_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(iTween_TypeInfo);
@@ -17029,50 +17029,50 @@ void iTween__LookUpdate(
 
   v3 = args;
   v71 = *(_QWORD *)(_ReadStatusReg(TPIDR_EL0) + 40);
-  if ( (byte_4C3EA01 & 1) == 0 )
+  if ( (byte_4C49F81 & 1) == 0 )
   {
-    sub_1C32C20(&UnityEngine_Debug_TypeInfo);
-    sub_1C32C20(&iTween_Defaults_TypeInfo);
-    sub_1C32C20(&Method_System_Nullable_Vector3__GetValueOrDefault__);
-    sub_1C32C20(&Method_System_Nullable_Vector3__get_HasValue__);
-    sub_1C32C20(&System_Nullable_Vector3__TypeInfo);
-    sub_1C32C20(&float_TypeInfo);
-    sub_1C32C20(&string_TypeInfo);
-    sub_1C32C20(&UnityEngine_Transform_var);
-    sub_1C32C20(&UnityEngine_Transform_TypeInfo);
-    sub_1C32C20(&System_Type_TypeInfo);
-    sub_1C32C20(&UnityEngine_Vector3___TypeInfo);
-    sub_1C32C20(&UnityEngine_Vector3_var);
-    sub_1C32C20(&UnityEngine_Vector3_TypeInfo);
-    sub_1C32C20(&StringLiteral_20102/*"iTween Error: LookUpdate needs a 'looktarget' property!"*/);
-    sub_1C32C20(&StringLiteral_24859/*"x"*/);
-    sub_1C32C20(&StringLiteral_24428/*"up"*/);
-    sub_1C32C20(&StringLiteral_21348/*"looktarget"*/);
-    sub_1C32C20(&StringLiteral_24067/*"time"*/);
-    sub_1C32C20(&StringLiteral_24961/*"y"*/);
-    sub_1C32C20(&StringLiteral_25008/*"z"*/);
-    sub_1C32C20(&StringLiteral_21349/*"looktime"*/);
-    sub_1C32C20(&StringLiteral_16960/*"axis"*/);
-    sub_1C32C20(&iTween_TypeInfo);
-    byte_4C3EA01 = 1;
+    sub_1C37058(&UnityEngine_Debug_TypeInfo);
+    sub_1C37058(&iTween_Defaults_TypeInfo);
+    sub_1C37058(&Method_System_Nullable_Vector3__GetValueOrDefault__);
+    sub_1C37058(&Method_System_Nullable_Vector3__get_HasValue__);
+    sub_1C37058(&System_Nullable_Vector3__TypeInfo);
+    sub_1C37058(&float_TypeInfo);
+    sub_1C37058(&string_TypeInfo);
+    sub_1C37058(&UnityEngine_Transform_var);
+    sub_1C37058(&UnityEngine_Transform_TypeInfo);
+    sub_1C37058(&System_Type_TypeInfo);
+    sub_1C37058(&UnityEngine_Vector3___TypeInfo);
+    sub_1C37058(&UnityEngine_Vector3_var);
+    sub_1C37058(&UnityEngine_Vector3_TypeInfo);
+    sub_1C37058(&StringLiteral_20105/*"iTween Error: LookUpdate needs a 'looktarget' property!"*/);
+    sub_1C37058(&StringLiteral_24864/*"x"*/);
+    sub_1C37058(&StringLiteral_24432/*"up"*/);
+    sub_1C37058(&StringLiteral_21351/*"looktarget"*/);
+    sub_1C37058(&StringLiteral_24071/*"time"*/);
+    sub_1C37058(&StringLiteral_24966/*"y"*/);
+    sub_1C37058(&StringLiteral_25013/*"z"*/);
+    sub_1C37058(&StringLiteral_21352/*"looktime"*/);
+    sub_1C37058(&StringLiteral_16962/*"axis"*/);
+    sub_1C37058(&iTween_TypeInfo);
+    byte_4C49F81 = 1;
   }
   if ( !iTween_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(iTween_TypeInfo);
   iTween__CleanArgs(v3, (const MethodInfo *)args);
-  transform = sub_1C32CC8(UnityEngine_Vector3___TypeInfo, 5);
+  transform = sub_1C37100(UnityEngine_Vector3___TypeInfo, 5);
   if ( !v3 )
     goto LABEL_99;
-  v6 = &StringLiteral_21349/*"looktime"*/;
+  v6 = &StringLiteral_21352/*"looktime"*/;
   v7 = transform;
   if ( (((__int64 (__fastcall *)(System_Collections_Hashtable_o *, __int64, const MethodInfo *))v3->klass->vtable._25_Contains.methodPtr)(
           v3,
-          StringLiteral_21349/*"looktime"*/,
+          StringLiteral_21352/*"looktime"*/,
           v3->klass->vtable._25_Contains.method)
       & 1) != 0 )
   {
     transform = ((__int64 (__fastcall *)(System_Collections_Hashtable_o *, __int64, const MethodInfo *))v3->klass->vtable._28_get_Item.methodPtr)(
                   v3,
-                  StringLiteral_21349/*"looktime"*/,
+                  StringLiteral_21352/*"looktime"*/,
                   v3->klass->vtable._28_get_Item.method);
     if ( !transform )
       goto LABEL_99;
@@ -17086,16 +17086,16 @@ void iTween__LookUpdate(
     }
     goto LABEL_101;
   }
-  v6 = &StringLiteral_24067/*"time"*/;
+  v6 = &StringLiteral_24071/*"time"*/;
   if ( (((__int64 (__fastcall *)(System_Collections_Hashtable_o *, __int64, const MethodInfo *))v3->klass->vtable._25_Contains.methodPtr)(
           v3,
-          StringLiteral_24067/*"time"*/,
+          StringLiteral_24071/*"time"*/,
           v3->klass->vtable._25_Contains.method)
       & 1) != 0 )
   {
     transform = ((__int64 (__fastcall *)(System_Collections_Hashtable_o *, __int64, const MethodInfo *))v3->klass->vtable._28_get_Item.methodPtr)(
                   v3,
-                  StringLiteral_24067/*"time"*/,
+                  StringLiteral_24071/*"time"*/,
                   v3->klass->vtable._28_get_Item.method);
     if ( !transform )
       goto LABEL_99;
@@ -17118,7 +17118,7 @@ LABEL_10:
       goto LABEL_11;
     }
 LABEL_101:
-    sub_1C3313C(transform);
+    sub_1C37574(transform);
     goto LABEL_102;
   }
   transform = (__int64)iTween_Defaults_TypeInfo;
@@ -17142,18 +17142,18 @@ LABEL_21:
   *(UnityEngine_Vector3_o *)(v7 + 32) = eulerAngles;
   if ( (((__int64 (__fastcall *)(System_Collections_Hashtable_o *, __int64, const MethodInfo *))v3->klass->vtable._25_Contains.methodPtr)(
           v3,
-          StringLiteral_21348/*"looktarget"*/,
+          StringLiteral_21351/*"looktarget"*/,
           v3->klass->vtable._25_Contains.method)
       & 1) == 0 )
   {
     if ( !UnityEngine_Debug_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(UnityEngine_Debug_TypeInfo);
-    UnityEngine_Debug__LogError((Il2CppObject *)StringLiteral_20102/*"iTween Error: LookUpdate needs a 'looktarget' property!"*/, 0);
+    UnityEngine_Debug__LogError((Il2CppObject *)StringLiteral_20105/*"iTween Error: LookUpdate needs a 'looktarget' property!"*/, 0);
     return;
   }
   transform = ((__int64 (__fastcall *)(System_Collections_Hashtable_o *, __int64, const MethodInfo *))v3->klass->vtable._28_get_Item.methodPtr)(
                 v3,
-                StringLiteral_21348/*"looktarget"*/,
+                StringLiteral_21351/*"looktarget"*/,
                 v3->klass->vtable._28_get_Item.method);
   if ( !transform )
     goto LABEL_99;
@@ -17168,15 +17168,15 @@ LABEL_21:
     v19 = UnityEngine_GameObject__get_transform(target, 0);
     v6 = (__int64 *)((__int64 (__fastcall *)(System_Collections_Hashtable_o *, __int64, const MethodInfo *))v3->klass->vtable._28_get_Item.methodPtr)(
                       v3,
-                      StringLiteral_21348/*"looktarget"*/,
+                      StringLiteral_21351/*"looktarget"*/,
                       v3->klass->vtable._28_get_Item.method);
     v20 = (Il2CppClass **)((__int64 (__fastcall *)(System_Collections_Hashtable_o *, __int64, const MethodInfo *))v3->klass->vtable._28_get_Item.methodPtr)(
                             v3,
-                            StringLiteral_24428/*"up"*/,
+                            StringLiteral_24432/*"up"*/,
                             v3->klass->vtable._28_get_Item.method);
     if ( v20 && *v20 != System_Nullable_Vector3__TypeInfo->_1.element_class )
       goto LABEL_103;
-    transform = sub_1C32D68(v20, System_Nullable_Vector3__TypeInfo, &v67);
+    transform = sub_1C371A0(v20, System_Nullable_Vector3__TypeInfo, &v67);
     v21 = v68;
     v22 = v69;
     v23 = v70;
@@ -17204,17 +17204,17 @@ LABEL_21:
         goto LABEL_57;
       }
 LABEL_99:
-      sub_1C32E7C(transform);
+      sub_1C372B4(transform);
     }
 LABEL_102:
-    sub_1C3313C(v6);
+    sub_1C37574(v6);
 LABEL_103:
-    sub_1C3313C(v20);
+    sub_1C37574(v20);
     goto LABEL_104;
   }
   transform = ((__int64 (__fastcall *)(System_Collections_Hashtable_o *, __int64, const MethodInfo *))v3->klass->vtable._28_get_Item.methodPtr)(
                 v3,
-                StringLiteral_21348/*"looktarget"*/,
+                StringLiteral_21351/*"looktarget"*/,
                 v3->klass->vtable._28_get_Item.method);
   if ( !transform )
     goto LABEL_99;
@@ -17229,15 +17229,15 @@ LABEL_103:
     v30 = UnityEngine_GameObject__get_transform(target, 0);
     v6 = (__int64 *)((__int64 (__fastcall *)(System_Collections_Hashtable_o *, __int64, const MethodInfo *))v3->klass->vtable._28_get_Item.methodPtr)(
                       v3,
-                      StringLiteral_21348/*"looktarget"*/,
+                      StringLiteral_21351/*"looktarget"*/,
                       v3->klass->vtable._28_get_Item.method);
     v20 = (Il2CppClass **)((__int64 (__fastcall *)(System_Collections_Hashtable_o *, __int64, const MethodInfo *))v3->klass->vtable._28_get_Item.methodPtr)(
                             v3,
-                            StringLiteral_24428/*"up"*/,
+                            StringLiteral_24432/*"up"*/,
                             v3->klass->vtable._28_get_Item.method);
     if ( v20 && *v20 != System_Nullable_Vector3__TypeInfo->_1.element_class )
       goto LABEL_103;
-    transform = sub_1C32D68(v20, System_Nullable_Vector3__TypeInfo, &v63);
+    transform = sub_1C371A0(v20, System_Nullable_Vector3__TypeInfo, &v63);
     if ( !v6 )
       goto LABEL_99;
     if ( *(Il2CppClass **)(*v6 + 64) != UnityEngine_Vector3_TypeInfo->_1.element_class )
@@ -17271,7 +17271,7 @@ LABEL_103:
     v76.fields.x = v34;
     v76.fields.y = v35;
     v76.fields.z = v36;
-    UnityEngine_Transform__LookAt_71249040(v30, v73, v76, 0);
+    UnityEngine_Transform__LookAt_71292152(v30, v73, v76, 0);
   }
 LABEL_57:
   transform = (__int64)UnityEngine_GameObject__get_transform(target, 0);
@@ -17297,7 +17297,7 @@ LABEL_57:
   if ( v44 < 0.0 )
     v45 = 0.0;
   v46 = v45 <= 180.0 ? v45 : v45 + -360.0;
-  v47 = UnityEngine_Mathf__SmoothDamp_71168496(v41, v41 + v46, (float *)(v7 + 56), v11, INFINITY, deltaTime, 0);
+  v47 = UnityEngine_Mathf__SmoothDamp_71211608(v41, v41 + v46, (float *)(v7 + 56), v11, INFINITY, deltaTime, 0);
   if ( *(_DWORD *)(v7 + 24) <= 3u )
     goto LABEL_100;
   v48 = *(float *)(v7 + 36);
@@ -17310,7 +17310,7 @@ LABEL_57:
     v52 = 0.0;
   if ( v52 > 180.0 )
     v52 = v52 + -360.0;
-  v53 = UnityEngine_Mathf__SmoothDamp_71168496(v48, v48 + v52, (float *)(v7 + 60), v11, INFINITY, v50, 0);
+  v53 = UnityEngine_Mathf__SmoothDamp_71211608(v48, v48 + v52, (float *)(v7 + 60), v11, INFINITY, v50, 0);
   if ( *(_DWORD *)(v7 + 24) <= 3u )
     goto LABEL_100;
   v54 = *(float *)(v7 + 40);
@@ -17322,7 +17322,7 @@ LABEL_57:
   if ( v57 < 0.0 )
     v58 = 0.0;
   v59 = v58 <= 180.0 ? v58 : v58 + -360.0;
-  v60 = UnityEngine_Mathf__SmoothDamp_71168496(v54, v54 + v59, (float *)(v7 + 64), v11, INFINITY, v56, 0);
+  v60 = UnityEngine_Mathf__SmoothDamp_71211608(v54, v54 + v59, (float *)(v7 + 64), v11, INFINITY, v56, 0);
   if ( *(_DWORD *)(v7 + 24) <= 3u )
     goto LABEL_100;
   *(float *)(v7 + 76) = v60;
@@ -17334,7 +17334,7 @@ LABEL_57:
   UnityEngine_Transform__set_eulerAngles((UnityEngine_Transform_o *)transform, *(UnityEngine_Vector3_o *)(v7 + 68), 0);
   if ( (((__int64 (__fastcall *)(System_Collections_Hashtable_o *, __int64, const MethodInfo *))v3->klass->vtable._25_Contains.methodPtr)(
           v3,
-          StringLiteral_16960/*"axis"*/,
+          StringLiteral_16962/*"axis"*/,
           v3->klass->vtable._25_Contains.method)
       & 1) == 0 )
     return;
@@ -17347,13 +17347,13 @@ LABEL_57:
   *(UnityEngine_Vector3_o *)(v7 + 80) = v75;
   v61 = (System_String_o *)((__int64 (__fastcall *)(System_Collections_Hashtable_o *, __int64, const MethodInfo *))v3->klass->vtable._28_get_Item.methodPtr)(
                              v3,
-                             StringLiteral_16960/*"axis"*/,
+                             StringLiteral_16962/*"axis"*/,
                              v3->klass->vtable._28_get_Item.method);
   v3 = (System_Collections_Hashtable_o *)v61;
   if ( v61 && v61->klass != string_TypeInfo )
 LABEL_104:
-    sub_1C3313C(v3);
-  transform = System_String__op_Equality(v61, (System_String_o *)StringLiteral_24859/*"x"*/, 0);
+    sub_1C37574(v3);
+  transform = System_String__op_Equality(v61, (System_String_o *)StringLiteral_24864/*"x"*/, 0);
   if ( (transform & 1) != 0 )
   {
     if ( *(_DWORD *)(v7 + 24) <= 4u )
@@ -17362,7 +17362,7 @@ LABEL_104:
   }
   else
   {
-    transform = System_String__op_Equality((System_String_o *)v3, (System_String_o *)StringLiteral_24961/*"y"*/, 0);
+    transform = System_String__op_Equality((System_String_o *)v3, (System_String_o *)StringLiteral_24966/*"y"*/, 0);
     if ( (transform & 1) != 0 )
     {
       if ( *(_DWORD *)(v7 + 24) <= 4u )
@@ -17373,7 +17373,7 @@ LABEL_104:
     }
     else
     {
-      transform = System_String__op_Equality((System_String_o *)v3, (System_String_o *)StringLiteral_25008/*"z"*/, 0);
+      transform = System_String__op_Equality((System_String_o *)v3, (System_String_o *)StringLiteral_25013/*"z"*/, 0);
       if ( (transform & 1) != 0 )
       {
         if ( *(_DWORD *)(v7 + 24) <= 4u )
@@ -17385,14 +17385,14 @@ LABEL_104:
   transform = (__int64)UnityEngine_GameObject__get_transform(target, 0);
   if ( *(_DWORD *)(v7 + 24) <= 4u )
 LABEL_100:
-    sub_1C32E84(transform);
+    sub_1C372BC(transform);
   if ( !transform )
     goto LABEL_99;
   UnityEngine_Transform__set_eulerAngles((UnityEngine_Transform_o *)transform, *(UnityEngine_Vector3_o *)(v7 + 80), 0);
 }
 
 
-void iTween__LookUpdate_63241528(
+void iTween__LookUpdate_63284640(
         UnityEngine_GameObject_o *target,
         UnityEngine_Vector3_o looktarget,
         float time,
@@ -17438,27 +17438,27 @@ void iTween__LookUpdate_63241528(
   z = looktarget.fields.z;
   y = looktarget.fields.y;
   x = looktarget.fields.x;
-  if ( (byte_4C3EA02 & 1) == 0 )
+  if ( (byte_4C49F82 & 1) == 0 )
   {
-    sub_1C32C20(&object___TypeInfo);
-    sub_1C32C20(&float_TypeInfo);
-    sub_1C32C20(&UnityEngine_Vector3_TypeInfo);
-    sub_1C32C20(&StringLiteral_21348/*"looktarget"*/);
-    sub_1C32C20(&StringLiteral_24067/*"time"*/);
-    sub_1C32C20(&iTween_TypeInfo);
-    byte_4C3EA02 = 1;
+    sub_1C37058(&object___TypeInfo);
+    sub_1C37058(&float_TypeInfo);
+    sub_1C37058(&UnityEngine_Vector3_TypeInfo);
+    sub_1C37058(&StringLiteral_21351/*"looktarget"*/);
+    sub_1C37058(&StringLiteral_24071/*"time"*/);
+    sub_1C37058(&iTween_TypeInfo);
+    byte_4C49F82 = 1;
   }
-  v9 = sub_1C32CC8(object___TypeInfo, 4);
+  v9 = sub_1C37100(object___TypeInfo, 4);
   if ( !v9 )
-    sub_1C32E7C(0);
+    sub_1C372B4(0);
   v12 = v9;
-  v13 = StringLiteral_21348/*"looktarget"*/;
-  if ( StringLiteral_21348/*"looktarget"*/ )
+  v13 = StringLiteral_21351/*"looktarget"*/;
+  if ( StringLiteral_21351/*"looktarget"*/ )
   {
-    v13 = sub_1C32D5C(StringLiteral_21348/*"looktarget"*/);
+    v13 = sub_1C37194(StringLiteral_21351/*"looktarget"*/);
     if ( !v13 )
       goto LABEL_24;
-    v14 = StringLiteral_21348/*"looktarget"*/;
+    v14 = StringLiteral_21351/*"looktarget"*/;
   }
   else
   {
@@ -17467,7 +17467,7 @@ void iTween__LookUpdate_63241528(
   if ( !*(_DWORD *)(v12 + 24) )
     goto LABEL_23;
   *(_QWORD *)(v12 + 32) = v14;
-  sub_1C32BC4((CGThumbnailListItem_o *)(v12 + 32), v14, v10, v11);
+  sub_1C36FFC((CGThumbnailListItem_o *)(v12 + 32), v14, v10, v11);
   *(float *)v40 = x;
   *(float *)&v40[1] = y;
   *(float *)&v40[2] = z;
@@ -17475,21 +17475,21 @@ void iTween__LookUpdate_63241528(
   v23 = v13;
   if ( v13 )
   {
-    v13 = sub_1C32D5C(v13);
+    v13 = sub_1C37194(v13);
     if ( !v13 )
       goto LABEL_24;
   }
   if ( *(_DWORD *)(v12 + 24) <= 1u )
     goto LABEL_23;
   *(_QWORD *)(v12 + 40) = v23;
-  sub_1C32BC4((CGThumbnailListItem_o *)(v12 + 40), v23, v21, v22);
-  v13 = StringLiteral_24067/*"time"*/;
-  if ( StringLiteral_24067/*"time"*/ )
+  sub_1C36FFC((CGThumbnailListItem_o *)(v12 + 40), v23, v21, v22);
+  v13 = StringLiteral_24071/*"time"*/;
+  if ( StringLiteral_24071/*"time"*/ )
   {
-    v13 = sub_1C32D5C(StringLiteral_24067/*"time"*/);
+    v13 = sub_1C37194(StringLiteral_24071/*"time"*/);
     if ( !v13 )
       goto LABEL_24;
-    v26 = StringLiteral_24067/*"time"*/;
+    v26 = StringLiteral_24071/*"time"*/;
   }
   else
   {
@@ -17498,25 +17498,25 @@ void iTween__LookUpdate_63241528(
   if ( *(_DWORD *)(v12 + 24) <= 2u )
     goto LABEL_23;
   *(_QWORD *)(v12 + 48) = v26;
-  sub_1C32BC4((CGThumbnailListItem_o *)(v12 + 48), v26, v24, v25);
+  sub_1C36FFC((CGThumbnailListItem_o *)(v12 + 48), v26, v24, v25);
   v41 = time;
   v13 = j_il2cpp_value_box_0(float_TypeInfo, &v41, v27, v28, v29, v30, v31, v32);
   v35 = v13;
   if ( v13 )
   {
-    v13 = sub_1C32D5C(v13);
+    v13 = sub_1C37194(v13);
     if ( !v13 )
     {
 LABEL_24:
-      v39 = sub_1C32EA0(v13);
-      sub_1C32D48(v39, 0);
+      v39 = sub_1C372D8(v13);
+      sub_1C37180(v39, 0);
     }
   }
   if ( *(_DWORD *)(v12 + 24) <= 3u )
 LABEL_23:
-    sub_1C32E84(v13);
+    sub_1C372BC(v13);
   *(_QWORD *)(v12 + 56) = v35;
-  sub_1C32BC4((CGThumbnailListItem_o *)(v12 + 56), v35, v33, v34);
+  sub_1C36FFC((CGThumbnailListItem_o *)(v12 + 56), v35, v33, v34);
   if ( !iTween_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(iTween_TypeInfo);
   v37 = iTween__Hash((System_Object_array *)v12, v36);
@@ -17570,27 +17570,27 @@ void iTween__MoveAdd(
   z = amount.fields.z;
   y = amount.fields.y;
   x = amount.fields.x;
-  if ( (byte_4C3E9A6 & 1) == 0 )
+  if ( (byte_4C49F26 & 1) == 0 )
   {
-    sub_1C32C20(&object___TypeInfo);
-    sub_1C32C20(&float_TypeInfo);
-    sub_1C32C20(&UnityEngine_Vector3_TypeInfo);
-    sub_1C32C20(&StringLiteral_24067/*"time"*/);
-    sub_1C32C20(&StringLiteral_16745/*"amount"*/);
-    sub_1C32C20(&iTween_TypeInfo);
-    byte_4C3E9A6 = 1;
+    sub_1C37058(&object___TypeInfo);
+    sub_1C37058(&float_TypeInfo);
+    sub_1C37058(&UnityEngine_Vector3_TypeInfo);
+    sub_1C37058(&StringLiteral_24071/*"time"*/);
+    sub_1C37058(&StringLiteral_16747/*"amount"*/);
+    sub_1C37058(&iTween_TypeInfo);
+    byte_4C49F26 = 1;
   }
-  v9 = sub_1C32CC8(object___TypeInfo, 4);
+  v9 = sub_1C37100(object___TypeInfo, 4);
   if ( !v9 )
-    sub_1C32E7C(0);
+    sub_1C372B4(0);
   v12 = v9;
-  v13 = StringLiteral_16745/*"amount"*/;
-  if ( StringLiteral_16745/*"amount"*/ )
+  v13 = StringLiteral_16747/*"amount"*/;
+  if ( StringLiteral_16747/*"amount"*/ )
   {
-    v13 = sub_1C32D5C(StringLiteral_16745/*"amount"*/);
+    v13 = sub_1C37194(StringLiteral_16747/*"amount"*/);
     if ( !v13 )
       goto LABEL_24;
-    v14 = StringLiteral_16745/*"amount"*/;
+    v14 = StringLiteral_16747/*"amount"*/;
   }
   else
   {
@@ -17599,7 +17599,7 @@ void iTween__MoveAdd(
   if ( !*(_DWORD *)(v12 + 24) )
     goto LABEL_23;
   *(_QWORD *)(v12 + 32) = v14;
-  sub_1C32BC4((CGThumbnailListItem_o *)(v12 + 32), v14, v10, v11);
+  sub_1C36FFC((CGThumbnailListItem_o *)(v12 + 32), v14, v10, v11);
   *(float *)v40 = x;
   *(float *)&v40[1] = y;
   *(float *)&v40[2] = z;
@@ -17607,21 +17607,21 @@ void iTween__MoveAdd(
   v23 = v13;
   if ( v13 )
   {
-    v13 = sub_1C32D5C(v13);
+    v13 = sub_1C37194(v13);
     if ( !v13 )
       goto LABEL_24;
   }
   if ( *(_DWORD *)(v12 + 24) <= 1u )
     goto LABEL_23;
   *(_QWORD *)(v12 + 40) = v23;
-  sub_1C32BC4((CGThumbnailListItem_o *)(v12 + 40), v23, v21, v22);
-  v13 = StringLiteral_24067/*"time"*/;
-  if ( StringLiteral_24067/*"time"*/ )
+  sub_1C36FFC((CGThumbnailListItem_o *)(v12 + 40), v23, v21, v22);
+  v13 = StringLiteral_24071/*"time"*/;
+  if ( StringLiteral_24071/*"time"*/ )
   {
-    v13 = sub_1C32D5C(StringLiteral_24067/*"time"*/);
+    v13 = sub_1C37194(StringLiteral_24071/*"time"*/);
     if ( !v13 )
       goto LABEL_24;
-    v26 = StringLiteral_24067/*"time"*/;
+    v26 = StringLiteral_24071/*"time"*/;
   }
   else
   {
@@ -17630,33 +17630,33 @@ void iTween__MoveAdd(
   if ( *(_DWORD *)(v12 + 24) <= 2u )
     goto LABEL_23;
   *(_QWORD *)(v12 + 48) = v26;
-  sub_1C32BC4((CGThumbnailListItem_o *)(v12 + 48), v26, v24, v25);
+  sub_1C36FFC((CGThumbnailListItem_o *)(v12 + 48), v26, v24, v25);
   v41 = time;
   v13 = j_il2cpp_value_box_0(float_TypeInfo, &v41, v27, v28, v29, v30, v31, v32);
   v35 = v13;
   if ( v13 )
   {
-    v13 = sub_1C32D5C(v13);
+    v13 = sub_1C37194(v13);
     if ( !v13 )
     {
 LABEL_24:
-      v39 = sub_1C32EA0(v13);
-      sub_1C32D48(v39, 0);
+      v39 = sub_1C372D8(v13);
+      sub_1C37180(v39, 0);
     }
   }
   if ( *(_DWORD *)(v12 + 24) <= 3u )
 LABEL_23:
-    sub_1C32E84(v13);
+    sub_1C372BC(v13);
   *(_QWORD *)(v12 + 56) = v35;
-  sub_1C32BC4((CGThumbnailListItem_o *)(v12 + 56), v35, v33, v34);
+  sub_1C36FFC((CGThumbnailListItem_o *)(v12 + 56), v35, v33, v34);
   if ( !iTween_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(iTween_TypeInfo);
   v37 = iTween__Hash((System_Object_array *)v12, v36);
-  iTween__MoveAdd_63160580(target, v37, v38);
+  iTween__MoveAdd_63203692(target, v37, v38);
 }
 
 
-void iTween__MoveAdd_63160580(
+void iTween__MoveAdd_63203692(
         UnityEngine_GameObject_o *target,
         System_Collections_Hashtable_o *args,
         const MethodInfo *method)
@@ -17665,30 +17665,30 @@ void iTween__MoveAdd_63160580(
   System_Collections_Hashtable_o *v6; // x20
   const MethodInfo *v7; // x2
 
-  if ( (byte_4C3E9A7 & 1) == 0 )
+  if ( (byte_4C49F27 & 1) == 0 )
   {
-    sub_1C32C20(&StringLiteral_16665/*"add"*/);
-    sub_1C32C20(&StringLiteral_21560/*"method"*/);
-    sub_1C32C20(&StringLiteral_21659/*"move"*/);
-    sub_1C32C20(&StringLiteral_24241/*"type"*/);
-    sub_1C32C20(&iTween_TypeInfo);
-    byte_4C3E9A7 = 1;
+    sub_1C37058(&StringLiteral_16667/*"add"*/);
+    sub_1C37058(&StringLiteral_21563/*"method"*/);
+    sub_1C37058(&StringLiteral_21662/*"move"*/);
+    sub_1C37058(&StringLiteral_24245/*"type"*/);
+    sub_1C37058(&iTween_TypeInfo);
+    byte_4C49F27 = 1;
   }
   if ( !iTween_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(iTween_TypeInfo);
   v5 = iTween__CleanArgs(args, (const MethodInfo *)args);
   if ( !v5 )
-    sub_1C32E7C(0);
+    sub_1C372B4(0);
   v6 = v5;
   ((void (__fastcall *)(System_Collections_Hashtable_o *, __int64, __int64, const MethodInfo *))v5->klass->vtable._29_set_Item.methodPtr)(
     v5,
-    StringLiteral_24241/*"type"*/,
-    StringLiteral_21659/*"move"*/,
+    StringLiteral_24245/*"type"*/,
+    StringLiteral_21662/*"move"*/,
     v5->klass->vtable._29_set_Item.method);
   ((void (__fastcall *)(System_Collections_Hashtable_o *, __int64, __int64, const MethodInfo *))v6->klass->vtable._29_set_Item.methodPtr)(
     v6,
-    StringLiteral_21560/*"method"*/,
-    StringLiteral_16665/*"add"*/,
+    StringLiteral_21563/*"method"*/,
+    StringLiteral_16667/*"add"*/,
     v6->klass->vtable._29_set_Item.method);
   iTween__Launch(target, v6, v7);
 }
@@ -17740,27 +17740,27 @@ void iTween__MoveBy(
   z = amount.fields.z;
   y = amount.fields.y;
   x = amount.fields.x;
-  if ( (byte_4C3E9A8 & 1) == 0 )
+  if ( (byte_4C49F28 & 1) == 0 )
   {
-    sub_1C32C20(&object___TypeInfo);
-    sub_1C32C20(&float_TypeInfo);
-    sub_1C32C20(&UnityEngine_Vector3_TypeInfo);
-    sub_1C32C20(&StringLiteral_24067/*"time"*/);
-    sub_1C32C20(&StringLiteral_16745/*"amount"*/);
-    sub_1C32C20(&iTween_TypeInfo);
-    byte_4C3E9A8 = 1;
+    sub_1C37058(&object___TypeInfo);
+    sub_1C37058(&float_TypeInfo);
+    sub_1C37058(&UnityEngine_Vector3_TypeInfo);
+    sub_1C37058(&StringLiteral_24071/*"time"*/);
+    sub_1C37058(&StringLiteral_16747/*"amount"*/);
+    sub_1C37058(&iTween_TypeInfo);
+    byte_4C49F28 = 1;
   }
-  v9 = sub_1C32CC8(object___TypeInfo, 4);
+  v9 = sub_1C37100(object___TypeInfo, 4);
   if ( !v9 )
-    sub_1C32E7C(0);
+    sub_1C372B4(0);
   v12 = (System_Object_array *)v9;
-  v13 = StringLiteral_16745/*"amount"*/;
-  if ( StringLiteral_16745/*"amount"*/ )
+  v13 = StringLiteral_16747/*"amount"*/;
+  if ( StringLiteral_16747/*"amount"*/ )
   {
-    v13 = sub_1C32D5C(StringLiteral_16745/*"amount"*/, v12->obj.klass->_1.element_class);
+    v13 = sub_1C37194(StringLiteral_16747/*"amount"*/, v12->obj.klass->_1.element_class);
     if ( !v13 )
       goto LABEL_24;
-    v14 = StringLiteral_16745/*"amount"*/;
+    v14 = StringLiteral_16747/*"amount"*/;
   }
   else
   {
@@ -17769,7 +17769,7 @@ void iTween__MoveBy(
   if ( !LODWORD(v12->max_length) )
     goto LABEL_23;
   v12->m_Items[0] = (Il2CppObject *)v14;
-  sub_1C32BC4((CGThumbnailListItem_o *)v12->m_Items, v14, v10, v11);
+  sub_1C36FFC((CGThumbnailListItem_o *)v12->m_Items, v14, v10, v11);
   *(float *)v40 = x;
   *(float *)&v40[1] = y;
   *(float *)&v40[2] = z;
@@ -17777,21 +17777,21 @@ void iTween__MoveBy(
   v23 = (Il2CppObject *)v13;
   if ( v13 )
   {
-    v13 = sub_1C32D5C(v13, v12->obj.klass->_1.element_class);
+    v13 = sub_1C37194(v13, v12->obj.klass->_1.element_class);
     if ( !v13 )
       goto LABEL_24;
   }
   if ( LODWORD(v12->max_length) <= 1 )
     goto LABEL_23;
   v12->m_Items[1] = v23;
-  sub_1C32BC4((CGThumbnailListItem_o *)&v12->m_Items[1], (int32_t)v23, v21, v22);
-  v13 = StringLiteral_24067/*"time"*/;
-  if ( StringLiteral_24067/*"time"*/ )
+  sub_1C36FFC((CGThumbnailListItem_o *)&v12->m_Items[1], (int32_t)v23, v21, v22);
+  v13 = StringLiteral_24071/*"time"*/;
+  if ( StringLiteral_24071/*"time"*/ )
   {
-    v13 = sub_1C32D5C(StringLiteral_24067/*"time"*/, v12->obj.klass->_1.element_class);
+    v13 = sub_1C37194(StringLiteral_24071/*"time"*/, v12->obj.klass->_1.element_class);
     if ( !v13 )
       goto LABEL_24;
-    v26 = StringLiteral_24067/*"time"*/;
+    v26 = StringLiteral_24071/*"time"*/;
   }
   else
   {
@@ -17800,33 +17800,33 @@ void iTween__MoveBy(
   if ( LODWORD(v12->max_length) <= 2 )
     goto LABEL_23;
   v12->m_Items[2] = (Il2CppObject *)v26;
-  sub_1C32BC4((CGThumbnailListItem_o *)&v12->m_Items[2], v26, v24, v25);
+  sub_1C36FFC((CGThumbnailListItem_o *)&v12->m_Items[2], v26, v24, v25);
   v41 = time;
   v13 = j_il2cpp_value_box_0(float_TypeInfo, &v41, v27, v28, v29, v30, v31, v32);
   v35 = (Il2CppObject *)v13;
   if ( v13 )
   {
-    v13 = sub_1C32D5C(v13, v12->obj.klass->_1.element_class);
+    v13 = sub_1C37194(v13, v12->obj.klass->_1.element_class);
     if ( !v13 )
     {
 LABEL_24:
-      v39 = sub_1C32EA0(v13);
-      sub_1C32D48(v39, 0);
+      v39 = sub_1C372D8(v13);
+      sub_1C37180(v39, 0);
     }
   }
   if ( LODWORD(v12->max_length) <= 3 )
 LABEL_23:
-    sub_1C32E84(v13);
+    sub_1C372BC(v13);
   v12->m_Items[3] = v35;
-  sub_1C32BC4((CGThumbnailListItem_o *)&v12->m_Items[3], (int32_t)v35, v33, v34);
+  sub_1C36FFC((CGThumbnailListItem_o *)&v12->m_Items[3], (int32_t)v35, v33, v34);
   if ( !iTween_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(iTween_TypeInfo);
   v37 = iTween__Hash(v12, v36);
-  iTween__MoveBy_63160832(target, v37, v38);
+  iTween__MoveBy_63203944(target, v37, v38);
 }
 
 
-void iTween__MoveBy_63160832(
+void iTween__MoveBy_63203944(
         UnityEngine_GameObject_o *target,
         System_Collections_Hashtable_o *args,
         const MethodInfo *method)
@@ -17835,30 +17835,30 @@ void iTween__MoveBy_63160832(
   System_Collections_Hashtable_o *v6; // x20
   const MethodInfo *v7; // x2
 
-  if ( (byte_4C3E9A9 & 1) == 0 )
+  if ( (byte_4C49F29 & 1) == 0 )
   {
-    sub_1C32C20(&StringLiteral_17669/*"by"*/);
-    sub_1C32C20(&StringLiteral_21560/*"method"*/);
-    sub_1C32C20(&StringLiteral_21659/*"move"*/);
-    sub_1C32C20(&StringLiteral_24241/*"type"*/);
-    sub_1C32C20(&iTween_TypeInfo);
-    byte_4C3E9A9 = 1;
+    sub_1C37058(&StringLiteral_17671/*"by"*/);
+    sub_1C37058(&StringLiteral_21563/*"method"*/);
+    sub_1C37058(&StringLiteral_21662/*"move"*/);
+    sub_1C37058(&StringLiteral_24245/*"type"*/);
+    sub_1C37058(&iTween_TypeInfo);
+    byte_4C49F29 = 1;
   }
   if ( !iTween_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(iTween_TypeInfo);
   v5 = iTween__CleanArgs(args, (const MethodInfo *)args);
   if ( !v5 )
-    sub_1C32E7C(0);
+    sub_1C372B4(0);
   v6 = v5;
   ((void (__fastcall *)(System_Collections_Hashtable_o *, __int64, __int64, const MethodInfo *))v5->klass->vtable._29_set_Item.methodPtr)(
     v5,
-    StringLiteral_24241/*"type"*/,
-    StringLiteral_21659/*"move"*/,
+    StringLiteral_24245/*"type"*/,
+    StringLiteral_21662/*"move"*/,
     v5->klass->vtable._29_set_Item.method);
   ((void (__fastcall *)(System_Collections_Hashtable_o *, __int64, __int64, const MethodInfo *))v6->klass->vtable._29_set_Item.methodPtr)(
     v6,
-    StringLiteral_21560/*"method"*/,
-    StringLiteral_17669/*"by"*/,
+    StringLiteral_21563/*"method"*/,
+    StringLiteral_17671/*"by"*/,
     v6->klass->vtable._29_set_Item.method);
   iTween__Launch(target, v6, v7);
 }
@@ -17910,27 +17910,27 @@ void iTween__MoveFrom(
   z = position.fields.z;
   y = position.fields.y;
   x = position.fields.x;
-  if ( (byte_4C3E9A4 & 1) == 0 )
+  if ( (byte_4C49F24 & 1) == 0 )
   {
-    sub_1C32C20(&object___TypeInfo);
-    sub_1C32C20(&float_TypeInfo);
-    sub_1C32C20(&UnityEngine_Vector3_TypeInfo);
-    sub_1C32C20(&StringLiteral_24067/*"time"*/);
-    sub_1C32C20(&StringLiteral_22736/*"position"*/);
-    sub_1C32C20(&iTween_TypeInfo);
-    byte_4C3E9A4 = 1;
+    sub_1C37058(&object___TypeInfo);
+    sub_1C37058(&float_TypeInfo);
+    sub_1C37058(&UnityEngine_Vector3_TypeInfo);
+    sub_1C37058(&StringLiteral_24071/*"time"*/);
+    sub_1C37058(&StringLiteral_22740/*"position"*/);
+    sub_1C37058(&iTween_TypeInfo);
+    byte_4C49F24 = 1;
   }
-  v9 = sub_1C32CC8(object___TypeInfo, 4);
+  v9 = sub_1C37100(object___TypeInfo, 4);
   if ( !v9 )
-    sub_1C32E7C(0);
+    sub_1C372B4(0);
   v12 = v9;
-  v13 = StringLiteral_22736/*"position"*/;
-  if ( StringLiteral_22736/*"position"*/ )
+  v13 = StringLiteral_22740/*"position"*/;
+  if ( StringLiteral_22740/*"position"*/ )
   {
-    v13 = sub_1C32D5C(StringLiteral_22736/*"position"*/);
+    v13 = sub_1C37194(StringLiteral_22740/*"position"*/);
     if ( !v13 )
       goto LABEL_24;
-    v14 = StringLiteral_22736/*"position"*/;
+    v14 = StringLiteral_22740/*"position"*/;
   }
   else
   {
@@ -17939,7 +17939,7 @@ void iTween__MoveFrom(
   if ( !*(_DWORD *)(v12 + 24) )
     goto LABEL_23;
   *(_QWORD *)(v12 + 32) = v14;
-  sub_1C32BC4((CGThumbnailListItem_o *)(v12 + 32), v14, v10, v11);
+  sub_1C36FFC((CGThumbnailListItem_o *)(v12 + 32), v14, v10, v11);
   *(float *)v40 = x;
   *(float *)&v40[1] = y;
   *(float *)&v40[2] = z;
@@ -17947,21 +17947,21 @@ void iTween__MoveFrom(
   v23 = v13;
   if ( v13 )
   {
-    v13 = sub_1C32D5C(v13);
+    v13 = sub_1C37194(v13);
     if ( !v13 )
       goto LABEL_24;
   }
   if ( *(_DWORD *)(v12 + 24) <= 1u )
     goto LABEL_23;
   *(_QWORD *)(v12 + 40) = v23;
-  sub_1C32BC4((CGThumbnailListItem_o *)(v12 + 40), v23, v21, v22);
-  v13 = StringLiteral_24067/*"time"*/;
-  if ( StringLiteral_24067/*"time"*/ )
+  sub_1C36FFC((CGThumbnailListItem_o *)(v12 + 40), v23, v21, v22);
+  v13 = StringLiteral_24071/*"time"*/;
+  if ( StringLiteral_24071/*"time"*/ )
   {
-    v13 = sub_1C32D5C(StringLiteral_24067/*"time"*/);
+    v13 = sub_1C37194(StringLiteral_24071/*"time"*/);
     if ( !v13 )
       goto LABEL_24;
-    v26 = StringLiteral_24067/*"time"*/;
+    v26 = StringLiteral_24071/*"time"*/;
   }
   else
   {
@@ -17970,34 +17970,34 @@ void iTween__MoveFrom(
   if ( *(_DWORD *)(v12 + 24) <= 2u )
     goto LABEL_23;
   *(_QWORD *)(v12 + 48) = v26;
-  sub_1C32BC4((CGThumbnailListItem_o *)(v12 + 48), v26, v24, v25);
+  sub_1C36FFC((CGThumbnailListItem_o *)(v12 + 48), v26, v24, v25);
   v41 = time;
   v13 = j_il2cpp_value_box_0(float_TypeInfo, &v41, v27, v28, v29, v30, v31, v32);
   v35 = v13;
   if ( v13 )
   {
-    v13 = sub_1C32D5C(v13);
+    v13 = sub_1C37194(v13);
     if ( !v13 )
     {
 LABEL_24:
-      v39 = sub_1C32EA0(v13);
-      sub_1C32D48(v39, 0);
+      v39 = sub_1C372D8(v13);
+      sub_1C37180(v39, 0);
     }
   }
   if ( *(_DWORD *)(v12 + 24) <= 3u )
 LABEL_23:
-    sub_1C32E84(v13);
+    sub_1C372BC(v13);
   *(_QWORD *)(v12 + 56) = v35;
-  sub_1C32BC4((CGThumbnailListItem_o *)(v12 + 56), v35, v33, v34);
+  sub_1C36FFC((CGThumbnailListItem_o *)(v12 + 56), v35, v33, v34);
   if ( !iTween_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(iTween_TypeInfo);
   v37 = iTween__Hash((System_Object_array *)v12, v36);
-  iTween__MoveFrom_63157580(target, v37, v38);
+  iTween__MoveFrom_63200692(target, v37, v38);
 }
 
 
 // local variable allocation has failed, the output may be wrong!
-void iTween__MoveFrom_63157580(
+void iTween__MoveFrom_63200692(
         UnityEngine_GameObject_o *target,
         System_Collections_Hashtable_o *args,
         const MethodInfo *method)
@@ -18084,48 +18084,48 @@ void iTween__MoveFrom_63157580(
   UnityEngine_Vector3_o position; // 0:s0.4,4:s1.4,8:s2.4
   UnityEngine_Vector3_o v85; // 0:s0.4,4:s1.4,8:s2.4
 
-  if ( (byte_4C3E9A5 & 1) == 0 )
+  if ( (byte_4C49F25 & 1) == 0 )
   {
-    sub_1C32C20(&bool_TypeInfo);
-    sub_1C32C20(&iTween_Defaults_TypeInfo);
-    sub_1C32C20(&float_TypeInfo);
-    sub_1C32C20(&UnityEngine_Transform___TypeInfo);
-    sub_1C32C20(&UnityEngine_Transform_var);
-    sub_1C32C20(&UnityEngine_Transform_TypeInfo);
-    sub_1C32C20(&System_Type_TypeInfo);
-    sub_1C32C20(&UnityEngine_Vector3___var);
-    sub_1C32C20(&UnityEngine_Vector3___TypeInfo);
-    sub_1C32C20(&UnityEngine_Vector3_var);
-    sub_1C32C20(&UnityEngine_Vector3_TypeInfo);
-    sub_1C32C20(&StringLiteral_24859/*"x"*/);
-    sub_1C32C20(&StringLiteral_21560/*"method"*/);
-    sub_1C32C20(&StringLiteral_22736/*"position"*/);
-    sub_1C32C20(&StringLiteral_24961/*"y"*/);
-    sub_1C32C20(&StringLiteral_25008/*"z"*/);
-    sub_1C32C20(&StringLiteral_24106/*"to"*/);
-    sub_1C32C20(&StringLiteral_20971/*"islocal"*/);
-    sub_1C32C20(&StringLiteral_21659/*"move"*/);
-    sub_1C32C20(&StringLiteral_24241/*"type"*/);
-    sub_1C32C20(&StringLiteral_22649/*"path"*/);
-    sub_1C32C20(&iTween_TypeInfo);
-    byte_4C3E9A5 = 1;
+    sub_1C37058(&bool_TypeInfo);
+    sub_1C37058(&iTween_Defaults_TypeInfo);
+    sub_1C37058(&float_TypeInfo);
+    sub_1C37058(&UnityEngine_Transform___TypeInfo);
+    sub_1C37058(&UnityEngine_Transform_var);
+    sub_1C37058(&UnityEngine_Transform_TypeInfo);
+    sub_1C37058(&System_Type_TypeInfo);
+    sub_1C37058(&UnityEngine_Vector3___var);
+    sub_1C37058(&UnityEngine_Vector3___TypeInfo);
+    sub_1C37058(&UnityEngine_Vector3_var);
+    sub_1C37058(&UnityEngine_Vector3_TypeInfo);
+    sub_1C37058(&StringLiteral_24864/*"x"*/);
+    sub_1C37058(&StringLiteral_21563/*"method"*/);
+    sub_1C37058(&StringLiteral_22740/*"position"*/);
+    sub_1C37058(&StringLiteral_24966/*"y"*/);
+    sub_1C37058(&StringLiteral_25013/*"z"*/);
+    sub_1C37058(&StringLiteral_24110/*"to"*/);
+    sub_1C37058(&StringLiteral_20974/*"islocal"*/);
+    sub_1C37058(&StringLiteral_21662/*"move"*/);
+    sub_1C37058(&StringLiteral_24245/*"type"*/);
+    sub_1C37058(&StringLiteral_22652/*"path"*/);
+    sub_1C37058(&iTween_TypeInfo);
+    byte_4C49F25 = 1;
   }
   if ( !iTween_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(iTween_TypeInfo);
   transform = (__int64)iTween__CleanArgs(args, (const MethodInfo *)args);
   if ( !transform )
     goto LABEL_96;
-  v6 = &StringLiteral_20971/*"islocal"*/;
+  v6 = &StringLiteral_20974/*"islocal"*/;
   v7 = (System_Collections_Hashtable_o *)transform;
   if ( ((*(__int64 (__fastcall **)(__int64, __int64, _QWORD))(*(_QWORD *)transform + 712LL))(
           transform,
-          StringLiteral_20971/*"islocal"*/,
+          StringLiteral_20974/*"islocal"*/,
           *(_QWORD *)(*(_QWORD *)transform + 720LL))
       & 1) != 0 )
   {
     transform = ((__int64 (__fastcall *)(System_Collections_Hashtable_o *, __int64, const MethodInfo *))v7->klass->vtable._28_get_Item.methodPtr)(
                   v7,
-                  StringLiteral_20971/*"islocal"*/,
+                  StringLiteral_20974/*"islocal"*/,
                   v7->klass->vtable._28_get_Item.method);
     if ( !transform )
       goto LABEL_96;
@@ -18146,7 +18146,7 @@ void iTween__MoveFrom_63157580(
   v12 = *p_isLocal;
   transform = ((__int64 (__fastcall *)(System_Collections_Hashtable_o *, __int64, const MethodInfo *))v7->klass->vtable._25_Contains.methodPtr)(
                 v7,
-                StringLiteral_22649/*"path"*/,
+                StringLiteral_22652/*"path"*/,
                 v7->klass->vtable._25_Contains.method);
   if ( (transform & 1) == 0 )
   {
@@ -18164,13 +18164,13 @@ void iTween__MoveFrom_63157580(
     z = localPosition.fields.z;
     if ( (((__int64 (__fastcall *)(System_Collections_Hashtable_o *, __int64, const MethodInfo *))v7->klass->vtable._25_Contains.methodPtr)(
             v7,
-            StringLiteral_22736/*"position"*/,
+            StringLiteral_22740/*"position"*/,
             v7->klass->vtable._25_Contains.method)
         & 1) != 0 )
     {
       transform = ((__int64 (__fastcall *)(System_Collections_Hashtable_o *, __int64, const MethodInfo *))v7->klass->vtable._28_get_Item.methodPtr)(
                     v7,
-                    StringLiteral_22736/*"position"*/,
+                    StringLiteral_22740/*"position"*/,
                     v7->klass->vtable._28_get_Item.method);
       if ( !transform )
         goto LABEL_96;
@@ -18183,7 +18183,7 @@ void iTween__MoveFrom_63157580(
       v6 = (__int64 *)System_Type__op_Equality(Type, TypeFromHandle, 0);
       transform = ((__int64 (__fastcall *)(System_Collections_Hashtable_o *, __int64, const MethodInfo *))v7->klass->vtable._28_get_Item.methodPtr)(
                     v7,
-                    StringLiteral_22736/*"position"*/,
+                    StringLiteral_22740/*"position"*/,
                     v7->klass->vtable._28_get_Item.method);
       if ( ((unsigned __int8)v6 & 1) != 0 )
       {
@@ -18200,7 +18200,7 @@ void iTween__MoveFrom_63157580(
           goto LABEL_81;
         }
 LABEL_98:
-        sub_1C3313C(transform);
+        sub_1C37574(transform);
         goto LABEL_99;
       }
       if ( !transform )
@@ -18218,7 +18218,7 @@ LABEL_98:
         goto LABEL_81;
       transform = ((__int64 (__fastcall *)(System_Collections_Hashtable_o *, __int64, const MethodInfo *))v7->klass->vtable._28_get_Item.methodPtr)(
                     v7,
-                    StringLiteral_22736/*"position"*/,
+                    StringLiteral_22740/*"position"*/,
                     v7->klass->vtable._28_get_Item.method);
       if ( !transform )
         goto LABEL_96;
@@ -18231,17 +18231,17 @@ LABEL_98:
     }
     else
     {
-      v6 = (__int64 *)&StringLiteral_24859/*"x"*/;
+      v6 = (__int64 *)&StringLiteral_24864/*"x"*/;
       v44 = x;
       if ( (((__int64 (__fastcall *)(System_Collections_Hashtable_o *, void *, const MethodInfo *))v7->klass->vtable._25_Contains.methodPtr)(
               v7,
-              StringLiteral_24859/*"x"*/,
+              StringLiteral_24864/*"x"*/,
               v7->klass->vtable._25_Contains.method)
           & 1) != 0 )
       {
         transform = ((__int64 (__fastcall *)(System_Collections_Hashtable_o *, void *, const MethodInfo *))v7->klass->vtable._28_get_Item.methodPtr)(
                       v7,
-                      StringLiteral_24859/*"x"*/,
+                      StringLiteral_24864/*"x"*/,
                       v7->klass->vtable._28_get_Item.method);
         if ( !transform )
           goto LABEL_96;
@@ -18249,17 +18249,17 @@ LABEL_98:
           goto LABEL_98;
         v44 = *(float *)j_il2cpp_object_unbox_0(transform, float_TypeInfo, v47, v48);
       }
-      v6 = &StringLiteral_24961/*"y"*/;
+      v6 = &StringLiteral_24966/*"y"*/;
       v45 = y;
       if ( (((__int64 (__fastcall *)(System_Collections_Hashtable_o *, __int64, const MethodInfo *))v7->klass->vtable._25_Contains.methodPtr)(
               v7,
-              StringLiteral_24961/*"y"*/,
+              StringLiteral_24966/*"y"*/,
               v7->klass->vtable._25_Contains.method)
           & 1) != 0 )
       {
         transform = ((__int64 (__fastcall *)(System_Collections_Hashtable_o *, __int64, const MethodInfo *))v7->klass->vtable._28_get_Item.methodPtr)(
                       v7,
-                      StringLiteral_24961/*"y"*/,
+                      StringLiteral_24966/*"y"*/,
                       v7->klass->vtable._28_get_Item.method);
         if ( !transform )
           goto LABEL_96;
@@ -18267,16 +18267,16 @@ LABEL_98:
           goto LABEL_98;
         v45 = *(float *)j_il2cpp_object_unbox_0(transform, float_TypeInfo, v49, v50);
       }
-      v6 = &StringLiteral_25008/*"z"*/;
+      v6 = &StringLiteral_25013/*"z"*/;
       if ( (((__int64 (__fastcall *)(System_Collections_Hashtable_o *, __int64, const MethodInfo *))v7->klass->vtable._25_Contains.methodPtr)(
               v7,
-              StringLiteral_25008/*"z"*/,
+              StringLiteral_25013/*"z"*/,
               v7->klass->vtable._25_Contains.method)
           & 1) != 0 )
       {
         transform = ((__int64 (__fastcall *)(System_Collections_Hashtable_o *, __int64, const MethodInfo *))v7->klass->vtable._28_get_Item.methodPtr)(
                       v7,
-                      StringLiteral_25008/*"z"*/,
+                      StringLiteral_25013/*"z"*/,
                       v7->klass->vtable._28_get_Item.method);
         if ( !transform )
           goto LABEL_96;
@@ -18308,7 +18308,7 @@ LABEL_81:
       *(float *)&v79[2] = z;
       v68 = j_il2cpp_value_box_0(UnityEngine_Vector3_TypeInfo, v79, v62, v63, v64, v65, v66, v67);
       klass = v7->klass;
-      v70 = StringLiteral_22736/*"position"*/;
+      v70 = StringLiteral_22740/*"position"*/;
       v71 = v68;
       v72 = v7;
       goto LABEL_93;
@@ -18317,7 +18317,7 @@ LABEL_81:
   }
   transform = ((__int64 (__fastcall *)(System_Collections_Hashtable_o *, __int64, const MethodInfo *))v7->klass->vtable._28_get_Item.methodPtr)(
                 v7,
-                StringLiteral_22649/*"path"*/,
+                StringLiteral_22652/*"path"*/,
                 v7->klass->vtable._28_get_Item.method);
   if ( !transform )
     goto LABEL_96;
@@ -18330,33 +18330,33 @@ LABEL_81:
   v17 = System_Type__op_Equality(v13, v16, 0);
   transform = ((__int64 (__fastcall *)(System_Collections_Hashtable_o *, __int64, const MethodInfo *))v7->klass->vtable._28_get_Item.methodPtr)(
                 v7,
-                StringLiteral_22649/*"path"*/,
+                StringLiteral_22652/*"path"*/,
                 v7->klass->vtable._28_get_Item.method);
   v6 = (__int64 *)transform;
   if ( v17 )
   {
     if ( !transform )
       goto LABEL_96;
-    v18 = sub_1C32D5C(transform);
+    v18 = sub_1C37194(transform);
     if ( v18 )
     {
       v19 = v18;
-      v20 = sub_1C32CC8(UnityEngine_Vector3___TypeInfo, *(unsigned int *)(v18 + 24));
-      System_Array__Copy_65184580((System_Array_o *)v19, (System_Array_o *)v20, *(_DWORD *)(v19 + 24), 0);
+      v20 = sub_1C37100(UnityEngine_Vector3___TypeInfo, *(unsigned int *)(v18 + 24));
+      System_Array__Copy_65227692((System_Array_o *)v19, (System_Array_o *)v20, *(_DWORD *)(v19 + 24), 0);
       goto LABEL_35;
     }
 LABEL_99:
-    v77 = sub_1C3313C(v6);
+    v77 = sub_1C37574(v6);
     iTween__MoveAdd(v75, *(UnityEngine_Vector3_o *)&v77, v78, v76);
     return;
   }
   if ( !transform )
     goto LABEL_96;
-  v21 = sub_1C32D5C(transform);
+  v21 = sub_1C37194(transform);
   if ( !v21 )
     goto LABEL_99;
   v22 = v21;
-  transform = sub_1C32CC8(UnityEngine_Vector3___TypeInfo, *(unsigned int *)(v21 + 24));
+  transform = sub_1C37100(UnityEngine_Vector3___TypeInfo, *(unsigned int *)(v21 + 24));
   v23 = *(_QWORD *)(v22 + 24);
   v20 = transform;
   if ( (int)v23 >= 1 )
@@ -18418,16 +18418,16 @@ LABEL_36:
       else
         UnityEngine_Transform__set_position((UnityEngine_Transform_o *)transform, *(UnityEngine_Vector3_o *)&v35, 0);
       klass = v7->klass;
-      v70 = StringLiteral_22649/*"path"*/;
+      v70 = StringLiteral_22652/*"path"*/;
       v72 = v7;
       v71 = v20;
       goto LABEL_93;
     }
 LABEL_96:
-    sub_1C32E7C(transform);
+    sub_1C372B4(transform);
   }
-  v31 = sub_1C32CC8(UnityEngine_Vector3___TypeInfo, (unsigned int)(*(_DWORD *)(v20 + 24) + 1));
-  System_Array__Copy_65184580((System_Array_o *)v20, (System_Array_o *)v31, *(_DWORD *)(v20 + 24), 0);
+  v31 = sub_1C37100(UnityEngine_Vector3___TypeInfo, (unsigned int)(*(_DWORD *)(v20 + 24) + 1));
+  System_Array__Copy_65227692((System_Array_o *)v20, (System_Array_o *)v31, *(_DWORD *)(v20 + 24), 0);
   if ( !v31 )
     goto LABEL_96;
   transform = (__int64)UnityEngine_GameObject__get_transform(target, 0);
@@ -18455,7 +18455,7 @@ LABEL_96:
       }
     }
 LABEL_97:
-    sub_1C32E84(transform);
+    sub_1C372BC(transform);
   }
   v83 = UnityEngine_Transform__get_localPosition((UnityEngine_Transform_o *)transform, 0);
   v32 = *(_DWORD *)(v31 + 24);
@@ -18473,7 +18473,7 @@ LABEL_97:
     0);
 LABEL_90:
   klass = v7->klass;
-  v70 = StringLiteral_22649/*"path"*/;
+  v70 = StringLiteral_22652/*"path"*/;
   v72 = v7;
   v71 = v31;
 LABEL_93:
@@ -18484,13 +18484,13 @@ LABEL_93:
     klass->vtable._29_set_Item.method);
   ((void (__fastcall *)(System_Collections_Hashtable_o *, __int64, __int64, const MethodInfo *))v7->klass->vtable._29_set_Item.methodPtr)(
     v7,
-    StringLiteral_24241/*"type"*/,
-    StringLiteral_21659/*"move"*/,
+    StringLiteral_24245/*"type"*/,
+    StringLiteral_21662/*"move"*/,
     v7->klass->vtable._29_set_Item.method);
   ((void (__fastcall *)(System_Collections_Hashtable_o *, __int64, __int64, const MethodInfo *))v7->klass->vtable._29_set_Item.methodPtr)(
     v7,
-    StringLiteral_21560/*"method"*/,
-    StringLiteral_24106/*"to"*/,
+    StringLiteral_21563/*"method"*/,
+    StringLiteral_24110/*"to"*/,
     v7->klass->vtable._29_set_Item.method);
   if ( !iTween_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(iTween_TypeInfo);
@@ -18544,27 +18544,27 @@ void iTween__MoveTo(
   z = position.fields.z;
   y = position.fields.y;
   x = position.fields.x;
-  if ( (byte_4C3E9A2 & 1) == 0 )
+  if ( (byte_4C49F22 & 1) == 0 )
   {
-    sub_1C32C20(&object___TypeInfo);
-    sub_1C32C20(&float_TypeInfo);
-    sub_1C32C20(&UnityEngine_Vector3_TypeInfo);
-    sub_1C32C20(&StringLiteral_24067/*"time"*/);
-    sub_1C32C20(&StringLiteral_22736/*"position"*/);
-    sub_1C32C20(&iTween_TypeInfo);
-    byte_4C3E9A2 = 1;
+    sub_1C37058(&object___TypeInfo);
+    sub_1C37058(&float_TypeInfo);
+    sub_1C37058(&UnityEngine_Vector3_TypeInfo);
+    sub_1C37058(&StringLiteral_24071/*"time"*/);
+    sub_1C37058(&StringLiteral_22740/*"position"*/);
+    sub_1C37058(&iTween_TypeInfo);
+    byte_4C49F22 = 1;
   }
-  v9 = sub_1C32CC8(object___TypeInfo, 4);
+  v9 = sub_1C37100(object___TypeInfo, 4);
   if ( !v9 )
-    sub_1C32E7C(0);
+    sub_1C372B4(0);
   v12 = v9;
-  v13 = StringLiteral_22736/*"position"*/;
-  if ( StringLiteral_22736/*"position"*/ )
+  v13 = StringLiteral_22740/*"position"*/;
+  if ( StringLiteral_22740/*"position"*/ )
   {
-    v13 = sub_1C32D5C(StringLiteral_22736/*"position"*/);
+    v13 = sub_1C37194(StringLiteral_22740/*"position"*/);
     if ( !v13 )
       goto LABEL_24;
-    v14 = StringLiteral_22736/*"position"*/;
+    v14 = StringLiteral_22740/*"position"*/;
   }
   else
   {
@@ -18573,7 +18573,7 @@ void iTween__MoveTo(
   if ( !*(_DWORD *)(v12 + 24) )
     goto LABEL_23;
   *(_QWORD *)(v12 + 32) = v14;
-  sub_1C32BC4((CGThumbnailListItem_o *)(v12 + 32), v14, v10, v11);
+  sub_1C36FFC((CGThumbnailListItem_o *)(v12 + 32), v14, v10, v11);
   *(float *)v40 = x;
   *(float *)&v40[1] = y;
   *(float *)&v40[2] = z;
@@ -18581,21 +18581,21 @@ void iTween__MoveTo(
   v23 = v13;
   if ( v13 )
   {
-    v13 = sub_1C32D5C(v13);
+    v13 = sub_1C37194(v13);
     if ( !v13 )
       goto LABEL_24;
   }
   if ( *(_DWORD *)(v12 + 24) <= 1u )
     goto LABEL_23;
   *(_QWORD *)(v12 + 40) = v23;
-  sub_1C32BC4((CGThumbnailListItem_o *)(v12 + 40), v23, v21, v22);
-  v13 = StringLiteral_24067/*"time"*/;
-  if ( StringLiteral_24067/*"time"*/ )
+  sub_1C36FFC((CGThumbnailListItem_o *)(v12 + 40), v23, v21, v22);
+  v13 = StringLiteral_24071/*"time"*/;
+  if ( StringLiteral_24071/*"time"*/ )
   {
-    v13 = sub_1C32D5C(StringLiteral_24067/*"time"*/);
+    v13 = sub_1C37194(StringLiteral_24071/*"time"*/);
     if ( !v13 )
       goto LABEL_24;
-    v26 = StringLiteral_24067/*"time"*/;
+    v26 = StringLiteral_24071/*"time"*/;
   }
   else
   {
@@ -18604,34 +18604,34 @@ void iTween__MoveTo(
   if ( *(_DWORD *)(v12 + 24) <= 2u )
     goto LABEL_23;
   *(_QWORD *)(v12 + 48) = v26;
-  sub_1C32BC4((CGThumbnailListItem_o *)(v12 + 48), v26, v24, v25);
+  sub_1C36FFC((CGThumbnailListItem_o *)(v12 + 48), v26, v24, v25);
   v41 = time;
   v13 = j_il2cpp_value_box_0(float_TypeInfo, &v41, v27, v28, v29, v30, v31, v32);
   v35 = v13;
   if ( v13 )
   {
-    v13 = sub_1C32D5C(v13);
+    v13 = sub_1C37194(v13);
     if ( !v13 )
     {
 LABEL_24:
-      v39 = sub_1C32EA0(v13);
-      sub_1C32D48(v39, 0);
+      v39 = sub_1C372D8(v13);
+      sub_1C37180(v39, 0);
     }
   }
   if ( *(_DWORD *)(v12 + 24) <= 3u )
 LABEL_23:
-    sub_1C32E84(v13);
+    sub_1C372BC(v13);
   *(_QWORD *)(v12 + 56) = v35;
-  sub_1C32BC4((CGThumbnailListItem_o *)(v12 + 56), v35, v33, v34);
+  sub_1C36FFC((CGThumbnailListItem_o *)(v12 + 56), v35, v33, v34);
   if ( !iTween_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(iTween_TypeInfo);
   v37 = iTween__Hash((System_Object_array *)v12, v36);
-  iTween__MoveTo_63156108(target, v37, v38);
+  iTween__MoveTo_63199220(target, v37, v38);
 }
 
 
 // local variable allocation has failed, the output may be wrong!
-void iTween__MoveTo_63156108(
+void iTween__MoveTo_63199220(
         UnityEngine_GameObject_o *target,
         System_Collections_Hashtable_o *args,
         const MethodInfo *method)
@@ -18686,21 +18686,21 @@ void iTween__MoveTo_63156108(
   UnityEngine_Vector3_o v52; // 0:s0.4,4:s1.4,8:s2.4
   UnityEngine_Vector3_o v53; // 0:s0.4,4:s1.4,8:s2.4
 
-  if ( (byte_4C3E9A3 & 1) == 0 )
+  if ( (byte_4C49F23 & 1) == 0 )
   {
-    sub_1C32C20(&UnityEngine_Transform_var);
-    sub_1C32C20(&UnityEngine_Transform_TypeInfo);
-    sub_1C32C20(&System_Type_TypeInfo);
-    sub_1C32C20(&UnityEngine_Vector3_TypeInfo);
-    sub_1C32C20(&StringLiteral_23148/*"rotation"*/);
-    sub_1C32C20(&StringLiteral_21560/*"method"*/);
-    sub_1C32C20(&StringLiteral_22736/*"position"*/);
-    sub_1C32C20(&StringLiteral_24106/*"to"*/);
-    sub_1C32C20(&StringLiteral_21659/*"move"*/);
-    sub_1C32C20(&StringLiteral_24241/*"type"*/);
-    sub_1C32C20(&StringLiteral_23191/*"scale"*/);
-    sub_1C32C20(&iTween_TypeInfo);
-    byte_4C3E9A3 = 1;
+    sub_1C37058(&UnityEngine_Transform_var);
+    sub_1C37058(&UnityEngine_Transform_TypeInfo);
+    sub_1C37058(&System_Type_TypeInfo);
+    sub_1C37058(&UnityEngine_Vector3_TypeInfo);
+    sub_1C37058(&StringLiteral_23152/*"rotation"*/);
+    sub_1C37058(&StringLiteral_21563/*"method"*/);
+    sub_1C37058(&StringLiteral_22740/*"position"*/);
+    sub_1C37058(&StringLiteral_24110/*"to"*/);
+    sub_1C37058(&StringLiteral_21662/*"move"*/);
+    sub_1C37058(&StringLiteral_24245/*"type"*/);
+    sub_1C37058(&StringLiteral_23195/*"scale"*/);
+    sub_1C37058(&iTween_TypeInfo);
+    byte_4C49F23 = 1;
   }
   if ( !iTween_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(iTween_TypeInfo);
@@ -18710,13 +18710,13 @@ void iTween__MoveTo_63156108(
   v6 = (System_Collections_Hashtable_o *)v5;
   if ( (((__int64 (__fastcall *)(Il2CppObject *, __int64, const MethodInfo *))v5->klass->vtable[25].methodPtr)(
           v5,
-          StringLiteral_22736/*"position"*/,
+          StringLiteral_22740/*"position"*/,
           v5->klass->vtable[25].method)
       & 1) == 0 )
     goto LABEL_15;
   v5 = (Il2CppObject *)((__int64 (__fastcall *)(System_Collections_Hashtable_o *, __int64, const MethodInfo *))v6->klass->vtable._28_get_Item.methodPtr)(
                          v6,
-                         StringLiteral_22736/*"position"*/,
+                         StringLiteral_22740/*"position"*/,
                          v6->klass->vtable._28_get_Item.method);
   if ( !v5 )
     goto LABEL_18;
@@ -18730,17 +18730,17 @@ void iTween__MoveTo_63156108(
     goto LABEL_15;
   v5 = (Il2CppObject *)((__int64 (__fastcall *)(System_Collections_Hashtable_o *, __int64, const MethodInfo *))v6->klass->vtable._28_get_Item.methodPtr)(
                          v6,
-                         StringLiteral_22736/*"position"*/,
+                         StringLiteral_22740/*"position"*/,
                          v6->klass->vtable._28_get_Item.method);
   if ( !v5 )
 LABEL_18:
-    sub_1C32E7C(v5);
+    sub_1C372B4(v5);
   v11 = (UnityEngine_Transform_o *)v5;
   naturalAligment = UnityEngine_Transform_TypeInfo->_2.naturalAligment;
   if ( v5->klass->_2.naturalAligment < (unsigned int)naturalAligment
     || (UnityEngine_Transform_c *)v5->klass->_2.typeHierarchy[naturalAligment - 1] != UnityEngine_Transform_TypeInfo )
   {
-    v43 = sub_1C3313C(v5);
+    v43 = sub_1C37574(v5);
     iTween__MoveFrom(v41, *(UnityEngine_Vector3_o *)&v43, v44, v42);
     return;
   }
@@ -18754,7 +18754,7 @@ LABEL_18:
   v21 = j_il2cpp_value_box_0(UnityEngine_Vector3_TypeInfo, v47, v15, v16, v17, v18, v19, v20);
   ((void (__fastcall *)(System_Collections_Hashtable_o *, __int64, __int64, const MethodInfo *))v6->klass->vtable._29_set_Item.methodPtr)(
     v6,
-    StringLiteral_22736/*"position"*/,
+    StringLiteral_22740/*"position"*/,
     v21,
     v6->klass->vtable._29_set_Item.method);
   eulerAngles = (unsigned int)UnityEngine_Transform__get_eulerAngles(v11, 0);
@@ -18767,7 +18767,7 @@ LABEL_18:
   v30 = j_il2cpp_value_box_0(UnityEngine_Vector3_TypeInfo, v46, v24, v25, v26, v27, v28, v29);
   ((void (__fastcall *)(System_Collections_Hashtable_o *, __int64, __int64, const MethodInfo *))v6->klass->vtable._29_set_Item.methodPtr)(
     v6,
-    StringLiteral_23148/*"rotation"*/,
+    StringLiteral_23152/*"rotation"*/,
     v30,
     v6->klass->vtable._29_set_Item.method);
   localScale = (unsigned int)UnityEngine_Transform__get_localScale(v11, 0);
@@ -18780,19 +18780,19 @@ LABEL_18:
   v39 = j_il2cpp_value_box_0(UnityEngine_Vector3_TypeInfo, v45, v33, v34, v35, v36, v37, v38);
   ((void (__fastcall *)(System_Collections_Hashtable_o *, __int64, __int64, const MethodInfo *))v6->klass->vtable._29_set_Item.methodPtr)(
     v6,
-    StringLiteral_23191/*"scale"*/,
+    StringLiteral_23195/*"scale"*/,
     v39,
     v6->klass->vtable._29_set_Item.method);
 LABEL_15:
   ((void (__fastcall *)(System_Collections_Hashtable_o *, __int64, __int64, const MethodInfo *))v6->klass->vtable._29_set_Item.methodPtr)(
     v6,
-    StringLiteral_24241/*"type"*/,
-    StringLiteral_21659/*"move"*/,
+    StringLiteral_24245/*"type"*/,
+    StringLiteral_21662/*"move"*/,
     v6->klass->vtable._29_set_Item.method);
   ((void (__fastcall *)(System_Collections_Hashtable_o *, __int64, __int64, const MethodInfo *))v6->klass->vtable._29_set_Item.methodPtr)(
     v6,
-    StringLiteral_21560/*"method"*/,
-    StringLiteral_24106/*"to"*/,
+    StringLiteral_21563/*"method"*/,
+    StringLiteral_24110/*"to"*/,
     v6->klass->vtable._29_set_Item.method);
   if ( !iTween_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(iTween_TypeInfo);
@@ -18877,46 +18877,46 @@ void iTween__MoveUpdate(
   UnityEngine_Vector3_o v73; // 0:s0.4,4:s1.4,8:s2.4
   UnityEngine_Vector3_o v74; // 0:s0.4,4:s1.4,8:s2.4
 
-  if ( (byte_4C3E9FF & 1) == 0 )
+  if ( (byte_4C49F7F & 1) == 0 )
   {
-    sub_1C32C20(&bool_TypeInfo);
-    sub_1C32C20(&iTween_Defaults_TypeInfo);
-    sub_1C32C20(&Method_UnityEngine_GameObject_GetComponent_Rigidbody___);
-    sub_1C32C20(&UnityEngine_Object_TypeInfo);
-    sub_1C32C20(&float_TypeInfo);
-    sub_1C32C20(&UnityEngine_Transform_var);
-    sub_1C32C20(&UnityEngine_Transform_TypeInfo);
-    sub_1C32C20(&System_Type_TypeInfo);
-    sub_1C32C20(&UnityEngine_Vector3___TypeInfo);
-    sub_1C32C20(&UnityEngine_Vector3_var);
-    sub_1C32C20(&UnityEngine_Vector3_TypeInfo);
-    sub_1C32C20(&StringLiteral_24859/*"x"*/);
-    sub_1C32C20(&StringLiteral_21348/*"looktarget"*/);
-    sub_1C32C20(&StringLiteral_24067/*"time"*/);
-    sub_1C32C20(&StringLiteral_22492/*"orienttopath"*/);
-    sub_1C32C20(&StringLiteral_22736/*"position"*/);
-    sub_1C32C20(&StringLiteral_24961/*"y"*/);
-    sub_1C32C20(&StringLiteral_25008/*"z"*/);
-    sub_1C32C20(&StringLiteral_20971/*"islocal"*/);
-    sub_1C32C20(&iTween_TypeInfo);
-    byte_4C3E9FF = 1;
+    sub_1C37058(&bool_TypeInfo);
+    sub_1C37058(&iTween_Defaults_TypeInfo);
+    sub_1C37058(&Method_UnityEngine_GameObject_GetComponent_Rigidbody___);
+    sub_1C37058(&UnityEngine_Object_TypeInfo);
+    sub_1C37058(&float_TypeInfo);
+    sub_1C37058(&UnityEngine_Transform_var);
+    sub_1C37058(&UnityEngine_Transform_TypeInfo);
+    sub_1C37058(&System_Type_TypeInfo);
+    sub_1C37058(&UnityEngine_Vector3___TypeInfo);
+    sub_1C37058(&UnityEngine_Vector3_var);
+    sub_1C37058(&UnityEngine_Vector3_TypeInfo);
+    sub_1C37058(&StringLiteral_24864/*"x"*/);
+    sub_1C37058(&StringLiteral_21351/*"looktarget"*/);
+    sub_1C37058(&StringLiteral_24071/*"time"*/);
+    sub_1C37058(&StringLiteral_22495/*"orienttopath"*/);
+    sub_1C37058(&StringLiteral_22740/*"position"*/);
+    sub_1C37058(&StringLiteral_24966/*"y"*/);
+    sub_1C37058(&StringLiteral_25013/*"z"*/);
+    sub_1C37058(&StringLiteral_20974/*"islocal"*/);
+    sub_1C37058(&iTween_TypeInfo);
+    byte_4C49F7F = 1;
   }
   if ( !iTween_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(iTween_TypeInfo);
   iTween__CleanArgs(args, (const MethodInfo *)args);
-  p_isLocal = sub_1C32CC8(UnityEngine_Vector3___TypeInfo, 4);
+  p_isLocal = sub_1C37100(UnityEngine_Vector3___TypeInfo, 4);
   if ( !args )
     goto LABEL_89;
   v6 = p_isLocal;
   if ( (((__int64 (__fastcall *)(System_Collections_Hashtable_o *, __int64, const MethodInfo *))args->klass->vtable._25_Contains.methodPtr)(
           args,
-          StringLiteral_24067/*"time"*/,
+          StringLiteral_24071/*"time"*/,
           args->klass->vtable._25_Contains.method)
       & 1) != 0 )
   {
     p_isLocal = ((__int64 (__fastcall *)(System_Collections_Hashtable_o *, __int64, const MethodInfo *))args->klass->vtable._28_get_Item.methodPtr)(
                   args,
-                  StringLiteral_24067/*"time"*/,
+                  StringLiteral_24071/*"time"*/,
                   args->klass->vtable._28_get_Item.method);
     if ( !p_isLocal )
       goto LABEL_89;
@@ -18943,13 +18943,13 @@ void iTween__MoveUpdate(
   }
   if ( (((__int64 (__fastcall *)(System_Collections_Hashtable_o *, __int64, const MethodInfo *))args->klass->vtable._25_Contains.methodPtr)(
           args,
-          StringLiteral_20971/*"islocal"*/,
+          StringLiteral_20974/*"islocal"*/,
           args->klass->vtable._25_Contains.method)
       & 1) != 0 )
   {
     p_isLocal = ((__int64 (__fastcall *)(System_Collections_Hashtable_o *, __int64, const MethodInfo *))args->klass->vtable._28_get_Item.methodPtr)(
                   args,
-                  StringLiteral_20971/*"islocal"*/,
+                  StringLiteral_20974/*"islocal"*/,
                   args->klass->vtable._28_get_Item.method);
     if ( !p_isLocal )
       goto LABEL_89;
@@ -18987,20 +18987,20 @@ void iTween__MoveUpdate(
   }
   if ( *(_DWORD *)(v6 + 24) <= 1u )
 LABEL_88:
-    sub_1C32E84(p_isLocal);
+    sub_1C372BC(p_isLocal);
   *(float *)(v6 + 48) = localPosition.fields.y;
   *(float *)(v6 + 52) = localPosition.fields.z;
   *(UnityEngine_Vector3_o *)(v6 + 32) = localPosition;
   *(float *)(v6 + 44) = localPosition.fields.x;
   if ( (((__int64 (__fastcall *)(System_Collections_Hashtable_o *, __int64, const MethodInfo *))args->klass->vtable._25_Contains.methodPtr)(
           args,
-          StringLiteral_22736/*"position"*/,
+          StringLiteral_22740/*"position"*/,
           args->klass->vtable._25_Contains.method)
       & 1) != 0 )
   {
     p_isLocal = ((__int64 (__fastcall *)(System_Collections_Hashtable_o *, __int64, const MethodInfo *))args->klass->vtable._28_get_Item.methodPtr)(
                   args,
-                  StringLiteral_22736/*"position"*/,
+                  StringLiteral_22740/*"position"*/,
                   args->klass->vtable._28_get_Item.method);
     if ( !p_isLocal )
       goto LABEL_89;
@@ -19013,7 +19013,7 @@ LABEL_88:
     v21 = System_Type__op_Equality(Type, TypeFromHandle, 0);
     p_isLocal = ((__int64 (__fastcall *)(System_Collections_Hashtable_o *, __int64, const MethodInfo *))args->klass->vtable._28_get_Item.methodPtr)(
                   args,
-                  StringLiteral_22736/*"position"*/,
+                  StringLiteral_22740/*"position"*/,
                   args->klass->vtable._28_get_Item.method);
     if ( v21 )
     {
@@ -19045,7 +19045,7 @@ LABEL_88:
       {
         p_isLocal = ((__int64 (__fastcall *)(System_Collections_Hashtable_o *, __int64, const MethodInfo *))args->klass->vtable._28_get_Item.methodPtr)(
                       args,
-                      StringLiteral_22736/*"position"*/,
+                      StringLiteral_22740/*"position"*/,
                       args->klass->vtable._28_get_Item.method);
         if ( !p_isLocal )
           goto LABEL_89;
@@ -19064,13 +19064,13 @@ LABEL_88:
   {
     if ( (((__int64 (__fastcall *)(System_Collections_Hashtable_o *, void *, const MethodInfo *))args->klass->vtable._25_Contains.methodPtr)(
             args,
-            StringLiteral_24859/*"x"*/,
+            StringLiteral_24864/*"x"*/,
             args->klass->vtable._25_Contains.method)
         & 1) != 0 )
     {
       p_isLocal = ((__int64 (__fastcall *)(System_Collections_Hashtable_o *, void *, const MethodInfo *))args->klass->vtable._28_get_Item.methodPtr)(
                     args,
-                    StringLiteral_24859/*"x"*/,
+                    StringLiteral_24864/*"x"*/,
                     args->klass->vtable._28_get_Item.method);
       if ( !p_isLocal )
         goto LABEL_89;
@@ -19083,13 +19083,13 @@ LABEL_88:
     }
     if ( (((__int64 (__fastcall *)(System_Collections_Hashtable_o *, __int64, const MethodInfo *))args->klass->vtable._25_Contains.methodPtr)(
             args,
-            StringLiteral_24961/*"y"*/,
+            StringLiteral_24966/*"y"*/,
             args->klass->vtable._25_Contains.method)
         & 1) != 0 )
     {
       p_isLocal = ((__int64 (__fastcall *)(System_Collections_Hashtable_o *, __int64, const MethodInfo *))args->klass->vtable._28_get_Item.methodPtr)(
                     args,
-                    StringLiteral_24961/*"y"*/,
+                    StringLiteral_24966/*"y"*/,
                     args->klass->vtable._28_get_Item.method);
       if ( !p_isLocal )
         goto LABEL_89;
@@ -19102,13 +19102,13 @@ LABEL_88:
     }
     p_isLocal = ((__int64 (__fastcall *)(System_Collections_Hashtable_o *, __int64, const MethodInfo *))args->klass->vtable._25_Contains.methodPtr)(
                   args,
-                  StringLiteral_25008/*"z"*/,
+                  StringLiteral_25013/*"z"*/,
                   args->klass->vtable._25_Contains.method);
     if ( (p_isLocal & 1) != 0 )
     {
       p_isLocal = ((__int64 (__fastcall *)(System_Collections_Hashtable_o *, __int64, const MethodInfo *))args->klass->vtable._28_get_Item.methodPtr)(
                     args,
-                    StringLiteral_25008/*"z"*/,
+                    StringLiteral_25013/*"z"*/,
                     args->klass->vtable._28_get_Item.method);
       if ( !p_isLocal )
         goto LABEL_89;
@@ -19125,33 +19125,33 @@ LABEL_88:
   v36 = *(float *)(v6 + 32);
   v37 = *(float *)(v6 + 44);
   deltaTime = UnityEngine_Time__get_deltaTime(0);
-  v39 = UnityEngine_Mathf__SmoothDamp_71168496(v36, v37, (float *)(v6 + 56), updateTime, INFINITY, deltaTime, 0);
+  v39 = UnityEngine_Mathf__SmoothDamp_71211608(v36, v37, (float *)(v6 + 56), updateTime, INFINITY, deltaTime, 0);
   if ( *(_DWORD *)(v6 + 24) <= 3u )
     goto LABEL_88;
   v40 = *(float *)(v6 + 36);
   v41 = *(float *)(v6 + 48);
   *(float *)(v6 + 68) = v39;
   v42 = UnityEngine_Time__get_deltaTime(0);
-  v43 = UnityEngine_Mathf__SmoothDamp_71168496(v40, v41, (float *)(v6 + 60), updateTime, INFINITY, v42, 0);
+  v43 = UnityEngine_Mathf__SmoothDamp_71211608(v40, v41, (float *)(v6 + 60), updateTime, INFINITY, v42, 0);
   if ( *(_DWORD *)(v6 + 24) <= 3u )
     goto LABEL_88;
   v44 = *(float *)(v6 + 40);
   v45 = *(float *)(v6 + 52);
   *(float *)(v6 + 72) = v43;
   v46 = UnityEngine_Time__get_deltaTime(0);
-  v47 = UnityEngine_Mathf__SmoothDamp_71168496(v44, v45, (float *)(v6 + 64), updateTime, INFINITY, v46, 0);
+  v47 = UnityEngine_Mathf__SmoothDamp_71211608(v44, v45, (float *)(v6 + 64), updateTime, INFINITY, v46, 0);
   if ( *(_DWORD *)(v6 + 24) <= 3u )
     goto LABEL_88;
   *(float *)(v6 + 76) = v47;
   if ( (((__int64 (__fastcall *)(System_Collections_Hashtable_o *, __int64, const MethodInfo *))args->klass->vtable._25_Contains.methodPtr)(
           args,
-          StringLiteral_22492/*"orienttopath"*/,
+          StringLiteral_22495/*"orienttopath"*/,
           args->klass->vtable._25_Contains.method)
       & 1) != 0 )
   {
     p_isLocal = ((__int64 (__fastcall *)(System_Collections_Hashtable_o *, __int64, const MethodInfo *))args->klass->vtable._28_get_Item.methodPtr)(
                   args,
-                  StringLiteral_22492/*"orienttopath"*/,
+                  StringLiteral_22495/*"orienttopath"*/,
                   args->klass->vtable._28_get_Item.method);
     if ( !p_isLocal )
       goto LABEL_89;
@@ -19168,21 +19168,21 @@ LABEL_88:
         v57 = j_il2cpp_value_box_0(UnityEngine_Vector3_TypeInfo, &v69, v50, v51, v52, v53, v54, v55);
         ((void (__fastcall *)(System_Collections_Hashtable_o *, __int64, __int64, const MethodInfo *))args->klass->vtable._29_set_Item.methodPtr)(
           args,
-          StringLiteral_21348/*"looktarget"*/,
+          StringLiteral_21351/*"looktarget"*/,
           v57,
           args->klass->vtable._29_set_Item.method);
       }
       goto LABEL_72;
     }
 LABEL_90:
-    sub_1C3313C(p_isLocal);
+    sub_1C37574(p_isLocal);
     iTween__LookUpdate(v66, v67, v68);
     return;
   }
 LABEL_72:
   if ( (((__int64 (__fastcall *)(System_Collections_Hashtable_o *, __int64, const MethodInfo *))args->klass->vtable._25_Contains.methodPtr)(
           args,
-          StringLiteral_21348/*"looktarget"*/,
+          StringLiteral_21351/*"looktarget"*/,
           args->klass->vtable._25_Contains.method)
       & 1) != 0 )
   {
@@ -19204,7 +19204,7 @@ LABEL_72:
     UnityEngine_Transform__set_position((UnityEngine_Transform_o *)p_isLocal, *(UnityEngine_Vector3_o *)&v61, 0);
   Component_object = UnityEngine_GameObject__GetComponent_object_(
                        target,
-                       (const MethodInfo_3134970 *)Method_UnityEngine_GameObject_GetComponent_Rigidbody___);
+                       (const MethodInfo_313F1D8 *)Method_UnityEngine_GameObject_GetComponent_Rigidbody___);
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   if ( UnityEngine_Object__op_Inequality((UnityEngine_Object_o *)Component_object, 0, 0) )
@@ -19218,7 +19218,7 @@ LABEL_72:
       z = v73.fields.z;
       p_isLocal = (__int64)UnityEngine_GameObject__GetComponent_object_(
                              target,
-                             (const MethodInfo_3134970 *)Method_UnityEngine_GameObject_GetComponent_Rigidbody___);
+                             (const MethodInfo_313F1D8 *)Method_UnityEngine_GameObject_GetComponent_Rigidbody___);
       if ( p_isLocal )
       {
         v74.fields.x = x;
@@ -19229,12 +19229,12 @@ LABEL_72:
       }
     }
 LABEL_89:
-    sub_1C32E7C(p_isLocal);
+    sub_1C372B4(p_isLocal);
   }
 }
 
 
-void iTween__MoveUpdate_63240976(
+void iTween__MoveUpdate_63284088(
         UnityEngine_GameObject_o *target,
         UnityEngine_Vector3_o position,
         float time,
@@ -19280,27 +19280,27 @@ void iTween__MoveUpdate_63240976(
   z = position.fields.z;
   y = position.fields.y;
   x = position.fields.x;
-  if ( (byte_4C3EA00 & 1) == 0 )
+  if ( (byte_4C49F80 & 1) == 0 )
   {
-    sub_1C32C20(&object___TypeInfo);
-    sub_1C32C20(&float_TypeInfo);
-    sub_1C32C20(&UnityEngine_Vector3_TypeInfo);
-    sub_1C32C20(&StringLiteral_24067/*"time"*/);
-    sub_1C32C20(&StringLiteral_22736/*"position"*/);
-    sub_1C32C20(&iTween_TypeInfo);
-    byte_4C3EA00 = 1;
+    sub_1C37058(&object___TypeInfo);
+    sub_1C37058(&float_TypeInfo);
+    sub_1C37058(&UnityEngine_Vector3_TypeInfo);
+    sub_1C37058(&StringLiteral_24071/*"time"*/);
+    sub_1C37058(&StringLiteral_22740/*"position"*/);
+    sub_1C37058(&iTween_TypeInfo);
+    byte_4C49F80 = 1;
   }
-  v9 = sub_1C32CC8(object___TypeInfo, 4);
+  v9 = sub_1C37100(object___TypeInfo, 4);
   if ( !v9 )
-    sub_1C32E7C(0);
+    sub_1C372B4(0);
   v12 = v9;
-  v13 = StringLiteral_22736/*"position"*/;
-  if ( StringLiteral_22736/*"position"*/ )
+  v13 = StringLiteral_22740/*"position"*/;
+  if ( StringLiteral_22740/*"position"*/ )
   {
-    v13 = sub_1C32D5C(StringLiteral_22736/*"position"*/);
+    v13 = sub_1C37194(StringLiteral_22740/*"position"*/);
     if ( !v13 )
       goto LABEL_24;
-    v14 = StringLiteral_22736/*"position"*/;
+    v14 = StringLiteral_22740/*"position"*/;
   }
   else
   {
@@ -19309,7 +19309,7 @@ void iTween__MoveUpdate_63240976(
   if ( !*(_DWORD *)(v12 + 24) )
     goto LABEL_23;
   *(_QWORD *)(v12 + 32) = v14;
-  sub_1C32BC4((CGThumbnailListItem_o *)(v12 + 32), v14, v10, v11);
+  sub_1C36FFC((CGThumbnailListItem_o *)(v12 + 32), v14, v10, v11);
   *(float *)v40 = x;
   *(float *)&v40[1] = y;
   *(float *)&v40[2] = z;
@@ -19317,21 +19317,21 @@ void iTween__MoveUpdate_63240976(
   v23 = v13;
   if ( v13 )
   {
-    v13 = sub_1C32D5C(v13);
+    v13 = sub_1C37194(v13);
     if ( !v13 )
       goto LABEL_24;
   }
   if ( *(_DWORD *)(v12 + 24) <= 1u )
     goto LABEL_23;
   *(_QWORD *)(v12 + 40) = v23;
-  sub_1C32BC4((CGThumbnailListItem_o *)(v12 + 40), v23, v21, v22);
-  v13 = StringLiteral_24067/*"time"*/;
-  if ( StringLiteral_24067/*"time"*/ )
+  sub_1C36FFC((CGThumbnailListItem_o *)(v12 + 40), v23, v21, v22);
+  v13 = StringLiteral_24071/*"time"*/;
+  if ( StringLiteral_24071/*"time"*/ )
   {
-    v13 = sub_1C32D5C(StringLiteral_24067/*"time"*/);
+    v13 = sub_1C37194(StringLiteral_24071/*"time"*/);
     if ( !v13 )
       goto LABEL_24;
-    v26 = StringLiteral_24067/*"time"*/;
+    v26 = StringLiteral_24071/*"time"*/;
   }
   else
   {
@@ -19340,25 +19340,25 @@ void iTween__MoveUpdate_63240976(
   if ( *(_DWORD *)(v12 + 24) <= 2u )
     goto LABEL_23;
   *(_QWORD *)(v12 + 48) = v26;
-  sub_1C32BC4((CGThumbnailListItem_o *)(v12 + 48), v26, v24, v25);
+  sub_1C36FFC((CGThumbnailListItem_o *)(v12 + 48), v26, v24, v25);
   v41 = time;
   v13 = j_il2cpp_value_box_0(float_TypeInfo, &v41, v27, v28, v29, v30, v31, v32);
   v35 = v13;
   if ( v13 )
   {
-    v13 = sub_1C32D5C(v13);
+    v13 = sub_1C37194(v13);
     if ( !v13 )
     {
 LABEL_24:
-      v39 = sub_1C32EA0(v13);
-      sub_1C32D48(v39, 0);
+      v39 = sub_1C372D8(v13);
+      sub_1C37180(v39, 0);
     }
   }
   if ( *(_DWORD *)(v12 + 24) <= 3u )
 LABEL_23:
-    sub_1C32E84(v13);
+    sub_1C372BC(v13);
   *(_QWORD *)(v12 + 56) = v35;
-  sub_1C32BC4((CGThumbnailListItem_o *)(v12 + 56), v35, v33, v34);
+  sub_1C36FFC((CGThumbnailListItem_o *)(v12 + 56), v35, v33, v34);
   if ( !iTween_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(iTween_TypeInfo);
   v37 = iTween__Hash((System_Object_array *)v12, v36);
@@ -19392,7 +19392,7 @@ void iTween__OnEnable(iTween_o *this, const MethodInfo *method)
   if ( !this->fields.started )
   {
     v4 = iTween__Start(this, method);
-    UnityEngine_MonoBehaviour__StartCoroutine_71209212((UnityEngine_MonoBehaviour_o *)this, v4, 0);
+    UnityEngine_MonoBehaviour__StartCoroutine_71252324((UnityEngine_MonoBehaviour_o *)this, v4, 0);
   }
 }
 
@@ -19422,15 +19422,15 @@ UnityEngine_Vector3_array *iTween__PathControlPointGenerator(UnityEngine_Vector3
   int v22; // s1
 
   v2 = path;
-  if ( (byte_4C3EA41 & 1) == 0 )
+  if ( (byte_4C49FC1 & 1) == 0 )
   {
-    path = (UnityEngine_Vector3_array *)sub_1C32C20(&UnityEngine_Vector3___TypeInfo);
-    byte_4C3EA41 = 1;
+    path = (UnityEngine_Vector3_array *)sub_1C37058(&UnityEngine_Vector3___TypeInfo);
+    byte_4C49FC1 = 1;
   }
   if ( !v2 )
     goto LABEL_13;
-  v3 = sub_1C32CC8(UnityEngine_Vector3___TypeInfo, (unsigned int)(LODWORD(v2->max_length) + 2));
-  System_Array__Copy_65180592((System_Array_o *)v2, 0, (System_Array_o *)v3, 1, v2->max_length, 0);
+  v3 = sub_1C37100(UnityEngine_Vector3___TypeInfo, (unsigned int)(LODWORD(v2->max_length) + 2));
+  System_Array__Copy_65223704((System_Array_o *)v2, 0, (System_Array_o *)v3, 1, v2->max_length, 0);
   if ( !v3 )
     goto LABEL_13;
   v4 = *(_QWORD *)(v3 + 24);
@@ -19457,8 +19457,8 @@ UnityEngine_Vector3_array *iTween__PathControlPointGenerator(UnityEngine_Vector3
   v15 = vmul_f32(v14, v14).n64_u64[0];
   if ( (float)(*((float *)&v15 + 1) + (float)((float)(v13 * v13) + *(float *)&v15)) < 1.0e-10 )
   {
-    v16 = sub_1C32CC8(UnityEngine_Vector3___TypeInfo, v11);
-    System_Array__Copy_65184580((System_Array_o *)v3, (System_Array_o *)v16, *(_DWORD *)(v3 + 24), 0);
+    v16 = sub_1C37100(UnityEngine_Vector3___TypeInfo, v11);
+    System_Array__Copy_65227692((System_Array_o *)v3, (System_Array_o *)v16, *(_DWORD *)(v3 + 24), 0);
     if ( v16 )
     {
       v17 = *(_QWORD *)(v16 + 24);
@@ -19473,15 +19473,15 @@ UnityEngine_Vector3_array *iTween__PathControlPointGenerator(UnityEngine_Vector3
         v22 = *(_DWORD *)(v16 + 64);
         *(_QWORD *)v20 = v21;
         *(_DWORD *)(v20 + 8) = v22;
-        v3 = sub_1C32CC8(UnityEngine_Vector3___TypeInfo, *(unsigned int *)(v16 + 24));
-        System_Array__Copy_65184580((System_Array_o *)v16, (System_Array_o *)v3, *(_DWORD *)(v16 + 24), 0);
+        v3 = sub_1C37100(UnityEngine_Vector3___TypeInfo, *(unsigned int *)(v16 + 24));
+        System_Array__Copy_65227692((System_Array_o *)v16, (System_Array_o *)v3, *(_DWORD *)(v16 + 24), 0);
         return (UnityEngine_Vector3_array *)v3;
       }
 LABEL_12:
-      sub_1C32E84(path);
+      sub_1C372BC(path);
     }
 LABEL_13:
-    sub_1C32E7C(path);
+    sub_1C372B4(path);
   }
   return (UnityEngine_Vector3_array *)v3;
 }
@@ -19515,15 +19515,15 @@ float iTween__PathLength(UnityEngine_Transform_array *path, const MethodInfo *me
   UnityEngine_Vector3_o v26; // 0:s0.4,4:s1.4,8:s2.4
 
   v2 = path;
-  if ( (byte_4C3EA03 & 1) == 0 )
+  if ( (byte_4C49F83 & 1) == 0 )
   {
-    sub_1C32C20(&UnityEngine_Vector3___TypeInfo);
-    path = (UnityEngine_Transform_array *)sub_1C32C20(&iTween_TypeInfo);
-    byte_4C3EA03 = 1;
+    sub_1C37058(&UnityEngine_Vector3___TypeInfo);
+    path = (UnityEngine_Transform_array *)sub_1C37058(&iTween_TypeInfo);
+    byte_4C49F83 = 1;
   }
   if ( !v2 )
     goto LABEL_26;
-  path = (UnityEngine_Transform_array *)sub_1C32CC8(UnityEngine_Vector3___TypeInfo, LODWORD(v2->max_length));
+  path = (UnityEngine_Transform_array *)sub_1C37100(UnityEngine_Vector3___TypeInfo, LODWORD(v2->max_length));
   max_length = v2->max_length;
   v5 = path;
   if ( max_length >= 1 )
@@ -19534,7 +19534,7 @@ float iTween__PathLength(UnityEngine_Transform_array *path, const MethodInfo *me
     {
       if ( (unsigned int)v6 >= max_length )
 LABEL_27:
-        sub_1C32E84(path);
+        sub_1C372BC(path);
       path = (UnityEngine_Transform_array *)v2->m_Items[v6];
       if ( !path )
         break;
@@ -19550,7 +19550,7 @@ LABEL_27:
         goto LABEL_11;
     }
 LABEL_26:
-    sub_1C32E7C(path);
+    sub_1C372B4(path);
   }
 LABEL_11:
   if ( !iTween_TypeInfo->_2.cctor_finished )
@@ -19580,10 +19580,10 @@ LABEL_11:
       v20 = v26.fields.x;
       v21 = v26.fields.y;
       v22 = v26.fields.z;
-      if ( !byte_4C313CF )
+      if ( !byte_4C3C91F )
       {
-        sub_1C32C20(&System_Math_TypeInfo);
-        byte_4C313CF = 1;
+        sub_1C37058(&System_Math_TypeInfo);
+        byte_4C3C91F = 1;
       }
       if ( !System_Math_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(System_Math_TypeInfo);
@@ -19602,7 +19602,7 @@ LABEL_11:
 }
 
 
-float iTween__PathLength_63207340(UnityEngine_Vector3_array *path, const MethodInfo *method)
+float iTween__PathLength_63250452(UnityEngine_Vector3_array *path, const MethodInfo *method)
 {
   UnityEngine_Vector3_array *v3; // x19
   float v4; // s8
@@ -19623,10 +19623,10 @@ float iTween__PathLength_63207340(UnityEngine_Vector3_array *path, const MethodI
   UnityEngine_Vector3_o v20; // 0:s0.4,4:s1.4,8:s2.4
   UnityEngine_Vector3_o v21; // 0:s0.4,4:s1.4,8:s2.4
 
-  if ( (byte_4C3EA04 & 1) == 0 )
+  if ( (byte_4C49F84 & 1) == 0 )
   {
-    sub_1C32C20(&iTween_TypeInfo);
-    byte_4C3EA04 = 1;
+    sub_1C37058(&iTween_TypeInfo);
+    byte_4C49F84 = 1;
   }
   if ( !iTween_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(iTween_TypeInfo);
@@ -19634,7 +19634,7 @@ float iTween__PathLength_63207340(UnityEngine_Vector3_array *path, const MethodI
   v4 = 0.0;
   v20 = iTween__Interp(v3, 0.0, v5);
   if ( !path )
-    sub_1C32E7C(v6);
+    sub_1C372B4(v6);
   v8 = 20 * LODWORD(path->max_length);
   if ( v8 >= 1 )
   {
@@ -19657,10 +19657,10 @@ float iTween__PathLength_63207340(UnityEngine_Vector3_array *path, const MethodI
       v16 = v21.fields.x;
       v17 = v21.fields.y;
       v18 = v21.fields.z;
-      if ( !byte_4C313CF )
+      if ( !byte_4C3C91F )
       {
-        sub_1C32C20(&System_Math_TypeInfo);
-        byte_4C313CF = 1;
+        sub_1C37058(&System_Math_TypeInfo);
+        byte_4C3C91F = 1;
       }
       if ( !System_Math_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(System_Math_TypeInfo);
@@ -19713,25 +19713,25 @@ void iTween__Pause(UnityEngine_GameObject_o *target, const MethodInfo *method)
   __int64 v31; // x0
 
   v2 = target;
-  if ( (byte_4C3EA29 & 1) == 0 )
+  if ( (byte_4C49FA9 & 1) == 0 )
   {
-    sub_1C32C20(&Method_System_Linq_Enumerable_Where_iTween___);
-    sub_1C32C20(&System_Func_iTween__bool__TypeInfo);
-    sub_1C32C20(&Method_UnityEngine_GameObject_GetComponents_iTween___);
-    sub_1C32C20(&System_IDisposable_TypeInfo);
-    sub_1C32C20(&System_Collections_Generic_IEnumerable_iTween__TypeInfo);
-    sub_1C32C20(&System_Collections_Generic_IEnumerator_iTween__TypeInfo);
-    sub_1C32C20(&System_Collections_IEnumerator_TypeInfo);
-    sub_1C32C20(&Method_iTween___c__Pause_b__212_0__);
-    sub_1C32C20(&iTween___c_TypeInfo);
-    target = (UnityEngine_GameObject_o *)sub_1C32C20(&StringLiteral_14621/*"TweenDelay"*/);
-    byte_4C3EA29 = 1;
+    sub_1C37058(&Method_System_Linq_Enumerable_Where_iTween___);
+    sub_1C37058(&System_Func_iTween__bool__TypeInfo);
+    sub_1C37058(&Method_UnityEngine_GameObject_GetComponents_iTween___);
+    sub_1C37058(&System_IDisposable_TypeInfo);
+    sub_1C37058(&System_Collections_Generic_IEnumerable_iTween__TypeInfo);
+    sub_1C37058(&System_Collections_Generic_IEnumerator_iTween__TypeInfo);
+    sub_1C37058(&System_Collections_IEnumerator_TypeInfo);
+    sub_1C37058(&Method_iTween___c__Pause_b__212_0__);
+    sub_1C37058(&iTween___c_TypeInfo);
+    target = (UnityEngine_GameObject_o *)sub_1C37058(&StringLiteral_14622/*"TweenDelay"*/);
+    byte_4C49FA9 = 1;
   }
   if ( !v2 )
     goto LABEL_43;
   Components_object = UnityEngine_GameObject__GetComponents_object_(
                         v2,
-                        (const MethodInfo_31352CC *)Method_UnityEngine_GameObject_GetComponents_iTween___);
+                        (const MethodInfo_313FB34 *)Method_UnityEngine_GameObject_GetComponents_iTween___);
   v4 = iTween___c_TypeInfo;
   v5 = (System_Collections_Generic_IEnumerable_TSource__o *)Components_object;
   if ( !iTween___c_TypeInfo->_2.cctor_finished )
@@ -19748,19 +19748,19 @@ void iTween__Pause(UnityEngine_GameObject_o *target, const MethodInfo *method)
       v4 = iTween___c_TypeInfo;
     }
     v7 = (Il2CppObject *)v4->static_fields->__9;
-    _9__212_0 = (System_Func_object__bool__o *)sub_1C32E6C(System_Func_iTween__bool__TypeInfo);
+    _9__212_0 = (System_Func_object__bool__o *)sub_1C372A4(System_Func_iTween__bool__TypeInfo);
     System_Func_object__bool____ctor(_9__212_0, v7, Method_iTween___c__Pause_b__212_0__, 0);
     static_fields = iTween___c_TypeInfo->static_fields;
     static_fields->__9__212_0 = (struct System_Func_iTween__bool__o *)_9__212_0;
-    sub_1C32BC4((CGThumbnailListItem_o *)&static_fields->__9__212_0, (int32_t)_9__212_0, v9, v10);
+    sub_1C36FFC((CGThumbnailListItem_o *)&static_fields->__9__212_0, (int32_t)_9__212_0, v9, v10);
   }
   target = (UnityEngine_GameObject_o *)System_Linq_Enumerable__Where_object_(
                                          v5,
                                          (System_Func_TSource__bool__o *)_9__212_0,
-                                         (const MethodInfo_3123BA8 *)Method_System_Linq_Enumerable_Where_iTween___);
+                                         (const MethodInfo_312E410 *)Method_System_Linq_Enumerable_Where_iTween___);
   if ( !target )
 LABEL_43:
-    sub_1C32E7C(target);
+    sub_1C372B4(target);
   klass = target->klass;
   v12 = target;
   v13 = *(unsigned __int16 *)&target->klass->_2.rank;
@@ -19779,11 +19779,11 @@ LABEL_43:
   else
   {
 LABEL_15:
-    v15 = sub_1C83438(target, System_Collections_Generic_IEnumerable_iTween__TypeInfo, 0);
+    v15 = sub_1C87870(target, System_Collections_Generic_IEnumerable_iTween__TypeInfo, 0);
   }
   v16 = (*(__int64 (__fastcall **)(UnityEngine_GameObject_o *, _QWORD))v15)(v12, *(_QWORD *)(v15 + 8));
   if ( !v16 )
-    sub_1C32E7C(0);
+    sub_1C372B4(0);
   while ( 1 )
   {
     v17 = *(_QWORD *)v16;
@@ -19803,7 +19803,7 @@ LABEL_15:
     else
     {
 LABEL_22:
-      v20 = sub_1C83438(v16, System_Collections_IEnumerator_TypeInfo, 0);
+      v20 = sub_1C87870(v16, System_Collections_IEnumerator_TypeInfo, 0);
     }
     if ( ((*(__int64 (__fastcall **)(__int64, _QWORD))v20)(v16, *(_QWORD *)(v20 + 8)) & 1) == 0 )
       break;
@@ -19824,19 +19824,19 @@ LABEL_22:
     else
     {
 LABEL_29:
-      v24 = sub_1C83438(v16, System_Collections_Generic_IEnumerator_iTween__TypeInfo, 0);
+      v24 = sub_1C87870(v16, System_Collections_Generic_IEnumerator_iTween__TypeInfo, 0);
     }
     v25 = (*(__int64 (__fastcall **)(__int64, _QWORD))v24)(v16, *(_QWORD *)(v24 + 8));
     v26 = v25;
     if ( !v25 )
-      sub_1C32E7C(0);
+      sub_1C372B4(0);
     v27 = *(float *)(v25 + 72);
     if ( v27 > 0.0 )
     {
       *(float *)(v25 + 72) = v27 - (float)(UnityEngine_Time__get_time(0) - *(float *)(v25 + 104));
-      UnityEngine_MonoBehaviour__StopCoroutine_71210140(
+      UnityEngine_MonoBehaviour__StopCoroutine_71253252(
         (UnityEngine_MonoBehaviour_o *)v26,
-        (System_String_o *)StringLiteral_14621/*"TweenDelay"*/,
+        (System_String_o *)StringLiteral_14622/*"TweenDelay"*/,
         0);
     }
     *(_BYTE *)(v26 + 81) = 1;
@@ -19859,14 +19859,14 @@ LABEL_29:
   else
   {
 LABEL_39:
-    v31 = sub_1C83438(v16, System_IDisposable_TypeInfo, 0);
+    v31 = sub_1C87870(v16, System_IDisposable_TypeInfo, 0);
   }
   (*(void (__fastcall **)(__int64, _QWORD))v31)(v16, *(_QWORD *)(v31 + 8));
 }
 
 
 // local variable allocation has failed, the output may be wrong!
-void iTween__Pause_63259168(UnityEngine_GameObject_o *target, bool includechildren, const MethodInfo *method)
+void iTween__Pause_63302280(UnityEngine_GameObject_o *target, bool includechildren, const MethodInfo *method)
 {
   UnityEngine_Transform_o *transform; // x0
   System_Collections_IEnumerator_o *Enumerator; // x19
@@ -19889,13 +19889,13 @@ void iTween__Pause_63259168(UnityEngine_GameObject_o *target, bool includechildr
   int *v23; // x10
   __int64 v24; // x0
 
-  if ( (byte_4C3EA2A & 1) == 0 )
+  if ( (byte_4C49FAA & 1) == 0 )
   {
-    sub_1C32C20(&System_IDisposable_TypeInfo);
-    sub_1C32C20(&System_Collections_IEnumerator_TypeInfo);
-    sub_1C32C20(&UnityEngine_Transform_TypeInfo);
-    sub_1C32C20(&iTween_TypeInfo);
-    byte_4C3EA2A = 1;
+    sub_1C37058(&System_IDisposable_TypeInfo);
+    sub_1C37058(&System_Collections_IEnumerator_TypeInfo);
+    sub_1C37058(&UnityEngine_Transform_TypeInfo);
+    sub_1C37058(&iTween_TypeInfo);
+    byte_4C49FAA = 1;
   }
   if ( !iTween_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(iTween_TypeInfo);
@@ -19903,10 +19903,10 @@ void iTween__Pause_63259168(UnityEngine_GameObject_o *target, bool includechildr
   if ( includechildren )
   {
     if ( !target || (transform = UnityEngine_GameObject__get_transform(target, 0)) == 0 )
-      sub_1C32E7C(transform);
+      sub_1C372B4(transform);
     Enumerator = UnityEngine_Transform__GetEnumerator(transform, 0);
     if ( !Enumerator )
-      sub_1C32E7C(0);
+      sub_1C372B4(0);
     while ( 1 )
     {
       klass = Enumerator->klass;
@@ -19926,7 +19926,7 @@ void iTween__Pause_63259168(UnityEngine_GameObject_o *target, bool includechildr
       else
       {
 LABEL_13:
-        v10 = sub_1C83438(Enumerator, System_Collections_IEnumerator_TypeInfo, 0);
+        v10 = sub_1C87870(Enumerator, System_Collections_IEnumerator_TypeInfo, 0);
       }
       if ( ((*(__int64 (__fastcall **)(System_Collections_IEnumerator_o *, _QWORD))v10)(
               Enumerator,
@@ -19950,7 +19950,7 @@ LABEL_13:
       else
       {
 LABEL_20:
-        v14 = sub_1C83438(Enumerator, System_Collections_IEnumerator_TypeInfo, 1);
+        v14 = sub_1C87870(Enumerator, System_Collections_IEnumerator_TypeInfo, 1);
       }
       v15 = (UnityEngine_Component_o *)(*(__int64 (__fastcall **)(System_Collections_IEnumerator_o *, _QWORD))v14)(
                                          Enumerator,
@@ -19961,16 +19961,16 @@ LABEL_20:
       if ( v15->klass->_2.naturalAligment < (unsigned int)naturalAligment
         || (UnityEngine_Transform_c *)v15->klass->_2.typeHierarchy[naturalAligment - 1] != UnityEngine_Transform_TypeInfo )
       {
-        sub_1C3313C(v15);
+        sub_1C37574(v15);
 LABEL_38:
-        sub_1C32E7C(v15);
+        sub_1C372B4(v15);
       }
       gameObject = UnityEngine_Component__get_gameObject(v15, 0);
       if ( !iTween_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(iTween_TypeInfo);
-      iTween__Pause_63259168(gameObject, 1, v17);
+      iTween__Pause_63302280(gameObject, 1, v17);
     }
-    v19 = sub_1C32D5C(Enumerator);
+    v19 = sub_1C37194(Enumerator);
     if ( v19 )
     {
       v20 = *(_QWORD *)v19;
@@ -19991,7 +19991,7 @@ LABEL_38:
       else
       {
 LABEL_33:
-        v24 = sub_1C83438(v19, System_IDisposable_TypeInfo, 0);
+        v24 = sub_1C87870(v19, System_IDisposable_TypeInfo, 0);
       }
       (*(void (__fastcall **)(__int64, _QWORD))v24)(v21, *(_QWORD *)(v24 + 8));
     }
@@ -19999,7 +19999,7 @@ LABEL_33:
 }
 
 
-void iTween__Pause_63259988(UnityEngine_GameObject_o *target, System_String_o *type, const MethodInfo *method)
+void iTween__Pause_63303100(UnityEngine_GameObject_o *target, System_String_o *type, const MethodInfo *method)
 {
   UnityEngine_GameObject_o *v4; // x19
   System_Object_array *Components_object; // x0
@@ -20037,25 +20037,25 @@ void iTween__Pause_63259988(UnityEngine_GameObject_o *target, System_String_o *t
   __int64 v37; // x0
 
   v4 = target;
-  if ( (byte_4C3EA2B & 1) == 0 )
+  if ( (byte_4C49FAB & 1) == 0 )
   {
-    sub_1C32C20(&Method_System_Linq_Enumerable_Where_iTween___);
-    sub_1C32C20(&System_Func_iTween__bool__TypeInfo);
-    sub_1C32C20(&Method_UnityEngine_GameObject_GetComponents_iTween___);
-    sub_1C32C20(&System_IDisposable_TypeInfo);
-    sub_1C32C20(&System_Collections_Generic_IEnumerable_iTween__TypeInfo);
-    sub_1C32C20(&System_Collections_Generic_IEnumerator_iTween__TypeInfo);
-    sub_1C32C20(&System_Collections_IEnumerator_TypeInfo);
-    sub_1C32C20(&Method_iTween___c__Pause_b__214_0__);
-    sub_1C32C20(&iTween___c_TypeInfo);
-    target = (UnityEngine_GameObject_o *)sub_1C32C20(&StringLiteral_14621/*"TweenDelay"*/);
-    byte_4C3EA2B = 1;
+    sub_1C37058(&Method_System_Linq_Enumerable_Where_iTween___);
+    sub_1C37058(&System_Func_iTween__bool__TypeInfo);
+    sub_1C37058(&Method_UnityEngine_GameObject_GetComponents_iTween___);
+    sub_1C37058(&System_IDisposable_TypeInfo);
+    sub_1C37058(&System_Collections_Generic_IEnumerable_iTween__TypeInfo);
+    sub_1C37058(&System_Collections_Generic_IEnumerator_iTween__TypeInfo);
+    sub_1C37058(&System_Collections_IEnumerator_TypeInfo);
+    sub_1C37058(&Method_iTween___c__Pause_b__214_0__);
+    sub_1C37058(&iTween___c_TypeInfo);
+    target = (UnityEngine_GameObject_o *)sub_1C37058(&StringLiteral_14622/*"TweenDelay"*/);
+    byte_4C49FAB = 1;
   }
   if ( !v4 )
     goto LABEL_50;
   Components_object = UnityEngine_GameObject__GetComponents_object_(
                         v4,
-                        (const MethodInfo_31352CC *)Method_UnityEngine_GameObject_GetComponents_iTween___);
+                        (const MethodInfo_313FB34 *)Method_UnityEngine_GameObject_GetComponents_iTween___);
   v6 = iTween___c_TypeInfo;
   v7 = (System_Collections_Generic_IEnumerable_TSource__o *)Components_object;
   if ( !iTween___c_TypeInfo->_2.cctor_finished )
@@ -20072,19 +20072,19 @@ void iTween__Pause_63259988(UnityEngine_GameObject_o *target, System_String_o *t
       v6 = iTween___c_TypeInfo;
     }
     v9 = (Il2CppObject *)v6->static_fields->__9;
-    _9__214_0 = (System_Func_object__bool__o *)sub_1C32E6C(System_Func_iTween__bool__TypeInfo);
+    _9__214_0 = (System_Func_object__bool__o *)sub_1C372A4(System_Func_iTween__bool__TypeInfo);
     System_Func_object__bool____ctor(_9__214_0, v9, Method_iTween___c__Pause_b__214_0__, 0);
     static_fields = iTween___c_TypeInfo->static_fields;
     static_fields->__9__214_0 = (struct System_Func_iTween__bool__o *)_9__214_0;
-    sub_1C32BC4((CGThumbnailListItem_o *)&static_fields->__9__214_0, (int32_t)_9__214_0, v11, v12);
+    sub_1C36FFC((CGThumbnailListItem_o *)&static_fields->__9__214_0, (int32_t)_9__214_0, v11, v12);
   }
   target = (UnityEngine_GameObject_o *)System_Linq_Enumerable__Where_object_(
                                          v7,
                                          (System_Func_TSource__bool__o *)_9__214_0,
-                                         (const MethodInfo_3123BA8 *)Method_System_Linq_Enumerable_Where_iTween___);
+                                         (const MethodInfo_312E410 *)Method_System_Linq_Enumerable_Where_iTween___);
   if ( !target )
 LABEL_50:
-    sub_1C32E7C(target);
+    sub_1C372B4(target);
   klass = target->klass;
   v14 = target;
   v15 = *(unsigned __int16 *)&target->klass->_2.rank;
@@ -20103,11 +20103,11 @@ LABEL_50:
   else
   {
 LABEL_15:
-    v17 = sub_1C83438(target, System_Collections_Generic_IEnumerable_iTween__TypeInfo, 0);
+    v17 = sub_1C87870(target, System_Collections_Generic_IEnumerable_iTween__TypeInfo, 0);
   }
   v18 = (*(__int64 (__fastcall **)(UnityEngine_GameObject_o *, _QWORD))v17)(v14, *(_QWORD *)(v17 + 8));
   if ( !v18 )
-    sub_1C32E7C(0);
+    sub_1C372B4(0);
   while ( 1 )
   {
     v19 = *(_QWORD *)v18;
@@ -20127,7 +20127,7 @@ LABEL_15:
     else
     {
 LABEL_22:
-      v22 = sub_1C83438(v18, System_Collections_IEnumerator_TypeInfo, 0);
+      v22 = sub_1C87870(v18, System_Collections_IEnumerator_TypeInfo, 0);
     }
     if ( ((*(__int64 (__fastcall **)(__int64, _QWORD))v22)(v18, *(_QWORD *)(v22 + 8)) & 1) == 0 )
       break;
@@ -20148,20 +20148,20 @@ LABEL_22:
     else
     {
 LABEL_29:
-      v26 = sub_1C83438(v18, System_Collections_Generic_IEnumerator_iTween__TypeInfo, 0);
+      v26 = sub_1C87870(v18, System_Collections_Generic_IEnumerator_iTween__TypeInfo, 0);
     }
     v27 = (*(__int64 (__fastcall **)(__int64, _QWORD))v26)(v18, *(_QWORD *)(v26 + 8));
     v28 = v27;
     if ( !v27 )
-      sub_1C32E7C(0);
-    v29 = System_String__Concat_63518544(*(System_String_o **)(v27 + 48), *(System_String_o **)(v27 + 56), 0);
+      sub_1C372B4(0);
+    v29 = System_String__Concat_63561656(*(System_String_o **)(v27 + 48), *(System_String_o **)(v27 + 56), 0);
     if ( !type )
-      sub_1C32E7C(v29);
+      sub_1C372B4(v29);
     if ( !v29 )
-      sub_1C32E7C(0);
-    v30 = System_String__Substring_63564468(v29, 0, type->fields._stringLength, 0);
+      sub_1C372B4(0);
+    v30 = System_String__Substring_63607580(v29, 0, type->fields._stringLength, 0);
     if ( !v30 )
-      sub_1C32E7C(0);
+      sub_1C372B4(0);
     v31 = System_String__ToLower(v30, 0);
     v32 = System_String__ToLower(type, 0);
     if ( System_String__op_Equality(v31, v32, 0) )
@@ -20170,9 +20170,9 @@ LABEL_29:
       if ( v33 > 0.0 )
       {
         *(float *)(v28 + 72) = v33 - (float)(UnityEngine_Time__get_time(0) - *(float *)(v28 + 104));
-        UnityEngine_MonoBehaviour__StopCoroutine_71210140(
+        UnityEngine_MonoBehaviour__StopCoroutine_71253252(
           (UnityEngine_MonoBehaviour_o *)v28,
-          (System_String_o *)StringLiteral_14621/*"TweenDelay"*/,
+          (System_String_o *)StringLiteral_14622/*"TweenDelay"*/,
           0);
       }
       *(_BYTE *)(v28 + 81) = 1;
@@ -20196,13 +20196,13 @@ LABEL_29:
   else
   {
 LABEL_43:
-    v37 = sub_1C83438(v18, System_IDisposable_TypeInfo, 0);
+    v37 = sub_1C87870(v18, System_IDisposable_TypeInfo, 0);
   }
   (*(void (__fastcall **)(__int64, _QWORD))v37)(v18, *(_QWORD *)(v37 + 8));
 }
 
 
-void iTween__Pause_63261220(
+void iTween__Pause_63304332(
         UnityEngine_GameObject_o *target,
         System_String_o *type,
         bool includechildren,
@@ -20263,27 +20263,27 @@ void iTween__Pause_63261220(
   __int64 v58; // x0
 
   v6 = target;
-  if ( (byte_4C3EA2C & 1) == 0 )
+  if ( (byte_4C49FAC & 1) == 0 )
   {
-    sub_1C32C20(&Method_System_Linq_Enumerable_Where_iTween___);
-    sub_1C32C20(&System_Func_iTween__bool__TypeInfo);
-    sub_1C32C20(&Method_UnityEngine_GameObject_GetComponents_iTween___);
-    sub_1C32C20(&System_IDisposable_TypeInfo);
-    sub_1C32C20(&System_Collections_Generic_IEnumerable_iTween__TypeInfo);
-    sub_1C32C20(&System_Collections_Generic_IEnumerator_iTween__TypeInfo);
-    sub_1C32C20(&System_Collections_IEnumerator_TypeInfo);
-    sub_1C32C20(&UnityEngine_Transform_TypeInfo);
-    sub_1C32C20(&Method_iTween___c__Pause_b__215_0__);
-    sub_1C32C20(&iTween___c_TypeInfo);
-    sub_1C32C20(&StringLiteral_14621/*"TweenDelay"*/);
-    target = (UnityEngine_GameObject_o *)sub_1C32C20(&iTween_TypeInfo);
-    byte_4C3EA2C = 1;
+    sub_1C37058(&Method_System_Linq_Enumerable_Where_iTween___);
+    sub_1C37058(&System_Func_iTween__bool__TypeInfo);
+    sub_1C37058(&Method_UnityEngine_GameObject_GetComponents_iTween___);
+    sub_1C37058(&System_IDisposable_TypeInfo);
+    sub_1C37058(&System_Collections_Generic_IEnumerable_iTween__TypeInfo);
+    sub_1C37058(&System_Collections_Generic_IEnumerator_iTween__TypeInfo);
+    sub_1C37058(&System_Collections_IEnumerator_TypeInfo);
+    sub_1C37058(&UnityEngine_Transform_TypeInfo);
+    sub_1C37058(&Method_iTween___c__Pause_b__215_0__);
+    sub_1C37058(&iTween___c_TypeInfo);
+    sub_1C37058(&StringLiteral_14622/*"TweenDelay"*/);
+    target = (UnityEngine_GameObject_o *)sub_1C37058(&iTween_TypeInfo);
+    byte_4C49FAC = 1;
   }
   if ( !v6 )
     goto LABEL_82;
   Components_object = UnityEngine_GameObject__GetComponents_object_(
                         v6,
-                        (const MethodInfo_31352CC *)Method_UnityEngine_GameObject_GetComponents_iTween___);
+                        (const MethodInfo_313FB34 *)Method_UnityEngine_GameObject_GetComponents_iTween___);
   v8 = iTween___c_TypeInfo;
   v9 = (System_Collections_Generic_IEnumerable_TSource__o *)Components_object;
   if ( !iTween___c_TypeInfo->_2.cctor_finished )
@@ -20300,16 +20300,16 @@ void iTween__Pause_63261220(
       v8 = iTween___c_TypeInfo;
     }
     v11 = (Il2CppObject *)v8->static_fields->__9;
-    _9__215_0 = (System_Func_object__bool__o *)sub_1C32E6C(System_Func_iTween__bool__TypeInfo);
+    _9__215_0 = (System_Func_object__bool__o *)sub_1C372A4(System_Func_iTween__bool__TypeInfo);
     System_Func_object__bool____ctor(_9__215_0, v11, Method_iTween___c__Pause_b__215_0__, 0);
     static_fields = iTween___c_TypeInfo->static_fields;
     static_fields->__9__215_0 = (struct System_Func_iTween__bool__o *)_9__215_0;
-    sub_1C32BC4((CGThumbnailListItem_o *)&static_fields->__9__215_0, (int32_t)_9__215_0, v13, v14);
+    sub_1C36FFC((CGThumbnailListItem_o *)&static_fields->__9__215_0, (int32_t)_9__215_0, v13, v14);
   }
   target = (UnityEngine_GameObject_o *)System_Linq_Enumerable__Where_object_(
                                          v9,
                                          (System_Func_TSource__bool__o *)_9__215_0,
-                                         (const MethodInfo_3123BA8 *)Method_System_Linq_Enumerable_Where_iTween___);
+                                         (const MethodInfo_312E410 *)Method_System_Linq_Enumerable_Where_iTween___);
   if ( !target )
     goto LABEL_82;
   klass = target->klass;
@@ -20330,11 +20330,11 @@ void iTween__Pause_63261220(
   else
   {
 LABEL_15:
-    v19 = sub_1C83438(target, System_Collections_Generic_IEnumerable_iTween__TypeInfo, 0);
+    v19 = sub_1C87870(target, System_Collections_Generic_IEnumerable_iTween__TypeInfo, 0);
   }
   v20 = (*(__int64 (__fastcall **)(UnityEngine_GameObject_o *, _QWORD))v19)(v16, *(_QWORD *)(v19 + 8));
   if ( !v20 )
-    sub_1C32E7C(0);
+    sub_1C372B4(0);
   while ( 1 )
   {
     v21 = *(_QWORD *)v20;
@@ -20354,7 +20354,7 @@ LABEL_15:
     else
     {
 LABEL_22:
-      v24 = sub_1C83438(v20, System_Collections_IEnumerator_TypeInfo, 0);
+      v24 = sub_1C87870(v20, System_Collections_IEnumerator_TypeInfo, 0);
     }
     if ( ((*(__int64 (__fastcall **)(__int64, _QWORD))v24)(v20, *(_QWORD *)(v24 + 8)) & 1) == 0 )
       break;
@@ -20375,20 +20375,20 @@ LABEL_22:
     else
     {
 LABEL_29:
-      v28 = sub_1C83438(v20, System_Collections_Generic_IEnumerator_iTween__TypeInfo, 0);
+      v28 = sub_1C87870(v20, System_Collections_Generic_IEnumerator_iTween__TypeInfo, 0);
     }
     v29 = (*(__int64 (__fastcall **)(__int64, _QWORD))v28)(v20, *(_QWORD *)(v28 + 8));
     v30 = v29;
     if ( !v29 )
-      sub_1C32E7C(0);
-    v31 = System_String__Concat_63518544(*(System_String_o **)(v29 + 48), *(System_String_o **)(v29 + 56), 0);
+      sub_1C372B4(0);
+    v31 = System_String__Concat_63561656(*(System_String_o **)(v29 + 48), *(System_String_o **)(v29 + 56), 0);
     if ( !type )
-      sub_1C32E7C(v31);
+      sub_1C372B4(v31);
     if ( !v31 )
-      sub_1C32E7C(0);
-    v32 = System_String__Substring_63564468(v31, 0, type->fields._stringLength, 0);
+      sub_1C372B4(0);
+    v32 = System_String__Substring_63607580(v31, 0, type->fields._stringLength, 0);
     if ( !v32 )
-      sub_1C32E7C(0);
+      sub_1C372B4(0);
     v33 = System_String__ToLower(v32, 0);
     v34 = System_String__ToLower(type, 0);
     if ( System_String__op_Equality(v33, v34, 0) )
@@ -20397,9 +20397,9 @@ LABEL_29:
       if ( v35 > 0.0 )
       {
         *(float *)(v30 + 72) = v35 - (float)(UnityEngine_Time__get_time(0) - *(float *)(v30 + 104));
-        UnityEngine_MonoBehaviour__StopCoroutine_71210140(
+        UnityEngine_MonoBehaviour__StopCoroutine_71253252(
           (UnityEngine_MonoBehaviour_o *)v30,
-          (System_String_o *)StringLiteral_14621/*"TweenDelay"*/,
+          (System_String_o *)StringLiteral_14622/*"TweenDelay"*/,
           0);
       }
       *(_BYTE *)(v30 + 81) = 1;
@@ -20423,7 +20423,7 @@ LABEL_29:
   else
   {
 LABEL_43:
-    v39 = sub_1C83438(v20, System_IDisposable_TypeInfo, 0);
+    v39 = sub_1C87870(v20, System_IDisposable_TypeInfo, 0);
   }
   (*(void (__fastcall **)(__int64, _QWORD))v39)(v20, *(_QWORD *)(v39 + 8));
   if ( includechildren )
@@ -20433,7 +20433,7 @@ LABEL_43:
     {
       Enumerator = UnityEngine_Transform__GetEnumerator((UnityEngine_Transform_o *)target, 0);
       if ( !Enumerator )
-        sub_1C32E7C(0);
+        sub_1C372B4(0);
       while ( 1 )
       {
         v41 = Enumerator->klass;
@@ -20453,7 +20453,7 @@ LABEL_43:
         else
         {
 LABEL_52:
-          v44 = sub_1C83438(Enumerator, System_Collections_IEnumerator_TypeInfo, 0);
+          v44 = sub_1C87870(Enumerator, System_Collections_IEnumerator_TypeInfo, 0);
         }
         if ( ((*(__int64 (__fastcall **)(System_Collections_IEnumerator_o *, _QWORD))v44)(
                 Enumerator,
@@ -20477,7 +20477,7 @@ LABEL_52:
         else
         {
 LABEL_59:
-          v48 = sub_1C83438(Enumerator, System_Collections_IEnumerator_TypeInfo, 1);
+          v48 = sub_1C87870(Enumerator, System_Collections_IEnumerator_TypeInfo, 1);
         }
         v49 = (UnityEngine_Component_o *)(*(__int64 (__fastcall **)(System_Collections_IEnumerator_o *, _QWORD))v48)(
                                            Enumerator,
@@ -20488,16 +20488,16 @@ LABEL_59:
         if ( v49->klass->_2.naturalAligment < (unsigned int)naturalAligment
           || (UnityEngine_Transform_c *)v49->klass->_2.typeHierarchy[naturalAligment - 1] != UnityEngine_Transform_TypeInfo )
         {
-          sub_1C3313C(v49);
+          sub_1C37574(v49);
 LABEL_81:
-          sub_1C32E7C(v49);
+          sub_1C372B4(v49);
         }
         gameObject = UnityEngine_Component__get_gameObject(v49, 0);
         if ( !iTween_TypeInfo->_2.cctor_finished )
           j_il2cpp_runtime_class_init_0(iTween_TypeInfo);
-        iTween__Pause_63261220(gameObject, type, 1, v51);
+        iTween__Pause_63304332(gameObject, type, 1, v51);
       }
-      v53 = sub_1C32D5C(Enumerator);
+      v53 = sub_1C37194(Enumerator);
       if ( v53 )
       {
         v54 = *(_QWORD *)v53;
@@ -20518,19 +20518,19 @@ LABEL_81:
         else
         {
 LABEL_72:
-          v58 = sub_1C83438(v53, System_IDisposable_TypeInfo, 0);
+          v58 = sub_1C87870(v53, System_IDisposable_TypeInfo, 0);
         }
         (*(void (__fastcall **)(__int64, _QWORD))v58)(v55, *(_QWORD *)(v58 + 8));
       }
       return;
     }
 LABEL_82:
-    sub_1C32E7C(target);
+    sub_1C372B4(target);
   }
 }
 
 
-void iTween__Pause_63263168(const MethodInfo *method)
+void iTween__Pause_63306280(const MethodInfo *method)
 {
   int32_t i; // w19
   void *Item; // x0
@@ -20540,14 +20540,14 @@ void iTween__Pause_63263168(const MethodInfo *method)
   System_String_o *v6; // x0
   const MethodInfo *v7; // x1
 
-  if ( (byte_4C3EA2D & 1) == 0 )
+  if ( (byte_4C49FAD & 1) == 0 )
   {
-    sub_1C32C20(&UnityEngine_GameObject_TypeInfo);
-    sub_1C32C20(&Method_System_Collections_Generic_List_Hashtable__get_Count__);
-    sub_1C32C20(&Method_System_Collections_Generic_List_Hashtable__get_Item__);
-    sub_1C32C20(&StringLiteral_23988/*"target"*/);
-    sub_1C32C20(&iTween_TypeInfo);
-    byte_4C3EA2D = 1;
+    sub_1C37058(&UnityEngine_GameObject_TypeInfo);
+    sub_1C37058(&Method_System_Collections_Generic_List_Hashtable__get_Count__);
+    sub_1C37058(&Method_System_Collections_Generic_List_Hashtable__get_Item__);
+    sub_1C37058(&StringLiteral_23992/*"target"*/);
+    sub_1C37058(&iTween_TypeInfo);
+    byte_4C49FAD = 1;
   }
   for ( i = 0; ; ++i )
   {
@@ -20568,14 +20568,14 @@ void iTween__Pause_63263168(const MethodInfo *method)
       || (Item = System_Collections_Generic_List_object___get_Item(
                    tweens,
                    i,
-                   (const MethodInfo_37984EC *)Method_System_Collections_Generic_List_Hashtable__get_Item__)) == 0 )
+                   (const MethodInfo_37A2D54 *)Method_System_Collections_Generic_List_Hashtable__get_Item__)) == 0 )
     {
 LABEL_15:
-      sub_1C32E7C(Item);
+      sub_1C372B4(Item);
     }
     v4 = (UnityEngine_GameObject_o *)(*(__int64 (__fastcall **)(void *, __int64, _QWORD))(*(_QWORD *)Item + 760LL))(
                                        Item,
-                                       StringLiteral_23988/*"target"*/,
+                                       StringLiteral_23992/*"target"*/,
                                        *(_QWORD *)(*(_QWORD *)Item + 768LL));
     if ( v4 )
     {
@@ -20585,12 +20585,12 @@ LABEL_15:
     }
     iTween__Pause(v4, (const MethodInfo *)v5);
   }
-  sub_1C3313C(v4);
-  iTween__Pause_63263464(v6, v7);
+  sub_1C37574(v4);
+  iTween__Pause_63306576(v6, v7);
 }
 
 
-void iTween__Pause_63263464(System_String_o *type, const MethodInfo *method)
+void iTween__Pause_63306576(System_String_o *type, const MethodInfo *method)
 {
   System_Collections_ArrayList_o *v3; // x20
   int32_t i; // w21
@@ -20603,17 +20603,17 @@ void iTween__Pause_63263464(System_String_o *type, const MethodInfo *method)
   const MethodInfo *v11; // x2
   const MethodInfo *v12; // x0
 
-  if ( (byte_4C3EA2E & 1) == 0 )
+  if ( (byte_4C49FAE & 1) == 0 )
   {
-    sub_1C32C20(&System_Collections_ArrayList_TypeInfo);
-    sub_1C32C20(&UnityEngine_GameObject_TypeInfo);
-    sub_1C32C20(&Method_System_Collections_Generic_List_Hashtable__get_Count__);
-    sub_1C32C20(&Method_System_Collections_Generic_List_Hashtable__get_Item__);
-    sub_1C32C20(&StringLiteral_23988/*"target"*/);
-    sub_1C32C20(&iTween_TypeInfo);
-    byte_4C3EA2E = 1;
+    sub_1C37058(&System_Collections_ArrayList_TypeInfo);
+    sub_1C37058(&UnityEngine_GameObject_TypeInfo);
+    sub_1C37058(&Method_System_Collections_Generic_List_Hashtable__get_Count__);
+    sub_1C37058(&Method_System_Collections_Generic_List_Hashtable__get_Item__);
+    sub_1C37058(&StringLiteral_23992/*"target"*/);
+    sub_1C37058(&iTween_TypeInfo);
+    byte_4C49FAE = 1;
   }
-  v3 = (System_Collections_ArrayList_o *)sub_1C32E6C(System_Collections_ArrayList_TypeInfo);
+  v3 = (System_Collections_ArrayList_o *)sub_1C372A4(System_Collections_ArrayList_TypeInfo);
   System_Collections_ArrayList___ctor(v3, 0);
   for ( i = 0; ; ++i )
   {
@@ -20638,18 +20638,18 @@ void iTween__Pause_63263464(System_String_o *type, const MethodInfo *method)
     Item = System_Collections_Generic_List_object___get_Item(
              tweens,
              i,
-             (const MethodInfo_37984EC *)Method_System_Collections_Generic_List_Hashtable__get_Item__);
+             (const MethodInfo_37A2D54 *)Method_System_Collections_Generic_List_Hashtable__get_Item__);
     if ( !Item )
       goto LABEL_25;
     Item = (void *)(*(__int64 (__fastcall **)(void *, __int64, _QWORD))(*(_QWORD *)Item + 760LL))(
                      Item,
-                     StringLiteral_23988/*"target"*/,
+                     StringLiteral_23992/*"target"*/,
                      *(_QWORD *)(*(_QWORD *)Item + 768LL));
     v7 = (UnityEngine_GameObject_o *)Item;
     if ( Item && *(UnityEngine_GameObject_c **)Item != UnityEngine_GameObject_TypeInfo )
     {
 LABEL_26:
-      sub_1C3313C(v7);
+      sub_1C37574(v7);
       iTween__Count(v12);
       return;
     }
@@ -20666,7 +20666,7 @@ LABEL_26:
   }
   if ( !v3 )
 LABEL_25:
-    sub_1C32E7C(Item);
+    sub_1C372B4(Item);
   if ( ((int (__fastcall *)(System_Collections_ArrayList_o *, const MethodInfo *))v3->klass->vtable._22_get_Count.methodPtr)(
          v3,
          v3->klass->vtable._22_get_Count.method) >= 1 )
@@ -20697,7 +20697,7 @@ LABEL_22:
             goto LABEL_26;
         }
       }
-      iTween__Pause_63259988(v7, type, v11);
+      iTween__Pause_63303100(v7, type, v11);
     }
   }
 }
@@ -20716,15 +20716,15 @@ UnityEngine_Vector3_o iTween__PointOnPath(UnityEngine_Transform_array *path, flo
   UnityEngine_Vector3_o position; // 0:s0.4,4:s1.4,8:s2.4
 
   v4 = path;
-  if ( (byte_4C3EA09 & 1) == 0 )
+  if ( (byte_4C49F89 & 1) == 0 )
   {
-    sub_1C32C20(&UnityEngine_Vector3___TypeInfo);
-    path = (UnityEngine_Transform_array *)sub_1C32C20(&iTween_TypeInfo);
-    byte_4C3EA09 = 1;
+    sub_1C37058(&UnityEngine_Vector3___TypeInfo);
+    path = (UnityEngine_Transform_array *)sub_1C37058(&iTween_TypeInfo);
+    byte_4C49F89 = 1;
   }
   if ( !v4 )
     goto LABEL_14;
-  path = (UnityEngine_Transform_array *)sub_1C32CC8(UnityEngine_Vector3___TypeInfo, LODWORD(v4->max_length));
+  path = (UnityEngine_Transform_array *)sub_1C37100(UnityEngine_Vector3___TypeInfo, LODWORD(v4->max_length));
   max_length = v4->max_length;
   v7 = path;
   if ( max_length >= 1 )
@@ -20735,7 +20735,7 @@ UnityEngine_Vector3_o iTween__PointOnPath(UnityEngine_Transform_array *path, flo
     {
       if ( (unsigned int)v8 >= max_length )
 LABEL_15:
-        sub_1C32E84(path);
+        sub_1C372BC(path);
       path = (UnityEngine_Transform_array *)v4->m_Items[v8];
       if ( !path )
         break;
@@ -20751,7 +20751,7 @@ LABEL_15:
         goto LABEL_11;
     }
 LABEL_14:
-    sub_1C32E7C(path);
+    sub_1C372B4(path);
   }
 LABEL_11:
   if ( !iTween_TypeInfo->_2.cctor_finished )
@@ -20761,7 +20761,7 @@ LABEL_11:
 }
 
 
-UnityEngine_Vector3_o iTween__PointOnPath_63248488(
+UnityEngine_Vector3_o iTween__PointOnPath_63291600(
         UnityEngine_Vector3_array *path,
         float percent,
         const MethodInfo *method)
@@ -20769,10 +20769,10 @@ UnityEngine_Vector3_o iTween__PointOnPath_63248488(
   UnityEngine_Vector3_array *v5; // x0
   const MethodInfo *v6; // x1
 
-  if ( (byte_4C3EA16 & 1) == 0 )
+  if ( (byte_4C49F96 & 1) == 0 )
   {
-    sub_1C32C20(&iTween_TypeInfo);
-    byte_4C3EA16 = 1;
+    sub_1C37058(&iTween_TypeInfo);
+    byte_4C49F96 = 1;
   }
   if ( !iTween_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(iTween_TypeInfo);
@@ -20827,27 +20827,27 @@ void iTween__PunchPosition(
   z = amount.fields.z;
   y = amount.fields.y;
   x = amount.fields.x;
-  if ( (byte_4C3E9C0 & 1) == 0 )
+  if ( (byte_4C49F40 & 1) == 0 )
   {
-    sub_1C32C20(&object___TypeInfo);
-    sub_1C32C20(&float_TypeInfo);
-    sub_1C32C20(&UnityEngine_Vector3_TypeInfo);
-    sub_1C32C20(&StringLiteral_24067/*"time"*/);
-    sub_1C32C20(&StringLiteral_16745/*"amount"*/);
-    sub_1C32C20(&iTween_TypeInfo);
-    byte_4C3E9C0 = 1;
+    sub_1C37058(&object___TypeInfo);
+    sub_1C37058(&float_TypeInfo);
+    sub_1C37058(&UnityEngine_Vector3_TypeInfo);
+    sub_1C37058(&StringLiteral_24071/*"time"*/);
+    sub_1C37058(&StringLiteral_16747/*"amount"*/);
+    sub_1C37058(&iTween_TypeInfo);
+    byte_4C49F40 = 1;
   }
-  v9 = sub_1C32CC8(object___TypeInfo, 4);
+  v9 = sub_1C37100(object___TypeInfo, 4);
   if ( !v9 )
-    sub_1C32E7C(0);
+    sub_1C372B4(0);
   v12 = v9;
-  v13 = StringLiteral_16745/*"amount"*/;
-  if ( StringLiteral_16745/*"amount"*/ )
+  v13 = StringLiteral_16747/*"amount"*/;
+  if ( StringLiteral_16747/*"amount"*/ )
   {
-    v13 = sub_1C32D5C(StringLiteral_16745/*"amount"*/);
+    v13 = sub_1C37194(StringLiteral_16747/*"amount"*/);
     if ( !v13 )
       goto LABEL_24;
-    v14 = StringLiteral_16745/*"amount"*/;
+    v14 = StringLiteral_16747/*"amount"*/;
   }
   else
   {
@@ -20856,7 +20856,7 @@ void iTween__PunchPosition(
   if ( !*(_DWORD *)(v12 + 24) )
     goto LABEL_23;
   *(_QWORD *)(v12 + 32) = v14;
-  sub_1C32BC4((CGThumbnailListItem_o *)(v12 + 32), v14, v10, v11);
+  sub_1C36FFC((CGThumbnailListItem_o *)(v12 + 32), v14, v10, v11);
   *(float *)v40 = x;
   *(float *)&v40[1] = y;
   *(float *)&v40[2] = z;
@@ -20864,21 +20864,21 @@ void iTween__PunchPosition(
   v23 = v13;
   if ( v13 )
   {
-    v13 = sub_1C32D5C(v13);
+    v13 = sub_1C37194(v13);
     if ( !v13 )
       goto LABEL_24;
   }
   if ( *(_DWORD *)(v12 + 24) <= 1u )
     goto LABEL_23;
   *(_QWORD *)(v12 + 40) = v23;
-  sub_1C32BC4((CGThumbnailListItem_o *)(v12 + 40), v23, v21, v22);
-  v13 = StringLiteral_24067/*"time"*/;
-  if ( StringLiteral_24067/*"time"*/ )
+  sub_1C36FFC((CGThumbnailListItem_o *)(v12 + 40), v23, v21, v22);
+  v13 = StringLiteral_24071/*"time"*/;
+  if ( StringLiteral_24071/*"time"*/ )
   {
-    v13 = sub_1C32D5C(StringLiteral_24067/*"time"*/);
+    v13 = sub_1C37194(StringLiteral_24071/*"time"*/);
     if ( !v13 )
       goto LABEL_24;
-    v26 = StringLiteral_24067/*"time"*/;
+    v26 = StringLiteral_24071/*"time"*/;
   }
   else
   {
@@ -20887,33 +20887,33 @@ void iTween__PunchPosition(
   if ( *(_DWORD *)(v12 + 24) <= 2u )
     goto LABEL_23;
   *(_QWORD *)(v12 + 48) = v26;
-  sub_1C32BC4((CGThumbnailListItem_o *)(v12 + 48), v26, v24, v25);
+  sub_1C36FFC((CGThumbnailListItem_o *)(v12 + 48), v26, v24, v25);
   v41 = time;
   v13 = j_il2cpp_value_box_0(float_TypeInfo, &v41, v27, v28, v29, v30, v31, v32);
   v35 = v13;
   if ( v13 )
   {
-    v13 = sub_1C32D5C(v13);
+    v13 = sub_1C37194(v13);
     if ( !v13 )
     {
 LABEL_24:
-      v39 = sub_1C32EA0(v13);
-      sub_1C32D48(v39, 0);
+      v39 = sub_1C372D8(v13);
+      sub_1C37180(v39, 0);
     }
   }
   if ( *(_DWORD *)(v12 + 24) <= 3u )
 LABEL_23:
-    sub_1C32E84(v13);
+    sub_1C372BC(v13);
   *(_QWORD *)(v12 + 56) = v35;
-  sub_1C32BC4((CGThumbnailListItem_o *)(v12 + 56), v35, v33, v34);
+  sub_1C36FFC((CGThumbnailListItem_o *)(v12 + 56), v35, v33, v34);
   if ( !iTween_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(iTween_TypeInfo);
   v37 = iTween__Hash((System_Object_array *)v12, v36);
-  iTween__PunchPosition_63174128(target, v37, v38);
+  iTween__PunchPosition_63217240(target, v37, v38);
 }
 
 
-void iTween__PunchPosition_63174128(
+void iTween__PunchPosition_63217240(
         UnityEngine_GameObject_o *target,
         System_Collections_Hashtable_o *args,
         const MethodInfo *method)
@@ -20930,38 +20930,38 @@ void iTween__PunchPosition_63174128(
   const MethodInfo *v14; // x2
   int v15; // [xsp+Ch] [xbp-34h] BYREF
 
-  if ( (byte_4C3E9C1 & 1) == 0 )
+  if ( (byte_4C49F41 & 1) == 0 )
   {
-    sub_1C32C20(&iTween_EaseType_TypeInfo);
-    sub_1C32C20(&StringLiteral_18751/*"easetype"*/);
-    sub_1C32C20(&StringLiteral_21560/*"method"*/);
-    sub_1C32C20(&StringLiteral_22736/*"position"*/);
-    sub_1C32C20(&StringLiteral_22815/*"punch"*/);
-    sub_1C32C20(&StringLiteral_24241/*"type"*/);
-    sub_1C32C20(&iTween_TypeInfo);
-    byte_4C3E9C1 = 1;
+    sub_1C37058(&iTween_EaseType_TypeInfo);
+    sub_1C37058(&StringLiteral_18754/*"easetype"*/);
+    sub_1C37058(&StringLiteral_21563/*"method"*/);
+    sub_1C37058(&StringLiteral_22740/*"position"*/);
+    sub_1C37058(&StringLiteral_22819/*"punch"*/);
+    sub_1C37058(&StringLiteral_24245/*"type"*/);
+    sub_1C37058(&iTween_TypeInfo);
+    byte_4C49F41 = 1;
   }
   if ( !iTween_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(iTween_TypeInfo);
   v5 = iTween__CleanArgs(args, (const MethodInfo *)args);
   if ( !v5 )
-    sub_1C32E7C(0);
+    sub_1C372B4(0);
   v6 = v5;
   ((void (__fastcall *)(System_Collections_Hashtable_o *, __int64, __int64, const MethodInfo *))v5->klass->vtable._29_set_Item.methodPtr)(
     v5,
-    StringLiteral_24241/*"type"*/,
-    StringLiteral_22815/*"punch"*/,
+    StringLiteral_24245/*"type"*/,
+    StringLiteral_22819/*"punch"*/,
     v5->klass->vtable._29_set_Item.method);
   ((void (__fastcall *)(System_Collections_Hashtable_o *, __int64, __int64, const MethodInfo *))v6->klass->vtable._29_set_Item.methodPtr)(
     v6,
-    StringLiteral_21560/*"method"*/,
-    StringLiteral_22736/*"position"*/,
+    StringLiteral_21563/*"method"*/,
+    StringLiteral_22740/*"position"*/,
     v6->klass->vtable._29_set_Item.method);
   v15 = 32;
   v13 = j_il2cpp_value_box_0(iTween_EaseType_TypeInfo, &v15, v7, v8, v9, v10, v11, v12);
   ((void (__fastcall *)(System_Collections_Hashtable_o *, __int64, __int64, const MethodInfo *))v6->klass->vtable._29_set_Item.methodPtr)(
     v6,
-    StringLiteral_18751/*"easetype"*/,
+    StringLiteral_18754/*"easetype"*/,
     v13,
     v6->klass->vtable._29_set_Item.method);
   iTween__Launch(target, v6, v14);
@@ -21014,27 +21014,27 @@ void iTween__PunchRotation(
   z = amount.fields.z;
   y = amount.fields.y;
   x = amount.fields.x;
-  if ( (byte_4C3E9C2 & 1) == 0 )
+  if ( (byte_4C49F42 & 1) == 0 )
   {
-    sub_1C32C20(&object___TypeInfo);
-    sub_1C32C20(&float_TypeInfo);
-    sub_1C32C20(&UnityEngine_Vector3_TypeInfo);
-    sub_1C32C20(&StringLiteral_24067/*"time"*/);
-    sub_1C32C20(&StringLiteral_16745/*"amount"*/);
-    sub_1C32C20(&iTween_TypeInfo);
-    byte_4C3E9C2 = 1;
+    sub_1C37058(&object___TypeInfo);
+    sub_1C37058(&float_TypeInfo);
+    sub_1C37058(&UnityEngine_Vector3_TypeInfo);
+    sub_1C37058(&StringLiteral_24071/*"time"*/);
+    sub_1C37058(&StringLiteral_16747/*"amount"*/);
+    sub_1C37058(&iTween_TypeInfo);
+    byte_4C49F42 = 1;
   }
-  v9 = sub_1C32CC8(object___TypeInfo, 4);
+  v9 = sub_1C37100(object___TypeInfo, 4);
   if ( !v9 )
-    sub_1C32E7C(0);
+    sub_1C372B4(0);
   v12 = v9;
-  v13 = StringLiteral_16745/*"amount"*/;
-  if ( StringLiteral_16745/*"amount"*/ )
+  v13 = StringLiteral_16747/*"amount"*/;
+  if ( StringLiteral_16747/*"amount"*/ )
   {
-    v13 = sub_1C32D5C(StringLiteral_16745/*"amount"*/);
+    v13 = sub_1C37194(StringLiteral_16747/*"amount"*/);
     if ( !v13 )
       goto LABEL_24;
-    v14 = StringLiteral_16745/*"amount"*/;
+    v14 = StringLiteral_16747/*"amount"*/;
   }
   else
   {
@@ -21043,7 +21043,7 @@ void iTween__PunchRotation(
   if ( !*(_DWORD *)(v12 + 24) )
     goto LABEL_23;
   *(_QWORD *)(v12 + 32) = v14;
-  sub_1C32BC4((CGThumbnailListItem_o *)(v12 + 32), v14, v10, v11);
+  sub_1C36FFC((CGThumbnailListItem_o *)(v12 + 32), v14, v10, v11);
   *(float *)v40 = x;
   *(float *)&v40[1] = y;
   *(float *)&v40[2] = z;
@@ -21051,21 +21051,21 @@ void iTween__PunchRotation(
   v23 = v13;
   if ( v13 )
   {
-    v13 = sub_1C32D5C(v13);
+    v13 = sub_1C37194(v13);
     if ( !v13 )
       goto LABEL_24;
   }
   if ( *(_DWORD *)(v12 + 24) <= 1u )
     goto LABEL_23;
   *(_QWORD *)(v12 + 40) = v23;
-  sub_1C32BC4((CGThumbnailListItem_o *)(v12 + 40), v23, v21, v22);
-  v13 = StringLiteral_24067/*"time"*/;
-  if ( StringLiteral_24067/*"time"*/ )
+  sub_1C36FFC((CGThumbnailListItem_o *)(v12 + 40), v23, v21, v22);
+  v13 = StringLiteral_24071/*"time"*/;
+  if ( StringLiteral_24071/*"time"*/ )
   {
-    v13 = sub_1C32D5C(StringLiteral_24067/*"time"*/);
+    v13 = sub_1C37194(StringLiteral_24071/*"time"*/);
     if ( !v13 )
       goto LABEL_24;
-    v26 = StringLiteral_24067/*"time"*/;
+    v26 = StringLiteral_24071/*"time"*/;
   }
   else
   {
@@ -21074,33 +21074,33 @@ void iTween__PunchRotation(
   if ( *(_DWORD *)(v12 + 24) <= 2u )
     goto LABEL_23;
   *(_QWORD *)(v12 + 48) = v26;
-  sub_1C32BC4((CGThumbnailListItem_o *)(v12 + 48), v26, v24, v25);
+  sub_1C36FFC((CGThumbnailListItem_o *)(v12 + 48), v26, v24, v25);
   v41 = time;
   v13 = j_il2cpp_value_box_0(float_TypeInfo, &v41, v27, v28, v29, v30, v31, v32);
   v35 = v13;
   if ( v13 )
   {
-    v13 = sub_1C32D5C(v13);
+    v13 = sub_1C37194(v13);
     if ( !v13 )
     {
 LABEL_24:
-      v39 = sub_1C32EA0(v13);
-      sub_1C32D48(v39, 0);
+      v39 = sub_1C372D8(v13);
+      sub_1C37180(v39, 0);
     }
   }
   if ( *(_DWORD *)(v12 + 24) <= 3u )
 LABEL_23:
-    sub_1C32E84(v13);
+    sub_1C372BC(v13);
   *(_QWORD *)(v12 + 56) = v35;
-  sub_1C32BC4((CGThumbnailListItem_o *)(v12 + 56), v35, v33, v34);
+  sub_1C36FFC((CGThumbnailListItem_o *)(v12 + 56), v35, v33, v34);
   if ( !iTween_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(iTween_TypeInfo);
   v37 = iTween__Hash((System_Object_array *)v12, v36);
-  iTween__PunchRotation_63175032(target, v37, v38);
+  iTween__PunchRotation_63218144(target, v37, v38);
 }
 
 
-void iTween__PunchRotation_63175032(
+void iTween__PunchRotation_63218144(
         UnityEngine_GameObject_o *target,
         System_Collections_Hashtable_o *args,
         const MethodInfo *method)
@@ -21117,38 +21117,38 @@ void iTween__PunchRotation_63175032(
   const MethodInfo *v14; // x2
   int v15; // [xsp+Ch] [xbp-34h] BYREF
 
-  if ( (byte_4C3E9C3 & 1) == 0 )
+  if ( (byte_4C49F43 & 1) == 0 )
   {
-    sub_1C32C20(&iTween_EaseType_TypeInfo);
-    sub_1C32C20(&StringLiteral_18751/*"easetype"*/);
-    sub_1C32C20(&StringLiteral_23148/*"rotation"*/);
-    sub_1C32C20(&StringLiteral_21560/*"method"*/);
-    sub_1C32C20(&StringLiteral_22815/*"punch"*/);
-    sub_1C32C20(&StringLiteral_24241/*"type"*/);
-    sub_1C32C20(&iTween_TypeInfo);
-    byte_4C3E9C3 = 1;
+    sub_1C37058(&iTween_EaseType_TypeInfo);
+    sub_1C37058(&StringLiteral_18754/*"easetype"*/);
+    sub_1C37058(&StringLiteral_23152/*"rotation"*/);
+    sub_1C37058(&StringLiteral_21563/*"method"*/);
+    sub_1C37058(&StringLiteral_22819/*"punch"*/);
+    sub_1C37058(&StringLiteral_24245/*"type"*/);
+    sub_1C37058(&iTween_TypeInfo);
+    byte_4C49F43 = 1;
   }
   if ( !iTween_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(iTween_TypeInfo);
   v5 = iTween__CleanArgs(args, (const MethodInfo *)args);
   if ( !v5 )
-    sub_1C32E7C(0);
+    sub_1C372B4(0);
   v6 = v5;
   ((void (__fastcall *)(System_Collections_Hashtable_o *, __int64, __int64, const MethodInfo *))v5->klass->vtable._29_set_Item.methodPtr)(
     v5,
-    StringLiteral_24241/*"type"*/,
-    StringLiteral_22815/*"punch"*/,
+    StringLiteral_24245/*"type"*/,
+    StringLiteral_22819/*"punch"*/,
     v5->klass->vtable._29_set_Item.method);
   ((void (__fastcall *)(System_Collections_Hashtable_o *, __int64, __int64, const MethodInfo *))v6->klass->vtable._29_set_Item.methodPtr)(
     v6,
-    StringLiteral_21560/*"method"*/,
-    StringLiteral_23148/*"rotation"*/,
+    StringLiteral_21563/*"method"*/,
+    StringLiteral_23152/*"rotation"*/,
     v6->klass->vtable._29_set_Item.method);
   v15 = 32;
   v13 = j_il2cpp_value_box_0(iTween_EaseType_TypeInfo, &v15, v7, v8, v9, v10, v11, v12);
   ((void (__fastcall *)(System_Collections_Hashtable_o *, __int64, __int64, const MethodInfo *))v6->klass->vtable._29_set_Item.methodPtr)(
     v6,
-    StringLiteral_18751/*"easetype"*/,
+    StringLiteral_18754/*"easetype"*/,
     v13,
     v6->klass->vtable._29_set_Item.method);
   iTween__Launch(target, v6, v14);
@@ -21201,27 +21201,27 @@ void iTween__PunchScale(
   z = amount.fields.z;
   y = amount.fields.y;
   x = amount.fields.x;
-  if ( (byte_4C3E9C4 & 1) == 0 )
+  if ( (byte_4C49F44 & 1) == 0 )
   {
-    sub_1C32C20(&object___TypeInfo);
-    sub_1C32C20(&float_TypeInfo);
-    sub_1C32C20(&UnityEngine_Vector3_TypeInfo);
-    sub_1C32C20(&StringLiteral_24067/*"time"*/);
-    sub_1C32C20(&StringLiteral_16745/*"amount"*/);
-    sub_1C32C20(&iTween_TypeInfo);
-    byte_4C3E9C4 = 1;
+    sub_1C37058(&object___TypeInfo);
+    sub_1C37058(&float_TypeInfo);
+    sub_1C37058(&UnityEngine_Vector3_TypeInfo);
+    sub_1C37058(&StringLiteral_24071/*"time"*/);
+    sub_1C37058(&StringLiteral_16747/*"amount"*/);
+    sub_1C37058(&iTween_TypeInfo);
+    byte_4C49F44 = 1;
   }
-  v9 = sub_1C32CC8(object___TypeInfo, 4);
+  v9 = sub_1C37100(object___TypeInfo, 4);
   if ( !v9 )
-    sub_1C32E7C(0);
+    sub_1C372B4(0);
   v12 = v9;
-  v13 = StringLiteral_16745/*"amount"*/;
-  if ( StringLiteral_16745/*"amount"*/ )
+  v13 = StringLiteral_16747/*"amount"*/;
+  if ( StringLiteral_16747/*"amount"*/ )
   {
-    v13 = sub_1C32D5C(StringLiteral_16745/*"amount"*/);
+    v13 = sub_1C37194(StringLiteral_16747/*"amount"*/);
     if ( !v13 )
       goto LABEL_24;
-    v14 = StringLiteral_16745/*"amount"*/;
+    v14 = StringLiteral_16747/*"amount"*/;
   }
   else
   {
@@ -21230,7 +21230,7 @@ void iTween__PunchScale(
   if ( !*(_DWORD *)(v12 + 24) )
     goto LABEL_23;
   *(_QWORD *)(v12 + 32) = v14;
-  sub_1C32BC4((CGThumbnailListItem_o *)(v12 + 32), v14, v10, v11);
+  sub_1C36FFC((CGThumbnailListItem_o *)(v12 + 32), v14, v10, v11);
   *(float *)v40 = x;
   *(float *)&v40[1] = y;
   *(float *)&v40[2] = z;
@@ -21238,21 +21238,21 @@ void iTween__PunchScale(
   v23 = v13;
   if ( v13 )
   {
-    v13 = sub_1C32D5C(v13);
+    v13 = sub_1C37194(v13);
     if ( !v13 )
       goto LABEL_24;
   }
   if ( *(_DWORD *)(v12 + 24) <= 1u )
     goto LABEL_23;
   *(_QWORD *)(v12 + 40) = v23;
-  sub_1C32BC4((CGThumbnailListItem_o *)(v12 + 40), v23, v21, v22);
-  v13 = StringLiteral_24067/*"time"*/;
-  if ( StringLiteral_24067/*"time"*/ )
+  sub_1C36FFC((CGThumbnailListItem_o *)(v12 + 40), v23, v21, v22);
+  v13 = StringLiteral_24071/*"time"*/;
+  if ( StringLiteral_24071/*"time"*/ )
   {
-    v13 = sub_1C32D5C(StringLiteral_24067/*"time"*/);
+    v13 = sub_1C37194(StringLiteral_24071/*"time"*/);
     if ( !v13 )
       goto LABEL_24;
-    v26 = StringLiteral_24067/*"time"*/;
+    v26 = StringLiteral_24071/*"time"*/;
   }
   else
   {
@@ -21261,33 +21261,33 @@ void iTween__PunchScale(
   if ( *(_DWORD *)(v12 + 24) <= 2u )
     goto LABEL_23;
   *(_QWORD *)(v12 + 48) = v26;
-  sub_1C32BC4((CGThumbnailListItem_o *)(v12 + 48), v26, v24, v25);
+  sub_1C36FFC((CGThumbnailListItem_o *)(v12 + 48), v26, v24, v25);
   v41 = time;
   v13 = j_il2cpp_value_box_0(float_TypeInfo, &v41, v27, v28, v29, v30, v31, v32);
   v35 = v13;
   if ( v13 )
   {
-    v13 = sub_1C32D5C(v13);
+    v13 = sub_1C37194(v13);
     if ( !v13 )
     {
 LABEL_24:
-      v39 = sub_1C32EA0(v13);
-      sub_1C32D48(v39, 0);
+      v39 = sub_1C372D8(v13);
+      sub_1C37180(v39, 0);
     }
   }
   if ( *(_DWORD *)(v12 + 24) <= 3u )
 LABEL_23:
-    sub_1C32E84(v13);
+    sub_1C372BC(v13);
   *(_QWORD *)(v12 + 56) = v35;
-  sub_1C32BC4((CGThumbnailListItem_o *)(v12 + 56), v35, v33, v34);
+  sub_1C36FFC((CGThumbnailListItem_o *)(v12 + 56), v35, v33, v34);
   if ( !iTween_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(iTween_TypeInfo);
   v37 = iTween__Hash((System_Object_array *)v12, v36);
-  iTween__PunchScale_63175936(target, v37, v38);
+  iTween__PunchScale_63219048(target, v37, v38);
 }
 
 
-void iTween__PunchScale_63175936(
+void iTween__PunchScale_63219048(
         UnityEngine_GameObject_o *target,
         System_Collections_Hashtable_o *args,
         const MethodInfo *method)
@@ -21304,38 +21304,38 @@ void iTween__PunchScale_63175936(
   const MethodInfo *v14; // x2
   int v15; // [xsp+Ch] [xbp-34h] BYREF
 
-  if ( (byte_4C3E9C5 & 1) == 0 )
+  if ( (byte_4C49F45 & 1) == 0 )
   {
-    sub_1C32C20(&iTween_EaseType_TypeInfo);
-    sub_1C32C20(&StringLiteral_18751/*"easetype"*/);
-    sub_1C32C20(&StringLiteral_21560/*"method"*/);
-    sub_1C32C20(&StringLiteral_22815/*"punch"*/);
-    sub_1C32C20(&StringLiteral_24241/*"type"*/);
-    sub_1C32C20(&StringLiteral_23191/*"scale"*/);
-    sub_1C32C20(&iTween_TypeInfo);
-    byte_4C3E9C5 = 1;
+    sub_1C37058(&iTween_EaseType_TypeInfo);
+    sub_1C37058(&StringLiteral_18754/*"easetype"*/);
+    sub_1C37058(&StringLiteral_21563/*"method"*/);
+    sub_1C37058(&StringLiteral_22819/*"punch"*/);
+    sub_1C37058(&StringLiteral_24245/*"type"*/);
+    sub_1C37058(&StringLiteral_23195/*"scale"*/);
+    sub_1C37058(&iTween_TypeInfo);
+    byte_4C49F45 = 1;
   }
   if ( !iTween_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(iTween_TypeInfo);
   v5 = iTween__CleanArgs(args, (const MethodInfo *)args);
   if ( !v5 )
-    sub_1C32E7C(0);
+    sub_1C372B4(0);
   v6 = v5;
   ((void (__fastcall *)(System_Collections_Hashtable_o *, __int64, __int64, const MethodInfo *))v5->klass->vtable._29_set_Item.methodPtr)(
     v5,
-    StringLiteral_24241/*"type"*/,
-    StringLiteral_22815/*"punch"*/,
+    StringLiteral_24245/*"type"*/,
+    StringLiteral_22819/*"punch"*/,
     v5->klass->vtable._29_set_Item.method);
   ((void (__fastcall *)(System_Collections_Hashtable_o *, __int64, __int64, const MethodInfo *))v6->klass->vtable._29_set_Item.methodPtr)(
     v6,
-    StringLiteral_21560/*"method"*/,
-    StringLiteral_23191/*"scale"*/,
+    StringLiteral_21563/*"method"*/,
+    StringLiteral_23195/*"scale"*/,
     v6->klass->vtable._29_set_Item.method);
   v15 = 32;
   v13 = j_il2cpp_value_box_0(iTween_EaseType_TypeInfo, &v15, v7, v8, v9, v10, v11, v12);
   ((void (__fastcall *)(System_Collections_Hashtable_o *, __int64, __int64, const MethodInfo *))v6->klass->vtable._29_set_Item.methodPtr)(
     v6,
-    StringLiteral_18751/*"easetype"*/,
+    StringLiteral_18754/*"easetype"*/,
     v13,
     v6->klass->vtable._29_set_Item.method);
   iTween__Launch(target, v6, v14);
@@ -21356,10 +21356,10 @@ void iTween__PutOnPath(
   UnityEngine_Vector3_o v11; // 0:s0.4,4:s1.4,8:s2.4
 
   v6 = target;
-  if ( (byte_4C3EA05 & 1) == 0 )
+  if ( (byte_4C49F85 & 1) == 0 )
   {
-    target = (UnityEngine_GameObject_o *)sub_1C32C20(&iTween_TypeInfo);
-    byte_4C3EA05 = 1;
+    target = (UnityEngine_GameObject_o *)sub_1C37058(&iTween_TypeInfo);
+    byte_4C49F85 = 1;
   }
   if ( !v6 )
     goto LABEL_8;
@@ -21370,12 +21370,12 @@ void iTween__PutOnPath(
   v11 = iTween__Interp(v9, percent, v10);
   if ( !transform )
 LABEL_8:
-    sub_1C32E7C(target);
+    sub_1C372B4(target);
   UnityEngine_Transform__set_position(transform, v11, 0);
 }
 
 
-void iTween__PutOnPath_63243768(
+void iTween__PutOnPath_63286880(
         UnityEngine_Transform_o *target,
         UnityEngine_Vector3_array *path,
         float percent,
@@ -21386,22 +21386,22 @@ void iTween__PutOnPath_63243768(
   __int64 v9; // x0
   UnityEngine_Vector3_o v10; // 0:s0.4,4:s1.4,8:s2.4
 
-  if ( (byte_4C3EA06 & 1) == 0 )
+  if ( (byte_4C49F86 & 1) == 0 )
   {
-    sub_1C32C20(&iTween_TypeInfo);
-    byte_4C3EA06 = 1;
+    sub_1C37058(&iTween_TypeInfo);
+    byte_4C49F86 = 1;
   }
   if ( !iTween_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(iTween_TypeInfo);
   v7 = iTween__PathControlPointGenerator(path, (const MethodInfo *)path);
   v10 = iTween__Interp(v7, percent, v8);
   if ( !target )
-    sub_1C32E7C(v9);
+    sub_1C372B4(v9);
   UnityEngine_Transform__set_position(target, v10, 0);
 }
 
 
-void iTween__PutOnPath_63243904(
+void iTween__PutOnPath_63287016(
         UnityEngine_GameObject_o *target,
         UnityEngine_Transform_array *path,
         float percent,
@@ -21420,15 +21420,15 @@ void iTween__PutOnPath_63243904(
   UnityEngine_Vector3_o v16; // 0:s0.4,4:s1.4,8:s2.4
 
   v6 = target;
-  if ( (byte_4C3EA07 & 1) == 0 )
+  if ( (byte_4C49F87 & 1) == 0 )
   {
-    sub_1C32C20(&UnityEngine_Vector3___TypeInfo);
-    target = (UnityEngine_GameObject_o *)sub_1C32C20(&iTween_TypeInfo);
-    byte_4C3EA07 = 1;
+    sub_1C37058(&UnityEngine_Vector3___TypeInfo);
+    target = (UnityEngine_GameObject_o *)sub_1C37058(&iTween_TypeInfo);
+    byte_4C49F87 = 1;
   }
   if ( !path )
     goto LABEL_17;
-  target = (UnityEngine_GameObject_o *)sub_1C32CC8(UnityEngine_Vector3___TypeInfo, LODWORD(path->max_length));
+  target = (UnityEngine_GameObject_o *)sub_1C37100(UnityEngine_Vector3___TypeInfo, LODWORD(path->max_length));
   max_length = path->max_length;
   v8 = target;
   if ( max_length >= 1 )
@@ -21439,7 +21439,7 @@ void iTween__PutOnPath_63243904(
     {
       if ( (unsigned int)v9 >= max_length )
 LABEL_16:
-        sub_1C32E84(target);
+        sub_1C372BC(target);
       target = (UnityEngine_GameObject_o *)path->m_Items[v9];
       if ( !target )
         break;
@@ -21455,7 +21455,7 @@ LABEL_16:
         goto LABEL_11;
     }
 LABEL_17:
-    sub_1C32E7C(target);
+    sub_1C372B4(target);
   }
 LABEL_11:
   if ( !v6 )
@@ -21471,7 +21471,7 @@ LABEL_11:
 }
 
 
-void iTween__PutOnPath_63244204(
+void iTween__PutOnPath_63287316(
         UnityEngine_Transform_o *target,
         UnityEngine_Transform_array *path,
         float percent,
@@ -21489,15 +21489,15 @@ void iTween__PutOnPath_63244204(
   UnityEngine_Vector3_o v15; // 0:s0.4,4:s1.4,8:s2.4
 
   v6 = target;
-  if ( (byte_4C3EA08 & 1) == 0 )
+  if ( (byte_4C49F88 & 1) == 0 )
   {
-    sub_1C32C20(&UnityEngine_Vector3___TypeInfo);
-    target = (UnityEngine_Transform_o *)sub_1C32C20(&iTween_TypeInfo);
-    byte_4C3EA08 = 1;
+    sub_1C37058(&UnityEngine_Vector3___TypeInfo);
+    target = (UnityEngine_Transform_o *)sub_1C37058(&iTween_TypeInfo);
+    byte_4C49F88 = 1;
   }
   if ( !path )
     goto LABEL_16;
-  target = (UnityEngine_Transform_o *)sub_1C32CC8(UnityEngine_Vector3___TypeInfo, LODWORD(path->max_length));
+  target = (UnityEngine_Transform_o *)sub_1C37100(UnityEngine_Vector3___TypeInfo, LODWORD(path->max_length));
   max_length = path->max_length;
   v9 = target;
   if ( max_length >= 1 )
@@ -21508,7 +21508,7 @@ void iTween__PutOnPath_63244204(
     {
       if ( (unsigned int)v10 >= max_length )
 LABEL_15:
-        sub_1C32E84(target);
+        sub_1C372BC(target);
       target = path->m_Items[v10];
       if ( !target )
         break;
@@ -21524,7 +21524,7 @@ LABEL_15:
         goto LABEL_11;
     }
 LABEL_16:
-    sub_1C32E7C(target);
+    sub_1C372B4(target);
   }
 LABEL_11:
   if ( !iTween_TypeInfo->_2.cctor_finished )
@@ -21568,10 +21568,10 @@ UnityEngine_Rect_o iTween__RectUpdate(
   v8 = currentValue.fields.m_Width;
   v9 = currentValue.fields.m_YMin;
   v10 = currentValue.fields.m_XMin;
-  if ( (byte_4C3E9F4 & 1) == 0 )
+  if ( (byte_4C49F74 & 1) == 0 )
   {
-    sub_1C32C20(&iTween_TypeInfo);
-    byte_4C3E9F4 = 1;
+    sub_1C37058(&iTween_TypeInfo);
+    byte_4C49F74 = 1;
   }
   if ( !iTween_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(iTween_TypeInfo);
@@ -21633,41 +21633,41 @@ void iTween__ResetTweenVariables(iTween_o *this, const MethodInfo *method)
 
   v4 = this;
   this->fields.id = 0;
-  sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.id, 0, v2, v3);
+  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.id, 0, v2, v3);
   v4->fields.type = 0;
-  sub_1C32BC4((CGThumbnailListItem_o *)&v4->fields.type, 0, v5, v6);
+  sub_1C36FFC((CGThumbnailListItem_o *)&v4->fields.type, 0, v5, v6);
   v4->fields.method = 0;
-  sub_1C32BC4((CGThumbnailListItem_o *)&v4->fields.method, 0, v7, v8);
+  sub_1C36FFC((CGThumbnailListItem_o *)&v4->fields.method, 0, v7, v8);
   v4->fields._name = 0;
   *(_QWORD *)&v4->fields.easeType = 0;
   *(_QWORD *)&v4->fields.delay = 0;
   *(_WORD *)&v4->fields.isRunning = 0;
-  sub_1C32BC4((CGThumbnailListItem_o *)&v4->fields._name, 0, v9, v10);
+  sub_1C36FFC((CGThumbnailListItem_o *)&v4->fields._name, 0, v9, v10);
   v4->fields.tweenArguments = 0;
   *(_QWORD *)&v4->fields.runningTime = 0;
   *(_QWORD *)&v4->fields.delayStarted = 0;
   v4->fields.physics = 0;
-  sub_1C32BC4((CGThumbnailListItem_o *)&v4->fields.tweenArguments, 0, v11, v12);
+  sub_1C36FFC((CGThumbnailListItem_o *)&v4->fields.tweenArguments, 0, v11, v12);
   v4->fields.space = 0;
   v4->fields.ease = 0;
-  sub_1C32BC4((CGThumbnailListItem_o *)&v4->fields.ease, 0, v13, v14);
+  sub_1C36FFC((CGThumbnailListItem_o *)&v4->fields.ease, 0, v13, v14);
   v4->fields.apply = 0;
-  sub_1C32BC4((CGThumbnailListItem_o *)&v4->fields.apply, 0, v15, v16);
+  sub_1C36FFC((CGThumbnailListItem_o *)&v4->fields.apply, 0, v15, v16);
   v4->fields.audioSource = 0;
-  sub_1C32BC4((CGThumbnailListItem_o *)&v4->fields.audioSource, 0, v17, v18);
+  sub_1C36FFC((CGThumbnailListItem_o *)&v4->fields.audioSource, 0, v17, v18);
   v4->fields.vector3s = 0;
-  sub_1C32BC4((CGThumbnailListItem_o *)&v4->fields.vector3s, 0, v19, v20);
+  sub_1C36FFC((CGThumbnailListItem_o *)&v4->fields.vector3s, 0, v19, v20);
   v4->fields.vector2s = 0;
-  sub_1C32BC4((CGThumbnailListItem_o *)&v4->fields.vector2s, 0, v21, v22);
+  sub_1C36FFC((CGThumbnailListItem_o *)&v4->fields.vector2s, 0, v21, v22);
   v4->fields.colors = 0;
-  sub_1C32BC4((CGThumbnailListItem_o *)&v4->fields.colors, 0, v23, v24);
+  sub_1C36FFC((CGThumbnailListItem_o *)&v4->fields.colors, 0, v23, v24);
   v4->fields.floats = 0;
-  sub_1C32BC4((CGThumbnailListItem_o *)&v4->fields.floats, 0, v25, v26);
+  sub_1C36FFC((CGThumbnailListItem_o *)&v4->fields.floats, 0, v25, v26);
   v4->fields.rects = 0;
-  sub_1C32BC4((CGThumbnailListItem_o *)&v4->fields.rects, 0, v27, v28);
+  sub_1C36FFC((CGThumbnailListItem_o *)&v4->fields.rects, 0, v27, v28);
   v4->fields.path = 0;
   v4 = (iTween_o *)((char *)v4 + 200);
-  sub_1C32BC4((CGThumbnailListItem_o *)v4, 0, v29, v30);
+  sub_1C36FFC((CGThumbnailListItem_o *)v4, 0, v29, v30);
   v4->monitor = 0;
   v4->fields.m_CachedPtr = 0;
   *(intptr_t *)((char *)&v4->fields.m_CachedPtr + 5) = 0;
@@ -21706,24 +21706,24 @@ void iTween__Resume(UnityEngine_GameObject_o *target, const MethodInfo *method)
   __int64 v29; // x0
 
   v2 = target;
-  if ( (byte_4C3EA23 & 1) == 0 )
+  if ( (byte_4C49FA3 & 1) == 0 )
   {
-    sub_1C32C20(&Method_System_Linq_Enumerable_Where_iTween___);
-    sub_1C32C20(&System_Func_iTween__bool__TypeInfo);
-    sub_1C32C20(&Method_UnityEngine_GameObject_GetComponents_iTween___);
-    sub_1C32C20(&System_IDisposable_TypeInfo);
-    sub_1C32C20(&System_Collections_Generic_IEnumerable_iTween__TypeInfo);
-    sub_1C32C20(&System_Collections_Generic_IEnumerator_iTween__TypeInfo);
-    sub_1C32C20(&System_Collections_IEnumerator_TypeInfo);
-    sub_1C32C20(&Method_iTween___c__Resume_b__206_0__);
-    target = (UnityEngine_GameObject_o *)sub_1C32C20(&iTween___c_TypeInfo);
-    byte_4C3EA23 = 1;
+    sub_1C37058(&Method_System_Linq_Enumerable_Where_iTween___);
+    sub_1C37058(&System_Func_iTween__bool__TypeInfo);
+    sub_1C37058(&Method_UnityEngine_GameObject_GetComponents_iTween___);
+    sub_1C37058(&System_IDisposable_TypeInfo);
+    sub_1C37058(&System_Collections_Generic_IEnumerable_iTween__TypeInfo);
+    sub_1C37058(&System_Collections_Generic_IEnumerator_iTween__TypeInfo);
+    sub_1C37058(&System_Collections_IEnumerator_TypeInfo);
+    sub_1C37058(&Method_iTween___c__Resume_b__206_0__);
+    target = (UnityEngine_GameObject_o *)sub_1C37058(&iTween___c_TypeInfo);
+    byte_4C49FA3 = 1;
   }
   if ( !v2 )
     goto LABEL_41;
   Components_object = UnityEngine_GameObject__GetComponents_object_(
                         v2,
-                        (const MethodInfo_31352CC *)Method_UnityEngine_GameObject_GetComponents_iTween___);
+                        (const MethodInfo_313FB34 *)Method_UnityEngine_GameObject_GetComponents_iTween___);
   v4 = iTween___c_TypeInfo;
   v5 = (System_Collections_Generic_IEnumerable_TSource__o *)Components_object;
   if ( !iTween___c_TypeInfo->_2.cctor_finished )
@@ -21740,19 +21740,19 @@ void iTween__Resume(UnityEngine_GameObject_o *target, const MethodInfo *method)
       v4 = iTween___c_TypeInfo;
     }
     v7 = (Il2CppObject *)v4->static_fields->__9;
-    _9__206_0 = (System_Func_object__bool__o *)sub_1C32E6C(System_Func_iTween__bool__TypeInfo);
+    _9__206_0 = (System_Func_object__bool__o *)sub_1C372A4(System_Func_iTween__bool__TypeInfo);
     System_Func_object__bool____ctor(_9__206_0, v7, Method_iTween___c__Resume_b__206_0__, 0);
     static_fields = iTween___c_TypeInfo->static_fields;
     static_fields->__9__206_0 = (struct System_Func_iTween__bool__o *)_9__206_0;
-    sub_1C32BC4((CGThumbnailListItem_o *)&static_fields->__9__206_0, (int32_t)_9__206_0, v9, v10);
+    sub_1C36FFC((CGThumbnailListItem_o *)&static_fields->__9__206_0, (int32_t)_9__206_0, v9, v10);
   }
   target = (UnityEngine_GameObject_o *)System_Linq_Enumerable__Where_object_(
                                          v5,
                                          (System_Func_TSource__bool__o *)_9__206_0,
-                                         (const MethodInfo_3123BA8 *)Method_System_Linq_Enumerable_Where_iTween___);
+                                         (const MethodInfo_312E410 *)Method_System_Linq_Enumerable_Where_iTween___);
   if ( !target )
 LABEL_41:
-    sub_1C32E7C(target);
+    sub_1C372B4(target);
   klass = target->klass;
   v12 = target;
   v13 = *(unsigned __int16 *)&target->klass->_2.rank;
@@ -21771,11 +21771,11 @@ LABEL_41:
   else
   {
 LABEL_15:
-    v15 = sub_1C83438(target, System_Collections_Generic_IEnumerable_iTween__TypeInfo, 0);
+    v15 = sub_1C87870(target, System_Collections_Generic_IEnumerable_iTween__TypeInfo, 0);
   }
   v16 = (*(__int64 (__fastcall **)(UnityEngine_GameObject_o *, _QWORD))v15)(v12, *(_QWORD *)(v15 + 8));
   if ( !v16 )
-    sub_1C32E7C(0);
+    sub_1C372B4(0);
   while ( 1 )
   {
     v17 = *(_QWORD *)v16;
@@ -21795,7 +21795,7 @@ LABEL_15:
     else
     {
 LABEL_22:
-      v20 = sub_1C83438(v16, System_Collections_IEnumerator_TypeInfo, 0);
+      v20 = sub_1C87870(v16, System_Collections_IEnumerator_TypeInfo, 0);
     }
     if ( ((*(__int64 (__fastcall **)(__int64, _QWORD))v20)(v16, *(_QWORD *)(v20 + 8)) & 1) == 0 )
       break;
@@ -21816,11 +21816,11 @@ LABEL_22:
     else
     {
 LABEL_29:
-      v24 = sub_1C83438(v16, System_Collections_Generic_IEnumerator_iTween__TypeInfo, 0);
+      v24 = sub_1C87870(v16, System_Collections_Generic_IEnumerator_iTween__TypeInfo, 0);
     }
     v25 = (UnityEngine_Behaviour_o *)(*(__int64 (__fastcall **)(__int64, _QWORD))v24)(v16, *(_QWORD *)(v24 + 8));
     if ( !v25 )
-      sub_1C32E7C(0);
+      sub_1C372B4(0);
     UnityEngine_Behaviour__set_enabled(v25, 1, 0);
   }
   v26 = *(_QWORD *)v16;
@@ -21840,7 +21840,7 @@ LABEL_29:
   else
   {
 LABEL_37:
-    v29 = sub_1C83438(v16, System_IDisposable_TypeInfo, 0);
+    v29 = sub_1C87870(v16, System_IDisposable_TypeInfo, 0);
   }
   (*(void (__fastcall **)(__int64, _QWORD))v29)(v16, *(_QWORD *)(v29 + 8));
 }
@@ -21848,20 +21848,20 @@ LABEL_37:
 
 void iTween__ResumeDelay(iTween_o *this, const MethodInfo *method)
 {
-  if ( (byte_4C3EA49 & 1) == 0 )
+  if ( (byte_4C49FC9 & 1) == 0 )
   {
-    sub_1C32C20(&StringLiteral_14621/*"TweenDelay"*/);
-    byte_4C3EA49 = 1;
+    sub_1C37058(&StringLiteral_14622/*"TweenDelay"*/);
+    byte_4C49FC9 = 1;
   }
   UnityEngine_MonoBehaviour__StartCoroutine(
     (UnityEngine_MonoBehaviour_o *)this,
-    (System_String_o *)StringLiteral_14621/*"TweenDelay"*/,
+    (System_String_o *)StringLiteral_14622/*"TweenDelay"*/,
     0);
 }
 
 
 // local variable allocation has failed, the output may be wrong!
-void iTween__Resume_63253424(UnityEngine_GameObject_o *target, bool includechildren, const MethodInfo *method)
+void iTween__Resume_63296536(UnityEngine_GameObject_o *target, bool includechildren, const MethodInfo *method)
 {
   UnityEngine_Transform_o *transform; // x0
   System_Collections_IEnumerator_o *Enumerator; // x19
@@ -21884,13 +21884,13 @@ void iTween__Resume_63253424(UnityEngine_GameObject_o *target, bool includechild
   int *v23; // x10
   __int64 v24; // x0
 
-  if ( (byte_4C3EA24 & 1) == 0 )
+  if ( (byte_4C49FA4 & 1) == 0 )
   {
-    sub_1C32C20(&System_IDisposable_TypeInfo);
-    sub_1C32C20(&System_Collections_IEnumerator_TypeInfo);
-    sub_1C32C20(&UnityEngine_Transform_TypeInfo);
-    sub_1C32C20(&iTween_TypeInfo);
-    byte_4C3EA24 = 1;
+    sub_1C37058(&System_IDisposable_TypeInfo);
+    sub_1C37058(&System_Collections_IEnumerator_TypeInfo);
+    sub_1C37058(&UnityEngine_Transform_TypeInfo);
+    sub_1C37058(&iTween_TypeInfo);
+    byte_4C49FA4 = 1;
   }
   if ( !iTween_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(iTween_TypeInfo);
@@ -21898,10 +21898,10 @@ void iTween__Resume_63253424(UnityEngine_GameObject_o *target, bool includechild
   if ( includechildren )
   {
     if ( !target || (transform = UnityEngine_GameObject__get_transform(target, 0)) == 0 )
-      sub_1C32E7C(transform);
+      sub_1C372B4(transform);
     Enumerator = UnityEngine_Transform__GetEnumerator(transform, 0);
     if ( !Enumerator )
-      sub_1C32E7C(0);
+      sub_1C372B4(0);
     while ( 1 )
     {
       klass = Enumerator->klass;
@@ -21921,7 +21921,7 @@ void iTween__Resume_63253424(UnityEngine_GameObject_o *target, bool includechild
       else
       {
 LABEL_13:
-        v10 = sub_1C83438(Enumerator, System_Collections_IEnumerator_TypeInfo, 0);
+        v10 = sub_1C87870(Enumerator, System_Collections_IEnumerator_TypeInfo, 0);
       }
       if ( ((*(__int64 (__fastcall **)(System_Collections_IEnumerator_o *, _QWORD))v10)(
               Enumerator,
@@ -21945,7 +21945,7 @@ LABEL_13:
       else
       {
 LABEL_20:
-        v14 = sub_1C83438(Enumerator, System_Collections_IEnumerator_TypeInfo, 1);
+        v14 = sub_1C87870(Enumerator, System_Collections_IEnumerator_TypeInfo, 1);
       }
       v15 = (UnityEngine_Component_o *)(*(__int64 (__fastcall **)(System_Collections_IEnumerator_o *, _QWORD))v14)(
                                          Enumerator,
@@ -21956,16 +21956,16 @@ LABEL_20:
       if ( v15->klass->_2.naturalAligment < (unsigned int)naturalAligment
         || (UnityEngine_Transform_c *)v15->klass->_2.typeHierarchy[naturalAligment - 1] != UnityEngine_Transform_TypeInfo )
       {
-        sub_1C3313C(v15);
+        sub_1C37574(v15);
 LABEL_38:
-        sub_1C32E7C(v15);
+        sub_1C372B4(v15);
       }
       gameObject = UnityEngine_Component__get_gameObject(v15, 0);
       if ( !iTween_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(iTween_TypeInfo);
-      iTween__Resume_63253424(gameObject, 1, v17);
+      iTween__Resume_63296536(gameObject, 1, v17);
     }
-    v19 = sub_1C32D5C(Enumerator);
+    v19 = sub_1C37194(Enumerator);
     if ( v19 )
     {
       v20 = *(_QWORD *)v19;
@@ -21986,7 +21986,7 @@ LABEL_38:
       else
       {
 LABEL_33:
-        v24 = sub_1C83438(v19, System_IDisposable_TypeInfo, 0);
+        v24 = sub_1C87870(v19, System_IDisposable_TypeInfo, 0);
       }
       (*(void (__fastcall **)(__int64, _QWORD))v24)(v21, *(_QWORD *)(v24 + 8));
     }
@@ -21994,7 +21994,7 @@ LABEL_33:
 }
 
 
-void iTween__Resume_63254244(UnityEngine_GameObject_o *target, System_String_o *type, const MethodInfo *method)
+void iTween__Resume_63297356(UnityEngine_GameObject_o *target, System_String_o *type, const MethodInfo *method)
 {
   UnityEngine_GameObject_o *v4; // x19
   System_Object_array *Components_object; // x0
@@ -22031,24 +22031,24 @@ void iTween__Resume_63254244(UnityEngine_GameObject_o *target, System_String_o *
   __int64 v36; // x0
 
   v4 = target;
-  if ( (byte_4C3EA25 & 1) == 0 )
+  if ( (byte_4C49FA5 & 1) == 0 )
   {
-    sub_1C32C20(&Method_System_Linq_Enumerable_Where_iTween___);
-    sub_1C32C20(&System_Func_iTween__bool__TypeInfo);
-    sub_1C32C20(&Method_UnityEngine_GameObject_GetComponents_iTween___);
-    sub_1C32C20(&System_IDisposable_TypeInfo);
-    sub_1C32C20(&System_Collections_Generic_IEnumerable_iTween__TypeInfo);
-    sub_1C32C20(&System_Collections_Generic_IEnumerator_iTween__TypeInfo);
-    sub_1C32C20(&System_Collections_IEnumerator_TypeInfo);
-    sub_1C32C20(&Method_iTween___c__Resume_b__208_0__);
-    target = (UnityEngine_GameObject_o *)sub_1C32C20(&iTween___c_TypeInfo);
-    byte_4C3EA25 = 1;
+    sub_1C37058(&Method_System_Linq_Enumerable_Where_iTween___);
+    sub_1C37058(&System_Func_iTween__bool__TypeInfo);
+    sub_1C37058(&Method_UnityEngine_GameObject_GetComponents_iTween___);
+    sub_1C37058(&System_IDisposable_TypeInfo);
+    sub_1C37058(&System_Collections_Generic_IEnumerable_iTween__TypeInfo);
+    sub_1C37058(&System_Collections_Generic_IEnumerator_iTween__TypeInfo);
+    sub_1C37058(&System_Collections_IEnumerator_TypeInfo);
+    sub_1C37058(&Method_iTween___c__Resume_b__208_0__);
+    target = (UnityEngine_GameObject_o *)sub_1C37058(&iTween___c_TypeInfo);
+    byte_4C49FA5 = 1;
   }
   if ( !v4 )
     goto LABEL_48;
   Components_object = UnityEngine_GameObject__GetComponents_object_(
                         v4,
-                        (const MethodInfo_31352CC *)Method_UnityEngine_GameObject_GetComponents_iTween___);
+                        (const MethodInfo_313FB34 *)Method_UnityEngine_GameObject_GetComponents_iTween___);
   v6 = iTween___c_TypeInfo;
   v7 = (System_Collections_Generic_IEnumerable_TSource__o *)Components_object;
   if ( !iTween___c_TypeInfo->_2.cctor_finished )
@@ -22065,19 +22065,19 @@ void iTween__Resume_63254244(UnityEngine_GameObject_o *target, System_String_o *
       v6 = iTween___c_TypeInfo;
     }
     v9 = (Il2CppObject *)v6->static_fields->__9;
-    _9__208_0 = (System_Func_object__bool__o *)sub_1C32E6C(System_Func_iTween__bool__TypeInfo);
+    _9__208_0 = (System_Func_object__bool__o *)sub_1C372A4(System_Func_iTween__bool__TypeInfo);
     System_Func_object__bool____ctor(_9__208_0, v9, Method_iTween___c__Resume_b__208_0__, 0);
     static_fields = iTween___c_TypeInfo->static_fields;
     static_fields->__9__208_0 = (struct System_Func_iTween__bool__o *)_9__208_0;
-    sub_1C32BC4((CGThumbnailListItem_o *)&static_fields->__9__208_0, (int32_t)_9__208_0, v11, v12);
+    sub_1C36FFC((CGThumbnailListItem_o *)&static_fields->__9__208_0, (int32_t)_9__208_0, v11, v12);
   }
   target = (UnityEngine_GameObject_o *)System_Linq_Enumerable__Where_object_(
                                          v7,
                                          (System_Func_TSource__bool__o *)_9__208_0,
-                                         (const MethodInfo_3123BA8 *)Method_System_Linq_Enumerable_Where_iTween___);
+                                         (const MethodInfo_312E410 *)Method_System_Linq_Enumerable_Where_iTween___);
   if ( !target )
 LABEL_48:
-    sub_1C32E7C(target);
+    sub_1C372B4(target);
   klass = target->klass;
   v14 = target;
   v15 = *(unsigned __int16 *)&target->klass->_2.rank;
@@ -22096,11 +22096,11 @@ LABEL_48:
   else
   {
 LABEL_15:
-    v17 = sub_1C83438(target, System_Collections_Generic_IEnumerable_iTween__TypeInfo, 0);
+    v17 = sub_1C87870(target, System_Collections_Generic_IEnumerable_iTween__TypeInfo, 0);
   }
   v18 = (*(__int64 (__fastcall **)(UnityEngine_GameObject_o *, _QWORD))v17)(v14, *(_QWORD *)(v17 + 8));
   if ( !v18 )
-    sub_1C32E7C(0);
+    sub_1C372B4(0);
   while ( 1 )
   {
     v19 = *(_QWORD *)v18;
@@ -22120,7 +22120,7 @@ LABEL_15:
     else
     {
 LABEL_22:
-      v22 = sub_1C83438(v18, System_Collections_IEnumerator_TypeInfo, 0);
+      v22 = sub_1C87870(v18, System_Collections_IEnumerator_TypeInfo, 0);
     }
     if ( ((*(__int64 (__fastcall **)(__int64, _QWORD))v22)(v18, *(_QWORD *)(v22 + 8)) & 1) == 0 )
       break;
@@ -22141,20 +22141,20 @@ LABEL_22:
     else
     {
 LABEL_29:
-      v26 = sub_1C83438(v18, System_Collections_Generic_IEnumerator_iTween__TypeInfo, 0);
+      v26 = sub_1C87870(v18, System_Collections_Generic_IEnumerator_iTween__TypeInfo, 0);
     }
     v27 = (*(__int64 (__fastcall **)(__int64, _QWORD))v26)(v18, *(_QWORD *)(v26 + 8));
     v28 = (UnityEngine_Behaviour_o *)v27;
     if ( !v27 )
-      sub_1C32E7C(0);
-    v29 = System_String__Concat_63518544(*(System_String_o **)(v27 + 48), *(System_String_o **)(v27 + 56), 0);
+      sub_1C372B4(0);
+    v29 = System_String__Concat_63561656(*(System_String_o **)(v27 + 48), *(System_String_o **)(v27 + 56), 0);
     if ( !type )
-      sub_1C32E7C(v29);
+      sub_1C372B4(v29);
     if ( !v29 )
-      sub_1C32E7C(0);
-    v30 = System_String__Substring_63564468(v29, 0, type->fields._stringLength, 0);
+      sub_1C372B4(0);
+    v30 = System_String__Substring_63607580(v29, 0, type->fields._stringLength, 0);
     if ( !v30 )
-      sub_1C32E7C(0);
+      sub_1C372B4(0);
     v31 = System_String__ToLower(v30, 0);
     v32 = System_String__ToLower(type, 0);
     if ( System_String__op_Equality(v31, v32, 0) )
@@ -22177,13 +22177,13 @@ LABEL_29:
   else
   {
 LABEL_41:
-    v36 = sub_1C83438(v18, System_IDisposable_TypeInfo, 0);
+    v36 = sub_1C87870(v18, System_IDisposable_TypeInfo, 0);
   }
   (*(void (__fastcall **)(__int64, _QWORD))v36)(v18, *(_QWORD *)(v36 + 8));
 }
 
 
-void iTween__Resume_63255372(
+void iTween__Resume_63298484(
         UnityEngine_GameObject_o *target,
         System_String_o *type,
         bool includechildren,
@@ -22243,26 +22243,26 @@ void iTween__Resume_63255372(
   __int64 v57; // x0
 
   v6 = target;
-  if ( (byte_4C3EA26 & 1) == 0 )
+  if ( (byte_4C49FA6 & 1) == 0 )
   {
-    sub_1C32C20(&Method_System_Linq_Enumerable_Where_iTween___);
-    sub_1C32C20(&System_Func_iTween__bool__TypeInfo);
-    sub_1C32C20(&Method_UnityEngine_GameObject_GetComponents_iTween___);
-    sub_1C32C20(&System_IDisposable_TypeInfo);
-    sub_1C32C20(&System_Collections_Generic_IEnumerable_iTween__TypeInfo);
-    sub_1C32C20(&System_Collections_Generic_IEnumerator_iTween__TypeInfo);
-    sub_1C32C20(&System_Collections_IEnumerator_TypeInfo);
-    sub_1C32C20(&UnityEngine_Transform_TypeInfo);
-    sub_1C32C20(&Method_iTween___c__Resume_b__209_0__);
-    sub_1C32C20(&iTween___c_TypeInfo);
-    target = (UnityEngine_GameObject_o *)sub_1C32C20(&iTween_TypeInfo);
-    byte_4C3EA26 = 1;
+    sub_1C37058(&Method_System_Linq_Enumerable_Where_iTween___);
+    sub_1C37058(&System_Func_iTween__bool__TypeInfo);
+    sub_1C37058(&Method_UnityEngine_GameObject_GetComponents_iTween___);
+    sub_1C37058(&System_IDisposable_TypeInfo);
+    sub_1C37058(&System_Collections_Generic_IEnumerable_iTween__TypeInfo);
+    sub_1C37058(&System_Collections_Generic_IEnumerator_iTween__TypeInfo);
+    sub_1C37058(&System_Collections_IEnumerator_TypeInfo);
+    sub_1C37058(&UnityEngine_Transform_TypeInfo);
+    sub_1C37058(&Method_iTween___c__Resume_b__209_0__);
+    sub_1C37058(&iTween___c_TypeInfo);
+    target = (UnityEngine_GameObject_o *)sub_1C37058(&iTween_TypeInfo);
+    byte_4C49FA6 = 1;
   }
   if ( !v6 )
     goto LABEL_80;
   Components_object = UnityEngine_GameObject__GetComponents_object_(
                         v6,
-                        (const MethodInfo_31352CC *)Method_UnityEngine_GameObject_GetComponents_iTween___);
+                        (const MethodInfo_313FB34 *)Method_UnityEngine_GameObject_GetComponents_iTween___);
   v8 = iTween___c_TypeInfo;
   v9 = (System_Collections_Generic_IEnumerable_TSource__o *)Components_object;
   if ( !iTween___c_TypeInfo->_2.cctor_finished )
@@ -22279,16 +22279,16 @@ void iTween__Resume_63255372(
       v8 = iTween___c_TypeInfo;
     }
     v11 = (Il2CppObject *)v8->static_fields->__9;
-    _9__209_0 = (System_Func_object__bool__o *)sub_1C32E6C(System_Func_iTween__bool__TypeInfo);
+    _9__209_0 = (System_Func_object__bool__o *)sub_1C372A4(System_Func_iTween__bool__TypeInfo);
     System_Func_object__bool____ctor(_9__209_0, v11, Method_iTween___c__Resume_b__209_0__, 0);
     static_fields = iTween___c_TypeInfo->static_fields;
     static_fields->__9__209_0 = (struct System_Func_iTween__bool__o *)_9__209_0;
-    sub_1C32BC4((CGThumbnailListItem_o *)&static_fields->__9__209_0, (int32_t)_9__209_0, v13, v14);
+    sub_1C36FFC((CGThumbnailListItem_o *)&static_fields->__9__209_0, (int32_t)_9__209_0, v13, v14);
   }
   target = (UnityEngine_GameObject_o *)System_Linq_Enumerable__Where_object_(
                                          v9,
                                          (System_Func_TSource__bool__o *)_9__209_0,
-                                         (const MethodInfo_3123BA8 *)Method_System_Linq_Enumerable_Where_iTween___);
+                                         (const MethodInfo_312E410 *)Method_System_Linq_Enumerable_Where_iTween___);
   if ( !target )
     goto LABEL_80;
   klass = target->klass;
@@ -22309,11 +22309,11 @@ void iTween__Resume_63255372(
   else
   {
 LABEL_15:
-    v19 = sub_1C83438(target, System_Collections_Generic_IEnumerable_iTween__TypeInfo, 0);
+    v19 = sub_1C87870(target, System_Collections_Generic_IEnumerable_iTween__TypeInfo, 0);
   }
   v20 = (*(__int64 (__fastcall **)(UnityEngine_GameObject_o *, _QWORD))v19)(v16, *(_QWORD *)(v19 + 8));
   if ( !v20 )
-    sub_1C32E7C(0);
+    sub_1C372B4(0);
   while ( 1 )
   {
     v21 = *(_QWORD *)v20;
@@ -22333,7 +22333,7 @@ LABEL_15:
     else
     {
 LABEL_22:
-      v24 = sub_1C83438(v20, System_Collections_IEnumerator_TypeInfo, 0);
+      v24 = sub_1C87870(v20, System_Collections_IEnumerator_TypeInfo, 0);
     }
     if ( ((*(__int64 (__fastcall **)(__int64, _QWORD))v24)(v20, *(_QWORD *)(v24 + 8)) & 1) == 0 )
       break;
@@ -22354,20 +22354,20 @@ LABEL_22:
     else
     {
 LABEL_29:
-      v28 = sub_1C83438(v20, System_Collections_Generic_IEnumerator_iTween__TypeInfo, 0);
+      v28 = sub_1C87870(v20, System_Collections_Generic_IEnumerator_iTween__TypeInfo, 0);
     }
     v29 = (*(__int64 (__fastcall **)(__int64, _QWORD))v28)(v20, *(_QWORD *)(v28 + 8));
     v30 = (UnityEngine_Behaviour_o *)v29;
     if ( !v29 )
-      sub_1C32E7C(0);
-    v31 = System_String__Concat_63518544(*(System_String_o **)(v29 + 48), *(System_String_o **)(v29 + 56), 0);
+      sub_1C372B4(0);
+    v31 = System_String__Concat_63561656(*(System_String_o **)(v29 + 48), *(System_String_o **)(v29 + 56), 0);
     if ( !type )
-      sub_1C32E7C(v31);
+      sub_1C372B4(v31);
     if ( !v31 )
-      sub_1C32E7C(0);
-    v32 = System_String__Substring_63564468(v31, 0, type->fields._stringLength, 0);
+      sub_1C372B4(0);
+    v32 = System_String__Substring_63607580(v31, 0, type->fields._stringLength, 0);
     if ( !v32 )
-      sub_1C32E7C(0);
+      sub_1C372B4(0);
     v33 = System_String__ToLower(v32, 0);
     v34 = System_String__ToLower(type, 0);
     if ( System_String__op_Equality(v33, v34, 0) )
@@ -22390,7 +22390,7 @@ LABEL_29:
   else
   {
 LABEL_41:
-    v38 = sub_1C83438(v20, System_IDisposable_TypeInfo, 0);
+    v38 = sub_1C87870(v20, System_IDisposable_TypeInfo, 0);
   }
   (*(void (__fastcall **)(__int64, _QWORD))v38)(v20, *(_QWORD *)(v38 + 8));
   if ( includechildren )
@@ -22400,7 +22400,7 @@ LABEL_41:
     {
       Enumerator = UnityEngine_Transform__GetEnumerator((UnityEngine_Transform_o *)target, 0);
       if ( !Enumerator )
-        sub_1C32E7C(0);
+        sub_1C372B4(0);
       while ( 1 )
       {
         v40 = Enumerator->klass;
@@ -22420,7 +22420,7 @@ LABEL_41:
         else
         {
 LABEL_50:
-          v43 = sub_1C83438(Enumerator, System_Collections_IEnumerator_TypeInfo, 0);
+          v43 = sub_1C87870(Enumerator, System_Collections_IEnumerator_TypeInfo, 0);
         }
         if ( ((*(__int64 (__fastcall **)(System_Collections_IEnumerator_o *, _QWORD))v43)(
                 Enumerator,
@@ -22444,7 +22444,7 @@ LABEL_50:
         else
         {
 LABEL_57:
-          v47 = sub_1C83438(Enumerator, System_Collections_IEnumerator_TypeInfo, 1);
+          v47 = sub_1C87870(Enumerator, System_Collections_IEnumerator_TypeInfo, 1);
         }
         v48 = (UnityEngine_Component_o *)(*(__int64 (__fastcall **)(System_Collections_IEnumerator_o *, _QWORD))v47)(
                                            Enumerator,
@@ -22455,16 +22455,16 @@ LABEL_57:
         if ( v48->klass->_2.naturalAligment < (unsigned int)naturalAligment
           || (UnityEngine_Transform_c *)v48->klass->_2.typeHierarchy[naturalAligment - 1] != UnityEngine_Transform_TypeInfo )
         {
-          sub_1C3313C(v48);
+          sub_1C37574(v48);
 LABEL_79:
-          sub_1C32E7C(v48);
+          sub_1C372B4(v48);
         }
         gameObject = UnityEngine_Component__get_gameObject(v48, 0);
         if ( !iTween_TypeInfo->_2.cctor_finished )
           j_il2cpp_runtime_class_init_0(iTween_TypeInfo);
-        iTween__Resume_63255372(gameObject, type, 1, v50);
+        iTween__Resume_63298484(gameObject, type, 1, v50);
       }
-      v52 = sub_1C32D5C(Enumerator);
+      v52 = sub_1C37194(Enumerator);
       if ( v52 )
       {
         v53 = *(_QWORD *)v52;
@@ -22485,19 +22485,19 @@ LABEL_79:
         else
         {
 LABEL_70:
-          v57 = sub_1C83438(v52, System_IDisposable_TypeInfo, 0);
+          v57 = sub_1C87870(v52, System_IDisposable_TypeInfo, 0);
         }
         (*(void (__fastcall **)(__int64, _QWORD))v57)(v54, *(_QWORD *)(v57 + 8));
       }
       return;
     }
 LABEL_80:
-    sub_1C32E7C(target);
+    sub_1C372B4(target);
   }
 }
 
 
-void iTween__Resume_63257216(const MethodInfo *method)
+void iTween__Resume_63300328(const MethodInfo *method)
 {
   int32_t i; // w19
   void *Item; // x0
@@ -22507,14 +22507,14 @@ void iTween__Resume_63257216(const MethodInfo *method)
   System_String_o *v6; // x0
   const MethodInfo *v7; // x1
 
-  if ( (byte_4C3EA27 & 1) == 0 )
+  if ( (byte_4C49FA7 & 1) == 0 )
   {
-    sub_1C32C20(&UnityEngine_GameObject_TypeInfo);
-    sub_1C32C20(&Method_System_Collections_Generic_List_Hashtable__get_Count__);
-    sub_1C32C20(&Method_System_Collections_Generic_List_Hashtable__get_Item__);
-    sub_1C32C20(&StringLiteral_23988/*"target"*/);
-    sub_1C32C20(&iTween_TypeInfo);
-    byte_4C3EA27 = 1;
+    sub_1C37058(&UnityEngine_GameObject_TypeInfo);
+    sub_1C37058(&Method_System_Collections_Generic_List_Hashtable__get_Count__);
+    sub_1C37058(&Method_System_Collections_Generic_List_Hashtable__get_Item__);
+    sub_1C37058(&StringLiteral_23992/*"target"*/);
+    sub_1C37058(&iTween_TypeInfo);
+    byte_4C49FA7 = 1;
   }
   for ( i = 0; ; ++i )
   {
@@ -22535,14 +22535,14 @@ void iTween__Resume_63257216(const MethodInfo *method)
       || (Item = System_Collections_Generic_List_object___get_Item(
                    tweens,
                    i,
-                   (const MethodInfo_37984EC *)Method_System_Collections_Generic_List_Hashtable__get_Item__)) == 0 )
+                   (const MethodInfo_37A2D54 *)Method_System_Collections_Generic_List_Hashtable__get_Item__)) == 0 )
     {
 LABEL_15:
-      sub_1C32E7C(Item);
+      sub_1C372B4(Item);
     }
     v4 = (UnityEngine_GameObject_o *)(*(__int64 (__fastcall **)(void *, __int64, _QWORD))(*(_QWORD *)Item + 760LL))(
                                        Item,
-                                       StringLiteral_23988/*"target"*/,
+                                       StringLiteral_23992/*"target"*/,
                                        *(_QWORD *)(*(_QWORD *)Item + 768LL));
     if ( v4 )
     {
@@ -22552,12 +22552,12 @@ LABEL_15:
     }
     iTween__Resume(v4, (const MethodInfo *)v5);
   }
-  sub_1C3313C(v4);
-  iTween__Resume_63257512(v6, v7);
+  sub_1C37574(v4);
+  iTween__Resume_63300624(v6, v7);
 }
 
 
-void iTween__Resume_63257512(System_String_o *type, const MethodInfo *method)
+void iTween__Resume_63300624(System_String_o *type, const MethodInfo *method)
 {
   System_Collections_ArrayList_o *v3; // x20
   int32_t i; // w21
@@ -22571,17 +22571,17 @@ void iTween__Resume_63257512(System_String_o *type, const MethodInfo *method)
   UnityEngine_GameObject_o *v12; // x0
   const MethodInfo *v13; // x1
 
-  if ( (byte_4C3EA28 & 1) == 0 )
+  if ( (byte_4C49FA8 & 1) == 0 )
   {
-    sub_1C32C20(&System_Collections_ArrayList_TypeInfo);
-    sub_1C32C20(&UnityEngine_GameObject_TypeInfo);
-    sub_1C32C20(&Method_System_Collections_Generic_List_Hashtable__get_Count__);
-    sub_1C32C20(&Method_System_Collections_Generic_List_Hashtable__get_Item__);
-    sub_1C32C20(&StringLiteral_23988/*"target"*/);
-    sub_1C32C20(&iTween_TypeInfo);
-    byte_4C3EA28 = 1;
+    sub_1C37058(&System_Collections_ArrayList_TypeInfo);
+    sub_1C37058(&UnityEngine_GameObject_TypeInfo);
+    sub_1C37058(&Method_System_Collections_Generic_List_Hashtable__get_Count__);
+    sub_1C37058(&Method_System_Collections_Generic_List_Hashtable__get_Item__);
+    sub_1C37058(&StringLiteral_23992/*"target"*/);
+    sub_1C37058(&iTween_TypeInfo);
+    byte_4C49FA8 = 1;
   }
-  v3 = (System_Collections_ArrayList_o *)sub_1C32E6C(System_Collections_ArrayList_TypeInfo);
+  v3 = (System_Collections_ArrayList_o *)sub_1C372A4(System_Collections_ArrayList_TypeInfo);
   System_Collections_ArrayList___ctor(v3, 0);
   for ( i = 0; ; ++i )
   {
@@ -22606,18 +22606,18 @@ void iTween__Resume_63257512(System_String_o *type, const MethodInfo *method)
     Item = System_Collections_Generic_List_object___get_Item(
              tweens,
              i,
-             (const MethodInfo_37984EC *)Method_System_Collections_Generic_List_Hashtable__get_Item__);
+             (const MethodInfo_37A2D54 *)Method_System_Collections_Generic_List_Hashtable__get_Item__);
     if ( !Item )
       goto LABEL_25;
     Item = (void *)(*(__int64 (__fastcall **)(void *, __int64, _QWORD))(*(_QWORD *)Item + 760LL))(
                      Item,
-                     StringLiteral_23988/*"target"*/,
+                     StringLiteral_23992/*"target"*/,
                      *(_QWORD *)(*(_QWORD *)Item + 768LL));
     v7 = (UnityEngine_GameObject_o *)Item;
     if ( Item && *(UnityEngine_GameObject_c **)Item != UnityEngine_GameObject_TypeInfo )
     {
 LABEL_26:
-      sub_1C3313C(v7);
+      sub_1C37574(v7);
       iTween__Pause(v12, v13);
       return;
     }
@@ -22634,7 +22634,7 @@ LABEL_26:
   }
   if ( !v3 )
 LABEL_25:
-    sub_1C32E7C(Item);
+    sub_1C372B4(Item);
   if ( ((int (__fastcall *)(System_Collections_ArrayList_o *, const MethodInfo *))v3->klass->vtable._22_get_Count.methodPtr)(
          v3,
          v3->klass->vtable._22_get_Count.method) >= 1 )
@@ -22665,7 +22665,7 @@ LABEL_22:
             goto LABEL_26;
         }
       }
-      iTween__Resume_63254244(v7, type, v11);
+      iTween__Resume_63297356(v7, type, v11);
     }
   }
 }
@@ -22786,44 +22786,44 @@ void iTween__RetrieveArgs(iTween_o *this, const MethodInfo *method)
   System_Collections_Generic_List_Enumerator_object__o v113; // [xsp+8h] [xbp-98h] BYREF
   System_Collections_Generic_List_Enumerator_object__o v114; // [xsp+20h] [xbp-80h] BYREF
 
-  if ( (byte_4C3EA44 & 1) == 0 )
+  if ( (byte_4C49FC4 & 1) == 0 )
   {
-    sub_1C32C20(&bool_TypeInfo);
-    sub_1C32C20(&Method_UnityEngine_Component_GetComponent_Rigidbody___);
-    sub_1C32C20(&iTween_Defaults_TypeInfo);
-    sub_1C32C20(&iTween_EaseType_var);
-    sub_1C32C20(&iTween_EaseType_TypeInfo);
-    sub_1C32C20(&System_Enum_TypeInfo);
-    sub_1C32C20(&Method_System_Collections_Generic_List_Enumerator_Hashtable__Dispose__);
-    sub_1C32C20(&Method_System_Collections_Generic_List_Enumerator_Hashtable__MoveNext__);
-    sub_1C32C20(&Method_System_Collections_Generic_List_Enumerator_Hashtable__get_Current__);
-    sub_1C32C20(&UnityEngine_GameObject_TypeInfo);
-    sub_1C32C20(&Method_System_Collections_Generic_List_Hashtable__GetEnumerator__);
-    sub_1C32C20(&iTween_LoopType_var);
-    sub_1C32C20(&iTween_LoopType_TypeInfo);
-    sub_1C32C20(&iTween_NamedValueColor_var);
-    sub_1C32C20(&iTween_NamedValueColor_TypeInfo);
-    sub_1C32C20(&UnityEngine_Object_TypeInfo);
-    sub_1C32C20(&float_TypeInfo);
-    sub_1C32C20(&UnityEngine_Space_var);
-    sub_1C32C20(&UnityEngine_Space_TypeInfo);
-    sub_1C32C20(&string_TypeInfo);
-    sub_1C32C20(&System_Type_TypeInfo);
-    sub_1C32C20(&StringLiteral_20278/*"ignoretimescale"*/);
-    sub_1C32C20(&StringLiteral_18751/*"easetype"*/);
-    sub_1C32C20(&StringLiteral_23988/*"target"*/);
-    sub_1C32C20(&StringLiteral_24067/*"time"*/);
-    sub_1C32C20(&StringLiteral_18551/*"delay"*/);
-    sub_1C32C20(&StringLiteral_21560/*"method"*/);
-    sub_1C32C20(&StringLiteral_21354/*"looptype"*/);
-    sub_1C32C20(&StringLiteral_20251/*"id"*/);
-    sub_1C32C20(&StringLiteral_20971/*"islocal"*/);
-    sub_1C32C20(&StringLiteral_22147/*"name"*/);
-    sub_1C32C20(&StringLiteral_23579/*"space"*/);
-    sub_1C32C20(&StringLiteral_22154/*"namedcolorvalue"*/);
-    sub_1C32C20(&StringLiteral_24241/*"type"*/);
-    sub_1C32C20(&iTween_TypeInfo);
-    byte_4C3EA44 = 1;
+    sub_1C37058(&bool_TypeInfo);
+    sub_1C37058(&Method_UnityEngine_Component_GetComponent_Rigidbody___);
+    sub_1C37058(&iTween_Defaults_TypeInfo);
+    sub_1C37058(&iTween_EaseType_var);
+    sub_1C37058(&iTween_EaseType_TypeInfo);
+    sub_1C37058(&System_Enum_TypeInfo);
+    sub_1C37058(&Method_System_Collections_Generic_List_Enumerator_Hashtable__Dispose__);
+    sub_1C37058(&Method_System_Collections_Generic_List_Enumerator_Hashtable__MoveNext__);
+    sub_1C37058(&Method_System_Collections_Generic_List_Enumerator_Hashtable__get_Current__);
+    sub_1C37058(&UnityEngine_GameObject_TypeInfo);
+    sub_1C37058(&Method_System_Collections_Generic_List_Hashtable__GetEnumerator__);
+    sub_1C37058(&iTween_LoopType_var);
+    sub_1C37058(&iTween_LoopType_TypeInfo);
+    sub_1C37058(&iTween_NamedValueColor_var);
+    sub_1C37058(&iTween_NamedValueColor_TypeInfo);
+    sub_1C37058(&UnityEngine_Object_TypeInfo);
+    sub_1C37058(&float_TypeInfo);
+    sub_1C37058(&UnityEngine_Space_var);
+    sub_1C37058(&UnityEngine_Space_TypeInfo);
+    sub_1C37058(&string_TypeInfo);
+    sub_1C37058(&System_Type_TypeInfo);
+    sub_1C37058(&StringLiteral_20281/*"ignoretimescale"*/);
+    sub_1C37058(&StringLiteral_18754/*"easetype"*/);
+    sub_1C37058(&StringLiteral_23992/*"target"*/);
+    sub_1C37058(&StringLiteral_24071/*"time"*/);
+    sub_1C37058(&StringLiteral_18554/*"delay"*/);
+    sub_1C37058(&StringLiteral_21563/*"method"*/);
+    sub_1C37058(&StringLiteral_21357/*"looptype"*/);
+    sub_1C37058(&StringLiteral_20254/*"id"*/);
+    sub_1C37058(&StringLiteral_20974/*"islocal"*/);
+    sub_1C37058(&StringLiteral_22150/*"name"*/);
+    sub_1C37058(&StringLiteral_23583/*"space"*/);
+    sub_1C37058(&StringLiteral_22157/*"namedcolorvalue"*/);
+    sub_1C37058(&StringLiteral_24245/*"type"*/);
+    sub_1C37058(&iTween_TypeInfo);
+    byte_4C49FC4 = 1;
   }
   v3 = iTween_TypeInfo;
   memset(&v114, 0, sizeof(v114));
@@ -22836,49 +22836,49 @@ void iTween__RetrieveArgs(iTween_o *this, const MethodInfo *method)
   if ( !tweens )
     goto LABEL_188;
   v5 = &Method_System_Collections_Generic_List_Enumerator_Hashtable__MoveNext__;
-  v6 = &StringLiteral_24067/*"time"*/;
+  v6 = &StringLiteral_24071/*"time"*/;
   System_Collections_Generic_List_object___GetEnumerator(
     (System_Collections_Generic_List_Enumerator_T__o *)&v113,
     tweens,
-    (const MethodInfo_37992B4 *)Method_System_Collections_Generic_List_Hashtable__GetEnumerator__);
+    (const MethodInfo_37A3B1C *)Method_System_Collections_Generic_List_Hashtable__GetEnumerator__);
   v114 = v113;
   do
   {
     v7 = System_Collections_Generic_List_Enumerator_object___MoveNext(
            &v114,
-           (const MethodInfo_3522FA8 *)Method_System_Collections_Generic_List_Enumerator_Hashtable__MoveNext__);
+           (const MethodInfo_352D810 *)Method_System_Collections_Generic_List_Enumerator_Hashtable__MoveNext__);
     if ( !v7 )
       goto LABEL_15;
     current = v114.fields._current;
     if ( !v114.fields._current )
-      sub_1C32E7C(v7);
+      sub_1C372B4(v7);
     v9 = (UnityEngine_Object_o *)((__int64 (__fastcall *)(Il2CppObject *, __int64, const MethodInfo *))v114.fields._current->klass->vtable[28].methodPtr)(
                                    v114.fields._current,
-                                   StringLiteral_23988/*"target"*/,
+                                   StringLiteral_23992/*"target"*/,
                                    v114.fields._current->klass->vtable[28].method);
     gameObject = (UnityEngine_Object_o *)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
     if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
     if ( v9 && (UnityEngine_GameObject_c *)v9->klass != UnityEngine_GameObject_TypeInfo )
     {
-      sub_1C3313C(v9);
+      sub_1C37574(v9);
       goto LABEL_108;
     }
   }
   while ( !UnityEngine_Object__op_Equality(v9, gameObject, 0) );
   this->fields.tweenArguments = (struct System_Collections_Hashtable_o *)current;
-  sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.tweenArguments, (int32_t)current, v11, v12);
+  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.tweenArguments, (int32_t)current, v11, v12);
 LABEL_15:
   System_Collections_Generic_List_Enumerator_object___Dispose(
     &v114,
-    (const MethodInfo_3522FA4 *)Method_System_Collections_Generic_List_Enumerator_Hashtable__Dispose__);
+    (const MethodInfo_352D80C *)Method_System_Collections_Generic_List_Enumerator_Hashtable__Dispose__);
   p_tweenArguments = &this->fields.tweenArguments;
   tweens = (System_Collections_Generic_List_object__o *)this->fields.tweenArguments;
   if ( !tweens )
     goto LABEL_188;
   v14 = (struct System_String_o *)((__int64 (__fastcall *)(System_Collections_Generic_List_object__o *, __int64, const MethodInfo *))tweens->klass->vtable._28_RemoveAt.methodPtr)(
                                     tweens,
-                                    StringLiteral_20251/*"id"*/,
+                                    StringLiteral_20254/*"id"*/,
                                     tweens->klass->vtable._28_RemoveAt.method);
   v17 = v14;
   if ( v14 )
@@ -22887,7 +22887,7 @@ LABEL_15:
     if ( v14->klass != string_TypeInfo || (this->fields.id = v14, p_id = &this->fields.id, v17->klass != v18) )
     {
 LABEL_37:
-      sub_1C3313C(v17);
+      sub_1C37574(v17);
 LABEL_38:
       this->fields.method = 0;
       p_method = &this->fields.method;
@@ -22899,20 +22899,20 @@ LABEL_38:
     this->fields.id = 0;
     p_id = &this->fields.id;
   }
-  sub_1C32BC4((CGThumbnailListItem_o *)p_id, (int32_t)v17, v15, v16);
+  sub_1C36FFC((CGThumbnailListItem_o *)p_id, (int32_t)v17, v15, v16);
   tweens = (System_Collections_Generic_List_object__o *)*p_tweenArguments;
   if ( !*p_tweenArguments )
     goto LABEL_188;
   v20 = (struct System_String_o *)((__int64 (__fastcall *)(System_Collections_Generic_List_object__o *, __int64, const MethodInfo *))tweens->klass->vtable._28_RemoveAt.methodPtr)(
                                     tweens,
-                                    StringLiteral_24241/*"type"*/,
+                                    StringLiteral_24245/*"type"*/,
                                     tweens->klass->vtable._28_RemoveAt.method);
   v17 = v20;
   if ( v20 )
   {
     v23 = string_TypeInfo;
-    v5 = &StringLiteral_20278/*"ignoretimescale"*/;
-    v6 = &StringLiteral_20971/*"islocal"*/;
+    v5 = &StringLiteral_20281/*"ignoretimescale"*/;
+    v6 = &StringLiteral_20974/*"islocal"*/;
     if ( v20->klass != string_TypeInfo )
       goto LABEL_37;
     this->fields.type = v20;
@@ -22924,16 +22924,16 @@ LABEL_38:
   {
     this->fields.type = 0;
     p_type = &this->fields.type;
-    v5 = &StringLiteral_20278/*"ignoretimescale"*/;
-    v6 = &StringLiteral_20971/*"islocal"*/;
+    v5 = &StringLiteral_20281/*"ignoretimescale"*/;
+    v6 = &StringLiteral_20974/*"islocal"*/;
   }
-  sub_1C32BC4((CGThumbnailListItem_o *)p_type, (int32_t)v17, v21, v22);
+  sub_1C36FFC((CGThumbnailListItem_o *)p_type, (int32_t)v17, v21, v22);
   tweens = (System_Collections_Generic_List_object__o *)*p_tweenArguments;
   if ( !*p_tweenArguments )
     goto LABEL_188;
   v25 = (struct System_String_o *)((__int64 (__fastcall *)(System_Collections_Generic_List_object__o *, __int64, const MethodInfo *))tweens->klass->vtable._28_RemoveAt.methodPtr)(
                                     tweens,
-                                    StringLiteral_22147/*"name"*/,
+                                    StringLiteral_22150/*"name"*/,
                                     tweens->klass->vtable._28_RemoveAt.method);
   v17 = v25;
   if ( v25 )
@@ -22951,13 +22951,13 @@ LABEL_38:
     this->fields._name = 0;
     p_name = &this->fields._name;
   }
-  sub_1C32BC4((CGThumbnailListItem_o *)p_name, (int32_t)v17, v26, v27);
+  sub_1C36FFC((CGThumbnailListItem_o *)p_name, (int32_t)v17, v26, v27);
   tweens = (System_Collections_Generic_List_object__o *)*p_tweenArguments;
   if ( !*p_tweenArguments )
     goto LABEL_188;
   v30 = (struct System_String_o *)((__int64 (__fastcall *)(System_Collections_Generic_List_object__o *, __int64, const MethodInfo *))tweens->klass->vtable._28_RemoveAt.methodPtr)(
                                     tweens,
-                                    StringLiteral_21560/*"method"*/,
+                                    StringLiteral_21563/*"method"*/,
                                     tweens->klass->vtable._28_RemoveAt.method);
   v17 = v30;
   if ( !v30 )
@@ -22970,13 +22970,13 @@ LABEL_38:
   if ( v17->klass != v33 )
     goto LABEL_37;
 LABEL_39:
-  sub_1C32BC4((CGThumbnailListItem_o *)p_method, (int32_t)v17, v31, v32);
+  sub_1C36FFC((CGThumbnailListItem_o *)p_method, (int32_t)v17, v31, v32);
   tweens = (System_Collections_Generic_List_object__o *)*p_tweenArguments;
   if ( !*p_tweenArguments )
     goto LABEL_188;
   if ( (((__int64 (__fastcall *)(System_Collections_Generic_List_object__o *, __int64, const MethodInfo *))tweens->klass->vtable._25_System_Collections_IList_IndexOf.methodPtr)(
           tweens,
-          StringLiteral_24067/*"time"*/,
+          StringLiteral_24071/*"time"*/,
           tweens->klass->vtable._25_System_Collections_IList_IndexOf.method)
       & 1) != 0 )
   {
@@ -22985,7 +22985,7 @@ LABEL_39:
     {
       tweens = (System_Collections_Generic_List_object__o *)((__int64 (__fastcall *)(System_Collections_Generic_List_object__o *, __int64, const MethodInfo *))tweens->klass->vtable._28_RemoveAt.methodPtr)(
                                                               tweens,
-                                                              StringLiteral_24067/*"time"*/,
+                                                              StringLiteral_24071/*"time"*/,
                                                               tweens->klass->vtable._28_RemoveAt.method);
       if ( tweens )
       {
@@ -22995,13 +22995,13 @@ LABEL_39:
           goto LABEL_48;
         }
 LABEL_189:
-        sub_1C3313C(tweens);
+        sub_1C37574(tweens);
 LABEL_190:
-        sub_1C32E7C(v87);
+        sub_1C372B4(v87);
       }
     }
 LABEL_188:
-    sub_1C32E7C(tweens);
+    sub_1C372B4(tweens);
   }
   v38 = iTween_Defaults_TypeInfo;
   if ( !iTween_Defaults_TypeInfo->_2.cctor_finished )
@@ -23014,7 +23014,7 @@ LABEL_48:
   this->fields.time = *p_time;
   Component_object = UnityEngine_Component__GetComponent_object_(
                        (UnityEngine_Component_o *)this,
-                       (const MethodInfo_30D3BC0 *)Method_UnityEngine_Component_GetComponent_Rigidbody___);
+                       (const MethodInfo_30DE428 *)Method_UnityEngine_Component_GetComponent_Rigidbody___);
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   if ( UnityEngine_Object__op_Inequality((UnityEngine_Object_o *)Component_object, 0, 0) )
@@ -23024,7 +23024,7 @@ LABEL_48:
     goto LABEL_188;
   if ( (((__int64 (__fastcall *)(System_Collections_Generic_List_object__o *, __int64, const MethodInfo *))tweens->klass->vtable._25_System_Collections_IList_IndexOf.methodPtr)(
           tweens,
-          StringLiteral_18551/*"delay"*/,
+          StringLiteral_18554/*"delay"*/,
           tweens->klass->vtable._25_System_Collections_IList_IndexOf.method)
       & 1) != 0 )
   {
@@ -23033,7 +23033,7 @@ LABEL_48:
       goto LABEL_188;
     tweens = (System_Collections_Generic_List_object__o *)((__int64 (__fastcall *)(System_Collections_Generic_List_object__o *, __int64, const MethodInfo *))tweens->klass->vtable._28_RemoveAt.methodPtr)(
                                                             tweens,
-                                                            StringLiteral_18551/*"delay"*/,
+                                                            StringLiteral_18554/*"delay"*/,
                                                             tweens->klass->vtable._28_RemoveAt.method);
     if ( !tweens )
       goto LABEL_188;
@@ -23058,7 +23058,7 @@ LABEL_48:
     goto LABEL_188;
   if ( (((__int64 (__fastcall *)(System_Collections_Generic_List_object__o *, __int64, const MethodInfo *))tweens->klass->vtable._25_System_Collections_IList_IndexOf.methodPtr)(
           tweens,
-          StringLiteral_22154/*"namedcolorvalue"*/,
+          StringLiteral_22157/*"namedcolorvalue"*/,
           tweens->klass->vtable._25_System_Collections_IList_IndexOf.method)
       & 1) == 0 )
   {
@@ -23076,7 +23076,7 @@ LABEL_48:
     goto LABEL_188;
   tweens = (System_Collections_Generic_List_object__o *)((__int64 (__fastcall *)(System_Collections_Generic_List_object__o *, __int64, const MethodInfo *))tweens->klass->vtable._28_RemoveAt.methodPtr)(
                                                           tweens,
-                                                          StringLiteral_22154/*"namedcolorvalue"*/,
+                                                          StringLiteral_22157/*"namedcolorvalue"*/,
                                                           tweens->klass->vtable._28_RemoveAt.method);
   if ( !tweens )
     goto LABEL_188;
@@ -23098,20 +23098,20 @@ LABEL_48:
     {
       v58 = (System_String_o *)((__int64 (__fastcall *)(struct System_Collections_Hashtable_o *, __int64, const MethodInfo *))v57->klass->vtable._28_get_Item.methodPtr)(
                                  v57,
-                                 StringLiteral_22154/*"namedcolorvalue"*/,
+                                 StringLiteral_22157/*"namedcolorvalue"*/,
                                  v57->klass->vtable._28_get_Item.method);
       if ( !System_Enum_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(System_Enum_TypeInfo);
       if ( v58 && v58->klass != string_TypeInfo )
       {
 LABEL_114:
-        sub_1C3313C(v58);
+        sub_1C37574(v58);
 LABEL_115:
-        sub_1C3313C(v58);
+        sub_1C37574(v58);
         if ( v71 != 1 )
-          sub_1D1BD54();
+          sub_1D2018C();
         v72 = (System_Type_o *)__cxa_begin_catch(v70);
-        v73 = sub_1C32C34(&object_TypeInfo);
+        v73 = sub_1C3706C(&object_TypeInfo);
         if ( (j_il2cpp_class_is_assignable_from_0(v73, v72->klass->_1.image) & 1) == 0 )
         {
 LABEL_198:
@@ -23120,36 +23120,36 @@ LABEL_198:
           __cxa_throw(exception, (struct type_info *)&`typeinfo for'Il2CppExceptionWrapper, 0);
         }
         __cxa_end_catch();
-        v74 = sub_1C32C34(&UnityEngine_Debug_TypeInfo);
+        v74 = sub_1C3706C(&UnityEngine_Debug_TypeInfo);
         if ( !*(_DWORD *)(v74 + 224) )
           j_il2cpp_runtime_class_init_0(v74);
-        v75 = (Il2CppObject *)sub_1C32C34(&StringLiteral_20106/*"iTween: Unsupported loopType supplied! Default will be used."*/);
+        v75 = (Il2CppObject *)sub_1C3706C(&StringLiteral_20109/*"iTween: Unsupported loopType supplied! Default will be used."*/);
         UnityEngine_Debug__LogWarning(v75, 0);
-        v5 = &StringLiteral_20278/*"ignoretimescale"*/;
-        v6 = &StringLiteral_20971/*"islocal"*/;
+        v5 = &StringLiteral_20281/*"ignoretimescale"*/;
+        v6 = &StringLiteral_20974/*"islocal"*/;
 LABEL_120:
         v69 = 0;
         goto LABEL_121;
       }
-      tweens = (System_Collections_Generic_List_object__o *)System_Enum__Parse_65249564(v56, v58, 1, 0);
+      tweens = (System_Collections_Generic_List_object__o *)System_Enum__Parse_65292676(v56, v58, 1, 0);
       if ( !tweens )
-        sub_1C32E7C(0);
+        sub_1C372B4(0);
       v51 = iTween_NamedValueColor_TypeInfo;
       if ( tweens->klass->_1.element_class == iTween_NamedValueColor_TypeInfo->_1.element_class )
         goto LABEL_84;
-      sub_1C3313C(tweens);
+      sub_1C37574(tweens);
 LABEL_112:
-      sub_1C32E7C(tweens);
+      sub_1C372B4(tweens);
     }
 LABEL_108:
-    sub_1C32E7C(v57);
+    sub_1C372B4(v57);
   }
   tweens = (System_Collections_Generic_List_object__o *)*p_tweenArguments;
   if ( !*p_tweenArguments )
     goto LABEL_188;
   tweens = (System_Collections_Generic_List_object__o *)((__int64 (__fastcall *)(System_Collections_Generic_List_object__o *, __int64, const MethodInfo *))tweens->klass->vtable._28_RemoveAt.methodPtr)(
                                                           tweens,
-                                                          StringLiteral_22154/*"namedcolorvalue"*/,
+                                                          StringLiteral_22157/*"namedcolorvalue"*/,
                                                           tweens->klass->vtable._28_RemoveAt.method);
   if ( !tweens )
     goto LABEL_188;
@@ -23165,7 +23165,7 @@ LABEL_85:
     goto LABEL_188;
   if ( (((__int64 (__fastcall *)(System_Collections_Generic_List_object__o *, __int64, const MethodInfo *))tweens->klass->vtable._25_System_Collections_IList_IndexOf.methodPtr)(
           tweens,
-          StringLiteral_21354/*"looptype"*/,
+          StringLiteral_21357/*"looptype"*/,
           tweens->klass->vtable._25_System_Collections_IList_IndexOf.method)
       & 1) == 0 )
     goto LABEL_120;
@@ -23174,7 +23174,7 @@ LABEL_85:
     goto LABEL_188;
   tweens = (System_Collections_Generic_List_object__o *)((__int64 (__fastcall *)(System_Collections_Generic_List_object__o *, __int64, const MethodInfo *))tweens->klass->vtable._28_RemoveAt.methodPtr)(
                                                           tweens,
-                                                          StringLiteral_21354/*"looptype"*/,
+                                                          StringLiteral_21357/*"looptype"*/,
                                                           tweens->klass->vtable._28_RemoveAt.method);
   if ( !tweens )
     goto LABEL_188;
@@ -23192,22 +23192,22 @@ LABEL_85:
     v67.fields.value = (intptr_t)v66;
     v68 = System_Type__GetTypeFromHandle(v67, 0);
     if ( !*p_tweenArguments )
-      sub_1C32E7C(0);
+      sub_1C372B4(0);
     v58 = (System_String_o *)((__int64 (__fastcall *)(struct System_Collections_Hashtable_o *, __int64, const MethodInfo *))(*p_tweenArguments)->klass->vtable._28_get_Item.methodPtr)(
                                *p_tweenArguments,
-                               StringLiteral_21354/*"looptype"*/,
+                               StringLiteral_21357/*"looptype"*/,
                                (*p_tweenArguments)->klass->vtable._28_get_Item.method);
     if ( !System_Enum_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(System_Enum_TypeInfo);
     if ( v58 && v58->klass != string_TypeInfo )
       goto LABEL_115;
-    tweens = (System_Collections_Generic_List_object__o *)System_Enum__Parse_65249564(v68, v58, 1, 0);
+    tweens = (System_Collections_Generic_List_object__o *)System_Enum__Parse_65292676(v68, v58, 1, 0);
     if ( tweens )
     {
       v65 = iTween_LoopType_TypeInfo;
       if ( tweens->klass->_1.element_class == iTween_LoopType_TypeInfo->_1.element_class )
         goto LABEL_105;
-      sub_1C3313C(tweens);
+      sub_1C37574(tweens);
       goto LABEL_114;
     }
     goto LABEL_112;
@@ -23217,7 +23217,7 @@ LABEL_85:
     goto LABEL_188;
   tweens = (System_Collections_Generic_List_object__o *)((__int64 (__fastcall *)(System_Collections_Generic_List_object__o *, __int64, const MethodInfo *))tweens->klass->vtable._28_RemoveAt.methodPtr)(
                                                           tweens,
-                                                          StringLiteral_21354/*"looptype"*/,
+                                                          StringLiteral_21357/*"looptype"*/,
                                                           tweens->klass->vtable._28_RemoveAt.method);
   if ( !tweens )
     goto LABEL_188;
@@ -23233,7 +23233,7 @@ LABEL_121:
     goto LABEL_188;
   if ( (((__int64 (__fastcall *)(System_Collections_Generic_List_object__o *, __int64, const MethodInfo *))tweens->klass->vtable._25_System_Collections_IList_IndexOf.methodPtr)(
           tweens,
-          StringLiteral_18751/*"easetype"*/,
+          StringLiteral_18754/*"easetype"*/,
           tweens->klass->vtable._25_System_Collections_IList_IndexOf.method)
       & 1) == 0 )
   {
@@ -23251,7 +23251,7 @@ LABEL_121:
     goto LABEL_188;
   tweens = (System_Collections_Generic_List_object__o *)((__int64 (__fastcall *)(System_Collections_Generic_List_object__o *, __int64, const MethodInfo *))tweens->klass->vtable._28_RemoveAt.methodPtr)(
                                                           tweens,
-                                                          StringLiteral_18751/*"easetype"*/,
+                                                          StringLiteral_18754/*"easetype"*/,
                                                           tweens->klass->vtable._28_RemoveAt.method);
   if ( !tweens )
     goto LABEL_188;
@@ -23273,34 +23273,34 @@ LABEL_121:
       goto LABEL_190;
     v88 = (System_String_o *)((__int64 (__fastcall *)(struct System_Collections_Hashtable_o *, __int64, const MethodInfo *))v87->klass->vtable._28_get_Item.methodPtr)(
                                v87,
-                               StringLiteral_18751/*"easetype"*/,
+                               StringLiteral_18754/*"easetype"*/,
                                v87->klass->vtable._28_get_Item.method);
     if ( !System_Enum_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(System_Enum_TypeInfo);
     if ( v88 && v88->klass != string_TypeInfo )
     {
 LABEL_196:
-      sub_1C3313C(v88);
+      sub_1C37574(v88);
 LABEL_197:
-      sub_1C3313C(v88);
+      sub_1C37574(v88);
       goto LABEL_198;
     }
-    tweens = (System_Collections_Generic_List_object__o *)System_Enum__Parse_65249564(v72, v88, 1, 0);
+    tweens = (System_Collections_Generic_List_object__o *)System_Enum__Parse_65292676(v72, v88, 1, 0);
     if ( !tweens )
-      sub_1C32E7C(0);
+      sub_1C372B4(0);
     v82 = iTween_EaseType_TypeInfo;
     if ( tweens->klass->_1.element_class == iTween_EaseType_TypeInfo->_1.element_class )
       goto LABEL_144;
-    sub_1C3313C(tweens);
+    sub_1C37574(tweens);
 LABEL_194:
-    sub_1C32E7C(tweens);
+    sub_1C372B4(tweens);
   }
   tweens = (System_Collections_Generic_List_object__o *)*p_tweenArguments;
   if ( !*p_tweenArguments )
     goto LABEL_188;
   tweens = (System_Collections_Generic_List_object__o *)((__int64 (__fastcall *)(System_Collections_Generic_List_object__o *, __int64, const MethodInfo *))tweens->klass->vtable._28_RemoveAt.methodPtr)(
                                                           tweens,
-                                                          StringLiteral_18751/*"easetype"*/,
+                                                          StringLiteral_18754/*"easetype"*/,
                                                           tweens->klass->vtable._28_RemoveAt.method);
   if ( !tweens )
     goto LABEL_188;
@@ -23317,7 +23317,7 @@ LABEL_145:
     goto LABEL_188;
   if ( (((__int64 (__fastcall *)(System_Collections_Generic_List_object__o *, __int64, const MethodInfo *))tweens->klass->vtable._25_System_Collections_IList_IndexOf.methodPtr)(
           tweens,
-          StringLiteral_23579/*"space"*/,
+          StringLiteral_23583/*"space"*/,
           tweens->klass->vtable._25_System_Collections_IList_IndexOf.method)
       & 1) == 0 )
   {
@@ -23335,7 +23335,7 @@ LABEL_145:
     goto LABEL_188;
   tweens = (System_Collections_Generic_List_object__o *)((__int64 (__fastcall *)(System_Collections_Generic_List_object__o *, __int64, const MethodInfo *))tweens->klass->vtable._28_RemoveAt.methodPtr)(
                                                           tweens,
-                                                          StringLiteral_23579/*"space"*/,
+                                                          StringLiteral_23583/*"space"*/,
                                                           tweens->klass->vtable._28_RemoveAt.method);
   if ( !tweens )
     goto LABEL_188;
@@ -23353,22 +23353,22 @@ LABEL_145:
     v100.fields.value = (intptr_t)v99;
     v72 = System_Type__GetTypeFromHandle(v100, 0);
     if ( !*p_tweenArguments )
-      sub_1C32E7C(0);
+      sub_1C372B4(0);
     v88 = (System_String_o *)((__int64 (__fastcall *)(struct System_Collections_Hashtable_o *, __int64, const MethodInfo *))(*p_tweenArguments)->klass->vtable._28_get_Item.methodPtr)(
                                *p_tweenArguments,
-                               StringLiteral_23579/*"space"*/,
+                               StringLiteral_23583/*"space"*/,
                                (*p_tweenArguments)->klass->vtable._28_get_Item.method);
     if ( !System_Enum_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(System_Enum_TypeInfo);
     if ( v88 && v88->klass != string_TypeInfo )
       goto LABEL_197;
-    tweens = (System_Collections_Generic_List_object__o *)System_Enum__Parse_65249564(v72, v88, 1, 0);
+    tweens = (System_Collections_Generic_List_object__o *)System_Enum__Parse_65292676(v72, v88, 1, 0);
     if ( tweens )
     {
       v96 = UnityEngine_Space_TypeInfo;
       if ( tweens->klass->_1.element_class == UnityEngine_Space_TypeInfo->_1.element_class )
         goto LABEL_168;
-      sub_1C3313C(tweens);
+      sub_1C37574(tweens);
       goto LABEL_196;
     }
     goto LABEL_194;
@@ -23378,7 +23378,7 @@ LABEL_145:
     goto LABEL_188;
   tweens = (System_Collections_Generic_List_object__o *)((__int64 (__fastcall *)(System_Collections_Generic_List_object__o *, __int64, const MethodInfo *))tweens->klass->vtable._28_RemoveAt.methodPtr)(
                                                           tweens,
-                                                          StringLiteral_23579/*"space"*/,
+                                                          StringLiteral_23583/*"space"*/,
                                                           tweens->klass->vtable._28_RemoveAt.method);
   if ( !tweens )
     goto LABEL_188;
@@ -23507,27 +23507,27 @@ void iTween__RotateAdd(
   z = amount.fields.z;
   y = amount.fields.y;
   x = amount.fields.x;
-  if ( (byte_4C3E9B6 & 1) == 0 )
+  if ( (byte_4C49F36 & 1) == 0 )
   {
-    sub_1C32C20(&object___TypeInfo);
-    sub_1C32C20(&float_TypeInfo);
-    sub_1C32C20(&UnityEngine_Vector3_TypeInfo);
-    sub_1C32C20(&StringLiteral_24067/*"time"*/);
-    sub_1C32C20(&StringLiteral_16745/*"amount"*/);
-    sub_1C32C20(&iTween_TypeInfo);
-    byte_4C3E9B6 = 1;
+    sub_1C37058(&object___TypeInfo);
+    sub_1C37058(&float_TypeInfo);
+    sub_1C37058(&UnityEngine_Vector3_TypeInfo);
+    sub_1C37058(&StringLiteral_24071/*"time"*/);
+    sub_1C37058(&StringLiteral_16747/*"amount"*/);
+    sub_1C37058(&iTween_TypeInfo);
+    byte_4C49F36 = 1;
   }
-  v9 = sub_1C32CC8(object___TypeInfo, 4);
+  v9 = sub_1C37100(object___TypeInfo, 4);
   if ( !v9 )
-    sub_1C32E7C(0);
+    sub_1C372B4(0);
   v12 = v9;
-  v13 = StringLiteral_16745/*"amount"*/;
-  if ( StringLiteral_16745/*"amount"*/ )
+  v13 = StringLiteral_16747/*"amount"*/;
+  if ( StringLiteral_16747/*"amount"*/ )
   {
-    v13 = sub_1C32D5C(StringLiteral_16745/*"amount"*/);
+    v13 = sub_1C37194(StringLiteral_16747/*"amount"*/);
     if ( !v13 )
       goto LABEL_24;
-    v14 = StringLiteral_16745/*"amount"*/;
+    v14 = StringLiteral_16747/*"amount"*/;
   }
   else
   {
@@ -23536,7 +23536,7 @@ void iTween__RotateAdd(
   if ( !*(_DWORD *)(v12 + 24) )
     goto LABEL_23;
   *(_QWORD *)(v12 + 32) = v14;
-  sub_1C32BC4((CGThumbnailListItem_o *)(v12 + 32), v14, v10, v11);
+  sub_1C36FFC((CGThumbnailListItem_o *)(v12 + 32), v14, v10, v11);
   *(float *)v40 = x;
   *(float *)&v40[1] = y;
   *(float *)&v40[2] = z;
@@ -23544,21 +23544,21 @@ void iTween__RotateAdd(
   v23 = v13;
   if ( v13 )
   {
-    v13 = sub_1C32D5C(v13);
+    v13 = sub_1C37194(v13);
     if ( !v13 )
       goto LABEL_24;
   }
   if ( *(_DWORD *)(v12 + 24) <= 1u )
     goto LABEL_23;
   *(_QWORD *)(v12 + 40) = v23;
-  sub_1C32BC4((CGThumbnailListItem_o *)(v12 + 40), v23, v21, v22);
-  v13 = StringLiteral_24067/*"time"*/;
-  if ( StringLiteral_24067/*"time"*/ )
+  sub_1C36FFC((CGThumbnailListItem_o *)(v12 + 40), v23, v21, v22);
+  v13 = StringLiteral_24071/*"time"*/;
+  if ( StringLiteral_24071/*"time"*/ )
   {
-    v13 = sub_1C32D5C(StringLiteral_24067/*"time"*/);
+    v13 = sub_1C37194(StringLiteral_24071/*"time"*/);
     if ( !v13 )
       goto LABEL_24;
-    v26 = StringLiteral_24067/*"time"*/;
+    v26 = StringLiteral_24071/*"time"*/;
   }
   else
   {
@@ -23567,33 +23567,33 @@ void iTween__RotateAdd(
   if ( *(_DWORD *)(v12 + 24) <= 2u )
     goto LABEL_23;
   *(_QWORD *)(v12 + 48) = v26;
-  sub_1C32BC4((CGThumbnailListItem_o *)(v12 + 48), v26, v24, v25);
+  sub_1C36FFC((CGThumbnailListItem_o *)(v12 + 48), v26, v24, v25);
   v41 = time;
   v13 = j_il2cpp_value_box_0(float_TypeInfo, &v41, v27, v28, v29, v30, v31, v32);
   v35 = v13;
   if ( v13 )
   {
-    v13 = sub_1C32D5C(v13);
+    v13 = sub_1C37194(v13);
     if ( !v13 )
     {
 LABEL_24:
-      v39 = sub_1C32EA0(v13);
-      sub_1C32D48(v39, 0);
+      v39 = sub_1C372D8(v13);
+      sub_1C37180(v39, 0);
     }
   }
   if ( *(_DWORD *)(v12 + 24) <= 3u )
 LABEL_23:
-    sub_1C32E84(v13);
+    sub_1C372BC(v13);
   *(_QWORD *)(v12 + 56) = v35;
-  sub_1C32BC4((CGThumbnailListItem_o *)(v12 + 56), v35, v33, v34);
+  sub_1C36FFC((CGThumbnailListItem_o *)(v12 + 56), v35, v33, v34);
   if ( !iTween_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(iTween_TypeInfo);
   v37 = iTween__Hash((System_Object_array *)v12, v36);
-  iTween__RotateAdd_63170108(target, v37, v38);
+  iTween__RotateAdd_63213220(target, v37, v38);
 }
 
 
-void iTween__RotateAdd_63170108(
+void iTween__RotateAdd_63213220(
         UnityEngine_GameObject_o *target,
         System_Collections_Hashtable_o *args,
         const MethodInfo *method)
@@ -23602,30 +23602,30 @@ void iTween__RotateAdd_63170108(
   System_Collections_Hashtable_o *v6; // x20
   const MethodInfo *v7; // x2
 
-  if ( (byte_4C3E9B7 & 1) == 0 )
+  if ( (byte_4C49F37 & 1) == 0 )
   {
-    sub_1C32C20(&StringLiteral_23146/*"rotate"*/);
-    sub_1C32C20(&StringLiteral_16665/*"add"*/);
-    sub_1C32C20(&StringLiteral_21560/*"method"*/);
-    sub_1C32C20(&StringLiteral_24241/*"type"*/);
-    sub_1C32C20(&iTween_TypeInfo);
-    byte_4C3E9B7 = 1;
+    sub_1C37058(&StringLiteral_23150/*"rotate"*/);
+    sub_1C37058(&StringLiteral_16667/*"add"*/);
+    sub_1C37058(&StringLiteral_21563/*"method"*/);
+    sub_1C37058(&StringLiteral_24245/*"type"*/);
+    sub_1C37058(&iTween_TypeInfo);
+    byte_4C49F37 = 1;
   }
   if ( !iTween_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(iTween_TypeInfo);
   v5 = iTween__CleanArgs(args, (const MethodInfo *)args);
   if ( !v5 )
-    sub_1C32E7C(0);
+    sub_1C372B4(0);
   v6 = v5;
   ((void (__fastcall *)(System_Collections_Hashtable_o *, __int64, __int64, const MethodInfo *))v5->klass->vtable._29_set_Item.methodPtr)(
     v5,
-    StringLiteral_24241/*"type"*/,
-    StringLiteral_23146/*"rotate"*/,
+    StringLiteral_24245/*"type"*/,
+    StringLiteral_23150/*"rotate"*/,
     v5->klass->vtable._29_set_Item.method);
   ((void (__fastcall *)(System_Collections_Hashtable_o *, __int64, __int64, const MethodInfo *))v6->klass->vtable._29_set_Item.methodPtr)(
     v6,
-    StringLiteral_21560/*"method"*/,
-    StringLiteral_16665/*"add"*/,
+    StringLiteral_21563/*"method"*/,
+    StringLiteral_16667/*"add"*/,
     v6->klass->vtable._29_set_Item.method);
   iTween__Launch(target, v6, v7);
 }
@@ -23677,27 +23677,27 @@ void iTween__RotateBy(
   z = amount.fields.z;
   y = amount.fields.y;
   x = amount.fields.x;
-  if ( (byte_4C3E9B8 & 1) == 0 )
+  if ( (byte_4C49F38 & 1) == 0 )
   {
-    sub_1C32C20(&object___TypeInfo);
-    sub_1C32C20(&float_TypeInfo);
-    sub_1C32C20(&UnityEngine_Vector3_TypeInfo);
-    sub_1C32C20(&StringLiteral_24067/*"time"*/);
-    sub_1C32C20(&StringLiteral_16745/*"amount"*/);
-    sub_1C32C20(&iTween_TypeInfo);
-    byte_4C3E9B8 = 1;
+    sub_1C37058(&object___TypeInfo);
+    sub_1C37058(&float_TypeInfo);
+    sub_1C37058(&UnityEngine_Vector3_TypeInfo);
+    sub_1C37058(&StringLiteral_24071/*"time"*/);
+    sub_1C37058(&StringLiteral_16747/*"amount"*/);
+    sub_1C37058(&iTween_TypeInfo);
+    byte_4C49F38 = 1;
   }
-  v9 = sub_1C32CC8(object___TypeInfo, 4);
+  v9 = sub_1C37100(object___TypeInfo, 4);
   if ( !v9 )
-    sub_1C32E7C(0);
+    sub_1C372B4(0);
   v12 = v9;
-  v13 = StringLiteral_16745/*"amount"*/;
-  if ( StringLiteral_16745/*"amount"*/ )
+  v13 = StringLiteral_16747/*"amount"*/;
+  if ( StringLiteral_16747/*"amount"*/ )
   {
-    v13 = sub_1C32D5C(StringLiteral_16745/*"amount"*/);
+    v13 = sub_1C37194(StringLiteral_16747/*"amount"*/);
     if ( !v13 )
       goto LABEL_24;
-    v14 = StringLiteral_16745/*"amount"*/;
+    v14 = StringLiteral_16747/*"amount"*/;
   }
   else
   {
@@ -23706,7 +23706,7 @@ void iTween__RotateBy(
   if ( !*(_DWORD *)(v12 + 24) )
     goto LABEL_23;
   *(_QWORD *)(v12 + 32) = v14;
-  sub_1C32BC4((CGThumbnailListItem_o *)(v12 + 32), v14, v10, v11);
+  sub_1C36FFC((CGThumbnailListItem_o *)(v12 + 32), v14, v10, v11);
   *(float *)v40 = x;
   *(float *)&v40[1] = y;
   *(float *)&v40[2] = z;
@@ -23714,21 +23714,21 @@ void iTween__RotateBy(
   v23 = v13;
   if ( v13 )
   {
-    v13 = sub_1C32D5C(v13);
+    v13 = sub_1C37194(v13);
     if ( !v13 )
       goto LABEL_24;
   }
   if ( *(_DWORD *)(v12 + 24) <= 1u )
     goto LABEL_23;
   *(_QWORD *)(v12 + 40) = v23;
-  sub_1C32BC4((CGThumbnailListItem_o *)(v12 + 40), v23, v21, v22);
-  v13 = StringLiteral_24067/*"time"*/;
-  if ( StringLiteral_24067/*"time"*/ )
+  sub_1C36FFC((CGThumbnailListItem_o *)(v12 + 40), v23, v21, v22);
+  v13 = StringLiteral_24071/*"time"*/;
+  if ( StringLiteral_24071/*"time"*/ )
   {
-    v13 = sub_1C32D5C(StringLiteral_24067/*"time"*/);
+    v13 = sub_1C37194(StringLiteral_24071/*"time"*/);
     if ( !v13 )
       goto LABEL_24;
-    v26 = StringLiteral_24067/*"time"*/;
+    v26 = StringLiteral_24071/*"time"*/;
   }
   else
   {
@@ -23737,33 +23737,33 @@ void iTween__RotateBy(
   if ( *(_DWORD *)(v12 + 24) <= 2u )
     goto LABEL_23;
   *(_QWORD *)(v12 + 48) = v26;
-  sub_1C32BC4((CGThumbnailListItem_o *)(v12 + 48), v26, v24, v25);
+  sub_1C36FFC((CGThumbnailListItem_o *)(v12 + 48), v26, v24, v25);
   v41 = time;
   v13 = j_il2cpp_value_box_0(float_TypeInfo, &v41, v27, v28, v29, v30, v31, v32);
   v35 = v13;
   if ( v13 )
   {
-    v13 = sub_1C32D5C(v13);
+    v13 = sub_1C37194(v13);
     if ( !v13 )
     {
 LABEL_24:
-      v39 = sub_1C32EA0(v13);
-      sub_1C32D48(v39, 0);
+      v39 = sub_1C372D8(v13);
+      sub_1C37180(v39, 0);
     }
   }
   if ( *(_DWORD *)(v12 + 24) <= 3u )
 LABEL_23:
-    sub_1C32E84(v13);
+    sub_1C372BC(v13);
   *(_QWORD *)(v12 + 56) = v35;
-  sub_1C32BC4((CGThumbnailListItem_o *)(v12 + 56), v35, v33, v34);
+  sub_1C36FFC((CGThumbnailListItem_o *)(v12 + 56), v35, v33, v34);
   if ( !iTween_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(iTween_TypeInfo);
   v37 = iTween__Hash((System_Object_array *)v12, v36);
-  iTween__RotateBy_63170912(target, v37, v38);
+  iTween__RotateBy_63214024(target, v37, v38);
 }
 
 
-void iTween__RotateBy_63170912(
+void iTween__RotateBy_63214024(
         UnityEngine_GameObject_o *target,
         System_Collections_Hashtable_o *args,
         const MethodInfo *method)
@@ -23772,30 +23772,30 @@ void iTween__RotateBy_63170912(
   System_Collections_Hashtable_o *v6; // x20
   const MethodInfo *v7; // x2
 
-  if ( (byte_4C3E9B9 & 1) == 0 )
+  if ( (byte_4C49F39 & 1) == 0 )
   {
-    sub_1C32C20(&StringLiteral_17669/*"by"*/);
-    sub_1C32C20(&StringLiteral_23146/*"rotate"*/);
-    sub_1C32C20(&StringLiteral_21560/*"method"*/);
-    sub_1C32C20(&StringLiteral_24241/*"type"*/);
-    sub_1C32C20(&iTween_TypeInfo);
-    byte_4C3E9B9 = 1;
+    sub_1C37058(&StringLiteral_17671/*"by"*/);
+    sub_1C37058(&StringLiteral_23150/*"rotate"*/);
+    sub_1C37058(&StringLiteral_21563/*"method"*/);
+    sub_1C37058(&StringLiteral_24245/*"type"*/);
+    sub_1C37058(&iTween_TypeInfo);
+    byte_4C49F39 = 1;
   }
   if ( !iTween_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(iTween_TypeInfo);
   v5 = iTween__CleanArgs(args, (const MethodInfo *)args);
   if ( !v5 )
-    sub_1C32E7C(0);
+    sub_1C372B4(0);
   v6 = v5;
   ((void (__fastcall *)(System_Collections_Hashtable_o *, __int64, __int64, const MethodInfo *))v5->klass->vtable._29_set_Item.methodPtr)(
     v5,
-    StringLiteral_24241/*"type"*/,
-    StringLiteral_23146/*"rotate"*/,
+    StringLiteral_24245/*"type"*/,
+    StringLiteral_23150/*"rotate"*/,
     v5->klass->vtable._29_set_Item.method);
   ((void (__fastcall *)(System_Collections_Hashtable_o *, __int64, __int64, const MethodInfo *))v6->klass->vtable._29_set_Item.methodPtr)(
     v6,
-    StringLiteral_21560/*"method"*/,
-    StringLiteral_17669/*"by"*/,
+    StringLiteral_21563/*"method"*/,
+    StringLiteral_17671/*"by"*/,
     v6->klass->vtable._29_set_Item.method);
   iTween__Launch(target, v6, v7);
 }
@@ -23847,27 +23847,27 @@ void iTween__RotateFrom(
   z = rotation.fields.z;
   y = rotation.fields.y;
   x = rotation.fields.x;
-  if ( (byte_4C3E9B4 & 1) == 0 )
+  if ( (byte_4C49F34 & 1) == 0 )
   {
-    sub_1C32C20(&object___TypeInfo);
-    sub_1C32C20(&float_TypeInfo);
-    sub_1C32C20(&UnityEngine_Vector3_TypeInfo);
-    sub_1C32C20(&StringLiteral_23148/*"rotation"*/);
-    sub_1C32C20(&StringLiteral_24067/*"time"*/);
-    sub_1C32C20(&iTween_TypeInfo);
-    byte_4C3E9B4 = 1;
+    sub_1C37058(&object___TypeInfo);
+    sub_1C37058(&float_TypeInfo);
+    sub_1C37058(&UnityEngine_Vector3_TypeInfo);
+    sub_1C37058(&StringLiteral_23152/*"rotation"*/);
+    sub_1C37058(&StringLiteral_24071/*"time"*/);
+    sub_1C37058(&iTween_TypeInfo);
+    byte_4C49F34 = 1;
   }
-  v9 = sub_1C32CC8(object___TypeInfo, 4);
+  v9 = sub_1C37100(object___TypeInfo, 4);
   if ( !v9 )
-    sub_1C32E7C(0);
+    sub_1C372B4(0);
   v12 = v9;
-  v13 = StringLiteral_23148/*"rotation"*/;
-  if ( StringLiteral_23148/*"rotation"*/ )
+  v13 = StringLiteral_23152/*"rotation"*/;
+  if ( StringLiteral_23152/*"rotation"*/ )
   {
-    v13 = sub_1C32D5C(StringLiteral_23148/*"rotation"*/);
+    v13 = sub_1C37194(StringLiteral_23152/*"rotation"*/);
     if ( !v13 )
       goto LABEL_24;
-    v14 = StringLiteral_23148/*"rotation"*/;
+    v14 = StringLiteral_23152/*"rotation"*/;
   }
   else
   {
@@ -23876,7 +23876,7 @@ void iTween__RotateFrom(
   if ( !*(_DWORD *)(v12 + 24) )
     goto LABEL_23;
   *(_QWORD *)(v12 + 32) = v14;
-  sub_1C32BC4((CGThumbnailListItem_o *)(v12 + 32), v14, v10, v11);
+  sub_1C36FFC((CGThumbnailListItem_o *)(v12 + 32), v14, v10, v11);
   *(float *)v40 = x;
   *(float *)&v40[1] = y;
   *(float *)&v40[2] = z;
@@ -23884,21 +23884,21 @@ void iTween__RotateFrom(
   v23 = v13;
   if ( v13 )
   {
-    v13 = sub_1C32D5C(v13);
+    v13 = sub_1C37194(v13);
     if ( !v13 )
       goto LABEL_24;
   }
   if ( *(_DWORD *)(v12 + 24) <= 1u )
     goto LABEL_23;
   *(_QWORD *)(v12 + 40) = v23;
-  sub_1C32BC4((CGThumbnailListItem_o *)(v12 + 40), v23, v21, v22);
-  v13 = StringLiteral_24067/*"time"*/;
-  if ( StringLiteral_24067/*"time"*/ )
+  sub_1C36FFC((CGThumbnailListItem_o *)(v12 + 40), v23, v21, v22);
+  v13 = StringLiteral_24071/*"time"*/;
+  if ( StringLiteral_24071/*"time"*/ )
   {
-    v13 = sub_1C32D5C(StringLiteral_24067/*"time"*/);
+    v13 = sub_1C37194(StringLiteral_24071/*"time"*/);
     if ( !v13 )
       goto LABEL_24;
-    v26 = StringLiteral_24067/*"time"*/;
+    v26 = StringLiteral_24071/*"time"*/;
   }
   else
   {
@@ -23907,34 +23907,34 @@ void iTween__RotateFrom(
   if ( *(_DWORD *)(v12 + 24) <= 2u )
     goto LABEL_23;
   *(_QWORD *)(v12 + 48) = v26;
-  sub_1C32BC4((CGThumbnailListItem_o *)(v12 + 48), v26, v24, v25);
+  sub_1C36FFC((CGThumbnailListItem_o *)(v12 + 48), v26, v24, v25);
   v41 = time;
   v13 = j_il2cpp_value_box_0(float_TypeInfo, &v41, v27, v28, v29, v30, v31, v32);
   v35 = v13;
   if ( v13 )
   {
-    v13 = sub_1C32D5C(v13);
+    v13 = sub_1C37194(v13);
     if ( !v13 )
     {
 LABEL_24:
-      v39 = sub_1C32EA0(v13);
-      sub_1C32D48(v39, 0);
+      v39 = sub_1C372D8(v13);
+      sub_1C37180(v39, 0);
     }
   }
   if ( *(_DWORD *)(v12 + 24) <= 3u )
 LABEL_23:
-    sub_1C32E84(v13);
+    sub_1C372BC(v13);
   *(_QWORD *)(v12 + 56) = v35;
-  sub_1C32BC4((CGThumbnailListItem_o *)(v12 + 56), v35, v33, v34);
+  sub_1C36FFC((CGThumbnailListItem_o *)(v12 + 56), v35, v33, v34);
   if ( !iTween_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(iTween_TypeInfo);
   v37 = iTween__Hash((System_Object_array *)v12, v36);
-  iTween__RotateFrom_63168024(target, v37, v38);
+  iTween__RotateFrom_63211136(target, v37, v38);
 }
 
 
 // local variable allocation has failed, the output may be wrong!
-void iTween__RotateFrom_63168024(
+void iTween__RotateFrom_63211136(
         UnityEngine_GameObject_o *target,
         System_Collections_Hashtable_o *args,
         const MethodInfo *method)
@@ -23989,27 +23989,27 @@ void iTween__RotateFrom_63168024(
   UnityEngine_Vector3_o localEulerAngles; // 0:s0.4,4:s1.4,8:s2.4
   UnityEngine_Vector3_o eulerAngles; // 0:s0.4,4:s1.4,8:s2.4
 
-  if ( (byte_4C3E9B5 & 1) == 0 )
+  if ( (byte_4C49F35 & 1) == 0 )
   {
-    sub_1C32C20(&bool_TypeInfo);
-    sub_1C32C20(&iTween_Defaults_TypeInfo);
-    sub_1C32C20(&float_TypeInfo);
-    sub_1C32C20(&UnityEngine_Transform_var);
-    sub_1C32C20(&UnityEngine_Transform_TypeInfo);
-    sub_1C32C20(&System_Type_TypeInfo);
-    sub_1C32C20(&UnityEngine_Vector3_var);
-    sub_1C32C20(&UnityEngine_Vector3_TypeInfo);
-    sub_1C32C20(&StringLiteral_24859/*"x"*/);
-    sub_1C32C20(&StringLiteral_23146/*"rotate"*/);
-    sub_1C32C20(&StringLiteral_23148/*"rotation"*/);
-    sub_1C32C20(&StringLiteral_21560/*"method"*/);
-    sub_1C32C20(&StringLiteral_24961/*"y"*/);
-    sub_1C32C20(&StringLiteral_25008/*"z"*/);
-    sub_1C32C20(&StringLiteral_24106/*"to"*/);
-    sub_1C32C20(&StringLiteral_20971/*"islocal"*/);
-    sub_1C32C20(&StringLiteral_24241/*"type"*/);
-    sub_1C32C20(&iTween_TypeInfo);
-    byte_4C3E9B5 = 1;
+    sub_1C37058(&bool_TypeInfo);
+    sub_1C37058(&iTween_Defaults_TypeInfo);
+    sub_1C37058(&float_TypeInfo);
+    sub_1C37058(&UnityEngine_Transform_var);
+    sub_1C37058(&UnityEngine_Transform_TypeInfo);
+    sub_1C37058(&System_Type_TypeInfo);
+    sub_1C37058(&UnityEngine_Vector3_var);
+    sub_1C37058(&UnityEngine_Vector3_TypeInfo);
+    sub_1C37058(&StringLiteral_24864/*"x"*/);
+    sub_1C37058(&StringLiteral_23150/*"rotate"*/);
+    sub_1C37058(&StringLiteral_23152/*"rotation"*/);
+    sub_1C37058(&StringLiteral_21563/*"method"*/);
+    sub_1C37058(&StringLiteral_24966/*"y"*/);
+    sub_1C37058(&StringLiteral_25013/*"z"*/);
+    sub_1C37058(&StringLiteral_24110/*"to"*/);
+    sub_1C37058(&StringLiteral_20974/*"islocal"*/);
+    sub_1C37058(&StringLiteral_24245/*"type"*/);
+    sub_1C37058(&iTween_TypeInfo);
+    byte_4C49F35 = 1;
   }
   if ( !iTween_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(iTween_TypeInfo);
@@ -24019,13 +24019,13 @@ void iTween__RotateFrom_63168024(
   v6 = (System_Collections_Hashtable_o *)p_isLocal;
   if ( (((__int64 (__fastcall *)(UnityEngine_Transform_o *, __int64, Il2CppMethodPointer))p_isLocal->klass[1].vtable._0_Equals.method)(
           p_isLocal,
-          StringLiteral_20971/*"islocal"*/,
+          StringLiteral_20974/*"islocal"*/,
           p_isLocal->klass[1].vtable._1_Finalize.methodPtr)
       & 1) != 0 )
   {
     p_isLocal = (UnityEngine_Transform_o *)((__int64 (__fastcall *)(System_Collections_Hashtable_o *, __int64, const MethodInfo *))v6->klass->vtable._28_get_Item.methodPtr)(
                                              v6,
-                                             StringLiteral_20971/*"islocal"*/,
+                                             StringLiteral_20974/*"islocal"*/,
                                              v6->klass->vtable._28_get_Item.method);
     if ( !p_isLocal )
       goto LABEL_54;
@@ -24047,7 +24047,7 @@ void iTween__RotateFrom_63168024(
     || (klass_low = LOBYTE(p_isLocal->klass), (p_isLocal = UnityEngine_GameObject__get_transform(target, 0)) == 0) )
   {
 LABEL_54:
-    sub_1C32E7C(p_isLocal);
+    sub_1C372B4(p_isLocal);
   }
   if ( klass_low )
     localEulerAngles = UnityEngine_Transform__get_localEulerAngles(p_isLocal, 0);
@@ -24058,13 +24058,13 @@ LABEL_54:
   z = localEulerAngles.fields.z;
   if ( (((__int64 (__fastcall *)(System_Collections_Hashtable_o *, __int64, const MethodInfo *))v6->klass->vtable._25_Contains.methodPtr)(
           v6,
-          StringLiteral_23148/*"rotation"*/,
+          StringLiteral_23152/*"rotation"*/,
           v6->klass->vtable._25_Contains.method)
       & 1) != 0 )
   {
     p_isLocal = (UnityEngine_Transform_o *)((__int64 (__fastcall *)(System_Collections_Hashtable_o *, __int64, const MethodInfo *))v6->klass->vtable._28_get_Item.methodPtr)(
                                              v6,
-                                             StringLiteral_23148/*"rotation"*/,
+                                             StringLiteral_23152/*"rotation"*/,
                                              v6->klass->vtable._28_get_Item.method);
     if ( !p_isLocal )
       goto LABEL_54;
@@ -24077,7 +24077,7 @@ LABEL_54:
     v18 = System_Type__op_Equality(Type, TypeFromHandle, 0);
     p_isLocal = (UnityEngine_Transform_o *)((__int64 (__fastcall *)(System_Collections_Hashtable_o *, __int64, const MethodInfo *))v6->klass->vtable._28_get_Item.methodPtr)(
                                              v6,
-                                             StringLiteral_23148/*"rotation"*/,
+                                             StringLiteral_23152/*"rotation"*/,
                                              v6->klass->vtable._28_get_Item.method);
     if ( v18 )
     {
@@ -24094,7 +24094,7 @@ LABEL_54:
         goto LABEL_47;
       }
 LABEL_55:
-      v49 = sub_1C3313C(p_isLocal);
+      v49 = sub_1C37574(p_isLocal);
       iTween__RotateAdd(v47, *(UnityEngine_Vector3_o *)&v49, v50, v48);
       return;
     }
@@ -24113,7 +24113,7 @@ LABEL_55:
     {
       p_isLocal = (UnityEngine_Transform_o *)((__int64 (__fastcall *)(System_Collections_Hashtable_o *, __int64, const MethodInfo *))v6->klass->vtable._28_get_Item.methodPtr)(
                                                v6,
-                                               StringLiteral_23148/*"rotation"*/,
+                                               StringLiteral_23152/*"rotation"*/,
                                                v6->klass->vtable._28_get_Item.method);
       if ( !p_isLocal )
         goto LABEL_54;
@@ -24130,13 +24130,13 @@ LABEL_55:
     v20 = x;
     if ( (((__int64 (__fastcall *)(System_Collections_Hashtable_o *, void *, const MethodInfo *))v6->klass->vtable._25_Contains.methodPtr)(
             v6,
-            StringLiteral_24859/*"x"*/,
+            StringLiteral_24864/*"x"*/,
             v6->klass->vtable._25_Contains.method)
         & 1) != 0 )
     {
       p_isLocal = (UnityEngine_Transform_o *)((__int64 (__fastcall *)(System_Collections_Hashtable_o *, void *, const MethodInfo *))v6->klass->vtable._28_get_Item.methodPtr)(
                                                v6,
-                                               StringLiteral_24859/*"x"*/,
+                                               StringLiteral_24864/*"x"*/,
                                                v6->klass->vtable._28_get_Item.method);
       if ( !p_isLocal )
         goto LABEL_54;
@@ -24147,13 +24147,13 @@ LABEL_55:
     v21 = y;
     if ( (((__int64 (__fastcall *)(System_Collections_Hashtable_o *, __int64, const MethodInfo *))v6->klass->vtable._25_Contains.methodPtr)(
             v6,
-            StringLiteral_24961/*"y"*/,
+            StringLiteral_24966/*"y"*/,
             v6->klass->vtable._25_Contains.method)
         & 1) != 0 )
     {
       p_isLocal = (UnityEngine_Transform_o *)((__int64 (__fastcall *)(System_Collections_Hashtable_o *, __int64, const MethodInfo *))v6->klass->vtable._28_get_Item.methodPtr)(
                                                v6,
-                                               StringLiteral_24961/*"y"*/,
+                                               StringLiteral_24966/*"y"*/,
                                                v6->klass->vtable._28_get_Item.method);
       if ( !p_isLocal )
         goto LABEL_54;
@@ -24163,13 +24163,13 @@ LABEL_55:
     }
     if ( (((__int64 (__fastcall *)(System_Collections_Hashtable_o *, __int64, const MethodInfo *))v6->klass->vtable._25_Contains.methodPtr)(
             v6,
-            StringLiteral_25008/*"z"*/,
+            StringLiteral_25013/*"z"*/,
             v6->klass->vtable._25_Contains.method)
         & 1) != 0 )
     {
       p_isLocal = (UnityEngine_Transform_o *)((__int64 (__fastcall *)(System_Collections_Hashtable_o *, __int64, const MethodInfo *))v6->klass->vtable._28_get_Item.methodPtr)(
                                                v6,
-                                               StringLiteral_25008/*"z"*/,
+                                               StringLiteral_25013/*"z"*/,
                                                v6->klass->vtable._28_get_Item.method);
       if ( !p_isLocal )
         goto LABEL_54;
@@ -24199,18 +24199,18 @@ LABEL_47:
   v45 = j_il2cpp_value_box_0(UnityEngine_Vector3_TypeInfo, v51, v39, v40, v41, v42, v43, v44);
   ((void (__fastcall *)(System_Collections_Hashtable_o *, __int64, __int64, const MethodInfo *))v6->klass->vtable._29_set_Item.methodPtr)(
     v6,
-    StringLiteral_23148/*"rotation"*/,
+    StringLiteral_23152/*"rotation"*/,
     v45,
     v6->klass->vtable._29_set_Item.method);
   ((void (__fastcall *)(System_Collections_Hashtable_o *, __int64, __int64, const MethodInfo *))v6->klass->vtable._29_set_Item.methodPtr)(
     v6,
-    StringLiteral_24241/*"type"*/,
-    StringLiteral_23146/*"rotate"*/,
+    StringLiteral_24245/*"type"*/,
+    StringLiteral_23150/*"rotate"*/,
     v6->klass->vtable._29_set_Item.method);
   ((void (__fastcall *)(System_Collections_Hashtable_o *, __int64, __int64, const MethodInfo *))v6->klass->vtable._29_set_Item.methodPtr)(
     v6,
-    StringLiteral_21560/*"method"*/,
-    StringLiteral_24106/*"to"*/,
+    StringLiteral_21563/*"method"*/,
+    StringLiteral_24110/*"to"*/,
     v6->klass->vtable._29_set_Item.method);
   if ( !iTween_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(iTween_TypeInfo);
@@ -24264,27 +24264,27 @@ void iTween__RotateTo(
   z = rotation.fields.z;
   y = rotation.fields.y;
   x = rotation.fields.x;
-  if ( (byte_4C3E9B2 & 1) == 0 )
+  if ( (byte_4C49F32 & 1) == 0 )
   {
-    sub_1C32C20(&object___TypeInfo);
-    sub_1C32C20(&float_TypeInfo);
-    sub_1C32C20(&UnityEngine_Vector3_TypeInfo);
-    sub_1C32C20(&StringLiteral_23148/*"rotation"*/);
-    sub_1C32C20(&StringLiteral_24067/*"time"*/);
-    sub_1C32C20(&iTween_TypeInfo);
-    byte_4C3E9B2 = 1;
+    sub_1C37058(&object___TypeInfo);
+    sub_1C37058(&float_TypeInfo);
+    sub_1C37058(&UnityEngine_Vector3_TypeInfo);
+    sub_1C37058(&StringLiteral_23152/*"rotation"*/);
+    sub_1C37058(&StringLiteral_24071/*"time"*/);
+    sub_1C37058(&iTween_TypeInfo);
+    byte_4C49F32 = 1;
   }
-  v9 = sub_1C32CC8(object___TypeInfo, 4);
+  v9 = sub_1C37100(object___TypeInfo, 4);
   if ( !v9 )
-    sub_1C32E7C(0);
+    sub_1C372B4(0);
   v12 = v9;
-  v13 = StringLiteral_23148/*"rotation"*/;
-  if ( StringLiteral_23148/*"rotation"*/ )
+  v13 = StringLiteral_23152/*"rotation"*/;
+  if ( StringLiteral_23152/*"rotation"*/ )
   {
-    v13 = sub_1C32D5C(StringLiteral_23148/*"rotation"*/);
+    v13 = sub_1C37194(StringLiteral_23152/*"rotation"*/);
     if ( !v13 )
       goto LABEL_24;
-    v14 = StringLiteral_23148/*"rotation"*/;
+    v14 = StringLiteral_23152/*"rotation"*/;
   }
   else
   {
@@ -24293,7 +24293,7 @@ void iTween__RotateTo(
   if ( !*(_DWORD *)(v12 + 24) )
     goto LABEL_23;
   *(_QWORD *)(v12 + 32) = v14;
-  sub_1C32BC4((CGThumbnailListItem_o *)(v12 + 32), v14, v10, v11);
+  sub_1C36FFC((CGThumbnailListItem_o *)(v12 + 32), v14, v10, v11);
   *(float *)v40 = x;
   *(float *)&v40[1] = y;
   *(float *)&v40[2] = z;
@@ -24301,21 +24301,21 @@ void iTween__RotateTo(
   v23 = v13;
   if ( v13 )
   {
-    v13 = sub_1C32D5C(v13);
+    v13 = sub_1C37194(v13);
     if ( !v13 )
       goto LABEL_24;
   }
   if ( *(_DWORD *)(v12 + 24) <= 1u )
     goto LABEL_23;
   *(_QWORD *)(v12 + 40) = v23;
-  sub_1C32BC4((CGThumbnailListItem_o *)(v12 + 40), v23, v21, v22);
-  v13 = StringLiteral_24067/*"time"*/;
-  if ( StringLiteral_24067/*"time"*/ )
+  sub_1C36FFC((CGThumbnailListItem_o *)(v12 + 40), v23, v21, v22);
+  v13 = StringLiteral_24071/*"time"*/;
+  if ( StringLiteral_24071/*"time"*/ )
   {
-    v13 = sub_1C32D5C(StringLiteral_24067/*"time"*/);
+    v13 = sub_1C37194(StringLiteral_24071/*"time"*/);
     if ( !v13 )
       goto LABEL_24;
-    v26 = StringLiteral_24067/*"time"*/;
+    v26 = StringLiteral_24071/*"time"*/;
   }
   else
   {
@@ -24324,34 +24324,34 @@ void iTween__RotateTo(
   if ( *(_DWORD *)(v12 + 24) <= 2u )
     goto LABEL_23;
   *(_QWORD *)(v12 + 48) = v26;
-  sub_1C32BC4((CGThumbnailListItem_o *)(v12 + 48), v26, v24, v25);
+  sub_1C36FFC((CGThumbnailListItem_o *)(v12 + 48), v26, v24, v25);
   v41 = time;
   v13 = j_il2cpp_value_box_0(float_TypeInfo, &v41, v27, v28, v29, v30, v31, v32);
   v35 = v13;
   if ( v13 )
   {
-    v13 = sub_1C32D5C(v13);
+    v13 = sub_1C37194(v13);
     if ( !v13 )
     {
 LABEL_24:
-      v39 = sub_1C32EA0(v13);
-      sub_1C32D48(v39, 0);
+      v39 = sub_1C372D8(v13);
+      sub_1C37180(v39, 0);
     }
   }
   if ( *(_DWORD *)(v12 + 24) <= 3u )
 LABEL_23:
-    sub_1C32E84(v13);
+    sub_1C372BC(v13);
   *(_QWORD *)(v12 + 56) = v35;
-  sub_1C32BC4((CGThumbnailListItem_o *)(v12 + 56), v35, v33, v34);
+  sub_1C36FFC((CGThumbnailListItem_o *)(v12 + 56), v35, v33, v34);
   if ( !iTween_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(iTween_TypeInfo);
   v37 = iTween__Hash((System_Object_array *)v12, v36);
-  iTween__RotateTo_63166552(target, v37, v38);
+  iTween__RotateTo_63209664(target, v37, v38);
 }
 
 
 // local variable allocation has failed, the output may be wrong!
-void iTween__RotateTo_63166552(
+void iTween__RotateTo_63209664(
         UnityEngine_GameObject_o *target,
         System_Collections_Hashtable_o *args,
         const MethodInfo *method)
@@ -24406,21 +24406,21 @@ void iTween__RotateTo_63166552(
   UnityEngine_Vector3_o v52; // 0:s0.4,4:s1.4,8:s2.4
   UnityEngine_Vector3_o v53; // 0:s0.4,4:s1.4,8:s2.4
 
-  if ( (byte_4C3E9B3 & 1) == 0 )
+  if ( (byte_4C49F33 & 1) == 0 )
   {
-    sub_1C32C20(&UnityEngine_Transform_var);
-    sub_1C32C20(&UnityEngine_Transform_TypeInfo);
-    sub_1C32C20(&System_Type_TypeInfo);
-    sub_1C32C20(&UnityEngine_Vector3_TypeInfo);
-    sub_1C32C20(&StringLiteral_23146/*"rotate"*/);
-    sub_1C32C20(&StringLiteral_23148/*"rotation"*/);
-    sub_1C32C20(&StringLiteral_21560/*"method"*/);
-    sub_1C32C20(&StringLiteral_22736/*"position"*/);
-    sub_1C32C20(&StringLiteral_24106/*"to"*/);
-    sub_1C32C20(&StringLiteral_24241/*"type"*/);
-    sub_1C32C20(&StringLiteral_23191/*"scale"*/);
-    sub_1C32C20(&iTween_TypeInfo);
-    byte_4C3E9B3 = 1;
+    sub_1C37058(&UnityEngine_Transform_var);
+    sub_1C37058(&UnityEngine_Transform_TypeInfo);
+    sub_1C37058(&System_Type_TypeInfo);
+    sub_1C37058(&UnityEngine_Vector3_TypeInfo);
+    sub_1C37058(&StringLiteral_23150/*"rotate"*/);
+    sub_1C37058(&StringLiteral_23152/*"rotation"*/);
+    sub_1C37058(&StringLiteral_21563/*"method"*/);
+    sub_1C37058(&StringLiteral_22740/*"position"*/);
+    sub_1C37058(&StringLiteral_24110/*"to"*/);
+    sub_1C37058(&StringLiteral_24245/*"type"*/);
+    sub_1C37058(&StringLiteral_23195/*"scale"*/);
+    sub_1C37058(&iTween_TypeInfo);
+    byte_4C49F33 = 1;
   }
   if ( !iTween_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(iTween_TypeInfo);
@@ -24430,13 +24430,13 @@ void iTween__RotateTo_63166552(
   v6 = (System_Collections_Hashtable_o *)v5;
   if ( (((__int64 (__fastcall *)(Il2CppObject *, __int64, const MethodInfo *))v5->klass->vtable[25].methodPtr)(
           v5,
-          StringLiteral_23148/*"rotation"*/,
+          StringLiteral_23152/*"rotation"*/,
           v5->klass->vtable[25].method)
       & 1) == 0 )
     goto LABEL_15;
   v5 = (Il2CppObject *)((__int64 (__fastcall *)(System_Collections_Hashtable_o *, __int64, const MethodInfo *))v6->klass->vtable._28_get_Item.methodPtr)(
                          v6,
-                         StringLiteral_23148/*"rotation"*/,
+                         StringLiteral_23152/*"rotation"*/,
                          v6->klass->vtable._28_get_Item.method);
   if ( !v5 )
     goto LABEL_18;
@@ -24450,17 +24450,17 @@ void iTween__RotateTo_63166552(
     goto LABEL_15;
   v5 = (Il2CppObject *)((__int64 (__fastcall *)(System_Collections_Hashtable_o *, __int64, const MethodInfo *))v6->klass->vtable._28_get_Item.methodPtr)(
                          v6,
-                         StringLiteral_23148/*"rotation"*/,
+                         StringLiteral_23152/*"rotation"*/,
                          v6->klass->vtable._28_get_Item.method);
   if ( !v5 )
 LABEL_18:
-    sub_1C32E7C(v5);
+    sub_1C372B4(v5);
   v11 = (UnityEngine_Transform_o *)v5;
   naturalAligment = UnityEngine_Transform_TypeInfo->_2.naturalAligment;
   if ( v5->klass->_2.naturalAligment < (unsigned int)naturalAligment
     || (UnityEngine_Transform_c *)v5->klass->_2.typeHierarchy[naturalAligment - 1] != UnityEngine_Transform_TypeInfo )
   {
-    v43 = sub_1C3313C(v5);
+    v43 = sub_1C37574(v5);
     iTween__RotateFrom(v41, *(UnityEngine_Vector3_o *)&v43, v44, v42);
     return;
   }
@@ -24474,7 +24474,7 @@ LABEL_18:
   v21 = j_il2cpp_value_box_0(UnityEngine_Vector3_TypeInfo, v47, v15, v16, v17, v18, v19, v20);
   ((void (__fastcall *)(System_Collections_Hashtable_o *, __int64, __int64, const MethodInfo *))v6->klass->vtable._29_set_Item.methodPtr)(
     v6,
-    StringLiteral_22736/*"position"*/,
+    StringLiteral_22740/*"position"*/,
     v21,
     v6->klass->vtable._29_set_Item.method);
   eulerAngles = (unsigned int)UnityEngine_Transform__get_eulerAngles(v11, 0);
@@ -24487,7 +24487,7 @@ LABEL_18:
   v30 = j_il2cpp_value_box_0(UnityEngine_Vector3_TypeInfo, v46, v24, v25, v26, v27, v28, v29);
   ((void (__fastcall *)(System_Collections_Hashtable_o *, __int64, __int64, const MethodInfo *))v6->klass->vtable._29_set_Item.methodPtr)(
     v6,
-    StringLiteral_23148/*"rotation"*/,
+    StringLiteral_23152/*"rotation"*/,
     v30,
     v6->klass->vtable._29_set_Item.method);
   localScale = (unsigned int)UnityEngine_Transform__get_localScale(v11, 0);
@@ -24500,19 +24500,19 @@ LABEL_18:
   v39 = j_il2cpp_value_box_0(UnityEngine_Vector3_TypeInfo, v45, v33, v34, v35, v36, v37, v38);
   ((void (__fastcall *)(System_Collections_Hashtable_o *, __int64, __int64, const MethodInfo *))v6->klass->vtable._29_set_Item.methodPtr)(
     v6,
-    StringLiteral_23191/*"scale"*/,
+    StringLiteral_23195/*"scale"*/,
     v39,
     v6->klass->vtable._29_set_Item.method);
 LABEL_15:
   ((void (__fastcall *)(System_Collections_Hashtable_o *, __int64, __int64, const MethodInfo *))v6->klass->vtable._29_set_Item.methodPtr)(
     v6,
-    StringLiteral_24241/*"type"*/,
-    StringLiteral_23146/*"rotate"*/,
+    StringLiteral_24245/*"type"*/,
+    StringLiteral_23150/*"rotate"*/,
     v6->klass->vtable._29_set_Item.method);
   ((void (__fastcall *)(System_Collections_Hashtable_o *, __int64, __int64, const MethodInfo *))v6->klass->vtable._29_set_Item.methodPtr)(
     v6,
-    StringLiteral_21560/*"method"*/,
-    StringLiteral_24106/*"to"*/,
+    StringLiteral_21563/*"method"*/,
+    StringLiteral_24110/*"to"*/,
     v6->klass->vtable._29_set_Item.method);
   if ( !iTween_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(iTween_TypeInfo);
@@ -24589,41 +24589,41 @@ void iTween__RotateUpdate(
   UnityEngine_Vector3_o v65; // 0:s0.4,4:s1.4,8:s2.4
   UnityEngine_Quaternion_o v66; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 
-  if ( (byte_4C3E9FB & 1) == 0 )
+  if ( (byte_4C49F7B & 1) == 0 )
   {
-    sub_1C32C20(&bool_TypeInfo);
-    sub_1C32C20(&iTween_Defaults_TypeInfo);
-    sub_1C32C20(&Method_UnityEngine_GameObject_GetComponent_Rigidbody___);
-    sub_1C32C20(&UnityEngine_Object_TypeInfo);
-    sub_1C32C20(&float_TypeInfo);
-    sub_1C32C20(&UnityEngine_Transform_var);
-    sub_1C32C20(&UnityEngine_Transform_TypeInfo);
-    sub_1C32C20(&System_Type_TypeInfo);
-    sub_1C32C20(&UnityEngine_Vector3___TypeInfo);
-    sub_1C32C20(&UnityEngine_Vector3_var);
-    sub_1C32C20(&UnityEngine_Vector3_TypeInfo);
-    sub_1C32C20(&StringLiteral_23148/*"rotation"*/);
-    sub_1C32C20(&StringLiteral_24067/*"time"*/);
-    sub_1C32C20(&StringLiteral_20971/*"islocal"*/);
-    sub_1C32C20(&iTween_TypeInfo);
-    byte_4C3E9FB = 1;
+    sub_1C37058(&bool_TypeInfo);
+    sub_1C37058(&iTween_Defaults_TypeInfo);
+    sub_1C37058(&Method_UnityEngine_GameObject_GetComponent_Rigidbody___);
+    sub_1C37058(&UnityEngine_Object_TypeInfo);
+    sub_1C37058(&float_TypeInfo);
+    sub_1C37058(&UnityEngine_Transform_var);
+    sub_1C37058(&UnityEngine_Transform_TypeInfo);
+    sub_1C37058(&System_Type_TypeInfo);
+    sub_1C37058(&UnityEngine_Vector3___TypeInfo);
+    sub_1C37058(&UnityEngine_Vector3_var);
+    sub_1C37058(&UnityEngine_Vector3_TypeInfo);
+    sub_1C37058(&StringLiteral_23152/*"rotation"*/);
+    sub_1C37058(&StringLiteral_24071/*"time"*/);
+    sub_1C37058(&StringLiteral_20974/*"islocal"*/);
+    sub_1C37058(&iTween_TypeInfo);
+    byte_4C49F7B = 1;
   }
   if ( !iTween_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(iTween_TypeInfo);
   iTween__CleanArgs(args, (const MethodInfo *)args);
-  p_isLocal = sub_1C32CC8(UnityEngine_Vector3___TypeInfo, 4);
+  p_isLocal = sub_1C37100(UnityEngine_Vector3___TypeInfo, 4);
   if ( !args )
     goto LABEL_78;
   v6 = p_isLocal;
   if ( (((__int64 (__fastcall *)(System_Collections_Hashtable_o *, __int64, const MethodInfo *))args->klass->vtable._25_Contains.methodPtr)(
           args,
-          StringLiteral_24067/*"time"*/,
+          StringLiteral_24071/*"time"*/,
           args->klass->vtable._25_Contains.method)
       & 1) != 0 )
   {
     p_isLocal = ((__int64 (__fastcall *)(System_Collections_Hashtable_o *, __int64, const MethodInfo *))args->klass->vtable._28_get_Item.methodPtr)(
                   args,
-                  StringLiteral_24067/*"time"*/,
+                  StringLiteral_24071/*"time"*/,
                   args->klass->vtable._28_get_Item.method);
     if ( !p_isLocal )
       goto LABEL_78;
@@ -24650,13 +24650,13 @@ void iTween__RotateUpdate(
   }
   if ( (((__int64 (__fastcall *)(System_Collections_Hashtable_o *, __int64, const MethodInfo *))args->klass->vtable._25_Contains.methodPtr)(
           args,
-          StringLiteral_20971/*"islocal"*/,
+          StringLiteral_20974/*"islocal"*/,
           args->klass->vtable._25_Contains.method)
       & 1) != 0 )
   {
     p_isLocal = ((__int64 (__fastcall *)(System_Collections_Hashtable_o *, __int64, const MethodInfo *))args->klass->vtable._28_get_Item.methodPtr)(
                   args,
-                  StringLiteral_20971/*"islocal"*/,
+                  StringLiteral_20974/*"islocal"*/,
                   args->klass->vtable._28_get_Item.method);
     if ( !p_isLocal )
       goto LABEL_78;
@@ -24694,17 +24694,17 @@ void iTween__RotateUpdate(
   }
   if ( !*(_DWORD *)(v6 + 24) )
 LABEL_77:
-    sub_1C32E84(p_isLocal);
+    sub_1C372BC(p_isLocal);
   *(UnityEngine_Vector3_o *)(v6 + 32) = localEulerAngles;
   p_isLocal = ((__int64 (__fastcall *)(System_Collections_Hashtable_o *, __int64, const MethodInfo *))args->klass->vtable._25_Contains.methodPtr)(
                 args,
-                StringLiteral_23148/*"rotation"*/,
+                StringLiteral_23152/*"rotation"*/,
                 args->klass->vtable._25_Contains.method);
   if ( (p_isLocal & 1) != 0 )
   {
     p_isLocal = ((__int64 (__fastcall *)(System_Collections_Hashtable_o *, __int64, const MethodInfo *))args->klass->vtable._28_get_Item.methodPtr)(
                   args,
-                  StringLiteral_23148/*"rotation"*/,
+                  StringLiteral_23152/*"rotation"*/,
                   args->klass->vtable._28_get_Item.method);
     if ( !p_isLocal )
       goto LABEL_78;
@@ -24717,7 +24717,7 @@ LABEL_77:
     v21 = System_Type__op_Equality(Type, TypeFromHandle, 0);
     p_isLocal = ((__int64 (__fastcall *)(System_Collections_Hashtable_o *, __int64, const MethodInfo *))args->klass->vtable._28_get_Item.methodPtr)(
                   args,
-                  StringLiteral_23148/*"rotation"*/,
+                  StringLiteral_23152/*"rotation"*/,
                   args->klass->vtable._28_get_Item.method);
     if ( v21 )
     {
@@ -24734,8 +24734,8 @@ LABEL_77:
         goto LABEL_47;
       }
 LABEL_79:
-      v60 = sub_1C3313C(p_isLocal);
-      iTween__RotateUpdate_63233252(v58, *(UnityEngine_Vector3_o *)&v60, v61, v59);
+      v60 = sub_1C37574(p_isLocal);
+      iTween__RotateUpdate_63276364(v58, *(UnityEngine_Vector3_o *)&v60, v61, v59);
       return;
     }
     if ( !p_isLocal )
@@ -24751,7 +24751,7 @@ LABEL_79:
       goto LABEL_47;
     p_isLocal = ((__int64 (__fastcall *)(System_Collections_Hashtable_o *, __int64, const MethodInfo *))args->klass->vtable._28_get_Item.methodPtr)(
                   args,
-                  StringLiteral_23148/*"rotation"*/,
+                  StringLiteral_23152/*"rotation"*/,
                   args->klass->vtable._28_get_Item.method);
     if ( !p_isLocal )
       goto LABEL_78;
@@ -24775,7 +24775,7 @@ LABEL_47:
   if ( v33 < 0.0 )
     v34 = 0.0;
   v35 = v34 <= 180.0 ? v34 : v34 + -360.0;
-  v36 = UnityEngine_Mathf__SmoothDamp_71168496(v30, v30 + v35, (float *)(v6 + 56), updateTime, INFINITY, deltaTime, 0);
+  v36 = UnityEngine_Mathf__SmoothDamp_71211608(v30, v30 + v35, (float *)(v6 + 56), updateTime, INFINITY, deltaTime, 0);
   if ( *(_DWORD *)(v6 + 24) <= 3u )
     goto LABEL_77;
   v37 = *(float *)(v6 + 36);
@@ -24788,7 +24788,7 @@ LABEL_47:
     v41 = 0.0;
   if ( v41 > 180.0 )
     v41 = v41 + -360.0;
-  v42 = UnityEngine_Mathf__SmoothDamp_71168496(v37, v37 + v41, (float *)(v6 + 60), updateTime, INFINITY, v39, 0);
+  v42 = UnityEngine_Mathf__SmoothDamp_71211608(v37, v37 + v41, (float *)(v6 + 60), updateTime, INFINITY, v39, 0);
   if ( *(_DWORD *)(v6 + 24) <= 3u )
     goto LABEL_77;
   v43 = *(float *)(v6 + 40);
@@ -24800,7 +24800,7 @@ LABEL_47:
   if ( v46 < 0.0 )
     v47 = 0.0;
   v48 = v47 <= 180.0 ? v47 : v47 + -360.0;
-  v49 = UnityEngine_Mathf__SmoothDamp_71168496(v43, v43 + v48, (float *)(v6 + 64), updateTime, INFINITY, v45, 0);
+  v49 = UnityEngine_Mathf__SmoothDamp_71211608(v43, v43 + v48, (float *)(v6 + 64), updateTime, INFINITY, v45, 0);
   if ( *(_DWORD *)(v6 + 24) <= 3u )
     goto LABEL_77;
   *(float *)(v6 + 76) = v49;
@@ -24818,7 +24818,7 @@ LABEL_47:
     UnityEngine_Transform__set_eulerAngles((UnityEngine_Transform_o *)p_isLocal, *(UnityEngine_Vector3_o *)&v52, 0);
   Component_object = UnityEngine_GameObject__GetComponent_object_(
                        target,
-                       (const MethodInfo_3134970 *)Method_UnityEngine_GameObject_GetComponent_Rigidbody___);
+                       (const MethodInfo_313F1D8 *)Method_UnityEngine_GameObject_GetComponent_Rigidbody___);
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   if ( UnityEngine_Object__op_Inequality((UnityEngine_Object_o *)Component_object, 0, 0) )
@@ -24832,7 +24832,7 @@ LABEL_47:
       z = v64.fields.z;
       v57 = UnityEngine_GameObject__GetComponent_object_(
               target,
-              (const MethodInfo_3134970 *)Method_UnityEngine_GameObject_GetComponent_Rigidbody___);
+              (const MethodInfo_313F1D8 *)Method_UnityEngine_GameObject_GetComponent_Rigidbody___);
       v65.fields.x = x * 0.017453;
       v65.fields.y = y * 0.017453;
       v65.fields.z = z * 0.017453;
@@ -24844,12 +24844,12 @@ LABEL_47:
       }
     }
 LABEL_78:
-    sub_1C32E7C(p_isLocal);
+    sub_1C372B4(p_isLocal);
   }
 }
 
 
-void iTween__RotateUpdate_63233252(
+void iTween__RotateUpdate_63276364(
         UnityEngine_GameObject_o *target,
         UnityEngine_Vector3_o rotation,
         float time,
@@ -24895,27 +24895,27 @@ void iTween__RotateUpdate_63233252(
   z = rotation.fields.z;
   y = rotation.fields.y;
   x = rotation.fields.x;
-  if ( (byte_4C3E9FC & 1) == 0 )
+  if ( (byte_4C49F7C & 1) == 0 )
   {
-    sub_1C32C20(&object___TypeInfo);
-    sub_1C32C20(&float_TypeInfo);
-    sub_1C32C20(&UnityEngine_Vector3_TypeInfo);
-    sub_1C32C20(&StringLiteral_23148/*"rotation"*/);
-    sub_1C32C20(&StringLiteral_24067/*"time"*/);
-    sub_1C32C20(&iTween_TypeInfo);
-    byte_4C3E9FC = 1;
+    sub_1C37058(&object___TypeInfo);
+    sub_1C37058(&float_TypeInfo);
+    sub_1C37058(&UnityEngine_Vector3_TypeInfo);
+    sub_1C37058(&StringLiteral_23152/*"rotation"*/);
+    sub_1C37058(&StringLiteral_24071/*"time"*/);
+    sub_1C37058(&iTween_TypeInfo);
+    byte_4C49F7C = 1;
   }
-  v9 = sub_1C32CC8(object___TypeInfo, 4);
+  v9 = sub_1C37100(object___TypeInfo, 4);
   if ( !v9 )
-    sub_1C32E7C(0);
+    sub_1C372B4(0);
   v12 = v9;
-  v13 = StringLiteral_23148/*"rotation"*/;
-  if ( StringLiteral_23148/*"rotation"*/ )
+  v13 = StringLiteral_23152/*"rotation"*/;
+  if ( StringLiteral_23152/*"rotation"*/ )
   {
-    v13 = sub_1C32D5C(StringLiteral_23148/*"rotation"*/);
+    v13 = sub_1C37194(StringLiteral_23152/*"rotation"*/);
     if ( !v13 )
       goto LABEL_24;
-    v14 = StringLiteral_23148/*"rotation"*/;
+    v14 = StringLiteral_23152/*"rotation"*/;
   }
   else
   {
@@ -24924,7 +24924,7 @@ void iTween__RotateUpdate_63233252(
   if ( !*(_DWORD *)(v12 + 24) )
     goto LABEL_23;
   *(_QWORD *)(v12 + 32) = v14;
-  sub_1C32BC4((CGThumbnailListItem_o *)(v12 + 32), v14, v10, v11);
+  sub_1C36FFC((CGThumbnailListItem_o *)(v12 + 32), v14, v10, v11);
   *(float *)v40 = x;
   *(float *)&v40[1] = y;
   *(float *)&v40[2] = z;
@@ -24932,21 +24932,21 @@ void iTween__RotateUpdate_63233252(
   v23 = v13;
   if ( v13 )
   {
-    v13 = sub_1C32D5C(v13);
+    v13 = sub_1C37194(v13);
     if ( !v13 )
       goto LABEL_24;
   }
   if ( *(_DWORD *)(v12 + 24) <= 1u )
     goto LABEL_23;
   *(_QWORD *)(v12 + 40) = v23;
-  sub_1C32BC4((CGThumbnailListItem_o *)(v12 + 40), v23, v21, v22);
-  v13 = StringLiteral_24067/*"time"*/;
-  if ( StringLiteral_24067/*"time"*/ )
+  sub_1C36FFC((CGThumbnailListItem_o *)(v12 + 40), v23, v21, v22);
+  v13 = StringLiteral_24071/*"time"*/;
+  if ( StringLiteral_24071/*"time"*/ )
   {
-    v13 = sub_1C32D5C(StringLiteral_24067/*"time"*/);
+    v13 = sub_1C37194(StringLiteral_24071/*"time"*/);
     if ( !v13 )
       goto LABEL_24;
-    v26 = StringLiteral_24067/*"time"*/;
+    v26 = StringLiteral_24071/*"time"*/;
   }
   else
   {
@@ -24955,25 +24955,25 @@ void iTween__RotateUpdate_63233252(
   if ( *(_DWORD *)(v12 + 24) <= 2u )
     goto LABEL_23;
   *(_QWORD *)(v12 + 48) = v26;
-  sub_1C32BC4((CGThumbnailListItem_o *)(v12 + 48), v26, v24, v25);
+  sub_1C36FFC((CGThumbnailListItem_o *)(v12 + 48), v26, v24, v25);
   v41 = time;
   v13 = j_il2cpp_value_box_0(float_TypeInfo, &v41, v27, v28, v29, v30, v31, v32);
   v35 = v13;
   if ( v13 )
   {
-    v13 = sub_1C32D5C(v13);
+    v13 = sub_1C37194(v13);
     if ( !v13 )
     {
 LABEL_24:
-      v39 = sub_1C32EA0(v13);
-      sub_1C32D48(v39, 0);
+      v39 = sub_1C372D8(v13);
+      sub_1C37180(v39, 0);
     }
   }
   if ( *(_DWORD *)(v12 + 24) <= 3u )
 LABEL_23:
-    sub_1C32E84(v13);
+    sub_1C372BC(v13);
   *(_QWORD *)(v12 + 56) = v35;
-  sub_1C32BC4((CGThumbnailListItem_o *)(v12 + 56), v35, v33, v34);
+  sub_1C36FFC((CGThumbnailListItem_o *)(v12 + 56), v35, v33, v34);
   if ( !iTween_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(iTween_TypeInfo);
   v37 = iTween__Hash((System_Object_array *)v12, v36);
@@ -25027,27 +25027,27 @@ void iTween__ScaleAdd(
   z = amount.fields.z;
   y = amount.fields.y;
   x = amount.fields.x;
-  if ( (byte_4C3E9AE & 1) == 0 )
+  if ( (byte_4C49F2E & 1) == 0 )
   {
-    sub_1C32C20(&object___TypeInfo);
-    sub_1C32C20(&float_TypeInfo);
-    sub_1C32C20(&UnityEngine_Vector3_TypeInfo);
-    sub_1C32C20(&StringLiteral_24067/*"time"*/);
-    sub_1C32C20(&StringLiteral_16745/*"amount"*/);
-    sub_1C32C20(&iTween_TypeInfo);
-    byte_4C3E9AE = 1;
+    sub_1C37058(&object___TypeInfo);
+    sub_1C37058(&float_TypeInfo);
+    sub_1C37058(&UnityEngine_Vector3_TypeInfo);
+    sub_1C37058(&StringLiteral_24071/*"time"*/);
+    sub_1C37058(&StringLiteral_16747/*"amount"*/);
+    sub_1C37058(&iTween_TypeInfo);
+    byte_4C49F2E = 1;
   }
-  v9 = sub_1C32CC8(object___TypeInfo, 4);
+  v9 = sub_1C37100(object___TypeInfo, 4);
   if ( !v9 )
-    sub_1C32E7C(0);
+    sub_1C372B4(0);
   v12 = v9;
-  v13 = StringLiteral_16745/*"amount"*/;
-  if ( StringLiteral_16745/*"amount"*/ )
+  v13 = StringLiteral_16747/*"amount"*/;
+  if ( StringLiteral_16747/*"amount"*/ )
   {
-    v13 = sub_1C32D5C(StringLiteral_16745/*"amount"*/);
+    v13 = sub_1C37194(StringLiteral_16747/*"amount"*/);
     if ( !v13 )
       goto LABEL_24;
-    v14 = StringLiteral_16745/*"amount"*/;
+    v14 = StringLiteral_16747/*"amount"*/;
   }
   else
   {
@@ -25056,7 +25056,7 @@ void iTween__ScaleAdd(
   if ( !*(_DWORD *)(v12 + 24) )
     goto LABEL_23;
   *(_QWORD *)(v12 + 32) = v14;
-  sub_1C32BC4((CGThumbnailListItem_o *)(v12 + 32), v14, v10, v11);
+  sub_1C36FFC((CGThumbnailListItem_o *)(v12 + 32), v14, v10, v11);
   *(float *)v40 = x;
   *(float *)&v40[1] = y;
   *(float *)&v40[2] = z;
@@ -25064,21 +25064,21 @@ void iTween__ScaleAdd(
   v23 = v13;
   if ( v13 )
   {
-    v13 = sub_1C32D5C(v13);
+    v13 = sub_1C37194(v13);
     if ( !v13 )
       goto LABEL_24;
   }
   if ( *(_DWORD *)(v12 + 24) <= 1u )
     goto LABEL_23;
   *(_QWORD *)(v12 + 40) = v23;
-  sub_1C32BC4((CGThumbnailListItem_o *)(v12 + 40), v23, v21, v22);
-  v13 = StringLiteral_24067/*"time"*/;
-  if ( StringLiteral_24067/*"time"*/ )
+  sub_1C36FFC((CGThumbnailListItem_o *)(v12 + 40), v23, v21, v22);
+  v13 = StringLiteral_24071/*"time"*/;
+  if ( StringLiteral_24071/*"time"*/ )
   {
-    v13 = sub_1C32D5C(StringLiteral_24067/*"time"*/);
+    v13 = sub_1C37194(StringLiteral_24071/*"time"*/);
     if ( !v13 )
       goto LABEL_24;
-    v26 = StringLiteral_24067/*"time"*/;
+    v26 = StringLiteral_24071/*"time"*/;
   }
   else
   {
@@ -25087,33 +25087,33 @@ void iTween__ScaleAdd(
   if ( *(_DWORD *)(v12 + 24) <= 2u )
     goto LABEL_23;
   *(_QWORD *)(v12 + 48) = v26;
-  sub_1C32BC4((CGThumbnailListItem_o *)(v12 + 48), v26, v24, v25);
+  sub_1C36FFC((CGThumbnailListItem_o *)(v12 + 48), v26, v24, v25);
   v41 = time;
   v13 = j_il2cpp_value_box_0(float_TypeInfo, &v41, v27, v28, v29, v30, v31, v32);
   v35 = v13;
   if ( v13 )
   {
-    v13 = sub_1C32D5C(v13);
+    v13 = sub_1C37194(v13);
     if ( !v13 )
     {
 LABEL_24:
-      v39 = sub_1C32EA0(v13);
-      sub_1C32D48(v39, 0);
+      v39 = sub_1C372D8(v13);
+      sub_1C37180(v39, 0);
     }
   }
   if ( *(_DWORD *)(v12 + 24) <= 3u )
 LABEL_23:
-    sub_1C32E84(v13);
+    sub_1C372BC(v13);
   *(_QWORD *)(v12 + 56) = v35;
-  sub_1C32BC4((CGThumbnailListItem_o *)(v12 + 56), v35, v33, v34);
+  sub_1C36FFC((CGThumbnailListItem_o *)(v12 + 56), v35, v33, v34);
   if ( !iTween_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(iTween_TypeInfo);
   v37 = iTween__Hash((System_Object_array *)v12, v36);
-  iTween__ScaleAdd_63164944(target, v37, v38);
+  iTween__ScaleAdd_63208056(target, v37, v38);
 }
 
 
-void iTween__ScaleAdd_63164944(
+void iTween__ScaleAdd_63208056(
         UnityEngine_GameObject_o *target,
         System_Collections_Hashtable_o *args,
         const MethodInfo *method)
@@ -25122,30 +25122,30 @@ void iTween__ScaleAdd_63164944(
   System_Collections_Hashtable_o *v6; // x20
   const MethodInfo *v7; // x2
 
-  if ( (byte_4C3E9AF & 1) == 0 )
+  if ( (byte_4C49F2F & 1) == 0 )
   {
-    sub_1C32C20(&StringLiteral_16665/*"add"*/);
-    sub_1C32C20(&StringLiteral_21560/*"method"*/);
-    sub_1C32C20(&StringLiteral_24241/*"type"*/);
-    sub_1C32C20(&StringLiteral_23191/*"scale"*/);
-    sub_1C32C20(&iTween_TypeInfo);
-    byte_4C3E9AF = 1;
+    sub_1C37058(&StringLiteral_16667/*"add"*/);
+    sub_1C37058(&StringLiteral_21563/*"method"*/);
+    sub_1C37058(&StringLiteral_24245/*"type"*/);
+    sub_1C37058(&StringLiteral_23195/*"scale"*/);
+    sub_1C37058(&iTween_TypeInfo);
+    byte_4C49F2F = 1;
   }
   if ( !iTween_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(iTween_TypeInfo);
   v5 = iTween__CleanArgs(args, (const MethodInfo *)args);
   if ( !v5 )
-    sub_1C32E7C(0);
+    sub_1C372B4(0);
   v6 = v5;
   ((void (__fastcall *)(System_Collections_Hashtable_o *, __int64, __int64, const MethodInfo *))v5->klass->vtable._29_set_Item.methodPtr)(
     v5,
-    StringLiteral_24241/*"type"*/,
-    StringLiteral_23191/*"scale"*/,
+    StringLiteral_24245/*"type"*/,
+    StringLiteral_23195/*"scale"*/,
     v5->klass->vtable._29_set_Item.method);
   ((void (__fastcall *)(System_Collections_Hashtable_o *, __int64, __int64, const MethodInfo *))v6->klass->vtable._29_set_Item.methodPtr)(
     v6,
-    StringLiteral_21560/*"method"*/,
-    StringLiteral_16665/*"add"*/,
+    StringLiteral_21563/*"method"*/,
+    StringLiteral_16667/*"add"*/,
     v6->klass->vtable._29_set_Item.method);
   iTween__Launch(target, v6, v7);
 }
@@ -25197,27 +25197,27 @@ void iTween__ScaleBy(
   z = amount.fields.z;
   y = amount.fields.y;
   x = amount.fields.x;
-  if ( (byte_4C3E9B0 & 1) == 0 )
+  if ( (byte_4C49F30 & 1) == 0 )
   {
-    sub_1C32C20(&object___TypeInfo);
-    sub_1C32C20(&float_TypeInfo);
-    sub_1C32C20(&UnityEngine_Vector3_TypeInfo);
-    sub_1C32C20(&StringLiteral_24067/*"time"*/);
-    sub_1C32C20(&StringLiteral_16745/*"amount"*/);
-    sub_1C32C20(&iTween_TypeInfo);
-    byte_4C3E9B0 = 1;
+    sub_1C37058(&object___TypeInfo);
+    sub_1C37058(&float_TypeInfo);
+    sub_1C37058(&UnityEngine_Vector3_TypeInfo);
+    sub_1C37058(&StringLiteral_24071/*"time"*/);
+    sub_1C37058(&StringLiteral_16747/*"amount"*/);
+    sub_1C37058(&iTween_TypeInfo);
+    byte_4C49F30 = 1;
   }
-  v9 = sub_1C32CC8(object___TypeInfo, 4);
+  v9 = sub_1C37100(object___TypeInfo, 4);
   if ( !v9 )
-    sub_1C32E7C(0);
+    sub_1C372B4(0);
   v12 = v9;
-  v13 = StringLiteral_16745/*"amount"*/;
-  if ( StringLiteral_16745/*"amount"*/ )
+  v13 = StringLiteral_16747/*"amount"*/;
+  if ( StringLiteral_16747/*"amount"*/ )
   {
-    v13 = sub_1C32D5C(StringLiteral_16745/*"amount"*/);
+    v13 = sub_1C37194(StringLiteral_16747/*"amount"*/);
     if ( !v13 )
       goto LABEL_24;
-    v14 = StringLiteral_16745/*"amount"*/;
+    v14 = StringLiteral_16747/*"amount"*/;
   }
   else
   {
@@ -25226,7 +25226,7 @@ void iTween__ScaleBy(
   if ( !*(_DWORD *)(v12 + 24) )
     goto LABEL_23;
   *(_QWORD *)(v12 + 32) = v14;
-  sub_1C32BC4((CGThumbnailListItem_o *)(v12 + 32), v14, v10, v11);
+  sub_1C36FFC((CGThumbnailListItem_o *)(v12 + 32), v14, v10, v11);
   *(float *)v40 = x;
   *(float *)&v40[1] = y;
   *(float *)&v40[2] = z;
@@ -25234,21 +25234,21 @@ void iTween__ScaleBy(
   v23 = v13;
   if ( v13 )
   {
-    v13 = sub_1C32D5C(v13);
+    v13 = sub_1C37194(v13);
     if ( !v13 )
       goto LABEL_24;
   }
   if ( *(_DWORD *)(v12 + 24) <= 1u )
     goto LABEL_23;
   *(_QWORD *)(v12 + 40) = v23;
-  sub_1C32BC4((CGThumbnailListItem_o *)(v12 + 40), v23, v21, v22);
-  v13 = StringLiteral_24067/*"time"*/;
-  if ( StringLiteral_24067/*"time"*/ )
+  sub_1C36FFC((CGThumbnailListItem_o *)(v12 + 40), v23, v21, v22);
+  v13 = StringLiteral_24071/*"time"*/;
+  if ( StringLiteral_24071/*"time"*/ )
   {
-    v13 = sub_1C32D5C(StringLiteral_24067/*"time"*/);
+    v13 = sub_1C37194(StringLiteral_24071/*"time"*/);
     if ( !v13 )
       goto LABEL_24;
-    v26 = StringLiteral_24067/*"time"*/;
+    v26 = StringLiteral_24071/*"time"*/;
   }
   else
   {
@@ -25257,33 +25257,33 @@ void iTween__ScaleBy(
   if ( *(_DWORD *)(v12 + 24) <= 2u )
     goto LABEL_23;
   *(_QWORD *)(v12 + 48) = v26;
-  sub_1C32BC4((CGThumbnailListItem_o *)(v12 + 48), v26, v24, v25);
+  sub_1C36FFC((CGThumbnailListItem_o *)(v12 + 48), v26, v24, v25);
   v41 = time;
   v13 = j_il2cpp_value_box_0(float_TypeInfo, &v41, v27, v28, v29, v30, v31, v32);
   v35 = v13;
   if ( v13 )
   {
-    v13 = sub_1C32D5C(v13);
+    v13 = sub_1C37194(v13);
     if ( !v13 )
     {
 LABEL_24:
-      v39 = sub_1C32EA0(v13);
-      sub_1C32D48(v39, 0);
+      v39 = sub_1C372D8(v13);
+      sub_1C37180(v39, 0);
     }
   }
   if ( *(_DWORD *)(v12 + 24) <= 3u )
 LABEL_23:
-    sub_1C32E84(v13);
+    sub_1C372BC(v13);
   *(_QWORD *)(v12 + 56) = v35;
-  sub_1C32BC4((CGThumbnailListItem_o *)(v12 + 56), v35, v33, v34);
+  sub_1C36FFC((CGThumbnailListItem_o *)(v12 + 56), v35, v33, v34);
   if ( !iTween_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(iTween_TypeInfo);
   v37 = iTween__Hash((System_Object_array *)v12, v36);
-  iTween__ScaleBy_63165748(target, v37, v38);
+  iTween__ScaleBy_63208860(target, v37, v38);
 }
 
 
-void iTween__ScaleBy_63165748(
+void iTween__ScaleBy_63208860(
         UnityEngine_GameObject_o *target,
         System_Collections_Hashtable_o *args,
         const MethodInfo *method)
@@ -25292,30 +25292,30 @@ void iTween__ScaleBy_63165748(
   System_Collections_Hashtable_o *v6; // x20
   const MethodInfo *v7; // x2
 
-  if ( (byte_4C3E9B1 & 1) == 0 )
+  if ( (byte_4C49F31 & 1) == 0 )
   {
-    sub_1C32C20(&StringLiteral_17669/*"by"*/);
-    sub_1C32C20(&StringLiteral_21560/*"method"*/);
-    sub_1C32C20(&StringLiteral_24241/*"type"*/);
-    sub_1C32C20(&StringLiteral_23191/*"scale"*/);
-    sub_1C32C20(&iTween_TypeInfo);
-    byte_4C3E9B1 = 1;
+    sub_1C37058(&StringLiteral_17671/*"by"*/);
+    sub_1C37058(&StringLiteral_21563/*"method"*/);
+    sub_1C37058(&StringLiteral_24245/*"type"*/);
+    sub_1C37058(&StringLiteral_23195/*"scale"*/);
+    sub_1C37058(&iTween_TypeInfo);
+    byte_4C49F31 = 1;
   }
   if ( !iTween_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(iTween_TypeInfo);
   v5 = iTween__CleanArgs(args, (const MethodInfo *)args);
   if ( !v5 )
-    sub_1C32E7C(0);
+    sub_1C372B4(0);
   v6 = v5;
   ((void (__fastcall *)(System_Collections_Hashtable_o *, __int64, __int64, const MethodInfo *))v5->klass->vtable._29_set_Item.methodPtr)(
     v5,
-    StringLiteral_24241/*"type"*/,
-    StringLiteral_23191/*"scale"*/,
+    StringLiteral_24245/*"type"*/,
+    StringLiteral_23195/*"scale"*/,
     v5->klass->vtable._29_set_Item.method);
   ((void (__fastcall *)(System_Collections_Hashtable_o *, __int64, __int64, const MethodInfo *))v6->klass->vtable._29_set_Item.methodPtr)(
     v6,
-    StringLiteral_21560/*"method"*/,
-    StringLiteral_17669/*"by"*/,
+    StringLiteral_21563/*"method"*/,
+    StringLiteral_17671/*"by"*/,
     v6->klass->vtable._29_set_Item.method);
   iTween__Launch(target, v6, v7);
 }
@@ -25367,27 +25367,27 @@ void iTween__ScaleFrom(
   z = scale.fields.z;
   y = scale.fields.y;
   x = scale.fields.x;
-  if ( (byte_4C3E9AC & 1) == 0 )
+  if ( (byte_4C49F2C & 1) == 0 )
   {
-    sub_1C32C20(&object___TypeInfo);
-    sub_1C32C20(&float_TypeInfo);
-    sub_1C32C20(&UnityEngine_Vector3_TypeInfo);
-    sub_1C32C20(&StringLiteral_24067/*"time"*/);
-    sub_1C32C20(&StringLiteral_23191/*"scale"*/);
-    sub_1C32C20(&iTween_TypeInfo);
-    byte_4C3E9AC = 1;
+    sub_1C37058(&object___TypeInfo);
+    sub_1C37058(&float_TypeInfo);
+    sub_1C37058(&UnityEngine_Vector3_TypeInfo);
+    sub_1C37058(&StringLiteral_24071/*"time"*/);
+    sub_1C37058(&StringLiteral_23195/*"scale"*/);
+    sub_1C37058(&iTween_TypeInfo);
+    byte_4C49F2C = 1;
   }
-  v9 = sub_1C32CC8(object___TypeInfo, 4);
+  v9 = sub_1C37100(object___TypeInfo, 4);
   if ( !v9 )
-    sub_1C32E7C(0);
+    sub_1C372B4(0);
   v12 = v9;
-  v13 = StringLiteral_23191/*"scale"*/;
-  if ( StringLiteral_23191/*"scale"*/ )
+  v13 = StringLiteral_23195/*"scale"*/;
+  if ( StringLiteral_23195/*"scale"*/ )
   {
-    v13 = sub_1C32D5C(StringLiteral_23191/*"scale"*/);
+    v13 = sub_1C37194(StringLiteral_23195/*"scale"*/);
     if ( !v13 )
       goto LABEL_24;
-    v14 = StringLiteral_23191/*"scale"*/;
+    v14 = StringLiteral_23195/*"scale"*/;
   }
   else
   {
@@ -25396,7 +25396,7 @@ void iTween__ScaleFrom(
   if ( !*(_DWORD *)(v12 + 24) )
     goto LABEL_23;
   *(_QWORD *)(v12 + 32) = v14;
-  sub_1C32BC4((CGThumbnailListItem_o *)(v12 + 32), v14, v10, v11);
+  sub_1C36FFC((CGThumbnailListItem_o *)(v12 + 32), v14, v10, v11);
   *(float *)v40 = x;
   *(float *)&v40[1] = y;
   *(float *)&v40[2] = z;
@@ -25404,21 +25404,21 @@ void iTween__ScaleFrom(
   v23 = v13;
   if ( v13 )
   {
-    v13 = sub_1C32D5C(v13);
+    v13 = sub_1C37194(v13);
     if ( !v13 )
       goto LABEL_24;
   }
   if ( *(_DWORD *)(v12 + 24) <= 1u )
     goto LABEL_23;
   *(_QWORD *)(v12 + 40) = v23;
-  sub_1C32BC4((CGThumbnailListItem_o *)(v12 + 40), v23, v21, v22);
-  v13 = StringLiteral_24067/*"time"*/;
-  if ( StringLiteral_24067/*"time"*/ )
+  sub_1C36FFC((CGThumbnailListItem_o *)(v12 + 40), v23, v21, v22);
+  v13 = StringLiteral_24071/*"time"*/;
+  if ( StringLiteral_24071/*"time"*/ )
   {
-    v13 = sub_1C32D5C(StringLiteral_24067/*"time"*/);
+    v13 = sub_1C37194(StringLiteral_24071/*"time"*/);
     if ( !v13 )
       goto LABEL_24;
-    v26 = StringLiteral_24067/*"time"*/;
+    v26 = StringLiteral_24071/*"time"*/;
   }
   else
   {
@@ -25427,34 +25427,34 @@ void iTween__ScaleFrom(
   if ( *(_DWORD *)(v12 + 24) <= 2u )
     goto LABEL_23;
   *(_QWORD *)(v12 + 48) = v26;
-  sub_1C32BC4((CGThumbnailListItem_o *)(v12 + 48), v26, v24, v25);
+  sub_1C36FFC((CGThumbnailListItem_o *)(v12 + 48), v26, v24, v25);
   v41 = time;
   v13 = j_il2cpp_value_box_0(float_TypeInfo, &v41, v27, v28, v29, v30, v31, v32);
   v35 = v13;
   if ( v13 )
   {
-    v13 = sub_1C32D5C(v13);
+    v13 = sub_1C37194(v13);
     if ( !v13 )
     {
 LABEL_24:
-      v39 = sub_1C32EA0(v13);
-      sub_1C32D48(v39, 0);
+      v39 = sub_1C372D8(v13);
+      sub_1C37180(v39, 0);
     }
   }
   if ( *(_DWORD *)(v12 + 24) <= 3u )
 LABEL_23:
-    sub_1C32E84(v13);
+    sub_1C372BC(v13);
   *(_QWORD *)(v12 + 56) = v35;
-  sub_1C32BC4((CGThumbnailListItem_o *)(v12 + 56), v35, v33, v34);
+  sub_1C36FFC((CGThumbnailListItem_o *)(v12 + 56), v35, v33, v34);
   if ( !iTween_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(iTween_TypeInfo);
   v37 = iTween__Hash((System_Object_array *)v12, v36);
-  iTween__ScaleFrom_63163088(target, v37, v38);
+  iTween__ScaleFrom_63206200(target, v37, v38);
 }
 
 
 // local variable allocation has failed, the output may be wrong!
-void iTween__ScaleFrom_63163088(
+void iTween__ScaleFrom_63206200(
         UnityEngine_GameObject_o *target,
         System_Collections_Hashtable_o *args,
         const MethodInfo *method)
@@ -25503,23 +25503,23 @@ void iTween__ScaleFrom_63163088(
   UnityEngine_Vector3_o v46; // 0:s0.4,4:s1.4,8:s2.4
   UnityEngine_Vector3_o v47; // 0:s0.4,4:s1.4,8:s2.4
 
-  if ( (byte_4C3E9AD & 1) == 0 )
+  if ( (byte_4C49F2D & 1) == 0 )
   {
-    sub_1C32C20(&float_TypeInfo);
-    sub_1C32C20(&UnityEngine_Transform_var);
-    sub_1C32C20(&UnityEngine_Transform_TypeInfo);
-    sub_1C32C20(&System_Type_TypeInfo);
-    sub_1C32C20(&UnityEngine_Vector3_var);
-    sub_1C32C20(&UnityEngine_Vector3_TypeInfo);
-    sub_1C32C20(&StringLiteral_24859/*"x"*/);
-    sub_1C32C20(&StringLiteral_21560/*"method"*/);
-    sub_1C32C20(&StringLiteral_24961/*"y"*/);
-    sub_1C32C20(&StringLiteral_25008/*"z"*/);
-    sub_1C32C20(&StringLiteral_24106/*"to"*/);
-    sub_1C32C20(&StringLiteral_24241/*"type"*/);
-    sub_1C32C20(&StringLiteral_23191/*"scale"*/);
-    sub_1C32C20(&iTween_TypeInfo);
-    byte_4C3E9AD = 1;
+    sub_1C37058(&float_TypeInfo);
+    sub_1C37058(&UnityEngine_Transform_var);
+    sub_1C37058(&UnityEngine_Transform_TypeInfo);
+    sub_1C37058(&System_Type_TypeInfo);
+    sub_1C37058(&UnityEngine_Vector3_var);
+    sub_1C37058(&UnityEngine_Vector3_TypeInfo);
+    sub_1C37058(&StringLiteral_24864/*"x"*/);
+    sub_1C37058(&StringLiteral_21563/*"method"*/);
+    sub_1C37058(&StringLiteral_24966/*"y"*/);
+    sub_1C37058(&StringLiteral_25013/*"z"*/);
+    sub_1C37058(&StringLiteral_24110/*"to"*/);
+    sub_1C37058(&StringLiteral_24245/*"type"*/);
+    sub_1C37058(&StringLiteral_23195/*"scale"*/);
+    sub_1C37058(&iTween_TypeInfo);
+    byte_4C49F2D = 1;
   }
   if ( !iTween_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(iTween_TypeInfo);
@@ -25530,20 +25530,20 @@ void iTween__ScaleFrom_63163088(
     || (localScale = UnityEngine_Transform__get_localScale(transform, 0), !v6) )
   {
 LABEL_41:
-    sub_1C32E7C(transform);
+    sub_1C372B4(transform);
   }
   x = localScale.fields.x;
   y = localScale.fields.y;
   z = localScale.fields.z;
   if ( (((__int64 (__fastcall *)(System_Collections_Hashtable_o *, __int64, const MethodInfo *))v6->klass->vtable._25_Contains.methodPtr)(
           v6,
-          StringLiteral_23191/*"scale"*/,
+          StringLiteral_23195/*"scale"*/,
           v6->klass->vtable._25_Contains.method)
       & 1) != 0 )
   {
     transform = (UnityEngine_Transform_o *)((__int64 (__fastcall *)(System_Collections_Hashtable_o *, __int64, const MethodInfo *))v6->klass->vtable._28_get_Item.methodPtr)(
                                              v6,
-                                             StringLiteral_23191/*"scale"*/,
+                                             StringLiteral_23195/*"scale"*/,
                                              v6->klass->vtable._28_get_Item.method);
     if ( !transform )
       goto LABEL_41;
@@ -25556,7 +25556,7 @@ LABEL_41:
     v14 = System_Type__op_Equality(Type, TypeFromHandle, 0);
     transform = (UnityEngine_Transform_o *)((__int64 (__fastcall *)(System_Collections_Hashtable_o *, __int64, const MethodInfo *))v6->klass->vtable._28_get_Item.methodPtr)(
                                              v6,
-                                             StringLiteral_23191/*"scale"*/,
+                                             StringLiteral_23195/*"scale"*/,
                                              v6->klass->vtable._28_get_Item.method);
     if ( v14 )
     {
@@ -25573,7 +25573,7 @@ LABEL_41:
         goto LABEL_37;
       }
 LABEL_42:
-      v42 = sub_1C3313C(transform);
+      v42 = sub_1C37574(transform);
       iTween__ScaleAdd(v40, *(UnityEngine_Vector3_o *)&v42, v43, v41);
       return;
     }
@@ -25592,7 +25592,7 @@ LABEL_42:
     {
       transform = (UnityEngine_Transform_o *)((__int64 (__fastcall *)(System_Collections_Hashtable_o *, __int64, const MethodInfo *))v6->klass->vtable._28_get_Item.methodPtr)(
                                                v6,
-                                               StringLiteral_23191/*"scale"*/,
+                                               StringLiteral_23195/*"scale"*/,
                                                v6->klass->vtable._28_get_Item.method);
       if ( !transform )
         goto LABEL_41;
@@ -25609,13 +25609,13 @@ LABEL_42:
     v16 = x;
     if ( (((__int64 (__fastcall *)(System_Collections_Hashtable_o *, void *, const MethodInfo *))v6->klass->vtable._25_Contains.methodPtr)(
             v6,
-            StringLiteral_24859/*"x"*/,
+            StringLiteral_24864/*"x"*/,
             v6->klass->vtable._25_Contains.method)
         & 1) != 0 )
     {
       transform = (UnityEngine_Transform_o *)((__int64 (__fastcall *)(System_Collections_Hashtable_o *, void *, const MethodInfo *))v6->klass->vtable._28_get_Item.methodPtr)(
                                                v6,
-                                               StringLiteral_24859/*"x"*/,
+                                               StringLiteral_24864/*"x"*/,
                                                v6->klass->vtable._28_get_Item.method);
       if ( !transform )
         goto LABEL_41;
@@ -25626,13 +25626,13 @@ LABEL_42:
     v17 = y;
     if ( (((__int64 (__fastcall *)(System_Collections_Hashtable_o *, __int64, const MethodInfo *))v6->klass->vtable._25_Contains.methodPtr)(
             v6,
-            StringLiteral_24961/*"y"*/,
+            StringLiteral_24966/*"y"*/,
             v6->klass->vtable._25_Contains.method)
         & 1) != 0 )
     {
       transform = (UnityEngine_Transform_o *)((__int64 (__fastcall *)(System_Collections_Hashtable_o *, __int64, const MethodInfo *))v6->klass->vtable._28_get_Item.methodPtr)(
                                                v6,
-                                               StringLiteral_24961/*"y"*/,
+                                               StringLiteral_24966/*"y"*/,
                                                v6->klass->vtable._28_get_Item.method);
       if ( !transform )
         goto LABEL_41;
@@ -25642,13 +25642,13 @@ LABEL_42:
     }
     if ( (((__int64 (__fastcall *)(System_Collections_Hashtable_o *, __int64, const MethodInfo *))v6->klass->vtable._25_Contains.methodPtr)(
             v6,
-            StringLiteral_25008/*"z"*/,
+            StringLiteral_25013/*"z"*/,
             v6->klass->vtable._25_Contains.method)
         & 1) != 0 )
     {
       transform = (UnityEngine_Transform_o *)((__int64 (__fastcall *)(System_Collections_Hashtable_o *, __int64, const MethodInfo *))v6->klass->vtable._28_get_Item.methodPtr)(
                                                v6,
-                                               StringLiteral_25008/*"z"*/,
+                                               StringLiteral_25013/*"z"*/,
                                                v6->klass->vtable._28_get_Item.method);
       if ( !transform )
         goto LABEL_41;
@@ -25675,18 +25675,18 @@ LABEL_37:
   v38 = j_il2cpp_value_box_0(UnityEngine_Vector3_TypeInfo, v44, v32, v33, v34, v35, v36, v37);
   ((void (__fastcall *)(System_Collections_Hashtable_o *, __int64, __int64, const MethodInfo *))v6->klass->vtable._29_set_Item.methodPtr)(
     v6,
-    StringLiteral_23191/*"scale"*/,
+    StringLiteral_23195/*"scale"*/,
     v38,
     v6->klass->vtable._29_set_Item.method);
   ((void (__fastcall *)(System_Collections_Hashtable_o *, __int64, __int64, const MethodInfo *))v6->klass->vtable._29_set_Item.methodPtr)(
     v6,
-    StringLiteral_24241/*"type"*/,
-    StringLiteral_23191/*"scale"*/,
+    StringLiteral_24245/*"type"*/,
+    StringLiteral_23195/*"scale"*/,
     v6->klass->vtable._29_set_Item.method);
   ((void (__fastcall *)(System_Collections_Hashtable_o *, __int64, __int64, const MethodInfo *))v6->klass->vtable._29_set_Item.methodPtr)(
     v6,
-    StringLiteral_21560/*"method"*/,
-    StringLiteral_24106/*"to"*/,
+    StringLiteral_21563/*"method"*/,
+    StringLiteral_24110/*"to"*/,
     v6->klass->vtable._29_set_Item.method);
   if ( !iTween_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(iTween_TypeInfo);
@@ -25740,27 +25740,27 @@ void iTween__ScaleTo(
   z = scale.fields.z;
   y = scale.fields.y;
   x = scale.fields.x;
-  if ( (byte_4C3E9AA & 1) == 0 )
+  if ( (byte_4C49F2A & 1) == 0 )
   {
-    sub_1C32C20(&object___TypeInfo);
-    sub_1C32C20(&float_TypeInfo);
-    sub_1C32C20(&UnityEngine_Vector3_TypeInfo);
-    sub_1C32C20(&StringLiteral_24067/*"time"*/);
-    sub_1C32C20(&StringLiteral_23191/*"scale"*/);
-    sub_1C32C20(&iTween_TypeInfo);
-    byte_4C3E9AA = 1;
+    sub_1C37058(&object___TypeInfo);
+    sub_1C37058(&float_TypeInfo);
+    sub_1C37058(&UnityEngine_Vector3_TypeInfo);
+    sub_1C37058(&StringLiteral_24071/*"time"*/);
+    sub_1C37058(&StringLiteral_23195/*"scale"*/);
+    sub_1C37058(&iTween_TypeInfo);
+    byte_4C49F2A = 1;
   }
-  v9 = sub_1C32CC8(object___TypeInfo, 4);
+  v9 = sub_1C37100(object___TypeInfo, 4);
   if ( !v9 )
-    sub_1C32E7C(0);
+    sub_1C372B4(0);
   v12 = v9;
-  v13 = StringLiteral_23191/*"scale"*/;
-  if ( StringLiteral_23191/*"scale"*/ )
+  v13 = StringLiteral_23195/*"scale"*/;
+  if ( StringLiteral_23195/*"scale"*/ )
   {
-    v13 = sub_1C32D5C(StringLiteral_23191/*"scale"*/);
+    v13 = sub_1C37194(StringLiteral_23195/*"scale"*/);
     if ( !v13 )
       goto LABEL_24;
-    v14 = StringLiteral_23191/*"scale"*/;
+    v14 = StringLiteral_23195/*"scale"*/;
   }
   else
   {
@@ -25769,7 +25769,7 @@ void iTween__ScaleTo(
   if ( !*(_DWORD *)(v12 + 24) )
     goto LABEL_23;
   *(_QWORD *)(v12 + 32) = v14;
-  sub_1C32BC4((CGThumbnailListItem_o *)(v12 + 32), v14, v10, v11);
+  sub_1C36FFC((CGThumbnailListItem_o *)(v12 + 32), v14, v10, v11);
   *(float *)v40 = x;
   *(float *)&v40[1] = y;
   *(float *)&v40[2] = z;
@@ -25777,21 +25777,21 @@ void iTween__ScaleTo(
   v23 = v13;
   if ( v13 )
   {
-    v13 = sub_1C32D5C(v13);
+    v13 = sub_1C37194(v13);
     if ( !v13 )
       goto LABEL_24;
   }
   if ( *(_DWORD *)(v12 + 24) <= 1u )
     goto LABEL_23;
   *(_QWORD *)(v12 + 40) = v23;
-  sub_1C32BC4((CGThumbnailListItem_o *)(v12 + 40), v23, v21, v22);
-  v13 = StringLiteral_24067/*"time"*/;
-  if ( StringLiteral_24067/*"time"*/ )
+  sub_1C36FFC((CGThumbnailListItem_o *)(v12 + 40), v23, v21, v22);
+  v13 = StringLiteral_24071/*"time"*/;
+  if ( StringLiteral_24071/*"time"*/ )
   {
-    v13 = sub_1C32D5C(StringLiteral_24067/*"time"*/);
+    v13 = sub_1C37194(StringLiteral_24071/*"time"*/);
     if ( !v13 )
       goto LABEL_24;
-    v26 = StringLiteral_24067/*"time"*/;
+    v26 = StringLiteral_24071/*"time"*/;
   }
   else
   {
@@ -25800,34 +25800,34 @@ void iTween__ScaleTo(
   if ( *(_DWORD *)(v12 + 24) <= 2u )
     goto LABEL_23;
   *(_QWORD *)(v12 + 48) = v26;
-  sub_1C32BC4((CGThumbnailListItem_o *)(v12 + 48), v26, v24, v25);
+  sub_1C36FFC((CGThumbnailListItem_o *)(v12 + 48), v26, v24, v25);
   v41 = time;
   v13 = j_il2cpp_value_box_0(float_TypeInfo, &v41, v27, v28, v29, v30, v31, v32);
   v35 = v13;
   if ( v13 )
   {
-    v13 = sub_1C32D5C(v13);
+    v13 = sub_1C37194(v13);
     if ( !v13 )
     {
 LABEL_24:
-      v39 = sub_1C32EA0(v13);
-      sub_1C32D48(v39, 0);
+      v39 = sub_1C372D8(v13);
+      sub_1C37180(v39, 0);
     }
   }
   if ( *(_DWORD *)(v12 + 24) <= 3u )
 LABEL_23:
-    sub_1C32E84(v13);
+    sub_1C372BC(v13);
   *(_QWORD *)(v12 + 56) = v35;
-  sub_1C32BC4((CGThumbnailListItem_o *)(v12 + 56), v35, v33, v34);
+  sub_1C36FFC((CGThumbnailListItem_o *)(v12 + 56), v35, v33, v34);
   if ( !iTween_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(iTween_TypeInfo);
   v37 = iTween__Hash((System_Object_array *)v12, v36);
-  iTween__ScaleTo_63161636(target, v37, v38);
+  iTween__ScaleTo_63204748(target, v37, v38);
 }
 
 
 // local variable allocation has failed, the output may be wrong!
-void iTween__ScaleTo_63161636(
+void iTween__ScaleTo_63204748(
         UnityEngine_GameObject_o *target,
         System_Collections_Hashtable_o *args,
         const MethodInfo *method)
@@ -25882,20 +25882,20 @@ void iTween__ScaleTo_63161636(
   UnityEngine_Vector3_o v52; // 0:s0.4,4:s1.4,8:s2.4
   UnityEngine_Vector3_o v53; // 0:s0.4,4:s1.4,8:s2.4
 
-  if ( (byte_4C3E9AB & 1) == 0 )
+  if ( (byte_4C49F2B & 1) == 0 )
   {
-    sub_1C32C20(&UnityEngine_Transform_var);
-    sub_1C32C20(&UnityEngine_Transform_TypeInfo);
-    sub_1C32C20(&System_Type_TypeInfo);
-    sub_1C32C20(&UnityEngine_Vector3_TypeInfo);
-    sub_1C32C20(&StringLiteral_23148/*"rotation"*/);
-    sub_1C32C20(&StringLiteral_21560/*"method"*/);
-    sub_1C32C20(&StringLiteral_22736/*"position"*/);
-    sub_1C32C20(&StringLiteral_24106/*"to"*/);
-    sub_1C32C20(&StringLiteral_24241/*"type"*/);
-    sub_1C32C20(&StringLiteral_23191/*"scale"*/);
-    sub_1C32C20(&iTween_TypeInfo);
-    byte_4C3E9AB = 1;
+    sub_1C37058(&UnityEngine_Transform_var);
+    sub_1C37058(&UnityEngine_Transform_TypeInfo);
+    sub_1C37058(&System_Type_TypeInfo);
+    sub_1C37058(&UnityEngine_Vector3_TypeInfo);
+    sub_1C37058(&StringLiteral_23152/*"rotation"*/);
+    sub_1C37058(&StringLiteral_21563/*"method"*/);
+    sub_1C37058(&StringLiteral_22740/*"position"*/);
+    sub_1C37058(&StringLiteral_24110/*"to"*/);
+    sub_1C37058(&StringLiteral_24245/*"type"*/);
+    sub_1C37058(&StringLiteral_23195/*"scale"*/);
+    sub_1C37058(&iTween_TypeInfo);
+    byte_4C49F2B = 1;
   }
   if ( !iTween_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(iTween_TypeInfo);
@@ -25905,13 +25905,13 @@ void iTween__ScaleTo_63161636(
   v6 = (System_Collections_Hashtable_o *)v5;
   if ( (((__int64 (__fastcall *)(Il2CppObject *, __int64, const MethodInfo *))v5->klass->vtable[25].methodPtr)(
           v5,
-          StringLiteral_23191/*"scale"*/,
+          StringLiteral_23195/*"scale"*/,
           v5->klass->vtable[25].method)
       & 1) == 0 )
     goto LABEL_15;
   v5 = (Il2CppObject *)((__int64 (__fastcall *)(System_Collections_Hashtable_o *, __int64, const MethodInfo *))v6->klass->vtable._28_get_Item.methodPtr)(
                          v6,
-                         StringLiteral_23191/*"scale"*/,
+                         StringLiteral_23195/*"scale"*/,
                          v6->klass->vtable._28_get_Item.method);
   if ( !v5 )
     goto LABEL_18;
@@ -25925,17 +25925,17 @@ void iTween__ScaleTo_63161636(
     goto LABEL_15;
   v5 = (Il2CppObject *)((__int64 (__fastcall *)(System_Collections_Hashtable_o *, __int64, const MethodInfo *))v6->klass->vtable._28_get_Item.methodPtr)(
                          v6,
-                         StringLiteral_23191/*"scale"*/,
+                         StringLiteral_23195/*"scale"*/,
                          v6->klass->vtable._28_get_Item.method);
   if ( !v5 )
 LABEL_18:
-    sub_1C32E7C(v5);
+    sub_1C372B4(v5);
   v11 = (UnityEngine_Transform_o *)v5;
   naturalAligment = UnityEngine_Transform_TypeInfo->_2.naturalAligment;
   if ( v5->klass->_2.naturalAligment < (unsigned int)naturalAligment
     || (UnityEngine_Transform_c *)v5->klass->_2.typeHierarchy[naturalAligment - 1] != UnityEngine_Transform_TypeInfo )
   {
-    v43 = sub_1C3313C(v5);
+    v43 = sub_1C37574(v5);
     iTween__ScaleFrom(v41, *(UnityEngine_Vector3_o *)&v43, v44, v42);
     return;
   }
@@ -25949,7 +25949,7 @@ LABEL_18:
   v21 = j_il2cpp_value_box_0(UnityEngine_Vector3_TypeInfo, v47, v15, v16, v17, v18, v19, v20);
   ((void (__fastcall *)(System_Collections_Hashtable_o *, __int64, __int64, const MethodInfo *))v6->klass->vtable._29_set_Item.methodPtr)(
     v6,
-    StringLiteral_22736/*"position"*/,
+    StringLiteral_22740/*"position"*/,
     v21,
     v6->klass->vtable._29_set_Item.method);
   eulerAngles = (unsigned int)UnityEngine_Transform__get_eulerAngles(v11, 0);
@@ -25962,7 +25962,7 @@ LABEL_18:
   v30 = j_il2cpp_value_box_0(UnityEngine_Vector3_TypeInfo, v46, v24, v25, v26, v27, v28, v29);
   ((void (__fastcall *)(System_Collections_Hashtable_o *, __int64, __int64, const MethodInfo *))v6->klass->vtable._29_set_Item.methodPtr)(
     v6,
-    StringLiteral_23148/*"rotation"*/,
+    StringLiteral_23152/*"rotation"*/,
     v30,
     v6->klass->vtable._29_set_Item.method);
   localScale = (unsigned int)UnityEngine_Transform__get_localScale(v11, 0);
@@ -25975,19 +25975,19 @@ LABEL_18:
   v39 = j_il2cpp_value_box_0(UnityEngine_Vector3_TypeInfo, v45, v33, v34, v35, v36, v37, v38);
   ((void (__fastcall *)(System_Collections_Hashtable_o *, __int64, __int64, const MethodInfo *))v6->klass->vtable._29_set_Item.methodPtr)(
     v6,
-    StringLiteral_23191/*"scale"*/,
+    StringLiteral_23195/*"scale"*/,
     v39,
     v6->klass->vtable._29_set_Item.method);
 LABEL_15:
   ((void (__fastcall *)(System_Collections_Hashtable_o *, __int64, __int64, const MethodInfo *))v6->klass->vtable._29_set_Item.methodPtr)(
     v6,
-    StringLiteral_24241/*"type"*/,
-    StringLiteral_23191/*"scale"*/,
+    StringLiteral_24245/*"type"*/,
+    StringLiteral_23195/*"scale"*/,
     v6->klass->vtable._29_set_Item.method);
   ((void (__fastcall *)(System_Collections_Hashtable_o *, __int64, __int64, const MethodInfo *))v6->klass->vtable._29_set_Item.methodPtr)(
     v6,
-    StringLiteral_21560/*"method"*/,
-    StringLiteral_24106/*"to"*/,
+    StringLiteral_21563/*"method"*/,
+    StringLiteral_24110/*"to"*/,
     v6->klass->vtable._29_set_Item.method);
   if ( !iTween_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(iTween_TypeInfo);
@@ -26045,40 +26045,40 @@ void iTween__ScaleUpdate(
   UnityEngine_Vector3_o localScale; // 0:s0.4,4:s1.4,8:s2.4
   UnityEngine_Vector3_o v47; // 0:s0.4,4:s1.4,8:s2.4
 
-  if ( (byte_4C3E9FD & 1) == 0 )
+  if ( (byte_4C49F7D & 1) == 0 )
   {
-    sub_1C32C20(&iTween_Defaults_TypeInfo);
-    sub_1C32C20(&float_TypeInfo);
-    sub_1C32C20(&UnityEngine_Transform_var);
-    sub_1C32C20(&UnityEngine_Transform_TypeInfo);
-    sub_1C32C20(&System_Type_TypeInfo);
-    sub_1C32C20(&UnityEngine_Vector3___TypeInfo);
-    sub_1C32C20(&UnityEngine_Vector3_var);
-    sub_1C32C20(&UnityEngine_Vector3_TypeInfo);
-    sub_1C32C20(&StringLiteral_24859/*"x"*/);
-    sub_1C32C20(&StringLiteral_24067/*"time"*/);
-    sub_1C32C20(&StringLiteral_24961/*"y"*/);
-    sub_1C32C20(&StringLiteral_25008/*"z"*/);
-    sub_1C32C20(&StringLiteral_23191/*"scale"*/);
-    sub_1C32C20(&iTween_TypeInfo);
-    byte_4C3E9FD = 1;
+    sub_1C37058(&iTween_Defaults_TypeInfo);
+    sub_1C37058(&float_TypeInfo);
+    sub_1C37058(&UnityEngine_Transform_var);
+    sub_1C37058(&UnityEngine_Transform_TypeInfo);
+    sub_1C37058(&System_Type_TypeInfo);
+    sub_1C37058(&UnityEngine_Vector3___TypeInfo);
+    sub_1C37058(&UnityEngine_Vector3_var);
+    sub_1C37058(&UnityEngine_Vector3_TypeInfo);
+    sub_1C37058(&StringLiteral_24864/*"x"*/);
+    sub_1C37058(&StringLiteral_24071/*"time"*/);
+    sub_1C37058(&StringLiteral_24966/*"y"*/);
+    sub_1C37058(&StringLiteral_25013/*"z"*/);
+    sub_1C37058(&StringLiteral_23195/*"scale"*/);
+    sub_1C37058(&iTween_TypeInfo);
+    byte_4C49F7D = 1;
   }
   if ( !iTween_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(iTween_TypeInfo);
   iTween__CleanArgs(args, (const MethodInfo *)args);
-  transform = sub_1C32CC8(UnityEngine_Vector3___TypeInfo, 4);
+  transform = sub_1C37100(UnityEngine_Vector3___TypeInfo, 4);
   if ( !args )
     goto LABEL_60;
   v6 = transform;
   if ( (((__int64 (__fastcall *)(System_Collections_Hashtable_o *, __int64, const MethodInfo *))args->klass->vtable._25_Contains.methodPtr)(
           args,
-          StringLiteral_24067/*"time"*/,
+          StringLiteral_24071/*"time"*/,
           args->klass->vtable._25_Contains.method)
       & 1) != 0 )
   {
     transform = ((__int64 (__fastcall *)(System_Collections_Hashtable_o *, __int64, const MethodInfo *))args->klass->vtable._28_get_Item.methodPtr)(
                   args,
-                  StringLiteral_24067/*"time"*/,
+                  StringLiteral_24071/*"time"*/,
                   args->klass->vtable._28_get_Item.method);
     if ( !transform )
       goto LABEL_60;
@@ -26119,19 +26119,19 @@ void iTween__ScaleUpdate(
   *(float *)(v6 + 44) = localScale.fields.x;
   if ( (((__int64 (__fastcall *)(System_Collections_Hashtable_o *, __int64, const MethodInfo *))args->klass->vtable._25_Contains.methodPtr)(
           args,
-          StringLiteral_23191/*"scale"*/,
+          StringLiteral_23195/*"scale"*/,
           args->klass->vtable._25_Contains.method)
       & 1) == 0 )
   {
     if ( (((__int64 (__fastcall *)(System_Collections_Hashtable_o *, void *, const MethodInfo *))args->klass->vtable._25_Contains.methodPtr)(
             args,
-            StringLiteral_24859/*"x"*/,
+            StringLiteral_24864/*"x"*/,
             args->klass->vtable._25_Contains.method)
         & 1) != 0 )
     {
       transform = ((__int64 (__fastcall *)(System_Collections_Hashtable_o *, void *, const MethodInfo *))args->klass->vtable._28_get_Item.methodPtr)(
                     args,
-                    StringLiteral_24859/*"x"*/,
+                    StringLiteral_24864/*"x"*/,
                     args->klass->vtable._28_get_Item.method);
       if ( !transform )
         goto LABEL_60;
@@ -26144,13 +26144,13 @@ void iTween__ScaleUpdate(
     }
     if ( (((__int64 (__fastcall *)(System_Collections_Hashtable_o *, __int64, const MethodInfo *))args->klass->vtable._25_Contains.methodPtr)(
             args,
-            StringLiteral_24961/*"y"*/,
+            StringLiteral_24966/*"y"*/,
             args->klass->vtable._25_Contains.method)
         & 1) != 0 )
     {
       transform = ((__int64 (__fastcall *)(System_Collections_Hashtable_o *, __int64, const MethodInfo *))args->klass->vtable._28_get_Item.methodPtr)(
                     args,
-                    StringLiteral_24961/*"y"*/,
+                    StringLiteral_24966/*"y"*/,
                     args->klass->vtable._28_get_Item.method);
       if ( !transform )
         goto LABEL_60;
@@ -26163,13 +26163,13 @@ void iTween__ScaleUpdate(
     }
     transform = ((__int64 (__fastcall *)(System_Collections_Hashtable_o *, __int64, const MethodInfo *))args->klass->vtable._25_Contains.methodPtr)(
                   args,
-                  StringLiteral_25008/*"z"*/,
+                  StringLiteral_25013/*"z"*/,
                   args->klass->vtable._25_Contains.method);
     if ( (transform & 1) != 0 )
     {
       transform = ((__int64 (__fastcall *)(System_Collections_Hashtable_o *, __int64, const MethodInfo *))args->klass->vtable._28_get_Item.methodPtr)(
                     args,
-                    StringLiteral_25008/*"z"*/,
+                    StringLiteral_25013/*"z"*/,
                     args->klass->vtable._28_get_Item.method);
       if ( !transform )
         goto LABEL_60;
@@ -26189,21 +26189,21 @@ LABEL_52:
       v30 = *(float *)(v6 + 32);
       v31 = *(float *)(v6 + 44);
       deltaTime = UnityEngine_Time__get_deltaTime(0);
-      v33 = UnityEngine_Mathf__SmoothDamp_71168496(v30, v31, (float *)(v6 + 56), v10, INFINITY, deltaTime, 0);
+      v33 = UnityEngine_Mathf__SmoothDamp_71211608(v30, v31, (float *)(v6 + 56), v10, INFINITY, deltaTime, 0);
       if ( *(_DWORD *)(v6 + 24) > 3u )
       {
         v34 = *(float *)(v6 + 36);
         v35 = *(float *)(v6 + 48);
         *(float *)(v6 + 68) = v33;
         v36 = UnityEngine_Time__get_deltaTime(0);
-        v37 = UnityEngine_Mathf__SmoothDamp_71168496(v34, v35, (float *)(v6 + 60), v10, INFINITY, v36, 0);
+        v37 = UnityEngine_Mathf__SmoothDamp_71211608(v34, v35, (float *)(v6 + 60), v10, INFINITY, v36, 0);
         if ( *(_DWORD *)(v6 + 24) > 3u )
         {
           v38 = *(float *)(v6 + 40);
           v39 = *(float *)(v6 + 52);
           *(float *)(v6 + 72) = v37;
           v40 = UnityEngine_Time__get_deltaTime(0);
-          v41 = UnityEngine_Mathf__SmoothDamp_71168496(v38, v39, (float *)(v6 + 64), v10, INFINITY, v40, 0);
+          v41 = UnityEngine_Mathf__SmoothDamp_71211608(v38, v39, (float *)(v6 + 64), v10, INFINITY, v40, 0);
           if ( *(_DWORD *)(v6 + 24) > 3u )
           {
             *(float *)(v6 + 76) = v41;
@@ -26219,18 +26219,18 @@ LABEL_52:
                 return;
               }
 LABEL_60:
-              sub_1C32E7C(transform);
+              sub_1C372B4(transform);
             }
           }
         }
       }
     }
 LABEL_59:
-    sub_1C32E84(transform);
+    sub_1C372BC(transform);
   }
   transform = ((__int64 (__fastcall *)(System_Collections_Hashtable_o *, __int64, const MethodInfo *))args->klass->vtable._28_get_Item.methodPtr)(
                 args,
-                StringLiteral_23191/*"scale"*/,
+                StringLiteral_23195/*"scale"*/,
                 args->klass->vtable._28_get_Item.method);
   if ( !transform )
     goto LABEL_60;
@@ -26243,7 +26243,7 @@ LABEL_59:
   v15 = System_Type__op_Equality(Type, TypeFromHandle, 0);
   transform = ((__int64 (__fastcall *)(System_Collections_Hashtable_o *, __int64, const MethodInfo *))args->klass->vtable._28_get_Item.methodPtr)(
                 args,
-                StringLiteral_23191/*"scale"*/,
+                StringLiteral_23195/*"scale"*/,
                 args->klass->vtable._28_get_Item.method);
   if ( !v15 )
   {
@@ -26260,7 +26260,7 @@ LABEL_59:
     {
       transform = ((__int64 (__fastcall *)(System_Collections_Hashtable_o *, __int64, const MethodInfo *))args->klass->vtable._28_get_Item.methodPtr)(
                     args,
-                    StringLiteral_23191/*"scale"*/,
+                    StringLiteral_23195/*"scale"*/,
                     args->klass->vtable._28_get_Item.method);
       if ( !transform )
         goto LABEL_60;
@@ -26291,12 +26291,12 @@ LABEL_59:
     goto LABEL_52;
   }
 LABEL_61:
-  v44 = sub_1C3313C(transform);
-  iTween__ScaleUpdate_63235448(v42, *(UnityEngine_Vector3_o *)&v44, v45, v43);
+  v44 = sub_1C37574(transform);
+  iTween__ScaleUpdate_63278560(v42, *(UnityEngine_Vector3_o *)&v44, v45, v43);
 }
 
 
-void iTween__ScaleUpdate_63235448(
+void iTween__ScaleUpdate_63278560(
         UnityEngine_GameObject_o *target,
         UnityEngine_Vector3_o scale,
         float time,
@@ -26342,27 +26342,27 @@ void iTween__ScaleUpdate_63235448(
   z = scale.fields.z;
   y = scale.fields.y;
   x = scale.fields.x;
-  if ( (byte_4C3E9FE & 1) == 0 )
+  if ( (byte_4C49F7E & 1) == 0 )
   {
-    sub_1C32C20(&object___TypeInfo);
-    sub_1C32C20(&float_TypeInfo);
-    sub_1C32C20(&UnityEngine_Vector3_TypeInfo);
-    sub_1C32C20(&StringLiteral_24067/*"time"*/);
-    sub_1C32C20(&StringLiteral_23191/*"scale"*/);
-    sub_1C32C20(&iTween_TypeInfo);
-    byte_4C3E9FE = 1;
+    sub_1C37058(&object___TypeInfo);
+    sub_1C37058(&float_TypeInfo);
+    sub_1C37058(&UnityEngine_Vector3_TypeInfo);
+    sub_1C37058(&StringLiteral_24071/*"time"*/);
+    sub_1C37058(&StringLiteral_23195/*"scale"*/);
+    sub_1C37058(&iTween_TypeInfo);
+    byte_4C49F7E = 1;
   }
-  v9 = sub_1C32CC8(object___TypeInfo, 4);
+  v9 = sub_1C37100(object___TypeInfo, 4);
   if ( !v9 )
-    sub_1C32E7C(0);
+    sub_1C372B4(0);
   v12 = v9;
-  v13 = StringLiteral_23191/*"scale"*/;
-  if ( StringLiteral_23191/*"scale"*/ )
+  v13 = StringLiteral_23195/*"scale"*/;
+  if ( StringLiteral_23195/*"scale"*/ )
   {
-    v13 = sub_1C32D5C(StringLiteral_23191/*"scale"*/);
+    v13 = sub_1C37194(StringLiteral_23195/*"scale"*/);
     if ( !v13 )
       goto LABEL_24;
-    v14 = StringLiteral_23191/*"scale"*/;
+    v14 = StringLiteral_23195/*"scale"*/;
   }
   else
   {
@@ -26371,7 +26371,7 @@ void iTween__ScaleUpdate_63235448(
   if ( !*(_DWORD *)(v12 + 24) )
     goto LABEL_23;
   *(_QWORD *)(v12 + 32) = v14;
-  sub_1C32BC4((CGThumbnailListItem_o *)(v12 + 32), v14, v10, v11);
+  sub_1C36FFC((CGThumbnailListItem_o *)(v12 + 32), v14, v10, v11);
   *(float *)v40 = x;
   *(float *)&v40[1] = y;
   *(float *)&v40[2] = z;
@@ -26379,21 +26379,21 @@ void iTween__ScaleUpdate_63235448(
   v23 = v13;
   if ( v13 )
   {
-    v13 = sub_1C32D5C(v13);
+    v13 = sub_1C37194(v13);
     if ( !v13 )
       goto LABEL_24;
   }
   if ( *(_DWORD *)(v12 + 24) <= 1u )
     goto LABEL_23;
   *(_QWORD *)(v12 + 40) = v23;
-  sub_1C32BC4((CGThumbnailListItem_o *)(v12 + 40), v23, v21, v22);
-  v13 = StringLiteral_24067/*"time"*/;
-  if ( StringLiteral_24067/*"time"*/ )
+  sub_1C36FFC((CGThumbnailListItem_o *)(v12 + 40), v23, v21, v22);
+  v13 = StringLiteral_24071/*"time"*/;
+  if ( StringLiteral_24071/*"time"*/ )
   {
-    v13 = sub_1C32D5C(StringLiteral_24067/*"time"*/);
+    v13 = sub_1C37194(StringLiteral_24071/*"time"*/);
     if ( !v13 )
       goto LABEL_24;
-    v26 = StringLiteral_24067/*"time"*/;
+    v26 = StringLiteral_24071/*"time"*/;
   }
   else
   {
@@ -26402,25 +26402,25 @@ void iTween__ScaleUpdate_63235448(
   if ( *(_DWORD *)(v12 + 24) <= 2u )
     goto LABEL_23;
   *(_QWORD *)(v12 + 48) = v26;
-  sub_1C32BC4((CGThumbnailListItem_o *)(v12 + 48), v26, v24, v25);
+  sub_1C36FFC((CGThumbnailListItem_o *)(v12 + 48), v26, v24, v25);
   v41 = time;
   v13 = j_il2cpp_value_box_0(float_TypeInfo, &v41, v27, v28, v29, v30, v31, v32);
   v35 = v13;
   if ( v13 )
   {
-    v13 = sub_1C32D5C(v13);
+    v13 = sub_1C37194(v13);
     if ( !v13 )
     {
 LABEL_24:
-      v39 = sub_1C32EA0(v13);
-      sub_1C32D48(v39, 0);
+      v39 = sub_1C372D8(v13);
+      sub_1C37180(v39, 0);
     }
   }
   if ( *(_DWORD *)(v12 + 24) <= 3u )
 LABEL_23:
-    sub_1C32E84(v13);
+    sub_1C372BC(v13);
   *(_QWORD *)(v12 + 56) = v35;
-  sub_1C32BC4((CGThumbnailListItem_o *)(v12 + 56), v35, v33, v34);
+  sub_1C36FFC((CGThumbnailListItem_o *)(v12 + 56), v35, v33, v34);
   if ( !iTween_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(iTween_TypeInfo);
   v37 = iTween__Hash((System_Object_array *)v12, v36);
@@ -26483,27 +26483,27 @@ void iTween__ShakePosition(
   z = amount.fields.z;
   y = amount.fields.y;
   x = amount.fields.x;
-  if ( (byte_4C3E9BA & 1) == 0 )
+  if ( (byte_4C49F3A & 1) == 0 )
   {
-    sub_1C32C20(&object___TypeInfo);
-    sub_1C32C20(&float_TypeInfo);
-    sub_1C32C20(&UnityEngine_Vector3_TypeInfo);
-    sub_1C32C20(&StringLiteral_24067/*"time"*/);
-    sub_1C32C20(&StringLiteral_16745/*"amount"*/);
-    sub_1C32C20(&iTween_TypeInfo);
-    byte_4C3E9BA = 1;
+    sub_1C37058(&object___TypeInfo);
+    sub_1C37058(&float_TypeInfo);
+    sub_1C37058(&UnityEngine_Vector3_TypeInfo);
+    sub_1C37058(&StringLiteral_24071/*"time"*/);
+    sub_1C37058(&StringLiteral_16747/*"amount"*/);
+    sub_1C37058(&iTween_TypeInfo);
+    byte_4C49F3A = 1;
   }
-  v9 = sub_1C32CC8(object___TypeInfo, 4);
+  v9 = sub_1C37100(object___TypeInfo, 4);
   if ( !v9 )
-    sub_1C32E7C(0);
+    sub_1C372B4(0);
   v12 = v9;
-  v13 = StringLiteral_16745/*"amount"*/;
-  if ( StringLiteral_16745/*"amount"*/ )
+  v13 = StringLiteral_16747/*"amount"*/;
+  if ( StringLiteral_16747/*"amount"*/ )
   {
-    v13 = sub_1C32D5C(StringLiteral_16745/*"amount"*/);
+    v13 = sub_1C37194(StringLiteral_16747/*"amount"*/);
     if ( !v13 )
       goto LABEL_24;
-    v14 = StringLiteral_16745/*"amount"*/;
+    v14 = StringLiteral_16747/*"amount"*/;
   }
   else
   {
@@ -26512,7 +26512,7 @@ void iTween__ShakePosition(
   if ( !*(_DWORD *)(v12 + 24) )
     goto LABEL_23;
   *(_QWORD *)(v12 + 32) = v14;
-  sub_1C32BC4((CGThumbnailListItem_o *)(v12 + 32), v14, v10, v11);
+  sub_1C36FFC((CGThumbnailListItem_o *)(v12 + 32), v14, v10, v11);
   *(float *)v40 = x;
   *(float *)&v40[1] = y;
   *(float *)&v40[2] = z;
@@ -26520,21 +26520,21 @@ void iTween__ShakePosition(
   v23 = v13;
   if ( v13 )
   {
-    v13 = sub_1C32D5C(v13);
+    v13 = sub_1C37194(v13);
     if ( !v13 )
       goto LABEL_24;
   }
   if ( *(_DWORD *)(v12 + 24) <= 1u )
     goto LABEL_23;
   *(_QWORD *)(v12 + 40) = v23;
-  sub_1C32BC4((CGThumbnailListItem_o *)(v12 + 40), v23, v21, v22);
-  v13 = StringLiteral_24067/*"time"*/;
-  if ( StringLiteral_24067/*"time"*/ )
+  sub_1C36FFC((CGThumbnailListItem_o *)(v12 + 40), v23, v21, v22);
+  v13 = StringLiteral_24071/*"time"*/;
+  if ( StringLiteral_24071/*"time"*/ )
   {
-    v13 = sub_1C32D5C(StringLiteral_24067/*"time"*/);
+    v13 = sub_1C37194(StringLiteral_24071/*"time"*/);
     if ( !v13 )
       goto LABEL_24;
-    v26 = StringLiteral_24067/*"time"*/;
+    v26 = StringLiteral_24071/*"time"*/;
   }
   else
   {
@@ -26543,33 +26543,33 @@ void iTween__ShakePosition(
   if ( *(_DWORD *)(v12 + 24) <= 2u )
     goto LABEL_23;
   *(_QWORD *)(v12 + 48) = v26;
-  sub_1C32BC4((CGThumbnailListItem_o *)(v12 + 48), v26, v24, v25);
+  sub_1C36FFC((CGThumbnailListItem_o *)(v12 + 48), v26, v24, v25);
   v41 = time;
   v13 = j_il2cpp_value_box_0(float_TypeInfo, &v41, v27, v28, v29, v30, v31, v32);
   v35 = v13;
   if ( v13 )
   {
-    v13 = sub_1C32D5C(v13);
+    v13 = sub_1C37194(v13);
     if ( !v13 )
     {
 LABEL_24:
-      v39 = sub_1C32EA0(v13);
-      sub_1C32D48(v39, 0);
+      v39 = sub_1C372D8(v13);
+      sub_1C37180(v39, 0);
     }
   }
   if ( *(_DWORD *)(v12 + 24) <= 3u )
 LABEL_23:
-    sub_1C32E84(v13);
+    sub_1C372BC(v13);
   *(_QWORD *)(v12 + 56) = v35;
-  sub_1C32BC4((CGThumbnailListItem_o *)(v12 + 56), v35, v33, v34);
+  sub_1C36FFC((CGThumbnailListItem_o *)(v12 + 56), v35, v33, v34);
   if ( !iTween_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(iTween_TypeInfo);
   v37 = iTween__Hash((System_Object_array *)v12, v36);
-  iTween__ShakePosition_63171716(target, v37, v38);
+  iTween__ShakePosition_63214828(target, v37, v38);
 }
 
 
-void iTween__ShakePosition_63171716(
+void iTween__ShakePosition_63214828(
         UnityEngine_GameObject_o *target,
         System_Collections_Hashtable_o *args,
         const MethodInfo *method)
@@ -26578,30 +26578,30 @@ void iTween__ShakePosition_63171716(
   System_Collections_Hashtable_o *v6; // x20
   const MethodInfo *v7; // x2
 
-  if ( (byte_4C3E9BB & 1) == 0 )
+  if ( (byte_4C49F3B & 1) == 0 )
   {
-    sub_1C32C20(&StringLiteral_23417/*"shake"*/);
-    sub_1C32C20(&StringLiteral_21560/*"method"*/);
-    sub_1C32C20(&StringLiteral_22736/*"position"*/);
-    sub_1C32C20(&StringLiteral_24241/*"type"*/);
-    sub_1C32C20(&iTween_TypeInfo);
-    byte_4C3E9BB = 1;
+    sub_1C37058(&StringLiteral_23421/*"shake"*/);
+    sub_1C37058(&StringLiteral_21563/*"method"*/);
+    sub_1C37058(&StringLiteral_22740/*"position"*/);
+    sub_1C37058(&StringLiteral_24245/*"type"*/);
+    sub_1C37058(&iTween_TypeInfo);
+    byte_4C49F3B = 1;
   }
   if ( !iTween_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(iTween_TypeInfo);
   v5 = iTween__CleanArgs(args, (const MethodInfo *)args);
   if ( !v5 )
-    sub_1C32E7C(0);
+    sub_1C372B4(0);
   v6 = v5;
   ((void (__fastcall *)(System_Collections_Hashtable_o *, __int64, __int64, const MethodInfo *))v5->klass->vtable._29_set_Item.methodPtr)(
     v5,
-    StringLiteral_24241/*"type"*/,
-    StringLiteral_23417/*"shake"*/,
+    StringLiteral_24245/*"type"*/,
+    StringLiteral_23421/*"shake"*/,
     v5->klass->vtable._29_set_Item.method);
   ((void (__fastcall *)(System_Collections_Hashtable_o *, __int64, __int64, const MethodInfo *))v6->klass->vtable._29_set_Item.methodPtr)(
     v6,
-    StringLiteral_21560/*"method"*/,
-    StringLiteral_22736/*"position"*/,
+    StringLiteral_21563/*"method"*/,
+    StringLiteral_22740/*"position"*/,
     v6->klass->vtable._29_set_Item.method);
   iTween__Launch(target, v6, v7);
 }
@@ -26653,27 +26653,27 @@ void iTween__ShakeRotation(
   z = amount.fields.z;
   y = amount.fields.y;
   x = amount.fields.x;
-  if ( (byte_4C3E9BE & 1) == 0 )
+  if ( (byte_4C49F3E & 1) == 0 )
   {
-    sub_1C32C20(&object___TypeInfo);
-    sub_1C32C20(&float_TypeInfo);
-    sub_1C32C20(&UnityEngine_Vector3_TypeInfo);
-    sub_1C32C20(&StringLiteral_24067/*"time"*/);
-    sub_1C32C20(&StringLiteral_16745/*"amount"*/);
-    sub_1C32C20(&iTween_TypeInfo);
-    byte_4C3E9BE = 1;
+    sub_1C37058(&object___TypeInfo);
+    sub_1C37058(&float_TypeInfo);
+    sub_1C37058(&UnityEngine_Vector3_TypeInfo);
+    sub_1C37058(&StringLiteral_24071/*"time"*/);
+    sub_1C37058(&StringLiteral_16747/*"amount"*/);
+    sub_1C37058(&iTween_TypeInfo);
+    byte_4C49F3E = 1;
   }
-  v9 = sub_1C32CC8(object___TypeInfo, 4);
+  v9 = sub_1C37100(object___TypeInfo, 4);
   if ( !v9 )
-    sub_1C32E7C(0);
+    sub_1C372B4(0);
   v12 = v9;
-  v13 = StringLiteral_16745/*"amount"*/;
-  if ( StringLiteral_16745/*"amount"*/ )
+  v13 = StringLiteral_16747/*"amount"*/;
+  if ( StringLiteral_16747/*"amount"*/ )
   {
-    v13 = sub_1C32D5C(StringLiteral_16745/*"amount"*/);
+    v13 = sub_1C37194(StringLiteral_16747/*"amount"*/);
     if ( !v13 )
       goto LABEL_24;
-    v14 = StringLiteral_16745/*"amount"*/;
+    v14 = StringLiteral_16747/*"amount"*/;
   }
   else
   {
@@ -26682,7 +26682,7 @@ void iTween__ShakeRotation(
   if ( !*(_DWORD *)(v12 + 24) )
     goto LABEL_23;
   *(_QWORD *)(v12 + 32) = v14;
-  sub_1C32BC4((CGThumbnailListItem_o *)(v12 + 32), v14, v10, v11);
+  sub_1C36FFC((CGThumbnailListItem_o *)(v12 + 32), v14, v10, v11);
   *(float *)v40 = x;
   *(float *)&v40[1] = y;
   *(float *)&v40[2] = z;
@@ -26690,21 +26690,21 @@ void iTween__ShakeRotation(
   v23 = v13;
   if ( v13 )
   {
-    v13 = sub_1C32D5C(v13);
+    v13 = sub_1C37194(v13);
     if ( !v13 )
       goto LABEL_24;
   }
   if ( *(_DWORD *)(v12 + 24) <= 1u )
     goto LABEL_23;
   *(_QWORD *)(v12 + 40) = v23;
-  sub_1C32BC4((CGThumbnailListItem_o *)(v12 + 40), v23, v21, v22);
-  v13 = StringLiteral_24067/*"time"*/;
-  if ( StringLiteral_24067/*"time"*/ )
+  sub_1C36FFC((CGThumbnailListItem_o *)(v12 + 40), v23, v21, v22);
+  v13 = StringLiteral_24071/*"time"*/;
+  if ( StringLiteral_24071/*"time"*/ )
   {
-    v13 = sub_1C32D5C(StringLiteral_24067/*"time"*/);
+    v13 = sub_1C37194(StringLiteral_24071/*"time"*/);
     if ( !v13 )
       goto LABEL_24;
-    v26 = StringLiteral_24067/*"time"*/;
+    v26 = StringLiteral_24071/*"time"*/;
   }
   else
   {
@@ -26713,33 +26713,33 @@ void iTween__ShakeRotation(
   if ( *(_DWORD *)(v12 + 24) <= 2u )
     goto LABEL_23;
   *(_QWORD *)(v12 + 48) = v26;
-  sub_1C32BC4((CGThumbnailListItem_o *)(v12 + 48), v26, v24, v25);
+  sub_1C36FFC((CGThumbnailListItem_o *)(v12 + 48), v26, v24, v25);
   v41 = time;
   v13 = j_il2cpp_value_box_0(float_TypeInfo, &v41, v27, v28, v29, v30, v31, v32);
   v35 = v13;
   if ( v13 )
   {
-    v13 = sub_1C32D5C(v13);
+    v13 = sub_1C37194(v13);
     if ( !v13 )
     {
 LABEL_24:
-      v39 = sub_1C32EA0(v13);
-      sub_1C32D48(v39, 0);
+      v39 = sub_1C372D8(v13);
+      sub_1C37180(v39, 0);
     }
   }
   if ( *(_DWORD *)(v12 + 24) <= 3u )
 LABEL_23:
-    sub_1C32E84(v13);
+    sub_1C372BC(v13);
   *(_QWORD *)(v12 + 56) = v35;
-  sub_1C32BC4((CGThumbnailListItem_o *)(v12 + 56), v35, v33, v34);
+  sub_1C36FFC((CGThumbnailListItem_o *)(v12 + 56), v35, v33, v34);
   if ( !iTween_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(iTween_TypeInfo);
   v37 = iTween__Hash((System_Object_array *)v12, v36);
-  iTween__ShakeRotation_63173324(target, v37, v38);
+  iTween__ShakeRotation_63216436(target, v37, v38);
 }
 
 
-void iTween__ShakeRotation_63173324(
+void iTween__ShakeRotation_63216436(
         UnityEngine_GameObject_o *target,
         System_Collections_Hashtable_o *args,
         const MethodInfo *method)
@@ -26748,30 +26748,30 @@ void iTween__ShakeRotation_63173324(
   System_Collections_Hashtable_o *v6; // x20
   const MethodInfo *v7; // x2
 
-  if ( (byte_4C3E9BF & 1) == 0 )
+  if ( (byte_4C49F3F & 1) == 0 )
   {
-    sub_1C32C20(&StringLiteral_23417/*"shake"*/);
-    sub_1C32C20(&StringLiteral_23148/*"rotation"*/);
-    sub_1C32C20(&StringLiteral_21560/*"method"*/);
-    sub_1C32C20(&StringLiteral_24241/*"type"*/);
-    sub_1C32C20(&iTween_TypeInfo);
-    byte_4C3E9BF = 1;
+    sub_1C37058(&StringLiteral_23421/*"shake"*/);
+    sub_1C37058(&StringLiteral_23152/*"rotation"*/);
+    sub_1C37058(&StringLiteral_21563/*"method"*/);
+    sub_1C37058(&StringLiteral_24245/*"type"*/);
+    sub_1C37058(&iTween_TypeInfo);
+    byte_4C49F3F = 1;
   }
   if ( !iTween_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(iTween_TypeInfo);
   v5 = iTween__CleanArgs(args, (const MethodInfo *)args);
   if ( !v5 )
-    sub_1C32E7C(0);
+    sub_1C372B4(0);
   v6 = v5;
   ((void (__fastcall *)(System_Collections_Hashtable_o *, __int64, __int64, const MethodInfo *))v5->klass->vtable._29_set_Item.methodPtr)(
     v5,
-    StringLiteral_24241/*"type"*/,
-    StringLiteral_23417/*"shake"*/,
+    StringLiteral_24245/*"type"*/,
+    StringLiteral_23421/*"shake"*/,
     v5->klass->vtable._29_set_Item.method);
   ((void (__fastcall *)(System_Collections_Hashtable_o *, __int64, __int64, const MethodInfo *))v6->klass->vtable._29_set_Item.methodPtr)(
     v6,
-    StringLiteral_21560/*"method"*/,
-    StringLiteral_23148/*"rotation"*/,
+    StringLiteral_21563/*"method"*/,
+    StringLiteral_23152/*"rotation"*/,
     v6->klass->vtable._29_set_Item.method);
   iTween__Launch(target, v6, v7);
 }
@@ -26823,27 +26823,27 @@ void iTween__ShakeScale(
   z = amount.fields.z;
   y = amount.fields.y;
   x = amount.fields.x;
-  if ( (byte_4C3E9BC & 1) == 0 )
+  if ( (byte_4C49F3C & 1) == 0 )
   {
-    sub_1C32C20(&object___TypeInfo);
-    sub_1C32C20(&float_TypeInfo);
-    sub_1C32C20(&UnityEngine_Vector3_TypeInfo);
-    sub_1C32C20(&StringLiteral_24067/*"time"*/);
-    sub_1C32C20(&StringLiteral_16745/*"amount"*/);
-    sub_1C32C20(&iTween_TypeInfo);
-    byte_4C3E9BC = 1;
+    sub_1C37058(&object___TypeInfo);
+    sub_1C37058(&float_TypeInfo);
+    sub_1C37058(&UnityEngine_Vector3_TypeInfo);
+    sub_1C37058(&StringLiteral_24071/*"time"*/);
+    sub_1C37058(&StringLiteral_16747/*"amount"*/);
+    sub_1C37058(&iTween_TypeInfo);
+    byte_4C49F3C = 1;
   }
-  v9 = sub_1C32CC8(object___TypeInfo, 4);
+  v9 = sub_1C37100(object___TypeInfo, 4);
   if ( !v9 )
-    sub_1C32E7C(0);
+    sub_1C372B4(0);
   v12 = v9;
-  v13 = StringLiteral_16745/*"amount"*/;
-  if ( StringLiteral_16745/*"amount"*/ )
+  v13 = StringLiteral_16747/*"amount"*/;
+  if ( StringLiteral_16747/*"amount"*/ )
   {
-    v13 = sub_1C32D5C(StringLiteral_16745/*"amount"*/);
+    v13 = sub_1C37194(StringLiteral_16747/*"amount"*/);
     if ( !v13 )
       goto LABEL_24;
-    v14 = StringLiteral_16745/*"amount"*/;
+    v14 = StringLiteral_16747/*"amount"*/;
   }
   else
   {
@@ -26852,7 +26852,7 @@ void iTween__ShakeScale(
   if ( !*(_DWORD *)(v12 + 24) )
     goto LABEL_23;
   *(_QWORD *)(v12 + 32) = v14;
-  sub_1C32BC4((CGThumbnailListItem_o *)(v12 + 32), v14, v10, v11);
+  sub_1C36FFC((CGThumbnailListItem_o *)(v12 + 32), v14, v10, v11);
   *(float *)v40 = x;
   *(float *)&v40[1] = y;
   *(float *)&v40[2] = z;
@@ -26860,21 +26860,21 @@ void iTween__ShakeScale(
   v23 = v13;
   if ( v13 )
   {
-    v13 = sub_1C32D5C(v13);
+    v13 = sub_1C37194(v13);
     if ( !v13 )
       goto LABEL_24;
   }
   if ( *(_DWORD *)(v12 + 24) <= 1u )
     goto LABEL_23;
   *(_QWORD *)(v12 + 40) = v23;
-  sub_1C32BC4((CGThumbnailListItem_o *)(v12 + 40), v23, v21, v22);
-  v13 = StringLiteral_24067/*"time"*/;
-  if ( StringLiteral_24067/*"time"*/ )
+  sub_1C36FFC((CGThumbnailListItem_o *)(v12 + 40), v23, v21, v22);
+  v13 = StringLiteral_24071/*"time"*/;
+  if ( StringLiteral_24071/*"time"*/ )
   {
-    v13 = sub_1C32D5C(StringLiteral_24067/*"time"*/);
+    v13 = sub_1C37194(StringLiteral_24071/*"time"*/);
     if ( !v13 )
       goto LABEL_24;
-    v26 = StringLiteral_24067/*"time"*/;
+    v26 = StringLiteral_24071/*"time"*/;
   }
   else
   {
@@ -26883,33 +26883,33 @@ void iTween__ShakeScale(
   if ( *(_DWORD *)(v12 + 24) <= 2u )
     goto LABEL_23;
   *(_QWORD *)(v12 + 48) = v26;
-  sub_1C32BC4((CGThumbnailListItem_o *)(v12 + 48), v26, v24, v25);
+  sub_1C36FFC((CGThumbnailListItem_o *)(v12 + 48), v26, v24, v25);
   v41 = time;
   v13 = j_il2cpp_value_box_0(float_TypeInfo, &v41, v27, v28, v29, v30, v31, v32);
   v35 = v13;
   if ( v13 )
   {
-    v13 = sub_1C32D5C(v13);
+    v13 = sub_1C37194(v13);
     if ( !v13 )
     {
 LABEL_24:
-      v39 = sub_1C32EA0(v13);
-      sub_1C32D48(v39, 0);
+      v39 = sub_1C372D8(v13);
+      sub_1C37180(v39, 0);
     }
   }
   if ( *(_DWORD *)(v12 + 24) <= 3u )
 LABEL_23:
-    sub_1C32E84(v13);
+    sub_1C372BC(v13);
   *(_QWORD *)(v12 + 56) = v35;
-  sub_1C32BC4((CGThumbnailListItem_o *)(v12 + 56), v35, v33, v34);
+  sub_1C36FFC((CGThumbnailListItem_o *)(v12 + 56), v35, v33, v34);
   if ( !iTween_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(iTween_TypeInfo);
   v37 = iTween__Hash((System_Object_array *)v12, v36);
-  iTween__ShakeScale_63172520(target, v37, v38);
+  iTween__ShakeScale_63215632(target, v37, v38);
 }
 
 
-void iTween__ShakeScale_63172520(
+void iTween__ShakeScale_63215632(
         UnityEngine_GameObject_o *target,
         System_Collections_Hashtable_o *args,
         const MethodInfo *method)
@@ -26918,30 +26918,30 @@ void iTween__ShakeScale_63172520(
   System_Collections_Hashtable_o *v6; // x20
   const MethodInfo *v7; // x2
 
-  if ( (byte_4C3E9BD & 1) == 0 )
+  if ( (byte_4C49F3D & 1) == 0 )
   {
-    sub_1C32C20(&StringLiteral_23417/*"shake"*/);
-    sub_1C32C20(&StringLiteral_21560/*"method"*/);
-    sub_1C32C20(&StringLiteral_24241/*"type"*/);
-    sub_1C32C20(&StringLiteral_23191/*"scale"*/);
-    sub_1C32C20(&iTween_TypeInfo);
-    byte_4C3E9BD = 1;
+    sub_1C37058(&StringLiteral_23421/*"shake"*/);
+    sub_1C37058(&StringLiteral_21563/*"method"*/);
+    sub_1C37058(&StringLiteral_24245/*"type"*/);
+    sub_1C37058(&StringLiteral_23195/*"scale"*/);
+    sub_1C37058(&iTween_TypeInfo);
+    byte_4C49F3D = 1;
   }
   if ( !iTween_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(iTween_TypeInfo);
   v5 = iTween__CleanArgs(args, (const MethodInfo *)args);
   if ( !v5 )
-    sub_1C32E7C(0);
+    sub_1C372B4(0);
   v6 = v5;
   ((void (__fastcall *)(System_Collections_Hashtable_o *, __int64, __int64, const MethodInfo *))v5->klass->vtable._29_set_Item.methodPtr)(
     v5,
-    StringLiteral_24241/*"type"*/,
-    StringLiteral_23417/*"shake"*/,
+    StringLiteral_24245/*"type"*/,
+    StringLiteral_23421/*"shake"*/,
     v5->klass->vtable._29_set_Item.method);
   ((void (__fastcall *)(System_Collections_Hashtable_o *, __int64, __int64, const MethodInfo *))v6->klass->vtable._29_set_Item.methodPtr)(
     v6,
-    StringLiteral_21560/*"method"*/,
-    StringLiteral_23191/*"scale"*/,
+    StringLiteral_21563/*"method"*/,
+    StringLiteral_23195/*"scale"*/,
     v6->klass->vtable._29_set_Item.method);
   iTween__Launch(target, v6, v7);
 }
@@ -26979,26 +26979,26 @@ void iTween__Stab(
   __int64 v30; // x0
   float v31; // [xsp+Ch] [xbp-34h] BYREF
 
-  if ( (byte_4C3E99C & 1) == 0 )
+  if ( (byte_4C49F1C & 1) == 0 )
   {
-    sub_1C32C20(&object___TypeInfo);
-    sub_1C32C20(&float_TypeInfo);
-    sub_1C32C20(&StringLiteral_18551/*"delay"*/);
-    sub_1C32C20(&StringLiteral_16939/*"audioclip"*/);
-    sub_1C32C20(&iTween_TypeInfo);
-    byte_4C3E99C = 1;
+    sub_1C37058(&object___TypeInfo);
+    sub_1C37058(&float_TypeInfo);
+    sub_1C37058(&StringLiteral_18554/*"delay"*/);
+    sub_1C37058(&StringLiteral_16941/*"audioclip"*/);
+    sub_1C37058(&iTween_TypeInfo);
+    byte_4C49F1C = 1;
   }
-  v7 = sub_1C32CC8(object___TypeInfo, 4);
+  v7 = sub_1C37100(object___TypeInfo, 4);
   if ( !v7 )
-    sub_1C32E7C(0);
+    sub_1C372B4(0);
   v10 = v7;
-  v11 = StringLiteral_16939/*"audioclip"*/;
-  if ( StringLiteral_16939/*"audioclip"*/ )
+  v11 = StringLiteral_16941/*"audioclip"*/;
+  if ( StringLiteral_16941/*"audioclip"*/ )
   {
-    v11 = sub_1C32D5C(StringLiteral_16939/*"audioclip"*/);
+    v11 = sub_1C37194(StringLiteral_16941/*"audioclip"*/);
     if ( !v11 )
       goto LABEL_24;
-    v12 = StringLiteral_16939/*"audioclip"*/;
+    v12 = StringLiteral_16941/*"audioclip"*/;
   }
   else
   {
@@ -27007,24 +27007,24 @@ void iTween__Stab(
   if ( !*(_DWORD *)(v10 + 24) )
     goto LABEL_23;
   *(_QWORD *)(v10 + 32) = v12;
-  sub_1C32BC4((CGThumbnailListItem_o *)(v10 + 32), v12, v8, v9);
+  sub_1C36FFC((CGThumbnailListItem_o *)(v10 + 32), v12, v8, v9);
   if ( audioclip )
   {
-    v11 = sub_1C32D5C(audioclip);
+    v11 = sub_1C37194(audioclip);
     if ( !v11 )
       goto LABEL_24;
   }
   if ( *(_DWORD *)(v10 + 24) <= 1u )
     goto LABEL_23;
   *(_QWORD *)(v10 + 40) = audioclip;
-  sub_1C32BC4((CGThumbnailListItem_o *)(v10 + 40), (int32_t)audioclip, v13, v14);
-  v11 = StringLiteral_18551/*"delay"*/;
-  if ( StringLiteral_18551/*"delay"*/ )
+  sub_1C36FFC((CGThumbnailListItem_o *)(v10 + 40), (int32_t)audioclip, v13, v14);
+  v11 = StringLiteral_18554/*"delay"*/;
+  if ( StringLiteral_18554/*"delay"*/ )
   {
-    v11 = sub_1C32D5C(StringLiteral_18551/*"delay"*/);
+    v11 = sub_1C37194(StringLiteral_18554/*"delay"*/);
     if ( !v11 )
       goto LABEL_24;
-    v17 = StringLiteral_18551/*"delay"*/;
+    v17 = StringLiteral_18554/*"delay"*/;
   }
   else
   {
@@ -27033,33 +27033,33 @@ void iTween__Stab(
   if ( *(_DWORD *)(v10 + 24) <= 2u )
     goto LABEL_23;
   *(_QWORD *)(v10 + 48) = v17;
-  sub_1C32BC4((CGThumbnailListItem_o *)(v10 + 48), v17, v15, v16);
+  sub_1C36FFC((CGThumbnailListItem_o *)(v10 + 48), v17, v15, v16);
   v31 = delay;
   v11 = j_il2cpp_value_box_0(float_TypeInfo, &v31, v18, v19, v20, v21, v22, v23);
   v26 = v11;
   if ( v11 )
   {
-    v11 = sub_1C32D5C(v11);
+    v11 = sub_1C37194(v11);
     if ( !v11 )
     {
 LABEL_24:
-      v30 = sub_1C32EA0(v11);
-      sub_1C32D48(v30, 0);
+      v30 = sub_1C372D8(v11);
+      sub_1C37180(v30, 0);
     }
   }
   if ( *(_DWORD *)(v10 + 24) <= 3u )
 LABEL_23:
-    sub_1C32E84(v11);
+    sub_1C372BC(v11);
   *(_QWORD *)(v10 + 56) = v26;
-  sub_1C32BC4((CGThumbnailListItem_o *)(v10 + 56), v26, v24, v25);
+  sub_1C36FFC((CGThumbnailListItem_o *)(v10 + 56), v26, v24, v25);
   if ( !iTween_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(iTween_TypeInfo);
   v28 = iTween__Hash((System_Object_array *)v10, v27);
-  iTween__Stab_63151664(target, v28, v29);
+  iTween__Stab_63194776(target, v28, v29);
 }
 
 
-void iTween__Stab_63151664(
+void iTween__Stab_63194776(
         UnityEngine_GameObject_o *target,
         System_Collections_Hashtable_o *args,
         const MethodInfo *method)
@@ -27068,23 +27068,23 @@ void iTween__Stab_63151664(
   System_Collections_Hashtable_o *v6; // x20
   const MethodInfo *v7; // x2
 
-  if ( (byte_4C3E99D & 1) == 0 )
+  if ( (byte_4C49F1D & 1) == 0 )
   {
-    sub_1C32C20(&StringLiteral_23640/*"stab"*/);
-    sub_1C32C20(&StringLiteral_24241/*"type"*/);
-    sub_1C32C20(&iTween_TypeInfo);
-    byte_4C3E99D = 1;
+    sub_1C37058(&StringLiteral_23644/*"stab"*/);
+    sub_1C37058(&StringLiteral_24245/*"type"*/);
+    sub_1C37058(&iTween_TypeInfo);
+    byte_4C49F1D = 1;
   }
   if ( !iTween_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(iTween_TypeInfo);
   v5 = iTween__CleanArgs(args, (const MethodInfo *)args);
   if ( !v5 )
-    sub_1C32E7C(0);
+    sub_1C372B4(0);
   v6 = v5;
   ((void (__fastcall *)(System_Collections_Hashtable_o *, __int64, __int64, const MethodInfo *))v5->klass->vtable._29_set_Item.methodPtr)(
     v5,
-    StringLiteral_24241/*"type"*/,
-    StringLiteral_23640/*"stab"*/,
+    StringLiteral_24245/*"type"*/,
+    StringLiteral_23644/*"stab"*/,
     v5->klass->vtable._29_set_Item.method);
   iTween__Launch(target, v6, v7);
 }
@@ -27097,17 +27097,17 @@ System_Collections_IEnumerator_o *iTween__Start(iTween_o *this, const MethodInfo
   int32_t v5; // w2
   const MethodInfo *v6; // x3
 
-  if ( (byte_4C3EA3D & 1) == 0 )
+  if ( (byte_4C49FBD & 1) == 0 )
   {
-    sub_1C32C20(&iTween__Start_d__234_TypeInfo);
-    byte_4C3EA3D = 1;
+    sub_1C37058(&iTween__Start_d__234_TypeInfo);
+    byte_4C49FBD = 1;
   }
-  v3 = sub_1C32E6C(iTween__Start_d__234_TypeInfo);
+  v3 = sub_1C372A4(iTween__Start_d__234_TypeInfo);
   iTween__Start_d__234___ctor((iTween__Start_d__234_o *)v3, 0, 0);
   if ( !v3 )
-    sub_1C32E7C(v4);
+    sub_1C372B4(v4);
   *(_QWORD *)(v3 + 32) = this;
-  sub_1C32BC4((CGThumbnailListItem_o *)(v3 + 32), (int32_t)this, v5, v6);
+  sub_1C36FFC((CGThumbnailListItem_o *)(v3 + 32), (int32_t)this, v5, v6);
   return (System_Collections_IEnumerator_o *)v3;
 }
 
@@ -27125,15 +27125,15 @@ void iTween__Stop(const MethodInfo *method)
   UnityEngine_GameObject_o *v9; // x0
   const MethodInfo *v10; // x1
 
-  if ( (byte_4C3EA33 & 1) == 0 )
+  if ( (byte_4C49FB3 & 1) == 0 )
   {
-    sub_1C32C20(&UnityEngine_GameObject_TypeInfo);
-    sub_1C32C20(&Method_System_Collections_Generic_List_Hashtable__Clear__);
-    sub_1C32C20(&Method_System_Collections_Generic_List_Hashtable__get_Count__);
-    sub_1C32C20(&Method_System_Collections_Generic_List_Hashtable__get_Item__);
-    sub_1C32C20(&StringLiteral_23988/*"target"*/);
-    sub_1C32C20(&iTween_TypeInfo);
-    byte_4C3EA33 = 1;
+    sub_1C37058(&UnityEngine_GameObject_TypeInfo);
+    sub_1C37058(&Method_System_Collections_Generic_List_Hashtable__Clear__);
+    sub_1C37058(&Method_System_Collections_Generic_List_Hashtable__get_Count__);
+    sub_1C37058(&Method_System_Collections_Generic_List_Hashtable__get_Item__);
+    sub_1C37058(&StringLiteral_23992/*"target"*/);
+    sub_1C37058(&iTween_TypeInfo);
+    byte_4C49FB3 = 1;
   }
   for ( i = 0; ; ++i )
   {
@@ -27149,31 +27149,31 @@ void iTween__Stop(const MethodInfo *method)
       && (j_il2cpp_runtime_class_init_0(v2), (tweens = iTween_TypeInfo->static_fields->tweens) == 0) )
     {
 LABEL_17:
-      sub_1C32E7C(tweens);
+      sub_1C372B4(tweens);
     }
     if ( i >= v4 )
       break;
     tweens = System_Collections_Generic_List_object___get_Item(
                (System_Collections_Generic_List_object__o *)tweens,
                i,
-               (const MethodInfo_37984EC *)Method_System_Collections_Generic_List_Hashtable__get_Item__);
+               (const MethodInfo_37A2D54 *)Method_System_Collections_Generic_List_Hashtable__get_Item__);
     if ( !tweens )
       goto LABEL_17;
     v5 = (UnityEngine_GameObject_o *)(*(__int64 (__fastcall **)(void *, __int64, _QWORD))(*(_QWORD *)tweens + 760LL))(
                                        tweens,
-                                       StringLiteral_23988/*"target"*/,
+                                       StringLiteral_23992/*"target"*/,
                                        *(_QWORD *)(*(_QWORD *)tweens + 768LL));
     if ( v5 )
     {
       v6 = UnityEngine_GameObject_TypeInfo;
       if ( v5->klass != UnityEngine_GameObject_TypeInfo )
       {
-        sub_1C3313C(v5);
-        iTween__Stop_63266448(v9, v10);
+        sub_1C37574(v5);
+        iTween__Stop_63309560(v9, v10);
         return;
       }
     }
-    iTween__Stop_63266448(v5, (const MethodInfo *)v6);
+    iTween__Stop_63309560(v5, (const MethodInfo *)v6);
   }
   v7 = *((_DWORD *)tweens + 6);
   v8 = *((_DWORD *)tweens + 7) + 1;
@@ -27199,17 +27199,17 @@ void iTween__StopByName(System_String_o *name, const MethodInfo *method)
   System_String_o *v13; // x1
   const MethodInfo *v14; // x2
 
-  if ( (byte_4C3EA35 & 1) == 0 )
+  if ( (byte_4C49FB5 & 1) == 0 )
   {
-    sub_1C32C20(&System_Collections_ArrayList_TypeInfo);
-    sub_1C32C20(&UnityEngine_GameObject_TypeInfo);
-    sub_1C32C20(&Method_System_Collections_Generic_List_Hashtable__get_Count__);
-    sub_1C32C20(&Method_System_Collections_Generic_List_Hashtable__get_Item__);
-    sub_1C32C20(&StringLiteral_23988/*"target"*/);
-    sub_1C32C20(&iTween_TypeInfo);
-    byte_4C3EA35 = 1;
+    sub_1C37058(&System_Collections_ArrayList_TypeInfo);
+    sub_1C37058(&UnityEngine_GameObject_TypeInfo);
+    sub_1C37058(&Method_System_Collections_Generic_List_Hashtable__get_Count__);
+    sub_1C37058(&Method_System_Collections_Generic_List_Hashtable__get_Item__);
+    sub_1C37058(&StringLiteral_23992/*"target"*/);
+    sub_1C37058(&iTween_TypeInfo);
+    byte_4C49FB5 = 1;
   }
-  v3 = (System_Collections_ArrayList_o *)sub_1C32E6C(System_Collections_ArrayList_TypeInfo);
+  v3 = (System_Collections_ArrayList_o *)sub_1C372A4(System_Collections_ArrayList_TypeInfo);
   System_Collections_ArrayList___ctor(v3, 0);
   for ( i = 0; ; ++i )
   {
@@ -27234,19 +27234,19 @@ void iTween__StopByName(System_String_o *name, const MethodInfo *method)
     Item = System_Collections_Generic_List_object___get_Item(
              tweens,
              i,
-             (const MethodInfo_37984EC *)Method_System_Collections_Generic_List_Hashtable__get_Item__);
+             (const MethodInfo_37A2D54 *)Method_System_Collections_Generic_List_Hashtable__get_Item__);
     if ( !Item )
       goto LABEL_25;
     Item = (void *)(*(__int64 (__fastcall **)(void *, __int64, _QWORD))(*(_QWORD *)Item + 760LL))(
                      Item,
-                     StringLiteral_23988/*"target"*/,
+                     StringLiteral_23992/*"target"*/,
                      *(_QWORD *)(*(_QWORD *)Item + 768LL));
     v7 = (UnityEngine_GameObject_o *)Item;
     if ( Item && *(UnityEngine_GameObject_c **)Item != UnityEngine_GameObject_TypeInfo )
     {
 LABEL_26:
-      sub_1C3313C(v7);
-      iTween__StopByName_63269696(v12, v13, v14);
+      sub_1C37574(v7);
+      iTween__StopByName_63312808(v12, v13, v14);
       return;
     }
     if ( !v3 )
@@ -27262,7 +27262,7 @@ LABEL_26:
   }
   if ( !v3 )
 LABEL_25:
-    sub_1C32E7C(Item);
+    sub_1C372B4(Item);
   if ( ((int (__fastcall *)(System_Collections_ArrayList_o *, const MethodInfo *))v3->klass->vtable._22_get_Count.methodPtr)(
          v3,
          v3->klass->vtable._22_get_Count.method) >= 1 )
@@ -27293,13 +27293,13 @@ LABEL_22:
             goto LABEL_26;
         }
       }
-      iTween__StopByName_63269696(v7, name, v11);
+      iTween__StopByName_63312808(v7, name, v11);
     }
   }
 }
 
 
-void iTween__StopByName_63269696(UnityEngine_GameObject_o *target, System_String_o *name, const MethodInfo *method)
+void iTween__StopByName_63312808(UnityEngine_GameObject_o *target, System_String_o *name, const MethodInfo *method)
 {
   UnityEngine_GameObject_o *v4; // x19
   System_Object_array *Components_object; // x0
@@ -27333,24 +27333,24 @@ void iTween__StopByName_63269696(UnityEngine_GameObject_o *target, System_String
   __int64 v33; // x0
 
   v4 = target;
-  if ( (byte_4C3EA39 & 1) == 0 )
+  if ( (byte_4C49FB9 & 1) == 0 )
   {
-    sub_1C32C20(&Method_System_Linq_Enumerable_Where_iTween___);
-    sub_1C32C20(&System_Func_iTween__bool__TypeInfo);
-    sub_1C32C20(&Method_UnityEngine_GameObject_GetComponents_iTween___);
-    sub_1C32C20(&System_IDisposable_TypeInfo);
-    sub_1C32C20(&System_Collections_Generic_IEnumerable_iTween__TypeInfo);
-    sub_1C32C20(&System_Collections_Generic_IEnumerator_iTween__TypeInfo);
-    sub_1C32C20(&System_Collections_IEnumerator_TypeInfo);
-    sub_1C32C20(&Method_iTween___c__StopByName_b__228_0__);
-    target = (UnityEngine_GameObject_o *)sub_1C32C20(&iTween___c_TypeInfo);
-    byte_4C3EA39 = 1;
+    sub_1C37058(&Method_System_Linq_Enumerable_Where_iTween___);
+    sub_1C37058(&System_Func_iTween__bool__TypeInfo);
+    sub_1C37058(&Method_UnityEngine_GameObject_GetComponents_iTween___);
+    sub_1C37058(&System_IDisposable_TypeInfo);
+    sub_1C37058(&System_Collections_Generic_IEnumerable_iTween__TypeInfo);
+    sub_1C37058(&System_Collections_Generic_IEnumerator_iTween__TypeInfo);
+    sub_1C37058(&System_Collections_IEnumerator_TypeInfo);
+    sub_1C37058(&Method_iTween___c__StopByName_b__228_0__);
+    target = (UnityEngine_GameObject_o *)sub_1C37058(&iTween___c_TypeInfo);
+    byte_4C49FB9 = 1;
   }
   if ( !v4 )
     goto LABEL_42;
   Components_object = UnityEngine_GameObject__GetComponents_object_(
                         v4,
-                        (const MethodInfo_31352CC *)Method_UnityEngine_GameObject_GetComponents_iTween___);
+                        (const MethodInfo_313FB34 *)Method_UnityEngine_GameObject_GetComponents_iTween___);
   v6 = iTween___c_TypeInfo;
   v7 = (System_Collections_Generic_IEnumerable_TSource__o *)Components_object;
   if ( !iTween___c_TypeInfo->_2.cctor_finished )
@@ -27367,19 +27367,19 @@ void iTween__StopByName_63269696(UnityEngine_GameObject_o *target, System_String
       v6 = iTween___c_TypeInfo;
     }
     v9 = (Il2CppObject *)v6->static_fields->__9;
-    _9__228_0 = (System_Func_object__bool__o *)sub_1C32E6C(System_Func_iTween__bool__TypeInfo);
+    _9__228_0 = (System_Func_object__bool__o *)sub_1C372A4(System_Func_iTween__bool__TypeInfo);
     System_Func_object__bool____ctor(_9__228_0, v9, Method_iTween___c__StopByName_b__228_0__, 0);
     static_fields = iTween___c_TypeInfo->static_fields;
     static_fields->__9__228_0 = (struct System_Func_iTween__bool__o *)_9__228_0;
-    sub_1C32BC4((CGThumbnailListItem_o *)&static_fields->__9__228_0, (int32_t)_9__228_0, v11, v12);
+    sub_1C36FFC((CGThumbnailListItem_o *)&static_fields->__9__228_0, (int32_t)_9__228_0, v11, v12);
   }
   target = (UnityEngine_GameObject_o *)System_Linq_Enumerable__Where_object_(
                                          v7,
                                          (System_Func_TSource__bool__o *)_9__228_0,
-                                         (const MethodInfo_3123BA8 *)Method_System_Linq_Enumerable_Where_iTween___);
+                                         (const MethodInfo_312E410 *)Method_System_Linq_Enumerable_Where_iTween___);
   if ( !target )
 LABEL_42:
-    sub_1C32E7C(target);
+    sub_1C372B4(target);
   klass = target->klass;
   v14 = target;
   v15 = *(unsigned __int16 *)&target->klass->_2.rank;
@@ -27398,11 +27398,11 @@ LABEL_42:
   else
   {
 LABEL_15:
-    v17 = sub_1C83438(target, System_Collections_Generic_IEnumerable_iTween__TypeInfo, 0);
+    v17 = sub_1C87870(target, System_Collections_Generic_IEnumerable_iTween__TypeInfo, 0);
   }
   v18 = (*(__int64 (__fastcall **)(UnityEngine_GameObject_o *, _QWORD))v17)(v14, *(_QWORD *)(v17 + 8));
   if ( !v18 )
-    sub_1C32E7C(0);
+    sub_1C372B4(0);
   while ( 1 )
   {
     v19 = *(_QWORD *)v18;
@@ -27422,7 +27422,7 @@ LABEL_15:
     else
     {
 LABEL_22:
-      v22 = sub_1C83438(v18, System_Collections_IEnumerator_TypeInfo, 0);
+      v22 = sub_1C87870(v18, System_Collections_IEnumerator_TypeInfo, 0);
     }
     if ( ((*(__int64 (__fastcall **)(__int64, _QWORD))v22)(v18, *(_QWORD *)(v22 + 8)) & 1) == 0 )
       break;
@@ -27443,12 +27443,12 @@ LABEL_22:
     else
     {
 LABEL_29:
-      v26 = sub_1C83438(v18, System_Collections_Generic_IEnumerator_iTween__TypeInfo, 0);
+      v26 = sub_1C87870(v18, System_Collections_Generic_IEnumerator_iTween__TypeInfo, 0);
     }
     v27 = (*(__int64 (__fastcall **)(__int64, _QWORD))v26)(v18, *(_QWORD *)(v26 + 8));
     v28 = (iTween_o *)v27;
     if ( !v27 )
-      sub_1C32E7C(0);
+      sub_1C372B4(0);
     if ( System_String__op_Equality(*(System_String_o **)(v27 + 88), name, 0) )
       iTween__Dispose(v28, v29);
   }
@@ -27469,13 +27469,13 @@ LABEL_29:
   else
   {
 LABEL_38:
-    v33 = sub_1C83438(v18, System_IDisposable_TypeInfo, 0);
+    v33 = sub_1C87870(v18, System_IDisposable_TypeInfo, 0);
   }
   (*(void (__fastcall **)(__int64, _QWORD))v33)(v18, *(_QWORD *)(v33 + 8));
 }
 
 
-void iTween__StopByName_63273364(
+void iTween__StopByName_63316476(
         UnityEngine_GameObject_o *target,
         System_String_o *name,
         bool includechildren,
@@ -27532,26 +27532,26 @@ void iTween__StopByName_63273364(
   __int64 v54; // x0
 
   v6 = target;
-  if ( (byte_4C3EA3B & 1) == 0 )
+  if ( (byte_4C49FBB & 1) == 0 )
   {
-    sub_1C32C20(&Method_System_Linq_Enumerable_Where_iTween___);
-    sub_1C32C20(&System_Func_iTween__bool__TypeInfo);
-    sub_1C32C20(&Method_UnityEngine_GameObject_GetComponents_iTween___);
-    sub_1C32C20(&System_IDisposable_TypeInfo);
-    sub_1C32C20(&System_Collections_Generic_IEnumerable_iTween__TypeInfo);
-    sub_1C32C20(&System_Collections_Generic_IEnumerator_iTween__TypeInfo);
-    sub_1C32C20(&System_Collections_IEnumerator_TypeInfo);
-    sub_1C32C20(&UnityEngine_Transform_TypeInfo);
-    sub_1C32C20(&Method_iTween___c__StopByName_b__230_0__);
-    sub_1C32C20(&iTween___c_TypeInfo);
-    target = (UnityEngine_GameObject_o *)sub_1C32C20(&iTween_TypeInfo);
-    byte_4C3EA3B = 1;
+    sub_1C37058(&Method_System_Linq_Enumerable_Where_iTween___);
+    sub_1C37058(&System_Func_iTween__bool__TypeInfo);
+    sub_1C37058(&Method_UnityEngine_GameObject_GetComponents_iTween___);
+    sub_1C37058(&System_IDisposable_TypeInfo);
+    sub_1C37058(&System_Collections_Generic_IEnumerable_iTween__TypeInfo);
+    sub_1C37058(&System_Collections_Generic_IEnumerator_iTween__TypeInfo);
+    sub_1C37058(&System_Collections_IEnumerator_TypeInfo);
+    sub_1C37058(&UnityEngine_Transform_TypeInfo);
+    sub_1C37058(&Method_iTween___c__StopByName_b__230_0__);
+    sub_1C37058(&iTween___c_TypeInfo);
+    target = (UnityEngine_GameObject_o *)sub_1C37058(&iTween_TypeInfo);
+    byte_4C49FBB = 1;
   }
   if ( !v6 )
     goto LABEL_74;
   Components_object = UnityEngine_GameObject__GetComponents_object_(
                         v6,
-                        (const MethodInfo_31352CC *)Method_UnityEngine_GameObject_GetComponents_iTween___);
+                        (const MethodInfo_313FB34 *)Method_UnityEngine_GameObject_GetComponents_iTween___);
   v8 = iTween___c_TypeInfo;
   v9 = (System_Collections_Generic_IEnumerable_TSource__o *)Components_object;
   if ( !iTween___c_TypeInfo->_2.cctor_finished )
@@ -27568,16 +27568,16 @@ void iTween__StopByName_63273364(
       v8 = iTween___c_TypeInfo;
     }
     v11 = (Il2CppObject *)v8->static_fields->__9;
-    _9__230_0 = (System_Func_object__bool__o *)sub_1C32E6C(System_Func_iTween__bool__TypeInfo);
+    _9__230_0 = (System_Func_object__bool__o *)sub_1C372A4(System_Func_iTween__bool__TypeInfo);
     System_Func_object__bool____ctor(_9__230_0, v11, Method_iTween___c__StopByName_b__230_0__, 0);
     static_fields = iTween___c_TypeInfo->static_fields;
     static_fields->__9__230_0 = (struct System_Func_iTween__bool__o *)_9__230_0;
-    sub_1C32BC4((CGThumbnailListItem_o *)&static_fields->__9__230_0, (int32_t)_9__230_0, v13, v14);
+    sub_1C36FFC((CGThumbnailListItem_o *)&static_fields->__9__230_0, (int32_t)_9__230_0, v13, v14);
   }
   target = (UnityEngine_GameObject_o *)System_Linq_Enumerable__Where_object_(
                                          v9,
                                          (System_Func_TSource__bool__o *)_9__230_0,
-                                         (const MethodInfo_3123BA8 *)Method_System_Linq_Enumerable_Where_iTween___);
+                                         (const MethodInfo_312E410 *)Method_System_Linq_Enumerable_Where_iTween___);
   if ( !target )
     goto LABEL_74;
   klass = target->klass;
@@ -27598,11 +27598,11 @@ void iTween__StopByName_63273364(
   else
   {
 LABEL_15:
-    v19 = sub_1C83438(target, System_Collections_Generic_IEnumerable_iTween__TypeInfo, 0);
+    v19 = sub_1C87870(target, System_Collections_Generic_IEnumerable_iTween__TypeInfo, 0);
   }
   v20 = (*(__int64 (__fastcall **)(UnityEngine_GameObject_o *, _QWORD))v19)(v16, *(_QWORD *)(v19 + 8));
   if ( !v20 )
-    sub_1C32E7C(0);
+    sub_1C372B4(0);
   while ( 1 )
   {
     v21 = *(_QWORD *)v20;
@@ -27622,7 +27622,7 @@ LABEL_15:
     else
     {
 LABEL_22:
-      v24 = sub_1C83438(v20, System_Collections_IEnumerator_TypeInfo, 0);
+      v24 = sub_1C87870(v20, System_Collections_IEnumerator_TypeInfo, 0);
     }
     if ( ((*(__int64 (__fastcall **)(__int64, _QWORD))v24)(v20, *(_QWORD *)(v24 + 8)) & 1) == 0 )
       break;
@@ -27643,12 +27643,12 @@ LABEL_22:
     else
     {
 LABEL_29:
-      v28 = sub_1C83438(v20, System_Collections_Generic_IEnumerator_iTween__TypeInfo, 0);
+      v28 = sub_1C87870(v20, System_Collections_Generic_IEnumerator_iTween__TypeInfo, 0);
     }
     v29 = (*(__int64 (__fastcall **)(__int64, _QWORD))v28)(v20, *(_QWORD *)(v28 + 8));
     v30 = (iTween_o *)v29;
     if ( !v29 )
-      sub_1C32E7C(0);
+      sub_1C372B4(0);
     if ( System_String__op_Equality(*(System_String_o **)(v29 + 88), name, 0) )
       iTween__Dispose(v30, v31);
   }
@@ -27669,7 +27669,7 @@ LABEL_29:
   else
   {
 LABEL_38:
-    v35 = sub_1C83438(v20, System_IDisposable_TypeInfo, 0);
+    v35 = sub_1C87870(v20, System_IDisposable_TypeInfo, 0);
   }
   (*(void (__fastcall **)(__int64, _QWORD))v35)(v20, *(_QWORD *)(v35 + 8));
   if ( includechildren )
@@ -27679,7 +27679,7 @@ LABEL_38:
     {
       Enumerator = UnityEngine_Transform__GetEnumerator((UnityEngine_Transform_o *)target, 0);
       if ( !Enumerator )
-        sub_1C32E7C(0);
+        sub_1C372B4(0);
       while ( 1 )
       {
         v37 = Enumerator->klass;
@@ -27699,7 +27699,7 @@ LABEL_38:
         else
         {
 LABEL_47:
-          v40 = sub_1C83438(Enumerator, System_Collections_IEnumerator_TypeInfo, 0);
+          v40 = sub_1C87870(Enumerator, System_Collections_IEnumerator_TypeInfo, 0);
         }
         if ( ((*(__int64 (__fastcall **)(System_Collections_IEnumerator_o *, _QWORD))v40)(
                 Enumerator,
@@ -27723,7 +27723,7 @@ LABEL_47:
         else
         {
 LABEL_54:
-          v44 = sub_1C83438(Enumerator, System_Collections_IEnumerator_TypeInfo, 1);
+          v44 = sub_1C87870(Enumerator, System_Collections_IEnumerator_TypeInfo, 1);
         }
         v45 = (UnityEngine_Component_o *)(*(__int64 (__fastcall **)(System_Collections_IEnumerator_o *, _QWORD))v44)(
                                            Enumerator,
@@ -27734,16 +27734,16 @@ LABEL_54:
         if ( v45->klass->_2.naturalAligment < (unsigned int)naturalAligment
           || (UnityEngine_Transform_c *)v45->klass->_2.typeHierarchy[naturalAligment - 1] != UnityEngine_Transform_TypeInfo )
         {
-          sub_1C3313C(v45);
+          sub_1C37574(v45);
 LABEL_73:
-          sub_1C32E7C(v45);
+          sub_1C372B4(v45);
         }
         gameObject = UnityEngine_Component__get_gameObject(v45, 0);
         if ( !iTween_TypeInfo->_2.cctor_finished )
           j_il2cpp_runtime_class_init_0(iTween_TypeInfo);
-        iTween__StopByName_63273364(gameObject, name, 1, v47);
+        iTween__StopByName_63316476(gameObject, name, 1, v47);
       }
-      v49 = sub_1C32D5C(Enumerator);
+      v49 = sub_1C37194(Enumerator);
       if ( v49 )
       {
         v50 = *(_QWORD *)v49;
@@ -27764,19 +27764,19 @@ LABEL_73:
         else
         {
 LABEL_67:
-          v54 = sub_1C83438(v49, System_IDisposable_TypeInfo, 0);
+          v54 = sub_1C87870(v49, System_IDisposable_TypeInfo, 0);
         }
         (*(void (__fastcall **)(__int64, _QWORD))v54)(v51, *(_QWORD *)(v54 + 8));
       }
       return;
     }
 LABEL_74:
-    sub_1C32E7C(target);
+    sub_1C372B4(target);
   }
 }
 
 
-void iTween__Stop_63266448(UnityEngine_GameObject_o *target, const MethodInfo *method)
+void iTween__Stop_63309560(UnityEngine_GameObject_o *target, const MethodInfo *method)
 {
   UnityEngine_GameObject_o *v2; // x19
   System_Object_array *Components_object; // x0
@@ -27809,24 +27809,24 @@ void iTween__Stop_63266448(UnityEngine_GameObject_o *target, const MethodInfo *m
   __int64 v30; // x0
 
   v2 = target;
-  if ( (byte_4C3EA36 & 1) == 0 )
+  if ( (byte_4C49FB6 & 1) == 0 )
   {
-    sub_1C32C20(&Method_System_Linq_Enumerable_Where_iTween___);
-    sub_1C32C20(&System_Func_iTween__bool__TypeInfo);
-    sub_1C32C20(&Method_UnityEngine_GameObject_GetComponents_iTween___);
-    sub_1C32C20(&System_IDisposable_TypeInfo);
-    sub_1C32C20(&System_Collections_Generic_IEnumerable_iTween__TypeInfo);
-    sub_1C32C20(&System_Collections_Generic_IEnumerator_iTween__TypeInfo);
-    sub_1C32C20(&System_Collections_IEnumerator_TypeInfo);
-    sub_1C32C20(&Method_iTween___c__Stop_b__225_0__);
-    target = (UnityEngine_GameObject_o *)sub_1C32C20(&iTween___c_TypeInfo);
-    byte_4C3EA36 = 1;
+    sub_1C37058(&Method_System_Linq_Enumerable_Where_iTween___);
+    sub_1C37058(&System_Func_iTween__bool__TypeInfo);
+    sub_1C37058(&Method_UnityEngine_GameObject_GetComponents_iTween___);
+    sub_1C37058(&System_IDisposable_TypeInfo);
+    sub_1C37058(&System_Collections_Generic_IEnumerable_iTween__TypeInfo);
+    sub_1C37058(&System_Collections_Generic_IEnumerator_iTween__TypeInfo);
+    sub_1C37058(&System_Collections_IEnumerator_TypeInfo);
+    sub_1C37058(&Method_iTween___c__Stop_b__225_0__);
+    target = (UnityEngine_GameObject_o *)sub_1C37058(&iTween___c_TypeInfo);
+    byte_4C49FB6 = 1;
   }
   if ( !v2 )
     goto LABEL_41;
   Components_object = UnityEngine_GameObject__GetComponents_object_(
                         v2,
-                        (const MethodInfo_31352CC *)Method_UnityEngine_GameObject_GetComponents_iTween___);
+                        (const MethodInfo_313FB34 *)Method_UnityEngine_GameObject_GetComponents_iTween___);
   v4 = iTween___c_TypeInfo;
   v5 = (System_Collections_Generic_IEnumerable_TSource__o *)Components_object;
   if ( !iTween___c_TypeInfo->_2.cctor_finished )
@@ -27843,19 +27843,19 @@ void iTween__Stop_63266448(UnityEngine_GameObject_o *target, const MethodInfo *m
       v4 = iTween___c_TypeInfo;
     }
     v7 = (Il2CppObject *)v4->static_fields->__9;
-    _9__225_0 = (System_Func_object__bool__o *)sub_1C32E6C(System_Func_iTween__bool__TypeInfo);
+    _9__225_0 = (System_Func_object__bool__o *)sub_1C372A4(System_Func_iTween__bool__TypeInfo);
     System_Func_object__bool____ctor(_9__225_0, v7, Method_iTween___c__Stop_b__225_0__, 0);
     static_fields = iTween___c_TypeInfo->static_fields;
     static_fields->__9__225_0 = (struct System_Func_iTween__bool__o *)_9__225_0;
-    sub_1C32BC4((CGThumbnailListItem_o *)&static_fields->__9__225_0, (int32_t)_9__225_0, v9, v10);
+    sub_1C36FFC((CGThumbnailListItem_o *)&static_fields->__9__225_0, (int32_t)_9__225_0, v9, v10);
   }
   target = (UnityEngine_GameObject_o *)System_Linq_Enumerable__Where_object_(
                                          v5,
                                          (System_Func_TSource__bool__o *)_9__225_0,
-                                         (const MethodInfo_3123BA8 *)Method_System_Linq_Enumerable_Where_iTween___);
+                                         (const MethodInfo_312E410 *)Method_System_Linq_Enumerable_Where_iTween___);
   if ( !target )
 LABEL_41:
-    sub_1C32E7C(target);
+    sub_1C372B4(target);
   klass = target->klass;
   v12 = target;
   v13 = *(unsigned __int16 *)&target->klass->_2.rank;
@@ -27874,11 +27874,11 @@ LABEL_41:
   else
   {
 LABEL_15:
-    v15 = sub_1C83438(target, System_Collections_Generic_IEnumerable_iTween__TypeInfo, 0);
+    v15 = sub_1C87870(target, System_Collections_Generic_IEnumerable_iTween__TypeInfo, 0);
   }
   v16 = (*(__int64 (__fastcall **)(UnityEngine_GameObject_o *, _QWORD))v15)(v12, *(_QWORD *)(v15 + 8));
   if ( !v16 )
-    sub_1C32E7C(0);
+    sub_1C372B4(0);
   while ( 1 )
   {
     v17 = *(_QWORD *)v16;
@@ -27898,7 +27898,7 @@ LABEL_15:
     else
     {
 LABEL_22:
-      v20 = sub_1C83438(v16, System_Collections_IEnumerator_TypeInfo, 0);
+      v20 = sub_1C87870(v16, System_Collections_IEnumerator_TypeInfo, 0);
     }
     if ( ((*(__int64 (__fastcall **)(__int64, _QWORD))v20)(v16, *(_QWORD *)(v20 + 8)) & 1) == 0 )
       break;
@@ -27919,11 +27919,11 @@ LABEL_22:
     else
     {
 LABEL_29:
-      v24 = sub_1C83438(v16, System_Collections_Generic_IEnumerator_iTween__TypeInfo, 0);
+      v24 = sub_1C87870(v16, System_Collections_Generic_IEnumerator_iTween__TypeInfo, 0);
     }
     v25 = (iTween_o *)(*(__int64 (__fastcall **)(__int64, _QWORD))v24)(v16, *(_QWORD *)(v24 + 8));
     if ( !v25 )
-      sub_1C32E7C(0);
+      sub_1C372B4(0);
     iTween__Dispose(v25, v26);
   }
   v27 = *(_QWORD *)v16;
@@ -27943,13 +27943,13 @@ LABEL_29:
   else
   {
 LABEL_37:
-    v30 = sub_1C83438(v16, System_IDisposable_TypeInfo, 0);
+    v30 = sub_1C87870(v16, System_IDisposable_TypeInfo, 0);
   }
   (*(void (__fastcall **)(__int64, _QWORD))v30)(v16, *(_QWORD *)(v30 + 8));
 }
 
 
-void iTween__Stop_63267420(System_String_o *type, const MethodInfo *method)
+void iTween__Stop_63310532(System_String_o *type, const MethodInfo *method)
 {
   System_Collections_ArrayList_o *v3; // x20
   int32_t i; // w21
@@ -27964,17 +27964,17 @@ void iTween__Stop_63267420(System_String_o *type, const MethodInfo *method)
   System_String_o *v13; // x1
   const MethodInfo *v14; // x2
 
-  if ( (byte_4C3EA34 & 1) == 0 )
+  if ( (byte_4C49FB4 & 1) == 0 )
   {
-    sub_1C32C20(&System_Collections_ArrayList_TypeInfo);
-    sub_1C32C20(&UnityEngine_GameObject_TypeInfo);
-    sub_1C32C20(&Method_System_Collections_Generic_List_Hashtable__get_Count__);
-    sub_1C32C20(&Method_System_Collections_Generic_List_Hashtable__get_Item__);
-    sub_1C32C20(&StringLiteral_23988/*"target"*/);
-    sub_1C32C20(&iTween_TypeInfo);
-    byte_4C3EA34 = 1;
+    sub_1C37058(&System_Collections_ArrayList_TypeInfo);
+    sub_1C37058(&UnityEngine_GameObject_TypeInfo);
+    sub_1C37058(&Method_System_Collections_Generic_List_Hashtable__get_Count__);
+    sub_1C37058(&Method_System_Collections_Generic_List_Hashtable__get_Item__);
+    sub_1C37058(&StringLiteral_23992/*"target"*/);
+    sub_1C37058(&iTween_TypeInfo);
+    byte_4C49FB4 = 1;
   }
-  v3 = (System_Collections_ArrayList_o *)sub_1C32E6C(System_Collections_ArrayList_TypeInfo);
+  v3 = (System_Collections_ArrayList_o *)sub_1C372A4(System_Collections_ArrayList_TypeInfo);
   System_Collections_ArrayList___ctor(v3, 0);
   for ( i = 0; ; ++i )
   {
@@ -27999,19 +27999,19 @@ void iTween__Stop_63267420(System_String_o *type, const MethodInfo *method)
     Item = System_Collections_Generic_List_object___get_Item(
              tweens,
              i,
-             (const MethodInfo_37984EC *)Method_System_Collections_Generic_List_Hashtable__get_Item__);
+             (const MethodInfo_37A2D54 *)Method_System_Collections_Generic_List_Hashtable__get_Item__);
     if ( !Item )
       goto LABEL_25;
     Item = (void *)(*(__int64 (__fastcall **)(void *, __int64, _QWORD))(*(_QWORD *)Item + 760LL))(
                      Item,
-                     StringLiteral_23988/*"target"*/,
+                     StringLiteral_23992/*"target"*/,
                      *(_QWORD *)(*(_QWORD *)Item + 768LL));
     v7 = (UnityEngine_GameObject_o *)Item;
     if ( Item && *(UnityEngine_GameObject_c **)Item != UnityEngine_GameObject_TypeInfo )
     {
 LABEL_26:
-      sub_1C3313C(v7);
-      iTween__Stop_63267988(v12, v13, v14);
+      sub_1C37574(v7);
+      iTween__Stop_63311100(v12, v13, v14);
       return;
     }
     if ( !v3 )
@@ -28027,7 +28027,7 @@ LABEL_26:
   }
   if ( !v3 )
 LABEL_25:
-    sub_1C32E7C(Item);
+    sub_1C372B4(Item);
   if ( ((int (__fastcall *)(System_Collections_ArrayList_o *, const MethodInfo *))v3->klass->vtable._22_get_Count.methodPtr)(
          v3,
          v3->klass->vtable._22_get_Count.method) >= 1 )
@@ -28058,13 +28058,13 @@ LABEL_22:
             goto LABEL_26;
         }
       }
-      iTween__Stop_63267988(v7, type, v11);
+      iTween__Stop_63311100(v7, type, v11);
     }
   }
 }
 
 
-void iTween__Stop_63267988(UnityEngine_GameObject_o *target, System_String_o *type, const MethodInfo *method)
+void iTween__Stop_63311100(UnityEngine_GameObject_o *target, System_String_o *type, const MethodInfo *method)
 {
   UnityEngine_GameObject_o *v4; // x19
   System_Object_array *Components_object; // x0
@@ -28103,24 +28103,24 @@ void iTween__Stop_63267988(UnityEngine_GameObject_o *target, System_String_o *ty
   __int64 v38; // x0
 
   v4 = target;
-  if ( (byte_4C3EA38 & 1) == 0 )
+  if ( (byte_4C49FB8 & 1) == 0 )
   {
-    sub_1C32C20(&Method_System_Linq_Enumerable_Where_iTween___);
-    sub_1C32C20(&System_Func_iTween__bool__TypeInfo);
-    sub_1C32C20(&Method_UnityEngine_GameObject_GetComponents_iTween___);
-    sub_1C32C20(&System_IDisposable_TypeInfo);
-    sub_1C32C20(&System_Collections_Generic_IEnumerable_iTween__TypeInfo);
-    sub_1C32C20(&System_Collections_Generic_IEnumerator_iTween__TypeInfo);
-    sub_1C32C20(&System_Collections_IEnumerator_TypeInfo);
-    sub_1C32C20(&Method_iTween___c__Stop_b__227_0__);
-    target = (UnityEngine_GameObject_o *)sub_1C32C20(&iTween___c_TypeInfo);
-    byte_4C3EA38 = 1;
+    sub_1C37058(&Method_System_Linq_Enumerable_Where_iTween___);
+    sub_1C37058(&System_Func_iTween__bool__TypeInfo);
+    sub_1C37058(&Method_UnityEngine_GameObject_GetComponents_iTween___);
+    sub_1C37058(&System_IDisposable_TypeInfo);
+    sub_1C37058(&System_Collections_Generic_IEnumerable_iTween__TypeInfo);
+    sub_1C37058(&System_Collections_Generic_IEnumerator_iTween__TypeInfo);
+    sub_1C37058(&System_Collections_IEnumerator_TypeInfo);
+    sub_1C37058(&Method_iTween___c__Stop_b__227_0__);
+    target = (UnityEngine_GameObject_o *)sub_1C37058(&iTween___c_TypeInfo);
+    byte_4C49FB8 = 1;
   }
   if ( !v4 )
     goto LABEL_49;
   Components_object = UnityEngine_GameObject__GetComponents_object_(
                         v4,
-                        (const MethodInfo_31352CC *)Method_UnityEngine_GameObject_GetComponents_iTween___);
+                        (const MethodInfo_313FB34 *)Method_UnityEngine_GameObject_GetComponents_iTween___);
   v6 = iTween___c_TypeInfo;
   v7 = (System_Collections_Generic_IEnumerable_TSource__o *)Components_object;
   if ( !iTween___c_TypeInfo->_2.cctor_finished )
@@ -28137,19 +28137,19 @@ void iTween__Stop_63267988(UnityEngine_GameObject_o *target, System_String_o *ty
       v6 = iTween___c_TypeInfo;
     }
     v9 = (Il2CppObject *)v6->static_fields->__9;
-    _9__227_0 = (System_Func_object__bool__o *)sub_1C32E6C(System_Func_iTween__bool__TypeInfo);
+    _9__227_0 = (System_Func_object__bool__o *)sub_1C372A4(System_Func_iTween__bool__TypeInfo);
     System_Func_object__bool____ctor(_9__227_0, v9, Method_iTween___c__Stop_b__227_0__, 0);
     static_fields = iTween___c_TypeInfo->static_fields;
     static_fields->__9__227_0 = (struct System_Func_iTween__bool__o *)_9__227_0;
-    sub_1C32BC4((CGThumbnailListItem_o *)&static_fields->__9__227_0, (int32_t)_9__227_0, v11, v12);
+    sub_1C36FFC((CGThumbnailListItem_o *)&static_fields->__9__227_0, (int32_t)_9__227_0, v11, v12);
   }
   target = (UnityEngine_GameObject_o *)System_Linq_Enumerable__Where_object_(
                                          v7,
                                          (System_Func_TSource__bool__o *)_9__227_0,
-                                         (const MethodInfo_3123BA8 *)Method_System_Linq_Enumerable_Where_iTween___);
+                                         (const MethodInfo_312E410 *)Method_System_Linq_Enumerable_Where_iTween___);
   if ( !target )
 LABEL_49:
-    sub_1C32E7C(target);
+    sub_1C372B4(target);
   klass = target->klass;
   v14 = target;
   v15 = *(unsigned __int16 *)&target->klass->_2.rank;
@@ -28168,11 +28168,11 @@ LABEL_49:
   else
   {
 LABEL_15:
-    v17 = sub_1C83438(target, System_Collections_Generic_IEnumerable_iTween__TypeInfo, 0);
+    v17 = sub_1C87870(target, System_Collections_Generic_IEnumerable_iTween__TypeInfo, 0);
   }
   v18 = (*(__int64 (__fastcall **)(UnityEngine_GameObject_o *, _QWORD))v17)(v14, *(_QWORD *)(v17 + 8));
   if ( !v18 )
-    sub_1C32E7C(0);
+    sub_1C372B4(0);
   while ( 1 )
   {
     v19 = *(_QWORD *)v18;
@@ -28192,7 +28192,7 @@ LABEL_15:
     else
     {
 LABEL_22:
-      v22 = sub_1C83438(v18, System_Collections_IEnumerator_TypeInfo, 0);
+      v22 = sub_1C87870(v18, System_Collections_IEnumerator_TypeInfo, 0);
     }
     if ( ((*(__int64 (__fastcall **)(__int64, _QWORD))v22)(v18, *(_QWORD *)(v22 + 8)) & 1) == 0 )
       break;
@@ -28213,23 +28213,23 @@ LABEL_22:
     else
     {
 LABEL_29:
-      v26 = sub_1C83438(v18, System_Collections_Generic_IEnumerator_iTween__TypeInfo, 0);
+      v26 = sub_1C87870(v18, System_Collections_Generic_IEnumerator_iTween__TypeInfo, 0);
     }
     v27 = (*(__int64 (__fastcall **)(__int64, _QWORD))v26)(v18, *(_QWORD *)(v26 + 8));
     v28 = (iTween_o *)v27;
     if ( !v27 )
-      sub_1C32E7C(0);
-    v29 = System_String__Concat_63518544(*(System_String_o **)(v27 + 48), *(System_String_o **)(v27 + 56), 0);
+      sub_1C372B4(0);
+    v29 = System_String__Concat_63561656(*(System_String_o **)(v27 + 48), *(System_String_o **)(v27 + 56), 0);
     if ( !v29 )
-      sub_1C32E7C(0);
+      sub_1C372B4(0);
     if ( !type )
-      sub_1C32E7C(v29);
+      sub_1C372B4(v29);
     stringLength = type->fields._stringLength;
     if ( v29->fields._stringLength >= stringLength )
     {
-      v31 = System_String__Substring_63564468(v29, 0, stringLength, 0);
+      v31 = System_String__Substring_63607580(v29, 0, stringLength, 0);
       if ( !v31 )
-        sub_1C32E7C(0);
+        sub_1C372B4(0);
       v32 = System_String__ToLower(v31, 0);
       v33 = System_String__ToLower(type, 0);
       if ( System_String__op_Equality(v32, v33, 0) )
@@ -28253,14 +28253,14 @@ LABEL_29:
   else
   {
 LABEL_42:
-    v38 = sub_1C83438(v18, System_IDisposable_TypeInfo, 0);
+    v38 = sub_1C87870(v18, System_IDisposable_TypeInfo, 0);
   }
   (*(void (__fastcall **)(__int64, _QWORD))v38)(v18, *(_QWORD *)(v38 + 8));
 }
 
 
 // local variable allocation has failed, the output may be wrong!
-void iTween__Stop_63270708(UnityEngine_GameObject_o *target, bool includechildren, const MethodInfo *method)
+void iTween__Stop_63313820(UnityEngine_GameObject_o *target, bool includechildren, const MethodInfo *method)
 {
   UnityEngine_Transform_o *transform; // x0
   System_Collections_IEnumerator_o *Enumerator; // x19
@@ -28283,24 +28283,24 @@ void iTween__Stop_63270708(UnityEngine_GameObject_o *target, bool includechildre
   int *v23; // x10
   __int64 v24; // x0
 
-  if ( (byte_4C3EA37 & 1) == 0 )
+  if ( (byte_4C49FB7 & 1) == 0 )
   {
-    sub_1C32C20(&System_IDisposable_TypeInfo);
-    sub_1C32C20(&System_Collections_IEnumerator_TypeInfo);
-    sub_1C32C20(&UnityEngine_Transform_TypeInfo);
-    sub_1C32C20(&iTween_TypeInfo);
-    byte_4C3EA37 = 1;
+    sub_1C37058(&System_IDisposable_TypeInfo);
+    sub_1C37058(&System_Collections_IEnumerator_TypeInfo);
+    sub_1C37058(&UnityEngine_Transform_TypeInfo);
+    sub_1C37058(&iTween_TypeInfo);
+    byte_4C49FB7 = 1;
   }
   if ( !iTween_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(iTween_TypeInfo);
-  iTween__Stop_63266448(target, (const MethodInfo *)includechildren);
+  iTween__Stop_63309560(target, (const MethodInfo *)includechildren);
   if ( includechildren )
   {
     if ( !target || (transform = UnityEngine_GameObject__get_transform(target, 0)) == 0 )
-      sub_1C32E7C(transform);
+      sub_1C372B4(transform);
     Enumerator = UnityEngine_Transform__GetEnumerator(transform, 0);
     if ( !Enumerator )
-      sub_1C32E7C(0);
+      sub_1C372B4(0);
     while ( 1 )
     {
       klass = Enumerator->klass;
@@ -28320,7 +28320,7 @@ void iTween__Stop_63270708(UnityEngine_GameObject_o *target, bool includechildre
       else
       {
 LABEL_13:
-        v10 = sub_1C83438(Enumerator, System_Collections_IEnumerator_TypeInfo, 0);
+        v10 = sub_1C87870(Enumerator, System_Collections_IEnumerator_TypeInfo, 0);
       }
       if ( ((*(__int64 (__fastcall **)(System_Collections_IEnumerator_o *, _QWORD))v10)(
               Enumerator,
@@ -28344,7 +28344,7 @@ LABEL_13:
       else
       {
 LABEL_20:
-        v14 = sub_1C83438(Enumerator, System_Collections_IEnumerator_TypeInfo, 1);
+        v14 = sub_1C87870(Enumerator, System_Collections_IEnumerator_TypeInfo, 1);
       }
       v15 = (UnityEngine_Component_o *)(*(__int64 (__fastcall **)(System_Collections_IEnumerator_o *, _QWORD))v14)(
                                          Enumerator,
@@ -28355,16 +28355,16 @@ LABEL_20:
       if ( v15->klass->_2.naturalAligment < (unsigned int)naturalAligment
         || (UnityEngine_Transform_c *)v15->klass->_2.typeHierarchy[naturalAligment - 1] != UnityEngine_Transform_TypeInfo )
       {
-        sub_1C3313C(v15);
+        sub_1C37574(v15);
 LABEL_38:
-        sub_1C32E7C(v15);
+        sub_1C372B4(v15);
       }
       gameObject = UnityEngine_Component__get_gameObject(v15, 0);
       if ( !iTween_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(iTween_TypeInfo);
-      iTween__Stop_63270708(gameObject, 1, v17);
+      iTween__Stop_63313820(gameObject, 1, v17);
     }
-    v19 = sub_1C32D5C(Enumerator);
+    v19 = sub_1C37194(Enumerator);
     if ( v19 )
     {
       v20 = *(_QWORD *)v19;
@@ -28385,7 +28385,7 @@ LABEL_38:
       else
       {
 LABEL_33:
-        v24 = sub_1C83438(v19, System_IDisposable_TypeInfo, 0);
+        v24 = sub_1C87870(v19, System_IDisposable_TypeInfo, 0);
       }
       (*(void (__fastcall **)(__int64, _QWORD))v24)(v21, *(_QWORD *)(v24 + 8));
     }
@@ -28393,7 +28393,7 @@ LABEL_33:
 }
 
 
-void iTween__Stop_63271528(
+void iTween__Stop_63314640(
         UnityEngine_GameObject_o *target,
         System_String_o *type,
         bool includechildren,
@@ -28454,26 +28454,26 @@ void iTween__Stop_63271528(
   __int64 v58; // x0
 
   v6 = target;
-  if ( (byte_4C3EA3A & 1) == 0 )
+  if ( (byte_4C49FBA & 1) == 0 )
   {
-    sub_1C32C20(&Method_System_Linq_Enumerable_Where_iTween___);
-    sub_1C32C20(&System_Func_iTween__bool__TypeInfo);
-    sub_1C32C20(&Method_UnityEngine_GameObject_GetComponents_iTween___);
-    sub_1C32C20(&System_IDisposable_TypeInfo);
-    sub_1C32C20(&System_Collections_Generic_IEnumerable_iTween__TypeInfo);
-    sub_1C32C20(&System_Collections_Generic_IEnumerator_iTween__TypeInfo);
-    sub_1C32C20(&System_Collections_IEnumerator_TypeInfo);
-    sub_1C32C20(&UnityEngine_Transform_TypeInfo);
-    sub_1C32C20(&Method_iTween___c__Stop_b__229_0__);
-    sub_1C32C20(&iTween___c_TypeInfo);
-    target = (UnityEngine_GameObject_o *)sub_1C32C20(&iTween_TypeInfo);
-    byte_4C3EA3A = 1;
+    sub_1C37058(&Method_System_Linq_Enumerable_Where_iTween___);
+    sub_1C37058(&System_Func_iTween__bool__TypeInfo);
+    sub_1C37058(&Method_UnityEngine_GameObject_GetComponents_iTween___);
+    sub_1C37058(&System_IDisposable_TypeInfo);
+    sub_1C37058(&System_Collections_Generic_IEnumerable_iTween__TypeInfo);
+    sub_1C37058(&System_Collections_Generic_IEnumerator_iTween__TypeInfo);
+    sub_1C37058(&System_Collections_IEnumerator_TypeInfo);
+    sub_1C37058(&UnityEngine_Transform_TypeInfo);
+    sub_1C37058(&Method_iTween___c__Stop_b__229_0__);
+    sub_1C37058(&iTween___c_TypeInfo);
+    target = (UnityEngine_GameObject_o *)sub_1C37058(&iTween_TypeInfo);
+    byte_4C49FBA = 1;
   }
   if ( !v6 )
     goto LABEL_80;
   Components_object = UnityEngine_GameObject__GetComponents_object_(
                         v6,
-                        (const MethodInfo_31352CC *)Method_UnityEngine_GameObject_GetComponents_iTween___);
+                        (const MethodInfo_313FB34 *)Method_UnityEngine_GameObject_GetComponents_iTween___);
   v8 = iTween___c_TypeInfo;
   v9 = (System_Collections_Generic_IEnumerable_TSource__o *)Components_object;
   if ( !iTween___c_TypeInfo->_2.cctor_finished )
@@ -28490,16 +28490,16 @@ void iTween__Stop_63271528(
       v8 = iTween___c_TypeInfo;
     }
     v11 = (Il2CppObject *)v8->static_fields->__9;
-    _9__229_0 = (System_Func_object__bool__o *)sub_1C32E6C(System_Func_iTween__bool__TypeInfo);
+    _9__229_0 = (System_Func_object__bool__o *)sub_1C372A4(System_Func_iTween__bool__TypeInfo);
     System_Func_object__bool____ctor(_9__229_0, v11, Method_iTween___c__Stop_b__229_0__, 0);
     static_fields = iTween___c_TypeInfo->static_fields;
     static_fields->__9__229_0 = (struct System_Func_iTween__bool__o *)_9__229_0;
-    sub_1C32BC4((CGThumbnailListItem_o *)&static_fields->__9__229_0, (int32_t)_9__229_0, v13, v14);
+    sub_1C36FFC((CGThumbnailListItem_o *)&static_fields->__9__229_0, (int32_t)_9__229_0, v13, v14);
   }
   target = (UnityEngine_GameObject_o *)System_Linq_Enumerable__Where_object_(
                                          v9,
                                          (System_Func_TSource__bool__o *)_9__229_0,
-                                         (const MethodInfo_3123BA8 *)Method_System_Linq_Enumerable_Where_iTween___);
+                                         (const MethodInfo_312E410 *)Method_System_Linq_Enumerable_Where_iTween___);
   if ( !target )
     goto LABEL_80;
   klass = target->klass;
@@ -28520,11 +28520,11 @@ void iTween__Stop_63271528(
   else
   {
 LABEL_15:
-    v19 = sub_1C83438(target, System_Collections_Generic_IEnumerable_iTween__TypeInfo, 0);
+    v19 = sub_1C87870(target, System_Collections_Generic_IEnumerable_iTween__TypeInfo, 0);
   }
   v20 = (*(__int64 (__fastcall **)(UnityEngine_GameObject_o *, _QWORD))v19)(v16, *(_QWORD *)(v19 + 8));
   if ( !v20 )
-    sub_1C32E7C(0);
+    sub_1C372B4(0);
   while ( 1 )
   {
     v21 = *(_QWORD *)v20;
@@ -28544,7 +28544,7 @@ LABEL_15:
     else
     {
 LABEL_22:
-      v24 = sub_1C83438(v20, System_Collections_IEnumerator_TypeInfo, 0);
+      v24 = sub_1C87870(v20, System_Collections_IEnumerator_TypeInfo, 0);
     }
     if ( ((*(__int64 (__fastcall **)(__int64, _QWORD))v24)(v20, *(_QWORD *)(v24 + 8)) & 1) == 0 )
       break;
@@ -28565,20 +28565,20 @@ LABEL_22:
     else
     {
 LABEL_29:
-      v28 = sub_1C83438(v20, System_Collections_Generic_IEnumerator_iTween__TypeInfo, 0);
+      v28 = sub_1C87870(v20, System_Collections_Generic_IEnumerator_iTween__TypeInfo, 0);
     }
     v29 = (*(__int64 (__fastcall **)(__int64, _QWORD))v28)(v20, *(_QWORD *)(v28 + 8));
     v30 = (iTween_o *)v29;
     if ( !v29 )
-      sub_1C32E7C(0);
-    v31 = System_String__Concat_63518544(*(System_String_o **)(v29 + 48), *(System_String_o **)(v29 + 56), 0);
+      sub_1C372B4(0);
+    v31 = System_String__Concat_63561656(*(System_String_o **)(v29 + 48), *(System_String_o **)(v29 + 56), 0);
     if ( !type )
-      sub_1C32E7C(v31);
+      sub_1C372B4(v31);
     if ( !v31 )
-      sub_1C32E7C(0);
-    v32 = System_String__Substring_63564468(v31, 0, type->fields._stringLength, 0);
+      sub_1C372B4(0);
+    v32 = System_String__Substring_63607580(v31, 0, type->fields._stringLength, 0);
     if ( !v32 )
-      sub_1C32E7C(0);
+      sub_1C372B4(0);
     v33 = System_String__ToLower(v32, 0);
     v34 = System_String__ToLower(type, 0);
     if ( System_String__op_Equality(v33, v34, 0) )
@@ -28601,7 +28601,7 @@ LABEL_29:
   else
   {
 LABEL_41:
-    v39 = sub_1C83438(v20, System_IDisposable_TypeInfo, 0);
+    v39 = sub_1C87870(v20, System_IDisposable_TypeInfo, 0);
   }
   (*(void (__fastcall **)(__int64, _QWORD))v39)(v20, *(_QWORD *)(v39 + 8));
   if ( includechildren )
@@ -28611,7 +28611,7 @@ LABEL_41:
     {
       Enumerator = UnityEngine_Transform__GetEnumerator((UnityEngine_Transform_o *)target, 0);
       if ( !Enumerator )
-        sub_1C32E7C(0);
+        sub_1C372B4(0);
       while ( 1 )
       {
         v41 = Enumerator->klass;
@@ -28631,7 +28631,7 @@ LABEL_41:
         else
         {
 LABEL_50:
-          v44 = sub_1C83438(Enumerator, System_Collections_IEnumerator_TypeInfo, 0);
+          v44 = sub_1C87870(Enumerator, System_Collections_IEnumerator_TypeInfo, 0);
         }
         if ( ((*(__int64 (__fastcall **)(System_Collections_IEnumerator_o *, _QWORD))v44)(
                 Enumerator,
@@ -28655,7 +28655,7 @@ LABEL_50:
         else
         {
 LABEL_57:
-          v48 = sub_1C83438(Enumerator, System_Collections_IEnumerator_TypeInfo, 1);
+          v48 = sub_1C87870(Enumerator, System_Collections_IEnumerator_TypeInfo, 1);
         }
         v49 = (UnityEngine_Component_o *)(*(__int64 (__fastcall **)(System_Collections_IEnumerator_o *, _QWORD))v48)(
                                            Enumerator,
@@ -28666,16 +28666,16 @@ LABEL_57:
         if ( v49->klass->_2.naturalAligment < (unsigned int)naturalAligment
           || (UnityEngine_Transform_c *)v49->klass->_2.typeHierarchy[naturalAligment - 1] != UnityEngine_Transform_TypeInfo )
         {
-          sub_1C3313C(v49);
+          sub_1C37574(v49);
 LABEL_79:
-          sub_1C32E7C(v49);
+          sub_1C372B4(v49);
         }
         gameObject = UnityEngine_Component__get_gameObject(v49, 0);
         if ( !iTween_TypeInfo->_2.cctor_finished )
           j_il2cpp_runtime_class_init_0(iTween_TypeInfo);
-        iTween__Stop_63271528(gameObject, type, 1, v51);
+        iTween__Stop_63314640(gameObject, type, 1, v51);
       }
-      v53 = sub_1C32D5C(Enumerator);
+      v53 = sub_1C37194(Enumerator);
       if ( v53 )
       {
         v54 = *(_QWORD *)v53;
@@ -28696,14 +28696,14 @@ LABEL_79:
         else
         {
 LABEL_70:
-          v58 = sub_1C83438(v53, System_IDisposable_TypeInfo, 0);
+          v58 = sub_1C87870(v53, System_IDisposable_TypeInfo, 0);
         }
         (*(void (__fastcall **)(__int64, _QWORD))v58)(v55, *(_QWORD *)(v58 + 8));
       }
       return;
     }
 LABEL_80:
-    sub_1C32E7C(target);
+    sub_1C372B4(target);
   }
 }
 
@@ -28718,12 +28718,12 @@ void iTween__TweenComplete(iTween_o *this, const MethodInfo *method)
   const MethodInfo *v7; // x2
 
   v2 = this;
-  if ( (byte_4C3E9F2 & 1) == 0 )
+  if ( (byte_4C49F72 & 1) == 0 )
   {
-    sub_1C32C20(&StringLiteral_24629/*"value"*/);
-    sub_1C32C20(&StringLiteral_22435/*"onupdate"*/);
-    this = (iTween_o *)sub_1C32C20(&StringLiteral_22427/*"oncomplete"*/);
-    byte_4C3E9F2 = 1;
+    sub_1C37058(&StringLiteral_24634/*"value"*/);
+    sub_1C37058(&StringLiteral_22438/*"onupdate"*/);
+    this = (iTween_o *)sub_1C37058(&StringLiteral_22430/*"oncomplete"*/);
+    byte_4C49F72 = 1;
   }
   apply = v2->fields.apply;
   v4 = 1.0;
@@ -28732,15 +28732,15 @@ void iTween__TweenComplete(iTween_o *this, const MethodInfo *method)
   v2->fields.isRunning = 0;
   v2->fields.percentage = v4;
   if ( !apply )
-    sub_1C32E7C(this);
+    sub_1C372B4(this);
   ((void (__fastcall *)(intptr_t, intptr_t))apply->fields.invoke_impl)(apply->fields.method_code, apply->fields.method);
-  if ( System_String__op_Equality(v2->fields.type, (System_String_o *)StringLiteral_24629/*"value"*/, 0) )
-    iTween__CallBack(v2, (System_String_o *)StringLiteral_22435/*"onupdate"*/, v6);
+  if ( System_String__op_Equality(v2->fields.type, (System_String_o *)StringLiteral_24634/*"value"*/, 0) )
+    iTween__CallBack(v2, (System_String_o *)StringLiteral_22438/*"onupdate"*/, v6);
   if ( v2->fields.loopType )
     iTween__TweenLoop(v2, v5);
   else
     iTween__Dispose(v2, v5);
-  iTween__CallBack(v2, (System_String_o *)StringLiteral_22427/*"oncomplete"*/, v7);
+  iTween__CallBack(v2, (System_String_o *)StringLiteral_22430/*"oncomplete"*/, v7);
 }
 
 
@@ -28751,17 +28751,17 @@ System_Collections_IEnumerator_o *iTween__TweenDelay(iTween_o *this, const Metho
   int32_t v5; // w2
   const MethodInfo *v6; // x3
 
-  if ( (byte_4C3E9EE & 1) == 0 )
+  if ( (byte_4C49F6E & 1) == 0 )
   {
-    sub_1C32C20(&iTween__TweenDelay_d__150_TypeInfo);
-    byte_4C3E9EE = 1;
+    sub_1C37058(&iTween__TweenDelay_d__150_TypeInfo);
+    byte_4C49F6E = 1;
   }
-  v3 = sub_1C32E6C(iTween__TweenDelay_d__150_TypeInfo);
+  v3 = sub_1C372A4(iTween__TweenDelay_d__150_TypeInfo);
   iTween__TweenDelay_d__150___ctor((iTween__TweenDelay_d__150_o *)v3, 0, 0);
   if ( !v3 )
-    sub_1C32E7C(v4);
+    sub_1C372B4(v4);
   *(_QWORD *)(v3 + 32) = this;
-  sub_1C32BC4((CGThumbnailListItem_o *)(v3 + 32), (int32_t)this, v5, v6);
+  sub_1C36FFC((CGThumbnailListItem_o *)(v3 + 32), (int32_t)this, v5, v6);
   return (System_Collections_IEnumerator_o *)v3;
 }
 
@@ -28774,10 +28774,10 @@ void iTween__TweenLoop(iTween_o *this, const MethodInfo *method)
   bool reverse; // w8
 
   v2 = this;
-  if ( (byte_4C3E9F3 & 1) == 0 )
+  if ( (byte_4C49F73 & 1) == 0 )
   {
-    this = (iTween_o *)sub_1C32C20(&StringLiteral_14622/*"TweenRestart"*/);
-    byte_4C3E9F3 = 1;
+    this = (iTween_o *)sub_1C37058(&StringLiteral_14623/*"TweenRestart"*/);
+    byte_4C49F73 = 1;
   }
   loopType = v2->fields.loopType;
   if ( loopType == 2 )
@@ -28788,7 +28788,7 @@ void iTween__TweenLoop(iTween_o *this, const MethodInfo *method)
 LABEL_8:
     UnityEngine_MonoBehaviour__StartCoroutine(
       (UnityEngine_MonoBehaviour_o *)v2,
-      (System_String_o *)StringLiteral_14622/*"TweenRestart"*/,
+      (System_String_o *)StringLiteral_14623/*"TweenRestart"*/,
       0);
     return;
   }
@@ -28797,7 +28797,7 @@ LABEL_8:
     apply = v2->fields.apply;
     *(_QWORD *)&v2->fields.runningTime = 0;
     if ( !apply )
-      sub_1C32E7C(this);
+      sub_1C372B4(this);
     ((void (__fastcall *)(intptr_t, intptr_t))apply->fields.invoke_impl)(
       apply->fields.method_code,
       apply->fields.method);
@@ -28813,17 +28813,17 @@ System_Collections_IEnumerator_o *iTween__TweenRestart(iTween_o *this, const Met
   int32_t v5; // w2
   const MethodInfo *v6; // x3
 
-  if ( (byte_4C3E9F0 & 1) == 0 )
+  if ( (byte_4C49F70 & 1) == 0 )
   {
-    sub_1C32C20(&iTween__TweenRestart_d__152_TypeInfo);
-    byte_4C3E9F0 = 1;
+    sub_1C37058(&iTween__TweenRestart_d__152_TypeInfo);
+    byte_4C49F70 = 1;
   }
-  v3 = sub_1C32E6C(iTween__TweenRestart_d__152_TypeInfo);
+  v3 = sub_1C372A4(iTween__TweenRestart_d__152_TypeInfo);
   iTween__TweenRestart_d__152___ctor((iTween__TweenRestart_d__152_o *)v3, 0, 0);
   if ( !v3 )
-    sub_1C32E7C(v4);
+    sub_1C372B4(v4);
   *(_QWORD *)(v3 + 32) = this;
-  sub_1C32BC4((CGThumbnailListItem_o *)(v3 + 32), (int32_t)this, v5, v6);
+  sub_1C36FFC((CGThumbnailListItem_o *)(v3 + 32), (int32_t)this, v5, v6);
   return (System_Collections_IEnumerator_o *)v3;
 }
 
@@ -28837,42 +28837,42 @@ void iTween__TweenStart(iTween_o *this, const MethodInfo *method)
   UnityEngine_AudioSource_o *audioSource; // x20
   UnityEngine_AudioClip_o *clip; // x0
 
-  if ( (byte_4C3E9EF & 1) == 0 )
+  if ( (byte_4C49F6F & 1) == 0 )
   {
-    sub_1C32C20(&StringLiteral_23146/*"rotate"*/);
-    sub_1C32C20(&StringLiteral_23417/*"shake"*/);
-    sub_1C32C20(&StringLiteral_21346/*"look"*/);
-    sub_1C32C20(&StringLiteral_18405/*"curve"*/);
-    sub_1C32C20(&StringLiteral_23640/*"stab"*/);
-    sub_1C32C20(&StringLiteral_22815/*"punch"*/);
-    sub_1C32C20(&StringLiteral_22432/*"onstart"*/);
-    sub_1C32C20(&StringLiteral_21659/*"move"*/);
-    sub_1C32C20(&StringLiteral_23191/*"scale"*/);
-    byte_4C3E9EF = 1;
+    sub_1C37058(&StringLiteral_23150/*"rotate"*/);
+    sub_1C37058(&StringLiteral_23421/*"shake"*/);
+    sub_1C37058(&StringLiteral_21349/*"look"*/);
+    sub_1C37058(&StringLiteral_18408/*"curve"*/);
+    sub_1C37058(&StringLiteral_23644/*"stab"*/);
+    sub_1C37058(&StringLiteral_22819/*"punch"*/);
+    sub_1C37058(&StringLiteral_22435/*"onstart"*/);
+    sub_1C37058(&StringLiteral_21662/*"move"*/);
+    sub_1C37058(&StringLiteral_23195/*"scale"*/);
+    byte_4C49F6F = 1;
   }
-  iTween__CallBack(this, (System_String_o *)StringLiteral_22432/*"onstart"*/, v2);
+  iTween__CallBack(this, (System_String_o *)StringLiteral_22435/*"onstart"*/, v2);
   if ( !this->fields.loop )
   {
     iTween__ConflictCheck(this, v4);
     iTween__GenerateTargets(this, v5);
   }
-  v6 = System_String__op_Equality(this->fields.type, (System_String_o *)StringLiteral_23640/*"stab"*/, 0);
+  v6 = System_String__op_Equality(this->fields.type, (System_String_o *)StringLiteral_23644/*"stab"*/, 0);
   if ( v6 )
   {
     audioSource = this->fields.audioSource;
     if ( !audioSource )
-      sub_1C32E7C(v6);
+      sub_1C372B4(v6);
     clip = UnityEngine_AudioSource__get_clip(this->fields.audioSource, 0);
     UnityEngine_AudioSource__PlayOneShot(audioSource, clip, 0);
   }
-  if ( !System_String__op_Equality(this->fields.type, (System_String_o *)StringLiteral_21659/*"move"*/, 0)
-    && !System_String__op_Equality(this->fields.type, (System_String_o *)StringLiteral_23191/*"scale"*/, 0)
-    && !System_String__op_Equality(this->fields.type, (System_String_o *)StringLiteral_23146/*"rotate"*/, 0)
-    && !System_String__op_Equality(this->fields.type, (System_String_o *)StringLiteral_22815/*"punch"*/, 0)
-    && !System_String__op_Equality(this->fields.type, (System_String_o *)StringLiteral_23417/*"shake"*/, 0)
-    && !System_String__op_Equality(this->fields.type, (System_String_o *)StringLiteral_18405/*"curve"*/, 0) )
+  if ( !System_String__op_Equality(this->fields.type, (System_String_o *)StringLiteral_21662/*"move"*/, 0)
+    && !System_String__op_Equality(this->fields.type, (System_String_o *)StringLiteral_23195/*"scale"*/, 0)
+    && !System_String__op_Equality(this->fields.type, (System_String_o *)StringLiteral_23150/*"rotate"*/, 0)
+    && !System_String__op_Equality(this->fields.type, (System_String_o *)StringLiteral_22819/*"punch"*/, 0)
+    && !System_String__op_Equality(this->fields.type, (System_String_o *)StringLiteral_23421/*"shake"*/, 0)
+    && !System_String__op_Equality(this->fields.type, (System_String_o *)StringLiteral_18408/*"curve"*/, 0) )
   {
-    System_String__op_Equality(this->fields.type, (System_String_o *)StringLiteral_21346/*"look"*/, 0);
+    System_String__op_Equality(this->fields.type, (System_String_o *)StringLiteral_21349/*"look"*/, 0);
   }
   this->fields.isRunning = 1;
 }
@@ -28886,16 +28886,16 @@ void iTween__TweenUpdate(iTween_o *this, const MethodInfo *method)
   const MethodInfo *v5; // x1
 
   v2 = this;
-  if ( (byte_4C3E9F1 & 1) == 0 )
+  if ( (byte_4C49F71 & 1) == 0 )
   {
-    this = (iTween_o *)sub_1C32C20(&StringLiteral_22435/*"onupdate"*/);
-    byte_4C3E9F1 = 1;
+    this = (iTween_o *)sub_1C37058(&StringLiteral_22438/*"onupdate"*/);
+    byte_4C49F71 = 1;
   }
   apply = v2->fields.apply;
   if ( !apply )
-    sub_1C32E7C(this);
+    sub_1C372B4(this);
   ((void (__fastcall *)(intptr_t, intptr_t))apply->fields.invoke_impl)(apply->fields.method_code, apply->fields.method);
-  iTween__CallBack(v2, (System_String_o *)StringLiteral_22435/*"onupdate"*/, v4);
+  iTween__CallBack(v2, (System_String_o *)StringLiteral_22438/*"onupdate"*/, v4);
   iTween__UpdatePercentage(v2, v5);
 }
 
@@ -28983,32 +28983,32 @@ void iTween__ValueTo(UnityEngine_GameObject_o *target, System_Collections_Hashta
   __int64 v36; // x0
   int v37; // [xsp+Ch] [xbp-44h] BYREF
 
-  if ( (byte_4C3E98F & 1) == 0 )
+  if ( (byte_4C49F0F & 1) == 0 )
   {
-    sub_1C32C20(&UnityEngine_Color_var);
-    sub_1C32C20(&UnityEngine_Debug_TypeInfo);
-    sub_1C32C20(&iTween_EaseType_TypeInfo);
-    sub_1C32C20(&UnityEngine_Rect_var);
-    sub_1C32C20(&float_var);
-    sub_1C32C20(&System_Type_TypeInfo);
-    sub_1C32C20(&UnityEngine_Vector2_var);
-    sub_1C32C20(&UnityEngine_Vector3_var);
-    sub_1C32C20(&StringLiteral_19689/*"from"*/);
-    sub_1C32C20(&StringLiteral_18751/*"easetype"*/);
-    sub_1C32C20(&StringLiteral_24629/*"value"*/);
-    sub_1C32C20(&StringLiteral_22435/*"onupdate"*/);
-    sub_1C32C20(&StringLiteral_20103/*"iTween Error: ValueTo() only works with interpolating Vector3s, Vector2s, floats, ints, Rects and Colors!"*/);
-    sub_1C32C20(&StringLiteral_20104/*"iTween Error: ValueTo() requires an 'onupdate' callback function and a 'from' and 'to' property.  The supplied 'onupdate' callback must accept a single argument that is the same type as the supplied 'from' and 'to' properties!"*/);
-    sub_1C32C20(&StringLiteral_22987/*"rect"*/);
-    sub_1C32C20(&StringLiteral_21560/*"method"*/);
-    sub_1C32C20(&StringLiteral_24646/*"vector2"*/);
-    sub_1C32C20(&StringLiteral_24106/*"to"*/);
-    sub_1C32C20(&StringLiteral_24647/*"vector3"*/);
-    sub_1C32C20(&StringLiteral_18051/*"color"*/);
-    sub_1C32C20(&StringLiteral_19499/*"float"*/);
-    sub_1C32C20(&StringLiteral_24241/*"type"*/);
-    sub_1C32C20(&iTween_TypeInfo);
-    byte_4C3E98F = 1;
+    sub_1C37058(&UnityEngine_Color_var);
+    sub_1C37058(&UnityEngine_Debug_TypeInfo);
+    sub_1C37058(&iTween_EaseType_TypeInfo);
+    sub_1C37058(&UnityEngine_Rect_var);
+    sub_1C37058(&float_var);
+    sub_1C37058(&System_Type_TypeInfo);
+    sub_1C37058(&UnityEngine_Vector2_var);
+    sub_1C37058(&UnityEngine_Vector3_var);
+    sub_1C37058(&StringLiteral_19692/*"from"*/);
+    sub_1C37058(&StringLiteral_18754/*"easetype"*/);
+    sub_1C37058(&StringLiteral_24634/*"value"*/);
+    sub_1C37058(&StringLiteral_22438/*"onupdate"*/);
+    sub_1C37058(&StringLiteral_20106/*"iTween Error: ValueTo() only works with interpolating Vector3s, Vector2s, floats, ints, Rects and Colors!"*/);
+    sub_1C37058(&StringLiteral_20107/*"iTween Error: ValueTo() requires an 'onupdate' callback function and a 'from' and 'to' property.  The supplied 'onupdate' callback must accept a single argument that is the same type as the supplied 'from' and 'to' properties!"*/);
+    sub_1C37058(&StringLiteral_22991/*"rect"*/);
+    sub_1C37058(&StringLiteral_21563/*"method"*/);
+    sub_1C37058(&StringLiteral_24651/*"vector2"*/);
+    sub_1C37058(&StringLiteral_24110/*"to"*/);
+    sub_1C37058(&StringLiteral_24652/*"vector3"*/);
+    sub_1C37058(&StringLiteral_18053/*"color"*/);
+    sub_1C37058(&StringLiteral_19502/*"float"*/);
+    sub_1C37058(&StringLiteral_24245/*"type"*/);
+    sub_1C37058(&iTween_TypeInfo);
+    byte_4C49F0F = 1;
   }
   if ( !iTween_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(iTween_TypeInfo);
@@ -29018,37 +29018,37 @@ void iTween__ValueTo(UnityEngine_GameObject_o *target, System_Collections_Hashta
   v6 = (System_Collections_Hashtable_o *)v5;
   if ( (((__int64 (__fastcall *)(Il2CppObject *, __int64, const MethodInfo *))v5->klass->vtable[25].methodPtr)(
           v5,
-          StringLiteral_22435/*"onupdate"*/,
+          StringLiteral_22438/*"onupdate"*/,
           v5->klass->vtable[25].method)
       & 1) == 0
     || (((__int64 (__fastcall *)(System_Collections_Hashtable_o *, __int64, const MethodInfo *))v6->klass->vtable._25_Contains.methodPtr)(
           v6,
-          StringLiteral_19689/*"from"*/,
+          StringLiteral_19692/*"from"*/,
           v6->klass->vtable._25_Contains.method)
       & 1) == 0
     || (((__int64 (__fastcall *)(System_Collections_Hashtable_o *, __int64, const MethodInfo *))v6->klass->vtable._25_Contains.methodPtr)(
           v6,
-          StringLiteral_24106/*"to"*/,
+          StringLiteral_24110/*"to"*/,
           v6->klass->vtable._25_Contains.method)
       & 1) == 0 )
   {
     if ( !UnityEngine_Debug_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(UnityEngine_Debug_TypeInfo);
-    v13 = (Il2CppObject *)StringLiteral_20104/*"iTween Error: ValueTo() requires an 'onupdate' callback function and a 'from' and 'to' property.  The supplied 'onupdate' callback must accept a single argument that is the same type as the supplied 'from' and 'to' properties!"*/;
+    v13 = (Il2CppObject *)StringLiteral_20107/*"iTween Error: ValueTo() requires an 'onupdate' callback function and a 'from' and 'to' property.  The supplied 'onupdate' callback must accept a single argument that is the same type as the supplied 'from' and 'to' properties!"*/;
     goto LABEL_17;
   }
   ((void (__fastcall *)(System_Collections_Hashtable_o *, __int64, __int64, const MethodInfo *))v6->klass->vtable._29_set_Item.methodPtr)(
     v6,
-    StringLiteral_24241/*"type"*/,
-    StringLiteral_24629/*"value"*/,
+    StringLiteral_24245/*"type"*/,
+    StringLiteral_24634/*"value"*/,
     v6->klass->vtable._29_set_Item.method);
   v5 = (Il2CppObject *)((__int64 (__fastcall *)(System_Collections_Hashtable_o *, __int64, const MethodInfo *))v6->klass->vtable._28_get_Item.methodPtr)(
                          v6,
-                         StringLiteral_19689/*"from"*/,
+                         StringLiteral_19692/*"from"*/,
                          v6->klass->vtable._28_get_Item.method);
   if ( !v5 )
 LABEL_46:
-    sub_1C32E7C(v5);
+    sub_1C372B4(v5);
   Type = System_Object__GetType(v5, 0);
   v8 = UnityEngine_Vector2_var;
   if ( !System_Type_TypeInfo->_2.cctor_finished )
@@ -29059,7 +29059,7 @@ LABEL_46:
   {
     v5 = (Il2CppObject *)((__int64 (__fastcall *)(System_Collections_Hashtable_o *, __int64, const MethodInfo *))v6->klass->vtable._28_get_Item.methodPtr)(
                            v6,
-                           StringLiteral_19689/*"from"*/,
+                           StringLiteral_19692/*"from"*/,
                            v6->klass->vtable._28_get_Item.method);
     if ( v5 )
     {
@@ -29072,12 +29072,12 @@ LABEL_46:
       if ( System_Type__op_Equality(v14, v17, 0) )
       {
         klass = v6->klass;
-        v12 = &StringLiteral_24647/*"vector3"*/;
+        v12 = &StringLiteral_24652/*"vector3"*/;
         goto LABEL_38;
       }
       v5 = (Il2CppObject *)((__int64 (__fastcall *)(System_Collections_Hashtable_o *, __int64, const MethodInfo *))v6->klass->vtable._28_get_Item.methodPtr)(
                              v6,
-                             StringLiteral_19689/*"from"*/,
+                             StringLiteral_19692/*"from"*/,
                              v6->klass->vtable._28_get_Item.method);
       if ( v5 )
       {
@@ -29090,12 +29090,12 @@ LABEL_46:
         if ( System_Type__op_Equality(v18, v21, 0) )
         {
           klass = v6->klass;
-          v12 = &StringLiteral_22987/*"rect"*/;
+          v12 = &StringLiteral_22991/*"rect"*/;
           goto LABEL_38;
         }
         v5 = (Il2CppObject *)((__int64 (__fastcall *)(System_Collections_Hashtable_o *, __int64, const MethodInfo *))v6->klass->vtable._28_get_Item.methodPtr)(
                                v6,
-                               StringLiteral_19689/*"from"*/,
+                               StringLiteral_19692/*"from"*/,
                                v6->klass->vtable._28_get_Item.method);
         if ( v5 )
         {
@@ -29108,12 +29108,12 @@ LABEL_46:
           if ( System_Type__op_Equality(v22, v25, 0) )
           {
             klass = v6->klass;
-            v12 = &StringLiteral_19499/*"float"*/;
+            v12 = &StringLiteral_19502/*"float"*/;
             goto LABEL_38;
           }
           v5 = (Il2CppObject *)((__int64 (__fastcall *)(System_Collections_Hashtable_o *, __int64, const MethodInfo *))v6->klass->vtable._28_get_Item.methodPtr)(
                                  v6,
-                                 StringLiteral_19689/*"from"*/,
+                                 StringLiteral_19692/*"from"*/,
                                  v6->klass->vtable._28_get_Item.method);
           if ( v5 )
           {
@@ -29126,12 +29126,12 @@ LABEL_46:
             if ( System_Type__op_Equality(v26, v29, 0) )
             {
               klass = v6->klass;
-              v12 = &StringLiteral_18051/*"color"*/;
+              v12 = &StringLiteral_18053/*"color"*/;
               goto LABEL_38;
             }
             if ( !UnityEngine_Debug_TypeInfo->_2.cctor_finished )
               j_il2cpp_runtime_class_init_0(UnityEngine_Debug_TypeInfo);
-            v13 = (Il2CppObject *)StringLiteral_20103/*"iTween Error: ValueTo() only works with interpolating Vector3s, Vector2s, floats, ints, Rects and Colors!"*/;
+            v13 = (Il2CppObject *)StringLiteral_20106/*"iTween Error: ValueTo() only works with interpolating Vector3s, Vector2s, floats, ints, Rects and Colors!"*/;
 LABEL_17:
             UnityEngine_Debug__LogError(v13, 0);
             return;
@@ -29142,16 +29142,16 @@ LABEL_17:
     goto LABEL_46;
   }
   klass = v6->klass;
-  v12 = &StringLiteral_24646/*"vector2"*/;
+  v12 = &StringLiteral_24651/*"vector2"*/;
 LABEL_38:
   ((void (__fastcall *)(System_Collections_Hashtable_o *, __int64, __int64, const MethodInfo *))klass->vtable._29_set_Item.methodPtr)(
     v6,
-    StringLiteral_21560/*"method"*/,
+    StringLiteral_21563/*"method"*/,
     *v12,
     klass->vtable._29_set_Item.method);
   if ( (((__int64 (__fastcall *)(System_Collections_Hashtable_o *, __int64, const MethodInfo *))v6->klass->vtable._25_Contains.methodPtr)(
           v6,
-          StringLiteral_18751/*"easetype"*/,
+          StringLiteral_18754/*"easetype"*/,
           v6->klass->vtable._25_Contains.method)
       & 1) == 0 )
   {
@@ -29159,7 +29159,7 @@ LABEL_38:
     v36 = j_il2cpp_value_box_0(iTween_EaseType_TypeInfo, &v37, v30, v31, v32, v33, v34, v35);
     ((void (__fastcall *)(System_Collections_Hashtable_o *, __int64, __int64, const MethodInfo *))v6->klass->vtable._22_Add.methodPtr)(
       v6,
-      StringLiteral_18751/*"easetype"*/,
+      StringLiteral_18754/*"easetype"*/,
       v36,
       v6->klass->vtable._22_Add.method);
   }
@@ -29729,15 +29729,15 @@ void iTween_ApplyTween___ctor(iTween_ApplyTween_o *this, Il2CppObject *object, i
   this->fields.method = method;
   this->fields.method_ptr = v4;
   this->fields.m_target = object;
-  sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.m_target, (int32_t)object, method, a4);
+  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.m_target, (int32_t)object, method, a4);
   v8 = *(unsigned __int8 *)(method + 82);
   this->fields.method_code = (intptr_t)this;
-  if ( (sub_1C32CE0(method) & 1) == 0 )
+  if ( (sub_1C37118(method) & 1) == 0 )
   {
     if ( !object )
     {
-      v10 = sub_1C32E98(0, "Delegate to an instance method cannot have null 'this'.");
-      sub_1C32D48(v10, 0);
+      v10 = sub_1C372D0(0, "Delegate to an instance method cannot have null 'this'.");
+      sub_1C37180(v10, 0);
     }
     goto LABEL_5;
   }
@@ -29749,9 +29749,9 @@ LABEL_5:
     this->fields.method_code = (intptr_t)m_target;
     goto LABEL_6;
   }
-  this->fields.invoke_impl = (intptr_t)sub_1BD7E98;
+  this->fields.invoke_impl = (intptr_t)sub_1BDC2D0;
 LABEL_6:
-  this->fields.extra_arg = (intptr_t)sub_1BD7E58;
+  this->fields.extra_arg = (intptr_t)sub_1BDC290;
 }
 
 
@@ -29764,13 +29764,13 @@ System_IAsyncResult_o *iTween_ApplyTween__BeginInvoke(
   __int64 v5; // [xsp+8h] [xbp-8h] BYREF
 
   v5 = 0;
-  return (System_IAsyncResult_o *)sub_1C32BD4(this, &v5, callback, object);
+  return (System_IAsyncResult_o *)sub_1C3700C(this, &v5, callback, object);
 }
 
 
 void iTween_ApplyTween__EndInvoke(iTween_ApplyTween_o *this, System_IAsyncResult_o *result, const MethodInfo *method)
 {
-  sub_1C32BD8(result, 0, method);
+  sub_1C37010(result, 0, method);
 }
 
 
@@ -29788,19 +29788,19 @@ void iTween_CRSpline___ctor(iTween_CRSpline_o *this, UnityEngine_Vector3_array *
   int32_t v8; // w2
   const MethodInfo *v9; // x3
 
-  if ( (byte_4C3EA4D & 1) == 0 )
+  if ( (byte_4C49FCD & 1) == 0 )
   {
-    sub_1C32C20(&UnityEngine_Vector3___TypeInfo);
-    byte_4C3EA4D = 1;
+    sub_1C37058(&UnityEngine_Vector3___TypeInfo);
+    byte_4C49FCD = 1;
   }
   System_Object___ctor((Il2CppObject *)this, 0);
   if ( !pts )
-    sub_1C32E7C(v5);
-  v6 = (struct UnityEngine_Vector3_array *)sub_1C32CC8(UnityEngine_Vector3___TypeInfo, LODWORD(pts->max_length));
+    sub_1C372B4(v5);
+  v6 = (struct UnityEngine_Vector3_array *)sub_1C37100(UnityEngine_Vector3___TypeInfo, LODWORD(pts->max_length));
   this->fields.pts = v6;
   p_fields = (CGThumbnailListItem_o *)&this->fields;
-  sub_1C32BC4(p_fields, (int32_t)v6, v8, v9);
-  System_Array__Copy_65184580((System_Array_o *)pts, (System_Array_o *)p_fields->klass, pts->max_length, 0);
+  sub_1C36FFC(p_fields, (int32_t)v6, v8, v9);
+  System_Array__Copy_65227692((System_Array_o *)pts, (System_Array_o *)p_fields->klass, pts->max_length, 0);
 }
 
 
@@ -29850,10 +29850,10 @@ UnityEngine_Vector3_o iTween_CRSpline__Interp(iTween_CRSpline_o *this, float t, 
     goto LABEL_17;
   max_length = pts->max_length;
   v5 = this;
-  if ( !byte_4C313D0 )
+  if ( !byte_4C3C920 )
   {
-    sub_1C32C20(&System_Math_TypeInfo);
-    byte_4C313D0 = 1;
+    sub_1C37058(&System_Math_TypeInfo);
+    byte_4C3C920 = 1;
   }
   v7 = (float)(max_length - 3) * t;
   this = (iTween_CRSpline_o *)System_Math_TypeInfo;
@@ -29867,10 +29867,10 @@ UnityEngine_Vector3_o iTween_CRSpline__Interp(iTween_CRSpline_o *this, float t, 
     v8 = max_length - 4;
   if ( !v9 )
 LABEL_17:
-    sub_1C32E7C(this);
+    sub_1C372B4(this);
   v10 = v9->max_length;
   if ( v8 >= v10 || (v11 = v8 + 1, v8 + 1 >= v10) || (v12 = v8 + 2, v8 + 2 >= v10) || (v13 = v8 + 3, v8 + 3 >= v10) )
-    sub_1C32E84(this);
+    sub_1C372BC(this);
   v14 = (float)v8;
   v15 = (float32x2_t *)((char *)v9 + 12 * v8);
   v16 = v12;
@@ -29935,10 +29935,10 @@ void iTween_Defaults___cctor(const MethodInfo *method)
   struct UnityEngine_Vector3_StaticFields *v9; // x9
   float z; // s1
 
-  if ( (byte_4C3EA4C & 1) == 0 )
+  if ( (byte_4C49FCC & 1) == 0 )
   {
-    sub_1C32C20(&iTween_Defaults_TypeInfo);
-    byte_4C3EA4C = 1;
+    sub_1C37058(&iTween_Defaults_TypeInfo);
+    byte_4C49FCC = 1;
   }
   v1 = iTween_Defaults_TypeInfo;
   static_fields = iTween_Defaults_TypeInfo->static_fields;
@@ -29954,10 +29954,10 @@ void iTween_Defaults___cctor(const MethodInfo *method)
   v8[6].n64_u64[0] = vdup_n_s32(0x3D4CCCCDu).n64_u64[0];
   v8[7].n64_u32[0] = 1028443341;
   v8[7].n64_u8[4] = 0;
-  if ( !byte_4C313D9 )
+  if ( !byte_4C3C929 )
   {
-    sub_1C32C20(&UnityEngine_Vector3_TypeInfo);
-    byte_4C313D9 = 1;
+    sub_1C37058(&UnityEngine_Vector3_TypeInfo);
+    byte_4C3C929 = 1;
     v8 = (int32x2_t *)iTween_Defaults_TypeInfo->static_fields;
   }
   v9 = UnityEngine_Vector3_TypeInfo->static_fields;
@@ -29982,15 +29982,15 @@ void iTween_EasingFunction___ctor(
   this->fields.method = method;
   this->fields.method_ptr = v4;
   this->fields.m_target = object;
-  sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.m_target, (int32_t)object, method, a4);
+  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.m_target, (int32_t)object, method, a4);
   v8 = *(unsigned __int8 *)(method + 82);
   this->fields.method_code = (intptr_t)this;
-  if ( (sub_1C32CE0(method) & 1) == 0 )
+  if ( (sub_1C37118(method) & 1) == 0 )
   {
     if ( !object )
     {
-      v10 = sub_1C32E98(0, "Delegate to an instance method cannot have null 'this'.");
-      sub_1C32D48(v10, 0);
+      v10 = sub_1C372D0(0, "Delegate to an instance method cannot have null 'this'.");
+      sub_1C37180(v10, 0);
     }
     goto LABEL_5;
   }
@@ -30002,9 +30002,9 @@ LABEL_5:
     this->fields.method_code = (intptr_t)m_target;
     goto LABEL_6;
   }
-  this->fields.invoke_impl = (intptr_t)sub_1BD7E44;
+  this->fields.invoke_impl = (intptr_t)sub_1BDC27C;
 LABEL_6:
-  this->fields.extra_arg = (intptr_t)sub_1BD7DD4;
+  this->fields.extra_arg = (intptr_t)sub_1BDC20C;
 }
 
 
@@ -30042,16 +30042,16 @@ System_IAsyncResult_o *iTween_EasingFunction__BeginInvoke(
   v30 = end;
   v31 = start;
   v29 = Value;
-  if ( (byte_4C3EA4B & 1) == 0 )
+  if ( (byte_4C49FCB & 1) == 0 )
   {
-    sub_1C32C20(&float_TypeInfo);
-    byte_4C3EA4B = 1;
+    sub_1C37058(&float_TypeInfo);
+    byte_4C49FCB = 1;
   }
   v28 = 0u;
   v27[0] = j_il2cpp_value_box_0(float_TypeInfo, &v31, object, method, v7, v8, v9, v10);
   v27[1] = j_il2cpp_value_box_0(float_TypeInfo, &v30, v14, v15, v16, v17, v18, v19);
   *(_QWORD *)&v28 = j_il2cpp_value_box_0(float_TypeInfo, &v29, v20, v21, v22, v23, v24, v25);
-  return (System_IAsyncResult_o *)sub_1C32BD4(this, v27, callback, object);
+  return (System_IAsyncResult_o *)sub_1C3700C(this, v27, callback, object);
 }
 
 
@@ -30065,9 +30065,9 @@ float iTween_EasingFunction__EndInvoke(
   __int64 v5; // x2
   __int64 v6; // x3
 
-  v3 = sub_1C32BD8(result, 0, method);
+  v3 = sub_1C37010(result, 0, method);
   if ( !v3 )
-    sub_1C32E7C(0);
+    sub_1C372B4(0);
   return *(float *)j_il2cpp_object_unbox_0(v3, v4, v5, v6);
 }
 
@@ -30109,10 +30109,10 @@ bool iTween__Start_d__234__MoveNext(iTween__Start_d__234_o *this, const MethodIn
   int32_t v9; // w2
   const MethodInfo *v10; // x3
 
-  if ( (byte_4C3EA4F & 1) == 0 )
+  if ( (byte_4C49FCF & 1) == 0 )
   {
-    sub_1C32C20(&StringLiteral_14621/*"TweenDelay"*/);
-    byte_4C3EA4F = 1;
+    sub_1C37058(&StringLiteral_14622/*"TweenDelay"*/);
+    byte_4C49FCF = 1;
   }
   _1__state = this->fields.__1__state;
   _4__this = this->fields.__4__this;
@@ -30128,7 +30128,7 @@ bool iTween__Start_d__234__MoveNext(iTween__Start_d__234_o *this, const MethodIn
   this->fields.__1__state = -1;
   if ( !_4__this )
 LABEL_13:
-    sub_1C32E7C(_4__this);
+    sub_1C372B4(_4__this);
   if ( _4__this->fields.started )
     return 0;
   delay = _4__this->fields.delay;
@@ -30142,11 +30142,11 @@ LABEL_10:
   }
   started = (Il2CppObject *)UnityEngine_MonoBehaviour__StartCoroutine(
                               (UnityEngine_MonoBehaviour_o *)_4__this,
-                              (System_String_o *)StringLiteral_14621/*"TweenDelay"*/,
+                              (System_String_o *)StringLiteral_14622/*"TweenDelay"*/,
                               0);
   this->fields.__2__current = started;
   p__2__current = &this->fields.__2__current;
-  sub_1C32BC4((CGThumbnailListItem_o *)p__2__current, (int32_t)started, v9, v10);
+  sub_1C36FFC((CGThumbnailListItem_o *)p__2__current, (int32_t)started, v9, v10);
   *((_DWORD *)p__2__current - 2) = 1;
   return v6;
 }
@@ -30168,11 +30168,11 @@ void __noreturn iTween__Start_d__234__System_Collections_IEnumerator_Reset(
   System_NotSupportedException_o *v3; // x19
   __int64 v4; // x0
 
-  v2 = sub_1C32C34(&System_NotSupportedException_TypeInfo);
-  v3 = (System_NotSupportedException_o *)sub_1C32E6C(v2);
+  v2 = sub_1C3706C(&System_NotSupportedException_TypeInfo);
+  v3 = (System_NotSupportedException_o *)sub_1C372A4(v2);
   System_NotSupportedException___ctor(v3, 0);
-  v4 = sub_1C32C34(&Method_iTween__Start_d__234_System_Collections_IEnumerator_Reset__);
-  sub_1C32D48(v3, v4);
+  v4 = sub_1C3706C(&Method_iTween__Start_d__234_System_Collections_IEnumerator_Reset__);
+  sub_1C37180(v3, v4);
 }
 
 
@@ -30211,10 +30211,10 @@ bool iTween__TweenDelay_d__150__MoveNext(iTween__TweenDelay_d__150_o *this, cons
   bool result; // w0
 
   v2 = this;
-  if ( (byte_4C3EA50 & 1) == 0 )
+  if ( (byte_4C49FD0 & 1) == 0 )
   {
-    this = (iTween__TweenDelay_d__150_o *)sub_1C32C20(&UnityEngine_WaitForSeconds_TypeInfo);
-    byte_4C3EA50 = 1;
+    this = (iTween__TweenDelay_d__150_o *)sub_1C37058(&UnityEngine_WaitForSeconds_TypeInfo);
+    byte_4C49FD0 = 1;
   }
   _1__state = v2->fields.__1__state;
   _4__this = v2->fields.__4__this;
@@ -30237,17 +30237,17 @@ bool iTween__TweenDelay_d__150__MoveNext(iTween__TweenDelay_d__150_o *this, cons
     {
       _4__this->fields.delayStarted = time;
       delay = _4__this->fields.delay;
-      v7 = (UnityEngine_WaitForSeconds_o *)sub_1C32E6C(UnityEngine_WaitForSeconds_TypeInfo);
+      v7 = (UnityEngine_WaitForSeconds_o *)sub_1C372A4(UnityEngine_WaitForSeconds_TypeInfo);
       UnityEngine_WaitForSeconds___ctor(v7, delay, 0);
       v2->fields.__2__current = (Il2CppObject *)v7;
       p__2__current = (CGThumbnailListItem_o *)&v2->fields.__2__current;
-      sub_1C32BC4(p__2__current, (int32_t)v7, v9, v10);
+      sub_1C36FFC(p__2__current, (int32_t)v7, v9, v10);
       result = 1;
       LODWORD(p__2__current[-1].fields._ThumbnailSpritePath_k__BackingField) = 1;
       return result;
     }
 LABEL_11:
-    sub_1C32E7C(this);
+    sub_1C372B4(this);
   }
   return 0;
 }
@@ -30269,11 +30269,11 @@ void __noreturn iTween__TweenDelay_d__150__System_Collections_IEnumerator_Reset(
   System_NotSupportedException_o *v3; // x19
   __int64 v4; // x0
 
-  v2 = sub_1C32C34(&System_NotSupportedException_TypeInfo);
-  v3 = (System_NotSupportedException_o *)sub_1C32E6C(v2);
+  v2 = sub_1C3706C(&System_NotSupportedException_TypeInfo);
+  v3 = (System_NotSupportedException_o *)sub_1C372A4(v2);
   System_NotSupportedException___ctor(v3, 0);
-  v4 = sub_1C32C34(&Method_iTween__TweenDelay_d__150_System_Collections_IEnumerator_Reset__);
-  sub_1C32D48(v3, v4);
+  v4 = sub_1C3706C(&Method_iTween__TweenDelay_d__150_System_Collections_IEnumerator_Reset__);
+  sub_1C37180(v3, v4);
 }
 
 
@@ -30314,10 +30314,10 @@ bool iTween__TweenRestart_d__152__MoveNext(iTween__TweenRestart_d__152_o *this, 
   bool result; // w0
 
   v2 = this;
-  if ( (byte_4C3EA51 & 1) == 0 )
+  if ( (byte_4C49FD1 & 1) == 0 )
   {
-    this = (iTween__TweenRestart_d__152_o *)sub_1C32C20(&UnityEngine_WaitForSeconds_TypeInfo);
-    byte_4C3EA51 = 1;
+    this = (iTween__TweenRestart_d__152_o *)sub_1C37058(&UnityEngine_WaitForSeconds_TypeInfo);
+    byte_4C49FD1 = 1;
   }
   _1__state = v2->fields.__1__state;
   _4__this = v2->fields.__4__this;
@@ -30332,7 +30332,7 @@ LABEL_9:
       return 0;
     }
 LABEL_11:
-    sub_1C32E7C(this);
+    sub_1C372B4(this);
   }
   if ( !_1__state )
   {
@@ -30343,11 +30343,11 @@ LABEL_11:
       {
         _4__this->fields.delayStarted = UnityEngine_Time__get_time(0);
         delay = _4__this->fields.delay;
-        v6 = (UnityEngine_WaitForSeconds_o *)sub_1C32E6C(UnityEngine_WaitForSeconds_TypeInfo);
+        v6 = (UnityEngine_WaitForSeconds_o *)sub_1C372A4(UnityEngine_WaitForSeconds_TypeInfo);
         UnityEngine_WaitForSeconds___ctor(v6, delay, 0);
         v2->fields.__2__current = (Il2CppObject *)v6;
         p__2__current = (CGThumbnailListItem_o *)&v2->fields.__2__current;
-        sub_1C32BC4(p__2__current, (int32_t)v6, v8, v9);
+        sub_1C36FFC(p__2__current, (int32_t)v6, v8, v9);
         result = 1;
         LODWORD(p__2__current[-1].fields._ThumbnailSpritePath_k__BackingField) = 1;
         return result;
@@ -30376,11 +30376,11 @@ void __noreturn iTween__TweenRestart_d__152__System_Collections_IEnumerator_Rese
   System_NotSupportedException_o *v3; // x19
   __int64 v4; // x0
 
-  v2 = sub_1C32C34(&System_NotSupportedException_TypeInfo);
-  v3 = (System_NotSupportedException_o *)sub_1C32E6C(v2);
+  v2 = sub_1C3706C(&System_NotSupportedException_TypeInfo);
+  v3 = (System_NotSupportedException_o *)sub_1C372A4(v2);
   System_NotSupportedException___ctor(v3, 0);
-  v4 = sub_1C32C34(&Method_iTween__TweenRestart_d__152_System_Collections_IEnumerator_Reset__);
-  sub_1C32D48(v3, v4);
+  v4 = sub_1C3706C(&Method_iTween__TweenRestart_d__152_System_Collections_IEnumerator_Reset__);
+  sub_1C37180(v3, v4);
 }
 
 
@@ -30406,15 +30406,15 @@ void iTween___c___cctor(const MethodInfo *method)
   int32_t v2; // w2
   const MethodInfo *v3; // x3
 
-  if ( (byte_4C3EA4E & 1) == 0 )
+  if ( (byte_4C49FCE & 1) == 0 )
   {
-    sub_1C32C20(&iTween___c_TypeInfo);
-    byte_4C3EA4E = 1;
+    sub_1C37058(&iTween___c_TypeInfo);
+    byte_4C49FCE = 1;
   }
-  v1 = (Il2CppObject *)sub_1C32E6C(iTween___c_TypeInfo);
+  v1 = (Il2CppObject *)sub_1C372A4(iTween___c_TypeInfo);
   System_Object___ctor(v1, 0);
   iTween___c_TypeInfo->static_fields->__9 = (struct iTween___c_o *)v1;
-  sub_1C32BC4((CGThumbnailListItem_o *)iTween___c_TypeInfo->static_fields, (int32_t)v1, v2, v3);
+  sub_1C36FFC((CGThumbnailListItem_o *)iTween___c_TypeInfo->static_fields, (int32_t)v1, v2, v3);
 }
 
 
@@ -30427,7 +30427,7 @@ void iTween___c___ctor(iTween___c_o *this, const MethodInfo *method)
 bool iTween___c___AddOrRecycleTweenComponent_b__6_0(iTween___c_o *this, iTween_o *x, const MethodInfo *method)
 {
   if ( !x )
-    sub_1C32E7C(this);
+    sub_1C372B4(this);
   return x->fields.disposed;
 }
 
@@ -30435,7 +30435,7 @@ bool iTween___c___AddOrRecycleTweenComponent_b__6_0(iTween___c_o *this, iTween_o
 bool iTween___c___ConflictCheck_b__253_0(iTween___c_o *this, iTween_o *x, const MethodInfo *method)
 {
   if ( !x )
-    sub_1C32E7C(this);
+    sub_1C372B4(this);
   return !x->fields.disposed;
 }
 
@@ -30443,7 +30443,7 @@ bool iTween___c___ConflictCheck_b__253_0(iTween___c_o *this, iTween_o *x, const 
 bool iTween___c___Count_b__220_0(iTween___c_o *this, iTween_o *x, const MethodInfo *method)
 {
   if ( !x )
-    sub_1C32E7C(this);
+    sub_1C372B4(this);
   return !x->fields.disposed;
 }
 
@@ -30451,7 +30451,7 @@ bool iTween___c___Count_b__220_0(iTween___c_o *this, iTween_o *x, const MethodIn
 bool iTween___c___Count_b__221_0(iTween___c_o *this, iTween_o *x, const MethodInfo *method)
 {
   if ( !x )
-    sub_1C32E7C(this);
+    sub_1C372B4(this);
   return !x->fields.disposed;
 }
 
@@ -30459,7 +30459,7 @@ bool iTween___c___Count_b__221_0(iTween___c_o *this, iTween_o *x, const MethodIn
 bool iTween___c___Pause_b__212_0(iTween___c_o *this, iTween_o *x, const MethodInfo *method)
 {
   if ( !x )
-    sub_1C32E7C(this);
+    sub_1C372B4(this);
   return !x->fields.disposed;
 }
 
@@ -30467,7 +30467,7 @@ bool iTween___c___Pause_b__212_0(iTween___c_o *this, iTween_o *x, const MethodIn
 bool iTween___c___Pause_b__214_0(iTween___c_o *this, iTween_o *x, const MethodInfo *method)
 {
   if ( !x )
-    sub_1C32E7C(this);
+    sub_1C372B4(this);
   return !x->fields.disposed;
 }
 
@@ -30475,7 +30475,7 @@ bool iTween___c___Pause_b__214_0(iTween___c_o *this, iTween_o *x, const MethodIn
 bool iTween___c___Pause_b__215_0(iTween___c_o *this, iTween_o *x, const MethodInfo *method)
 {
   if ( !x )
-    sub_1C32E7C(this);
+    sub_1C372B4(this);
   return !x->fields.disposed;
 }
 
@@ -30483,7 +30483,7 @@ bool iTween___c___Pause_b__215_0(iTween___c_o *this, iTween_o *x, const MethodIn
 bool iTween___c___Resume_b__206_0(iTween___c_o *this, iTween_o *x, const MethodInfo *method)
 {
   if ( !x )
-    sub_1C32E7C(this);
+    sub_1C372B4(this);
   return !x->fields.disposed;
 }
 
@@ -30491,7 +30491,7 @@ bool iTween___c___Resume_b__206_0(iTween___c_o *this, iTween_o *x, const MethodI
 bool iTween___c___Resume_b__208_0(iTween___c_o *this, iTween_o *x, const MethodInfo *method)
 {
   if ( !x )
-    sub_1C32E7C(this);
+    sub_1C372B4(this);
   return !x->fields.disposed;
 }
 
@@ -30499,7 +30499,7 @@ bool iTween___c___Resume_b__208_0(iTween___c_o *this, iTween_o *x, const MethodI
 bool iTween___c___Resume_b__209_0(iTween___c_o *this, iTween_o *x, const MethodInfo *method)
 {
   if ( !x )
-    sub_1C32E7C(this);
+    sub_1C372B4(this);
   return !x->fields.disposed;
 }
 
@@ -30507,7 +30507,7 @@ bool iTween___c___Resume_b__209_0(iTween___c_o *this, iTween_o *x, const MethodI
 bool iTween___c___StopByName_b__228_0(iTween___c_o *this, iTween_o *x, const MethodInfo *method)
 {
   if ( !x )
-    sub_1C32E7C(this);
+    sub_1C372B4(this);
   return !x->fields.disposed;
 }
 
@@ -30515,7 +30515,7 @@ bool iTween___c___StopByName_b__228_0(iTween___c_o *this, iTween_o *x, const Met
 bool iTween___c___StopByName_b__230_0(iTween___c_o *this, iTween_o *x, const MethodInfo *method)
 {
   if ( !x )
-    sub_1C32E7C(this);
+    sub_1C372B4(this);
   return !x->fields.disposed;
 }
 
@@ -30523,7 +30523,7 @@ bool iTween___c___StopByName_b__230_0(iTween___c_o *this, iTween_o *x, const Met
 bool iTween___c___Stop_b__225_0(iTween___c_o *this, iTween_o *x, const MethodInfo *method)
 {
   if ( !x )
-    sub_1C32E7C(this);
+    sub_1C372B4(this);
   return !x->fields.disposed;
 }
 
@@ -30531,7 +30531,7 @@ bool iTween___c___Stop_b__225_0(iTween___c_o *this, iTween_o *x, const MethodInf
 bool iTween___c___Stop_b__227_0(iTween___c_o *this, iTween_o *x, const MethodInfo *method)
 {
   if ( !x )
-    sub_1C32E7C(this);
+    sub_1C372B4(this);
   return !x->fields.disposed;
 }
 
@@ -30539,6 +30539,6 @@ bool iTween___c___Stop_b__227_0(iTween___c_o *this, iTween_o *x, const MethodInf
 bool iTween___c___Stop_b__229_0(iTween___c_o *this, iTween_o *x, const MethodInfo *method)
 {
   if ( !x )
-    sub_1C32E7C(this);
+    sub_1C372B4(this);
   return !x->fields.disposed;
 }

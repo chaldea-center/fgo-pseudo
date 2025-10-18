@@ -28,28 +28,28 @@ void CharaGraphCommandCodeListViewItem___ctor(
   CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_o v30; // [xsp+20h] [xbp-60h]
   CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o v31; // 0:x0.16
 
-  if ( (byte_4C36CA9 & 1) == 0 )
+  if ( (byte_4C42299 & 1) == 0 )
   {
-    sub_1C32C20(&Method_BasicHelper_Any_long___);
-    sub_1C32C20(&Method_DataManager_GetMaster_CommandCodeMaster___);
-    sub_1C32C20(&DataManager_TypeInfo);
-    sub_1C32C20(&Method_DataMasterBase_CommandCodeMaster__CommandCodeEntity__int__GetEntity__);
-    sub_1C32C20(&System_Func_long__bool__TypeInfo);
-    sub_1C32C20(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
-    sub_1C32C20(&CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo);
-    sub_1C32C20(&Method_CharaGraphCommandCodeListViewItem___c__DisplayClass20_0___ctor_b__0__);
-    sub_1C32C20(&CharaGraphCommandCodeListViewItem___c__DisplayClass20_0_TypeInfo);
-    byte_4C36CA9 = 1;
+    sub_1C37058(&Method_BasicHelper_Any_long___);
+    sub_1C37058(&Method_DataManager_GetMaster_CommandCodeMaster___);
+    sub_1C37058(&DataManager_TypeInfo);
+    sub_1C37058(&Method_DataMasterBase_CommandCodeMaster__CommandCodeEntity__int__GetEntity__);
+    sub_1C37058(&System_Func_long__bool__TypeInfo);
+    sub_1C37058(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
+    sub_1C37058(&CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo);
+    sub_1C37058(&Method_CharaGraphCommandCodeListViewItem___c__DisplayClass20_0___ctor_b__0__);
+    sub_1C37058(&CharaGraphCommandCodeListViewItem___c__DisplayClass20_0_TypeInfo);
+    byte_4C42299 = 1;
   }
   CharaGraphListViewItemBase___ctor(
     (CharaGraphListViewItemBase_o *)this,
     index,
     listViewPattern,
     (const MethodInfo *)userCommandCodeEntity);
-  v11 = (Il2CppObject *)sub_1C32E6C(CharaGraphCommandCodeListViewItem___c__DisplayClass20_0_TypeInfo);
+  v11 = (Il2CppObject *)sub_1C372A4(CharaGraphCommandCodeListViewItem___c__DisplayClass20_0_TypeInfo);
   System_Object___ctor(v11, 0);
   this->fields._UserCommandCodeEntity_k__BackingField = userCommandCodeEntity;
-  sub_1C32BC4(
+  sub_1C36FFC(
     (CGThumbnailListItem_o *)&this->fields._UserCommandCodeEntity_k__BackingField,
     (int32_t)userCommandCodeEntity,
     v12,
@@ -63,29 +63,29 @@ void CharaGraphCommandCodeListViewItem___ctor(
     j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
   *(_QWORD *)&v31.fields.currentCryptoKey = v17;
   *(_QWORD *)&v31.fields.fakeValue = v16;
-  Master_object = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_48887784(v31, 0);
+  Master_object = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_48930896(v31, 0);
   v18 = this->fields._UserCommandCodeEntity_k__BackingField;
   this->fields._CommandCodeId_k__BackingField = Master_object;
   if ( !v18 )
     goto LABEL_15;
   CategoryIdList = UserCommandCodeEntity__GetCategoryIdList(v18, 0);
   this->fields._CommandCodeCategoryIdArray_k__BackingField = CategoryIdList;
-  sub_1C32BC4(
+  sub_1C36FFC(
     (CGThumbnailListItem_o *)&this->fields._CommandCodeCategoryIdArray_k__BackingField,
     (int32_t)CategoryIdList,
     v20,
     v21);
   if ( !DataManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-  Master_object = (int64_t)DataManager__GetMaster_object_((const MethodInfo_30DD39C *)Method_DataManager_GetMaster_CommandCodeMaster___);
+  Master_object = (int64_t)DataManager__GetMaster_object_((const MethodInfo_30E7C04 *)Method_DataManager_GetMaster_CommandCodeMaster___);
   if ( !Master_object )
     goto LABEL_15;
   Entity = DataMasterBase_object__object__int___GetEntity(
              (DataMasterBase_TMaster__TEntity__PKType__o *)Master_object,
              this->fields._CommandCodeId_k__BackingField,
-             (const MethodInfo_3396838 *)Method_DataMasterBase_CommandCodeMaster__CommandCodeEntity__int__GetEntity__);
+             (const MethodInfo_33A10A0 *)Method_DataMasterBase_CommandCodeMaster__CommandCodeEntity__int__GetEntity__);
   this->fields._CommandCodeEntity_k__BackingField = (struct CommandCodeEntity_o *)Entity;
-  sub_1C32BC4((CGThumbnailListItem_o *)&this->fields._CommandCodeEntity_k__BackingField, (int32_t)Entity, v23, v24);
+  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields._CommandCodeEntity_k__BackingField, (int32_t)Entity, v23, v24);
   CharaGraphCommandCodeListViewItem__UpdateProperties(this, v25);
   v26 = this->fields._UserCommandCodeEntity_k__BackingField;
   if ( !v26 )
@@ -96,12 +96,12 @@ void CharaGraphCommandCodeListViewItem___ctor(
   if ( !CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo);
   v29 = v30;
-  Master_object = CodeStage_AntiCheat_ObscuredTypes_ObscuredLong__op_Implicit_48891308(&v29, 0);
+  Master_object = CodeStage_AntiCheat_ObscuredTypes_ObscuredLong__op_Implicit_48934420(&v29, 0);
   if ( !v11 )
 LABEL_15:
-    sub_1C32E7C(Master_object);
+    sub_1C372B4(Master_object);
   v11[1].klass = (Il2CppClass *)Master_object;
-  v28 = (System_Func_long__bool__o *)sub_1C32E6C(System_Func_long__bool__TypeInfo);
+  v28 = (System_Func_long__bool__o *)sub_1C372A4(System_Func_long__bool__TypeInfo);
   System_Func_long__bool____ctor(
     v28,
     v11,
@@ -110,7 +110,7 @@ LABEL_15:
   this->fields._IsUse_k__BackingField = BasicHelper__Any_long_(
                                           attachUserCommandCodeList,
                                           (System_Func_T__bool__o *)v28,
-                                          (const MethodInfo_30C66F4 *)Method_BasicHelper_Any_long___);
+                                          (const MethodInfo_30D0F5C *)Method_BasicHelper_Any_long___);
   this->fields._IsEnabled_k__BackingField = 1;
 }
 
@@ -131,17 +131,17 @@ void CharaGraphCommandCodeListViewItem__ModifyLocal(
   CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_o v12; // [xsp+0h] [xbp-60h] BYREF
   CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_o v13; // [xsp+20h] [xbp-40h]
 
-  if ( (byte_4C36CAA & 1) == 0 )
+  if ( (byte_4C4229A & 1) == 0 )
   {
-    sub_1C32C20(&Method_DataManager_GetMaster_UserCommandCodeMaster___);
-    sub_1C32C20(&DataManager_TypeInfo);
-    sub_1C32C20(&Method_DataMasterBase_UserCommandCodeMaster__UserCommandCodeEntity__long__GetEntity__);
-    sub_1C32C20(&CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo);
-    byte_4C36CAA = 1;
+    sub_1C37058(&Method_DataManager_GetMaster_UserCommandCodeMaster___);
+    sub_1C37058(&DataManager_TypeInfo);
+    sub_1C37058(&Method_DataMasterBase_UserCommandCodeMaster__UserCommandCodeEntity__long__GetEntity__);
+    sub_1C37058(&CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo);
+    byte_4C4229A = 1;
   }
   if ( !DataManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-  Master_object = (int64_t)DataManager__GetMaster_object_((const MethodInfo_30DD39C *)Method_DataManager_GetMaster_UserCommandCodeMaster___);
+  Master_object = (int64_t)DataManager__GetMaster_object_((const MethodInfo_30E7C04 *)Method_DataManager_GetMaster_UserCommandCodeMaster___);
   UserCommandCodeEntity_k__BackingField = this->fields._UserCommandCodeEntity_k__BackingField;
   if ( !UserCommandCodeEntity_k__BackingField )
     goto LABEL_10;
@@ -152,16 +152,16 @@ void CharaGraphCommandCodeListViewItem__ModifyLocal(
   if ( !CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo);
   v12 = v13;
-  Master_object = CodeStage_AntiCheat_ObscuredTypes_ObscuredLong__op_Implicit_48891308(&v12, 0);
+  Master_object = CodeStage_AntiCheat_ObscuredTypes_ObscuredLong__op_Implicit_48934420(&v12, 0);
   if ( !v7 )
 LABEL_10:
-    sub_1C32E7C(Master_object);
+    sub_1C372B4(Master_object);
   Entity = DataMasterBase_object__object__long___GetEntity(
              v7,
              Master_object,
-             (const MethodInfo_3398D94 *)Method_DataMasterBase_UserCommandCodeMaster__UserCommandCodeEntity__long__GetEntity__);
+             (const MethodInfo_33A35FC *)Method_DataMasterBase_UserCommandCodeMaster__UserCommandCodeEntity__long__GetEntity__);
   this->fields._UserCommandCodeEntity_k__BackingField = (struct UserCommandCodeEntity_o *)Entity;
-  sub_1C32BC4((CGThumbnailListItem_o *)&this->fields._UserCommandCodeEntity_k__BackingField, (int32_t)Entity, v9, v10);
+  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields._UserCommandCodeEntity_k__BackingField, (int32_t)Entity, v9, v10);
   CharaGraphCommandCodeListViewItem__UpdateProperties(this, v11);
 }
 
@@ -182,7 +182,7 @@ void CharaGraphCommandCodeListViewItem__UpdateProperties(
         this->fields._IsLock_k__BackingField = (unsigned __int8)UserCommandCodeEntity_k__BackingField & 1,
         !v4) )
   {
-    sub_1C32E7C(UserCommandCodeEntity_k__BackingField);
+    sub_1C372B4(UserCommandCodeEntity_k__BackingField);
   }
   this->fields._IsChoice_k__BackingField = UserCommandCodeEntity__IsChoice(v4, 0);
 }
@@ -223,21 +223,21 @@ int64_t CharaGraphCommandCodeListViewItem__get_ObjectId(
   CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_o v7; // [xsp+20h] [xbp-40h]
 
   v2 = this;
-  if ( (byte_4C36CA8 & 1) == 0 )
+  if ( (byte_4C42298 & 1) == 0 )
   {
-    this = (CharaGraphCommandCodeListViewItem_o *)sub_1C32C20(&CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo);
-    byte_4C36CA8 = 1;
+    this = (CharaGraphCommandCodeListViewItem_o *)sub_1C37058(&CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo);
+    byte_4C42298 = 1;
   }
   UserCommandCodeEntity_k__BackingField = v2->fields._UserCommandCodeEntity_k__BackingField;
   if ( !UserCommandCodeEntity_k__BackingField )
-    sub_1C32E7C(this);
+    sub_1C372B4(this);
   v4 = *(_OWORD *)&UserCommandCodeEntity_k__BackingField->fields.id.fields.fakeValue;
   *(_OWORD *)&v7.fields.currentCryptoKey = *(_OWORD *)&UserCommandCodeEntity_k__BackingField->fields.id.fields.currentCryptoKey;
   *(_OWORD *)&v7.fields.fakeValue = v4;
   if ( !CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo);
   v6 = v7;
-  return CodeStage_AntiCheat_ObscuredTypes_ObscuredLong__op_Implicit_48891308(&v6, 0);
+  return CodeStage_AntiCheat_ObscuredTypes_ObscuredLong__op_Implicit_48934420(&v6, 0);
 }
 
 
@@ -249,7 +249,7 @@ int32_t CharaGraphCommandCodeListViewItem__get_Rarity(
 
   CommandCodeEntity_k__BackingField = this->fields._CommandCodeEntity_k__BackingField;
   if ( !CommandCodeEntity_k__BackingField )
-    sub_1C32E7C(this);
+    sub_1C372B4(this);
   return CommandCodeEntity_k__BackingField->fields.rarity;
 }
 
@@ -270,7 +270,7 @@ void CharaGraphCommandCodeListViewItem__set_CommandCodeCategoryIdArray(
   const MethodInfo *v3; // x3
 
   this->fields._CommandCodeCategoryIdArray_k__BackingField = value;
-  sub_1C32BC4(
+  sub_1C36FFC(
     (CGThumbnailListItem_o *)&this->fields._CommandCodeCategoryIdArray_k__BackingField,
     (int32_t)value,
     (int32_t)method,
@@ -286,7 +286,7 @@ void CharaGraphCommandCodeListViewItem__set_CommandCodeEntity(
   const MethodInfo *v3; // x3
 
   this->fields._CommandCodeEntity_k__BackingField = value;
-  sub_1C32BC4(
+  sub_1C36FFC(
     (CGThumbnailListItem_o *)&this->fields._CommandCodeEntity_k__BackingField,
     (int32_t)value,
     (int32_t)method,
@@ -311,7 +311,7 @@ void CharaGraphCommandCodeListViewItem__set_UserCommandCodeEntity(
   const MethodInfo *v3; // x3
 
   this->fields._UserCommandCodeEntity_k__BackingField = value;
-  sub_1C32BC4(
+  sub_1C36FFC(
     (CGThumbnailListItem_o *)&this->fields._UserCommandCodeEntity_k__BackingField,
     (int32_t)value,
     (int32_t)method,

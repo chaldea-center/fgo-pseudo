@@ -25,7 +25,7 @@ void EventTradePickupInfoDispControl__Init(EventTradePickupInfoDispControl_o *th
     while ( 1 )
     {
       if ( v6 >= max_length )
-        sub_1C32E84(gameObject);
+        sub_1C372BC(gameObject);
       gameObject = dispGameObjects->m_Items[v6];
       if ( !gameObject )
         break;
@@ -35,7 +35,7 @@ void EventTradePickupInfoDispControl__Init(EventTradePickupInfoDispControl_o *th
         return;
     }
 LABEL_10:
-    sub_1C32E7C(gameObject);
+    sub_1C372B4(gameObject);
   }
 }
 
@@ -76,38 +76,38 @@ void EventTradePickupInfoDispControl__SetUi(
   __int64 v26; // x9
   Il2CppObject *entity; // [xsp+8h] [xbp-68h] BYREF
 
-  if ( (byte_4C32434 & 1) == 0 )
+  if ( (byte_4C3DA1E & 1) == 0 )
   {
-    sub_1C32C20(&AtlasManager_TypeInfo);
-    sub_1C32C20(&Method_DataManager_GetMaster_CommonReleaseMaster___);
-    sub_1C32C20(&Method_DataManager_GetMaster_EventTradeGoodsMaster___);
-    sub_1C32C20(&Method_DataManager_GetMaster_GiftMaster___);
-    sub_1C32C20(&DataManager_TypeInfo);
-    sub_1C32C20(&Method_DataMasterBase_EventTradeGoodsMaster__EventTradeGoodsEntity__int__TryGetEntity__);
-    sub_1C32C20(&Method_System_Collections_Generic_List_EventTradePickupEntity__get_Count__);
-    sub_1C32C20(&Method_System_Collections_Generic_List_EventTradePickupEntity__get_Item__);
-    sub_1C32C20(&StringLiteral_20491/*"img_popularitem_today"*/);
-    sub_1C32C20(&StringLiteral_20492/*"img_popularitem_tommorow"*/);
-    sub_1C32C20(&StringLiteral_20214/*"icon_popularitem_unknown"*/);
-    sub_1C32C20(&StringLiteral_20490/*"img_popularitem_"*/);
-    sub_1C32C20(&StringLiteral_20213/*"icon_popularitem_reward_arrow"*/);
-    byte_4C32434 = 1;
+    sub_1C37058(&AtlasManager_TypeInfo);
+    sub_1C37058(&Method_DataManager_GetMaster_CommonReleaseMaster___);
+    sub_1C37058(&Method_DataManager_GetMaster_EventTradeGoodsMaster___);
+    sub_1C37058(&Method_DataManager_GetMaster_GiftMaster___);
+    sub_1C37058(&DataManager_TypeInfo);
+    sub_1C37058(&Method_DataMasterBase_EventTradeGoodsMaster__EventTradeGoodsEntity__int__TryGetEntity__);
+    sub_1C37058(&Method_System_Collections_Generic_List_EventTradePickupEntity__get_Count__);
+    sub_1C37058(&Method_System_Collections_Generic_List_EventTradePickupEntity__get_Item__);
+    sub_1C37058(&StringLiteral_20494/*"img_popularitem_today"*/);
+    sub_1C37058(&StringLiteral_20495/*"img_popularitem_tommorow"*/);
+    sub_1C37058(&StringLiteral_20217/*"icon_popularitem_unknown"*/);
+    sub_1C37058(&StringLiteral_20493/*"img_popularitem_"*/);
+    sub_1C37058(&StringLiteral_20216/*"icon_popularitem_reward_arrow"*/);
+    byte_4C3DA1E = 1;
   }
   entity = 0;
   if ( isToday )
-    v8 = (System_String_o **)&StringLiteral_20491/*"img_popularitem_today"*/;
+    v8 = (System_String_o **)&StringLiteral_20494/*"img_popularitem_today"*/;
   else
-    v8 = (System_String_o **)&StringLiteral_20492/*"img_popularitem_tommorow"*/;
+    v8 = (System_String_o **)&StringLiteral_20495/*"img_popularitem_tommorow"*/;
   v9 = *v8;
   bg = this->fields.bg;
   if ( !AtlasManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo);
-  AtlasManager__SetEventUI_40507600(eventId, bg, v9, 0);
+  AtlasManager__SetEventUI_40606984(eventId, bg, v9, 0);
   if ( !DataManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-  Master_object = DataManager__GetMaster_object_((const MethodInfo_30DD39C *)Method_DataManager_GetMaster_EventTradeGoodsMaster___);
-  v12 = DataManager__GetMaster_object_((const MethodInfo_30DD39C *)Method_DataManager_GetMaster_GiftMaster___);
-  Item = (CommonReleaseMaster_o *)DataManager__GetMaster_object_((const MethodInfo_30DD39C *)Method_DataManager_GetMaster_CommonReleaseMaster___);
+  Master_object = DataManager__GetMaster_object_((const MethodInfo_30E7C04 *)Method_DataManager_GetMaster_EventTradeGoodsMaster___);
+  v12 = DataManager__GetMaster_object_((const MethodInfo_30E7C04 *)Method_DataManager_GetMaster_GiftMaster___);
+  Item = (CommonReleaseMaster_o *)DataManager__GetMaster_object_((const MethodInfo_30E7C04 *)Method_DataManager_GetMaster_CommonReleaseMaster___);
   if ( !pickupEntityList )
     goto LABEL_49;
   if ( pickupEntityList->fields._size >= 1 )
@@ -120,14 +120,14 @@ void EventTradePickupInfoDispControl__SetUi(
       Item = (CommonReleaseMaster_o *)System_Collections_Generic_List_object___get_Item(
                                         (System_Collections_Generic_List_object__o *)pickupEntityList,
                                         (int)v15 - 4,
-                                        (const MethodInfo_37984EC *)Method_System_Collections_Generic_List_EventTradePickupEntity__get_Item__);
+                                        (const MethodInfo_37A2D54 *)Method_System_Collections_Generic_List_EventTradePickupEntity__get_Item__);
       if ( !Item || !Master_object )
         goto LABEL_49;
       Item = (CommonReleaseMaster_o *)DataMasterBase_object__object__int___TryGetEntity(
                                         (DataMasterBase_TMaster__TEntity__PKType__o *)Master_object,
                                         &entity,
                                         Item->fields._MasterKind_k__BackingField,
-                                        (const MethodInfo_3396884 *)Method_DataMasterBase_EventTradeGoodsMaster__EventTradeGoodsEntity__int__TryGetEntity__);
+                                        (const MethodInfo_33A10EC *)Method_DataMasterBase_EventTradeGoodsMaster__EventTradeGoodsEntity__int__TryGetEntity__);
       if ( ((unsigned __int8)Item & 1) != 0 )
         break;
 LABEL_45:
@@ -170,27 +170,27 @@ LABEL_45:
         goto LABEL_49;
       if ( HIDWORD(entity[4].monitor) )
       {
-        v19 = (System_String_o *)StringLiteral_20214/*"icon_popularitem_unknown"*/;
+        v19 = (System_String_o *)StringLiteral_20217/*"icon_popularitem_unknown"*/;
 LABEL_32:
         goodsIcon = this->fields.goodsIcon;
         if ( !goodsIcon )
           goto LABEL_49;
         if ( v16 >= LODWORD(goodsIcon->max_length) )
 LABEL_50:
-          sub_1C32E84(Item);
+          sub_1C372BC(Item);
         v22 = (UISprite_o *)*((_QWORD *)&goodsIcon->obj.klass + v15);
         if ( !AtlasManager_TypeInfo->_2.cctor_finished )
           j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo);
-        Item = (CommonReleaseMaster_o *)AtlasManager__SetEventUI_40507600(eventId, v22, v19, 0);
+        Item = (CommonReleaseMaster_o *)AtlasManager__SetEventUI_40606984(eventId, v22, v19, 0);
         arrowIcon = this->fields.arrowIcon;
         if ( !arrowIcon )
           goto LABEL_49;
         if ( v16 >= LODWORD(arrowIcon->max_length) )
           goto LABEL_50;
-        Item = (CommonReleaseMaster_o *)AtlasManager__SetEventUI_40507600(
+        Item = (CommonReleaseMaster_o *)AtlasManager__SetEventUI_40606984(
                                           eventId,
                                           *((UISprite_o **)&arrowIcon->obj.klass + v15),
-                                          (System_String_o *)StringLiteral_20213/*"icon_popularitem_reward_arrow"*/,
+                                          (System_String_o *)StringLiteral_20216/*"icon_popularitem_reward_arrow"*/,
                                           0);
         rewardIcon = this->fields.rewardIcon;
         if ( !rewardIcon )
@@ -214,7 +214,7 @@ LABEL_50:
       }
     }
     v20 = System_Int32__ToString((int)entity + 40, 0);
-    Item = (CommonReleaseMaster_o *)System_String__Concat_63518544((System_String_o *)StringLiteral_20490/*"img_popularitem_"*/, v20, 0);
+    Item = (CommonReleaseMaster_o *)System_String__Concat_63561656((System_String_o *)StringLiteral_20493/*"img_popularitem_"*/, v20, 0);
     v19 = (System_String_o *)Item;
     goto LABEL_32;
   }
@@ -222,6 +222,6 @@ LABEL_47:
   Item = (CommonReleaseMaster_o *)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
   if ( !Item )
 LABEL_49:
-    sub_1C32E7C(Item);
+    sub_1C372B4(Item);
   UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)Item, 1, 0);
 }

@@ -10,11 +10,11 @@ void CriFsLoader___ctor(CriFsLoader_o *this, const MethodInfo *method)
   System_String_o *v10; // x0
   __int64 v11; // x0
 
-  if ( (byte_4C30E88 & 1) == 0 )
+  if ( (byte_4C3C3D8 & 1) == 0 )
   {
-    sub_1C32C20(&CriDisposableObjectManager_TypeInfo);
-    sub_1C32C20(&CriFsPlugin_TypeInfo);
-    byte_4C30E88 = 1;
+    sub_1C37058(&CriDisposableObjectManager_TypeInfo);
+    sub_1C37058(&CriFsPlugin_TypeInfo);
+    byte_4C3C3D8 = 1;
   }
   System_Object___ctor((Il2CppObject *)this, 0);
   this->fields.guid = System_Guid__NewGuid(0);
@@ -23,8 +23,8 @@ void CriFsLoader___ctor(CriFsLoader_o *this, const MethodInfo *method)
     inited = (CriFsPlugin_c *)j_il2cpp_runtime_class_init_0(CriFsPlugin_TypeInfo);
   if ( !CriFsPlugin__IsLibraryInitialized((const MethodInfo *)inited) )
   {
-    v6 = sub_1C32C34(&System_Exception_TypeInfo);
-    v7 = (System_Exception_o *)sub_1C32E6C(v6);
+    v6 = sub_1C3706C(&System_Exception_TypeInfo);
+    v7 = (System_Exception_o *)sub_1C372A4(v6);
     v8 = &StringLiteral_4871/*"CriFsPlugin is not initialized."*/;
     goto LABEL_12;
   }
@@ -32,14 +32,14 @@ void CriFsLoader___ctor(CriFsLoader_o *this, const MethodInfo *method)
   CriFsLoader__criFsLoader_Create(&this->fields.handle, v4);
   if ( System_IntPtr__op_Equality(this->fields.handle, 0, 0) )
   {
-    v9 = sub_1C32C34(&System_Exception_TypeInfo);
-    v7 = (System_Exception_o *)sub_1C32E6C(v9);
-    v8 = &StringLiteral_18332/*"criFsLoader_Create() failed."*/;
+    v9 = sub_1C3706C(&System_Exception_TypeInfo);
+    v7 = (System_Exception_o *)sub_1C372A4(v9);
+    v8 = &StringLiteral_18335/*"criFsLoader_Create() failed."*/;
 LABEL_12:
-    v10 = (System_String_o *)sub_1C32C34(v8);
-    System_Exception___ctor_65266192(v7, v10, 0);
-    v11 = sub_1C32C34(&Method_CriFsLoader__ctor__);
-    sub_1C32D48(v7, v11);
+    v10 = (System_String_o *)sub_1C3706C(v8);
+    System_Exception___ctor_65309304(v7, v10, 0);
+    v11 = sub_1C3706C(&Method_CriFsLoader__ctor__);
+    sub_1C37180(v7, v11);
   }
   if ( !CriDisposableObjectManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(CriDisposableObjectManager_TypeInfo);
@@ -65,9 +65,9 @@ void CriFsLoader__DecompressData(
   const MethodInfo *v16; // x5
 
   v7 = this;
-  this->fields.srcGch = System_Runtime_InteropServices_GCHandle__Alloc_64199356(&srcBuffer->obj, 3, 0);
+  this->fields.srcGch = System_Runtime_InteropServices_GCHandle__Alloc_64242468(&srcBuffer->obj, 3, 0);
   p_srcGch = (intptr_t)&v7->fields.srcGch;
-  v7->fields.dstGch = System_Runtime_InteropServices_GCHandle__Alloc_64199356(&dstBuffer->obj, 3, 0);
+  v7->fields.dstGch = System_Runtime_InteropServices_GCHandle__Alloc_64242468(&dstBuffer->obj, 3, 0);
   v7 = (CriFsLoader_o *)((char *)v7 + 40);
   handle = v7[-1].fields.srcGch.fields.handle;
   v12.fields.handle = p_srcGch;
@@ -82,12 +82,12 @@ void CriFsLoader__Dispose(CriFsLoader_o *this, const MethodInfo *method)
 {
   const MethodInfo *v2; // x2
 
-  if ( (byte_4C30E89 & 1) == 0 )
+  if ( (byte_4C3C3D9 & 1) == 0 )
   {
-    sub_1C32C20(&System_GC_TypeInfo);
-    byte_4C30E89 = 1;
+    sub_1C37058(&System_GC_TypeInfo);
+    byte_4C3C3D9 = 1;
   }
-  CriFsLoader__Dispose_30800108(this, 1, v2);
+  CriFsLoader__Dispose_30817572(this, 1, v2);
   if ( !System_GC_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(System_GC_TypeInfo);
   System_GC__SuppressFinalize((Il2CppObject *)this, 0);
@@ -95,7 +95,7 @@ void CriFsLoader__Dispose(CriFsLoader_o *this, const MethodInfo *method)
 
 
 // local variable allocation has failed, the output may be wrong!
-void CriFsLoader__Dispose_30800108(CriFsLoader_o *this, bool disposing, const MethodInfo *method)
+void CriFsLoader__Dispose_30817572(CriFsLoader_o *this, bool disposing, const MethodInfo *method)
 {
   const MethodInfo *v5; // x1
   System_Runtime_InteropServices_GCHandle_o v6; // x0
@@ -104,10 +104,10 @@ void CriFsLoader__Dispose_30800108(CriFsLoader_o *this, bool disposing, const Me
   System_Runtime_InteropServices_GCHandle_o v9; // x0
   System_Runtime_InteropServices_GCHandle_o v10; // x0
 
-  if ( (byte_4C30E8A & 1) == 0 )
+  if ( (byte_4C3C3DA & 1) == 0 )
   {
-    sub_1C32C20(&CriDisposableObjectManager_TypeInfo);
-    byte_4C30E8A = 1;
+    sub_1C37058(&CriDisposableObjectManager_TypeInfo);
+    byte_4C3C3DA = 1;
   }
   if ( !CriDisposableObjectManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(CriDisposableObjectManager_TypeInfo);
@@ -141,7 +141,7 @@ void CriFsLoader__Finalize(CriFsLoader_o *this, const MethodInfo *method)
 {
   const MethodInfo *v2; // x2
 
-  CriFsLoader__Dispose_30800108(this, 0, v2);
+  CriFsLoader__Dispose_30817572(this, 0, v2);
   System_Object__Finalize((Il2CppObject *)this, 0);
 }
 
@@ -192,14 +192,14 @@ void CriFsLoader__Load(
   intptr_t v15; // x0
   const MethodInfo *v16; // x7
 
-  this->fields.dstGch = System_Runtime_InteropServices_GCHandle__Alloc_64199356(&buffer->obj, 3, 0);
+  this->fields.dstGch = System_Runtime_InteropServices_GCHandle__Alloc_64242468(&buffer->obj, 3, 0);
   if ( binder )
     binder = (CriFsBinder_o *)binder->fields.handle;
   handle = this->fields.handle;
   v14.fields.handle = (intptr_t)&this->fields.dstGch;
   v15 = System_Runtime_InteropServices_GCHandle__AddrOfPinnedObject(v14, 0);
   if ( !buffer )
-    sub_1C32E7C(v15);
+    sub_1C372B4(v15);
   CriFsLoader__criFsLoader_Load(
     handle,
     (intptr_t)binder,
@@ -226,14 +226,14 @@ void CriFsLoader__LoadById(
   intptr_t v15; // x0
   const MethodInfo *v16; // x7
 
-  this->fields.dstGch = System_Runtime_InteropServices_GCHandle__Alloc_64199356(&buffer->obj, 3, 0);
+  this->fields.dstGch = System_Runtime_InteropServices_GCHandle__Alloc_64242468(&buffer->obj, 3, 0);
   if ( binder )
     binder = (CriFsBinder_o *)binder->fields.handle;
   handle = this->fields.handle;
   v14.fields.handle = (intptr_t)&this->fields.dstGch;
   v15 = System_Runtime_InteropServices_GCHandle__AddrOfPinnedObject(v14, 0);
   if ( !buffer )
-    sub_1C32E7C(v15);
+    sub_1C372B4(v15);
   CriFsLoader__criFsLoader_LoadById(
     handle,
     (intptr_t)binder,
@@ -260,14 +260,14 @@ void CriFsLoader__LoadWithoutDecompression(
   intptr_t v15; // x0
   const MethodInfo *v16; // x7
 
-  this->fields.dstGch = System_Runtime_InteropServices_GCHandle__Alloc_64199356(&buffer->obj, 3, 0);
+  this->fields.dstGch = System_Runtime_InteropServices_GCHandle__Alloc_64242468(&buffer->obj, 3, 0);
   if ( binder )
     binder = (CriFsBinder_o *)binder->fields.handle;
   handle = this->fields.handle;
   v14.fields.handle = (intptr_t)&this->fields.dstGch;
   v15 = System_Runtime_InteropServices_GCHandle__AddrOfPinnedObject(v14, 0);
   if ( !buffer )
-    sub_1C32E7C(v15);
+    sub_1C372B4(v15);
   CriFsLoader__criFsLoader_LoadWithoutDecompression(
     handle,
     (intptr_t)binder,
@@ -294,14 +294,14 @@ void CriFsLoader__LoadWithoutDecompressionById(
   intptr_t v15; // x0
   const MethodInfo *v16; // x7
 
-  this->fields.dstGch = System_Runtime_InteropServices_GCHandle__Alloc_64199356(&buffer->obj, 3, 0);
+  this->fields.dstGch = System_Runtime_InteropServices_GCHandle__Alloc_64242468(&buffer->obj, 3, 0);
   if ( binder )
     binder = (CriFsBinder_o *)binder->fields.handle;
   handle = this->fields.handle;
   v14.fields.handle = (intptr_t)&this->fields.dstGch;
   v15 = System_Runtime_InteropServices_GCHandle__AddrOfPinnedObject(v14, 0);
   if ( !buffer )
-    sub_1C32E7C(v15);
+    sub_1C372B4(v15);
   CriFsLoader__criFsLoader_LoadWithoutDecompressionById(
     handle,
     (intptr_t)binder,
@@ -339,8 +339,8 @@ int32_t CriFsLoader__criFsLoader_Create(intptr_t *loader, const MethodInfo *meth
   int v6; // [xsp+28h] [xbp-28h]
   char v7; // [xsp+2Ch] [xbp-24h]
 
-  v2 = off_4C30E90;
-  if ( !off_4C30E90 )
+  v2 = off_4C3C3E0;
+  if ( !off_4C3C3E0 )
   {
     v5[0] = "cri_ware_unity";
     v5[1] = 14;
@@ -349,8 +349,8 @@ int32_t CriFsLoader__criFsLoader_Create(intptr_t *loader, const MethodInfo *meth
     v6 = 8;
     v5[4] = 0x200000000LL;
     v7 = 0;
-    v2 = (void *)sub_1C331FC(v5, method);
-    off_4C30E90 = v2;
+    v2 = (void *)sub_1C37634(v5, method);
+    off_4C3C3E0 = v2;
   }
   return ((__int64 (__fastcall *)(intptr_t *, const MethodInfo *))v2)(loader, method);
 }
@@ -369,8 +369,8 @@ int32_t CriFsLoader__criFsLoader_DecompressData(
   int v14; // [xsp+28h] [xbp-48h]
   char v15; // [xsp+2Ch] [xbp-44h]
 
-  v6 = off_4C30ED8;
-  if ( !off_4C30ED8 )
+  v6 = off_4C3C428;
+  if ( !off_4C3C428 )
   {
     v13[0] = "cri_ware_unity";
     v13[1] = 14;
@@ -379,8 +379,8 @@ int32_t CriFsLoader__criFsLoader_DecompressData(
     v14 = 40;
     v13[4] = 0x200000000LL;
     v15 = 0;
-    v6 = (void *)sub_1C331FC(v13, src);
-    off_4C30ED8 = v6;
+    v6 = (void *)sub_1C37634(v13, src);
+    off_4C3C428 = v6;
   }
   return ((__int64 (__fastcall *)(intptr_t, intptr_t, int64_t, intptr_t, int64_t, const MethodInfo *))v6)(
            loader,
@@ -399,8 +399,8 @@ int32_t CriFsLoader__criFsLoader_Destroy(intptr_t loader, const MethodInfo *meth
   int v6; // [xsp+28h] [xbp-28h]
   char v7; // [xsp+2Ch] [xbp-24h]
 
-  v2 = off_4C30E98;
-  if ( !off_4C30E98 )
+  v2 = off_4C3C3E8;
+  if ( !off_4C3C3E8 )
   {
     v5[0] = "cri_ware_unity";
     v5[1] = 14;
@@ -409,8 +409,8 @@ int32_t CriFsLoader__criFsLoader_Destroy(intptr_t loader, const MethodInfo *meth
     v6 = 8;
     v5[4] = 0x200000000LL;
     v7 = 0;
-    v2 = (void *)sub_1C331FC(v5, method);
-    off_4C30E98 = v2;
+    v2 = (void *)sub_1C37634(v5, method);
+    off_4C3C3E8 = v2;
   }
   return ((__int64 (__fastcall *)(intptr_t, const MethodInfo *))v2)(loader, method);
 }
@@ -423,8 +423,8 @@ int32_t CriFsLoader__criFsLoader_GetStatus(intptr_t loader, int32_t *status, con
   int v8; // [xsp+28h] [xbp-28h]
   char v9; // [xsp+2Ch] [xbp-24h]
 
-  v3 = off_4C30EB8;
-  if ( !off_4C30EB8 )
+  v3 = off_4C3C408;
+  if ( !off_4C3C408 )
   {
     v7[0] = "cri_ware_unity";
     v7[1] = 14;
@@ -433,8 +433,8 @@ int32_t CriFsLoader__criFsLoader_GetStatus(intptr_t loader, int32_t *status, con
     v8 = 16;
     v7[4] = 0x200000000LL;
     v9 = 0;
-    v3 = (void *)sub_1C331FC(v7, status);
-    off_4C30EB8 = v3;
+    v3 = (void *)sub_1C37634(v7, status);
+    off_4C3C408 = v3;
   }
   return ((__int64 (__fastcall *)(intptr_t, int32_t *, const MethodInfo *))v3)(loader, status, method);
 }
@@ -462,7 +462,7 @@ int32_t CriFsLoader__criFsLoader_Load(
   char v24; // [xsp+2Ch] [xbp-54h]
 
   v12 = (int)path;
-  if ( !off_4C30EA0 )
+  if ( !off_4C3C3F0 )
   {
     *(_QWORD *)v18 = "cri_ware_unity";
     v19 = 14;
@@ -471,11 +471,11 @@ int32_t CriFsLoader__criFsLoader_Load(
     v23 = 56;
     v22 = 0x200000000LL;
     v24 = 0;
-    off_4C30EA0 = (__int64 (__fastcall *)(_QWORD, _QWORD, _QWORD, _QWORD, _QWORD, _QWORD, _QWORD))sub_1C331FC(
+    off_4C3C3F0 = (__int64 (__fastcall *)(_QWORD, _QWORD, _QWORD, _QWORD, _QWORD, _QWORD, _QWORD))sub_1C37634(
                                                                                                     v18,
                                                                                                     binder);
   }
-  v15 = sub_1C331D8(
+  v15 = sub_1C37610(
           v12,
           binder,
           (int)path,
@@ -488,8 +488,8 @@ int32_t CriFsLoader__criFsLoader_Load(
           v19,
           v20[0],
           v21);
-  v16 = off_4C30EA0(loader, binder, v15, offset, load_size, buffer, buffer_size);
-  sub_1C331F0(v15);
+  v16 = off_4C3C3F0(loader, binder, v15, offset, load_size, buffer, buffer_size);
+  sub_1C37628(v15);
   return v16;
 }
 
@@ -509,8 +509,8 @@ int32_t CriFsLoader__criFsLoader_LoadById(
   int v18; // [xsp+28h] [xbp-58h]
   char v19; // [xsp+2Ch] [xbp-54h]
 
-  v8 = off_4C30EA8;
-  if ( !off_4C30EA8 )
+  v8 = off_4C3C3F8;
+  if ( !off_4C3C3F8 )
   {
     v17[0] = "cri_ware_unity";
     v17[1] = 14;
@@ -519,8 +519,8 @@ int32_t CriFsLoader__criFsLoader_LoadById(
     v18 = 52;
     v17[4] = 0x200000000LL;
     v19 = 0;
-    v8 = (void *)sub_1C331FC(v17, binder);
-    off_4C30EA8 = v8;
+    v8 = (void *)sub_1C37634(v17, binder);
+    off_4C3C3F8 = v8;
   }
   return ((__int64 (__fastcall *)(intptr_t, intptr_t, _QWORD, int64_t, int64_t, intptr_t, int64_t, const MethodInfo *))v8)(
            loader,
@@ -556,7 +556,7 @@ int32_t CriFsLoader__criFsLoader_LoadWithoutDecompression(
   char v24; // [xsp+2Ch] [xbp-54h]
 
   v12 = (int)path;
-  if ( !off_4C30EC8 )
+  if ( !off_4C3C418 )
   {
     *(_QWORD *)v18 = "cri_ware_unity";
     v19 = 14;
@@ -565,11 +565,11 @@ int32_t CriFsLoader__criFsLoader_LoadWithoutDecompression(
     v23 = 56;
     v22 = 0x200000000LL;
     v24 = 0;
-    off_4C30EC8 = (__int64 (__fastcall *)(_QWORD, _QWORD, _QWORD, _QWORD, _QWORD, _QWORD, _QWORD))sub_1C331FC(
+    off_4C3C418 = (__int64 (__fastcall *)(_QWORD, _QWORD, _QWORD, _QWORD, _QWORD, _QWORD, _QWORD))sub_1C37634(
                                                                                                     v18,
                                                                                                     binder);
   }
-  v15 = sub_1C331D8(
+  v15 = sub_1C37610(
           v12,
           binder,
           (int)path,
@@ -582,8 +582,8 @@ int32_t CriFsLoader__criFsLoader_LoadWithoutDecompression(
           v19,
           v20[0],
           v21);
-  v16 = off_4C30EC8(loader, binder, v15, offset, load_size, buffer, buffer_size);
-  sub_1C331F0(v15);
+  v16 = off_4C3C418(loader, binder, v15, offset, load_size, buffer, buffer_size);
+  sub_1C37628(v15);
   return v16;
 }
 
@@ -603,8 +603,8 @@ int32_t CriFsLoader__criFsLoader_LoadWithoutDecompressionById(
   int v18; // [xsp+28h] [xbp-58h]
   char v19; // [xsp+2Ch] [xbp-54h]
 
-  v8 = off_4C30ED0;
-  if ( !off_4C30ED0 )
+  v8 = off_4C3C420;
+  if ( !off_4C3C420 )
   {
     v17[0] = "cri_ware_unity";
     v17[1] = 14;
@@ -613,8 +613,8 @@ int32_t CriFsLoader__criFsLoader_LoadWithoutDecompressionById(
     v18 = 52;
     v17[4] = 0x200000000LL;
     v19 = 0;
-    v8 = (void *)sub_1C331FC(v17, binder);
-    off_4C30ED0 = v8;
+    v8 = (void *)sub_1C37634(v17, binder);
+    off_4C3C420 = v8;
   }
   return ((__int64 (__fastcall *)(intptr_t, intptr_t, _QWORD, int64_t, int64_t, intptr_t, int64_t, const MethodInfo *))v8)(
            loader,
@@ -635,8 +635,8 @@ int32_t CriFsLoader__criFsLoader_SetReadUnitSize(intptr_t loader, int64_t unit_s
   int v8; // [xsp+28h] [xbp-28h]
   char v9; // [xsp+2Ch] [xbp-24h]
 
-  v3 = off_4C30EC0;
-  if ( !off_4C30EC0 )
+  v3 = off_4C3C410;
+  if ( !off_4C3C410 )
   {
     v7[0] = "cri_ware_unity";
     v7[1] = 14;
@@ -645,8 +645,8 @@ int32_t CriFsLoader__criFsLoader_SetReadUnitSize(intptr_t loader, int64_t unit_s
     v8 = 16;
     v7[4] = 0x200000000LL;
     v9 = 0;
-    v3 = (void *)sub_1C331FC(v7, unit_size);
-    off_4C30EC0 = v3;
+    v3 = (void *)sub_1C37634(v7, unit_size);
+    off_4C3C410 = v3;
   }
   return ((__int64 (__fastcall *)(intptr_t, int64_t, const MethodInfo *))v3)(loader, unit_size, method);
 }
@@ -659,8 +659,8 @@ int32_t CriFsLoader__criFsLoader_Stop(intptr_t loader, const MethodInfo *method)
   int v6; // [xsp+28h] [xbp-28h]
   char v7; // [xsp+2Ch] [xbp-24h]
 
-  v2 = off_4C30EB0;
-  if ( !off_4C30EB0 )
+  v2 = off_4C3C400;
+  if ( !off_4C3C400 )
   {
     v5[0] = "cri_ware_unity";
     v5[1] = 14;
@@ -669,8 +669,8 @@ int32_t CriFsLoader__criFsLoader_Stop(intptr_t loader, const MethodInfo *method)
     v6 = 8;
     v5[4] = 0x200000000LL;
     v7 = 0;
-    v2 = (void *)sub_1C331FC(v5, method);
-    off_4C30EB0 = v2;
+    v2 = (void *)sub_1C37634(v5, method);
+    off_4C3C400 = v2;
   }
   return ((__int64 (__fastcall *)(intptr_t, const MethodInfo *))v2)(loader, method);
 }

@@ -1,14 +1,14 @@
 void FunctionMaster___ctor(FunctionMaster_o *this, const MethodInfo *method)
 {
-  if ( (byte_4C37C3C & 1) == 0 )
+  if ( (byte_4C43235 & 1) == 0 )
   {
-    sub_1C32C20(&Method_DataMasterBase_FunctionMaster__FunctionEntity__int___ctor__);
-    byte_4C37C3C = 1;
+    sub_1C37058(&Method_DataMasterBase_FunctionMaster__FunctionEntity__int___ctor__);
+    byte_4C43235 = 1;
   }
   DataMasterBase_object__object__int____ctor(
     (DataMasterBase_TMaster__TEntity__PKType__o *)this,
     59,
-    (const MethodInfo_3394514 *)Method_DataMasterBase_FunctionMaster__FunctionEntity__int___ctor__);
+    (const MethodInfo_339ED7C *)Method_DataMasterBase_FunctionMaster__FunctionEntity__int___ctor__);
 }
 
 
@@ -16,10 +16,10 @@ DataVals_o *FunctionMaster__GetDispDataValsFromFunc(FunctionMaster_o *this, Data
 {
   System_Object_array *EndSkillValsArrayFromRootValsForDisplay; // x0
 
-  if ( (byte_4C37C3F & 1) == 0 )
+  if ( (byte_4C43238 & 1) == 0 )
   {
-    this = (FunctionMaster_o *)sub_1C32C20(&Method_BasicHelper_IndexValue_DataVals___);
-    byte_4C37C3F = 1;
+    this = (FunctionMaster_o *)sub_1C37058(&Method_BasicHelper_IndexValue_DataVals___);
+    byte_4C43238 = 1;
   }
   EndSkillValsArrayFromRootValsForDisplay = (System_Object_array *)FunctionMaster__GetEndSkillValsArrayFromRootValsForDisplay(
                                                                      this,
@@ -30,7 +30,7 @@ DataVals_o *FunctionMaster__GetDispDataValsFromFunc(FunctionMaster_o *this, Data
                            EndSkillValsArrayFromRootValsForDisplay,
                            0,
                            0,
-                           (const MethodInfo_30CB990 *)Method_BasicHelper_IndexValue_DataVals___);
+                           (const MethodInfo_30D61F8 *)Method_BasicHelper_IndexValue_DataVals___);
   else
     return vals;
 }
@@ -79,17 +79,17 @@ DataVals_array *FunctionMaster__GetEndSkillValsArrayFromRootValsForDisplay(
   SkillLvEntity_o *Entity; // x1
   Il2CppObject *v13; // x0
 
-  if ( (byte_4C37C40 & 1) == 0 )
+  if ( (byte_4C43239 & 1) == 0 )
   {
-    sub_1C32C20(&Method_BasicHelper_IndexValue_DataVals___);
-    sub_1C32C20(&BuffList_TypeInfo);
-    sub_1C32C20(&Method_DataManager_GetMaster_SkillLvMaster___);
-    sub_1C32C20(&DataManager_TypeInfo);
-    byte_4C37C40 = 1;
+    sub_1C37058(&Method_BasicHelper_IndexValue_DataVals___);
+    sub_1C37058(&BuffList_TypeInfo);
+    sub_1C37058(&Method_DataManager_GetMaster_SkillLvMaster___);
+    sub_1C37058(&DataManager_TypeInfo);
+    byte_4C43239 = 1;
   }
   if ( !DataManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-  Master_object = DataManager__GetMaster_object_((const MethodInfo_30DD39C *)Method_DataManager_GetMaster_SkillLvMaster___);
+  Master_object = DataManager__GetMaster_object_((const MethodInfo_30E7C04 *)Method_DataManager_GetMaster_SkillLvMaster___);
   if ( !vals )
     return 0;
   v6 = (SkillLvMaster_o *)Master_object;
@@ -100,7 +100,7 @@ DataVals_array *FunctionMaster__GetEndSkillValsArrayFromRootValsForDisplay(
     funcEnt = vals->fields.funcEnt;
     if ( !funcEnt )
 LABEL_24:
-      sub_1C32E7C(funcEnt);
+      sub_1C372B4(funcEnt);
     AddStateBuffTypeFromFunction = FunctionEntity__GetAddStateBuffTypeFromFunction(funcEnt, v5);
     if ( !BuffList_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(BuffList_TypeInfo);
@@ -130,7 +130,7 @@ LABEL_24:
             SetTypeDataValArray,
             0,
             0,
-            (const MethodInfo_30CB990 *)Method_BasicHelper_IndexValue_DataVals___);
+            (const MethodInfo_30D61F8 *)Method_BasicHelper_IndexValue_DataVals___);
     if ( !v13 )
       break;
     vals = (DataVals_o *)v13;
@@ -171,38 +171,38 @@ System_Collections_Generic_List_FunctionEntity__o *FunctionMaster__GetFunctionEn
   int32_t *v28; // x10
   __int64 v29; // x0
 
-  if ( (byte_4C37C3D & 1) == 0 )
+  if ( (byte_4C43236 & 1) == 0 )
   {
-    sub_1C32C20(&Method_System_Collections_ObjectModel_Collection_FunctionEntity__GetEnumerator__);
-    sub_1C32C20(&System_IDisposable_TypeInfo);
-    sub_1C32C20(&System_Collections_Generic_IEnumerator_FunctionEntity__TypeInfo);
-    sub_1C32C20(&System_Collections_IEnumerator_TypeInfo);
-    sub_1C32C20(&Method_System_Collections_Generic_List_FunctionEntity__Add__);
-    sub_1C32C20(&Method_System_Collections_Generic_List_int__Contains__);
-    sub_1C32C20(&Method_System_Collections_Generic_List_int__Remove__);
-    sub_1C32C20(&Method_System_Collections_Generic_List_FunctionEntity___ctor__);
-    sub_1C32C20(&Method_System_Collections_Generic_List_int___ctor___78010240);
-    sub_1C32C20(&System_Collections_Generic_List_int__TypeInfo);
-    sub_1C32C20(&System_Collections_Generic_List_FunctionEntity__TypeInfo);
-    byte_4C37C3D = 1;
+    sub_1C37058(&Method_System_Collections_ObjectModel_Collection_FunctionEntity__GetEnumerator__);
+    sub_1C37058(&System_IDisposable_TypeInfo);
+    sub_1C37058(&System_Collections_Generic_IEnumerator_FunctionEntity__TypeInfo);
+    sub_1C37058(&System_Collections_IEnumerator_TypeInfo);
+    sub_1C37058(&Method_System_Collections_Generic_List_FunctionEntity__Add__);
+    sub_1C37058(&Method_System_Collections_Generic_List_int__Contains__);
+    sub_1C37058(&Method_System_Collections_Generic_List_int__Remove__);
+    sub_1C37058(&Method_System_Collections_Generic_List_FunctionEntity___ctor__);
+    sub_1C37058(&Method_System_Collections_Generic_List_int___ctor___78055976);
+    sub_1C37058(&System_Collections_Generic_List_int__TypeInfo);
+    sub_1C37058(&System_Collections_Generic_List_FunctionEntity__TypeInfo);
+    byte_4C43236 = 1;
   }
-  v5 = (System_Collections_Generic_List_object__o *)sub_1C32E6C(System_Collections_Generic_List_FunctionEntity__TypeInfo);
+  v5 = (System_Collections_Generic_List_object__o *)sub_1C372A4(System_Collections_Generic_List_FunctionEntity__TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v5,
-    (const MethodInfo_3797F88 *)Method_System_Collections_Generic_List_FunctionEntity___ctor__);
-  v6 = (System_Collections_Generic_List_int__o *)sub_1C32E6C(System_Collections_Generic_List_int__TypeInfo);
-  System_Collections_Generic_List_int____ctor_58175596(
+    (const MethodInfo_37A27F0 *)Method_System_Collections_Generic_List_FunctionEntity___ctor__);
+  v6 = (System_Collections_Generic_List_int__o *)sub_1C372A4(System_Collections_Generic_List_int__TypeInfo);
+  System_Collections_Generic_List_int____ctor_58218708(
     v6,
     (System_Collections_Generic_IEnumerable_T__o *)funcIds,
-    (const MethodInfo_377B06C *)Method_System_Collections_Generic_List_int___ctor___78010240);
+    (const MethodInfo_37858D4 *)Method_System_Collections_Generic_List_int___ctor___78055976);
   list = (System_Collections_ObjectModel_Collection_T__o *)this->fields.list;
   if ( !list )
-    sub_1C32E7C(0);
+    sub_1C372B4(0);
   Enumerator = System_Collections_ObjectModel_Collection_object___GetEnumerator(
                  list,
-                 (const MethodInfo_3330280 *)Method_System_Collections_ObjectModel_Collection_FunctionEntity__GetEnumerator__);
+                 (const MethodInfo_333AAE8 *)Method_System_Collections_ObjectModel_Collection_FunctionEntity__GetEnumerator__);
   if ( !Enumerator )
-    sub_1C32E7C(0);
+    sub_1C372B4(0);
   while ( 1 )
   {
     klass = Enumerator->klass;
@@ -222,7 +222,7 @@ System_Collections_Generic_List_FunctionEntity__o *FunctionMaster__GetFunctionEn
     else
     {
 LABEL_9:
-      v12 = sub_1C83438(Enumerator, System_Collections_IEnumerator_TypeInfo, 0);
+      v12 = sub_1C87870(Enumerator, System_Collections_IEnumerator_TypeInfo, 0);
     }
     if ( ((*(__int64 (__fastcall **)(System_Collections_Generic_IEnumerator_T__o *, _QWORD))v12)(
             Enumerator,
@@ -246,7 +246,7 @@ LABEL_9:
     else
     {
 LABEL_16:
-      v16 = sub_1C83438(Enumerator, System_Collections_Generic_IEnumerator_FunctionEntity__TypeInfo, 0);
+      v16 = sub_1C87870(Enumerator, System_Collections_Generic_IEnumerator_FunctionEntity__TypeInfo, 0);
     }
     v17 = (*(__int64 (__fastcall **)(System_Collections_Generic_IEnumerator_T__o *, _QWORD))v16)(
             Enumerator,
@@ -255,39 +255,39 @@ LABEL_16:
     if ( v17 )
     {
       if ( !v6 )
-        sub_1C32E7C(v17);
+        sub_1C372B4(v17);
       v19 = System_Collections_Generic_List_int___Contains(
               v6,
               *(_DWORD *)(v17 + 16),
-              (const MethodInfo_377BB10 *)Method_System_Collections_Generic_List_int__Contains__);
+              (const MethodInfo_3786378 *)Method_System_Collections_Generic_List_int__Contains__);
       if ( v19 )
       {
         if ( !v5 )
-          sub_1C32E7C(v19);
+          sub_1C372B4(v19);
         items = v5->fields._items;
         v23 = Method_System_Collections_Generic_List_FunctionEntity__Add__;
         ++v5->fields._version;
         if ( !items )
-          sub_1C32E7C(v19);
+          sub_1C372B4(v19);
         size = v5->fields._size;
         if ( (unsigned int)size >= LODWORD(items->max_length) )
         {
           System_Collections_Generic_List_object___AddWithResize(
             v5,
             (Il2CppObject *)v18,
-            *(const MethodInfo_37987BC **)(*(_QWORD *)(v23[4] + 192LL) + 112LL));
+            *(const MethodInfo_37A3024 **)(*(_QWORD *)(v23[4] + 192LL) + 112LL));
         }
         else
         {
           v25 = &items->obj.klass + size;
           v5->fields._size = size + 1;
           v25[4] = (Il2CppClass *)v18;
-          sub_1C32BC4((CGThumbnailListItem_o *)(v25 + 4), v18, v20, v21);
+          sub_1C36FFC((CGThumbnailListItem_o *)(v25 + 4), v18, v20, v21);
         }
         System_Collections_Generic_List_int___Remove(
           v6,
           *(_DWORD *)(v18 + 16),
-          (const MethodInfo_377CC94 *)Method_System_Collections_Generic_List_int__Remove__);
+          (const MethodInfo_37874FC *)Method_System_Collections_Generic_List_int__Remove__);
       }
     }
   }
@@ -308,7 +308,7 @@ LABEL_16:
   else
   {
 LABEL_31:
-    v29 = sub_1C83438(Enumerator, System_IDisposable_TypeInfo, 0);
+    v29 = sub_1C87870(Enumerator, System_IDisposable_TypeInfo, 0);
   }
   (*(void (__fastcall **)(System_Collections_Generic_IEnumerator_T__o *, _QWORD))v29)(Enumerator, *(_QWORD *)(v29 + 8));
   return (System_Collections_Generic_List_FunctionEntity__o *)v5;
@@ -332,10 +332,10 @@ DataVals_array *FunctionMaster__GetSetTypeDataValArray(
   int32_t funcIndex; // [xsp+Ch] [xbp-34h] BYREF
 
   v6 = this;
-  if ( (byte_4C37C3E & 1) == 0 )
+  if ( (byte_4C43237 & 1) == 0 )
   {
-    this = (FunctionMaster_o *)sub_1C32C20(&Method_DataMasterBase_FunctionMaster__FunctionEntity__int__GetEntity__);
-    byte_4C37C3E = 1;
+    this = (FunctionMaster_o *)sub_1C37058(&Method_DataMasterBase_FunctionMaster__FunctionEntity__int__GetEntity__);
+    byte_4C43237 = 1;
   }
   funcIndex = 0;
   if ( !dataValArray )
@@ -362,22 +362,22 @@ DataVals_array *FunctionMaster__GetSetTypeDataValArray(
         break;
       if ( (unsigned int)v9 >= LODWORD(funcIds->max_length) )
 LABEL_14:
-        sub_1C32E84(this);
+        sub_1C372BC(this);
       v13 = *v11;
       this = (FunctionMaster_o *)DataMasterBase_object__object__int___GetEntity(
                                    (DataMasterBase_TMaster__TEntity__PKType__o *)v6,
                                    funcIds->m_Items[v9],
-                                   (const MethodInfo_3396838 *)Method_DataMasterBase_FunctionMaster__FunctionEntity__int__GetEntity__);
+                                   (const MethodInfo_33A10A0 *)Method_DataMasterBase_FunctionMaster__FunctionEntity__int__GetEntity__);
       if ( !v13 )
         break;
-      DataVals__SetType_41578984(v13, (FunctionEntity_o *)this, funcIndex++, 0);
+      DataVals__SetType_41678464(v13, (FunctionEntity_o *)this, funcIndex++, 0);
       max_length = dataValArray->max_length;
       v8 = v9 + 1;
       if ( (int)v9 + 1 >= max_length )
         return dataValArray;
     }
 LABEL_15:
-    sub_1C32E7C(this);
+    sub_1C372B4(this);
   }
   return dataValArray;
 }

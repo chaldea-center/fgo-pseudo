@@ -1,14 +1,14 @@
 void ServantLvDetailMaster___ctor(ServantLvDetailMaster_o *this, const MethodInfo *method)
 {
-  if ( (byte_4C38377 & 1) == 0 )
+  if ( (byte_4C43970 & 1) == 0 )
   {
-    sub_1C32C20(&Method_DataMasterBase_ServantLvDetailMaster__ServantLvDetailEntity__string___ctor__);
-    byte_4C38377 = 1;
+    sub_1C37058(&Method_DataMasterBase_ServantLvDetailMaster__ServantLvDetailEntity__string___ctor__);
+    byte_4C43970 = 1;
   }
   DataMasterBase_object__object__object____ctor(
     (DataMasterBase_TMaster__TEntity__PKType__o *)this,
     371,
-    (const MethodInfo_3398FCC *)Method_DataMasterBase_ServantLvDetailMaster__ServantLvDetailEntity__string___ctor__);
+    (const MethodInfo_33A3834 *)Method_DataMasterBase_ServantLvDetailMaster__ServantLvDetailEntity__string___ctor__);
 }
 
 
@@ -21,16 +21,16 @@ ServantLvDetailEntity_o *ServantLvDetailMaster__GetEntity(
 {
   Il2CppObject *PK; // x1
 
-  if ( (byte_4C38378 & 1) == 0 )
+  if ( (byte_4C43971 & 1) == 0 )
   {
-    sub_1C32C20(&Method_DataMasterBase_ServantLvDetailMaster__ServantLvDetailEntity__string__GetEntity__);
-    byte_4C38378 = 1;
+    sub_1C37058(&Method_DataMasterBase_ServantLvDetailMaster__ServantLvDetailEntity__string__GetEntity__);
+    byte_4C43971 = 1;
   }
   PK = (Il2CppObject *)ServantLvDetailEntity__CreatePK(rarity, lv, *(const MethodInfo **)&lv);
   return (ServantLvDetailEntity_o *)DataMasterBase_object__object__object___GetEntity(
                                       (DataMasterBase_TMaster__TEntity__PKType__o *)this,
                                       PK,
-                                      (const MethodInfo_339B2F0 *)Method_DataMasterBase_ServantLvDetailMaster__ServantLvDetailEntity__string__GetEntity__);
+                                      (const MethodInfo_33A5B58 *)Method_DataMasterBase_ServantLvDetailMaster__ServantLvDetailEntity__string__GetEntity__);
 }
 
 
@@ -85,22 +85,22 @@ ServantLvDetailEntity_o *ServantLvDetailMaster__GetHighestData(
   int32_t *v23; // x10
   __int64 v24; // x0
 
-  if ( (byte_4C38376 & 1) == 0 )
+  if ( (byte_4C4396F & 1) == 0 )
   {
-    sub_1C32C20(&Method_System_Collections_ObjectModel_Collection_ServantLvDetailEntity__GetEnumerator__);
-    sub_1C32C20(&System_IDisposable_TypeInfo);
-    sub_1C32C20(&System_Collections_Generic_IEnumerator_ServantLvDetailEntity__TypeInfo);
-    sub_1C32C20(&System_Collections_IEnumerator_TypeInfo);
-    byte_4C38376 = 1;
+    sub_1C37058(&Method_System_Collections_ObjectModel_Collection_ServantLvDetailEntity__GetEnumerator__);
+    sub_1C37058(&System_IDisposable_TypeInfo);
+    sub_1C37058(&System_Collections_Generic_IEnumerator_ServantLvDetailEntity__TypeInfo);
+    sub_1C37058(&System_Collections_IEnumerator_TypeInfo);
+    byte_4C4396F = 1;
   }
   list = (System_Collections_ObjectModel_Collection_T__o *)this->fields.list;
   if ( !list )
-    sub_1C32E7C(0);
+    sub_1C372B4(0);
   Enumerator = System_Collections_ObjectModel_Collection_object___GetEnumerator(
                  list,
-                 (const MethodInfo_3330280 *)Method_System_Collections_ObjectModel_Collection_ServantLvDetailEntity__GetEnumerator__);
+                 (const MethodInfo_333AAE8 *)Method_System_Collections_ObjectModel_Collection_ServantLvDetailEntity__GetEnumerator__);
   if ( !Enumerator )
-    sub_1C32E7C(0);
+    sub_1C372B4(0);
   v9 = 0;
 LABEL_6:
   v10 = v9;
@@ -123,7 +123,7 @@ LABEL_6:
     else
     {
 LABEL_11:
-      v14 = sub_1C83438(Enumerator, System_Collections_IEnumerator_TypeInfo, 0);
+      v14 = sub_1C87870(Enumerator, System_Collections_IEnumerator_TypeInfo, 0);
     }
     if ( ((*(__int64 (__fastcall **)(System_Collections_Generic_IEnumerator_T__o *, _QWORD))v14)(
             Enumerator,
@@ -147,14 +147,14 @@ LABEL_11:
     else
     {
 LABEL_18:
-      v18 = sub_1C83438(Enumerator, System_Collections_Generic_IEnumerator_ServantLvDetailEntity__TypeInfo, 0);
+      v18 = sub_1C87870(Enumerator, System_Collections_Generic_IEnumerator_ServantLvDetailEntity__TypeInfo, 0);
     }
     v19 = (*(__int64 (__fastcall **)(System_Collections_Generic_IEnumerator_T__o *, _QWORD))v18)(
             Enumerator,
             *(_QWORD *)(v18 + 8));
     v9 = (ServantLvDetailEntity_o *)v19;
     if ( !v19 )
-      sub_1C32E7C(0);
+      sub_1C372B4(0);
     if ( *(_DWORD *)(v19 + 16) == rarity )
     {
       v20 = *(_DWORD *)(v19 + 20);
@@ -179,7 +179,7 @@ LABEL_18:
   else
   {
 LABEL_30:
-    v24 = sub_1C83438(Enumerator, System_IDisposable_TypeInfo, 0);
+    v24 = sub_1C87870(Enumerator, System_IDisposable_TypeInfo, 0);
   }
   (*(void (__fastcall **)(System_Collections_Generic_IEnumerator_T__o *, _QWORD))v24)(Enumerator, *(_QWORD *)(v24 + 8));
   return v10;
@@ -222,15 +222,15 @@ bool ServantLvDetailMaster__TryGetEntity(
 {
   Il2CppObject *PK; // x2
 
-  if ( (byte_4C38379 & 1) == 0 )
+  if ( (byte_4C43972 & 1) == 0 )
   {
-    sub_1C32C20(&Method_DataMasterBase_ServantLvDetailMaster__ServantLvDetailEntity__string__TryGetEntity__);
-    byte_4C38379 = 1;
+    sub_1C37058(&Method_DataMasterBase_ServantLvDetailMaster__ServantLvDetailEntity__string__TryGetEntity__);
+    byte_4C43972 = 1;
   }
   PK = (Il2CppObject *)ServantLvDetailEntity__CreatePK(rarity, lv, *(const MethodInfo **)&rarity);
   return DataMasterBase_object__object__object___TryGetEntity(
            (DataMasterBase_TMaster__TEntity__PKType__o *)this,
            (Il2CppObject **)entity,
            PK,
-           (const MethodInfo_339B33C *)Method_DataMasterBase_ServantLvDetailMaster__ServantLvDetailEntity__string__TryGetEntity__);
+           (const MethodInfo_33A5BA4 *)Method_DataMasterBase_ServantLvDetailMaster__ServantLvDetailEntity__string__TryGetEntity__);
 }

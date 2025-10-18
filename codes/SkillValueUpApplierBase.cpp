@@ -5,7 +5,7 @@ void SkillValueUpApplierBase___ctor(SkillValueUpApplierBase_o *this, BattleData_
 
   System_Object___ctor((Il2CppObject *)this, 0);
   this->fields.data = data;
-  sub_1C32BC4((CGThumbnailListItem_o *)&this->fields, (int32_t)data, v5, v6);
+  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields, (int32_t)data, v5, v6);
 }
 
 

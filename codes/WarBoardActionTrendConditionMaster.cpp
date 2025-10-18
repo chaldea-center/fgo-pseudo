@@ -1,14 +1,14 @@
 void WarBoardActionTrendConditionMaster___ctor(WarBoardActionTrendConditionMaster_o *this, const MethodInfo *method)
 {
-  if ( (byte_4C38B01 & 1) == 0 )
+  if ( (byte_4C440FA & 1) == 0 )
   {
-    sub_1C32C20(&Method_DataMasterBase_WarBoardActionTrendConditionMaster__WarBoardActionTrendConditionEntity__int___ctor__);
-    byte_4C38B01 = 1;
+    sub_1C37058(&Method_DataMasterBase_WarBoardActionTrendConditionMaster__WarBoardActionTrendConditionEntity__int___ctor__);
+    byte_4C440FA = 1;
   }
   DataMasterBase_object__object__int____ctor(
     (DataMasterBase_TMaster__TEntity__PKType__o *)this,
     343,
-    (const MethodInfo_3394514 *)Method_DataMasterBase_WarBoardActionTrendConditionMaster__WarBoardActionTrendConditionEntity__int___ctor__);
+    (const MethodInfo_339ED7C *)Method_DataMasterBase_WarBoardActionTrendConditionMaster__WarBoardActionTrendConditionEntity__int___ctor__);
 }
 
 
@@ -31,7 +31,7 @@ bool WarBoardActionTrendConditionMaster__HasMatchCondition(
   *condType = 0;
   if ( !condEntityArray )
 LABEL_17:
-    sub_1C32E7C(condEntityArray);
+    sub_1C372B4(condEntityArray);
   max_length = condEntityArray->max_length;
   v5 = condEntityArray;
   v6 = max_length > 0;
@@ -42,7 +42,7 @@ LABEL_17:
     {
       if ( v9 >= (unsigned int)max_length )
 LABEL_18:
-        sub_1C32E84(condEntityArray);
+        sub_1C372BC(condEntityArray);
       v10 = v5->m_Items[v9];
       if ( !v10 )
         goto LABEL_17;

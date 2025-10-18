@@ -1,9 +1,9 @@
 void CommandAssistLvUpDialogComponent___ctor(CommandAssistLvUpDialogComponent_o *this, const MethodInfo *method)
 {
-  if ( (byte_4C32043 & 1) == 0 )
+  if ( (byte_4C3D62D & 1) == 0 )
   {
-    sub_1C32C20(&BaseDialog_TypeInfo);
-    byte_4C32043 = 1;
+    sub_1C37058(&BaseDialog_TypeInfo);
+    byte_4C3D62D = 1;
   }
   if ( !BaseDialog_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(BaseDialog_TypeInfo);
@@ -15,10 +15,10 @@ void CommandAssistLvUpDialogComponent__Init(CommandAssistLvUpDialogComponent_o *
 {
   UILabel_o *titleLabel; // x0
 
-  if ( (byte_4C3203F & 1) == 0 )
+  if ( (byte_4C3D629 & 1) == 0 )
   {
-    sub_1C32C20(&StringLiteral_1/*""*/);
-    byte_4C3203F = 1;
+    sub_1C37058(&StringLiteral_1/*""*/);
+    byte_4C3D629 = 1;
   }
   this->fields.state = 0;
   BaseDialog__Init((BaseDialog_o *)this, 0);
@@ -37,7 +37,7 @@ void CommandAssistLvUpDialogComponent__Init(CommandAssistLvUpDialogComponent_o *
         (titleLabel = (UILabel_o *)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0)) == 0) )
   {
 LABEL_10:
-    sub_1C32E7C(titleLabel);
+    sub_1C372B4(titleLabel);
   }
   UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)titleLabel, 0, 0);
 }
@@ -50,18 +50,18 @@ void CommandAssistLvUpDialogComponent__OnClickCloseButton(
   _QWORD *v3; // x0
   System_Reflection_MethodBase_o *v4; // x0
 
-  if ( (byte_4C32041 & 1) == 0 )
+  if ( (byte_4C3D62B & 1) == 0 )
   {
-    sub_1C32C20(&Method_CommandAssistLvUpDialogComponent_OnClickCloseButton__);
-    byte_4C32041 = 1;
+    sub_1C37058(&Method_CommandAssistLvUpDialogComponent_OnClickCloseButton__);
+    byte_4C3D62B = 1;
   }
   if ( this->fields.state == 2 )
   {
     this->fields.state = 4;
     v3 = Method_CommandAssistLvUpDialogComponent_OnClickCloseButton__;
     if ( (*((_BYTE *)Method_CommandAssistLvUpDialogComponent_OnClickCloseButton__ + 83) & 2) != 0 )
-      v3 = (_QWORD *)sub_1C32C38(Method_CommandAssistLvUpDialogComponent_OnClickCloseButton__);
-    v4 = (System_Reflection_MethodBase_o *)sub_1C32C04(v3, v3[4]);
+      v3 = (_QWORD *)sub_1C37070(Method_CommandAssistLvUpDialogComponent_OnClickCloseButton__);
+    v4 = (System_Reflection_MethodBase_o *)sub_1C3703C(v3, v3[4]);
     OverwriteAssetSoundName__PlaySystemSe(v4, 0, 0, 0);
     BaseDialog__Close((BaseDialog_o *)this, this->fields.closeCallback, 0);
   }
@@ -85,17 +85,17 @@ void CommandAssistLvUpDialogComponent__Open(
   const MethodInfo *v15; // x3
   System_Action_o *v16; // x20
 
-  if ( (byte_4C32040 & 1) == 0 )
+  if ( (byte_4C3D62A & 1) == 0 )
   {
-    sub_1C32C20(&System_Action_TypeInfo);
-    sub_1C32C20(&Method_CommandAssistLvUpDialogComponent__Open_b__11_0__);
-    sub_1C32C20(&CondType_TypeInfo);
-    sub_1C32C20(&LocalizationManager_TypeInfo);
-    sub_1C32C20(&UnityEngine_Object_TypeInfo);
-    sub_1C32C20(&StringLiteral_5556/*"EVENT_COMMAND_ASSIST_EVENT_END_MSG"*/);
-    sub_1C32C20(&StringLiteral_5557/*"EVENT_COMMAND_ASSIST_LEVEL_UP_DIALOG_TITLE"*/);
-    sub_1C32C20(&StringLiteral_3685/*"COMMON_CONFIRM_CLOSE"*/);
-    byte_4C32040 = 1;
+    sub_1C37058(&System_Action_TypeInfo);
+    sub_1C37058(&Method_CommandAssistLvUpDialogComponent__Open_b__11_0__);
+    sub_1C37058(&CondType_TypeInfo);
+    sub_1C37058(&LocalizationManager_TypeInfo);
+    sub_1C37058(&UnityEngine_Object_TypeInfo);
+    sub_1C37058(&StringLiteral_5557/*"EVENT_COMMAND_ASSIST_EVENT_END_MSG"*/);
+    sub_1C37058(&StringLiteral_5558/*"EVENT_COMMAND_ASSIST_LEVEL_UP_DIALOG_TITLE"*/);
+    sub_1C37058(&StringLiteral_3685/*"COMMON_CONFIRM_CLOSE"*/);
+    byte_4C3D62A = 1;
   }
   CommandAssistLvUpDialogComponent__Init(this, *(const MethodInfo **)&eventId);
   this->fields.state = 1;
@@ -117,7 +117,7 @@ void CommandAssistLvUpDialogComponent__Open(
   titleLabel = this->fields.titleLabel;
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-  gameObject = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)StringLiteral_5557/*"EVENT_COMMAND_ASSIST_LEVEL_UP_DIALOG_TITLE"*/, 0);
+  gameObject = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)StringLiteral_5558/*"EVENT_COMMAND_ASSIST_LEVEL_UP_DIALOG_TITLE"*/, 0);
   if ( !titleLabel )
     goto LABEL_19;
   UILabel__set_text(titleLabel, (System_String_o *)gameObject, 0);
@@ -127,12 +127,12 @@ void CommandAssistLvUpDialogComponent__Open(
     goto LABEL_19;
   UILabel__set_text(closeLabel, (System_String_o *)gameObject, 0);
   endEventMessageLabel = this->fields.endEventMessageLabel;
-  gameObject = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)StringLiteral_5556/*"EVENT_COMMAND_ASSIST_EVENT_END_MSG"*/, 0);
+  gameObject = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)StringLiteral_5557/*"EVENT_COMMAND_ASSIST_EVENT_END_MSG"*/, 0);
   if ( !endEventMessageLabel )
     goto LABEL_19;
   UILabel__set_text(endEventMessageLabel, (System_String_o *)gameObject, 0);
   this->fields.closeCallback = closeCallback;
-  sub_1C32BC4(&this->fields.closeCallback, closeCallback);
+  sub_1C36FFC(&this->fields.closeCallback, closeCallback);
   listViewManager = (UnityEngine_Object_o *)this->fields.listViewManager;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
@@ -149,10 +149,10 @@ void CommandAssistLvUpDialogComponent__Open(
       goto LABEL_18;
     }
 LABEL_19:
-    sub_1C32E7C(gameObject);
+    sub_1C372B4(gameObject);
   }
 LABEL_18:
-  v16 = (System_Action_o *)sub_1C32E6C(System_Action_TypeInfo);
+  v16 = (System_Action_o *)sub_1C372A4(System_Action_TypeInfo);
   System_Action___ctor(v16, (Il2CppObject *)this, Method_CommandAssistLvUpDialogComponent__Open_b__11_0__, 0);
   BaseDialog__Open((BaseDialog_o *)this, v16, 0, 0, 0);
 }
@@ -181,10 +181,10 @@ UnityEngine_GameObject_o *CommandAssistLvUpDialogComponent__get_closeBtnObject(
   UnityEngine_Object_o *closeButton; // x20
   UnityEngine_Component_o *v5; // x0
 
-  if ( (byte_4C32042 & 1) == 0 )
+  if ( (byte_4C3D62C & 1) == 0 )
   {
-    sub_1C32C20(&UnityEngine_Object_TypeInfo);
-    byte_4C32042 = 1;
+    sub_1C37058(&UnityEngine_Object_TypeInfo);
+    byte_4C3D62C = 1;
   }
   closeButton = (UnityEngine_Object_o *)this->fields.closeButton;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -193,6 +193,6 @@ UnityEngine_GameObject_o *CommandAssistLvUpDialogComponent__get_closeBtnObject(
     return 0;
   v5 = (UnityEngine_Component_o *)this->fields.closeButton;
   if ( !v5 )
-    sub_1C32E7C(0);
+    sub_1C372B4(0);
   return UnityEngine_Component__get_gameObject(v5, 0);
 }

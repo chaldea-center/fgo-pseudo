@@ -4,7 +4,7 @@ int32_t RarityRestrictedSkillUtil__GetOverwrittenRarity(
         const MethodInfo *method)
 {
   if ( !servantEntity )
-    sub_1C32E7C(0);
+    sub_1C372B4(0);
   if ( ServantEntity__checkIsHeroineSvt(servantEntity, 0) )
     return 3;
   else
@@ -24,10 +24,10 @@ bool RarityRestrictedSkillUtil__IsDisabled(
   _BOOL4 v9; // w0
 
   v6 = skillLvEntity;
-  if ( (byte_4C38D6A & 1) == 0 )
+  if ( (byte_4C44363 & 1) == 0 )
   {
-    skillLvEntity = (SkillLvEntity_o *)sub_1C32C20(&Method_System_Array_IndexOf_int___);
-    byte_4C38D6A = 1;
+    skillLvEntity = (SkillLvEntity_o *)sub_1C37058(&Method_System_Array_IndexOf_int___);
+    byte_4C44363 = 1;
   }
   if ( !v6
     || (skillLvEntity = (SkillLvEntity_o *)SkillLvEntity__GetActRarity(v6, 0), !servantEntity)
@@ -38,13 +38,13 @@ bool RarityRestrictedSkillUtil__IsDisabled(
       : (v8 = 3),
         !v7) )
   {
-    sub_1C32E7C(skillLvEntity);
+    sub_1C372B4(skillLvEntity);
   }
   if ( v7->max_length )
     return (unsigned int)System_Array__IndexOf_int_(
                            v7,
                            v8,
-                           (const MethodInfo_31E4470 *)Method_System_Array_IndexOf_int___) >> 31;
+                           (const MethodInfo_31EECD8 *)Method_System_Array_IndexOf_int___) >> 31;
   else
     LOBYTE(v9) = 0;
   return v9;

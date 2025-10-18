@@ -4,7 +4,7 @@ void SimpleHpData___ctor(SimpleHpData_o *this, BattleServantData_o *svtData, con
 
   System_Object___ctor((Il2CppObject *)this, 0);
   if ( !svtData )
-    sub_1C32E7C(v5);
+    sub_1C372B4(v5);
   this->fields._Hp_k__BackingField = BattleServantData__getNowHp(svtData, 0);
   this->fields._MaxHp_k__BackingField = BattleServantData__getMaxHp(svtData, 0);
 }

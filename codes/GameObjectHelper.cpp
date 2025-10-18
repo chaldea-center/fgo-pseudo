@@ -1,15 +1,15 @@
 Il2CppObject *GameObjectHelper__GetOrAddComponent_object_(
         UnityEngine_GameObject_o *self,
-        const MethodInfo_31364B8 *method)
+        const MethodInfo_3140D20 *method)
 {
   _BOOL8 v4; // x0
   Il2CppObject *Component_object; // x21
 
   if ( !method->rgctx_data )
   {
-    sub_1C32C20(&UnityEngine_Object_TypeInfo);
+    sub_1C37058(&UnityEngine_Object_TypeInfo);
     if ( !method->rgctx_data )
-      sub_1C83390();
+      sub_1C877C8();
   }
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
@@ -18,10 +18,10 @@ Il2CppObject *GameObjectHelper__GetOrAddComponent_object_(
   if ( v4 )
     return Component_object;
   if ( !self )
-    sub_1C32E7C(v4);
+    sub_1C372B4(v4);
   Component_object = UnityEngine_GameObject__GetComponent_object_(
                        self,
-                       (const MethodInfo_3134970 *)method->rgctx_data->_1_UnityEngine_GameObject_GetComponent_T_);
+                       (const MethodInfo_313F1D8 *)method->rgctx_data->_1_UnityEngine_GameObject_GetComponent_T_);
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   if ( !UnityEngine_Object__op_Equality((UnityEngine_Object_o *)Component_object, 0, 0) )
@@ -29,7 +29,7 @@ Il2CppObject *GameObjectHelper__GetOrAddComponent_object_(
   else
     return UnityEngine_GameObject__AddComponent_object_(
              self,
-             (const MethodInfo_3134888 *)method->rgctx_data->_2_UnityEngine_GameObject_AddComponent_T_);
+             (const MethodInfo_313F0F0 *)method->rgctx_data->_2_UnityEngine_GameObject_AddComponent_T_);
 }
 
 
@@ -37,7 +37,7 @@ Il2CppObject *GameObjectHelper__Instantiate_object_(
         UnityEngine_GameObject_o *self,
         UnityEngine_Transform_o *parent,
         bool worldPositionStays,
-        const MethodInfo_3136594 *method)
+        const MethodInfo_3140DFC *method)
 {
   Il2CppObject *Component_object; // x23
   Il2CppObject *v9; // x20
@@ -45,10 +45,10 @@ Il2CppObject *GameObjectHelper__Instantiate_object_(
 
   if ( !method->rgctx_data )
   {
-    sub_1C32C20(&Method_UnityEngine_Object_Instantiate_GameObject____78147224);
-    sub_1C32C20(&UnityEngine_Object_TypeInfo);
+    sub_1C37058(&Method_UnityEngine_Object_Instantiate_GameObject____78193016);
+    sub_1C37058(&UnityEngine_Object_TypeInfo);
     if ( !method->rgctx_data )
-      sub_1C83390();
+      sub_1C877C8();
   }
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
@@ -57,27 +57,27 @@ Il2CppObject *GameObjectHelper__Instantiate_object_(
   {
     if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-    v9 = UnityEngine_Object__Instantiate_object__51812596(
+    v9 = UnityEngine_Object__Instantiate_object__51855708(
            (Il2CppObject *)self,
            parent,
            worldPositionStays,
-           (const MethodInfo_31698F4 *)Method_UnityEngine_Object_Instantiate_GameObject____78147224);
+           (const MethodInfo_317415C *)Method_UnityEngine_Object_Instantiate_GameObject____78193016);
     v10 = UnityEngine_Object__op_Equality((UnityEngine_Object_o *)v9, 0, 0);
     Component_object = 0;
     if ( !v10 )
     {
       if ( !v9 )
-        sub_1C32E7C(v10);
+        sub_1C372B4(v10);
       Component_object = UnityEngine_GameObject__GetComponent_object_(
                            (UnityEngine_GameObject_o *)v9,
-                           (const MethodInfo_3134970 *)method->rgctx_data->_1_UnityEngine_GameObject_GetComponent_T_);
+                           (const MethodInfo_313F1D8 *)method->rgctx_data->_1_UnityEngine_GameObject_GetComponent_T_);
       if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
       if ( UnityEngine_Object__op_Equality((UnityEngine_Object_o *)Component_object, 0, 0) )
       {
         if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
           j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-        UnityEngine_Object__Destroy_71223640((UnityEngine_Object_o *)v9, 0);
+        UnityEngine_Object__Destroy_71266752((UnityEngine_Object_o *)v9, 0);
         return 0;
       }
     }
@@ -95,13 +95,13 @@ bool GameObjectHelper__IsInScene(UnityEngine_GameObject_o *self, int32_t sceneTy
   int32_t m_Handle; // [xsp+8h] [xbp-28h] BYREF
 
   v4 = self;
-  if ( (byte_4C393BE & 1) == 0 )
+  if ( (byte_4C449B8 & 1) == 0 )
   {
-    self = (UnityEngine_GameObject_o *)sub_1C32C20(&SceneList_TypeInfo);
-    byte_4C393BE = 1;
+    self = (UnityEngine_GameObject_o *)sub_1C37058(&SceneList_TypeInfo);
+    byte_4C449B8 = 1;
   }
   if ( !v4 )
-    sub_1C32E7C(self);
+    sub_1C372B4(self);
   m_Handle = UnityEngine_GameObject__get_scene(v4, 0).fields.m_Handle;
   p_m_Handle = &m_Handle;
   name = UnityEngine_SceneManagement_Scene__get_name((UnityEngine_SceneManagement_Scene_o)p_m_Handle, 0);
@@ -116,10 +116,10 @@ void GameObjectHelper__SetActiveSafely(UnityEngine_GameObject_o *self, bool valu
 {
   _BOOL8 v5; // x0
 
-  if ( (byte_4C393BF & 1) == 0 )
+  if ( (byte_4C449B9 & 1) == 0 )
   {
-    sub_1C32C20(&UnityEngine_Object_TypeInfo);
-    byte_4C393BF = 1;
+    sub_1C37058(&UnityEngine_Object_TypeInfo);
+    byte_4C449B9 = 1;
   }
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
@@ -127,7 +127,7 @@ void GameObjectHelper__SetActiveSafely(UnityEngine_GameObject_o *self, bool valu
   if ( !v5 )
   {
     if ( !self )
-      sub_1C32E7C(v5);
+      sub_1C372B4(v5);
     UnityEngine_GameObject__SetActive(self, value, 0);
   }
 }
@@ -160,20 +160,20 @@ void GameObjectHelper__addNguiDepth(UnityEngine_GameObject_o *self, int32_t dept
   __int64 v28; // x0
 
   v6 = self;
-  if ( (byte_4C393BD & 1) == 0 )
+  if ( (byte_4C449B7 & 1) == 0 )
   {
-    sub_1C32C20(&Method_UnityEngine_Component_GetComponent_UIWidget___);
-    sub_1C32C20(&System_IDisposable_TypeInfo);
-    sub_1C32C20(&System_Collections_IEnumerator_TypeInfo);
-    sub_1C32C20(&UnityEngine_Object_TypeInfo);
-    self = (UnityEngine_GameObject_o *)sub_1C32C20(&UnityEngine_Transform_TypeInfo);
-    byte_4C393BD = 1;
+    sub_1C37058(&Method_UnityEngine_Component_GetComponent_UIWidget___);
+    sub_1C37058(&System_IDisposable_TypeInfo);
+    sub_1C37058(&System_Collections_IEnumerator_TypeInfo);
+    sub_1C37058(&UnityEngine_Object_TypeInfo);
+    self = (UnityEngine_GameObject_o *)sub_1C37058(&UnityEngine_Transform_TypeInfo);
+    byte_4C449B7 = 1;
   }
   if ( !v6 || (self = (UnityEngine_GameObject_o *)UnityEngine_GameObject__get_transform(v6, 0)) == 0 )
-    sub_1C32E7C(self);
+    sub_1C372B4(self);
   Enumerator = UnityEngine_Transform__GetEnumerator((UnityEngine_Transform_o *)self, 0);
   if ( !Enumerator )
-    sub_1C32E7C(0);
+    sub_1C372B4(0);
   while ( 1 )
   {
     klass = Enumerator->klass;
@@ -193,7 +193,7 @@ void GameObjectHelper__addNguiDepth(UnityEngine_GameObject_o *self, int32_t dept
     else
     {
 LABEL_10:
-      v11 = sub_1C83438(Enumerator, System_Collections_IEnumerator_TypeInfo, 0);
+      v11 = sub_1C87870(Enumerator, System_Collections_IEnumerator_TypeInfo, 0);
     }
     if ( ((*(__int64 (__fastcall **)(System_Collections_IEnumerator_o *, _QWORD))v11)(Enumerator, *(_QWORD *)(v11 + 8))
         & 1) == 0 )
@@ -215,7 +215,7 @@ LABEL_10:
     else
     {
 LABEL_17:
-      v15 = sub_1C83438(Enumerator, System_Collections_IEnumerator_TypeInfo, 1);
+      v15 = sub_1C87870(Enumerator, System_Collections_IEnumerator_TypeInfo, 1);
     }
     v16 = (UnityEngine_Component_o *)(*(__int64 (__fastcall **)(System_Collections_IEnumerator_o *, _QWORD))v15)(
                                        Enumerator,
@@ -227,20 +227,20 @@ LABEL_17:
     if ( v16->klass->_2.naturalAligment < (unsigned int)naturalAligment
       || (UnityEngine_Transform_c *)v16->klass->_2.typeHierarchy[naturalAligment - 1] != UnityEngine_Transform_TypeInfo )
     {
-      sub_1C3313C(v16);
+      sub_1C37574(v16);
 LABEL_39:
-      sub_1C32E7C(v16);
+      sub_1C372B4(v16);
     }
     Component_object = UnityEngine_Component__GetComponent_object_(
                          v16,
-                         (const MethodInfo_30D3BC0 *)Method_UnityEngine_Component_GetComponent_UIWidget___);
+                         (const MethodInfo_30DE428 *)Method_UnityEngine_Component_GetComponent_UIWidget___);
     if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
     v20 = UnityEngine_Object__op_Inequality((UnityEngine_Object_o *)Component_object, 0, 0);
     if ( v20 )
     {
       if ( !Component_object )
-        sub_1C32E7C(v20);
+        sub_1C372B4(v20);
       UIWidget__set_depth((UIWidget_o *)Component_object, LODWORD(Component_object[11].klass) + depth, 0);
     }
     if ( flg )
@@ -249,7 +249,7 @@ LABEL_39:
       GameObjectHelper__addNguiDepth(gameObject, depth, 1, v22);
     }
   }
-  v23 = sub_1C32D5C(Enumerator, System_IDisposable_TypeInfo);
+  v23 = sub_1C37194(Enumerator, System_IDisposable_TypeInfo);
   if ( v23 )
   {
     v24 = *(_QWORD *)v23;
@@ -270,7 +270,7 @@ LABEL_39:
     else
     {
 LABEL_34:
-      v28 = sub_1C83438(v23, System_IDisposable_TypeInfo, 0);
+      v28 = sub_1C87870(v23, System_IDisposable_TypeInfo, 0);
     }
     (*(void (__fastcall **)(__int64, _QWORD))v28)(v25, *(_QWORD *)(v28 + 8));
   }

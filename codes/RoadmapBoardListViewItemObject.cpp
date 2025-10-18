@@ -1,9 +1,9 @@
 void RoadmapBoardListViewItemObject___ctor(RoadmapBoardListViewItemObject_o *this, const MethodInfo *method)
 {
-  if ( (byte_4C31A41 & 1) == 0 )
+  if ( (byte_4C3CF91 & 1) == 0 )
   {
-    sub_1C32C20(&ListViewObject_TypeInfo);
-    byte_4C31A41 = 1;
+    sub_1C37058(&ListViewObject_TypeInfo);
+    byte_4C3CF91 = 1;
   }
   if ( !ListViewObject_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(ListViewObject_TypeInfo);
@@ -27,23 +27,23 @@ void RoadmapBoardListViewItemObject__SetItem(
   RoadmapBoardListViewItemDraw_o *itemDraw; // x0
   __int64 naturalAligment; // x9
 
-  if ( (byte_4C31A40 & 1) == 0 )
+  if ( (byte_4C3CF90 & 1) == 0 )
   {
-    sub_1C32C20(&RoadmapBoardListViewItem_TypeInfo);
-    byte_4C31A40 = 1;
+    sub_1C37058(&RoadmapBoardListViewItem_TypeInfo);
+    byte_4C3CF90 = 1;
   }
-  ListViewObject__SetItem_43729388((ListViewObject_o *)this, item, seed, 0);
+  ListViewObject__SetItem_43831492((ListViewObject_o *)this, item, seed, 0);
   itemDraw = this->fields.itemDraw;
   if ( !itemDraw )
 LABEL_9:
-    sub_1C32E7C(itemDraw);
+    sub_1C372B4(itemDraw);
   if ( item )
   {
     naturalAligment = RoadmapBoardListViewItem_TypeInfo->_2.naturalAligment;
     if ( item->klass->_2.naturalAligment < (unsigned int)naturalAligment
       || (RoadmapBoardListViewItem_c *)item->klass->_2.typeHierarchy[naturalAligment - 1] != RoadmapBoardListViewItem_TypeInfo )
     {
-      itemDraw = (RoadmapBoardListViewItemDraw_o *)sub_1C3313C(item);
+      itemDraw = (RoadmapBoardListViewItemDraw_o *)sub_1C37574(item);
       goto LABEL_9;
     }
   }

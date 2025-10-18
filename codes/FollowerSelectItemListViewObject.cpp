@@ -1,9 +1,9 @@
 void FollowerSelectItemListViewObject___ctor(FollowerSelectItemListViewObject_o *this, const MethodInfo *method)
 {
-  if ( (byte_4C32555 & 1) == 0 )
+  if ( (byte_4C3DB3F & 1) == 0 )
   {
-    sub_1C32C20(&ListViewObject_TypeInfo);
-    byte_4C32555 = 1;
+    sub_1C37058(&ListViewObject_TypeInfo);
+    byte_4C3DB3F = 1;
   }
   if ( !ListViewObject_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(ListViewObject_TypeInfo);
@@ -16,20 +16,20 @@ void FollowerSelectItemListViewObject__Awake(FollowerSelectItemListViewObject_o 
   UnityEngine_GameObject_o *dispObject; // x0
   Il2CppObject *Component_object; // x0
 
-  if ( (byte_4C32533 & 1) == 0 )
+  if ( (byte_4C3DB1D & 1) == 0 )
   {
-    sub_1C32C20(&Method_UnityEngine_GameObject_GetComponent_FollowerSelectItemListViewItemDraw___);
-    byte_4C32533 = 1;
+    sub_1C37058(&Method_UnityEngine_GameObject_GetComponent_FollowerSelectItemListViewItemDraw___);
+    byte_4C3DB1D = 1;
   }
   ListViewObject__Awake((ListViewObject_o *)this, 0);
   dispObject = this->fields.dispObject;
   if ( !dispObject )
-    sub_1C32E7C(0);
+    sub_1C372B4(0);
   Component_object = UnityEngine_GameObject__GetComponent_object_(
                        dispObject,
-                       (const MethodInfo_3134970 *)Method_UnityEngine_GameObject_GetComponent_FollowerSelectItemListViewItemDraw___);
+                       (const MethodInfo_313F1D8 *)Method_UnityEngine_GameObject_GetComponent_FollowerSelectItemListViewItemDraw___);
   this->fields.itemDraw = (struct FollowerSelectItemListViewItemDraw_o *)Component_object;
-  sub_1C32BC4(&this->fields.itemDraw, Component_object);
+  sub_1C36FFC(&this->fields.itemDraw, Component_object);
 }
 
 
@@ -44,11 +44,11 @@ void FollowerSelectItemListViewObject__ChangeDisplaySkill(
   struct ListViewItem_o *v8; // x2
   FollowerSelectItemListViewItemDraw_o *v9; // x0
 
-  if ( (byte_4C32553 & 1) == 0 )
+  if ( (byte_4C3DB3D & 1) == 0 )
   {
-    sub_1C32C20(&FollowerSelectItemListViewItem_TypeInfo);
-    sub_1C32C20(&UnityEngine_Object_TypeInfo);
-    byte_4C32553 = 1;
+    sub_1C37058(&FollowerSelectItemListViewItem_TypeInfo);
+    sub_1C37058(&UnityEngine_Object_TypeInfo);
+    byte_4C3DB3D = 1;
   }
   itemDraw = (UnityEngine_Object_o *)this->fields.itemDraw;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -71,7 +71,7 @@ void FollowerSelectItemListViewObject__ChangeDisplaySkill(
     }
     v9 = this->fields.itemDraw;
     if ( !v9 )
-      sub_1C32E7C(0);
+      sub_1C372B4(0);
     FollowerSelectItemListViewItemDraw__ChangeDisplaySkill(v9, displaySkill, (FollowerSelectItemListViewItem_o *)v8, 0);
   }
 }
@@ -85,21 +85,21 @@ UnityEngine_GameObject_o *FollowerSelectItemListViewObject__CreateDragObject(
   UnityEngine_GameObject_o *v4; // x19
   const MethodInfo *v5; // x2
 
-  if ( (byte_4C32539 & 1) == 0 )
+  if ( (byte_4C3DB23 & 1) == 0 )
   {
-    sub_1C32C20(&Method_UnityEngine_GameObject_GetComponent_FollowerSelectItemListViewObject___);
-    byte_4C32539 = 1;
+    sub_1C37058(&Method_UnityEngine_GameObject_GetComponent_FollowerSelectItemListViewObject___);
+    byte_4C3DB23 = 1;
   }
   DragObject = ListViewObject__CreateDragObject((ListViewObject_o *)this, 0);
   if ( !DragObject
     || (v4 = DragObject,
         (DragObject = (UnityEngine_GameObject_o *)UnityEngine_GameObject__GetComponent_object_(
                                                     DragObject,
-                                                    (const MethodInfo_3134970 *)Method_UnityEngine_GameObject_GetComponent_FollowerSelectItemListViewObject___)) == 0) )
+                                                    (const MethodInfo_313F1D8 *)Method_UnityEngine_GameObject_GetComponent_FollowerSelectItemListViewObject___)) == 0) )
   {
-    sub_1C32E7C(DragObject);
+    sub_1C372B4(DragObject);
   }
-  FollowerSelectItemListViewObject__Init_32636708((FollowerSelectItemListViewObject_o *)DragObject, 2, v5);
+  FollowerSelectItemListViewObject__Init_32732340((FollowerSelectItemListViewObject_o *)DragObject, 2, v5);
   return v4;
 }
 
@@ -122,11 +122,11 @@ void FollowerSelectItemListViewObject__EventEnterMove(
   UnityEngine_Vector3_o v14; // 0:s0.4,4:s1.4,8:s2.4
   UnityEngine_Vector3_o v15; // 0:s1.4,4:s2.4,8:s3.4
 
-  if ( (byte_4C32540 & 1) == 0 )
+  if ( (byte_4C3DB2A & 1) == 0 )
   {
-    sub_1C32C20(&ListViewObject_TypeInfo);
-    sub_1C32C20(&StringLiteral_6211/*"EventEnterMove2"*/);
-    byte_4C32540 = 1;
+    sub_1C37058(&ListViewObject_TypeInfo);
+    sub_1C37058(&StringLiteral_6212/*"EventEnterMove2"*/);
+    byte_4C3DB2A = 1;
   }
   dragObject = this->fields.dragObject;
   if ( !dragObject )
@@ -158,15 +158,15 @@ void FollowerSelectItemListViewObject__EventEnterMove(
   dragObject = (UnityEngine_GameObject_o *)TweenPosition__Begin(v6, v5->static_fields->BASE_MOVE_TIME, v15, 0);
   if ( !dragObject )
 LABEL_11:
-    sub_1C32E7C(dragObject);
+    sub_1C372B4(dragObject);
   v10 = dragObject;
   LODWORD(dragObject[1].monitor) = 3;
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
   v10[3].monitor = gameObject;
-  sub_1C32BC4(&v10[3].monitor, gameObject);
-  v12 = StringLiteral_6211/*"EventEnterMove2"*/;
-  v10[3].fields.m_CachedPtr = StringLiteral_6211/*"EventEnterMove2"*/;
-  sub_1C32BC4(&v10[3].fields, v12);
+  sub_1C36FFC(&v10[3].monitor, gameObject);
+  v12 = StringLiteral_6212/*"EventEnterMove2"*/;
+  v10[3].fields.m_CachedPtr = StringLiteral_6212/*"EventEnterMove2"*/;
+  sub_1C36FFC(&v10[3].fields, v12);
 }
 
 
@@ -177,17 +177,17 @@ void FollowerSelectItemListViewObject__EventEnterMove2(
   UnityEngine_Object_o *dragObject; // x21
   const MethodInfo *v4; // x1
 
-  if ( (byte_4C32541 & 1) == 0 )
+  if ( (byte_4C3DB2B & 1) == 0 )
   {
-    sub_1C32C20(&NGUITools_TypeInfo);
-    byte_4C32541 = 1;
+    sub_1C37058(&NGUITools_TypeInfo);
+    byte_4C3DB2B = 1;
   }
   dragObject = (UnityEngine_Object_o *)this->fields.dragObject;
   if ( !NGUITools_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NGUITools_TypeInfo);
   NGUITools__Destroy(dragObject, 0);
   this->fields.dragObject = 0;
-  sub_1C32BC4(&this->fields.dragObject, 0);
+  sub_1C36FFC(&this->fields.dragObject, 0);
   FollowerSelectItemListViewObject__EventMoveEnd(this, v4);
 }
 
@@ -201,11 +201,11 @@ void FollowerSelectItemListViewObject__EventEnterStart(
   UnityEngine_GameObject_o *dragObject; // x0
   const MethodInfo *v7; // x2
 
-  if ( (byte_4C3253F & 1) == 0 )
+  if ( (byte_4C3DB29 & 1) == 0 )
   {
-    sub_1C32C20(&Method_UnityEngine_GameObject_GetComponent_FollowerSelectItemListViewObject___);
-    sub_1C32C20(&StringLiteral_6210/*"EventEnterMove"*/);
-    byte_4C3253F = 1;
+    sub_1C37058(&Method_UnityEngine_GameObject_GetComponent_FollowerSelectItemListViewObject___);
+    sub_1C37058(&StringLiteral_6211/*"EventEnterMove"*/);
+    byte_4C3DB29 = 1;
   }
   this->fields.isBusy = 1;
   this->fields.dispMode = 0;
@@ -215,19 +215,19 @@ void FollowerSelectItemListViewObject__EventEnterStart(
                                             this,
                                             this->klass->vtable._8_CreateDragObject.method);
   this->fields.dragObject = v5;
-  sub_1C32BC4(&this->fields.dragObject, v5);
+  sub_1C36FFC(&this->fields.dragObject, v5);
   dragObject = this->fields.dragObject;
   if ( !dragObject
     || (dragObject = (UnityEngine_GameObject_o *)UnityEngine_GameObject__GetComponent_object_(
                                                    dragObject,
-                                                   (const MethodInfo_3134970 *)Method_UnityEngine_GameObject_GetComponent_FollowerSelectItemListViewObject___)) == 0 )
+                                                   (const MethodInfo_313F1D8 *)Method_UnityEngine_GameObject_GetComponent_FollowerSelectItemListViewObject___)) == 0 )
   {
-    sub_1C32E7C(dragObject);
+    sub_1C372B4(dragObject);
   }
-  FollowerSelectItemListViewObject__Init_32636708((FollowerSelectItemListViewObject_o *)dragObject, 2, v7);
+  FollowerSelectItemListViewObject__Init_32732340((FollowerSelectItemListViewObject_o *)dragObject, 2, v7);
   UnityEngine_MonoBehaviour__Invoke(
     (UnityEngine_MonoBehaviour_o *)this,
-    (System_String_o *)StringLiteral_6210/*"EventEnterMove"*/,
+    (System_String_o *)StringLiteral_6211/*"EventEnterMove"*/,
     delay,
     0);
 }
@@ -253,12 +253,12 @@ void FollowerSelectItemListViewObject__EventExitMove(
   UnityEngine_Vector3_o v16; // 0:s0.4,4:s1.4,8:s2.4
   UnityEngine_Vector3_o v17; // 0:s1.4,4:s2.4,8:s3.4
 
-  if ( (byte_4C32543 & 1) == 0 )
+  if ( (byte_4C3DB2D & 1) == 0 )
   {
-    sub_1C32C20(&ListViewObject_TypeInfo);
-    sub_1C32C20(&UnityEngine_Object_TypeInfo);
-    sub_1C32C20(&StringLiteral_6216/*"EventExitMove2"*/);
-    byte_4C32543 = 1;
+    sub_1C37058(&ListViewObject_TypeInfo);
+    sub_1C37058(&UnityEngine_Object_TypeInfo);
+    sub_1C37058(&StringLiteral_6217/*"EventExitMove2"*/);
+    byte_4C3DB2D = 1;
   }
   dragObject = (UnityEngine_Object_o *)this->fields.dragObject;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -299,15 +299,15 @@ void FollowerSelectItemListViewObject__EventExitMove(
     transform = (UnityEngine_GameObject_o *)TweenPosition__Begin(v7, v8->static_fields->BASE_MOVE_TIME, v17, 0);
     if ( !transform )
 LABEL_15:
-      sub_1C32E7C(transform);
+      sub_1C372B4(transform);
     v12 = transform;
     LODWORD(transform[1].monitor) = 3;
     gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
     v12[3].monitor = gameObject;
-    sub_1C32BC4(&v12[3].monitor, gameObject);
-    v14 = StringLiteral_6216/*"EventExitMove2"*/;
-    v12[3].fields.m_CachedPtr = StringLiteral_6216/*"EventExitMove2"*/;
-    sub_1C32BC4(&v12[3].fields, v14);
+    sub_1C36FFC(&v12[3].monitor, gameObject);
+    v14 = StringLiteral_6217/*"EventExitMove2"*/;
+    v12[3].fields.m_CachedPtr = StringLiteral_6217/*"EventExitMove2"*/;
+    sub_1C36FFC(&v12[3].fields, v14);
   }
 }
 
@@ -319,17 +319,17 @@ void FollowerSelectItemListViewObject__EventExitMove2(
   UnityEngine_Object_o *dragObject; // x21
   const MethodInfo *v4; // x1
 
-  if ( (byte_4C32544 & 1) == 0 )
+  if ( (byte_4C3DB2E & 1) == 0 )
   {
-    sub_1C32C20(&NGUITools_TypeInfo);
-    byte_4C32544 = 1;
+    sub_1C37058(&NGUITools_TypeInfo);
+    byte_4C3DB2E = 1;
   }
   dragObject = (UnityEngine_Object_o *)this->fields.dragObject;
   if ( !NGUITools_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NGUITools_TypeInfo);
   NGUITools__Destroy(dragObject, 0);
   this->fields.dragObject = 0;
-  sub_1C32BC4(&this->fields.dragObject, 0);
+  sub_1C36FFC(&this->fields.dragObject, 0);
   FollowerSelectItemListViewObject__EventMoveEnd(this, v4);
 }
 
@@ -345,12 +345,12 @@ void FollowerSelectItemListViewObject__EventExitStart(
   const MethodInfo *v8; // x1
   const MethodInfo *v9; // x2
 
-  if ( (byte_4C32542 & 1) == 0 )
+  if ( (byte_4C3DB2C & 1) == 0 )
   {
-    sub_1C32C20(&Method_UnityEngine_GameObject_GetComponent_FollowerSelectItemListViewObject___);
-    sub_1C32C20(&UnityEngine_Object_TypeInfo);
-    sub_1C32C20(&StringLiteral_6215/*"EventExitMove"*/);
-    byte_4C32542 = 1;
+    sub_1C37058(&Method_UnityEngine_GameObject_GetComponent_FollowerSelectItemListViewObject___);
+    sub_1C37058(&UnityEngine_Object_TypeInfo);
+    sub_1C37058(&StringLiteral_6216/*"EventExitMove"*/);
+    byte_4C3DB2C = 1;
   }
   this->fields.isBusy = 1;
   this->fields.dispMode = 0;
@@ -360,13 +360,13 @@ void FollowerSelectItemListViewObject__EventExitStart(
                                             this,
                                             this->klass->vtable._8_CreateDragObject.method);
   this->fields.dragObject = v5;
-  sub_1C32BC4(&this->fields.dragObject, v5);
+  sub_1C36FFC(&this->fields.dragObject, v5);
   dragObject = this->fields.dragObject;
   if ( !dragObject )
     goto LABEL_10;
   Component_object = UnityEngine_GameObject__GetComponent_object_(
                        dragObject,
-                       (const MethodInfo_3134970 *)Method_UnityEngine_GameObject_GetComponent_FollowerSelectItemListViewObject___);
+                       (const MethodInfo_313F1D8 *)Method_UnityEngine_GameObject_GetComponent_FollowerSelectItemListViewObject___);
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   dragObject = (UnityEngine_GameObject_o *)UnityEngine_Object__op_Equality(
@@ -380,11 +380,11 @@ void FollowerSelectItemListViewObject__EventExitStart(
   }
   if ( !Component_object )
 LABEL_10:
-    sub_1C32E7C(dragObject);
-  FollowerSelectItemListViewObject__Init_32636708((FollowerSelectItemListViewObject_o *)Component_object, 2, v9);
+    sub_1C372B4(dragObject);
+  FollowerSelectItemListViewObject__Init_32732340((FollowerSelectItemListViewObject_o *)Component_object, 2, v9);
   UnityEngine_MonoBehaviour__Invoke(
     (UnityEngine_MonoBehaviour_o *)this,
-    (System_String_o *)StringLiteral_6215/*"EventExitMove"*/,
+    (System_String_o *)StringLiteral_6216/*"EventExitMove"*/,
     delay,
     0);
 }
@@ -408,11 +408,11 @@ void FollowerSelectItemListViewObject__EventIntoMove(
   UnityEngine_Vector3_o v14; // 0:s0.4,4:s1.4,8:s2.4
   UnityEngine_Vector3_o v15; // 0:s1.4,4:s2.4,8:s3.4
 
-  if ( (byte_4C3253D & 1) == 0 )
+  if ( (byte_4C3DB27 & 1) == 0 )
   {
-    sub_1C32C20(&ListViewObject_TypeInfo);
-    sub_1C32C20(&StringLiteral_6227/*"EventIntoMove2"*/);
-    byte_4C3253D = 1;
+    sub_1C37058(&ListViewObject_TypeInfo);
+    sub_1C37058(&StringLiteral_6228/*"EventIntoMove2"*/);
+    byte_4C3DB27 = 1;
   }
   dragObject = this->fields.dragObject;
   if ( !dragObject )
@@ -444,15 +444,15 @@ void FollowerSelectItemListViewObject__EventIntoMove(
   dragObject = (UnityEngine_GameObject_o *)TweenPosition__Begin(v6, v5->static_fields->BASE_MOVE_TIME, v15, 0);
   if ( !dragObject )
 LABEL_11:
-    sub_1C32E7C(dragObject);
+    sub_1C372B4(dragObject);
   v10 = dragObject;
   LODWORD(dragObject[1].monitor) = 3;
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
   v10[3].monitor = gameObject;
-  sub_1C32BC4(&v10[3].monitor, gameObject);
-  v12 = StringLiteral_6227/*"EventIntoMove2"*/;
-  v10[3].fields.m_CachedPtr = StringLiteral_6227/*"EventIntoMove2"*/;
-  sub_1C32BC4(&v10[3].fields, v12);
+  sub_1C36FFC(&v10[3].monitor, gameObject);
+  v12 = StringLiteral_6228/*"EventIntoMove2"*/;
+  v10[3].fields.m_CachedPtr = StringLiteral_6228/*"EventIntoMove2"*/;
+  sub_1C36FFC(&v10[3].fields, v12);
 }
 
 
@@ -464,10 +464,10 @@ void FollowerSelectItemListViewObject__EventIntoMove2(
   UnityEngine_Object_o *dragObject; // x21
   const MethodInfo *v5; // x1
 
-  if ( (byte_4C3253E & 1) == 0 )
+  if ( (byte_4C3DB28 & 1) == 0 )
   {
-    sub_1C32C20(&NGUITools_TypeInfo);
-    byte_4C3253E = 1;
+    sub_1C37058(&NGUITools_TypeInfo);
+    byte_4C3DB28 = 1;
   }
   ListViewObject__SetVisible((ListViewObject_o *)this, 1, 0);
   this->fields.dispMode = 2;
@@ -477,7 +477,7 @@ void FollowerSelectItemListViewObject__EventIntoMove2(
     j_il2cpp_runtime_class_init_0(NGUITools_TypeInfo);
   NGUITools__Destroy(dragObject, 0);
   this->fields.dragObject = 0;
-  sub_1C32BC4(&this->fields.dragObject, 0);
+  sub_1C36FFC(&this->fields.dragObject, 0);
   FollowerSelectItemListViewObject__EventMoveEnd(this, v5);
 }
 
@@ -494,11 +494,11 @@ void FollowerSelectItemListViewObject__EventIntoStart(
   UnityEngine_Transform_o *transform; // x20
   UnityEngine_Vector3_o v10; // 0:s0.4,4:s1.4,8:s2.4
 
-  if ( (byte_4C3253C & 1) == 0 )
+  if ( (byte_4C3DB26 & 1) == 0 )
   {
-    sub_1C32C20(&Method_UnityEngine_GameObject_GetComponent_FollowerSelectItemListViewObject___);
-    sub_1C32C20(&StringLiteral_6226/*"EventIntoMove"*/);
-    byte_4C3253C = 1;
+    sub_1C37058(&Method_UnityEngine_GameObject_GetComponent_FollowerSelectItemListViewObject___);
+    sub_1C37058(&StringLiteral_6227/*"EventIntoMove"*/);
+    byte_4C3DB26 = 1;
   }
   this->fields.isBusy = 1;
   this->fields.dispMode = 0;
@@ -509,27 +509,27 @@ void FollowerSelectItemListViewObject__EventIntoStart(
                                             this->klass->vtable._8_CreateDragObject.method);
   this->fields.dragObject = v5;
   p_dragObject = &this->fields.dragObject;
-  sub_1C32BC4(&this->fields.dragObject, v5);
+  sub_1C36FFC(&this->fields.dragObject, v5);
   dragObject = this->fields.dragObject;
   if ( !dragObject
     || (dragObject = (UnityEngine_GameObject_o *)UnityEngine_GameObject__GetComponent_object_(
                                                    dragObject,
-                                                   (const MethodInfo_3134970 *)Method_UnityEngine_GameObject_GetComponent_FollowerSelectItemListViewObject___)) == 0
-    || (FollowerSelectItemListViewObject__Init_32636708((FollowerSelectItemListViewObject_o *)dragObject, 2, v8),
+                                                   (const MethodInfo_313F1D8 *)Method_UnityEngine_GameObject_GetComponent_FollowerSelectItemListViewObject___)) == 0
+    || (FollowerSelectItemListViewObject__Init_32732340((FollowerSelectItemListViewObject_o *)dragObject, 2, v8),
         (dragObject = *p_dragObject) == 0)
     || (transform = UnityEngine_GameObject__get_transform(dragObject, 0),
         (dragObject = (UnityEngine_GameObject_o *)UnityEngine_Component__get_transform(
                                                     (UnityEngine_Component_o *)this,
                                                     0)) == 0)
-    || (v10 = UnityEngine_Transform__TransformPoint_71250240((UnityEngine_Transform_o *)dragObject, 1100.0, 0.0, 0.0, 0),
+    || (v10 = UnityEngine_Transform__TransformPoint_71293352((UnityEngine_Transform_o *)dragObject, 1100.0, 0.0, 0.0, 0),
         !transform) )
   {
-    sub_1C32E7C(dragObject);
+    sub_1C372B4(dragObject);
   }
   UnityEngine_Transform__set_position(transform, v10, 0);
   UnityEngine_MonoBehaviour__Invoke(
     (UnityEngine_MonoBehaviour_o *)this,
-    (System_String_o *)StringLiteral_6226/*"EventIntoMove"*/,
+    (System_String_o *)StringLiteral_6227/*"EventIntoMove"*/,
     delay,
     0);
 }
@@ -549,7 +549,7 @@ void FollowerSelectItemListViewObject__EventMoveEnd(FollowerSelectItemListViewOb
   if ( callbackFunc )
   {
     *p_callbackFunc = 0;
-    sub_1C32BC4(p_callbackFunc, 0);
+    sub_1C36FFC(p_callbackFunc, 0);
     ((void (__fastcall *)(intptr_t, intptr_t))v3->fields.invoke_impl)(v3->fields.method_code, v3->fields.method);
   }
 }
@@ -562,10 +562,10 @@ FollowerSelectItemListViewItem_o *FollowerSelectItemListViewObject__GetItem(
   struct ListViewItem_o *linkItem; // x8
   __int64 naturalAligment; // x11
 
-  if ( (byte_4C32536 & 1) == 0 )
+  if ( (byte_4C3DB20 & 1) == 0 )
   {
-    sub_1C32C20(&FollowerSelectItemListViewItem_TypeInfo);
-    byte_4C32536 = 1;
+    sub_1C37058(&FollowerSelectItemListViewItem_TypeInfo);
+    byte_4C3DB20 = 1;
   }
   linkItem = this->fields.linkItem;
   if ( !linkItem )
@@ -599,10 +599,10 @@ void FollowerSelectItemListViewObject__Init(
   int32_t v18; // w8
   struct System_Action_o *v19; // x19
 
-  if ( (byte_4C3253A & 1) == 0 )
+  if ( (byte_4C3DB24 & 1) == 0 )
   {
-    sub_1C32C20(&FollowerSelectItemListViewItem_TypeInfo);
-    byte_4C3253A = 1;
+    sub_1C37058(&FollowerSelectItemListViewItem_TypeInfo);
+    byte_4C3DB24 = 1;
   }
   if ( initMode == 5 )
   {
@@ -631,12 +631,12 @@ void FollowerSelectItemListViewObject__Init(
       || (UnityEngine_Transform__set_localPosition(transform, this->fields.basePosition, 0),
           (transform = UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0)) == 0) )
     {
-      sub_1C32E7C(transform);
+      sub_1C372B4(transform);
     }
     UnityEngine_Transform__set_localScale(transform, this->fields.baseScale, 0);
     this->fields.callbackFunc = callbackFunc;
     p_callbackFunc = &this->fields.callbackFunc;
-    sub_1C32BC4(&this->fields.callbackFunc, callbackFunc);
+    sub_1C36FFC(&this->fields.callbackFunc, callbackFunc);
     switch ( v12 )
     {
       case 0:
@@ -670,7 +670,7 @@ LABEL_23:
         if ( *p_callbackFunc )
         {
           *p_callbackFunc = 0;
-          sub_1C32BC4(p_callbackFunc, 0);
+          sub_1C36FFC(p_callbackFunc, 0);
           ((void (__fastcall *)(intptr_t, intptr_t))v19->fields.invoke_impl)(
             v19->fields.method_code,
             v19->fields.method);
@@ -688,7 +688,7 @@ void FollowerSelectItemListViewObject__InitItem(FollowerSelectItemListViewObject
 
 
 // local variable allocation has failed, the output may be wrong!
-void FollowerSelectItemListViewObject__Init_32636708(
+void FollowerSelectItemListViewObject__Init_32732340(
         FollowerSelectItemListViewObject_o *this,
         int32_t initMode,
         const MethodInfo *method)
@@ -696,17 +696,17 @@ void FollowerSelectItemListViewObject__Init_32636708(
   const MethodInfo *v3; // x3
   int v4; // s1 OVERLAPPED
 
-  if ( !byte_4C313D1 )
+  if ( !byte_4C3C921 )
   {
-    sub_1C32C20(&UnityEngine_Vector3_TypeInfo);
-    byte_4C313D1 = 1;
+    sub_1C37058(&UnityEngine_Vector3_TypeInfo);
+    byte_4C3C921 = 1;
   }
   FollowerSelectItemListViewObject__Init(this, initMode, 0, 0.0, *(UnityEngine_Vector3_o *)&v4, v3);
 }
 
 
 // local variable allocation has failed, the output may be wrong!
-void FollowerSelectItemListViewObject__Init_32638928(
+void FollowerSelectItemListViewObject__Init_32734560(
         FollowerSelectItemListViewObject_o *this,
         int32_t initMode,
         System_Action_o *callbackFunc,
@@ -715,17 +715,17 @@ void FollowerSelectItemListViewObject__Init_32638928(
 {
   int v5; // s1 OVERLAPPED
 
-  if ( !byte_4C313D1 )
+  if ( !byte_4C3C921 )
   {
-    sub_1C32C20(&UnityEngine_Vector3_TypeInfo);
-    byte_4C313D1 = 1;
+    sub_1C37058(&UnityEngine_Vector3_TypeInfo);
+    byte_4C3C921 = 1;
   }
   FollowerSelectItemListViewObject__Init(this, initMode, callbackFunc, delay, *(UnityEngine_Vector3_o *)&v5, method);
 }
 
 
 // local variable allocation has failed, the output may be wrong!
-void FollowerSelectItemListViewObject__Init_32639028(
+void FollowerSelectItemListViewObject__Init_32734660(
         FollowerSelectItemListViewObject_o *this,
         int32_t initMode,
         System_Action_o *callbackFunc,
@@ -733,10 +733,10 @@ void FollowerSelectItemListViewObject__Init_32639028(
 {
   int v4; // s1 OVERLAPPED
 
-  if ( !byte_4C313D1 )
+  if ( !byte_4C3C921 )
   {
-    sub_1C32C20(&UnityEngine_Vector3_TypeInfo);
-    byte_4C313D1 = 1;
+    sub_1C37058(&UnityEngine_Vector3_TypeInfo);
+    byte_4C3C921 = 1;
   }
   FollowerSelectItemListViewObject__Init(this, initMode, callbackFunc, 0.0, *(UnityEngine_Vector3_o *)&v4, method);
 }
@@ -748,17 +748,17 @@ void FollowerSelectItemListViewObject__OnClickSelect(
 {
   UnityEngine_Component_o *manager; // x0
 
-  if ( (byte_4C32545 & 1) == 0 )
+  if ( (byte_4C3DB2F & 1) == 0 )
   {
-    sub_1C32C20(&StringLiteral_9867/*"OnClickSelectListView"*/);
-    byte_4C32545 = 1;
+    sub_1C37058(&StringLiteral_9868/*"OnClickSelectListView"*/);
+    byte_4C3DB2F = 1;
   }
   if ( this->fields.linkItem )
   {
     manager = (UnityEngine_Component_o *)this->fields.manager;
     if ( !manager )
-      sub_1C32E7C(0);
-    UnityEngine_Component__SendMessage(manager, (System_String_o *)StringLiteral_9867/*"OnClickSelectListView"*/, (Il2CppObject *)this, 0);
+      sub_1C372B4(0);
+    UnityEngine_Component__SendMessage(manager, (System_String_o *)StringLiteral_9868/*"OnClickSelectListView"*/, (Il2CppObject *)this, 0);
   }
 }
 
@@ -769,17 +769,17 @@ void FollowerSelectItemListViewObject__OnClickSupport(
 {
   UnityEngine_Component_o *manager; // x0
 
-  if ( (byte_4C32552 & 1) == 0 )
+  if ( (byte_4C3DB3C & 1) == 0 )
   {
-    sub_1C32C20(&StringLiteral_9874/*"OnClickSupportListView"*/);
-    byte_4C32552 = 1;
+    sub_1C37058(&StringLiteral_9875/*"OnClickSupportListView"*/);
+    byte_4C3DB3C = 1;
   }
   if ( this->fields.linkItem )
   {
     manager = (UnityEngine_Component_o *)this->fields.manager;
     if ( !manager )
-      sub_1C32E7C(0);
-    UnityEngine_Component__SendMessage(manager, (System_String_o *)StringLiteral_9874/*"OnClickSupportListView"*/, (Il2CppObject *)this, 0);
+      sub_1C372B4(0);
+    UnityEngine_Component__SendMessage(manager, (System_String_o *)StringLiteral_9875/*"OnClickSupportListView"*/, (Il2CppObject *)this, 0);
   }
 }
 
@@ -791,11 +791,11 @@ void FollowerSelectItemListViewObject__OnDestroy(FollowerSelectItemListViewObjec
   struct UnityEngine_GameObject_o *dragObject; // t1
   UnityEngine_Object_o *v6; // x20
 
-  if ( (byte_4C32535 & 1) == 0 )
+  if ( (byte_4C3DB1F & 1) == 0 )
   {
-    sub_1C32C20(&NGUITools_TypeInfo);
-    sub_1C32C20(&UnityEngine_Object_TypeInfo);
-    byte_4C32535 = 1;
+    sub_1C37058(&NGUITools_TypeInfo);
+    sub_1C37058(&UnityEngine_Object_TypeInfo);
+    byte_4C3DB1F = 1;
   }
   dragObject = this->fields.dragObject;
   p_dragObject = &this->fields.dragObject;
@@ -809,7 +809,7 @@ void FollowerSelectItemListViewObject__OnDestroy(FollowerSelectItemListViewObjec
       j_il2cpp_runtime_class_init_0(NGUITools_TypeInfo);
     NGUITools__Destroy(v6, 0);
     *p_dragObject = 0;
-    sub_1C32BC4(p_dragObject, 0);
+    sub_1C36FFC(p_dragObject, 0);
   }
 }
 
@@ -818,24 +818,24 @@ void FollowerSelectItemListViewObject__OnLongPush(FollowerSelectItemListViewObje
 {
   UnityEngine_GameObject_o *gameObject; // x0
 
-  if ( (byte_4C32546 & 1) == 0 )
+  if ( (byte_4C3DB30 & 1) == 0 )
   {
-    sub_1C32C20(&StringLiteral_9927/*"OnLongPushListView"*/);
-    sub_1C32C20(&StringLiteral_9945/*"OnPressCancel"*/);
-    byte_4C32546 = 1;
+    sub_1C37058(&StringLiteral_9928/*"OnLongPushListView"*/);
+    sub_1C37058(&StringLiteral_9946/*"OnPressCancel"*/);
+    byte_4C3DB30 = 1;
   }
   if ( this->fields.linkItem )
   {
     gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
     if ( !gameObject
-      || (UnityEngine_GameObject__SendMessage_71205516(gameObject, (System_String_o *)StringLiteral_9945/*"OnPressCancel"*/, 0),
+      || (UnityEngine_GameObject__SendMessage_71248628(gameObject, (System_String_o *)StringLiteral_9946/*"OnPressCancel"*/, 0),
           (gameObject = (UnityEngine_GameObject_o *)this->fields.manager) == 0) )
     {
-      sub_1C32E7C(gameObject);
+      sub_1C372B4(gameObject);
     }
     UnityEngine_Component__SendMessage(
       (UnityEngine_Component_o *)gameObject,
-      (System_String_o *)StringLiteral_9927/*"OnLongPushListView"*/,
+      (System_String_o *)StringLiteral_9928/*"OnLongPushListView"*/,
       (Il2CppObject *)this,
       0);
   }
@@ -849,12 +849,12 @@ void FollowerSelectItemListViewObject__OnLongPushAppendSkill1(
   FollowerSelectItemListViewItem_o *linkItem; // x0
   __int64 naturalAligment; // x10
 
-  if ( (byte_4C3254D & 1) == 0 )
+  if ( (byte_4C3DB37 & 1) == 0 )
   {
-    sub_1C32C20(&FollowerSelectItemListViewItem_TypeInfo);
-    sub_1C32C20(&StringLiteral_9945/*"OnPressCancel"*/);
-    sub_1C32C20(&StringLiteral_9922/*"OnLongPushAppendSkill1ListView"*/);
-    byte_4C3254D = 1;
+    sub_1C37058(&FollowerSelectItemListViewItem_TypeInfo);
+    sub_1C37058(&StringLiteral_9946/*"OnPressCancel"*/);
+    sub_1C37058(&StringLiteral_9923/*"OnLongPushAppendSkill1ListView"*/);
+    byte_4C3DB37 = 1;
   }
   linkItem = (FollowerSelectItemListViewItem_o *)this->fields.linkItem;
   if ( linkItem )
@@ -873,16 +873,16 @@ void FollowerSelectItemListViewObject__OnLongPushAppendSkill1(
                                                          0);
         if ( linkItem )
         {
-          UnityEngine_GameObject__SendMessage_71205516(
+          UnityEngine_GameObject__SendMessage_71248628(
             (UnityEngine_GameObject_o *)linkItem,
-            (System_String_o *)StringLiteral_9945/*"OnPressCancel"*/,
+            (System_String_o *)StringLiteral_9946/*"OnPressCancel"*/,
             0);
           linkItem = (FollowerSelectItemListViewItem_o *)this->fields.manager;
           if ( linkItem )
           {
             UnityEngine_Component__SendMessage(
               (UnityEngine_Component_o *)linkItem,
-              (System_String_o *)StringLiteral_9922/*"OnLongPushAppendSkill1ListView"*/,
+              (System_String_o *)StringLiteral_9923/*"OnLongPushAppendSkill1ListView"*/,
               (Il2CppObject *)this,
               0);
             return;
@@ -890,7 +890,7 @@ void FollowerSelectItemListViewObject__OnLongPushAppendSkill1(
         }
       }
     }
-    sub_1C32E7C(linkItem);
+    sub_1C372B4(linkItem);
   }
 }
 
@@ -902,12 +902,12 @@ void FollowerSelectItemListViewObject__OnLongPushAppendSkill2(
   FollowerSelectItemListViewItem_o *linkItem; // x0
   __int64 naturalAligment; // x10
 
-  if ( (byte_4C3254E & 1) == 0 )
+  if ( (byte_4C3DB38 & 1) == 0 )
   {
-    sub_1C32C20(&FollowerSelectItemListViewItem_TypeInfo);
-    sub_1C32C20(&StringLiteral_9923/*"OnLongPushAppendSkill2ListView"*/);
-    sub_1C32C20(&StringLiteral_9945/*"OnPressCancel"*/);
-    byte_4C3254E = 1;
+    sub_1C37058(&FollowerSelectItemListViewItem_TypeInfo);
+    sub_1C37058(&StringLiteral_9924/*"OnLongPushAppendSkill2ListView"*/);
+    sub_1C37058(&StringLiteral_9946/*"OnPressCancel"*/);
+    byte_4C3DB38 = 1;
   }
   linkItem = (FollowerSelectItemListViewItem_o *)this->fields.linkItem;
   if ( linkItem )
@@ -926,16 +926,16 @@ void FollowerSelectItemListViewObject__OnLongPushAppendSkill2(
                                                          0);
         if ( linkItem )
         {
-          UnityEngine_GameObject__SendMessage_71205516(
+          UnityEngine_GameObject__SendMessage_71248628(
             (UnityEngine_GameObject_o *)linkItem,
-            (System_String_o *)StringLiteral_9945/*"OnPressCancel"*/,
+            (System_String_o *)StringLiteral_9946/*"OnPressCancel"*/,
             0);
           linkItem = (FollowerSelectItemListViewItem_o *)this->fields.manager;
           if ( linkItem )
           {
             UnityEngine_Component__SendMessage(
               (UnityEngine_Component_o *)linkItem,
-              (System_String_o *)StringLiteral_9923/*"OnLongPushAppendSkill2ListView"*/,
+              (System_String_o *)StringLiteral_9924/*"OnLongPushAppendSkill2ListView"*/,
               (Il2CppObject *)this,
               0);
             return;
@@ -943,7 +943,7 @@ void FollowerSelectItemListViewObject__OnLongPushAppendSkill2(
         }
       }
     }
-    sub_1C32E7C(linkItem);
+    sub_1C372B4(linkItem);
   }
 }
 
@@ -955,12 +955,12 @@ void FollowerSelectItemListViewObject__OnLongPushAppendSkill3(
   FollowerSelectItemListViewItem_o *linkItem; // x0
   __int64 naturalAligment; // x10
 
-  if ( (byte_4C3254F & 1) == 0 )
+  if ( (byte_4C3DB39 & 1) == 0 )
   {
-    sub_1C32C20(&FollowerSelectItemListViewItem_TypeInfo);
-    sub_1C32C20(&StringLiteral_9924/*"OnLongPushAppendSkill3ListView"*/);
-    sub_1C32C20(&StringLiteral_9945/*"OnPressCancel"*/);
-    byte_4C3254F = 1;
+    sub_1C37058(&FollowerSelectItemListViewItem_TypeInfo);
+    sub_1C37058(&StringLiteral_9925/*"OnLongPushAppendSkill3ListView"*/);
+    sub_1C37058(&StringLiteral_9946/*"OnPressCancel"*/);
+    byte_4C3DB39 = 1;
   }
   linkItem = (FollowerSelectItemListViewItem_o *)this->fields.linkItem;
   if ( linkItem )
@@ -979,16 +979,16 @@ void FollowerSelectItemListViewObject__OnLongPushAppendSkill3(
                                                          0);
         if ( linkItem )
         {
-          UnityEngine_GameObject__SendMessage_71205516(
+          UnityEngine_GameObject__SendMessage_71248628(
             (UnityEngine_GameObject_o *)linkItem,
-            (System_String_o *)StringLiteral_9945/*"OnPressCancel"*/,
+            (System_String_o *)StringLiteral_9946/*"OnPressCancel"*/,
             0);
           linkItem = (FollowerSelectItemListViewItem_o *)this->fields.manager;
           if ( linkItem )
           {
             UnityEngine_Component__SendMessage(
               (UnityEngine_Component_o *)linkItem,
-              (System_String_o *)StringLiteral_9924/*"OnLongPushAppendSkill3ListView"*/,
+              (System_String_o *)StringLiteral_9925/*"OnLongPushAppendSkill3ListView"*/,
               (Il2CppObject *)this,
               0);
             return;
@@ -996,7 +996,7 @@ void FollowerSelectItemListViewObject__OnLongPushAppendSkill3(
         }
       }
     }
-    sub_1C32E7C(linkItem);
+    sub_1C372B4(linkItem);
   }
 }
 
@@ -1008,12 +1008,12 @@ void FollowerSelectItemListViewObject__OnLongPushAppendSkill4(
   FollowerSelectItemListViewItem_o *linkItem; // x0
   __int64 naturalAligment; // x10
 
-  if ( (byte_4C32550 & 1) == 0 )
+  if ( (byte_4C3DB3A & 1) == 0 )
   {
-    sub_1C32C20(&FollowerSelectItemListViewItem_TypeInfo);
-    sub_1C32C20(&StringLiteral_9945/*"OnPressCancel"*/);
-    sub_1C32C20(&StringLiteral_9925/*"OnLongPushAppendSkill4ListView"*/);
-    byte_4C32550 = 1;
+    sub_1C37058(&FollowerSelectItemListViewItem_TypeInfo);
+    sub_1C37058(&StringLiteral_9946/*"OnPressCancel"*/);
+    sub_1C37058(&StringLiteral_9926/*"OnLongPushAppendSkill4ListView"*/);
+    byte_4C3DB3A = 1;
   }
   linkItem = (FollowerSelectItemListViewItem_o *)this->fields.linkItem;
   if ( linkItem )
@@ -1032,16 +1032,16 @@ void FollowerSelectItemListViewObject__OnLongPushAppendSkill4(
                                                          0);
         if ( linkItem )
         {
-          UnityEngine_GameObject__SendMessage_71205516(
+          UnityEngine_GameObject__SendMessage_71248628(
             (UnityEngine_GameObject_o *)linkItem,
-            (System_String_o *)StringLiteral_9945/*"OnPressCancel"*/,
+            (System_String_o *)StringLiteral_9946/*"OnPressCancel"*/,
             0);
           linkItem = (FollowerSelectItemListViewItem_o *)this->fields.manager;
           if ( linkItem )
           {
             UnityEngine_Component__SendMessage(
               (UnityEngine_Component_o *)linkItem,
-              (System_String_o *)StringLiteral_9925/*"OnLongPushAppendSkill4ListView"*/,
+              (System_String_o *)StringLiteral_9926/*"OnLongPushAppendSkill4ListView"*/,
               (Il2CppObject *)this,
               0);
             return;
@@ -1049,7 +1049,7 @@ void FollowerSelectItemListViewObject__OnLongPushAppendSkill4(
         }
       }
     }
-    sub_1C32E7C(linkItem);
+    sub_1C372B4(linkItem);
   }
 }
 
@@ -1061,12 +1061,12 @@ void FollowerSelectItemListViewObject__OnLongPushAppendSkill5(
   FollowerSelectItemListViewItem_o *linkItem; // x0
   __int64 naturalAligment; // x10
 
-  if ( (byte_4C32551 & 1) == 0 )
+  if ( (byte_4C3DB3B & 1) == 0 )
   {
-    sub_1C32C20(&FollowerSelectItemListViewItem_TypeInfo);
-    sub_1C32C20(&StringLiteral_9926/*"OnLongPushAppendSkill5ListView"*/);
-    sub_1C32C20(&StringLiteral_9945/*"OnPressCancel"*/);
-    byte_4C32551 = 1;
+    sub_1C37058(&FollowerSelectItemListViewItem_TypeInfo);
+    sub_1C37058(&StringLiteral_9927/*"OnLongPushAppendSkill5ListView"*/);
+    sub_1C37058(&StringLiteral_9946/*"OnPressCancel"*/);
+    byte_4C3DB3B = 1;
   }
   linkItem = (FollowerSelectItemListViewItem_o *)this->fields.linkItem;
   if ( linkItem )
@@ -1085,16 +1085,16 @@ void FollowerSelectItemListViewObject__OnLongPushAppendSkill5(
                                                          0);
         if ( linkItem )
         {
-          UnityEngine_GameObject__SendMessage_71205516(
+          UnityEngine_GameObject__SendMessage_71248628(
             (UnityEngine_GameObject_o *)linkItem,
-            (System_String_o *)StringLiteral_9945/*"OnPressCancel"*/,
+            (System_String_o *)StringLiteral_9946/*"OnPressCancel"*/,
             0);
           linkItem = (FollowerSelectItemListViewItem_o *)this->fields.manager;
           if ( linkItem )
           {
             UnityEngine_Component__SendMessage(
               (UnityEngine_Component_o *)linkItem,
-              (System_String_o *)StringLiteral_9926/*"OnLongPushAppendSkill5ListView"*/,
+              (System_String_o *)StringLiteral_9927/*"OnLongPushAppendSkill5ListView"*/,
               (Il2CppObject *)this,
               0);
             return;
@@ -1102,7 +1102,7 @@ void FollowerSelectItemListViewObject__OnLongPushAppendSkill5(
         }
       }
     }
-    sub_1C32E7C(linkItem);
+    sub_1C372B4(linkItem);
   }
 }
 
@@ -1113,25 +1113,25 @@ void FollowerSelectItemListViewObject__OnLongPushEquip(
 {
   UnityEngine_GameObject_o *gameObject; // x0
 
-  if ( (byte_4C32547 & 1) == 0 )
+  if ( (byte_4C3DB31 & 1) == 0 )
   {
-    sub_1C32C20(&StringLiteral_9928/*"OnLongPushServantEquip"*/);
-    sub_1C32C20(&StringLiteral_9945/*"OnPressCancel"*/);
-    byte_4C32547 = 1;
+    sub_1C37058(&StringLiteral_9929/*"OnLongPushServantEquip"*/);
+    sub_1C37058(&StringLiteral_9946/*"OnPressCancel"*/);
+    byte_4C3DB31 = 1;
   }
   if ( this->fields.linkItem )
   {
     this->fields._EquipIdx_k__BackingField = 0;
     gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
     if ( !gameObject
-      || (UnityEngine_GameObject__SendMessage_71205516(gameObject, (System_String_o *)StringLiteral_9945/*"OnPressCancel"*/, 0),
+      || (UnityEngine_GameObject__SendMessage_71248628(gameObject, (System_String_o *)StringLiteral_9946/*"OnPressCancel"*/, 0),
           (gameObject = (UnityEngine_GameObject_o *)this->fields.manager) == 0) )
     {
-      sub_1C32E7C(gameObject);
+      sub_1C372B4(gameObject);
     }
     UnityEngine_Component__SendMessage(
       (UnityEngine_Component_o *)gameObject,
-      (System_String_o *)StringLiteral_9928/*"OnLongPushServantEquip"*/,
+      (System_String_o *)StringLiteral_9929/*"OnLongPushServantEquip"*/,
       (Il2CppObject *)this,
       0);
   }
@@ -1144,25 +1144,25 @@ void FollowerSelectItemListViewObject__OnLongPushEquip2(
 {
   UnityEngine_GameObject_o *gameObject; // x0
 
-  if ( (byte_4C32548 & 1) == 0 )
+  if ( (byte_4C3DB32 & 1) == 0 )
   {
-    sub_1C32C20(&StringLiteral_9928/*"OnLongPushServantEquip"*/);
-    sub_1C32C20(&StringLiteral_9945/*"OnPressCancel"*/);
-    byte_4C32548 = 1;
+    sub_1C37058(&StringLiteral_9929/*"OnLongPushServantEquip"*/);
+    sub_1C37058(&StringLiteral_9946/*"OnPressCancel"*/);
+    byte_4C3DB32 = 1;
   }
   if ( this->fields.linkItem )
   {
     this->fields._EquipIdx_k__BackingField = 1;
     gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
     if ( !gameObject
-      || (UnityEngine_GameObject__SendMessage_71205516(gameObject, (System_String_o *)StringLiteral_9945/*"OnPressCancel"*/, 0),
+      || (UnityEngine_GameObject__SendMessage_71248628(gameObject, (System_String_o *)StringLiteral_9946/*"OnPressCancel"*/, 0),
           (gameObject = (UnityEngine_GameObject_o *)this->fields.manager) == 0) )
     {
-      sub_1C32E7C(gameObject);
+      sub_1C372B4(gameObject);
     }
     UnityEngine_Component__SendMessage(
       (UnityEngine_Component_o *)gameObject,
-      (System_String_o *)StringLiteral_9928/*"OnLongPushServantEquip"*/,
+      (System_String_o *)StringLiteral_9929/*"OnLongPushServantEquip"*/,
       (Il2CppObject *)this,
       0);
   }
@@ -1175,25 +1175,25 @@ void FollowerSelectItemListViewObject__OnLongPushEquip3(
 {
   UnityEngine_GameObject_o *gameObject; // x0
 
-  if ( (byte_4C32549 & 1) == 0 )
+  if ( (byte_4C3DB33 & 1) == 0 )
   {
-    sub_1C32C20(&StringLiteral_9928/*"OnLongPushServantEquip"*/);
-    sub_1C32C20(&StringLiteral_9945/*"OnPressCancel"*/);
-    byte_4C32549 = 1;
+    sub_1C37058(&StringLiteral_9929/*"OnLongPushServantEquip"*/);
+    sub_1C37058(&StringLiteral_9946/*"OnPressCancel"*/);
+    byte_4C3DB33 = 1;
   }
   if ( this->fields.linkItem )
   {
     this->fields._EquipIdx_k__BackingField = 2;
     gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
     if ( !gameObject
-      || (UnityEngine_GameObject__SendMessage_71205516(gameObject, (System_String_o *)StringLiteral_9945/*"OnPressCancel"*/, 0),
+      || (UnityEngine_GameObject__SendMessage_71248628(gameObject, (System_String_o *)StringLiteral_9946/*"OnPressCancel"*/, 0),
           (gameObject = (UnityEngine_GameObject_o *)this->fields.manager) == 0) )
     {
-      sub_1C32E7C(gameObject);
+      sub_1C372B4(gameObject);
     }
     UnityEngine_Component__SendMessage(
       (UnityEngine_Component_o *)gameObject,
-      (System_String_o *)StringLiteral_9928/*"OnLongPushServantEquip"*/,
+      (System_String_o *)StringLiteral_9929/*"OnLongPushServantEquip"*/,
       (Il2CppObject *)this,
       0);
   }
@@ -1207,12 +1207,12 @@ void FollowerSelectItemListViewObject__OnLongPushSkill1(
   FollowerSelectItemListViewItem_o *linkItem; // x0
   __int64 naturalAligment; // x10
 
-  if ( (byte_4C3254A & 1) == 0 )
+  if ( (byte_4C3DB34 & 1) == 0 )
   {
-    sub_1C32C20(&FollowerSelectItemListViewItem_TypeInfo);
-    sub_1C32C20(&StringLiteral_9929/*"OnLongPushSkill1ListView"*/);
-    sub_1C32C20(&StringLiteral_9945/*"OnPressCancel"*/);
-    byte_4C3254A = 1;
+    sub_1C37058(&FollowerSelectItemListViewItem_TypeInfo);
+    sub_1C37058(&StringLiteral_9930/*"OnLongPushSkill1ListView"*/);
+    sub_1C37058(&StringLiteral_9946/*"OnPressCancel"*/);
+    byte_4C3DB34 = 1;
   }
   linkItem = (FollowerSelectItemListViewItem_o *)this->fields.linkItem;
   if ( linkItem )
@@ -1231,16 +1231,16 @@ void FollowerSelectItemListViewObject__OnLongPushSkill1(
                                                          0);
         if ( linkItem )
         {
-          UnityEngine_GameObject__SendMessage_71205516(
+          UnityEngine_GameObject__SendMessage_71248628(
             (UnityEngine_GameObject_o *)linkItem,
-            (System_String_o *)StringLiteral_9945/*"OnPressCancel"*/,
+            (System_String_o *)StringLiteral_9946/*"OnPressCancel"*/,
             0);
           linkItem = (FollowerSelectItemListViewItem_o *)this->fields.manager;
           if ( linkItem )
           {
             UnityEngine_Component__SendMessage(
               (UnityEngine_Component_o *)linkItem,
-              (System_String_o *)StringLiteral_9929/*"OnLongPushSkill1ListView"*/,
+              (System_String_o *)StringLiteral_9930/*"OnLongPushSkill1ListView"*/,
               (Il2CppObject *)this,
               0);
             return;
@@ -1248,7 +1248,7 @@ void FollowerSelectItemListViewObject__OnLongPushSkill1(
         }
       }
     }
-    sub_1C32E7C(linkItem);
+    sub_1C372B4(linkItem);
   }
 }
 
@@ -1260,12 +1260,12 @@ void FollowerSelectItemListViewObject__OnLongPushSkill2(
   FollowerSelectItemListViewItem_o *linkItem; // x0
   __int64 naturalAligment; // x10
 
-  if ( (byte_4C3254B & 1) == 0 )
+  if ( (byte_4C3DB35 & 1) == 0 )
   {
-    sub_1C32C20(&FollowerSelectItemListViewItem_TypeInfo);
-    sub_1C32C20(&StringLiteral_9930/*"OnLongPushSkill2ListView"*/);
-    sub_1C32C20(&StringLiteral_9945/*"OnPressCancel"*/);
-    byte_4C3254B = 1;
+    sub_1C37058(&FollowerSelectItemListViewItem_TypeInfo);
+    sub_1C37058(&StringLiteral_9931/*"OnLongPushSkill2ListView"*/);
+    sub_1C37058(&StringLiteral_9946/*"OnPressCancel"*/);
+    byte_4C3DB35 = 1;
   }
   linkItem = (FollowerSelectItemListViewItem_o *)this->fields.linkItem;
   if ( linkItem )
@@ -1284,16 +1284,16 @@ void FollowerSelectItemListViewObject__OnLongPushSkill2(
                                                          0);
         if ( linkItem )
         {
-          UnityEngine_GameObject__SendMessage_71205516(
+          UnityEngine_GameObject__SendMessage_71248628(
             (UnityEngine_GameObject_o *)linkItem,
-            (System_String_o *)StringLiteral_9945/*"OnPressCancel"*/,
+            (System_String_o *)StringLiteral_9946/*"OnPressCancel"*/,
             0);
           linkItem = (FollowerSelectItemListViewItem_o *)this->fields.manager;
           if ( linkItem )
           {
             UnityEngine_Component__SendMessage(
               (UnityEngine_Component_o *)linkItem,
-              (System_String_o *)StringLiteral_9930/*"OnLongPushSkill2ListView"*/,
+              (System_String_o *)StringLiteral_9931/*"OnLongPushSkill2ListView"*/,
               (Il2CppObject *)this,
               0);
             return;
@@ -1301,7 +1301,7 @@ void FollowerSelectItemListViewObject__OnLongPushSkill2(
         }
       }
     }
-    sub_1C32E7C(linkItem);
+    sub_1C372B4(linkItem);
   }
 }
 
@@ -1313,12 +1313,12 @@ void FollowerSelectItemListViewObject__OnLongPushSkill3(
   FollowerSelectItemListViewItem_o *linkItem; // x0
   __int64 naturalAligment; // x10
 
-  if ( (byte_4C3254C & 1) == 0 )
+  if ( (byte_4C3DB36 & 1) == 0 )
   {
-    sub_1C32C20(&FollowerSelectItemListViewItem_TypeInfo);
-    sub_1C32C20(&StringLiteral_9931/*"OnLongPushSkill3ListView"*/);
-    sub_1C32C20(&StringLiteral_9945/*"OnPressCancel"*/);
-    byte_4C3254C = 1;
+    sub_1C37058(&FollowerSelectItemListViewItem_TypeInfo);
+    sub_1C37058(&StringLiteral_9932/*"OnLongPushSkill3ListView"*/);
+    sub_1C37058(&StringLiteral_9946/*"OnPressCancel"*/);
+    byte_4C3DB36 = 1;
   }
   linkItem = (FollowerSelectItemListViewItem_o *)this->fields.linkItem;
   if ( linkItem )
@@ -1337,16 +1337,16 @@ void FollowerSelectItemListViewObject__OnLongPushSkill3(
                                                          0);
         if ( linkItem )
         {
-          UnityEngine_GameObject__SendMessage_71205516(
+          UnityEngine_GameObject__SendMessage_71248628(
             (UnityEngine_GameObject_o *)linkItem,
-            (System_String_o *)StringLiteral_9945/*"OnPressCancel"*/,
+            (System_String_o *)StringLiteral_9946/*"OnPressCancel"*/,
             0);
           linkItem = (FollowerSelectItemListViewItem_o *)this->fields.manager;
           if ( linkItem )
           {
             UnityEngine_Component__SendMessage(
               (UnityEngine_Component_o *)linkItem,
-              (System_String_o *)StringLiteral_9931/*"OnLongPushSkill3ListView"*/,
+              (System_String_o *)StringLiteral_9932/*"OnLongPushSkill3ListView"*/,
               (Il2CppObject *)this,
               0);
             return;
@@ -1354,7 +1354,7 @@ void FollowerSelectItemListViewObject__OnLongPushSkill3(
         }
       }
     }
-    sub_1C32E7C(linkItem);
+    sub_1C372B4(linkItem);
   }
 }
 
@@ -1365,17 +1365,17 @@ void FollowerSelectItemListViewObject__OpenSupportClassBoardBuff(
 {
   UnityEngine_Component_o *manager; // x0
 
-  if ( (byte_4C32554 & 1) == 0 )
+  if ( (byte_4C3DB3E & 1) == 0 )
   {
-    sub_1C32C20(&StringLiteral_10003/*"OpenSupportClassBoard"*/);
-    byte_4C32554 = 1;
+    sub_1C37058(&StringLiteral_10004/*"OpenSupportClassBoard"*/);
+    byte_4C3DB3E = 1;
   }
   if ( this->fields.linkItem )
   {
     manager = (UnityEngine_Component_o *)this->fields.manager;
     if ( !manager )
-      sub_1C32E7C(0);
-    UnityEngine_Component__SendMessage(manager, (System_String_o *)StringLiteral_10003/*"OpenSupportClassBoard"*/, (Il2CppObject *)this, 0);
+      sub_1C372B4(0);
+    UnityEngine_Component__SendMessage(manager, (System_String_o *)StringLiteral_10004/*"OpenSupportClassBoard"*/, (Il2CppObject *)this, 0);
   }
 }
 
@@ -1391,11 +1391,11 @@ void FollowerSelectItemListViewObject__SetInput(
   struct ListViewItem_o *v8; // x1
   FollowerSelectItemListViewItemDraw_o *v9; // x0
 
-  if ( (byte_4C32537 & 1) == 0 )
+  if ( (byte_4C3DB21 & 1) == 0 )
   {
-    sub_1C32C20(&FollowerSelectItemListViewItem_TypeInfo);
-    sub_1C32C20(&UnityEngine_Object_TypeInfo);
-    byte_4C32537 = 1;
+    sub_1C37058(&FollowerSelectItemListViewItem_TypeInfo);
+    sub_1C37058(&UnityEngine_Object_TypeInfo);
+    byte_4C3DB21 = 1;
   }
   ListViewObject__SetInput((ListViewObject_o *)this, isInput, 0);
   itemDraw = (UnityEngine_Object_o *)this->fields.itemDraw;
@@ -1419,7 +1419,7 @@ void FollowerSelectItemListViewObject__SetInput(
     }
     v9 = this->fields.itemDraw;
     if ( !v9 )
-      sub_1C32E7C(0);
+      sub_1C372B4(0);
     FollowerSelectItemListViewItemDraw__SetInput(v9, (FollowerSelectItemListViewItem_o *)v8, isInput, 0, 0);
   }
 }
@@ -1436,11 +1436,11 @@ void FollowerSelectItemListViewObject__SetInputTutorial(
   struct ListViewItem_o *v8; // x1
   FollowerSelectItemListViewItemDraw_o *v9; // x0
 
-  if ( (byte_4C32538 & 1) == 0 )
+  if ( (byte_4C3DB22 & 1) == 0 )
   {
-    sub_1C32C20(&FollowerSelectItemListViewItem_TypeInfo);
-    sub_1C32C20(&UnityEngine_Object_TypeInfo);
-    byte_4C32538 = 1;
+    sub_1C37058(&FollowerSelectItemListViewItem_TypeInfo);
+    sub_1C37058(&UnityEngine_Object_TypeInfo);
+    byte_4C3DB22 = 1;
   }
   ListViewObject__SetInput((ListViewObject_o *)this, isInput, 0);
   itemDraw = (UnityEngine_Object_o *)this->fields.itemDraw;
@@ -1464,7 +1464,7 @@ void FollowerSelectItemListViewObject__SetInputTutorial(
     }
     v9 = this->fields.itemDraw;
     if ( !v9 )
-      sub_1C32E7C(0);
+      sub_1C372B4(0);
     FollowerSelectItemListViewItemDraw__SetInput(v9, (FollowerSelectItemListViewItem_o *)v8, isInput, 1, 0);
   }
 }
@@ -1476,12 +1476,12 @@ void FollowerSelectItemListViewObject__SetItem(
         ListViewItemSeed_o *seed,
         const MethodInfo *method)
 {
-  ListViewObject__SetItem_43729388((ListViewObject_o *)this, item, seed, 0);
+  ListViewObject__SetItem_43831492((ListViewObject_o *)this, item, seed, 0);
   this->fields.state = 0;
 }
 
 
-void FollowerSelectItemListViewObject__SetItem_32637124(
+void FollowerSelectItemListViewObject__SetItem_32732756(
         FollowerSelectItemListViewObject_o *this,
         ListViewItem_o *item,
         const MethodInfo *method)
@@ -1502,12 +1502,12 @@ void FollowerSelectItemListViewObject__SetupDisp(FollowerSelectItemListViewObjec
   __int64 v9; // x9
   int32_t dispMode; // w8
 
-  if ( (byte_4C3253B & 1) == 0 )
+  if ( (byte_4C3DB25 & 1) == 0 )
   {
-    sub_1C32C20(&FollowerSelectItemListViewItem_TypeInfo);
-    sub_1C32C20(&FollowerSelectItemListViewManager_TypeInfo);
-    sub_1C32C20(&UnityEngine_Object_TypeInfo);
-    byte_4C3253B = 1;
+    sub_1C37058(&FollowerSelectItemListViewItem_TypeInfo);
+    sub_1C37058(&FollowerSelectItemListViewManager_TypeInfo);
+    sub_1C37058(&UnityEngine_Object_TypeInfo);
+    byte_4C3DB25 = 1;
   }
   linkItem = this->fields.linkItem;
   if ( !linkItem )
@@ -1549,10 +1549,10 @@ LABEL_8:
       }
       else
       {
-        manager = (int32_t *)sub_1C3313C(manager);
+        manager = (int32_t *)sub_1C37574(manager);
       }
     }
-    sub_1C32E7C(manager);
+    sub_1C372B4(manager);
   }
 LABEL_16:
   dispMode = this->fields.dispMode;
@@ -1574,10 +1574,10 @@ void FollowerSelectItemListViewObject__Start(FollowerSelectItemListViewObject_o 
   struct ListViewManager_o *v6; // x8
   int32_t v7; // w1
 
-  if ( (byte_4C32534 & 1) == 0 )
+  if ( (byte_4C3DB1E & 1) == 0 )
   {
-    sub_1C32C20(&UnityEngine_Object_TypeInfo);
-    byte_4C32534 = 1;
+    sub_1C37058(&UnityEngine_Object_TypeInfo);
+    byte_4C3DB1E = 1;
   }
   if ( !this->fields.state )
   {
@@ -1589,13 +1589,13 @@ void FollowerSelectItemListViewObject__Start(FollowerSelectItemListViewObject_o 
     {
       v6 = this->fields.manager;
       if ( !v6 || (!v6->fields.isInput ? (v7 = 2) : (v7 = 3), !this || !v4) )
-        sub_1C32E7C(v4);
+        sub_1C372B4(v4);
     }
     else
     {
       v7 = 2;
     }
-    FollowerSelectItemListViewObject__Init_32636708(this, v7, v5);
+    FollowerSelectItemListViewObject__Init_32732340(this, v7, v5);
   }
 }
 
@@ -1615,10 +1615,10 @@ void FollowerSelectItemListViewObject__add_callbackFunc(
   System_Action_o *v12; // x1
   const MethodInfo *v13; // x2
 
-  if ( (byte_4C32531 & 1) == 0 )
+  if ( (byte_4C3DB1B & 1) == 0 )
   {
-    sub_1C32C20(&System_Action_TypeInfo);
-    byte_4C32531 = 1;
+    sub_1C37058(&System_Action_TypeInfo);
+    byte_4C3DB1B = 1;
   }
   callbackFunc = this->fields.callbackFunc;
   p_callbackFunc = &this->fields.callbackFunc;
@@ -1631,13 +1631,13 @@ void FollowerSelectItemListViewObject__add_callbackFunc(
       if ( (System_Action_c *)v8->klass != System_Action_TypeInfo )
         break;
     }
-    v9 = sub_1C6CE78(p_callbackFunc, v8, v6);
+    v9 = sub_1C712B0(p_callbackFunc, v8, v6);
     v10 = v6 == (System_Delegate_o *)v9;
     v6 = (System_Delegate_o *)v9;
     if ( v10 )
       return;
   }
-  v11 = (FollowerSelectItemListViewObject_o *)sub_1C3313C(v8);
+  v11 = (FollowerSelectItemListViewObject_o *)sub_1C37574(v8);
   FollowerSelectItemListViewObject__remove_callbackFunc(v11, v12, v13);
 }
 
@@ -1664,10 +1664,10 @@ void FollowerSelectItemListViewObject__remove_callbackFunc(
   FollowerSelectItemListViewObject_o *v11; // x0
   const MethodInfo *v12; // x1
 
-  if ( (byte_4C32532 & 1) == 0 )
+  if ( (byte_4C3DB1C & 1) == 0 )
   {
-    sub_1C32C20(&System_Action_TypeInfo);
-    byte_4C32532 = 1;
+    sub_1C37058(&System_Action_TypeInfo);
+    byte_4C3DB1C = 1;
   }
   callbackFunc = this->fields.callbackFunc;
   p_callbackFunc = &this->fields.callbackFunc;
@@ -1680,13 +1680,13 @@ void FollowerSelectItemListViewObject__remove_callbackFunc(
       if ( (System_Action_c *)v8->klass != System_Action_TypeInfo )
         break;
     }
-    v9 = sub_1C6CE78(p_callbackFunc, v8, v6);
+    v9 = sub_1C712B0(p_callbackFunc, v8, v6);
     v10 = v6 == (System_Delegate_o *)v9;
     v6 = (System_Delegate_o *)v9;
     if ( v10 )
       return;
   }
-  v11 = (FollowerSelectItemListViewObject_o *)sub_1C3313C(v8);
+  v11 = (FollowerSelectItemListViewObject_o *)sub_1C37574(v8);
   FollowerSelectItemListViewObject__get_EquipIdx(v11, v12);
 }
 

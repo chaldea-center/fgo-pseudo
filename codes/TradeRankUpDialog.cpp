@@ -1,9 +1,9 @@
 void TradeRankUpDialog___ctor(TradeRankUpDialog_o *this, const MethodInfo *method)
 {
-  if ( (byte_4C398A3 & 1) == 0 )
+  if ( (byte_4C44E9D & 1) == 0 )
   {
-    sub_1C32C20(&BaseDialog_TypeInfo);
-    byte_4C398A3 = 1;
+    sub_1C37058(&BaseDialog_TypeInfo);
+    byte_4C44E9D = 1;
   }
   if ( !BaseDialog_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(BaseDialog_TypeInfo);
@@ -33,24 +33,24 @@ void TradeRankUpDialog__CreateTradeGoodsObject(
   _BOOL8 v20; // x0
   Il2CppObject *current; // x21
   UISpriteData_o *Sprite; // x0
-  Il2CppObject *ComponentInChildren_object__51596568; // x21
+  Il2CppObject *ComponentInChildren_object__51639680; // x21
   System_Collections_Generic_List_Enumerator_object__o v24; // [xsp+0h] [xbp-80h] BYREF
   int32_t goodsIconId; // [xsp+1Ch] [xbp-64h] BYREF
   System_Collections_Generic_List_Enumerator_object__o v26; // [xsp+20h] [xbp-60h] BYREF
 
-  if ( (byte_4C398A2 & 1) == 0 )
+  if ( (byte_4C44E9C & 1) == 0 )
   {
-    sub_1C32C20(&Method_System_Collections_Generic_List_Enumerator_UIAtlas__Dispose__);
-    sub_1C32C20(&Method_System_Collections_Generic_List_Enumerator_UIAtlas__MoveNext__);
-    sub_1C32C20(&Method_System_Collections_Generic_List_Enumerator_UIAtlas__get_Current__);
-    sub_1C32C20(&Method_UnityEngine_GameObject_GetComponentInChildren_UILabel____78130152);
-    sub_1C32C20(&Method_UnityEngine_GameObject_GetComponent_UISprite___);
-    sub_1C32C20(&int_TypeInfo);
-    sub_1C32C20(&Method_System_Collections_Generic_List_UIAtlas__GetEnumerator__);
-    sub_1C32C20(&Method_UnityEngine_Object_Instantiate_GameObject____78147088);
-    sub_1C32C20(&UnityEngine_Object_TypeInfo);
-    sub_1C32C20(&StringLiteral_20493/*"img_popularitem_{0}"*/);
-    byte_4C398A2 = 1;
+    sub_1C37058(&Method_System_Collections_Generic_List_Enumerator_UIAtlas__Dispose__);
+    sub_1C37058(&Method_System_Collections_Generic_List_Enumerator_UIAtlas__MoveNext__);
+    sub_1C37058(&Method_System_Collections_Generic_List_Enumerator_UIAtlas__get_Current__);
+    sub_1C37058(&Method_UnityEngine_GameObject_GetComponentInChildren_UILabel____78175936);
+    sub_1C37058(&Method_UnityEngine_GameObject_GetComponent_UISprite___);
+    sub_1C37058(&int_TypeInfo);
+    sub_1C37058(&Method_System_Collections_Generic_List_UIAtlas__GetEnumerator__);
+    sub_1C37058(&Method_UnityEngine_Object_Instantiate_GameObject____78192880);
+    sub_1C37058(&UnityEngine_Object_TypeInfo);
+    sub_1C37058(&StringLiteral_20496/*"img_popularitem_{0}"*/);
+    byte_4C44E9C = 1;
   }
   memset(&v26, 0, sizeof(v26));
   if ( tradeGoodsEntity )
@@ -59,10 +59,10 @@ void TradeRankUpDialog__CreateTradeGoodsObject(
     tradeItemParent = this->fields.tradeItemParent;
     if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-    v9 = UnityEngine_Object__Instantiate_object__51812484(
+    v9 = UnityEngine_Object__Instantiate_object__51855596(
            tradeItemPrefab,
            tradeItemParent,
-           (const MethodInfo_3169884 *)Method_UnityEngine_Object_Instantiate_GameObject____78147088);
+           (const MethodInfo_31740EC *)Method_UnityEngine_Object_Instantiate_GameObject____78192880);
     v10 = (System_String_o *)UnityEngine_Object__op_Equality((UnityEngine_Object_o *)v9, 0, 0);
     if ( ((unsigned __int8)v10 & 1) == 0 )
     {
@@ -70,37 +70,37 @@ void TradeRankUpDialog__CreateTradeGoodsObject(
         goto LABEL_26;
       Component_object = UnityEngine_GameObject__GetComponent_object_(
                            (UnityEngine_GameObject_o *)v9,
-                           (const MethodInfo_3134970 *)Method_UnityEngine_GameObject_GetComponent_UISprite___);
+                           (const MethodInfo_313F1D8 *)Method_UnityEngine_GameObject_GetComponent_UISprite___);
       if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
       if ( !UnityEngine_Object__op_Equality((UnityEngine_Object_o *)Component_object, 0, 0) )
       {
         goodsIconId = tradeGoodsEntity->fields.goodsIconId;
         v18 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &goodsIconId, v12, v13, v14, v15, v16, v17);
-        v10 = System_String__Format((System_String_o *)StringLiteral_20493/*"img_popularitem_{0}"*/, v18, 0);
+        v10 = System_String__Format((System_String_o *)StringLiteral_20496/*"img_popularitem_{0}"*/, v18, 0);
         if ( atlasList )
         {
           v19 = v10;
           System_Collections_Generic_List_object___GetEnumerator(
             (System_Collections_Generic_List_Enumerator_T__o *)&v24,
             (System_Collections_Generic_List_object__o *)atlasList,
-            (const MethodInfo_37992B4 *)Method_System_Collections_Generic_List_UIAtlas__GetEnumerator__);
+            (const MethodInfo_37A3B1C *)Method_System_Collections_Generic_List_UIAtlas__GetEnumerator__);
           v26 = v24;
           while ( 1 )
           {
             v20 = System_Collections_Generic_List_Enumerator_object___MoveNext(
                     &v26,
-                    (const MethodInfo_3522FA8 *)Method_System_Collections_Generic_List_Enumerator_UIAtlas__MoveNext__);
+                    (const MethodInfo_352D810 *)Method_System_Collections_Generic_List_Enumerator_UIAtlas__MoveNext__);
             if ( !v20 )
               break;
             current = v26.fields._current;
             if ( !v26.fields._current )
-              sub_1C32E7C(v20);
+              sub_1C372B4(v20);
             Sprite = UIAtlas__GetSprite((UIAtlas_o *)v26.fields._current, v19, 0);
             if ( Sprite )
             {
               if ( !Component_object )
-                sub_1C32E7C(Sprite);
+                sub_1C372B4(Sprite);
               UISprite__set_atlas((UISprite_o *)Component_object, (UIAtlas_o *)current, 0);
               UISprite__set_spriteName((UISprite_o *)Component_object, v19, 0);
               break;
@@ -108,29 +108,29 @@ void TradeRankUpDialog__CreateTradeGoodsObject(
           }
           System_Collections_Generic_List_Enumerator_object___Dispose(
             &v26,
-            (const MethodInfo_3522FA4 *)Method_System_Collections_Generic_List_Enumerator_UIAtlas__Dispose__);
-          ComponentInChildren_object__51596568 = UnityEngine_GameObject__GetComponentInChildren_object__51596568(
+            (const MethodInfo_352D80C *)Method_System_Collections_Generic_List_Enumerator_UIAtlas__Dispose__);
+          ComponentInChildren_object__51639680 = UnityEngine_GameObject__GetComponentInChildren_object__51639680(
                                                    (UnityEngine_GameObject_o *)v9,
                                                    1,
-                                                   (const MethodInfo_3134D18 *)Method_UnityEngine_GameObject_GetComponentInChildren_UILabel____78130152);
+                                                   (const MethodInfo_313F580 *)Method_UnityEngine_GameObject_GetComponentInChildren_UILabel____78175936);
           if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
             j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
           v10 = (System_String_o *)UnityEngine_Object__op_Inequality(
-                                     (UnityEngine_Object_o *)ComponentInChildren_object__51596568,
+                                     (UnityEngine_Object_o *)ComponentInChildren_object__51639680,
                                      0,
                                      0);
           if ( ((unsigned __int8)v10 & 1) == 0 )
             goto LABEL_23;
-          if ( ComponentInChildren_object__51596568 )
+          if ( ComponentInChildren_object__51639680 )
           {
-            UILabel__set_text((UILabel_o *)ComponentInChildren_object__51596568, tradeGoodsEntity->fields.name, 0);
+            UILabel__set_text((UILabel_o *)ComponentInChildren_object__51639680, tradeGoodsEntity->fields.name, 0);
 LABEL_23:
             UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)v9, 1, 0);
             return;
           }
         }
 LABEL_26:
-        sub_1C32E7C(v10);
+        sub_1C372B4(v10);
       }
     }
   }
@@ -143,11 +143,11 @@ void TradeRankUpDialog__OnClickClose(TradeRankUpDialog_o *this, const MethodInfo
   _QWORD *v4; // x0
   System_Reflection_MethodBase_o *v5; // x0
 
-  if ( (byte_4C398A1 & 1) == 0 )
+  if ( (byte_4C44E9B & 1) == 0 )
   {
-    sub_1C32C20(&UnityEngine_Object_TypeInfo);
-    sub_1C32C20(&Method_TradeRankUpDialog_OnClickClose__);
-    byte_4C398A1 = 1;
+    sub_1C37058(&UnityEngine_Object_TypeInfo);
+    sub_1C37058(&Method_TradeRankUpDialog_OnClickClose__);
+    byte_4C44E9B = 1;
   }
   closeBtn = (UnityEngine_Object_o *)this->fields.closeBtn;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -156,8 +156,8 @@ void TradeRankUpDialog__OnClickClose(TradeRankUpDialog_o *this, const MethodInfo
     AndroidBackKeyManager__RemoveBackBtn(this->fields.closeBtn, 0);
   v4 = Method_TradeRankUpDialog_OnClickClose__;
   if ( (*((_BYTE *)Method_TradeRankUpDialog_OnClickClose__ + 83) & 2) != 0 )
-    v4 = (_QWORD *)sub_1C32C38(Method_TradeRankUpDialog_OnClickClose__);
-  v5 = (System_Reflection_MethodBase_o *)sub_1C32C04(v4, v4[4]);
+    v4 = (_QWORD *)sub_1C37070(Method_TradeRankUpDialog_OnClickClose__);
+  v5 = (System_Reflection_MethodBase_o *)sub_1C3703C(v4, v4[4]);
   OverwriteAssetSoundName__PlaySystemSe(v5, 0, 0, 0);
   BaseDialog__Close((BaseDialog_o *)this, this->fields.onClosed, 0);
 }
@@ -217,19 +217,19 @@ void TradeRankUpDialog__Setup(
   __int64 v53; // [xsp+8h] [xbp-68h] BYREF
   int32_t v54; // [xsp+1Ch] [xbp-54h] BYREF
 
-  if ( (byte_4C398A0 & 1) == 0 )
+  if ( (byte_4C44E9A & 1) == 0 )
   {
-    sub_1C32C20(&Method_DataManager_GetMaster_EventTradeGoodsMaster___);
-    sub_1C32C20(&Method_DataManager_GetMaster_EventTradeStoreMaster___);
-    sub_1C32C20(&DataManager_TypeInfo);
-    sub_1C32C20(&int_TypeInfo);
-    sub_1C32C20(&LocalizationManager_TypeInfo);
-    sub_1C32C20(&Method_System_Nullable_int___ctor__);
-    sub_1C32C20(&System_Nullable_int__TypeInfo);
-    sub_1C32C20(&UnityEngine_Object_TypeInfo);
-    sub_1C32C20(&StringLiteral_13510/*"TRADE_RANK_UP_DIALOG_DESCRIPTION"*/);
-    sub_1C32C20(&StringLiteral_13509/*"TRADE_RANK_NAME_{0}"*/);
-    byte_4C398A0 = 1;
+    sub_1C37058(&Method_DataManager_GetMaster_EventTradeGoodsMaster___);
+    sub_1C37058(&Method_DataManager_GetMaster_EventTradeStoreMaster___);
+    sub_1C37058(&DataManager_TypeInfo);
+    sub_1C37058(&int_TypeInfo);
+    sub_1C37058(&LocalizationManager_TypeInfo);
+    sub_1C37058(&Method_System_Nullable_int___ctor__);
+    sub_1C37058(&System_Nullable_int__TypeInfo);
+    sub_1C37058(&UnityEngine_Object_TypeInfo);
+    sub_1C37058(&StringLiteral_13511/*"TRADE_RANK_UP_DIALOG_DESCRIPTION"*/);
+    sub_1C37058(&StringLiteral_13510/*"TRADE_RANK_NAME_{0}"*/);
+    byte_4C44E9A = 1;
   }
   closeBtn = (UnityEngine_Object_o *)this->fields.closeBtn;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -239,17 +239,17 @@ void TradeRankUpDialog__Setup(
   if ( eventProgressEntity )
   {
     this->fields.onClosed = inOnClosed;
-    sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.onClosed, (int32_t)inOnClosed, v10, v11);
+    sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.onClosed, (int32_t)inOnClosed, v10, v11);
     progressValue = eventProgressEntity->fields.progressValue;
     LODWORD(v53) = progressValue - 1;
     v19 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v53, v13, v14, v15, v16, v17, v18);
-    v20 = System_String__Format((System_String_o *)StringLiteral_13509/*"TRADE_RANK_NAME_{0}"*/, v19, 0);
+    v20 = System_String__Format((System_String_o *)StringLiteral_13510/*"TRADE_RANK_NAME_{0}"*/, v19, 0);
     if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
     v21 = LocalizationManager__Get(v20, 0);
     v54 = progressValue;
     v28 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v54, v22, v23, v24, v25, v26, v27);
-    v29 = System_String__Format((System_String_o *)StringLiteral_13509/*"TRADE_RANK_NAME_{0}"*/, v28, 0);
+    v29 = System_String__Format((System_String_o *)StringLiteral_13510/*"TRADE_RANK_NAME_{0}"*/, v28, 0);
     v30 = LocalizationManager__Get(v29, 0);
     beforeRankLabel = (UnityEngine_Object_o *)this->fields.beforeRankLabel;
     v32 = v30;
@@ -274,7 +274,7 @@ void TradeRankUpDialog__Setup(
     }
     if ( !DataManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-    Master_object = (UILabel_o *)DataManager__GetMaster_object_((const MethodInfo_30DD39C *)Method_DataManager_GetMaster_EventTradeStoreMaster___);
+    Master_object = (UILabel_o *)DataManager__GetMaster_object_((const MethodInfo_30E7C04 *)Method_DataManager_GetMaster_EventTradeStoreMaster___);
     if ( Master_object )
     {
       TradeStoreEntities = EventTradeStoreMaster__GetTradeStoreEntities(
@@ -290,7 +290,7 @@ void TradeRankUpDialog__Setup(
         v38 = this->fields.descriptionLabel;
         if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
           j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-        v45 = LocalizationManager__Get((System_String_o *)StringLiteral_13510/*"TRADE_RANK_UP_DIALOG_DESCRIPTION"*/, 0);
+        v45 = LocalizationManager__Get((System_String_o *)StringLiteral_13511/*"TRADE_RANK_UP_DIALOG_DESCRIPTION"*/, 0);
         if ( v37 )
         {
           v53 = 0;
@@ -298,7 +298,7 @@ void TradeRankUpDialog__Setup(
           System_Nullable_int____ctor(
             v46,
             v37->max_length,
-            (const MethodInfo_38BDF3C *)Method_System_Nullable_int___ctor__);
+            (const MethodInfo_38C87A4 *)Method_System_Nullable_int___ctor__);
           v47 = v53;
         }
         else
@@ -314,7 +314,7 @@ void TradeRankUpDialog__Setup(
       }
       if ( !DataManager_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-      Master_object = (UILabel_o *)DataManager__GetMaster_object_((const MethodInfo_30DD39C *)Method_DataManager_GetMaster_EventTradeGoodsMaster___);
+      Master_object = (UILabel_o *)DataManager__GetMaster_object_((const MethodInfo_30E7C04 *)Method_DataManager_GetMaster_EventTradeGoodsMaster___);
       if ( Master_object )
       {
         Master_object = (UILabel_o *)EventTradeGoodsMaster__GetTradeGoodsEntities(
@@ -331,7 +331,7 @@ void TradeRankUpDialog__Setup(
             do
             {
               if ( v52 >= (unsigned int)m_CancellationTokenSource )
-                sub_1C32E84(Master_object);
+                sub_1C372BC(Master_object);
               TradeRankUpDialog__CreateTradeGoodsObject(
                 this,
                 atlasList,
@@ -347,6 +347,6 @@ void TradeRankUpDialog__Setup(
       }
     }
 LABEL_43:
-    sub_1C32E7C(Master_object);
+    sub_1C372B4(Master_object);
   }
 }

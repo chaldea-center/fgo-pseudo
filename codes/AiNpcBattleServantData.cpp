@@ -7,22 +7,22 @@ void AiNpcBattleServantData___ctor(AiNpcBattleServantData_o *this, const MethodI
   int32_t v7; // w2
   const MethodInfo *v8; // x3
 
-  if ( (byte_4C3A6DE & 1) == 0 )
+  if ( (byte_4C45CEB & 1) == 0 )
   {
-    sub_1C32C20(&Method_System_Collections_Generic_HashSet_AiLogic_PROC_STATE___ctor__);
-    sub_1C32C20(&System_Collections_Generic_HashSet_AiLogic_PROC_STATE__TypeInfo);
-    sub_1C32C20(&NpcAiState___TypeInfo);
-    byte_4C3A6DE = 1;
+    sub_1C37058(&Method_System_Collections_Generic_HashSet_AiLogic_PROC_STATE___ctor__);
+    sub_1C37058(&System_Collections_Generic_HashSet_AiLogic_PROC_STATE__TypeInfo);
+    sub_1C37058(&NpcAiState___TypeInfo);
+    byte_4C45CEB = 1;
   }
-  v3 = (struct NpcAiState_array *)sub_1C32CC8(NpcAiState___TypeInfo, 0);
+  v3 = (struct NpcAiState_array *)sub_1C37100(NpcAiState___TypeInfo, 0);
   this->fields.npcAiStates = v3;
-  sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.npcAiStates, (int32_t)v3, v4, v5);
-  v6 = (System_Collections_Generic_HashSet_T__o *)sub_1C32E6C(System_Collections_Generic_HashSet_AiLogic_PROC_STATE__TypeInfo);
+  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.npcAiStates, (int32_t)v3, v4, v5);
+  v6 = (System_Collections_Generic_HashSet_T__o *)sub_1C372A4(System_Collections_Generic_HashSet_AiLogic_PROC_STATE__TypeInfo);
   System_Collections_Generic_HashSet_Int32Enum____ctor(
     v6,
-    (const MethodInfo_364B3A4 *)Method_System_Collections_Generic_HashSet_AiLogic_PROC_STATE___ctor__);
+    (const MethodInfo_3655C0C *)Method_System_Collections_Generic_HashSet_AiLogic_PROC_STATE___ctor__);
   this->fields.hashCheckingProcState = (struct System_Collections_Generic_HashSet_AiLogic_PROC_STATE__o *)v6;
-  sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.hashCheckingProcState, (int32_t)v6, v7, v8);
+  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.hashCheckingProcState, (int32_t)v6, v7, v8);
   BattleServantData___ctor((BattleServantData_o *)this, 0);
 }
 
@@ -42,18 +42,18 @@ void AiNpcBattleServantData__AddCheckAiProcState(
 {
   System_Collections_Generic_HashSet_T__o *hashCheckingProcState; // x0
 
-  if ( (byte_4C3A6DA & 1) == 0 )
+  if ( (byte_4C45CE7 & 1) == 0 )
   {
-    sub_1C32C20(&Method_System_Collections_Generic_HashSet_AiLogic_PROC_STATE__Add__);
-    byte_4C3A6DA = 1;
+    sub_1C37058(&Method_System_Collections_Generic_HashSet_AiLogic_PROC_STATE__Add__);
+    byte_4C45CE7 = 1;
   }
   hashCheckingProcState = (System_Collections_Generic_HashSet_T__o *)this->fields.hashCheckingProcState;
   if ( !hashCheckingProcState )
-    sub_1C32E7C(0);
+    sub_1C372B4(0);
   System_Collections_Generic_HashSet_Int32Enum___Add(
     hashCheckingProcState,
     procState,
-    (const MethodInfo_364C5A8 *)Method_System_Collections_Generic_HashSet_AiLogic_PROC_STATE__Add__);
+    (const MethodInfo_3656E10 *)Method_System_Collections_Generic_HashSet_AiLogic_PROC_STATE__Add__);
 }
 
 
@@ -70,10 +70,10 @@ void AiNpcBattleServantData__AfterActorNoblePhantasm(
   UnityEngine_Vector3_o position; // 0:s0.4,4:s1.4,8:s2.4
 
   v8 = this;
-  if ( (byte_4C3A6DD & 1) == 0 )
+  if ( (byte_4C45CEA & 1) == 0 )
   {
-    this = (AiNpcBattleServantData_o *)sub_1C32C20(&UnityEngine_Object_TypeInfo);
-    byte_4C3A6DD = 1;
+    this = (AiNpcBattleServantData_o *)sub_1C37058(&UnityEngine_Object_TypeInfo);
+    byte_4C45CEA = 1;
   }
   if ( !actor )
     goto LABEL_20;
@@ -123,7 +123,7 @@ void AiNpcBattleServantData__AfterActorNoblePhantasm(
       }
     }
 LABEL_20:
-    sub_1C32E7C(this);
+    sub_1C372B4(this);
   }
 }
 
@@ -169,10 +169,10 @@ bool AiNpcBattleServantData__ExistAiThinking(
     while ( 1 )
     {
       if ( v16 >= v17 )
-        sub_1C32E84(this);
+        sub_1C372BC(this);
       v18 = (struct AiState_o *)npcAiStates->m_Items[v16];
       *p_CurrentAiState_k__BackingField = v18;
-      sub_1C32BC4(
+      sub_1C36FFC(
         (CGThumbnailListItem_o *)&v8->fields._CurrentAiState_k__BackingField,
         (int32_t)v18,
         procState,
@@ -196,11 +196,11 @@ bool AiNpcBattleServantData__ExistAiThinking(
       goto LABEL_10;
     }
 LABEL_11:
-    sub_1C32E7C(this);
+    sub_1C372B4(this);
   }
 LABEL_10:
   *p_CurrentAiState_k__BackingField = CurrentAiState_k__BackingField;
-  sub_1C32BC4(
+  sub_1C36FFC(
     (CGThumbnailListItem_o *)&v8->fields._CurrentAiState_k__BackingField,
     (int32_t)CurrentAiState_k__BackingField,
     procState,
@@ -225,14 +225,14 @@ void AiNpcBattleServantData__InitAiStates(
   int32_t v13; // w2
   const MethodInfo *v14; // x3
 
-  if ( (byte_4C3A6D8 & 1) == 0 )
+  if ( (byte_4C45CE5 & 1) == 0 )
   {
-    sub_1C32C20(&Method_System_Linq_Enumerable_Select_int__NpcAiState___);
-    sub_1C32C20(&Method_System_Linq_Enumerable_ToArray_NpcAiState___);
-    sub_1C32C20(&System_Func_int__NpcAiState__TypeInfo);
-    sub_1C32C20(&Method_AiNpcBattleServantData___c__InitAiStates_b__34_0__);
-    sub_1C32C20(&AiNpcBattleServantData___c_TypeInfo);
-    byte_4C3A6D8 = 1;
+    sub_1C37058(&Method_System_Linq_Enumerable_Select_int__NpcAiState___);
+    sub_1C37058(&Method_System_Linq_Enumerable_ToArray_NpcAiState___);
+    sub_1C37058(&System_Func_int__NpcAiState__TypeInfo);
+    sub_1C37058(&Method_AiNpcBattleServantData___c__InitAiStates_b__34_0__);
+    sub_1C37058(&AiNpcBattleServantData___c_TypeInfo);
+    byte_4C45CE5 = 1;
   }
   if ( aiIds )
   {
@@ -251,23 +251,23 @@ void AiNpcBattleServantData__InitAiStates(
         v5 = AiNpcBattleServantData___c_TypeInfo;
       }
       v7 = (Il2CppObject *)v5->static_fields->__9;
-      _9__34_0 = (System_Func_T__TResult__o *)sub_1C32E6C(System_Func_int__NpcAiState__TypeInfo);
+      _9__34_0 = (System_Func_T__TResult__o *)sub_1C372A4(System_Func_int__NpcAiState__TypeInfo);
       System_Func_int__object____ctor(_9__34_0, v7, Method_AiNpcBattleServantData___c__InitAiStates_b__34_0__, 0);
       static_fields = AiNpcBattleServantData___c_TypeInfo->static_fields;
       static_fields->__9__34_0 = (struct System_Func_int__NpcAiState__o *)_9__34_0;
-      sub_1C32BC4((CGThumbnailListItem_o *)&static_fields->__9__34_0, (int32_t)_9__34_0, v9, v10);
+      sub_1C36FFC((CGThumbnailListItem_o *)&static_fields->__9__34_0, (int32_t)_9__34_0, v9, v10);
     }
     v11 = (System_Collections_Generic_IEnumerable_TSource__o *)System_Linq_Enumerable__Select_int__object_(
                                                                  (System_Collections_Generic_IEnumerable_TSource__o *)aiIds,
                                                                  (System_Func_TSource__TResult__o *)_9__34_0,
-                                                                 (const MethodInfo_3110E00 *)Method_System_Linq_Enumerable_Select_int__NpcAiState___);
+                                                                 (const MethodInfo_311B668 *)Method_System_Linq_Enumerable_Select_int__NpcAiState___);
     v12 = System_Linq_Enumerable__ToArray_object_(
             v11,
-            (const MethodInfo_311CA8C *)Method_System_Linq_Enumerable_ToArray_NpcAiState___);
+            (const MethodInfo_31272F4 *)Method_System_Linq_Enumerable_ToArray_NpcAiState___);
     if ( !this )
-      sub_1C32E7C(v12);
+      sub_1C372B4(v12);
     this->fields.npcAiStates = (struct NpcAiState_array *)v12;
-    sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.npcAiStates, (int32_t)v12, v13, v14);
+    sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.npcAiStates, (int32_t)v12, v13, v14);
   }
 }
 
@@ -279,7 +279,7 @@ void AiNpcBattleServantData__PrevActorNoblePhantasm(
         const MethodInfo *method)
 {
   if ( !battleSeqManager )
-    sub_1C32E7C(this);
+    sub_1C372B4(this);
   BattleSequenceManager__PrevPlayTargetActorProc(battleSeqManager, actor, 0);
 }
 
@@ -292,21 +292,21 @@ bool AiNpcBattleServantData__RemoveCheckAiProcState(
   struct System_Collections_Generic_HashSet_AiLogic_PROC_STATE__o *hashCheckingProcState; // x0
   struct System_Collections_Generic_HashSet_AiLogic_PROC_STATE__o *v6; // x8
 
-  if ( (byte_4C3A6DB & 1) == 0 )
+  if ( (byte_4C45CE8 & 1) == 0 )
   {
-    sub_1C32C20(&Method_System_Collections_Generic_HashSet_AiLogic_PROC_STATE__Remove__);
-    sub_1C32C20(&Method_System_Collections_Generic_HashSet_AiLogic_PROC_STATE__get_Count__);
-    byte_4C3A6DB = 1;
+    sub_1C37058(&Method_System_Collections_Generic_HashSet_AiLogic_PROC_STATE__Remove__);
+    sub_1C37058(&Method_System_Collections_Generic_HashSet_AiLogic_PROC_STATE__get_Count__);
+    byte_4C45CE8 = 1;
   }
   hashCheckingProcState = this->fields.hashCheckingProcState;
   if ( !hashCheckingProcState
     || (hashCheckingProcState = (struct System_Collections_Generic_HashSet_AiLogic_PROC_STATE__o *)System_Collections_Generic_HashSet_Int32Enum___Remove(
                                                                                                      (System_Collections_Generic_HashSet_T__o *)hashCheckingProcState,
                                                                                                      procState,
-                                                                                                     (const MethodInfo_364BC6C *)Method_System_Collections_Generic_HashSet_AiLogic_PROC_STATE__Remove__),
+                                                                                                     (const MethodInfo_36564D4 *)Method_System_Collections_Generic_HashSet_AiLogic_PROC_STATE__Remove__),
         (v6 = this->fields.hashCheckingProcState) == 0) )
   {
-    sub_1C32E7C(hashCheckingProcState);
+    sub_1C372B4(hashCheckingProcState);
   }
   return v6->fields._count < 1;
 }
@@ -330,8 +330,8 @@ void AiNpcBattleServantData__SetNpcServant(
 
   AiNpcBattleServantData__InitAiStates(this, aiIds, (const MethodInfo *)deckSvt);
   if ( !data )
-    sub_1C32E7C(v10);
-  BattleServantData__setServantData_46125228(
+    sub_1C372B4(v10);
+  BattleServantData__setServantData_46238104(
     (BattleServantData_o *)this,
     deckSvt,
     data->fields.battle_ent,
@@ -361,13 +361,13 @@ void AiNpcBattleServantData__TurnProgress(
   int32_t v15; // w2
   const MethodInfo *v16; // x3
 
-  if ( (byte_4C3A6DC & 1) == 0 )
+  if ( (byte_4C45CE9 & 1) == 0 )
   {
-    sub_1C32C20(&System_Action_NpcAiState__TypeInfo);
-    sub_1C32C20(&Method_BasicHelper_ForEach_NpcAiState___);
-    sub_1C32C20(&Method_AiNpcBattleServantData___c__TurnProgress_b__41_0__);
-    sub_1C32C20(&AiNpcBattleServantData___c_TypeInfo);
-    byte_4C3A6DC = 1;
+    sub_1C37058(&System_Action_NpcAiState__TypeInfo);
+    sub_1C37058(&Method_BasicHelper_ForEach_NpcAiState___);
+    sub_1C37058(&Method_AiNpcBattleServantData___c__TurnProgress_b__41_0__);
+    sub_1C37058(&AiNpcBattleServantData___c_TypeInfo);
+    byte_4C45CE9 = 1;
   }
   v9 = isEndEnemyTurn;
   if ( this->fields.isEnemy == v9 )
@@ -388,16 +388,16 @@ void AiNpcBattleServantData__TurnProgress(
         v11 = AiNpcBattleServantData___c_TypeInfo;
       }
       v13 = (Il2CppObject *)v11->static_fields->__9;
-      _9__41_0 = (System_Action_object__o *)sub_1C32E6C(System_Action_NpcAiState__TypeInfo);
+      _9__41_0 = (System_Action_object__o *)sub_1C372A4(System_Action_NpcAiState__TypeInfo);
       System_Action_object____ctor(_9__41_0, v13, Method_AiNpcBattleServantData___c__TurnProgress_b__41_0__, 0);
       static_fields = AiNpcBattleServantData___c_TypeInfo->static_fields;
       static_fields->__9__41_0 = (struct System_Action_NpcAiState__o *)_9__41_0;
-      sub_1C32BC4((CGThumbnailListItem_o *)&static_fields->__9__41_0, (int32_t)_9__41_0, v15, v16);
+      sub_1C36FFC((CGThumbnailListItem_o *)&static_fields->__9__41_0, (int32_t)_9__41_0, v15, v16);
     }
     BasicHelper__ForEach_object_(
       npcAiStates,
       (System_Action_T__o *)_9__41_0,
-      (const MethodInfo_30C93B0 *)Method_BasicHelper_ForEach_NpcAiState___);
+      (const MethodInfo_30D3C18 *)Method_BasicHelper_ForEach_NpcAiState___);
   }
   BattleServantData__turnBuffProgressing((BattleServantData_o *)this, v9, fieldIndiv, logic, 0, 0);
 }
@@ -412,18 +412,18 @@ bool AiNpcBattleServantData__UpdateAiStateTargetIndex(
   int32_t v6; // w2
   const MethodInfo *v7; // x3
 
-  if ( (byte_4C3A6D9 & 1) == 0 )
+  if ( (byte_4C45CE6 & 1) == 0 )
   {
-    sub_1C32C20(&Method_BasicHelper_IndexValue_NpcAiState___);
-    byte_4C3A6D9 = 1;
+    sub_1C37058(&Method_BasicHelper_IndexValue_NpcAiState___);
+    byte_4C45CE6 = 1;
   }
   v5 = BasicHelper__IndexValue_object_(
          (System_Object_array *)this->fields.npcAiStates,
          index,
          0,
-         (const MethodInfo_30CB990 *)Method_BasicHelper_IndexValue_NpcAiState___);
+         (const MethodInfo_30D61F8 *)Method_BasicHelper_IndexValue_NpcAiState___);
   this->fields._CurrentAiState_k__BackingField = (struct AiState_o *)v5;
-  sub_1C32BC4((CGThumbnailListItem_o *)&this->fields._CurrentAiState_k__BackingField, (int32_t)v5, v6, v7);
+  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields._CurrentAiState_k__BackingField, (int32_t)v5, v6, v7);
   return this->fields._CurrentAiState_k__BackingField != 0;
 }
 
@@ -479,14 +479,14 @@ BattleServantData_SaveData_o *AiNpcBattleServantData__getSaveData(
   const MethodInfo *v17; // x3
   BattleServantData_SaveData_o *result; // x0
 
-  if ( (byte_4C3A6D6 & 1) == 0 )
+  if ( (byte_4C45CE3 & 1) == 0 )
   {
-    sub_1C32C20(&Method_System_Linq_Enumerable_Select_NpcAiState__AiState_SaveData___);
-    sub_1C32C20(&Method_System_Linq_Enumerable_ToArray_AiState_SaveData___);
-    sub_1C32C20(&System_Func_NpcAiState__AiState_SaveData__TypeInfo);
-    sub_1C32C20(&Method_AiNpcBattleServantData___c__getSaveData_b__31_0__);
-    sub_1C32C20(&AiNpcBattleServantData___c_TypeInfo);
-    byte_4C3A6D6 = 1;
+    sub_1C37058(&Method_System_Linq_Enumerable_Select_NpcAiState__AiState_SaveData___);
+    sub_1C37058(&Method_System_Linq_Enumerable_ToArray_AiState_SaveData___);
+    sub_1C37058(&System_Func_NpcAiState__AiState_SaveData__TypeInfo);
+    sub_1C37058(&Method_AiNpcBattleServantData___c__getSaveData_b__31_0__);
+    sub_1C37058(&AiNpcBattleServantData___c_TypeInfo);
+    byte_4C45CE3 = 1;
   }
   SaveData = BattleServantData__getSaveData((BattleServantData_o *)this, data, 0);
   v6 = AiNpcBattleServantData___c_TypeInfo;
@@ -506,23 +506,23 @@ BattleServantData_SaveData_o *AiNpcBattleServantData__getSaveData(
       v6 = AiNpcBattleServantData___c_TypeInfo;
     }
     v10 = (Il2CppObject *)v6->static_fields->__9;
-    _9__31_0 = (System_Func_object__object__o *)sub_1C32E6C(System_Func_NpcAiState__AiState_SaveData__TypeInfo);
+    _9__31_0 = (System_Func_object__object__o *)sub_1C372A4(System_Func_NpcAiState__AiState_SaveData__TypeInfo);
     System_Func_object__object____ctor(_9__31_0, v10, Method_AiNpcBattleServantData___c__getSaveData_b__31_0__, 0);
     static_fields = AiNpcBattleServantData___c_TypeInfo->static_fields;
     static_fields->__9__31_0 = (struct System_Func_NpcAiState__AiState_SaveData__o *)_9__31_0;
-    sub_1C32BC4((CGThumbnailListItem_o *)&static_fields->__9__31_0, (int32_t)_9__31_0, v12, v13);
+    sub_1C36FFC((CGThumbnailListItem_o *)&static_fields->__9__31_0, (int32_t)_9__31_0, v12, v13);
   }
   v14 = (System_Collections_Generic_IEnumerable_TSource__o *)System_Linq_Enumerable__Select_object__object_(
                                                                npcAiStates,
                                                                (System_Func_TSource__TResult__o *)_9__31_0,
-                                                               (const MethodInfo_3113ABC *)Method_System_Linq_Enumerable_Select_NpcAiState__AiState_SaveData___);
+                                                               (const MethodInfo_311E324 *)Method_System_Linq_Enumerable_Select_NpcAiState__AiState_SaveData___);
   v15 = System_Linq_Enumerable__ToArray_object_(
           v14,
-          (const MethodInfo_311CA8C *)Method_System_Linq_Enumerable_ToArray_AiState_SaveData___);
+          (const MethodInfo_31272F4 *)Method_System_Linq_Enumerable_ToArray_AiState_SaveData___);
   if ( !v8 )
-    sub_1C32E7C(v15);
+    sub_1C372B4(v15);
   v8->fields.npcAiStates = (struct AiState_SaveData_array *)v15;
-  sub_1C32BC4((CGThumbnailListItem_o *)&v8->fields.npcAiStates, (int32_t)v15, v16, v17);
+  sub_1C36FFC((CGThumbnailListItem_o *)&v8->fields.npcAiStates, (int32_t)v15, v16, v17);
   result = v8;
   *(_QWORD *)&v8->fields.npcActCount = *(_QWORD *)&this->fields._ActCount_k__BackingField;
   return result;
@@ -597,26 +597,26 @@ bool AiNpcBattleServantData__setSaveData(
   System_Action_object__o *v11; // x23
   __int64 v12; // x8
 
-  if ( (byte_4C3A6D7 & 1) == 0 )
+  if ( (byte_4C45CE4 & 1) == 0 )
   {
-    sub_1C32C20(&System_Action_NpcAiState__TypeInfo);
-    sub_1C32C20(&Method_BasicHelper_ForEach_NpcAiState___);
-    sub_1C32C20(&Method_AiNpcBattleServantData___c__DisplayClass32_0__setSaveData_b__0__);
-    sub_1C32C20(&AiNpcBattleServantData___c__DisplayClass32_0_TypeInfo);
-    byte_4C3A6D7 = 1;
+    sub_1C37058(&System_Action_NpcAiState__TypeInfo);
+    sub_1C37058(&Method_BasicHelper_ForEach_NpcAiState___);
+    sub_1C37058(&Method_AiNpcBattleServantData___c__DisplayClass32_0__setSaveData_b__0__);
+    sub_1C37058(&AiNpcBattleServantData___c__DisplayClass32_0_TypeInfo);
+    byte_4C45CE4 = 1;
   }
-  v5 = sub_1C32E6C(AiNpcBattleServantData___c__DisplayClass32_0_TypeInfo);
+  v5 = sub_1C372A4(AiNpcBattleServantData___c__DisplayClass32_0_TypeInfo);
   System_Object___ctor((Il2CppObject *)v5, 0);
   if ( !v5 )
     goto LABEL_8;
   *(_QWORD *)(v5 + 16) = save;
-  sub_1C32BC4((CGThumbnailListItem_o *)(v5 + 16), (int32_t)save, v7, v8);
+  sub_1C36FFC((CGThumbnailListItem_o *)(v5 + 16), (int32_t)save, v7, v8);
   v9 = BattleServantData__setSaveData((BattleServantData_o *)this, *(BattleServantData_SaveData_o **)(v5 + 16), 0);
   if ( v9 )
   {
     *(_DWORD *)(v5 + 24) = 0;
     npcAiStates = (System_Collections_Generic_IEnumerable_T__o *)this->fields.npcAiStates;
-    v11 = (System_Action_object__o *)sub_1C32E6C(System_Action_NpcAiState__TypeInfo);
+    v11 = (System_Action_object__o *)sub_1C372A4(System_Action_NpcAiState__TypeInfo);
     System_Action_object____ctor(
       v11,
       (Il2CppObject *)v5,
@@ -625,7 +625,7 @@ bool AiNpcBattleServantData__setSaveData(
     BasicHelper__ForEach_object_(
       npcAiStates,
       (System_Action_T__o *)v11,
-      (const MethodInfo_30C93B0 *)Method_BasicHelper_ForEach_NpcAiState___);
+      (const MethodInfo_30D3C18 *)Method_BasicHelper_ForEach_NpcAiState___);
     v12 = *(_QWORD *)(v5 + 16);
     if ( v12 )
     {
@@ -633,7 +633,7 @@ bool AiNpcBattleServantData__setSaveData(
       return v9;
     }
 LABEL_8:
-    sub_1C32E7C(v6);
+    sub_1C372B4(v6);
   }
   return v9;
 }
@@ -653,7 +653,7 @@ void AiNpcBattleServantData__set_CurrentAiState(
   const MethodInfo *v3; // x3
 
   this->fields._CurrentAiState_k__BackingField = value;
-  sub_1C32BC4(
+  sub_1C36FFC(
     (CGThumbnailListItem_o *)&this->fields._CurrentAiState_k__BackingField,
     (int32_t)value,
     (int32_t)method,
@@ -691,15 +691,15 @@ void AiNpcBattleServantData___c___cctor(const MethodInfo *method)
   int32_t v2; // w2
   const MethodInfo *v3; // x3
 
-  if ( (byte_4C3A6DF & 1) == 0 )
+  if ( (byte_4C45CEC & 1) == 0 )
   {
-    sub_1C32C20(&AiNpcBattleServantData___c_TypeInfo);
-    byte_4C3A6DF = 1;
+    sub_1C37058(&AiNpcBattleServantData___c_TypeInfo);
+    byte_4C45CEC = 1;
   }
-  v1 = (Il2CppObject *)sub_1C32E6C(AiNpcBattleServantData___c_TypeInfo);
+  v1 = (Il2CppObject *)sub_1C372A4(AiNpcBattleServantData___c_TypeInfo);
   System_Object___ctor(v1, 0);
   AiNpcBattleServantData___c_TypeInfo->static_fields->__9 = (struct AiNpcBattleServantData___c_o *)v1;
-  sub_1C32BC4((CGThumbnailListItem_o *)AiNpcBattleServantData___c_TypeInfo->static_fields, (int32_t)v1, v2, v3);
+  sub_1C36FFC((CGThumbnailListItem_o *)AiNpcBattleServantData___c_TypeInfo->static_fields, (int32_t)v1, v2, v3);
 }
 
 
@@ -716,12 +716,12 @@ NpcAiState_o *AiNpcBattleServantData___c___InitAiStates_b__34_0(
 {
   NpcAiState_o *v4; // x20
 
-  if ( (byte_4C3A6E0 & 1) == 0 )
+  if ( (byte_4C45CED & 1) == 0 )
   {
-    sub_1C32C20(&NpcAiState_TypeInfo);
-    byte_4C3A6E0 = 1;
+    sub_1C37058(&NpcAiState_TypeInfo);
+    byte_4C45CED = 1;
   }
-  v4 = (NpcAiState_o *)sub_1C32E6C(NpcAiState_TypeInfo);
+  v4 = (NpcAiState_o *)sub_1C372A4(NpcAiState_TypeInfo);
   NpcAiState___ctor(v4, id, 0);
   return v4;
 }
@@ -733,7 +733,7 @@ void AiNpcBattleServantData___c___TurnProgress_b__41_0(
         const MethodInfo *method)
 {
   if ( !state )
-    sub_1C32E7C(this);
+    sub_1C372B4(this);
   AiState__fieldTurnProgressing((AiState_o *)state, 0);
 }
 
@@ -744,7 +744,7 @@ AiState_SaveData_o *AiNpcBattleServantData___c___getSaveData_b__31_0(
         const MethodInfo *method)
 {
   if ( !state )
-    sub_1C32E7C(this);
+    sub_1C372B4(this);
   return AiState__getSaveData((AiState_o *)state, 0);
 }
 
@@ -768,10 +768,10 @@ void AiNpcBattleServantData___c__DisplayClass32_0___setSaveData_b__0(
   System_Object_array *npcAiStates; // x0
 
   v4 = this;
-  if ( (byte_4C3A6E1 & 1) == 0 )
+  if ( (byte_4C45CEE & 1) == 0 )
   {
-    this = (AiNpcBattleServantData___c__DisplayClass32_0_o *)sub_1C32C20(&Method_BasicHelper_IndexValue_AiState_SaveData___);
-    byte_4C3A6E1 = 1;
+    this = (AiNpcBattleServantData___c__DisplayClass32_0_o *)sub_1C37058(&Method_BasicHelper_IndexValue_AiState_SaveData___);
+    byte_4C45CEE = 1;
   }
   save = v4->fields.save;
   if ( !save
@@ -782,10 +782,10 @@ void AiNpcBattleServantData___c__DisplayClass32_0___setSaveData_b__0(
                                                                    npcAiStates,
                                                                    index,
                                                                    0,
-                                                                   (const MethodInfo_30CB990 *)Method_BasicHelper_IndexValue_AiState_SaveData___),
+                                                                   (const MethodInfo_30D61F8 *)Method_BasicHelper_IndexValue_AiState_SaveData___),
         !npcAiState) )
   {
-    sub_1C32E7C(this);
+    sub_1C372B4(this);
   }
   AiState__setSaveData((AiState_o *)npcAiState, (AiState_SaveData_o *)this, 0);
 }

@@ -1,14 +1,14 @@
 void UserCombineExpMaster___ctor(UserCombineExpMaster_o *this, const MethodInfo *method)
 {
-  if ( (byte_4C3871D & 1) == 0 )
+  if ( (byte_4C43D16 & 1) == 0 )
   {
-    sub_1C32C20(&Method_DataMasterBase_UserCombineExpMaster__UserCombineExpEntity__string___ctor__);
-    byte_4C3871D = 1;
+    sub_1C37058(&Method_DataMasterBase_UserCombineExpMaster__UserCombineExpEntity__string___ctor__);
+    byte_4C43D16 = 1;
   }
   DataMasterBase_object__object__object____ctor(
     (DataMasterBase_TMaster__TEntity__PKType__o *)this,
     311,
-    (const MethodInfo_3398FCC *)Method_DataMasterBase_UserCombineExpMaster__UserCombineExpEntity__string___ctor__);
+    (const MethodInfo_33A3834 *)Method_DataMasterBase_UserCombineExpMaster__UserCombineExpEntity__string___ctor__);
 }
 
 
@@ -32,19 +32,19 @@ CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_o *UserCombineExpMaster__GetUserS
   CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_o v17; // [xsp+40h] [xbp-90h] BYREF
   CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_o v18; // [xsp+60h] [xbp-70h]
 
-  if ( (byte_4C3871E & 1) == 0 )
+  if ( (byte_4C43D17 & 1) == 0 )
   {
-    sub_1C32C20(&Method_System_Collections_ObjectModel_Collection_UserCombineExpEntity__get_Count__);
-    sub_1C32C20(&Method_System_Collections_ObjectModel_Collection_UserCombineExpEntity__get_Item__);
-    sub_1C32C20(&CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo);
-    byte_4C3871E = 1;
+    sub_1C37058(&Method_System_Collections_ObjectModel_Collection_UserCombineExpEntity__get_Count__);
+    sub_1C37058(&Method_System_Collections_ObjectModel_Collection_UserCombineExpEntity__get_Item__);
+    sub_1C37058(&CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo);
+    byte_4C43D17 = 1;
   }
   result = (CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_o *)this->fields.list;
   if ( !result )
     goto LABEL_22;
   Count = System_Collections_ObjectModel_Collection_object___get_Count(
             (System_Collections_ObjectModel_Collection_T__o *)result,
-            (const MethodInfo_332FCA8 *)Method_System_Collections_ObjectModel_Collection_UserCombineExpEntity__get_Count__);
+            (const MethodInfo_333A510 *)Method_System_Collections_ObjectModel_Collection_UserCombineExpEntity__get_Count__);
   if ( !CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo);
   result = CodeStage_AntiCheat_ObscuredTypes_ObscuredLong__op_Implicit(&v17, 0, 0);
@@ -60,7 +60,7 @@ CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_o *UserCombineExpMaster__GetUserS
       result = (CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_o *)System_Collections_ObjectModel_Collection_object___get_Item(
                                                                      (System_Collections_ObjectModel_Collection_T__o *)result,
                                                                      v7,
-                                                                     (const MethodInfo_332FD38 *)Method_System_Collections_ObjectModel_Collection_UserCombineExpEntity__get_Item__);
+                                                                     (const MethodInfo_333A5A0 *)Method_System_Collections_ObjectModel_Collection_UserCombineExpEntity__get_Item__);
       if ( result )
       {
         v8 = *(_QWORD *)&result->fields.inited;
@@ -74,7 +74,7 @@ CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_o *UserCombineExpMaster__GetUserS
           do
           {
             if ( v10 >= (unsigned int)v9 )
-              sub_1C32E84(result);
+              sub_1C372BC(result);
             v12 = v11[1];
             *(_OWORD *)&v17.fields.currentCryptoKey = *v11;
             *(_OWORD *)&v17.fields.fakeValue = v12;
@@ -84,7 +84,7 @@ CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_o *UserCombineExpMaster__GetUserS
             if ( !CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo->_2.cctor_finished )
               j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo);
             v15 = v16;
-            result = (CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_o *)CodeStage_AntiCheat_ObscuredTypes_ObscuredLong__op_Implicit_48891308(
+            result = (CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_o *)CodeStage_AntiCheat_ObscuredTypes_ObscuredLong__op_Implicit_48934420(
                                                                            &v15,
                                                                            0);
             if ( ((unsigned __int64)result & 0x8000000000000000LL) == 0 )
@@ -100,7 +100,7 @@ CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_o *UserCombineExpMaster__GetUserS
         goto LABEL_20;
     }
 LABEL_22:
-    sub_1C32E7C(result);
+    sub_1C372B4(result);
   }
 LABEL_20:
   v14 = *(_OWORD *)&v18.fields.fakeValue;

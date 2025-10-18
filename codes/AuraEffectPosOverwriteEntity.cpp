@@ -1,13 +1,13 @@
 void AuraEffectPosOverwriteEntity___ctor(AuraEffectPosOverwriteEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_4C375B1 & 1) == 0 )
+  if ( (byte_4C42BA4 & 1) == 0 )
   {
-    sub_1C32C20(&Method_DataEntityBase_string___ctor__);
-    byte_4C375B1 = 1;
+    sub_1C37058(&Method_DataEntityBase_string___ctor__);
+    byte_4C42BA4 = 1;
   }
   DataEntityBase_object____ctor(
     (DataEntityBase_PKType__o *)this,
-    (const MethodInfo_33943CC *)Method_DataEntityBase_string___ctor__);
+    (const MethodInfo_339EC34 *)Method_DataEntityBase_string___ctor__);
 }
 
 
@@ -17,16 +17,16 @@ System_String_o *AuraEffectPosOverwriteEntity__CreatePK(
         int32_t svtLimitCount,
         const MethodInfo *method)
 {
-  if ( (byte_4C375B0 & 1) == 0 )
+  if ( (byte_4C42BA2 & 1) == 0 )
   {
-    sub_1C32C20(&Method_DataEntityBase_CreateMultiplePK_int__int__int___);
-    byte_4C375B0 = 1;
+    sub_1C37058(&Method_DataEntityBase_CreateMultiplePK_int__int__int___);
+    byte_4C42BA2 = 1;
   }
   return DataEntityBase__CreateMultiplePK_int__int__int_(
            auraEffectId,
            svtId,
            svtLimitCount,
-           (const MethodInfo_30DBA08 *)Method_DataEntityBase_CreateMultiplePK_int__int__int___);
+           (const MethodInfo_30E6270 *)Method_DataEntityBase_CreateMultiplePK_int__int__int___);
 }
 
 
@@ -79,4 +79,25 @@ UnityEngine_Vector3_o AuraEffectPosOverwriteEntity__GetRotation(
   result.fields.z = v3;
   result.fields.y = v4;
   return result;
+}
+
+
+bool AuraEffectPosOverwriteEntity__IsUseNodePositionOnly(
+        AuraEffectPosOverwriteEntity_o *this,
+        bool defVal,
+        const MethodInfo *method)
+{
+  int32_t IntValue; // w0
+  bool v6; // w8
+
+  if ( (byte_4C42BA3 & 1) == 0 )
+  {
+    sub_1C37058(&StringLiteral_24485/*"useNodePositionOnly"*/);
+    byte_4C42BA3 = 1;
+  }
+  IntValue = EntityScriptUtil__GetIntValue(this->fields.script, (System_String_o *)StringLiteral_24485/*"useNodePositionOnly"*/, -1, 0);
+  v6 = IntValue == 1;
+  if ( IntValue < 0 )
+    return defVal;
+  return v6;
 }

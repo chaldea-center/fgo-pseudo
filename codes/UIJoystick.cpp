@@ -4,10 +4,10 @@ void UIJoystick___ctor(UIJoystick_o *this, const MethodInfo *method)
   __int64 v4; // d1
   float z; // s2
 
-  if ( !byte_4C313D6 )
+  if ( !byte_4C3C926 )
   {
-    sub_1C32C20(&UnityEngine_Vector3_TypeInfo);
-    byte_4C313D6 = 1;
+    sub_1C37058(&UnityEngine_Vector3_TypeInfo);
+    byte_4C3C926 = 1;
   }
   static_fields = UnityEngine_Vector3_TypeInfo->static_fields;
   v4 = *(_QWORD *)&static_fields->oneVector.fields.x;
@@ -67,10 +67,10 @@ void UIJoystick__LateUpdate(UIJoystick_o *this, const MethodInfo *method)
     if ( this->fields.circularPadConstraint )
     {
       v7 = this->fields.range.fields.x;
-      if ( !byte_4C35887 )
+      if ( !byte_4C40E72 )
       {
-        sub_1C32C20(&System_Math_TypeInfo);
-        byte_4C35887 = 1;
+        sub_1C37058(&System_Math_TypeInfo);
+        byte_4C40E72 = 1;
       }
       v8 = (float)(z * z) + (float)((float)(x * x) + (float)(y * y));
       if ( v8 <= (float)(v7 * v7) )
@@ -114,7 +114,7 @@ void UIJoystick__LateUpdate(UIJoystick_o *this, const MethodInfo *method)
     target = (UnityEngine_Component_o *)this->fields.target;
     if ( !target || (target = (UnityEngine_Component_o *)UnityEngine_Component__get_transform(target, 0)) == 0 )
 LABEL_36:
-      sub_1C32E7C(target);
+      sub_1C372B4(target);
     v30.fields.x = x;
     v30.fields.y = v10;
     v30.fields.z = z;
@@ -122,10 +122,10 @@ LABEL_36:
     v18 = this->fields.mStartLocalPos.fields.x;
     v19 = this->fields.mStartLocalPos.fields.y;
     v20 = this->fields.mStartLocalPos.fields.z;
-    if ( !byte_4C313D3 )
+    if ( !byte_4C3C923 )
     {
-      sub_1C32C20(&System_Math_TypeInfo);
-      byte_4C313D3 = 1;
+      sub_1C37058(&System_Math_TypeInfo);
+      byte_4C3C923 = 1;
     }
     v21 = x - v18;
     v22 = v10 - v19;
@@ -134,18 +134,18 @@ LABEL_36:
       j_il2cpp_runtime_class_init_0(System_Math_TypeInfo);
     if ( sqrtf((float)((float)(v21 * v21) + (float)(v22 * v22)) + (float)(v23 * v23)) <= this->fields.deadZone )
     {
-      if ( !byte_4C312CA )
+      if ( !byte_4C3C81A )
       {
-        sub_1C32C20(&UnityEngine_Vector2_TypeInfo);
-        byte_4C312CA = 1;
+        sub_1C37058(&UnityEngine_Vector2_TypeInfo);
+        byte_4C3C81A = 1;
       }
       zeroVector = UnityEngine_Vector2_TypeInfo->static_fields->zeroVector;
       this->fields.padAngle = 0.0;
       this->fields.padPosition = zeroVector;
-      if ( !byte_4C313D1 )
+      if ( !byte_4C3C921 )
       {
-        sub_1C32C20(&UnityEngine_Vector3_TypeInfo);
-        byte_4C313D1 = 1;
+        sub_1C37058(&UnityEngine_Vector3_TypeInfo);
+        byte_4C3C921 = 1;
       }
       static_fields = UnityEngine_Vector3_TypeInfo->static_fields;
       v24 = static_fields->zeroVector.fields.x;
@@ -205,11 +205,11 @@ void UIJoystick__OnDrag(UIJoystick_o *this, UnityEngine_Vector2_o delta, const M
   UnityEngine_Vector3_o v35; // 0:s0.4,4:s1.4,8:s2.4
   UnityEngine_Vector3_o v36; // 0:s0.4,4:s1.4,8:s2.4
 
-  if ( (byte_4C35809 & 1) == 0 )
+  if ( (byte_4C40DF4 & 1) == 0 )
   {
-    sub_1C32C20(&NGUITools_TypeInfo);
-    sub_1C32C20(&UICamera_TypeInfo);
-    byte_4C35809 = 1;
+    sub_1C37058(&NGUITools_TypeInfo);
+    sub_1C37058(&UICamera_TypeInfo);
+    byte_4C40DF4 = 1;
   }
   memset(&v30, 0, sizeof(v30));
   if ( UnityEngine_Behaviour__get_enabled((UnityEngine_Behaviour_o *)this, 0) )
@@ -217,7 +217,7 @@ void UIJoystick__OnDrag(UIJoystick_o *this, UnityEngine_Vector2_o delta, const M
     gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
     if ( !NGUITools_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(NGUITools_TypeInfo);
-    if ( NGUITools__GetActive_49301984(gameObject, 0) )
+    if ( NGUITools__GetActive_49345096(gameObject, 0) )
     {
       target = UICamera_TypeInfo;
       if ( !UICamera_TypeInfo->_2.cctor_finished )
@@ -256,7 +256,7 @@ void UIJoystick__OnDrag(UIJoystick_o *this, UnityEngine_Vector2_o delta, const M
       v31.fields.x = *(float *)(v9 + 16);
       v31.fields.y = *(float *)(v9 + 20);
       v31.fields.z = 0.0;
-      UnityEngine_Camera__ScreenPointToRay_71030396(&v29, (UnityEngine_Camera_o *)target, v31, 0);
+      UnityEngine_Camera__ScreenPointToRay_71073508(&v29, (UnityEngine_Camera_o *)target, v31, 0);
       v30 = v29;
       z = v29.fields.m_Origin.fields.z;
       x = this->fields.mPlane.fields.m_Normal.fields.x;
@@ -266,10 +266,10 @@ void UIJoystick__OnDrag(UIJoystick_o *this, UnityEngine_Vector2_o delta, const M
       v15 = *(_QWORD *)&v29.fields.m_Origin.fields.x;
       v16 = (float)(v29.fields.m_Direction.fields.z * v14)
           + (float)((float)(v29.fields.m_Direction.fields.x * x) + (float)(v29.fields.m_Direction.fields.y * y));
-      if ( !byte_4C313D5 )
+      if ( !byte_4C3C925 )
       {
-        sub_1C32C20(&UnityEngine_Mathf_TypeInfo);
-        byte_4C313D5 = 1;
+        sub_1C37058(&UnityEngine_Mathf_TypeInfo);
+        byte_4C3C925 = 1;
       }
       v17 = UnityEngine_Mathf_TypeInfo->static_fields;
       v18 = fmaxf(fabsf(v16), 0.0) * 0.000001;
@@ -330,7 +330,7 @@ void UIJoystick__OnDrag(UIJoystick_o *this, UnityEngine_Vector2_o delta, const M
             return;
           }
 LABEL_32:
-          sub_1C32E7C(target);
+          sub_1C372B4(target);
         }
       }
     }
@@ -364,18 +364,18 @@ void UIJoystick__OnPress(UIJoystick_o *this, bool pressed, const MethodInfo *met
   UnityEngine_Quaternion_o rotation; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
   UnityEngine_Quaternion_o v27; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 
-  if ( (byte_4C35808 & 1) == 0 )
+  if ( (byte_4C40DF3 & 1) == 0 )
   {
-    sub_1C32C20(&NGUITools_TypeInfo);
-    sub_1C32C20(&UICamera_TypeInfo);
-    byte_4C35808 = 1;
+    sub_1C37058(&NGUITools_TypeInfo);
+    sub_1C37058(&UICamera_TypeInfo);
+    byte_4C40DF3 = 1;
   }
   if ( UnityEngine_Behaviour__get_enabled((UnityEngine_Behaviour_o *)this, 0) )
   {
     gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
     if ( !NGUITools_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(NGUITools_TypeInfo);
-    if ( NGUITools__GetActive_49301984(gameObject, 0) )
+    if ( NGUITools__GetActive_49345096(gameObject, 0) )
     {
       this->fields.mPressed = pressed;
       if ( pressed )
@@ -397,10 +397,10 @@ void UIJoystick__OnPress(UIJoystick_o *this, bool pressed, const MethodInfo *met
         {
           UnityEngine_Transform__set_position(transform, this->fields.mStartPos, 0);
           this->fields.mDragStarted = 0;
-          if ( !byte_4C313D1 )
+          if ( !byte_4C3C921 )
           {
-            sub_1C32C20(&UnityEngine_Vector3_TypeInfo);
-            byte_4C313D1 = 1;
+            sub_1C37058(&UnityEngine_Vector3_TypeInfo);
+            byte_4C3C921 = 1;
           }
           static_fields = UnityEngine_Vector3_TypeInfo->static_fields;
           z = static_fields->zeroVector.fields.z;
@@ -423,16 +423,16 @@ void UIJoystick__OnPress(UIJoystick_o *this, bool pressed, const MethodInfo *met
               y = rotation.fields.y;
               v12 = rotation.fields.z;
               w = rotation.fields.w;
-              if ( !byte_4C341EF )
+              if ( !byte_4C3F7D9 )
               {
-                sub_1C32C20(&UnityEngine_Vector3_TypeInfo);
-                byte_4C341EF = 1;
+                sub_1C37058(&UnityEngine_Vector3_TypeInfo);
+                byte_4C3F7D9 = 1;
               }
               v27.fields.x = x;
               v27.fields.y = y;
               v27.fields.z = v12;
               v27.fields.w = w;
-              v25 = UnityEngine_Quaternion__op_Multiply_71162940(
+              v25 = UnityEngine_Quaternion__op_Multiply_71206052(
                       v27,
                       UnityEngine_Vector3_TypeInfo->static_fields->backVector,
                       0);
@@ -442,20 +442,20 @@ void UIJoystick__OnPress(UIJoystick_o *this, bool pressed, const MethodInfo *met
               v17 = v25.fields.x;
               v18 = v25.fields.y;
               v19 = v25.fields.z;
-              if ( !byte_4C313D4 )
+              if ( !byte_4C3C924 )
               {
-                sub_1C32C20(&System_Math_TypeInfo);
-                byte_4C313D4 = 1;
+                sub_1C37058(&System_Math_TypeInfo);
+                byte_4C3C924 = 1;
               }
               if ( !System_Math_TypeInfo->_2.cctor_finished )
                 j_il2cpp_runtime_class_init_0(System_Math_TypeInfo);
               v20 = sqrtf((float)(v19 * v19) + (float)((float)(v17 * v17) + (float)(v18 * v18)));
               if ( v20 <= 0.00001 )
               {
-                if ( !byte_4C313D1 )
+                if ( !byte_4C3C921 )
                 {
-                  sub_1C32C20(&UnityEngine_Vector3_TypeInfo);
-                  byte_4C313D1 = 1;
+                  sub_1C37058(&UnityEngine_Vector3_TypeInfo);
+                  byte_4C3C921 = 1;
                 }
                 v24 = UnityEngine_Vector3_TypeInfo->static_fields;
                 v21 = v24->zeroVector.fields.x;
@@ -478,7 +478,7 @@ void UIJoystick__OnPress(UIJoystick_o *this, bool pressed, const MethodInfo *met
           }
         }
 LABEL_32:
-        sub_1C32E7C(transform);
+        sub_1C372B4(transform);
       }
     }
   }
@@ -493,7 +493,7 @@ void UIJoystick__Start(UIJoystick_o *this, const MethodInfo *method)
 
   transform = UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0);
   this->fields.target = transform;
-  sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.target, (int32_t)transform, v4, v5);
+  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.target, (int32_t)transform, v4, v5);
 }
 
 
@@ -533,7 +533,7 @@ void UIJoystick__Update(UIJoystick_o *this, const MethodInfo *method)
     v4 = this->fields.target;
     if ( !v4 )
 LABEL_9:
-      sub_1C32E7C(target);
+      sub_1C372B4(target);
     v18 = UnityEngine_Transform__get_position(this->fields.target, 0);
     x = this->fields.mStartPos.fields.x;
     y = this->fields.mStartPos.fields.y;

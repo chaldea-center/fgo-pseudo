@@ -1,9 +1,9 @@
 void EventRankingListViewObject___ctor(EventRankingListViewObject_o *this, const MethodInfo *method)
 {
-  if ( (byte_4C31FAE & 1) == 0 )
+  if ( (byte_4C3D598 & 1) == 0 )
   {
-    sub_1C32C20(&ListViewObject_TypeInfo);
-    byte_4C31FAE = 1;
+    sub_1C37058(&ListViewObject_TypeInfo);
+    byte_4C3D598 = 1;
   }
   if ( !ListViewObject_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(ListViewObject_TypeInfo);
@@ -16,25 +16,25 @@ void EventRankingListViewObject__Awake(EventRankingListViewObject_o *this, const
   UnityEngine_GameObject_o *dispObject; // x0
   Il2CppObject *Component_object; // x0
 
-  if ( (byte_4C31FA0 & 1) == 0 )
+  if ( (byte_4C3D58A & 1) == 0 )
   {
-    sub_1C32C20(&Method_UnityEngine_GameObject_GetComponent_EventRankingListViewItemDraw___);
-    byte_4C31FA0 = 1;
+    sub_1C37058(&Method_UnityEngine_GameObject_GetComponent_EventRankingListViewItemDraw___);
+    byte_4C3D58A = 1;
   }
   ListViewObject__Awake((ListViewObject_o *)this, 0);
   dispObject = this->fields.dispObject;
   if ( !dispObject
     || (Component_object = UnityEngine_GameObject__GetComponent_object_(
                              dispObject,
-                             (const MethodInfo_3134970 *)Method_UnityEngine_GameObject_GetComponent_EventRankingListViewItemDraw___),
+                             (const MethodInfo_313F1D8 *)Method_UnityEngine_GameObject_GetComponent_EventRankingListViewItemDraw___),
         this->fields.itemDraw = (struct EventRankingListViewItemDraw_o *)Component_object,
-        sub_1C32BC4(&this->fields.itemDraw, Component_object),
+        sub_1C36FFC(&this->fields.itemDraw, Component_object),
         (dispObject = (UnityEngine_GameObject_o *)this->fields.itemDraw) == 0) )
   {
-    sub_1C32E7C(dispObject);
+    sub_1C372B4(dispObject);
   }
   dispObject[5].fields.m_CachedPtr = (intptr_t)this;
-  sub_1C32BC4(&dispObject[5].fields, this);
+  sub_1C36FFC(&dispObject[5].fields, this);
 }
 
 
@@ -56,12 +56,12 @@ void EventRankingListViewObject__EventExitMove(EventRankingListViewObject_o *thi
   UnityEngine_Vector3_o v16; // 0:s0.4,4:s1.4,8:s2.4
   UnityEngine_Vector3_o v17; // 0:s1.4,4:s2.4,8:s3.4
 
-  if ( (byte_4C31FAA & 1) == 0 )
+  if ( (byte_4C3D594 & 1) == 0 )
   {
-    sub_1C32C20(&ListViewObject_TypeInfo);
-    sub_1C32C20(&UnityEngine_Object_TypeInfo);
-    sub_1C32C20(&StringLiteral_6216/*"EventExitMove2"*/);
-    byte_4C31FAA = 1;
+    sub_1C37058(&ListViewObject_TypeInfo);
+    sub_1C37058(&UnityEngine_Object_TypeInfo);
+    sub_1C37058(&StringLiteral_6217/*"EventExitMove2"*/);
+    byte_4C3D594 = 1;
   }
   dragObject = (UnityEngine_Object_o *)this->fields.dragObject;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -102,15 +102,15 @@ void EventRankingListViewObject__EventExitMove(EventRankingListViewObject_o *thi
     transform = (UnityEngine_GameObject_o *)TweenPosition__Begin(v7, v8->static_fields->BASE_MOVE_TIME, v17, 0);
     if ( !transform )
 LABEL_15:
-      sub_1C32E7C(transform);
+      sub_1C372B4(transform);
     v12 = transform;
     LODWORD(transform[1].monitor) = 3;
     gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
     v12[3].monitor = gameObject;
-    sub_1C32BC4(&v12[3].monitor, gameObject);
-    v14 = StringLiteral_6216/*"EventExitMove2"*/;
-    v12[3].fields.m_CachedPtr = StringLiteral_6216/*"EventExitMove2"*/;
-    sub_1C32BC4(&v12[3].fields, v14);
+    sub_1C36FFC(&v12[3].monitor, gameObject);
+    v14 = StringLiteral_6217/*"EventExitMove2"*/;
+    v12[3].fields.m_CachedPtr = StringLiteral_6217/*"EventExitMove2"*/;
+    sub_1C36FFC(&v12[3].fields, v14);
   }
 }
 
@@ -120,17 +120,17 @@ void EventRankingListViewObject__EventExitMove2(EventRankingListViewObject_o *th
   UnityEngine_Object_o *dragObject; // x21
   const MethodInfo *v4; // x1
 
-  if ( (byte_4C31FAB & 1) == 0 )
+  if ( (byte_4C3D595 & 1) == 0 )
   {
-    sub_1C32C20(&NGUITools_TypeInfo);
-    byte_4C31FAB = 1;
+    sub_1C37058(&NGUITools_TypeInfo);
+    byte_4C3D595 = 1;
   }
   dragObject = (UnityEngine_Object_o *)this->fields.dragObject;
   if ( !NGUITools_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NGUITools_TypeInfo);
   NGUITools__Destroy(dragObject, 0);
   this->fields.dragObject = 0;
-  sub_1C32BC4(&this->fields.dragObject, 0);
+  sub_1C36FFC(&this->fields.dragObject, 0);
   EventRankingListViewObject__EventMoveEnd(this, v4);
 }
 
@@ -146,12 +146,12 @@ void EventRankingListViewObject__EventExitStart(
   const MethodInfo *v8; // x1
   const MethodInfo *v9; // x2
 
-  if ( (byte_4C31FA9 & 1) == 0 )
+  if ( (byte_4C3D593 & 1) == 0 )
   {
-    sub_1C32C20(&Method_UnityEngine_GameObject_GetComponent_EventRankingListViewObject___);
-    sub_1C32C20(&UnityEngine_Object_TypeInfo);
-    sub_1C32C20(&StringLiteral_6215/*"EventExitMove"*/);
-    byte_4C31FA9 = 1;
+    sub_1C37058(&Method_UnityEngine_GameObject_GetComponent_EventRankingListViewObject___);
+    sub_1C37058(&UnityEngine_Object_TypeInfo);
+    sub_1C37058(&StringLiteral_6216/*"EventExitMove"*/);
+    byte_4C3D593 = 1;
   }
   this->fields.isBusy = 1;
   this->fields.dispMode = 0;
@@ -161,13 +161,13 @@ void EventRankingListViewObject__EventExitStart(
                                             this,
                                             this->klass->vtable._8_CreateDragObject.method);
   this->fields.dragObject = v5;
-  sub_1C32BC4(&this->fields.dragObject, v5);
+  sub_1C36FFC(&this->fields.dragObject, v5);
   dragObject = this->fields.dragObject;
   if ( !dragObject )
     goto LABEL_10;
   Component_object = UnityEngine_GameObject__GetComponent_object_(
                        dragObject,
-                       (const MethodInfo_3134970 *)Method_UnityEngine_GameObject_GetComponent_EventRankingListViewObject___);
+                       (const MethodInfo_313F1D8 *)Method_UnityEngine_GameObject_GetComponent_EventRankingListViewObject___);
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   dragObject = (UnityEngine_GameObject_o *)UnityEngine_Object__op_Equality(
@@ -181,11 +181,11 @@ void EventRankingListViewObject__EventExitStart(
   }
   if ( !Component_object )
 LABEL_10:
-    sub_1C32E7C(dragObject);
-  EventRankingListViewObject__Init_31927676((EventRankingListViewObject_o *)Component_object, 2, v9);
+    sub_1C372B4(dragObject);
+  EventRankingListViewObject__Init_32023308((EventRankingListViewObject_o *)Component_object, 2, v9);
   UnityEngine_MonoBehaviour__Invoke(
     (UnityEngine_MonoBehaviour_o *)this,
-    (System_String_o *)StringLiteral_6215/*"EventExitMove"*/,
+    (System_String_o *)StringLiteral_6216/*"EventExitMove"*/,
     delay,
     0);
 }
@@ -207,11 +207,11 @@ void EventRankingListViewObject__EventIntoMove(EventRankingListViewObject_o *thi
   UnityEngine_Vector3_o v14; // 0:s0.4,4:s1.4,8:s2.4
   UnityEngine_Vector3_o v15; // 0:s1.4,4:s2.4,8:s3.4
 
-  if ( (byte_4C31FA7 & 1) == 0 )
+  if ( (byte_4C3D591 & 1) == 0 )
   {
-    sub_1C32C20(&ListViewObject_TypeInfo);
-    sub_1C32C20(&StringLiteral_6227/*"EventIntoMove2"*/);
-    byte_4C31FA7 = 1;
+    sub_1C37058(&ListViewObject_TypeInfo);
+    sub_1C37058(&StringLiteral_6228/*"EventIntoMove2"*/);
+    byte_4C3D591 = 1;
   }
   dragObject = this->fields.dragObject;
   if ( !dragObject )
@@ -243,15 +243,15 @@ void EventRankingListViewObject__EventIntoMove(EventRankingListViewObject_o *thi
   dragObject = (UnityEngine_GameObject_o *)TweenPosition__Begin(v6, v5->static_fields->BASE_MOVE_TIME, v15, 0);
   if ( !dragObject )
 LABEL_11:
-    sub_1C32E7C(dragObject);
+    sub_1C372B4(dragObject);
   v10 = dragObject;
   LODWORD(dragObject[1].monitor) = 3;
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
   v10[3].monitor = gameObject;
-  sub_1C32BC4(&v10[3].monitor, gameObject);
-  v12 = StringLiteral_6227/*"EventIntoMove2"*/;
-  v10[3].fields.m_CachedPtr = StringLiteral_6227/*"EventIntoMove2"*/;
-  sub_1C32BC4(&v10[3].fields, v12);
+  sub_1C36FFC(&v10[3].monitor, gameObject);
+  v12 = StringLiteral_6228/*"EventIntoMove2"*/;
+  v10[3].fields.m_CachedPtr = StringLiteral_6228/*"EventIntoMove2"*/;
+  sub_1C36FFC(&v10[3].fields, v12);
 }
 
 
@@ -261,10 +261,10 @@ void EventRankingListViewObject__EventIntoMove2(EventRankingListViewObject_o *th
   UnityEngine_Object_o *dragObject; // x21
   const MethodInfo *v5; // x1
 
-  if ( (byte_4C31FA8 & 1) == 0 )
+  if ( (byte_4C3D592 & 1) == 0 )
   {
-    sub_1C32C20(&NGUITools_TypeInfo);
-    byte_4C31FA8 = 1;
+    sub_1C37058(&NGUITools_TypeInfo);
+    byte_4C3D592 = 1;
   }
   ListViewObject__SetVisible((ListViewObject_o *)this, 1, 0);
   this->fields.dispMode = 2;
@@ -274,7 +274,7 @@ void EventRankingListViewObject__EventIntoMove2(EventRankingListViewObject_o *th
     j_il2cpp_runtime_class_init_0(NGUITools_TypeInfo);
   NGUITools__Destroy(dragObject, 0);
   this->fields.dragObject = 0;
-  sub_1C32BC4(&this->fields.dragObject, 0);
+  sub_1C36FFC(&this->fields.dragObject, 0);
   EventRankingListViewObject__EventMoveEnd(this, v5);
 }
 
@@ -291,11 +291,11 @@ void EventRankingListViewObject__EventIntoStart(
   UnityEngine_Transform_o *transform; // x20
   UnityEngine_Vector3_o v10; // 0:s0.4,4:s1.4,8:s2.4
 
-  if ( (byte_4C31FA6 & 1) == 0 )
+  if ( (byte_4C3D590 & 1) == 0 )
   {
-    sub_1C32C20(&Method_UnityEngine_GameObject_GetComponent_EventRankingListViewObject___);
-    sub_1C32C20(&StringLiteral_6226/*"EventIntoMove"*/);
-    byte_4C31FA6 = 1;
+    sub_1C37058(&Method_UnityEngine_GameObject_GetComponent_EventRankingListViewObject___);
+    sub_1C37058(&StringLiteral_6227/*"EventIntoMove"*/);
+    byte_4C3D590 = 1;
   }
   this->fields.isBusy = 1;
   this->fields.dispMode = 0;
@@ -306,27 +306,27 @@ void EventRankingListViewObject__EventIntoStart(
                                             this->klass->vtable._8_CreateDragObject.method);
   this->fields.dragObject = v5;
   p_dragObject = &this->fields.dragObject;
-  sub_1C32BC4(&this->fields.dragObject, v5);
+  sub_1C36FFC(&this->fields.dragObject, v5);
   dragObject = this->fields.dragObject;
   if ( !dragObject
     || (dragObject = (UnityEngine_GameObject_o *)UnityEngine_GameObject__GetComponent_object_(
                                                    dragObject,
-                                                   (const MethodInfo_3134970 *)Method_UnityEngine_GameObject_GetComponent_EventRankingListViewObject___)) == 0
-    || (EventRankingListViewObject__Init_31927676((EventRankingListViewObject_o *)dragObject, 2, v8),
+                                                   (const MethodInfo_313F1D8 *)Method_UnityEngine_GameObject_GetComponent_EventRankingListViewObject___)) == 0
+    || (EventRankingListViewObject__Init_32023308((EventRankingListViewObject_o *)dragObject, 2, v8),
         (dragObject = *p_dragObject) == 0)
     || (transform = UnityEngine_GameObject__get_transform(dragObject, 0),
         (dragObject = (UnityEngine_GameObject_o *)UnityEngine_Component__get_transform(
                                                     (UnityEngine_Component_o *)this,
                                                     0)) == 0)
-    || (v10 = UnityEngine_Transform__TransformPoint_71250240((UnityEngine_Transform_o *)dragObject, 1000.0, 0.0, 0.0, 0),
+    || (v10 = UnityEngine_Transform__TransformPoint_71293352((UnityEngine_Transform_o *)dragObject, 1000.0, 0.0, 0.0, 0),
         !transform) )
   {
-    sub_1C32E7C(dragObject);
+    sub_1C372B4(dragObject);
   }
   UnityEngine_Transform__set_position(transform, v10, 0);
   UnityEngine_MonoBehaviour__Invoke(
     (UnityEngine_MonoBehaviour_o *)this,
-    (System_String_o *)StringLiteral_6226/*"EventIntoMove"*/,
+    (System_String_o *)StringLiteral_6227/*"EventIntoMove"*/,
     delay,
     0);
 }
@@ -346,7 +346,7 @@ void EventRankingListViewObject__EventMoveEnd(EventRankingListViewObject_o *this
   if ( callbackFunc )
   {
     *p_callbackFunc = 0;
-    sub_1C32BC4(p_callbackFunc, 0);
+    sub_1C36FFC(p_callbackFunc, 0);
     ((void (__fastcall *)(intptr_t, intptr_t))v3->fields.invoke_impl)(v3->fields.method_code, v3->fields.method);
   }
 }
@@ -359,10 +359,10 @@ EventRankingListViewItem_o *EventRankingListViewObject__GetItem(
   struct ListViewItem_o *linkItem; // x8
   __int64 naturalAligment; // x11
 
-  if ( (byte_4C31FA2 & 1) == 0 )
+  if ( (byte_4C3D58C & 1) == 0 )
   {
-    sub_1C32C20(&EventRankingListViewItem_TypeInfo);
-    byte_4C31FA2 = 1;
+    sub_1C37058(&EventRankingListViewItem_TypeInfo);
+    byte_4C3D58C = 1;
   }
   linkItem = this->fields.linkItem;
   if ( !linkItem )
@@ -396,10 +396,10 @@ void EventRankingListViewObject__Init(
   int32_t v19; // w8
   struct System_Action_o *v20; // x19
 
-  if ( (byte_4C31FA4 & 1) == 0 )
+  if ( (byte_4C3D58E & 1) == 0 )
   {
-    sub_1C32C20(&EventRankingListViewItem_TypeInfo);
-    byte_4C31FA4 = 1;
+    sub_1C37058(&EventRankingListViewItem_TypeInfo);
+    byte_4C3D58E = 1;
   }
   linkItem = this->fields.linkItem;
   if ( linkItem
@@ -427,12 +427,12 @@ void EventRankingListViewObject__Init(
     || (UnityEngine_Transform__set_localPosition(transform, this->fields.basePosition, 0),
         (transform = UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0)) == 0) )
   {
-    sub_1C32E7C(transform);
+    sub_1C372B4(transform);
   }
   UnityEngine_Transform__set_localScale(transform, this->fields.baseScale, 0);
   this->fields.callbackFunc = callbackFunc;
   p_callbackFunc = &this->fields.callbackFunc;
-  sub_1C32BC4(&this->fields.callbackFunc, callbackFunc);
+  sub_1C36FFC(&this->fields.callbackFunc, callbackFunc);
   v18 = 1;
   v19 = v12;
   switch ( v12 )
@@ -463,7 +463,7 @@ LABEL_16:
       if ( *p_callbackFunc )
       {
         *p_callbackFunc = 0;
-        sub_1C32BC4(p_callbackFunc, 0);
+        sub_1C36FFC(p_callbackFunc, 0);
         ((void (__fastcall *)(intptr_t, intptr_t))v20->fields.invoke_impl)(v20->fields.method_code, v20->fields.method);
       }
       return;
@@ -478,7 +478,7 @@ void EventRankingListViewObject__InitItem(EventRankingListViewObject_o *this, co
 
 
 // local variable allocation has failed, the output may be wrong!
-void EventRankingListViewObject__Init_31927676(
+void EventRankingListViewObject__Init_32023308(
         EventRankingListViewObject_o *this,
         int32_t initMode,
         const MethodInfo *method)
@@ -486,17 +486,17 @@ void EventRankingListViewObject__Init_31927676(
   const MethodInfo *v3; // x3
   int v4; // s1 OVERLAPPED
 
-  if ( !byte_4C313D1 )
+  if ( !byte_4C3C921 )
   {
-    sub_1C32C20(&UnityEngine_Vector3_TypeInfo);
-    byte_4C313D1 = 1;
+    sub_1C37058(&UnityEngine_Vector3_TypeInfo);
+    byte_4C3C921 = 1;
   }
   EventRankingListViewObject__Init(this, initMode, 0, 0.0, *(UnityEngine_Vector3_o *)&v4, v3);
 }
 
 
 // local variable allocation has failed, the output may be wrong!
-void EventRankingListViewObject__Init_31928528(
+void EventRankingListViewObject__Init_32024160(
         EventRankingListViewObject_o *this,
         int32_t initMode,
         System_Action_o *callbackFunc,
@@ -504,17 +504,17 @@ void EventRankingListViewObject__Init_31928528(
 {
   int v4; // s1 OVERLAPPED
 
-  if ( !byte_4C313D1 )
+  if ( !byte_4C3C921 )
   {
-    sub_1C32C20(&UnityEngine_Vector3_TypeInfo);
-    byte_4C313D1 = 1;
+    sub_1C37058(&UnityEngine_Vector3_TypeInfo);
+    byte_4C3C921 = 1;
   }
   EventRankingListViewObject__Init(this, initMode, callbackFunc, 0.0, *(UnityEngine_Vector3_o *)&v4, method);
 }
 
 
 // local variable allocation has failed, the output may be wrong!
-void EventRankingListViewObject__Init_31929048(
+void EventRankingListViewObject__Init_32024680(
         EventRankingListViewObject_o *this,
         int32_t initMode,
         System_Action_o *callbackFunc,
@@ -523,10 +523,10 @@ void EventRankingListViewObject__Init_31929048(
 {
   int v5; // s1 OVERLAPPED
 
-  if ( !byte_4C313D1 )
+  if ( !byte_4C3C921 )
   {
-    sub_1C32C20(&UnityEngine_Vector3_TypeInfo);
-    byte_4C313D1 = 1;
+    sub_1C37058(&UnityEngine_Vector3_TypeInfo);
+    byte_4C3C921 = 1;
   }
   EventRankingListViewObject__Init(this, initMode, callbackFunc, delay, *(UnityEngine_Vector3_o *)&v5, method);
 }
@@ -540,11 +540,11 @@ void EventRankingListViewObject__OnChangeAlphaAnim(EventRankingListViewObject_o 
   struct ListViewManager_o *v6; // x1
   EventRankingListViewItemDraw_o *itemDraw; // x0
 
-  if ( (byte_4C31FAC & 1) == 0 )
+  if ( (byte_4C3D596 & 1) == 0 )
   {
-    sub_1C32C20(&EventRankingListViewItem_TypeInfo);
-    sub_1C32C20(&EventRankingListViewManager_TypeInfo);
-    byte_4C31FAC = 1;
+    sub_1C37058(&EventRankingListViewItem_TypeInfo);
+    sub_1C37058(&EventRankingListViewManager_TypeInfo);
+    byte_4C3D596 = 1;
   }
   if ( this->fields.linkItem )
   {
@@ -564,7 +564,7 @@ void EventRankingListViewObject__OnChangeAlphaAnim(EventRankingListViewObject_o 
     }
     itemDraw = this->fields.itemDraw;
     if ( !itemDraw )
-      sub_1C32E7C(0);
+      sub_1C372B4(0);
     EventRankingListViewItemDraw__ChangeNextRewardIcon(itemDraw, (EventRankingListViewManager_o *)v6, v2);
   }
 }
@@ -575,11 +575,11 @@ void EventRankingListViewObject__SetInput(EventRankingListViewObject_o *this, bo
   UnityEngine_Object_o *itemDraw; // x20
   _BOOL8 v6; // x0
 
-  if ( (byte_4C31FA3 & 1) == 0 )
+  if ( (byte_4C3D58D & 1) == 0 )
   {
-    sub_1C32C20(&EventRankingListViewItem_TypeInfo);
-    sub_1C32C20(&UnityEngine_Object_TypeInfo);
-    byte_4C31FA3 = 1;
+    sub_1C37058(&EventRankingListViewItem_TypeInfo);
+    sub_1C37058(&UnityEngine_Object_TypeInfo);
+    byte_4C3D58D = 1;
   }
   ListViewObject__SetInput((ListViewObject_o *)this, isInput, 0);
   itemDraw = (UnityEngine_Object_o *)this->fields.itemDraw;
@@ -587,7 +587,7 @@ void EventRankingListViewObject__SetInput(EventRankingListViewObject_o *this, bo
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   v6 = UnityEngine_Object__op_Inequality(itemDraw, 0, 0);
   if ( v6 && !this->fields.itemDraw )
-    sub_1C32E7C(v6);
+    sub_1C372B4(v6);
 }
 
 
@@ -597,12 +597,12 @@ void EventRankingListViewObject__SetItem(
         ListViewItemSeed_o *seed,
         const MethodInfo *method)
 {
-  ListViewObject__SetItem_43729388((ListViewObject_o *)this, item, seed, 0);
+  ListViewObject__SetItem_43831492((ListViewObject_o *)this, item, seed, 0);
   this->fields.state = 0;
 }
 
 
-void EventRankingListViewObject__SetItem_31931724(
+void EventRankingListViewObject__SetItem_32027356(
         EventRankingListViewObject_o *this,
         ListViewItem_o *item,
         const MethodInfo *method)
@@ -624,12 +624,12 @@ void EventRankingListViewObject__SetupDisp(EventRankingListViewObject_o *this, c
   const MethodInfo *v10; // x3
   EventRankingListViewItemDraw_o *v11; // x0
 
-  if ( (byte_4C31FA5 & 1) == 0 )
+  if ( (byte_4C3D58F & 1) == 0 )
   {
-    sub_1C32C20(&EventRankingListViewItem_TypeInfo);
-    sub_1C32C20(&EventRankingListViewManager_TypeInfo);
-    sub_1C32C20(&UnityEngine_Object_TypeInfo);
-    byte_4C31FA5 = 1;
+    sub_1C37058(&EventRankingListViewItem_TypeInfo);
+    sub_1C37058(&EventRankingListViewManager_TypeInfo);
+    sub_1C37058(&UnityEngine_Object_TypeInfo);
+    byte_4C3D58F = 1;
   }
   linkItem = this->fields.linkItem;
   if ( !linkItem )
@@ -666,10 +666,10 @@ LABEL_8:
       v9 = 0;
     }
     this->fields.manager = v9;
-    sub_1C32BC4(&this->fields.manager, v9);
+    sub_1C36FFC(&this->fields.manager, v9);
     v11 = this->fields.itemDraw;
     if ( !v11 )
-      sub_1C32E7C(0);
+      sub_1C372B4(0);
     EventRankingListViewItemDraw__SetItem(v11, (EventRankingListViewItem_o *)linkItem, this->fields.dispMode, v10);
   }
 }
@@ -686,11 +686,11 @@ System_String_o *EventRankingListViewObject__ToString(EventRankingListViewObject
   __int64 v10; // [xsp+20h] [xbp-40h] BYREF
   float v11; // [xsp+28h] [xbp-38h]
 
-  if ( (byte_4C31FAD & 1) == 0 )
+  if ( (byte_4C3D597 & 1) == 0 )
   {
-    sub_1C32C20(&EventRankingListViewItemDraw_DispMode_TypeInfo);
-    sub_1C32C20(&StringLiteral_113/*" "*/);
-    byte_4C31FAD = 1;
+    sub_1C37058(&EventRankingListViewItemDraw_DispMode_TypeInfo);
+    sub_1C37058(&StringLiteral_113/*" "*/);
+    byte_4C3D597 = 1;
   }
   v11 = 0.0;
   v10 = 0;
@@ -702,8 +702,8 @@ System_String_o *EventRankingListViewObject__ToString(EventRankingListViewObject
   v5 = v3;
   v10 = *(_QWORD *)&this->fields.basePosition.fields.x;
   v11 = z;
-  v6 = (System_String_o *)sub_1DF1AD0(&v10, 0, 0, 0);
-  return System_String__Concat_63556792(v5, (System_String_o *)StringLiteral_113/*" "*/, v6, 0);
+  v6 = (System_String_o *)sub_1DF5F08(&v10, 0, 0, 0);
+  return System_String__Concat_63599904(v5, (System_String_o *)StringLiteral_113/*" "*/, v6, 0);
 }
 
 
@@ -719,12 +719,12 @@ void EventRankingListViewObject__Update(EventRankingListViewObject_o *this, cons
   struct ListViewManager_o *v10; // x3
   EventRankingListViewItemDraw_o *itemDraw; // x0
 
-  if ( (byte_4C31FA1 & 1) == 0 )
+  if ( (byte_4C3D58B & 1) == 0 )
   {
-    sub_1C32C20(&EventRankingListViewItem_TypeInfo);
-    sub_1C32C20(&EventRankingListViewManager_TypeInfo);
-    sub_1C32C20(&UnityEngine_Object_TypeInfo);
-    byte_4C31FA1 = 1;
+    sub_1C37058(&EventRankingListViewItem_TypeInfo);
+    sub_1C37058(&EventRankingListViewManager_TypeInfo);
+    sub_1C37058(&UnityEngine_Object_TypeInfo);
+    byte_4C3D58B = 1;
   }
   if ( this->fields.linkItem )
   {
@@ -763,7 +763,7 @@ void EventRankingListViewObject__Update(EventRankingListViewObject_o *this, cons
       }
       itemDraw = this->fields.itemDraw;
       if ( !itemDraw )
-        sub_1C32E7C(0);
+        sub_1C372B4(0);
       EventRankingListViewItemDraw__UpdateItem(
         itemDraw,
         (EventRankingListViewItem_o *)v7,
@@ -790,10 +790,10 @@ void EventRankingListViewObject__add_callbackFunc(
   System_Action_o *v12; // x1
   const MethodInfo *v13; // x2
 
-  if ( (byte_4C31F9E & 1) == 0 )
+  if ( (byte_4C3D588 & 1) == 0 )
   {
-    sub_1C32C20(&System_Action_TypeInfo);
-    byte_4C31F9E = 1;
+    sub_1C37058(&System_Action_TypeInfo);
+    byte_4C3D588 = 1;
   }
   callbackFunc = this->fields.callbackFunc;
   p_callbackFunc = &this->fields.callbackFunc;
@@ -806,13 +806,13 @@ void EventRankingListViewObject__add_callbackFunc(
       if ( (System_Action_c *)v8->klass != System_Action_TypeInfo )
         break;
     }
-    v9 = sub_1C6CE78(p_callbackFunc, v8, v6);
+    v9 = sub_1C712B0(p_callbackFunc, v8, v6);
     v10 = v6 == (System_Delegate_o *)v9;
     v6 = (System_Delegate_o *)v9;
     if ( v10 )
       return;
   }
-  v11 = (EventRankingListViewObject_o *)sub_1C3313C(v8);
+  v11 = (EventRankingListViewObject_o *)sub_1C37574(v8);
   EventRankingListViewObject__remove_callbackFunc(v11, v12, v13);
 }
 
@@ -831,10 +831,10 @@ void EventRankingListViewObject__remove_callbackFunc(
   EventRankingListViewObject_o *v11; // x0
   const MethodInfo *v12; // x1
 
-  if ( (byte_4C31F9F & 1) == 0 )
+  if ( (byte_4C3D589 & 1) == 0 )
   {
-    sub_1C32C20(&System_Action_TypeInfo);
-    byte_4C31F9F = 1;
+    sub_1C37058(&System_Action_TypeInfo);
+    byte_4C3D589 = 1;
   }
   callbackFunc = this->fields.callbackFunc;
   p_callbackFunc = &this->fields.callbackFunc;
@@ -847,12 +847,12 @@ void EventRankingListViewObject__remove_callbackFunc(
       if ( (System_Action_c *)v8->klass != System_Action_TypeInfo )
         break;
     }
-    v9 = sub_1C6CE78(p_callbackFunc, v8, v6);
+    v9 = sub_1C712B0(p_callbackFunc, v8, v6);
     v10 = v6 == (System_Delegate_o *)v9;
     v6 = (System_Delegate_o *)v9;
     if ( v10 )
       return;
   }
-  v11 = (EventRankingListViewObject_o *)sub_1C3313C(v8);
+  v11 = (EventRankingListViewObject_o *)sub_1C37574(v8);
   EventRankingListViewObject__Awake(v11, v12);
 }

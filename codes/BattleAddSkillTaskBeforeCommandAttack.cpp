@@ -17,30 +17,30 @@ CreateSkillTaskFromBuffAction_array *BattleAddSkillTaskBeforeCommandAttack__GetC
   const MethodInfo *v6; // x3
   __int64 v8; // x0
 
-  if ( (byte_4C3A958 & 1) == 0 )
+  if ( (byte_4C45F65 & 1) == 0 )
   {
-    sub_1C32C20(&CreateComboStartSkillTask_TypeInfo);
-    sub_1C32C20(&CreateSkillTaskFromBuffAction___TypeInfo);
-    byte_4C3A958 = 1;
+    sub_1C37058(&CreateComboStartSkillTask_TypeInfo);
+    sub_1C37058(&CreateSkillTaskFromBuffAction___TypeInfo);
+    byte_4C45F65 = 1;
   }
-  v2 = (CreateSkillTaskFromBuffAction_array *)sub_1C32CC8(CreateSkillTaskFromBuffAction___TypeInfo, 1);
-  v3 = (Il2CppObject *)sub_1C32E6C(CreateComboStartSkillTask_TypeInfo);
+  v2 = (CreateSkillTaskFromBuffAction_array *)sub_1C37100(CreateSkillTaskFromBuffAction___TypeInfo, 1);
+  v3 = (Il2CppObject *)sub_1C372A4(CreateComboStartSkillTask_TypeInfo);
   System_Object___ctor(v3, 0);
   if ( !v2 )
-    sub_1C32E7C(v4);
+    sub_1C372B4(v4);
   if ( v3 )
   {
-    v4 = sub_1C32D5C(v3, v2->obj.klass->_1.element_class);
+    v4 = sub_1C37194(v3, v2->obj.klass->_1.element_class);
     if ( !v4 )
     {
-      v8 = sub_1C32EA0(0);
-      sub_1C32D48(v8, 0);
+      v8 = sub_1C372D8(0);
+      sub_1C37180(v8, 0);
     }
   }
   if ( !LODWORD(v2->max_length) )
-    sub_1C32E84(v4);
+    sub_1C372BC(v4);
   v2->m_Items[0] = (CreateSkillTaskFromBuffAction_o *)v3;
-  sub_1C32BC4((CGThumbnailListItem_o *)v2->m_Items, (int32_t)v3, v5, v6);
+  sub_1C36FFC((CGThumbnailListItem_o *)v2->m_Items, (int32_t)v3, v5, v6);
   return v2;
 }
 

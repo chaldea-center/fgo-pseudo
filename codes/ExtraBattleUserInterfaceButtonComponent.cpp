@@ -25,11 +25,11 @@ void ExtraBattleUserInterfaceButtonComponent__OnTap(
   _QWORD *v7; // x0
   System_Reflection_MethodBase_o *v8; // x0
 
-  if ( (byte_4C3A921 & 1) == 0 )
+  if ( (byte_4C45F2E & 1) == 0 )
   {
-    sub_1C32C20(&Method_ActionExtensions_Call_ExtraBattleUserInterfaceButtonComponent_ExecType___);
-    sub_1C32C20(&Method_ExtraBattleUserInterfaceButtonComponent_OnTap__);
-    byte_4C3A921 = 1;
+    sub_1C37058(&Method_ActionExtensions_Call_ExtraBattleUserInterfaceButtonComponent_ExecType___);
+    sub_1C37058(&Method_ExtraBattleUserInterfaceButtonComponent_OnTap__);
+    byte_4C45F2E = 1;
   }
   IsEnable_k__BackingField = this->fields._IsEnable_k__BackingField;
   IsNullOrEmpty = System_String__IsNullOrEmpty(this->fields.disableTapSeName, 0);
@@ -39,21 +39,21 @@ void ExtraBattleUserInterfaceButtonComponent__OnTap(
     {
       v5 = Method_ExtraBattleUserInterfaceButtonComponent_OnTap__;
       if ( (*((_BYTE *)Method_ExtraBattleUserInterfaceButtonComponent_OnTap__ + 83) & 2) != 0 )
-        v5 = (_QWORD *)sub_1C32C38(Method_ExtraBattleUserInterfaceButtonComponent_OnTap__);
-      v6 = (System_Reflection_MethodBase_o *)sub_1C32C04(v5, v5[4]);
+        v5 = (_QWORD *)sub_1C37070(Method_ExtraBattleUserInterfaceButtonComponent_OnTap__);
+      v6 = (System_Reflection_MethodBase_o *)sub_1C3703C(v5, v5[4]);
       OverwriteAssetSoundName__PlaySe(v6, this->fields.enableTapSeName, 0, 0);
     }
     ActionExtensions__Call_Int32Enum_(
       (System_Action_T__o *)this->fields.onTapCallback,
       this->fields.execType,
-      (const MethodInfo_3029C90 *)Method_ActionExtensions_Call_ExtraBattleUserInterfaceButtonComponent_ExecType___);
+      (const MethodInfo_30344F8 *)Method_ActionExtensions_Call_ExtraBattleUserInterfaceButtonComponent_ExecType___);
   }
   else if ( !IsNullOrEmpty )
   {
     v7 = Method_ExtraBattleUserInterfaceButtonComponent_OnTap__;
     if ( (*((_BYTE *)Method_ExtraBattleUserInterfaceButtonComponent_OnTap__ + 83) & 2) != 0 )
-      v7 = (_QWORD *)sub_1C32C38(Method_ExtraBattleUserInterfaceButtonComponent_OnTap__);
-    v8 = (System_Reflection_MethodBase_o *)sub_1C32C04(v7, v7[4]);
+      v7 = (_QWORD *)sub_1C37070(Method_ExtraBattleUserInterfaceButtonComponent_OnTap__);
+    v8 = (System_Reflection_MethodBase_o *)sub_1C3703C(v7, v7[4]);
     OverwriteAssetSoundName__PlaySe(v8, this->fields.disableTapSeName, 0, 0);
   }
 }
@@ -66,15 +66,15 @@ void ExtraBattleUserInterfaceButtonComponent__SetActiveStateObjects(
   System_Collections_Generic_IEnumerable_T__o *stateObjects; // x20
   System_Action_object__o *v4; // x21
 
-  if ( (byte_4C3A91D & 1) == 0 )
+  if ( (byte_4C45F2A & 1) == 0 )
   {
-    sub_1C32C20(&System_Action_ExtraBattleUserInterfaceButtonComponent_StateObject__TypeInfo);
-    sub_1C32C20(&Method_BasicHelper_ForEach_ExtraBattleUserInterfaceButtonComponent_StateObject___);
-    sub_1C32C20(&Method_ExtraBattleUserInterfaceButtonComponent__SetActiveStateObjects_b__19_0__);
-    byte_4C3A91D = 1;
+    sub_1C37058(&System_Action_ExtraBattleUserInterfaceButtonComponent_StateObject__TypeInfo);
+    sub_1C37058(&Method_BasicHelper_ForEach_ExtraBattleUserInterfaceButtonComponent_StateObject___);
+    sub_1C37058(&Method_ExtraBattleUserInterfaceButtonComponent__SetActiveStateObjects_b__19_0__);
+    byte_4C45F2A = 1;
   }
   stateObjects = (System_Collections_Generic_IEnumerable_T__o *)this->fields.stateObjects;
-  v4 = (System_Action_object__o *)sub_1C32E6C(System_Action_ExtraBattleUserInterfaceButtonComponent_StateObject__TypeInfo);
+  v4 = (System_Action_object__o *)sub_1C372A4(System_Action_ExtraBattleUserInterfaceButtonComponent_StateObject__TypeInfo);
   System_Action_object____ctor(
     v4,
     (Il2CppObject *)this,
@@ -83,7 +83,7 @@ void ExtraBattleUserInterfaceButtonComponent__SetActiveStateObjects(
   BasicHelper__ForEach_object_(
     stateObjects,
     (System_Action_T__o *)v4,
-    (const MethodInfo_30C93B0 *)Method_BasicHelper_ForEach_ExtraBattleUserInterfaceButtonComponent_StateObject___);
+    (const MethodInfo_30D3C18 *)Method_BasicHelper_ForEach_ExtraBattleUserInterfaceButtonComponent_StateObject___);
 }
 
 
@@ -96,10 +96,10 @@ void ExtraBattleUserInterfaceButtonComponent__SetButtonLabel(
   UILabel_o *v6; // x0
   const MethodInfo *v7; // x1
 
-  if ( (byte_4C3A91E & 1) == 0 )
+  if ( (byte_4C45F2B & 1) == 0 )
   {
-    sub_1C32C20(&UnityEngine_Object_TypeInfo);
-    byte_4C3A91E = 1;
+    sub_1C37058(&UnityEngine_Object_TypeInfo);
+    byte_4C45F2B = 1;
   }
   buttonLabel = (UnityEngine_Object_o *)this->fields.buttonLabel;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -108,7 +108,7 @@ void ExtraBattleUserInterfaceButtonComponent__SetButtonLabel(
   {
     v6 = this->fields.buttonLabel;
     if ( !v6 )
-      sub_1C32E7C(0);
+      sub_1C372B4(0);
     UILabel__set_text(v6, text, 0);
     ExtraBattleUserInterfaceButtonComponent__SetActiveStateObjects(this, v7);
   }
@@ -132,10 +132,10 @@ void ExtraBattleUserInterfaceButtonComponent__SetButtonLabelColor(
   b = color.fields.b;
   g = color.fields.g;
   r = color.fields.r;
-  if ( (byte_4C3A91F & 1) == 0 )
+  if ( (byte_4C45F2C & 1) == 0 )
   {
-    sub_1C32C20(&UnityEngine_Object_TypeInfo);
-    byte_4C3A91F = 1;
+    sub_1C37058(&UnityEngine_Object_TypeInfo);
+    byte_4C45F2C = 1;
   }
   buttonLabel = (UnityEngine_Object_o *)this->fields.buttonLabel;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -144,7 +144,7 @@ void ExtraBattleUserInterfaceButtonComponent__SetButtonLabelColor(
   {
     v9 = (UIWidget_o *)this->fields.buttonLabel;
     if ( !v9 )
-      sub_1C32E7C(0);
+      sub_1C372B4(0);
     v10.fields.b = b;
     v10.fields.a = a;
     v10.fields.r = r;
@@ -166,7 +166,7 @@ void ExtraBattleUserInterfaceButtonComponent__SetEnable(
   buttonSprite = this->fields.buttonSprite;
   this->fields._IsEnable_k__BackingField = value;
   if ( !buttonSprite )
-    sub_1C32E7C(0);
+    sub_1C372B4(0);
   v5 = 136;
   if ( value )
     v5 = 120;
@@ -183,7 +183,7 @@ void ExtraBattleUserInterfaceButtonComponent__SetOnTapCallback(
   const MethodInfo *v3; // x3
 
   this->fields.onTapCallback = callback;
-  sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.onTapCallback, (int32_t)callback, (int32_t)method, v3);
+  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.onTapCallback, (int32_t)callback, (int32_t)method, v3);
 }
 
 
@@ -208,12 +208,12 @@ void ExtraBattleUserInterfaceButtonComponent__UpdateData(
   int32_t targetIndex; // [xsp+Ch] [xbp-34h] BYREF
   UnityEngine_Color_o v22; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 
-  if ( (byte_4C3A920 & 1) == 0 )
+  if ( (byte_4C45F2D & 1) == 0 )
   {
-    sub_1C32C20(&LocalizationManager_TypeInfo);
-    sub_1C32C20(&StringLiteral_5833/*"EX_BATTLE_UI_SWITCH_PARTY_BUTTON_ALL_OTHER_PARTY_LOSE_MESSAGE"*/);
-    sub_1C32C20(&StringLiteral_1/*""*/);
-    byte_4C3A920 = 1;
+    sub_1C37058(&LocalizationManager_TypeInfo);
+    sub_1C37058(&StringLiteral_5834/*"EX_BATTLE_UI_SWITCH_PARTY_BUTTON_ALL_OTHER_PARTY_LOSE_MESSAGE"*/);
+    sub_1C37058(&StringLiteral_1/*""*/);
+    byte_4C45F2D = 1;
   }
   targetIndex = 0;
   ExtraBattleUserInterfaceComponent__UpdateData(
@@ -250,14 +250,14 @@ void ExtraBattleUserInterfaceButtonComponent__UpdateData(
         return;
       }
 LABEL_19:
-      sub_1C32E7C(v11);
+      sub_1C372B4(v11);
     }
     if ( !v16 )
       goto LABEL_19;
     ExtraBattleUserInterfaceButtonComponent__SetEnable(v16, 0, v13);
     if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-    v18 = LocalizationManager__Get((System_String_o *)StringLiteral_5833/*"EX_BATTLE_UI_SWITCH_PARTY_BUTTON_ALL_OTHER_PARTY_LOSE_MESSAGE"*/, 0);
+    v18 = LocalizationManager__Get((System_String_o *)StringLiteral_5834/*"EX_BATTLE_UI_SWITCH_PARTY_BUTTON_ALL_OTHER_PARTY_LOSE_MESSAGE"*/, 0);
     ExtraBattleUserInterfaceButtonComponent__SetButtonLabel(this, v18, v19);
     v22.fields.g = 0.92157;
     v22.fields.b = 0.015686;
@@ -277,20 +277,20 @@ void ExtraBattleUserInterfaceButtonComponent___SetActiveStateObjects_b__19_0(
   __int64 v6; // x0
   const MethodInfo *v7; // x2
 
-  if ( (byte_4C3A922 & 1) == 0 )
+  if ( (byte_4C45F2F & 1) == 0 )
   {
-    sub_1C32C20(&Method_ExtraBattleUserInterfaceButtonComponent__SetActiveStateObjects_b__19_1__);
-    sub_1C32C20(&System_Func_ExtraBattleUserInterfaceButtonComponent_ShowCondition__bool__TypeInfo);
-    byte_4C3A922 = 1;
+    sub_1C37058(&Method_ExtraBattleUserInterfaceButtonComponent__SetActiveStateObjects_b__19_1__);
+    sub_1C37058(&System_Func_ExtraBattleUserInterfaceButtonComponent_ShowCondition__bool__TypeInfo);
+    byte_4C45F2F = 1;
   }
-  v5 = (System_Func_T__TResult__o *)sub_1C32E6C(System_Func_ExtraBattleUserInterfaceButtonComponent_ShowCondition__bool__TypeInfo);
+  v5 = (System_Func_T__TResult__o *)sub_1C372A4(System_Func_ExtraBattleUserInterfaceButtonComponent_ShowCondition__bool__TypeInfo);
   System_Func_Int32Enum__bool____ctor(
     v5,
     (Il2CppObject *)this,
     Method_ExtraBattleUserInterfaceButtonComponent__SetActiveStateObjects_b__19_1__,
     0);
   if ( !obj )
-    sub_1C32E7C(v6);
+    sub_1C372B4(v6);
   ExtraBattleUserInterfaceButtonComponent_StateObject__SetActiveCondition(
     obj,
     (System_Func_ExtraBattleUserInterfaceButtonComponent_ShowCondition__bool__o *)v5,
@@ -309,10 +309,10 @@ bool ExtraBattleUserInterfaceButtonComponent___SetActiveStateObjects_b__19_1(
   UnityEngine_Object_o *v9; // x20
   struct UILabel_o *v10; // x8
 
-  if ( (byte_4C3A923 & 1) == 0 )
+  if ( (byte_4C45F30 & 1) == 0 )
   {
-    sub_1C32C20(&UnityEngine_Object_TypeInfo);
-    byte_4C3A923 = 1;
+    sub_1C37058(&UnityEngine_Object_TypeInfo);
+    byte_4C45F30 = 1;
   }
   switch ( condtion )
   {
@@ -341,7 +341,7 @@ bool ExtraBattleUserInterfaceButtonComponent___SetActiveStateObjects_b__19_1(
       v10 = this->fields.buttonLabel;
       if ( !v10 )
 LABEL_18:
-        sub_1C32E7C(v7);
+        sub_1C372B4(v7);
       return System_String__IsNullOrEmpty(v10->fields.mText, 0);
     default:
       return 0;
@@ -389,7 +389,7 @@ void ExtraBattleUserInterfaceButtonComponent_StateObject__SetActiveCondition(
     if ( obj )
       goto LABEL_3;
 LABEL_5:
-    sub_1C32E7C(v4);
+    sub_1C372B4(v4);
   }
   v4 = ((__int64 (__fastcall *)(intptr_t, _QWORD, intptr_t))func->fields.invoke_impl)(
          func->fields.method_code,

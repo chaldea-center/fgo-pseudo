@@ -35,16 +35,16 @@ void RecommendSupportListViewItemDraw__Init(
   UISprite_o *unSelectedServantSprite; // x20
   const MethodInfo *v8; // x2
 
-  if ( (byte_4C33904 & 1) == 0 )
+  if ( (byte_4C3EEEE & 1) == 0 )
   {
-    sub_1C32C20(&AtlasManager_TypeInfo);
-    sub_1C32C20(&LocalizationManager_TypeInfo);
-    sub_1C32C20(&StringLiteral_19612/*"formation_select_small"*/);
-    sub_1C32C20(&StringLiteral_11034/*"RECOMMEND_SUPPORT_ADVICE_MESSAGE_SELECT_BUTTON"*/);
-    sub_1C32C20(&StringLiteral_19568/*"formation_blank_Landscape_select"*/);
-    sub_1C32C20(&StringLiteral_19567/*"formation_blank_Landscape"*/);
-    sub_1C32C20(&StringLiteral_11040/*"RECOMMEND_SUPPORT_QUEST_SELECT_BUTTON"*/);
-    byte_4C33904 = 1;
+    sub_1C37058(&AtlasManager_TypeInfo);
+    sub_1C37058(&LocalizationManager_TypeInfo);
+    sub_1C37058(&StringLiteral_19615/*"formation_select_small"*/);
+    sub_1C37058(&StringLiteral_11035/*"RECOMMEND_SUPPORT_ADVICE_MESSAGE_SELECT_BUTTON"*/);
+    sub_1C37058(&StringLiteral_19571/*"formation_blank_Landscape_select"*/);
+    sub_1C37058(&StringLiteral_19570/*"formation_blank_Landscape"*/);
+    sub_1C37058(&StringLiteral_11041/*"RECOMMEND_SUPPORT_QUEST_SELECT_BUTTON"*/);
+    byte_4C3EEEE = 1;
   }
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
   if ( !gameObject )
@@ -53,25 +53,25 @@ void RecommendSupportListViewItemDraw__Init(
   messageSelectButtonLabel = this->fields.messageSelectButtonLabel;
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-  gameObject = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)StringLiteral_11034/*"RECOMMEND_SUPPORT_ADVICE_MESSAGE_SELECT_BUTTON"*/, 0);
+  gameObject = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)StringLiteral_11035/*"RECOMMEND_SUPPORT_ADVICE_MESSAGE_SELECT_BUTTON"*/, 0);
   if ( !messageSelectButtonLabel
     || (UILabel__set_text(messageSelectButtonLabel, (System_String_o *)gameObject, 0),
         questSelectButtonLabel = this->fields.questSelectButtonLabel,
-        gameObject = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)StringLiteral_11040/*"RECOMMEND_SUPPORT_QUEST_SELECT_BUTTON"*/, 0),
+        gameObject = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)StringLiteral_11041/*"RECOMMEND_SUPPORT_QUEST_SELECT_BUTTON"*/, 0),
         !questSelectButtonLabel) )
   {
 LABEL_11:
-    sub_1C32E7C(gameObject);
+    sub_1C372B4(gameObject);
   }
   UILabel__set_text(questSelectButtonLabel, (System_String_o *)gameObject, 0);
   unSelectedServantSprite = this->fields.unSelectedServantSprite;
   if ( !AtlasManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo);
-  AtlasManager__SetPartyOrganizationImage(unSelectedServantSprite, (System_String_o *)StringLiteral_19612/*"formation_select_small"*/, 0);
-  AtlasManager__SetPartyOrganizationImage(this->fields.emptyBoardSprite, (System_String_o *)StringLiteral_19567/*"formation_blank_Landscape"*/, 0);
+  AtlasManager__SetPartyOrganizationImage(unSelectedServantSprite, (System_String_o *)StringLiteral_19615/*"formation_select_small"*/, 0);
+  AtlasManager__SetPartyOrganizationImage(this->fields.emptyBoardSprite, (System_String_o *)StringLiteral_19570/*"formation_blank_Landscape"*/, 0);
   AtlasManager__SetPartyOrganizationImage(
     this->fields.emptyBoardSelectSprite,
-    (System_String_o *)StringLiteral_19568/*"formation_blank_Landscape_select"*/,
+    (System_String_o *)StringLiteral_19571/*"formation_blank_Landscape_select"*/,
     0);
   RecommendSupportListViewItemDraw__SetupBoard(this, 1, v8);
 }
@@ -88,19 +88,19 @@ void RecommendSupportListViewItemDraw__SetConfirmItem(
   const MethodInfo *v8; // x2
   const MethodInfo *v9; // x3
 
-  if ( (byte_4C33905 & 1) == 0 )
+  if ( (byte_4C3EEEF & 1) == 0 )
   {
-    sub_1C32C20(&AtlasManager_TypeInfo);
-    sub_1C32C20(&StringLiteral_19612/*"formation_select_small"*/);
-    byte_4C33905 = 1;
+    sub_1C37058(&AtlasManager_TypeInfo);
+    sub_1C37058(&StringLiteral_19615/*"formation_select_small"*/);
+    byte_4C3EEEF = 1;
   }
   RecommendSupportListViewItemDraw__SetupBoard(this, 0, method);
   unSelectedServantSprite = this->fields.unSelectedServantSprite;
   if ( !AtlasManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo);
-  v6 = AtlasManager__SetPartyOrganizationImage(unSelectedServantSprite, (System_String_o *)StringLiteral_19612/*"formation_select_small"*/, 0);
+  v6 = AtlasManager__SetPartyOrganizationImage(unSelectedServantSprite, (System_String_o *)StringLiteral_19615/*"formation_select_small"*/, 0);
   if ( !deckData )
-    sub_1C32E7C(v6);
+    sub_1C372B4(v6);
   RecommendSupportListViewItemDraw__SetupFaceIcon(this, deckData->fields.userSvtId, deckData->fields.userSvtEquipId, v7);
   RecommendSupportListViewItemDraw__SetupMessage(this, deckData->fields.adviceMessageIds, v8);
   RecommendSupportListViewItemDraw__SetupQuest(this, deckData->fields.questId, deckData->fields.questPhase, v9);
@@ -117,7 +117,7 @@ void RecommendSupportListViewItemDraw__SetItem(
   const MethodInfo *v7; // x3
 
   if ( !deckData )
-    sub_1C32E7C(this);
+    sub_1C372B4(this);
   if ( deckData->fields.userSvtId <= 0 && deckData->fields.userSvtEquipId <= 0 && deckData->fields.questId < 1 )
   {
     RecommendSupportListViewItemDraw__ClearItem(this, (const MethodInfo *)deckData);
@@ -144,11 +144,11 @@ void RecommendSupportListViewItemDraw__SetServantName(
   UILabel_o *servantNameLabel; // x19
   System_String_o *SvtName; // x0
 
-  if ( (byte_4C33907 & 1) == 0 )
+  if ( (byte_4C3EEF1 & 1) == 0 )
   {
-    sub_1C32C20(&LocalizationManager_TypeInfo);
-    sub_1C32C20(&StringLiteral_11062/*"RECOMMEND_SUPPORT_SERVANT_NAME_NO_SELECT"*/);
-    byte_4C33907 = 1;
+    sub_1C37058(&LocalizationManager_TypeInfo);
+    sub_1C37058(&StringLiteral_11063/*"RECOMMEND_SUPPORT_SERVANT_NAME_NO_SELECT"*/);
+    byte_4C3EEF1 = 1;
   }
   servantNameLabel = this->fields.servantNameLabel;
   if ( entity )
@@ -159,10 +159,10 @@ void RecommendSupportListViewItemDraw__SetServantName(
   {
     if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-    SvtName = LocalizationManager__Get((System_String_o *)StringLiteral_11062/*"RECOMMEND_SUPPORT_SERVANT_NAME_NO_SELECT"*/, 0);
+    SvtName = LocalizationManager__Get((System_String_o *)StringLiteral_11063/*"RECOMMEND_SUPPORT_SERVANT_NAME_NO_SELECT"*/, 0);
   }
   if ( !servantNameLabel )
-    sub_1C32E7C(SvtName);
+    sub_1C372B4(SvtName);
   UILabel__set_text(servantNameLabel, SvtName, 0);
 }
 
@@ -178,7 +178,7 @@ void RecommendSupportListViewItemDraw__SetupBoard(
   if ( !emptyObject
     || (UnityEngine_GameObject__SetActive(emptyObject, isEmpty, 0), (emptyObject = this->fields.baseObject) == 0) )
   {
-    sub_1C32E7C(emptyObject);
+    sub_1C372B4(emptyObject);
   }
   UnityEngine_GameObject__SetActive(emptyObject, !isEmpty, 0);
 }
@@ -204,30 +204,30 @@ void RecommendSupportListViewItemDraw__SetupFaceIcon(
   Il2CppObject *v18; // [xsp+18h] [xbp-48h] BYREF
   Il2CppObject *entity; // [xsp+28h] [xbp-38h] BYREF
 
-  if ( (byte_4C33906 & 1) == 0 )
+  if ( (byte_4C3EEF0 & 1) == 0 )
   {
-    sub_1C32C20(&Method_DataManager_GetMaster_UserServantMaster___);
-    sub_1C32C20(&DataManager_TypeInfo);
-    sub_1C32C20(&Method_DataMasterBase_UserServantMaster__UserServantEntity__long__TryGetEntity__);
-    sub_1C32C20(&IconLabelInfo_TypeInfo);
-    sub_1C32C20(&long___TypeInfo);
-    byte_4C33906 = 1;
+    sub_1C37058(&Method_DataManager_GetMaster_UserServantMaster___);
+    sub_1C37058(&DataManager_TypeInfo);
+    sub_1C37058(&Method_DataMasterBase_UserServantMaster__UserServantEntity__long__TryGetEntity__);
+    sub_1C37058(&IconLabelInfo_TypeInfo);
+    sub_1C37058(&long___TypeInfo);
+    byte_4C3EEF0 = 1;
   }
   entity = 0;
   v18 = 0;
   RecommendSupportListViewItemDraw__SetupServantSelectState(this, 1, (const MethodInfo *)userSvtEquipId);
   if ( !DataManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-  Master_object = (__int64)DataManager__GetMaster_object_((const MethodInfo_30DD39C *)Method_DataManager_GetMaster_UserServantMaster___);
+  Master_object = (__int64)DataManager__GetMaster_object_((const MethodInfo_30E7C04 *)Method_DataManager_GetMaster_UserServantMaster___);
   if ( !Master_object )
     goto LABEL_24;
   if ( DataMasterBase_object__object__long___TryGetEntity(
          (DataMasterBase_TMaster__TEntity__PKType__o *)Master_object,
          &entity,
          userSvtId,
-         (const MethodInfo_3398DE0 *)Method_DataMasterBase_UserServantMaster__UserServantEntity__long__TryGetEntity__) )
+         (const MethodInfo_33A3648 *)Method_DataMasterBase_UserServantMaster__UserServantEntity__long__TryGetEntity__) )
   {
-    v8 = (IconLabelInfo_o *)sub_1C32E6C(IconLabelInfo_TypeInfo);
+    v8 = (IconLabelInfo_o *)sub_1C372A4(IconLabelInfo_TypeInfo);
     IconLabelInfo___ctor(v8, 0);
     Master_object = (__int64)entity;
     if ( entity )
@@ -236,18 +236,18 @@ void RecommendSupportListViewItemDraw__SetupFaceIcon(
       Master_object = UserServantEntity__getLevelMax((UserServantEntity_o *)entity, 0);
       if ( v8 )
       {
-        IconLabelInfo__Set_40818388(v8, 2, klass, Master_object, 0, 0, 0, 0, 0, 0);
+        IconLabelInfo__Set_40917868(v8, 2, klass, Master_object, 0, 0, 0, 0, 0, 0);
         servantFaceIcon = this->fields.servantFaceIcon;
         v11 = entity;
-        Master_object = sub_1C32CC8(long___TypeInfo, 1);
+        Master_object = sub_1C37100(long___TypeInfo, 1);
         if ( Master_object )
         {
           if ( !*(_DWORD *)(Master_object + 24) )
-            sub_1C32E84(Master_object);
+            sub_1C372BC(Master_object);
           *(_QWORD *)(Master_object + 32) = userSvtEquipId;
           if ( servantFaceIcon )
           {
-            ServantFaceIconComponent__Set_40905868(
+            ServantFaceIconComponent__Set_41005348(
               servantFaceIcon,
               (UserServantEntity_o *)v11,
               (System_Int64_array *)Master_object,
@@ -262,7 +262,7 @@ void RecommendSupportListViewItemDraw__SetupFaceIcon(
       }
     }
 LABEL_24:
-    sub_1C32E7C(Master_object);
+    sub_1C372B4(Master_object);
   }
   Master_object = (__int64)this->fields.servantFaceIcon;
   if ( !Master_object )
@@ -272,14 +272,14 @@ LABEL_24:
   RecommendSupportListViewItemDraw__SetupPush(this, 0, v15);
   if ( !DataManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-  Master_object = (__int64)DataManager__GetMaster_object_((const MethodInfo_30DD39C *)Method_DataManager_GetMaster_UserServantMaster___);
+  Master_object = (__int64)DataManager__GetMaster_object_((const MethodInfo_30E7C04 *)Method_DataManager_GetMaster_UserServantMaster___);
   if ( !Master_object )
     goto LABEL_24;
   if ( DataMasterBase_object__object__long___TryGetEntity(
          (DataMasterBase_TMaster__TEntity__PKType__o *)Master_object,
          &v18,
          userSvtEquipId,
-         (const MethodInfo_3398DE0 *)Method_DataMasterBase_UserServantMaster__UserServantEntity__long__TryGetEntity__) )
+         (const MethodInfo_33A3648 *)Method_DataMasterBase_UserServantMaster__UserServantEntity__long__TryGetEntity__) )
   {
     Master_object = (__int64)this->fields.servantFaceIcon;
     if ( !Master_object )
@@ -310,14 +310,14 @@ void RecommendSupportListViewItemDraw__SetupMessage(
   System_String_o *v9; // x21
   System_String_array *ConvertMessageToId; // x0
 
-  if ( (byte_4C33909 & 1) == 0 )
+  if ( (byte_4C3EEF3 & 1) == 0 )
   {
-    sub_1C32C20(&Method_DataManager_GetMaster_RecommendAdviceMessageMaster___);
-    sub_1C32C20(&DataManager_TypeInfo);
-    sub_1C32C20(&LocalizationManager_TypeInfo);
-    sub_1C32C20(&StringLiteral_11035/*"RECOMMEND_SUPPORT_ADVICE_MESSAGE_SEPARATOR"*/);
-    sub_1C32C20(&StringLiteral_11026/*"RECOMMEND_SUPPORT_ADVICE_MESSAGE_CHANGE_NO_INPUT"*/);
-    byte_4C33909 = 1;
+    sub_1C37058(&Method_DataManager_GetMaster_RecommendAdviceMessageMaster___);
+    sub_1C37058(&DataManager_TypeInfo);
+    sub_1C37058(&LocalizationManager_TypeInfo);
+    sub_1C37058(&StringLiteral_11036/*"RECOMMEND_SUPPORT_ADVICE_MESSAGE_SEPARATOR"*/);
+    sub_1C37058(&StringLiteral_11027/*"RECOMMEND_SUPPORT_ADVICE_MESSAGE_CHANGE_NO_INPUT"*/);
+    byte_4C3EEF3 = 1;
   }
   IsNullOrEmpty = BasicHelper__IsNullOrEmpty((System_Collections_ICollection_o *)ids, 0);
   selectMessageLabel = this->fields.selectMessageLabel;
@@ -334,24 +334,24 @@ void RecommendSupportListViewItemDraw__SetupMessage(
     {
 LABEL_5:
       Master_object = (RecommendAdviceMessageMaster_o *)LocalizationManager__Get(
-                                                          (System_String_o *)StringLiteral_11026/*"RECOMMEND_SUPPORT_ADVICE_MESSAGE_CHANGE_NO_INPUT"*/,
+                                                          (System_String_o *)StringLiteral_11027/*"RECOMMEND_SUPPORT_ADVICE_MESSAGE_CHANGE_NO_INPUT"*/,
                                                           0);
       if ( !selectMessageLabel )
         goto LABEL_13;
       goto LABEL_12;
     }
   }
-  v9 = LocalizationManager__Get((System_String_o *)StringLiteral_11035/*"RECOMMEND_SUPPORT_ADVICE_MESSAGE_SEPARATOR"*/, 0);
+  v9 = LocalizationManager__Get((System_String_o *)StringLiteral_11036/*"RECOMMEND_SUPPORT_ADVICE_MESSAGE_SEPARATOR"*/, 0);
   if ( !DataManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-  Master_object = (RecommendAdviceMessageMaster_o *)DataManager__GetMaster_object_((const MethodInfo_30DD39C *)Method_DataManager_GetMaster_RecommendAdviceMessageMaster___);
+  Master_object = (RecommendAdviceMessageMaster_o *)DataManager__GetMaster_object_((const MethodInfo_30E7C04 *)Method_DataManager_GetMaster_RecommendAdviceMessageMaster___);
   if ( !Master_object
     || (ConvertMessageToId = RecommendAdviceMessageMaster__GetConvertMessageToId(Master_object, ids, 0),
         Master_object = (RecommendAdviceMessageMaster_o *)System_String__Join(v9, ConvertMessageToId, 0),
         !selectMessageLabel) )
   {
 LABEL_13:
-    sub_1C32E7C(Master_object);
+    sub_1C372B4(Master_object);
   }
 LABEL_12:
   UILabel__set_text(selectMessageLabel, (System_String_o *)Master_object, 0);
@@ -372,10 +372,10 @@ void RecommendSupportListViewItemDraw__SetupPush(
   CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_o v11; // [xsp+0h] [xbp-60h] BYREF
   CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_o v12; // [xsp+20h] [xbp-40h]
 
-  if ( (byte_4C33908 & 1) == 0 )
+  if ( (byte_4C3EEF2 & 1) == 0 )
   {
-    sub_1C32C20(&CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo);
-    byte_4C33908 = 1;
+    sub_1C37058(&CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo);
+    byte_4C3EEF2 = 1;
   }
   pushSprite = (UnityEngine_Component_o *)this->fields.pushSprite;
   if ( !pushSprite )
@@ -388,7 +388,7 @@ void RecommendSupportListViewItemDraw__SetupPush(
     if ( pushSprite )
       goto LABEL_9;
 LABEL_11:
-    sub_1C32E7C(pushSprite);
+    sub_1C372B4(pushSprite);
   }
   pushSprite = (UnityEngine_Component_o *)UserGameMaster__getSelfUserGame(0);
   if ( !pushSprite )
@@ -401,7 +401,7 @@ LABEL_11:
   if ( !CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo);
   v11 = v12;
-  pushSprite = (UnityEngine_Component_o *)CodeStage_AntiCheat_ObscuredTypes_ObscuredLong__op_Implicit_48891308(&v11, 0);
+  pushSprite = (UnityEngine_Component_o *)CodeStage_AntiCheat_ObscuredTypes_ObscuredLong__op_Implicit_48934420(&v11, 0);
   v10 = monitor == pushSprite;
   if ( !v6 )
     goto LABEL_11;
@@ -463,27 +463,27 @@ void RecommendSupportListViewItemDraw__SetupQuest(
   int32_t questPhasea; // [xsp+2Ch] [xbp-44h] BYREF
 
   questPhasea = questPhase;
-  if ( (byte_4C3390A & 1) == 0 )
+  if ( (byte_4C3EEF4 & 1) == 0 )
   {
-    sub_1C32C20(&Method_DataManager_GetMaster_QuestMaster___);
-    sub_1C32C20(&Method_DataManager_GetMaster_RecommendSupportQuestMaster___);
-    sub_1C32C20(&Method_DataManager_GetMaster_SpotMaster___);
-    sub_1C32C20(&Method_DataManager_GetMaster_WarMaster___);
-    sub_1C32C20(&DataManager_TypeInfo);
-    sub_1C32C20(&Method_DataMasterBase_SpotMaster__SpotEntity__int__TryGetEntity__);
-    sub_1C32C20(&Method_DataMasterBase_QuestMaster__QuestEntity__int__TryGetEntity__);
-    sub_1C32C20(&Method_DataMasterBase_WarMaster__WarEntity__int__TryGetEntity__);
-    sub_1C32C20(&Method_System_Collections_Generic_List_string__Add__);
-    sub_1C32C20(&Method_System_Collections_Generic_List_string___ctor__);
-    sub_1C32C20(&Method_System_Collections_Generic_List_string__get_Item__);
-    sub_1C32C20(&Method_System_Collections_Generic_List_string__set_Item__);
-    sub_1C32C20(&System_Collections_Generic_List_string__TypeInfo);
-    sub_1C32C20(&LocalizationManager_TypeInfo);
-    sub_1C32C20(&StringLiteral_43/*"\n"*/);
-    sub_1C32C20(&StringLiteral_11055/*"RECOMMEND_SUPPORT_QUEST_SEPARATOR"*/);
-    sub_1C32C20(&StringLiteral_11039/*"RECOMMEND_SUPPORT_QUEST_CHANGE_NO_INPUT"*/);
-    sub_1C32C20(&StringLiteral_1/*""*/);
-    byte_4C3390A = 1;
+    sub_1C37058(&Method_DataManager_GetMaster_QuestMaster___);
+    sub_1C37058(&Method_DataManager_GetMaster_RecommendSupportQuestMaster___);
+    sub_1C37058(&Method_DataManager_GetMaster_SpotMaster___);
+    sub_1C37058(&Method_DataManager_GetMaster_WarMaster___);
+    sub_1C37058(&DataManager_TypeInfo);
+    sub_1C37058(&Method_DataMasterBase_SpotMaster__SpotEntity__int__TryGetEntity__);
+    sub_1C37058(&Method_DataMasterBase_QuestMaster__QuestEntity__int__TryGetEntity__);
+    sub_1C37058(&Method_DataMasterBase_WarMaster__WarEntity__int__TryGetEntity__);
+    sub_1C37058(&Method_System_Collections_Generic_List_string__Add__);
+    sub_1C37058(&Method_System_Collections_Generic_List_string___ctor__);
+    sub_1C37058(&Method_System_Collections_Generic_List_string__get_Item__);
+    sub_1C37058(&Method_System_Collections_Generic_List_string__set_Item__);
+    sub_1C37058(&System_Collections_Generic_List_string__TypeInfo);
+    sub_1C37058(&LocalizationManager_TypeInfo);
+    sub_1C37058(&StringLiteral_43/*"\n"*/);
+    sub_1C37058(&StringLiteral_11056/*"RECOMMEND_SUPPORT_QUEST_SEPARATOR"*/);
+    sub_1C37058(&StringLiteral_11040/*"RECOMMEND_SUPPORT_QUEST_CHANGE_NO_INPUT"*/);
+    sub_1C37058(&StringLiteral_1/*""*/);
+    byte_4C3EEF4 = 1;
   }
   v48 = 0;
   entity = 0;
@@ -491,41 +491,41 @@ void RecommendSupportListViewItemDraw__SetupQuest(
   v47 = 0;
   if ( !DataManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-  Master_object = (DataMasterBase_TMaster__TEntity__PKType__o *)DataManager__GetMaster_object_((const MethodInfo_30DD39C *)Method_DataManager_GetMaster_QuestMaster___);
+  Master_object = (DataMasterBase_TMaster__TEntity__PKType__o *)DataManager__GetMaster_object_((const MethodInfo_30E7C04 *)Method_DataManager_GetMaster_QuestMaster___);
   if ( !Master_object )
     goto LABEL_60;
   if ( !DataMasterBase_object__object__int___TryGetEntity(
           Master_object,
           &entity,
           questId,
-          (const MethodInfo_3396884 *)Method_DataMasterBase_QuestMaster__QuestEntity__int__TryGetEntity__) )
+          (const MethodInfo_33A10EC *)Method_DataMasterBase_QuestMaster__QuestEntity__int__TryGetEntity__) )
     goto LABEL_22;
   if ( !DataManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-  Master_object = (DataMasterBase_TMaster__TEntity__PKType__o *)DataManager__GetMaster_object_((const MethodInfo_30DD39C *)Method_DataManager_GetMaster_SpotMaster___);
+  Master_object = (DataMasterBase_TMaster__TEntity__PKType__o *)DataManager__GetMaster_object_((const MethodInfo_30E7C04 *)Method_DataManager_GetMaster_SpotMaster___);
   if ( !entity || !Master_object )
     goto LABEL_60;
   if ( !DataMasterBase_object__object__int___TryGetEntity(
           Master_object,
           &v48,
           (int32_t)entity[3].klass,
-          (const MethodInfo_3396884 *)Method_DataMasterBase_SpotMaster__SpotEntity__int__TryGetEntity__) )
+          (const MethodInfo_33A10EC *)Method_DataMasterBase_SpotMaster__SpotEntity__int__TryGetEntity__) )
     goto LABEL_22;
   if ( !DataManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-  Master_object = (DataMasterBase_TMaster__TEntity__PKType__o *)DataManager__GetMaster_object_((const MethodInfo_30DD39C *)Method_DataManager_GetMaster_WarMaster___);
+  Master_object = (DataMasterBase_TMaster__TEntity__PKType__o *)DataManager__GetMaster_object_((const MethodInfo_30E7C04 *)Method_DataManager_GetMaster_WarMaster___);
   if ( !v48 || !Master_object )
     goto LABEL_60;
   if ( DataMasterBase_object__object__int___TryGetEntity(
          Master_object,
          &v47,
          HIDWORD(v48[1].klass),
-         (const MethodInfo_3396884 *)Method_DataMasterBase_WarMaster__WarEntity__int__TryGetEntity__) )
+         (const MethodInfo_33A10EC *)Method_DataMasterBase_WarMaster__WarEntity__int__TryGetEntity__) )
   {
-    v7 = (System_Collections_Generic_List_object__o *)sub_1C32E6C(System_Collections_Generic_List_string__TypeInfo);
+    v7 = (System_Collections_Generic_List_object__o *)sub_1C372A4(System_Collections_Generic_List_string__TypeInfo);
     System_Collections_Generic_List_object____ctor(
       v7,
-      (const MethodInfo_3797F88 *)Method_System_Collections_Generic_List_string___ctor__);
+      (const MethodInfo_37A27F0 *)Method_System_Collections_Generic_List_string___ctor__);
     Master_object = (DataMasterBase_TMaster__TEntity__PKType__o *)v47;
     if ( !v47 )
       goto LABEL_60;
@@ -544,14 +544,14 @@ void RecommendSupportListViewItemDraw__SetupQuest(
       System_Collections_Generic_List_object___AddWithResize(
         v7,
         (Il2CppObject *)Master_object,
-        *(const MethodInfo_37987BC **)(*(_QWORD *)(v11[4] + 192LL) + 112LL));
+        *(const MethodInfo_37A3024 **)(*(_QWORD *)(v11[4] + 192LL) + 112LL));
     }
     else
     {
       v14 = &items->obj.klass + size;
       v7->fields._size = size + 1;
       v14[4] = (Il2CppClass *)v13;
-      sub_1C32BC4((CGThumbnailListItem_o *)(v14 + 4), (int32_t)v13, v8, v9);
+      sub_1C36FFC((CGThumbnailListItem_o *)(v14 + 4), (int32_t)v13, v8, v9);
     }
     if ( !v48 )
       goto LABEL_60;
@@ -574,28 +574,28 @@ void RecommendSupportListViewItemDraw__SetupQuest(
       System_Collections_Generic_List_object___AddWithResize(
         v7,
         (Il2CppObject *)Master_object,
-        *(const MethodInfo_37987BC **)(*(_QWORD *)(v20[4] + 192LL) + 112LL));
+        *(const MethodInfo_37A3024 **)(*(_QWORD *)(v20[4] + 192LL) + 112LL));
     }
     else
     {
       v23 = &v19->obj.klass + v21;
       v7->fields._size = v21 + 1;
       v23[4] = (Il2CppClass *)v22;
-      sub_1C32BC4((CGThumbnailListItem_o *)(v23 + 4), (int32_t)v22, v17, v18);
+      sub_1C36FFC((CGThumbnailListItem_o *)(v23 + 4), (int32_t)v22, v17, v18);
     }
     if ( (questPhasea & 0x80000000) == 0 )
     {
       Item = System_Collections_Generic_List_object___get_Item(
                v7,
                1,
-               (const MethodInfo_37984EC *)Method_System_Collections_Generic_List_string__get_Item__);
+               (const MethodInfo_37A2D54 *)Method_System_Collections_Generic_List_string__get_Item__);
       v25 = System_Int32__ToString((int32_t)&questPhasea, 0);
-      v26 = (Il2CppObject *)System_String__Concat_63518544((System_String_o *)Item, v25, 0);
+      v26 = (Il2CppObject *)System_String__Concat_63561656((System_String_o *)Item, v25, 0);
       System_Collections_Generic_List_object___set_Item(
         v7,
         1,
         v26,
-        (const MethodInfo_3798540 *)Method_System_Collections_Generic_List_string__set_Item__);
+        (const MethodInfo_37A2DA8 *)Method_System_Collections_Generic_List_string__set_Item__);
     }
     Master_object = (DataMasterBase_TMaster__TEntity__PKType__o *)entity;
     if ( !entity )
@@ -613,18 +613,18 @@ void RecommendSupportListViewItemDraw__SetupQuest(
       System_Collections_Generic_List_object___AddWithResize(
         v7,
         (Il2CppObject *)Master_object,
-        *(const MethodInfo_37987BC **)(*(_QWORD *)(v30[4] + 192LL) + 112LL));
+        *(const MethodInfo_37A3024 **)(*(_QWORD *)(v30[4] + 192LL) + 112LL));
     }
     else
     {
       v33 = &v29->obj.klass + v31;
       v7->fields._size = v31 + 1;
       v33[4] = (Il2CppClass *)v32;
-      sub_1C32BC4((CGThumbnailListItem_o *)(v33 + 4), (int32_t)v32, v27, v28);
+      sub_1C36FFC((CGThumbnailListItem_o *)(v33 + 4), (int32_t)v32, v27, v28);
     }
     if ( !DataManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-    Master_object = (DataMasterBase_TMaster__TEntity__PKType__o *)DataManager__GetMaster_object_((const MethodInfo_30DD39C *)Method_DataManager_GetMaster_RecommendSupportQuestMaster___);
+    Master_object = (DataMasterBase_TMaster__TEntity__PKType__o *)DataManager__GetMaster_object_((const MethodInfo_30E7C04 *)Method_DataManager_GetMaster_RecommendSupportQuestMaster___);
     if ( !Master_object )
       goto LABEL_60;
     Master_object = (DataMasterBase_TMaster__TEntity__PKType__o *)RecommendSupportQuestMaster__TryGetEntity(
@@ -649,12 +649,12 @@ void RecommendSupportListViewItemDraw__SetupQuest(
       Master_object = (DataMasterBase_TMaster__TEntity__PKType__o *)v46->fields.questMessage;
       if ( !Master_object )
         goto LABEL_60;
-      v36 = System_String__Replace_63565092(
+      v36 = System_String__Replace_63608204(
               (System_String_o *)Master_object,
               (System_String_o *)StringLiteral_43/*"\n"*/,
               (System_String_o *)StringLiteral_1/*""*/,
               0);
-      Master_object = (DataMasterBase_TMaster__TEntity__PKType__o *)System_String__Concat_63518544(
+      Master_object = (DataMasterBase_TMaster__TEntity__PKType__o *)System_String__Concat_63561656(
                                                                       (System_String_o *)StringLiteral_43/*"\n"*/,
                                                                       v36,
                                                                       0);
@@ -670,14 +670,14 @@ void RecommendSupportListViewItemDraw__SetupQuest(
         System_Collections_Generic_List_object___AddWithResize(
           v7,
           (Il2CppObject *)Master_object,
-          *(const MethodInfo_37987BC **)(*(_QWORD *)(v40[4] + 192LL) + 112LL));
+          *(const MethodInfo_37A3024 **)(*(_QWORD *)(v40[4] + 192LL) + 112LL));
       }
       else
       {
         v43 = &v39->obj.klass + v41;
         v7->fields._size = v41 + 1;
         v43[4] = (Il2CppClass *)v42;
-        sub_1C32BC4((CGThumbnailListItem_o *)(v43 + 4), (int32_t)v42, v37, v38);
+        sub_1C36FFC((CGThumbnailListItem_o *)(v43 + 4), (int32_t)v42, v37, v38);
       }
     }
     else
@@ -694,14 +694,14 @@ void RecommendSupportListViewItemDraw__SetupQuest(
     v16 = this->fields.selectQuestLabel;
     if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-    v45 = LocalizationManager__Get((System_String_o *)StringLiteral_11055/*"RECOMMEND_SUPPORT_QUEST_SEPARATOR"*/, 0);
-    Master_object = (DataMasterBase_TMaster__TEntity__PKType__o *)System_String__Join_63561120(
+    v45 = LocalizationManager__Get((System_String_o *)StringLiteral_11056/*"RECOMMEND_SUPPORT_QUEST_SEPARATOR"*/, 0);
+    Master_object = (DataMasterBase_TMaster__TEntity__PKType__o *)System_String__Join_63604232(
                                                                     v45,
                                                                     (System_Collections_Generic_IEnumerable_string__o *)v7,
                                                                     0);
     if ( !v16 )
 LABEL_60:
-      sub_1C32E7C(Master_object);
+      sub_1C372B4(Master_object);
   }
   else
   {
@@ -719,7 +719,7 @@ LABEL_22:
     if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
     Master_object = (DataMasterBase_TMaster__TEntity__PKType__o *)LocalizationManager__Get(
-                                                                    (System_String_o *)StringLiteral_11039/*"RECOMMEND_SUPPORT_QUEST_CHANGE_NO_INPUT"*/,
+                                                                    (System_String_o *)StringLiteral_11040/*"RECOMMEND_SUPPORT_QUEST_CHANGE_NO_INPUT"*/,
                                                                     0);
     if ( !v16 )
       goto LABEL_60;
@@ -764,7 +764,7 @@ void RecommendSupportListViewItemDraw__SetupServantSelectState(
       }
     }
 LABEL_12:
-    sub_1C32E7C(servantFaceIcon);
+    sub_1C372B4(servantFaceIcon);
   }
   UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)servantFaceIcon, 1, 0);
   servantFaceIcon = (ServantFaceIconComponent_o *)this->fields.unSelectedServantSprite;

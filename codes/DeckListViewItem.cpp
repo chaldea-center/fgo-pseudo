@@ -7,9 +7,9 @@ void DeckListViewItem___ctor(
   int32_t v6; // w2
   const MethodInfo *v7; // x3
 
-  ListViewItem___ctor_43702564((ListViewItem_o *)this, index, 0);
+  ListViewItem___ctor_43804668((ListViewItem_o *)this, index, 0);
   this->fields.partyItem = partyItem;
-  sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.partyItem, (int32_t)partyItem, v6, v7);
+  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.partyItem, (int32_t)partyItem, v6, v7);
 }
 
 
@@ -28,7 +28,7 @@ PartyOrganizationListViewItem_o *DeckListViewItem__GetMember(
 
   partyItem = this->fields.partyItem;
   if ( !partyItem )
-    sub_1C32E7C(0);
+    sub_1C372B4(0);
   return PartyListViewItem__GetMember(partyItem, num, 0);
 }
 
@@ -48,7 +48,7 @@ UserDeckEntity_o *DeckListViewItem__GetUserDeck(
 
   partyItem = this->fields.partyItem;
   if ( !partyItem )
-    sub_1C32E7C(0);
+    sub_1C372B4(0);
   return PartyListViewItem__GetUserDeck(partyItem, baseItem, 0);
 }
 
@@ -59,7 +59,7 @@ int64_t DeckListViewItem__get_DeckId(DeckListViewItem_o *this, const MethodInfo 
 
   partyItem = this->fields.partyItem;
   if ( !partyItem )
-    sub_1C32E7C(this);
+    sub_1C372B4(this);
   return partyItem->fields.id;
 }
 
@@ -70,7 +70,7 @@ System_String_o *DeckListViewItem__get_DeckName(DeckListViewItem_o *this, const 
 
   partyItem = this->fields.partyItem;
   if ( !partyItem )
-    sub_1C32E7C(this);
+    sub_1C372B4(this);
   return partyItem->fields.deckName;
 }
 
@@ -81,6 +81,6 @@ int32_t DeckListViewItem__get_DeckNum(DeckListViewItem_o *this, const MethodInfo
 
   partyItem = this->fields.partyItem;
   if ( !partyItem )
-    sub_1C32E7C(0);
+    sub_1C372B4(0);
   return PartyListViewItem__get_DeckNum(partyItem, 0);
 }

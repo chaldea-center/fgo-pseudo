@@ -12,11 +12,11 @@ void SampleCardListViewScene__Init(SampleCardListViewScene_o *this, const Method
   System_Action_o *v6; // x21
   const MethodInfo *v7; // x3
 
-  if ( (byte_4C350EB & 1) == 0 )
+  if ( (byte_4C40778 & 1) == 0 )
   {
-    sub_1C32C20(&System_Action_TypeInfo);
-    sub_1C32C20(&Method_SampleCardListViewScene_OnMoveEnd__);
-    byte_4C350EB = 1;
+    sub_1C37058(&System_Action_TypeInfo);
+    sub_1C37058(&Method_SampleCardListViewScene_OnMoveEnd__);
+    byte_4C40778 = 1;
   }
   if ( !this->fields.state )
   {
@@ -27,12 +27,12 @@ void SampleCardListViewScene__Init(SampleCardListViewScene_o *this, const Method
   }
   this->fields.state = 1;
   v5 = this->fields.cardListViewManager;
-  v6 = (System_Action_o *)sub_1C32E6C(System_Action_TypeInfo);
+  v6 = (System_Action_o *)sub_1C372A4(System_Action_TypeInfo);
   System_Action___ctor(v6, (Il2CppObject *)this, Method_SampleCardListViewScene_OnMoveEnd__, 0);
   if ( !v5 )
 LABEL_8:
-    sub_1C32E7C(cardListViewManager);
-  SampleCardListViewManager__SetMode_37470916(v5, 1, v6, v7);
+    sub_1C372B4(cardListViewManager);
+  SampleCardListViewManager__SetMode_37643464(v5, 1, v6, v7);
 }
 
 
@@ -46,11 +46,11 @@ void SampleCardListViewScene__OnMoveEnd(SampleCardListViewScene_o *this, const M
   int32_t v8; // w1
   System_Action_o *v9; // x2
 
-  if ( (byte_4C350EC & 1) == 0 )
+  if ( (byte_4C40779 & 1) == 0 )
   {
-    sub_1C32C20(&System_Action_TypeInfo);
-    sub_1C32C20(&Method_SampleCardListViewScene_OnMoveEnd__);
-    byte_4C350EC = 1;
+    sub_1C37058(&System_Action_TypeInfo);
+    sub_1C37058(&Method_SampleCardListViewScene_OnMoveEnd__);
+    byte_4C40779 = 1;
   }
   state = this->fields.state;
   if ( state == 2 )
@@ -64,13 +64,13 @@ void SampleCardListViewScene__OnMoveEnd(SampleCardListViewScene_o *this, const M
       goto LABEL_9;
     }
 LABEL_11:
-    sub_1C32E7C(cardListViewManager);
+    sub_1C372B4(cardListViewManager);
   }
   if ( state == 1 )
   {
     this->fields.state = 2;
     v5 = this->fields.cardListViewManager;
-    v6 = (System_Action_o *)sub_1C32E6C(System_Action_TypeInfo);
+    v6 = (System_Action_o *)sub_1C372A4(System_Action_TypeInfo);
     System_Action___ctor(v6, (Il2CppObject *)this, Method_SampleCardListViewScene_OnMoveEnd__, 0);
     if ( v5 )
     {
@@ -78,7 +78,7 @@ LABEL_11:
       cardListViewManager = v5;
       v9 = v6;
 LABEL_9:
-      SampleCardListViewManager__SetMode_37470916(cardListViewManager, v8, v9, v2);
+      SampleCardListViewManager__SetMode_37643464(cardListViewManager, v8, v9, v2);
       return;
     }
     goto LABEL_11;
@@ -92,6 +92,6 @@ void SampleCardListViewScene__Start(SampleCardListViewScene_o *this, const Metho
 
   cardListViewManager = (ListViewManager_o *)this->fields.cardListViewManager;
   if ( !cardListViewManager )
-    sub_1C32E7C(0);
+    sub_1C372B4(0);
   ListViewManager__set_IsInput(cardListViewManager, 0, 0);
 }

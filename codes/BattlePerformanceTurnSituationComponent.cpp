@@ -11,16 +11,16 @@ void BattlePerformanceTurnSituationComponent___cctor(const MethodInfo *method)
   int32_t v9; // w2
   const MethodInfo *v10; // x3
 
-  if ( (byte_4C3AFB3 & 1) == 0 )
+  if ( (byte_4C465C7 & 1) == 0 )
   {
-    sub_1C32C20(&BattlePerformanceTurnSituationComponent_TypeInfo);
-    sub_1C32C20(&StringLiteral_2894/*"BATTLE_TURN_SITUATTION_LABEL_WITH_RAID_PREFIX_{0}"*/);
-    sub_1C32C20(&StringLiteral_2892/*"BATTLE_TURN_SITUATTION_LABEL_WITH_RAIDNAME_{0}"*/);
-    sub_1C32C20(&StringLiteral_2893/*"BATTLE_TURN_SITUATTION_LABEL_WITH_RAID_DAMAGE_NUM_{0}"*/);
-    byte_4C3AFB3 = 1;
+    sub_1C37058(&BattlePerformanceTurnSituationComponent_TypeInfo);
+    sub_1C37058(&StringLiteral_2894/*"BATTLE_TURN_SITUATTION_LABEL_WITH_RAID_PREFIX_{0}"*/);
+    sub_1C37058(&StringLiteral_2892/*"BATTLE_TURN_SITUATTION_LABEL_WITH_RAIDNAME_{0}"*/);
+    sub_1C37058(&StringLiteral_2893/*"BATTLE_TURN_SITUATTION_LABEL_WITH_RAID_DAMAGE_NUM_{0}"*/);
+    byte_4C465C7 = 1;
   }
   BattlePerformanceTurnSituationComponent_TypeInfo->static_fields->LabelWithRaidPrefixKey = (struct System_String_o *)StringLiteral_2894/*"BATTLE_TURN_SITUATTION_LABEL_WITH_RAID_PREFIX_{0}"*/;
-  sub_1C32BC4(
+  sub_1C36FFC(
     (CGThumbnailListItem_o *)BattlePerformanceTurnSituationComponent_TypeInfo->static_fields,
     StringLiteral_2894/*"BATTLE_TURN_SITUATTION_LABEL_WITH_RAID_PREFIX_{0}"*/,
     v1,
@@ -28,11 +28,11 @@ void BattlePerformanceTurnSituationComponent___cctor(const MethodInfo *method)
   v3 = StringLiteral_2893/*"BATTLE_TURN_SITUATTION_LABEL_WITH_RAID_DAMAGE_NUM_{0}"*/;
   static_fields = BattlePerformanceTurnSituationComponent_TypeInfo->static_fields;
   static_fields->LabelWithRaidDamageNumKey = (struct System_String_o *)StringLiteral_2893/*"BATTLE_TURN_SITUATTION_LABEL_WITH_RAID_DAMAGE_NUM_{0}"*/;
-  sub_1C32BC4((CGThumbnailListItem_o *)&static_fields->LabelWithRaidDamageNumKey, v3, v5, v6);
+  sub_1C36FFC((CGThumbnailListItem_o *)&static_fields->LabelWithRaidDamageNumKey, v3, v5, v6);
   v7 = StringLiteral_2892/*"BATTLE_TURN_SITUATTION_LABEL_WITH_RAIDNAME_{0}"*/;
   v8 = BattlePerformanceTurnSituationComponent_TypeInfo->static_fields;
   v8->LABEL_WITH_RAIDNAME_KEY = (struct System_String_o *)StringLiteral_2892/*"BATTLE_TURN_SITUATTION_LABEL_WITH_RAIDNAME_{0}"*/;
-  sub_1C32BC4((CGThumbnailListItem_o *)&v8->LABEL_WITH_RAIDNAME_KEY, v7, v9, v10);
+  sub_1C36FFC((CGThumbnailListItem_o *)&v8->LABEL_WITH_RAIDNAME_KEY, v7, v9, v10);
 }
 
 
@@ -96,15 +96,15 @@ void BattlePerformanceTurnSituationComponent__SetLabelWithRaidName(
   int64_t v50; // [xsp+18h] [xbp-48h] BYREF
 
   v50 = param;
-  if ( (byte_4C3AFB2 & 1) == 0 )
+  if ( (byte_4C465C6 & 1) == 0 )
   {
-    sub_1C32C20(&BattlePerformanceTurnSituationComponent_TypeInfo);
-    sub_1C32C20(&int_TypeInfo);
-    sub_1C32C20(&long_TypeInfo);
-    sub_1C32C20(&LocalizationManager_TypeInfo);
-    sub_1C32C20(&UnityEngine_Object_TypeInfo);
-    sub_1C32C20(&StringLiteral_397/*"#,0"*/);
-    byte_4C3AFB2 = 1;
+    sub_1C37058(&BattlePerformanceTurnSituationComponent_TypeInfo);
+    sub_1C37058(&int_TypeInfo);
+    sub_1C37058(&long_TypeInfo);
+    sub_1C37058(&LocalizationManager_TypeInfo);
+    sub_1C37058(&UnityEngine_Object_TypeInfo);
+    sub_1C37058(&StringLiteral_397/*"#,0"*/);
+    byte_4C465C6 = 1;
   }
   numLabel = (UnityEngine_Object_o *)this->fields.numLabel;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -132,7 +132,7 @@ void BattlePerformanceTurnSituationComponent__SetLabelWithRaidName(
     v21 = System_String__Format(v20, (Il2CppObject *)bossName, 0);
     BattlePerformanceTurnSituationComponent__setMessage(this, v21, v22);
     v23 = this->fields.numLabel;
-    v24 = System_Int64__ToString_65033828((int64_t)&v50, (System_String_o *)StringLiteral_397/*"#,0"*/, 0);
+    v24 = System_Int64__ToString_65076940((int64_t)&v50, (System_String_o *)StringLiteral_397/*"#,0"*/, 0);
     if ( !v23
       || (UILabel__set_text(v23, v24, 0),
           LabelWithRaidDamageNumKey = BattlePerformanceTurnSituationComponent_TypeInfo->static_fields->LabelWithRaidDamageNumKey,
@@ -142,7 +142,7 @@ void BattlePerformanceTurnSituationComponent__SetLabelWithRaidName(
           v24 = LocalizationManager__Get(v33, 0),
           !this->fields.numTextLabel) )
     {
-      sub_1C32E7C(v24);
+      sub_1C372B4(v24);
     }
     UILabel__set_text(this->fields.numTextLabel, v24, 0);
   }
@@ -164,7 +164,7 @@ LABEL_16:
     v38 = LocalizationManager__Get(v37, 0);
     v48 = v50;
     v45 = (Il2CppObject *)j_il2cpp_value_box_0(long_TypeInfo, &v48, v39, v40, v41, v42, v43, v44);
-    v46 = System_String__Format_63559836(v38, (Il2CppObject *)bossName, v45, 0);
+    v46 = System_String__Format_63602948(v38, (Il2CppObject *)bossName, v45, 0);
     BattlePerformanceTurnSituationComponent__setMessage(this, v46, v47);
   }
 }
@@ -178,22 +178,22 @@ void BattlePerformanceTurnSituationComponent__setMessage(
   Il2CppObject *Component_object; // x20
   _BOOL8 v6; // x0
 
-  if ( (byte_4C3AFB1 & 1) == 0 )
+  if ( (byte_4C465C5 & 1) == 0 )
   {
-    sub_1C32C20(&Method_UnityEngine_Component_GetComponent_UILabel___);
-    sub_1C32C20(&UnityEngine_Object_TypeInfo);
-    byte_4C3AFB1 = 1;
+    sub_1C37058(&Method_UnityEngine_Component_GetComponent_UILabel___);
+    sub_1C37058(&UnityEngine_Object_TypeInfo);
+    byte_4C465C5 = 1;
   }
   Component_object = UnityEngine_Component__GetComponent_object_(
                        (UnityEngine_Component_o *)this,
-                       (const MethodInfo_30D3BC0 *)Method_UnityEngine_Component_GetComponent_UILabel___);
+                       (const MethodInfo_30DE428 *)Method_UnityEngine_Component_GetComponent_UILabel___);
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   v6 = UnityEngine_Object__op_Equality((UnityEngine_Object_o *)Component_object, 0, 0);
   if ( !v6 )
   {
     if ( !Component_object )
-      sub_1C32E7C(v6);
+      sub_1C372B4(v6);
     UILabel__set_text((UILabel_o *)Component_object, message, 0);
   }
 }

@@ -14,36 +14,36 @@ void CostSpriteCheckView___cctor(const MethodInfo *method)
   int32_t v12; // w2
   const MethodInfo *v13; // x3
 
-  if ( (byte_4C34E57 & 1) == 0 )
+  if ( (byte_4C40441 & 1) == 0 )
   {
-    sub_1C32C20(&CostSpriteCheckView_TypeInfo);
-    sub_1C32C20(&string___TypeInfo);
-    sub_1C32C20(&StringLiteral_25500/*"読み込み成功"*/);
-    sub_1C32C20(&StringLiteral_25456/*"全て"*/);
-    sub_1C32C20(&StringLiteral_25499/*"読み込み失敗"*/);
-    byte_4C34E57 = 1;
+    sub_1C37058(&CostSpriteCheckView_TypeInfo);
+    sub_1C37058(&string___TypeInfo);
+    sub_1C37058(&StringLiteral_25505/*"読み込み成功"*/);
+    sub_1C37058(&StringLiteral_25461/*"全て"*/);
+    sub_1C37058(&StringLiteral_25504/*"読み込み失敗"*/);
+    byte_4C40441 = 1;
   }
-  v1 = sub_1C32CC8(string___TypeInfo, 3);
+  v1 = sub_1C37100(string___TypeInfo, 3);
   if ( !v1 )
-    sub_1C32E7C(0);
+    sub_1C372B4(0);
   v4 = v1;
   if ( !*(_DWORD *)(v1 + 24)
-    || (v5 = StringLiteral_25456/*"全て"*/,
-        *(_QWORD *)(v1 + 32) = StringLiteral_25456/*"全て"*/,
-        sub_1C32BC4((CGThumbnailListItem_o *)(v1 + 32), v5, v2, v3),
+    || (v5 = StringLiteral_25461/*"全て"*/,
+        *(_QWORD *)(v1 + 32) = StringLiteral_25461/*"全て"*/,
+        sub_1C36FFC((CGThumbnailListItem_o *)(v1 + 32), v5, v2, v3),
         *(_DWORD *)(v4 + 24) <= 1u)
-    || (v8 = StringLiteral_25499/*"読み込み失敗"*/,
-        *(_QWORD *)(v4 + 40) = StringLiteral_25499/*"読み込み失敗"*/,
-        sub_1C32BC4((CGThumbnailListItem_o *)(v4 + 40), v8, v6, v7),
+    || (v8 = StringLiteral_25504/*"読み込み失敗"*/,
+        *(_QWORD *)(v4 + 40) = StringLiteral_25504/*"読み込み失敗"*/,
+        sub_1C36FFC((CGThumbnailListItem_o *)(v4 + 40), v8, v6, v7),
         *(_DWORD *)(v4 + 24) <= 2u) )
   {
-    sub_1C32E84(v1);
+    sub_1C372BC(v1);
   }
-  v11 = StringLiteral_25500/*"読み込み成功"*/;
-  *(_QWORD *)(v4 + 48) = StringLiteral_25500/*"読み込み成功"*/;
-  sub_1C32BC4((CGThumbnailListItem_o *)(v4 + 48), v11, v9, v10);
+  v11 = StringLiteral_25505/*"読み込み成功"*/;
+  *(_QWORD *)(v4 + 48) = StringLiteral_25505/*"読み込み成功"*/;
+  sub_1C36FFC((CGThumbnailListItem_o *)(v4 + 48), v11, v9, v10);
   CostSpriteCheckView_TypeInfo->static_fields->filterNameList = (struct System_String_array *)v4;
-  sub_1C32BC4((CGThumbnailListItem_o *)CostSpriteCheckView_TypeInfo->static_fields, v4, v12, v13);
+  sub_1C36FFC((CGThumbnailListItem_o *)CostSpriteCheckView_TypeInfo->static_fields, v4, v12, v13);
 }
 
 
@@ -73,10 +73,10 @@ void CostSpriteCheckView__Finish(CostSpriteCheckView_o *this, const MethodInfo *
   UnityEngine_Object_o *costSpriteListManager; // x20
   const MethodInfo *v5; // x1
 
-  if ( (byte_4C34E56 & 1) == 0 )
+  if ( (byte_4C40440 & 1) == 0 )
   {
-    sub_1C32C20(&UnityEngine_Object_TypeInfo);
-    byte_4C34E56 = 1;
+    sub_1C37058(&UnityEngine_Object_TypeInfo);
+    byte_4C40440 = 1;
   }
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
   if ( !gameObject )
@@ -94,7 +94,7 @@ void CostSpriteCheckView__Finish(CostSpriteCheckView_o *this, const MethodInfo *
       return;
     }
 LABEL_10:
-    sub_1C32E7C(gameObject);
+    sub_1C372B4(gameObject);
   }
 }
 
@@ -121,10 +121,10 @@ void CostSpriteCheckView__Init(CostSpriteCheckView_o *this, const MethodInfo *me
   int32_t filterMode; // w8
   int32_t v9; // w1
 
-  if ( (byte_4C34E54 & 1) == 0 )
+  if ( (byte_4C4043E & 1) == 0 )
   {
-    sub_1C32C20(&UnityEngine_Object_TypeInfo);
-    byte_4C34E54 = 1;
+    sub_1C37058(&UnityEngine_Object_TypeInfo);
+    byte_4C4043E = 1;
   }
   costSpriteListManager = (UnityEngine_Object_o *)this->fields.costSpriteListManager;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -136,7 +136,7 @@ void CostSpriteCheckView__Init(CostSpriteCheckView_o *this, const MethodInfo *me
       || (CostSpriteListManager__Init(v5, v4), (v5 = this->fields.costSpriteListManager) == 0)
       || (CostSpriteListManager__Load(v5, v6), (v5 = this->fields.costSpriteListManager) == 0) )
     {
-      sub_1C32E7C(v5);
+      sub_1C372B4(v5);
     }
     filterMode = this->fields.filterMode;
     if ( filterMode == 1 )
@@ -179,13 +179,13 @@ void CostSpriteCheckView__Setup(CostSpriteCheckView_o *this, const MethodInfo *m
   __int64 v6; // x9
   System_Action_o *v7; // x20
 
-  if ( (byte_4C34E53 & 1) == 0 )
+  if ( (byte_4C4043D & 1) == 0 )
   {
-    sub_1C32C20(&System_Action_TypeInfo);
-    sub_1C32C20(&AtlasManager_TypeInfo);
-    sub_1C32C20(&Method_CostSpriteCheckView__Setup_b__10_0__);
-    sub_1C32C20(&CostSpriteCheckView_TypeInfo);
-    byte_4C34E53 = 1;
+    sub_1C37058(&System_Action_TypeInfo);
+    sub_1C37058(&AtlasManager_TypeInfo);
+    sub_1C37058(&Method_CostSpriteCheckView__Setup_b__10_0__);
+    sub_1C37058(&CostSpriteCheckView_TypeInfo);
+    byte_4C4043D = 1;
   }
   this->fields.filterMode = 0;
   gameObject = (UnityEngine_GameObject_o *)CostSpriteCheckView_TypeInfo;
@@ -204,16 +204,16 @@ void CostSpriteCheckView__Setup(CostSpriteCheckView_o *this, const MethodInfo *m
   if ( !v6 )
     goto LABEL_13;
   if ( (unsigned int)filterMode >= *(_DWORD *)(v6 + 24) )
-    sub_1C32E84(gameObject);
+    sub_1C372BC(gameObject);
   if ( !filterLabel
     || (UILabel__set_text(filterLabel, *(System_String_o **)(v6 + 8LL * filterMode + 32), 0),
         (gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0)) == 0) )
   {
 LABEL_13:
-    sub_1C32E7C(gameObject);
+    sub_1C372B4(gameObject);
   }
   UnityEngine_GameObject__SetActive(gameObject, 1, 0);
-  v7 = (System_Action_o *)sub_1C32E6C(System_Action_TypeInfo);
+  v7 = (System_Action_o *)sub_1C372A4(System_Action_TypeInfo);
   System_Action___ctor(v7, (Il2CppObject *)this, Method_CostSpriteCheckView__Setup_b__10_0__, 0);
   if ( !AtlasManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo);
@@ -230,11 +230,11 @@ void CostSpriteCheckView__UpdateDisp(CostSpriteCheckView_o *this, int32_t mode, 
   const MethodInfo *v9; // x2
   int32_t v10; // w1
 
-  if ( (byte_4C34E55 & 1) == 0 )
+  if ( (byte_4C4043F & 1) == 0 )
   {
-    sub_1C32C20(&CostSpriteCheckView_TypeInfo);
-    sub_1C32C20(&UnityEngine_Object_TypeInfo);
-    byte_4C34E55 = 1;
+    sub_1C37058(&CostSpriteCheckView_TypeInfo);
+    sub_1C37058(&UnityEngine_Object_TypeInfo);
+    byte_4C4043F = 1;
   }
   v5 = (ListViewManager_o *)CostSpriteCheckView_TypeInfo;
   filterLabel = this->fields.filterLabel;
@@ -247,7 +247,7 @@ void CostSpriteCheckView__UpdateDisp(CostSpriteCheckView_o *this, int32_t mode, 
   if ( !klass )
     goto LABEL_18;
   if ( LODWORD(klass->_1.namespaze) <= mode )
-    sub_1C32E84(v5);
+    sub_1C372BC(v5);
   if ( !filterLabel )
     goto LABEL_18;
   UILabel__set_text(filterLabel, *((System_String_o **)&klass->_1.byval_arg.data + mode), 0);
@@ -272,7 +272,7 @@ void CostSpriteCheckView__UpdateDisp(CostSpriteCheckView_o *this, int32_t mode, 
       }
     }
 LABEL_18:
-    sub_1C32E7C(v5);
+    sub_1C372B4(v5);
   }
 }
 

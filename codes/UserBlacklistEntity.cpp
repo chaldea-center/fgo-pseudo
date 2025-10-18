@@ -1,27 +1,27 @@
 void UserBlacklistEntity___ctor(UserBlacklistEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_4C38706 & 1) == 0 )
+  if ( (byte_4C43CFF & 1) == 0 )
   {
-    sub_1C32C20(&Method_DataEntityBase_string___ctor__);
-    byte_4C38706 = 1;
+    sub_1C37058(&Method_DataEntityBase_string___ctor__);
+    byte_4C43CFF = 1;
   }
   DataEntityBase_object____ctor(
     (DataEntityBase_PKType__o *)this,
-    (const MethodInfo_33943CC *)Method_DataEntityBase_string___ctor__);
+    (const MethodInfo_339EC34 *)Method_DataEntityBase_string___ctor__);
 }
 
 
 System_String_o *UserBlacklistEntity__CreatePK(int64_t userId, int64_t targetUserId, const MethodInfo *method)
 {
-  if ( (byte_4C38704 & 1) == 0 )
+  if ( (byte_4C43CFD & 1) == 0 )
   {
-    sub_1C32C20(&Method_DataEntityBase_CreateMultiplePK_long__long___);
-    byte_4C38704 = 1;
+    sub_1C37058(&Method_DataEntityBase_CreateMultiplePK_long__long___);
+    byte_4C43CFD = 1;
   }
   return DataEntityBase__CreateMultiplePK_long__long_(
            userId,
            targetUserId,
-           (const MethodInfo_30DB704 *)Method_DataEntityBase_CreateMultiplePK_long__long___);
+           (const MethodInfo_30E5F6C *)Method_DataEntityBase_CreateMultiplePK_long__long___);
 }
 
 
@@ -39,18 +39,18 @@ int64_t UserBlacklistEntity__getOtherUserId(UserBlacklistEntity_o *this, const M
   NetworkManager_c *v4; // x0
   __int64 v5; // x8
 
-  if ( (byte_4C38705 & 1) == 0 )
+  if ( (byte_4C43CFE & 1) == 0 )
   {
-    sub_1C32C20(&NetworkManager_TypeInfo);
-    byte_4C38705 = 1;
+    sub_1C37058(&NetworkManager_TypeInfo);
+    byte_4C43CFE = 1;
   }
   userId = this->fields.userId;
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
-  if ( !byte_4C31812 )
+  if ( !byte_4C3CD62 )
   {
-    sub_1C32C20(&NetworkManager_TypeInfo);
-    byte_4C31812 = 1;
+    sub_1C37058(&NetworkManager_TypeInfo);
+    byte_4C3CD62 = 1;
   }
   v4 = NetworkManager_TypeInfo;
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )

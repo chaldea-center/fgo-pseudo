@@ -6,38 +6,38 @@ void SubmarineSaveParamsManager___ctor(SubmarineSaveParamsManager_o *this, const
 
 void SubmarineSaveParamsManager__DeleteSavedQuestInfo(const MethodInfo *method)
 {
-  if ( (byte_4C34343 & 1) == 0 )
+  if ( (byte_4C3F92D & 1) == 0 )
   {
-    sub_1C32C20(&StringLiteral_13149/*"SubmarineMapBeforeQuestInfo"*/);
-    byte_4C34343 = 1;
+    sub_1C37058(&StringLiteral_13150/*"SubmarineMapBeforeQuestInfo"*/);
+    byte_4C3F92D = 1;
   }
-  UnityEngine_PlayerPrefs__DeleteKey((System_String_o *)StringLiteral_13149/*"SubmarineMapBeforeQuestInfo"*/, 0);
+  UnityEngine_PlayerPrefs__DeleteKey((System_String_o *)StringLiteral_13150/*"SubmarineMapBeforeQuestInfo"*/, 0);
 }
 
 
 void SubmarineSaveParamsManager__DeleteUnreleasedScanInfo(const MethodInfo *method)
 {
-  if ( (byte_4C34346 & 1) == 0 )
+  if ( (byte_4C3F930 & 1) == 0 )
   {
-    sub_1C32C20(&StringLiteral_13157/*"SubmarineUnreleasedScan"*/);
-    byte_4C34346 = 1;
+    sub_1C37058(&StringLiteral_13158/*"SubmarineUnreleasedScan"*/);
+    byte_4C3F930 = 1;
   }
-  UnityEngine_PlayerPrefs__DeleteKey((System_String_o *)StringLiteral_13157/*"SubmarineUnreleasedScan"*/, 0);
+  UnityEngine_PlayerPrefs__DeleteKey((System_String_o *)StringLiteral_13158/*"SubmarineUnreleasedScan"*/, 0);
 }
 
 
 SubmarineQuestSaveInfo_o *SubmarineSaveParamsManager__LoadBeforeQuestInfo(const MethodInfo *method)
 {
-  System_String_o *String_71182452; // x0
+  System_String_o *String_71225564; // x0
   const MethodInfo *v2; // x1
 
-  if ( (byte_4C34342 & 1) == 0 )
+  if ( (byte_4C3F92C & 1) == 0 )
   {
-    sub_1C32C20(&StringLiteral_13149/*"SubmarineMapBeforeQuestInfo"*/);
-    byte_4C34342 = 1;
+    sub_1C37058(&StringLiteral_13150/*"SubmarineMapBeforeQuestInfo"*/);
+    byte_4C3F92C = 1;
   }
-  String_71182452 = UnityEngine_PlayerPrefs__GetString_71182452((System_String_o *)StringLiteral_13149/*"SubmarineMapBeforeQuestInfo"*/, 0);
-  return SubmarineQuestSaveInfo__CreateBySaveValue(String_71182452, v2);
+  String_71225564 = UnityEngine_PlayerPrefs__GetString_71225564((System_String_o *)StringLiteral_13150/*"SubmarineMapBeforeQuestInfo"*/, 0);
+  return SubmarineQuestSaveInfo__CreateBySaveValue(String_71225564, v2);
 }
 
 
@@ -45,17 +45,17 @@ SubmarineUnreleasedScanSaveInfo_o *SubmarineSaveParamsManager__LoadUnreleasedSca
         int32_t eventId,
         const MethodInfo *method)
 {
-  System_String_o *String_71182452; // x0
+  System_String_o *String_71225564; // x0
   const MethodInfo *v4; // x1
   SubmarineUnreleasedScanSaveInfo_o *result; // x0
 
-  if ( (byte_4C34345 & 1) == 0 )
+  if ( (byte_4C3F92F & 1) == 0 )
   {
-    sub_1C32C20(&StringLiteral_13157/*"SubmarineUnreleasedScan"*/);
-    byte_4C34345 = 1;
+    sub_1C37058(&StringLiteral_13158/*"SubmarineUnreleasedScan"*/);
+    byte_4C3F92F = 1;
   }
-  String_71182452 = UnityEngine_PlayerPrefs__GetString_71182452((System_String_o *)StringLiteral_13157/*"SubmarineUnreleasedScan"*/, 0);
-  result = SubmarineUnreleasedScanSaveInfo__CreateBySaveValue(String_71182452, v4);
+  String_71225564 = UnityEngine_PlayerPrefs__GetString_71225564((System_String_o *)StringLiteral_13158/*"SubmarineUnreleasedScan"*/, 0);
+  result = SubmarineUnreleasedScanSaveInfo__CreateBySaveValue(String_71225564, v4);
   if ( result )
   {
     if ( result->fields._EventId_k__BackingField != eventId )
@@ -76,20 +76,20 @@ void SubmarineSaveParamsManager__SaveClearQuestInfo(
   const MethodInfo *v10; // x1
   System_String_o *SaveValue; // x0
 
-  if ( (byte_4C34341 & 1) == 0 )
+  if ( (byte_4C3F92B & 1) == 0 )
   {
-    sub_1C32C20(&SubmarineQuestSaveInfo_TypeInfo);
-    sub_1C32C20(&StringLiteral_13149/*"SubmarineMapBeforeQuestInfo"*/);
-    byte_4C34341 = 1;
+    sub_1C37058(&SubmarineQuestSaveInfo_TypeInfo);
+    sub_1C37058(&StringLiteral_13150/*"SubmarineMapBeforeQuestInfo"*/);
+    byte_4C3F92B = 1;
   }
-  v9 = sub_1C32E6C(SubmarineQuestSaveInfo_TypeInfo);
+  v9 = sub_1C372A4(SubmarineQuestSaveInfo_TypeInfo);
   System_Object___ctor((Il2CppObject *)v9, 0);
   *(_DWORD *)(v9 + 16) = questId;
   *(_DWORD *)(v9 + 20) = phaseCnt;
   *(_BYTE *)(v9 + 24) = isQuestClear;
   *(_BYTE *)(v9 + 25) = isQuestPhaseClear;
   SaveValue = SubmarineQuestSaveInfo__GetSaveValue((SubmarineQuestSaveInfo_o *)v9, v10);
-  UnityEngine_PlayerPrefs__SetString((System_String_o *)StringLiteral_13149/*"SubmarineMapBeforeQuestInfo"*/, SaveValue, 0);
+  UnityEngine_PlayerPrefs__SetString((System_String_o *)StringLiteral_13150/*"SubmarineMapBeforeQuestInfo"*/, SaveValue, 0);
   UnityEngine_PlayerPrefs__Save(0);
 }
 
@@ -105,18 +105,18 @@ void SubmarineSaveParamsManager__SaveUnreleasedScanInfo(
   const MethodInfo *v8; // x1
   System_String_o *SaveValue; // x0
 
-  if ( (byte_4C34344 & 1) == 0 )
+  if ( (byte_4C3F92E & 1) == 0 )
   {
-    sub_1C32C20(&SubmarineUnreleasedScanSaveInfo_TypeInfo);
-    sub_1C32C20(&StringLiteral_13157/*"SubmarineUnreleasedScan"*/);
-    byte_4C34344 = 1;
+    sub_1C37058(&SubmarineUnreleasedScanSaveInfo_TypeInfo);
+    sub_1C37058(&StringLiteral_13158/*"SubmarineUnreleasedScan"*/);
+    byte_4C3F92E = 1;
   }
-  v5 = sub_1C32E6C(SubmarineUnreleasedScanSaveInfo_TypeInfo);
+  v5 = sub_1C372A4(SubmarineUnreleasedScanSaveInfo_TypeInfo);
   System_Object___ctor((Il2CppObject *)v5, 0);
   *(_DWORD *)(v5 + 16) = eventId;
   *(_QWORD *)(v5 + 24) = scanIds;
-  sub_1C32BC4((CGThumbnailListItem_o *)(v5 + 24), (int32_t)scanIds, v6, v7);
+  sub_1C36FFC((CGThumbnailListItem_o *)(v5 + 24), (int32_t)scanIds, v6, v7);
   SaveValue = SubmarineUnreleasedScanSaveInfo__GetSaveValue((SubmarineUnreleasedScanSaveInfo_o *)v5, v8);
-  UnityEngine_PlayerPrefs__SetString((System_String_o *)StringLiteral_13157/*"SubmarineUnreleasedScan"*/, SaveValue, 0);
+  UnityEngine_PlayerPrefs__SetString((System_String_o *)StringLiteral_13158/*"SubmarineUnreleasedScan"*/, SaveValue, 0);
   UnityEngine_PlayerPrefs__Save(0);
 }

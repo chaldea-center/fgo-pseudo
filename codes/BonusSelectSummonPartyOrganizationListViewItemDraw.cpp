@@ -34,28 +34,28 @@ System_String_o *BonusSelectSummonPartyOrganizationListViewItemDraw__GetClassIco
   Il2CppObject *v11; // x1
   System_String_o *v12; // x0
 
-  if ( (byte_4C33D83 & 1) == 0 )
+  if ( (byte_4C3F3FB & 1) == 0 )
   {
-    sub_1C32C20(&string_TypeInfo);
-    sub_1C32C20(&StringLiteral_16569/*"_on{0}"*/);
-    sub_1C32C20(&StringLiteral_20165/*"icon_class{0}"*/);
-    sub_1C32C20(&StringLiteral_16567/*"_off{0}"*/);
-    byte_4C33D83 = 1;
+    sub_1C37058(&string_TypeInfo);
+    sub_1C37058(&StringLiteral_16571/*"_on{0}"*/);
+    sub_1C37058(&StringLiteral_20168/*"icon_class{0}"*/);
+    sub_1C37058(&StringLiteral_16569/*"_off{0}"*/);
+    byte_4C3F3FB = 1;
   }
   if ( System_String__IsNullOrEmpty(classIconId, 0) )
     return string_TypeInfo->static_fields->Empty;
-  v9 = StringLiteral_20165/*"icon_class{0}"*/;
+  v9 = StringLiteral_20168/*"icon_class{0}"*/;
   if ( isUpper )
   {
-    v10 = (System_String_o **)&StringLiteral_16569/*"_on{0}"*/;
+    v10 = (System_String_o **)&StringLiteral_16571/*"_on{0}"*/;
     if ( !isUpperOn )
-      v10 = (System_String_o **)&StringLiteral_16567/*"_off{0}"*/;
+      v10 = (System_String_o **)&StringLiteral_16569/*"_off{0}"*/;
     v11 = (Il2CppObject *)System_String__Format(*v10, (Il2CppObject *)classIconId, 0);
     v12 = (System_String_o *)v9;
   }
   else
   {
-    v12 = (System_String_o *)StringLiteral_20165/*"icon_class{0}"*/;
+    v12 = (System_String_o *)StringLiteral_20168/*"icon_class{0}"*/;
     v11 = (Il2CppObject *)classIconId;
   }
   return System_String__Format(v12, v11, 0);
@@ -89,7 +89,7 @@ void BonusSelectSummonPartyOrganizationListViewItemDraw__SetItem(
     gameObject = (UnityEngine_GameObject_o *)this->fields.baseButton;
     if ( !gameObject )
 LABEL_11:
-      sub_1C32E7C(gameObject);
+      sub_1C372B4(gameObject);
     ((void (__fastcall *)(UnityEngine_GameObject_o *, _QWORD, __int64, Il2CppClass **))gameObject->klass[1]._1.nestedTypes)(
       gameObject,
       0,
@@ -111,10 +111,10 @@ void BonusSelectSummonPartyOrganizationListViewItemDraw__SetRestrictionClassSpri
   UISprite_o *v9; // x21
   System_String_o *v10; // x20
 
-  if ( (byte_4C33D82 & 1) == 0 )
+  if ( (byte_4C3F3FA & 1) == 0 )
   {
-    sub_1C32C20(&AtlasManager_TypeInfo);
-    byte_4C33D82 = 1;
+    sub_1C37058(&AtlasManager_TypeInfo);
+    byte_4C3F3FA = 1;
   }
   restrictionClassSprite = (UnityEngine_Component_o *)this->fields.restrictionClassSprite;
   if ( !restrictionClassSprite )
@@ -160,7 +160,7 @@ void BonusSelectSummonPartyOrganizationListViewItemDraw__SetRestrictionClassSpri
       }
     }
 LABEL_16:
-    sub_1C32E7C(restrictionClassSprite);
+    sub_1C372B4(restrictionClassSprite);
   }
 LABEL_14:
   restrictionClassSprite = (UnityEngine_Component_o *)this->fields.restrictionClassSprite;
@@ -186,10 +186,10 @@ void BonusSelectSummonPartyOrganizationListViewItemDraw__SetUpperClassSprite(
   System_String_o *v11; // x20
 
   v6 = this;
-  if ( (byte_4C33D81 & 1) == 0 )
+  if ( (byte_4C3F3F9 & 1) == 0 )
   {
-    this = (BonusSelectSummonPartyOrganizationListViewItemDraw_o *)sub_1C32C20(&AtlasManager_TypeInfo);
-    byte_4C33D81 = 1;
+    this = (BonusSelectSummonPartyOrganizationListViewItemDraw_o *)sub_1C37058(&AtlasManager_TypeInfo);
+    byte_4C3F3F9 = 1;
   }
   if ( !item )
     goto LABEL_12;
@@ -228,7 +228,7 @@ void BonusSelectSummonPartyOrganizationListViewItemDraw__SetUpperClassSprite(
       }
     }
 LABEL_12:
-    sub_1C32E7C(this);
+    sub_1C372B4(this);
   }
 }
 
@@ -273,14 +273,14 @@ void BonusSelectSummonPartyOrganizationListViewItemDraw__SvtDisp(
   TreasureDvcInfo_o *tdInfo; // [xsp+28h] [xbp-38h] BYREF
 
   v4 = this;
-  if ( (byte_4C33D7F & 1) == 0 )
+  if ( (byte_4C3F3F7 & 1) == 0 )
   {
-    sub_1C32C20(&AtlasManager_TypeInfo);
-    sub_1C32C20(&int_TypeInfo);
-    sub_1C32C20(&Rarity_TypeInfo);
-    sub_1C32C20(&StringLiteral_17142/*"bg_white"*/);
-    this = (BonusSelectSummonPartyOrganizationListViewItemDraw_o *)sub_1C32C20(&StringLiteral_17328/*"bonus_select_frame_{0}"*/);
-    byte_4C33D7F = 1;
+    sub_1C37058(&AtlasManager_TypeInfo);
+    sub_1C37058(&int_TypeInfo);
+    sub_1C37058(&Rarity_TypeInfo);
+    sub_1C37058(&StringLiteral_17144/*"bg_white"*/);
+    this = (BonusSelectSummonPartyOrganizationListViewItemDraw_o *)sub_1C37058(&StringLiteral_17330/*"bonus_select_frame_{0}"*/);
+    byte_4C3F3F7 = 1;
   }
   tdInfo = 0;
   if ( !item )
@@ -347,7 +347,7 @@ void BonusSelectSummonPartyOrganizationListViewItemDraw__SvtDisp(
       this = (BonusSelectSummonPartyOrganizationListViewItemDraw_o *)v4->fields.treasureDeviceIconLabel;
       if ( this )
       {
-        UIIconLabel__Set_41010828(
+        UIIconLabel__Set_41110308(
           (UIIconLabel_o *)this,
           33,
           tdInfo->fields.lv,
@@ -374,7 +374,7 @@ void BonusSelectSummonPartyOrganizationListViewItemDraw__SvtDisp(
       }
     }
 LABEL_26:
-    sub_1C32E7C(this);
+    sub_1C372B4(this);
   }
   treasureDeviceIconLabel = v4->fields.treasureDeviceIconLabel;
   tdLevel = BonusSelectSummonPartyOrganizationListViewItem__get_tdLevel(item, v16);
@@ -383,19 +383,19 @@ LABEL_26:
                                                                    v20);
   if ( !treasureDeviceIconLabel )
     goto LABEL_26;
-  UIIconLabel__Set_41010828(treasureDeviceIconLabel, 33, tdLevel, (int32_t)this, 0, 0, 0, 0, 0, 0, 0);
+  UIIconLabel__Set_41110308(treasureDeviceIconLabel, 33, tdLevel, (int32_t)this, 0, 0, 0, 0, 0, 0, 0);
 LABEL_23:
   treasureDeviceIconBg = v4->fields.treasureDeviceIconBg;
   if ( !AtlasManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo);
-  AtlasManager__SetPartyOrganizationImage(treasureDeviceIconBg, (System_String_o *)StringLiteral_17142/*"bg_white"*/, 0);
+  AtlasManager__SetPartyOrganizationImage(treasureDeviceIconBg, (System_String_o *)StringLiteral_17144/*"bg_white"*/, 0);
   baseSprite = v4->fields.baseSprite;
   FrameType = BonusSelectSummonPartyOrganizationListViewItem__get_FrameType(item, v23);
   AtlasManager__SetFormationBase(baseSprite, FrameType, v4->fields.partyOrganizationAtlas, 0, 0, 0);
   base2Sprite = v4->fields.base2Sprite;
   v35 = BonusSelectSummonPartyOrganizationListViewItem__get_FrameType(item, v26);
   v33 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v35, v27, v28, v29, v30, v31, v32);
-  v34 = System_String__Format((System_String_o *)StringLiteral_17328/*"bonus_select_frame_{0}"*/, v33, 0);
+  v34 = System_String__Format((System_String_o *)StringLiteral_17330/*"bonus_select_frame_{0}"*/, v33, 0);
   AtlasManager__SetEventSprite(base2Sprite, v34, 0);
 }
 
@@ -411,11 +411,11 @@ void BonusSelectSummonPartyOrganizationListViewItemDraw__SvtNotDisp(
   UISprite_o *baseSprite; // x20
   UIAtlas_o *partyOrganizationAtlas; // x21
 
-  if ( (byte_4C33D80 & 1) == 0 )
+  if ( (byte_4C3F3F8 & 1) == 0 )
   {
-    sub_1C32C20(&AtlasManager_TypeInfo);
-    sub_1C32C20(&string_TypeInfo);
-    byte_4C33D80 = 1;
+    sub_1C37058(&AtlasManager_TypeInfo);
+    sub_1C37058(&string_TypeInfo);
+    byte_4C3F3F8 = 1;
   }
   servantNarrowTexture = this->fields.servantNarrowTexture;
   if ( !servantNarrowTexture )
@@ -447,6 +447,6 @@ void BonusSelectSummonPartyOrganizationListViewItemDraw__SvtNotDisp(
   servantNarrowTexture = (UINarrowFigureTexture_o *)this->fields.base2Sprite;
   if ( !servantNarrowTexture )
 LABEL_12:
-    sub_1C32E7C(servantNarrowTexture);
+    sub_1C372B4(servantNarrowTexture);
   UISprite__set_spriteName((UISprite_o *)servantNarrowTexture, string_TypeInfo->static_fields->Empty, 0);
 }

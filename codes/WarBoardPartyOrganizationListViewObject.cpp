@@ -24,13 +24,13 @@ void WarBoardPartyOrganizationListViewObject__Init(
   const MethodInfo *v7; // x3
   WarBoardPartyOrganizationListViewItemDraw_o *v8; // x0
 
-  if ( (byte_4C3561E & 1) == 0 )
+  if ( (byte_4C40C09 & 1) == 0 )
   {
-    sub_1C32C20(&UnityEngine_Object_TypeInfo);
-    byte_4C3561E = 1;
+    sub_1C37058(&UnityEngine_Object_TypeInfo);
+    byte_4C40C09 = 1;
   }
   this->fields.onTapEvent = onTapEvent;
-  sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.onTapEvent, (int32_t)onTapEvent, (int32_t)method, v3);
+  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.onTapEvent, (int32_t)onTapEvent, (int32_t)method, v3);
   itemDraw = (UnityEngine_Object_o *)this->fields.itemDraw;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
@@ -38,7 +38,7 @@ void WarBoardPartyOrganizationListViewObject__Init(
   {
     v8 = this->fields.itemDraw;
     if ( !v8 )
-      sub_1C32E7C(0);
+      sub_1C372B4(0);
     WarBoardPartyOrganizationListViewItemDraw__SetItem(v8, this->fields.listViewItem, 3, v7);
   }
 }
@@ -163,5 +163,5 @@ void WarBoardPartyOrganizationListViewObject__SetItem(
   const MethodInfo *v3; // x3
 
   this->fields.listViewItem = item;
-  sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.listViewItem, (int32_t)item, (int32_t)method, v3);
+  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.listViewItem, (int32_t)item, (int32_t)method, v3);
 }

@@ -7,10 +7,10 @@ void CriFsWebInstaller___ctor(CriFsWebInstaller_o *this, const MethodInfo *metho
   System_String_o *v7; // x0
   __int64 v8; // x0
 
-  if ( (byte_4C31063 & 1) == 0 )
+  if ( (byte_4C3C5B3 & 1) == 0 )
   {
-    sub_1C32C20(&CriDisposableObjectManager_TypeInfo);
-    byte_4C31063 = 1;
+    sub_1C37058(&CriDisposableObjectManager_TypeInfo);
+    byte_4C3C5B3 = 1;
   }
   this->fields.handle = 0;
   System_Object___ctor((Il2CppObject *)this, 0);
@@ -19,12 +19,12 @@ void CriFsWebInstaller___ctor(CriFsWebInstaller_o *this, const MethodInfo *metho
   CriFsWebInstaller__criFsWebInstaller_Create(&this->fields.handle, *(const MethodInfo **)&v3.fields._d);
   if ( System_IntPtr__op_Equality(this->fields.handle, 0, 0) )
   {
-    v5 = sub_1C32C34(&System_Exception_TypeInfo);
-    v6 = (System_Exception_o *)sub_1C32E6C(v5);
-    v7 = (System_String_o *)sub_1C32C34(&StringLiteral_18333/*"criFsWebInstaller_Create() failed."*/);
-    System_Exception___ctor_65266192(v6, v7, 0);
-    v8 = sub_1C32C34(&Method_CriFsWebInstaller__ctor__);
-    sub_1C32D48(v6, v8);
+    v5 = sub_1C3706C(&System_Exception_TypeInfo);
+    v6 = (System_Exception_o *)sub_1C372A4(v5);
+    v7 = (System_String_o *)sub_1C3706C(&StringLiteral_18336/*"criFsWebInstaller_Create() failed."*/);
+    System_Exception___ctor_65309304(v6, v7, 0);
+    v8 = sub_1C3706C(&Method_CriFsWebInstaller__ctor__);
+    sub_1C37180(v6, v8);
   }
   if ( !CriDisposableObjectManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(CriDisposableObjectManager_TypeInfo);
@@ -46,12 +46,12 @@ void CriFsWebInstaller__Dispose(CriFsWebInstaller_o *this, const MethodInfo *met
 {
   const MethodInfo *v2; // x2
 
-  if ( (byte_4C31064 & 1) == 0 )
+  if ( (byte_4C3C5B4 & 1) == 0 )
   {
-    sub_1C32C20(&System_GC_TypeInfo);
-    byte_4C31064 = 1;
+    sub_1C37058(&System_GC_TypeInfo);
+    byte_4C3C5B4 = 1;
   }
-  CriFsWebInstaller__Dispose_30826132(this, 0, v2);
+  CriFsWebInstaller__Dispose_30843596(this, 0, v2);
   if ( !System_GC_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(System_GC_TypeInfo);
   System_GC__SuppressFinalize((Il2CppObject *)this, 0);
@@ -59,7 +59,7 @@ void CriFsWebInstaller__Dispose(CriFsWebInstaller_o *this, const MethodInfo *met
 
 
 // local variable allocation has failed, the output may be wrong!
-void CriFsWebInstaller__Dispose_30826132(CriFsWebInstaller_o *this, bool disposing, const MethodInfo *method)
+void CriFsWebInstaller__Dispose_30843596(CriFsWebInstaller_o *this, bool disposing, const MethodInfo *method)
 {
   const MethodInfo *v4; // x1
   const MethodInfo *v5; // x1
@@ -67,10 +67,10 @@ void CriFsWebInstaller__Dispose_30826132(CriFsWebInstaller_o *this, bool disposi
   const MethodInfo *v7; // x1
   CriFsWebInstaller_StatusInfo_o v8; // [xsp+0h] [xbp-40h] BYREF
 
-  if ( (byte_4C31067 & 1) == 0 )
+  if ( (byte_4C3C5B7 & 1) == 0 )
   {
-    sub_1C32C20(&CriDisposableObjectManager_TypeInfo);
-    byte_4C31067 = 1;
+    sub_1C37058(&CriDisposableObjectManager_TypeInfo);
+    byte_4C3C5B7 = 1;
   }
   if ( !CriDisposableObjectManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(CriDisposableObjectManager_TypeInfo);
@@ -101,7 +101,7 @@ void CriFsWebInstaller__Finalize(CriFsWebInstaller_o *this, const MethodInfo *me
 {
   const MethodInfo *v2; // x2
 
-  CriFsWebInstaller__Dispose_30826132(this, 0, v2);
+  CriFsWebInstaller__Dispose_30843596(this, 0, v2);
   System_Object__Finalize((Il2CppObject *)this, 0);
 }
 
@@ -112,18 +112,18 @@ void CriFsWebInstaller__FinalizeModule(const MethodInfo *method)
   const MethodInfo *v2; // x0
   CriFsPlugin_c *inited; // x0
 
-  if ( (byte_4C31066 & 1) == 0 )
+  if ( (byte_4C3C5B6 & 1) == 0 )
   {
-    sub_1C32C20(&CriDisposableObjectManager_TypeInfo);
-    sub_1C32C20(&CriFsPlugin_TypeInfo);
-    sub_1C32C20(&UnityEngine_Debug_TypeInfo);
-    sub_1C32C20(&StringLiteral_15900/*"[CRIWARE] CriFsWebInstaller module is not initialized."*/);
-    byte_4C31066 = 1;
+    sub_1C37058(&CriDisposableObjectManager_TypeInfo);
+    sub_1C37058(&CriFsPlugin_TypeInfo);
+    sub_1C37058(&UnityEngine_Debug_TypeInfo);
+    sub_1C37058(&StringLiteral_15902/*"[CRIWARE] CriFsWebInstaller module is not initialized."*/);
+    byte_4C3C5B6 = 1;
   }
-  if ( !byte_4C312C4 )
+  if ( !byte_4C3C814 )
   {
-    sub_1C32C20(&CriFsWebInstaller_TypeInfo);
-    byte_4C312C4 = 1;
+    sub_1C37058(&CriFsWebInstaller_TypeInfo);
+    byte_4C3C814 = 1;
   }
   if ( CriFsWebInstaller_TypeInfo->static_fields->_isInitialized_k__BackingField )
   {
@@ -135,10 +135,10 @@ void CriFsWebInstaller__FinalizeModule(const MethodInfo *method)
     if ( !CriFsPlugin_TypeInfo->_2.cctor_finished )
       inited = (CriFsPlugin_c *)j_il2cpp_runtime_class_init_0(CriFsPlugin_TypeInfo);
     CriFsPlugin__FinalizeLibrary((const MethodInfo *)inited);
-    if ( !byte_4C312C6 )
+    if ( !byte_4C3C816 )
     {
-      sub_1C32C20(&CriFsWebInstaller_TypeInfo);
-      byte_4C312C6 = 1;
+      sub_1C37058(&CriFsWebInstaller_TypeInfo);
+      byte_4C3C816 = 1;
     }
     CriFsWebInstaller_TypeInfo->static_fields->_isInitialized_k__BackingField = 0;
   }
@@ -146,7 +146,7 @@ void CriFsWebInstaller__FinalizeModule(const MethodInfo *method)
   {
     if ( !UnityEngine_Debug_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(UnityEngine_Debug_TypeInfo);
-    UnityEngine_Debug__LogError((Il2CppObject *)StringLiteral_15900/*"[CRIWARE] CriFsWebInstaller module is not initialized."*/, 0);
+    UnityEngine_Debug__LogError((Il2CppObject *)StringLiteral_15902/*"[CRIWARE] CriFsWebInstaller module is not initialized."*/, 0);
   }
 }
 
@@ -180,7 +180,7 @@ CriFsWebInstaller_StatusInfo_o *CriFsWebInstaller__GetStatusInfo(
   {
     v8.fields.httpStatusCode = -1;
     *(_QWORD *)&v8.fields.status = 0x800000000LL;
-    *(_OWORD *)&v8.fields.contentsSize = xmmword_C0CDB0;
+    *(_OWORD *)&v8.fields.contentsSize = xmmword_C0ED30;
   }
   v7 = *(_OWORD *)&v8.fields.contentsSize;
   *(_OWORD *)&retstr->fields.status = *(_OWORD *)&v8.fields.status;
@@ -196,23 +196,23 @@ void CriFsWebInstaller__InitializeModule(CriFsWebInstaller_ModuleConfig_o *confi
   bool crcEnabled; // w19
   struct CriFsWebInstaller_StaticFields *static_fields; // x8
 
-  if ( (byte_4C31065 & 1) == 0 )
+  if ( (byte_4C3C5B5 & 1) == 0 )
   {
-    sub_1C32C20(&CriFsPlugin_TypeInfo);
-    sub_1C32C20(&UnityEngine_Debug_TypeInfo);
-    sub_1C32C20(&StringLiteral_15899/*"[CRIWARE] CriFsWebInstaller module is already initialized."*/);
-    byte_4C31065 = 1;
+    sub_1C37058(&CriFsPlugin_TypeInfo);
+    sub_1C37058(&UnityEngine_Debug_TypeInfo);
+    sub_1C37058(&StringLiteral_15901/*"[CRIWARE] CriFsWebInstaller module is already initialized."*/);
+    byte_4C3C5B5 = 1;
   }
-  if ( !byte_4C312C4 )
+  if ( !byte_4C3C814 )
   {
-    sub_1C32C20(&CriFsWebInstaller_TypeInfo);
-    byte_4C312C4 = 1;
+    sub_1C37058(&CriFsWebInstaller_TypeInfo);
+    byte_4C3C814 = 1;
   }
   if ( CriFsWebInstaller_TypeInfo->static_fields->_isInitialized_k__BackingField )
   {
     if ( !UnityEngine_Debug_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(UnityEngine_Debug_TypeInfo);
-    UnityEngine_Debug__LogError((Il2CppObject *)StringLiteral_15899/*"[CRIWARE] CriFsWebInstaller module is already initialized."*/, 0);
+    UnityEngine_Debug__LogError((Il2CppObject *)StringLiteral_15901/*"[CRIWARE] CriFsWebInstaller module is already initialized."*/, 0);
   }
   else
   {
@@ -222,17 +222,17 @@ void CriFsWebInstaller__InitializeModule(CriFsWebInstaller_ModuleConfig_o *confi
     CriFsPlugin__InitializeLibrary((const MethodInfo *)inited);
     CriFsWebInstaller__criFsWebInstaller_Initialize(config, v4);
     crcEnabled = config->fields.crcEnabled;
-    if ( !byte_4C312C5 )
+    if ( !byte_4C3C815 )
     {
-      sub_1C32C20(&CriFsWebInstaller_TypeInfo);
-      byte_4C312C5 = 1;
+      sub_1C37058(&CriFsWebInstaller_TypeInfo);
+      byte_4C3C815 = 1;
     }
     static_fields = CriFsWebInstaller_TypeInfo->static_fields;
     static_fields->_isCrcEnabled_k__BackingField = crcEnabled;
-    if ( !byte_4C312C6 )
+    if ( !byte_4C3C816 )
     {
-      sub_1C32C20(&CriFsWebInstaller_TypeInfo);
-      byte_4C312C6 = 1;
+      sub_1C37058(&CriFsWebInstaller_TypeInfo);
+      byte_4C3C816 = 1;
       static_fields = CriFsWebInstaller_TypeInfo->static_fields;
     }
     static_fields->_isInitialized_k__BackingField = 1;
@@ -287,7 +287,7 @@ int32_t CriFsWebInstaller__criFsWebInstaller_Copy(
 
   v8 = (int)dstPath;
   v9 = (int)url;
-  if ( !off_4C31090 )
+  if ( !off_4C3C5E0 )
   {
     *(_QWORD *)v22 = "cri_ware_unity";
     v23 = 14;
@@ -296,13 +296,13 @@ int32_t CriFsWebInstaller__criFsWebInstaller_Copy(
     v27 = 24;
     v26 = 0x200000000LL;
     v28 = 0;
-    off_4C31090 = (__int64 (__fastcall *)(_QWORD, _QWORD, _QWORD))sub_1C331FC(v22);
+    off_4C3C5E0 = (__int64 (__fastcall *)(_QWORD, _QWORD, _QWORD))sub_1C37634(v22);
   }
-  v11 = sub_1C331D8(v9, (int)url, (int)dstPath, (int)method, v4, v5, v6, v7, v22[0], v23, v24[0], v25);
-  v19 = sub_1C331D8(v8, v12, v13, v14, v15, v16, v17, v18, v22[0], v23, v24[0], v25);
-  v20 = off_4C31090(installer, v11, v19);
-  sub_1C331F0(v11);
-  sub_1C331F0(v19);
+  v11 = sub_1C37610(v9, (int)url, (int)dstPath, (int)method, v4, v5, v6, v7, v22[0], v23, v24[0], v25);
+  v19 = sub_1C37610(v8, v12, v13, v14, v15, v16, v17, v18, v22[0], v23, v24[0], v25);
+  v20 = off_4C3C5E0(installer, v11, v19);
+  sub_1C37628(v11);
+  sub_1C37628(v19);
   return v20;
 }
 
@@ -314,8 +314,8 @@ int32_t CriFsWebInstaller__criFsWebInstaller_Create(intptr_t *installer, const M
   int v6; // [xsp+28h] [xbp-28h]
   char v7; // [xsp+2Ch] [xbp-24h]
 
-  v2 = off_4C31080;
-  if ( !off_4C31080 )
+  v2 = off_4C3C5D0;
+  if ( !off_4C3C5D0 )
   {
     v5[0] = "cri_ware_unity";
     v5[1] = 14;
@@ -324,8 +324,8 @@ int32_t CriFsWebInstaller__criFsWebInstaller_Create(intptr_t *installer, const M
     v6 = 8;
     v5[4] = 0x200000000LL;
     v7 = 0;
-    v2 = (void *)sub_1C331FC(v5);
-    off_4C31080 = v2;
+    v2 = (void *)sub_1C37634(v5);
+    off_4C3C5D0 = v2;
   }
   return ((__int64 (__fastcall *)(intptr_t *, const MethodInfo *))v2)(installer, method);
 }
@@ -338,8 +338,8 @@ int32_t CriFsWebInstaller__criFsWebInstaller_Destroy(intptr_t installer, const M
   int v6; // [xsp+28h] [xbp-28h]
   char v7; // [xsp+2Ch] [xbp-24h]
 
-  v2 = off_4C31088;
-  if ( !off_4C31088 )
+  v2 = off_4C3C5D8;
+  if ( !off_4C3C5D8 )
   {
     v5[0] = "cri_ware_unity";
     v5[1] = 14;
@@ -348,8 +348,8 @@ int32_t CriFsWebInstaller__criFsWebInstaller_Destroy(intptr_t installer, const M
     v6 = 8;
     v5[4] = 0x200000000LL;
     v7 = 0;
-    v2 = (void *)sub_1C331FC(v5);
-    off_4C31088 = v2;
+    v2 = (void *)sub_1C37634(v5);
+    off_4C3C5D8 = v2;
   }
   return ((__int64 (__fastcall *)(intptr_t, const MethodInfo *))v2)(installer, method);
 }
@@ -362,8 +362,8 @@ int32_t CriFsWebInstaller__criFsWebInstaller_ExecuteMain(const MethodInfo *metho
   int v4; // [xsp+28h] [xbp-18h]
   char v5; // [xsp+2Ch] [xbp-14h]
 
-  v1 = (const MethodInfo *)off_4C31078;
-  if ( !off_4C31078 )
+  v1 = (const MethodInfo *)off_4C3C5C8;
+  if ( !off_4C3C5C8 )
   {
     v4 = 0;
     v3[0] = "cri_ware_unity";
@@ -372,9 +372,9 @@ int32_t CriFsWebInstaller__criFsWebInstaller_ExecuteMain(const MethodInfo *metho
     v3[3] = 29;
     v3[4] = 0x200000000LL;
     v5 = 0;
-    method = (const MethodInfo *)sub_1C331FC(v3);
+    method = (const MethodInfo *)sub_1C37634(v3);
     v1 = method;
-    off_4C31078 = method;
+    off_4C3C5C8 = method;
   }
   return ((__int64 (__fastcall *)(const MethodInfo *))v1)(method);
 }
@@ -387,8 +387,8 @@ int32_t CriFsWebInstaller__criFsWebInstaller_Finalize(const MethodInfo *method)
   int v4; // [xsp+28h] [xbp-18h]
   char v5; // [xsp+2Ch] [xbp-14h]
 
-  v1 = (const MethodInfo *)off_4C31070;
-  if ( !off_4C31070 )
+  v1 = (const MethodInfo *)off_4C3C5C0;
+  if ( !off_4C3C5C0 )
   {
     v4 = 0;
     v3[0] = "cri_ware_unity";
@@ -397,9 +397,9 @@ int32_t CriFsWebInstaller__criFsWebInstaller_Finalize(const MethodInfo *method)
     v3[3] = 26;
     v3[4] = 0x200000000LL;
     v5 = 0;
-    method = (const MethodInfo *)sub_1C331FC(v3);
+    method = (const MethodInfo *)sub_1C37634(v3);
     v1 = method;
-    off_4C31070 = method;
+    off_4C3C5C0 = method;
   }
   return ((__int64 (__fastcall *)(const MethodInfo *))v1)(method);
 }
@@ -412,8 +412,8 @@ int32_t CriFsWebInstaller__criFsWebInstaller_GetCRC32(intptr_t installer, uint32
   int v8; // [xsp+28h] [xbp-28h]
   char v9; // [xsp+2Ch] [xbp-24h]
 
-  v3 = off_4C310A8;
-  if ( !off_4C310A8 )
+  v3 = off_4C3C5F8;
+  if ( !off_4C3C5F8 )
   {
     v7[0] = "cri_ware_unity";
     v7[1] = 14;
@@ -422,8 +422,8 @@ int32_t CriFsWebInstaller__criFsWebInstaller_GetCRC32(intptr_t installer, uint32
     v8 = 16;
     v7[4] = 0x200000000LL;
     v9 = 0;
-    v3 = (void *)sub_1C331FC(v7);
-    off_4C310A8 = v3;
+    v3 = (void *)sub_1C37634(v7);
+    off_4C3C5F8 = v3;
   }
   return ((__int64 (__fastcall *)(intptr_t, uint32_t *, const MethodInfo *))v3)(installer, crc32, method);
 }
@@ -439,8 +439,8 @@ int32_t CriFsWebInstaller__criFsWebInstaller_GetStatusInfo(
   int v8; // [xsp+28h] [xbp-28h]
   char v9; // [xsp+2Ch] [xbp-24h]
 
-  v3 = off_4C310A0;
-  if ( !off_4C310A0 )
+  v3 = off_4C3C5F0;
+  if ( !off_4C3C5F0 )
   {
     v7[0] = "cri_ware_unity";
     v7[1] = 14;
@@ -449,8 +449,8 @@ int32_t CriFsWebInstaller__criFsWebInstaller_GetStatusInfo(
     v8 = 16;
     v7[4] = 0x200000000LL;
     v9 = 0;
-    v3 = (void *)sub_1C331FC(v7);
-    off_4C310A0 = v3;
+    v3 = (void *)sub_1C37634(v7);
+    off_4C3C5F0 = v3;
   }
   return ((__int64 (__fastcall *)(intptr_t, CriFsWebInstaller_StatusInfo_o *, const MethodInfo *))v3)(
            installer,
@@ -481,7 +481,7 @@ int32_t CriFsWebInstaller__criFsWebInstaller_Initialize(
   int v19[4]; // [xsp+10h] [xbp-40h]
   __int128 v20; // [xsp+20h] [xbp-30h]
 
-  if ( !off_4C31068 )
+  if ( !off_4C3C5B8 )
   {
     *(_QWORD *)v18 = "cri_ware_unity";
     *(_QWORD *)&v18[8] = 14;
@@ -490,10 +490,10 @@ int32_t CriFsWebInstaller__criFsWebInstaller_Initialize(
     DWORD2(v20) = 8;
     *(_QWORD *)&v20 = 0x200000000LL;
     BYTE12(v20) = 0;
-    off_4C31068 = (__int64 (__fastcall *)(_QWORD))sub_1C331FC(v18);
+    off_4C3C5B8 = (__int64 (__fastcall *)(_QWORD))sub_1C37634(v18);
   }
   v20 = 0u;
-  *(_QWORD *)&v18[8] = sub_1C331D8(
+  *(_QWORD *)&v18[8] = sub_1C37610(
                          (int)config->fields.proxyHost,
                          (int)method,
                          v2,
@@ -507,7 +507,7 @@ int32_t CriFsWebInstaller__criFsWebInstaller_Initialize(
                          0,
                          0);
   LOWORD(v19[0]) = config->fields.proxyPort;
-  *(_QWORD *)&v19[2] = sub_1C331D8(
+  *(_QWORD *)&v19[2] = sub_1C37610(
                          (int)config->fields.userAgent,
                          v9,
                          v10,
@@ -525,7 +525,7 @@ int32_t CriFsWebInstaller__criFsWebInstaller_Initialize(
   DWORD1(v20) = allowInsecureSSL;
   DWORD2(v20) = config->fields.crcEnabled;
   BYTE12(v20) = config->fields.platformConfig.fields.reserved;
-  return off_4C31068(v18);
+  return off_4C3C5B8(v18);
 }
 
 
@@ -561,7 +561,7 @@ int32_t CriFsWebInstaller__criFsWebInstaller_SetRequestHeader(
 
   v8 = (int)value;
   v9 = (int)field;
-  if ( !off_4C310B0 )
+  if ( !off_4C3C600 )
   {
     *(_QWORD *)v21 = "cri_ware_unity";
     v22 = 14;
@@ -570,13 +570,13 @@ int32_t CriFsWebInstaller__criFsWebInstaller_SetRequestHeader(
     v26 = 16;
     v25 = 0x200000000LL;
     v27 = 0;
-    off_4C310B0 = (__int64 (__fastcall *)(_QWORD, _QWORD))sub_1C331FC(v21);
+    off_4C3C600 = (__int64 (__fastcall *)(_QWORD, _QWORD))sub_1C37634(v21);
   }
-  v10 = sub_1C331D8(v9, (int)value, (int)method, v3, v4, v5, v6, v7, v21[0], v22, v23[0], v24);
-  v18 = sub_1C331D8(v8, v11, v12, v13, v14, v15, v16, v17, v21[0], v22, v23[0], v24);
-  v19 = off_4C310B0(v10, v18);
-  sub_1C331F0(v10);
-  sub_1C331F0(v18);
+  v10 = sub_1C37610(v9, (int)value, (int)method, v3, v4, v5, v6, v7, v21[0], v22, v23[0], v24);
+  v18 = sub_1C37610(v8, v11, v12, v13, v14, v15, v16, v17, v21[0], v22, v23[0], v24);
+  v19 = off_4C3C600(v10, v18);
+  sub_1C37628(v10);
+  sub_1C37628(v18);
   return v19;
 }
 
@@ -588,8 +588,8 @@ int32_t CriFsWebInstaller__criFsWebInstaller_Stop(intptr_t installer, const Meth
   int v6; // [xsp+28h] [xbp-28h]
   char v7; // [xsp+2Ch] [xbp-24h]
 
-  v2 = off_4C31098;
-  if ( !off_4C31098 )
+  v2 = off_4C3C5E8;
+  if ( !off_4C3C5E8 )
   {
     v5[0] = "cri_ware_unity";
     v5[1] = 14;
@@ -598,8 +598,8 @@ int32_t CriFsWebInstaller__criFsWebInstaller_Stop(intptr_t installer, const Meth
     v6 = 8;
     v5[4] = 0x200000000LL;
     v7 = 0;
-    v2 = (void *)sub_1C331FC(v5);
-    off_4C31098 = v2;
+    v2 = (void *)sub_1C37634(v5);
+    off_4C3C5E8 = v2;
   }
   return ((__int64 (__fastcall *)(intptr_t, const MethodInfo *))v2)(installer, method);
 }
@@ -619,10 +619,10 @@ CriFsWebInstaller_ModuleConfig_o *CriFsWebInstaller__get_defaultModuleConfig(
   v7 = 0u;
   v6 = 2u;
   v8 = 0;
-  sub_1C32BC4((char *)&v6 + 8, 0);
+  sub_1C36FFC((char *)&v6 + 8, 0);
   LOWORD(v7) = 0;
   *((_QWORD *)&v7 + 1) = 0;
-  result = (CriFsWebInstaller_ModuleConfig_o *)sub_1C32BC4((char *)&v7 + 8, 0);
+  result = (CriFsWebInstaller_ModuleConfig_o *)sub_1C36FFC((char *)&v7 + 8, 0);
   WORD2(v8) = 0;
   BYTE6(v8) = 0;
   LODWORD(v8) = 300;
@@ -637,10 +637,10 @@ CriFsWebInstaller_ModuleConfig_o *CriFsWebInstaller__get_defaultModuleConfig(
 
 bool CriFsWebInstaller__get_isCrcEnabled(const MethodInfo *method)
 {
-  if ( (byte_4C31061 & 1) == 0 )
+  if ( (byte_4C3C5B1 & 1) == 0 )
   {
-    sub_1C32C20(&CriFsWebInstaller_TypeInfo);
-    byte_4C31061 = 1;
+    sub_1C37058(&CriFsWebInstaller_TypeInfo);
+    byte_4C3C5B1 = 1;
   }
   return CriFsWebInstaller_TypeInfo->static_fields->_isCrcEnabled_k__BackingField;
 }
@@ -648,10 +648,10 @@ bool CriFsWebInstaller__get_isCrcEnabled(const MethodInfo *method)
 
 bool CriFsWebInstaller__get_isInitialized(const MethodInfo *method)
 {
-  if ( (byte_4C3105F & 1) == 0 )
+  if ( (byte_4C3C5AF & 1) == 0 )
   {
-    sub_1C32C20(&CriFsWebInstaller_TypeInfo);
-    byte_4C3105F = 1;
+    sub_1C37058(&CriFsWebInstaller_TypeInfo);
+    byte_4C3C5AF = 1;
   }
   return CriFsWebInstaller_TypeInfo->static_fields->_isInitialized_k__BackingField;
 }
@@ -659,10 +659,10 @@ bool CriFsWebInstaller__get_isInitialized(const MethodInfo *method)
 
 void CriFsWebInstaller__set_isCrcEnabled(bool value, const MethodInfo *method)
 {
-  if ( (byte_4C31062 & 1) == 0 )
+  if ( (byte_4C3C5B2 & 1) == 0 )
   {
-    sub_1C32C20(&CriFsWebInstaller_TypeInfo);
-    byte_4C31062 = 1;
+    sub_1C37058(&CriFsWebInstaller_TypeInfo);
+    byte_4C3C5B2 = 1;
   }
   CriFsWebInstaller_TypeInfo->static_fields->_isCrcEnabled_k__BackingField = value;
 }
@@ -670,10 +670,10 @@ void CriFsWebInstaller__set_isCrcEnabled(bool value, const MethodInfo *method)
 
 void CriFsWebInstaller__set_isInitialized(bool value, const MethodInfo *method)
 {
-  if ( (byte_4C31060 & 1) == 0 )
+  if ( (byte_4C3C5B0 & 1) == 0 )
   {
-    sub_1C32C20(&CriFsWebInstaller_TypeInfo);
-    byte_4C31060 = 1;
+    sub_1C37058(&CriFsWebInstaller_TypeInfo);
+    byte_4C3C5B0 = 1;
   }
   CriFsWebInstaller_TypeInfo->static_fields->_isInitialized_k__BackingField = value;
 }

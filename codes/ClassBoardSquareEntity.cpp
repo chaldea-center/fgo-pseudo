@@ -1,27 +1,27 @@
 void ClassBoardSquareEntity___ctor(ClassBoardSquareEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_4C3773E & 1) == 0 )
+  if ( (byte_4C42D35 & 1) == 0 )
   {
-    sub_1C32C20(&Method_DataEntityBase_string___ctor__);
-    byte_4C3773E = 1;
+    sub_1C37058(&Method_DataEntityBase_string___ctor__);
+    byte_4C42D35 = 1;
   }
   DataEntityBase_object____ctor(
     (DataEntityBase_PKType__o *)this,
-    (const MethodInfo_33943CC *)Method_DataEntityBase_string___ctor__);
+    (const MethodInfo_339EC34 *)Method_DataEntityBase_string___ctor__);
 }
 
 
 System_String_o *ClassBoardSquareEntity__CreatePK(int32_t classBoardBaseId, int32_t id, const MethodInfo *method)
 {
-  if ( (byte_4C3773D & 1) == 0 )
+  if ( (byte_4C42D34 & 1) == 0 )
   {
-    sub_1C32C20(&Method_DataEntityBase_CreateMultiplePK_int__int___);
-    byte_4C3773D = 1;
+    sub_1C37058(&Method_DataEntityBase_CreateMultiplePK_int__int___);
+    byte_4C42D34 = 1;
   }
   return DataEntityBase__CreateMultiplePK_int__int_(
            classBoardBaseId,
            id,
-           (const MethodInfo_30DB578 *)Method_DataEntityBase_CreateMultiplePK_int__int___);
+           (const MethodInfo_30E5DE0 *)Method_DataEntityBase_CreateMultiplePK_int__int___);
 }
 
 
@@ -38,30 +38,30 @@ bool ClassBoardSquareEntity__IsGrand(ClassBoardSquareEntity_o *this, const Metho
   Il2CppObject *Master_object; // x0
   Il2CppObject *entity; // [xsp+8h] [xbp-28h] BYREF
 
-  if ( (byte_4C3773B & 1) == 0 )
+  if ( (byte_4C42D32 & 1) == 0 )
   {
-    sub_1C32C20(&Method_DataManager_GetMaster_ClassBoardBaseMaster___);
-    sub_1C32C20(&DataManager_TypeInfo);
-    sub_1C32C20(&Method_DataMasterBase_ClassBoardBaseMaster__ClassBoardBaseEntity__int__TryGetEntity__);
-    byte_4C3773B = 1;
+    sub_1C37058(&Method_DataManager_GetMaster_ClassBoardBaseMaster___);
+    sub_1C37058(&DataManager_TypeInfo);
+    sub_1C37058(&Method_DataMasterBase_ClassBoardBaseMaster__ClassBoardBaseEntity__int__TryGetEntity__);
+    byte_4C42D32 = 1;
   }
   entity = 0;
   if ( !DataManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-  Master_object = DataManager__GetMaster_object_((const MethodInfo_30DD39C *)Method_DataManager_GetMaster_ClassBoardBaseMaster___);
+  Master_object = DataManager__GetMaster_object_((const MethodInfo_30E7C04 *)Method_DataManager_GetMaster_ClassBoardBaseMaster___);
   if ( !Master_object )
     goto LABEL_11;
   Master_object = (Il2CppObject *)DataMasterBase_object__object__int___TryGetEntity(
                                     (DataMasterBase_TMaster__TEntity__PKType__o *)Master_object,
                                     &entity,
                                     this->fields.classBoardBaseId,
-                                    (const MethodInfo_3396884 *)Method_DataMasterBase_ClassBoardBaseMaster__ClassBoardBaseEntity__int__TryGetEntity__);
+                                    (const MethodInfo_33A10EC *)Method_DataMasterBase_ClassBoardBaseMaster__ClassBoardBaseEntity__int__TryGetEntity__);
   if ( ((unsigned __int8)Master_object & 1) != 0 )
   {
     if ( entity )
       return SLODWORD(entity[4].monitor) > 0;
 LABEL_11:
-    sub_1C32E7C(Master_object);
+    sub_1C372B4(Master_object);
   }
   return 0;
 }
@@ -94,34 +94,34 @@ bool ClassBoardSquareEntity__IsSetGrandSvt(ClassBoardSquareEntity_o *this, const
   int *v25; // x10
   __int64 v26; // x0
 
-  if ( (byte_4C3773C & 1) == 0 )
+  if ( (byte_4C42D33 & 1) == 0 )
   {
-    sub_1C32C20(&Method_DataManager_GetMaster_ClassBoardClassMaster___);
-    sub_1C32C20(&Method_DataManager_GetMaster_UserServantGrandMaster___);
-    sub_1C32C20(&DataManager_TypeInfo);
-    sub_1C32C20(&Method_System_Linq_Enumerable_Contains_int___);
-    sub_1C32C20(&System_IDisposable_TypeInfo);
-    sub_1C32C20(&System_Collections_Generic_IEnumerable_UserServantEntity__TypeInfo);
-    sub_1C32C20(&System_Collections_Generic_IEnumerator_UserServantEntity__TypeInfo);
-    sub_1C32C20(&System_Collections_IEnumerator_TypeInfo);
-    byte_4C3773C = 1;
+    sub_1C37058(&Method_DataManager_GetMaster_ClassBoardClassMaster___);
+    sub_1C37058(&Method_DataManager_GetMaster_UserServantGrandMaster___);
+    sub_1C37058(&DataManager_TypeInfo);
+    sub_1C37058(&Method_System_Linq_Enumerable_Contains_int___);
+    sub_1C37058(&System_IDisposable_TypeInfo);
+    sub_1C37058(&System_Collections_Generic_IEnumerable_UserServantEntity__TypeInfo);
+    sub_1C37058(&System_Collections_Generic_IEnumerator_UserServantEntity__TypeInfo);
+    sub_1C37058(&System_Collections_IEnumerator_TypeInfo);
+    byte_4C42D33 = 1;
   }
   if ( ClassBoardSquareEntity__IsGrand(this, method) )
   {
     if ( !DataManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-    Master_object = (ClassBoardClassMaster_o *)DataManager__GetMaster_object_((const MethodInfo_30DD39C *)Method_DataManager_GetMaster_ClassBoardClassMaster___);
+    Master_object = (ClassBoardClassMaster_o *)DataManager__GetMaster_object_((const MethodInfo_30E7C04 *)Method_DataManager_GetMaster_ClassBoardClassMaster___);
     if ( !Master_object
       || (OpenClassIdArrayFromBaseId = (System_Collections_Generic_IEnumerable_TSource__o *)ClassBoardClassMaster__GetOpenClassIdArrayFromBaseId(
                                                                                               Master_object,
                                                                                               this->fields.classBoardBaseId,
                                                                                               v4),
-          (Master_object = (ClassBoardClassMaster_o *)DataManager__GetMaster_object_((const MethodInfo_30DD39C *)Method_DataManager_GetMaster_UserServantGrandMaster___)) == 0)
+          (Master_object = (ClassBoardClassMaster_o *)DataManager__GetMaster_object_((const MethodInfo_30E7C04 *)Method_DataManager_GetMaster_UserServantGrandMaster___)) == 0)
       || (Master_object = (ClassBoardClassMaster_o *)UserServantGrandMaster__GetUserServantEntities(
                                                        (UserServantGrandMaster_o *)Master_object,
                                                        0)) == 0 )
     {
-      sub_1C32E7C(Master_object);
+      sub_1C372B4(Master_object);
     }
     klass = Master_object->klass;
     v7 = Master_object;
@@ -141,11 +141,11 @@ bool ClassBoardSquareEntity__IsSetGrandSvt(ClassBoardSquareEntity_o *this, const
     else
     {
 LABEL_13:
-      v10 = sub_1C83438(Master_object, System_Collections_Generic_IEnumerable_UserServantEntity__TypeInfo, 0);
+      v10 = sub_1C87870(Master_object, System_Collections_Generic_IEnumerable_UserServantEntity__TypeInfo, 0);
     }
     v12 = (*(__int64 (__fastcall **)(ClassBoardClassMaster_o *, _QWORD))v10)(v7, *(_QWORD *)(v10 + 8));
     if ( !v12 )
-      sub_1C32E7C(0);
+      sub_1C372B4(0);
     while ( 1 )
     {
       v13 = *(_QWORD *)v12;
@@ -165,7 +165,7 @@ LABEL_13:
       else
       {
 LABEL_21:
-        v16 = sub_1C83438(v12, System_Collections_IEnumerator_TypeInfo, 0);
+        v16 = sub_1C87870(v12, System_Collections_IEnumerator_TypeInfo, 0);
       }
       v11 = (*(__int64 (__fastcall **)(__int64, _QWORD))v16)(v12, *(_QWORD *)(v16 + 8));
       if ( (v11 & 1) == 0 )
@@ -187,16 +187,16 @@ LABEL_21:
       else
       {
 LABEL_28:
-        v20 = sub_1C83438(v12, System_Collections_Generic_IEnumerator_UserServantEntity__TypeInfo, 0);
+        v20 = sub_1C87870(v12, System_Collections_Generic_IEnumerator_UserServantEntity__TypeInfo, 0);
       }
       v21 = (UserServantEntity_o *)(*(__int64 (__fastcall **)(__int64, _QWORD))v20)(v12, *(_QWORD *)(v20 + 8));
       if ( !v21 )
-        sub_1C32E7C(0);
+        sub_1C372B4(0);
       SvtClassId = UserServantEntity__getSvtClassId(v21, 0, 1, 0);
       if ( System_Linq_Enumerable__Contains_int_(
              OpenClassIdArrayFromBaseId,
              SvtClassId,
-             (const MethodInfo_30FA3A0 *)Method_System_Linq_Enumerable_Contains_int___) )
+             (const MethodInfo_3104C08 *)Method_System_Linq_Enumerable_Contains_int___) )
       {
         goto LABEL_34;
       }
@@ -220,7 +220,7 @@ LABEL_34:
     else
     {
 LABEL_38:
-      v26 = sub_1C83438(v12, System_IDisposable_TypeInfo, 0);
+      v26 = sub_1C87870(v12, System_IDisposable_TypeInfo, 0);
     }
     (*(void (__fastcall **)(__int64, _QWORD))v26)(v12, *(_QWORD *)(v26 + 8));
   }

@@ -11,7 +11,7 @@ void DebugMenuComponent__OnClickCheckBox(DebugMenuComponent_o *this, const Metho
 
   checkMark = this->fields.checkMark;
   if ( !checkMark )
-    sub_1C32E7C(this);
+    sub_1C372B4(this);
   v3 = !UnityEngine_GameObject__get_activeSelf(this->fields.checkMark, 0);
   UnityEngine_GameObject__SetActive(checkMark, v3, 0);
 }
@@ -94,17 +94,17 @@ void DebugMenuComponent__OnClickMenu(DebugMenuComponent_o *this, const MethodInf
       v5 = this->fields.paramdel;
       if ( !v5 )
 LABEL_18:
-        sub_1C32E7C(this);
+        sub_1C372B4(this);
       ((void (__fastcall *)(intptr_t))v5->fields.invoke_impl)(v5->fields.method_code);
 LABEL_14:
       DebugMenuComponent__updateTitleLabel(this, v6);
       return;
     default:
-      v14 = sub_1C32C34(&System_ArgumentOutOfRangeException_TypeInfo);
-      v15 = (System_ArgumentOutOfRangeException_o *)sub_1C32E6C(v14);
+      v14 = sub_1C3706C(&System_ArgumentOutOfRangeException_TypeInfo);
+      v15 = (System_ArgumentOutOfRangeException_o *)sub_1C372A4(v14);
       System_ArgumentOutOfRangeException___ctor(v15, 0);
-      v16 = sub_1C32C34(&Method_DebugMenuComponent_OnClickMenu__);
-      sub_1C32D48(v15, v16);
+      v16 = sub_1C3706C(&Method_DebugMenuComponent_OnClickMenu__);
+      sub_1C37180(v15, v16);
   }
 }
 
@@ -115,7 +115,7 @@ void DebugMenuComponent__SetFavorite(DebugMenuComponent_o *this, bool favorite, 
 
   checkMark = this->fields.checkMark;
   if ( !checkMark )
-    sub_1C32E7C(0);
+    sub_1C372B4(0);
   UnityEngine_GameObject__SetActive(checkMark, favorite, 0);
 }
 
@@ -141,7 +141,7 @@ bool DebugMenuComponent__get_isFavorite(DebugMenuComponent_o *this, const Method
 
   checkMark = this->fields.checkMark;
   if ( !checkMark )
-    sub_1C32E7C(0);
+    sub_1C372B4(0);
   return UnityEngine_GameObject__get_activeSelf(checkMark, 0);
 }
 
@@ -159,18 +159,18 @@ void DebugMenuComponent__setInitDlg(
   const MethodInfo *v10; // x1
 
   this->fields.menudel = del;
-  sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.menudel, (int32_t)del, (int32_t)del, method);
+  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.menudel, (int32_t)del, (int32_t)del, method);
   this->fields.type = 0;
   this->fields.originalTitle = txt;
-  sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.originalTitle, (int32_t)txt, v6, v7);
+  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.originalTitle, (int32_t)txt, v6, v7);
   this->fields.title = txt;
-  sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.title, (int32_t)txt, v8, v9);
+  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.title, (int32_t)txt, v8, v9);
   DebugMenuComponent__updateTitleLabel(this, v10);
 }
 
 
 // local variable allocation has failed, the output may be wrong!
-void DebugMenuComponent__setInitDlg_43589608(
+void DebugMenuComponent__setInitDlg_43691476(
         DebugMenuComponent_o *this,
         System_String_o *txt,
         DebugPanelRootComponent_tgrDelegate_o *del,
@@ -184,19 +184,19 @@ void DebugMenuComponent__setInitDlg_43589608(
   const MethodInfo *v12; // x1
 
   this->fields.tgrdel = del;
-  sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.tgrdel, (int32_t)del, (int32_t)del, (const MethodInfo *)flg);
+  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.tgrdel, (int32_t)del, (int32_t)del, (const MethodInfo *)flg);
   this->fields.type = 1;
   this->fields.originalTitle = txt;
-  sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.originalTitle, (int32_t)txt, v8, v9);
+  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.originalTitle, (int32_t)txt, v8, v9);
   this->fields.title = txt;
-  sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.title, (int32_t)txt, v10, v11);
+  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.title, (int32_t)txt, v10, v11);
   this->fields.flg = flg;
   DebugMenuComponent__updateTitleLabel(this, v12);
 }
 
 
 // local variable allocation has failed, the output may be wrong!
-void DebugMenuComponent__setInitDlg_43589704(
+void DebugMenuComponent__setInitDlg_43691572(
         DebugMenuComponent_o *this,
         System_String_o *txt,
         DebugPanelRootComponent_paramDelegate_o *del,
@@ -210,19 +210,19 @@ void DebugMenuComponent__setInitDlg_43589704(
   const MethodInfo *v12; // x1
 
   this->fields.paramdel = del;
-  sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.paramdel, (int32_t)del, (int32_t)del, *(const MethodInfo **)&param);
+  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.paramdel, (int32_t)del, (int32_t)del, *(const MethodInfo **)&param);
   this->fields.type = 2;
   this->fields.originalTitle = txt;
-  sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.originalTitle, (int32_t)txt, v8, v9);
+  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.originalTitle, (int32_t)txt, v8, v9);
   this->fields.title = txt;
-  sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.title, (int32_t)txt, v10, v11);
+  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.title, (int32_t)txt, v10, v11);
   this->fields.param = param;
   DebugMenuComponent__updateTitleLabel(this, v12);
 }
 
 
 // local variable allocation has failed, the output may be wrong!
-void DebugMenuComponent__setInitDlg_43589796(
+void DebugMenuComponent__setInitDlg_43691664(
         DebugMenuComponent_o *this,
         System_String_o *txt,
         DebugPanelRootComponent_paramtgrDelegate_o *del,
@@ -237,23 +237,23 @@ void DebugMenuComponent__setInitDlg_43589796(
   const MethodInfo *v14; // x1
 
   this->fields.paramtgrdel = del;
-  sub_1C32BC4(
+  sub_1C36FFC(
     (CGThumbnailListItem_o *)&this->fields.paramtgrdel,
     (int32_t)del,
     (int32_t)del,
     *(const MethodInfo **)&param);
   this->fields.type = 3;
   this->fields.originalTitle = txt;
-  sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.originalTitle, (int32_t)txt, v10, v11);
+  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.originalTitle, (int32_t)txt, v10, v11);
   this->fields.title = txt;
-  sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.title, (int32_t)txt, v12, v13);
+  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.title, (int32_t)txt, v12, v13);
   this->fields.flg = flg;
   this->fields.param = param;
   DebugMenuComponent__updateTitleLabel(this, v14);
 }
 
 
-void DebugMenuComponent__setInitDlg_43589908(
+void DebugMenuComponent__setInitDlg_43691776(
         DebugMenuComponent_o *this,
         System_String_o *txt,
         DebugPanelRootComponent_paramStrDelegate_o *del,
@@ -269,20 +269,20 @@ void DebugMenuComponent__setInitDlg_43589908(
   const MethodInfo *v14; // x1
 
   this->fields.paramStrdel = del;
-  sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.paramStrdel, (int32_t)del, (int32_t)del, (const MethodInfo *)param);
+  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.paramStrdel, (int32_t)del, (int32_t)del, (const MethodInfo *)param);
   this->fields.type = 4;
   this->fields.originalTitle = txt;
-  sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.originalTitle, (int32_t)txt, v8, v9);
+  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.originalTitle, (int32_t)txt, v8, v9);
   this->fields.title = txt;
-  sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.title, (int32_t)txt, v10, v11);
+  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.title, (int32_t)txt, v10, v11);
   this->fields.strParam = param;
-  sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.strParam, (int32_t)param, v12, v13);
+  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.strParam, (int32_t)param, v12, v13);
   DebugMenuComponent__updateTitleLabel(this, v14);
 }
 
 
 // local variable allocation has failed, the output may be wrong!
-void DebugMenuComponent__setInitDlg_43590012(
+void DebugMenuComponent__setInitDlg_43691880(
         DebugMenuComponent_o *this,
         System_String_o *txt,
         DebugPanelRootComponent_paramDelegate_o *del,
@@ -298,12 +298,12 @@ void DebugMenuComponent__setInitDlg_43590012(
   const MethodInfo *v16; // x1
 
   this->fields.paramdel = del;
-  sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.paramdel, (int32_t)del, (int32_t)del, *(const MethodInfo **)&param);
+  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.paramdel, (int32_t)del, (int32_t)del, *(const MethodInfo **)&param);
   this->fields.type = 5;
   this->fields.originalTitle = txt;
-  sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.originalTitle, (int32_t)txt, v12, v13);
+  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.originalTitle, (int32_t)txt, v12, v13);
   this->fields.title = txt;
-  sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.title, (int32_t)txt, v14, v15);
+  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.title, (int32_t)txt, v14, v15);
   this->fields.param = param;
   this->fields.min = min;
   this->fields.max = max;
@@ -312,7 +312,7 @@ void DebugMenuComponent__setInitDlg_43590012(
 
 
 // local variable allocation has failed, the output may be wrong!
-void DebugMenuComponent__setInitDlg_43590124(
+void DebugMenuComponent__setInitDlg_43691992(
         DebugMenuComponent_o *this,
         System_String_o *txt,
         DebugPanelRootComponent_paramDelegate_o *del,
@@ -331,14 +331,14 @@ void DebugMenuComponent__setInitDlg_43590124(
   const MethodInfo *v20; // x1
 
   this->fields.paramdel = del;
-  sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.paramdel, (int32_t)del, (int32_t)del, *(const MethodInfo **)&param);
+  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.paramdel, (int32_t)del, (int32_t)del, *(const MethodInfo **)&param);
   this->fields.type = 6;
   this->fields.paramToStringDictionary = dictionary;
-  sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.paramToStringDictionary, (int32_t)dictionary, v14, v15);
+  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.paramToStringDictionary, (int32_t)dictionary, v14, v15);
   this->fields.originalTitle = txt;
-  sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.originalTitle, (int32_t)txt, v16, v17);
+  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.originalTitle, (int32_t)txt, v16, v17);
   this->fields.title = txt;
-  sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.title, (int32_t)txt, v18, v19);
+  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.title, (int32_t)txt, v18, v19);
   this->fields.param = param;
   this->fields.min = min;
   this->fields.max = max;
@@ -357,7 +357,7 @@ void DebugMenuComponent__setStringParam(DebugMenuComponent_o *this, System_Strin
   const MethodInfo *v3; // x3
 
   this->fields.strParam = param;
-  sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.strParam, (int32_t)param, (int32_t)method, v3);
+  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.strParam, (int32_t)param, (int32_t)method, v3);
 }
 
 
@@ -374,9 +374,9 @@ void DebugMenuComponent__setTitle(DebugMenuComponent_o *this, System_String_o *t
   const MethodInfo *v7; // x3
 
   this->fields.originalTitle = txt;
-  sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.originalTitle, (int32_t)txt, (int32_t)method, v3);
+  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.originalTitle, (int32_t)txt, (int32_t)method, v3);
   this->fields.title = txt;
-  sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.title, (int32_t)txt, v6, v7);
+  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.title, (int32_t)txt, v6, v7);
 }
 
 
@@ -392,14 +392,14 @@ void DebugMenuComponent__updateTitleLabel(DebugMenuComponent_o *this, const Meth
   __int64 v10; // x0
   Il2CppObject *value; // [xsp+8h] [xbp-28h] BYREF
 
-  if ( (byte_4C38FB3 & 1) == 0 )
+  if ( (byte_4C445AC & 1) == 0 )
   {
-    sub_1C32C20(&Method_System_Collections_Generic_Dictionary_int__string__TryGetValue__);
-    sub_1C32C20(&StringLiteral_206/*" [ON] "*/);
-    sub_1C32C20(&StringLiteral_16022/*"[​"*/);
-    sub_1C32C20(&StringLiteral_205/*" [OFF] "*/);
-    sub_1C32C20(&StringLiteral_16056/*"]"*/);
-    byte_4C38FB3 = 1;
+    sub_1C37058(&Method_System_Collections_Generic_Dictionary_int__string__TryGetValue__);
+    sub_1C37058(&StringLiteral_206/*" [ON] "*/);
+    sub_1C37058(&StringLiteral_16024/*"[​"*/);
+    sub_1C37058(&StringLiteral_205/*" [OFF] "*/);
+    sub_1C37058(&StringLiteral_16058/*"]"*/);
+    byte_4C445AC = 1;
   }
   value = 0;
   title = this->fields.title;
@@ -415,7 +415,7 @@ void DebugMenuComponent__updateTitleLabel(DebugMenuComponent_o *this, const Meth
         v4 = &StringLiteral_206/*" [ON] "*/;
       else
         v4 = &StringLiteral_205/*" [OFF] "*/;
-      v7 = System_String__Concat_63518544(this->fields.title, (System_String_o *)*v4, 0);
+      v7 = System_String__Concat_63561656(this->fields.title, (System_String_o *)*v4, 0);
       goto LABEL_14;
     case 5:
       v5 = (Il2CppObject *)System_Int32__ToString((int)this + 64, 0);
@@ -428,7 +428,7 @@ void DebugMenuComponent__updateTitleLabel(DebugMenuComponent_o *this, const Meth
              paramToStringDictionary,
              this->fields.param,
              &value,
-             (const MethodInfo_33F14A8 *)Method_System_Collections_Generic_Dictionary_int__string__TryGetValue__) )
+             (const MethodInfo_33FBD10 *)Method_System_Collections_Generic_Dictionary_int__string__TryGetValue__) )
       {
         v5 = value;
       }
@@ -438,11 +438,11 @@ void DebugMenuComponent__updateTitleLabel(DebugMenuComponent_o *this, const Meth
         value = v5;
       }
 LABEL_11:
-      v7 = System_String__Concat_63558796(
+      v7 = System_String__Concat_63601908(
              title,
-             (System_String_o *)StringLiteral_16022/*"[​"*/,
+             (System_String_o *)StringLiteral_16024/*"[​"*/,
              (System_String_o *)v5,
-             (System_String_o *)StringLiteral_16056/*"]"*/,
+             (System_String_o *)StringLiteral_16058/*"]"*/,
              0);
 LABEL_14:
       title = v7;
@@ -453,15 +453,15 @@ LABEL_15:
             (paramToStringDictionary = (System_Collections_Generic_Dictionary_int__object__o *)this->fields.titlelabel) == 0) )
       {
 LABEL_18:
-        sub_1C32E7C(paramToStringDictionary);
+        sub_1C372B4(paramToStringDictionary);
       }
       UILabel__set_effectStyle((UILabel_o *)paramToStringDictionary, 2, 0);
       return;
     default:
-      v8 = sub_1C32C34(&System_ArgumentOutOfRangeException_TypeInfo);
-      v9 = (System_ArgumentOutOfRangeException_o *)sub_1C32E6C(v8);
+      v8 = sub_1C3706C(&System_ArgumentOutOfRangeException_TypeInfo);
+      v9 = (System_ArgumentOutOfRangeException_o *)sub_1C372A4(v8);
       System_ArgumentOutOfRangeException___ctor(v9, 0);
-      v10 = sub_1C32C34(&Method_DebugMenuComponent_updateTitleLabel__);
-      sub_1C32D48(v9, v10);
+      v10 = sub_1C3706C(&Method_DebugMenuComponent_updateTitleLabel__);
+      sub_1C37180(v9, v10);
   }
 }

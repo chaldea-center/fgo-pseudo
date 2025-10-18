@@ -8,7 +8,7 @@ void WrapBattleAnimation___ctor(
 
   System_Object___ctor((Il2CppObject *)this, 0);
   this->fields.animation = normalAnim;
-  sub_1C32BC4((CGThumbnailListItem_o *)&this->fields, (int32_t)normalAnim, v5, v6);
+  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields, (int32_t)normalAnim, v5, v6);
 }
 
 
@@ -40,21 +40,21 @@ WrapBattleBaseAnimation_SimpleData_o *WrapBattleAnimation__GetPlayingSimpleAnimD
   int *v24; // x10
   __int64 v25; // x0
 
-  if ( (byte_4C3B155 & 1) == 0 )
+  if ( (byte_4C46768 & 1) == 0 )
   {
-    sub_1C32C20(&UnityEngine_AnimationState_TypeInfo);
-    sub_1C32C20(&System_IDisposable_TypeInfo);
-    sub_1C32C20(&System_Collections_IEnumerator_TypeInfo);
-    sub_1C32C20(&WrapBattleBaseAnimation_SimpleData_TypeInfo);
-    byte_4C3B155 = 1;
+    sub_1C37058(&UnityEngine_AnimationState_TypeInfo);
+    sub_1C37058(&System_IDisposable_TypeInfo);
+    sub_1C37058(&System_Collections_IEnumerator_TypeInfo);
+    sub_1C37058(&WrapBattleBaseAnimation_SimpleData_TypeInfo);
+    byte_4C46768 = 1;
   }
   animation = this->fields.animation;
   if ( !animation )
 LABEL_34:
-    sub_1C32E7C(animation);
+    sub_1C372B4(animation);
   Enumerator = UnityEngine_Animation__GetEnumerator(animation, 0);
   if ( !Enumerator )
-    sub_1C32E7C(0);
+    sub_1C372B4(0);
   while ( 1 )
   {
     klass = Enumerator->klass;
@@ -74,7 +74,7 @@ LABEL_34:
     else
     {
 LABEL_9:
-      v8 = sub_1C83438(Enumerator, System_Collections_IEnumerator_TypeInfo, 0);
+      v8 = sub_1C87870(Enumerator, System_Collections_IEnumerator_TypeInfo, 0);
     }
     if ( ((*(__int64 (__fastcall **)(System_Collections_IEnumerator_o *, _QWORD))v8)(Enumerator, *(_QWORD *)(v8 + 8)) & 1) == 0 )
       break;
@@ -95,34 +95,34 @@ LABEL_9:
     else
     {
 LABEL_16:
-      v12 = sub_1C83438(Enumerator, System_Collections_IEnumerator_TypeInfo, 1);
+      v12 = sub_1C87870(Enumerator, System_Collections_IEnumerator_TypeInfo, 1);
     }
     v13 = (UnityEngine_AnimationState_o *)(*(__int64 (__fastcall **)(System_Collections_IEnumerator_o *, _QWORD))v12)(
                                             Enumerator,
                                             *(_QWORD *)(v12 + 8));
     v14 = v13;
     if ( !v13 )
-      sub_1C32E7C(0);
+      sub_1C372B4(0);
     if ( v13->klass != UnityEngine_AnimationState_TypeInfo )
     {
-      sub_1C3313C(v13);
+      sub_1C37574(v13);
       goto LABEL_34;
     }
     if ( UnityEngine_AnimationState__get_enabled(v13, 0) )
     {
       name = UnityEngine_AnimationState__get_name(v14, 0);
       time = UnityEngine_AnimationState__get_time(v14, 0);
-      v17 = sub_1C32E6C(WrapBattleBaseAnimation_SimpleData_TypeInfo);
+      v17 = sub_1C372A4(WrapBattleBaseAnimation_SimpleData_TypeInfo);
       System_Object___ctor((Il2CppObject *)v17, 0);
       *(_QWORD *)(v17 + 16) = name;
-      sub_1C32BC4((CGThumbnailListItem_o *)(v17 + 16), (int32_t)name, v18, v19);
+      sub_1C36FFC((CGThumbnailListItem_o *)(v17 + 16), (int32_t)name, v18, v19);
       *(float *)(v17 + 24) = time;
       goto LABEL_23;
     }
   }
   v17 = 0;
 LABEL_23:
-  v20 = sub_1C32D5C(Enumerator, System_IDisposable_TypeInfo);
+  v20 = sub_1C37194(Enumerator, System_IDisposable_TypeInfo);
   if ( v20 )
   {
     v21 = *(_QWORD *)v20;
@@ -143,7 +143,7 @@ LABEL_23:
     else
     {
 LABEL_28:
-      v25 = sub_1C83438(v20, System_IDisposable_TypeInfo, 0);
+      v25 = sub_1C87870(v20, System_IDisposable_TypeInfo, 0);
     }
     (*(void (__fastcall **)(__int64, _QWORD))v25)(v22, *(_QWORD *)(v25 + 8));
   }
@@ -166,7 +166,7 @@ void WrapBattleAnimation__PlayAnimation(
         (animation = this->fields.animation) == 0)
     || (UnityEngine_Animation__Sample(animation, 0), (animation = this->fields.animation) == 0) )
   {
-    sub_1C32E7C(animation);
+    sub_1C372B4(animation);
   }
-  UnityEngine_Animation__Play_70968924(animation, animName, 0);
+  UnityEngine_Animation__Play_71012036(animation, animName, 0);
 }

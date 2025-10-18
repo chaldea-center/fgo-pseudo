@@ -1,27 +1,27 @@
 void RestrictionBaseEntity___ctor(RestrictionBaseEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_4C381A5 & 1) == 0 )
+  if ( (byte_4C4379E & 1) == 0 )
   {
-    sub_1C32C20(&Method_DataEntityBase_string___ctor__);
-    byte_4C381A5 = 1;
+    sub_1C37058(&Method_DataEntityBase_string___ctor__);
+    byte_4C4379E = 1;
   }
   DataEntityBase_object____ctor(
     (DataEntityBase_PKType__o *)this,
-    (const MethodInfo_33943CC *)Method_DataEntityBase_string___ctor__);
+    (const MethodInfo_339EC34 *)Method_DataEntityBase_string___ctor__);
 }
 
 
 System_String_o *RestrictionBaseEntity__CreatePK(int32_t questId, int32_t questPhase, const MethodInfo *method)
 {
-  if ( (byte_4C381A4 & 1) == 0 )
+  if ( (byte_4C4379D & 1) == 0 )
   {
-    sub_1C32C20(&Method_DataEntityBase_CreateMultiplePK_int__int___);
-    byte_4C381A4 = 1;
+    sub_1C37058(&Method_DataEntityBase_CreateMultiplePK_int__int___);
+    byte_4C4379D = 1;
   }
   return DataEntityBase__CreateMultiplePK_int__int_(
            questId,
            questPhase,
-           (const MethodInfo_30DB578 *)Method_DataEntityBase_CreateMultiplePK_int__int___);
+           (const MethodInfo_30E5DE0 *)Method_DataEntityBase_CreateMultiplePK_int__int___);
 }
 
 
@@ -54,32 +54,32 @@ bool RestrictionBaseEntity__GetOverwriteLimitCountSvtIds(
   int32_t v21; // w2
   const MethodInfo *v22; // x3
 
-  if ( (byte_4C381A3 & 1) == 0 )
+  if ( (byte_4C4379C & 1) == 0 )
   {
-    sub_1C32C20(&StringLiteral_22559/*"overwriteLimitCountSvtIds"*/);
-    sub_1C32C20(&StringLiteral_22560/*"overwriteLimitCounts"*/);
-    sub_1C32C20(&StringLiteral_22557/*"overwriteLimitCountIconIds"*/);
-    byte_4C381A3 = 1;
+    sub_1C37058(&StringLiteral_22562/*"overwriteLimitCountSvtIds"*/);
+    sub_1C37058(&StringLiteral_22563/*"overwriteLimitCounts"*/);
+    sub_1C37058(&StringLiteral_22560/*"overwriteLimitCountIconIds"*/);
+    byte_4C4379C = 1;
   }
-  IntArray = EntityScriptUtil__GetIntArray(this->fields.script, (System_String_o *)StringLiteral_22559/*"overwriteLimitCountSvtIds"*/, 0, 0);
+  IntArray = EntityScriptUtil__GetIntArray(this->fields.script, (System_String_o *)StringLiteral_22562/*"overwriteLimitCountSvtIds"*/, 0, 0);
   *overwriteLimitCountSvtIds = IntArray;
-  sub_1C32BC4((CGThumbnailListItem_o *)overwriteLimitCountSvtIds, (int32_t)IntArray, v10, v11);
+  sub_1C36FFC((CGThumbnailListItem_o *)overwriteLimitCountSvtIds, (int32_t)IntArray, v10, v11);
   if ( *overwriteLimitCountSvtIds )
   {
-    v14 = EntityScriptUtil__GetIntArray(this->fields.script, (System_String_o *)StringLiteral_22560/*"overwriteLimitCounts"*/, 0, 0);
+    v14 = EntityScriptUtil__GetIntArray(this->fields.script, (System_String_o *)StringLiteral_22563/*"overwriteLimitCounts"*/, 0, 0);
     *overwriteLimitCounts = v14;
-    sub_1C32BC4((CGThumbnailListItem_o *)overwriteLimitCounts, (int32_t)v14, v15, v16);
-    v17 = EntityScriptUtil__GetIntArray(this->fields.script, (System_String_o *)StringLiteral_22557/*"overwriteLimitCountIconIds"*/, 0, 0);
+    sub_1C36FFC((CGThumbnailListItem_o *)overwriteLimitCounts, (int32_t)v14, v15, v16);
+    v17 = EntityScriptUtil__GetIntArray(this->fields.script, (System_String_o *)StringLiteral_22560/*"overwriteLimitCountIconIds"*/, 0, 0);
     *overwriteLimitCountIconIds = v17;
-    sub_1C32BC4((CGThumbnailListItem_o *)overwriteLimitCountIconIds, (int32_t)v17, v18, v19);
+    sub_1C36FFC((CGThumbnailListItem_o *)overwriteLimitCountIconIds, (int32_t)v17, v18, v19);
     return *overwriteLimitCounts != 0;
   }
   else
   {
     *overwriteLimitCounts = 0;
-    sub_1C32BC4((CGThumbnailListItem_o *)overwriteLimitCounts, 0, v12, v13);
+    sub_1C36FFC((CGThumbnailListItem_o *)overwriteLimitCounts, 0, v12, v13);
     *overwriteLimitCountIconIds = 0;
-    sub_1C32BC4((CGThumbnailListItem_o *)overwriteLimitCountIconIds, 0, v21, v22);
+    sub_1C36FFC((CGThumbnailListItem_o *)overwriteLimitCountIconIds, 0, v21, v22);
     return 0;
   }
 }
@@ -87,12 +87,12 @@ bool RestrictionBaseEntity__GetOverwriteLimitCountSvtIds(
 
 int32_t RestrictionBaseEntity__GetUserEventDeckNo(RestrictionBaseEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_4C381A2 & 1) == 0 )
+  if ( (byte_4C4379B & 1) == 0 )
   {
-    sub_1C32C20(&StringLiteral_24475/*"useEventDeckNo"*/);
-    byte_4C381A2 = 1;
+    sub_1C37058(&StringLiteral_24479/*"useEventDeckNo"*/);
+    byte_4C4379B = 1;
   }
-  return EntityScriptUtil__GetIntValue(this->fields.script, (System_String_o *)StringLiteral_24475/*"useEventDeckNo"*/, 1, 0);
+  return EntityScriptUtil__GetIntValue(this->fields.script, (System_String_o *)StringLiteral_24479/*"useEventDeckNo"*/, 1, 0);
 }
 
 

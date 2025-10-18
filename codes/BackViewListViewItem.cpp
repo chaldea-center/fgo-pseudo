@@ -7,9 +7,9 @@ void BackViewListViewItem___ctor(
   int32_t v6; // w2
   const MethodInfo *v7; // x3
 
-  ListViewItem___ctor_43702564((ListViewItem_o *)this, index, 0);
+  ListViewItem___ctor_43804668((ListViewItem_o *)this, index, 0);
   this->fields.path = path;
-  sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.path, (int32_t)path, v6, v7);
+  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.path, (int32_t)path, v6, v7);
 }
 
 
@@ -25,21 +25,21 @@ bool BackViewListViewItem__SetSortValue(BackViewListViewItem_o *this, ListViewSo
   System_String_o *v5; // x0
   int32_t result; // [xsp+Ch] [xbp-14h] BYREF
 
-  if ( (byte_4C34E2E & 1) == 0 )
+  if ( (byte_4C40418 & 1) == 0 )
   {
-    sub_1C32C20(&StringLiteral_16995/*"back"*/);
-    sub_1C32C20(&StringLiteral_1/*""*/);
-    byte_4C34E2E = 1;
+    sub_1C37058(&StringLiteral_16997/*"back"*/);
+    sub_1C37058(&StringLiteral_1/*""*/);
+    byte_4C40418 = 1;
   }
   result = 0;
   *(_WORD *)&this->fields.isTermination = 0;
   this->fields.sortValue1 = -1;
   TitleText = BackViewListViewItem__get_TitleText(this, (const MethodInfo *)sort);
   if ( !TitleText )
-    sub_1C32E7C(0);
-  v5 = System_String__Replace_63565092(
+    sub_1C372B4(0);
+  v5 = System_String__Replace_63608204(
          TitleText,
-         (System_String_o *)StringLiteral_16995/*"back"*/,
+         (System_String_o *)StringLiteral_16997/*"back"*/,
          (System_String_o *)StringLiteral_1/*""*/,
          0);
   if ( System_Int32__TryParse(v5, &result, 0) )
@@ -67,7 +67,7 @@ System_String_o *BackViewListViewItem__get_TitleText(BackViewListViewItem_o *thi
     if ( this->fields.path )
       return System_String__Substring(this->fields.path, (int)path + 1, 0);
 LABEL_6:
-    sub_1C32E7C(path);
+    sub_1C372B4(path);
   }
   return this->fields.path;
 }

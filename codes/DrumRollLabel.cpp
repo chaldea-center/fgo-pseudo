@@ -19,7 +19,7 @@ void DrumRollLabel__CancelFinishCallback(
          0) )
   {
     this->fields.callComplete = 0;
-    sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.callComplete, 0, (int32_t)method, v3);
+    sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.callComplete, 0, (int32_t)method, v3);
   }
 }
 
@@ -49,26 +49,26 @@ void DrumRollLabel__ChangeParamNonAnimation(
   System_String_o *v23; // x1
   int32_t v24; // [xsp+Ch] [xbp-34h] BYREF
 
-  if ( (byte_4C390C4 & 1) == 0 )
+  if ( (byte_4C446BE & 1) == 0 )
   {
-    sub_1C32C20(&int_TypeInfo);
-    sub_1C32C20(&StringLiteral_25041/*"{0,3}"*/);
-    sub_1C32C20(&iTween_TypeInfo);
-    byte_4C390C4 = 1;
+    sub_1C37058(&int_TypeInfo);
+    sub_1C37058(&StringLiteral_25046/*"{0,3}"*/);
+    sub_1C37058(&iTween_TypeInfo);
+    byte_4C446BE = 1;
   }
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
   if ( !iTween_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(iTween_TypeInfo);
-  iTween__Stop_63266448(gameObject, 0);
+  iTween__Stop_63309560(gameObject, 0);
   this->fields.nowvalue = nextParam;
   this->fields.nextvalue = nextParam;
   v24 = nextParam;
   v14 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v24, v8, v9, v10, v11, v12, v13);
-  v15 = (DigitRollLabel_o *)System_String__Format((System_String_o *)StringLiteral_25041/*"{0,3}"*/, v14, 0);
+  v15 = (DigitRollLabel_o *)System_String__Format((System_String_o *)StringLiteral_25046/*"{0,3}"*/, v14, 0);
   diglabel = this->fields.diglabel;
   if ( !diglabel )
 LABEL_16:
-    sub_1C32E7C(v15);
+    sub_1C372B4(v15);
   v17 = (System_String_o *)v15;
   v18 = 0;
   v19 = -1;
@@ -79,12 +79,12 @@ LABEL_16:
       break;
     if ( v17 )
     {
-      v15 = (DigitRollLabel_o *)System_String__Substring_63564468(v17, v19 + max_length, 1, 0);
+      v15 = (DigitRollLabel_o *)System_String__Substring_63607580(v17, v19 + max_length, 1, 0);
       v22 = this->fields.diglabel;
       if ( v22 )
       {
         if ( (unsigned int)v18 >= LODWORD(v22->max_length) )
-          sub_1C32E84(v15);
+          sub_1C372BC(v15);
         v23 = (System_String_o *)v15;
         v15 = v22->m_Items[v18];
         if ( v15 )
@@ -131,7 +131,7 @@ void DrumRollLabel__SetLabelColor(DrumRollLabel_o *this, UnityEngine_Color_o col
     while ( 1 )
     {
       if ( v9 >= max_length )
-        sub_1C32E84(this);
+        sub_1C372BC(this);
       this = (DrumRollLabel_o *)diglabel->m_Items[v9];
       if ( !this )
         break;
@@ -145,7 +145,7 @@ void DrumRollLabel__SetLabelColor(DrumRollLabel_o *this, UnityEngine_Color_o col
         return;
     }
 LABEL_9:
-    sub_1C32E7C(this);
+    sub_1C372B4(this);
   }
 }
 
@@ -165,10 +165,10 @@ void DrumRollLabel__add_callComplete(
   DrumRollLabel_CompleteEventHandler_o *v12; // x1
   const MethodInfo *v13; // x2
 
-  if ( (byte_4C390BF & 1) == 0 )
+  if ( (byte_4C446B9 & 1) == 0 )
   {
-    sub_1C32C20(&DrumRollLabel_CompleteEventHandler_TypeInfo);
-    byte_4C390BF = 1;
+    sub_1C37058(&DrumRollLabel_CompleteEventHandler_TypeInfo);
+    byte_4C446B9 = 1;
   }
   callComplete = this->fields.callComplete;
   p_callComplete = &this->fields.callComplete;
@@ -181,13 +181,13 @@ void DrumRollLabel__add_callComplete(
       if ( (DrumRollLabel_CompleteEventHandler_c *)v8->klass != DrumRollLabel_CompleteEventHandler_TypeInfo )
         break;
     }
-    v9 = sub_1C6CE78(p_callComplete, v8, v6);
+    v9 = sub_1C712B0(p_callComplete, v8, v6);
     v10 = v6 == (System_Delegate_o *)v9;
     v6 = (System_Delegate_o *)v9;
     if ( v10 )
       return;
   }
-  sub_1C3313C(v8);
+  sub_1C37574(v8);
   DrumRollLabel__remove_callComplete(v11, v12, v13);
 }
 
@@ -278,39 +278,39 @@ void DrumRollLabel__changeParam(
   int32_t v85; // [xsp+8h] [xbp-58h] BYREF
   int32_t nowvalue; // [xsp+Ch] [xbp-54h] BYREF
 
-  if ( (byte_4C390C1 & 1) == 0 )
+  if ( (byte_4C446BB & 1) == 0 )
   {
-    sub_1C32C20(&int_TypeInfo);
-    sub_1C32C20(&object___TypeInfo);
-    sub_1C32C20(&float_TypeInfo);
-    sub_1C32C20(&StringLiteral_19689/*"from"*/);
-    sub_1C32C20(&StringLiteral_24067/*"time"*/);
-    sub_1C32C20(&StringLiteral_22435/*"onupdate"*/);
-    sub_1C32C20(&StringLiteral_18551/*"delay"*/);
-    sub_1C32C20(&StringLiteral_24106/*"to"*/);
-    sub_1C32C20(&StringLiteral_18186/*"completeValues"*/);
-    sub_1C32C20(&StringLiteral_24440/*"updateValues"*/);
-    sub_1C32C20(&StringLiteral_22427/*"oncomplete"*/);
-    sub_1C32C20(&iTween_TypeInfo);
-    byte_4C390C1 = 1;
+    sub_1C37058(&int_TypeInfo);
+    sub_1C37058(&object___TypeInfo);
+    sub_1C37058(&float_TypeInfo);
+    sub_1C37058(&StringLiteral_19692/*"from"*/);
+    sub_1C37058(&StringLiteral_24071/*"time"*/);
+    sub_1C37058(&StringLiteral_22438/*"onupdate"*/);
+    sub_1C37058(&StringLiteral_18554/*"delay"*/);
+    sub_1C37058(&StringLiteral_24110/*"to"*/);
+    sub_1C37058(&StringLiteral_18188/*"completeValues"*/);
+    sub_1C37058(&StringLiteral_24444/*"updateValues"*/);
+    sub_1C37058(&StringLiteral_22430/*"oncomplete"*/);
+    sub_1C37058(&iTween_TypeInfo);
+    byte_4C446BB = 1;
   }
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
   if ( !iTween_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(iTween_TypeInfo);
-  iTween__Stop_63266448(gameObject, 0);
+  iTween__Stop_63309560(gameObject, 0);
   v11 = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
-  v12 = (DigitRollLabel_o *)sub_1C32CC8(object___TypeInfo, 12);
+  v12 = (DigitRollLabel_o *)sub_1C37100(object___TypeInfo, 12);
   if ( !v12 )
 LABEL_64:
-    sub_1C32E7C(v12);
+    sub_1C372B4(v12);
   v15 = (System_Object_array *)v12;
-  v12 = (DigitRollLabel_o *)StringLiteral_19689/*"from"*/;
-  if ( StringLiteral_19689/*"from"*/ )
+  v12 = (DigitRollLabel_o *)StringLiteral_19692/*"from"*/;
+  if ( StringLiteral_19692/*"from"*/ )
   {
-    v12 = (DigitRollLabel_o *)sub_1C32D5C(StringLiteral_19689/*"from"*/, v15->obj.klass->_1.element_class);
+    v12 = (DigitRollLabel_o *)sub_1C37194(StringLiteral_19692/*"from"*/, v15->obj.klass->_1.element_class);
     if ( !v12 )
       goto LABEL_67;
-    v16 = StringLiteral_19689/*"from"*/;
+    v16 = StringLiteral_19692/*"from"*/;
   }
   else
   {
@@ -319,27 +319,27 @@ LABEL_64:
   if ( !LODWORD(v15->max_length) )
     goto LABEL_66;
   v15->m_Items[0] = (Il2CppObject *)v16;
-  sub_1C32BC4((CGThumbnailListItem_o *)v15->m_Items, v16, v13, v14);
+  sub_1C36FFC((CGThumbnailListItem_o *)v15->m_Items, v16, v13, v14);
   nowvalue = this->fields.nowvalue;
   v12 = (DigitRollLabel_o *)j_il2cpp_value_box_0(int_TypeInfo, &nowvalue, v17, v18, v19, v20, v21, v22);
   v25 = (Il2CppObject *)v12;
   if ( v12 )
   {
-    v12 = (DigitRollLabel_o *)sub_1C32D5C(v12, v15->obj.klass->_1.element_class);
+    v12 = (DigitRollLabel_o *)sub_1C37194(v12, v15->obj.klass->_1.element_class);
     if ( !v12 )
       goto LABEL_67;
   }
   if ( LODWORD(v15->max_length) <= 1 )
     goto LABEL_66;
   v15->m_Items[1] = v25;
-  sub_1C32BC4((CGThumbnailListItem_o *)&v15->m_Items[1], (int32_t)v25, v23, v24);
-  v12 = (DigitRollLabel_o *)StringLiteral_24106/*"to"*/;
-  if ( StringLiteral_24106/*"to"*/ )
+  sub_1C36FFC((CGThumbnailListItem_o *)&v15->m_Items[1], (int32_t)v25, v23, v24);
+  v12 = (DigitRollLabel_o *)StringLiteral_24110/*"to"*/;
+  if ( StringLiteral_24110/*"to"*/ )
   {
-    v12 = (DigitRollLabel_o *)sub_1C32D5C(StringLiteral_24106/*"to"*/, v15->obj.klass->_1.element_class);
+    v12 = (DigitRollLabel_o *)sub_1C37194(StringLiteral_24110/*"to"*/, v15->obj.klass->_1.element_class);
     if ( !v12 )
       goto LABEL_67;
-    v28 = StringLiteral_24106/*"to"*/;
+    v28 = StringLiteral_24110/*"to"*/;
   }
   else
   {
@@ -348,27 +348,27 @@ LABEL_64:
   if ( LODWORD(v15->max_length) <= 2 )
     goto LABEL_66;
   v15->m_Items[2] = (Il2CppObject *)v28;
-  sub_1C32BC4((CGThumbnailListItem_o *)&v15->m_Items[2], v28, v26, v27);
+  sub_1C36FFC((CGThumbnailListItem_o *)&v15->m_Items[2], v28, v26, v27);
   v85 = nextparam;
   v12 = (DigitRollLabel_o *)j_il2cpp_value_box_0(int_TypeInfo, &v85, v29, v30, v31, v32, v33, v34);
   v37 = (Il2CppObject *)v12;
   if ( v12 )
   {
-    v12 = (DigitRollLabel_o *)sub_1C32D5C(v12, v15->obj.klass->_1.element_class);
+    v12 = (DigitRollLabel_o *)sub_1C37194(v12, v15->obj.klass->_1.element_class);
     if ( !v12 )
       goto LABEL_67;
   }
   if ( LODWORD(v15->max_length) <= 3 )
     goto LABEL_66;
   v15->m_Items[3] = v37;
-  sub_1C32BC4((CGThumbnailListItem_o *)&v15->m_Items[3], (int32_t)v37, v35, v36);
-  v12 = (DigitRollLabel_o *)StringLiteral_22435/*"onupdate"*/;
-  if ( StringLiteral_22435/*"onupdate"*/ )
+  sub_1C36FFC((CGThumbnailListItem_o *)&v15->m_Items[3], (int32_t)v37, v35, v36);
+  v12 = (DigitRollLabel_o *)StringLiteral_22438/*"onupdate"*/;
+  if ( StringLiteral_22438/*"onupdate"*/ )
   {
-    v12 = (DigitRollLabel_o *)sub_1C32D5C(StringLiteral_22435/*"onupdate"*/, v15->obj.klass->_1.element_class);
+    v12 = (DigitRollLabel_o *)sub_1C37194(StringLiteral_22438/*"onupdate"*/, v15->obj.klass->_1.element_class);
     if ( !v12 )
       goto LABEL_67;
-    v40 = StringLiteral_22435/*"onupdate"*/;
+    v40 = StringLiteral_22438/*"onupdate"*/;
   }
   else
   {
@@ -377,14 +377,14 @@ LABEL_64:
   if ( LODWORD(v15->max_length) <= 4 )
     goto LABEL_66;
   v15->m_Items[4] = (Il2CppObject *)v40;
-  sub_1C32BC4((CGThumbnailListItem_o *)&v15->m_Items[4], v40, v38, v39);
-  v12 = (DigitRollLabel_o *)StringLiteral_24440/*"updateValues"*/;
-  if ( StringLiteral_24440/*"updateValues"*/ )
+  sub_1C36FFC((CGThumbnailListItem_o *)&v15->m_Items[4], v40, v38, v39);
+  v12 = (DigitRollLabel_o *)StringLiteral_24444/*"updateValues"*/;
+  if ( StringLiteral_24444/*"updateValues"*/ )
   {
-    v12 = (DigitRollLabel_o *)sub_1C32D5C(StringLiteral_24440/*"updateValues"*/, v15->obj.klass->_1.element_class);
+    v12 = (DigitRollLabel_o *)sub_1C37194(StringLiteral_24444/*"updateValues"*/, v15->obj.klass->_1.element_class);
     if ( !v12 )
       goto LABEL_67;
-    v43 = StringLiteral_24440/*"updateValues"*/;
+    v43 = StringLiteral_24444/*"updateValues"*/;
   }
   else
   {
@@ -393,14 +393,14 @@ LABEL_64:
   if ( LODWORD(v15->max_length) <= 5 )
     goto LABEL_66;
   v15->m_Items[5] = (Il2CppObject *)v43;
-  sub_1C32BC4((CGThumbnailListItem_o *)&v15->m_Items[5], v43, v41, v42);
-  v12 = (DigitRollLabel_o *)StringLiteral_22427/*"oncomplete"*/;
-  if ( StringLiteral_22427/*"oncomplete"*/ )
+  sub_1C36FFC((CGThumbnailListItem_o *)&v15->m_Items[5], v43, v41, v42);
+  v12 = (DigitRollLabel_o *)StringLiteral_22430/*"oncomplete"*/;
+  if ( StringLiteral_22430/*"oncomplete"*/ )
   {
-    v12 = (DigitRollLabel_o *)sub_1C32D5C(StringLiteral_22427/*"oncomplete"*/, v15->obj.klass->_1.element_class);
+    v12 = (DigitRollLabel_o *)sub_1C37194(StringLiteral_22430/*"oncomplete"*/, v15->obj.klass->_1.element_class);
     if ( !v12 )
       goto LABEL_67;
-    v46 = StringLiteral_22427/*"oncomplete"*/;
+    v46 = StringLiteral_22430/*"oncomplete"*/;
   }
   else
   {
@@ -409,14 +409,14 @@ LABEL_64:
   if ( LODWORD(v15->max_length) <= 6 )
     goto LABEL_66;
   v15->m_Items[6] = (Il2CppObject *)v46;
-  sub_1C32BC4((CGThumbnailListItem_o *)&v15->m_Items[6], v46, v44, v45);
-  v12 = (DigitRollLabel_o *)StringLiteral_18186/*"completeValues"*/;
-  if ( StringLiteral_18186/*"completeValues"*/ )
+  sub_1C36FFC((CGThumbnailListItem_o *)&v15->m_Items[6], v46, v44, v45);
+  v12 = (DigitRollLabel_o *)StringLiteral_18188/*"completeValues"*/;
+  if ( StringLiteral_18188/*"completeValues"*/ )
   {
-    v12 = (DigitRollLabel_o *)sub_1C32D5C(StringLiteral_18186/*"completeValues"*/, v15->obj.klass->_1.element_class);
+    v12 = (DigitRollLabel_o *)sub_1C37194(StringLiteral_18188/*"completeValues"*/, v15->obj.klass->_1.element_class);
     if ( !v12 )
       goto LABEL_67;
-    v49 = StringLiteral_18186/*"completeValues"*/;
+    v49 = StringLiteral_18188/*"completeValues"*/;
   }
   else
   {
@@ -425,14 +425,14 @@ LABEL_64:
   if ( LODWORD(v15->max_length) <= 7 )
     goto LABEL_66;
   v15->m_Items[7] = (Il2CppObject *)v49;
-  sub_1C32BC4((CGThumbnailListItem_o *)&v15->m_Items[7], v49, v47, v48);
-  v12 = (DigitRollLabel_o *)StringLiteral_24067/*"time"*/;
-  if ( StringLiteral_24067/*"time"*/ )
+  sub_1C36FFC((CGThumbnailListItem_o *)&v15->m_Items[7], v49, v47, v48);
+  v12 = (DigitRollLabel_o *)StringLiteral_24071/*"time"*/;
+  if ( StringLiteral_24071/*"time"*/ )
   {
-    v12 = (DigitRollLabel_o *)sub_1C32D5C(StringLiteral_24067/*"time"*/, v15->obj.klass->_1.element_class);
+    v12 = (DigitRollLabel_o *)sub_1C37194(StringLiteral_24071/*"time"*/, v15->obj.klass->_1.element_class);
     if ( !v12 )
       goto LABEL_67;
-    v52 = StringLiteral_24067/*"time"*/;
+    v52 = StringLiteral_24071/*"time"*/;
   }
   else
   {
@@ -441,27 +441,27 @@ LABEL_64:
   if ( LODWORD(v15->max_length) <= 8 )
     goto LABEL_66;
   v15->m_Items[8] = (Il2CppObject *)v52;
-  sub_1C32BC4((CGThumbnailListItem_o *)&v15->m_Items[8], v52, v50, v51);
+  sub_1C36FFC((CGThumbnailListItem_o *)&v15->m_Items[8], v52, v50, v51);
   changetime = this->fields.changetime;
   v12 = (DigitRollLabel_o *)j_il2cpp_value_box_0(float_TypeInfo, &changetime, v53, v54, v55, v56, v57, v58);
   v61 = (Il2CppObject *)v12;
   if ( v12 )
   {
-    v12 = (DigitRollLabel_o *)sub_1C32D5C(v12, v15->obj.klass->_1.element_class);
+    v12 = (DigitRollLabel_o *)sub_1C37194(v12, v15->obj.klass->_1.element_class);
     if ( !v12 )
       goto LABEL_67;
   }
   if ( LODWORD(v15->max_length) <= 9 )
     goto LABEL_66;
   v15->m_Items[9] = v61;
-  sub_1C32BC4((CGThumbnailListItem_o *)&v15->m_Items[9], (int32_t)v61, v59, v60);
-  v12 = (DigitRollLabel_o *)StringLiteral_18551/*"delay"*/;
-  if ( StringLiteral_18551/*"delay"*/ )
+  sub_1C36FFC((CGThumbnailListItem_o *)&v15->m_Items[9], (int32_t)v61, v59, v60);
+  v12 = (DigitRollLabel_o *)StringLiteral_18554/*"delay"*/;
+  if ( StringLiteral_18554/*"delay"*/ )
   {
-    v12 = (DigitRollLabel_o *)sub_1C32D5C(StringLiteral_18551/*"delay"*/, v15->obj.klass->_1.element_class);
+    v12 = (DigitRollLabel_o *)sub_1C37194(StringLiteral_18554/*"delay"*/, v15->obj.klass->_1.element_class);
     if ( !v12 )
       goto LABEL_67;
-    v64 = StringLiteral_18551/*"delay"*/;
+    v64 = StringLiteral_18554/*"delay"*/;
   }
   else
   {
@@ -470,30 +470,30 @@ LABEL_64:
   if ( LODWORD(v15->max_length) <= 0xA )
     goto LABEL_66;
   v15->m_Items[10] = (Il2CppObject *)v64;
-  sub_1C32BC4((CGThumbnailListItem_o *)&v15->m_Items[10], v64, v62, v63);
+  sub_1C36FFC((CGThumbnailListItem_o *)&v15->m_Items[10], v64, v62, v63);
   v83 = delay;
   v12 = (DigitRollLabel_o *)j_il2cpp_value_box_0(float_TypeInfo, &v83, v65, v66, v67, v68, v69, v70);
   v73 = (Il2CppObject *)v12;
   if ( v12 )
   {
-    v12 = (DigitRollLabel_o *)sub_1C32D5C(v12, v15->obj.klass->_1.element_class);
+    v12 = (DigitRollLabel_o *)sub_1C37194(v12, v15->obj.klass->_1.element_class);
     if ( !v12 )
     {
 LABEL_67:
-      v82 = sub_1C32EA0(v12);
-      sub_1C32D48(v82, 0);
+      v82 = sub_1C372D8(v12);
+      sub_1C37180(v82, 0);
     }
   }
   if ( LODWORD(v15->max_length) <= 0xB )
 LABEL_66:
-    sub_1C32E84(v12);
+    sub_1C372BC(v12);
   v15->m_Items[11] = v73;
-  sub_1C32BC4((CGThumbnailListItem_o *)&v15->m_Items[11], (int32_t)v73, v71, v72);
+  sub_1C36FFC((CGThumbnailListItem_o *)&v15->m_Items[11], (int32_t)v73, v71, v72);
   v74 = iTween__Hash(v15, 0);
   iTween__ValueTo(v11, v74, 0);
   this->fields.callComplete = callevent;
   this->fields.nextvalue = nextparam;
-  sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.callComplete, (int32_t)callevent, v75, v76);
+  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.callComplete, (int32_t)callevent, v75, v76);
   diglabel = this->fields.diglabel;
   if ( !diglabel )
     goto LABEL_64;
@@ -541,19 +541,19 @@ void DrumRollLabel__completeValues(DrumRollLabel_o *this, const MethodInfo *meth
   struct DrumRollLabel_CompleteEventHandler_o *callComplete; // x8
   int32_t nextvalue; // [xsp+Ch] [xbp-34h] BYREF
 
-  if ( (byte_4C390C3 & 1) == 0 )
+  if ( (byte_4C446BD & 1) == 0 )
   {
-    sub_1C32C20(&int_TypeInfo);
-    sub_1C32C20(&StringLiteral_25041/*"{0,3}"*/);
-    byte_4C390C3 = 1;
+    sub_1C37058(&int_TypeInfo);
+    sub_1C37058(&StringLiteral_25046/*"{0,3}"*/);
+    byte_4C446BD = 1;
   }
   nextvalue = this->fields.nextvalue;
   v9 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &nextvalue, v2, v3, v4, v5, v6, v7);
-  v10 = System_String__Format((System_String_o *)StringLiteral_25041/*"{0,3}"*/, v9, 0);
+  v10 = System_String__Format((System_String_o *)StringLiteral_25046/*"{0,3}"*/, v9, 0);
   diglabel = this->fields.diglabel;
   if ( !diglabel )
 LABEL_10:
-    sub_1C32E7C(v10);
+    sub_1C372B4(v10);
   v12 = v10;
   v13 = 0;
   v14 = -1;
@@ -563,11 +563,11 @@ LABEL_10:
     if ( (int)v13 >= max_length )
       break;
     if ( (unsigned int)v13 >= max_length )
-      sub_1C32E84(v10);
+      sub_1C372BC(v10);
     if ( v12 )
     {
       v16 = diglabel->m_Items[v13];
-      v10 = System_String__Substring_63564468(v12, v14 + max_length, 1, 0);
+      v10 = System_String__Substring_63607580(v12, v14 + max_length, 1, 0);
       if ( v16 )
       {
         DigitRollLabel__endChange(v16, v10, v17);
@@ -616,10 +616,10 @@ void DrumRollLabel__remove_callComplete(
   int32_t v12; // w1
   const MethodInfo *v13; // x2
 
-  if ( (byte_4C390C0 & 1) == 0 )
+  if ( (byte_4C446BA & 1) == 0 )
   {
-    sub_1C32C20(&DrumRollLabel_CompleteEventHandler_TypeInfo);
-    byte_4C390C0 = 1;
+    sub_1C37058(&DrumRollLabel_CompleteEventHandler_TypeInfo);
+    byte_4C446BA = 1;
   }
   callComplete = this->fields.callComplete;
   p_callComplete = &this->fields.callComplete;
@@ -632,13 +632,13 @@ void DrumRollLabel__remove_callComplete(
       if ( (DrumRollLabel_CompleteEventHandler_c *)v8->klass != DrumRollLabel_CompleteEventHandler_TypeInfo )
         break;
     }
-    v9 = sub_1C6CE78(p_callComplete, v8, v6);
+    v9 = sub_1C712B0(p_callComplete, v8, v6);
     v10 = v6 == (System_Delegate_o *)v9;
     v6 = (System_Delegate_o *)v9;
     if ( v10 )
       return;
   }
-  sub_1C3313C(v8);
+  sub_1C37574(v8);
   DrumRollLabel__setParam(v11, v12, v13);
 }
 
@@ -675,22 +675,22 @@ void DrumRollLabel__updateValues(DrumRollLabel_o *this, int32_t value, const Met
   int max_length; // [xsp+Ch] [xbp-34h] BYREF
 
   v4 = this;
-  if ( (byte_4C390C2 & 1) == 0 )
+  if ( (byte_4C446BC & 1) == 0 )
   {
-    sub_1C32C20(&int_TypeInfo);
-    sub_1C32C20(&StringLiteral_25253/*"}"*/);
-    this = (DrumRollLabel_o *)sub_1C32C20(&StringLiteral_25038/*"{0,"*/);
-    byte_4C390C2 = 1;
+    sub_1C37058(&int_TypeInfo);
+    sub_1C37058(&StringLiteral_25258/*"}"*/);
+    this = (DrumRollLabel_o *)sub_1C37058(&StringLiteral_25043/*"{0,"*/);
+    byte_4C446BC = 1;
   }
   diglabel = v4->fields.diglabel;
   if ( !diglabel )
     goto LABEL_12;
   max_length = diglabel->max_length;
   v6 = System_Int32__ToString((int32_t)&max_length, 0);
-  v7 = System_String__Concat_63556792(
-         (System_String_o *)StringLiteral_25038/*"{0,"*/,
+  v7 = System_String__Concat_63599904(
+         (System_String_o *)StringLiteral_25043/*"{0,"*/,
          v6,
-         (System_String_o *)StringLiteral_25253/*"}"*/,
+         (System_String_o *)StringLiteral_25258/*"}"*/,
          0);
   v23 = value;
   v14 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v23, v8, v9, v10, v11, v12, v13);
@@ -699,7 +699,7 @@ void DrumRollLabel__updateValues(DrumRollLabel_o *this, int32_t value, const Met
   v4->fields.nowvalue = value;
   if ( !v15 )
 LABEL_12:
-    sub_1C32E7C(this);
+    sub_1C372B4(this);
   v16 = this;
   v17 = 0;
   v18 = -1;
@@ -710,12 +710,12 @@ LABEL_12:
       break;
     if ( v16 )
     {
-      this = (DrumRollLabel_o *)System_String__Substring_63564468((System_String_o *)v16, v18 + v19, 1, 0);
+      this = (DrumRollLabel_o *)System_String__Substring_63607580((System_String_o *)v16, v18 + v19, 1, 0);
       v21 = v4->fields.diglabel;
       if ( v21 )
       {
         if ( (unsigned int)v17 >= LODWORD(v21->max_length) )
-          sub_1C32E84(this);
+          sub_1C372BC(this);
         v22 = this;
         this = (DrumRollLabel_o *)v21->m_Items[v17];
         if ( this )
@@ -749,15 +749,15 @@ void DrumRollLabel_CompleteEventHandler___ctor(
   this->fields.method = method;
   this->fields.method_ptr = v4;
   this->fields.m_target = object;
-  sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.m_target, (int32_t)object, method, a4);
+  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.m_target, (int32_t)object, method, a4);
   v8 = *(unsigned __int8 *)(method + 82);
   this->fields.method_code = (intptr_t)this;
-  if ( (sub_1C32CE0(method) & 1) == 0 )
+  if ( (sub_1C37118(method) & 1) == 0 )
   {
     if ( !object )
     {
-      v10 = sub_1C32E98(0, "Delegate to an instance method cannot have null 'this'.");
-      sub_1C32D48(v10, 0);
+      v10 = sub_1C372D0(0, "Delegate to an instance method cannot have null 'this'.");
+      sub_1C37180(v10, 0);
     }
     goto LABEL_5;
   }
@@ -769,9 +769,9 @@ LABEL_5:
     this->fields.method_code = (intptr_t)m_target;
     goto LABEL_6;
   }
-  this->fields.invoke_impl = (intptr_t)sub_1A784F4;
+  this->fields.invoke_impl = (intptr_t)sub_1A7C824;
 LABEL_6:
-  this->fields.extra_arg = (intptr_t)sub_1A784B4;
+  this->fields.extra_arg = (intptr_t)sub_1A7C7E4;
 }
 
 
@@ -784,7 +784,7 @@ System_IAsyncResult_o *DrumRollLabel_CompleteEventHandler__BeginInvoke(
   __int64 v5; // [xsp+8h] [xbp-8h] BYREF
 
   v5 = 0;
-  return (System_IAsyncResult_o *)sub_1C32BD4(this, &v5, callback, object);
+  return (System_IAsyncResult_o *)sub_1C3700C(this, &v5, callback, object);
 }
 
 
@@ -793,7 +793,7 @@ void DrumRollLabel_CompleteEventHandler__EndInvoke(
         System_IAsyncResult_o *result,
         const MethodInfo *method)
 {
-  sub_1C32BD8(result, 0, method);
+  sub_1C37010(result, 0, method);
 }
 
 

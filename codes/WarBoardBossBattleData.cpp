@@ -4,7 +4,7 @@ void WarBoardBossBattleData___ctor(WarBoardBossBattleData_o *this, const MethodI
 }
 
 
-void WarBoardBossBattleData___ctor_37825016(
+void WarBoardBossBattleData___ctor_37920764(
         WarBoardBossBattleData_o *this,
         WarBoardBossBattleData_SaveData_o *bossBattleData,
         const MethodInfo *method)
@@ -16,11 +16,11 @@ void WarBoardBossBattleData___ctor_37825016(
 
   System_Object___ctor((Il2CppObject *)this, 0);
   if ( !bossBattleData )
-    sub_1C32E7C(v5);
+    sub_1C372B4(v5);
   *(_QWORD *)&this->fields.bossIdx = *(_QWORD *)&bossBattleData->fields.bossIdx;
   script = bossBattleData->fields.script;
   this->fields.script = script;
-  sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.script, (int32_t)script, v6, v7);
+  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.script, (int32_t)script, v6, v7);
 }
 
 
@@ -35,11 +35,11 @@ void WarBoardBossBattleData_SaveData___ctor(WarBoardBossBattleData_SaveData_o *t
   v2->fields.script = 0;
   v2 = (WarBoardBossBattleData_SaveData_o *)((char *)v2 + 24);
   v2[-1].fields.script = 0;
-  sub_1C32BC4((CGThumbnailListItem_o *)v2, 0, v3, v4);
+  sub_1C36FFC((CGThumbnailListItem_o *)v2, 0, v3, v4);
 }
 
 
-void WarBoardBossBattleData_SaveData___ctor_37825120(
+void WarBoardBossBattleData_SaveData___ctor_37920868(
         WarBoardBossBattleData_SaveData_o *this,
         WarBoardBossBattleData_o *bossBattleData,
         const MethodInfo *method)
@@ -51,9 +51,9 @@ void WarBoardBossBattleData_SaveData___ctor_37825120(
 
   System_Object___ctor((Il2CppObject *)this, 0);
   if ( !bossBattleData )
-    sub_1C32E7C(v5);
+    sub_1C372B4(v5);
   *(_QWORD *)&this->fields.bossIdx = *(_QWORD *)&bossBattleData->fields.bossIdx;
   script = bossBattleData->fields.script;
   this->fields.script = script;
-  sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.script, (int32_t)script, v6, v7);
+  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.script, (int32_t)script, v6, v7);
 }

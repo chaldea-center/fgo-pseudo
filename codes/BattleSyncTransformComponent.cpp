@@ -4,15 +4,15 @@ void BattleSyncTransformComponent___ctor(BattleSyncTransformComponent_o *this, c
   int32_t v4; // w2
   const MethodInfo *v5; // x3
 
-  if ( (byte_4C3B0F6 & 1) == 0 )
+  if ( (byte_4C46709 & 1) == 0 )
   {
-    sub_1C32C20(&BattleSyncTransformComponent_SyncData_TypeInfo);
-    byte_4C3B0F6 = 1;
+    sub_1C37058(&BattleSyncTransformComponent_SyncData_TypeInfo);
+    byte_4C46709 = 1;
   }
-  v3 = (Il2CppObject *)sub_1C32E6C(BattleSyncTransformComponent_SyncData_TypeInfo);
+  v3 = (Il2CppObject *)sub_1C372A4(BattleSyncTransformComponent_SyncData_TypeInfo);
   System_Object___ctor(v3, 0);
   this->fields.syncData = (struct BattleSyncTransformComponent_SyncData_o *)v3;
-  sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.syncData, (int32_t)v3, v4, v5);
+  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.syncData, (int32_t)v3, v4, v5);
   UnityEngine_MonoBehaviour___ctor((UnityEngine_MonoBehaviour_o *)this, 0);
 }
 
@@ -36,10 +36,10 @@ void BattleSyncTransformComponent__InitSyncPos(
   z = posDiff.fields.z;
   y = posDiff.fields.y;
   x = posDiff.fields.x;
-  sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.targetObj, 0, v3, v4);
+  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.targetObj, 0, v3, v4);
   v10 = (float *)*(p_targetObj - 1);
   if ( !v10 )
-    sub_1C32E7C(v9);
+    sub_1C372B4(v9);
   v10[5] = x;
   v10[6] = y;
   v10[7] = z;
@@ -67,17 +67,17 @@ BattleSyncTransformComponent_o *BattleSyncTransformComponent__SetTarget(
   struct BattleSyncTransformComponent_SyncData_o *syncData; // x1
 
   this->fields.targetObj = target;
-  sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.targetObj, (int32_t)target, (int32_t)syncSetting, method);
+  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.targetObj, (int32_t)target, (int32_t)syncSetting, method);
   if ( !syncSetting )
-    sub_1C32E7C(v6);
+    sub_1C372B4(v6);
   syncData = syncSetting->fields.syncData;
   this->fields.syncData = syncData;
-  sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.syncData, (int32_t)syncData, v7, v8);
+  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.syncData, (int32_t)syncData, v7, v8);
   return this;
 }
 
 
-BattleSyncTransformComponent_o *BattleSyncTransformComponent__SetTarget_47470680(
+BattleSyncTransformComponent_o *BattleSyncTransformComponent__SetTarget_47591584(
         BattleSyncTransformComponent_o *this,
         UnityEngine_Transform_o *target,
         BattleSyncTransformComponent_SyncData_o *syncSettingData,
@@ -87,9 +87,9 @@ BattleSyncTransformComponent_o *BattleSyncTransformComponent__SetTarget_47470680
   const MethodInfo *v7; // x3
 
   this->fields.targetObj = target;
-  sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.targetObj, (int32_t)target, (int32_t)syncSettingData, method);
+  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.targetObj, (int32_t)target, (int32_t)syncSettingData, method);
   this->fields.syncData = syncSettingData;
-  sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.syncData, (int32_t)syncSettingData, v6, v7);
+  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.syncData, (int32_t)syncSettingData, v6, v7);
   return this;
 }
 
@@ -112,10 +112,10 @@ void BattleSyncTransformComponent__SyncTarget(BattleSyncTransformComponent_o *th
   UnityEngine_Quaternion_o rotation; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
   UnityEngine_Quaternion_o FixRotation; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 
-  if ( (byte_4C3B0F5 & 1) == 0 )
+  if ( (byte_4C46708 & 1) == 0 )
   {
-    sub_1C32C20(&UnityEngine_Object_TypeInfo);
-    byte_4C3B0F5 = 1;
+    sub_1C37058(&UnityEngine_Object_TypeInfo);
+    byte_4C46708 = 1;
   }
   targetObj = (UnityEngine_Object_o *)this->fields.targetObj;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -189,7 +189,7 @@ LABEL_19:
         }
       }
     }
-    sub_1C32E7C(transform);
+    sub_1C372B4(transform);
   }
 }
 
@@ -202,7 +202,7 @@ void BattleSyncTransformComponent__UpdateTarget(
   const MethodInfo *v3; // x3
 
   this->fields.targetObj = target;
-  sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.targetObj, (int32_t)target, (int32_t)method, v3);
+  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.targetObj, (int32_t)target, (int32_t)method, v3);
 }
 
 
@@ -212,7 +212,7 @@ bool BattleSyncTransformComponent__get_IsNotExecSync(BattleSyncTransformComponen
 
   syncData = this->fields.syncData;
   if ( !syncData )
-    sub_1C32E7C(this);
+    sub_1C372B4(this);
   return syncData->fields.syncType == 0;
 }
 

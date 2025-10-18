@@ -1,6 +1,6 @@
 void FriendshipExceedInfoComponent___ctor(FriendshipExceedInfoComponent_o *this, const MethodInfo *method)
 {
-  this->fields.DISABLE_COLOR = (struct UnityEngine_Color_o)xmmword_C0CA60;
+  this->fields.DISABLE_COLOR = (struct UnityEngine_Color_o)xmmword_C0E9E0;
   UnityEngine_MonoBehaviour___ctor((UnityEngine_MonoBehaviour_o *)this, 0);
 }
 
@@ -10,22 +10,22 @@ void FriendshipExceedInfoComponent__InitLabel(FriendshipExceedInfoComponent_o *t
   UILabel_o *disableLabel; // x20
   System_String_o *v4; // x0
 
-  if ( (byte_4C3B904 & 1) == 0 )
+  if ( (byte_4C46F17 & 1) == 0 )
   {
-    sub_1C32C20(&LocalizationManager_TypeInfo);
-    sub_1C32C20(&StringLiteral_8798/*"MSG_FRIENDSHIP_EXCEED_DISABLE"*/);
-    byte_4C3B904 = 1;
+    sub_1C37058(&LocalizationManager_TypeInfo);
+    sub_1C37058(&StringLiteral_8799/*"MSG_FRIENDSHIP_EXCEED_DISABLE"*/);
+    byte_4C46F17 = 1;
   }
   if ( !this->fields.isInitialized )
   {
     disableLabel = this->fields.disableLabel;
     if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-    v4 = LocalizationManager__Get((System_String_o *)StringLiteral_8798/*"MSG_FRIENDSHIP_EXCEED_DISABLE"*/, 0);
+    v4 = LocalizationManager__Get((System_String_o *)StringLiteral_8799/*"MSG_FRIENDSHIP_EXCEED_DISABLE"*/, 0);
     if ( !disableLabel
       || (UILabel__set_text(disableLabel, v4, 0), (v4 = (System_String_o *)this->fields.disableLabel) == 0) )
     {
-      sub_1C32E7C(v4);
+      sub_1C372B4(v4);
     }
     UIWidget__set_color((UIWidget_o *)v4, this->fields.DISABLE_COLOR, 0);
     this->fields.isInitialized = 1;
@@ -65,14 +65,14 @@ void FriendshipExceedInfoComponent__SetInfo(
   CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o v33; // 0:x0.16
   CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o v34; // 0:x0.16
 
-  if ( (byte_4C3B905 & 1) == 0 )
+  if ( (byte_4C46F18 & 1) == 0 )
   {
-    sub_1C32C20(&Method_DataManager_GetMasterData_FriendshipMaster___);
-    sub_1C32C20(&Method_DataManager_GetMasterData_ServantMaster___);
-    sub_1C32C20(&Method_DataMasterBase_ServantMaster__ServantEntity__int__GetEntity__);
-    sub_1C32C20(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
-    sub_1C32C20(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-    byte_4C3B905 = 1;
+    sub_1C37058(&Method_DataManager_GetMasterData_FriendshipMaster___);
+    sub_1C37058(&Method_DataManager_GetMasterData_ServantMaster___);
+    sub_1C37058(&Method_DataMasterBase_ServantMaster__ServantEntity__int__GetEntity__);
+    sub_1C37058(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
+    sub_1C37058(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    byte_4C46F18 = 1;
   }
   *(_QWORD *)max = 0;
   fraction = 0;
@@ -109,12 +109,12 @@ void FriendshipExceedInfoComponent__SetInfo(
     }
     goto LABEL_36;
   }
-  disableLabel = (UnityEngine_Component_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39E2904 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  disableLabel = (UnityEngine_Component_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39ED16C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !disableLabel )
     goto LABEL_36;
   MasterData_object = DataManager__GetMasterData_object_(
                         (DataManager_o *)disableLabel,
-                        (const MethodInfo_30DD3F0 *)Method_DataManager_GetMasterData_ServantMaster___);
+                        (const MethodInfo_30E7C58 *)Method_DataManager_GetMasterData_ServantMaster___);
   v16 = *(_QWORD *)&userServantEntity->fields.svtId.fields.currentCryptoKey;
   v15 = *(_QWORD *)&userServantEntity->fields.svtId.fields.fakeValue;
   v17 = (DataMasterBase_TMaster__TEntity__PKType__o *)MasterData_object;
@@ -122,19 +122,19 @@ void FriendshipExceedInfoComponent__SetInfo(
     j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
   *(_QWORD *)&v33.fields.currentCryptoKey = v16;
   *(_QWORD *)&v33.fields.fakeValue = v15;
-  disableLabel = (UnityEngine_Component_o *)CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_48887784(v33, 0);
+  disableLabel = (UnityEngine_Component_o *)CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_48930896(v33, 0);
   if ( !v17 )
     goto LABEL_36;
   Entity = DataMasterBase_object__object__int___GetEntity(
              v17,
              (int32_t)disableLabel,
-             (const MethodInfo_3396838 *)Method_DataMasterBase_ServantMaster__ServantEntity__int__GetEntity__);
-  disableLabel = (UnityEngine_Component_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39E2904 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+             (const MethodInfo_33A10A0 *)Method_DataMasterBase_ServantMaster__ServantEntity__int__GetEntity__);
+  disableLabel = (UnityEngine_Component_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39ED16C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !disableLabel )
     goto LABEL_36;
   disableLabel = (UnityEngine_Component_o *)DataManager__GetMasterData_object_(
                                               (DataManager_o *)disableLabel,
-                                              (const MethodInfo_30DD3F0 *)Method_DataManager_GetMasterData_FriendshipMaster___);
+                                              (const MethodInfo_30E7C58 *)Method_DataManager_GetMasterData_FriendshipMaster___);
   if ( !Entity )
     goto LABEL_36;
   v19 = (FriendshipMaster_o *)disableLabel;
@@ -147,7 +147,7 @@ void FriendshipExceedInfoComponent__SetInfo(
     j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
   *(_QWORD *)&v34.fields.currentCryptoKey = v20;
   *(_QWORD *)&v34.fields.fakeValue = v21;
-  disableLabel = (UnityEngine_Component_o *)CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_48887784(v34, 0);
+  disableLabel = (UnityEngine_Component_o *)CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_48930896(v34, 0);
   if ( !v19 )
     goto LABEL_36;
   FriendshipMaster__GetFriendshipRank(
@@ -205,7 +205,7 @@ void FriendshipExceedInfoComponent__SetInfo(
   disableLabel = (UnityEngine_Component_o *)this->fields.resultFriendshipGauge;
   if ( !disableLabel )
 LABEL_36:
-    sub_1C32E7C(disableLabel);
+    sub_1C372B4(disableLabel);
   FriendshipExceedFriendshipGauge__Set(
     (FriendshipExceedFriendshipGauge_o *)disableLabel,
     max[1],

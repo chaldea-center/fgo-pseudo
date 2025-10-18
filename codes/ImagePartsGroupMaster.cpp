@@ -1,14 +1,14 @@
 void ImagePartsGroupMaster___ctor(ImagePartsGroupMaster_o *this, const MethodInfo *method)
 {
-  if ( (byte_4C37E1C & 1) == 0 )
+  if ( (byte_4C43415 & 1) == 0 )
   {
-    sub_1C32C20(&Method_DataMasterBase_ImagePartsGroupMaster__ImagePartsGroupEntity__string___ctor__);
-    byte_4C37E1C = 1;
+    sub_1C37058(&Method_DataMasterBase_ImagePartsGroupMaster__ImagePartsGroupEntity__string___ctor__);
+    byte_4C43415 = 1;
   }
   DataMasterBase_object__object__object____ctor(
     (DataMasterBase_TMaster__TEntity__PKType__o *)this,
     534,
-    (const MethodInfo_3398FCC *)Method_DataMasterBase_ImagePartsGroupMaster__ImagePartsGroupEntity__string___ctor__);
+    (const MethodInfo_33A3834 *)Method_DataMasterBase_ImagePartsGroupMaster__ImagePartsGroupEntity__string___ctor__);
 }
 
 
@@ -25,11 +25,11 @@ void ImagePartsGroupMaster__ConcatDefaultImageValues(
   int32_t v11; // w2
   const MethodInfo *v12; // x3
 
-  if ( (byte_4C37E18 & 1) == 0 )
+  if ( (byte_4C43411 & 1) == 0 )
   {
-    sub_1C32C20(&Method_System_String_Join_int___);
-    sub_1C32C20(&StringLiteral_16107/*"_"*/);
-    byte_4C37E18 = 1;
+    sub_1C37058(&Method_System_String_Join_int___);
+    sub_1C37058(&StringLiteral_16109/*"_"*/);
+    byte_4C43411 = 1;
   }
   DefaultImageValues = (System_Collections_Generic_IEnumerable_T__o *)ImagePartsGroupMaster__GetDefaultImageValues(
                                                                         this,
@@ -39,12 +39,12 @@ void ImagePartsGroupMaster__ConcatDefaultImageValues(
   {
     v8 = *defaultName;
     v9 = System_String__Join_int_(
-           (System_String_o *)StringLiteral_16107/*"_"*/,
+           (System_String_o *)StringLiteral_16109/*"_"*/,
            DefaultImageValues,
-           (const MethodInfo_3188674 *)Method_System_String_Join_int___);
-    v10 = System_String__Concat_63556792(v8, (System_String_o *)StringLiteral_16107/*"_"*/, v9, 0);
+           (const MethodInfo_3192EDC *)Method_System_String_Join_int___);
+    v10 = System_String__Concat_63599904(v8, (System_String_o *)StringLiteral_16109/*"_"*/, v9, 0);
     *defaultName = v10;
-    sub_1C32BC4((CGThumbnailListItem_o *)defaultName, (int32_t)v10, v11, v12);
+    sub_1C36FFC((CGThumbnailListItem_o *)defaultName, (int32_t)v10, v11, v12);
   }
 }
 
@@ -74,25 +74,25 @@ void ImagePartsGroupMaster__ConcatImageValues(
   ImagePartsGroupEntity_o *entity; // [xsp+8h] [xbp-48h] BYREF
 
   v8 = this;
-  if ( (byte_4C37E1B & 1) == 0 )
+  if ( (byte_4C43414 & 1) == 0 )
   {
-    sub_1C32C20(&Method_System_Collections_Generic_List_int__Add__);
-    sub_1C32C20(&Method_System_Collections_Generic_List_int___ctor__);
-    sub_1C32C20(&System_Collections_Generic_List_int__TypeInfo);
-    sub_1C32C20(&Method_System_String_Join_int___);
-    this = (ImagePartsGroupMaster_o *)sub_1C32C20(&StringLiteral_16107/*"_"*/);
-    byte_4C37E1B = 1;
+    sub_1C37058(&Method_System_Collections_Generic_List_int__Add__);
+    sub_1C37058(&Method_System_Collections_Generic_List_int___ctor__);
+    sub_1C37058(&System_Collections_Generic_List_int__TypeInfo);
+    sub_1C37058(&Method_System_String_Join_int___);
+    this = (ImagePartsGroupMaster_o *)sub_1C37058(&StringLiteral_16109/*"_"*/);
+    byte_4C43414 = 1;
   }
   entity = 0;
   if ( !idxs )
 LABEL_21:
-    sub_1C32E7C(this);
+    sub_1C372B4(this);
   if ( !idxs->max_length )
     goto LABEL_19;
-  v9 = (System_Collections_Generic_List_int__o *)sub_1C32E6C(System_Collections_Generic_List_int__TypeInfo);
+  v9 = (System_Collections_Generic_List_int__o *)sub_1C372A4(System_Collections_Generic_List_int__TypeInfo);
   System_Collections_Generic_List_int____ctor(
     v9,
-    (const MethodInfo_377AF44 *)Method_System_Collections_Generic_List_int___ctor__);
+    (const MethodInfo_37857AC *)Method_System_Collections_Generic_List_int___ctor__);
   max_length = idxs->max_length;
   if ( (int)max_length >= 1 )
   {
@@ -100,7 +100,7 @@ LABEL_21:
     do
     {
       if ( v12 >= (unsigned int)max_length )
-        sub_1C32E84(this);
+        sub_1C372BC(this);
       this = (ImagePartsGroupMaster_o *)ImagePartsGroupMaster__TryGetEntity(v8, &entity, id, idxs->m_Items[v12], v10);
       if ( ((unsigned __int8)this & 1) != 0 )
       {
@@ -126,7 +126,7 @@ LABEL_21:
           System_Collections_Generic_List_int___AddWithResize(
             v9,
             imageValue,
-            *(const MethodInfo_377B798 **)(*(_QWORD *)(v16[4] + 192LL) + 112LL));
+            *(const MethodInfo_3786000 **)(*(_QWORD *)(v16[4] + 192LL) + 112LL));
         }
         else
         {
@@ -142,12 +142,12 @@ LABEL_21:
   {
     v18 = *defaultName;
     v19 = System_String__Join_int_(
-            (System_String_o *)StringLiteral_16107/*"_"*/,
+            (System_String_o *)StringLiteral_16109/*"_"*/,
             (System_Collections_Generic_IEnumerable_T__o *)v9,
-            (const MethodInfo_3188674 *)Method_System_String_Join_int___);
-    v20 = System_String__Concat_63556792(v18, (System_String_o *)StringLiteral_16107/*"_"*/, v19, 0);
+            (const MethodInfo_3192EDC *)Method_System_String_Join_int___);
+    v20 = System_String__Concat_63599904(v18, (System_String_o *)StringLiteral_16109/*"_"*/, v19, 0);
     *defaultName = v20;
-    sub_1C32BC4((CGThumbnailListItem_o *)defaultName, (int32_t)v20, v21, v22);
+    sub_1C36FFC((CGThumbnailListItem_o *)defaultName, (int32_t)v20, v21, v22);
   }
   else
   {
@@ -214,7 +214,7 @@ void ImagePartsGroupMaster__ConcatMaterialImageValues(
   const MethodInfo *v55; // x1
   ImagePartsGroupEntity_o *v56; // x25
   const MethodInfo *v57; // x2
-  _BOOL8 IsOpen_42247840; // x0
+  _BOOL8 IsOpen_42349708; // x0
   int32_t imageValue; // w1
   struct System_Int32_array *items; // x8
   _QWORD *v61; // x9
@@ -234,29 +234,29 @@ void ImagePartsGroupMaster__ConcatMaterialImageValues(
   int32_t v75; // w2
   ImagePartsGroupMaster_o *v76; // [xsp+28h] [xbp-68h]
 
-  if ( (byte_4C37E17 & 1) == 0 )
+  if ( (byte_4C43410 & 1) == 0 )
   {
-    sub_1C32C20(&AssetManager_TypeInfo);
-    sub_1C32C20(&Method_System_Linq_Enumerable_GroupBy_ImagePartsGroupEntity__int___);
-    sub_1C32C20(&Method_System_Linq_Enumerable_OrderBy_IGrouping_int__ImagePartsGroupEntity___int___);
-    sub_1C32C20(&System_Func_IGrouping_int__ImagePartsGroupEntity___int__TypeInfo);
-    sub_1C32C20(&System_Func_ImagePartsGroupEntity__int__TypeInfo);
-    sub_1C32C20(&System_IDisposable_TypeInfo);
-    sub_1C32C20(&System_Collections_Generic_IEnumerable_ImagePartsGroupEntity__TypeInfo);
-    sub_1C32C20(&System_Collections_Generic_IEnumerable_IGrouping_int__ImagePartsGroupEntity___TypeInfo);
-    sub_1C32C20(&System_Collections_Generic_IEnumerator_IGrouping_int__ImagePartsGroupEntity___TypeInfo);
-    sub_1C32C20(&System_Collections_Generic_IEnumerator_ImagePartsGroupEntity__TypeInfo);
-    sub_1C32C20(&System_Collections_IEnumerator_TypeInfo);
-    sub_1C32C20(&Method_System_Collections_Generic_List_int__Add__);
-    sub_1C32C20(&Method_System_Collections_Generic_List_int___ctor__);
-    sub_1C32C20(&System_Collections_Generic_List_int__TypeInfo);
-    sub_1C32C20(&Method_System_String_Join_int___);
-    sub_1C32C20(&Method_ImagePartsGroupMaster___c__ConcatMaterialImageValues_b__2_0__);
-    sub_1C32C20(&Method_ImagePartsGroupMaster___c__ConcatMaterialImageValues_b__2_1__);
-    sub_1C32C20(&ImagePartsGroupMaster___c_TypeInfo);
-    sub_1C32C20(&StringLiteral_16107/*"_"*/);
-    sub_1C32C20(&StringLiteral_4385/*"CharaGraph/"*/);
-    byte_4C37E17 = 1;
+    sub_1C37058(&AssetManager_TypeInfo);
+    sub_1C37058(&Method_System_Linq_Enumerable_GroupBy_ImagePartsGroupEntity__int___);
+    sub_1C37058(&Method_System_Linq_Enumerable_OrderBy_IGrouping_int__ImagePartsGroupEntity___int___);
+    sub_1C37058(&System_Func_IGrouping_int__ImagePartsGroupEntity___int__TypeInfo);
+    sub_1C37058(&System_Func_ImagePartsGroupEntity__int__TypeInfo);
+    sub_1C37058(&System_IDisposable_TypeInfo);
+    sub_1C37058(&System_Collections_Generic_IEnumerable_ImagePartsGroupEntity__TypeInfo);
+    sub_1C37058(&System_Collections_Generic_IEnumerable_IGrouping_int__ImagePartsGroupEntity___TypeInfo);
+    sub_1C37058(&System_Collections_Generic_IEnumerator_IGrouping_int__ImagePartsGroupEntity___TypeInfo);
+    sub_1C37058(&System_Collections_Generic_IEnumerator_ImagePartsGroupEntity__TypeInfo);
+    sub_1C37058(&System_Collections_IEnumerator_TypeInfo);
+    sub_1C37058(&Method_System_Collections_Generic_List_int__Add__);
+    sub_1C37058(&Method_System_Collections_Generic_List_int___ctor__);
+    sub_1C37058(&System_Collections_Generic_List_int__TypeInfo);
+    sub_1C37058(&Method_System_String_Join_int___);
+    sub_1C37058(&Method_ImagePartsGroupMaster___c__ConcatMaterialImageValues_b__2_0__);
+    sub_1C37058(&Method_ImagePartsGroupMaster___c__ConcatMaterialImageValues_b__2_1__);
+    sub_1C37058(&ImagePartsGroupMaster___c_TypeInfo);
+    sub_1C37058(&StringLiteral_16109/*"_"*/);
+    sub_1C37058(&StringLiteral_4385/*"CharaGraph/"*/);
+    byte_4C43410 = 1;
   }
   Entities = (System_Collections_ICollection_o *)ImagePartsGroupMaster__GetEntities(
                                                    this,
@@ -264,10 +264,10 @@ void ImagePartsGroupMaster__ConcatMaterialImageValues(
                                                    (const MethodInfo *)defaultName);
   if ( BasicHelper__IsNullOrEmpty(Entities, 0) )
     goto LABEL_88;
-  v9 = (System_Collections_Generic_List_int__o *)sub_1C32E6C(System_Collections_Generic_List_int__TypeInfo);
+  v9 = (System_Collections_Generic_List_int__o *)sub_1C372A4(System_Collections_Generic_List_int__TypeInfo);
   System_Collections_Generic_List_int____ctor(
     v9,
-    (const MethodInfo_377AF44 *)Method_System_Collections_Generic_List_int___ctor__);
+    (const MethodInfo_37857AC *)Method_System_Collections_Generic_List_int___ctor__);
   v76 = this;
   v10 = ImagePartsGroupMaster___c_TypeInfo;
   if ( !ImagePartsGroupMaster___c_TypeInfo->_2.cctor_finished )
@@ -284,7 +284,7 @@ void ImagePartsGroupMaster__ConcatMaterialImageValues(
       v10 = ImagePartsGroupMaster___c_TypeInfo;
     }
     v12 = (Il2CppObject *)v10->static_fields->__9;
-    _9__2_0 = (System_Func_object__int__o *)sub_1C32E6C(System_Func_ImagePartsGroupEntity__int__TypeInfo);
+    _9__2_0 = (System_Func_object__int__o *)sub_1C372A4(System_Func_ImagePartsGroupEntity__int__TypeInfo);
     System_Func_object__int____ctor(
       _9__2_0,
       v12,
@@ -292,12 +292,12 @@ void ImagePartsGroupMaster__ConcatMaterialImageValues(
       0);
     static_fields = ImagePartsGroupMaster___c_TypeInfo->static_fields;
     static_fields->__9__2_0 = (struct System_Func_ImagePartsGroupEntity__int__o *)_9__2_0;
-    sub_1C32BC4((CGThumbnailListItem_o *)&static_fields->__9__2_0, (int32_t)_9__2_0, v14, v15);
+    sub_1C36FFC((CGThumbnailListItem_o *)&static_fields->__9__2_0, (int32_t)_9__2_0, v14, v15);
   }
   v16 = System_Linq_Enumerable__GroupBy_object__int_(
           (System_Collections_Generic_IEnumerable_TSource__o *)Entities,
           (System_Func_TSource__TKey__o *)_9__2_0,
-          (const MethodInfo_31077C8 *)Method_System_Linq_Enumerable_GroupBy_ImagePartsGroupEntity__int___);
+          (const MethodInfo_3112030 *)Method_System_Linq_Enumerable_GroupBy_ImagePartsGroupEntity__int___);
   v17 = ImagePartsGroupMaster___c_TypeInfo;
   v18 = (System_Collections_Generic_IEnumerable_TSource__o *)v16;
   if ( !ImagePartsGroupMaster___c_TypeInfo->_2.cctor_finished )
@@ -314,7 +314,7 @@ void ImagePartsGroupMaster__ConcatMaterialImageValues(
       v17 = ImagePartsGroupMaster___c_TypeInfo;
     }
     v20 = (Il2CppObject *)v17->static_fields->__9;
-    _9__2_1 = (System_Func_object__int__o *)sub_1C32E6C(System_Func_IGrouping_int__ImagePartsGroupEntity___int__TypeInfo);
+    _9__2_1 = (System_Func_object__int__o *)sub_1C372A4(System_Func_IGrouping_int__ImagePartsGroupEntity___int__TypeInfo);
     System_Func_object__int____ctor(
       _9__2_1,
       v20,
@@ -322,14 +322,14 @@ void ImagePartsGroupMaster__ConcatMaterialImageValues(
       0);
     v21 = ImagePartsGroupMaster___c_TypeInfo->static_fields;
     v21->__9__2_1 = (struct System_Func_IGrouping_int__ImagePartsGroupEntity___int__o *)_9__2_1;
-    sub_1C32BC4((CGThumbnailListItem_o *)&v21->__9__2_1, (int32_t)_9__2_1, v22, v23);
+    sub_1C36FFC((CGThumbnailListItem_o *)&v21->__9__2_1, (int32_t)_9__2_1, v22, v23);
   }
   v24 = System_Linq_Enumerable__OrderBy_object__int_(
           v18,
           (System_Func_TSource__TKey__o *)_9__2_1,
-          (const MethodInfo_310CB44 *)Method_System_Linq_Enumerable_OrderBy_IGrouping_int__ImagePartsGroupEntity___int___);
+          (const MethodInfo_31173AC *)Method_System_Linq_Enumerable_OrderBy_IGrouping_int__ImagePartsGroupEntity___int___);
   if ( !v24 )
-    sub_1C32E7C(0);
+    sub_1C372B4(0);
   klass = v24->klass;
   v26 = v24;
   v27 = *(unsigned __int16 *)&v24->klass->_2.rank;
@@ -348,11 +348,11 @@ void ImagePartsGroupMaster__ConcatMaterialImageValues(
   else
   {
 LABEL_21:
-    v29 = sub_1C83438(v24, System_Collections_Generic_IEnumerable_IGrouping_int__ImagePartsGroupEntity___TypeInfo, 0);
+    v29 = sub_1C87870(v24, System_Collections_Generic_IEnumerable_IGrouping_int__ImagePartsGroupEntity___TypeInfo, 0);
   }
   v30 = (*(__int64 (__fastcall **)(System_Linq_IOrderedEnumerable_TSource__o *, _QWORD))v29)(v26, *(_QWORD *)(v29 + 8));
   if ( !v30 )
-    sub_1C32E7C(0);
+    sub_1C372B4(0);
   while ( 1 )
   {
     v31 = *(_QWORD *)v30;
@@ -372,7 +372,7 @@ LABEL_21:
     else
     {
 LABEL_28:
-      v34 = sub_1C83438(v30, System_Collections_IEnumerator_TypeInfo, 0);
+      v34 = sub_1C87870(v30, System_Collections_IEnumerator_TypeInfo, 0);
     }
     if ( ((*(__int64 (__fastcall **)(__int64, _QWORD))v34)(v30, *(_QWORD *)(v34 + 8)) & 1) == 0 )
       break;
@@ -393,12 +393,12 @@ LABEL_28:
     else
     {
 LABEL_35:
-      v38 = sub_1C83438(v30, System_Collections_Generic_IEnumerator_IGrouping_int__ImagePartsGroupEntity___TypeInfo, 0);
+      v38 = sub_1C87870(v30, System_Collections_Generic_IEnumerator_IGrouping_int__ImagePartsGroupEntity___TypeInfo, 0);
     }
     v39 = (*(__int64 (__fastcall **)(__int64, _QWORD))v38)(v30, *(_QWORD *)(v38 + 8));
     v40 = v39;
     if ( !v39 )
-      sub_1C32E7C(0);
+      sub_1C372B4(0);
     v41 = *(_QWORD *)v39;
     v42 = *(unsigned __int16 *)(*(_QWORD *)v39 + 302LL);
     if ( *(_WORD *)(*(_QWORD *)v39 + 302LL) )
@@ -416,11 +416,11 @@ LABEL_35:
     else
     {
 LABEL_42:
-      v44 = sub_1C83438(v39, System_Collections_Generic_IEnumerable_ImagePartsGroupEntity__TypeInfo, 0);
+      v44 = sub_1C87870(v39, System_Collections_Generic_IEnumerable_ImagePartsGroupEntity__TypeInfo, 0);
     }
     v45 = (*(__int64 (__fastcall **)(__int64, _QWORD))v44)(v40, *(_QWORD *)(v44 + 8));
     if ( !v45 )
-      sub_1C32E7C(0);
+      sub_1C372B4(0);
     while ( 1 )
     {
       v46 = *(_QWORD *)v45;
@@ -440,7 +440,7 @@ LABEL_42:
       else
       {
 LABEL_49:
-        v49 = sub_1C83438(v45, System_Collections_IEnumerator_TypeInfo, 0);
+        v49 = sub_1C87870(v45, System_Collections_IEnumerator_TypeInfo, 0);
       }
       if ( ((*(__int64 (__fastcall **)(__int64, _QWORD))v49)(v45, *(_QWORD *)(v49 + 8)) & 1) == 0 )
         break;
@@ -461,32 +461,32 @@ LABEL_49:
       else
       {
 LABEL_56:
-        v53 = sub_1C83438(v45, System_Collections_Generic_IEnumerator_ImagePartsGroupEntity__TypeInfo, 0);
+        v53 = sub_1C87870(v45, System_Collections_Generic_IEnumerator_ImagePartsGroupEntity__TypeInfo, 0);
       }
       v54 = (ImagePartsGroupEntity_o *)(*(__int64 (__fastcall **)(__int64, _QWORD))v53)(v45, *(_QWORD *)(v53 + 8));
       v56 = v54;
       if ( !v54 )
-        sub_1C32E7C(0);
+        sub_1C372B4(0);
       if ( ImagePartsGroupEntity__IsUseEquipImage(v54, v55) )
       {
-        IsOpen_42247840 = ImagePartsGroupEntity__IsOpen_42247840(v56, 1, v57);
-        if ( IsOpen_42247840 )
+        IsOpen_42349708 = ImagePartsGroupEntity__IsOpen_42349708(v56, 1, v57);
+        if ( IsOpen_42349708 )
         {
           if ( !v9 )
-            sub_1C32E7C(IsOpen_42247840);
+            sub_1C372B4(IsOpen_42349708);
           imageValue = v56->fields.imageValue;
           items = v9->fields._items;
           v61 = Method_System_Collections_Generic_List_int__Add__;
           ++v9->fields._version;
           if ( !items )
-            sub_1C32E7C(IsOpen_42247840);
+            sub_1C372B4(IsOpen_42349708);
           size = v9->fields._size;
           if ( (unsigned int)size >= LODWORD(items->max_length) )
           {
             System_Collections_Generic_List_int___AddWithResize(
               v9,
               imageValue,
-              *(const MethodInfo_377B798 **)(*(_QWORD *)(v61[4] + 192LL) + 112LL));
+              *(const MethodInfo_3786000 **)(*(_QWORD *)(v61[4] + 192LL) + 112LL));
           }
           else
           {
@@ -514,7 +514,7 @@ LABEL_56:
     else
     {
 LABEL_70:
-      v66 = sub_1C83438(v45, System_IDisposable_TypeInfo, 0);
+      v66 = sub_1C87870(v45, System_IDisposable_TypeInfo, 0);
     }
     (*(void (__fastcall **)(__int64, _QWORD))v66)(v45, *(_QWORD *)(v66 + 8));
   }
@@ -535,7 +535,7 @@ LABEL_70:
   else
   {
 LABEL_81:
-    v70 = sub_1C83438(v30, System_IDisposable_TypeInfo, 0);
+    v70 = sub_1C87870(v30, System_IDisposable_TypeInfo, 0);
   }
   (*(void (__fastcall **)(__int64, _QWORD))v70)(v30, *(_QWORD *)(v70 + 8));
   this = v76;
@@ -543,11 +543,11 @@ LABEL_81:
     goto LABEL_88;
   v71 = *defaultName;
   v72 = System_String__Join_int_(
-          (System_String_o *)StringLiteral_16107/*"_"*/,
+          (System_String_o *)StringLiteral_16109/*"_"*/,
           (System_Collections_Generic_IEnumerable_T__o *)v9,
-          (const MethodInfo_3188674 *)Method_System_String_Join_int___);
-  v73 = System_String__Concat_63556792(v71, (System_String_o *)StringLiteral_16107/*"_"*/, v72, 0);
-  v74 = System_String__Concat_63518544((System_String_o *)StringLiteral_4385/*"CharaGraph/"*/, v73, 0);
+          (const MethodInfo_3192EDC *)Method_System_String_Join_int___);
+  v73 = System_String__Concat_63599904(v71, (System_String_o *)StringLiteral_16109/*"_"*/, v72, 0);
+  v74 = System_String__Concat_63561656((System_String_o *)StringLiteral_4385/*"CharaGraph/"*/, v73, 0);
   if ( !AssetManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(AssetManager_TypeInfo);
   if ( !AssetManager__isExistAssetStorage(v74, 0) )
@@ -558,7 +558,7 @@ LABEL_88:
   else
   {
     *defaultName = v73;
-    sub_1C32BC4((CGThumbnailListItem_o *)defaultName, (int32_t)v73, v75, v8);
+    sub_1C36FFC((CGThumbnailListItem_o *)defaultName, (int32_t)v73, v75, v8);
   }
 }
 
@@ -624,37 +624,37 @@ System_Collections_Generic_List_int__o *ImagePartsGroupMaster__GetDefaultImageVa
   int *v58; // x10
   __int64 v59; // x0
 
-  if ( (byte_4C37E19 & 1) == 0 )
+  if ( (byte_4C43412 & 1) == 0 )
   {
-    sub_1C32C20(&Method_System_Linq_Enumerable_GroupBy_ImagePartsGroupEntity__int___);
-    sub_1C32C20(&Method_System_Linq_Enumerable_Min_ImagePartsGroupEntity___);
-    sub_1C32C20(&Method_System_Linq_Enumerable_OrderBy_IGrouping_int__ImagePartsGroupEntity___int___);
-    sub_1C32C20(&Method_System_Linq_Enumerable_Where_ImagePartsGroupEntity___);
-    sub_1C32C20(&System_Func_ImagePartsGroupEntity__bool__TypeInfo);
-    sub_1C32C20(&System_Func_IGrouping_int__ImagePartsGroupEntity___int__TypeInfo);
-    sub_1C32C20(&System_Func_ImagePartsGroupEntity__int__TypeInfo);
-    sub_1C32C20(&System_IDisposable_TypeInfo);
-    sub_1C32C20(&System_Collections_Generic_IEnumerable_IGrouping_int__ImagePartsGroupEntity___TypeInfo);
-    sub_1C32C20(&System_Collections_Generic_IEnumerator_IGrouping_int__ImagePartsGroupEntity___TypeInfo);
-    sub_1C32C20(&System_Collections_IEnumerator_TypeInfo);
-    sub_1C32C20(&Method_System_Collections_Generic_List_int__Add__);
-    sub_1C32C20(&Method_System_Collections_Generic_List_int___ctor__);
-    sub_1C32C20(&System_Collections_Generic_List_int__TypeInfo);
-    sub_1C32C20(&Method_ImagePartsGroupMaster___c__GetDefaultImageValues_b__4_0__);
-    sub_1C32C20(&Method_ImagePartsGroupMaster___c__GetDefaultImageValues_b__4_1__);
-    sub_1C32C20(&Method_ImagePartsGroupMaster___c__GetDefaultImageValues_b__4_2__);
-    sub_1C32C20(&Method_ImagePartsGroupMaster___c__GetDefaultImageValues_b__4_3__);
-    sub_1C32C20(&ImagePartsGroupMaster___c_TypeInfo);
-    byte_4C37E19 = 1;
+    sub_1C37058(&Method_System_Linq_Enumerable_GroupBy_ImagePartsGroupEntity__int___);
+    sub_1C37058(&Method_System_Linq_Enumerable_Min_ImagePartsGroupEntity___);
+    sub_1C37058(&Method_System_Linq_Enumerable_OrderBy_IGrouping_int__ImagePartsGroupEntity___int___);
+    sub_1C37058(&Method_System_Linq_Enumerable_Where_ImagePartsGroupEntity___);
+    sub_1C37058(&System_Func_ImagePartsGroupEntity__bool__TypeInfo);
+    sub_1C37058(&System_Func_IGrouping_int__ImagePartsGroupEntity___int__TypeInfo);
+    sub_1C37058(&System_Func_ImagePartsGroupEntity__int__TypeInfo);
+    sub_1C37058(&System_IDisposable_TypeInfo);
+    sub_1C37058(&System_Collections_Generic_IEnumerable_IGrouping_int__ImagePartsGroupEntity___TypeInfo);
+    sub_1C37058(&System_Collections_Generic_IEnumerator_IGrouping_int__ImagePartsGroupEntity___TypeInfo);
+    sub_1C37058(&System_Collections_IEnumerator_TypeInfo);
+    sub_1C37058(&Method_System_Collections_Generic_List_int__Add__);
+    sub_1C37058(&Method_System_Collections_Generic_List_int___ctor__);
+    sub_1C37058(&System_Collections_Generic_List_int__TypeInfo);
+    sub_1C37058(&Method_ImagePartsGroupMaster___c__GetDefaultImageValues_b__4_0__);
+    sub_1C37058(&Method_ImagePartsGroupMaster___c__GetDefaultImageValues_b__4_1__);
+    sub_1C37058(&Method_ImagePartsGroupMaster___c__GetDefaultImageValues_b__4_2__);
+    sub_1C37058(&Method_ImagePartsGroupMaster___c__GetDefaultImageValues_b__4_3__);
+    sub_1C37058(&ImagePartsGroupMaster___c_TypeInfo);
+    byte_4C43412 = 1;
   }
   Entities = (System_Collections_Generic_IEnumerable_TSource__o *)ImagePartsGroupMaster__GetEntities(this, id, method);
   v6 = 0;
   if ( !BasicHelper__IsNullOrEmpty((System_Collections_ICollection_o *)Entities, 0) )
   {
-    v6 = (System_Collections_Generic_List_int__o *)sub_1C32E6C(System_Collections_Generic_List_int__TypeInfo);
+    v6 = (System_Collections_Generic_List_int__o *)sub_1C372A4(System_Collections_Generic_List_int__TypeInfo);
     System_Collections_Generic_List_int____ctor(
       v6,
-      (const MethodInfo_377AF44 *)Method_System_Collections_Generic_List_int___ctor__);
+      (const MethodInfo_37857AC *)Method_System_Collections_Generic_List_int___ctor__);
     v7 = ImagePartsGroupMaster___c_TypeInfo;
     if ( !ImagePartsGroupMaster___c_TypeInfo->_2.cctor_finished )
     {
@@ -670,16 +670,16 @@ System_Collections_Generic_List_int__o *ImagePartsGroupMaster__GetDefaultImageVa
         v7 = ImagePartsGroupMaster___c_TypeInfo;
       }
       v9 = (Il2CppObject *)v7->static_fields->__9;
-      _9__4_0 = (System_Func_object__int__o *)sub_1C32E6C(System_Func_ImagePartsGroupEntity__int__TypeInfo);
+      _9__4_0 = (System_Func_object__int__o *)sub_1C372A4(System_Func_ImagePartsGroupEntity__int__TypeInfo);
       System_Func_object__int____ctor(_9__4_0, v9, Method_ImagePartsGroupMaster___c__GetDefaultImageValues_b__4_0__, 0);
       static_fields = ImagePartsGroupMaster___c_TypeInfo->static_fields;
       static_fields->__9__4_0 = (struct System_Func_ImagePartsGroupEntity__int__o *)_9__4_0;
-      sub_1C32BC4((CGThumbnailListItem_o *)&static_fields->__9__4_0, (int32_t)_9__4_0, v11, v12);
+      sub_1C36FFC((CGThumbnailListItem_o *)&static_fields->__9__4_0, (int32_t)_9__4_0, v11, v12);
     }
     v13 = System_Linq_Enumerable__GroupBy_object__int_(
             Entities,
             (System_Func_TSource__TKey__o *)_9__4_0,
-            (const MethodInfo_31077C8 *)Method_System_Linq_Enumerable_GroupBy_ImagePartsGroupEntity__int___);
+            (const MethodInfo_3112030 *)Method_System_Linq_Enumerable_GroupBy_ImagePartsGroupEntity__int___);
     v14 = ImagePartsGroupMaster___c_TypeInfo;
     v15 = (System_Collections_Generic_IEnumerable_TSource__o *)v13;
     if ( !ImagePartsGroupMaster___c_TypeInfo->_2.cctor_finished )
@@ -696,18 +696,18 @@ System_Collections_Generic_List_int__o *ImagePartsGroupMaster__GetDefaultImageVa
         v14 = ImagePartsGroupMaster___c_TypeInfo;
       }
       v17 = (Il2CppObject *)v14->static_fields->__9;
-      _9__4_1 = (System_Func_object__int__o *)sub_1C32E6C(System_Func_IGrouping_int__ImagePartsGroupEntity___int__TypeInfo);
+      _9__4_1 = (System_Func_object__int__o *)sub_1C372A4(System_Func_IGrouping_int__ImagePartsGroupEntity___int__TypeInfo);
       System_Func_object__int____ctor(_9__4_1, v17, Method_ImagePartsGroupMaster___c__GetDefaultImageValues_b__4_1__, 0);
       v18 = ImagePartsGroupMaster___c_TypeInfo->static_fields;
       v18->__9__4_1 = (struct System_Func_IGrouping_int__ImagePartsGroupEntity___int__o *)_9__4_1;
-      sub_1C32BC4((CGThumbnailListItem_o *)&v18->__9__4_1, (int32_t)_9__4_1, v19, v20);
+      sub_1C36FFC((CGThumbnailListItem_o *)&v18->__9__4_1, (int32_t)_9__4_1, v19, v20);
     }
     v21 = System_Linq_Enumerable__OrderBy_object__int_(
             v15,
             (System_Func_TSource__TKey__o *)_9__4_1,
-            (const MethodInfo_310CB44 *)Method_System_Linq_Enumerable_OrderBy_IGrouping_int__ImagePartsGroupEntity___int___);
+            (const MethodInfo_31173AC *)Method_System_Linq_Enumerable_OrderBy_IGrouping_int__ImagePartsGroupEntity___int___);
     if ( !v21 )
-      sub_1C32E7C(0);
+      sub_1C372B4(0);
     klass = v21->klass;
     v23 = v21;
     v24 = *(unsigned __int16 *)&v21->klass->_2.rank;
@@ -726,13 +726,13 @@ System_Collections_Generic_List_int__o *ImagePartsGroupMaster__GetDefaultImageVa
     else
     {
 LABEL_21:
-      v26 = sub_1C83438(v21, System_Collections_Generic_IEnumerable_IGrouping_int__ImagePartsGroupEntity___TypeInfo, 0);
+      v26 = sub_1C87870(v21, System_Collections_Generic_IEnumerable_IGrouping_int__ImagePartsGroupEntity___TypeInfo, 0);
     }
     v27 = (*(__int64 (__fastcall **)(System_Linq_IOrderedEnumerable_TSource__o *, _QWORD))v26)(
             v23,
             *(_QWORD *)(v26 + 8));
     if ( !v27 )
-      sub_1C32E7C(0);
+      sub_1C372B4(0);
     while ( 1 )
     {
       v28 = *(_QWORD *)v27;
@@ -752,7 +752,7 @@ LABEL_21:
       else
       {
 LABEL_28:
-        v31 = sub_1C83438(v27, System_Collections_IEnumerator_TypeInfo, 0);
+        v31 = sub_1C87870(v27, System_Collections_IEnumerator_TypeInfo, 0);
       }
       if ( ((*(__int64 (__fastcall **)(__int64, _QWORD))v31)(v27, *(_QWORD *)(v31 + 8)) & 1) == 0 )
         break;
@@ -773,7 +773,7 @@ LABEL_28:
       else
       {
 LABEL_35:
-        v35 = sub_1C83438(
+        v35 = sub_1C87870(
                 v27,
                 System_Collections_Generic_IEnumerator_IGrouping_int__ImagePartsGroupEntity___TypeInfo,
                 0);
@@ -795,7 +795,7 @@ LABEL_35:
           v37 = ImagePartsGroupMaster___c_TypeInfo;
         }
         v40 = (Il2CppObject *)v37->static_fields->__9;
-        _9__4_2 = (System_Func_object__bool__o *)sub_1C32E6C(System_Func_ImagePartsGroupEntity__bool__TypeInfo);
+        _9__4_2 = (System_Func_object__bool__o *)sub_1C372A4(System_Func_ImagePartsGroupEntity__bool__TypeInfo);
         System_Func_object__bool____ctor(
           _9__4_2,
           v40,
@@ -803,12 +803,12 @@ LABEL_35:
           0);
         v41 = ImagePartsGroupMaster___c_TypeInfo->static_fields;
         v41->__9__4_2 = (struct System_Func_ImagePartsGroupEntity__bool__o *)_9__4_2;
-        sub_1C32BC4((CGThumbnailListItem_o *)&v41->__9__4_2, (int32_t)_9__4_2, v42, v43);
+        sub_1C36FFC((CGThumbnailListItem_o *)&v41->__9__4_2, (int32_t)_9__4_2, v42, v43);
       }
       v44 = System_Linq_Enumerable__Where_object_(
               v38,
               (System_Func_TSource__bool__o *)_9__4_2,
-              (const MethodInfo_3123BA8 *)Method_System_Linq_Enumerable_Where_ImagePartsGroupEntity___);
+              (const MethodInfo_312E410 *)Method_System_Linq_Enumerable_Where_ImagePartsGroupEntity___);
       v45 = ImagePartsGroupMaster___c_TypeInfo;
       v46 = v44;
       if ( !ImagePartsGroupMaster___c_TypeInfo->_2.cctor_finished )
@@ -825,7 +825,7 @@ LABEL_35:
           v45 = ImagePartsGroupMaster___c_TypeInfo;
         }
         v48 = (Il2CppObject *)v45->static_fields->__9;
-        _9__4_3 = (System_Func_object__int__o *)sub_1C32E6C(System_Func_ImagePartsGroupEntity__int__TypeInfo);
+        _9__4_3 = (System_Func_object__int__o *)sub_1C372A4(System_Func_ImagePartsGroupEntity__int__TypeInfo);
         System_Func_object__int____ctor(
           _9__4_3,
           v48,
@@ -833,26 +833,26 @@ LABEL_35:
           0);
         v49 = ImagePartsGroupMaster___c_TypeInfo->static_fields;
         v49->__9__4_3 = (struct System_Func_ImagePartsGroupEntity__int__o *)_9__4_3;
-        sub_1C32BC4((CGThumbnailListItem_o *)&v49->__9__4_3, (int32_t)_9__4_3, v50, v51);
+        sub_1C36FFC((CGThumbnailListItem_o *)&v49->__9__4_3, (int32_t)_9__4_3, v50, v51);
       }
       v52 = System_Linq_Enumerable__Min_object_(
               v46,
               (System_Func_TSource__int__o *)_9__4_3,
-              (const MethodInfo_310C4A4 *)Method_System_Linq_Enumerable_Min_ImagePartsGroupEntity___);
+              (const MethodInfo_3116D0C *)Method_System_Linq_Enumerable_Min_ImagePartsGroupEntity___);
       if ( !v6 )
-        sub_1C32E7C(v52);
+        sub_1C372B4(v52);
       items = v6->fields._items;
       v54 = Method_System_Collections_Generic_List_int__Add__;
       ++v6->fields._version;
       if ( !items )
-        sub_1C32E7C(v52);
+        sub_1C372B4(v52);
       size = v6->fields._size;
       if ( (unsigned int)size >= LODWORD(items->max_length) )
       {
         System_Collections_Generic_List_int___AddWithResize(
           v6,
           v52,
-          *(const MethodInfo_377B798 **)(*(_QWORD *)(v54[4] + 192LL) + 112LL));
+          *(const MethodInfo_3786000 **)(*(_QWORD *)(v54[4] + 192LL) + 112LL));
       }
       else
       {
@@ -877,7 +877,7 @@ LABEL_35:
     else
     {
 LABEL_58:
-      v59 = sub_1C83438(v27, System_IDisposable_TypeInfo, 0);
+      v59 = sub_1C87870(v27, System_IDisposable_TypeInfo, 0);
     }
     (*(void (__fastcall **)(__int64, _QWORD))v59)(v27, *(_QWORD *)(v59 + 8));
   }
@@ -895,30 +895,30 @@ ImagePartsGroupEntity_o *ImagePartsGroupMaster__GetDispDialogEntityFromQuestId(
   struct System_Collections_ObjectModel_ObservableCollection_TEntity__o *list; // x19
   System_Func_object__bool__o *v8; // x20
 
-  if ( (byte_4C37E1A & 1) == 0 )
+  if ( (byte_4C43413 & 1) == 0 )
   {
-    sub_1C32C20(&Method_System_Linq_Enumerable_FirstOrDefault_ImagePartsGroupEntity___);
-    sub_1C32C20(&System_Func_ImagePartsGroupEntity__bool__TypeInfo);
-    sub_1C32C20(&Method_ImagePartsGroupMaster___c__DisplayClass6_0__GetDispDialogEntityFromQuestId_b__0__);
-    sub_1C32C20(&ImagePartsGroupMaster___c__DisplayClass6_0_TypeInfo);
-    byte_4C37E1A = 1;
+    sub_1C37058(&Method_System_Linq_Enumerable_FirstOrDefault_ImagePartsGroupEntity___);
+    sub_1C37058(&System_Func_ImagePartsGroupEntity__bool__TypeInfo);
+    sub_1C37058(&Method_ImagePartsGroupMaster___c__DisplayClass6_0__GetDispDialogEntityFromQuestId_b__0__);
+    sub_1C37058(&ImagePartsGroupMaster___c__DisplayClass6_0_TypeInfo);
+    byte_4C43413 = 1;
   }
-  v5 = sub_1C32E6C(ImagePartsGroupMaster___c__DisplayClass6_0_TypeInfo);
+  v5 = sub_1C372A4(ImagePartsGroupMaster___c__DisplayClass6_0_TypeInfo);
   System_Object___ctor((Il2CppObject *)v5, 0);
   if ( !v5 )
-    sub_1C32E7C(v6);
+    sub_1C372B4(v6);
   *(_DWORD *)(v5 + 16) = questId;
   list = this->fields.list;
-  v8 = (System_Func_object__bool__o *)sub_1C32E6C(System_Func_ImagePartsGroupEntity__bool__TypeInfo);
+  v8 = (System_Func_object__bool__o *)sub_1C372A4(System_Func_ImagePartsGroupEntity__bool__TypeInfo);
   System_Func_object__bool____ctor(
     v8,
     (Il2CppObject *)v5,
     Method_ImagePartsGroupMaster___c__DisplayClass6_0__GetDispDialogEntityFromQuestId_b__0__,
     0);
-  return (ImagePartsGroupEntity_o *)System_Linq_Enumerable__FirstOrDefault_object__51408536(
+  return (ImagePartsGroupEntity_o *)System_Linq_Enumerable__FirstOrDefault_object__51451648(
                                       (System_Collections_Generic_IEnumerable_TSource__o *)list,
                                       (System_Func_TSource__bool__o *)v8,
-                                      (const MethodInfo_3106E98 *)Method_System_Linq_Enumerable_FirstOrDefault_ImagePartsGroupEntity___);
+                                      (const MethodInfo_3111700 *)Method_System_Linq_Enumerable_FirstOrDefault_ImagePartsGroupEntity___);
 }
 
 
@@ -933,22 +933,22 @@ ImagePartsGroupEntity_array *ImagePartsGroupMaster__GetEntities(
   System_Func_object__bool__o *v8; // x20
   System_Collections_Generic_IEnumerable_TSource__o *v9; // x0
 
-  if ( (byte_4C37E15 & 1) == 0 )
+  if ( (byte_4C4340E & 1) == 0 )
   {
-    sub_1C32C20(&Method_System_Linq_Enumerable_ToArray_ImagePartsGroupEntity___);
-    sub_1C32C20(&Method_System_Linq_Enumerable_Where_ImagePartsGroupEntity___);
-    sub_1C32C20(&System_Func_ImagePartsGroupEntity__bool__TypeInfo);
-    sub_1C32C20(&Method_ImagePartsGroupMaster___c__DisplayClass0_0__GetEntities_b__0__);
-    sub_1C32C20(&ImagePartsGroupMaster___c__DisplayClass0_0_TypeInfo);
-    byte_4C37E15 = 1;
+    sub_1C37058(&Method_System_Linq_Enumerable_ToArray_ImagePartsGroupEntity___);
+    sub_1C37058(&Method_System_Linq_Enumerable_Where_ImagePartsGroupEntity___);
+    sub_1C37058(&System_Func_ImagePartsGroupEntity__bool__TypeInfo);
+    sub_1C37058(&Method_ImagePartsGroupMaster___c__DisplayClass0_0__GetEntities_b__0__);
+    sub_1C37058(&ImagePartsGroupMaster___c__DisplayClass0_0_TypeInfo);
+    byte_4C4340E = 1;
   }
-  v5 = sub_1C32E6C(ImagePartsGroupMaster___c__DisplayClass0_0_TypeInfo);
+  v5 = sub_1C372A4(ImagePartsGroupMaster___c__DisplayClass0_0_TypeInfo);
   System_Object___ctor((Il2CppObject *)v5, 0);
   if ( !v5 )
-    sub_1C32E7C(v6);
+    sub_1C372B4(v6);
   *(_DWORD *)(v5 + 16) = id;
   list = this->fields.list;
-  v8 = (System_Func_object__bool__o *)sub_1C32E6C(System_Func_ImagePartsGroupEntity__bool__TypeInfo);
+  v8 = (System_Func_object__bool__o *)sub_1C372A4(System_Func_ImagePartsGroupEntity__bool__TypeInfo);
   System_Func_object__bool____ctor(
     v8,
     (Il2CppObject *)v5,
@@ -957,10 +957,10 @@ ImagePartsGroupEntity_array *ImagePartsGroupMaster__GetEntities(
   v9 = System_Linq_Enumerable__Where_object_(
          (System_Collections_Generic_IEnumerable_TSource__o *)list,
          (System_Func_TSource__bool__o *)v8,
-         (const MethodInfo_3123BA8 *)Method_System_Linq_Enumerable_Where_ImagePartsGroupEntity___);
+         (const MethodInfo_312E410 *)Method_System_Linq_Enumerable_Where_ImagePartsGroupEntity___);
   return (ImagePartsGroupEntity_array *)System_Linq_Enumerable__ToArray_object_(
                                           v9,
-                                          (const MethodInfo_311CA8C *)Method_System_Linq_Enumerable_ToArray_ImagePartsGroupEntity___);
+                                          (const MethodInfo_31272F4 *)Method_System_Linq_Enumerable_ToArray_ImagePartsGroupEntity___);
 }
 
 
@@ -973,16 +973,16 @@ ImagePartsGroupEntity_o *ImagePartsGroupMaster__GetEntity(
 {
   Il2CppObject *PK; // x1
 
-  if ( (byte_4C37E1D & 1) == 0 )
+  if ( (byte_4C43416 & 1) == 0 )
   {
-    sub_1C32C20(&Method_DataMasterBase_ImagePartsGroupMaster__ImagePartsGroupEntity__string__GetEntity__);
-    byte_4C37E1D = 1;
+    sub_1C37058(&Method_DataMasterBase_ImagePartsGroupMaster__ImagePartsGroupEntity__string__GetEntity__);
+    byte_4C43416 = 1;
   }
   PK = (Il2CppObject *)ImagePartsGroupEntity__CreatePK(id, idx, *(const MethodInfo **)&idx);
   return (ImagePartsGroupEntity_o *)DataMasterBase_object__object__object___GetEntity(
                                       (DataMasterBase_TMaster__TEntity__PKType__o *)this,
                                       PK,
-                                      (const MethodInfo_339B2F0 *)Method_DataMasterBase_ImagePartsGroupMaster__ImagePartsGroupEntity__string__GetEntity__);
+                                      (const MethodInfo_33A5B58 *)Method_DataMasterBase_ImagePartsGroupMaster__ImagePartsGroupEntity__string__GetEntity__);
 }
 
 
@@ -1001,14 +1001,14 @@ ImagePartsGroupEntity_array *ImagePartsGroupMaster__GetOpenEntities(
   const MethodInfo *v12; // x3
   System_Collections_Generic_IEnumerable_TSource__o *v13; // x0
 
-  if ( (byte_4C37E16 & 1) == 0 )
+  if ( (byte_4C4340F & 1) == 0 )
   {
-    sub_1C32C20(&Method_System_Linq_Enumerable_ToArray_ImagePartsGroupEntity___);
-    sub_1C32C20(&Method_System_Linq_Enumerable_Where_ImagePartsGroupEntity___);
-    sub_1C32C20(&System_Func_ImagePartsGroupEntity__bool__TypeInfo);
-    sub_1C32C20(&Method_ImagePartsGroupMaster___c__GetOpenEntities_b__1_0__);
-    sub_1C32C20(&ImagePartsGroupMaster___c_TypeInfo);
-    byte_4C37E16 = 1;
+    sub_1C37058(&Method_System_Linq_Enumerable_ToArray_ImagePartsGroupEntity___);
+    sub_1C37058(&Method_System_Linq_Enumerable_Where_ImagePartsGroupEntity___);
+    sub_1C37058(&System_Func_ImagePartsGroupEntity__bool__TypeInfo);
+    sub_1C37058(&Method_ImagePartsGroupMaster___c__GetOpenEntities_b__1_0__);
+    sub_1C37058(&ImagePartsGroupMaster___c_TypeInfo);
+    byte_4C4340F = 1;
   }
   Entities = ImagePartsGroupMaster__GetEntities(this, id, method);
   v6 = ImagePartsGroupMaster___c_TypeInfo;
@@ -1027,19 +1027,19 @@ ImagePartsGroupEntity_array *ImagePartsGroupMaster__GetOpenEntities(
       v6 = ImagePartsGroupMaster___c_TypeInfo;
     }
     v9 = (Il2CppObject *)v6->static_fields->__9;
-    _9__1_0 = (System_Func_object__bool__o *)sub_1C32E6C(System_Func_ImagePartsGroupEntity__bool__TypeInfo);
+    _9__1_0 = (System_Func_object__bool__o *)sub_1C372A4(System_Func_ImagePartsGroupEntity__bool__TypeInfo);
     System_Func_object__bool____ctor(_9__1_0, v9, Method_ImagePartsGroupMaster___c__GetOpenEntities_b__1_0__, 0);
     static_fields = ImagePartsGroupMaster___c_TypeInfo->static_fields;
     static_fields->__9__1_0 = (struct System_Func_ImagePartsGroupEntity__bool__o *)_9__1_0;
-    sub_1C32BC4((CGThumbnailListItem_o *)&static_fields->__9__1_0, (int32_t)_9__1_0, v11, v12);
+    sub_1C36FFC((CGThumbnailListItem_o *)&static_fields->__9__1_0, (int32_t)_9__1_0, v11, v12);
   }
   v13 = System_Linq_Enumerable__Where_object_(
           v7,
           (System_Func_TSource__bool__o *)_9__1_0,
-          (const MethodInfo_3123BA8 *)Method_System_Linq_Enumerable_Where_ImagePartsGroupEntity___);
+          (const MethodInfo_312E410 *)Method_System_Linq_Enumerable_Where_ImagePartsGroupEntity___);
   return (ImagePartsGroupEntity_array *)System_Linq_Enumerable__ToArray_object_(
                                           v13,
-                                          (const MethodInfo_311CA8C *)Method_System_Linq_Enumerable_ToArray_ImagePartsGroupEntity___);
+                                          (const MethodInfo_31272F4 *)Method_System_Linq_Enumerable_ToArray_ImagePartsGroupEntity___);
 }
 
 
@@ -1062,17 +1062,17 @@ bool ImagePartsGroupMaster__TryGetEntity(
 {
   Il2CppObject *PK; // x2
 
-  if ( (byte_4C37E1E & 1) == 0 )
+  if ( (byte_4C43417 & 1) == 0 )
   {
-    sub_1C32C20(&Method_DataMasterBase_ImagePartsGroupMaster__ImagePartsGroupEntity__string__TryGetEntity__);
-    byte_4C37E1E = 1;
+    sub_1C37058(&Method_DataMasterBase_ImagePartsGroupMaster__ImagePartsGroupEntity__string__TryGetEntity__);
+    byte_4C43417 = 1;
   }
   PK = (Il2CppObject *)ImagePartsGroupEntity__CreatePK(id, idx, *(const MethodInfo **)&id);
   return DataMasterBase_object__object__object___TryGetEntity(
            (DataMasterBase_TMaster__TEntity__PKType__o *)this,
            (Il2CppObject **)entity,
            PK,
-           (const MethodInfo_339B33C *)Method_DataMasterBase_ImagePartsGroupMaster__ImagePartsGroupEntity__string__TryGetEntity__);
+           (const MethodInfo_33A5BA4 *)Method_DataMasterBase_ImagePartsGroupMaster__ImagePartsGroupEntity__string__TryGetEntity__);
 }
 
 
@@ -1082,15 +1082,15 @@ void ImagePartsGroupMaster___c___cctor(const MethodInfo *method)
   int32_t v2; // w2
   const MethodInfo *v3; // x3
 
-  if ( (byte_4C37E1F & 1) == 0 )
+  if ( (byte_4C43418 & 1) == 0 )
   {
-    sub_1C32C20(&ImagePartsGroupMaster___c_TypeInfo);
-    byte_4C37E1F = 1;
+    sub_1C37058(&ImagePartsGroupMaster___c_TypeInfo);
+    byte_4C43418 = 1;
   }
-  v1 = (Il2CppObject *)sub_1C32E6C(ImagePartsGroupMaster___c_TypeInfo);
+  v1 = (Il2CppObject *)sub_1C372A4(ImagePartsGroupMaster___c_TypeInfo);
   System_Object___ctor(v1, 0);
   ImagePartsGroupMaster___c_TypeInfo->static_fields->__9 = (struct ImagePartsGroupMaster___c_o *)v1;
-  sub_1C32BC4((CGThumbnailListItem_o *)ImagePartsGroupMaster___c_TypeInfo->static_fields, (int32_t)v1, v2, v3);
+  sub_1C36FFC((CGThumbnailListItem_o *)ImagePartsGroupMaster___c_TypeInfo->static_fields, (int32_t)v1, v2, v3);
 }
 
 
@@ -1106,7 +1106,7 @@ int32_t ImagePartsGroupMaster___c___ConcatMaterialImageValues_b__2_0(
         const MethodInfo *method)
 {
   if ( !entity )
-    sub_1C32E7C(this);
+    sub_1C372B4(this);
   return entity->fields.typeValue;
 }
 
@@ -1121,13 +1121,13 @@ int32_t ImagePartsGroupMaster___c___ConcatMaterialImageValues_b__2_1(
   int32_t *p_offset; // x10
   __int64 v7; // x0
 
-  if ( (byte_4C37E20 & 1) == 0 )
+  if ( (byte_4C43419 & 1) == 0 )
   {
-    this = (ImagePartsGroupMaster___c_o *)sub_1C32C20(&System_Linq_IGrouping_int__ImagePartsGroupEntity__TypeInfo);
-    byte_4C37E20 = 1;
+    this = (ImagePartsGroupMaster___c_o *)sub_1C37058(&System_Linq_IGrouping_int__ImagePartsGroupEntity__TypeInfo);
+    byte_4C43419 = 1;
   }
   if ( !typeValueGroup )
-    sub_1C32E7C(this);
+    sub_1C372B4(this);
   klass = typeValueGroup->klass;
   v5 = *(unsigned __int16 *)&typeValueGroup->klass->_2.rank;
   if ( *(_WORD *)&typeValueGroup->klass->_2.rank )
@@ -1145,7 +1145,7 @@ int32_t ImagePartsGroupMaster___c___ConcatMaterialImageValues_b__2_1(
   else
   {
 LABEL_8:
-    v7 = sub_1C83438(typeValueGroup, System_Linq_IGrouping_int__ImagePartsGroupEntity__TypeInfo, 0);
+    v7 = sub_1C87870(typeValueGroup, System_Linq_IGrouping_int__ImagePartsGroupEntity__TypeInfo, 0);
   }
   return (*(__int64 (__fastcall **)(System_Linq_IGrouping_int__ImagePartsGroupEntity__o *, _QWORD))v7)(
            typeValueGroup,
@@ -1159,7 +1159,7 @@ int32_t ImagePartsGroupMaster___c___GetDefaultImageValues_b__4_0(
         const MethodInfo *method)
 {
   if ( !entity )
-    sub_1C32E7C(this);
+    sub_1C372B4(this);
   return entity->fields.typeValue;
 }
 
@@ -1174,13 +1174,13 @@ int32_t ImagePartsGroupMaster___c___GetDefaultImageValues_b__4_1(
   int32_t *p_offset; // x10
   __int64 v7; // x0
 
-  if ( (byte_4C37E21 & 1) == 0 )
+  if ( (byte_4C4341A & 1) == 0 )
   {
-    this = (ImagePartsGroupMaster___c_o *)sub_1C32C20(&System_Linq_IGrouping_int__ImagePartsGroupEntity__TypeInfo);
-    byte_4C37E21 = 1;
+    this = (ImagePartsGroupMaster___c_o *)sub_1C37058(&System_Linq_IGrouping_int__ImagePartsGroupEntity__TypeInfo);
+    byte_4C4341A = 1;
   }
   if ( !typeValueGroup )
-    sub_1C32E7C(this);
+    sub_1C372B4(this);
   klass = typeValueGroup->klass;
   v5 = *(unsigned __int16 *)&typeValueGroup->klass->_2.rank;
   if ( *(_WORD *)&typeValueGroup->klass->_2.rank )
@@ -1198,7 +1198,7 @@ int32_t ImagePartsGroupMaster___c___GetDefaultImageValues_b__4_1(
   else
   {
 LABEL_8:
-    v7 = sub_1C83438(typeValueGroup, System_Linq_IGrouping_int__ImagePartsGroupEntity__TypeInfo, 0);
+    v7 = sub_1C87870(typeValueGroup, System_Linq_IGrouping_int__ImagePartsGroupEntity__TypeInfo, 0);
   }
   return (*(__int64 (__fastcall **)(System_Linq_IGrouping_int__ImagePartsGroupEntity__o *, _QWORD))v7)(
            typeValueGroup,
@@ -1212,7 +1212,7 @@ bool ImagePartsGroupMaster___c___GetDefaultImageValues_b__4_2(
         const MethodInfo *method)
 {
   if ( !entity )
-    sub_1C32E7C(this);
+    sub_1C372B4(this);
   return ImagePartsGroupEntity__IsUseEquipImage(entity, (const MethodInfo *)entity);
 }
 
@@ -1223,7 +1223,7 @@ int32_t ImagePartsGroupMaster___c___GetDefaultImageValues_b__4_3(
         const MethodInfo *method)
 {
   if ( !entity )
-    sub_1C32E7C(this);
+    sub_1C372B4(this);
   return entity->fields.imageValue;
 }
 
@@ -1234,7 +1234,7 @@ bool ImagePartsGroupMaster___c___GetOpenEntities_b__1_0(
         const MethodInfo *method)
 {
   if ( !v )
-    sub_1C32E7C(this);
+    sub_1C372B4(this);
   return ImagePartsGroupEntity__IsOpen(v, (const MethodInfo *)v);
 }
 
@@ -1253,7 +1253,7 @@ bool ImagePartsGroupMaster___c__DisplayClass0_0___GetEntities_b__0(
         const MethodInfo *method)
 {
   if ( !v )
-    sub_1C32E7C(this);
+    sub_1C372B4(this);
   return v->fields.id == this->fields.id;
 }
 
@@ -1272,7 +1272,7 @@ bool ImagePartsGroupMaster___c__DisplayClass6_0___GetDispDialogEntityFromQuestId
         const MethodInfo *method)
 {
   if ( !v )
-    sub_1C32E7C(this);
+    sub_1C372B4(this);
   return v->fields.condType == 1
       && v->fields.condId == this->fields.questId
       && ImagePartsGroupEntity__ExistsSkill(v, (const MethodInfo *)v);

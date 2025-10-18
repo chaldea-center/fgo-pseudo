@@ -2,10 +2,10 @@ void PartyOrganizationAutoOrganizationConfirmDialog___ctor(
         PartyOrganizationAutoOrganizationConfirmDialog_o *this,
         const MethodInfo *method)
 {
-  if ( (byte_4C3334C & 1) == 0 )
+  if ( (byte_4C3E936 & 1) == 0 )
   {
-    sub_1C32C20(&BaseDialog_TypeInfo);
-    byte_4C3334C = 1;
+    sub_1C37058(&BaseDialog_TypeInfo);
+    byte_4C3E936 = 1;
   }
   if ( !BaseDialog_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(BaseDialog_TypeInfo);
@@ -28,15 +28,15 @@ void PartyOrganizationAutoOrganizationConfirmDialog__Close(
 {
   System_Action_o *v5; // x20
 
-  if ( (byte_4C33345 & 1) == 0 )
+  if ( (byte_4C3E92F & 1) == 0 )
   {
-    sub_1C32C20(&System_Action_TypeInfo);
-    sub_1C32C20(&Method_PartyOrganizationAutoOrganizationConfirmDialog_EndClose__);
-    byte_4C33345 = 1;
+    sub_1C37058(&System_Action_TypeInfo);
+    sub_1C37058(&Method_PartyOrganizationAutoOrganizationConfirmDialog_EndClose__);
+    byte_4C3E92F = 1;
   }
   this->fields.autoDestroyEndClose = autoDestroy;
   this->fields.state = 4;
-  v5 = (System_Action_o *)sub_1C32E6C(System_Action_TypeInfo);
+  v5 = (System_Action_o *)sub_1C372A4(System_Action_TypeInfo);
   System_Action___ctor(v5, (Il2CppObject *)this, Method_PartyOrganizationAutoOrganizationConfirmDialog_EndClose__, 0);
   BaseDialog__Close((BaseDialog_o *)this, v5, 0);
 }
@@ -48,17 +48,17 @@ void PartyOrganizationAutoOrganizationConfirmDialog__EndClose(
 {
   UnityEngine_Object_o *gameObject; // x19
 
-  if ( (byte_4C33346 & 1) == 0 )
+  if ( (byte_4C3E930 & 1) == 0 )
   {
-    sub_1C32C20(&UnityEngine_Object_TypeInfo);
-    byte_4C33346 = 1;
+    sub_1C37058(&UnityEngine_Object_TypeInfo);
+    byte_4C3E930 = 1;
   }
   if ( this->fields.autoDestroyEndClose )
   {
     gameObject = (UnityEngine_Object_o *)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
     if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-    UnityEngine_Object__Destroy_71223640(gameObject, 0);
+    UnityEngine_Object__Destroy_71266752(gameObject, 0);
   }
   else
   {
@@ -81,10 +81,10 @@ void PartyOrganizationAutoOrganizationConfirmDialog__Init(
 {
   UILabel_o *titleLabel; // x0
 
-  if ( (byte_4C33343 & 1) == 0 )
+  if ( (byte_4C3E92D & 1) == 0 )
   {
-    sub_1C32C20(&StringLiteral_1/*""*/);
-    byte_4C33343 = 1;
+    sub_1C37058(&StringLiteral_1/*""*/);
+    byte_4C3E92D = 1;
   }
   titleLabel = this->fields.titleLabel;
   if ( !titleLabel )
@@ -123,7 +123,7 @@ void PartyOrganizationAutoOrganizationConfirmDialog__Init(
         (titleLabel = (UILabel_o *)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0)) == 0) )
   {
 LABEL_15:
-    sub_1C32E7C(titleLabel);
+    sub_1C372B4(titleLabel);
   }
   UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)titleLabel, 0, 0);
   this->fields.state = 0;
@@ -139,18 +139,18 @@ void PartyOrganizationAutoOrganizationConfirmDialog__OnClickCancel(
   System_Reflection_MethodBase_o *v4; // x0
   struct PartyOrganizationAutoOrganizationConfirmDialog_CloseDelegate_o *closeFunc; // x8
 
-  if ( (byte_4C33347 & 1) == 0 )
+  if ( (byte_4C3E931 & 1) == 0 )
   {
-    sub_1C32C20(&Method_PartyOrganizationAutoOrganizationConfirmDialog_OnClickCancel__);
-    byte_4C33347 = 1;
+    sub_1C37058(&Method_PartyOrganizationAutoOrganizationConfirmDialog_OnClickCancel__);
+    byte_4C3E931 = 1;
   }
   if ( this->fields.state == 2 )
   {
     this->fields.state = 3;
     v3 = Method_PartyOrganizationAutoOrganizationConfirmDialog_OnClickCancel__;
     if ( (*((_BYTE *)Method_PartyOrganizationAutoOrganizationConfirmDialog_OnClickCancel__ + 83) & 2) != 0 )
-      v3 = (_QWORD *)sub_1C32C38(Method_PartyOrganizationAutoOrganizationConfirmDialog_OnClickCancel__);
-    v4 = (System_Reflection_MethodBase_o *)sub_1C32C04(v3, v3[4]);
+      v3 = (_QWORD *)sub_1C37070(Method_PartyOrganizationAutoOrganizationConfirmDialog_OnClickCancel__);
+    v4 = (System_Reflection_MethodBase_o *)sub_1C3703C(v3, v3[4]);
     OverwriteAssetSoundName__PlaySystemSe(v4, 1, 0, 0);
     closeFunc = this->fields.closeFunc;
     if ( closeFunc )
@@ -170,18 +170,18 @@ void PartyOrganizationAutoOrganizationConfirmDialog__OnClickExec(
   System_Reflection_MethodBase_o *v4; // x0
   struct PartyOrganizationAutoOrganizationConfirmDialog_CloseDelegate_o *closeFunc; // x8
 
-  if ( (byte_4C33349 & 1) == 0 )
+  if ( (byte_4C3E933 & 1) == 0 )
   {
-    sub_1C32C20(&Method_PartyOrganizationAutoOrganizationConfirmDialog_OnClickExec__);
-    byte_4C33349 = 1;
+    sub_1C37058(&Method_PartyOrganizationAutoOrganizationConfirmDialog_OnClickExec__);
+    byte_4C3E933 = 1;
   }
   if ( this->fields.state == 2 )
   {
     this->fields.state = 3;
     v3 = Method_PartyOrganizationAutoOrganizationConfirmDialog_OnClickExec__;
     if ( (*((_BYTE *)Method_PartyOrganizationAutoOrganizationConfirmDialog_OnClickExec__ + 83) & 2) != 0 )
-      v3 = (_QWORD *)sub_1C32C38(Method_PartyOrganizationAutoOrganizationConfirmDialog_OnClickExec__);
-    v4 = (System_Reflection_MethodBase_o *)sub_1C32C04(v3, v3[4]);
+      v3 = (_QWORD *)sub_1C37070(Method_PartyOrganizationAutoOrganizationConfirmDialog_OnClickExec__);
+    v4 = (System_Reflection_MethodBase_o *)sub_1C3703C(v3, v3[4]);
     OverwriteAssetSoundName__PlaySystemSe(v4, 0, 0, 0);
     closeFunc = this->fields.closeFunc;
     if ( closeFunc )
@@ -222,40 +222,40 @@ void PartyOrganizationAutoOrganizationConfirmDialog__OnClickSetting(
   const MethodInfo *v25; // x3
   const MethodInfo *v26; // x5
 
-  if ( (byte_4C33348 & 1) == 0 )
+  if ( (byte_4C3E932 & 1) == 0 )
   {
-    sub_1C32C20(&AutoOrganizationManager_TypeInfo);
-    sub_1C32C20(&PartyOrganizationAutoOrganizationSettingDialog_CallbackFunc_TypeInfo);
-    sub_1C32C20(&Method_UnityEngine_GameObject_GetComponent_PartyOrganizationAutoOrganizationSettingDialog___);
-    sub_1C32C20(&Method_UnityEngine_Object_Instantiate_GameObject___);
-    sub_1C32C20(&UnityEngine_Object_TypeInfo);
-    sub_1C32C20(&Method_PartyOrganizationAutoOrganizationConfirmDialog_OnClickSetting__);
-    sub_1C32C20(&Method_PartyOrganizationAutoOrganizationConfirmDialog___c__DisplayClass30_0__OnClickSetting_b__0__);
-    sub_1C32C20(&PartyOrganizationAutoOrganizationConfirmDialog___c__DisplayClass30_0_TypeInfo);
-    byte_4C33348 = 1;
+    sub_1C37058(&AutoOrganizationManager_TypeInfo);
+    sub_1C37058(&PartyOrganizationAutoOrganizationSettingDialog_CallbackFunc_TypeInfo);
+    sub_1C37058(&Method_UnityEngine_GameObject_GetComponent_PartyOrganizationAutoOrganizationSettingDialog___);
+    sub_1C37058(&Method_UnityEngine_Object_Instantiate_GameObject___);
+    sub_1C37058(&UnityEngine_Object_TypeInfo);
+    sub_1C37058(&Method_PartyOrganizationAutoOrganizationConfirmDialog_OnClickSetting__);
+    sub_1C37058(&Method_PartyOrganizationAutoOrganizationConfirmDialog___c__DisplayClass30_0__OnClickSetting_b__0__);
+    sub_1C37058(&PartyOrganizationAutoOrganizationConfirmDialog___c__DisplayClass30_0_TypeInfo);
+    byte_4C3E932 = 1;
   }
-  v3 = sub_1C32E6C(PartyOrganizationAutoOrganizationConfirmDialog___c__DisplayClass30_0_TypeInfo);
+  v3 = sub_1C372A4(PartyOrganizationAutoOrganizationConfirmDialog___c__DisplayClass30_0_TypeInfo);
   System_Object___ctor((Il2CppObject *)v3, 0);
   if ( !v3 )
     goto LABEL_21;
   *(_QWORD *)(v3 + 32) = this;
-  sub_1C32BC4((CGThumbnailListItem_o *)(v3 + 32), (int32_t)this, v5, v6);
+  sub_1C36FFC((CGThumbnailListItem_o *)(v3 + 32), (int32_t)this, v5, v6);
   if ( this->fields.state == 2 )
   {
     v7 = Method_PartyOrganizationAutoOrganizationConfirmDialog_OnClickSetting__;
     if ( (*((_BYTE *)Method_PartyOrganizationAutoOrganizationConfirmDialog_OnClickSetting__ + 83) & 2) != 0 )
-      v7 = (_QWORD *)sub_1C32C38(Method_PartyOrganizationAutoOrganizationConfirmDialog_OnClickSetting__);
-    v8 = (System_Reflection_MethodBase_o *)sub_1C32C04(v7, v7[4]);
+      v7 = (_QWORD *)sub_1C37070(Method_PartyOrganizationAutoOrganizationConfirmDialog_OnClickSetting__);
+    v8 = (System_Reflection_MethodBase_o *)sub_1C3703C(v7, v7[4]);
     OverwriteAssetSoundName__PlaySystemSe(v8, 0, 0, 0);
     settingDialogPrefab = (Il2CppObject *)this->fields.settingDialogPrefab;
     if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
     v10 = UnityEngine_Object__Instantiate_object_(
             settingDialogPrefab,
-            (const MethodInfo_3169758 *)Method_UnityEngine_Object_Instantiate_GameObject___);
+            (const MethodInfo_3173FC0 *)Method_UnityEngine_Object_Instantiate_GameObject___);
     *(_QWORD *)(v3 + 24) = v10;
     v11 = (UnityEngine_Transform_o **)(v3 + 24);
-    sub_1C32BC4((CGThumbnailListItem_o *)(v3 + 24), (int32_t)v10, v12, v13);
+    sub_1C36FFC((CGThumbnailListItem_o *)(v3 + 24), (int32_t)v10, v12, v13);
     v14 = *(UnityEngine_GameObject_o **)(v3 + 24);
     transform = UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0);
     if ( transform )
@@ -267,9 +267,9 @@ void PartyOrganizationAutoOrganizationConfirmDialog__OnClickSetting(
       {
         Component_object = UnityEngine_GameObject__GetComponent_object_(
                              (UnityEngine_GameObject_o *)transform,
-                             (const MethodInfo_3134970 *)Method_UnityEngine_GameObject_GetComponent_PartyOrganizationAutoOrganizationSettingDialog___);
+                             (const MethodInfo_313F1D8 *)Method_UnityEngine_GameObject_GetComponent_PartyOrganizationAutoOrganizationSettingDialog___);
         *(_QWORD *)(v3 + 16) = Component_object;
-        sub_1C32BC4((CGThumbnailListItem_o *)(v3 + 16), (int32_t)Component_object, v17, v18);
+        sub_1C36FFC((CGThumbnailListItem_o *)(v3 + 16), (int32_t)Component_object, v17, v18);
         transform = *(UnityEngine_Transform_o **)(v3 + 16);
         if ( transform )
         {
@@ -278,10 +278,10 @@ void PartyOrganizationAutoOrganizationConfirmDialog__OnClickSetting(
           v19 = *(PartyOrganizationAutoOrganizationSettingDialog_o **)(v3 + 16);
           if ( !AutoOrganizationManager_TypeInfo->_2.cctor_finished )
             j_il2cpp_runtime_class_init_0(AutoOrganizationManager_TypeInfo);
-          if ( !byte_4C333D0 )
+          if ( !byte_4C3E9BA )
           {
-            sub_1C32C20(&AutoOrganizationManager_TypeInfo);
-            byte_4C333D0 = 1;
+            sub_1C37058(&AutoOrganizationManager_TypeInfo);
+            byte_4C3E9BA = 1;
           }
           v20 = AutoOrganizationManager_TypeInfo;
           if ( !AutoOrganizationManager_TypeInfo->_2.cctor_finished )
@@ -292,7 +292,7 @@ void PartyOrganizationAutoOrganizationConfirmDialog__OnClickSetting(
           eventId = this->fields.eventId;
           preQuest = this->fields.preQuest;
           autoOrganizationInfo = v20->static_fields->autoOrganizationInfo;
-          v24 = (PartyOrganizationAutoOrganizationSettingDialog_CallbackFunc_o *)sub_1C32E6C(PartyOrganizationAutoOrganizationSettingDialog_CallbackFunc_TypeInfo);
+          v24 = (PartyOrganizationAutoOrganizationSettingDialog_CallbackFunc_o *)sub_1C372A4(PartyOrganizationAutoOrganizationSettingDialog_CallbackFunc_TypeInfo);
           PartyOrganizationAutoOrganizationSettingDialog_CallbackFunc___ctor(
             v24,
             (Il2CppObject *)v3,
@@ -307,7 +307,7 @@ void PartyOrganizationAutoOrganizationConfirmDialog__OnClickSetting(
       }
     }
 LABEL_21:
-    sub_1C32E7C(transform);
+    sub_1C372B4(transform);
   }
 }
 
@@ -347,7 +347,7 @@ void PartyOrganizationAutoOrganizationConfirmDialog__Open(
   UILabel_o *v35; // x21
   AutoOrganizationManager_c *v36; // x0
   const MethodInfo *v37; // x1
-  System_String_o *String_71182452; // x21
+  System_String_o *String_71225564; // x21
   System_String_c *klass; // x8
   System_String_o *v40; // x21
   unsigned __int64 v41; // x24
@@ -355,34 +355,34 @@ void PartyOrganizationAutoOrganizationConfirmDialog__Open(
   System_Action_o *v43; // x20
 
   v13 = preQuest;
-  if ( (byte_4C33344 & 1) == 0 )
+  if ( (byte_4C3E92E & 1) == 0 )
   {
-    sub_1C32C20(&System_Action_TypeInfo);
-    sub_1C32C20(&AutoOrganizationManager_TypeInfo);
-    sub_1C32C20(&LocalizationManager_TypeInfo);
-    sub_1C32C20(&Method_PartyOrganizationAutoOrganizationConfirmDialog_EndOpen__);
-    sub_1C32C20(&StringLiteral_2076/*"AUTO_ORGANIZATION_CONFIRM_SETTING"*/);
-    sub_1C32C20(&StringLiteral_2078/*"AUTO_ORGANIZATION_CONFIRM_TITLE_WHEN_AUTO_OPEN"*/);
-    sub_1C32C20(&StringLiteral_2061/*"AUTO_ORGANIZATION_CONFIRM_CANCEL_WHEN_AUTO_OPEN"*/);
-    sub_1C32C20(&StringLiteral_2064/*"AUTO_ORGANIZATION_CONFIRM_DETAIL_CENTER_ADD"*/);
-    sub_1C32C20(&StringLiteral_2060/*"AUTO_ORGANIZATION_CONFIRM_CANCEL"*/);
-    sub_1C32C20(&StringLiteral_2073/*"AUTO_ORGANIZATION_CONFIRM_MESSAGE_EXIST_QUEST_BUFF"*/);
-    sub_1C32C20(&StringLiteral_2072/*"AUTO_ORGANIZATION_CONFIRM_MESSAGE"*/);
-    sub_1C32C20(&StringLiteral_2063/*"AUTO_ORGANIZATION_CONFIRM_DETAIL_CENTER"*/);
-    sub_1C32C20(&StringLiteral_2067/*"AUTO_ORGANIZATION_CONFIRM_DETAIL_LEFT"*/);
-    sub_1C32C20(&StringLiteral_2077/*"AUTO_ORGANIZATION_CONFIRM_TITLE"*/);
-    sub_1C32C20(&StringLiteral_2074/*"AUTO_ORGANIZATION_CONFIRM_MESSAGE_EXIST_QUEST_BUFF_WHEN_AUTO_OPEN"*/);
-    sub_1C32C20(&StringLiteral_2496/*"AutoOrganizationBonusFilterEventId"*/);
-    sub_1C32C20(&StringLiteral_2068/*"AUTO_ORGANIZATION_CONFIRM_DETAIL_LEFT_MODE"*/);
-    sub_1C32C20(&StringLiteral_2075/*"AUTO_ORGANIZATION_CONFIRM_MESSAGE_WHEN_AUTO_OPEN"*/);
-    sub_1C32C20(&StringLiteral_2062/*"AUTO_ORGANIZATION_CONFIRM_DECIDE"*/);
-    sub_1C32C20(&StringLiteral_2071/*"AUTO_ORGANIZATION_CONFIRM_DETAIL_TITLE"*/);
-    byte_4C33344 = 1;
+    sub_1C37058(&System_Action_TypeInfo);
+    sub_1C37058(&AutoOrganizationManager_TypeInfo);
+    sub_1C37058(&LocalizationManager_TypeInfo);
+    sub_1C37058(&Method_PartyOrganizationAutoOrganizationConfirmDialog_EndOpen__);
+    sub_1C37058(&StringLiteral_2076/*"AUTO_ORGANIZATION_CONFIRM_SETTING"*/);
+    sub_1C37058(&StringLiteral_2078/*"AUTO_ORGANIZATION_CONFIRM_TITLE_WHEN_AUTO_OPEN"*/);
+    sub_1C37058(&StringLiteral_2061/*"AUTO_ORGANIZATION_CONFIRM_CANCEL_WHEN_AUTO_OPEN"*/);
+    sub_1C37058(&StringLiteral_2064/*"AUTO_ORGANIZATION_CONFIRM_DETAIL_CENTER_ADD"*/);
+    sub_1C37058(&StringLiteral_2060/*"AUTO_ORGANIZATION_CONFIRM_CANCEL"*/);
+    sub_1C37058(&StringLiteral_2073/*"AUTO_ORGANIZATION_CONFIRM_MESSAGE_EXIST_QUEST_BUFF"*/);
+    sub_1C37058(&StringLiteral_2072/*"AUTO_ORGANIZATION_CONFIRM_MESSAGE"*/);
+    sub_1C37058(&StringLiteral_2063/*"AUTO_ORGANIZATION_CONFIRM_DETAIL_CENTER"*/);
+    sub_1C37058(&StringLiteral_2067/*"AUTO_ORGANIZATION_CONFIRM_DETAIL_LEFT"*/);
+    sub_1C37058(&StringLiteral_2077/*"AUTO_ORGANIZATION_CONFIRM_TITLE"*/);
+    sub_1C37058(&StringLiteral_2074/*"AUTO_ORGANIZATION_CONFIRM_MESSAGE_EXIST_QUEST_BUFF_WHEN_AUTO_OPEN"*/);
+    sub_1C37058(&StringLiteral_2496/*"AutoOrganizationBonusFilterEventId"*/);
+    sub_1C37058(&StringLiteral_2068/*"AUTO_ORGANIZATION_CONFIRM_DETAIL_LEFT_MODE"*/);
+    sub_1C37058(&StringLiteral_2075/*"AUTO_ORGANIZATION_CONFIRM_MESSAGE_WHEN_AUTO_OPEN"*/);
+    sub_1C37058(&StringLiteral_2062/*"AUTO_ORGANIZATION_CONFIRM_DECIDE"*/);
+    sub_1C37058(&StringLiteral_2071/*"AUTO_ORGANIZATION_CONFIRM_DETAIL_TITLE"*/);
+    byte_4C3E92E = 1;
   }
   this->fields.closeFunc = func;
   this->fields.eventId = eventId;
   this->fields.preQuest = v13;
-  sub_1C32BC4(
+  sub_1C36FFC(
     (CGThumbnailListItem_o *)&this->fields.closeFunc,
     (int32_t)func,
     preQuest,
@@ -443,14 +443,14 @@ void PartyOrganizationAutoOrganizationConfirmDialog__Open(
     if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
     v26 = LocalizationManager__Get((System_String_o *)StringLiteral_2068/*"AUTO_ORGANIZATION_CONFIRM_DETAIL_LEFT_MODE"*/, 0);
-    v27 = System_String__Concat_63518544(mText, v26, 0);
+    v27 = System_String__Concat_63561656(mText, v26, 0);
     UILabel__set_text(v24, v27, 0);
     v28 = this->fields.detailCenter;
     if ( !v28 )
       goto LABEL_60;
     v29 = v28->fields.mText;
     v30 = LocalizationManager__Get((System_String_o *)StringLiteral_2064/*"AUTO_ORGANIZATION_CONFIRM_DETAIL_CENTER_ADD"*/, 0);
-    v31 = System_String__Concat_63518544(v29, v30, 0);
+    v31 = System_String__Concat_63561656(v29, v30, 0);
     UILabel__set_text(v28, v31, 0);
   }
   if ( !isAutoOpen )
@@ -494,10 +494,10 @@ LABEL_29:
 LABEL_34:
   if ( !AutoOrganizationManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(AutoOrganizationManager_TypeInfo);
-  if ( !byte_4C333D0 )
+  if ( !byte_4C3E9BA )
   {
-    sub_1C32C20(&AutoOrganizationManager_TypeInfo);
-    byte_4C333D0 = 1;
+    sub_1C37058(&AutoOrganizationManager_TypeInfo);
+    byte_4C3E9BA = 1;
   }
   v36 = AutoOrganizationManager_TypeInfo;
   if ( !AutoOrganizationManager_TypeInfo->_2.cctor_finished )
@@ -511,15 +511,15 @@ LABEL_34:
   ListViewSort__Load((ListViewSort_o *)autoOrganizationInfo, 0);
   if ( eventId < 1 )
     goto LABEL_59;
-  String_71182452 = UnityEngine_PlayerPrefs__GetString_71182452((System_String_o *)StringLiteral_2496/*"AutoOrganizationBonusFilterEventId"*/, 0);
-  autoOrganizationInfo = (System_String_o *)System_String__IsNullOrEmpty(String_71182452, 0);
+  String_71225564 = UnityEngine_PlayerPrefs__GetString_71225564((System_String_o *)StringLiteral_2496/*"AutoOrganizationBonusFilterEventId"*/, 0);
+  autoOrganizationInfo = (System_String_o *)System_String__IsNullOrEmpty(String_71225564, 0);
   if ( ((unsigned __int8)autoOrganizationInfo & 1) != 0 )
     goto LABEL_51;
-  if ( !String_71182452 )
+  if ( !String_71225564 )
     goto LABEL_60;
-  if ( String_71182452->fields._stringLength < 1 )
+  if ( String_71225564->fields._stringLength < 1 )
     goto LABEL_51;
-  autoOrganizationInfo = (System_String_o *)System_String__Split(String_71182452, 0x2Cu, 0, 0);
+  autoOrganizationInfo = (System_String_o *)System_String__Split(String_71225564, 0x2Cu, 0, 0);
   if ( !autoOrganizationInfo )
     goto LABEL_60;
   klass = autoOrganizationInfo[1].klass;
@@ -529,10 +529,10 @@ LABEL_34:
 LABEL_51:
     if ( !AutoOrganizationManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(AutoOrganizationManager_TypeInfo);
-    if ( !byte_4C333D0 )
+    if ( !byte_4C3E9BA )
     {
-      sub_1C32C20(&AutoOrganizationManager_TypeInfo);
-      byte_4C333D0 = 1;
+      sub_1C37058(&AutoOrganizationManager_TypeInfo);
+      byte_4C3E9BA = 1;
     }
     v42 = AutoOrganizationManager_TypeInfo;
     if ( !AutoOrganizationManager_TypeInfo->_2.cctor_finished )
@@ -547,13 +547,13 @@ LABEL_51:
       goto LABEL_59;
     }
 LABEL_60:
-    sub_1C32E7C(autoOrganizationInfo);
+    sub_1C372B4(autoOrganizationInfo);
   }
   v41 = 0;
   while ( 1 )
   {
     if ( v41 >= (unsigned int)klass )
-      sub_1C32E84(autoOrganizationInfo);
+      sub_1C372BC(autoOrganizationInfo);
     autoOrganizationInfo = (System_String_o *)System_Int32__Parse(*((System_String_o **)&v40[1].monitor + v41), 0);
     if ( (_DWORD)autoOrganizationInfo == eventId )
       break;
@@ -564,7 +564,7 @@ LABEL_60:
 LABEL_59:
   PartyOrganizationAutoOrganizationConfirmDialog__SetDetailLabel(this, v37);
   this->fields.state = 1;
-  v43 = (System_Action_o *)sub_1C32E6C(System_Action_TypeInfo);
+  v43 = (System_Action_o *)sub_1C372A4(System_Action_TypeInfo);
   System_Action___ctor(v43, (Il2CppObject *)this, Method_PartyOrganizationAutoOrganizationConfirmDialog_EndOpen__, 0);
   BaseDialog__Open((BaseDialog_o *)this, v43, 0, 0, 0);
 }
@@ -576,7 +576,7 @@ void PartyOrganizationAutoOrganizationConfirmDialog__SetDetailLabel(
 {
   AutoOrganizationManager_c *v3; // x0
   ListViewSort_o *autoOrganizationInfo; // x20
-  __int64 Filter_43764480; // x0
+  __int64 Filter_43866584; // x0
   __int64 v6; // x21
   unsigned __int64 v7; // x22
   __int64 v8; // x25
@@ -681,36 +681,36 @@ void PartyOrganizationAutoOrganizationConfirmDialog__SetDetailLabel(
   System_String_o *v107; // x0
   int v108; // [xsp+Ch] [xbp-64h] BYREF
 
-  if ( (byte_4C3334A & 1) == 0 )
+  if ( (byte_4C3E934 & 1) == 0 )
   {
-    sub_1C32C20(&AutoOrganizationManager_TypeInfo);
-    sub_1C32C20(&bool___TypeInfo);
-    sub_1C32C20(&int_TypeInfo);
-    sub_1C32C20(&Method_System_Collections_Generic_List_string__Add__);
-    sub_1C32C20(&Method_System_Collections_Generic_List_string__Clear__);
-    sub_1C32C20(&Method_System_Collections_Generic_List_string___ctor__);
-    sub_1C32C20(&System_Collections_Generic_List_string__TypeInfo);
-    sub_1C32C20(&LocalizationManager_TypeInfo);
-    sub_1C32C20(&StringLiteral_43/*"\n"*/);
-    sub_1C32C20(&StringLiteral_2069/*"AUTO_ORGANIZATION_CONFIRM_DETAIL_MODE_USE_ENEMY_CLASS_ALL"*/);
-    sub_1C32C20(&StringLiteral_2070/*"AUTO_ORGANIZATION_CONFIRM_DETAIL_MODE_USE_ENEMY_CLASS_MAIN"*/);
-    sub_1C32C20(&StringLiteral_113/*" "*/);
-    sub_1C32C20(&StringLiteral_11806/*"SERVANT_SORT_FILTER_RARITY_UNCOMMON"*/);
-    sub_1C32C20(&StringLiteral_2065/*"AUTO_ORGANIZATION_CONFIRM_DETAIL_KIND_EQUIP"*/);
-    sub_1C32C20(&StringLiteral_11805/*"SERVANT_SORT_FILTER_RARITY_SSRARE"*/);
-    sub_1C32C20(&StringLiteral_12007/*"SERVANT_UNIT"*/);
-    sub_1C32C20(&StringLiteral_11804/*"SERVANT_SORT_FILTER_RARITY_SRARE"*/);
-    sub_1C32C20(&StringLiteral_11802/*"SERVANT_SORT_FILTER_RARITY_COMMON"*/);
-    sub_1C32C20(&StringLiteral_2066/*"AUTO_ORGANIZATION_CONFIRM_DETAIL_KIND_SERVANT"*/);
-    sub_1C32C20(&StringLiteral_11803/*"SERVANT_SORT_FILTER_RARITY_RARE"*/);
-    byte_4C3334A = 1;
+    sub_1C37058(&AutoOrganizationManager_TypeInfo);
+    sub_1C37058(&bool___TypeInfo);
+    sub_1C37058(&int_TypeInfo);
+    sub_1C37058(&Method_System_Collections_Generic_List_string__Add__);
+    sub_1C37058(&Method_System_Collections_Generic_List_string__Clear__);
+    sub_1C37058(&Method_System_Collections_Generic_List_string___ctor__);
+    sub_1C37058(&System_Collections_Generic_List_string__TypeInfo);
+    sub_1C37058(&LocalizationManager_TypeInfo);
+    sub_1C37058(&StringLiteral_43/*"\n"*/);
+    sub_1C37058(&StringLiteral_2069/*"AUTO_ORGANIZATION_CONFIRM_DETAIL_MODE_USE_ENEMY_CLASS_ALL"*/);
+    sub_1C37058(&StringLiteral_2070/*"AUTO_ORGANIZATION_CONFIRM_DETAIL_MODE_USE_ENEMY_CLASS_MAIN"*/);
+    sub_1C37058(&StringLiteral_113/*" "*/);
+    sub_1C37058(&StringLiteral_11807/*"SERVANT_SORT_FILTER_RARITY_UNCOMMON"*/);
+    sub_1C37058(&StringLiteral_2065/*"AUTO_ORGANIZATION_CONFIRM_DETAIL_KIND_EQUIP"*/);
+    sub_1C37058(&StringLiteral_11806/*"SERVANT_SORT_FILTER_RARITY_SSRARE"*/);
+    sub_1C37058(&StringLiteral_12008/*"SERVANT_UNIT"*/);
+    sub_1C37058(&StringLiteral_11805/*"SERVANT_SORT_FILTER_RARITY_SRARE"*/);
+    sub_1C37058(&StringLiteral_11803/*"SERVANT_SORT_FILTER_RARITY_COMMON"*/);
+    sub_1C37058(&StringLiteral_2066/*"AUTO_ORGANIZATION_CONFIRM_DETAIL_KIND_SERVANT"*/);
+    sub_1C37058(&StringLiteral_11804/*"SERVANT_SORT_FILTER_RARITY_RARE"*/);
+    byte_4C3E934 = 1;
   }
   if ( !AutoOrganizationManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(AutoOrganizationManager_TypeInfo);
-  if ( !byte_4C333D0 )
+  if ( !byte_4C3E9BA )
   {
-    sub_1C32C20(&AutoOrganizationManager_TypeInfo);
-    byte_4C333D0 = 1;
+    sub_1C37058(&AutoOrganizationManager_TypeInfo);
+    byte_4C3E9BA = 1;
   }
   v3 = AutoOrganizationManager_TypeInfo;
   if ( !AutoOrganizationManager_TypeInfo->_2.cctor_finished )
@@ -719,36 +719,36 @@ void PartyOrganizationAutoOrganizationConfirmDialog__SetDetailLabel(
     v3 = AutoOrganizationManager_TypeInfo;
   }
   autoOrganizationInfo = v3->static_fields->autoOrganizationInfo;
-  Filter_43764480 = sub_1C32CC8(bool___TypeInfo, 13);
+  Filter_43866584 = sub_1C37100(bool___TypeInfo, 13);
   if ( !autoOrganizationInfo )
     goto LABEL_116;
-  v6 = Filter_43764480;
+  v6 = Filter_43866584;
   v7 = 0;
-  v8 = Filter_43764480 + 32;
+  v8 = Filter_43866584 + 32;
   do
   {
-    Filter_43764480 = ListViewSort__GetFilter_43764480(autoOrganizationInfo, v7, 0);
+    Filter_43866584 = ListViewSort__GetFilter_43866584(autoOrganizationInfo, v7, 0);
     if ( !v6 )
       goto LABEL_116;
     if ( v7 >= *(unsigned int *)(v6 + 24) )
       goto LABEL_115;
-    *(_BYTE *)(v8 + v7++) = Filter_43764480 & 1;
+    *(_BYTE *)(v8 + v7++) = Filter_43866584 & 1;
   }
   while ( v7 != 13 );
-  v9 = sub_1C32E6C(System_Collections_Generic_List_string__TypeInfo);
+  v9 = sub_1C372A4(System_Collections_Generic_List_string__TypeInfo);
   System_Collections_Generic_List_object____ctor(
     (System_Collections_Generic_List_object__o *)v9,
-    (const MethodInfo_3797F88 *)Method_System_Collections_Generic_List_string___ctor__);
+    (const MethodInfo_37A27F0 *)Method_System_Collections_Generic_List_string___ctor__);
   if ( *(_DWORD *)(v6 + 24) < 2u )
 LABEL_115:
-    sub_1C32E84(Filter_43764480);
+    sub_1C372BC(Filter_43866584);
   v10 = *(_BYTE *)(v6 + 32) == 0;
   v11 = *(unsigned __int8 *)(v6 + 33) != 0;
   if ( *(_BYTE *)(v6 + 32) || !*(_BYTE *)(v6 + 33) )
   {
     if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-    Filter_43764480 = (__int64)LocalizationManager__Get((System_String_o *)StringLiteral_2066/*"AUTO_ORGANIZATION_CONFIRM_DETAIL_KIND_SERVANT"*/, 0);
+    Filter_43866584 = (__int64)LocalizationManager__Get((System_String_o *)StringLiteral_2066/*"AUTO_ORGANIZATION_CONFIRM_DETAIL_KIND_SERVANT"*/, 0);
     if ( !v9 )
       goto LABEL_116;
     v14 = *(_QWORD *)(v9 + 16);
@@ -757,27 +757,27 @@ LABEL_115:
     if ( !v14 )
       goto LABEL_116;
     v16 = *(int *)(v9 + 24);
-    v17 = Filter_43764480;
+    v17 = Filter_43866584;
     if ( (unsigned int)v16 >= *(_DWORD *)(v14 + 24) )
     {
       System_Collections_Generic_List_object___AddWithResize(
         (System_Collections_Generic_List_object__o *)v9,
-        (Il2CppObject *)Filter_43764480,
-        *(const MethodInfo_37987BC **)(*(_QWORD *)(v15[4] + 192LL) + 112LL));
+        (Il2CppObject *)Filter_43866584,
+        *(const MethodInfo_37A3024 **)(*(_QWORD *)(v15[4] + 192LL) + 112LL));
     }
     else
     {
       v18 = v14 + 8 * v16;
       *(_DWORD *)(v9 + 24) = v16 + 1;
       *(_QWORD *)(v18 + 32) = v17;
-      sub_1C32BC4((CGThumbnailListItem_o *)(v18 + 32), v17, v12, v13);
+      sub_1C36FFC((CGThumbnailListItem_o *)(v18 + 32), v17, v12, v13);
     }
   }
   if ( v11 || v10 )
   {
     if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-    Filter_43764480 = (__int64)LocalizationManager__Get((System_String_o *)StringLiteral_2065/*"AUTO_ORGANIZATION_CONFIRM_DETAIL_KIND_EQUIP"*/, 0);
+    Filter_43866584 = (__int64)LocalizationManager__Get((System_String_o *)StringLiteral_2065/*"AUTO_ORGANIZATION_CONFIRM_DETAIL_KIND_EQUIP"*/, 0);
     if ( !v9 )
       goto LABEL_116;
     v21 = *(_QWORD *)(v9 + 16);
@@ -786,34 +786,34 @@ LABEL_115:
     if ( !v21 )
       goto LABEL_116;
     v23 = *(int *)(v9 + 24);
-    v24 = Filter_43764480;
+    v24 = Filter_43866584;
     if ( (unsigned int)v23 >= *(_DWORD *)(v21 + 24) )
     {
       System_Collections_Generic_List_object___AddWithResize(
         (System_Collections_Generic_List_object__o *)v9,
-        (Il2CppObject *)Filter_43764480,
-        *(const MethodInfo_37987BC **)(*(_QWORD *)(v22[4] + 192LL) + 112LL));
+        (Il2CppObject *)Filter_43866584,
+        *(const MethodInfo_37A3024 **)(*(_QWORD *)(v22[4] + 192LL) + 112LL));
     }
     else
     {
       v25 = v21 + 8 * v23;
       *(_DWORD *)(v9 + 24) = v23 + 1;
       *(_QWORD *)(v25 + 32) = v24;
-      sub_1C32BC4((CGThumbnailListItem_o *)(v25 + 32), v24, v19, v20);
+      sub_1C36FFC((CGThumbnailListItem_o *)(v25 + 32), v24, v19, v20);
     }
   }
   detailRight = this->fields.detailRight;
-  Filter_43764480 = (__int64)System_String__Join_63561120(
+  Filter_43866584 = (__int64)System_String__Join_63604232(
                                (System_String_o *)StringLiteral_113/*" "*/,
                                (System_Collections_Generic_IEnumerable_string__o *)v9,
                                0);
   if ( !detailRight )
     goto LABEL_116;
-  UILabel__set_text(detailRight, (System_String_o *)Filter_43764480, 0);
+  UILabel__set_text(detailRight, (System_String_o *)Filter_43866584, 0);
   v27 = this->fields.detailRight;
   if ( !v27 )
     goto LABEL_116;
-  v28 = System_String__Concat_63518544(v27->fields.mText, (System_String_o *)StringLiteral_43/*"\n"*/, 0);
+  v28 = System_String__Concat_63561656(v27->fields.mText, (System_String_o *)StringLiteral_43/*"\n"*/, 0);
   UILabel__set_text(v27, v28, 0);
   if ( !v9 )
     goto LABEL_116;
@@ -823,9 +823,9 @@ LABEL_115:
   *(_DWORD *)(v9 + 28) = v30;
   if ( v29 >= 1 )
     System_Array__Clear(*(System_Array_o **)(v9 + 16), 0, v29, 0);
-  Filter_43764480 = sub_1C32CC8(bool___TypeInfo, 5);
+  Filter_43866584 = sub_1C37100(bool___TypeInfo, 5);
   v31 = *(_DWORD *)(v6 + 24);
-  v32 = Filter_43764480;
+  v32 = Filter_43866584;
   v33 = 0;
   v34 = v31 >= 2;
   v35 = v31 - 2;
@@ -838,13 +838,13 @@ LABEL_115:
   {
     if ( v36 == v33 )
       goto LABEL_115;
-    if ( !Filter_43764480 )
+    if ( !Filter_43866584 )
       goto LABEL_116;
-    v38 = *(unsigned int *)(Filter_43764480 + 24);
+    v38 = *(unsigned int *)(Filter_43866584 + 24);
     if ( v33 >= v38 )
       goto LABEL_115;
     v39 = *(unsigned __int8 *)(v6 + 34 + v33);
-    *(_BYTE *)(Filter_43764480 + 32 + v33++) = v39;
+    *(_BYTE *)(Filter_43866584 + 32 + v33++) = v39;
     v37 = (unsigned __int8)v37 & (v39 == 0);
   }
   while ( v33 != 5 );
@@ -853,7 +853,7 @@ LABEL_115:
     v40 = 0;
     while ( v40 < v38 )
     {
-      *(_BYTE *)(Filter_43764480 + 32 + v40++) = 1;
+      *(_BYTE *)(Filter_43866584 + 32 + v40++) = 1;
       if ( v40 == 5 )
         goto LABEL_49;
     }
@@ -862,31 +862,31 @@ LABEL_115:
 LABEL_49:
   if ( (unsigned int)v38 <= 4 )
     goto LABEL_115;
-  if ( *(_BYTE *)(Filter_43764480 + 36) )
+  if ( *(_BYTE *)(Filter_43866584 + 36) )
   {
     if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-    Filter_43764480 = (__int64)LocalizationManager__Get((System_String_o *)StringLiteral_11805/*"SERVANT_SORT_FILTER_RARITY_SSRARE"*/, 0);
+    Filter_43866584 = (__int64)LocalizationManager__Get((System_String_o *)StringLiteral_11806/*"SERVANT_SORT_FILTER_RARITY_SSRARE"*/, 0);
     v43 = *(_QWORD *)(v9 + 16);
     v44 = Method_System_Collections_Generic_List_string__Add__;
     ++*(_DWORD *)(v9 + 28);
     if ( !v43 )
       goto LABEL_116;
     v45 = *(int *)(v9 + 24);
-    v46 = Filter_43764480;
+    v46 = Filter_43866584;
     if ( (unsigned int)v45 >= *(_DWORD *)(v43 + 24) )
     {
       System_Collections_Generic_List_object___AddWithResize(
         (System_Collections_Generic_List_object__o *)v9,
-        (Il2CppObject *)Filter_43764480,
-        *(const MethodInfo_37987BC **)(*(_QWORD *)(v44[4] + 192LL) + 112LL));
+        (Il2CppObject *)Filter_43866584,
+        *(const MethodInfo_37A3024 **)(*(_QWORD *)(v44[4] + 192LL) + 112LL));
     }
     else
     {
       v47 = v43 + 8 * v45;
       *(_DWORD *)(v9 + 24) = v45 + 1;
       *(_QWORD *)(v47 + 32) = v46;
-      sub_1C32BC4((CGThumbnailListItem_o *)(v47 + 32), v46, v41, v42);
+      sub_1C36FFC((CGThumbnailListItem_o *)(v47 + 32), v46, v41, v42);
     }
   }
   if ( *(_DWORD *)(v32 + 24) <= 3u )
@@ -895,27 +895,27 @@ LABEL_49:
   {
     if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-    Filter_43764480 = (__int64)LocalizationManager__Get((System_String_o *)StringLiteral_11804/*"SERVANT_SORT_FILTER_RARITY_SRARE"*/, 0);
+    Filter_43866584 = (__int64)LocalizationManager__Get((System_String_o *)StringLiteral_11805/*"SERVANT_SORT_FILTER_RARITY_SRARE"*/, 0);
     v50 = *(_QWORD *)(v9 + 16);
     v51 = Method_System_Collections_Generic_List_string__Add__;
     ++*(_DWORD *)(v9 + 28);
     if ( !v50 )
       goto LABEL_116;
     v52 = *(int *)(v9 + 24);
-    v53 = Filter_43764480;
+    v53 = Filter_43866584;
     if ( (unsigned int)v52 >= *(_DWORD *)(v50 + 24) )
     {
       System_Collections_Generic_List_object___AddWithResize(
         (System_Collections_Generic_List_object__o *)v9,
-        (Il2CppObject *)Filter_43764480,
-        *(const MethodInfo_37987BC **)(*(_QWORD *)(v51[4] + 192LL) + 112LL));
+        (Il2CppObject *)Filter_43866584,
+        *(const MethodInfo_37A3024 **)(*(_QWORD *)(v51[4] + 192LL) + 112LL));
     }
     else
     {
       v54 = v50 + 8 * v52;
       *(_DWORD *)(v9 + 24) = v52 + 1;
       *(_QWORD *)(v54 + 32) = v53;
-      sub_1C32BC4((CGThumbnailListItem_o *)(v54 + 32), v53, v48, v49);
+      sub_1C36FFC((CGThumbnailListItem_o *)(v54 + 32), v53, v48, v49);
     }
   }
   if ( *(_DWORD *)(v32 + 24) <= 2u )
@@ -924,27 +924,27 @@ LABEL_49:
   {
     if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-    Filter_43764480 = (__int64)LocalizationManager__Get((System_String_o *)StringLiteral_11803/*"SERVANT_SORT_FILTER_RARITY_RARE"*/, 0);
+    Filter_43866584 = (__int64)LocalizationManager__Get((System_String_o *)StringLiteral_11804/*"SERVANT_SORT_FILTER_RARITY_RARE"*/, 0);
     v57 = *(_QWORD *)(v9 + 16);
     v58 = Method_System_Collections_Generic_List_string__Add__;
     ++*(_DWORD *)(v9 + 28);
     if ( !v57 )
       goto LABEL_116;
     v59 = *(int *)(v9 + 24);
-    v60 = Filter_43764480;
+    v60 = Filter_43866584;
     if ( (unsigned int)v59 >= *(_DWORD *)(v57 + 24) )
     {
       System_Collections_Generic_List_object___AddWithResize(
         (System_Collections_Generic_List_object__o *)v9,
-        (Il2CppObject *)Filter_43764480,
-        *(const MethodInfo_37987BC **)(*(_QWORD *)(v58[4] + 192LL) + 112LL));
+        (Il2CppObject *)Filter_43866584,
+        *(const MethodInfo_37A3024 **)(*(_QWORD *)(v58[4] + 192LL) + 112LL));
     }
     else
     {
       v61 = v57 + 8 * v59;
       *(_DWORD *)(v9 + 24) = v59 + 1;
       *(_QWORD *)(v61 + 32) = v60;
-      sub_1C32BC4((CGThumbnailListItem_o *)(v61 + 32), v60, v55, v56);
+      sub_1C36FFC((CGThumbnailListItem_o *)(v61 + 32), v60, v55, v56);
     }
   }
   if ( *(_DWORD *)(v32 + 24) <= 1u )
@@ -953,27 +953,27 @@ LABEL_49:
   {
     if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-    Filter_43764480 = (__int64)LocalizationManager__Get((System_String_o *)StringLiteral_11806/*"SERVANT_SORT_FILTER_RARITY_UNCOMMON"*/, 0);
+    Filter_43866584 = (__int64)LocalizationManager__Get((System_String_o *)StringLiteral_11807/*"SERVANT_SORT_FILTER_RARITY_UNCOMMON"*/, 0);
     v64 = *(_QWORD *)(v9 + 16);
     v65 = Method_System_Collections_Generic_List_string__Add__;
     ++*(_DWORD *)(v9 + 28);
     if ( !v64 )
       goto LABEL_116;
     v66 = *(int *)(v9 + 24);
-    v67 = Filter_43764480;
+    v67 = Filter_43866584;
     if ( (unsigned int)v66 >= *(_DWORD *)(v64 + 24) )
     {
       System_Collections_Generic_List_object___AddWithResize(
         (System_Collections_Generic_List_object__o *)v9,
-        (Il2CppObject *)Filter_43764480,
-        *(const MethodInfo_37987BC **)(*(_QWORD *)(v65[4] + 192LL) + 112LL));
+        (Il2CppObject *)Filter_43866584,
+        *(const MethodInfo_37A3024 **)(*(_QWORD *)(v65[4] + 192LL) + 112LL));
     }
     else
     {
       v68 = v64 + 8 * v66;
       *(_DWORD *)(v9 + 24) = v66 + 1;
       *(_QWORD *)(v68 + 32) = v67;
-      sub_1C32BC4((CGThumbnailListItem_o *)(v68 + 32), v67, v62, v63);
+      sub_1C36FFC((CGThumbnailListItem_o *)(v68 + 32), v67, v62, v63);
     }
   }
   if ( !*(_DWORD *)(v32 + 24) )
@@ -982,43 +982,43 @@ LABEL_49:
   {
     if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-    Filter_43764480 = (__int64)LocalizationManager__Get((System_String_o *)StringLiteral_11802/*"SERVANT_SORT_FILTER_RARITY_COMMON"*/, 0);
+    Filter_43866584 = (__int64)LocalizationManager__Get((System_String_o *)StringLiteral_11803/*"SERVANT_SORT_FILTER_RARITY_COMMON"*/, 0);
     v71 = *(_QWORD *)(v9 + 16);
     v72 = Method_System_Collections_Generic_List_string__Add__;
     ++*(_DWORD *)(v9 + 28);
     if ( !v71 )
       goto LABEL_116;
     v73 = *(int *)(v9 + 24);
-    v74 = Filter_43764480;
+    v74 = Filter_43866584;
     if ( (unsigned int)v73 >= *(_DWORD *)(v71 + 24) )
     {
       System_Collections_Generic_List_object___AddWithResize(
         (System_Collections_Generic_List_object__o *)v9,
-        (Il2CppObject *)Filter_43764480,
-        *(const MethodInfo_37987BC **)(*(_QWORD *)(v72[4] + 192LL) + 112LL));
+        (Il2CppObject *)Filter_43866584,
+        *(const MethodInfo_37A3024 **)(*(_QWORD *)(v72[4] + 192LL) + 112LL));
     }
     else
     {
       v75 = v71 + 8 * v73;
       *(_DWORD *)(v9 + 24) = v73 + 1;
       *(_QWORD *)(v75 + 32) = v74;
-      sub_1C32BC4((CGThumbnailListItem_o *)(v75 + 32), v74, v69, v70);
+      sub_1C36FFC((CGThumbnailListItem_o *)(v75 + 32), v74, v69, v70);
     }
   }
   v76 = this->fields.detailRight;
   if ( !v76 )
     goto LABEL_116;
   mText = v76->fields.mText;
-  v78 = System_String__Join_63561120(
+  v78 = System_String__Join_63604232(
           (System_String_o *)StringLiteral_113/*" "*/,
           (System_Collections_Generic_IEnumerable_string__o *)v9,
           0);
-  v79 = System_String__Concat_63518544(mText, v78, 0);
+  v79 = System_String__Concat_63561656(mText, v78, 0);
   UILabel__set_text(v76, v79, 0);
   v80 = this->fields.detailRight;
   if ( !v80 )
     goto LABEL_116;
-  v81 = System_String__Concat_63518544(v80->fields.mText, (System_String_o *)StringLiteral_43/*"\n"*/, 0);
+  v81 = System_String__Concat_63561656(v80->fields.mText, (System_String_o *)StringLiteral_43/*"\n"*/, 0);
   UILabel__set_text(v80, v81, 0);
   v82 = *(_DWORD *)(v9 + 24);
   v83 = *(_DWORD *)(v9 + 28) + 1;
@@ -1026,7 +1026,7 @@ LABEL_49:
   *(_DWORD *)(v9 + 28) = v83;
   if ( v82 >= 1 )
     System_Array__Clear(*(System_Array_o **)(v9 + 16), 0, v82, 0);
-  Filter_43764480 = sub_1C32CC8(bool___TypeInfo, 6);
+  Filter_43866584 = sub_1C37100(bool___TypeInfo, 6);
   v84 = *(_DWORD *)(v6 + 24);
   v85 = 0;
   v86 = 0;
@@ -1038,12 +1038,12 @@ LABEL_49:
   {
     if ( v87 == v85 )
       goto LABEL_115;
-    if ( !Filter_43764480 )
+    if ( !Filter_43866584 )
       goto LABEL_116;
-    if ( v85 >= *(unsigned int *)(Filter_43764480 + 24) )
+    if ( v85 >= *(unsigned int *)(Filter_43866584 + 24) )
       goto LABEL_115;
     v88 = *(unsigned __int8 *)(v6 + 39 + v85);
-    *(_BYTE *)(Filter_43764480 + 32 + v85++) = v88;
+    *(_BYTE *)(Filter_43866584 + 32 + v85++) = v88;
     if ( v88 )
       v86 = v85;
   }
@@ -1052,15 +1052,15 @@ LABEL_49:
   v90 = v86 ? v86 : 6;
   if ( !v89 )
 LABEL_116:
-    sub_1C32E7C(Filter_43764480);
+    sub_1C372B4(Filter_43866584);
   v91 = v89->fields.mText;
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-  v92 = LocalizationManager__Get((System_String_o *)StringLiteral_12007/*"SERVANT_UNIT"*/, 0);
+  v92 = LocalizationManager__Get((System_String_o *)StringLiteral_12008/*"SERVANT_UNIT"*/, 0);
   v108 = v90;
   v99 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v108, v93, v94, v95, v96, v97, v98);
   v100 = System_String__Format(v92, v99, 0);
-  v101 = System_String__Concat_63518544(v91, v100, 0);
+  v101 = System_String__Concat_63561656(v91, v100, 0);
   UILabel__set_text(v89, v101, 0);
   if ( this->fields.preQuest )
   {
@@ -1072,11 +1072,11 @@ LABEL_116:
     if ( autoOrganizationMode != 1 )
       v104 = (System_String_o **)&StringLiteral_2070/*"AUTO_ORGANIZATION_CONFIRM_DETAIL_MODE_USE_ENEMY_CLASS_MAIN"*/;
     v105 = LocalizationManager__Get(*v104, 0);
-    Filter_43764480 = (__int64)System_String__Concat_63518544(v102, v105, 0);
+    Filter_43866584 = (__int64)System_String__Concat_63561656(v102, v105, 0);
     v106 = this->fields.detailRight;
     if ( v106 )
     {
-      v107 = System_String__Concat_63518544(v106->fields.mText, (System_String_o *)Filter_43764480, 0);
+      v107 = System_String__Concat_63561656(v106->fields.mText, (System_String_o *)Filter_43866584, 0);
       UILabel__set_text(v106, v107, 0);
       return;
     }
@@ -1100,10 +1100,10 @@ void PartyOrganizationAutoOrganizationConfirmDialog__add_closeFunc(
   PartyOrganizationAutoOrganizationConfirmDialog_CloseDelegate_o *v12; // x1
   const MethodInfo *v13; // x2
 
-  if ( (byte_4C33341 & 1) == 0 )
+  if ( (byte_4C3E92B & 1) == 0 )
   {
-    sub_1C32C20(&PartyOrganizationAutoOrganizationConfirmDialog_CloseDelegate_TypeInfo);
-    byte_4C33341 = 1;
+    sub_1C37058(&PartyOrganizationAutoOrganizationConfirmDialog_CloseDelegate_TypeInfo);
+    byte_4C3E92B = 1;
   }
   closeFunc = this->fields.closeFunc;
   p_closeFunc = &this->fields.closeFunc;
@@ -1116,13 +1116,13 @@ void PartyOrganizationAutoOrganizationConfirmDialog__add_closeFunc(
       if ( (PartyOrganizationAutoOrganizationConfirmDialog_CloseDelegate_c *)v8->klass != PartyOrganizationAutoOrganizationConfirmDialog_CloseDelegate_TypeInfo )
         break;
     }
-    v9 = sub_1C6CE78(p_closeFunc, v8, v6);
+    v9 = sub_1C712B0(p_closeFunc, v8, v6);
     v10 = v6 == (System_Delegate_o *)v9;
     v6 = (System_Delegate_o *)v9;
     if ( v10 )
       return;
   }
-  v11 = (PartyOrganizationAutoOrganizationConfirmDialog_o *)sub_1C3313C(v8);
+  v11 = (PartyOrganizationAutoOrganizationConfirmDialog_o *)sub_1C37574(v8);
   PartyOrganizationAutoOrganizationConfirmDialog__remove_closeFunc(v11, v12, v13);
 }
 
@@ -1131,10 +1131,10 @@ System_String_o *PartyOrganizationAutoOrganizationConfirmDialog__get_closeBtnPat
         PartyOrganizationAutoOrganizationConfirmDialog_o *this,
         const MethodInfo *method)
 {
-  if ( (byte_4C3334B & 1) == 0 )
+  if ( (byte_4C3E935 & 1) == 0 )
   {
-    sub_1C32C20(&StringLiteral_3072/*"BaseWindow/CancelButton"*/);
-    byte_4C3334B = 1;
+    sub_1C37058(&StringLiteral_3072/*"BaseWindow/CancelButton"*/);
+    byte_4C3E935 = 1;
   }
   return (System_String_o *)StringLiteral_3072/*"BaseWindow/CancelButton"*/;
 }
@@ -1154,10 +1154,10 @@ void PartyOrganizationAutoOrganizationConfirmDialog__remove_closeFunc(
   PartyOrganizationAutoOrganizationConfirmDialog_o *v11; // x0
   const MethodInfo *v12; // x1
 
-  if ( (byte_4C33342 & 1) == 0 )
+  if ( (byte_4C3E92C & 1) == 0 )
   {
-    sub_1C32C20(&PartyOrganizationAutoOrganizationConfirmDialog_CloseDelegate_TypeInfo);
-    byte_4C33342 = 1;
+    sub_1C37058(&PartyOrganizationAutoOrganizationConfirmDialog_CloseDelegate_TypeInfo);
+    byte_4C3E92C = 1;
   }
   closeFunc = this->fields.closeFunc;
   p_closeFunc = &this->fields.closeFunc;
@@ -1170,13 +1170,13 @@ void PartyOrganizationAutoOrganizationConfirmDialog__remove_closeFunc(
       if ( (PartyOrganizationAutoOrganizationConfirmDialog_CloseDelegate_c *)v8->klass != PartyOrganizationAutoOrganizationConfirmDialog_CloseDelegate_TypeInfo )
         break;
     }
-    v9 = sub_1C6CE78(p_closeFunc, v8, v6);
+    v9 = sub_1C712B0(p_closeFunc, v8, v6);
     v10 = v6 == (System_Delegate_o *)v9;
     v6 = (System_Delegate_o *)v9;
     if ( v10 )
       return;
   }
-  v11 = (PartyOrganizationAutoOrganizationConfirmDialog_o *)sub_1C3313C(v8);
+  v11 = (PartyOrganizationAutoOrganizationConfirmDialog_o *)sub_1C37574(v8);
   PartyOrganizationAutoOrganizationConfirmDialog__Awake(v11, v12);
 }
 
@@ -1196,15 +1196,15 @@ void PartyOrganizationAutoOrganizationConfirmDialog_CloseDelegate___ctor(
   this->fields.method = method;
   this->fields.method_ptr = v4;
   this->fields.m_target = object;
-  sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.m_target, (int32_t)object, method, a4);
+  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.m_target, (int32_t)object, method, a4);
   v8 = *(unsigned __int8 *)(method + 82);
   this->fields.method_code = (intptr_t)this;
-  if ( (sub_1C32CE0(method) & 1) == 0 )
+  if ( (sub_1C37118(method) & 1) == 0 )
   {
     if ( !object )
     {
-      v10 = sub_1C32E98(0, "Delegate to an instance method cannot have null 'this'.");
-      sub_1C32D48(v10, 0);
+      v10 = sub_1C372D0(0, "Delegate to an instance method cannot have null 'this'.");
+      sub_1C37180(v10, 0);
     }
     goto LABEL_5;
   }
@@ -1216,9 +1216,9 @@ LABEL_5:
     this->fields.method_code = (intptr_t)m_target;
     goto LABEL_6;
   }
-  this->fields.invoke_impl = (intptr_t)sub_1A7168C;
+  this->fields.invoke_impl = (intptr_t)sub_1A759BC;
 LABEL_6:
-  this->fields.extra_arg = (intptr_t)sub_1A71644;
+  this->fields.extra_arg = (intptr_t)sub_1A75974;
 }
 
 
@@ -1236,14 +1236,14 @@ System_IAsyncResult_o *PartyOrganizationAutoOrganizationConfirmDialog_CloseDeleg
   bool v13[4]; // [xsp+1Ch] [xbp-34h] BYREF
 
   v13[0] = isDecide;
-  if ( (byte_4C3334D & 1) == 0 )
+  if ( (byte_4C3E937 & 1) == 0 )
   {
-    sub_1C32C20(&bool_TypeInfo);
-    byte_4C3334D = 1;
+    sub_1C37058(&bool_TypeInfo);
+    byte_4C3E937 = 1;
   }
   v12[1] = 0;
   v12[0] = j_il2cpp_value_box_0(bool_TypeInfo, v13, callback, object, method, v5, v6, v7);
-  return (System_IAsyncResult_o *)sub_1C32BD4(this, v12, callback, object);
+  return (System_IAsyncResult_o *)sub_1C3700C(this, v12, callback, object);
 }
 
 
@@ -1252,7 +1252,7 @@ void PartyOrganizationAutoOrganizationConfirmDialog_CloseDelegate__EndInvoke(
         System_IAsyncResult_o *result,
         const MethodInfo *method)
 {
-  sub_1C32BD8(result, 0, method);
+  sub_1C37010(result, 0, method);
 }
 
 
@@ -1290,37 +1290,37 @@ void PartyOrganizationAutoOrganizationConfirmDialog___c__DisplayClass30_0___OnCl
   const MethodInfo *v10; // x1
 
   v4 = this;
-  if ( (byte_4C3334E & 1) == 0 )
+  if ( (byte_4C3E938 & 1) == 0 )
   {
-    sub_1C32C20(&System_Action_TypeInfo);
-    sub_1C32C20(&AutoOrganizationManager_TypeInfo);
-    this = (PartyOrganizationAutoOrganizationConfirmDialog___c__DisplayClass30_0_o *)sub_1C32C20(&Method_PartyOrganizationAutoOrganizationConfirmDialog___c__DisplayClass30_0__OnClickSetting_b__1__);
-    byte_4C3334E = 1;
+    sub_1C37058(&System_Action_TypeInfo);
+    sub_1C37058(&AutoOrganizationManager_TypeInfo);
+    this = (PartyOrganizationAutoOrganizationConfirmDialog___c__DisplayClass30_0_o *)sub_1C37058(&Method_PartyOrganizationAutoOrganizationConfirmDialog___c__DisplayClass30_0__OnClickSetting_b__1__);
+    byte_4C3E938 = 1;
   }
   _9__1 = v4->fields.__9__1;
   settingDialog = v4->fields.settingDialog;
   if ( !_9__1 )
   {
-    _9__1 = (System_Action_o *)sub_1C32E6C(System_Action_TypeInfo);
+    _9__1 = (System_Action_o *)sub_1C372A4(System_Action_TypeInfo);
     System_Action___ctor(
       _9__1,
       (Il2CppObject *)v4,
       Method_PartyOrganizationAutoOrganizationConfirmDialog___c__DisplayClass30_0__OnClickSetting_b__1__,
       0);
     v4->fields.__9__1 = _9__1;
-    sub_1C32BC4((CGThumbnailListItem_o *)&v4->fields.__9__1, (int32_t)_9__1, v7, v8);
+    sub_1C36FFC((CGThumbnailListItem_o *)&v4->fields.__9__1, (int32_t)_9__1, v7, v8);
   }
   if ( !settingDialog )
     goto LABEL_17;
-  PartyOrganizationAutoOrganizationSettingDialog__Close_34052596(settingDialog, _9__1, method);
+  PartyOrganizationAutoOrganizationSettingDialog__Close_34148228(settingDialog, _9__1, method);
   if ( isDecide )
   {
     if ( !AutoOrganizationManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(AutoOrganizationManager_TypeInfo);
-    if ( !byte_4C333D0 )
+    if ( !byte_4C3E9BA )
     {
-      sub_1C32C20(&AutoOrganizationManager_TypeInfo);
-      byte_4C333D0 = 1;
+      sub_1C37058(&AutoOrganizationManager_TypeInfo);
+      byte_4C3E9BA = 1;
     }
     v9 = AutoOrganizationManager_TypeInfo;
     if ( !AutoOrganizationManager_TypeInfo->_2.cctor_finished )
@@ -1342,7 +1342,7 @@ void PartyOrganizationAutoOrganizationConfirmDialog___c__DisplayClass30_0___OnCl
       }
     }
 LABEL_17:
-    sub_1C32E7C(this);
+    sub_1C372B4(this);
   }
 }
 
@@ -1353,13 +1353,13 @@ void PartyOrganizationAutoOrganizationConfirmDialog___c__DisplayClass30_0___OnCl
 {
   UnityEngine_Object_o *go; // x19
 
-  if ( (byte_4C3334F & 1) == 0 )
+  if ( (byte_4C3E939 & 1) == 0 )
   {
-    sub_1C32C20(&UnityEngine_Object_TypeInfo);
-    byte_4C3334F = 1;
+    sub_1C37058(&UnityEngine_Object_TypeInfo);
+    byte_4C3E939 = 1;
   }
   go = (UnityEngine_Object_o *)this->fields.go;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-  UnityEngine_Object__Destroy_71223640(go, 0);
+  UnityEngine_Object__Destroy_71266752(go, 0);
 }

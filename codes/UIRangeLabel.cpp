@@ -10,11 +10,11 @@ void UIRangeLabel__Clear(UIRangeLabel_o *this, const MethodInfo *method)
   UILabel_o *textLabel; // x0
   UnityEngine_Object_o *iconSprite; // x20
 
-  if ( (byte_4C36F86 & 1) == 0 )
+  if ( (byte_4C42576 & 1) == 0 )
   {
-    sub_1C32C20(&UnityEngine_Object_TypeInfo);
-    sub_1C32C20(&StringLiteral_1/*""*/);
-    byte_4C36F86 = 1;
+    sub_1C37058(&UnityEngine_Object_TypeInfo);
+    sub_1C37058(&StringLiteral_1/*""*/);
+    byte_4C42576 = 1;
   }
   UIRangeLabel__InitParam(this, method);
   textLabel = this->fields.textLabel;
@@ -33,7 +33,7 @@ void UIRangeLabel__Clear(UIRangeLabel_o *this, const MethodInfo *method)
       return;
     }
 LABEL_10:
-    sub_1C32E7C(textLabel);
+    sub_1C372B4(textLabel);
   }
 }
 
@@ -46,7 +46,7 @@ void UIRangeLabel__InitParam(UIRangeLabel_o *this, const MethodInfo *method)
   {
     textLabel = (UIWidget_o *)this->fields.textLabel;
     if ( !textLabel )
-      sub_1C32E7C(this);
+      sub_1C372B4(this);
     this->fields.textWidth = textLabel->fields.mWidth;
     UIWidget__set_width(textLabel, 1000, 0);
   }
@@ -86,10 +86,10 @@ void UIRangeLabel__Set(
   UnityEngine_Vector3_o v34; // 0:s0.4,4:s1.4,8:s2.4
   UnityEngine_Vector3_o v35; // 0:s0.4,4:s1.4,8:s2.4
 
-  if ( (byte_4C36F87 & 1) == 0 )
+  if ( (byte_4C42577 & 1) == 0 )
   {
-    sub_1C32C20(&UnityEngine_Object_TypeInfo);
-    byte_4C36F87 = 1;
+    sub_1C37058(&UnityEngine_Object_TypeInfo);
+    byte_4C42577 = 1;
   }
   UIRangeLabel__InitParam(this, (const MethodInfo *)text);
   textLabel = this->fields.textLabel;
@@ -237,7 +237,7 @@ void UIRangeLabel__Set(
       }
     }
 LABEL_50:
-    sub_1C32E7C(textLabel);
+    sub_1C372B4(textLabel);
   }
 }
 
@@ -248,7 +248,7 @@ System_String_o *UIRangeLabel__get_Text(UIRangeLabel_o *this, const MethodInfo *
 
   textLabel = this->fields.textLabel;
   if ( !textLabel )
-    sub_1C32E7C(this);
+    sub_1C372B4(this);
   return textLabel->fields.mText;
 }
 
@@ -264,7 +264,7 @@ UnityEngine_Color_o UIRangeLabel__get_color(UIRangeLabel_o *this, const MethodIn
 
   textLabel = this->fields.textLabel;
   if ( !textLabel )
-    sub_1C32E7C(this);
+    sub_1C372B4(this);
   r = textLabel->fields.mColor.fields.r;
   g = textLabel->fields.mColor.fields.g;
   b = textLabel->fields.mColor.fields.b;
@@ -288,7 +288,7 @@ UnityEngine_Color_o UIRangeLabel__get_effectColor(UIRangeLabel_o *this, const Me
 
   textLabel = this->fields.textLabel;
   if ( !textLabel )
-    sub_1C32E7C(this);
+    sub_1C372B4(this);
   r = textLabel->fields.mEffectColor.fields.r;
   g = textLabel->fields.mEffectColor.fields.g;
   b = textLabel->fields.mEffectColor.fields.b;
@@ -307,7 +307,7 @@ void UIRangeLabel__set_Text(UIRangeLabel_o *this, System_String_o *value, const 
 
   textLabel = this->fields.textLabel;
   if ( !textLabel )
-    sub_1C32E7C(0);
+    sub_1C372B4(0);
   UILabel__set_text(textLabel, value, 0);
 }
 
@@ -318,7 +318,7 @@ void UIRangeLabel__set_color(UIRangeLabel_o *this, UnityEngine_Color_o value, co
 
   textLabel = (UIWidget_o *)this->fields.textLabel;
   if ( !textLabel )
-    sub_1C32E7C(0);
+    sub_1C372B4(0);
   UIWidget__set_color(textLabel, value, 0);
 }
 
@@ -329,6 +329,6 @@ void UIRangeLabel__set_effectColor(UIRangeLabel_o *this, UnityEngine_Color_o val
 
   textLabel = this->fields.textLabel;
   if ( !textLabel )
-    sub_1C32E7C(0);
+    sub_1C372B4(0);
   UILabel__set_effectColor(textLabel, value, 0);
 }

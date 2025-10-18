@@ -8,22 +8,22 @@ void TestTalkEffectRootComponent__beginInitialize(TestTalkEffectRootComponent_o 
 {
   Il2CppObject *Instance; // x0
 
-  if ( (byte_4C351C2 & 1) == 0 )
+  if ( (byte_4C407AD & 1) == 0 )
   {
-    sub_1C32C20(&Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__);
-    byte_4C351C2 = 1;
+    sub_1C37058(&Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__);
+    byte_4C407AD = 1;
   }
   SceneRootComponent__beginInitialize((SceneRootComponent_o *)this, 0);
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39E2904 *)Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39ED16C *)Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__);
   if ( !Instance )
-    sub_1C32E7C(0);
+    sub_1C372B4(0);
   AvalonSceneManager__endInitialize((AvalonSceneManager_o *)Instance, (SceneRootComponent_o *)this, 0);
 }
 
 
 void TestTalkEffectRootComponent__beginStartUp(TestTalkEffectRootComponent_o *this, const MethodInfo *method)
 {
-  SceneRootComponent__beginStartUp_41381708((SceneRootComponent_o *)this, 0);
+  SceneRootComponent__beginStartUp_41481188((SceneRootComponent_o *)this, 0);
 }
 
 
@@ -34,10 +34,10 @@ bool TestTalkEffectRootComponent__setupTestEffectPrefab(TestTalkEffectRootCompon
   UnityEngine_GameObject_o *testCharaBackEffectPrefab; // x19
   UnityEngine_GameObject_o *testCharaEffectPrefab; // x20
 
-  if ( (byte_4C351C3 & 1) == 0 )
+  if ( (byte_4C407AE & 1) == 0 )
   {
-    sub_1C32C20(&CommonEffectManager_TypeInfo);
-    byte_4C351C3 = 1;
+    sub_1C37058(&CommonEffectManager_TypeInfo);
+    byte_4C407AE = 1;
   }
   testEffectPrefab = this->fields.testEffectPrefab;
   testBackEffectPrefab = this->fields.testBackEffectPrefab;

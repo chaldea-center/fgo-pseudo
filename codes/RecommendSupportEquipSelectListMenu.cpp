@@ -1,9 +1,9 @@
 void RecommendSupportEquipSelectListMenu___ctor(RecommendSupportEquipSelectListMenu_o *this, const MethodInfo *method)
 {
-  if ( (byte_4C3384A & 1) == 0 )
+  if ( (byte_4C3EE34 & 1) == 0 )
   {
-    sub_1C32C20(&BaseMenu_TypeInfo);
-    byte_4C3384A = 1;
+    sub_1C37058(&BaseMenu_TypeInfo);
+    byte_4C3EE34 = 1;
   }
   if ( !BaseMenu_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(BaseMenu_TypeInfo);
@@ -21,11 +21,11 @@ void RecommendSupportEquipSelectListMenu__Close(RecommendSupportEquipSelectListM
 {
   const MethodInfo *v2; // x2
 
-  RecommendSupportEquipSelectListMenu__Close_34705212(this, 0, v2);
+  RecommendSupportEquipSelectListMenu__Close_34800844(this, 0, v2);
 }
 
 
-void RecommendSupportEquipSelectListMenu__Close_34705212(
+void RecommendSupportEquipSelectListMenu__Close_34800844(
         RecommendSupportEquipSelectListMenu_o *this,
         System_Action_o *callback,
         const MethodInfo *method)
@@ -34,17 +34,17 @@ void RecommendSupportEquipSelectListMenu__Close_34705212(
   const MethodInfo *v6; // x1
   System_Action_o *v7; // x20
 
-  if ( (byte_4C3383C & 1) == 0 )
+  if ( (byte_4C3EE26 & 1) == 0 )
   {
-    sub_1C32C20(&System_Action_TypeInfo);
-    sub_1C32C20(&Method_RecommendSupportEquipSelectListMenu_EndClose__);
-    byte_4C3383C = 1;
+    sub_1C37058(&System_Action_TypeInfo);
+    sub_1C37058(&Method_RecommendSupportEquipSelectListMenu_EndClose__);
+    byte_4C3EE26 = 1;
   }
   this->fields.closeCallbackFunc = callback;
-  sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.closeCallbackFunc, (int32_t)callback, (int32_t)method, v3);
+  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.closeCallbackFunc, (int32_t)callback, (int32_t)method, v3);
   this->fields.state = 4;
   RecommendSupportEquipSelectListMenu__SetListManagerStatus(this, v6);
-  v7 = (System_Action_o *)sub_1C32E6C(System_Action_TypeInfo);
+  v7 = (System_Action_o *)sub_1C372A4(System_Action_TypeInfo);
   System_Action___ctor(v7, (Il2CppObject *)this, Method_RecommendSupportEquipSelectListMenu_EndClose__, 0);
   BaseMenu__Close((BaseMenu_o *)this, v7, 0);
 }
@@ -59,10 +59,10 @@ void RecommendSupportEquipSelectListMenu__EndCancelButton(
   RecommendSupportEquipSelectListViewManager_o *supportServantEquipListViewManager; // x0
   const MethodInfo *v6; // x2
 
-  if ( (byte_4C33840 & 1) == 0 )
+  if ( (byte_4C3EE2A & 1) == 0 )
   {
-    sub_1C32C20(&Method_SingletonMonoBehaviour_RecommendSupportSelectControl__get_Instance__);
-    byte_4C33840 = 1;
+    sub_1C37058(&Method_SingletonMonoBehaviour_RecommendSupportSelectControl__get_Instance__);
+    byte_4C3EE2A = 1;
   }
   if ( isRequest )
   {
@@ -72,12 +72,12 @@ void RecommendSupportEquipSelectListMenu__EndCancelButton(
           (supportServantEquipListViewManager = this->fields.supportServantEquipListViewManager) == 0) )
     {
 LABEL_10:
-      sub_1C32E7C(supportServantEquipListViewManager);
+      sub_1C372B4(supportServantEquipListViewManager);
     }
-    RecommendSupportEquipSelectListViewManager__SetMode_34705508(supportServantEquipListViewManager, 3, v6);
+    RecommendSupportEquipSelectListViewManager__SetMode_34801140(supportServantEquipListViewManager, 3, v6);
   }
   RecommendSupportEquipSelectListMenu__Init(this, (const MethodInfo *)isRequest);
-  supportServantEquipListViewManager = (RecommendSupportEquipSelectListViewManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39E2904 *)Method_SingletonMonoBehaviour_RecommendSupportSelectControl__get_Instance__);
+  supportServantEquipListViewManager = (RecommendSupportEquipSelectListViewManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39ED16C *)Method_SingletonMonoBehaviour_RecommendSupportSelectControl__get_Instance__);
   if ( !supportServantEquipListViewManager )
     goto LABEL_10;
   RecommendSupportSelectControl__SetState((RecommendSupportSelectControl_o *)supportServantEquipListViewManager, 0, 0);
@@ -105,9 +105,9 @@ void RecommendSupportEquipSelectListMenu__EndClickTabChoice(
       || (RecommendSupportEquipSelectListViewManager__ModifyList(supportServantEquipListViewManager, 0, method),
           (supportServantEquipListViewManager = this->fields.supportServantEquipListViewManager) == 0) )
     {
-      sub_1C32E7C(supportServantEquipListViewManager);
+      sub_1C372B4(supportServantEquipListViewManager);
     }
-    RecommendSupportEquipSelectListViewManager__SetMode_34705508(supportServantEquipListViewManager, 3, v5);
+    RecommendSupportEquipSelectListViewManager__SetMode_34801140(supportServantEquipListViewManager, 3, v5);
   }
   RecommendSupportEquipSelectListMenu__SetModeTabKind(this, 2, method);
 }
@@ -128,9 +128,9 @@ void RecommendSupportEquipSelectListMenu__EndClickTabLock(
       || (RecommendSupportEquipSelectListViewManager__ModifyList(supportServantEquipListViewManager, 0, method),
           (supportServantEquipListViewManager = this->fields.supportServantEquipListViewManager) == 0) )
     {
-      sub_1C32E7C(supportServantEquipListViewManager);
+      sub_1C372B4(supportServantEquipListViewManager);
     }
-    RecommendSupportEquipSelectListViewManager__SetMode_34705508(supportServantEquipListViewManager, 3, v5);
+    RecommendSupportEquipSelectListViewManager__SetMode_34801140(supportServantEquipListViewManager, 3, v5);
   }
   RecommendSupportEquipSelectListMenu__SetModeTabKind(this, 1, method);
 }
@@ -151,9 +151,9 @@ void RecommendSupportEquipSelectListMenu__EndClickTabNormal(
       || (RecommendSupportEquipSelectListViewManager__ModifyList(supportServantEquipListViewManager, 0, method),
           (supportServantEquipListViewManager = this->fields.supportServantEquipListViewManager) == 0) )
     {
-      sub_1C32E7C(supportServantEquipListViewManager);
+      sub_1C372B4(supportServantEquipListViewManager);
     }
-    RecommendSupportEquipSelectListViewManager__SetMode_34705508(supportServantEquipListViewManager, 3, v5);
+    RecommendSupportEquipSelectListViewManager__SetMode_34801140(supportServantEquipListViewManager, 3, v5);
   }
   RecommendSupportEquipSelectListMenu__SetModeTabKind(this, 0, method);
 }
@@ -176,7 +176,7 @@ void RecommendSupportEquipSelectListMenu__EndClose(
   if ( closeCallbackFunc )
   {
     p_closeCallbackFunc->klass = 0;
-    sub_1C32BC4(p_closeCallbackFunc, 0, v3, v4);
+    sub_1C36FFC(p_closeCallbackFunc, 0, v3, v4);
     ((void (__fastcall *)(intptr_t, intptr_t))v6->fields.invoke_impl)(v6->fields.method_code, v6->fields.method);
   }
 }
@@ -193,25 +193,25 @@ void RecommendSupportEquipSelectListMenu__EndCloseShowServantEquip(
   const MethodInfo *v7; // x3
   const MethodInfo *v8; // x2
 
-  if ( (byte_4C33843 & 1) == 0 )
+  if ( (byte_4C3EE2D & 1) == 0 )
   {
-    sub_1C32C20(&RecommendSupportEquipSelectListViewManager_CallbackFunc_TypeInfo);
-    sub_1C32C20(&Method_RecommendSupportEquipSelectListMenu_OnSelectServantEquip__);
-    byte_4C33843 = 1;
+    sub_1C37058(&RecommendSupportEquipSelectListViewManager_CallbackFunc_TypeInfo);
+    sub_1C37058(&Method_RecommendSupportEquipSelectListMenu_OnSelectServantEquip__);
+    byte_4C3EE2D = 1;
   }
   this->fields.state = 2;
   supportServantEquipListViewManager = this->fields.supportServantEquipListViewManager;
-  v4 = (RecommendSupportEquipSelectListViewManager_CallbackFunc_o *)sub_1C32E6C(RecommendSupportEquipSelectListViewManager_CallbackFunc_TypeInfo);
+  v4 = (RecommendSupportEquipSelectListViewManager_CallbackFunc_o *)sub_1C372A4(RecommendSupportEquipSelectListViewManager_CallbackFunc_TypeInfo);
   RecommendSupportEquipSelectListViewManager_CallbackFunc___ctor(
     v4,
     (Il2CppObject *)this,
     (intptr_t)Method_RecommendSupportEquipSelectListMenu_OnSelectServantEquip__,
     0);
   if ( !supportServantEquipListViewManager )
-    sub_1C32E7C(v5);
+    sub_1C372B4(v5);
   supportServantEquipListViewManager->fields.callbackFunc = v4;
-  sub_1C32BC4((CGThumbnailListItem_o *)&supportServantEquipListViewManager->fields.callbackFunc, (int32_t)v4, v6, v7);
-  RecommendSupportEquipSelectListViewManager__SetMode_34705508(supportServantEquipListViewManager, 2, v8);
+  sub_1C36FFC((CGThumbnailListItem_o *)&supportServantEquipListViewManager->fields.callbackFunc, (int32_t)v4, v6, v7);
+  RecommendSupportEquipSelectListViewManager__SetMode_34801140(supportServantEquipListViewManager, 2, v8);
 }
 
 
@@ -239,12 +239,12 @@ void RecommendSupportEquipSelectListMenu__EndDecide(
   CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_o v21; // [xsp+20h] [xbp-60h]
   CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o v22; // 0:x0.16
 
-  if ( (byte_4C3383E & 1) == 0 )
+  if ( (byte_4C3EE28 & 1) == 0 )
   {
-    sub_1C32C20(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
-    sub_1C32C20(&CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo);
-    sub_1C32C20(&Method_SingletonMonoBehaviour_RecommendSupportSelectControl__get_Instance__);
-    byte_4C3383E = 1;
+    sub_1C37058(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
+    sub_1C37058(&CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo);
+    sub_1C37058(&Method_SingletonMonoBehaviour_RecommendSupportSelectControl__get_Instance__);
+    byte_4C3EE28 = 1;
   }
   if ( isRequest )
   {
@@ -258,7 +258,7 @@ void RecommendSupportEquipSelectListMenu__EndDecide(
     supportServantEquipListViewManager = (int64_t)this->fields.supportServantEquipListViewManager;
     if ( !supportServantEquipListViewManager )
       goto LABEL_30;
-    RecommendSupportEquipSelectListViewManager__SetMode_34705508(
+    RecommendSupportEquipSelectListViewManager__SetMode_34801140(
       (RecommendSupportEquipSelectListViewManager_o *)supportServantEquipListViewManager,
       3,
       v6);
@@ -290,11 +290,11 @@ void RecommendSupportEquipSelectListMenu__EndDecide(
   }
 LABEL_15:
   RecommendSupportEquipSelectListMenu__Init(this, selectNum);
-  supportServantEquipListViewManager = (int64_t)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39E2904 *)Method_SingletonMonoBehaviour_RecommendSupportSelectControl__get_Instance__);
+  supportServantEquipListViewManager = (int64_t)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39ED16C *)Method_SingletonMonoBehaviour_RecommendSupportSelectControl__get_Instance__);
   if ( !supportServantEquipListViewManager )
     goto LABEL_30;
   v9 = *(RecommendSupportData_o **)(supportServantEquipListViewManager + 112);
-  supportServantEquipListViewManager = (int64_t)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39E2904 *)Method_SingletonMonoBehaviour_RecommendSupportSelectControl__get_Instance__);
+  supportServantEquipListViewManager = (int64_t)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39ED16C *)Method_SingletonMonoBehaviour_RecommendSupportSelectControl__get_Instance__);
   if ( !supportServantEquipListViewManager )
     goto LABEL_30;
   v11 = *(_DWORD *)(supportServantEquipListViewManager + 120);
@@ -309,7 +309,7 @@ LABEL_15:
       if ( !CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo);
       v20 = v21;
-      supportServantEquipListViewManager = CodeStage_AntiCheat_ObscuredTypes_ObscuredLong__op_Implicit_48891308(&v20, 0);
+      supportServantEquipListViewManager = CodeStage_AntiCheat_ObscuredTypes_ObscuredLong__op_Implicit_48934420(&v20, 0);
       v14 = Item->fields.userSvtEntity;
       if ( v14 )
       {
@@ -320,7 +320,7 @@ LABEL_15:
           j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
         *(_QWORD *)&v22.fields.currentCryptoKey = v17;
         *(_QWORD *)&v22.fields.fakeValue = v16;
-        supportServantEquipListViewManager = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_48887784(v22, 0);
+        supportServantEquipListViewManager = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_48930896(v22, 0);
         if ( v9 )
         {
           RecommendSupportData__SetEquipData(v9, v11, v15, v18, v19);
@@ -329,13 +329,13 @@ LABEL_15:
       }
     }
 LABEL_30:
-    sub_1C32E7C(supportServantEquipListViewManager);
+    sub_1C372B4(supportServantEquipListViewManager);
   }
   if ( !v9 )
     goto LABEL_30;
   RecommendSupportData__RemoveEquipData(v9, v11, v10);
 LABEL_28:
-  supportServantEquipListViewManager = (int64_t)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39E2904 *)Method_SingletonMonoBehaviour_RecommendSupportSelectControl__get_Instance__);
+  supportServantEquipListViewManager = (int64_t)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39ED16C *)Method_SingletonMonoBehaviour_RecommendSupportSelectControl__get_Instance__);
   if ( !supportServantEquipListViewManager )
     goto LABEL_30;
   RecommendSupportSelectControl__SetState((RecommendSupportSelectControl_o *)supportServantEquipListViewManager, 0, 0);
@@ -351,28 +351,28 @@ void RecommendSupportEquipSelectListMenu__EndOpen(
   __int64 v5; // x0
   int v6; // w8
 
-  if ( (byte_4C3383B & 1) == 0 )
+  if ( (byte_4C3EE25 & 1) == 0 )
   {
-    sub_1C32C20(&TutorialFlag_ImageId___TypeInfo);
-    sub_1C32C20(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
-    sub_1C32C20(&TutorialFlag_TypeInfo);
-    byte_4C3383B = 1;
+    sub_1C37058(&TutorialFlag_ImageId___TypeInfo);
+    sub_1C37058(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+    sub_1C37058(&TutorialFlag_TypeInfo);
+    byte_4C3EE25 = 1;
   }
   if ( !TutorialFlag_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(TutorialFlag_TypeInfo);
-  if ( !TutorialFlag__Get_40328320(110, 0) )
+  if ( !TutorialFlag__Get_40427704(110, 0) )
   {
-    Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39E2904 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
-    v5 = sub_1C32CC8(TutorialFlag_ImageId___TypeInfo, 2);
+    Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39ED16C *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+    v5 = sub_1C37100(TutorialFlag_ImageId___TypeInfo, 2);
     if ( !v5 )
       goto LABEL_13;
     v6 = *(_DWORD *)(v5 + 24);
     if ( !v6 || (*(_DWORD *)(v5 + 32) = 4, v6 == 1) )
-      sub_1C32E84(v5);
+      sub_1C372BC(v5);
     *(_DWORD *)(v5 + 36) = 5;
     if ( !Instance )
 LABEL_13:
-      sub_1C32E7C(v5);
+      sub_1C372B4(v5);
     CommonUI__OpenTutorialImageDialog((CommonUI_o *)Instance, (TutorialFlag_ImageId_array *)v5, 110, 0, 0, 0, 0);
   }
   this->fields.state = 2;
@@ -390,12 +390,12 @@ void RecommendSupportEquipSelectListMenu__EndShowServantEquip(
   Il2CppObject *Instance; // x20
   System_Action_o *v8; // x21
 
-  if ( (byte_4C33842 & 1) == 0 )
+  if ( (byte_4C3EE2C & 1) == 0 )
   {
-    sub_1C32C20(&System_Action_TypeInfo);
-    sub_1C32C20(&Method_RecommendSupportEquipSelectListMenu_EndCloseShowServantEquip__);
-    sub_1C32C20(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
-    byte_4C33842 = 1;
+    sub_1C37058(&System_Action_TypeInfo);
+    sub_1C37058(&Method_RecommendSupportEquipSelectListMenu_EndCloseShowServantEquip__);
+    sub_1C37058(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+    byte_4C3EE2C = 1;
   }
   if ( isDecide )
   {
@@ -405,12 +405,12 @@ void RecommendSupportEquipSelectListMenu__EndShowServantEquip(
           (supportServantEquipListViewManager = this->fields.supportServantEquipListViewManager) == 0) )
     {
 LABEL_9:
-      sub_1C32E7C(supportServantEquipListViewManager);
+      sub_1C372B4(supportServantEquipListViewManager);
     }
-    RecommendSupportEquipSelectListViewManager__SetMode_34705508(supportServantEquipListViewManager, 3, v6);
+    RecommendSupportEquipSelectListViewManager__SetMode_34801140(supportServantEquipListViewManager, 3, v6);
   }
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39E2904 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
-  v8 = (System_Action_o *)sub_1C32E6C(System_Action_TypeInfo);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39ED16C *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+  v8 = (System_Action_o *)sub_1C372A4(System_Action_TypeInfo);
   System_Action___ctor(
     v8,
     (Il2CppObject *)this,
@@ -438,7 +438,7 @@ void RecommendSupportEquipSelectListMenu__EndStatusSync(
   if ( requestedCallback )
   {
     p_requestedCallback->klass = 0;
-    sub_1C32BC4(p_requestedCallback, 0, (int32_t)method, v3);
+    sub_1C36FFC(p_requestedCallback, 0, (int32_t)method, v3);
     ((void (__fastcall *)(intptr_t, __int64, intptr_t))v5->fields.invoke_impl)(
       v5->fields.method_code,
       1,
@@ -455,11 +455,11 @@ void RecommendSupportEquipSelectListMenu__Init(RecommendSupportEquipSelectListMe
   bool enabled; // w0
   const MethodInfo *v7; // x2
 
-  if ( (byte_4C33839 & 1) == 0 )
+  if ( (byte_4C3EE23 & 1) == 0 )
   {
-    sub_1C32C20(&LocalizationManager_TypeInfo);
-    sub_1C32C20(&StringLiteral_11625/*"SERVANT_EQUIP_OPERATION_EXPLANATION_STATUS"*/);
-    byte_4C33839 = 1;
+    sub_1C37058(&LocalizationManager_TypeInfo);
+    sub_1C37058(&StringLiteral_11626/*"SERVANT_EQUIP_OPERATION_EXPLANATION_STATUS"*/);
+    byte_4C3EE23 = 1;
   }
   supportServantEquipListViewManager = this->fields.supportServantEquipListViewManager;
   if ( !supportServantEquipListViewManager )
@@ -469,7 +469,7 @@ void RecommendSupportEquipSelectListMenu__Init(RecommendSupportEquipSelectListMe
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   supportServantEquipListViewManager = (RecommendSupportEquipSelectListViewManager_o *)LocalizationManager__Get(
-                                                                                         (System_String_o *)StringLiteral_11625/*"SERVANT_EQUIP_OPERATION_EXPLANATION_STATUS"*/,
+                                                                                         (System_String_o *)StringLiteral_11626/*"SERVANT_EQUIP_OPERATION_EXPLANATION_STATUS"*/,
                                                                                          0);
   if ( !explanationLabel
     || (UILabel__set_text(explanationLabel, (System_String_o *)supportServantEquipListViewManager, 0),
@@ -478,7 +478,7 @@ void RecommendSupportEquipSelectListMenu__Init(RecommendSupportEquipSelectListMe
         !normalTabButton) )
   {
 LABEL_9:
-    sub_1C32E7C(supportServantEquipListViewManager);
+    sub_1C372B4(supportServantEquipListViewManager);
   }
   enabled = UnityEngine_Behaviour__get_enabled(normalTabButton, 0);
   UICommonButton__SetColliderEnable((UICommonButton_o *)normalTabButton, enabled, 1, 0);
@@ -498,12 +498,12 @@ void RecommendSupportEquipSelectListMenu__OnClickCancel(
   const MethodInfo *v7; // x3
   const MethodInfo *v8; // x2
 
-  if ( (byte_4C3383F & 1) == 0 )
+  if ( (byte_4C3EE29 & 1) == 0 )
   {
-    sub_1C32C20(&Method_RecommendSupportEquipSelectListMenu_EndCancelButton__);
-    sub_1C32C20(&Method_RecommendSupportEquipSelectListMenu_OnClickCancel__);
-    sub_1C32C20(&RecommendSupportEquipSelectListMenu_RequestCallbackFunc_TypeInfo);
-    byte_4C3383F = 1;
+    sub_1C37058(&Method_RecommendSupportEquipSelectListMenu_EndCancelButton__);
+    sub_1C37058(&Method_RecommendSupportEquipSelectListMenu_OnClickCancel__);
+    sub_1C37058(&RecommendSupportEquipSelectListMenu_RequestCallbackFunc_TypeInfo);
+    byte_4C3EE29 = 1;
   }
   if ( this->fields.state == 2 )
   {
@@ -511,16 +511,16 @@ void RecommendSupportEquipSelectListMenu__OnClickCancel(
     {
       supportServantEquipListViewManager = (ListViewManager_o *)this->fields.supportServantEquipListViewManager;
       if ( !supportServantEquipListViewManager )
-        sub_1C32E7C(0);
+        sub_1C372B4(0);
       ListViewManager__SetScrollBarValue(supportServantEquipListViewManager, 0);
     }
     this->fields.state = 3;
     v4 = Method_RecommendSupportEquipSelectListMenu_OnClickCancel__;
     if ( (*((_BYTE *)Method_RecommendSupportEquipSelectListMenu_OnClickCancel__ + 83) & 2) != 0 )
-      v4 = (_QWORD *)sub_1C32C38(Method_RecommendSupportEquipSelectListMenu_OnClickCancel__);
-    v5 = (System_Reflection_MethodBase_o *)sub_1C32C04(v4, v4[4]);
+      v4 = (_QWORD *)sub_1C37070(Method_RecommendSupportEquipSelectListMenu_OnClickCancel__);
+    v5 = (System_Reflection_MethodBase_o *)sub_1C3703C(v4, v4[4]);
     OverwriteAssetSoundName__PlaySystemSe(v5, 1, 0, 0);
-    v6 = (RecommendSupportEquipSelectListMenu_RequestCallbackFunc_o *)sub_1C32E6C(RecommendSupportEquipSelectListMenu_RequestCallbackFunc_TypeInfo);
+    v6 = (RecommendSupportEquipSelectListMenu_RequestCallbackFunc_o *)sub_1C372A4(RecommendSupportEquipSelectListMenu_RequestCallbackFunc_TypeInfo);
     RecommendSupportEquipSelectListMenu_RequestCallbackFunc___ctor(
       v6,
       (Il2CppObject *)this,
@@ -546,26 +546,26 @@ void RecommendSupportEquipSelectListMenu__OnClickChoiceTabButton(
   const MethodInfo *v11; // x3
   const MethodInfo *v12; // x2
 
-  if ( (byte_4C33846 & 1) == 0 )
+  if ( (byte_4C3EE30 & 1) == 0 )
   {
-    sub_1C32C20(&Method_RecommendSupportEquipSelectListMenu_EndClickTabChoice__);
-    sub_1C32C20(&Method_RecommendSupportEquipSelectListMenu_OnClickChoiceTabButton__);
-    sub_1C32C20(&RecommendSupportEquipSelectListMenu_RequestCallbackFunc_TypeInfo);
-    byte_4C33846 = 1;
+    sub_1C37058(&Method_RecommendSupportEquipSelectListMenu_EndClickTabChoice__);
+    sub_1C37058(&Method_RecommendSupportEquipSelectListMenu_OnClickChoiceTabButton__);
+    sub_1C37058(&RecommendSupportEquipSelectListMenu_RequestCallbackFunc_TypeInfo);
+    byte_4C3EE30 = 1;
   }
   if ( this->fields.state == 2 )
   {
     v3 = Method_RecommendSupportEquipSelectListMenu_OnClickChoiceTabButton__;
     if ( (*((_BYTE *)Method_RecommendSupportEquipSelectListMenu_OnClickChoiceTabButton__ + 83) & 2) != 0 )
-      v3 = (_QWORD *)sub_1C32C38(Method_RecommendSupportEquipSelectListMenu_OnClickChoiceTabButton__);
-    v4 = (System_Reflection_MethodBase_o *)sub_1C32C04(v3, v3[4]);
+      v3 = (_QWORD *)sub_1C37070(Method_RecommendSupportEquipSelectListMenu_OnClickChoiceTabButton__);
+    v4 = (System_Reflection_MethodBase_o *)sub_1C3703C(v3, v3[4]);
     OverwriteAssetSoundName__PlaySystemSe(v4, 0, 0, 0);
     tabModeKind = this->fields.tabModeKind;
     if ( tabModeKind )
     {
       if ( tabModeKind == 2 )
       {
-        v7 = (RecommendSupportEquipSelectListMenu_RequestCallbackFunc_o *)sub_1C32E6C(RecommendSupportEquipSelectListMenu_RequestCallbackFunc_TypeInfo);
+        v7 = (RecommendSupportEquipSelectListMenu_RequestCallbackFunc_o *)sub_1C372A4(RecommendSupportEquipSelectListMenu_RequestCallbackFunc_TypeInfo);
         RecommendSupportEquipSelectListMenu_RequestCallbackFunc___ctor(
           v7,
           (Il2CppObject *)this,
@@ -574,7 +574,7 @@ void RecommendSupportEquipSelectListMenu__OnClickChoiceTabButton(
         RecommendSupportEquipSelectListMenu__StatusRequest(this, v7, v9);
         return;
       }
-      v10 = (RecommendSupportEquipSelectListMenu_RequestCallbackFunc_o *)sub_1C32E6C(RecommendSupportEquipSelectListMenu_RequestCallbackFunc_TypeInfo);
+      v10 = (RecommendSupportEquipSelectListMenu_RequestCallbackFunc_o *)sub_1C372A4(RecommendSupportEquipSelectListMenu_RequestCallbackFunc_TypeInfo);
       RecommendSupportEquipSelectListMenu_RequestCallbackFunc___ctor(
         v10,
         (Il2CppObject *)this,
@@ -602,26 +602,26 @@ void RecommendSupportEquipSelectListMenu__OnClickLockTabButton(
   const MethodInfo *v11; // x3
   const MethodInfo *v12; // x2
 
-  if ( (byte_4C33845 & 1) == 0 )
+  if ( (byte_4C3EE2F & 1) == 0 )
   {
-    sub_1C32C20(&Method_RecommendSupportEquipSelectListMenu_EndClickTabLock__);
-    sub_1C32C20(&Method_RecommendSupportEquipSelectListMenu_OnClickLockTabButton__);
-    sub_1C32C20(&RecommendSupportEquipSelectListMenu_RequestCallbackFunc_TypeInfo);
-    byte_4C33845 = 1;
+    sub_1C37058(&Method_RecommendSupportEquipSelectListMenu_EndClickTabLock__);
+    sub_1C37058(&Method_RecommendSupportEquipSelectListMenu_OnClickLockTabButton__);
+    sub_1C37058(&RecommendSupportEquipSelectListMenu_RequestCallbackFunc_TypeInfo);
+    byte_4C3EE2F = 1;
   }
   if ( this->fields.state == 2 )
   {
     v3 = Method_RecommendSupportEquipSelectListMenu_OnClickLockTabButton__;
     if ( (*((_BYTE *)Method_RecommendSupportEquipSelectListMenu_OnClickLockTabButton__ + 83) & 2) != 0 )
-      v3 = (_QWORD *)sub_1C32C38(Method_RecommendSupportEquipSelectListMenu_OnClickLockTabButton__);
-    v4 = (System_Reflection_MethodBase_o *)sub_1C32C04(v3, v3[4]);
+      v3 = (_QWORD *)sub_1C37070(Method_RecommendSupportEquipSelectListMenu_OnClickLockTabButton__);
+    v4 = (System_Reflection_MethodBase_o *)sub_1C3703C(v3, v3[4]);
     OverwriteAssetSoundName__PlaySystemSe(v4, 0, 0, 0);
     tabModeKind = this->fields.tabModeKind;
     if ( tabModeKind )
     {
       if ( tabModeKind == 1 )
       {
-        v7 = (RecommendSupportEquipSelectListMenu_RequestCallbackFunc_o *)sub_1C32E6C(RecommendSupportEquipSelectListMenu_RequestCallbackFunc_TypeInfo);
+        v7 = (RecommendSupportEquipSelectListMenu_RequestCallbackFunc_o *)sub_1C372A4(RecommendSupportEquipSelectListMenu_RequestCallbackFunc_TypeInfo);
         RecommendSupportEquipSelectListMenu_RequestCallbackFunc___ctor(
           v7,
           (Il2CppObject *)this,
@@ -630,7 +630,7 @@ void RecommendSupportEquipSelectListMenu__OnClickLockTabButton(
         RecommendSupportEquipSelectListMenu__StatusRequest(this, v7, v9);
         return;
       }
-      v10 = (RecommendSupportEquipSelectListMenu_RequestCallbackFunc_o *)sub_1C32E6C(RecommendSupportEquipSelectListMenu_RequestCallbackFunc_TypeInfo);
+      v10 = (RecommendSupportEquipSelectListMenu_RequestCallbackFunc_o *)sub_1C372A4(RecommendSupportEquipSelectListMenu_RequestCallbackFunc_TypeInfo);
       RecommendSupportEquipSelectListMenu_RequestCallbackFunc___ctor(
         v10,
         (Il2CppObject *)this,
@@ -653,21 +653,21 @@ void RecommendSupportEquipSelectListMenu__OnClickNormalTabButton(
   const MethodInfo *v6; // x3
   const MethodInfo *v7; // x2
 
-  if ( (byte_4C33844 & 1) == 0 )
+  if ( (byte_4C3EE2E & 1) == 0 )
   {
-    sub_1C32C20(&Method_RecommendSupportEquipSelectListMenu_EndClickTabNormal__);
-    sub_1C32C20(&Method_RecommendSupportEquipSelectListMenu_OnClickNormalTabButton__);
-    sub_1C32C20(&RecommendSupportEquipSelectListMenu_RequestCallbackFunc_TypeInfo);
-    byte_4C33844 = 1;
+    sub_1C37058(&Method_RecommendSupportEquipSelectListMenu_EndClickTabNormal__);
+    sub_1C37058(&Method_RecommendSupportEquipSelectListMenu_OnClickNormalTabButton__);
+    sub_1C37058(&RecommendSupportEquipSelectListMenu_RequestCallbackFunc_TypeInfo);
+    byte_4C3EE2E = 1;
   }
   if ( this->fields.state == 2 )
   {
     v3 = Method_RecommendSupportEquipSelectListMenu_OnClickNormalTabButton__;
     if ( (*((_BYTE *)Method_RecommendSupportEquipSelectListMenu_OnClickNormalTabButton__ + 83) & 2) != 0 )
-      v3 = (_QWORD *)sub_1C32C38(Method_RecommendSupportEquipSelectListMenu_OnClickNormalTabButton__);
-    v4 = (System_Reflection_MethodBase_o *)sub_1C32C04(v3, v3[4]);
+      v3 = (_QWORD *)sub_1C37070(Method_RecommendSupportEquipSelectListMenu_OnClickNormalTabButton__);
+    v4 = (System_Reflection_MethodBase_o *)sub_1C3703C(v3, v3[4]);
     OverwriteAssetSoundName__PlaySystemSe(v4, 0, 0, 0);
-    v5 = (RecommendSupportEquipSelectListMenu_RequestCallbackFunc_o *)sub_1C32E6C(RecommendSupportEquipSelectListMenu_RequestCallbackFunc_TypeInfo);
+    v5 = (RecommendSupportEquipSelectListMenu_RequestCallbackFunc_o *)sub_1C372A4(RecommendSupportEquipSelectListMenu_RequestCallbackFunc_TypeInfo);
     RecommendSupportEquipSelectListMenu_RequestCallbackFunc___ctor(
       v5,
       (Il2CppObject *)this,
@@ -689,17 +689,17 @@ void RecommendSupportEquipSelectListMenu__OnClickScaleChange(
   const MethodInfo *v7; // x1
   UISprite_o *scaleChangeTabSprite; // x19
 
-  if ( (byte_4C33849 & 1) == 0 )
+  if ( (byte_4C3EE33 & 1) == 0 )
   {
-    sub_1C32C20(&Method_RecommendSupportEquipSelectListMenu_OnClickScaleChange__);
-    byte_4C33849 = 1;
+    sub_1C37058(&Method_RecommendSupportEquipSelectListMenu_OnClickScaleChange__);
+    byte_4C3EE33 = 1;
   }
   if ( this->fields.state == 2 )
   {
     v3 = Method_RecommendSupportEquipSelectListMenu_OnClickScaleChange__;
     if ( (*((_BYTE *)Method_RecommendSupportEquipSelectListMenu_OnClickScaleChange__ + 83) & 2) != 0 )
-      v3 = (_QWORD *)sub_1C32C38(Method_RecommendSupportEquipSelectListMenu_OnClickScaleChange__);
-    v4 = (System_Reflection_MethodBase_o *)sub_1C32C04(v3, v3[4]);
+      v3 = (_QWORD *)sub_1C37070(Method_RecommendSupportEquipSelectListMenu_OnClickScaleChange__);
+    v4 = (System_Reflection_MethodBase_o *)sub_1C3703C(v3, v3[4]);
     OverwriteAssetSoundName__PlaySystemSe(v4, 0, 0, 0);
     supportServantEquipListViewManager = this->fields.supportServantEquipListViewManager;
     if ( !supportServantEquipListViewManager
@@ -711,7 +711,7 @@ void RecommendSupportEquipSelectListMenu__OnClickScaleChange(
                                                                                                  v7),
           !scaleChangeTabSprite) )
     {
-      sub_1C32E7C(supportServantEquipListViewManager);
+      sub_1C372B4(supportServantEquipListViewManager);
     }
     UISprite__set_spriteName(scaleChangeTabSprite, (System_String_o *)supportServantEquipListViewManager, 0);
   }
@@ -788,19 +788,19 @@ void RecommendSupportEquipSelectListMenu__OnSelectServantEquip(
   CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o v66; // 0:x0.16
 
   v6 = this;
-  if ( (byte_4C33841 & 1) == 0 )
+  if ( (byte_4C3EE2B & 1) == 0 )
   {
-    sub_1C32C20(&RecommendSupportEquipSelectListViewManager_CallbackFunc_TypeInfo);
-    sub_1C32C20(&ServantStatusDialog_EndDelegate_TypeInfo);
-    sub_1C32C20(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
-    sub_1C32C20(&CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo);
-    sub_1C32C20(&Method_RecommendSupportEquipSelectListMenu_EndDecide__);
-    sub_1C32C20(&Method_RecommendSupportEquipSelectListMenu_EndShowServantEquip__);
-    sub_1C32C20(&Method_RecommendSupportEquipSelectListMenu_OnSelectServantEquip__);
-    sub_1C32C20(&RecommendSupportEquipSelectListMenu_RequestCallbackFunc_TypeInfo);
-    sub_1C32C20(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
-    this = (RecommendSupportEquipSelectListMenu_o *)sub_1C32C20(&Method_SingletonMonoBehaviour_RecommendSupportSelectControl__get_Instance__);
-    byte_4C33841 = 1;
+    sub_1C37058(&RecommendSupportEquipSelectListViewManager_CallbackFunc_TypeInfo);
+    sub_1C37058(&ServantStatusDialog_EndDelegate_TypeInfo);
+    sub_1C37058(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
+    sub_1C37058(&CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo);
+    sub_1C37058(&Method_RecommendSupportEquipSelectListMenu_EndDecide__);
+    sub_1C37058(&Method_RecommendSupportEquipSelectListMenu_EndShowServantEquip__);
+    sub_1C37058(&Method_RecommendSupportEquipSelectListMenu_OnSelectServantEquip__);
+    sub_1C37058(&RecommendSupportEquipSelectListMenu_RequestCallbackFunc_TypeInfo);
+    sub_1C37058(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+    this = (RecommendSupportEquipSelectListMenu_o *)sub_1C37058(&Method_SingletonMonoBehaviour_RecommendSupportSelectControl__get_Instance__);
+    byte_4C3EE2B = 1;
   }
   if ( v6->fields.state != 2 )
     return;
@@ -828,8 +828,8 @@ void RecommendSupportEquipSelectListMenu__OnSelectServantEquip(
       {
         v38 = Method_RecommendSupportEquipSelectListMenu_OnSelectServantEquip__;
         if ( (*((_BYTE *)Method_RecommendSupportEquipSelectListMenu_OnSelectServantEquip__ + 83) & 2) != 0 )
-          v38 = (_QWORD *)sub_1C32C38(Method_RecommendSupportEquipSelectListMenu_OnSelectServantEquip__);
-        v39 = (System_Reflection_MethodBase_o *)sub_1C32C04(v38, v38[4]);
+          v38 = (_QWORD *)sub_1C37070(Method_RecommendSupportEquipSelectListMenu_OnSelectServantEquip__);
+        v39 = (System_Reflection_MethodBase_o *)sub_1C3703C(v38, v38[4]);
         OverwriteAssetSoundName__PlaySystemSe(v39, 0, 0, 0);
         if ( v7 )
           BYTE1(v7->fields.closeCallbackFunc) ^= 1u;
@@ -838,8 +838,8 @@ void RecommendSupportEquipSelectListMenu__OnSelectServantEquip(
       {
         v14 = Method_RecommendSupportEquipSelectListMenu_OnSelectServantEquip__;
         if ( (*((_BYTE *)Method_RecommendSupportEquipSelectListMenu_OnSelectServantEquip__ + 83) & 2) != 0 )
-          v14 = (_QWORD *)sub_1C32C38(Method_RecommendSupportEquipSelectListMenu_OnSelectServantEquip__);
-        v15 = (System_Reflection_MethodBase_o *)sub_1C32C04(v14, v14[4]);
+          v14 = (_QWORD *)sub_1C37070(Method_RecommendSupportEquipSelectListMenu_OnSelectServantEquip__);
+        v15 = (System_Reflection_MethodBase_o *)sub_1C3703C(v14, v14[4]);
         OverwriteAssetSoundName__PlaySystemSe(v15, 11, 0, 0);
         if ( v7 )
           LOBYTE(v7->fields.closeCallbackFunc) ^= 1u;
@@ -856,8 +856,8 @@ void RecommendSupportEquipSelectListMenu__OnSelectServantEquip(
           v43 = Method_RecommendSupportEquipSelectListMenu_OnSelectServantEquip__;
           v44 = BYTE1(v7->fields.choiceTabSprite);
           if ( (*((_BYTE *)Method_RecommendSupportEquipSelectListMenu_OnSelectServantEquip__ + 83) & 2) != 0 )
-            v43 = (_QWORD *)sub_1C32C38(Method_RecommendSupportEquipSelectListMenu_OnSelectServantEquip__);
-          v45 = (System_Reflection_MethodBase_o *)sub_1C32C04(v43, v43[4]);
+            v43 = (_QWORD *)sub_1C37070(Method_RecommendSupportEquipSelectListMenu_OnSelectServantEquip__);
+          v45 = (System_Reflection_MethodBase_o *)sub_1C3703C(v43, v43[4]);
           OverwriteAssetSoundName__PlaySystemSe(v45, 0, 0, 0);
           if ( v44 )
           {
@@ -885,7 +885,7 @@ void RecommendSupportEquipSelectListMenu__OnSelectServantEquip(
             if ( !CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo->_2.cctor_finished )
               j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo);
             v64 = v65;
-            this = (RecommendSupportEquipSelectListMenu_o *)CodeStage_AntiCheat_ObscuredTypes_ObscuredLong__op_Implicit_48891308(
+            this = (RecommendSupportEquipSelectListMenu_o *)CodeStage_AntiCheat_ObscuredTypes_ObscuredLong__op_Implicit_48934420(
                                                               &v64,
                                                               0);
             if ( !servantItemInfo )
@@ -899,8 +899,8 @@ void RecommendSupportEquipSelectListMenu__OnSelectServantEquip(
         {
           v51 = Method_RecommendSupportEquipSelectListMenu_OnSelectServantEquip__;
           if ( (*((_BYTE *)Method_RecommendSupportEquipSelectListMenu_OnSelectServantEquip__ + 83) & 2) != 0 )
-            v51 = (_QWORD *)sub_1C32C38(Method_RecommendSupportEquipSelectListMenu_OnSelectServantEquip__);
-          v52 = (System_Reflection_MethodBase_o *)sub_1C32C04(v51, v51[4]);
+            v51 = (_QWORD *)sub_1C37070(Method_RecommendSupportEquipSelectListMenu_OnSelectServantEquip__);
+          v52 = (System_Reflection_MethodBase_o *)sub_1C3703C(v51, v51[4]);
           OverwriteAssetSoundName__PlaySystemSe(v52, 0, 0, 0);
           this = (RecommendSupportEquipSelectListMenu_o *)v6->fields.supportServantEquipListViewManager;
           if ( !this )
@@ -927,7 +927,7 @@ void RecommendSupportEquipSelectListMenu__OnSelectServantEquip(
       }
       v6->fields.state = 2;
       v58 = v6->fields.supportServantEquipListViewManager;
-      v59 = (RecommendSupportEquipSelectListViewManager_CallbackFunc_o *)sub_1C32E6C(RecommendSupportEquipSelectListViewManager_CallbackFunc_TypeInfo);
+      v59 = (RecommendSupportEquipSelectListViewManager_CallbackFunc_o *)sub_1C372A4(RecommendSupportEquipSelectListViewManager_CallbackFunc_TypeInfo);
       RecommendSupportEquipSelectListViewManager_CallbackFunc___ctor(
         v59,
         (Il2CppObject *)v6,
@@ -936,28 +936,28 @@ void RecommendSupportEquipSelectListMenu__OnSelectServantEquip(
       if ( v58 )
       {
         v58->fields.callbackFunc = v59;
-        sub_1C32BC4((CGThumbnailListItem_o *)&v58->fields.callbackFunc, (int32_t)v59, v60, v61);
-        RecommendSupportEquipSelectListViewManager__SetMode_34705508(v58, 2, v62);
+        sub_1C36FFC((CGThumbnailListItem_o *)&v58->fields.callbackFunc, (int32_t)v59, v60, v61);
+        RecommendSupportEquipSelectListViewManager__SetMode_34801140(v58, 2, v62);
         return;
       }
 LABEL_73:
-      sub_1C32E7C(this);
+      sub_1C372B4(this);
     case 2:
       v16 = Method_RecommendSupportEquipSelectListMenu_OnSelectServantEquip__;
       if ( (*((_BYTE *)Method_RecommendSupportEquipSelectListMenu_OnSelectServantEquip__ + 83) & 2) != 0 )
-        v16 = (_QWORD *)sub_1C32C38(Method_RecommendSupportEquipSelectListMenu_OnSelectServantEquip__);
-      v17 = (System_Reflection_MethodBase_o *)sub_1C32C04(v16, v16[4]);
+        v16 = (_QWORD *)sub_1C37070(Method_RecommendSupportEquipSelectListMenu_OnSelectServantEquip__);
+      v17 = (System_Reflection_MethodBase_o *)sub_1C3703C(v16, v16[4]);
       if ( v7 )
       {
         OverwriteAssetSoundName__PlaySystemSe(v17, 0, 0, 0);
         v6->fields.state = 5;
-        Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39E2904 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+        Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39ED16C *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
         if ( BYTE2(v7->fields.choiceTabSprite) )
           v19 = 1;
         else
           v19 = BYTE1(v7->fields.choiceTabSprite) != 0;
         v49 = (UserServantEntity_o *)v7->fields.normalTabSprite;
-        v50 = (ServantStatusDialog_EndDelegate_o *)sub_1C32E6C(ServantStatusDialog_EndDelegate_TypeInfo);
+        v50 = (ServantStatusDialog_EndDelegate_o *)sub_1C372A4(ServantStatusDialog_EndDelegate_TypeInfo);
         ServantStatusDialog_EndDelegate___ctor(
           v50,
           (Il2CppObject *)v6,
@@ -965,7 +965,7 @@ LABEL_73:
           0);
         if ( Instance )
         {
-          CommonUI__OpenServantEquipStatusDialog_31206000((CommonUI_o *)Instance, 0, v49, v19, v50, 0, 0);
+          CommonUI__OpenServantEquipStatusDialog_31223464((CommonUI_o *)Instance, 0, v49, v19, v50, 0, 0);
           return;
         }
       }
@@ -974,7 +974,7 @@ LABEL_73:
         OverwriteAssetSoundName__PlaySystemSe(v17, 2, 0, 0);
         v6->fields.state = 2;
         v33 = v6->fields.supportServantEquipListViewManager;
-        v34 = (RecommendSupportEquipSelectListViewManager_CallbackFunc_o *)sub_1C32E6C(RecommendSupportEquipSelectListViewManager_CallbackFunc_TypeInfo);
+        v34 = (RecommendSupportEquipSelectListViewManager_CallbackFunc_o *)sub_1C372A4(RecommendSupportEquipSelectListViewManager_CallbackFunc_TypeInfo);
         RecommendSupportEquipSelectListViewManager_CallbackFunc___ctor(
           v34,
           (Il2CppObject *)v6,
@@ -983,8 +983,8 @@ LABEL_73:
         if ( v33 )
         {
           v33->fields.callbackFunc = v34;
-          sub_1C32BC4((CGThumbnailListItem_o *)&v33->fields.callbackFunc, (int32_t)v34, v35, v36);
-          RecommendSupportEquipSelectListViewManager__SetMode_34705508(v33, 2, v37);
+          sub_1C36FFC((CGThumbnailListItem_o *)&v33->fields.callbackFunc, (int32_t)v34, v35, v36);
+          RecommendSupportEquipSelectListViewManager__SetMode_34801140(v33, 2, v37);
           return;
         }
       }
@@ -992,10 +992,10 @@ LABEL_73:
     case 1:
       v8 = Method_RecommendSupportEquipSelectListMenu_OnSelectServantEquip__;
       if ( (*((_BYTE *)Method_RecommendSupportEquipSelectListMenu_OnSelectServantEquip__ + 83) & 2) != 0 )
-        v8 = (_QWORD *)sub_1C32C38(Method_RecommendSupportEquipSelectListMenu_OnSelectServantEquip__);
-      v9 = (System_Reflection_MethodBase_o *)sub_1C32C04(v8, v8[4]);
+        v8 = (_QWORD *)sub_1C37070(Method_RecommendSupportEquipSelectListMenu_OnSelectServantEquip__);
+      v9 = (System_Reflection_MethodBase_o *)sub_1C3703C(v8, v8[4]);
       OverwriteAssetSoundName__PlaySystemSe(v9, 8, 0, 0);
-      v10 = (RecommendSupportEquipSelectListMenu_RequestCallbackFunc_o *)sub_1C32E6C(RecommendSupportEquipSelectListMenu_RequestCallbackFunc_TypeInfo);
+      v10 = (RecommendSupportEquipSelectListMenu_RequestCallbackFunc_o *)sub_1C372A4(RecommendSupportEquipSelectListMenu_RequestCallbackFunc_TypeInfo);
       RecommendSupportEquipSelectListMenu_RequestCallbackFunc___ctor(
         v10,
         (Il2CppObject *)v6,
@@ -1006,18 +1006,18 @@ LABEL_73:
   }
   v20 = Method_RecommendSupportEquipSelectListMenu_OnSelectServantEquip__;
   if ( (*((_BYTE *)Method_RecommendSupportEquipSelectListMenu_OnSelectServantEquip__ + 83) & 2) != 0 )
-    v20 = (_QWORD *)sub_1C32C38(Method_RecommendSupportEquipSelectListMenu_OnSelectServantEquip__);
-  v21 = (System_Reflection_MethodBase_o *)sub_1C32C04(v20, v20[4]);
+    v20 = (_QWORD *)sub_1C37070(Method_RecommendSupportEquipSelectListMenu_OnSelectServantEquip__);
+  v21 = (System_Reflection_MethodBase_o *)sub_1C3703C(v20, v20[4]);
   OverwriteAssetSoundName__PlaySystemSe(v21, 1, 0, 0);
   v6->fields.state = 3;
   RecommendSupportEquipSelectListMenu__Init(v6, v22);
   if ( v7 )
   {
-    this = (RecommendSupportEquipSelectListMenu_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39E2904 *)Method_SingletonMonoBehaviour_RecommendSupportSelectControl__get_Instance__);
+    this = (RecommendSupportEquipSelectListMenu_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39ED16C *)Method_SingletonMonoBehaviour_RecommendSupportSelectControl__get_Instance__);
     if ( this )
     {
       explanationLabel = this->fields.explanationLabel;
-      this = (RecommendSupportEquipSelectListMenu_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39E2904 *)Method_SingletonMonoBehaviour_RecommendSupportSelectControl__get_Instance__);
+      this = (RecommendSupportEquipSelectListMenu_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39ED16C *)Method_SingletonMonoBehaviour_RecommendSupportSelectControl__get_Instance__);
       if ( this )
       {
         v24 = v7->fields.normalTabSprite;
@@ -1030,7 +1030,7 @@ LABEL_73:
           if ( !CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo->_2.cctor_finished )
             j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo);
           v63 = v65;
-          this = (RecommendSupportEquipSelectListMenu_o *)CodeStage_AntiCheat_ObscuredTypes_ObscuredLong__op_Implicit_48891308(
+          this = (RecommendSupportEquipSelectListMenu_o *)CodeStage_AntiCheat_ObscuredTypes_ObscuredLong__op_Implicit_48934420(
                                                             &v63,
                                                             0);
           v27 = v7->fields.normalTabSprite;
@@ -1043,7 +1043,7 @@ LABEL_73:
               j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
             *(_QWORD *)&v66.fields.currentCryptoKey = mTrans;
             *(_QWORD *)&v66.fields.fakeValue = mChildren;
-            this = (RecommendSupportEquipSelectListMenu_o *)CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_48887784(
+            this = (RecommendSupportEquipSelectListMenu_o *)CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_48930896(
                                                               v66,
                                                               0);
             if ( explanationLabel )
@@ -1054,7 +1054,7 @@ LABEL_73:
                 (int64_t)v28,
                 v31,
                 v32);
-              this = (RecommendSupportEquipSelectListMenu_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39E2904 *)Method_SingletonMonoBehaviour_RecommendSupportSelectControl__get_Instance__);
+              this = (RecommendSupportEquipSelectListMenu_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39ED16C *)Method_SingletonMonoBehaviour_RecommendSupportSelectControl__get_Instance__);
               if ( this )
               {
                 RecommendSupportSelectControl__SetState((RecommendSupportSelectControl_o *)this, 0, 0);
@@ -1082,15 +1082,15 @@ void RecommendSupportEquipSelectListMenu__Open(RecommendSupportEquipSelectListMe
   UISprite_o *scaleChangeTabSprite; // x20
   System_Action_o *v11; // x20
 
-  if ( (byte_4C3383A & 1) == 0 )
+  if ( (byte_4C3EE24 & 1) == 0 )
   {
-    sub_1C32C20(&System_Action_TypeInfo);
-    sub_1C32C20(&Method_RecommendSupportEquipSelectListMenu_EndOpen__);
-    sub_1C32C20(&Method_SingletonMonoBehaviour_RecommendSupportSelectControl__get_Instance__);
-    byte_4C3383A = 1;
+    sub_1C37058(&System_Action_TypeInfo);
+    sub_1C37058(&Method_RecommendSupportEquipSelectListMenu_EndOpen__);
+    sub_1C37058(&Method_SingletonMonoBehaviour_RecommendSupportSelectControl__get_Instance__);
+    byte_4C3EE24 = 1;
   }
   RecommendSupportEquipSelectListMenu__Init(this, method);
-  Instance = (RecommendSupportSelectControl_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39E2904 *)Method_SingletonMonoBehaviour_RecommendSupportSelectControl__get_Instance__);
+  Instance = (RecommendSupportSelectControl_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39ED16C *)Method_SingletonMonoBehaviour_RecommendSupportSelectControl__get_Instance__);
   if ( !Instance )
     goto LABEL_15;
   SelectEquipId = RecommendSupportSelectControl__get_SelectEquipId(Instance, 0);
@@ -1117,7 +1117,7 @@ void RecommendSupportEquipSelectListMenu__Open(RecommendSupportEquipSelectListMe
         Instance = (RecommendSupportSelectControl_o *)this->fields.titleInfo;
         if ( Instance )
         {
-          TitleInfoControl__setBackBtnSprite_39743540((TitleInfoControl_o *)Instance, 1, 0, 0, 0);
+          TitleInfoControl__setBackBtnSprite_39841600((TitleInfoControl_o *)Instance, 1, 0, 0, 0);
           Instance = (RecommendSupportSelectControl_o *)this->fields.supportServantEquipListViewManager;
           if ( Instance )
           {
@@ -1136,7 +1136,7 @@ void RecommendSupportEquipSelectListMenu__Open(RecommendSupportEquipSelectListMe
               if ( scaleChangeTabSprite )
               {
                 UISprite__set_spriteName(scaleChangeTabSprite, (System_String_o *)Instance, 0);
-                v11 = (System_Action_o *)sub_1C32E6C(System_Action_TypeInfo);
+                v11 = (System_Action_o *)sub_1C372A4(System_Action_TypeInfo);
                 System_Action___ctor(v11, (Il2CppObject *)this, Method_RecommendSupportEquipSelectListMenu_EndOpen__, 0);
                 BaseMenu__Open((BaseMenu_o *)this, v11, 0);
                 return;
@@ -1147,7 +1147,7 @@ void RecommendSupportEquipSelectListMenu__Open(RecommendSupportEquipSelectListMe
       }
     }
 LABEL_15:
-    sub_1C32E7C(Instance);
+    sub_1C372B4(Instance);
   }
 }
 
@@ -1165,11 +1165,11 @@ void RecommendSupportEquipSelectListMenu__SetListManagerStatus(
   int32_t v8; // w1
 
   v3 = this;
-  if ( (byte_4C3383D & 1) == 0 )
+  if ( (byte_4C3EE27 & 1) == 0 )
   {
-    sub_1C32C20(&RecommendSupportEquipSelectListViewManager_CallbackFunc_TypeInfo);
-    this = (RecommendSupportEquipSelectListMenu_o *)sub_1C32C20(&Method_RecommendSupportEquipSelectListMenu_OnSelectServantEquip__);
-    byte_4C3383D = 1;
+    sub_1C37058(&RecommendSupportEquipSelectListViewManager_CallbackFunc_TypeInfo);
+    this = (RecommendSupportEquipSelectListMenu_o *)sub_1C37058(&Method_RecommendSupportEquipSelectListMenu_OnSelectServantEquip__);
+    byte_4C3EE27 = 1;
   }
   supportServantEquipListViewManager = v3->fields.supportServantEquipListViewManager;
   if ( v3->fields.state != 2 )
@@ -1180,9 +1180,9 @@ void RecommendSupportEquipSelectListMenu__SetListManagerStatus(
       goto LABEL_8;
     }
 LABEL_9:
-    sub_1C32E7C(this);
+    sub_1C372B4(this);
   }
-  v5 = (RecommendSupportEquipSelectListViewManager_CallbackFunc_o *)sub_1C32E6C(RecommendSupportEquipSelectListViewManager_CallbackFunc_TypeInfo);
+  v5 = (RecommendSupportEquipSelectListViewManager_CallbackFunc_o *)sub_1C372A4(RecommendSupportEquipSelectListViewManager_CallbackFunc_TypeInfo);
   RecommendSupportEquipSelectListViewManager_CallbackFunc___ctor(
     v5,
     (Il2CppObject *)v3,
@@ -1191,10 +1191,10 @@ LABEL_9:
   if ( !supportServantEquipListViewManager )
     goto LABEL_9;
   supportServantEquipListViewManager->fields.callbackFunc = v5;
-  sub_1C32BC4((CGThumbnailListItem_o *)&supportServantEquipListViewManager->fields.callbackFunc, (int32_t)v5, v6, v7);
+  sub_1C36FFC((CGThumbnailListItem_o *)&supportServantEquipListViewManager->fields.callbackFunc, (int32_t)v5, v6, v7);
   v8 = 2;
 LABEL_8:
-  RecommendSupportEquipSelectListViewManager__SetMode_34705508(supportServantEquipListViewManager, v8, v2);
+  RecommendSupportEquipSelectListViewManager__SetMode_34801140(supportServantEquipListViewManager, v8, v2);
 }
 
 
@@ -1219,19 +1219,19 @@ void RecommendSupportEquipSelectListMenu__SetModeTabKind(
   __int64 *v18; // x8
   struct RecommendSupportEquipSelectListViewManager_o *supportServantEquipListViewManager; // x8
 
-  if ( (byte_4C33847 & 1) == 0 )
+  if ( (byte_4C3EE31 & 1) == 0 )
   {
-    sub_1C32C20(&LocalizationManager_TypeInfo);
-    sub_1C32C20(&StringLiteral_11623/*"SERVANT_EQUIP_OPERATION_EXPLANATION_CHOICE"*/);
-    sub_1C32C20(&StringLiteral_17638/*"button_allchoice_reg"*/);
-    sub_1C32C20(&StringLiteral_17641/*"button_alllock_unreg"*/);
-    sub_1C32C20(&StringLiteral_11625/*"SERVANT_EQUIP_OPERATION_EXPLANATION_STATUS"*/);
-    sub_1C32C20(&StringLiteral_11624/*"SERVANT_EQUIP_OPERATION_EXPLANATION_LOCK"*/);
-    sub_1C32C20(&StringLiteral_17654/*"button_select_reg"*/);
-    sub_1C32C20(&StringLiteral_17655/*"button_select_unreg"*/);
-    sub_1C32C20(&StringLiteral_17640/*"button_alllock_reg"*/);
-    sub_1C32C20(&StringLiteral_17639/*"button_allchoice_unreg"*/);
-    byte_4C33847 = 1;
+    sub_1C37058(&LocalizationManager_TypeInfo);
+    sub_1C37058(&StringLiteral_11624/*"SERVANT_EQUIP_OPERATION_EXPLANATION_CHOICE"*/);
+    sub_1C37058(&StringLiteral_17640/*"button_allchoice_reg"*/);
+    sub_1C37058(&StringLiteral_17643/*"button_alllock_unreg"*/);
+    sub_1C37058(&StringLiteral_11626/*"SERVANT_EQUIP_OPERATION_EXPLANATION_STATUS"*/);
+    sub_1C37058(&StringLiteral_11625/*"SERVANT_EQUIP_OPERATION_EXPLANATION_LOCK"*/);
+    sub_1C37058(&StringLiteral_17656/*"button_select_reg"*/);
+    sub_1C37058(&StringLiteral_17657/*"button_select_unreg"*/);
+    sub_1C37058(&StringLiteral_17642/*"button_alllock_reg"*/);
+    sub_1C37058(&StringLiteral_17641/*"button_allchoice_unreg"*/);
+    byte_4C3EE31 = 1;
   }
   if ( this->fields.tabModeKind != modeKind )
   {
@@ -1248,7 +1248,7 @@ void RecommendSupportEquipSelectListMenu__SetModeTabKind(
     normalTabButton = (UnityEngine_Behaviour_o *)this->fields.normalTabSprite;
     if ( !normalTabButton )
       goto LABEL_39;
-    v8 = (System_String_o **)(this->fields.tabModeKind ? &StringLiteral_17655/*"button_select_unreg"*/ : &StringLiteral_17654/*"button_select_reg"*/);
+    v8 = (System_String_o **)(this->fields.tabModeKind ? &StringLiteral_17657/*"button_select_unreg"*/ : &StringLiteral_17656/*"button_select_reg"*/);
     UISprite__set_spriteName((UISprite_o *)normalTabButton, *v8, 0);
     normalTabButton = (UnityEngine_Behaviour_o *)this->fields.lockTabButton;
     if ( !normalTabButton )
@@ -1262,7 +1262,7 @@ void RecommendSupportEquipSelectListMenu__SetModeTabKind(
     normalTabButton = (UnityEngine_Behaviour_o *)this->fields.lockTabSprite;
     if ( !normalTabButton )
       goto LABEL_39;
-    v11 = (System_String_o **)(this->fields.tabModeKind == 1 ? &StringLiteral_17640/*"button_alllock_reg"*/ : &StringLiteral_17641/*"button_alllock_unreg"*/);
+    v11 = (System_String_o **)(this->fields.tabModeKind == 1 ? &StringLiteral_17642/*"button_alllock_reg"*/ : &StringLiteral_17643/*"button_alllock_unreg"*/);
     UISprite__set_spriteName((UISprite_o *)normalTabButton, *v11, 0);
     normalTabButton = (UnityEngine_Behaviour_o *)this->fields.choiceTabButton;
     if ( !normalTabButton )
@@ -1277,9 +1277,9 @@ void RecommendSupportEquipSelectListMenu__SetModeTabKind(
     if ( !normalTabButton )
       goto LABEL_39;
     if ( this->fields.tabModeKind == 2 )
-      v14 = &StringLiteral_17638/*"button_allchoice_reg"*/;
+      v14 = &StringLiteral_17640/*"button_allchoice_reg"*/;
     else
-      v14 = &StringLiteral_17639/*"button_allchoice_unreg"*/;
+      v14 = &StringLiteral_17641/*"button_allchoice_unreg"*/;
     UISprite__set_spriteName((UISprite_o *)normalTabButton, (System_String_o *)*v14, 0);
     tabModeKind = this->fields.tabModeKind;
     if ( tabModeKind == 2 )
@@ -1287,14 +1287,14 @@ void RecommendSupportEquipSelectListMenu__SetModeTabKind(
       explanationLabel = this->fields.explanationLabel;
       if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-      v18 = &StringLiteral_11623/*"SERVANT_EQUIP_OPERATION_EXPLANATION_CHOICE"*/;
+      v18 = &StringLiteral_11624/*"SERVANT_EQUIP_OPERATION_EXPLANATION_CHOICE"*/;
     }
     else if ( tabModeKind == 1 )
     {
       explanationLabel = this->fields.explanationLabel;
       if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-      v18 = &StringLiteral_11624/*"SERVANT_EQUIP_OPERATION_EXPLANATION_LOCK"*/;
+      v18 = &StringLiteral_11625/*"SERVANT_EQUIP_OPERATION_EXPLANATION_LOCK"*/;
     }
     else
     {
@@ -1309,12 +1309,12 @@ LABEL_36:
           return;
         }
 LABEL_39:
-        sub_1C32E7C(normalTabButton);
+        sub_1C372B4(normalTabButton);
       }
       explanationLabel = this->fields.explanationLabel;
       if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-      v18 = &StringLiteral_11625/*"SERVANT_EQUIP_OPERATION_EXPLANATION_STATUS"*/;
+      v18 = &StringLiteral_11626/*"SERVANT_EQUIP_OPERATION_EXPLANATION_STATUS"*/;
     }
     normalTabButton = (UnityEngine_Behaviour_o *)LocalizationManager__Get((System_String_o *)*v18, 0);
     if ( !explanationLabel )
@@ -1348,13 +1348,13 @@ void RecommendSupportEquipSelectListMenu__StatusRequest(
   System_Int64_array *unlockList; // [xsp+10h] [xbp-30h] BYREF
   System_Int64_array *lockList; // [xsp+18h] [xbp-28h] BYREF
 
-  if ( (byte_4C33848 & 1) == 0 )
+  if ( (byte_4C3EE32 & 1) == 0 )
   {
-    sub_1C32C20(&Method_NetworkManager_getRequest_CardStatusSyncRequest___);
-    sub_1C32C20(&NetworkManager_TypeInfo);
-    sub_1C32C20(&Method_RecommendSupportEquipSelectListMenu_EndStatusSync__);
-    sub_1C32C20(&NetworkManager_ResultCallbackFunc_TypeInfo);
-    byte_4C33848 = 1;
+    sub_1C37058(&Method_NetworkManager_getRequest_CardStatusSyncRequest___);
+    sub_1C37058(&NetworkManager_TypeInfo);
+    sub_1C37058(&Method_RecommendSupportEquipSelectListMenu_EndStatusSync__);
+    sub_1C37058(&NetworkManager_ResultCallbackFunc_TypeInfo);
+    byte_4C3EE32 = 1;
   }
   unlockList = 0;
   lockList = 0;
@@ -1373,8 +1373,8 @@ void RecommendSupportEquipSelectListMenu__StatusRequest(
            v3) )
     {
       this->fields.requestedCallback = callback;
-      sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.requestedCallback, (int32_t)callback, v15, v16);
-      v17 = (NetworkManager_ResultCallbackFunc_o *)sub_1C32E6C(NetworkManager_ResultCallbackFunc_TypeInfo);
+      sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.requestedCallback, (int32_t)callback, v15, v16);
+      v17 = (NetworkManager_ResultCallbackFunc_o *)sub_1C372A4(NetworkManager_ResultCallbackFunc_TypeInfo);
       NetworkManager_ResultCallbackFunc___ctor(
         v17,
         (Il2CppObject *)this,
@@ -1384,7 +1384,7 @@ void RecommendSupportEquipSelectListMenu__StatusRequest(
         j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
       supportServantEquipListViewManager = (RecommendSupportEquipSelectListViewManager_o *)NetworkManager__getRequest_object_(
                                                                                              v17,
-                                                                                             (const MethodInfo_3168488 *)Method_NetworkManager_getRequest_CardStatusSyncRequest___);
+                                                                                             (const MethodInfo_3172CF0 *)Method_NetworkManager_getRequest_CardStatusSyncRequest___);
       if ( supportServantEquipListViewManager )
       {
         v12 = v18;
@@ -1394,7 +1394,7 @@ void RecommendSupportEquipSelectListMenu__StatusRequest(
         goto LABEL_17;
       }
 LABEL_21:
-      sub_1C32E7C(supportServantEquipListViewManager);
+      sub_1C372B4(supportServantEquipListViewManager);
     }
   }
   else if ( tabModeKind == 1 )
@@ -1409,8 +1409,8 @@ LABEL_21:
            v3) )
     {
       this->fields.requestedCallback = callback;
-      sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.requestedCallback, (int32_t)callback, v8, v9);
-      v10 = (NetworkManager_ResultCallbackFunc_o *)sub_1C32E6C(NetworkManager_ResultCallbackFunc_TypeInfo);
+      sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.requestedCallback, (int32_t)callback, v8, v9);
+      v10 = (NetworkManager_ResultCallbackFunc_o *)sub_1C372A4(NetworkManager_ResultCallbackFunc_TypeInfo);
       NetworkManager_ResultCallbackFunc___ctor(
         v10,
         (Il2CppObject *)this,
@@ -1420,7 +1420,7 @@ LABEL_21:
         j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
       supportServantEquipListViewManager = (RecommendSupportEquipSelectListViewManager_o *)NetworkManager__getRequest_object_(
                                                                                              v10,
-                                                                                             (const MethodInfo_3168488 *)Method_NetworkManager_getRequest_CardStatusSyncRequest___);
+                                                                                             (const MethodInfo_3172CF0 *)Method_NetworkManager_getRequest_CardStatusSyncRequest___);
       if ( supportServantEquipListViewManager )
       {
         v12 = unlockList;
@@ -1464,15 +1464,15 @@ void RecommendSupportEquipSelectListMenu_RequestCallbackFunc___ctor(
   this->fields.method = method;
   this->fields.method_ptr = v4;
   this->fields.m_target = object;
-  sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.m_target, (int32_t)object, method, a4);
+  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.m_target, (int32_t)object, method, a4);
   v8 = *(unsigned __int8 *)(method + 82);
   this->fields.method_code = (intptr_t)this;
-  if ( (sub_1C32CE0(method) & 1) == 0 )
+  if ( (sub_1C37118(method) & 1) == 0 )
   {
     if ( !object )
     {
-      v10 = sub_1C32E98(0, "Delegate to an instance method cannot have null 'this'.");
-      sub_1C32D48(v10, 0);
+      v10 = sub_1C372D0(0, "Delegate to an instance method cannot have null 'this'.");
+      sub_1C37180(v10, 0);
     }
     goto LABEL_5;
   }
@@ -1484,9 +1484,9 @@ LABEL_5:
     this->fields.method_code = (intptr_t)m_target;
     goto LABEL_6;
   }
-  this->fields.invoke_impl = (intptr_t)sub_1A72704;
+  this->fields.invoke_impl = (intptr_t)sub_1A76A34;
 LABEL_6:
-  this->fields.extra_arg = (intptr_t)sub_1A726BC;
+  this->fields.extra_arg = (intptr_t)sub_1A769EC;
 }
 
 
@@ -1504,14 +1504,14 @@ System_IAsyncResult_o *RecommendSupportEquipSelectListMenu_RequestCallbackFunc__
   bool v13[4]; // [xsp+1Ch] [xbp-34h] BYREF
 
   v13[0] = isRequest;
-  if ( (byte_4C3384B & 1) == 0 )
+  if ( (byte_4C3EE35 & 1) == 0 )
   {
-    sub_1C32C20(&bool_TypeInfo);
-    byte_4C3384B = 1;
+    sub_1C37058(&bool_TypeInfo);
+    byte_4C3EE35 = 1;
   }
   v12[1] = 0;
   v12[0] = j_il2cpp_value_box_0(bool_TypeInfo, v13, callback, object, method, v5, v6, v7);
-  return (System_IAsyncResult_o *)sub_1C32BD4(this, v12, callback, object);
+  return (System_IAsyncResult_o *)sub_1C3700C(this, v12, callback, object);
 }
 
 
@@ -1520,7 +1520,7 @@ void RecommendSupportEquipSelectListMenu_RequestCallbackFunc__EndInvoke(
         System_IAsyncResult_o *result,
         const MethodInfo *method)
 {
-  sub_1C32BD8(result, 0, method);
+  sub_1C37010(result, 0, method);
 }
 
 

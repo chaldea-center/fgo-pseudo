@@ -1,14 +1,14 @@
 void WarBoardDataMaster___ctor(WarBoardDataMaster_o *this, const MethodInfo *method)
 {
-  if ( (byte_4C38B1B & 1) == 0 )
+  if ( (byte_4C44114 & 1) == 0 )
   {
-    sub_1C32C20(&Method_DataMasterBase_WarBoardDataMaster__WarBoardDataEntity__string___ctor__);
-    byte_4C38B1B = 1;
+    sub_1C37058(&Method_DataMasterBase_WarBoardDataMaster__WarBoardDataEntity__string___ctor__);
+    byte_4C44114 = 1;
   }
   DataMasterBase_object__object__object____ctor(
     (DataMasterBase_TMaster__TEntity__PKType__o *)this,
     341,
-    (const MethodInfo_3398FCC *)Method_DataMasterBase_WarBoardDataMaster__WarBoardDataEntity__string___ctor__);
+    (const MethodInfo_33A3834 *)Method_DataMasterBase_WarBoardDataMaster__WarBoardDataEntity__string___ctor__);
 }
 
 
@@ -21,16 +21,16 @@ WarBoardDataEntity_o *WarBoardDataMaster__GetEntity(
 {
   Il2CppObject *PK; // x1
 
-  if ( (byte_4C38B19 & 1) == 0 )
+  if ( (byte_4C44112 & 1) == 0 )
   {
-    sub_1C32C20(&Method_DataMasterBase_WarBoardDataMaster__WarBoardDataEntity__string__GetEntity__);
-    byte_4C38B19 = 1;
+    sub_1C37058(&Method_DataMasterBase_WarBoardDataMaster__WarBoardDataEntity__string__GetEntity__);
+    byte_4C44112 = 1;
   }
   PK = (Il2CppObject *)WarBoardDataEntity__CreatePK(questId, questPhase, *(const MethodInfo **)&questPhase);
   return (WarBoardDataEntity_o *)DataMasterBase_object__object__object___GetEntity(
                                    (DataMasterBase_TMaster__TEntity__PKType__o *)this,
                                    PK,
-                                   (const MethodInfo_339B2F0 *)Method_DataMasterBase_WarBoardDataMaster__WarBoardDataEntity__string__GetEntity__);
+                                   (const MethodInfo_33A5B58 *)Method_DataMasterBase_WarBoardDataMaster__WarBoardDataEntity__string__GetEntity__);
 }
 
 
@@ -44,15 +44,15 @@ bool WarBoardDataMaster__TryGetEntity(
 {
   Il2CppObject *PK; // x2
 
-  if ( (byte_4C38B1A & 1) == 0 )
+  if ( (byte_4C44113 & 1) == 0 )
   {
-    sub_1C32C20(&Method_DataMasterBase_WarBoardDataMaster__WarBoardDataEntity__string__TryGetEntity__);
-    byte_4C38B1A = 1;
+    sub_1C37058(&Method_DataMasterBase_WarBoardDataMaster__WarBoardDataEntity__string__TryGetEntity__);
+    byte_4C44113 = 1;
   }
   PK = (Il2CppObject *)WarBoardDataEntity__CreatePK(questId, questPhase, *(const MethodInfo **)&questId);
   return DataMasterBase_object__object__object___TryGetEntity(
            (DataMasterBase_TMaster__TEntity__PKType__o *)this,
            (Il2CppObject **)entity,
            PK,
-           (const MethodInfo_339B33C *)Method_DataMasterBase_WarBoardDataMaster__WarBoardDataEntity__string__TryGetEntity__);
+           (const MethodInfo_33A5BA4 *)Method_DataMasterBase_WarBoardDataMaster__WarBoardDataEntity__string__TryGetEntity__);
 }

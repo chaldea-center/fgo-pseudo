@@ -1,14 +1,14 @@
 void UserEventTradeMaster___ctor(UserEventTradeMaster_o *this, const MethodInfo *method)
 {
-  if ( (byte_4C38831 & 1) == 0 )
+  if ( (byte_4C43E2A & 1) == 0 )
   {
-    sub_1C32C20(&Method_DataMasterBase_UserEventTradeMaster__UserEventTradeEntity__string___ctor__);
-    byte_4C38831 = 1;
+    sub_1C37058(&Method_DataMasterBase_UserEventTradeMaster__UserEventTradeEntity__string___ctor__);
+    byte_4C43E2A = 1;
   }
   DataMasterBase_object__object__object____ctor(
     (DataMasterBase_TMaster__TEntity__PKType__o *)this,
     503,
-    (const MethodInfo_3398FCC *)Method_DataMasterBase_UserEventTradeMaster__UserEventTradeEntity__string___ctor__);
+    (const MethodInfo_33A3834 *)Method_DataMasterBase_UserEventTradeMaster__UserEventTradeEntity__string___ctor__);
 }
 
 
@@ -34,14 +34,14 @@ System_Collections_Generic_List_UserEventTradeEntity__o *UserEventTradeMaster__G
   const MethodInfo *v9; // x3
   System_Collections_Generic_IEnumerable_TSource__o *v10; // x0
 
-  if ( (byte_4C38833 & 1) == 0 )
+  if ( (byte_4C43E2C & 1) == 0 )
   {
-    sub_1C32C20(&Method_System_Linq_Enumerable_Select_UserEventTradeEntity__UserEventTradeEntity___);
-    sub_1C32C20(&Method_System_Linq_Enumerable_ToList_UserEventTradeEntity___);
-    sub_1C32C20(&System_Func_UserEventTradeEntity__UserEventTradeEntity__TypeInfo);
-    sub_1C32C20(&Method_UserEventTradeMaster___c__GetEntityList_b__3_0__);
-    sub_1C32C20(&UserEventTradeMaster___c_TypeInfo);
-    byte_4C38833 = 1;
+    sub_1C37058(&Method_System_Linq_Enumerable_Select_UserEventTradeEntity__UserEventTradeEntity___);
+    sub_1C37058(&Method_System_Linq_Enumerable_ToList_UserEventTradeEntity___);
+    sub_1C37058(&System_Func_UserEventTradeEntity__UserEventTradeEntity__TypeInfo);
+    sub_1C37058(&Method_UserEventTradeMaster___c__GetEntityList_b__3_0__);
+    sub_1C37058(&UserEventTradeMaster___c_TypeInfo);
+    byte_4C43E2C = 1;
   }
   v3 = UserEventTradeMaster___c_TypeInfo;
   list = this->fields.list;
@@ -59,19 +59,19 @@ System_Collections_Generic_List_UserEventTradeEntity__o *UserEventTradeMaster__G
       v3 = UserEventTradeMaster___c_TypeInfo;
     }
     v6 = (Il2CppObject *)v3->static_fields->__9;
-    _9__3_0 = (System_Func_object__object__o *)sub_1C32E6C(System_Func_UserEventTradeEntity__UserEventTradeEntity__TypeInfo);
+    _9__3_0 = (System_Func_object__object__o *)sub_1C372A4(System_Func_UserEventTradeEntity__UserEventTradeEntity__TypeInfo);
     System_Func_object__object____ctor(_9__3_0, v6, Method_UserEventTradeMaster___c__GetEntityList_b__3_0__, 0);
     static_fields = UserEventTradeMaster___c_TypeInfo->static_fields;
     static_fields->__9__3_0 = (struct System_Func_UserEventTradeEntity__UserEventTradeEntity__o *)_9__3_0;
-    sub_1C32BC4((CGThumbnailListItem_o *)&static_fields->__9__3_0, (int32_t)_9__3_0, v8, v9);
+    sub_1C36FFC((CGThumbnailListItem_o *)&static_fields->__9__3_0, (int32_t)_9__3_0, v8, v9);
   }
   v10 = (System_Collections_Generic_IEnumerable_TSource__o *)System_Linq_Enumerable__Select_object__object_(
                                                                (System_Collections_Generic_IEnumerable_TSource__o *)list,
                                                                (System_Func_TSource__TResult__o *)_9__3_0,
-                                                               (const MethodInfo_3113ABC *)Method_System_Linq_Enumerable_Select_UserEventTradeEntity__UserEventTradeEntity___);
+                                                               (const MethodInfo_311E324 *)Method_System_Linq_Enumerable_Select_UserEventTradeEntity__UserEventTradeEntity___);
   return (System_Collections_Generic_List_UserEventTradeEntity__o *)System_Linq_Enumerable__ToList_object_(
                                                                       v10,
-                                                                      (const MethodInfo_3121728 *)Method_System_Linq_Enumerable_ToList_UserEventTradeEntity___);
+                                                                      (const MethodInfo_312BF90 *)Method_System_Linq_Enumerable_ToList_UserEventTradeEntity___);
 }
 
 
@@ -83,17 +83,17 @@ bool UserEventTradeMaster__TryGetEntity(
 {
   Il2CppObject *PK; // x2
 
-  if ( (byte_4C38832 & 1) == 0 )
+  if ( (byte_4C43E2B & 1) == 0 )
   {
-    sub_1C32C20(&Method_DataMasterBase_UserEventTradeMaster__UserEventTradeEntity__string__TryGetEntity__);
-    byte_4C38832 = 1;
+    sub_1C37058(&Method_DataMasterBase_UserEventTradeMaster__UserEventTradeEntity__string__TryGetEntity__);
+    byte_4C43E2B = 1;
   }
   PK = (Il2CppObject *)UserEventTradeEntity__CreatePK(eventId, (const MethodInfo *)entity);
   return DataMasterBase_object__object__object___TryGetEntity(
            (DataMasterBase_TMaster__TEntity__PKType__o *)this,
            (Il2CppObject **)entity,
            PK,
-           (const MethodInfo_339B33C *)Method_DataMasterBase_UserEventTradeMaster__UserEventTradeEntity__string__TryGetEntity__);
+           (const MethodInfo_33A5BA4 *)Method_DataMasterBase_UserEventTradeMaster__UserEventTradeEntity__string__TryGetEntity__);
 }
 
 
@@ -103,15 +103,15 @@ void UserEventTradeMaster___c___cctor(const MethodInfo *method)
   int32_t v2; // w2
   const MethodInfo *v3; // x3
 
-  if ( (byte_4C38834 & 1) == 0 )
+  if ( (byte_4C43E2D & 1) == 0 )
   {
-    sub_1C32C20(&UserEventTradeMaster___c_TypeInfo);
-    byte_4C38834 = 1;
+    sub_1C37058(&UserEventTradeMaster___c_TypeInfo);
+    byte_4C43E2D = 1;
   }
-  v1 = (Il2CppObject *)sub_1C32E6C(UserEventTradeMaster___c_TypeInfo);
+  v1 = (Il2CppObject *)sub_1C372A4(UserEventTradeMaster___c_TypeInfo);
   System_Object___ctor(v1, 0);
   UserEventTradeMaster___c_TypeInfo->static_fields->__9 = (struct UserEventTradeMaster___c_o *)v1;
-  sub_1C32BC4((CGThumbnailListItem_o *)UserEventTradeMaster___c_TypeInfo->static_fields, (int32_t)v1, v2, v3);
+  sub_1C36FFC((CGThumbnailListItem_o *)UserEventTradeMaster___c_TypeInfo->static_fields, (int32_t)v1, v2, v3);
 }
 
 

@@ -5,15 +5,15 @@ void AssetLoadWrapperBase___ctor(AssetLoadWrapperBase_o *this, const MethodInfo 
   int32_t v5; // w2
   const MethodInfo *v6; // x3
 
-  if ( (byte_4C369DD & 1) == 0 )
+  if ( (byte_4C41FCD & 1) == 0 )
   {
-    sub_1C32C20(&AssetPathLoadCounter_TypeInfo);
-    byte_4C369DD = 1;
+    sub_1C37058(&AssetPathLoadCounter_TypeInfo);
+    byte_4C41FCD = 1;
   }
-  v3 = (AssetPathLoadCounter_o *)sub_1C32E6C(AssetPathLoadCounter_TypeInfo);
+  v3 = (AssetPathLoadCounter_o *)sub_1C372A4(AssetPathLoadCounter_TypeInfo);
   AssetPathLoadCounter___ctor(v3, v4);
   this->fields.pathCounter = v3;
-  sub_1C32BC4((CGThumbnailListItem_o *)&this->fields, (int32_t)v3, v5, v6);
+  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields, (int32_t)v3, v5, v6);
   System_Object___ctor((Il2CppObject *)this, 0);
 }
 
@@ -24,7 +24,7 @@ void AssetLoadWrapperBase__AddLoadCount(AssetLoadWrapperBase_o *this, System_Str
 
   pathCounter = this->fields.pathCounter;
   if ( !pathCounter )
-    sub_1C32E7C(0);
+    sub_1C372B4(0);
   AssetPathLoadCounter__AddCount(pathCounter, path, method);
 }
 
@@ -51,21 +51,21 @@ void AssetLoadWrapperBase__ReleaseAll(AssetLoadWrapperBase_o *this, const Method
   __int64 v20; // x0
   const MethodInfo *v21; // x1
 
-  if ( (byte_4C369DC & 1) == 0 )
+  if ( (byte_4C41FCC & 1) == 0 )
   {
-    sub_1C32C20(&System_IDisposable_TypeInfo);
-    sub_1C32C20(&System_Collections_Generic_IEnumerator_KeyValuePair_string__int___TypeInfo);
-    sub_1C32C20(&System_Collections_IEnumerator_TypeInfo);
-    sub_1C32C20(&Method_System_Collections_Generic_KeyValuePair_string__int__get_Key__);
-    sub_1C32C20(&Method_System_Collections_Generic_KeyValuePair_string__int__get_Value__);
-    byte_4C369DC = 1;
+    sub_1C37058(&System_IDisposable_TypeInfo);
+    sub_1C37058(&System_Collections_Generic_IEnumerator_KeyValuePair_string__int___TypeInfo);
+    sub_1C37058(&System_Collections_IEnumerator_TypeInfo);
+    sub_1C37058(&Method_System_Collections_Generic_KeyValuePair_string__int__get_Key__);
+    sub_1C37058(&Method_System_Collections_Generic_KeyValuePair_string__int__get_Value__);
+    byte_4C41FCC = 1;
   }
   pathCounter = this->fields.pathCounter;
   if ( !pathCounter )
     goto LABEL_30;
   Enumerator = AssetPathLoadCounter__GetEnumerator(pathCounter, method);
   if ( !Enumerator )
-    sub_1C32E7C(0);
+    sub_1C372B4(0);
   while ( 1 )
   {
     klass = Enumerator->klass;
@@ -85,7 +85,7 @@ void AssetLoadWrapperBase__ReleaseAll(AssetLoadWrapperBase_o *this, const Method
     else
     {
 LABEL_9:
-      v8 = sub_1C83438(Enumerator, System_Collections_IEnumerator_TypeInfo, 0);
+      v8 = sub_1C87870(Enumerator, System_Collections_IEnumerator_TypeInfo, 0);
     }
     if ( ((*(__int64 (__fastcall **)(System_Collections_Generic_IEnumerator_KeyValuePair_string__int___o *, _QWORD))v8)(
             Enumerator,
@@ -109,7 +109,7 @@ LABEL_9:
     else
     {
 LABEL_16:
-      v12 = sub_1C83438(Enumerator, System_Collections_Generic_IEnumerator_KeyValuePair_string__int___TypeInfo, 0);
+      v12 = sub_1C87870(Enumerator, System_Collections_Generic_IEnumerator_KeyValuePair_string__int___TypeInfo, 0);
     }
     v13 = (*(__int64 (__fastcall **)(System_Collections_Generic_IEnumerator_KeyValuePair_string__int___o *, _QWORD))v12)(
             Enumerator,
@@ -146,7 +146,7 @@ LABEL_16:
   else
   {
 LABEL_26:
-    v20 = sub_1C83438(Enumerator, System_IDisposable_TypeInfo, 0);
+    v20 = sub_1C87870(Enumerator, System_IDisposable_TypeInfo, 0);
   }
   (*(void (__fastcall **)(System_Collections_Generic_IEnumerator_KeyValuePair_string__int___o *, _QWORD))v20)(
     Enumerator,
@@ -154,7 +154,7 @@ LABEL_26:
   pathCounter = this->fields.pathCounter;
   if ( !pathCounter )
 LABEL_30:
-    sub_1C32E7C(pathCounter);
+    sub_1C372B4(pathCounter);
   AssetPathLoadCounter__Clear(pathCounter, v21);
 }
 
@@ -165,6 +165,6 @@ void AssetLoadWrapperBase__SubLoadCount(AssetLoadWrapperBase_o *this, System_Str
 
   pathCounter = this->fields.pathCounter;
   if ( !pathCounter )
-    sub_1C32E7C(0);
+    sub_1C372B4(0);
   AssetPathLoadCounter__SubCount(pathCounter, path, method);
 }

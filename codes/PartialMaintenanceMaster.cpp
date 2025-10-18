@@ -1,14 +1,14 @@
 void PartialMaintenanceMaster___ctor(PartialMaintenanceMaster_o *this, const MethodInfo *method)
 {
-  if ( (byte_4C37F71 & 1) == 0 )
+  if ( (byte_4C4356A & 1) == 0 )
   {
-    sub_1C32C20(&Method_DataMasterBase_PartialMaintenanceMaster__PartialMaintenanceEntity__int___ctor__);
-    byte_4C37F71 = 1;
+    sub_1C37058(&Method_DataMasterBase_PartialMaintenanceMaster__PartialMaintenanceEntity__int___ctor__);
+    byte_4C4356A = 1;
   }
   DataMasterBase_object__object__int____ctor(
     (DataMasterBase_TMaster__TEntity__PKType__o *)this,
     162,
-    (const MethodInfo_3394514 *)Method_DataMasterBase_PartialMaintenanceMaster__PartialMaintenanceEntity__int___ctor__);
+    (const MethodInfo_339ED7C *)Method_DataMasterBase_PartialMaintenanceMaster__PartialMaintenanceEntity__int___ctor__);
 }
 
 
@@ -35,19 +35,19 @@ System_String_o *PartialMaintenanceMaster__GetMaintenanceMessage(
   const MethodInfo *v10; // x2
   Il2CppObject *v11; // x23
 
-  if ( (byte_4C37F74 & 1) == 0 )
+  if ( (byte_4C4356D & 1) == 0 )
   {
-    sub_1C32C20(&Method_System_Collections_ObjectModel_Collection_PartialMaintenanceEntity__get_Count__);
-    sub_1C32C20(&Method_System_Collections_ObjectModel_Collection_PartialMaintenanceEntity__get_Item__);
-    byte_4C37F74 = 1;
+    sub_1C37058(&Method_System_Collections_ObjectModel_Collection_PartialMaintenanceEntity__get_Count__);
+    sub_1C37058(&Method_System_Collections_ObjectModel_Collection_PartialMaintenanceEntity__get_Item__);
+    byte_4C4356D = 1;
   }
   list = (System_Collections_ObjectModel_Collection_T__o *)this->fields.list;
   if ( !list )
 LABEL_12:
-    sub_1C32E7C(list);
+    sub_1C372B4(list);
   Count = System_Collections_ObjectModel_Collection_object___get_Count(
             list,
-            (const MethodInfo_332FCA8 *)Method_System_Collections_ObjectModel_Collection_PartialMaintenanceEntity__get_Count__);
+            (const MethodInfo_333A510 *)Method_System_Collections_ObjectModel_Collection_PartialMaintenanceEntity__get_Count__);
   if ( Count < 1 )
     return 0;
   v7 = Count;
@@ -60,7 +60,7 @@ LABEL_12:
     Item = System_Collections_ObjectModel_Collection_object___get_Item(
              list,
              v8,
-             (const MethodInfo_332FD38 *)Method_System_Collections_ObjectModel_Collection_PartialMaintenanceEntity__get_Item__);
+             (const MethodInfo_333A5A0 *)Method_System_Collections_ObjectModel_Collection_PartialMaintenanceEntity__get_Item__);
     if ( Item )
     {
       v11 = Item;
@@ -92,12 +92,12 @@ bool PartialMaintenanceMaster__isChaliceMaintenaceEnd(PartialMaintenanceMaster_o
   int32_t v7; // w22
   bool v8; // w24
 
-  if ( (byte_4C37F72 & 1) == 0 )
+  if ( (byte_4C4356B & 1) == 0 )
   {
-    sub_1C32C20(&Method_System_Collections_ObjectModel_Collection_PartialMaintenanceEntity__get_Count__);
-    sub_1C32C20(&Method_System_Collections_ObjectModel_Collection_PartialMaintenanceEntity__get_Item__);
-    sub_1C32C20(&NetworkManager_TypeInfo);
-    byte_4C37F72 = 1;
+    sub_1C37058(&Method_System_Collections_ObjectModel_Collection_PartialMaintenanceEntity__get_Count__);
+    sub_1C37058(&Method_System_Collections_ObjectModel_Collection_PartialMaintenanceEntity__get_Item__);
+    sub_1C37058(&NetworkManager_TypeInfo);
+    byte_4C4356B = 1;
   }
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
@@ -107,7 +107,7 @@ bool PartialMaintenanceMaster__isChaliceMaintenaceEnd(PartialMaintenanceMaster_o
   v4 = Time;
   Count = System_Collections_ObjectModel_Collection_object___get_Count(
             (System_Collections_ObjectModel_Collection_T__o *)this->fields.list,
-            (const MethodInfo_332FCA8 *)Method_System_Collections_ObjectModel_Collection_PartialMaintenanceEntity__get_Count__);
+            (const MethodInfo_333A510 *)Method_System_Collections_ObjectModel_Collection_PartialMaintenanceEntity__get_Count__);
   if ( Count >= 1 )
   {
     v6 = Count;
@@ -121,7 +121,7 @@ bool PartialMaintenanceMaster__isChaliceMaintenaceEnd(PartialMaintenanceMaster_o
       Time = (int64_t)System_Collections_ObjectModel_Collection_object___get_Item(
                         (System_Collections_ObjectModel_Collection_T__o *)Time,
                         v7,
-                        (const MethodInfo_332FD38 *)Method_System_Collections_ObjectModel_Collection_PartialMaintenanceEntity__get_Item__);
+                        (const MethodInfo_333A5A0 *)Method_System_Collections_ObjectModel_Collection_PartialMaintenanceEntity__get_Item__);
       if ( !Time )
         break;
       if ( *(_DWORD *)(Time + 16) == 2 )
@@ -130,7 +130,7 @@ bool PartialMaintenanceMaster__isChaliceMaintenaceEnd(PartialMaintenanceMaster_o
         return v8;
     }
 LABEL_16:
-    sub_1C32E7C(Time);
+    sub_1C372B4(Time);
   }
   return 1;
 }
@@ -157,18 +157,18 @@ bool PartialMaintenanceMaster__isMaintenanceNow(
   Il2CppObject *Item; // x0
   const MethodInfo *v11; // x2
 
-  if ( (byte_4C37F73 & 1) == 0 )
+  if ( (byte_4C4356C & 1) == 0 )
   {
-    sub_1C32C20(&Method_System_Collections_ObjectModel_Collection_PartialMaintenanceEntity__get_Count__);
-    sub_1C32C20(&Method_System_Collections_ObjectModel_Collection_PartialMaintenanceEntity__get_Item__);
-    byte_4C37F73 = 1;
+    sub_1C37058(&Method_System_Collections_ObjectModel_Collection_PartialMaintenanceEntity__get_Count__);
+    sub_1C37058(&Method_System_Collections_ObjectModel_Collection_PartialMaintenanceEntity__get_Item__);
+    byte_4C4356C = 1;
   }
   list = (System_Collections_ObjectModel_Collection_T__o *)this->fields.list;
   if ( !list )
     goto LABEL_13;
   Count = System_Collections_ObjectModel_Collection_object___get_Count(
             list,
-            (const MethodInfo_332FCA8 *)Method_System_Collections_ObjectModel_Collection_PartialMaintenanceEntity__get_Count__);
+            (const MethodInfo_333A510 *)Method_System_Collections_ObjectModel_Collection_PartialMaintenanceEntity__get_Count__);
   if ( Count >= 1 )
   {
     v7 = Count;
@@ -182,7 +182,7 @@ bool PartialMaintenanceMaster__isMaintenanceNow(
       Item = System_Collections_ObjectModel_Collection_object___get_Item(
                list,
                v8,
-               (const MethodInfo_332FD38 *)Method_System_Collections_ObjectModel_Collection_PartialMaintenanceEntity__get_Item__);
+               (const MethodInfo_333A5A0 *)Method_System_Collections_ObjectModel_Collection_PartialMaintenanceEntity__get_Item__);
       if ( !Item || !PartialMaintenanceEntity__isMaintenanceNow((PartialMaintenanceEntity_o *)Item, mainteType, v11) )
       {
         v9 = ++v8 < v7;
@@ -192,7 +192,7 @@ bool PartialMaintenanceMaster__isMaintenanceNow(
       return v9;
     }
 LABEL_13:
-    sub_1C32E7C(list);
+    sub_1C372B4(list);
   }
   return 0;
 }

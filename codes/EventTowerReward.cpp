@@ -7,5 +7,5 @@ void EventTowerReward___ctor(EventTowerReward_o *this, const MethodInfo *method)
   *(_OWORD *)&this->fields.iconId = 0u;
   *(_OWORD *)&this->fields.limitCount = 0u;
   *(_OWORD *)&this->fields.eventId = 0u;
-  sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.voiceIds, 0, v3, v4);
+  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.voiceIds, 0, v3, v4);
 }

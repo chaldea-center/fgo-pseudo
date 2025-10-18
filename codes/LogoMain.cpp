@@ -5,18 +5,18 @@ void LogoMain___cctor(const MethodInfo *method)
   struct LogoMain_StaticFields *static_fields; // x0
   int32_t v4; // w1
 
-  if ( (byte_4C351EB & 1) == 0 )
+  if ( (byte_4C407D6 & 1) == 0 )
   {
-    sub_1C32C20(&LogoMain_TypeInfo);
-    sub_1C32C20(&StringLiteral_8498/*"LogoPlay"*/);
-    byte_4C351EB = 1;
+    sub_1C37058(&LogoMain_TypeInfo);
+    sub_1C37058(&StringLiteral_8499/*"LogoPlay"*/);
+    byte_4C407D6 = 1;
   }
   static_fields = LogoMain_TypeInfo->static_fields;
   *(_QWORD *)&static_fields->FADEIN_TIME = 0x3F0000003F000000LL;
   static_fields->FADEWAIT_TIME = 1.0;
-  v4 = StringLiteral_8498/*"LogoPlay"*/;
-  static_fields->SAVE_KEY = (struct System_String_o *)StringLiteral_8498/*"LogoPlay"*/;
-  sub_1C32BC4((CGThumbnailListItem_o *)&static_fields->SAVE_KEY, v4, v1, v2);
+  v4 = StringLiteral_8499/*"LogoPlay"*/;
+  static_fields->SAVE_KEY = (struct System_String_o *)StringLiteral_8499/*"LogoPlay"*/;
+  sub_1C36FFC((CGThumbnailListItem_o *)&static_fields->SAVE_KEY, v4, v1, v2);
   LogoMain_TypeInfo->static_fields->isPlayLogo = 1;
 }
 
@@ -31,11 +31,11 @@ void LogoMain__EndFadein(LogoMain_o *this, const MethodInfo *method)
 {
   LogoMain_c *v3; // x0
 
-  if ( (byte_4C351E5 & 1) == 0 )
+  if ( (byte_4C407D0 & 1) == 0 )
   {
-    sub_1C32C20(&LogoMain_TypeInfo);
-    sub_1C32C20(&StringLiteral_6598/*"Fadeout"*/);
-    byte_4C351E5 = 1;
+    sub_1C37058(&LogoMain_TypeInfo);
+    sub_1C37058(&StringLiteral_6599/*"Fadeout"*/);
+    byte_4C407D0 = 1;
   }
   this->fields.status = 2;
   v3 = LogoMain_TypeInfo;
@@ -46,7 +46,7 @@ void LogoMain__EndFadein(LogoMain_o *this, const MethodInfo *method)
   }
   UnityEngine_MonoBehaviour__Invoke(
     (UnityEngine_MonoBehaviour_o *)this,
-    (System_String_o *)StringLiteral_6598/*"Fadeout"*/,
+    (System_String_o *)StringLiteral_6599/*"Fadeout"*/,
     v3->static_fields->FADEWAIT_TIME,
     0);
 }
@@ -60,26 +60,26 @@ void LogoMain__EndFadeout(LogoMain_o *this, const MethodInfo *method)
   int32_t v5; // w8
 
   v2 = this;
-  if ( (byte_4C351E7 & 1) == 0 )
+  if ( (byte_4C407D2 & 1) == 0 )
   {
-    this = (LogoMain_o *)sub_1C32C20(&StringLiteral_6596/*"Fadein"*/);
-    byte_4C351E7 = 1;
+    this = (LogoMain_o *)sub_1C37058(&StringLiteral_6597/*"Fadein"*/);
+    byte_4C407D2 = 1;
   }
   logoList = v2->fields.logoList;
   if ( !logoList )
     goto LABEL_7;
   index = v2->fields.index;
   if ( (unsigned int)index >= LODWORD(logoList->max_length) )
-    sub_1C32E84(this);
+    sub_1C372BC(this);
   this = (LogoMain_o *)logoList->m_Items[index];
   if ( !this )
 LABEL_7:
-    sub_1C32E7C(this);
+    sub_1C372B4(this);
   UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)this, 0, 0);
   v5 = v2->fields.index;
   v2->fields.status = 4;
   v2->fields.index = v5 + 1;
-  UnityEngine_MonoBehaviour__Invoke((UnityEngine_MonoBehaviour_o *)v2, (System_String_o *)StringLiteral_6596/*"Fadein"*/, 0.2, 0);
+  UnityEngine_MonoBehaviour__Invoke((UnityEngine_MonoBehaviour_o *)v2, (System_String_o *)StringLiteral_6597/*"Fadein"*/, 0.2, 0);
 }
 
 
@@ -92,19 +92,19 @@ void LogoMain__EndLogo(LogoMain_o *this, const MethodInfo *method)
   UnityEngine_Object_o *fsm; // x20
   struct System_Action_o *callbackFunc; // x8
 
-  if ( (byte_4C351E8 & 1) == 0 )
+  if ( (byte_4C407D3 & 1) == 0 )
   {
-    sub_1C32C20(&LogoMain_TypeInfo);
-    sub_1C32C20(&UnityEngine_Object_TypeInfo);
-    sub_1C32C20(&StringLiteral_5443/*"END_LOGO"*/);
-    byte_4C351E8 = 1;
+    sub_1C37058(&LogoMain_TypeInfo);
+    sub_1C37058(&UnityEngine_Object_TypeInfo);
+    sub_1C37058(&StringLiteral_5444/*"END_LOGO"*/);
+    byte_4C407D3 = 1;
   }
   if ( !LogoMain_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(LogoMain_TypeInfo);
-  if ( !byte_4C35299 )
+  if ( !byte_4C40884 )
   {
-    sub_1C32C20(&LogoMain_TypeInfo);
-    byte_4C35299 = 1;
+    sub_1C37058(&LogoMain_TypeInfo);
+    byte_4C40884 = 1;
   }
   v3 = (UnityEngine_GameObject_o *)LogoMain_TypeInfo;
   if ( !LogoMain_TypeInfo->_2.cctor_finished )
@@ -124,7 +124,7 @@ void LogoMain__EndLogo(LogoMain_o *this, const MethodInfo *method)
     if ( (int)v5 >= max_length )
       break;
     if ( (unsigned int)v5 >= max_length )
-      sub_1C32E84(v3);
+      sub_1C372BC(v3);
     v3 = logoList->m_Items[v5];
     if ( v3 )
     {
@@ -144,11 +144,11 @@ void LogoMain__EndLogo(LogoMain_o *this, const MethodInfo *method)
     v3 = (UnityEngine_GameObject_o *)this->fields.fsm;
     if ( v3 )
     {
-      PlayMakerFSM__SendEvent((PlayMakerFSM_o *)v3, (System_String_o *)StringLiteral_5443/*"END_LOGO"*/, 0);
+      PlayMakerFSM__SendEvent((PlayMakerFSM_o *)v3, (System_String_o *)StringLiteral_5444/*"END_LOGO"*/, 0);
       goto LABEL_21;
     }
 LABEL_15:
-    sub_1C32E7C(v3);
+    sub_1C372B4(v3);
   }
 LABEL_21:
   callbackFunc = this->fields.callbackFunc;
@@ -171,13 +171,13 @@ void LogoMain__Fadein(LogoMain_o *this, const MethodInfo *method)
   System_Action_o *v9; // x21
 
   v2 = this;
-  if ( (byte_4C351E4 & 1) == 0 )
+  if ( (byte_4C407CF & 1) == 0 )
   {
-    sub_1C32C20(&System_Action_TypeInfo);
-    sub_1C32C20(&Method_LogoMain_EndFadein__);
-    sub_1C32C20(&LogoMain_TypeInfo);
-    this = (LogoMain_o *)sub_1C32C20(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
-    byte_4C351E4 = 1;
+    sub_1C37058(&System_Action_TypeInfo);
+    sub_1C37058(&Method_LogoMain_EndFadein__);
+    sub_1C37058(&LogoMain_TypeInfo);
+    this = (LogoMain_o *)sub_1C37058(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+    byte_4C407CF = 1;
   }
   logoList = v2->fields.logoList;
   if ( !logoList )
@@ -188,12 +188,12 @@ void LogoMain__Fadein(LogoMain_o *this, const MethodInfo *method)
   {
     v2->fields.status = 1;
     if ( (unsigned int)index >= max_length )
-      sub_1C32E84(this);
+      sub_1C372BC(this);
     this = (LogoMain_o *)logoList->m_Items[index];
     if ( this )
     {
       UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)this, 1, 0);
-      Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39E2904 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+      Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39ED16C *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
       v7 = LogoMain_TypeInfo;
       if ( !LogoMain_TypeInfo->_2.cctor_finished )
       {
@@ -201,7 +201,7 @@ void LogoMain__Fadein(LogoMain_o *this, const MethodInfo *method)
         v7 = LogoMain_TypeInfo;
       }
       FADEIN_TIME = v7->static_fields->FADEIN_TIME;
-      v9 = (System_Action_o *)sub_1C32E6C(System_Action_TypeInfo);
+      v9 = (System_Action_o *)sub_1C372A4(System_Action_TypeInfo);
       System_Action___ctor(v9, (Il2CppObject *)v2, Method_LogoMain_EndFadein__, 0);
       if ( Instance )
       {
@@ -210,7 +210,7 @@ void LogoMain__Fadein(LogoMain_o *this, const MethodInfo *method)
       }
     }
 LABEL_12:
-    sub_1C32E7C(this);
+    sub_1C372B4(this);
   }
   LogoMain__EndLogo(v2, method);
 }
@@ -228,25 +228,25 @@ void LogoMain__FadeinFirst(LogoMain_o *this, const MethodInfo *method)
   System_Action_o *v9; // x21
 
   v2 = this;
-  if ( (byte_4C351E3 & 1) == 0 )
+  if ( (byte_4C407CE & 1) == 0 )
   {
-    sub_1C32C20(&System_Action_TypeInfo);
-    sub_1C32C20(&Method_LogoMain_EndFadein__);
-    sub_1C32C20(&LogoMain_TypeInfo);
-    this = (LogoMain_o *)sub_1C32C20(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
-    byte_4C351E3 = 1;
+    sub_1C37058(&System_Action_TypeInfo);
+    sub_1C37058(&Method_LogoMain_EndFadein__);
+    sub_1C37058(&LogoMain_TypeInfo);
+    this = (LogoMain_o *)sub_1C37058(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+    byte_4C407CE = 1;
   }
   logoList = v2->fields.logoList;
   if ( !logoList )
     goto LABEL_10;
   index = v2->fields.index;
   if ( (unsigned int)index >= LODWORD(logoList->max_length) )
-    sub_1C32E84(this);
+    sub_1C372BC(this);
   this = (LogoMain_o *)logoList->m_Items[index];
   if ( !this )
     goto LABEL_10;
   UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)this, 1, 0);
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39E2904 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39ED16C *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
   v6 = LogoMain_TypeInfo;
   v7 = (CommonUI_o *)Instance;
   if ( !LogoMain_TypeInfo->_2.cctor_finished )
@@ -255,11 +255,11 @@ void LogoMain__FadeinFirst(LogoMain_o *this, const MethodInfo *method)
     v6 = LogoMain_TypeInfo;
   }
   FADEIN_TIME = v6->static_fields->FADEIN_TIME;
-  v9 = (System_Action_o *)sub_1C32E6C(System_Action_TypeInfo);
+  v9 = (System_Action_o *)sub_1C372A4(System_Action_TypeInfo);
   System_Action___ctor(v9, (Il2CppObject *)v2, Method_LogoMain_EndFadein__, 0);
   if ( !v7 )
 LABEL_10:
-    sub_1C32E7C(this);
+    sub_1C372B4(this);
   CommonUI__maskFadein(v7, FADEIN_TIME, v9, 0);
 }
 
@@ -273,16 +273,16 @@ void LogoMain__Fadeout(LogoMain_o *this, const MethodInfo *method)
   System_Action_o *v7; // x21
   __int64 v8; // x0
 
-  if ( (byte_4C351E6 & 1) == 0 )
+  if ( (byte_4C407D1 & 1) == 0 )
   {
-    sub_1C32C20(&System_Action_TypeInfo);
-    sub_1C32C20(&Method_LogoMain_EndFadeout__);
-    sub_1C32C20(&LogoMain_TypeInfo);
-    sub_1C32C20(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
-    byte_4C351E6 = 1;
+    sub_1C37058(&System_Action_TypeInfo);
+    sub_1C37058(&Method_LogoMain_EndFadeout__);
+    sub_1C37058(&LogoMain_TypeInfo);
+    sub_1C37058(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+    byte_4C407D1 = 1;
   }
   this->fields.status = 3;
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39E2904 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39ED16C *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
   v4 = LogoMain_TypeInfo;
   v5 = (CommonUI_o *)Instance;
   if ( !LogoMain_TypeInfo->_2.cctor_finished )
@@ -291,10 +291,10 @@ void LogoMain__Fadeout(LogoMain_o *this, const MethodInfo *method)
     v4 = LogoMain_TypeInfo;
   }
   FADEOUT_TIME = v4->static_fields->FADEOUT_TIME;
-  v7 = (System_Action_o *)sub_1C32E6C(System_Action_TypeInfo);
+  v7 = (System_Action_o *)sub_1C372A4(System_Action_TypeInfo);
   System_Action___ctor(v7, (Il2CppObject *)this, Method_LogoMain_EndFadeout__, 0);
   if ( !v5 )
-    sub_1C32E7C(v8);
+    sub_1C372B4(v8);
   CommonUI__maskFadeout(v5, 2, FADEOUT_TIME, v7, 0);
 }
 
@@ -307,14 +307,14 @@ void LogoMain__Init(LogoMain_o *this, PlayMakerFSM_o *fsm, const MethodInfo *met
   const MethodInfo *v7; // x1
 
   this->fields.fsm = fsm;
-  sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.fsm, (int32_t)fsm, (int32_t)method, v3);
+  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.fsm, (int32_t)fsm, (int32_t)method, v3);
   this->fields.callbackFunc = 0;
-  sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.callbackFunc, 0, v5, v6);
-  LogoMain__Init_37580508(this, v7);
+  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.callbackFunc, 0, v5, v6);
+  LogoMain__Init_37676256(this, v7);
 }
 
 
-void LogoMain__Init_37580508(LogoMain_o *this, const MethodInfo *method)
+void LogoMain__Init_37676256(LogoMain_o *this, const MethodInfo *method)
 {
   LogoMain_c *v3; // x0
   ManagerConfig_c *v4; // x0
@@ -339,15 +339,15 @@ void LogoMain__Init_37580508(LogoMain_o *this, const MethodInfo *method)
   int32_t v23; // w2
   const MethodInfo *v24; // x3
 
-  if ( (byte_4C351E2 & 1) == 0 )
+  if ( (byte_4C407CD & 1) == 0 )
   {
-    sub_1C32C20(&LogoMain_TypeInfo);
-    sub_1C32C20(&ManagerConfig_TypeInfo);
-    sub_1C32C20(&UnityEngine_Object_TypeInfo);
-    sub_1C32C20(&Method_SingletonMonoBehaviour_AssetManager__get_Instance__);
-    sub_1C32C20(&StringLiteral_22267/*"none"*/);
-    sub_1C32C20(&StringLiteral_6597/*"FadeinFirst"*/);
-    byte_4C351E2 = 1;
+    sub_1C37058(&LogoMain_TypeInfo);
+    sub_1C37058(&ManagerConfig_TypeInfo);
+    sub_1C37058(&UnityEngine_Object_TypeInfo);
+    sub_1C37058(&Method_SingletonMonoBehaviour_AssetManager__get_Instance__);
+    sub_1C37058(&StringLiteral_22270/*"none"*/);
+    sub_1C37058(&StringLiteral_6598/*"FadeinFirst"*/);
+    byte_4C407CD = 1;
   }
   v3 = LogoMain_TypeInfo;
   if ( !LogoMain_TypeInfo->_2.cctor_finished )
@@ -356,11 +356,11 @@ void LogoMain__Init_37580508(LogoMain_o *this, const MethodInfo *method)
     v3 = LogoMain_TypeInfo;
   }
   v3->static_fields->isPlayLogo = 0;
-  if ( !byte_4C35299 )
+  if ( !byte_4C40884 )
   {
-    sub_1C32C20(&LogoMain_TypeInfo);
+    sub_1C37058(&LogoMain_TypeInfo);
     v3 = LogoMain_TypeInfo;
-    byte_4C35299 = 1;
+    byte_4C40884 = 1;
   }
   if ( !v3->_2.cctor_finished )
   {
@@ -388,7 +388,7 @@ void LogoMain__Init_37580508(LogoMain_o *this, const MethodInfo *method)
       j_il2cpp_runtime_class_init_0(LogoMain_TypeInfo);
       v5 = LogoMain_TypeInfo;
     }
-    String = UnityEngine_PlayerPrefs__GetString(v5->static_fields->SAVE_KEY, (System_String_o *)StringLiteral_22267/*"none"*/, 0);
+    String = UnityEngine_PlayerPrefs__GetString(v5->static_fields->SAVE_KEY, (System_String_o *)StringLiteral_22270/*"none"*/, 0);
     if ( System_String__op_Inequality(String, AppVer, 0) )
     {
       v8 = LogoMain_TypeInfo;
@@ -439,7 +439,7 @@ void LogoMain__Init_37580508(LogoMain_o *this, const MethodInfo *method)
       while ( 1 )
       {
         if ( v17 >= (unsigned int)max_length )
-          sub_1C32E84(gameObject);
+          sub_1C372BC(gameObject);
         gameObject = logoList->m_Items[v17];
         if ( !gameObject )
           break;
@@ -452,14 +452,14 @@ void LogoMain__Init_37580508(LogoMain_o *this, const MethodInfo *method)
           goto LABEL_37;
       }
 LABEL_46:
-      sub_1C32E7C(gameObject);
+      sub_1C372B4(gameObject);
     }
 LABEL_37:
     this->fields.index = 0;
     this->fields.status = 4;
     UnityEngine_MonoBehaviour__Invoke(
       (UnityEngine_MonoBehaviour_o *)this,
-      (System_String_o *)StringLiteral_6597/*"FadeinFirst"*/,
+      (System_String_o *)StringLiteral_6598/*"FadeinFirst"*/,
       0.1,
       0);
   }
@@ -472,9 +472,9 @@ LABEL_37:
   {
     UnityEngine_MonoBehaviour__StopCoroutine((UnityEngine_MonoBehaviour_o *)this, progressBarCRW, 0);
     this->fields.progressBarCRW = 0;
-    sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.progressBarCRW, 0, v19, v20);
+    sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.progressBarCRW, 0, v19, v20);
   }
-  gameObject = (UnityEngine_GameObject_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39E2904 *)Method_SingletonMonoBehaviour_AssetManager__get_Instance__);
+  gameObject = (UnityEngine_GameObject_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39ED16C *)Method_SingletonMonoBehaviour_AssetManager__get_Instance__);
   if ( !gameObject )
     goto LABEL_46;
   if ( AssetManager__GetDownloadSize((AssetManager_o *)gameObject, 0) < 1 )
@@ -488,8 +488,8 @@ LABEL_37:
   {
     v22 = LogoMain__ProgressBarCR(this, v21);
     this->fields.progressBarCRW = v22;
-    sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.progressBarCRW, (int32_t)v22, v23, v24);
-    UnityEngine_MonoBehaviour__StartCoroutine_71209212(
+    sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.progressBarCRW, (int32_t)v22, v23, v24);
+    UnityEngine_MonoBehaviour__StartCoroutine_71252324(
       (UnityEngine_MonoBehaviour_o *)this,
       this->fields.progressBarCRW,
       0);
@@ -497,7 +497,7 @@ LABEL_37:
 }
 
 
-void LogoMain__Init_37581372(LogoMain_o *this, System_Action_o *callback, const MethodInfo *method)
+void LogoMain__Init_37677120(LogoMain_o *this, System_Action_o *callback, const MethodInfo *method)
 {
   const MethodInfo *v3; // x3
   int32_t v6; // w2
@@ -505,10 +505,10 @@ void LogoMain__Init_37581372(LogoMain_o *this, System_Action_o *callback, const 
   const MethodInfo *v8; // x1
 
   this->fields.fsm = 0;
-  sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.fsm, 0, (int32_t)method, v3);
+  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.fsm, 0, (int32_t)method, v3);
   this->fields.callbackFunc = callback;
-  sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.callbackFunc, (int32_t)callback, v6, v7);
-  LogoMain__Init_37580508(this, v8);
+  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.callbackFunc, (int32_t)callback, v6, v7);
+  LogoMain__Init_37676256(this, v8);
 }
 
 
@@ -520,12 +520,12 @@ bool LogoMain__IsPLayLogo(const MethodInfo *method)
   System_String_o *AppVer; // x19
   System_String_o *String; // x0
 
-  if ( (byte_4C351E1 & 1) == 0 )
+  if ( (byte_4C407CC & 1) == 0 )
   {
-    sub_1C32C20(&LogoMain_TypeInfo);
-    sub_1C32C20(&ManagerConfig_TypeInfo);
-    sub_1C32C20(&StringLiteral_22267/*"none"*/);
-    byte_4C351E1 = 1;
+    sub_1C37058(&LogoMain_TypeInfo);
+    sub_1C37058(&ManagerConfig_TypeInfo);
+    sub_1C37058(&StringLiteral_22270/*"none"*/);
+    byte_4C407CC = 1;
   }
   v1 = LogoMain_TypeInfo;
   if ( !LogoMain_TypeInfo->_2.cctor_finished )
@@ -555,7 +555,7 @@ bool LogoMain__IsPLayLogo(const MethodInfo *method)
     j_il2cpp_runtime_class_init_0(LogoMain_TypeInfo);
     v4 = LogoMain_TypeInfo;
   }
-  String = UnityEngine_PlayerPrefs__GetString(v4->static_fields->SAVE_KEY, (System_String_o *)StringLiteral_22267/*"none"*/, 0);
+  String = UnityEngine_PlayerPrefs__GetString(v4->static_fields->SAVE_KEY, (System_String_o *)StringLiteral_22270/*"none"*/, 0);
   return System_String__op_Inequality(String, AppVer, 0);
 }
 
@@ -572,16 +572,16 @@ System_Collections_IEnumerator_o *LogoMain__ProgressBarCR(LogoMain_o *this, cons
   int32_t v4; // w2
   const MethodInfo *v5; // x3
 
-  if ( (byte_4C351EA & 1) == 0 )
+  if ( (byte_4C407D5 & 1) == 0 )
   {
-    sub_1C32C20(&LogoMain__ProgressBarCR_d__33_TypeInfo);
-    byte_4C351EA = 1;
+    sub_1C37058(&LogoMain__ProgressBarCR_d__33_TypeInfo);
+    byte_4C407D5 = 1;
   }
-  v3 = sub_1C32E6C(LogoMain__ProgressBarCR_d__33_TypeInfo);
+  v3 = sub_1C372A4(LogoMain__ProgressBarCR_d__33_TypeInfo);
   System_Object___ctor((Il2CppObject *)v3, 0);
   *(_DWORD *)(v3 + 16) = 0;
   *(_QWORD *)(v3 + 32) = this;
-  sub_1C32BC4((CGThumbnailListItem_o *)(v3 + 32), (int32_t)this, v4, v5);
+  sub_1C36FFC((CGThumbnailListItem_o *)(v3 + 32), (int32_t)this, v4, v5);
   return (System_Collections_IEnumerator_o *)v3;
 }
 
@@ -593,7 +593,7 @@ void LogoMain__Quit(LogoMain_o *this, const MethodInfo *method)
   this->fields.status = 0;
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
   if ( !gameObject )
-    sub_1C32E7C(0);
+    sub_1C372B4(0);
   UnityEngine_GameObject__SetActive(gameObject, 0, 0);
 }
 
@@ -621,16 +621,16 @@ void LogoMain__SetChildInit(LogoMain_o *this, UnityEngine_Transform_o *tf, int32
   __int64 v24; // x0
 
   v6 = this;
-  if ( (byte_4C351E9 & 1) == 0 )
+  if ( (byte_4C407D4 & 1) == 0 )
   {
-    sub_1C32C20(&System_IDisposable_TypeInfo);
-    sub_1C32C20(&System_Collections_IEnumerator_TypeInfo);
-    this = (LogoMain_o *)sub_1C32C20(&UnityEngine_Transform_TypeInfo);
-    byte_4C351E9 = 1;
+    sub_1C37058(&System_IDisposable_TypeInfo);
+    sub_1C37058(&System_Collections_IEnumerator_TypeInfo);
+    this = (LogoMain_o *)sub_1C37058(&UnityEngine_Transform_TypeInfo);
+    byte_4C407D4 = 1;
   }
   if ( !tf || (this = (LogoMain_o *)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)tf, 0)) == 0 )
 LABEL_35:
-    sub_1C32E7C(this);
+    sub_1C372B4(this);
   if ( UnityEngine_GameObject__get_layer((UnityEngine_GameObject_o *)this, 0) != layer )
   {
     this = (LogoMain_o *)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)tf, 0);
@@ -639,7 +639,7 @@ LABEL_35:
     UnityEngine_GameObject__set_layer((UnityEngine_GameObject_o *)this, layer, 0);
     Enumerator = UnityEngine_Transform__GetEnumerator(tf, 0);
     if ( !Enumerator )
-      sub_1C32E7C(0);
+      sub_1C372B4(0);
     while ( 1 )
     {
       klass = Enumerator->klass;
@@ -659,7 +659,7 @@ LABEL_35:
       else
       {
 LABEL_12:
-        v11 = sub_1C83438(Enumerator, System_Collections_IEnumerator_TypeInfo, 0);
+        v11 = sub_1C87870(Enumerator, System_Collections_IEnumerator_TypeInfo, 0);
       }
       if ( ((*(__int64 (__fastcall **)(System_Collections_IEnumerator_o *, _QWORD))v11)(
               Enumerator,
@@ -683,7 +683,7 @@ LABEL_12:
       else
       {
 LABEL_19:
-        v15 = sub_1C83438(Enumerator, System_Collections_IEnumerator_TypeInfo, 1);
+        v15 = sub_1C87870(Enumerator, System_Collections_IEnumerator_TypeInfo, 1);
       }
       v16 = (UnityEngine_Transform_o *)(*(__int64 (__fastcall **)(System_Collections_IEnumerator_o *, _QWORD))v15)(
                                          Enumerator,
@@ -694,13 +694,13 @@ LABEL_19:
         if ( v16->klass->_2.naturalAligment < (unsigned int)naturalAligment
           || (UnityEngine_Transform_c *)v16->klass->_2.typeHierarchy[naturalAligment - 1] != UnityEngine_Transform_TypeInfo )
         {
-          sub_1C3313C(v16);
+          sub_1C37574(v16);
           goto LABEL_35;
         }
       }
       LogoMain__SetChildInit(v6, v16, layer, v17);
     }
-    v19 = sub_1C32D5C(Enumerator, System_IDisposable_TypeInfo);
+    v19 = sub_1C37194(Enumerator, System_IDisposable_TypeInfo);
     if ( v19 )
     {
       v20 = *(_QWORD *)v19;
@@ -721,7 +721,7 @@ LABEL_19:
       else
       {
 LABEL_30:
-        v24 = sub_1C83438(v19, System_IDisposable_TypeInfo, 0);
+        v24 = sub_1C87870(v19, System_IDisposable_TypeInfo, 0);
       }
       (*(void (__fastcall **)(__int64, _QWORD))v24)(v21, *(_QWORD *)(v24 + 8));
     }
@@ -733,10 +733,10 @@ bool LogoMain__get_isPlaying(const MethodInfo *method)
 {
   LogoMain_c *v1; // x0
 
-  if ( (byte_4C351DF & 1) == 0 )
+  if ( (byte_4C407CA & 1) == 0 )
   {
-    sub_1C32C20(&LogoMain_TypeInfo);
-    byte_4C351DF = 1;
+    sub_1C37058(&LogoMain_TypeInfo);
+    byte_4C407CA = 1;
   }
   v1 = LogoMain_TypeInfo;
   if ( !LogoMain_TypeInfo->_2.cctor_finished )
@@ -752,10 +752,10 @@ void LogoMain__set_isPlaying(bool value, const MethodInfo *method)
 {
   LogoMain_c *v3; // x0
 
-  if ( (byte_4C351E0 & 1) == 0 )
+  if ( (byte_4C407CB & 1) == 0 )
   {
-    sub_1C32C20(&LogoMain_TypeInfo);
-    byte_4C351E0 = 1;
+    sub_1C37058(&LogoMain_TypeInfo);
+    byte_4C407CB = 1;
   }
   v3 = LogoMain_TypeInfo;
   if ( !LogoMain_TypeInfo->_2.cctor_finished )
@@ -814,14 +814,14 @@ bool LogoMain__ProgressBarCR_d__33__MoveNext(LogoMain__ProgressBarCR_d__33_o *th
   const MethodInfo *v34; // x3
 
   v2 = this;
-  if ( (byte_4C351EC & 1) == 0 )
+  if ( (byte_4C407D7 & 1) == 0 )
   {
-    sub_1C32C20(&AssetManager_TypeInfo);
-    sub_1C32C20(&LocalizationManager_TypeInfo);
-    sub_1C32C20(&UnityEngine_WaitForEndOfFrame_TypeInfo);
-    sub_1C32C20(&UnityEngine_WaitForSeconds_TypeInfo);
-    this = (LogoMain__ProgressBarCR_d__33_o *)sub_1C32C20(&StringLiteral_3792/*"CONNECT_LOAD_MESSAGE3"*/);
-    byte_4C351EC = 1;
+    sub_1C37058(&AssetManager_TypeInfo);
+    sub_1C37058(&LocalizationManager_TypeInfo);
+    sub_1C37058(&UnityEngine_WaitForEndOfFrame_TypeInfo);
+    sub_1C37058(&UnityEngine_WaitForSeconds_TypeInfo);
+    this = (LogoMain__ProgressBarCR_d__33_o *)sub_1C37058(&StringLiteral_3792/*"CONNECT_LOAD_MESSAGE3"*/);
+    byte_4C407D7 = 1;
   }
   _4__this = v2->fields.__4__this;
   switch ( v2->fields.__1__state )
@@ -829,10 +829,10 @@ bool LogoMain__ProgressBarCR_d__33__MoveNext(LogoMain__ProgressBarCR_d__33_o *th
     case 0:
       v2->fields._sliderValue_5__2 = 0.0;
       v2->fields.__1__state = -1;
-      v4 = (UnityEngine_WaitForEndOfFrame_o *)sub_1C32E6C(UnityEngine_WaitForEndOfFrame_TypeInfo);
+      v4 = (UnityEngine_WaitForEndOfFrame_o *)sub_1C372A4(UnityEngine_WaitForEndOfFrame_TypeInfo);
       UnityEngine_WaitForEndOfFrame___ctor(v4, 0);
       v2->fields.__2__current = (Il2CppObject *)v4;
-      sub_1C32BC4((CGThumbnailListItem_o *)&v2->fields.__2__current, (int32_t)v4, v5, v6);
+      sub_1C36FFC((CGThumbnailListItem_o *)&v2->fields.__2__current, (int32_t)v4, v5, v6);
       result = 1;
       v2->fields.__1__state = 1;
       return result;
@@ -855,11 +855,11 @@ bool LogoMain__ProgressBarCR_d__33__MoveNext(LogoMain__ProgressBarCR_d__33_o *th
       if ( !miniProgressBarLabel )
         goto LABEL_40;
       UILabel__set_text(miniProgressBarLabel, (System_String_o *)this, 0);
-      v9 = (UnityEngine_WaitForEndOfFrame_o *)sub_1C32E6C(UnityEngine_WaitForEndOfFrame_TypeInfo);
+      v9 = (UnityEngine_WaitForEndOfFrame_o *)sub_1C372A4(UnityEngine_WaitForEndOfFrame_TypeInfo);
       UnityEngine_WaitForEndOfFrame___ctor(v9, 0);
       v2->fields.__2__current = (Il2CppObject *)v9;
       p__2__current = (CGThumbnailListItem_o *)&v2->fields.__2__current;
-      sub_1C32BC4(p__2__current, (int32_t)v9, v11, v12);
+      sub_1C36FFC(p__2__current, (int32_t)v9, v11, v12);
       v13 = 2;
       goto LABEL_30;
     case 2:
@@ -885,19 +885,19 @@ bool LogoMain__ProgressBarCR_d__33__MoveNext(LogoMain__ProgressBarCR_d__33_o *th
         goto LABEL_40;
       UIProgressBar__set_value((UIProgressBar_o *)this, v16, 0);
 LABEL_20:
-      v17 = (UnityEngine_WaitForEndOfFrame_o *)sub_1C32E6C(UnityEngine_WaitForEndOfFrame_TypeInfo);
+      v17 = (UnityEngine_WaitForEndOfFrame_o *)sub_1C372A4(UnityEngine_WaitForEndOfFrame_TypeInfo);
       UnityEngine_WaitForEndOfFrame___ctor(v17, 0);
       v2->fields.__2__current = (Il2CppObject *)v17;
       p__2__current = (CGThumbnailListItem_o *)&v2->fields.__2__current;
-      sub_1C32BC4(p__2__current, (int32_t)v17, v18, v19);
+      sub_1C36FFC(p__2__current, (int32_t)v17, v18, v19);
       v13 = 4;
       goto LABEL_30;
     case 4:
       v2->fields.__1__state = -1;
-      v20 = (UnityEngine_WaitForSeconds_o *)sub_1C32E6C(UnityEngine_WaitForSeconds_TypeInfo);
+      v20 = (UnityEngine_WaitForSeconds_o *)sub_1C372A4(UnityEngine_WaitForSeconds_TypeInfo);
       UnityEngine_WaitForSeconds___ctor(v20, 0.1, 0);
       v2->fields.__2__current = (Il2CppObject *)v20;
-      sub_1C32BC4((CGThumbnailListItem_o *)&v2->fields.__2__current, (int32_t)v20, v21, v22);
+      sub_1C36FFC((CGThumbnailListItem_o *)&v2->fields.__2__current, (int32_t)v20, v21, v22);
       v23 = 5;
       goto LABEL_37;
     case 5:
@@ -908,10 +908,10 @@ LABEL_23:
       v24 = AssetManager__getDownloadSize(0);
       v2->fields._size_5__4 = v24;
       v25 = v24;
-      v26 = (UnityEngine_WaitForEndOfFrame_o *)sub_1C32E6C(UnityEngine_WaitForEndOfFrame_TypeInfo);
+      v26 = (UnityEngine_WaitForEndOfFrame_o *)sub_1C372A4(UnityEngine_WaitForEndOfFrame_TypeInfo);
       UnityEngine_WaitForEndOfFrame___ctor(v26, 0);
       v2->fields.__2__current = (Il2CppObject *)v26;
-      sub_1C32BC4((CGThumbnailListItem_o *)&v2->fields.__2__current, (int32_t)v26, v27, v28);
+      sub_1C36FFC((CGThumbnailListItem_o *)&v2->fields.__2__current, (int32_t)v26, v27, v28);
       if ( v25 < 1 )
         v23 = 6;
       else
@@ -925,21 +925,21 @@ LABEL_23:
       if ( !this )
         goto LABEL_40;
       UIProgressBar__set_value((UIProgressBar_o *)this, 1.0, 0);
-      v29 = (UnityEngine_WaitForEndOfFrame_o *)sub_1C32E6C(UnityEngine_WaitForEndOfFrame_TypeInfo);
+      v29 = (UnityEngine_WaitForEndOfFrame_o *)sub_1C372A4(UnityEngine_WaitForEndOfFrame_TypeInfo);
       UnityEngine_WaitForEndOfFrame___ctor(v29, 0);
       v2->fields.__2__current = (Il2CppObject *)v29;
       p__2__current = (CGThumbnailListItem_o *)&v2->fields.__2__current;
-      sub_1C32BC4(p__2__current, (int32_t)v29, v30, v31);
+      sub_1C36FFC(p__2__current, (int32_t)v29, v30, v31);
       v13 = 7;
 LABEL_30:
       LODWORD(p__2__current[-1].fields._ThumbnailSpritePath_k__BackingField) = v13;
       return 1;
     case 7:
       v2->fields.__1__state = -1;
-      v32 = (UnityEngine_WaitForSeconds_o *)sub_1C32E6C(UnityEngine_WaitForSeconds_TypeInfo);
+      v32 = (UnityEngine_WaitForSeconds_o *)sub_1C372A4(UnityEngine_WaitForSeconds_TypeInfo);
       UnityEngine_WaitForSeconds___ctor(v32, 0.1, 0);
       v2->fields.__2__current = (Il2CppObject *)v32;
-      sub_1C32BC4((CGThumbnailListItem_o *)&v2->fields.__2__current, (int32_t)v32, v33, v34);
+      sub_1C36FFC((CGThumbnailListItem_o *)&v2->fields.__2__current, (int32_t)v32, v33, v34);
       v23 = 8;
 LABEL_37:
       v2->fields.__1__state = v23;
@@ -948,7 +948,7 @@ LABEL_37:
       v2->fields.__1__state = -1;
       if ( !_4__this || (this = (LogoMain__ProgressBarCR_d__33_o *)_4__this->fields.miniProgressBarBase) == 0 )
 LABEL_40:
-        sub_1C32E7C(this);
+        sub_1C372B4(this);
       UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)this, 0, 0);
       return 0;
     default:
@@ -973,11 +973,11 @@ void __noreturn LogoMain__ProgressBarCR_d__33__System_Collections_IEnumerator_Re
   System_NotSupportedException_o *v3; // x19
   __int64 v4; // x0
 
-  v2 = sub_1C32C34(&System_NotSupportedException_TypeInfo);
-  v3 = (System_NotSupportedException_o *)sub_1C32E6C(v2);
+  v2 = sub_1C3706C(&System_NotSupportedException_TypeInfo);
+  v3 = (System_NotSupportedException_o *)sub_1C372A4(v2);
   System_NotSupportedException___ctor(v3, 0);
-  v4 = sub_1C32C34(&Method_LogoMain__ProgressBarCR_d__33_System_Collections_IEnumerator_Reset__);
-  sub_1C32D48(v3, v4);
+  v4 = sub_1C3706C(&Method_LogoMain__ProgressBarCR_d__33_System_Collections_IEnumerator_Reset__);
+  sub_1C37180(v3, v4);
 }
 
 

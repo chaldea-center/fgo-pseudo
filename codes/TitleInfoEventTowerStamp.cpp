@@ -3,14 +3,14 @@ void TitleInfoEventTowerStamp___cctor(const MethodInfo *method)
   int32_t v1; // w2
   const MethodInfo *v2; // x3
 
-  if ( (byte_4C3652C & 1) == 0 )
+  if ( (byte_4C41B1A & 1) == 0 )
   {
-    sub_1C32C20(&TitleInfoEventTowerStamp_TypeInfo);
-    sub_1C32C20(&StringLiteral_24137/*"tower_img_base{0:00}_stamp"*/);
-    byte_4C3652C = 1;
+    sub_1C37058(&TitleInfoEventTowerStamp_TypeInfo);
+    sub_1C37058(&StringLiteral_24141/*"tower_img_base{0:00}_stamp"*/);
+    byte_4C41B1A = 1;
   }
-  TitleInfoEventTowerStamp_TypeInfo->static_fields->SPRITE_NAME_STAMP = (struct System_String_o *)StringLiteral_24137/*"tower_img_base{0:00}_stamp"*/;
-  sub_1C32BC4((CGThumbnailListItem_o *)TitleInfoEventTowerStamp_TypeInfo->static_fields, StringLiteral_24137/*"tower_img_base{0:00}_stamp"*/, v1, v2);
+  TitleInfoEventTowerStamp_TypeInfo->static_fields->SPRITE_NAME_STAMP = (struct System_String_o *)StringLiteral_24141/*"tower_img_base{0:00}_stamp"*/;
+  sub_1C36FFC((CGThumbnailListItem_o *)TitleInfoEventTowerStamp_TypeInfo->static_fields, StringLiteral_24141/*"tower_img_base{0:00}_stamp"*/, v1, v2);
 }
 
 
@@ -57,17 +57,17 @@ void TitleInfoEventTowerStamp__ResetStamp(TitleInfoEventTowerStamp_o *this, cons
   const MethodInfo *v13; // x3
   System_Collections_Generic_List_Enumerator_object__o v14; // [xsp+8h] [xbp-48h] BYREF
 
-  if ( (byte_4C3652B & 1) == 0 )
+  if ( (byte_4C41B19 & 1) == 0 )
   {
-    sub_1C32C20(&Method_System_Collections_Generic_List_Enumerator_GameObject__Dispose__);
-    sub_1C32C20(&Method_System_Collections_Generic_List_Enumerator_GameObject__MoveNext__);
-    sub_1C32C20(&Method_System_Collections_Generic_List_Enumerator_GameObject__get_Current__);
-    sub_1C32C20(&Method_System_Collections_Generic_List_GameObject__Clear__);
-    sub_1C32C20(&Method_System_Collections_Generic_List_GameObject__GetEnumerator__);
-    sub_1C32C20(&Method_System_Collections_Generic_List_GameObject___ctor__);
-    sub_1C32C20(&System_Collections_Generic_List_GameObject__TypeInfo);
-    sub_1C32C20(&UnityEngine_Object_TypeInfo);
-    byte_4C3652B = 1;
+    sub_1C37058(&Method_System_Collections_Generic_List_Enumerator_GameObject__Dispose__);
+    sub_1C37058(&Method_System_Collections_Generic_List_Enumerator_GameObject__MoveNext__);
+    sub_1C37058(&Method_System_Collections_Generic_List_Enumerator_GameObject__get_Current__);
+    sub_1C37058(&Method_System_Collections_Generic_List_GameObject__Clear__);
+    sub_1C37058(&Method_System_Collections_Generic_List_GameObject__GetEnumerator__);
+    sub_1C37058(&Method_System_Collections_Generic_List_GameObject___ctor__);
+    sub_1C37058(&System_Collections_Generic_List_GameObject__TypeInfo);
+    sub_1C37058(&UnityEngine_Object_TypeInfo);
+    byte_4C41B19 = 1;
   }
   memset(&v14, 0, sizeof(v14));
   stampList = this->fields.stampList;
@@ -78,22 +78,22 @@ void TitleInfoEventTowerStamp__ResetStamp(TitleInfoEventTowerStamp_o *this, cons
     System_Collections_Generic_List_object___GetEnumerator(
       (System_Collections_Generic_List_Enumerator_T__o *)&v14,
       v3,
-      (const MethodInfo_37992B4 *)Method_System_Collections_Generic_List_GameObject__GetEnumerator__);
+      (const MethodInfo_37A3B1C *)Method_System_Collections_Generic_List_GameObject__GetEnumerator__);
     while ( System_Collections_Generic_List_Enumerator_object___MoveNext(
               &v14,
-              (const MethodInfo_3522FA8 *)Method_System_Collections_Generic_List_Enumerator_GameObject__MoveNext__) )
+              (const MethodInfo_352D810 *)Method_System_Collections_Generic_List_Enumerator_GameObject__MoveNext__) )
     {
       current = v14.fields._current;
       if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-      UnityEngine_Object__Destroy_71223640((UnityEngine_Object_o *)current, 0);
+      UnityEngine_Object__Destroy_71266752((UnityEngine_Object_o *)current, 0);
     }
     System_Collections_Generic_List_Enumerator_object___Dispose(
       &v14,
-      (const MethodInfo_3522FA4 *)Method_System_Collections_Generic_List_Enumerator_GameObject__Dispose__);
+      (const MethodInfo_352D80C *)Method_System_Collections_Generic_List_Enumerator_GameObject__Dispose__);
     klass = p_stampList->klass;
     if ( !p_stampList->klass )
-      sub_1C32E7C(v7);
+      sub_1C372B4(v7);
     namespaze = (int32_t)klass->_1.namespaze;
     v10 = HIDWORD(klass->_1.namespaze) + 1;
     LODWORD(klass->_1.namespaze) = 0;
@@ -103,12 +103,12 @@ void TitleInfoEventTowerStamp__ResetStamp(TitleInfoEventTowerStamp_o *this, cons
   }
   else
   {
-    v11 = (System_Collections_Generic_List_object__o *)sub_1C32E6C(System_Collections_Generic_List_GameObject__TypeInfo);
+    v11 = (System_Collections_Generic_List_object__o *)sub_1C372A4(System_Collections_Generic_List_GameObject__TypeInfo);
     System_Collections_Generic_List_object____ctor(
       v11,
-      (const MethodInfo_3797F88 *)Method_System_Collections_Generic_List_GameObject___ctor__);
+      (const MethodInfo_37A27F0 *)Method_System_Collections_Generic_List_GameObject___ctor__);
     p_stampList->klass = (CGThumbnailListItem_c *)v11;
-    sub_1C32BC4(p_stampList, (int32_t)v11, v12, v13);
+    sub_1C36FFC(p_stampList, (int32_t)v11, v12, v13);
   }
 }
 
@@ -148,16 +148,16 @@ void TitleInfoEventTowerStamp__StampProgress(
   int32_t v33; // [xsp+Ch] [xbp-44h] BYREF
   UnityEngine_Vector3_o v34; // 0:s0.4,4:s1.4,8:s2.4
 
-  if ( (byte_4C3652A & 1) == 0 )
+  if ( (byte_4C41B18 & 1) == 0 )
   {
-    sub_1C32C20(&AtlasManager_TypeInfo);
-    sub_1C32C20(&Method_UnityEngine_GameObject_GetComponent_UISprite___);
-    sub_1C32C20(&int_TypeInfo);
-    sub_1C32C20(&Method_System_Collections_Generic_List_GameObject__Add__);
-    sub_1C32C20(&Method_UnityEngine_Object_Instantiate_GameObject____78147088);
-    sub_1C32C20(&UnityEngine_Object_TypeInfo);
-    sub_1C32C20(&TitleInfoEventTowerStamp_TypeInfo);
-    byte_4C3652A = 1;
+    sub_1C37058(&AtlasManager_TypeInfo);
+    sub_1C37058(&Method_UnityEngine_GameObject_GetComponent_UISprite___);
+    sub_1C37058(&int_TypeInfo);
+    sub_1C37058(&Method_System_Collections_Generic_List_GameObject__Add__);
+    sub_1C37058(&Method_UnityEngine_Object_Instantiate_GameObject____78192880);
+    sub_1C37058(&UnityEngine_Object_TypeInfo);
+    sub_1C37058(&TitleInfoEventTowerStamp_TypeInfo);
+    byte_4C41B18 = 1;
   }
   TitleInfoEventTowerStamp__ResetStamp(this, *(const MethodInfo **)&floor);
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
@@ -165,7 +165,7 @@ void TitleInfoEventTowerStamp__StampProgress(
     goto LABEL_22;
   Component_object = UnityEngine_GameObject__GetComponent_object_(
                        gameObject,
-                       (const MethodInfo_3134970 *)Method_UnityEngine_GameObject_GetComponent_UISprite___);
+                       (const MethodInfo_313F1D8 *)Method_UnityEngine_GameObject_GetComponent_UISprite___);
   v17 = TitleInfoEventTowerStamp_TypeInfo;
   v18 = (UISprite_o *)Component_object;
   if ( !TitleInfoEventTowerStamp_TypeInfo->_2.cctor_finished )
@@ -188,10 +188,10 @@ void TitleInfoEventTowerStamp__StampProgress(
       v23 = (Il2CppObject *)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
       if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-      gameObject = (UnityEngine_GameObject_o *)UnityEngine_Object__Instantiate_object__51812484(
+      gameObject = (UnityEngine_GameObject_o *)UnityEngine_Object__Instantiate_object__51855596(
                                                  v23,
                                                  spriteRoot,
-                                                 (const MethodInfo_3169884 *)Method_UnityEngine_Object_Instantiate_GameObject____78147088);
+                                                 (const MethodInfo_31740EC *)Method_UnityEngine_Object_Instantiate_GameObject____78192880);
       stampList = (System_Collections_Generic_List_object__o *)this->fields.stampList;
       if ( !stampList )
         break;
@@ -207,14 +207,14 @@ void TitleInfoEventTowerStamp__StampProgress(
         System_Collections_Generic_List_object___AddWithResize(
           stampList,
           (Il2CppObject *)gameObject,
-          *(const MethodInfo_37987BC **)(*(_QWORD *)(v28[4] + 192LL) + 112LL));
+          *(const MethodInfo_37A3024 **)(*(_QWORD *)(v28[4] + 192LL) + 112LL));
       }
       else
       {
         v31 = &items->obj.klass + size;
         stampList->fields._size = size + 1;
         v31[4] = (Il2CppClass *)v30;
-        sub_1C32BC4((CGThumbnailListItem_o *)(v31 + 4), (int32_t)v30, v24, v25);
+        sub_1C36FFC((CGThumbnailListItem_o *)(v31 + 4), (int32_t)v30, v24, v25);
       }
       if ( !v30 )
         break;
@@ -234,6 +234,6 @@ void TitleInfoEventTowerStamp__StampProgress(
         return;
     }
 LABEL_22:
-    sub_1C32E7C(gameObject);
+    sub_1C372B4(gameObject);
   }
 }

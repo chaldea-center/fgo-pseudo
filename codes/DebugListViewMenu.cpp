@@ -20,8 +20,8 @@ void DebugListViewMenu__Init(DebugListViewMenu_o *this, const MethodInfo *method
   this->fields.state = 1;
   if ( !listViewManager )
 LABEL_6:
-    sub_1C32E7C(listViewManager);
-  DebugListViewManager__SetMode_37246832(listViewManager, 1, 0, v2);
+    sub_1C372B4(listViewManager);
+  DebugListViewManager__SetMode_37342496(listViewManager, 1, 0, v2);
 }
 
 
@@ -34,7 +34,7 @@ void DebugListViewMenu__StartInput(DebugListViewMenu_o *this, const MethodInfo *
   {
     listViewManager = this->fields.listViewManager;
     if ( !listViewManager )
-      sub_1C32E7C(0);
-    DebugListViewManager__SetMode_37246832(listViewManager, 1, 0, v2);
+      sub_1C372B4(0);
+    DebugListViewManager__SetMode_37342496(listViewManager, 1, 0, v2);
   }
 }

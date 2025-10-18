@@ -13,19 +13,19 @@ TweenHeight_o *TweenHeight__Begin(UIWidget_o *widget, float duration, int32_t he
   UnityEngine_Behaviour_o *v9; // x21
 
   v6 = widget;
-  if ( (byte_4C3C240 & 1) == 0 )
+  if ( (byte_4C477BB & 1) == 0 )
   {
-    widget = (UIWidget_o *)sub_1C32C20(&Method_UITweener_Begin_TweenHeight___);
-    byte_4C3C240 = 1;
+    widget = (UIWidget_o *)sub_1C37058(&Method_UITweener_Begin_TweenHeight___);
+    byte_4C477BB = 1;
   }
   if ( !v6
     || (gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)v6, 0),
         (widget = (UIWidget_o *)UITweener__Begin_object_(
                                   gameObject,
                                   duration,
-                                  (const MethodInfo_3198D08 *)Method_UITweener_Begin_TweenHeight___)) == 0) )
+                                  (const MethodInfo_31A3570 *)Method_UITweener_Begin_TweenHeight___)) == 0) )
   {
-    sub_1C32E7C(widget);
+    sub_1C372B4(widget);
   }
   v9 = (UnityEngine_Behaviour_o *)widget;
   *(_DWORD *)&widget->fields.mRootSet = v6->fields.mHeight;
@@ -60,19 +60,19 @@ void TweenHeight__OnUpdate(TweenHeight_o *this, float factor, bool isFinished, c
   UnityEngine_Object_o *v22; // x21
   double iptr; // [xsp+18h] [xbp-28h] BYREF
 
-  if ( (byte_4C3C23F & 1) == 0 )
+  if ( (byte_4C477BA & 1) == 0 )
   {
-    sub_1C32C20(&Method_NGUITools_FindInParents_UITable___);
-    sub_1C32C20(&NGUITools_TypeInfo);
-    sub_1C32C20(&UnityEngine_Object_TypeInfo);
-    byte_4C3C23F = 1;
+    sub_1C37058(&Method_NGUITools_FindInParents_UITable___);
+    sub_1C37058(&NGUITools_TypeInfo);
+    sub_1C37058(&UnityEngine_Object_TypeInfo);
+    byte_4C477BA = 1;
   }
   v6 = (float)(1.0 - factor) * (float)this->fields.from;
   v7 = (float)this->fields.to * factor;
-  if ( !byte_4C32B16 )
+  if ( !byte_4C3E100 )
   {
-    sub_1C32C20(&System_Math_TypeInfo);
-    byte_4C32B16 = 1;
+    sub_1C37058(&System_Math_TypeInfo);
+    byte_4C3E100 = 1;
   }
   v8 = v6 + v7;
   if ( !System_Math_TypeInfo->_2.cctor_finished )
@@ -121,9 +121,9 @@ LABEL_17:
       j_il2cpp_runtime_class_init_0(NGUITools_TypeInfo);
     v19 = NGUITools__FindInParents_object_(
             gameObject,
-            (const MethodInfo_31676B4 *)Method_NGUITools_FindInParents_UITable___);
+            (const MethodInfo_3171F1C *)Method_NGUITools_FindInParents_UITable___);
     *p_mTable = (UITable_o *)v19;
-    sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.mTable, (int32_t)v19, v20, v21);
+    sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.mTable, (int32_t)v19, v20, v21);
     v22 = (UnityEngine_Object_o *)*p_mTable;
     if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
@@ -135,7 +135,7 @@ LABEL_17:
     {
 LABEL_31:
       if ( !*p_mTable )
-        sub_1C32E7C(0);
+        sub_1C372B4(0);
       UITable__set_repositionNow(*p_mTable, 1, 0);
     }
   }
@@ -164,7 +164,7 @@ void TweenHeight__SetEndToCurrentValue(TweenHeight_o *this, const MethodInfo *me
 
   cachedWidget = TweenHeight__get_cachedWidget(this, method);
   if ( !cachedWidget )
-    sub_1C32E7C(0);
+    sub_1C372B4(0);
   this->fields.to = cachedWidget->fields.mHeight;
 }
 
@@ -175,7 +175,7 @@ void TweenHeight__SetStartToCurrentValue(TweenHeight_o *this, const MethodInfo *
 
   cachedWidget = TweenHeight__get_cachedWidget(this, method);
   if ( !cachedWidget )
-    sub_1C32E7C(0);
+    sub_1C372B4(0);
   this->fields.from = cachedWidget->fields.mHeight;
 }
 
@@ -187,11 +187,11 @@ UIWidget_o *TweenHeight__get_cachedWidget(TweenHeight_o *this, const MethodInfo 
   int32_t v5; // w2
   const MethodInfo *v6; // x3
 
-  if ( (byte_4C3C23E & 1) == 0 )
+  if ( (byte_4C477B9 & 1) == 0 )
   {
-    sub_1C32C20(&Method_UnityEngine_Component_GetComponent_UIWidget___);
-    sub_1C32C20(&UnityEngine_Object_TypeInfo);
-    byte_4C3C23E = 1;
+    sub_1C37058(&Method_UnityEngine_Component_GetComponent_UIWidget___);
+    sub_1C37058(&UnityEngine_Object_TypeInfo);
+    byte_4C477B9 = 1;
   }
   mWidget = (UnityEngine_Object_o *)this->fields.mWidget;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -200,9 +200,9 @@ UIWidget_o *TweenHeight__get_cachedWidget(TweenHeight_o *this, const MethodInfo 
   {
     Component_object = UnityEngine_Component__GetComponent_object_(
                          (UnityEngine_Component_o *)this,
-                         (const MethodInfo_30D3BC0 *)Method_UnityEngine_Component_GetComponent_UIWidget___);
+                         (const MethodInfo_30DE428 *)Method_UnityEngine_Component_GetComponent_UIWidget___);
     this->fields.mWidget = (struct UIWidget_o *)Component_object;
-    sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.mWidget, (int32_t)Component_object, v5, v6);
+    sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.mWidget, (int32_t)Component_object, v5, v6);
   }
   return this->fields.mWidget;
 }
@@ -214,7 +214,7 @@ int32_t TweenHeight__get_height(TweenHeight_o *this, const MethodInfo *method)
 
   cachedWidget = TweenHeight__get_cachedWidget(this, method);
   if ( !cachedWidget )
-    sub_1C32E7C(0);
+    sub_1C372B4(0);
   return cachedWidget->fields.mHeight;
 }
 
@@ -225,7 +225,7 @@ int32_t TweenHeight__get_value(TweenHeight_o *this, const MethodInfo *method)
 
   cachedWidget = TweenHeight__get_cachedWidget(this, method);
   if ( !cachedWidget )
-    sub_1C32E7C(0);
+    sub_1C372B4(0);
   return cachedWidget->fields.mHeight;
 }
 
@@ -245,6 +245,6 @@ void TweenHeight__set_value(TweenHeight_o *this, int32_t value, const MethodInfo
 
   cachedWidget = TweenHeight__get_cachedWidget(this, *(const MethodInfo **)&value);
   if ( !cachedWidget )
-    sub_1C32E7C(0);
+    sub_1C372B4(0);
   UIWidget__set_height(cachedWidget, value, v5);
 }

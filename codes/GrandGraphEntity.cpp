@@ -1,13 +1,13 @@
 void GrandGraphEntity___ctor(GrandGraphEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_4C37DF0 & 1) == 0 )
+  if ( (byte_4C433E9 & 1) == 0 )
   {
-    sub_1C32C20(&Method_DataEntityBase_int___ctor__);
-    byte_4C37DF0 = 1;
+    sub_1C37058(&Method_DataEntityBase_int___ctor__);
+    byte_4C433E9 = 1;
   }
   DataEntityBase_int____ctor(
     (DataEntityBase_int__o *)this,
-    (const MethodInfo_3394354 *)Method_DataEntityBase_int___ctor__);
+    (const MethodInfo_339EBBC *)Method_DataEntityBase_int___ctor__);
 }
 
 
@@ -24,13 +24,13 @@ bool GrandGraphEntity__CanSelectToGrand(
   bool v10; // cc
 
   v4 = this;
-  if ( (byte_4C37DEF & 1) == 0 )
+  if ( (byte_4C433E8 & 1) == 0 )
   {
-    this = (GrandGraphEntity_o *)sub_1C32C20(&BalanceConfig_TypeInfo);
-    byte_4C37DEF = 1;
+    this = (GrandGraphEntity_o *)sub_1C37058(&BalanceConfig_TypeInfo);
+    byte_4C433E8 = 1;
   }
   if ( !userServantEntity )
-    sub_1C32E7C(this);
+    sub_1C372B4(this);
   if ( userServantEntity->fields.lv < v4->fields.condSvtLv )
     return 0;
   v6 = 0;
@@ -66,10 +66,10 @@ bool GrandGraphEntity__IsOpen(GrandGraphEntity_o *this, const MethodInfo *method
   int32_t condType; // w21
   int64_t condNum; // x19
 
-  if ( (byte_4C37DEE & 1) == 0 )
+  if ( (byte_4C433E7 & 1) == 0 )
   {
-    sub_1C32C20(&CondType_TypeInfo);
-    byte_4C37DEE = 1;
+    sub_1C37058(&CondType_TypeInfo);
+    byte_4C433E7 = 1;
   }
   condType = this->fields.condType;
   condTargetId = this->fields.condTargetId;

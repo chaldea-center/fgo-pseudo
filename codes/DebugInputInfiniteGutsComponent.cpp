@@ -17,13 +17,13 @@ void DebugInputInfiniteGutsComponent__AddBuffGuts(
   const MethodInfo *v10; // x3
   int m_CancellationTokenSource; // w8
 
-  if ( (byte_4C38F91 & 1) == 0 )
+  if ( (byte_4C4458A & 1) == 0 )
   {
-    sub_1C32C20(&BattleBuffData_BuffData_TypeInfo);
-    sub_1C32C20(&int___TypeInfo);
-    byte_4C38F91 = 1;
+    sub_1C37058(&BattleBuffData_BuffData_TypeInfo);
+    sub_1C37058(&int___TypeInfo);
+    byte_4C4458A = 1;
   }
-  v6 = sub_1C32E6C(BattleBuffData_BuffData_TypeInfo);
+  v6 = sub_1C372A4(BattleBuffData_BuffData_TypeInfo);
   BattleBuffData_BuffData___ctor((BattleBuffData_BuffData_o *)v6, 0);
   if ( !paramBuffEntity )
     goto LABEL_14;
@@ -33,22 +33,22 @@ void DebugInputInfiniteGutsComponent__AddBuffGuts(
   *(_QWORD *)(v6 + 20) = -1;
   *(_DWORD *)(v6 + 16) = id;
   *(_DWORD *)(v6 + 28) = 100;
-  addUnSubStateToggleOption = (struct UIToggle_o *)sub_1C32CC8(int___TypeInfo, 2);
+  addUnSubStateToggleOption = (struct UIToggle_o *)sub_1C37100(int___TypeInfo, 2);
   if ( !addUnSubStateToggleOption )
     goto LABEL_14;
   m_CancellationTokenSource = (int)addUnSubStateToggleOption->fields.m_CancellationTokenSource;
   if ( !m_CancellationTokenSource || (addUnSubStateToggleOption->fields.group = 1000, m_CancellationTokenSource == 1) )
-    sub_1C32E84(addUnSubStateToggleOption);
+    sub_1C372BC(addUnSubStateToggleOption);
   *(&addUnSubStateToggleOption->fields.group + 1) = 1;
   *(_QWORD *)(v6 + 40) = addUnSubStateToggleOption;
-  sub_1C32BC4((CGThumbnailListItem_o *)(v6 + 40), (int32_t)addUnSubStateToggleOption, v9, v10);
+  sub_1C36FFC((CGThumbnailListItem_o *)(v6 + 40), (int32_t)addUnSubStateToggleOption, v9, v10);
   *(_DWORD *)(v6 + 52) = 0;
   *(_DWORD *)(v6 + 56) = 0;
   BattleBuffData_BuffData__setShowState((BattleBuffData_BuffData_o *)v6, 1, 0);
   addUnSubStateToggleOption = this->fields.addUnSubStateToggleOption;
   if ( !addUnSubStateToggleOption )
 LABEL_14:
-    sub_1C32E7C(addUnSubStateToggleOption);
+    sub_1C372B4(addUnSubStateToggleOption);
   if ( UIToggle__get_value(addUnSubStateToggleOption, 0) )
     BattleBuffData_BuffData__onState((BattleBuffData_BuffData_o *)v6, 0x80000, 0);
   if ( BuffEntity__getAppearanceId(paramBuffEntity, 0) >= 1 )
@@ -68,7 +68,7 @@ void DebugInputInfiniteGutsComponent__Cancel(DebugInputInfiniteGutsComponent_o *
                                                       (UnityEngine_Component_o *)this,
                                                       0)) == 0) )
   {
-    sub_1C32E7C(debugMenuTran);
+    sub_1C372B4(debugMenuTran);
   }
   UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)debugMenuTran, 0, 0);
 }
@@ -84,26 +84,26 @@ bool DebugInputInfiniteGutsComponent__CheckHaveInfiniteGuts(
   System_Object_array *BuffList; // x20
   System_Func_object__bool__o *v8; // x21
 
-  if ( (byte_4C38F90 & 1) == 0 )
+  if ( (byte_4C44589 & 1) == 0 )
   {
-    sub_1C32C20(&Method_BasicHelper_Find_BattleBuffData_BuffData___);
-    sub_1C32C20(&Method_DebugInputInfiniteGutsComponent__CheckHaveInfiniteGuts_b__8_0__);
-    sub_1C32C20(&System_Func_BattleBuffData_BuffData__bool__TypeInfo);
-    sub_1C32C20(&BuffList_TYPE___TypeInfo);
-    byte_4C38F90 = 1;
+    sub_1C37058(&Method_BasicHelper_Find_BattleBuffData_BuffData___);
+    sub_1C37058(&Method_DebugInputInfiniteGutsComponent__CheckHaveInfiniteGuts_b__8_0__);
+    sub_1C37058(&System_Func_BattleBuffData_BuffData__bool__TypeInfo);
+    sub_1C37058(&BuffList_TYPE___TypeInfo);
+    byte_4C44589 = 1;
   }
-  buffData = (struct BattleBuffData_o *)sub_1C32CC8(BuffList_TYPE___TypeInfo, 1);
+  buffData = (struct BattleBuffData_o *)sub_1C37100(BuffList_TYPE___TypeInfo, 1);
   if ( !buffData )
     goto LABEL_8;
   v6 = (BuffList_TYPE_array *)buffData;
   if ( !buffData->fields.resumptionHpFromLossMaxHp )
-    sub_1C32E84(buffData);
+    sub_1C372BC(buffData);
   LODWORD(buffData->fields.passiveList) = 37;
   if ( !svtData || (buffData = svtData->fields.buffData) == 0 )
 LABEL_8:
-    sub_1C32E7C(buffData);
+    sub_1C372B4(buffData);
   BuffList = (System_Object_array *)BattleBuffData__GetBuffList(buffData, v6, 0, 1, 0);
-  v8 = (System_Func_object__bool__o *)sub_1C32E6C(System_Func_BattleBuffData_BuffData__bool__TypeInfo);
+  v8 = (System_Func_object__bool__o *)sub_1C372A4(System_Func_BattleBuffData_BuffData__bool__TypeInfo);
   System_Func_object__bool____ctor(
     v8,
     (Il2CppObject *)this,
@@ -112,7 +112,7 @@ LABEL_8:
   return BasicHelper__Find_object_(
            BuffList,
            (System_Func_T__bool__o *)v8,
-           (const MethodInfo_30C735C *)Method_BasicHelper_Find_BattleBuffData_BuffData___) != 0;
+           (const MethodInfo_30D1BC4 *)Method_BasicHelper_Find_BattleBuffData_BuffData___) != 0;
 }
 
 
@@ -127,7 +127,7 @@ bool DebugInputInfiniteGutsComponent__MatchUnSubState(
   if ( !addUnSubStateToggleOption
     || (addUnSubStateToggleOption = (UIToggle_o *)UIToggle__get_value(addUnSubStateToggleOption, 0), !added) )
   {
-    sub_1C32E7C(addUnSubStateToggleOption);
+    sub_1C372B4(addUnSubStateToggleOption);
   }
   return ((unsigned __int8)addUnSubStateToggleOption ^ ~BattleBuffData_BuffData__checkState(added, 0x80000, 0)) & 1;
 }
@@ -168,10 +168,10 @@ void DebugInputInfiniteGutsComponent__Open(
     ++v11;
   while ( v11 < v10 );
   this->fields.data = inputData;
-  sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.data, (int32_t)inputData, (int32_t)inputDebugMenuTran, method);
+  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.data, (int32_t)inputData, (int32_t)inputDebugMenuTran, method);
   v7->fields.debugMenuTran = inputDebugMenuTran;
   p_debugMenuTran = (DebugInputInfiniteGutsComponent_o **)&v7->fields.debugMenuTran;
-  sub_1C32BC4((CGThumbnailListItem_o *)&v7->fields.debugMenuTran, (int32_t)inputDebugMenuTran, v13, v14);
+  sub_1C36FFC((CGThumbnailListItem_o *)&v7->fields.debugMenuTran, (int32_t)inputDebugMenuTran, v13, v14);
   this = (DebugInputInfiniteGutsComponent_o *)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)v7, 0);
   if ( !this
     || (UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)this, 1, 0), (this = *p_debugMenuTran) == 0)
@@ -180,7 +180,7 @@ void DebugInputInfiniteGutsComponent__Open(
                                                       0)) == 0 )
   {
 LABEL_11:
-    sub_1C32E7C(this);
+    sub_1C372B4(this);
   }
   UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)this, 0, 0);
 }
@@ -198,7 +198,7 @@ bool DebugInputInfiniteGutsComponent___CheckHaveInfiniteGuts_b__8_0(
         const MethodInfo *method)
 {
   if ( !n )
-    sub_1C32E7C(this);
+    sub_1C372B4(this);
   return n->fields.turn == -1
       && n->fields.count == -1
       && n->fields.param == 100

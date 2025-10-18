@@ -31,10 +31,10 @@ void RoadmapBoardListViewItemDraw__UpdateBoard(
   UnityEngine_Transform_o *transform; // x0
   struct UnityEngine_GameObject_o *Object; // x0
 
-  if ( (byte_4C31A3F & 1) == 0 )
+  if ( (byte_4C3CF8F & 1) == 0 )
   {
-    sub_1C32C20(&UnityEngine_Object_TypeInfo);
-    byte_4C31A3F = 1;
+    sub_1C37058(&UnityEngine_Object_TypeInfo);
+    byte_4C3CF8F = 1;
   }
   boardSprite = (UnityEngine_Component_o *)this->fields.boardSprite;
   if ( !boardSprite )
@@ -60,9 +60,9 @@ void RoadmapBoardListViewItemDraw__UpdateBoard(
     v9 = (UnityEngine_Object_o *)*p_boardPrefab;
     if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-    UnityEngine_Object__Destroy_71223640(v9, 0);
+    UnityEngine_Object__Destroy_71266752(v9, 0);
     *p_boardPrefab = 0;
-    sub_1C32BC4(&this->fields.boardPrefab, 0);
+    sub_1C36FFC(&this->fields.boardPrefab, 0);
   }
   BoardPrefab_k__BackingField = (UnityEngine_Object_o *)item->fields._BoardPrefab_k__BackingField;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -73,7 +73,7 @@ void RoadmapBoardListViewItemDraw__UpdateBoard(
     transform = UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0);
     Object = BaseMonoBehaviour__createObject((BaseMonoBehaviour_o *)this, v11, transform, 0, 0);
     this->fields.boardPrefab = Object;
-    sub_1C32BC4(&this->fields.boardPrefab, Object);
+    sub_1C36FFC(&this->fields.boardPrefab, Object);
     boardSprite = (UnityEngine_Component_o *)this->fields.boardPrefab;
     if ( !boardSprite )
       goto LABEL_21;
@@ -85,7 +85,7 @@ void RoadmapBoardListViewItemDraw__UpdateBoard(
         (boardSprite = (UnityEngine_Component_o *)this->fields.boardSprite) == 0) )
   {
 LABEL_21:
-    sub_1C32E7C(boardSprite);
+    sub_1C372B4(boardSprite);
   }
   UISprite__set_spriteName((UISprite_o *)boardSprite, item->fields._SpriteName_k__BackingField, 0);
 }

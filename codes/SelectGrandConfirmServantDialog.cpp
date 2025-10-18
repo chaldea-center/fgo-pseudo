@@ -1,9 +1,9 @@
 void SelectGrandConfirmServantDialog___ctor(SelectGrandConfirmServantDialog_o *this, const MethodInfo *method)
 {
-  if ( (byte_4C3281A & 1) == 0 )
+  if ( (byte_4C3DE04 & 1) == 0 )
   {
-    sub_1C32C20(&BaseDialog_TypeInfo);
-    byte_4C3281A = 1;
+    sub_1C37058(&BaseDialog_TypeInfo);
+    byte_4C3DE04 = 1;
   }
   if ( !BaseDialog_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(BaseDialog_TypeInfo);
@@ -23,17 +23,17 @@ void SelectGrandConfirmServantDialog__OnClickCancel(SelectGrandConfirmServantDia
   System_Reflection_MethodBase_o *v4; // x0
   struct SelectGrandConfirmServantDialog_ClickDelegate_o *clickFunc; // x8
 
-  if ( (byte_4C32819 & 1) == 0 )
+  if ( (byte_4C3DE03 & 1) == 0 )
   {
-    sub_1C32C20(&Method_SelectGrandConfirmServantDialog_OnClickCancel__);
-    byte_4C32819 = 1;
+    sub_1C37058(&Method_SelectGrandConfirmServantDialog_OnClickCancel__);
+    byte_4C3DE03 = 1;
   }
   if ( this->fields.baseState == 2 )
   {
     v3 = Method_SelectGrandConfirmServantDialog_OnClickCancel__;
     if ( (*((_BYTE *)Method_SelectGrandConfirmServantDialog_OnClickCancel__ + 83) & 2) != 0 )
-      v3 = (_QWORD *)sub_1C32C38(Method_SelectGrandConfirmServantDialog_OnClickCancel__);
-    v4 = (System_Reflection_MethodBase_o *)sub_1C32C04(v3, v3[4]);
+      v3 = (_QWORD *)sub_1C37070(Method_SelectGrandConfirmServantDialog_OnClickCancel__);
+    v4 = (System_Reflection_MethodBase_o *)sub_1C3703C(v3, v3[4]);
     OverwriteAssetSoundName__PlaySystemSe(v4, 1, 0, 0);
     clickFunc = this->fields.clickFunc;
     if ( clickFunc )
@@ -51,17 +51,17 @@ void SelectGrandConfirmServantDialog__OnClickDecide(SelectGrandConfirmServantDia
   System_Reflection_MethodBase_o *v4; // x0
   struct SelectGrandConfirmServantDialog_ClickDelegate_o *clickFunc; // x8
 
-  if ( (byte_4C32818 & 1) == 0 )
+  if ( (byte_4C3DE02 & 1) == 0 )
   {
-    sub_1C32C20(&Method_SelectGrandConfirmServantDialog_OnClickDecide__);
-    byte_4C32818 = 1;
+    sub_1C37058(&Method_SelectGrandConfirmServantDialog_OnClickDecide__);
+    byte_4C3DE02 = 1;
   }
   if ( this->fields.baseState == 2 )
   {
     v3 = Method_SelectGrandConfirmServantDialog_OnClickDecide__;
     if ( (*((_BYTE *)Method_SelectGrandConfirmServantDialog_OnClickDecide__ + 83) & 2) != 0 )
-      v3 = (_QWORD *)sub_1C32C38(Method_SelectGrandConfirmServantDialog_OnClickDecide__);
-    v4 = (System_Reflection_MethodBase_o *)sub_1C32C04(v3, v3[4]);
+      v3 = (_QWORD *)sub_1C37070(Method_SelectGrandConfirmServantDialog_OnClickDecide__);
+    v4 = (System_Reflection_MethodBase_o *)sub_1C3703C(v3, v3[4]);
     OverwriteAssetSoundName__PlaySystemSe(v4, 8, 0, 0);
     clickFunc = this->fields.clickFunc;
     if ( clickFunc )
@@ -77,13 +77,13 @@ void SelectGrandConfirmServantDialog__OnEnable(SelectGrandConfirmServantDialog_o
 {
   UnityEngine_Transform_o *transform; // x0
 
-  if ( (byte_4C32816 & 1) == 0 )
+  if ( (byte_4C3DE00 & 1) == 0 )
   {
-    sub_1C32C20(&StringLiteral_15636/*"Window/Buttons/CancelButton"*/);
-    byte_4C32816 = 1;
+    sub_1C37058(&StringLiteral_15638/*"Window/Buttons/CancelButton"*/);
+    byte_4C3DE00 = 1;
   }
   transform = UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0);
-  AndroidBackKeyManager__AddBackBtn_44857896(transform, (System_String_o *)StringLiteral_15636/*"Window/Buttons/CancelButton"*/, 0);
+  AndroidBackKeyManager__AddBackBtn_44960000(transform, (System_String_o *)StringLiteral_15638/*"Window/Buttons/CancelButton"*/, 0);
 }
 
 
@@ -109,26 +109,26 @@ void SelectGrandConfirmServantDialog__OpenConfirm(
   UILabel_o *cancelButtonLabel; // x21
   UILabel_o *decideButtonLabel; // x21
 
-  if ( (byte_4C32817 & 1) == 0 )
+  if ( (byte_4C3DE01 & 1) == 0 )
   {
-    sub_1C32C20(&Method_DataManager_GetMaster_GrandGraphDetailMaster___);
-    sub_1C32C20(&Method_DataManager_GetMaster_ItemMaster___);
-    sub_1C32C20(&Method_DataManager_GetMaster_UserItemMaster___);
-    sub_1C32C20(&DataManager_TypeInfo);
-    sub_1C32C20(&Method_DataMasterBase_ItemMaster__ItemEntity__int__GetEntity__);
-    sub_1C32C20(&LocalizationManager_TypeInfo);
-    sub_1C32C20(&NetworkManager_TypeInfo);
-    sub_1C32C20(&StringLiteral_11530/*"SELECT_GRAND_CONFIRM_DIALOG_CANCEL_BUTTON_TEXT"*/);
-    sub_1C32C20(&StringLiteral_11531/*"SELECT_GRAND_CONFIRM_DIALOG_DECIDE_BUTTON_TEXT"*/);
-    sub_1C32C20(&StringLiteral_11532/*"SELECT_GRAND_CONFIRM_DIALOG_MESSAGE"*/);
-    sub_1C32C20(&StringLiteral_11533/*"SELECT_GRAND_CONFIRM_DIALOG_TITLE"*/);
-    byte_4C32817 = 1;
+    sub_1C37058(&Method_DataManager_GetMaster_GrandGraphDetailMaster___);
+    sub_1C37058(&Method_DataManager_GetMaster_ItemMaster___);
+    sub_1C37058(&Method_DataManager_GetMaster_UserItemMaster___);
+    sub_1C37058(&DataManager_TypeInfo);
+    sub_1C37058(&Method_DataMasterBase_ItemMaster__ItemEntity__int__GetEntity__);
+    sub_1C37058(&LocalizationManager_TypeInfo);
+    sub_1C37058(&NetworkManager_TypeInfo);
+    sub_1C37058(&StringLiteral_11531/*"SELECT_GRAND_CONFIRM_DIALOG_CANCEL_BUTTON_TEXT"*/);
+    sub_1C37058(&StringLiteral_11532/*"SELECT_GRAND_CONFIRM_DIALOG_DECIDE_BUTTON_TEXT"*/);
+    sub_1C37058(&StringLiteral_11533/*"SELECT_GRAND_CONFIRM_DIALOG_MESSAGE"*/);
+    sub_1C37058(&StringLiteral_11534/*"SELECT_GRAND_CONFIRM_DIALOG_TITLE"*/);
+    byte_4C3DE01 = 1;
   }
   this->fields.clickFunc = callback;
-  sub_1C32BC4(&this->fields.clickFunc, callback);
+  sub_1C36FFC(&this->fields.clickFunc, callback);
   if ( !DataManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-  Master_object = (GrandGraphDetailMaster_o *)DataManager__GetMaster_object_((const MethodInfo_30DD39C *)Method_DataManager_GetMaster_GrandGraphDetailMaster___);
+  Master_object = (GrandGraphDetailMaster_o *)DataManager__GetMaster_object_((const MethodInfo_30E7C04 *)Method_DataManager_GetMaster_GrandGraphDetailMaster___);
   if ( !grandGraphEntity )
     goto LABEL_29;
   if ( !userServantEntity )
@@ -143,16 +143,16 @@ void SelectGrandConfirmServantDialog__OpenConfirm(
   if ( !removeItemIds )
     goto LABEL_29;
   if ( !LODWORD(removeItemIds->max_length) )
-    sub_1C32E84(Master_object);
+    sub_1C372BC(Master_object);
   v13 = Master_object;
   v14 = removeItemIds->m_Items[0];
-  v15 = DataManager__GetMaster_object_((const MethodInfo_30DD39C *)Method_DataManager_GetMaster_UserItemMaster___);
+  v15 = DataManager__GetMaster_object_((const MethodInfo_30E7C04 *)Method_DataManager_GetMaster_UserItemMaster___);
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
-  if ( !byte_4C31812 )
+  if ( !byte_4C3CD62 )
   {
-    sub_1C32C20(&NetworkManager_TypeInfo);
-    byte_4C31812 = 1;
+    sub_1C37058(&NetworkManager_TypeInfo);
+    byte_4C3CD62 = 1;
   }
   Master_object = (GrandGraphDetailMaster_o *)NetworkManager_TypeInfo;
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
@@ -167,29 +167,29 @@ void SelectGrandConfirmServantDialog__OpenConfirm(
                        (int64_t)Master_object[2].fields.list[1].monitor,
                        v14,
                        0);
-  Master_object = (GrandGraphDetailMaster_o *)DataManager__GetMaster_object_((const MethodInfo_30DD39C *)Method_DataManager_GetMaster_ItemMaster___);
+  Master_object = (GrandGraphDetailMaster_o *)DataManager__GetMaster_object_((const MethodInfo_30E7C04 *)Method_DataManager_GetMaster_ItemMaster___);
   if ( !EntityDefinitely || !Master_object )
     goto LABEL_29;
   Entity = DataMasterBase_object__object__int___GetEntity(
              (DataMasterBase_TMaster__TEntity__PKType__o *)Master_object,
              EntityDefinitely->fields.itemId,
-             (const MethodInfo_3396838 *)Method_DataMasterBase_ItemMaster__ItemEntity__int__GetEntity__);
+             (const MethodInfo_33A10A0 *)Method_DataMasterBase_ItemMaster__ItemEntity__int__GetEntity__);
   BasicHelper__SetActiveSafely((UnityEngine_Component_o *)this->fields.titleLabel, 1, 0);
   titleLabel = this->fields.titleLabel;
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-  Master_object = (GrandGraphDetailMaster_o *)LocalizationManager__Get((System_String_o *)StringLiteral_11533/*"SELECT_GRAND_CONFIRM_DIALOG_TITLE"*/, 0);
+  Master_object = (GrandGraphDetailMaster_o *)LocalizationManager__Get((System_String_o *)StringLiteral_11534/*"SELECT_GRAND_CONFIRM_DIALOG_TITLE"*/, 0);
   if ( !titleLabel )
     goto LABEL_29;
   UILabel__set_text(titleLabel, (System_String_o *)Master_object, 0);
   messageLabel = this->fields.messageLabel;
-  v20 = LocalizationManager__Get((System_String_o *)StringLiteral_11532/*"SELECT_GRAND_CONFIRM_DIALOG_MESSAGE"*/, 0);
+  v20 = LocalizationManager__Get((System_String_o *)StringLiteral_11533/*"SELECT_GRAND_CONFIRM_DIALOG_MESSAGE"*/, 0);
   Master_object = (GrandGraphDetailMaster_o *)UserServantEntity__GetSvtName(userServantEntity, 0);
   if ( !v13 )
     goto LABEL_29;
   if ( !Entity )
     goto LABEL_29;
-  Master_object = (GrandGraphDetailMaster_o *)System_String__Format_63559904(
+  Master_object = (GrandGraphDetailMaster_o *)System_String__Format_63603016(
                                                 v20,
                                                 (Il2CppObject *)Master_object,
                                                 (Il2CppObject *)v13[1].klass,
@@ -199,17 +199,17 @@ void SelectGrandConfirmServantDialog__OpenConfirm(
     goto LABEL_29;
   UILabel__set_text(messageLabel, (System_String_o *)Master_object, 0);
   cancelButtonLabel = this->fields.cancelButtonLabel;
-  Master_object = (GrandGraphDetailMaster_o *)LocalizationManager__Get((System_String_o *)StringLiteral_11530/*"SELECT_GRAND_CONFIRM_DIALOG_CANCEL_BUTTON_TEXT"*/, 0);
+  Master_object = (GrandGraphDetailMaster_o *)LocalizationManager__Get((System_String_o *)StringLiteral_11531/*"SELECT_GRAND_CONFIRM_DIALOG_CANCEL_BUTTON_TEXT"*/, 0);
   if ( !cancelButtonLabel
     || (UILabel__set_text(cancelButtonLabel, (System_String_o *)Master_object, 0),
         decideButtonLabel = this->fields.decideButtonLabel,
-        Master_object = (GrandGraphDetailMaster_o *)LocalizationManager__Get((System_String_o *)StringLiteral_11531/*"SELECT_GRAND_CONFIRM_DIALOG_DECIDE_BUTTON_TEXT"*/, 0),
+        Master_object = (GrandGraphDetailMaster_o *)LocalizationManager__Get((System_String_o *)StringLiteral_11532/*"SELECT_GRAND_CONFIRM_DIALOG_DECIDE_BUTTON_TEXT"*/, 0),
         !decideButtonLabel)
     || (UILabel__set_text(decideButtonLabel, (System_String_o *)Master_object, 0),
         (Master_object = (GrandGraphDetailMaster_o *)this->fields.servantFaceIcon) == 0) )
   {
 LABEL_29:
-    sub_1C32E7C(Master_object);
+    sub_1C372B4(Master_object);
   }
   GrandServantListServantFaceIcon__Setup((GrandServantListServantFaceIcon_o *)Master_object, userServantEntity, 0);
   BaseDialog__SafeOpen((BaseDialog_o *)this, 0, 0, 0);
@@ -231,15 +231,15 @@ void SelectGrandConfirmServantDialog_ClickDelegate___ctor(
   this->fields.method = method;
   this->fields.method_ptr = v4;
   this->fields.m_target = object;
-  sub_1C32BC4(&this->fields.m_target, object);
+  sub_1C36FFC(&this->fields.m_target, object);
   v8 = *(unsigned __int8 *)(method + 82);
   this->fields.method_code = (intptr_t)this;
-  if ( (sub_1C32CE0(method) & 1) == 0 )
+  if ( (sub_1C37118(method) & 1) == 0 )
   {
     if ( !object )
     {
-      v10 = sub_1C32E98(0, "Delegate to an instance method cannot have null 'this'.");
-      sub_1C32D48(v10, 0);
+      v10 = sub_1C372D0(0, "Delegate to an instance method cannot have null 'this'.");
+      sub_1C37180(v10, 0);
     }
     goto LABEL_5;
   }
@@ -251,9 +251,9 @@ LABEL_5:
     this->fields.method_code = (intptr_t)m_target;
     goto LABEL_6;
   }
-  this->fields.invoke_impl = (intptr_t)sub_1A6FAD0;
+  this->fields.invoke_impl = (intptr_t)sub_1A73E00;
 LABEL_6:
-  this->fields.extra_arg = (intptr_t)sub_1A6FA88;
+  this->fields.extra_arg = (intptr_t)sub_1A73DB8;
 }
 
 
@@ -271,14 +271,14 @@ System_IAsyncResult_o *SelectGrandConfirmServantDialog_ClickDelegate__BeginInvok
   bool v13[4]; // [xsp+1Ch] [xbp-34h] BYREF
 
   v13[0] = isDecide;
-  if ( (byte_4C3281B & 1) == 0 )
+  if ( (byte_4C3DE05 & 1) == 0 )
   {
-    sub_1C32C20(&bool_TypeInfo);
-    byte_4C3281B = 1;
+    sub_1C37058(&bool_TypeInfo);
+    byte_4C3DE05 = 1;
   }
   v12[1] = 0;
   v12[0] = j_il2cpp_value_box_0(bool_TypeInfo, v13, callback, object, method, v5, v6, v7);
-  return (System_IAsyncResult_o *)sub_1C32BD4(this, v12, callback, object);
+  return (System_IAsyncResult_o *)sub_1C3700C(this, v12, callback, object);
 }
 
 
@@ -287,7 +287,7 @@ void SelectGrandConfirmServantDialog_ClickDelegate__EndInvoke(
         System_IAsyncResult_o *result,
         const MethodInfo *method)
 {
-  sub_1C32BD8(result, 0, method);
+  sub_1C37010(result, 0, method);
 }
 
 

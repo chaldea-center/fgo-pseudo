@@ -18,39 +18,39 @@ void ServantClassCompatibilityIconComponent___cctor(const MethodInfo *method)
   int32_t v16; // w2
   const MethodInfo *v17; // x3
 
-  if ( (byte_4C36E53 & 1) == 0 )
+  if ( (byte_4C42443 & 1) == 0 )
   {
-    sub_1C32C20(&ServantClassCompatibilityIconComponent_TypeInfo);
-    sub_1C32C20(&float___TypeInfo);
-    sub_1C32C20(&Field__PrivateImplementationDetails__657AC32C0816EB8C917333556CB7B41311E802F8A338DA957586A1EFBD925003);
-    sub_1C32C20(&Field__PrivateImplementationDetails__8FD8636127BEF610717EDA6C87275DE8FABC7EAFB50E06E32438371EA366A436);
-    sub_1C32C20(&Field__PrivateImplementationDetails__C08A644CA14B47C51D4206B9CD5FD8F3A046D90EF77DC2C18058397DC1F57528);
-    byte_4C36E53 = 1;
+    sub_1C37058(&ServantClassCompatibilityIconComponent_TypeInfo);
+    sub_1C37058(&float___TypeInfo);
+    sub_1C37058(&Field__PrivateImplementationDetails__657AC32C0816EB8C917333556CB7B41311E802F8A338DA957586A1EFBD925003);
+    sub_1C37058(&Field__PrivateImplementationDetails__8FD8636127BEF610717EDA6C87275DE8FABC7EAFB50E06E32438371EA366A436);
+    sub_1C37058(&Field__PrivateImplementationDetails__C08A644CA14B47C51D4206B9CD5FD8F3A046D90EF77DC2C18058397DC1F57528);
+    byte_4C42443 = 1;
   }
-  v1 = (System_Array_o *)sub_1C32CC8(float___TypeInfo, 5);
+  v1 = (System_Array_o *)sub_1C37100(float___TypeInfo, 5);
   v2.fields.value = Field__PrivateImplementationDetails__657AC32C0816EB8C917333556CB7B41311E802F8A338DA957586A1EFBD925003;
   v3 = (struct System_Single_array *)v1;
-  System_Runtime_CompilerServices_RuntimeHelpers__InitializeArray_64219320(v1, v2, 0);
+  System_Runtime_CompilerServices_RuntimeHelpers__InitializeArray_64262432(v1, v2, 0);
   ServantClassCompatibilityIconComponent_TypeInfo->static_fields->POSITION_X_UP = v3;
-  sub_1C32BC4(
+  sub_1C36FFC(
     (CGThumbnailListItem_o *)ServantClassCompatibilityIconComponent_TypeInfo->static_fields,
     (int32_t)v3,
     v4,
     v5);
-  v6 = (System_Array_o *)sub_1C32CC8(float___TypeInfo, 5);
+  v6 = (System_Array_o *)sub_1C37100(float___TypeInfo, 5);
   v7.fields.value = Field__PrivateImplementationDetails__8FD8636127BEF610717EDA6C87275DE8FABC7EAFB50E06E32438371EA366A436;
   v8 = v6;
-  System_Runtime_CompilerServices_RuntimeHelpers__InitializeArray_64219320(v6, v7, 0);
+  System_Runtime_CompilerServices_RuntimeHelpers__InitializeArray_64262432(v6, v7, 0);
   static_fields = ServantClassCompatibilityIconComponent_TypeInfo->static_fields;
   static_fields->POSITION_X_DOWN = (struct System_Single_array *)v8;
-  sub_1C32BC4((CGThumbnailListItem_o *)&static_fields->POSITION_X_DOWN, (int32_t)v8, v10, v11);
-  v12 = (System_Array_o *)sub_1C32CC8(float___TypeInfo, 5);
+  sub_1C36FFC((CGThumbnailListItem_o *)&static_fields->POSITION_X_DOWN, (int32_t)v8, v10, v11);
+  v12 = (System_Array_o *)sub_1C37100(float___TypeInfo, 5);
   v13.fields.value = Field__PrivateImplementationDetails__C08A644CA14B47C51D4206B9CD5FD8F3A046D90EF77DC2C18058397DC1F57528;
   v14 = v12;
-  System_Runtime_CompilerServices_RuntimeHelpers__InitializeArray_64219320(v12, v13, 0);
+  System_Runtime_CompilerServices_RuntimeHelpers__InitializeArray_64262432(v12, v13, 0);
   v15 = ServantClassCompatibilityIconComponent_TypeInfo->static_fields;
   v15->POSITION_X_CENTER = (struct System_Single_array *)v14;
-  sub_1C32BC4((CGThumbnailListItem_o *)&v15->POSITION_X_CENTER, (int32_t)v14, v16, v17);
+  sub_1C36FFC((CGThumbnailListItem_o *)&v15->POSITION_X_CENTER, (int32_t)v14, v16, v17);
 }
 
 
@@ -70,10 +70,10 @@ void ServantClassCompatibilityIconComponent__Clear(
   UISprite_o *gameObject; // x0
   UnityEngine_Object_o *downIconSprite; // x20
 
-  if ( (byte_4C36E4F & 1) == 0 )
+  if ( (byte_4C4243F & 1) == 0 )
   {
-    sub_1C32C20(&UnityEngine_Object_TypeInfo);
-    byte_4C36E4F = 1;
+    sub_1C37058(&UnityEngine_Object_TypeInfo);
+    byte_4C4243F = 1;
   }
   upIconSprite = (UnityEngine_Object_o *)this->fields.upIconSprite;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -113,7 +113,7 @@ void ServantClassCompatibilityIconComponent__Clear(
       }
     }
 LABEL_18:
-    sub_1C32E7C(gameObject);
+    sub_1C372B4(gameObject);
   }
 }
 
@@ -155,13 +155,13 @@ void ServantClassCompatibilityIconComponent__SetIcon(
   ClassRelationEntity_o *v35; // [xsp+0h] [xbp-70h] BYREF
   ClassRelationEntity_o *entity; // [xsp+8h] [xbp-68h] BYREF
 
-  if ( (byte_4C36E50 & 1) == 0 )
+  if ( (byte_4C42440 & 1) == 0 )
   {
-    sub_1C32C20(&Method_DataManager_GetMasterData_ClassRelationMaster___);
-    sub_1C32C20(&UnityEngine_Object_TypeInfo);
-    sub_1C32C20(&ServantClassCompatibilityIconComponent_TypeInfo);
-    sub_1C32C20(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-    byte_4C36E50 = 1;
+    sub_1C37058(&Method_DataManager_GetMasterData_ClassRelationMaster___);
+    sub_1C37058(&UnityEngine_Object_TypeInfo);
+    sub_1C37058(&ServantClassCompatibilityIconComponent_TypeInfo);
+    sub_1C37058(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    byte_4C42440 = 1;
   }
   v35 = 0;
   entity = 0;
@@ -182,12 +182,12 @@ LABEL_7:
     ServantClassCompatibilityIconComponent__Clear(this, *(const MethodInfo **)&classId);
     return;
   }
-  Instance = (DataManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39E2904 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = (DataManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39ED16C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance )
     goto LABEL_62;
   Instance = (DataManager_o *)DataManager__GetMasterData_object_(
                                 Instance,
-                                (const MethodInfo_30DD3F0 *)Method_DataManager_GetMasterData_ClassRelationMaster___);
+                                (const MethodInfo_30E7C58 *)Method_DataManager_GetMasterData_ClassRelationMaster___);
   max_length = targetClassIds->max_length;
   if ( (int)max_length >= 1 )
   {
@@ -273,11 +273,11 @@ LABEL_36:
                   goto LABEL_58;
                 }
 LABEL_63:
-                sub_1C32E84(Instance);
+                sub_1C372BC(Instance);
               }
             }
 LABEL_62:
-            sub_1C32E7C(Instance);
+            sub_1C372B4(Instance);
           }
           if ( !v22 )
             goto LABEL_62;
@@ -313,12 +313,12 @@ LABEL_58:
             if ( !Instance )
               goto LABEL_62;
             gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)Instance, 0);
-            GameObjectExtensions__SetLocalScale_36038768(gameObject, 0.8, 0);
+            GameObjectExtensions__SetLocalScale_36134400(gameObject, 0.8, 0);
             Instance = (DataManager_o *)this->fields.downIconSprite;
             if ( !Instance )
               goto LABEL_62;
             v34 = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)Instance, 0);
-            GameObjectExtensions__SetLocalScale_36038768(v34, 0.8, 0);
+            GameObjectExtensions__SetLocalScale_36134400(v34, 0.8, 0);
           }
         }
         else if ( v17 )
@@ -368,13 +368,13 @@ void ServantClassCompatibilityIconComponent__SetIconImage(
   int32_t upIconSprite_high; // w1
   System_String_o **v12; // x8
 
-  if ( (byte_4C36E51 & 1) == 0 )
+  if ( (byte_4C42441 & 1) == 0 )
   {
-    sub_1C32C20(&StringLiteral_20296/*"img_arrow_2"*/);
-    sub_1C32C20(&StringLiteral_20298/*"img_arrow_4"*/);
-    sub_1C32C20(&StringLiteral_20297/*"img_arrow_3"*/);
-    this = (ServantClassCompatibilityIconComponent_o *)sub_1C32C20(&StringLiteral_20295/*"img_arrow_1"*/);
-    byte_4C36E51 = 1;
+    sub_1C37058(&StringLiteral_20299/*"img_arrow_2"*/);
+    sub_1C37058(&StringLiteral_20301/*"img_arrow_4"*/);
+    sub_1C37058(&StringLiteral_20300/*"img_arrow_3"*/);
+    this = (ServantClassCompatibilityIconComponent_o *)sub_1C37058(&StringLiteral_20298/*"img_arrow_1"*/);
+    byte_4C42441 = 1;
   }
   if ( !icon )
     goto LABEL_18;
@@ -386,9 +386,9 @@ void ServantClassCompatibilityIconComponent__SetIconImage(
   UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)this, 1, 0);
   if ( iconId != 1 )
   {
-    v12 = (System_String_o **)&StringLiteral_20296/*"img_arrow_2"*/;
+    v12 = (System_String_o **)&StringLiteral_20299/*"img_arrow_2"*/;
     if ( !advantage )
-      v12 = (System_String_o **)&StringLiteral_20298/*"img_arrow_4"*/;
+      v12 = (System_String_o **)&StringLiteral_20301/*"img_arrow_4"*/;
     UISprite__set_spriteName(icon, *v12, 0);
     if ( dispMode == 4 )
     {
@@ -398,9 +398,9 @@ void ServantClassCompatibilityIconComponent__SetIconImage(
     }
     goto LABEL_14;
   }
-  v10 = (System_String_o **)&StringLiteral_20295/*"img_arrow_1"*/;
+  v10 = (System_String_o **)&StringLiteral_20298/*"img_arrow_1"*/;
   if ( !advantage )
-    v10 = (System_String_o **)&StringLiteral_20297/*"img_arrow_3"*/;
+    v10 = (System_String_o **)&StringLiteral_20300/*"img_arrow_3"*/;
   UISprite__set_spriteName(icon, *v10, 0);
   if ( dispMode != 4 )
   {
@@ -417,7 +417,7 @@ LABEL_14:
       }
     }
 LABEL_18:
-    sub_1C32E7C(this);
+    sub_1C372B4(this);
   }
   UIWidget__set_width((UIWidget_o *)icon, 22, 0);
   upIconSprite_high = 32;
@@ -435,11 +435,11 @@ void ServantClassCompatibilityIconComponent__SetIconPosition(
   Il2CppObject *Component_object; // x20
   UnityEngine_GameObject_o *gameObject; // x0
 
-  if ( (byte_4C36E52 & 1) == 0 )
+  if ( (byte_4C42442 & 1) == 0 )
   {
-    sub_1C32C20(&Method_UnityEngine_GameObject_GetComponent_TweenPosition___);
-    this = (ServantClassCompatibilityIconComponent_o *)sub_1C32C20(&UnityEngine_Object_TypeInfo);
-    byte_4C36E52 = 1;
+    sub_1C37058(&Method_UnityEngine_GameObject_GetComponent_TweenPosition___);
+    this = (ServantClassCompatibilityIconComponent_o *)sub_1C37058(&UnityEngine_Object_TypeInfo);
+    byte_4C42442 = 1;
   }
   if ( !icon )
     goto LABEL_11;
@@ -450,7 +450,7 @@ void ServantClassCompatibilityIconComponent__SetIconPosition(
     goto LABEL_11;
   Component_object = UnityEngine_GameObject__GetComponent_object_(
                        (UnityEngine_GameObject_o *)this,
-                       (const MethodInfo_3134970 *)Method_UnityEngine_GameObject_GetComponent_TweenPosition___);
+                       (const MethodInfo_313F1D8 *)Method_UnityEngine_GameObject_GetComponent_TweenPosition___);
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   this = (ServantClassCompatibilityIconComponent_o *)UnityEngine_Object__op_Inequality(
@@ -466,7 +466,7 @@ void ServantClassCompatibilityIconComponent__SetIconPosition(
       return;
     }
 LABEL_11:
-    sub_1C32E7C(this);
+    sub_1C372B4(this);
   }
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)icon, 0);
   GameObjectExtensions__SetLocalPositionX(gameObject, x, 0);

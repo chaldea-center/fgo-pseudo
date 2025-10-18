@@ -23,14 +23,14 @@ void ReceiptListViewManager__CreateList(ReceiptListViewManager_o *this, const Me
   __int64 m_CancellationTokenSource_low; // x10
   intptr_t v18; // x8
 
-  if ( (byte_4C34F1C & 1) == 0 )
+  if ( (byte_4C40507 & 1) == 0 )
   {
-    sub_1C32C20(&Method_System_Collections_Generic_List_ListViewItem__Add__);
-    sub_1C32C20(&ReceiptListViewItem_TypeInfo);
-    sub_1C32C20(&Method_SingletonMonoBehaviour_AccountingManager__get_Instance__);
-    byte_4C34F1C = 1;
+    sub_1C37058(&Method_System_Collections_Generic_List_ListViewItem__Add__);
+    sub_1C37058(&ReceiptListViewItem_TypeInfo);
+    sub_1C37058(&Method_SingletonMonoBehaviour_AccountingManager__get_Instance__);
+    byte_4C40507 = 1;
   }
-  Instance = (AccountingManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39E2904 *)Method_SingletonMonoBehaviour_AccountingManager__get_Instance__);
+  Instance = (AccountingManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39ED16C *)Method_SingletonMonoBehaviour_AccountingManager__get_Instance__);
   if ( !Instance )
     goto LABEL_15;
   Instance = (AccountingManager_o *)AccountingManager__GetPaymentHistoryList(Instance, 0);
@@ -46,12 +46,12 @@ void ReceiptListViewManager__CreateList(ReceiptListViewManager_o *this, const Me
     while ( 1 )
     {
       if ( v7 >= LODWORD(v5->fields.m_CancellationTokenSource) )
-        sub_1C32E84(v6);
+        sub_1C372BC(v6);
       v9 = *((_QWORD *)&v5->fields.callbackFunc + v7);
-      v10 = sub_1C32E6C(ReceiptListViewItem_TypeInfo);
-      ListViewItem___ctor_43702564((ListViewItem_o *)v10, v7, 0);
+      v10 = sub_1C372A4(ReceiptListViewItem_TypeInfo);
+      ListViewItem___ctor_43804668((ListViewItem_o *)v10, v7, 0);
       *(_QWORD *)(v10 + 120) = v9;
-      sub_1C32BC4((CGThumbnailListItem_o *)(v10 + 120), v9, v11, v12);
+      sub_1C36FFC((CGThumbnailListItem_o *)(v10 + 120), v9, v11, v12);
       Instance = (AccountingManager_o *)this->fields.itemList;
       if ( !Instance )
         break;
@@ -66,20 +66,20 @@ void ReceiptListViewManager__CreateList(ReceiptListViewManager_o *this, const Me
         System_Collections_Generic_List_object___AddWithResize(
           (System_Collections_Generic_List_object__o *)Instance,
           (Il2CppObject *)v10,
-          *(const MethodInfo_37987BC **)(*(_QWORD *)(v16[4] + 192LL) + 112LL));
+          *(const MethodInfo_37A3024 **)(*(_QWORD *)(v16[4] + 192LL) + 112LL));
       }
       else
       {
         v18 = m_CachedPtr + 8 * m_CancellationTokenSource_low;
         LODWORD(Instance->fields.m_CancellationTokenSource) = m_CancellationTokenSource_low + 1;
         *(_QWORD *)(v18 + 32) = v10;
-        sub_1C32BC4((CGThumbnailListItem_o *)(v18 + 32), v10, v13, v14);
+        sub_1C36FFC((CGThumbnailListItem_o *)(v18 + 32), v10, v13, v14);
       }
       if ( v8 == ++v7 )
         goto LABEL_14;
     }
 LABEL_15:
-    sub_1C32E7C(Instance);
+    sub_1C372B4(Instance);
   }
 LABEL_14:
   ListViewManager__SortItem((ListViewManager_o *)this, -1, 0, -1, 0);
@@ -106,11 +106,11 @@ ReceiptListViewItem_o *ReceiptListViewManager__GetItem(
   ReceiptListViewItem_o *result; // x0
   __int64 naturalAligment; // x10
 
-  if ( (byte_4C34F1D & 1) == 0 )
+  if ( (byte_4C40508 & 1) == 0 )
   {
-    sub_1C32C20(&Method_System_Collections_Generic_List_ListViewItem__get_Item__);
-    sub_1C32C20(&ReceiptListViewItem_TypeInfo);
-    byte_4C34F1D = 1;
+    sub_1C37058(&Method_System_Collections_Generic_List_ListViewItem__get_Item__);
+    sub_1C37058(&ReceiptListViewItem_TypeInfo);
+    byte_4C40508 = 1;
   }
   result = (ReceiptListViewItem_o *)this->fields.itemList;
   if ( result )
@@ -118,7 +118,7 @@ ReceiptListViewItem_o *ReceiptListViewManager__GetItem(
     result = (ReceiptListViewItem_o *)System_Collections_Generic_List_object___get_Item(
                                         (System_Collections_Generic_List_object__o *)result,
                                         index,
-                                        (const MethodInfo_37984EC *)Method_System_Collections_Generic_List_ListViewItem__get_Item__);
+                                        (const MethodInfo_37A2D54 *)Method_System_Collections_Generic_List_ListViewItem__get_Item__);
     if ( result )
     {
       naturalAligment = ReceiptListViewItem_TypeInfo->_2.naturalAligment;
@@ -144,17 +144,17 @@ System_String_o *ReceiptListViewManager__GetNextName(
 {
   void *itemList; // x0
   int v6; // w21
-  const MethodInfo_37984EC *v7; // x2
+  const MethodInfo_37A2D54 *v7; // x2
   __int64 naturalAligment; // x10
   int32_t v9; // w1
   __int64 v10; // x10
 
-  if ( (byte_4C34F23 & 1) == 0 )
+  if ( (byte_4C4050E & 1) == 0 )
   {
-    sub_1C32C20(&Method_System_Collections_Generic_List_ListViewItem__get_Count__);
-    sub_1C32C20(&Method_System_Collections_Generic_List_ListViewItem__get_Item__);
-    sub_1C32C20(&ReceiptListViewItem_TypeInfo);
-    byte_4C34F23 = 1;
+    sub_1C37058(&Method_System_Collections_Generic_List_ListViewItem__get_Count__);
+    sub_1C37058(&Method_System_Collections_Generic_List_ListViewItem__get_Item__);
+    sub_1C37058(&ReceiptListViewItem_TypeInfo);
+    byte_4C4050E = 1;
   }
   itemList = this->fields.itemList;
   if ( !itemList )
@@ -162,13 +162,13 @@ System_String_o *ReceiptListViewManager__GetNextName(
   v6 = 1;
   while ( 1 )
   {
-    v7 = (const MethodInfo_37984EC *)Method_System_Collections_Generic_List_ListViewItem__get_Item__;
+    v7 = (const MethodInfo_37A2D54 *)Method_System_Collections_Generic_List_ListViewItem__get_Item__;
     if ( v6 - 1 >= *((_DWORD *)itemList + 6) - 1 )
       break;
     itemList = System_Collections_Generic_List_object___get_Item(
                  (System_Collections_Generic_List_object__o *)itemList,
                  v6 - 1,
-                 (const MethodInfo_37984EC *)Method_System_Collections_Generic_List_ListViewItem__get_Item__);
+                 (const MethodInfo_37A2D54 *)Method_System_Collections_Generic_List_ListViewItem__get_Item__);
     if ( !itemList )
       goto LABEL_19;
     naturalAligment = ReceiptListViewItem_TypeInfo->_2.naturalAligment;
@@ -182,7 +182,7 @@ System_String_o *ReceiptListViewManager__GetNextName(
       itemList = this->fields.itemList;
       if ( itemList )
       {
-        v7 = (const MethodInfo_37984EC *)Method_System_Collections_Generic_List_ListViewItem__get_Item__;
+        v7 = (const MethodInfo_37A2D54 *)Method_System_Collections_Generic_List_ListViewItem__get_Item__;
         v9 = v6;
         goto LABEL_15;
       }
@@ -205,7 +205,7 @@ LABEL_15:
     || *(ReceiptListViewItem_c **)(*(_QWORD *)(*(_QWORD *)itemList + 200LL) + 8 * v10 - 8) != ReceiptListViewItem_TypeInfo )
   {
 LABEL_19:
-    sub_1C32E7C(itemList);
+    sub_1C372B4(itemList);
   }
   return (System_String_o *)*((_QWORD *)itemList + 15);
 }
@@ -222,14 +222,14 @@ void ReceiptListViewManager__OnClickListView(
   struct System_Action_o *callbackFunc; // x20
 
   if ( !obj )
-    sub_1C32E7C(this);
+    sub_1C372B4(this);
   Index = ListViewObject__get_Index(obj, 0);
   callbackFunc = this->fields.callbackFunc;
   this->fields.callbackIndex = Index;
   if ( callbackFunc )
   {
     this->fields.callbackFunc = 0;
-    sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.callbackFunc, 0, v5, v6);
+    sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.callbackFunc, 0, v5, v6);
     ((void (__fastcall *)(intptr_t, intptr_t))callbackFunc->fields.invoke_impl)(
       callbackFunc->fields.method_code,
       callbackFunc->fields.method);
@@ -248,10 +248,10 @@ void ReceiptListViewManager__OnMoveEnd(ReceiptListViewManager_o *this, const Met
   struct UIScrollView_o *v9; // x0
   struct System_Action_o *callbackFunc; // x20
 
-  if ( (byte_4C34F22 & 1) == 0 )
+  if ( (byte_4C4050D & 1) == 0 )
   {
-    sub_1C32C20(&UnityEngine_Object_TypeInfo);
-    byte_4C34F22 = 1;
+    sub_1C37058(&UnityEngine_Object_TypeInfo);
+    byte_4C4050D = 1;
   }
   callbackCount = this->fields.callbackCount;
   v4 = __OFSUB__(callbackCount, 1);
@@ -268,7 +268,7 @@ void ReceiptListViewManager__OnMoveEnd(ReceiptListViewManager_o *this, const Met
       {
         v9 = this->fields.scrollView;
         if ( !v9 )
-          sub_1C32E7C(0);
+          sub_1C372B4(0);
         ((void (__fastcall *)(struct UIScrollView_o *, __int64, const MethodInfo *))v9->klass->vtable._8_UpdateScrollbars.methodPtr)(
           v9,
           1,
@@ -280,7 +280,7 @@ void ReceiptListViewManager__OnMoveEnd(ReceiptListViewManager_o *this, const Met
         if ( callbackFunc )
         {
           this->fields.callbackFunc = 0;
-          sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.callbackFunc, 0, v7, v8);
+          sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.callbackFunc, 0, v7, v8);
           ((void (__fastcall *)(intptr_t, intptr_t))callbackFunc->fields.invoke_impl)(
             callbackFunc->fields.method_code,
             callbackFunc->fields.method);
@@ -306,31 +306,31 @@ void ReceiptListViewManager__RequestListObject(
   const MethodInfo *v12; // x3
   System_Collections_Generic_List_Enumerator_object__o v13; // [xsp+8h] [xbp-68h] BYREF
 
-  if ( (byte_4C34F20 & 1) == 0 )
+  if ( (byte_4C4050B & 1) == 0 )
   {
-    sub_1C32C20(&System_Action_TypeInfo);
-    sub_1C32C20(&Method_System_Collections_Generic_List_Enumerator_ReceiptListViewObject__Dispose__);
-    sub_1C32C20(&Method_System_Collections_Generic_List_Enumerator_ReceiptListViewObject__MoveNext__);
-    sub_1C32C20(&Method_System_Collections_Generic_List_Enumerator_ReceiptListViewObject__get_Current__);
-    sub_1C32C20(&Method_System_Collections_Generic_List_ReceiptListViewObject__GetEnumerator__);
-    sub_1C32C20(&Method_System_Collections_Generic_List_ReceiptListViewObject__get_Count__);
-    sub_1C32C20(&Method_ReceiptListViewManager_OnMoveEnd__);
-    sub_1C32C20(&StringLiteral_9941/*"OnMoveEnd"*/);
-    byte_4C34F20 = 1;
+    sub_1C37058(&System_Action_TypeInfo);
+    sub_1C37058(&Method_System_Collections_Generic_List_Enumerator_ReceiptListViewObject__Dispose__);
+    sub_1C37058(&Method_System_Collections_Generic_List_Enumerator_ReceiptListViewObject__MoveNext__);
+    sub_1C37058(&Method_System_Collections_Generic_List_Enumerator_ReceiptListViewObject__get_Current__);
+    sub_1C37058(&Method_System_Collections_Generic_List_ReceiptListViewObject__GetEnumerator__);
+    sub_1C37058(&Method_System_Collections_Generic_List_ReceiptListViewObject__get_Count__);
+    sub_1C37058(&Method_ReceiptListViewManager_OnMoveEnd__);
+    sub_1C37058(&StringLiteral_9942/*"OnMoveEnd"*/);
+    byte_4C4050B = 1;
   }
   memset(&v13, 0, sizeof(v13));
   ObjectList = (System_Collections_Generic_List_object__o *)ReceiptListViewManager__get_ObjectList(
                                                               this,
                                                               *(const MethodInfo **)&mode);
   if ( !ObjectList )
-    sub_1C32E7C(0);
+    sub_1C372B4(0);
   size = ObjectList->fields._size;
   if ( size < 1 )
   {
     this->fields.callbackCount = 1;
     UnityEngine_MonoBehaviour__Invoke(
       (UnityEngine_MonoBehaviour_o *)this,
-      (System_String_o *)StringLiteral_9941/*"OnMoveEnd"*/,
+      (System_String_o *)StringLiteral_9942/*"OnMoveEnd"*/,
       delay,
       0);
   }
@@ -340,27 +340,27 @@ void ReceiptListViewManager__RequestListObject(
     System_Collections_Generic_List_object___GetEnumerator(
       (System_Collections_Generic_List_Enumerator_T__o *)&v13,
       ObjectList,
-      (const MethodInfo_37992B4 *)Method_System_Collections_Generic_List_ReceiptListViewObject__GetEnumerator__);
+      (const MethodInfo_37A3B1C *)Method_System_Collections_Generic_List_ReceiptListViewObject__GetEnumerator__);
     while ( System_Collections_Generic_List_Enumerator_object___MoveNext(
               &v13,
-              (const MethodInfo_3522FA8 *)Method_System_Collections_Generic_List_Enumerator_ReceiptListViewObject__MoveNext__) )
+              (const MethodInfo_352D810 *)Method_System_Collections_Generic_List_Enumerator_ReceiptListViewObject__MoveNext__) )
     {
       current = v13.fields._current;
-      v10 = (System_Action_o *)sub_1C32E6C(System_Action_TypeInfo);
+      v10 = (System_Action_o *)sub_1C372A4(System_Action_TypeInfo);
       System_Action___ctor(v10, (Il2CppObject *)this, Method_ReceiptListViewManager_OnMoveEnd__, 0);
       if ( !current )
-        sub_1C32E7C(v11);
-      ReceiptListViewObject__Init_37305956((ReceiptListViewObject_o *)current, mode, v10, delay, v12);
+        sub_1C372B4(v11);
+      ReceiptListViewObject__Init_37401704((ReceiptListViewObject_o *)current, mode, v10, delay, v12);
     }
     System_Collections_Generic_List_Enumerator_object___Dispose(
       &v13,
-      (const MethodInfo_3522FA4 *)Method_System_Collections_Generic_List_Enumerator_ReceiptListViewObject__Dispose__);
+      (const MethodInfo_352D80C *)Method_System_Collections_Generic_List_Enumerator_ReceiptListViewObject__Dispose__);
   }
 }
 
 
 // local variable allocation has failed, the output may be wrong!
-void ReceiptListViewManager__RequestListObject_37306040(
+void ReceiptListViewManager__RequestListObject_37401788(
         ReceiptListViewManager_o *this,
         int32_t mode,
         const MethodInfo *method)
@@ -373,31 +373,31 @@ void ReceiptListViewManager__RequestListObject_37306040(
   const MethodInfo *v10; // x3
   System_Collections_Generic_List_Enumerator_object__o v11; // [xsp+8h] [xbp-68h] BYREF
 
-  if ( (byte_4C34F21 & 1) == 0 )
+  if ( (byte_4C4050C & 1) == 0 )
   {
-    sub_1C32C20(&System_Action_TypeInfo);
-    sub_1C32C20(&Method_System_Collections_Generic_List_Enumerator_ReceiptListViewObject__Dispose__);
-    sub_1C32C20(&Method_System_Collections_Generic_List_Enumerator_ReceiptListViewObject__MoveNext__);
-    sub_1C32C20(&Method_System_Collections_Generic_List_Enumerator_ReceiptListViewObject__get_Current__);
-    sub_1C32C20(&Method_System_Collections_Generic_List_ReceiptListViewObject__GetEnumerator__);
-    sub_1C32C20(&Method_System_Collections_Generic_List_ReceiptListViewObject__get_Count__);
-    sub_1C32C20(&Method_ReceiptListViewManager_OnMoveEnd__);
-    sub_1C32C20(&StringLiteral_9941/*"OnMoveEnd"*/);
-    byte_4C34F21 = 1;
+    sub_1C37058(&System_Action_TypeInfo);
+    sub_1C37058(&Method_System_Collections_Generic_List_Enumerator_ReceiptListViewObject__Dispose__);
+    sub_1C37058(&Method_System_Collections_Generic_List_Enumerator_ReceiptListViewObject__MoveNext__);
+    sub_1C37058(&Method_System_Collections_Generic_List_Enumerator_ReceiptListViewObject__get_Current__);
+    sub_1C37058(&Method_System_Collections_Generic_List_ReceiptListViewObject__GetEnumerator__);
+    sub_1C37058(&Method_System_Collections_Generic_List_ReceiptListViewObject__get_Count__);
+    sub_1C37058(&Method_ReceiptListViewManager_OnMoveEnd__);
+    sub_1C37058(&StringLiteral_9942/*"OnMoveEnd"*/);
+    byte_4C4050C = 1;
   }
   memset(&v11, 0, sizeof(v11));
   ObjectList = (System_Collections_Generic_List_object__o *)ReceiptListViewManager__get_ObjectList(
                                                               this,
                                                               *(const MethodInfo **)&mode);
   if ( !ObjectList )
-    sub_1C32E7C(0);
+    sub_1C372B4(0);
   size = ObjectList->fields._size;
   if ( size < 1 )
   {
     this->fields.callbackCount = 1;
     UnityEngine_MonoBehaviour__Invoke(
       (UnityEngine_MonoBehaviour_o *)this,
-      (System_String_o *)StringLiteral_9941/*"OnMoveEnd"*/,
+      (System_String_o *)StringLiteral_9942/*"OnMoveEnd"*/,
       0.0,
       0);
   }
@@ -407,21 +407,21 @@ void ReceiptListViewManager__RequestListObject_37306040(
     System_Collections_Generic_List_object___GetEnumerator(
       (System_Collections_Generic_List_Enumerator_T__o *)&v11,
       ObjectList,
-      (const MethodInfo_37992B4 *)Method_System_Collections_Generic_List_ReceiptListViewObject__GetEnumerator__);
+      (const MethodInfo_37A3B1C *)Method_System_Collections_Generic_List_ReceiptListViewObject__GetEnumerator__);
     while ( System_Collections_Generic_List_Enumerator_object___MoveNext(
               &v11,
-              (const MethodInfo_3522FA8 *)Method_System_Collections_Generic_List_Enumerator_ReceiptListViewObject__MoveNext__) )
+              (const MethodInfo_352D810 *)Method_System_Collections_Generic_List_Enumerator_ReceiptListViewObject__MoveNext__) )
     {
       current = v11.fields._current;
-      v8 = (System_Action_o *)sub_1C32E6C(System_Action_TypeInfo);
+      v8 = (System_Action_o *)sub_1C372A4(System_Action_TypeInfo);
       System_Action___ctor(v8, (Il2CppObject *)this, Method_ReceiptListViewManager_OnMoveEnd__, 0);
       if ( !current )
-        sub_1C32E7C(v9);
-      ReceiptListViewObject__Init_37307068((ReceiptListViewObject_o *)current, mode, v8, v10);
+        sub_1C372B4(v9);
+      ReceiptListViewObject__Init_37402816((ReceiptListViewObject_o *)current, mode, v8, v10);
     }
     System_Collections_Generic_List_Enumerator_object___Dispose(
       &v11,
-      (const MethodInfo_3522FA4 *)Method_System_Collections_Generic_List_Enumerator_ReceiptListViewObject__Dispose__);
+      (const MethodInfo_352D80C *)Method_System_Collections_Generic_List_Enumerator_ReceiptListViewObject__Dispose__);
   }
 }
 
@@ -430,11 +430,11 @@ void ReceiptListViewManager__SetMode(ReceiptListViewManager_o *this, int32_t mod
 {
   const MethodInfo *v3; // x3
 
-  ReceiptListViewManager__SetMode_37305444(this, mode, 0, v3);
+  ReceiptListViewManager__SetMode_37401192(this, mode, 0, v3);
 }
 
 
-void ReceiptListViewManager__SetMode_37305444(
+void ReceiptListViewManager__SetMode_37401192(
         ReceiptListViewManager_o *this,
         int32_t mode,
         System_Action_o *callback,
@@ -450,18 +450,18 @@ void ReceiptListViewManager__SetMode_37305444(
   System_Action_o *v14; // x23
   const MethodInfo *v15; // x3
 
-  if ( (byte_4C34F1F & 1) == 0 )
+  if ( (byte_4C4050A & 1) == 0 )
   {
-    sub_1C32C20(&System_Action_TypeInfo);
-    sub_1C32C20(&Method_System_Collections_Generic_List_ReceiptListViewObject__get_Count__);
-    sub_1C32C20(&Method_System_Collections_Generic_List_ReceiptListViewObject__get_Item__);
-    sub_1C32C20(&Method_ReceiptListViewManager_OnMoveEnd__);
-    sub_1C32C20(&StringLiteral_9941/*"OnMoveEnd"*/);
-    byte_4C34F1F = 1;
+    sub_1C37058(&System_Action_TypeInfo);
+    sub_1C37058(&Method_System_Collections_Generic_List_ReceiptListViewObject__get_Count__);
+    sub_1C37058(&Method_System_Collections_Generic_List_ReceiptListViewObject__get_Item__);
+    sub_1C37058(&Method_ReceiptListViewManager_OnMoveEnd__);
+    sub_1C37058(&StringLiteral_9942/*"OnMoveEnd"*/);
+    byte_4C4050A = 1;
   }
   this->fields.initMode = mode;
   this->fields.callbackFunc = callback;
-  sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.callbackFunc, (int32_t)callback, (int32_t)callback, method);
+  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.callbackFunc, (int32_t)callback, (int32_t)callback, method);
   this->fields.callbackCount = ListViewManager__get_ObjectSum((ListViewManager_o *)this, 0);
   ListViewManager__set_IsInput((ListViewManager_o *)this, mode == 2, 0);
   ObjectList = ReceiptListViewManager__get_ObjectList(this, v7);
@@ -475,7 +475,7 @@ void ReceiptListViewManager__SetMode_37305444(
       this->fields.callbackCount = 1;
       UnityEngine_MonoBehaviour__Invoke(
         (UnityEngine_MonoBehaviour_o *)this,
-        (System_String_o *)StringLiteral_9941/*"OnMoveEnd"*/,
+        (System_String_o *)StringLiteral_9942/*"OnMoveEnd"*/,
         0.0,
         0);
     }
@@ -491,24 +491,24 @@ void ReceiptListViewManager__SetMode_37305444(
           Item = System_Collections_Generic_List_object___get_Item(
                    v10,
                    v12,
-                   (const MethodInfo_37984EC *)Method_System_Collections_Generic_List_ReceiptListViewObject__get_Item__);
-          v14 = (System_Action_o *)sub_1C32E6C(System_Action_TypeInfo);
+                   (const MethodInfo_37A2D54 *)Method_System_Collections_Generic_List_ReceiptListViewObject__get_Item__);
+          v14 = (System_Action_o *)sub_1C372A4(System_Action_TypeInfo);
           System_Action___ctor(v14, (Il2CppObject *)this, Method_ReceiptListViewManager_OnMoveEnd__, 0);
           if ( !Item )
             break;
-          ReceiptListViewObject__Init_37305956((ReceiptListViewObject_o *)Item, 4, v14, (float)++v12 * 0.1, v15);
+          ReceiptListViewObject__Init_37401704((ReceiptListViewObject_o *)Item, 4, v14, (float)++v12 * 0.1, v15);
           if ( v12 >= v10->fields._size )
             return;
         }
 LABEL_15:
-        sub_1C32E7C(ObjectSum);
+        sub_1C372B4(ObjectSum);
       }
     }
   }
   else if ( mode == 2 )
   {
     this->fields.callbackIndex = -1;
-    ReceiptListViewManager__RequestListObject_37306040(this, 5, v9);
+    ReceiptListViewManager__RequestListObject_37401788(this, 5, v9);
   }
 }
 
@@ -524,23 +524,23 @@ void ReceiptListViewManager__SetObjectItem(
   int32_t v7; // w1
 
   v5 = this;
-  if ( (byte_4C34F1E & 1) == 0 )
+  if ( (byte_4C40509 & 1) == 0 )
   {
-    this = (ReceiptListViewManager_o *)sub_1C32C20(&ReceiptListViewObject_TypeInfo);
-    byte_4C34F1E = 1;
+    this = (ReceiptListViewManager_o *)sub_1C37058(&ReceiptListViewObject_TypeInfo);
+    byte_4C40509 = 1;
   }
   if ( !obj
     || (naturalAligment = ReceiptListViewObject_TypeInfo->_2.naturalAligment,
         obj->klass->_2.naturalAligment < (unsigned int)naturalAligment)
     || (ReceiptListViewObject_c *)obj->klass->_2.typeHierarchy[naturalAligment - 1] != ReceiptListViewObject_TypeInfo )
   {
-    sub_1C32E7C(this);
+    sub_1C372B4(this);
   }
   if ( v5->fields.initMode == 2 )
     v7 = 5;
   else
     v7 = 2;
-  ReceiptListViewObject__Init_37305364((ReceiptListViewObject_o *)obj, v7, (const MethodInfo *)item);
+  ReceiptListViewObject__Init_37401112((ReceiptListViewObject_o *)obj, v7, (const MethodInfo *)item);
 }
 
 
@@ -558,10 +558,10 @@ void ReceiptListViewManager__add_callbackFunc(
   System_Action_o *v11; // x1
   const MethodInfo *v12; // x2
 
-  if ( (byte_4C34F19 & 1) == 0 )
+  if ( (byte_4C40504 & 1) == 0 )
   {
-    sub_1C32C20(&System_Action_TypeInfo);
-    byte_4C34F19 = 1;
+    sub_1C37058(&System_Action_TypeInfo);
+    byte_4C40504 = 1;
   }
   callbackFunc = (System_Delegate_o *)this->fields.callbackFunc;
   p_callbackFunc = &this->fields.callbackFunc;
@@ -573,13 +573,13 @@ void ReceiptListViewManager__add_callbackFunc(
       if ( (System_Action_c *)v7->klass != System_Action_TypeInfo )
         break;
     }
-    v8 = sub_1C6CE78(p_callbackFunc, v7, callbackFunc);
+    v8 = sub_1C712B0(p_callbackFunc, v7, callbackFunc);
     v9 = callbackFunc == (System_Delegate_o *)v8;
     callbackFunc = (System_Delegate_o *)v8;
     if ( v9 )
       return;
   }
-  sub_1C3313C(v7);
+  sub_1C37574(v7);
   ReceiptListViewManager__remove_callbackFunc(v10, v11, v12);
 }
 
@@ -603,35 +603,35 @@ System_Collections_Generic_List_ReceiptListViewObject__o *ReceiptListViewManager
   System_Collections_Generic_List_Enumerator_object__o v16; // [xsp+8h] [xbp-78h] BYREF
   System_Collections_Generic_List_Enumerator_object__o v17; // [xsp+20h] [xbp-60h] BYREF
 
-  if ( (byte_4C34F1B & 1) == 0 )
+  if ( (byte_4C40506 & 1) == 0 )
   {
-    sub_1C32C20(&Method_System_Collections_Generic_List_Enumerator_GameObject__Dispose__);
-    sub_1C32C20(&Method_System_Collections_Generic_List_Enumerator_GameObject__MoveNext__);
-    sub_1C32C20(&Method_System_Collections_Generic_List_Enumerator_GameObject__get_Current__);
-    sub_1C32C20(&Method_UnityEngine_GameObject_GetComponent_ReceiptListViewObject___);
-    sub_1C32C20(&Method_System_Collections_Generic_List_ReceiptListViewObject__Add__);
-    sub_1C32C20(&Method_System_Collections_Generic_List_GameObject__GetEnumerator__);
-    sub_1C32C20(&Method_System_Collections_Generic_List_ReceiptListViewObject___ctor__);
-    sub_1C32C20(&System_Collections_Generic_List_ReceiptListViewObject__TypeInfo);
-    sub_1C32C20(&UnityEngine_Object_TypeInfo);
-    byte_4C34F1B = 1;
+    sub_1C37058(&Method_System_Collections_Generic_List_Enumerator_GameObject__Dispose__);
+    sub_1C37058(&Method_System_Collections_Generic_List_Enumerator_GameObject__MoveNext__);
+    sub_1C37058(&Method_System_Collections_Generic_List_Enumerator_GameObject__get_Current__);
+    sub_1C37058(&Method_UnityEngine_GameObject_GetComponent_ReceiptListViewObject___);
+    sub_1C37058(&Method_System_Collections_Generic_List_ReceiptListViewObject__Add__);
+    sub_1C37058(&Method_System_Collections_Generic_List_GameObject__GetEnumerator__);
+    sub_1C37058(&Method_System_Collections_Generic_List_ReceiptListViewObject___ctor__);
+    sub_1C37058(&System_Collections_Generic_List_ReceiptListViewObject__TypeInfo);
+    sub_1C37058(&UnityEngine_Object_TypeInfo);
+    byte_4C40506 = 1;
   }
   memset(&v17, 0, sizeof(v17));
-  v3 = (System_Collections_Generic_List_object__o *)sub_1C32E6C(System_Collections_Generic_List_ReceiptListViewObject__TypeInfo);
+  v3 = (System_Collections_Generic_List_object__o *)sub_1C372A4(System_Collections_Generic_List_ReceiptListViewObject__TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v3,
-    (const MethodInfo_3797F88 *)Method_System_Collections_Generic_List_ReceiptListViewObject___ctor__);
+    (const MethodInfo_37A27F0 *)Method_System_Collections_Generic_List_ReceiptListViewObject___ctor__);
   objectList = this->fields.objectList;
   if ( !objectList )
-    sub_1C32E7C(0);
+    sub_1C372B4(0);
   System_Collections_Generic_List_object___GetEnumerator(
     (System_Collections_Generic_List_Enumerator_T__o *)&v16,
     (System_Collections_Generic_List_object__o *)objectList,
-    (const MethodInfo_37992B4 *)Method_System_Collections_Generic_List_GameObject__GetEnumerator__);
+    (const MethodInfo_37A3B1C *)Method_System_Collections_Generic_List_GameObject__GetEnumerator__);
   v17 = v16;
   while ( System_Collections_Generic_List_Enumerator_object___MoveNext(
             &v17,
-            (const MethodInfo_3522FA8 *)Method_System_Collections_Generic_List_Enumerator_GameObject__MoveNext__) )
+            (const MethodInfo_352D810 *)Method_System_Collections_Generic_List_Enumerator_GameObject__MoveNext__) )
   {
     current = v17.fields._current;
     if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -640,38 +640,38 @@ System_Collections_Generic_List_ReceiptListViewObject__o *ReceiptListViewManager
     if ( v6 )
     {
       if ( !current )
-        sub_1C32E7C(v6);
+        sub_1C372B4(v6);
       Component_object = UnityEngine_GameObject__GetComponent_object_(
                            (UnityEngine_GameObject_o *)current,
-                           (const MethodInfo_3134970 *)Method_UnityEngine_GameObject_GetComponent_ReceiptListViewObject___);
+                           (const MethodInfo_313F1D8 *)Method_UnityEngine_GameObject_GetComponent_ReceiptListViewObject___);
       v10 = Component_object;
       if ( !v3 )
-        sub_1C32E7C(Component_object);
+        sub_1C372B4(Component_object);
       items = v3->fields._items;
       v12 = Method_System_Collections_Generic_List_ReceiptListViewObject__Add__;
       ++v3->fields._version;
       if ( !items )
-        sub_1C32E7C(Component_object);
+        sub_1C372B4(Component_object);
       size = v3->fields._size;
       if ( (unsigned int)size >= LODWORD(items->max_length) )
       {
         System_Collections_Generic_List_object___AddWithResize(
           v3,
           Component_object,
-          *(const MethodInfo_37987BC **)(*(_QWORD *)(v12[4] + 192LL) + 112LL));
+          *(const MethodInfo_37A3024 **)(*(_QWORD *)(v12[4] + 192LL) + 112LL));
       }
       else
       {
         v14 = &items->obj.klass + size;
         v3->fields._size = size + 1;
         v14[4] = (Il2CppClass *)v10;
-        sub_1C32BC4((CGThumbnailListItem_o *)(v14 + 4), (int32_t)v10, v8, v9);
+        sub_1C36FFC((CGThumbnailListItem_o *)(v14 + 4), (int32_t)v10, v8, v9);
       }
     }
   }
   System_Collections_Generic_List_Enumerator_object___Dispose(
     &v17,
-    (const MethodInfo_3522FA4 *)Method_System_Collections_Generic_List_Enumerator_GameObject__Dispose__);
+    (const MethodInfo_352D80C *)Method_System_Collections_Generic_List_Enumerator_GameObject__Dispose__);
   return (System_Collections_Generic_List_ReceiptListViewObject__o *)v3;
 }
 
@@ -689,10 +689,10 @@ void ReceiptListViewManager__remove_callbackFunc(
   ReceiptListViewManager_o *v10; // x0
   const MethodInfo *v11; // x1
 
-  if ( (byte_4C34F1A & 1) == 0 )
+  if ( (byte_4C40505 & 1) == 0 )
   {
-    sub_1C32C20(&System_Action_TypeInfo);
-    byte_4C34F1A = 1;
+    sub_1C37058(&System_Action_TypeInfo);
+    byte_4C40505 = 1;
   }
   callbackFunc = (System_Delegate_o *)this->fields.callbackFunc;
   p_callbackFunc = &this->fields.callbackFunc;
@@ -704,12 +704,12 @@ void ReceiptListViewManager__remove_callbackFunc(
       if ( (System_Action_c *)v7->klass != System_Action_TypeInfo )
         break;
     }
-    v8 = sub_1C6CE78(p_callbackFunc, v7, callbackFunc);
+    v8 = sub_1C712B0(p_callbackFunc, v7, callbackFunc);
     v9 = callbackFunc == (System_Delegate_o *)v8;
     callbackFunc = (System_Delegate_o *)v8;
     if ( v9 )
       return;
   }
-  sub_1C3313C(v7);
+  sub_1C37574(v7);
   ReceiptListViewManager__get_ObjectList(v10, v11);
 }

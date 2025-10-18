@@ -13,7 +13,7 @@ void ServantStatusCharaGraphViewer__DeactivateScrollViewObjects(
   viewerListViewManager = this->fields.viewerListViewManager;
   this->fields._IsAbleToSwitchDispMode_k__BackingField = 0;
   if ( !viewerListViewManager )
-    sub_1C32E7C(0);
+    sub_1C372B4(0);
   viewerListViewManager->fields.currentPhase = 0;
   ListViewManager__DestroyList((ListViewManager_o *)viewerListViewManager, 0);
 }
@@ -28,7 +28,7 @@ void ServantStatusCharaGraphViewer__FadeoutFrameScrollViewObjects(
 
   viewerListViewManager = this->fields.viewerListViewManager;
   if ( !viewerListViewManager )
-    sub_1C32E7C(0);
+    sub_1C372B4(0);
   ServantStatusCharaGraphViewerListViewManager__PlayFadeOutObjectFrame(viewerListViewManager, delay, method);
 }
 
@@ -43,14 +43,14 @@ ServantStatusCharaGraphListViewItem_o *ServantStatusCharaGraphViewer__GetCenterI
   __int64 naturalAligment; // x11
 
   v2 = this;
-  if ( (byte_4C335E8 & 1) == 0 )
+  if ( (byte_4C3EB09 & 1) == 0 )
   {
-    this = (ServantStatusCharaGraphViewer_o *)sub_1C32C20(&ServantStatusCharaGraphListViewItem_TypeInfo);
-    byte_4C335E8 = 1;
+    this = (ServantStatusCharaGraphViewer_o *)sub_1C37058(&ServantStatusCharaGraphListViewItem_TypeInfo);
+    byte_4C3EB09 = 1;
   }
   viewerListViewManager = v2->fields.viewerListViewManager;
   if ( !viewerListViewManager )
-    sub_1C32E7C(this);
+    sub_1C372B4(this);
   centerItem = (ServantStatusCharaGraphListViewItem_o *)viewerListViewManager->fields.centerItem;
   if ( !centerItem )
     return 0;
@@ -88,7 +88,7 @@ bool ServantStatusCharaGraphViewer__IsAbleToPinch(ServantStatusCharaGraphViewer_
   viewerListViewManager = this->fields.viewerListViewManager;
   if ( !viewerListViewManager )
 LABEL_11:
-    sub_1C32E7C(viewerListViewManager);
+    sub_1C372B4(viewerListViewManager);
   if ( centerItem->fields.basePosition.fields.y <= CenterPosition.fields.y )
     v6 = CenterPosition.fields.y - CenterPosition.fields.x;
   else
@@ -133,7 +133,7 @@ void ServantStatusCharaGraphViewer__SetDispType(
         }
       }
 LABEL_17:
-      sub_1C32E7C(viewerListViewManager);
+      sub_1C372B4(viewerListViewManager);
     case 1:
       viewerListViewManager = (ServantStatusCharaGraphViewerListViewManager_o *)this->fields.dragObjRootPanel;
       if ( !viewerListViewManager )
@@ -188,7 +188,7 @@ void ServantStatusCharaGraphViewer__SetItemDataType(
 
   viewerListViewManager = this->fields.viewerListViewManager;
   if ( !viewerListViewManager )
-    sub_1C32E7C(0);
+    sub_1C372B4(0);
   ServantStatusCharaGraphViewerListViewManager__SetItemDataType(viewerListViewManager, dispType, method);
 }
 
@@ -202,10 +202,10 @@ void ServantStatusCharaGraphViewer__SetModifyScrollViewCenter(
   const MethodInfo *v6; // x2
   ServantStatusCharaGraphViewerListViewManager_o *v7; // x0
 
-  if ( (byte_4C335E9 & 1) == 0 )
+  if ( (byte_4C3EB0A & 1) == 0 )
   {
-    sub_1C32C20(&UnityEngine_Object_TypeInfo);
-    byte_4C335E9 = 1;
+    sub_1C37058(&UnityEngine_Object_TypeInfo);
+    byte_4C3EB0A = 1;
   }
   viewerListViewManager = (UnityEngine_Object_o *)this->fields.viewerListViewManager;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -214,7 +214,7 @@ void ServantStatusCharaGraphViewer__SetModifyScrollViewCenter(
   {
     v7 = this->fields.viewerListViewManager;
     if ( !v7 )
-      sub_1C32E7C(0);
+      sub_1C372B4(0);
     ServantStatusCharaGraphViewerListViewManager__SetModifyScrollViewCenter(v7, onModifyScrollViewCenter, v6);
   }
 }
@@ -236,7 +236,7 @@ void ServantStatusCharaGraphViewer__Setup(
     viewerListViewManager = this->fields.viewerListViewManager;
     this->fields._IsAbleToSwitchDispMode_k__BackingField = 1;
     if ( !viewerListViewManager )
-      sub_1C32E7C(0);
+      sub_1C372B4(0);
     ServantStatusCharaGraphViewerListViewManager__CreateList(viewerListViewManager, currentIndex, items, v8);
   }
   else

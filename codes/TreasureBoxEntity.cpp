@@ -1,14 +1,14 @@
 void TreasureBoxEntity___ctor(TreasureBoxEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_4C386A2 & 1) == 0 )
+  if ( (byte_4C43C9B & 1) == 0 )
   {
-    sub_1C32C20(&Method_DataEntityBase_int___ctor__);
-    byte_4C386A2 = 1;
+    sub_1C37058(&Method_DataEntityBase_int___ctor__);
+    byte_4C43C9B = 1;
   }
   this->fields.consumeItemId = -1;
   DataEntityBase_int____ctor(
     (DataEntityBase_int__o *)this,
-    (const MethodInfo_3394354 *)Method_DataEntityBase_int___ctor__);
+    (const MethodInfo_339EBBC *)Method_DataEntityBase_int___ctor__);
 }
 
 
@@ -25,18 +25,18 @@ int32_t TreasureBoxEntity__get_ConsumeItemId(TreasureBoxEntity_o *this, const Me
   il2cpp_array_size_t max_length; // x8
   CommonConsumeEntity_o *v6; // x8
 
-  if ( (byte_4C386A1 & 1) == 0 )
+  if ( (byte_4C43C9A & 1) == 0 )
   {
-    sub_1C32C20(&Method_DataManager_GetMaster_CommonConsumeMaster___);
-    sub_1C32C20(&DataManager_TypeInfo);
-    byte_4C386A1 = 1;
+    sub_1C37058(&Method_DataManager_GetMaster_CommonConsumeMaster___);
+    sub_1C37058(&DataManager_TypeInfo);
+    byte_4C43C9A = 1;
   }
   result = this->fields.consumeItemId;
   if ( result <= 0 )
   {
     if ( !DataManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-    Master_object = (CommonConsumeEntity_array *)DataManager__GetMaster_object_((const MethodInfo_30DD39C *)Method_DataManager_GetMaster_CommonConsumeMaster___);
+    Master_object = (CommonConsumeEntity_array *)DataManager__GetMaster_object_((const MethodInfo_30E7C04 *)Method_DataManager_GetMaster_CommonConsumeMaster___);
     if ( Master_object )
     {
       Master_object = CommonConsumeMaster__GetIdEntityList(
@@ -49,7 +49,7 @@ int32_t TreasureBoxEntity__get_ConsumeItemId(TreasureBoxEntity_o *this, const Me
         goto LABEL_13;
       }
       if ( !(_DWORD)max_length )
-        sub_1C32E84(Master_object);
+        sub_1C372BC(Master_object);
       v6 = Master_object->m_Items[0];
       if ( v6 )
       {
@@ -59,7 +59,7 @@ LABEL_13:
         return result;
       }
     }
-    sub_1C32E7C(Master_object);
+    sub_1C372B4(Master_object);
   }
   return result;
 }

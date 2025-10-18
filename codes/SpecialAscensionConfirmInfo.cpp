@@ -15,13 +15,13 @@ void SpecialAscensionConfirmInfo__SetSpecialAscensionConfirmInfo(
   UILabel_o *subTitle; // x20
   System_String_o *v9; // x0
 
-  if ( (byte_4C3BC30 & 1) == 0 )
+  if ( (byte_4C3D039 & 1) == 0 )
   {
-    sub_1C32C20(&LocalizationManager_TypeInfo);
-    sub_1C32C20(&StringLiteral_12264/*"SPECIAL_ASCENSION_DIALOG_TXT"*/);
-    sub_1C32C20(&StringLiteral_3773/*"CONFIRM_TITLE_SPECIAL_ASCENSION"*/);
-    sub_1C32C20(&StringLiteral_44/*"\n\n"*/);
-    byte_4C3BC30 = 1;
+    sub_1C37058(&LocalizationManager_TypeInfo);
+    sub_1C37058(&StringLiteral_12265/*"SPECIAL_ASCENSION_DIALOG_TXT"*/);
+    sub_1C37058(&StringLiteral_3773/*"CONFIRM_TITLE_SPECIAL_ASCENSION"*/);
+    sub_1C37058(&StringLiteral_44/*"\n\n"*/);
+    byte_4C3D039 = 1;
   }
   title = this->fields.title;
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
@@ -30,11 +30,11 @@ void SpecialAscensionConfirmInfo__SetSpecialAscensionConfirmInfo(
   if ( !title
     || (UILabel__set_text(title, v7, 0),
         subTitle = this->fields.subTitle,
-        v9 = LocalizationManager__Get((System_String_o *)StringLiteral_12264/*"SPECIAL_ASCENSION_DIALOG_TXT"*/, 0),
-        v7 = System_String__Concat_63556792(v9, (System_String_o *)StringLiteral_44/*"\n\n"*/, text, 0),
+        v9 = LocalizationManager__Get((System_String_o *)StringLiteral_12265/*"SPECIAL_ASCENSION_DIALOG_TXT"*/, 0),
+        v7 = System_String__Concat_63599904(v9, (System_String_o *)StringLiteral_44/*"\n\n"*/, text, 0),
         !subTitle) )
   {
-    sub_1C32E7C(v7);
+    sub_1C372B4(v7);
   }
   UILabel__set_text(subTitle, v7, 0);
 }

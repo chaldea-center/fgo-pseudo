@@ -7,7 +7,7 @@ void BattleRaidTurnStartEffect___ctor(BattleRaidTurnStartEffect_o *this, const M
 void BattleRaidTurnStartEffect__resumeLimitTurnEffect(BattleRaidTurnStartEffect_o *this, const MethodInfo *method)
 {
   __int64 *v2; // x22
-  System_Object_array *ComponentsInChildren_object__51202152; // x20
+  System_Object_array *ComponentsInChildren_object__51245264; // x20
   SimpleAnimation_o *States; // x0
   SimpleAnimation_o *v6; // x21
   il2cpp_array_size_t max_length; // x8
@@ -64,34 +64,34 @@ void BattleRaidTurnStartEffect__resumeLimitTurnEffect(BattleRaidTurnStartEffect_
   __int64 v58; // x0
 
   v2 = &Method_UnityEngine_Component_GetComponentsInChildren_SimpleAnimation___;
-  if ( (byte_4C3A509 & 1) == 0 )
+  if ( (byte_4C45B11 & 1) == 0 )
   {
-    sub_1C32C20(&UnityEngine_AnimationState_TypeInfo);
-    sub_1C32C20(&Method_UnityEngine_Component_GetComponentsInChildren_Animation___);
-    sub_1C32C20(&Method_UnityEngine_Component_GetComponentsInChildren_ParticleSystem___);
-    sub_1C32C20(&Method_UnityEngine_Component_GetComponentsInChildren_SimpleAnimation___);
-    sub_1C32C20(&System_IDisposable_TypeInfo);
-    sub_1C32C20(&System_Collections_Generic_IEnumerable_SimpleAnimation_State__TypeInfo);
-    sub_1C32C20(&System_Collections_Generic_IEnumerator_SimpleAnimation_State__TypeInfo);
-    sub_1C32C20(&System_Collections_IEnumerator_TypeInfo);
-    sub_1C32C20(&SimpleAnimation_State_TypeInfo);
-    byte_4C3A509 = 1;
+    sub_1C37058(&UnityEngine_AnimationState_TypeInfo);
+    sub_1C37058(&Method_UnityEngine_Component_GetComponentsInChildren_Animation___);
+    sub_1C37058(&Method_UnityEngine_Component_GetComponentsInChildren_ParticleSystem___);
+    sub_1C37058(&Method_UnityEngine_Component_GetComponentsInChildren_SimpleAnimation___);
+    sub_1C37058(&System_IDisposable_TypeInfo);
+    sub_1C37058(&System_Collections_Generic_IEnumerable_SimpleAnimation_State__TypeInfo);
+    sub_1C37058(&System_Collections_Generic_IEnumerator_SimpleAnimation_State__TypeInfo);
+    sub_1C37058(&System_Collections_IEnumerator_TypeInfo);
+    sub_1C37058(&SimpleAnimation_State_TypeInfo);
+    byte_4C45B11 = 1;
   }
-  ComponentsInChildren_object__51202152 = UnityEngine_Component__GetComponentsInChildren_object__51202152(
+  ComponentsInChildren_object__51245264 = UnityEngine_Component__GetComponentsInChildren_object__51245264(
                                             (UnityEngine_Component_o *)this,
-                                            (const MethodInfo_30D4868 *)Method_UnityEngine_Component_GetComponentsInChildren_SimpleAnimation___);
-  States = (SimpleAnimation_o *)UnityEngine_Component__GetComponentsInChildren_object__51202152(
+                                            (const MethodInfo_30DF0D0 *)Method_UnityEngine_Component_GetComponentsInChildren_SimpleAnimation___);
+  States = (SimpleAnimation_o *)UnityEngine_Component__GetComponentsInChildren_object__51245264(
                                   (UnityEngine_Component_o *)this,
-                                  (const MethodInfo_30D4868 *)Method_UnityEngine_Component_GetComponentsInChildren_Animation___);
+                                  (const MethodInfo_30DF0D0 *)Method_UnityEngine_Component_GetComponentsInChildren_Animation___);
   v6 = States;
-  if ( ComponentsInChildren_object__51202152 && (max_length = ComponentsInChildren_object__51202152->max_length) != 0 )
+  if ( ComponentsInChildren_object__51245264 && (max_length = ComponentsInChildren_object__51245264->max_length) != 0 )
   {
     if ( (int)max_length >= 1 )
     {
       v8 = 0;
       while ( v8 < (unsigned int)max_length )
       {
-        States = (SimpleAnimation_o *)ComponentsInChildren_object__51202152->m_Items[v8];
+        States = (SimpleAnimation_o *)ComponentsInChildren_object__51245264->m_Items[v8];
         if ( !States )
           goto LABEL_91;
         States = (SimpleAnimation_o *)SimpleAnimation__GetStates(States, 0);
@@ -115,11 +115,11 @@ void BattleRaidTurnStartEffect__resumeLimitTurnEffect(BattleRaidTurnStartEffect_
         else
         {
 LABEL_14:
-          v13 = sub_1C83438(States, System_Collections_Generic_IEnumerable_SimpleAnimation_State__TypeInfo, 0);
+          v13 = sub_1C87870(States, System_Collections_Generic_IEnumerable_SimpleAnimation_State__TypeInfo, 0);
         }
         v14 = (*(__int64 (__fastcall **)(SimpleAnimation_o *, _QWORD))v13)(v10, *(_QWORD *)(v13 + 8));
         if ( !v14 )
-          sub_1C32E7C(0);
+          sub_1C372B4(0);
         while ( 1 )
         {
           v15 = *(_QWORD *)v14;
@@ -139,7 +139,7 @@ LABEL_14:
           else
           {
 LABEL_21:
-            v18 = sub_1C83438(v14, System_Collections_IEnumerator_TypeInfo, 0);
+            v18 = sub_1C87870(v14, System_Collections_IEnumerator_TypeInfo, 0);
           }
           if ( ((*(__int64 (__fastcall **)(__int64, _QWORD))v18)(v14, *(_QWORD *)(v18 + 8)) & 1) == 0 )
             break;
@@ -160,12 +160,12 @@ LABEL_21:
           else
           {
 LABEL_28:
-            v22 = sub_1C83438(v14, System_Collections_Generic_IEnumerator_SimpleAnimation_State__TypeInfo, 0);
+            v22 = sub_1C87870(v14, System_Collections_Generic_IEnumerator_SimpleAnimation_State__TypeInfo, 0);
           }
           v23 = (*(__int64 (__fastcall **)(__int64, _QWORD))v22)(v14, *(_QWORD *)(v22 + 8));
           v24 = v23;
           if ( !v23 )
-            sub_1C32E7C(0);
+            sub_1C372B4(0);
           v25 = *(_QWORD *)v23;
           v26 = *(unsigned __int16 *)(*(_QWORD *)v23 + 302LL);
           if ( *(_WORD *)(*(_QWORD *)v23 + 302LL) )
@@ -183,7 +183,7 @@ LABEL_28:
           else
           {
 LABEL_35:
-            v28 = sub_1C83438(v23, SimpleAnimation_State_TypeInfo, 8);
+            v28 = sub_1C87870(v23, SimpleAnimation_State_TypeInfo, 8);
           }
           (*(void (__fastcall **)(__int64, _QWORD, float))v28)(v24, *(_QWORD *)(v28 + 8), 1.0);
         }
@@ -204,10 +204,10 @@ LABEL_35:
         else
         {
 LABEL_42:
-          v32 = sub_1C83438(v14, System_IDisposable_TypeInfo, 0);
+          v32 = sub_1C87870(v14, System_IDisposable_TypeInfo, 0);
         }
         States = (SimpleAnimation_o *)(*(__int64 (__fastcall **)(__int64, _QWORD))v32)(v14, *(_QWORD *)(v32 + 8));
-        LODWORD(max_length) = ComponentsInChildren_object__51202152->max_length;
+        LODWORD(max_length) = ComponentsInChildren_object__51245264->max_length;
         if ( (int)++v8 >= (int)max_length )
           goto LABEL_84;
       }
@@ -229,7 +229,7 @@ LABEL_42:
             goto LABEL_91;
           Enumerator = UnityEngine_Animation__GetEnumerator((UnityEngine_Animation_o *)States, 0);
           if ( !Enumerator )
-            sub_1C32E7C(0);
+            sub_1C372B4(0);
           while ( 1 )
           {
             v36 = Enumerator->klass;
@@ -249,7 +249,7 @@ LABEL_42:
             else
             {
 LABEL_59:
-              v39 = sub_1C83438(Enumerator, System_Collections_IEnumerator_TypeInfo, 0);
+              v39 = sub_1C87870(Enumerator, System_Collections_IEnumerator_TypeInfo, 0);
             }
             if ( ((*(__int64 (__fastcall **)(System_Collections_IEnumerator_o *, _QWORD))v39)(
                     Enumerator,
@@ -273,17 +273,17 @@ LABEL_59:
             else
             {
 LABEL_66:
-              v43 = sub_1C83438(Enumerator, System_Collections_IEnumerator_TypeInfo, 1);
+              v43 = sub_1C87870(Enumerator, System_Collections_IEnumerator_TypeInfo, 1);
             }
             v44 = (UnityEngine_AnimationState_o *)(*(__int64 (__fastcall **)(System_Collections_IEnumerator_o *, _QWORD))v43)(
                                                     Enumerator,
                                                     *(_QWORD *)(v43 + 8));
             if ( !v44 )
-              sub_1C32E7C(0);
+              sub_1C372B4(0);
             if ( v44->klass != UnityEngine_AnimationState_TypeInfo )
             {
-              sub_1C3313C(v44);
-              v53 = sub_1C32D5C(Enumerator, System_IDisposable_TypeInfo);
+              sub_1C37574(v44);
+              v53 = sub_1C37194(Enumerator, System_IDisposable_TypeInfo);
               v54 = v53;
               if ( v53 )
               {
@@ -304,18 +304,18 @@ LABEL_66:
                 else
                 {
 LABEL_98:
-                  v58 = sub_1C83438(v53, System_IDisposable_TypeInfo, 0);
+                  v58 = sub_1C87870(v53, System_IDisposable_TypeInfo, 0);
                 }
                 (*(void (__fastcall **)(__int64, _QWORD))v58)(v54, *(_QWORD *)(v58 + 8));
               }
               if ( v2 )
-                sub_1C32E74(v2);
-              sub_1D1BD54();
+                sub_1C372AC(v2);
+              sub_1D2018C();
             }
             UnityEngine_AnimationState__set_speed(v44, 1.0, 0);
           }
           v2 = 0;
-          States = (SimpleAnimation_o *)sub_1C32D5C(Enumerator, System_IDisposable_TypeInfo);
+          States = (SimpleAnimation_o *)sub_1C37194(Enumerator, System_IDisposable_TypeInfo);
           if ( States )
           {
             v45 = States->klass;
@@ -336,7 +336,7 @@ LABEL_98:
             else
             {
 LABEL_76:
-              v49 = sub_1C83438(States, System_IDisposable_TypeInfo, 0);
+              v49 = sub_1C87870(States, System_IDisposable_TypeInfo, 0);
             }
             States = (SimpleAnimation_o *)(*(__int64 (__fastcall **)(SimpleAnimation_o *, _QWORD))v49)(
                                             v46,
@@ -347,17 +347,17 @@ LABEL_76:
             goto LABEL_84;
         }
 LABEL_92:
-        sub_1C32E84(States);
+        sub_1C372BC(States);
       }
     }
   }
 LABEL_84:
-  States = (SimpleAnimation_o *)UnityEngine_Component__GetComponentsInChildren_object__51202152(
+  States = (SimpleAnimation_o *)UnityEngine_Component__GetComponentsInChildren_object__51245264(
                                   (UnityEngine_Component_o *)this,
-                                  (const MethodInfo_30D4868 *)Method_UnityEngine_Component_GetComponentsInChildren_ParticleSystem___);
+                                  (const MethodInfo_30DF0D0 *)Method_UnityEngine_Component_GetComponentsInChildren_ParticleSystem___);
   if ( !States )
 LABEL_91:
-    sub_1C32E7C(States);
+    sub_1C372B4(States);
   v50 = (int)States->fields.m_CancellationTokenSource;
   v51 = States;
   if ( v50 >= 1 )
@@ -368,7 +368,7 @@ LABEL_91:
       States = (SimpleAnimation_o *)*(&v51->fields.m_Graph.fields.m_Handle + (int)v52);
       if ( !States )
         goto LABEL_91;
-      UnityEngine_ParticleSystem__Play_71507048((UnityEngine_ParticleSystem_o *)States, 0);
+      UnityEngine_ParticleSystem__Play_71550160((UnityEngine_ParticleSystem_o *)States, 0);
       v50 = (int)v51->fields.m_CancellationTokenSource;
       if ( (int)++v52 >= v50 )
         return;
@@ -387,7 +387,7 @@ void BattleRaidTurnStartEffect__setStopFlg(BattleRaidTurnStartEffect_o *this, bo
 void BattleRaidTurnStartEffect__waitLimitTurnEffect(BattleRaidTurnStartEffect_o *this, const MethodInfo *method)
 {
   __int64 v2; // x22
-  System_Object_array *ComponentsInChildren_object__51202152; // x20
+  System_Object_array *ComponentsInChildren_object__51245264; // x20
   SimpleAnimation_o *States; // x0
   SimpleAnimation_o *v6; // x21
   il2cpp_array_size_t max_length; // x8
@@ -443,36 +443,36 @@ void BattleRaidTurnStartEffect__waitLimitTurnEffect(BattleRaidTurnStartEffect_o 
   int *v57; // x10
   __int64 v58; // x0
 
-  if ( (byte_4C3A508 & 1) == 0 )
+  if ( (byte_4C45B10 & 1) == 0 )
   {
-    sub_1C32C20(&UnityEngine_AnimationState_TypeInfo);
-    sub_1C32C20(&Method_UnityEngine_Component_GetComponentsInChildren_Animation___);
-    sub_1C32C20(&Method_UnityEngine_Component_GetComponentsInChildren_ParticleSystem___);
-    sub_1C32C20(&Method_UnityEngine_Component_GetComponentsInChildren_SimpleAnimation___);
-    sub_1C32C20(&System_IDisposable_TypeInfo);
-    sub_1C32C20(&System_Collections_Generic_IEnumerable_SimpleAnimation_State__TypeInfo);
-    sub_1C32C20(&System_Collections_Generic_IEnumerator_SimpleAnimation_State__TypeInfo);
-    sub_1C32C20(&System_Collections_IEnumerator_TypeInfo);
-    sub_1C32C20(&SimpleAnimation_State_TypeInfo);
-    byte_4C3A508 = 1;
+    sub_1C37058(&UnityEngine_AnimationState_TypeInfo);
+    sub_1C37058(&Method_UnityEngine_Component_GetComponentsInChildren_Animation___);
+    sub_1C37058(&Method_UnityEngine_Component_GetComponentsInChildren_ParticleSystem___);
+    sub_1C37058(&Method_UnityEngine_Component_GetComponentsInChildren_SimpleAnimation___);
+    sub_1C37058(&System_IDisposable_TypeInfo);
+    sub_1C37058(&System_Collections_Generic_IEnumerable_SimpleAnimation_State__TypeInfo);
+    sub_1C37058(&System_Collections_Generic_IEnumerator_SimpleAnimation_State__TypeInfo);
+    sub_1C37058(&System_Collections_IEnumerator_TypeInfo);
+    sub_1C37058(&SimpleAnimation_State_TypeInfo);
+    byte_4C45B10 = 1;
   }
   if ( this->fields.animeStop )
   {
-    ComponentsInChildren_object__51202152 = UnityEngine_Component__GetComponentsInChildren_object__51202152(
+    ComponentsInChildren_object__51245264 = UnityEngine_Component__GetComponentsInChildren_object__51245264(
                                               (UnityEngine_Component_o *)this,
-                                              (const MethodInfo_30D4868 *)Method_UnityEngine_Component_GetComponentsInChildren_SimpleAnimation___);
-    States = (SimpleAnimation_o *)UnityEngine_Component__GetComponentsInChildren_object__51202152(
+                                              (const MethodInfo_30DF0D0 *)Method_UnityEngine_Component_GetComponentsInChildren_SimpleAnimation___);
+    States = (SimpleAnimation_o *)UnityEngine_Component__GetComponentsInChildren_object__51245264(
                                     (UnityEngine_Component_o *)this,
-                                    (const MethodInfo_30D4868 *)Method_UnityEngine_Component_GetComponentsInChildren_Animation___);
+                                    (const MethodInfo_30DF0D0 *)Method_UnityEngine_Component_GetComponentsInChildren_Animation___);
     v6 = States;
-    if ( ComponentsInChildren_object__51202152 && (max_length = ComponentsInChildren_object__51202152->max_length) != 0 )
+    if ( ComponentsInChildren_object__51245264 && (max_length = ComponentsInChildren_object__51245264->max_length) != 0 )
     {
       if ( (int)max_length >= 1 )
       {
         v8 = 0;
         while ( v8 < (unsigned int)max_length )
         {
-          States = (SimpleAnimation_o *)ComponentsInChildren_object__51202152->m_Items[v8];
+          States = (SimpleAnimation_o *)ComponentsInChildren_object__51245264->m_Items[v8];
           if ( !States )
             goto LABEL_92;
           States = (SimpleAnimation_o *)SimpleAnimation__GetStates(States, 0);
@@ -496,11 +496,11 @@ void BattleRaidTurnStartEffect__waitLimitTurnEffect(BattleRaidTurnStartEffect_o 
           else
           {
 LABEL_15:
-            v13 = sub_1C83438(States, System_Collections_Generic_IEnumerable_SimpleAnimation_State__TypeInfo, 0);
+            v13 = sub_1C87870(States, System_Collections_Generic_IEnumerable_SimpleAnimation_State__TypeInfo, 0);
           }
           v14 = (*(__int64 (__fastcall **)(SimpleAnimation_o *, _QWORD))v13)(v10, *(_QWORD *)(v13 + 8));
           if ( !v14 )
-            sub_1C32E7C(0);
+            sub_1C372B4(0);
           while ( 1 )
           {
             v15 = *(_QWORD *)v14;
@@ -520,7 +520,7 @@ LABEL_15:
             else
             {
 LABEL_22:
-              v18 = sub_1C83438(v14, System_Collections_IEnumerator_TypeInfo, 0);
+              v18 = sub_1C87870(v14, System_Collections_IEnumerator_TypeInfo, 0);
             }
             if ( ((*(__int64 (__fastcall **)(__int64, _QWORD))v18)(v14, *(_QWORD *)(v18 + 8)) & 1) == 0 )
               break;
@@ -541,12 +541,12 @@ LABEL_22:
             else
             {
 LABEL_29:
-              v22 = sub_1C83438(v14, System_Collections_Generic_IEnumerator_SimpleAnimation_State__TypeInfo, 0);
+              v22 = sub_1C87870(v14, System_Collections_Generic_IEnumerator_SimpleAnimation_State__TypeInfo, 0);
             }
             v23 = (*(__int64 (__fastcall **)(__int64, _QWORD))v22)(v14, *(_QWORD *)(v22 + 8));
             v24 = v23;
             if ( !v23 )
-              sub_1C32E7C(0);
+              sub_1C372B4(0);
             v25 = *(_QWORD *)v23;
             v26 = *(unsigned __int16 *)(*(_QWORD *)v23 + 302LL);
             if ( *(_WORD *)(*(_QWORD *)v23 + 302LL) )
@@ -564,7 +564,7 @@ LABEL_29:
             else
             {
 LABEL_36:
-              v28 = sub_1C83438(v23, SimpleAnimation_State_TypeInfo, 8);
+              v28 = sub_1C87870(v23, SimpleAnimation_State_TypeInfo, 8);
             }
             (*(void (__fastcall **)(__int64, _QWORD, float))v28)(v24, *(_QWORD *)(v28 + 8), 0.0);
           }
@@ -585,10 +585,10 @@ LABEL_36:
           else
           {
 LABEL_43:
-            v32 = sub_1C83438(v14, System_IDisposable_TypeInfo, 0);
+            v32 = sub_1C87870(v14, System_IDisposable_TypeInfo, 0);
           }
           States = (SimpleAnimation_o *)(*(__int64 (__fastcall **)(__int64, _QWORD))v32)(v14, *(_QWORD *)(v32 + 8));
-          LODWORD(max_length) = ComponentsInChildren_object__51202152->max_length;
+          LODWORD(max_length) = ComponentsInChildren_object__51245264->max_length;
           if ( (int)++v8 >= (int)max_length )
             goto LABEL_85;
         }
@@ -610,7 +610,7 @@ LABEL_43:
               goto LABEL_92;
             Enumerator = UnityEngine_Animation__GetEnumerator((UnityEngine_Animation_o *)States, 0);
             if ( !Enumerator )
-              sub_1C32E7C(0);
+              sub_1C372B4(0);
             while ( 1 )
             {
               v36 = Enumerator->klass;
@@ -630,7 +630,7 @@ LABEL_43:
               else
               {
 LABEL_60:
-                v39 = sub_1C83438(Enumerator, System_Collections_IEnumerator_TypeInfo, 0);
+                v39 = sub_1C87870(Enumerator, System_Collections_IEnumerator_TypeInfo, 0);
               }
               if ( ((*(__int64 (__fastcall **)(System_Collections_IEnumerator_o *, _QWORD))v39)(
                       Enumerator,
@@ -654,17 +654,17 @@ LABEL_60:
               else
               {
 LABEL_67:
-                v43 = sub_1C83438(Enumerator, System_Collections_IEnumerator_TypeInfo, 1);
+                v43 = sub_1C87870(Enumerator, System_Collections_IEnumerator_TypeInfo, 1);
               }
               v44 = (UnityEngine_AnimationState_o *)(*(__int64 (__fastcall **)(System_Collections_IEnumerator_o *, _QWORD))v43)(
                                                       Enumerator,
                                                       *(_QWORD *)(v43 + 8));
               if ( !v44 )
-                sub_1C32E7C(0);
+                sub_1C372B4(0);
               if ( v44->klass != UnityEngine_AnimationState_TypeInfo )
               {
-                sub_1C3313C(v44);
-                v53 = sub_1C32D5C(Enumerator, System_IDisposable_TypeInfo);
+                sub_1C37574(v44);
+                v53 = sub_1C37194(Enumerator, System_IDisposable_TypeInfo);
                 v54 = v53;
                 if ( v53 )
                 {
@@ -685,18 +685,18 @@ LABEL_67:
                   else
                   {
 LABEL_99:
-                    v58 = sub_1C83438(v53, System_IDisposable_TypeInfo, 0);
+                    v58 = sub_1C87870(v53, System_IDisposable_TypeInfo, 0);
                   }
                   (*(void (__fastcall **)(__int64, _QWORD))v58)(v54, *(_QWORD *)(v58 + 8));
                 }
                 if ( v2 )
-                  sub_1C32E74(v2);
-                sub_1D1BD54();
+                  sub_1C372AC(v2);
+                sub_1D2018C();
               }
               UnityEngine_AnimationState__set_speed(v44, 0.0, 0);
             }
             v2 = 0;
-            States = (SimpleAnimation_o *)sub_1C32D5C(Enumerator, System_IDisposable_TypeInfo);
+            States = (SimpleAnimation_o *)sub_1C37194(Enumerator, System_IDisposable_TypeInfo);
             if ( States )
             {
               v45 = States->klass;
@@ -717,7 +717,7 @@ LABEL_99:
               else
               {
 LABEL_77:
-                v49 = sub_1C83438(States, System_IDisposable_TypeInfo, 0);
+                v49 = sub_1C87870(States, System_IDisposable_TypeInfo, 0);
               }
               States = (SimpleAnimation_o *)(*(__int64 (__fastcall **)(SimpleAnimation_o *, _QWORD))v49)(
                                               v46,
@@ -728,17 +728,17 @@ LABEL_77:
               goto LABEL_85;
           }
 LABEL_93:
-          sub_1C32E84(States);
+          sub_1C372BC(States);
         }
       }
     }
 LABEL_85:
-    States = (SimpleAnimation_o *)UnityEngine_Component__GetComponentsInChildren_object__51202152(
+    States = (SimpleAnimation_o *)UnityEngine_Component__GetComponentsInChildren_object__51245264(
                                     (UnityEngine_Component_o *)this,
-                                    (const MethodInfo_30D4868 *)Method_UnityEngine_Component_GetComponentsInChildren_ParticleSystem___);
+                                    (const MethodInfo_30DF0D0 *)Method_UnityEngine_Component_GetComponentsInChildren_ParticleSystem___);
     if ( !States )
 LABEL_92:
-      sub_1C32E7C(States);
+      sub_1C372B4(States);
     v50 = (int)States->fields.m_CancellationTokenSource;
     v51 = States;
     if ( v50 >= 1 )
@@ -749,7 +749,7 @@ LABEL_92:
         States = (SimpleAnimation_o *)*(&v51->fields.m_Graph.fields.m_Handle + (int)v52);
         if ( !States )
           goto LABEL_92;
-        UnityEngine_ParticleSystem__Pause_71507180((UnityEngine_ParticleSystem_o *)States, 0);
+        UnityEngine_ParticleSystem__Pause_71550292((UnityEngine_ParticleSystem_o *)States, 0);
         v50 = (int)v51->fields.m_CancellationTokenSource;
         if ( (int)++v52 >= v50 )
           return;

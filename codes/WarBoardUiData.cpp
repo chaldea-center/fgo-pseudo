@@ -8,13 +8,13 @@ void WarBoardUiData___ctor(WarBoardUiData_o *this, const MethodInfo *method)
   System_Object___ctor((Il2CppObject *)this, 0);
   this->fields._squareIndex_k__BackingField = -1;
   this->fields._pieceIndex_k__BackingField = 0;
-  sub_1C32BC4((CGThumbnailListItem_o *)&this->fields._pieceIndex_k__BackingField, 0, v3, v4);
+  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields._pieceIndex_k__BackingField, 0, v3, v4);
   this->fields._keys_k__BackingField = 0;
-  sub_1C32BC4((CGThumbnailListItem_o *)&this->fields._keys_k__BackingField, 0, v5, v6);
+  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields._keys_k__BackingField, 0, v5, v6);
 }
 
 
-void WarBoardUiData___ctor_38071504(
+void WarBoardUiData___ctor_38167256(
         WarBoardUiData_o *this,
         WarBoardUiData_SaveData_o *saveData,
         const MethodInfo *method)
@@ -29,18 +29,18 @@ void WarBoardUiData___ctor_38071504(
 
   System_Object___ctor((Il2CppObject *)this, 0);
   if ( !saveData )
-    sub_1C32E7C(v5);
+    sub_1C372B4(v5);
   this->fields._squareIndex_k__BackingField = saveData->fields.squareIndex;
   pieceIndex = saveData->fields.pieceIndex;
   this->fields._pieceIndex_k__BackingField = pieceIndex;
-  sub_1C32BC4((CGThumbnailListItem_o *)&this->fields._pieceIndex_k__BackingField, (int32_t)pieceIndex, v6, v7);
+  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields._pieceIndex_k__BackingField, (int32_t)pieceIndex, v6, v7);
   keys = saveData->fields.keys;
   this->fields._keys_k__BackingField = keys;
-  sub_1C32BC4((CGThumbnailListItem_o *)&this->fields._keys_k__BackingField, (int32_t)keys, v10, v11);
+  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields._keys_k__BackingField, (int32_t)keys, v10, v11);
 }
 
 
-void WarBoardUiData___ctor_38071584(
+void WarBoardUiData___ctor_38167336(
         WarBoardUiData_o *this,
         int32_t index,
         System_String_array *setKeys,
@@ -54,13 +54,13 @@ void WarBoardUiData___ctor_38071584(
   System_Object___ctor((Il2CppObject *)this, 0);
   this->fields._squareIndex_k__BackingField = index;
   this->fields._pieceIndex_k__BackingField = 0;
-  sub_1C32BC4((CGThumbnailListItem_o *)&this->fields._pieceIndex_k__BackingField, 0, v7, v8);
+  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields._pieceIndex_k__BackingField, 0, v7, v8);
   this->fields._keys_k__BackingField = setKeys;
-  sub_1C32BC4((CGThumbnailListItem_o *)&this->fields._keys_k__BackingField, (int32_t)setKeys, v9, v10);
+  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields._keys_k__BackingField, (int32_t)setKeys, v9, v10);
 }
 
 
-void WarBoardUiData___ctor_38071656(
+void WarBoardUiData___ctor_38167408(
         WarBoardUiData_o *this,
         System_Int32_array *indexes,
         System_String_array *setKeys,
@@ -74,9 +74,9 @@ void WarBoardUiData___ctor_38071656(
   System_Object___ctor((Il2CppObject *)this, 0);
   this->fields._squareIndex_k__BackingField = -1;
   this->fields._pieceIndex_k__BackingField = indexes;
-  sub_1C32BC4((CGThumbnailListItem_o *)&this->fields._pieceIndex_k__BackingField, (int32_t)indexes, v7, v8);
+  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields._pieceIndex_k__BackingField, (int32_t)indexes, v7, v8);
   this->fields._keys_k__BackingField = setKeys;
-  sub_1C32BC4((CGThumbnailListItem_o *)&this->fields._keys_k__BackingField, (int32_t)setKeys, v9, v10);
+  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields._keys_k__BackingField, (int32_t)setKeys, v9, v10);
 }
 
 
@@ -85,7 +85,7 @@ void WarBoardUiData__SetKeys(WarBoardUiData_o *this, System_String_array *setKey
   const MethodInfo *v3; // x3
 
   this->fields._keys_k__BackingField = setKeys;
-  sub_1C32BC4((CGThumbnailListItem_o *)&this->fields._keys_k__BackingField, (int32_t)setKeys, (int32_t)method, v3);
+  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields._keys_k__BackingField, (int32_t)setKeys, (int32_t)method, v3);
 }
 
 
@@ -112,7 +112,7 @@ void WarBoardUiData__set_keys(WarBoardUiData_o *this, System_String_array *value
   const MethodInfo *v3; // x3
 
   this->fields._keys_k__BackingField = value;
-  sub_1C32BC4((CGThumbnailListItem_o *)&this->fields._keys_k__BackingField, (int32_t)value, (int32_t)method, v3);
+  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields._keys_k__BackingField, (int32_t)value, (int32_t)method, v3);
 }
 
 
@@ -121,7 +121,7 @@ void WarBoardUiData__set_pieceIndex(WarBoardUiData_o *this, System_Int32_array *
   const MethodInfo *v3; // x3
 
   this->fields._pieceIndex_k__BackingField = value;
-  sub_1C32BC4((CGThumbnailListItem_o *)&this->fields._pieceIndex_k__BackingField, (int32_t)value, (int32_t)method, v3);
+  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields._pieceIndex_k__BackingField, (int32_t)value, (int32_t)method, v3);
 }
 
 
@@ -141,13 +141,13 @@ void WarBoardUiData_SaveData___ctor(WarBoardUiData_SaveData_o *this, const Metho
   System_Object___ctor((Il2CppObject *)this, 0);
   this->fields.squareIndex = -1;
   this->fields.pieceIndex = 0;
-  sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.pieceIndex, 0, v3, v4);
+  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.pieceIndex, 0, v3, v4);
   this->fields.keys = 0;
-  sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.keys, 0, v5, v6);
+  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.keys, 0, v5, v6);
 }
 
 
-void WarBoardUiData_SaveData___ctor_38028552(
+void WarBoardUiData_SaveData___ctor_38124300(
         WarBoardUiData_SaveData_o *this,
         WarBoardUiData_o *uiData,
         const MethodInfo *method)
@@ -162,12 +162,12 @@ void WarBoardUiData_SaveData___ctor_38028552(
 
   System_Object___ctor((Il2CppObject *)this, 0);
   if ( !uiData )
-    sub_1C32E7C(v5);
+    sub_1C372B4(v5);
   this->fields.squareIndex = uiData->fields._squareIndex_k__BackingField;
   pieceIndex_k__BackingField = uiData->fields._pieceIndex_k__BackingField;
   this->fields.pieceIndex = pieceIndex_k__BackingField;
-  sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.pieceIndex, (int32_t)pieceIndex_k__BackingField, v6, v7);
+  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.pieceIndex, (int32_t)pieceIndex_k__BackingField, v6, v7);
   keys_k__BackingField = uiData->fields._keys_k__BackingField;
   this->fields.keys = keys_k__BackingField;
-  sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.keys, (int32_t)keys_k__BackingField, v10, v11);
+  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.keys, (int32_t)keys_k__BackingField, v10, v11);
 }

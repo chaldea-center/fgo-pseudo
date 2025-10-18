@@ -16,7 +16,7 @@ void ScriptTextListViewItemDraw__SetItem(
   {
     lineTextLabel = this->fields.lineTextLabel;
     if ( !lineTextLabel )
-      sub_1C32E7C(0);
+      sub_1C372B4(0);
     UILabel__set_text(lineTextLabel, item->fields.lineText, 0);
   }
 }
