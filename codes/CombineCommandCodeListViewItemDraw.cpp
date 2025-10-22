@@ -11,10 +11,10 @@ void CombineCommandCodeListViewItemDraw__SetInput(
 {
   UnityEngine_GameObject_o *selectImgObj; // x0
 
-  if ( (byte_4C46E38 & 1) == 0 )
+  if ( (byte_4C5AC2F & 1) == 0 )
   {
-    sub_1C37058(&StringLiteral_1172/*"1"*/);
-    byte_4C46E38 = 1;
+    sub_1C3E564(&StringLiteral_1172/*"1"*/);
+    byte_4C5AC2F = 1;
   }
   if ( item )
   {
@@ -31,7 +31,7 @@ void CombineCommandCodeListViewItemDraw__SetInput(
         return;
       }
 LABEL_10:
-      sub_1C372B4(selectImgObj);
+      sub_1C3E7C0(selectImgObj, item);
     }
     UnityEngine_GameObject__SetActive(selectImgObj, 0, 0);
   }
@@ -49,20 +49,20 @@ void CombineCommandCodeListViewItemDraw__SetItem(
   bool v9; // w1
   UILabel_o *maskLabel; // x21
 
-  if ( (byte_4C46E37 & 1) == 0 )
+  if ( (byte_4C5AC2E & 1) == 0 )
   {
-    sub_1C37058(&LocalizationManager_TypeInfo);
-    sub_1C37058(&StringLiteral_9319/*"NOT_SELECT_MAX_EQUIP"*/);
-    sub_1C37058(&StringLiteral_1/*""*/);
-    sub_1C37058(&StringLiteral_1172/*"1"*/);
-    byte_4C46E37 = 1;
+    sub_1C3E564(&LocalizationManager_TypeInfo);
+    sub_1C3E564(&StringLiteral_9319/*"NOT_SELECT_MAX_EQUIP"*/);
+    sub_1C3E564(&StringLiteral_1/*""*/);
+    sub_1C3E564(&StringLiteral_1172/*"1"*/);
+    byte_4C5AC2E = 1;
   }
   if ( item && mode )
   {
     icon = this->fields.icon;
     if ( !icon )
       goto LABEL_38;
-    ServantFaceIconComponent__Set_41012776(
+    ServantFaceIconComponent__Set_41061212(
       icon,
       item->fields.userCommandCode,
       item->fields.iconLabelInfo1,
@@ -150,7 +150,7 @@ void CombineCommandCodeListViewItemDraw__SetItem(
         }
       }
 LABEL_38:
-      sub_1C372B4(icon);
+      sub_1C3E7C0(icon, item);
     }
   }
 }

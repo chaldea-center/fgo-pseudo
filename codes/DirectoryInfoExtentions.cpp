@@ -7,17 +7,17 @@ System_String_array *DirectoryInfoExtentions__BashCommandExecute(
   const MethodInfo *v4; // x0
   System_String_array *result; // x0
 
-  if ( (byte_4C450B3 & 1) == 0 )
+  if ( (byte_4C58E7F & 1) == 0 )
   {
-    sub_1C37058(&System_Diagnostics_DataReceivedEventHandler_TypeInfo);
-    sub_1C37058(&System_IDisposable_TypeInfo);
-    sub_1C37058(&System_Diagnostics_ProcessStartInfo_TypeInfo);
-    sub_1C37058(&System_Text_StringBuilder_TypeInfo);
-    sub_1C37058(&Method_DirectoryInfoExtentions___c__DisplayClass2_0__BashCommandExecute_b__0__);
-    sub_1C37058(&DirectoryInfoExtentions___c__DisplayClass2_0_TypeInfo);
-    byte_4C450B3 = 1;
+    sub_1C3E564(&System_Diagnostics_DataReceivedEventHandler_TypeInfo);
+    sub_1C3E564(&System_IDisposable_TypeInfo);
+    sub_1C3E564(&System_Diagnostics_ProcessStartInfo_TypeInfo);
+    sub_1C3E564(&System_Text_StringBuilder_TypeInfo);
+    sub_1C3E564(&Method_DirectoryInfoExtentions___c__DisplayClass2_0__BashCommandExecute_b__0__);
+    sub_1C3E564(&DirectoryInfoExtentions___c__DisplayClass2_0_TypeInfo);
+    byte_4C58E7F = 1;
   }
-  v3 = (System_Diagnostics_ProcessStartInfo_o *)sub_1C372A4(System_Diagnostics_ProcessStartInfo_TypeInfo);
+  v3 = (System_Diagnostics_ProcessStartInfo_o *)sub_1C3E7B0(System_Diagnostics_ProcessStartInfo_TypeInfo);
   System_Diagnostics_ProcessStartInfo___ctor(v3, 0);
   DirectoryInfoExtentions__GetBashPath(v4);
   return result;
@@ -33,104 +33,105 @@ System_Collections_Generic_IEnumerable_DirectoryInfo__o *DirectoryInfoExtentions
 {
   System_String_o *Arguments; // x0
   __int64 appended; // x0
-  System_String_o *v9; // x20
-  System_String_o *v10; // x0
-  const MethodInfo *v11; // x2
-  System_String_array *v12; // x0
+  __int64 v9; // x1
+  System_String_o *v10; // x20
+  System_String_o *v11; // x0
+  const MethodInfo *v12; // x2
+  System_String_array *v13; // x0
   long double inited; // q0
-  _QWORD *v14; // x21
-  System_String_array *v15; // x20
-  __int64 v16; // x8
-  __int64 v17; // x0
+  _QWORD *v15; // x21
+  System_String_array *v16; // x20
+  __int64 v17; // x8
+  __int64 v18; // x0
   il2cpp_array_size_t max_length; // x8
-  System_Collections_Generic_IEnumerable_TSource__o *v19; // x21
+  System_Collections_Generic_IEnumerable_TSource__o *v20; // x21
   unsigned __int64 i; // x24
-  System_String_o *v21; // x22
-  System_String_o *v22; // x23
-  System_String_o *v23; // x0
-  System_String_o *v24; // x22
-  System_IO_DirectoryInfo_o *v25; // x23
+  System_String_o *v22; // x22
+  System_String_o *v23; // x23
+  System_String_o *v24; // x0
+  System_String_o *v25; // x22
+  System_IO_DirectoryInfo_o *v26; // x23
 
-  if ( (byte_4C450B5 & 1) == 0 )
+  if ( (byte_4C58E81 & 1) == 0 )
   {
-    sub_1C37058(&System_IO_DirectoryInfo_TypeInfo);
-    sub_1C37058(&Method_System_Linq_Enumerable_Append_DirectoryInfo___);
-    sub_1C37058(&Method_System_Linq_Enumerable_Empty_DirectoryInfo___);
-    sub_1C37058(&System_IO_Path_TypeInfo);
-    sub_1C37058(&string_TypeInfo);
-    sub_1C37058(&StringLiteral_957/*"-c 'find . -type d "*/);
-    sub_1C37058(&StringLiteral_524/*"'"*/);
-    byte_4C450B5 = 1;
+    sub_1C3E564(&System_IO_DirectoryInfo_TypeInfo);
+    sub_1C3E564(&Method_System_Linq_Enumerable_Append_DirectoryInfo___);
+    sub_1C3E564(&Method_System_Linq_Enumerable_Empty_DirectoryInfo___);
+    sub_1C3E564(&System_IO_Path_TypeInfo);
+    sub_1C3E564(&string_TypeInfo);
+    sub_1C3E564(&StringLiteral_957/*"-c 'find . -type d "*/);
+    sub_1C3E564(&StringLiteral_524/*"'"*/);
+    byte_4C58E81 = 1;
   }
   Arguments = DirectoryInfoExtentions__GetFindArguments(
                 searchPattern,
                 searchOption,
                 *(const MethodInfo **)&searchOption);
-  appended = (__int64)System_String__Concat_63599904(
+  appended = (__int64)System_String__Concat_63674716(
                         (System_String_o *)StringLiteral_957/*"-c 'find . -type d "*/,
                         Arguments,
                         (System_String_o *)StringLiteral_524/*"'"*/,
                         0);
   if ( !directoryInfo )
     goto LABEL_24;
-  v9 = (System_String_o *)appended;
-  v10 = (System_String_o *)((__int64 (__fastcall *)(System_IO_DirectoryInfo_o *, const MethodInfo *))directoryInfo->klass->vtable._8_get_FullName.methodPtr)(
+  v10 = (System_String_o *)appended;
+  v11 = (System_String_o *)((__int64 (__fastcall *)(System_IO_DirectoryInfo_o *, const MethodInfo *))directoryInfo->klass->vtable._8_get_FullName.methodPtr)(
                              directoryInfo,
                              directoryInfo->klass->vtable._8_get_FullName.method);
-  v12 = DirectoryInfoExtentions__BashCommandExecute(v10, v9, v11);
-  v14 = Method_System_Linq_Enumerable_Empty_DirectoryInfo___;
-  v15 = v12;
-  v16 = *((_QWORD *)Method_System_Linq_Enumerable_Empty_DirectoryInfo___ + 7);
-  if ( !v16 )
+  v13 = DirectoryInfoExtentions__BashCommandExecute(v11, v10, v12);
+  v15 = Method_System_Linq_Enumerable_Empty_DirectoryInfo___;
+  v16 = v13;
+  v17 = *((_QWORD *)Method_System_Linq_Enumerable_Empty_DirectoryInfo___ + 7);
+  if ( !v17 )
   {
-    sub_1C877C8(Method_System_Linq_Enumerable_Empty_DirectoryInfo___);
-    v16 = v14[7];
+    sub_1C8ECD4(Method_System_Linq_Enumerable_Empty_DirectoryInfo___);
+    v17 = v15[7];
   }
-  v17 = *(_QWORD *)(v16 + 16);
-  if ( (*(_BYTE *)(v17 + 309) & 1) == 0 )
-    v17 = sub_1C8776C(inited);
-  if ( !*(_DWORD *)(v17 + 224) )
-    inited = j_il2cpp_runtime_class_init_0(v17);
-  appended = *(_QWORD *)(v14[7] + 16LL);
+  v18 = *(_QWORD *)(v17 + 16);
+  if ( (*(_BYTE *)(v18 + 309) & 1) == 0 )
+    v18 = sub_1C8EC78(inited);
+  if ( !*(_DWORD *)(v18 + 224) )
+    inited = j_il2cpp_runtime_class_init_0(v18);
+  appended = *(_QWORD *)(v15[7] + 16LL);
   if ( (*(_BYTE *)(appended + 309) & 1) == 0 )
-    appended = sub_1C8776C(inited);
-  if ( !v15 )
+    appended = sub_1C8EC78(inited);
+  if ( !v16 )
 LABEL_24:
-    sub_1C372B4(appended);
-  max_length = v15->max_length;
-  v19 = **(System_Collections_Generic_IEnumerable_TSource__o ***)(appended + 184);
+    sub_1C3E7C0(appended, v9);
+  max_length = v16->max_length;
+  v20 = **(System_Collections_Generic_IEnumerable_TSource__o ***)(appended + 184);
   if ( (int)max_length >= 1 )
   {
     for ( i = 0; (__int64)i < (int)max_length; ++i )
     {
       if ( i >= (unsigned int)max_length )
-        sub_1C372BC(appended);
-      v21 = v15->m_Items[i];
-      appended = System_String__op_Inequality(v21, string_TypeInfo->static_fields->Empty, 0);
+        sub_1C3E7C8(appended, v9);
+      v22 = v16->m_Items[i];
+      appended = System_String__op_Inequality(v22, string_TypeInfo->static_fields->Empty, 0);
       if ( (appended & 1) != 0 )
       {
         appended = ((__int64 (__fastcall *)(System_IO_DirectoryInfo_o *, const MethodInfo *))directoryInfo->klass->vtable._8_get_FullName.methodPtr)(
                      directoryInfo,
                      directoryInfo->klass->vtable._8_get_FullName.method);
-        v22 = (System_String_o *)appended;
+        v23 = (System_String_o *)appended;
         if ( !System_IO_Path_TypeInfo->_2.cctor_finished )
           j_il2cpp_runtime_class_init_0(System_IO_Path_TypeInfo);
-        if ( !v21 )
+        if ( !v22 )
           goto LABEL_24;
-        v23 = System_String__Replace(v21, 0x2Fu, System_IO_Path_TypeInfo->static_fields->DirectorySeparatorChar, 0);
-        v24 = System_IO_Path__Combine(v22, v23, 0);
-        v25 = (System_IO_DirectoryInfo_o *)sub_1C372A4(System_IO_DirectoryInfo_TypeInfo);
-        System_IO_DirectoryInfo___ctor(v25, v24, 0);
+        v24 = System_String__Replace(v22, 0x2Fu, System_IO_Path_TypeInfo->static_fields->DirectorySeparatorChar, 0);
+        v25 = System_IO_Path__Combine(v23, v24, 0);
+        v26 = (System_IO_DirectoryInfo_o *)sub_1C3E7B0(System_IO_DirectoryInfo_TypeInfo);
+        System_IO_DirectoryInfo___ctor(v26, v25, 0);
         appended = (__int64)System_Linq_Enumerable__Append_object_(
-                              v19,
-                              (Il2CppObject *)v25,
-                              (const MethodInfo_30F5DE4 *)Method_System_Linq_Enumerable_Append_DirectoryInfo___);
-        v19 = (System_Collections_Generic_IEnumerable_TSource__o *)appended;
+                              v20,
+                              (Il2CppObject *)v26,
+                              (const MethodInfo_3107C5C *)Method_System_Linq_Enumerable_Append_DirectoryInfo___);
+        v20 = (System_Collections_Generic_IEnumerable_TSource__o *)appended;
       }
-      LODWORD(max_length) = v15->max_length;
+      LODWORD(max_length) = v16->max_length;
     }
   }
-  return (System_Collections_Generic_IEnumerable_DirectoryInfo__o *)v19;
+  return (System_Collections_Generic_IEnumerable_DirectoryInfo__o *)v20;
 }
 
 
@@ -143,104 +144,105 @@ System_Collections_Generic_IEnumerable_FileInfo__o *DirectoryInfoExtentions__Cre
 {
   System_String_o *Arguments; // x0
   __int64 appended; // x0
-  System_String_o *v9; // x20
-  System_String_o *v10; // x0
-  const MethodInfo *v11; // x2
-  System_String_array *v12; // x0
+  __int64 v9; // x1
+  System_String_o *v10; // x20
+  System_String_o *v11; // x0
+  const MethodInfo *v12; // x2
+  System_String_array *v13; // x0
   long double inited; // q0
-  _QWORD *v14; // x21
-  System_String_array *v15; // x20
-  __int64 v16; // x8
-  __int64 v17; // x0
+  _QWORD *v15; // x21
+  System_String_array *v16; // x20
+  __int64 v17; // x8
+  __int64 v18; // x0
   il2cpp_array_size_t max_length; // x8
-  System_Collections_Generic_IEnumerable_TSource__o *v19; // x21
+  System_Collections_Generic_IEnumerable_TSource__o *v20; // x21
   unsigned __int64 i; // x24
-  System_String_o *v21; // x22
-  System_String_o *v22; // x23
-  System_String_o *v23; // x0
-  System_String_o *v24; // x22
-  System_IO_FileInfo_o *v25; // x23
+  System_String_o *v22; // x22
+  System_String_o *v23; // x23
+  System_String_o *v24; // x0
+  System_String_o *v25; // x22
+  System_IO_FileInfo_o *v26; // x23
 
-  if ( (byte_4C450B4 & 1) == 0 )
+  if ( (byte_4C58E80 & 1) == 0 )
   {
-    sub_1C37058(&Method_System_Linq_Enumerable_Append_FileInfo___);
-    sub_1C37058(&Method_System_Linq_Enumerable_Empty_FileInfo___);
-    sub_1C37058(&System_IO_FileInfo_TypeInfo);
-    sub_1C37058(&System_IO_Path_TypeInfo);
-    sub_1C37058(&string_TypeInfo);
-    sub_1C37058(&StringLiteral_958/*"-c 'find . -type f "*/);
-    sub_1C37058(&StringLiteral_524/*"'"*/);
-    byte_4C450B4 = 1;
+    sub_1C3E564(&Method_System_Linq_Enumerable_Append_FileInfo___);
+    sub_1C3E564(&Method_System_Linq_Enumerable_Empty_FileInfo___);
+    sub_1C3E564(&System_IO_FileInfo_TypeInfo);
+    sub_1C3E564(&System_IO_Path_TypeInfo);
+    sub_1C3E564(&string_TypeInfo);
+    sub_1C3E564(&StringLiteral_958/*"-c 'find . -type f "*/);
+    sub_1C3E564(&StringLiteral_524/*"'"*/);
+    byte_4C58E80 = 1;
   }
   Arguments = DirectoryInfoExtentions__GetFindArguments(
                 searchPattern,
                 searchOption,
                 *(const MethodInfo **)&searchOption);
-  appended = (__int64)System_String__Concat_63599904(
+  appended = (__int64)System_String__Concat_63674716(
                         (System_String_o *)StringLiteral_958/*"-c 'find . -type f "*/,
                         Arguments,
                         (System_String_o *)StringLiteral_524/*"'"*/,
                         0);
   if ( !directoryInfo )
     goto LABEL_24;
-  v9 = (System_String_o *)appended;
-  v10 = (System_String_o *)((__int64 (__fastcall *)(System_IO_DirectoryInfo_o *, const MethodInfo *))directoryInfo->klass->vtable._8_get_FullName.methodPtr)(
+  v10 = (System_String_o *)appended;
+  v11 = (System_String_o *)((__int64 (__fastcall *)(System_IO_DirectoryInfo_o *, const MethodInfo *))directoryInfo->klass->vtable._8_get_FullName.methodPtr)(
                              directoryInfo,
                              directoryInfo->klass->vtable._8_get_FullName.method);
-  v12 = DirectoryInfoExtentions__BashCommandExecute(v10, v9, v11);
-  v14 = Method_System_Linq_Enumerable_Empty_FileInfo___;
-  v15 = v12;
-  v16 = *((_QWORD *)Method_System_Linq_Enumerable_Empty_FileInfo___ + 7);
-  if ( !v16 )
+  v13 = DirectoryInfoExtentions__BashCommandExecute(v11, v10, v12);
+  v15 = Method_System_Linq_Enumerable_Empty_FileInfo___;
+  v16 = v13;
+  v17 = *((_QWORD *)Method_System_Linq_Enumerable_Empty_FileInfo___ + 7);
+  if ( !v17 )
   {
-    sub_1C877C8(Method_System_Linq_Enumerable_Empty_FileInfo___);
-    v16 = v14[7];
+    sub_1C8ECD4(Method_System_Linq_Enumerable_Empty_FileInfo___);
+    v17 = v15[7];
   }
-  v17 = *(_QWORD *)(v16 + 16);
-  if ( (*(_BYTE *)(v17 + 309) & 1) == 0 )
-    v17 = sub_1C8776C(inited);
-  if ( !*(_DWORD *)(v17 + 224) )
-    inited = j_il2cpp_runtime_class_init_0(v17);
-  appended = *(_QWORD *)(v14[7] + 16LL);
+  v18 = *(_QWORD *)(v17 + 16);
+  if ( (*(_BYTE *)(v18 + 309) & 1) == 0 )
+    v18 = sub_1C8EC78(inited);
+  if ( !*(_DWORD *)(v18 + 224) )
+    inited = j_il2cpp_runtime_class_init_0(v18);
+  appended = *(_QWORD *)(v15[7] + 16LL);
   if ( (*(_BYTE *)(appended + 309) & 1) == 0 )
-    appended = sub_1C8776C(inited);
-  if ( !v15 )
+    appended = sub_1C8EC78(inited);
+  if ( !v16 )
 LABEL_24:
-    sub_1C372B4(appended);
-  max_length = v15->max_length;
-  v19 = **(System_Collections_Generic_IEnumerable_TSource__o ***)(appended + 184);
+    sub_1C3E7C0(appended, v9);
+  max_length = v16->max_length;
+  v20 = **(System_Collections_Generic_IEnumerable_TSource__o ***)(appended + 184);
   if ( (int)max_length >= 1 )
   {
     for ( i = 0; (__int64)i < (int)max_length; ++i )
     {
       if ( i >= (unsigned int)max_length )
-        sub_1C372BC(appended);
-      v21 = v15->m_Items[i];
-      appended = System_String__op_Inequality(v21, string_TypeInfo->static_fields->Empty, 0);
+        sub_1C3E7C8(appended, v9);
+      v22 = v16->m_Items[i];
+      appended = System_String__op_Inequality(v22, string_TypeInfo->static_fields->Empty, 0);
       if ( (appended & 1) != 0 )
       {
         appended = ((__int64 (__fastcall *)(System_IO_DirectoryInfo_o *, const MethodInfo *))directoryInfo->klass->vtable._8_get_FullName.methodPtr)(
                      directoryInfo,
                      directoryInfo->klass->vtable._8_get_FullName.method);
-        v22 = (System_String_o *)appended;
+        v23 = (System_String_o *)appended;
         if ( !System_IO_Path_TypeInfo->_2.cctor_finished )
           j_il2cpp_runtime_class_init_0(System_IO_Path_TypeInfo);
-        if ( !v21 )
+        if ( !v22 )
           goto LABEL_24;
-        v23 = System_String__Replace(v21, 0x2Fu, System_IO_Path_TypeInfo->static_fields->DirectorySeparatorChar, 0);
-        v24 = System_IO_Path__Combine(v22, v23, 0);
-        v25 = (System_IO_FileInfo_o *)sub_1C372A4(System_IO_FileInfo_TypeInfo);
-        System_IO_FileInfo___ctor_64436240(v25, v24, 0);
+        v24 = System_String__Replace(v22, 0x2Fu, System_IO_Path_TypeInfo->static_fields->DirectorySeparatorChar, 0);
+        v25 = System_IO_Path__Combine(v23, v24, 0);
+        v26 = (System_IO_FileInfo_o *)sub_1C3E7B0(System_IO_FileInfo_TypeInfo);
+        System_IO_FileInfo___ctor_64511052(v26, v25, 0);
         appended = (__int64)System_Linq_Enumerable__Append_object_(
-                              v19,
-                              (Il2CppObject *)v25,
-                              (const MethodInfo_30F5DE4 *)Method_System_Linq_Enumerable_Append_FileInfo___);
-        v19 = (System_Collections_Generic_IEnumerable_TSource__o *)appended;
+                              v20,
+                              (Il2CppObject *)v26,
+                              (const MethodInfo_3107C5C *)Method_System_Linq_Enumerable_Append_FileInfo___);
+        v20 = (System_Collections_Generic_IEnumerable_TSource__o *)appended;
       }
-      LODWORD(max_length) = v15->max_length;
+      LODWORD(max_length) = v16->max_length;
     }
   }
-  return (System_Collections_Generic_IEnumerable_FileInfo__o *)v19;
+  return (System_Collections_Generic_IEnumerable_FileInfo__o *)v20;
 }
 
 
@@ -250,11 +252,11 @@ System_String_o *__noreturn DirectoryInfoExtentions__GetBashPath(const MethodInf
   System_NotImplementedException_o *v2; // x19
   __int64 v3; // x0
 
-  v1 = sub_1C3706C(&System_NotImplementedException_TypeInfo);
-  v2 = (System_NotImplementedException_o *)sub_1C372A4(v1);
+  v1 = sub_1C3E578(&System_NotImplementedException_TypeInfo);
+  v2 = (System_NotImplementedException_o *)sub_1C3E7B0(v1);
   System_NotImplementedException___ctor(v2, 0);
-  v3 = sub_1C3706C(&Method_DirectoryInfoExtentions_GetBashPath__);
-  sub_1C37180(v2, v3);
+  v3 = sub_1C3E578(&Method_DirectoryInfoExtentions_GetBashPath__);
+  sub_1C3E68C(v2, v3);
 }
 
 
@@ -265,7 +267,7 @@ System_IO_DirectoryInfo_array *DirectoryInfoExtentions__GetDirectoriesEx(
         const MethodInfo *method)
 {
   if ( !directoryInfo )
-    sub_1C372B4(0);
+    sub_1C3E7C0(0, searchPattern);
   return System_IO_DirectoryInfo__GetDirectories(directoryInfo, searchPattern, searchOption, 0);
 }
 
@@ -277,8 +279,8 @@ System_IO_FileInfo_array *DirectoryInfoExtentions__GetFilesEx(
         const MethodInfo *method)
 {
   if ( !directoryInfo )
-    sub_1C372B4(0);
-  return System_IO_DirectoryInfo__GetFiles_64426240(directoryInfo, searchPattern, searchOption, 0);
+    sub_1C3E7C0(0, searchPattern);
+  return System_IO_DirectoryInfo__GetFiles_64501052(directoryInfo, searchPattern, searchOption, 0);
 }
 
 
@@ -289,19 +291,19 @@ System_String_o *DirectoryInfoExtentions__GetFindArguments(
 {
   System_String_o **v5; // x8
 
-  if ( (byte_4C450B2 & 1) == 0 )
+  if ( (byte_4C58E7E & 1) == 0 )
   {
-    sub_1C37058(&StringLiteral_156/*" -name \""*/);
-    sub_1C37058(&StringLiteral_965/*"-mindepth 1 -maxdepth 1"*/);
-    sub_1C37058(&StringLiteral_349/*"\" | sed -e \"s/^..//\""*/);
-    sub_1C37058(&StringLiteral_964/*"-mindepth 1"*/);
-    byte_4C450B2 = 1;
+    sub_1C3E564(&StringLiteral_156/*" -name \""*/);
+    sub_1C3E564(&StringLiteral_965/*"-mindepth 1 -maxdepth 1"*/);
+    sub_1C3E564(&StringLiteral_349/*"\" | sed -e \"s/^..//\""*/);
+    sub_1C3E564(&StringLiteral_964/*"-mindepth 1"*/);
+    byte_4C58E7E = 1;
   }
   if ( searchOption )
     v5 = (System_String_o **)&StringLiteral_964/*"-mindepth 1"*/;
   else
     v5 = (System_String_o **)&StringLiteral_965/*"-mindepth 1 -maxdepth 1"*/;
-  return System_String__Concat_63601908(
+  return System_String__Concat_63676720(
            *v5,
            (System_String_o *)StringLiteral_156/*" -name \""*/,
            searchPattern,
@@ -324,20 +326,18 @@ void DirectoryInfoExtentions___c__DisplayClass2_0___BashCommandExecute_b__0(
         System_Diagnostics_DataReceivedEventArgs_o *e,
         const MethodInfo *method)
 {
-  System_String_o *data; // x1
-
   if ( !e )
     goto LABEL_6;
-  data = e->fields.data;
-  if ( data )
+  sender = (Il2CppObject *)e->fields.data;
+  if ( sender )
   {
     this = (DirectoryInfoExtentions___c__DisplayClass2_0_o *)this->fields.stdout;
     if ( this )
     {
-      System_Text_StringBuilder__AppendLine_63647944((System_Text_StringBuilder_o *)this, data, 0);
+      System_Text_StringBuilder__AppendLine_63722756((System_Text_StringBuilder_o *)this, (System_String_o *)sender, 0);
       return;
     }
 LABEL_6:
-    sub_1C372B4(this);
+    sub_1C3E7C0(this, sender);
   }
 }

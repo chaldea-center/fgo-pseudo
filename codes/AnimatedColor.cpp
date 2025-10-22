@@ -9,7 +9,7 @@ void AnimatedColor___ctor(AnimatedColor_o *this, const MethodInfo *method)
 void AnimatedColor__LateUpdate(AnimatedColor_o *this, const MethodInfo *method)
 {
   if ( !this->fields.mWidget )
-    sub_1C372B4(this);
+    sub_1C3E7C0(this, method);
   UIWidget__set_color(this->fields.mWidget, this->fields.color, method);
 }
 
@@ -21,15 +21,15 @@ void AnimatedColor__OnEnable(AnimatedColor_o *this, const MethodInfo *method)
   const MethodInfo *v5; // x3
   const MethodInfo *v6; // x1
 
-  if ( (byte_4C477A8 & 1) == 0 )
+  if ( (byte_4C5B59F & 1) == 0 )
   {
-    sub_1C37058(&Method_UnityEngine_Component_GetComponent_UIWidget___);
-    byte_4C477A8 = 1;
+    sub_1C3E564(&Method_UnityEngine_Component_GetComponent_UIWidget___);
+    byte_4C5B59F = 1;
   }
   Component_object = UnityEngine_Component__GetComponent_object_(
                        (UnityEngine_Component_o *)this,
-                       (const MethodInfo_30DE428 *)Method_UnityEngine_Component_GetComponent_UIWidget___);
+                       (const MethodInfo_30F0240 *)Method_UnityEngine_Component_GetComponent_UIWidget___);
   this->fields.mWidget = (struct UIWidget_o *)Component_object;
-  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.mWidget, (int32_t)Component_object, v4, v5);
+  sub_1C3E508((CGThumbnailListItem_o *)&this->fields.mWidget, (int32_t)Component_object, v4, v5);
   AnimatedColor__LateUpdate(this, v6);
 }

@@ -14,7 +14,7 @@ void SelectBonus___ctor(
 }
 
 
-void SelectBonus___ctor_35488852(SelectBonus_o *this, const MethodInfo *method)
+void SelectBonus___ctor_35532204(SelectBonus_o *this, const MethodInfo *method)
 {
   System_Object___ctor((Il2CppObject *)this, 0);
 }

@@ -1,27 +1,27 @@
 void ClassBoardClassEntity___ctor(ClassBoardClassEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_4C42D17 & 1) == 0 )
+  if ( (byte_4C56AC0 & 1) == 0 )
   {
-    sub_1C37058(&Method_DataEntityBase_string___ctor__);
-    byte_4C42D17 = 1;
+    sub_1C3E564(&Method_DataEntityBase_string___ctor__);
+    byte_4C56AC0 = 1;
   }
   DataEntityBase_object____ctor(
     (DataEntityBase_PKType__o *)this,
-    (const MethodInfo_339EC34 *)Method_DataEntityBase_string___ctor__);
+    (const MethodInfo_33B0AEC *)Method_DataEntityBase_string___ctor__);
 }
 
 
 System_String_o *ClassBoardClassEntity__CreatePK(int32_t classBoardBaseId, int32_t classId, const MethodInfo *method)
 {
-  if ( (byte_4C42D16 & 1) == 0 )
+  if ( (byte_4C56ABF & 1) == 0 )
   {
-    sub_1C37058(&Method_DataEntityBase_CreateMultiplePK_int__int___);
-    byte_4C42D16 = 1;
+    sub_1C3E564(&Method_DataEntityBase_CreateMultiplePK_int__int___);
+    byte_4C56ABF = 1;
   }
   return DataEntityBase__CreateMultiplePK_int__int_(
            classBoardBaseId,
            classId,
-           (const MethodInfo_30E5DE0 *)Method_DataEntityBase_CreateMultiplePK_int__int___);
+           (const MethodInfo_30F7BF8 *)Method_DataEntityBase_CreateMultiplePK_int__int___);
 }
 
 
@@ -45,10 +45,10 @@ bool ClassBoardClassEntity__IsOpen(ClassBoardClassEntity_o *this, const MethodIn
   int32_t condType; // w21
   int64_t condNum; // x19
 
-  if ( (byte_4C42D15 & 1) == 0 )
+  if ( (byte_4C56ABE & 1) == 0 )
   {
-    sub_1C37058(&CondType_TypeInfo);
-    byte_4C42D15 = 1;
+    sub_1C3E564(&CondType_TypeInfo);
+    byte_4C56ABE = 1;
   }
   condType = this->fields.condType;
   condTargetId = this->fields.condTargetId;

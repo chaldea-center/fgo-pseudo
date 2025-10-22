@@ -5,153 +5,140 @@ void BattleEffectReplaceShaderTexture___ctor(BattleEffectReplaceShaderTexture_o 
   const MethodInfo *v5; // x3
   System_Collections_Generic_List_object__o *v6; // x20
   __int64 v7; // x0
-  int32_t v8; // w2
-  const MethodInfo *v9; // x3
-  Il2CppObject *v10; // x1
+  Il2CppObject *v8; // x1
+  int32_t v9; // w2
+  const MethodInfo *v10; // x3
   struct System_Object_array *items; // x8
   _QWORD *v12; // x9
   __int64 size; // x10
   Il2CppClass **v14; // x0
   int32_t v15; // w2
   const MethodInfo *v16; // x3
-  Il2CppObject *v17; // x1
-  struct System_Object_array *v18; // x8
-  _QWORD *v19; // x9
-  __int64 v20; // x10
-  Il2CppClass **v21; // x0
-  int32_t v22; // w2
-  const MethodInfo *v23; // x3
-  Il2CppObject *v24; // x1
-  struct System_Object_array *v25; // x8
-  _QWORD *v26; // x9
-  __int64 v27; // x10
-  Il2CppClass **v28; // x0
-  int32_t v29; // w2
-  const MethodInfo *v30; // x3
-  Il2CppObject *v31; // x1
-  struct System_Object_array *v32; // x8
-  _QWORD *v33; // x9
-  __int64 v34; // x10
-  Il2CppClass **v35; // x0
-  int32_t v36; // w2
-  const MethodInfo *v37; // x3
-  Il2CppObject *v38; // x1
-  struct System_Object_array *v39; // x8
-  _QWORD *v40; // x9
-  __int64 v41; // x10
-  Il2CppClass **v42; // x0
-  int32_t v43; // w2
-  const MethodInfo *v44; // x3
-  Il2CppObject *v45; // x1
-  struct System_Object_array *v46; // x8
-  _QWORD *v47; // x9
-  __int64 v48; // x10
-  Il2CppClass **v49; // x0
-  int32_t v50; // w2
-  const MethodInfo *v51; // x3
-  Il2CppObject *v52; // x1
+  struct System_Object_array *v17; // x8
+  _QWORD *v18; // x9
+  __int64 v19; // x10
+  Il2CppClass **v20; // x0
+  int32_t v21; // w2
+  const MethodInfo *v22; // x3
+  struct System_Object_array *v23; // x8
+  _QWORD *v24; // x9
+  __int64 v25; // x10
+  Il2CppClass **v26; // x0
+  int32_t v27; // w2
+  const MethodInfo *v28; // x3
+  struct System_Object_array *v29; // x8
+  _QWORD *v30; // x9
+  __int64 v31; // x10
+  Il2CppClass **v32; // x0
+  int32_t v33; // w2
+  const MethodInfo *v34; // x3
+  struct System_Object_array *v35; // x8
+  _QWORD *v36; // x9
+  __int64 v37; // x10
+  Il2CppClass **v38; // x0
+  int32_t v39; // w2
+  const MethodInfo *v40; // x3
+  struct System_Object_array *v41; // x8
+  _QWORD *v42; // x9
+  __int64 v43; // x10
+  Il2CppClass **v44; // x0
+  int32_t v45; // w2
+  const MethodInfo *v46; // x3
+  struct System_Object_array *v47; // x8
+  _QWORD *v48; // x9
+  __int64 v49; // x10
+  Il2CppClass **v50; // x0
+  int32_t v51; // w2
+  const MethodInfo *v52; // x3
   struct System_Object_array *v53; // x8
   _QWORD *v54; // x9
   __int64 v55; // x10
   Il2CppClass **v56; // x0
   int32_t v57; // w2
   const MethodInfo *v58; // x3
-  Il2CppObject *v59; // x1
-  struct System_Object_array *v60; // x8
-  _QWORD *v61; // x9
-  __int64 v62; // x10
-  Il2CppClass **v63; // x0
-  int32_t v64; // w2
-  const MethodInfo *v65; // x3
-  Il2CppObject *v66; // x1
-  struct System_Object_array *v67; // x8
-  _QWORD *v68; // x9
-  __int64 v69; // x10
-  Il2CppClass **v70; // x0
-  int32_t v71; // w2
-  const MethodInfo *v72; // x3
-  Il2CppObject *v73; // x1
-  struct System_Object_array *v74; // x8
-  _QWORD *v75; // x9
-  __int64 v76; // x10
-  Il2CppClass **v77; // x0
-  int32_t v78; // w2
-  const MethodInfo *v79; // x3
-  Il2CppObject *v80; // x1
-  struct System_Object_array *v81; // x8
-  _QWORD *v82; // x9
-  __int64 v83; // x10
-  Il2CppClass **v84; // x0
-  int32_t v85; // w2
-  const MethodInfo *v86; // x3
-  Il2CppObject *v87; // x1
-  struct System_Object_array *v88; // x8
-  _QWORD *v89; // x9
-  __int64 v90; // x10
-  Il2CppClass **v91; // x0
-  int32_t v92; // w2
-  const MethodInfo *v93; // x3
-  Il2CppObject *v94; // x1
-  struct System_Object_array *v95; // x8
-  _QWORD *v96; // x9
-  __int64 v97; // x10
-  Il2CppClass **v98; // x0
+  struct System_Object_array *v59; // x8
+  _QWORD *v60; // x9
+  __int64 v61; // x10
+  Il2CppClass **v62; // x0
+  int32_t v63; // w2
+  const MethodInfo *v64; // x3
+  struct System_Object_array *v65; // x8
+  _QWORD *v66; // x9
+  __int64 v67; // x10
+  Il2CppClass **v68; // x0
+  int32_t v69; // w2
+  const MethodInfo *v70; // x3
+  struct System_Object_array *v71; // x8
+  _QWORD *v72; // x9
+  __int64 v73; // x10
+  Il2CppClass **v74; // x0
+  int32_t v75; // w2
+  const MethodInfo *v76; // x3
+  struct System_Object_array *v77; // x8
+  _QWORD *v78; // x9
+  __int64 v79; // x10
+  Il2CppClass **v80; // x0
+  int32_t v81; // w2
+  const MethodInfo *v82; // x3
+  struct System_Object_array *v83; // x8
+  _QWORD *v84; // x9
+  __int64 v85; // x10
+  Il2CppClass **v86; // x0
+  int32_t v87; // w2
+  const MethodInfo *v88; // x3
+  struct System_Object_array *v89; // x8
+  _QWORD *v90; // x9
+  __int64 v91; // x10
+  Il2CppClass **v92; // x0
+  int32_t v93; // w2
+  const MethodInfo *v94; // x3
+  System_Collections_Generic_List_object__o *v95; // x20
+  int32_t v96; // w2
+  const MethodInfo *v97; // x3
+  System_Collections_Generic_List_object__o *v98; // x20
   int32_t v99; // w2
   const MethodInfo *v100; // x3
-  Il2CppObject *v101; // x1
-  struct System_Object_array *v102; // x8
-  _QWORD *v103; // x9
-  __int64 v104; // x10
-  Il2CppClass **v105; // x0
-  int32_t v106; // w2
-  const MethodInfo *v107; // x3
-  System_Collections_Generic_List_object__o *v108; // x20
-  int32_t v109; // w2
-  const MethodInfo *v110; // x3
-  System_Collections_Generic_List_object__o *v111; // x20
-  int32_t v112; // w2
-  const MethodInfo *v113; // x3
 
-  if ( (byte_4C463EC & 1) == 0 )
+  if ( (byte_4C5A1E3 & 1) == 0 )
   {
-    sub_1C37058(&Method_System_Collections_Generic_List_string__Add__);
-    sub_1C37058(&Method_System_Collections_Generic_List_Material___ctor__);
-    sub_1C37058(&Method_System_Collections_Generic_List_GameObject___ctor__);
-    sub_1C37058(&Method_System_Collections_Generic_List_string___ctor__);
-    sub_1C37058(&Method_System_Collections_Generic_List_BattleEffectReplaceShaderTexture_ReplaceObject___ctor__);
-    sub_1C37058(&System_Collections_Generic_List_Material__TypeInfo);
-    sub_1C37058(&System_Collections_Generic_List_BattleEffectReplaceShaderTexture_ReplaceObject__TypeInfo);
-    sub_1C37058(&System_Collections_Generic_List_GameObject__TypeInfo);
-    sub_1C37058(&System_Collections_Generic_List_string__TypeInfo);
-    sub_1C37058(&StringLiteral_7322/*"Hidden/Particle/MultiplyAdd1Pass-Stencil"*/);
-    sub_1C37058(&StringLiteral_7325/*"Hidden/Particle/distortion-GrabPass"*/);
-    sub_1C37058(&StringLiteral_6407/*"FGO_Battle/Ken/Base"*/);
-    sub_1C37058(&StringLiteral_7326/*"Hidden/Particle/distortion-Stencil"*/);
-    sub_1C37058(&StringLiteral_7324/*"Hidden/Particle/distortion"*/);
-    sub_1C37058(&StringLiteral_6408/*"FGO_Battle/Particle/Base"*/);
-    sub_1C37058(&StringLiteral_7321/*"Hidden/Particle/MultiplyAdd1Pass"*/);
-    sub_1C37058(&StringLiteral_7314/*"Hidden/Ken/Distortion"*/);
-    sub_1C37058(&StringLiteral_7323/*"Hidden/Particle/dissolve"*/);
-    sub_1C37058(&StringLiteral_7316/*"Hidden/Ken/MultiplyAdd"*/);
-    sub_1C37058(&StringLiteral_7318/*"Hidden/Particle/Base-Stencil"*/);
-    sub_1C37058(&StringLiteral_7319/*"Hidden/Particle/MultiplyAdd"*/);
-    sub_1C37058(&StringLiteral_7320/*"Hidden/Particle/MultiplyAdd-Stencil"*/);
-    sub_1C37058(&StringLiteral_7315/*"Hidden/Ken/GradationMap"*/);
-    byte_4C463EC = 1;
+    sub_1C3E564(&Method_System_Collections_Generic_List_string__Add__);
+    sub_1C3E564(&Method_System_Collections_Generic_List_Material___ctor__);
+    sub_1C3E564(&Method_System_Collections_Generic_List_GameObject___ctor__);
+    sub_1C3E564(&Method_System_Collections_Generic_List_string___ctor__);
+    sub_1C3E564(&Method_System_Collections_Generic_List_BattleEffectReplaceShaderTexture_ReplaceObject___ctor__);
+    sub_1C3E564(&System_Collections_Generic_List_Material__TypeInfo);
+    sub_1C3E564(&System_Collections_Generic_List_BattleEffectReplaceShaderTexture_ReplaceObject__TypeInfo);
+    sub_1C3E564(&System_Collections_Generic_List_GameObject__TypeInfo);
+    sub_1C3E564(&System_Collections_Generic_List_string__TypeInfo);
+    sub_1C3E564(&StringLiteral_7322/*"Hidden/Particle/MultiplyAdd1Pass-Stencil"*/);
+    sub_1C3E564(&StringLiteral_7325/*"Hidden/Particle/distortion-GrabPass"*/);
+    sub_1C3E564(&StringLiteral_6407/*"FGO_Battle/Ken/Base"*/);
+    sub_1C3E564(&StringLiteral_7326/*"Hidden/Particle/distortion-Stencil"*/);
+    sub_1C3E564(&StringLiteral_7324/*"Hidden/Particle/distortion"*/);
+    sub_1C3E564(&StringLiteral_6408/*"FGO_Battle/Particle/Base"*/);
+    sub_1C3E564(&StringLiteral_7321/*"Hidden/Particle/MultiplyAdd1Pass"*/);
+    sub_1C3E564(&StringLiteral_7314/*"Hidden/Ken/Distortion"*/);
+    sub_1C3E564(&StringLiteral_7323/*"Hidden/Particle/dissolve"*/);
+    sub_1C3E564(&StringLiteral_7316/*"Hidden/Ken/MultiplyAdd"*/);
+    sub_1C3E564(&StringLiteral_7318/*"Hidden/Particle/Base-Stencil"*/);
+    sub_1C3E564(&StringLiteral_7319/*"Hidden/Particle/MultiplyAdd"*/);
+    sub_1C3E564(&StringLiteral_7320/*"Hidden/Particle/MultiplyAdd-Stencil"*/);
+    sub_1C3E564(&StringLiteral_7315/*"Hidden/Ken/GradationMap"*/);
+    byte_4C5A1E3 = 1;
   }
-  v3 = (System_Collections_Generic_List_object__o *)sub_1C372A4(System_Collections_Generic_List_BattleEffectReplaceShaderTexture_ReplaceObject__TypeInfo);
+  v3 = (System_Collections_Generic_List_object__o *)sub_1C3E7B0(System_Collections_Generic_List_BattleEffectReplaceShaderTexture_ReplaceObject__TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v3,
-    (const MethodInfo_37A27F0 *)Method_System_Collections_Generic_List_BattleEffectReplaceShaderTexture_ReplaceObject___ctor__);
+    (const MethodInfo_37B4C2C *)Method_System_Collections_Generic_List_BattleEffectReplaceShaderTexture_ReplaceObject___ctor__);
   this->fields.replaceObjects = (struct System_Collections_Generic_List_BattleEffectReplaceShaderTexture_ReplaceObject__o *)v3;
-  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.replaceObjects, (int32_t)v3, v4, v5);
-  v6 = (System_Collections_Generic_List_object__o *)sub_1C372A4(System_Collections_Generic_List_string__TypeInfo);
+  sub_1C3E508((CGThumbnailListItem_o *)&this->fields.replaceObjects, (int32_t)v3, v4, v5);
+  v6 = (System_Collections_Generic_List_object__o *)sub_1C3E7B0(System_Collections_Generic_List_string__TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v6,
-    (const MethodInfo_37A27F0 *)Method_System_Collections_Generic_List_string___ctor__);
+    (const MethodInfo_37B4C2C *)Method_System_Collections_Generic_List_string___ctor__);
   if ( !v6 )
     goto LABEL_61;
-  v10 = (Il2CppObject *)StringLiteral_6408/*"FGO_Battle/Particle/Base"*/;
+  v8 = (Il2CppObject *)StringLiteral_6408/*"FGO_Battle/Particle/Base"*/;
   items = v6->fields._items;
   v12 = Method_System_Collections_Generic_List_string__Add__;
   ++v6->fields._version;
@@ -162,122 +149,143 @@ void BattleEffectReplaceShaderTexture___ctor(BattleEffectReplaceShaderTexture_o 
   {
     System_Collections_Generic_List_object___AddWithResize(
       v6,
-      v10,
-      *(const MethodInfo_37A3024 **)(*(_QWORD *)(v12[4] + 192LL) + 112LL));
+      v8,
+      *(const MethodInfo_37B5460 **)(*(_QWORD *)(v12[4] + 192LL) + 112LL));
   }
   else
   {
     v14 = &items->obj.klass + size;
     v6->fields._size = size + 1;
-    v14[4] = (Il2CppClass *)v10;
-    sub_1C36FFC((CGThumbnailListItem_o *)(v14 + 4), (int32_t)v10, v8, v9);
+    v14[4] = (Il2CppClass *)v8;
+    sub_1C3E508((CGThumbnailListItem_o *)(v14 + 4), (int32_t)v8, v9, v10);
   }
-  v17 = (Il2CppObject *)StringLiteral_7319/*"Hidden/Particle/MultiplyAdd"*/;
-  v18 = v6->fields._items;
-  v19 = Method_System_Collections_Generic_List_string__Add__;
+  v8 = (Il2CppObject *)StringLiteral_7319/*"Hidden/Particle/MultiplyAdd"*/;
+  v17 = v6->fields._items;
+  v18 = Method_System_Collections_Generic_List_string__Add__;
   ++v6->fields._version;
-  if ( !v18 )
+  if ( !v17 )
     goto LABEL_61;
-  v20 = v6->fields._size;
-  if ( (unsigned int)v20 >= LODWORD(v18->max_length) )
+  v19 = v6->fields._size;
+  if ( (unsigned int)v19 >= LODWORD(v17->max_length) )
   {
     System_Collections_Generic_List_object___AddWithResize(
       v6,
-      v17,
-      *(const MethodInfo_37A3024 **)(*(_QWORD *)(v19[4] + 192LL) + 112LL));
+      v8,
+      *(const MethodInfo_37B5460 **)(*(_QWORD *)(v18[4] + 192LL) + 112LL));
   }
   else
   {
-    v21 = &v18->obj.klass + v20;
-    v6->fields._size = v20 + 1;
-    v21[4] = (Il2CppClass *)v17;
-    sub_1C36FFC((CGThumbnailListItem_o *)(v21 + 4), (int32_t)v17, v15, v16);
+    v20 = &v17->obj.klass + v19;
+    v6->fields._size = v19 + 1;
+    v20[4] = (Il2CppClass *)v8;
+    sub_1C3E508((CGThumbnailListItem_o *)(v20 + 4), (int32_t)v8, v15, v16);
   }
-  v24 = (Il2CppObject *)StringLiteral_7321/*"Hidden/Particle/MultiplyAdd1Pass"*/;
-  v25 = v6->fields._items;
-  v26 = Method_System_Collections_Generic_List_string__Add__;
+  v8 = (Il2CppObject *)StringLiteral_7321/*"Hidden/Particle/MultiplyAdd1Pass"*/;
+  v23 = v6->fields._items;
+  v24 = Method_System_Collections_Generic_List_string__Add__;
   ++v6->fields._version;
-  if ( !v25 )
+  if ( !v23 )
     goto LABEL_61;
-  v27 = v6->fields._size;
-  if ( (unsigned int)v27 >= LODWORD(v25->max_length) )
+  v25 = v6->fields._size;
+  if ( (unsigned int)v25 >= LODWORD(v23->max_length) )
   {
     System_Collections_Generic_List_object___AddWithResize(
       v6,
-      v24,
-      *(const MethodInfo_37A3024 **)(*(_QWORD *)(v26[4] + 192LL) + 112LL));
+      v8,
+      *(const MethodInfo_37B5460 **)(*(_QWORD *)(v24[4] + 192LL) + 112LL));
   }
   else
   {
-    v28 = &v25->obj.klass + v27;
-    v6->fields._size = v27 + 1;
-    v28[4] = (Il2CppClass *)v24;
-    sub_1C36FFC((CGThumbnailListItem_o *)(v28 + 4), (int32_t)v24, v22, v23);
+    v26 = &v23->obj.klass + v25;
+    v6->fields._size = v25 + 1;
+    v26[4] = (Il2CppClass *)v8;
+    sub_1C3E508((CGThumbnailListItem_o *)(v26 + 4), (int32_t)v8, v21, v22);
   }
-  v31 = (Il2CppObject *)StringLiteral_7324/*"Hidden/Particle/distortion"*/;
-  v32 = v6->fields._items;
-  v33 = Method_System_Collections_Generic_List_string__Add__;
+  v8 = (Il2CppObject *)StringLiteral_7324/*"Hidden/Particle/distortion"*/;
+  v29 = v6->fields._items;
+  v30 = Method_System_Collections_Generic_List_string__Add__;
   ++v6->fields._version;
-  if ( !v32 )
+  if ( !v29 )
     goto LABEL_61;
-  v34 = v6->fields._size;
-  if ( (unsigned int)v34 >= LODWORD(v32->max_length) )
+  v31 = v6->fields._size;
+  if ( (unsigned int)v31 >= LODWORD(v29->max_length) )
   {
     System_Collections_Generic_List_object___AddWithResize(
       v6,
-      v31,
-      *(const MethodInfo_37A3024 **)(*(_QWORD *)(v33[4] + 192LL) + 112LL));
+      v8,
+      *(const MethodInfo_37B5460 **)(*(_QWORD *)(v30[4] + 192LL) + 112LL));
   }
   else
   {
-    v35 = &v32->obj.klass + v34;
-    v6->fields._size = v34 + 1;
-    v35[4] = (Il2CppClass *)v31;
-    sub_1C36FFC((CGThumbnailListItem_o *)(v35 + 4), (int32_t)v31, v29, v30);
+    v32 = &v29->obj.klass + v31;
+    v6->fields._size = v31 + 1;
+    v32[4] = (Il2CppClass *)v8;
+    sub_1C3E508((CGThumbnailListItem_o *)(v32 + 4), (int32_t)v8, v27, v28);
   }
-  v38 = (Il2CppObject *)StringLiteral_7318/*"Hidden/Particle/Base-Stencil"*/;
-  v39 = v6->fields._items;
-  v40 = Method_System_Collections_Generic_List_string__Add__;
+  v8 = (Il2CppObject *)StringLiteral_7318/*"Hidden/Particle/Base-Stencil"*/;
+  v35 = v6->fields._items;
+  v36 = Method_System_Collections_Generic_List_string__Add__;
   ++v6->fields._version;
-  if ( !v39 )
+  if ( !v35 )
     goto LABEL_61;
-  v41 = v6->fields._size;
-  if ( (unsigned int)v41 >= LODWORD(v39->max_length) )
+  v37 = v6->fields._size;
+  if ( (unsigned int)v37 >= LODWORD(v35->max_length) )
   {
     System_Collections_Generic_List_object___AddWithResize(
       v6,
-      v38,
-      *(const MethodInfo_37A3024 **)(*(_QWORD *)(v40[4] + 192LL) + 112LL));
+      v8,
+      *(const MethodInfo_37B5460 **)(*(_QWORD *)(v36[4] + 192LL) + 112LL));
   }
   else
   {
-    v42 = &v39->obj.klass + v41;
-    v6->fields._size = v41 + 1;
-    v42[4] = (Il2CppClass *)v38;
-    sub_1C36FFC((CGThumbnailListItem_o *)(v42 + 4), (int32_t)v38, v36, v37);
+    v38 = &v35->obj.klass + v37;
+    v6->fields._size = v37 + 1;
+    v38[4] = (Il2CppClass *)v8;
+    sub_1C3E508((CGThumbnailListItem_o *)(v38 + 4), (int32_t)v8, v33, v34);
   }
-  v45 = (Il2CppObject *)StringLiteral_7320/*"Hidden/Particle/MultiplyAdd-Stencil"*/;
-  v46 = v6->fields._items;
-  v47 = Method_System_Collections_Generic_List_string__Add__;
+  v8 = (Il2CppObject *)StringLiteral_7320/*"Hidden/Particle/MultiplyAdd-Stencil"*/;
+  v41 = v6->fields._items;
+  v42 = Method_System_Collections_Generic_List_string__Add__;
   ++v6->fields._version;
-  if ( !v46 )
+  if ( !v41 )
     goto LABEL_61;
-  v48 = v6->fields._size;
-  if ( (unsigned int)v48 >= LODWORD(v46->max_length) )
+  v43 = v6->fields._size;
+  if ( (unsigned int)v43 >= LODWORD(v41->max_length) )
   {
     System_Collections_Generic_List_object___AddWithResize(
       v6,
-      v45,
-      *(const MethodInfo_37A3024 **)(*(_QWORD *)(v47[4] + 192LL) + 112LL));
+      v8,
+      *(const MethodInfo_37B5460 **)(*(_QWORD *)(v42[4] + 192LL) + 112LL));
   }
   else
   {
-    v49 = &v46->obj.klass + v48;
-    v6->fields._size = v48 + 1;
-    v49[4] = (Il2CppClass *)v45;
-    sub_1C36FFC((CGThumbnailListItem_o *)(v49 + 4), (int32_t)v45, v43, v44);
+    v44 = &v41->obj.klass + v43;
+    v6->fields._size = v43 + 1;
+    v44[4] = (Il2CppClass *)v8;
+    sub_1C3E508((CGThumbnailListItem_o *)(v44 + 4), (int32_t)v8, v39, v40);
   }
-  v52 = (Il2CppObject *)StringLiteral_7322/*"Hidden/Particle/MultiplyAdd1Pass-Stencil"*/;
+  v8 = (Il2CppObject *)StringLiteral_7322/*"Hidden/Particle/MultiplyAdd1Pass-Stencil"*/;
+  v47 = v6->fields._items;
+  v48 = Method_System_Collections_Generic_List_string__Add__;
+  ++v6->fields._version;
+  if ( !v47 )
+    goto LABEL_61;
+  v49 = v6->fields._size;
+  if ( (unsigned int)v49 >= LODWORD(v47->max_length) )
+  {
+    System_Collections_Generic_List_object___AddWithResize(
+      v6,
+      v8,
+      *(const MethodInfo_37B5460 **)(*(_QWORD *)(v48[4] + 192LL) + 112LL));
+  }
+  else
+  {
+    v50 = &v47->obj.klass + v49;
+    v6->fields._size = v49 + 1;
+    v50[4] = (Il2CppClass *)v8;
+    sub_1C3E508((CGThumbnailListItem_o *)(v50 + 4), (int32_t)v8, v45, v46);
+  }
+  v8 = (Il2CppObject *)StringLiteral_7326/*"Hidden/Particle/distortion-Stencil"*/;
   v53 = v6->fields._items;
   v54 = Method_System_Collections_Generic_List_string__Add__;
   ++v6->fields._version;
@@ -288,178 +296,157 @@ void BattleEffectReplaceShaderTexture___ctor(BattleEffectReplaceShaderTexture_o 
   {
     System_Collections_Generic_List_object___AddWithResize(
       v6,
-      v52,
-      *(const MethodInfo_37A3024 **)(*(_QWORD *)(v54[4] + 192LL) + 112LL));
+      v8,
+      *(const MethodInfo_37B5460 **)(*(_QWORD *)(v54[4] + 192LL) + 112LL));
   }
   else
   {
     v56 = &v53->obj.klass + v55;
     v6->fields._size = v55 + 1;
-    v56[4] = (Il2CppClass *)v52;
-    sub_1C36FFC((CGThumbnailListItem_o *)(v56 + 4), (int32_t)v52, v50, v51);
+    v56[4] = (Il2CppClass *)v8;
+    sub_1C3E508((CGThumbnailListItem_o *)(v56 + 4), (int32_t)v8, v51, v52);
   }
-  v59 = (Il2CppObject *)StringLiteral_7326/*"Hidden/Particle/distortion-Stencil"*/;
-  v60 = v6->fields._items;
-  v61 = Method_System_Collections_Generic_List_string__Add__;
+  v8 = (Il2CppObject *)StringLiteral_7325/*"Hidden/Particle/distortion-GrabPass"*/;
+  v59 = v6->fields._items;
+  v60 = Method_System_Collections_Generic_List_string__Add__;
   ++v6->fields._version;
-  if ( !v60 )
+  if ( !v59 )
     goto LABEL_61;
-  v62 = v6->fields._size;
-  if ( (unsigned int)v62 >= LODWORD(v60->max_length) )
+  v61 = v6->fields._size;
+  if ( (unsigned int)v61 >= LODWORD(v59->max_length) )
   {
     System_Collections_Generic_List_object___AddWithResize(
       v6,
-      v59,
-      *(const MethodInfo_37A3024 **)(*(_QWORD *)(v61[4] + 192LL) + 112LL));
+      v8,
+      *(const MethodInfo_37B5460 **)(*(_QWORD *)(v60[4] + 192LL) + 112LL));
   }
   else
   {
-    v63 = &v60->obj.klass + v62;
-    v6->fields._size = v62 + 1;
-    v63[4] = (Il2CppClass *)v59;
-    sub_1C36FFC((CGThumbnailListItem_o *)(v63 + 4), (int32_t)v59, v57, v58);
+    v62 = &v59->obj.klass + v61;
+    v6->fields._size = v61 + 1;
+    v62[4] = (Il2CppClass *)v8;
+    sub_1C3E508((CGThumbnailListItem_o *)(v62 + 4), (int32_t)v8, v57, v58);
   }
-  v66 = (Il2CppObject *)StringLiteral_7325/*"Hidden/Particle/distortion-GrabPass"*/;
-  v67 = v6->fields._items;
-  v68 = Method_System_Collections_Generic_List_string__Add__;
+  v8 = (Il2CppObject *)StringLiteral_7323/*"Hidden/Particle/dissolve"*/;
+  v65 = v6->fields._items;
+  v66 = Method_System_Collections_Generic_List_string__Add__;
   ++v6->fields._version;
-  if ( !v67 )
+  if ( !v65 )
     goto LABEL_61;
-  v69 = v6->fields._size;
-  if ( (unsigned int)v69 >= LODWORD(v67->max_length) )
+  v67 = v6->fields._size;
+  if ( (unsigned int)v67 >= LODWORD(v65->max_length) )
   {
     System_Collections_Generic_List_object___AddWithResize(
       v6,
-      v66,
-      *(const MethodInfo_37A3024 **)(*(_QWORD *)(v68[4] + 192LL) + 112LL));
+      v8,
+      *(const MethodInfo_37B5460 **)(*(_QWORD *)(v66[4] + 192LL) + 112LL));
   }
   else
   {
-    v70 = &v67->obj.klass + v69;
-    v6->fields._size = v69 + 1;
-    v70[4] = (Il2CppClass *)v66;
-    sub_1C36FFC((CGThumbnailListItem_o *)(v70 + 4), (int32_t)v66, v64, v65);
+    v68 = &v65->obj.klass + v67;
+    v6->fields._size = v67 + 1;
+    v68[4] = (Il2CppClass *)v8;
+    sub_1C3E508((CGThumbnailListItem_o *)(v68 + 4), (int32_t)v8, v63, v64);
   }
-  v73 = (Il2CppObject *)StringLiteral_7323/*"Hidden/Particle/dissolve"*/;
-  v74 = v6->fields._items;
-  v75 = Method_System_Collections_Generic_List_string__Add__;
+  v8 = (Il2CppObject *)StringLiteral_6407/*"FGO_Battle/Ken/Base"*/;
+  v71 = v6->fields._items;
+  v72 = Method_System_Collections_Generic_List_string__Add__;
   ++v6->fields._version;
-  if ( !v74 )
+  if ( !v71 )
     goto LABEL_61;
-  v76 = v6->fields._size;
-  if ( (unsigned int)v76 >= LODWORD(v74->max_length) )
+  v73 = v6->fields._size;
+  if ( (unsigned int)v73 >= LODWORD(v71->max_length) )
   {
     System_Collections_Generic_List_object___AddWithResize(
       v6,
-      v73,
-      *(const MethodInfo_37A3024 **)(*(_QWORD *)(v75[4] + 192LL) + 112LL));
+      v8,
+      *(const MethodInfo_37B5460 **)(*(_QWORD *)(v72[4] + 192LL) + 112LL));
   }
   else
   {
-    v77 = &v74->obj.klass + v76;
-    v6->fields._size = v76 + 1;
-    v77[4] = (Il2CppClass *)v73;
-    sub_1C36FFC((CGThumbnailListItem_o *)(v77 + 4), (int32_t)v73, v71, v72);
+    v74 = &v71->obj.klass + v73;
+    v6->fields._size = v73 + 1;
+    v74[4] = (Il2CppClass *)v8;
+    sub_1C3E508((CGThumbnailListItem_o *)(v74 + 4), (int32_t)v8, v69, v70);
   }
-  v80 = (Il2CppObject *)StringLiteral_6407/*"FGO_Battle/Ken/Base"*/;
-  v81 = v6->fields._items;
-  v82 = Method_System_Collections_Generic_List_string__Add__;
+  v8 = (Il2CppObject *)StringLiteral_7316/*"Hidden/Ken/MultiplyAdd"*/;
+  v77 = v6->fields._items;
+  v78 = Method_System_Collections_Generic_List_string__Add__;
   ++v6->fields._version;
-  if ( !v81 )
+  if ( !v77 )
     goto LABEL_61;
-  v83 = v6->fields._size;
-  if ( (unsigned int)v83 >= LODWORD(v81->max_length) )
+  v79 = v6->fields._size;
+  if ( (unsigned int)v79 >= LODWORD(v77->max_length) )
   {
     System_Collections_Generic_List_object___AddWithResize(
       v6,
-      v80,
-      *(const MethodInfo_37A3024 **)(*(_QWORD *)(v82[4] + 192LL) + 112LL));
+      v8,
+      *(const MethodInfo_37B5460 **)(*(_QWORD *)(v78[4] + 192LL) + 112LL));
   }
   else
   {
-    v84 = &v81->obj.klass + v83;
-    v6->fields._size = v83 + 1;
-    v84[4] = (Il2CppClass *)v80;
-    sub_1C36FFC((CGThumbnailListItem_o *)(v84 + 4), (int32_t)v80, v78, v79);
+    v80 = &v77->obj.klass + v79;
+    v6->fields._size = v79 + 1;
+    v80[4] = (Il2CppClass *)v8;
+    sub_1C3E508((CGThumbnailListItem_o *)(v80 + 4), (int32_t)v8, v75, v76);
   }
-  v87 = (Il2CppObject *)StringLiteral_7316/*"Hidden/Ken/MultiplyAdd"*/;
-  v88 = v6->fields._items;
-  v89 = Method_System_Collections_Generic_List_string__Add__;
+  v8 = (Il2CppObject *)StringLiteral_7314/*"Hidden/Ken/Distortion"*/;
+  v83 = v6->fields._items;
+  v84 = Method_System_Collections_Generic_List_string__Add__;
   ++v6->fields._version;
-  if ( !v88 )
+  if ( !v83 )
     goto LABEL_61;
-  v90 = v6->fields._size;
-  if ( (unsigned int)v90 >= LODWORD(v88->max_length) )
+  v85 = v6->fields._size;
+  if ( (unsigned int)v85 >= LODWORD(v83->max_length) )
   {
     System_Collections_Generic_List_object___AddWithResize(
       v6,
-      v87,
-      *(const MethodInfo_37A3024 **)(*(_QWORD *)(v89[4] + 192LL) + 112LL));
+      v8,
+      *(const MethodInfo_37B5460 **)(*(_QWORD *)(v84[4] + 192LL) + 112LL));
   }
   else
   {
-    v91 = &v88->obj.klass + v90;
-    v6->fields._size = v90 + 1;
-    v91[4] = (Il2CppClass *)v87;
-    sub_1C36FFC((CGThumbnailListItem_o *)(v91 + 4), (int32_t)v87, v85, v86);
+    v86 = &v83->obj.klass + v85;
+    v6->fields._size = v85 + 1;
+    v86[4] = (Il2CppClass *)v8;
+    sub_1C3E508((CGThumbnailListItem_o *)(v86 + 4), (int32_t)v8, v81, v82);
   }
-  v94 = (Il2CppObject *)StringLiteral_7314/*"Hidden/Ken/Distortion"*/;
-  v95 = v6->fields._items;
-  v96 = Method_System_Collections_Generic_List_string__Add__;
+  v8 = (Il2CppObject *)StringLiteral_7315/*"Hidden/Ken/GradationMap"*/;
+  v89 = v6->fields._items;
+  v90 = Method_System_Collections_Generic_List_string__Add__;
   ++v6->fields._version;
-  if ( !v95 )
-    goto LABEL_61;
-  v97 = v6->fields._size;
-  if ( (unsigned int)v97 >= LODWORD(v95->max_length) )
-  {
-    System_Collections_Generic_List_object___AddWithResize(
-      v6,
-      v94,
-      *(const MethodInfo_37A3024 **)(*(_QWORD *)(v96[4] + 192LL) + 112LL));
-  }
-  else
-  {
-    v98 = &v95->obj.klass + v97;
-    v6->fields._size = v97 + 1;
-    v98[4] = (Il2CppClass *)v94;
-    sub_1C36FFC((CGThumbnailListItem_o *)(v98 + 4), (int32_t)v94, v92, v93);
-  }
-  v101 = (Il2CppObject *)StringLiteral_7315/*"Hidden/Ken/GradationMap"*/;
-  v102 = v6->fields._items;
-  v103 = Method_System_Collections_Generic_List_string__Add__;
-  ++v6->fields._version;
-  if ( !v102 )
+  if ( !v89 )
 LABEL_61:
-    sub_1C372B4(v7);
-  v104 = v6->fields._size;
-  if ( (unsigned int)v104 >= LODWORD(v102->max_length) )
+    sub_1C3E7C0(v7, v8);
+  v91 = v6->fields._size;
+  if ( (unsigned int)v91 >= LODWORD(v89->max_length) )
   {
     System_Collections_Generic_List_object___AddWithResize(
       v6,
-      v101,
-      *(const MethodInfo_37A3024 **)(*(_QWORD *)(v103[4] + 192LL) + 112LL));
+      v8,
+      *(const MethodInfo_37B5460 **)(*(_QWORD *)(v90[4] + 192LL) + 112LL));
   }
   else
   {
-    v105 = &v102->obj.klass + v104;
-    v6->fields._size = v104 + 1;
-    v105[4] = (Il2CppClass *)v101;
-    sub_1C36FFC((CGThumbnailListItem_o *)(v105 + 4), (int32_t)v101, v99, v100);
+    v92 = &v89->obj.klass + v91;
+    v6->fields._size = v91 + 1;
+    v92[4] = (Il2CppClass *)v8;
+    sub_1C3E508((CGThumbnailListItem_o *)(v92 + 4), (int32_t)v8, v87, v88);
   }
   this->fields.autoReplaceShaderNames = (struct System_Collections_Generic_List_string__o *)v6;
-  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.autoReplaceShaderNames, (int32_t)v6, v106, v107);
-  v108 = (System_Collections_Generic_List_object__o *)sub_1C372A4(System_Collections_Generic_List_Material__TypeInfo);
+  sub_1C3E508((CGThumbnailListItem_o *)&this->fields.autoReplaceShaderNames, (int32_t)v6, v93, v94);
+  v95 = (System_Collections_Generic_List_object__o *)sub_1C3E7B0(System_Collections_Generic_List_Material__TypeInfo);
   System_Collections_Generic_List_object____ctor(
-    v108,
-    (const MethodInfo_37A27F0 *)Method_System_Collections_Generic_List_Material___ctor__);
-  this->fields.replaceMaterials = (struct System_Collections_Generic_List_Material__o *)v108;
-  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.replaceMaterials, (int32_t)v108, v109, v110);
-  v111 = (System_Collections_Generic_List_object__o *)sub_1C372A4(System_Collections_Generic_List_GameObject__TypeInfo);
+    v95,
+    (const MethodInfo_37B4C2C *)Method_System_Collections_Generic_List_Material___ctor__);
+  this->fields.replaceMaterials = (struct System_Collections_Generic_List_Material__o *)v95;
+  sub_1C3E508((CGThumbnailListItem_o *)&this->fields.replaceMaterials, (int32_t)v95, v96, v97);
+  v98 = (System_Collections_Generic_List_object__o *)sub_1C3E7B0(System_Collections_Generic_List_GameObject__TypeInfo);
   System_Collections_Generic_List_object____ctor(
-    v111,
-    (const MethodInfo_37A27F0 *)Method_System_Collections_Generic_List_GameObject___ctor__);
-  this->fields.shadowAuraList = (struct System_Collections_Generic_List_GameObject__o *)v111;
-  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.shadowAuraList, (int32_t)v111, v112, v113);
+    v98,
+    (const MethodInfo_37B4C2C *)Method_System_Collections_Generic_List_GameObject___ctor__);
+  this->fields.shadowAuraList = (struct System_Collections_Generic_List_GameObject__o *)v98;
+  sub_1C3E508((CGThumbnailListItem_o *)&this->fields.shadowAuraList, (int32_t)v98, v99, v100);
   UnityEngine_MonoBehaviour___ctor((UnityEngine_MonoBehaviour_o *)this, 0);
 }
 
@@ -471,240 +458,256 @@ void BattleEffectReplaceShaderTexture__Execute(BattleEffectReplaceShaderTexture_
   System_Collections_Generic_Dictionary_object__object__o *v4; // x20
   UnityEngine_Object_o *v5; // x20
   _BOOL8 v6; // x0
-  const MethodInfo *v7; // x4
+  __int64 v7; // x1
+  const MethodInfo *v8; // x4
   Il2CppObject *current; // x26
   System_Collections_Generic_List_object__o *TargetActors; // x0
-  _BOOL8 v10; // x0
-  BattleActorControl_o *v11; // x29
+  __int64 v11; // x1
+  _BOOL8 v12; // x0
+  __int64 v13; // x1
+  BattleActorControl_o *v14; // x29
   bool isChocoServant; // w22
   _BOOL8 isShadowServant; // x0
-  const MethodInfo *v14; // x3
-  bool v15; // w23
+  __int64 v17; // x1
+  const MethodInfo *v18; // x3
+  bool v19; // w23
   UnityEngine_Object_o *ActorTexture; // x24
   BattleServantData_o *battleSvtData; // x0
   long double inited; // q0
   System_Collections_Generic_IEnumerable_TSource__o *klass; // x25
-  _QWORD *v20; // x25
-  __int64 v21; // x8
-  __int64 v22; // x0
-  __int64 v23; // x0
+  _QWORD *v24; // x25
+  __int64 v25; // x8
+  __int64 v26; // x0
+  __int64 v27; // x0
   UnityEngine_Transform_o *transform; // x0
   Il2CppObject *NodeFromName; // x1
   System_Collections_Generic_IEnumerable_T__o *appended; // x0
-  System_Collections_Generic_IEnumerable_T__o *v27; // x25
-  Il2CppObject *v28; // x1
-  System_Collections_Generic_IEnumerable_Transform__o *v29; // x28
+  System_Collections_Generic_IEnumerable_T__o *v31; // x25
+  Il2CppObject *v32; // x1
+  System_Collections_Generic_IEnumerable_Transform__o *v33; // x28
   System_Collections_Generic_List_object__o *shadowAuraList; // x25
-  NpcServantDisplayTypeDetailEntity_o *v31; // x27
+  NpcServantDisplayTypeDetailEntity_o *v35; // x27
   System_Collections_Generic_IEnumerable_T__o *ShadowEffectAndAttachForEachNodes; // x0
   UnityEngine_Object_o *monitor; // x25
-  UnityEngine_Object_o *v34; // x0
-  System_Collections_Generic_List_object__o *v35; // x0
-  System_Collections_Generic_List_T__o *v36; // x0
-  Il2CppObject *v37; // x28
-  const MethodInfo *v38; // x5
+  __int64 v38; // x1
+  UnityEngine_Object_o *v39; // x0
+  System_Collections_Generic_List_object__o *v40; // x0
+  __int64 v41; // x1
+  System_Collections_Generic_List_T__o *v42; // x0
+  Il2CppObject *v43; // x28
+  const MethodInfo *v44; // x5
   UnityEngine_Renderer_array *TargetRenderers; // x0
-  UnityEngine_Renderer_array *v40; // x27
+  __int64 v46; // x1
+  UnityEngine_Renderer_array *v47; // x27
   il2cpp_array_size_t max_length; // x8
-  unsigned __int64 v42; // x9
-  System_Collections_Generic_List_object__o *v43; // x0
-  Il2CppObject *v44; // x25
-  const MethodInfo *v45; // x4
+  unsigned __int64 v49; // x9
+  System_Collections_Generic_List_object__o *v50; // x0
+  Il2CppObject *v51; // x25
+  const MethodInfo *v52; // x4
   System_Collections_Generic_List_object__o *TargetMaterials; // x0
-  Il2CppObject *v47; // x28
-  _BOOL8 v48; // x0
+  __int64 v54; // x1
+  Il2CppObject *v55; // x28
+  _BOOL8 v56; // x0
+  __int64 v57; // x1
   System_Collections_Generic_List_object__o *autoReplaceShaderNames; // x25
   UnityEngine_Object_o *shader; // x0
+  __int64 v60; // x1
   Il2CppObject *name; // x0
-  UnityEngine_Object_o *v52; // x0
-  System_String_o *v53; // x0
-  BattleEffectReplaceShaderTexture_o *v54; // x0
-  const MethodInfo *v55; // x3
+  UnityEngine_Object_o *v62; // x0
+  __int64 v63; // x1
+  System_String_o *v64; // x0
+  BattleEffectReplaceShaderTexture_o *v65; // x0
+  const MethodInfo *v66; // x3
   UnityEngine_Object_o *ReplaceChocoShader; // x29
   UnityEngine_GameObject_o *gameObject; // x0
+  __int64 v69; // x1
   Il2CppObject *Component_object; // x25
-  _BOOL8 v59; // x0
-  UnityEngine_Shader_o *v60; // x0
-  _BOOL8 v61; // x0
-  const MethodInfo *v62; // x3
-  Il2CppObject *object; // x0
-  const MethodInfo *v64; // x4
-  BattleEffectReplaceShaderTexture_o *v65; // x0
-  const MethodInfo *v66; // x5
-  System_Collections_Generic_List_object__o *v67; // x25
-  UnityEngine_Object_o *v68; // x0
-  Il2CppObject *v69; // x0
-  UnityEngine_Object_o *v70; // x0
-  System_String_o *v71; // x0
-  BattleEffectReplaceShaderTexture_o *v72; // x0
-  const MethodInfo *v73; // x3
-  UnityEngine_Object_o *v74; // x25
+  _BOOL8 v71; // x0
+  __int64 v72; // x1
+  UnityEngine_Shader_o *v73; // x0
+  _BOOL8 v74; // x0
   const MethodInfo *v75; // x3
-  BattleEffectReplaceShaderTexture_o *v76; // x0
-  const MethodInfo *v77; // x5
+  Il2CppObject *object; // x0
+  const MethodInfo *v77; // x4
+  BattleEffectReplaceShaderTexture_o *v78; // x0
+  const MethodInfo *v79; // x5
+  System_Collections_Generic_List_object__o *v80; // x25
+  UnityEngine_Object_o *v81; // x0
+  __int64 v82; // x1
+  Il2CppObject *v83; // x0
+  UnityEngine_Object_o *v84; // x0
+  __int64 v85; // x1
+  System_String_o *v86; // x0
+  BattleEffectReplaceShaderTexture_o *v87; // x0
+  const MethodInfo *v88; // x3
+  UnityEngine_Object_o *v89; // x25
+  const MethodInfo *v90; // x3
+  BattleEffectReplaceShaderTexture_o *v91; // x0
+  const MethodInfo *v92; // x5
   System_Collections_Generic_List_object__o *replaceMaterials; // x0
-  int32_t v79; // w2
-  const MethodInfo *v80; // x3
-  System_Collections_Generic_List_object__o *v81; // x0
+  __int64 v94; // x1
+  int32_t v95; // w2
+  const MethodInfo *v96; // x3
+  System_Collections_Generic_List_object__o *v97; // x0
   struct System_Object_array *items; // x8
-  _QWORD *v83; // x9
+  _QWORD *v99; // x9
   __int64 size; // x10
-  Il2CppClass **v85; // x8
+  Il2CppClass **v101; // x8
   System_String_o *targetShaderName; // [xsp+8h] [xbp-138h]
-  Il2CppObject *v87; // [xsp+10h] [xbp-130h]
-  unsigned __int64 v88; // [xsp+18h] [xbp-128h]
-  UnityEngine_Component_o *v89; // [xsp+20h] [xbp-120h]
-  System_Collections_Generic_List_Enumerator_object__o v90; // [xsp+28h] [xbp-118h] BYREF
-  System_Collections_Generic_List_Enumerator_object__o v91; // [xsp+40h] [xbp-100h] BYREF
-  System_Collections_Generic_List_Enumerator_object__o v92; // [xsp+60h] [xbp-E0h] BYREF
-  System_Collections_Generic_List_Enumerator_object__o v93; // [xsp+80h] [xbp-C0h] BYREF
+  Il2CppObject *v103; // [xsp+10h] [xbp-130h]
+  unsigned __int64 v104; // [xsp+18h] [xbp-128h]
+  UnityEngine_Component_o *v105; // [xsp+20h] [xbp-120h]
+  System_Collections_Generic_List_Enumerator_object__o v106; // [xsp+28h] [xbp-118h] BYREF
+  System_Collections_Generic_List_Enumerator_object__o v107; // [xsp+40h] [xbp-100h] BYREF
+  System_Collections_Generic_List_Enumerator_object__o v108; // [xsp+60h] [xbp-E0h] BYREF
+  System_Collections_Generic_List_Enumerator_object__o v109; // [xsp+80h] [xbp-C0h] BYREF
   NpcServantDisplayTypeDetailEntity_o *entity; // [xsp+98h] [xbp-A8h] BYREF
-  System_Collections_Generic_List_Enumerator_object__o v95; // [xsp+A0h] [xbp-A0h] BYREF
-  System_Collections_Generic_List_Enumerator_object__o v96; // [xsp+C0h] [xbp-80h] BYREF
+  System_Collections_Generic_List_Enumerator_object__o v111; // [xsp+A0h] [xbp-A0h] BYREF
+  System_Collections_Generic_List_Enumerator_object__o v112; // [xsp+C0h] [xbp-80h] BYREF
   System_Collections_Generic_Dictionary_string__Shader__o *shaderCaches; // [xsp+D8h] [xbp-68h] BYREF
 
   v2 = this;
-  if ( (byte_4C463E0 & 1) == 0 )
+  if ( (byte_4C5A1D7 & 1) == 0 )
   {
-    sub_1C37058(&Method_System_Array_Empty_Transform___);
-    sub_1C37058(&Method_BasicHelper_ExcludeNull_Transform___);
-    sub_1C37058(&BattleEffectUtility_TypeInfo);
-    sub_1C37058(&Method_System_Collections_Generic_Dictionary_string__Shader___ctor__);
-    sub_1C37058(&System_Collections_Generic_Dictionary_string__Shader__TypeInfo);
-    sub_1C37058(&Method_System_Linq_Enumerable_Append_Transform___);
-    sub_1C37058(&Method_System_Linq_Enumerable_DefaultIfEmpty_Transform___);
-    sub_1C37058(&Method_System_Collections_Generic_List_Enumerator_BattleActorControl__Dispose__);
-    sub_1C37058(&Method_System_Collections_Generic_List_Enumerator_GameObject__Dispose__);
-    sub_1C37058(&Method_System_Collections_Generic_List_Enumerator_BattleEffectReplaceShaderTexture_ReplaceObject__Dispose__);
-    sub_1C37058(&Method_System_Collections_Generic_List_Enumerator_Material__Dispose__);
-    sub_1C37058(&Method_System_Collections_Generic_List_Enumerator_BattleEffectReplaceShaderTexture_RendererType__Dispose__);
-    sub_1C37058(&Method_System_Collections_Generic_List_Enumerator_BattleEffectReplaceShaderTexture_RendererType__MoveNext__);
-    sub_1C37058(&Method_System_Collections_Generic_List_Enumerator_BattleActorControl__MoveNext__);
-    sub_1C37058(&Method_System_Collections_Generic_List_Enumerator_BattleEffectReplaceShaderTexture_ReplaceObject__MoveNext__);
-    sub_1C37058(&Method_System_Collections_Generic_List_Enumerator_GameObject__MoveNext__);
-    sub_1C37058(&Method_System_Collections_Generic_List_Enumerator_Material__MoveNext__);
-    sub_1C37058(&Method_System_Collections_Generic_List_Enumerator_Material__get_Current__);
-    sub_1C37058(&Method_System_Collections_Generic_List_Enumerator_GameObject__get_Current__);
-    sub_1C37058(&Method_System_Collections_Generic_List_Enumerator_BattleEffectReplaceShaderTexture_ReplaceObject__get_Current__);
-    sub_1C37058(&Method_System_Collections_Generic_List_Enumerator_BattleActorControl__get_Current__);
-    sub_1C37058(&Method_System_Collections_Generic_List_Enumerator_BattleEffectReplaceShaderTexture_RendererType__get_Current__);
-    sub_1C37058(&Method_UnityEngine_GameObject_GetComponent_BattleServantDeadComponent___);
-    sub_1C37058(&Method_System_Collections_Generic_List_GameObject__AddRange__);
-    sub_1C37058(&Method_System_Collections_Generic_List_Material__Add__);
-    sub_1C37058(&Method_System_Collections_Generic_List_string__Contains__);
-    sub_1C37058(&Method_System_Collections_Generic_List_Material__Contains__);
-    sub_1C37058(&Method_System_Collections_Generic_List_Renderer__Contains__);
-    sub_1C37058(&Method_System_Collections_Generic_List_BattleEffectReplaceShaderTexture_RendererType__GetEnumerator__);
-    sub_1C37058(&Method_System_Collections_Generic_List_BattleEffectReplaceShaderTexture_ReplaceObject__GetEnumerator__);
-    sub_1C37058(&Method_System_Collections_Generic_List_GameObject__GetEnumerator__);
-    sub_1C37058(&Method_System_Collections_Generic_List_BattleActorControl__GetEnumerator__);
-    sub_1C37058(&Method_System_Collections_Generic_List_Material__GetEnumerator__);
-    sub_1C37058(&Method_System_Collections_Generic_List_BattleEffectReplaceShaderTexture_ReplaceObject__get_Count__);
-    sub_1C37058(&UnityEngine_Object_TypeInfo);
-    sub_1C37058(&Method_UnityEngine_Resources_Load_Texture2D___);
-    sub_1C37058(&StringLiteral_16153/*"_Choco"*/);
-    sub_1C37058(&StringLiteral_16343/*"_Shadow"*/);
-    sub_1C37058(&StringLiteral_12837/*"Shaders/ChocoMap"*/);
-    this = (BattleEffectReplaceShaderTexture_o *)sub_1C37058(&StringLiteral_4915/*"Custom/SoftEdgeUnlitCutZ_Choco (SoftClip)"*/);
-    byte_4C463E0 = 1;
+    sub_1C3E564(&Method_System_Array_Empty_Transform___);
+    sub_1C3E564(&Method_BasicHelper_ExcludeNull_Transform___);
+    sub_1C3E564(&BattleEffectUtility_TypeInfo);
+    sub_1C3E564(&Method_System_Collections_Generic_Dictionary_string__Shader___ctor__);
+    sub_1C3E564(&System_Collections_Generic_Dictionary_string__Shader__TypeInfo);
+    sub_1C3E564(&Method_System_Linq_Enumerable_Append_Transform___);
+    sub_1C3E564(&Method_System_Linq_Enumerable_DefaultIfEmpty_Transform___);
+    sub_1C3E564(&Method_System_Collections_Generic_List_Enumerator_BattleActorControl__Dispose__);
+    sub_1C3E564(&Method_System_Collections_Generic_List_Enumerator_GameObject__Dispose__);
+    sub_1C3E564(&Method_System_Collections_Generic_List_Enumerator_BattleEffectReplaceShaderTexture_ReplaceObject__Dispose__);
+    sub_1C3E564(&Method_System_Collections_Generic_List_Enumerator_Material__Dispose__);
+    sub_1C3E564(&Method_System_Collections_Generic_List_Enumerator_BattleEffectReplaceShaderTexture_RendererType__Dispose__);
+    sub_1C3E564(&Method_System_Collections_Generic_List_Enumerator_BattleEffectReplaceShaderTexture_RendererType__MoveNext__);
+    sub_1C3E564(&Method_System_Collections_Generic_List_Enumerator_BattleActorControl__MoveNext__);
+    sub_1C3E564(&Method_System_Collections_Generic_List_Enumerator_BattleEffectReplaceShaderTexture_ReplaceObject__MoveNext__);
+    sub_1C3E564(&Method_System_Collections_Generic_List_Enumerator_GameObject__MoveNext__);
+    sub_1C3E564(&Method_System_Collections_Generic_List_Enumerator_Material__MoveNext__);
+    sub_1C3E564(&Method_System_Collections_Generic_List_Enumerator_Material__get_Current__);
+    sub_1C3E564(&Method_System_Collections_Generic_List_Enumerator_GameObject__get_Current__);
+    sub_1C3E564(&Method_System_Collections_Generic_List_Enumerator_BattleEffectReplaceShaderTexture_ReplaceObject__get_Current__);
+    sub_1C3E564(&Method_System_Collections_Generic_List_Enumerator_BattleActorControl__get_Current__);
+    sub_1C3E564(&Method_System_Collections_Generic_List_Enumerator_BattleEffectReplaceShaderTexture_RendererType__get_Current__);
+    sub_1C3E564(&Method_UnityEngine_GameObject_GetComponent_BattleServantDeadComponent___);
+    sub_1C3E564(&Method_System_Collections_Generic_List_GameObject__AddRange__);
+    sub_1C3E564(&Method_System_Collections_Generic_List_Material__Add__);
+    sub_1C3E564(&Method_System_Collections_Generic_List_string__Contains__);
+    sub_1C3E564(&Method_System_Collections_Generic_List_Material__Contains__);
+    sub_1C3E564(&Method_System_Collections_Generic_List_Renderer__Contains__);
+    sub_1C3E564(&Method_System_Collections_Generic_List_BattleEffectReplaceShaderTexture_RendererType__GetEnumerator__);
+    sub_1C3E564(&Method_System_Collections_Generic_List_BattleEffectReplaceShaderTexture_ReplaceObject__GetEnumerator__);
+    sub_1C3E564(&Method_System_Collections_Generic_List_GameObject__GetEnumerator__);
+    sub_1C3E564(&Method_System_Collections_Generic_List_BattleActorControl__GetEnumerator__);
+    sub_1C3E564(&Method_System_Collections_Generic_List_Material__GetEnumerator__);
+    sub_1C3E564(&Method_System_Collections_Generic_List_BattleEffectReplaceShaderTexture_ReplaceObject__get_Count__);
+    sub_1C3E564(&UnityEngine_Object_TypeInfo);
+    sub_1C3E564(&Method_UnityEngine_Resources_Load_Texture2D___);
+    sub_1C3E564(&StringLiteral_16163/*"_Choco"*/);
+    sub_1C3E564(&StringLiteral_16353/*"_Shadow"*/);
+    sub_1C3E564(&StringLiteral_12845/*"Shaders/ChocoMap"*/);
+    this = (BattleEffectReplaceShaderTexture_o *)sub_1C3E564(&StringLiteral_4915/*"Custom/SoftEdgeUnlitCutZ_Choco (SoftClip)"*/);
+    byte_4C5A1D7 = 1;
   }
-  memset(&v96, 0, sizeof(v96));
-  memset(&v95, 0, sizeof(v95));
+  memset(&v112, 0, sizeof(v112));
+  memset(&v111, 0, sizeof(v111));
   entity = 0;
-  memset(&v93, 0, sizeof(v93));
-  memset(&v92, 0, sizeof(v92));
-  memset(&v91, 0, sizeof(v91));
+  memset(&v109, 0, sizeof(v109));
+  memset(&v108, 0, sizeof(v108));
+  memset(&v107, 0, sizeof(v107));
   replaceObjects = v2->fields.replaceObjects;
   if ( !replaceObjects )
     goto LABEL_144;
   if ( replaceObjects->fields._size < 1 )
     return;
-  v4 = (System_Collections_Generic_Dictionary_object__object__o *)sub_1C372A4(System_Collections_Generic_Dictionary_string__Shader__TypeInfo);
+  v4 = (System_Collections_Generic_Dictionary_object__object__o *)sub_1C3E7B0(System_Collections_Generic_Dictionary_string__Shader__TypeInfo);
   System_Collections_Generic_Dictionary_object__object____ctor(
     v4,
-    (const MethodInfo_3462C80 *)Method_System_Collections_Generic_Dictionary_string__Shader___ctor__);
+    (const MethodInfo_3474E30 *)Method_System_Collections_Generic_Dictionary_string__Shader___ctor__);
   shaderCaches = (System_Collections_Generic_Dictionary_string__Shader__o *)v4;
   this = (BattleEffectReplaceShaderTexture_o *)v2->fields.replaceObjects;
   if ( !this )
 LABEL_144:
-    sub_1C372B4(this);
+    sub_1C3E7C0(this, method);
   System_Collections_Generic_List_object___GetEnumerator(
-    (System_Collections_Generic_List_Enumerator_T__o *)&v90,
+    (System_Collections_Generic_List_Enumerator_T__o *)&v106,
     (System_Collections_Generic_List_object__o *)this,
-    (const MethodInfo_37A3B1C *)Method_System_Collections_Generic_List_BattleEffectReplaceShaderTexture_ReplaceObject__GetEnumerator__);
+    (const MethodInfo_37B5F58 *)Method_System_Collections_Generic_List_BattleEffectReplaceShaderTexture_ReplaceObject__GetEnumerator__);
   v5 = 0;
-  v96 = v90;
+  v112 = v106;
   while ( 1 )
   {
     v6 = System_Collections_Generic_List_Enumerator_object___MoveNext(
-           &v96,
-           (const MethodInfo_352D810 *)Method_System_Collections_Generic_List_Enumerator_BattleEffectReplaceShaderTexture_ReplaceObject__MoveNext__);
+           &v112,
+           (const MethodInfo_353FC4C *)Method_System_Collections_Generic_List_Enumerator_BattleEffectReplaceShaderTexture_ReplaceObject__MoveNext__);
     if ( !v6 )
       break;
-    current = v96.fields._current;
-    if ( !v96.fields._current )
-      sub_1C372B4(v6);
+    current = v112.fields._current;
+    if ( !v112.fields._current )
+      sub_1C3E7C0(v6, v7);
     TargetActors = (System_Collections_Generic_List_object__o *)BattleEffectReplaceShaderTexture__GetTargetActors(
                                                                   v2,
-                                                                  (System_Int32_array *)v96.fields._current[1].monitor,
-                                                                  (bool)v96.fields._current[2].klass,
-                                                                  (bool)v96.fields._current[1].klass,
-                                                                  v7);
+                                                                  (System_Int32_array *)v112.fields._current[1].monitor,
+                                                                  (bool)v112.fields._current[2].klass,
+                                                                  (bool)v112.fields._current[1].klass,
+                                                                  v8);
     if ( !TargetActors )
-      sub_1C372B4(0);
+      sub_1C3E7C0(0, v11);
     System_Collections_Generic_List_object___GetEnumerator(
-      (System_Collections_Generic_List_Enumerator_T__o *)&v90,
+      (System_Collections_Generic_List_Enumerator_T__o *)&v106,
       TargetActors,
-      (const MethodInfo_37A3B1C *)Method_System_Collections_Generic_List_BattleActorControl__GetEnumerator__);
-    v95 = v90;
+      (const MethodInfo_37B5F58 *)Method_System_Collections_Generic_List_BattleActorControl__GetEnumerator__);
+    v111 = v106;
     while ( 1 )
     {
-      v10 = System_Collections_Generic_List_Enumerator_object___MoveNext(
-              &v95,
-              (const MethodInfo_352D810 *)Method_System_Collections_Generic_List_Enumerator_BattleActorControl__MoveNext__);
-      if ( !v10 )
+      v12 = System_Collections_Generic_List_Enumerator_object___MoveNext(
+              &v111,
+              (const MethodInfo_353FC4C *)Method_System_Collections_Generic_List_Enumerator_BattleActorControl__MoveNext__);
+      if ( !v12 )
         break;
-      v11 = (BattleActorControl_o *)v95.fields._current;
-      if ( !v95.fields._current )
-        sub_1C372B4(v10);
-      isChocoServant = BattleActorControl__isChocoServant((BattleActorControl_o *)v95.fields._current, 0);
-      isShadowServant = BattleActorControl__isShadowServant(v11, 0);
-      v15 = isShadowServant;
+      v14 = (BattleActorControl_o *)v111.fields._current;
+      if ( !v111.fields._current )
+        sub_1C3E7C0(v12, v13);
+      isChocoServant = BattleActorControl__isChocoServant((BattleActorControl_o *)v111.fields._current, 0);
+      isShadowServant = BattleActorControl__isShadowServant(v14, 0);
+      v19 = isShadowServant;
       if ( LOBYTE(current[12].klass) )
         ActorTexture = (UnityEngine_Object_o *)BattleEffectReplaceShaderTexture__getActorTexture(
                                                  (BattleEffectReplaceShaderTexture_o *)isShadowServant,
-                                                 v11,
+                                                 v14,
                                                  (System_String_o *)current[2].monitor,
-                                                 v14);
+                                                 v18);
       else
         ActorTexture = 0;
-      battleSvtData = v11->fields.battleSvtData;
+      battleSvtData = v14->fields.battleSvtData;
       if ( !battleSvtData )
-        sub_1C372B4(0);
+        sub_1C3E7C0(0, v17);
       BattleServantData__TryGetDisplayTypeDetailEntity(battleSvtData, &entity, 0);
-      if ( (v15 & (__int64)current[3].klass & 1) != 0 )
+      if ( (v19 & (__int64)current[3].klass & 1) != 0 )
       {
         klass = (System_Collections_Generic_IEnumerable_TSource__o *)current[4].klass;
         if ( !klass )
         {
-          v20 = Method_System_Array_Empty_Transform___;
-          v21 = *((_QWORD *)Method_System_Array_Empty_Transform___ + 7);
-          if ( !v21 )
+          v24 = Method_System_Array_Empty_Transform___;
+          v25 = *((_QWORD *)Method_System_Array_Empty_Transform___ + 7);
+          if ( !v25 )
           {
-            sub_1C877C8(Method_System_Array_Empty_Transform___);
-            v21 = v20[7];
+            sub_1C8ECD4(Method_System_Array_Empty_Transform___);
+            v25 = v24[7];
           }
-          v22 = *(_QWORD *)(v21 + 16);
-          if ( (*(_BYTE *)(v22 + 309) & 1) == 0 )
-            v22 = sub_1C8776C(inited);
-          if ( !*(_DWORD *)(v22 + 224) )
-            inited = j_il2cpp_runtime_class_init_0(v22);
-          v23 = *(_QWORD *)(v20[7] + 16LL);
-          if ( (*(_BYTE *)(v23 + 309) & 1) == 0 )
-            v23 = sub_1C8776C(inited);
-          klass = **(System_Collections_Generic_IEnumerable_TSource__o ***)(v23 + 184);
+          v26 = *(_QWORD *)(v25 + 16);
+          if ( (*(_BYTE *)(v26 + 309) & 1) == 0 )
+            v26 = sub_1C8EC78(inited);
+          if ( !*(_DWORD *)(v26 + 224) )
+            inited = j_il2cpp_runtime_class_init_0(v26);
+          v27 = *(_QWORD *)(v24[7] + 16LL);
+          if ( (*(_BYTE *)(v27 + 309) & 1) == 0 )
+            v27 = sub_1C8EC78(inited);
+          klass = **(System_Collections_Generic_IEnumerable_TSource__o ***)(v27 + 184);
         }
-        transform = UnityEngine_Component__get_transform((UnityEngine_Component_o *)v11, 0);
+        transform = UnityEngine_Component__get_transform((UnityEngine_Component_o *)v14, 0);
         NodeFromName = (Il2CppObject *)TransformHelper__getNodeFromName(
                                          transform,
                                          (System_String_o *)current[3].monitor,
@@ -713,29 +716,29 @@ LABEL_144:
         appended = (System_Collections_Generic_IEnumerable_T__o *)System_Linq_Enumerable__Append_object_(
                                                                     klass,
                                                                     NodeFromName,
-                                                                    (const MethodInfo_30F5DE4 *)Method_System_Linq_Enumerable_Append_Transform___);
-        v27 = BasicHelper__ExcludeNull_object_(
+                                                                    (const MethodInfo_3107C5C *)Method_System_Linq_Enumerable_Append_Transform___);
+        v31 = BasicHelper__ExcludeNull_object_(
                 appended,
-                (const MethodInfo_30D194C *)Method_BasicHelper_ExcludeNull_Transform___);
-        v28 = (Il2CppObject *)UnityEngine_Component__get_transform((UnityEngine_Component_o *)v2, 0);
-        v29 = (System_Collections_Generic_IEnumerable_Transform__o *)System_Linq_Enumerable__DefaultIfEmpty_object_(
-                                                                       (System_Collections_Generic_IEnumerable_TSource__o *)v27,
-                                                                       v28,
-                                                                       (const MethodInfo_310AADC *)Method_System_Linq_Enumerable_DefaultIfEmpty_Transform___);
+                (const MethodInfo_30E3764 *)Method_BasicHelper_ExcludeNull_Transform___);
+        v32 = (Il2CppObject *)UnityEngine_Component__get_transform((UnityEngine_Component_o *)v2, 0);
+        v33 = (System_Collections_Generic_IEnumerable_Transform__o *)System_Linq_Enumerable__DefaultIfEmpty_object_(
+                                                                       (System_Collections_Generic_IEnumerable_TSource__o *)v31,
+                                                                       v32,
+                                                                       (const MethodInfo_311C9D0 *)Method_System_Linq_Enumerable_DefaultIfEmpty_Transform___);
         shadowAuraList = (System_Collections_Generic_List_object__o *)v2->fields.shadowAuraList;
-        v31 = entity;
+        v35 = entity;
         if ( !BattleEffectUtility_TypeInfo->_2.cctor_finished )
           j_il2cpp_runtime_class_init_0(BattleEffectUtility_TypeInfo);
         ShadowEffectAndAttachForEachNodes = (System_Collections_Generic_IEnumerable_T__o *)BattleEffectUtility__CreateShadowEffectAndAttachForEachNodes(
-                                                                                             v29,
-                                                                                             v31,
+                                                                                             v33,
+                                                                                             v35,
                                                                                              0);
         if ( !shadowAuraList )
-          sub_1C372B4(ShadowEffectAndAttachForEachNodes);
+          sub_1C3E7C0(ShadowEffectAndAttachForEachNodes, ShadowEffectAndAttachForEachNodes);
         System_Collections_Generic_List_object___AddRange(
           shadowAuraList,
           ShadowEffectAndAttachForEachNodes,
-          (const MethodInfo_37A3230 *)Method_System_Collections_Generic_List_GameObject__AddRange__);
+          (const MethodInfo_37B566C *)Method_System_Collections_Generic_List_GameObject__AddRange__);
       }
       monitor = (UnityEngine_Object_o *)current[7].monitor;
       targetShaderName = (System_String_o *)current[7].klass;
@@ -743,94 +746,94 @@ LABEL_144:
         j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
       if ( UnityEngine_Object__op_Inequality(monitor, 0, 0) )
       {
-        v34 = (UnityEngine_Object_o *)current[7].monitor;
-        if ( !v34 )
-          sub_1C372B4(0);
-        targetShaderName = UnityEngine_Object__get_name(v34, 0);
+        v39 = (UnityEngine_Object_o *)current[7].monitor;
+        if ( !v39 )
+          sub_1C3E7C0(0, v38);
+        targetShaderName = UnityEngine_Object__get_name(v39, 0);
       }
-      v35 = (System_Collections_Generic_List_object__o *)current[4].monitor;
-      if ( !v35 )
-        sub_1C372B4(0);
+      v40 = (System_Collections_Generic_List_object__o *)current[4].monitor;
+      if ( !v40 )
+        sub_1C3E7C0(0, v38);
       System_Collections_Generic_List_object___GetEnumerator(
-        (System_Collections_Generic_List_Enumerator_T__o *)&v90,
-        v35,
-        (const MethodInfo_37A3B1C *)Method_System_Collections_Generic_List_GameObject__GetEnumerator__);
-      v89 = (UnityEngine_Component_o *)v11;
-      v93 = v90;
+        (System_Collections_Generic_List_Enumerator_T__o *)&v106,
+        v40,
+        (const MethodInfo_37B5F58 *)Method_System_Collections_Generic_List_GameObject__GetEnumerator__);
+      v105 = (UnityEngine_Component_o *)v14;
+      v109 = v106;
       while ( System_Collections_Generic_List_Enumerator_object___MoveNext(
-                &v93,
-                (const MethodInfo_352D810 *)Method_System_Collections_Generic_List_Enumerator_GameObject__MoveNext__) )
+                &v109,
+                (const MethodInfo_353FC4C *)Method_System_Collections_Generic_List_Enumerator_GameObject__MoveNext__) )
       {
-        v36 = (System_Collections_Generic_List_T__o *)current[6].klass;
-        if ( !v36 )
-          sub_1C372B4(0);
-        v37 = v93.fields._current;
+        v42 = (System_Collections_Generic_List_T__o *)current[6].klass;
+        if ( !v42 )
+          sub_1C3E7C0(0, v41);
+        v43 = v109.fields._current;
         System_Collections_Generic_List_Int32Enum___GetEnumerator(
-          (System_Collections_Generic_List_Enumerator_T__o *)&v90,
-          v36,
-          (const MethodInfo_3789300 *)Method_System_Collections_Generic_List_BattleEffectReplaceShaderTexture_RendererType__GetEnumerator__);
-        v92 = v90;
+          (System_Collections_Generic_List_Enumerator_T__o *)&v106,
+          v42,
+          (const MethodInfo_379B73C *)Method_System_Collections_Generic_List_BattleEffectReplaceShaderTexture_RendererType__GetEnumerator__);
+        v108 = v106;
         while ( System_Collections_Generic_List_Enumerator_Int32Enum___MoveNext(
-                  (System_Collections_Generic_List_Enumerator_T__o *)&v92,
-                  (const MethodInfo_352A5B4 *)Method_System_Collections_Generic_List_Enumerator_BattleEffectReplaceShaderTexture_RendererType__MoveNext__) )
+                  (System_Collections_Generic_List_Enumerator_T__o *)&v108,
+                  (const MethodInfo_353C9F0 *)Method_System_Collections_Generic_List_Enumerator_BattleEffectReplaceShaderTexture_RendererType__MoveNext__) )
         {
           TargetRenderers = BattleEffectReplaceShaderTexture__getTargetRenderers(
                               v2,
-                              (UnityEngine_GameObject_o *)v37,
-                              (int32_t)v92.fields._current,
+                              (UnityEngine_GameObject_o *)v43,
+                              (int32_t)v108.fields._current,
                               (bool)current[5].monitor,
                               BYTE1(current[5].monitor),
-                              v38);
-          v40 = TargetRenderers;
+                              v44);
+          v47 = TargetRenderers;
           if ( TargetRenderers )
           {
             max_length = TargetRenderers->max_length;
             if ( (int)max_length >= 1 )
             {
-              v42 = 0;
-              v87 = v37;
+              v49 = 0;
+              v103 = v43;
               do
               {
-                if ( v42 >= (unsigned int)max_length )
-                  sub_1C372BC(TargetRenderers);
-                v43 = (System_Collections_Generic_List_object__o *)current[5].klass;
-                if ( !v43 )
-                  sub_1C372B4(0);
-                v88 = v42;
-                v44 = (Il2CppObject *)v40->m_Items[v42];
+                if ( v49 >= (unsigned int)max_length )
+                  sub_1C3E7C8(TargetRenderers, v46);
+                v50 = (System_Collections_Generic_List_object__o *)current[5].klass;
+                if ( !v50 )
+                  sub_1C3E7C0(0, v46);
+                v104 = v49;
+                v51 = (Il2CppObject *)v47->m_Items[v49];
                 TargetRenderers = (UnityEngine_Renderer_array *)System_Collections_Generic_List_object___Contains(
-                                                                  v43,
-                                                                  v44,
-                                                                  (const MethodInfo_37A33B4 *)Method_System_Collections_Generic_List_Renderer__Contains__);
+                                                                  v50,
+                                                                  v51,
+                                                                  (const MethodInfo_37B57F0 *)Method_System_Collections_Generic_List_Renderer__Contains__);
                 if ( ((unsigned __int8)TargetRenderers & 1) == 0 )
                 {
                   TargetMaterials = (System_Collections_Generic_List_object__o *)BattleEffectReplaceShaderTexture__getTargetMaterials(
                                                                                    (BattleEffectReplaceShaderTexture_o *)TargetRenderers,
-                                                                                   (UnityEngine_Renderer_o *)v44,
+                                                                                   (UnityEngine_Renderer_o *)v51,
                                                                                    targetShaderName,
                                                                                    (bool)current[6].monitor,
-                                                                                   v45);
+                                                                                   v52);
                   if ( !TargetMaterials )
-                    sub_1C372B4(0);
+                    sub_1C3E7C0(0, v54);
                   System_Collections_Generic_List_object___GetEnumerator(
-                    (System_Collections_Generic_List_Enumerator_T__o *)&v90,
+                    (System_Collections_Generic_List_Enumerator_T__o *)&v106,
                     TargetMaterials,
-                    (const MethodInfo_37A3B1C *)Method_System_Collections_Generic_List_Material__GetEnumerator__);
-                  v91 = v90;
+                    (const MethodInfo_37B5F58 *)Method_System_Collections_Generic_List_Material__GetEnumerator__);
+                  v107 = v106;
                   while ( System_Collections_Generic_List_Enumerator_object___MoveNext(
-                            &v91,
-                            (const MethodInfo_352D810 *)Method_System_Collections_Generic_List_Enumerator_Material__MoveNext__) )
+                            &v107,
+                            (const MethodInfo_353FC4C *)Method_System_Collections_Generic_List_Enumerator_Material__MoveNext__) )
                   {
-                    v47 = v91.fields._current;
+                    v55 = v107.fields._current;
                     if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
                       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-                    v48 = UnityEngine_Object__op_Inequality(ActorTexture, 0, 0);
-                    if ( v48 )
+                    v56 = UnityEngine_Object__op_Inequality(ActorTexture, 0, 0);
+                    if ( v56 )
                     {
-                      if ( !v47 )
-                        sub_1C372B4(v48);
+                      if ( !v55 )
+                        sub_1C3E7C0(v56, v57);
                       UnityEngine_Material__set_mainTexture(
-                        (UnityEngine_Material_o *)v47,
+                        (UnityEngine_Material_o *)v55,
                         (UnityEngine_Texture_o *)ActorTexture,
                         0);
                     }
@@ -838,35 +841,35 @@ LABEL_144:
                     {
                       if ( !BYTE1(current[12].klass) )
                         goto LABEL_65;
-                      if ( !v47 )
-                        sub_1C372B4(v48);
+                      if ( !v55 )
+                        sub_1C3E7C0(v56, v57);
                       autoReplaceShaderNames = (System_Collections_Generic_List_object__o *)v2->fields.autoReplaceShaderNames;
                       shader = (UnityEngine_Object_o *)UnityEngine_Material__get_shader(
-                                                         (UnityEngine_Material_o *)v47,
+                                                         (UnityEngine_Material_o *)v55,
                                                          0);
                       if ( !shader )
-                        sub_1C372B4(0);
+                        sub_1C3E7C0(0, v60);
                       name = (Il2CppObject *)UnityEngine_Object__get_name(shader, 0);
                       if ( !autoReplaceShaderNames )
-                        sub_1C372B4(name);
+                        sub_1C3E7C0(name, name);
                       if ( System_Collections_Generic_List_object___Contains(
                              autoReplaceShaderNames,
                              name,
-                             (const MethodInfo_37A33B4 *)Method_System_Collections_Generic_List_string__Contains__) )
+                             (const MethodInfo_37B57F0 *)Method_System_Collections_Generic_List_string__Contains__) )
                       {
-                        v52 = (UnityEngine_Object_o *)UnityEngine_Material__get_shader((UnityEngine_Material_o *)v47, 0);
-                        if ( !v52 )
-                          sub_1C372B4(0);
-                        v53 = UnityEngine_Object__get_name(v52, 0);
-                        v54 = (BattleEffectReplaceShaderTexture_o *)System_String__Concat_63561656(
-                                                                      v53,
-                                                                      (System_String_o *)StringLiteral_16153/*"_Choco"*/,
+                        v62 = (UnityEngine_Object_o *)UnityEngine_Material__get_shader((UnityEngine_Material_o *)v55, 0);
+                        if ( !v62 )
+                          sub_1C3E7C0(0, v63);
+                        v64 = UnityEngine_Object__get_name(v62, 0);
+                        v65 = (BattleEffectReplaceShaderTexture_o *)System_String__Concat_63636468(
+                                                                      v64,
+                                                                      (System_String_o *)StringLiteral_16163/*"_Choco"*/,
                                                                       0);
                         ReplaceChocoShader = (UnityEngine_Object_o *)BattleEffectReplaceShaderTexture__loadShader(
-                                                                       v54,
-                                                                       (System_String_o *)v54,
+                                                                       v65,
+                                                                       (System_String_o *)v65,
                                                                        &shaderCaches,
-                                                                       v55);
+                                                                       v66);
                       }
                       else
                       {
@@ -881,173 +884,173 @@ LABEL_65:
                         j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
                       if ( UnityEngine_Object__op_Equality(ReplaceChocoShader, 0, 0) && BYTE2(current[12].klass) )
                       {
-                        gameObject = UnityEngine_Component__get_gameObject(v89, 0);
+                        gameObject = UnityEngine_Component__get_gameObject(v105, 0);
                         if ( !gameObject )
-                          sub_1C372B4(0);
+                          sub_1C3E7C0(0, v69);
                         Component_object = UnityEngine_GameObject__GetComponent_object_(
                                              gameObject,
-                                             (const MethodInfo_313F1D8 *)Method_UnityEngine_GameObject_GetComponent_BattleServantDeadComponent___);
+                                             (const MethodInfo_31510CC *)Method_UnityEngine_GameObject_GetComponent_BattleServantDeadComponent___);
                         if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
                           j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-                        v59 = UnityEngine_Object__op_Inequality((UnityEngine_Object_o *)Component_object, 0, 0);
-                        if ( v59 )
+                        v71 = UnityEngine_Object__op_Inequality((UnityEngine_Object_o *)Component_object, 0, 0);
+                        if ( v71 )
                         {
-                          if ( !v47 )
-                            sub_1C372B4(v59);
-                          v60 = UnityEngine_Material__get_shader((UnityEngine_Material_o *)v47, 0);
+                          if ( !v55 )
+                            sub_1C3E7C0(v71, v72);
+                          v73 = UnityEngine_Material__get_shader((UnityEngine_Material_o *)v55, 0);
                           if ( !Component_object )
-                            sub_1C372B4(v60);
+                            sub_1C3E7C0(v73, v73);
                           ReplaceChocoShader = (UnityEngine_Object_o *)BattleServantDeadComponent__getReplaceChocoShader(
                                                                          (BattleServantDeadComponent_o *)Component_object,
-                                                                         v60,
+                                                                         v73,
                                                                          0,
                                                                          0);
                         }
                       }
                       if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
                         j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-                      v61 = UnityEngine_Object__op_Equality(ReplaceChocoShader, 0, 0);
-                      if ( v61 )
+                      v74 = UnityEngine_Object__op_Equality(ReplaceChocoShader, 0, 0);
+                      if ( v74 )
                         ReplaceChocoShader = (UnityEngine_Object_o *)BattleEffectReplaceShaderTexture__loadShader(
-                                                                       (BattleEffectReplaceShaderTexture_o *)v61,
+                                                                       (BattleEffectReplaceShaderTexture_o *)v74,
                                                                        (System_String_o *)StringLiteral_4915/*"Custom/SoftEdgeUnlitCutZ_Choco (SoftClip)"*/,
                                                                        &shaderCaches,
-                                                                       v62);
+                                                                       v75);
                       if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
                         j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
                       object = (Il2CppObject *)UnityEngine_Object__op_Equality(v5, 0, 0);
                       if ( ((unsigned __int8)object & 1) != 0 )
                       {
                         object = UnityEngine_Resources__Load_object_(
-                                   (System_String_o *)StringLiteral_12837/*"Shaders/ChocoMap"*/,
-                                   (const MethodInfo_3184210 *)Method_UnityEngine_Resources_Load_Texture2D___);
+                                   (System_String_o *)StringLiteral_12845/*"Shaders/ChocoMap"*/,
+                                   (const MethodInfo_3196164 *)Method_UnityEngine_Resources_Load_Texture2D___);
                         v5 = (UnityEngine_Object_o *)object;
                       }
                       BattleEffectReplaceShaderTexture__setupChocoShader(
                         (BattleEffectReplaceShaderTexture_o *)object,
-                        (UnityEngine_Material_o *)v47,
+                        (UnityEngine_Material_o *)v55,
                         (UnityEngine_Shader_o *)ReplaceChocoShader,
                         (UnityEngine_Texture2D_o *)v5,
-                        v64);
+                        v77);
                       BattleEffectReplaceShaderTexture__updateShaderValues(
-                        v65,
-                        (UnityEngine_Material_o *)v47,
+                        v78,
+                        (UnityEngine_Material_o *)v55,
                         (System_Collections_Generic_List_BattleEffectReplaceShaderTexture_ShaderFloatValue__o *)current[8].monitor,
                         (System_Collections_Generic_List_BattleEffectReplaceShaderTexture_ShaderColorValue__o *)current[9].klass,
                         (System_Collections_Generic_List_BattleEffectReplaceShaderTexture_ShaderTextureValue__o *)current[9].monitor,
-                        v66);
+                        v79);
                     }
-                    if ( v15 )
+                    if ( v19 )
                     {
-                      if ( !v47 )
-                        sub_1C372B4(v48);
-                      v67 = (System_Collections_Generic_List_object__o *)v2->fields.autoReplaceShaderNames;
-                      v68 = (UnityEngine_Object_o *)UnityEngine_Material__get_shader((UnityEngine_Material_o *)v47, 0);
-                      if ( !v68 )
-                        sub_1C372B4(0);
-                      v69 = (Il2CppObject *)UnityEngine_Object__get_name(v68, 0);
-                      if ( !v67 )
-                        sub_1C372B4(v69);
+                      if ( !v55 )
+                        sub_1C3E7C0(v56, v57);
+                      v80 = (System_Collections_Generic_List_object__o *)v2->fields.autoReplaceShaderNames;
+                      v81 = (UnityEngine_Object_o *)UnityEngine_Material__get_shader((UnityEngine_Material_o *)v55, 0);
+                      if ( !v81 )
+                        sub_1C3E7C0(0, v82);
+                      v83 = (Il2CppObject *)UnityEngine_Object__get_name(v81, 0);
+                      if ( !v80 )
+                        sub_1C3E7C0(v83, v83);
                       if ( System_Collections_Generic_List_object___Contains(
-                             v67,
-                             v69,
-                             (const MethodInfo_37A33B4 *)Method_System_Collections_Generic_List_string__Contains__) )
+                             v80,
+                             v83,
+                             (const MethodInfo_37B57F0 *)Method_System_Collections_Generic_List_string__Contains__) )
                       {
-                        v70 = (UnityEngine_Object_o *)UnityEngine_Material__get_shader((UnityEngine_Material_o *)v47, 0);
-                        if ( !v70 )
-                          sub_1C372B4(0);
-                        v71 = UnityEngine_Object__get_name(v70, 0);
-                        v72 = (BattleEffectReplaceShaderTexture_o *)System_String__Concat_63561656(
-                                                                      v71,
-                                                                      (System_String_o *)StringLiteral_16343/*"_Shadow"*/,
+                        v84 = (UnityEngine_Object_o *)UnityEngine_Material__get_shader((UnityEngine_Material_o *)v55, 0);
+                        if ( !v84 )
+                          sub_1C3E7C0(0, v85);
+                        v86 = UnityEngine_Object__get_name(v84, 0);
+                        v87 = (BattleEffectReplaceShaderTexture_o *)System_String__Concat_63636468(
+                                                                      v86,
+                                                                      (System_String_o *)StringLiteral_16353/*"_Shadow"*/,
                                                                       0);
-                        v74 = (UnityEngine_Object_o *)BattleEffectReplaceShaderTexture__loadShader(
-                                                        v72,
-                                                        (System_String_o *)v72,
+                        v89 = (UnityEngine_Object_o *)BattleEffectReplaceShaderTexture__loadShader(
+                                                        v87,
+                                                        (System_String_o *)v87,
                                                         &shaderCaches,
-                                                        v73);
+                                                        v88);
                       }
                       else
                       {
-                        v74 = 0;
+                        v89 = 0;
                       }
                       if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
                         j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-                      if ( UnityEngine_Object__op_Equality(v74, 0, 0) )
-                        v74 = (UnityEngine_Object_o *)current[10].klass;
+                      if ( UnityEngine_Object__op_Equality(v89, 0, 0) )
+                        v89 = (UnityEngine_Object_o *)current[10].klass;
                       BattleEffectReplaceShaderTexture__SetupShadowShader(
-                        (UnityEngine_Material_o *)v47,
-                        (UnityEngine_Shader_o *)v74,
+                        (UnityEngine_Material_o *)v55,
+                        (UnityEngine_Shader_o *)v89,
                         entity,
-                        v75);
+                        v90);
                       BattleEffectReplaceShaderTexture__updateShaderValues(
-                        v76,
-                        (UnityEngine_Material_o *)v47,
+                        v91,
+                        (UnityEngine_Material_o *)v55,
                         (System_Collections_Generic_List_BattleEffectReplaceShaderTexture_ShaderFloatValue__o *)current[10].monitor,
                         (System_Collections_Generic_List_BattleEffectReplaceShaderTexture_ShaderColorValue__o *)current[11].klass,
                         (System_Collections_Generic_List_BattleEffectReplaceShaderTexture_ShaderTextureValue__o *)current[11].monitor,
-                        v77);
+                        v92);
                     }
                     replaceMaterials = (System_Collections_Generic_List_object__o *)v2->fields.replaceMaterials;
                     if ( !replaceMaterials )
-                      sub_1C372B4(0);
+                      sub_1C3E7C0(0, v57);
                     if ( !System_Collections_Generic_List_object___Contains(
                             replaceMaterials,
-                            v47,
-                            (const MethodInfo_37A33B4 *)Method_System_Collections_Generic_List_Material__Contains__) )
+                            v55,
+                            (const MethodInfo_37B57F0 *)Method_System_Collections_Generic_List_Material__Contains__) )
                     {
-                      v81 = (System_Collections_Generic_List_object__o *)v2->fields.replaceMaterials;
-                      if ( !v81 )
-                        sub_1C372B4(0);
-                      items = v81->fields._items;
-                      v83 = Method_System_Collections_Generic_List_Material__Add__;
-                      ++v81->fields._version;
+                      v97 = (System_Collections_Generic_List_object__o *)v2->fields.replaceMaterials;
+                      if ( !v97 )
+                        sub_1C3E7C0(0, v94);
+                      items = v97->fields._items;
+                      v99 = Method_System_Collections_Generic_List_Material__Add__;
+                      ++v97->fields._version;
                       if ( !items )
-                        sub_1C372B4(v81);
-                      size = v81->fields._size;
+                        sub_1C3E7C0(v97, v94);
+                      size = v97->fields._size;
                       if ( (unsigned int)size >= LODWORD(items->max_length) )
                       {
                         System_Collections_Generic_List_object___AddWithResize(
-                          v81,
-                          v47,
-                          *(const MethodInfo_37A3024 **)(*(_QWORD *)(v83[4] + 192LL) + 112LL));
+                          v97,
+                          v55,
+                          *(const MethodInfo_37B5460 **)(*(_QWORD *)(v99[4] + 192LL) + 112LL));
                       }
                       else
                       {
-                        v85 = &items->obj.klass + size;
-                        v81->fields._size = size + 1;
-                        v85[4] = (Il2CppClass *)v47;
-                        sub_1C36FFC((CGThumbnailListItem_o *)(v85 + 4), (int32_t)v47, v79, v80);
+                        v101 = &items->obj.klass + size;
+                        v97->fields._size = size + 1;
+                        v101[4] = (Il2CppClass *)v55;
+                        sub_1C3E508((CGThumbnailListItem_o *)(v101 + 4), (int32_t)v55, v95, v96);
                       }
                     }
                   }
                   System_Collections_Generic_List_Enumerator_object___Dispose(
-                    &v91,
-                    (const MethodInfo_352D80C *)Method_System_Collections_Generic_List_Enumerator_Material__Dispose__);
-                  v37 = v87;
+                    &v107,
+                    (const MethodInfo_353FC48 *)Method_System_Collections_Generic_List_Enumerator_Material__Dispose__);
+                  v43 = v103;
                 }
-                LODWORD(max_length) = v40->max_length;
-                v42 = v88 + 1;
+                LODWORD(max_length) = v47->max_length;
+                v49 = v104 + 1;
               }
-              while ( (__int64)(v88 + 1) < (int)max_length );
+              while ( (__int64)(v104 + 1) < (int)max_length );
             }
           }
         }
         System_Collections_Generic_List_Enumerator_Int32Enum___Dispose(
-          (System_Collections_Generic_List_Enumerator_T__o *)&v92,
-          (const MethodInfo_352A5B0 *)Method_System_Collections_Generic_List_Enumerator_BattleEffectReplaceShaderTexture_RendererType__Dispose__);
+          (System_Collections_Generic_List_Enumerator_T__o *)&v108,
+          (const MethodInfo_353C9EC *)Method_System_Collections_Generic_List_Enumerator_BattleEffectReplaceShaderTexture_RendererType__Dispose__);
       }
       System_Collections_Generic_List_Enumerator_object___Dispose(
-        &v93,
-        (const MethodInfo_352D80C *)Method_System_Collections_Generic_List_Enumerator_GameObject__Dispose__);
+        &v109,
+        (const MethodInfo_353FC48 *)Method_System_Collections_Generic_List_Enumerator_GameObject__Dispose__);
     }
     System_Collections_Generic_List_Enumerator_object___Dispose(
-      &v95,
-      (const MethodInfo_352D80C *)Method_System_Collections_Generic_List_Enumerator_BattleActorControl__Dispose__);
+      &v111,
+      (const MethodInfo_353FC48 *)Method_System_Collections_Generic_List_Enumerator_BattleActorControl__Dispose__);
   }
   System_Collections_Generic_List_Enumerator_object___Dispose(
-    &v96,
-    (const MethodInfo_352D80C *)Method_System_Collections_Generic_List_Enumerator_BattleEffectReplaceShaderTexture_ReplaceObject__Dispose__);
+    &v112,
+    (const MethodInfo_353FC48 *)Method_System_Collections_Generic_List_Enumerator_BattleEffectReplaceShaderTexture_ReplaceObject__Dispose__);
 }
 
 
@@ -1058,48 +1061,49 @@ BattleActorControl_o *BattleEffectReplaceShaderTexture__GetModelBattleActor(
         const MethodInfo *method)
 {
   System_Object_array *ObjectsOfType_object; // x0
+  __int64 v8; // x1
   int max_length; // w8
-  System_Object_array *v9; // x22
-  unsigned int v10; // w24
-  Il2CppClass **v11; // x8
-  BattleActorControl_o *v12; // x23
+  System_Object_array *v10; // x22
+  unsigned int v11; // w24
+  Il2CppClass **v12; // x8
+  BattleActorControl_o *v13; // x23
 
-  if ( (byte_4C463E2 & 1) == 0 )
+  if ( (byte_4C5A1D9 & 1) == 0 )
   {
-    sub_1C37058(&Method_UnityEngine_Object_FindObjectsOfType_BattleActorControl___);
-    sub_1C37058(&UnityEngine_Object_TypeInfo);
-    byte_4C463E2 = 1;
+    sub_1C3E564(&Method_UnityEngine_Object_FindObjectsOfType_BattleActorControl___);
+    sub_1C3E564(&UnityEngine_Object_TypeInfo);
+    byte_4C5A1D9 = 1;
   }
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-  ObjectsOfType_object = UnityEngine_Object__FindObjectsOfType_object_((const MethodInfo_3173E64 *)Method_UnityEngine_Object_FindObjectsOfType_BattleActorControl___);
+  ObjectsOfType_object = UnityEngine_Object__FindObjectsOfType_object_((const MethodInfo_3185D58 *)Method_UnityEngine_Object_FindObjectsOfType_BattleActorControl___);
   if ( !ObjectsOfType_object )
     goto LABEL_17;
   max_length = ObjectsOfType_object->max_length;
-  v9 = ObjectsOfType_object;
+  v10 = ObjectsOfType_object;
   if ( max_length >= 1 )
   {
-    v10 = 0;
+    v11 = 0;
     while ( 1 )
     {
-      if ( v10 >= max_length )
-        sub_1C372BC(ObjectsOfType_object);
-      v11 = &v9->obj.klass + (int)v10;
-      v12 = (BattleActorControl_o *)v11[4];
-      if ( !v12 )
+      if ( v11 >= max_length )
+        sub_1C3E7C8(ObjectsOfType_object, v8);
+      v12 = &v10->obj.klass + (int)v11;
+      v13 = (BattleActorControl_o *)v12[4];
+      if ( !v13 )
         break;
-      ObjectsOfType_object = (System_Object_array *)BattleActorControl__getServantId((BattleActorControl_o *)v11[4], 0);
+      ObjectsOfType_object = (System_Object_array *)BattleActorControl__getServantId((BattleActorControl_o *)v12[4], 0);
       if ( (_DWORD)ObjectsOfType_object == servantId
-        && (!isCheckUniqueId || v12->fields.uniqueID == this->fields.targetId) )
+        && (!isCheckUniqueId || v13->fields.uniqueID == this->fields.targetId) )
       {
-        return v12;
+        return v13;
       }
-      max_length = v9->max_length;
-      if ( (int)++v10 >= max_length )
+      max_length = v10->max_length;
+      if ( (int)++v11 >= max_length )
         return 0;
     }
 LABEL_17:
-    sub_1C372B4(ObjectsOfType_object);
+    sub_1C3E7C0(ObjectsOfType_object, v8);
   }
   return 0;
 }
@@ -1114,17 +1118,17 @@ System_Collections_Generic_List_BattleActorControl__o *BattleEffectReplaceShader
 {
   System_Collections_Generic_List_object__o *v9; // x19
   System_Object_array *Instance; // x0
-  const MethodInfo *v11; // x3
-  UnityEngine_Object_o *v12; // x20
+  Il2CppObject *v11; // x1
+  const MethodInfo *v12; // x3
+  UnityEngine_Object_o *v13; // x20
   Il2CppObject *Component_object; // x20
-  int32_t v14; // w2
-  const MethodInfo *v15; // x3
+  int32_t v15; // w2
+  const MethodInfo *v16; // x3
   struct System_Object_array *items; // x8
-  _QWORD *v17; // x9
+  _QWORD *v18; // x9
   __int64 size; // x10
-  Il2CppClass **v19; // x0
-  CGThumbnailListItem_o *v20; // x0
-  Il2CppObject *v21; // x1
+  Il2CppClass **v20; // x0
+  CGThumbnailListItem_o *v21; // x0
   __int64 max_length; // x8
   Il2CppObject **i; // x9
   il2cpp_array_size_t v24; // x8
@@ -1143,38 +1147,38 @@ System_Collections_Generic_List_BattleActorControl__o *BattleEffectReplaceShader
   __int64 v37; // x10
   Il2CppClass **v38; // x0
 
-  if ( (byte_4C463E1 & 1) == 0 )
+  if ( (byte_4C5A1D8 & 1) == 0 )
   {
-    sub_1C37058(&Method_UnityEngine_GameObject_GetComponent_BattleActorControl___);
-    sub_1C37058(&Method_System_Collections_Generic_List_BattleActorControl__Add__);
-    sub_1C37058(&Method_System_Collections_Generic_List_BattleActorControl__Contains__);
-    sub_1C37058(&Method_System_Collections_Generic_List_BattleActorControl___ctor__);
-    sub_1C37058(&System_Collections_Generic_List_BattleActorControl__TypeInfo);
-    sub_1C37058(&Method_UnityEngine_Object_FindObjectsOfType_BattleActorControl___);
-    sub_1C37058(&UnityEngine_Object_TypeInfo);
-    sub_1C37058(&Method_SingletonMonoBehaviour_BattleSequenceManager__get_Instance__);
-    byte_4C463E1 = 1;
+    sub_1C3E564(&Method_UnityEngine_GameObject_GetComponent_BattleActorControl___);
+    sub_1C3E564(&Method_System_Collections_Generic_List_BattleActorControl__Add__);
+    sub_1C3E564(&Method_System_Collections_Generic_List_BattleActorControl__Contains__);
+    sub_1C3E564(&Method_System_Collections_Generic_List_BattleActorControl___ctor__);
+    sub_1C3E564(&System_Collections_Generic_List_BattleActorControl__TypeInfo);
+    sub_1C3E564(&Method_UnityEngine_Object_FindObjectsOfType_BattleActorControl___);
+    sub_1C3E564(&UnityEngine_Object_TypeInfo);
+    sub_1C3E564(&Method_SingletonMonoBehaviour_BattleSequenceManager__get_Instance__);
+    byte_4C5A1D8 = 1;
   }
-  v9 = (System_Collections_Generic_List_object__o *)sub_1C372A4(System_Collections_Generic_List_BattleActorControl__TypeInfo);
+  v9 = (System_Collections_Generic_List_object__o *)sub_1C3E7B0(System_Collections_Generic_List_BattleActorControl__TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v9,
-    (const MethodInfo_37A27F0 *)Method_System_Collections_Generic_List_BattleActorControl___ctor__);
+    (const MethodInfo_37B4C2C *)Method_System_Collections_Generic_List_BattleActorControl___ctor__);
   if ( this->fields.isNPEffect )
   {
-    Instance = (System_Object_array *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39ED16C *)Method_SingletonMonoBehaviour_BattleSequenceManager__get_Instance__);
+    Instance = (System_Object_array *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39FF5A8 *)Method_SingletonMonoBehaviour_BattleSequenceManager__get_Instance__);
     if ( !Instance )
       goto LABEL_50;
-    v12 = (UnityEngine_Object_o *)Instance->m_Items[6];
+    v13 = (UnityEngine_Object_o *)Instance->m_Items[6];
     if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-    Instance = (System_Object_array *)UnityEngine_Object__op_Inequality(v12, 0, 0);
+    Instance = (System_Object_array *)UnityEngine_Object__op_Inequality(v13, 0, 0);
     if ( ((unsigned __int8)Instance & 1) != 0 )
     {
-      if ( !v12 )
+      if ( !v13 )
         goto LABEL_50;
       Component_object = UnityEngine_GameObject__GetComponent_object_(
-                           (UnityEngine_GameObject_o *)v12,
-                           (const MethodInfo_313F1D8 *)Method_UnityEngine_GameObject_GetComponent_BattleActorControl___);
+                           (UnityEngine_GameObject_o *)v13,
+                           (const MethodInfo_31510CC *)Method_UnityEngine_GameObject_GetComponent_BattleActorControl___);
       if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
       Instance = (System_Object_array *)UnityEngine_Object__op_Inequality(
@@ -1186,25 +1190,25 @@ System_Collections_Generic_List_BattleActorControl__o *BattleEffectReplaceShader
         if ( v9 )
         {
           items = v9->fields._items;
-          v17 = Method_System_Collections_Generic_List_BattleActorControl__Add__;
+          v18 = Method_System_Collections_Generic_List_BattleActorControl__Add__;
           ++v9->fields._version;
           if ( items )
           {
             size = v9->fields._size;
             if ( (unsigned int)size < LODWORD(items->max_length) )
             {
-              v19 = &items->obj.klass + size;
+              v20 = &items->obj.klass + size;
               v9->fields._size = size + 1;
-              v19[4] = (Il2CppClass *)Component_object;
-              v20 = (CGThumbnailListItem_o *)(v19 + 4);
-              LODWORD(v21) = (_DWORD)Component_object;
+              v20[4] = (Il2CppClass *)Component_object;
+              v21 = (CGThumbnailListItem_o *)(v20 + 4);
+              LODWORD(v11) = (_DWORD)Component_object;
 LABEL_46:
-              sub_1C36FFC(v20, (int32_t)v21, v14, v15);
+              sub_1C3E508(v21, (int32_t)v11, v15, v16);
               return (System_Collections_Generic_List_BattleActorControl__o *)v9;
             }
-            v33 = v17[4];
+            v33 = v18[4];
             v34 = v9;
-            v21 = Component_object;
+            v11 = Component_object;
             goto LABEL_48;
           }
         }
@@ -1216,7 +1220,7 @@ LABEL_46:
   {
     if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-    Instance = UnityEngine_Object__FindObjectsOfType_object_((const MethodInfo_3173E64 *)Method_UnityEngine_Object_FindObjectsOfType_BattleActorControl___);
+    Instance = UnityEngine_Object__FindObjectsOfType_object_((const MethodInfo_3185D58 *)Method_UnityEngine_Object_FindObjectsOfType_BattleActorControl___);
     if ( !Instance )
       goto LABEL_50;
     if ( (int)Instance->max_length >= 1 )
@@ -1224,10 +1228,10 @@ LABEL_46:
       max_length = (unsigned int)Instance->max_length;
       for ( i = Instance->m_Items; ; ++i )
       {
-        v21 = *i;
+        v11 = *i;
         if ( !*i )
           goto LABEL_50;
-        if ( LODWORD(v21[33].monitor) == this->fields.targetId )
+        if ( LODWORD(v11[33].monitor) == this->fields.targetId )
           break;
         if ( !--max_length )
           return (System_Collections_Generic_List_BattleActorControl__o *)v9;
@@ -1244,8 +1248,8 @@ LABEL_46:
           {
             v38 = &v35->obj.klass + v37;
             v9->fields._size = v37 + 1;
-            v38[4] = (Il2CppClass *)v21;
-            v20 = (CGThumbnailListItem_o *)(v38 + 4);
+            v38[4] = (Il2CppClass *)v11;
+            v21 = (CGThumbnailListItem_o *)(v38 + 4);
             goto LABEL_46;
           }
           v33 = v36[4];
@@ -1253,13 +1257,13 @@ LABEL_46:
 LABEL_48:
           System_Collections_Generic_List_object___AddWithResize(
             v34,
-            v21,
-            *(const MethodInfo_37A3024 **)(*(_QWORD *)(v33 + 192) + 112LL));
+            v11,
+            *(const MethodInfo_37B5460 **)(*(_QWORD *)(v33 + 192) + 112LL));
           return (System_Collections_Generic_List_BattleActorControl__o *)v9;
         }
       }
 LABEL_50:
-      sub_1C372B4(Instance);
+      sub_1C3E7C0(Instance, v11);
     }
   }
   else if ( servantIds )
@@ -1272,12 +1276,12 @@ LABEL_50:
       do
       {
         if ( v25 >= (unsigned int)v24 )
-          sub_1C372BC(Instance);
+          sub_1C3E7C8(Instance, v11);
         ModelBattleActor = (UnityEngine_Object_o *)BattleEffectReplaceShaderTexture__GetModelBattleActor(
                                                      this,
                                                      servantIds->m_Items[v25],
                                                      v26,
-                                                     v11);
+                                                     v12);
         if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
           j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
         Instance = (System_Object_array *)UnityEngine_Object__op_Inequality(ModelBattleActor, 0, 0);
@@ -1288,7 +1292,7 @@ LABEL_50:
           Instance = (System_Object_array *)System_Collections_Generic_List_object___Contains(
                                               v9,
                                               (Il2CppObject *)ModelBattleActor,
-                                              (const MethodInfo_37A33B4 *)Method_System_Collections_Generic_List_BattleActorControl__Contains__);
+                                              (const MethodInfo_37B57F0 *)Method_System_Collections_Generic_List_BattleActorControl__Contains__);
           if ( ((unsigned __int8)Instance & 1) == 0 )
           {
             v29 = v9->fields._items;
@@ -1302,14 +1306,14 @@ LABEL_50:
               System_Collections_Generic_List_object___AddWithResize(
                 v9,
                 (Il2CppObject *)ModelBattleActor,
-                *(const MethodInfo_37A3024 **)(*(_QWORD *)(v30[4] + 192LL) + 112LL));
+                *(const MethodInfo_37B5460 **)(*(_QWORD *)(v30[4] + 192LL) + 112LL));
             }
             else
             {
               v32 = &v29->obj.klass + v31;
               v9->fields._size = v31 + 1;
               v32[4] = (Il2CppClass *)ModelBattleActor;
-              sub_1C36FFC((CGThumbnailListItem_o *)(v32 + 4), (int32_t)ModelBattleActor, v28, v11);
+              sub_1C3E508((CGThumbnailListItem_o *)(v32 + 4), (int32_t)ModelBattleActor, v28, v12);
             }
           }
         }
@@ -1339,20 +1343,20 @@ void BattleEffectReplaceShaderTexture__OnDestroy(BattleEffectReplaceShaderTextur
   System_Collections_Generic_List_Enumerator_object__o v13; // [xsp+20h] [xbp-50h] BYREF
 
   v2 = this;
-  if ( (byte_4C463DF & 1) == 0 )
+  if ( (byte_4C5A1D6 & 1) == 0 )
   {
-    sub_1C37058(&System_Action_GameObject__TypeInfo);
-    sub_1C37058(&Method_BasicHelper_ExcludeNull_GameObject___);
-    sub_1C37058(&Method_BasicHelper_ForEach_GameObject___);
-    sub_1C37058(&Method_System_Collections_Generic_List_Enumerator_Material__Dispose__);
-    sub_1C37058(&Method_System_Collections_Generic_List_Enumerator_Material__MoveNext__);
-    sub_1C37058(&Method_System_Collections_Generic_List_Enumerator_Material__get_Current__);
-    sub_1C37058(&Method_System_Collections_Generic_List_GameObject__Clear__);
-    sub_1C37058(&Method_System_Collections_Generic_List_Material__Clear__);
-    sub_1C37058(&Method_System_Collections_Generic_List_Material__GetEnumerator__);
-    sub_1C37058(&Method_UnityEngine_Object_Destroy__);
-    this = (BattleEffectReplaceShaderTexture_o *)sub_1C37058(&UnityEngine_Object_TypeInfo);
-    byte_4C463DF = 1;
+    sub_1C3E564(&System_Action_GameObject__TypeInfo);
+    sub_1C3E564(&Method_BasicHelper_ExcludeNull_GameObject___);
+    sub_1C3E564(&Method_BasicHelper_ForEach_GameObject___);
+    sub_1C3E564(&Method_System_Collections_Generic_List_Enumerator_Material__Dispose__);
+    sub_1C3E564(&Method_System_Collections_Generic_List_Enumerator_Material__MoveNext__);
+    sub_1C3E564(&Method_System_Collections_Generic_List_Enumerator_Material__get_Current__);
+    sub_1C3E564(&Method_System_Collections_Generic_List_GameObject__Clear__);
+    sub_1C3E564(&Method_System_Collections_Generic_List_Material__Clear__);
+    sub_1C3E564(&Method_System_Collections_Generic_List_Material__GetEnumerator__);
+    sub_1C3E564(&Method_UnityEngine_Object_Destroy__);
+    this = (BattleEffectReplaceShaderTexture_o *)sub_1C3E564(&UnityEngine_Object_TypeInfo);
+    byte_4C5A1D6 = 1;
   }
   memset(&v13, 0, sizeof(v13));
   if ( v2->fields.destroyReplaceShaderMaterials )
@@ -1363,11 +1367,11 @@ void BattleEffectReplaceShaderTexture__OnDestroy(BattleEffectReplaceShaderTextur
     System_Collections_Generic_List_object___GetEnumerator(
       (System_Collections_Generic_List_Enumerator_T__o *)&v12,
       (System_Collections_Generic_List_object__o *)this,
-      (const MethodInfo_37A3B1C *)Method_System_Collections_Generic_List_Material__GetEnumerator__);
+      (const MethodInfo_37B5F58 *)Method_System_Collections_Generic_List_Material__GetEnumerator__);
     v13 = v12;
     while ( System_Collections_Generic_List_Enumerator_object___MoveNext(
               &v13,
-              (const MethodInfo_352D810 *)Method_System_Collections_Generic_List_Enumerator_Material__MoveNext__) )
+              (const MethodInfo_353FC4C *)Method_System_Collections_Generic_List_Enumerator_Material__MoveNext__) )
     {
       current = v13.fields._current;
       if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -1376,12 +1380,12 @@ void BattleEffectReplaceShaderTexture__OnDestroy(BattleEffectReplaceShaderTextur
       {
         if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
           j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-        UnityEngine_Object__DestroyImmediate_71266940((UnityEngine_Object_o *)current, 0);
+        UnityEngine_Object__DestroyImmediate_71341752((UnityEngine_Object_o *)current, 0);
       }
     }
     System_Collections_Generic_List_Enumerator_object___Dispose(
       &v13,
-      (const MethodInfo_352D80C *)Method_System_Collections_Generic_List_Enumerator_Material__Dispose__);
+      (const MethodInfo_353FC48 *)Method_System_Collections_Generic_List_Enumerator_Material__Dispose__);
   }
   replaceMaterials = v2->fields.replaceMaterials;
   if ( !replaceMaterials )
@@ -1394,17 +1398,17 @@ void BattleEffectReplaceShaderTexture__OnDestroy(BattleEffectReplaceShaderTextur
     System_Array__Clear((System_Array_o *)replaceMaterials->fields._items, 0, size, 0);
   v7 = BasicHelper__ExcludeNull_object_(
          (System_Collections_Generic_IEnumerable_T__o *)v2->fields.shadowAuraList,
-         (const MethodInfo_30D194C *)Method_BasicHelper_ExcludeNull_GameObject___);
-  v8 = (System_Action_object__o *)sub_1C372A4(System_Action_GameObject__TypeInfo);
+         (const MethodInfo_30E3764 *)Method_BasicHelper_ExcludeNull_GameObject___);
+  v8 = (System_Action_object__o *)sub_1C3E7B0(System_Action_GameObject__TypeInfo);
   System_Action_object____ctor(v8, 0, Method_UnityEngine_Object_Destroy__, 0);
   BasicHelper__ForEach_object_(
     v7,
     (System_Action_T__o *)v8,
-    (const MethodInfo_30D3C18 *)Method_BasicHelper_ForEach_GameObject___);
+    (const MethodInfo_30E5A30 *)Method_BasicHelper_ForEach_GameObject___);
   shadowAuraList = v2->fields.shadowAuraList;
   if ( !shadowAuraList )
 LABEL_21:
-    sub_1C372B4(this);
+    sub_1C3E7C0(this, method);
   v10 = shadowAuraList->fields._size;
   v11 = shadowAuraList->fields._version + 1;
   shadowAuraList->fields._size = 0;
@@ -1430,19 +1434,20 @@ void BattleEffectReplaceShaderTexture__SetupShadowShader(
         const MethodInfo *method)
 {
   __int64 v7; // x0
-  int32_t v8; // w2
-  const MethodInfo *v9; // x3
-  __int64 v10; // x21
-  __int64 v11; // x0
+  __int64 v8; // x1
+  int32_t v9; // w2
+  const MethodInfo *v10; // x3
+  __int64 v11; // x21
+  __int64 v12; // x0
 
-  if ( (byte_4C463EA & 1) == 0 )
+  if ( (byte_4C5A1E1 & 1) == 0 )
   {
-    sub_1C37058(&BattleDataDefine_TypeInfo);
-    sub_1C37058(&BattleEffectUtility_TypeInfo);
-    sub_1C37058(&UnityEngine_Material___TypeInfo);
-    sub_1C37058(&UnityEngine_Object_TypeInfo);
-    sub_1C37058(&StringLiteral_16173/*"_Color"*/);
-    byte_4C463EA = 1;
+    sub_1C3E564(&BattleDataDefine_TypeInfo);
+    sub_1C3E564(&BattleEffectUtility_TypeInfo);
+    sub_1C3E564(&UnityEngine_Material___TypeInfo);
+    sub_1C3E564(&UnityEngine_Object_TypeInfo);
+    sub_1C3E564(&StringLiteral_16183/*"_Color"*/);
+    byte_4C5A1E1 = 1;
   }
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
@@ -1465,35 +1470,35 @@ void BattleEffectReplaceShaderTexture__SetupShadowShader(
     {
       UnityEngine_Material__SetColor(
         material,
-        (System_String_o *)StringLiteral_16173/*"_Color"*/,
+        (System_String_o *)StringLiteral_16183/*"_Color"*/,
         *(UnityEngine_Color_o *)(*(_QWORD *)(v7 + 184) + 56LL),
         0);
       return;
     }
 LABEL_20:
-    sub_1C372B4(v7);
+    sub_1C3E7C0(v7, v8);
   }
-  v7 = sub_1C37100(UnityEngine_Material___TypeInfo, 1);
+  v7 = sub_1C3E60C(UnityEngine_Material___TypeInfo, 1);
   if ( !v7 )
     goto LABEL_20;
-  v10 = v7;
+  v11 = v7;
   if ( material )
   {
-    v7 = sub_1C37194(material, *(_QWORD *)(*(_QWORD *)v7 + 64LL));
+    v7 = sub_1C3E6A0(material, *(_QWORD *)(*(_QWORD *)v7 + 64LL));
     if ( !v7 )
     {
-      v11 = sub_1C372D8(0);
-      sub_1C37180(v11, 0);
+      v12 = sub_1C3E7E4(0);
+      sub_1C3E68C(v12, 0);
     }
   }
-  if ( !*(_DWORD *)(v10 + 24) )
-    sub_1C372BC(v7);
-  *(_QWORD *)(v10 + 32) = material;
-  sub_1C36FFC((CGThumbnailListItem_o *)(v10 + 32), (int32_t)material, v8, v9);
+  if ( !*(_DWORD *)(v11 + 24) )
+    sub_1C3E7C8(v7, v8);
+  *(_QWORD *)(v11 + 32) = material;
+  sub_1C3E508((CGThumbnailListItem_o *)(v11 + 32), (int32_t)material, v9, v10);
   if ( !BattleEffectUtility_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(BattleEffectUtility_TypeInfo);
   BattleEffectUtility__SetShadowServantColorToMaterials(
-    (System_Collections_Generic_IEnumerable_Material__o *)v10,
+    (System_Collections_Generic_IEnumerable_Material__o *)v11,
     displayTypeDetailEntity,
     0);
 }
@@ -1518,17 +1523,17 @@ UnityEngine_Texture_o *BattleEffectReplaceShaderTexture__getActorTexture(
   BattleEffectReplaceShaderTexture_c **v9; // x8
   UnityEngine_Object_o *v10; // x21
 
-  if ( (byte_4C463E4 & 1) == 0 )
+  if ( (byte_4C5A1DB & 1) == 0 )
   {
-    this = (BattleEffectReplaceShaderTexture_o *)sub_1C37058(&Method_UnityEngine_Component_GetComponentsInChildren_SkinnedMeshRenderer____78127672);
-    byte_4C463E4 = 1;
+    this = (BattleEffectReplaceShaderTexture_o *)sub_1C3E564(&Method_UnityEngine_Component_GetComponentsInChildren_SkinnedMeshRenderer____78207680);
+    byte_4C5A1DB = 1;
   }
   if ( !actor )
     goto LABEL_16;
   this = (BattleEffectReplaceShaderTexture_o *)UnityEngine_Component__GetComponentsInChildren_object_(
                                                  (UnityEngine_Component_o *)actor,
                                                  1,
-                                                 (const MethodInfo_30DF14C *)Method_UnityEngine_Component_GetComponentsInChildren_SkinnedMeshRenderer____78127672);
+                                                 (const MethodInfo_30F0F64 *)Method_UnityEngine_Component_GetComponentsInChildren_SkinnedMeshRenderer____78207680);
   if ( !this )
     goto LABEL_16;
   m_CancellationTokenSource = (int)this->fields.m_CancellationTokenSource;
@@ -1539,7 +1544,7 @@ UnityEngine_Texture_o *BattleEffectReplaceShaderTexture__getActorTexture(
   while ( 1 )
   {
     if ( v8 >= m_CancellationTokenSource )
-      sub_1C372BC(this);
+      sub_1C3E7C8(this, actor);
     v9 = &v7->klass + (int)v8;
     v10 = (UnityEngine_Object_o *)v9[4];
     if ( !v10 )
@@ -1550,7 +1555,7 @@ UnityEngine_Texture_o *BattleEffectReplaceShaderTexture__getActorTexture(
       this = (BattleEffectReplaceShaderTexture_o *)UnityEngine_Object__get_name(v10, 0);
       if ( !this )
         goto LABEL_16;
-      this = (BattleEffectReplaceShaderTexture_o *)System_String__IndexOf_63620032(
+      this = (BattleEffectReplaceShaderTexture_o *)System_String__IndexOf_63694844(
                                                      (System_String_o *)this,
                                                      searchMeshWord,
                                                      0);
@@ -1564,7 +1569,7 @@ UnityEngine_Texture_o *BattleEffectReplaceShaderTexture__getActorTexture(
   this = (BattleEffectReplaceShaderTexture_o *)UnityEngine_Renderer__get_material((UnityEngine_Renderer_o *)v10, 0);
   if ( !this )
 LABEL_16:
-    sub_1C372B4(this);
+    sub_1C3E7C0(this, actor);
   return UnityEngine_Material__get_mainTexture((UnityEngine_Material_o *)this, 0);
 }
 
@@ -1578,13 +1583,13 @@ UnityEngine_Renderer_o *BattleEffectReplaceShaderTexture__getRenderer(
   __int64 *v6; // x8
   UnityEngine_Renderer_o *result; // x0
 
-  if ( (byte_4C463E6 & 1) == 0 )
+  if ( (byte_4C5A1DD & 1) == 0 )
   {
-    sub_1C37058(&Method_UnityEngine_GameObject_GetComponent_MeshRenderer___);
-    sub_1C37058(&Method_UnityEngine_GameObject_GetComponent_ParticleSystemRenderer___);
-    sub_1C37058(&Method_UnityEngine_GameObject_GetComponent_Renderer___);
-    this = (BattleEffectReplaceShaderTexture_o *)sub_1C37058(&Method_UnityEngine_GameObject_GetComponent_SkinnedMeshRenderer___);
-    byte_4C463E6 = 1;
+    sub_1C3E564(&Method_UnityEngine_GameObject_GetComponent_MeshRenderer___);
+    sub_1C3E564(&Method_UnityEngine_GameObject_GetComponent_ParticleSystemRenderer___);
+    sub_1C3E564(&Method_UnityEngine_GameObject_GetComponent_Renderer___);
+    this = (BattleEffectReplaceShaderTexture_o *)sub_1C3E564(&Method_UnityEngine_GameObject_GetComponent_SkinnedMeshRenderer___);
+    byte_4C5A1DD = 1;
   }
   switch ( rendererType )
   {
@@ -1606,12 +1611,12 @@ UnityEngine_Renderer_o *BattleEffectReplaceShaderTexture__getRenderer(
     case 3:
       if ( !gameObject )
 LABEL_14:
-        sub_1C372B4(this);
+        sub_1C3E7C0(this, gameObject);
       v6 = &Method_UnityEngine_GameObject_GetComponent_ParticleSystemRenderer___;
 LABEL_13:
       result = (UnityEngine_Renderer_o *)UnityEngine_GameObject__GetComponent_object_(
                                            gameObject,
-                                           (const MethodInfo_313F1D8 *)*v6);
+                                           (const MethodInfo_31510CC *)*v6);
       break;
     default:
       result = 0;
@@ -1631,41 +1636,41 @@ UnityEngine_Renderer_array *BattleEffectReplaceShaderTexture__getRenderersInChil
   __int64 *v8; // x8
   UnityEngine_Renderer_array *result; // x0
 
-  if ( (byte_4C463E7 & 1) == 0 )
+  if ( (byte_4C5A1DE & 1) == 0 )
   {
-    sub_1C37058(&Method_UnityEngine_GameObject_GetComponentsInChildren_MeshRenderer____78176472);
-    sub_1C37058(&Method_UnityEngine_GameObject_GetComponentsInChildren_ParticleSystemRenderer____78176504);
-    sub_1C37058(&Method_UnityEngine_GameObject_GetComponentsInChildren_Renderer____78176512);
-    this = (BattleEffectReplaceShaderTexture_o *)sub_1C37058(&Method_UnityEngine_GameObject_GetComponentsInChildren_SkinnedMeshRenderer____78176528);
-    byte_4C463E7 = 1;
+    sub_1C3E564(&Method_UnityEngine_GameObject_GetComponentsInChildren_MeshRenderer____78256488);
+    sub_1C3E564(&Method_UnityEngine_GameObject_GetComponentsInChildren_ParticleSystemRenderer____78256520);
+    sub_1C3E564(&Method_UnityEngine_GameObject_GetComponentsInChildren_Renderer____78256528);
+    this = (BattleEffectReplaceShaderTexture_o *)sub_1C3E564(&Method_UnityEngine_GameObject_GetComponentsInChildren_SkinnedMeshRenderer____78256544);
+    byte_4C5A1DE = 1;
   }
   switch ( rendererType )
   {
     case 0:
       if ( !gameObject )
         goto LABEL_14;
-      v8 = &Method_UnityEngine_GameObject_GetComponentsInChildren_Renderer____78176512;
+      v8 = &Method_UnityEngine_GameObject_GetComponentsInChildren_Renderer____78256528;
       goto LABEL_13;
     case 1:
       if ( !gameObject )
         goto LABEL_14;
-      v8 = &Method_UnityEngine_GameObject_GetComponentsInChildren_MeshRenderer____78176472;
+      v8 = &Method_UnityEngine_GameObject_GetComponentsInChildren_MeshRenderer____78256488;
       goto LABEL_13;
     case 2:
       if ( !gameObject )
         goto LABEL_14;
-      v8 = &Method_UnityEngine_GameObject_GetComponentsInChildren_SkinnedMeshRenderer____78176528;
+      v8 = &Method_UnityEngine_GameObject_GetComponentsInChildren_SkinnedMeshRenderer____78256544;
       goto LABEL_13;
     case 3:
       if ( !gameObject )
 LABEL_14:
-        sub_1C372B4(this);
-      v8 = &Method_UnityEngine_GameObject_GetComponentsInChildren_ParticleSystemRenderer____78176504;
+        sub_1C3E7C0(this, gameObject);
+      v8 = &Method_UnityEngine_GameObject_GetComponentsInChildren_ParticleSystemRenderer____78256520;
 LABEL_13:
       result = (UnityEngine_Renderer_array *)UnityEngine_GameObject__GetComponentsInChildren_object_(
                                                gameObject,
                                                includeInactive,
-                                               (const MethodInfo_313FE78 *)*v8);
+                                               (const MethodInfo_3151D6C *)*v8);
       break;
     default:
       result = 0;
@@ -1684,52 +1689,53 @@ System_Collections_Generic_List_Material__o *BattleEffectReplaceShaderTexture__g
 {
   System_Collections_Generic_List_object__o *v8; // x21
   UnityEngine_Object_o *materials; // x0
+  __int64 v10; // x1
   UnityEngine_Object_c *klass; // x8
-  UnityEngine_Object_o *v11; // x22
+  UnityEngine_Object_o *v12; // x22
   unsigned __int64 i; // x25
-  UnityEngine_Object_o *v13; // x23
+  UnityEngine_Object_o *v14; // x23
   UnityEngine_Object_o *shader; // x24
   System_String_o *name; // x0
-  int32_t v16; // w2
-  const MethodInfo *v17; // x3
+  int32_t v17; // w2
+  const MethodInfo *v18; // x3
   struct System_Object_array *items; // x8
-  _QWORD *v19; // x9
+  _QWORD *v20; // x9
   __int64 size; // x10
-  Il2CppClass **v21; // x0
+  Il2CppClass **v22; // x0
 
-  if ( (byte_4C463E8 & 1) == 0 )
+  if ( (byte_4C5A1DF & 1) == 0 )
   {
-    sub_1C37058(&Method_System_Collections_Generic_List_Material__Add__);
-    sub_1C37058(&Method_System_Collections_Generic_List_Material__Contains__);
-    sub_1C37058(&Method_System_Collections_Generic_List_Material___ctor__);
-    sub_1C37058(&System_Collections_Generic_List_Material__TypeInfo);
-    sub_1C37058(&UnityEngine_Object_TypeInfo);
-    byte_4C463E8 = 1;
+    sub_1C3E564(&Method_System_Collections_Generic_List_Material__Add__);
+    sub_1C3E564(&Method_System_Collections_Generic_List_Material__Contains__);
+    sub_1C3E564(&Method_System_Collections_Generic_List_Material___ctor__);
+    sub_1C3E564(&System_Collections_Generic_List_Material__TypeInfo);
+    sub_1C3E564(&UnityEngine_Object_TypeInfo);
+    byte_4C5A1DF = 1;
   }
-  v8 = (System_Collections_Generic_List_object__o *)sub_1C372A4(System_Collections_Generic_List_Material__TypeInfo);
+  v8 = (System_Collections_Generic_List_object__o *)sub_1C3E7B0(System_Collections_Generic_List_Material__TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v8,
-    (const MethodInfo_37A27F0 *)Method_System_Collections_Generic_List_Material___ctor__);
+    (const MethodInfo_37B4C2C *)Method_System_Collections_Generic_List_Material___ctor__);
   if ( !renderer || (materials = (UnityEngine_Object_o *)UnityEngine_Renderer__get_materials(renderer, 0)) == 0 )
 LABEL_27:
-    sub_1C372B4(materials);
+    sub_1C3E7C0(materials, v10);
   klass = materials[1].klass;
-  v11 = materials;
+  v12 = materials;
   if ( (int)klass >= 1 )
   {
     for ( i = 0; (__int64)i < (int)klass; ++i )
     {
       if ( i >= (unsigned int)klass )
-        sub_1C372BC(materials);
-      v13 = (UnityEngine_Object_o *)*((_QWORD *)&v11[1].monitor + i);
+        sub_1C3E7C8(materials, v10);
+      v14 = (UnityEngine_Object_o *)*((_QWORD *)&v12[1].monitor + i);
       if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-      materials = (UnityEngine_Object_o *)UnityEngine_Object__op_Inequality(v13, 0, 0);
+      materials = (UnityEngine_Object_o *)UnityEngine_Object__op_Inequality(v14, 0, 0);
       if ( ((unsigned __int8)materials & 1) != 0 )
         goto LABEL_31;
-      if ( !v13 )
+      if ( !v14 )
         goto LABEL_27;
-      shader = (UnityEngine_Object_o *)UnityEngine_Material__get_shader((UnityEngine_Material_o *)v13, 0);
+      shader = (UnityEngine_Object_o *)UnityEngine_Material__get_shader((UnityEngine_Material_o *)v14, 0);
       if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
       materials = (UnityEngine_Object_o *)UnityEngine_Object__op_Inequality(shader, 0, 0);
@@ -1738,9 +1744,9 @@ LABEL_27:
 LABEL_31:
         if ( targetShaderAll )
           goto LABEL_19;
-        if ( !v13 )
+        if ( !v14 )
           goto LABEL_27;
-        materials = (UnityEngine_Object_o *)UnityEngine_Material__get_shader((UnityEngine_Material_o *)v13, 0);
+        materials = (UnityEngine_Object_o *)UnityEngine_Material__get_shader((UnityEngine_Material_o *)v14, 0);
         if ( !materials )
           goto LABEL_27;
         name = UnityEngine_Object__get_name(materials, 0);
@@ -1752,12 +1758,12 @@ LABEL_19:
             goto LABEL_27;
           materials = (UnityEngine_Object_o *)System_Collections_Generic_List_object___Contains(
                                                 v8,
-                                                (Il2CppObject *)v13,
-                                                (const MethodInfo_37A33B4 *)Method_System_Collections_Generic_List_Material__Contains__);
+                                                (Il2CppObject *)v14,
+                                                (const MethodInfo_37B57F0 *)Method_System_Collections_Generic_List_Material__Contains__);
           if ( ((unsigned __int8)materials & 1) == 0 )
           {
             items = v8->fields._items;
-            v19 = Method_System_Collections_Generic_List_Material__Add__;
+            v20 = Method_System_Collections_Generic_List_Material__Add__;
             ++v8->fields._version;
             if ( !items )
               goto LABEL_27;
@@ -1766,20 +1772,20 @@ LABEL_19:
             {
               System_Collections_Generic_List_object___AddWithResize(
                 v8,
-                (Il2CppObject *)v13,
-                *(const MethodInfo_37A3024 **)(*(_QWORD *)(v19[4] + 192LL) + 112LL));
+                (Il2CppObject *)v14,
+                *(const MethodInfo_37B5460 **)(*(_QWORD *)(v20[4] + 192LL) + 112LL));
             }
             else
             {
-              v21 = &items->obj.klass + size;
+              v22 = &items->obj.klass + size;
               v8->fields._size = size + 1;
-              v21[4] = (Il2CppClass *)v13;
-              sub_1C36FFC((CGThumbnailListItem_o *)(v21 + 4), (int32_t)v13, v16, v17);
+              v22[4] = (Il2CppClass *)v14;
+              sub_1C3E508((CGThumbnailListItem_o *)(v22 + 4), (int32_t)v14, v17, v18);
             }
           }
         }
       }
-      LODWORD(klass) = v11[1].klass;
+      LODWORD(klass) = v12[1].klass;
     }
   }
   return (System_Collections_Generic_List_Material__o *)v8;
@@ -1798,15 +1804,16 @@ UnityEngine_Renderer_array *BattleEffectReplaceShaderTexture__getTargetRenderers
   UnityEngine_Object_o *Renderer; // x19
   __int64 v12; // x20
   __int64 v13; // x0
-  int32_t v14; // w2
-  const MethodInfo *v15; // x3
-  __int64 v16; // x0
+  __int64 v14; // x1
+  int32_t v15; // w2
+  const MethodInfo *v16; // x3
+  __int64 v17; // x0
 
-  if ( (byte_4C463E5 & 1) == 0 )
+  if ( (byte_4C5A1DC & 1) == 0 )
   {
-    sub_1C37058(&UnityEngine_Object_TypeInfo);
-    this = (BattleEffectReplaceShaderTexture_o *)sub_1C37058(&UnityEngine_Renderer___TypeInfo);
-    byte_4C463E5 = 1;
+    sub_1C3E564(&UnityEngine_Object_TypeInfo);
+    this = (BattleEffectReplaceShaderTexture_o *)sub_1C3E564(&UnityEngine_Renderer___TypeInfo);
+    byte_4C5A1DC = 1;
   }
   if ( targetsInChildren )
     return BattleEffectReplaceShaderTexture__getRenderersInChildren(
@@ -1825,23 +1832,23 @@ UnityEngine_Renderer_array *BattleEffectReplaceShaderTexture__getTargetRenderers
   v12 = 0;
   if ( UnityEngine_Object__op_Inequality(Renderer, 0, 0) )
   {
-    v13 = sub_1C37100(UnityEngine_Renderer___TypeInfo, 1);
+    v13 = sub_1C3E60C(UnityEngine_Renderer___TypeInfo, 1);
     if ( !v13 )
-      sub_1C372B4(0);
+      sub_1C3E7C0(0, v14);
     v12 = v13;
     if ( Renderer )
     {
-      v13 = sub_1C37194(Renderer, *(_QWORD *)(*(_QWORD *)v13 + 64LL));
+      v13 = sub_1C3E6A0(Renderer, *(_QWORD *)(*(_QWORD *)v13 + 64LL));
       if ( !v13 )
       {
-        v16 = sub_1C372D8(0);
-        sub_1C37180(v16, 0);
+        v17 = sub_1C3E7E4(0);
+        sub_1C3E68C(v17, 0);
       }
     }
     if ( !*(_DWORD *)(v12 + 24) )
-      sub_1C372BC(v13);
+      sub_1C3E7C8(v13, v14);
     *(_QWORD *)(v12 + 32) = Renderer;
-    sub_1C36FFC((CGThumbnailListItem_o *)(v12 + 32), (int32_t)Renderer, v14, v15);
+    sub_1C3E508((CGThumbnailListItem_o *)(v12 + 32), (int32_t)Renderer, v15, v16);
   }
   return (UnityEngine_Renderer_array *)v12;
 }
@@ -1858,13 +1865,13 @@ UnityEngine_Shader_o *BattleEffectReplaceShaderTexture__loadShader(
   UnityEngine_Object_o *v8; // x21
   bool v9; // w8
 
-  if ( (byte_4C463E3 & 1) == 0 )
+  if ( (byte_4C5A1DA & 1) == 0 )
   {
-    sub_1C37058(&Method_System_Collections_Generic_Dictionary_string__Shader__ContainsKey__);
-    sub_1C37058(&Method_System_Collections_Generic_Dictionary_string__Shader__get_Item__);
-    sub_1C37058(&Method_System_Collections_Generic_Dictionary_string__Shader__set_Item__);
-    sub_1C37058(&UnityEngine_Object_TypeInfo);
-    byte_4C463E3 = 1;
+    sub_1C3E564(&Method_System_Collections_Generic_Dictionary_string__Shader__ContainsKey__);
+    sub_1C3E564(&Method_System_Collections_Generic_Dictionary_string__Shader__get_Item__);
+    sub_1C3E564(&Method_System_Collections_Generic_Dictionary_string__Shader__set_Item__);
+    sub_1C3E564(&UnityEngine_Object_TypeInfo);
+    byte_4C5A1DA = 1;
   }
   v6 = *shaderCaches;
   if ( !*shaderCaches )
@@ -1872,16 +1879,16 @@ UnityEngine_Shader_o *BattleEffectReplaceShaderTexture__loadShader(
   if ( System_Collections_Generic_Dictionary_object__object___ContainsKey(
          (System_Collections_Generic_Dictionary_object__object__o *)v6,
          (Il2CppObject *)shaderName,
-         (const MethodInfo_3463824 *)Method_System_Collections_Generic_Dictionary_string__Shader__ContainsKey__) )
+         (const MethodInfo_34759D4 *)Method_System_Collections_Generic_Dictionary_string__Shader__ContainsKey__) )
   {
     v6 = *shaderCaches;
     if ( *shaderCaches )
       return (UnityEngine_Shader_o *)System_Collections_Generic_Dictionary_object__object___get_Item(
                                        (System_Collections_Generic_Dictionary_object__object__o *)v6,
                                        (Il2CppObject *)shaderName,
-                                       (const MethodInfo_34635B0 *)Method_System_Collections_Generic_Dictionary_string__Shader__get_Item__);
+                                       (const MethodInfo_3475760 *)Method_System_Collections_Generic_Dictionary_string__Shader__get_Item__);
 LABEL_13:
-    sub_1C372B4(v6);
+    sub_1C3E7C0(v6, shaderName);
   }
   v8 = (UnityEngine_Object_o *)UnityEngine_Shader__Find(shaderName, 0);
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -1897,7 +1904,7 @@ LABEL_13:
       (System_Collections_Generic_Dictionary_object__object__o *)v6,
       (Il2CppObject *)shaderName,
       (Il2CppObject *)v8,
-      (const MethodInfo_346361C *)Method_System_Collections_Generic_Dictionary_string__Shader__set_Item__);
+      (const MethodInfo_34757CC *)Method_System_Collections_Generic_Dictionary_string__Shader__set_Item__);
     return (UnityEngine_Shader_o *)v8;
   }
   return result;
@@ -1924,20 +1931,20 @@ void BattleEffectReplaceShaderTexture__setupChocoShader(
   UnityEngine_Color_o v18; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
   UnityEngine_Color_o v19; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 
-  if ( (byte_4C463E9 & 1) == 0 )
+  if ( (byte_4C5A1E0 & 1) == 0 )
   {
-    sub_1C37058(&UnityEngine_Object_TypeInfo);
-    sub_1C37058(&StringLiteral_16173/*"_Color"*/);
-    sub_1C37058(&StringLiteral_16154/*"_ChocoTex"*/);
-    sub_1C37058(&StringLiteral_16400/*"_Use_alphawidth"*/);
-    this = (BattleEffectReplaceShaderTexture_o *)sub_1C37058(&StringLiteral_16121/*"_AddColor"*/);
-    byte_4C463E9 = 1;
+    sub_1C3E564(&UnityEngine_Object_TypeInfo);
+    sub_1C3E564(&StringLiteral_16183/*"_Color"*/);
+    sub_1C3E564(&StringLiteral_16164/*"_ChocoTex"*/);
+    sub_1C3E564(&StringLiteral_16410/*"_Use_alphawidth"*/);
+    this = (BattleEffectReplaceShaderTexture_o *)sub_1C3E564(&StringLiteral_16131/*"_AddColor"*/);
+    byte_4C5A1E0 = 1;
   }
   if ( !material )
-    sub_1C372B4(this);
-  if ( UnityEngine_Material__HasProperty_71132888(material, (System_String_o *)StringLiteral_16173/*"_Color"*/, 0) )
+    sub_1C3E7C0(this, material);
+  if ( UnityEngine_Material__HasProperty_71207700(material, (System_String_o *)StringLiteral_16183/*"_Color"*/, 0) )
   {
-    Color = UnityEngine_Material__GetColor(material, (System_String_o *)StringLiteral_16173/*"_Color"*/, 0);
+    Color = UnityEngine_Material__GetColor(material, (System_String_o *)StringLiteral_16183/*"_Color"*/, 0);
     r = Color.fields.r;
     g = Color.fields.g;
     b = Color.fields.b;
@@ -1954,9 +1961,9 @@ void BattleEffectReplaceShaderTexture__setupChocoShader(
   v13 = 0.0;
   v14 = 0.0;
   v15 = 0.0;
-  if ( UnityEngine_Material__HasProperty_71132888(material, (System_String_o *)StringLiteral_16121/*"_AddColor"*/, 0) )
+  if ( UnityEngine_Material__HasProperty_71207700(material, (System_String_o *)StringLiteral_16131/*"_AddColor"*/, 0) )
   {
-    v17 = UnityEngine_Material__GetColor(material, (System_String_o *)StringLiteral_16121/*"_AddColor"*/, 0);
+    v17 = UnityEngine_Material__GetColor(material, (System_String_o *)StringLiteral_16131/*"_AddColor"*/, 0);
     v12 = v17.fields.r;
     v13 = v17.fields.g;
     v14 = v17.fields.b;
@@ -1970,19 +1977,19 @@ void BattleEffectReplaceShaderTexture__setupChocoShader(
   v18.fields.g = g;
   v18.fields.b = b;
   v18.fields.a = a;
-  UnityEngine_Material__SetColor(material, (System_String_o *)StringLiteral_16173/*"_Color"*/, v18, 0);
+  UnityEngine_Material__SetColor(material, (System_String_o *)StringLiteral_16183/*"_Color"*/, v18, 0);
   v19.fields.r = v12;
   v19.fields.g = v13;
   v19.fields.b = v14;
   v19.fields.a = v15;
-  UnityEngine_Material__SetColor(material, (System_String_o *)StringLiteral_16121/*"_AddColor"*/, v19, 0);
+  UnityEngine_Material__SetColor(material, (System_String_o *)StringLiteral_16131/*"_AddColor"*/, v19, 0);
   UnityEngine_Material__SetTexture(
     material,
-    (System_String_o *)StringLiteral_16154/*"_ChocoTex"*/,
+    (System_String_o *)StringLiteral_16164/*"_ChocoTex"*/,
     (UnityEngine_Texture_o *)chocoTexture,
     0);
-  if ( UnityEngine_Material__HasProperty_71132888(material, (System_String_o *)StringLiteral_16400/*"_Use_alphawidth"*/, 0) )
-    UnityEngine_Material__SetFloat(material, (System_String_o *)StringLiteral_16400/*"_Use_alphawidth"*/, 1.0, 0);
+  if ( UnityEngine_Material__HasProperty_71207700(material, (System_String_o *)StringLiteral_16410/*"_Use_alphawidth"*/, 0) )
+    UnityEngine_Material__SetFloat(material, (System_String_o *)StringLiteral_16410/*"_Use_alphawidth"*/, 1.0, 0);
 }
 
 
@@ -1995,123 +2002,126 @@ void BattleEffectReplaceShaderTexture__updateShaderValues(
         const MethodInfo *method)
 {
   _BOOL8 v10; // x0
+  __int64 v11; // x1
   Il2CppObject *current; // x22
-  _BOOL8 v12; // x0
-  Il2CppObject *v13; // x21
-  _BOOL8 v14; // x0
-  Il2CppObject *v15; // x20
-  System_Collections_Generic_List_Enumerator_object__o v16; // [xsp+0h] [xbp-D0h] BYREF
-  System_Collections_Generic_List_Enumerator_object__o v17; // [xsp+18h] [xbp-B8h] BYREF
-  System_Collections_Generic_List_Enumerator_object__o v18; // [xsp+30h] [xbp-A0h] BYREF
-  System_Collections_Generic_List_Enumerator_object__o v19; // [xsp+50h] [xbp-80h] BYREF
+  _BOOL8 v13; // x0
+  __int64 v14; // x1
+  Il2CppObject *v15; // x21
+  _BOOL8 v16; // x0
+  __int64 v17; // x1
+  Il2CppObject *v18; // x20
+  System_Collections_Generic_List_Enumerator_object__o v19; // [xsp+0h] [xbp-D0h] BYREF
+  System_Collections_Generic_List_Enumerator_object__o v20; // [xsp+18h] [xbp-B8h] BYREF
+  System_Collections_Generic_List_Enumerator_object__o v21; // [xsp+30h] [xbp-A0h] BYREF
+  System_Collections_Generic_List_Enumerator_object__o v22; // [xsp+50h] [xbp-80h] BYREF
 
-  if ( (byte_4C463EB & 1) == 0 )
+  if ( (byte_4C5A1E2 & 1) == 0 )
   {
-    sub_1C37058(&Method_System_Collections_Generic_List_Enumerator_BattleEffectReplaceShaderTexture_ShaderFloatValue__Dispose__);
-    sub_1C37058(&Method_System_Collections_Generic_List_Enumerator_BattleEffectReplaceShaderTexture_ShaderTextureValue__Dispose__);
-    sub_1C37058(&Method_System_Collections_Generic_List_Enumerator_BattleEffectReplaceShaderTexture_ShaderColorValue__Dispose__);
-    sub_1C37058(&Method_System_Collections_Generic_List_Enumerator_BattleEffectReplaceShaderTexture_ShaderColorValue__MoveNext__);
-    sub_1C37058(&Method_System_Collections_Generic_List_Enumerator_BattleEffectReplaceShaderTexture_ShaderFloatValue__MoveNext__);
-    sub_1C37058(&Method_System_Collections_Generic_List_Enumerator_BattleEffectReplaceShaderTexture_ShaderTextureValue__MoveNext__);
-    sub_1C37058(&Method_System_Collections_Generic_List_Enumerator_BattleEffectReplaceShaderTexture_ShaderTextureValue__get_Current__);
-    sub_1C37058(&Method_System_Collections_Generic_List_Enumerator_BattleEffectReplaceShaderTexture_ShaderFloatValue__get_Current__);
-    sub_1C37058(&Method_System_Collections_Generic_List_Enumerator_BattleEffectReplaceShaderTexture_ShaderColorValue__get_Current__);
-    sub_1C37058(&Method_System_Collections_Generic_List_BattleEffectReplaceShaderTexture_ShaderTextureValue__GetEnumerator__);
-    sub_1C37058(&Method_System_Collections_Generic_List_BattleEffectReplaceShaderTexture_ShaderFloatValue__GetEnumerator__);
-    this = (BattleEffectReplaceShaderTexture_o *)sub_1C37058(&Method_System_Collections_Generic_List_BattleEffectReplaceShaderTexture_ShaderColorValue__GetEnumerator__);
-    byte_4C463EB = 1;
+    sub_1C3E564(&Method_System_Collections_Generic_List_Enumerator_BattleEffectReplaceShaderTexture_ShaderFloatValue__Dispose__);
+    sub_1C3E564(&Method_System_Collections_Generic_List_Enumerator_BattleEffectReplaceShaderTexture_ShaderTextureValue__Dispose__);
+    sub_1C3E564(&Method_System_Collections_Generic_List_Enumerator_BattleEffectReplaceShaderTexture_ShaderColorValue__Dispose__);
+    sub_1C3E564(&Method_System_Collections_Generic_List_Enumerator_BattleEffectReplaceShaderTexture_ShaderColorValue__MoveNext__);
+    sub_1C3E564(&Method_System_Collections_Generic_List_Enumerator_BattleEffectReplaceShaderTexture_ShaderFloatValue__MoveNext__);
+    sub_1C3E564(&Method_System_Collections_Generic_List_Enumerator_BattleEffectReplaceShaderTexture_ShaderTextureValue__MoveNext__);
+    sub_1C3E564(&Method_System_Collections_Generic_List_Enumerator_BattleEffectReplaceShaderTexture_ShaderTextureValue__get_Current__);
+    sub_1C3E564(&Method_System_Collections_Generic_List_Enumerator_BattleEffectReplaceShaderTexture_ShaderFloatValue__get_Current__);
+    sub_1C3E564(&Method_System_Collections_Generic_List_Enumerator_BattleEffectReplaceShaderTexture_ShaderColorValue__get_Current__);
+    sub_1C3E564(&Method_System_Collections_Generic_List_BattleEffectReplaceShaderTexture_ShaderTextureValue__GetEnumerator__);
+    sub_1C3E564(&Method_System_Collections_Generic_List_BattleEffectReplaceShaderTexture_ShaderFloatValue__GetEnumerator__);
+    this = (BattleEffectReplaceShaderTexture_o *)sub_1C3E564(&Method_System_Collections_Generic_List_BattleEffectReplaceShaderTexture_ShaderColorValue__GetEnumerator__);
+    byte_4C5A1E2 = 1;
   }
-  memset(&v19, 0, sizeof(v19));
-  memset(&v18, 0, sizeof(v18));
-  memset(&v17, 0, sizeof(v17));
+  memset(&v22, 0, sizeof(v22));
+  memset(&v21, 0, sizeof(v21));
+  memset(&v20, 0, sizeof(v20));
   if ( !replaceShaderFloatValues )
     goto LABEL_31;
   System_Collections_Generic_List_object___GetEnumerator(
-    (System_Collections_Generic_List_Enumerator_T__o *)&v16,
+    (System_Collections_Generic_List_Enumerator_T__o *)&v19,
     (System_Collections_Generic_List_object__o *)replaceShaderFloatValues,
-    (const MethodInfo_37A3B1C *)Method_System_Collections_Generic_List_BattleEffectReplaceShaderTexture_ShaderFloatValue__GetEnumerator__);
-  v19 = v16;
+    (const MethodInfo_37B5F58 *)Method_System_Collections_Generic_List_BattleEffectReplaceShaderTexture_ShaderFloatValue__GetEnumerator__);
+  v22 = v19;
   while ( 1 )
   {
     v10 = System_Collections_Generic_List_Enumerator_object___MoveNext(
-            &v19,
-            (const MethodInfo_352D810 *)Method_System_Collections_Generic_List_Enumerator_BattleEffectReplaceShaderTexture_ShaderFloatValue__MoveNext__);
+            &v22,
+            (const MethodInfo_353FC4C *)Method_System_Collections_Generic_List_Enumerator_BattleEffectReplaceShaderTexture_ShaderFloatValue__MoveNext__);
     if ( !v10 )
       break;
-    current = v19.fields._current;
-    if ( !v19.fields._current )
-      sub_1C372B4(v10);
+    current = v22.fields._current;
+    if ( !v22.fields._current )
+      sub_1C3E7C0(v10, v11);
     if ( !material )
-      sub_1C372B4(v10);
-    if ( UnityEngine_Material__HasProperty_71132888(material, (System_String_o *)v19.fields._current[1].klass, 0) )
+      sub_1C3E7C0(v10, v11);
+    if ( UnityEngine_Material__HasProperty_71207700(material, (System_String_o *)v22.fields._current[1].klass, 0) )
       UnityEngine_Material__SetFloat(material, (System_String_o *)current[1].klass, *(float *)&current[1].monitor, 0);
   }
   System_Collections_Generic_List_Enumerator_object___Dispose(
-    &v19,
-    (const MethodInfo_352D80C *)Method_System_Collections_Generic_List_Enumerator_BattleEffectReplaceShaderTexture_ShaderFloatValue__Dispose__);
+    &v22,
+    (const MethodInfo_353FC48 *)Method_System_Collections_Generic_List_Enumerator_BattleEffectReplaceShaderTexture_ShaderFloatValue__Dispose__);
   if ( !replaceShaderColorValues )
     goto LABEL_31;
   System_Collections_Generic_List_object___GetEnumerator(
-    (System_Collections_Generic_List_Enumerator_T__o *)&v16,
+    (System_Collections_Generic_List_Enumerator_T__o *)&v19,
     (System_Collections_Generic_List_object__o *)replaceShaderColorValues,
-    (const MethodInfo_37A3B1C *)Method_System_Collections_Generic_List_BattleEffectReplaceShaderTexture_ShaderColorValue__GetEnumerator__);
-  v18 = v16;
+    (const MethodInfo_37B5F58 *)Method_System_Collections_Generic_List_BattleEffectReplaceShaderTexture_ShaderColorValue__GetEnumerator__);
+  v21 = v19;
   while ( 1 )
   {
-    v12 = System_Collections_Generic_List_Enumerator_object___MoveNext(
-            &v18,
-            (const MethodInfo_352D810 *)Method_System_Collections_Generic_List_Enumerator_BattleEffectReplaceShaderTexture_ShaderColorValue__MoveNext__);
-    if ( !v12 )
+    v13 = System_Collections_Generic_List_Enumerator_object___MoveNext(
+            &v21,
+            (const MethodInfo_353FC4C *)Method_System_Collections_Generic_List_Enumerator_BattleEffectReplaceShaderTexture_ShaderColorValue__MoveNext__);
+    if ( !v13 )
       break;
-    v13 = v18.fields._current;
-    if ( !v18.fields._current )
-      sub_1C372B4(v12);
+    v15 = v21.fields._current;
+    if ( !v21.fields._current )
+      sub_1C3E7C0(v13, v14);
     if ( !material )
-      sub_1C372B4(v12);
-    if ( UnityEngine_Material__HasProperty_71132888(material, (System_String_o *)v18.fields._current[1].klass, 0) )
+      sub_1C3E7C0(v13, v14);
+    if ( UnityEngine_Material__HasProperty_71207700(material, (System_String_o *)v21.fields._current[1].klass, 0) )
       UnityEngine_Material__SetColor(
         material,
-        (System_String_o *)v13[1].klass,
-        *(UnityEngine_Color_o *)&v13[1].monitor,
+        (System_String_o *)v15[1].klass,
+        *(UnityEngine_Color_o *)&v15[1].monitor,
         0);
   }
   System_Collections_Generic_List_Enumerator_object___Dispose(
-    &v18,
-    (const MethodInfo_352D80C *)Method_System_Collections_Generic_List_Enumerator_BattleEffectReplaceShaderTexture_ShaderColorValue__Dispose__);
+    &v21,
+    (const MethodInfo_353FC48 *)Method_System_Collections_Generic_List_Enumerator_BattleEffectReplaceShaderTexture_ShaderColorValue__Dispose__);
   if ( !replaceShaderTextureValues )
 LABEL_31:
-    sub_1C372B4(this);
+    sub_1C3E7C0(this, material);
   System_Collections_Generic_List_object___GetEnumerator(
-    (System_Collections_Generic_List_Enumerator_T__o *)&v17,
+    (System_Collections_Generic_List_Enumerator_T__o *)&v20,
     (System_Collections_Generic_List_object__o *)replaceShaderTextureValues,
-    (const MethodInfo_37A3B1C *)Method_System_Collections_Generic_List_BattleEffectReplaceShaderTexture_ShaderTextureValue__GetEnumerator__);
+    (const MethodInfo_37B5F58 *)Method_System_Collections_Generic_List_BattleEffectReplaceShaderTexture_ShaderTextureValue__GetEnumerator__);
   while ( 1 )
   {
-    v14 = System_Collections_Generic_List_Enumerator_object___MoveNext(
-            &v17,
-            (const MethodInfo_352D810 *)Method_System_Collections_Generic_List_Enumerator_BattleEffectReplaceShaderTexture_ShaderTextureValue__MoveNext__);
-    if ( !v14 )
+    v16 = System_Collections_Generic_List_Enumerator_object___MoveNext(
+            &v20,
+            (const MethodInfo_353FC4C *)Method_System_Collections_Generic_List_Enumerator_BattleEffectReplaceShaderTexture_ShaderTextureValue__MoveNext__);
+    if ( !v16 )
       break;
-    v15 = v17.fields._current;
-    if ( !v17.fields._current )
-      sub_1C372B4(v14);
+    v18 = v20.fields._current;
+    if ( !v20.fields._current )
+      sub_1C3E7C0(v16, v17);
     if ( !material )
-      sub_1C372B4(v14);
-    if ( UnityEngine_Material__HasProperty_71132888(
+      sub_1C3E7C0(v16, v17);
+    if ( UnityEngine_Material__HasProperty_71207700(
            material,
-           *(System_String_o **)((char *)&v17.fields._current->klass + (unsigned __int64)&word_10),
+           *(System_String_o **)((char *)&v20.fields._current->klass + (unsigned __int64)&word_10),
            0) )
     {
       UnityEngine_Material__SetTexture(
         material,
-        *(System_String_o **)((char *)&word_10 + (_QWORD)v15),
-        *(UnityEngine_Texture_o **)((char *)&word_10 + (_QWORD)v15 + 8),
+        *(System_String_o **)((char *)&word_10 + (_QWORD)v18),
+        *(UnityEngine_Texture_o **)((char *)&word_10 + (_QWORD)v18 + 8),
         0);
     }
   }
   System_Collections_Generic_List_Enumerator_object___Dispose(
-    &v17,
-    (const MethodInfo_352D80C *)Method_System_Collections_Generic_List_Enumerator_BattleEffectReplaceShaderTexture_ShaderTextureValue__Dispose__);
+    &v20,
+    (const MethodInfo_353FC48 *)Method_System_Collections_Generic_List_Enumerator_BattleEffectReplaceShaderTexture_ShaderTextureValue__Dispose__);
 }
 
 
@@ -2123,16 +2133,16 @@ void BattleEffectReplaceShaderTexture_ReplaceObject___ctor(
   const MethodInfo *v3; // x3
   int32_t v5; // w1
 
-  if ( (byte_4C463ED & 1) == 0 )
+  if ( (byte_4C5A1E4 & 1) == 0 )
   {
-    sub_1C37058(&StringLiteral_17326/*"body_level"*/);
-    byte_4C463ED = 1;
+    sub_1C3E564(&StringLiteral_17342/*"body_level"*/);
+    byte_4C5A1E4 = 1;
   }
   this->fields.useUniqueId = 1;
   this->fields.isCheckUniqueId = 1;
-  v5 = StringLiteral_17326/*"body_level"*/;
-  this->fields.searchMeshWord = (struct System_String_o *)StringLiteral_17326/*"body_level"*/;
-  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.searchMeshWord, v5, v2, v3);
+  v5 = StringLiteral_17342/*"body_level"*/;
+  this->fields.searchMeshWord = (struct System_String_o *)StringLiteral_17342/*"body_level"*/;
+  sub_1C3E508((CGThumbnailListItem_o *)&this->fields.searchMeshWord, v5, v2, v3);
   this->fields.targetShaderAll = 1;
   *(_WORD *)&this->fields.targetsInChildren = 257;
   *(_WORD *)&this->fields.useAutoReplaceShader = 257;

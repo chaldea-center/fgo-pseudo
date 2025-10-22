@@ -10,71 +10,72 @@ void EventPointBuffEntity___ctor(EventPointBuffEntity_o *this, const MethodInfo 
   int32_t v10; // w2
   const MethodInfo *v11; // x3
 
-  if ( (byte_4C43023 & 1) == 0 )
+  if ( (byte_4C56DD2 & 1) == 0 )
   {
-    sub_1C37058(&Method_DataEntityBase_int___ctor__);
-    sub_1C37058(&int___TypeInfo);
-    sub_1C37058(&StringLiteral_1/*""*/);
-    byte_4C43023 = 1;
+    sub_1C3E564(&Method_DataEntityBase_int___ctor__);
+    sub_1C3E564(&int___TypeInfo);
+    sub_1C3E564(&StringLiteral_1/*""*/);
+    byte_4C56DD2 = 1;
   }
   DataEntityBase_int____ctor(
     (DataEntityBase_int__o *)this,
-    (const MethodInfo_339EBBC *)Method_DataEntityBase_int___ctor__);
+    (const MethodInfo_33B0A74 *)Method_DataEntityBase_int___ctor__);
   *(_QWORD *)&this->fields.id = 0;
   *(_QWORD *)&this->fields.groupId = 0;
   v3 = StringLiteral_1/*""*/;
   this->fields.name = (struct System_String_o *)StringLiteral_1/*""*/;
-  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.name, v3, v4, v5);
+  sub_1C3E508((CGThumbnailListItem_o *)&this->fields.name, v3, v4, v5);
   v6 = StringLiteral_1/*""*/;
   this->fields.detail = (struct System_String_o *)StringLiteral_1/*""*/;
-  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.detail, v6, v7, v8);
+  sub_1C3E508((CGThumbnailListItem_o *)&this->fields.detail, v6, v7, v8);
   *(_QWORD *)&this->fields.imageId = 0;
   *(_QWORD *)&this->fields.skillIconId = 0;
   this->fields.value = 0;
-  v9 = (struct System_Int32_array *)sub_1C37100(int___TypeInfo, 0);
+  v9 = (struct System_Int32_array *)sub_1C3E60C(int___TypeInfo, 0);
   this->fields.funcIds = v9;
-  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.funcIds, (int32_t)v9, v10, v11);
+  sub_1C3E508((CGThumbnailListItem_o *)&this->fields.funcIds, (int32_t)v9, v10, v11);
 }
 
 
-void EventPointBuffEntity___ctor_42059100(
+void EventPointBuffEntity___ctor_42108664(
         EventPointBuffEntity_o *this,
         EventPointBuffEntity_o *cSrc,
         const MethodInfo *method)
 {
   __int64 v5; // x0
-  int32_t v6; // w2
-  const MethodInfo *v7; // x3
+  __int64 v6; // x1
+  int32_t v7; // w2
+  const MethodInfo *v8; // x3
   struct System_String_o *name; // x1
   struct System_String_o *detail; // x1
-  int32_t v10; // w2
-  const MethodInfo *v11; // x3
+  int32_t v11; // w2
+  const MethodInfo *v12; // x3
   struct System_Int32_array *funcIds; // x1
-  int32_t v13; // w2
-  const MethodInfo *v14; // x3
+  int32_t v14; // w2
+  const MethodInfo *v15; // x3
 
-  if ( (byte_4C43024 & 1) == 0 )
+  if ( (byte_4C56DD3 & 1) == 0 )
   {
-    sub_1C37058(&Method_DataEntityBase_int___ctor__);
-    byte_4C43024 = 1;
+    sub_1C3E564(&Method_DataEntityBase_int___ctor__);
+    byte_4C56DD3 = 1;
   }
   DataEntityBase_int____ctor(
     (DataEntityBase_int__o *)this,
-    (const MethodInfo_339EBBC *)Method_DataEntityBase_int___ctor__);
+    (const MethodInfo_33B0A74 *)Method_DataEntityBase_int___ctor__);
   if ( !cSrc )
-    sub_1C372B4(v5);
+    sub_1C3E7C0(v5, v6);
   *(_OWORD *)&this->fields.id = *(_OWORD *)&cSrc->fields.id;
   name = cSrc->fields.name;
   this->fields.name = name;
-  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.name, (int32_t)name, v6, v7);
+  sub_1C3E508((CGThumbnailListItem_o *)&this->fields.name, (int32_t)name, v7, v8);
   detail = cSrc->fields.detail;
   this->fields.detail = detail;
-  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.detail, (int32_t)detail, v10, v11);
+  sub_1C3E508((CGThumbnailListItem_o *)&this->fields.detail, (int32_t)detail, v11, v12);
   *(_OWORD *)&this->fields.imageId = *(_OWORD *)&cSrc->fields.imageId;
   this->fields.value = cSrc->fields.value;
   funcIds = cSrc->fields.funcIds;
   this->fields.funcIds = funcIds;
-  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.funcIds, (int32_t)funcIds, v13, v14);
+  sub_1C3E508((CGThumbnailListItem_o *)&this->fields.funcIds, (int32_t)funcIds, v14, v15);
 }
 
 

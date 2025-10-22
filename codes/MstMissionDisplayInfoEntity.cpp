@@ -1,13 +1,13 @@
 void MstMissionDisplayInfoEntity___ctor(MstMissionDisplayInfoEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_4C434CC & 1) == 0 )
+  if ( (byte_4C57281 & 1) == 0 )
   {
-    sub_1C37058(&Method_DataEntityBase_int___ctor__);
-    byte_4C434CC = 1;
+    sub_1C3E564(&Method_DataEntityBase_int___ctor__);
+    byte_4C57281 = 1;
   }
   DataEntityBase_int____ctor(
     (DataEntityBase_int__o *)this,
-    (const MethodInfo_339EBBC *)Method_DataEntityBase_int___ctor__);
+    (const MethodInfo_33B0A74 *)Method_DataEntityBase_int___ctor__);
 }
 
 
@@ -21,10 +21,10 @@ bool MstMissionDisplayInfoEntity__isOpenNow(MstMissionDisplayInfoEntity_o *this,
 {
   int64_t Time; // x0
 
-  if ( (byte_4C434CB & 1) == 0 )
+  if ( (byte_4C57280 & 1) == 0 )
   {
-    sub_1C37058(&NetworkManager_TypeInfo);
-    byte_4C434CB = 1;
+    sub_1C3E564(&NetworkManager_TypeInfo);
+    byte_4C57280 = 1;
   }
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);

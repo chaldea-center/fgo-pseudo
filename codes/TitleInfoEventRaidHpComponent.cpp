@@ -9,22 +9,22 @@ void TitleInfoEventRaidHpComponent___cctor(const MethodInfo *method)
   int32_t v7; // w2
   const MethodInfo *v8; // x3
 
-  if ( (byte_4C418E6 & 1) == 0 )
+  if ( (byte_4C55688 & 1) == 0 )
   {
-    sub_1C37058(&TitleInfoEventRaidHpComponent_TypeInfo);
-    sub_1C37058(&StringLiteral_19245/*"event_raid_ok"*/);
-    sub_1C37058(&StringLiteral_19243/*"event_raid_ng"*/);
-    byte_4C418E6 = 1;
+    sub_1C3E564(&TitleInfoEventRaidHpComponent_TypeInfo);
+    sub_1C3E564(&StringLiteral_19263/*"event_raid_ok"*/);
+    sub_1C3E564(&StringLiteral_19261/*"event_raid_ng"*/);
+    byte_4C55688 = 1;
   }
   static_fields = TitleInfoEventRaidHpComponent_TypeInfo->static_fields;
   static_fields->WIDTH = 31.0;
-  v4 = StringLiteral_19245/*"event_raid_ok"*/;
-  static_fields->RESULT_OK_SPNAME = (struct System_String_o *)StringLiteral_19245/*"event_raid_ok"*/;
-  sub_1C36FFC((CGThumbnailListItem_o *)&static_fields->RESULT_OK_SPNAME, v4, v1, v2);
-  v5 = StringLiteral_19243/*"event_raid_ng"*/;
+  v4 = StringLiteral_19263/*"event_raid_ok"*/;
+  static_fields->RESULT_OK_SPNAME = (struct System_String_o *)StringLiteral_19263/*"event_raid_ok"*/;
+  sub_1C3E508((CGThumbnailListItem_o *)&static_fields->RESULT_OK_SPNAME, v4, v1, v2);
+  v5 = StringLiteral_19261/*"event_raid_ng"*/;
   v6 = TitleInfoEventRaidHpComponent_TypeInfo->static_fields;
-  v6->RESULT_NG_SPNAME = (struct System_String_o *)StringLiteral_19243/*"event_raid_ng"*/;
-  sub_1C36FFC((CGThumbnailListItem_o *)&v6->RESULT_NG_SPNAME, v5, v7, v8);
+  v6->RESULT_NG_SPNAME = (struct System_String_o *)StringLiteral_19261/*"event_raid_ng"*/;
+  sub_1C3E508((CGThumbnailListItem_o *)&v6->RESULT_NG_SPNAME, v5, v7, v8);
 }
 
 
@@ -34,6 +34,7 @@ void TitleInfoEventRaidHpComponent___ctor(TitleInfoEventRaidHpComponent_o *this,
 }
 
 
+// local variable allocation has failed, the output may be wrong!
 void TitleInfoEventRaidHpComponent__Setup(
         TitleInfoEventRaidHpComponent_o *this,
         int32_t dispHpType,
@@ -43,10 +44,10 @@ void TitleInfoEventRaidHpComponent__Setup(
   UISprite_o *v6; // x20
   System_String_o *RESULT_NG_SPNAME; // x1
 
-  if ( (byte_4C418E5 & 1) == 0 )
+  if ( (byte_4C55687 & 1) == 0 )
   {
-    sub_1C37058(&TitleInfoEventRaidHpComponent_TypeInfo);
-    byte_4C418E5 = 1;
+    sub_1C3E564(&TitleInfoEventRaidHpComponent_TypeInfo);
+    byte_4C55687 = 1;
   }
   resultSp = (UnityEngine_Component_o *)this->fields.resultSp;
   if ( !resultSp )
@@ -82,7 +83,7 @@ void TitleInfoEventRaidHpComponent__Setup(
         }
       }
 LABEL_22:
-      sub_1C372B4(resultSp);
+      sub_1C3E7C0(resultSp, *(_QWORD *)&dispHpType);
     }
     v6 = this->fields.resultSp;
     resultSp = (UnityEngine_Component_o *)TitleInfoEventRaidHpComponent_TypeInfo;

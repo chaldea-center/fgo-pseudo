@@ -8,14 +8,15 @@ void CharaGraphGrandEquipListViewItem___ctor(
         const MethodInfo *method)
 {
   __int64 v13; // x0
-  __int128 v14; // q1
-  CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_o v15; // [xsp+0h] [xbp-80h] BYREF
-  CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_o v16; // [xsp+20h] [xbp-60h]
+  __int64 v14; // x1
+  __int128 v15; // q1
+  CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_o v16; // [xsp+0h] [xbp-80h] BYREF
+  CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_o v17; // [xsp+20h] [xbp-60h]
 
-  if ( (byte_4C3DD60 & 1) == 0 )
+  if ( (byte_4C51AE0 & 1) == 0 )
   {
-    sub_1C37058(&CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo);
-    byte_4C3DD60 = 1;
+    sub_1C3E564(&CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo);
+    byte_4C51AE0 = 1;
   }
   CharaGraphEquipListViewItem___ctor(
     (CharaGraphEquipListViewItem_o *)this,
@@ -25,14 +26,14 @@ void CharaGraphGrandEquipListViewItem___ctor(
     partyUserServantList,
     0);
   this->fields.grandServantData = grandSvtSlotData;
-  v13 = sub_1C36FFC(&this->fields.grandServantData, grandSvtSlotData);
+  v13 = sub_1C3E508(&this->fields.grandServantData, grandSvtSlotData);
   if ( !userSvtEntity )
-    sub_1C372B4(v13);
-  v14 = *(_OWORD *)&userSvtEntity->fields.id.fields.fakeValue;
-  *(_OWORD *)&v16.fields.currentCryptoKey = *(_OWORD *)&userSvtEntity->fields.id.fields.currentCryptoKey;
-  *(_OWORD *)&v16.fields.fakeValue = v14;
+    sub_1C3E7C0(v13, v14);
+  v15 = *(_OWORD *)&userSvtEntity->fields.id.fields.fakeValue;
+  *(_OWORD *)&v17.fields.currentCryptoKey = *(_OWORD *)&userSvtEntity->fields.id.fields.currentCryptoKey;
+  *(_OWORD *)&v17.fields.fakeValue = v15;
   if ( !CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo);
-  v15 = v16;
-  this->fields.equipUserServantId = CodeStage_AntiCheat_ObscuredTypes_ObscuredLong__op_Implicit_48934420(&v15, 0);
+  v16 = v17;
+  this->fields.equipUserServantId = CodeStage_AntiCheat_ObscuredTypes_ObscuredLong__op_Implicit_49007660(&v16, 0);
 }

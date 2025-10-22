@@ -4,6 +4,7 @@ void ShortestDistanceFromPrioritySpace___ctor(ShortestDistanceFromPrioritySpace_
 }
 
 
+// local variable allocation has failed, the output may be wrong!
 float ShortestDistanceFromPrioritySpace__GetRatingBase(
         ShortestDistanceFromPrioritySpace_o *this,
         int32_t forceId,
@@ -19,10 +20,10 @@ float ShortestDistanceFromPrioritySpace__GetRatingBase(
   struct WarBoardRatingBaseEntity_o *ratingBase; // x8
 
   v9 = this;
-  if ( (byte_4C4091D & 1) == 0 )
+  if ( (byte_4C546BA & 1) == 0 )
   {
-    this = (ShortestDistanceFromPrioritySpace_o *)sub_1C37058(&AStarSearch_TypeInfo);
-    byte_4C4091D = 1;
+    this = (ShortestDistanceFromPrioritySpace_o *)sub_1C3E564(&AStarSearch_TypeInfo);
+    byte_4C546BA = 1;
   }
   if ( !targetSquare )
     goto LABEL_12;
@@ -44,7 +45,7 @@ float ShortestDistanceFromPrioritySpace__GetRatingBase(
                * (float)targetSquare->fields._evalValue_k__BackingField,
                  0.0);
 LABEL_12:
-      sub_1C372B4(this);
+      sub_1C3E7C0(this, *(_QWORD *)&forceId);
     }
   }
   return 0.0;

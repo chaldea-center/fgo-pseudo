@@ -7,19 +7,19 @@ void WarBoardMasterPieceComponent___cctor(const MethodInfo *method)
   int32_t v5; // w2
   const MethodInfo *v6; // x3
 
-  if ( (byte_4C4085A & 1) == 0 )
+  if ( (byte_4C545F7 & 1) == 0 )
   {
-    sub_1C37058(&WarBoardMasterPieceComponent_TypeInfo);
-    sub_1C37058(&StringLiteral_19036/*"enemyMstFace{0:d5}"*/);
-    sub_1C37058(&StringLiteral_6045/*"EnemyMasterFace/enemyMstFace{0:d5}"*/);
-    byte_4C4085A = 1;
+    sub_1C3E564(&WarBoardMasterPieceComponent_TypeInfo);
+    sub_1C3E564(&StringLiteral_19054/*"enemyMstFace{0:d5}"*/);
+    sub_1C3E564(&StringLiteral_6045/*"EnemyMasterFace/enemyMstFace{0:d5}"*/);
+    byte_4C545F7 = 1;
   }
   WarBoardMasterPieceComponent_TypeInfo->static_fields->ENEMY_MASTER_FACE_ASSET_NAME = (struct System_String_o *)StringLiteral_6045/*"EnemyMasterFace/enemyMstFace{0:d5}"*/;
-  sub_1C36FFC((CGThumbnailListItem_o *)WarBoardMasterPieceComponent_TypeInfo->static_fields, StringLiteral_6045/*"EnemyMasterFace/enemyMstFace{0:d5}"*/, v1, v2);
-  v3 = StringLiteral_19036/*"enemyMstFace{0:d5}"*/;
+  sub_1C3E508((CGThumbnailListItem_o *)WarBoardMasterPieceComponent_TypeInfo->static_fields, StringLiteral_6045/*"EnemyMasterFace/enemyMstFace{0:d5}"*/, v1, v2);
+  v3 = StringLiteral_19054/*"enemyMstFace{0:d5}"*/;
   static_fields = WarBoardMasterPieceComponent_TypeInfo->static_fields;
-  static_fields->ENEMY_MASTER_FACE_TEXTURE_NAME = (struct System_String_o *)StringLiteral_19036/*"enemyMstFace{0:d5}"*/;
-  sub_1C36FFC((CGThumbnailListItem_o *)&static_fields->ENEMY_MASTER_FACE_TEXTURE_NAME, v3, v5, v6);
+  static_fields->ENEMY_MASTER_FACE_TEXTURE_NAME = (struct System_String_o *)StringLiteral_19054/*"enemyMstFace{0:d5}"*/;
+  sub_1C3E508((CGThumbnailListItem_o *)&static_fields->ENEMY_MASTER_FACE_TEXTURE_NAME, v3, v5, v6);
 }
 
 
@@ -39,7 +39,7 @@ UnityEngine_Vector3_o WarBoardMasterPieceComponent__GetIconLocalPosition(
 
   masterIcon = (UnityEngine_Component_o *)this->fields.masterIcon;
   if ( !masterIcon || (masterIcon = (UnityEngine_Component_o *)UnityEngine_Component__get_transform(masterIcon, 0)) == 0 )
-    sub_1C372B4(masterIcon);
+    sub_1C3E7C0(masterIcon, method);
   return UnityEngine_Transform__get_localPosition((UnityEngine_Transform_o *)masterIcon, 0);
 }
 
@@ -52,7 +52,7 @@ UnityEngine_Vector3_o WarBoardMasterPieceComponent__GetIconPosition(
 
   masterIcon = (UnityEngine_Component_o *)this->fields.masterIcon;
   if ( !masterIcon || (masterIcon = (UnityEngine_Component_o *)UnityEngine_Component__get_transform(masterIcon, 0)) == 0 )
-    sub_1C372B4(masterIcon);
+    sub_1C3E7C0(masterIcon, method);
   return UnityEngine_Transform__get_position((UnityEngine_Transform_o *)masterIcon, 0);
 }
 
@@ -63,67 +63,68 @@ void WarBoardMasterPieceComponent__Initialize(
         const MethodInfo *method)
 {
   System_String_o *masterIcon; // x0
-  __int64 v6; // x2
-  __int64 v7; // x3
-  __int64 v8; // x4
-  __int64 v9; // x5
-  __int64 v10; // x6
-  __int64 v11; // x7
+  __int64 v6; // x1
+  __int64 v7; // x2
+  __int64 v8; // x3
+  __int64 v9; // x4
+  __int64 v10; // x5
+  __int64 v11; // x6
+  __int64 v12; // x7
   UISprite_o *frameSprite; // x21
-  Il2CppObject *v13; // x0
-  UnityEngine_Object_o *v14; // x20
-  const MethodInfo *v15; // x1
-  struct UITexture_o *v16; // x20
-  UnityEngine_Shader_o *v17; // x22
-  UnityEngine_Material_o *v18; // x21
+  Il2CppObject *v14; // x0
+  UnityEngine_Object_o *v15; // x20
+  const MethodInfo *v16; // x1
+  struct UITexture_o *v17; // x20
+  UnityEngine_Shader_o *v18; // x22
+  UnityEngine_Material_o *v19; // x21
   int32_t forceId_k__BackingField; // [xsp+Ch] [xbp-24h] BYREF
 
-  if ( (byte_4C40853 & 1) == 0 )
+  if ( (byte_4C545F0 & 1) == 0 )
   {
-    sub_1C37058(&int_TypeInfo);
-    sub_1C37058(&UnityEngine_Material_TypeInfo);
-    sub_1C37058(&UnityEngine_Object_TypeInfo);
-    sub_1C37058(&StringLiteral_4940/*"Custom/SpriteWithMask"*/);
-    sub_1C37058(&StringLiteral_6861/*"Frame{0}"*/);
-    byte_4C40853 = 1;
+    sub_1C3E564(&int_TypeInfo);
+    sub_1C3E564(&UnityEngine_Material_TypeInfo);
+    sub_1C3E564(&UnityEngine_Object_TypeInfo);
+    sub_1C3E564(&StringLiteral_4940/*"Custom/SpriteWithMask"*/);
+    sub_1C3E564(&StringLiteral_6861/*"Frame{0}"*/);
+    byte_4C545F0 = 1;
   }
   WarBoardPieceBaseComponent__Initialize((WarBoardPieceBaseComponent_o *)this, pieceData, method);
   if ( !pieceData )
     goto LABEL_12;
   frameSprite = this->fields.frameSprite;
   forceId_k__BackingField = pieceData->fields._forceId_k__BackingField;
-  v13 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &forceId_k__BackingField, v6, v7, v8, v9, v10, v11);
-  masterIcon = System_String__Format((System_String_o *)StringLiteral_6861/*"Frame{0}"*/, v13, 0);
+  v14 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &forceId_k__BackingField, v7, v8, v9, v10, v11, v12);
+  masterIcon = System_String__Format((System_String_o *)StringLiteral_6861/*"Frame{0}"*/, v14, 0);
   if ( !frameSprite )
     goto LABEL_12;
   UISprite__set_spriteName(frameSprite, masterIcon, 0);
   masterIcon = (System_String_o *)this->fields.masterIcon;
   if ( !masterIcon )
     goto LABEL_12;
-  v14 = (UnityEngine_Object_o *)((__int64 (__fastcall *)(System_String_o *, const MethodInfo *))masterIcon->klass->vtable._24_ToString.methodPtr)(
+  v15 = (UnityEngine_Object_o *)((__int64 (__fastcall *)(System_String_o *, const MethodInfo *))masterIcon->klass->vtable._24_ToString.methodPtr)(
                                   masterIcon,
                                   masterIcon->klass->vtable._24_ToString.method);
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-  if ( UnityEngine_Object__op_Equality(v14, 0, 0) )
+  if ( UnityEngine_Object__op_Equality(v15, 0, 0) )
   {
-    v16 = this->fields.masterIcon;
-    v17 = UnityEngine_Shader__Find((System_String_o *)StringLiteral_4940/*"Custom/SpriteWithMask"*/, 0);
-    v18 = (UnityEngine_Material_o *)sub_1C372A4(UnityEngine_Material_TypeInfo);
-    UnityEngine_Material___ctor(v18, v17, 0);
-    if ( v16 )
+    v17 = this->fields.masterIcon;
+    v18 = UnityEngine_Shader__Find((System_String_o *)StringLiteral_4940/*"Custom/SpriteWithMask"*/, 0);
+    v19 = (UnityEngine_Material_o *)sub_1C3E7B0(UnityEngine_Material_TypeInfo);
+    UnityEngine_Material___ctor(v19, v18, 0);
+    if ( v17 )
     {
-      ((void (__fastcall *)(struct UITexture_o *, UnityEngine_Material_o *, const MethodInfo *))v16->klass->vtable._25_set_material.methodPtr)(
-        v16,
-        v18,
-        v16->klass->vtable._25_set_material.method);
+      ((void (__fastcall *)(struct UITexture_o *, UnityEngine_Material_o *, const MethodInfo *))v17->klass->vtable._25_set_material.methodPtr)(
+        v17,
+        v19,
+        v17->klass->vtable._25_set_material.method);
       goto LABEL_11;
     }
 LABEL_12:
-    sub_1C372B4(masterIcon);
+    sub_1C3E7C0(masterIcon, v6);
   }
 LABEL_11:
-  WarBoardMasterPieceComponent__SetMasterIcon(this, v15);
+  WarBoardMasterPieceComponent__SetMasterIcon(this, v16);
 }
 
 
@@ -136,149 +137,150 @@ void WarBoardMasterPieceComponent__OnDead(
 {
   Il2CppObject *Instance; // x22
   UnityEngine_Transform_o *transform; // x0
-  const MethodInfo_38CD368 *v11; // x2
-  System_Nullable_float__o v12; // x3
-  int32_t v13; // w2
-  const MethodInfo *v14; // x3
+  __int64 v11; // x1
+  const MethodInfo_38DF7A4 *v12; // x2
+  System_Nullable_float__o v13; // x3
+  int32_t v14; // w2
+  const MethodInfo *v15; // x3
   struct WarBoardTaskBase_array *items; // x8
-  _QWORD *v16; // x9
+  _QWORD *v17; // x9
   __int64 size; // x10
-  UnityEngine_Transform_o *v18; // x1
-  Il2CppClass **v19; // x0
-  WarBoardTaskBase_array *v20; // x23
-  Il2CppObject *v21; // x24
-  const MethodInfo_38CD368 *v22; // x2
-  System_Nullable_float__o v23; // x3
-  int32_t v24; // w2
-  const MethodInfo *v25; // x3
-  WarBoardTaskBase_o *v26; // x21
-  Il2CppObject *v27; // x21
+  UnityEngine_Transform_o *v19; // x1
+  Il2CppClass **v20; // x0
+  WarBoardTaskBase_array *v21; // x23
+  Il2CppObject *v22; // x24
+  const MethodInfo_38DF7A4 *v23; // x2
+  System_Nullable_float__o v24; // x3
+  int32_t v25; // w2
+  const MethodInfo *v26; // x3
+  WarBoardTaskBase_o *v27; // x21
+  Il2CppObject *v28; // x21
   CGThumbnailListItem_o *p_fields; // x22
   System_Delegate_o *m_CachedPtr; // x23
-  WarBoardTaskBase_TaskCallback_o *v30; // x24
-  System_Delegate_o *v31; // x0
-  int32_t v32; // w2
-  const MethodInfo *v33; // x3
-  System_Delegate_o *v34; // x8
-  WarBoardTaskBase_TaskCallback_c *v35; // x1
-  int32_t v36; // w2
-  const MethodInfo *v37; // x3
-  struct WarBoardTaskBase_array *v38; // x8
-  _QWORD *v39; // x9
-  __int64 v40; // x10
-  Il2CppClass **v41; // x0
-  Il2CppObject *v42; // x19
-  UnityEngine_Transform_o *v43; // x20
-  int32_t v44; // w2
-  const MethodInfo *v45; // x3
-  __int64 v46; // x0
-  System_Nullable_Vector3__o v47; // [xsp+0h] [xbp-60h] BYREF
-  System_Nullable_Vector3__o v48; // 0:x0.16
+  WarBoardTaskBase_TaskCallback_o *v31; // x24
+  System_Delegate_o *v32; // x0
+  int32_t v33; // w2
+  const MethodInfo *v34; // x3
+  System_Delegate_o *v35; // x8
+  WarBoardTaskBase_TaskCallback_c *v36; // x1
+  int32_t v37; // w2
+  const MethodInfo *v38; // x3
+  struct WarBoardTaskBase_array *v39; // x8
+  _QWORD *v40; // x9
+  __int64 v41; // x10
+  Il2CppClass **v42; // x0
+  Il2CppObject *v43; // x19
+  UnityEngine_Transform_o *v44; // x20
+  int32_t v45; // w2
+  const MethodInfo *v46; // x3
+  __int64 v47; // x0
+  System_Nullable_Vector3__o v48; // [xsp+0h] [xbp-60h] BYREF
   System_Nullable_Vector3__o v49; // 0:x0.16
+  System_Nullable_Vector3__o v50; // 0:x0.16
   UnityEngine_Vector3_o localPosition; // 0:s0.4,4:s1.4,8:s2.4
-  UnityEngine_Vector3_o v51; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o v52; // 0:s0.4,4:s1.4,8:s2.4
 
-  if ( (byte_4C40854 & 1) == 0 )
+  if ( (byte_4C545F1 & 1) == 0 )
   {
-    sub_1C37058(&Method_System_Collections_Generic_List_WarBoardTaskBase__Add__);
-    sub_1C37058(&Method_System_Nullable_Vector3___ctor__);
-    sub_1C37058(&Method_SingletonMonoBehaviour_WarBoardManager__get_Instance__);
-    sub_1C37058(&WarBoardTaskBase_TaskCallback_TypeInfo);
-    sub_1C37058(&Method_WarBoardMasterPieceComponent__OnDead_b__11_0__);
-    sub_1C37058(&WarBoardTaskBase___TypeInfo);
-    sub_1C37058(&StringLiteral_8939/*"MasterBreak"*/);
-    byte_4C40854 = 1;
+    sub_1C3E564(&Method_System_Collections_Generic_List_WarBoardTaskBase__Add__);
+    sub_1C3E564(&Method_System_Nullable_Vector3___ctor__);
+    sub_1C3E564(&Method_SingletonMonoBehaviour_WarBoardManager__get_Instance__);
+    sub_1C3E564(&WarBoardTaskBase_TaskCallback_TypeInfo);
+    sub_1C3E564(&Method_WarBoardMasterPieceComponent__OnDead_b__11_0__);
+    sub_1C3E564(&WarBoardTaskBase___TypeInfo);
+    sub_1C3E564(&StringLiteral_8939/*"MasterBreak"*/);
+    byte_4C545F1 = 1;
   }
   if ( cameraMove )
   {
-    Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39ED16C *)Method_SingletonMonoBehaviour_WarBoardManager__get_Instance__);
+    Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39FF5A8 *)Method_SingletonMonoBehaviour_WarBoardManager__get_Instance__);
     if ( taskList )
     {
       transform = UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0);
       if ( transform )
       {
         localPosition = UnityEngine_Transform__get_localPosition(transform, 0);
-        *(_QWORD *)&v48.fields.hasValue = &v47;
-        *(_QWORD *)&v47.fields.hasValue = 0;
-        *(_QWORD *)&v47.fields.value.fields.y = 0;
-        *(_QWORD *)&v48.fields.value.fields.y = Method_System_Nullable_Vector3___ctor__;
-        System_Nullable_Vector3____ctor(v48, localPosition, v11);
+        *(_QWORD *)&v49.fields.hasValue = &v48;
+        *(_QWORD *)&v48.fields.hasValue = 0;
+        *(_QWORD *)&v48.fields.value.fields.y = 0;
+        *(_QWORD *)&v49.fields.value.fields.y = Method_System_Nullable_Vector3___ctor__;
+        System_Nullable_Vector3____ctor(v49, localPosition, v12);
         if ( Instance )
         {
-          v12 = cameraSize;
+          v13 = cameraSize;
           transform = (UnityEngine_Transform_o *)WarBoardManager__GetCameraPerformanceTask(
                                                    (WarBoardManager_o *)Instance,
-                                                   v47,
-                                                   v12,
+                                                   v48,
+                                                   v13,
                                                    1,
                                                    0,
                                                    1,
                                                    0);
           items = taskList->fields._items;
-          v16 = Method_System_Collections_Generic_List_WarBoardTaskBase__Add__;
+          v17 = Method_System_Collections_Generic_List_WarBoardTaskBase__Add__;
           ++taskList->fields._version;
           if ( items )
           {
             size = taskList->fields._size;
-            v18 = transform;
+            v19 = transform;
             if ( (unsigned int)size >= LODWORD(items->max_length) )
             {
               System_Collections_Generic_List_object___AddWithResize(
                 (System_Collections_Generic_List_object__o *)taskList,
                 (Il2CppObject *)transform,
-                *(const MethodInfo_37A3024 **)(*(_QWORD *)(v16[4] + 192LL) + 112LL));
+                *(const MethodInfo_37B5460 **)(*(_QWORD *)(v17[4] + 192LL) + 112LL));
             }
             else
             {
-              v19 = &items->obj.klass + size;
+              v20 = &items->obj.klass + size;
               taskList->fields._size = size + 1;
-              v19[4] = (Il2CppClass *)v18;
-              sub_1C36FFC((CGThumbnailListItem_o *)(v19 + 4), (int32_t)v18, v13, v14);
+              v20[4] = (Il2CppClass *)v19;
+              sub_1C3E508((CGThumbnailListItem_o *)(v20 + 4), (int32_t)v19, v14, v15);
             }
             goto LABEL_19;
           }
         }
       }
 LABEL_37:
-      sub_1C372B4(transform);
+      sub_1C3E7C0(transform, v11);
     }
-    v20 = (WarBoardTaskBase_array *)sub_1C37100(WarBoardTaskBase___TypeInfo, 1);
-    v21 = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39ED16C *)Method_SingletonMonoBehaviour_WarBoardManager__get_Instance__);
+    v21 = (WarBoardTaskBase_array *)sub_1C3E60C(WarBoardTaskBase___TypeInfo, 1);
+    v22 = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39FF5A8 *)Method_SingletonMonoBehaviour_WarBoardManager__get_Instance__);
     transform = UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0);
     if ( !transform )
       goto LABEL_37;
-    v51 = UnityEngine_Transform__get_localPosition(transform, 0);
-    *(_QWORD *)&v49.fields.hasValue = &v47;
-    v47 = (System_Nullable_Vector3__o)0LL;
-    *(_QWORD *)&v49.fields.value.fields.y = Method_System_Nullable_Vector3___ctor__;
-    System_Nullable_Vector3____ctor(v49, v51, v22);
-    if ( !v21 )
+    v52 = UnityEngine_Transform__get_localPosition(transform, 0);
+    *(_QWORD *)&v50.fields.hasValue = &v48;
+    v48 = (System_Nullable_Vector3__o)0LL;
+    *(_QWORD *)&v50.fields.value.fields.y = Method_System_Nullable_Vector3___ctor__;
+    System_Nullable_Vector3____ctor(v50, v52, v23);
+    if ( !v22 )
       goto LABEL_37;
-    v23 = cameraSize;
+    v24 = cameraSize;
     transform = (UnityEngine_Transform_o *)WarBoardManager__GetCameraPerformanceTask(
-                                             (WarBoardManager_o *)v21,
-                                             v47,
-                                             v23,
+                                             (WarBoardManager_o *)v22,
+                                             v48,
+                                             v24,
                                              1,
                                              0,
                                              1,
                                              0);
-    if ( !v20 )
+    if ( !v21 )
       goto LABEL_37;
-    v26 = (WarBoardTaskBase_o *)transform;
+    v27 = (WarBoardTaskBase_o *)transform;
     if ( transform )
     {
-      transform = (UnityEngine_Transform_o *)sub_1C37194(transform, v20->obj.klass->_1.element_class);
+      transform = (UnityEngine_Transform_o *)sub_1C3E6A0(transform, v21->obj.klass->_1.element_class);
       if ( !transform )
         goto LABEL_39;
     }
-    if ( !LODWORD(v20->max_length) )
+    if ( !LODWORD(v21->max_length) )
       goto LABEL_38;
-    v20->m_Items[0] = v26;
-    sub_1C36FFC((CGThumbnailListItem_o *)v20->m_Items, (int32_t)v26, v24, v25);
+    v21->m_Items[0] = v27;
+    sub_1C3E508((CGThumbnailListItem_o *)v21->m_Items, (int32_t)v27, v25, v26);
     if ( !Instance )
       goto LABEL_37;
-    WarBoardManager__InsertTask((WarBoardManager_o *)Instance, 0, v20, 0);
+    WarBoardManager__InsertTask((WarBoardManager_o *)Instance, 0, v21, 0);
   }
 LABEL_19:
   transform = (UnityEngine_Transform_o *)WarBoardPieceBaseComponent__GetSimpleAnimationPerformance(
@@ -287,74 +289,74 @@ LABEL_19:
                                            (const MethodInfo *)taskList);
   if ( !transform )
     goto LABEL_37;
-  v27 = (Il2CppObject *)transform;
+  v28 = (Il2CppObject *)transform;
   p_fields = (CGThumbnailListItem_o *)&transform[1].fields;
   m_CachedPtr = (System_Delegate_o *)transform[1].fields.m_CachedPtr;
-  v30 = (WarBoardTaskBase_TaskCallback_o *)sub_1C372A4(WarBoardTaskBase_TaskCallback_TypeInfo);
+  v31 = (WarBoardTaskBase_TaskCallback_o *)sub_1C3E7B0(WarBoardTaskBase_TaskCallback_TypeInfo);
   WarBoardTaskBase_TaskCallback___ctor(
-    v30,
+    v31,
     (Il2CppObject *)this,
     Method_WarBoardMasterPieceComponent__OnDead_b__11_0__,
     0);
-  v31 = System_Delegate__Combine(m_CachedPtr, (System_Delegate_o *)v30, 0);
-  v34 = v31;
-  if ( !v31 )
+  v32 = System_Delegate__Combine(m_CachedPtr, (System_Delegate_o *)v31, 0);
+  v35 = v32;
+  if ( !v32 )
     goto LABEL_24;
-  v35 = WarBoardTaskBase_TaskCallback_TypeInfo;
-  if ( (WarBoardTaskBase_TaskCallback_c *)v31->klass != WarBoardTaskBase_TaskCallback_TypeInfo
-    || (p_fields->klass = (CGThumbnailListItem_c *)v31, (WarBoardTaskBase_TaskCallback_c *)v31->klass != v35) )
+  v36 = WarBoardTaskBase_TaskCallback_TypeInfo;
+  if ( (WarBoardTaskBase_TaskCallback_c *)v32->klass != WarBoardTaskBase_TaskCallback_TypeInfo
+    || (p_fields->klass = (CGThumbnailListItem_c *)v32, (WarBoardTaskBase_TaskCallback_c *)v32->klass != v36) )
   {
-    sub_1C37574(v31);
+    sub_1C3EA80(v32);
 LABEL_24:
-    p_fields->klass = (CGThumbnailListItem_c *)v34;
+    p_fields->klass = (CGThumbnailListItem_c *)v35;
   }
-  sub_1C36FFC(p_fields, (int32_t)v34, v32, v33);
+  sub_1C3E508(p_fields, (int32_t)v35, v33, v34);
   if ( taskList )
   {
-    v38 = taskList->fields._items;
-    v39 = Method_System_Collections_Generic_List_WarBoardTaskBase__Add__;
+    v39 = taskList->fields._items;
+    v40 = Method_System_Collections_Generic_List_WarBoardTaskBase__Add__;
     ++taskList->fields._version;
-    if ( !v38 )
+    if ( !v39 )
       goto LABEL_37;
-    v40 = taskList->fields._size;
-    if ( (unsigned int)v40 >= LODWORD(v38->max_length) )
+    v41 = taskList->fields._size;
+    if ( (unsigned int)v41 >= LODWORD(v39->max_length) )
     {
       System_Collections_Generic_List_object___AddWithResize(
         (System_Collections_Generic_List_object__o *)taskList,
-        v27,
-        *(const MethodInfo_37A3024 **)(*(_QWORD *)(v39[4] + 192LL) + 112LL));
+        v28,
+        *(const MethodInfo_37B5460 **)(*(_QWORD *)(v40[4] + 192LL) + 112LL));
     }
     else
     {
-      v41 = &v38->obj.klass + v40;
-      taskList->fields._size = v40 + 1;
-      v41[4] = (Il2CppClass *)v27;
-      sub_1C36FFC((CGThumbnailListItem_o *)(v41 + 4), (int32_t)v27, v36, v37);
+      v42 = &v39->obj.klass + v41;
+      taskList->fields._size = v41 + 1;
+      v42[4] = (Il2CppClass *)v28;
+      sub_1C3E508((CGThumbnailListItem_o *)(v42 + 4), (int32_t)v28, v37, v38);
     }
     goto LABEL_35;
   }
-  v42 = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39ED16C *)Method_SingletonMonoBehaviour_WarBoardManager__get_Instance__);
-  transform = (UnityEngine_Transform_o *)sub_1C37100(WarBoardTaskBase___TypeInfo, 1);
+  v43 = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39FF5A8 *)Method_SingletonMonoBehaviour_WarBoardManager__get_Instance__);
+  transform = (UnityEngine_Transform_o *)sub_1C3E60C(WarBoardTaskBase___TypeInfo, 1);
   if ( !transform )
     goto LABEL_37;
-  v43 = transform;
-  transform = (UnityEngine_Transform_o *)sub_1C37194(v27, transform->klass->_1.element_class);
+  v44 = transform;
+  transform = (UnityEngine_Transform_o *)sub_1C3E6A0(v28, transform->klass->_1.element_class);
   if ( !transform )
   {
 LABEL_39:
-    v46 = sub_1C372D8();
-    sub_1C37180(v46, 0);
+    v47 = sub_1C3E7E4();
+    sub_1C3E68C(v47, 0);
   }
-  if ( !LODWORD(v43[1].klass) )
+  if ( !LODWORD(v44[1].klass) )
 LABEL_38:
-    sub_1C372BC(transform);
-  v43[1].monitor = v27;
-  sub_1C36FFC((CGThumbnailListItem_o *)&v43[1].monitor, (int32_t)v27, v44, v45);
-  if ( !v42 )
+    sub_1C3E7C8(transform, v11);
+  v44[1].monitor = v28;
+  sub_1C3E508((CGThumbnailListItem_o *)&v44[1].monitor, (int32_t)v28, v45, v46);
+  if ( !v43 )
     goto LABEL_37;
-  WarBoardManager__InsertTask((WarBoardManager_o *)v42, 0, (WarBoardTaskBase_array *)v43, 0);
+  WarBoardManager__InsertTask((WarBoardManager_o *)v43, 0, (WarBoardTaskBase_array *)v44, 0);
 LABEL_35:
-  transform = (UnityEngine_Transform_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39ED16C *)Method_SingletonMonoBehaviour_WarBoardManager__get_Instance__);
+  transform = (UnityEngine_Transform_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39FF5A8 *)Method_SingletonMonoBehaviour_WarBoardManager__get_Instance__);
   if ( !transform )
     goto LABEL_37;
   WarBoardManager__UpdateAlivePiecesWidgetDepth((WarBoardManager_o *)transform, 0);
@@ -368,10 +370,10 @@ void WarBoardMasterPieceComponent__OnDestroy(WarBoardMasterPieceComponent_o *thi
   int32_t v5; // w2
   const MethodInfo *v6; // x3
 
-  if ( (byte_4C40859 & 1) == 0 )
+  if ( (byte_4C545F6 & 1) == 0 )
   {
-    sub_1C37058(&AssetManager_TypeInfo);
-    byte_4C40859 = 1;
+    sub_1C3E564(&AssetManager_TypeInfo);
+    byte_4C545F6 = 1;
   }
   assetDatas = this->fields.assetDatas;
   if ( assetDatas )
@@ -379,9 +381,9 @@ void WarBoardMasterPieceComponent__OnDestroy(WarBoardMasterPieceComponent_o *thi
     p_assetDatas = (CGThumbnailListItem_o *)&this->fields.assetDatas;
     if ( !AssetManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(AssetManager_TypeInfo);
-    AssetManager__releaseAsset_40534920(assetDatas, 0);
+    AssetManager__releaseAsset_40581180(assetDatas, 0);
     p_assetDatas->klass = 0;
-    sub_1C36FFC(p_assetDatas, 0, v5, v6);
+    sub_1C3E508(p_assetDatas, 0, v5, v6);
   }
 }
 
@@ -393,54 +395,55 @@ void WarBoardMasterPieceComponent__OnRevive(
 {
   System_Collections_Generic_List_object__o *v5; // x20
   WarBoardManager_o *Instance; // x0
+  __int64 v7; // x1
   struct WarBoardPieceData_o *pieceData; // x8
   float x; // s8
   float y; // s9
   float z; // s10
-  Il2CppObject *v11; // x22
-  const MethodInfo_38CD368 *v12; // x2
-  System_Nullable_float__o v13; // x3
-  int32_t v14; // w2
-  const MethodInfo *v15; // x3
+  Il2CppObject *v12; // x22
+  const MethodInfo_38DF7A4 *v13; // x2
+  System_Nullable_float__o v14; // x3
+  int32_t v15; // w2
+  const MethodInfo *v16; // x3
   struct System_Object_array *items; // x8
-  _QWORD *v17; // x9
+  _QWORD *v18; // x9
   __int64 size; // x10
-  WarBoardManager_o *v19; // x1
-  Il2CppClass **v20; // x0
-  System_Collections_Generic_List_object__o *v21; // x22
-  const MethodInfo *v22; // x2
-  struct WarBoardPieceData_o *v23; // x8
-  __int64 v24; // x27
+  WarBoardManager_o *v20; // x1
+  Il2CppClass **v21; // x0
+  System_Collections_Generic_List_object__o *v22; // x22
+  const MethodInfo *v23; // x2
+  struct WarBoardPieceData_o *v24; // x8
+  __int64 v25; // x27
   struct WarBoardBreakPointComponent_array *breakPoints; // x9
-  WarBoardParallelSchedule_o *v26; // x21
-  int32_t v27; // w2
-  const MethodInfo *v28; // x3
-  struct System_Object_array *v29; // x8
-  _QWORD *v30; // x9
-  __int64 v31; // x10
-  Il2CppClass **v32; // x0
-  System_Nullable_Vector3__o v33; // [xsp+0h] [xbp-80h] BYREF
-  System_Nullable_Vector3__o v34; // 0:x0.16
+  WarBoardParallelSchedule_o *v27; // x21
+  int32_t v28; // w2
+  const MethodInfo *v29; // x3
+  struct System_Object_array *v30; // x8
+  _QWORD *v31; // x9
+  __int64 v32; // x10
+  Il2CppClass **v33; // x0
+  System_Nullable_Vector3__o v34; // [xsp+0h] [xbp-80h] BYREF
+  System_Nullable_Vector3__o v35; // 0:x0.16
   UnityEngine_Vector3_o SquarePosition; // 0:s0.4,4:s1.4,8:s2.4
-  UnityEngine_Vector3_o v36; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o v37; // 0:s0.4,4:s1.4,8:s2.4
   UnityEngine_Vector3_o localPosition; // 0:s0.4,4:s1.4,8:s2.4
 
-  if ( (byte_4C40855 & 1) == 0 )
+  if ( (byte_4C545F2 & 1) == 0 )
   {
-    sub_1C37058(&Method_System_Collections_Generic_List_WarBoardTaskBase__AddRange__);
-    sub_1C37058(&Method_System_Collections_Generic_List_WarBoardTaskBase__Add__);
-    sub_1C37058(&Method_System_Collections_Generic_List_WarBoardTaskBase___ctor__);
-    sub_1C37058(&System_Collections_Generic_List_WarBoardTaskBase__TypeInfo);
-    sub_1C37058(&Method_System_Nullable_Vector3___ctor__);
-    sub_1C37058(&Method_SingletonMonoBehaviour_WarBoardManager__get_Instance__);
-    sub_1C37058(&WarBoardParallelSchedule_TypeInfo);
-    byte_4C40855 = 1;
+    sub_1C3E564(&Method_System_Collections_Generic_List_WarBoardTaskBase__AddRange__);
+    sub_1C3E564(&Method_System_Collections_Generic_List_WarBoardTaskBase__Add__);
+    sub_1C3E564(&Method_System_Collections_Generic_List_WarBoardTaskBase___ctor__);
+    sub_1C3E564(&System_Collections_Generic_List_WarBoardTaskBase__TypeInfo);
+    sub_1C3E564(&Method_System_Nullable_Vector3___ctor__);
+    sub_1C3E564(&Method_SingletonMonoBehaviour_WarBoardManager__get_Instance__);
+    sub_1C3E564(&WarBoardParallelSchedule_TypeInfo);
+    byte_4C545F2 = 1;
   }
-  v5 = (System_Collections_Generic_List_object__o *)sub_1C372A4(System_Collections_Generic_List_WarBoardTaskBase__TypeInfo);
+  v5 = (System_Collections_Generic_List_object__o *)sub_1C3E7B0(System_Collections_Generic_List_WarBoardTaskBase__TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v5,
-    (const MethodInfo_37A27F0 *)Method_System_Collections_Generic_List_WarBoardTaskBase___ctor__);
-  Instance = (WarBoardManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39ED16C *)Method_SingletonMonoBehaviour_WarBoardManager__get_Instance__);
+    (const MethodInfo_37B4C2C *)Method_System_Collections_Generic_List_WarBoardTaskBase___ctor__);
+  Instance = (WarBoardManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39FF5A8 *)Method_SingletonMonoBehaviour_WarBoardManager__get_Instance__);
   pieceData = this->fields.pieceData;
   if ( !pieceData )
     goto LABEL_24;
@@ -456,31 +459,31 @@ void WarBoardMasterPieceComponent__OnRevive(
   Instance = (WarBoardManager_o *)UnityEngine_GameObject__get_transform((UnityEngine_GameObject_o *)Instance, 0);
   if ( !Instance )
     goto LABEL_24;
-  v36.fields.x = x;
-  v36.fields.y = y;
-  v36.fields.z = z;
-  UnityEngine_Transform__set_localPosition((UnityEngine_Transform_o *)Instance, v36, 0);
+  v37.fields.x = x;
+  v37.fields.y = y;
+  v37.fields.z = z;
+  UnityEngine_Transform__set_localPosition((UnityEngine_Transform_o *)Instance, v37, 0);
   Instance = (WarBoardManager_o *)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
   if ( !Instance )
     goto LABEL_24;
   UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)Instance, 1, 0);
-  v11 = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39ED16C *)Method_SingletonMonoBehaviour_WarBoardManager__get_Instance__);
+  v12 = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39FF5A8 *)Method_SingletonMonoBehaviour_WarBoardManager__get_Instance__);
   Instance = (WarBoardManager_o *)UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0);
   if ( !Instance )
     goto LABEL_24;
   localPosition = UnityEngine_Transform__get_localPosition((UnityEngine_Transform_o *)Instance, 0);
-  *(_QWORD *)&v34.fields.value.fields.y = Method_System_Nullable_Vector3___ctor__;
-  *(_QWORD *)&v34.fields.hasValue = &v33;
-  *(_QWORD *)&v33.fields.hasValue = 0;
-  *(_QWORD *)&v33.fields.value.fields.y = 0;
-  System_Nullable_Vector3____ctor(v34, localPosition, v12);
-  if ( !v11 )
+  *(_QWORD *)&v35.fields.value.fields.y = Method_System_Nullable_Vector3___ctor__;
+  *(_QWORD *)&v35.fields.hasValue = &v34;
+  *(_QWORD *)&v34.fields.hasValue = 0;
+  *(_QWORD *)&v34.fields.value.fields.y = 0;
+  System_Nullable_Vector3____ctor(v35, localPosition, v13);
+  if ( !v12 )
     goto LABEL_24;
-  v13 = 0;
+  v14 = 0;
   Instance = (WarBoardManager_o *)WarBoardManager__GetCameraPerformanceTask(
-                                    (WarBoardManager_o *)v11,
-                                    v33,
-                                    v13,
+                                    (WarBoardManager_o *)v12,
+                                    v34,
+                                    v14,
                                     1,
                                     0,
                                     1,
@@ -488,105 +491,106 @@ void WarBoardMasterPieceComponent__OnRevive(
   if ( !v5 )
     goto LABEL_24;
   items = v5->fields._items;
-  v17 = Method_System_Collections_Generic_List_WarBoardTaskBase__Add__;
+  v18 = Method_System_Collections_Generic_List_WarBoardTaskBase__Add__;
   ++v5->fields._version;
   if ( !items )
     goto LABEL_24;
   size = v5->fields._size;
-  v19 = Instance;
+  v20 = Instance;
   if ( (unsigned int)size >= LODWORD(items->max_length) )
   {
     System_Collections_Generic_List_object___AddWithResize(
       v5,
       (Il2CppObject *)Instance,
-      *(const MethodInfo_37A3024 **)(*(_QWORD *)(v17[4] + 192LL) + 112LL));
+      *(const MethodInfo_37B5460 **)(*(_QWORD *)(v18[4] + 192LL) + 112LL));
   }
   else
   {
-    v20 = &items->obj.klass + size;
+    v21 = &items->obj.klass + size;
     v5->fields._size = size + 1;
-    v20[4] = (Il2CppClass *)v19;
-    sub_1C36FFC((CGThumbnailListItem_o *)(v20 + 4), (int32_t)v19, v14, v15);
+    v21[4] = (Il2CppClass *)v20;
+    sub_1C3E508((CGThumbnailListItem_o *)(v21 + 4), (int32_t)v20, v15, v16);
   }
-  v21 = (System_Collections_Generic_List_object__o *)sub_1C372A4(System_Collections_Generic_List_WarBoardTaskBase__TypeInfo);
+  v22 = (System_Collections_Generic_List_object__o *)sub_1C3E7B0(System_Collections_Generic_List_WarBoardTaskBase__TypeInfo);
   System_Collections_Generic_List_object____ctor(
-    v21,
-    (const MethodInfo_37A27F0 *)Method_System_Collections_Generic_List_WarBoardTaskBase___ctor__);
-  v23 = this->fields.pieceData;
-  if ( !v23 )
+    v22,
+    (const MethodInfo_37B4C2C *)Method_System_Collections_Generic_List_WarBoardTaskBase___ctor__);
+  v24 = this->fields.pieceData;
+  if ( !v24 )
     goto LABEL_24;
-  v24 = 0;
-  while ( (int)v24 < v23->fields._breakPointMax_k__BackingField )
+  v25 = 0;
+  while ( (int)v25 < v24->fields._breakPointMax_k__BackingField )
   {
     breakPoints = this->fields.breakPoints;
     if ( breakPoints )
     {
-      if ( (unsigned int)v24 >= LODWORD(breakPoints->max_length) )
-        sub_1C372BC(Instance);
-      Instance = (WarBoardManager_o *)breakPoints->m_Items[v24];
+      if ( (unsigned int)v25 >= LODWORD(breakPoints->max_length) )
+        sub_1C3E7C8(Instance, v7);
+      Instance = (WarBoardManager_o *)breakPoints->m_Items[v25];
       if ( Instance )
       {
         if ( !HIBYTE(Instance->fields.cutInRoot) )
         {
           WarBoardBreakPointComponent__ShowMasterRechargeEffect(
             (WarBoardBreakPointComponent_o *)Instance,
-            (System_Collections_Generic_List_WarBoardTaskBase__o *)v21,
-            v22);
-          v23 = this->fields.pieceData;
+            (System_Collections_Generic_List_WarBoardTaskBase__o *)v22,
+            v23);
+          v24 = this->fields.pieceData;
         }
-        ++v24;
-        if ( v23 )
+        ++v25;
+        if ( v24 )
           continue;
       }
     }
     goto LABEL_24;
   }
-  v26 = (WarBoardParallelSchedule_o *)sub_1C372A4(WarBoardParallelSchedule_TypeInfo);
-  WarBoardParallelSchedule___ctor_38276964(v26, (System_Collections_Generic_List_WarBoardTaskBase__o *)v21, 0);
-  v29 = v5->fields._items;
-  v30 = Method_System_Collections_Generic_List_WarBoardTaskBase__Add__;
+  v27 = (WarBoardParallelSchedule_o *)sub_1C3E7B0(WarBoardParallelSchedule_TypeInfo);
+  WarBoardParallelSchedule___ctor_38321768(v27, (System_Collections_Generic_List_WarBoardTaskBase__o *)v22, 0);
+  v30 = v5->fields._items;
+  v31 = Method_System_Collections_Generic_List_WarBoardTaskBase__Add__;
   ++v5->fields._version;
-  if ( !v29 )
+  if ( !v30 )
 LABEL_24:
-    sub_1C372B4(Instance);
-  v31 = v5->fields._size;
-  if ( (unsigned int)v31 >= LODWORD(v29->max_length) )
+    sub_1C3E7C0(Instance, v7);
+  v32 = v5->fields._size;
+  if ( (unsigned int)v32 >= LODWORD(v30->max_length) )
   {
     System_Collections_Generic_List_object___AddWithResize(
       v5,
-      (Il2CppObject *)v26,
-      *(const MethodInfo_37A3024 **)(*(_QWORD *)(v30[4] + 192LL) + 112LL));
+      (Il2CppObject *)v27,
+      *(const MethodInfo_37B5460 **)(*(_QWORD *)(v31[4] + 192LL) + 112LL));
     if ( taskList )
       goto LABEL_28;
   }
   else
   {
-    v32 = &v29->obj.klass + v31;
-    v5->fields._size = v31 + 1;
-    v32[4] = (Il2CppClass *)v26;
-    sub_1C36FFC((CGThumbnailListItem_o *)(v32 + 4), (int32_t)v26, v27, v28);
+    v33 = &v30->obj.klass + v32;
+    v5->fields._size = v32 + 1;
+    v33[4] = (Il2CppClass *)v27;
+    sub_1C3E508((CGThumbnailListItem_o *)(v33 + 4), (int32_t)v27, v28, v29);
     if ( taskList )
     {
 LABEL_28:
       System_Collections_Generic_List_object___AddRange(
         (System_Collections_Generic_List_object__o *)taskList,
         (System_Collections_Generic_IEnumerable_T__o *)v5,
-        (const MethodInfo_37A3230 *)Method_System_Collections_Generic_List_WarBoardTaskBase__AddRange__);
+        (const MethodInfo_37B566C *)Method_System_Collections_Generic_List_WarBoardTaskBase__AddRange__);
       goto LABEL_32;
     }
   }
-  Instance = (WarBoardManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39ED16C *)Method_SingletonMonoBehaviour_WarBoardManager__get_Instance__);
+  Instance = (WarBoardManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39FF5A8 *)Method_SingletonMonoBehaviour_WarBoardManager__get_Instance__);
   if ( !Instance )
     goto LABEL_24;
-  WarBoardManager__InsertTask_38062676(Instance, 0, (System_Collections_Generic_List_WarBoardTaskBase__o *)v5, 0);
+  WarBoardManager__InsertTask_38107480(Instance, 0, (System_Collections_Generic_List_WarBoardTaskBase__o *)v5, 0);
 LABEL_32:
-  Instance = (WarBoardManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39ED16C *)Method_SingletonMonoBehaviour_WarBoardManager__get_Instance__);
+  Instance = (WarBoardManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39FF5A8 *)Method_SingletonMonoBehaviour_WarBoardManager__get_Instance__);
   if ( !Instance )
     goto LABEL_24;
   WarBoardManager__UpdateAlivePiecesWidgetDepth(Instance, 0);
 }
 
 
+// local variable allocation has failed, the output may be wrong!
 void WarBoardMasterPieceComponent__SetCommandSpellRemain(
         WarBoardMasterPieceComponent_o *this,
         int32_t remain,
@@ -596,7 +600,7 @@ void WarBoardMasterPieceComponent__SetCommandSpellRemain(
 
   commandSpellIconComponent = this->fields.commandSpellIconComponent;
   if ( !commandSpellIconComponent )
-    sub_1C372B4(0);
+    sub_1C3E7C0(0, *(_QWORD *)&remain);
   CommandSpellIconComponent__SetRemain(commandSpellIconComponent, remain, 0);
 }
 
@@ -617,14 +621,14 @@ void WarBoardMasterPieceComponent__SetEnemyMasterIcon(WarBoardMasterPieceCompone
   AssetLoader_LoadEndDataHandler_o *v14; // x21
   int32_t iconId_k__BackingField; // [xsp+Ch] [xbp-34h] BYREF
 
-  if ( (byte_4C40858 & 1) == 0 )
+  if ( (byte_4C545F5 & 1) == 0 )
   {
-    sub_1C37058(&AssetManager_TypeInfo);
-    sub_1C37058(&int_TypeInfo);
-    sub_1C37058(&AssetLoader_LoadEndDataHandler_TypeInfo);
-    sub_1C37058(&Method_WarBoardMasterPieceComponent__SetEnemyMasterIcon_b__17_0__);
-    sub_1C37058(&WarBoardMasterPieceComponent_TypeInfo);
-    byte_4C40858 = 1;
+    sub_1C3E564(&AssetManager_TypeInfo);
+    sub_1C3E564(&int_TypeInfo);
+    sub_1C3E564(&AssetLoader_LoadEndDataHandler_TypeInfo);
+    sub_1C3E564(&Method_WarBoardMasterPieceComponent__SetEnemyMasterIcon_b__17_0__);
+    sub_1C3E564(&WarBoardMasterPieceComponent_TypeInfo);
+    byte_4C545F5 = 1;
   }
   commandSpellIconRoot = this->fields.commandSpellIconRoot;
   if ( !commandSpellIconRoot )
@@ -656,12 +660,12 @@ void WarBoardMasterPieceComponent__SetEnemyMasterIcon(WarBoardMasterPieceCompone
   pieceData = this->fields.pieceData;
   if ( !pieceData )
 LABEL_14:
-    sub_1C372B4(commandSpellIconRoot);
+    sub_1C3E7C0(commandSpellIconRoot, method);
   ENEMY_MASTER_FACE_ASSET_NAME = WarBoardMasterPieceComponent_TypeInfo->static_fields->ENEMY_MASTER_FACE_ASSET_NAME;
   iconId_k__BackingField = pieceData->fields._iconId_k__BackingField;
   v12 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &iconId_k__BackingField, v4, v5, v6, v7, v8, v9);
   v13 = System_String__Format(ENEMY_MASTER_FACE_ASSET_NAME, v12, 0);
-  v14 = (AssetLoader_LoadEndDataHandler_o *)sub_1C372A4(AssetLoader_LoadEndDataHandler_TypeInfo);
+  v14 = (AssetLoader_LoadEndDataHandler_o *)sub_1C3E7B0(AssetLoader_LoadEndDataHandler_TypeInfo);
   AssetLoader_LoadEndDataHandler___ctor(
     v14,
     (Il2CppObject *)this,
@@ -680,7 +684,7 @@ void WarBoardMasterPieceComponent__SetMasterIcon(WarBoardMasterPieceComponent_o 
 
   pieceData = this->fields.pieceData;
   if ( !pieceData )
-    sub_1C372B4(0);
+    sub_1C3E7C0(0, method);
   if ( WarBoardPieceData__get_isPlayerMaster(pieceData, 0) )
     WarBoardMasterPieceComponent__SetPlayerMasterIcon(this, v4);
   else
@@ -692,41 +696,42 @@ void WarBoardMasterPieceComponent__SetPlayerMasterIcon(WarBoardMasterPieceCompon
 {
   __int64 v3; // x19
   void *commandSpellIconRoot; // x0
-  int32_t v5; // w2
-  const MethodInfo *v6; // x3
+  __int64 v5; // x1
+  int32_t v6; // w2
+  const MethodInfo *v7; // x3
   CommandSpellIconComponent_o *commandSpellIconComponent; // x21
-  long double v8; // q0
+  long double v9; // q0
   struct WarBoardPieceData_o *pieceData; // x8
   int32_t iconId_k__BackingField; // w20
-  __int64 v11; // x0
   __int64 v12; // x0
-  __int64 v13; // x20
-  __int64 v14; // x21
+  __int64 v13; // x0
+  __int64 v14; // x20
+  __int64 v15; // x21
   System_String_array *AssetName; // x0
-  int32_t v16; // w2
-  const MethodInfo *v17; // x3
-  System_String_array *v18; // x20
-  System_Action_o *v19; // x21
+  int32_t v17; // w2
+  const MethodInfo *v18; // x3
+  System_String_array *v19; // x20
+  System_Action_o *v20; // x21
   EquipEntity_o *fixedEquipEntity; // [xsp+8h] [xbp-38h] BYREF
-  CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o v21; // 0:x0.16
+  CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o v22; // 0:x0.16
 
-  if ( (byte_4C40857 & 1) == 0 )
+  if ( (byte_4C545F4 & 1) == 0 )
   {
-    sub_1C37058(&System_Action_TypeInfo);
-    sub_1C37058(&AssetManager_TypeInfo);
-    sub_1C37058(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
-    sub_1C37058(&Method_SingletonMonoBehaviour_WarBoardManager__getInstance__);
-    sub_1C37058(&Method_WarBoardMasterPieceComponent___c__DisplayClass16_0__SetPlayerMasterIcon_b__0__);
-    sub_1C37058(&WarBoardMasterPieceComponent___c__DisplayClass16_0_TypeInfo);
-    byte_4C40857 = 1;
+    sub_1C3E564(&System_Action_TypeInfo);
+    sub_1C3E564(&AssetManager_TypeInfo);
+    sub_1C3E564(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
+    sub_1C3E564(&Method_SingletonMonoBehaviour_WarBoardManager__getInstance__);
+    sub_1C3E564(&Method_WarBoardMasterPieceComponent___c__DisplayClass16_0__SetPlayerMasterIcon_b__0__);
+    sub_1C3E564(&WarBoardMasterPieceComponent___c__DisplayClass16_0_TypeInfo);
+    byte_4C545F4 = 1;
   }
   fixedEquipEntity = 0;
-  v3 = sub_1C372A4(WarBoardMasterPieceComponent___c__DisplayClass16_0_TypeInfo);
+  v3 = sub_1C3E7B0(WarBoardMasterPieceComponent___c__DisplayClass16_0_TypeInfo);
   System_Object___ctor((Il2CppObject *)v3, 0);
   if ( !v3 )
     goto LABEL_25;
   *(_QWORD *)(v3 + 16) = this;
-  sub_1C36FFC((CGThumbnailListItem_o *)(v3 + 16), (int32_t)this, v5, v6);
+  sub_1C3E508((CGThumbnailListItem_o *)(v3 + 16), (int32_t)this, v6, v7);
   commandSpellIconRoot = this->fields.commandSpellIconRoot;
   if ( !commandSpellIconRoot )
     goto LABEL_25;
@@ -758,13 +763,13 @@ void WarBoardMasterPieceComponent__SetPlayerMasterIcon(WarBoardMasterPieceCompon
   if ( !pieceData )
     goto LABEL_25;
   iconId_k__BackingField = pieceData->fields._iconId_k__BackingField;
-  v11 = *((_QWORD *)Method_SingletonMonoBehaviour_WarBoardManager__getInstance__ + 4);
-  if ( (*(_BYTE *)(v11 + 309) & 1) == 0 )
-    v11 = sub_1C8776C(v8);
-  v12 = *(_QWORD *)(*(_QWORD *)(v11 + 192) + 16LL);
+  v12 = *((_QWORD *)Method_SingletonMonoBehaviour_WarBoardManager__getInstance__ + 4);
   if ( (*(_BYTE *)(v12 + 309) & 1) == 0 )
-    v12 = sub_1C8776C(v8);
-  commandSpellIconRoot = **(void ***)(v12 + 184);
+    v12 = sub_1C8EC78(v9);
+  v13 = *(_QWORD *)(*(_QWORD *)(v12 + 192) + 16LL);
+  if ( (*(_BYTE *)(v13 + 309) & 1) == 0 )
+    v13 = sub_1C8EC78(v9);
+  commandSpellIconRoot = **(void ***)(v13 + 184);
   if ( !commandSpellIconRoot )
     goto LABEL_25;
   commandSpellIconRoot = (void *)WarBoardManager__TryGetFixedMasterEquipInfo(
@@ -775,46 +780,47 @@ void WarBoardMasterPieceComponent__SetPlayerMasterIcon(WarBoardMasterPieceCompon
   {
     if ( !fixedEquipEntity )
       goto LABEL_25;
-    v14 = *(_QWORD *)&fixedEquipEntity->fields.id.fields.currentCryptoKey;
-    v13 = *(_QWORD *)&fixedEquipEntity->fields.id.fields.fakeValue;
+    v15 = *(_QWORD *)&fixedEquipEntity->fields.id.fields.currentCryptoKey;
+    v14 = *(_QWORD *)&fixedEquipEntity->fields.id.fields.fakeValue;
     if ( !CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
-    *(_QWORD *)&v21.fields.currentCryptoKey = v14;
-    *(_QWORD *)&v21.fields.fakeValue = v13;
-    iconId_k__BackingField = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_48930896(v21, 0);
+    *(_QWORD *)&v22.fields.currentCryptoKey = v15;
+    *(_QWORD *)&v22.fields.fakeValue = v14;
+    iconId_k__BackingField = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_49004136(v22, 0);
   }
   commandSpellIconRoot = UserGameMaster__getSelfUserGame(0);
   if ( !commandSpellIconRoot )
 LABEL_25:
-    sub_1C372B4(commandSpellIconRoot);
+    sub_1C3E7C0(commandSpellIconRoot, v5);
   AssetName = MasterFaceManager__GetAssetName(1, *((_DWORD *)commandSpellIconRoot + 19), iconId_k__BackingField, 0);
   *(_QWORD *)(v3 + 24) = AssetName;
-  sub_1C36FFC((CGThumbnailListItem_o *)(v3 + 24), (int32_t)AssetName, v16, v17);
-  v18 = *(System_String_array **)(v3 + 24);
-  v19 = (System_Action_o *)sub_1C372A4(System_Action_TypeInfo);
+  sub_1C3E508((CGThumbnailListItem_o *)(v3 + 24), (int32_t)AssetName, v17, v18);
+  v19 = *(System_String_array **)(v3 + 24);
+  v20 = (System_Action_o *)sub_1C3E7B0(System_Action_TypeInfo);
   System_Action___ctor(
-    v19,
+    v20,
     (Il2CppObject *)v3,
     Method_WarBoardMasterPieceComponent___c__DisplayClass16_0__SetPlayerMasterIcon_b__0__,
     0);
   if ( !AssetManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(AssetManager_TypeInfo);
-  AssetManager__loadAssetStorage_40541524(v18, v19, 1, 0);
+  AssetManager__loadAssetStorage_40587784(v19, v20, 1, 0);
 }
 
 
 bool WarBoardMasterPieceComponent__ShowStatus(WarBoardMasterPieceComponent_o *this, const MethodInfo *method)
 {
   Il2CppObject *Instance; // x0
+  __int64 v3; // x1
 
-  if ( (byte_4C40856 & 1) == 0 )
+  if ( (byte_4C545F3 & 1) == 0 )
   {
-    sub_1C37058(&Method_SingletonMonoBehaviour_WarBoardManager__get_Instance__);
-    byte_4C40856 = 1;
+    sub_1C3E564(&Method_SingletonMonoBehaviour_WarBoardManager__get_Instance__);
+    byte_4C545F3 = 1;
   }
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39ED16C *)Method_SingletonMonoBehaviour_WarBoardManager__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39FF5A8 *)Method_SingletonMonoBehaviour_WarBoardManager__get_Instance__);
   if ( !Instance )
-    sub_1C372B4(0);
+    sub_1C3E7C0(0, v3);
   WarBoardManager__HideSimplePopup((WarBoardManager_o *)Instance, 0, 0);
   return 0;
 }
@@ -823,10 +829,11 @@ bool WarBoardMasterPieceComponent__ShowStatus(WarBoardMasterPieceComponent_o *th
 void WarBoardMasterPieceComponent___OnDead_b__11_0(WarBoardMasterPieceComponent_o *this, const MethodInfo *method)
 {
   UnityEngine_GameObject_o *gameObject; // x0
+  __int64 v3; // x1
 
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
   if ( !gameObject )
-    sub_1C372B4(0);
+    sub_1C3E7C0(0, v3);
   UnityEngine_GameObject__SetActive(gameObject, 0, 0);
 }
 
@@ -836,53 +843,54 @@ void WarBoardMasterPieceComponent___SetEnemyMasterIcon_b__17_0(
         AssetData_o *asset,
         const MethodInfo *method)
 {
-  System_String_o *Object_object__51154888; // x0
-  int32_t v6; // w2
-  const MethodInfo *v7; // x3
-  System_String_o *v8; // x21
-  int32_t v9; // w2
-  const MethodInfo *v10; // x3
-  __int64 v11; // x2
-  __int64 v12; // x3
-  __int64 v13; // x4
-  __int64 v14; // x5
-  __int64 v15; // x6
-  __int64 v16; // x7
+  System_String_o *Object_object__51228128; // x0
+  __int64 v6; // x1
+  int32_t v7; // w2
+  const MethodInfo *v8; // x3
+  System_String_o *v9; // x21
+  int32_t v10; // w2
+  const MethodInfo *v11; // x3
+  __int64 v12; // x2
+  __int64 v13; // x3
+  __int64 v14; // x4
+  __int64 v15; // x5
+  __int64 v16; // x6
+  __int64 v17; // x7
   struct UITexture_o *masterIcon; // x21
   struct WarBoardPieceData_o *pieceData; // x8
   System_String_o *ENEMY_MASTER_FACE_TEXTURE_NAME; // x22
-  Il2CppObject *v20; // x0
-  __int64 v21; // x0
+  Il2CppObject *v21; // x0
+  __int64 v22; // x0
   int32_t iconId_k__BackingField; // [xsp+Ch] [xbp-24h] BYREF
 
-  if ( (byte_4C4085B & 1) == 0 )
+  if ( (byte_4C545F8 & 1) == 0 )
   {
-    sub_1C37058(&AssetData___TypeInfo);
-    sub_1C37058(&Method_AssetData_GetObject_Texture2D____78105200);
-    sub_1C37058(&int_TypeInfo);
-    sub_1C37058(&WarBoardMasterPieceComponent_TypeInfo);
-    byte_4C4085B = 1;
+    sub_1C3E564(&AssetData___TypeInfo);
+    sub_1C3E564(&Method_AssetData_GetObject_Texture2D____78185184);
+    sub_1C3E564(&int_TypeInfo);
+    sub_1C3E564(&WarBoardMasterPieceComponent_TypeInfo);
+    byte_4C545F8 = 1;
   }
-  Object_object__51154888 = (System_String_o *)sub_1C37100(AssetData___TypeInfo, 1);
-  if ( !Object_object__51154888 )
+  Object_object__51228128 = (System_String_o *)sub_1C3E60C(AssetData___TypeInfo, 1);
+  if ( !Object_object__51228128 )
     goto LABEL_14;
-  v8 = Object_object__51154888;
+  v9 = Object_object__51228128;
   if ( asset )
   {
-    Object_object__51154888 = (System_String_o *)sub_1C37194(asset, Object_object__51154888->klass->_1.element_class);
-    if ( !Object_object__51154888 )
+    Object_object__51228128 = (System_String_o *)sub_1C3E6A0(asset, Object_object__51228128->klass->_1.element_class);
+    if ( !Object_object__51228128 )
     {
-      v21 = sub_1C372D8();
-      sub_1C37180(v21, 0);
+      v22 = sub_1C3E7E4();
+      sub_1C3E68C(v22, 0);
     }
   }
-  if ( !LODWORD(v8[1].klass) )
-    sub_1C372BC(Object_object__51154888);
-  v8[1].monitor = asset;
-  sub_1C36FFC((CGThumbnailListItem_o *)&v8[1].monitor, (int32_t)asset, v6, v7);
-  this->fields.assetDatas = (struct AssetData_array *)v8;
-  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.assetDatas, (int32_t)v8, v9, v10);
-  Object_object__51154888 = (System_String_o *)WarBoardMasterPieceComponent_TypeInfo;
+  if ( !LODWORD(v9[1].klass) )
+    sub_1C3E7C8(Object_object__51228128, v6);
+  v9[1].monitor = asset;
+  sub_1C3E508((CGThumbnailListItem_o *)&v9[1].monitor, (int32_t)asset, v7, v8);
+  this->fields.assetDatas = (struct AssetData_array *)v9;
+  sub_1C3E508((CGThumbnailListItem_o *)&this->fields.assetDatas, (int32_t)v9, v10, v11);
+  Object_object__51228128 = (System_String_o *)WarBoardMasterPieceComponent_TypeInfo;
   masterIcon = this->fields.masterIcon;
   if ( !WarBoardMasterPieceComponent_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(WarBoardMasterPieceComponent_TypeInfo);
@@ -890,24 +898,24 @@ void WarBoardMasterPieceComponent___SetEnemyMasterIcon_b__17_0(
   if ( !pieceData
     || (ENEMY_MASTER_FACE_TEXTURE_NAME = WarBoardMasterPieceComponent_TypeInfo->static_fields->ENEMY_MASTER_FACE_TEXTURE_NAME,
         iconId_k__BackingField = pieceData->fields._iconId_k__BackingField,
-        v20 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &iconId_k__BackingField, v11, v12, v13, v14, v15, v16),
-        Object_object__51154888 = System_String__Format(ENEMY_MASTER_FACE_TEXTURE_NAME, v20, 0),
+        v21 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &iconId_k__BackingField, v12, v13, v14, v15, v16, v17),
+        Object_object__51228128 = System_String__Format(ENEMY_MASTER_FACE_TEXTURE_NAME, v21, 0),
         !asset)
-    || (Object_object__51154888 = (System_String_o *)AssetData__GetObject_object__51154888(
+    || (Object_object__51228128 = (System_String_o *)AssetData__GetObject_object__51228128(
                                                        asset,
-                                                       Object_object__51154888,
-                                                       (const MethodInfo_30C8FC8 *)Method_AssetData_GetObject_Texture2D____78105200),
+                                                       Object_object__51228128,
+                                                       (const MethodInfo_30DADE0 *)Method_AssetData_GetObject_Texture2D____78185184),
         !masterIcon)
     || (((void (__fastcall *)(struct UITexture_o *, System_String_o *, const MethodInfo *))masterIcon->klass->vtable._27_set_mainTexture.methodPtr)(
           masterIcon,
-          Object_object__51154888,
+          Object_object__51228128,
           masterIcon->klass->vtable._27_set_mainTexture.method),
-        (Object_object__51154888 = (System_String_o *)this->fields.masterIcon) == 0) )
+        (Object_object__51228128 = (System_String_o *)this->fields.masterIcon) == 0) )
   {
 LABEL_14:
-    sub_1C372B4(Object_object__51154888);
+    sub_1C3E7C0(Object_object__51228128, v6);
   }
-  UIWidget__SetDirty((UIWidget_o *)Object_object__51154888, 0);
+  UIWidget__SetDirty((UIWidget_o *)Object_object__51228128, 0);
 }
 
 
@@ -925,87 +933,88 @@ void WarBoardMasterPieceComponent___c__DisplayClass16_0___SetPlayerMasterIcon_b_
 {
   System_String_array *loadAssets; // x20
   struct WarBoardMasterPieceComponent_o *_4__this; // x21
-  AssetData_array *AssetStorage_40542884; // x0
-  int32_t v6; // w2
-  const MethodInfo *v7; // x3
-  struct WarBoardMasterPieceComponent_o *v8; // x8
+  AssetData_array *AssetStorage_40589144; // x0
+  __int64 v6; // x1
+  int32_t v7; // w2
+  const MethodInfo *v8; // x3
+  struct WarBoardMasterPieceComponent_o *v9; // x8
   struct AssetData_array *assetDatas; // x9
   struct UITexture_o *masterIcon; // x20
-  struct WarBoardMasterPieceComponent_o *v11; // x8
   struct WarBoardMasterPieceComponent_o *v12; // x8
-  struct AssetData_array *v13; // x8
-  UnityEngine_Material_o *v14; // x20
-  struct WarBoardMasterPieceComponent_o *v15; // x8
+  struct WarBoardMasterPieceComponent_o *v13; // x8
+  struct AssetData_array *v14; // x8
+  UnityEngine_Material_o *v15; // x20
+  struct WarBoardMasterPieceComponent_o *v16; // x8
 
-  if ( (byte_4C4085C & 1) == 0 )
+  if ( (byte_4C545F9 & 1) == 0 )
   {
-    sub_1C37058(&Method_AssetData_GetObject_Texture2D___);
-    sub_1C37058(&AssetManager_TypeInfo);
-    sub_1C37058(&StringLiteral_16269/*"_MaskTex"*/);
-    byte_4C4085C = 1;
+    sub_1C3E564(&Method_AssetData_GetObject_Texture2D___);
+    sub_1C3E564(&AssetManager_TypeInfo);
+    sub_1C3E564(&StringLiteral_16279/*"_MaskTex"*/);
+    byte_4C545F9 = 1;
   }
   _4__this = this->fields.__4__this;
   loadAssets = this->fields.loadAssets;
   if ( !AssetManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(AssetManager_TypeInfo);
-  AssetStorage_40542884 = AssetManager__getAssetStorage_40542884(loadAssets, 0);
+  AssetStorage_40589144 = AssetManager__getAssetStorage_40589144(loadAssets, 0);
   if ( !_4__this )
     goto LABEL_21;
-  _4__this->fields.assetDatas = AssetStorage_40542884;
-  sub_1C36FFC((CGThumbnailListItem_o *)&_4__this->fields.assetDatas, (int32_t)AssetStorage_40542884, v6, v7);
-  v8 = this->fields.__4__this;
-  if ( !v8 )
+  _4__this->fields.assetDatas = AssetStorage_40589144;
+  sub_1C3E508((CGThumbnailListItem_o *)&_4__this->fields.assetDatas, (int32_t)AssetStorage_40589144, v7, v8);
+  v9 = this->fields.__4__this;
+  if ( !v9 )
     goto LABEL_21;
-  assetDatas = v8->fields.assetDatas;
+  assetDatas = v9->fields.assetDatas;
   if ( !assetDatas )
     goto LABEL_21;
   if ( !LODWORD(assetDatas->max_length) )
     goto LABEL_22;
-  AssetStorage_40542884 = (AssetData_array *)assetDatas->m_Items[0];
-  if ( !AssetStorage_40542884 )
+  AssetStorage_40589144 = (AssetData_array *)assetDatas->m_Items[0];
+  if ( !AssetStorage_40589144 )
     goto LABEL_21;
-  masterIcon = v8->fields.masterIcon;
-  AssetStorage_40542884 = (AssetData_array *)AssetData__GetObject_object_(
-                                               (AssetData_o *)AssetStorage_40542884,
-                                               (const MethodInfo_30C8EC0 *)Method_AssetData_GetObject_Texture2D___);
+  masterIcon = v9->fields.masterIcon;
+  AssetStorage_40589144 = (AssetData_array *)AssetData__GetObject_object_(
+                                               (AssetData_o *)AssetStorage_40589144,
+                                               (const MethodInfo_30DACD8 *)Method_AssetData_GetObject_Texture2D___);
   if ( !masterIcon
-    || (AssetStorage_40542884 = (AssetData_array *)((__int64 (__fastcall *)(struct UITexture_o *, AssetData_array *, const MethodInfo *))masterIcon->klass->vtable._27_set_mainTexture.methodPtr)(
+    || (AssetStorage_40589144 = (AssetData_array *)((__int64 (__fastcall *)(struct UITexture_o *, AssetData_array *, const MethodInfo *))masterIcon->klass->vtable._27_set_mainTexture.methodPtr)(
                                                      masterIcon,
-                                                     AssetStorage_40542884,
+                                                     AssetStorage_40589144,
                                                      masterIcon->klass->vtable._27_set_mainTexture.method),
-        (v11 = this->fields.__4__this) == 0)
-    || (AssetStorage_40542884 = (AssetData_array *)v11->fields.masterIcon) == 0
-    || (AssetStorage_40542884 = (AssetData_array *)((__int64 (__fastcall *)(AssetData_array *, const MethodInfo *))AssetStorage_40542884->obj.klass->vtable[24].methodPtr)(
-                                                     AssetStorage_40542884,
-                                                     AssetStorage_40542884->obj.klass->vtable[24].method),
         (v12 = this->fields.__4__this) == 0)
-    || (v13 = v12->fields.assetDatas) == 0 )
+    || (AssetStorage_40589144 = (AssetData_array *)v12->fields.masterIcon) == 0
+    || (AssetStorage_40589144 = (AssetData_array *)((__int64 (__fastcall *)(AssetData_array *, const MethodInfo *))AssetStorage_40589144->obj.klass->vtable[24].methodPtr)(
+                                                     AssetStorage_40589144,
+                                                     AssetStorage_40589144->obj.klass->vtable[24].method),
+        (v13 = this->fields.__4__this) == 0)
+    || (v14 = v13->fields.assetDatas) == 0 )
   {
 LABEL_21:
-    sub_1C372B4(AssetStorage_40542884);
+    sub_1C3E7C0(AssetStorage_40589144, v6);
   }
-  if ( LODWORD(v13->max_length) <= 1 )
+  if ( LODWORD(v14->max_length) <= 1 )
 LABEL_22:
-    sub_1C372BC(AssetStorage_40542884);
-  v14 = (UnityEngine_Material_o *)AssetStorage_40542884;
-  AssetStorage_40542884 = (AssetData_array *)v13->m_Items[1];
-  if ( !AssetStorage_40542884 )
+    sub_1C3E7C8(AssetStorage_40589144, v6);
+  v15 = (UnityEngine_Material_o *)AssetStorage_40589144;
+  AssetStorage_40589144 = (AssetData_array *)v14->m_Items[1];
+  if ( !AssetStorage_40589144 )
     goto LABEL_21;
-  AssetStorage_40542884 = (AssetData_array *)AssetData__GetObject_object_(
-                                               (AssetData_o *)AssetStorage_40542884,
-                                               (const MethodInfo_30C8EC0 *)Method_AssetData_GetObject_Texture2D___);
-  if ( !v14 )
-    goto LABEL_21;
-  UnityEngine_Material__SetTexture(
-    v14,
-    (System_String_o *)StringLiteral_16269/*"_MaskTex"*/,
-    (UnityEngine_Texture_o *)AssetStorage_40542884,
-    0);
-  v15 = this->fields.__4__this;
+  AssetStorage_40589144 = (AssetData_array *)AssetData__GetObject_object_(
+                                               (AssetData_o *)AssetStorage_40589144,
+                                               (const MethodInfo_30DACD8 *)Method_AssetData_GetObject_Texture2D___);
   if ( !v15 )
     goto LABEL_21;
-  AssetStorage_40542884 = (AssetData_array *)v15->fields.masterIcon;
-  if ( !AssetStorage_40542884 )
+  UnityEngine_Material__SetTexture(
+    v15,
+    (System_String_o *)StringLiteral_16279/*"_MaskTex"*/,
+    (UnityEngine_Texture_o *)AssetStorage_40589144,
+    0);
+  v16 = this->fields.__4__this;
+  if ( !v16 )
     goto LABEL_21;
-  UIWidget__SetDirty((UIWidget_o *)AssetStorage_40542884, 0);
+  AssetStorage_40589144 = (AssetData_array *)v16->fields.masterIcon;
+  if ( !AssetStorage_40589144 )
+    goto LABEL_21;
+  UIWidget__SetDirty((UIWidget_o *)AssetStorage_40589144, 0);
 }

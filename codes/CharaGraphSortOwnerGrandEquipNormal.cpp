@@ -2,15 +2,15 @@ void CharaGraphSortOwnerGrandEquipNormal___ctor(CharaGraphSortOwnerGrandEquipNor
 {
   CharaGraphSortManageUnitServantEquip_o *v3; // x20
 
-  if ( (byte_4C3DD63 & 1) == 0 )
+  if ( (byte_4C51AE3 & 1) == 0 )
   {
-    sub_1C37058(&CharaGraphSortManageUnitGrandEquip_TypeInfo);
-    byte_4C3DD63 = 1;
+    sub_1C3E564(&CharaGraphSortManageUnitGrandEquip_TypeInfo);
+    byte_4C51AE3 = 1;
   }
-  v3 = (CharaGraphSortManageUnitServantEquip_o *)sub_1C372A4(CharaGraphSortManageUnitGrandEquip_TypeInfo);
+  v3 = (CharaGraphSortManageUnitServantEquip_o *)sub_1C3E7B0(CharaGraphSortManageUnitGrandEquip_TypeInfo);
   CharaGraphSortManageUnitServantEquip___ctor(v3, 0);
   this->fields._ServantEquipSortManageUnit_k__BackingField = (struct CharaGraphSortManageUnitBase_o *)v3;
-  sub_1C36FFC(&this->fields._ServantEquipSortManageUnit_k__BackingField, v3);
+  sub_1C3E508(&this->fields._ServantEquipSortManageUnit_k__BackingField, v3);
   CharaGraphSortOwnerBase___ctor((CharaGraphSortOwnerBase_o *)this, 0);
 }
 
@@ -27,10 +27,10 @@ System_String_o *CharaGraphSortOwnerGrandEquipNormal__get_SortSaveKeyPrefix(
         CharaGraphSortOwnerGrandEquipNormal_o *this,
         const MethodInfo *method)
 {
-  if ( (byte_4C3DD62 & 1) == 0 )
+  if ( (byte_4C51AE2 & 1) == 0 )
   {
-    sub_1C37058(&StringLiteral_4392/*"CharaGraphSort_GrandEquip_Normal"*/);
-    byte_4C3DD62 = 1;
+    sub_1C3E564(&StringLiteral_4392/*"CharaGraphSort_GrandEquip_Normal"*/);
+    byte_4C51AE2 = 1;
   }
   return (System_String_o *)StringLiteral_4392/*"CharaGraphSort_GrandEquip_Normal"*/;
 }
@@ -42,5 +42,5 @@ void CharaGraphSortOwnerGrandEquipNormal__set_ServantEquipSortManageUnit(
         const MethodInfo *method)
 {
   this->fields._ServantEquipSortManageUnit_k__BackingField = value;
-  sub_1C36FFC(&this->fields._ServantEquipSortManageUnit_k__BackingField, value);
+  sub_1C3E508(&this->fields._ServantEquipSortManageUnit_k__BackingField, value);
 }

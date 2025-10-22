@@ -1,14 +1,14 @@
 void WarBoardPartySkillMaster___ctor(WarBoardPartySkillMaster_o *this, const MethodInfo *method)
 {
-  if ( (byte_4C44177 & 1) == 0 )
+  if ( (byte_4C57F3F & 1) == 0 )
   {
-    sub_1C37058(&Method_DataMasterBase_WarBoardPartySkillMaster__WarBoardPartySkillEntity__string___ctor__);
-    byte_4C44177 = 1;
+    sub_1C3E564(&Method_DataMasterBase_WarBoardPartySkillMaster__WarBoardPartySkillEntity__string___ctor__);
+    byte_4C57F3F = 1;
   }
   DataMasterBase_object__object__object____ctor(
     (DataMasterBase_TMaster__TEntity__PKType__o *)this,
     420,
-    (const MethodInfo_33A3834 *)Method_DataMasterBase_WarBoardPartySkillMaster__WarBoardPartySkillEntity__string___ctor__);
+    (const MethodInfo_33B56EC *)Method_DataMasterBase_WarBoardPartySkillMaster__WarBoardPartySkillEntity__string___ctor__);
 }
 
 
@@ -22,16 +22,16 @@ WarBoardPartySkillEntity_o *WarBoardPartySkillMaster__GetEntity(
 {
   Il2CppObject *PK; // x1
 
-  if ( (byte_4C44178 & 1) == 0 )
+  if ( (byte_4C57F40 & 1) == 0 )
   {
-    sub_1C37058(&Method_DataMasterBase_WarBoardPartySkillMaster__WarBoardPartySkillEntity__string__GetEntity__);
-    byte_4C44178 = 1;
+    sub_1C3E564(&Method_DataMasterBase_WarBoardPartySkillMaster__WarBoardPartySkillEntity__string__GetEntity__);
+    byte_4C57F40 = 1;
   }
   PK = (Il2CppObject *)WarBoardPartySkillEntity__CreatePK(id, target, num, *(const MethodInfo **)&num);
   return (WarBoardPartySkillEntity_o *)DataMasterBase_object__object__object___GetEntity(
                                          (DataMasterBase_TMaster__TEntity__PKType__o *)this,
                                          PK,
-                                         (const MethodInfo_33A5B58 *)Method_DataMasterBase_WarBoardPartySkillMaster__WarBoardPartySkillEntity__string__GetEntity__);
+                                         (const MethodInfo_33B7A10 *)Method_DataMasterBase_WarBoardPartySkillMaster__WarBoardPartySkillEntity__string__GetEntity__);
 }
 
 
@@ -43,47 +43,48 @@ WarBoardPartySkillEntity_array *WarBoardPartySkillMaster__GetEntityArray(
 {
   __int64 v7; // x22
   __int64 v8; // x0
-  int v9; // w9
-  System_Collections_Generic_IEnumerable_TSource__o *v10; // x19
-  System_Func_object__bool__o *v11; // x20
-  System_Collections_Generic_IEnumerable_TSource__o *v12; // x0
+  __int64 v9; // x1
+  int v10; // w9
+  System_Collections_Generic_IEnumerable_TSource__o *v11; // x19
+  System_Func_object__bool__o *v12; // x20
+  System_Collections_Generic_IEnumerable_TSource__o *v13; // x0
 
-  if ( (byte_4C44179 & 1) == 0 )
+  if ( (byte_4C57F41 & 1) == 0 )
   {
-    sub_1C37058(&Method_System_Linq_Enumerable_OfType_WarBoardPartySkillEntity___);
-    sub_1C37058(&Method_System_Linq_Enumerable_ToArray_WarBoardPartySkillEntity___);
-    sub_1C37058(&Method_System_Linq_Enumerable_Where_WarBoardPartySkillEntity___);
-    sub_1C37058(&System_Func_WarBoardPartySkillEntity__bool__TypeInfo);
-    sub_1C37058(&Method_WarBoardPartySkillMaster___c__DisplayClass2_0__GetEntityArray_b__0__);
-    sub_1C37058(&WarBoardPartySkillMaster___c__DisplayClass2_0_TypeInfo);
-    byte_4C44179 = 1;
+    sub_1C3E564(&Method_System_Linq_Enumerable_OfType_WarBoardPartySkillEntity___);
+    sub_1C3E564(&Method_System_Linq_Enumerable_ToArray_WarBoardPartySkillEntity___);
+    sub_1C3E564(&Method_System_Linq_Enumerable_Where_WarBoardPartySkillEntity___);
+    sub_1C3E564(&System_Func_WarBoardPartySkillEntity__bool__TypeInfo);
+    sub_1C3E564(&Method_WarBoardPartySkillMaster___c__DisplayClass2_0__GetEntityArray_b__0__);
+    sub_1C3E564(&WarBoardPartySkillMaster___c__DisplayClass2_0_TypeInfo);
+    byte_4C57F41 = 1;
   }
-  v7 = sub_1C372A4(WarBoardPartySkillMaster___c__DisplayClass2_0_TypeInfo);
+  v7 = sub_1C3E7B0(WarBoardPartySkillMaster___c__DisplayClass2_0_TypeInfo);
   System_Object___ctor((Il2CppObject *)v7, 0);
   if ( !v7 )
-    sub_1C372B4(v8);
+    sub_1C3E7C0(v8, v9);
   if ( isEnemy )
-    v9 = 2;
+    v10 = 2;
   else
-    v9 = 1;
+    v10 = 1;
   *(_DWORD *)(v7 + 16) = id;
-  *(_DWORD *)(v7 + 20) = v9;
-  v10 = (System_Collections_Generic_IEnumerable_TSource__o *)System_Linq_Enumerable__OfType_object_(
+  *(_DWORD *)(v7 + 20) = v10;
+  v11 = (System_Collections_Generic_IEnumerable_TSource__o *)System_Linq_Enumerable__OfType_object_(
                                                                (System_Collections_IEnumerable_o *)this->fields.list,
-                                                               (const MethodInfo_3116E34 *)Method_System_Linq_Enumerable_OfType_WarBoardPartySkillEntity___);
-  v11 = (System_Func_object__bool__o *)sub_1C372A4(System_Func_WarBoardPartySkillEntity__bool__TypeInfo);
+                                                               (const MethodInfo_3128D28 *)Method_System_Linq_Enumerable_OfType_WarBoardPartySkillEntity___);
+  v12 = (System_Func_object__bool__o *)sub_1C3E7B0(System_Func_WarBoardPartySkillEntity__bool__TypeInfo);
   System_Func_object__bool____ctor(
-    v11,
+    v12,
     (Il2CppObject *)v7,
     Method_WarBoardPartySkillMaster___c__DisplayClass2_0__GetEntityArray_b__0__,
     0);
-  v12 = System_Linq_Enumerable__Where_object_(
-          v10,
-          (System_Func_TSource__bool__o *)v11,
-          (const MethodInfo_312E410 *)Method_System_Linq_Enumerable_Where_WarBoardPartySkillEntity___);
+  v13 = System_Linq_Enumerable__Where_object_(
+          v11,
+          (System_Func_TSource__bool__o *)v12,
+          (const MethodInfo_3140304 *)Method_System_Linq_Enumerable_Where_WarBoardPartySkillEntity___);
   return (WarBoardPartySkillEntity_array *)System_Linq_Enumerable__ToArray_object_(
-                                             v12,
-                                             (const MethodInfo_31272F4 *)Method_System_Linq_Enumerable_ToArray_WarBoardPartySkillEntity___);
+                                             v13,
+                                             (const MethodInfo_31391E8 *)Method_System_Linq_Enumerable_ToArray_WarBoardPartySkillEntity___);
 }
 
 
@@ -108,18 +109,18 @@ SkillEntity_array *WarBoardPartySkillMaster__GetPartyNumMatchSkillArray(
   WarBoardPartySkillEntity_o *v19; // x1
   Il2CppClass **v20; // x0
 
-  if ( (byte_4C4417B & 1) == 0 )
+  if ( (byte_4C57F43 & 1) == 0 )
   {
-    sub_1C37058(&Method_System_Collections_Generic_List_SkillEntity__Add__);
-    sub_1C37058(&Method_System_Collections_Generic_List_SkillEntity__ToArray__);
-    sub_1C37058(&Method_System_Collections_Generic_List_SkillEntity___ctor__);
-    sub_1C37058(&System_Collections_Generic_List_SkillEntity__TypeInfo);
-    byte_4C4417B = 1;
+    sub_1C3E564(&Method_System_Collections_Generic_List_SkillEntity__Add__);
+    sub_1C3E564(&Method_System_Collections_Generic_List_SkillEntity__ToArray__);
+    sub_1C3E564(&Method_System_Collections_Generic_List_SkillEntity___ctor__);
+    sub_1C3E564(&System_Collections_Generic_List_SkillEntity__TypeInfo);
+    byte_4C57F43 = 1;
   }
-  v8 = (System_Collections_Generic_List_object__o *)sub_1C372A4(System_Collections_Generic_List_SkillEntity__TypeInfo);
+  v8 = (System_Collections_Generic_List_object__o *)sub_1C3E7B0(System_Collections_Generic_List_SkillEntity__TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v8,
-    (const MethodInfo_37A27F0 *)Method_System_Collections_Generic_List_SkillEntity___ctor__);
+    (const MethodInfo_37B4C2C *)Method_System_Collections_Generic_List_SkillEntity___ctor__);
   if ( !entityArray )
     goto LABEL_19;
   max_length = entityArray->max_length;
@@ -129,7 +130,7 @@ SkillEntity_array *WarBoardPartySkillMaster__GetPartyNumMatchSkillArray(
     while ( 1 )
     {
       if ( v12 >= max_length )
-        sub_1C372BC(SkillEntity);
+        sub_1C3E7C8(SkillEntity, v10);
       SkillEntity = entityArray->m_Items[v12];
       if ( !SkillEntity )
         break;
@@ -153,14 +154,14 @@ SkillEntity_array *WarBoardPartySkillMaster__GetPartyNumMatchSkillArray(
             System_Collections_Generic_List_object___AddWithResize(
               v8,
               (Il2CppObject *)SkillEntity,
-              *(const MethodInfo_37A3024 **)(*(_QWORD *)(v17[4] + 192LL) + 112LL));
+              *(const MethodInfo_37B5460 **)(*(_QWORD *)(v17[4] + 192LL) + 112LL));
           }
           else
           {
             v20 = &items->obj.klass + size;
             v8->fields._size = size + 1;
             v20[4] = (Il2CppClass *)v19;
-            sub_1C36FFC((CGThumbnailListItem_o *)(v20 + 4), (int32_t)v19, v14, v15);
+            sub_1C3E508((CGThumbnailListItem_o *)(v20 + 4), (int32_t)v19, v14, v15);
           }
         }
       }
@@ -169,14 +170,14 @@ SkillEntity_array *WarBoardPartySkillMaster__GetPartyNumMatchSkillArray(
         goto LABEL_17;
     }
 LABEL_19:
-    sub_1C372B4(SkillEntity);
+    sub_1C3E7C0(SkillEntity, v10);
   }
 LABEL_17:
   if ( !v8 )
     goto LABEL_19;
   return (SkillEntity_array *)System_Collections_Generic_List_object___ToArray(
                                 v8,
-                                (const MethodInfo_37A4B7C *)Method_System_Collections_Generic_List_SkillEntity__ToArray__);
+                                (const MethodInfo_37B6FB8 *)Method_System_Collections_Generic_List_SkillEntity__ToArray__);
 }
 
 
@@ -191,7 +192,7 @@ SkillEntity_o *WarBoardPartySkillMaster__GetPartySkillEntity(
   int32_t maxNum; // [xsp+Ch] [xbp-4h] BYREF
 
   maxNum = 0;
-  return WarBoardPartySkillMaster__GetPartySkillEntity_43323780(this, partySkillId, partyNum, isEnemy, &maxNum, v5);
+  return WarBoardPartySkillMaster__GetPartySkillEntity_43378496(this, partySkillId, partyNum, isEnemy, &maxNum, v5);
 }
 
 
@@ -209,25 +210,26 @@ SkillEntity_array *WarBoardPartySkillMaster__GetPartySkillEntityArray(
   SkillEntity_array *v12; // x22
   int32_t v13; // w21
   SkillEntity_array *PartyNumMatchSkillArray; // x0
-  WarBoardPartySkillMaster___c_c *v16; // x0
+  __int64 v15; // x1
+  WarBoardPartySkillMaster___c_c *v17; // x0
   System_Func_object__int__o *_9__3_0; // x23
-  Il2CppObject *v18; // x24
+  Il2CppObject *v19; // x24
   struct WarBoardPartySkillMaster___c_StaticFields *static_fields; // x0
-  int32_t v20; // w2
-  const MethodInfo *v21; // x3
-  System_Collections_Generic_IEnumerable_TSource__o *v22; // x0
-  Il2CppObject *v23; // x0
-  const MethodInfo *v24; // x4
+  int32_t v21; // w2
+  const MethodInfo *v22; // x3
+  System_Collections_Generic_IEnumerable_TSource__o *v23; // x0
+  Il2CppObject *v24; // x0
+  const MethodInfo *v25; // x4
   int32_t monitor; // w1
 
-  if ( (byte_4C4417A & 1) == 0 )
+  if ( (byte_4C57F42 & 1) == 0 )
   {
-    sub_1C37058(&Method_System_Linq_Enumerable_FirstOrDefault_WarBoardPartySkillEntity___);
-    sub_1C37058(&Method_System_Linq_Enumerable_OrderByDescending_WarBoardPartySkillEntity__int___);
-    sub_1C37058(&System_Func_WarBoardPartySkillEntity__int__TypeInfo);
-    sub_1C37058(&Method_WarBoardPartySkillMaster___c__GetPartySkillEntityArray_b__3_0__);
-    sub_1C37058(&WarBoardPartySkillMaster___c_TypeInfo);
-    byte_4C4417A = 1;
+    sub_1C3E564(&Method_System_Linq_Enumerable_FirstOrDefault_WarBoardPartySkillEntity___);
+    sub_1C3E564(&Method_System_Linq_Enumerable_OrderByDescending_WarBoardPartySkillEntity__int___);
+    sub_1C3E564(&System_Func_WarBoardPartySkillEntity__int__TypeInfo);
+    sub_1C3E564(&Method_WarBoardPartySkillMaster___c__GetPartySkillEntityArray_b__3_0__);
+    sub_1C3E564(&WarBoardPartySkillMaster___c_TypeInfo);
+    byte_4C57F42 = 1;
   }
   EntityArray = (System_Collections_ICollection_o *)WarBoardPartySkillMaster__GetEntityArray(
                                                       this,
@@ -249,58 +251,58 @@ SkillEntity_array *WarBoardPartySkillMaster__GetPartySkillEntityArray(
                               (WarBoardPartySkillEntity_array *)EntityArray,
                               v11);
   if ( !PartyNumMatchSkillArray )
-    sub_1C372B4(0);
+    sub_1C3E7C0(0, v15);
   v12 = PartyNumMatchSkillArray;
   if ( PartyNumMatchSkillArray->max_length )
     return v12;
-  v16 = WarBoardPartySkillMaster___c_TypeInfo;
+  v17 = WarBoardPartySkillMaster___c_TypeInfo;
   if ( !WarBoardPartySkillMaster___c_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(WarBoardPartySkillMaster___c_TypeInfo);
-    v16 = WarBoardPartySkillMaster___c_TypeInfo;
+    v17 = WarBoardPartySkillMaster___c_TypeInfo;
   }
-  _9__3_0 = (System_Func_object__int__o *)v16->static_fields->__9__3_0;
+  _9__3_0 = (System_Func_object__int__o *)v17->static_fields->__9__3_0;
   if ( !_9__3_0 )
   {
-    if ( !v16->_2.cctor_finished )
+    if ( !v17->_2.cctor_finished )
     {
-      j_il2cpp_runtime_class_init_0(v16);
-      v16 = WarBoardPartySkillMaster___c_TypeInfo;
+      j_il2cpp_runtime_class_init_0(v17);
+      v17 = WarBoardPartySkillMaster___c_TypeInfo;
     }
-    v18 = (Il2CppObject *)v16->static_fields->__9;
-    _9__3_0 = (System_Func_object__int__o *)sub_1C372A4(System_Func_WarBoardPartySkillEntity__int__TypeInfo);
+    v19 = (Il2CppObject *)v17->static_fields->__9;
+    _9__3_0 = (System_Func_object__int__o *)sub_1C3E7B0(System_Func_WarBoardPartySkillEntity__int__TypeInfo);
     System_Func_object__int____ctor(
       _9__3_0,
-      v18,
+      v19,
       Method_WarBoardPartySkillMaster___c__GetPartySkillEntityArray_b__3_0__,
       0);
     static_fields = WarBoardPartySkillMaster___c_TypeInfo->static_fields;
     static_fields->__9__3_0 = (struct System_Func_WarBoardPartySkillEntity__int__o *)_9__3_0;
-    sub_1C36FFC((CGThumbnailListItem_o *)&static_fields->__9__3_0, (int32_t)_9__3_0, v20, v21);
+    sub_1C3E508((CGThumbnailListItem_o *)&static_fields->__9__3_0, (int32_t)_9__3_0, v21, v22);
   }
-  v22 = (System_Collections_Generic_IEnumerable_TSource__o *)System_Linq_Enumerable__OrderByDescending_object__int_(
+  v23 = (System_Collections_Generic_IEnumerable_TSource__o *)System_Linq_Enumerable__OrderByDescending_object__int_(
                                                                (System_Collections_Generic_IEnumerable_TSource__o *)EntityArray,
                                                                (System_Func_TSource__TKey__o *)_9__3_0,
-                                                               (const MethodInfo_311792C *)Method_System_Linq_Enumerable_OrderByDescending_WarBoardPartySkillEntity__int___);
-  v23 = System_Linq_Enumerable__FirstOrDefault_object_(
-          v22,
-          (const MethodInfo_311035C *)Method_System_Linq_Enumerable_FirstOrDefault_WarBoardPartySkillEntity___);
-  if ( !v23 )
+                                                               (const MethodInfo_3129820 *)Method_System_Linq_Enumerable_OrderByDescending_WarBoardPartySkillEntity__int___);
+  v24 = System_Linq_Enumerable__FirstOrDefault_object_(
+          v23,
+          (const MethodInfo_3122250 *)Method_System_Linq_Enumerable_FirstOrDefault_WarBoardPartySkillEntity___);
+  if ( !v24 )
     return v12;
-  monitor = (int32_t)v23[1].monitor;
+  monitor = (int32_t)v24[1].monitor;
   if ( monitor >= partyNum )
     return v12;
   else
     return WarBoardPartySkillMaster__GetPartyNumMatchSkillArray(
-             (WarBoardPartySkillMaster_o *)v23,
+             (WarBoardPartySkillMaster_o *)v24,
              monitor,
              v13,
              (WarBoardPartySkillEntity_array *)EntityArray,
-             v24);
+             v25);
 }
 
 
-SkillEntity_o *WarBoardPartySkillMaster__GetPartySkillEntity_43323780(
+SkillEntity_o *WarBoardPartySkillMaster__GetPartySkillEntity_43378496(
         WarBoardPartySkillMaster_o *this,
         int32_t partySkillId,
         int32_t partyNum,
@@ -310,94 +312,95 @@ SkillEntity_o *WarBoardPartySkillMaster__GetPartySkillEntity_43323780(
 {
   __int64 v11; // x20
   __int64 v12; // x0
-  const MethodInfo *v13; // x3
+  __int64 v13; // x1
+  const MethodInfo *v14; // x3
   System_Collections_ICollection_o *EntityArray; // x21
-  System_Func_object__bool__o *v16; // x22
+  System_Func_object__bool__o *v17; // x22
   WarBoardPartySkillEntity_o *object; // x0
-  const MethodInfo *v18; // x1
+  const MethodInfo *v19; // x1
   int32_t num; // w8
-  WarBoardPartySkillMaster___c_c *v20; // x0
+  WarBoardPartySkillMaster___c_c *v21; // x0
   System_Func_object__int__o *_9__6_1; // x22
-  Il2CppObject *v22; // x23
+  Il2CppObject *v23; // x23
   struct WarBoardPartySkillMaster___c_StaticFields *static_fields; // x0
-  int32_t v24; // w2
-  const MethodInfo *v25; // x3
-  System_Collections_Generic_IEnumerable_TSource__o *v26; // x0
+  int32_t v25; // w2
+  const MethodInfo *v26; // x3
+  System_Collections_Generic_IEnumerable_TSource__o *v27; // x0
 
-  if ( (byte_4C4417C & 1) == 0 )
+  if ( (byte_4C57F44 & 1) == 0 )
   {
-    sub_1C37058(&Method_BasicHelper_Find_WarBoardPartySkillEntity___);
-    sub_1C37058(&Method_System_Linq_Enumerable_FirstOrDefault_WarBoardPartySkillEntity___);
-    sub_1C37058(&Method_System_Linq_Enumerable_OrderByDescending_WarBoardPartySkillEntity__int___);
-    sub_1C37058(&System_Func_WarBoardPartySkillEntity__bool__TypeInfo);
-    sub_1C37058(&System_Func_WarBoardPartySkillEntity__int__TypeInfo);
-    sub_1C37058(&Method_WarBoardPartySkillMaster___c__GetPartySkillEntity_b__6_1__);
-    sub_1C37058(&Method_WarBoardPartySkillMaster___c__DisplayClass6_0__GetPartySkillEntity_b__0__);
-    sub_1C37058(&WarBoardPartySkillMaster___c__DisplayClass6_0_TypeInfo);
-    sub_1C37058(&WarBoardPartySkillMaster___c_TypeInfo);
-    byte_4C4417C = 1;
+    sub_1C3E564(&Method_BasicHelper_Find_WarBoardPartySkillEntity___);
+    sub_1C3E564(&Method_System_Linq_Enumerable_FirstOrDefault_WarBoardPartySkillEntity___);
+    sub_1C3E564(&Method_System_Linq_Enumerable_OrderByDescending_WarBoardPartySkillEntity__int___);
+    sub_1C3E564(&System_Func_WarBoardPartySkillEntity__bool__TypeInfo);
+    sub_1C3E564(&System_Func_WarBoardPartySkillEntity__int__TypeInfo);
+    sub_1C3E564(&Method_WarBoardPartySkillMaster___c__GetPartySkillEntity_b__6_1__);
+    sub_1C3E564(&Method_WarBoardPartySkillMaster___c__DisplayClass6_0__GetPartySkillEntity_b__0__);
+    sub_1C3E564(&WarBoardPartySkillMaster___c__DisplayClass6_0_TypeInfo);
+    sub_1C3E564(&WarBoardPartySkillMaster___c_TypeInfo);
+    byte_4C57F44 = 1;
   }
-  v11 = sub_1C372A4(WarBoardPartySkillMaster___c__DisplayClass6_0_TypeInfo);
+  v11 = sub_1C3E7B0(WarBoardPartySkillMaster___c__DisplayClass6_0_TypeInfo);
   System_Object___ctor((Il2CppObject *)v11, 0);
   if ( !v11 )
-    sub_1C372B4(v12);
+    sub_1C3E7C0(v12, v13);
   *(_DWORD *)(v11 + 16) = partyNum;
   *maxNum = 0;
   EntityArray = (System_Collections_ICollection_o *)WarBoardPartySkillMaster__GetEntityArray(
                                                       this,
                                                       partySkillId,
                                                       isEnemy,
-                                                      v13);
+                                                      v14);
   if ( BasicHelper__IsNullOrEmpty(EntityArray, 0) )
     return 0;
-  v16 = (System_Func_object__bool__o *)sub_1C372A4(System_Func_WarBoardPartySkillEntity__bool__TypeInfo);
+  v17 = (System_Func_object__bool__o *)sub_1C3E7B0(System_Func_WarBoardPartySkillEntity__bool__TypeInfo);
   System_Func_object__bool____ctor(
-    v16,
+    v17,
     (Il2CppObject *)v11,
     Method_WarBoardPartySkillMaster___c__DisplayClass6_0__GetPartySkillEntity_b__0__,
     0);
   object = (WarBoardPartySkillEntity_o *)BasicHelper__Find_object_(
                                            (System_Object_array *)EntityArray,
-                                           (System_Func_T__bool__o *)v16,
-                                           (const MethodInfo_30D1BC4 *)Method_BasicHelper_Find_WarBoardPartySkillEntity___);
+                                           (System_Func_T__bool__o *)v17,
+                                           (const MethodInfo_30E39DC *)Method_BasicHelper_Find_WarBoardPartySkillEntity___);
   if ( object )
   {
     num = object->fields.num;
   }
   else
   {
-    v20 = WarBoardPartySkillMaster___c_TypeInfo;
+    v21 = WarBoardPartySkillMaster___c_TypeInfo;
     if ( !WarBoardPartySkillMaster___c_TypeInfo->_2.cctor_finished )
     {
       j_il2cpp_runtime_class_init_0(WarBoardPartySkillMaster___c_TypeInfo);
-      v20 = WarBoardPartySkillMaster___c_TypeInfo;
+      v21 = WarBoardPartySkillMaster___c_TypeInfo;
     }
-    _9__6_1 = (System_Func_object__int__o *)v20->static_fields->__9__6_1;
+    _9__6_1 = (System_Func_object__int__o *)v21->static_fields->__9__6_1;
     if ( !_9__6_1 )
     {
-      if ( !v20->_2.cctor_finished )
+      if ( !v21->_2.cctor_finished )
       {
-        j_il2cpp_runtime_class_init_0(v20);
-        v20 = WarBoardPartySkillMaster___c_TypeInfo;
+        j_il2cpp_runtime_class_init_0(v21);
+        v21 = WarBoardPartySkillMaster___c_TypeInfo;
       }
-      v22 = (Il2CppObject *)v20->static_fields->__9;
-      _9__6_1 = (System_Func_object__int__o *)sub_1C372A4(System_Func_WarBoardPartySkillEntity__int__TypeInfo);
+      v23 = (Il2CppObject *)v21->static_fields->__9;
+      _9__6_1 = (System_Func_object__int__o *)sub_1C3E7B0(System_Func_WarBoardPartySkillEntity__int__TypeInfo);
       System_Func_object__int____ctor(
         _9__6_1,
-        v22,
+        v23,
         Method_WarBoardPartySkillMaster___c__GetPartySkillEntity_b__6_1__,
         0);
       static_fields = WarBoardPartySkillMaster___c_TypeInfo->static_fields;
       static_fields->__9__6_1 = (struct System_Func_WarBoardPartySkillEntity__int__o *)_9__6_1;
-      sub_1C36FFC((CGThumbnailListItem_o *)&static_fields->__9__6_1, (int32_t)_9__6_1, v24, v25);
+      sub_1C3E508((CGThumbnailListItem_o *)&static_fields->__9__6_1, (int32_t)_9__6_1, v25, v26);
     }
-    v26 = (System_Collections_Generic_IEnumerable_TSource__o *)System_Linq_Enumerable__OrderByDescending_object__int_(
+    v27 = (System_Collections_Generic_IEnumerable_TSource__o *)System_Linq_Enumerable__OrderByDescending_object__int_(
                                                                  (System_Collections_Generic_IEnumerable_TSource__o *)EntityArray,
                                                                  (System_Func_TSource__TKey__o *)_9__6_1,
-                                                                 (const MethodInfo_311792C *)Method_System_Linq_Enumerable_OrderByDescending_WarBoardPartySkillEntity__int___);
+                                                                 (const MethodInfo_3129820 *)Method_System_Linq_Enumerable_OrderByDescending_WarBoardPartySkillEntity__int___);
     object = (WarBoardPartySkillEntity_o *)System_Linq_Enumerable__FirstOrDefault_object_(
-                                             v26,
-                                             (const MethodInfo_311035C *)Method_System_Linq_Enumerable_FirstOrDefault_WarBoardPartySkillEntity___);
+                                             v27,
+                                             (const MethodInfo_3122250 *)Method_System_Linq_Enumerable_FirstOrDefault_WarBoardPartySkillEntity___);
     if ( !object )
       return 0;
     num = object->fields.num;
@@ -405,7 +408,7 @@ SkillEntity_o *WarBoardPartySkillMaster__GetPartySkillEntity_43323780(
       return 0;
   }
   *maxNum = num;
-  return WarBoardPartySkillEntity__GetSkillEntity(object, v18);
+  return WarBoardPartySkillEntity__GetSkillEntity(object, v19);
 }
 
 
@@ -415,15 +418,15 @@ void WarBoardPartySkillMaster___c___cctor(const MethodInfo *method)
   int32_t v2; // w2
   const MethodInfo *v3; // x3
 
-  if ( (byte_4C4417D & 1) == 0 )
+  if ( (byte_4C57F45 & 1) == 0 )
   {
-    sub_1C37058(&WarBoardPartySkillMaster___c_TypeInfo);
-    byte_4C4417D = 1;
+    sub_1C3E564(&WarBoardPartySkillMaster___c_TypeInfo);
+    byte_4C57F45 = 1;
   }
-  v1 = (Il2CppObject *)sub_1C372A4(WarBoardPartySkillMaster___c_TypeInfo);
+  v1 = (Il2CppObject *)sub_1C3E7B0(WarBoardPartySkillMaster___c_TypeInfo);
   System_Object___ctor(v1, 0);
   WarBoardPartySkillMaster___c_TypeInfo->static_fields->__9 = (struct WarBoardPartySkillMaster___c_o *)v1;
-  sub_1C36FFC((CGThumbnailListItem_o *)WarBoardPartySkillMaster___c_TypeInfo->static_fields, (int32_t)v1, v2, v3);
+  sub_1C3E508((CGThumbnailListItem_o *)WarBoardPartySkillMaster___c_TypeInfo->static_fields, (int32_t)v1, v2, v3);
 }
 
 
@@ -439,7 +442,7 @@ int32_t WarBoardPartySkillMaster___c___GetPartySkillEntityArray_b__3_0(
         const MethodInfo *method)
 {
   if ( !entity )
-    sub_1C372B4(this);
+    sub_1C3E7C0(this, 0);
   return entity->fields.num;
 }
 
@@ -450,7 +453,7 @@ int32_t WarBoardPartySkillMaster___c___GetPartySkillEntity_b__6_1(
         const MethodInfo *method)
 {
   if ( !entity )
-    sub_1C372B4(this);
+    sub_1C3E7C0(this, 0);
   return entity->fields.num;
 }
 
@@ -469,7 +472,7 @@ bool WarBoardPartySkillMaster___c__DisplayClass2_0___GetEntityArray_b__0(
         const MethodInfo *method)
 {
   if ( !entity )
-    sub_1C372B4(this);
+    sub_1C3E7C0(this, 0);
   return entity->fields.id == this->fields.id
       && (entity->fields.target == this->fields.target || entity->fields.target == 0);
 }
@@ -489,6 +492,6 @@ bool WarBoardPartySkillMaster___c__DisplayClass6_0___GetPartySkillEntity_b__0(
         const MethodInfo *method)
 {
   if ( !entity )
-    sub_1C372B4(this);
+    sub_1C3E7C0(this, 0);
   return entity->fields.num == this->fields.partyNum;
 }

@@ -14,16 +14,16 @@ System_Collections_IEnumerator_o *TestBattleRequestButton__battleRequest(
   int32_t v8; // w2
   const MethodInfo *v9; // x3
 
-  if ( (byte_4C4073C & 1) == 0 )
+  if ( (byte_4C544D9 & 1) == 0 )
   {
-    sub_1C37058(&TestBattleRequestButton__battleRequest_d__4_TypeInfo);
-    byte_4C4073C = 1;
+    sub_1C3E564(&TestBattleRequestButton__battleRequest_d__4_TypeInfo);
+    byte_4C544D9 = 1;
   }
-  v7 = sub_1C372A4(TestBattleRequestButton__battleRequest_d__4_TypeInfo);
+  v7 = sub_1C3E7B0(TestBattleRequestButton__battleRequest_d__4_TypeInfo);
   System_Object___ctor((Il2CppObject *)v7, 0);
   *(_DWORD *)(v7 + 16) = 0;
   *(_QWORD *)(v7 + 32) = this;
-  sub_1C36FFC((CGThumbnailListItem_o *)(v7 + 32), (int32_t)this, v8, v9);
+  sub_1C3E508((CGThumbnailListItem_o *)(v7 + 32), (int32_t)this, v8, v9);
   *(_DWORD *)(v7 + 40) = questNo;
   *(_DWORD *)(v7 + 44) = questPhase;
   return (System_Collections_IEnumerator_o *)v7;
@@ -33,23 +33,24 @@ System_Collections_IEnumerator_o *TestBattleRequestButton__battleRequest(
 void TestBattleRequestButton__beginInitialize(TestBattleRequestButton_o *this, const MethodInfo *method)
 {
   Il2CppObject *Instance; // x0
+  __int64 v4; // x1
 
-  if ( (byte_4C4073B & 1) == 0 )
+  if ( (byte_4C544D8 & 1) == 0 )
   {
-    sub_1C37058(&Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__);
-    byte_4C4073B = 1;
+    sub_1C3E564(&Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__);
+    byte_4C544D8 = 1;
   }
   SceneRootComponent__beginInitialize((SceneRootComponent_o *)this, 0);
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39ED16C *)Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39FF5A8 *)Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__);
   if ( !Instance )
-    sub_1C372B4(0);
+    sub_1C3E7C0(0, v4);
   AvalonSceneManager__endInitialize((AvalonSceneManager_o *)Instance, (SceneRootComponent_o *)this, 0);
 }
 
 
 void TestBattleRequestButton__beginStartUp(TestBattleRequestButton_o *this, const MethodInfo *method)
 {
-  SceneRootComponent__beginStartUp_41481188((SceneRootComponent_o *)this, 0);
+  SceneRootComponent__beginStartUp_41529716((SceneRootComponent_o *)this, 0);
 }
 
 
@@ -68,7 +69,7 @@ void TestBattleRequestButton__startRequestA(TestBattleRequestButton_o *this, con
   System_Collections_IEnumerator_o *v4; // x1
 
   v4 = TestBattleRequestButton__battleRequest(this, 1010, 1, v2);
-  UnityEngine_MonoBehaviour__StartCoroutine_71252324((UnityEngine_MonoBehaviour_o *)this, v4, 0);
+  UnityEngine_MonoBehaviour__StartCoroutine_71327136((UnityEngine_MonoBehaviour_o *)this, v4, 0);
 }
 
 
@@ -99,16 +100,16 @@ bool TestBattleRequestButton__battleRequest_d__4__MoveNext(
   const MethodInfo *v12; // x3
 
   v2 = this;
-  if ( (byte_4C4073D & 1) == 0 )
+  if ( (byte_4C544DA & 1) == 0 )
   {
-    sub_1C37058(&Method_NetworkManager_getRequest_BattleSetupRequest___);
-    sub_1C37058(&NetworkManager_TypeInfo);
-    sub_1C37058(&NetworkManager_ResultCallbackFunc_TypeInfo);
-    sub_1C37058(&Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__);
-    sub_1C37058(&Method_TestBattleRequestButton_callbackRequest__);
-    sub_1C37058(&UnityEngine_WaitForEndOfFrame_TypeInfo);
-    this = (TestBattleRequestButton__battleRequest_d__4_o *)sub_1C37058(&StringLiteral_1/*""*/);
-    byte_4C4073D = 1;
+    sub_1C3E564(&Method_NetworkManager_getRequest_BattleSetupRequest___);
+    sub_1C3E564(&NetworkManager_TypeInfo);
+    sub_1C3E564(&NetworkManager_ResultCallbackFunc_TypeInfo);
+    sub_1C3E564(&Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__);
+    sub_1C3E564(&Method_TestBattleRequestButton_callbackRequest__);
+    sub_1C3E564(&UnityEngine_WaitForEndOfFrame_TypeInfo);
+    this = (TestBattleRequestButton__battleRequest_d__4_o *)sub_1C3E564(&StringLiteral_1/*""*/);
+    byte_4C544DA = 1;
   }
   _1__state = v2->fields.__1__state;
   _4__this = v2->fields.__4__this;
@@ -121,7 +122,7 @@ bool TestBattleRequestButton__battleRequest_d__4__MoveNext(
         goto LABEL_19;
       _4__this->fields.isRequest = 0;
       SelfUserGame = UserGameMaster__getSelfUserGame(0);
-      v6 = (NetworkManager_ResultCallbackFunc_o *)sub_1C372A4(NetworkManager_ResultCallbackFunc_TypeInfo);
+      v6 = (NetworkManager_ResultCallbackFunc_o *)sub_1C3E7B0(NetworkManager_ResultCallbackFunc_TypeInfo);
       NetworkManager_ResultCallbackFunc___ctor(
         v6,
         (Il2CppObject *)_4__this,
@@ -131,13 +132,13 @@ bool TestBattleRequestButton__battleRequest_d__4__MoveNext(
         j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
       this = (TestBattleRequestButton__battleRequest_d__4_o *)NetworkManager__getRequest_object_(
                                                                 v6,
-                                                                (const MethodInfo_3172CF0 *)Method_NetworkManager_getRequest_BattleSetupRequest___);
+                                                                (const MethodInfo_3184BE4 *)Method_NetworkManager_getRequest_BattleSetupRequest___);
       if ( SelfUserGame )
       {
         activeDeckId = SelfUserGame->fields.activeDeckId;
         if ( !this )
 LABEL_19:
-          sub_1C372B4(this);
+          sub_1C3E7C0(this, method);
       }
       else
       {
@@ -178,18 +179,18 @@ LABEL_19:
     goto LABEL_19;
   if ( _4__this->fields.isRequest )
   {
-    this = (TestBattleRequestButton__battleRequest_d__4_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39ED16C *)Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__);
+    this = (TestBattleRequestButton__battleRequest_d__4_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39FF5A8 *)Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__);
     if ( !this )
       goto LABEL_19;
     AvalonSceneManager__changeScene((AvalonSceneManager_o *)this, 10, 1, 0, 0);
     return 0;
   }
 LABEL_18:
-  v9 = (UnityEngine_WaitForEndOfFrame_o *)sub_1C372A4(UnityEngine_WaitForEndOfFrame_TypeInfo);
+  v9 = (UnityEngine_WaitForEndOfFrame_o *)sub_1C3E7B0(UnityEngine_WaitForEndOfFrame_TypeInfo);
   UnityEngine_WaitForEndOfFrame___ctor(v9, 0);
   v2->fields.__2__current = (Il2CppObject *)v9;
   p__2__current = (CGThumbnailListItem_o *)&v2->fields.__2__current;
-  sub_1C36FFC(p__2__current, (int32_t)v9, v11, v12);
+  sub_1C3E508(p__2__current, (int32_t)v9, v11, v12);
   result = 1;
   LODWORD(p__2__current[-1].fields._ThumbnailSpritePath_k__BackingField) = 1;
   return result;
@@ -212,11 +213,11 @@ void __noreturn TestBattleRequestButton__battleRequest_d__4__System_Collections_
   System_NotSupportedException_o *v3; // x19
   __int64 v4; // x0
 
-  v2 = sub_1C3706C(&System_NotSupportedException_TypeInfo);
-  v3 = (System_NotSupportedException_o *)sub_1C372A4(v2);
+  v2 = sub_1C3E578(&System_NotSupportedException_TypeInfo);
+  v3 = (System_NotSupportedException_o *)sub_1C3E7B0(v2);
   System_NotSupportedException___ctor(v3, 0);
-  v4 = sub_1C3706C(&Method_TestBattleRequestButton__battleRequest_d__4_System_Collections_IEnumerator_Reset__);
-  sub_1C37180(v3, v4);
+  v4 = sub_1C3E578(&Method_TestBattleRequestButton__battleRequest_d__4_System_Collections_IEnumerator_Reset__);
+  sub_1C3E68C(v3, v4);
 }
 
 

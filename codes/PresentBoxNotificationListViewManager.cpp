@@ -6,6 +6,7 @@ void PresentBoxNotificationListViewManager___ctor(
 }
 
 
+// local variable allocation has failed, the output may be wrong!
 void PresentBoxNotificationListViewManager__CreateList(
         PresentBoxNotificationListViewManager_o *this,
         int32_t kind,
@@ -16,24 +17,25 @@ void PresentBoxNotificationListViewManager__CreateList(
   struct System_Collections_Generic_List_ListViewItem__o *itemList; // x9
   struct UIScrollView_o *scrollView; // x8
   int v9; // w9
+  __int64 v10; // x2
   il2cpp_array_size_t max_length; // x8
-  unsigned __int64 v11; // x24
-  int32_t v12; // w21
-  UserPresentBoxEntity_o *v13; // x23
-  PresentBoxNotificationListViewItem_o *v14; // x22
-  const MethodInfo *v15; // x3
+  unsigned __int64 v12; // x24
+  int32_t v13; // w21
+  UserPresentBoxEntity_o *v14; // x23
+  PresentBoxNotificationListViewItem_o *v15; // x22
+  const MethodInfo *v16; // x3
   intptr_t m_CachedPtr; // x8
-  _QWORD *v17; // x9
+  _QWORD *v18; // x9
   __int64 m_CancellationTokenSource_low; // x10
-  intptr_t v19; // x8
+  intptr_t v20; // x8
 
   v6 = this;
-  if ( (byte_4C3CF1D & 1) == 0 )
+  if ( (byte_4C50C9D & 1) == 0 )
   {
-    sub_1C37058(&Method_System_Collections_Generic_List_ListViewItem__Add__);
-    sub_1C37058(&Method_System_Collections_Generic_List_ListViewItem__get_Count__);
-    this = (PresentBoxNotificationListViewManager_o *)sub_1C37058(&PresentBoxNotificationListViewItem_TypeInfo);
-    byte_4C3CF1D = 1;
+    sub_1C3E564(&Method_System_Collections_Generic_List_ListViewItem__Add__);
+    sub_1C3E564(&Method_System_Collections_Generic_List_ListViewItem__get_Count__);
+    this = (PresentBoxNotificationListViewManager_o *)sub_1C3E564(&PresentBoxNotificationListViewItem_TypeInfo);
+    byte_4C50C9D = 1;
   }
   if ( !kind )
   {
@@ -43,22 +45,22 @@ void PresentBoxNotificationListViewManager__CreateList(
       max_length = presentList->max_length;
       if ( (int)max_length >= 1 )
       {
-        v11 = 0;
         v12 = 0;
+        v13 = 0;
         do
         {
-          if ( v11 >= (unsigned int)max_length )
-            sub_1C372BC(this);
-          v13 = presentList->m_Items[v11];
-          if ( v13 )
+          if ( v12 >= (unsigned int)max_length )
+            sub_1C3E7C8(this, *(_QWORD *)&kind, v10);
+          v14 = presentList->m_Items[v12];
+          if ( v14 )
           {
-            v14 = (PresentBoxNotificationListViewItem_o *)sub_1C372A4(PresentBoxNotificationListViewItem_TypeInfo);
-            PresentBoxNotificationListViewItem___ctor(v14, v12, v13, v15);
+            v15 = (PresentBoxNotificationListViewItem_o *)sub_1C3E7B0(PresentBoxNotificationListViewItem_TypeInfo);
+            PresentBoxNotificationListViewItem___ctor(v15, v13, v14, v16);
             this = (PresentBoxNotificationListViewManager_o *)v6->fields.itemList;
             if ( !this )
               goto LABEL_23;
             m_CachedPtr = this->fields.m_CachedPtr;
-            v17 = Method_System_Collections_Generic_List_ListViewItem__Add__;
+            v18 = Method_System_Collections_Generic_List_ListViewItem__Add__;
             ++HIDWORD(this->fields.m_CancellationTokenSource);
             if ( !m_CachedPtr )
               goto LABEL_23;
@@ -67,29 +69,29 @@ void PresentBoxNotificationListViewManager__CreateList(
             {
               System_Collections_Generic_List_object___AddWithResize(
                 (System_Collections_Generic_List_object__o *)this,
-                (Il2CppObject *)v14,
-                *(const MethodInfo_37A3024 **)(*(_QWORD *)(v17[4] + 192LL) + 112LL));
+                (Il2CppObject *)v15,
+                *(const MethodInfo_37B5460 **)(*(_QWORD *)(v18[4] + 192LL) + 112LL));
             }
             else
             {
-              v19 = m_CachedPtr + 8 * m_CancellationTokenSource_low;
+              v20 = m_CachedPtr + 8 * m_CancellationTokenSource_low;
               LODWORD(this->fields.m_CancellationTokenSource) = m_CancellationTokenSource_low + 1;
-              *(_QWORD *)(v19 + 32) = v14;
-              this = (PresentBoxNotificationListViewManager_o *)sub_1C36FFC(v19 + 32, v14);
+              *(_QWORD *)(v20 + 32) = v15;
+              this = (PresentBoxNotificationListViewManager_o *)sub_1C3E508(v20 + 32, v15);
             }
             LODWORD(max_length) = presentList->max_length;
-            ++v12;
+            ++v13;
           }
-          ++v11;
+          ++v12;
         }
-        while ( (__int64)v11 < (int)max_length );
+        while ( (__int64)v12 < (int)max_length );
       }
     }
   }
   itemList = v6->fields.itemList;
   if ( !itemList || (scrollView = v6->fields.scrollView) == 0 )
 LABEL_23:
-    sub_1C372B4(this);
+    sub_1C3E7C0(this, *(_QWORD *)&kind);
   if ( itemList->fields._size > 4 )
     v9 = 1;
   else
@@ -115,11 +117,11 @@ PresentBoxNotificationListViewItem_o *PresentBoxNotificationListViewManager__Get
   PresentBoxNotificationListViewItem_o *result; // x0
   __int64 naturalAligment; // x10
 
-  if ( (byte_4C3CF1E & 1) == 0 )
+  if ( (byte_4C50C9E & 1) == 0 )
   {
-    sub_1C37058(&Method_System_Collections_Generic_List_ListViewItem__get_Item__);
-    sub_1C37058(&PresentBoxNotificationListViewItem_TypeInfo);
-    byte_4C3CF1E = 1;
+    sub_1C3E564(&Method_System_Collections_Generic_List_ListViewItem__get_Item__);
+    sub_1C3E564(&PresentBoxNotificationListViewItem_TypeInfo);
+    byte_4C50C9E = 1;
   }
   result = (PresentBoxNotificationListViewItem_o *)this->fields.itemList;
   if ( result )
@@ -127,7 +129,7 @@ PresentBoxNotificationListViewItem_o *PresentBoxNotificationListViewManager__Get
     result = (PresentBoxNotificationListViewItem_o *)System_Collections_Generic_List_object___get_Item(
                                                        (System_Collections_Generic_List_object__o *)result,
                                                        index,
-                                                       (const MethodInfo_37A2D54 *)Method_System_Collections_Generic_List_ListViewItem__get_Item__);
+                                                       (const MethodInfo_37B5190 *)Method_System_Collections_Generic_List_ListViewItem__get_Item__);
     if ( result )
     {
       naturalAligment = PresentBoxNotificationListViewItem_TypeInfo->_2.naturalAligment;
@@ -153,15 +155,16 @@ void PresentBoxNotificationListViewManager__OnClickListView(
 {
   struct PresentBoxNotificationListViewManager_CallbackFunc_o *callbackFunc; // x20
   __int64 v5; // x0
+  __int64 v6; // x1
   unsigned int Index; // w0
 
   callbackFunc = this->fields.callbackFunc;
   this->fields.callbackFunc = 0;
-  v5 = sub_1C36FFC(&this->fields.callbackFunc, 0);
+  v5 = sub_1C3E508(&this->fields.callbackFunc, 0);
   if ( callbackFunc )
   {
     if ( !obj )
-      sub_1C372B4(v5);
+      sub_1C3E7C0(v5, v6);
     Index = ListViewObject__get_Index(obj, 0);
     ((void (__fastcall *)(intptr_t, _QWORD, intptr_t))callbackFunc->fields.invoke_impl)(
       callbackFunc->fields.method_code,
@@ -179,13 +182,14 @@ void PresentBoxNotificationListViewManager__OnMoveEnd(
   bool v4; // vf
   int32_t v5; // w8
   UnityEngine_Object_o *scrollView; // x20
-  struct UIScrollView_o *v7; // x0
+  __int64 v7; // x1
+  struct UIScrollView_o *v8; // x0
   struct System_Action_o *callbackFunc2; // x20
 
-  if ( (byte_4C3CF22 & 1) == 0 )
+  if ( (byte_4C50CA2 & 1) == 0 )
   {
-    sub_1C37058(&UnityEngine_Object_TypeInfo);
-    byte_4C3CF22 = 1;
+    sub_1C3E564(&UnityEngine_Object_TypeInfo);
+    byte_4C50CA2 = 1;
   }
   callbackCount = this->fields.callbackCount;
   v4 = __OFSUB__(callbackCount, 1);
@@ -200,17 +204,17 @@ void PresentBoxNotificationListViewManager__OnMoveEnd(
         j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
       if ( UnityEngine_Object__op_Inequality(scrollView, 0, 0) )
       {
-        v7 = this->fields.scrollView;
-        if ( !v7 )
-          sub_1C372B4(0);
-        ((void (__fastcall *)(struct UIScrollView_o *, __int64, const MethodInfo *))v7->klass->vtable._8_UpdateScrollbars.methodPtr)(
-          v7,
+        v8 = this->fields.scrollView;
+        if ( !v8 )
+          sub_1C3E7C0(0, v7);
+        ((void (__fastcall *)(struct UIScrollView_o *, __int64, const MethodInfo *))v8->klass->vtable._8_UpdateScrollbars.methodPtr)(
+          v8,
           1,
-          v7->klass->vtable._8_UpdateScrollbars.method);
+          v8->klass->vtable._8_UpdateScrollbars.method);
       }
       callbackFunc2 = this->fields.callbackFunc2;
       this->fields.callbackFunc2 = 0;
-      sub_1C36FFC(&this->fields.callbackFunc2, 0);
+      sub_1C3E508(&this->fields.callbackFunc2, 0);
       if ( callbackFunc2 )
         ((void (__fastcall *)(intptr_t, intptr_t))callbackFunc2->fields.invoke_impl)(
           callbackFunc2->fields.method_code,
@@ -228,31 +232,33 @@ void PresentBoxNotificationListViewManager__RequestListObject(
         const MethodInfo *method)
 {
   System_Collections_Generic_List_object__o *ObjectList; // x0
+  __int64 v8; // x1
   int32_t size; // w8
   Il2CppObject *current; // x21
-  System_Action_o *v10; // x22
-  __int64 v11; // x0
-  const MethodInfo *v12; // x3
-  System_Collections_Generic_List_Enumerator_object__o v13; // [xsp+8h] [xbp-68h] BYREF
+  System_Action_o *v11; // x22
+  __int64 v12; // x0
+  __int64 v13; // x1
+  const MethodInfo *v14; // x3
+  System_Collections_Generic_List_Enumerator_object__o v15; // [xsp+8h] [xbp-68h] BYREF
 
-  if ( (byte_4C3CF20 & 1) == 0 )
+  if ( (byte_4C50CA0 & 1) == 0 )
   {
-    sub_1C37058(&System_Action_TypeInfo);
-    sub_1C37058(&Method_System_Collections_Generic_List_Enumerator_PresentBoxNotificationListViewObject__Dispose__);
-    sub_1C37058(&Method_System_Collections_Generic_List_Enumerator_PresentBoxNotificationListViewObject__MoveNext__);
-    sub_1C37058(&Method_System_Collections_Generic_List_Enumerator_PresentBoxNotificationListViewObject__get_Current__);
-    sub_1C37058(&Method_System_Collections_Generic_List_PresentBoxNotificationListViewObject__GetEnumerator__);
-    sub_1C37058(&Method_System_Collections_Generic_List_PresentBoxNotificationListViewObject__get_Count__);
-    sub_1C37058(&Method_PresentBoxNotificationListViewManager_OnMoveEnd__);
-    sub_1C37058(&StringLiteral_9942/*"OnMoveEnd"*/);
-    byte_4C3CF20 = 1;
+    sub_1C3E564(&System_Action_TypeInfo);
+    sub_1C3E564(&Method_System_Collections_Generic_List_Enumerator_PresentBoxNotificationListViewObject__Dispose__);
+    sub_1C3E564(&Method_System_Collections_Generic_List_Enumerator_PresentBoxNotificationListViewObject__MoveNext__);
+    sub_1C3E564(&Method_System_Collections_Generic_List_Enumerator_PresentBoxNotificationListViewObject__get_Current__);
+    sub_1C3E564(&Method_System_Collections_Generic_List_PresentBoxNotificationListViewObject__GetEnumerator__);
+    sub_1C3E564(&Method_System_Collections_Generic_List_PresentBoxNotificationListViewObject__get_Count__);
+    sub_1C3E564(&Method_PresentBoxNotificationListViewManager_OnMoveEnd__);
+    sub_1C3E564(&StringLiteral_9942/*"OnMoveEnd"*/);
+    byte_4C50CA0 = 1;
   }
-  memset(&v13, 0, sizeof(v13));
+  memset(&v15, 0, sizeof(v15));
   ObjectList = (System_Collections_Generic_List_object__o *)PresentBoxNotificationListViewManager__get_ObjectList(
                                                               this,
                                                               *(const MethodInfo **)&mode);
   if ( !ObjectList )
-    sub_1C372B4(0);
+    sub_1C3E7C0(0, v8);
   size = ObjectList->fields._size;
   if ( size < 1 )
   {
@@ -267,64 +273,66 @@ void PresentBoxNotificationListViewManager__RequestListObject(
   {
     this->fields.callbackCount = size;
     System_Collections_Generic_List_object___GetEnumerator(
-      (System_Collections_Generic_List_Enumerator_T__o *)&v13,
+      (System_Collections_Generic_List_Enumerator_T__o *)&v15,
       ObjectList,
-      (const MethodInfo_37A3B1C *)Method_System_Collections_Generic_List_PresentBoxNotificationListViewObject__GetEnumerator__);
+      (const MethodInfo_37B5F58 *)Method_System_Collections_Generic_List_PresentBoxNotificationListViewObject__GetEnumerator__);
     while ( System_Collections_Generic_List_Enumerator_object___MoveNext(
-              &v13,
-              (const MethodInfo_352D810 *)Method_System_Collections_Generic_List_Enumerator_PresentBoxNotificationListViewObject__MoveNext__) )
+              &v15,
+              (const MethodInfo_353FC4C *)Method_System_Collections_Generic_List_Enumerator_PresentBoxNotificationListViewObject__MoveNext__) )
     {
-      current = v13.fields._current;
-      v10 = (System_Action_o *)sub_1C372A4(System_Action_TypeInfo);
-      System_Action___ctor(v10, (Il2CppObject *)this, Method_PresentBoxNotificationListViewManager_OnMoveEnd__, 0);
+      current = v15.fields._current;
+      v11 = (System_Action_o *)sub_1C3E7B0(System_Action_TypeInfo);
+      System_Action___ctor(v11, (Il2CppObject *)this, Method_PresentBoxNotificationListViewManager_OnMoveEnd__, 0);
       if ( !current )
-        sub_1C372B4(v11);
-      PresentBoxNotificationListViewObject__Init_31338932(
+        sub_1C3E7C0(v12, v13);
+      PresentBoxNotificationListViewObject__Init_31368932(
         (PresentBoxNotificationListViewObject_o *)current,
         mode,
-        v10,
+        v11,
         delay,
-        v12);
+        v14);
     }
     System_Collections_Generic_List_Enumerator_object___Dispose(
-      &v13,
-      (const MethodInfo_352D80C *)Method_System_Collections_Generic_List_Enumerator_PresentBoxNotificationListViewObject__Dispose__);
+      &v15,
+      (const MethodInfo_353FC48 *)Method_System_Collections_Generic_List_Enumerator_PresentBoxNotificationListViewObject__Dispose__);
   }
 }
 
 
 // local variable allocation has failed, the output may be wrong!
-void PresentBoxNotificationListViewManager__RequestListObject_31337904(
+void PresentBoxNotificationListViewManager__RequestListObject_31367904(
         PresentBoxNotificationListViewManager_o *this,
         int32_t mode,
         const MethodInfo *method)
 {
   System_Collections_Generic_List_object__o *ObjectList; // x0
+  __int64 v6; // x1
   int32_t size; // w8
   Il2CppObject *current; // x21
-  System_Action_o *v8; // x22
-  __int64 v9; // x0
-  const MethodInfo *v10; // x3
-  System_Collections_Generic_List_Enumerator_object__o v11; // [xsp+8h] [xbp-68h] BYREF
+  System_Action_o *v9; // x22
+  __int64 v10; // x0
+  __int64 v11; // x1
+  const MethodInfo *v12; // x3
+  System_Collections_Generic_List_Enumerator_object__o v13; // [xsp+8h] [xbp-68h] BYREF
 
-  if ( (byte_4C3CF21 & 1) == 0 )
+  if ( (byte_4C50CA1 & 1) == 0 )
   {
-    sub_1C37058(&System_Action_TypeInfo);
-    sub_1C37058(&Method_System_Collections_Generic_List_Enumerator_PresentBoxNotificationListViewObject__Dispose__);
-    sub_1C37058(&Method_System_Collections_Generic_List_Enumerator_PresentBoxNotificationListViewObject__MoveNext__);
-    sub_1C37058(&Method_System_Collections_Generic_List_Enumerator_PresentBoxNotificationListViewObject__get_Current__);
-    sub_1C37058(&Method_System_Collections_Generic_List_PresentBoxNotificationListViewObject__GetEnumerator__);
-    sub_1C37058(&Method_System_Collections_Generic_List_PresentBoxNotificationListViewObject__get_Count__);
-    sub_1C37058(&Method_PresentBoxNotificationListViewManager_OnMoveEnd__);
-    sub_1C37058(&StringLiteral_9942/*"OnMoveEnd"*/);
-    byte_4C3CF21 = 1;
+    sub_1C3E564(&System_Action_TypeInfo);
+    sub_1C3E564(&Method_System_Collections_Generic_List_Enumerator_PresentBoxNotificationListViewObject__Dispose__);
+    sub_1C3E564(&Method_System_Collections_Generic_List_Enumerator_PresentBoxNotificationListViewObject__MoveNext__);
+    sub_1C3E564(&Method_System_Collections_Generic_List_Enumerator_PresentBoxNotificationListViewObject__get_Current__);
+    sub_1C3E564(&Method_System_Collections_Generic_List_PresentBoxNotificationListViewObject__GetEnumerator__);
+    sub_1C3E564(&Method_System_Collections_Generic_List_PresentBoxNotificationListViewObject__get_Count__);
+    sub_1C3E564(&Method_PresentBoxNotificationListViewManager_OnMoveEnd__);
+    sub_1C3E564(&StringLiteral_9942/*"OnMoveEnd"*/);
+    byte_4C50CA1 = 1;
   }
-  memset(&v11, 0, sizeof(v11));
+  memset(&v13, 0, sizeof(v13));
   ObjectList = (System_Collections_Generic_List_object__o *)PresentBoxNotificationListViewManager__get_ObjectList(
                                                               this,
                                                               *(const MethodInfo **)&mode);
   if ( !ObjectList )
-    sub_1C372B4(0);
+    sub_1C3E7C0(0, v6);
   size = ObjectList->fields._size;
   if ( size < 1 )
   {
@@ -339,27 +347,27 @@ void PresentBoxNotificationListViewManager__RequestListObject_31337904(
   {
     this->fields.callbackCount = size;
     System_Collections_Generic_List_object___GetEnumerator(
-      (System_Collections_Generic_List_Enumerator_T__o *)&v11,
+      (System_Collections_Generic_List_Enumerator_T__o *)&v13,
       ObjectList,
-      (const MethodInfo_37A3B1C *)Method_System_Collections_Generic_List_PresentBoxNotificationListViewObject__GetEnumerator__);
+      (const MethodInfo_37B5F58 *)Method_System_Collections_Generic_List_PresentBoxNotificationListViewObject__GetEnumerator__);
     while ( System_Collections_Generic_List_Enumerator_object___MoveNext(
-              &v11,
-              (const MethodInfo_352D810 *)Method_System_Collections_Generic_List_Enumerator_PresentBoxNotificationListViewObject__MoveNext__) )
+              &v13,
+              (const MethodInfo_353FC4C *)Method_System_Collections_Generic_List_Enumerator_PresentBoxNotificationListViewObject__MoveNext__) )
     {
-      current = v11.fields._current;
-      v8 = (System_Action_o *)sub_1C372A4(System_Action_TypeInfo);
-      System_Action___ctor(v8, (Il2CppObject *)this, Method_PresentBoxNotificationListViewManager_OnMoveEnd__, 0);
+      current = v13.fields._current;
+      v9 = (System_Action_o *)sub_1C3E7B0(System_Action_TypeInfo);
+      System_Action___ctor(v9, (Il2CppObject *)this, Method_PresentBoxNotificationListViewManager_OnMoveEnd__, 0);
       if ( !current )
-        sub_1C372B4(v9);
-      PresentBoxNotificationListViewObject__Init_31339016(
+        sub_1C3E7C0(v10, v11);
+      PresentBoxNotificationListViewObject__Init_31369016(
         (PresentBoxNotificationListViewObject_o *)current,
         mode,
-        v8,
-        v10);
+        v9,
+        v12);
     }
     System_Collections_Generic_List_Enumerator_object___Dispose(
-      &v11,
-      (const MethodInfo_352D80C *)Method_System_Collections_Generic_List_Enumerator_PresentBoxNotificationListViewObject__Dispose__);
+      &v13,
+      (const MethodInfo_353FC48 *)Method_System_Collections_Generic_List_Enumerator_PresentBoxNotificationListViewObject__Dispose__);
   }
 }
 
@@ -373,12 +381,12 @@ void PresentBoxNotificationListViewManager__SetMode(
   const MethodInfo *v6; // x2
 
   this->fields.callbackFunc = callback;
-  sub_1C36FFC(&this->fields.callbackFunc, callback);
-  PresentBoxNotificationListViewManager__SetMode_31337760(this, mode, v6);
+  sub_1C3E508(&this->fields.callbackFunc, callback);
+  PresentBoxNotificationListViewManager__SetMode_31367760(this, mode, v6);
 }
 
 
-void PresentBoxNotificationListViewManager__SetMode_31337760(
+void PresentBoxNotificationListViewManager__SetMode_31367760(
         PresentBoxNotificationListViewManager_o *this,
         int32_t mode,
         const MethodInfo *method)
@@ -389,11 +397,11 @@ void PresentBoxNotificationListViewManager__SetMode_31337760(
   this->fields.callbackCount = ListViewManager__get_ObjectSum((ListViewManager_o *)this, 0);
   ListViewManager__set_IsInput((ListViewManager_o *)this, mode == 1, 0);
   if ( mode == 1 )
-    PresentBoxNotificationListViewManager__RequestListObject_31337904(this, 3, v5);
+    PresentBoxNotificationListViewManager__RequestListObject_31367904(this, 3, v5);
 }
 
 
-void PresentBoxNotificationListViewManager__SetMode_31337852(
+void PresentBoxNotificationListViewManager__SetMode_31367852(
         PresentBoxNotificationListViewManager_o *this,
         int32_t mode,
         System_Action_o *callback,
@@ -402,8 +410,8 @@ void PresentBoxNotificationListViewManager__SetMode_31337852(
   const MethodInfo *v6; // x2
 
   this->fields.callbackFunc2 = callback;
-  sub_1C36FFC(&this->fields.callbackFunc2, callback);
-  PresentBoxNotificationListViewManager__SetMode_31337760(this, mode, v6);
+  sub_1C3E508(&this->fields.callbackFunc2, callback);
+  PresentBoxNotificationListViewManager__SetMode_31367760(this, mode, v6);
 }
 
 
@@ -418,23 +426,23 @@ void PresentBoxNotificationListViewManager__SetObjectItem(
   int32_t v7; // w1
 
   v5 = this;
-  if ( (byte_4C3CF1F & 1) == 0 )
+  if ( (byte_4C50C9F & 1) == 0 )
   {
-    this = (PresentBoxNotificationListViewManager_o *)sub_1C37058(&PresentBoxNotificationListViewObject_TypeInfo);
-    byte_4C3CF1F = 1;
+    this = (PresentBoxNotificationListViewManager_o *)sub_1C3E564(&PresentBoxNotificationListViewObject_TypeInfo);
+    byte_4C50C9F = 1;
   }
   if ( !obj
     || (naturalAligment = PresentBoxNotificationListViewObject_TypeInfo->_2.naturalAligment,
         obj->klass->_2.naturalAligment < (unsigned int)naturalAligment)
     || (PresentBoxNotificationListViewObject_c *)obj->klass->_2.typeHierarchy[naturalAligment - 1] != PresentBoxNotificationListViewObject_TypeInfo )
   {
-    sub_1C372B4(this);
+    sub_1C3E7C0(this, obj);
   }
   if ( v5->fields.initMode == 1 )
     v7 = 3;
   else
     v7 = 2;
-  PresentBoxNotificationListViewObject__Init_31337636(
+  PresentBoxNotificationListViewObject__Init_31367636(
     (PresentBoxNotificationListViewObject_o *)obj,
     v7,
     (const MethodInfo *)item);
@@ -455,10 +463,10 @@ void PresentBoxNotificationListViewManager__add_callbackFunc(
   PresentBoxNotificationListViewManager_CallbackFunc_o *v11; // x1
   const MethodInfo *v12; // x2
 
-  if ( (byte_4C3CF17 & 1) == 0 )
+  if ( (byte_4C50C97 & 1) == 0 )
   {
-    sub_1C37058(&PresentBoxNotificationListViewManager_CallbackFunc_TypeInfo);
-    byte_4C3CF17 = 1;
+    sub_1C3E564(&PresentBoxNotificationListViewManager_CallbackFunc_TypeInfo);
+    byte_4C50C97 = 1;
   }
   callbackFunc = (System_Delegate_o *)this->fields.callbackFunc;
   p_callbackFunc = &this->fields.callbackFunc;
@@ -470,13 +478,13 @@ void PresentBoxNotificationListViewManager__add_callbackFunc(
       if ( (PresentBoxNotificationListViewManager_CallbackFunc_c *)v7->klass != PresentBoxNotificationListViewManager_CallbackFunc_TypeInfo )
         break;
     }
-    v8 = sub_1C712B0(p_callbackFunc, v7, callbackFunc);
+    v8 = sub_1C787BC(p_callbackFunc, v7, callbackFunc);
     v9 = callbackFunc == (System_Delegate_o *)v8;
     callbackFunc = (System_Delegate_o *)v8;
     if ( v9 )
       return;
   }
-  v10 = (PresentBoxNotificationListViewManager_o *)sub_1C37574(v7);
+  v10 = (PresentBoxNotificationListViewManager_o *)sub_1C3EA80(v7);
   PresentBoxNotificationListViewManager__remove_callbackFunc(v10, v11, v12);
 }
 
@@ -495,10 +503,10 @@ void PresentBoxNotificationListViewManager__add_callbackFunc2(
   System_Action_o *v11; // x1
   const MethodInfo *v12; // x2
 
-  if ( (byte_4C3CF19 & 1) == 0 )
+  if ( (byte_4C50C99 & 1) == 0 )
   {
-    sub_1C37058(&System_Action_TypeInfo);
-    byte_4C3CF19 = 1;
+    sub_1C3E564(&System_Action_TypeInfo);
+    byte_4C50C99 = 1;
   }
   callbackFunc2 = (System_Delegate_o *)this->fields.callbackFunc2;
   p_callbackFunc2 = &this->fields.callbackFunc2;
@@ -510,13 +518,13 @@ void PresentBoxNotificationListViewManager__add_callbackFunc2(
       if ( (System_Action_c *)v7->klass != System_Action_TypeInfo )
         break;
     }
-    v8 = sub_1C712B0(p_callbackFunc2, v7, callbackFunc2);
+    v8 = sub_1C787BC(p_callbackFunc2, v7, callbackFunc2);
     v9 = callbackFunc2 == (System_Delegate_o *)v8;
     callbackFunc2 = (System_Delegate_o *)v8;
     if ( v9 )
       return;
   }
-  v10 = (PresentBoxNotificationListViewManager_o *)sub_1C37574(v7);
+  v10 = (PresentBoxNotificationListViewManager_o *)sub_1C3EA80(v7);
   PresentBoxNotificationListViewManager__remove_callbackFunc2(v10, v11, v12);
 }
 
@@ -526,115 +534,119 @@ System_Collections_Generic_List_PresentBoxNotificationListViewObject__o *Present
         const MethodInfo *method)
 {
   System_Collections_Generic_List_object__o *v3; // x19
+  __int64 v4; // x1
   struct System_Collections_Generic_List_GameObject__o *objectList; // x0
   Il2CppObject *current; // x21
-  _BOOL8 v6; // x0
+  _BOOL8 v7; // x0
+  __int64 v8; // x1
   Il2CppObject *Component_object; // x0
-  const MethodInfo *v8; // x1
-  Il2CppObject *v9; // x21
+  const MethodInfo *v10; // x1
+  Il2CppObject *v11; // x21
   ListViewItem_o *Item; // x0
-  _BOOL8 v11; // x0
+  __int64 v13; // x1
+  _BOOL8 v14; // x0
+  __int64 v15; // x1
   struct System_Object_array *items; // x8
-  _QWORD *v13; // x9
+  _QWORD *v17; // x9
   __int64 size; // x10
-  Il2CppClass **v15; // x0
-  System_Collections_Generic_List_Enumerator_object__o v17; // [xsp+8h] [xbp-88h] BYREF
-  System_Collections_Generic_List_Enumerator_object__o v18; // [xsp+20h] [xbp-70h] BYREF
+  Il2CppClass **v19; // x0
+  System_Collections_Generic_List_Enumerator_object__o v21; // [xsp+8h] [xbp-88h] BYREF
+  System_Collections_Generic_List_Enumerator_object__o v22; // [xsp+20h] [xbp-70h] BYREF
 
-  if ( (byte_4C3CF1C & 1) == 0 )
+  if ( (byte_4C50C9C & 1) == 0 )
   {
-    sub_1C37058(&Method_System_Collections_Generic_List_Enumerator_GameObject__Dispose__);
-    sub_1C37058(&Method_System_Collections_Generic_List_Enumerator_GameObject__MoveNext__);
-    sub_1C37058(&Method_System_Collections_Generic_List_Enumerator_GameObject__get_Current__);
-    sub_1C37058(&Method_UnityEngine_GameObject_GetComponent_PresentBoxNotificationListViewObject___);
-    sub_1C37058(&Method_System_Collections_Generic_List_PresentBoxNotificationListViewObject__Add__);
-    sub_1C37058(&Method_System_Collections_Generic_List_GameObject__GetEnumerator__);
-    sub_1C37058(&Method_System_Collections_Generic_List_PresentBoxNotificationListViewObject___ctor__);
-    sub_1C37058(&System_Collections_Generic_List_PresentBoxNotificationListViewObject__TypeInfo);
-    sub_1C37058(&UnityEngine_Object_TypeInfo);
-    byte_4C3CF1C = 1;
+    sub_1C3E564(&Method_System_Collections_Generic_List_Enumerator_GameObject__Dispose__);
+    sub_1C3E564(&Method_System_Collections_Generic_List_Enumerator_GameObject__MoveNext__);
+    sub_1C3E564(&Method_System_Collections_Generic_List_Enumerator_GameObject__get_Current__);
+    sub_1C3E564(&Method_UnityEngine_GameObject_GetComponent_PresentBoxNotificationListViewObject___);
+    sub_1C3E564(&Method_System_Collections_Generic_List_PresentBoxNotificationListViewObject__Add__);
+    sub_1C3E564(&Method_System_Collections_Generic_List_GameObject__GetEnumerator__);
+    sub_1C3E564(&Method_System_Collections_Generic_List_PresentBoxNotificationListViewObject___ctor__);
+    sub_1C3E564(&System_Collections_Generic_List_PresentBoxNotificationListViewObject__TypeInfo);
+    sub_1C3E564(&UnityEngine_Object_TypeInfo);
+    byte_4C50C9C = 1;
   }
-  memset(&v18, 0, sizeof(v18));
-  v3 = (System_Collections_Generic_List_object__o *)sub_1C372A4(System_Collections_Generic_List_PresentBoxNotificationListViewObject__TypeInfo);
+  memset(&v22, 0, sizeof(v22));
+  v3 = (System_Collections_Generic_List_object__o *)sub_1C3E7B0(System_Collections_Generic_List_PresentBoxNotificationListViewObject__TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v3,
-    (const MethodInfo_37A27F0 *)Method_System_Collections_Generic_List_PresentBoxNotificationListViewObject___ctor__);
+    (const MethodInfo_37B4C2C *)Method_System_Collections_Generic_List_PresentBoxNotificationListViewObject___ctor__);
   objectList = this->fields.objectList;
   if ( !objectList )
-    sub_1C372B4(0);
+    sub_1C3E7C0(0, v4);
   System_Collections_Generic_List_object___GetEnumerator(
-    (System_Collections_Generic_List_Enumerator_T__o *)&v17,
+    (System_Collections_Generic_List_Enumerator_T__o *)&v21,
     (System_Collections_Generic_List_object__o *)objectList,
-    (const MethodInfo_37A3B1C *)Method_System_Collections_Generic_List_GameObject__GetEnumerator__);
-  v18 = v17;
+    (const MethodInfo_37B5F58 *)Method_System_Collections_Generic_List_GameObject__GetEnumerator__);
+  v22 = v21;
   while ( System_Collections_Generic_List_Enumerator_object___MoveNext(
-            &v18,
-            (const MethodInfo_352D810 *)Method_System_Collections_Generic_List_Enumerator_GameObject__MoveNext__) )
+            &v22,
+            (const MethodInfo_353FC4C *)Method_System_Collections_Generic_List_Enumerator_GameObject__MoveNext__) )
   {
-    current = v18.fields._current;
+    current = v22.fields._current;
     if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-    v6 = UnityEngine_Object__op_Inequality((UnityEngine_Object_o *)current, 0, 0);
-    if ( v6 )
+    v7 = UnityEngine_Object__op_Inequality((UnityEngine_Object_o *)current, 0, 0);
+    if ( v7 )
     {
       if ( !current )
-        sub_1C372B4(v6);
+        sub_1C3E7C0(v7, v8);
       Component_object = UnityEngine_GameObject__GetComponent_object_(
                            (UnityEngine_GameObject_o *)current,
-                           (const MethodInfo_313F1D8 *)Method_UnityEngine_GameObject_GetComponent_PresentBoxNotificationListViewObject___);
-      v9 = Component_object;
+                           (const MethodInfo_31510CC *)Method_UnityEngine_GameObject_GetComponent_PresentBoxNotificationListViewObject___);
+      v11 = Component_object;
       if ( !Component_object )
-        sub_1C372B4(0);
+        sub_1C3E7C0(0, v10);
       Item = (ListViewItem_o *)PresentBoxNotificationListViewObject__GetItem(
                                  (PresentBoxNotificationListViewObject_o *)Component_object,
-                                 v8);
+                                 v10);
       if ( !Item )
-        sub_1C372B4(0);
+        sub_1C3E7C0(0, v13);
       if ( Item->fields.isTermination )
       {
-        v11 = ListViewManager__ClippingItem_43820548((ListViewManager_o *)this, Item, 0);
-        if ( v11 )
+        v14 = ListViewManager__ClippingItem_43876032((ListViewManager_o *)this, Item, 0);
+        if ( v14 )
         {
           if ( !v3 )
-            sub_1C372B4(v11);
+            sub_1C3E7C0(v14, v15);
           items = v3->fields._items;
-          v13 = Method_System_Collections_Generic_List_PresentBoxNotificationListViewObject__Add__;
+          v17 = Method_System_Collections_Generic_List_PresentBoxNotificationListViewObject__Add__;
           ++v3->fields._version;
           if ( !items )
-            sub_1C372B4(v11);
+            sub_1C3E7C0(v14, v15);
           size = v3->fields._size;
           if ( (unsigned int)size < LODWORD(items->max_length) )
             goto LABEL_17;
 LABEL_21:
           System_Collections_Generic_List_object___AddWithResize(
             v3,
-            v9,
-            *(const MethodInfo_37A3024 **)(*(_QWORD *)(v13[4] + 192LL) + 112LL));
+            v11,
+            *(const MethodInfo_37B5460 **)(*(_QWORD *)(v17[4] + 192LL) + 112LL));
         }
       }
       else
       {
         if ( !v3 )
-          sub_1C372B4(Item);
+          sub_1C3E7C0(Item, v13);
         items = v3->fields._items;
-        v13 = Method_System_Collections_Generic_List_PresentBoxNotificationListViewObject__Add__;
+        v17 = Method_System_Collections_Generic_List_PresentBoxNotificationListViewObject__Add__;
         ++v3->fields._version;
         if ( !items )
-          sub_1C372B4(Item);
+          sub_1C3E7C0(Item, v13);
         size = v3->fields._size;
         if ( (unsigned int)size >= LODWORD(items->max_length) )
           goto LABEL_21;
 LABEL_17:
-        v15 = &items->obj.klass + size;
+        v19 = &items->obj.klass + size;
         v3->fields._size = size + 1;
-        v15[4] = (Il2CppClass *)v9;
-        sub_1C36FFC(v15 + 4, v9);
+        v19[4] = (Il2CppClass *)v11;
+        sub_1C3E508(v19 + 4, v11);
       }
     }
   }
   System_Collections_Generic_List_Enumerator_object___Dispose(
-    &v18,
-    (const MethodInfo_352D80C *)Method_System_Collections_Generic_List_Enumerator_GameObject__Dispose__);
+    &v22,
+    (const MethodInfo_353FC48 *)Method_System_Collections_Generic_List_Enumerator_GameObject__Dispose__);
   return (System_Collections_Generic_List_PresentBoxNotificationListViewObject__o *)v3;
 }
 
@@ -644,87 +656,89 @@ System_Collections_Generic_List_PresentBoxNotificationListViewObject__o *Present
         const MethodInfo *method)
 {
   System_Collections_Generic_List_object__o *v3; // x19
+  __int64 v4; // x1
   struct System_Collections_Generic_List_GameObject__o *objectList; // x0
   Il2CppObject *current; // x20
-  _BOOL8 v6; // x0
+  _BOOL8 v7; // x0
+  __int64 v8; // x1
   Il2CppObject *Component_object; // x0
-  Il2CppObject *v8; // x1
+  Il2CppObject *v10; // x1
   struct System_Object_array *items; // x8
-  _QWORD *v10; // x9
+  _QWORD *v12; // x9
   __int64 size; // x10
-  Il2CppClass **v12; // x0
-  System_Collections_Generic_List_Enumerator_object__o v14; // [xsp+8h] [xbp-78h] BYREF
-  System_Collections_Generic_List_Enumerator_object__o v15; // [xsp+20h] [xbp-60h] BYREF
+  Il2CppClass **v14; // x0
+  System_Collections_Generic_List_Enumerator_object__o v16; // [xsp+8h] [xbp-78h] BYREF
+  System_Collections_Generic_List_Enumerator_object__o v17; // [xsp+20h] [xbp-60h] BYREF
 
-  if ( (byte_4C3CF1B & 1) == 0 )
+  if ( (byte_4C50C9B & 1) == 0 )
   {
-    sub_1C37058(&Method_System_Collections_Generic_List_Enumerator_GameObject__Dispose__);
-    sub_1C37058(&Method_System_Collections_Generic_List_Enumerator_GameObject__MoveNext__);
-    sub_1C37058(&Method_System_Collections_Generic_List_Enumerator_GameObject__get_Current__);
-    sub_1C37058(&Method_UnityEngine_GameObject_GetComponent_PresentBoxNotificationListViewObject___);
-    sub_1C37058(&Method_System_Collections_Generic_List_PresentBoxNotificationListViewObject__Add__);
-    sub_1C37058(&Method_System_Collections_Generic_List_GameObject__GetEnumerator__);
-    sub_1C37058(&Method_System_Collections_Generic_List_PresentBoxNotificationListViewObject___ctor__);
-    sub_1C37058(&System_Collections_Generic_List_PresentBoxNotificationListViewObject__TypeInfo);
-    sub_1C37058(&UnityEngine_Object_TypeInfo);
-    byte_4C3CF1B = 1;
+    sub_1C3E564(&Method_System_Collections_Generic_List_Enumerator_GameObject__Dispose__);
+    sub_1C3E564(&Method_System_Collections_Generic_List_Enumerator_GameObject__MoveNext__);
+    sub_1C3E564(&Method_System_Collections_Generic_List_Enumerator_GameObject__get_Current__);
+    sub_1C3E564(&Method_UnityEngine_GameObject_GetComponent_PresentBoxNotificationListViewObject___);
+    sub_1C3E564(&Method_System_Collections_Generic_List_PresentBoxNotificationListViewObject__Add__);
+    sub_1C3E564(&Method_System_Collections_Generic_List_GameObject__GetEnumerator__);
+    sub_1C3E564(&Method_System_Collections_Generic_List_PresentBoxNotificationListViewObject___ctor__);
+    sub_1C3E564(&System_Collections_Generic_List_PresentBoxNotificationListViewObject__TypeInfo);
+    sub_1C3E564(&UnityEngine_Object_TypeInfo);
+    byte_4C50C9B = 1;
   }
-  memset(&v15, 0, sizeof(v15));
-  v3 = (System_Collections_Generic_List_object__o *)sub_1C372A4(System_Collections_Generic_List_PresentBoxNotificationListViewObject__TypeInfo);
+  memset(&v17, 0, sizeof(v17));
+  v3 = (System_Collections_Generic_List_object__o *)sub_1C3E7B0(System_Collections_Generic_List_PresentBoxNotificationListViewObject__TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v3,
-    (const MethodInfo_37A27F0 *)Method_System_Collections_Generic_List_PresentBoxNotificationListViewObject___ctor__);
+    (const MethodInfo_37B4C2C *)Method_System_Collections_Generic_List_PresentBoxNotificationListViewObject___ctor__);
   objectList = this->fields.objectList;
   if ( !objectList )
-    sub_1C372B4(0);
+    sub_1C3E7C0(0, v4);
   System_Collections_Generic_List_object___GetEnumerator(
-    (System_Collections_Generic_List_Enumerator_T__o *)&v14,
+    (System_Collections_Generic_List_Enumerator_T__o *)&v16,
     (System_Collections_Generic_List_object__o *)objectList,
-    (const MethodInfo_37A3B1C *)Method_System_Collections_Generic_List_GameObject__GetEnumerator__);
-  v15 = v14;
+    (const MethodInfo_37B5F58 *)Method_System_Collections_Generic_List_GameObject__GetEnumerator__);
+  v17 = v16;
   while ( System_Collections_Generic_List_Enumerator_object___MoveNext(
-            &v15,
-            (const MethodInfo_352D810 *)Method_System_Collections_Generic_List_Enumerator_GameObject__MoveNext__) )
+            &v17,
+            (const MethodInfo_353FC4C *)Method_System_Collections_Generic_List_Enumerator_GameObject__MoveNext__) )
   {
-    current = v15.fields._current;
+    current = v17.fields._current;
     if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-    v6 = UnityEngine_Object__op_Inequality((UnityEngine_Object_o *)current, 0, 0);
-    if ( v6 )
+    v7 = UnityEngine_Object__op_Inequality((UnityEngine_Object_o *)current, 0, 0);
+    if ( v7 )
     {
       if ( !current )
-        sub_1C372B4(v6);
+        sub_1C3E7C0(v7, v8);
       Component_object = UnityEngine_GameObject__GetComponent_object_(
                            (UnityEngine_GameObject_o *)current,
-                           (const MethodInfo_313F1D8 *)Method_UnityEngine_GameObject_GetComponent_PresentBoxNotificationListViewObject___);
-      v8 = Component_object;
+                           (const MethodInfo_31510CC *)Method_UnityEngine_GameObject_GetComponent_PresentBoxNotificationListViewObject___);
+      v10 = Component_object;
       if ( !v3 )
-        sub_1C372B4(Component_object);
+        sub_1C3E7C0(Component_object, Component_object);
       items = v3->fields._items;
-      v10 = Method_System_Collections_Generic_List_PresentBoxNotificationListViewObject__Add__;
+      v12 = Method_System_Collections_Generic_List_PresentBoxNotificationListViewObject__Add__;
       ++v3->fields._version;
       if ( !items )
-        sub_1C372B4(Component_object);
+        sub_1C3E7C0(Component_object, Component_object);
       size = v3->fields._size;
       if ( (unsigned int)size >= LODWORD(items->max_length) )
       {
         System_Collections_Generic_List_object___AddWithResize(
           v3,
           Component_object,
-          *(const MethodInfo_37A3024 **)(*(_QWORD *)(v10[4] + 192LL) + 112LL));
+          *(const MethodInfo_37B5460 **)(*(_QWORD *)(v12[4] + 192LL) + 112LL));
       }
       else
       {
-        v12 = &items->obj.klass + size;
+        v14 = &items->obj.klass + size;
         v3->fields._size = size + 1;
-        v12[4] = (Il2CppClass *)v8;
-        sub_1C36FFC(v12 + 4, v8);
+        v14[4] = (Il2CppClass *)v10;
+        sub_1C3E508(v14 + 4, v10);
       }
     }
   }
   System_Collections_Generic_List_Enumerator_object___Dispose(
-    &v15,
-    (const MethodInfo_352D80C *)Method_System_Collections_Generic_List_Enumerator_GameObject__Dispose__);
+    &v17,
+    (const MethodInfo_353FC48 *)Method_System_Collections_Generic_List_Enumerator_GameObject__Dispose__);
   return (System_Collections_Generic_List_PresentBoxNotificationListViewObject__o *)v3;
 }
 
@@ -743,10 +757,10 @@ void PresentBoxNotificationListViewManager__remove_callbackFunc(
   System_Action_o *v11; // x1
   const MethodInfo *v12; // x2
 
-  if ( (byte_4C3CF18 & 1) == 0 )
+  if ( (byte_4C50C98 & 1) == 0 )
   {
-    sub_1C37058(&PresentBoxNotificationListViewManager_CallbackFunc_TypeInfo);
-    byte_4C3CF18 = 1;
+    sub_1C3E564(&PresentBoxNotificationListViewManager_CallbackFunc_TypeInfo);
+    byte_4C50C98 = 1;
   }
   callbackFunc = (System_Delegate_o *)this->fields.callbackFunc;
   p_callbackFunc = &this->fields.callbackFunc;
@@ -758,13 +772,13 @@ void PresentBoxNotificationListViewManager__remove_callbackFunc(
       if ( (PresentBoxNotificationListViewManager_CallbackFunc_c *)v7->klass != PresentBoxNotificationListViewManager_CallbackFunc_TypeInfo )
         break;
     }
-    v8 = sub_1C712B0(p_callbackFunc, v7, callbackFunc);
+    v8 = sub_1C787BC(p_callbackFunc, v7, callbackFunc);
     v9 = callbackFunc == (System_Delegate_o *)v8;
     callbackFunc = (System_Delegate_o *)v8;
     if ( v9 )
       return;
   }
-  v10 = (PresentBoxNotificationListViewManager_o *)sub_1C37574(v7);
+  v10 = (PresentBoxNotificationListViewManager_o *)sub_1C3EA80(v7);
   PresentBoxNotificationListViewManager__add_callbackFunc2(v10, v11, v12);
 }
 
@@ -782,10 +796,10 @@ void PresentBoxNotificationListViewManager__remove_callbackFunc2(
   PresentBoxNotificationListViewManager_o *v10; // x0
   const MethodInfo *v11; // x1
 
-  if ( (byte_4C3CF1A & 1) == 0 )
+  if ( (byte_4C50C9A & 1) == 0 )
   {
-    sub_1C37058(&System_Action_TypeInfo);
-    byte_4C3CF1A = 1;
+    sub_1C3E564(&System_Action_TypeInfo);
+    byte_4C50C9A = 1;
   }
   callbackFunc2 = (System_Delegate_o *)this->fields.callbackFunc2;
   p_callbackFunc2 = &this->fields.callbackFunc2;
@@ -797,13 +811,13 @@ void PresentBoxNotificationListViewManager__remove_callbackFunc2(
       if ( (System_Action_c *)v7->klass != System_Action_TypeInfo )
         break;
     }
-    v8 = sub_1C712B0(p_callbackFunc2, v7, callbackFunc2);
+    v8 = sub_1C787BC(p_callbackFunc2, v7, callbackFunc2);
     v9 = callbackFunc2 == (System_Delegate_o *)v8;
     callbackFunc2 = (System_Delegate_o *)v8;
     if ( v9 )
       return;
   }
-  v10 = (PresentBoxNotificationListViewManager_o *)sub_1C37574(v7);
+  v10 = (PresentBoxNotificationListViewManager_o *)sub_1C3EA80(v7);
   PresentBoxNotificationListViewManager__get_ObjectList(v10, v11);
 }
 
@@ -823,15 +837,15 @@ void PresentBoxNotificationListViewManager_CallbackFunc___ctor(
   this->fields.method = method;
   this->fields.method_ptr = v4;
   this->fields.m_target = object;
-  sub_1C36FFC(&this->fields.m_target, object);
+  sub_1C3E508(&this->fields.m_target, object);
   v8 = *(unsigned __int8 *)(method + 82);
   this->fields.method_code = (intptr_t)this;
-  if ( (sub_1C37118(method) & 1) == 0 )
+  if ( (sub_1C3E624(method) & 1) == 0 )
   {
     if ( !object )
     {
-      v10 = sub_1C372D0(0, "Delegate to an instance method cannot have null 'this'.");
-      sub_1C37180(v10, 0);
+      v10 = sub_1C3E7DC(0, "Delegate to an instance method cannot have null 'this'.");
+      sub_1C3E68C(v10, 0);
     }
     goto LABEL_5;
   }
@@ -843,9 +857,9 @@ LABEL_5:
     this->fields.method_code = (intptr_t)m_target;
     goto LABEL_6;
   }
-  this->fields.invoke_impl = (intptr_t)sub_1A7250C;
+  this->fields.invoke_impl = (intptr_t)sub_1A798B4;
 LABEL_6:
-  this->fields.extra_arg = (intptr_t)sub_1A724C4;
+  this->fields.extra_arg = (intptr_t)sub_1A7986C;
 }
 
 
@@ -863,14 +877,14 @@ System_IAsyncResult_o *PresentBoxNotificationListViewManager_CallbackFunc__Begin
   int32_t v13; // [xsp+1Ch] [xbp-34h] BYREF
 
   v13 = result;
-  if ( (byte_4C3CF23 & 1) == 0 )
+  if ( (byte_4C50CA3 & 1) == 0 )
   {
-    sub_1C37058(&int_TypeInfo);
-    byte_4C3CF23 = 1;
+    sub_1C3E564(&int_TypeInfo);
+    byte_4C50CA3 = 1;
   }
   v12[1] = 0;
   v12[0] = j_il2cpp_value_box_0(int_TypeInfo, &v13, callback, object, method, v5, v6, v7);
-  return (System_IAsyncResult_o *)sub_1C3700C(this, v12, callback, object);
+  return (System_IAsyncResult_o *)sub_1C3E518(this, v12, callback, object);
 }
 
 
@@ -879,7 +893,7 @@ void PresentBoxNotificationListViewManager_CallbackFunc__EndInvoke(
         System_IAsyncResult_o *result,
         const MethodInfo *method)
 {
-  sub_1C37010(result, 0, method);
+  sub_1C3E51C(result, 0, method);
 }
 
 

@@ -10,6 +10,6 @@ void UserPresentHistoryListViewItemDraw__SetItem(
         const MethodInfo *method)
 {
   if ( !item || (this = (UserPresentHistoryListViewItemDraw_o *)this->fields.messageLabel) == 0 )
-    sub_1C372B4(this);
+    sub_1C3E7C0(this, item);
   UILabel__set_text((UILabel_o *)this, item->fields._Message_k__BackingField, 0);
 }

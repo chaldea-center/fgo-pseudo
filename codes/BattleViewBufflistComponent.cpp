@@ -4,19 +4,19 @@ void BattleViewBufflistComponent___ctor(BattleViewBufflistComponent_o *this, con
   int32_t v4; // w2
   const MethodInfo *v5; // x3
 
-  if ( (byte_4C46714 & 1) == 0 )
+  if ( (byte_4C5A50B & 1) == 0 )
   {
-    sub_1C37058(&Method_System_Collections_Generic_List_GameObject___ctor__);
-    sub_1C37058(&System_Collections_Generic_List_GameObject__TypeInfo);
-    byte_4C46714 = 1;
+    sub_1C3E564(&Method_System_Collections_Generic_List_GameObject___ctor__);
+    sub_1C3E564(&System_Collections_Generic_List_GameObject__TypeInfo);
+    byte_4C5A50B = 1;
   }
   this->fields.height = 120.0;
-  v3 = (System_Collections_Generic_List_object__o *)sub_1C372A4(System_Collections_Generic_List_GameObject__TypeInfo);
+  v3 = (System_Collections_Generic_List_object__o *)sub_1C3E7B0(System_Collections_Generic_List_GameObject__TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v3,
-    (const MethodInfo_37A27F0 *)Method_System_Collections_Generic_List_GameObject___ctor__);
+    (const MethodInfo_37B4C2C *)Method_System_Collections_Generic_List_GameObject___ctor__);
   this->fields.objList = (struct System_Collections_Generic_List_GameObject__o *)v3;
-  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.objList, (int32_t)v3, v4, v5);
+  sub_1C3E508((CGThumbnailListItem_o *)&this->fields.objList, (int32_t)v3, v4, v5);
   BaseMonoBehaviour___ctor((BaseMonoBehaviour_o *)this, 0);
 }
 
@@ -28,32 +28,33 @@ void BattleViewBufflistComponent__UpdateBuffListScrollView(
 {
   UnityEngine_Object_o *stateTitleObj; // x21
   struct UIScrollView_o *mBG; // x0
+  __int64 v7; // x1
   struct UIScrollView_o *uiScrollView; // x8
   UnityEngine_Object_o *mPanel; // x20
-  struct UIScrollView_o *v9; // x8
   struct UIScrollView_o *v10; // x8
   struct UIScrollView_o *v11; // x8
+  struct UIScrollView_o *v12; // x8
   struct UIProgressBar_o *verticalScrollBar; // x8
-  struct UIScrollView_o *v13; // x8
-  struct UIProgressBar_o *v14; // x8
-  struct UIScrollView_o *v15; // x8
-  struct UIProgressBar_o *v16; // x8
-  int32_t v17; // w1
-  struct UIScrollView_o *v18; // x8
-  UnityEngine_Object_o *v19; // x20
-  struct UIScrollView_o *v20; // x8
+  struct UIScrollView_o *v14; // x8
+  struct UIProgressBar_o *v15; // x8
+  struct UIScrollView_o *v16; // x8
+  struct UIProgressBar_o *v17; // x8
+  int32_t v18; // w1
+  struct UIScrollView_o *v19; // x8
+  UnityEngine_Object_o *v20; // x20
   struct UIScrollView_o *v21; // x8
   struct UIScrollView_o *v22; // x8
-  struct UIProgressBar_o *v23; // x8
-  struct UIScrollView_o *v24; // x8
-  struct UIProgressBar_o *v25; // x8
-  struct UIScrollView_o *v26; // x8
-  struct UIProgressBar_o *v27; // x8
+  struct UIScrollView_o *v23; // x8
+  struct UIProgressBar_o *v24; // x8
+  struct UIScrollView_o *v25; // x8
+  struct UIProgressBar_o *v26; // x8
+  struct UIScrollView_o *v27; // x8
+  struct UIProgressBar_o *v28; // x8
 
-  if ( (byte_4C46713 & 1) == 0 )
+  if ( (byte_4C5A50A & 1) == 0 )
   {
-    sub_1C37058(&UnityEngine_Object_TypeInfo);
-    byte_4C46713 = 1;
+    sub_1C3E564(&UnityEngine_Object_TypeInfo);
+    byte_4C5A50A = 1;
   }
   stateTitleObj = (UnityEngine_Object_o *)this->fields.stateTitleObj;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -75,18 +76,18 @@ void BattleViewBufflistComponent__UpdateBuffListScrollView(
     mBG = (struct UIScrollView_o *)UnityEngine_Object__op_Inequality(mPanel, 0, 0);
     if ( ((unsigned __int8)mBG & 1) != 0 )
     {
-      v9 = this->fields.uiScrollView;
-      if ( !v9 )
+      v10 = this->fields.uiScrollView;
+      if ( !v10 )
         goto LABEL_54;
-      mBG = (struct UIScrollView_o *)v9->fields.mPanel;
+      mBG = (struct UIScrollView_o *)v10->fields.mPanel;
       if ( !mBG )
         goto LABEL_54;
       if ( UIPanel__get_height((UIPanel_o *)mBG, 0) <= 300.0 )
       {
-        v10 = this->fields.uiScrollView;
-        if ( v10 )
+        v11 = this->fields.uiScrollView;
+        if ( v11 )
         {
-          mBG = (struct UIScrollView_o *)v10->fields.mPanel;
+          mBG = (struct UIScrollView_o *)v11->fields.mPanel;
           if ( mBG )
           {
             ((void (__fastcall *)(struct UIScrollView_o *, Il2CppClass *, float, float, float, float))mBG->klass[1]._1.interopData)(
@@ -97,38 +98,38 @@ void BattleViewBufflistComponent__UpdateBuffListScrollView(
               670.0,
               298.0);
             GameObjectExtensions__SetLocalPositionY(this->fields.barObject, -196.0, 0);
-            v11 = this->fields.uiScrollView;
-            if ( v11 )
+            v12 = this->fields.uiScrollView;
+            if ( v12 )
             {
-              verticalScrollBar = v11->fields.verticalScrollBar;
+              verticalScrollBar = v12->fields.verticalScrollBar;
               if ( verticalScrollBar )
               {
                 mBG = (struct UIScrollView_o *)verticalScrollBar->fields.mBG;
                 if ( mBG )
                 {
                   UIWidget__set_height((UIWidget_o *)mBG, 312, 0);
-                  v13 = this->fields.uiScrollView;
-                  if ( v13 )
+                  v14 = this->fields.uiScrollView;
+                  if ( v14 )
                   {
-                    v14 = v13->fields.verticalScrollBar;
-                    if ( v14 )
+                    v15 = v14->fields.verticalScrollBar;
+                    if ( v15 )
                     {
-                      mBG = (struct UIScrollView_o *)v14->fields.mFG;
+                      mBG = (struct UIScrollView_o *)v15->fields.mFG;
                       if ( mBG )
                       {
                         UIWidget__set_width((UIWidget_o *)mBG, 26, 0);
-                        v15 = this->fields.uiScrollView;
-                        if ( v15 )
+                        v16 = this->fields.uiScrollView;
+                        if ( v16 )
                         {
-                          v16 = v15->fields.verticalScrollBar;
-                          if ( v16 )
+                          v17 = v16->fields.verticalScrollBar;
+                          if ( v17 )
                           {
-                            mBG = (struct UIScrollView_o *)v16->fields.mFG;
+                            mBG = (struct UIScrollView_o *)v17->fields.mFG;
                             if ( mBG )
                             {
-                              v17 = 312;
+                              v18 = 312;
 LABEL_50:
-                              UIWidget__set_height((UIWidget_o *)mBG, v17, 0);
+                              UIWidget__set_height((UIWidget_o *)mBG, v18, 0);
                               goto LABEL_51;
                             }
                           }
@@ -152,27 +153,27 @@ LABEL_50:
     {
       GameObjectExtensions__SetLocalPositionY(this->fields.stateTitleObj, -20.0, 0);
     }
-    v18 = this->fields.uiScrollView;
-    if ( !v18 )
+    v19 = this->fields.uiScrollView;
+    if ( !v19 )
       goto LABEL_54;
-    v19 = (UnityEngine_Object_o *)v18->fields.mPanel;
+    v20 = (UnityEngine_Object_o *)v19->fields.mPanel;
     if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-    mBG = (struct UIScrollView_o *)UnityEngine_Object__op_Inequality(v19, 0, 0);
+    mBG = (struct UIScrollView_o *)UnityEngine_Object__op_Inequality(v20, 0, 0);
     if ( ((unsigned __int8)mBG & 1) != 0 )
     {
-      v20 = this->fields.uiScrollView;
-      if ( !v20 )
+      v21 = this->fields.uiScrollView;
+      if ( !v21 )
         goto LABEL_54;
-      mBG = (struct UIScrollView_o *)v20->fields.mPanel;
+      mBG = (struct UIScrollView_o *)v21->fields.mPanel;
       if ( !mBG )
         goto LABEL_54;
       if ( UIPanel__get_height((UIPanel_o *)mBG, 0) <= 298.0 )
       {
-        v21 = this->fields.uiScrollView;
-        if ( v21 )
+        v22 = this->fields.uiScrollView;
+        if ( v22 )
         {
-          mBG = (struct UIScrollView_o *)v21->fields.mPanel;
+          mBG = (struct UIScrollView_o *)v22->fields.mPanel;
           if ( mBG )
           {
             ((void (__fastcall *)(struct UIScrollView_o *, Il2CppClass *, float, float, float, float))mBG->klass[1]._1.interopData)(
@@ -183,36 +184,36 @@ LABEL_50:
               670.0,
               300.0);
             GameObjectExtensions__SetLocalPositionY(this->fields.barObject, -207.0, 0);
-            v22 = this->fields.uiScrollView;
-            if ( v22 )
+            v23 = this->fields.uiScrollView;
+            if ( v23 )
             {
-              v23 = v22->fields.verticalScrollBar;
-              if ( v23 )
+              v24 = v23->fields.verticalScrollBar;
+              if ( v24 )
               {
-                mBG = (struct UIScrollView_o *)v23->fields.mBG;
+                mBG = (struct UIScrollView_o *)v24->fields.mBG;
                 if ( mBG )
                 {
                   UIWidget__set_height((UIWidget_o *)mBG, 298, 0);
-                  v24 = this->fields.uiScrollView;
-                  if ( v24 )
+                  v25 = this->fields.uiScrollView;
+                  if ( v25 )
                   {
-                    v25 = v24->fields.verticalScrollBar;
-                    if ( v25 )
+                    v26 = v25->fields.verticalScrollBar;
+                    if ( v26 )
                     {
-                      mBG = (struct UIScrollView_o *)v25->fields.mFG;
+                      mBG = (struct UIScrollView_o *)v26->fields.mFG;
                       if ( mBG )
                       {
                         UIWidget__set_width((UIWidget_o *)mBG, 26, 0);
-                        v26 = this->fields.uiScrollView;
-                        if ( v26 )
+                        v27 = this->fields.uiScrollView;
+                        if ( v27 )
                         {
-                          v27 = v26->fields.verticalScrollBar;
-                          if ( v27 )
+                          v28 = v27->fields.verticalScrollBar;
+                          if ( v28 )
                           {
-                            mBG = (struct UIScrollView_o *)v27->fields.mFG;
+                            mBG = (struct UIScrollView_o *)v28->fields.mFG;
                             if ( mBG )
                             {
-                              v17 = 298;
+                              v18 = 298;
                               goto LABEL_50;
                             }
                           }
@@ -226,7 +227,7 @@ LABEL_50:
           }
         }
 LABEL_54:
-        sub_1C372B4(mBG);
+        sub_1C3E7C0(mBG, v7);
       }
     }
   }
@@ -269,14 +270,14 @@ void BattleViewBufflistComponent__setBuffList(
   System_String_o *v24; // x21
   UnityEngine_Vector3_o v25; // 0:s0.4,4:s1.4,8:s2.4
 
-  if ( (byte_4C46710 & 1) == 0 )
+  if ( (byte_4C5A507 & 1) == 0 )
   {
-    sub_1C37058(&Method_UnityEngine_GameObject_GetComponent_BattleBuffListObjectComponent___);
-    sub_1C37058(&Method_System_Collections_Generic_List_GameObject__Add__);
-    sub_1C37058(&LocalizationManager_TypeInfo);
-    sub_1C37058(&UnityEngine_Object_TypeInfo);
-    sub_1C37058(&StringLiteral_2811/*"BATTLE_NOBUFFLIST"*/);
-    byte_4C46710 = 1;
+    sub_1C3E564(&Method_UnityEngine_GameObject_GetComponent_BattleBuffListObjectComponent___);
+    sub_1C3E564(&Method_System_Collections_Generic_List_GameObject__Add__);
+    sub_1C3E564(&LocalizationManager_TypeInfo);
+    sub_1C3E564(&UnityEngine_Object_TypeInfo);
+    sub_1C3E564(&StringLiteral_2811/*"BATTLE_NOBUFFLIST"*/);
+    byte_4C5A507 = 1;
   }
   prefabBuffObject = this->fields.prefabBuffObject;
   if ( !prefabBuffObject )
@@ -293,7 +294,7 @@ void BattleViewBufflistComponent__setBuffList(
       do
       {
         if ( v8 >= (unsigned int)max_length )
-          sub_1C372BC(prefabBuffObject);
+          sub_1C3E7C8(prefabBuffObject, buffList);
         v10 = buffList->m_Items[v8];
         height = this->fields.height;
         Object = (UnityEngine_Object_o *)BaseMonoBehaviour__createObject(
@@ -321,7 +322,7 @@ void BattleViewBufflistComponent__setBuffList(
           UnityEngine_Transform__set_localPosition((UnityEngine_Transform_o *)prefabBuffObject, v25, 0);
           prefabBuffObject = (UnityEngine_GameObject_o *)UnityEngine_GameObject__GetComponent_object_(
                                                            (UnityEngine_GameObject_o *)Object,
-                                                           (const MethodInfo_313F1D8 *)Method_UnityEngine_GameObject_GetComponent_BattleBuffListObjectComponent___);
+                                                           (const MethodInfo_31510CC *)Method_UnityEngine_GameObject_GetComponent_BattleBuffListObjectComponent___);
           if ( !prefabBuffObject )
             goto LABEL_34;
           v13 = prefabBuffObject;
@@ -342,14 +343,14 @@ void BattleViewBufflistComponent__setBuffList(
             System_Collections_Generic_List_object___AddWithResize(
               (System_Collections_Generic_List_object__o *)prefabBuffObject,
               (Il2CppObject *)Object,
-              *(const MethodInfo_37A3024 **)(*(_QWORD *)(v18[4] + 192LL) + 112LL));
+              *(const MethodInfo_37B5460 **)(*(_QWORD *)(v18[4] + 192LL) + 112LL));
           }
           else
           {
             v20 = m_CachedPtr + 8 * klass_low;
             LODWORD(prefabBuffObject[1].klass) = klass_low + 1;
             *(_QWORD *)(v20 + 32) = Object;
-            sub_1C36FFC((CGThumbnailListItem_o *)(v20 + 32), (int32_t)Object, v14, v15);
+            sub_1C3E508((CGThumbnailListItem_o *)(v20 + 32), (int32_t)Object, v14, v15);
           }
         }
         LODWORD(max_length) = buffList->max_length;
@@ -369,7 +370,7 @@ void BattleViewBufflistComponent__setBuffList(
     if ( prefabBuffObject )
     {
       v24 = (System_String_o *)prefabBuffObject;
-      if ( !System_String__Equals_63596960((System_String_o *)prefabBuffObject, v23, 0) )
+      if ( !System_String__Equals_63671772((System_String_o *)prefabBuffObject, v23, 0) )
       {
         prefabBuffObject = (UnityEngine_GameObject_o *)this->fields.nothingLabel;
         if ( !prefabBuffObject )
@@ -390,7 +391,7 @@ LABEL_32:
       }
     }
 LABEL_34:
-    sub_1C372B4(prefabBuffObject);
+    sub_1C3E7C0(prefabBuffObject, buffList);
   }
 }
 
@@ -401,7 +402,7 @@ void BattleViewBufflistComponent__setBuffListScrollView(BattleViewBufflistCompon
 
   uiScrollView = this->fields.uiScrollView;
   if ( !uiScrollView || (UIScrollView__ResetPosition(uiScrollView, 0), (uiScrollView = this->fields.uiScrollView) == 0) )
-    sub_1C372B4(uiScrollView);
+    sub_1C3E7C0(uiScrollView, method);
   UIScrollView__UpdateScrollbars(uiScrollView, 0);
 }
 
@@ -413,29 +414,30 @@ void BattleViewBufflistComponent__setClassIcon(
 {
   UnityEngine_Object_o *servantClassIconComponent; // x21
   ServantClassIconComponent_o *ClassId; // x0
+  __int64 v7; // x1
   int32_t EnemyNameEffect; // w0
   struct UnityEngine_GameObject_o **p_enemyNameEffectPrefab; // x21
   UnityEngine_Object_o *enemyNameEffectPrefab; // x23
-  int32_t v10; // w22
-  UnityEngine_Object_o *v11; // x23
+  int32_t v11; // w22
+  UnityEngine_Object_o *v12; // x23
   System_String_o *NameEffectPath; // x22
   AssetData_o *AssetStorage; // x0
-  Il2CppObject *Object_object__51154888; // x22
+  Il2CppObject *Object_object__51228128; // x22
   UnityEngine_Transform_o *transform; // x23
-  Il2CppObject *v16; // x0
-  int32_t v17; // w2
-  const MethodInfo *v18; // x3
+  Il2CppObject *v17; // x0
+  int32_t v18; // w2
+  const MethodInfo *v19; // x3
   UILabel_o *nameLabel; // x20
 
-  if ( (byte_4C46712 & 1) == 0 )
+  if ( (byte_4C5A509 & 1) == 0 )
   {
-    sub_1C37058(&Method_AssetData_GetObject_GameObject____78105168);
-    sub_1C37058(&AssetManager_TypeInfo);
-    sub_1C37058(&Method_UnityEngine_Object_Instantiate_GameObject____78192880);
-    sub_1C37058(&UnityEngine_Object_TypeInfo);
-    sub_1C37058(&ServantAssetLoadManager_TypeInfo);
-    sub_1C37058(&StringLiteral_18616/*"dialog_title"*/);
-    byte_4C46712 = 1;
+    sub_1C3E564(&Method_AssetData_GetObject_GameObject____78185152);
+    sub_1C3E564(&AssetManager_TypeInfo);
+    sub_1C3E564(&Method_UnityEngine_Object_Instantiate_GameObject____78272896);
+    sub_1C3E564(&UnityEngine_Object_TypeInfo);
+    sub_1C3E564(&ServantAssetLoadManager_TypeInfo);
+    sub_1C3E564(&StringLiteral_18634/*"dialog_title"*/);
+    byte_4C5A509 = 1;
   }
   servantClassIconComponent = (UnityEngine_Object_o *)this->fields.nameInfo.fields.servantClassIconComponent;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -463,43 +465,43 @@ void BattleViewBufflistComponent__setClassIcon(
     EnemyNameEffect = BattleServantData__getEnemyNameEffect(data, 0);
     p_enemyNameEffectPrefab = &this->fields.enemyNameEffectPrefab;
     enemyNameEffectPrefab = (UnityEngine_Object_o *)this->fields.enemyNameEffectPrefab;
-    v10 = EnemyNameEffect;
+    v11 = EnemyNameEffect;
     if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
     if ( UnityEngine_Object__op_Inequality(enemyNameEffectPrefab, 0, 0) )
     {
-      v11 = (UnityEngine_Object_o *)*p_enemyNameEffectPrefab;
+      v12 = (UnityEngine_Object_o *)*p_enemyNameEffectPrefab;
       if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-      UnityEngine_Object__Destroy_71266752(v11, 0);
+      UnityEngine_Object__Destroy_71341564(v12, 0);
     }
-    if ( v10 )
+    if ( v11 )
     {
       if ( !ServantAssetLoadManager_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(ServantAssetLoadManager_TypeInfo);
-      NameEffectPath = ServantAssetLoadManager__getNameEffectPath(v10, 0);
+      NameEffectPath = ServantAssetLoadManager__getNameEffectPath(v11, 0);
       if ( !AssetManager_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(AssetManager_TypeInfo);
       AssetStorage = AssetManager__getAssetStorage(NameEffectPath, 0);
       if ( AssetStorage )
-        Object_object__51154888 = AssetData__GetObject_object__51154888(
+        Object_object__51228128 = AssetData__GetObject_object__51228128(
                                     AssetStorage,
-                                    (System_String_o *)StringLiteral_18616/*"dialog_title"*/,
-                                    (const MethodInfo_30C8FC8 *)Method_AssetData_GetObject_GameObject____78105168);
+                                    (System_String_o *)StringLiteral_18634/*"dialog_title"*/,
+                                    (const MethodInfo_30DADE0 *)Method_AssetData_GetObject_GameObject____78185152);
       else
-        Object_object__51154888 = 0;
+        Object_object__51228128 = 0;
       ClassId = (ServantClassIconComponent_o *)this->fields.nameInfo.fields.nameLabel;
       if ( !ClassId )
         goto LABEL_30;
       transform = UnityEngine_Component__get_transform((UnityEngine_Component_o *)ClassId, 0);
       if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-      v16 = UnityEngine_Object__Instantiate_object__51855596(
-              Object_object__51154888,
+      v17 = UnityEngine_Object__Instantiate_object__51929056(
+              Object_object__51228128,
               transform,
-              (const MethodInfo_31740EC *)Method_UnityEngine_Object_Instantiate_GameObject____78192880);
-      *p_enemyNameEffectPrefab = (struct UnityEngine_GameObject_o *)v16;
-      sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.enemyNameEffectPrefab, (int32_t)v16, v17, v18);
+              (const MethodInfo_3185FE0 *)Method_UnityEngine_Object_Instantiate_GameObject____78272896);
+      *p_enemyNameEffectPrefab = (struct UnityEngine_GameObject_o *)v17;
+      sub_1C3E508((CGThumbnailListItem_o *)&this->fields.enemyNameEffectPrefab, (int32_t)v17, v18, v19);
     }
     nameLabel = this->fields.nameInfo.fields.nameLabel;
     ClassId = (ServantClassIconComponent_o *)BattleServantData__getServantShortName(data, 0);
@@ -509,7 +511,7 @@ void BattleViewBufflistComponent__setClassIcon(
       return;
     }
 LABEL_30:
-    sub_1C372B4(ClassId);
+    sub_1C3E7C0(ClassId, v7);
   }
 }
 
@@ -518,53 +520,52 @@ void BattleViewBufflistComponent__setClearBuffList(BattleViewBufflistComponent_o
 {
   struct System_Collections_Generic_List_GameObject__o *objList; // x0
   Il2CppObject *current; // x20
-  const MethodInfo *v5; // x1
-  struct System_Collections_Generic_List_GameObject__o *v6; // x8
+  struct System_Collections_Generic_List_GameObject__o *v5; // x8
   int32_t size; // w2
-  int v8; // w9
-  System_Collections_Generic_List_Enumerator_object__o v9; // [xsp+8h] [xbp-48h] BYREF
+  int v7; // w9
+  System_Collections_Generic_List_Enumerator_object__o v8; // [xsp+8h] [xbp-48h] BYREF
 
-  if ( (byte_4C46711 & 1) == 0 )
+  if ( (byte_4C5A508 & 1) == 0 )
   {
-    sub_1C37058(&Method_System_Collections_Generic_List_Enumerator_GameObject__Dispose__);
-    sub_1C37058(&Method_System_Collections_Generic_List_Enumerator_GameObject__MoveNext__);
-    sub_1C37058(&Method_System_Collections_Generic_List_Enumerator_GameObject__get_Current__);
-    sub_1C37058(&Method_System_Collections_Generic_List_GameObject__Clear__);
-    sub_1C37058(&Method_System_Collections_Generic_List_GameObject__GetEnumerator__);
-    sub_1C37058(&UnityEngine_Object_TypeInfo);
-    byte_4C46711 = 1;
+    sub_1C3E564(&Method_System_Collections_Generic_List_Enumerator_GameObject__Dispose__);
+    sub_1C3E564(&Method_System_Collections_Generic_List_Enumerator_GameObject__MoveNext__);
+    sub_1C3E564(&Method_System_Collections_Generic_List_Enumerator_GameObject__get_Current__);
+    sub_1C3E564(&Method_System_Collections_Generic_List_GameObject__Clear__);
+    sub_1C3E564(&Method_System_Collections_Generic_List_GameObject__GetEnumerator__);
+    sub_1C3E564(&UnityEngine_Object_TypeInfo);
+    byte_4C5A508 = 1;
   }
-  memset(&v9, 0, sizeof(v9));
+  memset(&v8, 0, sizeof(v8));
   objList = this->fields.objList;
   if ( !objList )
     goto LABEL_13;
   System_Collections_Generic_List_object___GetEnumerator(
-    (System_Collections_Generic_List_Enumerator_T__o *)&v9,
+    (System_Collections_Generic_List_Enumerator_T__o *)&v8,
     (System_Collections_Generic_List_object__o *)objList,
-    (const MethodInfo_37A3B1C *)Method_System_Collections_Generic_List_GameObject__GetEnumerator__);
+    (const MethodInfo_37B5F58 *)Method_System_Collections_Generic_List_GameObject__GetEnumerator__);
   while ( System_Collections_Generic_List_Enumerator_object___MoveNext(
-            &v9,
-            (const MethodInfo_352D810 *)Method_System_Collections_Generic_List_Enumerator_GameObject__MoveNext__) )
+            &v8,
+            (const MethodInfo_353FC4C *)Method_System_Collections_Generic_List_Enumerator_GameObject__MoveNext__) )
   {
-    current = v9.fields._current;
+    current = v8.fields._current;
     if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-    UnityEngine_Object__Destroy_71266752((UnityEngine_Object_o *)current, 0);
+    UnityEngine_Object__Destroy_71341564((UnityEngine_Object_o *)current, 0);
   }
   System_Collections_Generic_List_Enumerator_object___Dispose(
-    &v9,
-    (const MethodInfo_352D80C *)Method_System_Collections_Generic_List_Enumerator_GameObject__Dispose__);
-  v6 = this->fields.objList;
-  if ( !v6 )
+    &v8,
+    (const MethodInfo_353FC48 *)Method_System_Collections_Generic_List_Enumerator_GameObject__Dispose__);
+  v5 = this->fields.objList;
+  if ( !v5 )
 LABEL_13:
-    sub_1C372B4(objList);
-  size = v6->fields._size;
-  v8 = v6->fields._version + 1;
-  v6->fields._size = 0;
-  v6->fields._version = v8;
+    sub_1C3E7C0(objList, method);
+  size = v5->fields._size;
+  v7 = v5->fields._version + 1;
+  v5->fields._size = 0;
+  v5->fields._version = v7;
   if ( size >= 1 )
-    System_Array__Clear((System_Array_o *)v6->fields._items, 0, size, 0);
-  BattleViewBufflistComponent__setBuffListScrollView(this, v5);
+    System_Array__Clear((System_Array_o *)v5->fields._items, 0, size, 0);
+  BattleViewBufflistComponent__setBuffListScrollView(this, method);
 }
 
 
@@ -581,7 +582,7 @@ void BattleViewBufflistComponent__setHide(BattleViewBufflistComponent_o *this, b
         (barObject = (UnityEngine_GameObject_o *)this->fields.listRoot) == 0)
     || (barObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)barObject, 0)) == 0 )
   {
-    sub_1C372B4(barObject);
+    sub_1C3E7C0(barObject, isClose);
   }
   UnityEngine_GameObject__SetActive(barObject, 0, 0);
 }
@@ -599,7 +600,7 @@ void BattleViewBufflistComponent__setShow(BattleViewBufflistComponent_o *this, c
         BattleViewBufflistComponent__setBuffListScrollView(this, v4),
         (listRoot = (UnityEngine_Component_o *)this->fields.barObject) == 0) )
   {
-    sub_1C372B4(listRoot);
+    sub_1C3E7C0(listRoot, method);
   }
   UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)listRoot, 1, 0);
 }

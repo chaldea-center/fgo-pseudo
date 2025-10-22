@@ -1,13 +1,13 @@
 void BattleItemData___ctor(BattleItemData_o *this, const MethodInfo *method)
 {
-  if ( (byte_4C45AD4 & 1) == 0 )
+  if ( (byte_4C598B1 & 1) == 0 )
   {
-    sub_1C37058(&Method_SingletonTemplate_BattleItemData___ctor__);
-    byte_4C45AD4 = 1;
+    sub_1C3E564(&Method_SingletonTemplate_BattleItemData___ctor__);
+    byte_4C598B1 = 1;
   }
   SingletonTemplate_object____ctor(
     (SingletonTemplate_CLASS__o *)this,
-    (const MethodInfo_39ED754 *)Method_SingletonTemplate_BattleItemData___ctor__);
+    (const MethodInfo_39FFB90 *)Method_SingletonTemplate_BattleItemData___ctor__);
 }
 
 
@@ -49,17 +49,18 @@ BattleItemData_SaveData_o *BattleItemData__GetSaveData(BattleItemData_o *this, c
 {
   Il2CppObject *v3; // x20
   __int64 v4; // x0
+  __int64 v5; // x1
   BattleItemData_SaveData_o *result; // x0
 
-  if ( (byte_4C45AD3 & 1) == 0 )
+  if ( (byte_4C598B0 & 1) == 0 )
   {
-    sub_1C37058(&BattleItemData_SaveData_TypeInfo);
-    byte_4C45AD3 = 1;
+    sub_1C3E564(&BattleItemData_SaveData_TypeInfo);
+    byte_4C598B0 = 1;
   }
-  v3 = (Il2CppObject *)sub_1C372A4(BattleItemData_SaveData_TypeInfo);
+  v3 = (Il2CppObject *)sub_1C3E7B0(BattleItemData_SaveData_TypeInfo);
   System_Object___ctor(v3, 0);
   if ( !v3 )
-    sub_1C372B4(v4);
+    sub_1C3E7C0(v4, v5);
   result = (BattleItemData_SaveData_o *)v3;
   v3[1].klass = *(Il2CppClass **)&this->fields.itemId;
   return result;

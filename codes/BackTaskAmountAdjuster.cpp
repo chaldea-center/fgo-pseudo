@@ -5,16 +5,16 @@ void BackTaskAmountAdjuster___ctor(BackTaskAmountAdjuster_o *this, const MethodI
   const MethodInfo *v5; // x3
   float v6; // s0
 
-  if ( (byte_4C44C36 & 1) == 0 )
+  if ( (byte_4C58A02 & 1) == 0 )
   {
-    sub_1C37058(&UnityEngine_Application_TypeInfo);
-    sub_1C37058(&System_Diagnostics_Stopwatch_TypeInfo);
-    byte_4C44C36 = 1;
+    sub_1C3E564(&UnityEngine_Application_TypeInfo);
+    sub_1C3E564(&System_Diagnostics_Stopwatch_TypeInfo);
+    byte_4C58A02 = 1;
   }
-  v3 = (System_Diagnostics_Stopwatch_o *)sub_1C372A4(System_Diagnostics_Stopwatch_TypeInfo);
+  v3 = (System_Diagnostics_Stopwatch_o *)sub_1C3E7B0(System_Diagnostics_Stopwatch_TypeInfo);
   System_Diagnostics_Stopwatch___ctor(v3, 0);
   this->fields.stopwatch = v3;
-  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.stopwatch, (int32_t)v3, v4, v5);
+  sub_1C3E508((CGThumbnailListItem_o *)&this->fields.stopwatch, (int32_t)v3, v4, v5);
   System_Object___ctor((Il2CppObject *)this, 0);
   if ( !UnityEngine_Application_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Application_TypeInfo);
@@ -44,18 +44,18 @@ System_Collections_IEnumerator_o *BackTaskAmountAdjuster__Execute(
   int32_t v8; // w2
   const MethodInfo *v9; // x3
 
-  if ( (byte_4C44C37 & 1) == 0 )
+  if ( (byte_4C58A03 & 1) == 0 )
   {
-    sub_1C37058(&BackTaskAmountAdjuster__Execute_d__9_TypeInfo);
-    byte_4C44C37 = 1;
+    sub_1C3E564(&BackTaskAmountAdjuster__Execute_d__9_TypeInfo);
+    byte_4C58A03 = 1;
   }
-  v5 = sub_1C372A4(BackTaskAmountAdjuster__Execute_d__9_TypeInfo);
+  v5 = sub_1C3E7B0(BackTaskAmountAdjuster__Execute_d__9_TypeInfo);
   System_Object___ctor((Il2CppObject *)v5, 0);
   *(_DWORD *)(v5 + 16) = 0;
   *(_QWORD *)(v5 + 32) = this;
-  sub_1C36FFC((CGThumbnailListItem_o *)(v5 + 32), (int32_t)this, v6, v7);
+  sub_1C3E508((CGThumbnailListItem_o *)(v5 + 32), (int32_t)this, v6, v7);
   *(_QWORD *)(v5 + 40) = bgTask;
-  sub_1C36FFC((CGThumbnailListItem_o *)(v5 + 40), (int32_t)bgTask, v8, v9);
+  sub_1C3E508((CGThumbnailListItem_o *)(v5 + 40), (int32_t)bgTask, v8, v9);
   return (System_Collections_IEnumerator_o *)v5;
 }
 
@@ -67,7 +67,7 @@ bool BackTaskAmountAdjuster__IsOverWork(BackTaskAmountAdjuster_o *this, const Me
 
   stopwatch = this->fields.stopwatch;
   if ( !stopwatch )
-    sub_1C372B4(0);
+    sub_1C3E7C0(0, method);
   if ( !stopwatch->fields.is_running )
     return 1;
   plannedWorkDeltaTime = this->fields.plannedWorkDeltaTime;
@@ -78,6 +78,7 @@ bool BackTaskAmountAdjuster__IsOverWork(BackTaskAmountAdjuster_o *this, const Me
 
 void BackTaskAmountAdjuster__PlanNextWork(BackTaskAmountAdjuster_o *this, const MethodInfo *method)
 {
+  __int64 v3; // x1
   float deltaTime; // s0
   float expectedDeltaTime; // s1
   float minWorkDeltaTime; // s0
@@ -98,7 +99,7 @@ void BackTaskAmountAdjuster__PlanNextWork(BackTaskAmountAdjuster_o *this, const 
   stopwatch = this->fields.stopwatch;
   this->fields.plannedWorkDeltaTime = minWorkDeltaTime;
   if ( !stopwatch || (System_Diagnostics_Stopwatch__Reset(stopwatch, 0), (stopwatch = this->fields.stopwatch) == 0) )
-    sub_1C372B4(stopwatch);
+    sub_1C3E7C0(stopwatch, v3);
   System_Diagnostics_Stopwatch__Start(stopwatch, 0);
 }
 
@@ -109,7 +110,7 @@ void BackTaskAmountAdjuster__SaveActualWorkDeltaTime(BackTaskAmountAdjuster_o *t
 
   stopwatch = this->fields.stopwatch;
   if ( !stopwatch )
-    sub_1C372B4(0);
+    sub_1C3E7C0(0, method);
   this->fields.actualWorkDeltaTime = (float)System_Diagnostics_Stopwatch__get_ElapsedMilliseconds(stopwatch, 0) / 1000.0;
 }
 
@@ -144,18 +145,17 @@ bool BackTaskAmountAdjuster__Execute_d__9__MoveNext(
   const MethodInfo *v15; // x1
   int32_t v16; // w2
   const MethodInfo *v17; // x3
-  const MethodInfo *v18; // x1
   CGThumbnailListItem_o *p__2__current; // x19
-  int32_t v20; // w2
-  const MethodInfo *v21; // x3
+  int32_t v19; // w2
+  const MethodInfo *v20; // x3
   bool result; // w0
-  CGThumbnailListItem_o *v23; // x19
+  CGThumbnailListItem_o *v22; // x19
 
   v2 = this;
-  if ( (byte_4C44C38 & 1) == 0 )
+  if ( (byte_4C58A04 & 1) == 0 )
   {
-    this = (BackTaskAmountAdjuster__Execute_d__9_o *)sub_1C37058(&System_Collections_IEnumerator_TypeInfo);
-    byte_4C44C38 = 1;
+    this = (BackTaskAmountAdjuster__Execute_d__9_o *)sub_1C3E564(&System_Collections_IEnumerator_TypeInfo);
+    byte_4C58A04 = 1;
   }
   _4__this = v2->fields.__4__this;
   if ( v2->fields.__1__state > 2u )
@@ -163,7 +163,7 @@ bool BackTaskAmountAdjuster__Execute_d__9__MoveNext(
   v2->fields.__1__state = -1;
   if ( !_4__this )
 LABEL_26:
-    sub_1C372B4(this);
+    sub_1C3E7C0(this, method);
   BackTaskAmountAdjuster__PlanNextWork(_4__this, method);
   while ( 1 )
   {
@@ -187,7 +187,7 @@ LABEL_26:
     else
     {
 LABEL_11:
-      v8 = sub_1C87870(v2->fields.bgTask, System_Collections_IEnumerator_TypeInfo, 0);
+      v8 = sub_1C8ED7C(v2->fields.bgTask, System_Collections_IEnumerator_TypeInfo, 0);
     }
     this = (BackTaskAmountAdjuster__Execute_d__9_o *)(*(__int64 (__fastcall **)(struct System_Collections_IEnumerator_o *, _QWORD))v8)(
                                                        bgTask,
@@ -214,7 +214,7 @@ LABEL_11:
     else
     {
 LABEL_19:
-      v13 = sub_1C87870(v2->fields.bgTask, System_Collections_IEnumerator_TypeInfo, 1);
+      v13 = sub_1C8ED7C(v2->fields.bgTask, System_Collections_IEnumerator_TypeInfo, 1);
     }
     v14 = (*(__int64 (__fastcall **)(struct System_Collections_IEnumerator_o *, _QWORD))v13)(v9, *(_QWORD *)(v13 + 8));
     if ( v14 )
@@ -222,19 +222,19 @@ LABEL_19:
     this = (BackTaskAmountAdjuster__Execute_d__9_o *)BackTaskAmountAdjuster__IsOverWork(_4__this, v15);
     if ( ((unsigned __int8)this & 1) != 0 )
     {
-      BackTaskAmountAdjuster__SaveActualWorkDeltaTime(_4__this, v18);
+      BackTaskAmountAdjuster__SaveActualWorkDeltaTime(_4__this, method);
       v2->fields.__2__current = 0;
       p__2__current = (CGThumbnailListItem_o *)&v2->fields.__2__current;
-      sub_1C36FFC(p__2__current, 0, v20, v21);
+      sub_1C3E508(p__2__current, 0, v19, v20);
       LODWORD(p__2__current[-1].fields._ThumbnailSpritePath_k__BackingField) = 2;
       return 1;
     }
   }
   v2->fields.__2__current = (Il2CppObject *)v14;
-  v23 = (CGThumbnailListItem_o *)&v2->fields.__2__current;
-  sub_1C36FFC(v23, v14, v16, v17);
+  v22 = (CGThumbnailListItem_o *)&v2->fields.__2__current;
+  sub_1C3E508(v22, v14, v16, v17);
   result = 1;
-  LODWORD(v23[-1].fields._ThumbnailSpritePath_k__BackingField) = 1;
+  LODWORD(v22[-1].fields._ThumbnailSpritePath_k__BackingField) = 1;
   return result;
 }
 
@@ -255,11 +255,11 @@ void __noreturn BackTaskAmountAdjuster__Execute_d__9__System_Collections_IEnumer
   System_NotSupportedException_o *v3; // x19
   __int64 v4; // x0
 
-  v2 = sub_1C3706C(&System_NotSupportedException_TypeInfo);
-  v3 = (System_NotSupportedException_o *)sub_1C372A4(v2);
+  v2 = sub_1C3E578(&System_NotSupportedException_TypeInfo);
+  v3 = (System_NotSupportedException_o *)sub_1C3E7B0(v2);
   System_NotSupportedException___ctor(v3, 0);
-  v4 = sub_1C3706C(&Method_BackTaskAmountAdjuster__Execute_d__9_System_Collections_IEnumerator_Reset__);
-  sub_1C37180(v3, v4);
+  v4 = sub_1C3E578(&Method_BackTaskAmountAdjuster__Execute_d__9_System_Collections_IEnumerator_Reset__);
+  sub_1C3E68C(v3, v4);
 }
 
 

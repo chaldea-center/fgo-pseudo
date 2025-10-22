@@ -1,13 +1,13 @@
 void ServantScriptMultipleEntity___ctor(ServantScriptMultipleEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_4C439ED & 1) == 0 )
+  if ( (byte_4C577A4 & 1) == 0 )
   {
-    sub_1C37058(&Method_DataEntityBase_string___ctor__);
-    byte_4C439ED = 1;
+    sub_1C3E564(&Method_DataEntityBase_string___ctor__);
+    byte_4C577A4 = 1;
   }
   DataEntityBase_object____ctor(
     (DataEntityBase_PKType__o *)this,
-    (const MethodInfo_339EC34 *)Method_DataEntityBase_string___ctor__);
+    (const MethodInfo_33B0AEC *)Method_DataEntityBase_string___ctor__);
 }
 
 
@@ -17,16 +17,16 @@ System_String_o *ServantScriptMultipleEntity__CreatePK(
         int32_t position,
         const MethodInfo *method)
 {
-  if ( (byte_4C439EC & 1) == 0 )
+  if ( (byte_4C577A3 & 1) == 0 )
   {
-    sub_1C37058(&Method_DataEntityBase_CreateMultiplePK_int__int__int___);
-    byte_4C439EC = 1;
+    sub_1C3E564(&Method_DataEntityBase_CreateMultiplePK_int__int__int___);
+    byte_4C577A3 = 1;
   }
   return DataEntityBase__CreateMultiplePK_int__int__int_(
            id,
            form,
            position,
-           (const MethodInfo_30E6270 *)Method_DataEntityBase_CreateMultiplePK_int__int__int___);
+           (const MethodInfo_30F8088 *)Method_DataEntityBase_CreateMultiplePK_int__int__int___);
 }
 
 

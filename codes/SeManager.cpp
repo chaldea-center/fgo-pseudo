@@ -1,544 +1,546 @@
 void SeManager___cctor(const MethodInfo *method)
 {
   __int64 v1; // x0
-  int32_t v2; // w2
-  const MethodInfo *v3; // x3
-  __int64 v4; // x19
-  int32_t v5; // w1
-  int32_t v6; // w2
-  const MethodInfo *v7; // x3
-  int32_t v8; // w1
-  int32_t v9; // w2
-  const MethodInfo *v10; // x3
+  __int64 v2; // x1
+  int32_t v3; // w2
+  const MethodInfo *v4; // x3
+  __int64 v5; // x19
+  int32_t v6; // w1
+  int32_t v7; // w2
+  const MethodInfo *v8; // x3
+  int32_t v9; // w1
+  int32_t v10; // w2
+  const MethodInfo *v11; // x3
   struct SeManager_StaticFields *static_fields; // x0
-  int32_t v12; // w2
-  const MethodInfo *v13; // x3
-  struct SeManager_StaticFields *v14; // x0
-  int32_t v15; // w2
-  const MethodInfo *v16; // x3
-  struct SeManager_StaticFields *v22; // x8
+  int32_t v13; // w2
+  const MethodInfo *v14; // x3
+  struct SeManager_StaticFields *v15; // x0
+  int32_t v16; // w2
+  const MethodInfo *v17; // x3
+  struct SeManager_StaticFields *v23; // x8
 
-  if ( (byte_4C4295D & 1) == 0 )
+  if ( (byte_4C56706 & 1) == 0 )
   {
-    sub_1C37058(&SeManager_TypeInfo);
-    sub_1C37058(&string___TypeInfo);
-    sub_1C37058(&StringLiteral_11511/*"SE"*/);
-    sub_1C37058(&StringLiteral_11368/*"ResidentSE"*/);
-    byte_4C4295D = 1;
+    sub_1C3E564(&SeManager_TypeInfo);
+    sub_1C3E564(&string___TypeInfo);
+    sub_1C3E564(&StringLiteral_11513/*"SE"*/);
+    sub_1C3E564(&StringLiteral_11370/*"ResidentSE"*/);
+    byte_4C56706 = 1;
   }
-  v1 = sub_1C37100(string___TypeInfo, 2);
+  v1 = sub_1C3E60C(string___TypeInfo, 2);
   if ( !v1 )
-    sub_1C372B4(0);
-  v4 = v1;
+    sub_1C3E7C0(0, v2);
+  v5 = v1;
   if ( !*(_DWORD *)(v1 + 24)
-    || (v5 = StringLiteral_11368/*"ResidentSE"*/,
-        *(_QWORD *)(v1 + 32) = StringLiteral_11368/*"ResidentSE"*/,
-        sub_1C36FFC((CGThumbnailListItem_o *)(v1 + 32), v5, v2, v3),
-        *(_DWORD *)(v4 + 24) <= 1u) )
+    || (v6 = StringLiteral_11370/*"ResidentSE"*/,
+        *(_QWORD *)(v1 + 32) = StringLiteral_11370/*"ResidentSE"*/,
+        sub_1C3E508((CGThumbnailListItem_o *)(v1 + 32), v6, v3, v4),
+        *(_DWORD *)(v5 + 24) <= 1u) )
   {
-    sub_1C372BC(v1);
+    sub_1C3E7C8(v1, v2);
   }
-  v8 = StringLiteral_11511/*"SE"*/;
-  *(_QWORD *)(v4 + 40) = StringLiteral_11511/*"SE"*/;
-  sub_1C36FFC((CGThumbnailListItem_o *)(v4 + 40), v8, v6, v7);
-  SeManager_TypeInfo->static_fields->LoadSeList = (struct System_String_array *)v4;
-  sub_1C36FFC((CGThumbnailListItem_o *)SeManager_TypeInfo->static_fields, v4, v9, v10);
+  v9 = StringLiteral_11513/*"SE"*/;
+  *(_QWORD *)(v5 + 40) = StringLiteral_11513/*"SE"*/;
+  sub_1C3E508((CGThumbnailListItem_o *)(v5 + 40), v9, v7, v8);
+  SeManager_TypeInfo->static_fields->LoadSeList = (struct System_String_array *)v5;
+  sub_1C3E508((CGThumbnailListItem_o *)SeManager_TypeInfo->static_fields, v5, v10, v11);
   static_fields = SeManager_TypeInfo->static_fields;
   static_fields->seAssetBundleList = 0;
   static_fields = (struct SeManager_StaticFields *)((char *)static_fields + 16);
   static_fields[-1].loadCounter = 1065353216;
-  sub_1C36FFC((CGThumbnailListItem_o *)static_fields, 0, v12, v13);
-  v14 = SeManager_TypeInfo->static_fields;
-  v14->residentSeAssetBundleList = 0;
-  sub_1C36FFC((CGThumbnailListItem_o *)&v14->residentSeAssetBundleList, 0, v15, v16);
+  sub_1C3E508((CGThumbnailListItem_o *)static_fields, 0, v13, v14);
+  v15 = SeManager_TypeInfo->static_fields;
+  v15->residentSeAssetBundleList = 0;
+  sub_1C3E508((CGThumbnailListItem_o *)&v15->residentSeAssetBundleList, 0, v16, v17);
   __asm { FMOV            V0.2S, #1.0 }
-  v22 = SeManager_TypeInfo->static_fields;
-  v22->isMute = 0;
-  *(_QWORD *)&v22->masterVolume = _D0;
-  v22->IsBusy = 0;
+  v23 = SeManager_TypeInfo->static_fields;
+  v23->isMute = 0;
+  *(_QWORD *)&v23->masterVolume = _D0;
+  v23->IsBusy = 0;
 }
 
 
 void SeManager___ctor(SeManager_o *this, const MethodInfo *method)
 {
   __int64 v3; // x0
-  int32_t v4; // w2
-  const MethodInfo *v5; // x3
-  __int64 v6; // x20
-  int32_t v7; // w1
-  int32_t v8; // w2
-  const MethodInfo *v9; // x3
-  int32_t v10; // w1
-  int32_t v11; // w2
-  const MethodInfo *v12; // x3
-  int32_t v13; // w1
-  int32_t v14; // w2
-  const MethodInfo *v15; // x3
-  int32_t v16; // w1
-  int32_t v17; // w2
-  const MethodInfo *v18; // x3
-  int32_t v19; // w1
-  int32_t v20; // w2
-  const MethodInfo *v21; // x3
-  int32_t v22; // w1
-  int32_t v23; // w2
-  const MethodInfo *v24; // x3
-  int32_t v25; // w1
-  int32_t v26; // w2
-  const MethodInfo *v27; // x3
-  int32_t v28; // w2
-  const MethodInfo *v29; // x3
-  __int64 v30; // x20
-  int32_t v31; // w1
-  int32_t v32; // w2
-  const MethodInfo *v33; // x3
-  int32_t v34; // w1
-  int32_t v35; // w2
-  const MethodInfo *v36; // x3
-  int32_t v37; // w1
-  int32_t v38; // w2
-  const MethodInfo *v39; // x3
-  int32_t v40; // w1
-  int32_t v41; // w2
-  const MethodInfo *v42; // x3
-  int32_t v43; // w1
-  int32_t v44; // w2
-  const MethodInfo *v45; // x3
-  int32_t v46; // w1
-  int32_t v47; // w2
-  const MethodInfo *v48; // x3
-  int32_t v49; // w1
-  int32_t v50; // w2
-  const MethodInfo *v51; // x3
-  int32_t v52; // w1
-  int32_t v53; // w2
-  const MethodInfo *v54; // x3
-  int32_t v55; // w1
-  int32_t v56; // w2
-  const MethodInfo *v57; // x3
-  int32_t v58; // w1
-  int32_t v59; // w2
-  const MethodInfo *v60; // x3
-  int32_t v61; // w1
-  int32_t v62; // w2
-  const MethodInfo *v63; // x3
-  int32_t v64; // w1
-  int32_t v65; // w2
-  const MethodInfo *v66; // x3
-  int32_t v67; // w2
-  const MethodInfo *v68; // x3
-  __int64 v69; // x20
-  int32_t v70; // w1
-  int32_t v71; // w2
-  const MethodInfo *v72; // x3
-  int32_t v73; // w1
-  int32_t v74; // w2
-  const MethodInfo *v75; // x3
-  int32_t v76; // w1
-  int32_t v77; // w2
-  const MethodInfo *v78; // x3
-  int32_t v79; // w1
-  int32_t v80; // w2
-  const MethodInfo *v81; // x3
-  int32_t v82; // w1
-  int32_t v83; // w2
-  const MethodInfo *v84; // x3
-  int32_t v85; // w1
-  int32_t v86; // w2
-  const MethodInfo *v87; // x3
-  int32_t v88; // w1
-  int32_t v89; // w2
-  const MethodInfo *v90; // x3
-  int32_t v91; // w1
-  int32_t v92; // w2
-  const MethodInfo *v93; // x3
-  int32_t v94; // w1
-  int32_t v95; // w2
-  const MethodInfo *v96; // x3
-  int32_t v97; // w1
-  int32_t v98; // w2
-  const MethodInfo *v99; // x3
-  int32_t v100; // w1
-  int32_t v101; // w2
-  const MethodInfo *v102; // x3
-  int32_t v103; // w1
-  int32_t v104; // w2
-  const MethodInfo *v105; // x3
-  int32_t v106; // w1
-  int32_t v107; // w2
-  const MethodInfo *v108; // x3
-  int32_t v109; // w1
-  int32_t v110; // w2
-  const MethodInfo *v111; // x3
-  int32_t v112; // w1
-  int32_t v113; // w2
-  const MethodInfo *v114; // x3
-  int32_t v115; // w1
-  int32_t v116; // w2
-  const MethodInfo *v117; // x3
-  int32_t v118; // w1
-  int32_t v119; // w2
-  const MethodInfo *v120; // x3
-  int32_t v121; // w1
-  int32_t v122; // w2
-  const MethodInfo *v123; // x3
-  int32_t v124; // w1
-  int32_t v125; // w2
-  const MethodInfo *v126; // x3
-  int32_t v127; // w1
-  int32_t v128; // w2
-  const MethodInfo *v129; // x3
-  int32_t v130; // w1
-  int32_t v131; // w2
-  const MethodInfo *v132; // x3
-  int32_t v133; // w1
-  int32_t v134; // w2
-  const MethodInfo *v135; // x3
-  int32_t v136; // w1
-  int32_t v137; // w2
-  const MethodInfo *v138; // x3
-  int32_t v139; // w1
-  int32_t v140; // w2
-  const MethodInfo *v141; // x3
-  int32_t v142; // w1
-  int32_t v143; // w2
-  const MethodInfo *v144; // x3
-  int32_t v145; // w1
-  int32_t v146; // w2
-  const MethodInfo *v147; // x3
-  int32_t v148; // w1
-  int32_t v149; // w2
-  const MethodInfo *v150; // x3
-  int32_t v151; // w1
-  int32_t v152; // w2
-  const MethodInfo *v153; // x3
-  int32_t v154; // w1
-  int32_t v155; // w2
-  const MethodInfo *v156; // x3
-  int32_t v157; // w1
-  int32_t v158; // w2
-  const MethodInfo *v159; // x3
+  __int64 v4; // x1
+  int32_t v5; // w2
+  const MethodInfo *v6; // x3
+  __int64 v7; // x20
+  int32_t v8; // w1
+  int32_t v9; // w2
+  const MethodInfo *v10; // x3
+  int32_t v11; // w1
+  int32_t v12; // w2
+  const MethodInfo *v13; // x3
+  int32_t v14; // w1
+  int32_t v15; // w2
+  const MethodInfo *v16; // x3
+  int32_t v17; // w1
+  int32_t v18; // w2
+  const MethodInfo *v19; // x3
+  int32_t v20; // w1
+  int32_t v21; // w2
+  const MethodInfo *v22; // x3
+  int32_t v23; // w1
+  int32_t v24; // w2
+  const MethodInfo *v25; // x3
+  int32_t v26; // w1
+  int32_t v27; // w2
+  const MethodInfo *v28; // x3
+  int32_t v29; // w2
+  const MethodInfo *v30; // x3
+  __int64 v31; // x20
+  int32_t v32; // w1
+  int32_t v33; // w2
+  const MethodInfo *v34; // x3
+  int32_t v35; // w1
+  int32_t v36; // w2
+  const MethodInfo *v37; // x3
+  int32_t v38; // w1
+  int32_t v39; // w2
+  const MethodInfo *v40; // x3
+  int32_t v41; // w1
+  int32_t v42; // w2
+  const MethodInfo *v43; // x3
+  int32_t v44; // w1
+  int32_t v45; // w2
+  const MethodInfo *v46; // x3
+  int32_t v47; // w1
+  int32_t v48; // w2
+  const MethodInfo *v49; // x3
+  int32_t v50; // w1
+  int32_t v51; // w2
+  const MethodInfo *v52; // x3
+  int32_t v53; // w1
+  int32_t v54; // w2
+  const MethodInfo *v55; // x3
+  int32_t v56; // w1
+  int32_t v57; // w2
+  const MethodInfo *v58; // x3
+  int32_t v59; // w1
+  int32_t v60; // w2
+  const MethodInfo *v61; // x3
+  int32_t v62; // w1
+  int32_t v63; // w2
+  const MethodInfo *v64; // x3
+  int32_t v65; // w1
+  int32_t v66; // w2
+  const MethodInfo *v67; // x3
+  int32_t v68; // w2
+  const MethodInfo *v69; // x3
+  __int64 v70; // x20
+  int32_t v71; // w1
+  int32_t v72; // w2
+  const MethodInfo *v73; // x3
+  int32_t v74; // w1
+  int32_t v75; // w2
+  const MethodInfo *v76; // x3
+  int32_t v77; // w1
+  int32_t v78; // w2
+  const MethodInfo *v79; // x3
+  int32_t v80; // w1
+  int32_t v81; // w2
+  const MethodInfo *v82; // x3
+  int32_t v83; // w1
+  int32_t v84; // w2
+  const MethodInfo *v85; // x3
+  int32_t v86; // w1
+  int32_t v87; // w2
+  const MethodInfo *v88; // x3
+  int32_t v89; // w1
+  int32_t v90; // w2
+  const MethodInfo *v91; // x3
+  int32_t v92; // w1
+  int32_t v93; // w2
+  const MethodInfo *v94; // x3
+  int32_t v95; // w1
+  int32_t v96; // w2
+  const MethodInfo *v97; // x3
+  int32_t v98; // w1
+  int32_t v99; // w2
+  const MethodInfo *v100; // x3
+  int32_t v101; // w1
+  int32_t v102; // w2
+  const MethodInfo *v103; // x3
+  int32_t v104; // w1
+  int32_t v105; // w2
+  const MethodInfo *v106; // x3
+  int32_t v107; // w1
+  int32_t v108; // w2
+  const MethodInfo *v109; // x3
+  int32_t v110; // w1
+  int32_t v111; // w2
+  const MethodInfo *v112; // x3
+  int32_t v113; // w1
+  int32_t v114; // w2
+  const MethodInfo *v115; // x3
+  int32_t v116; // w1
+  int32_t v117; // w2
+  const MethodInfo *v118; // x3
+  int32_t v119; // w1
+  int32_t v120; // w2
+  const MethodInfo *v121; // x3
+  int32_t v122; // w1
+  int32_t v123; // w2
+  const MethodInfo *v124; // x3
+  int32_t v125; // w1
+  int32_t v126; // w2
+  const MethodInfo *v127; // x3
+  int32_t v128; // w1
+  int32_t v129; // w2
+  const MethodInfo *v130; // x3
+  int32_t v131; // w1
+  int32_t v132; // w2
+  const MethodInfo *v133; // x3
+  int32_t v134; // w1
+  int32_t v135; // w2
+  const MethodInfo *v136; // x3
+  int32_t v137; // w1
+  int32_t v138; // w2
+  const MethodInfo *v139; // x3
+  int32_t v140; // w1
+  int32_t v141; // w2
+  const MethodInfo *v142; // x3
+  int32_t v143; // w1
+  int32_t v144; // w2
+  const MethodInfo *v145; // x3
+  int32_t v146; // w1
+  int32_t v147; // w2
+  const MethodInfo *v148; // x3
+  int32_t v149; // w1
+  int32_t v150; // w2
+  const MethodInfo *v151; // x3
+  int32_t v152; // w1
+  int32_t v153; // w2
+  const MethodInfo *v154; // x3
+  int32_t v155; // w1
+  int32_t v156; // w2
+  const MethodInfo *v157; // x3
+  int32_t v158; // w1
+  int32_t v159; // w2
+  const MethodInfo *v160; // x3
 
-  if ( (byte_4C4295C & 1) == 0 )
+  if ( (byte_4C56705 & 1) == 0 )
   {
-    sub_1C37058(&Method_SingletonMonoBehaviour_SeManager___ctor__);
-    sub_1C37058(&string___TypeInfo);
-    sub_1C37058(&StringLiteral_23894/*"sy4"*/);
-    sub_1C37058(&StringLiteral_16849/*"ar102"*/);
-    sub_1C37058(&StringLiteral_16983/*"ba17"*/);
-    sub_1C37058(&StringLiteral_24068/*"ti1"*/);
-    sub_1C37058(&StringLiteral_23898/*"sy8"*/);
-    sub_1C37058(&StringLiteral_16850/*"ar112"*/);
-    sub_1C37058(&StringLiteral_16978/*"ba11"*/);
-    sub_1C37058(&StringLiteral_23895/*"sy5"*/);
-    sub_1C37058(&StringLiteral_16976/*"ba10"*/);
-    sub_1C37058(&StringLiteral_18032/*"co1"*/);
-    sub_1C37058(&StringLiteral_23896/*"sy6"*/);
-    sub_1C37058(&StringLiteral_16986/*"ba2"*/);
-    sub_1C37058(&StringLiteral_16992/*"ba3"*/);
-    sub_1C37058(&StringLiteral_16981/*"ba15"*/);
-    sub_1C37058(&StringLiteral_16991/*"ba24"*/);
-    sub_1C37058(&StringLiteral_24289/*"um2"*/);
-    sub_1C37058(&StringLiteral_21597/*"mis1"*/);
-    sub_1C37058(&StringLiteral_23897/*"sy7"*/);
-    sub_1C37058(&StringLiteral_16987/*"ba20"*/);
-    sub_1C37058(&StringLiteral_16975/*"ba1"*/);
-    sub_1C37058(&StringLiteral_16985/*"ba19"*/);
-    sub_1C37058(&StringLiteral_23899/*"sy9"*/);
-    sub_1C37058(&StringLiteral_16855/*"ar2"*/);
-    sub_1C37058(&StringLiteral_16990/*"ba23"*/);
-    sub_1C37058(&StringLiteral_24851/*"wo11"*/);
-    sub_1C37058(&StringLiteral_16994/*"ba38"*/);
-    sub_1C37058(&StringLiteral_23892/*"sy2"*/);
-    sub_1C37058(&StringLiteral_24035/*"testSe"*/);
-    sub_1C37058(&StringLiteral_16993/*"ba30"*/);
-    sub_1C37058(&StringLiteral_24288/*"um1"*/);
-    sub_1C37058(&StringLiteral_16996/*"ba7"*/);
-    sub_1C37058(&StringLiteral_16988/*"ba21"*/);
-    sub_1C37058(&StringLiteral_16984/*"ba18"*/);
-    sub_1C37058(&StringLiteral_23890/*"sy1"*/);
-    sub_1C37058(&StringLiteral_22845/*"qev79"*/);
-    sub_1C37058(&StringLiteral_16980/*"ba13"*/);
-    sub_1C37058(&StringLiteral_16982/*"ba16"*/);
-    sub_1C37058(&StringLiteral_16979/*"ba12"*/);
-    sub_1C37058(&StringLiteral_16989/*"ba22"*/);
-    sub_1C37058(&StringLiteral_24850/*"wo1"*/);
-    sub_1C37058(&StringLiteral_23893/*"sy3"*/);
-    sub_1C37058(&StringLiteral_23891/*"sy1a"*/);
-    sub_1C37058(&StringLiteral_16977/*"ba10a"*/);
-    byte_4C4295C = 1;
+    sub_1C3E564(&Method_SingletonMonoBehaviour_SeManager___ctor__);
+    sub_1C3E564(&string___TypeInfo);
+    sub_1C3E564(&StringLiteral_23914/*"sy4"*/);
+    sub_1C3E564(&StringLiteral_16864/*"ar102"*/);
+    sub_1C3E564(&StringLiteral_16999/*"ba17"*/);
+    sub_1C3E564(&StringLiteral_24088/*"ti1"*/);
+    sub_1C3E564(&StringLiteral_23918/*"sy8"*/);
+    sub_1C3E564(&StringLiteral_16865/*"ar112"*/);
+    sub_1C3E564(&StringLiteral_16994/*"ba11"*/);
+    sub_1C3E564(&StringLiteral_23915/*"sy5"*/);
+    sub_1C3E564(&StringLiteral_16992/*"ba10"*/);
+    sub_1C3E564(&StringLiteral_18049/*"co1"*/);
+    sub_1C3E564(&StringLiteral_23916/*"sy6"*/);
+    sub_1C3E564(&StringLiteral_17002/*"ba2"*/);
+    sub_1C3E564(&StringLiteral_17008/*"ba3"*/);
+    sub_1C3E564(&StringLiteral_16997/*"ba15"*/);
+    sub_1C3E564(&StringLiteral_17007/*"ba24"*/);
+    sub_1C3E564(&StringLiteral_24309/*"um2"*/);
+    sub_1C3E564(&StringLiteral_21615/*"mis1"*/);
+    sub_1C3E564(&StringLiteral_23917/*"sy7"*/);
+    sub_1C3E564(&StringLiteral_17003/*"ba20"*/);
+    sub_1C3E564(&StringLiteral_16991/*"ba1"*/);
+    sub_1C3E564(&StringLiteral_17001/*"ba19"*/);
+    sub_1C3E564(&StringLiteral_23919/*"sy9"*/);
+    sub_1C3E564(&StringLiteral_16870/*"ar2"*/);
+    sub_1C3E564(&StringLiteral_17006/*"ba23"*/);
+    sub_1C3E564(&StringLiteral_24871/*"wo11"*/);
+    sub_1C3E564(&StringLiteral_17010/*"ba38"*/);
+    sub_1C3E564(&StringLiteral_23912/*"sy2"*/);
+    sub_1C3E564(&StringLiteral_24055/*"testSe"*/);
+    sub_1C3E564(&StringLiteral_17009/*"ba30"*/);
+    sub_1C3E564(&StringLiteral_24308/*"um1"*/);
+    sub_1C3E564(&StringLiteral_17012/*"ba7"*/);
+    sub_1C3E564(&StringLiteral_17004/*"ba21"*/);
+    sub_1C3E564(&StringLiteral_17000/*"ba18"*/);
+    sub_1C3E564(&StringLiteral_23910/*"sy1"*/);
+    sub_1C3E564(&StringLiteral_22864/*"qev79"*/);
+    sub_1C3E564(&StringLiteral_16996/*"ba13"*/);
+    sub_1C3E564(&StringLiteral_16998/*"ba16"*/);
+    sub_1C3E564(&StringLiteral_16995/*"ba12"*/);
+    sub_1C3E564(&StringLiteral_17005/*"ba22"*/);
+    sub_1C3E564(&StringLiteral_24870/*"wo1"*/);
+    sub_1C3E564(&StringLiteral_23913/*"sy3"*/);
+    sub_1C3E564(&StringLiteral_23911/*"sy1a"*/);
+    sub_1C3E564(&StringLiteral_16993/*"ba10a"*/);
+    byte_4C56705 = 1;
   }
   this->fields.SYSTEM_SE_MAX = 3;
   this->fields.seMax = 8;
   *(int32x2_t *)&this->fields.preDelayTimeForStream = vdup_n_s32(0x43270000u);
-  v3 = sub_1C37100(string___TypeInfo, 7);
+  v3 = sub_1C3E60C(string___TypeInfo, 7);
   if ( !v3 )
     goto LABEL_57;
-  v6 = v3;
+  v7 = v3;
   if ( !*(_DWORD *)(v3 + 24) )
     goto LABEL_56;
-  v7 = StringLiteral_23890/*"sy1"*/;
-  *(_QWORD *)(v3 + 32) = StringLiteral_23890/*"sy1"*/;
-  sub_1C36FFC((CGThumbnailListItem_o *)(v3 + 32), v7, v4, v5);
-  if ( *(_DWORD *)(v6 + 24) <= 1u )
+  v8 = StringLiteral_23910/*"sy1"*/;
+  *(_QWORD *)(v3 + 32) = StringLiteral_23910/*"sy1"*/;
+  sub_1C3E508((CGThumbnailListItem_o *)(v3 + 32), v8, v5, v6);
+  if ( *(_DWORD *)(v7 + 24) <= 1u )
     goto LABEL_56;
-  v10 = StringLiteral_23891/*"sy1a"*/;
-  *(_QWORD *)(v6 + 40) = StringLiteral_23891/*"sy1a"*/;
-  sub_1C36FFC((CGThumbnailListItem_o *)(v6 + 40), v10, v8, v9);
-  if ( *(_DWORD *)(v6 + 24) <= 2u )
+  v11 = StringLiteral_23911/*"sy1a"*/;
+  *(_QWORD *)(v7 + 40) = StringLiteral_23911/*"sy1a"*/;
+  sub_1C3E508((CGThumbnailListItem_o *)(v7 + 40), v11, v9, v10);
+  if ( *(_DWORD *)(v7 + 24) <= 2u )
     goto LABEL_56;
-  v13 = StringLiteral_23892/*"sy2"*/;
-  *(_QWORD *)(v6 + 48) = StringLiteral_23892/*"sy2"*/;
-  sub_1C36FFC((CGThumbnailListItem_o *)(v6 + 48), v13, v11, v12);
-  if ( *(_DWORD *)(v6 + 24) <= 3u )
+  v14 = StringLiteral_23912/*"sy2"*/;
+  *(_QWORD *)(v7 + 48) = StringLiteral_23912/*"sy2"*/;
+  sub_1C3E508((CGThumbnailListItem_o *)(v7 + 48), v14, v12, v13);
+  if ( *(_DWORD *)(v7 + 24) <= 3u )
     goto LABEL_56;
-  v16 = StringLiteral_23893/*"sy3"*/;
-  *(_QWORD *)(v6 + 56) = StringLiteral_23893/*"sy3"*/;
-  sub_1C36FFC((CGThumbnailListItem_o *)(v6 + 56), v16, v14, v15);
-  if ( *(_DWORD *)(v6 + 24) <= 4u )
+  v17 = StringLiteral_23913/*"sy3"*/;
+  *(_QWORD *)(v7 + 56) = StringLiteral_23913/*"sy3"*/;
+  sub_1C3E508((CGThumbnailListItem_o *)(v7 + 56), v17, v15, v16);
+  if ( *(_DWORD *)(v7 + 24) <= 4u )
     goto LABEL_56;
-  v19 = StringLiteral_23899/*"sy9"*/;
-  *(_QWORD *)(v6 + 64) = StringLiteral_23899/*"sy9"*/;
-  sub_1C36FFC((CGThumbnailListItem_o *)(v6 + 64), v19, v17, v18);
-  if ( *(_DWORD *)(v6 + 24) <= 5u )
+  v20 = StringLiteral_23919/*"sy9"*/;
+  *(_QWORD *)(v7 + 64) = StringLiteral_23919/*"sy9"*/;
+  sub_1C3E508((CGThumbnailListItem_o *)(v7 + 64), v20, v18, v19);
+  if ( *(_DWORD *)(v7 + 24) <= 5u )
     goto LABEL_56;
-  v22 = StringLiteral_24068/*"ti1"*/;
-  *(_QWORD *)(v6 + 72) = StringLiteral_24068/*"ti1"*/;
-  sub_1C36FFC((CGThumbnailListItem_o *)(v6 + 72), v22, v20, v21);
-  if ( *(_DWORD *)(v6 + 24) <= 6u )
+  v23 = StringLiteral_24088/*"ti1"*/;
+  *(_QWORD *)(v7 + 72) = StringLiteral_24088/*"ti1"*/;
+  sub_1C3E508((CGThumbnailListItem_o *)(v7 + 72), v23, v21, v22);
+  if ( *(_DWORD *)(v7 + 24) <= 6u )
     goto LABEL_56;
-  v25 = StringLiteral_16984/*"ba18"*/;
-  *(_QWORD *)(v6 + 80) = StringLiteral_16984/*"ba18"*/;
-  sub_1C36FFC((CGThumbnailListItem_o *)(v6 + 80), v25, v23, v24);
-  this->fields.ignorePreDelayArray = (struct System_String_array *)v6;
-  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.ignorePreDelayArray, v6, v26, v27);
-  v3 = sub_1C37100(string___TypeInfo, 12);
+  v26 = StringLiteral_17000/*"ba18"*/;
+  *(_QWORD *)(v7 + 80) = StringLiteral_17000/*"ba18"*/;
+  sub_1C3E508((CGThumbnailListItem_o *)(v7 + 80), v26, v24, v25);
+  this->fields.ignorePreDelayArray = (struct System_String_array *)v7;
+  sub_1C3E508((CGThumbnailListItem_o *)&this->fields.ignorePreDelayArray, v7, v27, v28);
+  v3 = sub_1C3E60C(string___TypeInfo, 12);
   if ( !v3 )
     goto LABEL_57;
-  v30 = v3;
+  v31 = v3;
   if ( !*(_DWORD *)(v3 + 24) )
     goto LABEL_56;
-  v31 = StringLiteral_23890/*"sy1"*/;
-  *(_QWORD *)(v3 + 32) = StringLiteral_23890/*"sy1"*/;
-  sub_1C36FFC((CGThumbnailListItem_o *)(v3 + 32), v31, v28, v29);
-  if ( *(_DWORD *)(v30 + 24) <= 1u )
+  v32 = StringLiteral_23910/*"sy1"*/;
+  *(_QWORD *)(v3 + 32) = StringLiteral_23910/*"sy1"*/;
+  sub_1C3E508((CGThumbnailListItem_o *)(v3 + 32), v32, v29, v30);
+  if ( *(_DWORD *)(v31 + 24) <= 1u )
     goto LABEL_56;
-  v34 = StringLiteral_23892/*"sy2"*/;
-  *(_QWORD *)(v30 + 40) = StringLiteral_23892/*"sy2"*/;
-  sub_1C36FFC((CGThumbnailListItem_o *)(v30 + 40), v34, v32, v33);
-  if ( *(_DWORD *)(v30 + 24) <= 2u )
+  v35 = StringLiteral_23912/*"sy2"*/;
+  *(_QWORD *)(v31 + 40) = StringLiteral_23912/*"sy2"*/;
+  sub_1C3E508((CGThumbnailListItem_o *)(v31 + 40), v35, v33, v34);
+  if ( *(_DWORD *)(v31 + 24) <= 2u )
     goto LABEL_56;
-  v37 = StringLiteral_23893/*"sy3"*/;
-  *(_QWORD *)(v30 + 48) = StringLiteral_23893/*"sy3"*/;
-  sub_1C36FFC((CGThumbnailListItem_o *)(v30 + 48), v37, v35, v36);
-  if ( *(_DWORD *)(v30 + 24) <= 3u )
+  v38 = StringLiteral_23913/*"sy3"*/;
+  *(_QWORD *)(v31 + 48) = StringLiteral_23913/*"sy3"*/;
+  sub_1C3E508((CGThumbnailListItem_o *)(v31 + 48), v38, v36, v37);
+  if ( *(_DWORD *)(v31 + 24) <= 3u )
     goto LABEL_56;
-  v40 = StringLiteral_23894/*"sy4"*/;
-  *(_QWORD *)(v30 + 56) = StringLiteral_23894/*"sy4"*/;
-  sub_1C36FFC((CGThumbnailListItem_o *)(v30 + 56), v40, v38, v39);
-  if ( *(_DWORD *)(v30 + 24) <= 4u )
+  v41 = StringLiteral_23914/*"sy4"*/;
+  *(_QWORD *)(v31 + 56) = StringLiteral_23914/*"sy4"*/;
+  sub_1C3E508((CGThumbnailListItem_o *)(v31 + 56), v41, v39, v40);
+  if ( *(_DWORD *)(v31 + 24) <= 4u )
     goto LABEL_56;
-  v43 = StringLiteral_23895/*"sy5"*/;
-  *(_QWORD *)(v30 + 64) = StringLiteral_23895/*"sy5"*/;
-  sub_1C36FFC((CGThumbnailListItem_o *)(v30 + 64), v43, v41, v42);
-  if ( *(_DWORD *)(v30 + 24) <= 5u )
+  v44 = StringLiteral_23915/*"sy5"*/;
+  *(_QWORD *)(v31 + 64) = StringLiteral_23915/*"sy5"*/;
+  sub_1C3E508((CGThumbnailListItem_o *)(v31 + 64), v44, v42, v43);
+  if ( *(_DWORD *)(v31 + 24) <= 5u )
     goto LABEL_56;
-  v46 = StringLiteral_23896/*"sy6"*/;
-  *(_QWORD *)(v30 + 72) = StringLiteral_23896/*"sy6"*/;
-  sub_1C36FFC((CGThumbnailListItem_o *)(v30 + 72), v46, v44, v45);
-  if ( *(_DWORD *)(v30 + 24) <= 6u )
+  v47 = StringLiteral_23916/*"sy6"*/;
+  *(_QWORD *)(v31 + 72) = StringLiteral_23916/*"sy6"*/;
+  sub_1C3E508((CGThumbnailListItem_o *)(v31 + 72), v47, v45, v46);
+  if ( *(_DWORD *)(v31 + 24) <= 6u )
     goto LABEL_56;
-  v49 = StringLiteral_23897/*"sy7"*/;
-  *(_QWORD *)(v30 + 80) = StringLiteral_23897/*"sy7"*/;
-  sub_1C36FFC((CGThumbnailListItem_o *)(v30 + 80), v49, v47, v48);
-  if ( *(_DWORD *)(v30 + 24) <= 7u )
+  v50 = StringLiteral_23917/*"sy7"*/;
+  *(_QWORD *)(v31 + 80) = StringLiteral_23917/*"sy7"*/;
+  sub_1C3E508((CGThumbnailListItem_o *)(v31 + 80), v50, v48, v49);
+  if ( *(_DWORD *)(v31 + 24) <= 7u )
     goto LABEL_56;
-  v52 = StringLiteral_23898/*"sy8"*/;
-  *(_QWORD *)(v30 + 88) = StringLiteral_23898/*"sy8"*/;
-  sub_1C36FFC((CGThumbnailListItem_o *)(v30 + 88), v52, v50, v51);
-  if ( *(_DWORD *)(v30 + 24) <= 8u )
+  v53 = StringLiteral_23918/*"sy8"*/;
+  *(_QWORD *)(v31 + 88) = StringLiteral_23918/*"sy8"*/;
+  sub_1C3E508((CGThumbnailListItem_o *)(v31 + 88), v53, v51, v52);
+  if ( *(_DWORD *)(v31 + 24) <= 8u )
     goto LABEL_56;
-  v55 = StringLiteral_23891/*"sy1a"*/;
-  *(_QWORD *)(v30 + 96) = StringLiteral_23891/*"sy1a"*/;
-  sub_1C36FFC((CGThumbnailListItem_o *)(v30 + 96), v55, v53, v54);
-  if ( *(_DWORD *)(v30 + 24) <= 9u
-    || (v58 = StringLiteral_24288/*"um1"*/,
-        *(_QWORD *)(v30 + 104) = StringLiteral_24288/*"um1"*/,
-        sub_1C36FFC((CGThumbnailListItem_o *)(v30 + 104), v58, v56, v57),
-        *(_DWORD *)(v30 + 24) <= 0xAu)
-    || (v61 = StringLiteral_24289/*"um2"*/,
-        *(_QWORD *)(v30 + 112) = StringLiteral_24289/*"um2"*/,
-        sub_1C36FFC((CGThumbnailListItem_o *)(v30 + 112), v61, v59, v60),
-        *(_DWORD *)(v30 + 24) <= 0xBu) )
+  v56 = StringLiteral_23911/*"sy1a"*/;
+  *(_QWORD *)(v31 + 96) = StringLiteral_23911/*"sy1a"*/;
+  sub_1C3E508((CGThumbnailListItem_o *)(v31 + 96), v56, v54, v55);
+  if ( *(_DWORD *)(v31 + 24) <= 9u
+    || (v59 = StringLiteral_24308/*"um1"*/,
+        *(_QWORD *)(v31 + 104) = StringLiteral_24308/*"um1"*/,
+        sub_1C3E508((CGThumbnailListItem_o *)(v31 + 104), v59, v57, v58),
+        *(_DWORD *)(v31 + 24) <= 0xAu)
+    || (v62 = StringLiteral_24309/*"um2"*/,
+        *(_QWORD *)(v31 + 112) = StringLiteral_24309/*"um2"*/,
+        sub_1C3E508((CGThumbnailListItem_o *)(v31 + 112), v62, v60, v61),
+        *(_DWORD *)(v31 + 24) <= 0xBu) )
   {
 LABEL_56:
-    sub_1C372BC(v3);
+    sub_1C3E7C8(v3, v4);
   }
-  v64 = StringLiteral_23899/*"sy9"*/;
-  *(_QWORD *)(v30 + 120) = StringLiteral_23899/*"sy9"*/;
-  sub_1C36FFC((CGThumbnailListItem_o *)(v30 + 120), v64, v62, v63);
-  this->fields.systemSeClipNames = (struct System_String_array *)v30;
-  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.systemSeClipNames, v30, v65, v66);
-  v3 = sub_1C37100(string___TypeInfo, 30);
+  v65 = StringLiteral_23919/*"sy9"*/;
+  *(_QWORD *)(v31 + 120) = StringLiteral_23919/*"sy9"*/;
+  sub_1C3E508((CGThumbnailListItem_o *)(v31 + 120), v65, v63, v64);
+  this->fields.systemSeClipNames = (struct System_String_array *)v31;
+  sub_1C3E508((CGThumbnailListItem_o *)&this->fields.systemSeClipNames, v31, v66, v67);
+  v3 = sub_1C3E60C(string___TypeInfo, 30);
   if ( !v3 )
 LABEL_57:
-    sub_1C372B4(v3);
-  v69 = v3;
+    sub_1C3E7C0(v3, v4);
+  v70 = v3;
   if ( !*(_DWORD *)(v3 + 24) )
     goto LABEL_56;
-  v70 = StringLiteral_16975/*"ba1"*/;
-  *(_QWORD *)(v3 + 32) = StringLiteral_16975/*"ba1"*/;
-  sub_1C36FFC((CGThumbnailListItem_o *)(v3 + 32), v70, v67, v68);
-  if ( *(_DWORD *)(v69 + 24) <= 1u )
+  v71 = StringLiteral_16991/*"ba1"*/;
+  *(_QWORD *)(v3 + 32) = StringLiteral_16991/*"ba1"*/;
+  sub_1C3E508((CGThumbnailListItem_o *)(v3 + 32), v71, v68, v69);
+  if ( *(_DWORD *)(v70 + 24) <= 1u )
     goto LABEL_56;
-  v73 = StringLiteral_16986/*"ba2"*/;
-  *(_QWORD *)(v69 + 40) = StringLiteral_16986/*"ba2"*/;
-  sub_1C36FFC((CGThumbnailListItem_o *)(v69 + 40), v73, v71, v72);
-  if ( *(_DWORD *)(v69 + 24) <= 2u )
+  v74 = StringLiteral_17002/*"ba2"*/;
+  *(_QWORD *)(v70 + 40) = StringLiteral_17002/*"ba2"*/;
+  sub_1C3E508((CGThumbnailListItem_o *)(v70 + 40), v74, v72, v73);
+  if ( *(_DWORD *)(v70 + 24) <= 2u )
     goto LABEL_56;
-  v76 = StringLiteral_16992/*"ba3"*/;
-  *(_QWORD *)(v69 + 48) = StringLiteral_16992/*"ba3"*/;
-  sub_1C36FFC((CGThumbnailListItem_o *)(v69 + 48), v76, v74, v75);
-  if ( *(_DWORD *)(v69 + 24) <= 3u )
+  v77 = StringLiteral_17008/*"ba3"*/;
+  *(_QWORD *)(v70 + 48) = StringLiteral_17008/*"ba3"*/;
+  sub_1C3E508((CGThumbnailListItem_o *)(v70 + 48), v77, v75, v76);
+  if ( *(_DWORD *)(v70 + 24) <= 3u )
     goto LABEL_56;
-  v79 = StringLiteral_16996/*"ba7"*/;
-  *(_QWORD *)(v69 + 56) = StringLiteral_16996/*"ba7"*/;
-  sub_1C36FFC((CGThumbnailListItem_o *)(v69 + 56), v79, v77, v78);
-  if ( *(_DWORD *)(v69 + 24) <= 4u )
+  v80 = StringLiteral_17012/*"ba7"*/;
+  *(_QWORD *)(v70 + 56) = StringLiteral_17012/*"ba7"*/;
+  sub_1C3E508((CGThumbnailListItem_o *)(v70 + 56), v80, v78, v79);
+  if ( *(_DWORD *)(v70 + 24) <= 4u )
     goto LABEL_56;
-  v82 = StringLiteral_16976/*"ba10"*/;
-  *(_QWORD *)(v69 + 64) = StringLiteral_16976/*"ba10"*/;
-  sub_1C36FFC((CGThumbnailListItem_o *)(v69 + 64), v82, v80, v81);
-  if ( *(_DWORD *)(v69 + 24) <= 5u )
+  v83 = StringLiteral_16992/*"ba10"*/;
+  *(_QWORD *)(v70 + 64) = StringLiteral_16992/*"ba10"*/;
+  sub_1C3E508((CGThumbnailListItem_o *)(v70 + 64), v83, v81, v82);
+  if ( *(_DWORD *)(v70 + 24) <= 5u )
     goto LABEL_56;
-  v85 = StringLiteral_16977/*"ba10a"*/;
-  *(_QWORD *)(v69 + 72) = StringLiteral_16977/*"ba10a"*/;
-  sub_1C36FFC((CGThumbnailListItem_o *)(v69 + 72), v85, v83, v84);
-  if ( *(_DWORD *)(v69 + 24) <= 6u )
+  v86 = StringLiteral_16993/*"ba10a"*/;
+  *(_QWORD *)(v70 + 72) = StringLiteral_16993/*"ba10a"*/;
+  sub_1C3E508((CGThumbnailListItem_o *)(v70 + 72), v86, v84, v85);
+  if ( *(_DWORD *)(v70 + 24) <= 6u )
     goto LABEL_56;
-  v88 = StringLiteral_16978/*"ba11"*/;
-  *(_QWORD *)(v69 + 80) = StringLiteral_16978/*"ba11"*/;
-  sub_1C36FFC((CGThumbnailListItem_o *)(v69 + 80), v88, v86, v87);
-  if ( *(_DWORD *)(v69 + 24) <= 7u )
+  v89 = StringLiteral_16994/*"ba11"*/;
+  *(_QWORD *)(v70 + 80) = StringLiteral_16994/*"ba11"*/;
+  sub_1C3E508((CGThumbnailListItem_o *)(v70 + 80), v89, v87, v88);
+  if ( *(_DWORD *)(v70 + 24) <= 7u )
     goto LABEL_56;
-  v91 = StringLiteral_16979/*"ba12"*/;
-  *(_QWORD *)(v69 + 88) = StringLiteral_16979/*"ba12"*/;
-  sub_1C36FFC((CGThumbnailListItem_o *)(v69 + 88), v91, v89, v90);
-  if ( *(_DWORD *)(v69 + 24) <= 8u )
+  v92 = StringLiteral_16995/*"ba12"*/;
+  *(_QWORD *)(v70 + 88) = StringLiteral_16995/*"ba12"*/;
+  sub_1C3E508((CGThumbnailListItem_o *)(v70 + 88), v92, v90, v91);
+  if ( *(_DWORD *)(v70 + 24) <= 8u )
     goto LABEL_56;
-  v94 = StringLiteral_16982/*"ba16"*/;
-  *(_QWORD *)(v69 + 96) = StringLiteral_16982/*"ba16"*/;
-  sub_1C36FFC((CGThumbnailListItem_o *)(v69 + 96), v94, v92, v93);
-  if ( *(_DWORD *)(v69 + 24) <= 9u )
+  v95 = StringLiteral_16998/*"ba16"*/;
+  *(_QWORD *)(v70 + 96) = StringLiteral_16998/*"ba16"*/;
+  sub_1C3E508((CGThumbnailListItem_o *)(v70 + 96), v95, v93, v94);
+  if ( *(_DWORD *)(v70 + 24) <= 9u )
     goto LABEL_56;
-  v97 = StringLiteral_16984/*"ba18"*/;
-  *(_QWORD *)(v69 + 104) = StringLiteral_16984/*"ba18"*/;
-  sub_1C36FFC((CGThumbnailListItem_o *)(v69 + 104), v97, v95, v96);
-  if ( *(_DWORD *)(v69 + 24) <= 0xAu )
+  v98 = StringLiteral_17000/*"ba18"*/;
+  *(_QWORD *)(v70 + 104) = StringLiteral_17000/*"ba18"*/;
+  sub_1C3E508((CGThumbnailListItem_o *)(v70 + 104), v98, v96, v97);
+  if ( *(_DWORD *)(v70 + 24) <= 0xAu )
     goto LABEL_56;
-  v100 = StringLiteral_16985/*"ba19"*/;
-  *(_QWORD *)(v69 + 112) = StringLiteral_16985/*"ba19"*/;
-  sub_1C36FFC((CGThumbnailListItem_o *)(v69 + 112), v100, v98, v99);
-  if ( *(_DWORD *)(v69 + 24) <= 0xBu )
+  v101 = StringLiteral_17001/*"ba19"*/;
+  *(_QWORD *)(v70 + 112) = StringLiteral_17001/*"ba19"*/;
+  sub_1C3E508((CGThumbnailListItem_o *)(v70 + 112), v101, v99, v100);
+  if ( *(_DWORD *)(v70 + 24) <= 0xBu )
     goto LABEL_56;
-  v103 = StringLiteral_16987/*"ba20"*/;
-  *(_QWORD *)(v69 + 120) = StringLiteral_16987/*"ba20"*/;
-  sub_1C36FFC((CGThumbnailListItem_o *)(v69 + 120), v103, v101, v102);
-  if ( *(_DWORD *)(v69 + 24) <= 0xCu )
+  v104 = StringLiteral_17003/*"ba20"*/;
+  *(_QWORD *)(v70 + 120) = StringLiteral_17003/*"ba20"*/;
+  sub_1C3E508((CGThumbnailListItem_o *)(v70 + 120), v104, v102, v103);
+  if ( *(_DWORD *)(v70 + 24) <= 0xCu )
     goto LABEL_56;
-  v106 = StringLiteral_16988/*"ba21"*/;
-  *(_QWORD *)(v69 + 128) = StringLiteral_16988/*"ba21"*/;
-  sub_1C36FFC((CGThumbnailListItem_o *)(v69 + 128), v106, v104, v105);
-  if ( *(_DWORD *)(v69 + 24) <= 0xDu )
+  v107 = StringLiteral_17004/*"ba21"*/;
+  *(_QWORD *)(v70 + 128) = StringLiteral_17004/*"ba21"*/;
+  sub_1C3E508((CGThumbnailListItem_o *)(v70 + 128), v107, v105, v106);
+  if ( *(_DWORD *)(v70 + 24) <= 0xDu )
     goto LABEL_56;
-  v109 = StringLiteral_16989/*"ba22"*/;
-  *(_QWORD *)(v69 + 136) = StringLiteral_16989/*"ba22"*/;
-  sub_1C36FFC((CGThumbnailListItem_o *)(v69 + 136), v109, v107, v108);
-  if ( *(_DWORD *)(v69 + 24) <= 0xEu )
+  v110 = StringLiteral_17005/*"ba22"*/;
+  *(_QWORD *)(v70 + 136) = StringLiteral_17005/*"ba22"*/;
+  sub_1C3E508((CGThumbnailListItem_o *)(v70 + 136), v110, v108, v109);
+  if ( *(_DWORD *)(v70 + 24) <= 0xEu )
     goto LABEL_56;
-  v112 = StringLiteral_16990/*"ba23"*/;
-  *(_QWORD *)(v69 + 144) = StringLiteral_16990/*"ba23"*/;
-  sub_1C36FFC((CGThumbnailListItem_o *)(v69 + 144), v112, v110, v111);
-  if ( *(_DWORD *)(v69 + 24) <= 0xFu )
+  v113 = StringLiteral_17006/*"ba23"*/;
+  *(_QWORD *)(v70 + 144) = StringLiteral_17006/*"ba23"*/;
+  sub_1C3E508((CGThumbnailListItem_o *)(v70 + 144), v113, v111, v112);
+  if ( *(_DWORD *)(v70 + 24) <= 0xFu )
     goto LABEL_56;
-  v115 = StringLiteral_16991/*"ba24"*/;
-  *(_QWORD *)(v69 + 152) = StringLiteral_16991/*"ba24"*/;
-  sub_1C36FFC((CGThumbnailListItem_o *)(v69 + 152), v115, v113, v114);
-  if ( *(_DWORD *)(v69 + 24) <= 0x10u )
+  v116 = StringLiteral_17007/*"ba24"*/;
+  *(_QWORD *)(v70 + 152) = StringLiteral_17007/*"ba24"*/;
+  sub_1C3E508((CGThumbnailListItem_o *)(v70 + 152), v116, v114, v115);
+  if ( *(_DWORD *)(v70 + 24) <= 0x10u )
     goto LABEL_56;
-  v118 = StringLiteral_16993/*"ba30"*/;
-  *(_QWORD *)(v69 + 160) = StringLiteral_16993/*"ba30"*/;
-  sub_1C36FFC((CGThumbnailListItem_o *)(v69 + 160), v118, v116, v117);
-  if ( *(_DWORD *)(v69 + 24) <= 0x11u )
+  v119 = StringLiteral_17009/*"ba30"*/;
+  *(_QWORD *)(v70 + 160) = StringLiteral_17009/*"ba30"*/;
+  sub_1C3E508((CGThumbnailListItem_o *)(v70 + 160), v119, v117, v118);
+  if ( *(_DWORD *)(v70 + 24) <= 0x11u )
     goto LABEL_56;
-  v121 = StringLiteral_16855/*"ar2"*/;
-  *(_QWORD *)(v69 + 168) = StringLiteral_16855/*"ar2"*/;
-  sub_1C36FFC((CGThumbnailListItem_o *)(v69 + 168), v121, v119, v120);
-  if ( *(_DWORD *)(v69 + 24) <= 0x12u )
+  v122 = StringLiteral_16870/*"ar2"*/;
+  *(_QWORD *)(v70 + 168) = StringLiteral_16870/*"ar2"*/;
+  sub_1C3E508((CGThumbnailListItem_o *)(v70 + 168), v122, v120, v121);
+  if ( *(_DWORD *)(v70 + 24) <= 0x12u )
     goto LABEL_56;
-  v124 = StringLiteral_16849/*"ar102"*/;
-  *(_QWORD *)(v69 + 176) = StringLiteral_16849/*"ar102"*/;
-  sub_1C36FFC((CGThumbnailListItem_o *)(v69 + 176), v124, v122, v123);
-  if ( *(_DWORD *)(v69 + 24) <= 0x13u )
+  v125 = StringLiteral_16864/*"ar102"*/;
+  *(_QWORD *)(v70 + 176) = StringLiteral_16864/*"ar102"*/;
+  sub_1C3E508((CGThumbnailListItem_o *)(v70 + 176), v125, v123, v124);
+  if ( *(_DWORD *)(v70 + 24) <= 0x13u )
     goto LABEL_56;
-  v127 = StringLiteral_18032/*"co1"*/;
-  *(_QWORD *)(v69 + 184) = StringLiteral_18032/*"co1"*/;
-  sub_1C36FFC((CGThumbnailListItem_o *)(v69 + 184), v127, v125, v126);
-  if ( *(_DWORD *)(v69 + 24) <= 0x14u )
+  v128 = StringLiteral_18049/*"co1"*/;
+  *(_QWORD *)(v70 + 184) = StringLiteral_18049/*"co1"*/;
+  sub_1C3E508((CGThumbnailListItem_o *)(v70 + 184), v128, v126, v127);
+  if ( *(_DWORD *)(v70 + 24) <= 0x14u )
     goto LABEL_56;
-  v130 = StringLiteral_21597/*"mis1"*/;
-  *(_QWORD *)(v69 + 192) = StringLiteral_21597/*"mis1"*/;
-  sub_1C36FFC((CGThumbnailListItem_o *)(v69 + 192), v130, v128, v129);
-  if ( *(_DWORD *)(v69 + 24) <= 0x15u )
+  v131 = StringLiteral_21615/*"mis1"*/;
+  *(_QWORD *)(v70 + 192) = StringLiteral_21615/*"mis1"*/;
+  sub_1C3E508((CGThumbnailListItem_o *)(v70 + 192), v131, v129, v130);
+  if ( *(_DWORD *)(v70 + 24) <= 0x15u )
     goto LABEL_56;
-  v133 = StringLiteral_24035/*"testSe"*/;
-  *(_QWORD *)(v69 + 200) = StringLiteral_24035/*"testSe"*/;
-  sub_1C36FFC((CGThumbnailListItem_o *)(v69 + 200), v133, v131, v132);
-  if ( *(_DWORD *)(v69 + 24) <= 0x16u )
+  v134 = StringLiteral_24055/*"testSe"*/;
+  *(_QWORD *)(v70 + 200) = StringLiteral_24055/*"testSe"*/;
+  sub_1C3E508((CGThumbnailListItem_o *)(v70 + 200), v134, v132, v133);
+  if ( *(_DWORD *)(v70 + 24) <= 0x16u )
     goto LABEL_56;
-  v136 = StringLiteral_24850/*"wo1"*/;
-  *(_QWORD *)(v69 + 208) = StringLiteral_24850/*"wo1"*/;
-  sub_1C36FFC((CGThumbnailListItem_o *)(v69 + 208), v136, v134, v135);
-  if ( *(_DWORD *)(v69 + 24) <= 0x17u )
+  v137 = StringLiteral_24870/*"wo1"*/;
+  *(_QWORD *)(v70 + 208) = StringLiteral_24870/*"wo1"*/;
+  sub_1C3E508((CGThumbnailListItem_o *)(v70 + 208), v137, v135, v136);
+  if ( *(_DWORD *)(v70 + 24) <= 0x17u )
     goto LABEL_56;
-  v139 = StringLiteral_24851/*"wo11"*/;
-  *(_QWORD *)(v69 + 216) = StringLiteral_24851/*"wo11"*/;
-  sub_1C36FFC((CGThumbnailListItem_o *)(v69 + 216), v139, v137, v138);
-  if ( *(_DWORD *)(v69 + 24) <= 0x18u )
+  v140 = StringLiteral_24871/*"wo11"*/;
+  *(_QWORD *)(v70 + 216) = StringLiteral_24871/*"wo11"*/;
+  sub_1C3E508((CGThumbnailListItem_o *)(v70 + 216), v140, v138, v139);
+  if ( *(_DWORD *)(v70 + 24) <= 0x18u )
     goto LABEL_56;
-  v142 = StringLiteral_16994/*"ba38"*/;
-  *(_QWORD *)(v69 + 224) = StringLiteral_16994/*"ba38"*/;
-  sub_1C36FFC((CGThumbnailListItem_o *)(v69 + 224), v142, v140, v141);
-  if ( *(_DWORD *)(v69 + 24) <= 0x19u )
+  v143 = StringLiteral_17010/*"ba38"*/;
+  *(_QWORD *)(v70 + 224) = StringLiteral_17010/*"ba38"*/;
+  sub_1C3E508((CGThumbnailListItem_o *)(v70 + 224), v143, v141, v142);
+  if ( *(_DWORD *)(v70 + 24) <= 0x19u )
     goto LABEL_56;
-  v145 = StringLiteral_16980/*"ba13"*/;
-  *(_QWORD *)(v69 + 232) = StringLiteral_16980/*"ba13"*/;
-  sub_1C36FFC((CGThumbnailListItem_o *)(v69 + 232), v145, v143, v144);
-  if ( *(_DWORD *)(v69 + 24) <= 0x1Au )
+  v146 = StringLiteral_16996/*"ba13"*/;
+  *(_QWORD *)(v70 + 232) = StringLiteral_16996/*"ba13"*/;
+  sub_1C3E508((CGThumbnailListItem_o *)(v70 + 232), v146, v144, v145);
+  if ( *(_DWORD *)(v70 + 24) <= 0x1Au )
     goto LABEL_56;
-  v148 = StringLiteral_16981/*"ba15"*/;
-  *(_QWORD *)(v69 + 240) = StringLiteral_16981/*"ba15"*/;
-  sub_1C36FFC((CGThumbnailListItem_o *)(v69 + 240), v148, v146, v147);
-  if ( *(_DWORD *)(v69 + 24) <= 0x1Bu )
+  v149 = StringLiteral_16997/*"ba15"*/;
+  *(_QWORD *)(v70 + 240) = StringLiteral_16997/*"ba15"*/;
+  sub_1C3E508((CGThumbnailListItem_o *)(v70 + 240), v149, v147, v148);
+  if ( *(_DWORD *)(v70 + 24) <= 0x1Bu )
     goto LABEL_56;
-  v151 = StringLiteral_16983/*"ba17"*/;
-  *(_QWORD *)(v69 + 248) = StringLiteral_16983/*"ba17"*/;
-  sub_1C36FFC((CGThumbnailListItem_o *)(v69 + 248), v151, v149, v150);
-  if ( *(_DWORD *)(v69 + 24) <= 0x1Cu )
+  v152 = StringLiteral_16999/*"ba17"*/;
+  *(_QWORD *)(v70 + 248) = StringLiteral_16999/*"ba17"*/;
+  sub_1C3E508((CGThumbnailListItem_o *)(v70 + 248), v152, v150, v151);
+  if ( *(_DWORD *)(v70 + 24) <= 0x1Cu )
     goto LABEL_56;
-  v154 = StringLiteral_16850/*"ar112"*/;
-  *(_QWORD *)(v69 + 256) = StringLiteral_16850/*"ar112"*/;
-  sub_1C36FFC((CGThumbnailListItem_o *)(v69 + 256), v154, v152, v153);
-  if ( *(_DWORD *)(v69 + 24) <= 0x1Du )
+  v155 = StringLiteral_16865/*"ar112"*/;
+  *(_QWORD *)(v70 + 256) = StringLiteral_16865/*"ar112"*/;
+  sub_1C3E508((CGThumbnailListItem_o *)(v70 + 256), v155, v153, v154);
+  if ( *(_DWORD *)(v70 + 24) <= 0x1Du )
     goto LABEL_56;
-  v157 = StringLiteral_22845/*"qev79"*/;
-  *(_QWORD *)(v69 + 264) = StringLiteral_22845/*"qev79"*/;
-  sub_1C36FFC((CGThumbnailListItem_o *)(v69 + 264), v157, v155, v156);
-  this->fields.commonSeClipNames = (struct System_String_array *)v69;
-  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.commonSeClipNames, v69, v158, v159);
+  v158 = StringLiteral_22864/*"qev79"*/;
+  *(_QWORD *)(v70 + 264) = StringLiteral_22864/*"qev79"*/;
+  sub_1C3E508((CGThumbnailListItem_o *)(v70 + 264), v158, v156, v157);
+  this->fields.commonSeClipNames = (struct System_String_array *)v70;
+  sub_1C3E508((CGThumbnailListItem_o *)&this->fields.commonSeClipNames, v70, v159, v160);
   SingletonMonoBehaviour_object____ctor(
     (SingletonMonoBehaviour_T__o *)this,
-    (const MethodInfo_39ED654 *)Method_SingletonMonoBehaviour_SeManager___ctor__);
+    (const MethodInfo_39FFA90 *)Method_SingletonMonoBehaviour_SeManager___ctor__);
 }
 
 
@@ -546,23 +548,24 @@ void SeManager__ChangeVolumeSe(System_String_o *name, float volume, float fadeTi
 {
   Il2CppObject *Instance; // x20
   _BOOL8 v8; // x0
-  const MethodInfo *v9; // x2
+  __int64 v9; // x1
+  const MethodInfo *v10; // x2
 
-  if ( (byte_4C42944 & 1) == 0 )
+  if ( (byte_4C566ED & 1) == 0 )
   {
-    sub_1C37058(&UnityEngine_Object_TypeInfo);
-    sub_1C37058(&Method_SingletonMonoBehaviour_SeManager__get_Instance__);
-    byte_4C42944 = 1;
+    sub_1C3E564(&UnityEngine_Object_TypeInfo);
+    sub_1C3E564(&Method_SingletonMonoBehaviour_SeManager__get_Instance__);
+    byte_4C566ED = 1;
   }
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39ED16C *)Method_SingletonMonoBehaviour_SeManager__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39FF5A8 *)Method_SingletonMonoBehaviour_SeManager__get_Instance__);
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   v8 = UnityEngine_Object__op_Equality((UnityEngine_Object_o *)Instance, 0, 0);
   if ( !v8 )
   {
     if ( !Instance )
-      sub_1C372B4(v8);
-    SeManager__ChangeVolumeSeLocal((SeManager_o *)Instance, name, volume, fadeTime, v9);
+      sub_1C3E7C0(v8, v9);
+    SeManager__ChangeVolumeSeLocal((SeManager_o *)Instance, name, volume, fadeTime, v10);
   }
 }
 
@@ -574,16 +577,16 @@ void SeManager__ChangeVolumeSeLocal(
         float fadeTime,
         const MethodInfo *method)
 {
-  SePlayer_o *SePlayer_41499400; // x0
+  SePlayer_o *SePlayer_41547928; // x0
   const MethodInfo *v8; // x1
 
-  SePlayer_41499400 = SeManager__GetSePlayer_41499400(this, name, method);
-  if ( SePlayer_41499400 )
-    SePlayer__ChangeVolume(SePlayer_41499400, volume, fadeTime, v8);
+  SePlayer_41547928 = SeManager__GetSePlayer_41547928(this, name, method);
+  if ( SePlayer_41547928 )
+    SePlayer__ChangeVolume(SePlayer_41547928, volume, fadeTime, v8);
 }
 
 
-void SeManager__ChangeVolumeSeLocal_41494424(
+void SeManager__ChangeVolumeSeLocal_41542952(
         SeManager_o *this,
         System_String_o *assetName,
         System_String_o *objectName,
@@ -591,12 +594,12 @@ void SeManager__ChangeVolumeSeLocal_41494424(
         float fadeTime,
         const MethodInfo *method)
 {
-  SePlayer_o *SePlayer_41499576; // x0
+  SePlayer_o *SePlayer_41548104; // x0
   const MethodInfo *v9; // x1
 
-  SePlayer_41499576 = SeManager__GetSePlayer_41499576(this, assetName, objectName, method);
-  if ( SePlayer_41499576 )
-    SePlayer__ChangeVolume(SePlayer_41499576, volume, fadeTime, v9);
+  SePlayer_41548104 = SeManager__GetSePlayer_41548104(this, assetName, objectName, method);
+  if ( SePlayer_41548104 )
+    SePlayer__ChangeVolume(SePlayer_41548104, volume, fadeTime, v9);
 }
 
 
@@ -609,23 +612,24 @@ void SeManager__ChangeVolumeVoice(
 {
   Il2CppObject *Instance; // x21
   _BOOL8 v10; // x0
-  const MethodInfo *v11; // x3
+  __int64 v11; // x1
+  const MethodInfo *v12; // x3
 
-  if ( (byte_4C42945 & 1) == 0 )
+  if ( (byte_4C566EE & 1) == 0 )
   {
-    sub_1C37058(&UnityEngine_Object_TypeInfo);
-    sub_1C37058(&Method_SingletonMonoBehaviour_SeManager__get_Instance__);
-    byte_4C42945 = 1;
+    sub_1C3E564(&UnityEngine_Object_TypeInfo);
+    sub_1C3E564(&Method_SingletonMonoBehaviour_SeManager__get_Instance__);
+    byte_4C566EE = 1;
   }
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39ED16C *)Method_SingletonMonoBehaviour_SeManager__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39FF5A8 *)Method_SingletonMonoBehaviour_SeManager__get_Instance__);
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   v10 = UnityEngine_Object__op_Equality((UnityEngine_Object_o *)Instance, 0, 0);
   if ( !v10 )
   {
     if ( !Instance )
-      sub_1C372B4(v10);
-    SeManager__ChangeVolumeVoiceLocal((SeManager_o *)Instance, assetName, objectName, volume, fadeTime, v11);
+      sub_1C3E7C0(v10, v11);
+    SeManager__ChangeVolumeVoiceLocal((SeManager_o *)Instance, assetName, objectName, volume, fadeTime, v12);
   }
 }
 
@@ -639,12 +643,12 @@ void SeManager__ChangeVolumeVoiceLocal(
         const MethodInfo *method)
 {
   const MethodInfo *v6; // x4
-  SePlayer_o *SePlayer_41499992; // x0
+  SePlayer_o *SePlayer_41548520; // x0
   const MethodInfo *v10; // x1
 
-  SePlayer_41499992 = SeManager__GetSePlayer_41499992(this, 1, assetName, objectName, v6);
-  if ( SePlayer_41499992 )
-    SePlayer__ChangeVolume(SePlayer_41499992, volume, fadeTime, v10);
+  SePlayer_41548520 = SeManager__GetSePlayer_41548520(this, 1, assetName, objectName, v6);
+  if ( SePlayer_41548520 )
+    SePlayer__ChangeVolume(SePlayer_41548520, volume, fadeTime, v10);
 }
 
 
@@ -680,30 +684,30 @@ CriAtomSource_o *SeManager__GetAudioSource(SeManager_o *this, SePlayer_o *player
   }
   if ( player )
   {
-    this = (SeManager_o *)sub_1C37194(player, sePlayerStatusList->obj.klass->_1.element_class);
+    this = (SeManager_o *)sub_1C3E6A0(player, sePlayerStatusList->obj.klass->_1.element_class);
     if ( !this )
     {
-      v13 = sub_1C372D8(0);
-      sub_1C37180(v13, 0);
+      v13 = sub_1C3E7E4(0);
+      sub_1C3E68C(v13, 0);
     }
     max_length = sePlayerStatusList->max_length;
   }
   if ( v9 >= (unsigned int)max_length )
 LABEL_15:
-    sub_1C372BC(this);
+    sub_1C3E7C8(this, player);
   *(Il2CppClass **)((char *)&sePlayerStatusList->obj.klass + i) = (Il2CppClass *)player;
-  sub_1C36FFC((CGThumbnailListItem_o *)((char *)sePlayerStatusList + i), (int32_t)player, (int32_t)method, v3);
+  sub_1C3E508((CGThumbnailListItem_o *)((char *)sePlayerStatusList + i), (int32_t)player, (int32_t)method, v3);
   seSources = v6->fields.seSources;
   if ( !seSources )
 LABEL_16:
-    sub_1C372B4(this);
+    sub_1C3E7C0(this, player);
   if ( v9 >= LODWORD(seSources->max_length) )
     goto LABEL_15;
   return *(CriAtomSource_o **)((char *)&seSources->obj.klass + i);
 }
 
 
-CriAtomSource_o *SeManager__GetAudioSource_41498172(
+CriAtomSource_o *SeManager__GetAudioSource_41546700(
         SeManager_o *this,
         SePlayer_o *player,
         System_String_o *cueSheet,
@@ -717,11 +721,10 @@ CriAtomSource_o *SeManager__GetAudioSource_41498172(
   struct CriAtomSource_array *seSources; // x9
   SePlayer_o *v13; // x24
   CriAtomSource_o *v14; // x23
-  const MethodInfo *v15; // x1
-  int32_t v17; // w2
-  const MethodInfo *v18; // x3
-  struct SePlayer_array *v19; // x20
-  __int64 v20; // x0
+  int32_t v16; // w2
+  const MethodInfo *v17; // x3
+  struct SePlayer_array *v18; // x20
+  __int64 v19; // x0
 
   v5 = this;
   if ( this->fields.seMax < 1 )
@@ -756,31 +759,31 @@ CriAtomSource_o *SeManager__GetAudioSource_41498172(
     if ( (__int64)++v9 >= v5->fields.seMax )
       return SeManager__GetAudioSource(v5, player, (const MethodInfo *)cueSheet);
   }
-  SePlayer__StopSe(v13, 0.0, v15);
-  v19 = v5->fields.sePlayerStatusList;
-  if ( !v19 )
+  SePlayer__StopSe(v13, 0.0, (const MethodInfo *)player);
+  v18 = v5->fields.sePlayerStatusList;
+  if ( !v18 )
 LABEL_18:
-    sub_1C372B4(this);
+    sub_1C3E7C0(this, player);
   if ( player )
   {
-    this = (SeManager_o *)sub_1C37194(player, v19->obj.klass->_1.element_class);
+    this = (SeManager_o *)sub_1C3E6A0(player, v18->obj.klass->_1.element_class);
     if ( !this )
     {
-      v20 = sub_1C372D8(0);
-      sub_1C37180(v20, 0);
+      v19 = sub_1C3E7E4(0);
+      sub_1C3E68C(v19, 0);
     }
   }
-  if ( (unsigned int)v9 >= LODWORD(v19->max_length) )
+  if ( (unsigned int)v9 >= LODWORD(v18->max_length) )
 LABEL_19:
-    sub_1C372BC(this);
-  *(Il2CppClass **)((char *)&v19->obj.klass + i) = (Il2CppClass *)player;
-  sub_1C36FFC((CGThumbnailListItem_o *)((char *)v19 + i), (int32_t)player, v17, v18);
+    sub_1C3E7C8(this, player);
+  *(Il2CppClass **)((char *)&v18->obj.klass + i) = (Il2CppClass *)player;
+  sub_1C3E508((CGThumbnailListItem_o *)((char *)v18 + i), (int32_t)player, v16, v17);
   return v14;
 }
 
 
 // local variable allocation has failed, the output may be wrong!
-CriAtomSource_o *SeManager__GetAudioSource_41498832(
+CriAtomSource_o *SeManager__GetAudioSource_41547360(
         SeManager_o *this,
         SePlayer_o *player,
         System_String_o *cueSheet,
@@ -800,10 +803,10 @@ CriAtomSource_o *SeManager__GetAudioSource_41498832(
 
   v7 = this;
   if ( !notOverwrite )
-    return SeManager__GetAudioSource_41498172(this, player, cueSheet, cueName, (const MethodInfo *)notOverwrite);
+    return SeManager__GetAudioSource_41546700(this, player, cueSheet, cueName, (const MethodInfo *)notOverwrite);
   seMax = this->fields.seMax;
   if ( seMax < 1 )
-    return SeManager__GetAudioSource_41498172(this, player, cueSheet, cueName, (const MethodInfo *)notOverwrite);
+    return SeManager__GetAudioSource_41546700(this, player, cueSheet, cueName, (const MethodInfo *)notOverwrite);
   sePlayerStatusList = this->fields.sePlayerStatusList;
   if ( !sePlayerStatusList )
     goto LABEL_19;
@@ -821,23 +824,23 @@ CriAtomSource_o *SeManager__GetAudioSource_41498832(
     if ( !*(Il2CppClass **)((char *)&sePlayerStatusList->obj.klass + i) )
       break;
     if ( (int)++v11 >= seMax )
-      return SeManager__GetAudioSource_41498172(this, player, cueSheet, cueName, (const MethodInfo *)notOverwrite);
+      return SeManager__GetAudioSource_41546700(this, player, cueSheet, cueName, (const MethodInfo *)notOverwrite);
   }
   if ( player )
   {
-    this = (SeManager_o *)sub_1C37194(player, sePlayerStatusList->obj.klass->_1.element_class);
+    this = (SeManager_o *)sub_1C3E6A0(player, sePlayerStatusList->obj.klass->_1.element_class);
     if ( !this )
     {
-      v16 = sub_1C372D8(0);
-      sub_1C37180(v16, 0);
+      v16 = sub_1C3E7E4(0);
+      sub_1C3E68C(v16, 0);
     }
     max_length = sePlayerStatusList->max_length;
   }
   if ( v11 >= (unsigned int)max_length )
 LABEL_18:
-    sub_1C372BC(this);
+    sub_1C3E7C8(this, player);
   *(Il2CppClass **)((char *)&sePlayerStatusList->obj.klass + i) = (Il2CppClass *)player;
-  sub_1C36FFC(
+  sub_1C3E508(
     (CGThumbnailListItem_o *)((char *)sePlayerStatusList + i),
     (int32_t)player,
     (int32_t)cueSheet,
@@ -845,7 +848,7 @@ LABEL_18:
   v15 = v7->fields.seSources;
   if ( !v15 )
 LABEL_19:
-    sub_1C372B4(this);
+    sub_1C3E7C0(this, player);
   if ( v11 >= LODWORD(v15->max_length) )
     goto LABEL_18;
   return *(CriAtomSource_o **)((char *)&v15->obj.klass + i);
@@ -855,29 +858,31 @@ LABEL_19:
 System_String_o *SeManager__GetCommonSeName(int32_t kind, const MethodInfo *method)
 {
   Il2CppObject *Instance; // x0
-  const MethodInfo *v4; // x2
+  __int64 v4; // x1
+  const MethodInfo *v5; // x2
 
-  if ( (byte_4C42928 & 1) == 0 )
+  if ( (byte_4C566D1 & 1) == 0 )
   {
-    sub_1C37058(&Method_SingletonMonoBehaviour_SeManager__get_Instance__);
-    byte_4C42928 = 1;
+    sub_1C3E564(&Method_SingletonMonoBehaviour_SeManager__get_Instance__);
+    byte_4C566D1 = 1;
   }
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39ED16C *)Method_SingletonMonoBehaviour_SeManager__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39FF5A8 *)Method_SingletonMonoBehaviour_SeManager__get_Instance__);
   if ( !Instance )
-    sub_1C372B4(0);
-  return SeManager__GetCommonSeNameLocal((SeManager_o *)Instance, kind, v4);
+    sub_1C3E7C0(0, v4);
+  return SeManager__GetCommonSeNameLocal((SeManager_o *)Instance, kind, v5);
 }
 
 
+// local variable allocation has failed, the output may be wrong!
 System_String_o *SeManager__GetCommonSeNameLocal(SeManager_o *this, int32_t kind, const MethodInfo *method)
 {
   struct System_String_array *commonSeClipNames; // x8
 
   commonSeClipNames = this->fields.commonSeClipNames;
   if ( !commonSeClipNames )
-    sub_1C372B4(this);
+    sub_1C3E7C0(this, *(_QWORD *)&kind);
   if ( LODWORD(commonSeClipNames->max_length) <= kind )
-    sub_1C372BC(this);
+    sub_1C3E7C8(this, *(_QWORD *)&kind);
   return commonSeClipNames->m_Items[kind];
 }
 
@@ -904,12 +909,12 @@ float SeManager__GetDefaultPreDelayTime(
 
 System_String_o *SeManager__GetPathName(System_String_o *name, const MethodInfo *method)
 {
-  if ( (byte_4C4291E & 1) == 0 )
+  if ( (byte_4C566C7 & 1) == 0 )
   {
-    sub_1C37058(&StringLiteral_12654/*"Se/"*/);
-    byte_4C4291E = 1;
+    sub_1C3E564(&StringLiteral_12662/*"Se/"*/);
+    byte_4C566C7 = 1;
   }
-  return System_String__Concat_63561656((System_String_o *)StringLiteral_12654/*"Se/"*/, name, 0);
+  return System_String__Concat_63636468((System_String_o *)StringLiteral_12662/*"Se/"*/, name, 0);
 }
 
 
@@ -917,40 +922,41 @@ float SeManager__GetPitchSe(System_String_o *name, const MethodInfo *method)
 {
   Il2CppObject *Instance; // x20
   _BOOL8 v4; // x0
-  const MethodInfo *v5; // x2
-  float v6; // s8
-  SePlayer_o *SePlayer_41499400; // x0
+  __int64 v5; // x1
+  const MethodInfo *v6; // x2
+  float v7; // s8
+  SePlayer_o *SePlayer_41547928; // x0
 
-  if ( (byte_4C42947 & 1) == 0 )
+  if ( (byte_4C566F0 & 1) == 0 )
   {
-    sub_1C37058(&UnityEngine_Object_TypeInfo);
-    sub_1C37058(&Method_SingletonMonoBehaviour_SeManager__get_Instance__);
-    byte_4C42947 = 1;
+    sub_1C3E564(&UnityEngine_Object_TypeInfo);
+    sub_1C3E564(&Method_SingletonMonoBehaviour_SeManager__get_Instance__);
+    byte_4C566F0 = 1;
   }
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39ED16C *)Method_SingletonMonoBehaviour_SeManager__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39FF5A8 *)Method_SingletonMonoBehaviour_SeManager__get_Instance__);
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   v4 = UnityEngine_Object__op_Equality((UnityEngine_Object_o *)Instance, 0, 0);
-  v6 = 0.0;
+  v7 = 0.0;
   if ( !v4 )
   {
     if ( !Instance )
-      sub_1C372B4(v4);
-    SePlayer_41499400 = SeManager__GetSePlayer_41499400((SeManager_o *)Instance, name, v5);
-    if ( SePlayer_41499400 )
-      return SePlayer_41499400->fields.pitchValue;
+      sub_1C3E7C0(v4, v5);
+    SePlayer_41547928 = SeManager__GetSePlayer_41547928((SeManager_o *)Instance, name, v6);
+    if ( SePlayer_41547928 )
+      return SePlayer_41547928->fields.pitchValue;
   }
-  return v6;
+  return v7;
 }
 
 
 float SeManager__GetPitchSeLocal(SeManager_o *this, System_String_o *name, const MethodInfo *method)
 {
-  SePlayer_o *SePlayer_41499400; // x0
+  SePlayer_o *SePlayer_41547928; // x0
 
-  SePlayer_41499400 = SeManager__GetSePlayer_41499400(this, name, method);
-  if ( SePlayer_41499400 )
-    return SePlayer_41499400->fields.pitchValue;
+  SePlayer_41547928 = SeManager__GetSePlayer_41547928(this, name, method);
+  if ( SePlayer_41547928 )
+    return SePlayer_41547928->fields.pitchValue;
   else
     return 0.0;
 }
@@ -967,10 +973,10 @@ float SeManager__GetPreDelayTime(
   CriAtomExAcb_o *Acb; // x0
   CriAtomEx_WaveformInfo_o v11; // [xsp+0h] [xbp-60h] BYREF
 
-  if ( (byte_4C4294E & 1) == 0 )
+  if ( (byte_4C566F7 & 1) == 0 )
   {
-    sub_1C37058(&Method_System_Linq_Enumerable_Contains_string___);
-    byte_4C4294E = 1;
+    sub_1C3E564(&Method_System_Linq_Enumerable_Contains_string___);
+    byte_4C566F7 = 1;
   }
   v7 = 0.0;
   if ( this->fields.enablePreDelay )
@@ -980,7 +986,7 @@ float SeManager__GetPreDelayTime(
       || !System_Linq_Enumerable__Contains_object_(
             ignorePreDelayArray,
             (Il2CppObject *)cueName,
-            (const MethodInfo_3104EFC *)Method_System_Linq_Enumerable_Contains_string___) )
+            (const MethodInfo_3116DF0 *)Method_System_Linq_Enumerable_Contains_string___) )
     {
       Acb = CriAtom__GetAcb(cueSheet, 0);
       memset(&v11, 0, sizeof(v11));
@@ -994,6 +1000,7 @@ float SeManager__GetPreDelayTime(
 }
 
 
+// local variable allocation has failed, the output may be wrong!
 SePlayer_o *SeManager__GetSePlayer(SeManager_o *this, int32_t num, const MethodInfo *method)
 {
   SeManager_o *v4; // x20
@@ -1001,16 +1008,16 @@ SePlayer_o *SeManager__GetSePlayer(SeManager_o *this, int32_t num, const MethodI
   int32_t i; // w21
 
   v4 = this;
-  if ( (byte_4C42950 & 1) == 0 )
+  if ( (byte_4C566F9 & 1) == 0 )
   {
-    sub_1C37058(&Method_System_Collections_Generic_List_SePlayer__get_Count__);
-    this = (SeManager_o *)sub_1C37058(&Method_System_Collections_Generic_List_SePlayer__get_Item__);
-    byte_4C42950 = 1;
+    sub_1C3E564(&Method_System_Collections_Generic_List_SePlayer__get_Count__);
+    this = (SeManager_o *)sub_1C3E564(&Method_System_Collections_Generic_List_SePlayer__get_Item__);
+    byte_4C566F9 = 1;
   }
   workSePlayerStatusList = v4->fields.workSePlayerStatusList;
   if ( !workSePlayerStatusList )
 LABEL_11:
-    sub_1C372B4(this);
+    sub_1C3E7C0(this, *(_QWORD *)&num);
   for ( i = workSePlayerStatusList->fields._size - 1; (i & 0x80000000) == 0; --i )
   {
     this = (SeManager_o *)v4->fields.workSePlayerStatusList;
@@ -1019,7 +1026,7 @@ LABEL_11:
     this = (SeManager_o *)System_Collections_Generic_List_object___get_Item(
                             (System_Collections_Generic_List_object__o *)this,
                             i,
-                            (const MethodInfo_37A2D54 *)Method_System_Collections_Generic_List_SePlayer__get_Item__);
+                            (const MethodInfo_37B5190 *)Method_System_Collections_Generic_List_SePlayer__get_Item__);
     if ( !this )
       goto LABEL_11;
     if ( HIDWORD(this->fields.m_CachedPtr) == num )
@@ -1029,7 +1036,7 @@ LABEL_11:
 }
 
 
-SePlayer_o *SeManager__GetSePlayer_41499400(SeManager_o *this, System_String_o *name, const MethodInfo *method)
+SePlayer_o *SeManager__GetSePlayer_41547928(SeManager_o *this, System_String_o *name, const MethodInfo *method)
 {
   SeManager_o *v4; // x20
   struct System_Collections_Generic_List_SePlayer__o *workSePlayerStatusList; // x8
@@ -1037,16 +1044,16 @@ SePlayer_o *SeManager__GetSePlayer_41499400(SeManager_o *this, System_String_o *
   SeManager_o *v7; // x22
 
   v4 = this;
-  if ( (byte_4C42951 & 1) == 0 )
+  if ( (byte_4C566FA & 1) == 0 )
   {
-    sub_1C37058(&Method_System_Collections_Generic_List_SePlayer__get_Count__);
-    this = (SeManager_o *)sub_1C37058(&Method_System_Collections_Generic_List_SePlayer__get_Item__);
-    byte_4C42951 = 1;
+    sub_1C3E564(&Method_System_Collections_Generic_List_SePlayer__get_Count__);
+    this = (SeManager_o *)sub_1C3E564(&Method_System_Collections_Generic_List_SePlayer__get_Item__);
+    byte_4C566FA = 1;
   }
   workSePlayerStatusList = v4->fields.workSePlayerStatusList;
   if ( !workSePlayerStatusList )
 LABEL_12:
-    sub_1C372B4(this);
+    sub_1C3E7C0(this, name);
   for ( i = workSePlayerStatusList->fields._size - 1; (i & 0x80000000) == 0; --i )
   {
     this = (SeManager_o *)v4->fields.workSePlayerStatusList;
@@ -1055,7 +1062,7 @@ LABEL_12:
     this = (SeManager_o *)System_Collections_Generic_List_object___get_Item(
                             (System_Collections_Generic_List_object__o *)this,
                             i,
-                            (const MethodInfo_37A2D54 *)Method_System_Collections_Generic_List_SePlayer__get_Item__);
+                            (const MethodInfo_37B5190 *)Method_System_Collections_Generic_List_SePlayer__get_Item__);
     if ( !this )
       goto LABEL_12;
     v7 = this;
@@ -1066,7 +1073,7 @@ LABEL_12:
 }
 
 
-SePlayer_o *SeManager__GetSePlayer_41499576(
+SePlayer_o *SeManager__GetSePlayer_41548104(
         SeManager_o *this,
         System_String_o *assetName,
         System_String_o *objectName,
@@ -1076,11 +1083,11 @@ SePlayer_o *SeManager__GetSePlayer_41499576(
   int32_t v8; // w22
   SePlayer_o *v9; // x23
 
-  if ( (byte_4C42952 & 1) == 0 )
+  if ( (byte_4C566FB & 1) == 0 )
   {
-    sub_1C37058(&Method_System_Collections_Generic_List_SePlayer__get_Count__);
-    sub_1C37058(&Method_System_Collections_Generic_List_SePlayer__get_Item__);
-    byte_4C42952 = 1;
+    sub_1C3E564(&Method_System_Collections_Generic_List_SePlayer__get_Count__);
+    sub_1C3E564(&Method_System_Collections_Generic_List_SePlayer__get_Item__);
+    byte_4C566FB = 1;
   }
   workSePlayerStatusList = this->fields.workSePlayerStatusList;
   if ( !workSePlayerStatusList )
@@ -1093,7 +1100,7 @@ SePlayer_o *SeManager__GetSePlayer_41499576(
       workSePlayerStatusList = System_Collections_Generic_List_object___get_Item(
                                  (System_Collections_Generic_List_object__o *)workSePlayerStatusList,
                                  v8,
-                                 (const MethodInfo_37A2D54 *)Method_System_Collections_Generic_List_SePlayer__get_Item__);
+                                 (const MethodInfo_37B5190 *)Method_System_Collections_Generic_List_SePlayer__get_Item__);
       if ( !workSePlayerStatusList )
         break;
       v9 = (SePlayer_o *)workSePlayerStatusList;
@@ -1108,13 +1115,14 @@ SePlayer_o *SeManager__GetSePlayer_41499576(
     }
     while ( workSePlayerStatusList );
 LABEL_10:
-    sub_1C372B4(workSePlayerStatusList);
+    sub_1C3E7C0(workSePlayerStatusList, assetName);
   }
   return 0;
 }
 
 
-SePlayer_o *SeManager__GetSePlayer_41499792(
+// local variable allocation has failed, the output may be wrong!
+SePlayer_o *SeManager__GetSePlayer_41548320(
         SeManager_o *this,
         int32_t type,
         System_String_o *name,
@@ -1124,11 +1132,11 @@ SePlayer_o *SeManager__GetSePlayer_41499792(
   int32_t v8; // w22
   SePlayer_o *v9; // x23
 
-  if ( (byte_4C42953 & 1) == 0 )
+  if ( (byte_4C566FC & 1) == 0 )
   {
-    sub_1C37058(&Method_System_Collections_Generic_List_SePlayer__get_Count__);
-    sub_1C37058(&Method_System_Collections_Generic_List_SePlayer__get_Item__);
-    byte_4C42953 = 1;
+    sub_1C3E564(&Method_System_Collections_Generic_List_SePlayer__get_Count__);
+    sub_1C3E564(&Method_System_Collections_Generic_List_SePlayer__get_Item__);
+    byte_4C566FC = 1;
   }
   workSePlayerStatusList = this->fields.workSePlayerStatusList;
   if ( !workSePlayerStatusList )
@@ -1141,7 +1149,7 @@ SePlayer_o *SeManager__GetSePlayer_41499792(
       workSePlayerStatusList = System_Collections_Generic_List_object___get_Item(
                                  (System_Collections_Generic_List_object__o *)workSePlayerStatusList,
                                  v8,
-                                 (const MethodInfo_37A2D54 *)Method_System_Collections_Generic_List_SePlayer__get_Item__);
+                                 (const MethodInfo_37B5190 *)Method_System_Collections_Generic_List_SePlayer__get_Item__);
       if ( !workSePlayerStatusList )
         break;
       v9 = (SePlayer_o *)workSePlayerStatusList;
@@ -1156,13 +1164,14 @@ SePlayer_o *SeManager__GetSePlayer_41499792(
     }
     while ( workSePlayerStatusList );
 LABEL_10:
-    sub_1C372B4(workSePlayerStatusList);
+    sub_1C3E7C0(workSePlayerStatusList, *(_QWORD *)&type);
   }
   return 0;
 }
 
 
-SePlayer_o *SeManager__GetSePlayer_41499992(
+// local variable allocation has failed, the output may be wrong!
+SePlayer_o *SeManager__GetSePlayer_41548520(
         SeManager_o *this,
         int32_t type,
         System_String_o *assetName,
@@ -1173,11 +1182,11 @@ SePlayer_o *SeManager__GetSePlayer_41499992(
   int32_t v10; // w23
   SePlayer_o *v11; // x24
 
-  if ( (byte_4C42954 & 1) == 0 )
+  if ( (byte_4C566FD & 1) == 0 )
   {
-    sub_1C37058(&Method_System_Collections_Generic_List_SePlayer__get_Count__);
-    sub_1C37058(&Method_System_Collections_Generic_List_SePlayer__get_Item__);
-    byte_4C42954 = 1;
+    sub_1C3E564(&Method_System_Collections_Generic_List_SePlayer__get_Count__);
+    sub_1C3E564(&Method_System_Collections_Generic_List_SePlayer__get_Item__);
+    byte_4C566FD = 1;
   }
   workSePlayerStatusList = this->fields.workSePlayerStatusList;
   if ( !workSePlayerStatusList )
@@ -1190,7 +1199,7 @@ SePlayer_o *SeManager__GetSePlayer_41499992(
       workSePlayerStatusList = System_Collections_Generic_List_object___get_Item(
                                  (System_Collections_Generic_List_object__o *)workSePlayerStatusList,
                                  v10,
-                                 (const MethodInfo_37A2D54 *)Method_System_Collections_Generic_List_SePlayer__get_Item__);
+                                 (const MethodInfo_37B5190 *)Method_System_Collections_Generic_List_SePlayer__get_Item__);
       if ( !workSePlayerStatusList )
         break;
       v11 = (SePlayer_o *)workSePlayerStatusList;
@@ -1206,7 +1215,7 @@ SePlayer_o *SeManager__GetSePlayer_41499992(
     }
     while ( workSePlayerStatusList );
 LABEL_11:
-    sub_1C372B4(workSePlayerStatusList);
+    sub_1C3E7C0(workSePlayerStatusList, *(_QWORD *)&type);
   }
   return 0;
 }
@@ -1223,12 +1232,12 @@ void SeManager__Initialize(const MethodInfo *method)
   _BOOL8 v7; // x0
   const MethodInfo *v8; // x1
 
-  if ( (byte_4C42919 & 1) == 0 )
+  if ( (byte_4C566C2 & 1) == 0 )
   {
-    sub_1C37058(&UnityEngine_Object_TypeInfo);
-    sub_1C37058(&SeManager_TypeInfo);
-    sub_1C37058(&Method_SingletonMonoBehaviour_SeManager__get_Instance__);
-    byte_4C42919 = 1;
+    sub_1C3E564(&UnityEngine_Object_TypeInfo);
+    sub_1C3E564(&SeManager_TypeInfo);
+    sub_1C3E564(&Method_SingletonMonoBehaviour_SeManager__get_Instance__);
+    byte_4C566C2 = 1;
   }
   v3 = SeManager_TypeInfo;
   if ( !SeManager_TypeInfo->_2.cctor_finished )
@@ -1245,7 +1254,7 @@ void SeManager__Initialize(const MethodInfo *method)
       static_fields = SeManager_TypeInfo->static_fields;
     }
     static_fields->seAssetBundleList = 0;
-    sub_1C36FFC((CGThumbnailListItem_o *)&static_fields->seAssetBundleList, 0, v1, v2);
+    sub_1C3E508((CGThumbnailListItem_o *)&static_fields->seAssetBundleList, 0, v1, v2);
     v3 = SeManager_TypeInfo;
   }
   if ( !v3->_2.cctor_finished )
@@ -1262,16 +1271,16 @@ void SeManager__Initialize(const MethodInfo *method)
       v5 = SeManager_TypeInfo->static_fields;
     }
     v5->residentSeAssetBundleList = 0;
-    sub_1C36FFC((CGThumbnailListItem_o *)&v5->residentSeAssetBundleList, 0, v1, v2);
+    sub_1C3E508((CGThumbnailListItem_o *)&v5->residentSeAssetBundleList, 0, v1, v2);
   }
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39ED16C *)Method_SingletonMonoBehaviour_SeManager__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39FF5A8 *)Method_SingletonMonoBehaviour_SeManager__get_Instance__);
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   v7 = UnityEngine_Object__op_Equality((UnityEngine_Object_o *)Instance, 0, 0);
   if ( !v7 )
   {
     if ( !Instance )
-      sub_1C372B4(v7);
+      sub_1C3E7C0(v7, v8);
     SeManager__InitializeLocal((SeManager_o *)Instance, v8);
   }
 }
@@ -1282,24 +1291,25 @@ void SeManager__InitializeAssetStorage(const MethodInfo *method)
   SeManager_c *v1; // x0
   struct SeManager_StaticFields *static_fields; // x8
   Il2CppObject *Instance; // x0
+  __int64 v4; // x1
   struct System_String_array *LoadSeList; // x8
-  SoundManager_o *v5; // x19
-  System_String_o *v6; // x20
-  System_Action_o *v7; // x21
-  const MethodInfo *v8; // x4
-  struct System_String_array *v9; // x8
-  SoundManager_o *v10; // x19
-  System_String_o *v11; // x20
-  System_Action_o *v12; // x21
-  const MethodInfo *v13; // x4
+  SoundManager_o *v6; // x19
+  System_String_o *v7; // x20
+  System_Action_o *v8; // x21
+  const MethodInfo *v9; // x4
+  struct System_String_array *v10; // x8
+  SoundManager_o *v11; // x19
+  System_String_o *v12; // x20
+  System_Action_o *v13; // x21
+  const MethodInfo *v14; // x4
 
-  if ( (byte_4C4291A & 1) == 0 )
+  if ( (byte_4C566C3 & 1) == 0 )
   {
-    sub_1C37058(&System_Action_TypeInfo);
-    sub_1C37058(&Method_SeManager_LoadEndResidentSeAsset__);
-    sub_1C37058(&SeManager_TypeInfo);
-    sub_1C37058(&Method_SingletonMonoBehaviour_SoundManager__get_Instance__);
-    byte_4C4291A = 1;
+    sub_1C3E564(&System_Action_TypeInfo);
+    sub_1C3E564(&Method_SeManager_LoadEndResidentSeAsset__);
+    sub_1C3E564(&SeManager_TypeInfo);
+    sub_1C3E564(&Method_SingletonMonoBehaviour_SoundManager__get_Instance__);
+    byte_4C566C3 = 1;
   }
   v1 = SeManager_TypeInfo;
   if ( !SeManager_TypeInfo->_2.cctor_finished )
@@ -1310,34 +1320,34 @@ void SeManager__InitializeAssetStorage(const MethodInfo *method)
   static_fields = v1->static_fields;
   static_fields->IsBusy = 1;
   static_fields->loadCounter = 2;
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39ED16C *)Method_SingletonMonoBehaviour_SoundManager__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39FF5A8 *)Method_SingletonMonoBehaviour_SoundManager__get_Instance__);
   LoadSeList = SeManager_TypeInfo->static_fields->LoadSeList;
   if ( !LoadSeList )
     goto LABEL_12;
   if ( !LODWORD(LoadSeList->max_length) )
     goto LABEL_13;
-  v5 = (SoundManager_o *)Instance;
-  v6 = LoadSeList->m_Items[0];
-  v7 = (System_Action_o *)sub_1C372A4(System_Action_TypeInfo);
-  System_Action___ctor(v7, 0, Method_SeManager_LoadEndResidentSeAsset__, 0);
-  if ( !v5
-    || (SoundManager__LoadAudioAssetStorage(v5, v6, v7, 1, v8),
-        Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39ED16C *)Method_SingletonMonoBehaviour_SoundManager__get_Instance__),
-        (v9 = SeManager_TypeInfo->static_fields->LoadSeList) == 0) )
+  v6 = (SoundManager_o *)Instance;
+  v7 = LoadSeList->m_Items[0];
+  v8 = (System_Action_o *)sub_1C3E7B0(System_Action_TypeInfo);
+  System_Action___ctor(v8, 0, Method_SeManager_LoadEndResidentSeAsset__, 0);
+  if ( !v6
+    || (SoundManager__LoadAudioAssetStorage(v6, v7, v8, 1, v9),
+        Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39FF5A8 *)Method_SingletonMonoBehaviour_SoundManager__get_Instance__),
+        (v10 = SeManager_TypeInfo->static_fields->LoadSeList) == 0) )
   {
 LABEL_12:
-    sub_1C372B4(Instance);
+    sub_1C3E7C0(Instance, v4);
   }
-  if ( LODWORD(v9->max_length) <= 1 )
+  if ( LODWORD(v10->max_length) <= 1 )
 LABEL_13:
-    sub_1C372BC(Instance);
-  v10 = (SoundManager_o *)Instance;
-  v11 = v9->m_Items[1];
-  v12 = (System_Action_o *)sub_1C372A4(System_Action_TypeInfo);
-  System_Action___ctor(v12, 0, Method_SeManager_LoadEndResidentSeAsset__, 0);
-  if ( !v10 )
+    sub_1C3E7C8(Instance, v4);
+  v11 = (SoundManager_o *)Instance;
+  v12 = v10->m_Items[1];
+  v13 = (System_Action_o *)sub_1C3E7B0(System_Action_TypeInfo);
+  System_Action___ctor(v13, 0, Method_SeManager_LoadEndResidentSeAsset__, 0);
+  if ( !v11 )
     goto LABEL_12;
-  SoundManager__LoadAudioAssetStorage(v10, v11, v12, 1, v13);
+  SoundManager__LoadAudioAssetStorage(v11, v12, v13, 1, v14);
 }
 
 
@@ -1349,50 +1359,51 @@ void SeManager__InitializeLocal(SeManager_o *this, const MethodInfo *method)
   UnityEngine_GameObject_o *v6; // x21
   int32_t v7; // w2
   const MethodInfo *v8; // x3
+  __int64 v9; // x1
   UnityEngine_Object_o *gameObject; // x0
   UnityEngine_Transform_o *transform; // x21
-  struct CriAtomSource_array *v11; // x0
+  struct CriAtomSource_array *v12; // x0
   struct CriAtomSource_array **p_seSources; // x21
-  int32_t v13; // w2
-  const MethodInfo *v14; // x3
-  struct SePlayer_array *v15; // x0
-  int32_t v16; // w2
-  const MethodInfo *v17; // x3
-  struct CriAtomSource_array *v18; // x0
+  int32_t v14; // w2
+  const MethodInfo *v15; // x3
+  struct SePlayer_array *v16; // x0
+  int32_t v17; // w2
+  const MethodInfo *v18; // x3
+  struct CriAtomSource_array *v19; // x0
   struct CriAtomSource_array **p_systemSeSources; // x22
-  int32_t v20; // w2
-  const MethodInfo *v21; // x3
-  System_Collections_Generic_List_object__o *v22; // x23
-  int32_t v23; // w2
-  const MethodInfo *v24; // x3
-  struct CriAtomSource_array *v25; // x27
-  unsigned int v26; // w24
-  __int64 v27; // x25
-  int32_t v28; // w2
-  const MethodInfo *v29; // x3
-  UnityEngine_Object_o *v30; // x23
-  __int64 v31; // x8
-  struct CriAtomSource_array *v32; // x27
-  unsigned int v33; // w23
+  int32_t v21; // w2
+  const MethodInfo *v22; // x3
+  System_Collections_Generic_List_object__o *v23; // x23
+  int32_t v24; // w2
+  const MethodInfo *v25; // x3
+  struct CriAtomSource_array *v26; // x27
+  unsigned int v27; // w24
+  __int64 v28; // x25
+  int32_t v29; // w2
+  const MethodInfo *v30; // x3
+  UnityEngine_Object_o *v31; // x23
+  __int64 v32; // x8
+  struct CriAtomSource_array *v33; // x27
+  unsigned int v34; // w23
   __int64 i; // x24
-  int32_t v35; // w2
-  const MethodInfo *v36; // x3
-  UnityEngine_Object_o *v37; // x22
-  struct CriAtomSource_array *v38; // x8
-  __int64 v39; // x8
-  __int64 v40; // x0
+  int32_t v36; // w2
+  const MethodInfo *v37; // x3
+  UnityEngine_Object_o *v38; // x22
+  struct CriAtomSource_array *v39; // x8
+  __int64 v40; // x8
+  __int64 v41; // x0
 
-  if ( (byte_4C4294B & 1) == 0 )
+  if ( (byte_4C566F4 & 1) == 0 )
   {
-    sub_1C37058(&CriAtomSource___TypeInfo);
-    sub_1C37058(&Method_UnityEngine_GameObject_AddComponent_CriAtomSource___);
-    sub_1C37058(&UnityEngine_GameObject_TypeInfo);
-    sub_1C37058(&Method_System_Collections_Generic_List_SePlayer___ctor__);
-    sub_1C37058(&System_Collections_Generic_List_SePlayer__TypeInfo);
-    sub_1C37058(&UnityEngine_Object_TypeInfo);
-    sub_1C37058(&SePlayer___TypeInfo);
-    sub_1C37058(&StringLiteral_12655/*"SePlayerObject"*/);
-    byte_4C4294B = 1;
+    sub_1C3E564(&CriAtomSource___TypeInfo);
+    sub_1C3E564(&Method_UnityEngine_GameObject_AddComponent_CriAtomSource___);
+    sub_1C3E564(&UnityEngine_GameObject_TypeInfo);
+    sub_1C3E564(&Method_System_Collections_Generic_List_SePlayer___ctor__);
+    sub_1C3E564(&System_Collections_Generic_List_SePlayer__TypeInfo);
+    sub_1C3E564(&UnityEngine_Object_TypeInfo);
+    sub_1C3E564(&SePlayer___TypeInfo);
+    sub_1C3E564(&StringLiteral_12663/*"SePlayerObject"*/);
+    byte_4C566F4 = 1;
   }
   p_playerGameObject = &this->fields.playerGameObject;
   playerGameObject = (UnityEngine_Object_o *)this->fields.playerGameObject;
@@ -1400,14 +1411,14 @@ void SeManager__InitializeLocal(SeManager_o *this, const MethodInfo *method)
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   if ( UnityEngine_Object__op_Equality(playerGameObject, 0, 0) )
   {
-    v6 = (UnityEngine_GameObject_o *)sub_1C372A4(UnityEngine_GameObject_TypeInfo);
-    UnityEngine_GameObject___ctor_71248916(v6, 0);
+    v6 = (UnityEngine_GameObject_o *)sub_1C3E7B0(UnityEngine_GameObject_TypeInfo);
+    UnityEngine_GameObject___ctor_71323728(v6, 0);
     *p_playerGameObject = v6;
-    sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.playerGameObject, (int32_t)v6, v7, v8);
+    sub_1C3E508((CGThumbnailListItem_o *)&this->fields.playerGameObject, (int32_t)v6, v7, v8);
     gameObject = (UnityEngine_Object_o *)*p_playerGameObject;
     if ( !*p_playerGameObject )
       goto LABEL_37;
-    UnityEngine_Object__set_name(gameObject, (System_String_o *)StringLiteral_12655/*"SePlayerObject"*/, 0);
+    UnityEngine_Object__set_name(gameObject, (System_String_o *)StringLiteral_12663/*"SePlayerObject"*/, 0);
     gameObject = (UnityEngine_Object_o *)*p_playerGameObject;
     if ( !*p_playerGameObject )
       goto LABEL_37;
@@ -1421,29 +1432,29 @@ void SeManager__InitializeLocal(SeManager_o *this, const MethodInfo *method)
     if ( !transform )
       goto LABEL_37;
     UnityEngine_Transform__set_parent(transform, (UnityEngine_Transform_o *)gameObject, 0);
-    v11 = (struct CriAtomSource_array *)sub_1C37100(CriAtomSource___TypeInfo, (unsigned int)this->fields.seMax);
-    this->fields.seSources = v11;
+    v12 = (struct CriAtomSource_array *)sub_1C3E60C(CriAtomSource___TypeInfo, (unsigned int)this->fields.seMax);
+    this->fields.seSources = v12;
     p_seSources = &this->fields.seSources;
-    sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.seSources, (int32_t)v11, v13, v14);
-    v15 = (struct SePlayer_array *)sub_1C37100(SePlayer___TypeInfo, (unsigned int)this->fields.seMax);
-    this->fields.sePlayerStatusList = v15;
-    sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.sePlayerStatusList, (int32_t)v15, v16, v17);
-    v18 = (struct CriAtomSource_array *)sub_1C37100(CriAtomSource___TypeInfo, (unsigned int)this->fields.SYSTEM_SE_MAX);
-    this->fields.systemSeSources = v18;
+    sub_1C3E508((CGThumbnailListItem_o *)&this->fields.seSources, (int32_t)v12, v14, v15);
+    v16 = (struct SePlayer_array *)sub_1C3E60C(SePlayer___TypeInfo, (unsigned int)this->fields.seMax);
+    this->fields.sePlayerStatusList = v16;
+    sub_1C3E508((CGThumbnailListItem_o *)&this->fields.sePlayerStatusList, (int32_t)v16, v17, v18);
+    v19 = (struct CriAtomSource_array *)sub_1C3E60C(CriAtomSource___TypeInfo, (unsigned int)this->fields.SYSTEM_SE_MAX);
+    this->fields.systemSeSources = v19;
     p_systemSeSources = &this->fields.systemSeSources;
-    sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.systemSeSources, (int32_t)v18, v20, v21);
+    sub_1C3E508((CGThumbnailListItem_o *)&this->fields.systemSeSources, (int32_t)v19, v21, v22);
     this->fields.systemSeIdx = 0;
-    v22 = (System_Collections_Generic_List_object__o *)sub_1C372A4(System_Collections_Generic_List_SePlayer__TypeInfo);
+    v23 = (System_Collections_Generic_List_object__o *)sub_1C3E7B0(System_Collections_Generic_List_SePlayer__TypeInfo);
     System_Collections_Generic_List_object____ctor(
-      v22,
-      (const MethodInfo_37A27F0 *)Method_System_Collections_Generic_List_SePlayer___ctor__);
-    this->fields.workSePlayerStatusList = (struct System_Collections_Generic_List_SePlayer__o *)v22;
-    sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.workSePlayerStatusList, (int32_t)v22, v23, v24);
+      v23,
+      (const MethodInfo_37B4C2C *)Method_System_Collections_Generic_List_SePlayer___ctor__);
+    this->fields.workSePlayerStatusList = (struct System_Collections_Generic_List_SePlayer__o *)v23;
+    sub_1C3E508((CGThumbnailListItem_o *)&this->fields.workSePlayerStatusList, (int32_t)v23, v24, v25);
     if ( this->fields.SYSTEM_SE_MAX >= 1 )
     {
-      v25 = *p_systemSeSources;
-      v26 = 0;
-      v27 = 32;
+      v26 = *p_systemSeSources;
+      v27 = 0;
+      v28 = 32;
       while ( 1 )
       {
         gameObject = (UnityEngine_Object_o *)*p_playerGameObject;
@@ -1451,47 +1462,47 @@ void SeManager__InitializeLocal(SeManager_o *this, const MethodInfo *method)
           break;
         gameObject = (UnityEngine_Object_o *)UnityEngine_GameObject__AddComponent_object_(
                                                (UnityEngine_GameObject_o *)gameObject,
-                                               (const MethodInfo_313F0F0 *)Method_UnityEngine_GameObject_AddComponent_CriAtomSource___);
-        if ( !v25 )
+                                               (const MethodInfo_3150FE4 *)Method_UnityEngine_GameObject_AddComponent_CriAtomSource___);
+        if ( !v26 )
           break;
-        v30 = gameObject;
+        v31 = gameObject;
         if ( gameObject )
         {
-          gameObject = (UnityEngine_Object_o *)sub_1C37194(gameObject, v25->obj.klass->_1.element_class);
+          gameObject = (UnityEngine_Object_o *)sub_1C3E6A0(gameObject, v26->obj.klass->_1.element_class);
           if ( !gameObject )
           {
 LABEL_39:
-            v40 = sub_1C372D8(gameObject);
-            sub_1C37180(v40, 0);
+            v41 = sub_1C3E7E4(gameObject);
+            sub_1C3E68C(v41, 0);
           }
         }
-        if ( v26 >= LODWORD(v25->max_length) )
+        if ( v27 >= LODWORD(v26->max_length) )
           goto LABEL_38;
-        *(Il2CppClass **)((char *)&v25->obj.klass + v27) = (Il2CppClass *)v30;
-        sub_1C36FFC((CGThumbnailListItem_o *)((char *)v25 + v27), (int32_t)v30, v28, v29);
-        v25 = *p_systemSeSources;
+        *(Il2CppClass **)((char *)&v26->obj.klass + v28) = (Il2CppClass *)v31;
+        sub_1C3E508((CGThumbnailListItem_o *)((char *)v26 + v28), (int32_t)v31, v29, v30);
+        v26 = *p_systemSeSources;
         if ( !*p_systemSeSources )
           break;
-        if ( v26 >= LODWORD(v25->max_length) )
+        if ( v27 >= LODWORD(v26->max_length) )
 LABEL_38:
-          sub_1C372BC(gameObject);
-        v31 = *(__int64 *)((char *)&v25->obj.klass + v27);
-        if ( !v31 )
+          sub_1C3E7C8(gameObject, v9);
+        v32 = *(__int64 *)((char *)&v26->obj.klass + v28);
+        if ( !v32 )
           break;
-        *(_BYTE *)(v31 + 156) = 1;
-        ++v26;
-        v27 += 8;
-        if ( (signed int)v26 >= this->fields.SYSTEM_SE_MAX )
+        *(_BYTE *)(v32 + 156) = 1;
+        ++v27;
+        v28 += 8;
+        if ( (signed int)v27 >= this->fields.SYSTEM_SE_MAX )
           goto LABEL_21;
       }
 LABEL_37:
-      sub_1C372B4(gameObject);
+      sub_1C3E7C0(gameObject, v9);
     }
 LABEL_21:
     if ( this->fields.seMax >= 1 )
     {
-      v32 = *p_seSources;
-      v33 = 0;
+      v33 = *p_seSources;
+      v34 = 0;
       for ( i = 32; ; i += 8 )
       {
         gameObject = (UnityEngine_Object_o *)*p_playerGameObject;
@@ -1499,39 +1510,39 @@ LABEL_21:
           break;
         gameObject = (UnityEngine_Object_o *)UnityEngine_GameObject__AddComponent_object_(
                                                (UnityEngine_GameObject_o *)gameObject,
-                                               (const MethodInfo_313F0F0 *)Method_UnityEngine_GameObject_AddComponent_CriAtomSource___);
-        if ( !v32 )
+                                               (const MethodInfo_3150FE4 *)Method_UnityEngine_GameObject_AddComponent_CriAtomSource___);
+        if ( !v33 )
           break;
-        v37 = gameObject;
+        v38 = gameObject;
         if ( gameObject )
         {
-          gameObject = (UnityEngine_Object_o *)sub_1C37194(gameObject, v32->obj.klass->_1.element_class);
+          gameObject = (UnityEngine_Object_o *)sub_1C3E6A0(gameObject, v33->obj.klass->_1.element_class);
           if ( !gameObject )
             goto LABEL_39;
         }
-        if ( v33 >= LODWORD(v32->max_length) )
+        if ( v34 >= LODWORD(v33->max_length) )
           goto LABEL_38;
-        *(Il2CppClass **)((char *)&v32->obj.klass + i) = (Il2CppClass *)v37;
-        sub_1C36FFC((CGThumbnailListItem_o *)((char *)v32 + i), (int32_t)v37, v35, v36);
-        v38 = *p_seSources;
+        *(Il2CppClass **)((char *)&v33->obj.klass + i) = (Il2CppClass *)v38;
+        sub_1C3E508((CGThumbnailListItem_o *)((char *)v33 + i), (int32_t)v38, v36, v37);
+        v39 = *p_seSources;
         if ( !*p_seSources )
           break;
-        if ( v33 >= LODWORD(v38->max_length) )
+        if ( v34 >= LODWORD(v39->max_length) )
           goto LABEL_38;
-        gameObject = *(UnityEngine_Object_o **)((char *)&v38->obj.klass + i);
+        gameObject = *(UnityEngine_Object_o **)((char *)&v39->obj.klass + i);
         if ( !gameObject )
           break;
         CriAtomSource__set_use3dPositioning((CriAtomSource_o *)gameObject, 0, 0);
-        v32 = *p_seSources;
+        v33 = *p_seSources;
         if ( !*p_seSources )
           break;
-        if ( v33 >= LODWORD(v32->max_length) )
+        if ( v34 >= LODWORD(v33->max_length) )
           goto LABEL_38;
-        v39 = *(__int64 *)((char *)&v32->obj.klass + i);
-        if ( !v39 )
+        v40 = *(__int64 *)((char *)&v33->obj.klass + i);
+        if ( !v40 )
           break;
-        *(_BYTE *)(v39 + 156) = 1;
-        if ( (signed int)++v33 >= this->fields.seMax )
+        *(_BYTE *)(v40 + 156) = 1;
+        if ( (signed int)++v34 >= this->fields.seMax )
           return;
       }
       goto LABEL_37;
@@ -1550,20 +1561,20 @@ void SeManager__InitializePreDelaySetting(const MethodInfo *method)
   _BOOL8 v2; // x0
   const MethodInfo *v3; // x1
 
-  if ( (byte_4C4291B & 1) == 0 )
+  if ( (byte_4C566C4 & 1) == 0 )
   {
-    sub_1C37058(&UnityEngine_Object_TypeInfo);
-    sub_1C37058(&Method_SingletonMonoBehaviour_SeManager__get_Instance__);
-    byte_4C4291B = 1;
+    sub_1C3E564(&UnityEngine_Object_TypeInfo);
+    sub_1C3E564(&Method_SingletonMonoBehaviour_SeManager__get_Instance__);
+    byte_4C566C4 = 1;
   }
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39ED16C *)Method_SingletonMonoBehaviour_SeManager__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39FF5A8 *)Method_SingletonMonoBehaviour_SeManager__get_Instance__);
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   v2 = UnityEngine_Object__op_Equality((UnityEngine_Object_o *)Instance, 0, 0);
   if ( !v2 )
   {
     if ( !Instance )
-      sub_1C372B4(v2);
+      sub_1C3E7C0(v2, v3);
     SeManager__InitializePreDelaySettingLocal((SeManager_o *)Instance, v3);
   }
 }
@@ -1572,35 +1583,36 @@ void SeManager__InitializePreDelaySetting(const MethodInfo *method)
 void SeManager__InitializePreDelaySettingLocal(SeManager_o *this, const MethodInfo *method)
 {
   DataManager_o *Instance; // x0
+  __int64 v4; // x1
   struct DataMasterBase_array *datalist; // x8
-  DataMasterBase_o *v5; // x8
-  ConstantStrMaster_o *v6; // x20
+  DataMasterBase_o *v6; // x8
+  ConstantStrMaster_o *v7; // x20
   struct System_String_array *ValueStringArray; // x0
-  int32_t v8; // w2
-  const MethodInfo *v9; // x3
+  int32_t v9; // w2
+  const MethodInfo *v10; // x3
 
-  if ( (byte_4C4294C & 1) == 0 )
+  if ( (byte_4C566F5 & 1) == 0 )
   {
-    sub_1C37058(&Method_DataManager_GetMasterData_ConstantStrMaster___);
-    sub_1C37058(&Method_DataMasterBase_ConstantStrMaster__ConstantStrEntity__string__isEntityExistsFromId__);
-    sub_1C37058(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-    sub_1C37058(&Method_SingletonMonoBehaviour_SoundManager__get_Instance__);
-    sub_1C37058(&StringLiteral_12028/*"SE_PRE_DELAY_TIME_FOR_MEMORY"*/);
-    sub_1C37058(&StringLiteral_12029/*"SE_PRE_DELAY_TIME_FOR_STREAM"*/);
-    sub_1C37058(&StringLiteral_12027/*"SE_IGNORE_PRE_DELAY"*/);
-    byte_4C4294C = 1;
+    sub_1C3E564(&Method_DataManager_GetMasterData_ConstantStrMaster___);
+    sub_1C3E564(&Method_DataMasterBase_ConstantStrMaster__ConstantStrEntity__string__isEntityExistsFromId__);
+    sub_1C3E564(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    sub_1C3E564(&Method_SingletonMonoBehaviour_SoundManager__get_Instance__);
+    sub_1C3E564(&StringLiteral_12030/*"SE_PRE_DELAY_TIME_FOR_MEMORY"*/);
+    sub_1C3E564(&StringLiteral_12031/*"SE_PRE_DELAY_TIME_FOR_STREAM"*/);
+    sub_1C3E564(&StringLiteral_12029/*"SE_IGNORE_PRE_DELAY"*/);
+    byte_4C566F5 = 1;
   }
   this->fields.enablePreDelay = 0;
-  Instance = (DataManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39ED16C *)Method_SingletonMonoBehaviour_SoundManager__get_Instance__);
+  Instance = (DataManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39FF5A8 *)Method_SingletonMonoBehaviour_SoundManager__get_Instance__);
   if ( !Instance )
     goto LABEL_17;
   datalist = Instance->fields.datalist;
   if ( !datalist )
     goto LABEL_17;
-  v5 = datalist->m_Items[5];
-  if ( !v5 )
+  v6 = datalist->m_Items[5];
+  if ( !v6 )
     goto LABEL_17;
-  if ( BYTE5(v5[3].fields._MasterName_k__BackingField) )
+  if ( BYTE5(v6[3].fields._MasterName_k__BackingField) )
   {
     this->fields.enablePreDelay = 1;
   }
@@ -1608,34 +1620,34 @@ void SeManager__InitializePreDelaySettingLocal(SeManager_o *this, const MethodIn
   {
     return;
   }
-  Instance = (DataManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39ED16C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = (DataManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39FF5A8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance
     || (Instance = (DataManager_o *)DataManager__GetMasterData_object_(
                                       Instance,
-                                      (const MethodInfo_30E7C58 *)Method_DataManager_GetMasterData_ConstantStrMaster___)) == 0 )
+                                      (const MethodInfo_30F9A70 *)Method_DataManager_GetMasterData_ConstantStrMaster___)) == 0 )
   {
 LABEL_17:
-    sub_1C372B4(Instance);
+    sub_1C3E7C0(Instance, v4);
   }
-  v6 = (ConstantStrMaster_o *)Instance;
+  v7 = (ConstantStrMaster_o *)Instance;
   this->fields.preDelayTimeForStream = ConstantStrMaster__GetFloat(
                                          (ConstantStrMaster_o *)Instance,
-                                         (System_String_o *)StringLiteral_12029/*"SE_PRE_DELAY_TIME_FOR_STREAM"*/,
+                                         (System_String_o *)StringLiteral_12031/*"SE_PRE_DELAY_TIME_FOR_STREAM"*/,
                                          this->fields.preDelayTimeForStream,
                                          0);
   this->fields.preDelayTimeForMemory = ConstantStrMaster__GetFloat(
-                                         v6,
-                                         (System_String_o *)StringLiteral_12028/*"SE_PRE_DELAY_TIME_FOR_MEMORY"*/,
+                                         v7,
+                                         (System_String_o *)StringLiteral_12030/*"SE_PRE_DELAY_TIME_FOR_MEMORY"*/,
                                          this->fields.preDelayTimeForMemory,
                                          0);
-  if ( DataMasterBase_object__object__object___isEntityExistsFromId_54153952(
-         (DataMasterBase_TMaster__TEntity__PKType__o *)v6,
-         (System_String_o *)StringLiteral_12027/*"SE_IGNORE_PRE_DELAY"*/,
-         (const MethodInfo_33A52E0 *)Method_DataMasterBase_ConstantStrMaster__ConstantStrEntity__string__isEntityExistsFromId__) )
+  if ( DataMasterBase_object__object__object___isEntityExistsFromId_54227352(
+         (DataMasterBase_TMaster__TEntity__PKType__o *)v7,
+         (System_String_o *)StringLiteral_12029/*"SE_IGNORE_PRE_DELAY"*/,
+         (const MethodInfo_33B7198 *)Method_DataMasterBase_ConstantStrMaster__ConstantStrEntity__string__isEntityExistsFromId__) )
   {
-    ValueStringArray = ConstantStrMaster__GetValueStringArray(v6, (System_String_o *)StringLiteral_12027/*"SE_IGNORE_PRE_DELAY"*/, 0, 0);
+    ValueStringArray = ConstantStrMaster__GetValueStringArray(v7, (System_String_o *)StringLiteral_12029/*"SE_IGNORE_PRE_DELAY"*/, 0, 0);
     this->fields.ignorePreDelayArray = ValueStringArray;
-    sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.ignorePreDelayArray, (int32_t)ValueStringArray, v8, v9);
+    sub_1C3E508((CGThumbnailListItem_o *)&this->fields.ignorePreDelayArray, (int32_t)ValueStringArray, v9, v10);
   }
   if ( this->fields.preDelayTimeForStream <= 0.0 && this->fields.preDelayTimeForMemory <= 0.0 )
     this->fields.enablePreDelay = 0;
@@ -1645,17 +1657,18 @@ LABEL_17:
 bool SeManager__IsBusyCommonSe(int32_t kind, const MethodInfo *method)
 {
   Il2CppObject *Instance; // x0
-  const MethodInfo *v4; // x2
+  __int64 v4; // x1
+  const MethodInfo *v5; // x2
 
-  if ( (byte_4C4292D & 1) == 0 )
+  if ( (byte_4C566D6 & 1) == 0 )
   {
-    sub_1C37058(&Method_SingletonMonoBehaviour_SeManager__get_Instance__);
-    byte_4C4292D = 1;
+    sub_1C3E564(&Method_SingletonMonoBehaviour_SeManager__get_Instance__);
+    byte_4C566D6 = 1;
   }
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39ED16C *)Method_SingletonMonoBehaviour_SeManager__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39FF5A8 *)Method_SingletonMonoBehaviour_SeManager__get_Instance__);
   if ( !Instance )
-    sub_1C372B4(0);
-  return SeManager__IsBusyCommonSeLocal((SeManager_o *)Instance, kind, v4);
+    sub_1C3E7C0(0, v4);
+  return SeManager__IsBusyCommonSeLocal((SeManager_o *)Instance, kind, v5);
 }
 
 
@@ -1667,16 +1680,16 @@ bool SeManager__IsBusyCommonSeLocal(SeManager_o *this, int32_t kind, const Metho
   System_String_o *v6; // x19
 
   v4 = this;
-  if ( (byte_4C4292E & 1) == 0 )
+  if ( (byte_4C566D7 & 1) == 0 )
   {
-    this = (SeManager_o *)sub_1C37058(&SeManager_TypeInfo);
-    byte_4C4292E = 1;
+    this = (SeManager_o *)sub_1C3E564(&SeManager_TypeInfo);
+    byte_4C566D7 = 1;
   }
   commonSeClipNames = v4->fields.commonSeClipNames;
   if ( !commonSeClipNames )
-    sub_1C372B4(this);
+    sub_1C3E7C0(this, *(_QWORD *)&kind);
   if ( LODWORD(commonSeClipNames->max_length) <= kind )
-    sub_1C372BC(this);
+    sub_1C3E7C8(this, *(_QWORD *)&kind);
   v6 = commonSeClipNames->m_Items[kind];
   if ( !SeManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(SeManager_TypeInfo);
@@ -1684,6 +1697,7 @@ bool SeManager__IsBusyCommonSeLocal(SeManager_o *this, int32_t kind, const Metho
 }
 
 
+// local variable allocation has failed, the output may be wrong!
 bool SeManager__IsBusyLocal(
         SeManager_o *this,
         int32_t seType,
@@ -1691,55 +1705,52 @@ bool SeManager__IsBusyLocal(
         System_String_o *objectName,
         const MethodInfo *method)
 {
-  SePlayer_o *SePlayer_41499992; // x0
+  SePlayer_o *SePlayer_41548520; // x0
   const MethodInfo *v10; // x1
   void *workSePlayerStatusList; // x0
   int v12; // w21
   int v13; // w8
   SePlayer_o *v14; // x23
-  const MethodInfo *v15; // x1
-  int32_t v16; // w22
-  SePlayer_o *v17; // x23
-  const MethodInfo *v18; // x1
-  const MethodInfo *v19; // x1
+  int32_t v15; // w22
+  SePlayer_o *v16; // x23
 
-  if ( (byte_4C42955 & 1) == 0 )
+  if ( (byte_4C566FE & 1) == 0 )
   {
-    sub_1C37058(&Method_System_Collections_Generic_List_SePlayer__get_Count__);
-    sub_1C37058(&Method_System_Collections_Generic_List_SePlayer__get_Item__);
-    byte_4C42955 = 1;
+    sub_1C3E564(&Method_System_Collections_Generic_List_SePlayer__get_Count__);
+    sub_1C3E564(&Method_System_Collections_Generic_List_SePlayer__get_Item__);
+    byte_4C566FE = 1;
   }
   if ( objectName )
   {
     if ( assetName )
     {
-      SePlayer_41499992 = SeManager__GetSePlayer_41499992(this, seType, assetName, objectName, method);
-      if ( SePlayer_41499992 )
-        LOBYTE(SePlayer_41499992) = SePlayer__get_IsBusy(SePlayer_41499992, v10);
-      return (char)SePlayer_41499992;
+      SePlayer_41548520 = SeManager__GetSePlayer_41548520(this, seType, assetName, objectName, method);
+      if ( SePlayer_41548520 )
+        LOBYTE(SePlayer_41548520) = SePlayer__get_IsBusy(SePlayer_41548520, v10);
+      return (char)SePlayer_41548520;
     }
     workSePlayerStatusList = this->fields.workSePlayerStatusList;
     if ( workSePlayerStatusList )
     {
-      v16 = *((_DWORD *)workSePlayerStatusList + 6) - 1;
-      if ( v16 >= 0 )
+      v15 = *((_DWORD *)workSePlayerStatusList + 6) - 1;
+      if ( v15 >= 0 )
       {
         do
         {
           workSePlayerStatusList = System_Collections_Generic_List_object___get_Item(
                                      (System_Collections_Generic_List_object__o *)workSePlayerStatusList,
-                                     v16,
-                                     (const MethodInfo_37A2D54 *)Method_System_Collections_Generic_List_SePlayer__get_Item__);
+                                     v15,
+                                     (const MethodInfo_37B5190 *)Method_System_Collections_Generic_List_SePlayer__get_Item__);
           if ( !workSePlayerStatusList )
             break;
-          v17 = (SePlayer_o *)workSePlayerStatusList;
+          v16 = (SePlayer_o *)workSePlayerStatusList;
           if ( *((_DWORD *)workSePlayerStatusList + 4) == seType
             && System_String__op_Equality(*((System_String_o **)workSePlayerStatusList + 4), objectName, 0)
-            && SePlayer__get_IsBusy(v17, v18) )
+            && SePlayer__get_IsBusy(v16, *(const MethodInfo **)&seType) )
           {
             goto LABEL_35;
           }
-          if ( --v16 < 0 )
+          if ( --v15 < 0 )
             goto LABEL_33;
           workSePlayerStatusList = this->fields.workSePlayerStatusList;
         }
@@ -1747,11 +1758,11 @@ bool SeManager__IsBusyLocal(
         goto LABEL_32;
       }
 LABEL_33:
-      LOBYTE(SePlayer_41499992) = 0;
-      return (char)SePlayer_41499992;
+      LOBYTE(SePlayer_41548520) = 0;
+      return (char)SePlayer_41548520;
     }
 LABEL_32:
-    sub_1C372B4(workSePlayerStatusList);
+    sub_1C3E7C0(workSePlayerStatusList, *(_QWORD *)&seType);
   }
   workSePlayerStatusList = this->fields.workSePlayerStatusList;
   if ( !workSePlayerStatusList )
@@ -1767,13 +1778,13 @@ LABEL_32:
       workSePlayerStatusList = System_Collections_Generic_List_object___get_Item(
                                  (System_Collections_Generic_List_object__o *)workSePlayerStatusList,
                                  --v12,
-                                 (const MethodInfo_37A2D54 *)Method_System_Collections_Generic_List_SePlayer__get_Item__);
+                                 (const MethodInfo_37B5190 *)Method_System_Collections_Generic_List_SePlayer__get_Item__);
       if ( !workSePlayerStatusList )
         break;
       v14 = (SePlayer_o *)workSePlayerStatusList;
       if ( *((_DWORD *)workSePlayerStatusList + 4) == seType
         && System_String__op_Equality(*((System_String_o **)workSePlayerStatusList + 3), assetName, 0)
-        && SePlayer__get_IsBusy(v14, v15) )
+        && SePlayer__get_IsBusy(v14, *(const MethodInfo **)&seType) )
       {
         goto LABEL_35;
       }
@@ -1791,11 +1802,11 @@ LABEL_32:
     workSePlayerStatusList = System_Collections_Generic_List_object___get_Item(
                                (System_Collections_Generic_List_object__o *)workSePlayerStatusList,
                                --v12,
-                               (const MethodInfo_37A2D54 *)Method_System_Collections_Generic_List_SePlayer__get_Item__);
+                               (const MethodInfo_37B5190 *)Method_System_Collections_Generic_List_SePlayer__get_Item__);
     if ( !workSePlayerStatusList )
       goto LABEL_32;
     if ( *((_DWORD *)workSePlayerStatusList + 4) == seType
-      && SePlayer__get_IsBusy((SePlayer_o *)workSePlayerStatusList, v19) )
+      && SePlayer__get_IsBusy((SePlayer_o *)workSePlayerStatusList, *(const MethodInfo **)&seType) )
     {
       break;
     }
@@ -1806,8 +1817,8 @@ LABEL_32:
       goto LABEL_32;
   }
 LABEL_35:
-  LOBYTE(SePlayer_41499992) = 1;
-  return (char)SePlayer_41499992;
+  LOBYTE(SePlayer_41548520) = 1;
+  return (char)SePlayer_41548520;
 }
 
 
@@ -1815,23 +1826,24 @@ bool SeManager__IsBusySe(System_String_o *name, const MethodInfo *method)
 {
   Il2CppObject *Instance; // x20
   _BOOL8 v4; // x0
-  const MethodInfo *v5; // x4
+  __int64 v5; // x1
+  const MethodInfo *v6; // x4
 
-  if ( (byte_4C4292F & 1) == 0 )
+  if ( (byte_4C566D8 & 1) == 0 )
   {
-    sub_1C37058(&UnityEngine_Object_TypeInfo);
-    sub_1C37058(&Method_SingletonMonoBehaviour_SeManager__get_Instance__);
-    byte_4C4292F = 1;
+    sub_1C3E564(&UnityEngine_Object_TypeInfo);
+    sub_1C3E564(&Method_SingletonMonoBehaviour_SeManager__get_Instance__);
+    byte_4C566D8 = 1;
   }
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39ED16C *)Method_SingletonMonoBehaviour_SeManager__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39FF5A8 *)Method_SingletonMonoBehaviour_SeManager__get_Instance__);
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   v4 = UnityEngine_Object__op_Equality((UnityEngine_Object_o *)Instance, 0, 0);
   if ( v4 )
     return 0;
   if ( !Instance )
-    sub_1C372B4(v4);
-  return SeManager__IsBusyLocal((SeManager_o *)Instance, 0, 0, name, v5);
+    sub_1C3E7C0(v4, v5);
+  return SeManager__IsBusyLocal((SeManager_o *)Instance, 0, 0, name, v6);
 }
 
 
@@ -1839,23 +1851,24 @@ bool SeManager__IsBusyVoice(System_String_o *assetName, System_String_o *objectN
 {
   Il2CppObject *Instance; // x21
   _BOOL8 v6; // x0
-  const MethodInfo *v7; // x4
+  __int64 v7; // x1
+  const MethodInfo *v8; // x4
 
-  if ( (byte_4C42930 & 1) == 0 )
+  if ( (byte_4C566D9 & 1) == 0 )
   {
-    sub_1C37058(&UnityEngine_Object_TypeInfo);
-    sub_1C37058(&Method_SingletonMonoBehaviour_SeManager__get_Instance__);
-    byte_4C42930 = 1;
+    sub_1C3E564(&UnityEngine_Object_TypeInfo);
+    sub_1C3E564(&Method_SingletonMonoBehaviour_SeManager__get_Instance__);
+    byte_4C566D9 = 1;
   }
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39ED16C *)Method_SingletonMonoBehaviour_SeManager__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39FF5A8 *)Method_SingletonMonoBehaviour_SeManager__get_Instance__);
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   v6 = UnityEngine_Object__op_Equality((UnityEngine_Object_o *)Instance, 0, 0);
   if ( v6 )
     return 0;
   if ( !Instance )
-    sub_1C372B4(v6);
-  return SeManager__IsBusyLocal((SeManager_o *)Instance, 1, assetName, objectName, v7);
+    sub_1C3E7C0(v6, v7);
+  return SeManager__IsBusyLocal((SeManager_o *)Instance, 1, assetName, objectName, v8);
 }
 
 
@@ -1863,11 +1876,11 @@ bool SeManager__IsDownloadFile(System_String_o *pathName, const MethodInfo *meth
 {
   SeManager_c *v3; // x0
 
-  if ( (byte_4C4291F & 1) == 0 )
+  if ( (byte_4C566C8 & 1) == 0 )
   {
-    sub_1C37058(&Method_System_Array_IndexOf_string___);
-    sub_1C37058(&SeManager_TypeInfo);
-    byte_4C4291F = 1;
+    sub_1C3E564(&Method_System_Array_IndexOf_string___);
+    sub_1C3E564(&SeManager_TypeInfo);
+    byte_4C566C8 = 1;
   }
   v3 = SeManager_TypeInfo;
   if ( !SeManager_TypeInfo->_2.cctor_finished )
@@ -1878,7 +1891,7 @@ bool SeManager__IsDownloadFile(System_String_o *pathName, const MethodInfo *meth
   return System_Array__IndexOf_object_(
            (System_Object_array *)v3->static_fields->seAssetBundleList,
            (Il2CppObject *)pathName,
-           (const MethodInfo_31EEE70 *)Method_System_Array_IndexOf_string___) >= 0;
+           (const MethodInfo_3200DC4 *)Method_System_Array_IndexOf_string___) >= 0;
 }
 
 
@@ -1891,23 +1904,22 @@ void SeManager__LateUpdate(SeManager_o *this, const MethodInfo *method)
   Il2CppObject *Item; // x0
   const MethodInfo *v8; // x1
   SePlayer_o *v9; // x21
-  const MethodInfo *v10; // x1
-  int32_t v11; // w2
-  const MethodInfo *v12; // x3
+  int32_t v10; // w2
+  const MethodInfo *v11; // x3
   int32_t seMax; // w8
   struct SePlayer_array *sePlayerStatusList; // x11
-  int32_t v15; // w9
+  int32_t v14; // w9
   CGThumbnailListItem_o *m_Items; // x0
   struct System_Action_o *callbackFunc; // x24
-  const MethodInfo *v18; // x1
+  const MethodInfo *v17; // x1
 
-  if ( (byte_4C4295B & 1) == 0 )
+  if ( (byte_4C56704 & 1) == 0 )
   {
-    sub_1C37058(&Method_System_Collections_Generic_List_SePlayer__RemoveAt__);
-    sub_1C37058(&Method_System_Collections_Generic_List_SePlayer__get_Count__);
-    sub_1C37058(&Method_System_Collections_Generic_List_SePlayer__get_Item__);
-    sub_1C37058(&UnityEngine_Object_TypeInfo);
-    byte_4C4295B = 1;
+    sub_1C3E564(&Method_System_Collections_Generic_List_SePlayer__RemoveAt__);
+    sub_1C3E564(&Method_System_Collections_Generic_List_SePlayer__get_Count__);
+    sub_1C3E564(&Method_System_Collections_Generic_List_SePlayer__get_Item__);
+    sub_1C3E564(&UnityEngine_Object_TypeInfo);
+    byte_4C56704 = 1;
   }
   playerGameObject = (UnityEngine_Object_o *)this->fields.playerGameObject;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -1928,7 +1940,7 @@ void SeManager__LateUpdate(SeManager_o *this, const MethodInfo *method)
           Item = System_Collections_Generic_List_object___get_Item(
                    (System_Collections_Generic_List_object__o *)workSePlayerStatusList,
                    v6,
-                   (const MethodInfo_37A2D54 *)Method_System_Collections_Generic_List_SePlayer__get_Item__);
+                   (const MethodInfo_37B5190 *)Method_System_Collections_Generic_List_SePlayer__get_Item__);
           if ( Item )
           {
             v9 = (SePlayer_o *)Item;
@@ -1937,7 +1949,7 @@ void SeManager__LateUpdate(SeManager_o *this, const MethodInfo *method)
               workSePlayerStatusList = (struct System_Collections_Generic_List_SePlayer__o *)SePlayer__Update(
                                                                                                v9,
                                                                                                deltaTime,
-                                                                                               v10);
+                                                                                               v8);
               if ( ((unsigned __int8)workSePlayerStatusList & 1) == 0 )
               {
                 seMax = this->fields.seMax;
@@ -1946,21 +1958,21 @@ void SeManager__LateUpdate(SeManager_o *this, const MethodInfo *method)
                   sePlayerStatusList = this->fields.sePlayerStatusList;
                   if ( !sePlayerStatusList )
                     goto LABEL_28;
-                  v15 = 0;
+                  v14 = 0;
                   m_Items = (CGThumbnailListItem_o *)sePlayerStatusList->m_Items;
                   while ( 1 )
                   {
-                    if ( (unsigned int)v15 >= LODWORD(sePlayerStatusList->max_length) )
-                      sub_1C372BC(m_Items);
+                    if ( (unsigned int)v14 >= LODWORD(sePlayerStatusList->max_length) )
+                      sub_1C3E7C8(m_Items, v8);
                     if ( (SePlayer_o *)m_Items->klass == v9 )
                       break;
-                    ++v15;
+                    ++v14;
                     m_Items = (CGThumbnailListItem_o *)((char *)m_Items + 8);
-                    if ( v15 >= seMax )
+                    if ( v14 >= seMax )
                       goto LABEL_23;
                   }
                   m_Items->klass = 0;
-                  sub_1C36FFC(m_Items, 0, v11, v12);
+                  sub_1C3E508(m_Items, 0, v10, v11);
                 }
 LABEL_23:
                 workSePlayerStatusList = this->fields.workSePlayerStatusList;
@@ -1969,9 +1981,9 @@ LABEL_23:
                 System_Collections_Generic_List_object___RemoveAt(
                   (System_Collections_Generic_List_object__o *)workSePlayerStatusList,
                   v6,
-                  (const MethodInfo_37A47F8 *)Method_System_Collections_Generic_List_SePlayer__RemoveAt__);
+                  (const MethodInfo_37B6C34 *)Method_System_Collections_Generic_List_SePlayer__RemoveAt__);
                 callbackFunc = v9->fields.callbackFunc;
-                SePlayer__Destroy(v9, v18);
+                SePlayer__Destroy(v9, v17);
                 if ( callbackFunc )
                   ((void (__fastcall *)(intptr_t, intptr_t))callbackFunc->fields.invoke_impl)(
                     callbackFunc->fields.method_code,
@@ -1987,14 +1999,14 @@ LABEL_23:
             System_Collections_Generic_List_object___RemoveAt(
               (System_Collections_Generic_List_object__o *)workSePlayerStatusList,
               v6,
-              (const MethodInfo_37A47F8 *)Method_System_Collections_Generic_List_SePlayer__RemoveAt__);
+              (const MethodInfo_37B6C34 *)Method_System_Collections_Generic_List_SePlayer__RemoveAt__);
           }
           if ( --v6 < 0 )
             return;
           workSePlayerStatusList = this->fields.workSePlayerStatusList;
           if ( !workSePlayerStatusList )
 LABEL_28:
-            sub_1C372B4(workSePlayerStatusList);
+            sub_1C3E7C0(workSePlayerStatusList, v8);
         }
       }
     }
@@ -2008,57 +2020,58 @@ void SeManager__LoadEndResidentSeAsset(const MethodInfo *method)
   struct SeManager_StaticFields *static_fields; // x8
   int v3; // w9
   Il2CppObject *Instance; // x0
-  const MethodInfo *v5; // x2
-  SeManager_c *v6; // x8
-  SoundManager_o *v7; // x19
+  __int64 v5; // x1
+  const MethodInfo *v6; // x2
+  SeManager_c *v7; // x8
+  SoundManager_o *v8; // x19
   struct System_String_array *LoadSeList; // x8
   System_String_array *CueList; // x0
-  System_Collections_Generic_IEnumerable_TSource__o *v10; // x19
-  SeManager___c_c *v11; // x0
+  System_Collections_Generic_IEnumerable_TSource__o *v11; // x19
+  SeManager___c_c *v12; // x0
   System_Func_object__object__o *_9__31_0; // x20
-  Il2CppObject *v13; // x21
-  struct SeManager___c_StaticFields *v14; // x0
-  int32_t v15; // w2
-  const MethodInfo *v16; // x3
-  System_Collections_Generic_IEnumerable_TSource__o *v17; // x0
-  System_Object_array *v18; // x0
-  int32_t v19; // w2
-  const MethodInfo *v20; // x3
-  SeManager_c *v21; // x8
-  System_Object_array *v22; // x19
-  struct SeManager_StaticFields *v23; // x0
-  const MethodInfo *v24; // x2
-  SeManager_c *v25; // x8
-  SoundManager_o *v26; // x19
-  struct System_String_array *v27; // x8
-  System_String_array *v28; // x0
-  System_Collections_Generic_IEnumerable_TSource__o *v29; // x19
-  SeManager___c_c *v30; // x0
+  Il2CppObject *v14; // x21
+  struct SeManager___c_StaticFields *v15; // x0
+  int32_t v16; // w2
+  const MethodInfo *v17; // x3
+  System_Collections_Generic_IEnumerable_TSource__o *v18; // x0
+  System_Object_array *v19; // x0
+  int32_t v20; // w2
+  const MethodInfo *v21; // x3
+  SeManager_c *v22; // x8
+  System_Object_array *v23; // x19
+  struct SeManager_StaticFields *v24; // x0
+  const MethodInfo *v25; // x2
+  SeManager_c *v26; // x8
+  SoundManager_o *v27; // x19
+  struct System_String_array *v28; // x8
+  System_String_array *v29; // x0
+  System_Collections_Generic_IEnumerable_TSource__o *v30; // x19
+  SeManager___c_c *v31; // x0
   System_Func_object__object__o *_9__31_1; // x20
-  Il2CppObject *v32; // x21
-  struct SeManager___c_StaticFields *v33; // x0
-  int32_t v34; // w2
-  const MethodInfo *v35; // x3
-  System_Collections_Generic_IEnumerable_TSource__o *v36; // x0
-  System_Object_array *v37; // x0
-  int32_t v38; // w2
-  const MethodInfo *v39; // x3
-  SeManager_c *v40; // x8
-  System_Object_array *v41; // x19
-  struct SeManager_StaticFields *v42; // x0
-  SeManager_c *v43; // x0
+  Il2CppObject *v33; // x21
+  struct SeManager___c_StaticFields *v34; // x0
+  int32_t v35; // w2
+  const MethodInfo *v36; // x3
+  System_Collections_Generic_IEnumerable_TSource__o *v37; // x0
+  System_Object_array *v38; // x0
+  int32_t v39; // w2
+  const MethodInfo *v40; // x3
+  SeManager_c *v41; // x8
+  System_Object_array *v42; // x19
+  struct SeManager_StaticFields *v43; // x0
+  SeManager_c *v44; // x0
 
-  if ( (byte_4C4291C & 1) == 0 )
+  if ( (byte_4C566C5 & 1) == 0 )
   {
-    sub_1C37058(&Method_System_Linq_Enumerable_Select_string__string___);
-    sub_1C37058(&Method_System_Linq_Enumerable_ToArray_string___);
-    sub_1C37058(&System_Func_string__string__TypeInfo);
-    sub_1C37058(&SeManager_TypeInfo);
-    sub_1C37058(&Method_SingletonMonoBehaviour_SoundManager__get_Instance__);
-    sub_1C37058(&Method_SeManager___c__LoadEndResidentSeAsset_b__31_0__);
-    sub_1C37058(&Method_SeManager___c__LoadEndResidentSeAsset_b__31_1__);
-    sub_1C37058(&SeManager___c_TypeInfo);
-    byte_4C4291C = 1;
+    sub_1C3E564(&Method_System_Linq_Enumerable_Select_string__string___);
+    sub_1C3E564(&Method_System_Linq_Enumerable_ToArray_string___);
+    sub_1C3E564(&System_Func_string__string__TypeInfo);
+    sub_1C3E564(&SeManager_TypeInfo);
+    sub_1C3E564(&Method_SingletonMonoBehaviour_SoundManager__get_Instance__);
+    sub_1C3E564(&Method_SeManager___c__LoadEndResidentSeAsset_b__31_0__);
+    sub_1C3E564(&Method_SeManager___c__LoadEndResidentSeAsset_b__31_1__);
+    sub_1C3E564(&SeManager___c_TypeInfo);
+    byte_4C566C5 = 1;
   }
   v1 = SeManager_TypeInfo;
   if ( !SeManager_TypeInfo->_2.cctor_finished )
@@ -2071,135 +2084,135 @@ void SeManager__LoadEndResidentSeAsset(const MethodInfo *method)
   static_fields->loadCounter = v3;
   if ( !v3 )
   {
-    Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39ED16C *)Method_SingletonMonoBehaviour_SoundManager__get_Instance__);
-    v6 = SeManager_TypeInfo;
-    v7 = (SoundManager_o *)Instance;
+    Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39FF5A8 *)Method_SingletonMonoBehaviour_SoundManager__get_Instance__);
+    v7 = SeManager_TypeInfo;
+    v8 = (SoundManager_o *)Instance;
     if ( !SeManager_TypeInfo->_2.cctor_finished )
     {
       j_il2cpp_runtime_class_init_0(SeManager_TypeInfo);
-      v6 = SeManager_TypeInfo;
+      v7 = SeManager_TypeInfo;
     }
-    LoadSeList = v6->static_fields->LoadSeList;
+    LoadSeList = v7->static_fields->LoadSeList;
     if ( LoadSeList )
     {
       if ( LODWORD(LoadSeList->max_length) <= 1 )
         goto LABEL_41;
-      if ( !v7 )
+      if ( !v8 )
         goto LABEL_40;
-      CueList = SoundManager__GetCueList(v7, LoadSeList->m_Items[1], v5);
+      CueList = SoundManager__GetCueList(v8, LoadSeList->m_Items[1], v6);
       if ( CueList )
       {
-        v10 = (System_Collections_Generic_IEnumerable_TSource__o *)CueList;
-        v11 = SeManager___c_TypeInfo;
+        v11 = (System_Collections_Generic_IEnumerable_TSource__o *)CueList;
+        v12 = SeManager___c_TypeInfo;
         if ( !SeManager___c_TypeInfo->_2.cctor_finished )
         {
           j_il2cpp_runtime_class_init_0(SeManager___c_TypeInfo);
-          v11 = SeManager___c_TypeInfo;
+          v12 = SeManager___c_TypeInfo;
         }
-        _9__31_0 = (System_Func_object__object__o *)v11->static_fields->__9__31_0;
+        _9__31_0 = (System_Func_object__object__o *)v12->static_fields->__9__31_0;
         if ( !_9__31_0 )
         {
-          if ( !v11->_2.cctor_finished )
+          if ( !v12->_2.cctor_finished )
           {
-            j_il2cpp_runtime_class_init_0(v11);
-            v11 = SeManager___c_TypeInfo;
+            j_il2cpp_runtime_class_init_0(v12);
+            v12 = SeManager___c_TypeInfo;
           }
-          v13 = (Il2CppObject *)v11->static_fields->__9;
-          _9__31_0 = (System_Func_object__object__o *)sub_1C372A4(System_Func_string__string__TypeInfo);
-          System_Func_object__object____ctor(_9__31_0, v13, Method_SeManager___c__LoadEndResidentSeAsset_b__31_0__, 0);
-          v14 = SeManager___c_TypeInfo->static_fields;
-          v14->__9__31_0 = (struct System_Func_string__string__o *)_9__31_0;
-          sub_1C36FFC((CGThumbnailListItem_o *)&v14->__9__31_0, (int32_t)_9__31_0, v15, v16);
+          v14 = (Il2CppObject *)v12->static_fields->__9;
+          _9__31_0 = (System_Func_object__object__o *)sub_1C3E7B0(System_Func_string__string__TypeInfo);
+          System_Func_object__object____ctor(_9__31_0, v14, Method_SeManager___c__LoadEndResidentSeAsset_b__31_0__, 0);
+          v15 = SeManager___c_TypeInfo->static_fields;
+          v15->__9__31_0 = (struct System_Func_string__string__o *)_9__31_0;
+          sub_1C3E508((CGThumbnailListItem_o *)&v15->__9__31_0, (int32_t)_9__31_0, v16, v17);
         }
-        v17 = (System_Collections_Generic_IEnumerable_TSource__o *)System_Linq_Enumerable__Select_object__object_(
-                                                                     v10,
+        v18 = (System_Collections_Generic_IEnumerable_TSource__o *)System_Linq_Enumerable__Select_object__object_(
+                                                                     v11,
                                                                      (System_Func_TSource__TResult__o *)_9__31_0,
-                                                                     (const MethodInfo_311E324 *)Method_System_Linq_Enumerable_Select_string__string___);
-        v18 = System_Linq_Enumerable__ToArray_object_(
-                v17,
-                (const MethodInfo_31272F4 *)Method_System_Linq_Enumerable_ToArray_string___);
-        v21 = SeManager_TypeInfo;
-        v22 = v18;
+                                                                     (const MethodInfo_3130218 *)Method_System_Linq_Enumerable_Select_string__string___);
+        v19 = System_Linq_Enumerable__ToArray_object_(
+                v18,
+                (const MethodInfo_31391E8 *)Method_System_Linq_Enumerable_ToArray_string___);
+        v22 = SeManager_TypeInfo;
+        v23 = v19;
         if ( !SeManager_TypeInfo->_2.cctor_finished )
         {
           j_il2cpp_runtime_class_init_0(SeManager_TypeInfo);
-          v21 = SeManager_TypeInfo;
+          v22 = SeManager_TypeInfo;
         }
-        v23 = v21->static_fields;
-        v23->seAssetBundleList = (struct System_String_array *)v22;
-        sub_1C36FFC((CGThumbnailListItem_o *)&v23->seAssetBundleList, (int32_t)v22, v19, v20);
+        v24 = v22->static_fields;
+        v24->seAssetBundleList = (struct System_String_array *)v23;
+        sub_1C3E508((CGThumbnailListItem_o *)&v24->seAssetBundleList, (int32_t)v23, v20, v21);
       }
-      Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39ED16C *)Method_SingletonMonoBehaviour_SoundManager__get_Instance__);
-      v25 = SeManager_TypeInfo;
-      v26 = (SoundManager_o *)Instance;
+      Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39FF5A8 *)Method_SingletonMonoBehaviour_SoundManager__get_Instance__);
+      v26 = SeManager_TypeInfo;
+      v27 = (SoundManager_o *)Instance;
       if ( !SeManager_TypeInfo->_2.cctor_finished )
       {
         j_il2cpp_runtime_class_init_0(SeManager_TypeInfo);
-        v25 = SeManager_TypeInfo;
+        v26 = SeManager_TypeInfo;
       }
-      v27 = v25->static_fields->LoadSeList;
-      if ( !v27 )
+      v28 = v26->static_fields->LoadSeList;
+      if ( !v28 )
         goto LABEL_40;
-      if ( !LODWORD(v27->max_length) )
+      if ( !LODWORD(v28->max_length) )
 LABEL_41:
-        sub_1C372BC(Instance);
-      if ( v26 )
+        sub_1C3E7C8(Instance, v5);
+      if ( v27 )
       {
-        v28 = SoundManager__GetCueList(v26, v27->m_Items[0], v24);
-        if ( v28 )
+        v29 = SoundManager__GetCueList(v27, v28->m_Items[0], v25);
+        if ( v29 )
         {
-          v29 = (System_Collections_Generic_IEnumerable_TSource__o *)v28;
-          v30 = SeManager___c_TypeInfo;
+          v30 = (System_Collections_Generic_IEnumerable_TSource__o *)v29;
+          v31 = SeManager___c_TypeInfo;
           if ( !SeManager___c_TypeInfo->_2.cctor_finished )
           {
             j_il2cpp_runtime_class_init_0(SeManager___c_TypeInfo);
-            v30 = SeManager___c_TypeInfo;
+            v31 = SeManager___c_TypeInfo;
           }
-          _9__31_1 = (System_Func_object__object__o *)v30->static_fields->__9__31_1;
+          _9__31_1 = (System_Func_object__object__o *)v31->static_fields->__9__31_1;
           if ( !_9__31_1 )
           {
-            if ( !v30->_2.cctor_finished )
+            if ( !v31->_2.cctor_finished )
             {
-              j_il2cpp_runtime_class_init_0(v30);
-              v30 = SeManager___c_TypeInfo;
+              j_il2cpp_runtime_class_init_0(v31);
+              v31 = SeManager___c_TypeInfo;
             }
-            v32 = (Il2CppObject *)v30->static_fields->__9;
-            _9__31_1 = (System_Func_object__object__o *)sub_1C372A4(System_Func_string__string__TypeInfo);
-            System_Func_object__object____ctor(_9__31_1, v32, Method_SeManager___c__LoadEndResidentSeAsset_b__31_1__, 0);
-            v33 = SeManager___c_TypeInfo->static_fields;
-            v33->__9__31_1 = (struct System_Func_string__string__o *)_9__31_1;
-            sub_1C36FFC((CGThumbnailListItem_o *)&v33->__9__31_1, (int32_t)_9__31_1, v34, v35);
+            v33 = (Il2CppObject *)v31->static_fields->__9;
+            _9__31_1 = (System_Func_object__object__o *)sub_1C3E7B0(System_Func_string__string__TypeInfo);
+            System_Func_object__object____ctor(_9__31_1, v33, Method_SeManager___c__LoadEndResidentSeAsset_b__31_1__, 0);
+            v34 = SeManager___c_TypeInfo->static_fields;
+            v34->__9__31_1 = (struct System_Func_string__string__o *)_9__31_1;
+            sub_1C3E508((CGThumbnailListItem_o *)&v34->__9__31_1, (int32_t)_9__31_1, v35, v36);
           }
-          v36 = (System_Collections_Generic_IEnumerable_TSource__o *)System_Linq_Enumerable__Select_object__object_(
-                                                                       v29,
+          v37 = (System_Collections_Generic_IEnumerable_TSource__o *)System_Linq_Enumerable__Select_object__object_(
+                                                                       v30,
                                                                        (System_Func_TSource__TResult__o *)_9__31_1,
-                                                                       (const MethodInfo_311E324 *)Method_System_Linq_Enumerable_Select_string__string___);
-          v37 = System_Linq_Enumerable__ToArray_object_(
-                  v36,
-                  (const MethodInfo_31272F4 *)Method_System_Linq_Enumerable_ToArray_string___);
-          v40 = SeManager_TypeInfo;
-          v41 = v37;
+                                                                       (const MethodInfo_3130218 *)Method_System_Linq_Enumerable_Select_string__string___);
+          v38 = System_Linq_Enumerable__ToArray_object_(
+                  v37,
+                  (const MethodInfo_31391E8 *)Method_System_Linq_Enumerable_ToArray_string___);
+          v41 = SeManager_TypeInfo;
+          v42 = v38;
           if ( !SeManager_TypeInfo->_2.cctor_finished )
           {
             j_il2cpp_runtime_class_init_0(SeManager_TypeInfo);
-            v40 = SeManager_TypeInfo;
+            v41 = SeManager_TypeInfo;
           }
-          v42 = v40->static_fields;
-          v42->residentSeAssetBundleList = (struct System_String_array *)v41;
-          sub_1C36FFC((CGThumbnailListItem_o *)&v42->residentSeAssetBundleList, (int32_t)v41, v38, v39);
+          v43 = v41->static_fields;
+          v43->residentSeAssetBundleList = (struct System_String_array *)v42;
+          sub_1C3E508((CGThumbnailListItem_o *)&v43->residentSeAssetBundleList, (int32_t)v42, v39, v40);
         }
-        v43 = SeManager_TypeInfo;
+        v44 = SeManager_TypeInfo;
         if ( !SeManager_TypeInfo->_2.cctor_finished )
         {
           j_il2cpp_runtime_class_init_0(SeManager_TypeInfo);
-          v43 = SeManager_TypeInfo;
+          v44 = SeManager_TypeInfo;
         }
-        v43->static_fields->IsBusy = 0;
+        v44->static_fields->IsBusy = 0;
         return;
       }
     }
 LABEL_40:
-    sub_1C372B4(Instance);
+    sub_1C3E7C0(Instance, v5);
   }
 }
 
@@ -2208,21 +2221,22 @@ void SeManager__LoadSe(System_String_o *name, System_Action_o *callbackFunc, con
 {
   Il2CppObject *Instance; // x20
   _BOOL8 v5; // x0
+  __int64 v6; // x1
 
-  if ( (byte_4C42931 & 1) == 0 )
+  if ( (byte_4C566DA & 1) == 0 )
   {
-    sub_1C37058(&UnityEngine_Object_TypeInfo);
-    sub_1C37058(&Method_SingletonMonoBehaviour_SeManager__get_Instance__);
-    byte_4C42931 = 1;
+    sub_1C3E564(&UnityEngine_Object_TypeInfo);
+    sub_1C3E564(&Method_SingletonMonoBehaviour_SeManager__get_Instance__);
+    byte_4C566DA = 1;
   }
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39ED16C *)Method_SingletonMonoBehaviour_SeManager__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39FF5A8 *)Method_SingletonMonoBehaviour_SeManager__get_Instance__);
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   v5 = UnityEngine_Object__op_Equality((UnityEngine_Object_o *)Instance, 0, 0);
   if ( !v5 )
   {
     if ( !Instance )
-      sub_1C372B4(v5);
+      sub_1C3E7C0(v5, v6);
     if ( callbackFunc )
       ((void (__fastcall *)(intptr_t, intptr_t))callbackFunc->fields.invoke_impl)(
         callbackFunc->fields.method_code,
@@ -2248,23 +2262,24 @@ void SeManager__PauseSe(bool isPause, const MethodInfo *method)
 {
   Il2CppObject *Instance; // x20
   _BOOL8 v4; // x0
-  const MethodInfo *v5; // x3
+  __int64 v5; // x1
+  const MethodInfo *v6; // x3
 
-  if ( (byte_4C42948 & 1) == 0 )
+  if ( (byte_4C566F1 & 1) == 0 )
   {
-    sub_1C37058(&UnityEngine_Object_TypeInfo);
-    sub_1C37058(&Method_SingletonMonoBehaviour_SeManager__get_Instance__);
-    byte_4C42948 = 1;
+    sub_1C3E564(&UnityEngine_Object_TypeInfo);
+    sub_1C3E564(&Method_SingletonMonoBehaviour_SeManager__get_Instance__);
+    byte_4C566F1 = 1;
   }
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39ED16C *)Method_SingletonMonoBehaviour_SeManager__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39FF5A8 *)Method_SingletonMonoBehaviour_SeManager__get_Instance__);
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   v4 = UnityEngine_Object__op_Equality((UnityEngine_Object_o *)Instance, 0, 0);
   if ( !v4 )
   {
     if ( !Instance )
-      sub_1C372B4(v4);
-    SeManager__PauseSeLocal((SeManager_o *)Instance, isPause, 0, v5);
+      sub_1C3E7C0(v4, v5);
+    SeManager__PauseSeLocal((SeManager_o *)Instance, isPause, 0, v6);
   }
 }
 
@@ -2275,13 +2290,14 @@ void SeManager__PauseSeLocal(SeManager_o *this, bool isPause, int32_t seType, co
   int32_t v8; // w21
   bool v9; // w22
   SePlayer_o *Item; // x0
-  const MethodInfo *v11; // x2
+  __int64 v11; // x1
+  const MethodInfo *v12; // x2
 
-  if ( (byte_4C4294A & 1) == 0 )
+  if ( (byte_4C566F3 & 1) == 0 )
   {
-    sub_1C37058(&Method_System_Collections_Generic_List_SePlayer__get_Count__);
-    sub_1C37058(&Method_System_Collections_Generic_List_SePlayer__get_Item__);
-    byte_4C4294A = 1;
+    sub_1C3E564(&Method_System_Collections_Generic_List_SePlayer__get_Count__);
+    sub_1C3E564(&Method_System_Collections_Generic_List_SePlayer__get_Item__);
+    byte_4C566F3 = 1;
   }
   workSePlayerStatusList = (System_Collections_Generic_List_object__o *)this->fields.workSePlayerStatusList;
   if ( workSePlayerStatusList )
@@ -2295,14 +2311,14 @@ void SeManager__PauseSeLocal(SeManager_o *this, bool isPause, int32_t seType, co
         Item = (SePlayer_o *)System_Collections_Generic_List_object___get_Item(
                                workSePlayerStatusList,
                                v8,
-                               (const MethodInfo_37A2D54 *)Method_System_Collections_Generic_List_SePlayer__get_Item__);
+                               (const MethodInfo_37B5190 *)Method_System_Collections_Generic_List_SePlayer__get_Item__);
         if ( Item && Item->fields.seType == seType )
-          SePlayer__SetPause(Item, v9, v11);
+          SePlayer__SetPause(Item, v9, v12);
         if ( --v8 < 0 )
           break;
         workSePlayerStatusList = (System_Collections_Generic_List_object__o *)this->fields.workSePlayerStatusList;
         if ( !workSePlayerStatusList )
-          sub_1C372B4(0);
+          sub_1C3E7C0(0, v11);
       }
     }
   }
@@ -2313,23 +2329,24 @@ void SeManager__PauseVoice(bool isPause, const MethodInfo *method)
 {
   Il2CppObject *Instance; // x20
   _BOOL8 v4; // x0
-  const MethodInfo *v5; // x3
+  __int64 v5; // x1
+  const MethodInfo *v6; // x3
 
-  if ( (byte_4C42949 & 1) == 0 )
+  if ( (byte_4C566F2 & 1) == 0 )
   {
-    sub_1C37058(&UnityEngine_Object_TypeInfo);
-    sub_1C37058(&Method_SingletonMonoBehaviour_SeManager__get_Instance__);
-    byte_4C42949 = 1;
+    sub_1C3E564(&UnityEngine_Object_TypeInfo);
+    sub_1C3E564(&Method_SingletonMonoBehaviour_SeManager__get_Instance__);
+    byte_4C566F2 = 1;
   }
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39ED16C *)Method_SingletonMonoBehaviour_SeManager__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39FF5A8 *)Method_SingletonMonoBehaviour_SeManager__get_Instance__);
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   v4 = UnityEngine_Object__op_Equality((UnityEngine_Object_o *)Instance, 0, 0);
   if ( !v4 )
   {
     if ( !Instance )
-      sub_1C372B4(v4);
-    SeManager__PauseSeLocal((SeManager_o *)Instance, isPause, 1, v5);
+      sub_1C3E7C0(v4, v5);
+    SeManager__PauseSeLocal((SeManager_o *)Instance, isPause, 1, v6);
   }
 }
 
@@ -2337,20 +2354,22 @@ void SeManager__PauseVoice(bool isPause, const MethodInfo *method)
 void SeManager__PlayCommonSe(int32_t kind, bool ignorePreDelay, const MethodInfo *method)
 {
   Il2CppObject *Instance; // x0
-  const MethodInfo *v6; // x3
+  __int64 v6; // x1
+  const MethodInfo *v7; // x3
 
-  if ( (byte_4C42929 & 1) == 0 )
+  if ( (byte_4C566D2 & 1) == 0 )
   {
-    sub_1C37058(&Method_SingletonMonoBehaviour_SeManager__get_Instance__);
-    byte_4C42929 = 1;
+    sub_1C3E564(&Method_SingletonMonoBehaviour_SeManager__get_Instance__);
+    byte_4C566D2 = 1;
   }
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39ED16C *)Method_SingletonMonoBehaviour_SeManager__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39FF5A8 *)Method_SingletonMonoBehaviour_SeManager__get_Instance__);
   if ( !Instance )
-    sub_1C372B4(0);
-  SeManager__PlayCommonSeLocal((SeManager_o *)Instance, kind, ignorePreDelay, v6);
+    sub_1C3E7C0(0, v6);
+  SeManager__PlayCommonSeLocal((SeManager_o *)Instance, kind, ignorePreDelay, v7);
 }
 
 
+// local variable allocation has failed, the output may be wrong!
 void SeManager__PlayCommonSeLocal(SeManager_o *this, int32_t kind, bool ignorePreDelay, const MethodInfo *method)
 {
   const MethodInfo *v4; // x4
@@ -2360,16 +2379,16 @@ void SeManager__PlayCommonSeLocal(SeManager_o *this, int32_t kind, bool ignorePr
   SeManager_c *v10; // x0
 
   v7 = this;
-  if ( (byte_4C4292C & 1) == 0 )
+  if ( (byte_4C566D5 & 1) == 0 )
   {
-    this = (SeManager_o *)sub_1C37058(&SeManager_TypeInfo);
-    byte_4C4292C = 1;
+    this = (SeManager_o *)sub_1C3E564(&SeManager_TypeInfo);
+    byte_4C566D5 = 1;
   }
   commonSeClipNames = v7->fields.commonSeClipNames;
   if ( !commonSeClipNames )
-    sub_1C372B4(this);
+    sub_1C3E7C0(this, *(_QWORD *)&kind);
   if ( LODWORD(commonSeClipNames->max_length) <= kind )
-    sub_1C372BC(this);
+    sub_1C3E7C8(this, *(_QWORD *)&kind);
   v9 = commonSeClipNames->m_Items[kind];
   v10 = SeManager_TypeInfo;
   if ( !SeManager_TypeInfo->_2.cctor_finished )
@@ -2391,13 +2410,13 @@ System_Collections_IEnumerator_o *SeManager__PlayCommonSeWithDelay(
   bool v9; // w22
   __int64 v10; // x21
 
-  if ( (byte_4C4292B & 1) == 0 )
+  if ( (byte_4C566D4 & 1) == 0 )
   {
-    sub_1C37058(&SeManager__PlayCommonSeWithDelay_d__50_TypeInfo);
-    byte_4C4292B = 1;
+    sub_1C3E564(&SeManager__PlayCommonSeWithDelay_d__50_TypeInfo);
+    byte_4C566D4 = 1;
   }
   v9 = ignorePreDelay;
-  v10 = sub_1C372A4(SeManager__PlayCommonSeWithDelay_d__50_TypeInfo);
+  v10 = sub_1C3E7B0(SeManager__PlayCommonSeWithDelay_d__50_TypeInfo);
   System_Object___ctor((Il2CppObject *)v10, 0);
   *(_DWORD *)(v10 + 16) = 0;
   *(_DWORD *)(v10 + 40) = kind;
@@ -2408,7 +2427,7 @@ System_Collections_IEnumerator_o *SeManager__PlayCommonSeWithDelay(
 }
 
 
-void SeManager__PlayCommonSe_41488564(
+void SeManager__PlayCommonSe_41537092(
         int32_t kind,
         float delayTime,
         int32_t waitFrameCount,
@@ -2418,20 +2437,21 @@ void SeManager__PlayCommonSe_41488564(
   const MethodInfo *v9; // x3
   Il2CppObject *Instance; // x22
   System_Collections_IEnumerator_o *v11; // x0
+  __int64 v12; // x1
 
-  if ( (byte_4C4292A & 1) == 0 )
+  if ( (byte_4C566D3 & 1) == 0 )
   {
-    sub_1C37058(&SeManager_TypeInfo);
-    sub_1C37058(&Method_SingletonMonoBehaviour_SeManager__get_Instance__);
-    byte_4C4292A = 1;
+    sub_1C3E564(&SeManager_TypeInfo);
+    sub_1C3E564(&Method_SingletonMonoBehaviour_SeManager__get_Instance__);
+    byte_4C566D3 = 1;
   }
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39ED16C *)Method_SingletonMonoBehaviour_SeManager__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39FF5A8 *)Method_SingletonMonoBehaviour_SeManager__get_Instance__);
   if ( !SeManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(SeManager_TypeInfo);
   v11 = SeManager__PlayCommonSeWithDelay(kind, delayTime, waitFrameCount, ignorePreDelay, v9);
   if ( !Instance )
-    sub_1C372B4(v11);
-  UnityEngine_MonoBehaviour__StartCoroutine_71252324((UnityEngine_MonoBehaviour_o *)Instance, v11, 0);
+    sub_1C3E7C0(v11, v12);
+  UnityEngine_MonoBehaviour__StartCoroutine_71327136((UnityEngine_MonoBehaviour_o *)Instance, v11, 0);
 }
 
 
@@ -2452,24 +2472,25 @@ SePlayer_o *SeManager__PlayLocal(
   int32_t v21; // w27
   SePlayer_o *v22; // x19
   int32_t v23; // w3
-  int32_t v24; // w2
-  const MethodInfo *v25; // x3
+  __int64 v24; // x1
+  int32_t v25; // w2
+  const MethodInfo *v26; // x3
   System_Collections_Generic_List_object__o *workSePlayerStatusList; // x0
   struct System_Object_array *items; // x8
-  _QWORD *v28; // x9
+  _QWORD *v29; // x9
   __int64 size; // x10
-  Il2CppClass **v30; // x8
-  const MethodInfo *v32; // [xsp+10h] [xbp-80h]
+  Il2CppClass **v31; // x8
+  const MethodInfo *v33; // [xsp+10h] [xbp-80h]
 
-  if ( (byte_4C42956 & 1) == 0 )
+  if ( (byte_4C566FF & 1) == 0 )
   {
-    sub_1C37058(&Method_System_Collections_Generic_List_SePlayer__Add__);
-    sub_1C37058(&SePlayer_TypeInfo);
-    byte_4C42956 = 1;
+    sub_1C3E564(&Method_System_Collections_Generic_List_SePlayer__Add__);
+    sub_1C3E564(&SePlayer_TypeInfo);
+    byte_4C566FF = 1;
   }
   v21 = this->fields.sePlayNum + 1;
   this->fields.sePlayNum = v21;
-  v22 = (SePlayer_o *)sub_1C372A4(SePlayer_TypeInfo);
+  v22 = (SePlayer_o *)sub_1C3E7B0(SePlayer_TypeInfo);
   SePlayer___ctor(
     v22,
     v21,
@@ -2483,29 +2504,29 @@ SePlayer_o *SeManager__PlayLocal(
     callbackFunc,
     notOverwrite,
     ignorePreDelay,
-    v32);
+    v33);
   workSePlayerStatusList = (System_Collections_Generic_List_object__o *)this->fields.workSePlayerStatusList;
   if ( workSePlayerStatusList )
   {
     items = workSePlayerStatusList->fields._items;
-    v28 = Method_System_Collections_Generic_List_SePlayer__Add__;
+    v29 = Method_System_Collections_Generic_List_SePlayer__Add__;
     ++workSePlayerStatusList->fields._version;
     if ( !items )
-      sub_1C372B4(workSePlayerStatusList);
+      sub_1C3E7C0(workSePlayerStatusList, v24);
     size = workSePlayerStatusList->fields._size;
     if ( (unsigned int)size >= LODWORD(items->max_length) )
     {
       System_Collections_Generic_List_object___AddWithResize(
         workSePlayerStatusList,
         (Il2CppObject *)v22,
-        *(const MethodInfo_37A3024 **)(*(_QWORD *)(v28[4] + 192LL) + 112LL));
+        *(const MethodInfo_37B5460 **)(*(_QWORD *)(v29[4] + 192LL) + 112LL));
     }
     else
     {
-      v30 = &items->obj.klass + size;
+      v31 = &items->obj.klass + size;
       workSePlayerStatusList->fields._size = size + 1;
-      v30[4] = (Il2CppClass *)v22;
-      sub_1C36FFC((CGThumbnailListItem_o *)(v30 + 4), (int32_t)v22, v24, v25);
+      v31[4] = (Il2CppClass *)v22;
+      sub_1C3E508((CGThumbnailListItem_o *)(v31 + 4), (int32_t)v22, v25, v26);
     }
   }
   return v22;
@@ -2523,22 +2544,23 @@ SePlayer_o *SeManager__PlaySe(
 {
   Il2CppObject *Instance; // x23
   _BOOL8 v14; // x0
-  const MethodInfo *v15; // x7
+  __int64 v15; // x1
+  const MethodInfo *v16; // x7
 
-  if ( (byte_4C42933 & 1) == 0 )
+  if ( (byte_4C566DC & 1) == 0 )
   {
-    sub_1C37058(&UnityEngine_Object_TypeInfo);
-    sub_1C37058(&Method_SingletonMonoBehaviour_SeManager__get_Instance__);
-    byte_4C42933 = 1;
+    sub_1C3E564(&UnityEngine_Object_TypeInfo);
+    sub_1C3E564(&Method_SingletonMonoBehaviour_SeManager__get_Instance__);
+    byte_4C566DC = 1;
   }
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39ED16C *)Method_SingletonMonoBehaviour_SeManager__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39FF5A8 *)Method_SingletonMonoBehaviour_SeManager__get_Instance__);
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   v14 = UnityEngine_Object__op_Equality((UnityEngine_Object_o *)Instance, 0, 0);
   if ( v14 )
     return 0;
   if ( !Instance )
-    sub_1C372B4(v14);
+    sub_1C3E7C0(v14, v15);
   return SeManager__PlaySeLocal(
            (SeManager_o *)Instance,
            0,
@@ -2549,7 +2571,7 @@ SePlayer_o *SeManager__PlaySe(
            callbackFunc,
            notOverwrite,
            ignorePreDelay,
-           v15);
+           v16);
 }
 
 
@@ -2567,90 +2589,91 @@ SePlayer_o *SeManager__PlaySeLocal(
 {
   int32_t v19; // w26
   SoundManager_o *Instance; // x0
-  const MethodInfo *v21; // x2
+  __int64 v21; // x1
+  const MethodInfo *v22; // x2
   System_String_o *CueSheet; // x0
-  System_String_o *v23; // x28
-  SePlayer_o *v24; // x27
-  int32_t v25; // w3
-  int32_t v26; // w2
-  const MethodInfo *v27; // x3
+  System_String_o *v24; // x28
+  SePlayer_o *v25; // x27
+  int32_t v26; // w3
+  int32_t v27; // w2
+  const MethodInfo *v28; // x3
   intptr_t m_CachedPtr; // x8
-  _QWORD *v29; // x9
+  _QWORD *v30; // x9
   __int64 m_CancellationTokenSource_low; // x10
-  intptr_t v31; // x8
-  SeManager_c *v32; // x8
+  intptr_t v32; // x8
+  SeManager_c *v33; // x8
   struct SeManager_StaticFields *static_fields; // x9
   System_Object_array *residentSeAssetBundleList; // x27
-  Il2CppObject *v35; // x0
+  Il2CppObject *v36; // x0
   struct System_String_array *LoadSeList; // x8
-  struct SeManager_StaticFields *v37; // x9
+  struct SeManager_StaticFields *v38; // x9
   System_Object_array *seAssetBundleList; // x27
-  Il2CppObject *v39; // x0
-  __int64 v40; // x8
-  const MethodInfo *v42; // [xsp+10h] [xbp-80h]
+  Il2CppObject *v40; // x0
+  __int64 v41; // x8
+  const MethodInfo *v43; // [xsp+10h] [xbp-80h]
 
-  if ( (byte_4C42958 & 1) == 0 )
+  if ( (byte_4C56701 & 1) == 0 )
   {
-    sub_1C37058(&Method_System_Array_IndexOf_string___);
-    sub_1C37058(&Method_System_Collections_Generic_List_SePlayer__Add__);
-    sub_1C37058(&SeManager_TypeInfo);
-    sub_1C37058(&SePlayer_TypeInfo);
-    sub_1C37058(&Method_SingletonMonoBehaviour_SoundManager__get_Instance__);
-    sub_1C37058(&StringLiteral_11369/*"ResidentSE/"*/);
-    sub_1C37058(&StringLiteral_12654/*"Se/"*/);
-    byte_4C42958 = 1;
+    sub_1C3E564(&Method_System_Array_IndexOf_string___);
+    sub_1C3E564(&Method_System_Collections_Generic_List_SePlayer__Add__);
+    sub_1C3E564(&SeManager_TypeInfo);
+    sub_1C3E564(&SePlayer_TypeInfo);
+    sub_1C3E564(&Method_SingletonMonoBehaviour_SoundManager__get_Instance__);
+    sub_1C3E564(&StringLiteral_11371/*"ResidentSE/"*/);
+    sub_1C3E564(&StringLiteral_12662/*"Se/"*/);
+    byte_4C56701 = 1;
   }
   v19 = this->fields.sePlayNum + 1;
   this->fields.sePlayNum = v19;
-  Instance = (SoundManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39ED16C *)Method_SingletonMonoBehaviour_SoundManager__get_Instance__);
+  Instance = (SoundManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39FF5A8 *)Method_SingletonMonoBehaviour_SoundManager__get_Instance__);
   if ( !Instance )
     goto LABEL_35;
-  CueSheet = SoundManager__GetCueSheet(Instance, name, v21);
+  CueSheet = SoundManager__GetCueSheet(Instance, name, v22);
   if ( !CueSheet )
   {
-    v32 = SeManager_TypeInfo;
+    v33 = SeManager_TypeInfo;
     if ( !SeManager_TypeInfo->_2.cctor_finished )
     {
       j_il2cpp_runtime_class_init_0(SeManager_TypeInfo);
-      v32 = SeManager_TypeInfo;
+      v33 = SeManager_TypeInfo;
     }
-    static_fields = v32->static_fields;
+    static_fields = v33->static_fields;
     if ( !static_fields->residentSeAssetBundleList )
       goto LABEL_39;
-    if ( !v32->_2.cctor_finished )
+    if ( !v33->_2.cctor_finished )
     {
-      j_il2cpp_runtime_class_init_0(v32);
+      j_il2cpp_runtime_class_init_0(v33);
       static_fields = SeManager_TypeInfo->static_fields;
     }
     residentSeAssetBundleList = (System_Object_array *)static_fields->residentSeAssetBundleList;
-    v35 = (Il2CppObject *)System_String__Concat_63561656((System_String_o *)StringLiteral_11369/*"ResidentSE/"*/, name, 0);
+    v36 = (Il2CppObject *)System_String__Concat_63636468((System_String_o *)StringLiteral_11371/*"ResidentSE/"*/, name, 0);
     Instance = (SoundManager_o *)System_Array__IndexOf_object_(
                                    residentSeAssetBundleList,
-                                   v35,
-                                   (const MethodInfo_31EEE70 *)Method_System_Array_IndexOf_string___);
-    v32 = SeManager_TypeInfo;
+                                   v36,
+                                   (const MethodInfo_3200DC4 *)Method_System_Array_IndexOf_string___);
+    v33 = SeManager_TypeInfo;
     if ( ((unsigned int)Instance & 0x80000000) != 0 )
     {
 LABEL_39:
-      if ( !v32->_2.cctor_finished )
+      if ( !v33->_2.cctor_finished )
       {
-        j_il2cpp_runtime_class_init_0(v32);
-        v32 = SeManager_TypeInfo;
+        j_il2cpp_runtime_class_init_0(v33);
+        v33 = SeManager_TypeInfo;
       }
-      v37 = v32->static_fields;
-      if ( !v37->seAssetBundleList )
+      v38 = v33->static_fields;
+      if ( !v38->seAssetBundleList )
         return 0;
-      if ( !v32->_2.cctor_finished )
+      if ( !v33->_2.cctor_finished )
       {
-        j_il2cpp_runtime_class_init_0(v32);
-        v37 = SeManager_TypeInfo->static_fields;
+        j_il2cpp_runtime_class_init_0(v33);
+        v38 = SeManager_TypeInfo->static_fields;
       }
-      seAssetBundleList = (System_Object_array *)v37->seAssetBundleList;
-      v39 = (Il2CppObject *)System_String__Concat_63561656((System_String_o *)StringLiteral_12654/*"Se/"*/, name, 0);
+      seAssetBundleList = (System_Object_array *)v38->seAssetBundleList;
+      v40 = (Il2CppObject *)System_String__Concat_63636468((System_String_o *)StringLiteral_12662/*"Se/"*/, name, 0);
       if ( System_Array__IndexOf_object_(
              seAssetBundleList,
-             v39,
-             (const MethodInfo_31EEE70 *)Method_System_Array_IndexOf_string___) < 0 )
+             v40,
+             (const MethodInfo_3200DC4 *)Method_System_Array_IndexOf_string___) < 0 )
         return 0;
       Instance = (SoundManager_o *)SeManager_TypeInfo;
       if ( !SeManager_TypeInfo->_2.cctor_finished )
@@ -2658,12 +2681,12 @@ LABEL_39:
         j_il2cpp_runtime_class_init_0(SeManager_TypeInfo);
         Instance = (SoundManager_o *)SeManager_TypeInfo;
       }
-      v40 = *(_QWORD *)Instance[2].monitor;
-      if ( v40 )
+      v41 = *(_QWORD *)Instance[2].monitor;
+      if ( v41 )
       {
-        if ( *(_DWORD *)(v40 + 24) > 1u )
+        if ( *(_DWORD *)(v41 + 24) > 1u )
         {
-          v23 = *(System_String_o **)(v40 + 40);
+          v24 = *(System_String_o **)(v41 + 40);
           goto LABEL_6;
         }
         goto LABEL_36;
@@ -2674,32 +2697,32 @@ LABEL_39:
       if ( !SeManager_TypeInfo->_2.cctor_finished )
       {
         j_il2cpp_runtime_class_init_0(SeManager_TypeInfo);
-        v32 = SeManager_TypeInfo;
+        v33 = SeManager_TypeInfo;
       }
-      LoadSeList = v32->static_fields->LoadSeList;
+      LoadSeList = v33->static_fields->LoadSeList;
       if ( LoadSeList )
       {
         if ( LODWORD(LoadSeList->max_length) )
         {
-          v23 = LoadSeList->m_Items[0];
+          v24 = LoadSeList->m_Items[0];
           goto LABEL_6;
         }
 LABEL_36:
-        sub_1C372BC(Instance);
+        sub_1C3E7C8(Instance, v21);
       }
     }
 LABEL_35:
-    sub_1C372B4(Instance);
+    sub_1C3E7C0(Instance, v21);
   }
-  v23 = CueSheet;
+  v24 = CueSheet;
 LABEL_6:
-  v24 = (SePlayer_o *)sub_1C372A4(SePlayer_TypeInfo);
+  v25 = (SePlayer_o *)sub_1C3E7B0(SePlayer_TypeInfo);
   SePlayer___ctor(
-    v24,
+    v25,
     v19,
     seType,
-    v25,
-    v23,
+    v26,
+    v24,
     name,
     volume,
     isLoop,
@@ -2707,12 +2730,12 @@ LABEL_6:
     callbackFunc,
     notOverwrite,
     ignorePreDelay,
-    v42);
+    v43);
   Instance = (SoundManager_o *)this->fields.workSePlayerStatusList;
   if ( !Instance )
     goto LABEL_35;
   m_CachedPtr = Instance->fields.m_CachedPtr;
-  v29 = Method_System_Collections_Generic_List_SePlayer__Add__;
+  v30 = Method_System_Collections_Generic_List_SePlayer__Add__;
   ++HIDWORD(Instance->fields.m_CancellationTokenSource);
   if ( !m_CachedPtr )
     goto LABEL_35;
@@ -2721,21 +2744,21 @@ LABEL_6:
   {
     System_Collections_Generic_List_object___AddWithResize(
       (System_Collections_Generic_List_object__o *)Instance,
-      (Il2CppObject *)v24,
-      *(const MethodInfo_37A3024 **)(*(_QWORD *)(v29[4] + 192LL) + 112LL));
+      (Il2CppObject *)v25,
+      *(const MethodInfo_37B5460 **)(*(_QWORD *)(v30[4] + 192LL) + 112LL));
   }
   else
   {
-    v31 = m_CachedPtr + 8 * m_CancellationTokenSource_low;
+    v32 = m_CachedPtr + 8 * m_CancellationTokenSource_low;
     LODWORD(Instance->fields.m_CancellationTokenSource) = m_CancellationTokenSource_low + 1;
-    *(_QWORD *)(v31 + 32) = v24;
-    sub_1C36FFC((CGThumbnailListItem_o *)(v31 + 32), (int32_t)v24, v26, v27);
+    *(_QWORD *)(v32 + 32) = v25;
+    sub_1C3E508((CGThumbnailListItem_o *)(v32 + 32), (int32_t)v25, v27, v28);
   }
-  return v24;
+  return v25;
 }
 
 
-SePlayer_o *SeManager__PlaySeLocal_41491656(
+SePlayer_o *SeManager__PlaySeLocal_41540184(
         SeManager_o *this,
         int32_t seType,
         System_String_o *pathName,
@@ -2775,27 +2798,28 @@ SePlayer_o *SeManager__PlaySeLoop(
 {
   Il2CppObject *Instance; // x21
   _BOOL8 v10; // x0
-  const MethodInfo *v11; // x7
+  __int64 v11; // x1
+  const MethodInfo *v12; // x7
 
-  if ( (byte_4C42936 & 1) == 0 )
+  if ( (byte_4C566DF & 1) == 0 )
   {
-    sub_1C37058(&UnityEngine_Object_TypeInfo);
-    sub_1C37058(&Method_SingletonMonoBehaviour_SeManager__get_Instance__);
-    byte_4C42936 = 1;
+    sub_1C3E564(&UnityEngine_Object_TypeInfo);
+    sub_1C3E564(&Method_SingletonMonoBehaviour_SeManager__get_Instance__);
+    byte_4C566DF = 1;
   }
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39ED16C *)Method_SingletonMonoBehaviour_SeManager__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39FF5A8 *)Method_SingletonMonoBehaviour_SeManager__get_Instance__);
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   v10 = UnityEngine_Object__op_Equality((UnityEngine_Object_o *)Instance, 0, 0);
   if ( v10 )
     return 0;
   if ( !Instance )
-    sub_1C372B4(v10);
-  return SeManager__PlaySeLocal((SeManager_o *)Instance, 0, name, volume, 1, fadeinTime, 0, 0, ignorePreDelay, v11);
+    sub_1C3E7C0(v10, v11);
+  return SeManager__PlaySeLocal((SeManager_o *)Instance, 0, name, volume, 1, fadeinTime, 0, 0, ignorePreDelay, v12);
 }
 
 
-SePlayer_o *SeManager__PlaySeLoop_41492212(
+SePlayer_o *SeManager__PlaySeLoop_41540740(
         System_String_o *assetName,
         System_String_o *objectName,
         float volume,
@@ -2805,22 +2829,23 @@ SePlayer_o *SeManager__PlaySeLoop_41492212(
 {
   Il2CppObject *Instance; // x22
   _BOOL8 v12; // x0
-  const MethodInfo *v14; // [xsp+8h] [xbp-58h]
+  __int64 v13; // x1
+  const MethodInfo *v15; // [xsp+8h] [xbp-58h]
 
-  if ( (byte_4C42937 & 1) == 0 )
+  if ( (byte_4C566E0 & 1) == 0 )
   {
-    sub_1C37058(&UnityEngine_Object_TypeInfo);
-    sub_1C37058(&Method_SingletonMonoBehaviour_SeManager__get_Instance__);
-    byte_4C42937 = 1;
+    sub_1C3E564(&UnityEngine_Object_TypeInfo);
+    sub_1C3E564(&Method_SingletonMonoBehaviour_SeManager__get_Instance__);
+    byte_4C566E0 = 1;
   }
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39ED16C *)Method_SingletonMonoBehaviour_SeManager__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39FF5A8 *)Method_SingletonMonoBehaviour_SeManager__get_Instance__);
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   v12 = UnityEngine_Object__op_Equality((UnityEngine_Object_o *)Instance, 0, 0);
   if ( v12 )
     return 0;
   if ( !Instance )
-    sub_1C372B4(v12);
+    sub_1C3E7C0(v12, v13);
   return SeManager__PlayLocal(
            (SeManager_o *)Instance,
            0,
@@ -2833,11 +2858,11 @@ SePlayer_o *SeManager__PlaySeLoop_41492212(
            0,
            0,
            ignorePreDelay,
-           v14);
+           v15);
 }
 
 
-SePlayer_o *SeManager__PlaySeLoop_41492464(
+SePlayer_o *SeManager__PlaySeLoop_41540992(
         AssetData_o *assetData,
         System_String_o *objectName,
         float volume,
@@ -2847,22 +2872,23 @@ SePlayer_o *SeManager__PlaySeLoop_41492464(
 {
   Il2CppObject *Instance; // x22
   _BOOL8 v12; // x0
-  const MethodInfo *v14; // [xsp+8h] [xbp-58h]
+  __int64 v13; // x1
+  const MethodInfo *v15; // [xsp+8h] [xbp-58h]
 
-  if ( (byte_4C42938 & 1) == 0 )
+  if ( (byte_4C566E1 & 1) == 0 )
   {
-    sub_1C37058(&UnityEngine_Object_TypeInfo);
-    sub_1C37058(&Method_SingletonMonoBehaviour_SeManager__get_Instance__);
-    byte_4C42938 = 1;
+    sub_1C3E564(&UnityEngine_Object_TypeInfo);
+    sub_1C3E564(&Method_SingletonMonoBehaviour_SeManager__get_Instance__);
+    byte_4C566E1 = 1;
   }
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39ED16C *)Method_SingletonMonoBehaviour_SeManager__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39FF5A8 *)Method_SingletonMonoBehaviour_SeManager__get_Instance__);
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   v12 = UnityEngine_Object__op_Equality((UnityEngine_Object_o *)Instance, 0, 0);
   if ( v12 )
     return 0;
   if ( !assetData || !Instance )
-    sub_1C372B4(v12);
+    sub_1C3E7C0(v12, v13);
   return SeManager__PlayLocal(
            (SeManager_o *)Instance,
            0,
@@ -2875,11 +2901,11 @@ SePlayer_o *SeManager__PlaySeLoop_41492464(
            0,
            0,
            ignorePreDelay,
-           v14);
+           v15);
 }
 
 
-SePlayer_o *SeManager__PlaySe_41491388(
+SePlayer_o *SeManager__PlaySe_41539916(
         System_String_o *assetName,
         System_String_o *objectName,
         float volume,
@@ -2891,22 +2917,23 @@ SePlayer_o *SeManager__PlaySe_41491388(
 {
   Il2CppObject *Instance; // x24
   _BOOL8 v16; // x0
-  const MethodInfo *v18; // [xsp+8h] [xbp-68h]
+  __int64 v17; // x1
+  const MethodInfo *v19; // [xsp+8h] [xbp-68h]
 
-  if ( (byte_4C42934 & 1) == 0 )
+  if ( (byte_4C566DD & 1) == 0 )
   {
-    sub_1C37058(&UnityEngine_Object_TypeInfo);
-    sub_1C37058(&Method_SingletonMonoBehaviour_SeManager__get_Instance__);
-    byte_4C42934 = 1;
+    sub_1C3E564(&UnityEngine_Object_TypeInfo);
+    sub_1C3E564(&Method_SingletonMonoBehaviour_SeManager__get_Instance__);
+    byte_4C566DD = 1;
   }
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39ED16C *)Method_SingletonMonoBehaviour_SeManager__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39FF5A8 *)Method_SingletonMonoBehaviour_SeManager__get_Instance__);
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   v16 = UnityEngine_Object__op_Equality((UnityEngine_Object_o *)Instance, 0, 0);
   if ( v16 )
     return 0;
   if ( !Instance )
-    sub_1C372B4(v16);
+    sub_1C3E7C0(v16, v17);
   return SeManager__PlayLocal(
            (SeManager_o *)Instance,
            0,
@@ -2919,11 +2946,11 @@ SePlayer_o *SeManager__PlaySe_41491388(
            callbackFunc,
            notOverwrite,
            ignorePreDelay,
-           v18);
+           v19);
 }
 
 
-SePlayer_o *SeManager__PlaySe_41491720(
+SePlayer_o *SeManager__PlaySe_41540248(
         AssetData_o *assetData,
         System_String_o *objectName,
         float volume,
@@ -2934,22 +2961,23 @@ SePlayer_o *SeManager__PlaySe_41491720(
 {
   Il2CppObject *Instance; // x23
   _BOOL8 v14; // x0
-  const MethodInfo *v16; // [xsp+8h] [xbp-58h]
+  __int64 v15; // x1
+  const MethodInfo *v17; // [xsp+8h] [xbp-58h]
 
-  if ( (byte_4C42935 & 1) == 0 )
+  if ( (byte_4C566DE & 1) == 0 )
   {
-    sub_1C37058(&UnityEngine_Object_TypeInfo);
-    sub_1C37058(&Method_SingletonMonoBehaviour_SeManager__get_Instance__);
-    byte_4C42935 = 1;
+    sub_1C3E564(&UnityEngine_Object_TypeInfo);
+    sub_1C3E564(&Method_SingletonMonoBehaviour_SeManager__get_Instance__);
+    byte_4C566DE = 1;
   }
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39ED16C *)Method_SingletonMonoBehaviour_SeManager__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39FF5A8 *)Method_SingletonMonoBehaviour_SeManager__get_Instance__);
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   v14 = UnityEngine_Object__op_Equality((UnityEngine_Object_o *)Instance, 0, 0);
   if ( v14 )
     return 0;
   if ( !assetData || !Instance )
-    sub_1C372B4(v14);
+    sub_1C3E7C0(v14, v15);
   return SeManager__PlayLocal(
            (SeManager_o *)Instance,
            0,
@@ -2962,27 +2990,29 @@ SePlayer_o *SeManager__PlaySe_41491720(
            callbackFunc,
            0,
            ignorePreDelay,
-           v16);
+           v17);
 }
 
 
 CriAtomSource_o *SeManager__PlaySystemSe(int32_t kind, bool ignorePreDelay, const MethodInfo *method)
 {
   Il2CppObject *Instance; // x0
-  const MethodInfo *v6; // x3
+  __int64 v6; // x1
+  const MethodInfo *v7; // x3
 
-  if ( (byte_4C42927 & 1) == 0 )
+  if ( (byte_4C566D0 & 1) == 0 )
   {
-    sub_1C37058(&Method_SingletonMonoBehaviour_SeManager__get_Instance__);
-    byte_4C42927 = 1;
+    sub_1C3E564(&Method_SingletonMonoBehaviour_SeManager__get_Instance__);
+    byte_4C566D0 = 1;
   }
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39ED16C *)Method_SingletonMonoBehaviour_SeManager__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39FF5A8 *)Method_SingletonMonoBehaviour_SeManager__get_Instance__);
   if ( !Instance )
-    sub_1C372B4(0);
-  return SeManager__PlaySystemSeLocal((SeManager_o *)Instance, kind, ignorePreDelay, v6);
+    sub_1C3E7C0(0, v6);
+  return SeManager__PlaySystemSeLocal((SeManager_o *)Instance, kind, ignorePreDelay, v7);
 }
 
 
+// local variable allocation has failed, the output may be wrong!
 CriAtomSource_o *SeManager__PlaySystemSeLocal(
         SeManager_o *this,
         int32_t kind,
@@ -3007,11 +3037,11 @@ CriAtomSource_o *SeManager__PlaySystemSeLocal(
   SoundManager_c *v21; // x0
 
   v6 = this;
-  if ( (byte_4C4294F & 1) == 0 )
+  if ( (byte_4C566F8 & 1) == 0 )
   {
-    sub_1C37058(&SeManager_TypeInfo);
-    this = (SeManager_o *)sub_1C37058(&SoundManager_TypeInfo);
-    byte_4C4294F = 1;
+    sub_1C3E564(&SeManager_TypeInfo);
+    this = (SeManager_o *)sub_1C3E564(&SoundManager_TypeInfo);
+    byte_4C566F8 = 1;
   }
   systemSeSources = v6->fields.systemSeSources;
   if ( !systemSeSources )
@@ -3019,7 +3049,7 @@ CriAtomSource_o *SeManager__PlaySystemSeLocal(
   systemSeIdx = v6->fields.systemSeIdx;
   if ( (unsigned int)systemSeIdx >= LODWORD(systemSeSources->max_length) )
 LABEL_37:
-    sub_1C372BC(this);
+    sub_1C3E7C8(this, *(_QWORD *)&kind);
   v9 = systemSeSources->m_Items[systemSeIdx];
   if ( !v9 )
     goto LABEL_36;
@@ -3040,10 +3070,10 @@ LABEL_37:
   }
   if ( !SeManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(SeManager_TypeInfo);
-  if ( !byte_4C429F4 )
+  if ( !byte_4C5679D )
   {
-    sub_1C37058(&SeManager_TypeInfo);
-    byte_4C429F4 = 1;
+    sub_1C3E564(&SeManager_TypeInfo);
+    byte_4C5679D = 1;
   }
   this = (SeManager_o *)SeManager_TypeInfo;
   if ( !SeManager_TypeInfo->_2.cctor_finished )
@@ -3070,9 +3100,9 @@ LABEL_37:
       {
         v14 = *(struct System_String_o **)(*(_QWORD *)&this[1].fields.SYSTEM_SE_MAX + 8LL);
         v9->fields._cueSheet = v14;
-        sub_1C36FFC((CGThumbnailListItem_o *)&v9->fields._cueSheet, (int32_t)v14, ignorePreDelay, method);
+        sub_1C3E508((CGThumbnailListItem_o *)&v9->fields._cueSheet, (int32_t)v14, ignorePreDelay, method);
         v9->fields._cueName = v13;
-        sub_1C36FFC((CGThumbnailListItem_o *)&v9->fields._cueName, (int32_t)v13, v15, v16);
+        sub_1C3E508((CGThumbnailListItem_o *)&v9->fields._cueName, (int32_t)v13, v15, v16);
         v17 = SeManager_TypeInfo;
         if ( !SeManager_TypeInfo->_2.cctor_finished )
         {
@@ -3108,7 +3138,7 @@ LABEL_37:
         }
       }
 LABEL_36:
-      sub_1C372B4(this);
+      sub_1C3E7C0(this, *(_QWORD *)&kind);
     }
     goto LABEL_37;
   }
@@ -3125,27 +3155,28 @@ SePlayer_o *SeManager__PlayVoice(
 {
   Il2CppObject *Instance; // x22
   _BOOL8 v10; // x0
-  const MethodInfo *v11; // x7
+  __int64 v11; // x1
+  const MethodInfo *v12; // x7
 
-  if ( (byte_4C42939 & 1) == 0 )
+  if ( (byte_4C566E2 & 1) == 0 )
   {
-    sub_1C37058(&UnityEngine_Object_TypeInfo);
-    sub_1C37058(&Method_SingletonMonoBehaviour_SeManager__get_Instance__);
-    byte_4C42939 = 1;
+    sub_1C3E564(&UnityEngine_Object_TypeInfo);
+    sub_1C3E564(&Method_SingletonMonoBehaviour_SeManager__get_Instance__);
+    byte_4C566E2 = 1;
   }
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39ED16C *)Method_SingletonMonoBehaviour_SeManager__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39FF5A8 *)Method_SingletonMonoBehaviour_SeManager__get_Instance__);
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   v10 = UnityEngine_Object__op_Equality((UnityEngine_Object_o *)Instance, 0, 0);
   if ( v10 )
     return 0;
   if ( !Instance )
-    sub_1C372B4(v10);
-  return SeManager__PlaySeLocal((SeManager_o *)Instance, 1, name, volume, 0, 0.0, callbackFunc, 0, ignorePreDelay, v11);
+    sub_1C3E7C0(v10, v11);
+  return SeManager__PlaySeLocal((SeManager_o *)Instance, 1, name, volume, 0, 0.0, callbackFunc, 0, ignorePreDelay, v12);
 }
 
 
-SePlayer_o *SeManager__PlayVoice_41492964(
+SePlayer_o *SeManager__PlayVoice_41541492(
         System_String_o *assetName,
         System_String_o *objectName,
         float volume,
@@ -3155,22 +3186,23 @@ SePlayer_o *SeManager__PlayVoice_41492964(
 {
   Il2CppObject *Instance; // x23
   _BOOL8 v12; // x0
-  const MethodInfo *v14; // [xsp+8h] [xbp-58h]
+  __int64 v13; // x1
+  const MethodInfo *v15; // [xsp+8h] [xbp-58h]
 
-  if ( (byte_4C4293A & 1) == 0 )
+  if ( (byte_4C566E3 & 1) == 0 )
   {
-    sub_1C37058(&UnityEngine_Object_TypeInfo);
-    sub_1C37058(&Method_SingletonMonoBehaviour_SeManager__get_Instance__);
-    byte_4C4293A = 1;
+    sub_1C3E564(&UnityEngine_Object_TypeInfo);
+    sub_1C3E564(&Method_SingletonMonoBehaviour_SeManager__get_Instance__);
+    byte_4C566E3 = 1;
   }
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39ED16C *)Method_SingletonMonoBehaviour_SeManager__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39FF5A8 *)Method_SingletonMonoBehaviour_SeManager__get_Instance__);
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   v12 = UnityEngine_Object__op_Equality((UnityEngine_Object_o *)Instance, 0, 0);
   if ( v12 )
     return 0;
   if ( !Instance )
-    sub_1C372B4(v12);
+    sub_1C3E7C0(v12, v13);
   return SeManager__PlayLocal(
            (SeManager_o *)Instance,
            1,
@@ -3183,11 +3215,11 @@ SePlayer_o *SeManager__PlayVoice_41492964(
            callbackFunc,
            0,
            ignorePreDelay,
-           v14);
+           v15);
 }
 
 
-SePlayer_o *SeManager__PlayVoice_41493216(
+SePlayer_o *SeManager__PlayVoice_41541744(
         AssetData_o *assetData,
         System_String_o *objectName,
         float volume,
@@ -3197,22 +3229,23 @@ SePlayer_o *SeManager__PlayVoice_41493216(
 {
   Il2CppObject *Instance; // x23
   _BOOL8 v12; // x0
-  const MethodInfo *v14; // [xsp+8h] [xbp-58h]
+  __int64 v13; // x1
+  const MethodInfo *v15; // [xsp+8h] [xbp-58h]
 
-  if ( (byte_4C4293B & 1) == 0 )
+  if ( (byte_4C566E4 & 1) == 0 )
   {
-    sub_1C37058(&UnityEngine_Object_TypeInfo);
-    sub_1C37058(&Method_SingletonMonoBehaviour_SeManager__get_Instance__);
-    byte_4C4293B = 1;
+    sub_1C3E564(&UnityEngine_Object_TypeInfo);
+    sub_1C3E564(&Method_SingletonMonoBehaviour_SeManager__get_Instance__);
+    byte_4C566E4 = 1;
   }
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39ED16C *)Method_SingletonMonoBehaviour_SeManager__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39FF5A8 *)Method_SingletonMonoBehaviour_SeManager__get_Instance__);
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   v12 = UnityEngine_Object__op_Equality((UnityEngine_Object_o *)Instance, 0, 0);
   if ( v12 )
     return 0;
   if ( !assetData || !Instance )
-    sub_1C372B4(v12);
+    sub_1C3E7C0(v12, v13);
   return SeManager__PlayLocal(
            (SeManager_o *)Instance,
            1,
@@ -3225,7 +3258,7 @@ SePlayer_o *SeManager__PlayVoice_41493216(
            callbackFunc,
            0,
            ignorePreDelay,
-           v14);
+           v15);
 }
 
 
@@ -3257,17 +3290,17 @@ bool SeManager__ReleaseAudioSource(SeManager_o *this, SePlayer_o *player, const 
       return 0;
   }
   *(Il2CppClass **)((char *)&sePlayerStatusList->obj.klass + i) = 0;
-  sub_1C36FFC((CGThumbnailListItem_o *)((char *)sePlayerStatusList + i), 0, (int32_t)method, v3);
+  sub_1C3E508((CGThumbnailListItem_o *)((char *)sePlayerStatusList + i), 0, (int32_t)method, v3);
   seSources = v6->fields.seSources;
   if ( !seSources )
     goto LABEL_13;
   if ( v7 >= LODWORD(seSources->max_length) )
 LABEL_12:
-    sub_1C372BC(this);
+    sub_1C3E7C8(this, player);
   this = *(SeManager_o **)((char *)&seSources->obj.klass + i);
   if ( !this )
 LABEL_13:
-    sub_1C372B4(this);
+    sub_1C3E7C0(this, player);
   CriAtomSource__Stop((CriAtomSource_o *)this, 0);
   return 1;
 }
@@ -3277,19 +3310,20 @@ void SeManager__ReleaseSe(System_String_o *name, const MethodInfo *method)
 {
   Il2CppObject *Instance; // x19
   _BOOL8 v3; // x0
+  __int64 v4; // x1
 
-  if ( (byte_4C42932 & 1) == 0 )
+  if ( (byte_4C566DB & 1) == 0 )
   {
-    sub_1C37058(&UnityEngine_Object_TypeInfo);
-    sub_1C37058(&Method_SingletonMonoBehaviour_SeManager__get_Instance__);
-    byte_4C42932 = 1;
+    sub_1C3E564(&UnityEngine_Object_TypeInfo);
+    sub_1C3E564(&Method_SingletonMonoBehaviour_SeManager__get_Instance__);
+    byte_4C566DB = 1;
   }
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39ED16C *)Method_SingletonMonoBehaviour_SeManager__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39FF5A8 *)Method_SingletonMonoBehaviour_SeManager__get_Instance__);
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   v3 = UnityEngine_Object__op_Equality((UnityEngine_Object_o *)Instance, 0, 0);
   if ( !Instance && !v3 )
-    sub_1C372B4(v3);
+    sub_1C3E7C0(v3, v4);
 }
 
 
@@ -3305,20 +3339,20 @@ void SeManager__Reset(const MethodInfo *method)
   _BOOL8 v2; // x0
   const MethodInfo *v3; // x1
 
-  if ( (byte_4C42920 & 1) == 0 )
+  if ( (byte_4C566C9 & 1) == 0 )
   {
-    sub_1C37058(&UnityEngine_Object_TypeInfo);
-    sub_1C37058(&Method_SingletonMonoBehaviour_SeManager__get_Instance__);
-    byte_4C42920 = 1;
+    sub_1C3E564(&UnityEngine_Object_TypeInfo);
+    sub_1C3E564(&Method_SingletonMonoBehaviour_SeManager__get_Instance__);
+    byte_4C566C9 = 1;
   }
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39ED16C *)Method_SingletonMonoBehaviour_SeManager__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39FF5A8 *)Method_SingletonMonoBehaviour_SeManager__get_Instance__);
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   v2 = UnityEngine_Object__op_Equality((UnityEngine_Object_o *)Instance, 0, 0);
   if ( !v2 )
   {
     if ( !Instance )
-      sub_1C372B4(v2);
+      sub_1C3E7C0(v2, v3);
     SeManager__StopSeAllLocal((SeManager_o *)Instance, 0.0, v3);
   }
 }
@@ -3338,12 +3372,12 @@ void SeManager__SetMasterVolume(float volume, const MethodInfo *method)
   _BOOL8 v6; // x0
   const MethodInfo *v7; // x1
 
-  if ( (byte_4C42925 & 1) == 0 )
+  if ( (byte_4C566CE & 1) == 0 )
   {
-    sub_1C37058(&UnityEngine_Object_TypeInfo);
-    sub_1C37058(&SeManager_TypeInfo);
-    sub_1C37058(&Method_SingletonMonoBehaviour_SeManager__get_Instance__);
-    byte_4C42925 = 1;
+    sub_1C3E564(&UnityEngine_Object_TypeInfo);
+    sub_1C3E564(&SeManager_TypeInfo);
+    sub_1C3E564(&Method_SingletonMonoBehaviour_SeManager__get_Instance__);
+    byte_4C566CE = 1;
   }
   v3 = SeManager_TypeInfo;
   if ( !SeManager_TypeInfo->_2.cctor_finished )
@@ -3360,14 +3394,14 @@ void SeManager__SetMasterVolume(float volume, const MethodInfo *method)
       static_fields = SeManager_TypeInfo->static_fields;
     }
     static_fields->masterVolume = volume;
-    Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39ED16C *)Method_SingletonMonoBehaviour_SeManager__get_Instance__);
+    Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39FF5A8 *)Method_SingletonMonoBehaviour_SeManager__get_Instance__);
     if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
     v6 = UnityEngine_Object__op_Equality((UnityEngine_Object_o *)Instance, 0, 0);
     if ( !v6 )
     {
       if ( !Instance )
-        sub_1C372B4(v6);
+        sub_1C3E7C0(v6, v7);
       SeManager__SetMuteLocal((SeManager_o *)Instance, v7);
     }
   }
@@ -3383,12 +3417,12 @@ void SeManager__SetMute(bool isMute, const MethodInfo *method)
   _BOOL8 v7; // x0
   const MethodInfo *v8; // x1
 
-  if ( (byte_4C42922 & 1) == 0 )
+  if ( (byte_4C566CB & 1) == 0 )
   {
-    sub_1C37058(&UnityEngine_Object_TypeInfo);
-    sub_1C37058(&SeManager_TypeInfo);
-    sub_1C37058(&Method_SingletonMonoBehaviour_SeManager__get_Instance__);
-    byte_4C42922 = 1;
+    sub_1C3E564(&UnityEngine_Object_TypeInfo);
+    sub_1C3E564(&SeManager_TypeInfo);
+    sub_1C3E564(&Method_SingletonMonoBehaviour_SeManager__get_Instance__);
+    byte_4C566CB = 1;
   }
   v3 = SeManager_TypeInfo;
   v4 = isMute;
@@ -3406,14 +3440,14 @@ void SeManager__SetMute(bool isMute, const MethodInfo *method)
       static_fields = SeManager_TypeInfo->static_fields;
     }
     static_fields->isMute = v4;
-    Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39ED16C *)Method_SingletonMonoBehaviour_SeManager__get_Instance__);
+    Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39FF5A8 *)Method_SingletonMonoBehaviour_SeManager__get_Instance__);
     if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
     v7 = UnityEngine_Object__op_Equality((UnityEngine_Object_o *)Instance, 0, 0);
     if ( !v7 )
     {
       if ( !Instance )
-        sub_1C372B4(v7);
+        sub_1C3E7C0(v7, v8);
       SeManager__SetMuteLocal((SeManager_o *)Instance, v8);
     }
   }
@@ -3427,14 +3461,13 @@ void SeManager__SetMuteLocal(SeManager_o *this, const MethodInfo *method)
   unsigned __int64 v5; // x20
   struct CriAtomSource_array *systemSeSources; // x8
   int32_t v7; // w20
-  const MethodInfo *v8; // x1
 
-  if ( (byte_4C4294D & 1) == 0 )
+  if ( (byte_4C566F6 & 1) == 0 )
   {
-    sub_1C37058(&Method_System_Collections_Generic_List_SePlayer__get_Count__);
-    sub_1C37058(&Method_System_Collections_Generic_List_SePlayer__get_Item__);
-    sub_1C37058(&SeManager_TypeInfo);
-    byte_4C4294D = 1;
+    sub_1C3E564(&Method_System_Collections_Generic_List_SePlayer__get_Count__);
+    sub_1C3E564(&Method_System_Collections_Generic_List_SePlayer__get_Item__);
+    sub_1C3E564(&SeManager_TypeInfo);
+    byte_4C566F6 = 1;
   }
   workSePlayerStatusList = (SeManager_o *)SeManager_TypeInfo;
   if ( !SeManager_TypeInfo->_2.cctor_finished )
@@ -3451,13 +3484,13 @@ void SeManager__SetMuteLocal(SeManager_o *this, const MethodInfo *method)
       if ( !systemSeSources )
         break;
       if ( v5 >= LODWORD(systemSeSources->max_length) )
-        sub_1C372BC(workSePlayerStatusList);
+        sub_1C3E7C8(workSePlayerStatusList, method);
       SeManager__StopLocal(workSePlayerStatusList, systemSeSources->m_Items[v5++], v2);
       if ( (__int64)v5 >= this->fields.SYSTEM_SE_MAX )
         goto LABEL_11;
     }
 LABEL_16:
-    sub_1C372B4(workSePlayerStatusList);
+    sub_1C3E7C0(workSePlayerStatusList, method);
   }
 LABEL_11:
   workSePlayerStatusList = (SeManager_o *)this->fields.workSePlayerStatusList;
@@ -3471,10 +3504,10 @@ LABEL_11:
         workSePlayerStatusList = (SeManager_o *)System_Collections_Generic_List_object___get_Item(
                                                   (System_Collections_Generic_List_object__o *)workSePlayerStatusList,
                                                   v7,
-                                                  (const MethodInfo_37A2D54 *)Method_System_Collections_Generic_List_SePlayer__get_Item__);
+                                                  (const MethodInfo_37B5190 *)Method_System_Collections_Generic_List_SePlayer__get_Item__);
         if ( !workSePlayerStatusList )
           break;
-        SePlayer__MuteSe((SePlayer_o *)workSePlayerStatusList, v8);
+        SePlayer__MuteSe((SePlayer_o *)workSePlayerStatusList, method);
         if ( --v7 < 0 )
           return;
         workSePlayerStatusList = (SeManager_o *)this->fields.workSePlayerStatusList;
@@ -3490,28 +3523,29 @@ void SeManager__SetPitchSe(System_String_o *name, float pitch, const MethodInfo 
 {
   Il2CppObject *Instance; // x20
   _BOOL8 v6; // x0
-  const MethodInfo *v7; // x2
-  SePlayer_o *SePlayer_41499400; // x0
+  __int64 v7; // x1
+  const MethodInfo *v8; // x2
+  SePlayer_o *SePlayer_41547928; // x0
 
-  if ( (byte_4C42946 & 1) == 0 )
+  if ( (byte_4C566EF & 1) == 0 )
   {
-    sub_1C37058(&UnityEngine_Object_TypeInfo);
-    sub_1C37058(&Method_SingletonMonoBehaviour_SeManager__get_Instance__);
-    byte_4C42946 = 1;
+    sub_1C3E564(&UnityEngine_Object_TypeInfo);
+    sub_1C3E564(&Method_SingletonMonoBehaviour_SeManager__get_Instance__);
+    byte_4C566EF = 1;
   }
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39ED16C *)Method_SingletonMonoBehaviour_SeManager__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39FF5A8 *)Method_SingletonMonoBehaviour_SeManager__get_Instance__);
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   v6 = UnityEngine_Object__op_Equality((UnityEngine_Object_o *)Instance, 0, 0);
   if ( !v6 )
   {
     if ( !Instance )
-      sub_1C372B4(v6);
-    SePlayer_41499400 = SeManager__GetSePlayer_41499400((SeManager_o *)Instance, name, v7);
-    if ( SePlayer_41499400 )
+      sub_1C3E7C0(v6, v7);
+    SePlayer_41547928 = SeManager__GetSePlayer_41547928((SeManager_o *)Instance, name, v8);
+    if ( SePlayer_41547928 )
     {
-      SePlayer_41499400->fields.pitchValue = pitch;
-      SePlayer_41499400->fields.changePitchRequest = 1;
+      SePlayer_41547928->fields.pitchValue = pitch;
+      SePlayer_41547928->fields.changePitchRequest = 1;
     }
   }
 }
@@ -3519,13 +3553,13 @@ void SeManager__SetPitchSe(System_String_o *name, float pitch, const MethodInfo 
 
 void SeManager__SetPitchSeLocal(SeManager_o *this, System_String_o *name, float pitch, const MethodInfo *method)
 {
-  SePlayer_o *SePlayer_41499400; // x0
+  SePlayer_o *SePlayer_41547928; // x0
 
-  SePlayer_41499400 = SeManager__GetSePlayer_41499400(this, name, method);
-  if ( SePlayer_41499400 )
+  SePlayer_41547928 = SeManager__GetSePlayer_41547928(this, name, method);
+  if ( SePlayer_41547928 )
   {
-    SePlayer_41499400->fields.pitchValue = pitch;
-    SePlayer_41499400->fields.changePitchRequest = 1;
+    SePlayer_41547928->fields.pitchValue = pitch;
+    SePlayer_41547928->fields.changePitchRequest = 1;
   }
 }
 
@@ -3538,12 +3572,12 @@ void SeManager__SetVoiceMasterVolume(float volume, const MethodInfo *method)
   _BOOL8 v6; // x0
   const MethodInfo *v7; // x1
 
-  if ( (byte_4C42926 & 1) == 0 )
+  if ( (byte_4C566CF & 1) == 0 )
   {
-    sub_1C37058(&UnityEngine_Object_TypeInfo);
-    sub_1C37058(&SeManager_TypeInfo);
-    sub_1C37058(&Method_SingletonMonoBehaviour_SeManager__get_Instance__);
-    byte_4C42926 = 1;
+    sub_1C3E564(&UnityEngine_Object_TypeInfo);
+    sub_1C3E564(&SeManager_TypeInfo);
+    sub_1C3E564(&Method_SingletonMonoBehaviour_SeManager__get_Instance__);
+    byte_4C566CF = 1;
   }
   v3 = SeManager_TypeInfo;
   if ( !SeManager_TypeInfo->_2.cctor_finished )
@@ -3560,14 +3594,14 @@ void SeManager__SetVoiceMasterVolume(float volume, const MethodInfo *method)
       static_fields = SeManager_TypeInfo->static_fields;
     }
     static_fields->masterVoiceVolume = volume;
-    Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39ED16C *)Method_SingletonMonoBehaviour_SeManager__get_Instance__);
+    Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39FF5A8 *)Method_SingletonMonoBehaviour_SeManager__get_Instance__);
     if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
     v6 = UnityEngine_Object__op_Equality((UnityEngine_Object_o *)Instance, 0, 0);
     if ( !v6 )
     {
       if ( !Instance )
-        sub_1C372B4(v6);
+        sub_1C3E7C0(v6, v7);
       SeManager__SetMuteLocal((SeManager_o *)Instance, v7);
     }
   }
@@ -3577,11 +3611,12 @@ void SeManager__SetVoiceMasterVolume(float volume, const MethodInfo *method)
 void SeManager__StopLocal(SeManager_o *this, CriAtomSource_o *player, const MethodInfo *method)
 {
   _BOOL8 v4; // x0
+  __int64 v5; // x1
 
-  if ( (byte_4C42957 & 1) == 0 )
+  if ( (byte_4C56700 & 1) == 0 )
   {
-    sub_1C37058(&UnityEngine_Object_TypeInfo);
-    byte_4C42957 = 1;
+    sub_1C3E564(&UnityEngine_Object_TypeInfo);
+    byte_4C56700 = 1;
   }
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
@@ -3589,7 +3624,7 @@ void SeManager__StopLocal(SeManager_o *this, CriAtomSource_o *player, const Meth
   if ( v4 )
   {
     if ( !player )
-      sub_1C372B4(v4);
+      sub_1C3E7C0(v4, v5);
     if ( CriAtomSource__get_status(player, 0) == 2 )
       CriAtomSource__Stop(player, 0);
   }
@@ -3600,23 +3635,24 @@ void SeManager__StopSe(int32_t num, float fadeoutTime, const MethodInfo *method)
 {
   Il2CppObject *Instance; // x20
   _BOOL8 v6; // x0
-  const MethodInfo *v7; // x2
+  __int64 v7; // x1
+  const MethodInfo *v8; // x2
 
-  if ( (byte_4C4293C & 1) == 0 )
+  if ( (byte_4C566E5 & 1) == 0 )
   {
-    sub_1C37058(&UnityEngine_Object_TypeInfo);
-    sub_1C37058(&Method_SingletonMonoBehaviour_SeManager__get_Instance__);
-    byte_4C4293C = 1;
+    sub_1C3E564(&UnityEngine_Object_TypeInfo);
+    sub_1C3E564(&Method_SingletonMonoBehaviour_SeManager__get_Instance__);
+    byte_4C566E5 = 1;
   }
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39ED16C *)Method_SingletonMonoBehaviour_SeManager__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39FF5A8 *)Method_SingletonMonoBehaviour_SeManager__get_Instance__);
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   v6 = UnityEngine_Object__op_Equality((UnityEngine_Object_o *)Instance, 0, 0);
   if ( !v6 )
   {
     if ( !Instance )
-      sub_1C372B4(v6);
-    SeManager__StopSeLocal((SeManager_o *)Instance, num, fadeoutTime, v7);
+      sub_1C3E7C0(v6, v7);
+    SeManager__StopSeLocal((SeManager_o *)Instance, num, fadeoutTime, v8);
   }
 }
 
@@ -3627,20 +3663,20 @@ void SeManager__StopSeAll(float fadeoutTime, const MethodInfo *method)
   _BOOL8 v4; // x0
   const MethodInfo *v5; // x1
 
-  if ( (byte_4C42942 & 1) == 0 )
+  if ( (byte_4C566EB & 1) == 0 )
   {
-    sub_1C37058(&UnityEngine_Object_TypeInfo);
-    sub_1C37058(&Method_SingletonMonoBehaviour_SeManager__get_Instance__);
-    byte_4C42942 = 1;
+    sub_1C3E564(&UnityEngine_Object_TypeInfo);
+    sub_1C3E564(&Method_SingletonMonoBehaviour_SeManager__get_Instance__);
+    byte_4C566EB = 1;
   }
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39ED16C *)Method_SingletonMonoBehaviour_SeManager__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39FF5A8 *)Method_SingletonMonoBehaviour_SeManager__get_Instance__);
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   v4 = UnityEngine_Object__op_Equality((UnityEngine_Object_o *)Instance, 0, 0);
   if ( !v4 )
   {
     if ( !Instance )
-      sub_1C372B4(v4);
+      sub_1C3E7C0(v4, v5);
     SeManager__StopSeAllLocal((SeManager_o *)Instance, fadeoutTime, v5);
   }
 }
@@ -3650,13 +3686,12 @@ void SeManager__StopSeAllLocal(SeManager_o *this, float fadeoutTime, const Metho
 {
   System_Collections_Generic_List_object__o *workSePlayerStatusList; // x0
   int32_t v6; // w20
-  const MethodInfo *v7; // x1
 
-  if ( (byte_4C42959 & 1) == 0 )
+  if ( (byte_4C56702 & 1) == 0 )
   {
-    sub_1C37058(&Method_System_Collections_Generic_List_SePlayer__get_Count__);
-    sub_1C37058(&Method_System_Collections_Generic_List_SePlayer__get_Item__);
-    byte_4C42959 = 1;
+    sub_1C3E564(&Method_System_Collections_Generic_List_SePlayer__get_Count__);
+    sub_1C3E564(&Method_System_Collections_Generic_List_SePlayer__get_Item__);
+    byte_4C56702 = 1;
   }
   workSePlayerStatusList = (System_Collections_Generic_List_object__o *)this->fields.workSePlayerStatusList;
   if ( !workSePlayerStatusList )
@@ -3669,17 +3704,17 @@ void SeManager__StopSeAllLocal(SeManager_o *this, float fadeoutTime, const Metho
       workSePlayerStatusList = (System_Collections_Generic_List_object__o *)System_Collections_Generic_List_object___get_Item(
                                                                               workSePlayerStatusList,
                                                                               v6,
-                                                                              (const MethodInfo_37A2D54 *)Method_System_Collections_Generic_List_SePlayer__get_Item__);
+                                                                              (const MethodInfo_37B5190 *)Method_System_Collections_Generic_List_SePlayer__get_Item__);
       if ( !workSePlayerStatusList )
         break;
-      SePlayer__StopSe((SePlayer_o *)workSePlayerStatusList, fadeoutTime, v7);
+      SePlayer__StopSe((SePlayer_o *)workSePlayerStatusList, fadeoutTime, method);
       if ( --v6 < 0 )
         return;
       workSePlayerStatusList = (System_Collections_Generic_List_object__o *)this->fields.workSePlayerStatusList;
     }
     while ( workSePlayerStatusList );
 LABEL_8:
-    sub_1C372B4(workSePlayerStatusList);
+    sub_1C3E7C0(workSePlayerStatusList, method);
   }
 }
 
@@ -3695,63 +3730,64 @@ void SeManager__StopSeLocal(SeManager_o *this, int32_t num, float fadeoutTime, c
 }
 
 
-void SeManager__StopSeLocal_41493912(
+void SeManager__StopSeLocal_41542440(
         SeManager_o *this,
         System_String_o *name,
         float fadeoutTime,
         const MethodInfo *method)
 {
-  SePlayer_o *SePlayer_41499400; // x0
+  SePlayer_o *SePlayer_41547928; // x0
   const MethodInfo *v6; // x1
 
-  SePlayer_41499400 = SeManager__GetSePlayer_41499400(this, name, method);
-  if ( SePlayer_41499400 )
-    SePlayer__StopSe(SePlayer_41499400, fadeoutTime, v6);
+  SePlayer_41547928 = SeManager__GetSePlayer_41547928(this, name, method);
+  if ( SePlayer_41547928 )
+    SePlayer__StopSe(SePlayer_41547928, fadeoutTime, v6);
 }
 
 
-void SeManager__StopSeLocal_41494164(
+void SeManager__StopSeLocal_41542692(
         SeManager_o *this,
         System_String_o *assetName,
         System_String_o *objectName,
         float fadeoutTime,
         const MethodInfo *method)
 {
-  SePlayer_o *SePlayer_41499576; // x0
+  SePlayer_o *SePlayer_41548104; // x0
   const MethodInfo *v7; // x1
 
-  SePlayer_41499576 = SeManager__GetSePlayer_41499576(this, assetName, objectName, method);
-  if ( SePlayer_41499576 )
-    SePlayer__StopSe(SePlayer_41499576, fadeoutTime, v7);
+  SePlayer_41548104 = SeManager__GetSePlayer_41548104(this, assetName, objectName, method);
+  if ( SePlayer_41548104 )
+    SePlayer__StopSe(SePlayer_41548104, fadeoutTime, v7);
 }
 
 
-void SeManager__StopSe_41493716(System_String_o *name, float fadeoutTime, const MethodInfo *method)
+void SeManager__StopSe_41542244(System_String_o *name, float fadeoutTime, const MethodInfo *method)
 {
   Il2CppObject *Instance; // x20
   _BOOL8 v6; // x0
-  const MethodInfo *v7; // x2
+  __int64 v7; // x1
+  const MethodInfo *v8; // x2
 
-  if ( (byte_4C4293D & 1) == 0 )
+  if ( (byte_4C566E6 & 1) == 0 )
   {
-    sub_1C37058(&UnityEngine_Object_TypeInfo);
-    sub_1C37058(&Method_SingletonMonoBehaviour_SeManager__get_Instance__);
-    byte_4C4293D = 1;
+    sub_1C3E564(&UnityEngine_Object_TypeInfo);
+    sub_1C3E564(&Method_SingletonMonoBehaviour_SeManager__get_Instance__);
+    byte_4C566E6 = 1;
   }
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39ED16C *)Method_SingletonMonoBehaviour_SeManager__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39FF5A8 *)Method_SingletonMonoBehaviour_SeManager__get_Instance__);
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   v6 = UnityEngine_Object__op_Equality((UnityEngine_Object_o *)Instance, 0, 0);
   if ( !v6 )
   {
     if ( !Instance )
-      sub_1C372B4(v6);
-    SeManager__StopSeLocal_41493912((SeManager_o *)Instance, name, fadeoutTime, v7);
+      sub_1C3E7C0(v6, v7);
+    SeManager__StopSeLocal_41542440((SeManager_o *)Instance, name, fadeoutTime, v8);
   }
 }
 
 
-void SeManager__StopSe_41493960(
+void SeManager__StopSe_41542488(
         System_String_o *assetName,
         System_String_o *objectName,
         float fadeoutTime,
@@ -3759,28 +3795,29 @@ void SeManager__StopSe_41493960(
 {
   Il2CppObject *Instance; // x21
   _BOOL8 v8; // x0
-  const MethodInfo *v9; // x3
+  __int64 v9; // x1
+  const MethodInfo *v10; // x3
 
-  if ( (byte_4C4293E & 1) == 0 )
+  if ( (byte_4C566E7 & 1) == 0 )
   {
-    sub_1C37058(&UnityEngine_Object_TypeInfo);
-    sub_1C37058(&Method_SingletonMonoBehaviour_SeManager__get_Instance__);
-    byte_4C4293E = 1;
+    sub_1C3E564(&UnityEngine_Object_TypeInfo);
+    sub_1C3E564(&Method_SingletonMonoBehaviour_SeManager__get_Instance__);
+    byte_4C566E7 = 1;
   }
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39ED16C *)Method_SingletonMonoBehaviour_SeManager__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39FF5A8 *)Method_SingletonMonoBehaviour_SeManager__get_Instance__);
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   v8 = UnityEngine_Object__op_Equality((UnityEngine_Object_o *)Instance, 0, 0);
   if ( !v8 )
   {
     if ( !Instance )
-      sub_1C372B4(v8);
-    SeManager__StopSeLocal_41494164((SeManager_o *)Instance, assetName, objectName, fadeoutTime, v9);
+      sub_1C3E7C0(v8, v9);
+    SeManager__StopSeLocal_41542692((SeManager_o *)Instance, assetName, objectName, fadeoutTime, v10);
   }
 }
 
 
-void SeManager__StopSe_41494212(
+void SeManager__StopSe_41542740(
         System_String_o *assetName,
         System_String_o *objectName,
         float volume,
@@ -3789,23 +3826,24 @@ void SeManager__StopSe_41494212(
 {
   Il2CppObject *Instance; // x21
   _BOOL8 v10; // x0
-  const MethodInfo *v11; // x3
+  __int64 v11; // x1
+  const MethodInfo *v12; // x3
 
-  if ( (byte_4C4293F & 1) == 0 )
+  if ( (byte_4C566E8 & 1) == 0 )
   {
-    sub_1C37058(&UnityEngine_Object_TypeInfo);
-    sub_1C37058(&Method_SingletonMonoBehaviour_SeManager__get_Instance__);
-    byte_4C4293F = 1;
+    sub_1C3E564(&UnityEngine_Object_TypeInfo);
+    sub_1C3E564(&Method_SingletonMonoBehaviour_SeManager__get_Instance__);
+    byte_4C566E8 = 1;
   }
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39ED16C *)Method_SingletonMonoBehaviour_SeManager__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39FF5A8 *)Method_SingletonMonoBehaviour_SeManager__get_Instance__);
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   v10 = UnityEngine_Object__op_Equality((UnityEngine_Object_o *)Instance, 0, 0);
   if ( !v10 )
   {
     if ( !Instance )
-      sub_1C372B4(v10);
-    SeManager__ChangeVolumeSeLocal_41494424((SeManager_o *)Instance, assetName, objectName, volume, fadeTime, v11);
+      sub_1C3E7C0(v10, v11);
+    SeManager__ChangeVolumeSeLocal_41542952((SeManager_o *)Instance, assetName, objectName, volume, fadeTime, v12);
   }
 }
 
@@ -3816,20 +3854,20 @@ void SeManager__StopSystemSe(const MethodInfo *method)
   _BOOL8 v2; // x0
   const MethodInfo *v3; // x1
 
-  if ( (byte_4C42940 & 1) == 0 )
+  if ( (byte_4C566E9 & 1) == 0 )
   {
-    sub_1C37058(&UnityEngine_Object_TypeInfo);
-    sub_1C37058(&Method_SingletonMonoBehaviour_SeManager__get_Instance__);
-    byte_4C42940 = 1;
+    sub_1C3E564(&UnityEngine_Object_TypeInfo);
+    sub_1C3E564(&Method_SingletonMonoBehaviour_SeManager__get_Instance__);
+    byte_4C566E9 = 1;
   }
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39ED16C *)Method_SingletonMonoBehaviour_SeManager__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39FF5A8 *)Method_SingletonMonoBehaviour_SeManager__get_Instance__);
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   v2 = UnityEngine_Object__op_Equality((UnityEngine_Object_o *)Instance, 0, 0);
   if ( !v2 )
   {
     if ( !Instance )
-      sub_1C372B4(v2);
+      sub_1C3E7C0(v2, v3);
     SeManager__StopSystemSeLocal((SeManager_o *)Instance, v3);
   }
 }
@@ -3851,11 +3889,11 @@ void SeManager__StopSystemSeLocal(SeManager_o *this, const MethodInfo *method)
       if ( !systemSeSources )
         goto LABEL_8;
       if ( (unsigned int)v3 >= LODWORD(systemSeSources->max_length) )
-        sub_1C372BC(this);
+        sub_1C3E7C8(this, method);
       this = (SeManager_o *)systemSeSources->m_Items[v3];
       if ( !this )
 LABEL_8:
-        sub_1C372B4(this);
+        sub_1C3E7C0(this, method);
       CriAtomSource__Stop((CriAtomSource_o *)this, 0);
       ++v3;
     }
@@ -3872,23 +3910,24 @@ void SeManager__StopVoice(
 {
   Il2CppObject *Instance; // x21
   _BOOL8 v8; // x0
-  const MethodInfo *v9; // x3
+  __int64 v9; // x1
+  const MethodInfo *v10; // x3
 
-  if ( (byte_4C42941 & 1) == 0 )
+  if ( (byte_4C566EA & 1) == 0 )
   {
-    sub_1C37058(&UnityEngine_Object_TypeInfo);
-    sub_1C37058(&Method_SingletonMonoBehaviour_SeManager__get_Instance__);
-    byte_4C42941 = 1;
+    sub_1C3E564(&UnityEngine_Object_TypeInfo);
+    sub_1C3E564(&Method_SingletonMonoBehaviour_SeManager__get_Instance__);
+    byte_4C566EA = 1;
   }
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39ED16C *)Method_SingletonMonoBehaviour_SeManager__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39FF5A8 *)Method_SingletonMonoBehaviour_SeManager__get_Instance__);
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   v8 = UnityEngine_Object__op_Equality((UnityEngine_Object_o *)Instance, 0, 0);
   if ( !v8 )
   {
     if ( !Instance )
-      sub_1C372B4(v8);
-    SeManager__StopVoiceLocal((SeManager_o *)Instance, assetName, objectName, fadeoutTime, v9);
+      sub_1C3E7C0(v8, v9);
+    SeManager__StopVoiceLocal((SeManager_o *)Instance, assetName, objectName, fadeoutTime, v10);
   }
 }
 
@@ -3899,20 +3938,20 @@ void SeManager__StopVoiceAll(float fadeoutTime, const MethodInfo *method)
   _BOOL8 v4; // x0
   const MethodInfo *v5; // x1
 
-  if ( (byte_4C42943 & 1) == 0 )
+  if ( (byte_4C566EC & 1) == 0 )
   {
-    sub_1C37058(&UnityEngine_Object_TypeInfo);
-    sub_1C37058(&Method_SingletonMonoBehaviour_SeManager__get_Instance__);
-    byte_4C42943 = 1;
+    sub_1C3E564(&UnityEngine_Object_TypeInfo);
+    sub_1C3E564(&Method_SingletonMonoBehaviour_SeManager__get_Instance__);
+    byte_4C566EC = 1;
   }
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39ED16C *)Method_SingletonMonoBehaviour_SeManager__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39FF5A8 *)Method_SingletonMonoBehaviour_SeManager__get_Instance__);
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   v4 = UnityEngine_Object__op_Equality((UnityEngine_Object_o *)Instance, 0, 0);
   if ( !v4 )
   {
     if ( !Instance )
-      sub_1C372B4(v4);
+      sub_1C3E7C0(v4, v5);
     SeManager__StopVoiceAllLocal((SeManager_o *)Instance, fadeoutTime, v5);
   }
 }
@@ -3922,13 +3961,12 @@ void SeManager__StopVoiceAllLocal(SeManager_o *this, float fadeoutTime, const Me
 {
   System_Collections_Generic_List_object__o *workSePlayerStatusList; // x0
   int32_t v6; // w20
-  const MethodInfo *v7; // x1
 
-  if ( (byte_4C4295A & 1) == 0 )
+  if ( (byte_4C56703 & 1) == 0 )
   {
-    sub_1C37058(&Method_System_Collections_Generic_List_SePlayer__get_Count__);
-    sub_1C37058(&Method_System_Collections_Generic_List_SePlayer__get_Item__);
-    byte_4C4295A = 1;
+    sub_1C3E564(&Method_System_Collections_Generic_List_SePlayer__get_Count__);
+    sub_1C3E564(&Method_System_Collections_Generic_List_SePlayer__get_Item__);
+    byte_4C56703 = 1;
   }
   workSePlayerStatusList = (System_Collections_Generic_List_object__o *)this->fields.workSePlayerStatusList;
   if ( !workSePlayerStatusList )
@@ -3941,18 +3979,18 @@ void SeManager__StopVoiceAllLocal(SeManager_o *this, float fadeoutTime, const Me
       workSePlayerStatusList = (System_Collections_Generic_List_object__o *)System_Collections_Generic_List_object___get_Item(
                                                                               workSePlayerStatusList,
                                                                               v6,
-                                                                              (const MethodInfo_37A2D54 *)Method_System_Collections_Generic_List_SePlayer__get_Item__);
+                                                                              (const MethodInfo_37B5190 *)Method_System_Collections_Generic_List_SePlayer__get_Item__);
       if ( !workSePlayerStatusList )
         break;
       if ( LODWORD(workSePlayerStatusList->fields._items) == 1 )
-        SePlayer__StopSe((SePlayer_o *)workSePlayerStatusList, fadeoutTime, v7);
+        SePlayer__StopSe((SePlayer_o *)workSePlayerStatusList, fadeoutTime, method);
       if ( --v6 < 0 )
         return;
       workSePlayerStatusList = (System_Collections_Generic_List_object__o *)this->fields.workSePlayerStatusList;
     }
     while ( workSePlayerStatusList );
 LABEL_10:
-    sub_1C372B4(workSePlayerStatusList);
+    sub_1C3E7C0(workSePlayerStatusList, method);
   }
 }
 
@@ -3965,12 +4003,12 @@ void SeManager__StopVoiceLocal(
         const MethodInfo *method)
 {
   const MethodInfo *v5; // x4
-  SePlayer_o *SePlayer_41499992; // x0
+  SePlayer_o *SePlayer_41548520; // x0
   const MethodInfo *v8; // x1
 
-  SePlayer_41499992 = SeManager__GetSePlayer_41499992(this, 1, assetName, objectName, v5);
-  if ( SePlayer_41499992 )
-    SePlayer__StopSe(SePlayer_41499992, fadeoutTime, v8);
+  SePlayer_41548520 = SeManager__GetSePlayer_41548520(this, 1, assetName, objectName, v5);
+  if ( SePlayer_41548520 )
+    SePlayer__StopSe(SePlayer_41548520, fadeoutTime, v8);
 }
 
 
@@ -3978,10 +4016,10 @@ System_String_array *SeManager__getLoadSeNameList(const MethodInfo *method)
 {
   SeManager_c *v1; // x0
 
-  if ( (byte_4C4291D & 1) == 0 )
+  if ( (byte_4C566C6 & 1) == 0 )
   {
-    sub_1C37058(&SeManager_TypeInfo);
-    byte_4C4291D = 1;
+    sub_1C3E564(&SeManager_TypeInfo);
+    byte_4C566C6 = 1;
   }
   v1 = SeManager_TypeInfo;
   if ( !SeManager_TypeInfo->_2.cctor_finished )
@@ -3997,10 +4035,10 @@ bool SeManager__get_IsMute(const MethodInfo *method)
 {
   SeManager_c *v1; // x0
 
-  if ( (byte_4C42921 & 1) == 0 )
+  if ( (byte_4C566CA & 1) == 0 )
   {
-    sub_1C37058(&SeManager_TypeInfo);
-    byte_4C42921 = 1;
+    sub_1C3E564(&SeManager_TypeInfo);
+    byte_4C566CA = 1;
   }
   v1 = SeManager_TypeInfo;
   if ( !SeManager_TypeInfo->_2.cctor_finished )
@@ -4016,10 +4054,10 @@ float SeManager__get_MasterVoiceVolume(const MethodInfo *method)
 {
   SeManager_c *v1; // x0
 
-  if ( (byte_4C42924 & 1) == 0 )
+  if ( (byte_4C566CD & 1) == 0 )
   {
-    sub_1C37058(&SeManager_TypeInfo);
-    byte_4C42924 = 1;
+    sub_1C3E564(&SeManager_TypeInfo);
+    byte_4C566CD = 1;
   }
   v1 = SeManager_TypeInfo;
   if ( !SeManager_TypeInfo->_2.cctor_finished )
@@ -4035,10 +4073,10 @@ float SeManager__get_MasterVolume(const MethodInfo *method)
 {
   SeManager_c *v1; // x0
 
-  if ( (byte_4C42923 & 1) == 0 )
+  if ( (byte_4C566CC & 1) == 0 )
   {
-    sub_1C37058(&SeManager_TypeInfo);
-    byte_4C42923 = 1;
+    sub_1C3E564(&SeManager_TypeInfo);
+    byte_4C566CC = 1;
   }
   v1 = SeManager_TypeInfo;
   if ( !SeManager_TypeInfo->_2.cctor_finished )
@@ -4078,11 +4116,11 @@ bool SeManager__PlayCommonSeWithDelay_d__50__MoveNext(
   int32_t v14; // w2
   const MethodInfo *v15; // x3
 
-  if ( (byte_4C42961 & 1) == 0 )
+  if ( (byte_4C5670A & 1) == 0 )
   {
-    sub_1C37058(&SeManager_TypeInfo);
-    sub_1C37058(&UnityEngine_WaitForSeconds_TypeInfo);
-    byte_4C42961 = 1;
+    sub_1C3E564(&SeManager_TypeInfo);
+    sub_1C3E564(&UnityEngine_WaitForSeconds_TypeInfo);
+    byte_4C5670A = 1;
   }
   _1__state = this->fields.__1__state;
   if ( _1__state == 2 )
@@ -4113,11 +4151,11 @@ LABEL_12:
   if ( _1__state >= this->fields.waitFrameCount )
   {
     delay = this->fields.delay;
-    v12 = (UnityEngine_WaitForSeconds_o *)sub_1C372A4(UnityEngine_WaitForSeconds_TypeInfo);
+    v12 = (UnityEngine_WaitForSeconds_o *)sub_1C3E7B0(UnityEngine_WaitForSeconds_TypeInfo);
     UnityEngine_WaitForSeconds___ctor(v12, delay, 0);
     this->fields.__2__current = (Il2CppObject *)v12;
     p__2__current = &this->fields.__2__current;
-    sub_1C36FFC((CGThumbnailListItem_o *)p__2__current, (int32_t)v12, v14, v15);
+    sub_1C3E508((CGThumbnailListItem_o *)p__2__current, (int32_t)v12, v14, v15);
     *((_DWORD *)p__2__current - 2) = 2;
     return 1;
   }
@@ -4125,7 +4163,7 @@ LABEL_12:
   {
     this->fields.__2__current = 0;
     v10 = &this->fields.__2__current;
-    sub_1C36FFC((CGThumbnailListItem_o *)v10, 0, (int32_t)v2, v3);
+    sub_1C3E508((CGThumbnailListItem_o *)v10, 0, (int32_t)v2, v3);
     result = 1;
     *((_DWORD *)v10 - 2) = 1;
   }
@@ -4149,11 +4187,11 @@ void __noreturn SeManager__PlayCommonSeWithDelay_d__50__System_Collections_IEnum
   System_NotSupportedException_o *v3; // x19
   __int64 v4; // x0
 
-  v2 = sub_1C3706C(&System_NotSupportedException_TypeInfo);
-  v3 = (System_NotSupportedException_o *)sub_1C372A4(v2);
+  v2 = sub_1C3E578(&System_NotSupportedException_TypeInfo);
+  v3 = (System_NotSupportedException_o *)sub_1C3E7B0(v2);
   System_NotSupportedException___ctor(v3, 0);
-  v4 = sub_1C3706C(&Method_SeManager__PlayCommonSeWithDelay_d__50_System_Collections_IEnumerator_Reset__);
-  sub_1C37180(v3, v4);
+  v4 = sub_1C3E578(&Method_SeManager__PlayCommonSeWithDelay_d__50_System_Collections_IEnumerator_Reset__);
+  sub_1C3E68C(v3, v4);
 }
 
 
@@ -4179,15 +4217,15 @@ void SeManager___c___cctor(const MethodInfo *method)
   int32_t v2; // w2
   const MethodInfo *v3; // x3
 
-  if ( (byte_4C4295E & 1) == 0 )
+  if ( (byte_4C56707 & 1) == 0 )
   {
-    sub_1C37058(&SeManager___c_TypeInfo);
-    byte_4C4295E = 1;
+    sub_1C3E564(&SeManager___c_TypeInfo);
+    byte_4C56707 = 1;
   }
-  v1 = (Il2CppObject *)sub_1C372A4(SeManager___c_TypeInfo);
+  v1 = (Il2CppObject *)sub_1C3E7B0(SeManager___c_TypeInfo);
   System_Object___ctor(v1, 0);
   SeManager___c_TypeInfo->static_fields->__9 = (struct SeManager___c_o *)v1;
-  sub_1C36FFC((CGThumbnailListItem_o *)SeManager___c_TypeInfo->static_fields, (int32_t)v1, v2, v3);
+  sub_1C3E508((CGThumbnailListItem_o *)SeManager___c_TypeInfo->static_fields, (int32_t)v1, v2, v3);
 }
 
 
@@ -4202,12 +4240,12 @@ System_String_o *SeManager___c___LoadEndResidentSeAsset_b__31_0(
         System_String_o *str,
         const MethodInfo *method)
 {
-  if ( (byte_4C4295F & 1) == 0 )
+  if ( (byte_4C56708 & 1) == 0 )
   {
-    sub_1C37058(&StringLiteral_12654/*"Se/"*/);
-    byte_4C4295F = 1;
+    sub_1C3E564(&StringLiteral_12662/*"Se/"*/);
+    byte_4C56708 = 1;
   }
-  return System_String__Concat_63561656((System_String_o *)StringLiteral_12654/*"Se/"*/, str, 0);
+  return System_String__Concat_63636468((System_String_o *)StringLiteral_12662/*"Se/"*/, str, 0);
 }
 
 
@@ -4216,10 +4254,10 @@ System_String_o *SeManager___c___LoadEndResidentSeAsset_b__31_1(
         System_String_o *str,
         const MethodInfo *method)
 {
-  if ( (byte_4C42960 & 1) == 0 )
+  if ( (byte_4C56709 & 1) == 0 )
   {
-    sub_1C37058(&StringLiteral_11369/*"ResidentSE/"*/);
-    byte_4C42960 = 1;
+    sub_1C3E564(&StringLiteral_11371/*"ResidentSE/"*/);
+    byte_4C56709 = 1;
   }
-  return System_String__Concat_63561656((System_String_o *)StringLiteral_11369/*"ResidentSE/"*/, str, 0);
+  return System_String__Concat_63636468((System_String_o *)StringLiteral_11371/*"ResidentSE/"*/, str, 0);
 }

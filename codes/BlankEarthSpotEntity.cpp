@@ -1,13 +1,13 @@
 void BlankEarthSpotEntity___ctor(BlankEarthSpotEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_4C42C51 & 1) == 0 )
+  if ( (byte_4C569FA & 1) == 0 )
   {
-    sub_1C37058(&Method_DataEntityBase_int___ctor__);
-    byte_4C42C51 = 1;
+    sub_1C3E564(&Method_DataEntityBase_int___ctor__);
+    byte_4C569FA = 1;
   }
   DataEntityBase_int____ctor(
     (DataEntityBase_int__o *)this,
-    (const MethodInfo_339EBBC *)Method_DataEntityBase_int___ctor__);
+    (const MethodInfo_33B0A74 *)Method_DataEntityBase_int___ctor__);
 }
 
 
@@ -22,12 +22,12 @@ int32_t BlankEarthSpotEntity__GetGrandBaseOffsetX(
         int32_t defaultValue,
         const MethodInfo *method)
 {
-  if ( (byte_4C42C4E & 1) == 0 )
+  if ( (byte_4C569F7 & 1) == 0 )
   {
-    sub_1C37058(&StringLiteral_19888/*"grandBaseOffsetX"*/);
-    byte_4C42C4E = 1;
+    sub_1C3E564(&StringLiteral_19906/*"grandBaseOffsetX"*/);
+    byte_4C569F7 = 1;
   }
-  return EntityScriptUtil__GetIntValue(this->fields.script, (System_String_o *)StringLiteral_19888/*"grandBaseOffsetX"*/, defaultValue, 0);
+  return EntityScriptUtil__GetIntValue(this->fields.script, (System_String_o *)StringLiteral_19906/*"grandBaseOffsetX"*/, defaultValue, 0);
 }
 
 
@@ -36,12 +36,12 @@ int32_t BlankEarthSpotEntity__GetGrandBaseOffsetY(
         int32_t defaultValue,
         const MethodInfo *method)
 {
-  if ( (byte_4C42C4F & 1) == 0 )
+  if ( (byte_4C569F8 & 1) == 0 )
   {
-    sub_1C37058(&StringLiteral_19889/*"grandBaseOffsetY"*/);
-    byte_4C42C4F = 1;
+    sub_1C3E564(&StringLiteral_19907/*"grandBaseOffsetY"*/);
+    byte_4C569F8 = 1;
   }
-  return EntityScriptUtil__GetIntValue(this->fields.script, (System_String_o *)StringLiteral_19889/*"grandBaseOffsetY"*/, defaultValue, 0);
+  return EntityScriptUtil__GetIntValue(this->fields.script, (System_String_o *)StringLiteral_19907/*"grandBaseOffsetY"*/, defaultValue, 0);
 }
 
 
@@ -50,12 +50,12 @@ float BlankEarthSpotEntity__GetGrandBaseScale(
         float defaultValue,
         const MethodInfo *method)
 {
-  if ( (byte_4C42C50 & 1) == 0 )
+  if ( (byte_4C569F9 & 1) == 0 )
   {
-    sub_1C37058(&StringLiteral_19890/*"grandBaseScale"*/);
-    byte_4C42C50 = 1;
+    sub_1C3E564(&StringLiteral_19908/*"grandBaseScale"*/);
+    byte_4C569F9 = 1;
   }
-  return EntityScriptUtil__GetFloatValue(this->fields.script, (System_String_o *)StringLiteral_19890/*"grandBaseScale"*/, defaultValue, 0);
+  return EntityScriptUtil__GetFloatValue(this->fields.script, (System_String_o *)StringLiteral_19908/*"grandBaseScale"*/, defaultValue, 0);
 }
 
 
@@ -64,12 +64,12 @@ int32_t BlankEarthSpotEntity__GetGrandClassIconId(
         int32_t defaultValue,
         const MethodInfo *method)
 {
-  if ( (byte_4C42C49 & 1) == 0 )
+  if ( (byte_4C569F2 & 1) == 0 )
   {
-    sub_1C37058(&StringLiteral_19891/*"grandClassIconId"*/);
-    byte_4C42C49 = 1;
+    sub_1C3E564(&StringLiteral_19909/*"grandClassIconId"*/);
+    byte_4C569F2 = 1;
   }
-  return EntityScriptUtil__GetIntValue(this->fields.script, (System_String_o *)StringLiteral_19891/*"grandClassIconId"*/, defaultValue, 0);
+  return EntityScriptUtil__GetIntValue(this->fields.script, (System_String_o *)StringLiteral_19909/*"grandClassIconId"*/, defaultValue, 0);
 }
 
 
@@ -78,12 +78,12 @@ int32_t BlankEarthSpotEntity__GetGrandFaceId(
         int32_t defaultValue,
         const MethodInfo *method)
 {
-  if ( (byte_4C42C4C & 1) == 0 )
+  if ( (byte_4C569F5 & 1) == 0 )
   {
-    sub_1C37058(&StringLiteral_19892/*"grandFaceId"*/);
-    byte_4C42C4C = 1;
+    sub_1C3E564(&StringLiteral_19910/*"grandFaceId"*/);
+    byte_4C569F5 = 1;
   }
-  return EntityScriptUtil__GetIntValue(this->fields.script, (System_String_o *)StringLiteral_19892/*"grandFaceId"*/, defaultValue, 0);
+  return EntityScriptUtil__GetIntValue(this->fields.script, (System_String_o *)StringLiteral_19910/*"grandFaceId"*/, defaultValue, 0);
 }
 
 
@@ -92,12 +92,12 @@ int32_t BlankEarthSpotEntity__GetGrandImageId(
         int32_t defaultValue,
         const MethodInfo *method)
 {
-  if ( (byte_4C42C4A & 1) == 0 )
+  if ( (byte_4C569F3 & 1) == 0 )
   {
-    sub_1C37058(&StringLiteral_19894/*"grandImageId"*/);
-    byte_4C42C4A = 1;
+    sub_1C3E564(&StringLiteral_19912/*"grandImageId"*/);
+    byte_4C569F3 = 1;
   }
-  return EntityScriptUtil__GetIntValue(this->fields.script, (System_String_o *)StringLiteral_19894/*"grandImageId"*/, defaultValue, 0);
+  return EntityScriptUtil__GetIntValue(this->fields.script, (System_String_o *)StringLiteral_19912/*"grandImageId"*/, defaultValue, 0);
 }
 
 
@@ -106,12 +106,12 @@ int32_t BlankEarthSpotEntity__GetGrandLimitCount(
         int32_t defaultValue,
         const MethodInfo *method)
 {
-  if ( (byte_4C42C4B & 1) == 0 )
+  if ( (byte_4C569F4 & 1) == 0 )
   {
-    sub_1C37058(&StringLiteral_19895/*"grandLimitCount"*/);
-    byte_4C42C4B = 1;
+    sub_1C3E564(&StringLiteral_19913/*"grandLimitCount"*/);
+    byte_4C569F4 = 1;
   }
-  return EntityScriptUtil__GetIntValue(this->fields.script, (System_String_o *)StringLiteral_19895/*"grandLimitCount"*/, defaultValue, 0);
+  return EntityScriptUtil__GetIntValue(this->fields.script, (System_String_o *)StringLiteral_19913/*"grandLimitCount"*/, defaultValue, 0);
 }
 
 
@@ -120,12 +120,12 @@ int32_t BlankEarthSpotEntity__GetGrandOffsetX(
         int32_t defaultValue,
         const MethodInfo *method)
 {
-  if ( (byte_4C42C4D & 1) == 0 )
+  if ( (byte_4C569F6 & 1) == 0 )
   {
-    sub_1C37058(&StringLiteral_19896/*"grandOffsetX"*/);
-    byte_4C42C4D = 1;
+    sub_1C3E564(&StringLiteral_19914/*"grandOffsetX"*/);
+    byte_4C569F6 = 1;
   }
-  return EntityScriptUtil__GetIntValue(this->fields.script, (System_String_o *)StringLiteral_19896/*"grandOffsetX"*/, defaultValue, 0);
+  return EntityScriptUtil__GetIntValue(this->fields.script, (System_String_o *)StringLiteral_19914/*"grandOffsetX"*/, defaultValue, 0);
 }
 
 
@@ -153,10 +153,10 @@ bool BlankEarthSpotEntity__IsOpen(BlankEarthSpotEntity_o *this, const MethodInfo
   int32_t condTargetType; // w21
   int64_t condTargetNum; // x19
 
-  if ( (byte_4C42C47 & 1) == 0 )
+  if ( (byte_4C569F0 & 1) == 0 )
   {
-    sub_1C37058(&CondType_TypeInfo);
-    byte_4C42C47 = 1;
+    sub_1C3E564(&CondType_TypeInfo);
+    byte_4C569F0 = 1;
   }
   condTargetType = this->fields.condTargetType;
   condTargetId = this->fields.condTargetId;
@@ -177,10 +177,10 @@ bool BlankEarthSpotEntity__IsOpenForQAA(
   int32_t condTargetType; // w23
   int64_t condTargetNum; // x21
 
-  if ( (byte_4C42C48 & 1) == 0 )
+  if ( (byte_4C569F1 & 1) == 0 )
   {
-    sub_1C37058(&CondType_TypeInfo);
-    byte_4C42C48 = 1;
+    sub_1C3E564(&CondType_TypeInfo);
+    byte_4C569F1 = 1;
   }
   condTargetType = this->fields.condTargetType;
   condTargetId = this->fields.condTargetId;

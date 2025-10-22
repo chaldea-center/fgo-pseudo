@@ -4,17 +4,17 @@ void UIToggle___cctor(const MethodInfo *method)
   int32_t v2; // w2
   const MethodInfo *v3; // x3
 
-  if ( (byte_4C47651 & 1) == 0 )
+  if ( (byte_4C5B448 & 1) == 0 )
   {
-    sub_1C37058(&Method_BetterList_UIToggle___ctor__);
-    sub_1C37058(&BetterList_UIToggle__TypeInfo);
-    sub_1C37058(&UIToggle_TypeInfo);
-    byte_4C47651 = 1;
+    sub_1C3E564(&Method_BetterList_UIToggle___ctor__);
+    sub_1C3E564(&BetterList_UIToggle__TypeInfo);
+    sub_1C3E564(&UIToggle_TypeInfo);
+    byte_4C5B448 = 1;
   }
-  v1 = (BetterList_T__o *)sub_1C372A4(BetterList_UIToggle__TypeInfo);
-  BetterList_object____ctor(v1, (const MethodInfo_331A714 *)Method_BetterList_UIToggle___ctor__);
+  v1 = (BetterList_T__o *)sub_1C3E7B0(BetterList_UIToggle__TypeInfo);
+  BetterList_object____ctor(v1, (const MethodInfo_332C5CC *)Method_BetterList_UIToggle___ctor__);
   UIToggle_TypeInfo->static_fields->list = (struct BetterList_UIToggle__o *)v1;
-  sub_1C36FFC((CGThumbnailListItem_o *)UIToggle_TypeInfo->static_fields, (int32_t)v1, v2, v3);
+  sub_1C3E508((CGThumbnailListItem_o *)UIToggle_TypeInfo->static_fields, (int32_t)v1, v2, v3);
 }
 
 
@@ -27,22 +27,22 @@ void UIToggle___ctor(UIToggle_o *this, const MethodInfo *method)
   int32_t v7; // w2
   const MethodInfo *v8; // x3
 
-  if ( (byte_4C47650 & 1) == 0 )
+  if ( (byte_4C5B447 & 1) == 0 )
   {
-    sub_1C37058(&Method_System_Collections_Generic_List_EventDelegate___ctor__);
-    sub_1C37058(&System_Collections_Generic_List_EventDelegate__TypeInfo);
-    sub_1C37058(&StringLiteral_9832/*"OnActivate"*/);
-    byte_4C47650 = 1;
+    sub_1C3E564(&Method_System_Collections_Generic_List_EventDelegate___ctor__);
+    sub_1C3E564(&System_Collections_Generic_List_EventDelegate__TypeInfo);
+    sub_1C3E564(&StringLiteral_9832/*"OnActivate"*/);
+    byte_4C5B447 = 1;
   }
-  v3 = (System_Collections_Generic_List_object__o *)sub_1C372A4(System_Collections_Generic_List_EventDelegate__TypeInfo);
+  v3 = (System_Collections_Generic_List_object__o *)sub_1C3E7B0(System_Collections_Generic_List_EventDelegate__TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v3,
-    (const MethodInfo_37A27F0 *)Method_System_Collections_Generic_List_EventDelegate___ctor__);
+    (const MethodInfo_37B4C2C *)Method_System_Collections_Generic_List_EventDelegate___ctor__);
   this->fields.onChange = (struct System_Collections_Generic_List_EventDelegate__o *)v3;
-  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.onChange, (int32_t)v3, v4, v5);
+  sub_1C3E508((CGThumbnailListItem_o *)&this->fields.onChange, (int32_t)v3, v4, v5);
   v6 = StringLiteral_9832/*"OnActivate"*/;
   this->fields.functionName = (struct System_String_o *)StringLiteral_9832/*"OnActivate"*/;
-  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.functionName, v6, v7, v8);
+  sub_1C3E508((CGThumbnailListItem_o *)&this->fields.functionName, v6, v7, v8);
   this->fields.mIsActive = 1;
   UnityEngine_MonoBehaviour___ctor((UnityEngine_MonoBehaviour_o *)this, 0);
 }
@@ -55,12 +55,12 @@ UIToggle_o *UIToggle__GetActiveToggle(int32_t group, const MethodInfo *method)
   BetterList_T__o *list; // x8
   Il2CppObject *Item; // x21
 
-  if ( (byte_4C4764B & 1) == 0 )
+  if ( (byte_4C5B442 & 1) == 0 )
   {
-    sub_1C37058(&Method_BetterList_UIToggle__get_Item__);
-    sub_1C37058(&UnityEngine_Object_TypeInfo);
-    sub_1C37058(&UIToggle_TypeInfo);
-    byte_4C4764B = 1;
+    sub_1C3E564(&Method_BetterList_UIToggle__get_Item__);
+    sub_1C3E564(&UnityEngine_Object_TypeInfo);
+    sub_1C3E564(&UIToggle_TypeInfo);
+    byte_4C5B442 = 1;
   }
   for ( i = 0; ; ++i )
   {
@@ -73,7 +73,7 @@ UIToggle_o *UIToggle__GetActiveToggle(int32_t group, const MethodInfo *method)
     list = (BetterList_T__o *)v4->static_fields->list;
     if ( !list )
 LABEL_19:
-      sub_1C372B4(v4);
+      sub_1C3E7C0(v4, method);
     if ( i >= list->fields.size )
       break;
     if ( !v4->_2.cctor_finished )
@@ -83,7 +83,7 @@ LABEL_19:
       if ( !list )
         goto LABEL_19;
     }
-    Item = BetterList_object___get_Item(list, i, (const MethodInfo_3319DC0 *)Method_BetterList_UIToggle__get_Item__);
+    Item = BetterList_object___get_Item(list, i, (const MethodInfo_332BC78 *)Method_BetterList_UIToggle__get_Item__);
     if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
     v4 = (UIToggle_c *)UnityEngine_Object__op_Inequality((UnityEngine_Object_o *)Item, 0, 0);
@@ -119,11 +119,11 @@ void UIToggle__OnDisable(UIToggle_o *this, const MethodInfo *method)
   UIToggle_c *v3; // x0
   BetterList_T__o *list; // x0
 
-  if ( (byte_4C4764D & 1) == 0 )
+  if ( (byte_4C5B444 & 1) == 0 )
   {
-    sub_1C37058(&Method_BetterList_UIToggle__Remove__);
-    sub_1C37058(&UIToggle_TypeInfo);
-    byte_4C4764D = 1;
+    sub_1C3E564(&Method_BetterList_UIToggle__Remove__);
+    sub_1C3E564(&UIToggle_TypeInfo);
+    byte_4C5B444 = 1;
   }
   v3 = UIToggle_TypeInfo;
   if ( !UIToggle_TypeInfo->_2.cctor_finished )
@@ -133,11 +133,11 @@ void UIToggle__OnDisable(UIToggle_o *this, const MethodInfo *method)
   }
   list = (BetterList_T__o *)v3->static_fields->list;
   if ( !list )
-    sub_1C372B4(0);
+    sub_1C3E7C0(0, method);
   BetterList_object___Remove(
     list,
     (Il2CppObject *)this,
-    (const MethodInfo_331A2A0 *)Method_BetterList_UIToggle__Remove__);
+    (const MethodInfo_332C158 *)Method_BetterList_UIToggle__Remove__);
 }
 
 
@@ -146,11 +146,11 @@ void UIToggle__OnEnable(UIToggle_o *this, const MethodInfo *method)
   UIToggle_c *v3; // x0
   BetterList_T__o *list; // x0
 
-  if ( (byte_4C4764C & 1) == 0 )
+  if ( (byte_4C5B443 & 1) == 0 )
   {
-    sub_1C37058(&Method_BetterList_UIToggle__Add__);
-    sub_1C37058(&UIToggle_TypeInfo);
-    byte_4C4764C = 1;
+    sub_1C3E564(&Method_BetterList_UIToggle__Add__);
+    sub_1C3E564(&UIToggle_TypeInfo);
+    byte_4C5B443 = 1;
   }
   v3 = UIToggle_TypeInfo;
   if ( !UIToggle_TypeInfo->_2.cctor_finished )
@@ -160,11 +160,12 @@ void UIToggle__OnEnable(UIToggle_o *this, const MethodInfo *method)
   }
   list = (BetterList_T__o *)v3->static_fields->list;
   if ( !list )
-    sub_1C372B4(0);
-  BetterList_object___Add(list, (Il2CppObject *)this, (const MethodInfo_3319FE8 *)Method_BetterList_UIToggle__Add__);
+    sub_1C3E7C0(0, method);
+  BetterList_object___Add(list, (Il2CppObject *)this, (const MethodInfo_332BEA0 *)Method_BetterList_UIToggle__Add__);
 }
 
 
+// local variable allocation has failed, the output may be wrong!
 void UIToggle__Set(UIToggle_o *this, bool state, const MethodInfo *method)
 {
   struct UIToggle_Validate_o *validator; // x8
@@ -193,7 +194,7 @@ void UIToggle__Set(UIToggle_o *this, bool state, const MethodInfo *method)
   struct UIToggle_o *monitor; // t1
   const MethodInfo *v29; // x1
   System_Collections_Generic_List_EventDelegate__o *onChange; // x22
-  bool IsValid_49249072; // w0
+  bool IsValid_49322312; // w0
   const MethodInfo *v32; // x1
   struct UIToggle_o *v33; // x25
   System_Collections_Generic_List_EventDelegate__o *v34; // x22
@@ -212,18 +213,17 @@ void UIToggle__Set(UIToggle_o *this, bool state, const MethodInfo *method)
   const MethodInfo *v47; // x5
   int32_t v48; // w2
   UnityEngine_Object_o *v49; // x20
-  const MethodInfo *v50; // x1
-  bool v51[4]; // [xsp+Ch] [xbp-54h] BYREF
+  bool v50[4]; // [xsp+Ch] [xbp-54h] BYREF
 
-  if ( (byte_4C4764F & 1) == 0 )
+  if ( (byte_4C5B446 & 1) == 0 )
   {
-    sub_1C37058(&Method_BetterList_UIToggle__get_Item__);
-    sub_1C37058(&bool_TypeInfo);
-    sub_1C37058(&EventDelegate_TypeInfo);
-    sub_1C37058(&NGUITools_TypeInfo);
-    sub_1C37058(&UnityEngine_Object_TypeInfo);
-    sub_1C37058(&UIToggle_TypeInfo);
-    byte_4C4764F = 1;
+    sub_1C3E564(&Method_BetterList_UIToggle__get_Item__);
+    sub_1C3E564(&bool_TypeInfo);
+    sub_1C3E564(&EventDelegate_TypeInfo);
+    sub_1C3E564(&NGUITools_TypeInfo);
+    sub_1C3E564(&UnityEngine_Object_TypeInfo);
+    sub_1C3E564(&UIToggle_TypeInfo);
+    byte_4C5B446 = 1;
   }
   validator = this->fields.validator;
   if ( !validator
@@ -269,7 +269,7 @@ void UIToggle__Set(UIToggle_o *this, bool state, const MethodInfo *method)
                 Item = BetterList_object___get_Item(
                          (BetterList_T__o *)Active,
                          v10,
-                         (const MethodInfo_3319DC0 *)Method_BetterList_UIToggle__get_Item__);
+                         (const MethodInfo_332BC78 *)Method_BetterList_UIToggle__get_Item__);
                 if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
                   j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
                 Active = UnityEngine_Object__op_Inequality(
@@ -310,7 +310,7 @@ void UIToggle__Set(UIToggle_o *this, bool state, const MethodInfo *method)
                 goto LABEL_34;
             }
 LABEL_98:
-            sub_1C372B4(Active);
+            sub_1C3E7C0(Active, state);
           }
         }
 LABEL_34:
@@ -372,21 +372,21 @@ LABEL_52:
           static_fields = (CGThumbnailListItem_o *)((char *)static_fields + 8);
           v27 = monitor;
           static_fields->klass = (CGThumbnailListItem_c *)this;
-          sub_1C36FFC(static_fields, (int32_t)this, v23, v24);
+          sub_1C3E508(static_fields, (int32_t)this, v23, v24);
           onChange = this->fields.onChange;
           if ( !EventDelegate_TypeInfo->_2.cctor_finished )
             j_il2cpp_runtime_class_init_0(EventDelegate_TypeInfo);
-          IsValid_49249072 = EventDelegate__IsValid_49249072(onChange, v29);
-          if ( IsValid_49249072 )
+          IsValid_49322312 = EventDelegate__IsValid_49322312(onChange, v29);
+          if ( IsValid_49322312 )
             v33 = 0;
           else
             v33 = v27;
-          if ( IsValid_49249072 )
+          if ( IsValid_49322312 )
           {
             v34 = this->fields.onChange;
             if ( !EventDelegate_TypeInfo->_2.cctor_finished )
               j_il2cpp_runtime_class_init_0(EventDelegate_TypeInfo);
-            EventDelegate__Execute_49220500(v34, v32);
+            EventDelegate__Execute_49293740(v34, v32);
           }
           else
           {
@@ -399,11 +399,11 @@ LABEL_52:
               {
                 v42 = this->fields.eventReceiver;
                 functionName = this->fields.functionName;
-                v51[0] = this->fields.mIsActive;
-                Active = j_il2cpp_value_box_0(bool_TypeInfo, v51, v35, v36, v38, v39, v40, v41);
+                v50[0] = this->fields.mIsActive;
+                Active = j_il2cpp_value_box_0(bool_TypeInfo, v50, v35, v36, v38, v39, v40, v41);
                 if ( !v42 )
                   goto LABEL_98;
-                UnityEngine_GameObject__SendMessage_71247544(v42, functionName, (Il2CppObject *)Active, 1, 0);
+                UnityEngine_GameObject__SendMessage_71322356(v42, functionName, (Il2CppObject *)Active, 1, 0);
               }
               v27 = v33;
             }
@@ -416,7 +416,7 @@ LABEL_52:
           }
           v45 = v44->static_fields;
           v45->current = v27;
-          sub_1C36FFC((CGThumbnailListItem_o *)&v45->current, (int32_t)v27, v35, v36);
+          sub_1C3E508((CGThumbnailListItem_o *)&v45->current, (int32_t)v27, v35, v36);
         }
         activeAnimation = (UnityEngine_Object_o *)this->fields.activeAnimation;
         if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -427,7 +427,7 @@ LABEL_52:
             v48 = 1;
           else
             v48 = -1;
-          v49 = (UnityEngine_Object_o *)ActiveAnimation__Play_49249300(this->fields.activeAnimation, 0, v48, 2, 0, v47);
+          v49 = (UnityEngine_Object_o *)ActiveAnimation__Play_49322540(this->fields.activeAnimation, 0, v48, 2, 0, v47);
           if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
             j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
           Active = UnityEngine_Object__op_Inequality(v49, 0, 0);
@@ -443,7 +443,7 @@ LABEL_52:
 LABEL_95:
               if ( !v49 )
                 goto LABEL_98;
-              ActiveAnimation__Finish((ActiveAnimation_o *)v49, v50);
+              ActiveAnimation__Finish((ActiveAnimation_o *)v49, (const MethodInfo *)state);
             }
           }
         }
@@ -505,12 +505,12 @@ void UIToggle__Start(UIToggle_o *this, const MethodInfo *method)
   int32_t v29; // w2
   const MethodInfo *v30; // x3
 
-  if ( (byte_4C4764E & 1) == 0 )
+  if ( (byte_4C5B445 & 1) == 0 )
   {
-    sub_1C37058(&UnityEngine_Application_TypeInfo);
-    sub_1C37058(&EventDelegate_TypeInfo);
-    sub_1C37058(&UnityEngine_Object_TypeInfo);
-    byte_4C4764E = 1;
+    sub_1C3E564(&UnityEngine_Application_TypeInfo);
+    sub_1C3E564(&EventDelegate_TypeInfo);
+    sub_1C3E564(&UnityEngine_Object_TypeInfo);
+    byte_4C5B445 = 1;
   }
   if ( this->fields.startsChecked )
   {
@@ -544,9 +544,9 @@ void UIToggle__Start(UIToggle_o *this, const MethodInfo *method)
       {
         v11 = *p_checkSprite;
         this->fields.activeSprite = *p_checkSprite;
-        sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.activeSprite, (int32_t)v11, v9, v10);
+        sub_1C3E508((CGThumbnailListItem_o *)&this->fields.activeSprite, (int32_t)v11, v9, v10);
         *p_checkSprite = 0;
-        sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.checkSprite, 0, v12, v13);
+        sub_1C3E508((CGThumbnailListItem_o *)&this->fields.checkSprite, 0, v12, v13);
       }
     }
     p_checkAnimation = &this->fields.checkAnimation;
@@ -562,9 +562,9 @@ void UIToggle__Start(UIToggle_o *this, const MethodInfo *method)
       {
         v19 = *p_checkAnimation;
         this->fields.activeAnimation = *p_checkAnimation;
-        sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.activeAnimation, (int32_t)v19, v17, v18);
+        sub_1C3E508((CGThumbnailListItem_o *)&this->fields.activeAnimation, (int32_t)v19, v17, v18);
         *p_checkAnimation = 0;
-        sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.checkAnimation, 0, v20, v21);
+        sub_1C3E508((CGThumbnailListItem_o *)&this->fields.checkAnimation, 0, v20, v21);
       }
     }
     if ( !UnityEngine_Application_TypeInfo->_2.cctor_finished )
@@ -578,7 +578,7 @@ void UIToggle__Start(UIToggle_o *this, const MethodInfo *method)
       {
         v25 = this->fields.activeSprite;
         if ( !v25 )
-          sub_1C372B4(0);
+          sub_1C3E7C0(0, v22);
         LODWORD(v24) = 1.0;
         if ( !this->fields.startsActive )
           *(float *)&v24 = 0.0;
@@ -591,12 +591,12 @@ void UIToggle__Start(UIToggle_o *this, const MethodInfo *method)
     onChange = this->fields.onChange;
     if ( !EventDelegate_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(EventDelegate_TypeInfo);
-    if ( EventDelegate__IsValid_49249072(onChange, v22) )
+    if ( EventDelegate__IsValid_49322312(onChange, v22) )
     {
       this->fields.eventReceiver = 0;
-      sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.eventReceiver, 0, v27, v28);
+      sub_1C3E508((CGThumbnailListItem_o *)&this->fields.eventReceiver, 0, v27, v28);
       this->fields.functionName = 0;
-      sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.functionName, 0, v29, v30);
+      sub_1C3E508((CGThumbnailListItem_o *)&this->fields.functionName, 0, v29, v30);
     }
   }
 }
@@ -655,15 +655,15 @@ void UIToggle_Validate___ctor(UIToggle_Validate_o *this, Il2CppObject *object, i
   this->fields.method = method;
   this->fields.method_ptr = v4;
   this->fields.m_target = object;
-  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.m_target, (int32_t)object, method, a4);
+  sub_1C3E508((CGThumbnailListItem_o *)&this->fields.m_target, (int32_t)object, method, a4);
   v8 = *(unsigned __int8 *)(method + 82);
   this->fields.method_code = (intptr_t)this;
-  if ( (sub_1C37118(method) & 1) == 0 )
+  if ( (sub_1C3E624(method) & 1) == 0 )
   {
     if ( !object )
     {
-      v10 = sub_1C372D0(0, "Delegate to an instance method cannot have null 'this'.");
-      sub_1C37180(v10, 0);
+      v10 = sub_1C3E7DC(0, "Delegate to an instance method cannot have null 'this'.");
+      sub_1C3E68C(v10, 0);
     }
     goto LABEL_5;
   }
@@ -675,9 +675,9 @@ LABEL_5:
     this->fields.method_code = (intptr_t)m_target;
     goto LABEL_6;
   }
-  this->fields.invoke_impl = (intptr_t)sub_1A823EC;
+  this->fields.invoke_impl = (intptr_t)sub_1A89794;
 LABEL_6:
-  this->fields.extra_arg = (intptr_t)sub_1A82398;
+  this->fields.extra_arg = (intptr_t)sub_1A89740;
 }
 
 
@@ -695,14 +695,14 @@ System_IAsyncResult_o *UIToggle_Validate__BeginInvoke(
   bool v13[4]; // [xsp+1Ch] [xbp-34h] BYREF
 
   v13[0] = choice;
-  if ( (byte_4C47652 & 1) == 0 )
+  if ( (byte_4C5B449 & 1) == 0 )
   {
-    sub_1C37058(&bool_TypeInfo);
-    byte_4C47652 = 1;
+    sub_1C3E564(&bool_TypeInfo);
+    byte_4C5B449 = 1;
   }
   v12[1] = 0;
   v12[0] = j_il2cpp_value_box_0(bool_TypeInfo, v13, callback, object, method, v5, v6, v7);
-  return (System_IAsyncResult_o *)sub_1C3700C(this, v12, callback, object);
+  return (System_IAsyncResult_o *)sub_1C3E518(this, v12, callback, object);
 }
 
 
@@ -713,9 +713,9 @@ bool UIToggle_Validate__EndInvoke(UIToggle_Validate_o *this, System_IAsyncResult
   __int64 v5; // x2
   __int64 v6; // x3
 
-  v3 = sub_1C37010(result, 0, method);
+  v3 = sub_1C3E51C(result, 0, method);
   if ( !v3 )
-    sub_1C372B4(0);
+    sub_1C3E7C0(0, v4);
   return *(_BYTE *)j_il2cpp_object_unbox_0(v3, v4, v5, v6);
 }
 

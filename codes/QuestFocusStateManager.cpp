@@ -7,24 +7,24 @@ void QuestFocusStateManager___cctor(const MethodInfo *method)
   int32_t v5; // w2
   const MethodInfo *v6; // x3
 
-  if ( (byte_4C442F8 & 1) == 0 )
+  if ( (byte_4C580C1 & 1) == 0 )
   {
-    sub_1C37058(&Method_System_Collections_Generic_List_QuestFocusStateManager_QuestFocusStateData___ctor__);
-    sub_1C37058(&System_Collections_Generic_List_QuestFocusStateManager_QuestFocusStateData__TypeInfo);
-    sub_1C37058(&QuestFocusStateManager_TypeInfo);
-    sub_1C37058(&StringLiteral_6688/*"Fgo_20240306_1"*/);
-    byte_4C442F8 = 1;
+    sub_1C3E564(&Method_System_Collections_Generic_List_QuestFocusStateManager_QuestFocusStateData___ctor__);
+    sub_1C3E564(&System_Collections_Generic_List_QuestFocusStateManager_QuestFocusStateData__TypeInfo);
+    sub_1C3E564(&QuestFocusStateManager_TypeInfo);
+    sub_1C3E564(&StringLiteral_6688/*"Fgo_20240306_1"*/);
+    byte_4C580C1 = 1;
   }
   QuestFocusStateManager_TypeInfo->static_fields->SAVE_DATA_VERSION = (struct System_String_o *)StringLiteral_6688/*"Fgo_20240306_1"*/;
-  sub_1C36FFC((CGThumbnailListItem_o *)QuestFocusStateManager_TypeInfo->static_fields, StringLiteral_6688/*"Fgo_20240306_1"*/, v1, v2);
+  sub_1C3E508((CGThumbnailListItem_o *)QuestFocusStateManager_TypeInfo->static_fields, StringLiteral_6688/*"Fgo_20240306_1"*/, v1, v2);
   QuestFocusStateManager_TypeInfo->static_fields->isContinueDevice = 0;
-  v3 = (System_Collections_Generic_List_object__o *)sub_1C372A4(System_Collections_Generic_List_QuestFocusStateManager_QuestFocusStateData__TypeInfo);
+  v3 = (System_Collections_Generic_List_object__o *)sub_1C3E7B0(System_Collections_Generic_List_QuestFocusStateManager_QuestFocusStateData__TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v3,
-    (const MethodInfo_37A27F0 *)Method_System_Collections_Generic_List_QuestFocusStateManager_QuestFocusStateData___ctor__);
+    (const MethodInfo_37B4C2C *)Method_System_Collections_Generic_List_QuestFocusStateManager_QuestFocusStateData___ctor__);
   static_fields = QuestFocusStateManager_TypeInfo->static_fields;
   static_fields->_QuestFocusStateDataList_k__BackingField = (struct System_Collections_Generic_List_QuestFocusStateManager_QuestFocusStateData__o *)v3;
-  sub_1C36FFC((CGThumbnailListItem_o *)&static_fields->_QuestFocusStateDataList_k__BackingField, (int32_t)v3, v5, v6);
+  sub_1C3E508((CGThumbnailListItem_o *)&static_fields->_QuestFocusStateDataList_k__BackingField, (int32_t)v3, v5, v6);
 }
 
 
@@ -44,26 +44,27 @@ void QuestFocusStateManager__AddQuestFocusStateData(
   System_Collections_Generic_List_object__o *QuestFocusStateDataList_k__BackingField; // x21
   __int64 v8; // x22
   __int64 v9; // x0
-  int32_t v10; // w2
-  const MethodInfo *v11; // x3
+  __int64 v10; // x1
+  int32_t v11; // w2
+  const MethodInfo *v12; // x3
   struct System_Object_array *items; // x8
-  _QWORD *v13; // x9
+  _QWORD *v14; // x9
   __int64 size; // x10
-  Il2CppClass **v15; // x0
+  Il2CppClass **v16; // x0
 
-  if ( (byte_4C442F3 & 1) == 0 )
+  if ( (byte_4C580BC & 1) == 0 )
   {
-    sub_1C37058(&Method_System_Collections_Generic_List_QuestFocusStateManager_QuestFocusStateData__Add__);
-    sub_1C37058(&QuestFocusStateManager_QuestFocusStateData_TypeInfo);
-    sub_1C37058(&QuestFocusStateManager_TypeInfo);
-    byte_4C442F3 = 1;
+    sub_1C3E564(&Method_System_Collections_Generic_List_QuestFocusStateManager_QuestFocusStateData__Add__);
+    sub_1C3E564(&QuestFocusStateManager_QuestFocusStateData_TypeInfo);
+    sub_1C3E564(&QuestFocusStateManager_TypeInfo);
+    byte_4C580BC = 1;
   }
   if ( !QuestFocusStateManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(QuestFocusStateManager_TypeInfo);
-  if ( !byte_4C4435C )
+  if ( !byte_4C58125 )
   {
-    sub_1C37058(&QuestFocusStateManager_TypeInfo);
-    byte_4C4435C = 1;
+    sub_1C3E564(&QuestFocusStateManager_TypeInfo);
+    byte_4C58125 = 1;
   }
   v6 = QuestFocusStateManager_TypeInfo;
   if ( !QuestFocusStateManager_TypeInfo->_2.cctor_finished )
@@ -72,17 +73,17 @@ void QuestFocusStateManager__AddQuestFocusStateData(
     v6 = QuestFocusStateManager_TypeInfo;
   }
   QuestFocusStateDataList_k__BackingField = (System_Collections_Generic_List_object__o *)v6->static_fields->_QuestFocusStateDataList_k__BackingField;
-  v8 = sub_1C372A4(QuestFocusStateManager_QuestFocusStateData_TypeInfo);
+  v8 = sub_1C3E7B0(QuestFocusStateManager_QuestFocusStateData_TypeInfo);
   System_Object___ctor((Il2CppObject *)v8, 0);
   *(_DWORD *)(v8 + 16) = questId;
   *(_DWORD *)(v8 + 20) = state;
   if ( !QuestFocusStateDataList_k__BackingField
     || (items = QuestFocusStateDataList_k__BackingField->fields._items,
-        v13 = Method_System_Collections_Generic_List_QuestFocusStateManager_QuestFocusStateData__Add__,
+        v14 = Method_System_Collections_Generic_List_QuestFocusStateManager_QuestFocusStateData__Add__,
         ++QuestFocusStateDataList_k__BackingField->fields._version,
         !items) )
   {
-    sub_1C372B4(v9);
+    sub_1C3E7C0(v9, v10);
   }
   size = QuestFocusStateDataList_k__BackingField->fields._size;
   if ( (unsigned int)size >= LODWORD(items->max_length) )
@@ -90,84 +91,85 @@ void QuestFocusStateManager__AddQuestFocusStateData(
     System_Collections_Generic_List_object___AddWithResize(
       QuestFocusStateDataList_k__BackingField,
       (Il2CppObject *)v8,
-      *(const MethodInfo_37A3024 **)(*(_QWORD *)(v13[4] + 192LL) + 112LL));
+      *(const MethodInfo_37B5460 **)(*(_QWORD *)(v14[4] + 192LL) + 112LL));
   }
   else
   {
-    v15 = &items->obj.klass + size;
+    v16 = &items->obj.klass + size;
     QuestFocusStateDataList_k__BackingField->fields._size = size + 1;
-    v15[4] = (Il2CppClass *)v8;
-    sub_1C36FFC((CGThumbnailListItem_o *)(v15 + 4), v8, v10, v11);
+    v16[4] = (Il2CppClass *)v8;
+    sub_1C3E508((CGThumbnailListItem_o *)(v16 + 4), v8, v11, v12);
   }
 }
 
 
 void QuestFocusStateManager__ClearQuestFocusStateDataList(const MethodInfo *method)
 {
-  QuestFocusStateManager_c *v1; // x0
+  __int64 v1; // x1
+  QuestFocusStateManager_c *v2; // x0
   struct System_Collections_Generic_List_QuestFocusStateManager_QuestFocusStateData__o *QuestFocusStateDataList_k__BackingField; // x8
-  struct System_Collections_Generic_List_QuestFocusStateManager_QuestFocusStateData__o *v3; // x8
+  struct System_Collections_Generic_List_QuestFocusStateManager_QuestFocusStateData__o *v4; // x8
   int32_t size; // w2
-  int v5; // w9
+  int v6; // w9
 
-  if ( (byte_4C442F4 & 1) == 0 )
+  if ( (byte_4C580BD & 1) == 0 )
   {
-    sub_1C37058(&Method_System_Collections_Generic_List_QuestFocusStateManager_QuestFocusStateData__Clear__);
-    sub_1C37058(&Method_System_Collections_Generic_List_QuestFocusStateManager_QuestFocusStateData__get_Count__);
-    sub_1C37058(&QuestFocusStateManager_TypeInfo);
-    byte_4C442F4 = 1;
+    sub_1C3E564(&Method_System_Collections_Generic_List_QuestFocusStateManager_QuestFocusStateData__Clear__);
+    sub_1C3E564(&Method_System_Collections_Generic_List_QuestFocusStateManager_QuestFocusStateData__get_Count__);
+    sub_1C3E564(&QuestFocusStateManager_TypeInfo);
+    byte_4C580BD = 1;
   }
   if ( !QuestFocusStateManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(QuestFocusStateManager_TypeInfo);
-  if ( !byte_4C4435C )
+  if ( !byte_4C58125 )
   {
-    sub_1C37058(&QuestFocusStateManager_TypeInfo);
-    byte_4C4435C = 1;
+    sub_1C3E564(&QuestFocusStateManager_TypeInfo);
+    byte_4C58125 = 1;
   }
-  v1 = QuestFocusStateManager_TypeInfo;
+  v2 = QuestFocusStateManager_TypeInfo;
   if ( !QuestFocusStateManager_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(QuestFocusStateManager_TypeInfo);
-    v1 = QuestFocusStateManager_TypeInfo;
+    v2 = QuestFocusStateManager_TypeInfo;
   }
-  QuestFocusStateDataList_k__BackingField = v1->static_fields->_QuestFocusStateDataList_k__BackingField;
+  QuestFocusStateDataList_k__BackingField = v2->static_fields->_QuestFocusStateDataList_k__BackingField;
   if ( !QuestFocusStateDataList_k__BackingField )
     goto LABEL_23;
   if ( QuestFocusStateDataList_k__BackingField->fields._size < 1 )
     goto LABEL_20;
-  if ( !v1->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(v1);
-  if ( !byte_4C4435C )
+  if ( !v2->_2.cctor_finished )
+    j_il2cpp_runtime_class_init_0(v2);
+  if ( !byte_4C58125 )
   {
-    sub_1C37058(&QuestFocusStateManager_TypeInfo);
-    byte_4C4435C = 1;
+    sub_1C3E564(&QuestFocusStateManager_TypeInfo);
+    byte_4C58125 = 1;
   }
-  v1 = QuestFocusStateManager_TypeInfo;
+  v2 = QuestFocusStateManager_TypeInfo;
   if ( !QuestFocusStateManager_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(QuestFocusStateManager_TypeInfo);
-    v1 = QuestFocusStateManager_TypeInfo;
+    v2 = QuestFocusStateManager_TypeInfo;
   }
-  v3 = v1->static_fields->_QuestFocusStateDataList_k__BackingField;
-  if ( !v3 )
+  v4 = v2->static_fields->_QuestFocusStateDataList_k__BackingField;
+  if ( !v4 )
 LABEL_23:
-    sub_1C372B4(v1);
-  size = v3->fields._size;
-  v5 = v3->fields._version + 1;
-  v3->fields._size = 0;
-  v3->fields._version = v5;
+    sub_1C3E7C0(v2, v1);
+  size = v4->fields._size;
+  v6 = v4->fields._version + 1;
+  v4->fields._size = 0;
+  v4->fields._version = v6;
   if ( size >= 1 )
   {
-    System_Array__Clear((System_Array_o *)v3->fields._items, 0, size, 0);
-    v1 = QuestFocusStateManager_TypeInfo;
+    System_Array__Clear((System_Array_o *)v4->fields._items, 0, size, 0);
+    v2 = QuestFocusStateManager_TypeInfo;
   }
 LABEL_20:
-  if ( !v1->_2.cctor_finished )
+  if ( !v2->_2.cctor_finished )
   {
-    j_il2cpp_runtime_class_init_0(v1);
-    v1 = QuestFocusStateManager_TypeInfo;
+    j_il2cpp_runtime_class_init_0(v2);
+    v2 = QuestFocusStateManager_TypeInfo;
   }
-  v1->static_fields->isContinueDevice = 0;
+  v2->static_fields->isContinueDevice = 0;
 }
 
 
@@ -177,10 +179,10 @@ void QuestFocusStateManager__DeleteSaveData(const MethodInfo *method)
   System_String_o *SaveFileName; // x19
   QuestFocusStateManager_c *v3; // x0
 
-  if ( (byte_4C442F7 & 1) == 0 )
+  if ( (byte_4C580C0 & 1) == 0 )
   {
-    sub_1C37058(&QuestFocusStateManager_TypeInfo);
-    byte_4C442F7 = 1;
+    sub_1C3E564(&QuestFocusStateManager_TypeInfo);
+    byte_4C580C0 = 1;
   }
   v1 = QuestFocusStateManager_TypeInfo;
   if ( !QuestFocusStateManager_TypeInfo->_2.cctor_finished )
@@ -216,51 +218,52 @@ QuestFocusStateManager_QuestFocusStateData_o *QuestFocusStateManager__GetQuestFo
 {
   __int64 v4; // x19
   __int64 v5; // x0
-  QuestFocusStateManager_c *v6; // x0
+  __int64 v6; // x1
+  QuestFocusStateManager_c *v7; // x0
   System_Collections_Generic_List_object__o *QuestFocusStateDataList_k__BackingField; // x20
-  System_Predicate_object__o *v8; // x21
+  System_Predicate_object__o *v9; // x21
 
-  if ( (byte_4C442F2 & 1) == 0 )
+  if ( (byte_4C580BB & 1) == 0 )
   {
-    sub_1C37058(&Method_System_Collections_Generic_List_QuestFocusStateManager_QuestFocusStateData__Find__);
-    sub_1C37058(&System_Predicate_QuestFocusStateManager_QuestFocusStateData__TypeInfo);
-    sub_1C37058(&QuestFocusStateManager_TypeInfo);
-    sub_1C37058(&Method_QuestFocusStateManager___c__DisplayClass8_0__GetQuestFocusStateData_b__0__);
-    sub_1C37058(&QuestFocusStateManager___c__DisplayClass8_0_TypeInfo);
-    byte_4C442F2 = 1;
+    sub_1C3E564(&Method_System_Collections_Generic_List_QuestFocusStateManager_QuestFocusStateData__Find__);
+    sub_1C3E564(&System_Predicate_QuestFocusStateManager_QuestFocusStateData__TypeInfo);
+    sub_1C3E564(&QuestFocusStateManager_TypeInfo);
+    sub_1C3E564(&Method_QuestFocusStateManager___c__DisplayClass8_0__GetQuestFocusStateData_b__0__);
+    sub_1C3E564(&QuestFocusStateManager___c__DisplayClass8_0_TypeInfo);
+    byte_4C580BB = 1;
   }
-  v4 = sub_1C372A4(QuestFocusStateManager___c__DisplayClass8_0_TypeInfo);
+  v4 = sub_1C3E7B0(QuestFocusStateManager___c__DisplayClass8_0_TypeInfo);
   System_Object___ctor((Il2CppObject *)v4, 0);
   if ( !v4 )
     goto LABEL_12;
   *(_DWORD *)(v4 + 16) = questId;
   if ( !QuestFocusStateManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(QuestFocusStateManager_TypeInfo);
-  if ( !byte_4C4435C )
+  if ( !byte_4C58125 )
   {
-    sub_1C37058(&QuestFocusStateManager_TypeInfo);
-    byte_4C4435C = 1;
+    sub_1C3E564(&QuestFocusStateManager_TypeInfo);
+    byte_4C58125 = 1;
   }
-  v6 = QuestFocusStateManager_TypeInfo;
+  v7 = QuestFocusStateManager_TypeInfo;
   if ( !QuestFocusStateManager_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(QuestFocusStateManager_TypeInfo);
-    v6 = QuestFocusStateManager_TypeInfo;
+    v7 = QuestFocusStateManager_TypeInfo;
   }
-  QuestFocusStateDataList_k__BackingField = (System_Collections_Generic_List_object__o *)v6->static_fields->_QuestFocusStateDataList_k__BackingField;
-  v8 = (System_Predicate_object__o *)sub_1C372A4(System_Predicate_QuestFocusStateManager_QuestFocusStateData__TypeInfo);
+  QuestFocusStateDataList_k__BackingField = (System_Collections_Generic_List_object__o *)v7->static_fields->_QuestFocusStateDataList_k__BackingField;
+  v9 = (System_Predicate_object__o *)sub_1C3E7B0(System_Predicate_QuestFocusStateManager_QuestFocusStateData__TypeInfo);
   System_Predicate_object____ctor(
-    v8,
+    v9,
     (Il2CppObject *)v4,
     Method_QuestFocusStateManager___c__DisplayClass8_0__GetQuestFocusStateData_b__0__,
     0);
   if ( !QuestFocusStateDataList_k__BackingField )
 LABEL_12:
-    sub_1C372B4(v5);
+    sub_1C3E7C0(v5, v6);
   return (QuestFocusStateManager_QuestFocusStateData_o *)System_Collections_Generic_List_object___Find(
                                                            QuestFocusStateDataList_k__BackingField,
-                                                           (System_Predicate_T__o *)v8,
-                                                           (const MethodInfo_37A368C *)Method_System_Collections_Generic_List_QuestFocusStateManager_QuestFocusStateData__Find__);
+                                                           (System_Predicate_T__o *)v9,
+                                                           (const MethodInfo_37B5AC8 *)Method_System_Collections_Generic_List_QuestFocusStateManager_QuestFocusStateData__Find__);
 }
 
 
@@ -269,12 +272,12 @@ System_String_o *QuestFocusStateManager__GetSaveFileName(const MethodInfo *metho
   System_String_o *DatFileSavePath; // x19
   System_String_o *FileName; // x2
 
-  if ( (byte_4C442F1 & 1) == 0 )
+  if ( (byte_4C580BA & 1) == 0 )
   {
-    sub_1C37058(&AndroidUtil_TypeInfo);
-    sub_1C37058(&DatFileName_TypeInfo);
-    sub_1C37058(&StringLiteral_1048/*"/"*/);
-    byte_4C442F1 = 1;
+    sub_1C3E564(&AndroidUtil_TypeInfo);
+    sub_1C3E564(&DatFileName_TypeInfo);
+    sub_1C3E564(&StringLiteral_1048/*"/"*/);
+    byte_4C580BA = 1;
   }
   if ( !AndroidUtil_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(AndroidUtil_TypeInfo);
@@ -282,7 +285,7 @@ System_String_o *QuestFocusStateManager__GetSaveFileName(const MethodInfo *metho
   if ( !DatFileName_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DatFileName_TypeInfo);
   FileName = DatFileName__getFileName(42, 0);
-  return System_String__Concat_63599904(DatFileSavePath, (System_String_o *)StringLiteral_1048/*"/"*/, FileName, 0);
+  return System_String__Concat_63674716(DatFileSavePath, (System_String_o *)StringLiteral_1048/*"/"*/, FileName, 0);
 }
 
 
@@ -293,27 +296,28 @@ bool QuestFocusStateManager__ReadData(QuestFocusStateManager_o *this, const Meth
   System_IO_Stream_o *v4; // x20
   System_IO_BinaryReader_o *v5; // x19
   __int64 v6; // x0
-  System_String_o *v7; // x20
-  QuestFocusStateManager_c *v8; // x0
-  int v9; // w21
-  char v10; // w20
-  QuestFocusStateManager_c *v11; // x0
-  int v12; // w20
-  int32_t v13; // w21
-  QuestFocusStateManager_o *v14; // x0
-  const MethodInfo *v15; // x3
+  __int64 v7; // x1
+  System_String_o *v8; // x20
+  QuestFocusStateManager_c *v9; // x0
+  int v10; // w21
+  char v11; // w20
+  QuestFocusStateManager_c *v12; // x0
+  int v13; // w20
+  int32_t v14; // w21
+  QuestFocusStateManager_o *v15; // x0
+  const MethodInfo *v16; // x3
   System_IO_BinaryReader_c *klass; // x8
-  __int64 v17; // x9
+  __int64 v18; // x9
   int32_t *p_offset; // x10
-  __int64 v19; // x0
-  QuestFocusStateManager_c *v21; // x0
+  __int64 v20; // x0
+  QuestFocusStateManager_c *v22; // x0
 
-  if ( (byte_4C442F5 & 1) == 0 )
+  if ( (byte_4C580BE & 1) == 0 )
   {
-    sub_1C37058(&System_IO_BinaryReader_TypeInfo);
-    sub_1C37058(&System_IDisposable_TypeInfo);
-    sub_1C37058(&QuestFocusStateManager_TypeInfo);
-    byte_4C442F5 = 1;
+    sub_1C3E564(&System_IO_BinaryReader_TypeInfo);
+    sub_1C3E564(&System_IDisposable_TypeInfo);
+    sub_1C3E564(&QuestFocusStateManager_TypeInfo);
+    byte_4C580BE = 1;
   }
   v2 = QuestFocusStateManager_TypeInfo;
   if ( !QuestFocusStateManager_TypeInfo->_2.cctor_finished )
@@ -321,86 +325,86 @@ bool QuestFocusStateManager__ReadData(QuestFocusStateManager_o *this, const Meth
   SaveFileName = QuestFocusStateManager__GetSaveFileName((const MethodInfo *)v2);
   if ( !System_IO_File__Exists(SaveFileName, 0) )
   {
-    v21 = QuestFocusStateManager_TypeInfo;
+    v22 = QuestFocusStateManager_TypeInfo;
     if ( !QuestFocusStateManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(QuestFocusStateManager_TypeInfo);
-    QuestFocusStateManager__ClearQuestFocusStateDataList((const MethodInfo *)v21);
+    QuestFocusStateManager__ClearQuestFocusStateDataList((const MethodInfo *)v22);
     return 0;
   }
   v4 = (System_IO_Stream_o *)System_IO_File__OpenRead(SaveFileName, 0);
-  v5 = (System_IO_BinaryReader_o *)sub_1C372A4(System_IO_BinaryReader_TypeInfo);
+  v5 = (System_IO_BinaryReader_o *)sub_1C3E7B0(System_IO_BinaryReader_TypeInfo);
   System_IO_BinaryReader___ctor(v5, v4, 0);
   if ( !v5 )
-    sub_1C372B4(v6);
-  v7 = (System_String_o *)((__int64 (__fastcall *)(System_IO_BinaryReader_o *, const MethodInfo *))v5->klass->vtable._22_ReadString.methodPtr)(
+    sub_1C3E7C0(v6, v7);
+  v8 = (System_String_o *)((__int64 (__fastcall *)(System_IO_BinaryReader_o *, const MethodInfo *))v5->klass->vtable._22_ReadString.methodPtr)(
                             v5,
                             v5->klass->vtable._22_ReadString.method);
-  v8 = QuestFocusStateManager_TypeInfo;
+  v9 = QuestFocusStateManager_TypeInfo;
   if ( !QuestFocusStateManager_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(QuestFocusStateManager_TypeInfo);
-    v8 = QuestFocusStateManager_TypeInfo;
+    v9 = QuestFocusStateManager_TypeInfo;
   }
-  if ( System_String__op_Inequality(v8->static_fields->SAVE_DATA_VERSION, v7, 0) )
+  if ( System_String__op_Inequality(v9->static_fields->SAVE_DATA_VERSION, v8, 0) )
   {
-    v9 = 4;
+    v10 = 4;
   }
   else
   {
-    v10 = ((__int64 (__fastcall *)(System_IO_BinaryReader_o *, const MethodInfo *))v5->klass->vtable._9_ReadBoolean.methodPtr)(
+    v11 = ((__int64 (__fastcall *)(System_IO_BinaryReader_o *, const MethodInfo *))v5->klass->vtable._9_ReadBoolean.methodPtr)(
             v5,
             v5->klass->vtable._9_ReadBoolean.method);
-    v11 = QuestFocusStateManager_TypeInfo;
+    v12 = QuestFocusStateManager_TypeInfo;
     if ( !QuestFocusStateManager_TypeInfo->_2.cctor_finished )
     {
       j_il2cpp_runtime_class_init_0(QuestFocusStateManager_TypeInfo);
-      v11 = QuestFocusStateManager_TypeInfo;
+      v12 = QuestFocusStateManager_TypeInfo;
     }
-    v11->static_fields->isContinueDevice = v10 & 1;
-    v12 = ((__int64 (__fastcall *)(System_IO_BinaryReader_o *, const MethodInfo *))v5->klass->vtable._15_ReadInt32.methodPtr)(
+    v12->static_fields->isContinueDevice = v11 & 1;
+    v13 = ((__int64 (__fastcall *)(System_IO_BinaryReader_o *, const MethodInfo *))v5->klass->vtable._15_ReadInt32.methodPtr)(
             v5,
             v5->klass->vtable._15_ReadInt32.method);
-    if ( v12 >= 1 )
+    if ( v13 >= 1 )
     {
       do
       {
-        v13 = ((__int64 (__fastcall *)(System_IO_BinaryReader_o *, const MethodInfo *))v5->klass->vtable._15_ReadInt32.methodPtr)(
+        v14 = ((__int64 (__fastcall *)(System_IO_BinaryReader_o *, const MethodInfo *))v5->klass->vtable._15_ReadInt32.methodPtr)(
                 v5,
                 v5->klass->vtable._15_ReadInt32.method);
-        v14 = (QuestFocusStateManager_o *)((__int64 (__fastcall *)(System_IO_BinaryReader_o *, const MethodInfo *))v5->klass->vtable._15_ReadInt32.methodPtr)(
+        v15 = (QuestFocusStateManager_o *)((__int64 (__fastcall *)(System_IO_BinaryReader_o *, const MethodInfo *))v5->klass->vtable._15_ReadInt32.methodPtr)(
                                             v5,
                                             v5->klass->vtable._15_ReadInt32.method);
-        QuestFocusStateManager__AddQuestFocusStateData(v14, v13, (int32_t)v14, v15);
-        --v12;
+        QuestFocusStateManager__AddQuestFocusStateData(v15, v14, (int32_t)v15, v16);
+        --v13;
       }
-      while ( v12 );
+      while ( v13 );
     }
     ((void (__fastcall *)(System_IO_BinaryReader_o *, const MethodInfo *))v5->klass->vtable._6_Close.methodPtr)(
       v5,
       v5->klass->vtable._6_Close.method);
-    v9 = 7;
+    v10 = 7;
   }
   klass = v5->klass;
-  v17 = *(unsigned __int16 *)&v5->klass->_2.rank;
+  v18 = *(unsigned __int16 *)&v5->klass->_2.rank;
   if ( *(_WORD *)&v5->klass->_2.rank )
   {
     p_offset = &klass->_1.interfaceOffsets->offset;
     while ( *((System_IDisposable_c **)p_offset - 1) != System_IDisposable_TypeInfo )
     {
-      --v17;
+      --v18;
       p_offset += 4;
-      if ( !v17 )
+      if ( !v18 )
         goto LABEL_20;
     }
-    v19 = (__int64)&klass->vtable + 16 * *p_offset;
+    v20 = (__int64)&klass->vtable + 16 * *p_offset;
   }
   else
   {
 LABEL_20:
-    v19 = sub_1C87870(v5, System_IDisposable_TypeInfo, 0);
+    v20 = sub_1C8ED7C(v5, System_IDisposable_TypeInfo, 0);
   }
-  (*(void (__fastcall **)(System_IO_BinaryReader_o *, _QWORD))v19)(v5, *(_QWORD *)(v19 + 8));
-  return v9 == 7;
+  (*(void (__fastcall **)(System_IO_BinaryReader_o *, _QWORD))v20)(v5, *(_QWORD *)(v20 + 8));
+  return v10 == 7;
 }
 
 
@@ -429,30 +433,33 @@ bool QuestFocusStateManager__WriteData(QuestFocusStateManager_o *this, const Met
   System_String_o *SaveFileName; // x0
   System_IO_Stream_o *v6; // x21
   System_IO_BinaryWriter_o *v7; // x19
+  __int64 v8; // x1
   long double inited; // q0
-  QuestFocusStateManager_c *v9; // x0
+  QuestFocusStateManager_c *v10; // x0
   struct QuestFocusStateManager_StaticFields *static_fields; // x8
   struct System_Collections_Generic_List_QuestFocusStateManager_QuestFocusStateData__o *QuestFocusStateDataList_k__BackingField; // x9
   int size; // w21
+  __int64 v14; // x1
   int32_t i; // w22
-  QuestFocusStateManager_c *v14; // x0
-  System_Collections_Generic_List_object__o *v15; // x0
+  QuestFocusStateManager_c *v16; // x0
+  System_Collections_Generic_List_object__o *v17; // x0
   Il2CppObject *Item; // x0
-  Il2CppObject *v17; // x23
+  __int64 v19; // x1
+  Il2CppObject *v20; // x23
   System_IO_BinaryWriter_c *klass; // x8
-  __int64 v19; // x9
+  __int64 v22; // x9
   int32_t *p_offset; // x10
-  __int64 v21; // x0
+  __int64 v24; // x0
 
-  if ( (byte_4C442F6 & 1) == 0 )
+  if ( (byte_4C580BF & 1) == 0 )
   {
-    sub_1C37058(&System_IO_BinaryWriter_TypeInfo);
-    sub_1C37058(&System_IDisposable_TypeInfo);
-    sub_1C37058(&Method_System_Collections_Generic_List_QuestFocusStateManager_QuestFocusStateData__get_Count__);
-    sub_1C37058(&Method_System_Collections_Generic_List_QuestFocusStateManager_QuestFocusStateData__get_Item__);
-    sub_1C37058(&ManagerConfig_TypeInfo);
-    sub_1C37058(&QuestFocusStateManager_TypeInfo);
-    byte_4C442F6 = 1;
+    sub_1C3E564(&System_IO_BinaryWriter_TypeInfo);
+    sub_1C3E564(&System_IDisposable_TypeInfo);
+    sub_1C3E564(&Method_System_Collections_Generic_List_QuestFocusStateManager_QuestFocusStateData__get_Count__);
+    sub_1C3E564(&Method_System_Collections_Generic_List_QuestFocusStateManager_QuestFocusStateData__get_Item__);
+    sub_1C3E564(&ManagerConfig_TypeInfo);
+    sub_1C3E564(&QuestFocusStateManager_TypeInfo);
+    byte_4C580BF = 1;
   }
   v2 = ManagerConfig_TypeInfo;
   if ( !ManagerConfig_TypeInfo->_2.cctor_finished )
@@ -467,27 +474,27 @@ bool QuestFocusStateManager__WriteData(QuestFocusStateManager_o *this, const Met
     j_il2cpp_runtime_class_init_0(QuestFocusStateManager_TypeInfo);
   SaveFileName = QuestFocusStateManager__GetSaveFileName((const MethodInfo *)v4);
   v6 = (System_IO_Stream_o *)System_IO_File__OpenWrite(SaveFileName, 0);
-  v7 = (System_IO_BinaryWriter_o *)sub_1C372A4(System_IO_BinaryWriter_TypeInfo);
-  System_IO_BinaryWriter___ctor_64472960(v7, v6, 0);
+  v7 = (System_IO_BinaryWriter_o *)sub_1C3E7B0(System_IO_BinaryWriter_TypeInfo);
+  System_IO_BinaryWriter___ctor_64547772(v7, v6, 0);
   if ( !QuestFocusStateManager_TypeInfo->_2.cctor_finished )
     inited = j_il2cpp_runtime_class_init_0(QuestFocusStateManager_TypeInfo);
-  if ( !byte_4C4435C )
+  if ( !byte_4C58125 )
   {
-    sub_1C37058(&QuestFocusStateManager_TypeInfo);
-    byte_4C4435C = 1;
+    sub_1C3E564(&QuestFocusStateManager_TypeInfo);
+    byte_4C58125 = 1;
   }
-  v9 = QuestFocusStateManager_TypeInfo;
+  v10 = QuestFocusStateManager_TypeInfo;
   if ( !QuestFocusStateManager_TypeInfo->_2.cctor_finished )
   {
     inited = j_il2cpp_runtime_class_init_0(QuestFocusStateManager_TypeInfo);
-    v9 = QuestFocusStateManager_TypeInfo;
+    v10 = QuestFocusStateManager_TypeInfo;
   }
-  static_fields = v9->static_fields;
+  static_fields = v10->static_fields;
   QuestFocusStateDataList_k__BackingField = static_fields->_QuestFocusStateDataList_k__BackingField;
   if ( !QuestFocusStateDataList_k__BackingField )
-    sub_1C372B4(v9);
+    sub_1C3E7C0(v10, v8);
   if ( !v7 )
-    sub_1C372B4(v9);
+    sub_1C3E7C0(v10, v8);
   size = QuestFocusStateDataList_k__BackingField->fields._size;
   ((void (__fastcall *)(System_IO_BinaryWriter_o *, struct System_String_o *, const MethodInfo *, long double))v7->klass->vtable._22_Write.methodPtr)(
     v7,
@@ -508,34 +515,34 @@ bool QuestFocusStateManager__WriteData(QuestFocusStateManager_o *this, const Met
     {
       if ( !QuestFocusStateManager_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(QuestFocusStateManager_TypeInfo);
-      if ( !byte_4C4435C )
+      if ( !byte_4C58125 )
       {
-        sub_1C37058(&QuestFocusStateManager_TypeInfo);
-        byte_4C4435C = 1;
+        sub_1C3E564(&QuestFocusStateManager_TypeInfo);
+        byte_4C58125 = 1;
       }
-      v14 = QuestFocusStateManager_TypeInfo;
+      v16 = QuestFocusStateManager_TypeInfo;
       if ( !QuestFocusStateManager_TypeInfo->_2.cctor_finished )
       {
         j_il2cpp_runtime_class_init_0(QuestFocusStateManager_TypeInfo);
-        v14 = QuestFocusStateManager_TypeInfo;
+        v16 = QuestFocusStateManager_TypeInfo;
       }
-      v15 = (System_Collections_Generic_List_object__o *)v14->static_fields->_QuestFocusStateDataList_k__BackingField;
-      if ( !v15 )
-        sub_1C372B4(0);
+      v17 = (System_Collections_Generic_List_object__o *)v16->static_fields->_QuestFocusStateDataList_k__BackingField;
+      if ( !v17 )
+        sub_1C3E7C0(0, v14);
       Item = System_Collections_Generic_List_object___get_Item(
-               v15,
+               v17,
                i,
-               (const MethodInfo_37A2D54 *)Method_System_Collections_Generic_List_QuestFocusStateManager_QuestFocusStateData__get_Item__);
-      v17 = Item;
+               (const MethodInfo_37B5190 *)Method_System_Collections_Generic_List_QuestFocusStateManager_QuestFocusStateData__get_Item__);
+      v20 = Item;
       if ( !Item )
-        sub_1C372B4(0);
+        sub_1C3E7C0(0, v19);
       ((void (__fastcall *)(System_IO_BinaryWriter_o *, _QWORD, const MethodInfo *))v7->klass->vtable._17_Write.methodPtr)(
         v7,
         LODWORD(Item[1].klass),
         v7->klass->vtable._17_Write.method);
       ((void (__fastcall *)(System_IO_BinaryWriter_o *, _QWORD, const MethodInfo *))v7->klass->vtable._17_Write.methodPtr)(
         v7,
-        HIDWORD(v17[1].klass),
+        HIDWORD(v20[1].klass),
         v7->klass->vtable._17_Write.method);
     }
   }
@@ -543,25 +550,25 @@ bool QuestFocusStateManager__WriteData(QuestFocusStateManager_o *this, const Met
     v7,
     v7->klass->vtable._5_Close.method);
   klass = v7->klass;
-  v19 = *(unsigned __int16 *)&v7->klass->_2.rank;
+  v22 = *(unsigned __int16 *)&v7->klass->_2.rank;
   if ( *(_WORD *)&v7->klass->_2.rank )
   {
     p_offset = &klass->_1.interfaceOffsets->offset;
     while ( *((System_IDisposable_c **)p_offset - 1) != System_IDisposable_TypeInfo )
     {
-      --v19;
+      --v22;
       p_offset += 4;
-      if ( !v19 )
+      if ( !v22 )
         goto LABEL_32;
     }
-    v21 = (__int64)&klass->vtable + 16 * *p_offset;
+    v24 = (__int64)&klass->vtable + 16 * *p_offset;
   }
   else
   {
 LABEL_32:
-    v21 = sub_1C87870(v7, System_IDisposable_TypeInfo, 0);
+    v24 = sub_1C8ED7C(v7, System_IDisposable_TypeInfo, 0);
   }
-  (*(void (__fastcall **)(System_IO_BinaryWriter_o *, _QWORD))v21)(v7, *(_QWORD *)(v21 + 8));
+  (*(void (__fastcall **)(System_IO_BinaryWriter_o *, _QWORD))v24)(v7, *(_QWORD *)(v24 + 8));
   return 1;
 }
 
@@ -571,10 +578,10 @@ System_Collections_Generic_List_QuestFocusStateManager_QuestFocusStateData__o *Q
 {
   QuestFocusStateManager_c *v1; // x0
 
-  if ( (byte_4C442F0 & 1) == 0 )
+  if ( (byte_4C580B9 & 1) == 0 )
   {
-    sub_1C37058(&QuestFocusStateManager_TypeInfo);
-    byte_4C442F0 = 1;
+    sub_1C3E564(&QuestFocusStateManager_TypeInfo);
+    byte_4C580B9 = 1;
   }
   v1 = QuestFocusStateManager_TypeInfo;
   if ( !QuestFocusStateManager_TypeInfo->_2.cctor_finished )
@@ -612,6 +619,6 @@ bool QuestFocusStateManager___c__DisplayClass8_0___GetQuestFocusStateData_b__0(
         const MethodInfo *method)
 {
   if ( !n )
-    sub_1C372B4(this);
+    sub_1C3E7C0(this, 0);
   return n->fields.QuestId == this->fields.questId;
 }

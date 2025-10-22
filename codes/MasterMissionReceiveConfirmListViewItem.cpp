@@ -7,9 +7,9 @@ void MasterMissionReceiveConfirmListViewItem___ctor(
   int32_t v6; // w2
   const MethodInfo *v7; // x3
 
-  ListViewItem___ctor_43804668((ListViewItem_o *)this, index, 0);
+  ListViewItem___ctor_43860152((ListViewItem_o *)this, index, 0);
   this->fields._Message_k__BackingField = message;
-  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields._Message_k__BackingField, (int32_t)message, v6, v7);
+  sub_1C3E508((CGThumbnailListItem_o *)&this->fields._Message_k__BackingField, (int32_t)message, v6, v7);
 }
 
 
@@ -29,5 +29,5 @@ void MasterMissionReceiveConfirmListViewItem__set_Message(
   const MethodInfo *v3; // x3
 
   this->fields._Message_k__BackingField = value;
-  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields._Message_k__BackingField, (int32_t)value, (int32_t)method, v3);
+  sub_1C3E508((CGThumbnailListItem_o *)&this->fields._Message_k__BackingField, (int32_t)value, (int32_t)method, v3);
 }

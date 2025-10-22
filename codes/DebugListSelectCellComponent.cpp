@@ -12,22 +12,23 @@ void DebugListSelectCellComponent__Set(
         const MethodInfo *method)
 {
   struct System_String_o **p_id; // x22
-  UILabel_o *v9; // x0
+  __int64 v9; // x1
+  UILabel_o *v10; // x0
   struct System_Action_string__int__o **p_callback; // x21
-  int32_t v11; // w2
-  const MethodInfo *v12; // x3
+  int32_t v12; // w2
+  const MethodInfo *v13; // x3
 
   this->fields.id = id;
   p_id = &this->fields.id;
-  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.id, (int32_t)id, index, (const MethodInfo *)callback);
-  v9 = (UILabel_o *)*(p_id - 1);
-  if ( !v9 )
-    sub_1C372B4(0);
-  UILabel__set_text(v9, this->fields.id, 0);
+  sub_1C3E508((CGThumbnailListItem_o *)&this->fields.id, (int32_t)id, index, (const MethodInfo *)callback);
+  v10 = (UILabel_o *)*(p_id - 1);
+  if ( !v10 )
+    sub_1C3E7C0(0, v9);
+  UILabel__set_text(v10, this->fields.id, 0);
   this->fields.callback = callback;
   p_callback = &this->fields.callback;
   *((_DWORD *)p_callback - 2) = index;
-  sub_1C36FFC((CGThumbnailListItem_o *)p_callback, (int32_t)callback, v11, v12);
+  sub_1C3E508((CGThumbnailListItem_o *)p_callback, (int32_t)callback, v12, v13);
 }
 
 

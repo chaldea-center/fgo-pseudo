@@ -1,13 +1,13 @@
 void UserCoinRoomEntity___ctor(UserCoinRoomEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_4C43D12 & 1) == 0 )
+  if ( (byte_4C57ACA & 1) == 0 )
   {
-    sub_1C37058(&Method_DataEntityBase_long___ctor__);
-    byte_4C43D12 = 1;
+    sub_1C3E564(&Method_DataEntityBase_long___ctor__);
+    byte_4C57ACA = 1;
   }
   DataEntityBase_long____ctor(
     (DataEntityBase_long__o *)this,
-    (const MethodInfo_339EC04 *)Method_DataEntityBase_long___ctor__);
+    (const MethodInfo_33B0ABC *)Method_DataEntityBase_long___ctor__);
 }
 
 

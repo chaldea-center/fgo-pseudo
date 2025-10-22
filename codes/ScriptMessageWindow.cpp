@@ -1,6 +1,6 @@
 void ScriptMessageWindow___ctor(ScriptMessageWindow_o *this, const MethodInfo *method)
 {
-  *(_OWORD *)&this->fields.talkNameBackBaseWidth = xmmword_C0E1F0;
+  *(_OWORD *)&this->fields.talkNameBackBaseWidth = xmmword_C11860;
   this->fields.defaultWindowDispCenter = (struct UnityEngine_Vector2_o)0xC35A000000000000LL;
   UnityEngine_MonoBehaviour___ctor((UnityEngine_MonoBehaviour_o *)this, 0);
 }
@@ -17,13 +17,13 @@ void ScriptMessageWindow__AddChildMessageScroll(
 
   if ( !child
     || (v4 = this,
-        UnityEngine_Transform__SetParent_71290012(child, this->fields.messageScroll, 0, 0),
+        UnityEngine_Transform__SetParent_71364824(child, this->fields.messageScroll, 0, 0),
         this = (ScriptMessageWindow_o *)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)child, 0),
         (messageScroll = (UnityEngine_Component_o *)v4->fields.messageScroll) == 0)
     || (v6 = this, (this = (ScriptMessageWindow_o *)UnityEngine_Component__get_gameObject(messageScroll, 0)) == 0)
     || (this = (ScriptMessageWindow_o *)UnityEngine_GameObject__get_layer((UnityEngine_GameObject_o *)this, 0), !v6) )
   {
-    sub_1C372B4(this);
+    sub_1C3E7C0(this, child);
   }
   UnityEngine_GameObject__set_layer((UnityEngine_GameObject_o *)v6, (int32_t)this, 0);
 }
@@ -45,13 +45,13 @@ void ScriptMessageWindow__CopyTouchComponents(
   const MethodInfo *v13; // x3
   void *v14; // x1
 
-  if ( (byte_4C44FC2 & 1) == 0 )
+  if ( (byte_4C58D8E & 1) == 0 )
   {
-    sub_1C37058(&Method_UnityEngine_GameObject_AddComponent_ScriptMessageGestureReciver___);
-    sub_1C37058(&Method_UnityEngine_GameObject_AddComponent_UITouchPressMarge___);
-    sub_1C37058(&Method_UnityEngine_GameObject_GetComponent_ScriptMessageGestureReciver___);
-    sub_1C37058(&Method_UnityEngine_GameObject_GetComponent_UITouchPressMarge___);
-    byte_4C44FC2 = 1;
+    sub_1C3E564(&Method_UnityEngine_GameObject_AddComponent_ScriptMessageGestureReciver___);
+    sub_1C3E564(&Method_UnityEngine_GameObject_AddComponent_UITouchPressMarge___);
+    sub_1C3E564(&Method_UnityEngine_GameObject_GetComponent_ScriptMessageGestureReciver___);
+    sub_1C3E564(&Method_UnityEngine_GameObject_GetComponent_UITouchPressMarge___);
+    byte_4C58D8E = 1;
   }
   messageBackBase = (UnityEngine_Component_o *)this->fields.messageBackBase;
   if ( !messageBackBase )
@@ -61,7 +61,7 @@ void ScriptMessageWindow__CopyTouchComponents(
     goto LABEL_17;
   messageBackBase = (UnityEngine_Component_o *)UnityEngine_GameObject__AddComponent_object_(
                                                  (UnityEngine_GameObject_o *)messageBackBase,
-                                                 (const MethodInfo_313F0F0 *)Method_UnityEngine_GameObject_AddComponent_ScriptMessageGestureReciver___);
+                                                 (const MethodInfo_3150FE4 *)Method_UnityEngine_GameObject_AddComponent_ScriptMessageGestureReciver___);
   if ( !src )
     goto LABEL_17;
   v6 = messageBackBase;
@@ -73,54 +73,55 @@ void ScriptMessageWindow__CopyTouchComponents(
     goto LABEL_17;
   messageBackBase = (UnityEngine_Component_o *)UnityEngine_GameObject__GetComponent_object_(
                                                  (UnityEngine_GameObject_o *)messageBackBase,
-                                                 (const MethodInfo_313F1D8 *)Method_UnityEngine_GameObject_GetComponent_ScriptMessageGestureReciver___);
+                                                 (const MethodInfo_31510CC *)Method_UnityEngine_GameObject_GetComponent_ScriptMessageGestureReciver___);
   if ( !messageBackBase )
     goto LABEL_17;
   if ( !v6 )
     goto LABEL_17;
   monitor = messageBackBase[1].monitor;
   v6[1].monitor = monitor;
-  sub_1C36FFC((CGThumbnailListItem_o *)&v6[1].monitor, (int32_t)monitor, v7, v8);
+  sub_1C3E508((CGThumbnailListItem_o *)&v6[1].monitor, (int32_t)monitor, v7, v8);
   messageBackBase = (UnityEngine_Component_o *)this->fields.messageBackBase;
   if ( !messageBackBase
     || (messageBackBase = (UnityEngine_Component_o *)UnityEngine_Component__get_gameObject(messageBackBase, 0)) == 0
     || (messageBackBase = (UnityEngine_Component_o *)UnityEngine_GameObject__AddComponent_object_(
                                                        (UnityEngine_GameObject_o *)messageBackBase,
-                                                       (const MethodInfo_313F0F0 *)Method_UnityEngine_GameObject_AddComponent_UITouchPressMarge___),
+                                                       (const MethodInfo_3150FE4 *)Method_UnityEngine_GameObject_AddComponent_UITouchPressMarge___),
         (v10 = (UnityEngine_Component_o *)src->fields.messageBackBase) == 0)
     || (v11 = messageBackBase,
         (messageBackBase = (UnityEngine_Component_o *)UnityEngine_Component__get_gameObject(v10, 0)) == 0)
     || (messageBackBase = (UnityEngine_Component_o *)UnityEngine_GameObject__GetComponent_object_(
                                                        (UnityEngine_GameObject_o *)messageBackBase,
-                                                       (const MethodInfo_313F1D8 *)Method_UnityEngine_GameObject_GetComponent_UITouchPressMarge___)) == 0
+                                                       (const MethodInfo_31510CC *)Method_UnityEngine_GameObject_GetComponent_UITouchPressMarge___)) == 0
     || !v11 )
   {
 LABEL_17:
-    sub_1C372B4(messageBackBase);
+    sub_1C3E7C0(messageBackBase, src);
   }
   v14 = messageBackBase[1].monitor;
   v11[1].monitor = v14;
-  sub_1C36FFC((CGThumbnailListItem_o *)&v11[1].monitor, (int32_t)v14, v12, v13);
+  sub_1C3E508((CGThumbnailListItem_o *)&v11[1].monitor, (int32_t)v14, v12, v13);
 }
 
 
+// local variable allocation has failed, the output may be wrong!
 void ScriptMessageWindow__SetEnabledCollider(ScriptMessageWindow_o *this, bool isEnable, const MethodInfo *method)
 {
   struct UIWidget_o *messageBackBase; // x0
   Il2CppObject *Component_object; // x20
 
-  if ( (byte_4C44FC3 & 1) == 0 )
+  if ( (byte_4C58D8F & 1) == 0 )
   {
-    sub_1C37058(&Method_UnityEngine_Component_GetComponent_BoxCollider___);
-    sub_1C37058(&UnityEngine_Object_TypeInfo);
-    byte_4C44FC3 = 1;
+    sub_1C3E564(&Method_UnityEngine_Component_GetComponent_BoxCollider___);
+    sub_1C3E564(&UnityEngine_Object_TypeInfo);
+    byte_4C58D8F = 1;
   }
   messageBackBase = this->fields.messageBackBase;
   if ( !messageBackBase )
     goto LABEL_9;
   Component_object = UnityEngine_Component__GetComponent_object_(
                        (UnityEngine_Component_o *)messageBackBase,
-                       (const MethodInfo_30DE428 *)Method_UnityEngine_Component_GetComponent_BoxCollider___);
+                       (const MethodInfo_30F0240 *)Method_UnityEngine_Component_GetComponent_BoxCollider___);
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   messageBackBase = (struct UIWidget_o *)UnityEngine_Object__op_Equality((UnityEngine_Object_o *)Component_object, 0, 0);
@@ -132,7 +133,7 @@ void ScriptMessageWindow__SetEnabledCollider(ScriptMessageWindow_o *this, bool i
       return;
     }
 LABEL_9:
-    sub_1C372B4(messageBackBase);
+    sub_1C3E7C0(messageBackBase, isEnable);
   }
 }
 

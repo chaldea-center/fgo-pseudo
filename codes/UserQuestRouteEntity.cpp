@@ -1,13 +1,13 @@
 void UserQuestRouteEntity___ctor(UserQuestRouteEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_4C43F01 & 1) == 0 )
+  if ( (byte_4C57CB9 & 1) == 0 )
   {
-    sub_1C37058(&Method_DataEntityBase_string___ctor__);
-    byte_4C43F01 = 1;
+    sub_1C3E564(&Method_DataEntityBase_string___ctor__);
+    byte_4C57CB9 = 1;
   }
   DataEntityBase_object____ctor(
     (DataEntityBase_PKType__o *)this,
-    (const MethodInfo_339EC34 *)Method_DataEntityBase_string___ctor__);
+    (const MethodInfo_33B0AEC *)Method_DataEntityBase_string___ctor__);
 }
 
 
@@ -17,16 +17,16 @@ System_String_o *UserQuestRouteEntity__CreatePK(
         int32_t routeId,
         const MethodInfo *method)
 {
-  if ( (byte_4C43F00 & 1) == 0 )
+  if ( (byte_4C57CB8 & 1) == 0 )
   {
-    sub_1C37058(&Method_DataEntityBase_CreateMultiplePK_long__int__int___);
-    byte_4C43F00 = 1;
+    sub_1C3E564(&Method_DataEntityBase_CreateMultiplePK_long__int__int___);
+    byte_4C57CB8 = 1;
   }
   return DataEntityBase__CreateMultiplePK_long__int__int_(
            userId,
            questId,
            routeId,
-           (const MethodInfo_30E642C *)Method_DataEntityBase_CreateMultiplePK_long__int__int___);
+           (const MethodInfo_30F8244 *)Method_DataEntityBase_CreateMultiplePK_long__int__int___);
 }
 
 

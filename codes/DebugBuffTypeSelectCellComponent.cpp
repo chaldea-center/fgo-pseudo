@@ -13,25 +13,26 @@ void DebugBuffTypeSelectCellComponent__Set(
   struct System_Action_BuffList_TYPE__o **p_callback; // x19
   UILabel_o *v8; // x20
   System_String_o *v9; // x0
-  System_Enum_o v10; // [xsp+8h] [xbp-48h] BYREF
-  int v11; // [xsp+18h] [xbp-38h]
+  __int64 v10; // x1
+  System_Enum_o v11; // [xsp+8h] [xbp-48h] BYREF
+  int v12; // [xsp+18h] [xbp-38h]
 
-  if ( (byte_4C4456B & 1) == 0 )
+  if ( (byte_4C58336 & 1) == 0 )
   {
-    sub_1C37058(&BuffList_TYPE_TypeInfo);
-    byte_4C4456B = 1;
+    sub_1C3E564(&BuffList_TYPE_TypeInfo);
+    byte_4C58336 = 1;
   }
   this->fields.callback = callback;
   p_callback = &this->fields.callback;
   *((_DWORD *)p_callback - 2) = buffType;
-  sub_1C36FFC((CGThumbnailListItem_o *)p_callback, (int32_t)callback, (int32_t)callback, method);
+  sub_1C3E508((CGThumbnailListItem_o *)p_callback, (int32_t)callback, (int32_t)callback, method);
   v8 = (UILabel_o *)*(p_callback - 2);
-  v10.klass = (System_Enum_c *)BuffList_TYPE_TypeInfo;
-  v10.monitor = (void *)-1LL;
-  v11 = *((_DWORD *)p_callback - 2);
-  v9 = System_Enum__ToString(&v10, 0);
+  v11.klass = (System_Enum_c *)BuffList_TYPE_TypeInfo;
+  v11.monitor = (void *)-1LL;
+  v12 = *((_DWORD *)p_callback - 2);
+  v9 = System_Enum__ToString(&v11, 0);
   if ( !v8 )
-    sub_1C372B4(v9);
+    sub_1C3E7C0(v9, v10);
   UILabel__set_text(v8, v9, 0);
 }
 

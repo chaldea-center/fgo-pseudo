@@ -12,15 +12,15 @@ void CommandAssistListViewItem___ctor(
   CommandAssistListViewItem_o *v15; // x25
 
   v15 = this;
-  ListViewItem___ctor_43804668((ListViewItem_o *)this, index, 0);
+  ListViewItem___ctor_43860152((ListViewItem_o *)this, index, 0);
   v15->fields._EventId_k__BackingField = eventId;
   v15->fields._AssistId_k__BackingField = assistId;
   v15->fields._IconImageId_k__BackingField = iconImageId;
   v15->fields._Name_k__BackingField = name;
-  sub_1C36FFC(&v15->fields._Name_k__BackingField, name);
+  sub_1C3E508(&v15->fields._Name_k__BackingField, name);
   v15->fields._Detail_k__BackingField = detail;
   v15 = (CommandAssistListViewItem_o *)((char *)v15 + 144);
-  sub_1C36FFC(v15, detail);
+  sub_1C3E508(v15, detail);
   LOBYTE(v15->monitor) = isLast;
 }
 
@@ -76,7 +76,7 @@ void CommandAssistListViewItem__set_Detail(
         const MethodInfo *method)
 {
   this->fields._Detail_k__BackingField = value;
-  sub_1C36FFC(&this->fields._Detail_k__BackingField, value);
+  sub_1C3E508(&this->fields._Detail_k__BackingField, value);
 }
 
 
@@ -107,5 +107,5 @@ void CommandAssistListViewItem__set_Name(
         const MethodInfo *method)
 {
   this->fields._Name_k__BackingField = value;
-  sub_1C36FFC(&this->fields._Name_k__BackingField, value);
+  sub_1C3E508(&this->fields._Name_k__BackingField, value);
 }

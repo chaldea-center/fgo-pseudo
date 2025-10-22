@@ -5,6 +5,7 @@ void TweenHeight___ctor(TweenHeight_o *this, const MethodInfo *method)
 }
 
 
+// local variable allocation has failed, the output may be wrong!
 TweenHeight_o *TweenHeight__Begin(UIWidget_o *widget, float duration, int32_t height, const MethodInfo *method)
 {
   UIWidget_o *v6; // x20
@@ -13,19 +14,19 @@ TweenHeight_o *TweenHeight__Begin(UIWidget_o *widget, float duration, int32_t he
   UnityEngine_Behaviour_o *v9; // x21
 
   v6 = widget;
-  if ( (byte_4C477BB & 1) == 0 )
+  if ( (byte_4C5B5B2 & 1) == 0 )
   {
-    widget = (UIWidget_o *)sub_1C37058(&Method_UITweener_Begin_TweenHeight___);
-    byte_4C477BB = 1;
+    widget = (UIWidget_o *)sub_1C3E564(&Method_UITweener_Begin_TweenHeight___);
+    byte_4C5B5B2 = 1;
   }
   if ( !v6
     || (gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)v6, 0),
         (widget = (UIWidget_o *)UITweener__Begin_object_(
                                   gameObject,
                                   duration,
-                                  (const MethodInfo_31A3570 *)Method_UITweener_Begin_TweenHeight___)) == 0) )
+                                  (const MethodInfo_31B54C4 *)Method_UITweener_Begin_TweenHeight___)) == 0) )
   {
-    sub_1C372B4(widget);
+    sub_1C3E7C0(widget, *(_QWORD *)&height);
   }
   v9 = (UnityEngine_Behaviour_o *)widget;
   *(_DWORD *)&widget->fields.mRootSet = v6->fields.mHeight;
@@ -53,26 +54,27 @@ void TweenHeight__OnUpdate(TweenHeight_o *this, float factor, bool isFinished, c
   int32_t v15; // w1
   UITable_o **p_mTable; // x20
   UnityEngine_Object_o *mTable; // x21
+  __int64 v18; // x1
   UnityEngine_GameObject_o *gameObject; // x21
-  Il2CppObject *v19; // x0
-  int32_t v20; // w2
-  const MethodInfo *v21; // x3
-  UnityEngine_Object_o *v22; // x21
+  Il2CppObject *v20; // x0
+  int32_t v21; // w2
+  const MethodInfo *v22; // x3
+  UnityEngine_Object_o *v23; // x21
   double iptr; // [xsp+18h] [xbp-28h] BYREF
 
-  if ( (byte_4C477BA & 1) == 0 )
+  if ( (byte_4C5B5B1 & 1) == 0 )
   {
-    sub_1C37058(&Method_NGUITools_FindInParents_UITable___);
-    sub_1C37058(&NGUITools_TypeInfo);
-    sub_1C37058(&UnityEngine_Object_TypeInfo);
-    byte_4C477BA = 1;
+    sub_1C3E564(&Method_NGUITools_FindInParents_UITable___);
+    sub_1C3E564(&NGUITools_TypeInfo);
+    sub_1C3E564(&UnityEngine_Object_TypeInfo);
+    byte_4C5B5B1 = 1;
   }
   v6 = (float)(1.0 - factor) * (float)this->fields.from;
   v7 = (float)this->fields.to * factor;
-  if ( !byte_4C3E100 )
+  if ( !byte_4C51E80 )
   {
-    sub_1C37058(&System_Math_TypeInfo);
-    byte_4C3E100 = 1;
+    sub_1C3E564(&System_Math_TypeInfo);
+    byte_4C51E80 = 1;
   }
   v8 = v6 + v7;
   if ( !System_Math_TypeInfo->_2.cctor_finished )
@@ -119,15 +121,15 @@ LABEL_17:
     gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
     if ( !NGUITools_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(NGUITools_TypeInfo);
-    v19 = NGUITools__FindInParents_object_(
+    v20 = NGUITools__FindInParents_object_(
             gameObject,
-            (const MethodInfo_3171F1C *)Method_NGUITools_FindInParents_UITable___);
-    *p_mTable = (UITable_o *)v19;
-    sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.mTable, (int32_t)v19, v20, v21);
-    v22 = (UnityEngine_Object_o *)*p_mTable;
+            (const MethodInfo_3183E10 *)Method_NGUITools_FindInParents_UITable___);
+    *p_mTable = (UITable_o *)v20;
+    sub_1C3E508((CGThumbnailListItem_o *)&this->fields.mTable, (int32_t)v20, v21, v22);
+    v23 = (UnityEngine_Object_o *)*p_mTable;
     if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-    if ( UnityEngine_Object__op_Equality(v22, 0, 0) )
+    if ( UnityEngine_Object__op_Equality(v23, 0, 0) )
     {
       this->fields.updateTable = 0;
     }
@@ -135,7 +137,7 @@ LABEL_17:
     {
 LABEL_31:
       if ( !*p_mTable )
-        sub_1C372B4(0);
+        sub_1C3E7C0(0, v18);
       UITable__set_repositionNow(*p_mTable, 1, 0);
     }
   }
@@ -161,10 +163,11 @@ void TweenHeight__SetCurrentValueToStart(TweenHeight_o *this, const MethodInfo *
 void TweenHeight__SetEndToCurrentValue(TweenHeight_o *this, const MethodInfo *method)
 {
   UIWidget_o *cachedWidget; // x0
+  __int64 v4; // x1
 
   cachedWidget = TweenHeight__get_cachedWidget(this, method);
   if ( !cachedWidget )
-    sub_1C372B4(0);
+    sub_1C3E7C0(0, v4);
   this->fields.to = cachedWidget->fields.mHeight;
 }
 
@@ -172,10 +175,11 @@ void TweenHeight__SetEndToCurrentValue(TweenHeight_o *this, const MethodInfo *me
 void TweenHeight__SetStartToCurrentValue(TweenHeight_o *this, const MethodInfo *method)
 {
   UIWidget_o *cachedWidget; // x0
+  __int64 v4; // x1
 
   cachedWidget = TweenHeight__get_cachedWidget(this, method);
   if ( !cachedWidget )
-    sub_1C372B4(0);
+    sub_1C3E7C0(0, v4);
   this->fields.from = cachedWidget->fields.mHeight;
 }
 
@@ -187,11 +191,11 @@ UIWidget_o *TweenHeight__get_cachedWidget(TweenHeight_o *this, const MethodInfo 
   int32_t v5; // w2
   const MethodInfo *v6; // x3
 
-  if ( (byte_4C477B9 & 1) == 0 )
+  if ( (byte_4C5B5B0 & 1) == 0 )
   {
-    sub_1C37058(&Method_UnityEngine_Component_GetComponent_UIWidget___);
-    sub_1C37058(&UnityEngine_Object_TypeInfo);
-    byte_4C477B9 = 1;
+    sub_1C3E564(&Method_UnityEngine_Component_GetComponent_UIWidget___);
+    sub_1C3E564(&UnityEngine_Object_TypeInfo);
+    byte_4C5B5B0 = 1;
   }
   mWidget = (UnityEngine_Object_o *)this->fields.mWidget;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -200,9 +204,9 @@ UIWidget_o *TweenHeight__get_cachedWidget(TweenHeight_o *this, const MethodInfo 
   {
     Component_object = UnityEngine_Component__GetComponent_object_(
                          (UnityEngine_Component_o *)this,
-                         (const MethodInfo_30DE428 *)Method_UnityEngine_Component_GetComponent_UIWidget___);
+                         (const MethodInfo_30F0240 *)Method_UnityEngine_Component_GetComponent_UIWidget___);
     this->fields.mWidget = (struct UIWidget_o *)Component_object;
-    sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.mWidget, (int32_t)Component_object, v5, v6);
+    sub_1C3E508((CGThumbnailListItem_o *)&this->fields.mWidget, (int32_t)Component_object, v5, v6);
   }
   return this->fields.mWidget;
 }
@@ -211,10 +215,11 @@ UIWidget_o *TweenHeight__get_cachedWidget(TweenHeight_o *this, const MethodInfo 
 int32_t TweenHeight__get_height(TweenHeight_o *this, const MethodInfo *method)
 {
   UIWidget_o *cachedWidget; // x0
+  __int64 v3; // x1
 
   cachedWidget = TweenHeight__get_cachedWidget(this, method);
   if ( !cachedWidget )
-    sub_1C372B4(0);
+    sub_1C3E7C0(0, v3);
   return cachedWidget->fields.mHeight;
 }
 
@@ -222,10 +227,11 @@ int32_t TweenHeight__get_height(TweenHeight_o *this, const MethodInfo *method)
 int32_t TweenHeight__get_value(TweenHeight_o *this, const MethodInfo *method)
 {
   UIWidget_o *cachedWidget; // x0
+  __int64 v3; // x1
 
   cachedWidget = TweenHeight__get_cachedWidget(this, method);
   if ( !cachedWidget )
-    sub_1C372B4(0);
+    sub_1C3E7C0(0, v3);
   return cachedWidget->fields.mHeight;
 }
 
@@ -241,10 +247,11 @@ void TweenHeight__set_height(TweenHeight_o *this, int32_t value, const MethodInf
 void TweenHeight__set_value(TweenHeight_o *this, int32_t value, const MethodInfo *method)
 {
   UIWidget_o *cachedWidget; // x0
-  const MethodInfo *v5; // x2
+  __int64 v5; // x1
+  const MethodInfo *v6; // x2
 
   cachedWidget = TweenHeight__get_cachedWidget(this, *(const MethodInfo **)&value);
   if ( !cachedWidget )
-    sub_1C372B4(0);
-  UIWidget__set_height(cachedWidget, value, v5);
+    sub_1C3E7C0(0, v5);
+  UIWidget__set_height(cachedWidget, value, v6);
 }

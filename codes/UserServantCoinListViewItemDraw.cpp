@@ -11,33 +11,34 @@ void UserServantCoinListViewItemDraw__SetInput(
         const MethodInfo *method)
 {
   UnityEngine_Object_o *baseButton; // x20
-  struct UICommonButton_o *v6; // x0
+  __int64 v6; // x1
+  struct UICommonButton_o *v7; // x0
 
-  if ( (byte_4C3E680 & 1) == 0 )
+  if ( (byte_4C52406 & 1) == 0 )
   {
-    sub_1C37058(&UnityEngine_Object_TypeInfo);
-    byte_4C3E680 = 1;
+    sub_1C3E564(&UnityEngine_Object_TypeInfo);
+    byte_4C52406 = 1;
   }
   baseButton = (UnityEngine_Object_o *)this->fields.baseButton;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   if ( UnityEngine_Object__op_Inequality(baseButton, 0, 0) )
   {
-    v6 = this->fields.baseButton;
-    if ( !v6
-      || (((void (__fastcall *)(struct UICommonButton_o *, __int64, const MethodInfo *))v6->klass->vtable._5_set_isEnabled.methodPtr)(
-            v6,
+    v7 = this->fields.baseButton;
+    if ( !v7
+      || (((void (__fastcall *)(struct UICommonButton_o *, __int64, const MethodInfo *))v7->klass->vtable._5_set_isEnabled.methodPtr)(
+            v7,
             1,
-            v6->klass->vtable._5_set_isEnabled.method),
-          (v6 = this->fields.baseButton) == 0) )
+            v7->klass->vtable._5_set_isEnabled.method),
+          (v7 = this->fields.baseButton) == 0) )
     {
-      sub_1C372B4(v6);
+      sub_1C3E7C0(v7, v6);
     }
-    ((void (__fastcall *)(struct UICommonButton_o *, _QWORD, __int64, const MethodInfo *))v6->klass->vtable._14_SetState.methodPtr)(
-      v6,
+    ((void (__fastcall *)(struct UICommonButton_o *, _QWORD, __int64, const MethodInfo *))v7->klass->vtable._14_SetState.methodPtr)(
+      v7,
       0,
       1,
-      v6->klass->vtable._14_SetState.method);
+      v7->klass->vtable._14_SetState.method);
   }
 }
 
@@ -50,7 +51,7 @@ void UserServantCoinListViewItemDraw__SetItem(
 {
   struct SvtCoinEntity_o *svtCoinEntity; // x8
   ItemIconComponent_o *itemIcon; // x0
-  int32_t itemId; // w1
+  __int64 itemId; // x1
   __int64 v10; // x2
   __int64 v11; // x3
   __int64 v12; // x4
@@ -62,11 +63,11 @@ void UserServantCoinListViewItemDraw__SetItem(
   Il2CppObject *v18; // x0
   int v19; // [xsp+Ch] [xbp-24h] BYREF
 
-  if ( (byte_4C3E67F & 1) == 0 )
+  if ( (byte_4C52405 & 1) == 0 )
   {
-    sub_1C37058(&int_TypeInfo);
-    sub_1C37058(&StringLiteral_25052/*"{0:#,0}"*/);
-    byte_4C3E67F = 1;
+    sub_1C3E564(&int_TypeInfo);
+    sub_1C3E564(&StringLiteral_25072/*"{0:#,0}"*/);
+    byte_4C52405 = 1;
   }
   if ( item && mode )
   {
@@ -74,7 +75,7 @@ void UserServantCoinListViewItemDraw__SetItem(
     itemIcon = this->fields.itemIcon;
     if ( svtCoinEntity )
     {
-      itemId = svtCoinEntity->fields.itemId;
+      itemId = (unsigned int)svtCoinEntity->fields.itemId;
       if ( !itemIcon )
         goto LABEL_15;
     }
@@ -95,10 +96,10 @@ void UserServantCoinListViewItemDraw__SetItem(
       LODWORD(userSvtCoinEntity) = userSvtCoinEntity->fields.num;
     v19 = (int)userSvtCoinEntity;
     v18 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v19, v10, v11, v12, v13, v14, v15);
-    itemIcon = (ItemIconComponent_o *)System_String__Format((System_String_o *)StringLiteral_25052/*"{0:#,0}"*/, v18, 0);
+    itemIcon = (ItemIconComponent_o *)System_String__Format((System_String_o *)StringLiteral_25072/*"{0:#,0}"*/, v18, 0);
     if ( !possessionNum )
 LABEL_15:
-      sub_1C372B4(itemIcon);
+      sub_1C3E7C0(itemIcon, itemId);
     UILabel__set_text(possessionNum, (System_String_o *)itemIcon, 0);
   }
 }

@@ -4,6 +4,7 @@ void UITouchPressMarge___ctor(UITouchPressMarge_o *this, const MethodInfo *metho
 }
 
 
+// local variable allocation has failed, the output may be wrong!
 void UITouchPressMarge__OnHover(UITouchPressMarge_o *this, bool isSelect, const MethodInfo *method)
 {
   UITouchPress_o *margeComponent; // x0
@@ -23,11 +24,12 @@ void UITouchPressMarge__OnHover(UITouchPressMarge_o *this, bool isSelect, const 
       return;
     }
 LABEL_9:
-    sub_1C372B4(margeComponent);
+    sub_1C3E7C0(margeComponent, isSelect);
   }
 }
 
 
+// local variable allocation has failed, the output may be wrong!
 void UITouchPressMarge__OnPress(UITouchPressMarge_o *this, bool isPressed, const MethodInfo *method)
 {
   UITouchPress_o *margeComponent; // x0
@@ -46,6 +48,6 @@ void UITouchPressMarge__OnPress(UITouchPressMarge_o *this, bool isPressed, const
       return;
     }
 LABEL_7:
-    sub_1C372B4(margeComponent);
+    sub_1C3E7C0(margeComponent, isPressed);
   }
 }

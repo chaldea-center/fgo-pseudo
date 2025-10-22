@@ -1,9 +1,9 @@
 void EventHeelPortraitListViewObject___ctor(EventHeelPortraitListViewObject_o *this, const MethodInfo *method)
 {
-  if ( (byte_4C3D53E & 1) == 0 )
+  if ( (byte_4C512BE & 1) == 0 )
   {
-    sub_1C37058(&ListViewObject_TypeInfo);
-    byte_4C3D53E = 1;
+    sub_1C3E564(&ListViewObject_TypeInfo);
+    byte_4C512BE = 1;
   }
   if ( !ListViewObject_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(ListViewObject_TypeInfo);
@@ -13,23 +13,24 @@ void EventHeelPortraitListViewObject___ctor(EventHeelPortraitListViewObject_o *t
 
 void EventHeelPortraitListViewObject__Awake(EventHeelPortraitListViewObject_o *this, const MethodInfo *method)
 {
+  __int64 v3; // x1
   UnityEngine_GameObject_o *dispObject; // x0
   Il2CppObject *Component_object; // x0
 
-  if ( (byte_4C3D53A & 1) == 0 )
+  if ( (byte_4C512BA & 1) == 0 )
   {
-    sub_1C37058(&Method_UnityEngine_GameObject_GetComponent_EventHeelPortraitListViewItemDraw___);
-    byte_4C3D53A = 1;
+    sub_1C3E564(&Method_UnityEngine_GameObject_GetComponent_EventHeelPortraitListViewItemDraw___);
+    byte_4C512BA = 1;
   }
   ListViewObject__Awake((ListViewObject_o *)this, 0);
   dispObject = this->fields.dispObject;
   if ( !dispObject )
-    sub_1C372B4(0);
+    sub_1C3E7C0(0, v3);
   Component_object = UnityEngine_GameObject__GetComponent_object_(
                        dispObject,
-                       (const MethodInfo_313F1D8 *)Method_UnityEngine_GameObject_GetComponent_EventHeelPortraitListViewItemDraw___);
+                       (const MethodInfo_31510CC *)Method_UnityEngine_GameObject_GetComponent_EventHeelPortraitListViewItemDraw___);
   this->fields.itemDraw = (struct EventHeelPortraitListViewItemDraw_o *)Component_object;
-  sub_1C36FFC(&this->fields.itemDraw, Component_object);
+  sub_1C3E508(&this->fields.itemDraw, Component_object);
 }
 
 
@@ -39,12 +40,13 @@ void EventHeelPortraitListViewObject__ClearNewImgSprite(
 {
   UnityEngine_Object_o *itemDraw; // x20
   ShiningIconComponent_o *newImgSprite; // x0
-  struct EventHeelPortraitListViewItemDraw_o *v5; // x8
+  __int64 v5; // x1
+  struct EventHeelPortraitListViewItemDraw_o *v6; // x8
 
-  if ( (byte_4C3D53D & 1) == 0 )
+  if ( (byte_4C512BD & 1) == 0 )
   {
-    sub_1C37058(&UnityEngine_Object_TypeInfo);
-    byte_4C3D53D = 1;
+    sub_1C3E564(&UnityEngine_Object_TypeInfo);
+    byte_4C512BD = 1;
   }
   itemDraw = (UnityEngine_Object_o *)this->fields.itemDraw;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -52,9 +54,9 @@ void EventHeelPortraitListViewObject__ClearNewImgSprite(
   newImgSprite = (ShiningIconComponent_o *)UnityEngine_Object__op_Equality(itemDraw, 0, 0);
   if ( ((unsigned __int8)newImgSprite & 1) == 0 )
   {
-    v5 = this->fields.itemDraw;
-    if ( !v5 || (newImgSprite = v5->fields.newImgSprite) == 0 )
-      sub_1C372B4(newImgSprite);
+    v6 = this->fields.itemDraw;
+    if ( !v6 || (newImgSprite = v6->fields.newImgSprite) == 0 )
+      sub_1C3E7C0(newImgSprite, v5);
     ShiningIconComponent__Clear(newImgSprite, 0);
   }
 }
@@ -67,10 +69,10 @@ EventHeelPortraitListViewItem_o *EventHeelPortraitListViewObject__GetItem(
   struct ListViewItem_o *linkItem; // x8
   __int64 naturalAligment; // x11
 
-  if ( (byte_4C3D53C & 1) == 0 )
+  if ( (byte_4C512BC & 1) == 0 )
   {
-    sub_1C37058(&EventHeelPortraitListViewItem_TypeInfo);
-    byte_4C3D53C = 1;
+    sub_1C3E564(&EventHeelPortraitListViewItem_TypeInfo);
+    byte_4C512BC = 1;
   }
   linkItem = this->fields.linkItem;
   if ( !linkItem )
@@ -90,29 +92,30 @@ void EventHeelPortraitListViewObject__SetItem(
         ListViewItemSeed_o *seed,
         const MethodInfo *method)
 {
-  const MethodInfo *v7; // x2
+  __int64 v7; // x1
+  const MethodInfo *v8; // x2
   EventHeelPortraitListViewItemDraw_o *itemDraw; // x0
   __int64 naturalAligment; // x9
 
-  if ( (byte_4C3D53B & 1) == 0 )
+  if ( (byte_4C512BB & 1) == 0 )
   {
-    sub_1C37058(&EventHeelPortraitListViewItem_TypeInfo);
-    byte_4C3D53B = 1;
+    sub_1C3E564(&EventHeelPortraitListViewItem_TypeInfo);
+    byte_4C512BB = 1;
   }
-  ListViewObject__SetItem_43831492((ListViewObject_o *)this, item, seed, 0);
+  ListViewObject__SetItem_43886976((ListViewObject_o *)this, item, seed, 0);
   itemDraw = this->fields.itemDraw;
   if ( !itemDraw )
 LABEL_9:
-    sub_1C372B4(itemDraw);
+    sub_1C3E7C0(itemDraw, v7);
   if ( item )
   {
     naturalAligment = EventHeelPortraitListViewItem_TypeInfo->_2.naturalAligment;
     if ( item->klass->_2.naturalAligment < (unsigned int)naturalAligment
       || (EventHeelPortraitListViewItem_c *)item->klass->_2.typeHierarchy[naturalAligment - 1] != EventHeelPortraitListViewItem_TypeInfo )
     {
-      itemDraw = (EventHeelPortraitListViewItemDraw_o *)sub_1C37574(item);
+      itemDraw = (EventHeelPortraitListViewItemDraw_o *)sub_1C3EA80(item);
       goto LABEL_9;
     }
   }
-  EventHeelPortraitListViewItemDraw__SetItem(itemDraw, (EventHeelPortraitListViewItem_o *)item, v7);
+  EventHeelPortraitListViewItemDraw__SetItem(itemDraw, (EventHeelPortraitListViewItem_o *)item, v8);
 }

@@ -13,10 +13,10 @@ bool ControlOtherBgmPriorityAtOverStageBgm__IsMatchCond(
 {
   System_Int32_array *individuality; // x20
 
-  if ( (byte_4C45A7D & 1) == 0 )
+  if ( (byte_4C5985A & 1) == 0 )
   {
-    sub_1C37058(&Individuality_TypeInfo);
-    byte_4C45A7D = 1;
+    sub_1C3E564(&Individuality_TypeInfo);
+    byte_4C5985A = 1;
   }
   individuality = this->fields.individuality;
   if ( !Individuality_TypeInfo->_2.cctor_finished )
@@ -33,6 +33,6 @@ void ControlOtherBgmPriorityAtOverStageBgm__UpdatePriority(
   struct BattleFieldEnvironmentData_CommonData_o *comData; // x8
 
   if ( !bgmData || (comData = bgmData->fields.comData) == 0 )
-    sub_1C372B4(this);
+    sub_1C3E7C0(this, bgmData);
   comData->fields.priority = this->fields.priority;
 }

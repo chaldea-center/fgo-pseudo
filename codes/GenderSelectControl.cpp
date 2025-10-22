@@ -16,13 +16,14 @@ int32_t GenderSelectControl__getIdx(GenderSelectControl_o *this, const MethodInf
 }
 
 
+// local variable allocation has failed, the output may be wrong!
 void GenderSelectControl__setEnableGenderImg(GenderSelectControl_o *this, bool isShow, const MethodInfo *method)
 {
   UnityEngine_Component_o *genderImg; // x0
 
   genderImg = (UnityEngine_Component_o *)this->fields.genderImg;
   if ( !genderImg || (genderImg = (UnityEngine_Component_o *)UnityEngine_Component__get_gameObject(genderImg, 0)) == 0 )
-    sub_1C372B4(genderImg);
+    sub_1C3E7C0(genderImg, isShow);
   UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)genderImg, isShow, 0);
 }
 

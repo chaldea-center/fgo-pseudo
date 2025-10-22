@@ -52,7 +52,7 @@ void QuestBoardRewardIcon_RewardIconArgs___ctor(
   BYTE5(v20[-1].fields._ThumbnailSpritePath_k__BackingField) = isDisplayServantLimitOpened;
   BYTE6(v20[-1].fields._ThumbnailSpritePath_k__BackingField) = isDisplayGot;
   HIBYTE(v20[-1].fields._ThumbnailSpritePath_k__BackingField) = isDisplayShardReward;
-  sub_1C36FFC(v20, (int32_t)shardRewardImageName, v25, v26);
+  sub_1C3E508(v20, (int32_t)shardRewardImageName, v25, v26);
 }
 
 
@@ -175,19 +175,20 @@ void QuestBoardRewardIcon_RewardIconInfo___ctor(
   int32_t v7; // w2
   const MethodInfo *v8; // x3
   __int64 v9; // x0
+  __int64 v10; // x1
 
   System_Object___ctor((Il2CppObject *)this, 0);
   this->fields.args = args;
-  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.args, (int32_t)args, v7, v8);
+  sub_1C3E508((CGThumbnailListItem_o *)&this->fields.args, (int32_t)args, v7, v8);
   if ( !entity )
-    sub_1C372B4(v9);
+    sub_1C3E7C0(v9, v10);
   this->fields._PriorIconId_k__BackingField = entity->fields.prioredIconId;
   *(_QWORD *)&this->fields._GiftType_k__BackingField = *(_QWORD *)&entity->fields.type;
   this->fields._Num_k__BackingField = entity->fields.num;
 }
 
 
-void QuestBoardRewardIcon_RewardIconInfo___ctor_38467660(
+void QuestBoardRewardIcon_RewardIconInfo___ctor_38512468(
         QuestBoardRewardIcon_RewardIconInfo_o *this,
         QuestBoardRewardIcon_RewardIconArgs_o *args,
         int32_t num,
@@ -196,13 +197,14 @@ void QuestBoardRewardIcon_RewardIconInfo___ctor_38467660(
   int32_t v7; // w2
   const MethodInfo *v8; // x3
   __int64 v9; // x0
+  __int64 v10; // x1
   int32_t GiftIconId_k__BackingField; // w8
 
   System_Object___ctor((Il2CppObject *)this, 0);
   this->fields.args = args;
-  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.args, (int32_t)args, v7, v8);
+  sub_1C3E508((CGThumbnailListItem_o *)&this->fields.args, (int32_t)args, v7, v8);
   if ( !args )
-    sub_1C372B4(v9);
+    sub_1C3E7C0(v9, v10);
   GiftIconId_k__BackingField = args->fields._GiftIconId_k__BackingField;
   this->fields._Num_k__BackingField = num;
   this->fields._PriorIconId_k__BackingField = GiftIconId_k__BackingField;
@@ -217,7 +219,7 @@ int32_t QuestBoardRewardIcon_RewardIconInfo__GetTitleType(
 
   args = this->fields.args;
   if ( !args )
-    sub_1C372B4(this);
+    sub_1C3E7C0(this, method);
   if ( args->fields._HasPhaseRewardExceptLastPhaseOnThisQuest_k__BackingField )
   {
     if ( args->fields._IsLastReward_k__BackingField )
@@ -253,7 +255,7 @@ UnityEngine_Color_o QuestBoardRewardIcon_RewardIconInfo__get_Color(
 
   args = this->fields.args;
   if ( !args )
-    sub_1C372B4(this);
+    sub_1C3E7C0(this, method);
   r = args->fields._Color_k__BackingField.fields.r;
   g = args->fields._Color_k__BackingField.fields.g;
   b = args->fields._Color_k__BackingField.fields.b;
@@ -282,7 +284,7 @@ bool QuestBoardRewardIcon_RewardIconInfo__get_HasPhaseRewardExceptLastPhaseOnThi
 
   args = this->fields.args;
   if ( !args )
-    sub_1C372B4(this);
+    sub_1C3E7C0(this, method);
   return args->fields._HasPhaseRewardExceptLastPhaseOnThisQuest_k__BackingField;
 }
 
@@ -295,7 +297,7 @@ bool QuestBoardRewardIcon_RewardIconInfo__get_IsDisplayFirstOnlyReward(
 
   args = this->fields.args;
   if ( !args )
-    sub_1C372B4(this);
+    sub_1C3E7C0(this, method);
   return args->fields._IsDisplayFirstOnlyReward_k__BackingField;
 }
 
@@ -308,7 +310,7 @@ bool QuestBoardRewardIcon_RewardIconInfo__get_IsDisplayGot(
 
   args = this->fields.args;
   if ( !args )
-    sub_1C372B4(this);
+    sub_1C3E7C0(this, method);
   return args->fields._IsDisplayGot_k__BackingField
       && !args->fields._IsDisplayNotGive_k__BackingField
       && !args->fields._IsDisplayServantLimitOpened_k__BackingField;
@@ -323,7 +325,7 @@ bool QuestBoardRewardIcon_RewardIconInfo__get_IsDisplayNotGive(
 
   args = this->fields.args;
   if ( !args )
-    sub_1C372B4(this);
+    sub_1C3E7C0(this, method);
   return args->fields._IsDisplayNotGive_k__BackingField;
 }
 
@@ -336,7 +338,7 @@ bool QuestBoardRewardIcon_RewardIconInfo__get_IsDisplayServantLimitOpened(
 
   args = this->fields.args;
   if ( !args )
-    sub_1C372B4(this);
+    sub_1C3E7C0(this, method);
   return args->fields._IsDisplayServantLimitOpened_k__BackingField;
 }
 
@@ -349,7 +351,7 @@ bool QuestBoardRewardIcon_RewardIconInfo__get_IsDisplaySharedReward(
 
   args = this->fields.args;
   if ( !args )
-    sub_1C372B4(this);
+    sub_1C3E7C0(this, method);
   return args->fields._IsDisplayShardReward_k__BackingField;
 }
 
@@ -362,7 +364,7 @@ bool QuestBoardRewardIcon_RewardIconInfo__get_IsLastReward(
 
   args = this->fields.args;
   if ( !args )
-    sub_1C372B4(this);
+    sub_1C3E7C0(this, method);
   return args->fields._IsLastReward_k__BackingField;
 }
 
@@ -391,7 +393,7 @@ int32_t QuestBoardRewardIcon_RewardIconInfo__get_Phase(
 
   args = this->fields.args;
   if ( !args )
-    sub_1C372B4(this);
+    sub_1C3E7C0(this, method);
   return args->fields._Phase_k__BackingField;
 }
 
@@ -412,7 +414,7 @@ System_String_o *QuestBoardRewardIcon_RewardIconInfo__get_SharedRewardImageName(
 
   args = this->fields.args;
   if ( !args )
-    sub_1C372B4(this);
+    sub_1C3E7C0(this, method);
   return args->fields._ShardRewardImageName_k__BackingField;
 }
 
@@ -435,41 +437,41 @@ System_Collections_Generic_IEnumerable_RewardIconInfo__o *QuestBoardRewardIcon_R
   __int64 v14; // x0
 
   v3 = args;
-  if ( (byte_4C40E09 & 1) == 0 )
+  if ( (byte_4C54BA6 & 1) == 0 )
   {
-    sub_1C37058(&Method_System_Linq_Enumerable_Empty_RewardIconInfo___);
-    sub_1C37058(&QuestBoardRewardIcon_RewardIconInfo___TypeInfo);
-    args = (QuestBoardRewardIcon_RewardIconArgs_o *)sub_1C37058(&QuestBoardRewardIcon_RewardIconInfo_TypeInfo);
-    byte_4C40E09 = 1;
+    sub_1C3E564(&Method_System_Linq_Enumerable_Empty_RewardIconInfo___);
+    sub_1C3E564(&QuestBoardRewardIcon_RewardIconInfo___TypeInfo);
+    args = (QuestBoardRewardIcon_RewardIconArgs_o *)sub_1C3E564(&QuestBoardRewardIcon_RewardIconInfo_TypeInfo);
+    byte_4C54BA6 = 1;
   }
   if ( !v3 )
     goto LABEL_22;
   if ( v3->fields._GiftIconId_k__BackingField > 0 )
   {
-    v4 = (System_Collections_Generic_IEnumerable_RewardIconInfo__o *)sub_1C37100(
+    v4 = (System_Collections_Generic_IEnumerable_RewardIconInfo__o *)sub_1C3E60C(
                                                                        QuestBoardRewardIcon_RewardIconInfo___TypeInfo,
                                                                        1);
-    v5 = (QuestBoardRewardIcon_RewardIconInfo_o *)sub_1C372A4(QuestBoardRewardIcon_RewardIconInfo_TypeInfo);
-    QuestBoardRewardIcon_RewardIconInfo___ctor_38467660(v5, v3, -1, v6);
+    v5 = (QuestBoardRewardIcon_RewardIconInfo_o *)sub_1C3E7B0(QuestBoardRewardIcon_RewardIconInfo_TypeInfo);
+    QuestBoardRewardIcon_RewardIconInfo___ctor_38512468(v5, v3, -1, v6);
     if ( v4 )
     {
       if ( v5 )
       {
-        args = (QuestBoardRewardIcon_RewardIconArgs_o *)sub_1C37194(v5, v4->klass->_1.element_class);
+        args = (QuestBoardRewardIcon_RewardIconArgs_o *)sub_1C3E6A0(v5, v4->klass->_1.element_class);
         if ( !args )
         {
-          v14 = sub_1C372D8();
-          sub_1C37180(v14, 0);
+          v14 = sub_1C3E7E4();
+          sub_1C3E68C(v14, 0);
         }
       }
       if ( !LODWORD(v4[1].monitor) )
-        sub_1C372BC(args);
+        sub_1C3E7C8(args, method);
       v4[2].klass = (System_Collections_Generic_IEnumerable_RewardIconInfo__c *)v5;
-      sub_1C36FFC((CGThumbnailListItem_o *)&v4[2], (int32_t)v5, v7, v8);
+      sub_1C3E508((CGThumbnailListItem_o *)&v4[2], (int32_t)v5, v7, v8);
       return v4;
     }
 LABEL_22:
-    sub_1C372B4(args);
+    sub_1C3E7C0(args, method);
   }
   if ( v3->fields._GiftId_k__BackingField <= 0 )
   {
@@ -477,17 +479,17 @@ LABEL_22:
     v11 = *((_QWORD *)Method_System_Linq_Enumerable_Empty_RewardIconInfo___ + 7);
     if ( !v11 )
     {
-      sub_1C877C8(Method_System_Linq_Enumerable_Empty_RewardIconInfo___);
+      sub_1C8ECD4(Method_System_Linq_Enumerable_Empty_RewardIconInfo___);
       v11 = v10[7];
     }
     v12 = *(_QWORD *)(v11 + 16);
     if ( (*(_BYTE *)(v12 + 309) & 1) == 0 )
-      v12 = sub_1C8776C(inited);
+      v12 = sub_1C8EC78(inited);
     if ( !*(_DWORD *)(v12 + 224) )
       inited = j_il2cpp_runtime_class_init_0(v12);
     v13 = *(_QWORD *)(v10[7] + 16LL);
     if ( (*(_BYTE *)(v13 + 309) & 1) == 0 )
-      v13 = sub_1C8776C(inited);
+      v13 = sub_1C8EC78(inited);
     return **(System_Collections_Generic_IEnumerable_RewardIconInfo__o ***)(v13 + 184);
   }
   return QuestBoardRewardIcon_RewardIconUtil__EnumerateRewardIconInfoByGiftId(v3, method);
@@ -500,141 +502,142 @@ System_Collections_Generic_IEnumerable_RewardIconInfo__o *QuestBoardRewardIcon_R
 {
   __int64 v3; // x19
   System_Int32_array *Instance; // x0
-  int32_t v5; // w2
-  const MethodInfo *v6; // x3
-  __int64 v7; // x8
-  int32_t v8; // w20
+  __int64 v5; // x1
+  int32_t v6; // w2
+  const MethodInfo *v7; // x3
+  __int64 v8; // x8
+  int32_t v9; // w20
   GiftEntity_array *GiftListById; // x0
-  QuestBoardRewardIcon_RewardIconUtil___c_c *v10; // x8
-  System_Collections_Generic_IEnumerable_TSource__o *v11; // x21
+  QuestBoardRewardIcon_RewardIconUtil___c_c *v11; // x8
+  System_Collections_Generic_IEnumerable_TSource__o *v12; // x21
   System_Func_object__bool__o *_9__1_0; // x22
-  Il2CppObject *v13; // x23
+  Il2CppObject *v14; // x23
   struct QuestBoardRewardIcon_RewardIconUtil___c_StaticFields *static_fields; // x0
-  int32_t v15; // w2
-  const MethodInfo *v16; // x3
-  System_Collections_Generic_IEnumerable_TSource__o *v17; // x21
-  __int64 v18; // x20
-  int32_t v19; // w2
-  const MethodInfo *v20; // x3
-  System_Func_object__bool__o *v21; // x22
-  System_Func_object__object__o *v22; // x20
+  int32_t v16; // w2
+  const MethodInfo *v17; // x3
+  System_Collections_Generic_IEnumerable_TSource__o *v18; // x21
+  __int64 v19; // x20
+  int32_t v20; // w2
+  const MethodInfo *v21; // x3
+  System_Func_object__bool__o *v22; // x22
+  System_Func_object__object__o *v23; // x20
   Il2CppObject *entity; // [xsp+8h] [xbp-48h] BYREF
 
-  if ( (byte_4C40E0A & 1) == 0 )
+  if ( (byte_4C54BA7 & 1) == 0 )
   {
-    sub_1C37058(&Method_DataManager_GetMasterData_GiftMaster___);
-    sub_1C37058(&Method_DataManager_GetMaster_GiftDetailMaster___);
-    sub_1C37058(&DataManager_TypeInfo);
-    sub_1C37058(&Method_DataMasterBase_GiftDetailMaster__GiftDetailEntity__int__TryGetEntity__);
-    sub_1C37058(&Method_System_Linq_Enumerable_Select_GiftEntity__RewardIconInfo___);
-    sub_1C37058(&Method_System_Linq_Enumerable_Where_GiftEntity___);
-    sub_1C37058(&System_Func_GiftEntity__bool__TypeInfo);
-    sub_1C37058(&System_Func_GiftEntity__RewardIconInfo__TypeInfo);
-    sub_1C37058(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-    sub_1C37058(&Method_QuestBoardRewardIcon_RewardIconUtil___c__EnumerateRewardIconInfoByGiftId_b__1_0__);
-    sub_1C37058(&Method_QuestBoardRewardIcon_RewardIconUtil___c__DisplayClass1_0__EnumerateRewardIconInfoByGiftId_b__1__);
-    sub_1C37058(&QuestBoardRewardIcon_RewardIconUtil___c__DisplayClass1_0_TypeInfo);
-    sub_1C37058(&Method_QuestBoardRewardIcon_RewardIconUtil___c__DisplayClass1_1__EnumerateRewardIconInfoByGiftId_b__2__);
-    sub_1C37058(&QuestBoardRewardIcon_RewardIconUtil___c__DisplayClass1_1_TypeInfo);
-    sub_1C37058(&QuestBoardRewardIcon_RewardIconUtil___c_TypeInfo);
-    byte_4C40E0A = 1;
+    sub_1C3E564(&Method_DataManager_GetMasterData_GiftMaster___);
+    sub_1C3E564(&Method_DataManager_GetMaster_GiftDetailMaster___);
+    sub_1C3E564(&DataManager_TypeInfo);
+    sub_1C3E564(&Method_DataMasterBase_GiftDetailMaster__GiftDetailEntity__int__TryGetEntity__);
+    sub_1C3E564(&Method_System_Linq_Enumerable_Select_GiftEntity__RewardIconInfo___);
+    sub_1C3E564(&Method_System_Linq_Enumerable_Where_GiftEntity___);
+    sub_1C3E564(&System_Func_GiftEntity__bool__TypeInfo);
+    sub_1C3E564(&System_Func_GiftEntity__RewardIconInfo__TypeInfo);
+    sub_1C3E564(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    sub_1C3E564(&Method_QuestBoardRewardIcon_RewardIconUtil___c__EnumerateRewardIconInfoByGiftId_b__1_0__);
+    sub_1C3E564(&Method_QuestBoardRewardIcon_RewardIconUtil___c__DisplayClass1_0__EnumerateRewardIconInfoByGiftId_b__1__);
+    sub_1C3E564(&QuestBoardRewardIcon_RewardIconUtil___c__DisplayClass1_0_TypeInfo);
+    sub_1C3E564(&Method_QuestBoardRewardIcon_RewardIconUtil___c__DisplayClass1_1__EnumerateRewardIconInfoByGiftId_b__2__);
+    sub_1C3E564(&QuestBoardRewardIcon_RewardIconUtil___c__DisplayClass1_1_TypeInfo);
+    sub_1C3E564(&QuestBoardRewardIcon_RewardIconUtil___c_TypeInfo);
+    byte_4C54BA7 = 1;
   }
   entity = 0;
-  v3 = sub_1C372A4(QuestBoardRewardIcon_RewardIconUtil___c__DisplayClass1_0_TypeInfo);
+  v3 = sub_1C3E7B0(QuestBoardRewardIcon_RewardIconUtil___c__DisplayClass1_0_TypeInfo);
   System_Object___ctor((Il2CppObject *)v3, 0);
   if ( !v3 )
     goto LABEL_22;
   *(_QWORD *)(v3 + 16) = args;
-  sub_1C36FFC((CGThumbnailListItem_o *)(v3 + 16), (int32_t)args, v5, v6);
-  v7 = *(_QWORD *)(v3 + 16);
-  if ( !v7 )
+  sub_1C3E508((CGThumbnailListItem_o *)(v3 + 16), (int32_t)args, v6, v7);
+  v8 = *(_QWORD *)(v3 + 16);
+  if ( !v8 )
     goto LABEL_22;
-  v8 = *(_DWORD *)(v7 + 20);
-  Instance = (System_Int32_array *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39ED16C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  v9 = *(_DWORD *)(v8 + 20);
+  Instance = (System_Int32_array *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39FF5A8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance )
     goto LABEL_22;
   Instance = (System_Int32_array *)DataManager__GetMasterData_object_(
                                      (DataManager_o *)Instance,
-                                     (const MethodInfo_30E7C58 *)Method_DataManager_GetMasterData_GiftMaster___);
+                                     (const MethodInfo_30F9A70 *)Method_DataManager_GetMasterData_GiftMaster___);
   if ( !Instance )
     goto LABEL_22;
-  GiftListById = GiftMaster__GetGiftListById((GiftMaster_o *)Instance, v8, 0);
-  v10 = QuestBoardRewardIcon_RewardIconUtil___c_TypeInfo;
-  v11 = (System_Collections_Generic_IEnumerable_TSource__o *)GiftListById;
+  GiftListById = GiftMaster__GetGiftListById((GiftMaster_o *)Instance, v9, 0);
+  v11 = QuestBoardRewardIcon_RewardIconUtil___c_TypeInfo;
+  v12 = (System_Collections_Generic_IEnumerable_TSource__o *)GiftListById;
   if ( !QuestBoardRewardIcon_RewardIconUtil___c_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(QuestBoardRewardIcon_RewardIconUtil___c_TypeInfo);
-    v10 = QuestBoardRewardIcon_RewardIconUtil___c_TypeInfo;
+    v11 = QuestBoardRewardIcon_RewardIconUtil___c_TypeInfo;
   }
-  _9__1_0 = (System_Func_object__bool__o *)v10->static_fields->__9__1_0;
+  _9__1_0 = (System_Func_object__bool__o *)v11->static_fields->__9__1_0;
   if ( !_9__1_0 )
   {
-    if ( !v10->_2.cctor_finished )
+    if ( !v11->_2.cctor_finished )
     {
-      j_il2cpp_runtime_class_init_0(v10);
-      v10 = QuestBoardRewardIcon_RewardIconUtil___c_TypeInfo;
+      j_il2cpp_runtime_class_init_0(v11);
+      v11 = QuestBoardRewardIcon_RewardIconUtil___c_TypeInfo;
     }
-    v13 = (Il2CppObject *)v10->static_fields->__9;
-    _9__1_0 = (System_Func_object__bool__o *)sub_1C372A4(System_Func_GiftEntity__bool__TypeInfo);
+    v14 = (Il2CppObject *)v11->static_fields->__9;
+    _9__1_0 = (System_Func_object__bool__o *)sub_1C3E7B0(System_Func_GiftEntity__bool__TypeInfo);
     System_Func_object__bool____ctor(
       _9__1_0,
-      v13,
+      v14,
       Method_QuestBoardRewardIcon_RewardIconUtil___c__EnumerateRewardIconInfoByGiftId_b__1_0__,
       0);
     static_fields = QuestBoardRewardIcon_RewardIconUtil___c_TypeInfo->static_fields;
     static_fields->__9__1_0 = (struct System_Func_GiftEntity__bool__o *)_9__1_0;
-    sub_1C36FFC((CGThumbnailListItem_o *)&static_fields->__9__1_0, (int32_t)_9__1_0, v15, v16);
+    sub_1C3E508((CGThumbnailListItem_o *)&static_fields->__9__1_0, (int32_t)_9__1_0, v16, v17);
   }
-  v17 = System_Linq_Enumerable__Where_object_(
-          v11,
+  v18 = System_Linq_Enumerable__Where_object_(
+          v12,
           (System_Func_TSource__bool__o *)_9__1_0,
-          (const MethodInfo_312E410 *)Method_System_Linq_Enumerable_Where_GiftEntity___);
+          (const MethodInfo_3140304 *)Method_System_Linq_Enumerable_Where_GiftEntity___);
   if ( !DataManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-  Instance = (System_Int32_array *)DataManager__GetMaster_object_((const MethodInfo_30E7C04 *)Method_DataManager_GetMaster_GiftDetailMaster___);
+  Instance = (System_Int32_array *)DataManager__GetMaster_object_((const MethodInfo_30F9A1C *)Method_DataManager_GetMaster_GiftDetailMaster___);
   if ( !Instance )
     goto LABEL_22;
   if ( !DataMasterBase_object__object__int___TryGetEntity(
           (DataMasterBase_TMaster__TEntity__PKType__o *)Instance,
           &entity,
-          v8,
-          (const MethodInfo_33A10EC *)Method_DataMasterBase_GiftDetailMaster__GiftDetailEntity__int__TryGetEntity__) )
+          v9,
+          (const MethodInfo_33B2FA4 *)Method_DataMasterBase_GiftDetailMaster__GiftDetailEntity__int__TryGetEntity__) )
     goto LABEL_21;
-  v18 = sub_1C372A4(QuestBoardRewardIcon_RewardIconUtil___c__DisplayClass1_1_TypeInfo);
-  System_Object___ctor((Il2CppObject *)v18, 0);
+  v19 = sub_1C3E7B0(QuestBoardRewardIcon_RewardIconUtil___c__DisplayClass1_1_TypeInfo);
+  System_Object___ctor((Il2CppObject *)v19, 0);
   Instance = (System_Int32_array *)entity;
   if ( !entity
-    || (Instance = GiftDetailEntity__GetIgnoreQuestBoardRewardIconItemIds((GiftDetailEntity_o *)entity, 0), !v18) )
+    || (Instance = GiftDetailEntity__GetIgnoreQuestBoardRewardIconItemIds((GiftDetailEntity_o *)entity, 0), !v19) )
   {
 LABEL_22:
-    sub_1C372B4(Instance);
+    sub_1C3E7C0(Instance, v5);
   }
-  *(_QWORD *)(v18 + 16) = Instance;
-  sub_1C36FFC((CGThumbnailListItem_o *)(v18 + 16), (int32_t)Instance, v19, v20);
-  if ( !BasicHelper__IsNullOrEmpty(*(System_Collections_ICollection_o **)(v18 + 16), 0) )
+  *(_QWORD *)(v19 + 16) = Instance;
+  sub_1C3E508((CGThumbnailListItem_o *)(v19 + 16), (int32_t)Instance, v20, v21);
+  if ( !BasicHelper__IsNullOrEmpty(*(System_Collections_ICollection_o **)(v19 + 16), 0) )
   {
-    v21 = (System_Func_object__bool__o *)sub_1C372A4(System_Func_GiftEntity__bool__TypeInfo);
+    v22 = (System_Func_object__bool__o *)sub_1C3E7B0(System_Func_GiftEntity__bool__TypeInfo);
     System_Func_object__bool____ctor(
-      v21,
-      (Il2CppObject *)v18,
+      v22,
+      (Il2CppObject *)v19,
       Method_QuestBoardRewardIcon_RewardIconUtil___c__DisplayClass1_1__EnumerateRewardIconInfoByGiftId_b__2__,
       0);
-    v17 = System_Linq_Enumerable__Where_object_(
-            v17,
-            (System_Func_TSource__bool__o *)v21,
-            (const MethodInfo_312E410 *)Method_System_Linq_Enumerable_Where_GiftEntity___);
+    v18 = System_Linq_Enumerable__Where_object_(
+            v18,
+            (System_Func_TSource__bool__o *)v22,
+            (const MethodInfo_3140304 *)Method_System_Linq_Enumerable_Where_GiftEntity___);
   }
 LABEL_21:
-  v22 = (System_Func_object__object__o *)sub_1C372A4(System_Func_GiftEntity__RewardIconInfo__TypeInfo);
+  v23 = (System_Func_object__object__o *)sub_1C3E7B0(System_Func_GiftEntity__RewardIconInfo__TypeInfo);
   System_Func_object__object____ctor(
-    v22,
+    v23,
     (Il2CppObject *)v3,
     Method_QuestBoardRewardIcon_RewardIconUtil___c__DisplayClass1_0__EnumerateRewardIconInfoByGiftId_b__1__,
     0);
   return (System_Collections_Generic_IEnumerable_RewardIconInfo__o *)System_Linq_Enumerable__Select_object__object_(
-                                                                       v17,
-                                                                       (System_Func_TSource__TResult__o *)v22,
-                                                                       (const MethodInfo_311E324 *)Method_System_Linq_Enumerable_Select_GiftEntity__RewardIconInfo___);
+                                                                       v18,
+                                                                       (System_Func_TSource__TResult__o *)v23,
+                                                                       (const MethodInfo_3130218 *)Method_System_Linq_Enumerable_Select_GiftEntity__RewardIconInfo___);
 }
 
 
@@ -643,33 +646,34 @@ System_String_o *QuestBoardRewardIcon_RewardIconUtil__GetSharedRewardImageName(
         const MethodInfo *method)
 {
   Il2CppObject *Master_object; // x0
+  __int64 v4; // x1
   Il2CppObject *entity; // [xsp+8h] [xbp-28h] BYREF
 
-  if ( (byte_4C40E10 & 1) == 0 )
+  if ( (byte_4C54BAD & 1) == 0 )
   {
-    sub_1C37058(&Method_DataManager_GetMaster_QuestExtensionMaster___);
-    sub_1C37058(&DataManager_TypeInfo);
-    sub_1C37058(&Method_DataMasterBase_QuestExtensionMaster__QuestExtensionEntity__int__TryGetEntity__);
-    sub_1C37058(&string_TypeInfo);
-    byte_4C40E10 = 1;
+    sub_1C3E564(&Method_DataManager_GetMaster_QuestExtensionMaster___);
+    sub_1C3E564(&DataManager_TypeInfo);
+    sub_1C3E564(&Method_DataMasterBase_QuestExtensionMaster__QuestExtensionEntity__int__TryGetEntity__);
+    sub_1C3E564(&string_TypeInfo);
+    byte_4C54BAD = 1;
   }
   entity = 0;
   if ( !DataManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-  Master_object = DataManager__GetMaster_object_((const MethodInfo_30E7C04 *)Method_DataManager_GetMaster_QuestExtensionMaster___);
+  Master_object = DataManager__GetMaster_object_((const MethodInfo_30F9A1C *)Method_DataManager_GetMaster_QuestExtensionMaster___);
   if ( !questInfo || !Master_object )
     goto LABEL_12;
   if ( DataMasterBase_object__object__int___TryGetEntity(
          (DataMasterBase_TMaster__TEntity__PKType__o *)Master_object,
          &entity,
          questInfo->fields.questId,
-         (const MethodInfo_33A10EC *)Method_DataMasterBase_QuestExtensionMaster__QuestExtensionEntity__int__TryGetEntity__) )
+         (const MethodInfo_33B2FA4 *)Method_DataMasterBase_QuestExtensionMaster__QuestExtensionEntity__int__TryGetEntity__) )
   {
     Master_object = entity;
     if ( entity )
       return QuestExtensionEntity__GetGiftSharedImageName((QuestExtensionEntity_o *)entity, 0);
 LABEL_12:
-    sub_1C372B4(Master_object);
+    sub_1C3E7C0(Master_object, v4);
   }
   return string_TypeInfo->static_fields->Empty;
 }
@@ -685,24 +689,24 @@ bool QuestBoardRewardIcon_RewardIconUtil__IsDisplayGot(
   bool v6; // w8
 
   v4 = questInfo;
-  if ( (byte_4C40E0E & 1) == 0 )
+  if ( (byte_4C54BAB & 1) == 0 )
   {
-    questInfo = (MapControl_QuestInfo_o *)sub_1C37058(&CondType_TypeInfo);
-    byte_4C40E0E = 1;
+    questInfo = (MapControl_QuestInfo_o *)sub_1C3E564(&CondType_TypeInfo);
+    byte_4C54BAB = 1;
   }
   if ( !v4 )
     goto LABEL_10;
   questId = v4->fields.questId;
   if ( !CondType_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(CondType_TypeInfo);
-  questInfo = (MapControl_QuestInfo_o *)CondType__IsQuestClear_40324848(questId, -1, 0, 0);
+  questInfo = (MapControl_QuestInfo_o *)CondType__IsQuestClear_40371188(questId, -1, 0, 0);
   v6 = 0;
   if ( ((unsigned __int8)questInfo & 1) != 0 )
   {
     if ( userQuestEnt )
       return !UserQuestEntity__HasStatus(userQuestEnt, 4, 0);
 LABEL_10:
-    sub_1C372B4(questInfo);
+    sub_1C3E7C0(questInfo, userQuestEnt);
   }
   return v6;
 }
@@ -717,11 +721,11 @@ bool QuestBoardRewardIcon_RewardIconUtil__IsDisplayGotBySharedReward(
   int32_t QuestPhaseStart1Clamped; // w20
 
   v2 = questInfo;
-  if ( (byte_4C40E0F & 1) == 0 )
+  if ( (byte_4C54BAC & 1) == 0 )
   {
-    sub_1C37058(&Method_DataManager_GetMaster_QuestBehaviorMaster___);
-    questInfo = (MapControl_QuestInfo_o *)sub_1C37058(&DataManager_TypeInfo);
-    byte_4C40E0F = 1;
+    sub_1C3E564(&Method_DataManager_GetMaster_QuestBehaviorMaster___);
+    questInfo = (MapControl_QuestInfo_o *)sub_1C3E564(&DataManager_TypeInfo);
+    byte_4C54BAC = 1;
   }
   if ( !v2 )
     goto LABEL_8;
@@ -729,10 +733,10 @@ bool QuestBoardRewardIcon_RewardIconUtil__IsDisplayGotBySharedReward(
   QuestPhaseStart1Clamped = MapControl_QuestInfo__GetQuestPhaseStart1Clamped(v2, 0);
   if ( !DataManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-  questInfo = (MapControl_QuestInfo_o *)DataManager__GetMaster_object_((const MethodInfo_30E7C04 *)Method_DataManager_GetMaster_QuestBehaviorMaster___);
+  questInfo = (MapControl_QuestInfo_o *)DataManager__GetMaster_object_((const MethodInfo_30F9A1C *)Method_DataManager_GetMaster_QuestBehaviorMaster___);
   if ( !questInfo )
 LABEL_8:
-    sub_1C372B4(questInfo);
+    sub_1C3E7C0(questInfo, method);
   return QuestBehaviorMaster__IsOpenQuestBehaviorCond(
            (QuestBehaviorMaster_o *)questInfo,
            questId,
@@ -749,11 +753,11 @@ bool QuestBoardRewardIcon_RewardIconUtil__IsDisplayNotGive(MapControl_QuestInfo_
   int32_t QuestPhaseStart1Clamped; // w20
 
   v2 = questInfo;
-  if ( (byte_4C40E0C & 1) == 0 )
+  if ( (byte_4C54BA9 & 1) == 0 )
   {
-    sub_1C37058(&Method_DataManager_GetMaster_QuestBehaviorMaster___);
-    questInfo = (MapControl_QuestInfo_o *)sub_1C37058(&DataManager_TypeInfo);
-    byte_4C40E0C = 1;
+    sub_1C3E564(&Method_DataManager_GetMaster_QuestBehaviorMaster___);
+    questInfo = (MapControl_QuestInfo_o *)sub_1C3E564(&DataManager_TypeInfo);
+    byte_4C54BA9 = 1;
   }
   if ( !v2 )
     goto LABEL_8;
@@ -761,10 +765,10 @@ bool QuestBoardRewardIcon_RewardIconUtil__IsDisplayNotGive(MapControl_QuestInfo_
   QuestPhaseStart1Clamped = MapControl_QuestInfo__GetQuestPhaseStart1Clamped(v2, 0);
   if ( !DataManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-  questInfo = (MapControl_QuestInfo_o *)DataManager__GetMaster_object_((const MethodInfo_30E7C04 *)Method_DataManager_GetMaster_QuestBehaviorMaster___);
+  questInfo = (MapControl_QuestInfo_o *)DataManager__GetMaster_object_((const MethodInfo_30F9A1C *)Method_DataManager_GetMaster_QuestBehaviorMaster___);
   if ( !questInfo )
 LABEL_8:
-    sub_1C372B4(questInfo);
+    sub_1C3E7C0(questInfo, method);
   return QuestBehaviorMaster__IsOpenQuestBehaviorCond(
            (QuestBehaviorMaster_o *)questInfo,
            questId,
@@ -784,13 +788,13 @@ bool QuestBoardRewardIcon_RewardIconUtil__IsDisplayServantLimitOpened(
   Il2CppObject *Master_object; // x21
 
   v2 = questInfo;
-  if ( (byte_4C40E0B & 1) == 0 )
+  if ( (byte_4C54BA8 & 1) == 0 )
   {
-    sub_1C37058(&CondType_TypeInfo);
-    sub_1C37058(&Method_DataManager_GetMaster_QuestBehaviorMaster___);
-    sub_1C37058(&Method_DataManager_GetMaster_ServantLimitImageMaster___);
-    questInfo = (MapControl_QuestInfo_o *)sub_1C37058(&DataManager_TypeInfo);
-    byte_4C40E0B = 1;
+    sub_1C3E564(&CondType_TypeInfo);
+    sub_1C3E564(&Method_DataManager_GetMaster_QuestBehaviorMaster___);
+    sub_1C3E564(&Method_DataManager_GetMaster_ServantLimitImageMaster___);
+    questInfo = (MapControl_QuestInfo_o *)sub_1C3E564(&DataManager_TypeInfo);
+    byte_4C54BA8 = 1;
   }
   if ( !v2 )
     goto LABEL_16;
@@ -798,10 +802,10 @@ bool QuestBoardRewardIcon_RewardIconUtil__IsDisplayServantLimitOpened(
   QuestPhaseStart1Clamped = MapControl_QuestInfo__GetQuestPhaseStart1Clamped(v2, 0);
   if ( !DataManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-  Master_object = DataManager__GetMaster_object_((const MethodInfo_30E7C04 *)Method_DataManager_GetMaster_ServantLimitImageMaster___);
+  Master_object = DataManager__GetMaster_object_((const MethodInfo_30F9A1C *)Method_DataManager_GetMaster_ServantLimitImageMaster___);
   if ( !CondType_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(CondType_TypeInfo);
-  questInfo = (MapControl_QuestInfo_o *)CondType__IsQuestClear_40324848(questId, -1, 0, 0);
+  questInfo = (MapControl_QuestInfo_o *)CondType__IsQuestClear_40371188(questId, -1, 0, 0);
   if ( ((unsigned __int8)questInfo & 1) != 0 )
   {
     if ( !Master_object )
@@ -811,10 +815,10 @@ bool QuestBoardRewardIcon_RewardIconUtil__IsDisplayServantLimitOpened(
   }
   if ( !DataManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-  questInfo = (MapControl_QuestInfo_o *)DataManager__GetMaster_object_((const MethodInfo_30E7C04 *)Method_DataManager_GetMaster_QuestBehaviorMaster___);
+  questInfo = (MapControl_QuestInfo_o *)DataManager__GetMaster_object_((const MethodInfo_30F9A1C *)Method_DataManager_GetMaster_QuestBehaviorMaster___);
   if ( !questInfo )
 LABEL_16:
-    sub_1C372B4(questInfo);
+    sub_1C3E7C0(questInfo, method);
   return QuestBehaviorMaster__IsOpenQuestBehaviorCond(
            (QuestBehaviorMaster_o *)questInfo,
            questId,
@@ -833,11 +837,11 @@ bool QuestBoardRewardIcon_RewardIconUtil__IsDisplaySharedReward(
   int32_t QuestPhaseStart1Clamped; // w20
 
   v2 = questInfo;
-  if ( (byte_4C40E0D & 1) == 0 )
+  if ( (byte_4C54BAA & 1) == 0 )
   {
-    sub_1C37058(&Method_DataManager_GetMaster_QuestBehaviorMaster___);
-    questInfo = (MapControl_QuestInfo_o *)sub_1C37058(&DataManager_TypeInfo);
-    byte_4C40E0D = 1;
+    sub_1C3E564(&Method_DataManager_GetMaster_QuestBehaviorMaster___);
+    questInfo = (MapControl_QuestInfo_o *)sub_1C3E564(&DataManager_TypeInfo);
+    byte_4C54BAA = 1;
   }
   if ( !v2 )
     goto LABEL_8;
@@ -845,10 +849,10 @@ bool QuestBoardRewardIcon_RewardIconUtil__IsDisplaySharedReward(
   QuestPhaseStart1Clamped = MapControl_QuestInfo__GetQuestPhaseStart1Clamped(v2, 0);
   if ( !DataManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-  questInfo = (MapControl_QuestInfo_o *)DataManager__GetMaster_object_((const MethodInfo_30E7C04 *)Method_DataManager_GetMaster_QuestBehaviorMaster___);
+  questInfo = (MapControl_QuestInfo_o *)DataManager__GetMaster_object_((const MethodInfo_30F9A1C *)Method_DataManager_GetMaster_QuestBehaviorMaster___);
   if ( !questInfo )
 LABEL_8:
-    sub_1C372B4(questInfo);
+    sub_1C3E7C0(questInfo, method);
   return QuestBehaviorMaster__IsSharedReward((QuestBehaviorMaster_o *)questInfo, questId, QuestPhaseStart1Clamped, 0);
 }
 
@@ -859,15 +863,15 @@ void QuestBoardRewardIcon_RewardIconUtil___c___cctor(const MethodInfo *method)
   int32_t v2; // w2
   const MethodInfo *v3; // x3
 
-  if ( (byte_4C40E11 & 1) == 0 )
+  if ( (byte_4C54BAE & 1) == 0 )
   {
-    sub_1C37058(&QuestBoardRewardIcon_RewardIconUtil___c_TypeInfo);
-    byte_4C40E11 = 1;
+    sub_1C3E564(&QuestBoardRewardIcon_RewardIconUtil___c_TypeInfo);
+    byte_4C54BAE = 1;
   }
-  v1 = (Il2CppObject *)sub_1C372A4(QuestBoardRewardIcon_RewardIconUtil___c_TypeInfo);
+  v1 = (Il2CppObject *)sub_1C3E7B0(QuestBoardRewardIcon_RewardIconUtil___c_TypeInfo);
   System_Object___ctor(v1, 0);
   QuestBoardRewardIcon_RewardIconUtil___c_TypeInfo->static_fields->__9 = (struct QuestBoardRewardIcon_RewardIconUtil___c_o *)v1;
-  sub_1C36FFC(
+  sub_1C3E508(
     (CGThumbnailListItem_o *)QuestBoardRewardIcon_RewardIconUtil___c_TypeInfo->static_fields,
     (int32_t)v1,
     v2,
@@ -889,7 +893,7 @@ bool QuestBoardRewardIcon_RewardIconUtil___c___EnumerateRewardIconInfoByGiftId_b
         const MethodInfo *method)
 {
   if ( !ent )
-    sub_1C372B4(this);
+    sub_1C3E7C0(this, 0);
   return ent->fields.type != 15;
 }
 
@@ -911,13 +915,13 @@ QuestBoardRewardIcon_RewardIconInfo_o *QuestBoardRewardIcon_RewardIconUtil___c__
   QuestBoardRewardIcon_RewardIconInfo_o *v6; // x21
   const MethodInfo *v7; // x3
 
-  if ( (byte_4C40E12 & 1) == 0 )
+  if ( (byte_4C54BAF & 1) == 0 )
   {
-    sub_1C37058(&QuestBoardRewardIcon_RewardIconInfo_TypeInfo);
-    byte_4C40E12 = 1;
+    sub_1C3E564(&QuestBoardRewardIcon_RewardIconInfo_TypeInfo);
+    byte_4C54BAF = 1;
   }
   args = this->fields.args;
-  v6 = (QuestBoardRewardIcon_RewardIconInfo_o *)sub_1C372A4(QuestBoardRewardIcon_RewardIconInfo_TypeInfo);
+  v6 = (QuestBoardRewardIcon_RewardIconInfo_o *)sub_1C3E7B0(QuestBoardRewardIcon_RewardIconInfo_TypeInfo);
   QuestBoardRewardIcon_RewardIconInfo___ctor(v6, x, args, v7);
   return v6;
 }
@@ -938,36 +942,37 @@ bool QuestBoardRewardIcon_RewardIconUtil___c__DisplayClass1_1___EnumerateRewardI
 {
   __int64 v5; // x21
   __int64 v6; // x0
-  int32_t v7; // w2
-  const MethodInfo *v8; // x3
+  __int64 v7; // x1
+  int32_t v8; // w2
+  const MethodInfo *v9; // x3
   System_Int32_array *itemIds; // x19
-  System_Func_int__bool__o *v10; // x20
+  System_Func_int__bool__o *v11; // x20
 
-  if ( (byte_4C40E13 & 1) == 0 )
+  if ( (byte_4C54BB0 & 1) == 0 )
   {
-    sub_1C37058(&Method_BasicHelper_Any_int____78107944);
-    sub_1C37058(&System_Func_int__bool__TypeInfo);
-    sub_1C37058(&Method_QuestBoardRewardIcon_RewardIconUtil___c__DisplayClass1_2__EnumerateRewardIconInfoByGiftId_b__3__);
-    sub_1C37058(&QuestBoardRewardIcon_RewardIconUtil___c__DisplayClass1_2_TypeInfo);
-    byte_4C40E13 = 1;
+    sub_1C3E564(&Method_BasicHelper_Any_int____78187928);
+    sub_1C3E564(&System_Func_int__bool__TypeInfo);
+    sub_1C3E564(&Method_QuestBoardRewardIcon_RewardIconUtil___c__DisplayClass1_2__EnumerateRewardIconInfoByGiftId_b__3__);
+    sub_1C3E564(&QuestBoardRewardIcon_RewardIconUtil___c__DisplayClass1_2_TypeInfo);
+    byte_4C54BB0 = 1;
   }
-  v5 = sub_1C372A4(QuestBoardRewardIcon_RewardIconUtil___c__DisplayClass1_2_TypeInfo);
+  v5 = sub_1C3E7B0(QuestBoardRewardIcon_RewardIconUtil___c__DisplayClass1_2_TypeInfo);
   System_Object___ctor((Il2CppObject *)v5, 0);
   if ( !v5 )
-    sub_1C372B4(v6);
+    sub_1C3E7C0(v6, v7);
   *(_QWORD *)(v5 + 16) = info;
-  sub_1C36FFC((CGThumbnailListItem_o *)(v5 + 16), (int32_t)info, v7, v8);
+  sub_1C3E508((CGThumbnailListItem_o *)(v5 + 16), (int32_t)info, v8, v9);
   itemIds = this->fields.itemIds;
-  v10 = (System_Func_int__bool__o *)sub_1C372A4(System_Func_int__bool__TypeInfo);
+  v11 = (System_Func_int__bool__o *)sub_1C3E7B0(System_Func_int__bool__TypeInfo);
   System_Func_int__bool____ctor(
-    v10,
+    v11,
     (Il2CppObject *)v5,
     Method_QuestBoardRewardIcon_RewardIconUtil___c__DisplayClass1_2__EnumerateRewardIconInfoByGiftId_b__3__,
     0);
-  return !BasicHelper__Any_int__51187064(
+  return !BasicHelper__Any_int__51260304(
             itemIds,
-            (System_Func_T__bool__o *)v10,
-            (const MethodInfo_30D0D78 *)Method_BasicHelper_Any_int____78107944);
+            (System_Func_T__bool__o *)v11,
+            (const MethodInfo_30E2B90 *)Method_BasicHelper_Any_int____78187928);
 }
 
 
@@ -979,6 +984,7 @@ void QuestBoardRewardIcon_RewardIconUtil___c__DisplayClass1_2___ctor(
 }
 
 
+// local variable allocation has failed, the output may be wrong!
 bool QuestBoardRewardIcon_RewardIconUtil___c__DisplayClass1_2___EnumerateRewardIconInfoByGiftId_b__3(
         QuestBoardRewardIcon_RewardIconUtil___c__DisplayClass1_2_o *this,
         int32_t x,
@@ -988,6 +994,6 @@ bool QuestBoardRewardIcon_RewardIconUtil___c__DisplayClass1_2___EnumerateRewardI
 
   info = this->fields.info;
   if ( !info )
-    sub_1C372B4(this);
+    sub_1C3E7C0(this, *(_QWORD *)&x);
   return info->fields.objectId == x;
 }

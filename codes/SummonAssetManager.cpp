@@ -1,13 +1,13 @@
 void SummonAssetManager___ctor(SummonAssetManager_o *this, const MethodInfo *method)
 {
-  if ( (byte_4C42228 & 1) == 0 )
+  if ( (byte_4C55FCA & 1) == 0 )
   {
-    sub_1C37058(&Method_SingletonMonoBehaviour_SummonAssetManager___ctor__);
-    byte_4C42228 = 1;
+    sub_1C3E564(&Method_SingletonMonoBehaviour_SummonAssetManager___ctor__);
+    byte_4C55FCA = 1;
   }
   SingletonMonoBehaviour_object____ctor(
     (SingletonMonoBehaviour_T__o *)this,
-    (const MethodInfo_39ED654 *)Method_SingletonMonoBehaviour_SummonAssetManager___ctor__);
+    (const MethodInfo_39FFA90 *)Method_SingletonMonoBehaviour_SummonAssetManager___ctor__);
 }
 
 
@@ -19,79 +19,80 @@ ServantRewardAction_o *SummonAssetManager__InstantiateSvtGetPrefab(
 {
   ServantRewardAction_o *result; // x0
   System_String_o **v8; // x8
-  Il2CppObject *Object_object__51154888; // x19
+  Il2CppObject *Object_object__51228128; // x19
   UnityEngine_GameObject_o *transform; // x0
-  UnityEngine_GameObject_o *v11; // x19
-  UnityEngine_Transform_o *v12; // x20
+  __int64 v11; // x1
+  UnityEngine_GameObject_o *v12; // x19
   UnityEngine_Transform_o *v13; // x20
   UnityEngine_Transform_o *v14; // x20
+  UnityEngine_Transform_o *v15; // x20
 
-  if ( (byte_4C42226 & 1) == 0 )
+  if ( (byte_4C55FC8 & 1) == 0 )
   {
-    sub_1C37058(&Method_AssetData_GetObject_GameObject____78105168);
-    sub_1C37058(&Method_GameObjectExtensions_SafeGetComponent_ServantRewardAction___);
-    sub_1C37058(&Method_UnityEngine_Object_Instantiate_GameObject___);
-    sub_1C37058(&UnityEngine_Object_TypeInfo);
-    sub_1C37058(&StringLiteral_12751/*"Servant_get_prefab"*/);
-    sub_1C37058(&StringLiteral_12752/*"Servant_get_prefab_for_battle"*/);
-    byte_4C42226 = 1;
+    sub_1C3E564(&Method_AssetData_GetObject_GameObject____78185152);
+    sub_1C3E564(&Method_GameObjectExtensions_SafeGetComponent_ServantRewardAction___);
+    sub_1C3E564(&Method_UnityEngine_Object_Instantiate_GameObject___);
+    sub_1C3E564(&UnityEngine_Object_TypeInfo);
+    sub_1C3E564(&StringLiteral_12759/*"Servant_get_prefab"*/);
+    sub_1C3E564(&StringLiteral_12760/*"Servant_get_prefab_for_battle"*/);
+    byte_4C55FC8 = 1;
   }
   result = (ServantRewardAction_o *)this->fields.summonAssets;
   if ( result )
   {
-    v8 = (System_String_o **)&StringLiteral_12752/*"Servant_get_prefab_for_battle"*/;
+    v8 = (System_String_o **)&StringLiteral_12760/*"Servant_get_prefab_for_battle"*/;
     if ( !isForBattle )
-      v8 = (System_String_o **)&StringLiteral_12751/*"Servant_get_prefab"*/;
-    Object_object__51154888 = AssetData__GetObject_object__51154888(
+      v8 = (System_String_o **)&StringLiteral_12759/*"Servant_get_prefab"*/;
+    Object_object__51228128 = AssetData__GetObject_object__51228128(
                                 (AssetData_o *)result,
                                 *v8,
-                                (const MethodInfo_30C8FC8 *)Method_AssetData_GetObject_GameObject____78105168);
+                                (const MethodInfo_30DADE0 *)Method_AssetData_GetObject_GameObject____78185152);
     if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
     transform = (UnityEngine_GameObject_o *)UnityEngine_Object__Instantiate_object_(
-                                              Object_object__51154888,
-                                              (const MethodInfo_3173FC0 *)Method_UnityEngine_Object_Instantiate_GameObject___);
+                                              Object_object__51228128,
+                                              (const MethodInfo_3185EB4 *)Method_UnityEngine_Object_Instantiate_GameObject___);
     if ( !transform )
       goto LABEL_21;
-    v11 = transform;
+    v12 = transform;
     transform = (UnityEngine_GameObject_o *)UnityEngine_GameObject__get_transform(transform, 0);
     if ( !transform )
       goto LABEL_21;
     UnityEngine_Transform__set_parent((UnityEngine_Transform_o *)transform, parent, 0);
-    transform = (UnityEngine_GameObject_o *)UnityEngine_GameObject__get_transform(v11, 0);
-    v12 = (UnityEngine_Transform_o *)transform;
-    if ( !byte_4C3C921 )
-    {
-      transform = (UnityEngine_GameObject_o *)sub_1C37058(&UnityEngine_Vector3_TypeInfo);
-      byte_4C3C921 = 1;
-    }
-    if ( !v12 )
-      goto LABEL_21;
-    UnityEngine_Transform__set_localPosition(v12, UnityEngine_Vector3_TypeInfo->static_fields->zeroVector, 0);
-    transform = (UnityEngine_GameObject_o *)UnityEngine_GameObject__get_transform(v11, 0);
+    transform = (UnityEngine_GameObject_o *)UnityEngine_GameObject__get_transform(v12, 0);
     v13 = (UnityEngine_Transform_o *)transform;
-    if ( !byte_4C3C927 )
+    if ( !byte_4C506A1 )
     {
-      transform = (UnityEngine_GameObject_o *)sub_1C37058(&UnityEngine_Quaternion_TypeInfo);
-      byte_4C3C927 = 1;
+      transform = (UnityEngine_GameObject_o *)sub_1C3E564(&UnityEngine_Vector3_TypeInfo);
+      byte_4C506A1 = 1;
     }
     if ( !v13 )
       goto LABEL_21;
-    UnityEngine_Transform__set_localRotation(v13, UnityEngine_Quaternion_TypeInfo->static_fields->identityQuaternion, 0);
-    transform = (UnityEngine_GameObject_o *)UnityEngine_GameObject__get_transform(v11, 0);
+    UnityEngine_Transform__set_localPosition(v13, UnityEngine_Vector3_TypeInfo->static_fields->zeroVector, 0);
+    transform = (UnityEngine_GameObject_o *)UnityEngine_GameObject__get_transform(v12, 0);
     v14 = (UnityEngine_Transform_o *)transform;
-    if ( !byte_4C3C926 )
+    if ( !byte_4C506A7 )
     {
-      transform = (UnityEngine_GameObject_o *)sub_1C37058(&UnityEngine_Vector3_TypeInfo);
-      byte_4C3C926 = 1;
+      transform = (UnityEngine_GameObject_o *)sub_1C3E564(&UnityEngine_Quaternion_TypeInfo);
+      byte_4C506A7 = 1;
     }
     if ( !v14 )
+      goto LABEL_21;
+    UnityEngine_Transform__set_localRotation(v14, UnityEngine_Quaternion_TypeInfo->static_fields->identityQuaternion, 0);
+    transform = (UnityEngine_GameObject_o *)UnityEngine_GameObject__get_transform(v12, 0);
+    v15 = (UnityEngine_Transform_o *)transform;
+    if ( !byte_4C506A6 )
+    {
+      transform = (UnityEngine_GameObject_o *)sub_1C3E564(&UnityEngine_Vector3_TypeInfo);
+      byte_4C506A6 = 1;
+    }
+    if ( !v15 )
 LABEL_21:
-      sub_1C372B4(transform);
-    UnityEngine_Transform__set_localScale(v14, UnityEngine_Vector3_TypeInfo->static_fields->oneVector, 0);
+      sub_1C3E7C0(transform, v11);
+    UnityEngine_Transform__set_localScale(v15, UnityEngine_Vector3_TypeInfo->static_fields->oneVector, 0);
     return (ServantRewardAction_o *)GameObjectExtensions__SafeGetComponent_object_(
-                                      v11,
-                                      (const MethodInfo_3140CC0 *)Method_GameObjectExtensions_SafeGetComponent_ServantRewardAction___);
+                                      v12,
+                                      (const MethodInfo_3152BB4 *)Method_GameObjectExtensions_SafeGetComponent_ServantRewardAction___);
   }
   return result;
 }
@@ -104,30 +105,31 @@ void SummonAssetManager__LoadSummonAssets(
 {
   __int64 v5; // x21
   __int64 v6; // x0
-  int32_t v7; // w2
-  const MethodInfo *v8; // x3
-  int32_t v9; // w2
-  const MethodInfo *v10; // x3
+  __int64 v7; // x1
+  int32_t v8; // w2
+  const MethodInfo *v9; // x3
+  int32_t v10; // w2
+  const MethodInfo *v11; // x3
   AssetData_o *summonAssets; // x0
-  AssetLoader_LoadEndDataHandler_o *v12; // x19
+  AssetLoader_LoadEndDataHandler_o *v13; // x19
 
-  if ( (byte_4C42225 & 1) == 0 )
+  if ( (byte_4C55FC7 & 1) == 0 )
   {
-    sub_1C37058(&AssetManager_TypeInfo);
-    sub_1C37058(&AssetLoader_LoadEndDataHandler_TypeInfo);
-    sub_1C37058(&Method_SummonAssetManager___c__DisplayClass1_0__LoadSummonAssets_b__0__);
-    sub_1C37058(&SummonAssetManager___c__DisplayClass1_0_TypeInfo);
-    sub_1C37058(&StringLiteral_5893/*"Effect/Summon"*/);
-    byte_4C42225 = 1;
+    sub_1C3E564(&AssetManager_TypeInfo);
+    sub_1C3E564(&AssetLoader_LoadEndDataHandler_TypeInfo);
+    sub_1C3E564(&Method_SummonAssetManager___c__DisplayClass1_0__LoadSummonAssets_b__0__);
+    sub_1C3E564(&SummonAssetManager___c__DisplayClass1_0_TypeInfo);
+    sub_1C3E564(&StringLiteral_5893/*"Effect/Summon"*/);
+    byte_4C55FC7 = 1;
   }
-  v5 = sub_1C372A4(SummonAssetManager___c__DisplayClass1_0_TypeInfo);
+  v5 = sub_1C3E7B0(SummonAssetManager___c__DisplayClass1_0_TypeInfo);
   System_Object___ctor((Il2CppObject *)v5, 0);
   if ( !v5 )
-    sub_1C372B4(v6);
+    sub_1C3E7C0(v6, v7);
   *(_QWORD *)(v5 + 16) = this;
-  sub_1C36FFC((CGThumbnailListItem_o *)(v5 + 16), (int32_t)this, v7, v8);
+  sub_1C3E508((CGThumbnailListItem_o *)(v5 + 16), (int32_t)this, v8, v9);
   *(_QWORD *)(v5 + 24) = onLoad;
-  sub_1C36FFC((CGThumbnailListItem_o *)(v5 + 24), (int32_t)onLoad, v9, v10);
+  sub_1C3E508((CGThumbnailListItem_o *)(v5 + 24), (int32_t)onLoad, v10, v11);
   summonAssets = this->fields.summonAssets;
   if ( summonAssets && !AssetData__get_IsEmpty(summonAssets, 0) )
   {
@@ -135,15 +137,15 @@ void SummonAssetManager__LoadSummonAssets(
   }
   else
   {
-    v12 = (AssetLoader_LoadEndDataHandler_o *)sub_1C372A4(AssetLoader_LoadEndDataHandler_TypeInfo);
+    v13 = (AssetLoader_LoadEndDataHandler_o *)sub_1C3E7B0(AssetLoader_LoadEndDataHandler_TypeInfo);
     AssetLoader_LoadEndDataHandler___ctor(
-      v12,
+      v13,
       (Il2CppObject *)v5,
       Method_SummonAssetManager___c__DisplayClass1_0__LoadSummonAssets_b__0__,
       0);
     if ( !AssetManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(AssetManager_TypeInfo);
-    AssetManager__loadAssetStorage((System_String_o *)StringLiteral_5893/*"Effect/Summon"*/, v12, 1, 0);
+    AssetManager__loadAssetStorage((System_String_o *)StringLiteral_5893/*"Effect/Summon"*/, v13, 1, 0);
   }
 }
 
@@ -156,10 +158,10 @@ void SummonAssetManager__UnloadSummonAssets(SummonAssetManager_o *this, const Me
   int32_t v6; // w2
   const MethodInfo *v7; // x3
 
-  if ( (byte_4C42227 & 1) == 0 )
+  if ( (byte_4C55FC9 & 1) == 0 )
   {
-    sub_1C37058(&AssetManager_TypeInfo);
-    byte_4C42227 = 1;
+    sub_1C3E564(&AssetManager_TypeInfo);
+    byte_4C55FC9 = 1;
   }
   summonAssets = this->fields.summonAssets;
   p_summonAssets = (CGThumbnailListItem_o *)&this->fields.summonAssets;
@@ -168,9 +170,9 @@ void SummonAssetManager__UnloadSummonAssets(SummonAssetManager_o *this, const Me
   {
     if ( !AssetManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(AssetManager_TypeInfo);
-    AssetManager__releaseAsset_40534712(v4, 0);
+    AssetManager__releaseAsset_40580972(v4, 0);
     p_summonAssets->klass = 0;
-    sub_1C36FFC(p_summonAssets, 0, v6, v7);
+    sub_1C3E508(p_summonAssets, 0, v6, v7);
   }
 }
 
@@ -193,8 +195,8 @@ void SummonAssetManager___c__DisplayClass1_0___LoadSummonAssets_b__0(
 
   _4__this = this->fields.__4__this;
   if ( !_4__this )
-    sub_1C372B4(0);
+    sub_1C3E7C0(0, data);
   _4__this->fields.summonAssets = data;
-  sub_1C36FFC((CGThumbnailListItem_o *)&_4__this->fields.summonAssets, (int32_t)data, (int32_t)method, v3);
+  sub_1C3E508((CGThumbnailListItem_o *)&_4__this->fields.summonAssets, (int32_t)data, (int32_t)method, v3);
   ActionExtensions__Call(this->fields.onLoad, 0);
 }

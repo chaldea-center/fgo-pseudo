@@ -11,10 +11,10 @@ void UISnapshotPoint__Start(UISnapshotPoint_o *this, const MethodInfo *method)
 {
   System_String_o *tag; // x0
 
-  if ( (byte_4C47785 & 1) == 0 )
+  if ( (byte_4C5B57C & 1) == 0 )
   {
-    sub_1C37058(&StringLiteral_5844/*"EditorOnly"*/);
-    byte_4C47785 = 1;
+    sub_1C3E564(&StringLiteral_5844/*"EditorOnly"*/);
+    byte_4C5B57C = 1;
   }
   tag = UnityEngine_Component__get_tag((UnityEngine_Component_o *)this, 0);
   if ( System_String__op_Inequality(tag, (System_String_o *)StringLiteral_5844/*"EditorOnly"*/, 0) )

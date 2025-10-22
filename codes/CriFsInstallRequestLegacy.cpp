@@ -9,36 +9,37 @@ void CriFsInstallRequestLegacy___ctor(
 {
   CriFsInstaller_o *v13; // x24
   const MethodInfo *v14; // x1
-  const MethodInfo *v15; // x5
+  __int64 v15; // x1
+  const MethodInfo *v16; // x5
   CriFsInstaller_o *installer; // x0
-  const MethodInfo *v17; // x2
+  const MethodInfo *v18; // x2
 
-  if ( (byte_4C3C502 & 1) == 0 )
+  if ( (byte_4C50282 & 1) == 0 )
   {
-    sub_1C37058(&CriDisposableObjectManager_TypeInfo);
-    sub_1C37058(&CriFsInstaller_TypeInfo);
-    byte_4C3C502 = 1;
+    sub_1C3E564(&CriDisposableObjectManager_TypeInfo);
+    sub_1C3E564(&CriFsInstaller_TypeInfo);
+    byte_4C50282 = 1;
   }
   System_Object___ctor((Il2CppObject *)this, 0);
   this->fields.guid = System_Guid__NewGuid(0);
   this->fields._sourcePath_k__BackingField = srcPath;
-  sub_1C36FFC(&this->fields._sourcePath_k__BackingField, srcPath);
+  sub_1C3E508(&this->fields._sourcePath_k__BackingField, srcPath);
   this->fields._destinationPath_k__BackingField = dstPath;
-  sub_1C36FFC(&this->fields._destinationPath_k__BackingField, dstPath);
+  sub_1C3E508(&this->fields._destinationPath_k__BackingField, dstPath);
   this->fields._doneDelegate_k__BackingField = doneDelegate;
-  sub_1C36FFC(&this->fields._doneDelegate_k__BackingField, doneDelegate);
+  sub_1C3E508(&this->fields._doneDelegate_k__BackingField, doneDelegate);
   this->fields._progress_k__BackingField = 0.0;
-  v13 = (CriFsInstaller_o *)sub_1C372A4(CriFsInstaller_TypeInfo);
+  v13 = (CriFsInstaller_o *)sub_1C3E7B0(CriFsInstaller_TypeInfo);
   CriFsInstaller___ctor(v13, v14);
   this->fields.installer = v13;
-  sub_1C36FFC(&this->fields.installer, v13);
+  sub_1C3E508(&this->fields.installer, v13);
   installer = this->fields.installer;
   if ( !installer )
-    sub_1C372B4(0);
-  CriFsInstaller__Copy(installer, srcBinder, srcPath, dstPath, installBufferSize, v15);
+    sub_1C3E7C0(0, v15);
+  CriFsInstaller__Copy(installer, srcBinder, srcPath, dstPath, installBufferSize, v16);
   if ( !CriDisposableObjectManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(CriDisposableObjectManager_TypeInfo);
-  CriDisposableObjectManager__Register((CriDisposable_o *)this, 2, v17);
+  CriDisposableObjectManager__Register((CriDisposable_o *)this, 2, v18);
 }
 
 
@@ -49,10 +50,10 @@ void CriFsInstallRequestLegacy__Dispose(CriFsInstallRequestLegacy_o *this, bool 
   struct CriFsInstaller_o **p_installer; // x19
   struct CriFsInstaller_o *installer; // t1
 
-  if ( (byte_4C3C504 & 1) == 0 )
+  if ( (byte_4C50284 & 1) == 0 )
   {
-    sub_1C37058(&CriDisposableObjectManager_TypeInfo);
-    byte_4C3C504 = 1;
+    sub_1C3E564(&CriDisposableObjectManager_TypeInfo);
+    byte_4C50284 = 1;
   }
   if ( !CriDisposableObjectManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(CriDisposableObjectManager_TypeInfo);
@@ -66,7 +67,7 @@ void CriFsInstallRequestLegacy__Dispose(CriFsInstallRequestLegacy_o *this, bool 
       v4,
       v4->klass->vtable._5_Dispose.method);
     *p_installer = 0;
-    sub_1C36FFC(p_installer, 0);
+    sub_1C3E508(p_installer, 0);
   }
 }
 
@@ -92,10 +93,10 @@ void CriFsInstallRequestLegacy__Update(CriFsInstallRequestLegacy_o *this, const 
   __int64 v9; // x1
   struct CriFsRequest_DoneDelegate_o *doneDelegate_k__BackingField; // x8
 
-  if ( (byte_4C3C503 & 1) == 0 )
+  if ( (byte_4C50283 & 1) == 0 )
   {
-    sub_1C37058(&StringLiteral_6139/*"Error occurred."*/);
-    byte_4C3C503 = 1;
+    sub_1C3E564(&StringLiteral_6139/*"Error occurred."*/);
+    byte_4C50283 = 1;
   }
   p_installer = &this->fields.installer;
   installer = this->fields.installer;
@@ -114,17 +115,17 @@ void CriFsInstallRequestLegacy__Update(CriFsInstallRequestLegacy_o *this, const 
       this->fields._progress_k__BackingField = -1.0;
       v9 = StringLiteral_6139/*"Error occurred."*/;
       this->fields._error_k__BackingField = (struct System_String_o *)StringLiteral_6139/*"Error occurred."*/;
-      sub_1C36FFC(&this->fields._error_k__BackingField, v9);
+      sub_1C3E508(&this->fields._error_k__BackingField, v9);
     }
     v7 = *p_installer;
     if ( !*p_installer )
 LABEL_12:
-      sub_1C372B4(v7);
+      sub_1C3E7C0(v7, v5);
     ((void (__fastcall *)(CriFsInstaller_o *, const MethodInfo *))v7->klass->vtable._5_Dispose.methodPtr)(
       v7,
       v7->klass->vtable._5_Dispose.method);
     this->fields.installer = 0;
-    sub_1C36FFC(&this->fields.installer, 0);
+    sub_1C3E508(&this->fields.installer, 0);
     doneDelegate_k__BackingField = this->fields._doneDelegate_k__BackingField;
     this->fields._isDone_k__BackingField = 1;
     if ( doneDelegate_k__BackingField )

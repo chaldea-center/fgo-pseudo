@@ -7,24 +7,24 @@ void MaterialBranchRouteManager___cctor(const MethodInfo *method)
   int32_t v5; // w2
   const MethodInfo *v6; // x3
 
-  if ( (byte_4C442CF & 1) == 0 )
+  if ( (byte_4C58098 & 1) == 0 )
   {
-    sub_1C37058(&Method_System_Collections_Generic_List_MaterialBranchRouteManager_MaterialBranchInfo___ctor__);
-    sub_1C37058(&System_Collections_Generic_List_MaterialBranchRouteManager_MaterialBranchInfo__TypeInfo);
-    sub_1C37058(&MaterialBranchRouteManager_TypeInfo);
-    sub_1C37058(&StringLiteral_6682/*"Fgo_20210908"*/);
-    byte_4C442CF = 1;
+    sub_1C3E564(&Method_System_Collections_Generic_List_MaterialBranchRouteManager_MaterialBranchInfo___ctor__);
+    sub_1C3E564(&System_Collections_Generic_List_MaterialBranchRouteManager_MaterialBranchInfo__TypeInfo);
+    sub_1C3E564(&MaterialBranchRouteManager_TypeInfo);
+    sub_1C3E564(&StringLiteral_6682/*"Fgo_20210908"*/);
+    byte_4C58098 = 1;
   }
   MaterialBranchRouteManager_TypeInfo->static_fields->SAVE_DATA_VERSION = (struct System_String_o *)StringLiteral_6682/*"Fgo_20210908"*/;
-  sub_1C36FFC((CGThumbnailListItem_o *)MaterialBranchRouteManager_TypeInfo->static_fields, StringLiteral_6682/*"Fgo_20210908"*/, v1, v2);
+  sub_1C3E508((CGThumbnailListItem_o *)MaterialBranchRouteManager_TypeInfo->static_fields, StringLiteral_6682/*"Fgo_20210908"*/, v1, v2);
   *(_WORD *)&MaterialBranchRouteManager_TypeInfo->static_fields->isModfiy = 0;
-  v3 = (System_Collections_Generic_List_object__o *)sub_1C372A4(System_Collections_Generic_List_MaterialBranchRouteManager_MaterialBranchInfo__TypeInfo);
+  v3 = (System_Collections_Generic_List_object__o *)sub_1C3E7B0(System_Collections_Generic_List_MaterialBranchRouteManager_MaterialBranchInfo__TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v3,
-    (const MethodInfo_37A27F0 *)Method_System_Collections_Generic_List_MaterialBranchRouteManager_MaterialBranchInfo___ctor__);
+    (const MethodInfo_37B4C2C *)Method_System_Collections_Generic_List_MaterialBranchRouteManager_MaterialBranchInfo___ctor__);
   static_fields = MaterialBranchRouteManager_TypeInfo->static_fields;
   static_fields->infoList = (struct System_Collections_Generic_List_MaterialBranchRouteManager_MaterialBranchInfo__o *)v3;
-  sub_1C36FFC((CGThumbnailListItem_o *)&static_fields->infoList, (int32_t)v3, v5, v6);
+  sub_1C3E508((CGThumbnailListItem_o *)&static_fields->infoList, (int32_t)v3, v5, v6);
 }
 
 
@@ -37,18 +37,19 @@ void MaterialBranchRouteManager___ctor(MaterialBranchRouteManager_o *this, const
 void MaterialBranchRouteManager__ClearSaveData(const MethodInfo *method)
 {
   MaterialBranchRouteManager_c *v1; // x0
-  MaterialBranchRouteManager_c *v2; // x0
+  __int64 v2; // x1
+  MaterialBranchRouteManager_c *v3; // x0
   struct System_Collections_Generic_List_MaterialBranchRouteManager_MaterialBranchInfo__o *infoList; // x8
   int32_t size; // w2
-  int v5; // w9
-  MaterialBranchRouteManager_c *v6; // x0
+  int v6; // w9
+  MaterialBranchRouteManager_c *v7; // x0
 
-  if ( (byte_4C442C9 & 1) == 0 )
+  if ( (byte_4C58092 & 1) == 0 )
   {
-    sub_1C37058(&Method_System_Linq_Enumerable_Any_MaterialBranchRouteManager_MaterialBranchInfo___);
-    sub_1C37058(&Method_System_Collections_Generic_List_MaterialBranchRouteManager_MaterialBranchInfo__Clear__);
-    sub_1C37058(&MaterialBranchRouteManager_TypeInfo);
-    byte_4C442C9 = 1;
+    sub_1C3E564(&Method_System_Linq_Enumerable_Any_MaterialBranchRouteManager_MaterialBranchInfo___);
+    sub_1C3E564(&Method_System_Collections_Generic_List_MaterialBranchRouteManager_MaterialBranchInfo__Clear__);
+    sub_1C3E564(&MaterialBranchRouteManager_TypeInfo);
+    byte_4C58092 = 1;
   }
   v1 = MaterialBranchRouteManager_TypeInfo;
   if ( !MaterialBranchRouteManager_TypeInfo->_2.cctor_finished )
@@ -58,31 +59,31 @@ void MaterialBranchRouteManager__ClearSaveData(const MethodInfo *method)
   }
   if ( System_Linq_Enumerable__Any_object_(
          (System_Collections_Generic_IEnumerable_TSource__o *)v1->static_fields->infoList,
-         (const MethodInfo_30F37D0 *)Method_System_Linq_Enumerable_Any_MaterialBranchRouteManager_MaterialBranchInfo___) )
+         (const MethodInfo_31055E8 *)Method_System_Linq_Enumerable_Any_MaterialBranchRouteManager_MaterialBranchInfo___) )
   {
-    v2 = MaterialBranchRouteManager_TypeInfo;
+    v3 = MaterialBranchRouteManager_TypeInfo;
     if ( !MaterialBranchRouteManager_TypeInfo->_2.cctor_finished )
     {
       j_il2cpp_runtime_class_init_0(MaterialBranchRouteManager_TypeInfo);
-      v2 = MaterialBranchRouteManager_TypeInfo;
+      v3 = MaterialBranchRouteManager_TypeInfo;
     }
-    infoList = v2->static_fields->infoList;
+    infoList = v3->static_fields->infoList;
     if ( !infoList )
-      sub_1C372B4(v2);
+      sub_1C3E7C0(v3, v2);
     size = infoList->fields._size;
-    v5 = infoList->fields._version + 1;
+    v6 = infoList->fields._version + 1;
     infoList->fields._size = 0;
-    infoList->fields._version = v5;
+    infoList->fields._version = v6;
     if ( size >= 1 )
       System_Array__Clear((System_Array_o *)infoList->fields._items, 0, size, 0);
   }
-  v6 = MaterialBranchRouteManager_TypeInfo;
+  v7 = MaterialBranchRouteManager_TypeInfo;
   if ( !MaterialBranchRouteManager_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(MaterialBranchRouteManager_TypeInfo);
-    v6 = MaterialBranchRouteManager_TypeInfo;
+    v7 = MaterialBranchRouteManager_TypeInfo;
   }
-  *(_WORD *)&v6->static_fields->isModfiy = 1;
+  *(_WORD *)&v7->static_fields->isModfiy = 1;
 }
 
 
@@ -91,10 +92,10 @@ void MaterialBranchRouteManager__DeleteSaveData(const MethodInfo *method)
   MaterialBranchRouteManager_c *v1; // x0
   System_String_o *FilePath; // x19
 
-  if ( (byte_4C442C7 & 1) == 0 )
+  if ( (byte_4C58090 & 1) == 0 )
   {
-    sub_1C37058(&MaterialBranchRouteManager_TypeInfo);
-    byte_4C442C7 = 1;
+    sub_1C3E564(&MaterialBranchRouteManager_TypeInfo);
+    byte_4C58090 = 1;
   }
   v1 = MaterialBranchRouteManager_TypeInfo;
   if ( !MaterialBranchRouteManager_TypeInfo->_2.cctor_finished )
@@ -110,12 +111,12 @@ System_String_o *MaterialBranchRouteManager__GetFilePath(const MethodInfo *metho
   System_String_o *DatFileSavePath; // x19
   System_String_o *FileName; // x2
 
-  if ( (byte_4C442C6 & 1) == 0 )
+  if ( (byte_4C5808F & 1) == 0 )
   {
-    sub_1C37058(&AndroidUtil_TypeInfo);
-    sub_1C37058(&DatFileName_TypeInfo);
-    sub_1C37058(&StringLiteral_1048/*"/"*/);
-    byte_4C442C6 = 1;
+    sub_1C3E564(&AndroidUtil_TypeInfo);
+    sub_1C3E564(&DatFileName_TypeInfo);
+    sub_1C3E564(&StringLiteral_1048/*"/"*/);
+    byte_4C5808F = 1;
   }
   if ( !AndroidUtil_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(AndroidUtil_TypeInfo);
@@ -123,7 +124,7 @@ System_String_o *MaterialBranchRouteManager__GetFilePath(const MethodInfo *metho
   if ( !DatFileName_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DatFileName_TypeInfo);
   FileName = DatFileName__getFileName(35, 0);
-  return System_String__Concat_63599904(DatFileSavePath, (System_String_o *)StringLiteral_1048/*"/"*/, FileName, 0);
+  return System_String__Concat_63674716(DatFileSavePath, (System_String_o *)StringLiteral_1048/*"/"*/, FileName, 0);
 }
 
 
@@ -131,10 +132,10 @@ void MaterialBranchRouteManager__Initialize(const MethodInfo *method)
 {
   MaterialBranchRouteManager_c *v1; // x0
 
-  if ( (byte_4C442C8 & 1) == 0 )
+  if ( (byte_4C58091 & 1) == 0 )
   {
-    sub_1C37058(&MaterialBranchRouteManager_TypeInfo);
-    byte_4C442C8 = 1;
+    sub_1C3E564(&MaterialBranchRouteManager_TypeInfo);
+    byte_4C58091 = 1;
   }
   v1 = MaterialBranchRouteManager_TypeInfo;
   if ( !MaterialBranchRouteManager_TypeInfo->_2.cctor_finished )
@@ -147,42 +148,43 @@ bool MaterialBranchRouteManager__IsMaterialSelectedRouteId(int32_t questId, int3
 {
   __int64 v5; // x21
   __int64 v6; // x0
-  MaterialBranchRouteManager_c *v7; // x0
+  __int64 v7; // x1
+  MaterialBranchRouteManager_c *v8; // x0
   System_Collections_Generic_List_T__o *infoList; // x19
-  System_Func_object__bool__o *v9; // x20
+  System_Func_object__bool__o *v10; // x20
 
-  if ( (byte_4C442CA & 1) == 0 )
+  if ( (byte_4C58093 & 1) == 0 )
   {
-    sub_1C37058(&Method_BasicHelper_Any_MaterialBranchRouteManager_MaterialBranchInfo___);
-    sub_1C37058(&System_Func_MaterialBranchRouteManager_MaterialBranchInfo__bool__TypeInfo);
-    sub_1C37058(&MaterialBranchRouteManager_TypeInfo);
-    sub_1C37058(&Method_MaterialBranchRouteManager___c__DisplayClass9_0__IsMaterialSelectedRouteId_b__0__);
-    sub_1C37058(&MaterialBranchRouteManager___c__DisplayClass9_0_TypeInfo);
-    byte_4C442CA = 1;
+    sub_1C3E564(&Method_BasicHelper_Any_MaterialBranchRouteManager_MaterialBranchInfo___);
+    sub_1C3E564(&System_Func_MaterialBranchRouteManager_MaterialBranchInfo__bool__TypeInfo);
+    sub_1C3E564(&MaterialBranchRouteManager_TypeInfo);
+    sub_1C3E564(&Method_MaterialBranchRouteManager___c__DisplayClass9_0__IsMaterialSelectedRouteId_b__0__);
+    sub_1C3E564(&MaterialBranchRouteManager___c__DisplayClass9_0_TypeInfo);
+    byte_4C58093 = 1;
   }
-  v5 = sub_1C372A4(MaterialBranchRouteManager___c__DisplayClass9_0_TypeInfo);
+  v5 = sub_1C3E7B0(MaterialBranchRouteManager___c__DisplayClass9_0_TypeInfo);
   System_Object___ctor((Il2CppObject *)v5, 0);
   if ( !v5 )
-    sub_1C372B4(v6);
+    sub_1C3E7C0(v6, v7);
   *(_DWORD *)(v5 + 16) = questId;
   *(_DWORD *)(v5 + 20) = routeId;
-  v7 = MaterialBranchRouteManager_TypeInfo;
+  v8 = MaterialBranchRouteManager_TypeInfo;
   if ( !MaterialBranchRouteManager_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(MaterialBranchRouteManager_TypeInfo);
-    v7 = MaterialBranchRouteManager_TypeInfo;
+    v8 = MaterialBranchRouteManager_TypeInfo;
   }
-  infoList = (System_Collections_Generic_List_T__o *)v7->static_fields->infoList;
-  v9 = (System_Func_object__bool__o *)sub_1C372A4(System_Func_MaterialBranchRouteManager_MaterialBranchInfo__bool__TypeInfo);
+  infoList = (System_Collections_Generic_List_T__o *)v8->static_fields->infoList;
+  v10 = (System_Func_object__bool__o *)sub_1C3E7B0(System_Func_MaterialBranchRouteManager_MaterialBranchInfo__bool__TypeInfo);
   System_Func_object__bool____ctor(
-    v9,
+    v10,
     (Il2CppObject *)v5,
     Method_MaterialBranchRouteManager___c__DisplayClass9_0__IsMaterialSelectedRouteId_b__0__,
     0);
   return BasicHelper__Any_object_(
            infoList,
-           (System_Func_T__bool__o *)v9,
-           (const MethodInfo_30D0FF8 *)Method_BasicHelper_Any_MaterialBranchRouteManager_MaterialBranchInfo___);
+           (System_Func_T__bool__o *)v10,
+           (const MethodInfo_30E2E10 *)Method_BasicHelper_Any_MaterialBranchRouteManager_MaterialBranchInfo___);
 }
 
 
@@ -195,267 +197,272 @@ bool MaterialBranchRouteManager__IsMaterialSelectedRouteIds(
 {
   System_Collections_Generic_HashSet_int__o *v7; // x21
   __int64 v8; // x0
+  __int64 v9; // x1
   System_Collections_Generic_IList_int__c *klass; // x8
-  __int64 v10; // x9
+  __int64 v11; // x9
   int32_t *p_offset; // x10
-  __int64 v12; // x0
   __int64 v13; // x0
-  __int64 v14; // x22
-  __int64 v15; // x8
-  __int64 v16; // x9
-  int *v17; // x10
-  __int64 v18; // x0
-  __int64 v19; // x8
-  __int64 v20; // x9
-  int *v21; // x10
-  __int64 v22; // x0
-  __int64 v23; // x0
-  System_Collections_Generic_IList_int__c *v24; // x8
-  int32_t v25; // w25
-  __int64 v26; // x9
-  int32_t *v27; // x10
-  __int64 v28; // x0
-  __int64 v29; // x24
-  __int64 v30; // x8
-  __int64 v31; // x9
-  int *v32; // x10
-  __int64 v33; // x0
+  __int64 v14; // x0
+  __int64 v15; // x1
+  __int64 v16; // x22
+  __int64 v17; // x8
+  __int64 v18; // x9
+  int *v19; // x10
+  __int64 v20; // x0
+  __int64 v21; // x8
+  __int64 v22; // x9
+  int *v23; // x10
+  __int64 v24; // x0
+  __int64 v25; // x0
+  __int64 v26; // x1
+  System_Collections_Generic_IList_int__c *v27; // x8
+  int32_t v28; // w25
+  __int64 v29; // x9
+  int32_t *v30; // x10
+  __int64 v31; // x0
+  __int64 v32; // x1
+  __int64 v33; // x24
   __int64 v34; // x8
   __int64 v35; // x9
   int *v36; // x10
   __int64 v37; // x0
-  const MethodInfo *v38; // x2
-  int32_t v39; // w26
+  __int64 v38; // x8
+  __int64 v39; // x9
+  int *v40; // x10
+  __int64 v41; // x0
+  const MethodInfo *v42; // x2
+  int32_t v43; // w26
   _BOOL8 IsMaterialSelectedRouteId; // x0
-  __int64 v41; // x8
-  __int64 v42; // x9
-  int *v43; // x10
-  __int64 v44; // x0
-  __int64 v45; // x8
-  __int64 v46; // x9
-  int *v47; // x10
-  __int64 v48; // x0
-  int32_t v49; // w21
+  __int64 v45; // x1
+  __int64 v46; // x8
+  __int64 v47; // x9
+  int *v48; // x10
+  __int64 v49; // x0
+  __int64 v50; // x8
+  __int64 v51; // x9
+  int *v52; // x10
+  __int64 v53; // x0
+  int32_t v54; // w21
 
-  if ( (byte_4C442CB & 1) == 0 )
+  if ( (byte_4C58094 & 1) == 0 )
   {
-    sub_1C37058(&CondType_TypeInfo);
-    sub_1C37058(&Method_System_Collections_Generic_HashSet_int__Add__);
-    sub_1C37058(&Method_System_Collections_Generic_HashSet_int___ctor__);
-    sub_1C37058(&Method_System_Collections_Generic_HashSet_int__get_Count__);
-    sub_1C37058(&System_Collections_Generic_HashSet_int__TypeInfo);
-    sub_1C37058(&System_IDisposable_TypeInfo);
-    sub_1C37058(&System_Collections_Generic_IEnumerable_int__TypeInfo);
-    sub_1C37058(&System_Collections_Generic_IEnumerator_int__TypeInfo);
-    sub_1C37058(&System_Collections_IEnumerator_TypeInfo);
-    sub_1C37058(&MaterialBranchRouteManager_TypeInfo);
-    byte_4C442CB = 1;
+    sub_1C3E564(&CondType_TypeInfo);
+    sub_1C3E564(&Method_System_Collections_Generic_HashSet_int__Add__);
+    sub_1C3E564(&Method_System_Collections_Generic_HashSet_int___ctor__);
+    sub_1C3E564(&Method_System_Collections_Generic_HashSet_int__get_Count__);
+    sub_1C3E564(&System_Collections_Generic_HashSet_int__TypeInfo);
+    sub_1C3E564(&System_IDisposable_TypeInfo);
+    sub_1C3E564(&System_Collections_Generic_IEnumerable_int__TypeInfo);
+    sub_1C3E564(&System_Collections_Generic_IEnumerator_int__TypeInfo);
+    sub_1C3E564(&System_Collections_IEnumerator_TypeInfo);
+    sub_1C3E564(&MaterialBranchRouteManager_TypeInfo);
+    byte_4C58094 = 1;
   }
-  v7 = (System_Collections_Generic_HashSet_int__o *)sub_1C372A4(System_Collections_Generic_HashSet_int__TypeInfo);
+  v7 = (System_Collections_Generic_HashSet_int__o *)sub_1C3E7B0(System_Collections_Generic_HashSet_int__TypeInfo);
   System_Collections_Generic_HashSet_int____ctor(
     v7,
-    (const MethodInfo_3653A88 *)Method_System_Collections_Generic_HashSet_int___ctor__);
+    (const MethodInfo_3665EC4 *)Method_System_Collections_Generic_HashSet_int___ctor__);
   if ( !questIds )
     goto LABEL_72;
   klass = questIds->klass;
-  v10 = *(unsigned __int16 *)&questIds->klass->_2.rank;
+  v11 = *(unsigned __int16 *)&questIds->klass->_2.rank;
   if ( *(_WORD *)&questIds->klass->_2.rank )
   {
     p_offset = &klass->_1.interfaceOffsets->offset;
     while ( *((System_Collections_Generic_IEnumerable_int__c **)p_offset - 1) != System_Collections_Generic_IEnumerable_int__TypeInfo )
     {
-      --v10;
+      --v11;
       p_offset += 4;
-      if ( !v10 )
+      if ( !v11 )
         goto LABEL_8;
     }
-    v12 = (__int64)&klass->vtable[*p_offset];
+    v13 = (__int64)&klass->vtable[*p_offset];
   }
   else
   {
 LABEL_8:
-    v12 = sub_1C87870(questIds, System_Collections_Generic_IEnumerable_int__TypeInfo, 0);
+    v13 = sub_1C8ED7C(questIds, System_Collections_Generic_IEnumerable_int__TypeInfo, 0);
   }
-  v13 = (*(__int64 (__fastcall **)(System_Collections_Generic_IList_int__o *, _QWORD))v12)(
+  v14 = (*(__int64 (__fastcall **)(System_Collections_Generic_IList_int__o *, _QWORD))v13)(
           questIds,
-          *(_QWORD *)(v12 + 8));
-  v14 = v13;
+          *(_QWORD *)(v13 + 8));
+  v16 = v14;
   while ( 1 )
   {
-    if ( !v14 )
-      sub_1C372B4(v13);
-    v15 = *(_QWORD *)v14;
-    v16 = *(unsigned __int16 *)(*(_QWORD *)v14 + 302LL);
-    if ( *(_WORD *)(*(_QWORD *)v14 + 302LL) )
+    if ( !v16 )
+      sub_1C3E7C0(v14, v15);
+    v17 = *(_QWORD *)v16;
+    v18 = *(unsigned __int16 *)(*(_QWORD *)v16 + 302LL);
+    if ( *(_WORD *)(*(_QWORD *)v16 + 302LL) )
     {
-      v17 = (int *)(*(_QWORD *)(v15 + 176) + 8LL);
-      while ( *((System_Collections_IEnumerator_c **)v17 - 1) != System_Collections_IEnumerator_TypeInfo )
+      v19 = (int *)(*(_QWORD *)(v17 + 176) + 8LL);
+      while ( *((System_Collections_IEnumerator_c **)v19 - 1) != System_Collections_IEnumerator_TypeInfo )
       {
-        --v16;
-        v17 += 4;
-        if ( !v16 )
+        --v18;
+        v19 += 4;
+        if ( !v18 )
           goto LABEL_16;
       }
-      v18 = v15 + 16LL * *v17 + 312;
+      v20 = v17 + 16LL * *v19 + 312;
     }
     else
     {
 LABEL_16:
-      v18 = sub_1C87870(v14, System_Collections_IEnumerator_TypeInfo, 0);
+      v20 = sub_1C8ED7C(v16, System_Collections_IEnumerator_TypeInfo, 0);
     }
-    if ( ((*(__int64 (__fastcall **)(__int64, _QWORD))v18)(v14, *(_QWORD *)(v18 + 8)) & 1) == 0 )
+    if ( ((*(__int64 (__fastcall **)(__int64, _QWORD))v20)(v16, *(_QWORD *)(v20 + 8)) & 1) == 0 )
       break;
-    v19 = *(_QWORD *)v14;
-    v20 = *(unsigned __int16 *)(*(_QWORD *)v14 + 302LL);
-    if ( *(_WORD *)(*(_QWORD *)v14 + 302LL) )
+    v21 = *(_QWORD *)v16;
+    v22 = *(unsigned __int16 *)(*(_QWORD *)v16 + 302LL);
+    if ( *(_WORD *)(*(_QWORD *)v16 + 302LL) )
     {
-      v21 = (int *)(*(_QWORD *)(v19 + 176) + 8LL);
-      while ( *((System_Collections_Generic_IEnumerator_int__c **)v21 - 1) != System_Collections_Generic_IEnumerator_int__TypeInfo )
+      v23 = (int *)(*(_QWORD *)(v21 + 176) + 8LL);
+      while ( *((System_Collections_Generic_IEnumerator_int__c **)v23 - 1) != System_Collections_Generic_IEnumerator_int__TypeInfo )
       {
-        --v20;
-        v21 += 4;
-        if ( !v20 )
+        --v22;
+        v23 += 4;
+        if ( !v22 )
           goto LABEL_23;
       }
-      v22 = v19 + 16LL * *v21 + 312;
+      v24 = v21 + 16LL * *v23 + 312;
     }
     else
     {
 LABEL_23:
-      v22 = sub_1C87870(v14, System_Collections_Generic_IEnumerator_int__TypeInfo, 0);
+      v24 = sub_1C8ED7C(v16, System_Collections_Generic_IEnumerator_int__TypeInfo, 0);
     }
-    v23 = (*(__int64 (__fastcall **)(__int64, _QWORD))v22)(v14, *(_QWORD *)(v22 + 8));
+    v25 = (*(__int64 (__fastcall **)(__int64, _QWORD))v24)(v16, *(_QWORD *)(v24 + 8));
     if ( !routeIds )
-      sub_1C372B4(v23);
-    v24 = routeIds->klass;
-    v25 = v23;
-    v26 = *(unsigned __int16 *)&routeIds->klass->_2.rank;
+      sub_1C3E7C0(v25, v26);
+    v27 = routeIds->klass;
+    v28 = v25;
+    v29 = *(unsigned __int16 *)&routeIds->klass->_2.rank;
     if ( *(_WORD *)&routeIds->klass->_2.rank )
     {
-      v27 = &v24->_1.interfaceOffsets->offset;
-      while ( *((System_Collections_Generic_IEnumerable_int__c **)v27 - 1) != System_Collections_Generic_IEnumerable_int__TypeInfo )
+      v30 = &v27->_1.interfaceOffsets->offset;
+      while ( *((System_Collections_Generic_IEnumerable_int__c **)v30 - 1) != System_Collections_Generic_IEnumerable_int__TypeInfo )
       {
-        --v26;
-        v27 += 4;
-        if ( !v26 )
+        --v29;
+        v30 += 4;
+        if ( !v29 )
           goto LABEL_30;
       }
-      v28 = (__int64)&v24->vtable[*v27];
+      v31 = (__int64)&v27->vtable[*v30];
     }
     else
     {
 LABEL_30:
-      v28 = sub_1C87870(routeIds, System_Collections_Generic_IEnumerable_int__TypeInfo, 0);
+      v31 = sub_1C8ED7C(routeIds, System_Collections_Generic_IEnumerable_int__TypeInfo, 0);
     }
-    v29 = (*(__int64 (__fastcall **)(System_Collections_Generic_IList_int__o *, _QWORD))v28)(
+    v33 = (*(__int64 (__fastcall **)(System_Collections_Generic_IList_int__o *, _QWORD))v31)(
             routeIds,
-            *(_QWORD *)(v28 + 8));
-    if ( !v29 )
-      sub_1C372B4(0);
+            *(_QWORD *)(v31 + 8));
+    if ( !v33 )
+      sub_1C3E7C0(0, v32);
     while ( 1 )
     {
-      v30 = *(_QWORD *)v29;
-      v31 = *(unsigned __int16 *)(*(_QWORD *)v29 + 302LL);
-      if ( *(_WORD *)(*(_QWORD *)v29 + 302LL) )
-      {
-        v32 = (int *)(*(_QWORD *)(v30 + 176) + 8LL);
-        while ( *((System_Collections_IEnumerator_c **)v32 - 1) != System_Collections_IEnumerator_TypeInfo )
-        {
-          --v31;
-          v32 += 4;
-          if ( !v31 )
-            goto LABEL_37;
-        }
-        v33 = v30 + 16LL * *v32 + 312;
-      }
-      else
-      {
-LABEL_37:
-        v33 = sub_1C87870(v29, System_Collections_IEnumerator_TypeInfo, 0);
-      }
-      if ( ((*(__int64 (__fastcall **)(__int64, _QWORD))v33)(v29, *(_QWORD *)(v33 + 8)) & 1) == 0 )
-        break;
-      v34 = *(_QWORD *)v29;
-      v35 = *(unsigned __int16 *)(*(_QWORD *)v29 + 302LL);
-      if ( *(_WORD *)(*(_QWORD *)v29 + 302LL) )
+      v34 = *(_QWORD *)v33;
+      v35 = *(unsigned __int16 *)(*(_QWORD *)v33 + 302LL);
+      if ( *(_WORD *)(*(_QWORD *)v33 + 302LL) )
       {
         v36 = (int *)(*(_QWORD *)(v34 + 176) + 8LL);
-        while ( *((System_Collections_Generic_IEnumerator_int__c **)v36 - 1) != System_Collections_Generic_IEnumerator_int__TypeInfo )
+        while ( *((System_Collections_IEnumerator_c **)v36 - 1) != System_Collections_IEnumerator_TypeInfo )
         {
           --v35;
           v36 += 4;
           if ( !v35 )
-            goto LABEL_44;
+            goto LABEL_37;
         }
         v37 = v34 + 16LL * *v36 + 312;
       }
       else
       {
-LABEL_44:
-        v37 = sub_1C87870(v29, System_Collections_Generic_IEnumerator_int__TypeInfo, 0);
+LABEL_37:
+        v37 = sub_1C8ED7C(v33, System_Collections_IEnumerator_TypeInfo, 0);
       }
-      v39 = (*(__int64 (__fastcall **)(__int64, _QWORD))v37)(v29, *(_QWORD *)(v37 + 8));
+      if ( ((*(__int64 (__fastcall **)(__int64, _QWORD))v37)(v33, *(_QWORD *)(v37 + 8)) & 1) == 0 )
+        break;
+      v38 = *(_QWORD *)v33;
+      v39 = *(unsigned __int16 *)(*(_QWORD *)v33 + 302LL);
+      if ( *(_WORD *)(*(_QWORD *)v33 + 302LL) )
+      {
+        v40 = (int *)(*(_QWORD *)(v38 + 176) + 8LL);
+        while ( *((System_Collections_Generic_IEnumerator_int__c **)v40 - 1) != System_Collections_Generic_IEnumerator_int__TypeInfo )
+        {
+          --v39;
+          v40 += 4;
+          if ( !v39 )
+            goto LABEL_44;
+        }
+        v41 = v38 + 16LL * *v40 + 312;
+      }
+      else
+      {
+LABEL_44:
+        v41 = sub_1C8ED7C(v33, System_Collections_Generic_IEnumerator_int__TypeInfo, 0);
+      }
+      v43 = (*(__int64 (__fastcall **)(__int64, _QWORD))v41)(v33, *(_QWORD *)(v41 + 8));
       if ( !MaterialBranchRouteManager_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(MaterialBranchRouteManager_TypeInfo);
-      IsMaterialSelectedRouteId = MaterialBranchRouteManager__IsMaterialSelectedRouteId(v25, v39, v38);
+      IsMaterialSelectedRouteId = MaterialBranchRouteManager__IsMaterialSelectedRouteId(v28, v43, v42);
       if ( IsMaterialSelectedRouteId )
       {
         if ( !v7 )
-          sub_1C372B4(IsMaterialSelectedRouteId);
+          sub_1C3E7C0(IsMaterialSelectedRouteId, v45);
         System_Collections_Generic_HashSet_int___Add(
           v7,
-          v39,
-          (const MethodInfo_3654C8C *)Method_System_Collections_Generic_HashSet_int__Add__);
+          v43,
+          (const MethodInfo_36670C8 *)Method_System_Collections_Generic_HashSet_int__Add__);
       }
     }
-    v41 = *(_QWORD *)v29;
-    v42 = *(unsigned __int16 *)(*(_QWORD *)v29 + 302LL);
-    if ( *(_WORD *)(*(_QWORD *)v29 + 302LL) )
+    v46 = *(_QWORD *)v33;
+    v47 = *(unsigned __int16 *)(*(_QWORD *)v33 + 302LL);
+    if ( *(_WORD *)(*(_QWORD *)v33 + 302LL) )
     {
-      v43 = (int *)(*(_QWORD *)(v41 + 176) + 8LL);
-      while ( *((System_IDisposable_c **)v43 - 1) != System_IDisposable_TypeInfo )
+      v48 = (int *)(*(_QWORD *)(v46 + 176) + 8LL);
+      while ( *((System_IDisposable_c **)v48 - 1) != System_IDisposable_TypeInfo )
       {
-        --v42;
-        v43 += 4;
-        if ( !v42 )
+        --v47;
+        v48 += 4;
+        if ( !v47 )
           goto LABEL_55;
       }
-      v44 = v41 + 16LL * *v43 + 312;
+      v49 = v46 + 16LL * *v48 + 312;
     }
     else
     {
 LABEL_55:
-      v44 = sub_1C87870(v29, System_IDisposable_TypeInfo, 0);
+      v49 = sub_1C8ED7C(v33, System_IDisposable_TypeInfo, 0);
     }
-    v13 = (*(__int64 (__fastcall **)(__int64, _QWORD))v44)(v29, *(_QWORD *)(v44 + 8));
+    v14 = (*(__int64 (__fastcall **)(__int64, _QWORD))v49)(v33, *(_QWORD *)(v49 + 8));
   }
-  v45 = *(_QWORD *)v14;
-  v46 = *(unsigned __int16 *)(*(_QWORD *)v14 + 302LL);
-  if ( *(_WORD *)(*(_QWORD *)v14 + 302LL) )
+  v50 = *(_QWORD *)v16;
+  v51 = *(unsigned __int16 *)(*(_QWORD *)v16 + 302LL);
+  if ( *(_WORD *)(*(_QWORD *)v16 + 302LL) )
   {
-    v47 = (int *)(*(_QWORD *)(v45 + 176) + 8LL);
-    while ( *((System_IDisposable_c **)v47 - 1) != System_IDisposable_TypeInfo )
+    v52 = (int *)(*(_QWORD *)(v50 + 176) + 8LL);
+    while ( *((System_IDisposable_c **)v52 - 1) != System_IDisposable_TypeInfo )
     {
-      --v46;
-      v47 += 4;
-      if ( !v46 )
+      --v51;
+      v52 += 4;
+      if ( !v51 )
         goto LABEL_64;
     }
-    v48 = v45 + 16LL * *v47 + 312;
+    v53 = v50 + 16LL * *v52 + 312;
   }
   else
   {
 LABEL_64:
-    v48 = sub_1C87870(v14, System_IDisposable_TypeInfo, 0);
+    v53 = sub_1C8ED7C(v16, System_IDisposable_TypeInfo, 0);
   }
-  v8 = (*(__int64 (__fastcall **)(__int64, _QWORD))v48)(v14, *(_QWORD *)(v48 + 8));
+  v8 = (*(__int64 (__fastcall **)(__int64, _QWORD))v53)(v16, *(_QWORD *)(v53 + 8));
   if ( !v7 )
 LABEL_72:
-    sub_1C372B4(v8);
-  v49 = v7->fields._count;
+    sub_1C3E7C0(v8, v9);
+  v54 = v7->fields._count;
   if ( !CondType_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(CondType_TypeInfo);
-  return CondType__GetCompareCheckType(checkType, count, v49, 0);
+  return CondType__GetCompareCheckType(checkType, count, v54, 0);
 }
 
 
@@ -468,39 +475,41 @@ bool MaterialBranchRouteManager__ReadData(const MethodInfo *method)
   System_IO_Stream_o *v6; // x20
   System_IO_BinaryReader_o *v7; // x19
   __int64 v8; // x0
-  System_String_o *v9; // x20
-  MaterialBranchRouteManager_c *v10; // x0
-  int v11; // w21
-  char v12; // w20
-  MaterialBranchRouteManager_c *v13; // x0
-  int v14; // w20
-  int v15; // w22
-  int v16; // w23
-  int v17; // w24
-  __int64 v18; // x21
-  __int64 v19; // x0
-  int32_t v20; // w2
-  const MethodInfo *v21; // x3
-  MaterialBranchRouteManager_c *v22; // x0
+  __int64 v9; // x1
+  System_String_o *v10; // x20
+  MaterialBranchRouteManager_c *v11; // x0
+  int v12; // w21
+  char v13; // w20
+  MaterialBranchRouteManager_c *v14; // x0
+  int v15; // w20
+  int v16; // w22
+  int v17; // w23
+  int v18; // w24
+  __int64 v19; // x21
+  __int64 v20; // x0
+  __int64 v21; // x1
+  int32_t v22; // w2
+  const MethodInfo *v23; // x3
+  MaterialBranchRouteManager_c *v24; // x0
   System_Collections_Generic_List_object__o *infoList; // x0
   struct System_Object_array *items; // x8
-  _QWORD *v25; // x9
+  _QWORD *v27; // x9
   __int64 size; // x10
-  Il2CppClass **v27; // x8
+  Il2CppClass **v29; // x8
   System_IO_BinaryReader_c *klass; // x8
-  __int64 v29; // x9
+  __int64 v31; // x9
   int32_t *p_offset; // x10
-  __int64 v31; // x0
+  __int64 v33; // x0
 
-  if ( (byte_4C442CD & 1) == 0 )
+  if ( (byte_4C58096 & 1) == 0 )
   {
-    sub_1C37058(&System_IO_BinaryReader_TypeInfo);
-    sub_1C37058(&System_IDisposable_TypeInfo);
-    sub_1C37058(&Method_System_Collections_Generic_List_MaterialBranchRouteManager_MaterialBranchInfo__Add__);
-    sub_1C37058(&ManagerConfig_TypeInfo);
-    sub_1C37058(&MaterialBranchRouteManager_MaterialBranchInfo_TypeInfo);
-    sub_1C37058(&MaterialBranchRouteManager_TypeInfo);
-    byte_4C442CD = 1;
+    sub_1C3E564(&System_IO_BinaryReader_TypeInfo);
+    sub_1C3E564(&System_IDisposable_TypeInfo);
+    sub_1C3E564(&Method_System_Collections_Generic_List_MaterialBranchRouteManager_MaterialBranchInfo__Add__);
+    sub_1C3E564(&ManagerConfig_TypeInfo);
+    sub_1C3E564(&MaterialBranchRouteManager_MaterialBranchInfo_TypeInfo);
+    sub_1C3E564(&MaterialBranchRouteManager_TypeInfo);
+    byte_4C58096 = 1;
   }
   v1 = ManagerConfig_TypeInfo;
   if ( !ManagerConfig_TypeInfo->_2.cctor_finished )
@@ -522,114 +531,114 @@ bool MaterialBranchRouteManager__ReadData(const MethodInfo *method)
   MaterialBranchRouteManager__ClearSaveData((const MethodInfo *)v5);
   MaterialBranchRouteManager_TypeInfo->static_fields->isModfiy = 0;
   v6 = (System_IO_Stream_o *)System_IO_File__OpenRead(FilePath, 0);
-  v7 = (System_IO_BinaryReader_o *)sub_1C372A4(System_IO_BinaryReader_TypeInfo);
+  v7 = (System_IO_BinaryReader_o *)sub_1C3E7B0(System_IO_BinaryReader_TypeInfo);
   System_IO_BinaryReader___ctor(v7, v6, 0);
   if ( !v7 )
-    sub_1C372B4(v8);
-  v9 = (System_String_o *)((__int64 (__fastcall *)(System_IO_BinaryReader_o *, const MethodInfo *))v7->klass->vtable._22_ReadString.methodPtr)(
-                            v7,
-                            v7->klass->vtable._22_ReadString.method);
-  v10 = MaterialBranchRouteManager_TypeInfo;
+    sub_1C3E7C0(v8, v9);
+  v10 = (System_String_o *)((__int64 (__fastcall *)(System_IO_BinaryReader_o *, const MethodInfo *))v7->klass->vtable._22_ReadString.methodPtr)(
+                             v7,
+                             v7->klass->vtable._22_ReadString.method);
+  v11 = MaterialBranchRouteManager_TypeInfo;
   if ( !MaterialBranchRouteManager_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(MaterialBranchRouteManager_TypeInfo);
-    v10 = MaterialBranchRouteManager_TypeInfo;
+    v11 = MaterialBranchRouteManager_TypeInfo;
   }
-  if ( System_String__op_Inequality(v10->static_fields->SAVE_DATA_VERSION, v9, 0) )
+  if ( System_String__op_Inequality(v11->static_fields->SAVE_DATA_VERSION, v10, 0) )
   {
-    v11 = 5;
+    v12 = 5;
   }
   else
   {
-    v12 = ((__int64 (__fastcall *)(System_IO_BinaryReader_o *, const MethodInfo *))v7->klass->vtable._9_ReadBoolean.methodPtr)(
+    v13 = ((__int64 (__fastcall *)(System_IO_BinaryReader_o *, const MethodInfo *))v7->klass->vtable._9_ReadBoolean.methodPtr)(
             v7,
             v7->klass->vtable._9_ReadBoolean.method);
-    v13 = MaterialBranchRouteManager_TypeInfo;
+    v14 = MaterialBranchRouteManager_TypeInfo;
     if ( !MaterialBranchRouteManager_TypeInfo->_2.cctor_finished )
     {
       j_il2cpp_runtime_class_init_0(MaterialBranchRouteManager_TypeInfo);
-      v13 = MaterialBranchRouteManager_TypeInfo;
+      v14 = MaterialBranchRouteManager_TypeInfo;
     }
-    v13->static_fields->isContinueDevice = v12 & 1;
-    v14 = ((__int64 (__fastcall *)(System_IO_BinaryReader_o *, const MethodInfo *))v7->klass->vtable._15_ReadInt32.methodPtr)(
+    v14->static_fields->isContinueDevice = v13 & 1;
+    v15 = ((__int64 (__fastcall *)(System_IO_BinaryReader_o *, const MethodInfo *))v7->klass->vtable._15_ReadInt32.methodPtr)(
             v7,
             v7->klass->vtable._15_ReadInt32.method);
-    if ( v14 >= 1 )
+    if ( v15 >= 1 )
     {
       do
       {
-        v15 = ((__int64 (__fastcall *)(System_IO_BinaryReader_o *, const MethodInfo *))v7->klass->vtable._15_ReadInt32.methodPtr)(
-                v7,
-                v7->klass->vtable._15_ReadInt32.method);
         v16 = ((__int64 (__fastcall *)(System_IO_BinaryReader_o *, const MethodInfo *))v7->klass->vtable._15_ReadInt32.methodPtr)(
                 v7,
                 v7->klass->vtable._15_ReadInt32.method);
         v17 = ((__int64 (__fastcall *)(System_IO_BinaryReader_o *, const MethodInfo *))v7->klass->vtable._15_ReadInt32.methodPtr)(
                 v7,
                 v7->klass->vtable._15_ReadInt32.method);
-        v18 = sub_1C372A4(MaterialBranchRouteManager_MaterialBranchInfo_TypeInfo);
-        System_Object___ctor((Il2CppObject *)v18, 0);
-        if ( !v18 )
-          sub_1C372B4(v19);
-        *(_DWORD *)(v18 + 16) = v15;
-        *(_DWORD *)(v18 + 20) = v16;
-        *(_DWORD *)(v18 + 24) = v17;
-        v22 = MaterialBranchRouteManager_TypeInfo;
+        v18 = ((__int64 (__fastcall *)(System_IO_BinaryReader_o *, const MethodInfo *))v7->klass->vtable._15_ReadInt32.methodPtr)(
+                v7,
+                v7->klass->vtable._15_ReadInt32.method);
+        v19 = sub_1C3E7B0(MaterialBranchRouteManager_MaterialBranchInfo_TypeInfo);
+        System_Object___ctor((Il2CppObject *)v19, 0);
+        if ( !v19 )
+          sub_1C3E7C0(v20, v21);
+        *(_DWORD *)(v19 + 16) = v16;
+        *(_DWORD *)(v19 + 20) = v17;
+        *(_DWORD *)(v19 + 24) = v18;
+        v24 = MaterialBranchRouteManager_TypeInfo;
         if ( !MaterialBranchRouteManager_TypeInfo->_2.cctor_finished )
         {
           j_il2cpp_runtime_class_init_0(MaterialBranchRouteManager_TypeInfo);
-          v22 = MaterialBranchRouteManager_TypeInfo;
+          v24 = MaterialBranchRouteManager_TypeInfo;
         }
-        infoList = (System_Collections_Generic_List_object__o *)v22->static_fields->infoList;
+        infoList = (System_Collections_Generic_List_object__o *)v24->static_fields->infoList;
         if ( !infoList )
-          sub_1C372B4(0);
+          sub_1C3E7C0(0, v21);
         items = infoList->fields._items;
-        v25 = Method_System_Collections_Generic_List_MaterialBranchRouteManager_MaterialBranchInfo__Add__;
+        v27 = Method_System_Collections_Generic_List_MaterialBranchRouteManager_MaterialBranchInfo__Add__;
         ++infoList->fields._version;
         if ( !items )
-          sub_1C372B4(infoList);
+          sub_1C3E7C0(infoList, v21);
         size = infoList->fields._size;
         if ( (unsigned int)size >= LODWORD(items->max_length) )
         {
           System_Collections_Generic_List_object___AddWithResize(
             infoList,
-            (Il2CppObject *)v18,
-            *(const MethodInfo_37A3024 **)(*(_QWORD *)(v25[4] + 192LL) + 112LL));
+            (Il2CppObject *)v19,
+            *(const MethodInfo_37B5460 **)(*(_QWORD *)(v27[4] + 192LL) + 112LL));
         }
         else
         {
-          v27 = &items->obj.klass + size;
+          v29 = &items->obj.klass + size;
           infoList->fields._size = size + 1;
-          v27[4] = (Il2CppClass *)v18;
-          sub_1C36FFC((CGThumbnailListItem_o *)(v27 + 4), v18, v20, v21);
+          v29[4] = (Il2CppClass *)v19;
+          sub_1C3E508((CGThumbnailListItem_o *)(v29 + 4), v19, v22, v23);
         }
-        --v14;
+        --v15;
       }
-      while ( v14 );
+      while ( v15 );
     }
-    v11 = 8;
+    v12 = 8;
   }
   klass = v7->klass;
-  v29 = *(unsigned __int16 *)&v7->klass->_2.rank;
+  v31 = *(unsigned __int16 *)&v7->klass->_2.rank;
   if ( *(_WORD *)&v7->klass->_2.rank )
   {
     p_offset = &klass->_1.interfaceOffsets->offset;
     while ( *((System_IDisposable_c **)p_offset - 1) != System_IDisposable_TypeInfo )
     {
-      --v29;
+      --v31;
       p_offset += 4;
-      if ( !v29 )
+      if ( !v31 )
         goto LABEL_34;
     }
-    v31 = (__int64)&klass->vtable + 16 * *p_offset;
+    v33 = (__int64)&klass->vtable + 16 * *p_offset;
   }
   else
   {
 LABEL_34:
-    v31 = sub_1C87870(v7, System_IDisposable_TypeInfo, 0);
+    v33 = sub_1C8ED7C(v7, System_IDisposable_TypeInfo, 0);
   }
-  (*(void (__fastcall **)(System_IO_BinaryReader_o *, _QWORD))v31)(v7, *(_QWORD *)(v31 + 8));
-  return (v11 | 8) == 8;
+  (*(void (__fastcall **)(System_IO_BinaryReader_o *, _QWORD))v33)(v7, *(_QWORD *)(v33 + 8));
+  return (v12 | 8) == 8;
 }
 
 
@@ -642,46 +651,48 @@ void MaterialBranchRouteManager__SetRouteId(
 {
   __int64 v9; // x19
   System_Collections_Generic_List_object__o *All; // x0
-  ScriptManager_MenuRouteInfo_o *v11; // x8
+  __int64 v11; // x1
+  ScriptManager_MenuRouteInfo_o *v12; // x8
   int32_t route; // w24
-  MaterialBranchRouteManager_c *v13; // x0
+  MaterialBranchRouteManager_c *v14; // x0
   System_Collections_Generic_List_object__o *infoList; // x21
-  System_Predicate_object__o *v15; // x22
+  System_Predicate_object__o *v16; // x22
   Il2CppObject *current; // x25
-  _BOOL8 v17; // x0
+  _BOOL8 v18; // x0
+  __int64 v19; // x1
   il2cpp_array_size_t max_length; // x8
-  __int64 v19; // x10
-  ScriptManager_MenuRouteInfo_o *v20; // x11
-  MaterialBranchRouteManager_c *v21; // x0
-  __int64 v22; // x20
-  int32_t v23; // w2
-  const MethodInfo *v24; // x3
-  __int64 v25; // d0
-  MaterialBranchRouteManager_c *v26; // x0
+  __int64 v21; // x10
+  ScriptManager_MenuRouteInfo_o *v22; // x11
+  MaterialBranchRouteManager_c *v23; // x0
+  __int64 v24; // x20
+  int32_t v25; // w2
+  const MethodInfo *v26; // x3
+  __int64 v27; // d0
+  MaterialBranchRouteManager_c *v28; // x0
   struct System_Object_array *items; // x8
-  _QWORD *v28; // x9
+  _QWORD *v30; // x9
   __int64 size; // x10
-  Il2CppClass **v30; // x8
-  System_Collections_Generic_List_Enumerator_object__o v31; // [xsp+8h] [xbp-88h] BYREF
-  System_Collections_Generic_List_Enumerator_object__o v32; // [xsp+20h] [xbp-70h] BYREF
+  Il2CppClass **v32; // x8
+  System_Collections_Generic_List_Enumerator_object__o v33; // [xsp+8h] [xbp-88h] BYREF
+  System_Collections_Generic_List_Enumerator_object__o v34; // [xsp+20h] [xbp-70h] BYREF
 
-  if ( (byte_4C442CC & 1) == 0 )
+  if ( (byte_4C58095 & 1) == 0 )
   {
-    sub_1C37058(&Method_System_Collections_Generic_List_Enumerator_MaterialBranchRouteManager_MaterialBranchInfo__Dispose__);
-    sub_1C37058(&Method_System_Collections_Generic_List_Enumerator_MaterialBranchRouteManager_MaterialBranchInfo__MoveNext__);
-    sub_1C37058(&Method_System_Collections_Generic_List_Enumerator_MaterialBranchRouteManager_MaterialBranchInfo__get_Current__);
-    sub_1C37058(&Method_System_Collections_Generic_List_MaterialBranchRouteManager_MaterialBranchInfo__Add__);
-    sub_1C37058(&Method_System_Collections_Generic_List_MaterialBranchRouteManager_MaterialBranchInfo__FindAll__);
-    sub_1C37058(&Method_System_Collections_Generic_List_MaterialBranchRouteManager_MaterialBranchInfo__GetEnumerator__);
-    sub_1C37058(&MaterialBranchRouteManager_MaterialBranchInfo_TypeInfo);
-    sub_1C37058(&MaterialBranchRouteManager_TypeInfo);
-    sub_1C37058(&System_Predicate_MaterialBranchRouteManager_MaterialBranchInfo__TypeInfo);
-    sub_1C37058(&Method_MaterialBranchRouteManager___c__DisplayClass11_0__SetRouteId_b__0__);
-    sub_1C37058(&MaterialBranchRouteManager___c__DisplayClass11_0_TypeInfo);
-    byte_4C442CC = 1;
+    sub_1C3E564(&Method_System_Collections_Generic_List_Enumerator_MaterialBranchRouteManager_MaterialBranchInfo__Dispose__);
+    sub_1C3E564(&Method_System_Collections_Generic_List_Enumerator_MaterialBranchRouteManager_MaterialBranchInfo__MoveNext__);
+    sub_1C3E564(&Method_System_Collections_Generic_List_Enumerator_MaterialBranchRouteManager_MaterialBranchInfo__get_Current__);
+    sub_1C3E564(&Method_System_Collections_Generic_List_MaterialBranchRouteManager_MaterialBranchInfo__Add__);
+    sub_1C3E564(&Method_System_Collections_Generic_List_MaterialBranchRouteManager_MaterialBranchInfo__FindAll__);
+    sub_1C3E564(&Method_System_Collections_Generic_List_MaterialBranchRouteManager_MaterialBranchInfo__GetEnumerator__);
+    sub_1C3E564(&MaterialBranchRouteManager_MaterialBranchInfo_TypeInfo);
+    sub_1C3E564(&MaterialBranchRouteManager_TypeInfo);
+    sub_1C3E564(&System_Predicate_MaterialBranchRouteManager_MaterialBranchInfo__TypeInfo);
+    sub_1C3E564(&Method_MaterialBranchRouteManager___c__DisplayClass11_0__SetRouteId_b__0__);
+    sub_1C3E564(&MaterialBranchRouteManager___c__DisplayClass11_0_TypeInfo);
+    byte_4C58095 = 1;
   }
-  memset(&v32, 0, sizeof(v32));
-  v9 = sub_1C372A4(MaterialBranchRouteManager___c__DisplayClass11_0_TypeInfo);
+  memset(&v34, 0, sizeof(v34));
+  v9 = sub_1C3E7B0(MaterialBranchRouteManager___c__DisplayClass11_0_TypeInfo);
   System_Object___ctor((Il2CppObject *)v9, 0);
   if ( !v9 )
     goto LABEL_40;
@@ -690,23 +701,23 @@ void MaterialBranchRouteManager__SetRouteId(
   if ( !routeInfos )
     goto LABEL_40;
   if ( LODWORD(routeInfos->max_length) <= index )
-    sub_1C372BC(All);
-  v11 = routeInfos->m_Items[index];
-  if ( !v11 )
+    sub_1C3E7C8(All, v11);
+  v12 = routeInfos->m_Items[index];
+  if ( !v12 )
     goto LABEL_40;
-  route = v11->fields.route;
+  route = v12->fields.route;
   if ( !route )
     return;
-  v13 = MaterialBranchRouteManager_TypeInfo;
+  v14 = MaterialBranchRouteManager_TypeInfo;
   if ( !MaterialBranchRouteManager_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(MaterialBranchRouteManager_TypeInfo);
-    v13 = MaterialBranchRouteManager_TypeInfo;
+    v14 = MaterialBranchRouteManager_TypeInfo;
   }
-  infoList = (System_Collections_Generic_List_object__o *)v13->static_fields->infoList;
-  v15 = (System_Predicate_object__o *)sub_1C372A4(System_Predicate_MaterialBranchRouteManager_MaterialBranchInfo__TypeInfo);
+  infoList = (System_Collections_Generic_List_object__o *)v14->static_fields->infoList;
+  v16 = (System_Predicate_object__o *)sub_1C3E7B0(System_Predicate_MaterialBranchRouteManager_MaterialBranchInfo__TypeInfo);
   System_Predicate_object____ctor(
-    v15,
+    v16,
     (Il2CppObject *)v9,
     Method_MaterialBranchRouteManager___c__DisplayClass11_0__SetRouteId_b__0__,
     0);
@@ -714,68 +725,68 @@ void MaterialBranchRouteManager__SetRouteId(
     goto LABEL_40;
   All = (System_Collections_Generic_List_object__o *)System_Collections_Generic_List_object___FindAll(
                                                        infoList,
-                                                       (System_Predicate_T__o *)v15,
-                                                       (const MethodInfo_37A3734 *)Method_System_Collections_Generic_List_MaterialBranchRouteManager_MaterialBranchInfo__FindAll__);
+                                                       (System_Predicate_T__o *)v16,
+                                                       (const MethodInfo_37B5B70 *)Method_System_Collections_Generic_List_MaterialBranchRouteManager_MaterialBranchInfo__FindAll__);
   if ( !All )
     goto LABEL_40;
   System_Collections_Generic_List_object___GetEnumerator(
-    (System_Collections_Generic_List_Enumerator_T__o *)&v31,
+    (System_Collections_Generic_List_Enumerator_T__o *)&v33,
     All,
-    (const MethodInfo_37A3B1C *)Method_System_Collections_Generic_List_MaterialBranchRouteManager_MaterialBranchInfo__GetEnumerator__);
+    (const MethodInfo_37B5F58 *)Method_System_Collections_Generic_List_MaterialBranchRouteManager_MaterialBranchInfo__GetEnumerator__);
   current = 0;
-  v32 = v31;
+  v34 = v33;
 LABEL_13:
   while ( 1 )
   {
-    v17 = System_Collections_Generic_List_Enumerator_object___MoveNext(
-            &v32,
-            (const MethodInfo_352D810 *)Method_System_Collections_Generic_List_Enumerator_MaterialBranchRouteManager_MaterialBranchInfo__MoveNext__);
-    if ( !v17 )
+    v18 = System_Collections_Generic_List_Enumerator_object___MoveNext(
+            &v34,
+            (const MethodInfo_353FC4C *)Method_System_Collections_Generic_List_Enumerator_MaterialBranchRouteManager_MaterialBranchInfo__MoveNext__);
+    if ( !v18 )
       break;
     max_length = routeInfos->max_length;
     if ( (int)max_length >= 1 )
     {
-      v19 = 0;
+      v21 = 0;
       while ( 1 )
       {
-        if ( (unsigned int)v19 >= (unsigned int)max_length )
-          sub_1C372BC(v17);
-        v20 = routeInfos->m_Items[v19];
-        if ( !v20 )
-          sub_1C372B4(v17);
-        if ( !v32.fields._current )
-          sub_1C372B4(v17);
-        if ( v20->fields.route == LODWORD(v32.fields._current[1].monitor) )
+        if ( (unsigned int)v21 >= (unsigned int)max_length )
+          sub_1C3E7C8(v18, v19);
+        v22 = routeInfos->m_Items[v21];
+        if ( !v22 )
+          sub_1C3E7C0(v18, v19);
+        if ( !v34.fields._current )
+          sub_1C3E7C0(v18, v19);
+        if ( v22->fields.route == LODWORD(v34.fields._current[1].monitor) )
           break;
-        if ( (int)++v19 >= (int)max_length )
+        if ( (int)++v21 >= (int)max_length )
           goto LABEL_13;
       }
-      current = v32.fields._current;
+      current = v34.fields._current;
     }
   }
   System_Collections_Generic_List_Enumerator_object___Dispose(
-    &v32,
-    (const MethodInfo_352D80C *)Method_System_Collections_Generic_List_Enumerator_MaterialBranchRouteManager_MaterialBranchInfo__Dispose__);
+    &v34,
+    (const MethodInfo_353FC48 *)Method_System_Collections_Generic_List_Enumerator_MaterialBranchRouteManager_MaterialBranchInfo__Dispose__);
   if ( !current )
   {
-    v22 = sub_1C372A4(MaterialBranchRouteManager_MaterialBranchInfo_TypeInfo);
-    System_Object___ctor((Il2CppObject *)v22, 0);
-    if ( v22 )
+    v24 = sub_1C3E7B0(MaterialBranchRouteManager_MaterialBranchInfo_TypeInfo);
+    System_Object___ctor((Il2CppObject *)v24, 0);
+    if ( v24 )
     {
-      v25 = *(_QWORD *)(v9 + 16);
-      *(_DWORD *)(v22 + 24) = route;
-      *(_QWORD *)(v22 + 16) = v25;
-      v26 = MaterialBranchRouteManager_TypeInfo;
+      v27 = *(_QWORD *)(v9 + 16);
+      *(_DWORD *)(v24 + 24) = route;
+      *(_QWORD *)(v24 + 16) = v27;
+      v28 = MaterialBranchRouteManager_TypeInfo;
       if ( !MaterialBranchRouteManager_TypeInfo->_2.cctor_finished )
       {
         j_il2cpp_runtime_class_init_0(MaterialBranchRouteManager_TypeInfo);
-        v26 = MaterialBranchRouteManager_TypeInfo;
+        v28 = MaterialBranchRouteManager_TypeInfo;
       }
-      All = (System_Collections_Generic_List_object__o *)v26->static_fields->infoList;
+      All = (System_Collections_Generic_List_object__o *)v28->static_fields->infoList;
       if ( All )
       {
         items = All->fields._items;
-        v28 = Method_System_Collections_Generic_List_MaterialBranchRouteManager_MaterialBranchInfo__Add__;
+        v30 = Method_System_Collections_Generic_List_MaterialBranchRouteManager_MaterialBranchInfo__Add__;
         ++All->fields._version;
         if ( items )
         {
@@ -784,32 +795,32 @@ LABEL_13:
           {
             System_Collections_Generic_List_object___AddWithResize(
               All,
-              (Il2CppObject *)v22,
-              *(const MethodInfo_37A3024 **)(*(_QWORD *)(v28[4] + 192LL) + 112LL));
+              (Il2CppObject *)v24,
+              *(const MethodInfo_37B5460 **)(*(_QWORD *)(v30[4] + 192LL) + 112LL));
           }
           else
           {
-            v30 = &items->obj.klass + size;
+            v32 = &items->obj.klass + size;
             All->fields._size = size + 1;
-            v30[4] = (Il2CppClass *)v22;
-            sub_1C36FFC((CGThumbnailListItem_o *)(v30 + 4), v22, v23, v24);
+            v32[4] = (Il2CppClass *)v24;
+            sub_1C3E508((CGThumbnailListItem_o *)(v32 + 4), v24, v25, v26);
           }
           goto LABEL_34;
         }
       }
     }
 LABEL_40:
-    sub_1C372B4(All);
+    sub_1C3E7C0(All, v11);
   }
   *(_DWORD *)((char *)&off_18 + (_QWORD)current) = route;
-  v21 = MaterialBranchRouteManager_TypeInfo;
+  v23 = MaterialBranchRouteManager_TypeInfo;
   if ( !MaterialBranchRouteManager_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(MaterialBranchRouteManager_TypeInfo);
 LABEL_34:
-    v21 = MaterialBranchRouteManager_TypeInfo;
+    v23 = MaterialBranchRouteManager_TypeInfo;
   }
-  v21->static_fields->isModfiy = 1;
+  v23->static_fields->isModfiy = 1;
 }
 
 
@@ -821,29 +832,32 @@ bool MaterialBranchRouteManager__WriteData(const MethodInfo *method)
   System_String_o *FilePath; // x0
   System_IO_Stream_o *v6; // x20
   System_IO_BinaryWriter_o *v7; // x19
-  MaterialBranchRouteManager_c *v8; // x0
+  __int64 v8; // x1
+  MaterialBranchRouteManager_c *v9; // x0
   struct MaterialBranchRouteManager_StaticFields *static_fields; // x8
   struct System_Collections_Generic_List_MaterialBranchRouteManager_MaterialBranchInfo__o *infoList; // x9
   int size; // w20
+  __int64 v13; // x1
   int32_t i; // w21
-  MaterialBranchRouteManager_c *v13; // x0
-  System_Collections_Generic_List_object__o *v14; // x0
+  MaterialBranchRouteManager_c *v15; // x0
+  System_Collections_Generic_List_object__o *v16; // x0
   Il2CppObject *Item; // x0
-  Il2CppObject *v16; // x22
+  __int64 v18; // x1
+  Il2CppObject *v19; // x22
   System_IO_BinaryWriter_c *klass; // x8
-  __int64 v18; // x9
+  __int64 v21; // x9
   int32_t *p_offset; // x10
-  __int64 v20; // x0
+  __int64 v23; // x0
 
-  if ( (byte_4C442CE & 1) == 0 )
+  if ( (byte_4C58097 & 1) == 0 )
   {
-    sub_1C37058(&System_IO_BinaryWriter_TypeInfo);
-    sub_1C37058(&System_IDisposable_TypeInfo);
-    sub_1C37058(&Method_System_Collections_Generic_List_MaterialBranchRouteManager_MaterialBranchInfo__get_Count__);
-    sub_1C37058(&Method_System_Collections_Generic_List_MaterialBranchRouteManager_MaterialBranchInfo__get_Item__);
-    sub_1C37058(&ManagerConfig_TypeInfo);
-    sub_1C37058(&MaterialBranchRouteManager_TypeInfo);
-    byte_4C442CE = 1;
+    sub_1C3E564(&System_IO_BinaryWriter_TypeInfo);
+    sub_1C3E564(&System_IDisposable_TypeInfo);
+    sub_1C3E564(&Method_System_Collections_Generic_List_MaterialBranchRouteManager_MaterialBranchInfo__get_Count__);
+    sub_1C3E564(&Method_System_Collections_Generic_List_MaterialBranchRouteManager_MaterialBranchInfo__get_Item__);
+    sub_1C3E564(&ManagerConfig_TypeInfo);
+    sub_1C3E564(&MaterialBranchRouteManager_TypeInfo);
+    byte_4C58097 = 1;
   }
   v1 = MaterialBranchRouteManager_TypeInfo;
   if ( !MaterialBranchRouteManager_TypeInfo->_2.cctor_finished )
@@ -870,20 +884,20 @@ bool MaterialBranchRouteManager__WriteData(const MethodInfo *method)
   *((_BYTE *)v4[2].virtualMethodPointer + 8) = 0;
   FilePath = MaterialBranchRouteManager__GetFilePath(v4);
   v6 = (System_IO_Stream_o *)System_IO_File__OpenWrite(FilePath, 0);
-  v7 = (System_IO_BinaryWriter_o *)sub_1C372A4(System_IO_BinaryWriter_TypeInfo);
-  System_IO_BinaryWriter___ctor_64472960(v7, v6, 0);
-  v8 = MaterialBranchRouteManager_TypeInfo;
+  v7 = (System_IO_BinaryWriter_o *)sub_1C3E7B0(System_IO_BinaryWriter_TypeInfo);
+  System_IO_BinaryWriter___ctor_64547772(v7, v6, 0);
+  v9 = MaterialBranchRouteManager_TypeInfo;
   if ( !MaterialBranchRouteManager_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(MaterialBranchRouteManager_TypeInfo);
-    v8 = MaterialBranchRouteManager_TypeInfo;
+    v9 = MaterialBranchRouteManager_TypeInfo;
   }
-  static_fields = v8->static_fields;
+  static_fields = v9->static_fields;
   infoList = static_fields->infoList;
   if ( !infoList )
-    sub_1C372B4(v8);
+    sub_1C3E7C0(v9, v8);
   if ( !v7 )
-    sub_1C372B4(v8);
+    sub_1C3E7C0(v9, v8);
   size = infoList->fields._size;
   ((void (__fastcall *)(System_IO_BinaryWriter_o *, struct System_String_o *, const MethodInfo *))v7->klass->vtable._22_Write.methodPtr)(
     v7,
@@ -901,56 +915,56 @@ bool MaterialBranchRouteManager__WriteData(const MethodInfo *method)
   {
     for ( i = 0; i != size; ++i )
     {
-      v13 = MaterialBranchRouteManager_TypeInfo;
+      v15 = MaterialBranchRouteManager_TypeInfo;
       if ( !MaterialBranchRouteManager_TypeInfo->_2.cctor_finished )
       {
         j_il2cpp_runtime_class_init_0(MaterialBranchRouteManager_TypeInfo);
-        v13 = MaterialBranchRouteManager_TypeInfo;
+        v15 = MaterialBranchRouteManager_TypeInfo;
       }
-      v14 = (System_Collections_Generic_List_object__o *)v13->static_fields->infoList;
-      if ( !v14 )
-        sub_1C372B4(0);
+      v16 = (System_Collections_Generic_List_object__o *)v15->static_fields->infoList;
+      if ( !v16 )
+        sub_1C3E7C0(0, v13);
       Item = System_Collections_Generic_List_object___get_Item(
-               v14,
+               v16,
                i,
-               (const MethodInfo_37A2D54 *)Method_System_Collections_Generic_List_MaterialBranchRouteManager_MaterialBranchInfo__get_Item__);
-      v16 = Item;
+               (const MethodInfo_37B5190 *)Method_System_Collections_Generic_List_MaterialBranchRouteManager_MaterialBranchInfo__get_Item__);
+      v19 = Item;
       if ( !Item )
-        sub_1C372B4(0);
+        sub_1C3E7C0(0, v18);
       ((void (__fastcall *)(System_IO_BinaryWriter_o *, _QWORD, const MethodInfo *))v7->klass->vtable._17_Write.methodPtr)(
         v7,
         LODWORD(Item[1].klass),
         v7->klass->vtable._17_Write.method);
       ((void (__fastcall *)(System_IO_BinaryWriter_o *, _QWORD, const MethodInfo *))v7->klass->vtable._17_Write.methodPtr)(
         v7,
-        HIDWORD(v16[1].klass),
+        HIDWORD(v19[1].klass),
         v7->klass->vtable._17_Write.method);
       ((void (__fastcall *)(System_IO_BinaryWriter_o *, _QWORD, const MethodInfo *))v7->klass->vtable._17_Write.methodPtr)(
         v7,
-        LODWORD(v16[1].monitor),
+        LODWORD(v19[1].monitor),
         v7->klass->vtable._17_Write.method);
     }
   }
   klass = v7->klass;
-  v18 = *(unsigned __int16 *)&v7->klass->_2.rank;
+  v21 = *(unsigned __int16 *)&v7->klass->_2.rank;
   if ( *(_WORD *)&v7->klass->_2.rank )
   {
     p_offset = &klass->_1.interfaceOffsets->offset;
     while ( *((System_IDisposable_c **)p_offset - 1) != System_IDisposable_TypeInfo )
     {
-      --v18;
+      --v21;
       p_offset += 4;
-      if ( !v18 )
+      if ( !v21 )
         goto LABEL_27;
     }
-    v20 = (__int64)&klass->vtable + 16 * *p_offset;
+    v23 = (__int64)&klass->vtable + 16 * *p_offset;
   }
   else
   {
 LABEL_27:
-    v20 = sub_1C87870(v7, System_IDisposable_TypeInfo, 0);
+    v23 = sub_1C8ED7C(v7, System_IDisposable_TypeInfo, 0);
   }
-  (*(void (__fastcall **)(System_IO_BinaryWriter_o *, _QWORD))v20)(v7, *(_QWORD *)(v20 + 8));
+  (*(void (__fastcall **)(System_IO_BinaryWriter_o *, _QWORD))v23)(v7, *(_QWORD *)(v23 + 8));
   return 1;
 }
 
@@ -977,7 +991,7 @@ bool MaterialBranchRouteManager___c__DisplayClass11_0___SetRouteId_b__0(
         const MethodInfo *method)
 {
   if ( !x )
-    sub_1C372B4(this);
+    sub_1C3E7C0(this, 0);
   return x->fields.questId == this->fields.questId && x->fields.phase == this->fields.phase;
 }
 
@@ -996,6 +1010,6 @@ bool MaterialBranchRouteManager___c__DisplayClass9_0___IsMaterialSelectedRouteId
         const MethodInfo *method)
 {
   if ( !x )
-    sub_1C372B4(this);
+    sub_1C3E7C0(this, 0);
   return x->fields.questId == this->fields.questId && x->fields.routeId == this->fields.routeId;
 }

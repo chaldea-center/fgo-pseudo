@@ -48,49 +48,50 @@ void EventInfoConquestItemFarmCounterComponent__SetLabel(
   __int64 v16; // x7
   Il2CppObject *v17; // x0
   System_String_o *v18; // x0
+  __int64 v19; // x1
   UILabel_o *productNumLabel; // x22
-  System_String_o *v20; // x23
-  __int64 v21; // x2
-  __int64 v22; // x3
-  __int64 v23; // x4
-  __int64 v24; // x5
-  __int64 v25; // x6
-  __int64 v26; // x7
-  Il2CppObject *v27; // x0
-  int v28; // [xsp+4h] [xbp-4Ch] BYREF
-  int64_t v29; // [xsp+8h] [xbp-48h] BYREF
+  System_String_o *v21; // x23
+  __int64 v22; // x2
+  __int64 v23; // x3
+  __int64 v24; // x4
+  __int64 v25; // x5
+  __int64 v26; // x6
+  __int64 v27; // x7
+  Il2CppObject *v28; // x0
+  int v29; // [xsp+4h] [xbp-4Ch] BYREF
+  int64_t v30; // [xsp+8h] [xbp-48h] BYREF
 
-  if ( (byte_4C44493 & 1) == 0 )
+  if ( (byte_4C5825C & 1) == 0 )
   {
-    sub_1C37058(&int_TypeInfo);
-    sub_1C37058(&long_TypeInfo);
-    sub_1C37058(&LocalizationManager_TypeInfo);
-    sub_1C37058(&StringLiteral_5562/*"EVENT_CONQUEST_FARM_ITEM_FORMAT"*/);
-    sub_1C37058(&StringLiteral_5563/*"EVENT_CONQUEST_FARM_PRODUCT_FORMAT"*/);
-    byte_4C44493 = 1;
+    sub_1C3E564(&int_TypeInfo);
+    sub_1C3E564(&long_TypeInfo);
+    sub_1C3E564(&LocalizationManager_TypeInfo);
+    sub_1C3E564(&StringLiteral_5562/*"EVENT_CONQUEST_FARM_ITEM_FORMAT"*/);
+    sub_1C3E564(&StringLiteral_5563/*"EVENT_CONQUEST_FARM_PRODUCT_FORMAT"*/);
+    byte_4C5825C = 1;
   }
   itemNumLabel = this->fields.itemNumLabel;
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   v10 = LocalizationManager__Get((System_String_o *)StringLiteral_5562/*"EVENT_CONQUEST_FARM_ITEM_FORMAT"*/, 0);
-  v29 = itemNum;
-  v17 = (Il2CppObject *)j_il2cpp_value_box_0(long_TypeInfo, &v29, v11, v12, v13, v14, v15, v16);
+  v30 = itemNum;
+  v17 = (Il2CppObject *)j_il2cpp_value_box_0(long_TypeInfo, &v30, v11, v12, v13, v14, v15, v16);
   v18 = System_String__Format(v10, v17, 0);
   if ( !itemNumLabel )
     goto LABEL_10;
   UILabel__set_text(itemNumLabel, v18, 0);
   productNumLabel = this->fields.productNumLabel;
-  v20 = LocalizationManager__Get((System_String_o *)StringLiteral_5563/*"EVENT_CONQUEST_FARM_PRODUCT_FORMAT"*/, 0);
-  v28 = productNum - addNum;
-  v27 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v28, v21, v22, v23, v24, v25, v26);
-  v18 = System_String__Format(v20, v27, 0);
+  v21 = LocalizationManager__Get((System_String_o *)StringLiteral_5563/*"EVENT_CONQUEST_FARM_PRODUCT_FORMAT"*/, 0);
+  v29 = productNum - addNum;
+  v28 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v29, v22, v23, v24, v25, v26, v27);
+  v18 = System_String__Format(v21, v28, 0);
   if ( !productNumLabel
     || (UILabel__set_text(productNumLabel, v18, 0), (v18 = (System_String_o *)this->fields.itemNumLabel) == 0)
     || (UILabel__SetCondensedScale((UILabel_o *)v18, this->fields.numLabelMaxWidth, 0, 0),
         (v18 = (System_String_o *)this->fields.productNumLabel) == 0) )
   {
 LABEL_10:
-    sub_1C372B4(v18);
+    sub_1C3E7C0(v18, v19);
   }
   UILabel__SetCondensedScale((UILabel_o *)v18, this->fields.numLabelMaxWidth, 0, 0);
 }
@@ -103,16 +104,17 @@ void EventInfoConquestItemFarmCounterComponent__Start(
   UnityEngine_Object_o *itemNumTitleLabel; // x20
   UILabel_o *v4; // x20
   System_String_o *v5; // x0
+  __int64 v6; // x1
   UnityEngine_Object_o *productNumTitleLabel; // x20
-  UILabel_o *v7; // x20
+  UILabel_o *v8; // x20
 
-  if ( (byte_4C44492 & 1) == 0 )
+  if ( (byte_4C5825B & 1) == 0 )
   {
-    sub_1C37058(&LocalizationManager_TypeInfo);
-    sub_1C37058(&UnityEngine_Object_TypeInfo);
-    sub_1C37058(&StringLiteral_5562/*"EVENT_CONQUEST_FARM_ITEM_FORMAT"*/);
-    sub_1C37058(&StringLiteral_5563/*"EVENT_CONQUEST_FARM_PRODUCT_FORMAT"*/);
-    byte_4C44492 = 1;
+    sub_1C3E564(&LocalizationManager_TypeInfo);
+    sub_1C3E564(&UnityEngine_Object_TypeInfo);
+    sub_1C3E564(&StringLiteral_5562/*"EVENT_CONQUEST_FARM_ITEM_FORMAT"*/);
+    sub_1C3E564(&StringLiteral_5563/*"EVENT_CONQUEST_FARM_PRODUCT_FORMAT"*/);
+    byte_4C5825B = 1;
   }
   itemNumTitleLabel = (UnityEngine_Object_o *)this->fields.itemNumTitleLabel;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -136,13 +138,13 @@ void EventInfoConquestItemFarmCounterComponent__Start(
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   if ( UnityEngine_Object__op_Inequality(productNumTitleLabel, 0, 0) )
   {
-    v7 = this->fields.productNumTitleLabel;
+    v8 = this->fields.productNumTitleLabel;
     if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
     v5 = LocalizationManager__Get((System_String_o *)StringLiteral_5563/*"EVENT_CONQUEST_FARM_PRODUCT_FORMAT"*/, 0);
-    if ( v7 )
+    if ( v8 )
     {
-      UILabel__set_text(v7, v5, 0);
+      UILabel__set_text(v8, v5, 0);
       v5 = (System_String_o *)this->fields.productNumTitleLabel;
       if ( v5 )
       {
@@ -151,7 +153,7 @@ void EventInfoConquestItemFarmCounterComponent__Start(
       }
     }
 LABEL_20:
-    sub_1C372B4(v5);
+    sub_1C3E7C0(v5, v6);
   }
 LABEL_19:
   EventInfoConquestItemCounterComponent__SetNum(

@@ -10,6 +10,6 @@ void SetMenuNameControl__setMenuName(SetMenuNameControl_o *this, System_String_o
 
   menuNameLb = this->fields.menuNameLb;
   if ( !menuNameLb )
-    sub_1C372B4(0);
+    sub_1C3E7C0(0, menuName);
   UILabel__set_text(menuNameLb, menuName, 0);
 }

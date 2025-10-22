@@ -33,12 +33,12 @@ void EventInfoChronologyComponent__Refresh(EventInfoChronologyComponent_o *this,
   UnityEngine_Object_o *spriteLineH; // x21
   UnityEngine_Vector3_o v14; // 0:s0.4,4:s1.4,8:s2.4
 
-  if ( (byte_4C43371 & 1) == 0 )
+  if ( (byte_4C57126 & 1) == 0 )
   {
-    sub_1C37058(&Method_UnityEngine_GameObject_GetComponent_EnableCommonReleaseComponent___);
-    sub_1C37058(&Method_UnityEngine_GameObject_GetComponent_UILabel___);
-    sub_1C37058(&UnityEngine_Object_TypeInfo);
-    byte_4C43371 = 1;
+    sub_1C3E564(&Method_UnityEngine_GameObject_GetComponent_EnableCommonReleaseComponent___);
+    sub_1C3E564(&Method_UnityEngine_GameObject_GetComponent_UILabel___);
+    sub_1C3E564(&UnityEngine_Object_TypeInfo);
+    byte_4C57126 = 1;
   }
   objHistory = this->fields.objHistory;
   if ( !objHistory )
@@ -70,7 +70,7 @@ void EventInfoChronologyComponent__Refresh(EventInfoChronologyComponent_o *this,
           {
             Component_object = UnityEngine_GameObject__GetComponent_object_(
                                  objHistory,
-                                 (const MethodInfo_313F1D8 *)Method_UnityEngine_GameObject_GetComponent_EnableCommonReleaseComponent___);
+                                 (const MethodInfo_31510CC *)Method_UnityEngine_GameObject_GetComponent_EnableCommonReleaseComponent___);
             if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
               j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
             objHistory = (UnityEngine_GameObject_o *)UnityEngine_Object__op_Inequality(
@@ -93,7 +93,7 @@ void EventInfoChronologyComponent__Refresh(EventInfoChronologyComponent_o *this,
                   goto LABEL_40;
                 v4 = UnityEngine_GameObject__GetComponent_object_(
                        objHistory,
-                       (const MethodInfo_313F1D8 *)Method_UnityEngine_GameObject_GetComponent_UILabel___);
+                       (const MethodInfo_31510CC *)Method_UnityEngine_GameObject_GetComponent_UILabel___);
               }
               objHistory = this->fields.objHistory;
               ++v5;
@@ -152,7 +152,7 @@ void EventInfoChronologyComponent__Refresh(EventInfoChronologyComponent_o *this,
         }
       }
 LABEL_40:
-      sub_1C372B4(objHistory);
+      sub_1C3E7C0(objHistory, method);
     }
   }
 }
@@ -165,7 +165,7 @@ void EventInfoChronologyComponent__SetSprite(
         const MethodInfo *method)
 {
   if ( !src || !dest )
-    sub_1C372B4(this);
+    sub_1C3E7C0(this, src);
   UISprite__set_atlas(dest, src->fields.mAtlas, 0);
   UISprite__set_spriteName(dest, src->fields.mSpriteName, 0);
 }

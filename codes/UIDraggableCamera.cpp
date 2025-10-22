@@ -3,10 +3,10 @@ void UIDraggableCamera___ctor(UIDraggableCamera_o *this, const MethodInfo *metho
   UnityEngine_Vector2_c *v3; // x8
   struct UnityEngine_Vector2_o oneVector; // d0
 
-  if ( !byte_4C433CF )
+  if ( !byte_4C57184 )
   {
-    sub_1C37058(&UnityEngine_Vector2_TypeInfo);
-    byte_4C433CF = 1;
+    sub_1C3E564(&UnityEngine_Vector2_TypeInfo);
+    byte_4C57184 = 1;
   }
   v3 = UnityEngine_Vector2_TypeInfo;
   oneVector = UnityEngine_Vector2_TypeInfo->static_fields->oneVector;
@@ -14,11 +14,11 @@ void UIDraggableCamera___ctor(UIDraggableCamera_o *this, const MethodInfo *metho
   this->fields.smoothDragStart = 1;
   this->fields.momentumAmount = 35.0;
   this->fields.scale = oneVector;
-  if ( !byte_4C3C81A )
+  if ( !byte_4C5059A )
   {
-    sub_1C37058(&UnityEngine_Vector2_TypeInfo);
+    sub_1C3E564(&UnityEngine_Vector2_TypeInfo);
     v3 = UnityEngine_Vector2_TypeInfo;
-    byte_4C3C81A = 1;
+    byte_4C5059A = 1;
   }
   this->fields.mMomentum = v3->static_fields->zeroVector;
   UnityEngine_MonoBehaviour___ctor((UnityEngine_MonoBehaviour_o *)this, 0);
@@ -29,44 +29,45 @@ void UIDraggableCamera___ctor(UIDraggableCamera_o *this, const MethodInfo *metho
 UnityEngine_Vector3_o UIDraggableCamera__CalculateConstrainOffset(UIDraggableCamera_o *this, const MethodInfo *method)
 {
   UnityEngine_Object_o *rootForBounds; // x20
+  __int64 v4; // x1
   UnityEngine_Camera_o *mCam; // x0
-  float v5; // s8
-  int v6; // w20
+  float v6; // s8
+  int v7; // w20
   float m_YMin; // s10
-  int v8; // w22
+  int v9; // w22
   float m_XMin; // s9
   float m_Width; // s11
-  int v11; // w21
-  float v12; // s13
+  int v12; // w21
+  float v13; // s13
   float m_Height; // s14
-  int v14; // w23
+  int v15; // w23
   float z; // s8
   float x; // s10
   float y; // s12
-  float v18; // s3
-  float v19; // s4
-  float v20; // s5
-  float v21; // s3
-  float v22; // s0
-  float v23; // s1
-  UnityEngine_Vector2_o v24; // kr00_8
+  float v19; // s3
+  float v20; // s4
+  float v21; // s5
+  float v22; // s3
+  float v23; // s0
+  float v24; // s1
+  UnityEngine_Vector2_o v25; // kr00_8
   struct UnityEngine_Vector3_StaticFields *static_fields; // x8
-  float v26; // s2
-  UnityEngine_Vector2_o v27; // 0:s4.4,4:s5.4
-  UnityEngine_Vector2_o v28; // 0:s6.4,4:s7.4
-  UnityEngine_Vector3_o v29; // 0:s0.4,4:s1.4,8:s2.4
+  float v27; // s2
+  UnityEngine_Vector2_o v28; // 0:s4.4,4:s5.4
+  UnityEngine_Vector2_o v29; // 0:s6.4,4:s7.4
   UnityEngine_Vector3_o v30; // 0:s0.4,4:s1.4,8:s2.4
   UnityEngine_Vector3_o v31; // 0:s0.4,4:s1.4,8:s2.4
-  UnityEngine_Vector3_o v32; // 0:s0.4,4:s1.4,8:s2.4 OVERLAPPED
+  UnityEngine_Vector3_o v32; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o v33; // 0:s0.4,4:s1.4,8:s2.4 OVERLAPPED
   UnityEngine_Vector3_o result; // 0:s0.4,4:s1.4,8:s2.4
   UnityEngine_Rect_o rect; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
-  UnityEngine_Rect_o v35; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
   UnityEngine_Rect_o v36; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
+  UnityEngine_Rect_o v37; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 
-  if ( (byte_4C47583 & 1) == 0 )
+  if ( (byte_4C5B37A & 1) == 0 )
   {
-    sub_1C37058(&UnityEngine_Object_TypeInfo);
-    byte_4C47583 = 1;
+    sub_1C3E564(&UnityEngine_Object_TypeInfo);
+    byte_4C5B37A = 1;
   }
   rootForBounds = (UnityEngine_Object_o *)this->fields.rootForBounds;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -81,65 +82,65 @@ UnityEngine_Vector3_o UIDraggableCamera__CalculateConstrainOffset(UIDraggableCam
       mCam = this->fields.mCam;
       if ( mCam )
       {
-        LODWORD(v5) = *(_OWORD *)&UnityEngine_Camera__get_rect(mCam, 0);
+        LODWORD(v6) = *(_OWORD *)&UnityEngine_Camera__get_rect(mCam, 0);
         mCam = (UnityEngine_Camera_o *)UnityEngine_Screen__get_width(0);
         if ( this->fields.mCam )
         {
-          v6 = (int)mCam;
+          v7 = (int)mCam;
           rect = UnityEngine_Camera__get_rect(this->fields.mCam, 0);
           m_YMin = rect.fields.m_YMin;
           mCam = (UnityEngine_Camera_o *)UnityEngine_Screen__get_height(0);
           if ( this->fields.mCam )
           {
-            v8 = (int)mCam;
-            v35 = UnityEngine_Camera__get_rect(this->fields.mCam, 0);
-            m_XMin = v35.fields.m_XMin;
-            m_Width = v35.fields.m_Width;
+            v9 = (int)mCam;
+            v36 = UnityEngine_Camera__get_rect(this->fields.mCam, 0);
+            m_XMin = v36.fields.m_XMin;
+            m_Width = v36.fields.m_Width;
             mCam = (UnityEngine_Camera_o *)UnityEngine_Screen__get_width(0);
             if ( this->fields.mCam )
             {
-              v11 = (int)mCam;
-              v36 = UnityEngine_Camera__get_rect(this->fields.mCam, 0);
-              v12 = v36.fields.m_YMin;
-              m_Height = v36.fields.m_Height;
+              v12 = (int)mCam;
+              v37 = UnityEngine_Camera__get_rect(this->fields.mCam, 0);
+              v13 = v37.fields.m_YMin;
+              m_Height = v37.fields.m_Height;
               mCam = (UnityEngine_Camera_o *)UnityEngine_Screen__get_height(0);
               if ( this->fields.mCam )
               {
-                v14 = (int)mCam;
-                v29.fields.x = v5 * (float)v6;
-                v29.fields.y = m_YMin * (float)v8;
-                v29.fields.z = 0.0;
+                v15 = (int)mCam;
+                v30.fields.x = v6 * (float)v7;
+                v30.fields.y = m_YMin * (float)v9;
+                v30.fields.z = 0.0;
                 z = 0.0;
-                v30 = UnityEngine_Camera__ScreenToWorldPoint_71073044(this->fields.mCam, v29, 0);
+                v31 = UnityEngine_Camera__ScreenToWorldPoint_71147856(this->fields.mCam, v30, 0);
                 mCam = this->fields.mCam;
                 if ( mCam )
                 {
-                  x = v30.fields.x;
-                  y = v30.fields.y;
-                  v31.fields.x = (float)(m_Width + m_XMin) * (float)v11;
-                  v31.fields.y = (float)(m_Height + v12) * (float)v14;
-                  v31.fields.z = 0.0;
-                  v32 = UnityEngine_Camera__ScreenToWorldPoint_71073044(mCam, v31, 0);
-                  v32.fields.z = this->fields.mBounds.fields.m_Center.fields.x;
-                  v18 = this->fields.mBounds.fields.m_Center.fields.y;
-                  v19 = this->fields.mBounds.fields.m_Extents.fields.x;
-                  v20 = this->fields.mBounds.fields.m_Extents.fields.y;
-                  v28.fields.x = v32.fields.x;
-                  v28.fields.y = v32.fields.y;
-                  v32.fields.x = v32.fields.z - v19;
-                  v32.fields.y = v18 - v20;
-                  v32.fields.z = v32.fields.z + v19;
-                  v21 = v18 + v20;
-                  v27.fields.x = x;
-                  v27.fields.y = y;
-                  v24 = NGUIMath__ConstrainRect(
-                          *(UnityEngine_Vector2_o *)&v32.fields.x,
-                          *(UnityEngine_Vector2_o *)&v32.fields.z,
-                          v27,
+                  x = v31.fields.x;
+                  y = v31.fields.y;
+                  v32.fields.x = (float)(m_Width + m_XMin) * (float)v12;
+                  v32.fields.y = (float)(m_Height + v13) * (float)v15;
+                  v32.fields.z = 0.0;
+                  v33 = UnityEngine_Camera__ScreenToWorldPoint_71147856(mCam, v32, 0);
+                  v33.fields.z = this->fields.mBounds.fields.m_Center.fields.x;
+                  v19 = this->fields.mBounds.fields.m_Center.fields.y;
+                  v20 = this->fields.mBounds.fields.m_Extents.fields.x;
+                  v21 = this->fields.mBounds.fields.m_Extents.fields.y;
+                  v29.fields.x = v33.fields.x;
+                  v29.fields.y = v33.fields.y;
+                  v33.fields.x = v33.fields.z - v20;
+                  v33.fields.y = v19 - v21;
+                  v33.fields.z = v33.fields.z + v20;
+                  v22 = v19 + v21;
+                  v28.fields.x = x;
+                  v28.fields.y = y;
+                  v25 = NGUIMath__ConstrainRect(
+                          *(UnityEngine_Vector2_o *)&v33.fields.x,
+                          *(UnityEngine_Vector2_o *)&v33.fields.z,
                           v28,
+                          v29,
                           0);
-                  v23 = v24.fields.y;
-                  v22 = v24.fields.x;
+                  v24 = v25.fields.y;
+                  v23 = v25.fields.x;
                   goto LABEL_18;
                 }
               }
@@ -148,23 +149,23 @@ UnityEngine_Vector3_o UIDraggableCamera__CalculateConstrainOffset(UIDraggableCam
         }
       }
 LABEL_19:
-      sub_1C372B4(mCam);
+      sub_1C3E7C0(mCam, v4);
     }
   }
-  if ( !byte_4C3C921 )
+  if ( !byte_4C506A1 )
   {
-    sub_1C37058(&UnityEngine_Vector3_TypeInfo);
-    byte_4C3C921 = 1;
+    sub_1C3E564(&UnityEngine_Vector3_TypeInfo);
+    byte_4C506A1 = 1;
   }
   static_fields = UnityEngine_Vector3_TypeInfo->static_fields;
-  v22 = static_fields->zeroVector.fields.x;
-  v23 = static_fields->zeroVector.fields.y;
+  v23 = static_fields->zeroVector.fields.x;
+  v24 = static_fields->zeroVector.fields.y;
   z = static_fields->zeroVector.fields.z;
 LABEL_18:
-  v26 = z;
-  result.fields.z = v26;
-  result.fields.y = v23;
-  result.fields.x = v22;
+  v27 = z;
+  result.fields.z = v27;
+  result.fields.y = v24;
+  result.fields.x = v23;
   return result;
 }
 
@@ -175,20 +176,21 @@ bool UIDraggableCamera__ConstrainToBounds(UIDraggableCamera_o *this, bool immedi
   UnityEngine_Object_o *rootForBounds; // x21
   const MethodInfo *v7; // x1
   UnityEngine_GameObject_o *gameObject; // x0
+  __int64 v9; // x1
   float x; // s10
   float y; // s9
   float z; // s8
-  UnityEngine_Transform_o *v12; // x19
-  UnityEngine_Transform_o *v14; // x8
-  UnityEngine_GameObject_o *v15; // x19
-  UnityEngine_Vector3_o v16; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Transform_o *v13; // x19
+  UnityEngine_Transform_o *v15; // x8
+  UnityEngine_GameObject_o *v16; // x19
   UnityEngine_Vector3_o v17; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o v18; // 0:s0.4,4:s1.4,8:s2.4
   UnityEngine_Vector3_o position; // 0:s0.4,4:s1.4,8:s2.4
 
-  if ( (byte_4C47584 & 1) == 0 )
+  if ( (byte_4C5B37B & 1) == 0 )
   {
-    sub_1C37058(&UnityEngine_Object_TypeInfo);
-    byte_4C47584 = 1;
+    sub_1C3E564(&UnityEngine_Object_TypeInfo);
+    byte_4C5B37B = 1;
   }
   mTrans = (UnityEngine_Object_o *)this->fields.mTrans;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -200,25 +202,25 @@ bool UIDraggableCamera__ConstrainToBounds(UIDraggableCamera_o *this, bool immedi
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   if ( !UnityEngine_Object__op_Inequality(rootForBounds, 0, 0) )
     return 0;
-  v16 = UIDraggableCamera__CalculateConstrainOffset(this, v7);
-  x = v16.fields.x;
-  y = v16.fields.y;
-  if ( (float)((float)(v16.fields.z * v16.fields.z)
-             + (float)((float)(v16.fields.x * v16.fields.x) + (float)(v16.fields.y * v16.fields.y))) <= 0.0 )
+  v17 = UIDraggableCamera__CalculateConstrainOffset(this, v7);
+  x = v17.fields.x;
+  y = v17.fields.y;
+  if ( (float)((float)(v17.fields.z * v17.fields.z)
+             + (float)((float)(v17.fields.x * v17.fields.x) + (float)(v17.fields.y * v17.fields.y))) <= 0.0 )
     return 0;
-  z = v16.fields.z;
+  z = v17.fields.z;
   if ( !immediate )
   {
     gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
-    v14 = this->fields.mTrans;
-    if ( v14 )
+    v15 = this->fields.mTrans;
+    if ( v15 )
     {
-      v15 = gameObject;
-      position = UnityEngine_Transform__get_position(v14, 0);
+      v16 = gameObject;
+      position = UnityEngine_Transform__get_position(v15, 0);
       position.fields.x = position.fields.x - x;
       position.fields.y = position.fields.y - y;
       position.fields.z = position.fields.z - z;
-      gameObject = (UnityEngine_GameObject_o *)SpringPosition__Begin(v15, position, 13.0, 0);
+      gameObject = (UnityEngine_GameObject_o *)SpringPosition__Begin(v16, position, 13.0, 0);
       if ( gameObject )
       {
         LOWORD(gameObject[2].klass) = 257;
@@ -226,16 +228,16 @@ bool UIDraggableCamera__ConstrainToBounds(UIDraggableCamera_o *this, bool immedi
       }
     }
 LABEL_18:
-    sub_1C372B4(gameObject);
+    sub_1C3E7C0(gameObject, v9);
   }
-  v12 = this->fields.mTrans;
-  if ( !v12 )
+  v13 = this->fields.mTrans;
+  if ( !v13 )
     goto LABEL_18;
-  v17 = UnityEngine_Transform__get_position(v12, 0);
-  v17.fields.x = v17.fields.x - x;
-  v17.fields.y = v17.fields.y - y;
-  v17.fields.z = v17.fields.z - z;
-  UnityEngine_Transform__set_position(v12, v17, 0);
+  v18 = UnityEngine_Transform__get_position(v13, 0);
+  v18.fields.x = v18.fields.x - x;
+  v18.fields.y = v18.fields.y - y;
+  v18.fields.z = v18.fields.z - z;
+  UnityEngine_Transform__set_position(v13, v18, 0);
   return 1;
 }
 
@@ -257,11 +259,11 @@ void UIDraggableCamera__Drag(UIDraggableCamera_o *this, UnityEngine_Vector2_o de
 
   y = delta.fields.y;
   x = delta.fields.x;
-  if ( (byte_4C47586 & 1) == 0 )
+  if ( (byte_4C5B37D & 1) == 0 )
   {
-    sub_1C37058(&UnityEngine_Object_TypeInfo);
-    sub_1C37058(&UICamera_TypeInfo);
-    byte_4C47586 = 1;
+    sub_1C3E564(&UnityEngine_Object_TypeInfo);
+    sub_1C3E564(&UICamera_TypeInfo);
+    byte_4C5B37D = 1;
   }
   if ( this->fields.smoothDragStart && !this->fields.mDragStarted )
   {
@@ -293,7 +295,7 @@ void UIDraggableCamera__Drag(UIDraggableCamera_o *this, UnityEngine_Vector2_o de
   mTrans = this->fields.mTrans;
   if ( !mTrans )
 LABEL_21:
-    sub_1C372B4(v4);
+    sub_1C3E7C0(v4, method);
   v14.n64_u64[0] = vmul_f32(v7, vneg_f32((float32x2_t)this->fields.scale)).n64_u64[0];
   localPosition = UnityEngine_Transform__get_localPosition(this->fields.mTrans, 0);
   localPosition.fields.z = localPosition.fields.z + 0.0;
@@ -312,10 +314,10 @@ LABEL_21:
                                                              vdup_n_s32(0x3F2B851Fu))).n64_u64[0];
   if ( dragEffect != 2 && UIDraggableCamera__ConstrainToBounds(this, 1, v9) )
   {
-    if ( !byte_4C3C81A )
+    if ( !byte_4C5059A )
     {
-      sub_1C37058(&UnityEngine_Vector2_TypeInfo);
-      byte_4C3C81A = 1;
+      sub_1C3E564(&UnityEngine_Vector2_TypeInfo);
+      byte_4C5059A = 1;
     }
     zeroVector = UnityEngine_Vector2_TypeInfo->static_fields->zeroVector;
     this->fields.mScroll = 0.0;
@@ -332,13 +334,14 @@ void UIDraggableCamera__Press(UIDraggableCamera_o *this, bool isPressed, const M
   struct UnityEngine_Vector2_o zeroVector; // d0
   Il2CppObject *Component_object; // x19
   _BOOL8 v10; // x0
-  UnityEngine_Bounds_o v11[2]; // [xsp+8h] [xbp-68h] BYREF
+  __int64 v11; // x1
+  UnityEngine_Bounds_o v12[2]; // [xsp+8h] [xbp-68h] BYREF
 
-  if ( (byte_4C47585 & 1) == 0 )
+  if ( (byte_4C5B37C & 1) == 0 )
   {
-    sub_1C37058(&Method_UnityEngine_Component_GetComponent_SpringPosition___);
-    sub_1C37058(&UnityEngine_Object_TypeInfo);
-    byte_4C47585 = 1;
+    sub_1C3E564(&Method_UnityEngine_Component_GetComponent_SpringPosition___);
+    sub_1C3E564(&UnityEngine_Object_TypeInfo);
+    byte_4C5B37C = 1;
   }
   if ( isPressed )
     this->fields.mDragStarted = 0;
@@ -350,29 +353,29 @@ void UIDraggableCamera__Press(UIDraggableCamera_o *this, bool isPressed, const M
     this->fields.mPressed = isPressed;
     if ( isPressed )
     {
-      NGUIMath__CalculateAbsoluteWidgetBounds(v11, this->fields.rootForBounds, 0);
-      v7 = *(_OWORD *)&v11[0].fields.m_Center.fields.x;
-      v11[1] = v11[0];
-      *(_QWORD *)&this->fields.mBounds.fields.m_Extents.fields.y = *(_QWORD *)&v11[0].fields.m_Extents.fields.y;
+      NGUIMath__CalculateAbsoluteWidgetBounds(v12, this->fields.rootForBounds, 0);
+      v7 = *(_OWORD *)&v12[0].fields.m_Center.fields.x;
+      v12[1] = v12[0];
+      *(_QWORD *)&this->fields.mBounds.fields.m_Extents.fields.y = *(_QWORD *)&v12[0].fields.m_Extents.fields.y;
       *(_OWORD *)&this->fields.mBounds.fields.m_Center.fields.x = v7;
-      if ( !byte_4C3C81A )
+      if ( !byte_4C5059A )
       {
-        sub_1C37058(&UnityEngine_Vector2_TypeInfo);
-        byte_4C3C81A = 1;
+        sub_1C3E564(&UnityEngine_Vector2_TypeInfo);
+        byte_4C5059A = 1;
       }
       zeroVector = UnityEngine_Vector2_TypeInfo->static_fields->zeroVector;
       this->fields.mScroll = 0.0;
       this->fields.mMomentum = zeroVector;
       Component_object = UnityEngine_Component__GetComponent_object_(
                            (UnityEngine_Component_o *)this,
-                           (const MethodInfo_30DE428 *)Method_UnityEngine_Component_GetComponent_SpringPosition___);
+                           (const MethodInfo_30F0240 *)Method_UnityEngine_Component_GetComponent_SpringPosition___);
       if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
       v10 = UnityEngine_Object__op_Inequality((UnityEngine_Object_o *)Component_object, 0, 0);
       if ( v10 )
       {
         if ( !Component_object )
-          sub_1C372B4(v10);
+          sub_1C3E7C0(v10, v11);
         UnityEngine_Behaviour__set_enabled((UnityEngine_Behaviour_o *)Component_object, 0, 0);
       }
     }
@@ -391,17 +394,17 @@ void UIDraggableCamera__Scroll(UIDraggableCamera_o *this, float delta, const Met
   float v7; // s1
   float v8; // s5
 
-  if ( (byte_4C47587 & 1) == 0 )
+  if ( (byte_4C5B37E & 1) == 0 )
   {
-    sub_1C37058(&NGUITools_TypeInfo);
-    byte_4C47587 = 1;
+    sub_1C3E564(&NGUITools_TypeInfo);
+    byte_4C5B37E = 1;
   }
   if ( UnityEngine_Behaviour__get_enabled((UnityEngine_Behaviour_o *)this, 0) )
   {
     gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
     if ( !NGUITools_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(NGUITools_TypeInfo);
-    if ( NGUITools__GetActive_49345096(gameObject, 0) )
+    if ( NGUITools__GetActive_49418336(gameObject, 0) )
     {
       mScroll = this->fields.mScroll;
       v7 = -1.0;
@@ -436,32 +439,32 @@ void UIDraggableCamera__Start(UIDraggableCamera_o *this, const MethodInfo *metho
   System_String_o *Hierarchy; // x0
   Il2CppObject *v16; // x20
 
-  if ( (byte_4C47582 & 1) == 0 )
+  if ( (byte_4C5B379 & 1) == 0 )
   {
-    sub_1C37058(&Method_UnityEngine_Component_GetComponent_Camera___);
-    sub_1C37058(&UnityEngine_Debug_TypeInfo);
-    sub_1C37058(&Method_NGUITools_FindInParents_UIRoot___);
-    sub_1C37058(&NGUITools_TypeInfo);
-    sub_1C37058(&UnityEngine_Object_TypeInfo);
-    sub_1C37058(&StringLiteral_280/*" needs the 'Root For Bounds' parameter to be set"*/);
-    byte_4C47582 = 1;
+    sub_1C3E564(&Method_UnityEngine_Component_GetComponent_Camera___);
+    sub_1C3E564(&UnityEngine_Debug_TypeInfo);
+    sub_1C3E564(&Method_NGUITools_FindInParents_UIRoot___);
+    sub_1C3E564(&NGUITools_TypeInfo);
+    sub_1C3E564(&UnityEngine_Object_TypeInfo);
+    sub_1C3E564(&StringLiteral_280/*" needs the 'Root For Bounds' parameter to be set"*/);
+    byte_4C5B379 = 1;
   }
   Component_object = UnityEngine_Component__GetComponent_object_(
                        (UnityEngine_Component_o *)this,
-                       (const MethodInfo_30DE428 *)Method_UnityEngine_Component_GetComponent_Camera___);
+                       (const MethodInfo_30F0240 *)Method_UnityEngine_Component_GetComponent_Camera___);
   this->fields.mCam = (struct UnityEngine_Camera_o *)Component_object;
-  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.mCam, (int32_t)Component_object, v4, v5);
+  sub_1C3E508((CGThumbnailListItem_o *)&this->fields.mCam, (int32_t)Component_object, v4, v5);
   transform = UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0);
   this->fields.mTrans = transform;
-  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.mTrans, (int32_t)transform, v7, v8);
+  sub_1C3E508((CGThumbnailListItem_o *)&this->fields.mTrans, (int32_t)transform, v7, v8);
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
   if ( !NGUITools_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NGUITools_TypeInfo);
   v10 = NGUITools__FindInParents_object_(
           gameObject,
-          (const MethodInfo_3171F1C *)Method_NGUITools_FindInParents_UIRoot___);
+          (const MethodInfo_3183E10 *)Method_NGUITools_FindInParents_UIRoot___);
   this->fields.mRoot = (struct UIRoot_o *)v10;
-  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.mRoot, (int32_t)v10, v11, v12);
+  sub_1C3E508((CGThumbnailListItem_o *)&this->fields.mRoot, (int32_t)v10, v11, v12);
   rootForBounds = (UnityEngine_Object_o *)this->fields.rootForBounds;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
@@ -471,10 +474,10 @@ void UIDraggableCamera__Start(UIDraggableCamera_o *this, const MethodInfo *metho
     if ( !NGUITools_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(NGUITools_TypeInfo);
     Hierarchy = NGUITools__GetHierarchy(v14, 0);
-    v16 = (Il2CppObject *)System_String__Concat_63561656(Hierarchy, (System_String_o *)StringLiteral_280/*" needs the 'Root For Bounds' parameter to be set"*/, 0);
+    v16 = (Il2CppObject *)System_String__Concat_63636468(Hierarchy, (System_String_o *)StringLiteral_280/*" needs the 'Root For Bounds' parameter to be set"*/, 0);
     if ( !UnityEngine_Debug_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(UnityEngine_Debug_TypeInfo);
-    UnityEngine_Debug__LogError_71079304(v16, (UnityEngine_Object_o *)this, 0);
+    UnityEngine_Debug__LogError_71154116(v16, (UnityEngine_Object_o *)this, 0);
     UnityEngine_Behaviour__set_enabled((UnityEngine_Behaviour_o *)this, 0, 0);
   }
 }
@@ -485,34 +488,35 @@ void UIDraggableCamera__Update(UIDraggableCamera_o *this, const MethodInfo *meth
   float deltaTime; // s8
   Il2CppObject *Component_object; // x20
   System_Math_c *v5; // x0
+  __int64 v6; // x1
   float mScroll; // s0
   float y; // s9
   float x; // s10
   UnityEngine_Transform_o *mTrans; // x21
-  float v10; // s9
-  float v11; // s10
+  float v11; // s9
+  float v12; // s10
   float z; // s11
-  UnityEngine_Vector2_o v13; // kr00_8
-  __int128 v14; // q0
+  UnityEngine_Vector2_o v14; // kr00_8
+  __int128 v15; // q0
   int32_t dragEffect; // w9
-  const MethodInfo *v16; // x2
-  Il2CppObject *v17; // x19
-  UnityEngine_Bounds_o v18[2]; // [xsp+8h] [xbp-88h] BYREF
+  const MethodInfo *v17; // x2
+  Il2CppObject *v18; // x19
+  UnityEngine_Bounds_o v19[2]; // [xsp+8h] [xbp-88h] BYREF
   UnityEngine_Vector3_o localPosition; // 0:s0.4,4:s1.4,8:s2.4
-  UnityEngine_Vector3_o v20; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o v21; // 0:s0.4,4:s1.4,8:s2.4
 
-  if ( (byte_4C47588 & 1) == 0 )
+  if ( (byte_4C5B37F & 1) == 0 )
   {
-    sub_1C37058(&Method_UnityEngine_Component_GetComponent_SpringPosition___);
-    sub_1C37058(&UnityEngine_Object_TypeInfo);
-    byte_4C47588 = 1;
+    sub_1C3E564(&Method_UnityEngine_Component_GetComponent_SpringPosition___);
+    sub_1C3E564(&UnityEngine_Object_TypeInfo);
+    byte_4C5B37F = 1;
   }
   deltaTime = RealTime__get_deltaTime(0);
   if ( this->fields.mPressed )
   {
     Component_object = UnityEngine_Component__GetComponent_object_(
                          (UnityEngine_Component_o *)this,
-                         (const MethodInfo_30DE428 *)Method_UnityEngine_Component_GetComponent_SpringPosition___);
+                         (const MethodInfo_30F0240 *)Method_UnityEngine_Component_GetComponent_SpringPosition___);
     if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
     v5 = (System_Math_c *)UnityEngine_Object__op_Inequality((UnityEngine_Object_o *)Component_object, 0, 0);
@@ -523,21 +527,21 @@ void UIDraggableCamera__Update(UIDraggableCamera_o *this, const MethodInfo *meth
       UnityEngine_Behaviour__set_enabled((UnityEngine_Behaviour_o *)Component_object, 0, 0);
 LABEL_22:
       this->fields.mScroll = 0.0;
-      NGUIMath__SpringDampen_49301232(&this->fields.mMomentum, 9.0, deltaTime, 0);
+      NGUIMath__SpringDampen_49374472(&this->fields.mMomentum, 9.0, deltaTime, 0);
       return;
     }
 LABEL_23:
-    sub_1C372B4(v5);
+    sub_1C3E7C0(v5, v6);
   }
   mScroll = this->fields.mScroll;
   this->fields.mMomentum = (struct UnityEngine_Vector2_o)vadd_f32(
                                                            (float32x2_t)this->fields.mMomentum,
                                                            vmul_n_f32((float32x2_t)this->fields.scale, mScroll * 20.0)).n64_u64[0];
-  this->fields.mScroll = NGUIMath__SpringLerp_49238604(mScroll, 0.0, 20.0, deltaTime, 0);
-  if ( !byte_4C3C922 )
+  this->fields.mScroll = NGUIMath__SpringLerp_49311844(mScroll, 0.0, 20.0, deltaTime, 0);
+  if ( !byte_4C506A2 )
   {
-    sub_1C37058(&System_Math_TypeInfo);
-    byte_4C3C922 = 1;
+    sub_1C3E564(&System_Math_TypeInfo);
+    byte_4C506A2 = 1;
   }
   x = this->fields.mMomentum.fields.x;
   y = this->fields.mMomentum.fields.y;
@@ -550,33 +554,33 @@ LABEL_23:
   if ( !mTrans )
     goto LABEL_23;
   localPosition = UnityEngine_Transform__get_localPosition(this->fields.mTrans, 0);
-  v10 = localPosition.fields.x;
-  v11 = localPosition.fields.y;
+  v11 = localPosition.fields.x;
+  v12 = localPosition.fields.y;
   z = localPosition.fields.z;
-  v13 = NGUIMath__SpringDampen_49301232(&this->fields.mMomentum, 9.0, deltaTime, 0);
-  v20.fields.x = v10 + v13.fields.x;
-  v20.fields.y = v11 + v13.fields.y;
-  v20.fields.z = z + 0.0;
-  UnityEngine_Transform__set_localPosition(mTrans, v20, 0);
-  NGUIMath__CalculateAbsoluteWidgetBounds(v18, this->fields.rootForBounds, 0);
-  v14 = *(_OWORD *)&v18[0].fields.m_Center.fields.x;
-  v18[1] = v18[0];
+  v14 = NGUIMath__SpringDampen_49374472(&this->fields.mMomentum, 9.0, deltaTime, 0);
+  v21.fields.x = v11 + v14.fields.x;
+  v21.fields.y = v12 + v14.fields.y;
+  v21.fields.z = z + 0.0;
+  UnityEngine_Transform__set_localPosition(mTrans, v21, 0);
+  NGUIMath__CalculateAbsoluteWidgetBounds(v19, this->fields.rootForBounds, 0);
+  v15 = *(_OWORD *)&v19[0].fields.m_Center.fields.x;
+  v19[1] = v19[0];
   dragEffect = this->fields.dragEffect;
-  *(_QWORD *)&this->fields.mBounds.fields.m_Extents.fields.y = *(_QWORD *)&v18[0].fields.m_Extents.fields.y;
-  *(_OWORD *)&this->fields.mBounds.fields.m_Center.fields.x = v14;
-  if ( !UIDraggableCamera__ConstrainToBounds(this, dragEffect == 0, v16) )
+  *(_QWORD *)&this->fields.mBounds.fields.m_Extents.fields.y = *(_QWORD *)&v19[0].fields.m_Extents.fields.y;
+  *(_OWORD *)&this->fields.mBounds.fields.m_Center.fields.x = v15;
+  if ( !UIDraggableCamera__ConstrainToBounds(this, dragEffect == 0, v17) )
   {
-    v17 = UnityEngine_Component__GetComponent_object_(
+    v18 = UnityEngine_Component__GetComponent_object_(
             (UnityEngine_Component_o *)this,
-            (const MethodInfo_30DE428 *)Method_UnityEngine_Component_GetComponent_SpringPosition___);
+            (const MethodInfo_30F0240 *)Method_UnityEngine_Component_GetComponent_SpringPosition___);
     if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-    v5 = (System_Math_c *)UnityEngine_Object__op_Inequality((UnityEngine_Object_o *)v17, 0, 0);
+    v5 = (System_Math_c *)UnityEngine_Object__op_Inequality((UnityEngine_Object_o *)v18, 0, 0);
     if ( ((unsigned __int8)v5 & 1) != 0 )
     {
-      if ( !v17 )
+      if ( !v18 )
         goto LABEL_23;
-      UnityEngine_Behaviour__set_enabled((UnityEngine_Behaviour_o *)v17, 0, 0);
+      UnityEngine_Behaviour__set_enabled((UnityEngine_Behaviour_o *)v18, 0, 0);
     }
   }
 }

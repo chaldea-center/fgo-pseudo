@@ -12,37 +12,38 @@ void FGOEffectSheetAnimation__OnEnable(FGOEffectSheetAnimation_o *this, const Me
   int32_t v4; // w2
   const MethodInfo *v5; // x3
 
-  if ( (byte_4C41D3A & 1) == 0 )
+  if ( (byte_4C55ADC & 1) == 0 )
   {
-    sub_1C37058(&Method_UnityEngine_Component_GetComponent_Renderer___);
-    byte_4C41D3A = 1;
+    sub_1C3E564(&Method_UnityEngine_Component_GetComponent_Renderer___);
+    byte_4C55ADC = 1;
   }
   Component_object = UnityEngine_Component__GetComponent_object_(
                        (UnityEngine_Component_o *)this,
-                       (const MethodInfo_30DE428 *)Method_UnityEngine_Component_GetComponent_Renderer___);
+                       (const MethodInfo_30F0240 *)Method_UnityEngine_Component_GetComponent_Renderer___);
   this->fields.compRenderer = (struct UnityEngine_Renderer_o *)Component_object;
-  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.compRenderer, (int32_t)Component_object, v4, v5);
+  sub_1C3E508((CGThumbnailListItem_o *)&this->fields.compRenderer, (int32_t)Component_object, v4, v5);
 }
 
 
 void FGOEffectSheetAnimation__Update(FGOEffectSheetAnimation_o *this, const MethodInfo *method)
 {
   UnityEngine_Object_o *compRenderer; // x20
+  __int64 v4; // x1
   float time; // s0
   UnityEngine_Renderer_o *material; // x0
-  float v6; // s0
-  int v7; // w21
+  float v7; // s0
+  int v8; // w21
   int32_t uvAnimationTileX; // w20
   int32_t uvAnimationTileY; // w22
-  int v10; // w8
-  UnityEngine_Vector2_o v11; // 0:s0.4,4:s1.4
+  int v11; // w8
   UnityEngine_Vector2_o v12; // 0:s0.4,4:s1.4
+  UnityEngine_Vector2_o v13; // 0:s0.4,4:s1.4
 
-  if ( (byte_4C41D3B & 1) == 0 )
+  if ( (byte_4C55ADD & 1) == 0 )
   {
-    sub_1C37058(&UnityEngine_Object_TypeInfo);
-    sub_1C37058(&StringLiteral_16264/*"_MainTex"*/);
-    byte_4C41D3B = 1;
+    sub_1C3E564(&UnityEngine_Object_TypeInfo);
+    sub_1C3E564(&StringLiteral_16274/*"_MainTex"*/);
+    byte_4C55ADD = 1;
   }
   compRenderer = (UnityEngine_Object_o *)this->fields.compRenderer;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -51,38 +52,38 @@ void FGOEffectSheetAnimation__Update(FGOEffectSheetAnimation_o *this, const Meth
   {
     time = UnityEngine_Time__get_time(0);
     material = this->fields.compRenderer;
-    v6 = time * this->fields.framesPerSecond;
-    if ( v6 == INFINITY )
-      v7 = 0x80000000;
+    v7 = time * this->fields.framesPerSecond;
+    if ( v7 == INFINITY )
+      v8 = 0x80000000;
     else
-      v7 = (int)v6;
+      v8 = (int)v7;
     if ( !material )
       goto LABEL_15;
     uvAnimationTileX = this->fields.uvAnimationTileX;
     uvAnimationTileY = this->fields.uvAnimationTileY;
     material = (UnityEngine_Renderer_o *)UnityEngine_Renderer__get_material(material, 0);
     if ( !material
-      || (v10 = v7 % (uvAnimationTileY * uvAnimationTileX),
-          v11.fields.x = (float)(1.0 / (float)uvAnimationTileX) * (float)(v10 % uvAnimationTileX),
-          v11.fields.y = (float)(1.0 - (float)(1.0 / (float)uvAnimationTileY))
-                       - (float)((float)(1.0 / (float)uvAnimationTileY) * (float)(v10 / uvAnimationTileX)),
+      || (v11 = v8 % (uvAnimationTileY * uvAnimationTileX),
+          v12.fields.x = (float)(1.0 / (float)uvAnimationTileX) * (float)(v11 % uvAnimationTileX),
+          v12.fields.y = (float)(1.0 - (float)(1.0 / (float)uvAnimationTileY))
+                       - (float)((float)(1.0 / (float)uvAnimationTileY) * (float)(v11 / uvAnimationTileX)),
           UnityEngine_Material__SetTextureOffset(
             (UnityEngine_Material_o *)material,
-            (System_String_o *)StringLiteral_16264/*"_MainTex"*/,
-            v11,
+            (System_String_o *)StringLiteral_16274/*"_MainTex"*/,
+            v12,
             0),
           (material = this->fields.compRenderer) == 0)
       || (material = (UnityEngine_Renderer_o *)UnityEngine_Renderer__get_material(material, 0)) == 0 )
     {
 LABEL_15:
-      sub_1C372B4(material);
+      sub_1C3E7C0(material, v4);
     }
-    v12.fields.x = 1.0 / (float)uvAnimationTileX;
-    v12.fields.y = 1.0 / (float)uvAnimationTileY;
+    v13.fields.x = 1.0 / (float)uvAnimationTileX;
+    v13.fields.y = 1.0 / (float)uvAnimationTileY;
     UnityEngine_Material__SetTextureScale(
       (UnityEngine_Material_o *)material,
-      (System_String_o *)StringLiteral_16264/*"_MainTex"*/,
-      v12,
+      (System_String_o *)StringLiteral_16274/*"_MainTex"*/,
+      v13,
       0);
   }
 }

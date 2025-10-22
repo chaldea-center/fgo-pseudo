@@ -6,26 +6,26 @@ void MaterialEventLogListViewManager___cctor(const MethodInfo *method)
   int32_t v4; // w2
   const MethodInfo *v5; // x3
 
-  if ( (byte_4C3E1DE & 1) == 0 )
+  if ( (byte_4C51F5E & 1) == 0 )
   {
-    sub_1C37058(&ListViewSort_TypeInfo);
-    sub_1C37058(&MaterialEventLogListViewManager_TypeInfo);
-    sub_1C37058(&StringLiteral_8962/*"MaterialCollectionServant6"*/);
-    byte_4C3E1DE = 1;
+    sub_1C3E564(&ListViewSort_TypeInfo);
+    sub_1C3E564(&MaterialEventLogListViewManager_TypeInfo);
+    sub_1C3E564(&StringLiteral_8962/*"MaterialCollectionServant6"*/);
+    byte_4C51F5E = 1;
   }
   static_fields = MaterialEventLogListViewManager_TypeInfo->static_fields;
   *(_QWORD *)&static_fields->VL_LIST_POS_Y = 0xC2CC0000C1F00000LL;
   static_fields->VL_SCROLLBAR_POS_Y = 70.0;
-  *(_OWORD *)&static_fields->VL_SCROLLBAR_HEIGHT = xmmword_C0E460;
+  *(_OWORD *)&static_fields->VL_SCROLLBAR_HEIGHT = xmmword_C11AD0;
   *(_QWORD *)&static_fields->NORMAL_LIST_POS_Y = 0xC2F00000C20C0000LL;
   static_fields->NORMAL_SCROLLBAR_POS_Y = 45.0;
-  *(_OWORD *)&static_fields->NORMAL_SCROLLBAR_BACK_HEIGHT = xmmword_C0ED90;
+  *(_OWORD *)&static_fields->NORMAL_SCROLLBAR_BACK_HEIGHT = xmmword_C12400;
   static_fields->NORMAL_PANEL_CENTER_Y = 0;
-  v2 = (ListViewSort_o *)sub_1C372A4(ListViewSort_TypeInfo);
-  ListViewSort___ctor_43838564(v2, (System_String_o *)StringLiteral_8962/*"MaterialCollectionServant6"*/, 27, 1, 0);
+  v2 = (ListViewSort_o *)sub_1C3E7B0(ListViewSort_TypeInfo);
+  ListViewSort___ctor_43894048(v2, (System_String_o *)StringLiteral_8962/*"MaterialCollectionServant6"*/, 27, 1, 0);
   v3 = MaterialEventLogListViewManager_TypeInfo->static_fields;
   v3->EventLogservantSortInfo = v2;
-  sub_1C36FFC((CGThumbnailListItem_o *)&v3->EventLogservantSortInfo, (int32_t)v2, v4, v5);
+  sub_1C3E508((CGThumbnailListItem_o *)&v3->EventLogservantSortInfo, (int32_t)v2, v4, v5);
 }
 
 
@@ -38,38 +38,39 @@ void MaterialEventLogListViewManager___ctor(MaterialEventLogListViewManager_o *t
 void MaterialEventLogListViewManager__Awake(MaterialEventLogListViewManager_o *this, const MethodInfo *method)
 {
   UnityEngine_GameObject_o *gameObject; // x0
+  __int64 v4; // x1
   Il2CppObject *Component_object; // x0
-  int32_t v5; // w2
-  const MethodInfo *v6; // x3
+  int32_t v6; // w2
+  const MethodInfo *v7; // x3
   struct UIScrollView_o *scrollView; // x8
-  ListViewSort_o *v8; // x20
-  int32_t v9; // w2
-  const MethodInfo *v10; // x3
+  ListViewSort_o *v9; // x20
+  int32_t v10; // w2
+  const MethodInfo *v11; // x3
 
-  if ( (byte_4C3E1C5 & 1) == 0 )
+  if ( (byte_4C51F45 & 1) == 0 )
   {
-    sub_1C37058(&Method_UnityEngine_GameObject_GetComponent_BoxCollider___);
-    sub_1C37058(&ListViewSort_TypeInfo);
-    byte_4C3E1C5 = 1;
+    sub_1C3E564(&Method_UnityEngine_GameObject_GetComponent_BoxCollider___);
+    sub_1C3E564(&ListViewSort_TypeInfo);
+    byte_4C51F45 = 1;
   }
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
   if ( !gameObject
     || (Component_object = UnityEngine_GameObject__GetComponent_object_(
                              gameObject,
-                             (const MethodInfo_313F1D8 *)Method_UnityEngine_GameObject_GetComponent_BoxCollider___),
+                             (const MethodInfo_31510CC *)Method_UnityEngine_GameObject_GetComponent_BoxCollider___),
         this->fields.mBoxCollider = (struct UnityEngine_BoxCollider_o *)Component_object,
-        sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.mBoxCollider, (int32_t)Component_object, v5, v6),
+        sub_1C3E508((CGThumbnailListItem_o *)&this->fields.mBoxCollider, (int32_t)Component_object, v6, v7),
         (gameObject = (UnityEngine_GameObject_o *)this->fields.mBoxCollider) == 0)
     || (UnityEngine_Collider__set_enabled((UnityEngine_Collider_o *)gameObject, 0, 0),
         (scrollView = this->fields.scrollView) == 0) )
   {
-    sub_1C372B4(gameObject);
+    sub_1C3E7C0(gameObject, v4);
   }
   scrollView->fields.disableDragIfFits = 0;
-  v8 = (ListViewSort_o *)sub_1C372A4(ListViewSort_TypeInfo);
-  ListViewSort___ctor(v8, 3, 1, 0);
-  this->fields.sort = v8;
-  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.sort, (int32_t)v8, v9, v10);
+  v9 = (ListViewSort_o *)sub_1C3E7B0(ListViewSort_TypeInfo);
+  ListViewSort___ctor(v9, 3, 1, 0);
+  this->fields.sort = v9;
+  sub_1C3E508((CGThumbnailListItem_o *)&this->fields.sort, (int32_t)v9, v10, v11);
 }
 
 
@@ -83,17 +84,16 @@ void MaterialEventLogListViewManager__Back(MaterialEventLogListViewManager_o *th
   MaterialEventLogListViewManager_o *v7; // x0
   const MethodInfo *v8; // x1
   UnityEngine_Object_o *MaterialCollectionServantListViewManager; // x19
-  const MethodInfo *v10; // x1
-  MaterialEventLogListViewManager_c *v11; // x0
+  MaterialEventLogListViewManager_c *v10; // x0
   ListViewSort_o *EventLogservantSortInfo; // x8
 
   v2 = this;
-  if ( (byte_4C3E1DA & 1) == 0 )
+  if ( (byte_4C51F5A & 1) == 0 )
   {
-    sub_1C37058(&ListViewSort_TypeInfo);
-    sub_1C37058(&MaterialEventLogListViewManager_TypeInfo);
-    this = (MaterialEventLogListViewManager_o *)sub_1C37058(&UnityEngine_Object_TypeInfo);
-    byte_4C3E1DA = 1;
+    sub_1C3E564(&ListViewSort_TypeInfo);
+    sub_1C3E564(&MaterialEventLogListViewManager_TypeInfo);
+    this = (MaterialEventLogListViewManager_o *)sub_1C3E564(&UnityEngine_Object_TypeInfo);
+    byte_4C51F5A = 1;
   }
   if ( !v2->fields.issortButton )
   {
@@ -102,10 +102,10 @@ void MaterialEventLogListViewManager__Back(MaterialEventLogListViewManager_o *th
       goto LABEL_18;
     sort->fields.isAscendingOrder = 1;
   }
-  v4 = (ListViewSort_o *)sub_1C372A4(ListViewSort_TypeInfo);
+  v4 = (ListViewSort_o *)sub_1C3E7B0(ListViewSort_TypeInfo);
   ListViewSort___ctor(v4, 3, 1, 0);
   v2->fields.sort = v4;
-  sub_1C36FFC((CGThumbnailListItem_o *)&v2->fields.sort, (int32_t)v4, v5, v6);
+  sub_1C3E508((CGThumbnailListItem_o *)&v2->fields.sort, (int32_t)v4, v5, v6);
   MaterialCollectionServantListViewManager = (UnityEngine_Object_o *)MaterialEventLogListViewManager__GetMaterialCollectionServantListViewManager(
                                                                        v7,
                                                                        v8);
@@ -121,30 +121,31 @@ void MaterialEventLogListViewManager__Back(MaterialEventLogListViewManager_o *th
       goto LABEL_18;
     MaterialCollectionServantListViewManager__EventLogSortListSave(
       (MaterialCollectionServantListViewManager_o *)this,
-      v10);
+      method);
   }
-  v11 = MaterialEventLogListViewManager_TypeInfo;
+  v10 = MaterialEventLogListViewManager_TypeInfo;
   if ( !MaterialEventLogListViewManager_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(MaterialEventLogListViewManager_TypeInfo);
-    v11 = MaterialEventLogListViewManager_TypeInfo;
+    v10 = MaterialEventLogListViewManager_TypeInfo;
   }
-  EventLogservantSortInfo = v11->static_fields->EventLogservantSortInfo;
+  EventLogservantSortInfo = v10->static_fields->EventLogservantSortInfo;
   if ( EventLogservantSortInfo )
   {
-    if ( v11->_2.cctor_finished
-      || (j_il2cpp_runtime_class_init_0(v11),
+    if ( v10->_2.cctor_finished
+      || (j_il2cpp_runtime_class_init_0(v10),
           (EventLogservantSortInfo = MaterialEventLogListViewManager_TypeInfo->static_fields->EventLogservantSortInfo) != 0) )
     {
       ListViewSort__Save(EventLogservantSortInfo, 0);
       return;
     }
 LABEL_18:
-    sub_1C372B4(this);
+    sub_1C3E7C0(this, method);
   }
 }
 
 
+// local variable allocation has failed, the output may be wrong!
 void MaterialEventLogListViewManager__CheckPlayableMaterial(
         MaterialEventLogListViewManager_o *this,
         int32_t servantId,
@@ -152,227 +153,231 @@ void MaterialEventLogListViewManager__CheckPlayableMaterial(
         const MethodInfo *method)
 {
   struct System_Collections_Generic_List_GameObject__o *objectList; // x0
+  __int64 v8; // x1
   Il2CppObject *Component_object; // x0
-  const MethodInfo *v9; // x1
-  MaterialEventLogListViewObject_o *v10; // x21
+  const MethodInfo *v10; // x1
+  MaterialEventLogListViewObject_o *v11; // x21
   MaterialEventLogListViewItem_o *Item; // x0
-  const MethodInfo *v12; // x2
-  MaterialEventLogListViewItem_o *v13; // x22
+  __int64 v13; // x1
+  const MethodInfo *v14; // x2
+  MaterialEventLogListViewItem_o *v15; // x22
   struct MaterialEventLogListViewItem_Info_o *info_k__BackingField; // x8
-  bool v15; // w23
-  const MethodInfo *v16; // x2
-  __int64 v17; // x0
-  struct MaterialEventLogListViewItem_Info_o *v18; // x8
-  unsigned int v19; // w9
-  System_Collections_Generic_List_Enumerator_object__o v20; // [xsp+8h] [xbp-98h] BYREF
-  System_Collections_Generic_List_Enumerator_object__o v21; // [xsp+20h] [xbp-80h] BYREF
+  bool v17; // w23
+  const MethodInfo *v18; // x2
+  __int64 v19; // x0
+  __int64 v20; // x1
+  struct MaterialEventLogListViewItem_Info_o *v21; // x8
+  unsigned int v22; // w9
+  System_Collections_Generic_List_Enumerator_object__o v23; // [xsp+8h] [xbp-98h] BYREF
+  System_Collections_Generic_List_Enumerator_object__o v24; // [xsp+20h] [xbp-80h] BYREF
 
-  if ( (byte_4C3E1D2 & 1) == 0 )
+  if ( (byte_4C51F52 & 1) == 0 )
   {
-    sub_1C37058(&Method_System_Collections_Generic_List_Enumerator_GameObject__Dispose__);
-    sub_1C37058(&Method_System_Collections_Generic_List_Enumerator_GameObject__MoveNext__);
-    sub_1C37058(&Method_System_Collections_Generic_List_Enumerator_GameObject__get_Current__);
-    sub_1C37058(&Method_UnityEngine_GameObject_GetComponent_MaterialEventLogListViewObject___);
-    sub_1C37058(&Method_System_Collections_Generic_List_GameObject__GetEnumerator__);
-    byte_4C3E1D2 = 1;
+    sub_1C3E564(&Method_System_Collections_Generic_List_Enumerator_GameObject__Dispose__);
+    sub_1C3E564(&Method_System_Collections_Generic_List_Enumerator_GameObject__MoveNext__);
+    sub_1C3E564(&Method_System_Collections_Generic_List_Enumerator_GameObject__get_Current__);
+    sub_1C3E564(&Method_UnityEngine_GameObject_GetComponent_MaterialEventLogListViewObject___);
+    sub_1C3E564(&Method_System_Collections_Generic_List_GameObject__GetEnumerator__);
+    byte_4C51F52 = 1;
   }
-  memset(&v21, 0, sizeof(v21));
+  memset(&v24, 0, sizeof(v24));
   objectList = this->fields.objectList;
   this->fields.selectedLimitCount = limitCount;
   if ( !objectList )
-    sub_1C372B4(0);
+    sub_1C3E7C0(0, *(_QWORD *)&servantId);
   System_Collections_Generic_List_object___GetEnumerator(
-    (System_Collections_Generic_List_Enumerator_T__o *)&v20,
+    (System_Collections_Generic_List_Enumerator_T__o *)&v23,
     (System_Collections_Generic_List_object__o *)objectList,
-    (const MethodInfo_37A3B1C *)Method_System_Collections_Generic_List_GameObject__GetEnumerator__);
-  v21 = v20;
+    (const MethodInfo_37B5F58 *)Method_System_Collections_Generic_List_GameObject__GetEnumerator__);
+  v24 = v23;
   while ( System_Collections_Generic_List_Enumerator_object___MoveNext(
-            &v21,
-            (const MethodInfo_352D810 *)Method_System_Collections_Generic_List_Enumerator_GameObject__MoveNext__) )
+            &v24,
+            (const MethodInfo_353FC4C *)Method_System_Collections_Generic_List_Enumerator_GameObject__MoveNext__) )
   {
-    if ( !v21.fields._current )
-      sub_1C372B4(0);
+    if ( !v24.fields._current )
+      sub_1C3E7C0(0, v8);
     Component_object = UnityEngine_GameObject__GetComponent_object_(
-                         (UnityEngine_GameObject_o *)v21.fields._current,
-                         (const MethodInfo_313F1D8 *)Method_UnityEngine_GameObject_GetComponent_MaterialEventLogListViewObject___);
-    v10 = (MaterialEventLogListViewObject_o *)Component_object;
+                         (UnityEngine_GameObject_o *)v24.fields._current,
+                         (const MethodInfo_31510CC *)Method_UnityEngine_GameObject_GetComponent_MaterialEventLogListViewObject___);
+    v11 = (MaterialEventLogListViewObject_o *)Component_object;
     if ( !Component_object )
-      sub_1C372B4(0);
-    Item = MaterialEventLogListViewObject__GetItem((MaterialEventLogListViewObject_o *)Component_object, v9);
-    v13 = Item;
+      sub_1C3E7C0(0, v10);
+    Item = MaterialEventLogListViewObject__GetItem((MaterialEventLogListViewObject_o *)Component_object, v10);
+    v15 = Item;
     if ( !Item )
-      sub_1C372B4(0);
+      sub_1C3E7C0(0, v13);
     info_k__BackingField = Item->fields._info_k__BackingField;
     if ( info_k__BackingField && info_k__BackingField->fields.svt_id == servantId )
     {
-      v15 = MaterialEventLogListViewItem__CheckPlayableMaterial(Item, limitCount, v12);
-      MaterialEventLogListViewObject__SetEnableSelect(v10, v15, v16);
-      v18 = v13->fields._info_k__BackingField;
-      if ( v15 )
+      v17 = MaterialEventLogListViewItem__CheckPlayableMaterial(Item, limitCount, v14);
+      MaterialEventLogListViewObject__SetEnableSelect(v11, v17, v18);
+      v21 = v15->fields._info_k__BackingField;
+      if ( v17 )
       {
-        if ( !v18 )
-          sub_1C372B4(v17);
-        v19 = v18->fields.flag & 0xFFFFFFFA;
+        if ( !v21 )
+          sub_1C3E7C0(v19, v20);
+        v22 = v21->fields.flag & 0xFFFFFFFA;
       }
       else
       {
-        if ( !v18 )
-          sub_1C372B4(v17);
-        v19 = v18->fields.flag | 5;
+        if ( !v21 )
+          sub_1C3E7C0(v19, v20);
+        v22 = v21->fields.flag | 5;
       }
-      v18->fields.flag = v19;
+      v21->fields.flag = v22;
     }
     else
     {
-      MaterialEventLogListViewObject__SetEnableSelect(v10, 1, v12);
+      MaterialEventLogListViewObject__SetEnableSelect(v11, 1, v14);
     }
   }
   System_Collections_Generic_List_Enumerator_object___Dispose(
-    &v21,
-    (const MethodInfo_352D80C *)Method_System_Collections_Generic_List_Enumerator_GameObject__Dispose__);
+    &v24,
+    (const MethodInfo_353FC48 *)Method_System_Collections_Generic_List_Enumerator_GameObject__Dispose__);
 }
 
 
 void MaterialEventLogListViewManager__CreateInfos(MaterialEventLogListViewManager_o *this, const MethodInfo *method)
 {
   void *Instance; // x0
-  UnityEngine_Object_o *v4; // x19
+  __int64 v4; // x1
+  UnityEngine_Object_o *v5; // x19
   __int64 naturalAligment; // x10
   UnityEngine_Object_o *m_CachedPtr; // x19
-  System_Collections_Generic_List_object__o *v7; // x20
-  _BOOL8 v8; // x0
-  int32_t v9; // w2
-  const MethodInfo *v10; // x3
-  __int64 v11; // x11
+  System_Collections_Generic_List_object__o *v8; // x20
+  _BOOL8 v9; // x0
+  int32_t v10; // w2
+  const MethodInfo *v11; // x3
+  __int64 v12; // x11
   Il2CppClass *klass; // x1
   struct System_Object_array *items; // x8
-  _QWORD *v14; // x9
+  _QWORD *v15; // x9
   __int64 size; // x10
-  Il2CppClass **v16; // x0
-  int32_t v17; // w2
-  const MethodInfo *v18; // x3
-  System_Collections_Generic_List_Enumerator_object__o v19; // [xsp+8h] [xbp-68h] BYREF
-  System_Collections_Generic_List_Enumerator_object__o v20; // [xsp+20h] [xbp-50h] BYREF
+  Il2CppClass **v17; // x0
+  int32_t v18; // w2
+  const MethodInfo *v19; // x3
+  System_Collections_Generic_List_Enumerator_object__o v20; // [xsp+8h] [xbp-68h] BYREF
+  System_Collections_Generic_List_Enumerator_object__o v21; // [xsp+20h] [xbp-50h] BYREF
 
-  if ( (byte_4C3E1DC & 1) == 0 )
+  if ( (byte_4C51F5C & 1) == 0 )
   {
-    sub_1C37058(&Method_System_Collections_Generic_List_Enumerator_ListViewItem__Dispose__);
-    sub_1C37058(&Method_System_Collections_Generic_List_Enumerator_ListViewItem__MoveNext__);
-    sub_1C37058(&Method_System_Collections_Generic_List_Enumerator_ListViewItem__get_Current__);
-    sub_1C37058(&Method_System_Collections_Generic_List_MaterialEventLogListViewItem_Info__Add__);
-    sub_1C37058(&Method_System_Collections_Generic_List_ListViewItem__GetEnumerator__);
-    sub_1C37058(&Method_System_Collections_Generic_List_MaterialEventLogListViewItem_Info___ctor__);
-    sub_1C37058(&System_Collections_Generic_List_MaterialEventLogListViewItem_Info__TypeInfo);
-    sub_1C37058(&MaterialEventLogListViewItem_TypeInfo);
-    sub_1C37058(&MyRoomRootComponent_TypeInfo);
-    sub_1C37058(&UnityEngine_Object_TypeInfo);
-    sub_1C37058(&Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__);
-    byte_4C3E1DC = 1;
+    sub_1C3E564(&Method_System_Collections_Generic_List_Enumerator_ListViewItem__Dispose__);
+    sub_1C3E564(&Method_System_Collections_Generic_List_Enumerator_ListViewItem__MoveNext__);
+    sub_1C3E564(&Method_System_Collections_Generic_List_Enumerator_ListViewItem__get_Current__);
+    sub_1C3E564(&Method_System_Collections_Generic_List_MaterialEventLogListViewItem_Info__Add__);
+    sub_1C3E564(&Method_System_Collections_Generic_List_ListViewItem__GetEnumerator__);
+    sub_1C3E564(&Method_System_Collections_Generic_List_MaterialEventLogListViewItem_Info___ctor__);
+    sub_1C3E564(&System_Collections_Generic_List_MaterialEventLogListViewItem_Info__TypeInfo);
+    sub_1C3E564(&MaterialEventLogListViewItem_TypeInfo);
+    sub_1C3E564(&MyRoomRootComponent_TypeInfo);
+    sub_1C3E564(&UnityEngine_Object_TypeInfo);
+    sub_1C3E564(&Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__);
+    byte_4C51F5C = 1;
   }
-  memset(&v20, 0, sizeof(v20));
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39ED16C *)Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__);
+  memset(&v21, 0, sizeof(v21));
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39FF5A8 *)Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__);
   if ( !Instance )
     goto LABEL_35;
-  v4 = (UnityEngine_Object_o *)*((_QWORD *)Instance + 4);
+  v5 = (UnityEngine_Object_o *)*((_QWORD *)Instance + 4);
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-  if ( !UnityEngine_Object__op_Equality(v4, 0, 0) )
+  if ( !UnityEngine_Object__op_Equality(v5, 0, 0) )
   {
-    if ( v4 )
+    if ( v5 )
     {
       naturalAligment = MyRoomRootComponent_TypeInfo->_2.naturalAligment;
-      if ( v4->klass->_2.naturalAligment >= (unsigned int)naturalAligment )
+      if ( v5->klass->_2.naturalAligment >= (unsigned int)naturalAligment )
       {
-        if ( (MyRoomRootComponent_c *)v4->klass->_2.typeHierarchy[naturalAligment - 1] != MyRoomRootComponent_TypeInfo )
-          v4 = 0;
+        if ( (MyRoomRootComponent_c *)v5->klass->_2.typeHierarchy[naturalAligment - 1] != MyRoomRootComponent_TypeInfo )
+          v5 = 0;
       }
       else
       {
-        v4 = 0;
+        v5 = 0;
       }
     }
     if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-    Instance = (void *)UnityEngine_Object__op_Equality(v4, 0, 0);
+    Instance = (void *)UnityEngine_Object__op_Equality(v5, 0, 0);
     if ( ((unsigned __int8)Instance & 1) == 0 )
     {
-      if ( !v4 )
+      if ( !v5 )
         goto LABEL_35;
-      m_CachedPtr = (UnityEngine_Object_o *)v4[2].fields.m_CachedPtr;
+      m_CachedPtr = (UnityEngine_Object_o *)v5[2].fields.m_CachedPtr;
       if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
       if ( !UnityEngine_Object__op_Equality(m_CachedPtr, 0, 0) )
       {
-        v7 = (System_Collections_Generic_List_object__o *)sub_1C372A4(System_Collections_Generic_List_MaterialEventLogListViewItem_Info__TypeInfo);
+        v8 = (System_Collections_Generic_List_object__o *)sub_1C3E7B0(System_Collections_Generic_List_MaterialEventLogListViewItem_Info__TypeInfo);
         System_Collections_Generic_List_object____ctor(
-          v7,
-          (const MethodInfo_37A27F0 *)Method_System_Collections_Generic_List_MaterialEventLogListViewItem_Info___ctor__);
+          v8,
+          (const MethodInfo_37B4C2C *)Method_System_Collections_Generic_List_MaterialEventLogListViewItem_Info___ctor__);
         Instance = this->fields.itemSortList;
         if ( Instance )
         {
           System_Collections_Generic_List_object___GetEnumerator(
-            (System_Collections_Generic_List_Enumerator_T__o *)&v19,
+            (System_Collections_Generic_List_Enumerator_T__o *)&v20,
             (System_Collections_Generic_List_object__o *)Instance,
-            (const MethodInfo_37A3B1C *)Method_System_Collections_Generic_List_ListViewItem__GetEnumerator__);
-          v20 = v19;
+            (const MethodInfo_37B5F58 *)Method_System_Collections_Generic_List_ListViewItem__GetEnumerator__);
+          v21 = v20;
           while ( 1 )
           {
-            v8 = System_Collections_Generic_List_Enumerator_object___MoveNext(
-                   &v20,
-                   (const MethodInfo_352D810 *)Method_System_Collections_Generic_List_Enumerator_ListViewItem__MoveNext__);
-            if ( !v8 )
+            v9 = System_Collections_Generic_List_Enumerator_object___MoveNext(
+                   &v21,
+                   (const MethodInfo_353FC4C *)Method_System_Collections_Generic_List_Enumerator_ListViewItem__MoveNext__);
+            if ( !v9 )
               break;
-            if ( v20.fields._current )
+            if ( v21.fields._current )
             {
-              v11 = MaterialEventLogListViewItem_TypeInfo->_2.naturalAligment;
-              if ( v20.fields._current->klass->_2.naturalAligment >= (unsigned int)v11
-                && (MaterialEventLogListViewItem_c *)v20.fields._current->klass->_2.typeHierarchy[v11 - 1] == MaterialEventLogListViewItem_TypeInfo )
+              v12 = MaterialEventLogListViewItem_TypeInfo->_2.naturalAligment;
+              if ( v21.fields._current->klass->_2.naturalAligment >= (unsigned int)v12
+                && (MaterialEventLogListViewItem_c *)v21.fields._current->klass->_2.typeHierarchy[v12 - 1] == MaterialEventLogListViewItem_TypeInfo )
               {
-                klass = v20.fields._current[8].klass;
+                klass = v21.fields._current[8].klass;
                 if ( klass )
                 {
-                  if ( !v7 )
-                    sub_1C372B4(v8);
-                  items = v7->fields._items;
-                  v14 = Method_System_Collections_Generic_List_MaterialEventLogListViewItem_Info__Add__;
-                  ++v7->fields._version;
+                  if ( !v8 )
+                    sub_1C3E7C0(v9, klass);
+                  items = v8->fields._items;
+                  v15 = Method_System_Collections_Generic_List_MaterialEventLogListViewItem_Info__Add__;
+                  ++v8->fields._version;
                   if ( !items )
-                    sub_1C372B4(v8);
-                  size = v7->fields._size;
+                    sub_1C3E7C0(v9, klass);
+                  size = v8->fields._size;
                   if ( (unsigned int)size >= LODWORD(items->max_length) )
                   {
                     System_Collections_Generic_List_object___AddWithResize(
-                      v7,
+                      v8,
                       (Il2CppObject *)klass,
-                      *(const MethodInfo_37A3024 **)(*(_QWORD *)(v14[4] + 192LL) + 112LL));
+                      *(const MethodInfo_37B5460 **)(*(_QWORD *)(v15[4] + 192LL) + 112LL));
                   }
                   else
                   {
-                    v16 = &items->obj.klass + size;
-                    v7->fields._size = size + 1;
-                    v16[4] = klass;
-                    sub_1C36FFC((CGThumbnailListItem_o *)(v16 + 4), (int32_t)klass, v9, v10);
+                    v17 = &items->obj.klass + size;
+                    v8->fields._size = size + 1;
+                    v17[4] = klass;
+                    sub_1C3E508((CGThumbnailListItem_o *)(v17 + 4), (int32_t)klass, v10, v11);
                   }
                 }
               }
             }
           }
           System_Collections_Generic_List_Enumerator_object___Dispose(
-            &v20,
-            (const MethodInfo_352D80C *)Method_System_Collections_Generic_List_Enumerator_ListViewItem__Dispose__);
+            &v21,
+            (const MethodInfo_353FC48 *)Method_System_Collections_Generic_List_Enumerator_ListViewItem__Dispose__);
           if ( m_CachedPtr )
           {
             Instance = m_CachedPtr[38].monitor;
             if ( Instance )
             {
-              *((_QWORD *)Instance + 18) = v7;
-              sub_1C36FFC((CGThumbnailListItem_o *)Instance + 1, (int32_t)v7, v17, v18);
+              *((_QWORD *)Instance + 18) = v8;
+              sub_1C3E508((CGThumbnailListItem_o *)Instance + 1, (int32_t)v8, v18, v19);
               return;
             }
           }
         }
 LABEL_35:
-        sub_1C372B4(Instance);
+        sub_1C3E7C0(Instance, v4);
       }
     }
   }
@@ -386,76 +391,77 @@ void MaterialEventLogListViewManager__CreateList(
         const MethodInfo *method)
 {
   void *itemList; // x0
+  __int64 v8; // x1
   int32_t size; // w8
-  int v9; // w25
+  int v10; // w25
   int32_t i; // w22
-  __int64 v11; // x23
-  Il2CppObject **v12; // x24
-  int32_t v13; // w2
-  const MethodInfo *v14; // x3
-  int32_t v15; // w2
-  const MethodInfo *v16; // x3
+  __int64 v12; // x23
+  Il2CppObject **v13; // x24
+  int32_t v14; // w2
+  const MethodInfo *v15; // x3
+  int32_t v16; // w2
+  const MethodInfo *v17; // x3
   Il2CppObject *Item; // x0
-  int32_t v18; // w2
-  const MethodInfo *v19; // x3
-  int32_t v20; // w2
-  const MethodInfo *v21; // x3
-  __int64 v22; // x8
-  _QWORD *v23; // x9
-  __int64 v24; // x10
-  __int64 v25; // x8
+  int32_t v19; // w2
+  const MethodInfo *v20; // x3
+  int32_t v21; // w2
+  const MethodInfo *v22; // x3
+  __int64 v23; // x8
+  _QWORD *v24; // x9
+  __int64 v25; // x10
+  __int64 v26; // x8
   _BOOL4 issortButton; // w24
   UnityEngine_GameObject_o *gameObject; // x0
-  MaterialEventLogListViewManager_c *v28; // x8
-  UnityEngine_GameObject_o *v29; // x20
+  MaterialEventLogListViewManager_c *v29; // x8
+  UnityEngine_GameObject_o *v30; // x20
   float *p_VL_LIST_POS_Y; // x8
   struct UIScrollView_o *scrollView; // x8
   UnityEngine_Object_o *verticalScrollBar; // x8
   __int64 naturalAligment; // x11
-  UnityEngine_Object_o *v34; // x20
-  struct UIScrollView_o *v35; // x8
-  UnityEngine_Object_o *v36; // x8
-  __int64 v37; // x11
-  UnityEngine_Object_o *v38; // x20
-  UnityEngine_GameObject_o *v39; // x0
-  MaterialEventLogListViewManager_c *v40; // x8
-  UnityEngine_GameObject_o *v41; // x21
-  struct UIScrollView_o *v42; // x8
+  UnityEngine_Object_o *v35; // x20
+  struct UIScrollView_o *v36; // x8
+  UnityEngine_Object_o *v37; // x8
+  __int64 v38; // x11
+  UnityEngine_Object_o *v39; // x20
+  UnityEngine_GameObject_o *v40; // x0
+  MaterialEventLogListViewManager_c *v41; // x8
+  UnityEngine_GameObject_o *v42; // x21
+  struct UIScrollView_o *v43; // x8
   UnityEngine_Object_o *mPanel; // x20
-  int32_t v44; // w2
-  const MethodInfo *v45; // x3
-  MaterialEventLogListViewManager_c *v46; // x0
+  int32_t v45; // w2
+  const MethodInfo *v46; // x3
+  MaterialEventLogListViewManager_c *v47; // x0
   struct ListViewSort_o *EventLogservantSortInfo; // x1
   struct ListViewSort_o **p_sort; // x20
-  MaterialEventLogListViewManager_o *v49; // x0
-  const MethodInfo *v50; // x1
+  MaterialEventLogListViewManager_o *v50; // x0
+  const MethodInfo *v51; // x1
   MaterialCollectionServantListViewManager_o *MaterialCollectionServantListViewManager; // x21
-  int32_t v52; // w2
-  const MethodInfo *v53; // x3
-  struct ListViewSort_o *v54; // x1
+  int32_t v53; // w2
+  const MethodInfo *v54; // x3
+  struct ListViewSort_o *v55; // x1
   UILabel_o *emptyMessageLabel; // x20
-  const MethodInfo *v56; // x1
   const MethodInfo *v57; // x1
-  UnityEngine_GameObject_o *v58; // x0
-  MaterialEventLogListViewManager_c *v59; // x8
-  UnityEngine_GameObject_o *v60; // x21
-  struct UIScrollView_o *v61; // x8
-  UnityEngine_Object_o *v62; // x20
-  const MethodInfo *v63; // x1
-  bool v64; // w1
+  const MethodInfo *v58; // x1
+  UnityEngine_GameObject_o *v59; // x0
+  MaterialEventLogListViewManager_c *v60; // x8
+  UnityEngine_GameObject_o *v61; // x21
+  struct UIScrollView_o *v62; // x8
+  UnityEngine_Object_o *v63; // x20
+  const MethodInfo *v64; // x1
+  bool v65; // w1
 
-  if ( (byte_4C3E1CB & 1) == 0 )
+  if ( (byte_4C51F4B & 1) == 0 )
   {
-    sub_1C37058(&Method_System_Collections_Generic_List_ListViewItem__Add__);
-    sub_1C37058(&Method_System_Collections_Generic_List_MaterialEventLogListViewItem_Info__get_Count__);
-    sub_1C37058(&Method_System_Collections_Generic_List_MaterialEventLogListViewItem_Info__get_Item__);
-    sub_1C37058(&LocalizationManager_TypeInfo);
-    sub_1C37058(&MaterialEventLogListViewItem_TypeInfo);
-    sub_1C37058(&MaterialEventLogListViewManager_TypeInfo);
-    sub_1C37058(&UnityEngine_Object_TypeInfo);
-    sub_1C37058(&UIScrollBar_TypeInfo);
-    sub_1C37058(&StringLiteral_11809/*"SERVANT_SORT_FILTER_RESULT_EMPTY_NEW_LINE"*/);
-    byte_4C3E1CB = 1;
+    sub_1C3E564(&Method_System_Collections_Generic_List_ListViewItem__Add__);
+    sub_1C3E564(&Method_System_Collections_Generic_List_MaterialEventLogListViewItem_Info__get_Count__);
+    sub_1C3E564(&Method_System_Collections_Generic_List_MaterialEventLogListViewItem_Info__get_Item__);
+    sub_1C3E564(&LocalizationManager_TypeInfo);
+    sub_1C3E564(&MaterialEventLogListViewItem_TypeInfo);
+    sub_1C3E564(&MaterialEventLogListViewManager_TypeInfo);
+    sub_1C3E564(&UnityEngine_Object_TypeInfo);
+    sub_1C3E564(&UIScrollBar_TypeInfo);
+    sub_1C3E564(&StringLiteral_11811/*"SERVANT_SORT_FILTER_RESULT_EMPTY_NEW_LINE"*/);
+    byte_4C51F4B = 1;
   }
   ListViewManager__DestroyList((ListViewManager_o *)this, 0);
   ListViewManager__CheckSortButton((ListViewManager_o *)this, 0, 0);
@@ -464,36 +470,36 @@ void MaterialEventLogListViewManager__CreateList(
     goto LABEL_85;
   size = infos->fields._size;
   if ( size >= 4 )
-    v9 = size + 1;
+    v10 = size + 1;
   else
-    v9 = 4;
-  if ( v9 >= 1 )
+    v10 = 4;
+  if ( v10 >= 1 )
   {
-    for ( i = 0; i != v9; ++i )
+    for ( i = 0; i != v10; ++i )
     {
-      v11 = sub_1C372A4(MaterialEventLogListViewItem_TypeInfo);
-      ListViewItem___ctor_43804668((ListViewItem_o *)v11, i, 0);
-      *(_DWORD *)(v11 + 120) = kind;
-      *(_QWORD *)(v11 + 128) = 0;
-      v12 = (Il2CppObject **)(v11 + 128);
-      sub_1C36FFC((CGThumbnailListItem_o *)(v11 + 128), 0, v13, v14);
+      v12 = sub_1C3E7B0(MaterialEventLogListViewItem_TypeInfo);
+      ListViewItem___ctor_43860152((ListViewItem_o *)v12, i, 0);
+      *(_DWORD *)(v12 + 120) = kind;
+      *(_QWORD *)(v12 + 128) = 0;
+      v13 = (Il2CppObject **)(v12 + 128);
+      sub_1C3E508((CGThumbnailListItem_o *)(v12 + 128), 0, v14, v15);
       if ( i < infos->fields._size )
       {
         Item = System_Collections_Generic_List_object___get_Item(
                  (System_Collections_Generic_List_object__o *)infos,
                  i,
-                 (const MethodInfo_37A2D54 *)Method_System_Collections_Generic_List_MaterialEventLogListViewItem_Info__get_Item__);
-        *v12 = Item;
-        sub_1C36FFC((CGThumbnailListItem_o *)(v11 + 128), (int32_t)Item, v18, v19);
-        itemList = *v12;
-        if ( !*v12 )
+                 (const MethodInfo_37B5190 *)Method_System_Collections_Generic_List_MaterialEventLogListViewItem_Info__get_Item__);
+        *v13 = Item;
+        sub_1C3E508((CGThumbnailListItem_o *)(v12 + 128), (int32_t)Item, v19, v20);
+        itemList = *v13;
+        if ( !*v13 )
           goto LABEL_85;
-        *((_QWORD *)itemList + 11) = v11;
-        sub_1C36FFC((CGThumbnailListItem_o *)((char *)itemList + 88), v11, v20, v21);
+        *((_QWORD *)itemList + 11) = v12;
+        sub_1C3E508((CGThumbnailListItem_o *)((char *)itemList + 88), v12, v21, v22);
         itemList = System_Collections_Generic_List_object___get_Item(
                      (System_Collections_Generic_List_object__o *)infos,
                      i,
-                     (const MethodInfo_37A2D54 *)Method_System_Collections_Generic_List_MaterialEventLogListViewItem_Info__get_Item__);
+                     (const MethodInfo_37B5190 *)Method_System_Collections_Generic_List_MaterialEventLogListViewItem_Info__get_Item__);
         if ( !itemList )
           goto LABEL_85;
         this->fields.issortButton = *((_BYTE *)itemList + 152);
@@ -501,41 +507,41 @@ void MaterialEventLogListViewManager__CreateList(
       itemList = this->fields.itemList;
       if ( !itemList )
         goto LABEL_85;
-      v22 = *((_QWORD *)itemList + 2);
-      v23 = Method_System_Collections_Generic_List_ListViewItem__Add__;
+      v23 = *((_QWORD *)itemList + 2);
+      v24 = Method_System_Collections_Generic_List_ListViewItem__Add__;
       ++*((_DWORD *)itemList + 7);
-      if ( !v22 )
+      if ( !v23 )
         goto LABEL_85;
-      v24 = *((int *)itemList + 6);
-      if ( (unsigned int)v24 >= *(_DWORD *)(v22 + 24) )
+      v25 = *((int *)itemList + 6);
+      if ( (unsigned int)v25 >= *(_DWORD *)(v23 + 24) )
       {
         System_Collections_Generic_List_object___AddWithResize(
           (System_Collections_Generic_List_object__o *)itemList,
-          (Il2CppObject *)v11,
-          *(const MethodInfo_37A3024 **)(*(_QWORD *)(v23[4] + 192LL) + 112LL));
+          (Il2CppObject *)v12,
+          *(const MethodInfo_37B5460 **)(*(_QWORD *)(v24[4] + 192LL) + 112LL));
       }
       else
       {
-        v25 = v22 + 8 * v24;
-        *((_DWORD *)itemList + 6) = v24 + 1;
-        *(_QWORD *)(v25 + 32) = v11;
-        sub_1C36FFC((CGThumbnailListItem_o *)(v25 + 32), v11, v15, v16);
+        v26 = v23 + 8 * v25;
+        *((_DWORD *)itemList + 6) = v25 + 1;
+        *(_QWORD *)(v26 + 32) = v12;
+        sub_1C3E508((CGThumbnailListItem_o *)(v26 + 32), v12, v16, v17);
       }
     }
   }
   issortButton = this->fields.issortButton;
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
-  v28 = MaterialEventLogListViewManager_TypeInfo;
-  v29 = gameObject;
+  v29 = MaterialEventLogListViewManager_TypeInfo;
+  v30 = gameObject;
   if ( !MaterialEventLogListViewManager_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(MaterialEventLogListViewManager_TypeInfo);
-    v28 = MaterialEventLogListViewManager_TypeInfo;
+    v29 = MaterialEventLogListViewManager_TypeInfo;
   }
-  p_VL_LIST_POS_Y = &v28->static_fields->VL_LIST_POS_Y;
+  p_VL_LIST_POS_Y = &v29->static_fields->VL_LIST_POS_Y;
   if ( issortButton )
   {
-    GameObjectExtensions__SetLocalPositionY(v29, *p_VL_LIST_POS_Y, 0);
+    GameObjectExtensions__SetLocalPositionY(v30, *p_VL_LIST_POS_Y, 0);
     ListViewManager__SetArrangementPitchY(
       (ListViewManager_o *)this,
       MaterialEventLogListViewManager_TypeInfo->static_fields->VL_ARRANGEMENT_PY,
@@ -549,38 +555,38 @@ void MaterialEventLogListViewManager__CreateList(
           verticalScrollBar->klass->_2.naturalAligment >= (unsigned int)naturalAligment) )
     {
       if ( (UIScrollBar_c *)verticalScrollBar->klass->_2.typeHierarchy[naturalAligment - 1] == UIScrollBar_TypeInfo )
-        v34 = verticalScrollBar;
+        v35 = verticalScrollBar;
       else
-        v34 = 0;
+        v35 = 0;
     }
     else
     {
-      v34 = 0;
+      v35 = 0;
     }
     if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-    itemList = (void *)UnityEngine_Object__op_Inequality(v34, 0, 0);
+    itemList = (void *)UnityEngine_Object__op_Inequality(v35, 0, 0);
     if ( ((unsigned __int8)itemList & 1) != 0 )
     {
-      if ( !v34 )
+      if ( !v35 )
         goto LABEL_85;
-      v39 = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)v34, 0);
-      v40 = MaterialEventLogListViewManager_TypeInfo;
-      v41 = v39;
+      v40 = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)v35, 0);
+      v41 = MaterialEventLogListViewManager_TypeInfo;
+      v42 = v40;
       if ( !MaterialEventLogListViewManager_TypeInfo->_2.cctor_finished )
       {
         j_il2cpp_runtime_class_init_0(MaterialEventLogListViewManager_TypeInfo);
-        v40 = MaterialEventLogListViewManager_TypeInfo;
+        v41 = MaterialEventLogListViewManager_TypeInfo;
       }
-      GameObjectExtensions__SetLocalPositionY(v41, v40->static_fields->VL_SCROLLBAR_POS_Y, 0);
-      itemList = v34[2].klass;
+      GameObjectExtensions__SetLocalPositionY(v42, v41->static_fields->VL_SCROLLBAR_POS_Y, 0);
+      itemList = v35[2].klass;
       if ( !itemList )
         goto LABEL_85;
       UIWidget__set_height(
         (UIWidget_o *)itemList,
         MaterialEventLogListViewManager_TypeInfo->static_fields->VL_SCROLLBAR_HEIGHT,
         0);
-      itemList = v34[2].monitor;
+      itemList = v35[2].monitor;
       if ( !itemList )
         goto LABEL_85;
       UIWidget__set_height(
@@ -588,10 +594,10 @@ void MaterialEventLogListViewManager__CreateList(
         MaterialEventLogListViewManager_TypeInfo->static_fields->VL_SCROLLBAR_HEIGHT,
         0);
     }
-    v42 = this->fields.scrollView;
-    if ( !v42 )
+    v43 = this->fields.scrollView;
+    if ( !v43 )
       goto LABEL_85;
-    mPanel = (UnityEngine_Object_o *)v42->fields.mPanel;
+    mPanel = (UnityEngine_Object_o *)v43->fields.mPanel;
     if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
     if ( UnityEngine_Object__op_Inequality(mPanel, 0, 0) )
@@ -613,24 +619,24 @@ void MaterialEventLogListViewManager__CreateList(
         (float)*(int *)(*((_QWORD *)itemList + 23) + 20LL));
     }
     ListViewManager__CheckSortButton((ListViewManager_o *)this, this->fields.issortButton, 0);
-    v46 = MaterialEventLogListViewManager_TypeInfo;
+    v47 = MaterialEventLogListViewManager_TypeInfo;
     if ( !MaterialEventLogListViewManager_TypeInfo->_2.cctor_finished )
     {
       j_il2cpp_runtime_class_init_0(MaterialEventLogListViewManager_TypeInfo);
-      v46 = MaterialEventLogListViewManager_TypeInfo;
+      v47 = MaterialEventLogListViewManager_TypeInfo;
     }
-    EventLogservantSortInfo = v46->static_fields->EventLogservantSortInfo;
+    EventLogservantSortInfo = v47->static_fields->EventLogservantSortInfo;
     this->fields.sort = EventLogservantSortInfo;
     p_sort = &this->fields.sort;
-    sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.sort, (int32_t)EventLogservantSortInfo, v44, v45);
+    sub_1C3E508((CGThumbnailListItem_o *)&this->fields.sort, (int32_t)EventLogservantSortInfo, v45, v46);
     itemList = this->fields.sort;
     if ( itemList )
     {
       *((_DWORD *)itemList + 32) = 0;
       ListViewSort__Load((ListViewSort_o *)itemList, 0);
       MaterialCollectionServantListViewManager = MaterialEventLogListViewManager__GetMaterialCollectionServantListViewManager(
-                                                   v49,
-                                                   v50);
+                                                   v50,
+                                                   v51);
       if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
       itemList = (void *)UnityEngine_Object__op_Inequality(
@@ -641,73 +647,73 @@ void MaterialEventLogListViewManager__CreateList(
       {
         if ( !MaterialCollectionServantListViewManager )
           goto LABEL_85;
-        v54 = *p_sort;
+        v55 = *p_sort;
         MaterialCollectionServantListViewManager->fields.sort = *p_sort;
-        sub_1C36FFC(
+        sub_1C3E508(
           (CGThumbnailListItem_o *)&MaterialCollectionServantListViewManager->fields.sort,
-          (int32_t)v54,
-          v52,
-          v53);
+          (int32_t)v55,
+          v53,
+          v54);
       }
       emptyMessageLabel = this->fields.emptyMessageLabel;
       if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-      itemList = LocalizationManager__Get((System_String_o *)StringLiteral_11809/*"SERVANT_SORT_FILTER_RESULT_EMPTY_NEW_LINE"*/, 0);
+      itemList = LocalizationManager__Get((System_String_o *)StringLiteral_11811/*"SERVANT_SORT_FILTER_RESULT_EMPTY_NEW_LINE"*/, 0);
       if ( emptyMessageLabel )
       {
         UILabel__set_text(emptyMessageLabel, (System_String_o *)itemList, 0);
-        MaterialEventLogListViewManager__SetFilterButtonImage(this, v56);
-        MaterialEventLogListViewManager__SortDummyData(this, v57);
+        MaterialEventLogListViewManager__SetFilterButtonImage(this, v57);
+        MaterialEventLogListViewManager__SortDummyData(this, v58);
         goto LABEL_82;
       }
     }
 LABEL_85:
-    sub_1C372B4(itemList);
+    sub_1C3E7C0(itemList, v8);
   }
-  GameObjectExtensions__SetLocalPositionY(v29, p_VL_LIST_POS_Y[7], 0);
+  GameObjectExtensions__SetLocalPositionY(v30, p_VL_LIST_POS_Y[7], 0);
   ListViewManager__SetArrangementPitchY(
     (ListViewManager_o *)this,
     MaterialEventLogListViewManager_TypeInfo->static_fields->NORMAL_ARRANGEMENT_PY,
     0);
-  v35 = this->fields.scrollView;
-  if ( !v35 )
+  v36 = this->fields.scrollView;
+  if ( !v36 )
     goto LABEL_85;
-  v36 = (UnityEngine_Object_o *)v35->fields.verticalScrollBar;
-  if ( v36 && (v37 = UIScrollBar_TypeInfo->_2.naturalAligment, v36->klass->_2.naturalAligment >= (unsigned int)v37) )
+  v37 = (UnityEngine_Object_o *)v36->fields.verticalScrollBar;
+  if ( v37 && (v38 = UIScrollBar_TypeInfo->_2.naturalAligment, v37->klass->_2.naturalAligment >= (unsigned int)v38) )
   {
-    if ( (UIScrollBar_c *)v36->klass->_2.typeHierarchy[v37 - 1] == UIScrollBar_TypeInfo )
-      v38 = v36;
+    if ( (UIScrollBar_c *)v37->klass->_2.typeHierarchy[v38 - 1] == UIScrollBar_TypeInfo )
+      v39 = v37;
     else
-      v38 = 0;
+      v39 = 0;
   }
   else
   {
-    v38 = 0;
+    v39 = 0;
   }
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-  itemList = (void *)UnityEngine_Object__op_Inequality(v38, 0, 0);
+  itemList = (void *)UnityEngine_Object__op_Inequality(v39, 0, 0);
   if ( ((unsigned __int8)itemList & 1) != 0 )
   {
-    if ( !v38 )
+    if ( !v39 )
       goto LABEL_85;
-    v58 = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)v38, 0);
-    v59 = MaterialEventLogListViewManager_TypeInfo;
-    v60 = v58;
+    v59 = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)v39, 0);
+    v60 = MaterialEventLogListViewManager_TypeInfo;
+    v61 = v59;
     if ( !MaterialEventLogListViewManager_TypeInfo->_2.cctor_finished )
     {
       j_il2cpp_runtime_class_init_0(MaterialEventLogListViewManager_TypeInfo);
-      v59 = MaterialEventLogListViewManager_TypeInfo;
+      v60 = MaterialEventLogListViewManager_TypeInfo;
     }
-    GameObjectExtensions__SetLocalPositionY(v60, v59->static_fields->NORMAL_SCROLLBAR_POS_Y, 0);
-    itemList = v38[2].klass;
+    GameObjectExtensions__SetLocalPositionY(v61, v60->static_fields->NORMAL_SCROLLBAR_POS_Y, 0);
+    itemList = v39[2].klass;
     if ( !itemList )
       goto LABEL_85;
     UIWidget__set_height(
       (UIWidget_o *)itemList,
       MaterialEventLogListViewManager_TypeInfo->static_fields->NORMAL_SCROLLBAR_BACK_HEIGHT,
       0);
-    itemList = v38[2].monitor;
+    itemList = v39[2].monitor;
     if ( !itemList )
       goto LABEL_85;
     UIWidget__set_height(
@@ -715,13 +721,13 @@ LABEL_85:
       MaterialEventLogListViewManager_TypeInfo->static_fields->NORMAL_SCROLLBAR_FORE_HEIGHT,
       0);
   }
-  v61 = this->fields.scrollView;
-  if ( !v61 )
+  v62 = this->fields.scrollView;
+  if ( !v62 )
     goto LABEL_85;
-  v62 = (UnityEngine_Object_o *)v61->fields.mPanel;
+  v63 = (UnityEngine_Object_o *)v62->fields.mPanel;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-  if ( UnityEngine_Object__op_Inequality(v62, 0, 0) )
+  if ( UnityEngine_Object__op_Inequality(v63, 0, 0) )
   {
     itemList = MaterialEventLogListViewManager_TypeInfo;
     if ( !MaterialEventLogListViewManager_TypeInfo->_2.cctor_finished )
@@ -729,11 +735,11 @@ LABEL_85:
       j_il2cpp_runtime_class_init_0(MaterialEventLogListViewManager_TypeInfo);
       itemList = MaterialEventLogListViewManager_TypeInfo;
     }
-    if ( !v62 )
+    if ( !v63 )
       goto LABEL_85;
-    (*(void (__fastcall **)(UnityEngine_Object_o *, size_t, float, float, float, float))&v62->klass[1]._2.cctor_finished)(
-      v62,
-      v62->klass[1]._2.cctor_thread,
+    (*(void (__fastcall **)(UnityEngine_Object_o *, size_t, float, float, float, float))&v63->klass[1]._2.cctor_finished)(
+      v63,
+      v63->klass[1]._2.cctor_thread,
       0.0,
       (float)*(int *)(*((_QWORD *)itemList + 23) + 56LL),
       (float)*(int *)(*((_QWORD *)itemList + 23) + 48LL),
@@ -743,10 +749,10 @@ LABEL_82:
   ListViewManager__SortItem((ListViewManager_o *)this, -1, 0, -1, 0);
   if ( this->fields.issortButton )
   {
-    v64 = MaterialEventLogListViewManager__GetFilterCount(this, v63) < 1;
-    ListViewManager__SetEmptyMessageBase((ListViewManager_o *)this, v64, 0);
+    v65 = MaterialEventLogListViewManager__GetFilterCount(this, v64) < 1;
+    ListViewManager__SetEmptyMessageBase((ListViewManager_o *)this, v65, 0);
   }
-  MaterialEventLogListViewManager__CreateInfos(this, v63);
+  MaterialEventLogListViewManager__CreateInfos(this, v64);
   ListViewManager__ClippingItems((ListViewManager_o *)this, 1, 0, 0);
   ListViewManager__CheckVerticalScrollBar((ListViewManager_o *)this, 0);
 }
@@ -754,23 +760,24 @@ LABEL_82:
 
 void MaterialEventLogListViewManager__DeleteContinueData(const MethodInfo *method)
 {
-  MaterialEventLogListViewManager_c *v1; // x0
+  __int64 v1; // x1
+  MaterialEventLogListViewManager_c *v2; // x0
   ListViewSort_o *EventLogservantSortInfo; // x0
 
-  if ( (byte_4C3E1C6 & 1) == 0 )
+  if ( (byte_4C51F46 & 1) == 0 )
   {
-    sub_1C37058(&MaterialEventLogListViewManager_TypeInfo);
-    byte_4C3E1C6 = 1;
+    sub_1C3E564(&MaterialEventLogListViewManager_TypeInfo);
+    byte_4C51F46 = 1;
   }
-  v1 = MaterialEventLogListViewManager_TypeInfo;
+  v2 = MaterialEventLogListViewManager_TypeInfo;
   if ( !MaterialEventLogListViewManager_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(MaterialEventLogListViewManager_TypeInfo);
-    v1 = MaterialEventLogListViewManager_TypeInfo;
+    v2 = MaterialEventLogListViewManager_TypeInfo;
   }
-  EventLogservantSortInfo = v1->static_fields->EventLogservantSortInfo;
+  EventLogservantSortInfo = v2->static_fields->EventLogservantSortInfo;
   if ( !EventLogservantSortInfo )
-    sub_1C372B4(0);
+    sub_1C3E7C0(0, v1);
   ListViewSort__DeleteContinueData(EventLogservantSortInfo, 0);
 }
 
@@ -782,6 +789,7 @@ void MaterialEventLogListViewManager__DestroyList(MaterialEventLogListViewManage
 }
 
 
+// local variable allocation has failed, the output may be wrong!
 void MaterialEventLogListViewManager__EndEventLogSortKind(
         MaterialEventLogListViewManager_o *this,
         bool isDecide,
@@ -791,18 +799,17 @@ void MaterialEventLogListViewManager__EndEventLogSortKind(
   MaterialEventLogListViewManager_o *v6; // x0
   const MethodInfo *v7; // x1
   MaterialCollectionServantListViewManager_o *MaterialCollectionServantListViewManager; // x21
-  const MethodInfo *v9; // x1
-  int32_t v10; // w2
-  const MethodInfo *v11; // x3
+  int32_t v9; // w2
+  const MethodInfo *v10; // x3
   struct ListViewSort_o *sort; // x1
-  const MethodInfo *v13; // x1
-  bool v14; // w1
-  const MethodInfo *v15; // x1
+  const MethodInfo *v12; // x1
+  bool v13; // w1
+  const MethodInfo *v14; // x1
 
-  if ( (byte_4C3E1D5 & 1) == 0 )
+  if ( (byte_4C51F55 & 1) == 0 )
   {
-    sub_1C37058(&UnityEngine_Object_TypeInfo);
-    byte_4C3E1D5 = 1;
+    sub_1C3E564(&UnityEngine_Object_TypeInfo);
+    byte_4C51F55 = 1;
   }
   eventLogServantSortSelectMenu = this->fields.eventLogServantSortSelectMenu;
   if ( !eventLogServantSortSelectMenu )
@@ -823,30 +830,26 @@ void MaterialEventLogListViewManager__EndEventLogSortKind(
       goto LABEL_13;
     sort = this->fields.sort;
     MaterialCollectionServantListViewManager->fields.sort = sort;
-    sub_1C36FFC(
-      (CGThumbnailListItem_o *)&MaterialCollectionServantListViewManager->fields.sort,
-      (int32_t)sort,
-      v10,
-      v11);
+    sub_1C3E508((CGThumbnailListItem_o *)&MaterialCollectionServantListViewManager->fields.sort, (int32_t)sort, v9, v10);
   }
   if ( isDecide )
   {
-    MaterialEventLogListViewManager__SortDummyData(this, v9);
+    MaterialEventLogListViewManager__SortDummyData(this, (const MethodInfo *)isDecide);
     ListViewManager__SortItem((ListViewManager_o *)this, -1, 0, -1, 0);
-    v14 = MaterialEventLogListViewManager__GetFilterCount(this, v13) < 1;
-    ListViewManager__SetEmptyMessageBase((ListViewManager_o *)this, v14, 0);
+    v13 = MaterialEventLogListViewManager__GetFilterCount(this, v12) < 1;
+    ListViewManager__SetEmptyMessageBase((ListViewManager_o *)this, v13, 0);
     eventLogServantSortSelectMenu = (MaterialEventLogServantSortSelectMenu_o *)this->fields.sort;
     if ( eventLogServantSortSelectMenu )
     {
       ListViewSort__Save((ListViewSort_o *)eventLogServantSortSelectMenu, 0);
-      MaterialEventLogListViewManager__CreateInfos(this, v15);
+      MaterialEventLogListViewManager__CreateInfos(this, v14);
       goto LABEL_12;
     }
 LABEL_13:
-    sub_1C372B4(eventLogServantSortSelectMenu);
+    sub_1C3E7C0(eventLogServantSortSelectMenu, isDecide);
   }
 LABEL_12:
-  MaterialEventLogListViewManager__SetFilterButtonImage(this, v9);
+  MaterialEventLogListViewManager__SetFilterButtonImage(this, (const MethodInfo *)isDecide);
 }
 
 
@@ -858,24 +861,25 @@ void MaterialEventLogListViewManager__EventLogSortKind(
   ListViewSort_o *sort; // x21
   MaterialEventLogServantSortSelectMenu_CallbackFunc_o *v6; // x22
   __int64 v7; // x0
+  __int64 v8; // x1
 
-  if ( (byte_4C3E1D3 & 1) == 0 )
+  if ( (byte_4C51F53 & 1) == 0 )
   {
-    sub_1C37058(&MaterialEventLogServantSortSelectMenu_CallbackFunc_TypeInfo);
-    sub_1C37058(&Method_MaterialEventLogListViewManager_EndEventLogSortKind__);
-    byte_4C3E1D3 = 1;
+    sub_1C3E564(&MaterialEventLogServantSortSelectMenu_CallbackFunc_TypeInfo);
+    sub_1C3E564(&Method_MaterialEventLogListViewManager_EndEventLogSortKind__);
+    byte_4C51F53 = 1;
   }
   if ( this->fields.isInput )
   {
     sort = this->fields.sort;
-    v6 = (MaterialEventLogServantSortSelectMenu_CallbackFunc_o *)sub_1C372A4(MaterialEventLogServantSortSelectMenu_CallbackFunc_TypeInfo);
+    v6 = (MaterialEventLogServantSortSelectMenu_CallbackFunc_o *)sub_1C3E7B0(MaterialEventLogServantSortSelectMenu_CallbackFunc_TypeInfo);
     MaterialEventLogServantSortSelectMenu_CallbackFunc___ctor(
       v6,
       (Il2CppObject *)this,
       Method_MaterialEventLogListViewManager_EndEventLogSortKind__,
       0);
     if ( !eventLogServantSortSelectMenu )
-      sub_1C372B4(v7);
+      sub_1C3E7C0(v7, v8);
     MaterialEventLogServantSortSelectMenu__Open(eventLogServantSortSelectMenu, 0, sort, v6, 0);
   }
 }
@@ -891,12 +895,12 @@ int32_t MaterialEventLogListViewManager__GetFilterCount(
   int32_t v6; // w20
   __int64 naturalAligment; // x10
 
-  if ( (byte_4C3E1D4 & 1) == 0 )
+  if ( (byte_4C51F54 & 1) == 0 )
   {
-    sub_1C37058(&Method_System_Collections_Generic_List_ListViewItem__get_Count__);
-    sub_1C37058(&Method_System_Collections_Generic_List_ListViewItem__get_Item__);
-    sub_1C37058(&MaterialEventLogListViewItem_TypeInfo);
-    byte_4C3E1D4 = 1;
+    sub_1C3E564(&Method_System_Collections_Generic_List_ListViewItem__get_Count__);
+    sub_1C3E564(&Method_System_Collections_Generic_List_ListViewItem__get_Item__);
+    sub_1C3E564(&MaterialEventLogListViewItem_TypeInfo);
+    byte_4C51F54 = 1;
   }
   itemList = (System_Collections_Generic_List_object__o *)this->fields.itemList;
   if ( !itemList )
@@ -911,7 +915,7 @@ int32_t MaterialEventLogListViewManager__GetFilterCount(
       itemList = (System_Collections_Generic_List_object__o *)System_Collections_Generic_List_object___get_Item(
                                                                 itemList,
                                                                 v5,
-                                                                (const MethodInfo_37A2D54 *)Method_System_Collections_Generic_List_ListViewItem__get_Item__);
+                                                                (const MethodInfo_37B5190 *)Method_System_Collections_Generic_List_ListViewItem__get_Item__);
       if ( !itemList )
         break;
       naturalAligment = MaterialEventLogListViewItem_TypeInfo->_2.naturalAligment;
@@ -932,7 +936,7 @@ int32_t MaterialEventLogListViewManager__GetFilterCount(
     }
     while ( itemList );
 LABEL_13:
-    sub_1C372B4(itemList);
+    sub_1C3E7C0(itemList, method);
   }
   return 0;
 }
@@ -946,11 +950,11 @@ PartyServantListViewItem_o *MaterialEventLogListViewManager__GetItem(
   PartyServantListViewItem_o *result; // x0
   __int64 naturalAligment; // x10
 
-  if ( (byte_4C3E1CC & 1) == 0 )
+  if ( (byte_4C51F4C & 1) == 0 )
   {
-    sub_1C37058(&Method_System_Collections_Generic_List_ListViewItem__get_Item__);
-    sub_1C37058(&PartyServantListViewItem_TypeInfo);
-    byte_4C3E1CC = 1;
+    sub_1C3E564(&Method_System_Collections_Generic_List_ListViewItem__get_Item__);
+    sub_1C3E564(&PartyServantListViewItem_TypeInfo);
+    byte_4C51F4C = 1;
   }
   result = (PartyServantListViewItem_o *)this->fields.itemList;
   if ( result )
@@ -958,7 +962,7 @@ PartyServantListViewItem_o *MaterialEventLogListViewManager__GetItem(
     result = (PartyServantListViewItem_o *)System_Collections_Generic_List_object___get_Item(
                                              (System_Collections_Generic_List_object__o *)result,
                                              index,
-                                             (const MethodInfo_37A2D54 *)Method_System_Collections_Generic_List_ListViewItem__get_Item__);
+                                             (const MethodInfo_37B5190 *)Method_System_Collections_Generic_List_ListViewItem__get_Item__);
     if ( result )
     {
       naturalAligment = PartyServantListViewItem_TypeInfo->_2.naturalAligment;
@@ -982,29 +986,30 @@ MaterialCollectionServantListViewManager_o *MaterialEventLogListViewManager__Get
         const MethodInfo *method)
 {
   MaterialCollectionServantListViewManager_o *result; // x0
+  __int64 v3; // x1
   UnityEngine_Object_o *dropObjectList; // x19
-  bool v4; // w8
+  bool v5; // w8
   __int64 naturalAligment; // x10
-  bool v6; // w8
+  bool v7; // w8
   intptr_t m_CachedPtr; // x19
-  bool v8; // w8
+  bool v9; // w8
 
-  if ( (byte_4C3E1C8 & 1) == 0 )
+  if ( (byte_4C51F48 & 1) == 0 )
   {
-    sub_1C37058(&MyRoomRootComponent_TypeInfo);
-    sub_1C37058(&UnityEngine_Object_TypeInfo);
-    sub_1C37058(&Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__);
-    byte_4C3E1C8 = 1;
+    sub_1C3E564(&MyRoomRootComponent_TypeInfo);
+    sub_1C3E564(&UnityEngine_Object_TypeInfo);
+    sub_1C3E564(&Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__);
+    byte_4C51F48 = 1;
   }
-  result = (MaterialCollectionServantListViewManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39ED16C *)Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__);
+  result = (MaterialCollectionServantListViewManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39FF5A8 *)Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__);
   if ( !result )
     goto LABEL_22;
   dropObjectList = (UnityEngine_Object_o *)result->fields.dropObjectList;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-  v4 = UnityEngine_Object__op_Equality(dropObjectList, 0, 0);
+  v5 = UnityEngine_Object__op_Equality(dropObjectList, 0, 0);
   result = 0;
-  if ( !v4 )
+  if ( !v5 )
   {
     if ( dropObjectList )
     {
@@ -1021,23 +1026,23 @@ MaterialCollectionServantListViewManager_o *MaterialEventLogListViewManager__Get
     }
     if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-    v6 = UnityEngine_Object__op_Equality(dropObjectList, 0, 0);
+    v7 = UnityEngine_Object__op_Equality(dropObjectList, 0, 0);
     result = 0;
-    if ( !v6 )
+    if ( !v7 )
     {
       if ( !dropObjectList )
         goto LABEL_22;
       m_CachedPtr = dropObjectList[2].fields.m_CachedPtr;
       if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-      v8 = UnityEngine_Object__op_Equality((UnityEngine_Object_o *)m_CachedPtr, 0, 0);
+      v9 = UnityEngine_Object__op_Equality((UnityEngine_Object_o *)m_CachedPtr, 0, 0);
       result = 0;
-      if ( !v8 )
+      if ( !v9 )
       {
         if ( m_CachedPtr )
           return *(MaterialCollectionServantListViewManager_o **)(m_CachedPtr + 568);
 LABEL_22:
-        sub_1C372B4(result);
+        sub_1C3E7C0(result, v3);
       }
     }
   }
@@ -1052,7 +1057,7 @@ float MaterialEventLogListViewManager__GetScrollPosY(MaterialEventLogListViewMan
 
   scrollView = (UnityEngine_Component_o *)this->fields.scrollView;
   if ( !scrollView )
-    sub_1C372B4(0);
+    sub_1C3E7C0(0, method);
   gameObject = UnityEngine_Component__get_gameObject(scrollView, 0);
   return GameObjectExtensions__GetLocalPositionY(gameObject, 0);
 }
@@ -1068,23 +1073,24 @@ UIScrollView_o *MaterialEventLogListViewManager__GetScrollView(
 
 void MaterialEventLogListViewManager__InitLoad(const MethodInfo *method)
 {
-  MaterialEventLogListViewManager_c *v1; // x0
+  __int64 v1; // x1
+  MaterialEventLogListViewManager_c *v2; // x0
   ListViewSort_o *EventLogservantSortInfo; // x0
 
-  if ( (byte_4C3E1C7 & 1) == 0 )
+  if ( (byte_4C51F47 & 1) == 0 )
   {
-    sub_1C37058(&MaterialEventLogListViewManager_TypeInfo);
-    byte_4C3E1C7 = 1;
+    sub_1C3E564(&MaterialEventLogListViewManager_TypeInfo);
+    byte_4C51F47 = 1;
   }
-  v1 = MaterialEventLogListViewManager_TypeInfo;
+  v2 = MaterialEventLogListViewManager_TypeInfo;
   if ( !MaterialEventLogListViewManager_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(MaterialEventLogListViewManager_TypeInfo);
-    v1 = MaterialEventLogListViewManager_TypeInfo;
+    v2 = MaterialEventLogListViewManager_TypeInfo;
   }
-  EventLogservantSortInfo = v1->static_fields->EventLogservantSortInfo;
+  EventLogservantSortInfo = v2->static_fields->EventLogservantSortInfo;
   if ( !EventLogservantSortInfo )
-    sub_1C372B4(0);
+    sub_1C3E7C0(0, v1);
   ListViewSort__InitLoad(EventLogservantSortInfo, 0);
 }
 
@@ -1094,68 +1100,68 @@ void MaterialEventLogListViewManager__InitializeObjectPosition(
         const MethodInfo *method)
 {
   UnityEngine_Object_o *seed; // x20
-  UnityEngine_GameObject_o *ComponentsInChildren_object__51641852; // x0
-  struct ListViewItemSeed_o *v5; // x8
+  UnityEngine_GameObject_o *ComponentsInChildren_object__51715312; // x0
+  const MethodInfo *v5; // x1
+  struct ListViewItemSeed_o *v6; // x8
   UnityEngine_Object_o *parent; // x20
-  struct ListViewItemSeed_o *v7; // x8
-  const MethodInfo *v8; // x1
+  struct ListViewItemSeed_o *v8; // x8
   int klass; // w8
   UnityEngine_GameObject_o *v10; // x19
   unsigned int v11; // w20
 
-  if ( (byte_4C3E1DD & 1) == 0 )
+  if ( (byte_4C51F5D & 1) == 0 )
   {
-    sub_1C37058(&Method_UnityEngine_GameObject_GetComponentsInChildren_MaterialEventLogListViewObject___);
-    sub_1C37058(&UnityEngine_Object_TypeInfo);
-    byte_4C3E1DD = 1;
+    sub_1C3E564(&Method_UnityEngine_GameObject_GetComponentsInChildren_MaterialEventLogListViewObject___);
+    sub_1C3E564(&UnityEngine_Object_TypeInfo);
+    byte_4C51F5D = 1;
   }
   seed = (UnityEngine_Object_o *)this->fields.seed;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-  ComponentsInChildren_object__51641852 = (UnityEngine_GameObject_o *)UnityEngine_Object__op_Inequality(seed, 0, 0);
-  if ( ((unsigned __int8)ComponentsInChildren_object__51641852 & 1) != 0 )
+  ComponentsInChildren_object__51715312 = (UnityEngine_GameObject_o *)UnityEngine_Object__op_Inequality(seed, 0, 0);
+  if ( ((unsigned __int8)ComponentsInChildren_object__51715312 & 1) != 0 )
   {
-    v5 = this->fields.seed;
-    if ( !v5 )
+    v6 = this->fields.seed;
+    if ( !v6 )
       goto LABEL_19;
-    parent = (UnityEngine_Object_o *)v5->fields.parent;
+    parent = (UnityEngine_Object_o *)v6->fields.parent;
     if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-    ComponentsInChildren_object__51641852 = (UnityEngine_GameObject_o *)UnityEngine_Object__op_Inequality(parent, 0, 0);
-    if ( ((unsigned __int8)ComponentsInChildren_object__51641852 & 1) != 0 )
+    ComponentsInChildren_object__51715312 = (UnityEngine_GameObject_o *)UnityEngine_Object__op_Inequality(parent, 0, 0);
+    if ( ((unsigned __int8)ComponentsInChildren_object__51715312 & 1) != 0 )
     {
-      v7 = this->fields.seed;
-      if ( !v7 )
+      v8 = this->fields.seed;
+      if ( !v8 )
         goto LABEL_19;
-      ComponentsInChildren_object__51641852 = v7->fields.parent;
-      if ( !ComponentsInChildren_object__51641852 )
+      ComponentsInChildren_object__51715312 = v8->fields.parent;
+      if ( !ComponentsInChildren_object__51715312 )
         goto LABEL_19;
-      ComponentsInChildren_object__51641852 = (UnityEngine_GameObject_o *)UnityEngine_GameObject__GetComponentsInChildren_object__51641852(
-                                                                            ComponentsInChildren_object__51641852,
-                                                                            (const MethodInfo_313FDFC *)Method_UnityEngine_GameObject_GetComponentsInChildren_MaterialEventLogListViewObject___);
-      if ( !ComponentsInChildren_object__51641852 )
+      ComponentsInChildren_object__51715312 = (UnityEngine_GameObject_o *)UnityEngine_GameObject__GetComponentsInChildren_object__51715312(
+                                                                            ComponentsInChildren_object__51715312,
+                                                                            (const MethodInfo_3151CF0 *)Method_UnityEngine_GameObject_GetComponentsInChildren_MaterialEventLogListViewObject___);
+      if ( !ComponentsInChildren_object__51715312 )
         goto LABEL_19;
-      klass = (int)ComponentsInChildren_object__51641852[1].klass;
-      v10 = ComponentsInChildren_object__51641852;
+      klass = (int)ComponentsInChildren_object__51715312[1].klass;
+      v10 = ComponentsInChildren_object__51715312;
       if ( klass >= 1 )
       {
         v11 = 0;
         while ( 1 )
         {
           if ( v11 >= klass )
-            sub_1C372BC(ComponentsInChildren_object__51641852);
-          ComponentsInChildren_object__51641852 = (UnityEngine_GameObject_o *)*((_QWORD *)&v10[1].monitor + (int)v11);
-          if ( !ComponentsInChildren_object__51641852 )
+            sub_1C3E7C8(ComponentsInChildren_object__51715312, v5);
+          ComponentsInChildren_object__51715312 = (UnityEngine_GameObject_o *)*((_QWORD *)&v10[1].monitor + (int)v11);
+          if ( !ComponentsInChildren_object__51715312 )
             break;
           MaterialEventLogListViewObject__InitPosition(
-            (MaterialEventLogListViewObject_o *)ComponentsInChildren_object__51641852,
-            v8);
+            (MaterialEventLogListViewObject_o *)ComponentsInChildren_object__51715312,
+            v5);
           klass = (int)v10[1].klass;
           if ( (int)++v11 >= klass )
             return;
         }
 LABEL_19:
-        sub_1C372B4(ComponentsInChildren_object__51641852);
+        sub_1C3E7C0(ComponentsInChildren_object__51715312, v5);
       }
     }
   }
@@ -1188,12 +1194,12 @@ void MaterialEventLogListViewManager__OnClickListView(
   _QWORD *v10; // x0
   System_Reflection_MethodBase_o *v11; // x0
 
-  if ( (byte_4C3E1D1 & 1) == 0 )
+  if ( (byte_4C51F51 & 1) == 0 )
   {
-    sub_1C37058(&Method_ActionExtensions_Call_MaterialEventLogListViewItem___);
-    sub_1C37058(&MaterialEventLogListViewItem_TypeInfo);
-    this = (MaterialEventLogListViewManager_o *)sub_1C37058(&Method_MaterialEventLogListViewManager_OnClickListView__);
-    byte_4C3E1D1 = 1;
+    sub_1C3E564(&Method_ActionExtensions_Call_MaterialEventLogListViewItem___);
+    sub_1C3E564(&MaterialEventLogListViewItem_TypeInfo);
+    this = (MaterialEventLogListViewManager_o *)sub_1C3E564(&Method_MaterialEventLogListViewManager_OnClickListView__);
+    byte_4C51F51 = 1;
   }
   if ( !obj
     || (linkItem = (Il2CppObject *)obj->fields.linkItem) == 0
@@ -1201,7 +1207,7 @@ void MaterialEventLogListViewManager__OnClickListView(
         linkItem->klass->_2.naturalAligment < (unsigned int)naturalAligment)
     || (MaterialEventLogListViewItem_c *)linkItem->klass->_2.typeHierarchy[naturalAligment - 1] != MaterialEventLogListViewItem_TypeInfo )
   {
-    sub_1C372B4(this);
+    sub_1C3E7C0(this, obj);
   }
   klass = linkItem[8].klass;
   if ( klass )
@@ -1211,8 +1217,8 @@ void MaterialEventLogListViewManager__OnClickListView(
     {
       v8 = Method_MaterialEventLogListViewManager_OnClickListView__;
       if ( (*((_BYTE *)Method_MaterialEventLogListViewManager_OnClickListView__ + 83) & 2) != 0 )
-        v8 = (_QWORD *)sub_1C37070(Method_MaterialEventLogListViewManager_OnClickListView__);
-      v9 = (System_Reflection_MethodBase_o *)sub_1C3703C(v8, v8[4]);
+        v8 = (_QWORD *)sub_1C3E57C(Method_MaterialEventLogListViewManager_OnClickListView__);
+      v9 = (System_Reflection_MethodBase_o *)sub_1C3E548(v8, v8[4]);
       OverwriteAssetSoundName__PlaySystemSe(v9, 0, 0, 0);
       element_class_high = HIDWORD(klass->_1.element_class);
     }
@@ -1220,8 +1226,8 @@ void MaterialEventLogListViewManager__OnClickListView(
     {
       v10 = Method_MaterialEventLogListViewManager_OnClickListView__;
       if ( (*((_BYTE *)Method_MaterialEventLogListViewManager_OnClickListView__ + 83) & 2) != 0 )
-        v10 = (_QWORD *)sub_1C37070(Method_MaterialEventLogListViewManager_OnClickListView__);
-      v11 = (System_Reflection_MethodBase_o *)sub_1C3703C(v10, v10[4]);
+        v10 = (_QWORD *)sub_1C3E57C(Method_MaterialEventLogListViewManager_OnClickListView__);
+      v11 = (System_Reflection_MethodBase_o *)sub_1C3E548(v10, v10[4]);
       OverwriteAssetSoundName__PlaySystemSe(v11, 2, 0, 0);
     }
     else
@@ -1229,7 +1235,7 @@ void MaterialEventLogListViewManager__OnClickListView(
       ActionExtensions__Call_object_(
         (System_Action_T__o *)klass->_1.declaringType,
         linkItem,
-        (const MethodInfo_3034548 *)Method_ActionExtensions_Call_MaterialEventLogListViewItem___);
+        (const MethodInfo_3046360 *)Method_ActionExtensions_Call_MaterialEventLogListViewItem___);
     }
   }
 }
@@ -1243,69 +1249,70 @@ void MaterialEventLogListViewManager__RequestListObject(
 {
   __int64 v7; // x19
   System_Collections_Generic_List_object__o *ObjectList; // x0
-  int32_t v9; // w2
-  const MethodInfo *v10; // x3
-  int32_t v11; // w2
-  const MethodInfo *v12; // x3
-  const MethodInfo *v13; // x1
-  System_Collections_Generic_List_object__o *v14; // x22
-  int32_t v15; // w24
-  const MethodInfo *v16; // x4
+  __int64 v9; // x1
+  int32_t v10; // w2
+  const MethodInfo *v11; // x3
+  int32_t v12; // w2
+  const MethodInfo *v13; // x3
+  const MethodInfo *v14; // x1
+  System_Collections_Generic_List_object__o *v15; // x22
+  int32_t v16; // w24
+  const MethodInfo *v17; // x4
   int32_t initMode; // w8
-  UnityEngine_GameObject_o *v18; // x0
-  Il2CppObject *v19; // x21
-  float v20; // s8
+  UnityEngine_GameObject_o *v19; // x0
+  Il2CppObject *v20; // x21
+  float v21; // s8
   int klass; // s0
   int monitor; // s1
-  System_Action_o *v23; // x20
+  System_Action_o *v24; // x20
   UnityEngine_GameObject_o *gameObject; // x0
   Il2CppObject *Component_object; // x20
   float IntpTime_AutoResume; // s8
-  System_Action_o *v27; // x21
-  System_Action_o *v28; // x20
+  System_Action_o *v28; // x21
+  System_Action_o *v29; // x20
 
-  if ( (byte_4C3E1CF & 1) == 0 )
+  if ( (byte_4C51F4F & 1) == 0 )
   {
-    sub_1C37058(&System_Action_TypeInfo);
-    sub_1C37058(&Method_GameObjectExtensions_SafeGetComponent_SlideFadeObject___);
-    sub_1C37058(&Method_System_Collections_Generic_List_MaterialEventLogListViewObject__get_Count__);
-    sub_1C37058(&Method_System_Collections_Generic_List_MaterialEventLogListViewObject__get_Item__);
-    sub_1C37058(&TerminalPramsManager_TypeInfo);
-    sub_1C37058(&Method_MaterialEventLogListViewManager___c__DisplayClass50_0__RequestListObject_b__0__);
-    sub_1C37058(&Method_MaterialEventLogListViewManager___c__DisplayClass50_0__RequestListObject_b__1__);
-    sub_1C37058(&Method_MaterialEventLogListViewManager___c__DisplayClass50_0__RequestListObject_b__2__);
-    sub_1C37058(&MaterialEventLogListViewManager___c__DisplayClass50_0_TypeInfo);
-    byte_4C3E1CF = 1;
+    sub_1C3E564(&System_Action_TypeInfo);
+    sub_1C3E564(&Method_GameObjectExtensions_SafeGetComponent_SlideFadeObject___);
+    sub_1C3E564(&Method_System_Collections_Generic_List_MaterialEventLogListViewObject__get_Count__);
+    sub_1C3E564(&Method_System_Collections_Generic_List_MaterialEventLogListViewObject__get_Item__);
+    sub_1C3E564(&TerminalPramsManager_TypeInfo);
+    sub_1C3E564(&Method_MaterialEventLogListViewManager___c__DisplayClass50_0__RequestListObject_b__0__);
+    sub_1C3E564(&Method_MaterialEventLogListViewManager___c__DisplayClass50_0__RequestListObject_b__1__);
+    sub_1C3E564(&Method_MaterialEventLogListViewManager___c__DisplayClass50_0__RequestListObject_b__2__);
+    sub_1C3E564(&MaterialEventLogListViewManager___c__DisplayClass50_0_TypeInfo);
+    byte_4C51F4F = 1;
   }
-  v7 = sub_1C372A4(MaterialEventLogListViewManager___c__DisplayClass50_0_TypeInfo);
+  v7 = sub_1C3E7B0(MaterialEventLogListViewManager___c__DisplayClass50_0_TypeInfo);
   System_Object___ctor((Il2CppObject *)v7, 0);
   if ( !v7 )
     goto LABEL_25;
   *(_QWORD *)(v7 + 16) = this;
-  sub_1C36FFC((CGThumbnailListItem_o *)(v7 + 16), (int32_t)this, v9, v10);
+  sub_1C3E508((CGThumbnailListItem_o *)(v7 + 16), (int32_t)this, v10, v11);
   *(_QWORD *)(v7 + 24) = end_act;
-  sub_1C36FFC((CGThumbnailListItem_o *)(v7 + 24), (int32_t)end_act, v11, v12);
-  ObjectList = (System_Collections_Generic_List_object__o *)MaterialEventLogListViewManager__get_ObjectList(this, v13);
+  sub_1C3E508((CGThumbnailListItem_o *)(v7 + 24), (int32_t)end_act, v12, v13);
+  ObjectList = (System_Collections_Generic_List_object__o *)MaterialEventLogListViewManager__get_ObjectList(this, v14);
   if ( !ObjectList )
     goto LABEL_25;
-  v14 = ObjectList;
+  v15 = ObjectList;
   if ( ObjectList->fields._size >= 1 )
   {
-    v15 = 0;
+    v16 = 0;
     while ( 1 )
     {
       ObjectList = (System_Collections_Generic_List_object__o *)System_Collections_Generic_List_object___get_Item(
-                                                                  v14,
                                                                   v15,
-                                                                  (const MethodInfo_37A2D54 *)Method_System_Collections_Generic_List_MaterialEventLogListViewObject__get_Item__);
+                                                                  v16,
+                                                                  (const MethodInfo_37B5190 *)Method_System_Collections_Generic_List_MaterialEventLogListViewObject__get_Item__);
       if ( !ObjectList )
         break;
-      MaterialEventLogListViewObject__Init_33344412((MaterialEventLogListViewObject_o *)ObjectList, mode, 0, -1, v16);
-      if ( ++v15 >= v14->fields._size )
+      MaterialEventLogListViewObject__Init_33374664((MaterialEventLogListViewObject_o *)ObjectList, mode, 0, -1, v17);
+      if ( ++v16 >= v15->fields._size )
         goto LABEL_9;
     }
 LABEL_25:
-    sub_1C372B4(ObjectList);
+    sub_1C3E7C0(ObjectList, v9);
   }
 LABEL_9:
   initMode = this->fields.initMode;
@@ -1320,19 +1327,19 @@ LABEL_9:
     gameObject = UnityEngine_GameObject__get_gameObject((UnityEngine_GameObject_o *)ObjectList, 0);
     Component_object = GameObjectExtensions__SafeGetComponent_object_(
                          gameObject,
-                         (const MethodInfo_3140CC0 *)Method_GameObjectExtensions_SafeGetComponent_SlideFadeObject___);
+                         (const MethodInfo_3152BB4 *)Method_GameObjectExtensions_SafeGetComponent_SlideFadeObject___);
     if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(TerminalPramsManager_TypeInfo);
     IntpTime_AutoResume = TerminalPramsManager__GetIntpTime_AutoResume(0.25, 0);
-    v27 = (System_Action_o *)sub_1C372A4(System_Action_TypeInfo);
+    v28 = (System_Action_o *)sub_1C3E7B0(System_Action_TypeInfo);
     System_Action___ctor(
-      v27,
+      v28,
       (Il2CppObject *)v7,
       Method_MaterialEventLogListViewManager___c__DisplayClass50_0__RequestListObject_b__2__,
       0);
     if ( !Component_object )
       goto LABEL_25;
-    SlideFadeObject__SlideOut_36148772((SlideFadeObject_o *)Component_object, 580.0, IntpTime_AutoResume, 0.0, v27, 0);
+    SlideFadeObject__SlideOut_36192672((SlideFadeObject_o *)Component_object, 580.0, IntpTime_AutoResume, 0.0, v28, 0);
   }
   else if ( initMode == 3 )
   {
@@ -1343,41 +1350,41 @@ LABEL_9:
                                                                 0);
     if ( !ObjectList )
       goto LABEL_25;
-    v18 = UnityEngine_GameObject__get_gameObject((UnityEngine_GameObject_o *)ObjectList, 0);
-    v19 = GameObjectExtensions__SafeGetComponent_object_(
-            v18,
-            (const MethodInfo_3140CC0 *)Method_GameObjectExtensions_SafeGetComponent_SlideFadeObject___);
+    v19 = UnityEngine_GameObject__get_gameObject((UnityEngine_GameObject_o *)ObjectList, 0);
+    v20 = GameObjectExtensions__SafeGetComponent_object_(
+            v19,
+            (const MethodInfo_3152BB4 *)Method_GameObjectExtensions_SafeGetComponent_SlideFadeObject___);
     if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(TerminalPramsManager_TypeInfo);
-    v20 = TerminalPramsManager__GetIntpTime_AutoResume(0.25, 0);
+    v21 = TerminalPramsManager__GetIntpTime_AutoResume(0.25, 0);
     if ( this->fields.issortButton )
     {
-      if ( !v19 )
+      if ( !v20 )
         goto LABEL_25;
-      klass = (int)v19[4].klass;
-      monitor = (int)v19[4].monitor;
-      LODWORD(v19[5].klass) = -1027735552;
-      HIDWORD(v19[4].monitor) = klass;
-      HIDWORD(v19[5].klass) = monitor;
-      v23 = (System_Action_o *)sub_1C372A4(System_Action_TypeInfo);
+      klass = (int)v20[4].klass;
+      monitor = (int)v20[4].monitor;
+      LODWORD(v20[5].klass) = -1027735552;
+      HIDWORD(v20[4].monitor) = klass;
+      HIDWORD(v20[5].klass) = monitor;
+      v24 = (System_Action_o *)sub_1C3E7B0(System_Action_TypeInfo);
       System_Action___ctor(
-        v23,
+        v24,
         (Il2CppObject *)v7,
         Method_MaterialEventLogListViewManager___c__DisplayClass50_0__RequestListObject_b__1__,
         0);
-      SlideFadeObject__SlideSortIn((SlideFadeObject_o *)v19, 580.0, v20, 0.0, v23, 0);
+      SlideFadeObject__SlideSortIn((SlideFadeObject_o *)v20, 580.0, v21, 0.0, v24, 0);
     }
     else
     {
-      v28 = (System_Action_o *)sub_1C372A4(System_Action_TypeInfo);
+      v29 = (System_Action_o *)sub_1C3E7B0(System_Action_TypeInfo);
       System_Action___ctor(
-        v28,
+        v29,
         (Il2CppObject *)v7,
         Method_MaterialEventLogListViewManager___c__DisplayClass50_0__RequestListObject_b__0__,
         0);
-      if ( !v19 )
+      if ( !v20 )
         goto LABEL_25;
-      SlideFadeObject__SlideIn_36147828((SlideFadeObject_o *)v19, 580.0, v20, 0.0, v28, 0);
+      SlideFadeObject__SlideIn_36191728((SlideFadeObject_o *)v20, 580.0, v21, 0.0, v29, 0);
     }
   }
   else
@@ -1394,35 +1401,36 @@ void MaterialEventLogListViewManager__SetAllActiveWidget(
         const MethodInfo *method)
 {
   System_Collections_Generic_List_object__o *ObjectList; // x0
-  System_Collections_Generic_List_object__o *v6; // x19
-  int32_t v7; // w20
-  bool v8; // w21
+  __int64 v6; // x1
+  System_Collections_Generic_List_object__o *v7; // x19
+  int32_t v8; // w20
+  bool v9; // w21
   Il2CppObject *Component_object; // x22
 
-  if ( (byte_4C3E1D8 & 1) == 0 )
+  if ( (byte_4C51F58 & 1) == 0 )
   {
-    sub_1C37058(&Method_UnityEngine_GameObject_GetComponent_UIWidget___);
-    sub_1C37058(&Method_System_Collections_Generic_List_MaterialEventLogListViewObject__get_Count__);
-    sub_1C37058(&Method_System_Collections_Generic_List_MaterialEventLogListViewObject__get_Item__);
-    sub_1C37058(&UnityEngine_Object_TypeInfo);
-    byte_4C3E1D8 = 1;
+    sub_1C3E564(&Method_UnityEngine_GameObject_GetComponent_UIWidget___);
+    sub_1C3E564(&Method_System_Collections_Generic_List_MaterialEventLogListViewObject__get_Count__);
+    sub_1C3E564(&Method_System_Collections_Generic_List_MaterialEventLogListViewObject__get_Item__);
+    sub_1C3E564(&UnityEngine_Object_TypeInfo);
+    byte_4C51F58 = 1;
   }
   ObjectList = (System_Collections_Generic_List_object__o *)MaterialEventLogListViewManager__get_ObjectList(
                                                               this,
                                                               (const MethodInfo *)isActive);
   if ( !ObjectList )
     goto LABEL_15;
-  v6 = ObjectList;
+  v7 = ObjectList;
   if ( ObjectList->fields._size >= 1 )
   {
-    v7 = 0;
-    v8 = isActive;
+    v8 = 0;
+    v9 = isActive;
     while ( 1 )
     {
       ObjectList = (System_Collections_Generic_List_object__o *)System_Collections_Generic_List_object___get_Item(
-                                                                  v6,
                                                                   v7,
-                                                                  (const MethodInfo_37A2D54 *)Method_System_Collections_Generic_List_MaterialEventLogListViewObject__get_Item__);
+                                                                  v8,
+                                                                  (const MethodInfo_37B5190 *)Method_System_Collections_Generic_List_MaterialEventLogListViewObject__get_Item__);
       if ( !ObjectList )
         break;
       ObjectList = (System_Collections_Generic_List_object__o *)UnityEngine_Component__get_gameObject(
@@ -1432,7 +1440,7 @@ void MaterialEventLogListViewManager__SetAllActiveWidget(
         break;
       Component_object = UnityEngine_GameObject__GetComponent_object_(
                            (UnityEngine_GameObject_o *)ObjectList,
-                           (const MethodInfo_313F1D8 *)Method_UnityEngine_GameObject_GetComponent_UIWidget___);
+                           (const MethodInfo_31510CC *)Method_UnityEngine_GameObject_GetComponent_UIWidget___);
       if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
       ObjectList = (System_Collections_Generic_List_object__o *)UnityEngine_Object__op_Inequality(
@@ -1443,13 +1451,13 @@ void MaterialEventLogListViewManager__SetAllActiveWidget(
       {
         if ( !Component_object )
           break;
-        UnityEngine_Behaviour__set_enabled((UnityEngine_Behaviour_o *)Component_object, v8, 0);
+        UnityEngine_Behaviour__set_enabled((UnityEngine_Behaviour_o *)Component_object, v9, 0);
       }
-      if ( ++v7 >= v6->fields._size )
+      if ( ++v8 >= v7->fields._size )
         return;
     }
 LABEL_15:
-    sub_1C372B4(ObjectList);
+    sub_1C3E7C0(ObjectList, v6);
   }
 }
 
@@ -1463,13 +1471,13 @@ void MaterialEventLogListViewManager__SetFilterButtonImage(
   System_String_o **v5; // x20
   UnityEngine_Color_o v6; // [xsp+0h] [xbp-30h] BYREF
 
-  if ( (byte_4C3E1D6 & 1) == 0 )
+  if ( (byte_4C51F56 & 1) == 0 )
   {
-    sub_1C37058(&StringLiteral_423/*"#FE4545"*/);
-    sub_1C37058(&StringLiteral_17487/*"btn_filter_on"*/);
-    sub_1C37058(&StringLiteral_404/*"#000000"*/);
-    sub_1C37058(&StringLiteral_17486/*"btn_filter"*/);
-    byte_4C3E1D6 = 1;
+    sub_1C3E564(&StringLiteral_423/*"#FE4545"*/);
+    sub_1C3E564(&StringLiteral_17504/*"btn_filter_on"*/);
+    sub_1C3E564(&StringLiteral_404/*"#000000"*/);
+    sub_1C3E564(&StringLiteral_17503/*"btn_filter"*/);
+    byte_4C51F56 = 1;
   }
   sort = this->fields.sort;
   if ( !sort )
@@ -1477,14 +1485,14 @@ void MaterialEventLogListViewManager__SetFilterButtonImage(
   sort = (ListViewSort_o *)ListViewSort__CheckFilterDefaultAll(sort, -1, 0);
   if ( !this->fields.filterSprite )
     goto LABEL_10;
-  v4 = (System_String_o **)&StringLiteral_17486/*"btn_filter"*/;
+  v4 = (System_String_o **)&StringLiteral_17503/*"btn_filter"*/;
   if ( ((unsigned __int8)sort & 1) != 0 )
   {
     v5 = (System_String_o **)&StringLiteral_404/*"#000000"*/;
   }
   else
   {
-    v4 = (System_String_o **)&StringLiteral_17487/*"btn_filter_on"*/;
+    v4 = (System_String_o **)&StringLiteral_17504/*"btn_filter_on"*/;
     v5 = (System_String_o **)&StringLiteral_423/*"#FE4545"*/;
   }
   UISprite__set_spriteName(this->fields.filterSprite, *v4, 0);
@@ -1494,7 +1502,7 @@ void MaterialEventLogListViewManager__SetFilterButtonImage(
   sort = (ListViewSort_o *)this->fields.sortKindLabel;
   if ( !sort )
 LABEL_10:
-    sub_1C372B4(sort);
+    sub_1C3E7C0(sort, method);
   UILabel__set_effectColor((UILabel_o *)sort, v6, 0);
 }
 
@@ -1506,24 +1514,25 @@ bool MaterialEventLogListViewManager__SetMode(
         const MethodInfo *method)
 {
   int32_t mIsDoing_Slide; // w8
+  __int64 v8; // x1
   UnityEngine_Collider_o *mBoxCollider; // x0
-  const MethodInfo *v9; // x3
-  int32_t v10; // w1
+  const MethodInfo *v10; // x3
+  int32_t v11; // w1
   bool result; // w0
-  MaterialEventLogListViewManager_o *v12; // x0
-  System_Action_o *v13; // x2
-  System_Action_o *v14; // x21
-  System_Delegate_o *v15; // x0
-  MaterialEventLogListViewManager_o *v16; // x0
-  int32_t v17; // w1
-  System_Action_o *v18; // x2
-  const MethodInfo *v19; // x3
+  MaterialEventLogListViewManager_o *v13; // x0
+  System_Action_o *v14; // x2
+  System_Action_o *v15; // x21
+  System_Delegate_o *v16; // x0
+  MaterialEventLogListViewManager_o *v17; // x0
+  int32_t v18; // w1
+  System_Action_o *v19; // x2
+  const MethodInfo *v20; // x3
 
-  if ( (byte_4C3E1CE & 1) == 0 )
+  if ( (byte_4C51F4E & 1) == 0 )
   {
-    sub_1C37058(&System_Action_TypeInfo);
-    sub_1C37058(&Method_MaterialEventLogListViewManager__SetMode_b__49_0__);
-    byte_4C3E1CE = 1;
+    sub_1C3E564(&System_Action_TypeInfo);
+    sub_1C3E564(&Method_MaterialEventLogListViewManager__SetMode_b__49_0__);
+    byte_4C51F4E = 1;
   }
   mIsDoing_Slide = this->fields.mIsDoing_Slide;
   if ( mode == 4 )
@@ -1549,43 +1558,43 @@ LABEL_11:
   ListViewManager__set_IsInput((ListViewManager_o *)this, mode == 2, 0);
   mBoxCollider = (UnityEngine_Collider_o *)this->fields.mBoxCollider;
   if ( !mBoxCollider )
-    sub_1C372B4(0);
+    sub_1C3E7C0(0, v8);
   UnityEngine_Collider__set_enabled(mBoxCollider, this->fields.isInput, 0);
   switch ( mode )
   {
     case 1:
     case 3:
-      v10 = 2;
+      v11 = 2;
       goto LABEL_17;
     case 2:
-      v10 = 3;
+      v11 = 3;
 LABEL_17:
-      v12 = this;
+      v13 = this;
       goto LABEL_18;
     case 4:
-      v14 = (System_Action_o *)sub_1C372A4(System_Action_TypeInfo);
-      System_Action___ctor(v14, (Il2CppObject *)this, Method_MaterialEventLogListViewManager__SetMode_b__49_0__, 0);
-      v15 = System_Delegate__Combine((System_Delegate_o *)end_act, (System_Delegate_o *)v14, 0);
-      v13 = (System_Action_o *)v15;
-      if ( v15 && (System_Action_c *)v15->klass != System_Action_TypeInfo )
+      v15 = (System_Action_o *)sub_1C3E7B0(System_Action_TypeInfo);
+      System_Action___ctor(v15, (Il2CppObject *)this, Method_MaterialEventLogListViewManager__SetMode_b__49_0__, 0);
+      v16 = System_Delegate__Combine((System_Delegate_o *)end_act, (System_Delegate_o *)v15, 0);
+      v14 = (System_Action_o *)v16;
+      if ( v16 && (System_Action_c *)v16->klass != System_Action_TypeInfo )
       {
-        v16 = (MaterialEventLogListViewManager_o *)sub_1C37574(v15);
-        MaterialEventLogListViewManager__RequestListObject(v16, v17, v18, v19);
+        v17 = (MaterialEventLogListViewManager_o *)sub_1C3EA80(v16);
+        MaterialEventLogListViewManager__RequestListObject(v17, v18, v19, v20);
       }
       else
       {
-        v10 = 2;
-        v12 = this;
+        v11 = 2;
+        v13 = this;
 LABEL_19:
-        MaterialEventLogListViewManager__RequestListObject(v12, v10, v13, v9);
+        MaterialEventLogListViewManager__RequestListObject(v13, v11, v14, v10);
         result = 1;
       }
       break;
     default:
-      v12 = this;
-      v10 = 0;
+      v13 = this;
+      v11 = 0;
 LABEL_18:
-      v13 = end_act;
+      v14 = end_act;
       goto LABEL_19;
   }
   return result;
@@ -1604,23 +1613,23 @@ void MaterialEventLogListViewManager__SetObjectItem(
   int32_t v8; // w1
 
   v6 = this;
-  if ( (byte_4C3E1CD & 1) == 0 )
+  if ( (byte_4C51F4D & 1) == 0 )
   {
-    this = (MaterialEventLogListViewManager_o *)sub_1C37058(&MaterialEventLogListViewObject_TypeInfo);
-    byte_4C3E1CD = 1;
+    this = (MaterialEventLogListViewManager_o *)sub_1C3E564(&MaterialEventLogListViewObject_TypeInfo);
+    byte_4C51F4D = 1;
   }
   if ( !obj
     || (naturalAligment = MaterialEventLogListViewObject_TypeInfo->_2.naturalAligment,
         obj->klass->_2.naturalAligment < (unsigned int)naturalAligment)
     || (MaterialEventLogListViewObject_c *)obj->klass->_2.typeHierarchy[naturalAligment - 1] != MaterialEventLogListViewObject_TypeInfo )
   {
-    sub_1C372B4(this);
+    sub_1C3E7C0(this, obj);
   }
   if ( v6->fields.initMode == 2 )
     v8 = 3;
   else
     v8 = 2;
-  MaterialEventLogListViewObject__Init_33344412(
+  MaterialEventLogListViewObject__Init_33374664(
     (MaterialEventLogListViewObject_o *)obj,
     v8,
     0,
@@ -1638,10 +1647,10 @@ void MaterialEventLogListViewManager__SetScrollPosY(
   UnityEngine_GameObject_o *gameObject; // x0
   UnityEngine_Vector2_o v7; // 0:s0.4,4:s1.4
 
-  if ( (byte_4C3E1C9 & 1) == 0 )
+  if ( (byte_4C51F49 & 1) == 0 )
   {
-    sub_1C37058(&Method_UnityEngine_GameObject_GetComponent_UIPanel___);
-    byte_4C3E1C9 = 1;
+    sub_1C3E564(&Method_UnityEngine_GameObject_GetComponent_UIPanel___);
+    byte_4C51F49 = 1;
   }
   scrollView = this->fields.scrollView;
   if ( !scrollView
@@ -1651,9 +1660,9 @@ void MaterialEventLogListViewManager__SetScrollPosY(
     || (scrollView = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)scrollView, 0)) == 0
     || (scrollView = UnityEngine_GameObject__GetComponent_object_(
                        (UnityEngine_GameObject_o *)scrollView,
-                       (const MethodInfo_313F1D8 *)Method_UnityEngine_GameObject_GetComponent_UIPanel___)) == 0 )
+                       (const MethodInfo_31510CC *)Method_UnityEngine_GameObject_GetComponent_UIPanel___)) == 0 )
   {
-    sub_1C372B4(scrollView);
+    sub_1C3E7C0(scrollView, method);
   }
   v7.fields.x = *((float *)scrollView + 83);
   v7.fields.y = -y;
@@ -1673,7 +1682,7 @@ void MaterialEventLogListViewManager__SetSort(
   const MethodInfo *v7; // x1
 
   this->fields.sort = sort;
-  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.sort, (int32_t)sort, (int32_t)method, v3);
+  sub_1C3E508((CGThumbnailListItem_o *)&this->fields.sort, (int32_t)sort, (int32_t)method, v3);
   ListViewManager__SortItem((ListViewManager_o *)this, -1, 0, -1, 0);
   v6 = MaterialEventLogListViewManager__GetFilterCount(this, v5) < 1;
   ListViewManager__SetEmptyMessageBase((ListViewManager_o *)this, v6, 0);
@@ -1686,28 +1695,29 @@ void MaterialEventLogListViewManager__SetSortButtonImage(
         const MethodInfo *method)
 {
   UnityEngine_Object_o *sortKindLabel; // x20
+  __int64 v4; // x1
   ListViewSort_o *sort; // x0
-  UILabel_o *v5; // x20
+  UILabel_o *v6; // x20
   UnityEngine_Object_o *sortOrderSprite; // x20
-  struct ListViewSort_o *v7; // x8
+  struct ListViewSort_o *v8; // x8
   int32_t sortKind; // w9
-  System_String_o **v9; // x8
-  struct ListViewSort_o *v10; // x8
-  System_String_o **v11; // x9
-  System_String_o **v12; // x10
-  System_String_o **v13; // x8
+  System_String_o **v10; // x8
+  struct ListViewSort_o *v11; // x8
+  System_String_o **v12; // x9
+  System_String_o **v13; // x10
   System_String_o **v14; // x8
+  System_String_o **v15; // x8
 
-  if ( (byte_4C3E1D9 & 1) == 0 )
+  if ( (byte_4C51F59 & 1) == 0 )
   {
-    sub_1C37058(&UnityEngine_Object_TypeInfo);
-    sub_1C37058(&StringLiteral_17523/*"btn_sort_up"*/);
-    sub_1C37058(&StringLiteral_17621/*"btn_txt_up"*/);
-    sub_1C37058(&StringLiteral_17572/*"btn_txt_new"*/);
-    sub_1C37058(&StringLiteral_17562/*"btn_txt_down"*/);
-    sub_1C37058(&StringLiteral_17579/*"btn_txt_old"*/);
-    sub_1C37058(&StringLiteral_17520/*"btn_sort_down"*/);
-    byte_4C3E1D9 = 1;
+    sub_1C3E564(&UnityEngine_Object_TypeInfo);
+    sub_1C3E564(&StringLiteral_17540/*"btn_sort_up"*/);
+    sub_1C3E564(&StringLiteral_17638/*"btn_txt_up"*/);
+    sub_1C3E564(&StringLiteral_17589/*"btn_txt_new"*/);
+    sub_1C3E564(&StringLiteral_17579/*"btn_txt_down"*/);
+    sub_1C3E564(&StringLiteral_17596/*"btn_txt_old"*/);
+    sub_1C3E564(&StringLiteral_17537/*"btn_sort_down"*/);
+    byte_4C51F59 = 1;
   }
   sortKindLabel = (UnityEngine_Object_o *)this->fields.sortKindLabel;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -1717,11 +1727,11 @@ void MaterialEventLogListViewManager__SetSortButtonImage(
     sort = this->fields.sort;
     if ( !sort )
       goto LABEL_34;
-    v5 = this->fields.sortKindLabel;
+    v6 = this->fields.sortKindLabel;
     sort = (ListViewSort_o *)ListViewSort__GetSortKindButtonText(sort, 0, 0);
-    if ( !v5 )
+    if ( !v6 )
       goto LABEL_34;
-    UILabel__set_text(v5, (System_String_o *)sort, 0);
+    UILabel__set_text(v6, (System_String_o *)sort, 0);
   }
   sortOrderSprite = (UnityEngine_Object_o *)this->fields.sortOrderSprite;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -1729,31 +1739,31 @@ void MaterialEventLogListViewManager__SetSortButtonImage(
   sort = (ListViewSort_o *)UnityEngine_Object__op_Inequality(sortOrderSprite, 0, 0);
   if ( ((unsigned __int8)sort & 1) != 0 )
   {
-    v7 = this->fields.sort;
-    if ( v7 )
+    v8 = this->fields.sort;
+    if ( v8 )
     {
-      sortKind = v7->fields.sortKind;
+      sortKind = v8->fields.sortKind;
       if ( sortKind == 11 || sortKind == 1 )
       {
         sort = (ListViewSort_o *)this->fields.sortExplanationSprite;
         if ( sort )
         {
-          v9 = (System_String_o **)(v7->fields.isAscendingOrder ? &StringLiteral_17579/*"btn_txt_old"*/ : &StringLiteral_17572/*"btn_txt_new"*/);
-          UISprite__set_spriteName((UISprite_o *)sort, *v9, 0);
-          v10 = this->fields.sort;
-          if ( v10 )
+          v10 = (System_String_o **)(v8->fields.isAscendingOrder ? &StringLiteral_17596/*"btn_txt_old"*/ : &StringLiteral_17589/*"btn_txt_new"*/);
+          UISprite__set_spriteName((UISprite_o *)sort, *v10, 0);
+          v11 = this->fields.sort;
+          if ( v11 )
           {
             sort = (ListViewSort_o *)this->fields.sortOrderSprite;
             if ( sort )
             {
-              v11 = (System_String_o **)&StringLiteral_17520/*"btn_sort_down"*/;
-              v12 = (System_String_o **)&StringLiteral_17523/*"btn_sort_up"*/;
+              v12 = (System_String_o **)&StringLiteral_17537/*"btn_sort_down"*/;
+              v13 = (System_String_o **)&StringLiteral_17540/*"btn_sort_up"*/;
 LABEL_30:
-              if ( v10->fields.isAscendingOrder )
-                v14 = v11;
+              if ( v11->fields.isAscendingOrder )
+                v15 = v12;
               else
-                v14 = v12;
-              UISprite__set_spriteName((UISprite_o *)sort, *v14, 0);
+                v15 = v13;
+              UISprite__set_spriteName((UISprite_o *)sort, *v15, 0);
               return;
             }
           }
@@ -1764,16 +1774,16 @@ LABEL_30:
         sort = (ListViewSort_o *)this->fields.sortExplanationSprite;
         if ( sort )
         {
-          v13 = (System_String_o **)(v7->fields.isAscendingOrder ? &StringLiteral_17621/*"btn_txt_up"*/ : &StringLiteral_17562/*"btn_txt_down"*/);
-          UISprite__set_spriteName((UISprite_o *)sort, *v13, 0);
-          v10 = this->fields.sort;
-          if ( v10 )
+          v14 = (System_String_o **)(v8->fields.isAscendingOrder ? &StringLiteral_17638/*"btn_txt_up"*/ : &StringLiteral_17579/*"btn_txt_down"*/);
+          UISprite__set_spriteName((UISprite_o *)sort, *v14, 0);
+          v11 = this->fields.sort;
+          if ( v11 )
           {
             sort = (ListViewSort_o *)this->fields.sortOrderSprite;
             if ( sort )
             {
-              v11 = (System_String_o **)&StringLiteral_17523/*"btn_sort_up"*/;
-              v12 = (System_String_o **)&StringLiteral_17520/*"btn_sort_down"*/;
+              v12 = (System_String_o **)&StringLiteral_17540/*"btn_sort_up"*/;
+              v13 = (System_String_o **)&StringLiteral_17537/*"btn_sort_down"*/;
               goto LABEL_30;
             }
           }
@@ -1781,7 +1791,7 @@ LABEL_30:
       }
     }
 LABEL_34:
-    sub_1C372B4(sort);
+    sub_1C3E7C0(sort, v4);
   }
 }
 
@@ -1791,17 +1801,18 @@ void MaterialEventLogListViewManager__SetValentineListDisplay(
         const MethodInfo *method)
 {
   Il2CppObject *Instance; // x0
+  __int64 v3; // x1
   Il2CppClass *klass; // x8
   __int64 naturalAligment; // x11
   MyRoomControl_o *element_class; // x19
 
-  if ( (byte_4C3E1D0 & 1) == 0 )
+  if ( (byte_4C51F50 & 1) == 0 )
   {
-    sub_1C37058(&MyRoomRootComponent_TypeInfo);
-    sub_1C37058(&Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__);
-    byte_4C3E1D0 = 1;
+    sub_1C3E564(&MyRoomRootComponent_TypeInfo);
+    sub_1C3E564(&Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__);
+    byte_4C51F50 = 1;
   }
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39ED16C *)Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39FF5A8 *)Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__);
   if ( !Instance
     || (klass = Instance[2].klass) == 0
     || (naturalAligment = MyRoomRootComponent_TypeInfo->_2.naturalAligment,
@@ -1809,7 +1820,7 @@ void MaterialEventLogListViewManager__SetValentineListDisplay(
     || *(MyRoomRootComponent_c **)(*((_QWORD *)klass->_1.image + 25) + 8 * naturalAligment - 8) != MyRoomRootComponent_TypeInfo
     || (element_class = (MyRoomControl_o *)klass->_1.element_class) == 0 )
   {
-    sub_1C372B4(Instance);
+    sub_1C3E7C0(Instance, v3);
   }
   if ( element_class->fields.IsMaterialEventBack )
   {
@@ -1837,18 +1848,18 @@ void MaterialEventLogListViewManager__SortAscendingOrder(
   bool v14; // w1
   const MethodInfo *v15; // x1
 
-  if ( (byte_4C3E1D7 & 1) == 0 )
+  if ( (byte_4C51F57 & 1) == 0 )
   {
-    sub_1C37058(&Method_MaterialEventLogListViewManager_SortAscendingOrder__);
-    sub_1C37058(&UnityEngine_Object_TypeInfo);
-    byte_4C3E1D7 = 1;
+    sub_1C3E564(&Method_MaterialEventLogListViewManager_SortAscendingOrder__);
+    sub_1C3E564(&UnityEngine_Object_TypeInfo);
+    byte_4C51F57 = 1;
   }
   if ( this->fields.isInput )
   {
     v3 = Method_MaterialEventLogListViewManager_SortAscendingOrder__;
     if ( (*((_BYTE *)Method_MaterialEventLogListViewManager_SortAscendingOrder__ + 83) & 2) != 0 )
-      v3 = (_QWORD *)sub_1C37070(Method_MaterialEventLogListViewManager_SortAscendingOrder__);
-    v4 = (System_Reflection_MethodBase_o *)sub_1C3703C(v3, v3[4]);
+      v3 = (_QWORD *)sub_1C3E57C(Method_MaterialEventLogListViewManager_SortAscendingOrder__);
+    v4 = (System_Reflection_MethodBase_o *)sub_1C3E548(v3, v3[4]);
     OverwriteAssetSoundName__PlaySystemSe(v4, 0, 0, 0);
     sort = this->fields.sort;
     if ( sort )
@@ -1869,7 +1880,7 @@ void MaterialEventLogListViewManager__SortAscendingOrder(
           goto LABEL_15;
         v11 = this->fields.sort;
         MaterialCollectionServantListViewManager->fields.sort = v11;
-        sub_1C36FFC(
+        sub_1C3E508(
           (CGThumbnailListItem_o *)&MaterialCollectionServantListViewManager->fields.sort,
           (int32_t)v11,
           v9,
@@ -1891,7 +1902,7 @@ void MaterialEventLogListViewManager__SortAscendingOrder(
       }
     }
 LABEL_15:
-    sub_1C372B4(v5);
+    sub_1C3E7C0(v5, v6);
   }
 }
 
@@ -1912,8 +1923,8 @@ void MaterialEventLogListViewManager__SortDummyData(MaterialEventLogListViewMana
   __int64 v13; // x10
   MaterialEventLogListViewManager_o *v14; // x1
   Il2CppClass **v15; // x0
-  System_Collections_Generic_List_object__o *v16; // x0
-  const MethodInfo *v17; // x1
+  __int64 v16; // x1
+  System_Collections_Generic_List_object__o *v17; // x0
   const MethodInfo *v18; // x1
   int v19; // w9
   int v20; // w20
@@ -1937,36 +1948,36 @@ void MaterialEventLogListViewManager__SortDummyData(MaterialEventLogListViewMana
   System_Collections_Generic_List_Enumerator_object__o i; // [xsp+20h] [xbp-70h] BYREF
 
   v2 = this;
-  if ( (byte_4C3E1DB & 1) == 0 )
+  if ( (byte_4C51F5B & 1) == 0 )
   {
-    sub_1C37058(&Method_System_Collections_Generic_List_Enumerator_ListViewItem__Dispose__);
-    sub_1C37058(&Method_System_Collections_Generic_List_Enumerator_ListViewItem__MoveNext__);
-    sub_1C37058(&Method_System_Collections_Generic_List_Enumerator_ListViewItem__get_Current__);
-    sub_1C37058(&Method_System_Collections_Generic_List_ListViewItem__Add__);
-    sub_1C37058(&Method_System_Collections_Generic_List_ListViewItem__GetEnumerator__);
-    sub_1C37058(&Method_System_Collections_Generic_List_ListViewItem__Remove__);
-    sub_1C37058(&Method_System_Collections_Generic_List_MaterialEventLogListViewItem___ctor__);
-    sub_1C37058(&Method_System_Collections_Generic_List_ListViewItem___ctor__);
-    sub_1C37058(&Method_System_Collections_Generic_List_ListViewItem__get_Count__);
-    sub_1C37058(&Method_System_Collections_Generic_List_ListViewItem__get_Item__);
-    sub_1C37058(&System_Collections_Generic_List_ListViewItem__TypeInfo);
-    sub_1C37058(&System_Collections_Generic_List_MaterialEventLogListViewItem__TypeInfo);
-    this = (MaterialEventLogListViewManager_o *)sub_1C37058(&MaterialEventLogListViewItem_TypeInfo);
-    byte_4C3E1DB = 1;
+    sub_1C3E564(&Method_System_Collections_Generic_List_Enumerator_ListViewItem__Dispose__);
+    sub_1C3E564(&Method_System_Collections_Generic_List_Enumerator_ListViewItem__MoveNext__);
+    sub_1C3E564(&Method_System_Collections_Generic_List_Enumerator_ListViewItem__get_Current__);
+    sub_1C3E564(&Method_System_Collections_Generic_List_ListViewItem__Add__);
+    sub_1C3E564(&Method_System_Collections_Generic_List_ListViewItem__GetEnumerator__);
+    sub_1C3E564(&Method_System_Collections_Generic_List_ListViewItem__Remove__);
+    sub_1C3E564(&Method_System_Collections_Generic_List_MaterialEventLogListViewItem___ctor__);
+    sub_1C3E564(&Method_System_Collections_Generic_List_ListViewItem___ctor__);
+    sub_1C3E564(&Method_System_Collections_Generic_List_ListViewItem__get_Count__);
+    sub_1C3E564(&Method_System_Collections_Generic_List_ListViewItem__get_Item__);
+    sub_1C3E564(&System_Collections_Generic_List_ListViewItem__TypeInfo);
+    sub_1C3E564(&System_Collections_Generic_List_MaterialEventLogListViewItem__TypeInfo);
+    this = (MaterialEventLogListViewManager_o *)sub_1C3E564(&MaterialEventLogListViewItem_TypeInfo);
+    byte_4C51F5B = 1;
   }
   memset(&i, 0, sizeof(i));
   itemList = v2->fields.itemList;
   if ( !itemList )
     goto LABEL_42;
   size = itemList->fields._size;
-  v5 = (System_Collections_Generic_List_object__o *)sub_1C372A4(System_Collections_Generic_List_MaterialEventLogListViewItem__TypeInfo);
+  v5 = (System_Collections_Generic_List_object__o *)sub_1C3E7B0(System_Collections_Generic_List_MaterialEventLogListViewItem__TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v5,
-    (const MethodInfo_37A27F0 *)Method_System_Collections_Generic_List_MaterialEventLogListViewItem___ctor__);
-  v6 = (System_Collections_Generic_List_object__o *)sub_1C372A4(System_Collections_Generic_List_ListViewItem__TypeInfo);
+    (const MethodInfo_37B4C2C *)Method_System_Collections_Generic_List_MaterialEventLogListViewItem___ctor__);
+  v6 = (System_Collections_Generic_List_object__o *)sub_1C3E7B0(System_Collections_Generic_List_ListViewItem__TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v6,
-    (const MethodInfo_37A27F0 *)Method_System_Collections_Generic_List_ListViewItem___ctor__);
+    (const MethodInfo_37B4C2C *)Method_System_Collections_Generic_List_ListViewItem___ctor__);
   if ( size >= 1 )
   {
     v7 = 0;
@@ -1978,7 +1989,7 @@ void MaterialEventLogListViewManager__SortDummyData(MaterialEventLogListViewMana
       this = (MaterialEventLogListViewManager_o *)System_Collections_Generic_List_object___get_Item(
                                                     (System_Collections_Generic_List_object__o *)this,
                                                     v7,
-                                                    (const MethodInfo_37A2D54 *)Method_System_Collections_Generic_List_ListViewItem__get_Item__);
+                                                    (const MethodInfo_37B5190 *)Method_System_Collections_Generic_List_ListViewItem__get_Item__);
       if ( !this )
         break;
       naturalAligment = MaterialEventLogListViewItem_TypeInfo->_2.naturalAligment;
@@ -1995,7 +2006,7 @@ void MaterialEventLogListViewManager__SortDummyData(MaterialEventLogListViewMana
         this = (MaterialEventLogListViewManager_o *)System_Collections_Generic_List_object___get_Item(
                                                       (System_Collections_Generic_List_object__o *)this,
                                                       v7,
-                                                      (const MethodInfo_37A2D54 *)Method_System_Collections_Generic_List_ListViewItem__get_Item__);
+                                                      (const MethodInfo_37B5190 *)Method_System_Collections_Generic_List_ListViewItem__get_Item__);
         if ( !v6 )
           break;
         items = v6->fields._items;
@@ -2010,21 +2021,21 @@ void MaterialEventLogListViewManager__SortDummyData(MaterialEventLogListViewMana
           System_Collections_Generic_List_object___AddWithResize(
             v6,
             (Il2CppObject *)this,
-            *(const MethodInfo_37A3024 **)(*(_QWORD *)(v12[4] + 192LL) + 112LL));
+            *(const MethodInfo_37B5460 **)(*(_QWORD *)(v12[4] + 192LL) + 112LL));
         }
         else
         {
           v15 = &items->obj.klass + v13;
           v6->fields._size = v13 + 1;
           v15[4] = (Il2CppClass *)v14;
-          sub_1C36FFC((CGThumbnailListItem_o *)(v15 + 4), (int32_t)v14, v9, v10);
+          sub_1C3E508((CGThumbnailListItem_o *)(v15 + 4), (int32_t)v14, v9, v10);
         }
       }
       if ( size == ++v7 )
         goto LABEL_18;
     }
 LABEL_42:
-    sub_1C372B4(this);
+    sub_1C3E7C0(this, method);
   }
 LABEL_18:
   if ( !v6 )
@@ -2032,24 +2043,24 @@ LABEL_18:
   System_Collections_Generic_List_object___GetEnumerator(
     (System_Collections_Generic_List_Enumerator_T__o *)&v37,
     v6,
-    (const MethodInfo_37A3B1C *)Method_System_Collections_Generic_List_ListViewItem__GetEnumerator__);
+    (const MethodInfo_37B5F58 *)Method_System_Collections_Generic_List_ListViewItem__GetEnumerator__);
   for ( i = v37;
         System_Collections_Generic_List_Enumerator_object___MoveNext(
           &i,
-          (const MethodInfo_352D810 *)Method_System_Collections_Generic_List_Enumerator_ListViewItem__MoveNext__);
+          (const MethodInfo_353FC4C *)Method_System_Collections_Generic_List_Enumerator_ListViewItem__MoveNext__);
         System_Collections_Generic_List_object___Remove(
-          v16,
+          v17,
           i.fields._current,
-          (const MethodInfo_37A454C *)Method_System_Collections_Generic_List_ListViewItem__Remove__) )
+          (const MethodInfo_37B6988 *)Method_System_Collections_Generic_List_ListViewItem__Remove__) )
   {
-    v16 = (System_Collections_Generic_List_object__o *)v2->fields.itemList;
-    if ( !v16 )
-      sub_1C372B4(0);
+    v17 = (System_Collections_Generic_List_object__o *)v2->fields.itemList;
+    if ( !v17 )
+      sub_1C3E7C0(0, v16);
   }
   System_Collections_Generic_List_Enumerator_object___Dispose(
     &i,
-    (const MethodInfo_352D80C *)Method_System_Collections_Generic_List_Enumerator_ListViewItem__Dispose__);
-  this = (MaterialEventLogListViewManager_o *)MaterialEventLogListViewManager__GetFilterCount(v2, v17);
+    (const MethodInfo_353FC48 *)Method_System_Collections_Generic_List_Enumerator_ListViewItem__Dispose__);
+  this = (MaterialEventLogListViewManager_o *)MaterialEventLogListViewManager__GetFilterCount(v2, v18);
   if ( (int)this > 3 )
     v19 = 1;
   else
@@ -2069,13 +2080,13 @@ LABEL_18:
       if ( !sort )
         goto LABEL_42;
       isAscendingOrder = sort->fields.isAscendingOrder;
-      v26 = (ListViewItem_o *)sub_1C372A4(MaterialEventLogListViewItem_TypeInfo);
+      v26 = (ListViewItem_o *)sub_1C3E7B0(MaterialEventLogListViewItem_TypeInfo);
       v27 = v26;
       v28 = isAscendingOrder ? v22 : v20;
-      ListViewItem___ctor_43804668(v26, v28, 0);
+      ListViewItem___ctor_43860152(v26, v28, 0);
       v27[1].monitor = 0;
       LODWORD(v27[1].klass) = 5;
-      sub_1C36FFC((CGThumbnailListItem_o *)&v27[1].monitor, 0, v29, v30);
+      sub_1C3E508((CGThumbnailListItem_o *)&v27[1].monitor, 0, v29, v30);
       this = (MaterialEventLogListViewManager_o *)v2->fields.itemList;
       if ( !this )
         goto LABEL_42;
@@ -2090,21 +2101,21 @@ LABEL_18:
         System_Collections_Generic_List_object___AddWithResize(
           (System_Collections_Generic_List_object__o *)this,
           (Il2CppObject *)v27,
-          *(const MethodInfo_37A3024 **)(*(_QWORD *)(v34[4] + 192LL) + 112LL));
+          *(const MethodInfo_37B5460 **)(*(_QWORD *)(v34[4] + 192LL) + 112LL));
       }
       else
       {
         v36 = m_CachedPtr + 8 * m_CancellationTokenSource_low;
         LODWORD(this->fields.m_CancellationTokenSource) = m_CancellationTokenSource_low + 1;
         *(_QWORD *)(v36 + 32) = v27;
-        sub_1C36FFC((CGThumbnailListItem_o *)(v36 + 32), (int32_t)v27, v31, v32);
+        sub_1C3E508((CGThumbnailListItem_o *)(v36 + 32), (int32_t)v27, v31, v32);
       }
       --v20;
       ++v22;
     }
     while ( v23 != v20 );
   }
-  MaterialEventLogListViewManager__InitializeObjectPosition(v2, v18);
+  MaterialEventLogListViewManager__InitializeObjectPosition(v2, method);
 }
 
 
@@ -2121,89 +2132,91 @@ System_Collections_Generic_List_MaterialEventLogListViewObject__o *MaterialEvent
         const MethodInfo *method)
 {
   System_Collections_Generic_List_object__o *v3; // x19
+  __int64 v4; // x1
   struct System_Collections_Generic_List_GameObject__o *objectList; // x0
   Il2CppObject *current; // x20
-  _BOOL8 v6; // x0
+  _BOOL8 v7; // x0
+  __int64 v8; // x1
   Il2CppObject *Component_object; // x0
-  int32_t v8; // w2
-  const MethodInfo *v9; // x3
-  Il2CppObject *v10; // x1
+  int32_t v10; // w2
+  const MethodInfo *v11; // x3
+  Il2CppObject *v12; // x1
   struct System_Object_array *items; // x8
-  _QWORD *v12; // x9
+  _QWORD *v14; // x9
   __int64 size; // x10
-  Il2CppClass **v14; // x0
-  System_Collections_Generic_List_Enumerator_object__o v16; // [xsp+8h] [xbp-78h] BYREF
-  System_Collections_Generic_List_Enumerator_object__o v17; // [xsp+20h] [xbp-60h] BYREF
+  Il2CppClass **v16; // x0
+  System_Collections_Generic_List_Enumerator_object__o v18; // [xsp+8h] [xbp-78h] BYREF
+  System_Collections_Generic_List_Enumerator_object__o v19; // [xsp+20h] [xbp-60h] BYREF
 
-  if ( (byte_4C3E1CA & 1) == 0 )
+  if ( (byte_4C51F4A & 1) == 0 )
   {
-    sub_1C37058(&Method_System_Collections_Generic_List_Enumerator_GameObject__Dispose__);
-    sub_1C37058(&Method_System_Collections_Generic_List_Enumerator_GameObject__MoveNext__);
-    sub_1C37058(&Method_System_Collections_Generic_List_Enumerator_GameObject__get_Current__);
-    sub_1C37058(&Method_UnityEngine_GameObject_GetComponent_MaterialEventLogListViewObject___);
-    sub_1C37058(&Method_System_Collections_Generic_List_MaterialEventLogListViewObject__Add__);
-    sub_1C37058(&Method_System_Collections_Generic_List_GameObject__GetEnumerator__);
-    sub_1C37058(&Method_System_Collections_Generic_List_MaterialEventLogListViewObject___ctor__);
-    sub_1C37058(&System_Collections_Generic_List_MaterialEventLogListViewObject__TypeInfo);
-    sub_1C37058(&UnityEngine_Object_TypeInfo);
-    byte_4C3E1CA = 1;
+    sub_1C3E564(&Method_System_Collections_Generic_List_Enumerator_GameObject__Dispose__);
+    sub_1C3E564(&Method_System_Collections_Generic_List_Enumerator_GameObject__MoveNext__);
+    sub_1C3E564(&Method_System_Collections_Generic_List_Enumerator_GameObject__get_Current__);
+    sub_1C3E564(&Method_UnityEngine_GameObject_GetComponent_MaterialEventLogListViewObject___);
+    sub_1C3E564(&Method_System_Collections_Generic_List_MaterialEventLogListViewObject__Add__);
+    sub_1C3E564(&Method_System_Collections_Generic_List_GameObject__GetEnumerator__);
+    sub_1C3E564(&Method_System_Collections_Generic_List_MaterialEventLogListViewObject___ctor__);
+    sub_1C3E564(&System_Collections_Generic_List_MaterialEventLogListViewObject__TypeInfo);
+    sub_1C3E564(&UnityEngine_Object_TypeInfo);
+    byte_4C51F4A = 1;
   }
-  memset(&v17, 0, sizeof(v17));
-  v3 = (System_Collections_Generic_List_object__o *)sub_1C372A4(System_Collections_Generic_List_MaterialEventLogListViewObject__TypeInfo);
+  memset(&v19, 0, sizeof(v19));
+  v3 = (System_Collections_Generic_List_object__o *)sub_1C3E7B0(System_Collections_Generic_List_MaterialEventLogListViewObject__TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v3,
-    (const MethodInfo_37A27F0 *)Method_System_Collections_Generic_List_MaterialEventLogListViewObject___ctor__);
+    (const MethodInfo_37B4C2C *)Method_System_Collections_Generic_List_MaterialEventLogListViewObject___ctor__);
   objectList = this->fields.objectList;
   if ( !objectList )
-    sub_1C372B4(0);
+    sub_1C3E7C0(0, v4);
   System_Collections_Generic_List_object___GetEnumerator(
-    (System_Collections_Generic_List_Enumerator_T__o *)&v16,
+    (System_Collections_Generic_List_Enumerator_T__o *)&v18,
     (System_Collections_Generic_List_object__o *)objectList,
-    (const MethodInfo_37A3B1C *)Method_System_Collections_Generic_List_GameObject__GetEnumerator__);
-  v17 = v16;
+    (const MethodInfo_37B5F58 *)Method_System_Collections_Generic_List_GameObject__GetEnumerator__);
+  v19 = v18;
   while ( System_Collections_Generic_List_Enumerator_object___MoveNext(
-            &v17,
-            (const MethodInfo_352D810 *)Method_System_Collections_Generic_List_Enumerator_GameObject__MoveNext__) )
+            &v19,
+            (const MethodInfo_353FC4C *)Method_System_Collections_Generic_List_Enumerator_GameObject__MoveNext__) )
   {
-    current = v17.fields._current;
+    current = v19.fields._current;
     if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-    v6 = UnityEngine_Object__op_Inequality((UnityEngine_Object_o *)current, 0, 0);
-    if ( v6 )
+    v7 = UnityEngine_Object__op_Inequality((UnityEngine_Object_o *)current, 0, 0);
+    if ( v7 )
     {
       if ( !current )
-        sub_1C372B4(v6);
+        sub_1C3E7C0(v7, v8);
       Component_object = UnityEngine_GameObject__GetComponent_object_(
                            (UnityEngine_GameObject_o *)current,
-                           (const MethodInfo_313F1D8 *)Method_UnityEngine_GameObject_GetComponent_MaterialEventLogListViewObject___);
-      v10 = Component_object;
+                           (const MethodInfo_31510CC *)Method_UnityEngine_GameObject_GetComponent_MaterialEventLogListViewObject___);
+      v12 = Component_object;
       if ( !v3 )
-        sub_1C372B4(Component_object);
+        sub_1C3E7C0(Component_object, Component_object);
       items = v3->fields._items;
-      v12 = Method_System_Collections_Generic_List_MaterialEventLogListViewObject__Add__;
+      v14 = Method_System_Collections_Generic_List_MaterialEventLogListViewObject__Add__;
       ++v3->fields._version;
       if ( !items )
-        sub_1C372B4(Component_object);
+        sub_1C3E7C0(Component_object, Component_object);
       size = v3->fields._size;
       if ( (unsigned int)size >= LODWORD(items->max_length) )
       {
         System_Collections_Generic_List_object___AddWithResize(
           v3,
           Component_object,
-          *(const MethodInfo_37A3024 **)(*(_QWORD *)(v12[4] + 192LL) + 112LL));
+          *(const MethodInfo_37B5460 **)(*(_QWORD *)(v14[4] + 192LL) + 112LL));
       }
       else
       {
-        v14 = &items->obj.klass + size;
+        v16 = &items->obj.klass + size;
         v3->fields._size = size + 1;
-        v14[4] = (Il2CppClass *)v10;
-        sub_1C36FFC((CGThumbnailListItem_o *)(v14 + 4), (int32_t)v10, v8, v9);
+        v16[4] = (Il2CppClass *)v12;
+        sub_1C3E508((CGThumbnailListItem_o *)(v16 + 4), (int32_t)v12, v10, v11);
       }
     }
   }
   System_Collections_Generic_List_Enumerator_object___Dispose(
-    &v17,
-    (const MethodInfo_352D80C *)Method_System_Collections_Generic_List_Enumerator_GameObject__Dispose__);
+    &v19,
+    (const MethodInfo_353FC48 *)Method_System_Collections_Generic_List_Enumerator_GameObject__Dispose__);
   return (System_Collections_Generic_List_MaterialEventLogListViewObject__o *)v3;
 }
 
@@ -2225,7 +2238,7 @@ void MaterialEventLogListViewManager___c__DisplayClass50_0___RequestListObject_b
 
   _4__this = this->fields.__4__this;
   if ( !_4__this )
-    sub_1C372B4(0);
+    sub_1C3E7C0(0, method);
   _4__this->fields.mIsDoing_Slide = 0;
   MaterialEventLogListViewManager__SetMode(_4__this, 2, this->fields.end_act, v2);
 }
@@ -2240,7 +2253,7 @@ void MaterialEventLogListViewManager___c__DisplayClass50_0___RequestListObject_b
 
   _4__this = this->fields.__4__this;
   if ( !_4__this )
-    sub_1C372B4(0);
+    sub_1C3E7C0(0, method);
   _4__this->fields.mIsDoing_Slide = 0;
   MaterialEventLogListViewManager__SetMode(_4__this, 2, this->fields.end_act, v2);
 }
@@ -2258,27 +2271,27 @@ void MaterialEventLogListViewManager___c__DisplayClass50_0___RequestListObject_b
   const MethodInfo *v7; // x3
 
   v3 = this;
-  if ( (byte_4C3E1DF & 1) == 0 )
+  if ( (byte_4C51F5F & 1) == 0 )
   {
-    sub_1C37058(&System_Action_TypeInfo);
-    this = (MaterialEventLogListViewManager___c__DisplayClass50_0_o *)sub_1C37058(&Method_MaterialEventLogListViewManager___c__DisplayClass50_0__RequestListObject_b__3__);
-    byte_4C3E1DF = 1;
+    sub_1C3E564(&System_Action_TypeInfo);
+    this = (MaterialEventLogListViewManager___c__DisplayClass50_0_o *)sub_1C3E564(&Method_MaterialEventLogListViewManager___c__DisplayClass50_0__RequestListObject_b__3__);
+    byte_4C51F5F = 1;
   }
   _4__this = v3->fields.__4__this;
   if ( !_4__this )
-    sub_1C372B4(this);
+    sub_1C3E7C0(this, method);
   _4__this->fields.mIsDoing_Slide = 0;
   _9__3 = v3->fields.__9__3;
   if ( !_9__3 )
   {
-    _9__3 = (System_Action_o *)sub_1C372A4(System_Action_TypeInfo);
+    _9__3 = (System_Action_o *)sub_1C3E7B0(System_Action_TypeInfo);
     System_Action___ctor(
       _9__3,
       (Il2CppObject *)v3,
       Method_MaterialEventLogListViewManager___c__DisplayClass50_0__RequestListObject_b__3__,
       0);
     v3->fields.__9__3 = _9__3;
-    sub_1C36FFC((CGThumbnailListItem_o *)&v3->fields.__9__3, (int32_t)_9__3, v6, v7);
+    sub_1C3E508((CGThumbnailListItem_o *)&v3->fields.__9__3, (int32_t)_9__3, v6, v7);
   }
   MaterialEventLogListViewManager__SetMode(_4__this, 0, _9__3, v2);
 }

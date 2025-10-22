@@ -6,22 +6,23 @@ void BattleBranchSkillInfoData___ctor(
 {
   const MethodInfo *v7; // x2
   __int64 v8; // x0
-  int32_t v9; // w2
-  const MethodInfo *v10; // x3
+  __int64 v9; // x1
+  int32_t v10; // w2
+  const MethodInfo *v11; // x3
   struct System_Int32_array *condValue; // x1
   struct System_String_o *condType; // x21
-  int32_t v13; // w2
-  const MethodInfo *v14; // x3
-  int v15; // w8
+  int32_t v14; // w2
+  const MethodInfo *v15; // x3
+  int v16; // w8
   struct System_String_o *detailText; // x1
   bool *p_isAnd; // x20
 
-  if ( (byte_4C45D1C & 1) == 0 )
+  if ( (byte_4C59AF9 & 1) == 0 )
   {
-    sub_1C37058(&StringLiteral_9534/*"None"*/);
-    sub_1C37058(&StringLiteral_7625/*"Individuality"*/);
-    sub_1C37058(&StringLiteral_8069/*"IsSelfTarget"*/);
-    byte_4C45D1C = 1;
+    sub_1C3E564(&StringLiteral_9534/*"None"*/);
+    sub_1C3E564(&StringLiteral_7625/*"Individuality"*/);
+    sub_1C3E564(&StringLiteral_8069/*"IsSelfTarget"*/);
+    byte_4C59AF9 = 1;
   }
   this->fields.itemImageId = -1;
   *(_QWORD *)&this->fields.cutInId = -1;
@@ -31,22 +32,22 @@ void BattleBranchSkillInfoData___ctor(
   System_Object___ctor((Il2CppObject *)this, 0);
   BattleBranchSkillInfoData__InheritOriginalSkillInfo(this, original, v7);
   if ( !condBranchSkillInfoData )
-    sub_1C372B4(v8);
+    sub_1C3E7C0(v8, v9);
   this->fields._skillId = condBranchSkillInfoData->fields.skillId;
   condValue = condBranchSkillInfoData->fields.condValue;
   *(_QWORD *)&this->fields.condBranchType = condValue;
-  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.condBranchType, (int32_t)condValue, v9, v10);
+  sub_1C3E508((CGThumbnailListItem_o *)&this->fields.condBranchType, (int32_t)condValue, v10, v11);
   condType = condBranchSkillInfoData->fields.condType;
   if ( System_String__op_Equality(condType, (System_String_o *)StringLiteral_8069/*"IsSelfTarget"*/, 0) )
   {
-    v15 = 1;
+    v16 = 1;
 LABEL_8:
-    *((_DWORD *)&this->fields.hasAddBattlePointFunc + 1) = v15;
+    *((_DWORD *)&this->fields.hasAddBattlePointFunc + 1) = v16;
     goto LABEL_9;
   }
   if ( System_String__op_Equality(condType, (System_String_o *)StringLiteral_7625/*"Individuality"*/, 0) )
   {
-    v15 = 2;
+    v16 = 2;
     goto LABEL_8;
   }
   if ( System_String__op_Equality(condType, (System_String_o *)StringLiteral_9534/*"None"*/, 0)
@@ -59,7 +60,7 @@ LABEL_9:
   detailText = condBranchSkillInfoData->fields.detailText;
   *(_QWORD *)&this->fields.isAnd = detailText;
   p_isAnd = &this->fields.isAnd;
-  sub_1C36FFC((CGThumbnailListItem_o *)p_isAnd, (int32_t)detailText, v13, v14);
+  sub_1C3E508((CGThumbnailListItem_o *)p_isAnd, (int32_t)detailText, v14, v15);
   *((_DWORD *)p_isAnd + 2) = condBranchSkillInfoData->fields.iconBuffId;
 }
 
@@ -71,15 +72,16 @@ void BattleBranchSkillInfoData__InheritOriginalSkillInfo(
 {
   const MethodInfo *v3; // x3
   __int64 v6; // x0
+  __int64 v7; // x1
 
   *(_QWORD *)&this->fields._IconBuffId_k__BackingField = original;
-  sub_1C36FFC(
+  sub_1C3E508(
     (CGThumbnailListItem_o *)&this->fields._IconBuffId_k__BackingField,
     (int32_t)original,
     (int32_t)method,
     v3);
   if ( !original )
-    sub_1C372B4(v6);
+    sub_1C3E7C0(v6, v7);
   *(_QWORD *)&this->fields.type = *(_QWORD *)&original->fields.type;
   this->fields.svtUniqueId = original->fields.svtUniqueId;
   this->fields.isPassive = original->fields.isPassive;
@@ -90,6 +92,7 @@ void BattleBranchSkillInfoData__InheritOriginalSkillInfo(
 }
 
 
+// local variable allocation has failed, the output may be wrong!
 bool BattleBranchSkillInfoData__IsSatisfyCond(
         BattleBranchSkillInfoData_o *this,
         bool isSelfTarget,
@@ -107,29 +110,29 @@ bool BattleBranchSkillInfoData__IsSatisfyCond(
   System_Func_T1__T2__TResult__o *v15; // x22
 
   v6 = this;
-  if ( (byte_4C45D1D & 1) == 0 )
+  if ( (byte_4C59AFA & 1) == 0 )
   {
-    sub_1C37058(&System_Func_int____int____bool__TypeInfo);
-    sub_1C37058(&Method_Individuality_IsMatchArray__);
-    sub_1C37058(&Method_Individuality_IsPartialMatchArray__);
-    this = (BattleBranchSkillInfoData_o *)sub_1C37058(&Individuality_TypeInfo);
-    byte_4C45D1D = 1;
+    sub_1C3E564(&System_Func_int____int____bool__TypeInfo);
+    sub_1C3E564(&Method_Individuality_IsMatchArray__);
+    sub_1C3E564(&Method_Individuality_IsPartialMatchArray__);
+    this = (BattleBranchSkillInfoData_o *)sub_1C3E564(&Individuality_TypeInfo);
+    byte_4C59AFA = 1;
   }
   v7 = *((_DWORD *)&v6->fields.hasAddBattlePointFunc + 1);
   if ( v7 == 2 )
   {
     condValue_low = LOBYTE(v6->fields.condValue);
     v11 = *(System_Int32_array **)&v6->fields.condBranchType;
-    v12 = (System_Func_T1__T2__TResult__o *)sub_1C372A4(System_Func_int____int____bool__TypeInfo);
+    v12 = (System_Func_T1__T2__TResult__o *)sub_1C3E7B0(System_Func_int____int____bool__TypeInfo);
     v13 = (System_Func_int____int____bool__o *)v12;
     if ( condValue_low )
     {
       System_Func_object__object__bool____ctor(v12, 0, Method_Individuality_IsMatchArray__, 0);
-      v14 = (System_Func_T1__T2__TResult__o *)sub_1C372A4(System_Func_int____int____bool__TypeInfo);
+      v14 = (System_Func_T1__T2__TResult__o *)sub_1C3E7B0(System_Func_int____int____bool__TypeInfo);
       System_Func_object__object__bool____ctor(v14, 0, Method_Individuality_IsPartialMatchArray__, 0);
       if ( !Individuality_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(Individuality_TypeInfo);
-      return Individuality__CheckSignedIndividualities_40436636(
+      return Individuality__CheckSignedIndividualities_40482876(
                targetIndv,
                v11,
                v13,
@@ -139,7 +142,7 @@ bool BattleBranchSkillInfoData__IsSatisfyCond(
     else
     {
       System_Func_object__object__bool____ctor(v12, 0, Method_Individuality_IsPartialMatchArray__, 0);
-      v15 = (System_Func_T1__T2__TResult__o *)sub_1C372A4(System_Func_int____int____bool__TypeInfo);
+      v15 = (System_Func_T1__T2__TResult__o *)sub_1C3E7B0(System_Func_int____int____bool__TypeInfo);
       System_Func_object__object__bool____ctor(v15, 0, Method_Individuality_IsMatchArray__, 0);
       if ( !Individuality_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(Individuality_TypeInfo);
@@ -156,9 +159,9 @@ bool BattleBranchSkillInfoData__IsSatisfyCond(
   {
     v9 = *(_QWORD *)&v6->fields.condBranchType;
     if ( !v9 )
-      sub_1C372B4(this);
+      sub_1C3E7C0(this, isSelfTarget);
     if ( !*(_DWORD *)(v9 + 24) )
-      sub_1C372BC(this);
+      sub_1C3E7C8(this, isSelfTarget);
     return ((*(_DWORD *)(v9 + 32) != 1) ^ isSelfTarget) & 1;
   }
   else
@@ -194,7 +197,7 @@ int32_t BattleBranchSkillInfoData__get_chargeTurn(BattleBranchSkillInfoData_o *t
 
   v2 = *(_QWORD *)&this->fields._IconBuffId_k__BackingField;
   if ( !v2 )
-    sub_1C372B4(0);
+    sub_1C3E7C0(0, method);
   return (*(__int64 (__fastcall **)(__int64, _QWORD))(*(_QWORD *)v2 + 408LL))(v2, *(_QWORD *)(*(_QWORD *)v2 + 416LL));
 }
 
@@ -207,7 +210,7 @@ void BattleBranchSkillInfoData__set_DetailText(
   const MethodInfo *v3; // x3
 
   *(_QWORD *)&this->fields.isAnd = value;
-  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.isAnd, (int32_t)value, (int32_t)method, v3);
+  sub_1C3E508((CGThumbnailListItem_o *)&this->fields.isAnd, (int32_t)value, (int32_t)method, v3);
 }
 
 
@@ -220,6 +223,7 @@ void BattleBranchSkillInfoData__set_IconBuffId(
 }
 
 
+// local variable allocation has failed, the output may be wrong!
 void BattleBranchSkillInfoData__set_chargeTurn(
         BattleBranchSkillInfoData_o *this,
         int32_t value,
@@ -229,7 +233,7 @@ void BattleBranchSkillInfoData__set_chargeTurn(
 
   v3 = *(_QWORD *)&this->fields._IconBuffId_k__BackingField;
   if ( !v3 )
-    sub_1C372B4(0);
+    sub_1C3E7C0(0, *(_QWORD *)&value);
   (*(void (__fastcall **)(__int64, int32_t, _QWORD))(*(_QWORD *)v3 + 424LL))(
     v3,
     value,

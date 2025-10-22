@@ -1,9 +1,9 @@
 void CardEffectComponent___ctor(CardEffectComponent_o *this, const MethodInfo *method)
 {
-  if ( (byte_4C45D43 & 1) == 0 )
+  if ( (byte_4C59B20 & 1) == 0 )
   {
-    sub_1C37058(&EffectComponent_TypeInfo);
-    byte_4C45D43 = 1;
+    sub_1C3E564(&EffectComponent_TypeInfo);
+    byte_4C59B20 = 1;
   }
   if ( !EffectComponent_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(EffectComponent_TypeInfo);
@@ -11,6 +11,7 @@ void CardEffectComponent___ctor(CardEffectComponent_o *this, const MethodInfo *m
 }
 
 
+// local variable allocation has failed, the output may be wrong!
 void CardEffectComponent__SetCardEffectDepth(
         CardEffectComponent_o *this,
         int32_t onBaseDepth,
@@ -47,13 +48,13 @@ void CardEffectComponent__SetCardEffectDepth(
         goto LABEL_7;
     }
 LABEL_14:
-    sub_1C372BC(this);
+    sub_1C3E7C8(this, *(_QWORD *)&onBaseDepth);
   }
 LABEL_7:
   underCardEffectArray = v7->fields.underCardEffectArray;
   if ( !underCardEffectArray )
 LABEL_15:
-    sub_1C372B4(this);
+    sub_1C3E7C0(this, *(_QWORD *)&onBaseDepth);
   v11 = underCardEffectArray->max_length;
   if ( v11 >= 1 )
   {

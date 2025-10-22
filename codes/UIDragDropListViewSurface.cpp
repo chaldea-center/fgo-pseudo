@@ -7,17 +7,18 @@ void UIDragDropListViewSurface___ctor(UIDragDropListViewSurface_o *this, const M
 void UIDragDropListViewSurface__DragEnd(UIDragDropListViewSurface_o *this, const MethodInfo *method)
 {
   Il2CppObject *Component_object; // x0
+  __int64 v4; // x1
 
-  if ( (byte_4C447E2 & 1) == 0 )
+  if ( (byte_4C585AD & 1) == 0 )
   {
-    sub_1C37058(&Method_UnityEngine_Component_GetComponent_Collider___);
-    byte_4C447E2 = 1;
+    sub_1C3E564(&Method_UnityEngine_Component_GetComponent_Collider___);
+    byte_4C585AD = 1;
   }
   Component_object = UnityEngine_Component__GetComponent_object_(
                        (UnityEngine_Component_o *)this,
-                       (const MethodInfo_30DE428 *)Method_UnityEngine_Component_GetComponent_Collider___);
+                       (const MethodInfo_30F0240 *)Method_UnityEngine_Component_GetComponent_Collider___);
   if ( !Component_object )
-    sub_1C372B4(0);
+    sub_1C3E7C0(0, v4);
   UnityEngine_Collider__set_enabled((UnityEngine_Collider_o *)Component_object, 0, 0);
 }
 
@@ -25,16 +26,17 @@ void UIDragDropListViewSurface__DragEnd(UIDragDropListViewSurface_o *this, const
 void UIDragDropListViewSurface__DragStart(UIDragDropListViewSurface_o *this, const MethodInfo *method)
 {
   Il2CppObject *Component_object; // x0
+  __int64 v4; // x1
 
-  if ( (byte_4C447E1 & 1) == 0 )
+  if ( (byte_4C585AC & 1) == 0 )
   {
-    sub_1C37058(&Method_UnityEngine_Component_GetComponent_Collider___);
-    byte_4C447E1 = 1;
+    sub_1C3E564(&Method_UnityEngine_Component_GetComponent_Collider___);
+    byte_4C585AC = 1;
   }
   Component_object = UnityEngine_Component__GetComponent_object_(
                        (UnityEngine_Component_o *)this,
-                       (const MethodInfo_30DE428 *)Method_UnityEngine_Component_GetComponent_Collider___);
+                       (const MethodInfo_30F0240 *)Method_UnityEngine_Component_GetComponent_Collider___);
   if ( !Component_object )
-    sub_1C372B4(0);
+    sub_1C3E7C0(0, v4);
   UnityEngine_Collider__set_enabled((UnityEngine_Collider_o *)Component_object, 1, 0);
 }

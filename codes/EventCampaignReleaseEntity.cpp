@@ -1,13 +1,13 @@
 void EventCampaignReleaseEntity___ctor(EventCampaignReleaseEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_4C42EB1 & 1) == 0 )
+  if ( (byte_4C56C60 & 1) == 0 )
   {
-    sub_1C37058(&Method_DataEntityBase_string___ctor__);
-    byte_4C42EB1 = 1;
+    sub_1C3E564(&Method_DataEntityBase_string___ctor__);
+    byte_4C56C60 = 1;
   }
   DataEntityBase_object____ctor(
     (DataEntityBase_PKType__o *)this,
-    (const MethodInfo_339EC34 *)Method_DataEntityBase_string___ctor__);
+    (const MethodInfo_33B0AEC *)Method_DataEntityBase_string___ctor__);
 }
 
 
@@ -17,16 +17,16 @@ System_String_o *EventCampaignReleaseEntity__CreatePK(
         int32_t idx,
         const MethodInfo *method)
 {
-  if ( (byte_4C42EB0 & 1) == 0 )
+  if ( (byte_4C56C5F & 1) == 0 )
   {
-    sub_1C37058(&Method_DataEntityBase_CreateMultiplePK_int__int__int___);
-    byte_4C42EB0 = 1;
+    sub_1C3E564(&Method_DataEntityBase_CreateMultiplePK_int__int__int___);
+    byte_4C56C5F = 1;
   }
   return DataEntityBase__CreateMultiplePK_int__int__int_(
            eventId,
            target,
            idx,
-           (const MethodInfo_30E6270 *)Method_DataEntityBase_CreateMultiplePK_int__int__int___);
+           (const MethodInfo_30F8088 *)Method_DataEntityBase_CreateMultiplePK_int__int__int___);
 }
 
 
@@ -48,59 +48,60 @@ System_String_o *EventCampaignReleaseEntity__getCreatePrimarykey(
 {
   __int64 v4; // x19
   System_String_o *v5; // x0
-  int32_t v6; // w2
-  const MethodInfo *v7; // x3
-  int32_t v8; // w2
-  const MethodInfo *v9; // x3
-  int32_t v10; // w1
-  int32_t v11; // w2
-  const MethodInfo *v12; // x3
-  int32_t v13; // w2
-  const MethodInfo *v14; // x3
-  int32_t v15; // w1
-  int32_t v16; // w2
-  const MethodInfo *v17; // x3
-  int32_t v19; // [xsp+4h] [xbp-2Ch] BYREF
-  int32_t v20; // [xsp+8h] [xbp-28h] BYREF
-  int32_t v21; // [xsp+Ch] [xbp-24h] BYREF
+  __int64 v6; // x1
+  int32_t v7; // w2
+  const MethodInfo *v8; // x3
+  int32_t v9; // w2
+  const MethodInfo *v10; // x3
+  int32_t v11; // w1
+  int32_t v12; // w2
+  const MethodInfo *v13; // x3
+  int32_t v14; // w2
+  const MethodInfo *v15; // x3
+  int32_t v16; // w1
+  int32_t v17; // w2
+  const MethodInfo *v18; // x3
+  int32_t v20; // [xsp+4h] [xbp-2Ch] BYREF
+  int32_t v21; // [xsp+8h] [xbp-28h] BYREF
+  int32_t v22; // [xsp+Ch] [xbp-24h] BYREF
 
-  v20 = target;
-  v21 = eventId;
-  v19 = idx;
-  if ( (byte_4C42EAF & 1) == 0 )
+  v21 = target;
+  v22 = eventId;
+  v20 = idx;
+  if ( (byte_4C56C5E & 1) == 0 )
   {
-    sub_1C37058(&string___TypeInfo);
-    sub_1C37058(&StringLiteral_1457/*":"*/);
-    byte_4C42EAF = 1;
+    sub_1C3E564(&string___TypeInfo);
+    sub_1C3E564(&StringLiteral_1456/*":"*/);
+    byte_4C56C5E = 1;
   }
-  v4 = sub_1C37100(string___TypeInfo, 5);
-  v5 = System_Int32__ToString((int32_t)&v21, 0);
+  v4 = sub_1C3E60C(string___TypeInfo, 5);
+  v5 = System_Int32__ToString((int32_t)&v22, 0);
   if ( !v4 )
-    sub_1C372B4(v5);
+    sub_1C3E7C0(v5, v6);
   if ( !*(_DWORD *)(v4 + 24) )
     goto LABEL_10;
   *(_QWORD *)(v4 + 32) = v5;
-  sub_1C36FFC((CGThumbnailListItem_o *)(v4 + 32), (int32_t)v5, v6, v7);
+  sub_1C3E508((CGThumbnailListItem_o *)(v4 + 32), (int32_t)v5, v7, v8);
   if ( *(_DWORD *)(v4 + 24) <= 1u )
     goto LABEL_10;
-  v10 = StringLiteral_1457/*":"*/;
-  *(_QWORD *)(v4 + 40) = StringLiteral_1457/*":"*/;
-  sub_1C36FFC((CGThumbnailListItem_o *)(v4 + 40), v10, v8, v9);
-  v5 = System_Int32__ToString((int32_t)&v20, 0);
+  v11 = StringLiteral_1456/*":"*/;
+  *(_QWORD *)(v4 + 40) = StringLiteral_1456/*":"*/;
+  sub_1C3E508((CGThumbnailListItem_o *)(v4 + 40), v11, v9, v10);
+  v5 = System_Int32__ToString((int32_t)&v21, 0);
   if ( *(_DWORD *)(v4 + 24) <= 2u
     || (*(_QWORD *)(v4 + 48) = v5,
-        sub_1C36FFC((CGThumbnailListItem_o *)(v4 + 48), (int32_t)v5, v11, v12),
+        sub_1C3E508((CGThumbnailListItem_o *)(v4 + 48), (int32_t)v5, v12, v13),
         *(_DWORD *)(v4 + 24) <= 3u)
-    || (v15 = StringLiteral_1457/*":"*/,
-        *(_QWORD *)(v4 + 56) = StringLiteral_1457/*":"*/,
-        sub_1C36FFC((CGThumbnailListItem_o *)(v4 + 56), v15, v13, v14),
-        v5 = System_Int32__ToString((int32_t)&v19, 0),
+    || (v16 = StringLiteral_1456/*":"*/,
+        *(_QWORD *)(v4 + 56) = StringLiteral_1456/*":"*/,
+        sub_1C3E508((CGThumbnailListItem_o *)(v4 + 56), v16, v14, v15),
+        v5 = System_Int32__ToString((int32_t)&v20, 0),
         *(_DWORD *)(v4 + 24) <= 4u) )
   {
 LABEL_10:
-    sub_1C372BC(v5);
+    sub_1C3E7C8(v5, v6);
   }
   *(_QWORD *)(v4 + 64) = v5;
-  sub_1C36FFC((CGThumbnailListItem_o *)(v4 + 64), (int32_t)v5, v16, v17);
-  return System_String__Concat_63602172((System_String_array *)v4, 0);
+  sub_1C3E508((CGThumbnailListItem_o *)(v4 + 64), (int32_t)v5, v17, v18);
+  return System_String__Concat_63676984((System_String_array *)v4, 0);
 }

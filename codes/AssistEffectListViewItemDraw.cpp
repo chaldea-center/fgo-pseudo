@@ -1,9 +1,9 @@
 void AssistEffectListViewItemDraw___cctor(const MethodInfo *method)
 {
-  if ( (byte_4C3CCB7 & 1) == 0 )
+  if ( (byte_4C50A37 & 1) == 0 )
   {
-    sub_1C37058(&AssistEffectListViewItemDraw_TypeInfo);
-    byte_4C3CCB7 = 1;
+    sub_1C3E564(&AssistEffectListViewItemDraw_TypeInfo);
+    byte_4C50A37 = 1;
   }
   AssistEffectListViewItemDraw_TypeInfo->static_fields->NAME_LABEL_MAX_WIDTH = 280;
 }
@@ -22,89 +22,90 @@ void AssistEffectListViewItemDraw__UpdateUi(
 {
   Il2CppObject *v5; // x23
   __int64 Instance; // x0
+  __int64 v7; // x1
   void **p_monitor; // x20
-  AssistMaster_o *v8; // x22
-  __int64 v9; // x21
+  AssistMaster_o *v9; // x22
+  __int64 v10; // x21
   AssistEntity_o *MaxLevelEntity; // x22
-  System_Action_o *v11; // x24
+  System_Action_o *v12; // x24
   UILabel_o *nameLabel; // x23
   UILabel_o *levelLabel; // x23
-  __int64 v14; // x2
-  __int64 v15; // x3
-  __int64 v16; // x4
-  __int64 v17; // x5
-  __int64 v18; // x6
-  __int64 v19; // x7
-  System_String_o *v20; // x24
-  __int64 v21; // x2
-  __int64 v22; // x3
-  __int64 v23; // x4
-  __int64 v24; // x5
-  __int64 v25; // x6
-  __int64 v26; // x7
-  Il2CppObject *v27; // x25
-  Il2CppObject *v28; // x0
+  __int64 v15; // x2
+  __int64 v16; // x3
+  __int64 v17; // x4
+  __int64 v18; // x5
+  __int64 v19; // x6
+  __int64 v20; // x7
+  System_String_o *v21; // x24
+  __int64 v22; // x2
+  __int64 v23; // x3
+  __int64 v24; // x4
+  __int64 v25; // x5
+  __int64 v26; // x6
+  __int64 v27; // x7
+  Il2CppObject *v28; // x25
+  Il2CppObject *v29; // x0
   UILabel_o *detailLabel; // x22
-  System_String_o *v30; // x23
-  System_String_o *v31; // x24
-  __int64 v32; // x2
-  __int64 v33; // x3
-  __int64 v34; // x4
-  __int64 v35; // x5
-  __int64 v36; // x6
-  __int64 v37; // x7
-  Il2CppObject *v38; // x0
+  System_String_o *v31; // x23
+  System_String_o *v32; // x24
+  __int64 v33; // x2
+  __int64 v34; // x3
+  __int64 v35; // x4
+  __int64 v36; // x5
+  __int64 v37; // x6
+  __int64 v38; // x7
   Il2CppObject *v39; // x0
-  System_String_o *v40; // x0
-  int v41; // [xsp+Ch] [xbp-54h] BYREF
+  Il2CppObject *v40; // x0
+  System_String_o *v41; // x0
+  int v42; // [xsp+Ch] [xbp-54h] BYREF
   int32_t lv; // [xsp+18h] [xbp-48h] BYREF
-  int v43; // [xsp+1Ch] [xbp-44h] BYREF
+  int v44; // [xsp+1Ch] [xbp-44h] BYREF
 
-  if ( (byte_4C3CCB6 & 1) == 0 )
+  if ( (byte_4C50A36 & 1) == 0 )
   {
-    sub_1C37058(&System_Action_TypeInfo);
-    sub_1C37058(&AssistEffectListViewItemDraw_TypeInfo);
-    sub_1C37058(&AtlasManager_TypeInfo);
-    sub_1C37058(&Method_DataManager_GetMasterData_AssistMaster___);
-    sub_1C37058(&int_TypeInfo);
-    sub_1C37058(&LocalizationManager_TypeInfo);
-    sub_1C37058(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-    sub_1C37058(&Method_AssistEffectListViewItemDraw___c__DisplayClass6_0__UpdateUi_b__0__);
-    sub_1C37058(&AssistEffectListViewItemDraw___c__DisplayClass6_0_TypeInfo);
-    sub_1C37058(&StringLiteral_8263/*"LEVEL_INFO"*/);
-    sub_1C37058(&StringLiteral_5521/*"EVENT_ASSIST_SKILL_CONFIRM_DIALOG_LEVEL_FORMAT"*/);
-    byte_4C3CCB6 = 1;
+    sub_1C3E564(&System_Action_TypeInfo);
+    sub_1C3E564(&AssistEffectListViewItemDraw_TypeInfo);
+    sub_1C3E564(&AtlasManager_TypeInfo);
+    sub_1C3E564(&Method_DataManager_GetMasterData_AssistMaster___);
+    sub_1C3E564(&int_TypeInfo);
+    sub_1C3E564(&LocalizationManager_TypeInfo);
+    sub_1C3E564(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    sub_1C3E564(&Method_AssistEffectListViewItemDraw___c__DisplayClass6_0__UpdateUi_b__0__);
+    sub_1C3E564(&AssistEffectListViewItemDraw___c__DisplayClass6_0_TypeInfo);
+    sub_1C3E564(&StringLiteral_8263/*"LEVEL_INFO"*/);
+    sub_1C3E564(&StringLiteral_5521/*"EVENT_ASSIST_SKILL_CONFIRM_DIALOG_LEVEL_FORMAT"*/);
+    byte_4C50A36 = 1;
   }
-  v5 = (Il2CppObject *)sub_1C372A4(AssistEffectListViewItemDraw___c__DisplayClass6_0_TypeInfo);
+  v5 = (Il2CppObject *)sub_1C3E7B0(AssistEffectListViewItemDraw___c__DisplayClass6_0_TypeInfo);
   System_Object___ctor(v5, 0);
   if ( !v5 )
     goto LABEL_24;
   v5[1].klass = (Il2CppClass *)this;
-  sub_1C36FFC(&v5[1], this);
+  sub_1C3E508(&v5[1], this);
   v5[1].monitor = item;
   p_monitor = &v5[1].monitor;
-  sub_1C36FFC(&v5[1].monitor, item);
-  Instance = (__int64)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39ED16C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  sub_1C3E508(&v5[1].monitor, item);
+  Instance = (__int64)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39FF5A8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance )
     goto LABEL_24;
   Instance = (__int64)DataManager__GetMasterData_object_(
                         (DataManager_o *)Instance,
-                        (const MethodInfo_30E7C58 *)Method_DataManager_GetMasterData_AssistMaster___);
+                        (const MethodInfo_30F9A70 *)Method_DataManager_GetMasterData_AssistMaster___);
   if ( !*p_monitor )
     goto LABEL_24;
-  v8 = (AssistMaster_o *)Instance;
+  v9 = (AssistMaster_o *)Instance;
   if ( !Instance )
     goto LABEL_24;
   Instance = (__int64)AssistMaster__GetCurrentLevelEntity((AssistMaster_o *)Instance, *((_DWORD *)*p_monitor + 31), 0);
   if ( !*p_monitor )
     goto LABEL_24;
-  v9 = Instance;
-  MaxLevelEntity = AssistMaster__GetMaxLevelEntity(v8, *((_DWORD *)*p_monitor + 31), 0);
-  v11 = (System_Action_o *)sub_1C372A4(System_Action_TypeInfo);
-  System_Action___ctor(v11, v5, Method_AssistEffectListViewItemDraw___c__DisplayClass6_0__UpdateUi_b__0__, 0);
+  v10 = Instance;
+  MaxLevelEntity = AssistMaster__GetMaxLevelEntity(v9, *((_DWORD *)*p_monitor + 31), 0);
+  v12 = (System_Action_o *)sub_1C3E7B0(System_Action_TypeInfo);
+  System_Action___ctor(v12, v5, Method_AssistEffectListViewItemDraw___c__DisplayClass6_0__UpdateUi_b__0__, 0);
   if ( !AtlasManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo);
-  AtlasManager__LoadEventUI(v11, 1, 0);
+  AtlasManager__LoadEventUI(v12, 1, 0);
   if ( !*p_monitor )
     goto LABEL_24;
   Instance = (__int64)this->fields.nameLabel;
@@ -126,33 +127,33 @@ void AssistEffectListViewItemDraw__UpdateUi(
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   Instance = (__int64)LocalizationManager__Get((System_String_o *)StringLiteral_5521/*"EVENT_ASSIST_SKILL_CONFIRM_DIALOG_LEVEL_FORMAT"*/, 0);
-  if ( !v9 )
+  if ( !v10 )
     goto LABEL_24;
-  v20 = (System_String_o *)Instance;
-  v43 = *(_DWORD *)(v9 + 32);
-  Instance = j_il2cpp_value_box_0(int_TypeInfo, &v43, v14, v15, v16, v17, v18, v19);
+  v21 = (System_String_o *)Instance;
+  v44 = *(_DWORD *)(v10 + 32);
+  Instance = j_il2cpp_value_box_0(int_TypeInfo, &v44, v15, v16, v17, v18, v19, v20);
   if ( !MaxLevelEntity )
     goto LABEL_24;
-  v27 = (Il2CppObject *)Instance;
+  v28 = (Il2CppObject *)Instance;
   lv = MaxLevelEntity->fields.lv;
-  v28 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &lv, v21, v22, v23, v24, v25, v26);
-  Instance = (__int64)System_String__Format_63602948(v20, v27, v28, 0);
+  v29 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &lv, v22, v23, v24, v25, v26, v27);
+  Instance = (__int64)System_String__Format_63677760(v21, v28, v29, 0);
   if ( !levelLabel )
     goto LABEL_24;
   UILabel__set_text(levelLabel, (System_String_o *)Instance, 0);
   if ( !*p_monitor )
     goto LABEL_24;
   detailLabel = this->fields.detailLabel;
-  v30 = (System_String_o *)*((_QWORD *)*p_monitor + 18);
-  v31 = LocalizationManager__Get((System_String_o *)StringLiteral_8263/*"LEVEL_INFO"*/, 0);
-  v41 = *(_DWORD *)(v9 + 32);
-  v38 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v41, v32, v33, v34, v35, v36, v37);
-  v39 = (Il2CppObject *)System_String__Format(v31, v38, 0);
-  v40 = System_String__Format(v30, v39, 0);
-  Instance = WrapControlText__textAdjust(detailLabel, v40, 16, 0, 0);
+  v31 = (System_String_o *)*((_QWORD *)*p_monitor + 18);
+  v32 = LocalizationManager__Get((System_String_o *)StringLiteral_8263/*"LEVEL_INFO"*/, 0);
+  v42 = *(_DWORD *)(v10 + 32);
+  v39 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v42, v33, v34, v35, v36, v37, v38);
+  v40 = (Il2CppObject *)System_String__Format(v32, v39, 0);
+  v41 = System_String__Format(v31, v40, 0);
+  Instance = WrapControlText__textAdjust(detailLabel, v41, 16, 0, 0);
   if ( !*p_monitor || (Instance = (__int64)this->fields.line) == 0 )
 LABEL_24:
-    sub_1C372B4(Instance);
+    sub_1C3E7C0(Instance, v7);
   UnityEngine_Behaviour__set_enabled((UnityEngine_Behaviour_o *)Instance, *((_BYTE *)*p_monitor + 152) == 0, 0);
 }
 
@@ -193,12 +194,12 @@ void AssistEffectListViewItemDraw___c__DisplayClass6_0___UpdateUi_b__0(
   int32_t EventId_k__BackingField; // [xsp+Ch] [xbp-24h] BYREF
 
   v8 = this;
-  if ( (byte_4C3CCB8 & 1) == 0 )
+  if ( (byte_4C50A38 & 1) == 0 )
   {
-    sub_1C37058(&AtlasManager_TypeInfo);
-    sub_1C37058(&int_TypeInfo);
-    this = (AssistEffectListViewItemDraw___c__DisplayClass6_0_o *)sub_1C37058(&StringLiteral_19275/*"event_skill_icon_{0}{1:D2}"*/);
-    byte_4C3CCB8 = 1;
+    sub_1C3E564(&AtlasManager_TypeInfo);
+    sub_1C3E564(&int_TypeInfo);
+    this = (AssistEffectListViewItemDraw___c__DisplayClass6_0_o *)sub_1C3E564(&StringLiteral_19293/*"event_skill_icon_{0}{1:D2}"*/);
+    byte_4C50A38 = 1;
   }
   _4__this = v8->fields.__4__this;
   if ( !_4__this
@@ -216,12 +217,12 @@ void AssistEffectListViewItemDraw___c__DisplayClass6_0___UpdateUi_b__0(
                                                                         v7),
         (v18 = v8->fields.item) == 0) )
   {
-    sub_1C372B4(this);
+    sub_1C3E7C0(this, method);
   }
   v19 = (Il2CppObject *)this;
   IconImageId_k__BackingField = v18->fields._IconImageId_k__BackingField;
   v20 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &IconImageId_k__BackingField, v12, v13, v14, v15, v16, v17);
-  v21 = System_String__Format_63602948((System_String_o *)StringLiteral_19275/*"event_skill_icon_{0}{1:D2}"*/, v19, v20, 0);
+  v21 = System_String__Format_63677760((System_String_o *)StringLiteral_19293/*"event_skill_icon_{0}{1:D2}"*/, v19, v20, 0);
   if ( !AtlasManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo);
   AtlasManager__SetEventUI(icon, v21, 0);

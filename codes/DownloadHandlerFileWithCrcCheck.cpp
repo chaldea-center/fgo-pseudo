@@ -22,23 +22,23 @@ void DownloadHandlerFileWithCrcCheck___ctor(
   UnityEngine_Networking_DownloadHandlerScript___ctor((UnityEngine_Networking_DownloadHandlerScript_o *)this, 0);
   this->fields.crc = 0;
   this->fields.path = path;
-  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.path, (int32_t)path, v7, v8);
+  sub_1C3E508((CGThumbnailListItem_o *)&this->fields.path, (int32_t)path, v7, v8);
   this->fields.fileStream = 0;
-  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.fileStream, 0, v9, v10);
+  sub_1C3E508((CGThumbnailListItem_o *)&this->fields.fileStream, 0, v9, v10);
   this->fields._error_k__BackingField = 0;
-  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields._error_k__BackingField, 0, v11, v12);
+  sub_1C3E508((CGThumbnailListItem_o *)&this->fields._error_k__BackingField, 0, v11, v12);
   *(_QWORD *)&this->fields.nowDataLength = 0;
   this->fields.isDecrypt = v6;
   this->fields.cryptoStream = 0;
-  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.cryptoStream, 0, v13, v14);
+  sub_1C3E508((CGThumbnailListItem_o *)&this->fields.cryptoStream, 0, v13, v14);
   this->fields.outputStream = 0;
-  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.outputStream, 0, v15, v16);
+  sub_1C3E508((CGThumbnailListItem_o *)&this->fields.outputStream, 0, v15, v16);
   this->fields.key = 0;
-  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.key, 0, v17, v18);
+  sub_1C3E508((CGThumbnailListItem_o *)&this->fields.key, 0, v17, v18);
 }
 
 
-void DownloadHandlerFileWithCrcCheck___ctor_40763424(
+void DownloadHandlerFileWithCrcCheck___ctor_40809908(
         DownloadHandlerFileWithCrcCheck_o *this,
         System_String_o *path,
         bool isDecrypt,
@@ -61,25 +61,25 @@ void DownloadHandlerFileWithCrcCheck___ctor_40763424(
   const MethodInfo *v21; // x3
 
   v7 = isDecrypt;
-  UnityEngine_Networking_DownloadHandlerScript___ctor_73777040(
+  UnityEngine_Networking_DownloadHandlerScript___ctor_73851852(
     (UnityEngine_Networking_DownloadHandlerScript_o *)this,
     buffer,
     0);
   this->fields.crc = 0;
   this->fields.path = path;
-  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.path, (int32_t)path, v10, v11);
+  sub_1C3E508((CGThumbnailListItem_o *)&this->fields.path, (int32_t)path, v10, v11);
   this->fields.fileStream = 0;
-  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.fileStream, 0, v12, v13);
+  sub_1C3E508((CGThumbnailListItem_o *)&this->fields.fileStream, 0, v12, v13);
   this->fields._error_k__BackingField = 0;
-  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields._error_k__BackingField, 0, v14, v15);
+  sub_1C3E508((CGThumbnailListItem_o *)&this->fields._error_k__BackingField, 0, v14, v15);
   *(_QWORD *)&this->fields.nowDataLength = 0;
   this->fields.isDecrypt = v7;
   this->fields.cryptoStream = 0;
-  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.cryptoStream, 0, v16, v17);
+  sub_1C3E508((CGThumbnailListItem_o *)&this->fields.cryptoStream, 0, v16, v17);
   this->fields.outputStream = 0;
-  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.outputStream, 0, v18, v19);
+  sub_1C3E508((CGThumbnailListItem_o *)&this->fields.outputStream, 0, v18, v19);
   this->fields.key = key;
-  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.key, (int32_t)key, v20, v21);
+  sub_1C3E508((CGThumbnailListItem_o *)&this->fields.key, (int32_t)key, v20, v21);
 }
 
 
@@ -104,14 +104,14 @@ void DownloadHandlerFileWithCrcCheck__CloseStream(DownloadHandlerFileWithCrcChec
   {
     System_IO_Stream__Dispose(fileStream, 0);
     p_fileStream->klass = 0;
-    sub_1C36FFC(p_fileStream, 0, v5, v6);
+    sub_1C3E508(p_fileStream, 0, v5, v6);
   }
   cryptoStream = this->fields.cryptoStream;
   if ( cryptoStream )
   {
     System_Security_Cryptography_CryptoStream__Clear(cryptoStream, 0);
     this->fields.cryptoStream = 0;
-    sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.cryptoStream, 0, v8, v9);
+    sub_1C3E508((CGThumbnailListItem_o *)&this->fields.cryptoStream, 0, v8, v9);
   }
   outputStream = this->fields.outputStream;
   p_outputStream = (CGThumbnailListItem_o *)&this->fields.outputStream;
@@ -120,7 +120,7 @@ void DownloadHandlerFileWithCrcCheck__CloseStream(DownloadHandlerFileWithCrcChec
   {
     System_IO_Stream__Dispose(v10, 0);
     p_outputStream->klass = 0;
-    sub_1C36FFC(p_outputStream, 0, v13, v14);
+    sub_1C3E508(p_outputStream, 0, v13, v14);
   }
 }
 
@@ -135,24 +135,27 @@ void DownloadHandlerFileWithCrcCheck__CompleteContent(
   const MethodInfo *v6; // x3
   System_Security_Cryptography_CryptoStream_o *cryptoStream; // x0
   System_Security_Cryptography_CryptoStream_o **p_cryptoStream; // x21
+  __int64 v9; // x1
   struct System_IO_MemoryStream_o *outputStream; // x0
-  __int64 v10; // x20
-  struct System_IO_MemoryStream_o *v11; // x0
-  struct System_Byte_array *v12; // x0
-  int32_t v13; // w2
-  const MethodInfo *v14; // x3
+  __int64 v11; // x1
+  __int64 v12; // x20
+  struct System_IO_MemoryStream_o *v13; // x0
+  struct System_Byte_array *v14; // x0
   int32_t v15; // w2
   const MethodInfo *v16; // x3
-  System_IO_Stream_o *v17; // x0
-  int32_t v18; // w2
-  const MethodInfo *v19; // x3
+  int32_t v17; // w2
+  const MethodInfo *v18; // x3
+  System_IO_Stream_o *v19; // x0
+  int32_t v20; // w2
+  const MethodInfo *v21; // x3
   _BOOL8 IsNullOrEmpty; // x0
-  __int64 v21; // x10
-  int v22; // w11
+  __int64 v23; // x1
+  __int64 v24; // x10
+  int v25; // w11
   struct System_Byte_array *decryptData; // x13
   unsigned int max_length; // w16
-  uint8_t v25; // w12
-  struct System_Byte_array *v26; // x13
+  uint8_t v28; // w12
+  struct System_Byte_array *v29; // x13
 
   p_fileStream = (CGThumbnailListItem_o *)&this->fields.fileStream;
   fileStream = (System_IO_Stream_o *)this->fields.fileStream;
@@ -160,7 +163,7 @@ void DownloadHandlerFileWithCrcCheck__CompleteContent(
   {
     System_IO_Stream__Dispose(fileStream, 0);
     p_fileStream->klass = 0;
-    sub_1C36FFC(p_fileStream, 0, v5, v6);
+    sub_1C3E508(p_fileStream, 0, v5, v6);
   }
   if ( this->fields.isDecrypt )
   {
@@ -172,67 +175,67 @@ void DownloadHandlerFileWithCrcCheck__CompleteContent(
       outputStream = this->fields.outputStream;
       if ( outputStream )
       {
-        v10 = ((__int64 (__fastcall *)(struct System_IO_MemoryStream_o *, const MethodInfo *))outputStream->klass->vtable._11_get_Length.methodPtr)(
+        v12 = ((__int64 (__fastcall *)(struct System_IO_MemoryStream_o *, const MethodInfo *))outputStream->klass->vtable._11_get_Length.methodPtr)(
                 outputStream,
                 outputStream->klass->vtable._11_get_Length.method);
-        v11 = this->fields.outputStream;
-        if ( !v11 )
-          sub_1C372B4(0);
-        v12 = (struct System_Byte_array *)((__int64 (__fastcall *)(struct System_IO_MemoryStream_o *, const MethodInfo *))v11->klass->vtable._37_GetBuffer.methodPtr)(
-                                            v11,
-                                            v11->klass->vtable._37_GetBuffer.method);
-        this->fields.decryptData = v12;
-        sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.decryptData, (int32_t)v12, v13, v14);
+        v13 = this->fields.outputStream;
+        if ( !v13 )
+          sub_1C3E7C0(0, v11);
+        v14 = (struct System_Byte_array *)((__int64 (__fastcall *)(struct System_IO_MemoryStream_o *, const MethodInfo *))v13->klass->vtable._37_GetBuffer.methodPtr)(
+                                            v13,
+                                            v13->klass->vtable._37_GetBuffer.method);
+        this->fields.decryptData = v14;
+        sub_1C3E508((CGThumbnailListItem_o *)&this->fields.decryptData, (int32_t)v14, v15, v16);
       }
       else
       {
-        v10 = 0;
+        v12 = 0;
       }
       if ( !*p_cryptoStream )
-        sub_1C372B4(0);
+        sub_1C3E7C0(0, v9);
       System_Security_Cryptography_CryptoStream__Clear(*p_cryptoStream, 0);
       *p_cryptoStream = 0;
-      sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.cryptoStream, 0, v15, v16);
+      sub_1C3E508((CGThumbnailListItem_o *)&this->fields.cryptoStream, 0, v17, v18);
     }
     else
     {
-      v10 = 0;
+      v12 = 0;
     }
-    v17 = (System_IO_Stream_o *)this->fields.outputStream;
-    if ( v17 )
+    v19 = (System_IO_Stream_o *)this->fields.outputStream;
+    if ( v19 )
     {
-      System_IO_Stream__Dispose(v17, 0);
+      System_IO_Stream__Dispose(v19, 0);
       this->fields.outputStream = 0;
-      sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.outputStream, 0, v18, v19);
+      sub_1C3E508((CGThumbnailListItem_o *)&this->fields.outputStream, 0, v20, v21);
     }
     IsNullOrEmpty = System_String__IsNullOrEmpty(this->fields.key, 0);
-    if ( v10 >= 1 && IsNullOrEmpty )
+    if ( v12 >= 1 && IsNullOrEmpty )
     {
-      v21 = 0;
+      v24 = 0;
       do
       {
-        v22 = v21 + 1;
-        if ( v10 <= (int)v21 + 1 )
+        v25 = v24 + 1;
+        if ( v12 <= (int)v24 + 1 )
           break;
         decryptData = this->fields.decryptData;
         if ( !decryptData )
-          sub_1C372B4(IsNullOrEmpty);
+          sub_1C3E7C0(IsNullOrEmpty, v23);
         max_length = decryptData->max_length;
-        if ( (unsigned int)v21 >= max_length )
-          sub_1C372BC(IsNullOrEmpty);
-        v25 = decryptData->m_Items[v21];
-        if ( (int)v21 + 1 >= max_length )
-          sub_1C372BC(IsNullOrEmpty);
-        decryptData->m_Items[v21] = decryptData->m_Items[v22] ^ 0xD2;
-        v26 = this->fields.decryptData;
-        if ( !v26 )
-          sub_1C372B4(IsNullOrEmpty);
-        if ( (unsigned int)(v21 + 1) >= LODWORD(v26->max_length) )
-          sub_1C372BC(IsNullOrEmpty);
-        v21 = (int)v21 + 2;
-        v26->m_Items[v22] = v25 ^ 0xCE;
+        if ( (unsigned int)v24 >= max_length )
+          sub_1C3E7C8(IsNullOrEmpty, v23);
+        v28 = decryptData->m_Items[v24];
+        if ( (int)v24 + 1 >= max_length )
+          sub_1C3E7C8(IsNullOrEmpty, v23);
+        decryptData->m_Items[v24] = decryptData->m_Items[v25] ^ 0xD2;
+        v29 = this->fields.decryptData;
+        if ( !v29 )
+          sub_1C3E7C0(IsNullOrEmpty, v23);
+        if ( (unsigned int)(v24 + 1) >= LODWORD(v29->max_length) )
+          sub_1C3E7C8(IsNullOrEmpty, v23);
+        v24 = (int)v24 + 2;
+        v29->m_Items[v25] = v28 ^ 0xCE;
       }
-      while ( v10 > (int)v21 );
+      while ( v12 > (int)v24 );
     }
   }
   UnityEngine_Networking_DownloadHandler__CompleteContent((UnityEngine_Networking_DownloadHandler_o *)this, 0);
@@ -308,42 +311,46 @@ bool DownloadHandlerFileWithCrcCheck__ReceiveData(
   System_IO_FileStream_o *v10; // x23
   int32_t v11; // w2
   const MethodInfo *v12; // x3
+  __int64 v13; // x1
+  __int64 v14; // x1
   struct System_Security_Cryptography_CryptoStream_o *cryptoStream; // x0
   struct System_Security_Cryptography_CryptoStream_o **p_cryptoStream; // x22
   int32_t contentSize; // w24
-  System_IO_MemoryStream_o *v16; // x23
-  int32_t v17; // w2
-  const MethodInfo *v18; // x3
+  System_IO_MemoryStream_o *v18; // x23
+  int32_t v19; // w2
+  const MethodInfo *v20; // x3
   System_IO_Stream_o *outputStream; // x23
   System_String_o *key; // x24
-  System_Security_Cryptography_CryptoStream_o *v21; // x0
-  int32_t v22; // w2
-  const MethodInfo *v23; // x3
+  System_Security_Cryptography_CryptoStream_o *v23; // x0
+  int32_t v24; // w2
+  const MethodInfo *v25; // x3
+  __int64 v26; // x1
+  __int64 v27; // x1
   uint32_t crc; // w22
-  uint32_t v25; // w0
+  uint32_t v29; // w0
   int32_t nowDataLength; // w8
   bool result; // w0
 
-  if ( (byte_4C4223D & 1) == 0 )
+  if ( (byte_4C55FDF & 1) == 0 )
   {
-    sub_1C37058(&CatAndMouseGame_TypeInfo);
-    sub_1C37058(&Crc32_TypeInfo);
-    sub_1C37058(&System_IO_FileStream_TypeInfo);
-    sub_1C37058(&System_IO_MemoryStream_TypeInfo);
-    byte_4C4223D = 1;
+    sub_1C3E564(&CatAndMouseGame_TypeInfo);
+    sub_1C3E564(&Crc32_TypeInfo);
+    sub_1C3E564(&System_IO_FileStream_TypeInfo);
+    sub_1C3E564(&System_IO_MemoryStream_TypeInfo);
+    byte_4C55FDF = 1;
   }
   p_fileStream = &this->fields.fileStream;
   fileStream = this->fields.fileStream;
   if ( !fileStream )
   {
     path = this->fields.path;
-    v10 = (System_IO_FileStream_o *)sub_1C372A4(System_IO_FileStream_TypeInfo);
-    System_IO_FileStream___ctor_64480128(v10, path, 2, 2, 0);
+    v10 = (System_IO_FileStream_o *)sub_1C3E7B0(System_IO_FileStream_TypeInfo);
+    System_IO_FileStream___ctor_64554940(v10, path, 2, 2, 0);
     *p_fileStream = v10;
-    sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.fileStream, (int32_t)v10, v11, v12);
+    sub_1C3E508((CGThumbnailListItem_o *)&this->fields.fileStream, (int32_t)v10, v11, v12);
     fileStream = *p_fileStream;
     if ( !*p_fileStream )
-      sub_1C372B4(0);
+      sub_1C3E7C0(0, v13);
   }
   ((void (__fastcall *)(struct System_IO_FileStream_o *, System_Byte_array *, _QWORD, _QWORD, const MethodInfo *))fileStream->klass->vtable._34_Write.methodPtr)(
     fileStream,
@@ -352,7 +359,7 @@ bool DownloadHandlerFileWithCrcCheck__ReceiveData(
     (unsigned int)dataLength,
     fileStream->klass->vtable._34_Write.method);
   if ( !*p_fileStream )
-    sub_1C372B4(0);
+    sub_1C3E7C0(0, v14);
   ((void (__fastcall *)(struct System_IO_FileStream_o *, const MethodInfo *))(*p_fileStream)->klass->vtable._20_Flush.methodPtr)(
     *p_fileStream,
     (*p_fileStream)->klass->vtable._20_Flush.method);
@@ -363,20 +370,20 @@ bool DownloadHandlerFileWithCrcCheck__ReceiveData(
     if ( !cryptoStream )
     {
       contentSize = this->fields.contentSize;
-      v16 = (System_IO_MemoryStream_o *)sub_1C372A4(System_IO_MemoryStream_TypeInfo);
-      System_IO_MemoryStream___ctor_64383756(v16, contentSize, 0);
-      this->fields.outputStream = v16;
-      sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.outputStream, (int32_t)v16, v17, v18);
+      v18 = (System_IO_MemoryStream_o *)sub_1C3E7B0(System_IO_MemoryStream_TypeInfo);
+      System_IO_MemoryStream___ctor_64458568(v18, contentSize, 0);
+      this->fields.outputStream = v18;
+      sub_1C3E508((CGThumbnailListItem_o *)&this->fields.outputStream, (int32_t)v18, v19, v20);
       outputStream = (System_IO_Stream_o *)this->fields.outputStream;
       key = this->fields.key;
       if ( !CatAndMouseGame_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(CatAndMouseGame_TypeInfo);
-      v21 = CatAndMouseGame__MouseGame4Stream_41237128(outputStream, key, 0);
-      *p_cryptoStream = v21;
-      sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.cryptoStream, (int32_t)v21, v22, v23);
+      v23 = CatAndMouseGame__MouseGame4Stream_41285656(outputStream, key, 0);
+      *p_cryptoStream = v23;
+      sub_1C3E508((CGThumbnailListItem_o *)&this->fields.cryptoStream, (int32_t)v23, v24, v25);
       cryptoStream = *p_cryptoStream;
       if ( !*p_cryptoStream )
-        sub_1C372B4(0);
+        sub_1C3E7C0(0, v26);
     }
     ((void (__fastcall *)(struct System_Security_Cryptography_CryptoStream_o *, System_Byte_array *, _QWORD, _QWORD, const MethodInfo *))cryptoStream->klass->vtable._34_Write.methodPtr)(
       cryptoStream,
@@ -385,7 +392,7 @@ bool DownloadHandlerFileWithCrcCheck__ReceiveData(
       (unsigned int)dataLength,
       cryptoStream->klass->vtable._34_Write.method);
     if ( !*p_cryptoStream )
-      sub_1C372B4(0);
+      sub_1C3E7C0(0, v27);
     ((void (__fastcall *)(struct System_Security_Cryptography_CryptoStream_o *, const MethodInfo *))(*p_cryptoStream)->klass->vtable._20_Flush.methodPtr)(
       *p_cryptoStream,
       (*p_cryptoStream)->klass->vtable._20_Flush.method);
@@ -393,9 +400,9 @@ bool DownloadHandlerFileWithCrcCheck__ReceiveData(
   crc = this->fields.crc;
   if ( !Crc32_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(Crc32_TypeInfo);
-  v25 = Crc32__Compute_41246160(data, dataLength, crc, 0);
+  v29 = Crc32__Compute_41294688(data, dataLength, crc, 0);
   nowDataLength = this->fields.nowDataLength;
-  this->fields.crc = v25;
+  this->fields.crc = v29;
   result = 1;
   this->fields.nowDataLength = nowDataLength + dataLength;
   return result;
@@ -424,5 +431,5 @@ void DownloadHandlerFileWithCrcCheck__set_error(
   const MethodInfo *v3; // x3
 
   this->fields._error_k__BackingField = value;
-  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields._error_k__BackingField, (int32_t)value, (int32_t)method, v3);
+  sub_1C3E508((CGThumbnailListItem_o *)&this->fields._error_k__BackingField, (int32_t)value, (int32_t)method, v3);
 }

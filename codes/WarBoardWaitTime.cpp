@@ -11,16 +11,16 @@ System_Collections_IEnumerator_o *WarBoardWaitTime__Execute(WarBoardWaitTime_o *
   int32_t v4; // w2
   const MethodInfo *v5; // x3
 
-  if ( (byte_4C40C69 & 1) == 0 )
+  if ( (byte_4C54A06 & 1) == 0 )
   {
-    sub_1C37058(&WarBoardWaitTime__Execute_d__2_TypeInfo);
-    byte_4C40C69 = 1;
+    sub_1C3E564(&WarBoardWaitTime__Execute_d__2_TypeInfo);
+    byte_4C54A06 = 1;
   }
-  v3 = sub_1C372A4(WarBoardWaitTime__Execute_d__2_TypeInfo);
+  v3 = sub_1C3E7B0(WarBoardWaitTime__Execute_d__2_TypeInfo);
   System_Object___ctor((Il2CppObject *)v3, 0);
   *(_DWORD *)(v3 + 16) = 0;
   *(_QWORD *)(v3 + 32) = this;
-  sub_1C36FFC((CGThumbnailListItem_o *)(v3 + 32), (int32_t)this, v4, v5);
+  sub_1C3E508((CGThumbnailListItem_o *)(v3 + 32), (int32_t)this, v4, v5);
   return (System_Collections_IEnumerator_o *)v3;
 }
 
@@ -62,7 +62,7 @@ bool WarBoardWaitTime__Execute_d__2__MoveNext(WarBoardWaitTime__Execute_d__2_o *
       goto LABEL_7;
     }
 LABEL_10:
-    sub_1C372B4(this);
+    sub_1C3E7C0(this, method);
   }
   espTime_5__2 = this->fields._espTime_5__2;
   this->fields.__1__state = -1;
@@ -75,7 +75,7 @@ LABEL_7:
   {
     this->fields.__2__current = 0;
     p__2__current = &this->fields.__2__current;
-    sub_1C36FFC((CGThumbnailListItem_o *)p__2__current, 0, v2, v3);
+    sub_1C3E508((CGThumbnailListItem_o *)p__2__current, 0, v2, v3);
     result = 1;
     *((_DWORD *)p__2__current - 2) = 1;
     return result;
@@ -100,11 +100,11 @@ void __noreturn WarBoardWaitTime__Execute_d__2__System_Collections_IEnumerator_R
   System_NotSupportedException_o *v3; // x19
   __int64 v4; // x0
 
-  v2 = sub_1C3706C(&System_NotSupportedException_TypeInfo);
-  v3 = (System_NotSupportedException_o *)sub_1C372A4(v2);
+  v2 = sub_1C3E578(&System_NotSupportedException_TypeInfo);
+  v3 = (System_NotSupportedException_o *)sub_1C3E7B0(v2);
   System_NotSupportedException___ctor(v3, 0);
-  v4 = sub_1C3706C(&Method_WarBoardWaitTime__Execute_d__2_System_Collections_IEnumerator_Reset__);
-  sub_1C37180(v3, v4);
+  v4 = sub_1C3E578(&Method_WarBoardWaitTime__Execute_d__2_System_Collections_IEnumerator_Reset__);
+  sub_1C3E68C(v3, v4);
 }
 
 

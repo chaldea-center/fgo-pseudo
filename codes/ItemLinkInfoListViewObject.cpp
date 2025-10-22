@@ -11,19 +11,19 @@ void ItemLinkInfoListViewObject__Awake(ItemLinkInfoListViewObject_o *this, const
   int32_t v5; // w2
   const MethodInfo *v6; // x3
 
-  if ( (byte_4C45816 & 1) == 0 )
+  if ( (byte_4C595F3 & 1) == 0 )
   {
-    sub_1C37058(&Method_UnityEngine_GameObject_GetComponent_ItemLinkInfoListViewItemDraw___);
-    byte_4C45816 = 1;
+    sub_1C3E564(&Method_UnityEngine_GameObject_GetComponent_ItemLinkInfoListViewItemDraw___);
+    byte_4C595F3 = 1;
   }
   dispObject = this->fields.dispObject;
   if ( !dispObject )
-    sub_1C372B4(0);
+    sub_1C3E7C0(0, method);
   Component_object = UnityEngine_GameObject__GetComponent_object_(
                        dispObject,
-                       (const MethodInfo_313F1D8 *)Method_UnityEngine_GameObject_GetComponent_ItemLinkInfoListViewItemDraw___);
+                       (const MethodInfo_31510CC *)Method_UnityEngine_GameObject_GetComponent_ItemLinkInfoListViewItemDraw___);
   this->fields.itemDraw = (struct ItemLinkInfoListViewItemDraw_o *)Component_object;
-  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.itemDraw, (int32_t)Component_object, v5, v6);
+  sub_1C3E508((CGThumbnailListItem_o *)&this->fields.itemDraw, (int32_t)Component_object, v5, v6);
 }
 
 
@@ -33,10 +33,10 @@ void ItemLinkInfoListViewObject__DeleteCallback(ItemLinkInfoListViewObject_o *th
   const MethodInfo *v4; // x1
   ItemLinkInfoListViewItemDraw_o *v5; // x0
 
-  if ( (byte_4C4581A & 1) == 0 )
+  if ( (byte_4C595F7 & 1) == 0 )
   {
-    sub_1C37058(&UnityEngine_Object_TypeInfo);
-    byte_4C4581A = 1;
+    sub_1C3E564(&UnityEngine_Object_TypeInfo);
+    byte_4C595F7 = 1;
   }
   itemDraw = (UnityEngine_Object_o *)this->fields.itemDraw;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -45,7 +45,7 @@ void ItemLinkInfoListViewObject__DeleteCallback(ItemLinkInfoListViewObject_o *th
   {
     v5 = this->fields.itemDraw;
     if ( !v5 )
-      sub_1C372B4(0);
+      sub_1C3E7C0(0, v4);
     ItemLinkInfoListViewItemDraw__DeleteCallback(v5, v4);
   }
 }
@@ -58,11 +58,11 @@ float ItemLinkInfoListViewObject__GetHeight(ItemLinkInfoListViewObject_o *this, 
   ItemLinkInfoListViewItemDraw_o *v5; // x0
   ItemLinkInfoListViewItemDraw_c *v7; // x0
 
-  if ( (byte_4C45819 & 1) == 0 )
+  if ( (byte_4C595F6 & 1) == 0 )
   {
-    sub_1C37058(&ItemLinkInfoListViewItemDraw_TypeInfo);
-    sub_1C37058(&UnityEngine_Object_TypeInfo);
-    byte_4C45819 = 1;
+    sub_1C3E564(&ItemLinkInfoListViewItemDraw_TypeInfo);
+    sub_1C3E564(&UnityEngine_Object_TypeInfo);
+    byte_4C595F6 = 1;
   }
   itemDraw = (UnityEngine_Object_o *)this->fields.itemDraw;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -71,7 +71,7 @@ float ItemLinkInfoListViewObject__GetHeight(ItemLinkInfoListViewObject_o *this, 
   {
     v5 = this->fields.itemDraw;
     if ( !v5 )
-      sub_1C372B4(0);
+      sub_1C3E7C0(0, v4);
     return ItemLinkInfoListViewItemDraw__GetHeight(v5, v4);
   }
   else
@@ -96,7 +96,7 @@ void ItemLinkInfoListViewObject__SetItem(
   const MethodInfo *v5; // x1
 
   this->fields.linkItem = item;
-  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.linkItem, (int32_t)item, (int32_t)method, v3);
+  sub_1C3E508((CGThumbnailListItem_o *)&this->fields.linkItem, (int32_t)item, (int32_t)method, v3);
   ItemLinkInfoListViewObject__SetupDisp(this, v5);
 }
 
@@ -107,22 +107,23 @@ void ItemLinkInfoListViewObject__SetVisible(
         const MethodInfo *method)
 {
   UnityEngine_Object_o *dispObject; // x21
-  UnityEngine_GameObject_o *v6; // x0
+  __int64 v6; // x1
+  UnityEngine_GameObject_o *v7; // x0
 
-  if ( (byte_4C45818 & 1) == 0 )
+  if ( (byte_4C595F5 & 1) == 0 )
   {
-    sub_1C37058(&UnityEngine_Object_TypeInfo);
-    byte_4C45818 = 1;
+    sub_1C3E564(&UnityEngine_Object_TypeInfo);
+    byte_4C595F5 = 1;
   }
   dispObject = (UnityEngine_Object_o *)this->fields.dispObject;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   if ( UnityEngine_Object__op_Inequality(dispObject, 0, 0) )
   {
-    v6 = this->fields.dispObject;
-    if ( !v6 )
-      sub_1C372B4(0);
-    UnityEngine_GameObject__SetActive(v6, isVisible, 0);
+    v7 = this->fields.dispObject;
+    if ( !v7 )
+      sub_1C3E7C0(0, v6);
+    UnityEngine_GameObject__SetActive(v7, isVisible, 0);
   }
 }
 
@@ -132,12 +133,13 @@ void ItemLinkInfoListViewObject__SetupDisp(ItemLinkInfoListViewObject_o *this, c
   const MethodInfo *v2; // x2
   struct ItemLinkInfoListViewItem_o *linkItem; // x20
   UnityEngine_Object_o *itemDraw; // x21
-  struct ItemLinkInfoListViewItemDraw_o *v6; // x0
+  __int64 v6; // x1
+  struct ItemLinkInfoListViewItemDraw_o *v7; // x0
 
-  if ( (byte_4C45817 & 1) == 0 )
+  if ( (byte_4C595F4 & 1) == 0 )
   {
-    sub_1C37058(&UnityEngine_Object_TypeInfo);
-    byte_4C45817 = 1;
+    sub_1C3E564(&UnityEngine_Object_TypeInfo);
+    byte_4C595F4 = 1;
   }
   linkItem = this->fields.linkItem;
   ItemLinkInfoListViewObject__SetVisible(this, linkItem != 0, v2);
@@ -146,12 +148,12 @@ void ItemLinkInfoListViewObject__SetupDisp(ItemLinkInfoListViewObject_o *this, c
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   if ( UnityEngine_Object__op_Inequality(itemDraw, 0, 0) )
   {
-    v6 = this->fields.itemDraw;
-    if ( !v6 )
-      sub_1C372B4(0);
-    ((void (__fastcall *)(struct ItemLinkInfoListViewItemDraw_o *, struct ItemLinkInfoListViewItem_o *, const MethodInfo *))v6->klass->vtable._4_SetItem.methodPtr)(
-      v6,
+    v7 = this->fields.itemDraw;
+    if ( !v7 )
+      sub_1C3E7C0(0, v6);
+    ((void (__fastcall *)(struct ItemLinkInfoListViewItemDraw_o *, struct ItemLinkInfoListViewItem_o *, const MethodInfo *))v7->klass->vtable._4_SetItem.methodPtr)(
+      v7,
       linkItem,
-      v6->klass->vtable._4_SetItem.method);
+      v7->klass->vtable._4_SetItem.method);
   }
 }

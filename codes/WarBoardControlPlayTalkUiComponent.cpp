@@ -23,6 +23,7 @@ void WarBoardControlPlayTalkUiComponent__SetDispImmediately(
 }
 
 
+// local variable allocation has failed, the output may be wrong!
 void WarBoardControlPlayTalkUiComponent__SetDispLocal(
         WarBoardControlPlayTalkUiComponent_o *this,
         bool isDisp,
@@ -52,13 +53,13 @@ void WarBoardControlPlayTalkUiComponent__SetDispLocal(
   const MethodInfo *v26; // x3
 
   v7 = this;
-  if ( (byte_4C40823 & 1) == 0 )
+  if ( (byte_4C545C0 & 1) == 0 )
   {
-    sub_1C37058(&Method_BasicHelper_GetOrAddComponent_UIWidget___);
-    sub_1C37058(&bool___TypeInfo);
-    sub_1C37058(&Method_UnityEngine_GameObject_GetComponent_ParticleSystem___);
-    this = (WarBoardControlPlayTalkUiComponent_o *)sub_1C37058(&UnityEngine_Object_TypeInfo);
-    byte_4C40823 = 1;
+    sub_1C3E564(&Method_BasicHelper_GetOrAddComponent_UIWidget___);
+    sub_1C3E564(&bool___TypeInfo);
+    sub_1C3E564(&Method_UnityEngine_GameObject_GetComponent_ParticleSystem___);
+    this = (WarBoardControlPlayTalkUiComponent_o *)sub_1C3E564(&UnityEngine_Object_TypeInfo);
+    byte_4C545C0 = 1;
   }
   if ( isDisp || v7->fields.activeStates )
   {
@@ -69,10 +70,10 @@ void WarBoardControlPlayTalkUiComponent__SetDispLocal(
     controlUiObjects = v7->fields.controlUiObjects;
     if ( !controlUiObjects )
 LABEL_28:
-      sub_1C372B4(this);
-    v24 = sub_1C37100(bool___TypeInfo, LODWORD(controlUiObjects->max_length));
+      sub_1C3E7C0(this, isDisp);
+    v24 = sub_1C3E60C(bool___TypeInfo, LODWORD(controlUiObjects->max_length));
     v7->fields.activeStates = (struct System_Boolean_array *)v24;
-    sub_1C36FFC((CGThumbnailListItem_o *)&v7->fields.activeStates, v24, v25, v26);
+    sub_1C3E508((CGThumbnailListItem_o *)&v7->fields.activeStates, v24, v25, v26);
     v8 = 1;
   }
   v9 = v7->fields.controlUiObjects;
@@ -97,7 +98,7 @@ LABEL_28:
       goto LABEL_28;
     Component_object = UnityEngine_GameObject__GetComponent_object_(
                          (UnityEngine_GameObject_o *)v14[4],
-                         (const MethodInfo_313F1D8 *)Method_UnityEngine_GameObject_GetComponent_ParticleSystem___);
+                         (const MethodInfo_31510CC *)Method_UnityEngine_GameObject_GetComponent_ParticleSystem___);
     if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
     this = (WarBoardControlPlayTalkUiComponent_o *)UnityEngine_Object__op_Inequality(
@@ -129,7 +130,7 @@ LABEL_28:
             goto LABEL_28;
           if ( (unsigned int)v10 >= LODWORD(v21->max_length) )
 LABEL_34:
-            sub_1C372BC(this);
+            sub_1C3E7C8(this, isDisp);
           v21->m_Items[v10] = (unsigned __int8)this & 1;
         }
         v20 = v15;
@@ -141,7 +142,7 @@ LABEL_27:
     transform = (UnityEngine_Component_o *)UnityEngine_GameObject__get_transform(v15, 0);
     BasicHelper__GetOrAddComponent_object_(
       transform,
-      (const MethodInfo_30D535C *)Method_BasicHelper_GetOrAddComponent_UIWidget___);
+      (const MethodInfo_30E7174 *)Method_BasicHelper_GetOrAddComponent_UIWidget___);
     this = (WarBoardControlPlayTalkUiComponent_o *)TweenAlpha__Begin(v15, time, v12, 0);
     v9 = v7->fields.controlUiObjects;
     ++v10;
@@ -151,6 +152,6 @@ LABEL_27:
   if ( isDisp )
   {
     *p_activeStates = 0;
-    sub_1C36FFC((CGThumbnailListItem_o *)&v7->fields.activeStates, 0, (int32_t)method, v4);
+    sub_1C3E508((CGThumbnailListItem_o *)&v7->fields.activeStates, 0, (int32_t)method, v4);
   }
 }

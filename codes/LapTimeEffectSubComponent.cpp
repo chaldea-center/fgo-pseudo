@@ -18,14 +18,14 @@ void LapTimeEffectSubComponent__RecvParam(
   void *monitor; // x8
   int64_t v12; // x20
 
-  if ( (byte_4C4468C & 1) == 0 )
+  if ( (byte_4C58457 & 1) == 0 )
   {
-    sub_1C37058(&LocalizationManager_TypeInfo);
-    sub_1C37058(&RaceResultEffectParam_TypeInfo);
-    sub_1C37058(&StringLiteral_10949/*"RACE_TARGET_GOAL_RANK"*/);
-    sub_1C37058(&StringLiteral_1/*""*/);
-    sub_1C37058(&StringLiteral_5671/*"EVENT_RACE_RESULT_TIME_NONE"*/);
-    byte_4C4468C = 1;
+    sub_1C3E564(&LocalizationManager_TypeInfo);
+    sub_1C3E564(&RaceResultEffectParam_TypeInfo);
+    sub_1C3E564(&StringLiteral_10951/*"RACE_TARGET_GOAL_RANK"*/);
+    sub_1C3E564(&StringLiteral_1/*""*/);
+    sub_1C3E564(&StringLiteral_5671/*"EVENT_RACE_RESULT_TIME_NONE"*/);
+    byte_4C58457 = 1;
   }
   if ( param
     && (naturalAligment = RaceResultEffectParam_TypeInfo->_2.naturalAligment,
@@ -35,14 +35,14 @@ void LapTimeEffectSubComponent__RecvParam(
     && v8[6] >= 5 )
   {
     v9 = *((_QWORD *)v8 + 7);
-    Value = (System_String_o *)ConstantMaster__getValue((System_String_o *)StringLiteral_10949/*"RACE_TARGET_GOAL_RANK"*/, 0);
+    Value = (System_String_o *)ConstantMaster__getValue((System_String_o *)StringLiteral_10951/*"RACE_TARGET_GOAL_RANK"*/, 0);
     if ( v9 <= (int)Value )
     {
       monitor = param[1].monitor;
       if ( !monitor )
         goto LABEL_22;
       if ( *((_DWORD *)monitor + 6) <= 4u )
-        sub_1C372BC(Value);
+        sub_1C3E7C8(Value, param);
       v12 = *((_QWORD *)monitor + 8);
       label = this->fields.label;
       if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
@@ -50,7 +50,7 @@ void LapTimeEffectSubComponent__RecvParam(
       Value = LocalizationManager__GetLapTime(v12, 0);
       if ( !label )
 LABEL_22:
-        sub_1C372B4(Value);
+        sub_1C3E7C0(Value, param);
     }
     else
     {

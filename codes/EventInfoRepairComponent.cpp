@@ -20,7 +20,7 @@ void EventInfoRepairComponent__Initialization(
 
   EventInfoUIBase__Initialization((EventInfoUIBase_o *)this, entity, 0);
   this->fields.eventUiEntity = entity;
-  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.eventUiEntity, (int32_t)entity, v5, v6);
+  sub_1C3E508((CGThumbnailListItem_o *)&this->fields.eventUiEntity, (int32_t)entity, v5, v6);
 }
 
 
@@ -36,19 +36,20 @@ void EventInfoRepairComponent__OnClick(EventInfoRepairComponent_o *this, const M
   System_Reflection_MethodBase_o *v4; // x0
   UnityEngine_Object_o *eventInfoRepairDialog; // x20
   _BOOL8 v6; // x0
+  __int64 v7; // x1
   struct EventUiEntity_o *eventUiEntity; // x8
   int32_t eventId; // w21
-  EventInfoOpenRepairDialogComponent_o *v9; // x20
-  System_Action_o *v10; // x22
-  const MethodInfo *v11; // x3
+  EventInfoOpenRepairDialogComponent_o *v10; // x20
+  System_Action_o *v11; // x22
+  const MethodInfo *v12; // x3
 
-  if ( (byte_4C44547 & 1) == 0 )
+  if ( (byte_4C58310 & 1) == 0 )
   {
-    sub_1C37058(&System_Action_TypeInfo);
-    sub_1C37058(&Method_EventInfoRepairComponent_OnClick__);
-    sub_1C37058(&Method_EventInfoRepairComponent__OnClick_b__7_0__);
-    sub_1C37058(&UnityEngine_Object_TypeInfo);
-    byte_4C44547 = 1;
+    sub_1C3E564(&System_Action_TypeInfo);
+    sub_1C3E564(&Method_EventInfoRepairComponent_OnClick__);
+    sub_1C3E564(&Method_EventInfoRepairComponent__OnClick_b__7_0__);
+    sub_1C3E564(&UnityEngine_Object_TypeInfo);
+    byte_4C58310 = 1;
   }
   if ( (((__int64 (__fastcall *)(EventInfoRepairComponent_o *, const MethodInfo *))this->klass->vtable._17_IsBusy.methodPtr)(
           this,
@@ -58,8 +59,8 @@ void EventInfoRepairComponent__OnClick(EventInfoRepairComponent_o *this, const M
     this->fields.isBusy = 1;
     v3 = Method_EventInfoRepairComponent_OnClick__;
     if ( (*((_BYTE *)Method_EventInfoRepairComponent_OnClick__ + 83) & 2) != 0 )
-      v3 = (_QWORD *)sub_1C37070(Method_EventInfoRepairComponent_OnClick__);
-    v4 = (System_Reflection_MethodBase_o *)sub_1C3703C(v3, v3[4]);
+      v3 = (_QWORD *)sub_1C3E57C(Method_EventInfoRepairComponent_OnClick__);
+    v4 = (System_Reflection_MethodBase_o *)sub_1C3E548(v3, v3[4]);
     OverwriteAssetSoundName__PlaySystemSe(v4, 0, 0, 0);
     eventInfoRepairDialog = (UnityEngine_Object_o *)this->fields.eventInfoRepairDialog;
     if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -70,14 +71,14 @@ void EventInfoRepairComponent__OnClick(EventInfoRepairComponent_o *this, const M
       eventUiEntity = this->fields.eventUiEntity;
       if ( !eventUiEntity
         || (eventId = eventUiEntity->fields.eventId,
-            v9 = this->fields.eventInfoRepairDialog,
-            v10 = (System_Action_o *)sub_1C372A4(System_Action_TypeInfo),
-            System_Action___ctor(v10, (Il2CppObject *)this, Method_EventInfoRepairComponent__OnClick_b__7_0__, 0),
-            !v9) )
+            v10 = this->fields.eventInfoRepairDialog,
+            v11 = (System_Action_o *)sub_1C3E7B0(System_Action_TypeInfo),
+            System_Action___ctor(v11, (Il2CppObject *)this, Method_EventInfoRepairComponent__OnClick_b__7_0__, 0),
+            !v10) )
       {
-        sub_1C372B4(v6);
+        sub_1C3E7C0(v6, v7);
       }
-      EventInfoOpenRepairDialogComponent__OpenEventInfoRepairDialog(v9, eventId, v10, v11);
+      EventInfoOpenRepairDialogComponent__OpenEventInfoRepairDialog(v10, eventId, v11, v12);
     }
   }
 }
@@ -85,42 +86,43 @@ void EventInfoRepairComponent__OnClick(EventInfoRepairComponent_o *this, const M
 
 void EventInfoRepairComponent__Redisplay(EventInfoRepairComponent_o *this, const MethodInfo *method)
 {
-  System_Object_array *ComponentsInChildren_object__51245264; // x0
+  System_Object_array *ComponentsInChildren_object__51318504; // x0
+  __int64 v4; // x1
   int max_length; // w8
-  System_Object_array *v5; // x19
-  unsigned int v6; // w20
+  System_Object_array *v6; // x19
+  unsigned int v7; // w20
 
-  if ( (byte_4C44546 & 1) == 0 )
+  if ( (byte_4C5830F & 1) == 0 )
   {
-    sub_1C37058(&Method_UnityEngine_Component_GetComponentsInChildren_EventInfoAssistSkillIconComponent___);
-    byte_4C44546 = 1;
+    sub_1C3E564(&Method_UnityEngine_Component_GetComponentsInChildren_EventInfoAssistSkillIconComponent___);
+    byte_4C5830F = 1;
   }
-  ComponentsInChildren_object__51245264 = UnityEngine_Component__GetComponentsInChildren_object__51245264(
+  ComponentsInChildren_object__51318504 = UnityEngine_Component__GetComponentsInChildren_object__51318504(
                                             (UnityEngine_Component_o *)this,
-                                            (const MethodInfo_30DF0D0 *)Method_UnityEngine_Component_GetComponentsInChildren_EventInfoAssistSkillIconComponent___);
-  if ( !ComponentsInChildren_object__51245264 )
+                                            (const MethodInfo_30F0EE8 *)Method_UnityEngine_Component_GetComponentsInChildren_EventInfoAssistSkillIconComponent___);
+  if ( !ComponentsInChildren_object__51318504 )
     goto LABEL_11;
-  max_length = ComponentsInChildren_object__51245264->max_length;
-  v5 = ComponentsInChildren_object__51245264;
+  max_length = ComponentsInChildren_object__51318504->max_length;
+  v6 = ComponentsInChildren_object__51318504;
   if ( max_length >= 1 )
   {
-    v6 = 0;
+    v7 = 0;
     while ( 1 )
     {
-      if ( v6 >= max_length )
-        sub_1C372BC(ComponentsInChildren_object__51245264);
-      ComponentsInChildren_object__51245264 = (System_Object_array *)v5->m_Items[v6];
-      if ( !ComponentsInChildren_object__51245264 )
+      if ( v7 >= max_length )
+        sub_1C3E7C8(ComponentsInChildren_object__51318504, v4);
+      ComponentsInChildren_object__51318504 = (System_Object_array *)v6->m_Items[v7];
+      if ( !ComponentsInChildren_object__51318504 )
         break;
       EventInfoAssistSkillIconComponent__Redisplay(
-        (EventInfoAssistSkillIconComponent_o *)ComponentsInChildren_object__51245264,
+        (EventInfoAssistSkillIconComponent_o *)ComponentsInChildren_object__51318504,
         0);
-      max_length = v5->max_length;
-      if ( (int)++v6 >= max_length )
+      max_length = v6->max_length;
+      if ( (int)++v7 >= max_length )
         return;
     }
 LABEL_11:
-    sub_1C372B4(ComponentsInChildren_object__51245264);
+    sub_1C3E7C0(ComponentsInChildren_object__51318504, v4);
   }
 }
 

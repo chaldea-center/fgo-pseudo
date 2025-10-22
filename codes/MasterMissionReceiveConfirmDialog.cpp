@@ -1,9 +1,9 @@
 void MasterMissionReceiveConfirmDialog___ctor(MasterMissionReceiveConfirmDialog_o *this, const MethodInfo *method)
 {
-  if ( (byte_4C46120 & 1) == 0 )
+  if ( (byte_4C59F09 & 1) == 0 )
   {
-    sub_1C37058(&BaseDialog_TypeInfo);
-    byte_4C46120 = 1;
+    sub_1C3E564(&BaseDialog_TypeInfo);
+    byte_4C59F09 = 1;
   }
   this->fields.state = 2;
   if ( !BaseDialog_TypeInfo->_2.cctor_finished )
@@ -22,15 +22,15 @@ void MasterMissionReceiveConfirmDialog__Init(MasterMissionReceiveConfirmDialog_o
   UILabel_o *cancelLabel; // x20
   UILabel_o *decideLabel; // x20
 
-  if ( (byte_4C4611C & 1) == 0 )
+  if ( (byte_4C59F05 & 1) == 0 )
   {
-    sub_1C37058(&LocalizationManager_TypeInfo);
-    sub_1C37058(&StringLiteral_8558/*"MASTER_MISSION_RECEIVE_CONFIRM_CANCEL"*/);
-    sub_1C37058(&StringLiteral_8561/*"MASTER_MISSION_RECEIVE_CONFIRM_DLG_SUB_MSG"*/);
-    sub_1C37058(&StringLiteral_8560/*"MASTER_MISSION_RECEIVE_CONFIRM_DLG_MSG"*/);
-    sub_1C37058(&StringLiteral_8559/*"MASTER_MISSION_RECEIVE_CONFIRM_DECIDE"*/);
-    sub_1C37058(&StringLiteral_8562/*"MASTER_MISSION_RECEIVE_CONFIRM_DLG_TITLE"*/);
-    byte_4C4611C = 1;
+    sub_1C3E564(&LocalizationManager_TypeInfo);
+    sub_1C3E564(&StringLiteral_8558/*"MASTER_MISSION_RECEIVE_CONFIRM_CANCEL"*/);
+    sub_1C3E564(&StringLiteral_8561/*"MASTER_MISSION_RECEIVE_CONFIRM_DLG_SUB_MSG"*/);
+    sub_1C3E564(&StringLiteral_8560/*"MASTER_MISSION_RECEIVE_CONFIRM_DLG_MSG"*/);
+    sub_1C3E564(&StringLiteral_8559/*"MASTER_MISSION_RECEIVE_CONFIRM_DECIDE"*/);
+    sub_1C3E564(&StringLiteral_8562/*"MASTER_MISSION_RECEIVE_CONFIRM_DLG_TITLE"*/);
+    byte_4C59F05 = 1;
   }
   BaseDialog__Init((BaseDialog_o *)this, 0);
   receiveConfirmListViewManager = this->fields.receiveConfirmListViewManager;
@@ -72,7 +72,7 @@ void MasterMissionReceiveConfirmDialog__Init(MasterMissionReceiveConfirmDialog_o
         !decideLabel) )
   {
 LABEL_12:
-    sub_1C372B4(receiveConfirmListViewManager);
+    sub_1C3E7C0(receiveConfirmListViewManager, v3);
   }
   UILabel__set_text(decideLabel, (System_String_o *)receiveConfirmListViewManager, 0);
   this->fields.state = 2;
@@ -87,22 +87,22 @@ void MasterMissionReceiveConfirmDialog__OnClickCancelButton(
   System_Reflection_MethodBase_o *v4; // x0
   System_Action_o *v5; // x20
 
-  if ( (byte_4C4611D & 1) == 0 )
+  if ( (byte_4C59F06 & 1) == 0 )
   {
-    sub_1C37058(&System_Action_TypeInfo);
-    sub_1C37058(&Method_MasterMissionReceiveConfirmDialog_OnClickCancelButton__);
-    sub_1C37058(&Method_MasterMissionReceiveConfirmDialog__OnClickCancelButton_b__12_0__);
-    byte_4C4611D = 1;
+    sub_1C3E564(&System_Action_TypeInfo);
+    sub_1C3E564(&Method_MasterMissionReceiveConfirmDialog_OnClickCancelButton__);
+    sub_1C3E564(&Method_MasterMissionReceiveConfirmDialog__OnClickCancelButton_b__12_0__);
+    byte_4C59F06 = 1;
   }
   if ( !this->fields.state )
   {
     v3 = Method_MasterMissionReceiveConfirmDialog_OnClickCancelButton__;
     if ( (*((_BYTE *)Method_MasterMissionReceiveConfirmDialog_OnClickCancelButton__ + 83) & 2) != 0 )
-      v3 = (_QWORD *)sub_1C37070(Method_MasterMissionReceiveConfirmDialog_OnClickCancelButton__);
-    v4 = (System_Reflection_MethodBase_o *)sub_1C3703C(v3, v3[4]);
+      v3 = (_QWORD *)sub_1C3E57C(Method_MasterMissionReceiveConfirmDialog_OnClickCancelButton__);
+    v4 = (System_Reflection_MethodBase_o *)sub_1C3E548(v3, v3[4]);
     OverwriteAssetSoundName__PlaySystemSe(v4, 1, 0, 0);
     this->fields.state = 2;
-    v5 = (System_Action_o *)sub_1C372A4(System_Action_TypeInfo);
+    v5 = (System_Action_o *)sub_1C3E7B0(System_Action_TypeInfo);
     System_Action___ctor(
       v5,
       (Il2CppObject *)this,
@@ -121,22 +121,22 @@ void MasterMissionReceiveConfirmDialog__OnClickDecideButton(
   System_Reflection_MethodBase_o *v4; // x0
   System_Action_o *v5; // x20
 
-  if ( (byte_4C4611E & 1) == 0 )
+  if ( (byte_4C59F07 & 1) == 0 )
   {
-    sub_1C37058(&System_Action_TypeInfo);
-    sub_1C37058(&Method_MasterMissionReceiveConfirmDialog_OnClickDecideButton__);
-    sub_1C37058(&Method_MasterMissionReceiveConfirmDialog__OnClickDecideButton_b__13_0__);
-    byte_4C4611E = 1;
+    sub_1C3E564(&System_Action_TypeInfo);
+    sub_1C3E564(&Method_MasterMissionReceiveConfirmDialog_OnClickDecideButton__);
+    sub_1C3E564(&Method_MasterMissionReceiveConfirmDialog__OnClickDecideButton_b__13_0__);
+    byte_4C59F07 = 1;
   }
   if ( !this->fields.state )
   {
     v3 = Method_MasterMissionReceiveConfirmDialog_OnClickDecideButton__;
     if ( (*((_BYTE *)Method_MasterMissionReceiveConfirmDialog_OnClickDecideButton__ + 83) & 2) != 0 )
-      v3 = (_QWORD *)sub_1C37070(Method_MasterMissionReceiveConfirmDialog_OnClickDecideButton__);
-    v4 = (System_Reflection_MethodBase_o *)sub_1C3703C(v3, v3[4]);
+      v3 = (_QWORD *)sub_1C3E57C(Method_MasterMissionReceiveConfirmDialog_OnClickDecideButton__);
+    v4 = (System_Reflection_MethodBase_o *)sub_1C3E548(v3, v3[4]);
     OverwriteAssetSoundName__PlaySystemSe(v4, 8, 0, 0);
     this->fields.state = 2;
-    v5 = (System_Action_o *)sub_1C372A4(System_Action_TypeInfo);
+    v5 = (System_Action_o *)sub_1C3E7B0(System_Action_TypeInfo);
     System_Action___ctor(
       v5,
       (Il2CppObject *)this,
@@ -156,8 +156,9 @@ void MasterMissionReceiveConfirmDialog__Open(
   MasterMissionReceiveConfirmDialog_o *v6; // x21
   int32_t v7; // w2
   const MethodInfo *v8; // x3
-  const MethodInfo *v9; // x2
-  MasterMissionReceiveConfirmListViewManager_o *v10; // x0
+  __int64 v9; // x1
+  const MethodInfo *v10; // x2
+  MasterMissionReceiveConfirmListViewManager_o *v11; // x0
 
   v6 = this;
   ((void (__fastcall *)(MasterMissionReceiveConfirmDialog_o *, const MethodInfo *, MasterMissionReceiveConfirmDialog_ClickDelegate_o *, const MethodInfo *))this->klass->vtable._7_Init.methodPtr)(
@@ -168,12 +169,12 @@ void MasterMissionReceiveConfirmDialog__Open(
   BaseDialog__Open((BaseDialog_o *)v6, 0, 0, 0, 0);
   v6->fields.clickFunc = callback;
   v6 = (MasterMissionReceiveConfirmDialog_o *)((char *)v6 + 152);
-  sub_1C36FFC((CGThumbnailListItem_o *)v6, (int32_t)callback, v7, v8);
-  v10 = *(MasterMissionReceiveConfirmListViewManager_o **)&v6[-1].fields.state;
+  sub_1C3E508((CGThumbnailListItem_o *)v6, (int32_t)callback, v7, v8);
+  v11 = *(MasterMissionReceiveConfirmListViewManager_o **)&v6[-1].fields.state;
   LODWORD(v6->monitor) = 0;
-  if ( !v10 )
-    sub_1C372B4(0);
-  MasterMissionReceiveConfirmListViewManager__CreateList(v10, receiveItems, v9);
+  if ( !v11 )
+    sub_1C3E7C0(0, v9);
+  MasterMissionReceiveConfirmListViewManager__CreateList(v11, receiveItems, v10);
 }
 
 
@@ -217,12 +218,12 @@ System_String_o *MasterMissionReceiveConfirmDialog__get_closeBtnPath(
         MasterMissionReceiveConfirmDialog_o *this,
         const MethodInfo *method)
 {
-  if ( (byte_4C4611F & 1) == 0 )
+  if ( (byte_4C59F08 & 1) == 0 )
   {
-    sub_1C37058(&StringLiteral_15641/*"Window/CancelButton"*/);
-    byte_4C4611F = 1;
+    sub_1C3E564(&StringLiteral_15651/*"Window/CancelButton"*/);
+    byte_4C59F08 = 1;
   }
-  return (System_String_o *)StringLiteral_15641/*"Window/CancelButton"*/;
+  return (System_String_o *)StringLiteral_15651/*"Window/CancelButton"*/;
 }
 
 
@@ -241,15 +242,15 @@ void MasterMissionReceiveConfirmDialog_ClickDelegate___ctor(
   this->fields.method = method;
   this->fields.method_ptr = v4;
   this->fields.m_target = object;
-  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.m_target, (int32_t)object, method, a4);
+  sub_1C3E508((CGThumbnailListItem_o *)&this->fields.m_target, (int32_t)object, method, a4);
   v8 = *(unsigned __int8 *)(method + 82);
   this->fields.method_code = (intptr_t)this;
-  if ( (sub_1C37118(method) & 1) == 0 )
+  if ( (sub_1C3E624(method) & 1) == 0 )
   {
     if ( !object )
     {
-      v10 = sub_1C372D0(0, "Delegate to an instance method cannot have null 'this'.");
-      sub_1C37180(v10, 0);
+      v10 = sub_1C3E7DC(0, "Delegate to an instance method cannot have null 'this'.");
+      sub_1C3E68C(v10, 0);
     }
     goto LABEL_5;
   }
@@ -261,9 +262,9 @@ LABEL_5:
     this->fields.method_code = (intptr_t)m_target;
     goto LABEL_6;
   }
-  this->fields.invoke_impl = (intptr_t)sub_1A7EB80;
+  this->fields.invoke_impl = (intptr_t)sub_1A85F1C;
 LABEL_6:
-  this->fields.extra_arg = (intptr_t)sub_1A7EB38;
+  this->fields.extra_arg = (intptr_t)sub_1A85ED4;
 }
 
 
@@ -281,14 +282,14 @@ System_IAsyncResult_o *MasterMissionReceiveConfirmDialog_ClickDelegate__BeginInv
   bool v13[4]; // [xsp+1Ch] [xbp-34h] BYREF
 
   v13[0] = isDecide;
-  if ( (byte_4C46121 & 1) == 0 )
+  if ( (byte_4C59F0A & 1) == 0 )
   {
-    sub_1C37058(&bool_TypeInfo);
-    byte_4C46121 = 1;
+    sub_1C3E564(&bool_TypeInfo);
+    byte_4C59F0A = 1;
   }
   v12[1] = 0;
   v12[0] = j_il2cpp_value_box_0(bool_TypeInfo, v13, callback, object, method, v5, v6, v7);
-  return (System_IAsyncResult_o *)sub_1C3700C(this, v12, callback, object);
+  return (System_IAsyncResult_o *)sub_1C3E518(this, v12, callback, object);
 }
 
 
@@ -297,7 +298,7 @@ void MasterMissionReceiveConfirmDialog_ClickDelegate__EndInvoke(
         System_IAsyncResult_o *result,
         const MethodInfo *method)
 {
-  sub_1C37010(result, 0, method);
+  sub_1C3E51C(result, 0, method);
 }
 
 

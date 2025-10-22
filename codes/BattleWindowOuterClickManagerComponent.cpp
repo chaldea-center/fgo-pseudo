@@ -12,31 +12,32 @@ void BattleWindowOuterClickManagerComponent__setOuterClickCallBack(
         const MethodInfo *method)
 {
   UnityEngine_Object_o *outerPanel; // x21
-  int32_t v6; // w2
-  const MethodInfo *v7; // x3
-  struct BattleWindowOuterClickComponent_o *v8; // x0
-  int32_t v9; // w2
-  const MethodInfo *v10; // x3
+  __int64 v6; // x1
+  int32_t v7; // w2
+  const MethodInfo *v8; // x3
+  struct BattleWindowOuterClickComponent_o *v9; // x0
+  int32_t v10; // w2
+  const MethodInfo *v11; // x3
 
-  if ( (byte_4C4672E & 1) == 0 )
+  if ( (byte_4C5A525 & 1) == 0 )
   {
-    sub_1C37058(&UnityEngine_Object_TypeInfo);
-    byte_4C4672E = 1;
+    sub_1C3E564(&UnityEngine_Object_TypeInfo);
+    byte_4C5A525 = 1;
   }
   outerPanel = (UnityEngine_Object_o *)this->fields.outerPanel;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   if ( UnityEngine_Object__op_Inequality(outerPanel, 0, 0) )
   {
-    v8 = this->fields.outerPanel;
-    if ( !v8
-      || (v8->fields.clickCallBack = callBack,
-          sub_1C36FFC((CGThumbnailListItem_o *)&v8->fields.clickCallBack, (int32_t)callBack, v6, v7),
-          (v8 = this->fields.outerPanel) == 0) )
+    v9 = this->fields.outerPanel;
+    if ( !v9
+      || (v9->fields.clickCallBack = callBack,
+          sub_1C3E508((CGThumbnailListItem_o *)&v9->fields.clickCallBack, (int32_t)callBack, v7, v8),
+          (v9 = this->fields.outerPanel) == 0) )
     {
-      sub_1C372B4(v8);
+      sub_1C3E7C0(v9, v6);
     }
-    v8->fields.targetWindow = (struct BattleWindowComponent_o *)this;
-    sub_1C36FFC((CGThumbnailListItem_o *)&v8->fields.targetWindow, (int32_t)this, v9, v10);
+    v9->fields.targetWindow = (struct BattleWindowComponent_o *)this;
+    sub_1C3E508((CGThumbnailListItem_o *)&v9->fields.targetWindow, (int32_t)this, v10, v11);
   }
 }

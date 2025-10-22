@@ -1,132 +1,138 @@
 void WarBoardActionTrendEntity___ctor(WarBoardActionTrendEntity_o *this, const MethodInfo *method)
 {
   __int64 v3; // x0
-  int32_t v4; // w2
-  const MethodInfo *v5; // x3
-  int32_t v6; // w2
-  const MethodInfo *v7; // x3
+  __int64 v4; // x1
+  int32_t v5; // w2
+  const MethodInfo *v6; // x3
+  __int64 v7; // x1
+  int32_t v8; // w2
+  const MethodInfo *v9; // x3
   struct System_Int32_array **p_actionTypeIds; // x19
 
-  if ( (byte_4C440FB & 1) == 0 )
+  if ( (byte_4C57EC3 & 1) == 0 )
   {
-    sub_1C37058(&Method_DataEntityBase_int___ctor__);
-    sub_1C37058(&int___TypeInfo);
-    byte_4C440FB = 1;
+    sub_1C3E564(&Method_DataEntityBase_int___ctor__);
+    sub_1C3E564(&int___TypeInfo);
+    byte_4C57EC3 = 1;
   }
   DataEntityBase_int____ctor(
     (DataEntityBase_int__o *)this,
-    (const MethodInfo_339EBBC *)Method_DataEntityBase_int___ctor__);
+    (const MethodInfo_33B0A74 *)Method_DataEntityBase_int___ctor__);
   this->fields.id = 0;
   this->fields.viewPoint = 0;
-  v3 = sub_1C37100(int___TypeInfo, 1);
+  v3 = sub_1C3E60C(int___TypeInfo, 1);
   if ( !v3 )
     goto LABEL_8;
+  v7 = v3;
   if ( !*(_DWORD *)(v3 + 24) )
     goto LABEL_9;
   *(_DWORD *)(v3 + 32) = 23;
   this->fields.conditionIds = (struct System_Int32_array *)v3;
-  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.conditionIds, v3, v4, v5);
+  sub_1C3E508((CGThumbnailListItem_o *)&this->fields.conditionIds, v3, v5, v6);
   this->fields.attackValue = 0;
-  v3 = sub_1C37100(int___TypeInfo, 1);
+  v3 = sub_1C3E60C(int___TypeInfo, 1);
   if ( !v3 )
 LABEL_8:
-    sub_1C372B4(v3);
+    sub_1C3E7C0(v3, v4);
+  v7 = v3;
   if ( !*(_DWORD *)(v3 + 24) )
 LABEL_9:
-    sub_1C372BC(v3);
+    sub_1C3E7C8(v3, v7);
   *(_DWORD *)(v3 + 32) = 1;
   this->fields.actionTypeIds = (struct System_Int32_array *)v3;
   p_actionTypeIds = &this->fields.actionTypeIds;
-  sub_1C36FFC((CGThumbnailListItem_o *)p_actionTypeIds, v3, v6, v7);
+  sub_1C3E508((CGThumbnailListItem_o *)p_actionTypeIds, v3, v8, v9);
   *((_DWORD *)p_actionTypeIds + 3) = 0;
 }
 
 
-void WarBoardActionTrendEntity___ctor_43299872(
+void WarBoardActionTrendEntity___ctor_43354588(
         WarBoardActionTrendEntity_o *this,
         WarBoardActionTrendEntity_o *cSrc,
         const MethodInfo *method)
 {
   __int64 v5; // x0
-  int32_t v6; // w2
-  const MethodInfo *v7; // x3
+  __int64 v6; // x1
+  int32_t v7; // w2
+  const MethodInfo *v8; // x3
   struct System_Int32_array *conditionIds; // x1
   struct System_Int32_array *actionTypeIds; // x1
   CGThumbnailListItem_o *p_actionTypeIds; // x20
-  int32_t v11; // w2
-  const MethodInfo *v12; // x3
+  int32_t v12; // w2
+  const MethodInfo *v13; // x3
 
-  if ( (byte_4C440FC & 1) == 0 )
+  if ( (byte_4C57EC4 & 1) == 0 )
   {
-    sub_1C37058(&Method_DataEntityBase_int___ctor__);
-    byte_4C440FC = 1;
+    sub_1C3E564(&Method_DataEntityBase_int___ctor__);
+    byte_4C57EC4 = 1;
   }
   DataEntityBase_int____ctor(
     (DataEntityBase_int__o *)this,
-    (const MethodInfo_339EBBC *)Method_DataEntityBase_int___ctor__);
+    (const MethodInfo_33B0A74 *)Method_DataEntityBase_int___ctor__);
   if ( !cSrc )
-    sub_1C372B4(v5);
+    sub_1C3E7C0(v5, v6);
   this->fields.id = cSrc->fields.id;
   conditionIds = cSrc->fields.conditionIds;
   this->fields.conditionIds = conditionIds;
-  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.conditionIds, (int32_t)conditionIds, v6, v7);
+  sub_1C3E508((CGThumbnailListItem_o *)&this->fields.conditionIds, (int32_t)conditionIds, v7, v8);
   this->fields.viewPoint = cSrc->fields.viewPoint;
   actionTypeIds = cSrc->fields.actionTypeIds;
   this->fields.actionTypeIds = actionTypeIds;
   p_actionTypeIds = (CGThumbnailListItem_o *)&this->fields.actionTypeIds;
-  sub_1C36FFC(p_actionTypeIds, (int32_t)actionTypeIds, v11, v12);
+  sub_1C3E508(p_actionTypeIds, (int32_t)actionTypeIds, v12, v13);
   p_actionTypeIds->monitor = *(void **)&cSrc->fields.attackValue;
 }
 
 
-void WarBoardActionTrendEntity___ctor_43300024(
+void WarBoardActionTrendEntity___ctor_43354740(
         WarBoardActionTrendEntity_o *this,
         WarBoardFutureActionTrendEntity_o *futureEntity,
         WarBoardActionTrendEntity_o *root,
         const MethodInfo *method)
 {
   __int64 v7; // x0
-  const MethodInfo_38C8F30 *v8; // x3
+  __int64 v8; // x1
+  const MethodInfo_38DB36C *v9; // x3
   __int64 id; // x8
   struct System_Int32_array *conditionIds; // x1
-  int32_t v11; // w2
-  const MethodInfo *v12; // x3
-  int32_t v13; // w2
-  const MethodInfo *v14; // x3
+  int32_t v12; // w2
+  const MethodInfo *v13; // x3
+  int32_t v14; // w2
+  const MethodInfo *v15; // x3
   struct System_Int32_array *actionTypeIds; // x1
-  struct System_Nullable_long__o v16; // [xsp+0h] [xbp-40h] BYREF
-  System_Nullable_long__o v17; // 0:x0.16
+  struct System_Nullable_long__o v17; // [xsp+0h] [xbp-40h] BYREF
+  System_Nullable_long__o v18; // 0:x0.16
 
-  if ( (byte_4C440FD & 1) == 0 )
+  if ( (byte_4C57EC5 & 1) == 0 )
   {
-    sub_1C37058(&Method_DataEntityBase_int___ctor__);
-    sub_1C37058(&Method_System_Nullable_long___ctor__);
-    byte_4C440FD = 1;
+    sub_1C3E564(&Method_DataEntityBase_int___ctor__);
+    sub_1C3E564(&Method_System_Nullable_long___ctor__);
+    byte_4C57EC5 = 1;
   }
   DataEntityBase_int____ctor(
     (DataEntityBase_int__o *)this,
-    (const MethodInfo_339EBBC *)Method_DataEntityBase_int___ctor__);
+    (const MethodInfo_33B0A74 *)Method_DataEntityBase_int___ctor__);
   this->fields.id = 0;
   if ( !futureEntity )
     goto LABEL_6;
   id = futureEntity->fields.id;
-  *(_QWORD *)&v17.fields.hasValue = &v16;
+  *(_QWORD *)&v18.fields.hasValue = &v17;
   this->fields._IdForFutureTrend_k__BackingField = id;
-  v16 = (struct System_Nullable_long__o)0LL;
-  v17.fields.value = id + 1000000000000LL;
-  System_Nullable_long____ctor(v17, Method_System_Nullable_long___ctor__, v8);
-  this->fields._trendKey_k__BackingField = v16;
+  v17 = (struct System_Nullable_long__o)0LL;
+  v18.fields.value = id + 1000000000000LL;
+  System_Nullable_long____ctor(v18, Method_System_Nullable_long___ctor__, v9);
+  this->fields._trendKey_k__BackingField = v17;
   conditionIds = futureEntity->fields.conditionIds;
   this->fields.conditionIds = conditionIds;
-  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.conditionIds, (int32_t)conditionIds, v11, v12);
+  sub_1C3E508((CGThumbnailListItem_o *)&this->fields.conditionIds, (int32_t)conditionIds, v12, v13);
   *(_QWORD *)&this->fields.attackValue = *(_QWORD *)&futureEntity->fields.attackValue;
   if ( !root )
 LABEL_6:
-    sub_1C372B4(v7);
+    sub_1C3E7C0(v7, v8);
   this->fields.viewPoint = root->fields.viewPoint;
   actionTypeIds = root->fields.actionTypeIds;
   this->fields.actionTypeIds = actionTypeIds;
-  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.actionTypeIds, (int32_t)actionTypeIds, v13, v14);
+  sub_1C3E508((CGThumbnailListItem_o *)&this->fields.actionTypeIds, (int32_t)actionTypeIds, v14, v15);
 }
 
 
@@ -177,17 +183,17 @@ int32_t WarBoardActionTrendEntity__get_IdForFutureTrend(WarBoardActionTrendEntit
 
 int64_t WarBoardActionTrendEntity__get_TrendKey(WarBoardActionTrendEntity_o *this, const MethodInfo *method)
 {
-  const MethodInfo_38C8F30 *v2; // x3
+  const MethodInfo_38DB36C *v2; // x3
   int64_t id; // x20
   struct System_Nullable_long__o v6; // [xsp+0h] [xbp-30h] BYREF
   System_Nullable_long__o v7; // 0:x0.16
 
-  if ( (byte_4C440FE & 1) == 0 )
+  if ( (byte_4C57EC6 & 1) == 0 )
   {
-    sub_1C37058(&Method_System_Nullable_long__GetValueOrDefault__);
-    sub_1C37058(&Method_System_Nullable_long___ctor__);
-    sub_1C37058(&Method_System_Nullable_long__get_HasValue__);
-    byte_4C440FE = 1;
+    sub_1C3E564(&Method_System_Nullable_long__GetValueOrDefault__);
+    sub_1C3E564(&Method_System_Nullable_long___ctor__);
+    sub_1C3E564(&Method_System_Nullable_long__get_HasValue__);
+    byte_4C57EC6 = 1;
   }
   v6 = (struct System_Nullable_long__o)0LL;
   if ( this->fields._trendKey_k__BackingField.fields.hasValue )

@@ -16,13 +16,13 @@ void ServantNpInfoIconComponent__SetCommandCardComponent(
   int32_t limitCount; // w24
   BattleCommandData_o *v10; // x21
 
-  if ( (byte_4C3D075 & 1) == 0 )
+  if ( (byte_4C50DF5 & 1) == 0 )
   {
-    sub_1C37058(&BattleCommandData_TypeInfo);
-    sub_1C37058(&Method_DataManager_GetMasterData_ServantLimitImageMaster___);
-    sub_1C37058(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-    sub_1C37058(&StringLiteral_15133/*"Unlit/Transparent Colored"*/);
-    byte_4C3D075 = 1;
+    sub_1C3E564(&BattleCommandData_TypeInfo);
+    sub_1C3E564(&Method_DataManager_GetMasterData_ServantLimitImageMaster___);
+    sub_1C3E564(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    sub_1C3E564(&StringLiteral_15143/*"Unlit/Transparent Colored"*/);
+    byte_4C50DF5 = 1;
   }
   commandCard = this->fields.commandCard;
   if ( !commandCard )
@@ -33,23 +33,23 @@ void ServantNpInfoIconComponent__SetCommandCardComponent(
   if ( !v6 )
     goto LABEL_14;
   v6->fields.target = (struct UnityEngine_GameObject_o *)commandCard;
-  commandCard = (BattleCommandComponent_o *)sub_1C36FFC(&v6->fields.target, commandCard);
+  commandCard = (BattleCommandComponent_o *)sub_1C3E508(&v6->fields.target, commandCard);
   if ( !npData )
     goto LABEL_14;
   npCardId = npData->fields.npCardId;
   svtId = npData->fields.svtId;
   limitCount = npData->fields.limitCount;
-  v10 = (BattleCommandData_o *)sub_1C372A4(BattleCommandData_TypeInfo);
-  BattleCommandData___ctor_46588268(v10, npCardId, svtId, limitCount, 0, -1, 0);
+  v10 = (BattleCommandData_o *)sub_1C3E7B0(BattleCommandData_TypeInfo);
+  BattleCommandData___ctor_46651164(v10, npCardId, svtId, limitCount, 0, -1, 0);
   if ( !v10 )
     goto LABEL_14;
   v10->fields.treasureDvc = npData->fields.svtDispNpId;
-  commandCard = (BattleCommandComponent_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39ED16C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  commandCard = (BattleCommandComponent_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39FF5A8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !commandCard )
     goto LABEL_14;
   commandCard = (BattleCommandComponent_o *)DataManager__GetMasterData_object_(
                                               (DataManager_o *)commandCard,
-                                              (const MethodInfo_30E7C58 *)Method_DataManager_GetMasterData_ServantLimitImageMaster___);
+                                              (const MethodInfo_30F9A70 *)Method_DataManager_GetMasterData_ServantLimitImageMaster___);
   if ( !commandCard )
     goto LABEL_14;
   v10->fields._loadsvtLimit = ServantLimitImageMaster__GetServantLimitCountSealAfter(
@@ -61,13 +61,13 @@ void ServantNpInfoIconComponent__SetCommandCardComponent(
   if ( !commandCard
     || (BattleCommandComponent__setData(commandCard, v10, 0, 0, 1, 0, 1, 0),
         (commandCard = this->fields.commandCard) == 0)
-    || (BattleCommandComponent__setShader(commandCard, (System_String_o *)StringLiteral_15133/*"Unlit/Transparent Colored"*/, 0),
+    || (BattleCommandComponent__setShader(commandCard, (System_String_o *)StringLiteral_15143/*"Unlit/Transparent Colored"*/, 0),
         (commandCard = this->fields.commandCard) == 0)
     || (BattleCommandComponent__updateView(commandCard, 1, 0, 1, 0, npData->fields.isCardHide, 0),
         (commandCard = this->fields.commandCard) == 0) )
   {
 LABEL_14:
-    sub_1C372B4(commandCard);
+    sub_1C3E7C0(commandCard, npData);
   }
   BattleCommandComponent__setTouchFlg(commandCard, 0, 0);
 }
@@ -97,11 +97,11 @@ void ServantNpInfoIconComponent__SetNpInfo(
     || (UILabel__set_text((UILabel_o *)backSprite, npData->fields.npRuby, 0),
         (backSprite = (UnityEngine_Component_o *)this->fields.tdNameLabel) == 0) )
   {
-    sub_1C372B4(backSprite);
+    sub_1C3E7C0(backSprite, baseData);
   }
   UILabel__set_text((UILabel_o *)backSprite, npData->fields.svtNpName, 0);
   GameObjectExtensions__AddLocalPositionY(this->fields.commandCardBase, npBasePosY, 0);
-  NoblePhantasmNameOverwriter__SetOverwriteNpLabel_48552020(
+  NoblePhantasmNameOverwriter__SetOverwriteNpLabel_48625264(
     npData->fields.svtId,
     npData->fields.dispLimitCount,
     this->fields.tdNameLabel,
@@ -156,13 +156,13 @@ void ServantNpInfoIconComponent__setNpIconImg(
   UnityEngine_Vector3_o v19; // 0:s0.4,4:s1.4,8:s2.4
 
   v7 = this;
-  if ( (byte_4C3D074 & 1) == 0 )
+  if ( (byte_4C50DF4 & 1) == 0 )
   {
-    sub_1C37058(&Method_UnityEngine_GameObject_GetComponent_BattleCommandComponent___);
-    sub_1C37058(&Method_UnityEngine_Object_Instantiate_GameObject___);
-    sub_1C37058(&UnityEngine_Object_TypeInfo);
-    this = (ServantNpInfoIconComponent_o *)sub_1C37058(&StringLiteral_4582/*"CommandCard"*/);
-    byte_4C3D074 = 1;
+    sub_1C3E564(&Method_UnityEngine_GameObject_GetComponent_BattleCommandComponent___);
+    sub_1C3E564(&Method_UnityEngine_Object_Instantiate_GameObject___);
+    sub_1C3E564(&UnityEngine_Object_TypeInfo);
+    this = (ServantNpInfoIconComponent_o *)sub_1C3E564(&StringLiteral_4582/*"CommandCard"*/);
+    byte_4C50DF4 = 1;
   }
   if ( !npData )
     goto LABEL_19;
@@ -178,7 +178,7 @@ void ServantNpInfoIconComponent__setNpIconImg(
       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
     this = (ServantNpInfoIconComponent_o *)UnityEngine_Object__Instantiate_object_(
                                              commandCardPrefab,
-                                             (const MethodInfo_3173FC0 *)Method_UnityEngine_Object_Instantiate_GameObject___);
+                                             (const MethodInfo_3185EB4 *)Method_UnityEngine_Object_Instantiate_GameObject___);
     if ( this )
     {
       v11 = this;
@@ -204,10 +204,10 @@ void ServantNpInfoIconComponent__setNpIconImg(
             v18.fields.z = 0.0;
             v18.fields.y = npIconPosY;
             UnityEngine_Transform__set_localPosition(transform, v18, 0);
-            if ( !byte_4C3C927 )
+            if ( !byte_4C506A7 )
             {
-              sub_1C37058(&UnityEngine_Quaternion_TypeInfo);
-              byte_4C3C927 = 1;
+              sub_1C3E564(&UnityEngine_Quaternion_TypeInfo);
+              byte_4C506A7 = 1;
             }
             UnityEngine_Transform__set_localRotation(
               transform,
@@ -219,9 +219,9 @@ void ServantNpInfoIconComponent__setNpIconImg(
             UnityEngine_Transform__set_localScale(transform, v19, 0);
             Component_object = UnityEngine_GameObject__GetComponent_object_(
                                  (UnityEngine_GameObject_o *)v11,
-                                 (const MethodInfo_313F1D8 *)Method_UnityEngine_GameObject_GetComponent_BattleCommandComponent___);
+                                 (const MethodInfo_31510CC *)Method_UnityEngine_GameObject_GetComponent_BattleCommandComponent___);
             v7->fields.commandCard = (struct BattleCommandComponent_o *)Component_object;
-            sub_1C36FFC(&v7->fields.commandCard, Component_object);
+            sub_1C3E508(&v7->fields.commandCard, Component_object);
 LABEL_17:
             ServantNpInfoIconComponent__SetCommandCardComponent(v7, npData, v9);
             return;
@@ -230,7 +230,7 @@ LABEL_17:
       }
     }
 LABEL_19:
-    sub_1C372B4(this);
+    sub_1C3E7C0(this, baseUsrSvtData);
   }
 }
 
@@ -247,27 +247,28 @@ void ServantNpInfoIconComponent__setNpLv(ServantNpInfoIconComponent_o *this, int
   __int64 v12; // x7
   Il2CppObject *v13; // x0
   System_String_o *gameObject; // x0
-  int32_t v15; // [xsp+Ch] [xbp-34h] BYREF
+  __int64 v15; // x1
+  int32_t v16; // [xsp+Ch] [xbp-34h] BYREF
 
-  if ( (byte_4C3D076 & 1) == 0 )
+  if ( (byte_4C50DF6 & 1) == 0 )
   {
-    sub_1C37058(&int_TypeInfo);
-    sub_1C37058(&LocalizationManager_TypeInfo);
-    sub_1C37058(&StringLiteral_8263/*"LEVEL_INFO"*/);
-    byte_4C3D076 = 1;
+    sub_1C3E564(&int_TypeInfo);
+    sub_1C3E564(&LocalizationManager_TypeInfo);
+    sub_1C3E564(&StringLiteral_8263/*"LEVEL_INFO"*/);
+    byte_4C50DF6 = 1;
   }
   levelLabel = this->fields.levelLabel;
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   v6 = LocalizationManager__Get((System_String_o *)StringLiteral_8263/*"LEVEL_INFO"*/, 0);
-  v15 = lv;
-  v13 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v15, v7, v8, v9, v10, v11, v12);
+  v16 = lv;
+  v13 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v16, v7, v8, v9, v10, v11, v12);
   gameObject = System_String__Format(v6, v13, 0);
   if ( !levelLabel
     || (UILabel__set_text(levelLabel, gameObject, 0), (gameObject = (System_String_o *)this->fields.levelLabel) == 0)
     || (gameObject = (System_String_o *)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)gameObject, 0)) == 0 )
   {
-    sub_1C372B4(gameObject);
+    sub_1C3E7C0(gameObject, v15);
   }
   UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)gameObject, 1, 0);
 }
@@ -297,15 +298,15 @@ void ServantNpInfoIconComponent_ClickDelegate___ctor(
   this->fields.method = method;
   this->fields.method_ptr = v4;
   this->fields.m_target = object;
-  sub_1C36FFC(&this->fields.m_target, object);
+  sub_1C3E508(&this->fields.m_target, object);
   v8 = *(unsigned __int8 *)(method + 82);
   this->fields.method_code = (intptr_t)this;
-  if ( (sub_1C37118(method) & 1) == 0 )
+  if ( (sub_1C3E624(method) & 1) == 0 )
   {
     if ( !object )
     {
-      v10 = sub_1C372D0(0, "Delegate to an instance method cannot have null 'this'.");
-      sub_1C37180(v10, 0);
+      v10 = sub_1C3E7DC(0, "Delegate to an instance method cannot have null 'this'.");
+      sub_1C3E68C(v10, 0);
     }
     goto LABEL_5;
   }
@@ -317,9 +318,9 @@ LABEL_5:
     this->fields.method_code = (intptr_t)m_target;
     goto LABEL_6;
   }
-  this->fields.invoke_impl = (intptr_t)sub_1A72B00;
+  this->fields.invoke_impl = (intptr_t)sub_1A79EA8;
 LABEL_6:
-  this->fields.extra_arg = (intptr_t)sub_1A72AB8;
+  this->fields.extra_arg = (intptr_t)sub_1A79E60;
 }
 
 
@@ -337,14 +338,14 @@ System_IAsyncResult_o *ServantNpInfoIconComponent_ClickDelegate__BeginInvoke(
   bool v13[4]; // [xsp+1Ch] [xbp-34h] BYREF
 
   v13[0] = isDecide;
-  if ( (byte_4C3D077 & 1) == 0 )
+  if ( (byte_4C50DF7 & 1) == 0 )
   {
-    sub_1C37058(&bool_TypeInfo);
-    byte_4C3D077 = 1;
+    sub_1C3E564(&bool_TypeInfo);
+    byte_4C50DF7 = 1;
   }
   v12[1] = 0;
   v12[0] = j_il2cpp_value_box_0(bool_TypeInfo, v13, callback, object, method, v5, v6, v7);
-  return (System_IAsyncResult_o *)sub_1C3700C(this, v12, callback, object);
+  return (System_IAsyncResult_o *)sub_1C3E518(this, v12, callback, object);
 }
 
 
@@ -353,7 +354,7 @@ void ServantNpInfoIconComponent_ClickDelegate__EndInvoke(
         System_IAsyncResult_o *result,
         const MethodInfo *method)
 {
-  sub_1C37010(result, 0, method);
+  sub_1C3E51C(result, 0, method);
 }
 
 

@@ -2,13 +2,13 @@ void BattleMoviePlayer___cctor(const MethodInfo *method)
 {
   struct BattleMoviePlayer_StaticFields *static_fields; // x8
 
-  if ( (byte_4C45AFC & 1) == 0 )
+  if ( (byte_4C598D9 & 1) == 0 )
   {
-    sub_1C37058(&BattleMoviePlayer_TypeInfo);
-    byte_4C45AFC = 1;
+    sub_1C3E564(&BattleMoviePlayer_TypeInfo);
+    byte_4C598D9 = 1;
   }
   static_fields = BattleMoviePlayer_TypeInfo->static_fields;
-  *(_OWORD *)&static_fields->BackMovieScale = xmmword_C0F990;
+  *(_OWORD *)&static_fields->BackMovieScale = xmmword_C13000;
   *(_QWORD *)&static_fields->BasePanelPosition.fields.x = 0;
   static_fields->BasePanelPosition.fields.z = 10.0;
 }
@@ -31,47 +31,47 @@ void BattleMoviePlayer___ctor(BattleMoviePlayer_o *this, const MethodInfo *metho
   struct UnityEngine_Vector3_StaticFields *v15; // x8
   float v16; // s1
 
-  if ( (byte_4C45AFB & 1) == 0 )
+  if ( (byte_4C598D8 & 1) == 0 )
   {
-    sub_1C37058(&Method_System_Collections_Generic_List_GameObject___ctor__);
-    sub_1C37058(&Method_System_Collections_Generic_List_BattleMoviePlayer_MovieInfo___ctor__);
-    sub_1C37058(&System_Collections_Generic_List_BattleMoviePlayer_MovieInfo__TypeInfo);
-    sub_1C37058(&System_Collections_Generic_List_GameObject__TypeInfo);
-    byte_4C45AFB = 1;
+    sub_1C3E564(&Method_System_Collections_Generic_List_GameObject___ctor__);
+    sub_1C3E564(&Method_System_Collections_Generic_List_BattleMoviePlayer_MovieInfo___ctor__);
+    sub_1C3E564(&System_Collections_Generic_List_BattleMoviePlayer_MovieInfo__TypeInfo);
+    sub_1C3E564(&System_Collections_Generic_List_GameObject__TypeInfo);
+    byte_4C598D8 = 1;
   }
   this->fields.KeepStartPosition = 1;
-  v3 = (System_Collections_Generic_List_object__o *)sub_1C372A4(System_Collections_Generic_List_BattleMoviePlayer_MovieInfo__TypeInfo);
+  v3 = (System_Collections_Generic_List_object__o *)sub_1C3E7B0(System_Collections_Generic_List_BattleMoviePlayer_MovieInfo__TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v3,
-    (const MethodInfo_37A27F0 *)Method_System_Collections_Generic_List_BattleMoviePlayer_MovieInfo___ctor__);
+    (const MethodInfo_37B4C2C *)Method_System_Collections_Generic_List_BattleMoviePlayer_MovieInfo___ctor__);
   this->fields.MovieInfoList = (struct System_Collections_Generic_List_BattleMoviePlayer_MovieInfo__o *)v3;
-  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.MovieInfoList, (int32_t)v3, v4, v5);
-  v6 = (System_Collections_Generic_List_object__o *)sub_1C372A4(System_Collections_Generic_List_GameObject__TypeInfo);
+  sub_1C3E508((CGThumbnailListItem_o *)&this->fields.MovieInfoList, (int32_t)v3, v4, v5);
+  v6 = (System_Collections_Generic_List_object__o *)sub_1C3E7B0(System_Collections_Generic_List_GameObject__TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v6,
-    (const MethodInfo_37A27F0 *)Method_System_Collections_Generic_List_GameObject___ctor__);
+    (const MethodInfo_37B4C2C *)Method_System_Collections_Generic_List_GameObject___ctor__);
   this->fields.ObjList = (struct System_Collections_Generic_List_GameObject__o *)v6;
-  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.ObjList, (int32_t)v6, v7, v8);
-  if ( !byte_4C3C921 )
+  sub_1C3E508((CGThumbnailListItem_o *)&this->fields.ObjList, (int32_t)v6, v7, v8);
+  if ( !byte_4C506A1 )
   {
-    sub_1C37058(&UnityEngine_Vector3_TypeInfo);
-    byte_4C3C921 = 1;
+    sub_1C3E564(&UnityEngine_Vector3_TypeInfo);
+    byte_4C506A1 = 1;
   }
   v9 = UnityEngine_Vector3_TypeInfo;
   static_fields = UnityEngine_Vector3_TypeInfo->static_fields;
   z = static_fields->zeroVector.fields.z;
   *(_QWORD *)&this->fields.startPanelPosition.fields.x = *(_QWORD *)&static_fields->zeroVector.fields.x;
   this->fields.startPanelPosition.fields.z = z;
-  if ( byte_4C3C926 )
+  if ( byte_4C506A6 )
   {
     v12 = 0;
   }
   else
   {
-    sub_1C37058(&UnityEngine_Vector3_TypeInfo);
+    sub_1C3E564(&UnityEngine_Vector3_TypeInfo);
     v9 = UnityEngine_Vector3_TypeInfo;
-    byte_4C3C926 = 1;
-    v12 = byte_4C3C921 == 0;
+    byte_4C506A6 = 1;
+    v12 = byte_4C506A1 == 0;
   }
   v13 = v9->static_fields;
   v14 = v13->oneVector.fields.z;
@@ -79,9 +79,9 @@ void BattleMoviePlayer___ctor(BattleMoviePlayer_o *this, const MethodInfo *metho
   this->fields.startPanelScale.fields.z = v14;
   if ( v12 )
   {
-    sub_1C37058(&UnityEngine_Vector3_TypeInfo);
+    sub_1C3E564(&UnityEngine_Vector3_TypeInfo);
     v9 = UnityEngine_Vector3_TypeInfo;
-    byte_4C3C921 = 1;
+    byte_4C506A1 = 1;
   }
   v15 = v9->static_fields;
   v16 = v15->zeroVector.fields.z;
@@ -149,19 +149,19 @@ UnityEngine_GameObject_o *BattleMoviePlayer__CreateBattleMoviePanel(
   UnityEngine_Vector3_o v56; // 0:s0.4,4:s1.4,8:s2.4
 
   v6 = this;
-  if ( (byte_4C45AEF & 1) == 0 )
+  if ( (byte_4C598CC & 1) == 0 )
   {
-    sub_1C37058(&BattleMoviePlayer_TypeInfo);
-    sub_1C37058(&Method_UnityEngine_Component_GetComponent_BattlePerformance___);
-    sub_1C37058(&Method_UnityEngine_GameObject_GetComponent_BattleCameraFullScaleSetter___);
-    sub_1C37058(&Method_UnityEngine_GameObject_GetComponent_CriManaMovieController___);
-    sub_1C37058(&Method_UnityEngine_GameObject_GetComponent_MeshRenderer___);
-    sub_1C37058(&Method_UnityEngine_GameObject_TryGetComponent_BattleCameraFullScaleSetter___);
-    sub_1C37058(&Method_System_Collections_Generic_List_GameObject__Add__);
-    sub_1C37058(&UnityEngine_Material_TypeInfo);
-    sub_1C37058(&Method_UnityEngine_Object_Instantiate_GameObject____78192880);
-    this = (BattleMoviePlayer_o *)sub_1C37058(&UnityEngine_Object_TypeInfo);
-    byte_4C45AEF = 1;
+    sub_1C3E564(&BattleMoviePlayer_TypeInfo);
+    sub_1C3E564(&Method_UnityEngine_Component_GetComponent_BattlePerformance___);
+    sub_1C3E564(&Method_UnityEngine_GameObject_GetComponent_BattleCameraFullScaleSetter___);
+    sub_1C3E564(&Method_UnityEngine_GameObject_GetComponent_CriManaMovieController___);
+    sub_1C3E564(&Method_UnityEngine_GameObject_GetComponent_MeshRenderer___);
+    sub_1C3E564(&Method_UnityEngine_GameObject_TryGetComponent_BattleCameraFullScaleSetter___);
+    sub_1C3E564(&Method_System_Collections_Generic_List_GameObject__Add__);
+    sub_1C3E564(&UnityEngine_Material_TypeInfo);
+    sub_1C3E564(&Method_UnityEngine_Object_Instantiate_GameObject____78272896);
+    this = (BattleMoviePlayer_o *)sub_1C3E564(&UnityEngine_Object_TypeInfo);
+    byte_4C598CC = 1;
   }
   component = 0;
   v48 = 0;
@@ -183,10 +183,10 @@ UnityEngine_GameObject_o *BattleMoviePlayer__CreateBattleMoviePanel(
     transform = UnityEngine_GameObject__get_transform((UnityEngine_GameObject_o *)this, 0);
     if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-    this = (BattleMoviePlayer_o *)UnityEngine_Object__Instantiate_object__51855596(
+    this = (BattleMoviePlayer_o *)UnityEngine_Object__Instantiate_object__51929056(
                                     moviePrefab,
                                     transform,
-                                    (const MethodInfo_31740EC *)Method_UnityEngine_Object_Instantiate_GameObject____78192880);
+                                    (const MethodInfo_3185FE0 *)Method_UnityEngine_Object_Instantiate_GameObject____78272896);
     ObjList = (System_Collections_Generic_List_object__o *)v6->fields.ObjList;
     if ( !ObjList )
       goto LABEL_63;
@@ -202,21 +202,21 @@ UnityEngine_GameObject_o *BattleMoviePlayer__CreateBattleMoviePanel(
       System_Collections_Generic_List_object___AddWithResize(
         ObjList,
         (Il2CppObject *)this,
-        *(const MethodInfo_37A3024 **)(*(_QWORD *)(v25[4] + 192LL) + 112LL));
+        *(const MethodInfo_37B5460 **)(*(_QWORD *)(v25[4] + 192LL) + 112LL));
     }
     else
     {
       v27 = &items->obj.klass + size;
       ObjList->fields._size = size + 1;
       v27[4] = (Il2CppClass *)v16;
-      sub_1C36FFC((CGThumbnailListItem_o *)(v27 + 4), (int32_t)v16, v21, v22);
+      sub_1C3E508((CGThumbnailListItem_o *)(v27 + 4), (int32_t)v16, v21, v22);
     }
     if ( !v16 )
       goto LABEL_63;
     if ( UnityEngine_GameObject__TryGetComponent_object_(
            (UnityEngine_GameObject_o *)v16,
            &v48,
-           (const MethodInfo_3140468 *)Method_UnityEngine_GameObject_TryGetComponent_BattleCameraFullScaleSetter___) )
+           (const MethodInfo_315235C *)Method_UnityEngine_GameObject_TryGetComponent_BattleCameraFullScaleSetter___) )
     {
       this = (BattleMoviePlayer_o *)v48;
       if ( !v48 )
@@ -226,7 +226,7 @@ UnityEngine_GameObject_o *BattleMoviePlayer__CreateBattleMoviePanel(
     UnityEngine_GameObject__set_layer((UnityEngine_GameObject_o *)v16, 11, 0);
     this = (BattleMoviePlayer_o *)UnityEngine_GameObject__GetComponent_object_(
                                     (UnityEngine_GameObject_o *)v16,
-                                    (const MethodInfo_313F1D8 *)Method_UnityEngine_GameObject_GetComponent_BattleCameraFullScaleSetter___);
+                                    (const MethodInfo_31510CC *)Method_UnityEngine_GameObject_GetComponent_BattleCameraFullScaleSetter___);
     if ( !this )
       goto LABEL_63;
     v28 = 1;
@@ -244,16 +244,16 @@ UnityEngine_GameObject_o *BattleMoviePlayer__CreateBattleMoviePanel(
     v8 = (Il2CppObject *)v6->fields.moviePrefab;
     this = (BattleMoviePlayer_o *)UnityEngine_Component__GetComponent_object_(
                                     (UnityEngine_Component_o *)this,
-                                    (const MethodInfo_30DE428 *)Method_UnityEngine_Component_GetComponent_BattlePerformance___);
+                                    (const MethodInfo_30F0240 *)Method_UnityEngine_Component_GetComponent_BattlePerformance___);
     if ( !this )
       goto LABEL_63;
     v9 = this[1].fields.moviePrefab;
     if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-    this = (BattleMoviePlayer_o *)UnityEngine_Object__Instantiate_object__51855596(
+    this = (BattleMoviePlayer_o *)UnityEngine_Object__Instantiate_object__51929056(
                                     v8,
                                     (UnityEngine_Transform_o *)v9,
-                                    (const MethodInfo_31740EC *)Method_UnityEngine_Object_Instantiate_GameObject____78192880);
+                                    (const MethodInfo_3185FE0 *)Method_UnityEngine_Object_Instantiate_GameObject____78272896);
     v12 = (System_Collections_Generic_List_object__o *)v6->fields.ObjList;
     if ( !v12 )
       goto LABEL_63;
@@ -269,21 +269,21 @@ UnityEngine_GameObject_o *BattleMoviePlayer__CreateBattleMoviePanel(
       System_Collections_Generic_List_object___AddWithResize(
         v12,
         (Il2CppObject *)this,
-        *(const MethodInfo_37A3024 **)(*(_QWORD *)(v14[4] + 192LL) + 112LL));
+        *(const MethodInfo_37B5460 **)(*(_QWORD *)(v14[4] + 192LL) + 112LL));
     }
     else
     {
       v17 = &v13->obj.klass + v15;
       v12->fields._size = v15 + 1;
       v17[4] = (Il2CppClass *)v16;
-      sub_1C36FFC((CGThumbnailListItem_o *)(v17 + 4), (int32_t)v16, v10, v11);
+      sub_1C3E508((CGThumbnailListItem_o *)(v17 + 4), (int32_t)v16, v10, v11);
     }
     if ( !v16 )
       goto LABEL_63;
     if ( UnityEngine_GameObject__TryGetComponent_object_(
            (UnityEngine_GameObject_o *)v16,
            &component,
-           (const MethodInfo_3140468 *)Method_UnityEngine_GameObject_TryGetComponent_BattleCameraFullScaleSetter___) )
+           (const MethodInfo_315235C *)Method_UnityEngine_GameObject_TryGetComponent_BattleCameraFullScaleSetter___) )
     {
       this = (BattleMoviePlayer_o *)component;
       if ( !component )
@@ -292,7 +292,7 @@ UnityEngine_GameObject_o *BattleMoviePlayer__CreateBattleMoviePanel(
     }
     this = (BattleMoviePlayer_o *)UnityEngine_GameObject__GetComponent_object_(
                                     (UnityEngine_GameObject_o *)v16,
-                                    (const MethodInfo_313F1D8 *)Method_UnityEngine_GameObject_GetComponent_BattleCameraFullScaleSetter___);
+                                    (const MethodInfo_31510CC *)Method_UnityEngine_GameObject_GetComponent_BattleCameraFullScaleSetter___);
     if ( !this )
       goto LABEL_63;
     v28 = 0;
@@ -311,14 +311,14 @@ LABEL_39:
       goto LABEL_63;
     this = (BattleMoviePlayer_o *)UnityEngine_GameObject__GetComponent_object_(
                                     (UnityEngine_GameObject_o *)v16,
-                                    (const MethodInfo_313F1D8 *)Method_UnityEngine_GameObject_GetComponent_MeshRenderer___);
+                                    (const MethodInfo_31510CC *)Method_UnityEngine_GameObject_GetComponent_MeshRenderer___);
     if ( !this )
       goto LABEL_63;
     material = UnityEngine_Renderer__get_material((UnityEngine_Renderer_o *)this, 0);
-    v32 = (UnityEngine_Material_o *)sub_1C372A4(UnityEngine_Material_TypeInfo);
-    UnityEngine_Material___ctor_71129980(v32, material, 0);
+    v32 = (UnityEngine_Material_o *)sub_1C3E7B0(UnityEngine_Material_TypeInfo);
+    UnityEngine_Material___ctor_71204792(v32, material, 0);
     *p_baseMat = v32;
-    sub_1C36FFC((CGThumbnailListItem_o *)&v6->fields.baseMat, (int32_t)v32, v33, v34);
+    sub_1C3E508((CGThumbnailListItem_o *)&v6->fields.baseMat, (int32_t)v32, v33, v34);
   }
   else if ( !v16 )
   {
@@ -388,28 +388,28 @@ LABEL_39:
       }
     }
 LABEL_63:
-    sub_1C372B4(this);
+    sub_1C3E7C0(this, movieInfo);
   }
 LABEL_59:
   v44 = *p_baseMat;
-  v45 = (UnityEngine_Material_o *)sub_1C372A4(UnityEngine_Material_TypeInfo);
-  UnityEngine_Material___ctor_71129980(v45, v44, 0);
+  v45 = (UnityEngine_Material_o *)sub_1C3E7B0(UnityEngine_Material_TypeInfo);
+  UnityEngine_Material___ctor_71204792(v45, v44, 0);
   this = (BattleMoviePlayer_o *)UnityEngine_GameObject__GetComponent_object_(
                                   (UnityEngine_GameObject_o *)v16,
-                                  (const MethodInfo_313F1D8 *)Method_UnityEngine_GameObject_GetComponent_MeshRenderer___);
+                                  (const MethodInfo_31510CC *)Method_UnityEngine_GameObject_GetComponent_MeshRenderer___);
   if ( !this )
     goto LABEL_63;
   UnityEngine_Renderer__set_material((UnityEngine_Renderer_o *)this, v45, 0);
   this = (BattleMoviePlayer_o *)UnityEngine_GameObject__GetComponent_object_(
                                   (UnityEngine_GameObject_o *)v16,
-                                  (const MethodInfo_313F1D8 *)Method_UnityEngine_GameObject_GetComponent_CriManaMovieController___);
+                                  (const MethodInfo_31510CC *)Method_UnityEngine_GameObject_GetComponent_CriManaMovieController___);
   if ( !this )
     goto LABEL_63;
   CriManaMovieMaterial__set_material((CriManaMovieMaterial_o *)this, v45, 0);
   UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)v16, 1, 0);
   this = (BattleMoviePlayer_o *)UnityEngine_GameObject__GetComponent_object_(
                                   (UnityEngine_GameObject_o *)v16,
-                                  (const MethodInfo_313F1D8 *)Method_UnityEngine_GameObject_GetComponent_MeshRenderer___);
+                                  (const MethodInfo_31510CC *)Method_UnityEngine_GameObject_GetComponent_MeshRenderer___);
   if ( !this )
     goto LABEL_63;
   UnityEngine_Renderer__set_enabled((UnityEngine_Renderer_o *)this, 0, 0);
@@ -466,22 +466,22 @@ void BattleMoviePlayer__CreateMovieInfoListEvent(
   System_String_o *patha; // [xsp+58h] [xbp-98h]
 
   v47 = this;
-  if ( (byte_4C45AFA & 1) == 0 )
+  if ( (byte_4C598D7 & 1) == 0 )
   {
-    sub_1C37058(&Method_System_Collections_Generic_List_BattleMoviePlayer_MovieInfo__Add__);
-    sub_1C37058(&Method_System_Collections_Generic_List_float__get_Count__);
-    sub_1C37058(&Method_System_Collections_Generic_List_BattleMoviePlayer_PathType__get_Count__);
-    sub_1C37058(&Method_System_Collections_Generic_List_UnityEvent__get_Count__);
-    sub_1C37058(&Method_System_Collections_Generic_List_string__get_Count__);
-    sub_1C37058(&Method_System_Collections_Generic_List_int__get_Count__);
-    sub_1C37058(&Method_System_Collections_Generic_List_string__get_Item__);
-    sub_1C37058(&Method_System_Collections_Generic_List_UnityEvent__get_Item__);
-    sub_1C37058(&Method_System_Collections_Generic_List_BattleMoviePlayer_PathType__get_Item__);
-    sub_1C37058(&Method_System_Collections_Generic_List_int__get_Item__);
-    sub_1C37058(&Method_System_Collections_Generic_List_float__get_Item__);
-    sub_1C37058(&BattleMoviePlayer_MovieInfo_TypeInfo);
-    this = (BattleMoviePlayer_o *)sub_1C37058(&StringLiteral_1/*""*/);
-    byte_4C45AFA = 1;
+    sub_1C3E564(&Method_System_Collections_Generic_List_BattleMoviePlayer_MovieInfo__Add__);
+    sub_1C3E564(&Method_System_Collections_Generic_List_float__get_Count__);
+    sub_1C3E564(&Method_System_Collections_Generic_List_BattleMoviePlayer_PathType__get_Count__);
+    sub_1C3E564(&Method_System_Collections_Generic_List_UnityEvent__get_Count__);
+    sub_1C3E564(&Method_System_Collections_Generic_List_string__get_Count__);
+    sub_1C3E564(&Method_System_Collections_Generic_List_int__get_Count__);
+    sub_1C3E564(&Method_System_Collections_Generic_List_string__get_Item__);
+    sub_1C3E564(&Method_System_Collections_Generic_List_UnityEvent__get_Item__);
+    sub_1C3E564(&Method_System_Collections_Generic_List_BattleMoviePlayer_PathType__get_Item__);
+    sub_1C3E564(&Method_System_Collections_Generic_List_int__get_Item__);
+    sub_1C3E564(&Method_System_Collections_Generic_List_float__get_Item__);
+    sub_1C3E564(&BattleMoviePlayer_MovieInfo_TypeInfo);
+    this = (BattleMoviePlayer_o *)sub_1C3E564(&StringLiteral_1/*""*/);
+    byte_4C598D7 = 1;
   }
   v47->fields.KeepStartPosition = keepStartPosition;
   v47->fields.OverrideZDepth = overrideZDepth;
@@ -490,7 +490,7 @@ void BattleMoviePlayer__CreateMovieInfoListEvent(
   v47->fields.IsBackMovie = isBackMovie;
   if ( !path )
 LABEL_47:
-    sub_1C372B4(this);
+    sub_1C3E7C0(this, type);
   v21 = valid;
   if ( path->fields._size >= 1 )
   {
@@ -504,7 +504,7 @@ LABEL_47:
       this = (BattleMoviePlayer_o *)System_Collections_Generic_List_object___get_Item(
                                       (System_Collections_Generic_List_object__o *)path,
                                       v23,
-                                      (const MethodInfo_37A2D54 *)Method_System_Collections_Generic_List_string__get_Item__);
+                                      (const MethodInfo_37B5190 *)Method_System_Collections_Generic_List_string__get_Item__);
       if ( this )
       {
         if ( !fadeout )
@@ -527,7 +527,7 @@ LABEL_47:
               this = (BattleMoviePlayer_o *)System_Collections_Generic_List_Int32Enum___get_Item(
                                               (System_Collections_Generic_List_T__o *)type,
                                               v23,
-                                              (const MethodInfo_378853C *)Method_System_Collections_Generic_List_BattleMoviePlayer_PathType__get_Item__);
+                                              (const MethodInfo_379A978 *)Method_System_Collections_Generic_List_BattleMoviePlayer_PathType__get_Item__);
               v24 = (int)this;
             }
             if ( v23 >= path->fields._size )
@@ -539,7 +539,7 @@ LABEL_47:
               this = (BattleMoviePlayer_o *)System_Collections_Generic_List_object___get_Item(
                                               (System_Collections_Generic_List_object__o *)path,
                                               v23,
-                                              (const MethodInfo_37A2D54 *)Method_System_Collections_Generic_List_string__get_Item__);
+                                              (const MethodInfo_37B5190 *)Method_System_Collections_Generic_List_string__get_Item__);
               patha = (System_String_o *)this;
             }
             if ( !v21 )
@@ -551,14 +551,14 @@ LABEL_47:
                       System_Collections_Generic_List_float___get_Item(
                         v21,
                         v23,
-                        (const MethodInfo_37C88A8 *)Method_System_Collections_Generic_List_float__get_Item__),
+                        (const MethodInfo_37DACE4 *)Method_System_Collections_Generic_List_float__get_Item__),
                       0.0);
             if ( v23 < fadeout->fields._size )
               v25 = fmaxf(
                       System_Collections_Generic_List_float___get_Item(
                         fadeout,
                         v23,
-                        (const MethodInfo_37C88A8 *)Method_System_Collections_Generic_List_float__get_Item__),
+                        (const MethodInfo_37DACE4 *)Method_System_Collections_Generic_List_float__get_Item__),
                       1.0);
             if ( v23 >= cam->fields._size )
             {
@@ -569,7 +569,7 @@ LABEL_47:
               this = (BattleMoviePlayer_o *)System_Collections_Generic_List_int___get_Item(
                                               cam,
                                               v23,
-                                              (const MethodInfo_3785D10 *)Method_System_Collections_Generic_List_int__get_Item__);
+                                              (const MethodInfo_379814C *)Method_System_Collections_Generic_List_int__get_Item__);
               v27 = (int)this;
             }
             if ( !speed )
@@ -579,7 +579,7 @@ LABEL_47:
               Item = System_Collections_Generic_List_float___get_Item(
                        speed,
                        v23,
-                       (const MethodInfo_37C88A8 *)Method_System_Collections_Generic_List_float__get_Item__);
+                       (const MethodInfo_37DACE4 *)Method_System_Collections_Generic_List_float__get_Item__);
             if ( !effect )
               goto LABEL_47;
             if ( v23 >= effect->fields._size )
@@ -591,7 +591,7 @@ LABEL_47:
               this = (BattleMoviePlayer_o *)System_Collections_Generic_List_object___get_Item(
                                               (System_Collections_Generic_List_object__o *)effect,
                                               v23,
-                                              (const MethodInfo_37A2D54 *)Method_System_Collections_Generic_List_UnityEvent__get_Item__);
+                                              (const MethodInfo_37B5190 *)Method_System_Collections_Generic_List_UnityEvent__get_Item__);
               eff = (UnityEngine_Events_UnityEvent_o *)this;
             }
             if ( !v22 )
@@ -601,7 +601,7 @@ LABEL_47:
               v29 = System_Collections_Generic_List_float___get_Item(
                       v22,
                       v23,
-                      (const MethodInfo_37C88A8 *)Method_System_Collections_Generic_List_float__get_Item__);
+                      (const MethodInfo_37DACE4 *)Method_System_Collections_Generic_List_float__get_Item__);
             if ( !fadein )
               goto LABEL_47;
             v30 = 0.0;
@@ -610,12 +610,12 @@ LABEL_47:
               v30 = System_Collections_Generic_List_float___get_Item(
                       fadein,
                       v23,
-                      (const MethodInfo_37C88A8 *)Method_System_Collections_Generic_List_float__get_Item__);
+                      (const MethodInfo_37DACE4 *)Method_System_Collections_Generic_List_float__get_Item__);
             MovieInfoList = (System_Collections_Generic_List_object__o *)v47->fields.MovieInfoList;
             IgnoreTimeScale = v47->fields.IgnoreTimeScale;
             v33 = v47->fields.Loop;
             v34 = v47->fields.IsBackMovie;
-            v35 = (BattleMoviePlayer_MovieInfo_o *)sub_1C372A4(BattleMoviePlayer_MovieInfo_TypeInfo);
+            v35 = (BattleMoviePlayer_MovieInfo_o *)sub_1C3E7B0(BattleMoviePlayer_MovieInfo_TypeInfo);
             BattleMoviePlayer_MovieInfo___ctor(
               v35,
               v24,
@@ -645,14 +645,14 @@ LABEL_47:
               System_Collections_Generic_List_object___AddWithResize(
                 MovieInfoList,
                 (Il2CppObject *)v35,
-                *(const MethodInfo_37A3024 **)(*(_QWORD *)(v39[4] + 192LL) + 112LL));
+                *(const MethodInfo_37B5460 **)(*(_QWORD *)(v39[4] + 192LL) + 112LL));
             }
             else
             {
               v41 = &items->obj.klass + size;
               MovieInfoList->fields._size = size + 1;
               v41[4] = (Il2CppClass *)v35;
-              sub_1C36FFC((CGThumbnailListItem_o *)(v41 + 4), (int32_t)v35, v36, v37);
+              sub_1C3E508((CGThumbnailListItem_o *)(v41 + 4), (int32_t)v35, v36, v37);
             }
             effect = v42;
             speed = v43;
@@ -672,41 +672,42 @@ void BattleMoviePlayer__Dispose(BattleMoviePlayer_o *this, const MethodInfo *met
 {
   UnityEngine_Object_o *perf; // x20
   struct System_Collections_Generic_List_GameObject__o *ObjList; // x0
+  __int64 v5; // x1
   System_Collections_Generic_List_T__o *MovieInfoList; // x20
-  BattleMoviePlayer___c_c *v6; // x0
+  BattleMoviePlayer___c_c *v7; // x0
   System_Func_object__bool__o *_9__27_0; // x21
-  Il2CppObject *v8; // x22
+  Il2CppObject *v9; // x22
   struct BattleMoviePlayer___c_StaticFields *static_fields; // x0
-  int32_t v10; // w2
-  const MethodInfo *v11; // x3
-  const MethodInfo *v12; // x2
-  struct System_Collections_Generic_List_BattleMoviePlayer_MovieInfo__o *v13; // x8
+  int32_t v11; // w2
+  const MethodInfo *v12; // x3
+  const MethodInfo *v13; // x2
+  struct System_Collections_Generic_List_BattleMoviePlayer_MovieInfo__o *v14; // x8
   int32_t size; // w2
-  int v15; // w9
+  int v16; // w9
   Il2CppObject *current; // x20
-  struct System_Collections_Generic_List_GameObject__o *v17; // x8
-  int32_t v18; // w2
-  int v19; // w9
+  struct System_Collections_Generic_List_GameObject__o *v18; // x8
+  int32_t v19; // w2
+  int v20; // w9
   UnityEngine_Object_o *gameObject; // x19
-  System_Collections_Generic_List_Enumerator_object__o v21; // [xsp+8h] [xbp-78h] BYREF
-  System_Collections_Generic_List_Enumerator_object__o v22; // [xsp+20h] [xbp-60h] BYREF
+  System_Collections_Generic_List_Enumerator_object__o v22; // [xsp+8h] [xbp-78h] BYREF
+  System_Collections_Generic_List_Enumerator_object__o v23; // [xsp+20h] [xbp-60h] BYREF
 
-  if ( (byte_4C45AEE & 1) == 0 )
+  if ( (byte_4C598CB & 1) == 0 )
   {
-    sub_1C37058(&Method_BasicHelper_Any_BattleMoviePlayer_MovieInfo___);
-    sub_1C37058(&Method_System_Collections_Generic_List_Enumerator_GameObject__Dispose__);
-    sub_1C37058(&Method_System_Collections_Generic_List_Enumerator_GameObject__MoveNext__);
-    sub_1C37058(&Method_System_Collections_Generic_List_Enumerator_GameObject__get_Current__);
-    sub_1C37058(&System_Func_BattleMoviePlayer_MovieInfo__bool__TypeInfo);
-    sub_1C37058(&Method_System_Collections_Generic_List_GameObject__Clear__);
-    sub_1C37058(&Method_System_Collections_Generic_List_BattleMoviePlayer_MovieInfo__Clear__);
-    sub_1C37058(&Method_System_Collections_Generic_List_GameObject__GetEnumerator__);
-    sub_1C37058(&UnityEngine_Object_TypeInfo);
-    sub_1C37058(&Method_BattleMoviePlayer___c__Dispose_b__27_0__);
-    sub_1C37058(&BattleMoviePlayer___c_TypeInfo);
-    byte_4C45AEE = 1;
+    sub_1C3E564(&Method_BasicHelper_Any_BattleMoviePlayer_MovieInfo___);
+    sub_1C3E564(&Method_System_Collections_Generic_List_Enumerator_GameObject__Dispose__);
+    sub_1C3E564(&Method_System_Collections_Generic_List_Enumerator_GameObject__MoveNext__);
+    sub_1C3E564(&Method_System_Collections_Generic_List_Enumerator_GameObject__get_Current__);
+    sub_1C3E564(&System_Func_BattleMoviePlayer_MovieInfo__bool__TypeInfo);
+    sub_1C3E564(&Method_System_Collections_Generic_List_GameObject__Clear__);
+    sub_1C3E564(&Method_System_Collections_Generic_List_BattleMoviePlayer_MovieInfo__Clear__);
+    sub_1C3E564(&Method_System_Collections_Generic_List_GameObject__GetEnumerator__);
+    sub_1C3E564(&UnityEngine_Object_TypeInfo);
+    sub_1C3E564(&Method_BattleMoviePlayer___c__Dispose_b__27_0__);
+    sub_1C3E564(&BattleMoviePlayer___c_TypeInfo);
+    byte_4C598CB = 1;
   }
-  memset(&v22, 0, sizeof(v22));
+  memset(&v23, 0, sizeof(v23));
   perf = (UnityEngine_Object_o *)this->fields.perf;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
@@ -714,82 +715,82 @@ void BattleMoviePlayer__Dispose(BattleMoviePlayer_o *this, const MethodInfo *met
   if ( ((unsigned __int8)ObjList & 1) != 0 )
   {
     MovieInfoList = (System_Collections_Generic_List_T__o *)this->fields.MovieInfoList;
-    v6 = BattleMoviePlayer___c_TypeInfo;
+    v7 = BattleMoviePlayer___c_TypeInfo;
     if ( !BattleMoviePlayer___c_TypeInfo->_2.cctor_finished )
     {
       j_il2cpp_runtime_class_init_0(BattleMoviePlayer___c_TypeInfo);
-      v6 = BattleMoviePlayer___c_TypeInfo;
+      v7 = BattleMoviePlayer___c_TypeInfo;
     }
-    _9__27_0 = (System_Func_object__bool__o *)v6->static_fields->__9__27_0;
+    _9__27_0 = (System_Func_object__bool__o *)v7->static_fields->__9__27_0;
     if ( !_9__27_0 )
     {
-      if ( !v6->_2.cctor_finished )
+      if ( !v7->_2.cctor_finished )
       {
-        j_il2cpp_runtime_class_init_0(v6);
-        v6 = BattleMoviePlayer___c_TypeInfo;
+        j_il2cpp_runtime_class_init_0(v7);
+        v7 = BattleMoviePlayer___c_TypeInfo;
       }
-      v8 = (Il2CppObject *)v6->static_fields->__9;
-      _9__27_0 = (System_Func_object__bool__o *)sub_1C372A4(System_Func_BattleMoviePlayer_MovieInfo__bool__TypeInfo);
-      System_Func_object__bool____ctor(_9__27_0, v8, Method_BattleMoviePlayer___c__Dispose_b__27_0__, 0);
+      v9 = (Il2CppObject *)v7->static_fields->__9;
+      _9__27_0 = (System_Func_object__bool__o *)sub_1C3E7B0(System_Func_BattleMoviePlayer_MovieInfo__bool__TypeInfo);
+      System_Func_object__bool____ctor(_9__27_0, v9, Method_BattleMoviePlayer___c__Dispose_b__27_0__, 0);
       static_fields = BattleMoviePlayer___c_TypeInfo->static_fields;
       static_fields->__9__27_0 = (struct System_Func_BattleMoviePlayer_MovieInfo__bool__o *)_9__27_0;
-      sub_1C36FFC((CGThumbnailListItem_o *)&static_fields->__9__27_0, (int32_t)_9__27_0, v10, v11);
+      sub_1C3E508((CGThumbnailListItem_o *)&static_fields->__9__27_0, (int32_t)_9__27_0, v11, v12);
     }
     ObjList = (struct System_Collections_Generic_List_GameObject__o *)BasicHelper__Any_object_(
                                                                         MovieInfoList,
                                                                         (System_Func_T__bool__o *)_9__27_0,
-                                                                        (const MethodInfo_30D0FF8 *)Method_BasicHelper_Any_BattleMoviePlayer_MovieInfo___);
+                                                                        (const MethodInfo_30E2E10 *)Method_BasicHelper_Any_BattleMoviePlayer_MovieInfo___);
     if ( ((unsigned __int8)ObjList & 1) != 0 )
-      BattleMoviePlayer__ShowBg(this, 1, v12);
+      BattleMoviePlayer__ShowBg(this, 1, v13);
   }
-  v13 = this->fields.MovieInfoList;
-  if ( !v13 )
+  v14 = this->fields.MovieInfoList;
+  if ( !v14 )
     goto LABEL_32;
-  size = v13->fields._size;
-  v15 = v13->fields._version + 1;
-  v13->fields._size = 0;
-  v13->fields._version = v15;
+  size = v14->fields._size;
+  v16 = v14->fields._version + 1;
+  v14->fields._size = 0;
+  v14->fields._version = v16;
   if ( size >= 1 )
-    System_Array__Clear((System_Array_o *)v13->fields._items, 0, size, 0);
+    System_Array__Clear((System_Array_o *)v14->fields._items, 0, size, 0);
   ObjList = this->fields.ObjList;
   if ( !ObjList )
     goto LABEL_32;
   System_Collections_Generic_List_object___GetEnumerator(
-    (System_Collections_Generic_List_Enumerator_T__o *)&v21,
+    (System_Collections_Generic_List_Enumerator_T__o *)&v22,
     (System_Collections_Generic_List_object__o *)ObjList,
-    (const MethodInfo_37A3B1C *)Method_System_Collections_Generic_List_GameObject__GetEnumerator__);
-  v22 = v21;
+    (const MethodInfo_37B5F58 *)Method_System_Collections_Generic_List_GameObject__GetEnumerator__);
+  v23 = v22;
   while ( System_Collections_Generic_List_Enumerator_object___MoveNext(
-            &v22,
-            (const MethodInfo_352D810 *)Method_System_Collections_Generic_List_Enumerator_GameObject__MoveNext__) )
+            &v23,
+            (const MethodInfo_353FC4C *)Method_System_Collections_Generic_List_Enumerator_GameObject__MoveNext__) )
   {
-    current = v22.fields._current;
+    current = v23.fields._current;
     if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
     if ( UnityEngine_Object__op_Inequality((UnityEngine_Object_o *)current, 0, 0) )
     {
       if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-      UnityEngine_Object__Destroy_71266752((UnityEngine_Object_o *)current, 0);
+      UnityEngine_Object__Destroy_71341564((UnityEngine_Object_o *)current, 0);
     }
   }
   System_Collections_Generic_List_Enumerator_object___Dispose(
-    &v22,
-    (const MethodInfo_352D80C *)Method_System_Collections_Generic_List_Enumerator_GameObject__Dispose__);
-  v17 = this->fields.ObjList;
-  if ( !v17 )
+    &v23,
+    (const MethodInfo_353FC48 *)Method_System_Collections_Generic_List_Enumerator_GameObject__Dispose__);
+  v18 = this->fields.ObjList;
+  if ( !v18 )
 LABEL_32:
-    sub_1C372B4(ObjList);
-  v18 = v17->fields._size;
-  v19 = v17->fields._version + 1;
-  v17->fields._size = 0;
-  v17->fields._version = v19;
-  if ( v18 >= 1 )
-    System_Array__Clear((System_Array_o *)v17->fields._items, 0, v18, 0);
+    sub_1C3E7C0(ObjList, v5);
+  v19 = v18->fields._size;
+  v20 = v18->fields._version + 1;
+  v18->fields._size = 0;
+  v18->fields._version = v20;
+  if ( v19 >= 1 )
+    System_Array__Clear((System_Array_o *)v18->fields._items, 0, v19, 0);
   gameObject = (UnityEngine_Object_o *)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-  UnityEngine_Object__Destroy_71266752(gameObject, 0);
+  UnityEngine_Object__Destroy_71341564(gameObject, 0);
 }
 
 
@@ -800,28 +801,30 @@ System_Collections_IEnumerator_o *BattleMoviePlayer__FadeoutDeleteMovie(
 {
   __int64 v5; // x21
   __int64 v6; // x0
-  int32_t v7; // w2
-  const MethodInfo *v8; // x3
-  int32_t v9; // w2
-  const MethodInfo *v10; // x3
+  __int64 v7; // x1
+  int32_t v8; // w2
+  const MethodInfo *v9; // x3
+  int32_t v10; // w2
+  const MethodInfo *v11; // x3
 
-  if ( (byte_4C45AF5 & 1) == 0 )
+  if ( (byte_4C598D2 & 1) == 0 )
   {
-    sub_1C37058(&BattleMoviePlayer__FadeoutDeleteMovie_d__38_TypeInfo);
-    byte_4C45AF5 = 1;
+    sub_1C3E564(&BattleMoviePlayer__FadeoutDeleteMovie_d__38_TypeInfo);
+    byte_4C598D2 = 1;
   }
-  v5 = sub_1C372A4(BattleMoviePlayer__FadeoutDeleteMovie_d__38_TypeInfo);
+  v5 = sub_1C3E7B0(BattleMoviePlayer__FadeoutDeleteMovie_d__38_TypeInfo);
   BattleMoviePlayer__FadeoutDeleteMovie_d__38___ctor((BattleMoviePlayer__FadeoutDeleteMovie_d__38_o *)v5, 0, 0);
   if ( !v5 )
-    sub_1C372B4(v6);
+    sub_1C3E7C0(v6, v7);
   *(_QWORD *)(v5 + 32) = this;
-  sub_1C36FFC((CGThumbnailListItem_o *)(v5 + 32), (int32_t)this, v7, v8);
+  sub_1C3E508((CGThumbnailListItem_o *)(v5 + 32), (int32_t)this, v8, v9);
   *(_QWORD *)(v5 + 40) = FadeOuted;
-  sub_1C36FFC((CGThumbnailListItem_o *)(v5 + 40), (int32_t)FadeOuted, v9, v10);
+  sub_1C3E508((CGThumbnailListItem_o *)(v5 + 40), (int32_t)FadeOuted, v10, v11);
   return (System_Collections_IEnumerator_o *)v5;
 }
 
 
+// local variable allocation has failed, the output may be wrong!
 void BattleMoviePlayer__GetMoviePanelAdd(BattleMoviePlayer_o *this, int32_t i, const MethodInfo *method)
 {
   System_Collections_Generic_List_object__o *MovieInfoList; // x0
@@ -831,24 +834,24 @@ void BattleMoviePlayer__GetMoviePanelAdd(BattleMoviePlayer_o *this, int32_t i, c
   int32_t v9; // w2
   const MethodInfo *v10; // x3
 
-  if ( (byte_4C45AF1 & 1) == 0 )
+  if ( (byte_4C598CE & 1) == 0 )
   {
-    sub_1C37058(&Method_System_Collections_Generic_List_BattleMoviePlayer_MovieInfo__get_Count__);
-    sub_1C37058(&Method_System_Collections_Generic_List_BattleMoviePlayer_MovieInfo__get_Item__);
-    byte_4C45AF1 = 1;
+    sub_1C3E564(&Method_System_Collections_Generic_List_BattleMoviePlayer_MovieInfo__get_Count__);
+    sub_1C3E564(&Method_System_Collections_Generic_List_BattleMoviePlayer_MovieInfo__get_Item__);
+    byte_4C598CE = 1;
   }
   MovieInfoList = (System_Collections_Generic_List_object__o *)this->fields.MovieInfoList;
   if ( !MovieInfoList )
-    sub_1C372B4(0);
+    sub_1C3E7C0(0, *(_QWORD *)&i);
   if ( MovieInfoList->fields._size > i )
   {
     Item = System_Collections_Generic_List_object___get_Item(
              MovieInfoList,
              i,
-             (const MethodInfo_37A2D54 *)Method_System_Collections_Generic_List_BattleMoviePlayer_MovieInfo__get_Item__);
+             (const MethodInfo_37B5190 *)Method_System_Collections_Generic_List_BattleMoviePlayer_MovieInfo__get_Item__);
     BattleMoviePanel = BattleMoviePlayer__CreateBattleMoviePanel(this, (BattleMoviePlayer_MovieInfo_o *)Item, i, v7);
     this->fields.nextMovieObj = BattleMoviePanel;
-    sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.nextMovieObj, (int32_t)BattleMoviePanel, v9, v10);
+    sub_1C3E508((CGThumbnailListItem_o *)&this->fields.nextMovieObj, (int32_t)BattleMoviePanel, v9, v10);
   }
 }
 
@@ -860,24 +863,25 @@ System_Collections_IEnumerator_o *BattleMoviePlayer__GetMoviePanelFirst(
 {
   __int64 v5; // x21
   __int64 v6; // x0
-  int32_t v7; // w2
-  const MethodInfo *v8; // x3
-  int32_t v9; // w2
-  const MethodInfo *v10; // x3
+  __int64 v7; // x1
+  int32_t v8; // w2
+  const MethodInfo *v9; // x3
+  int32_t v10; // w2
+  const MethodInfo *v11; // x3
 
-  if ( (byte_4C45AF0 & 1) == 0 )
+  if ( (byte_4C598CD & 1) == 0 )
   {
-    sub_1C37058(&BattleMoviePlayer__GetMoviePanelFirst_d__30_TypeInfo);
-    byte_4C45AF0 = 1;
+    sub_1C3E564(&BattleMoviePlayer__GetMoviePanelFirst_d__30_TypeInfo);
+    byte_4C598CD = 1;
   }
-  v5 = sub_1C372A4(BattleMoviePlayer__GetMoviePanelFirst_d__30_TypeInfo);
+  v5 = sub_1C3E7B0(BattleMoviePlayer__GetMoviePanelFirst_d__30_TypeInfo);
   BattleMoviePlayer__GetMoviePanelFirst_d__30___ctor((BattleMoviePlayer__GetMoviePanelFirst_d__30_o *)v5, 0, 0);
   if ( !v5 )
-    sub_1C372B4(v6);
+    sub_1C3E7C0(v6, v7);
   *(_QWORD *)(v5 + 32) = this;
-  sub_1C36FFC((CGThumbnailListItem_o *)(v5 + 32), (int32_t)this, v7, v8);
+  sub_1C3E508((CGThumbnailListItem_o *)(v5 + 32), (int32_t)this, v8, v9);
   *(_QWORD *)(v5 + 40) = performance;
-  sub_1C36FFC((CGThumbnailListItem_o *)(v5 + 40), (int32_t)performance, v9, v10);
+  sub_1C3E508((CGThumbnailListItem_o *)(v5 + 40), (int32_t)performance, v10, v11);
   return (System_Collections_IEnumerator_o *)v5;
 }
 
@@ -888,28 +892,29 @@ void BattleMoviePlayer__InitMovie(
         int32_t pathnum,
         const MethodInfo *method)
 {
+  __int64 v7; // x1
   void *MovieInfoList; // x0
-  System_String_o *v8; // x22
+  System_String_o *v9; // x22
   AssetData_o *AssetStorageData; // x0
-  System_String_o *v10; // x22
-  int v11; // w8
-  System_Collections_Generic_List_object__o *v12; // x8
-  System_String_o *v13; // x21
-  __int64 *v14; // x8
-  System_Collections_Generic_List_object__o *v15; // x8
+  System_String_o *v11; // x22
+  int v12; // w8
+  System_Collections_Generic_List_object__o *v13; // x8
+  System_String_o *v14; // x21
+  __int64 *v15; // x8
+  System_Collections_Generic_List_object__o *v16; // x8
   UnityEngine_Object_o *Component_object; // x19
 
-  if ( (byte_4C45AF9 & 1) == 0 )
+  if ( (byte_4C598D6 & 1) == 0 )
   {
-    sub_1C37058(&UnityEngine_Application_TypeInfo);
-    sub_1C37058(&AssetManager_TypeInfo);
-    sub_1C37058(&Method_UnityEngine_GameObject_GetComponent_CriManaMovieController___);
-    sub_1C37058(&Method_System_Collections_Generic_List_BattleMoviePlayer_MovieInfo__get_Item__);
-    sub_1C37058(&UnityEngine_Object_TypeInfo);
-    sub_1C37058(&StringLiteral_1046/*".usm"*/);
-    sub_1C37058(&StringLiteral_1092/*"/StreamingAssets/"*/);
-    sub_1C37058(&StringLiteral_1087/*"/Resources/"*/);
-    byte_4C45AF9 = 1;
+    sub_1C3E564(&UnityEngine_Application_TypeInfo);
+    sub_1C3E564(&AssetManager_TypeInfo);
+    sub_1C3E564(&Method_UnityEngine_GameObject_GetComponent_CriManaMovieController___);
+    sub_1C3E564(&Method_System_Collections_Generic_List_BattleMoviePlayer_MovieInfo__get_Item__);
+    sub_1C3E564(&UnityEngine_Object_TypeInfo);
+    sub_1C3E564(&StringLiteral_1046/*".usm"*/);
+    sub_1C3E564(&StringLiteral_1092/*"/StreamingAssets/"*/);
+    sub_1C3E564(&StringLiteral_1087/*"/Resources/"*/);
+    byte_4C598D6 = 1;
   }
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
@@ -921,81 +926,81 @@ void BattleMoviePlayer__InitMovie(
     MovieInfoList = System_Collections_Generic_List_object___get_Item(
                       (System_Collections_Generic_List_object__o *)MovieInfoList,
                       pathnum,
-                      (const MethodInfo_37A2D54 *)Method_System_Collections_Generic_List_BattleMoviePlayer_MovieInfo__get_Item__);
+                      (const MethodInfo_37B5190 *)Method_System_Collections_Generic_List_BattleMoviePlayer_MovieInfo__get_Item__);
     if ( !MovieInfoList )
       goto LABEL_41;
-    v8 = (System_String_o *)*((_QWORD *)MovieInfoList + 3);
-    if ( !v8 )
+    v9 = (System_String_o *)*((_QWORD *)MovieInfoList + 3);
+    if ( !v9 )
       goto LABEL_41;
     if ( !System_String__EndsWith(*((System_String_o **)MovieInfoList + 3), (System_String_o *)StringLiteral_1046/*".usm"*/, 0) )
-      v8 = System_String__Concat_63561656(v8, (System_String_o *)StringLiteral_1046/*".usm"*/, 0);
+      v9 = System_String__Concat_63636468(v9, (System_String_o *)StringLiteral_1046/*".usm"*/, 0);
     if ( !AssetManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(AssetManager_TypeInfo);
-    AssetStorageData = AssetManager__getAssetStorageData(v8, 0);
-    v10 = AssetStorageData ? AssetData__get_Path(AssetStorageData, 0) : 0LL;
+    AssetStorageData = AssetManager__getAssetStorageData(v9, 0);
+    v11 = AssetStorageData ? AssetData__get_Path(AssetStorageData, 0) : 0LL;
     MovieInfoList = this->fields.MovieInfoList;
     if ( !MovieInfoList )
       goto LABEL_41;
     MovieInfoList = System_Collections_Generic_List_object___get_Item(
                       (System_Collections_Generic_List_object__o *)MovieInfoList,
                       pathnum,
-                      (const MethodInfo_37A2D54 *)Method_System_Collections_Generic_List_BattleMoviePlayer_MovieInfo__get_Item__);
+                      (const MethodInfo_37B5190 *)Method_System_Collections_Generic_List_BattleMoviePlayer_MovieInfo__get_Item__);
     if ( !MovieInfoList )
       goto LABEL_41;
-    v11 = *((_DWORD *)MovieInfoList + 4);
-    if ( v11 == 102 )
+    v12 = *((_DWORD *)MovieInfoList + 4);
+    if ( v12 == 102 )
     {
       if ( !UnityEngine_Application_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(UnityEngine_Application_TypeInfo);
       MovieInfoList = UnityEngine_Application__get_dataPath(0);
-      v15 = (System_Collections_Generic_List_object__o *)this->fields.MovieInfoList;
-      if ( !v15 )
+      v16 = (System_Collections_Generic_List_object__o *)this->fields.MovieInfoList;
+      if ( !v16 )
         goto LABEL_41;
-      v13 = (System_String_o *)MovieInfoList;
+      v14 = (System_String_o *)MovieInfoList;
       MovieInfoList = System_Collections_Generic_List_object___get_Item(
-                        v15,
+                        v16,
                         pathnum,
-                        (const MethodInfo_37A2D54 *)Method_System_Collections_Generic_List_BattleMoviePlayer_MovieInfo__get_Item__);
+                        (const MethodInfo_37B5190 *)Method_System_Collections_Generic_List_BattleMoviePlayer_MovieInfo__get_Item__);
       if ( !MovieInfoList )
         goto LABEL_41;
-      v14 = &StringLiteral_1087/*"/Resources/"*/;
+      v15 = &StringLiteral_1087/*"/Resources/"*/;
     }
     else
     {
-      if ( v11 != 101 )
+      if ( v12 != 101 )
         goto LABEL_31;
       if ( !UnityEngine_Application_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(UnityEngine_Application_TypeInfo);
       MovieInfoList = UnityEngine_Application__get_dataPath(0);
-      v12 = (System_Collections_Generic_List_object__o *)this->fields.MovieInfoList;
-      if ( !v12 )
+      v13 = (System_Collections_Generic_List_object__o *)this->fields.MovieInfoList;
+      if ( !v13 )
         goto LABEL_41;
-      v13 = (System_String_o *)MovieInfoList;
+      v14 = (System_String_o *)MovieInfoList;
       MovieInfoList = System_Collections_Generic_List_object___get_Item(
-                        v12,
+                        v13,
                         pathnum,
-                        (const MethodInfo_37A2D54 *)Method_System_Collections_Generic_List_BattleMoviePlayer_MovieInfo__get_Item__);
+                        (const MethodInfo_37B5190 *)Method_System_Collections_Generic_List_BattleMoviePlayer_MovieInfo__get_Item__);
       if ( !MovieInfoList )
         goto LABEL_41;
-      v14 = &StringLiteral_1092/*"/StreamingAssets/"*/;
+      v15 = &StringLiteral_1092/*"/StreamingAssets/"*/;
     }
-    MovieInfoList = System_String__Concat_63599904(
-                      v13,
-                      (System_String_o *)*v14,
+    MovieInfoList = System_String__Concat_63674716(
+                      v14,
+                      (System_String_o *)*v15,
                       *((System_String_o **)MovieInfoList + 3),
                       0);
-    v10 = (System_String_o *)MovieInfoList;
+    v11 = (System_String_o *)MovieInfoList;
 LABEL_31:
     if ( obj )
     {
       Component_object = (UnityEngine_Object_o *)UnityEngine_GameObject__GetComponent_object_(
                                                    obj,
-                                                   (const MethodInfo_313F1D8 *)Method_UnityEngine_GameObject_GetComponent_CriManaMovieController___);
+                                                   (const MethodInfo_31510CC *)Method_UnityEngine_GameObject_GetComponent_CriManaMovieController___);
       if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
       if ( !UnityEngine_Object__op_Inequality(Component_object, 0, 0) )
         return;
-      MovieInfoList = (void *)System_String__IsNullOrEmpty(v10, 0);
+      MovieInfoList = (void *)System_String__IsNullOrEmpty(v11, 0);
       if ( ((unsigned __int8)MovieInfoList & 1) != 0 )
         return;
       if ( Component_object )
@@ -1003,7 +1008,7 @@ LABEL_31:
         MovieInfoList = Component_object[2].monitor;
         if ( MovieInfoList )
         {
-          CriMana_Player__SetFile((CriMana_Player_o *)MovieInfoList, 0, v10, 0, 0);
+          CriMana_Player__SetFile((CriMana_Player_o *)MovieInfoList, 0, v11, 0, 0);
           MovieInfoList = Component_object[2].monitor;
           if ( MovieInfoList )
           {
@@ -1014,7 +1019,7 @@ LABEL_31:
       }
     }
 LABEL_41:
-    sub_1C372B4(MovieInfoList);
+    sub_1C3E7C0(MovieInfoList, v7);
   }
 }
 
@@ -1024,7 +1029,7 @@ void BattleMoviePlayer__Initialize(BattleMoviePlayer_o *this, BattlePerformance_
   System_Collections_IEnumerator_o *MoviePanelFirst; // x1
 
   MoviePanelFirst = BattleMoviePlayer__GetMoviePanelFirst(this, perf, method);
-  UnityEngine_MonoBehaviour__StartCoroutine_71252324((UnityEngine_MonoBehaviour_o *)this, MoviePanelFirst, 0);
+  UnityEngine_MonoBehaviour__StartCoroutine_71327136((UnityEngine_MonoBehaviour_o *)this, MoviePanelFirst, 0);
 }
 
 
@@ -1038,11 +1043,11 @@ bool BattleMoviePlayer__IsBossCamera(BattleMoviePlayer_o *this, const MethodInfo
   BattleMoviePlayer_c *v7; // x0
 
   v2 = this;
-  if ( (byte_4C45AF6 & 1) == 0 )
+  if ( (byte_4C598D3 & 1) == 0 )
   {
-    sub_1C37058(&BattleMoviePlayer_TypeInfo);
-    this = (BattleMoviePlayer_o *)sub_1C37058(&UnityEngine_Object_TypeInfo);
-    byte_4C45AF6 = 1;
+    sub_1C3E564(&BattleMoviePlayer_TypeInfo);
+    this = (BattleMoviePlayer_o *)sub_1C3E564(&UnityEngine_Object_TypeInfo);
+    byte_4C598D3 = 1;
   }
   perf = v2->fields.perf;
   if ( !perf )
@@ -1065,7 +1070,7 @@ bool BattleMoviePlayer__IsBossCamera(BattleMoviePlayer_o *this, const MethodInfo
       }
     }
 LABEL_16:
-    sub_1C372B4(this);
+    sub_1C3E7C0(this, method);
   }
   v7 = BattleMoviePlayer_TypeInfo;
   if ( !BattleMoviePlayer_TypeInfo->_2.cctor_finished )
@@ -1087,13 +1092,14 @@ LABEL_13:
 bool BattleMoviePlayer__IsPausedMovie(BattleMoviePlayer_o *this, const MethodInfo *method)
 {
   UnityEngine_Object_o *currMovieObj; // x20
+  __int64 v4; // x1
   UnityEngine_GameObject_o *Component_object; // x0
 
-  if ( (byte_4C45AF4 & 1) == 0 )
+  if ( (byte_4C598D1 & 1) == 0 )
   {
-    sub_1C37058(&Method_UnityEngine_GameObject_GetComponent_CriManaMovieController___);
-    sub_1C37058(&UnityEngine_Object_TypeInfo);
-    byte_4C45AF4 = 1;
+    sub_1C3E564(&Method_UnityEngine_GameObject_GetComponent_CriManaMovieController___);
+    sub_1C3E564(&UnityEngine_Object_TypeInfo);
+    byte_4C598D1 = 1;
   }
   currMovieObj = (UnityEngine_Object_o *)this->fields.currMovieObj;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -1104,10 +1110,10 @@ bool BattleMoviePlayer__IsPausedMovie(BattleMoviePlayer_o *this, const MethodInf
   if ( !Component_object
     || (Component_object = (UnityEngine_GameObject_o *)UnityEngine_GameObject__GetComponent_object_(
                                                          Component_object,
-                                                         (const MethodInfo_313F1D8 *)Method_UnityEngine_GameObject_GetComponent_CriManaMovieController___)) == 0
+                                                         (const MethodInfo_31510CC *)Method_UnityEngine_GameObject_GetComponent_CriManaMovieController___)) == 0
     || (Component_object = (UnityEngine_GameObject_o *)Component_object[2].monitor) == 0 )
   {
-    sub_1C372B4(Component_object);
+    sub_1C3E7C0(Component_object, v4);
   }
   return CriMana_Player__IsPaused((CriMana_Player_o *)Component_object, 0);
 }
@@ -1117,26 +1123,27 @@ void BattleMoviePlayer__PauseMovie(BattleMoviePlayer_o *this, bool v, const Meth
 {
   UnityEngine_Object_o *currMovieObj; // x21
   Il2CppObject *Component_object; // x0
-  UnityEngine_GameObject_o *v7; // x21
+  __int64 v7; // x1
+  UnityEngine_GameObject_o *v8; // x21
   System_Collections_Generic_List_T__o *MovieInfoList; // x22
-  BattleMoviePlayer___c_c *v9; // x0
+  BattleMoviePlayer___c_c *v10; // x0
   System_Func_object__bool__o *_9__36_0; // x23
-  Il2CppObject *v11; // x24
+  Il2CppObject *v12; // x24
   struct BattleMoviePlayer___c_StaticFields *static_fields; // x0
-  int32_t v13; // w2
-  const MethodInfo *v14; // x3
-  const MethodInfo *v15; // x2
+  int32_t v14; // w2
+  const MethodInfo *v15; // x3
+  const MethodInfo *v16; // x2
 
-  if ( (byte_4C45AF3 & 1) == 0 )
+  if ( (byte_4C598D0 & 1) == 0 )
   {
-    sub_1C37058(&Method_BasicHelper_Any_BattleMoviePlayer_MovieInfo___);
-    sub_1C37058(&System_Func_BattleMoviePlayer_MovieInfo__bool__TypeInfo);
-    sub_1C37058(&Method_UnityEngine_GameObject_GetComponent_CriManaMovieController___);
-    sub_1C37058(&Method_UnityEngine_GameObject_GetComponent_MeshRenderer___);
-    sub_1C37058(&UnityEngine_Object_TypeInfo);
-    sub_1C37058(&Method_BattleMoviePlayer___c__PauseMovie_b__36_0__);
-    sub_1C37058(&BattleMoviePlayer___c_TypeInfo);
-    byte_4C45AF3 = 1;
+    sub_1C3E564(&Method_BasicHelper_Any_BattleMoviePlayer_MovieInfo___);
+    sub_1C3E564(&System_Func_BattleMoviePlayer_MovieInfo__bool__TypeInfo);
+    sub_1C3E564(&Method_UnityEngine_GameObject_GetComponent_CriManaMovieController___);
+    sub_1C3E564(&Method_UnityEngine_GameObject_GetComponent_MeshRenderer___);
+    sub_1C3E564(&UnityEngine_Object_TypeInfo);
+    sub_1C3E564(&Method_BattleMoviePlayer___c__PauseMovie_b__36_0__);
+    sub_1C3E564(&BattleMoviePlayer___c_TypeInfo);
+    byte_4C598D0 = 1;
   }
   currMovieObj = (UnityEngine_Object_o *)this->fields.currMovieObj;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -1144,12 +1151,12 @@ void BattleMoviePlayer__PauseMovie(BattleMoviePlayer_o *this, bool v, const Meth
   Component_object = (Il2CppObject *)UnityEngine_Object__op_Equality(currMovieObj, 0, 0);
   if ( ((unsigned __int8)Component_object & 1) == 0 )
   {
-    v7 = this->fields.currMovieObj;
-    if ( !v7 )
+    v8 = this->fields.currMovieObj;
+    if ( !v8 )
       goto LABEL_19;
     Component_object = UnityEngine_GameObject__GetComponent_object_(
                          this->fields.currMovieObj,
-                         (const MethodInfo_313F1D8 *)Method_UnityEngine_GameObject_GetComponent_CriManaMovieController___);
+                         (const MethodInfo_31510CC *)Method_UnityEngine_GameObject_GetComponent_CriManaMovieController___);
     if ( !Component_object )
       goto LABEL_19;
     Component_object = (Il2CppObject *)Component_object[3].monitor;
@@ -1157,40 +1164,40 @@ void BattleMoviePlayer__PauseMovie(BattleMoviePlayer_o *this, bool v, const Meth
       goto LABEL_19;
     CriMana_Player__Pause((CriMana_Player_o *)Component_object, v, 0);
     MovieInfoList = (System_Collections_Generic_List_T__o *)this->fields.MovieInfoList;
-    v9 = BattleMoviePlayer___c_TypeInfo;
+    v10 = BattleMoviePlayer___c_TypeInfo;
     if ( !BattleMoviePlayer___c_TypeInfo->_2.cctor_finished )
     {
       j_il2cpp_runtime_class_init_0(BattleMoviePlayer___c_TypeInfo);
-      v9 = BattleMoviePlayer___c_TypeInfo;
+      v10 = BattleMoviePlayer___c_TypeInfo;
     }
-    _9__36_0 = (System_Func_object__bool__o *)v9->static_fields->__9__36_0;
+    _9__36_0 = (System_Func_object__bool__o *)v10->static_fields->__9__36_0;
     if ( !_9__36_0 )
     {
-      if ( !v9->_2.cctor_finished )
+      if ( !v10->_2.cctor_finished )
       {
-        j_il2cpp_runtime_class_init_0(v9);
-        v9 = BattleMoviePlayer___c_TypeInfo;
+        j_il2cpp_runtime_class_init_0(v10);
+        v10 = BattleMoviePlayer___c_TypeInfo;
       }
-      v11 = (Il2CppObject *)v9->static_fields->__9;
-      _9__36_0 = (System_Func_object__bool__o *)sub_1C372A4(System_Func_BattleMoviePlayer_MovieInfo__bool__TypeInfo);
-      System_Func_object__bool____ctor(_9__36_0, v11, Method_BattleMoviePlayer___c__PauseMovie_b__36_0__, 0);
+      v12 = (Il2CppObject *)v10->static_fields->__9;
+      _9__36_0 = (System_Func_object__bool__o *)sub_1C3E7B0(System_Func_BattleMoviePlayer_MovieInfo__bool__TypeInfo);
+      System_Func_object__bool____ctor(_9__36_0, v12, Method_BattleMoviePlayer___c__PauseMovie_b__36_0__, 0);
       static_fields = BattleMoviePlayer___c_TypeInfo->static_fields;
       static_fields->__9__36_0 = (struct System_Func_BattleMoviePlayer_MovieInfo__bool__o *)_9__36_0;
-      sub_1C36FFC((CGThumbnailListItem_o *)&static_fields->__9__36_0, (int32_t)_9__36_0, v13, v14);
+      sub_1C3E508((CGThumbnailListItem_o *)&static_fields->__9__36_0, (int32_t)_9__36_0, v14, v15);
     }
     if ( BasicHelper__Any_object_(
            MovieInfoList,
            (System_Func_T__bool__o *)_9__36_0,
-           (const MethodInfo_30D0FF8 *)Method_BasicHelper_Any_BattleMoviePlayer_MovieInfo___) )
+           (const MethodInfo_30E2E10 *)Method_BasicHelper_Any_BattleMoviePlayer_MovieInfo___) )
     {
-      BattleMoviePlayer__ShowBg(this, v, v15);
+      BattleMoviePlayer__ShowBg(this, v, v16);
     }
     Component_object = UnityEngine_GameObject__GetComponent_object_(
-                         v7,
-                         (const MethodInfo_313F1D8 *)Method_UnityEngine_GameObject_GetComponent_MeshRenderer___);
+                         v8,
+                         (const MethodInfo_31510CC *)Method_UnityEngine_GameObject_GetComponent_MeshRenderer___);
     if ( !Component_object )
 LABEL_19:
-      sub_1C372B4(Component_object);
+      sub_1C3E7C0(Component_object, v7);
     UnityEngine_Renderer__set_enabled((UnityEngine_Renderer_o *)Component_object, !v, 0);
   }
 }
@@ -1204,24 +1211,25 @@ System_Collections_IEnumerator_o *BattleMoviePlayer__PlayMovie(
 {
   __int64 v7; // x22
   __int64 v8; // x0
-  int32_t v9; // w2
-  const MethodInfo *v10; // x3
-  int32_t v11; // w2
-  const MethodInfo *v12; // x3
+  __int64 v9; // x1
+  int32_t v10; // w2
+  const MethodInfo *v11; // x3
+  int32_t v12; // w2
+  const MethodInfo *v13; // x3
 
-  if ( (byte_4C45AF7 & 1) == 0 )
+  if ( (byte_4C598D4 & 1) == 0 )
   {
-    sub_1C37058(&BattleMoviePlayer__PlayMovie_d__44_TypeInfo);
-    byte_4C45AF7 = 1;
+    sub_1C3E564(&BattleMoviePlayer__PlayMovie_d__44_TypeInfo);
+    byte_4C598D4 = 1;
   }
-  v7 = sub_1C372A4(BattleMoviePlayer__PlayMovie_d__44_TypeInfo);
+  v7 = sub_1C3E7B0(BattleMoviePlayer__PlayMovie_d__44_TypeInfo);
   BattleMoviePlayer__PlayMovie_d__44___ctor((BattleMoviePlayer__PlayMovie_d__44_o *)v7, 0, 0);
   if ( !v7 )
-    sub_1C372B4(v8);
+    sub_1C3E7C0(v8, v9);
   *(_QWORD *)(v7 + 32) = this;
-  sub_1C36FFC((CGThumbnailListItem_o *)(v7 + 32), (int32_t)this, v9, v10);
+  sub_1C3E508((CGThumbnailListItem_o *)(v7 + 32), (int32_t)this, v10, v11);
   *(_QWORD *)(v7 + 40) = movieObj;
-  sub_1C36FFC((CGThumbnailListItem_o *)(v7 + 40), (int32_t)movieObj, v11, v12);
+  sub_1C3E508((CGThumbnailListItem_o *)(v7 + 40), (int32_t)movieObj, v12, v13);
   *(_DWORD *)(v7 + 48) = num;
   return (System_Collections_IEnumerator_o *)v7;
 }
@@ -1236,30 +1244,32 @@ System_Collections_IEnumerator_o *BattleMoviePlayer__PlayMovieFadeOut(
 {
   __int64 v9; // x23
   __int64 v10; // x0
-  int32_t v11; // w2
-  const MethodInfo *v12; // x3
-  int32_t v13; // w2
-  const MethodInfo *v14; // x3
+  __int64 v11; // x1
+  int32_t v12; // w2
+  const MethodInfo *v13; // x3
+  int32_t v14; // w2
+  const MethodInfo *v15; // x3
 
-  if ( (byte_4C45AF8 & 1) == 0 )
+  if ( (byte_4C598D5 & 1) == 0 )
   {
-    sub_1C37058(&BattleMoviePlayer__PlayMovieFadeOut_d__45_TypeInfo);
-    byte_4C45AF8 = 1;
+    sub_1C3E564(&BattleMoviePlayer__PlayMovieFadeOut_d__45_TypeInfo);
+    byte_4C598D5 = 1;
   }
-  v9 = sub_1C372A4(BattleMoviePlayer__PlayMovieFadeOut_d__45_TypeInfo);
+  v9 = sub_1C3E7B0(BattleMoviePlayer__PlayMovieFadeOut_d__45_TypeInfo);
   BattleMoviePlayer__PlayMovieFadeOut_d__45___ctor((BattleMoviePlayer__PlayMovieFadeOut_d__45_o *)v9, 0, 0);
   if ( !v9 )
-    sub_1C372B4(v10);
+    sub_1C3E7C0(v10, v11);
   *(_QWORD *)(v9 + 40) = this;
-  sub_1C36FFC((CGThumbnailListItem_o *)(v9 + 40), (int32_t)this, v11, v12);
+  sub_1C3E508((CGThumbnailListItem_o *)(v9 + 40), (int32_t)this, v12, v13);
   *(_QWORD *)(v9 + 32) = movieObj;
-  sub_1C36FFC((CGThumbnailListItem_o *)(v9 + 32), (int32_t)movieObj, v13, v14);
+  sub_1C3E508((CGThumbnailListItem_o *)(v9 + 32), (int32_t)movieObj, v14, v15);
   *(_DWORD *)(v9 + 48) = num;
   *(_BYTE *)(v9 + 52) = forceFadeout;
   return (System_Collections_IEnumerator_o *)v9;
 }
 
 
+// local variable allocation has failed, the output may be wrong!
 void BattleMoviePlayer__ShowBg(BattleMoviePlayer_o *this, bool v, const MethodInfo *method)
 {
   BattleMoviePlayer_o *v3; // x19
@@ -1284,7 +1294,7 @@ LABEL_12:
       }
     }
 LABEL_13:
-    sub_1C372B4(this);
+    sub_1C3E7C0(this, v);
   }
   if ( this->fields.IsBackMovie )
     goto LABEL_9;
@@ -1314,20 +1324,21 @@ System_Collections_IEnumerator_o *BattleMoviePlayer__StartMovie(BattleMoviePlaye
 {
   __int64 v3; // x20
   __int64 v4; // x0
-  int32_t v5; // w2
-  const MethodInfo *v6; // x3
+  __int64 v5; // x1
+  int32_t v6; // w2
+  const MethodInfo *v7; // x3
 
-  if ( (byte_4C45AF2 & 1) == 0 )
+  if ( (byte_4C598CF & 1) == 0 )
   {
-    sub_1C37058(&BattleMoviePlayer__StartMovie_d__35_TypeInfo);
-    byte_4C45AF2 = 1;
+    sub_1C3E564(&BattleMoviePlayer__StartMovie_d__35_TypeInfo);
+    byte_4C598CF = 1;
   }
-  v3 = sub_1C372A4(BattleMoviePlayer__StartMovie_d__35_TypeInfo);
+  v3 = sub_1C3E7B0(BattleMoviePlayer__StartMovie_d__35_TypeInfo);
   BattleMoviePlayer__StartMovie_d__35___ctor((BattleMoviePlayer__StartMovie_d__35_o *)v3, 0, 0);
   if ( !v3 )
-    sub_1C372B4(v4);
+    sub_1C3E7C0(v4, v5);
   *(_QWORD *)(v3 + 32) = this;
-  sub_1C36FFC((CGThumbnailListItem_o *)(v3 + 32), (int32_t)this, v5, v6);
+  sub_1C3E508((CGThumbnailListItem_o *)(v3 + 32), (int32_t)this, v6, v7);
   return (System_Collections_IEnumerator_o *)v3;
 }
 
@@ -1381,13 +1392,13 @@ void BattleMoviePlayer_MovieInfo___ctor(
   System_Object___ctor((Il2CppObject *)this, 0);
   this->fields.pathType = type;
   this->fields.moviePath = path;
-  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.moviePath, (int32_t)path, v27, v28);
+  sub_1C3E508((CGThumbnailListItem_o *)&this->fields.moviePath, (int32_t)path, v27, v28);
   this->fields.effectEvent = eff;
   this->fields.validTime = valid;
   this->fields.fadeRestTime = fade;
   this->fields.cameraType = cam;
   this->fields.playSpeed = speed;
-  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.effectEvent, (int32_t)eff, v29, v30);
+  sub_1C3E508((CGThumbnailListItem_o *)&this->fields.effectEvent, (int32_t)eff, v29, v30);
   this->fields.effectRestTime = effRest;
   this->fields.ignoreTimeScale = v24;
   this->fields.fadeinTime = fadein;
@@ -1457,14 +1468,14 @@ bool BattleMoviePlayer__FadeoutDeleteMovie_d__38__MoveNext(
   struct System_Action_o *FadeOuted; // x8
 
   v2 = this;
-  if ( (byte_4C45AFE & 1) == 0 )
+  if ( (byte_4C598DB & 1) == 0 )
   {
-    sub_1C37058(&Method_BasicHelper_Any_BattleMoviePlayer_MovieInfo___);
-    sub_1C37058(&System_Func_BattleMoviePlayer_MovieInfo__bool__TypeInfo);
-    sub_1C37058(&UnityEngine_Object_TypeInfo);
-    sub_1C37058(&Method_BattleMoviePlayer___c__FadeoutDeleteMovie_b__38_0__);
-    this = (BattleMoviePlayer__FadeoutDeleteMovie_d__38_o *)sub_1C37058(&BattleMoviePlayer___c_TypeInfo);
-    byte_4C45AFE = 1;
+    sub_1C3E564(&Method_BasicHelper_Any_BattleMoviePlayer_MovieInfo___);
+    sub_1C3E564(&System_Func_BattleMoviePlayer_MovieInfo__bool__TypeInfo);
+    sub_1C3E564(&UnityEngine_Object_TypeInfo);
+    sub_1C3E564(&Method_BattleMoviePlayer___c__FadeoutDeleteMovie_b__38_0__);
+    this = (BattleMoviePlayer__FadeoutDeleteMovie_d__38_o *)sub_1C3E564(&BattleMoviePlayer___c_TypeInfo);
+    byte_4C598DB = 1;
   }
   _1__state = v2->fields.__1__state;
   _4__this = v2->fields.__4__this;
@@ -1503,23 +1514,23 @@ bool BattleMoviePlayer__FadeoutDeleteMovie_d__38__MoveNext(
             v9 = BattleMoviePlayer___c_TypeInfo;
           }
           v11 = (Il2CppObject *)v9->static_fields->__9;
-          _9__38_0 = (System_Func_object__bool__o *)sub_1C372A4(System_Func_BattleMoviePlayer_MovieInfo__bool__TypeInfo);
+          _9__38_0 = (System_Func_object__bool__o *)sub_1C3E7B0(System_Func_BattleMoviePlayer_MovieInfo__bool__TypeInfo);
           System_Func_object__bool____ctor(_9__38_0, v11, Method_BattleMoviePlayer___c__FadeoutDeleteMovie_b__38_0__, 0);
           static_fields = BattleMoviePlayer___c_TypeInfo->static_fields;
           static_fields->__9__38_0 = (struct System_Func_BattleMoviePlayer_MovieInfo__bool__o *)_9__38_0;
-          sub_1C36FFC((CGThumbnailListItem_o *)&static_fields->__9__38_0, (int32_t)_9__38_0, v13, v14);
+          sub_1C3E508((CGThumbnailListItem_o *)&static_fields->__9__38_0, (int32_t)_9__38_0, v13, v14);
         }
         if ( BasicHelper__Any_object_(
                MovieInfoList,
                (System_Func_T__bool__o *)_9__38_0,
-               (const MethodInfo_30D0FF8 *)Method_BasicHelper_Any_BattleMoviePlayer_MovieInfo___) )
+               (const MethodInfo_30E2E10 *)Method_BasicHelper_Any_BattleMoviePlayer_MovieInfo___) )
         {
           BattleMoviePlayer__ShowBg(_4__this, 1, 0);
         }
-        started = UnityEngine_MonoBehaviour__StartCoroutine_71252324((UnityEngine_MonoBehaviour_o *)_4__this, v8, 0);
+        started = UnityEngine_MonoBehaviour__StartCoroutine_71327136((UnityEngine_MonoBehaviour_o *)_4__this, v8, 0);
         v2->fields.__2__current = (Il2CppObject *)started;
         p__2__current = (CGThumbnailListItem_o *)&v2->fields.__2__current;
-        sub_1C36FFC(p__2__current, (int32_t)started, v17, v18);
+        sub_1C3E508(p__2__current, (int32_t)started, v17, v18);
         LOBYTE(perf) = 1;
         LODWORD(p__2__current[-1].fields._ThumbnailSpritePath_k__BackingField) = 1;
         return (char)perf;
@@ -1529,7 +1540,7 @@ LABEL_23:
       return (char)perf;
     }
 LABEL_25:
-    sub_1C372B4(this);
+    sub_1C3E7C0(this, method);
   }
   v2->fields.__1__state = -1;
   if ( !_4__this )
@@ -1566,11 +1577,11 @@ void __noreturn BattleMoviePlayer__FadeoutDeleteMovie_d__38__System_Collections_
   System_NotSupportedException_o *v3; // x19
   __int64 v4; // x0
 
-  v2 = sub_1C3706C(&System_NotSupportedException_TypeInfo);
-  v3 = (System_NotSupportedException_o *)sub_1C372A4(v2);
+  v2 = sub_1C3E578(&System_NotSupportedException_TypeInfo);
+  v3 = (System_NotSupportedException_o *)sub_1C3E7B0(v2);
   System_NotSupportedException___ctor(v3, 0);
-  v4 = sub_1C3706C(&Method_BattleMoviePlayer__FadeoutDeleteMovie_d__38_System_Collections_IEnumerator_Reset__);
-  sub_1C37180(v3, v4);
+  v4 = sub_1C3E578(&Method_BattleMoviePlayer__FadeoutDeleteMovie_d__38_System_Collections_IEnumerator_Reset__);
+  sub_1C3E68C(v3, v4);
 }
 
 
@@ -1627,14 +1638,14 @@ bool BattleMoviePlayer__GetMoviePanelFirst_d__30__MoveNext(
   const MethodInfo *v22; // x3
 
   v2 = this;
-  if ( (byte_4C45AFF & 1) == 0 )
+  if ( (byte_4C598DC & 1) == 0 )
   {
-    sub_1C37058(&Method_UnityEngine_GameObject_GetComponent_BattlePerformance___);
-    sub_1C37058(&Method_System_Collections_Generic_List_BattleMoviePlayer_MovieInfo__get_Count__);
-    sub_1C37058(&Method_System_Collections_Generic_List_BattleMoviePlayer_MovieInfo__get_Item__);
-    sub_1C37058(&UnityEngine_Object_TypeInfo);
-    this = (BattleMoviePlayer__GetMoviePanelFirst_d__30_o *)sub_1C37058(&StringLiteral_10602/*"Performance"*/);
-    byte_4C45AFF = 1;
+    sub_1C3E564(&Method_UnityEngine_GameObject_GetComponent_BattlePerformance___);
+    sub_1C3E564(&Method_System_Collections_Generic_List_BattleMoviePlayer_MovieInfo__get_Count__);
+    sub_1C3E564(&Method_System_Collections_Generic_List_BattleMoviePlayer_MovieInfo__get_Item__);
+    sub_1C3E564(&UnityEngine_Object_TypeInfo);
+    this = (BattleMoviePlayer__GetMoviePanelFirst_d__30_o *)sub_1C3E564(&StringLiteral_10604/*"Performance"*/);
+    byte_4C598DC = 1;
   }
   if ( !v2->fields.__1__state )
   {
@@ -1655,7 +1666,7 @@ bool BattleMoviePlayer__GetMoviePanelFirst_d__30__MoveNext(
     {
       v9 = v2->fields.performance;
       *p_perf = (Il2CppObject *)v9;
-      sub_1C36FFC((CGThumbnailListItem_o *)&_4__this->fields.perf, (int32_t)v9, v7, v8);
+      sub_1C3E508((CGThumbnailListItem_o *)&_4__this->fields.perf, (int32_t)v9, v7, v8);
     }
     v10 = (UnityEngine_Object_o *)*p_perf;
     if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -1663,15 +1674,15 @@ bool BattleMoviePlayer__GetMoviePanelFirst_d__30__MoveNext(
     if ( !UnityEngine_Object__op_Equality(v10, 0, 0) )
       goto LABEL_19;
     this = (BattleMoviePlayer__GetMoviePanelFirst_d__30_o *)UnityEngine_GameObject__Find(
-                                                              (System_String_o *)StringLiteral_10602/*"Performance"*/,
+                                                              (System_String_o *)StringLiteral_10604/*"Performance"*/,
                                                               0);
     if ( !this )
       goto LABEL_25;
     Component_object = UnityEngine_GameObject__GetComponent_object_(
                          (UnityEngine_GameObject_o *)this,
-                         (const MethodInfo_313F1D8 *)Method_UnityEngine_GameObject_GetComponent_BattlePerformance___);
+                         (const MethodInfo_31510CC *)Method_UnityEngine_GameObject_GetComponent_BattlePerformance___);
     *p_perf = Component_object;
-    sub_1C36FFC((CGThumbnailListItem_o *)&_4__this->fields.perf, (int32_t)Component_object, v12, v13);
+    sub_1C3E508((CGThumbnailListItem_o *)&_4__this->fields.perf, (int32_t)Component_object, v12, v13);
     v14 = (UnityEngine_Object_o *)*p_perf;
     if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
@@ -1685,10 +1696,10 @@ LABEL_19:
           || (v15 = System_Collections_Generic_List_object___get_Item(
                       (System_Collections_Generic_List_object__o *)this,
                       0,
-                      (const MethodInfo_37A2D54 *)Method_System_Collections_Generic_List_BattleMoviePlayer_MovieInfo__get_Item__),
+                      (const MethodInfo_37B5190 *)Method_System_Collections_Generic_List_BattleMoviePlayer_MovieInfo__get_Item__),
               v16 = BattleMoviePlayer__CreateBattleMoviePanel(_4__this, (BattleMoviePlayer_MovieInfo_o *)v15, 0, 0),
               _4__this->fields.currMovieObj = v16,
-              sub_1C36FFC((CGThumbnailListItem_o *)&_4__this->fields.currMovieObj, (int32_t)v16, v17, v18),
+              sub_1C3E508((CGThumbnailListItem_o *)&_4__this->fields.currMovieObj, (int32_t)v16, v17, v18),
               (this = (BattleMoviePlayer__GetMoviePanelFirst_d__30_o *)_4__this->fields.MovieInfoList) != 0) )
         {
           if ( SLODWORD(this->fields.__2__current) > 1 )
@@ -1696,20 +1707,20 @@ LABEL_19:
             Item = System_Collections_Generic_List_object___get_Item(
                      (System_Collections_Generic_List_object__o *)this,
                      1,
-                     (const MethodInfo_37A2D54 *)Method_System_Collections_Generic_List_BattleMoviePlayer_MovieInfo__get_Item__);
+                     (const MethodInfo_37B5190 *)Method_System_Collections_Generic_List_BattleMoviePlayer_MovieInfo__get_Item__);
             BattleMoviePanel = BattleMoviePlayer__CreateBattleMoviePanel(
                                  _4__this,
                                  (BattleMoviePlayer_MovieInfo_o *)Item,
                                  1,
                                  0);
             _4__this->fields.nextMovieObj = BattleMoviePanel;
-            sub_1C36FFC((CGThumbnailListItem_o *)&_4__this->fields.nextMovieObj, (int32_t)BattleMoviePanel, v21, v22);
+            sub_1C3E508((CGThumbnailListItem_o *)&_4__this->fields.nextMovieObj, (int32_t)BattleMoviePanel, v21, v22);
           }
           return 0;
         }
       }
 LABEL_25:
-      sub_1C372B4(this);
+      sub_1C3E7C0(this, method);
     }
   }
   return 0;
@@ -1732,11 +1743,11 @@ void __noreturn BattleMoviePlayer__GetMoviePanelFirst_d__30__System_Collections_
   System_NotSupportedException_o *v3; // x19
   __int64 v4; // x0
 
-  v2 = sub_1C3706C(&System_NotSupportedException_TypeInfo);
-  v3 = (System_NotSupportedException_o *)sub_1C372A4(v2);
+  v2 = sub_1C3E578(&System_NotSupportedException_TypeInfo);
+  v3 = (System_NotSupportedException_o *)sub_1C3E7B0(v2);
   System_NotSupportedException___ctor(v3, 0);
-  v4 = sub_1C3706C(&Method_BattleMoviePlayer__GetMoviePanelFirst_d__30_System_Collections_IEnumerator_Reset__);
-  sub_1C37180(v3, v4);
+  v4 = sub_1C3E578(&Method_BattleMoviePlayer__GetMoviePanelFirst_d__30_System_Collections_IEnumerator_Reset__);
+  sub_1C3E68C(v3, v4);
 }
 
 
@@ -1809,7 +1820,7 @@ bool BattleMoviePlayer__PlayMovieFadeOut_d__45__MoveNext(
   struct BattlePerformance_o *perf; // x8
   float v38; // w10
   __int64 v39; // x9
-  struct BattlePerformance_o *v40; // x8
+  UnityEngine_Vector3_o *v40; // x8
   float x; // s8
   float y; // s9
   float z; // s10
@@ -1869,18 +1880,18 @@ bool BattleMoviePlayer__PlayMovieFadeOut_d__45__MoveNext(
   UnityEngine_Vector3_o v97; // 0:s0.4,4:s1.4,8:s2.4
 
   v4 = this;
-  if ( (byte_4C45B01 & 1) == 0 )
+  if ( (byte_4C598DE & 1) == 0 )
   {
-    sub_1C37058(&BattleMoviePlayer_TypeInfo);
-    sub_1C37058(&Method_UnityEngine_GameObject_GetComponent_MeshRenderer___);
-    sub_1C37058(&Method_System_Collections_Generic_List_GameObject__Remove__);
-    sub_1C37058(&Method_System_Collections_Generic_List_BattleMoviePlayer_MovieInfo__get_Count__);
-    sub_1C37058(&Method_System_Collections_Generic_List_BattleMoviePlayer_MovieInfo__get_Item__);
-    sub_1C37058(&UnityEngine_Object_TypeInfo);
-    sub_1C37058(&StringLiteral_16420/*"_ZWriteMode"*/);
-    sub_1C37058(&StringLiteral_16419/*"_ZTestMode"*/);
-    this = (BattleMoviePlayer__PlayMovieFadeOut_d__45_o *)sub_1C37058(&StringLiteral_16385/*"_Transparency"*/);
-    byte_4C45B01 = 1;
+    sub_1C3E564(&BattleMoviePlayer_TypeInfo);
+    sub_1C3E564(&Method_UnityEngine_GameObject_GetComponent_MeshRenderer___);
+    sub_1C3E564(&Method_System_Collections_Generic_List_GameObject__Remove__);
+    sub_1C3E564(&Method_System_Collections_Generic_List_BattleMoviePlayer_MovieInfo__get_Count__);
+    sub_1C3E564(&Method_System_Collections_Generic_List_BattleMoviePlayer_MovieInfo__get_Item__);
+    sub_1C3E564(&UnityEngine_Object_TypeInfo);
+    sub_1C3E564(&StringLiteral_16430/*"_ZWriteMode"*/);
+    sub_1C3E564(&StringLiteral_16429/*"_ZTestMode"*/);
+    this = (BattleMoviePlayer__PlayMovieFadeOut_d__45_o *)sub_1C3E564(&StringLiteral_16395/*"_Transparency"*/);
+    byte_4C598DE = 1;
   }
   _1__state = v4->fields.__1__state;
   _4__this = v4->fields.__4__this;
@@ -1909,7 +1920,7 @@ bool BattleMoviePlayer__PlayMovieFadeOut_d__45__MoveNext(
           goto LABEL_121;
       }
       *(_QWORD *)&this->fields.num = 0;
-      sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.num, 0, v2, v3);
+      sub_1C3E508((CGThumbnailListItem_o *)&this->fields.num, 0, v2, v3);
     }
     num = v4->fields.num;
     if ( num < 0 )
@@ -1934,22 +1945,22 @@ LABEL_105:
           goto LABEL_121;
       }
       *(_QWORD *)&this->fields.num = 0;
-      sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.num, 0, v2, v3);
+      sub_1C3E508((CGThumbnailListItem_o *)&this->fields.num, 0, v2, v3);
       if ( !v4->fields._pastError_5__5 )
       {
         this = (BattleMoviePlayer__PlayMovieFadeOut_d__45_o *)v4->fields._movieMaterial_5__2;
         if ( !this )
           goto LABEL_121;
-        UnityEngine_Material__SetInt((UnityEngine_Material_o *)this, (System_String_o *)StringLiteral_16419/*"_ZTestMode"*/, 4, 0);
+        UnityEngine_Material__SetInt((UnityEngine_Material_o *)this, (System_String_o *)StringLiteral_16429/*"_ZTestMode"*/, 4, 0);
         this = (BattleMoviePlayer__PlayMovieFadeOut_d__45_o *)v4->fields._movieMaterial_5__2;
         if ( !this )
           goto LABEL_121;
-        UnityEngine_Material__SetFloat((UnityEngine_Material_o *)this, (System_String_o *)StringLiteral_16385/*"_Transparency"*/, 1.0, 0);
+        UnityEngine_Material__SetFloat((UnityEngine_Material_o *)this, (System_String_o *)StringLiteral_16395/*"_Transparency"*/, 1.0, 0);
       }
       v4->fields._movieMaterial_5__2 = 0;
-      sub_1C36FFC((CGThumbnailListItem_o *)&v4->fields._movieMaterial_5__2, 0, v78, v79);
+      sub_1C3E508((CGThumbnailListItem_o *)&v4->fields._movieMaterial_5__2, 0, v78, v79);
       v4->fields._movInfo_5__3 = 0;
-      sub_1C36FFC((CGThumbnailListItem_o *)&v4->fields._movInfo_5__3, 0, v80, v81);
+      sub_1C3E508((CGThumbnailListItem_o *)&v4->fields._movInfo_5__3, 0, v80, v81);
       goto LABEL_113;
     }
     movInfo_5__3 = v4->fields._movInfo_5__3;
@@ -1964,7 +1975,7 @@ LABEL_105:
     v32 = 0.0;
     if ( !v31 )
       v32 = v30;
-    UnityEngine_Material__SetFloat((UnityEngine_Material_o *)this, (System_String_o *)StringLiteral_16385/*"_Transparency"*/, v32, 0);
+    UnityEngine_Material__SetFloat((UnityEngine_Material_o *)this, (System_String_o *)StringLiteral_16395/*"_Transparency"*/, v32, 0);
     v33 = v4->fields._movInfo_5__3;
     if ( !v33 )
       goto LABEL_121;
@@ -2002,15 +2013,12 @@ LABEL_105:
         this = (BattleMoviePlayer__PlayMovieFadeOut_d__45_o *)UnityEngine_Component__get_transform(
                                                                 (UnityEngine_Component_o *)this,
                                                                 0);
-        v40 = _4__this->fields.perf;
+        v40 = (UnityEngine_Vector3_o *)_4__this->fields.perf;
         if ( !v40 )
           goto LABEL_121;
         if ( !this )
           goto LABEL_121;
-        v86 = UnityEngine_Transform__InverseTransformVector(
-                (UnityEngine_Transform_o *)this,
-                v40->fields._CurrentShakeWidth_k__BackingField,
-                0);
+        v86 = UnityEngine_Transform__InverseTransformVector((UnityEngine_Transform_o *)this, v40[112], 0);
         x = v86.fields.x;
         y = v86.fields.y;
         z = v86.fields.z;
@@ -2213,7 +2221,7 @@ LABEL_103:
     {
       v4->fields.__2__current = 0;
       p__2__current = (CGThumbnailListItem_o *)&v4->fields.__2__current;
-      sub_1C36FFC(p__2__current, 0, v2, v3);
+      sub_1C3E508(p__2__current, 0, v2, v3);
       result = 1;
       LODWORD(p__2__current[-1].fields._ThumbnailSpritePath_k__BackingField) = 1;
       return result;
@@ -2238,11 +2246,11 @@ LABEL_113:
         System_Collections_Generic_List_object___Remove(
           (System_Collections_Generic_List_object__o *)this,
           (Il2CppObject *)v4->fields.movieObj,
-          (const MethodInfo_37A454C *)Method_System_Collections_Generic_List_GameObject__Remove__);
+          (const MethodInfo_37B6988 *)Method_System_Collections_Generic_List_GameObject__Remove__);
         v82 = (UnityEngine_Object_o *)v4->fields.movieObj;
         if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
           j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-        UnityEngine_Object__Destroy_71266752(v82, 0);
+        UnityEngine_Object__Destroy_71341564(v82, 0);
         return 0;
       }
       goto LABEL_121;
@@ -2259,23 +2267,23 @@ LABEL_113:
         goto LABEL_121;
       this = (BattleMoviePlayer__PlayMovieFadeOut_d__45_o *)UnityEngine_GameObject__GetComponent_object_(
                                                               (UnityEngine_GameObject_o *)this,
-                                                              (const MethodInfo_313F1D8 *)Method_UnityEngine_GameObject_GetComponent_MeshRenderer___);
+                                                              (const MethodInfo_31510CC *)Method_UnityEngine_GameObject_GetComponent_MeshRenderer___);
       if ( !this )
         goto LABEL_121;
       material = UnityEngine_Renderer__get_material((UnityEngine_Renderer_o *)this, 0);
       v4->fields._movieMaterial_5__2 = material;
       p_movieMaterial_5__2 = (BattleMoviePlayer__PlayMovieFadeOut_d__45_o **)&v4->fields._movieMaterial_5__2;
-      sub_1C36FFC((CGThumbnailListItem_o *)&v4->fields._movieMaterial_5__2, (int32_t)material, v11, v12);
+      sub_1C3E508((CGThumbnailListItem_o *)&v4->fields._movieMaterial_5__2, (int32_t)material, v11, v12);
       this = (BattleMoviePlayer__PlayMovieFadeOut_d__45_o *)_4__this->fields.MovieInfoList;
       if ( !this )
         goto LABEL_121;
       Item = System_Collections_Generic_List_object___get_Item(
                (System_Collections_Generic_List_object__o *)this,
                v4->fields.num,
-               (const MethodInfo_37A2D54 *)Method_System_Collections_Generic_List_BattleMoviePlayer_MovieInfo__get_Item__);
+               (const MethodInfo_37B5190 *)Method_System_Collections_Generic_List_BattleMoviePlayer_MovieInfo__get_Item__);
       v4->fields._movInfo_5__3 = (struct BattleMoviePlayer_MovieInfo_o *)Item;
       v14 = &v4->fields._movInfo_5__3;
-      sub_1C36FFC((CGThumbnailListItem_o *)&v4->fields._movInfo_5__3, (int32_t)Item, v15, v16);
+      sub_1C3E508((CGThumbnailListItem_o *)&v4->fields._movInfo_5__3, (int32_t)Item, v15, v16);
       v17 = v4->fields._movInfo_5__3;
       if ( !v17 )
         goto LABEL_121;
@@ -2330,17 +2338,17 @@ LABEL_63:
           this = *p_movieMaterial_5__2;
           if ( !*p_movieMaterial_5__2 )
             goto LABEL_121;
-          UnityEngine_Material__SetInt((UnityEngine_Material_o *)this, (System_String_o *)StringLiteral_16420/*"_ZWriteMode"*/, 0, 0);
+          UnityEngine_Material__SetInt((UnityEngine_Material_o *)this, (System_String_o *)StringLiteral_16430/*"_ZWriteMode"*/, 0, 0);
         }
         this = *p_movieMaterial_5__2;
         if ( !*p_movieMaterial_5__2 )
 LABEL_121:
-          sub_1C372B4(this);
+          sub_1C3E7C0(this, method);
         if ( _4__this->fields.OverrideZDepth )
           v50 = 8;
         else
           v50 = 4;
-        UnityEngine_Material__SetInt((UnityEngine_Material_o *)this, (System_String_o *)StringLiteral_16419/*"_ZTestMode"*/, v50, 0);
+        UnityEngine_Material__SetInt((UnityEngine_Material_o *)this, (System_String_o *)StringLiteral_16429/*"_ZTestMode"*/, v50, 0);
         goto LABEL_103;
       }
     }
@@ -2365,11 +2373,11 @@ void __noreturn BattleMoviePlayer__PlayMovieFadeOut_d__45__System_Collections_IE
   System_NotSupportedException_o *v3; // x19
   __int64 v4; // x0
 
-  v2 = sub_1C3706C(&System_NotSupportedException_TypeInfo);
-  v3 = (System_NotSupportedException_o *)sub_1C372A4(v2);
+  v2 = sub_1C3E578(&System_NotSupportedException_TypeInfo);
+  v3 = (System_NotSupportedException_o *)sub_1C3E7B0(v2);
   System_NotSupportedException___ctor(v3, 0);
-  v4 = sub_1C3706C(&Method_BattleMoviePlayer__PlayMovieFadeOut_d__45_System_Collections_IEnumerator_Reset__);
-  sub_1C37180(v3, v4);
+  v4 = sub_1C3E578(&Method_BattleMoviePlayer__PlayMovieFadeOut_d__45_System_Collections_IEnumerator_Reset__);
+  sub_1C3E68C(v3, v4);
 }
 
 
@@ -2473,7 +2481,7 @@ bool BattleMoviePlayer__PlayMovie_d__44__MoveNext(BattleMoviePlayer__PlayMovie_d
   __int64 v70; // x9
   float v71; // w10
   __int64 v72; // x9
-  struct BattlePerformance_o *v73; // x8
+  UnityEngine_Vector3_o *v73; // x8
   float x; // s8
   float y; // s9
   float z; // s10
@@ -2519,19 +2527,19 @@ bool BattleMoviePlayer__PlayMovie_d__44__MoveNext(BattleMoviePlayer__PlayMovie_d
   UnityEngine_Vector3_o v116; // 0:s0.4,4:s1.4,8:s2.4
 
   v4 = this;
-  if ( (byte_4C45B00 & 1) == 0 )
+  if ( (byte_4C598DD & 1) == 0 )
   {
-    sub_1C37058(&BattleMoviePlayer_TypeInfo);
-    sub_1C37058(&Method_UnityEngine_Component_GetComponent_MeshRenderer___);
-    sub_1C37058(&Method_UnityEngine_GameObject_GetComponent_BattleCameraFullScaleSetter___);
-    sub_1C37058(&Method_UnityEngine_GameObject_GetComponent_CriManaMovieController___);
-    sub_1C37058(&Method_UnityEngine_GameObject_GetComponent_MeshRenderer___);
-    sub_1C37058(&Method_System_Collections_Generic_List_BattleMoviePlayer_MovieInfo__get_Item__);
-    sub_1C37058(&UnityEngine_Object_TypeInfo);
-    sub_1C37058(&StringLiteral_16420/*"_ZWriteMode"*/);
-    sub_1C37058(&StringLiteral_16419/*"_ZTestMode"*/);
-    this = (BattleMoviePlayer__PlayMovie_d__44_o *)sub_1C37058(&StringLiteral_16385/*"_Transparency"*/);
-    byte_4C45B00 = 1;
+    sub_1C3E564(&BattleMoviePlayer_TypeInfo);
+    sub_1C3E564(&Method_UnityEngine_Component_GetComponent_MeshRenderer___);
+    sub_1C3E564(&Method_UnityEngine_GameObject_GetComponent_BattleCameraFullScaleSetter___);
+    sub_1C3E564(&Method_UnityEngine_GameObject_GetComponent_CriManaMovieController___);
+    sub_1C3E564(&Method_UnityEngine_GameObject_GetComponent_MeshRenderer___);
+    sub_1C3E564(&Method_System_Collections_Generic_List_BattleMoviePlayer_MovieInfo__get_Item__);
+    sub_1C3E564(&UnityEngine_Object_TypeInfo);
+    sub_1C3E564(&StringLiteral_16430/*"_ZWriteMode"*/);
+    sub_1C3E564(&StringLiteral_16429/*"_ZTestMode"*/);
+    this = (BattleMoviePlayer__PlayMovie_d__44_o *)sub_1C3E564(&StringLiteral_16395/*"_Transparency"*/);
+    byte_4C598DD = 1;
   }
   _1__state = v4->fields.__1__state;
   _4__this = v4->fields.__4__this;
@@ -2548,12 +2556,12 @@ bool BattleMoviePlayer__PlayMovie_d__44__MoveNext(BattleMoviePlayer__PlayMovie_d
       {
 LABEL_117:
         v4->fields._movInfo_5__2 = 0;
-        sub_1C36FFC((CGThumbnailListItem_o *)&v4->fields._movInfo_5__2, 0, v2, v3);
+        sub_1C3E508((CGThumbnailListItem_o *)&v4->fields._movInfo_5__2, 0, v2, v3);
         return 0;
       }
       this = (BattleMoviePlayer__PlayMovie_d__44_o *)UnityEngine_Component__GetComponent_object_(
                                                        (UnityEngine_Component_o *)this,
-                                                       (const MethodInfo_30DE428 *)Method_UnityEngine_Component_GetComponent_MeshRenderer___);
+                                                       (const MethodInfo_30F0240 *)Method_UnityEngine_Component_GetComponent_MeshRenderer___);
       if ( !this )
         goto LABEL_189;
       v23 = this;
@@ -2581,8 +2589,8 @@ LABEL_117:
         {
           if ( !v24 )
             goto LABEL_189;
-          UnityEngine_Material__SetInt((UnityEngine_Material_o *)v24, (System_String_o *)StringLiteral_16419/*"_ZTestMode"*/, 4, 0);
-          UnityEngine_Material__SetFloat((UnityEngine_Material_o *)v24, (System_String_o *)StringLiteral_16385/*"_Transparency"*/, 0.0, 0);
+          UnityEngine_Material__SetInt((UnityEngine_Material_o *)v24, (System_String_o *)StringLiteral_16429/*"_ZTestMode"*/, 4, 0);
+          UnityEngine_Material__SetFloat((UnityEngine_Material_o *)v24, (System_String_o *)StringLiteral_16395/*"_Transparency"*/, 0.0, 0);
           movInfo_5__2 = v4->fields._movInfo_5__2;
           if ( !movInfo_5__2 )
             goto LABEL_189;
@@ -2596,14 +2604,14 @@ LABEL_117:
             goto LABEL_189;
           UnityEngine_Material__SetFloat(
             (UnityEngine_Material_o *)v24,
-            (System_String_o *)StringLiteral_16385/*"_Transparency"*/,
+            (System_String_o *)StringLiteral_16395/*"_Transparency"*/,
             1.0 - v26,
             0);
           if ( _4__this->fields.OverrideZDepth )
             v27 = 8;
           else
             v27 = 4;
-          UnityEngine_Material__SetInt((UnityEngine_Material_o *)v24, (System_String_o *)StringLiteral_16419/*"_ZTestMode"*/, v27, 0);
+          UnityEngine_Material__SetInt((UnityEngine_Material_o *)v24, (System_String_o *)StringLiteral_16429/*"_ZTestMode"*/, v27, 0);
         }
       }
       v57 = v4->fields._movInfo_5__2;
@@ -2613,7 +2621,7 @@ LABEL_117:
       {
         if ( !v24 )
           goto LABEL_189;
-        UnityEngine_Material__SetInt((UnityEngine_Material_o *)v24, (System_String_o *)StringLiteral_16420/*"_ZWriteMode"*/, 0, 0);
+        UnityEngine_Material__SetInt((UnityEngine_Material_o *)v24, (System_String_o *)StringLiteral_16430/*"_ZWriteMode"*/, 0, 0);
       }
       if ( _4__this->fields._ForceFadeout_k__BackingField )
         return 0;
@@ -2622,7 +2630,7 @@ LABEL_117:
         || (this = (BattleMoviePlayer__PlayMovie_d__44_o *)currController->fields._player_k__BackingField) == 0 )
       {
 LABEL_189:
-        sub_1C372B4(this);
+        sub_1C3E7C0(this, method);
       }
       this = (BattleMoviePlayer__PlayMovie_d__44_o *)CriMana_Player__GetDisplayedFrameNo((CriMana_Player_o *)this, 0);
       effectTime_5__7 = v4->fields._effectTime_5__7;
@@ -2640,7 +2648,7 @@ LABEL_189:
             goto LABEL_189;
         }
         *(_QWORD *)&this->fields.num = 0;
-        sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.num, 0, v59, v60);
+        sub_1C3E508((CGThumbnailListItem_o *)&this->fields.num, 0, v59, v60);
       }
       if ( _4__this->fields.KeepStartPosition )
       {
@@ -2680,15 +2688,12 @@ LABEL_189:
           this = (BattleMoviePlayer__PlayMovie_d__44_o *)UnityEngine_Component__get_transform(
                                                            (UnityEngine_Component_o *)this,
                                                            0);
-          v73 = _4__this->fields.perf;
+          v73 = (UnityEngine_Vector3_o *)_4__this->fields.perf;
           if ( !v73 )
             goto LABEL_189;
           if ( !this )
             goto LABEL_189;
-          v106 = UnityEngine_Transform__InverseTransformVector(
-                   (UnityEngine_Transform_o *)this,
-                   v73->fields._CurrentShakeWidth_k__BackingField,
-                   0);
+          v106 = UnityEngine_Transform__InverseTransformVector((UnityEngine_Transform_o *)this, v73[112], 0);
           x = v106.fields.x;
           y = v106.fields.y;
           z = v106.fields.z;
@@ -2907,7 +2912,7 @@ LABEL_185:
           goto LABEL_189;
         this = (BattleMoviePlayer__PlayMovie_d__44_o *)UnityEngine_Component__GetComponent_object_(
                                                          (UnityEngine_Component_o *)this,
-                                                         (const MethodInfo_30DE428 *)Method_UnityEngine_Component_GetComponent_MeshRenderer___);
+                                                         (const MethodInfo_30F0240 *)Method_UnityEngine_Component_GetComponent_MeshRenderer___);
         if ( !this )
           goto LABEL_189;
         UnityEngine_Renderer__set_enabled((UnityEngine_Renderer_o *)this, 0, 0);
@@ -2942,7 +2947,7 @@ LABEL_50:
       {
         this = (BattleMoviePlayer__PlayMovie_d__44_o *)UnityEngine_GameObject__GetComponent_object_(
                                                          (UnityEngine_GameObject_o *)this,
-                                                         (const MethodInfo_313F1D8 *)Method_UnityEngine_GameObject_GetComponent_BattleCameraFullScaleSetter___);
+                                                         (const MethodInfo_31510CC *)Method_UnityEngine_GameObject_GetComponent_BattleCameraFullScaleSetter___);
         v33 = _4__this->fields.currController;
         if ( v33 )
         {
@@ -2983,7 +2988,7 @@ LABEL_50:
                             {
                               this = (BattleMoviePlayer__PlayMovie_d__44_o *)UnityEngine_Component__GetComponent_object_(
                                                                                (UnityEngine_Component_o *)this,
-                                                                               (const MethodInfo_30DE428 *)Method_UnityEngine_Component_GetComponent_MeshRenderer___);
+                                                                               (const MethodInfo_30F0240 *)Method_UnityEngine_Component_GetComponent_MeshRenderer___);
                               if ( this )
                               {
                                 this = (BattleMoviePlayer__PlayMovie_d__44_o *)UnityEngine_Renderer__get_material(
@@ -3008,7 +3013,7 @@ LABEL_50:
                                         goto LABEL_189;
                                       this = (BattleMoviePlayer__PlayMovie_d__44_o *)UnityEngine_Component__GetComponent_object_(
                                                                                        (UnityEngine_Component_o *)this,
-                                                                                       (const MethodInfo_30DE428 *)Method_UnityEngine_Component_GetComponent_MeshRenderer___);
+                                                                                       (const MethodInfo_30F0240 *)Method_UnityEngine_Component_GetComponent_MeshRenderer___);
                                       if ( !this )
                                         goto LABEL_189;
                                       UnityEngine_Renderer__set_enabled((UnityEngine_Renderer_o *)this, 0, 0);
@@ -3101,7 +3106,7 @@ LABEL_50:
                                             {
                                               this = (BattleMoviePlayer__PlayMovie_d__44_o *)UnityEngine_GameObject__GetComponent_object_(
                                                                                                (UnityEngine_GameObject_o *)this,
-                                                                                               (const MethodInfo_313F1D8 *)Method_UnityEngine_GameObject_GetComponent_MeshRenderer___);
+                                                                                               (const MethodInfo_31510CC *)Method_UnityEngine_GameObject_GetComponent_MeshRenderer___);
                                               if ( this )
                                               {
                                                 this = (BattleMoviePlayer__PlayMovie_d__44_o *)UnityEngine_Renderer__get_material(
@@ -3123,7 +3128,7 @@ LABEL_50:
                                                       goto LABEL_189;
                                                     this = (BattleMoviePlayer__PlayMovie_d__44_o *)UnityEngine_Component__GetComponent_object_(
                                                                                                      (UnityEngine_Component_o *)this,
-                                                                                                     (const MethodInfo_30DE428 *)Method_UnityEngine_Component_GetComponent_MeshRenderer___);
+                                                                                                     (const MethodInfo_30F0240 *)Method_UnityEngine_Component_GetComponent_MeshRenderer___);
                                                     if ( !this )
                                                       goto LABEL_189;
                                                     UnityEngine_Renderer__set_enabled(
@@ -3141,12 +3146,12 @@ LABEL_50:
                                                       v50 = 4;
                                                     UnityEngine_Material__SetInt(
                                                       (UnityEngine_Material_o *)v49,
-                                                      (System_String_o *)StringLiteral_16419/*"_ZTestMode"*/,
+                                                      (System_String_o *)StringLiteral_16429/*"_ZTestMode"*/,
                                                       v50,
                                                       0);
                                                     UnityEngine_Material__SetFloat(
                                                       (UnityEngine_Material_o *)v49,
-                                                      (System_String_o *)StringLiteral_16385/*"_Transparency"*/,
+                                                      (System_String_o *)StringLiteral_16395/*"_Transparency"*/,
                                                       1.0,
                                                       0);
                                                   }
@@ -3159,7 +3164,7 @@ LABEL_50:
                                                       goto LABEL_189;
                                                     UnityEngine_Material__SetInt(
                                                       (UnityEngine_Material_o *)v49,
-                                                      (System_String_o *)StringLiteral_16420/*"_ZWriteMode"*/,
+                                                      (System_String_o *)StringLiteral_16430/*"_ZWriteMode"*/,
                                                       0,
                                                       0);
                                                   }
@@ -3189,7 +3194,7 @@ LABEL_114:
                                                           {
                                                             v4->fields.__2__current = 0;
                                                             p__2__current = (CGThumbnailListItem_o *)&v4->fields.__2__current;
-                                                            sub_1C36FFC(p__2__current, 0, v2, v3);
+                                                            sub_1C3E508(p__2__current, 0, v2, v3);
                                                             LODWORD(p__2__current[-1].fields._ThumbnailSpritePath_k__BackingField) = 2;
                                                             return 1;
                                                           }
@@ -3228,12 +3233,12 @@ LABEL_114:
         goto LABEL_189;
       this = (BattleMoviePlayer__PlayMovie_d__44_o *)UnityEngine_GameObject__GetComponent_object_(
                                                        (UnityEngine_GameObject_o *)this,
-                                                       (const MethodInfo_313F1D8 *)Method_UnityEngine_GameObject_GetComponent_CriManaMovieController___);
+                                                       (const MethodInfo_31510CC *)Method_UnityEngine_GameObject_GetComponent_CriManaMovieController___);
       if ( !_4__this )
         goto LABEL_189;
       _4__this->fields.currController = (struct CriManaMovieController_o *)this;
       p_currController = &_4__this->fields.currController;
-      sub_1C36FFC((CGThumbnailListItem_o *)&_4__this->fields.currController, (int32_t)this, v7, v8);
+      sub_1C3E508((CGThumbnailListItem_o *)&_4__this->fields.currController, (int32_t)this, v7, v8);
       _4__this->fields.currentMovieNum = v4->fields.num;
       v10 = (UnityEngine_Object_o *)_4__this->fields.currController;
       if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -3246,10 +3251,10 @@ LABEL_114:
       Item = System_Collections_Generic_List_object___get_Item(
                (System_Collections_Generic_List_object__o *)this,
                v4->fields.num,
-               (const MethodInfo_37A2D54 *)Method_System_Collections_Generic_List_BattleMoviePlayer_MovieInfo__get_Item__);
+               (const MethodInfo_37B5190 *)Method_System_Collections_Generic_List_BattleMoviePlayer_MovieInfo__get_Item__);
       v4->fields._movInfo_5__2 = (struct BattleMoviePlayer_MovieInfo_o *)Item;
       p_movInfo_5__2 = &v4->fields._movInfo_5__2;
-      sub_1C36FFC((CGThumbnailListItem_o *)&v4->fields._movInfo_5__2, (int32_t)Item, v13, v14);
+      sub_1C3E508((CGThumbnailListItem_o *)&v4->fields._movInfo_5__2, (int32_t)Item, v13, v14);
       if ( !*p_currController )
         goto LABEL_189;
       v15 = *p_movInfo_5__2;
@@ -3289,7 +3294,7 @@ LABEL_114:
 LABEL_23:
         v4->fields.__2__current = 0;
         v21 = (CGThumbnailListItem_o *)&v4->fields.__2__current;
-        sub_1C36FFC(v21, 0, v18, v19);
+        sub_1C3E508(v21, 0, v18, v19);
         result = 1;
         LODWORD(v21[-1].fields._ThumbnailSpritePath_k__BackingField) = 1;
         return result;
@@ -3316,11 +3321,11 @@ void __noreturn BattleMoviePlayer__PlayMovie_d__44__System_Collections_IEnumerat
   System_NotSupportedException_o *v3; // x19
   __int64 v4; // x0
 
-  v2 = sub_1C3706C(&System_NotSupportedException_TypeInfo);
-  v3 = (System_NotSupportedException_o *)sub_1C372A4(v2);
+  v2 = sub_1C3E578(&System_NotSupportedException_TypeInfo);
+  v3 = (System_NotSupportedException_o *)sub_1C3E7B0(v2);
   System_NotSupportedException___ctor(v3, 0);
-  v4 = sub_1C3706C(&Method_BattleMoviePlayer__PlayMovie_d__44_System_Collections_IEnumerator_Reset__);
-  sub_1C37180(v3, v4);
+  v4 = sub_1C3E578(&Method_BattleMoviePlayer__PlayMovie_d__44_System_Collections_IEnumerator_Reset__);
+  sub_1C3E68C(v3, v4);
 }
 
 
@@ -3405,15 +3410,15 @@ bool BattleMoviePlayer__StartMovie_d__35__MoveNext(
   const MethodInfo *v50; // x3
 
   v4 = this;
-  if ( (byte_4C45B02 & 1) == 0 )
+  if ( (byte_4C598DF & 1) == 0 )
   {
-    sub_1C37058(&Method_BasicHelper_Any_BattleMoviePlayer_MovieInfo___);
-    sub_1C37058(&System_Func_BattleMoviePlayer_MovieInfo__bool__TypeInfo);
-    sub_1C37058(&Method_System_Collections_Generic_List_BattleMoviePlayer_MovieInfo__get_Count__);
-    sub_1C37058(&UnityEngine_Object_TypeInfo);
-    sub_1C37058(&Method_BattleMoviePlayer___c__StartMovie_b__35_0__);
-    this = (BattleMoviePlayer__StartMovie_d__35_o *)sub_1C37058(&BattleMoviePlayer___c_TypeInfo);
-    byte_4C45B02 = 1;
+    sub_1C3E564(&Method_BasicHelper_Any_BattleMoviePlayer_MovieInfo___);
+    sub_1C3E564(&System_Func_BattleMoviePlayer_MovieInfo__bool__TypeInfo);
+    sub_1C3E564(&Method_System_Collections_Generic_List_BattleMoviePlayer_MovieInfo__get_Count__);
+    sub_1C3E564(&UnityEngine_Object_TypeInfo);
+    sub_1C3E564(&Method_BattleMoviePlayer___c__StartMovie_b__35_0__);
+    this = (BattleMoviePlayer__StartMovie_d__35_o *)sub_1C3E564(&BattleMoviePlayer___c_TypeInfo);
+    byte_4C598DF = 1;
   }
   _4__this = v4->fields.__4__this;
   switch ( v4->fields.__1__state )
@@ -3434,10 +3439,10 @@ bool BattleMoviePlayer__StartMovie_d__35__MoveNext(
       if ( MovieInfoList->fields._size >= 1 )
       {
         v8 = BattleMoviePlayer__PlayMovie(_4__this, _4__this->fields.currMovieObj, 0, 0);
-        started = UnityEngine_MonoBehaviour__StartCoroutine_71252324((UnityEngine_MonoBehaviour_o *)_4__this, v8, 0);
+        started = UnityEngine_MonoBehaviour__StartCoroutine_71327136((UnityEngine_MonoBehaviour_o *)_4__this, v8, 0);
         v4->fields.__2__current = (Il2CppObject *)started;
         p__2__current = (CGThumbnailListItem_o *)&v4->fields.__2__current;
-        sub_1C36FFC(p__2__current, (int32_t)started, v11, v12);
+        sub_1C3E508(p__2__current, (int32_t)started, v11, v12);
         LOBYTE(perf) = 1;
         LODWORD(p__2__current[-1].fields._ThumbnailSpritePath_k__BackingField) = 1;
         return (char)perf;
@@ -3472,17 +3477,17 @@ LABEL_12:
     {
       v26 = _4__this->fields.currMovieObj;
       _4__this->fields.pastMovieObj = v26;
-      sub_1C36FFC((CGThumbnailListItem_o *)&_4__this->fields.pastMovieObj, (int32_t)v26, v2, v3);
+      sub_1C3E508((CGThumbnailListItem_o *)&_4__this->fields.pastMovieObj, (int32_t)v26, v2, v3);
       _4__this->fields.currMovieObj = 0;
-      sub_1C36FFC((CGThumbnailListItem_o *)&_4__this->fields.currMovieObj, 0, v27, v28);
+      sub_1C3E508((CGThumbnailListItem_o *)&_4__this->fields.currMovieObj, 0, v27, v28);
       _4__this->fields.nextMovieObj = 0;
-      sub_1C36FFC((CGThumbnailListItem_o *)&_4__this->fields.nextMovieObj, 0, v29, v30);
+      sub_1C3E508((CGThumbnailListItem_o *)&_4__this->fields.nextMovieObj, 0, v29, v30);
       if ( !_4__this->fields._ForceFadeout_k__BackingField )
       {
         v31 = _4__this->fields.MovieInfoList;
         if ( !v31 )
 LABEL_45:
-          sub_1C372B4(this);
+          sub_1C3E7C0(this, method);
         size = v31->fields._size;
         if ( size >= 1 )
         {
@@ -3504,23 +3509,23 @@ LABEL_45:
               v36 = BattleMoviePlayer___c_TypeInfo;
             }
             v38 = (Il2CppObject *)v36->static_fields->__9;
-            _9__35_0 = (System_Func_object__bool__o *)sub_1C372A4(System_Func_BattleMoviePlayer_MovieInfo__bool__TypeInfo);
+            _9__35_0 = (System_Func_object__bool__o *)sub_1C3E7B0(System_Func_BattleMoviePlayer_MovieInfo__bool__TypeInfo);
             System_Func_object__bool____ctor(_9__35_0, v38, Method_BattleMoviePlayer___c__StartMovie_b__35_0__, 0);
             static_fields = BattleMoviePlayer___c_TypeInfo->static_fields;
             static_fields->__9__35_0 = (struct System_Func_BattleMoviePlayer_MovieInfo__bool__o *)_9__35_0;
-            sub_1C36FFC((CGThumbnailListItem_o *)&static_fields->__9__35_0, (int32_t)_9__35_0, v40, v41);
+            sub_1C3E508((CGThumbnailListItem_o *)&static_fields->__9__35_0, (int32_t)_9__35_0, v40, v41);
           }
           if ( BasicHelper__Any_object_(
                  v34,
                  (System_Func_T__bool__o *)_9__35_0,
-                 (const MethodInfo_30D0FF8 *)Method_BasicHelper_Any_BattleMoviePlayer_MovieInfo___) )
+                 (const MethodInfo_30E2E10 *)Method_BasicHelper_Any_BattleMoviePlayer_MovieInfo___) )
           {
             BattleMoviePlayer__ShowBg(_4__this, 1, 0);
           }
-          v42 = UnityEngine_MonoBehaviour__StartCoroutine_71252324((UnityEngine_MonoBehaviour_o *)_4__this, v35, 0);
+          v42 = UnityEngine_MonoBehaviour__StartCoroutine_71327136((UnityEngine_MonoBehaviour_o *)_4__this, v35, 0);
           v4->fields.__2__current = (Il2CppObject *)v42;
           v43 = (CGThumbnailListItem_o *)&v4->fields.__2__current;
-          sub_1C36FFC(v43, (int32_t)v42, v44, v45);
+          sub_1C3E508(v43, (int32_t)v42, v44, v45);
           v46 = 3;
           goto LABEL_43;
         }
@@ -3536,14 +3541,14 @@ LABEL_41:
     }
     v15 = _4__this->fields.currMovieObj;
     _4__this->fields.pastMovieObj = v15;
-    sub_1C36FFC((CGThumbnailListItem_o *)&_4__this->fields.pastMovieObj, (int32_t)v15, v2, v3);
+    sub_1C3E508((CGThumbnailListItem_o *)&_4__this->fields.pastMovieObj, (int32_t)v15, v2, v3);
     nextMovieObj = _4__this->fields.nextMovieObj;
     _4__this->fields.currMovieObj = nextMovieObj;
-    sub_1C36FFC((CGThumbnailListItem_o *)&_4__this->fields.currMovieObj, (int32_t)nextMovieObj, v17, v18);
+    sub_1C3E508((CGThumbnailListItem_o *)&_4__this->fields.currMovieObj, (int32_t)nextMovieObj, v17, v18);
     _4__this->fields.nextMovieObj = 0;
-    sub_1C36FFC((CGThumbnailListItem_o *)&_4__this->fields.nextMovieObj, 0, v19, v20);
+    sub_1C3E508((CGThumbnailListItem_o *)&_4__this->fields.nextMovieObj, 0, v19, v20);
     v21 = BattleMoviePlayer__PlayMovieFadeOut(_4__this, _4__this->fields.pastMovieObj, v4->fields._i_5__2, 0, 0);
-    this = (BattleMoviePlayer__StartMovie_d__35_o *)UnityEngine_MonoBehaviour__StartCoroutine_71252324(
+    this = (BattleMoviePlayer__StartMovie_d__35_o *)UnityEngine_MonoBehaviour__StartCoroutine_71327136(
                                                       (UnityEngine_MonoBehaviour_o *)_4__this,
                                                       v21,
                                                       0);
@@ -3564,10 +3569,10 @@ LABEL_23:
     v4->fields._i_5__2 = v14;
   }
   v47 = BattleMoviePlayer__PlayMovie(_4__this, _4__this->fields.currMovieObj, v4->fields._i_5__2 + 1, 0);
-  v48 = UnityEngine_MonoBehaviour__StartCoroutine_71252324((UnityEngine_MonoBehaviour_o *)_4__this, v47, 0);
+  v48 = UnityEngine_MonoBehaviour__StartCoroutine_71327136((UnityEngine_MonoBehaviour_o *)_4__this, v47, 0);
   v4->fields.__2__current = (Il2CppObject *)v48;
   v43 = (CGThumbnailListItem_o *)&v4->fields.__2__current;
-  sub_1C36FFC(v43, (int32_t)v48, v49, v50);
+  sub_1C3E508(v43, (int32_t)v48, v49, v50);
   v46 = 2;
 LABEL_43:
   LODWORD(v43[-1].fields._ThumbnailSpritePath_k__BackingField) = v46;
@@ -3592,11 +3597,11 @@ void __noreturn BattleMoviePlayer__StartMovie_d__35__System_Collections_IEnumera
   System_NotSupportedException_o *v3; // x19
   __int64 v4; // x0
 
-  v2 = sub_1C3706C(&System_NotSupportedException_TypeInfo);
-  v3 = (System_NotSupportedException_o *)sub_1C372A4(v2);
+  v2 = sub_1C3E578(&System_NotSupportedException_TypeInfo);
+  v3 = (System_NotSupportedException_o *)sub_1C3E7B0(v2);
   System_NotSupportedException___ctor(v3, 0);
-  v4 = sub_1C3706C(&Method_BattleMoviePlayer__StartMovie_d__35_System_Collections_IEnumerator_Reset__);
-  sub_1C37180(v3, v4);
+  v4 = sub_1C3E578(&Method_BattleMoviePlayer__StartMovie_d__35_System_Collections_IEnumerator_Reset__);
+  sub_1C3E68C(v3, v4);
 }
 
 
@@ -3622,15 +3627,15 @@ void BattleMoviePlayer___c___cctor(const MethodInfo *method)
   int32_t v2; // w2
   const MethodInfo *v3; // x3
 
-  if ( (byte_4C45AFD & 1) == 0 )
+  if ( (byte_4C598DA & 1) == 0 )
   {
-    sub_1C37058(&BattleMoviePlayer___c_TypeInfo);
-    byte_4C45AFD = 1;
+    sub_1C3E564(&BattleMoviePlayer___c_TypeInfo);
+    byte_4C598DA = 1;
   }
-  v1 = (Il2CppObject *)sub_1C372A4(BattleMoviePlayer___c_TypeInfo);
+  v1 = (Il2CppObject *)sub_1C3E7B0(BattleMoviePlayer___c_TypeInfo);
   System_Object___ctor(v1, 0);
   BattleMoviePlayer___c_TypeInfo->static_fields->__9 = (struct BattleMoviePlayer___c_o *)v1;
-  sub_1C36FFC((CGThumbnailListItem_o *)BattleMoviePlayer___c_TypeInfo->static_fields, (int32_t)v1, v2, v3);
+  sub_1C3E508((CGThumbnailListItem_o *)BattleMoviePlayer___c_TypeInfo->static_fields, (int32_t)v1, v2, v3);
 }
 
 
@@ -3646,7 +3651,7 @@ bool BattleMoviePlayer___c___Dispose_b__27_0(
         const MethodInfo *method)
 {
   if ( !x )
-    sub_1C372B4(this);
+    sub_1C3E7C0(this, 0);
   return x->fields.cameraType == 1;
 }
 
@@ -3657,7 +3662,7 @@ bool BattleMoviePlayer___c___FadeoutDeleteMovie_b__38_0(
         const MethodInfo *method)
 {
   if ( !x )
-    sub_1C372B4(this);
+    sub_1C3E7C0(this, 0);
   return x->fields.cameraType == 1;
 }
 
@@ -3668,7 +3673,7 @@ bool BattleMoviePlayer___c___PauseMovie_b__36_0(
         const MethodInfo *method)
 {
   if ( !x )
-    sub_1C372B4(this);
+    sub_1C3E7C0(this, 0);
   return x->fields.cameraType == 1;
 }
 
@@ -3679,6 +3684,6 @@ bool BattleMoviePlayer___c___StartMovie_b__35_0(
         const MethodInfo *method)
 {
   if ( !x )
-    sub_1C372B4(this);
+    sub_1C3E7C0(this, 0);
   return x->fields.cameraType == 1;
 }

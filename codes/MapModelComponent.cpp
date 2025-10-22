@@ -1,7 +1,7 @@
 void MapModelComponent___ctor(MapModelComponent_o *this, const MethodInfo *method)
 {
   this->fields.isMapCamera2DReset = 1;
-  *(_OWORD *)&this->fields.mapCamera2DResetPosition.fields.x = xmmword_C0E960;
+  *(_OWORD *)&this->fields.mapCamera2DResetPosition.fields.x = xmmword_C11FD0;
   UnityEngine_MonoBehaviour___ctor((UnityEngine_MonoBehaviour_o *)this, 0);
 }
 
@@ -21,39 +21,40 @@ UnityEngine_Vector3_o MapModelComponent__GetCameraLocationPosition(
   System_String_o *locationPrefix; // x20
   System_String_o *v5; // x0
   System_String_o *v6; // x0
+  __int64 v7; // x1
   struct UnityEngine_GameObject_array *cameraLocationObjectList; // x8
-  System_String_o *v8; // x20
-  __int64 v9; // x21
+  System_String_o *v9; // x20
+  __int64 v10; // x21
   int max_length; // w9
-  unsigned int v11; // w22
+  unsigned int v12; // w22
   System_String_o *name; // x0
   struct UnityEngine_Vector3_StaticFields *static_fields; // x8
   float x; // s0 OVERLAPPED
   float y; // s1
   float z; // s2
-  struct UnityEngine_GameObject_array *v17; // x8
-  int32_t v18; // [xsp+Ch] [xbp-24h] BYREF
+  struct UnityEngine_GameObject_array *v18; // x8
+  int32_t v19; // [xsp+Ch] [xbp-24h] BYREF
   UnityEngine_Vector3_o result; // 0:s0.4,4:s1.4,8:s2.4
 
-  v18 = layer;
+  v19 = layer;
   locationPrefix = this->fields.locationPrefix;
-  v5 = System_Int32__ToString((int32_t)&v18, 0);
-  v6 = System_String__Concat_63561656(locationPrefix, v5, 0);
+  v5 = System_Int32__ToString((int32_t)&v19, 0);
+  v6 = System_String__Concat_63636468(locationPrefix, v5, 0);
   cameraLocationObjectList = this->fields.cameraLocationObjectList;
   if ( !cameraLocationObjectList )
     goto LABEL_8;
-  v8 = v6;
-  v9 = 4;
+  v9 = v6;
+  v10 = 4;
   while ( 1 )
   {
     max_length = cameraLocationObjectList->max_length;
-    v11 = v9 - 4;
-    if ( (int)v9 - 4 >= max_length )
+    v12 = v10 - 4;
+    if ( (int)v10 - 4 >= max_length )
     {
-      if ( !byte_4C3C921 )
+      if ( !byte_4C506A1 )
       {
-        sub_1C37058(&UnityEngine_Vector3_TypeInfo);
-        byte_4C3C921 = 1;
+        sub_1C3E564(&UnityEngine_Vector3_TypeInfo);
+        byte_4C506A1 = 1;
       }
       static_fields = UnityEngine_Vector3_TypeInfo->static_fields;
       x = static_fields->zeroVector.fields.x;
@@ -61,29 +62,29 @@ UnityEngine_Vector3_o MapModelComponent__GetCameraLocationPosition(
       z = static_fields->zeroVector.fields.z;
       goto LABEL_16;
     }
-    if ( v11 >= max_length )
+    if ( v12 >= max_length )
       goto LABEL_15;
-    v6 = (System_String_o *)*((_QWORD *)&cameraLocationObjectList->obj.klass + v9);
+    v6 = (System_String_o *)*((_QWORD *)&cameraLocationObjectList->obj.klass + v10);
     if ( !v6 )
       goto LABEL_8;
     name = UnityEngine_Object__get_name((UnityEngine_Object_o *)v6, 0);
-    v6 = (System_String_o *)System_String__op_Inequality(name, v8, 0);
+    v6 = (System_String_o *)System_String__op_Inequality(name, v9, 0);
     if ( ((unsigned __int8)v6 & 1) == 0 )
       break;
     cameraLocationObjectList = this->fields.cameraLocationObjectList;
-    ++v9;
+    ++v10;
     if ( !cameraLocationObjectList )
       goto LABEL_8;
   }
-  v17 = this->fields.cameraLocationObjectList;
-  if ( !v17 )
+  v18 = this->fields.cameraLocationObjectList;
+  if ( !v18 )
 LABEL_8:
-    sub_1C372B4(v6);
-  if ( v11 >= LODWORD(v17->max_length) )
+    sub_1C3E7C0(v6, v7);
+  if ( v12 >= LODWORD(v18->max_length) )
 LABEL_15:
-    sub_1C372BC(v6);
+    sub_1C3E7C8(v6, v7);
   *(UnityEngine_Vector3_o *)&x = GameObjectExtensions__GetLocalPosition(
-                                   (UnityEngine_GameObject_o *)*((_QWORD *)&v17->obj.klass + v9),
+                                   (UnityEngine_GameObject_o *)*((_QWORD *)&v18->obj.klass + v10),
                                    0);
 LABEL_16:
   result.fields.z = z;
@@ -104,12 +105,12 @@ void MapModelComponent__PlayAnimation(
   effectAction = (char *)this->fields.effectAction;
   if ( !effectAction
     || (*((_QWORD *)effectAction + 5) = endAction,
-        sub_1C36FFC((CGThumbnailListItem_o *)(effectAction + 40), (int32_t)endAction, (int32_t)endAction, method),
+        sub_1C3E508((CGThumbnailListItem_o *)(effectAction + 40), (int32_t)endAction, (int32_t)endAction, method),
         (effectAction = (char *)this->fields.animationComponent) == 0) )
   {
-    sub_1C372B4(effectAction);
+    sub_1C3E7C0(effectAction, animationName);
   }
-  SimpleAnimation__Play_66507412((SimpleAnimation_o *)effectAction, animationName, 0);
+  SimpleAnimation__Play_66582224((SimpleAnimation_o *)effectAction, animationName, 0);
 }
 
 

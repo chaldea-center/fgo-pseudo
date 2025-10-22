@@ -20,7 +20,7 @@ void ScriptActionAdvPrefabActorGoNextState__OnStateEnter(
 
   owner = this->fields.owner;
   if ( !owner )
-    sub_1C372B4(this);
+    sub_1C3E7C0(this, animator);
   owner->fields._IsGoNext_k__BackingField = 1;
   v7 = *(_OWORD *)&stateInfo->fields.m_Name;
   v6 = *(_OWORD *)&stateInfo->fields.m_Length;
@@ -44,5 +44,5 @@ void ScriptActionAdvPrefabActorGoNextState__SetOwner(
   const MethodInfo *v3; // x3
 
   this->fields.owner = owner;
-  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.owner, (int32_t)owner, (int32_t)method, v3);
+  sub_1C3E508((CGThumbnailListItem_o *)&this->fields.owner, (int32_t)owner, (int32_t)method, v3);
 }

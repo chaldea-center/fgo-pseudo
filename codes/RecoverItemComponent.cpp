@@ -1,9 +1,9 @@
 void RecoverItemComponent___cctor(const MethodInfo *method)
 {
-  if ( (byte_4C3CF75 & 1) == 0 )
+  if ( (byte_4C50CF5 & 1) == 0 )
   {
-    sub_1C37058(&RecoverItemComponent_TypeInfo);
-    byte_4C3CF75 = 1;
+    sub_1C3E564(&RecoverItemComponent_TypeInfo);
+    byte_4C50CF5 = 1;
   }
   LODWORD(RecoverItemComponent_TypeInfo->static_fields->COLOR_VAL) = (struct RecoverItemComponent_StaticFields)1052770304;
 }
@@ -20,14 +20,14 @@ void RecoverItemComponent__AttachStoneCountRefreshComponent(RecoverItemComponent
   UnityEngine_GameObject_o *gameObject; // x20
   System_Action_int__o *v4; // x21
 
-  if ( (byte_4C3CF6F & 1) == 0 )
+  if ( (byte_4C50CEF & 1) == 0 )
   {
-    sub_1C37058(&System_Action_int__TypeInfo);
-    sub_1C37058(&Method_RecoverItemComponent__AttachStoneCountRefreshComponent_b__38_0__);
-    byte_4C3CF6F = 1;
+    sub_1C3E564(&System_Action_int__TypeInfo);
+    sub_1C3E564(&Method_RecoverItemComponent__AttachStoneCountRefreshComponent_b__38_0__);
+    byte_4C50CEF = 1;
   }
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
-  v4 = (System_Action_int__o *)sub_1C372A4(System_Action_int__TypeInfo);
+  v4 = (System_Action_int__o *)sub_1C3E7B0(System_Action_int__TypeInfo);
   System_Action_int____ctor(
     v4,
     (Il2CppObject *)this,
@@ -46,27 +46,28 @@ void RecoverItemComponent__CloseApRecovDlg(
   Il2CppObject *Instance; // x20
   System_Action_o *v8; // x21
   Il2CppObject *v9; // x0
+  __int64 v10; // x1
 
-  if ( (byte_4C3CF72 & 1) == 0 )
+  if ( (byte_4C50CF2 & 1) == 0 )
   {
-    sub_1C37058(&System_Action_TypeInfo);
-    sub_1C37058(&Method_RecoverItemComponent_setRequestInfo__);
-    sub_1C37058(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
-    byte_4C3CF72 = 1;
+    sub_1C3E564(&System_Action_TypeInfo);
+    sub_1C3E564(&Method_RecoverItemComponent_setRequestInfo__);
+    sub_1C3E564(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+    byte_4C50CF2 = 1;
   }
   if ( isRes )
   {
     this->fields.spendNum = useNum;
-    Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39ED16C *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
-    v8 = (System_Action_o *)sub_1C372A4(System_Action_TypeInfo);
+    Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39FF5A8 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+    v8 = (System_Action_o *)sub_1C3E7B0(System_Action_TypeInfo);
     System_Action___ctor(v8, (Il2CppObject *)this, Method_RecoverItemComponent_setRequestInfo__, 0);
     if ( !Instance )
 LABEL_9:
-      sub_1C372B4(v9);
+      sub_1C3E7C0(v9, v10);
   }
   else
   {
-    v9 = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39ED16C *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+    v9 = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39FF5A8 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
     if ( !v9 )
       goto LABEL_9;
     Instance = v9;
@@ -80,210 +81,212 @@ void RecoverItemComponent__OnClickItem(RecoverItemComponent_o *this, const Metho
 {
   UnityEngine_Object_o *dialog; // x20
   __int64 userEntity; // x0
-  struct RecoverDlgComponent_o *v5; // x8
-  System_String_o *v6; // x20
-  System_String_o *v7; // x21
-  __int64 v8; // x2
-  __int64 v9; // x3
-  __int64 v10; // x4
-  __int64 v11; // x5
-  __int64 v12; // x6
-  __int64 v13; // x7
-  Il2CppObject *v14; // x0
-  System_String_o *v15; // x24
+  __int64 v5; // x1
+  struct RecoverDlgComponent_o *v6; // x8
+  System_String_o *v7; // x20
+  System_String_o *v8; // x21
+  __int64 v9; // x2
+  __int64 v10; // x3
+  __int64 v11; // x4
+  __int64 v12; // x5
+  __int64 v13; // x6
+  __int64 v14; // x7
+  Il2CppObject *v15; // x0
+  System_String_o *v16; // x24
   Il2CppObject *mText; // x23
-  System_String_o *v17; // x21
-  __int64 v18; // x2
-  __int64 v19; // x3
-  __int64 v20; // x4
-  __int64 v21; // x5
-  __int64 v22; // x6
-  __int64 v23; // x7
-  Il2CppObject *v24; // x0
+  System_String_o *v18; // x21
+  __int64 v19; // x2
+  __int64 v20; // x3
+  __int64 v21; // x4
+  __int64 v22; // x5
+  __int64 v23; // x6
+  __int64 v24; // x7
+  Il2CppObject *v25; // x0
   struct UILabel_o *itemNameLb; // x8
-  System_String_o *v26; // x21
-  System_String_o *v27; // x22
-  _QWORD *v28; // x8
-  System_Reflection_MethodBase_o *v29; // x0
-  int32_t v30; // w8
+  System_String_o *v27; // x21
+  System_String_o *v28; // x22
+  _QWORD *v29; // x8
+  System_Reflection_MethodBase_o *v30; // x0
+  int32_t v31; // w8
   int32_t usrMaxAp; // w9
-  System_String_o **v32; // x8
-  System_String_o *v33; // x25
+  System_String_o **v33; // x8
   System_String_o *v34; // x25
-  System_Object_array *v35; // x26
+  System_String_o *v35; // x25
   __int64 v36; // x2
-  __int64 v37; // x3
-  __int64 v38; // x4
-  __int64 v39; // x5
-  __int64 v40; // x6
-  __int64 v41; // x7
-  Il2CppObject *v42; // x24
-  __int64 v43; // x2
-  __int64 v44; // x3
-  __int64 v45; // x4
-  __int64 v46; // x5
-  __int64 v47; // x6
-  __int64 v48; // x7
-  Il2CppObject *v49; // x24
-  __int64 v50; // x2
-  __int64 v51; // x3
-  __int64 v52; // x4
-  __int64 v53; // x5
-  __int64 v54; // x6
-  __int64 v55; // x7
-  Il2CppObject *v56; // x24
-  __int64 v57; // x2
-  __int64 v58; // x3
-  __int64 v59; // x4
-  __int64 v60; // x5
-  __int64 v61; // x6
-  __int64 v62; // x7
-  Il2CppObject *v63; // x24
-  __int64 v64; // x2
-  __int64 v65; // x3
-  __int64 v66; // x4
-  __int64 v67; // x5
-  __int64 v68; // x6
-  __int64 v69; // x7
-  Il2CppObject *v70; // x24
-  Il2CppObject **v71; // x0
-  System_String_o *v72; // x25
-  System_Object_array *v73; // x26
-  __int64 v74; // x2
-  __int64 v75; // x3
-  __int64 v76; // x4
-  __int64 v77; // x5
-  __int64 v78; // x6
-  __int64 v79; // x7
-  __int64 v80; // x24
-  __int64 v81; // x2
-  __int64 v82; // x3
-  __int64 v83; // x4
-  __int64 v84; // x5
-  __int64 v85; // x6
-  __int64 v86; // x7
-  __int64 v87; // x24
-  __int64 v88; // x2
-  __int64 v89; // x3
-  __int64 v90; // x4
-  __int64 v91; // x5
-  __int64 v92; // x6
-  __int64 v93; // x7
-  __int64 v94; // x24
-  __int64 v95; // x2
-  __int64 v96; // x3
-  __int64 v97; // x4
-  __int64 v98; // x5
-  __int64 v99; // x6
-  __int64 v100; // x7
-  __int64 v101; // x24
-  __int64 v102; // x2
-  __int64 v103; // x3
-  __int64 v104; // x4
-  __int64 v105; // x5
-  __int64 v106; // x6
-  __int64 v107; // x7
-  __int64 v108; // x24
-  System_String_o *v109; // x24
-  Il2CppObject *v110; // x23
-  CommonConfirmDialog_ClickDelegate_o *v111; // x25
-  System_String_o **v112; // x8
-  System_String_o *v113; // x25
-  __int64 v114; // x2
-  __int64 v115; // x3
-  __int64 v116; // x4
-  __int64 v117; // x5
-  __int64 v118; // x6
-  __int64 v119; // x7
-  Il2CppObject *v120; // x24
-  __int64 v121; // x2
-  __int64 v122; // x3
-  __int64 v123; // x4
-  __int64 v124; // x5
-  __int64 v125; // x6
-  __int64 v126; // x7
-  Il2CppObject *v127; // x24
-  __int64 v128; // x2
-  __int64 v129; // x3
-  __int64 v130; // x4
-  __int64 v131; // x5
-  __int64 v132; // x6
-  __int64 v133; // x7
-  Il2CppObject *v134; // x24
-  __int64 v135; // x2
-  __int64 v136; // x3
-  __int64 v137; // x4
-  __int64 v138; // x5
-  __int64 v139; // x6
-  __int64 v140; // x7
-  Il2CppObject *v141; // x24
-  __int64 v142; // x2
-  __int64 v143; // x3
-  __int64 v144; // x4
-  __int64 v145; // x5
-  __int64 v146; // x6
-  __int64 v147; // x7
-  Il2CppObject *v148; // x24
-  __int64 v149; // x2
-  __int64 v150; // x3
-  __int64 v151; // x4
-  __int64 v152; // x5
-  __int64 v153; // x6
-  __int64 v154; // x7
-  System_String_o *v155; // x23
-  Il2CppObject *v156; // x25
-  CommonConfirmDialog_ClickDelegate_o *v157; // x26
-  System_String_o *v158; // x0
-  System_String_o *v159; // x20
-  Il2CppObject *v160; // x21
-  System_Action_o *v161; // x22
-  System_String_o *v162; // x0
-  System_String_o *v163; // x20
+  System_Object_array *v37; // x26
+  __int64 v38; // x2
+  __int64 v39; // x3
+  __int64 v40; // x4
+  __int64 v41; // x5
+  __int64 v42; // x6
+  __int64 v43; // x7
+  Il2CppObject *v44; // x24
+  __int64 v45; // x2
+  __int64 v46; // x3
+  __int64 v47; // x4
+  __int64 v48; // x5
+  __int64 v49; // x6
+  __int64 v50; // x7
+  Il2CppObject *v51; // x24
+  __int64 v52; // x2
+  __int64 v53; // x3
+  __int64 v54; // x4
+  __int64 v55; // x5
+  __int64 v56; // x6
+  __int64 v57; // x7
+  Il2CppObject *v58; // x24
+  __int64 v59; // x2
+  __int64 v60; // x3
+  __int64 v61; // x4
+  __int64 v62; // x5
+  __int64 v63; // x6
+  __int64 v64; // x7
+  Il2CppObject *v65; // x24
+  __int64 v66; // x2
+  __int64 v67; // x3
+  __int64 v68; // x4
+  __int64 v69; // x5
+  __int64 v70; // x6
+  __int64 v71; // x7
+  Il2CppObject *v72; // x24
+  Il2CppObject **v73; // x0
+  System_String_o *v74; // x25
+  System_Object_array *v75; // x26
+  __int64 v76; // x2
+  __int64 v77; // x3
+  __int64 v78; // x4
+  __int64 v79; // x5
+  __int64 v80; // x6
+  __int64 v81; // x7
+  __int64 v82; // x24
+  __int64 v83; // x2
+  __int64 v84; // x3
+  __int64 v85; // x4
+  __int64 v86; // x5
+  __int64 v87; // x6
+  __int64 v88; // x7
+  __int64 v89; // x24
+  __int64 v90; // x2
+  __int64 v91; // x3
+  __int64 v92; // x4
+  __int64 v93; // x5
+  __int64 v94; // x6
+  __int64 v95; // x7
+  __int64 v96; // x24
+  __int64 v97; // x2
+  __int64 v98; // x3
+  __int64 v99; // x4
+  __int64 v100; // x5
+  __int64 v101; // x6
+  __int64 v102; // x7
+  __int64 v103; // x24
+  __int64 v104; // x2
+  __int64 v105; // x3
+  __int64 v106; // x4
+  __int64 v107; // x5
+  __int64 v108; // x6
+  __int64 v109; // x7
+  __int64 v110; // x24
+  System_String_o *v111; // x24
+  Il2CppObject *v112; // x23
+  CommonConfirmDialog_ClickDelegate_o *v113; // x25
+  System_String_o **v114; // x8
+  System_String_o *v115; // x25
+  __int64 v116; // x2
+  __int64 v117; // x3
+  __int64 v118; // x4
+  __int64 v119; // x5
+  __int64 v120; // x6
+  __int64 v121; // x7
+  Il2CppObject *v122; // x24
+  __int64 v123; // x2
+  __int64 v124; // x3
+  __int64 v125; // x4
+  __int64 v126; // x5
+  __int64 v127; // x6
+  __int64 v128; // x7
+  Il2CppObject *v129; // x24
+  __int64 v130; // x2
+  __int64 v131; // x3
+  __int64 v132; // x4
+  __int64 v133; // x5
+  __int64 v134; // x6
+  __int64 v135; // x7
+  Il2CppObject *v136; // x24
+  __int64 v137; // x2
+  __int64 v138; // x3
+  __int64 v139; // x4
+  __int64 v140; // x5
+  __int64 v141; // x6
+  __int64 v142; // x7
+  Il2CppObject *v143; // x24
+  __int64 v144; // x2
+  __int64 v145; // x3
+  __int64 v146; // x4
+  __int64 v147; // x5
+  __int64 v148; // x6
+  __int64 v149; // x7
+  Il2CppObject *v150; // x24
+  __int64 v151; // x2
+  __int64 v152; // x3
+  __int64 v153; // x4
+  __int64 v154; // x5
+  __int64 v155; // x6
+  __int64 v156; // x7
+  System_String_o *v157; // x23
+  Il2CppObject *v158; // x25
+  CommonConfirmDialog_ClickDelegate_o *v159; // x26
+  System_String_o *v160; // x0
+  System_String_o *v161; // x20
+  Il2CppObject *v162; // x21
+  System_Action_o *v163; // x22
+  System_String_o *v164; // x0
+  System_String_o *v165; // x20
   Il2CppObject *Instance; // x21
-  System_Action_o *v165; // x22
-  Il2CppObject *v166; // x0
+  System_Action_o *v167; // x22
+  Il2CppObject *v168; // x0
   int32_t targetId; // w20
   int32_t needAp; // w21
-  CommonUI_o *v169; // x22
-  System_Action_bool__int__o *v170; // x23
-  __int64 v171; // x0
-  int32_t v172; // [xsp+48h] [xbp-78h] BYREF
-  int32_t v173; // [xsp+4Ch] [xbp-74h] BYREF
+  CommonUI_o *v171; // x22
+  System_Action_bool__int__o *v172; // x23
+  __int64 v173; // x0
+  int32_t v174; // [xsp+48h] [xbp-78h] BYREF
+  int32_t v175; // [xsp+4Ch] [xbp-74h] BYREF
   int32_t recvSum; // [xsp+50h] [xbp-70h] BYREF
   int32_t usrMaxRp; // [xsp+54h] [xbp-6Ch] BYREF
   int32_t usrCurrentRp; // [xsp+58h] [xbp-68h] BYREF
   int32_t spendNum; // [xsp+5Ch] [xbp-64h] BYREF
 
-  if ( (byte_4C3CF70 & 1) == 0 )
+  if ( (byte_4C50CF0 & 1) == 0 )
   {
-    sub_1C37058(&System_Action_bool__int__TypeInfo);
-    sub_1C37058(&System_Action_TypeInfo);
-    sub_1C37058(&BalanceConfig_TypeInfo);
-    sub_1C37058(&CommonConfirmDialog_ClickDelegate_TypeInfo);
-    sub_1C37058(&int_TypeInfo);
-    sub_1C37058(&LocalizationManager_TypeInfo);
-    sub_1C37058(&object___TypeInfo);
-    sub_1C37058(&UnityEngine_Object_TypeInfo);
-    sub_1C37058(&Method_RecoverItemComponent_CloseApRecovDlg__);
-    sub_1C37058(&Method_RecoverItemComponent_OnClickItem__);
-    sub_1C37058(&Method_RecoverItemComponent_closeNotificationDlg__);
-    sub_1C37058(&Method_RecoverItemComponent_spendItemDlg__);
-    sub_1C37058(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
-    sub_1C37058(&StringLiteral_11167/*"RP_RECOVER_CONFIRM_MSG"*/);
-    sub_1C37058(&StringLiteral_3528/*"CMDSPELL_CURRENT_NUM"*/);
-    sub_1C37058(&StringLiteral_3680/*"COMMAND_SPELL_TXT"*/);
-    sub_1C37058(&StringLiteral_2028/*"AP_RECOVER_CONFIRM_MSG"*/);
-    sub_1C37058(&StringLiteral_11165/*"RP_FULL_MSG"*/);
-    sub_1C37058(&StringLiteral_14813/*"UNIT_INFO"*/);
-    sub_1C37058(&StringLiteral_2024/*"AP_ADD_CONFIRM_MSG"*/);
-    sub_1C37058(&StringLiteral_3686/*"COMMON_CONFIRM_DECIDE"*/);
-    sub_1C37058(&StringLiteral_3684/*"COMMON_CONFIRM_CANCEL"*/);
-    sub_1C37058(&StringLiteral_2025/*"AP_ADD_CONFIRM_MSG_OVER"*/);
-    sub_1C37058(&StringLiteral_2029/*"AP_RECOVER_CONFIRM_MSG_OVER"*/);
-    sub_1C37058(&StringLiteral_2026/*"AP_FULL_MSG"*/);
-    sub_1C37058(&StringLiteral_1/*""*/);
-    sub_1C37058(&StringLiteral_2034/*"AP_RECOVER_STONEPAY_WARNING_MSG"*/);
-    byte_4C3CF70 = 1;
+    sub_1C3E564(&System_Action_bool__int__TypeInfo);
+    sub_1C3E564(&System_Action_TypeInfo);
+    sub_1C3E564(&BalanceConfig_TypeInfo);
+    sub_1C3E564(&CommonConfirmDialog_ClickDelegate_TypeInfo);
+    sub_1C3E564(&int_TypeInfo);
+    sub_1C3E564(&LocalizationManager_TypeInfo);
+    sub_1C3E564(&object___TypeInfo);
+    sub_1C3E564(&UnityEngine_Object_TypeInfo);
+    sub_1C3E564(&Method_RecoverItemComponent_CloseApRecovDlg__);
+    sub_1C3E564(&Method_RecoverItemComponent_OnClickItem__);
+    sub_1C3E564(&Method_RecoverItemComponent_closeNotificationDlg__);
+    sub_1C3E564(&Method_RecoverItemComponent_spendItemDlg__);
+    sub_1C3E564(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+    sub_1C3E564(&StringLiteral_11169/*"RP_RECOVER_CONFIRM_MSG"*/);
+    sub_1C3E564(&StringLiteral_3528/*"CMDSPELL_CURRENT_NUM"*/);
+    sub_1C3E564(&StringLiteral_3680/*"COMMAND_SPELL_TXT"*/);
+    sub_1C3E564(&StringLiteral_2028/*"AP_RECOVER_CONFIRM_MSG"*/);
+    sub_1C3E564(&StringLiteral_11167/*"RP_FULL_MSG"*/);
+    sub_1C3E564(&StringLiteral_14823/*"UNIT_INFO"*/);
+    sub_1C3E564(&StringLiteral_2024/*"AP_ADD_CONFIRM_MSG"*/);
+    sub_1C3E564(&StringLiteral_3686/*"COMMON_CONFIRM_DECIDE"*/);
+    sub_1C3E564(&StringLiteral_3684/*"COMMON_CONFIRM_CANCEL"*/);
+    sub_1C3E564(&StringLiteral_2025/*"AP_ADD_CONFIRM_MSG_OVER"*/);
+    sub_1C3E564(&StringLiteral_2029/*"AP_RECOVER_CONFIRM_MSG_OVER"*/);
+    sub_1C3E564(&StringLiteral_2026/*"AP_FULL_MSG"*/);
+    sub_1C3E564(&StringLiteral_1/*""*/);
+    sub_1C3E564(&StringLiteral_2034/*"AP_RECOVER_STONEPAY_WARNING_MSG"*/);
+    byte_4C50CF0 = 1;
   }
   if ( !this->fields.isEnableSelect )
     return;
@@ -293,19 +296,19 @@ void RecoverItemComponent__OnClickItem(RecoverItemComponent_o *this, const Metho
   userEntity = UnityEngine_Object__op_Inequality(dialog, 0, 0);
   if ( (userEntity & 1) == 0 )
     return;
-  v5 = this->fields.dialog;
-  if ( !v5 )
+  v6 = this->fields.dialog;
+  if ( !v6 )
     goto LABEL_140;
-  if ( v5->fields.isClosed )
+  if ( v6->fields.isClosed )
     return;
-  v6 = (System_String_o *)StringLiteral_1/*""*/;
+  v7 = (System_String_o *)StringLiteral_1/*""*/;
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-  v7 = LocalizationManager__Get((System_String_o *)StringLiteral_14813/*"UNIT_INFO"*/, 0);
+  v8 = LocalizationManager__Get((System_String_o *)StringLiteral_14823/*"UNIT_INFO"*/, 0);
   spendNum = this->fields.spendNum;
-  v14 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &spendNum, v8, v9, v10, v11, v12, v13);
-  userEntity = (__int64)System_String__Format(v7, v14, 0);
-  v15 = (System_String_o *)userEntity;
+  v15 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &spendNum, v9, v10, v11, v12, v13, v14);
+  userEntity = (__int64)System_String__Format(v8, v15, 0);
+  v16 = (System_String_o *)userEntity;
   if ( this->fields.currentType == 1 )
   {
     if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
@@ -315,10 +318,10 @@ void RecoverItemComponent__OnClickItem(RecoverItemComponent_o *this, const Metho
     {
       if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-      v17 = LocalizationManager__Get((System_String_o *)StringLiteral_3528/*"CMDSPELL_CURRENT_NUM"*/, 0);
+      v18 = LocalizationManager__Get((System_String_o *)StringLiteral_3528/*"CMDSPELL_CURRENT_NUM"*/, 0);
       spendNum = this->fields.spendNum;
-      v24 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &spendNum, v18, v19, v20, v21, v22, v23);
-      v15 = System_String__Format(v17, v24, 0);
+      v25 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &spendNum, v19, v20, v21, v22, v23, v24);
+      v16 = System_String__Format(v18, v25, 0);
     }
   }
   else
@@ -330,121 +333,121 @@ void RecoverItemComponent__OnClickItem(RecoverItemComponent_o *this, const Metho
   }
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-  v26 = LocalizationManager__Get((System_String_o *)StringLiteral_3686/*"COMMON_CONFIRM_DECIDE"*/, 0);
-  v27 = LocalizationManager__Get((System_String_o *)StringLiteral_3684/*"COMMON_CONFIRM_CANCEL"*/, 0);
-  v28 = Method_RecoverItemComponent_OnClickItem__;
+  v27 = LocalizationManager__Get((System_String_o *)StringLiteral_3686/*"COMMON_CONFIRM_DECIDE"*/, 0);
+  v28 = LocalizationManager__Get((System_String_o *)StringLiteral_3684/*"COMMON_CONFIRM_CANCEL"*/, 0);
+  v29 = Method_RecoverItemComponent_OnClickItem__;
   if ( (*((_BYTE *)Method_RecoverItemComponent_OnClickItem__ + 83) & 2) != 0 )
-    v28 = (_QWORD *)sub_1C37070(Method_RecoverItemComponent_OnClickItem__);
-  v29 = (System_Reflection_MethodBase_o *)sub_1C3703C(v28, v28[4]);
-  OverwriteAssetSoundName__PlaySystemSe(v29, 0, 0, 0);
+    v29 = (_QWORD *)sub_1C3E57C(Method_RecoverItemComponent_OnClickItem__);
+  v30 = (System_Reflection_MethodBase_o *)sub_1C3E548(v29, v29[4]);
+  OverwriteAssetSoundName__PlaySystemSe(v30, 0, 0, 0);
   if ( !this->fields.isAp )
   {
     if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-    v72 = LocalizationManager__Get((System_String_o *)StringLiteral_11167/*"RP_RECOVER_CONFIRM_MSG"*/, 0);
-    userEntity = sub_1C37100(object___TypeInfo, 7);
+    v74 = LocalizationManager__Get((System_String_o *)StringLiteral_11169/*"RP_RECOVER_CONFIRM_MSG"*/, 0);
+    userEntity = sub_1C3E60C(object___TypeInfo, 7);
     if ( !userEntity )
       goto LABEL_140;
-    v73 = (System_Object_array *)userEntity;
+    v75 = (System_Object_array *)userEntity;
     if ( mText )
     {
-      userEntity = sub_1C37194(mText, *(_QWORD *)(*(_QWORD *)userEntity + 64LL));
+      userEntity = sub_1C3E6A0(mText, *(_QWORD *)(*(_QWORD *)userEntity + 64LL));
       if ( !userEntity )
         goto LABEL_141;
     }
-    if ( LODWORD(v73->max_length) )
+    if ( LODWORD(v75->max_length) )
     {
-      v73->m_Items[0] = mText;
-      userEntity = sub_1C36FFC(v73->m_Items, mText);
-      if ( v15 )
+      v75->m_Items[0] = mText;
+      userEntity = sub_1C3E508(v75->m_Items, mText);
+      if ( v16 )
       {
-        userEntity = sub_1C37194(v15, v73->obj.klass->_1.element_class);
+        userEntity = sub_1C3E6A0(v16, v75->obj.klass->_1.element_class);
         if ( !userEntity )
           goto LABEL_141;
       }
-      if ( LODWORD(v73->max_length) > 1 )
+      if ( LODWORD(v75->max_length) > 1 )
       {
-        v73->m_Items[1] = (Il2CppObject *)v15;
-        sub_1C36FFC(&v73->m_Items[1], v15);
+        v75->m_Items[1] = (Il2CppObject *)v16;
+        sub_1C3E508(&v75->m_Items[1], v16);
         spendNum = this->fields.recvRpNum;
-        userEntity = j_il2cpp_value_box_0(int_TypeInfo, &spendNum, v74, v75, v76, v77, v78, v79);
-        v80 = userEntity;
+        userEntity = j_il2cpp_value_box_0(int_TypeInfo, &spendNum, v76, v77, v78, v79, v80, v81);
+        v82 = userEntity;
         if ( userEntity )
         {
-          userEntity = sub_1C37194(userEntity, v73->obj.klass->_1.element_class);
+          userEntity = sub_1C3E6A0(userEntity, v75->obj.klass->_1.element_class);
           if ( !userEntity )
             goto LABEL_141;
         }
-        if ( LODWORD(v73->max_length) > 2 )
+        if ( LODWORD(v75->max_length) > 2 )
         {
-          v73->m_Items[2] = (Il2CppObject *)v80;
-          sub_1C36FFC(&v73->m_Items[2], v80);
+          v75->m_Items[2] = (Il2CppObject *)v82;
+          sub_1C3E508(&v75->m_Items[2], v82);
           usrCurrentRp = this->fields.usrCurrentRp;
-          userEntity = j_il2cpp_value_box_0(int_TypeInfo, &usrCurrentRp, v81, v82, v83, v84, v85, v86);
-          v87 = userEntity;
+          userEntity = j_il2cpp_value_box_0(int_TypeInfo, &usrCurrentRp, v83, v84, v85, v86, v87, v88);
+          v89 = userEntity;
           if ( userEntity )
           {
-            userEntity = sub_1C37194(userEntity, v73->obj.klass->_1.element_class);
+            userEntity = sub_1C3E6A0(userEntity, v75->obj.klass->_1.element_class);
             if ( !userEntity )
               goto LABEL_141;
           }
-          if ( LODWORD(v73->max_length) > 3 )
+          if ( LODWORD(v75->max_length) > 3 )
           {
-            v73->m_Items[3] = (Il2CppObject *)v87;
-            sub_1C36FFC(&v73->m_Items[3], v87);
+            v75->m_Items[3] = (Il2CppObject *)v89;
+            sub_1C3E508(&v75->m_Items[3], v89);
             usrMaxRp = this->fields.usrMaxRp;
-            userEntity = j_il2cpp_value_box_0(int_TypeInfo, &usrMaxRp, v88, v89, v90, v91, v92, v93);
-            v94 = userEntity;
+            userEntity = j_il2cpp_value_box_0(int_TypeInfo, &usrMaxRp, v90, v91, v92, v93, v94, v95);
+            v96 = userEntity;
             if ( userEntity )
             {
-              userEntity = sub_1C37194(userEntity, v73->obj.klass->_1.element_class);
+              userEntity = sub_1C3E6A0(userEntity, v75->obj.klass->_1.element_class);
               if ( !userEntity )
                 goto LABEL_141;
             }
-            if ( LODWORD(v73->max_length) > 4 )
+            if ( LODWORD(v75->max_length) > 4 )
             {
-              v73->m_Items[4] = (Il2CppObject *)v94;
-              sub_1C36FFC(&v73->m_Items[4], v94);
+              v75->m_Items[4] = (Il2CppObject *)v96;
+              sub_1C3E508(&v75->m_Items[4], v96);
               recvSum = this->fields.recvSum;
-              userEntity = j_il2cpp_value_box_0(int_TypeInfo, &recvSum, v95, v96, v97, v98, v99, v100);
-              v101 = userEntity;
+              userEntity = j_il2cpp_value_box_0(int_TypeInfo, &recvSum, v97, v98, v99, v100, v101, v102);
+              v103 = userEntity;
               if ( userEntity )
               {
-                userEntity = sub_1C37194(userEntity, v73->obj.klass->_1.element_class);
+                userEntity = sub_1C3E6A0(userEntity, v75->obj.klass->_1.element_class);
                 if ( !userEntity )
                   goto LABEL_141;
               }
-              if ( LODWORD(v73->max_length) > 5 )
+              if ( LODWORD(v75->max_length) > 5 )
               {
-                v73->m_Items[5] = (Il2CppObject *)v101;
-                sub_1C36FFC(&v73->m_Items[5], v101);
-                v173 = this->fields.usrMaxRp;
-                userEntity = j_il2cpp_value_box_0(int_TypeInfo, &v173, v102, v103, v104, v105, v106, v107);
-                v108 = userEntity;
+                v75->m_Items[5] = (Il2CppObject *)v103;
+                sub_1C3E508(&v75->m_Items[5], v103);
+                v175 = this->fields.usrMaxRp;
+                userEntity = j_il2cpp_value_box_0(int_TypeInfo, &v175, v104, v105, v106, v107, v108, v109);
+                v110 = userEntity;
                 if ( userEntity )
                 {
-                  userEntity = sub_1C37194(userEntity, v73->obj.klass->_1.element_class);
+                  userEntity = sub_1C3E6A0(userEntity, v75->obj.klass->_1.element_class);
                   if ( !userEntity )
                     goto LABEL_141;
                 }
-                if ( LODWORD(v73->max_length) > 6 )
+                if ( LODWORD(v75->max_length) > 6 )
                 {
-                  v73->m_Items[6] = (Il2CppObject *)v108;
-                  sub_1C36FFC(&v73->m_Items[6], v108);
-                  userEntity = (__int64)System_String__Format_63603084(v72, v73, 0);
+                  v75->m_Items[6] = (Il2CppObject *)v110;
+                  sub_1C3E508(&v75->m_Items[6], v110);
+                  userEntity = (__int64)System_String__Format_63677896(v74, v75, 0);
                   if ( !this->fields.userEntity )
                     goto LABEL_140;
-                  v109 = (System_String_o *)userEntity;
+                  v111 = (System_String_o *)userEntity;
                   if ( UserGameEntity__getRp(this->fields.userEntity, 0) < this->fields.usrMaxRp )
                     goto LABEL_80;
                   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
                     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-                  v162 = LocalizationManager__Get((System_String_o *)StringLiteral_11165/*"RP_FULL_MSG"*/, 0);
-                  v163 = System_String__Format(v162, mText, 0);
-                  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39ED16C *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
-                  v165 = (System_Action_o *)sub_1C372A4(System_Action_TypeInfo);
+                  v164 = LocalizationManager__Get((System_String_o *)StringLiteral_11167/*"RP_FULL_MSG"*/, 0);
+                  v165 = System_String__Format(v164, mText, 0);
+                  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39FF5A8 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+                  v167 = (System_Action_o *)sub_1C3E7B0(System_Action_TypeInfo);
                   System_Action___ctor(
-                    v165,
+                    v167,
                     (Il2CppObject *)this,
                     Method_RecoverItemComponent_closeNotificationDlg__,
                     0);
@@ -453,8 +456,8 @@ void RecoverItemComponent__OnClickItem(RecoverItemComponent_o *this, const Metho
                   CommonUI__OpenNotificationDialog(
                     (CommonUI_o *)Instance,
                     (System_String_o *)StringLiteral_1/*""*/,
-                    v163,
                     v165,
+                    v167,
                     -1,
                     0,
                     0,
@@ -476,122 +479,122 @@ void RecoverItemComponent__OnClickItem(RecoverItemComponent_o *this, const Metho
       }
     }
 LABEL_139:
-    sub_1C372BC(userEntity);
+    sub_1C3E7C8(userEntity, v5, v36);
   }
-  v30 = this->fields.recvSum;
+  v31 = this->fields.recvSum;
   usrMaxAp = this->fields.usrMaxAp;
   if ( !this->fields.isAddAp )
   {
-    if ( v30 <= usrMaxAp )
-      v112 = (System_String_o **)&StringLiteral_2028/*"AP_RECOVER_CONFIRM_MSG"*/;
+    if ( v31 <= usrMaxAp )
+      v114 = (System_String_o **)&StringLiteral_2028/*"AP_RECOVER_CONFIRM_MSG"*/;
     else
-      v112 = (System_String_o **)&StringLiteral_2029/*"AP_RECOVER_CONFIRM_MSG_OVER"*/;
-    v113 = *v112;
+      v114 = (System_String_o **)&StringLiteral_2029/*"AP_RECOVER_CONFIRM_MSG_OVER"*/;
+    v115 = *v114;
     if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-    v34 = LocalizationManager__Get(v113, 0);
-    userEntity = sub_1C37100(object___TypeInfo, 8);
+    v35 = LocalizationManager__Get(v115, 0);
+    userEntity = sub_1C3E60C(object___TypeInfo, 8);
     if ( !userEntity )
       goto LABEL_140;
-    v35 = (System_Object_array *)userEntity;
+    v37 = (System_Object_array *)userEntity;
     if ( mText )
     {
-      userEntity = sub_1C37194(mText, *(_QWORD *)(*(_QWORD *)userEntity + 64LL));
+      userEntity = sub_1C3E6A0(mText, *(_QWORD *)(*(_QWORD *)userEntity + 64LL));
       if ( !userEntity )
         goto LABEL_141;
     }
-    if ( LODWORD(v35->max_length) )
+    if ( LODWORD(v37->max_length) )
     {
-      v35->m_Items[0] = mText;
-      userEntity = sub_1C36FFC(v35->m_Items, mText);
-      if ( v15 )
+      v37->m_Items[0] = mText;
+      userEntity = sub_1C3E508(v37->m_Items, mText);
+      if ( v16 )
       {
-        userEntity = sub_1C37194(v15, v35->obj.klass->_1.element_class);
+        userEntity = sub_1C3E6A0(v16, v37->obj.klass->_1.element_class);
         if ( !userEntity )
           goto LABEL_141;
       }
-      if ( LODWORD(v35->max_length) > 1 )
+      if ( LODWORD(v37->max_length) > 1 )
       {
-        v35->m_Items[1] = (Il2CppObject *)v15;
-        sub_1C36FFC(&v35->m_Items[1], v15);
+        v37->m_Items[1] = (Il2CppObject *)v16;
+        sub_1C3E508(&v37->m_Items[1], v16);
         spendNum = this->fields.apRcvRate;
-        userEntity = j_il2cpp_value_box_0(int_TypeInfo, &spendNum, v114, v115, v116, v117, v118, v119);
-        v120 = (Il2CppObject *)userEntity;
+        userEntity = j_il2cpp_value_box_0(int_TypeInfo, &spendNum, v116, v117, v118, v119, v120, v121);
+        v122 = (Il2CppObject *)userEntity;
         if ( userEntity )
         {
-          userEntity = sub_1C37194(userEntity, v35->obj.klass->_1.element_class);
+          userEntity = sub_1C3E6A0(userEntity, v37->obj.klass->_1.element_class);
           if ( !userEntity )
             goto LABEL_141;
         }
-        if ( LODWORD(v35->max_length) > 2 )
+        if ( LODWORD(v37->max_length) > 2 )
         {
-          v35->m_Items[2] = v120;
-          sub_1C36FFC(&v35->m_Items[2], v120);
+          v37->m_Items[2] = v122;
+          sub_1C3E508(&v37->m_Items[2], v122);
           usrCurrentRp = this->fields.recvApNum;
-          userEntity = j_il2cpp_value_box_0(int_TypeInfo, &usrCurrentRp, v121, v122, v123, v124, v125, v126);
-          v127 = (Il2CppObject *)userEntity;
+          userEntity = j_il2cpp_value_box_0(int_TypeInfo, &usrCurrentRp, v123, v124, v125, v126, v127, v128);
+          v129 = (Il2CppObject *)userEntity;
           if ( userEntity )
           {
-            userEntity = sub_1C37194(userEntity, v35->obj.klass->_1.element_class);
+            userEntity = sub_1C3E6A0(userEntity, v37->obj.klass->_1.element_class);
             if ( !userEntity )
               goto LABEL_141;
           }
-          if ( LODWORD(v35->max_length) > 3 )
+          if ( LODWORD(v37->max_length) > 3 )
           {
-            v35->m_Items[3] = v127;
-            sub_1C36FFC(&v35->m_Items[3], v127);
+            v37->m_Items[3] = v129;
+            sub_1C3E508(&v37->m_Items[3], v129);
             usrMaxRp = this->fields.usrCurrentAp;
-            userEntity = j_il2cpp_value_box_0(int_TypeInfo, &usrMaxRp, v128, v129, v130, v131, v132, v133);
-            v134 = (Il2CppObject *)userEntity;
+            userEntity = j_il2cpp_value_box_0(int_TypeInfo, &usrMaxRp, v130, v131, v132, v133, v134, v135);
+            v136 = (Il2CppObject *)userEntity;
             if ( userEntity )
             {
-              userEntity = sub_1C37194(userEntity, v35->obj.klass->_1.element_class);
+              userEntity = sub_1C3E6A0(userEntity, v37->obj.klass->_1.element_class);
               if ( !userEntity )
                 goto LABEL_141;
             }
-            if ( LODWORD(v35->max_length) > 4 )
+            if ( LODWORD(v37->max_length) > 4 )
             {
-              v35->m_Items[4] = v134;
-              sub_1C36FFC(&v35->m_Items[4], v134);
+              v37->m_Items[4] = v136;
+              sub_1C3E508(&v37->m_Items[4], v136);
               recvSum = this->fields.usrMaxAp;
-              userEntity = j_il2cpp_value_box_0(int_TypeInfo, &recvSum, v135, v136, v137, v138, v139, v140);
-              v141 = (Il2CppObject *)userEntity;
+              userEntity = j_il2cpp_value_box_0(int_TypeInfo, &recvSum, v137, v138, v139, v140, v141, v142);
+              v143 = (Il2CppObject *)userEntity;
               if ( userEntity )
               {
-                userEntity = sub_1C37194(userEntity, v35->obj.klass->_1.element_class);
+                userEntity = sub_1C3E6A0(userEntity, v37->obj.klass->_1.element_class);
                 if ( !userEntity )
                   goto LABEL_141;
               }
-              if ( LODWORD(v35->max_length) > 5 )
+              if ( LODWORD(v37->max_length) > 5 )
               {
-                v35->m_Items[5] = v141;
-                sub_1C36FFC(&v35->m_Items[5], v141);
-                v173 = this->fields.recvSum;
-                userEntity = j_il2cpp_value_box_0(int_TypeInfo, &v173, v142, v143, v144, v145, v146, v147);
-                v148 = (Il2CppObject *)userEntity;
+                v37->m_Items[5] = v143;
+                sub_1C3E508(&v37->m_Items[5], v143);
+                v175 = this->fields.recvSum;
+                userEntity = j_il2cpp_value_box_0(int_TypeInfo, &v175, v144, v145, v146, v147, v148, v149);
+                v150 = (Il2CppObject *)userEntity;
                 if ( userEntity )
                 {
-                  userEntity = sub_1C37194(userEntity, v35->obj.klass->_1.element_class);
+                  userEntity = sub_1C3E6A0(userEntity, v37->obj.klass->_1.element_class);
                   if ( !userEntity )
                     goto LABEL_141;
                 }
-                if ( LODWORD(v35->max_length) > 6 )
+                if ( LODWORD(v37->max_length) > 6 )
                 {
-                  v35->m_Items[6] = v148;
-                  sub_1C36FFC(&v35->m_Items[6], v148);
-                  v172 = this->fields.usrMaxAp;
-                  userEntity = j_il2cpp_value_box_0(int_TypeInfo, &v172, v149, v150, v151, v152, v153, v154);
-                  v70 = (Il2CppObject *)userEntity;
+                  v37->m_Items[6] = v150;
+                  sub_1C3E508(&v37->m_Items[6], v150);
+                  v174 = this->fields.usrMaxAp;
+                  userEntity = j_il2cpp_value_box_0(int_TypeInfo, &v174, v151, v152, v153, v154, v155, v156);
+                  v72 = (Il2CppObject *)userEntity;
                   if ( userEntity )
                   {
-                    userEntity = sub_1C37194(userEntity, v35->obj.klass->_1.element_class);
+                    userEntity = sub_1C3E6A0(userEntity, v37->obj.klass->_1.element_class);
                     if ( !userEntity )
                       goto LABEL_141;
                   }
-                  if ( LODWORD(v35->max_length) > 7 )
+                  if ( LODWORD(v37->max_length) > 7 )
                   {
-                    v35->m_Items[7] = v70;
-                    v71 = &v35->m_Items[7];
+                    v37->m_Items[7] = v72;
+                    v73 = &v37->m_Items[7];
                     goto LABEL_115;
                   }
                 }
@@ -603,110 +606,110 @@ LABEL_139:
     }
     goto LABEL_139;
   }
-  if ( v30 <= usrMaxAp )
-    v32 = (System_String_o **)&StringLiteral_2024/*"AP_ADD_CONFIRM_MSG"*/;
+  if ( v31 <= usrMaxAp )
+    v33 = (System_String_o **)&StringLiteral_2024/*"AP_ADD_CONFIRM_MSG"*/;
   else
-    v32 = (System_String_o **)&StringLiteral_2025/*"AP_ADD_CONFIRM_MSG_OVER"*/;
-  v33 = *v32;
+    v33 = (System_String_o **)&StringLiteral_2025/*"AP_ADD_CONFIRM_MSG_OVER"*/;
+  v34 = *v33;
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-  v34 = LocalizationManager__Get(v33, 0);
-  userEntity = sub_1C37100(object___TypeInfo, 7);
+  v35 = LocalizationManager__Get(v34, 0);
+  userEntity = sub_1C3E60C(object___TypeInfo, 7);
   if ( !userEntity )
     goto LABEL_140;
-  v35 = (System_Object_array *)userEntity;
+  v37 = (System_Object_array *)userEntity;
   if ( mText )
   {
-    userEntity = sub_1C37194(mText, *(_QWORD *)(*(_QWORD *)userEntity + 64LL));
+    userEntity = sub_1C3E6A0(mText, *(_QWORD *)(*(_QWORD *)userEntity + 64LL));
     if ( !userEntity )
       goto LABEL_141;
   }
-  if ( !LODWORD(v35->max_length) )
+  if ( !LODWORD(v37->max_length) )
     goto LABEL_139;
-  v35->m_Items[0] = mText;
-  userEntity = sub_1C36FFC(v35->m_Items, mText);
-  if ( v15 )
+  v37->m_Items[0] = mText;
+  userEntity = sub_1C3E508(v37->m_Items, mText);
+  if ( v16 )
   {
-    userEntity = sub_1C37194(v15, v35->obj.klass->_1.element_class);
+    userEntity = sub_1C3E6A0(v16, v37->obj.klass->_1.element_class);
     if ( !userEntity )
       goto LABEL_141;
   }
-  if ( LODWORD(v35->max_length) <= 1 )
+  if ( LODWORD(v37->max_length) <= 1 )
     goto LABEL_139;
-  v35->m_Items[1] = (Il2CppObject *)v15;
-  sub_1C36FFC(&v35->m_Items[1], v15);
+  v37->m_Items[1] = (Il2CppObject *)v16;
+  sub_1C3E508(&v37->m_Items[1], v16);
   spendNum = this->fields.recvApNum;
-  userEntity = j_il2cpp_value_box_0(int_TypeInfo, &spendNum, v36, v37, v38, v39, v40, v41);
-  v42 = (Il2CppObject *)userEntity;
+  userEntity = j_il2cpp_value_box_0(int_TypeInfo, &spendNum, v38, v39, v40, v41, v42, v43);
+  v44 = (Il2CppObject *)userEntity;
   if ( userEntity )
   {
-    userEntity = sub_1C37194(userEntity, v35->obj.klass->_1.element_class);
+    userEntity = sub_1C3E6A0(userEntity, v37->obj.klass->_1.element_class);
     if ( !userEntity )
       goto LABEL_141;
   }
-  if ( LODWORD(v35->max_length) <= 2 )
+  if ( LODWORD(v37->max_length) <= 2 )
     goto LABEL_139;
-  v35->m_Items[2] = v42;
-  sub_1C36FFC(&v35->m_Items[2], v42);
+  v37->m_Items[2] = v44;
+  sub_1C3E508(&v37->m_Items[2], v44);
   usrCurrentRp = this->fields.usrCurrentAp;
-  userEntity = j_il2cpp_value_box_0(int_TypeInfo, &usrCurrentRp, v43, v44, v45, v46, v47, v48);
-  v49 = (Il2CppObject *)userEntity;
+  userEntity = j_il2cpp_value_box_0(int_TypeInfo, &usrCurrentRp, v45, v46, v47, v48, v49, v50);
+  v51 = (Il2CppObject *)userEntity;
   if ( userEntity )
   {
-    userEntity = sub_1C37194(userEntity, v35->obj.klass->_1.element_class);
+    userEntity = sub_1C3E6A0(userEntity, v37->obj.klass->_1.element_class);
     if ( !userEntity )
       goto LABEL_141;
   }
-  if ( LODWORD(v35->max_length) <= 3 )
+  if ( LODWORD(v37->max_length) <= 3 )
     goto LABEL_139;
-  v35->m_Items[3] = v49;
-  sub_1C36FFC(&v35->m_Items[3], v49);
+  v37->m_Items[3] = v51;
+  sub_1C3E508(&v37->m_Items[3], v51);
   usrMaxRp = this->fields.usrMaxAp;
-  userEntity = j_il2cpp_value_box_0(int_TypeInfo, &usrMaxRp, v50, v51, v52, v53, v54, v55);
-  v56 = (Il2CppObject *)userEntity;
+  userEntity = j_il2cpp_value_box_0(int_TypeInfo, &usrMaxRp, v52, v53, v54, v55, v56, v57);
+  v58 = (Il2CppObject *)userEntity;
   if ( userEntity )
   {
-    userEntity = sub_1C37194(userEntity, v35->obj.klass->_1.element_class);
+    userEntity = sub_1C3E6A0(userEntity, v37->obj.klass->_1.element_class);
     if ( !userEntity )
       goto LABEL_141;
   }
-  if ( LODWORD(v35->max_length) <= 4 )
+  if ( LODWORD(v37->max_length) <= 4 )
     goto LABEL_139;
-  v35->m_Items[4] = v56;
-  sub_1C36FFC(&v35->m_Items[4], v56);
+  v37->m_Items[4] = v58;
+  sub_1C3E508(&v37->m_Items[4], v58);
   recvSum = this->fields.recvSum;
-  userEntity = j_il2cpp_value_box_0(int_TypeInfo, &recvSum, v57, v58, v59, v60, v61, v62);
-  v63 = (Il2CppObject *)userEntity;
+  userEntity = j_il2cpp_value_box_0(int_TypeInfo, &recvSum, v59, v60, v61, v62, v63, v64);
+  v65 = (Il2CppObject *)userEntity;
   if ( userEntity )
   {
-    userEntity = sub_1C37194(userEntity, v35->obj.klass->_1.element_class);
+    userEntity = sub_1C3E6A0(userEntity, v37->obj.klass->_1.element_class);
     if ( !userEntity )
       goto LABEL_141;
   }
-  if ( LODWORD(v35->max_length) <= 5 )
+  if ( LODWORD(v37->max_length) <= 5 )
     goto LABEL_139;
-  v35->m_Items[5] = v63;
-  sub_1C36FFC(&v35->m_Items[5], v63);
-  v173 = this->fields.usrMaxAp;
-  userEntity = j_il2cpp_value_box_0(int_TypeInfo, &v173, v64, v65, v66, v67, v68, v69);
-  v70 = (Il2CppObject *)userEntity;
+  v37->m_Items[5] = v65;
+  sub_1C3E508(&v37->m_Items[5], v65);
+  v175 = this->fields.usrMaxAp;
+  userEntity = j_il2cpp_value_box_0(int_TypeInfo, &v175, v66, v67, v68, v69, v70, v71);
+  v72 = (Il2CppObject *)userEntity;
   if ( userEntity )
   {
-    userEntity = sub_1C37194(userEntity, v35->obj.klass->_1.element_class);
+    userEntity = sub_1C3E6A0(userEntity, v37->obj.klass->_1.element_class);
     if ( !userEntity )
     {
 LABEL_141:
-      v171 = sub_1C372D8();
-      sub_1C37180(v171, 0);
+      v173 = sub_1C3E7E4();
+      sub_1C3E68C(v173, 0);
     }
   }
-  if ( LODWORD(v35->max_length) <= 6 )
+  if ( LODWORD(v37->max_length) <= 6 )
     goto LABEL_139;
-  v35->m_Items[6] = v70;
-  v71 = &v35->m_Items[6];
+  v37->m_Items[6] = v72;
+  v73 = &v37->m_Items[6];
 LABEL_115:
-  sub_1C36FFC(v71, v70);
-  v109 = System_String__Format_63603084(v34, v35, 0);
+  sub_1C3E508(v73, v72);
+  v111 = System_String__Format_63677896(v35, v37, 0);
   userEntity = (__int64)this->fields.userEntity;
   if ( !userEntity )
     goto LABEL_140;
@@ -716,27 +719,27 @@ LABEL_115:
     {
       if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-      v155 = LocalizationManager__Get((System_String_o *)StringLiteral_2034/*"AP_RECOVER_STONEPAY_WARNING_MSG"*/, 0);
-      v156 = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39ED16C *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
-      v157 = (CommonConfirmDialog_ClickDelegate_o *)sub_1C372A4(CommonConfirmDialog_ClickDelegate_TypeInfo);
+      v157 = LocalizationManager__Get((System_String_o *)StringLiteral_2034/*"AP_RECOVER_STONEPAY_WARNING_MSG"*/, 0);
+      v158 = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39FF5A8 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+      v159 = (CommonConfirmDialog_ClickDelegate_o *)sub_1C3E7B0(CommonConfirmDialog_ClickDelegate_TypeInfo);
       CommonConfirmDialog_ClickDelegate___ctor(
-        v157,
+        v159,
         (Il2CppObject *)this,
         Method_RecoverItemComponent_spendItemDlg__,
         0);
       userEntity = (__int64)BalanceConfig_TypeInfo;
       if ( !BalanceConfig_TypeInfo->_2.cctor_finished )
         userEntity = j_il2cpp_runtime_class_init_0(BalanceConfig_TypeInfo);
-      if ( v156 )
+      if ( v158 )
       {
         CommonUI__OpenConfirmDecideDlgAddMsgFrame(
-          (CommonUI_o *)v156,
-          v6,
-          v109,
-          v155,
-          v26,
-          v27,
+          (CommonUI_o *)v158,
+          v7,
+          v111,
           v157,
+          v27,
+          v28,
+          v159,
           BalanceConfig_TypeInfo->static_fields->DefaultFontSize,
           0.0,
           86.0,
@@ -749,37 +752,37 @@ LABEL_115:
         return;
       }
 LABEL_140:
-      sub_1C372B4(userEntity);
+      sub_1C3E7C0(userEntity, v5);
     }
     if ( this->fields.isAddAp || this->fields.apRcvRate != 100 || this->fields.spendNum >= 2 )
     {
-      v166 = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39ED16C *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+      v168 = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39FF5A8 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
       targetId = this->fields.targetId;
       needAp = this->fields.needAp;
-      v169 = (CommonUI_o *)v166;
-      v170 = (System_Action_bool__int__o *)sub_1C372A4(System_Action_bool__int__TypeInfo);
-      System_Action_bool__int____ctor(v170, (Il2CppObject *)this, Method_RecoverItemComponent_CloseApRecovDlg__, 0);
-      if ( !v169 )
+      v171 = (CommonUI_o *)v168;
+      v172 = (System_Action_bool__int__o *)sub_1C3E7B0(System_Action_bool__int__TypeInfo);
+      System_Action_bool__int____ctor(v172, (Il2CppObject *)this, Method_RecoverItemComponent_CloseApRecovDlg__, 0);
+      if ( !v171 )
         goto LABEL_140;
-      CommonUI__OpenApRecoverConfirmDlg(v169, targetId, needAp, v170, 0);
+      CommonUI__OpenApRecoverConfirmDlg(v171, targetId, needAp, v172, 0);
       return;
     }
 LABEL_80:
-    v110 = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39ED16C *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
-    v111 = (CommonConfirmDialog_ClickDelegate_o *)sub_1C372A4(CommonConfirmDialog_ClickDelegate_TypeInfo);
-    CommonConfirmDialog_ClickDelegate___ctor(v111, (Il2CppObject *)this, Method_RecoverItemComponent_spendItemDlg__, 0);
+    v112 = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39FF5A8 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+    v113 = (CommonConfirmDialog_ClickDelegate_o *)sub_1C3E7B0(CommonConfirmDialog_ClickDelegate_TypeInfo);
+    CommonConfirmDialog_ClickDelegate___ctor(v113, (Il2CppObject *)this, Method_RecoverItemComponent_spendItemDlg__, 0);
     userEntity = (__int64)BalanceConfig_TypeInfo;
     if ( !BalanceConfig_TypeInfo->_2.cctor_finished )
       userEntity = j_il2cpp_runtime_class_init_0(BalanceConfig_TypeInfo);
-    if ( v110 )
+    if ( v112 )
     {
       CommonUI__OpenConfirmDecideDlg(
-        (CommonUI_o *)v110,
-        v6,
-        v109,
-        v26,
-        v27,
+        (CommonUI_o *)v112,
+        v7,
         v111,
+        v27,
+        v28,
+        v113,
         BalanceConfig_TypeInfo->static_fields->DefaultFontSize,
         0.0,
         15.0,
@@ -798,18 +801,18 @@ LABEL_80:
   }
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-  v158 = LocalizationManager__Get((System_String_o *)StringLiteral_2026/*"AP_FULL_MSG"*/, 0);
-  v159 = System_String__Format(v158, mText, 0);
-  v160 = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39ED16C *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
-  v161 = (System_Action_o *)sub_1C372A4(System_Action_TypeInfo);
-  System_Action___ctor(v161, (Il2CppObject *)this, Method_RecoverItemComponent_closeNotificationDlg__, 0);
-  if ( !v160 )
+  v160 = LocalizationManager__Get((System_String_o *)StringLiteral_2026/*"AP_FULL_MSG"*/, 0);
+  v161 = System_String__Format(v160, mText, 0);
+  v162 = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39FF5A8 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+  v163 = (System_Action_o *)sub_1C3E7B0(System_Action_TypeInfo);
+  System_Action___ctor(v163, (Il2CppObject *)this, Method_RecoverItemComponent_closeNotificationDlg__, 0);
+  if ( !v162 )
     goto LABEL_140;
   CommonUI__OpenNotificationDialog(
-    (CommonUI_o *)v160,
+    (CommonUI_o *)v162,
     (System_String_o *)StringLiteral_1/*""*/,
-    v159,
     v161,
+    v163,
     -1,
     0,
     0,
@@ -838,20 +841,21 @@ void RecoverItemComponent___AttachStoneCountRefreshComponent_b__38_0(
   UILabel_o *currentNumLb; // x19
   Il2CppObject *v11; // x0
   System_String_o *v12; // x0
-  int32_t v13; // [xsp+Ch] [xbp-34h] BYREF
+  __int64 v13; // x1
+  int32_t v14; // [xsp+Ch] [xbp-34h] BYREF
 
-  if ( (byte_4C3CF76 & 1) == 0 )
+  if ( (byte_4C50CF6 & 1) == 0 )
   {
-    sub_1C37058(&int_TypeInfo);
-    sub_1C37058(&StringLiteral_25092/*"{0:N0}"*/);
-    byte_4C3CF76 = 1;
+    sub_1C3E564(&int_TypeInfo);
+    sub_1C3E564(&StringLiteral_25112/*"{0:N0}"*/);
+    byte_4C50CF6 = 1;
   }
   currentNumLb = this->fields.currentNumLb;
-  v13 = stoneCount;
-  v11 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v13, method, v3, v4, v5, v6, v7);
-  v12 = System_String__Format((System_String_o *)StringLiteral_25092/*"{0:N0}"*/, v11, 0);
+  v14 = stoneCount;
+  v11 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v14, method, v3, v4, v5, v6, v7);
+  v12 = System_String__Format((System_String_o *)StringLiteral_25112/*"{0:N0}"*/, v11, 0);
   if ( !currentNumLb )
-    sub_1C372B4(v12);
+    sub_1C3E7C0(v12, v13);
   UILabel__set_text(currentNumLb, v12, 0);
 }
 
@@ -871,10 +875,10 @@ void RecoverItemComponent__add_callbackFunc(
   RecoverItemComponent_CallbackFunc_o *v12; // x1
   const MethodInfo *v13; // x2
 
-  if ( (byte_4C3CF6B & 1) == 0 )
+  if ( (byte_4C50CEB & 1) == 0 )
   {
-    sub_1C37058(&RecoverItemComponent_CallbackFunc_TypeInfo);
-    byte_4C3CF6B = 1;
+    sub_1C3E564(&RecoverItemComponent_CallbackFunc_TypeInfo);
+    byte_4C50CEB = 1;
   }
   callbackFunc = this->fields.callbackFunc;
   p_callbackFunc = &this->fields.callbackFunc;
@@ -887,13 +891,13 @@ void RecoverItemComponent__add_callbackFunc(
       if ( (RecoverItemComponent_CallbackFunc_c *)v8->klass != RecoverItemComponent_CallbackFunc_TypeInfo )
         break;
     }
-    v9 = sub_1C712B0(p_callbackFunc, v8, v6);
+    v9 = sub_1C787BC(p_callbackFunc, v8, v6);
     v10 = v6 == (System_Delegate_o *)v9;
     v6 = (System_Delegate_o *)v9;
     if ( v10 )
       return;
   }
-  v11 = (RecoverItemComponent_o *)sub_1C37574(v8);
+  v11 = (RecoverItemComponent_o *)sub_1C3EA80(v8);
   RecoverItemComponent__remove_callbackFunc(v11, v12, v13);
 }
 
@@ -901,15 +905,16 @@ void RecoverItemComponent__add_callbackFunc(
 void RecoverItemComponent__closeNotificationDlg(RecoverItemComponent_o *this, const MethodInfo *method)
 {
   Il2CppObject *Instance; // x0
+  __int64 v3; // x1
 
-  if ( (byte_4C3CF74 & 1) == 0 )
+  if ( (byte_4C50CF4 & 1) == 0 )
   {
-    sub_1C37058(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
-    byte_4C3CF74 = 1;
+    sub_1C3E564(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+    byte_4C50CF4 = 1;
   }
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39ED16C *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39FF5A8 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
   if ( !Instance )
-    sub_1C372B4(0);
+    sub_1C3E7C0(0, v3);
   CommonUI__CloseNotificationDialog((CommonUI_o *)Instance, 0);
 }
 
@@ -928,10 +933,10 @@ void RecoverItemComponent__remove_callbackFunc(
   RecoverItemComponent_o *v11; // x0
   const MethodInfo *v12; // x1
 
-  if ( (byte_4C3CF6C & 1) == 0 )
+  if ( (byte_4C50CEC & 1) == 0 )
   {
-    sub_1C37058(&RecoverItemComponent_CallbackFunc_TypeInfo);
-    byte_4C3CF6C = 1;
+    sub_1C3E564(&RecoverItemComponent_CallbackFunc_TypeInfo);
+    byte_4C50CEC = 1;
   }
   callbackFunc = this->fields.callbackFunc;
   p_callbackFunc = &this->fields.callbackFunc;
@@ -944,13 +949,13 @@ void RecoverItemComponent__remove_callbackFunc(
       if ( (RecoverItemComponent_CallbackFunc_c *)v8->klass != RecoverItemComponent_CallbackFunc_TypeInfo )
         break;
     }
-    v9 = sub_1C712B0(p_callbackFunc, v8, v6);
+    v9 = sub_1C787BC(p_callbackFunc, v8, v6);
     v10 = v6 == (System_Delegate_o *)v9;
     v6 = (System_Delegate_o *)v9;
     if ( v10 )
       return;
   }
-  v11 = (RecoverItemComponent_o *)sub_1C37574(v8);
+  v11 = (RecoverItemComponent_o *)sub_1C3EA80(v8);
   RecoverItemComponent__AttachStoneCountRefreshComponent(v11, v12);
 }
 
@@ -972,53 +977,53 @@ void RecoverItemComponent__setAPRecvItemInfo(
   unsigned int *p_spendNum; // x20
   UILabel_o *currentInfoLb; // x24
   UILabel_o *spendInfoLb; // x24
-  const MethodInfo *v19; // x1
   int32_t currentType; // w8
-  RecoverItemComponent_o *v21; // x21
-  RecoverItemComponent_o *v22; // x22
-  __int64 v23; // x2
-  __int64 v24; // x3
-  __int64 v25; // x4
-  __int64 v26; // x5
-  __int64 v27; // x6
-  __int64 v28; // x7
-  int32_t v29; // w8
-  UILabel_o *v30; // x21
-  Il2CppObject *v31; // x0
-  UILabel_o *v32; // x21
-  const MethodInfo *v33; // x1
-  System_String_o *v34; // x20
-  __int64 v35; // x2
-  __int64 v36; // x3
-  __int64 v37; // x4
-  __int64 v38; // x5
-  __int64 v39; // x6
-  __int64 v40; // x7
-  Il2CppObject *v41; // x0
-  System_String_o *v42; // x0
-  UILabel_o *v43; // x20
-  Il2CppObject *v44; // x21
-  System_String_o *v45; // x22
-  __int64 v46; // x2
-  __int64 v47; // x3
-  __int64 v48; // x4
-  __int64 v49; // x5
-  __int64 v50; // x6
-  __int64 v51; // x7
-  Il2CppObject *v52; // x24
-  __int64 v53; // x2
-  __int64 v54; // x3
-  __int64 v55; // x4
-  __int64 v56; // x5
-  __int64 v57; // x6
-  __int64 v58; // x7
-  Il2CppObject *v59; // x0
-  bool v60; // cc
-  int v61; // w8
+  RecoverItemComponent_o *v20; // x21
+  RecoverItemComponent_o *v21; // x22
+  __int64 v22; // x2
+  __int64 v23; // x3
+  __int64 v24; // x4
+  __int64 v25; // x5
+  __int64 v26; // x6
+  __int64 v27; // x7
+  int32_t v28; // w8
+  UILabel_o *v29; // x21
+  Il2CppObject *v30; // x0
+  UILabel_o *v31; // x21
+  const MethodInfo *v32; // x1
+  System_String_o *v33; // x20
+  __int64 v34; // x2
+  __int64 v35; // x3
+  __int64 v36; // x4
+  __int64 v37; // x5
+  __int64 v38; // x6
+  __int64 v39; // x7
+  Il2CppObject *v40; // x0
+  System_String_o *v41; // x0
+  UILabel_o *v42; // x20
+  Il2CppObject *v43; // x21
+  System_String_o *v44; // x22
+  __int64 v45; // x2
+  __int64 v46; // x3
+  __int64 v47; // x4
+  __int64 v48; // x5
+  __int64 v49; // x6
+  __int64 v50; // x7
+  Il2CppObject *v51; // x24
+  __int64 v52; // x2
+  __int64 v53; // x3
+  __int64 v54; // x4
+  __int64 v55; // x5
+  __int64 v56; // x6
+  __int64 v57; // x7
+  Il2CppObject *v58; // x0
+  bool v59; // cc
+  int v60; // w8
+  UILabel_o *v61; // x22
   UILabel_o *v62; // x22
-  UILabel_o *v63; // x22
-  Il2CppObject *v64; // x0
-  CommandSpellEntity_o *v65; // x22
+  Il2CppObject *v63; // x0
+  CommandSpellEntity_o *v64; // x22
+  __int64 v65; // x2
   int32_t type; // w8
   struct ItemIconComponent_o *itemIconInfo; // x27
   float v68; // s0
@@ -1164,30 +1169,30 @@ void RecoverItemComponent__setAPRecvItemInfo(
   UserItemEntity_o *entity; // [xsp+18h] [xbp-78h] BYREF
 
   v10 = this;
-  if ( (byte_4C3CF6D & 1) == 0 )
+  if ( (byte_4C50CED & 1) == 0 )
   {
-    sub_1C37058(&BalanceConfig_TypeInfo);
-    sub_1C37058(&Method_DataManager_GetMasterData_CommandSpellMaster___);
-    sub_1C37058(&Method_DataManager_GetMasterData_ItemMaster___);
-    sub_1C37058(&Method_DataManager_GetMasterData_StoneShopMaster___);
-    sub_1C37058(&Method_DataManager_GetMasterData_UserItemMaster___);
-    sub_1C37058(&Method_DataMasterBase_CommandSpellMaster__CommandSpellEntity__int__GetEntity__);
-    sub_1C37058(&Method_DataMasterBase_StoneShopMaster__StoneShopEntity__int__GetEntity__);
-    sub_1C37058(&int_TypeInfo);
-    sub_1C37058(&LocalizationManager_TypeInfo);
-    sub_1C37058(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-    sub_1C37058(&StringLiteral_3528/*"CMDSPELL_CURRENT_NUM"*/);
-    sub_1C37058(&StringLiteral_1920/*"ADD_RECOVER_CMDSPELL_TXT"*/);
-    sub_1C37058(&StringLiteral_3530/*"CMDSPELL_SPEND_NUM_TXT"*/);
-    sub_1C37058(&StringLiteral_25092/*"{0:N0}"*/);
-    sub_1C37058(&StringLiteral_861/*"-"*/);
-    sub_1C37058(&StringLiteral_14813/*"UNIT_INFO"*/);
-    sub_1C37058(&StringLiteral_12274/*"SPEND_NUM_TXT"*/);
-    sub_1C37058(&StringLiteral_3936/*"CURRENT_NUM_TXT"*/);
-    sub_1C37058(&StringLiteral_1921/*"ADD_RECOVER_NUM_TXT"*/);
-    sub_1C37058(&StringLiteral_2031/*"AP_RECOVER_NUM_TXT"*/);
-    this = (RecoverItemComponent_o *)sub_1C37058(&StringLiteral_3529/*"CMDSPELL_CURRENT_NUM_TXT"*/);
-    byte_4C3CF6D = 1;
+    sub_1C3E564(&BalanceConfig_TypeInfo);
+    sub_1C3E564(&Method_DataManager_GetMasterData_CommandSpellMaster___);
+    sub_1C3E564(&Method_DataManager_GetMasterData_ItemMaster___);
+    sub_1C3E564(&Method_DataManager_GetMasterData_StoneShopMaster___);
+    sub_1C3E564(&Method_DataManager_GetMasterData_UserItemMaster___);
+    sub_1C3E564(&Method_DataMasterBase_CommandSpellMaster__CommandSpellEntity__int__GetEntity__);
+    sub_1C3E564(&Method_DataMasterBase_StoneShopMaster__StoneShopEntity__int__GetEntity__);
+    sub_1C3E564(&int_TypeInfo);
+    sub_1C3E564(&LocalizationManager_TypeInfo);
+    sub_1C3E564(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    sub_1C3E564(&StringLiteral_3528/*"CMDSPELL_CURRENT_NUM"*/);
+    sub_1C3E564(&StringLiteral_1919/*"ADD_RECOVER_CMDSPELL_TXT"*/);
+    sub_1C3E564(&StringLiteral_3530/*"CMDSPELL_SPEND_NUM_TXT"*/);
+    sub_1C3E564(&StringLiteral_25112/*"{0:N0}"*/);
+    sub_1C3E564(&StringLiteral_861/*"-"*/);
+    sub_1C3E564(&StringLiteral_14823/*"UNIT_INFO"*/);
+    sub_1C3E564(&StringLiteral_12279/*"SPEND_NUM_TXT"*/);
+    sub_1C3E564(&StringLiteral_3936/*"CURRENT_NUM_TXT"*/);
+    sub_1C3E564(&StringLiteral_1920/*"ADD_RECOVER_NUM_TXT"*/);
+    sub_1C3E564(&StringLiteral_2031/*"AP_RECOVER_NUM_TXT"*/);
+    this = (RecoverItemComponent_o *)sub_1C3E564(&StringLiteral_3529/*"CMDSPELL_CURRENT_NUM_TXT"*/);
+    byte_4C50CED = 1;
   }
   entity = 0;
   CommandSpell = 0;
@@ -1199,11 +1204,11 @@ void RecoverItemComponent__setAPRecvItemInfo(
   v10->fields.isEnableSelect = 0;
   v10->fields.targetId = targetId;
   v10->fields.dialog = dlg;
-  sub_1C36FFC(&v10->fields.dialog, dlg);
+  sub_1C3E508(&v10->fields.dialog, dlg);
   v10->fields.callbackFunc = callback;
   v10->fields.needAp = needAp;
   *(_WORD *)&v10->fields.isAp = 1;
-  sub_1C36FFC(&v10->fields.callbackFunc, callback);
+  sub_1C3E508(&v10->fields.callbackFunc, callback);
   this = (RecoverItemComponent_o *)v10->fields.maskImg;
   if ( !this )
     goto LABEL_152;
@@ -1211,7 +1216,7 @@ void RecoverItemComponent__setAPRecvItemInfo(
   SelfUserGame = UserGameMaster__getSelfUserGame(0);
   v10->fields.userEntity = SelfUserGame;
   p_userEntity = (RecoverItemComponent_o **)&v10->fields.userEntity;
-  sub_1C36FFC(&v10->fields.userEntity, SelfUserGame);
+  sub_1C3E508(&v10->fields.userEntity, SelfUserGame);
   this = (RecoverItemComponent_o *)v10->fields.userEntity;
   if ( !this )
     goto LABEL_152;
@@ -1250,7 +1255,7 @@ void RecoverItemComponent__setAPRecvItemInfo(
     goto LABEL_152;
   UILabel__set_text(currentInfoLb, (System_String_o *)this, 0);
   spendInfoLb = v10->fields.spendInfoLb;
-  this = (RecoverItemComponent_o *)LocalizationManager__Get((System_String_o *)StringLiteral_12274/*"SPEND_NUM_TXT"*/, 0);
+  this = (RecoverItemComponent_o *)LocalizationManager__Get((System_String_o *)StringLiteral_12279/*"SPEND_NUM_TXT"*/, 0);
   if ( !spendInfoLb )
     goto LABEL_152;
   UILabel__set_text(spendInfoLb, (System_String_o *)this, 0);
@@ -1268,33 +1273,33 @@ void RecoverItemComponent__setAPRecvItemInfo(
     if ( !this )
       goto LABEL_152;
     UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)this, 1, 0);
-    v62 = v10->fields.currentInfoLb;
+    v61 = v10->fields.currentInfoLb;
     if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
     this = (RecoverItemComponent_o *)LocalizationManager__Get((System_String_o *)StringLiteral_3529/*"CMDSPELL_CURRENT_NUM_TXT"*/, 0);
+    if ( !v61 )
+      goto LABEL_152;
+    UILabel__set_text(v61, (System_String_o *)this, 0);
+    v62 = v10->fields.spendInfoLb;
+    this = (RecoverItemComponent_o *)LocalizationManager__Get((System_String_o *)StringLiteral_3530/*"CMDSPELL_SPEND_NUM_TXT"*/, 0);
     if ( !v62 )
       goto LABEL_152;
     UILabel__set_text(v62, (System_String_o *)this, 0);
-    v63 = v10->fields.spendInfoLb;
-    this = (RecoverItemComponent_o *)LocalizationManager__Get((System_String_o *)StringLiteral_3530/*"CMDSPELL_SPEND_NUM_TXT"*/, 0);
-    if ( !v63 )
-      goto LABEL_152;
-    UILabel__set_text(v63, (System_String_o *)this, 0);
-    this = (RecoverItemComponent_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39ED16C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    this = (RecoverItemComponent_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39FF5A8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
     if ( !this )
       goto LABEL_152;
     this = (RecoverItemComponent_o *)DataManager__GetMasterData_object_(
                                        (DataManager_o *)this,
-                                       (const MethodInfo_30E7C58 *)Method_DataManager_GetMasterData_CommandSpellMaster___);
+                                       (const MethodInfo_30F9A70 *)Method_DataManager_GetMasterData_CommandSpellMaster___);
     if ( !this )
       goto LABEL_152;
-    v64 = DataMasterBase_object__object__int___GetEntity(
+    v63 = DataMasterBase_object__object__int___GetEntity(
             (DataMasterBase_TMaster__TEntity__PKType__o *)this,
             v10->fields.targetId,
-            (const MethodInfo_33A10A0 *)Method_DataMasterBase_CommandSpellMaster__CommandSpellEntity__int__GetEntity__);
-    if ( !v64 )
+            (const MethodInfo_33B2F58 *)Method_DataMasterBase_CommandSpellMaster__CommandSpellEntity__int__GetEntity__);
+    if ( !v63 )
       goto LABEL_151;
-    v65 = (CommandSpellEntity_o *)v64;
+    v64 = (CommandSpellEntity_o *)v63;
     this = (RecoverItemComponent_o *)v10->fields.cmdSpellIcon;
     if ( !this )
       goto LABEL_152;
@@ -1302,18 +1307,18 @@ void RecoverItemComponent__setAPRecvItemInfo(
     this = (RecoverItemComponent_o *)v10->fields.itemNameLb;
     if ( !this )
       goto LABEL_152;
-    UILabel__set_text((UILabel_o *)this, v65->fields.name, 0);
+    UILabel__set_text((UILabel_o *)this, v64->fields.name, 0);
     this = *p_userEntity;
     if ( !*p_userEntity )
       goto LABEL_152;
     CommandSpell = UserGameEntity__getCommandSpell((UserGameEntity_o *)this, 0);
-    *p_spendNum = v65->fields.consume;
-    this = (RecoverItemComponent_o *)CommandSpellEntity__getValues(v65, 0);
+    *p_spendNum = v64->fields.consume;
+    this = (RecoverItemComponent_o *)CommandSpellEntity__getValues(v64, 0);
     if ( !this )
       goto LABEL_152;
     if ( LODWORD(this->fields.m_CancellationTokenSource) )
     {
-      type = v65->fields.type;
+      type = v64->fields.type;
       itemIconInfo = this->fields.itemIconInfo;
       if ( type == 3 )
       {
@@ -1328,10 +1333,10 @@ void RecoverItemComponent__setAPRecvItemInfo(
         v10->fields.apRcvRate = v69;
         usrMaxAp = (float)v10->fields.usrMaxAp;
         v71 = (float)SLODWORD(itemIconInfo->fields.backSprite) / 1000.0;
-        if ( !byte_4C3CFE8 )
+        if ( !byte_4C50D68 )
         {
-          sub_1C37058(&System_Math_TypeInfo);
-          byte_4C3CFE8 = 1;
+          sub_1C3E564(&System_Math_TypeInfo);
+          byte_4C50D68 = 1;
         }
         v72 = v71 * usrMaxAp;
         if ( !System_Math_TypeInfo->_2.cctor_finished )
@@ -1355,11 +1360,11 @@ void RecoverItemComponent__setAPRecvItemInfo(
         v93 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &apRcvRate, v87, v88, v89, v90, v91, v92);
         recvApNum = v10->fields.recvApNum;
         v100 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &recvApNum, v94, v95, v96, v97, v98, v99);
-        this = (RecoverItemComponent_o *)System_String__Format_63603016(v86, v85, v93, v100, 0);
+        this = (RecoverItemComponent_o *)System_String__Format_63677828(v86, v85, v93, v100, 0);
         if ( !itemDetailLb )
           goto LABEL_152;
         UILabel__set_text(itemDetailLb, (System_String_o *)this, 0);
-        type = v65->fields.type;
+        type = v64->fields.type;
       }
       if ( type != 4 )
       {
@@ -1374,8 +1379,8 @@ LABEL_144:
           if ( spendNumLb )
           {
             UILabel__set_text(spendNumLb, (System_String_o *)this, 0);
-            v60 = CommandSpell < v10->fields.spendNum;
-            v61 = v10->fields.recvApNum + v10->fields.usrCurrentAp;
+            v59 = CommandSpell < v10->fields.spendNum;
+            v60 = v10->fields.recvApNum + v10->fields.usrCurrentAp;
             goto LABEL_147;
           }
         }
@@ -1393,10 +1398,10 @@ LABEL_144:
         else
         {
           v102 = (float)(needAp - v10->fields.usrCurrentAp) / (float)backSprite;
-          if ( !byte_4C3CFE8 )
+          if ( !byte_4C50D68 )
           {
-            sub_1C37058(&System_Math_TypeInfo);
-            byte_4C3CFE8 = 1;
+            sub_1C3E564(&System_Math_TypeInfo);
+            byte_4C50D68 = 1;
           }
           v103 = fmaxf(v102, 1.0);
           if ( !System_Math_TypeInfo->_2.cctor_finished )
@@ -1417,10 +1422,10 @@ LABEL_144:
         v189 = System_String__Format(v181, v188, 0);
         v190 = v10->fields.itemDetailLb;
         v191 = (Il2CppObject *)v189;
-        v192 = LocalizationManager__Get((System_String_o *)StringLiteral_1920/*"ADD_RECOVER_CMDSPELL_TXT"*/, 0);
+        v192 = LocalizationManager__Get((System_String_o *)StringLiteral_1919/*"ADD_RECOVER_CMDSPELL_TXT"*/, 0);
         apRcvRate = v10->fields.recvApNum;
         v199 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &apRcvRate, v193, v194, v195, v196, v197, v198);
-        this = (RecoverItemComponent_o *)System_String__Format_63602948(v192, v191, v199, 0);
+        this = (RecoverItemComponent_o *)System_String__Format_63677760(v192, v191, v199, 0);
         if ( !v190 )
           goto LABEL_152;
         UILabel__set_text(v190, (System_String_o *)this, 0);
@@ -1429,7 +1434,7 @@ LABEL_144:
       }
     }
 LABEL_153:
-    sub_1C372BC(this);
+    sub_1C3E7C8(this, data, v65);
   }
   if ( currentType == 3 )
   {
@@ -1451,7 +1456,7 @@ LABEL_153:
           this = (RecoverItemComponent_o *)v10->fields.itemIconInfo;
           if ( this )
           {
-            ItemIconComponent__SetItemImage_40919564(
+            ItemIconComponent__SetItemImage_40966052(
               (ItemIconComponent_o *)this,
               v107->fields.imageId,
               v107->fields.bgImageId,
@@ -1471,12 +1476,12 @@ LABEL_153:
                 {
                   UILabel__set_text((UILabel_o *)this, v107->fields.name, 0);
                   *p_spendNum = 1;
-                  this = (RecoverItemComponent_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39ED16C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+                  this = (RecoverItemComponent_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39FF5A8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
                   if ( this )
                   {
                     this = (RecoverItemComponent_o *)DataManager__GetMasterData_object_(
                                                        (DataManager_o *)this,
-                                                       (const MethodInfo_30E7C58 *)Method_DataManager_GetMasterData_UserItemMaster___);
+                                                       (const MethodInfo_30F9A70 *)Method_DataManager_GetMasterData_UserItemMaster___);
                     if ( *p_userEntity )
                     {
                       if ( this )
@@ -1515,10 +1520,10 @@ LABEL_153:
                           v119 = v10->fields.usrMaxAp;
                           v10->fields.apRcvRate = v118;
                           v120 = (float)v119;
-                          if ( !byte_4C3CFE8 )
+                          if ( !byte_4C50D68 )
                           {
-                            sub_1C37058(&System_Math_TypeInfo);
-                            byte_4C3CFE8 = 1;
+                            sub_1C3E564(&System_Math_TypeInfo);
+                            byte_4C50D68 = 1;
                           }
                           v121 = v117 * v120;
                           if ( !System_Math_TypeInfo->_2.cctor_finished )
@@ -1530,10 +1535,10 @@ LABEL_153:
                           if ( needAp >= 1 )
                           {
                             v123 = (float)(needAp - v10->fields.usrCurrentAp) / (float)v122;
-                            if ( !byte_4C3CFE8 )
+                            if ( !byte_4C50D68 )
                             {
-                              sub_1C37058(&System_Math_TypeInfo);
-                              byte_4C3CFE8 = 1;
+                              sub_1C3E564(&System_Math_TypeInfo);
+                              byte_4C50D68 = 1;
                             }
                             v124 = fmaxf(v123, 1.0);
                             if ( !System_Math_TypeInfo->_2.cctor_finished )
@@ -1549,7 +1554,7 @@ LABEL_153:
                           }
                           if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
                             j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-                          v128 = LocalizationManager__Get((System_String_o *)StringLiteral_14813/*"UNIT_INFO"*/, 0);
+                          v128 = LocalizationManager__Get((System_String_o *)StringLiteral_14823/*"UNIT_INFO"*/, 0);
                           spendNum = v10->fields.spendNum;
                           v135 = (Il2CppObject *)j_il2cpp_value_box_0(
                                                    int_TypeInfo,
@@ -1584,7 +1589,7 @@ LABEL_153:
                                                    v150,
                                                    v151,
                                                    v152);
-                          this = (RecoverItemComponent_o *)System_String__Format_63603016(v139, v138, v146, v153, 0);
+                          this = (RecoverItemComponent_o *)System_String__Format_63677828(v139, v138, v146, v153, 0);
                           if ( !v137 )
                             goto LABEL_152;
                           UILabel__set_text(v137, (System_String_o *)this, 0);
@@ -1600,10 +1605,10 @@ LABEL_153:
                           else
                           {
                             v155 = (float)(needAp - v10->fields.usrCurrentAp) / (float)value;
-                            if ( !byte_4C3CFE8 )
+                            if ( !byte_4C50D68 )
                             {
-                              sub_1C37058(&System_Math_TypeInfo);
-                              byte_4C3CFE8 = 1;
+                              sub_1C3E564(&System_Math_TypeInfo);
+                              byte_4C50D68 = 1;
                             }
                             v156 = fmaxf(v155, 1.0);
                             if ( !System_Math_TypeInfo->_2.cctor_finished )
@@ -1617,7 +1622,7 @@ LABEL_153:
                           v10->fields.recvApNum = value;
                           if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
                             j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-                          v158 = LocalizationManager__Get((System_String_o *)StringLiteral_14813/*"UNIT_INFO"*/, 0);
+                          v158 = LocalizationManager__Get((System_String_o *)StringLiteral_14823/*"UNIT_INFO"*/, 0);
                           spendNum = v10->fields.spendNum;
                           v165 = (Il2CppObject *)j_il2cpp_value_box_0(
                                                    int_TypeInfo,
@@ -1631,7 +1636,7 @@ LABEL_153:
                           v166 = System_String__Format(v158, v165, 0);
                           v167 = v10->fields.itemDetailLb;
                           v168 = (Il2CppObject *)v166;
-                          v169 = LocalizationManager__Get((System_String_o *)StringLiteral_1921/*"ADD_RECOVER_NUM_TXT"*/, 0);
+                          v169 = LocalizationManager__Get((System_String_o *)StringLiteral_1920/*"ADD_RECOVER_NUM_TXT"*/, 0);
                           apRcvRate = v10->fields.recvApNum;
                           v176 = (Il2CppObject *)j_il2cpp_value_box_0(
                                                    int_TypeInfo,
@@ -1642,7 +1647,7 @@ LABEL_153:
                                                    v173,
                                                    v174,
                                                    v175);
-                          this = (RecoverItemComponent_o *)System_String__Format_63602948(v169, v168, v176, 0);
+                          this = (RecoverItemComponent_o *)System_String__Format_63677760(v169, v168, v176, 0);
                           if ( !v167 )
                             goto LABEL_152;
                           UILabel__set_text(v167, (System_String_o *)this, 0);
@@ -1660,7 +1665,7 @@ LABEL_153:
                                                  v112,
                                                  v113);
                         this = (RecoverItemComponent_o *)System_String__Format(
-                                                           (System_String_o *)StringLiteral_25092/*"{0:N0}"*/,
+                                                           (System_String_o *)StringLiteral_25112/*"{0:N0}"*/,
                                                            v178,
                                                            0);
                         if ( v177 )
@@ -1689,7 +1694,7 @@ LABEL_153:
       }
     }
 LABEL_152:
-    sub_1C372B4(this);
+    sub_1C3E7C0(this, data);
   }
   if ( currentType != 2 )
     goto LABEL_151;
@@ -1704,26 +1709,26 @@ LABEL_152:
   if ( !this )
     goto LABEL_152;
   UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)this, 0, 0);
-  this = (RecoverItemComponent_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39ED16C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  this = (RecoverItemComponent_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39FF5A8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !this )
     goto LABEL_152;
   this = (RecoverItemComponent_o *)DataManager__GetMasterData_object_(
                                      (DataManager_o *)this,
-                                     (const MethodInfo_30E7C58 *)Method_DataManager_GetMasterData_ItemMaster___);
+                                     (const MethodInfo_30F9A70 *)Method_DataManager_GetMasterData_ItemMaster___);
   if ( !this )
     goto LABEL_152;
   this = (RecoverItemComponent_o *)ItemMaster__GetEntityByType((ItemMaster_o *)this, 2, 0);
   if ( !this )
     goto LABEL_152;
-  v21 = this;
+  v20 = this;
   this = (RecoverItemComponent_o *)v10->fields.itemIconInfo;
   if ( !this )
     goto LABEL_152;
-  ItemIconComponent__SetItemImage_40919564(
+  ItemIconComponent__SetItemImage_40966052(
     (ItemIconComponent_o *)this,
-    (int32_t)v21->fields.cmdSpellBg,
-    HIDWORD(v21->fields.cmdSpellBg),
-    (int32_t)v21->fields.cmdSpellIcon,
+    (int32_t)v20->fields.cmdSpellBg,
+    HIDWORD(v20->fields.cmdSpellBg),
+    (int32_t)v20->fields.cmdSpellIcon,
     0,
     1,
     0);
@@ -1734,68 +1739,68 @@ LABEL_152:
   if ( !this )
     goto LABEL_152;
   UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)this, 1, 0);
-  this = (RecoverItemComponent_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39ED16C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  this = (RecoverItemComponent_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39FF5A8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !this )
     goto LABEL_152;
   this = (RecoverItemComponent_o *)DataManager__GetMasterData_object_(
                                      (DataManager_o *)this,
-                                     (const MethodInfo_30E7C58 *)Method_DataManager_GetMasterData_StoneShopMaster___);
+                                     (const MethodInfo_30F9A70 *)Method_DataManager_GetMasterData_StoneShopMaster___);
   if ( !this )
     goto LABEL_152;
   this = (RecoverItemComponent_o *)DataMasterBase_object__object__int___GetEntity(
                                      (DataMasterBase_TMaster__TEntity__PKType__o *)this,
                                      v10->fields.targetId,
-                                     (const MethodInfo_33A10A0 *)Method_DataMasterBase_StoneShopMaster__StoneShopEntity__int__GetEntity__);
+                                     (const MethodInfo_33B2F58 *)Method_DataMasterBase_StoneShopMaster__StoneShopEntity__int__GetEntity__);
   if ( !v10->fields.itemNameLb )
     goto LABEL_152;
-  v22 = this;
-  UILabel__set_text(v10->fields.itemNameLb, (System_String_o *)v21->fields.m_CancellationTokenSource, 0);
+  v21 = this;
+  UILabel__set_text(v10->fields.itemNameLb, (System_String_o *)v20->fields.m_CancellationTokenSource, 0);
   if ( !*p_userEntity )
     goto LABEL_152;
-  v29 = (int32_t)(*p_userEntity)->fields.userEntity;
-  if ( v22 )
-    *p_spendNum = HIDWORD(v22->fields.cmdSpellBg);
-  v30 = v10->fields.currentNumLb;
-  spendNum = v29;
-  v31 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &spendNum, v23, v24, v25, v26, v27, v28);
-  this = (RecoverItemComponent_o *)System_String__Format((System_String_o *)StringLiteral_25092/*"{0:N0}"*/, v31, 0);
-  if ( !v30 )
+  v28 = (int32_t)(*p_userEntity)->fields.userEntity;
+  if ( v21 )
+    *p_spendNum = HIDWORD(v21->fields.cmdSpellBg);
+  v29 = v10->fields.currentNumLb;
+  spendNum = v28;
+  v30 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &spendNum, v22, v23, v24, v25, v26, v27);
+  this = (RecoverItemComponent_o *)System_String__Format((System_String_o *)StringLiteral_25112/*"{0:N0}"*/, v30, 0);
+  if ( !v29 )
     goto LABEL_152;
-  UILabel__set_text(v30, (System_String_o *)this, 0);
-  v32 = v10->fields.spendNumLb;
+  UILabel__set_text(v29, (System_String_o *)this, 0);
+  v31 = v10->fields.spendNumLb;
   this = (RecoverItemComponent_o *)System_Int32__ToString((int)v10 + 128, 0);
-  if ( !v32 )
+  if ( !v31 )
     goto LABEL_152;
-  UILabel__set_text(v32, (System_String_o *)this, 0);
-  RecoverItemComponent__AttachStoneCountRefreshComponent(v10, v33);
+  UILabel__set_text(v31, (System_String_o *)this, 0);
+  RecoverItemComponent__AttachStoneCountRefreshComponent(v10, v32);
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-  v34 = LocalizationManager__Get((System_String_o *)StringLiteral_14813/*"UNIT_INFO"*/, 0);
+  v33 = LocalizationManager__Get((System_String_o *)StringLiteral_14823/*"UNIT_INFO"*/, 0);
   apRcvRate = v10->fields.spendNum;
-  v41 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &apRcvRate, v35, v36, v37, v38, v39, v40);
-  v42 = System_String__Format(v34, v41, 0);
-  v43 = v10->fields.itemDetailLb;
-  v44 = (Il2CppObject *)v42;
-  v45 = LocalizationManager__Get((System_String_o *)StringLiteral_2031/*"AP_RECOVER_NUM_TXT"*/, 0);
+  v40 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &apRcvRate, v34, v35, v36, v37, v38, v39);
+  v41 = System_String__Format(v33, v40, 0);
+  v42 = v10->fields.itemDetailLb;
+  v43 = (Il2CppObject *)v41;
+  v44 = LocalizationManager__Get((System_String_o *)StringLiteral_2031/*"AP_RECOVER_NUM_TXT"*/, 0);
   recvApNum = v10->fields.apRcvRate;
-  v52 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &recvApNum, v46, v47, v48, v49, v50, v51);
+  v51 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &recvApNum, v45, v46, v47, v48, v49, v50);
   v203 = v10->fields.recvApNum;
-  v59 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v203, v53, v54, v55, v56, v57, v58);
-  this = (RecoverItemComponent_o *)System_String__Format_63603016(v45, v44, v52, v59, 0);
-  if ( !v43 )
+  v58 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v203, v52, v53, v54, v55, v56, v57);
+  this = (RecoverItemComponent_o *)System_String__Format_63677828(v44, v43, v51, v58, 0);
+  if ( !v42 )
     goto LABEL_152;
-  UILabel__set_text(v43, (System_String_o *)this, 0);
+  UILabel__set_text(v42, (System_String_o *)this, 0);
   this = *p_userEntity;
   if ( !*p_userEntity )
     goto LABEL_152;
-  v60 = UserGameEntity__get_PayableStoneNum((UserGameEntity_o *)this, 0) < v10->fields.spendNum;
-  v61 = v10->fields.usrMaxAp + v10->fields.usrCurrentAp;
+  v59 = UserGameEntity__get_PayableStoneNum((UserGameEntity_o *)this, 0) < v10->fields.spendNum;
+  v60 = v10->fields.usrMaxAp + v10->fields.usrCurrentAp;
 LABEL_147:
-  v202 = !v60;
+  v202 = !v59;
   v10->fields.isEnableSelect = v202;
-  v10->fields.recvSum = v61;
+  v10->fields.recvSum = v60;
 LABEL_151:
-  RecoverItemComponent__setEnableSelectItem(v10, v19);
+  RecoverItemComponent__setEnableSelectItem(v10, (const MethodInfo *)data);
 }
 
 
@@ -1807,7 +1812,7 @@ void RecoverItemComponent__setEnableSelectItem(RecoverItemComponent_o *this, con
   {
     maskImg = this->fields.maskImg;
     if ( !maskImg )
-      sub_1C372B4(0);
+      sub_1C3E7C0(0, method);
     UnityEngine_GameObject__SetActive(maskImg, 1, 0);
   }
 }
@@ -1830,46 +1835,46 @@ void RecoverItemComponent__setRPRecvItemInfo(
   unsigned int *p_spendNum; // x20
   UILabel_o *currentInfoLb; // x24
   UILabel_o *spendInfoLb; // x24
-  const MethodInfo *v19; // x1
   int32_t currentType; // w8
-  RecoverItemComponent_o *v21; // x22
-  RecoverItemComponent_o *v22; // x23
-  __int64 v23; // x2
-  __int64 v24; // x3
-  __int64 v25; // x4
-  __int64 v26; // x5
-  __int64 v27; // x6
-  __int64 v28; // x7
+  RecoverItemComponent_o *v20; // x22
+  RecoverItemComponent_o *v21; // x23
+  __int64 v22; // x2
+  __int64 v23; // x3
+  __int64 v24; // x4
+  __int64 v25; // x5
+  __int64 v26; // x6
+  __int64 v27; // x7
   int32_t userEntity; // w8
-  UILabel_o *v30; // x22
-  Il2CppObject *v31; // x0
-  UILabel_o *v32; // x22
-  const MethodInfo *v33; // x1
-  System_String_o *v34; // x20
-  __int64 v35; // x2
-  __int64 v36; // x3
-  __int64 v37; // x4
-  __int64 v38; // x5
-  __int64 v39; // x6
-  __int64 v40; // x7
-  Il2CppObject *v41; // x0
-  System_String_o *v42; // x0
-  UILabel_o *v43; // x20
-  Il2CppObject *v44; // x22
-  System_String_o *v45; // x23
-  __int64 v46; // x2
-  __int64 v47; // x3
-  __int64 v48; // x4
-  __int64 v49; // x5
-  __int64 v50; // x6
-  __int64 v51; // x7
-  Il2CppObject *v52; // x0
-  bool v53; // cc
-  int v54; // w8
+  UILabel_o *v29; // x22
+  Il2CppObject *v30; // x0
+  UILabel_o *v31; // x22
+  const MethodInfo *v32; // x1
+  System_String_o *v33; // x20
+  __int64 v34; // x2
+  __int64 v35; // x3
+  __int64 v36; // x4
+  __int64 v37; // x5
+  __int64 v38; // x6
+  __int64 v39; // x7
+  Il2CppObject *v40; // x0
+  System_String_o *v41; // x0
+  UILabel_o *v42; // x20
+  Il2CppObject *v43; // x22
+  System_String_o *v44; // x23
+  __int64 v45; // x2
+  __int64 v46; // x3
+  __int64 v47; // x4
+  __int64 v48; // x5
+  __int64 v49; // x6
+  __int64 v50; // x7
+  Il2CppObject *v51; // x0
+  bool v52; // cc
+  int v53; // w8
+  UILabel_o *v54; // x23
   UILabel_o *v55; // x23
-  UILabel_o *v56; // x23
-  Il2CppObject *v57; // x0
-  CommandSpellEntity_o *v58; // x23
+  Il2CppObject *v56; // x0
+  CommandSpellEntity_o *v57; // x23
+  __int64 v58; // x2
   struct ItemIconComponent_o *itemIconInfo; // x8
   int backSprite; // w21
   float v61; // s8
@@ -1941,29 +1946,29 @@ void RecoverItemComponent__setRPRecvItemInfo(
   UserItemEntity_o *entity; // [xsp+28h] [xbp-48h] BYREF
 
   v10 = this;
-  if ( (byte_4C3CF6E & 1) == 0 )
+  if ( (byte_4C50CEE & 1) == 0 )
   {
-    sub_1C37058(&BalanceConfig_TypeInfo);
-    sub_1C37058(&Method_DataManager_GetMasterData_CommandSpellMaster___);
-    sub_1C37058(&Method_DataManager_GetMasterData_ItemMaster___);
-    sub_1C37058(&Method_DataManager_GetMasterData_StoneShopMaster___);
-    sub_1C37058(&Method_DataManager_GetMasterData_UserItemMaster___);
-    sub_1C37058(&Method_DataMasterBase_CommandSpellMaster__CommandSpellEntity__int__GetEntity__);
-    sub_1C37058(&Method_DataMasterBase_StoneShopMaster__StoneShopEntity__int__GetEntity__);
-    sub_1C37058(&int_TypeInfo);
-    sub_1C37058(&LocalizationManager_TypeInfo);
-    sub_1C37058(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-    sub_1C37058(&StringLiteral_3528/*"CMDSPELL_CURRENT_NUM"*/);
-    sub_1C37058(&StringLiteral_3530/*"CMDSPELL_SPEND_NUM_TXT"*/);
-    sub_1C37058(&StringLiteral_25092/*"{0:N0}"*/);
-    sub_1C37058(&StringLiteral_861/*"-"*/);
-    sub_1C37058(&StringLiteral_14813/*"UNIT_INFO"*/);
-    sub_1C37058(&StringLiteral_12274/*"SPEND_NUM_TXT"*/);
-    sub_1C37058(&StringLiteral_3936/*"CURRENT_NUM_TXT"*/);
-    sub_1C37058(&StringLiteral_11166/*"RP_RECOVER_CMDSPELL_TXT"*/);
-    sub_1C37058(&StringLiteral_11168/*"RP_RECOVER_NUM_TXT"*/);
-    this = (RecoverItemComponent_o *)sub_1C37058(&StringLiteral_3529/*"CMDSPELL_CURRENT_NUM_TXT"*/);
-    byte_4C3CF6E = 1;
+    sub_1C3E564(&BalanceConfig_TypeInfo);
+    sub_1C3E564(&Method_DataManager_GetMasterData_CommandSpellMaster___);
+    sub_1C3E564(&Method_DataManager_GetMasterData_ItemMaster___);
+    sub_1C3E564(&Method_DataManager_GetMasterData_StoneShopMaster___);
+    sub_1C3E564(&Method_DataManager_GetMasterData_UserItemMaster___);
+    sub_1C3E564(&Method_DataMasterBase_CommandSpellMaster__CommandSpellEntity__int__GetEntity__);
+    sub_1C3E564(&Method_DataMasterBase_StoneShopMaster__StoneShopEntity__int__GetEntity__);
+    sub_1C3E564(&int_TypeInfo);
+    sub_1C3E564(&LocalizationManager_TypeInfo);
+    sub_1C3E564(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    sub_1C3E564(&StringLiteral_3528/*"CMDSPELL_CURRENT_NUM"*/);
+    sub_1C3E564(&StringLiteral_3530/*"CMDSPELL_SPEND_NUM_TXT"*/);
+    sub_1C3E564(&StringLiteral_25112/*"{0:N0}"*/);
+    sub_1C3E564(&StringLiteral_861/*"-"*/);
+    sub_1C3E564(&StringLiteral_14823/*"UNIT_INFO"*/);
+    sub_1C3E564(&StringLiteral_12279/*"SPEND_NUM_TXT"*/);
+    sub_1C3E564(&StringLiteral_3936/*"CURRENT_NUM_TXT"*/);
+    sub_1C3E564(&StringLiteral_11168/*"RP_RECOVER_CMDSPELL_TXT"*/);
+    sub_1C3E564(&StringLiteral_11170/*"RP_RECOVER_NUM_TXT"*/);
+    this = (RecoverItemComponent_o *)sub_1C3E564(&StringLiteral_3529/*"CMDSPELL_CURRENT_NUM_TXT"*/);
+    byte_4C50CEE = 1;
   }
   entity = 0;
   CommandSpell = 0;
@@ -1975,9 +1980,9 @@ void RecoverItemComponent__setRPRecvItemInfo(
   v10->fields.isEnableSelect = 0;
   v10->fields.targetId = targetId;
   v10->fields.dialog = dlg;
-  sub_1C36FFC(&v10->fields.dialog, dlg);
+  sub_1C3E508(&v10->fields.dialog, dlg);
   v10->fields.callbackFunc = callback;
-  sub_1C36FFC(&v10->fields.callbackFunc, callback);
+  sub_1C3E508(&v10->fields.callbackFunc, callback);
   this = (RecoverItemComponent_o *)v10->fields.maskImg;
   if ( !this )
     goto LABEL_108;
@@ -1985,7 +1990,7 @@ void RecoverItemComponent__setRPRecvItemInfo(
   SelfUserGame = UserGameMaster__getSelfUserGame(0);
   v10->fields.userEntity = SelfUserGame;
   p_userEntity = (RecoverItemComponent_o **)&v10->fields.userEntity;
-  sub_1C36FFC(&v10->fields.userEntity, SelfUserGame);
+  sub_1C3E508(&v10->fields.userEntity, SelfUserGame);
   this = (RecoverItemComponent_o *)v10->fields.userEntity;
   if ( !this )
     goto LABEL_108;
@@ -2026,7 +2031,7 @@ void RecoverItemComponent__setRPRecvItemInfo(
     goto LABEL_108;
   UILabel__set_text(currentInfoLb, (System_String_o *)this, 0);
   spendInfoLb = v10->fields.spendInfoLb;
-  this = (RecoverItemComponent_o *)LocalizationManager__Get((System_String_o *)StringLiteral_12274/*"SPEND_NUM_TXT"*/, 0);
+  this = (RecoverItemComponent_o *)LocalizationManager__Get((System_String_o *)StringLiteral_12279/*"SPEND_NUM_TXT"*/, 0);
   if ( !spendInfoLb )
     goto LABEL_108;
   UILabel__set_text(spendInfoLb, (System_String_o *)this, 0);
@@ -2044,33 +2049,33 @@ void RecoverItemComponent__setRPRecvItemInfo(
         if ( this )
         {
           UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)this, 1, 0);
-          v55 = v10->fields.currentInfoLb;
+          v54 = v10->fields.currentInfoLb;
           if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
             j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
           this = (RecoverItemComponent_o *)LocalizationManager__Get((System_String_o *)StringLiteral_3529/*"CMDSPELL_CURRENT_NUM_TXT"*/, 0);
-          if ( v55 )
+          if ( v54 )
           {
-            UILabel__set_text(v55, (System_String_o *)this, 0);
-            v56 = v10->fields.spendInfoLb;
+            UILabel__set_text(v54, (System_String_o *)this, 0);
+            v55 = v10->fields.spendInfoLb;
             this = (RecoverItemComponent_o *)LocalizationManager__Get((System_String_o *)StringLiteral_3530/*"CMDSPELL_SPEND_NUM_TXT"*/, 0);
-            if ( v56 )
+            if ( v55 )
             {
-              UILabel__set_text(v56, (System_String_o *)this, 0);
-              this = (RecoverItemComponent_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39ED16C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+              UILabel__set_text(v55, (System_String_o *)this, 0);
+              this = (RecoverItemComponent_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39FF5A8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
               if ( this )
               {
                 this = (RecoverItemComponent_o *)DataManager__GetMasterData_object_(
                                                    (DataManager_o *)this,
-                                                   (const MethodInfo_30E7C58 *)Method_DataManager_GetMasterData_CommandSpellMaster___);
+                                                   (const MethodInfo_30F9A70 *)Method_DataManager_GetMasterData_CommandSpellMaster___);
                 if ( this )
                 {
-                  v57 = DataMasterBase_object__object__int___GetEntity(
+                  v56 = DataMasterBase_object__object__int___GetEntity(
                           (DataMasterBase_TMaster__TEntity__PKType__o *)this,
                           v10->fields.targetId,
-                          (const MethodInfo_33A10A0 *)Method_DataMasterBase_CommandSpellMaster__CommandSpellEntity__int__GetEntity__);
-                  if ( !v57 )
+                          (const MethodInfo_33B2F58 *)Method_DataMasterBase_CommandSpellMaster__CommandSpellEntity__int__GetEntity__);
+                  if ( !v56 )
                     goto LABEL_107;
-                  v58 = (CommandSpellEntity_o *)v57;
+                  v57 = (CommandSpellEntity_o *)v56;
                   this = (RecoverItemComponent_o *)v10->fields.cmdSpellIcon;
                   if ( this )
                   {
@@ -2078,13 +2083,13 @@ void RecoverItemComponent__setRPRecvItemInfo(
                     this = (RecoverItemComponent_o *)v10->fields.itemNameLb;
                     if ( this )
                     {
-                      UILabel__set_text((UILabel_o *)this, v58->fields.name, 0);
+                      UILabel__set_text((UILabel_o *)this, v57->fields.name, 0);
                       this = *p_userEntity;
                       if ( *p_userEntity )
                       {
                         CommandSpell = UserGameEntity__getCommandSpell((UserGameEntity_o *)this, 0);
-                        *p_spendNum = v58->fields.consume;
-                        this = (RecoverItemComponent_o *)CommandSpellEntity__getValues(v58, 0);
+                        *p_spendNum = v57->fields.consume;
+                        this = (RecoverItemComponent_o *)CommandSpellEntity__getValues(v57, 0);
                         if ( this )
                         {
                           if ( !LODWORD(this->fields.m_CancellationTokenSource) )
@@ -2094,7 +2099,7 @@ void RecoverItemComponent__setRPRecvItemInfo(
                             goto LABEL_108;
                           if ( !LODWORD(itemIconInfo->fields.m_CancellationTokenSource) )
 LABEL_109:
-                            sub_1C372BC(this);
+                            sub_1C3E7C8(this, data, v58);
                           backSprite = (int)itemIconInfo->fields.backSprite;
                           if ( needRp < 1 )
                           {
@@ -2103,10 +2108,10 @@ LABEL_109:
                           else
                           {
                             v61 = (float)(needRp - v10->fields.usrCurrentRp) / (float)backSprite;
-                            if ( !byte_4C3CFE8 )
+                            if ( !byte_4C50D68 )
                             {
-                              sub_1C37058(&System_Math_TypeInfo);
-                              byte_4C3CFE8 = 1;
+                              sub_1C3E564(&System_Math_TypeInfo);
+                              byte_4C50D68 = 1;
                             }
                             v62 = fmaxf(v61, 1.0);
                             if ( !System_Math_TypeInfo->_2.cctor_finished )
@@ -2135,7 +2140,7 @@ LABEL_109:
                           v109 = System_String__Format(v101, v108, 0);
                           itemDetailLb = v10->fields.itemDetailLb;
                           v111 = (Il2CppObject *)v109;
-                          v112 = LocalizationManager__Get((System_String_o *)StringLiteral_11166/*"RP_RECOVER_CMDSPELL_TXT"*/, 0);
+                          v112 = LocalizationManager__Get((System_String_o *)StringLiteral_11168/*"RP_RECOVER_CMDSPELL_TXT"*/, 0);
                           recvRpNum = v10->fields.recvRpNum;
                           v119 = (Il2CppObject *)j_il2cpp_value_box_0(
                                                    int_TypeInfo,
@@ -2146,7 +2151,7 @@ LABEL_109:
                                                    v116,
                                                    v117,
                                                    v118);
-                          this = (RecoverItemComponent_o *)System_String__Format_63602948(v112, v111, v119, 0);
+                          this = (RecoverItemComponent_o *)System_String__Format_63677760(v112, v111, v119, 0);
                           if ( itemDetailLb )
                           {
                             UILabel__set_text(itemDetailLb, (System_String_o *)this, 0);
@@ -2160,8 +2165,8 @@ LABEL_109:
                               if ( spendNumLb )
                               {
                                 UILabel__set_text(spendNumLb, (System_String_o *)this, 0);
-                                v53 = CommandSpell < v10->fields.spendNum;
-                                v54 = v10->fields.recvRpNum + v10->fields.usrCurrentRp;
+                                v52 = CommandSpell < v10->fields.spendNum;
+                                v53 = v10->fields.recvRpNum + v10->fields.usrCurrentRp;
                                 goto LABEL_103;
                               }
                             }
@@ -2199,7 +2204,7 @@ LABEL_109:
           this = (RecoverItemComponent_o *)v10->fields.itemIconInfo;
           if ( this )
           {
-            ItemIconComponent__SetItemImage_40919564(
+            ItemIconComponent__SetItemImage_40966052(
               (ItemIconComponent_o *)this,
               v66->fields.imageId,
               v66->fields.bgImageId,
@@ -2218,12 +2223,12 @@ LABEL_109:
                 if ( this )
                 {
                   UILabel__set_text((UILabel_o *)this, v66->fields.name, 0);
-                  this = (RecoverItemComponent_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39ED16C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+                  this = (RecoverItemComponent_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39FF5A8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
                   if ( this )
                   {
                     this = (RecoverItemComponent_o *)DataManager__GetMasterData_object_(
                                                        (DataManager_o *)this,
-                                                       (const MethodInfo_30E7C58 *)Method_DataManager_GetMasterData_UserItemMaster___);
+                                                       (const MethodInfo_30F9A70 *)Method_DataManager_GetMasterData_UserItemMaster___);
                     if ( *p_userEntity )
                     {
                       if ( this )
@@ -2244,10 +2249,10 @@ LABEL_109:
                         else
                         {
                           v69 = (float)(needRp - v10->fields.usrCurrentRp) / (float)value;
-                          if ( !byte_4C3CFE8 )
+                          if ( !byte_4C50D68 )
                           {
-                            sub_1C37058(&System_Math_TypeInfo);
-                            byte_4C3CFE8 = 1;
+                            sub_1C3E564(&System_Math_TypeInfo);
+                            byte_4C50D68 = 1;
                           }
                           v70 = fmaxf(v69, 1.0);
                           if ( !System_Math_TypeInfo->_2.cctor_finished )
@@ -2261,7 +2266,7 @@ LABEL_109:
                         v10->fields.recvRpNum = value;
                         if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
                           j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-                        v72 = LocalizationManager__Get((System_String_o *)StringLiteral_14813/*"UNIT_INFO"*/, 0);
+                        v72 = LocalizationManager__Get((System_String_o *)StringLiteral_14823/*"UNIT_INFO"*/, 0);
                         spendNum = v10->fields.spendNum;
                         v79 = (Il2CppObject *)j_il2cpp_value_box_0(
                                                 int_TypeInfo,
@@ -2275,7 +2280,7 @@ LABEL_109:
                         v80 = System_String__Format(v72, v79, 0);
                         v81 = v10->fields.itemDetailLb;
                         v82 = (Il2CppObject *)v80;
-                        v83 = LocalizationManager__Get((System_String_o *)StringLiteral_11168/*"RP_RECOVER_NUM_TXT"*/, 0);
+                        v83 = LocalizationManager__Get((System_String_o *)StringLiteral_11170/*"RP_RECOVER_NUM_TXT"*/, 0);
                         recvRpNum = v10->fields.recvRpNum;
                         v90 = (Il2CppObject *)j_il2cpp_value_box_0(
                                                 int_TypeInfo,
@@ -2286,7 +2291,7 @@ LABEL_109:
                                                 v87,
                                                 v88,
                                                 v89);
-                        this = (RecoverItemComponent_o *)System_String__Format_63602948(v83, v82, v90, 0);
+                        this = (RecoverItemComponent_o *)System_String__Format_63677760(v83, v82, v90, 0);
                         if ( v81 )
                         {
                           UILabel__set_text(v81, (System_String_o *)this, 0);
@@ -2294,7 +2299,7 @@ LABEL_109:
                           v123 = v67;
                           v98 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v123, v92, v93, v94, v95, v96, v97);
                           this = (RecoverItemComponent_o *)System_String__Format(
-                                                             (System_String_o *)StringLiteral_25092/*"{0:N0}"*/,
+                                                             (System_String_o *)StringLiteral_25112/*"{0:N0}"*/,
                                                              v98,
                                                              0);
                           if ( v91 )
@@ -2338,26 +2343,26 @@ LABEL_109:
   if ( !this )
     goto LABEL_108;
   UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)this, 0, 0);
-  this = (RecoverItemComponent_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39ED16C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  this = (RecoverItemComponent_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39FF5A8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !this )
     goto LABEL_108;
   this = (RecoverItemComponent_o *)DataManager__GetMasterData_object_(
                                      (DataManager_o *)this,
-                                     (const MethodInfo_30E7C58 *)Method_DataManager_GetMasterData_ItemMaster___);
+                                     (const MethodInfo_30F9A70 *)Method_DataManager_GetMasterData_ItemMaster___);
   if ( !this )
     goto LABEL_108;
   this = (RecoverItemComponent_o *)ItemMaster__GetEntityByType((ItemMaster_o *)this, 2, 0);
   if ( !this )
     goto LABEL_108;
-  v21 = this;
+  v20 = this;
   this = (RecoverItemComponent_o *)v10->fields.itemIconInfo;
   if ( !this )
     goto LABEL_108;
-  ItemIconComponent__SetItemImage_40919564(
+  ItemIconComponent__SetItemImage_40966052(
     (ItemIconComponent_o *)this,
-    (int32_t)v21->fields.cmdSpellBg,
-    HIDWORD(v21->fields.cmdSpellBg),
-    (int32_t)v21->fields.cmdSpellIcon,
+    (int32_t)v20->fields.cmdSpellBg,
+    HIDWORD(v20->fields.cmdSpellBg),
+    (int32_t)v20->fields.cmdSpellIcon,
     0,
     1,
     0);
@@ -2368,107 +2373,108 @@ LABEL_109:
   if ( !this )
     goto LABEL_108;
   UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)this, 1, 0);
-  this = (RecoverItemComponent_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39ED16C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  this = (RecoverItemComponent_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39FF5A8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !this )
     goto LABEL_108;
   this = (RecoverItemComponent_o *)DataManager__GetMasterData_object_(
                                      (DataManager_o *)this,
-                                     (const MethodInfo_30E7C58 *)Method_DataManager_GetMasterData_StoneShopMaster___);
+                                     (const MethodInfo_30F9A70 *)Method_DataManager_GetMasterData_StoneShopMaster___);
   if ( !this )
     goto LABEL_108;
   this = (RecoverItemComponent_o *)DataMasterBase_object__object__int___GetEntity(
                                      (DataMasterBase_TMaster__TEntity__PKType__o *)this,
                                      v10->fields.targetId,
-                                     (const MethodInfo_33A10A0 *)Method_DataMasterBase_StoneShopMaster__StoneShopEntity__int__GetEntity__);
+                                     (const MethodInfo_33B2F58 *)Method_DataMasterBase_StoneShopMaster__StoneShopEntity__int__GetEntity__);
   if ( !v10->fields.itemNameLb )
     goto LABEL_108;
-  v22 = this;
-  UILabel__set_text(v10->fields.itemNameLb, (System_String_o *)v21->fields.m_CancellationTokenSource, 0);
+  v21 = this;
+  UILabel__set_text(v10->fields.itemNameLb, (System_String_o *)v20->fields.m_CancellationTokenSource, 0);
   if ( !*p_userEntity )
     goto LABEL_108;
   userEntity = (int32_t)(*p_userEntity)->fields.userEntity;
-  if ( v22 )
-    *p_spendNum = HIDWORD(v22->fields.cmdSpellBg);
-  v30 = v10->fields.currentNumLb;
+  if ( v21 )
+    *p_spendNum = HIDWORD(v21->fields.cmdSpellBg);
+  v29 = v10->fields.currentNumLb;
   spendNum = userEntity;
-  v31 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &spendNum, v23, v24, v25, v26, v27, v28);
-  this = (RecoverItemComponent_o *)System_String__Format((System_String_o *)StringLiteral_25092/*"{0:N0}"*/, v31, 0);
-  if ( !v30 )
+  v30 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &spendNum, v22, v23, v24, v25, v26, v27);
+  this = (RecoverItemComponent_o *)System_String__Format((System_String_o *)StringLiteral_25112/*"{0:N0}"*/, v30, 0);
+  if ( !v29 )
     goto LABEL_108;
-  UILabel__set_text(v30, (System_String_o *)this, 0);
-  v32 = v10->fields.spendNumLb;
+  UILabel__set_text(v29, (System_String_o *)this, 0);
+  v31 = v10->fields.spendNumLb;
   this = (RecoverItemComponent_o *)System_Int32__ToString((int)v10 + 128, 0);
-  if ( !v32 )
+  if ( !v31 )
     goto LABEL_108;
-  UILabel__set_text(v32, (System_String_o *)this, 0);
-  RecoverItemComponent__AttachStoneCountRefreshComponent(v10, v33);
+  UILabel__set_text(v31, (System_String_o *)this, 0);
+  RecoverItemComponent__AttachStoneCountRefreshComponent(v10, v32);
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-  v34 = LocalizationManager__Get((System_String_o *)StringLiteral_14813/*"UNIT_INFO"*/, 0);
+  v33 = LocalizationManager__Get((System_String_o *)StringLiteral_14823/*"UNIT_INFO"*/, 0);
   recvRpNum = v10->fields.spendNum;
-  v41 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &recvRpNum, v35, v36, v37, v38, v39, v40);
-  v42 = System_String__Format(v34, v41, 0);
-  v43 = v10->fields.itemDetailLb;
-  v44 = (Il2CppObject *)v42;
-  v45 = LocalizationManager__Get((System_String_o *)StringLiteral_11168/*"RP_RECOVER_NUM_TXT"*/, 0);
+  v40 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &recvRpNum, v34, v35, v36, v37, v38, v39);
+  v41 = System_String__Format(v33, v40, 0);
+  v42 = v10->fields.itemDetailLb;
+  v43 = (Il2CppObject *)v41;
+  v44 = LocalizationManager__Get((System_String_o *)StringLiteral_11170/*"RP_RECOVER_NUM_TXT"*/, 0);
   v123 = v10->fields.recvRpNum;
-  v52 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v123, v46, v47, v48, v49, v50, v51);
-  this = (RecoverItemComponent_o *)System_String__Format_63602948(v45, v44, v52, 0);
-  if ( !v43 || (UILabel__set_text(v43, (System_String_o *)this, 0), (this = *p_userEntity) == 0) )
+  v51 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v123, v45, v46, v47, v48, v49, v50);
+  this = (RecoverItemComponent_o *)System_String__Format_63677760(v44, v43, v51, 0);
+  if ( !v42 || (UILabel__set_text(v42, (System_String_o *)this, 0), (this = *p_userEntity) == 0) )
 LABEL_108:
-    sub_1C372B4(this);
-  v53 = UserGameEntity__get_PayableStoneNum((UserGameEntity_o *)this, 0) < v10->fields.spendNum;
-  v54 = v10->fields.recvRpNum + v10->fields.usrCurrentRp;
+    sub_1C3E7C0(this, data);
+  v52 = UserGameEntity__get_PayableStoneNum((UserGameEntity_o *)this, 0) < v10->fields.spendNum;
+  v53 = v10->fields.recvRpNum + v10->fields.usrCurrentRp;
 LABEL_103:
-  v122 = !v53;
+  v122 = !v52;
   v10->fields.isEnableSelect = v122;
-  v10->fields.recvSum = v54;
+  v10->fields.recvSum = v53;
 LABEL_107:
-  RecoverItemComponent__setEnableSelectItem(v10, v19);
+  RecoverItemComponent__setEnableSelectItem(v10, (const MethodInfo *)data);
 }
 
 
 void RecoverItemComponent__setRequestInfo(RecoverItemComponent_o *this, const MethodInfo *method)
 {
   DataManager_o *Instance; // x0
-  __int64 v4; // x8
+  __int64 v4; // x1
+  __int64 v5; // x8
   struct RecoverItemComponent_CallbackFunc_o *callbackFunc; // x20
-  Il2CppObject *v6; // x19
-  System_String_o *v7; // x20
-  RecoverItemComponent___c_c *v8; // x8
+  Il2CppObject *v7; // x19
+  System_String_o *v8; // x20
+  RecoverItemComponent___c_c *v9; // x8
   System_Action_o *_9__43_0; // x22
-  System_String_o *v10; // x21
-  Il2CppObject *v11; // x23
+  System_String_o *v11; // x21
+  Il2CppObject *v12; // x23
   struct RecoverItemComponent___c_StaticFields *static_fields; // x0
 
-  if ( (byte_4C3CF73 & 1) == 0 )
+  if ( (byte_4C50CF3 & 1) == 0 )
   {
-    sub_1C37058(&System_Action_TypeInfo);
-    sub_1C37058(&Method_DataManager_GetMasterData_EventMaster___);
-    sub_1C37058(&LocalizationManager_TypeInfo);
-    sub_1C37058(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
-    sub_1C37058(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-    sub_1C37058(&TerminalSceneComponent_TypeInfo);
-    sub_1C37058(&Method_RecoverItemComponent___c__setRequestInfo_b__43_0__);
-    sub_1C37058(&RecoverItemComponent___c_TypeInfo);
-    sub_1C37058(&StringLiteral_11169/*"RP_UNRECOVERABLE_MESSAGE"*/);
-    sub_1C37058(&StringLiteral_1/*""*/);
-    byte_4C3CF73 = 1;
+    sub_1C3E564(&System_Action_TypeInfo);
+    sub_1C3E564(&Method_DataManager_GetMasterData_EventMaster___);
+    sub_1C3E564(&LocalizationManager_TypeInfo);
+    sub_1C3E564(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+    sub_1C3E564(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    sub_1C3E564(&TerminalSceneComponent_TypeInfo);
+    sub_1C3E564(&Method_RecoverItemComponent___c__setRequestInfo_b__43_0__);
+    sub_1C3E564(&RecoverItemComponent___c_TypeInfo);
+    sub_1C3E564(&StringLiteral_11171/*"RP_UNRECOVERABLE_MESSAGE"*/);
+    sub_1C3E564(&StringLiteral_1/*""*/);
+    byte_4C50CF3 = 1;
   }
   if ( this->fields.recvTarget != 2 )
     goto LABEL_14;
-  Instance = (DataManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39ED16C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = (DataManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39FF5A8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance )
     goto LABEL_27;
   DataManager__GetMasterData_object_(
     Instance,
-    (const MethodInfo_30E7C58 *)Method_DataManager_GetMasterData_EventMaster___);
+    (const MethodInfo_30F9A70 *)Method_DataManager_GetMasterData_EventMaster___);
   if ( !TerminalSceneComponent_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(TerminalSceneComponent_TypeInfo);
-  if ( !byte_4C3CF06 )
+  if ( !byte_4C50C86 )
   {
-    sub_1C37058(&TerminalSceneComponent_TypeInfo);
-    byte_4C3CF06 = 1;
+    sub_1C3E564(&TerminalSceneComponent_TypeInfo);
+    byte_4C50C86 = 1;
   }
   Instance = (DataManager_o *)TerminalSceneComponent_TypeInfo;
   if ( !TerminalSceneComponent_TypeInfo->_2.cctor_finished )
@@ -2476,42 +2482,42 @@ void RecoverItemComponent__setRequestInfo(RecoverItemComponent_o *this, const Me
     j_il2cpp_runtime_class_init_0(TerminalSceneComponent_TypeInfo);
     Instance = (DataManager_o *)TerminalSceneComponent_TypeInfo;
   }
-  v4 = **(_QWORD **)&Instance[1].fields._DispLog;
-  if ( !v4 || (Instance = *(DataManager_o **)(v4 + 248)) == 0 )
+  v5 = **(_QWORD **)&Instance[1].fields._DispLog;
+  if ( !v5 || (Instance = *(DataManager_o **)(v5 + 248)) == 0 )
 LABEL_27:
-    sub_1C372B4(Instance);
+    sub_1C3E7C0(Instance, v4);
   if ( !ScrPlayerStatus__IsBPActive((ScrPlayerStatus_o *)Instance, 0) )
   {
-    v6 = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39ED16C *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+    v7 = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39FF5A8 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
     if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-    Instance = (DataManager_o *)LocalizationManager__Get((System_String_o *)StringLiteral_11169/*"RP_UNRECOVERABLE_MESSAGE"*/, 0);
-    v7 = (System_String_o *)Instance;
-    v8 = RecoverItemComponent___c_TypeInfo;
+    Instance = (DataManager_o *)LocalizationManager__Get((System_String_o *)StringLiteral_11171/*"RP_UNRECOVERABLE_MESSAGE"*/, 0);
+    v8 = (System_String_o *)Instance;
+    v9 = RecoverItemComponent___c_TypeInfo;
     if ( !RecoverItemComponent___c_TypeInfo->_2.cctor_finished )
     {
       Instance = (DataManager_o *)j_il2cpp_runtime_class_init_0(RecoverItemComponent___c_TypeInfo);
-      v8 = RecoverItemComponent___c_TypeInfo;
+      v9 = RecoverItemComponent___c_TypeInfo;
     }
-    _9__43_0 = v8->static_fields->__9__43_0;
-    v10 = (System_String_o *)StringLiteral_1/*""*/;
+    _9__43_0 = v9->static_fields->__9__43_0;
+    v11 = (System_String_o *)StringLiteral_1/*""*/;
     if ( !_9__43_0 )
     {
-      if ( !v8->_2.cctor_finished )
+      if ( !v9->_2.cctor_finished )
       {
-        j_il2cpp_runtime_class_init_0(v8);
-        v8 = RecoverItemComponent___c_TypeInfo;
+        j_il2cpp_runtime_class_init_0(v9);
+        v9 = RecoverItemComponent___c_TypeInfo;
       }
-      v11 = (Il2CppObject *)v8->static_fields->__9;
-      _9__43_0 = (System_Action_o *)sub_1C372A4(System_Action_TypeInfo);
-      System_Action___ctor(_9__43_0, v11, Method_RecoverItemComponent___c__setRequestInfo_b__43_0__, 0);
+      v12 = (Il2CppObject *)v9->static_fields->__9;
+      _9__43_0 = (System_Action_o *)sub_1C3E7B0(System_Action_TypeInfo);
+      System_Action___ctor(_9__43_0, v12, Method_RecoverItemComponent___c__setRequestInfo_b__43_0__, 0);
       static_fields = RecoverItemComponent___c_TypeInfo->static_fields;
       static_fields->__9__43_0 = _9__43_0;
-      Instance = (DataManager_o *)sub_1C36FFC(&static_fields->__9__43_0, _9__43_0);
+      Instance = (DataManager_o *)sub_1C3E508(&static_fields->__9__43_0, _9__43_0);
     }
-    if ( v6 )
+    if ( v7 )
     {
-      CommonUI__OpenNotificationDialog((CommonUI_o *)v6, v10, v7, _9__43_0, -1, 0, 0, 0, 1, 0, 1, 0, 0, 0.0, 0, 0);
+      CommonUI__OpenNotificationDialog((CommonUI_o *)v7, v11, v8, _9__43_0, -1, 0, 0, 0, 1, 0, 1, 0, 0, 0.0, 0, 0);
       return;
     }
     goto LABEL_27;
@@ -2521,7 +2527,7 @@ LABEL_14:
   if ( callbackFunc )
   {
     this->fields.callbackFunc = 0;
-    sub_1C36FFC(&this->fields.callbackFunc, 0);
+    sub_1C3E508(&this->fields.callbackFunc, 0);
     ((void (__fastcall *)(intptr_t, _QWORD, _QWORD, _QWORD, intptr_t))callbackFunc->fields.invoke_impl)(
       callbackFunc->fields.method_code,
       (unsigned int)this->fields.currentType,
@@ -2535,29 +2541,30 @@ LABEL_14:
 void RecoverItemComponent__spendItemDlg(RecoverItemComponent_o *this, bool isRes, const MethodInfo *method)
 {
   Il2CppObject *Instance; // x0
-  CommonUI_o *v6; // x21
-  System_Action_o *v7; // x20
+  __int64 v6; // x1
+  CommonUI_o *v7; // x21
+  System_Action_o *v8; // x20
 
-  if ( (byte_4C3CF71 & 1) == 0 )
+  if ( (byte_4C50CF1 & 1) == 0 )
   {
-    sub_1C37058(&System_Action_TypeInfo);
-    sub_1C37058(&Method_RecoverItemComponent_setRequestInfo__);
-    sub_1C37058(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
-    byte_4C3CF71 = 1;
+    sub_1C3E564(&System_Action_TypeInfo);
+    sub_1C3E564(&Method_RecoverItemComponent_setRequestInfo__);
+    sub_1C3E564(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+    byte_4C50CF1 = 1;
   }
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39ED16C *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
-  v6 = (CommonUI_o *)Instance;
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39FF5A8 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+  v7 = (CommonUI_o *)Instance;
   if ( isRes )
   {
-    v7 = (System_Action_o *)sub_1C372A4(System_Action_TypeInfo);
-    System_Action___ctor(v7, (Il2CppObject *)this, Method_RecoverItemComponent_setRequestInfo__, 0);
-    if ( v6 )
+    v8 = (System_Action_o *)sub_1C3E7B0(System_Action_TypeInfo);
+    System_Action___ctor(v8, (Il2CppObject *)this, Method_RecoverItemComponent_setRequestInfo__, 0);
+    if ( v7 )
     {
-      CommonUI__CloseConfirmDialog_31208544(v6, v7, 0);
+      CommonUI__CloseConfirmDialog_31238516(v7, v8, 0);
       return;
     }
 LABEL_8:
-    sub_1C372B4(Instance);
+    sub_1C3E7C0(Instance, v6);
   }
   if ( !Instance )
     goto LABEL_8;
@@ -2580,15 +2587,15 @@ void RecoverItemComponent_CallbackFunc___ctor(
   this->fields.method = method;
   this->fields.method_ptr = v4;
   this->fields.m_target = object;
-  sub_1C36FFC(&this->fields.m_target, object);
+  sub_1C3E508(&this->fields.m_target, object);
   v8 = *(unsigned __int8 *)(method + 82);
   this->fields.method_code = (intptr_t)this;
-  if ( (sub_1C37118(method) & 1) == 0 )
+  if ( (sub_1C3E624(method) & 1) == 0 )
   {
     if ( !object )
     {
-      v10 = sub_1C372D0(0, "Delegate to an instance method cannot have null 'this'.");
-      sub_1C37180(v10, 0);
+      v10 = sub_1C3E7DC(0, "Delegate to an instance method cannot have null 'this'.");
+      sub_1C3E68C(v10, 0);
     }
     goto LABEL_5;
   }
@@ -2600,9 +2607,9 @@ LABEL_5:
     this->fields.method_code = (intptr_t)m_target;
     goto LABEL_6;
   }
-  this->fields.invoke_impl = (intptr_t)sub_1A726B4;
+  this->fields.invoke_impl = (intptr_t)sub_1A79A5C;
 LABEL_6:
-  this->fields.extra_arg = (intptr_t)sub_1A72654;
+  this->fields.extra_arg = (intptr_t)sub_1A799FC;
 }
 
 
@@ -2638,11 +2645,11 @@ System_IAsyncResult_o *RecoverItemComponent_CallbackFunc__BeginInvoke(
   v27 = id;
   v28 = type;
   v26 = num;
-  if ( (byte_4C3CF77 & 1) == 0 )
+  if ( (byte_4C50CF7 & 1) == 0 )
   {
-    sub_1C37058(&int_TypeInfo);
-    sub_1C37058(&RecoverType_Type_TypeInfo);
-    byte_4C3CF77 = 1;
+    sub_1C3E564(&int_TypeInfo);
+    sub_1C3E564(&RecoverType_Type_TypeInfo);
+    byte_4C50CF7 = 1;
   }
   v25 = 0u;
   v24[0] = j_il2cpp_value_box_0(
@@ -2656,7 +2663,7 @@ System_IAsyncResult_o *RecoverItemComponent_CallbackFunc__BeginInvoke(
              v7);
   v24[1] = j_il2cpp_value_box_0(int_TypeInfo, &v27, v11, v12, v13, v14, v15, v16);
   *(_QWORD *)&v25 = j_il2cpp_value_box_0(int_TypeInfo, &v26, v17, v18, v19, v20, v21, v22);
-  return (System_IAsyncResult_o *)sub_1C3700C(this, v24, callback, object);
+  return (System_IAsyncResult_o *)sub_1C3E518(this, v24, callback, object);
 }
 
 
@@ -2665,7 +2672,7 @@ void RecoverItemComponent_CallbackFunc__EndInvoke(
         System_IAsyncResult_o *result,
         const MethodInfo *method)
 {
-  sub_1C37010(result, 0, method);
+  sub_1C3E51C(result, 0, method);
 }
 
 
@@ -2689,15 +2696,15 @@ void RecoverItemComponent___c___cctor(const MethodInfo *method)
 {
   Il2CppObject *v1; // x19
 
-  if ( (byte_4C3CF78 & 1) == 0 )
+  if ( (byte_4C50CF8 & 1) == 0 )
   {
-    sub_1C37058(&RecoverItemComponent___c_TypeInfo);
-    byte_4C3CF78 = 1;
+    sub_1C3E564(&RecoverItemComponent___c_TypeInfo);
+    byte_4C50CF8 = 1;
   }
-  v1 = (Il2CppObject *)sub_1C372A4(RecoverItemComponent___c_TypeInfo);
+  v1 = (Il2CppObject *)sub_1C3E7B0(RecoverItemComponent___c_TypeInfo);
   System_Object___ctor(v1, 0);
   RecoverItemComponent___c_TypeInfo->static_fields->__9 = (struct RecoverItemComponent___c_o *)v1;
-  sub_1C36FFC(RecoverItemComponent___c_TypeInfo->static_fields, v1);
+  sub_1C3E508(RecoverItemComponent___c_TypeInfo->static_fields, v1);
 }
 
 
@@ -2710,19 +2717,20 @@ void RecoverItemComponent___c___ctor(RecoverItemComponent___c_o *this, const Met
 void RecoverItemComponent___c___setRequestInfo_b__43_0(RecoverItemComponent___c_o *this, const MethodInfo *method)
 {
   Il2CppObject *Instance; // x0
+  __int64 v3; // x1
 
-  if ( (byte_4C3CF79 & 1) == 0 )
+  if ( (byte_4C50CF9 & 1) == 0 )
   {
-    sub_1C37058(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
-    sub_1C37058(&Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__);
-    byte_4C3CF79 = 1;
+    sub_1C3E564(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+    sub_1C3E564(&Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__);
+    byte_4C50CF9 = 1;
   }
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39ED16C *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39FF5A8 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
   if ( !Instance
     || (CommonUI__CloseRecoverItemListDialog((CommonUI_o *)Instance, 0),
-        (Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39ED16C *)Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__)) == 0) )
+        (Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39FF5A8 *)Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__)) == 0) )
   {
-    sub_1C372B4(Instance);
+    sub_1C3E7C0(Instance, v3);
   }
   AvalonSceneManager__transitionSceneRefresh((AvalonSceneManager_o *)Instance, 34, 1, 0, 0, 0);
 }

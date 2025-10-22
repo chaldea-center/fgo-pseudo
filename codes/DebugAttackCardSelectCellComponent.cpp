@@ -15,14 +15,14 @@ void DebugAttackCardSelectCellComponent__Set(
   int32_t v10; // w2
   const MethodInfo *v11; // x3
 
-  if ( (byte_4C4448E & 1) == 0 )
+  if ( (byte_4C58259 & 1) == 0 )
   {
-    sub_1C37058(&System_Action_int__string__string__int__TypeInfo);
-    sub_1C37058(&Method_DebugAttackCardSelectCellComponent_TapCallback__);
-    sub_1C37058(&StringLiteral_1/*""*/);
-    byte_4C4448E = 1;
+    sub_1C3E564(&System_Action_int__string__string__int__TypeInfo);
+    sub_1C3E564(&Method_DebugAttackCardSelectCellComponent_TapCallback__);
+    sub_1C3E564(&StringLiteral_1/*""*/);
+    byte_4C58259 = 1;
   }
-  v9 = (System_Action_T1__T2__T3__T4__o *)sub_1C372A4(System_Action_int__string__string__int__TypeInfo);
+  v9 = (System_Action_T1__T2__T3__T4__o *)sub_1C3E7B0(System_Action_int__string__string__int__TypeInfo);
   System_Action_int__object__object__int____ctor(
     v9,
     (Il2CppObject *)this,
@@ -37,7 +37,7 @@ void DebugAttackCardSelectCellComponent__Set(
     (System_Action_int__string__string__int__o *)v9,
     0);
   this->fields.actionCallback = callback;
-  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.actionCallback, (int32_t)callback, v10, v11);
+  sub_1C3E508((CGThumbnailListItem_o *)&this->fields.actionCallback, (int32_t)callback, v10, v11);
 }
 
 

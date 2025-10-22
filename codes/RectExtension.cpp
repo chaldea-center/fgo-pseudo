@@ -1,3 +1,4 @@
+// local variable allocation has failed, the output may be wrong!
 bool RectExtension__HasAnyIntersects(
         UnityEngine_Rect_o self,
         UnityEngine_Rect_array *rects,
@@ -28,7 +29,7 @@ bool RectExtension__HasAnyIntersects(
   float v25; // s20
 
   if ( !rects )
-    sub_1C372B4(0);
+    sub_1C3E7C0(0, allowInverse);
   max_length = rects->max_length;
   v5 = self.fields.m_XMin + self.fields.m_Width;
   v6 = self.fields.m_YMin + self.fields.m_Height;
@@ -61,7 +62,7 @@ bool RectExtension__HasAnyIntersects(
     if ( (v13 & 0x80000000) != 0 )
       break;
     if ( v13 >= max_length )
-      sub_1C372BC(rects);
+      sub_1C3E7C8(rects, allowInverse);
     v15 = (float *)(&rects->obj + v13);
     v17 = v15[8];
     v16 = v15[9];

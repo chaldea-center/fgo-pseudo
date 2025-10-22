@@ -1,13 +1,13 @@
 void EventCampaignEntity___ctor(EventCampaignEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_4C42E9B & 1) == 0 )
+  if ( (byte_4C56C4A & 1) == 0 )
   {
-    sub_1C37058(&Method_DataEntityBase_string___ctor__);
-    byte_4C42E9B = 1;
+    sub_1C3E564(&Method_DataEntityBase_string___ctor__);
+    byte_4C56C4A = 1;
   }
   DataEntityBase_object____ctor(
     (DataEntityBase_PKType__o *)this,
-    (const MethodInfo_339EC34 *)Method_DataEntityBase_string___ctor__);
+    (const MethodInfo_33B0AEC *)Method_DataEntityBase_string___ctor__);
 }
 
 
@@ -16,65 +16,66 @@ EventCampaignEntity_o *EventCampaignEntity__Clone(EventCampaignEntity_o *this, c
   __int64 v3; // x20
   const MethodInfo *v4; // x1
   __int64 v5; // x0
-  int32_t v6; // w2
-  const MethodInfo *v7; // x3
+  __int64 v6; // x1
+  int32_t v7; // w2
+  const MethodInfo *v8; // x3
   struct System_Int32_array *targetIds; // x1
   struct System_Int32_array *warIds; // x1
-  int32_t v10; // w2
-  const MethodInfo *v11; // x3
+  int32_t v11; // w2
+  const MethodInfo *v12; // x3
   struct System_String_o *entryCondMessage; // x1
-  int32_t v13; // w2
-  const MethodInfo *v14; // x3
+  int32_t v14; // w2
+  const MethodInfo *v15; // x3
   struct System_Int32_array *warGroupIds; // x1
-  int32_t v16; // w2
-  const MethodInfo *v17; // x3
+  int32_t v17; // w2
+  const MethodInfo *v18; // x3
   struct System_Collections_Generic_Dictionary_string__object__o *script; // x1
-  int32_t v19; // w2
-  const MethodInfo *v20; // x3
+  int32_t v20; // w2
+  const MethodInfo *v21; // x3
 
-  if ( (byte_4C42E97 & 1) == 0 )
+  if ( (byte_4C56C40 & 1) == 0 )
   {
-    sub_1C37058(&EventCampaignEntity_TypeInfo);
-    byte_4C42E97 = 1;
+    sub_1C3E564(&EventCampaignEntity_TypeInfo);
+    byte_4C56C40 = 1;
   }
-  v3 = sub_1C372A4(EventCampaignEntity_TypeInfo);
+  v3 = sub_1C3E7B0(EventCampaignEntity_TypeInfo);
   EventCampaignEntity___ctor((EventCampaignEntity_o *)v3, v4);
   if ( !v3 )
-    sub_1C372B4(v5);
+    sub_1C3E7C0(v5, v6);
   *(_OWORD *)(v3 + 16) = *(_OWORD *)&this->fields.eventId;
   *(_DWORD *)(v3 + 32) = this->fields.priority;
   targetIds = this->fields.targetIds;
   *(_QWORD *)(v3 + 40) = targetIds;
-  sub_1C36FFC((CGThumbnailListItem_o *)(v3 + 40), (int32_t)targetIds, v6, v7);
+  sub_1C3E508((CGThumbnailListItem_o *)(v3 + 40), (int32_t)targetIds, v7, v8);
   *(_QWORD *)(v3 + 48) = *(_QWORD *)&this->fields.value;
   warIds = this->fields.warIds;
   *(_QWORD *)(v3 + 56) = warIds;
-  sub_1C36FFC((CGThumbnailListItem_o *)(v3 + 56), (int32_t)warIds, v10, v11);
+  sub_1C3E508((CGThumbnailListItem_o *)(v3 + 56), (int32_t)warIds, v11, v12);
   entryCondMessage = this->fields.entryCondMessage;
   *(_QWORD *)(v3 + 64) = entryCondMessage;
-  sub_1C36FFC((CGThumbnailListItem_o *)(v3 + 64), (int32_t)entryCondMessage, v13, v14);
+  sub_1C3E508((CGThumbnailListItem_o *)(v3 + 64), (int32_t)entryCondMessage, v14, v15);
   warGroupIds = this->fields.warGroupIds;
   *(_QWORD *)(v3 + 72) = warGroupIds;
-  sub_1C36FFC((CGThumbnailListItem_o *)(v3 + 72), (int32_t)warGroupIds, v16, v17);
+  sub_1C3E508((CGThumbnailListItem_o *)(v3 + 72), (int32_t)warGroupIds, v17, v18);
   script = this->fields.script;
   *(_QWORD *)(v3 + 80) = script;
-  sub_1C36FFC((CGThumbnailListItem_o *)(v3 + 80), (int32_t)script, v19, v20);
+  sub_1C3E508((CGThumbnailListItem_o *)(v3 + 80), (int32_t)script, v20, v21);
   return (EventCampaignEntity_o *)v3;
 }
 
 
 System_String_o *EventCampaignEntity__CreatePK(int32_t eventId, int32_t target, int32_t idx, const MethodInfo *method)
 {
-  if ( (byte_4C42E9A & 1) == 0 )
+  if ( (byte_4C56C49 & 1) == 0 )
   {
-    sub_1C37058(&Method_DataEntityBase_CreateMultiplePK_int__int__int___);
-    byte_4C42E9A = 1;
+    sub_1C3E564(&Method_DataEntityBase_CreateMultiplePK_int__int__int___);
+    byte_4C56C49 = 1;
   }
   return DataEntityBase__CreateMultiplePK_int__int__int_(
            eventId,
            target,
            idx,
-           (const MethodInfo_30E6270 *)Method_DataEntityBase_CreateMultiplePK_int__int__int___);
+           (const MethodInfo_30F8088 *)Method_DataEntityBase_CreateMultiplePK_int__int__int___);
 }
 
 
@@ -83,6 +84,67 @@ System_String_o *EventCampaignEntity__CreatePrimaryKey(EventCampaignEntity_o *th
   const MethodInfo *v2; // x3
 
   return EventCampaignEntity__CreatePK(this->fields.eventId, this->fields.target, this->fields.idx, v2);
+}
+
+
+System_String_o *EventCampaignEntity__GetAddPassiveContentDetail(EventCampaignEntity_o *this, const MethodInfo *method)
+{
+  if ( (byte_4C56C46 & 1) == 0 )
+  {
+    sub_1C3E564(&StringLiteral_16690/*"addPassiveContentDetail"*/);
+    byte_4C56C46 = 1;
+  }
+  return EntityScriptUtil__GetStringValue(this->fields.script, (System_String_o *)StringLiteral_16690/*"addPassiveContentDetail"*/, 0, 0);
+}
+
+
+System_String_o *EventCampaignEntity__GetAddPassiveContentOrganization(
+        EventCampaignEntity_o *this,
+        const MethodInfo *method)
+{
+  if ( (byte_4C56C45 & 1) == 0 )
+  {
+    sub_1C3E564(&StringLiteral_16691/*"addPassiveContentOrganization"*/);
+    byte_4C56C45 = 1;
+  }
+  return EntityScriptUtil__GetStringValue(this->fields.script, (System_String_o *)StringLiteral_16691/*"addPassiveContentOrganization"*/, 0, 0);
+}
+
+
+System_String_o *EventCampaignEntity__GetAddPassiveDescriptionDetail(
+        EventCampaignEntity_o *this,
+        const MethodInfo *method)
+{
+  if ( (byte_4C56C47 & 1) == 0 )
+  {
+    sub_1C3E564(&StringLiteral_16692/*"addPassiveDescriptionDetail"*/);
+    byte_4C56C47 = 1;
+  }
+  return EntityScriptUtil__GetStringValue(this->fields.script, (System_String_o *)StringLiteral_16692/*"addPassiveDescriptionDetail"*/, 0, 0);
+}
+
+
+System_String_o *EventCampaignEntity__GetAddPassiveIconOrganization(
+        EventCampaignEntity_o *this,
+        const MethodInfo *method)
+{
+  if ( (byte_4C56C44 & 1) == 0 )
+  {
+    sub_1C3E564(&StringLiteral_16693/*"addPassiveIconOrganization"*/);
+    byte_4C56C44 = 1;
+  }
+  return EntityScriptUtil__GetStringValue(this->fields.script, (System_String_o *)StringLiteral_16693/*"addPassiveIconOrganization"*/, 0, 0);
+}
+
+
+int32_t EventCampaignEntity__GetAddPassiveSkillId(EventCampaignEntity_o *this, const MethodInfo *method)
+{
+  if ( (byte_4C56C48 & 1) == 0 )
+  {
+    sub_1C3E564(&StringLiteral_16694/*"addPassiveSkillId"*/);
+    byte_4C56C48 = 1;
+  }
+  return EntityScriptUtil__GetIntValue(this->fields.script, (System_String_o *)StringLiteral_16694/*"addPassiveSkillId"*/, 0, 0);
 }
 
 
@@ -144,23 +206,34 @@ LABEL_6:
 
 int32_t EventCampaignEntity__GetOnlyMaxFuncGroupId(EventCampaignEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_4C42E99 & 1) == 0 )
+  if ( (byte_4C56C42 & 1) == 0 )
   {
-    sub_1C37058(&StringLiteral_9998/*"OnlyMaxFuncGroupId"*/);
-    byte_4C42E99 = 1;
+    sub_1C3E564(&StringLiteral_10000/*"OnlyMaxFuncGroupId"*/);
+    byte_4C56C42 = 1;
   }
-  return EntityScriptUtil__GetIntValue(this->fields.script, (System_String_o *)StringLiteral_9998/*"OnlyMaxFuncGroupId"*/, 0, 0);
+  return EntityScriptUtil__GetIntValue(this->fields.script, (System_String_o *)StringLiteral_10000/*"OnlyMaxFuncGroupId"*/, 0, 0);
 }
 
 
 bool EventCampaignEntity__IsNotDispEntryCondMessage(EventCampaignEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_4C42E98 & 1) == 0 )
+  if ( (byte_4C56C41 & 1) == 0 )
   {
-    sub_1C37058(&StringLiteral_20935/*"isNotDispEntryCondMessage"*/);
-    byte_4C42E98 = 1;
+    sub_1C3E564(&StringLiteral_20953/*"isNotDispEntryCondMessage"*/);
+    byte_4C56C41 = 1;
   }
-  return EntityScriptUtil__GetIntValue(this->fields.script, (System_String_o *)StringLiteral_20935/*"isNotDispEntryCondMessage"*/, 0, 0) > 0;
+  return EntityScriptUtil__GetIntValue(this->fields.script, (System_String_o *)StringLiteral_20953/*"isNotDispEntryCondMessage"*/, 0, 0) > 0;
+}
+
+
+bool EventCampaignEntity__IsShowBoardMessageOnWarGroupId(EventCampaignEntity_o *this, const MethodInfo *method)
+{
+  if ( (byte_4C56C43 & 1) == 0 )
+  {
+    sub_1C3E564(&StringLiteral_23505/*"showBoardMessageOnWarGroupId"*/);
+    byte_4C56C43 = 1;
+  }
+  return EntityScriptUtil__GetIntValue(this->fields.script, (System_String_o *)StringLiteral_23505/*"showBoardMessageOnWarGroupId"*/, 0, 0) > 0;
 }
 
 
@@ -188,6 +261,7 @@ int32_t EventCampaignEntity__getValue(EventCampaignEntity_o *this, const MethodI
 }
 
 
+// local variable allocation has failed, the output may be wrong!
 bool EventCampaignEntity__isDispWarId(EventCampaignEntity_o *this, int32_t warId, const MethodInfo *method)
 {
   struct System_Int32_array *warIds; // x8
@@ -197,7 +271,7 @@ bool EventCampaignEntity__isDispWarId(EventCampaignEntity_o *this, int32_t warId
 
   warIds = this->fields.warIds;
   if ( !warIds )
-    sub_1C372B4(this);
+    sub_1C3E7C0(this, *(_QWORD *)&warId);
   max_length = warIds->max_length;
   v5 = max_length > 0;
   if ( max_length >= 1 )
@@ -205,7 +279,7 @@ bool EventCampaignEntity__isDispWarId(EventCampaignEntity_o *this, int32_t warId
     for ( i = 0; i < max_length; v5 = i < max_length )
     {
       if ( i >= (unsigned int)max_length )
-        sub_1C372BC(this);
+        sub_1C3E7C8(this, *(_QWORD *)&warId);
       if ( warIds->m_Items[i] == warId )
         break;
       ++i;

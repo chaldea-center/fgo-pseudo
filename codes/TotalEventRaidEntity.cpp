@@ -1,27 +1,27 @@
 void TotalEventRaidEntity___ctor(TotalEventRaidEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_4C43C8F & 1) == 0 )
+  if ( (byte_4C57A47 & 1) == 0 )
   {
-    sub_1C37058(&Method_DataEntityBase_string___ctor__);
-    byte_4C43C8F = 1;
+    sub_1C3E564(&Method_DataEntityBase_string___ctor__);
+    byte_4C57A47 = 1;
   }
   DataEntityBase_object____ctor(
     (DataEntityBase_PKType__o *)this,
-    (const MethodInfo_339EC34 *)Method_DataEntityBase_string___ctor__);
+    (const MethodInfo_33B0AEC *)Method_DataEntityBase_string___ctor__);
 }
 
 
 System_String_o *TotalEventRaidEntity__CreatePK(int32_t eventId, int32_t day, const MethodInfo *method)
 {
-  if ( (byte_4C43C8E & 1) == 0 )
+  if ( (byte_4C57A46 & 1) == 0 )
   {
-    sub_1C37058(&Method_DataEntityBase_CreateMultiplePK_int__int___);
-    byte_4C43C8E = 1;
+    sub_1C3E564(&Method_DataEntityBase_CreateMultiplePK_int__int___);
+    byte_4C57A46 = 1;
   }
   return DataEntityBase__CreateMultiplePK_int__int_(
            eventId,
            day,
-           (const MethodInfo_30E5DE0 *)Method_DataEntityBase_CreateMultiplePK_int__int___);
+           (const MethodInfo_30F7BF8 *)Method_DataEntityBase_CreateMultiplePK_int__int___);
 }
 
 

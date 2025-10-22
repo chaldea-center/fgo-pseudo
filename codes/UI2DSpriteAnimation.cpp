@@ -16,13 +16,14 @@ void UI2DSpriteAnimation__Play(UI2DSpriteAnimation_o *this, const MethodInfo *me
 {
   struct UnityEngine_Sprite_array *frames; // x8
   _BOOL8 enabled; // x0
+  __int64 v5; // x1
   int32_t framerate; // w8
-  int v6; // w10
-  int v7; // w9
-  struct UnityEngine_Sprite_array *v8; // x10
-  int32_t v9; // w8
-  struct UnityEngine_Sprite_array *v10; // x8
-  const MethodInfo *v11; // x1
+  int v7; // w10
+  int v8; // w9
+  struct UnityEngine_Sprite_array *v9; // x10
+  int32_t v10; // w8
+  struct UnityEngine_Sprite_array *v11; // x8
+  const MethodInfo *v12; // x1
 
   frames = this->fields.frames;
   if ( frames && frames->max_length )
@@ -32,38 +33,38 @@ void UI2DSpriteAnimation__Play(UI2DSpriteAnimation_o *this, const MethodInfo *me
       goto LABEL_17;
     framerate = this->fields.framerate;
     if ( framerate < 1 )
-      v6 = -1;
+      v7 = -1;
     else
-      v6 = 1;
-    v7 = v6 + this->fields.mIndex;
-    if ( v7 >= 0 )
+      v7 = 1;
+    v8 = v7 + this->fields.mIndex;
+    if ( v8 >= 0 )
     {
-      v8 = this->fields.frames;
-      if ( !v8 )
+      v9 = this->fields.frames;
+      if ( !v9 )
         goto LABEL_18;
-      if ( v7 < SLODWORD(v8->max_length) )
+      if ( v8 < SLODWORD(v9->max_length) )
       {
 LABEL_17:
         UnityEngine_Behaviour__set_enabled((UnityEngine_Behaviour_o *)this, 1, 0);
-        UI2DSpriteAnimation__UpdateSprite(this, v11);
+        UI2DSpriteAnimation__UpdateSprite(this, v12);
         return;
       }
     }
     if ( (framerate & 0x80000000) == 0 )
     {
-      v9 = 0;
+      v10 = 0;
 LABEL_16:
-      this->fields.mIndex = v9;
+      this->fields.mIndex = v10;
       goto LABEL_17;
     }
-    v10 = this->fields.frames;
-    if ( v10 )
+    v11 = this->fields.frames;
+    if ( v11 )
     {
-      v9 = LODWORD(v10->max_length) - 1;
+      v10 = LODWORD(v11->max_length) - 1;
       goto LABEL_16;
     }
 LABEL_18:
-    sub_1C372B4(enabled);
+    sub_1C3E7C0(enabled, v5);
   }
 }
 
@@ -77,7 +78,7 @@ void UI2DSpriteAnimation__ResetToBeginning(UI2DSpriteAnimation_o *this, const Me
   {
     frames = this->fields.frames;
     if ( !frames )
-      sub_1C372B4(this);
+      sub_1C3E7C0(this, method);
     v2 = LODWORD(frames->max_length) - 1;
   }
   else
@@ -92,14 +93,15 @@ void UI2DSpriteAnimation__ResetToBeginning(UI2DSpriteAnimation_o *this, const Me
 void UI2DSpriteAnimation__Update(UI2DSpriteAnimation_o *this, const MethodInfo *method)
 {
   struct UnityEngine_Sprite_array *frames; // x8
-  float v4; // s0
+  __int64 v4; // x1
+  float v5; // s0
   int32_t framerate; // w8
   int32_t mIndex; // w9
   _BOOL4 loop; // w10
-  int v8; // w8
-  __int64 v9; // x0
-  struct UnityEngine_Sprite_array *v10; // x8
-  const MethodInfo *v11; // x1
+  int v9; // w8
+  __int64 v10; // x0
+  struct UnityEngine_Sprite_array *v11; // x8
+  const MethodInfo *v12; // x1
 
   frames = this->fields.frames;
   if ( !frames || !frames->max_length )
@@ -110,37 +112,37 @@ LABEL_18:
   }
   if ( this->fields.framerate )
   {
-    v4 = this->fields.ignoreTimeScale ? RealTime__get_time(0) : UnityEngine_Time__get_time(0);
-    if ( this->fields.mUpdate < v4 )
+    v5 = this->fields.ignoreTimeScale ? RealTime__get_time(0) : UnityEngine_Time__get_time(0);
+    if ( this->fields.mUpdate < v5 )
     {
       framerate = this->fields.framerate;
       mIndex = this->fields.mIndex;
       loop = this->fields.loop;
-      this->fields.mUpdate = v4;
+      this->fields.mUpdate = v5;
       if ( framerate < 1 )
-        v8 = -1;
+        v9 = -1;
       else
-        v8 = 1;
-      v9 = (unsigned int)(v8 + mIndex);
+        v9 = 1;
+      v10 = (unsigned int)(v9 + mIndex);
       if ( loop )
       {
-        v10 = this->fields.frames;
-        if ( v10 )
+        v11 = this->fields.frames;
+        if ( v11 )
         {
 LABEL_13:
-          this->fields.mIndex = NGUIMath__RepeatIndex(v9, v10->max_length, 0);
-          UI2DSpriteAnimation__UpdateSprite(this, v11);
+          this->fields.mIndex = NGUIMath__RepeatIndex(v10, v11->max_length, 0);
+          UI2DSpriteAnimation__UpdateSprite(this, v12);
           return;
         }
 LABEL_19:
-        sub_1C372B4(v9);
+        sub_1C3E7C0(v10, v4);
       }
-      if ( (v9 & 0x80000000) == 0 )
+      if ( (v10 & 0x80000000) == 0 )
       {
-        v10 = this->fields.frames;
-        if ( !v10 )
+        v11 = this->fields.frames;
+        if ( !v11 )
           goto LABEL_19;
-        if ( (int)v9 < SLODWORD(v10->max_length) )
+        if ( (int)v10 < SLODWORD(v11->max_length) )
           goto LABEL_13;
       }
       goto LABEL_18;
@@ -165,22 +167,23 @@ void UI2DSpriteAnimation__UpdateSprite(UI2DSpriteAnimation_o *this, const Method
   int32_t framerate; // w8
   UnityEngine_Object_o *v15; // x20
   UnityEngine_SpriteRenderer_o *v16; // x0
+  __int64 v17; // x1
   struct UnityEngine_Sprite_array *frames; // x8
   __int64 mIndex; // x9
-  UnityEngine_Object_o *v19; // x20
-  int32_t v20; // w2
-  const MethodInfo *v21; // x3
-  struct UnityEngine_Sprite_array *v22; // x8
-  __int64 v23; // x9
-  struct UI2DSprite_o *v24; // x10
-  struct UnityEngine_Sprite_o *v25; // x1
+  UnityEngine_Object_o *v20; // x20
+  int32_t v21; // w2
+  const MethodInfo *v22; // x3
+  struct UnityEngine_Sprite_array *v23; // x8
+  __int64 v24; // x9
+  struct UI2DSprite_o *v25; // x10
+  struct UnityEngine_Sprite_o *v26; // x1
 
-  if ( (byte_4C477E3 & 1) == 0 )
+  if ( (byte_4C5B5DA & 1) == 0 )
   {
-    sub_1C37058(&Method_UnityEngine_Component_GetComponent_SpriteRenderer___);
-    sub_1C37058(&Method_UnityEngine_Component_GetComponent_UI2DSprite___);
-    sub_1C37058(&UnityEngine_Object_TypeInfo);
-    byte_4C477E3 = 1;
+    sub_1C3E564(&Method_UnityEngine_Component_GetComponent_SpriteRenderer___);
+    sub_1C3E564(&Method_UnityEngine_Component_GetComponent_UI2DSprite___);
+    sub_1C3E564(&UnityEngine_Object_TypeInfo);
+    byte_4C5B5DA = 1;
   }
   mUnitySprite = (UnityEngine_Object_o *)this->fields.mUnitySprite;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -194,14 +197,14 @@ void UI2DSpriteAnimation__UpdateSprite(UI2DSpriteAnimation_o *this, const Method
     {
       Component_object = UnityEngine_Component__GetComponent_object_(
                            (UnityEngine_Component_o *)this,
-                           (const MethodInfo_30DE428 *)Method_UnityEngine_Component_GetComponent_SpriteRenderer___);
+                           (const MethodInfo_30F0240 *)Method_UnityEngine_Component_GetComponent_SpriteRenderer___);
       this->fields.mUnitySprite = (struct UnityEngine_SpriteRenderer_o *)Component_object;
-      sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.mUnitySprite, (int32_t)Component_object, v6, v7);
+      sub_1C3E508((CGThumbnailListItem_o *)&this->fields.mUnitySprite, (int32_t)Component_object, v6, v7);
       v8 = UnityEngine_Component__GetComponent_object_(
              (UnityEngine_Component_o *)this,
-             (const MethodInfo_30DE428 *)Method_UnityEngine_Component_GetComponent_UI2DSprite___);
+             (const MethodInfo_30F0240 *)Method_UnityEngine_Component_GetComponent_UI2DSprite___);
       this->fields.mNguiSprite = (struct UI2DSprite_o *)v8;
-      sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.mNguiSprite, (int32_t)v8, v9, v10);
+      sub_1C3E508((CGThumbnailListItem_o *)&this->fields.mNguiSprite, (int32_t)v8, v9, v10);
       v11 = (UnityEngine_Object_o *)this->fields.mUnitySprite;
       if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
@@ -244,29 +247,29 @@ void UI2DSpriteAnimation__UpdateSprite(UI2DSpriteAnimation_o *this, const Method
         return;
       }
 LABEL_36:
-      sub_1C372B4(v16);
+      sub_1C3E7C0(v16, v17);
     }
 LABEL_37:
-    sub_1C372BC(v16);
+    sub_1C3E7C8(v16, v17);
   }
-  v19 = (UnityEngine_Object_o *)this->fields.mNguiSprite;
+  v20 = (UnityEngine_Object_o *)this->fields.mNguiSprite;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-  v16 = (UnityEngine_SpriteRenderer_o *)UnityEngine_Object__op_Inequality(v19, 0, 0);
+  v16 = (UnityEngine_SpriteRenderer_o *)UnityEngine_Object__op_Inequality(v20, 0, 0);
   if ( ((unsigned __int8)v16 & 1) != 0 )
   {
-    v22 = this->fields.frames;
-    if ( !v22 )
+    v23 = this->fields.frames;
+    if ( !v23 )
       goto LABEL_36;
-    v23 = this->fields.mIndex;
-    if ( (unsigned int)v23 >= LODWORD(v22->max_length) )
+    v24 = this->fields.mIndex;
+    if ( (unsigned int)v24 >= LODWORD(v23->max_length) )
       goto LABEL_37;
-    v24 = this->fields.mNguiSprite;
-    if ( !v24 )
+    v25 = this->fields.mNguiSprite;
+    if ( !v25 )
       goto LABEL_36;
-    v25 = v22->m_Items[v23];
-    v24->fields.nextSprite = v25;
-    sub_1C36FFC((CGThumbnailListItem_o *)&v24->fields.nextSprite, (int32_t)v25, v20, v21);
+    v26 = v23->m_Items[v24];
+    v25->fields.nextSprite = v26;
+    sub_1C3E508((CGThumbnailListItem_o *)&v25->fields.nextSprite, (int32_t)v26, v21, v22);
   }
 }
 

@@ -11,25 +11,25 @@ void CharaGraphSortOwnerAllKind___ctor(CharaGraphSortOwnerAllKind_o *this, const
   const MethodInfo *v11; // x3
   const MethodInfo *v12; // x1
 
-  if ( (byte_4C422F1 & 1) == 0 )
+  if ( (byte_4C56093 & 1) == 0 )
   {
-    sub_1C37058(&CharaGraphSortManageUnitCommandCode_TypeInfo);
-    sub_1C37058(&CharaGraphSortManageUnitServantEquip_TypeInfo);
-    sub_1C37058(&CharaGraphSortManageUnitServant_TypeInfo);
-    byte_4C422F1 = 1;
+    sub_1C3E564(&CharaGraphSortManageUnitCommandCode_TypeInfo);
+    sub_1C3E564(&CharaGraphSortManageUnitServantEquip_TypeInfo);
+    sub_1C3E564(&CharaGraphSortManageUnitServant_TypeInfo);
+    byte_4C56093 = 1;
   }
-  v3 = (Il2CppObject *)sub_1C372A4(CharaGraphSortManageUnitServant_TypeInfo);
+  v3 = (Il2CppObject *)sub_1C3E7B0(CharaGraphSortManageUnitServant_TypeInfo);
   System_Object___ctor(v3, 0);
   this->fields._ServantSortManageUnit_k__BackingField = (struct CharaGraphSortManageUnitBase_o *)v3;
-  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields._ServantSortManageUnit_k__BackingField, (int32_t)v3, v4, v5);
-  v6 = (Il2CppObject *)sub_1C372A4(CharaGraphSortManageUnitServantEquip_TypeInfo);
+  sub_1C3E508((CGThumbnailListItem_o *)&this->fields._ServantSortManageUnit_k__BackingField, (int32_t)v3, v4, v5);
+  v6 = (Il2CppObject *)sub_1C3E7B0(CharaGraphSortManageUnitServantEquip_TypeInfo);
   System_Object___ctor(v6, 0);
   this->fields._ServantEquipSortManageUnit_k__BackingField = (struct CharaGraphSortManageUnitBase_o *)v6;
-  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields._ServantEquipSortManageUnit_k__BackingField, (int32_t)v6, v7, v8);
-  v9 = (Il2CppObject *)sub_1C372A4(CharaGraphSortManageUnitCommandCode_TypeInfo);
+  sub_1C3E508((CGThumbnailListItem_o *)&this->fields._ServantEquipSortManageUnit_k__BackingField, (int32_t)v6, v7, v8);
+  v9 = (Il2CppObject *)sub_1C3E7B0(CharaGraphSortManageUnitCommandCode_TypeInfo);
   System_Object___ctor(v9, 0);
   this->fields._CommandCodeSortManageUnit_k__BackingField = (struct CharaGraphSortManageUnitBase_o *)v9;
-  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields._CommandCodeSortManageUnit_k__BackingField, (int32_t)v9, v10, v11);
+  sub_1C3E508((CGThumbnailListItem_o *)&this->fields._CommandCodeSortManageUnit_k__BackingField, (int32_t)v9, v10, v11);
   System_Object___ctor((Il2CppObject *)this, 0);
   CharaGraphSortOwnerBase__SetSortSaveKeyPrefix((CharaGraphSortOwnerBase_o *)this, v12);
 }
@@ -67,7 +67,7 @@ void CharaGraphSortOwnerAllKind__set_CommandCodeSortManageUnit(
   const MethodInfo *v3; // x3
 
   this->fields._CommandCodeSortManageUnit_k__BackingField = value;
-  sub_1C36FFC(
+  sub_1C3E508(
     (CGThumbnailListItem_o *)&this->fields._CommandCodeSortManageUnit_k__BackingField,
     (int32_t)value,
     (int32_t)method,
@@ -83,7 +83,7 @@ void CharaGraphSortOwnerAllKind__set_ServantEquipSortManageUnit(
   const MethodInfo *v3; // x3
 
   this->fields._ServantEquipSortManageUnit_k__BackingField = value;
-  sub_1C36FFC(
+  sub_1C3E508(
     (CGThumbnailListItem_o *)&this->fields._ServantEquipSortManageUnit_k__BackingField,
     (int32_t)value,
     (int32_t)method,
@@ -99,7 +99,7 @@ void CharaGraphSortOwnerAllKind__set_ServantSortManageUnit(
   const MethodInfo *v3; // x3
 
   this->fields._ServantSortManageUnit_k__BackingField = value;
-  sub_1C36FFC(
+  sub_1C3E508(
     (CGThumbnailListItem_o *)&this->fields._ServantSortManageUnit_k__BackingField,
     (int32_t)value,
     (int32_t)method,

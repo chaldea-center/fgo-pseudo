@@ -30,46 +30,47 @@ void ServantStatusListViewItemDrawTdSpeed__SetItem(
         const MethodInfo *method)
 {
   System_String_o *TreasureDeviceSpeedSelect; // x0
+  __int64 v8; // x1
   struct UIRangeLabel_array *tdSpeedRangeLabelList; // x8
-  UIRangeLabel_o *v9; // x22
-  struct UIRangeLabel_array *v10; // x8
-  UIRangeLabel_o *v11; // x22
-  struct UIRangeLabel_array *v12; // x8
-  UIRangeLabel_o *v13; // x22
+  UIRangeLabel_o *v10; // x22
+  struct UIRangeLabel_array *v11; // x8
+  UIRangeLabel_o *v12; // x22
+  struct UIRangeLabel_array *v13; // x8
+  UIRangeLabel_o *v14; // x22
   UILabel_o *explanationLabel; // x22
   float *fields; // x8
-  float v16; // s8
-  float v17; // s9
-  float v18; // s10
-  float v19; // s11
+  float v17; // s8
+  float v18; // s9
+  float v19; // s10
+  float v20; // s11
   struct UICommonButton_array *tdSpeedButtonList; // x8
   int max_length; // w22
-  float *v22; // x8
-  unsigned int v23; // w23
-  float v24; // s12
-  float v25; // s13
-  float v26; // s14
-  float v27; // s15
-  struct UICommonButton_array *v28; // x8
-  int v29; // w21
+  float *v23; // x8
+  unsigned int v24; // w23
+  float v25; // s12
+  float v26; // s13
+  float v27; // s14
+  float v28; // s15
+  struct UICommonButton_array *v29; // x8
+  int v30; // w21
   struct UISprite_array *tdSpeedButtonSpriteList; // x8
-  System_String_o **v31; // x8
-  struct UIRangeLabel_array *v32; // x8
-  float v33; // s1 OVERLAPPED
-  float v34; // s0
-  float v35; // s2
-  float v36; // s3
+  System_String_o **v32; // x8
+  struct UIRangeLabel_array *v33; // x8
+  float v34; // s1 OVERLAPPED
+  float v35; // s0
+  float v36; // s2
+  float v37; // s3
 
-  if ( (byte_4C4063B & 1) == 0 )
+  if ( (byte_4C543D8 & 1) == 0 )
   {
-    sub_1C37058(&LocalizationManager_TypeInfo);
-    sub_1C37058(&StringLiteral_11994/*"SERVANT_STATUS_TD_SPEED_TWICE"*/);
-    sub_1C37058(&StringLiteral_17447/*"btn_bg_20"*/);
-    sub_1C37058(&StringLiteral_11992/*"SERVANT_STATUS_TD_SPEED_FREE"*/);
-    sub_1C37058(&StringLiteral_11993/*"SERVANT_STATUS_TD_SPEED_MESSAGE"*/);
-    sub_1C37058(&StringLiteral_11988/*"SERVANT_STATUS_TD_SPEED_ACTUAL"*/);
-    sub_1C37058(&StringLiteral_17448/*"btn_bg_21"*/);
-    byte_4C4063B = 1;
+    sub_1C3E564(&LocalizationManager_TypeInfo);
+    sub_1C3E564(&StringLiteral_11996/*"SERVANT_STATUS_TD_SPEED_TWICE"*/);
+    sub_1C3E564(&StringLiteral_17464/*"btn_bg_20"*/);
+    sub_1C3E564(&StringLiteral_11994/*"SERVANT_STATUS_TD_SPEED_FREE"*/);
+    sub_1C3E564(&StringLiteral_11995/*"SERVANT_STATUS_TD_SPEED_MESSAGE"*/);
+    sub_1C3E564(&StringLiteral_11990/*"SERVANT_STATUS_TD_SPEED_ACTUAL"*/);
+    sub_1C3E564(&StringLiteral_17465/*"btn_bg_21"*/);
+    byte_4C543D8 = 1;
   }
   ServantStatusListViewItemDraw__SetItem((ServantStatusListViewItemDraw_o *)this, item, mode, 0);
   if ( item && mode )
@@ -79,43 +80,43 @@ void ServantStatusListViewItemDrawTdSpeed__SetItem(
       goto LABEL_54;
     if ( !LODWORD(tdSpeedRangeLabelList->max_length) )
       goto LABEL_55;
-    v9 = tdSpeedRangeLabelList->m_Items[0];
+    v10 = tdSpeedRangeLabelList->m_Items[0];
     if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-    TreasureDeviceSpeedSelect = LocalizationManager__Get((System_String_o *)StringLiteral_11992/*"SERVANT_STATUS_TD_SPEED_FREE"*/, 0);
-    if ( !v9 )
-      goto LABEL_54;
-    UIRangeLabel__Set(v9, TreasureDeviceSpeedSelect, 0, 1, 0, 0, 0);
-    v10 = this->fields.tdSpeedRangeLabelList;
+    TreasureDeviceSpeedSelect = LocalizationManager__Get((System_String_o *)StringLiteral_11994/*"SERVANT_STATUS_TD_SPEED_FREE"*/, 0);
     if ( !v10 )
       goto LABEL_54;
-    if ( LODWORD(v10->max_length) <= 1 )
-      goto LABEL_55;
-    v11 = v10->m_Items[1];
-    TreasureDeviceSpeedSelect = LocalizationManager__Get((System_String_o *)StringLiteral_11988/*"SERVANT_STATUS_TD_SPEED_ACTUAL"*/, 0);
+    UIRangeLabel__Set(v10, TreasureDeviceSpeedSelect, 0, 1, 0, 0, 0);
+    v11 = this->fields.tdSpeedRangeLabelList;
     if ( !v11 )
       goto LABEL_54;
-    UIRangeLabel__Set(v11, TreasureDeviceSpeedSelect, 0, 1, 0, 0, 0);
-    v12 = this->fields.tdSpeedRangeLabelList;
+    if ( LODWORD(v11->max_length) <= 1 )
+      goto LABEL_55;
+    v12 = v11->m_Items[1];
+    TreasureDeviceSpeedSelect = LocalizationManager__Get((System_String_o *)StringLiteral_11990/*"SERVANT_STATUS_TD_SPEED_ACTUAL"*/, 0);
     if ( !v12 )
       goto LABEL_54;
-    if ( LODWORD(v12->max_length) <= 2 )
-LABEL_55:
-      sub_1C372BC(TreasureDeviceSpeedSelect);
-    v13 = v12->m_Items[2];
-    TreasureDeviceSpeedSelect = LocalizationManager__Get((System_String_o *)StringLiteral_11994/*"SERVANT_STATUS_TD_SPEED_TWICE"*/, 0);
+    UIRangeLabel__Set(v12, TreasureDeviceSpeedSelect, 0, 1, 0, 0, 0);
+    v13 = this->fields.tdSpeedRangeLabelList;
     if ( !v13 )
       goto LABEL_54;
-    UIRangeLabel__Set(v13, TreasureDeviceSpeedSelect, 0, 1, 0, 0, 0);
+    if ( LODWORD(v13->max_length) <= 2 )
+LABEL_55:
+      sub_1C3E7C8(TreasureDeviceSpeedSelect, v8);
+    v14 = v13->m_Items[2];
+    TreasureDeviceSpeedSelect = LocalizationManager__Get((System_String_o *)StringLiteral_11996/*"SERVANT_STATUS_TD_SPEED_TWICE"*/, 0);
+    if ( !v14 )
+      goto LABEL_54;
+    UIRangeLabel__Set(v14, TreasureDeviceSpeedSelect, 0, 1, 0, 0, 0);
     explanationLabel = this->fields.explanationLabel;
-    TreasureDeviceSpeedSelect = LocalizationManager__Get((System_String_o *)StringLiteral_11993/*"SERVANT_STATUS_TD_SPEED_MESSAGE"*/, 0);
+    TreasureDeviceSpeedSelect = LocalizationManager__Get((System_String_o *)StringLiteral_11995/*"SERVANT_STATUS_TD_SPEED_MESSAGE"*/, 0);
     if ( !explanationLabel )
       goto LABEL_54;
     UILabel__set_text(explanationLabel, TreasureDeviceSpeedSelect, 0);
-    if ( !byte_4C3D77E )
+    if ( !byte_4C514FE )
     {
-      sub_1C37058(&LocalizationManager_TypeInfo);
-      byte_4C3D77E = 1;
+      sub_1C3E564(&LocalizationManager_TypeInfo);
+      byte_4C514FE = 1;
     }
     TreasureDeviceSpeedSelect = (System_String_o *)LocalizationManager_TypeInfo;
     if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
@@ -124,15 +125,15 @@ LABEL_55:
       TreasureDeviceSpeedSelect = (System_String_o *)LocalizationManager_TypeInfo;
     }
     fields = (float *)TreasureDeviceSpeedSelect[7].fields;
-    v16 = fields[20];
-    v17 = fields[21];
-    v18 = fields[22];
-    v19 = fields[23];
-    if ( !byte_4C3D77F )
+    v17 = fields[20];
+    v18 = fields[21];
+    v19 = fields[22];
+    v20 = fields[23];
+    if ( !byte_4C514FF )
     {
-      sub_1C37058(&LocalizationManager_TypeInfo);
+      sub_1C3E564(&LocalizationManager_TypeInfo);
       TreasureDeviceSpeedSelect = (System_String_o *)LocalizationManager_TypeInfo;
-      byte_4C3D77F = 1;
+      byte_4C514FF = 1;
     }
     if ( !LODWORD(TreasureDeviceSpeedSelect[9].monitor) )
     {
@@ -145,56 +146,56 @@ LABEL_55:
     max_length = tdSpeedButtonList->max_length;
     if ( max_length >= 1 )
     {
-      v22 = (float *)TreasureDeviceSpeedSelect[7].fields;
-      v23 = 0;
-      v24 = v22[24];
-      v25 = v22[25];
-      v26 = v22[26];
-      v27 = v22[27];
+      v23 = (float *)TreasureDeviceSpeedSelect[7].fields;
+      v24 = 0;
+      v25 = v23[24];
+      v26 = v23[25];
+      v27 = v23[26];
+      v28 = v23[27];
       while ( 1 )
       {
         TreasureDeviceSpeedSelect = (System_String_o *)ServantStatusListViewItem__get_TreasureDeviceSpeedSelect(item, 0);
-        v28 = this->fields.tdSpeedButtonList;
-        if ( !v28 )
+        v29 = this->fields.tdSpeedButtonList;
+        if ( !v29 )
           break;
-        if ( v23 >= LODWORD(v28->max_length) )
+        if ( v24 >= LODWORD(v29->max_length) )
           goto LABEL_55;
-        v29 = (int)TreasureDeviceSpeedSelect;
-        TreasureDeviceSpeedSelect = (System_String_o *)v28->m_Items[v23];
+        v30 = (int)TreasureDeviceSpeedSelect;
+        TreasureDeviceSpeedSelect = (System_String_o *)v29->m_Items[v24];
         if ( !TreasureDeviceSpeedSelect )
           break;
-        UICommonButton__SetColliderEnable((UICommonButton_o *)TreasureDeviceSpeedSelect, v23 != v29, 1, 0);
+        UICommonButton__SetColliderEnable((UICommonButton_o *)TreasureDeviceSpeedSelect, v24 != v30, 1, 0);
         tdSpeedButtonSpriteList = this->fields.tdSpeedButtonSpriteList;
         if ( !tdSpeedButtonSpriteList )
           break;
-        if ( v23 >= LODWORD(tdSpeedButtonSpriteList->max_length) )
+        if ( v24 >= LODWORD(tdSpeedButtonSpriteList->max_length) )
           goto LABEL_55;
-        TreasureDeviceSpeedSelect = (System_String_o *)tdSpeedButtonSpriteList->m_Items[v23];
+        TreasureDeviceSpeedSelect = (System_String_o *)tdSpeedButtonSpriteList->m_Items[v24];
         if ( !TreasureDeviceSpeedSelect )
           break;
-        v31 = (System_String_o **)(v23 == v29 ? &StringLiteral_17448/*"btn_bg_21"*/ : &StringLiteral_17447/*"btn_bg_20"*/);
-        UISprite__set_spriteName((UISprite_o *)TreasureDeviceSpeedSelect, *v31, 0);
-        v32 = this->fields.tdSpeedRangeLabelList;
-        if ( !v32 )
+        v32 = (System_String_o **)(v24 == v30 ? &StringLiteral_17465/*"btn_bg_21"*/ : &StringLiteral_17464/*"btn_bg_20"*/);
+        UISprite__set_spriteName((UISprite_o *)TreasureDeviceSpeedSelect, *v32, 0);
+        v33 = this->fields.tdSpeedRangeLabelList;
+        if ( !v33 )
           break;
-        if ( v23 >= LODWORD(v32->max_length) )
+        if ( v24 >= LODWORD(v33->max_length) )
           goto LABEL_55;
-        TreasureDeviceSpeedSelect = (System_String_o *)v32->m_Items[v23];
-        v33 = v23 == v29 ? v25 : v17;
-        v34 = v23 == v29 ? v24 : v16;
-        v35 = v23 == v29 ? v26 : v18;
-        v36 = v23 == v29 ? v27 : v19;
+        TreasureDeviceSpeedSelect = (System_String_o *)v33->m_Items[v24];
+        v34 = v24 == v30 ? v26 : v18;
+        v35 = v24 == v30 ? v25 : v17;
+        v36 = v24 == v30 ? v27 : v19;
+        v37 = v24 == v30 ? v28 : v20;
         if ( !TreasureDeviceSpeedSelect )
           break;
         UIRangeLabel__set_effectColor(
           (UIRangeLabel_o *)TreasureDeviceSpeedSelect,
-          *(UnityEngine_Color_o *)(&v33 - 1),
+          *(UnityEngine_Color_o *)(&v34 - 1),
           0);
-        if ( max_length == ++v23 )
+        if ( max_length == ++v24 )
           return;
       }
 LABEL_54:
-      sub_1C372B4(TreasureDeviceSpeedSelect);
+      sub_1C3E7C0(TreasureDeviceSpeedSelect, v8);
     }
   }
 }

@@ -4,56 +4,56 @@ void MissionRewardInfoController___cctor(const MethodInfo *method)
   const MethodInfo *v2; // x3
   struct MissionRewardInfoController_StaticFields *static_fields; // x8
   struct System_Single_array *v4; // x0
-  int32_t v5; // w2
-  const MethodInfo *v6; // x3
+  __int64 v5; // x1
+  int32_t v6; // w2
+  const MethodInfo *v7; // x3
   int max_length; // w8
-  struct System_Single_array *v8; // x1
-  struct MissionRewardInfoController_StaticFields *v9; // x0
-  int32_t v10; // w2
-  const MethodInfo *v11; // x3
-  int v12; // w8
-  struct System_Single_array *v13; // x1
+  struct System_Single_array *v9; // x1
+  struct MissionRewardInfoController_StaticFields *v10; // x0
+  int32_t v11; // w2
+  const MethodInfo *v12; // x3
+  int v13; // w8
   struct MissionRewardInfoController_StaticFields *v14; // x0
 
-  if ( (byte_4C4615F & 1) == 0 )
+  if ( (byte_4C59F48 & 1) == 0 )
   {
-    sub_1C37058(&MissionRewardInfoController_TypeInfo);
-    sub_1C37058(&float___TypeInfo);
-    sub_1C37058(&StringLiteral_20602/*"img_title_mission_"*/);
-    byte_4C4615F = 1;
+    sub_1C3E564(&MissionRewardInfoController_TypeInfo);
+    sub_1C3E564(&float___TypeInfo);
+    sub_1C3E564(&StringLiteral_20620/*"img_title_mission_"*/);
+    byte_4C59F48 = 1;
   }
-  MissionRewardInfoController_TypeInfo->static_fields->TitleImgNamePrefix = (struct System_String_o *)StringLiteral_20602/*"img_title_mission_"*/;
-  sub_1C36FFC((CGThumbnailListItem_o *)MissionRewardInfoController_TypeInfo->static_fields, StringLiteral_20602/*"img_title_mission_"*/, v1, v2);
+  MissionRewardInfoController_TypeInfo->static_fields->TitleImgNamePrefix = (struct System_String_o *)StringLiteral_20620/*"img_title_mission_"*/;
+  sub_1C3E508((CGThumbnailListItem_o *)MissionRewardInfoController_TypeInfo->static_fields, StringLiteral_20620/*"img_title_mission_"*/, v1, v2);
   static_fields = MissionRewardInfoController_TypeInfo->static_fields;
   static_fields->FadeTime = 0.3;
   static_fields->ScopeItemInfoPosition = (struct UnityEngine_Vector2_o)0x4204000040800000LL;
-  v4 = (struct System_Single_array *)sub_1C37100(float___TypeInfo, 2);
+  v4 = (struct System_Single_array *)sub_1C3E60C(float___TypeInfo, 2);
   if ( !v4 )
     goto LABEL_11;
   max_length = v4->max_length;
-  v8 = v4;
+  v9 = v4;
   if ( !max_length || (v4->m_Items[0] = -100.0, max_length == 1) )
 LABEL_10:
-    sub_1C372BC(v4);
+    sub_1C3E7C8(v4, v9);
   v4->m_Items[1] = 100.0;
-  v9 = MissionRewardInfoController_TypeInfo->static_fields;
-  v9->XNormalPositions = v8;
-  sub_1C36FFC((CGThumbnailListItem_o *)&v9->XNormalPositions, (int32_t)v8, v5, v6);
-  v4 = (struct System_Single_array *)sub_1C37100(float___TypeInfo, 2);
+  v10 = MissionRewardInfoController_TypeInfo->static_fields;
+  v10->XNormalPositions = v9;
+  sub_1C3E508((CGThumbnailListItem_o *)&v10->XNormalPositions, (int32_t)v9, v6, v7);
+  v4 = (struct System_Single_array *)sub_1C3E60C(float___TypeInfo, 2);
   if ( !v4 )
 LABEL_11:
-    sub_1C372B4(v4);
-  v12 = v4->max_length;
-  v13 = v4;
-  if ( !v12 )
+    sub_1C3E7C0(v4, v5);
+  v13 = v4->max_length;
+  v9 = v4;
+  if ( !v13 )
     goto LABEL_10;
   v4->m_Items[0] = 72.0;
-  if ( v12 == 1 )
+  if ( v13 == 1 )
     goto LABEL_10;
   v4->m_Items[1] = 30.0;
   v14 = MissionRewardInfoController_TypeInfo->static_fields;
-  v14->YNormalPositions = v13;
-  sub_1C36FFC((CGThumbnailListItem_o *)&v14->YNormalPositions, (int32_t)v13, v10, v11);
+  v14->YNormalPositions = v9;
+  sub_1C3E508((CGThumbnailListItem_o *)&v14->YNormalPositions, (int32_t)v9, v11, v12);
   MissionRewardInfoController_TypeInfo->static_fields->MaxColumnsNormal = 2;
 }
 
@@ -78,6 +78,7 @@ void MissionRewardInfoController__CheckSerializeFieldAssertion(
 }
 
 
+// local variable allocation has failed, the output may be wrong!
 UnityEngine_Vector3_o MissionRewardInfoController__GetEventItemPosition(
         MissionRewardInfoController_o *this,
         int32_t index,
@@ -97,10 +98,10 @@ UnityEngine_Vector3_o MissionRewardInfoController__GetEventItemPosition(
   float v15; // s2
   UnityEngine_Vector3_o result; // 0:s0.4,4:s1.4,8:s2.4
 
-  if ( (byte_4C4615E & 1) == 0 )
+  if ( (byte_4C59F47 & 1) == 0 )
   {
-    sub_1C37058(&MissionRewardInfoController_TypeInfo);
-    byte_4C4615E = 1;
+    sub_1C3E564(&MissionRewardInfoController_TypeInfo);
+    byte_4C59F47 = 1;
   }
   v4 = MissionRewardInfoController_TypeInfo;
   if ( !MissionRewardInfoController_TypeInfo->_2.cctor_finished )
@@ -109,10 +110,10 @@ UnityEngine_Vector3_o MissionRewardInfoController__GetEventItemPosition(
     v4 = MissionRewardInfoController_TypeInfo;
   }
   MaxColumnsNormal = v4->static_fields->MaxColumnsNormal;
-  if ( !byte_4C3C920 )
+  if ( !byte_4C506A0 )
   {
-    sub_1C37058(&System_Math_TypeInfo);
-    byte_4C3C920 = 1;
+    sub_1C3E564(&System_Math_TypeInfo);
+    byte_4C506A0 = 1;
   }
   v6 = (float)index / (float)MaxColumnsNormal;
   v7 = System_Math_TypeInfo;
@@ -132,10 +133,10 @@ UnityEngine_Vector3_o MissionRewardInfoController__GetEventItemPosition(
   YNormalPositions = static_fields->YNormalPositions;
   if ( !YNormalPositions )
 LABEL_17:
-    sub_1C372B4(v7);
+    sub_1C3E7C0(v7, *(_QWORD *)&index);
   if ( v11 >= LODWORD(YNormalPositions->max_length) )
 LABEL_18:
-    sub_1C372BC(v7);
+    sub_1C3E7C8(v7, *(_QWORD *)&index);
   v13 = XNormalPositions->m_Items[index % MaxColumnsNormal];
   v14 = YNormalPositions->m_Items[v11];
   v15 = 0.0;
@@ -157,20 +158,20 @@ void MissionRewardInfoController__ModifyPanelPosition(
   struct MissionRewardInfoController_StaticFields *v7; // x9
   UnityEngine_Vector2_o v8; // 0:s0.4,4:s1.4
 
-  if ( (byte_4C4615D & 1) == 0 )
+  if ( (byte_4C59F46 & 1) == 0 )
   {
-    sub_1C37058(&FSUtility_TypeInfo);
-    sub_1C37058(&MissionRewardInfoController_TypeInfo);
-    byte_4C4615D = 1;
+    sub_1C3E564(&FSUtility_TypeInfo);
+    sub_1C3E564(&MissionRewardInfoController_TypeInfo);
+    byte_4C59F46 = 1;
   }
   if ( !FSUtility_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(FSUtility_TypeInfo);
   if ( FSUtility__IsUnderVista(0) )
   {
-    if ( !byte_4C3C81A )
+    if ( !byte_4C5059A )
     {
-      sub_1C37058(&UnityEngine_Vector2_TypeInfo);
-      byte_4C3C81A = 1;
+      sub_1C3E564(&UnityEngine_Vector2_TypeInfo);
+      byte_4C5059A = 1;
     }
     static_fields = UnityEngine_Vector2_TypeInfo->static_fields;
     p_y = &static_fields->zeroVector.fields.y;
@@ -189,7 +190,7 @@ void MissionRewardInfoController__ModifyPanelPosition(
   }
   v8.fields.x = static_fields->zeroVector.fields.x;
   v8.fields.y = *p_y;
-  GameObjectExtensions__SetLocalPosition_36132288(panelObject, v8, 0);
+  GameObjectExtensions__SetLocalPosition_36176188(panelObject, v8, 0);
 }
 
 
@@ -205,60 +206,63 @@ void MissionRewardInfoController__RefreshMissionRewardItemInfo(
   MissionRewardInfoController_c *v9; // x8
   int32_t v10; // w21
   _BOOL8 v11; // x0
-  const MethodInfo *v12; // x3
+  __int64 v12; // x1
+  const MethodInfo *v13; // x3
   struct MissionRewardItemComponent_array *missionRewardItemDrawList; // x8
   il2cpp_array_size_t max_length; // x9
   Il2CppObject *value; // x27
-  MissionRewardItemComponent_o *v16; // x0
-  __int64 v17; // x0
-  struct MissionRewardItemComponent_array *v18; // x8
-  UnityEngine_Component_o *v19; // x0
+  MissionRewardItemComponent_o *v17; // x0
+  __int64 v18; // x0
+  __int64 v19; // x1
+  struct MissionRewardItemComponent_array *v20; // x8
+  UnityEngine_Component_o *v21; // x0
   MissionRewardInfoController_o *transform; // x22
-  const MethodInfo *v21; // x2
-  __int64 v22; // x0
-  __int64 v23; // x0
-  const MethodInfo *v24; // x1
+  const MethodInfo *v23; // x2
+  __int64 v24; // x0
+  __int64 v25; // x1
+  __int64 v26; // x0
+  const MethodInfo *v27; // x1
   Il2CppClass *klass; // x22
-  struct MissionRewardItemComponent_array *v26; // x8
-  MissionRewardItemComponent_o *v27; // x0
-  __int64 v28; // x0
-  const MethodInfo *v29; // x1
-  struct MissionRewardItemComponent_array *v30; // x8
-  MissionRewardItemComponent_o *v31; // x0
-  __int64 v32; // x0
+  struct MissionRewardItemComponent_array *v29; // x8
+  MissionRewardItemComponent_o *v30; // x0
+  __int64 v31; // x0
+  const MethodInfo *v32; // x1
+  struct MissionRewardItemComponent_array *v33; // x8
+  MissionRewardItemComponent_o *v34; // x0
+  __int64 v35; // x0
+  __int64 v36; // x1
   int data; // w8
-  float v34; // s0
-  struct MissionRewardItemComponent_array *v35; // x8
-  MissionRewardItemComponent_o *v36; // x8
+  float v38; // s0
+  struct MissionRewardItemComponent_array *v39; // x8
+  MissionRewardItemComponent_o *v40; // x8
   ItemIconComponent_o *itemIcon; // x0
-  const MethodInfo *v38; // x1
-  const MethodInfo *v39; // x2
-  struct MissionRewardItemComponent_array *v40; // x8
-  signed __int64 v41; // x21
+  const MethodInfo *v42; // x2
+  struct MissionRewardItemComponent_array *v43; // x8
+  signed __int64 v44; // x21
   unsigned __int64 max_length_low; // x9
-  System_Collections_Generic_Dictionary_Enumerator_TKey__TValue__o v43; // [xsp+8h] [xbp-A8h] BYREF
-  System_Collections_Generic_Dictionary_Enumerator_TKey__TValue__o v44; // [xsp+30h] [xbp-80h] BYREF
+  System_Collections_Generic_Dictionary_Enumerator_TKey__TValue__o v46; // [xsp+8h] [xbp-A8h] BYREF
+  System_Collections_Generic_Dictionary_Enumerator_TKey__TValue__o v47; // [xsp+30h] [xbp-80h] BYREF
   UnityEngine_Vector3_o EventItemPosition; // 0:s0.4,4:s1.4,8:s2.4
 
   v6 = this;
-  if ( (byte_4C4615C & 1) == 0 )
+  if ( (byte_4C59F45 & 1) == 0 )
   {
-    sub_1C37058(&Method_System_Collections_Generic_Dictionary_int__MissionItemDisplayInfo__GetEnumerator__);
-    sub_1C37058(&Method_System_Collections_Generic_Dictionary_int__MissionItemDisplayInfo__get_Count__);
-    sub_1C37058(&Method_System_Collections_Generic_Dictionary_Enumerator_int__MissionItemDisplayInfo__Dispose__);
-    sub_1C37058(&Method_System_Collections_Generic_Dictionary_Enumerator_int__MissionItemDisplayInfo__MoveNext__);
-    sub_1C37058(&Method_System_Collections_Generic_Dictionary_Enumerator_int__MissionItemDisplayInfo__get_Current__);
-    sub_1C37058(&Method_System_Collections_Generic_KeyValuePair_int__MissionItemDisplayInfo__get_Key__);
-    sub_1C37058(&Method_System_Collections_Generic_KeyValuePair_int__MissionItemDisplayInfo__get_Value__);
-    this = (MissionRewardInfoController_o *)sub_1C37058(&MissionRewardInfoController_TypeInfo);
-    byte_4C4615C = 1;
+    sub_1C3E564(&Method_System_Collections_Generic_Dictionary_int__MissionItemDisplayInfo__GetEnumerator__);
+    sub_1C3E564(&Method_System_Collections_Generic_Dictionary_int__MissionItemDisplayInfo__get_Count__);
+    sub_1C3E564(&Method_System_Collections_Generic_Dictionary_Enumerator_int__MissionItemDisplayInfo__Dispose__);
+    sub_1C3E564(&Method_System_Collections_Generic_Dictionary_Enumerator_int__MissionItemDisplayInfo__MoveNext__);
+    sub_1C3E564(&Method_System_Collections_Generic_Dictionary_Enumerator_int__MissionItemDisplayInfo__get_Current__);
+    sub_1C3E564(&Method_System_Collections_Generic_KeyValuePair_int__MissionItemDisplayInfo__get_Key__);
+    sub_1C3E564(&Method_System_Collections_Generic_KeyValuePair_int__MissionItemDisplayInfo__get_Value__);
+    this = (MissionRewardInfoController_o *)sub_1C3E564(&MissionRewardInfoController_TypeInfo);
+    byte_4C59F45 = 1;
   }
-  memset(&v44, 0, sizeof(v44));
+  memset(&v47, 0, sizeof(v47));
   if ( !itemIdAndInfoDic )
     goto LABEL_50;
   this = (MissionRewardInfoController_o *)System_Collections_Generic_Dictionary_int__object___get_Count(
                                             (System_Collections_Generic_Dictionary_int__object__o *)itemIdAndInfoDic,
-                                            (const MethodInfo_33FA234 *)Method_System_Collections_Generic_Dictionary_int__MissionItemDisplayInfo__get_Count__);
+                                            (const MethodInfo_340C0EC *)Method_System_Collections_Generic_Dictionary_int__MissionItemDisplayInfo__get_Count__);
   if ( !v6->fields.rewardItemWindow )
     goto LABEL_50;
   v7 = (int)this;
@@ -301,120 +305,120 @@ void MissionRewardInfoController__RefreshMissionRewardItemInfo(
     TweenAlpha__Begin(gameObject, v9->static_fields->FadeTime, 1.0, 0);
   }
   System_Collections_Generic_Dictionary_int__object___GetEnumerator(
-    &v43,
+    &v46,
     (System_Collections_Generic_Dictionary_int__object__o *)itemIdAndInfoDic,
-    (const MethodInfo_33FA9BC *)Method_System_Collections_Generic_Dictionary_int__MissionItemDisplayInfo__GetEnumerator__);
+    (const MethodInfo_340C874 *)Method_System_Collections_Generic_Dictionary_int__MissionItemDisplayInfo__GetEnumerator__);
   v10 = 0;
-  v44 = v43;
+  v47 = v46;
   while ( 1 )
   {
     v11 = System_Collections_Generic_Dictionary_Enumerator_int__object___MoveNext(
-            &v44,
-            (const MethodInfo_35513F8 *)Method_System_Collections_Generic_Dictionary_Enumerator_int__MissionItemDisplayInfo__MoveNext__);
+            &v47,
+            (const MethodInfo_3563834 *)Method_System_Collections_Generic_Dictionary_Enumerator_int__MissionItemDisplayInfo__MoveNext__);
     if ( !v11 )
       break;
     missionRewardItemDrawList = v6->fields.missionRewardItemDrawList;
     if ( !missionRewardItemDrawList )
-      sub_1C372B4(v11);
+      sub_1C3E7C0(v11, v12);
     max_length = missionRewardItemDrawList->max_length;
     if ( v10 < (int)max_length )
     {
       if ( v10 >= (unsigned int)max_length )
-        sub_1C372BC(v11);
-      value = v44.fields._current.fields.value;
-      if ( !v44.fields._current.fields.value )
-        sub_1C372B4(v11);
-      v16 = missionRewardItemDrawList->m_Items[v10];
-      if ( !v16 )
-        sub_1C372B4(0);
+        sub_1C3E7C8(v11, v12);
+      value = v47.fields._current.fields.value;
+      if ( !v47.fields._current.fields.value )
+        sub_1C3E7C0(v11, v12);
+      v17 = missionRewardItemDrawList->m_Items[v10];
+      if ( !v17 )
+        sub_1C3E7C0(0, v12);
       MissionRewardItemComponent__Set(
-        v16,
-        (int32_t)v44.fields._current.fields.key,
-        (int32_t)v44.fields._current.fields.value[1].monitor,
-        v12);
-      v18 = v6->fields.missionRewardItemDrawList;
-      if ( !v18 )
-        sub_1C372B4(v17);
-      if ( (unsigned int)v10 >= LODWORD(v18->max_length) )
-        sub_1C372BC(v17);
-      v19 = (UnityEngine_Component_o *)v18->m_Items[v10];
-      if ( !v19 )
-        sub_1C372B4(0);
-      transform = (MissionRewardInfoController_o *)UnityEngine_Component__get_transform(v19, 0);
-      EventItemPosition = MissionRewardInfoController__GetEventItemPosition(transform, v10, v21);
+        v17,
+        (int32_t)v47.fields._current.fields.key,
+        (int32_t)v47.fields._current.fields.value[1].monitor,
+        v13);
+      v20 = v6->fields.missionRewardItemDrawList;
+      if ( !v20 )
+        sub_1C3E7C0(v18, v19);
+      if ( (unsigned int)v10 >= LODWORD(v20->max_length) )
+        sub_1C3E7C8(v18, v19);
+      v21 = (UnityEngine_Component_o *)v20->m_Items[v10];
+      if ( !v21 )
+        sub_1C3E7C0(0, v19);
+      transform = (MissionRewardInfoController_o *)UnityEngine_Component__get_transform(v21, 0);
+      EventItemPosition = MissionRewardInfoController__GetEventItemPosition(transform, v10, v23);
       if ( !transform )
-        sub_1C372B4(v22);
+        sub_1C3E7C0(v24, v25);
       UnityEngine_Transform__set_localPosition((UnityEngine_Transform_o *)transform, EventItemPosition, 0);
       klass = value[1].klass;
       if ( klass )
       {
-        v26 = v6->fields.missionRewardItemDrawList;
-        if ( !v26 )
-          sub_1C372B4(v23);
-        if ( (unsigned int)v10 >= LODWORD(v26->max_length) )
-          sub_1C372BC(v23);
-        v27 = v26->m_Items[v10];
-        if ( !v27 )
-          sub_1C372B4(0);
-        MissionRewardItemComponent__SetItemIconOffsetX(v27, (float)SHIDWORD(klass->_1.byval_arg.data), v24);
-        v30 = v6->fields.missionRewardItemDrawList;
+        v29 = v6->fields.missionRewardItemDrawList;
+        if ( !v29 )
+          sub_1C3E7C0(v26, v27);
+        if ( (unsigned int)v10 >= LODWORD(v29->max_length) )
+          sub_1C3E7C8(v26, v27);
+        v30 = v29->m_Items[v10];
         if ( !v30 )
-          sub_1C372B4(v28);
-        if ( (unsigned int)v10 >= LODWORD(v30->max_length) )
-          sub_1C372BC(v28);
-        v31 = v30->m_Items[v10];
-        if ( !v31 )
-          sub_1C372B4(0);
-        MissionRewardItemComponent__SetItemIconOffsetY(v31, (float)(int)klass->_1.byval_arg.bits, v29);
+          sub_1C3E7C0(0, v27);
+        MissionRewardItemComponent__SetItemIconOffsetX(v30, (float)SHIDWORD(klass->_1.byval_arg.data), v27);
+        v33 = v6->fields.missionRewardItemDrawList;
+        if ( !v33 )
+          sub_1C3E7C0(v31, v32);
+        if ( (unsigned int)v10 >= LODWORD(v33->max_length) )
+          sub_1C3E7C8(v31, v32);
+        v34 = v33->m_Items[v10];
+        if ( !v34 )
+          sub_1C3E7C0(0, v32);
+        MissionRewardItemComponent__SetItemIconOffsetY(v34, (float)(int)klass->_1.byval_arg.bits, v32);
         data = (int)klass->_1.byval_arg.data;
         if ( data <= 0 )
-          v34 = 1.0;
+          v38 = 1.0;
         else
-          v34 = (float)data / 1000.0;
-        v35 = v6->fields.missionRewardItemDrawList;
-        if ( !v35 )
-          sub_1C372B4(v32);
-        if ( (unsigned int)v10 >= LODWORD(v35->max_length) )
-          sub_1C372BC(v32);
-        v36 = v35->m_Items[v10];
-        if ( !v36 )
-          sub_1C372B4(v32);
-        itemIcon = v36->fields.itemIcon;
+          v38 = (float)data / 1000.0;
+        v39 = v6->fields.missionRewardItemDrawList;
+        if ( !v39 )
+          sub_1C3E7C0(v35, v36);
+        if ( (unsigned int)v10 >= LODWORD(v39->max_length) )
+          sub_1C3E7C8(v35, v36);
+        v40 = v39->m_Items[v10];
+        if ( !v40 )
+          sub_1C3E7C0(v35, v36);
+        itemIcon = v40->fields.itemIcon;
         if ( !itemIcon )
-          sub_1C372B4(0);
-        ItemIconComponent__setLocalScaleIconSprite(itemIcon, v34, 0);
+          sub_1C3E7C0(0, v36);
+        ItemIconComponent__setLocalScaleIconSprite(itemIcon, v38, 0);
       }
       ++v10;
     }
   }
   System_Collections_Generic_Dictionary_Enumerator_int__object___Dispose(
-    &v44,
-    (const MethodInfo_355151C *)Method_System_Collections_Generic_Dictionary_Enumerator_int__MissionItemDisplayInfo__Dispose__);
-  v40 = v6->fields.missionRewardItemDrawList;
-  if ( !v40 )
+    &v47,
+    (const MethodInfo_3563958 *)Method_System_Collections_Generic_Dictionary_Enumerator_int__MissionItemDisplayInfo__Dispose__);
+  v43 = v6->fields.missionRewardItemDrawList;
+  if ( !v43 )
 LABEL_50:
-    sub_1C372B4(this);
-  v41 = 0;
+    sub_1C3E7C0(this, itemIdAndInfoDic);
+  v44 = 0;
   while ( 1 )
   {
-    max_length_low = LODWORD(v40->max_length);
-    if ( v41 >= (int)max_length_low )
+    max_length_low = LODWORD(v43->max_length);
+    if ( v44 >= (int)max_length_low )
       break;
-    if ( v41 >= v7 )
+    if ( v44 >= v7 )
     {
-      if ( v41 >= max_length_low )
-        sub_1C372BC(this);
-      this = (MissionRewardInfoController_o *)v40->m_Items[v41];
+      if ( v44 >= max_length_low )
+        sub_1C3E7C8(this, itemIdAndInfoDic);
+      this = (MissionRewardInfoController_o *)v43->m_Items[v44];
       if ( !this )
         goto LABEL_50;
-      MissionRewardItemComponent__Clear((MissionRewardItemComponent_o *)this, v38);
-      v40 = v6->fields.missionRewardItemDrawList;
+      MissionRewardItemComponent__Clear((MissionRewardItemComponent_o *)this, (const MethodInfo *)itemIdAndInfoDic);
+      v43 = v6->fields.missionRewardItemDrawList;
     }
-    ++v41;
-    if ( !v40 )
+    ++v44;
+    if ( !v43 )
       goto LABEL_50;
   }
-  MissionRewardInfoController__ModifyPanelPosition(this, v6->fields.rewardItemPanelObject, v39);
+  MissionRewardInfoController__ModifyPanelPosition(this, v6->fields.rewardItemPanelObject, v42);
 }
 
 
@@ -427,18 +431,19 @@ void MissionRewardInfoController__SetRewardItemTitle(
   System_String_o *TitleImgNamePrefix; // x21
   UnityEngine_Object_o *rewardItemTitle; // x20
   UISprite_o *v8; // x20
-  struct UISprite_o *v9; // x0
+  __int64 v9; // x1
+  struct UISprite_o *v10; // x0
 
-  if ( (byte_4C4615B & 1) == 0 )
+  if ( (byte_4C59F44 & 1) == 0 )
   {
-    sub_1C37058(&AtlasManager_TypeInfo);
-    sub_1C37058(&MissionRewardInfoController_TypeInfo);
-    sub_1C37058(&UnityEngine_Object_TypeInfo);
-    sub_1C37058(&StringLiteral_18446/*"daily"*/);
-    sub_1C37058(&StringLiteral_21239/*"limited"*/);
-    sub_1C37058(&StringLiteral_19343/*"extra"*/);
-    sub_1C37058(&StringLiteral_24802/*"weekly"*/);
-    byte_4C4615B = 1;
+    sub_1C3E564(&AtlasManager_TypeInfo);
+    sub_1C3E564(&MissionRewardInfoController_TypeInfo);
+    sub_1C3E564(&UnityEngine_Object_TypeInfo);
+    sub_1C3E564(&StringLiteral_18464/*"daily"*/);
+    sub_1C3E564(&StringLiteral_21257/*"limited"*/);
+    sub_1C3E564(&StringLiteral_19361/*"extra"*/);
+    sub_1C3E564(&StringLiteral_24822/*"weekly"*/);
+    byte_4C59F44 = 1;
   }
   v5 = MissionRewardInfoController_TypeInfo;
   if ( !MissionRewardInfoController_TypeInfo->_2.cctor_finished )
@@ -448,9 +453,9 @@ void MissionRewardInfoController__SetRewardItemTitle(
   }
   TitleImgNamePrefix = v5->static_fields->TitleImgNamePrefix;
   if ( (unsigned int)(missionType - 2) <= 3 )
-    TitleImgNamePrefix = System_String__Concat_63561656(
+    TitleImgNamePrefix = System_String__Concat_63636468(
                            v5->static_fields->TitleImgNamePrefix,
-                           *(System_String_o **)*(&off_466A950 + missionType - 2),
+                           *(System_String_o **)*(&off_467CDF0 + missionType - 2),
                            0);
   rewardItemTitle = (UnityEngine_Object_o *)this->fields.rewardItemTitle;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -461,12 +466,12 @@ void MissionRewardInfoController__SetRewardItemTitle(
     if ( !AtlasManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo);
     AtlasManager__SetDownloadCommonSprite(v8, TitleImgNamePrefix, 0);
-    v9 = this->fields.rewardItemTitle;
-    if ( !v9 )
-      sub_1C372B4(0);
-    ((void (__fastcall *)(struct UISprite_o *, const MethodInfo *))v9->klass->vtable._33_MakePixelPerfect.methodPtr)(
-      v9,
-      v9->klass->vtable._33_MakePixelPerfect.method);
+    v10 = this->fields.rewardItemTitle;
+    if ( !v10 )
+      sub_1C3E7C0(0, v9);
+    ((void (__fastcall *)(struct UISprite_o *, const MethodInfo *))v10->klass->vtable._33_MakePixelPerfect.methodPtr)(
+      v10,
+      v10->klass->vtable._33_MakePixelPerfect.method);
   }
 }
 
@@ -475,14 +480,15 @@ void MissionRewardInfoController__SetupWindow(MissionRewardInfoController_o *thi
 {
   UnityEngine_Object_o *rewardItemWindow; // x20
   UISprite_o *v4; // x20
-  struct UISprite_o *v5; // x0
+  __int64 v5; // x1
+  struct UISprite_o *v6; // x0
 
-  if ( (byte_4C4615A & 1) == 0 )
+  if ( (byte_4C59F43 & 1) == 0 )
   {
-    sub_1C37058(&AtlasManager_TypeInfo);
-    sub_1C37058(&UnityEngine_Object_TypeInfo);
-    sub_1C37058(&StringLiteral_20423/*"img_itembg_mission"*/);
-    byte_4C4615A = 1;
+    sub_1C3E564(&AtlasManager_TypeInfo);
+    sub_1C3E564(&UnityEngine_Object_TypeInfo);
+    sub_1C3E564(&StringLiteral_20441/*"img_itembg_mission"*/);
+    byte_4C59F43 = 1;
   }
   rewardItemWindow = (UnityEngine_Object_o *)this->fields.rewardItemWindow;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -492,12 +498,12 @@ void MissionRewardInfoController__SetupWindow(MissionRewardInfoController_o *thi
     v4 = this->fields.rewardItemWindow;
     if ( !AtlasManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo);
-    AtlasManager__SetDownloadCommonSprite(v4, (System_String_o *)StringLiteral_20423/*"img_itembg_mission"*/, 0);
-    v5 = this->fields.rewardItemWindow;
-    if ( !v5 )
-      sub_1C372B4(0);
-    ((void (__fastcall *)(struct UISprite_o *, const MethodInfo *))v5->klass->vtable._33_MakePixelPerfect.methodPtr)(
-      v5,
-      v5->klass->vtable._33_MakePixelPerfect.method);
+    AtlasManager__SetDownloadCommonSprite(v4, (System_String_o *)StringLiteral_20441/*"img_itembg_mission"*/, 0);
+    v6 = this->fields.rewardItemWindow;
+    if ( !v6 )
+      sub_1C3E7C0(0, v5);
+    ((void (__fastcall *)(struct UISprite_o *, const MethodInfo *))v6->klass->vtable._33_MakePixelPerfect.methodPtr)(
+      v6,
+      v6->klass->vtable._33_MakePixelPerfect.method);
   }
 }

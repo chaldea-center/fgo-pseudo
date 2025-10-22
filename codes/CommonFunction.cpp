@@ -7,10 +7,10 @@ System_Int32_array *CommonFunction__JoinIndiv(
   il2cpp_array_size_t v6; // x9
   System_Array_o *v7; // x21
 
-  if ( (byte_4C42372 & 1) == 0 )
+  if ( (byte_4C56114 & 1) == 0 )
   {
-    sub_1C37058(&int___TypeInfo);
-    byte_4C42372 = 1;
+    sub_1C3E564(&int___TypeInfo);
+    byte_4C56114 = 1;
   }
   if ( addIndiv )
   {
@@ -19,7 +19,7 @@ System_Int32_array *CommonFunction__JoinIndiv(
     {
       if ( baseIndiv && (v6 = baseIndiv->max_length) != 0 )
       {
-        v7 = (System_Array_o *)sub_1C37100(int___TypeInfo, (unsigned int)(v6 + max_length));
+        v7 = (System_Array_o *)sub_1C3E60C(int___TypeInfo, (unsigned int)(v6 + max_length));
         System_Array__CopyTo((System_Array_o *)baseIndiv, v7, 0, 0);
         System_Array__CopyTo((System_Array_o *)addIndiv, v7, baseIndiv->max_length, 0);
         return (System_Int32_array *)v7;
@@ -38,36 +38,37 @@ bool CommonFunction__ReScaleUiFunc(UIRoot_o *uiRoot, const MethodInfo *method)
 {
   int32_t height; // w20
   int32_t width; // w0
-  int32_t v6; // w21
-  CommonUI_o *v7; // x0
+  __int64 v6; // x1
+  int32_t v7; // w21
+  CommonUI_o *v8; // x0
   struct ConnectMark_o *connectMark; // x8
   int profileBase; // w23
   int32_t profileNameLabel; // w25
-  float v11; // s0
   float v12; // s0
   float v13; // s0
+  float v14; // s0
   Il2CppObject *Instance; // x19
-  ManagerConfig_c *v15; // x0
-  int32_t v16; // w24
-  int v17; // w24
-  _BOOL4 v18; // w8
-  int32_t v19; // w22
-  int v20; // w8
-  float v21; // s0
-  float v22; // s2
-  int v23; // w8
-  bool v24; // zf
-  float v25; // s0
-  int32_t v26; // w1
-  unsigned int v27; // w8
-  int32_t v28; // w2
+  ManagerConfig_c *v16; // x0
+  int32_t v17; // w24
+  int v18; // w24
+  _BOOL4 v19; // w8
+  int32_t v20; // w22
+  int v21; // w8
+  float v22; // s0
+  float v23; // s2
+  int v24; // w8
+  bool v25; // zf
+  float v26; // s0
+  int32_t v27; // w1
+  unsigned int v28; // w8
+  int32_t v29; // w2
 
-  if ( (byte_4C42370 & 1) == 0 )
+  if ( (byte_4C56112 & 1) == 0 )
   {
-    sub_1C37058(&ManagerConfig_TypeInfo);
-    sub_1C37058(&UnityEngine_Object_TypeInfo);
-    sub_1C37058(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
-    byte_4C42370 = 1;
+    sub_1C3E564(&ManagerConfig_TypeInfo);
+    sub_1C3E564(&UnityEngine_Object_TypeInfo);
+    sub_1C3E564(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+    byte_4C56112 = 1;
   }
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
@@ -80,100 +81,101 @@ bool CommonFunction__ReScaleUiFunc(UIRoot_o *uiRoot, const MethodInfo *method)
     height = UnityEngine_Screen__get_width(0);
     width = UnityEngine_Screen__get_height(0);
   }
-  v6 = width;
-  v7 = (CommonUI_o *)ManagerConfig_TypeInfo;
+  v7 = width;
+  v8 = (CommonUI_o *)ManagerConfig_TypeInfo;
   if ( !ManagerConfig_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(ManagerConfig_TypeInfo);
-    v7 = (CommonUI_o *)ManagerConfig_TypeInfo;
+    v8 = (CommonUI_o *)ManagerConfig_TypeInfo;
   }
-  connectMark = v7->fields.connectMark;
+  connectMark = v8->fields.connectMark;
   profileBase = (int)connectMark->fields.profileBase;
   profileNameLabel = (int32_t)connectMark->fields.profileNameLabel;
-  v11 = (float)(profileBase * height) / (float)(profileNameLabel * v6);
-  if ( v11 <= 1.0 )
+  v12 = (float)(profileBase * height) / (float)(profileNameLabel * v7);
+  if ( v12 <= 1.0 )
   {
-    v13 = (float)profileBase / v11;
-    if ( v13 == INFINITY )
+    v14 = (float)profileBase / v12;
+    if ( v14 == INFINITY )
       profileBase = 0x80000000;
     else
-      profileBase = (int)v13;
+      profileBase = (int)v14;
   }
   else
   {
-    v12 = v11 * (float)profileNameLabel;
-    if ( v12 == INFINITY )
+    v13 = v12 * (float)profileNameLabel;
+    if ( v13 == INFINITY )
       profileNameLabel = 0x80000000;
     else
-      profileNameLabel = (int)v12;
+      profileNameLabel = (int)v13;
   }
   if ( !uiRoot )
     goto LABEL_48;
   if ( uiRoot->fields.manualHeight != profileNameLabel )
     uiRoot->fields.manualHeight = profileNameLabel;
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39ED16C *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39FF5A8 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   if ( !UnityEngine_Object__op_Inequality((UnityEngine_Object_o *)Instance, 0, 0) )
     return 1;
-  v15 = ManagerConfig_TypeInfo;
+  v16 = ManagerConfig_TypeInfo;
   if ( !ManagerConfig_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(ManagerConfig_TypeInfo);
-    v15 = ManagerConfig_TypeInfo;
+    v16 = ManagerConfig_TypeInfo;
   }
-  v16 = v15->static_fields->HEIGHT;
-  if ( !byte_4C3D918 )
+  v17 = v16->static_fields->HEIGHT;
+  if ( !byte_4C51698 )
   {
-    sub_1C37058(&System_Math_TypeInfo);
-    byte_4C3D918 = 1;
+    sub_1C3E564(&System_Math_TypeInfo);
+    byte_4C51698 = 1;
   }
-  v17 = profileNameLabel - v16;
+  v18 = profileNameLabel - v17;
   if ( System_Math_TypeInfo->_2.cctor_finished )
   {
-    v18 = 0;
+    v19 = 0;
   }
   else
   {
     j_il2cpp_runtime_class_init_0(System_Math_TypeInfo);
-    v18 = byte_4C3D918 == 0;
+    v19 = byte_4C51698 == 0;
   }
-  if ( v17 < 0 )
-    v17 = -v17;
-  v19 = ManagerConfig_TypeInfo->static_fields->WIDTH;
-  if ( v18 )
+  if ( v18 < 0 )
+    v18 = -v18;
+  v20 = ManagerConfig_TypeInfo->static_fields->WIDTH;
+  if ( v19 )
   {
-    sub_1C37058(&System_Math_TypeInfo);
-    byte_4C3D918 = 1;
+    sub_1C3E564(&System_Math_TypeInfo);
+    byte_4C51698 = 1;
   }
   if ( !System_Math_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(System_Math_TypeInfo);
-  v7 = (CommonUI_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39ED16C *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
-  if ( !v7 )
+  v8 = (CommonUI_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39FF5A8 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+  if ( !v8 )
 LABEL_48:
-    sub_1C372B4(v7);
-  v20 = v19 - profileBase;
-  if ( v19 - profileBase < 0 )
-    v20 = profileBase - v19;
-  v21 = ceilf((float)v17 * 0.5);
-  v22 = (float)v20 * 0.5;
-  v23 = (int)v21;
-  v24 = v21 == INFINITY;
-  v25 = ceilf(v22);
-  if ( v24 )
-    v26 = 0x80000000;
+    sub_1C3E7C0(v8, v6);
+  v21 = v20 - profileBase;
+  if ( v20 - profileBase < 0 )
+    v21 = profileBase - v20;
+  v22 = ceilf((float)v18 * 0.5);
+  v23 = (float)v21 * 0.5;
+  v24 = (int)v22;
+  v25 = v22 == INFINITY;
+  v26 = ceilf(v23);
+  if ( v25 )
+    v27 = 0x80000000;
   else
-    v26 = v23;
-  v27 = vcvtps_s32_f32(v22);
-  if ( v25 == INFINITY )
-    v28 = 0x80000000;
+    v27 = v24;
+  v28 = vcvtps_s32_f32(v23);
+  if ( v26 == INFINITY )
+    v29 = 0x80000000;
   else
-    v28 = v27;
-  CommonUI__setObiImgSize(v7, v26, v28, 0);
+    v29 = v28;
+  CommonUI__setObiImgSize(v8, v27, v29, 0);
   return 1;
 }
 
 
+// local variable allocation has failed, the output may be wrong!
 void CommonFunction__ScalingLabelWidth(UILabel_o *label, int32_t maxWidth, const MethodInfo *method)
 {
   UILabel_o *v4; // x20
@@ -191,10 +193,10 @@ void CommonFunction__ScalingLabelWidth(UILabel_o *label, int32_t maxWidth, const
   v4 = label;
   label = (UILabel_o *)UnityEngine_Component__get_transform((UnityEngine_Component_o *)label, 0);
   v5 = label;
-  if ( !byte_4C3C926 )
+  if ( !byte_4C506A6 )
   {
-    label = (UILabel_o *)sub_1C37058(&UnityEngine_Vector3_TypeInfo);
-    byte_4C3C926 = 1;
+    label = (UILabel_o *)sub_1C3E564(&UnityEngine_Vector3_TypeInfo);
+    byte_4C506A6 = 1;
   }
   if ( !v5 )
     goto LABEL_11;
@@ -225,7 +227,7 @@ void CommonFunction__ScalingLabelWidth(UILabel_o *label, int32_t maxWidth, const
       }
     }
 LABEL_11:
-    sub_1C372B4(label);
+    sub_1C3E7C0(label, *(_QWORD *)&maxWidth);
   }
 }
 
@@ -241,21 +243,22 @@ void CommonFunction__SetColor(
   float g; // s10
   float r; // s11
   _BOOL8 v10; // x0
+  __int64 v11; // x1
   Il2CppObject *Component_object; // x21
-  UIWidget_o *v12; // x0
-  Il2CppObject *v13; // x20
-  UnityEngine_Color_o v14; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
+  UIWidget_o *v13; // x0
+  Il2CppObject *v14; // x20
+  UnityEngine_Color_o v15; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 
   a = color.fields.a;
   b = color.fields.b;
   g = color.fields.g;
   r = color.fields.r;
-  if ( (byte_4C42371 & 1) == 0 )
+  if ( (byte_4C56113 & 1) == 0 )
   {
-    sub_1C37058(&Method_UnityEngine_GameObject_GetComponent_UILabel___);
-    sub_1C37058(&Method_UnityEngine_GameObject_GetComponent_UISprite___);
-    sub_1C37058(&UnityEngine_Object_TypeInfo);
-    byte_4C42371 = 1;
+    sub_1C3E564(&Method_UnityEngine_GameObject_GetComponent_UILabel___);
+    sub_1C3E564(&Method_UnityEngine_GameObject_GetComponent_UISprite___);
+    sub_1C3E564(&UnityEngine_Object_TypeInfo);
+    byte_4C56113 = 1;
   }
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
@@ -266,7 +269,7 @@ void CommonFunction__SetColor(
     {
       Component_object = UnityEngine_GameObject__GetComponent_object_(
                            obj,
-                           (const MethodInfo_313F1D8 *)Method_UnityEngine_GameObject_GetComponent_UILabel___);
+                           (const MethodInfo_31510CC *)Method_UnityEngine_GameObject_GetComponent_UILabel___);
       if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
       v10 = UnityEngine_Object__op_Inequality((UnityEngine_Object_o *)Component_object, 0, 0);
@@ -281,24 +284,24 @@ void CommonFunction__SetColor(
         }
         if ( Component_object )
         {
-          v12 = (UIWidget_o *)Component_object;
+          v13 = (UIWidget_o *)Component_object;
 LABEL_22:
-          v14.fields.b = b;
-          v14.fields.a = a;
-          v14.fields.r = r;
-          v14.fields.g = g;
-          UIWidget__set_color(v12, v14, 0);
+          v15.fields.b = b;
+          v15.fields.a = a;
+          v15.fields.r = r;
+          v15.fields.g = g;
+          UIWidget__set_color(v13, v15, 0);
           return;
         }
       }
       else
       {
-        v13 = UnityEngine_GameObject__GetComponent_object_(
+        v14 = UnityEngine_GameObject__GetComponent_object_(
                 obj,
-                (const MethodInfo_313F1D8 *)Method_UnityEngine_GameObject_GetComponent_UISprite___);
+                (const MethodInfo_31510CC *)Method_UnityEngine_GameObject_GetComponent_UISprite___);
         if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
           j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-        v10 = UnityEngine_Object__op_Inequality((UnityEngine_Object_o *)v13, 0, 0);
+        v10 = UnityEngine_Object__op_Inequality((UnityEngine_Object_o *)v14, 0, 0);
         if ( !v10 )
           return;
         if ( isEnable )
@@ -308,18 +311,19 @@ LABEL_22:
           g = 1.0;
           r = 1.0;
         }
-        if ( v13 )
+        if ( v14 )
         {
-          v12 = (UIWidget_o *)v13;
+          v13 = (UIWidget_o *)v14;
           goto LABEL_22;
         }
       }
     }
-    sub_1C372B4(v10);
+    sub_1C3E7C0(v10, v11);
   }
 }
 
 
+// local variable allocation has failed, the output may be wrong!
 void CommonFunction__SetColorAllChild(
         UnityEngine_Transform_o *parentTransform,
         bool isEnable,
@@ -372,6 +376,6 @@ void CommonFunction__SetColorAllChild(
         return;
     }
 LABEL_7:
-    sub_1C372B4(parentTransform);
+    sub_1C3E7C0(parentTransform, isEnable);
   }
 }

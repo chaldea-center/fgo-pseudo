@@ -3,11 +3,11 @@ void CriFsConfig___ctor(CriFsConfig_o *this, const MethodInfo *method)
   CriFsPlugin_c *v3; // x0
   __int64 v4; // x1
 
-  if ( (byte_4C3C700 & 1) == 0 )
+  if ( (byte_4C50480 & 1) == 0 )
   {
-    sub_1C37058(&CriFsPlugin_TypeInfo);
-    sub_1C37058(&StringLiteral_1/*""*/);
-    byte_4C3C700 = 1;
+    sub_1C3E564(&CriFsPlugin_TypeInfo);
+    sub_1C3E564(&StringLiteral_1/*""*/);
+    byte_4C50480 = 1;
   }
   this->fields.numberOfInstallers = 2;
   *(_QWORD *)&this->fields.numberOfLoaders = 0x800000010LL;
@@ -21,7 +21,7 @@ void CriFsConfig___ctor(CriFsConfig_o *this, const MethodInfo *method)
   this->fields.maxPath = 256;
   v4 = StringLiteral_1/*""*/;
   this->fields.userAgentString = (struct System_String_o *)StringLiteral_1/*""*/;
-  sub_1C36FFC(&this->fields.userAgentString, v4);
+  sub_1C3E508(&this->fields.userAgentString, v4);
   this->fields.androidDeviceReadBitrate = 50000000;
   System_Object___ctor((Il2CppObject *)this, 0);
 }

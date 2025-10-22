@@ -1,17 +1,19 @@
 void PropertyReference___cctor(const MethodInfo *method)
 {
-  if ( (byte_4C47734 & 1) == 0 )
+  __int64 v1; // x1
+
+  if ( (byte_4C5B52B & 1) == 0 )
   {
-    sub_1C37058(&PropertyReference_TypeInfo);
-    sub_1C37058(&StringLiteral_10778/*"PropertyBinding"*/);
-    byte_4C47734 = 1;
+    sub_1C3E564(&PropertyReference_TypeInfo);
+    sub_1C3E564(&StringLiteral_10780/*"PropertyBinding"*/);
+    byte_4C5B52B = 1;
   }
-  if ( !StringLiteral_10778/*"PropertyBinding"*/ )
-    sub_1C372B4(0);
-  PropertyReference_TypeInfo->static_fields->s_Hash = (*(__int64 (__fastcall **)(void *, _QWORD))(*(_QWORD *)StringLiteral_10778/*"PropertyBinding"*/
+  if ( !StringLiteral_10780/*"PropertyBinding"*/ )
+    sub_1C3E7C0(0, v1);
+  PropertyReference_TypeInfo->static_fields->s_Hash = (*(__int64 (__fastcall **)(void *, _QWORD))(*(_QWORD *)StringLiteral_10780/*"PropertyBinding"*/
                                                                                                 + 344LL))(
-                                                        StringLiteral_10778/*"PropertyBinding"*/,
-                                                        *(_QWORD *)(*(_QWORD *)StringLiteral_10778/*"PropertyBinding"*/ + 352LL));
+                                                        StringLiteral_10780/*"PropertyBinding"*/,
+                                                        *(_QWORD *)(*(_QWORD *)StringLiteral_10780/*"PropertyBinding"*/ + 352LL));
 }
 
 
@@ -21,7 +23,7 @@ void PropertyReference___ctor(PropertyReference_o *this, const MethodInfo *metho
 }
 
 
-void PropertyReference___ctor_49368312(
+void PropertyReference___ctor_49441552(
         PropertyReference_o *this,
         UnityEngine_Component_o *target,
         System_String_o *fieldName,
@@ -34,9 +36,9 @@ void PropertyReference___ctor_49368312(
 
   System_Object___ctor((Il2CppObject *)this, 0);
   this->fields.mTarget = target;
-  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields, (int32_t)target, v7, v8);
+  sub_1C3E508((CGThumbnailListItem_o *)&this->fields, (int32_t)target, v7, v8);
   this->fields.mName = fieldName;
-  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.mName, (int32_t)fieldName, v9, v10);
+  sub_1C3E508((CGThumbnailListItem_o *)&this->fields.mName, (int32_t)fieldName, v9, v10);
 }
 
 
@@ -45,21 +47,22 @@ bool PropertyReference__Cache(PropertyReference_o *this, const MethodInfo *metho
   UnityEngine_Object_o *mTarget; // x20
   int32_t v4; // w2
   const MethodInfo *v5; // x3
-  int32_t v6; // w2
-  const MethodInfo *v7; // x3
+  __int64 v6; // x1
+  int32_t v7; // w2
+  const MethodInfo *v8; // x3
   struct System_Reflection_PropertyInfo_o **p_mProperty; // x0
-  int32_t v9; // w1
+  int32_t v10; // w1
   Il2CppObject *Type; // x0
-  System_Type_o *v11; // x20
+  System_Type_o *v12; // x20
   struct System_Reflection_FieldInfo_o *Field; // x0
-  int32_t v13; // w2
-  const MethodInfo *v14; // x3
+  int32_t v14; // w2
+  const MethodInfo *v15; // x3
   struct System_Reflection_PropertyInfo_o *Property; // x0
 
-  if ( (byte_4C4772F & 1) == 0 )
+  if ( (byte_4C5B526 & 1) == 0 )
   {
-    sub_1C37058(&UnityEngine_Object_TypeInfo);
-    byte_4C4772F = 1;
+    sub_1C3E564(&UnityEngine_Object_TypeInfo);
+    byte_4C5B526 = 1;
   }
   mTarget = (UnityEngine_Object_o *)this->fields.mTarget;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -68,25 +71,25 @@ bool PropertyReference__Cache(PropertyReference_o *this, const MethodInfo *metho
   {
     Type = (Il2CppObject *)this->fields.mTarget;
     if ( !Type || (Type = (Il2CppObject *)System_Object__GetType(Type, 0)) == 0 )
-      sub_1C372B4(Type);
-    v11 = (System_Type_o *)Type;
+      sub_1C3E7C0(Type, v6);
+    v12 = (System_Type_o *)Type;
     Field = System_Type__GetField((System_Type_o *)Type, this->fields.mName, 0);
     this->fields.mField = Field;
-    sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.mField, (int32_t)Field, v13, v14);
-    Property = System_Type__GetProperty(v11, this->fields.mName, 0);
-    v9 = (int)Property;
+    sub_1C3E508((CGThumbnailListItem_o *)&this->fields.mField, (int32_t)Field, v14, v15);
+    Property = System_Type__GetProperty(v12, this->fields.mName, 0);
+    v10 = (int)Property;
     this->fields.mProperty = Property;
     p_mProperty = &this->fields.mProperty;
   }
   else
   {
     this->fields.mField = 0;
-    sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.mField, 0, v4, v5);
+    sub_1C3E508((CGThumbnailListItem_o *)&this->fields.mField, 0, v4, v5);
     this->fields.mProperty = 0;
     p_mProperty = &this->fields.mProperty;
-    v9 = 0;
+    v10 = 0;
   }
-  sub_1C36FFC((CGThumbnailListItem_o *)p_mProperty, v9, v6, v7);
+  sub_1C3E508((CGThumbnailListItem_o *)p_mProperty, v10, v7, v8);
   return System_Reflection_FieldInfo__op_Inequality(this->fields.mField, 0, 0)
       || System_Reflection_PropertyInfo__op_Inequality(this->fields.mProperty, 0, 0);
 }
@@ -100,9 +103,9 @@ void PropertyReference__Clear(PropertyReference_o *this, const MethodInfo *metho
   const MethodInfo *v6; // x3
 
   this->fields.mTarget = 0;
-  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields, 0, v2, v3);
+  sub_1C3E508((CGThumbnailListItem_o *)&this->fields, 0, v2, v3);
   this->fields.mName = 0;
-  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.mName, 0, v5, v6);
+  sub_1C3E508((CGThumbnailListItem_o *)&this->fields.mName, 0, v5, v6);
 }
 
 
@@ -111,15 +114,16 @@ bool PropertyReference__Convert(PropertyReference_o *this, Il2CppObject **value,
   UnityEngine_Object_o *mTarget; // x21
   const MethodInfo *v6; // x1
   System_Type_o *PropertyType; // x0
-  System_Type_o *v9; // x20
-  const MethodInfo *v10; // x3
+  __int64 v9; // x1
+  System_Type_o *v10; // x20
+  const MethodInfo *v11; // x3
   System_Type_o *Type; // x21
 
-  if ( (byte_4C47730 & 1) == 0 )
+  if ( (byte_4C5B527 & 1) == 0 )
   {
-    sub_1C37058(&UnityEngine_Object_TypeInfo);
-    sub_1C37058(&PropertyReference_TypeInfo);
-    byte_4C47730 = 1;
+    sub_1C3E564(&UnityEngine_Object_TypeInfo);
+    sub_1C3E564(&PropertyReference_TypeInfo);
+    byte_4C5B527 = 1;
   }
   mTarget = (UnityEngine_Object_o *)this->fields.mTarget;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -127,7 +131,7 @@ bool PropertyReference__Convert(PropertyReference_o *this, Il2CppObject **value,
   if ( UnityEngine_Object__op_Equality(mTarget, 0, 0) )
     return 0;
   PropertyType = PropertyReference__GetPropertyType(this, v6);
-  v9 = PropertyType;
+  v10 = PropertyType;
   if ( *value )
   {
     Type = System_Object__GetType(*value, 0);
@@ -135,18 +139,18 @@ bool PropertyReference__Convert(PropertyReference_o *this, Il2CppObject **value,
   else
   {
     if ( !PropertyType )
-      sub_1C372B4(0);
+      sub_1C3E7C0(0, v9);
     Type = PropertyType;
     if ( !System_Type__get_IsClass(PropertyType, 0) )
       return 0;
   }
   if ( !PropertyReference_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(PropertyReference_TypeInfo);
-  return PropertyReference__Convert_49369744(value, Type, v9, v10);
+  return PropertyReference__Convert_49442984(value, Type, v10, v11);
 }
 
 
-bool PropertyReference__Convert_49369744(
+bool PropertyReference__Convert_49442984(
         Il2CppObject **value,
         System_Type_o *from,
         System_Type_o *to,
@@ -200,17 +204,17 @@ bool PropertyReference__Convert_49369744(
   double iptr; // [xsp+28h] [xbp-38h] BYREF
 
   v6 = (Il2CppObject ***)value;
-  if ( (byte_4C47733 & 1) == 0 )
+  if ( (byte_4C5B52A & 1) == 0 )
   {
-    sub_1C37058(&int_var);
-    sub_1C37058(&int_TypeInfo);
-    sub_1C37058(&float_var);
-    sub_1C37058(&float_TypeInfo);
-    sub_1C37058(&string_var);
-    sub_1C37058(&string_TypeInfo);
-    sub_1C37058(&System_Type_TypeInfo);
-    value = (Il2CppObject **)sub_1C37058(&StringLiteral_22335/*"null"*/);
-    byte_4C47733 = 1;
+    sub_1C3E564(&int_var);
+    sub_1C3E564(&int_TypeInfo);
+    sub_1C3E564(&float_var);
+    sub_1C3E564(&float_TypeInfo);
+    sub_1C3E564(&string_var);
+    sub_1C3E564(&string_TypeInfo);
+    sub_1C3E564(&System_Type_TypeInfo);
+    value = (Il2CppObject **)sub_1C3E564(&StringLiteral_22353/*"null"*/);
+    byte_4C5B52A = 1;
   }
   *(_QWORD *)result = 0;
   if ( !to )
@@ -237,7 +241,7 @@ bool PropertyReference__Convert_49369744(
                                *v6,
                                (*v13)[23].klass);
     else
-      v14 = (Il2CppObject **)StringLiteral_22335/*"null"*/;
+      v14 = (Il2CppObject **)StringLiteral_22353/*"null"*/;
     *v6 = v14;
     goto LABEL_23;
   }
@@ -276,7 +280,7 @@ LABEL_58:
           LODWORD(v14) = v47;
           *v6 = (Il2CppObject **)v47;
 LABEL_23:
-          sub_1C36FFC((CGThumbnailListItem_o *)v6, (int32_t)v14, v11, v12);
+          sub_1C3E508((CGThumbnailListItem_o *)v6, (int32_t)v14, v11, v12);
           return 1;
         }
       }
@@ -303,10 +307,10 @@ LABEL_23:
         if ( (*value)[4].klass != float_TypeInfo->_1.element_class )
           goto LABEL_60;
         v41 = *(float *)j_il2cpp_object_unbox_0(value, float_TypeInfo, v39, v40);
-        if ( !byte_4C3E100 )
+        if ( !byte_4C51E80 )
         {
-          sub_1C37058(&System_Math_TypeInfo);
-          byte_4C3E100 = 1;
+          sub_1C3E564(&System_Math_TypeInfo);
+          byte_4C51E80 = 1;
         }
         if ( !System_Math_TypeInfo->_2.cctor_finished )
           j_il2cpp_runtime_class_init_0(System_Math_TypeInfo);
@@ -344,7 +348,7 @@ LABEL_55:
         goto LABEL_57;
       }
 LABEL_59:
-      sub_1C372B4(value);
+      sub_1C3E7C0(value, from);
     }
     return 0;
   }
@@ -362,39 +366,39 @@ LABEL_57:
     return 0;
   }
 LABEL_60:
-  sub_1C37574(value);
-  return PropertyReference__Convert_49370804(v48, v49, v50);
+  sub_1C3EA80(value);
+  return PropertyReference__Convert_49444044(v48, v49, v50);
 }
 
 
-bool PropertyReference__Convert_49370804(System_Type_o *from, System_Type_o *to, const MethodInfo *method)
+bool PropertyReference__Convert_49444044(System_Type_o *from, System_Type_o *to, const MethodInfo *method)
 {
   const MethodInfo *v3; // x3
   Il2CppObject *value; // [xsp+8h] [xbp-28h] BYREF
 
-  if ( (byte_4C47731 & 1) == 0 )
+  if ( (byte_4C5B528 & 1) == 0 )
   {
-    sub_1C37058(&PropertyReference_TypeInfo);
-    byte_4C47731 = 1;
+    sub_1C3E564(&PropertyReference_TypeInfo);
+    byte_4C5B528 = 1;
   }
   value = 0;
   if ( !PropertyReference_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(PropertyReference_TypeInfo);
-  return PropertyReference__Convert_49369744(&value, from, to, v3);
+  return PropertyReference__Convert_49442984(&value, from, to, v3);
 }
 
 
-bool PropertyReference__Convert_49370920(Il2CppObject *value, System_Type_o *to, const MethodInfo *method)
+bool PropertyReference__Convert_49444160(Il2CppObject *value, System_Type_o *to, const MethodInfo *method)
 {
   const MethodInfo *v3; // x3
   System_Type_o *Type; // x20
   Il2CppObject *valuea; // [xsp+8h] [xbp-28h] BYREF
 
   valuea = value;
-  if ( (byte_4C47732 & 1) == 0 )
+  if ( (byte_4C5B529 & 1) == 0 )
   {
-    sub_1C37058(&PropertyReference_TypeInfo);
-    byte_4C47732 = 1;
+    sub_1C3E564(&PropertyReference_TypeInfo);
+    byte_4C5B529 = 1;
   }
   if ( value )
   {
@@ -412,7 +416,7 @@ bool PropertyReference__Convert_49370920(Il2CppObject *value, System_Type_o *to,
       Type = to;
     }
   }
-  return PropertyReference__Convert_49369744(&valuea, Type, to, v3);
+  return PropertyReference__Convert_49442984(&valuea, Type, to, v3);
 }
 
 
@@ -422,11 +426,11 @@ bool PropertyReference__Equals(PropertyReference_o *this, Il2CppObject *obj, con
   UnityEngine_Object_o *mTarget; // x21
   Il2CppClass *klass; // x22
 
-  if ( (byte_4C4772A & 1) == 0 )
+  if ( (byte_4C5B521 & 1) == 0 )
   {
-    sub_1C37058(&UnityEngine_Object_TypeInfo);
-    sub_1C37058(&PropertyReference_TypeInfo);
-    byte_4C4772A = 1;
+    sub_1C3E564(&UnityEngine_Object_TypeInfo);
+    sub_1C3E564(&PropertyReference_TypeInfo);
+    byte_4C5B521 = 1;
   }
   if ( obj )
   {
@@ -439,7 +443,7 @@ bool PropertyReference__Equals(PropertyReference_o *this, Il2CppObject *obj, con
       if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
       if ( UnityEngine_Object__op_Equality(mTarget, (UnityEngine_Object_o *)klass, 0) )
-        return System_String__Equals_63597688(this->fields.mName, (System_String_o *)obj[1].monitor, 0);
+        return System_String__Equals_63672500(this->fields.mName, (System_String_o *)obj[1].monitor, 0);
     }
     return 0;
   }
@@ -454,6 +458,7 @@ Il2CppObject *PropertyReference__Get(PropertyReference_o *this, const MethodInfo
 {
   const MethodInfo *v3; // x1
   const MethodInfo *v4; // x1
+  __int64 v5; // x1
   void *mProperty; // x0
 
   if ( System_Reflection_PropertyInfo__op_Equality(this->fields.mProperty, 0, 0)
@@ -480,7 +485,7 @@ Il2CppObject *PropertyReference__Get(PropertyReference_o *this, const MethodInfo
                                  0,
                                  *(_QWORD *)(*(_QWORD *)mProperty + 720LL));
 LABEL_14:
-      sub_1C372B4(mProperty);
+      sub_1C3E7C0(mProperty, v5);
     }
     return 0;
   }
@@ -500,10 +505,10 @@ int32_t PropertyReference__GetHashCode(PropertyReference_o *this, const MethodIn
 {
   PropertyReference_c *v2; // x0
 
-  if ( (byte_4C4772B & 1) == 0 )
+  if ( (byte_4C5B522 & 1) == 0 )
   {
-    sub_1C37058(&PropertyReference_TypeInfo);
-    byte_4C4772B = 1;
+    sub_1C3E564(&PropertyReference_TypeInfo);
+    byte_4C5B522 = 1;
   }
   v2 = PropertyReference_TypeInfo;
   if ( !PropertyReference_TypeInfo->_2.cctor_finished )
@@ -519,16 +524,17 @@ System_Type_o *PropertyReference__GetPropertyType(PropertyReference_o *this, con
 {
   const MethodInfo *v3; // x1
   const MethodInfo *v4; // x1
+  __int64 v5; // x1
   void *mProperty; // x0
-  __int64 (*v6)(void); // x2
-  Il2CppType *v8; // x19
-  System_RuntimeTypeHandle_o v9; // x0
+  __int64 (*v7)(void); // x2
+  Il2CppType *v9; // x19
+  System_RuntimeTypeHandle_o v10; // x0
 
-  if ( (byte_4C47729 & 1) == 0 )
+  if ( (byte_4C5B520 & 1) == 0 )
   {
-    sub_1C37058(&System_Type_TypeInfo);
-    sub_1C37058(&void_var);
-    byte_4C47729 = 1;
+    sub_1C3E564(&System_Type_TypeInfo);
+    sub_1C3E564(&void_var);
+    byte_4C5B520 = 1;
   }
   if ( System_Reflection_PropertyInfo__op_Equality(this->fields.mProperty, 0, 0)
     && System_Reflection_FieldInfo__op_Equality(this->fields.mField, 0, 0)
@@ -541,8 +547,8 @@ System_Type_o *PropertyReference__GetPropertyType(PropertyReference_o *this, con
     mProperty = this->fields.mProperty;
     if ( mProperty )
     {
-      v6 = *(__int64 (**)(void))(*(_QWORD *)mProperty + 568LL);
-      return (System_Type_o *)v6();
+      v7 = *(__int64 (**)(void))(*(_QWORD *)mProperty + 568LL);
+      return (System_Type_o *)v7();
     }
     goto LABEL_17;
   }
@@ -551,17 +557,17 @@ System_Type_o *PropertyReference__GetPropertyType(PropertyReference_o *this, con
     mProperty = this->fields.mField;
     if ( mProperty )
     {
-      v6 = *(__int64 (**)(void))(*(_QWORD *)mProperty + 584LL);
-      return (System_Type_o *)v6();
+      v7 = *(__int64 (**)(void))(*(_QWORD *)mProperty + 584LL);
+      return (System_Type_o *)v7();
     }
 LABEL_17:
-    sub_1C372B4(mProperty);
+    sub_1C3E7C0(mProperty, v5);
   }
-  v8 = void_var;
+  v9 = void_var;
   if ( !System_Type_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(System_Type_TypeInfo);
-  v9.fields.value = (intptr_t)v8;
-  return System_Type__GetTypeFromHandle(v9, 0);
+  v10.fields.value = (intptr_t)v9;
+  return System_Type__GetTypeFromHandle(v10, 0);
 }
 
 
@@ -573,9 +579,9 @@ void PropertyReference__Reset(PropertyReference_o *this, const MethodInfo *metho
   const MethodInfo *v6; // x3
 
   this->fields.mField = 0;
-  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.mField, 0, v2, v3);
+  sub_1C3E508((CGThumbnailListItem_o *)&this->fields.mField, 0, v2, v3);
   this->fields.mProperty = 0;
-  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.mProperty, 0, v5, v6);
+  sub_1C3E508((CGThumbnailListItem_o *)&this->fields.mProperty, 0, v5, v6);
 }
 
 
@@ -589,39 +595,42 @@ void PropertyReference__Set(
   const MethodInfo *v7; // x3
 
   this->fields.mTarget = target;
-  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields, (int32_t)target, (int32_t)methodName, method);
+  sub_1C3E508((CGThumbnailListItem_o *)&this->fields, (int32_t)target, (int32_t)methodName, method);
   this->fields.mName = methodName;
-  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.mName, (int32_t)methodName, v6, v7);
+  sub_1C3E508((CGThumbnailListItem_o *)&this->fields.mName, (int32_t)methodName, v6, v7);
 }
 
 
-bool PropertyReference__Set_49366816(PropertyReference_o *this, Il2CppObject *value, const MethodInfo *method)
+bool PropertyReference__Set_49440056(PropertyReference_o *this, Il2CppObject *value, const MethodInfo *method)
 {
   const MethodInfo *v5; // x1
   const MethodInfo *v6; // x1
   const MethodInfo *v7; // x2
-  System_Reflection_FieldInfo_o *v8; // x0
+  __int64 v8; // x1
+  System_Reflection_FieldInfo_o *v9; // x0
+  __int64 v10; // x1
   struct System_Reflection_PropertyInfo_o *mProperty; // x0
-  struct System_Reflection_PropertyInfo_o *v10; // x0
+  __int64 v12; // x1
+  struct System_Reflection_PropertyInfo_o *v13; // x0
   System_Type_o *Type; // x0
-  const MethodInfo *v12; // x1
-  System_String_o *v13; // x20
-  System_String_o *v14; // x21
+  const MethodInfo *v15; // x1
+  System_String_o *v16; // x20
+  System_String_o *v17; // x21
   System_Reflection_FieldInfo_o *mField; // x0
   System_Type_o *PropertyType; // x0
-  System_String_o *v18; // x19
-  System_String_o *v19; // x3
-  Il2CppObject *v20; // x19
+  System_String_o *v21; // x19
+  System_String_o *v22; // x3
+  Il2CppObject *v23; // x19
   Il2CppObject *valuea; // [xsp+8h] [xbp-28h] BYREF
 
   valuea = value;
-  if ( (byte_4C4772E & 1) == 0 )
+  if ( (byte_4C5B525 & 1) == 0 )
   {
-    sub_1C37058(&UnityEngine_Application_TypeInfo);
-    sub_1C37058(&UnityEngine_Debug_TypeInfo);
-    sub_1C37058(&StringLiteral_303/*" to "*/);
-    sub_1C37058(&StringLiteral_14902/*"Unable to convert "*/);
-    byte_4C4772E = 1;
+    sub_1C3E564(&UnityEngine_Application_TypeInfo);
+    sub_1C3E564(&UnityEngine_Debug_TypeInfo);
+    sub_1C3E564(&StringLiteral_303/*" to "*/);
+    sub_1C3E564(&StringLiteral_14912/*"Unable to convert "*/);
+    byte_4C5B525 = 1;
   }
   if ( System_Reflection_PropertyInfo__op_Equality(this->fields.mProperty, 0, 0)
     && System_Reflection_FieldInfo__op_Equality(this->fields.mField, 0, 0)
@@ -638,27 +647,27 @@ bool PropertyReference__Set_49366816(PropertyReference_o *this, Il2CppObject *va
       {
         mField = this->fields.mField;
         if ( !mField )
-          sub_1C372B4(0);
+          sub_1C3E7C0(0, v10);
         System_Reflection_FieldInfo__SetValue(mField, (Il2CppObject *)this->fields.mTarget, 0, 0);
         return 1;
       }
       mProperty = this->fields.mProperty;
       if ( !mProperty )
-        sub_1C372B4(0);
+        sub_1C3E7C0(0, v10);
       if ( (((__int64 (__fastcall *)(struct System_Reflection_PropertyInfo_o *, const MethodInfo *))mProperty->klass->vtable._19_unknown.methodPtr)(
               mProperty,
               mProperty->klass->vtable._19_unknown.method)
           & 1) != 0 )
       {
-        v10 = this->fields.mProperty;
-        if ( !v10 )
-          sub_1C372B4(0);
-        ((void (__fastcall *)(struct System_Reflection_PropertyInfo_o *, struct UnityEngine_Component_o *, _QWORD, _QWORD, const MethodInfo *))v10->klass->vtable._27_SetValue.methodPtr)(
-          v10,
+        v13 = this->fields.mProperty;
+        if ( !v13 )
+          sub_1C3E7C0(0, v12);
+        ((void (__fastcall *)(struct System_Reflection_PropertyInfo_o *, struct UnityEngine_Component_o *, _QWORD, _QWORD, const MethodInfo *))v13->klass->vtable._27_SetValue.methodPtr)(
+          v13,
           this->fields.mTarget,
           0,
           0,
-          v10->klass->vtable._27_SetValue.method);
+          v13->klass->vtable._27_SetValue.method);
         return 1;
       }
     }
@@ -666,35 +675,35 @@ bool PropertyReference__Set_49366816(PropertyReference_o *this, Il2CppObject *va
     {
       if ( System_Reflection_FieldInfo__op_Inequality(this->fields.mField, 0, 0) )
       {
-        v8 = this->fields.mField;
-        if ( v8 )
+        v9 = this->fields.mField;
+        if ( v9 )
         {
-          System_Reflection_FieldInfo__SetValue(v8, (Il2CppObject *)this->fields.mTarget, valuea, 0);
+          System_Reflection_FieldInfo__SetValue(v9, (Il2CppObject *)this->fields.mTarget, valuea, 0);
           return 1;
         }
         goto LABEL_41;
       }
-      v8 = (System_Reflection_FieldInfo_o *)this->fields.mProperty;
-      if ( !v8 )
+      v9 = (System_Reflection_FieldInfo_o *)this->fields.mProperty;
+      if ( !v9 )
         goto LABEL_41;
-      if ( (((__int64 (__fastcall *)(System_Reflection_FieldInfo_o *, const MethodInfo *))v8->klass->vtable._19_get_IsLiteral.methodPtr)(
-              v8,
-              v8->klass->vtable._19_get_IsLiteral.method)
+      if ( (((__int64 (__fastcall *)(System_Reflection_FieldInfo_o *, const MethodInfo *))v9->klass->vtable._19_get_IsLiteral.methodPtr)(
+              v9,
+              v9->klass->vtable._19_get_IsLiteral.method)
           & 1) != 0 )
       {
-        v8 = (System_Reflection_FieldInfo_o *)this->fields.mProperty;
-        if ( v8 )
+        v9 = (System_Reflection_FieldInfo_o *)this->fields.mProperty;
+        if ( v9 )
         {
-          ((void (__fastcall *)(System_Reflection_FieldInfo_o *, struct UnityEngine_Component_o *, Il2CppObject *, _QWORD, const MethodInfo *))v8->klass->vtable._27_unknown.methodPtr)(
-            v8,
+          ((void (__fastcall *)(System_Reflection_FieldInfo_o *, struct UnityEngine_Component_o *, Il2CppObject *, _QWORD, const MethodInfo *))v9->klass->vtable._27_unknown.methodPtr)(
+            v9,
             this->fields.mTarget,
             valuea,
             0,
-            v8->klass->vtable._27_unknown.method);
+            v9->klass->vtable._27_unknown.method);
           return 1;
         }
 LABEL_41:
-        sub_1C372B4(v8);
+        sub_1C3E7C0(v9, v8);
       }
     }
     else
@@ -703,29 +712,29 @@ LABEL_41:
         j_il2cpp_runtime_class_init_0(UnityEngine_Application_TypeInfo);
       if ( UnityEngine_Application__get_isPlaying(0) )
       {
-        v8 = (System_Reflection_FieldInfo_o *)valuea;
+        v9 = (System_Reflection_FieldInfo_o *)valuea;
         if ( !valuea )
           goto LABEL_41;
         Type = System_Object__GetType(valuea, 0);
-        v13 = (System_String_o *)StringLiteral_14902/*"Unable to convert "*/;
+        v16 = (System_String_o *)StringLiteral_14912/*"Unable to convert "*/;
         if ( Type )
-          v14 = (System_String_o *)((__int64 (__fastcall *)(System_Type_o *, const MethodInfo *))Type->klass->vtable._3_ToString.methodPtr)(
+          v17 = (System_String_o *)((__int64 (__fastcall *)(System_Type_o *, const MethodInfo *))Type->klass->vtable._3_ToString.methodPtr)(
                                      Type,
                                      Type->klass->vtable._3_ToString.method);
         else
-          v14 = 0;
-        PropertyType = PropertyReference__GetPropertyType(this, v12);
-        v18 = (System_String_o *)StringLiteral_303/*" to "*/;
+          v17 = 0;
+        PropertyType = PropertyReference__GetPropertyType(this, v15);
+        v21 = (System_String_o *)StringLiteral_303/*" to "*/;
         if ( PropertyType )
-          v19 = (System_String_o *)((__int64 (__fastcall *)(System_Type_o *, const MethodInfo *))PropertyType->klass->vtable._3_ToString.methodPtr)(
+          v22 = (System_String_o *)((__int64 (__fastcall *)(System_Type_o *, const MethodInfo *))PropertyType->klass->vtable._3_ToString.methodPtr)(
                                      PropertyType,
                                      PropertyType->klass->vtable._3_ToString.method);
         else
-          v19 = 0;
-        v20 = (Il2CppObject *)System_String__Concat_63601908(v13, v14, v18, v19, 0);
+          v22 = 0;
+        v23 = (Il2CppObject *)System_String__Concat_63676720(v16, v17, v21, v22, 0);
         if ( !UnityEngine_Debug_TypeInfo->_2.cctor_finished )
           j_il2cpp_runtime_class_init_0(UnityEngine_Debug_TypeInfo);
-        UnityEngine_Debug__LogError(v20, 0);
+        UnityEngine_Debug__LogError(v23, 0);
       }
     }
   }
@@ -739,34 +748,35 @@ System_String_o *PropertyReference__ToString(PropertyReference_o *this, const Me
   System_String_o *mName; // x19
   UnityEngine_Component_o *mTarget; // x20
 
-  if ( (byte_4C4772C & 1) == 0 )
+  if ( (byte_4C5B523 & 1) == 0 )
   {
-    sub_1C37058(&PropertyReference_TypeInfo);
-    byte_4C4772C = 1;
+    sub_1C3E564(&PropertyReference_TypeInfo);
+    byte_4C5B523 = 1;
   }
   mTarget = this->fields.mTarget;
   mName = this->fields.mName;
   if ( !PropertyReference_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(PropertyReference_TypeInfo);
-  return PropertyReference__ToString_49369176(mTarget, mName, v2);
+  return PropertyReference__ToString_49442416(mTarget, mName, v2);
 }
 
 
-System_String_o *PropertyReference__ToString_49369176(
+System_String_o *PropertyReference__ToString_49442416(
         UnityEngine_Component_o *comp,
         System_String_o *property,
         const MethodInfo *method)
 {
   System_Type_o *Type; // x0
-  System_String_o *v6; // x20
+  __int64 v6; // x1
+  System_String_o *v7; // x20
   int32_t IndexOf; // w0
 
-  if ( (byte_4C4772D & 1) == 0 )
+  if ( (byte_4C5B524 & 1) == 0 )
   {
-    sub_1C37058(&UnityEngine_Object_TypeInfo);
-    sub_1C37058(&StringLiteral_1011/*".[property]"*/);
-    sub_1C37058(&StringLiteral_988/*"."*/);
-    byte_4C4772D = 1;
+    sub_1C3E564(&UnityEngine_Object_TypeInfo);
+    sub_1C3E564(&StringLiteral_1011/*".[property]"*/);
+    sub_1C3E564(&StringLiteral_988/*"."*/);
+    byte_4C5B524 = 1;
   }
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
@@ -779,16 +789,16 @@ System_String_o *PropertyReference__ToString_49369176(
                                   Type,
                                   Type->klass->vtable._3_ToString.method)) == 0 )
   {
-    sub_1C372B4(Type);
+    sub_1C3E7C0(Type, v6);
   }
-  v6 = (System_String_o *)Type;
+  v7 = (System_String_o *)Type;
   IndexOf = System_String__LastIndexOf((System_String_o *)Type, 0x2Eu, 0);
   if ( IndexOf >= 1 )
-    v6 = System_String__Substring(v6, IndexOf + 1, 0);
+    v7 = System_String__Substring(v7, IndexOf + 1, 0);
   if ( System_String__IsNullOrEmpty(property, 0) )
-    return System_String__Concat_63561656(v6, (System_String_o *)StringLiteral_1011/*".[property]"*/, 0);
+    return System_String__Concat_63636468(v7, (System_String_o *)StringLiteral_1011/*".[property]"*/, 0);
   else
-    return System_String__Concat_63599904(v6, (System_String_o *)StringLiteral_988/*"."*/, property, 0);
+    return System_String__Concat_63674716(v7, (System_String_o *)StringLiteral_988/*"."*/, property, 0);
 }
 
 
@@ -799,12 +809,13 @@ bool PropertyReference__get_isEnabled(PropertyReference_o *this, const MethodInf
   __int64 naturalAligment; // x11
   UnityEngine_Object_o *v7; // x19
   _BOOL8 v8; // x0
+  __int64 v9; // x1
 
-  if ( (byte_4C47728 & 1) == 0 )
+  if ( (byte_4C5B51F & 1) == 0 )
   {
-    sub_1C37058(&UnityEngine_MonoBehaviour_TypeInfo);
-    sub_1C37058(&UnityEngine_Object_TypeInfo);
-    byte_4C47728 = 1;
+    sub_1C3E564(&UnityEngine_MonoBehaviour_TypeInfo);
+    sub_1C3E564(&UnityEngine_Object_TypeInfo);
+    byte_4C5B51F = 1;
   }
   mTarget = (UnityEngine_Object_o *)this->fields.mTarget;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -831,7 +842,7 @@ bool PropertyReference__get_isEnabled(PropertyReference_o *this, const MethodInf
   if ( v8 )
     return 1;
   if ( !v7 )
-    sub_1C372B4(v8);
+    sub_1C3E7C0(v8, v9);
   return UnityEngine_Behaviour__get_enabled((UnityEngine_Behaviour_o *)v7, 0);
 }
 
@@ -840,10 +851,10 @@ bool PropertyReference__get_isValid(PropertyReference_o *this, const MethodInfo 
 {
   UnityEngine_Object_o *mTarget; // x20
 
-  if ( (byte_4C47727 & 1) == 0 )
+  if ( (byte_4C5B51E & 1) == 0 )
   {
-    sub_1C37058(&UnityEngine_Object_TypeInfo);
-    byte_4C47727 = 1;
+    sub_1C3E564(&UnityEngine_Object_TypeInfo);
+    byte_4C5B51E = 1;
   }
   mTarget = (UnityEngine_Object_o *)this->fields.mTarget;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -873,11 +884,11 @@ void PropertyReference__set_name(PropertyReference_o *this, System_String_o *val
   const MethodInfo *v8; // x3
 
   this->fields.mName = value;
-  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.mName, (int32_t)value, (int32_t)method, v3);
+  sub_1C3E508((CGThumbnailListItem_o *)&this->fields.mName, (int32_t)value, (int32_t)method, v3);
   this->fields.mProperty = 0;
-  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.mProperty, 0, v5, v6);
+  sub_1C3E508((CGThumbnailListItem_o *)&this->fields.mProperty, 0, v5, v6);
   this->fields.mField = 0;
-  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.mField, 0, v7, v8);
+  sub_1C3E508((CGThumbnailListItem_o *)&this->fields.mField, 0, v7, v8);
 }
 
 
@@ -890,9 +901,9 @@ void PropertyReference__set_target(PropertyReference_o *this, UnityEngine_Compon
   const MethodInfo *v8; // x3
 
   this->fields.mTarget = value;
-  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields, (int32_t)value, (int32_t)method, v3);
+  sub_1C3E508((CGThumbnailListItem_o *)&this->fields, (int32_t)value, (int32_t)method, v3);
   this->fields.mProperty = 0;
-  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.mProperty, 0, v5, v6);
+  sub_1C3E508((CGThumbnailListItem_o *)&this->fields.mProperty, 0, v5, v6);
   this->fields.mField = 0;
-  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.mField, 0, v7, v8);
+  sub_1C3E508((CGThumbnailListItem_o *)&this->fields.mField, 0, v7, v8);
 }

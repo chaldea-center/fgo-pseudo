@@ -1,27 +1,27 @@
 void EventFilterEntity___ctor(EventFilterEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_4C42F59 & 1) == 0 )
+  if ( (byte_4C56D08 & 1) == 0 )
   {
-    sub_1C37058(&Method_DataEntityBase_string___ctor__);
-    byte_4C42F59 = 1;
+    sub_1C3E564(&Method_DataEntityBase_string___ctor__);
+    byte_4C56D08 = 1;
   }
   DataEntityBase_object____ctor(
     (DataEntityBase_PKType__o *)this,
-    (const MethodInfo_339EC34 *)Method_DataEntityBase_string___ctor__);
+    (const MethodInfo_33B0AEC *)Method_DataEntityBase_string___ctor__);
 }
 
 
 System_String_o *EventFilterEntity__CreatePK(int32_t id, int32_t type, const MethodInfo *method)
 {
-  if ( (byte_4C42F57 & 1) == 0 )
+  if ( (byte_4C56D06 & 1) == 0 )
   {
-    sub_1C37058(&Method_DataEntityBase_CreateMultiplePK_int__int___);
-    byte_4C42F57 = 1;
+    sub_1C3E564(&Method_DataEntityBase_CreateMultiplePK_int__int___);
+    byte_4C56D06 = 1;
   }
   return DataEntityBase__CreateMultiplePK_int__int_(
            id,
            type,
-           (const MethodInfo_30E5DE0 *)Method_DataEntityBase_CreateMultiplePK_int__int___);
+           (const MethodInfo_30F7BF8 *)Method_DataEntityBase_CreateMultiplePK_int__int___);
 }
 
 
@@ -50,10 +50,10 @@ bool EventFilterEntity__IsOpen(EventFilterEntity_o *this, const MethodInfo *meth
   int32_t closeQuestId; // w19
   int32_t openQuestId; // w20
 
-  if ( (byte_4C42F58 & 1) == 0 )
+  if ( (byte_4C56D07 & 1) == 0 )
   {
-    sub_1C37058(&CondType_TypeInfo);
-    byte_4C42F58 = 1;
+    sub_1C3E564(&CondType_TypeInfo);
+    byte_4C56D07 = 1;
   }
   openQuestId = this->fields.openQuestId;
   closeQuestId = this->fields.closeQuestId;

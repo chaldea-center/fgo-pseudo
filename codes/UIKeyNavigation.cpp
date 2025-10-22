@@ -4,17 +4,17 @@ void UIKeyNavigation___cctor(const MethodInfo *method)
   int32_t v2; // w2
   const MethodInfo *v3; // x3
 
-  if ( (byte_4C475D0 & 1) == 0 )
+  if ( (byte_4C5B3C7 & 1) == 0 )
   {
-    sub_1C37058(&Method_BetterList_UIKeyNavigation___ctor__);
-    sub_1C37058(&BetterList_UIKeyNavigation__TypeInfo);
-    sub_1C37058(&UIKeyNavigation_TypeInfo);
-    byte_4C475D0 = 1;
+    sub_1C3E564(&Method_BetterList_UIKeyNavigation___ctor__);
+    sub_1C3E564(&BetterList_UIKeyNavigation__TypeInfo);
+    sub_1C3E564(&UIKeyNavigation_TypeInfo);
+    byte_4C5B3C7 = 1;
   }
-  v1 = (BetterList_T__o *)sub_1C372A4(BetterList_UIKeyNavigation__TypeInfo);
-  BetterList_object____ctor(v1, (const MethodInfo_331A714 *)Method_BetterList_UIKeyNavigation___ctor__);
+  v1 = (BetterList_T__o *)sub_1C3E7B0(BetterList_UIKeyNavigation__TypeInfo);
+  BetterList_object____ctor(v1, (const MethodInfo_332C5CC *)Method_BetterList_UIKeyNavigation___ctor__);
   UIKeyNavigation_TypeInfo->static_fields->list = (struct BetterList_UIKeyNavigation__o *)v1;
-  sub_1C36FFC((CGThumbnailListItem_o *)UIKeyNavigation_TypeInfo->static_fields, (int32_t)v1, v2, v3);
+  sub_1C3E508((CGThumbnailListItem_o *)UIKeyNavigation_TypeInfo->static_fields, (int32_t)v1, v2, v3);
 }
 
 
@@ -34,75 +34,76 @@ UnityEngine_GameObject_o *UIKeyNavigation__Get(
   float y; // s9
   float x; // s10
   void *transform; // x0
-  UnityEngine_Transform_o *v9; // x21
-  const MethodInfo *v10; // x1
+  __int64 v9; // x1
+  UnityEngine_Transform_o *v10; // x21
+  const MethodInfo *v11; // x1
   UnityEngine_GameObject_o *gameObject; // x22
-  float v12; // s12
-  float v13; // s13
-  int32_t v14; // w22
+  float v13; // s12
+  float v14; // s13
+  int32_t v15; // w22
   BetterList_T__o *list; // x8
   Il2CppObject *Item; // x26
   Il2CppObject *Component_object; // x27
-  const MethodInfo *v18; // x1
-  UnityEngine_GameObject_o *v19; // x27
-  float v20; // s8
-  float v21; // s15
-  float v22; // s9
-  float v23; // s15
-  float v24; // s14
-  float v25; // s8
-  float v26; // s2
-  float v27; // s0
-  float v28; // s1
-  float v29; // s2
+  const MethodInfo *v19; // x1
+  UnityEngine_GameObject_o *v20; // x27
+  float v21; // s8
+  float v22; // s15
+  float v23; // s9
+  float v24; // s15
+  float v25; // s14
+  float v26; // s8
+  float v27; // s2
+  float v28; // s0
+  float v29; // s1
+  float v30; // s2
   struct UnityEngine_Vector3_StaticFields *static_fields; // x8
-  float v31; // s8
-  UnityEngine_GameObject_o *v33; // [xsp+0h] [xbp-C0h]
-  float v35; // [xsp+Ch] [xbp-B4h]
-  float v36; // [xsp+10h] [xbp-B0h]
-  float v37; // [xsp+14h] [xbp-ACh]
-  float v38; // [xsp+18h] [xbp-A8h]
-  float v39; // [xsp+1Ch] [xbp-A4h]
-  UnityEngine_Vector3_o v40; // 0:s0.4,4:s1.4,8:s2.4
+  float v32; // s8
+  UnityEngine_GameObject_o *v34; // [xsp+0h] [xbp-C0h]
+  float v36; // [xsp+Ch] [xbp-B4h]
+  float v37; // [xsp+10h] [xbp-B0h]
+  float v38; // [xsp+14h] [xbp-ACh]
+  float v39; // [xsp+18h] [xbp-A8h]
+  float v40; // [xsp+1Ch] [xbp-A4h]
   UnityEngine_Vector3_o v41; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o v42; // 0:s0.4,4:s1.4,8:s2.4
   UnityEngine_Vector3_o Center; // 0:s0.4,4:s1.4,8:s2.4
-  UnityEngine_Vector3_o v43; // 0:s0.4,4:s1.4,8:s2.4
   UnityEngine_Vector3_o v44; // 0:s0.4,4:s1.4,8:s2.4
   UnityEngine_Vector3_o v45; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o v46; // 0:s0.4,4:s1.4,8:s2.4
 
   z = myDir.fields.z;
   y = myDir.fields.y;
   x = myDir.fields.x;
-  if ( (byte_4C475CC & 1) == 0 )
+  if ( (byte_4C5B3C3 & 1) == 0 )
   {
-    sub_1C37058(&Method_BetterList_UIKeyNavigation__get_Item__);
-    sub_1C37058(&Method_UnityEngine_Component_GetComponent_UIButton___);
-    sub_1C37058(&UnityEngine_Object_TypeInfo);
-    sub_1C37058(&UIKeyNavigation_TypeInfo);
-    byte_4C475CC = 1;
+    sub_1C3E564(&Method_BetterList_UIKeyNavigation__get_Item__);
+    sub_1C3E564(&Method_UnityEngine_Component_GetComponent_UIButton___);
+    sub_1C3E564(&UnityEngine_Object_TypeInfo);
+    sub_1C3E564(&UIKeyNavigation_TypeInfo);
+    byte_4C5B3C3 = 1;
   }
   transform = UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0);
   if ( !transform )
 LABEL_41:
-    sub_1C372B4(transform);
-  v40.fields.x = x;
-  v40.fields.y = y;
-  v40.fields.z = z;
-  v9 = (UnityEngine_Transform_o *)transform;
-  v41 = UnityEngine_Transform__TransformDirection((UnityEngine_Transform_o *)transform, v40, 0);
-  v38 = v41.fields.y;
-  v39 = v41.fields.x;
-  v37 = v41.fields.z;
+    sub_1C3E7C0(transform, v9);
+  v41.fields.x = x;
+  v41.fields.y = y;
+  v41.fields.z = z;
+  v10 = (UnityEngine_Transform_o *)transform;
+  v42 = UnityEngine_Transform__TransformDirection((UnityEngine_Transform_o *)transform, v41, 0);
+  v39 = v42.fields.y;
+  v40 = v42.fields.x;
+  v38 = v42.fields.z;
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
   if ( !UIKeyNavigation_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UIKeyNavigation_TypeInfo);
-  Center = UIKeyNavigation__GetCenter(gameObject, v10);
-  v36 = Center.fields.x;
-  v33 = 0;
-  v12 = Center.fields.y;
-  v13 = Center.fields.z;
-  v14 = 0;
-  v35 = 3.4028e38;
+  Center = UIKeyNavigation__GetCenter(gameObject, v11);
+  v37 = Center.fields.x;
+  v34 = 0;
+  v13 = Center.fields.y;
+  v14 = Center.fields.z;
+  v15 = 0;
+  v36 = 3.4028e38;
   while ( 1 )
   {
     transform = UIKeyNavigation_TypeInfo;
@@ -114,8 +115,8 @@ LABEL_41:
     list = (BetterList_T__o *)**((_QWORD **)transform + 23);
     if ( !list )
       goto LABEL_41;
-    if ( v14 >= list->fields.size )
-      return v33;
+    if ( v15 >= list->fields.size )
+      return v34;
     if ( !*((_DWORD *)transform + 56) )
     {
       j_il2cpp_runtime_class_init_0(transform);
@@ -125,8 +126,8 @@ LABEL_41:
     }
     Item = BetterList_object___get_Item(
              list,
-             v14,
-             (const MethodInfo_3319DC0 *)Method_BetterList_UIKeyNavigation__get_Item__);
+             v15,
+             (const MethodInfo_332BC78 *)Method_BetterList_UIKeyNavigation__get_Item__);
     if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
     transform = (void *)UnityEngine_Object__op_Equality((UnityEngine_Object_o *)Item, (UnityEngine_Object_o *)this, 0);
@@ -136,7 +137,7 @@ LABEL_41:
         goto LABEL_41;
       Component_object = UnityEngine_Component__GetComponent_object_(
                            (UnityEngine_Component_o *)Item,
-                           (const MethodInfo_30DE428 *)Method_UnityEngine_Component_GetComponent_UIButton___);
+                           (const MethodInfo_30F0240 *)Method_UnityEngine_Component_GetComponent_UIButton___);
       if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
       transform = (void *)UnityEngine_Object__op_Inequality((UnityEngine_Object_o *)Component_object, 0, 0);
@@ -150,63 +151,63 @@ LABEL_41:
           & 1) != 0 )
       {
 LABEL_22:
-        v19 = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)Item, 0);
+        v20 = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)Item, 0);
         if ( !UIKeyNavigation_TypeInfo->_2.cctor_finished )
           j_il2cpp_runtime_class_init_0(UIKeyNavigation_TypeInfo);
-        v43 = UIKeyNavigation__GetCenter(v19, v18);
-        v20 = v43.fields.x;
-        v21 = v43.fields.y;
-        v22 = v43.fields.z;
-        if ( !byte_4C3C924 )
+        v44 = UIKeyNavigation__GetCenter(v20, v19);
+        v21 = v44.fields.x;
+        v22 = v44.fields.y;
+        v23 = v44.fields.z;
+        if ( !byte_4C506A4 )
         {
-          sub_1C37058(&System_Math_TypeInfo);
-          byte_4C3C924 = 1;
+          sub_1C3E564(&System_Math_TypeInfo);
+          byte_4C506A4 = 1;
         }
         if ( !System_Math_TypeInfo->_2.cctor_finished )
           j_il2cpp_runtime_class_init_0(System_Math_TypeInfo);
-        v23 = v21 - v12;
-        v24 = v20 - v36;
-        v25 = v22 - v13;
-        v26 = sqrtf((float)(v25 * v25) + (float)((float)(v24 * v24) + (float)(v23 * v23)));
-        if ( v26 <= 0.00001 )
+        v24 = v22 - v13;
+        v25 = v21 - v37;
+        v26 = v23 - v14;
+        v27 = sqrtf((float)(v26 * v26) + (float)((float)(v25 * v25) + (float)(v24 * v24)));
+        if ( v27 <= 0.00001 )
         {
-          if ( !byte_4C3C921 )
+          if ( !byte_4C506A1 )
           {
-            sub_1C37058(&UnityEngine_Vector3_TypeInfo);
-            byte_4C3C921 = 1;
+            sub_1C3E564(&UnityEngine_Vector3_TypeInfo);
+            byte_4C506A1 = 1;
           }
           static_fields = UnityEngine_Vector3_TypeInfo->static_fields;
-          v27 = static_fields->zeroVector.fields.x;
-          v28 = static_fields->zeroVector.fields.y;
-          v29 = static_fields->zeroVector.fields.z;
+          v28 = static_fields->zeroVector.fields.x;
+          v29 = static_fields->zeroVector.fields.y;
+          v30 = static_fields->zeroVector.fields.z;
         }
         else
         {
-          v27 = v24 / v26;
-          v28 = v23 / v26;
-          v29 = v25 / v26;
+          v28 = v25 / v27;
+          v29 = v24 / v27;
+          v30 = v26 / v27;
         }
-        if ( (float)((float)(v37 * v29) + (float)((float)(v39 * v27) + (float)(v38 * v28))) >= 0.707 )
+        if ( (float)((float)(v38 * v30) + (float)((float)(v40 * v28) + (float)(v39 * v29))) >= 0.707 )
         {
-          v44.fields.x = v24;
-          v44.fields.y = v23;
-          v44.fields.z = v22 - v13;
-          v45 = UnityEngine_Transform__InverseTransformDirection(v9, v44, 0);
+          v45.fields.x = v25;
+          v45.fields.y = v24;
+          v45.fields.z = v23 - v14;
+          v46 = UnityEngine_Transform__InverseTransformDirection(v10, v45, 0);
           if ( horizontal )
-            v45.fields.y = v45.fields.y + v45.fields.y;
+            v46.fields.y = v46.fields.y + v46.fields.y;
           else
-            v45.fields.x = v45.fields.x + v45.fields.x;
-          v31 = (float)(v45.fields.z * v45.fields.z)
-              + (float)((float)(v45.fields.x * v45.fields.x) + (float)(v45.fields.y * v45.fields.y));
-          if ( v31 <= v35 )
+            v46.fields.x = v46.fields.x + v46.fields.x;
+          v32 = (float)(v46.fields.z * v46.fields.z)
+              + (float)((float)(v46.fields.x * v46.fields.x) + (float)(v46.fields.y * v46.fields.y));
+          if ( v32 <= v36 )
           {
-            v33 = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)Item, 0);
-            v35 = v31;
+            v34 = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)Item, 0);
+            v36 = v32;
           }
         }
       }
     }
-    ++v14;
+    ++v15;
   }
 }
 
@@ -227,18 +228,18 @@ UnityEngine_Vector3_o UIKeyNavigation__GetCenter(UnityEngine_GameObject_o *go, c
   UnityEngine_Vector3_o result; // 0:s0.4,4:s1.4,8:s2.4
 
   v2 = go;
-  if ( (byte_4C475CD & 1) == 0 )
+  if ( (byte_4C5B3C4 & 1) == 0 )
   {
-    sub_1C37058(&Method_UnityEngine_GameObject_GetComponent_UIWidget___);
-    sub_1C37058(&UnityEngine_Object_TypeInfo);
-    go = (UnityEngine_GameObject_o *)sub_1C37058(&UICamera_TypeInfo);
-    byte_4C475CD = 1;
+    sub_1C3E564(&Method_UnityEngine_GameObject_GetComponent_UIWidget___);
+    sub_1C3E564(&UnityEngine_Object_TypeInfo);
+    go = (UnityEngine_GameObject_o *)sub_1C3E564(&UICamera_TypeInfo);
+    byte_4C5B3C4 = 1;
   }
   if ( !v2 )
     goto LABEL_29;
   Component_object = UnityEngine_GameObject__GetComponent_object_(
                        v2,
-                       (const MethodInfo_313F1D8 *)Method_UnityEngine_GameObject_GetComponent_UIWidget___);
+                       (const MethodInfo_31510CC *)Method_UnityEngine_GameObject_GetComponent_UIWidget___);
   layer = UnityEngine_GameObject__get_layer(v2, 0);
   if ( !UICamera_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UICamera_TypeInfo);
@@ -280,7 +281,7 @@ UnityEngine_Vector3_o UIKeyNavigation__GetCenter(UnityEngine_GameObject_o *go, c
       }
     }
 LABEL_29:
-    sub_1C372B4(go);
+    sub_1C3E7C0(go, method);
   }
   go = (UnityEngine_GameObject_o *)UnityEngine_GameObject__get_transform(v2, 0);
   if ( !go )
@@ -312,7 +313,7 @@ LABEL_29:
           goto LABEL_17;
         }
 LABEL_30:
-        sub_1C372BC(go);
+        sub_1C3E7C8(go, method);
       }
     }
     goto LABEL_29;
@@ -326,7 +327,7 @@ LABEL_17:
   v12.fields.x = position;
   v12.fields.y = y;
   v12.fields.z = z;
-  result = UnityEngine_Camera__WorldToScreenPoint_71073020((UnityEngine_Camera_o *)go, v12, 0);
+  result = UnityEngine_Camera__WorldToScreenPoint_71147832((UnityEngine_Camera_o *)go, v12, 0);
   v9 = 0.0;
 LABEL_31:
   result.fields.z = v9;
@@ -339,22 +340,22 @@ UnityEngine_GameObject_o *UIKeyNavigation__GetDown(UIKeyNavigation_o *this, cons
   UnityEngine_GameObject_o *onDown; // x20
   const MethodInfo *v4; // x2
 
-  if ( (byte_4C475CB & 1) == 0 )
+  if ( (byte_4C5B3C2 & 1) == 0 )
   {
-    sub_1C37058(&NGUITools_TypeInfo);
-    byte_4C475CB = 1;
+    sub_1C3E564(&NGUITools_TypeInfo);
+    byte_4C5B3C2 = 1;
   }
   onDown = this->fields.onDown;
   if ( !NGUITools_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NGUITools_TypeInfo);
-  if ( NGUITools__GetActive_49345096(onDown, 0) )
+  if ( NGUITools__GetActive_49418336(onDown, 0) )
     return this->fields.onDown;
   if ( (this->fields.constraint & 0xFFFFFFFE) == 2 )
     return 0;
-  if ( !byte_4C3ECEB )
+  if ( !byte_4C52A7D )
   {
-    sub_1C37058(&UnityEngine_Vector3_TypeInfo);
-    byte_4C3ECEB = 1;
+    sub_1C3E564(&UnityEngine_Vector3_TypeInfo);
+    byte_4C52A7D = 1;
   }
   return UIKeyNavigation__Get(this, UnityEngine_Vector3_TypeInfo->static_fields->downVector, 0, v4);
 }
@@ -365,22 +366,22 @@ UnityEngine_GameObject_o *UIKeyNavigation__GetLeft(UIKeyNavigation_o *this, cons
   UnityEngine_GameObject_o *onLeft; // x20
   const MethodInfo *v4; // x2
 
-  if ( (byte_4C475C8 & 1) == 0 )
+  if ( (byte_4C5B3BF & 1) == 0 )
   {
-    sub_1C37058(&NGUITools_TypeInfo);
-    byte_4C475C8 = 1;
+    sub_1C3E564(&NGUITools_TypeInfo);
+    byte_4C5B3BF = 1;
   }
   onLeft = this->fields.onLeft;
   if ( !NGUITools_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NGUITools_TypeInfo);
-  if ( NGUITools__GetActive_49345096(onLeft, 0) )
+  if ( NGUITools__GetActive_49418336(onLeft, 0) )
     return this->fields.onLeft;
   if ( (this->fields.constraint | 2) == 3 )
     return 0;
-  if ( !byte_4C41D86 )
+  if ( !byte_4C55B28 )
   {
-    sub_1C37058(&UnityEngine_Vector3_TypeInfo);
-    byte_4C41D86 = 1;
+    sub_1C3E564(&UnityEngine_Vector3_TypeInfo);
+    byte_4C55B28 = 1;
   }
   return UIKeyNavigation__Get(this, UnityEngine_Vector3_TypeInfo->static_fields->leftVector, 1, v4);
 }
@@ -391,22 +392,22 @@ UnityEngine_GameObject_o *UIKeyNavigation__GetRight(UIKeyNavigation_o *this, con
   UnityEngine_GameObject_o *onRight; // x20
   const MethodInfo *v4; // x2
 
-  if ( (byte_4C475C9 & 1) == 0 )
+  if ( (byte_4C5B3C0 & 1) == 0 )
   {
-    sub_1C37058(&NGUITools_TypeInfo);
-    byte_4C475C9 = 1;
+    sub_1C3E564(&NGUITools_TypeInfo);
+    byte_4C5B3C0 = 1;
   }
   onRight = this->fields.onRight;
   if ( !NGUITools_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NGUITools_TypeInfo);
-  if ( NGUITools__GetActive_49345096(onRight, 0) )
+  if ( NGUITools__GetActive_49418336(onRight, 0) )
     return this->fields.onRight;
   if ( (this->fields.constraint | 2) == 3 )
     return 0;
-  if ( !byte_4C3C928 )
+  if ( !byte_4C506A8 )
   {
-    sub_1C37058(&UnityEngine_Vector3_TypeInfo);
-    byte_4C3C928 = 1;
+    sub_1C3E564(&UnityEngine_Vector3_TypeInfo);
+    byte_4C506A8 = 1;
   }
   return UIKeyNavigation__Get(this, UnityEngine_Vector3_TypeInfo->static_fields->rightVector, 1, v4);
 }
@@ -417,22 +418,22 @@ UnityEngine_GameObject_o *UIKeyNavigation__GetUp(UIKeyNavigation_o *this, const 
   UnityEngine_GameObject_o *onUp; // x20
   const MethodInfo *v4; // x2
 
-  if ( (byte_4C475CA & 1) == 0 )
+  if ( (byte_4C5B3C1 & 1) == 0 )
   {
-    sub_1C37058(&NGUITools_TypeInfo);
-    byte_4C475CA = 1;
+    sub_1C3E564(&NGUITools_TypeInfo);
+    byte_4C5B3C1 = 1;
   }
   onUp = this->fields.onUp;
   if ( !NGUITools_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NGUITools_TypeInfo);
-  if ( NGUITools__GetActive_49345096(onUp, 0) )
+  if ( NGUITools__GetActive_49418336(onUp, 0) )
     return this->fields.onUp;
   if ( (this->fields.constraint & 0xFFFFFFFE) == 2 )
     return 0;
-  if ( !byte_4C3C929 )
+  if ( !byte_4C506A9 )
   {
-    sub_1C37058(&UnityEngine_Vector3_TypeInfo);
-    byte_4C3C929 = 1;
+    sub_1C3E564(&UnityEngine_Vector3_TypeInfo);
+    byte_4C506A9 = 1;
   }
   return UIKeyNavigation__Get(this, UnityEngine_Vector3_TypeInfo->static_fields->upVector, 0, v4);
 }
@@ -443,11 +444,11 @@ void UIKeyNavigation__OnClick(UIKeyNavigation_o *this, const MethodInfo *method)
   UnityEngine_GameObject_o *onClick; // x20
   UnityEngine_GameObject_o *v4; // x19
 
-  if ( (byte_4C475CF & 1) == 0 )
+  if ( (byte_4C5B3C6 & 1) == 0 )
   {
-    sub_1C37058(&NGUITools_TypeInfo);
-    sub_1C37058(&UICamera_TypeInfo);
-    byte_4C475CF = 1;
+    sub_1C3E564(&NGUITools_TypeInfo);
+    sub_1C3E564(&UICamera_TypeInfo);
+    byte_4C5B3C6 = 1;
   }
   if ( !NGUITools_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NGUITools_TypeInfo);
@@ -456,7 +457,7 @@ void UIKeyNavigation__OnClick(UIKeyNavigation_o *this, const MethodInfo *method)
     onClick = this->fields.onClick;
     if ( !NGUITools_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(NGUITools_TypeInfo);
-    if ( NGUITools__GetActive_49345096(onClick, 0) )
+    if ( NGUITools__GetActive_49418336(onClick, 0) )
     {
       v4 = this->fields.onClick;
       if ( !UICamera_TypeInfo->_2.cctor_finished )
@@ -472,11 +473,11 @@ void UIKeyNavigation__OnDisable(UIKeyNavigation_o *this, const MethodInfo *metho
   UIKeyNavigation_c *v3; // x0
   BetterList_T__o *list; // x0
 
-  if ( (byte_4C475C7 & 1) == 0 )
+  if ( (byte_4C5B3BE & 1) == 0 )
   {
-    sub_1C37058(&Method_BetterList_UIKeyNavigation__Remove__);
-    sub_1C37058(&UIKeyNavigation_TypeInfo);
-    byte_4C475C7 = 1;
+    sub_1C3E564(&Method_BetterList_UIKeyNavigation__Remove__);
+    sub_1C3E564(&UIKeyNavigation_TypeInfo);
+    byte_4C5B3BE = 1;
   }
   v3 = UIKeyNavigation_TypeInfo;
   if ( !UIKeyNavigation_TypeInfo->_2.cctor_finished )
@@ -486,11 +487,11 @@ void UIKeyNavigation__OnDisable(UIKeyNavigation_o *this, const MethodInfo *metho
   }
   list = (BetterList_T__o *)v3->static_fields->list;
   if ( !list )
-    sub_1C372B4(0);
+    sub_1C3E7C0(0, method);
   BetterList_object___Remove(
     list,
     (Il2CppObject *)this,
-    (const MethodInfo_331A2A0 *)Method_BetterList_UIKeyNavigation__Remove__);
+    (const MethodInfo_332C158 *)Method_BetterList_UIKeyNavigation__Remove__);
 }
 
 
@@ -503,14 +504,14 @@ void UIKeyNavigation__OnEnable(UIKeyNavigation_o *this, const MethodInfo *method
   UICamera_c *v7; // x0
   UnityEngine_GameObject_o *gameObject; // x0
 
-  if ( (byte_4C475C6 & 1) == 0 )
+  if ( (byte_4C5B3BD & 1) == 0 )
   {
-    sub_1C37058(&Method_BetterList_UIKeyNavigation__Add__);
-    sub_1C37058(&NGUITools_TypeInfo);
-    sub_1C37058(&UnityEngine_Object_TypeInfo);
-    sub_1C37058(&UICamera_TypeInfo);
-    sub_1C37058(&UIKeyNavigation_TypeInfo);
-    byte_4C475C6 = 1;
+    sub_1C3E564(&Method_BetterList_UIKeyNavigation__Add__);
+    sub_1C3E564(&NGUITools_TypeInfo);
+    sub_1C3E564(&UnityEngine_Object_TypeInfo);
+    sub_1C3E564(&UICamera_TypeInfo);
+    sub_1C3E564(&UIKeyNavigation_TypeInfo);
+    byte_4C5B3BD = 1;
   }
   v3 = UIKeyNavigation_TypeInfo;
   if ( !UIKeyNavigation_TypeInfo->_2.cctor_finished )
@@ -520,11 +521,11 @@ void UIKeyNavigation__OnEnable(UIKeyNavigation_o *this, const MethodInfo *method
   }
   list = (BetterList_T__o *)v3->static_fields->list;
   if ( !list )
-    sub_1C372B4(0);
+    sub_1C3E7C0(0, method);
   BetterList_object___Add(
     list,
     (Il2CppObject *)this,
-    (const MethodInfo_3319FE8 *)Method_BetterList_UIKeyNavigation__Add__);
+    (const MethodInfo_332BEA0 *)Method_BetterList_UIKeyNavigation__Add__);
   if ( this->fields.startsSelected )
   {
     if ( !UICamera_TypeInfo->_2.cctor_finished )
@@ -539,7 +540,7 @@ void UIKeyNavigation__OnEnable(UIKeyNavigation_o *this, const MethodInfo *method
     v6 = UICamera__get_selectedObject(0);
     if ( !NGUITools_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(NGUITools_TypeInfo);
-    if ( !NGUITools__GetActive_49345096(v6, 0) )
+    if ( !NGUITools__GetActive_49418336(v6, 0) )
     {
 LABEL_18:
       v7 = UICamera_TypeInfo;
@@ -567,12 +568,12 @@ void UIKeyNavigation__OnKey(UIKeyNavigation_o *this, int32_t key, const MethodIn
   const MethodInfo *v11; // x1
   const MethodInfo *v12; // x1
 
-  if ( (byte_4C475CE & 1) == 0 )
+  if ( (byte_4C5B3C5 & 1) == 0 )
   {
-    sub_1C37058(&NGUITools_TypeInfo);
-    sub_1C37058(&UnityEngine_Object_TypeInfo);
-    sub_1C37058(&UICamera_TypeInfo);
-    byte_4C475CE = 1;
+    sub_1C3E564(&NGUITools_TypeInfo);
+    sub_1C3E564(&UnityEngine_Object_TypeInfo);
+    sub_1C3E564(&UICamera_TypeInfo);
+    byte_4C5B3C5 = 1;
   }
   if ( !NGUITools_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NGUITools_TypeInfo);

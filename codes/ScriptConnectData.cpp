@@ -20,14 +20,14 @@ void ScriptConnectData___ctor(
   v12 = this;
   v13 = isView;
   this->fields.ConnectPath = connectPath;
-  sub_1C36FFC((CGThumbnailListItem_o *)this, (int32_t)connectPath, (int32_t)objectPath, (const MethodInfo *)endCallback);
+  sub_1C3E508((CGThumbnailListItem_o *)this, (int32_t)connectPath, (int32_t)objectPath, (const MethodInfo *)endCallback);
   v12->fields.ObjectPath = objectPath;
-  sub_1C36FFC((CGThumbnailListItem_o *)&v12->fields.ObjectPath, (int32_t)objectPath, v14, v15);
+  sub_1C3E508((CGThumbnailListItem_o *)&v12->fields.ObjectPath, (int32_t)objectPath, v14, v15);
   v12->fields.EndCallback = endCallback;
-  sub_1C36FFC((CGThumbnailListItem_o *)&v12->fields.EndCallback, (int32_t)endCallback, v16, v17);
+  sub_1C3E508((CGThumbnailListItem_o *)&v12->fields.EndCallback, (int32_t)endCallback, v16, v17);
   v12->fields.ErrorCallback = errorCallback;
   v12 = (ScriptConnectData_o *)((char *)v12 + 24);
-  sub_1C36FFC((CGThumbnailListItem_o *)v12, (int32_t)errorCallback, v18, v19);
+  sub_1C3E508((CGThumbnailListItem_o *)v12, (int32_t)errorCallback, v18, v19);
   LODWORD(v12->fields.ObjectPath) = jumpLine;
   BYTE4(v12->fields.ObjectPath) = v13;
   BYTE5(v12->fields.ObjectPath) = 0;

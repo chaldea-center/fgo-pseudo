@@ -13,10 +13,10 @@ int32_t NGUIMath__AdjustByDPI(float height, const MethodInfo *method)
   int v13; // w8
   double iptr; // [xsp+18h] [xbp-18h] BYREF
 
-  if ( (byte_4C476BD & 1) == 0 )
+  if ( (byte_4C5B4B4 & 1) == 0 )
   {
-    sub_1C37058(&UnityEngine_Application_TypeInfo);
-    byte_4C476BD = 1;
+    sub_1C3E564(&UnityEngine_Application_TypeInfo);
+    byte_4C5B4B4 = 1;
   }
   dpi = UnityEngine_Screen__get_dpi(0);
   if ( !UnityEngine_Application_TypeInfo->_2.cctor_finished )
@@ -31,10 +31,10 @@ int32_t NGUIMath__AdjustByDPI(float height, const MethodInfo *method)
     dpi = *(float *)&v5;
   }
   v6 = 96.0 / dpi;
-  if ( !byte_4C3E100 )
+  if ( !byte_4C51E80 )
   {
-    sub_1C37058(&System_Math_TypeInfo);
-    byte_4C3E100 = 1;
+    sub_1C3E564(&System_Math_TypeInfo);
+    byte_4C51E80 = 1;
   }
   v7 = v6 * height;
   if ( !System_Math_TypeInfo->_2.cctor_finished )
@@ -77,11 +77,11 @@ void NGUIMath__AdjustWidget(UIWidget_o *w, float left, float bottom, float right
 {
   const MethodInfo *v6; // x5
 
-  NGUIMath__AdjustWidget_49304876(w, left, bottom, right, top, 2, 2, 100000, 100000, v6);
+  NGUIMath__AdjustWidget_49378116(w, left, bottom, right, top, 2, 2, 100000, 100000, v6);
 }
 
 
-void NGUIMath__AdjustWidget_49304856(
+void NGUIMath__AdjustWidget_49378096(
         UIWidget_o *w,
         float left,
         float bottom,
@@ -93,11 +93,12 @@ void NGUIMath__AdjustWidget_49304856(
 {
   const MethodInfo *v8; // x5
 
-  NGUIMath__AdjustWidget_49304876(w, left, bottom, right, top, minWidth, minHeight, 100000, 100000, v8);
+  NGUIMath__AdjustWidget_49378116(w, left, bottom, right, top, minWidth, minHeight, 100000, 100000, v8);
 }
 
 
-void NGUIMath__AdjustWidget_49304876(
+// local variable allocation has failed, the output may be wrong!
+void NGUIMath__AdjustWidget_49378116(
         UIWidget_o *w,
         float left,
         float bottom,
@@ -109,6 +110,7 @@ void NGUIMath__AdjustWidget_49304876(
         int32_t maxHeight,
         const MethodInfo *method)
 {
+  int32_t v13; // w24
   UIWidget_o *v18; // x19
   UnityEngine_Vector2_o pivotOffset; // kr00_8
   UIWidget_o *v20; // x20
@@ -141,7 +143,7 @@ void NGUIMath__AdjustWidget_49304876(
   int32_t v47; // w0
   int32_t v48; // w0
   int32_t mHeight; // w22
-  int32_t v50; // w27
+  int v50; // w27
   int v51; // w28
   int32_t v52; // w9
   struct UnityEngine_Vector3_StaticFields *v53; // x10
@@ -216,11 +218,12 @@ void NGUIMath__AdjustWidget_49304876(
   UnityEngine_Quaternion_o v122; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
   UnityEngine_Quaternion_o v123; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 
+  v13 = minWidth;
   v18 = w;
-  if ( (byte_4C476BC & 1) == 0 )
+  if ( (byte_4C5B4B3 & 1) == 0 )
   {
-    w = (UIWidget_o *)sub_1C37058(&UnityEngine_Object_TypeInfo);
-    byte_4C476BC = 1;
+    w = (UIWidget_o *)sub_1C3E564(&UnityEngine_Object_TypeInfo);
+    byte_4C5B4B3 = 1;
   }
   if ( !v18 )
     goto LABEL_133;
@@ -234,10 +237,10 @@ void NGUIMath__AdjustWidget_49304876(
   x = localRotation.fields.x;
   v101 = localRotation.fields.w;
   z = localRotation.fields.z;
-  if ( !byte_4C3C920 )
+  if ( !byte_4C506A0 )
   {
-    sub_1C37058(&System_Math_TypeInfo);
-    byte_4C3C920 = 1;
+    sub_1C3E564(&System_Math_TypeInfo);
+    byte_4C506A0 = 1;
   }
   v21 = left + 0.5;
   if ( System_Math_TypeInfo->_2.cctor_finished )
@@ -247,7 +250,7 @@ void NGUIMath__AdjustWidget_49304876(
   else
   {
     j_il2cpp_runtime_class_init_0(System_Math_TypeInfo);
-    v22 = (unsigned __int8)byte_4C3C920;
+    v22 = (unsigned __int8)byte_4C506A0;
   }
   v23 = vcvtms_s32_f32(v21);
   if ( floorf(v21) == INFINITY )
@@ -256,8 +259,8 @@ void NGUIMath__AdjustWidget_49304876(
     v24 = v23;
   if ( !v22 )
   {
-    sub_1C37058(&System_Math_TypeInfo);
-    byte_4C3C920 = 1;
+    sub_1C3E564(&System_Math_TypeInfo);
+    byte_4C506A0 = 1;
   }
   v25 = bottom + 0.5;
   v98 = maxWidth;
@@ -268,7 +271,7 @@ void NGUIMath__AdjustWidget_49304876(
   else
   {
     j_il2cpp_runtime_class_init_0(System_Math_TypeInfo);
-    v26 = (unsigned __int8)byte_4C3C920;
+    v26 = (unsigned __int8)byte_4C506A0;
   }
   v27 = vcvtms_s32_f32(v25);
   if ( floorf(v25) == INFINITY )
@@ -277,8 +280,8 @@ void NGUIMath__AdjustWidget_49304876(
     v28 = v27;
   if ( !v26 )
   {
-    sub_1C37058(&System_Math_TypeInfo);
-    byte_4C3C920 = 1;
+    sub_1C3E564(&System_Math_TypeInfo);
+    byte_4C506A0 = 1;
   }
   v29 = right + 0.5;
   if ( System_Math_TypeInfo->_2.cctor_finished )
@@ -288,7 +291,7 @@ void NGUIMath__AdjustWidget_49304876(
   else
   {
     j_il2cpp_runtime_class_init_0(System_Math_TypeInfo);
-    v30 = (unsigned __int8)byte_4C3C920;
+    v30 = (unsigned __int8)byte_4C506A0;
   }
   v31 = vcvtms_s32_f32(v29);
   if ( floorf(v29) == INFINITY )
@@ -297,8 +300,8 @@ void NGUIMath__AdjustWidget_49304876(
     v32 = v31;
   if ( !v30 )
   {
-    sub_1C37058(&System_Math_TypeInfo);
-    byte_4C3C920 = 1;
+    sub_1C3E564(&System_Math_TypeInfo);
+    byte_4C506A0 = 1;
   }
   v33 = top + 0.5;
   if ( !System_Math_TypeInfo->_2.cctor_finished )
@@ -325,7 +328,7 @@ void NGUIMath__AdjustWidget_49304876(
   v115.fields.w = v101;
   v105.fields.x = (float)v24;
   v105.fields.y = (float)v35;
-  *(UnityEngine_Vector3_o *)&v116.fields.x = UnityEngine_Quaternion__op_Multiply_71206052(v115, v105, 0);
+  *(UnityEngine_Vector3_o *)&v116.fields.x = UnityEngine_Quaternion__op_Multiply_71280864(v115, v105, 0);
   v96 = v116.fields.x;
   v94 = v116.fields.y;
   v106.fields.z = 0.0;
@@ -335,7 +338,7 @@ void NGUIMath__AdjustWidget_49304876(
   v116.fields.w = v101;
   v106.fields.x = (float)v32;
   v106.fields.y = (float)v35;
-  *(UnityEngine_Vector3_o *)&v117.fields.x = UnityEngine_Quaternion__op_Multiply_71206052(v116, v106, 0);
+  *(UnityEngine_Vector3_o *)&v117.fields.x = UnityEngine_Quaternion__op_Multiply_71280864(v116, v106, 0);
   v88 = v117.fields.y;
   v89 = v117.fields.x;
   v107.fields.z = 0.0;
@@ -345,7 +348,7 @@ void NGUIMath__AdjustWidget_49304876(
   v117.fields.w = v101;
   v107.fields.x = (float)v24;
   v107.fields.y = (float)v28;
-  *(UnityEngine_Vector3_o *)&v118.fields.x = UnityEngine_Quaternion__op_Multiply_71206052(v117, v107, 0);
+  *(UnityEngine_Vector3_o *)&v118.fields.x = UnityEngine_Quaternion__op_Multiply_71280864(v117, v107, 0);
   v90 = v118.fields.y;
   v91 = v118.fields.x;
   v108.fields.z = 0.0;
@@ -355,7 +358,7 @@ void NGUIMath__AdjustWidget_49304876(
   v118.fields.w = v101;
   v108.fields.x = (float)v32;
   v108.fields.y = (float)v28;
-  *(UnityEngine_Vector3_o *)&v119.fields.x = UnityEngine_Quaternion__op_Multiply_71206052(v118, v108, 0);
+  *(UnityEngine_Vector3_o *)&v119.fields.x = UnityEngine_Quaternion__op_Multiply_71280864(v118, v108, 0);
   v92 = v119.fields.y;
   v93 = v119.fields.x;
   v109.fields.y = 0.0;
@@ -365,7 +368,7 @@ void NGUIMath__AdjustWidget_49304876(
   v119.fields.z = z;
   v119.fields.w = v101;
   v109.fields.x = (float)v24;
-  *(UnityEngine_Vector3_o *)&v120.fields.x = UnityEngine_Quaternion__op_Multiply_71206052(v119, v109, 0);
+  *(UnityEngine_Vector3_o *)&v120.fields.x = UnityEngine_Quaternion__op_Multiply_71280864(v119, v109, 0);
   v86 = v120.fields.x;
   v36 = v120.fields.y;
   v110.fields.y = 0.0;
@@ -375,7 +378,7 @@ void NGUIMath__AdjustWidget_49304876(
   v120.fields.z = z;
   v120.fields.w = v101;
   v110.fields.x = (float)v32;
-  *(UnityEngine_Vector3_o *)&v121.fields.x = UnityEngine_Quaternion__op_Multiply_71206052(v120, v110, 0);
+  *(UnityEngine_Vector3_o *)&v121.fields.x = UnityEngine_Quaternion__op_Multiply_71280864(v120, v110, 0);
   v85 = v121.fields.x;
   v37 = v121.fields.y;
   v111.fields.x = 0.0;
@@ -385,7 +388,7 @@ void NGUIMath__AdjustWidget_49304876(
   v121.fields.z = z;
   v121.fields.w = v101;
   v111.fields.y = (float)v35;
-  *(UnityEngine_Vector3_o *)&v122.fields.x = UnityEngine_Quaternion__op_Multiply_71206052(v121, v111, 0);
+  *(UnityEngine_Vector3_o *)&v122.fields.x = UnityEngine_Quaternion__op_Multiply_71280864(v121, v111, 0);
   v87 = v122.fields.x;
   v38 = v122.fields.y;
   v112.fields.x = 0.0;
@@ -395,13 +398,13 @@ void NGUIMath__AdjustWidget_49304876(
   v122.fields.z = z;
   v122.fields.w = v101;
   v112.fields.y = (float)v28;
-  v103 = UnityEngine_Quaternion__op_Multiply_71206052(v122, v112, 0);
+  v103 = UnityEngine_Quaternion__op_Multiply_71280864(v122, v112, 0);
   v39 = v103.fields.x;
   v40 = v103.fields.y;
-  if ( !byte_4C3C921 )
+  if ( !byte_4C506A1 )
   {
-    sub_1C37058(&UnityEngine_Vector3_TypeInfo);
-    byte_4C3C921 = 1;
+    sub_1C3E564(&UnityEngine_Vector3_TypeInfo);
+    byte_4C506A1 = 1;
   }
   static_fields = UnityEngine_Vector3_TypeInfo->static_fields;
   v43 = static_fields->zeroVector.fields.x;
@@ -474,8 +477,8 @@ LABEL_59:
   v47 = ((__int64 (__fastcall *)(UIWidget_o *, const MethodInfo *))v18->klass->vtable._34_get_minWidth.methodPtr)(
           v18,
           v18->klass->vtable._34_get_minWidth.method);
-  if ( v47 >= minWidth )
-    minWidth = v47;
+  if ( v47 >= v13 )
+    v13 = v47;
   v48 = ((__int64 (__fastcall *)(UIWidget_o *, const MethodInfo *))v18->klass->vtable._35_get_minHeight.methodPtr)(
           v18,
           v18->klass->vtable._35_get_minHeight.method);
@@ -484,10 +487,10 @@ LABEL_59:
     minHeight = v48;
   v50 = v32 - v24 + v18->fields.mWidth;
   v51 = v35 - v28;
-  if ( !byte_4C3C921 )
+  if ( !byte_4C506A1 )
   {
-    sub_1C37058(&UnityEngine_Vector3_TypeInfo);
-    byte_4C3C921 = 1;
+    sub_1C3E564(&UnityEngine_Vector3_TypeInfo);
+    byte_4C506A1 = 1;
   }
   v52 = v51 + mHeight;
   v53 = UnityEngine_Vector3_TypeInfo->static_fields;
@@ -495,8 +498,8 @@ LABEL_59:
   v55 = v53->zeroVector.fields.x;
   if ( v50 <= v98 )
     v54 = v50;
-  if ( v50 < minWidth )
-    v54 = minWidth;
+  if ( v50 < v13 )
+    v54 = v13;
   if ( v54 == v50 )
   {
     v54 = v50;
@@ -558,7 +561,7 @@ LABEL_59:
   v123.fields.w = v101;
   v123.fields.z = z;
   v123.fields.x = v61;
-  v104 = UnityEngine_Quaternion__op_Multiply_71206052(v123, v113, 0);
+  v104 = UnityEngine_Quaternion__op_Multiply_71280864(v123, v113, 0);
   v70 = v67 + v104.fields.x;
   v71 = v68 + v104.fields.y;
   v104.fields.z = v69 + v104.fields.z;
@@ -619,7 +622,7 @@ LABEL_59:
     topAnchor = v18->fields.topAnchor;
     if ( !topAnchor )
 LABEL_133:
-      sub_1C372B4(w);
+      sub_1C3E7C0(w, *(_QWORD *)&minWidth);
     v84 = (UnityEngine_Object_o *)topAnchor->fields.target;
     if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
@@ -643,54 +646,55 @@ UnityEngine_Bounds_o *NGUIMath__CalculateAbsoluteWidgetBounds(
         const MethodInfo *method)
 {
   UnityEngine_Bounds_o *result; // x0
-  __int64 v6; // x22
-  UnityEngine_Bounds_o *v7; // x20
-  unsigned int v8; // w23
-  int8x8_t v9; // d10
-  int8x8_t v10; // d9
-  float v11; // s8
-  float v12; // s11
-  char *v13; // x8
-  __int64 v14; // x21
-  unsigned __int64 v15; // x8
+  __int64 v6; // x1
+  __int64 v7; // x22
+  UnityEngine_Bounds_o *v8; // x20
+  unsigned int v9; // w23
+  int8x8_t v10; // d10
+  int8x8_t v11; // d9
+  float v12; // s8
+  float v13; // s11
+  char *v14; // x8
+  __int64 v15; // x21
+  unsigned __int64 v16; // x8
   float *p_y; // x10
-  int8x8_t v17; // d0
-  float v18; // t1
-  float v19; // s1
-  int8x8_t v20; // d2
-  int8x8_t v21; // d3
-  struct UnityEngine_Vector3_StaticFields *v22; // x8
-  float v23; // s0
-  float v24; // s1
-  float v25; // s3
-  float32x2_t v26; // d0
-  float v27; // s2
-  float v28; // s1
+  int8x8_t v18; // d0
+  float v19; // t1
+  float v20; // s1
+  int8x8_t v21; // d2
+  int8x8_t v22; // d3
+  struct UnityEngine_Vector3_StaticFields *v23; // x8
+  float v24; // s0
+  float v25; // s1
+  float v26; // s3
+  float32x2_t v27; // d0
+  float v28; // s2
+  float v29; // s1
   float x; // s8
   float y; // s9
   float z; // s10
-  struct UnityEngine_Vector3_StaticFields *v32; // x8
-  float v33; // s0
-  float v34; // s2
-  float v35; // s3
+  struct UnityEngine_Vector3_StaticFields *v33; // x8
+  float v34; // s0
+  float v35; // s2
+  float v36; // s3
   float32x2_t *static_fields; // x8
-  float v37; // s1
-  float32x2_t v38; // d0
-  float v39; // s5
-  int8x8_t v40; // d4
-  int8x8_t v41; // d0
-  float v42; // s1
-  int8x8_t v43; // d6
-  int8x8_t v44; // d7
-  float32x2_t v45; // d4
-  float32x2_t v46; // d0
+  float v38; // s1
+  float32x2_t v39; // d0
+  float v40; // s5
+  int8x8_t v41; // d4
+  int8x8_t v42; // d0
+  float v43; // s1
+  int8x8_t v44; // d6
+  int8x8_t v45; // d7
+  float32x2_t v46; // d4
+  float32x2_t v47; // d0
   UnityEngine_Vector3_o position; // 0:s0.4,4:s1.4,8:s2.4
 
-  if ( (byte_4C476B7 & 1) == 0 )
+  if ( (byte_4C5B4AE & 1) == 0 )
   {
-    sub_1C37058(&Method_UnityEngine_Component_GetComponentsInChildren_UIWidget___);
-    sub_1C37058(&UnityEngine_Object_TypeInfo);
-    byte_4C476B7 = 1;
+    sub_1C3E564(&Method_UnityEngine_Component_GetComponentsInChildren_UIWidget___);
+    sub_1C3E564(&UnityEngine_Object_TypeInfo);
+    byte_4C5B4AE = 1;
   }
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
@@ -699,100 +703,100 @@ UnityEngine_Bounds_o *NGUIMath__CalculateAbsoluteWidgetBounds(
   {
     if ( !trans )
       goto LABEL_40;
-    result = (UnityEngine_Bounds_o *)UnityEngine_Component__GetComponentsInChildren_object__51245264(
+    result = (UnityEngine_Bounds_o *)UnityEngine_Component__GetComponentsInChildren_object__51318504(
                                        (UnityEngine_Component_o *)trans,
-                                       (const MethodInfo_30DF0D0 *)Method_UnityEngine_Component_GetComponentsInChildren_UIWidget___);
+                                       (const MethodInfo_30F0EE8 *)Method_UnityEngine_Component_GetComponentsInChildren_UIWidget___);
     if ( !result )
       goto LABEL_40;
-    v6 = *(_QWORD *)&result[1].fields.m_Center.fields.x;
-    v7 = result;
-    if ( v6 )
+    v7 = *(_QWORD *)&result[1].fields.m_Center.fields.x;
+    v8 = result;
+    if ( v7 )
     {
-      if ( (int)v6 >= 1 )
+      if ( (int)v7 >= 1 )
       {
-        if ( !(_DWORD)v6 )
+        if ( !(_DWORD)v7 )
           goto LABEL_24;
-        v8 = 0;
-        v9.n64_u64[0] = vdup_n_s32(0x7F7FFFFFu).n64_u64[0];
-        v10.n64_u64[0] = 0x80000000800000LL;
-        v11 = -3.4028e38;
-        v12 = 3.4028e38;
+        v9 = 0;
+        v10.n64_u64[0] = vdup_n_s32(0x7F7FFFFFu).n64_u64[0];
+        v11.n64_u64[0] = 0x80000000800000LL;
+        v12 = -3.4028e38;
+        v13 = 3.4028e38;
         while ( 1 )
         {
-          v13 = (char *)v7 + 8 * (int)v8;
-          v14 = *((_QWORD *)v13 + 4);
-          if ( !v14 )
+          v14 = (char *)v8 + 8 * (int)v9;
+          v15 = *((_QWORD *)v14 + 4);
+          if ( !v15 )
             goto LABEL_40;
-          result = (UnityEngine_Bounds_o *)UnityEngine_Behaviour__get_enabled(*((UnityEngine_Behaviour_o **)v13 + 4), 0);
+          result = (UnityEngine_Bounds_o *)UnityEngine_Behaviour__get_enabled(*((UnityEngine_Behaviour_o **)v14 + 4), 0);
           if ( ((unsigned __int8)result & 1) != 0 )
             break;
 LABEL_22:
-          if ( ++v8 == (_DWORD)v6 )
+          if ( ++v9 == (_DWORD)v7 )
             goto LABEL_32;
-          if ( v8 >= LODWORD(v7[1].fields.m_Center.fields.x) )
+          if ( v9 >= LODWORD(v8[1].fields.m_Center.fields.x) )
             goto LABEL_24;
         }
-        result = (UnityEngine_Bounds_o *)(*(__int64 (__fastcall **)(__int64, _QWORD))(*(_QWORD *)v14 + 488LL))(
-                                           v14,
-                                           *(_QWORD *)(*(_QWORD *)v14 + 496LL));
+        result = (UnityEngine_Bounds_o *)(*(__int64 (__fastcall **)(__int64, _QWORD))(*(_QWORD *)v15 + 488LL))(
+                                           v15,
+                                           *(_QWORD *)(*(_QWORD *)v15 + 496LL));
         if ( result )
         {
-          v15 = 0;
+          v16 = 0;
           p_y = &result[1].fields.m_Extents.fields.y;
-          while ( v15 < LODWORD(result[1].fields.m_Center.fields.x) )
+          while ( v16 < LODWORD(result[1].fields.m_Center.fields.x) )
           {
-            v17.n64_u64[0] = *(_QWORD *)(p_y - 2);
-            v18 = *p_y;
+            v18.n64_u64[0] = *(_QWORD *)(p_y - 2);
+            v19 = *p_y;
             p_y += 3;
-            v19 = v18;
-            ++v15;
-            v20.n64_u64[0] = vcgt_f32(v17, v10).n64_u64[0];
-            v21.n64_u64[0] = vcgt_f32(v9, v17).n64_u64[0];
-            if ( v18 > v11 )
-              v11 = v19;
-            v10.n64_u64[0] = vbsl_s8(v20, v17, v10).n64_u64[0];
-            v9.n64_u64[0] = vbsl_s8(v21, v17, v9).n64_u64[0];
-            if ( v19 < v12 )
-              v12 = v19;
-            if ( v15 == 4 )
+            v20 = v19;
+            ++v16;
+            v21.n64_u64[0] = vcgt_f32(v18, v11).n64_u64[0];
+            v22.n64_u64[0] = vcgt_f32(v10, v18).n64_u64[0];
+            if ( v19 > v12 )
+              v12 = v20;
+            v11.n64_u64[0] = vbsl_s8(v21, v18, v11).n64_u64[0];
+            v10.n64_u64[0] = vbsl_s8(v22, v18, v10).n64_u64[0];
+            if ( v20 < v13 )
+              v13 = v20;
+            if ( v16 == 4 )
               goto LABEL_22;
           }
 LABEL_24:
-          sub_1C372BC(result);
+          sub_1C3E7C8(result, v6);
         }
 LABEL_40:
-        sub_1C372B4(result);
+        sub_1C3E7C0(result, v6);
       }
-      v9.n64_u64[0] = vdup_n_s32(0x7F7FFFFFu).n64_u64[0];
-      v10.n64_u64[0] = 0x80000000800000LL;
-      v11 = -3.4028e38;
-      v12 = 3.4028e38;
+      v10.n64_u64[0] = vdup_n_s32(0x7F7FFFFFu).n64_u64[0];
+      v11.n64_u64[0] = 0x80000000800000LL;
+      v12 = -3.4028e38;
+      v13 = 3.4028e38;
 LABEL_32:
-      if ( !byte_4C3C921 )
+      if ( !byte_4C506A1 )
       {
-        result = (UnityEngine_Bounds_o *)sub_1C37058(&UnityEngine_Vector3_TypeInfo);
-        byte_4C3C921 = 1;
+        result = (UnityEngine_Bounds_o *)sub_1C3E564(&UnityEngine_Vector3_TypeInfo);
+        byte_4C506A1 = 1;
       }
       static_fields = (float32x2_t *)UnityEngine_Vector3_TypeInfo->static_fields;
-      v37 = static_fields[1].n64_f32[0] * 0.5;
-      v38.n64_u64[0] = vmul_f32((float32x2_t)static_fields->n64_u64[0], (float32x2_t)0x3F0000003F000000LL).n64_u64[0];
-      v39 = v12 - v37;
-      v40.n64_u64[0] = vsub_f32(v9, v38).n64_u64[0];
-      v41.n64_u64[0] = vadd_f32(v9, v38).n64_u64[0];
-      v42 = v12 + v37;
-      v43.n64_u64[0] = vcgt_f32(v10, v40).n64_u64[0];
-      v44.n64_u64[0] = vcgt_f32(v41, v10).n64_u64[0];
-      if ( v39 >= v11 )
-        v39 = v11;
-      v45.n64_u64[0] = vbsl_s8(v43, v40, v10).n64_u64[0];
-      v46.n64_u64[0] = vbsl_s8(v44, v41, v10).n64_u64[0];
-      if ( v42 <= v11 )
-        v42 = v11;
-      v26.n64_u64[0] = vmul_f32(vsub_f32(v46, v45), (float32x2_t)0x3F0000003F000000LL).n64_u64[0];
-      v28 = (float)(v42 - v39) * 0.5;
-      *(float32x2_t *)&retstr->fields.m_Center.fields.x = vadd_f32(v45, v26);
-      retstr->fields.m_Center.fields.z = v39 + v28;
-      v27 = v26.n64_f32[1];
+      v38 = static_fields[1].n64_f32[0] * 0.5;
+      v39.n64_u64[0] = vmul_f32((float32x2_t)static_fields->n64_u64[0], (float32x2_t)0x3F0000003F000000LL).n64_u64[0];
+      v40 = v13 - v38;
+      v41.n64_u64[0] = vsub_f32(v10, v39).n64_u64[0];
+      v42.n64_u64[0] = vadd_f32(v10, v39).n64_u64[0];
+      v43 = v13 + v38;
+      v44.n64_u64[0] = vcgt_f32(v11, v41).n64_u64[0];
+      v45.n64_u64[0] = vcgt_f32(v42, v11).n64_u64[0];
+      if ( v40 >= v12 )
+        v40 = v12;
+      v46.n64_u64[0] = vbsl_s8(v44, v41, v11).n64_u64[0];
+      v47.n64_u64[0] = vbsl_s8(v45, v42, v11).n64_u64[0];
+      if ( v43 <= v12 )
+        v43 = v12;
+      v27.n64_u64[0] = vmul_f32(vsub_f32(v47, v46), (float32x2_t)0x3F0000003F000000LL).n64_u64[0];
+      v29 = (float)(v43 - v40) * 0.5;
+      *(float32x2_t *)&retstr->fields.m_Center.fields.x = vadd_f32(v46, v27);
+      retstr->fields.m_Center.fields.z = v40 + v29;
+      v28 = v27.n64_f32[1];
     }
     else
     {
@@ -800,44 +804,44 @@ LABEL_32:
       x = position.fields.x;
       y = position.fields.y;
       z = position.fields.z;
-      if ( !byte_4C3C921 )
+      if ( !byte_4C506A1 )
       {
-        result = (UnityEngine_Bounds_o *)sub_1C37058(&UnityEngine_Vector3_TypeInfo);
-        byte_4C3C921 = 1;
+        result = (UnityEngine_Bounds_o *)sub_1C3E564(&UnityEngine_Vector3_TypeInfo);
+        byte_4C506A1 = 1;
       }
-      v32 = UnityEngine_Vector3_TypeInfo->static_fields;
-      v33 = v32->zeroVector.fields.x;
-      v34 = v32->zeroVector.fields.y;
-      v35 = v32->zeroVector.fields.z;
+      v33 = UnityEngine_Vector3_TypeInfo->static_fields;
+      v34 = v33->zeroVector.fields.x;
+      v35 = v33->zeroVector.fields.y;
+      v36 = v33->zeroVector.fields.z;
       retstr->fields.m_Center.fields.x = x;
       retstr->fields.m_Center.fields.y = y;
       retstr->fields.m_Center.fields.z = z;
-      v26.n64_f32[0] = v33 * 0.5;
-      v27 = v34 * 0.5;
+      v27.n64_f32[0] = v34 * 0.5;
       v28 = v35 * 0.5;
+      v29 = v36 * 0.5;
     }
   }
   else
   {
-    if ( !byte_4C3C921 )
+    if ( !byte_4C506A1 )
     {
-      result = (UnityEngine_Bounds_o *)sub_1C37058(&UnityEngine_Vector3_TypeInfo);
-      byte_4C3C921 = 1;
+      result = (UnityEngine_Bounds_o *)sub_1C3E564(&UnityEngine_Vector3_TypeInfo);
+      byte_4C506A1 = 1;
     }
-    v22 = UnityEngine_Vector3_TypeInfo->static_fields;
-    v23 = v22->zeroVector.fields.x;
-    v24 = v22->zeroVector.fields.y;
-    v25 = v22->zeroVector.fields.z;
-    retstr->fields.m_Center.fields.x = v22->zeroVector.fields.x;
-    retstr->fields.m_Center.fields.y = v24;
-    v26.n64_f32[0] = v23 * 0.5;
-    v27 = v24 * 0.5;
+    v23 = UnityEngine_Vector3_TypeInfo->static_fields;
+    v24 = v23->zeroVector.fields.x;
+    v25 = v23->zeroVector.fields.y;
+    v26 = v23->zeroVector.fields.z;
+    retstr->fields.m_Center.fields.x = v23->zeroVector.fields.x;
+    retstr->fields.m_Center.fields.y = v25;
+    v27.n64_f32[0] = v24 * 0.5;
     v28 = v25 * 0.5;
-    retstr->fields.m_Center.fields.z = v25;
+    v29 = v26 * 0.5;
+    retstr->fields.m_Center.fields.z = v26;
   }
-  LODWORD(retstr->fields.m_Extents.fields.x) = v26.n64_u32[0];
-  retstr->fields.m_Extents.fields.y = v27;
-  retstr->fields.m_Extents.fields.z = v28;
+  LODWORD(retstr->fields.m_Extents.fields.x) = v27.n64_u32[0];
+  retstr->fields.m_Extents.fields.y = v28;
+  retstr->fields.m_Extents.fields.z = v29;
   return result;
 }
 
@@ -852,7 +856,7 @@ UnityEngine_Bounds_o *NGUIMath__CalculateRelativeWidgetBounds(
   __int128 v6; // q0
   UnityEngine_Bounds_o v7; // [xsp+8h] [xbp-28h] BYREF
 
-  result = NGUIMath__CalculateRelativeWidgetBounds_49299668(&v7, trans, trans, 0, 1, v3);
+  result = NGUIMath__CalculateRelativeWidgetBounds_49372908(&v7, trans, trans, 0, 1, v3);
   v6 = *(_OWORD *)&v7.fields.m_Center.fields.x;
   *(_QWORD *)&retstr->fields.m_Extents.fields.y = *(_QWORD *)&v7.fields.m_Extents.fields.y;
   *(_OWORD *)&retstr->fields.m_Center.fields.x = v6;
@@ -860,7 +864,7 @@ UnityEngine_Bounds_o *NGUIMath__CalculateRelativeWidgetBounds(
 }
 
 
-UnityEngine_Bounds_o *NGUIMath__CalculateRelativeWidgetBounds_49225048(
+UnityEngine_Bounds_o *NGUIMath__CalculateRelativeWidgetBounds_49298288(
         UnityEngine_Bounds_o *__return_ptr retstr,
         UnityEngine_Transform_o *relativeTo,
         UnityEngine_Transform_o *content,
@@ -871,7 +875,7 @@ UnityEngine_Bounds_o *NGUIMath__CalculateRelativeWidgetBounds_49225048(
   __int128 v7; // q0
   UnityEngine_Bounds_o v8; // [xsp+8h] [xbp-28h] BYREF
 
-  result = NGUIMath__CalculateRelativeWidgetBounds_49299668(&v8, relativeTo, content, 0, 1, v4);
+  result = NGUIMath__CalculateRelativeWidgetBounds_49372908(&v8, relativeTo, content, 0, 1, v4);
   v7 = *(_OWORD *)&v8.fields.m_Center.fields.x;
   *(_QWORD *)&retstr->fields.m_Extents.fields.y = *(_QWORD *)&v8.fields.m_Extents.fields.y;
   *(_OWORD *)&retstr->fields.m_Center.fields.x = v7;
@@ -879,7 +883,7 @@ UnityEngine_Bounds_o *NGUIMath__CalculateRelativeWidgetBounds_49225048(
 }
 
 
-UnityEngine_Bounds_o *NGUIMath__CalculateRelativeWidgetBounds_49245556(
+UnityEngine_Bounds_o *NGUIMath__CalculateRelativeWidgetBounds_49318796(
         UnityEngine_Bounds_o *__return_ptr retstr,
         UnityEngine_Transform_o *trans,
         bool considerInactive,
@@ -890,7 +894,7 @@ UnityEngine_Bounds_o *NGUIMath__CalculateRelativeWidgetBounds_49245556(
   __int128 v7; // q0
   UnityEngine_Bounds_o v8; // [xsp+8h] [xbp-28h] BYREF
 
-  result = NGUIMath__CalculateRelativeWidgetBounds_49299668(&v8, trans, trans, considerInactive, 1, v4);
+  result = NGUIMath__CalculateRelativeWidgetBounds_49372908(&v8, trans, trans, considerInactive, 1, v4);
   v7 = *(_OWORD *)&v8.fields.m_Center.fields.x;
   *(_QWORD *)&retstr->fields.m_Extents.fields.y = *(_QWORD *)&v8.fields.m_Extents.fields.y;
   *(_OWORD *)&retstr->fields.m_Center.fields.x = v7;
@@ -898,7 +902,7 @@ UnityEngine_Bounds_o *NGUIMath__CalculateRelativeWidgetBounds_49245556(
 }
 
 
-UnityEngine_Bounds_o *NGUIMath__CalculateRelativeWidgetBounds_49299668(
+UnityEngine_Bounds_o *NGUIMath__CalculateRelativeWidgetBounds_49372908(
         UnityEngine_Bounds_o *__return_ptr retstr,
         UnityEngine_Transform_o *relativeTo,
         UnityEngine_Transform_o *content,
@@ -907,34 +911,35 @@ UnityEngine_Bounds_o *NGUIMath__CalculateRelativeWidgetBounds_49299668(
         const MethodInfo *method)
 {
   UnityEngine_Bounds_o *result; // x0
-  float32x2_t v12; // d8
+  __int64 v12; // x1
+  float32x2_t v13; // d8
   float m20; // s9
   float32x2_t *static_fields; // x8
-  float v15; // s3
-  float32x2_t v16; // d2
+  float v16; // s3
+  float32x2_t v17; // d2
   float z; // s7
-  int8x8_t v18; // d6
-  int8x8_t v19; // d2
-  float v20; // s3
-  int8x8_t v21; // d16
-  int8x8_t v22; // d17
-  float32x2_t v23; // d6
-  float32x2_t v24; // d2
-  float32x2_t v25; // d0
-  float v26; // s1
-  struct UnityEngine_Vector3_StaticFields *v27; // x8
-  float32x2_t v28; // d0
-  float v29; // s1
-  const MethodInfo *v30; // [xsp+0h] [xbp-100h]
+  int8x8_t v19; // d6
+  int8x8_t v20; // d2
+  float v21; // s3
+  int8x8_t v22; // d16
+  int8x8_t v23; // d17
+  float32x2_t v24; // d6
+  float32x2_t v25; // d2
+  float32x2_t v26; // d0
+  float v27; // s1
+  struct UnityEngine_Vector3_StaticFields *v28; // x8
+  float32x2_t v29; // d0
+  float v30; // s1
+  const MethodInfo *v31; // [xsp+0h] [xbp-100h]
   UnityEngine_Matrix4x4_o vMin; // [xsp+10h] [xbp-F0h] BYREF
   UnityEngine_Vector3_o vMax; // [xsp+50h] [xbp-B0h] BYREF
   UnityEngine_Matrix4x4_o toLocal; // [xsp+60h] [xbp-A0h] BYREF
   bool isSet; // [xsp+BCh] [xbp-44h] BYREF
 
-  if ( (byte_4C476B8 & 1) == 0 )
+  if ( (byte_4C5B4AF & 1) == 0 )
   {
-    sub_1C37058(&UnityEngine_Object_TypeInfo);
-    byte_4C476B8 = 1;
+    sub_1C3E564(&UnityEngine_Object_TypeInfo);
+    byte_4C5B4AF = 1;
   }
   memset(&toLocal, 0, sizeof(toLocal));
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -949,14 +954,14 @@ UnityEngine_Bounds_o *NGUIMath__CalculateRelativeWidgetBounds_49299668(
     goto LABEL_18;
   isSet = 0;
   if ( !relativeTo )
-    sub_1C372B4(result);
+    sub_1C3E7C0(result, v12);
   UnityEngine_Transform__get_worldToLocalMatrix(&vMin, relativeTo, 0);
   *(_QWORD *)&vMax.fields.x = 0x80000000800000LL;
   toLocal = vMin;
   vMin.fields.m20 = 3.4028e38;
   *(int32x2_t *)&vMin.fields.m00 = vdup_n_s32(0x7F7FFFFFu);
   vMax.fields.z = -3.4028e38;
-  NGUIMath__CalculateRelativeWidgetBounds_49300252(
+  NGUIMath__CalculateRelativeWidgetBounds_49373492(
     content,
     considerInactive,
     1,
@@ -965,59 +970,59 @@ UnityEngine_Bounds_o *NGUIMath__CalculateRelativeWidgetBounds_49299668(
     &vMax,
     &isSet,
     considerParents,
-    v30);
+    v31);
   if ( isSet )
   {
-    v12.n64_u64[0] = *(unsigned __int64 *)&vMin.fields.m00;
+    v13.n64_u64[0] = *(unsigned __int64 *)&vMin.fields.m00;
     m20 = vMin.fields.m20;
-    if ( !byte_4C3C921 )
+    if ( !byte_4C506A1 )
     {
-      result = (UnityEngine_Bounds_o *)sub_1C37058(&UnityEngine_Vector3_TypeInfo);
-      byte_4C3C921 = 1;
+      result = (UnityEngine_Bounds_o *)sub_1C3E564(&UnityEngine_Vector3_TypeInfo);
+      byte_4C506A1 = 1;
     }
     static_fields = (float32x2_t *)UnityEngine_Vector3_TypeInfo->static_fields;
-    v15 = static_fields[1].n64_f32[0] * 0.5;
-    v16.n64_u64[0] = vmul_f32((float32x2_t)static_fields->n64_u64[0], (float32x2_t)0x3F0000003F000000LL).n64_u64[0];
-    z = m20 - v15;
-    v18.n64_u64[0] = vsub_f32(v12, v16).n64_u64[0];
-    v19.n64_u64[0] = vadd_f32(v12, v16).n64_u64[0];
-    v20 = m20 + v15;
-    v21.n64_u64[0] = vcgt_f32(*(float32x2_t *)&vMax.fields.x, v18).n64_u64[0];
-    v22.n64_u64[0] = vcgt_f32(v19, *(float32x2_t *)&vMax.fields.x).n64_u64[0];
+    v16 = static_fields[1].n64_f32[0] * 0.5;
+    v17.n64_u64[0] = vmul_f32((float32x2_t)static_fields->n64_u64[0], (float32x2_t)0x3F0000003F000000LL).n64_u64[0];
+    z = m20 - v16;
+    v19.n64_u64[0] = vsub_f32(v13, v17).n64_u64[0];
+    v20.n64_u64[0] = vadd_f32(v13, v17).n64_u64[0];
+    v21 = m20 + v16;
+    v22.n64_u64[0] = vcgt_f32(*(float32x2_t *)&vMax.fields.x, v19).n64_u64[0];
+    v23.n64_u64[0] = vcgt_f32(v20, *(float32x2_t *)&vMax.fields.x).n64_u64[0];
     if ( z >= vMax.fields.z )
       z = vMax.fields.z;
-    v23.n64_u64[0] = vbsl_s8(v21, v18, *(int8x8_t *)&vMax.fields.x).n64_u64[0];
     v24.n64_u64[0] = vbsl_s8(v22, v19, *(int8x8_t *)&vMax.fields.x).n64_u64[0];
-    if ( v20 <= vMax.fields.z )
-      v20 = vMax.fields.z;
-    v25.n64_u64[0] = vmul_f32(vsub_f32(v24, v23), (float32x2_t)0x3F0000003F000000LL).n64_u64[0];
-    v26 = (float)(v20 - z) * 0.5;
-    *(float32x2_t *)&retstr->fields.m_Center.fields.x = vadd_f32(v23, v25);
-    retstr->fields.m_Center.fields.z = z + v26;
+    v25.n64_u64[0] = vbsl_s8(v23, v20, *(int8x8_t *)&vMax.fields.x).n64_u64[0];
+    if ( v21 <= vMax.fields.z )
+      v21 = vMax.fields.z;
+    v26.n64_u64[0] = vmul_f32(vsub_f32(v25, v24), (float32x2_t)0x3F0000003F000000LL).n64_u64[0];
+    v27 = (float)(v21 - z) * 0.5;
+    *(float32x2_t *)&retstr->fields.m_Center.fields.x = vadd_f32(v24, v26);
+    retstr->fields.m_Center.fields.z = z + v27;
   }
   else
   {
 LABEL_18:
-    if ( !byte_4C3C921 )
+    if ( !byte_4C506A1 )
     {
-      result = (UnityEngine_Bounds_o *)sub_1C37058(&UnityEngine_Vector3_TypeInfo);
-      byte_4C3C921 = 1;
+      result = (UnityEngine_Bounds_o *)sub_1C3E564(&UnityEngine_Vector3_TypeInfo);
+      byte_4C506A1 = 1;
     }
-    v27 = UnityEngine_Vector3_TypeInfo->static_fields;
-    v28.n64_u64[0] = *(unsigned __int64 *)&v27->zeroVector.fields.x;
-    v29 = v27->zeroVector.fields.z;
-    *(_QWORD *)&retstr->fields.m_Center.fields.x = *(_QWORD *)&v27->zeroVector.fields.x;
-    retstr->fields.m_Center.fields.z = v29;
-    v25.n64_u64[0] = vmul_f32(v28, (float32x2_t)0x3F0000003F000000LL).n64_u64[0];
-    v26 = v29 * 0.5;
+    v28 = UnityEngine_Vector3_TypeInfo->static_fields;
+    v29.n64_u64[0] = *(unsigned __int64 *)&v28->zeroVector.fields.x;
+    v30 = v28->zeroVector.fields.z;
+    *(_QWORD *)&retstr->fields.m_Center.fields.x = *(_QWORD *)&v28->zeroVector.fields.x;
+    retstr->fields.m_Center.fields.z = v30;
+    v26.n64_u64[0] = vmul_f32(v29, (float32x2_t)0x3F0000003F000000LL).n64_u64[0];
+    v27 = v30 * 0.5;
   }
-  *(float32x2_t *)&retstr->fields.m_Extents.fields.x = v25;
-  retstr->fields.m_Extents.fields.z = v26;
+  *(float32x2_t *)&retstr->fields.m_Extents.fields.x = v26;
+  retstr->fields.m_Extents.fields.z = v27;
   return result;
 }
 
 
-void NGUIMath__CalculateRelativeWidgetBounds_49300252(
+void NGUIMath__CalculateRelativeWidgetBounds_49373492(
         UnityEngine_Transform_o *content,
         bool considerInactive,
         bool isRoot,
@@ -1028,36 +1033,37 @@ void NGUIMath__CalculateRelativeWidgetBounds_49300252(
         bool considerParents,
         const MethodInfo *method)
 {
-  __int64 Active_49345096; // x0
+  __int64 Active_49418336; // x0
+  __int64 v18; // x1
   UnityEngine_GameObject_o *gameObject; // x27
   Il2CppObject *Component_object; // x26
-  __int64 v20; // x23
-  unsigned __int64 v21; // x24
-  __int64 v22; // x25
-  Il2CppObject *v23; // x26
-  __int64 v24; // x26
-  unsigned __int64 v25; // x27
-  __int64 v26; // x28
+  __int64 v21; // x23
+  unsigned __int64 v22; // x24
+  __int64 v23; // x25
+  Il2CppObject *v24; // x26
+  __int64 v25; // x26
+  unsigned __int64 v26; // x27
+  __int64 v27; // x28
   int32_t childCount; // w0
-  int32_t v28; // w25
+  int32_t v29; // w25
   int32_t i; // w26
   UnityEngine_Transform_o *Child; // x0
-  const MethodInfo *v31; // [xsp+0h] [xbp-70h]
-  UnityEngine_Vector3_o v32; // 0:s0.4,4:s1.4,8:s2.4
+  const MethodInfo *v32; // [xsp+0h] [xbp-70h]
   UnityEngine_Vector3_o v33; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o v34; // 0:s0.4,4:s1.4,8:s2.4
 
-  if ( (byte_4C476B9 & 1) == 0 )
+  if ( (byte_4C5B4B0 & 1) == 0 )
   {
-    sub_1C37058(&Method_UnityEngine_Component_GetComponent_UIPanel___);
-    sub_1C37058(&Method_UnityEngine_Component_GetComponent_UIWidget___);
-    sub_1C37058(&NGUITools_TypeInfo);
-    sub_1C37058(&UnityEngine_Object_TypeInfo);
-    byte_4C476B9 = 1;
+    sub_1C3E564(&Method_UnityEngine_Component_GetComponent_UIPanel___);
+    sub_1C3E564(&Method_UnityEngine_Component_GetComponent_UIWidget___);
+    sub_1C3E564(&NGUITools_TypeInfo);
+    sub_1C3E564(&UnityEngine_Object_TypeInfo);
+    byte_4C5B4B0 = 1;
   }
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-  Active_49345096 = UnityEngine_Object__op_Equality((UnityEngine_Object_o *)content, 0, 0);
-  if ( (Active_49345096 & 1) != 0 )
+  Active_49418336 = UnityEngine_Object__op_Equality((UnityEngine_Object_o *)content, 0, 0);
+  if ( (Active_49418336 & 1) != 0 )
     return;
   if ( !considerInactive )
   {
@@ -1066,8 +1072,8 @@ void NGUIMath__CalculateRelativeWidgetBounds_49300252(
     gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)content, 0);
     if ( !NGUITools_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(NGUITools_TypeInfo);
-    Active_49345096 = NGUITools__GetActive_49345096(gameObject, 0);
-    if ( (Active_49345096 & 1) == 0 )
+    Active_49418336 = NGUITools__GetActive_49418336(gameObject, 0);
+    if ( (Active_49418336 & 1) == 0 )
       return;
   }
   if ( isRoot )
@@ -1080,12 +1086,12 @@ void NGUIMath__CalculateRelativeWidgetBounds_49300252(
       goto LABEL_71;
     Component_object = UnityEngine_Component__GetComponent_object_(
                          (UnityEngine_Component_o *)content,
-                         (const MethodInfo_30DE428 *)Method_UnityEngine_Component_GetComponent_UIPanel___);
+                         (const MethodInfo_30F0240 *)Method_UnityEngine_Component_GetComponent_UIPanel___);
   }
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-  Active_49345096 = UnityEngine_Object__op_Inequality((UnityEngine_Object_o *)Component_object, 0, 0);
-  if ( (Active_49345096 & 1) != 0 )
+  Active_49418336 = UnityEngine_Object__op_Inequality((UnityEngine_Object_o *)Component_object, 0, 0);
+  if ( (Active_49418336 & 1) != 0 )
   {
     if ( !Component_object )
       goto LABEL_71;
@@ -1094,104 +1100,104 @@ void NGUIMath__CalculateRelativeWidgetBounds_49300252(
   }
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-  Active_49345096 = UnityEngine_Object__op_Inequality((UnityEngine_Object_o *)Component_object, 0, 0);
-  if ( (Active_49345096 & 1) != 0 )
+  Active_49418336 = UnityEngine_Object__op_Inequality((UnityEngine_Object_o *)Component_object, 0, 0);
+  if ( (Active_49418336 & 1) != 0 )
   {
     if ( !Component_object )
       goto LABEL_71;
     if ( HIDWORD(Component_object[18].klass) )
     {
-      Active_49345096 = ((__int64 (__fastcall *)(Il2CppObject *, const MethodInfo *))Component_object->klass->vtable[11].methodPtr)(
+      Active_49418336 = ((__int64 (__fastcall *)(Il2CppObject *, const MethodInfo *))Component_object->klass->vtable[11].methodPtr)(
                           Component_object,
                           Component_object->klass->vtable[11].method);
-      if ( Active_49345096 )
+      if ( Active_49418336 )
       {
-        v20 = Active_49345096;
-        v21 = 0;
-        v22 = Active_49345096 + 40;
-        while ( v21 < *(unsigned int *)(v20 + 24) )
+        v21 = Active_49418336;
+        v22 = 0;
+        v23 = Active_49418336 + 40;
+        while ( v22 < *(unsigned int *)(v21 + 24) )
         {
-          v32 = UnityEngine_Matrix4x4__MultiplyPoint3x4(toLocal, *(UnityEngine_Vector3_o *)(v22 - 8), 0);
-          if ( v32.fields.x > vMax->fields.x )
-            vMax->fields.x = v32.fields.x;
-          if ( v32.fields.y > vMax->fields.y )
-            vMax->fields.y = v32.fields.y;
-          if ( v32.fields.z > vMax->fields.z )
-            vMax->fields.z = v32.fields.z;
-          if ( v32.fields.x < vMin->fields.x )
-            vMin->fields.x = v32.fields.x;
-          if ( v32.fields.y < vMin->fields.y )
-            vMin->fields.y = v32.fields.y;
-          if ( v32.fields.z < vMin->fields.z )
-            vMin->fields.z = v32.fields.z;
-          ++v21;
-          v22 += 12;
+          v33 = UnityEngine_Matrix4x4__MultiplyPoint3x4(toLocal, *(UnityEngine_Vector3_o *)(v23 - 8), 0);
+          if ( v33.fields.x > vMax->fields.x )
+            vMax->fields.x = v33.fields.x;
+          if ( v33.fields.y > vMax->fields.y )
+            vMax->fields.y = v33.fields.y;
+          if ( v33.fields.z > vMax->fields.z )
+            vMax->fields.z = v33.fields.z;
+          if ( v33.fields.x < vMin->fields.x )
+            vMin->fields.x = v33.fields.x;
+          if ( v33.fields.y < vMin->fields.y )
+            vMin->fields.y = v33.fields.y;
+          if ( v33.fields.z < vMin->fields.z )
+            vMin->fields.z = v33.fields.z;
+          ++v22;
+          v23 += 12;
           *isSet = 1;
-          if ( v21 == 4 )
+          if ( v22 == 4 )
             return;
         }
 LABEL_70:
-        sub_1C372BC(Active_49345096);
+        sub_1C3E7C8(Active_49418336, v18);
       }
 LABEL_71:
-      sub_1C372B4(Active_49345096);
+      sub_1C3E7C0(Active_49418336, v18);
     }
   }
   if ( !content )
     goto LABEL_71;
-  v23 = UnityEngine_Component__GetComponent_object_(
+  v24 = UnityEngine_Component__GetComponent_object_(
           (UnityEngine_Component_o *)content,
-          (const MethodInfo_30DE428 *)Method_UnityEngine_Component_GetComponent_UIWidget___);
+          (const MethodInfo_30F0240 *)Method_UnityEngine_Component_GetComponent_UIWidget___);
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-  Active_49345096 = UnityEngine_Object__op_Inequality((UnityEngine_Object_o *)v23, 0, 0);
-  if ( (Active_49345096 & 1) == 0 )
+  Active_49418336 = UnityEngine_Object__op_Inequality((UnityEngine_Object_o *)v24, 0, 0);
+  if ( (Active_49418336 & 1) == 0 )
     goto LABEL_66;
-  if ( !v23 )
+  if ( !v24 )
     goto LABEL_71;
-  if ( !UnityEngine_Behaviour__get_enabled((UnityEngine_Behaviour_o *)v23, 0) )
+  if ( !UnityEngine_Behaviour__get_enabled((UnityEngine_Behaviour_o *)v24, 0) )
     goto LABEL_66;
-  Active_49345096 = ((__int64 (__fastcall *)(Il2CppObject *, const MethodInfo *))v23->klass->vtable[11].methodPtr)(
-                      v23,
-                      v23->klass->vtable[11].method);
-  if ( !Active_49345096 )
+  Active_49418336 = ((__int64 (__fastcall *)(Il2CppObject *, const MethodInfo *))v24->klass->vtable[11].methodPtr)(
+                      v24,
+                      v24->klass->vtable[11].method);
+  if ( !Active_49418336 )
     goto LABEL_71;
-  v24 = Active_49345096;
-  v25 = 0;
-  v26 = Active_49345096 + 40;
+  v25 = Active_49418336;
+  v26 = 0;
+  v27 = Active_49418336 + 40;
   do
   {
-    if ( v25 >= *(unsigned int *)(v24 + 24) )
+    if ( v26 >= *(unsigned int *)(v25 + 24) )
       goto LABEL_70;
-    v33 = UnityEngine_Matrix4x4__MultiplyPoint3x4(toLocal, *(UnityEngine_Vector3_o *)(v26 - 8), 0);
-    if ( v33.fields.x > vMax->fields.x )
-      vMax->fields.x = v33.fields.x;
-    if ( v33.fields.y > vMax->fields.y )
-      vMax->fields.y = v33.fields.y;
-    if ( v33.fields.z > vMax->fields.z )
-      vMax->fields.z = v33.fields.z;
-    if ( v33.fields.x < vMin->fields.x )
-      vMin->fields.x = v33.fields.x;
-    if ( v33.fields.y < vMin->fields.y )
-      vMin->fields.y = v33.fields.y;
-    if ( v33.fields.z < vMin->fields.z )
-      vMin->fields.z = v33.fields.z;
-    ++v25;
-    v26 += 12;
+    v34 = UnityEngine_Matrix4x4__MultiplyPoint3x4(toLocal, *(UnityEngine_Vector3_o *)(v27 - 8), 0);
+    if ( v34.fields.x > vMax->fields.x )
+      vMax->fields.x = v34.fields.x;
+    if ( v34.fields.y > vMax->fields.y )
+      vMax->fields.y = v34.fields.y;
+    if ( v34.fields.z > vMax->fields.z )
+      vMax->fields.z = v34.fields.z;
+    if ( v34.fields.x < vMin->fields.x )
+      vMin->fields.x = v34.fields.x;
+    if ( v34.fields.y < vMin->fields.y )
+      vMin->fields.y = v34.fields.y;
+    if ( v34.fields.z < vMin->fields.z )
+      vMin->fields.z = v34.fields.z;
+    ++v26;
+    v27 += 12;
     *isSet = 1;
   }
-  while ( v25 != 4 );
+  while ( v26 != 4 );
   if ( considerParents )
   {
 LABEL_66:
     childCount = UnityEngine_Transform__get_childCount(content, 0);
     if ( childCount >= 1 )
     {
-      v28 = childCount;
-      for ( i = 0; i != v28; ++i )
+      v29 = childCount;
+      for ( i = 0; i != v29; ++i )
       {
         Child = UnityEngine_Transform__GetChild(content, i, 0);
-        NGUIMath__CalculateRelativeWidgetBounds_49300252(Child, considerInactive, 0, toLocal, vMin, vMax, isSet, 1, v31);
+        NGUIMath__CalculateRelativeWidgetBounds_49373492(Child, considerInactive, 0, toLocal, vMin, vMax, isSet, 1, v32);
       }
     }
   }
@@ -1252,10 +1258,10 @@ int32_t NGUIMath__ColorToInt(UnityEngine_Color_o c, const MethodInfo *method)
   b = c.fields.b;
   g = c.fields.g;
   r = c.fields.r;
-  if ( !byte_4C3E100 )
+  if ( !byte_4C51E80 )
   {
-    sub_1C37058(&System_Math_TypeInfo);
-    byte_4C3E100 = 1;
+    sub_1C3E564(&System_Math_TypeInfo);
+    byte_4C51E80 = 1;
   }
   v6 = r * 255.0;
   if ( !System_Math_TypeInfo->_2.cctor_finished )
@@ -1288,10 +1294,10 @@ int32_t NGUIMath__ColorToInt(UnityEngine_Color_o c, const MethodInfo *method)
   else
     v12 = v9;
 LABEL_15:
-  if ( !byte_4C3E100 )
+  if ( !byte_4C51E80 )
   {
-    sub_1C37058(&System_Math_TypeInfo);
-    byte_4C3E100 = 1;
+    sub_1C3E564(&System_Math_TypeInfo);
+    byte_4C51E80 = 1;
   }
   v13 = g * 255.0;
   if ( !System_Math_TypeInfo->_2.cctor_finished )
@@ -1324,10 +1330,10 @@ LABEL_15:
   else
     v19 = v16;
 LABEL_29:
-  if ( !byte_4C3E100 )
+  if ( !byte_4C51E80 )
   {
-    sub_1C37058(&System_Math_TypeInfo);
-    byte_4C3E100 = 1;
+    sub_1C3E564(&System_Math_TypeInfo);
+    byte_4C51E80 = 1;
   }
   v20 = b * 255.0;
   if ( !System_Math_TypeInfo->_2.cctor_finished )
@@ -1360,10 +1366,10 @@ LABEL_29:
   else
     v26 = v23;
 LABEL_43:
-  if ( !byte_4C3E100 )
+  if ( !byte_4C51E80 )
   {
-    sub_1C37058(&System_Math_TypeInfo);
-    byte_4C3E100 = 1;
+    sub_1C3E564(&System_Math_TypeInfo);
+    byte_4C51E80 = 1;
   }
   v27 = a * 255.0;
   if ( !System_Math_TypeInfo->_2.cctor_finished )
@@ -1451,10 +1457,10 @@ UnityEngine_Vector2_o NGUIMath__ConstrainRect(
   v10 = maxRect.fields.x;
   v11 = minRect.fields.y;
   v12 = minRect.fields.x;
-  if ( !byte_4C3C81A )
+  if ( !byte_4C5059A )
   {
-    sub_1C37058(&UnityEngine_Vector2_TypeInfo);
-    byte_4C3C81A = 1;
+    sub_1C3E564(&UnityEngine_Vector2_TypeInfo);
+    byte_4C5059A = 1;
   }
   v13 = v9 - v11;
   v14 = y - v7;
@@ -1562,10 +1568,10 @@ UnityEngine_Rect_o NGUIMath__ConvertToPixels(
     v18 = (float)(1.0 - rect.fields.m_YMin) * (float)height;
     goto LABEL_70;
   }
-  if ( !byte_4C3E100 )
+  if ( !byte_4C51E80 )
   {
-    sub_1C37058(&System_Math_TypeInfo);
-    byte_4C3E100 = 1;
+    sub_1C3E564(&System_Math_TypeInfo);
+    byte_4C51E80 = 1;
   }
   if ( !System_Math_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(System_Math_TypeInfo);
@@ -1600,10 +1606,10 @@ LABEL_17:
   else
     v11 = (float)(int)v14;
   v20 = m_Width + m_XMin;
-  if ( !byte_4C3E100 )
+  if ( !byte_4C51E80 )
   {
-    sub_1C37058(&System_Math_TypeInfo);
-    byte_4C3E100 = 1;
+    sub_1C3E564(&System_Math_TypeInfo);
+    byte_4C51E80 = 1;
   }
   v21 = v20 * v5;
   if ( !System_Math_TypeInfo->_2.cctor_finished )
@@ -1640,10 +1646,10 @@ LABEL_34:
     v27 = (float)(int)v24;
   v28 = 1.0 - (float)(m_Height + m_YMin);
   v29 = (float)height;
-  if ( !byte_4C3E100 )
+  if ( !byte_4C51E80 )
   {
-    sub_1C37058(&System_Math_TypeInfo);
-    byte_4C3E100 = 1;
+    sub_1C3E564(&System_Math_TypeInfo);
+    byte_4C51E80 = 1;
   }
   v30 = v28 * v29;
   if ( !System_Math_TypeInfo->_2.cctor_finished )
@@ -1679,10 +1685,10 @@ LABEL_51:
   else
     v17 = (float)(int)v33;
   v36 = 1.0 - m_YMin;
-  if ( !byte_4C3E100 )
+  if ( !byte_4C51E80 )
   {
-    sub_1C37058(&System_Math_TypeInfo);
-    byte_4C3E100 = 1;
+    sub_1C3E564(&System_Math_TypeInfo);
+    byte_4C51E80 = 1;
   }
   v37 = v36 * v29;
   if ( !System_Math_TypeInfo->_2.cctor_finished )
@@ -1761,13 +1767,13 @@ System_String_o *NGUIMath__DecimalToHex24(int32_t num, const MethodInfo *method)
 {
   int v4; // [xsp+Ch] [xbp-24h] BYREF
 
-  if ( (byte_4C476B4 & 1) == 0 )
+  if ( (byte_4C5B4AB & 1) == 0 )
   {
-    sub_1C37058(&StringLiteral_15709/*"X6"*/);
-    byte_4C476B4 = 1;
+    sub_1C3E564(&StringLiteral_15719/*"X6"*/);
+    byte_4C5B4AB = 1;
   }
   v4 = num & 0xFFFFFF;
-  return System_Int32__ToString_65071764((int32_t)&v4, (System_String_o *)StringLiteral_15709/*"X6"*/, 0);
+  return System_Int32__ToString_65146576((int32_t)&v4, (System_String_o *)StringLiteral_15719/*"X6"*/, 0);
 }
 
 
@@ -1776,12 +1782,12 @@ System_String_o *NGUIMath__DecimalToHex32(int32_t num, const MethodInfo *method)
   int32_t v3; // [xsp+Ch] [xbp-14h] BYREF
 
   v3 = num;
-  if ( (byte_4C476B5 & 1) == 0 )
+  if ( (byte_4C5B4AC & 1) == 0 )
   {
-    sub_1C37058(&StringLiteral_15710/*"X8"*/);
-    byte_4C476B5 = 1;
+    sub_1C3E564(&StringLiteral_15720/*"X8"*/);
+    byte_4C5B4AC = 1;
   }
-  return System_Int32__ToString_65071764((int32_t)&v3, (System_String_o *)StringLiteral_15710/*"X8"*/, 0);
+  return System_Int32__ToString_65146576((int32_t)&v3, (System_String_o *)StringLiteral_15720/*"X8"*/, 0);
 }
 
 
@@ -1791,13 +1797,13 @@ System_String_o *NGUIMath__DecimalToHex8(int32_t num, const MethodInfo *method)
   int v4; // [xsp+Ch] [xbp-24h] BYREF
 
   v2 = num;
-  if ( (byte_4C476B3 & 1) == 0 )
+  if ( (byte_4C5B4AA & 1) == 0 )
   {
-    sub_1C37058(&StringLiteral_15703/*"X2"*/);
-    byte_4C476B3 = 1;
+    sub_1C3E564(&StringLiteral_15713/*"X2"*/);
+    byte_4C5B4AA = 1;
   }
   v4 = v2;
-  return System_Int32__ToString_65071764((int32_t)&v4, (System_String_o *)StringLiteral_15703/*"X2"*/, 0);
+  return System_Int32__ToString_65146576((int32_t)&v4, (System_String_o *)StringLiteral_15713/*"X2"*/, 0);
 }
 
 
@@ -1842,34 +1848,34 @@ float NGUIMath__DistancePointToLineSegment(
         v11 = vdiv_f32(vadd_f32(vdup_lane_s32(v10, 1), v10), vadd_f32(vdup_lane_s32(v7, 1), v7)).n64_f32[0],
         v11 < 0.0) )
   {
-    if ( !byte_4C3C922 )
+    if ( !byte_4C506A2 )
     {
-      sub_1C37058(&System_Math_TypeInfo);
-      byte_4C3C922 = 1;
+      sub_1C3E564(&System_Math_TypeInfo);
+      byte_4C506A2 = 1;
     }
   }
   else if ( v11 <= 1.0 )
   {
     v13.n64_u64[0] = vadd_f32(*(float32x2_t *)&a.fields.y, vmul_n_f32(v6, v11)).n64_u64[0];
-    if ( !byte_4C3C922 )
+    if ( !byte_4C506A2 )
     {
       v16 = *(UnityEngine_Vector2_o *)&point.fields.y;
-      sub_1C37058(&System_Math_TypeInfo);
+      sub_1C3E564(&System_Math_TypeInfo);
       *(UnityEngine_Vector2_o *)&point.fields.y = v16;
-      byte_4C3C922 = 1;
+      byte_4C506A2 = 1;
     }
     v9.n64_u64[0] = vsub_f32(*(float32x2_t *)&point.fields.y, v13).n64_u64[0];
   }
   else
   {
-    if ( !byte_4C3C922 )
+    if ( !byte_4C506A2 )
     {
       v14 = *(UnityEngine_Vector2_o *)&b.fields.y;
       v15 = *(UnityEngine_Vector2_o *)&point.fields.y;
-      sub_1C37058(&System_Math_TypeInfo);
+      sub_1C3E564(&System_Math_TypeInfo);
       *(UnityEngine_Vector2_o *)&b.fields.y = v14;
       *(UnityEngine_Vector2_o *)&point.fields.y = v15;
-      byte_4C3C922 = 1;
+      byte_4C506A2 = 1;
     }
     v9.n64_u64[0] = vsub_f32(*(float32x2_t *)&point.fields.y, *(float32x2_t *)&b.fields.y).n64_u64[0];
   }
@@ -1919,7 +1925,7 @@ float NGUIMath__DistanceToRectangle(
     else
       v10 = v7;
     if ( !screenPoints )
-      sub_1C372B4(0);
+      sub_1C3E7C0(0, method);
     max_length = screenPoints->max_length;
     v12 = v7 - (v10 & 0xFFFFFFFC);
     if ( v12 >= (unsigned int)max_length )
@@ -1970,13 +1976,13 @@ float NGUIMath__DistanceToRectangle(
       }
     }
 LABEL_24:
-    sub_1C372BC(screenPoints);
+    sub_1C3E7C8(screenPoints, method);
   }
   return v18;
 }
 
 
-float NGUIMath__DistanceToRectangle_49303036(
+float NGUIMath__DistanceToRectangle_49376276(
         UnityEngine_Vector3_array *worldPoints,
         UnityEngine_Vector2_o mousePos,
         UnityEngine_Camera_o *cam,
@@ -1985,51 +1991,51 @@ float NGUIMath__DistanceToRectangle_49303036(
   float y; // s8
   float x; // s9
   __int64 v8; // x0
-  __int64 v9; // x21
-  unsigned __int64 v10; // x22
-  float *v11; // x23
+  const MethodInfo *v9; // x1
+  __int64 v10; // x21
+  unsigned __int64 v11; // x22
+  float *v12; // x23
   float *p_z; // x24
-  const MethodInfo *v13; // x1
   UnityEngine_Vector2_o v15; // 0:s0.4,4:s1.4
   UnityEngine_Vector3_o v16; // 0:s0.4,4:s1.4,8:s2.4
 
   y = mousePos.fields.y;
   x = mousePos.fields.x;
-  if ( (byte_4C476BA & 1) == 0 )
+  if ( (byte_4C5B4B1 & 1) == 0 )
   {
-    sub_1C37058(&UnityEngine_Vector2___TypeInfo);
-    byte_4C476BA = 1;
+    sub_1C3E564(&UnityEngine_Vector2___TypeInfo);
+    byte_4C5B4B1 = 1;
   }
-  v8 = sub_1C37100(UnityEngine_Vector2___TypeInfo, 4);
+  v8 = sub_1C3E60C(UnityEngine_Vector2___TypeInfo, 4);
   if ( !worldPoints )
 LABEL_11:
-    sub_1C372B4(v8);
-  v9 = v8;
-  v10 = 0;
-  v11 = (float *)(v8 + 36);
+    sub_1C3E7C0(v8, v9);
+  v10 = v8;
+  v11 = 0;
+  v12 = (float *)(v8 + 36);
   p_z = &worldPoints->m_Items[0].fields.z;
   do
   {
-    if ( v10 >= LODWORD(worldPoints->max_length) )
+    if ( v11 >= LODWORD(worldPoints->max_length) )
 LABEL_12:
-      sub_1C372BC(v8);
+      sub_1C3E7C8(v8, v9);
     if ( !cam )
       goto LABEL_11;
-    v16 = UnityEngine_Camera__WorldToScreenPoint_71073020(cam, *(UnityEngine_Vector3_o *)(p_z - 2), 0);
-    if ( !v9 )
+    v16 = UnityEngine_Camera__WorldToScreenPoint_71147832(cam, *(UnityEngine_Vector3_o *)(p_z - 2), 0);
+    if ( !v10 )
       goto LABEL_11;
-    if ( v10 >= *(unsigned int *)(v9 + 24) )
+    if ( v11 >= *(unsigned int *)(v10 + 24) )
       goto LABEL_12;
-    ++v10;
-    *(v11 - 1) = v16.fields.x;
-    *v11 = v16.fields.y;
-    v11 += 2;
+    ++v11;
+    *(v12 - 1) = v16.fields.x;
+    *v12 = v16.fields.y;
+    v12 += 2;
     p_z += 3;
   }
-  while ( v10 != 4 );
+  while ( v11 != 4 );
   v15.fields.x = x;
   v15.fields.y = y;
-  return NGUIMath__DistanceToRectangle((UnityEngine_Vector2_array *)v9, v15, v13);
+  return NGUIMath__DistanceToRectangle((UnityEngine_Vector2_array *)v10, v15, v9);
 }
 
 
@@ -2086,14 +2092,14 @@ UnityEngine_Vector2_o NGUIMath__GetPivotOffset(int32_t pv, const MethodInfo *met
   float v4; // s1
   UnityEngine_Vector2_o result; // 0:s0.4,4:s1.4
 
-  if ( !byte_4C3C81A )
+  if ( !byte_4C5059A )
   {
-    sub_1C37058(&UnityEngine_Vector2_TypeInfo);
-    byte_4C3C81A = 1;
+    sub_1C3E564(&UnityEngine_Vector2_TypeInfo);
+    byte_4C5059A = 1;
   }
   v3 = 0.0;
   if ( (unsigned int)(pv - 1) <= 7 )
-    v3 = flt_C46BB0[pv - 1];
+    v3 = flt_C4A220[pv - 1];
   v4 = 0.5;
   if ( (unsigned int)(pv - 3) >= 3 )
   {
@@ -2136,7 +2142,7 @@ int32_t NGUIMath__HexToDecimal(uint16_t ch, const MethodInfo *method)
   if ( (unsigned __int16)(ch - 48) > 0x36u )
     return 15;
   else
-    return dword_C497FC[(__int16)(ch - 48)];
+    return dword_C4CE8C[(__int16)(ch - 48)];
 }
 
 
@@ -2147,12 +2153,12 @@ System_String_o *NGUIMath__IntToBinary(int32_t val, int32_t bits, const MethodIn
   System_String_o *v7; // x0
   __int16 v9; // [xsp+Ch] [xbp-44h] BYREF
 
-  if ( (byte_4C476B6 & 1) == 0 )
+  if ( (byte_4C5B4AD & 1) == 0 )
   {
-    sub_1C37058(&char_TypeInfo);
-    sub_1C37058(&StringLiteral_113/*" "*/);
-    sub_1C37058(&StringLiteral_1/*""*/);
-    byte_4C476B6 = 1;
+    sub_1C3E564(&char_TypeInfo);
+    sub_1C3E564(&StringLiteral_113/*" "*/);
+    sub_1C3E564(&StringLiteral_1/*""*/);
+    byte_4C5B4AD = 1;
   }
   v5 = (System_String_o *)StringLiteral_1/*""*/;
   v9 = 0;
@@ -2161,7 +2167,7 @@ System_String_o *NGUIMath__IntToBinary(int32_t val, int32_t bits, const MethodIn
     do
     {
       if ( (unsigned int)bits <= 0x18 && ((1 << bits) & 0x1010100) != 0 )
-        v5 = System_String__Concat_63561656(v5, (System_String_o *)StringLiteral_113/*" "*/, 0);
+        v5 = System_String__Concat_63636468(v5, (System_String_o *)StringLiteral_113/*" "*/, 0);
       if ( (((unsigned int)val >> --bits) & 1) != 0 )
         v6 = 49;
       else
@@ -2170,7 +2176,7 @@ System_String_o *NGUIMath__IntToBinary(int32_t val, int32_t bits, const MethodIn
       if ( !char_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(char_TypeInfo);
       v7 = System_Char__ToString((uint16_t)&v9, 0);
-      v5 = System_String__Concat_63561656(v5, v7, 0);
+      v5 = System_String__Concat_63636468(v5, v7, 0);
     }
     while ( bits + 1 > 1 );
   }
@@ -2251,10 +2257,10 @@ UnityEngine_Rect_o NGUIMath__MakePixelPerfect(UnityEngine_Rect_o rect, const Met
   m_Width = rect.fields.m_Width;
   m_YMin = rect.fields.m_YMin;
   m_XMin = rect.fields.m_XMin;
-  if ( !byte_4C3E100 )
+  if ( !byte_4C51E80 )
   {
-    sub_1C37058(&System_Math_TypeInfo);
-    byte_4C3E100 = 1;
+    sub_1C3E564(&System_Math_TypeInfo);
+    byte_4C51E80 = 1;
   }
   if ( !System_Math_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(System_Math_TypeInfo);
@@ -2288,10 +2294,10 @@ LABEL_15:
     v11 = -2147500000.0;
   else
     v11 = (float)(int)v8;
-  if ( !byte_4C3E100 )
+  if ( !byte_4C51E80 )
   {
-    sub_1C37058(&System_Math_TypeInfo);
-    byte_4C3E100 = 1;
+    sub_1C3E564(&System_Math_TypeInfo);
+    byte_4C51E80 = 1;
   }
   if ( !System_Math_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(System_Math_TypeInfo);
@@ -2327,10 +2333,10 @@ LABEL_32:
     v19 = -2147500000.0;
   else
     v19 = (float)(int)v15;
-  if ( !byte_4C3E100 )
+  if ( !byte_4C51E80 )
   {
-    sub_1C37058(&System_Math_TypeInfo);
-    byte_4C3E100 = 1;
+    sub_1C3E564(&System_Math_TypeInfo);
+    byte_4C51E80 = 1;
   }
   v20 = v11 + v18;
   if ( !System_Math_TypeInfo->_2.cctor_finished )
@@ -2364,10 +2370,10 @@ LABEL_32:
   else
     v27 = v24;
 LABEL_49:
-  if ( !byte_4C3E100 )
+  if ( !byte_4C51E80 )
   {
-    sub_1C37058(&System_Math_TypeInfo);
-    byte_4C3E100 = 1;
+    sub_1C3E564(&System_Math_TypeInfo);
+    byte_4C51E80 = 1;
   }
   v28 = v19 + (float)(v21 - v19);
   if ( !System_Math_TypeInfo->_2.cctor_finished )
@@ -2417,7 +2423,7 @@ LABEL_63:
 }
 
 
-UnityEngine_Rect_o NGUIMath__MakePixelPerfect_49297796(
+UnityEngine_Rect_o NGUIMath__MakePixelPerfect_49371036(
         UnityEngine_Rect_o rect,
         int32_t width,
         int32_t height,
@@ -2468,10 +2474,10 @@ UnityEngine_Rect_o NGUIMath__MakePixelPerfect_49297796(
   m_YMin = v43.fields.m_YMin;
   m_Width = v43.fields.m_Width;
   m_Height = v43.fields.m_Height;
-  if ( !byte_4C3E100 )
+  if ( !byte_4C51E80 )
   {
-    sub_1C37058(&System_Math_TypeInfo);
-    byte_4C3E100 = 1;
+    sub_1C3E564(&System_Math_TypeInfo);
+    byte_4C51E80 = 1;
   }
   if ( !System_Math_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(System_Math_TypeInfo);
@@ -2505,10 +2511,10 @@ LABEL_15:
     v16 = -2147500000.0;
   else
     v16 = (float)(int)v13;
-  if ( !byte_4C3E100 )
+  if ( !byte_4C51E80 )
   {
-    sub_1C37058(&System_Math_TypeInfo);
-    byte_4C3E100 = 1;
+    sub_1C3E564(&System_Math_TypeInfo);
+    byte_4C51E80 = 1;
   }
   if ( !System_Math_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(System_Math_TypeInfo);
@@ -2544,10 +2550,10 @@ LABEL_32:
     v24 = -2147500000.0;
   else
     v24 = (float)(int)v20;
-  if ( !byte_4C3E100 )
+  if ( !byte_4C51E80 )
   {
-    sub_1C37058(&System_Math_TypeInfo);
-    byte_4C3E100 = 1;
+    sub_1C3E564(&System_Math_TypeInfo);
+    byte_4C51E80 = 1;
   }
   v25 = v16 + v23;
   if ( !System_Math_TypeInfo->_2.cctor_finished )
@@ -2581,10 +2587,10 @@ LABEL_32:
   else
     v32 = v29;
 LABEL_49:
-  if ( !byte_4C3E100 )
+  if ( !byte_4C51E80 )
   {
-    sub_1C37058(&System_Math_TypeInfo);
-    byte_4C3E100 = 1;
+    sub_1C3E564(&System_Math_TypeInfo);
+    byte_4C51E80 = 1;
   }
   v33 = v24 + (float)(v26 - v24);
   if ( !System_Math_TypeInfo->_2.cctor_finished )
@@ -2656,15 +2662,15 @@ void NGUIMath__MoveRect(UIRect_o *rect, float x, float y, const MethodInfo *meth
   struct UIRect_AnchorPoint_o *v28; // x8
   UnityEngine_Vector3_o localPosition; // 0:s0.4,4:s1.4,8:s2.4
 
-  if ( (byte_4C476BB & 1) == 0 )
+  if ( (byte_4C5B4B2 & 1) == 0 )
   {
-    sub_1C37058(&UnityEngine_Object_TypeInfo);
-    byte_4C476BB = 1;
+    sub_1C3E564(&UnityEngine_Object_TypeInfo);
+    byte_4C5B4B2 = 1;
   }
-  if ( !byte_4C3C920 )
+  if ( !byte_4C506A0 )
   {
-    sub_1C37058(&System_Math_TypeInfo);
-    byte_4C3C920 = 1;
+    sub_1C3E564(&System_Math_TypeInfo);
+    byte_4C506A0 = 1;
   }
   v7 = x + 0.5;
   if ( System_Math_TypeInfo->_2.cctor_finished )
@@ -2674,7 +2680,7 @@ void NGUIMath__MoveRect(UIRect_o *rect, float x, float y, const MethodInfo *meth
   else
   {
     j_il2cpp_runtime_class_init_0(System_Math_TypeInfo);
-    v8 = (unsigned __int8)byte_4C3C920;
+    v8 = (unsigned __int8)byte_4C506A0;
   }
   v9 = vcvtms_s32_f32(v7);
   if ( floorf(v7) == INFINITY )
@@ -2683,8 +2689,8 @@ void NGUIMath__MoveRect(UIRect_o *rect, float x, float y, const MethodInfo *meth
     v10 = v9;
   if ( !v8 )
   {
-    sub_1C37058(&System_Math_TypeInfo);
-    byte_4C3C920 = 1;
+    sub_1C3E564(&System_Math_TypeInfo);
+    byte_4C506A0 = 1;
   }
   cachedTransform = (UnityEngine_Transform_o *)System_Math_TypeInfo;
   v12 = y + 0.5;
@@ -2758,7 +2764,7 @@ void NGUIMath__MoveRect(UIRect_o *rect, float x, float y, const MethodInfo *meth
   topAnchor = rect->fields.topAnchor;
   if ( !topAnchor )
 LABEL_48:
-    sub_1C372B4(cachedTransform);
+    sub_1C3E7C0(cachedTransform, method);
   v27 = (UnityEngine_Object_o *)topAnchor->fields.target;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
@@ -2813,20 +2819,20 @@ void NGUIMath__OverlayPosition(
   y = worldPos.fields.y;
   x = worldPos.fields.x;
   v10 = trans;
-  if ( (byte_4C476C1 & 1) == 0 )
+  if ( (byte_4C5B4B8 & 1) == 0 )
   {
-    trans = (UnityEngine_Transform_o *)sub_1C37058(&UnityEngine_Object_TypeInfo);
-    byte_4C476C1 = 1;
+    trans = (UnityEngine_Transform_o *)sub_1C3E564(&UnityEngine_Object_TypeInfo);
+    byte_4C5B4B8 = 1;
   }
   if ( !worldCam )
     goto LABEL_12;
   v15.fields.x = x;
   v15.fields.y = y;
   v15.fields.z = z;
-  v16 = UnityEngine_Camera__WorldToViewportPoint_71073028(worldCam, v15, 0);
+  v16 = UnityEngine_Camera__WorldToViewportPoint_71147840(worldCam, v15, 0);
   if ( !myCam )
     goto LABEL_12;
-  v17 = UnityEngine_Camera__ViewportToWorldPoint_71073036(myCam, v16, 0);
+  v17 = UnityEngine_Camera__ViewportToWorldPoint_71147848(myCam, v16, 0);
   if ( !v10 )
     goto LABEL_12;
   v11 = v17.fields.x;
@@ -2850,7 +2856,7 @@ void NGUIMath__OverlayPosition(
       goto LABEL_11;
     }
 LABEL_12:
-    sub_1C372B4(trans);
+    sub_1C3E7C0(trans, worldCam);
   }
 LABEL_11:
   v20.fields.x = v11;
@@ -2860,7 +2866,7 @@ LABEL_11:
 }
 
 
-void NGUIMath__OverlayPosition_49309172(
+void NGUIMath__OverlayPosition_49382412(
         UnityEngine_Transform_o *trans,
         UnityEngine_Vector3_o worldPos,
         UnityEngine_Camera_o *worldCam,
@@ -2879,14 +2885,14 @@ void NGUIMath__OverlayPosition_49309172(
   y = worldPos.fields.y;
   x = worldPos.fields.x;
   v8 = (UnityEngine_Component_o *)trans;
-  if ( (byte_4C476C2 & 1) == 0 )
+  if ( (byte_4C5B4B9 & 1) == 0 )
   {
-    sub_1C37058(&NGUITools_TypeInfo);
-    trans = (UnityEngine_Transform_o *)sub_1C37058(&UnityEngine_Object_TypeInfo);
-    byte_4C476C2 = 1;
+    sub_1C3E564(&NGUITools_TypeInfo);
+    trans = (UnityEngine_Transform_o *)sub_1C3E564(&UnityEngine_Object_TypeInfo);
+    byte_4C5B4B9 = 1;
   }
   if ( !v8 || (trans = (UnityEngine_Transform_o *)UnityEngine_Component__get_gameObject(v8, 0)) == 0 )
-    sub_1C372B4(trans);
+    sub_1C3E7C0(trans, worldCam);
   layer = UnityEngine_GameObject__get_layer((UnityEngine_GameObject_o *)trans, 0);
   if ( !NGUITools_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NGUITools_TypeInfo);
@@ -2903,7 +2909,7 @@ void NGUIMath__OverlayPosition_49309172(
 }
 
 
-void NGUIMath__OverlayPosition_49309456(
+void NGUIMath__OverlayPosition_49382696(
         UnityEngine_Transform_o *trans,
         UnityEngine_Transform_o *target,
         const MethodInfo *method)
@@ -2917,11 +2923,11 @@ void NGUIMath__OverlayPosition_49309456(
   UnityEngine_Vector3_o position; // 0:s0.4,4:s1.4,8:s2.4
 
   v4 = (UnityEngine_Component_o *)trans;
-  if ( (byte_4C476C3 & 1) == 0 )
+  if ( (byte_4C5B4BA & 1) == 0 )
   {
-    sub_1C37058(&NGUITools_TypeInfo);
-    trans = (UnityEngine_Transform_o *)sub_1C37058(&UnityEngine_Object_TypeInfo);
-    byte_4C476C3 = 1;
+    sub_1C3E564(&NGUITools_TypeInfo);
+    trans = (UnityEngine_Transform_o *)sub_1C3E564(&UnityEngine_Object_TypeInfo);
+    byte_4C5B4BA = 1;
   }
   if ( !v4 )
     goto LABEL_17;
@@ -2937,7 +2943,7 @@ void NGUIMath__OverlayPosition_49309456(
         (trans = (UnityEngine_Transform_o *)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)target, 0)) == 0) )
   {
 LABEL_17:
-    sub_1C372B4(trans);
+    sub_1C3E7C0(trans, target);
   }
   v7 = UnityEngine_GameObject__get_layer((UnityEngine_GameObject_o *)trans, 0);
   CameraForLayer = NGUITools__FindCameraForLayer(v7, 0);
@@ -2981,11 +2987,12 @@ void NGUIMath__ResizeWidget(
 {
   const MethodInfo *v7; // x6
 
-  NGUIMath__ResizeWidget_49303972(w, pivot, x, y, 2, 2, 100000, 100000, v7);
+  NGUIMath__ResizeWidget_49377212(w, pivot, x, y, 2, 2, 100000, 100000, v7);
 }
 
 
-void NGUIMath__ResizeWidget_49303972(
+// local variable allocation has failed, the output may be wrong!
+void NGUIMath__ResizeWidget_49377212(
         UIWidget_o *w,
         int32_t pivot,
         float x,
@@ -3043,7 +3050,7 @@ void NGUIMath__ResizeWidget_49303972(
         v46.fields.z = 0.0;
         v46.fields.x = x;
         v46.fields.y = y;
-        v45 = UnityEngine_Quaternion__op_Multiply_71206052(v48, v46, 0);
+        v45 = UnityEngine_Quaternion__op_Multiply_71280864(v48, v46, 0);
         v24 = v45.fields.x;
         v25 = v45.fields.y;
         switch ( pivot )
@@ -3108,15 +3115,15 @@ LABEL_52:
       }
     }
 LABEL_54:
-    sub_1C372B4(w);
+    sub_1C3E7C0(w, *(_QWORD *)&pivot);
   }
   if ( !w )
     goto LABEL_54;
   mWidth = (float)w->fields.mWidth;
-  if ( !byte_4C3E100 )
+  if ( !byte_4C51E80 )
   {
-    sub_1C37058(&System_Math_TypeInfo);
-    byte_4C3E100 = 1;
+    sub_1C3E564(&System_Math_TypeInfo);
+    byte_4C51E80 = 1;
   }
   v15 = x - mWidth;
   if ( !System_Math_TypeInfo->_2.cctor_finished )
@@ -3150,10 +3157,10 @@ LABEL_54:
     v29 = v18;
 LABEL_21:
   mHeight = (float)v13->fields.mHeight;
-  if ( !byte_4C3E100 )
+  if ( !byte_4C51E80 )
   {
-    sub_1C37058(&System_Math_TypeInfo);
-    byte_4C3E100 = 1;
+    sub_1C3E564(&System_Math_TypeInfo);
+    byte_4C51E80 = 1;
   }
   v31 = y - mHeight;
   if ( !System_Math_TypeInfo->_2.cctor_finished )
@@ -3202,7 +3209,7 @@ LABEL_35:
     v42 = minWidth;
     v43 = minHeight;
 LABEL_53:
-    NGUIMath__AdjustWidget_49304876(v27, v45.fields.x, v45.fields.y, v26, v39, v42, v43, v40, v41, v23);
+    NGUIMath__AdjustWidget_49378116(v27, v45.fields.x, v45.fields.y, v26, v39, v42, v43, v40, v41, v23);
   }
 }
 
@@ -3253,13 +3260,13 @@ UnityEngine_Vector2_o NGUIMath__ScreenToParentPixels(
   v3 = (UnityEngine_Component_o *)relativeTo;
   y = pos.fields.y;
   x = pos.fields.x;
-  if ( (byte_4C476BF & 1) == 0 )
+  if ( (byte_4C5B4B6 & 1) == 0 )
   {
-    sub_1C37058(&UnityEngine_Debug_TypeInfo);
-    sub_1C37058(&NGUITools_TypeInfo);
-    sub_1C37058(&UnityEngine_Object_TypeInfo);
-    relativeTo = (UnityEngine_Transform_o *)sub_1C37058(&StringLiteral_9465/*"No camera found for layer "*/);
-    byte_4C476BF = 1;
+    sub_1C3E564(&UnityEngine_Debug_TypeInfo);
+    sub_1C3E564(&NGUITools_TypeInfo);
+    sub_1C3E564(&UnityEngine_Object_TypeInfo);
+    relativeTo = (UnityEngine_Transform_o *)sub_1C3E564(&StringLiteral_9465/*"No camera found for layer "*/);
+    byte_4C5B4B6 = 1;
   }
   if ( !v3 )
     goto LABEL_24;
@@ -3282,7 +3289,7 @@ UnityEngine_Vector2_o NGUIMath__ScreenToParentPixels(
   if ( ((unsigned __int8)relativeTo & 1) != 0 )
   {
     v9 = System_Int32__ToString((int32_t)&v14, 0);
-    v10 = (Il2CppObject *)System_String__Concat_63561656((System_String_o *)StringLiteral_9465/*"No camera found for layer "*/, v9, 0);
+    v10 = (Il2CppObject *)System_String__Concat_63636468((System_String_o *)StringLiteral_9465/*"No camera found for layer "*/, v9, 0);
     if ( !UnityEngine_Debug_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(UnityEngine_Debug_TypeInfo);
     UnityEngine_Debug__LogWarning(v10, 0);
@@ -3290,11 +3297,11 @@ UnityEngine_Vector2_o NGUIMath__ScreenToParentPixels(
   }
   if ( !CameraForLayer )
 LABEL_24:
-    sub_1C372B4(relativeTo);
+    sub_1C3E7C0(relativeTo, method);
   v16.fields.z = 0.0;
   v16.fields.x = x;
   v16.fields.y = y;
-  v17 = UnityEngine_Camera__ScreenToWorldPoint_71073044((UnityEngine_Camera_o *)CameraForLayer, v16, 0);
+  v17 = UnityEngine_Camera__ScreenToWorldPoint_71147856((UnityEngine_Camera_o *)CameraForLayer, v16, 0);
   x = v17.fields.x;
   y = v17.fields.y;
   z = v17.fields.z;
@@ -3346,13 +3353,13 @@ UnityEngine_Vector2_o NGUIMath__ScreenToPixels(
   v3 = (UnityEngine_Component_o *)relativeTo;
   y = pos.fields.y;
   x = pos.fields.x;
-  if ( (byte_4C476BE & 1) == 0 )
+  if ( (byte_4C5B4B5 & 1) == 0 )
   {
-    sub_1C37058(&UnityEngine_Debug_TypeInfo);
-    sub_1C37058(&NGUITools_TypeInfo);
-    sub_1C37058(&UnityEngine_Object_TypeInfo);
-    relativeTo = (UnityEngine_Transform_o *)sub_1C37058(&StringLiteral_9465/*"No camera found for layer "*/);
-    byte_4C476BE = 1;
+    sub_1C3E564(&UnityEngine_Debug_TypeInfo);
+    sub_1C3E564(&NGUITools_TypeInfo);
+    sub_1C3E564(&UnityEngine_Object_TypeInfo);
+    relativeTo = (UnityEngine_Transform_o *)sub_1C3E564(&StringLiteral_9465/*"No camera found for layer "*/);
+    byte_4C5B4B5 = 1;
   }
   if ( !v3 )
     goto LABEL_16;
@@ -3373,17 +3380,17 @@ UnityEngine_Vector2_o NGUIMath__ScreenToPixels(
       v13.fields.z = 0.0;
       v13.fields.x = x;
       v13.fields.y = y;
-      v14 = UnityEngine_Camera__ScreenToWorldPoint_71073044((UnityEngine_Camera_o *)CameraForLayer, v13, 0);
+      v14 = UnityEngine_Camera__ScreenToWorldPoint_71147856((UnityEngine_Camera_o *)CameraForLayer, v13, 0);
       v15 = UnityEngine_Transform__InverseTransformPoint((UnityEngine_Transform_o *)v3, v14, 0);
       x = v15.fields.x;
       y = v15.fields.y;
       goto LABEL_15;
     }
 LABEL_16:
-    sub_1C372B4(relativeTo);
+    sub_1C3E7C0(relativeTo, method);
   }
   v7 = System_Int32__ToString((int32_t)&layer, 0);
-  v8 = (Il2CppObject *)System_String__Concat_63561656((System_String_o *)StringLiteral_9465/*"No camera found for layer "*/, v7, 0);
+  v8 = (Il2CppObject *)System_String__Concat_63636468((System_String_o *)StringLiteral_9465/*"No camera found for layer "*/, v7, 0);
   if ( !UnityEngine_Debug_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Debug_TypeInfo);
   UnityEngine_Debug__LogWarning(v8, 0);
@@ -3428,10 +3435,10 @@ UnityEngine_Vector3_o NGUIMath__SpringDampen(
   UnityEngine_Vector3_o result; // 0:s0.4,4:s1.4,8:s2.4
 
   v6 = fminf(deltaTime, 1.0);
-  if ( !byte_4C3E100 )
+  if ( !byte_4C51E80 )
   {
-    sub_1C37058(&System_Math_TypeInfo);
-    byte_4C3E100 = 1;
+    sub_1C3E564(&System_Math_TypeInfo);
+    byte_4C51E80 = 1;
   }
   v7 = strength * -0.001;
   v8 = v6 * 1000.0;
@@ -3489,7 +3496,7 @@ LABEL_15:
 }
 
 
-UnityEngine_Vector2_o NGUIMath__SpringDampen_49301232(
+UnityEngine_Vector2_o NGUIMath__SpringDampen_49374472(
         UnityEngine_Vector2_o *velocity,
         float strength,
         float deltaTime,
@@ -3517,10 +3524,10 @@ UnityEngine_Vector2_o NGUIMath__SpringDampen_49301232(
   UnityEngine_Vector2_o result; // 0:s0.4,4:s1.4
 
   v6 = fminf(deltaTime, 1.0);
-  if ( !byte_4C3E100 )
+  if ( !byte_4C51E80 )
   {
-    sub_1C37058(&System_Math_TypeInfo);
-    byte_4C3E100 = 1;
+    sub_1C3E564(&System_Math_TypeInfo);
+    byte_4C51E80 = 1;
   }
   v7 = strength * -0.001;
   v8 = v6 * 1000.0;
@@ -3587,10 +3594,10 @@ float NGUIMath__SpringLerp(float strength, float deltaTime, const MethodInfo *me
   double iptr; // [xsp+8h] [xbp-28h] BYREF
 
   v4 = fminf(deltaTime, 1.0);
-  if ( !byte_4C3E100 )
+  if ( !byte_4C51E80 )
   {
-    sub_1C37058(&System_Math_TypeInfo);
-    byte_4C3E100 = 1;
+    sub_1C3E564(&System_Math_TypeInfo);
+    byte_4C51E80 = 1;
   }
   v5 = v4 * 1000.0;
   if ( !System_Math_TypeInfo->_2.cctor_finished )
@@ -3641,7 +3648,7 @@ LABEL_15:
 }
 
 
-float NGUIMath__SpringLerp_49238604(float from, float to, float strength, float deltaTime, const MethodInfo *method)
+float NGUIMath__SpringLerp_49311844(float from, float to, float strength, float deltaTime, const MethodInfo *method)
 {
   float v8; // s11
   float v9; // s12
@@ -3656,10 +3663,10 @@ float NGUIMath__SpringLerp_49238604(float from, float to, float strength, float 
   double iptr; // [xsp+8h] [xbp-38h] BYREF
 
   v8 = fminf(deltaTime, 1.0);
-  if ( !byte_4C3E100 )
+  if ( !byte_4C51E80 )
   {
-    sub_1C37058(&System_Math_TypeInfo);
-    byte_4C3E100 = 1;
+    sub_1C3E564(&System_Math_TypeInfo);
+    byte_4C51E80 = 1;
   }
   v9 = v8 * 1000.0;
   if ( !System_Math_TypeInfo->_2.cctor_finished )
@@ -3711,7 +3718,7 @@ LABEL_15:
 }
 
 
-UnityEngine_Vector2_o NGUIMath__SpringLerp_49301904(
+UnityEngine_Vector2_o NGUIMath__SpringLerp_49375144(
         UnityEngine_Vector2_o from,
         UnityEngine_Vector2_o to,
         float strength,
@@ -3748,7 +3755,7 @@ UnityEngine_Vector2_o NGUIMath__SpringLerp_49301904(
 }
 
 
-UnityEngine_Vector3_o NGUIMath__SpringLerp_49302004(
+UnityEngine_Vector3_o NGUIMath__SpringLerp_49375244(
         UnityEngine_Vector3_o from,
         UnityEngine_Vector3_o to,
         float strength,
@@ -3794,7 +3801,7 @@ UnityEngine_Vector3_o NGUIMath__SpringLerp_49302004(
 }
 
 
-UnityEngine_Quaternion_o NGUIMath__SpringLerp_49302132(
+UnityEngine_Quaternion_o NGUIMath__SpringLerp_49375372(
         UnityEngine_Quaternion_o from,
         UnityEngine_Quaternion_o to,
         float strength,
@@ -3865,20 +3872,20 @@ UnityEngine_Vector3_o NGUIMath__WorldToLocalPoint(
   z = worldPos.fields.z;
   y = worldPos.fields.y;
   x = worldPos.fields.x;
-  if ( (byte_4C476C0 & 1) == 0 )
+  if ( (byte_4C5B4B7 & 1) == 0 )
   {
-    worldCam = (UnityEngine_Camera_o *)sub_1C37058(&UnityEngine_Object_TypeInfo);
-    byte_4C476C0 = 1;
+    worldCam = (UnityEngine_Camera_o *)sub_1C3E564(&UnityEngine_Object_TypeInfo);
+    byte_4C5B4B7 = 1;
   }
   if ( !v7 )
     goto LABEL_15;
   v18.fields.x = x;
   v18.fields.y = y;
   v18.fields.z = z;
-  v19 = UnityEngine_Camera__WorldToViewportPoint_71073028(v7, v18, 0);
+  v19 = UnityEngine_Camera__WorldToViewportPoint_71147840(v7, v18, 0);
   if ( !uiCam )
     goto LABEL_15;
-  v20 = UnityEngine_Camera__ViewportToWorldPoint_71073036(uiCam, v19, 0);
+  v20 = UnityEngine_Camera__ViewportToWorldPoint_71147848(uiCam, v19, 0);
   v11 = v20.fields.x;
   v12 = v20.fields.y;
   v13 = v20.fields.z;
@@ -3907,7 +3914,7 @@ UnityEngine_Vector3_o NGUIMath__WorldToLocalPoint(
         goto LABEL_14;
       }
 LABEL_15:
-      sub_1C372B4(worldCam);
+      sub_1C3E7C0(worldCam, uiCam);
     }
   }
 LABEL_14:
@@ -3926,10 +3933,10 @@ float NGUIMath__Wrap01(float val, const MethodInfo *method)
   int v3; // w8
   float v4; // s0
 
-  if ( !byte_4C3C920 )
+  if ( !byte_4C506A0 )
   {
-    sub_1C37058(&System_Math_TypeInfo);
-    byte_4C3C920 = 1;
+    sub_1C3E564(&System_Math_TypeInfo);
+    byte_4C506A0 = 1;
   }
   if ( !System_Math_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(System_Math_TypeInfo);

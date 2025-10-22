@@ -28,11 +28,12 @@ void SwitchActiveBaseConditionComponent__SwitchActive(
 {
   UnityEngine_GameObject_o *gameObject; // x21
   __int64 v6; // x0
+  __int64 v7; // x1
 
-  if ( (byte_4C46761 & 1) == 0 )
+  if ( (byte_4C5A558 & 1) == 0 )
   {
-    sub_1C37058(&UnityEngine_Object_TypeInfo);
-    byte_4C46761 = 1;
+    sub_1C3E564(&UnityEngine_Object_TypeInfo);
+    byte_4C5A558 = 1;
   }
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
@@ -44,7 +45,7 @@ void SwitchActiveBaseConditionComponent__SwitchActive(
            data,
            this->klass->vtable._4_IsSatisfyCond.method);
     if ( !gameObject )
-      sub_1C372B4(v6);
+      sub_1C3E7C0(v6, v7);
     UnityEngine_GameObject__SetActive(gameObject, v6 & 1, 0);
   }
 }

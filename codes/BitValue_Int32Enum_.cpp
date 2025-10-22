@@ -1,15 +1,16 @@
-void BitValue_Int32Enum____ctor(BitValue_T__o *this, System_Func_T__int__o *func, const MethodInfo_332159C *method)
+void BitValue_Int32Enum____ctor(BitValue_T__o *this, System_Func_T__int__o *func, const MethodInfo_3333454 *method)
 {
   int32_t v5; // w2
   const MethodInfo *v6; // x3
 
   System_Object___ctor((Il2CppObject *)this, 0);
   this->fields.convertFunc = func;
-  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.convertFunc, (int32_t)func, v5, v6);
+  sub_1C3E508((CGThumbnailListItem_o *)&this->fields.convertFunc, (int32_t)func, v5, v6);
 }
 
 
-bool BitValue_Int32Enum___Check(BitValue_T__o *this, int32_t val, const MethodInfo_332164C *method)
+// local variable allocation has failed, the output may be wrong!
+bool BitValue_Int32Enum___Check(BitValue_T__o *this, int32_t val, const MethodInfo_3333504 *method)
 {
   struct System_Func_T__int__o *convertFunc; // x8
   int32_t value; // w19
@@ -18,7 +19,7 @@ bool BitValue_Int32Enum___Check(BitValue_T__o *this, int32_t val, const MethodIn
 
   convertFunc = this->fields.convertFunc;
   if ( !convertFunc )
-    sub_1C372B4(this);
+    sub_1C3E7C0(this, *(_QWORD *)&val);
   value = this->fields.value;
   v5 = ((__int64 (__fastcall *)(intptr_t, int32_t, intptr_t))convertFunc->fields.invoke_impl)(
          convertFunc->fields.method_code,
@@ -28,9 +29,9 @@ bool BitValue_Int32Enum___Check(BitValue_T__o *this, int32_t val, const MethodIn
 }
 
 
-bool BitValue_Int32Enum___CheckAndOff(BitValue_T__o *this, int32_t val, const MethodInfo_3321680 *method)
+bool BitValue_Int32Enum___CheckAndOff(BitValue_T__o *this, int32_t val, const MethodInfo_3333538 *method)
 {
-  const MethodInfo_3321680 *v3; // x19
+  const MethodInfo_3333538 *v3; // x19
   bool v6; // w0
   BitValue_T__c *klass; // x8
 
@@ -38,22 +39,23 @@ bool BitValue_Int32Enum___CheckAndOff(BitValue_T__o *this, int32_t val, const Me
   v6 = BitValue_Int32Enum___Check(
          this,
          val,
-         (const MethodInfo_332164C *)method->klass->rgctx_data->_4_BitValue_T__Check);
+         (const MethodInfo_3333504 *)method->klass->rgctx_data->_4_BitValue_T__Check);
   klass = v3->klass;
   LOBYTE(v3) = v6;
-  BitValue_Int32Enum___Off(this, val, (const MethodInfo_332160C *)klass->rgctx_data->_5_BitValue_T__Off);
+  BitValue_Int32Enum___Off(this, val, (const MethodInfo_33334C4 *)klass->rgctx_data->_5_BitValue_T__Off);
   return (unsigned __int8)v3 & 1;
 }
 
 
-void BitValue_Int32Enum___Off(BitValue_T__o *this, int32_t val, const MethodInfo_332160C *method)
+// local variable allocation has failed, the output may be wrong!
+void BitValue_Int32Enum___Off(BitValue_T__o *this, int32_t val, const MethodInfo_33334C4 *method)
 {
   struct System_Func_T__int__o *convertFunc; // x8
   int32_t value; // w20
 
   convertFunc = this->fields.convertFunc;
   if ( !convertFunc )
-    sub_1C372B4(this);
+    sub_1C3E7C0(this, *(_QWORD *)&val);
   value = this->fields.value;
   this->fields.value = value
                      & ~((unsigned int (__fastcall *)(intptr_t, int32_t, intptr_t))convertFunc->fields.invoke_impl)(
@@ -63,14 +65,15 @@ void BitValue_Int32Enum___Off(BitValue_T__o *this, int32_t val, const MethodInfo
 }
 
 
-void BitValue_Int32Enum___On(BitValue_T__o *this, int32_t val, const MethodInfo_33215CC *method)
+// local variable allocation has failed, the output may be wrong!
+void BitValue_Int32Enum___On(BitValue_T__o *this, int32_t val, const MethodInfo_3333484 *method)
 {
   struct System_Func_T__int__o *convertFunc; // x8
   int32_t value; // w20
 
   convertFunc = this->fields.convertFunc;
   if ( !convertFunc )
-    sub_1C372B4(this);
+    sub_1C3E7C0(this, *(_QWORD *)&val);
   value = this->fields.value;
   this->fields.value = ((__int64 (__fastcall *)(intptr_t, int32_t, intptr_t))convertFunc->fields.invoke_impl)(
                          convertFunc->fields.method_code,
@@ -80,7 +83,7 @@ void BitValue_Int32Enum___On(BitValue_T__o *this, int32_t val, const MethodInfo_
 }
 
 
-void BitValue_Int32Enum___Reset(BitValue_T__o *this, const MethodInfo_33216D0 *method)
+void BitValue_Int32Enum___Reset(BitValue_T__o *this, const MethodInfo_3333588 *method)
 {
   this->fields.value = 0;
 }

@@ -8,29 +8,29 @@ void UserServantLeaderEntity___ctor(UserServantLeaderEntity_o *this, const Metho
   int32_t v8; // w2
   const MethodInfo *v9; // x3
 
-  if ( (byte_4C4400A & 1) == 0 )
+  if ( (byte_4C57DD2 & 1) == 0 )
   {
-    sub_1C37058(&Method_DataEntityBase_string___ctor__);
-    byte_4C4400A = 1;
+    sub_1C3E564(&Method_DataEntityBase_string___ctor__);
+    byte_4C57DD2 = 1;
   }
   this->fields.supportDeckId = 1;
   DataEntityBase_object____ctor(
     (DataEntityBase_PKType__o *)this,
-    (const MethodInfo_339EC34 *)Method_DataEntityBase_string___ctor__);
+    (const MethodInfo_33B0AEC *)Method_DataEntityBase_string___ctor__);
   this->fields.userServantEntity = 0;
-  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields, 0, v3, v4);
+  sub_1C3E508((CGThumbnailListItem_o *)&this->fields, 0, v3, v4);
   this->fields.servantLeaderInfo = 0;
-  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.servantLeaderInfo, 0, v5, v6);
+  sub_1C3E508((CGThumbnailListItem_o *)&this->fields.servantLeaderInfo, 0, v5, v6);
   this->fields.supportDeckId = 1;
   this->fields.equipTarget1 = 0;
   p_equipTarget1 = &this->fields.equipTarget1;
   *(struct EquipTargetInfo_o **)((char *)p_equipTarget1 + 28) = 0;
   *(struct EquipTargetInfo_o **)((char *)p_equipTarget1 + 20) = 0;
-  sub_1C36FFC((CGThumbnailListItem_o *)p_equipTarget1, 0, v8, v9);
+  sub_1C3E508((CGThumbnailListItem_o *)p_equipTarget1, 0, v8, v9);
 }
 
 
-void UserServantLeaderEntity___ctor_43213376(
+void UserServantLeaderEntity___ctor_43268528(
         UserServantLeaderEntity_o *this,
         int32_t classPos,
         int32_t supportDeckId,
@@ -44,64 +44,65 @@ void UserServantLeaderEntity___ctor_43213376(
   int32_t v12; // w2
   const MethodInfo *v13; // x3
 
-  if ( (byte_4C4400B & 1) == 0 )
+  if ( (byte_4C57DD3 & 1) == 0 )
   {
-    sub_1C37058(&Method_DataEntityBase_string___ctor__);
-    byte_4C4400B = 1;
+    sub_1C3E564(&Method_DataEntityBase_string___ctor__);
+    byte_4C57DD3 = 1;
   }
   this->fields.supportDeckId = 1;
   DataEntityBase_object____ctor(
     (DataEntityBase_PKType__o *)this,
-    (const MethodInfo_339EC34 *)Method_DataEntityBase_string___ctor__);
+    (const MethodInfo_33B0AEC *)Method_DataEntityBase_string___ctor__);
   this->fields.userServantEntity = 0;
-  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields, 0, v7, v8);
+  sub_1C3E508((CGThumbnailListItem_o *)&this->fields, 0, v7, v8);
   this->fields.servantLeaderInfo = 0;
-  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.servantLeaderInfo, 0, v9, v10);
+  sub_1C3E508((CGThumbnailListItem_o *)&this->fields.servantLeaderInfo, 0, v9, v10);
   this->fields.supportDeckId = supportDeckId;
   this->fields.equipTarget1 = 0;
   p_equipTarget1 = &this->fields.equipTarget1;
   *((_DWORD *)p_equipTarget1 + 8) = 0;
   p_equipTarget1[3] = 0;
   *((_DWORD *)p_equipTarget1 + 5) = classPos;
-  sub_1C36FFC((CGThumbnailListItem_o *)p_equipTarget1, 0, v12, v13);
+  sub_1C3E508((CGThumbnailListItem_o *)p_equipTarget1, 0, v12, v13);
 }
 
 
-void UserServantLeaderEntity___ctor_43213536(
+void UserServantLeaderEntity___ctor_43268688(
         UserServantLeaderEntity_o *this,
         UserServantLeaderEntity_o *src,
         const MethodInfo *method)
 {
   __int64 v5; // x0
-  int32_t v6; // w2
-  const MethodInfo *v7; // x3
+  __int64 v6; // x1
+  int32_t v7; // w2
+  const MethodInfo *v8; // x3
   struct UserServantEntity_o *userServantEntity; // x1
   struct ServantLeaderInfo_o *servantLeaderInfo; // x1
-  int32_t v10; // w2
-  const MethodInfo *v11; // x3
-  const MethodInfo *v12; // x2
+  int32_t v11; // w2
+  const MethodInfo *v12; // x3
+  const MethodInfo *v13; // x2
 
-  if ( (byte_4C4400C & 1) == 0 )
+  if ( (byte_4C57DD4 & 1) == 0 )
   {
-    sub_1C37058(&Method_DataEntityBase_string___ctor__);
-    byte_4C4400C = 1;
+    sub_1C3E564(&Method_DataEntityBase_string___ctor__);
+    byte_4C57DD4 = 1;
   }
   this->fields.supportDeckId = 1;
   DataEntityBase_object____ctor(
     (DataEntityBase_PKType__o *)this,
-    (const MethodInfo_339EC34 *)Method_DataEntityBase_string___ctor__);
+    (const MethodInfo_33B0AEC *)Method_DataEntityBase_string___ctor__);
   if ( !src )
-    sub_1C372B4(v5);
+    sub_1C3E7C0(v5, v6);
   userServantEntity = src->fields.userServantEntity;
   this->fields.userServantEntity = userServantEntity;
-  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields, (int32_t)userServantEntity, v6, v7);
+  sub_1C3E508((CGThumbnailListItem_o *)&this->fields, (int32_t)userServantEntity, v7, v8);
   servantLeaderInfo = src->fields.servantLeaderInfo;
   this->fields.servantLeaderInfo = servantLeaderInfo;
-  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.servantLeaderInfo, (int32_t)servantLeaderInfo, v10, v11);
+  sub_1C3E508((CGThumbnailListItem_o *)&this->fields.servantLeaderInfo, (int32_t)servantLeaderInfo, v11, v12);
   this->fields.svtId = src->fields.svtId;
   this->fields.userSvtId = src->fields.userSvtId;
   *(_QWORD *)&this->fields.supportDeckId = *(_QWORD *)&src->fields.supportDeckId;
-  UserServantLeaderEntity__setEquipTargetInfo(this, src->fields.equipTarget1, v12);
+  UserServantLeaderEntity__setEquipTargetInfo(this, src->fields.equipTarget1, v13);
 }
 
 
@@ -111,16 +112,16 @@ System_String_o *UserServantLeaderEntity__CreatePK(
         int32_t supportDeckId,
         const MethodInfo *method)
 {
-  if ( (byte_4C44009 & 1) == 0 )
+  if ( (byte_4C57DD1 & 1) == 0 )
   {
-    sub_1C37058(&Method_DataEntityBase_CreateMultiplePK_long__int__int___);
-    byte_4C44009 = 1;
+    sub_1C3E564(&Method_DataEntityBase_CreateMultiplePK_long__int__int___);
+    byte_4C57DD1 = 1;
   }
   return DataEntityBase__CreateMultiplePK_long__int__int_(
            userId,
            classId,
            supportDeckId,
-           (const MethodInfo_30E642C *)Method_DataEntityBase_CreateMultiplePK_long__int__int___);
+           (const MethodInfo_30F8244 *)Method_DataEntityBase_CreateMultiplePK_long__int__int___);
 }
 
 
@@ -147,10 +148,10 @@ int64_t UserServantLeaderEntity__getEquipUserSvtId(UserServantLeaderEntity_o *th
   CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_o v6; // [xsp+0h] [xbp-60h] BYREF
   CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_o v7; // [xsp+20h] [xbp-40h]
 
-  if ( (byte_4C4400D & 1) == 0 )
+  if ( (byte_4C57DD5 & 1) == 0 )
   {
-    sub_1C37058(&CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo);
-    byte_4C4400D = 1;
+    sub_1C3E564(&CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo);
+    byte_4C57DD5 = 1;
   }
   equipTarget1 = this->fields.equipTarget1;
   if ( !equipTarget1 )
@@ -161,7 +162,7 @@ int64_t UserServantLeaderEntity__getEquipUserSvtId(UserServantLeaderEntity_o *th
   if ( !CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo);
   v6 = v7;
-  return CodeStage_AntiCheat_ObscuredTypes_ObscuredLong__op_Implicit_48934420(&v6, 0);
+  return CodeStage_AntiCheat_ObscuredTypes_ObscuredLong__op_Implicit_49007660(&v6, 0);
 }
 
 
@@ -182,15 +183,15 @@ void UserServantLeaderEntity__setEquipTargetInfo(
   int32_t v6; // w2
   const MethodInfo *v7; // x3
 
-  if ( (byte_4C4400E & 1) == 0 )
+  if ( (byte_4C57DD6 & 1) == 0 )
   {
-    sub_1C37058(&EquipTargetInfo_TypeInfo);
-    byte_4C4400E = 1;
+    sub_1C3E564(&EquipTargetInfo_TypeInfo);
+    byte_4C57DD6 = 1;
   }
-  v5 = (EquipTargetInfo_o *)sub_1C372A4(EquipTargetInfo_TypeInfo);
-  EquipTargetInfo___ctor_41710900(v5, equipTargetInfo, 0);
+  v5 = (EquipTargetInfo_o *)sub_1C3E7B0(EquipTargetInfo_TypeInfo);
+  EquipTargetInfo___ctor_41759460(v5, equipTargetInfo, 0);
   this->fields.equipTarget1 = v5;
-  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.equipTarget1, (int32_t)v5, v6, v7);
+  sub_1C3E508((CGThumbnailListItem_o *)&this->fields.equipTarget1, (int32_t)v5, v6, v7);
 }
 
 
@@ -205,51 +206,52 @@ void UserServantLeaderEntity__setUserServantEntity(
   int32_t v9; // w2
   const MethodInfo *v10; // x3
   __int64 v11; // x0
-  __int128 v12; // q1
+  __int64 v12; // x1
   __int128 v13; // q1
-  __int64 v14; // x20
-  __int64 v15; // x21
-  CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_o v16; // [xsp+0h] [xbp-90h] BYREF
-  CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_o v17; // [xsp+20h] [xbp-70h] BYREF
-  CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_o v18; // [xsp+40h] [xbp-50h]
-  CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o v19; // 0:x0.16
+  __int128 v14; // q1
+  __int64 v15; // x20
+  __int64 v16; // x21
+  CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_o v17; // [xsp+0h] [xbp-90h] BYREF
+  CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_o v18; // [xsp+20h] [xbp-70h] BYREF
+  CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_o v19; // [xsp+40h] [xbp-50h]
+  CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o v20; // 0:x0.16
 
-  if ( (byte_4C4400F & 1) == 0 )
+  if ( (byte_4C57DD7 & 1) == 0 )
   {
-    sub_1C37058(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
-    sub_1C37058(&CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo);
-    byte_4C4400F = 1;
+    sub_1C3E564(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
+    sub_1C3E564(&CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo);
+    byte_4C57DD7 = 1;
   }
   this->fields.userServantEntity = entity;
-  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields, (int32_t)entity, classPos, *(const MethodInfo **)&supportDeckId);
+  sub_1C3E508((CGThumbnailListItem_o *)&this->fields, (int32_t)entity, classPos, *(const MethodInfo **)&supportDeckId);
   this->fields.servantLeaderInfo = 0;
-  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.servantLeaderInfo, 0, v9, v10);
+  sub_1C3E508((CGThumbnailListItem_o *)&this->fields.servantLeaderInfo, 0, v9, v10);
   if ( !entity )
-    sub_1C372B4(v11);
-  v12 = *(_OWORD *)&entity->fields.userId.fields.fakeValue;
-  *(_OWORD *)&v18.fields.currentCryptoKey = *(_OWORD *)&entity->fields.userId.fields.currentCryptoKey;
-  *(_OWORD *)&v18.fields.fakeValue = v12;
+    sub_1C3E7C0(v11, v12);
+  v13 = *(_OWORD *)&entity->fields.userId.fields.fakeValue;
+  *(_OWORD *)&v19.fields.currentCryptoKey = *(_OWORD *)&entity->fields.userId.fields.currentCryptoKey;
+  *(_OWORD *)&v19.fields.fakeValue = v13;
   if ( !CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo);
-  v17 = v18;
-  this->fields.userId = CodeStage_AntiCheat_ObscuredTypes_ObscuredLong__op_Implicit_48934420(&v17, 0);
+  v18 = v19;
+  this->fields.userId = CodeStage_AntiCheat_ObscuredTypes_ObscuredLong__op_Implicit_49007660(&v18, 0);
   this->fields.supportDeckId = supportDeckId;
   this->fields.classId = classPos;
-  v13 = *(_OWORD *)&entity->fields.id.fields.fakeValue;
-  *(_OWORD *)&v16.fields.currentCryptoKey = *(_OWORD *)&entity->fields.id.fields.currentCryptoKey;
-  *(_OWORD *)&v16.fields.fakeValue = v13;
-  this->fields.userSvtId = CodeStage_AntiCheat_ObscuredTypes_ObscuredLong__op_Implicit_48934420(&v16, 0);
-  v15 = *(_QWORD *)&entity->fields.svtId.fields.currentCryptoKey;
-  v14 = *(_QWORD *)&entity->fields.svtId.fields.fakeValue;
+  v14 = *(_OWORD *)&entity->fields.id.fields.fakeValue;
+  *(_OWORD *)&v17.fields.currentCryptoKey = *(_OWORD *)&entity->fields.id.fields.currentCryptoKey;
+  *(_OWORD *)&v17.fields.fakeValue = v14;
+  this->fields.userSvtId = CodeStage_AntiCheat_ObscuredTypes_ObscuredLong__op_Implicit_49007660(&v17, 0);
+  v16 = *(_QWORD *)&entity->fields.svtId.fields.currentCryptoKey;
+  v15 = *(_QWORD *)&entity->fields.svtId.fields.fakeValue;
   if ( !CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
-  *(_QWORD *)&v19.fields.currentCryptoKey = v15;
-  *(_QWORD *)&v19.fields.fakeValue = v14;
-  this->fields.svtId = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_48930896(v19, 0);
+  *(_QWORD *)&v20.fields.currentCryptoKey = v16;
+  *(_QWORD *)&v20.fields.fakeValue = v15;
+  this->fields.svtId = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_49004136(v20, 0);
 }
 
 
-void UserServantLeaderEntity__setUserServantEntity_43214220(
+void UserServantLeaderEntity__setUserServantEntity_43269372(
         UserServantLeaderEntity_o *this,
         ServantLeaderInfo_o *info,
         const MethodInfo *method)
@@ -258,37 +260,38 @@ void UserServantLeaderEntity__setUserServantEntity_43214220(
   int32_t v6; // w2
   const MethodInfo *v7; // x3
   __int64 v8; // x0
-  __int64 v9; // x21
-  __int64 v10; // x22
+  __int64 v9; // x1
+  __int64 v10; // x21
+  __int64 v11; // x22
   struct EquipTargetInfo_o *equipTarget1; // x1
-  int32_t v12; // w2
-  const MethodInfo *v13; // x3
-  CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o v14; // 0:x0.16
+  int32_t v13; // w2
+  const MethodInfo *v14; // x3
+  CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o v15; // 0:x0.16
 
-  if ( (byte_4C44010 & 1) == 0 )
+  if ( (byte_4C57DD8 & 1) == 0 )
   {
-    sub_1C37058(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
-    byte_4C44010 = 1;
+    sub_1C3E564(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
+    byte_4C57DD8 = 1;
   }
   this->fields.userServantEntity = 0;
-  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields, 0, (int32_t)method, v3);
+  sub_1C3E508((CGThumbnailListItem_o *)&this->fields, 0, (int32_t)method, v3);
   this->fields.servantLeaderInfo = info;
-  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.servantLeaderInfo, (int32_t)info, v6, v7);
+  sub_1C3E508((CGThumbnailListItem_o *)&this->fields.servantLeaderInfo, (int32_t)info, v6, v7);
   if ( !info )
-    sub_1C372B4(v8);
+    sub_1C3E7C0(v8, v9);
   this->fields.userId = info->fields.userId;
   this->fields.supportDeckId = info->fields.supportDeckId;
   this->fields.classId = info->fields.classId;
   this->fields.userSvtId = info->fields.userSvtId;
-  v10 = *(_QWORD *)&info->fields.svtId.fields.currentCryptoKey;
-  v9 = *(_QWORD *)&info->fields.svtId.fields.fakeValue;
+  v11 = *(_QWORD *)&info->fields.svtId.fields.currentCryptoKey;
+  v10 = *(_QWORD *)&info->fields.svtId.fields.fakeValue;
   if ( !CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
-  *(_QWORD *)&v14.fields.currentCryptoKey = v10;
-  *(_QWORD *)&v14.fields.fakeValue = v9;
-  this->fields.svtId = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_48930896(v14, 0);
+  *(_QWORD *)&v15.fields.currentCryptoKey = v11;
+  *(_QWORD *)&v15.fields.fakeValue = v10;
+  this->fields.svtId = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_49004136(v15, 0);
   ServantLeaderInfo__SetEquipImagePartsGroupIdxs(info, 0);
   equipTarget1 = info->fields.equipTarget1;
   this->fields.equipTarget1 = equipTarget1;
-  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.equipTarget1, (int32_t)equipTarget1, v12, v13);
+  sub_1C3E508((CGThumbnailListItem_o *)&this->fields.equipTarget1, (int32_t)equipTarget1, v13, v14);
 }

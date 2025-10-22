@@ -2,8 +2,8 @@ void __noreturn GlobalizationNative_GetTimeZoneDisplayName()
 {
   __int64 v0; // x0
 
-  v0 = sub_1C471B4(
+  v0 = sub_1C4E6C0(
          "/Applications/Unity/Hub/Editor/2022.3.28f1/Unity.app/Contents/il2cpp/libil2cpp/os/ClassLibraryPAL/pal_unused.cp"
          "p(36) : Unsupported internal call for IL2CPP:GlobalizationNative_GetTimeZoneDisplayName - Not implemented");
-  sub_1C45F24(v0, 0);
+  sub_1C4D430(v0, 0);
 }

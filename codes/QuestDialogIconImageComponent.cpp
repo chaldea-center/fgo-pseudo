@@ -2,10 +2,10 @@ void QuestDialogIconImageComponent___cctor(const MethodInfo *method)
 {
   int32x2_t *static_fields; // x8
 
-  if ( (byte_4C3FCD1 & 1) == 0 )
+  if ( (byte_4C53A6E & 1) == 0 )
   {
-    sub_1C37058(&QuestDialogIconImageComponent_TypeInfo);
-    byte_4C3FCD1 = 1;
+    sub_1C3E564(&QuestDialogIconImageComponent_TypeInfo);
+    byte_4C53A6E = 1;
   }
   static_fields = (int32x2_t *)QuestDialogIconImageComponent_TypeInfo->static_fields;
   static_fields->n64_u64[0] = vdup_n_s32(0x3F333333u).n64_u64[0];
@@ -20,18 +20,18 @@ void QuestDialogIconImageComponent___ctor(QuestDialogIconImageComponent_o *this,
   int32_t v4; // w2
   const MethodInfo *v5; // x3
 
-  if ( (byte_4C3FCD0 & 1) == 0 )
+  if ( (byte_4C53A6D & 1) == 0 )
   {
-    sub_1C37058(&Method_System_Collections_Generic_List_GameObject___ctor__);
-    sub_1C37058(&System_Collections_Generic_List_GameObject__TypeInfo);
-    byte_4C3FCD0 = 1;
+    sub_1C3E564(&Method_System_Collections_Generic_List_GameObject___ctor__);
+    sub_1C3E564(&System_Collections_Generic_List_GameObject__TypeInfo);
+    byte_4C53A6D = 1;
   }
-  v3 = (System_Collections_Generic_List_object__o *)sub_1C372A4(System_Collections_Generic_List_GameObject__TypeInfo);
+  v3 = (System_Collections_Generic_List_object__o *)sub_1C3E7B0(System_Collections_Generic_List_GameObject__TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v3,
-    (const MethodInfo_37A27F0 *)Method_System_Collections_Generic_List_GameObject___ctor__);
+    (const MethodInfo_37B4C2C *)Method_System_Collections_Generic_List_GameObject___ctor__);
   this->fields.mEventItemIconList = (struct System_Collections_Generic_List_GameObject__o *)v3;
-  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.mEventItemIconList, (int32_t)v3, v4, v5);
+  sub_1C3E508((CGThumbnailListItem_o *)&this->fields.mEventItemIconList, (int32_t)v3, v4, v5);
   UnityEngine_MonoBehaviour___ctor((UnityEngine_MonoBehaviour_o *)this, 0);
 }
 
@@ -44,18 +44,18 @@ void QuestDialogIconImageComponent__DestroyIcon(QuestDialogIconImageComponent_o 
   Il2CppObject *Item; // x21
   int v7; // w8
 
-  if ( (byte_4C3FCCF & 1) == 0 )
+  if ( (byte_4C53A6C & 1) == 0 )
   {
-    sub_1C37058(&Method_System_Collections_Generic_List_GameObject__Clear__);
-    sub_1C37058(&Method_System_Collections_Generic_List_GameObject__get_Count__);
-    sub_1C37058(&Method_System_Collections_Generic_List_GameObject__get_Item__);
-    sub_1C37058(&UnityEngine_Object_TypeInfo);
-    byte_4C3FCCF = 1;
+    sub_1C3E564(&Method_System_Collections_Generic_List_GameObject__Clear__);
+    sub_1C3E564(&Method_System_Collections_Generic_List_GameObject__get_Count__);
+    sub_1C3E564(&Method_System_Collections_Generic_List_GameObject__get_Item__);
+    sub_1C3E564(&UnityEngine_Object_TypeInfo);
+    byte_4C53A6C = 1;
   }
   mEventItemIconList = this->fields.mEventItemIconList;
   if ( !mEventItemIconList )
 LABEL_9:
-    sub_1C372B4(mEventItemIconList);
+    sub_1C3E7C0(mEventItemIconList, method);
   v4 = 0;
   while ( 1 )
   {
@@ -65,10 +65,10 @@ LABEL_9:
     Item = System_Collections_Generic_List_object___get_Item(
              (System_Collections_Generic_List_object__o *)mEventItemIconList,
              v4,
-             (const MethodInfo_37A2D54 *)Method_System_Collections_Generic_List_GameObject__get_Item__);
+             (const MethodInfo_37B5190 *)Method_System_Collections_Generic_List_GameObject__get_Item__);
     if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-    UnityEngine_Object__Destroy_71266752((UnityEngine_Object_o *)Item, 0);
+    UnityEngine_Object__Destroy_71341564((UnityEngine_Object_o *)Item, 0);
     mEventItemIconList = this->fields.mEventItemIconList;
     ++v4;
     if ( !mEventItemIconList )
@@ -88,91 +88,92 @@ void QuestDialogIconImageComponent__SetIconData(
         const MethodInfo *method)
 {
   DataManager_o *Instance; // x0
+  __int64 v6; // x1
   struct System_Int32_array *itemIds; // x8
-  DataMasterBase_TMaster__TEntity__PKType__o *v7; // x25
-  __int64 v8; // x27
-  unsigned __int64 v9; // x28
+  DataMasterBase_TMaster__TEntity__PKType__o *v8; // x25
+  __int64 v9; // x27
+  unsigned __int64 v10; // x28
   Il2CppObject *Entity; // x23
   Il2CppObject *MasterData_object; // x24
-  struct System_Int32_array *v12; // x8
+  struct System_Int32_array *v13; // x8
   struct System_Int32_array *nums; // x8
   Il2CppObject *gameObject; // x23
-  UnityEngine_GameObject_o *v15; // x23
-  UnityEngine_Transform_o *v16; // x24
-  QuestDialogIconImageComponent_c *v17; // x8
-  UnityEngine_Transform_o *v18; // x24
-  struct System_Int32_array *v19; // x8
-  ItemIconComponent_o *v20; // x24
-  Il2CppObject *v21; // x25
-  Il2CppObject *v22; // x26
-  struct System_Int32_array *v23; // x8
+  UnityEngine_GameObject_o *v16; // x23
+  UnityEngine_Transform_o *v17; // x24
+  QuestDialogIconImageComponent_c *v18; // x8
+  UnityEngine_Transform_o *v19; // x24
+  struct System_Int32_array *v20; // x8
+  ItemIconComponent_o *v21; // x24
+  Il2CppObject *v22; // x25
+  Il2CppObject *v23; // x26
   struct System_Int32_array *v24; // x8
-  int32_t v25; // w2
-  const MethodInfo *v26; // x3
+  struct System_Int32_array *v25; // x8
+  int32_t v26; // w2
+  const MethodInfo *v27; // x3
   intptr_t m_CachedPtr; // x8
-  _QWORD *v28; // x9
+  _QWORD *v29; // x9
   __int64 m_CancellationTokenSource_low; // x10
-  intptr_t v30; // x8
-  UnityEngine_GameObject_o *v31; // x0
+  intptr_t v31; // x8
+  UnityEngine_GameObject_o *v32; // x0
   struct UIGrid_o *itemGrid; // x20
   DataManager_c *klass; // x8
-  DataMasterBase_TMaster__TEntity__PKType__o *v34; // [xsp+8h] [xbp-68h]
+  DataMasterBase_TMaster__TEntity__PKType__o *v35; // [xsp+8h] [xbp-68h]
 
-  if ( (byte_4C3FCCE & 1) == 0 )
+  if ( (byte_4C53A6B & 1) == 0 )
   {
-    sub_1C37058(&Method_DataManager_GetMasterData_ItemMaster___);
-    sub_1C37058(&Method_DataManager_GetMasterData_UserItemMaster___);
-    sub_1C37058(&Method_DataMasterBase_ItemMaster__ItemEntity__int__GetEntity__);
-    sub_1C37058(&Method_UnityEngine_GameObject_GetComponent_ItemIconWithConsumptionNumberComponent___);
-    sub_1C37058(&Method_System_Collections_Generic_List_GameObject__Add__);
-    sub_1C37058(&NetworkManager_TypeInfo);
-    sub_1C37058(&Method_UnityEngine_Object_Instantiate_GameObject___);
-    sub_1C37058(&UnityEngine_Object_TypeInfo);
-    sub_1C37058(&QuestDialogIconImageComponent_TypeInfo);
-    sub_1C37058(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-    byte_4C3FCCE = 1;
+    sub_1C3E564(&Method_DataManager_GetMasterData_ItemMaster___);
+    sub_1C3E564(&Method_DataManager_GetMasterData_UserItemMaster___);
+    sub_1C3E564(&Method_DataMasterBase_ItemMaster__ItemEntity__int__GetEntity__);
+    sub_1C3E564(&Method_UnityEngine_GameObject_GetComponent_ItemIconWithConsumptionNumberComponent___);
+    sub_1C3E564(&Method_System_Collections_Generic_List_GameObject__Add__);
+    sub_1C3E564(&NetworkManager_TypeInfo);
+    sub_1C3E564(&Method_UnityEngine_Object_Instantiate_GameObject___);
+    sub_1C3E564(&UnityEngine_Object_TypeInfo);
+    sub_1C3E564(&QuestDialogIconImageComponent_TypeInfo);
+    sub_1C3E564(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    byte_4C53A6B = 1;
   }
-  Instance = (DataManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39ED16C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = (DataManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39FF5A8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance )
     goto LABEL_68;
   Instance = (DataManager_o *)DataManager__GetMasterData_object_(
                                 Instance,
-                                (const MethodInfo_30E7C58 *)Method_DataManager_GetMasterData_ItemMaster___);
+                                (const MethodInfo_30F9A70 *)Method_DataManager_GetMasterData_ItemMaster___);
   if ( !itemConsumeEnt )
     goto LABEL_68;
   itemIds = itemConsumeEnt->fields.itemIds;
   if ( !itemIds )
     goto LABEL_68;
-  v7 = (DataMasterBase_TMaster__TEntity__PKType__o *)Instance;
-  v8 = 8;
-  v34 = (DataMasterBase_TMaster__TEntity__PKType__o *)Instance;
+  v8 = (DataMasterBase_TMaster__TEntity__PKType__o *)Instance;
+  v9 = 8;
+  v35 = (DataMasterBase_TMaster__TEntity__PKType__o *)Instance;
   while ( 1 )
   {
-    v9 = v8 - 8;
-    if ( v8 - 8 >= SLODWORD(itemIds->max_length) )
+    v10 = v9 - 8;
+    if ( v9 - 8 >= SLODWORD(itemIds->max_length) )
       break;
-    if ( v8 == 8 )
+    if ( v9 == 8 )
     {
       if ( !LODWORD(itemIds->max_length) )
         goto LABEL_69;
-      if ( !v7 )
+      if ( !v8 )
         goto LABEL_68;
       Entity = DataMasterBase_object__object__int___GetEntity(
-                 v7,
+                 v8,
                  itemIds->m_Items[0],
-                 (const MethodInfo_33A10A0 *)Method_DataMasterBase_ItemMaster__ItemEntity__int__GetEntity__);
-      Instance = (DataManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39ED16C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+                 (const MethodInfo_33B2F58 *)Method_DataMasterBase_ItemMaster__ItemEntity__int__GetEntity__);
+      Instance = (DataManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39FF5A8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
       if ( !Instance )
         goto LABEL_68;
       MasterData_object = DataManager__GetMasterData_object_(
                             Instance,
-                            (const MethodInfo_30E7C58 *)Method_DataManager_GetMasterData_UserItemMaster___);
+                            (const MethodInfo_30F9A70 *)Method_DataManager_GetMasterData_UserItemMaster___);
       if ( !NetworkManager_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
-      if ( !byte_4C3CD62 )
+      if ( !byte_4C50AE2 )
       {
-        sub_1C37058(&NetworkManager_TypeInfo);
-        byte_4C3CD62 = 1;
+        sub_1C3E564(&NetworkManager_TypeInfo);
+        byte_4C50AE2 = 1;
       }
       Instance = (DataManager_o *)NetworkManager_TypeInfo;
       if ( !NetworkManager_TypeInfo->_2.cctor_finished )
@@ -180,17 +181,17 @@ void QuestDialogIconImageComponent__SetIconData(
         j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
         Instance = (DataManager_o *)NetworkManager_TypeInfo;
       }
-      v12 = itemConsumeEnt->fields.itemIds;
-      if ( !v12 )
+      v13 = itemConsumeEnt->fields.itemIds;
+      if ( !v13 )
         goto LABEL_68;
-      if ( !LODWORD(v12->max_length) )
+      if ( !LODWORD(v13->max_length) )
         goto LABEL_69;
       if ( !MasterData_object )
         goto LABEL_68;
       Instance = (DataManager_o *)UserItemMaster__GetEntityDefinitely(
                                     (UserItemMaster_o *)MasterData_object,
                                     *(_QWORD *)(*(_QWORD *)&Instance[1].fields._DispLog + 64LL),
-                                    v12->m_Items[0],
+                                    v13->m_Items[0],
                                     0);
       if ( !Entity )
         goto LABEL_68;
@@ -227,58 +228,58 @@ void QuestDialogIconImageComponent__SetIconData(
         j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
       Instance = (DataManager_o *)UnityEngine_Object__Instantiate_object_(
                                     gameObject,
-                                    (const MethodInfo_3173FC0 *)Method_UnityEngine_Object_Instantiate_GameObject___);
+                                    (const MethodInfo_3185EB4 *)Method_UnityEngine_Object_Instantiate_GameObject___);
       if ( !Instance )
         goto LABEL_68;
-      v15 = (UnityEngine_GameObject_o *)Instance;
+      v16 = (UnityEngine_GameObject_o *)Instance;
       Instance = (DataManager_o *)UnityEngine_GameObject__get_transform((UnityEngine_GameObject_o *)Instance, 0);
       if ( !this->fields.itemGrid )
         goto LABEL_68;
-      v16 = (UnityEngine_Transform_o *)Instance;
+      v17 = (UnityEngine_Transform_o *)Instance;
       Instance = (DataManager_o *)UnityEngine_Component__get_transform(
                                     (UnityEngine_Component_o *)this->fields.itemGrid,
                                     0);
-      if ( !v16 )
+      if ( !v17 )
         goto LABEL_68;
-      UnityEngine_Transform__set_parent(v16, (UnityEngine_Transform_o *)Instance, 0);
-      Instance = (DataManager_o *)UnityEngine_GameObject__get_transform(v15, 0);
-      v17 = QuestDialogIconImageComponent_TypeInfo;
-      v18 = (UnityEngine_Transform_o *)Instance;
+      UnityEngine_Transform__set_parent(v17, (UnityEngine_Transform_o *)Instance, 0);
+      Instance = (DataManager_o *)UnityEngine_GameObject__get_transform(v16, 0);
+      v18 = QuestDialogIconImageComponent_TypeInfo;
+      v19 = (UnityEngine_Transform_o *)Instance;
       if ( !QuestDialogIconImageComponent_TypeInfo->_2.cctor_finished )
       {
         j_il2cpp_runtime_class_init_0(QuestDialogIconImageComponent_TypeInfo);
-        v17 = QuestDialogIconImageComponent_TypeInfo;
+        v18 = QuestDialogIconImageComponent_TypeInfo;
       }
-      if ( !v18 )
-        goto LABEL_68;
-      UnityEngine_Transform__set_localScale(v18, v17->static_fields->ITEM_ICON_SIZE, 0);
-      Instance = (DataManager_o *)UnityEngine_GameObject__GetComponent_object_(
-                                    v15,
-                                    (const MethodInfo_313F1D8 *)Method_UnityEngine_GameObject_GetComponent_ItemIconWithConsumptionNumberComponent___);
-      v19 = itemConsumeEnt->fields.itemIds;
       if ( !v19 )
         goto LABEL_68;
-      if ( v9 >= LODWORD(v19->max_length) )
-        goto LABEL_69;
-      if ( !v7 )
+      UnityEngine_Transform__set_localScale(v19, v18->static_fields->ITEM_ICON_SIZE, 0);
+      Instance = (DataManager_o *)UnityEngine_GameObject__GetComponent_object_(
+                                    v16,
+                                    (const MethodInfo_31510CC *)Method_UnityEngine_GameObject_GetComponent_ItemIconWithConsumptionNumberComponent___);
+      v20 = itemConsumeEnt->fields.itemIds;
+      if ( !v20 )
         goto LABEL_68;
-      v20 = (ItemIconComponent_o *)Instance;
-      v21 = DataMasterBase_object__object__int___GetEntity(
-              v7,
-              *((_DWORD *)&v19->obj.klass + v8),
-              (const MethodInfo_33A10A0 *)Method_DataMasterBase_ItemMaster__ItemEntity__int__GetEntity__);
-      Instance = (DataManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39ED16C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+      if ( v10 >= LODWORD(v20->max_length) )
+        goto LABEL_69;
+      if ( !v8 )
+        goto LABEL_68;
+      v21 = (ItemIconComponent_o *)Instance;
+      v22 = DataMasterBase_object__object__int___GetEntity(
+              v8,
+              *((_DWORD *)&v20->obj.klass + v9),
+              (const MethodInfo_33B2F58 *)Method_DataMasterBase_ItemMaster__ItemEntity__int__GetEntity__);
+      Instance = (DataManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39FF5A8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
       if ( !Instance )
         goto LABEL_68;
-      v22 = DataManager__GetMasterData_object_(
+      v23 = DataManager__GetMasterData_object_(
               Instance,
-              (const MethodInfo_30E7C58 *)Method_DataManager_GetMasterData_UserItemMaster___);
+              (const MethodInfo_30F9A70 *)Method_DataManager_GetMasterData_UserItemMaster___);
       if ( !NetworkManager_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
-      if ( !byte_4C3CD62 )
+      if ( !byte_4C50AE2 )
       {
-        sub_1C37058(&NetworkManager_TypeInfo);
-        byte_4C3CD62 = 1;
+        sub_1C3E564(&NetworkManager_TypeInfo);
+        byte_4C50AE2 = 1;
       }
       Instance = (DataManager_o *)NetworkManager_TypeInfo;
       if ( !NetworkManager_TypeInfo->_2.cctor_finished )
@@ -286,46 +287,46 @@ void QuestDialogIconImageComponent__SetIconData(
         j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
         Instance = (DataManager_o *)NetworkManager_TypeInfo;
       }
-      v23 = itemConsumeEnt->fields.itemIds;
+      v24 = itemConsumeEnt->fields.itemIds;
+      if ( !v24 )
+        goto LABEL_68;
+      if ( v10 >= LODWORD(v24->max_length) )
+        goto LABEL_69;
       if ( !v23 )
         goto LABEL_68;
-      if ( v9 >= LODWORD(v23->max_length) )
-        goto LABEL_69;
-      if ( !v22 )
-        goto LABEL_68;
       Instance = (DataManager_o *)UserItemMaster__GetEntityDefinitely(
-                                    (UserItemMaster_o *)v22,
+                                    (UserItemMaster_o *)v23,
                                     *(_QWORD *)(*(_QWORD *)&Instance[1].fields._DispLog + 64LL),
-                                    *((_DWORD *)&v23->obj.klass + v8),
+                                    *((_DWORD *)&v24->obj.klass + v9),
                                     0);
-      if ( !v21 )
+      if ( !v22 )
         goto LABEL_68;
       if ( !Instance )
         goto LABEL_68;
-      if ( !v20 )
+      if ( !v21 )
         goto LABEL_68;
       ItemIconComponent__SetItem(
-        v20,
-        (int32_t)v21[2].monitor,
+        v21,
+        (int32_t)v22[2].monitor,
         HIDWORD(Instance->fields.m_CancellationTokenSource),
         1,
         0);
-      v24 = itemConsumeEnt->fields.nums;
-      if ( !v24 )
+      v25 = itemConsumeEnt->fields.nums;
+      if ( !v25 )
         goto LABEL_68;
-      if ( v9 >= LODWORD(v24->max_length) )
+      if ( v10 >= LODWORD(v25->max_length) )
 LABEL_69:
-        sub_1C372BC(Instance);
+        sub_1C3E7C8(Instance, v6);
       ItemIconWithConsumptionNumberComponent__SetConsumptionNumber(
-        (ItemIconWithConsumptionNumberComponent_o *)v20,
-        *((_DWORD *)&v24->obj.klass + v8),
+        (ItemIconWithConsumptionNumberComponent_o *)v21,
+        *((_DWORD *)&v25->obj.klass + v9),
         0);
       Instance = (DataManager_o *)this->fields.mEventItemIconList;
       if ( !Instance )
         goto LABEL_68;
       m_CachedPtr = Instance->fields.m_CachedPtr;
-      v7 = v34;
-      v28 = Method_System_Collections_Generic_List_GameObject__Add__;
+      v8 = v35;
+      v29 = Method_System_Collections_Generic_List_GameObject__Add__;
       ++HIDWORD(Instance->fields.m_CancellationTokenSource);
       if ( !m_CachedPtr )
         goto LABEL_68;
@@ -334,27 +335,27 @@ LABEL_69:
       {
         System_Collections_Generic_List_object___AddWithResize(
           (System_Collections_Generic_List_object__o *)Instance,
-          (Il2CppObject *)v15,
-          *(const MethodInfo_37A3024 **)(*(_QWORD *)(v28[4] + 192LL) + 112LL));
+          (Il2CppObject *)v16,
+          *(const MethodInfo_37B5460 **)(*(_QWORD *)(v29[4] + 192LL) + 112LL));
       }
       else
       {
-        v30 = m_CachedPtr + 8 * m_CancellationTokenSource_low;
+        v31 = m_CachedPtr + 8 * m_CancellationTokenSource_low;
         LODWORD(Instance->fields.m_CancellationTokenSource) = m_CancellationTokenSource_low + 1;
-        *(_QWORD *)(v30 + 32) = v15;
-        sub_1C36FFC((CGThumbnailListItem_o *)(v30 + 32), (int32_t)v15, v25, v26);
+        *(_QWORD *)(v31 + 32) = v16;
+        sub_1C3E508((CGThumbnailListItem_o *)(v31 + 32), (int32_t)v16, v26, v27);
       }
     }
     itemIds = itemConsumeEnt->fields.itemIds;
-    ++v8;
+    ++v9;
     if ( !itemIds )
       goto LABEL_68;
   }
   Instance = (DataManager_o *)this->fields.itemGrid;
   if ( !Instance )
     goto LABEL_68;
-  v31 = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)Instance, 0);
-  GameObjectExtensions__SetLocalPosition_36132392(v31, 0.0, 0.0, 0);
+  v32 = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)Instance, 0);
+  GameObjectExtensions__SetLocalPosition_36176292(v32, 0.0, 0.0, 0);
   Instance = (DataManager_o *)QuestDialogIconImageComponent_TypeInfo;
   itemGrid = this->fields.itemGrid;
   if ( !QuestDialogIconImageComponent_TypeInfo->_2.cctor_finished )
@@ -364,7 +365,7 @@ LABEL_69:
         (Instance = (DataManager_o *)this->fields.itemGrid) == 0) )
   {
 LABEL_68:
-    sub_1C372B4(Instance);
+    sub_1C3E7C0(Instance, v6);
   }
   klass = Instance->klass;
   HIDWORD(Instance->fields.lookup) = 0;

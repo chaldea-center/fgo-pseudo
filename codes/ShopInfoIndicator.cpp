@@ -13,16 +13,16 @@ System_Collections_IEnumerator_o *ShopInfoIndicator__InformationChangeCR(
   int32_t v4; // w2
   const MethodInfo *v5; // x3
 
-  if ( (byte_4C3F250 & 1) == 0 )
+  if ( (byte_4C52FE2 & 1) == 0 )
   {
-    sub_1C37058(&ShopInfoIndicator__InformationChangeCR_d__7_TypeInfo);
-    byte_4C3F250 = 1;
+    sub_1C3E564(&ShopInfoIndicator__InformationChangeCR_d__7_TypeInfo);
+    byte_4C52FE2 = 1;
   }
-  v3 = sub_1C372A4(ShopInfoIndicator__InformationChangeCR_d__7_TypeInfo);
+  v3 = sub_1C3E7B0(ShopInfoIndicator__InformationChangeCR_d__7_TypeInfo);
   System_Object___ctor((Il2CppObject *)v3, 0);
   *(_DWORD *)(v3 + 16) = 0;
   *(_QWORD *)(v3 + 32) = this;
-  sub_1C36FFC((CGThumbnailListItem_o *)(v3 + 32), (int32_t)this, v4, v5);
+  sub_1C3E508((CGThumbnailListItem_o *)(v3 + 32), (int32_t)this, v4, v5);
   return (System_Collections_IEnumerator_o *)v3;
 }
 
@@ -32,18 +32,18 @@ void ShopInfoIndicator__InformationPanelTweenAlpha(ShopInfoIndicator_o *this, co
   struct UIPanel_o *informationPanel; // x0
   Il2CppObject *Component_object; // x19
 
-  if ( (byte_4C3F251 & 1) == 0 )
+  if ( (byte_4C52FE3 & 1) == 0 )
   {
-    sub_1C37058(&Method_UnityEngine_Component_GetComponent_TweenAlpha___);
-    sub_1C37058(&UnityEngine_Object_TypeInfo);
-    byte_4C3F251 = 1;
+    sub_1C3E564(&Method_UnityEngine_Component_GetComponent_TweenAlpha___);
+    sub_1C3E564(&UnityEngine_Object_TypeInfo);
+    byte_4C52FE3 = 1;
   }
   informationPanel = this->fields.informationPanel;
   if ( !informationPanel )
     goto LABEL_11;
   Component_object = UnityEngine_Component__GetComponent_object_(
                        (UnityEngine_Component_o *)informationPanel,
-                       (const MethodInfo_30DE428 *)Method_UnityEngine_Component_GetComponent_TweenAlpha___);
+                       (const MethodInfo_30F0240 *)Method_UnityEngine_Component_GetComponent_TweenAlpha___);
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   informationPanel = (struct UIPanel_o *)UnityEngine_Object__op_Equality((UnityEngine_Object_o *)Component_object, 0, 0);
@@ -56,7 +56,7 @@ void ShopInfoIndicator__InformationPanelTweenAlpha(ShopInfoIndicator_o *this, co
       return;
     }
 LABEL_11:
-    sub_1C372B4(informationPanel);
+    sub_1C3E7C0(informationPanel, method);
   }
 }
 
@@ -67,18 +67,18 @@ void ShopInfoIndicator__OnClick(ShopInfoIndicator_o *this, const MethodInfo *met
   System_Reflection_MethodBase_o *v4; // x0
   const MethodInfo *v5; // x1
 
-  if ( (byte_4C3F252 & 1) == 0 )
+  if ( (byte_4C52FE4 & 1) == 0 )
   {
-    sub_1C37058(&Method_ShopInfoIndicator_OnClick__);
-    byte_4C3F252 = 1;
+    sub_1C3E564(&Method_ShopInfoIndicator_OnClick__);
+    byte_4C52FE4 = 1;
   }
   if ( !this->fields.isClick )
   {
     this->fields.isClick = 1;
     v3 = Method_ShopInfoIndicator_OnClick__;
     if ( (*((_BYTE *)Method_ShopInfoIndicator_OnClick__ + 83) & 2) != 0 )
-      v3 = (_QWORD *)sub_1C37070(Method_ShopInfoIndicator_OnClick__);
-    v4 = (System_Reflection_MethodBase_o *)sub_1C3703C(v3, v3[4]);
+      v3 = (_QWORD *)sub_1C3E57C(Method_ShopInfoIndicator_OnClick__);
+    v4 = (System_Reflection_MethodBase_o *)sub_1C3E548(v3, v3[4]);
     OverwriteAssetSoundName__PlaySystemSe(v4, 0, 0, 0);
     ShopInfoIndicator__SwitchInfo(this, v5);
   }
@@ -96,8 +96,8 @@ void ShopInfoIndicator__StartInformationChange(ShopInfoIndicator_o *this, const 
   ShopInfoIndicator__StopInformationChange(this, method);
   v4 = ShopInfoIndicator__InformationChangeCR(this, v3);
   this->fields.InformationChangeCRW = v4;
-  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.InformationChangeCRW, (int32_t)v4, v5, v6);
-  UnityEngine_MonoBehaviour__StartCoroutine_71252324(
+  sub_1C3E508((CGThumbnailListItem_o *)&this->fields.InformationChangeCRW, (int32_t)v4, v5, v6);
+  UnityEngine_MonoBehaviour__StartCoroutine_71327136(
     (UnityEngine_MonoBehaviour_o *)this,
     this->fields.InformationChangeCRW,
     0);
@@ -118,7 +118,7 @@ void ShopInfoIndicator__StopInformationChange(ShopInfoIndicator_o *this, const M
   {
     UnityEngine_MonoBehaviour__StopCoroutine((UnityEngine_MonoBehaviour_o *)this, InformationChangeCRW, 0);
     this->fields.InformationChangeCRW = 0;
-    sub_1C36FFC((CGThumbnailListItem_o *)p_InformationChangeCRW, 0, v5, v6);
+    sub_1C3E508((CGThumbnailListItem_o *)p_InformationChangeCRW, 0, v5, v6);
   }
 }
 
@@ -154,7 +154,7 @@ void ShopInfoIndicator__SwitchInfo(ShopInfoIndicator_o *this, const MethodInfo *
         goto LABEL_7;
     }
 LABEL_16:
-    sub_1C372BC(this);
+    sub_1C3E7C8(this, method);
   }
 LABEL_7:
   v6 = v4->fields.infos;
@@ -168,7 +168,7 @@ LABEL_7:
     || (UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)this, 1, 0), (v8 = v4->fields.infos) == 0) )
   {
 LABEL_15:
-    sub_1C372B4(this);
+    sub_1C3E7C0(this, method);
   }
   v9 = v4->fields.infoIndex;
   if ( v9 < LODWORD(v8->max_length) - 1 )
@@ -200,33 +200,32 @@ bool ShopInfoIndicator__InformationChangeCR_d__7__MoveNext(
   UnityEngine_WaitForEndOfFrame_o *v6; // x21
   int32_t v7; // w2
   const MethodInfo *v8; // x3
-  const MethodInfo *v9; // x1
   bool result; // w0
-  int32_t v11; // w2
-  const MethodInfo *v12; // x3
-  UnityEngine_GameObject_o *v13; // x0
-  TweenAlpha_o *v14; // x0
-  ShopInfoIndicator__InformationChangeCR_d__7_o **v15; // x21
-  int32_t v16; // w2
-  const MethodInfo *v17; // x3
-  const MethodInfo *v18; // x1
-  UnityEngine_Object_o *v19; // x22
+  int32_t v10; // w2
+  const MethodInfo *v11; // x3
+  UnityEngine_GameObject_o *v12; // x0
+  TweenAlpha_o *v13; // x0
+  ShopInfoIndicator__InformationChangeCR_d__7_o **v14; // x21
+  int32_t v15; // w2
+  const MethodInfo *v16; // x3
+  const MethodInfo *v17; // x1
+  UnityEngine_Object_o *v18; // x22
   struct UnityEngine_WaitForEndOfFrame_o *wait_5__3; // x1
-  ShopInfoIndicator__InformationChangeCR_d__7_o *v21; // x0
-  int v22; // w20
+  ShopInfoIndicator__InformationChangeCR_d__7_o *v20; // x0
+  int v21; // w20
   UnityEngine_GameObject_o *gameObject; // x0
-  TweenAlpha_o *v24; // x0
+  TweenAlpha_o *v23; // x0
   ShopInfoIndicator__InformationChangeCR_d__7_o **p_ta_5__2; // x21
-  int32_t v26; // w2
-  const MethodInfo *v27; // x3
+  int32_t v25; // w2
+  const MethodInfo *v26; // x3
   UnityEngine_Object_o *ta_5__2; // x22
 
   v2 = this;
-  if ( (byte_4C3F253 & 1) == 0 )
+  if ( (byte_4C52FE5 & 1) == 0 )
   {
-    sub_1C37058(&UnityEngine_Object_TypeInfo);
-    this = (ShopInfoIndicator__InformationChangeCR_d__7_o *)sub_1C37058(&UnityEngine_WaitForEndOfFrame_TypeInfo);
-    byte_4C3F253 = 1;
+    sub_1C3E564(&UnityEngine_Object_TypeInfo);
+    this = (ShopInfoIndicator__InformationChangeCR_d__7_o *)sub_1C3E564(&UnityEngine_WaitForEndOfFrame_TypeInfo);
+    byte_4C52FE5 = 1;
   }
   _4__this = v2->fields.__4__this;
   switch ( v2->fields.__1__state )
@@ -245,11 +244,11 @@ bool ShopInfoIndicator__InformationChangeCR_d__7__MoveNext(
         1.0);
       _4__this->fields.isClick = 1;
       v2->fields._ta_5__2 = 0;
-      sub_1C36FFC((CGThumbnailListItem_o *)&v2->fields._ta_5__2, 0, v4, v5);
-      v6 = (UnityEngine_WaitForEndOfFrame_o *)sub_1C372A4(UnityEngine_WaitForEndOfFrame_TypeInfo);
+      sub_1C3E508((CGThumbnailListItem_o *)&v2->fields._ta_5__2, 0, v4, v5);
+      v6 = (UnityEngine_WaitForEndOfFrame_o *)sub_1C3E7B0(UnityEngine_WaitForEndOfFrame_TypeInfo);
       UnityEngine_WaitForEndOfFrame___ctor(v6, 0);
       v2->fields._wait_5__3 = v6;
-      sub_1C36FFC((CGThumbnailListItem_o *)&v2->fields._wait_5__3, (int32_t)v6, v7, v8);
+      sub_1C3E508((CGThumbnailListItem_o *)&v2->fields._wait_5__3, (int32_t)v6, v7, v8);
       goto LABEL_17;
     case 1:
       this = (ShopInfoIndicator__InformationChangeCR_d__7_o *)v2->fields._ta_5__2;
@@ -272,8 +271,8 @@ bool ShopInfoIndicator__InformationChangeCR_d__7__MoveNext(
         if ( !_4__this->fields.isClick )
         {
           wait_5__3 = v2->fields._wait_5__3;
-          v21 = v2;
-          v22 = 2;
+          v20 = v2;
+          v21 = 2;
           goto LABEL_46;
         }
 LABEL_34:
@@ -283,10 +282,10 @@ LABEL_34:
         if ( !this )
           goto LABEL_48;
         gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
-        v24 = TweenAlpha__Begin(gameObject, 0.5, 0.0, 0);
-        v2->fields._ta_5__2 = v24;
+        v23 = TweenAlpha__Begin(gameObject, 0.5, 0.0, 0);
+        v2->fields._ta_5__2 = v23;
         p_ta_5__2 = (ShopInfoIndicator__InformationChangeCR_d__7_o **)&v2->fields._ta_5__2;
-        sub_1C36FFC((CGThumbnailListItem_o *)&v2->fields._ta_5__2, (int32_t)v24, v26, v27);
+        sub_1C3E508((CGThumbnailListItem_o *)&v2->fields._ta_5__2, (int32_t)v23, v25, v26);
         ta_5__2 = (UnityEngine_Object_o *)v2->fields._ta_5__2;
         if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
           j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
@@ -308,26 +307,26 @@ LABEL_41:
 LABEL_17:
           if ( !_4__this )
             goto LABEL_48;
-          ShopInfoIndicator__InformationPanelTweenAlpha(_4__this, v9);
+          ShopInfoIndicator__InformationPanelTweenAlpha(_4__this, method);
           this = (ShopInfoIndicator__InformationChangeCR_d__7_o *)_4__this->fields.informationPanel;
           if ( !this )
             goto LABEL_48;
           if ( _4__this->fields.isClick )
             break;
-          v13 = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
-          v14 = TweenAlpha__Begin(v13, 0.5, 1.0, 0);
-          v2->fields._ta_5__2 = v14;
-          v15 = (ShopInfoIndicator__InformationChangeCR_d__7_o **)&v2->fields._ta_5__2;
-          sub_1C36FFC((CGThumbnailListItem_o *)&v2->fields._ta_5__2, (int32_t)v14, v16, v17);
-          ShopInfoIndicator__SwitchInfo(_4__this, v18);
-          v19 = (UnityEngine_Object_o *)v2->fields._ta_5__2;
+          v12 = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
+          v13 = TweenAlpha__Begin(v12, 0.5, 1.0, 0);
+          v2->fields._ta_5__2 = v13;
+          v14 = (ShopInfoIndicator__InformationChangeCR_d__7_o **)&v2->fields._ta_5__2;
+          sub_1C3E508((CGThumbnailListItem_o *)&v2->fields._ta_5__2, (int32_t)v13, v15, v16);
+          ShopInfoIndicator__SwitchInfo(_4__this, v17);
+          v18 = (UnityEngine_Object_o *)v2->fields._ta_5__2;
           if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
             j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-          this = (ShopInfoIndicator__InformationChangeCR_d__7_o *)UnityEngine_Object__op_Inequality(v19, 0, 0);
+          this = (ShopInfoIndicator__InformationChangeCR_d__7_o *)UnityEngine_Object__op_Inequality(v18, 0, 0);
           if ( ((unsigned __int8)this & 1) != 0 )
           {
-            this = *v15;
-            if ( !*v15 )
+            this = *v14;
+            if ( !*v14 )
               goto LABEL_48;
             LODWORD(this->fields.__4__this) = 6;
 LABEL_26:
@@ -341,8 +340,8 @@ LABEL_26:
               if ( !_4__this->fields.isClick )
               {
                 wait_5__3 = v2->fields._wait_5__3;
-                v21 = v2;
-                v22 = 1;
+                v20 = v2;
+                v21 = 1;
                 goto LABEL_46;
               }
             }
@@ -364,17 +363,17 @@ LABEL_32:
       }
       if ( !_4__this )
 LABEL_48:
-        sub_1C372B4(this);
+        sub_1C3E7C0(this, method);
       if ( _4__this->fields.isClick )
         goto LABEL_17;
       wait_5__3 = v2->fields._wait_5__3;
-      v21 = v2;
-      v22 = 3;
+      v20 = v2;
+      v21 = 3;
 LABEL_46:
-      v21->fields.__2__current = (Il2CppObject *)wait_5__3;
-      sub_1C36FFC((CGThumbnailListItem_o *)&v21->fields.__2__current, (int32_t)wait_5__3, v11, v12);
+      v20->fields.__2__current = (Il2CppObject *)wait_5__3;
+      sub_1C3E508((CGThumbnailListItem_o *)&v20->fields.__2__current, (int32_t)wait_5__3, v10, v11);
       result = 1;
-      v2->fields.__1__state = v22;
+      v2->fields.__1__state = v21;
       return result;
     case 3:
       this = (ShopInfoIndicator__InformationChangeCR_d__7_o *)v2->fields._ta_5__2;
@@ -404,11 +403,11 @@ void __noreturn ShopInfoIndicator__InformationChangeCR_d__7__System_Collections_
   System_NotSupportedException_o *v3; // x19
   __int64 v4; // x0
 
-  v2 = sub_1C3706C(&System_NotSupportedException_TypeInfo);
-  v3 = (System_NotSupportedException_o *)sub_1C372A4(v2);
+  v2 = sub_1C3E578(&System_NotSupportedException_TypeInfo);
+  v3 = (System_NotSupportedException_o *)sub_1C3E7B0(v2);
   System_NotSupportedException___ctor(v3, 0);
-  v4 = sub_1C3706C(&Method_ShopInfoIndicator__InformationChangeCR_d__7_System_Collections_IEnumerator_Reset__);
-  sub_1C37180(v3, v4);
+  v4 = sub_1C3E578(&Method_ShopInfoIndicator__InformationChangeCR_d__7_System_Collections_IEnumerator_Reset__);
+  sub_1C3E68C(v3, v4);
 }
 
 

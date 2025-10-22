@@ -2,10 +2,10 @@ void RecommendSupportQuestBoardListViewObject___ctor(
         RecommendSupportQuestBoardListViewObject_o *this,
         const MethodInfo *method)
 {
-  if ( (byte_4C3EECB & 1) == 0 )
+  if ( (byte_4C52C5D & 1) == 0 )
   {
-    sub_1C37058(&ListViewObject_TypeInfo);
-    byte_4C3EECB = 1;
+    sub_1C3E564(&ListViewObject_TypeInfo);
+    byte_4C52C5D = 1;
   }
   if ( !ListViewObject_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(ListViewObject_TypeInfo);
@@ -17,25 +17,26 @@ void RecommendSupportQuestBoardListViewObject__Awake(
         RecommendSupportQuestBoardListViewObject_o *this,
         const MethodInfo *method)
 {
+  __int64 v3; // x1
   UnityEngine_GameObject_o *dispObject; // x0
   Il2CppObject *Component_object; // x0
-  int32_t v5; // w2
-  const MethodInfo *v6; // x3
+  int32_t v6; // w2
+  const MethodInfo *v7; // x3
 
-  if ( (byte_4C3EEC8 & 1) == 0 )
+  if ( (byte_4C52C5A & 1) == 0 )
   {
-    sub_1C37058(&Method_UnityEngine_GameObject_GetComponent_RecommendSupportQuestBoardListViewItemDraw___);
-    byte_4C3EEC8 = 1;
+    sub_1C3E564(&Method_UnityEngine_GameObject_GetComponent_RecommendSupportQuestBoardListViewItemDraw___);
+    byte_4C52C5A = 1;
   }
   ListViewObject__Awake((ListViewObject_o *)this, 0);
   dispObject = this->fields.dispObject;
   if ( !dispObject )
-    sub_1C372B4(0);
+    sub_1C3E7C0(0, v3);
   Component_object = UnityEngine_GameObject__GetComponent_object_(
                        dispObject,
-                       (const MethodInfo_313F1D8 *)Method_UnityEngine_GameObject_GetComponent_RecommendSupportQuestBoardListViewItemDraw___);
+                       (const MethodInfo_31510CC *)Method_UnityEngine_GameObject_GetComponent_RecommendSupportQuestBoardListViewItemDraw___);
   this->fields.itemDraw = (struct RecommendSupportQuestBoardListViewItemDraw_o *)Component_object;
-  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.itemDraw, (int32_t)Component_object, v5, v6);
+  sub_1C3E508((CGThumbnailListItem_o *)&this->fields.itemDraw, (int32_t)Component_object, v6, v7);
 }
 
 
@@ -46,10 +47,10 @@ RecommendSupportQuestBoardListViewItem_o *RecommendSupportQuestBoardListViewObje
   struct ListViewItem_o *linkItem; // x8
   __int64 naturalAligment; // x11
 
-  if ( (byte_4C3EECA & 1) == 0 )
+  if ( (byte_4C52C5C & 1) == 0 )
   {
-    sub_1C37058(&RecommendSupportQuestBoardListViewItem_TypeInfo);
-    byte_4C3EECA = 1;
+    sub_1C3E564(&RecommendSupportQuestBoardListViewItem_TypeInfo);
+    byte_4C52C5C = 1;
   }
   linkItem = this->fields.linkItem;
   if ( !linkItem )
@@ -69,29 +70,30 @@ void RecommendSupportQuestBoardListViewObject__SetItem(
         ListViewItemSeed_o *seed,
         const MethodInfo *method)
 {
-  const MethodInfo *v7; // x2
+  __int64 v7; // x1
+  const MethodInfo *v8; // x2
   RecommendSupportQuestBoardListViewItemDraw_o *itemDraw; // x0
   __int64 naturalAligment; // x9
 
-  if ( (byte_4C3EEC9 & 1) == 0 )
+  if ( (byte_4C52C5B & 1) == 0 )
   {
-    sub_1C37058(&RecommendSupportQuestBoardListViewItem_TypeInfo);
-    byte_4C3EEC9 = 1;
+    sub_1C3E564(&RecommendSupportQuestBoardListViewItem_TypeInfo);
+    byte_4C52C5B = 1;
   }
-  ListViewObject__SetItem_43831492((ListViewObject_o *)this, item, seed, 0);
+  ListViewObject__SetItem_43886976((ListViewObject_o *)this, item, seed, 0);
   itemDraw = this->fields.itemDraw;
   if ( !itemDraw )
 LABEL_9:
-    sub_1C372B4(itemDraw);
+    sub_1C3E7C0(itemDraw, v7);
   if ( item )
   {
     naturalAligment = RecommendSupportQuestBoardListViewItem_TypeInfo->_2.naturalAligment;
     if ( item->klass->_2.naturalAligment < (unsigned int)naturalAligment
       || (RecommendSupportQuestBoardListViewItem_c *)item->klass->_2.typeHierarchy[naturalAligment - 1] != RecommendSupportQuestBoardListViewItem_TypeInfo )
     {
-      itemDraw = (RecommendSupportQuestBoardListViewItemDraw_o *)sub_1C37574(item);
+      itemDraw = (RecommendSupportQuestBoardListViewItemDraw_o *)sub_1C3EA80(item);
       goto LABEL_9;
     }
   }
-  RecommendSupportQuestBoardListViewItemDraw__SetItem(itemDraw, (RecommendSupportQuestBoardListViewItem_o *)item, v7);
+  RecommendSupportQuestBoardListViewItemDraw__SetItem(itemDraw, (RecommendSupportQuestBoardListViewItem_o *)item, v8);
 }

@@ -1,10 +1,10 @@
 void UITable___ctor(UITable_o *this, const MethodInfo *method)
 {
   this->fields.hideInactive = 1;
-  if ( !byte_4C3C81A )
+  if ( !byte_4C5059A )
   {
-    sub_1C37058(&UnityEngine_Vector2_TypeInfo);
-    byte_4C3C81A = 1;
+    sub_1C3E564(&UnityEngine_Vector2_TypeInfo);
+    byte_4C5059A = 1;
   }
   this->fields.padding = UnityEngine_Vector2_TypeInfo->static_fields->zeroVector;
   UnityEngine_MonoBehaviour___ctor((UnityEngine_MonoBehaviour_o *)this, 0);
@@ -16,70 +16,70 @@ System_Collections_Generic_List_Transform__o *UITable__GetChildList(UITable_o *t
   UnityEngine_Transform_o *transform; // x21
   System_Collections_Generic_List_object__o *v4; // x19
   UnityEngine_Transform_o *childCount; // x0
+  System_Comparison_T__o *onCustomSort; // x1
   int32_t i; // w22
-  int32_t v7; // w2
-  const MethodInfo *v8; // x3
-  UnityEngine_Object_o *v9; // x23
+  int32_t v8; // w2
+  const MethodInfo *v9; // x3
+  UnityEngine_Object_o *v10; // x23
   UnityEngine_GameObject_o *gameObject; // x24
   struct System_Object_array *items; // x8
-  _QWORD *v12; // x9
+  _QWORD *v13; // x9
   __int64 size; // x10
-  Il2CppClass **v14; // x0
-  System_Comparison_T__o *v15; // x0
-  intptr_t *v16; // x8
-  System_Comparison_T__o *onCustomSort; // x1
+  Il2CppClass **v15; // x0
+  System_Comparison_T__o *v16; // x0
+  intptr_t *v17; // x8
   System_Collections_Generic_List_object__o *v18; // x0
   System_Comparison_T__o *v19; // x20
 
-  if ( (byte_4C47645 & 1) == 0 )
+  if ( (byte_4C5B43C & 1) == 0 )
   {
-    sub_1C37058(&System_Comparison_Transform__TypeInfo);
-    sub_1C37058(&Method_System_Collections_Generic_List_Transform__Add__);
-    sub_1C37058(&Method_System_Collections_Generic_List_Transform__Sort__);
-    sub_1C37058(&Method_System_Collections_Generic_List_Transform___ctor__);
-    sub_1C37058(&System_Collections_Generic_List_Transform__TypeInfo);
-    sub_1C37058(&NGUITools_TypeInfo);
-    sub_1C37058(&UnityEngine_Object_TypeInfo);
-    sub_1C37058(&Method_UIGrid_SortByName__);
-    sub_1C37058(&Method_UIGrid_SortHorizontal__);
-    sub_1C37058(&Method_UIGrid_SortVertical__);
-    byte_4C47645 = 1;
+    sub_1C3E564(&System_Comparison_Transform__TypeInfo);
+    sub_1C3E564(&Method_System_Collections_Generic_List_Transform__Add__);
+    sub_1C3E564(&Method_System_Collections_Generic_List_Transform__Sort__);
+    sub_1C3E564(&Method_System_Collections_Generic_List_Transform___ctor__);
+    sub_1C3E564(&System_Collections_Generic_List_Transform__TypeInfo);
+    sub_1C3E564(&NGUITools_TypeInfo);
+    sub_1C3E564(&UnityEngine_Object_TypeInfo);
+    sub_1C3E564(&Method_UIGrid_SortByName__);
+    sub_1C3E564(&Method_UIGrid_SortHorizontal__);
+    sub_1C3E564(&Method_UIGrid_SortVertical__);
+    byte_4C5B43C = 1;
   }
   transform = UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0);
-  v4 = (System_Collections_Generic_List_object__o *)sub_1C372A4(System_Collections_Generic_List_Transform__TypeInfo);
+  v4 = (System_Collections_Generic_List_object__o *)sub_1C3E7B0(System_Collections_Generic_List_Transform__TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v4,
-    (const MethodInfo_37A27F0 *)Method_System_Collections_Generic_List_Transform___ctor__);
+    (const MethodInfo_37B4C2C *)Method_System_Collections_Generic_List_Transform___ctor__);
   if ( !transform )
 LABEL_32:
-    sub_1C372B4(childCount);
+    sub_1C3E7C0(childCount, onCustomSort);
   childCount = (UnityEngine_Transform_o *)UnityEngine_Transform__get_childCount(transform, 0);
   if ( (int)childCount >= 1 )
   {
     for ( i = 0; i < (int)childCount; ++i )
     {
       childCount = UnityEngine_Transform__GetChild(transform, i, 0);
-      v9 = (UnityEngine_Object_o *)childCount;
+      v10 = (UnityEngine_Object_o *)childCount;
       if ( !this->fields.hideInactive )
         goto LABEL_35;
       if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-      childCount = (UnityEngine_Transform_o *)UnityEngine_Object__op_Implicit(v9, 0);
+      childCount = (UnityEngine_Transform_o *)UnityEngine_Object__op_Implicit(v10, 0);
       if ( ((unsigned __int8)childCount & 1) != 0 )
       {
-        if ( !v9 )
+        if ( !v10 )
           goto LABEL_32;
-        gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)v9, 0);
+        gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)v10, 0);
         if ( !NGUITools_TypeInfo->_2.cctor_finished )
           j_il2cpp_runtime_class_init_0(NGUITools_TypeInfo);
-        childCount = (UnityEngine_Transform_o *)NGUITools__GetActive_49345096(gameObject, 0);
+        childCount = (UnityEngine_Transform_o *)NGUITools__GetActive_49418336(gameObject, 0);
         if ( ((unsigned __int8)childCount & 1) != 0 )
         {
 LABEL_35:
           if ( !v4 )
             goto LABEL_32;
           items = v4->fields._items;
-          v12 = Method_System_Collections_Generic_List_Transform__Add__;
+          v13 = Method_System_Collections_Generic_List_Transform__Add__;
           ++v4->fields._version;
           if ( !items )
             goto LABEL_32;
@@ -88,15 +88,15 @@ LABEL_35:
           {
             System_Collections_Generic_List_object___AddWithResize(
               v4,
-              (Il2CppObject *)v9,
-              *(const MethodInfo_37A3024 **)(*(_QWORD *)(v12[4] + 192LL) + 112LL));
+              (Il2CppObject *)v10,
+              *(const MethodInfo_37B5460 **)(*(_QWORD *)(v13[4] + 192LL) + 112LL));
           }
           else
           {
-            v14 = &items->obj.klass + size;
+            v15 = &items->obj.klass + size;
             v4->fields._size = size + 1;
-            v14[4] = (Il2CppClass *)v9;
-            sub_1C36FFC((CGThumbnailListItem_o *)(v14 + 4), (int32_t)v9, v7, v8);
+            v15[4] = (Il2CppClass *)v10;
+            sub_1C3E508((CGThumbnailListItem_o *)(v15 + 4), (int32_t)v10, v8, v9);
           }
         }
       }
@@ -108,19 +108,19 @@ LABEL_35:
     case 0:
       return (System_Collections_Generic_List_Transform__o *)v4;
     case 1:
-      v15 = (System_Comparison_T__o *)sub_1C372A4(System_Comparison_Transform__TypeInfo);
-      v16 = &Method_UIGrid_SortByName__;
+      v16 = (System_Comparison_T__o *)sub_1C3E7B0(System_Comparison_Transform__TypeInfo);
+      v17 = &Method_UIGrid_SortByName__;
       goto LABEL_27;
     case 2:
-      v15 = (System_Comparison_T__o *)sub_1C372A4(System_Comparison_Transform__TypeInfo);
-      v16 = &Method_UIGrid_SortHorizontal__;
+      v16 = (System_Comparison_T__o *)sub_1C3E7B0(System_Comparison_Transform__TypeInfo);
+      v17 = &Method_UIGrid_SortHorizontal__;
       goto LABEL_27;
     case 3:
-      v15 = (System_Comparison_T__o *)sub_1C372A4(System_Comparison_Transform__TypeInfo);
-      v16 = &Method_UIGrid_SortVertical__;
+      v16 = (System_Comparison_T__o *)sub_1C3E7B0(System_Comparison_Transform__TypeInfo);
+      v17 = &Method_UIGrid_SortVertical__;
 LABEL_27:
-      v19 = v15;
-      System_Comparison_object____ctor(v15, 0, *v16, 0);
+      v19 = v16;
+      System_Comparison_object____ctor(v16, 0, *v17, 0);
       if ( !v4 )
         goto LABEL_32;
       v18 = v4;
@@ -140,10 +140,10 @@ LABEL_27:
         goto LABEL_32;
       v18 = v4;
 LABEL_29:
-      System_Collections_Generic_List_object___Sort_58346216(
+      System_Collections_Generic_List_object___Sort_58421028(
         v18,
         onCustomSort,
-        (const MethodInfo_37A4AE8 *)Method_System_Collections_Generic_List_Transform__Sort__);
+        (const MethodInfo_37B6F24 *)Method_System_Collections_Generic_List_Transform__Sort__);
       return (System_Collections_Generic_List_Transform__o *)v4;
   }
 }
@@ -156,11 +156,11 @@ void UITable__Init(UITable_o *this, const MethodInfo *method)
   int32_t v5; // w2
   const MethodInfo *v6; // x3
 
-  if ( (byte_4C47647 & 1) == 0 )
+  if ( (byte_4C5B43E & 1) == 0 )
   {
-    sub_1C37058(&Method_NGUITools_FindInParents_UIPanel___);
-    sub_1C37058(&NGUITools_TypeInfo);
-    byte_4C47647 = 1;
+    sub_1C3E564(&Method_NGUITools_FindInParents_UIPanel___);
+    sub_1C3E564(&NGUITools_TypeInfo);
+    byte_4C5B43E = 1;
   }
   this->fields.mInitDone = 1;
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
@@ -168,9 +168,9 @@ void UITable__Init(UITable_o *this, const MethodInfo *method)
     j_il2cpp_runtime_class_init_0(NGUITools_TypeInfo);
   v4 = NGUITools__FindInParents_object_(
          gameObject,
-         (const MethodInfo_3171F1C *)Method_NGUITools_FindInParents_UIPanel___);
+         (const MethodInfo_3183E10 *)Method_NGUITools_FindInParents_UIPanel___);
   this->fields.mPanel = (struct UIPanel_o *)v4;
-  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.mPanel, (int32_t)v4, v5, v6);
+  sub_1C3E508((CGThumbnailListItem_o *)&this->fields.mPanel, (int32_t)v4, v5, v6);
 }
 
 
@@ -186,11 +186,11 @@ void UITable__LateUpdate(UITable_o *this, const MethodInfo *method)
 
 void UITable__OnValidate(UITable_o *this, const MethodInfo *method)
 {
-  if ( (byte_4C47648 & 1) == 0 )
+  if ( (byte_4C5B43F & 1) == 0 )
   {
-    sub_1C37058(&UnityEngine_Application_TypeInfo);
-    sub_1C37058(&NGUITools_TypeInfo);
-    byte_4C47648 = 1;
+    sub_1C3E564(&UnityEngine_Application_TypeInfo);
+    sub_1C3E564(&NGUITools_TypeInfo);
+    byte_4C5B43F = 1;
   }
   if ( !UnityEngine_Application_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Application_TypeInfo);
@@ -211,19 +211,20 @@ void UITable__Reposition(UITable_o *this, const MethodInfo *method)
   UnityEngine_Transform_o *transform; // x20
   const MethodInfo *v4; // x1
   System_Collections_Generic_List_Transform__o *ChildList; // x0
-  const MethodInfo *v6; // x2
+  __int64 v6; // x1
+  const MethodInfo *v7; // x2
   UnityEngine_Object_o *mPanel; // x21
   Il2CppObject *Component_object; // x20
   struct UITable_OnReposition_o *onReposition; // x8
 
-  if ( (byte_4C4764A & 1) == 0 )
+  if ( (byte_4C5B441 & 1) == 0 )
   {
-    sub_1C37058(&UnityEngine_Application_TypeInfo);
-    sub_1C37058(&Method_UnityEngine_Component_GetComponent_UIScrollView___);
-    sub_1C37058(&Method_System_Collections_Generic_List_Transform__get_Count__);
-    sub_1C37058(&NGUITools_TypeInfo);
-    sub_1C37058(&UnityEngine_Object_TypeInfo);
-    byte_4C4764A = 1;
+    sub_1C3E564(&UnityEngine_Application_TypeInfo);
+    sub_1C3E564(&Method_UnityEngine_Component_GetComponent_UIScrollView___);
+    sub_1C3E564(&Method_System_Collections_Generic_List_Transform__get_Count__);
+    sub_1C3E564(&NGUITools_TypeInfo);
+    sub_1C3E564(&UnityEngine_Object_TypeInfo);
+    byte_4C5B441 = 1;
   }
   if ( !UnityEngine_Application_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Application_TypeInfo);
@@ -242,7 +243,7 @@ void UITable__Reposition(UITable_o *this, const MethodInfo *method)
   if ( !ChildList )
     goto LABEL_28;
   if ( ChildList->fields._size >= 1 )
-    UITable__RepositionVariableSize(this, ChildList, v6);
+    UITable__RepositionVariableSize(this, ChildList, v7);
   if ( this->fields.keepWithinPanel )
   {
     mPanel = (UnityEngine_Object_o *)this->fields.mPanel;
@@ -253,13 +254,13 @@ void UITable__Reposition(UITable_o *this, const MethodInfo *method)
       ChildList = (System_Collections_Generic_List_Transform__o *)this->fields.mPanel;
       if ( !ChildList )
         goto LABEL_28;
-      UIPanel__ConstrainTargetToBounds_49119940((UIPanel_o *)ChildList, transform, 1, 0);
+      UIPanel__ConstrainTargetToBounds_49193180((UIPanel_o *)ChildList, transform, 1, 0);
       ChildList = (System_Collections_Generic_List_Transform__o *)this->fields.mPanel;
       if ( !ChildList )
         goto LABEL_28;
       Component_object = UnityEngine_Component__GetComponent_object_(
                            (UnityEngine_Component_o *)ChildList,
-                           (const MethodInfo_30DE428 *)Method_UnityEngine_Component_GetComponent_UIScrollView___);
+                           (const MethodInfo_30F0240 *)Method_UnityEngine_Component_GetComponent_UIScrollView___);
       if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
       ChildList = (System_Collections_Generic_List_Transform__o *)UnityEngine_Object__op_Inequality(
@@ -277,7 +278,7 @@ void UITable__Reposition(UITable_o *this, const MethodInfo *method)
           goto LABEL_25;
         }
 LABEL_28:
-        sub_1C372B4(ChildList);
+        sub_1C3E7C0(ChildList, v6);
       }
     }
   }
@@ -302,173 +303,172 @@ void UITable__RepositionVariableSize(
   __int64 v7; // x21
   __int64 v8; // x22
   __int64 v9; // x0
-  const MethodInfo *v10; // x1
   int32_t size; // w27
-  __int64 v12; // x23
-  unsigned int v13; // w28
-  unsigned int v14; // w29
-  int32_t v15; // w24
+  __int64 v11; // x23
+  unsigned int v12; // w28
+  unsigned int v13; // w29
+  int32_t v14; // w24
   Il2CppObject *Item; // x25
-  const MethodInfo *v17; // x4
-  float32x2_t v18; // d10
+  const MethodInfo *v16; // x4
+  float32x2_t v17; // d10
   float z; // s11
-  float32x2_t v20; // d12
-  float v21; // s13
-  __int64 v22; // x8
-  __int64 v23; // x9
+  float32x2_t v19; // d12
+  float v20; // s13
+  __int64 v21; // x8
+  __int64 v22; // x9
   float y; // v0.s[1]
-  float32x2_t v25; // d3
-  float v26; // s4
-  float32x2_t v27; // d1
-  float v28; // s5
-  float32x2_t v29; // d3
-  float v30; // s4
-  float32x2_t v31; // d6
-  float v32; // s7
-  float32x2_t v33; // d1
-  float v34; // s4
-  float32x2_t v35; // d2
-  float v36; // s3
-  __int64 v37; // x9
-  float32x2_t v38; // d5
-  float v39; // s4
-  float *v40; // x9
-  float v41; // s16
-  float v42; // s17
-  float v43; // s18
-  float v44; // s19
-  float v45; // s20
-  float v46; // s21
-  float v47; // s0
-  float v48; // s1
-  float v49; // s3
-  float v50; // s4
-  float v51; // s6
-  float v52; // s7
-  float v53; // s16
-  float v54; // s17
-  float v55; // s19
-  float v56; // s18
+  float32x2_t v24; // d3
+  float v25; // s4
+  float32x2_t v26; // d1
+  float v27; // s5
+  float32x2_t v28; // d3
+  float v29; // s4
+  float32x2_t v30; // d6
+  float v31; // s7
+  float32x2_t v32; // d1
+  float v33; // s4
+  float32x2_t v34; // d2
+  float v35; // s3
+  __int64 v36; // x9
+  float32x2_t v37; // d5
+  float v38; // s4
+  float *v39; // x9
+  float v40; // s16
+  float v41; // s17
+  float v42; // s18
+  float v43; // s19
+  float v44; // s20
+  float v45; // s21
+  float v46; // s0
+  float v47; // s1
+  float v48; // s3
+  float v49; // s4
+  float v50; // s6
+  float v51; // s7
+  float v52; // s16
+  float v53; // s17
+  float v54; // s19
+  float v55; // s18
+  float v56; // s16
   float v57; // s16
-  float v58; // s16
-  float v59; // s17
-  float v60; // s6
-  float v61; // s18
-  float v62; // s7
-  float v63; // s20
-  float v64; // s6
-  float v65; // s16
-  float v66; // s19
-  float v67; // s7
-  float v68; // s17
-  float v69; // s16
-  float v70; // s18
-  float v71; // s6
-  float v72; // s7
-  float v73; // s16
-  float *v74; // x8
-  float v75; // s6
-  float v76; // s7
-  float v77; // s16
-  float v78; // s17
-  float v79; // s18
-  float v80; // s19
-  int32_t v81; // w9
-  float v82; // s20
-  float v83; // s21
-  bool v84; // nf
-  float v85; // s22
-  float v86; // s6
-  float v87; // s17
-  float v88; // s7
-  float v89; // s18
-  float v90; // s16
-  float v91; // s19
+  float v58; // s17
+  float v59; // s6
+  float v60; // s18
+  float v61; // s7
+  float v62; // s20
+  float v63; // s6
+  float v64; // s16
+  float v65; // s19
+  float v66; // s7
+  float v67; // s17
+  float v68; // s16
+  float v69; // s18
+  float v70; // s6
+  float v71; // s7
+  float v72; // s16
+  float *v73; // x8
+  float v74; // s6
+  float v75; // s7
+  float v76; // s16
+  float v77; // s17
+  float v78; // s18
+  float v79; // s19
+  int32_t v80; // w9
+  float v81; // s20
+  float v82; // s21
+  bool v83; // nf
+  float v84; // s22
+  float v85; // s6
+  float v86; // s17
+  float v87; // s7
+  float v88; // s18
+  float v89; // s16
+  float v90; // s19
+  float v91; // s0
   float v92; // s0
-  float v93; // s0
-  float v94; // s5
-  float v95; // s1
-  float v96; // s16
-  float v97; // s0
-  float v98; // s17
-  float v99; // s5
-  float v100; // s7
-  float v101; // s1
-  float v102; // s6
-  float v103; // s2
-  float v104; // s0
-  float v105; // s2
-  float v106; // s1
-  _BOOL4 v107; // w8
-  int v108; // w9
-  const MethodInfo *v109; // x1
+  float v93; // s5
+  float v94; // s1
+  float v95; // s16
+  float v96; // s0
+  float v97; // s17
+  float v98; // s5
+  float v99; // s7
+  float v100; // s1
+  float v101; // s6
+  float v102; // s2
+  float v103; // s0
+  float v104; // s2
+  float v105; // s1
+  _BOOL4 v106; // w8
+  int v107; // w9
+  const MethodInfo *v108; // x1
   UnityEngine_Vector2_o PivotOffset; // kr00_8
-  int32_t v111; // w26
-  float v112; // s0
-  float v113; // s2
-  float v114; // s4
-  unsigned int v115; // w28
-  unsigned int v116; // w27
-  int32_t v117; // w24
-  float v118; // s10
-  float v119; // s0
-  float v120; // s13
+  int32_t v110; // w26
+  float v111; // s0
+  float v112; // s2
+  float v113; // s4
+  unsigned int v114; // w28
+  unsigned int v115; // w27
+  int32_t v116; // w24
+  float v117; // s10
+  float v118; // s0
+  float v119; // s13
+  __int64 v120; // x8
   __int64 v121; // x8
-  __int64 v122; // x8
-  UnityEngine_Transform_o *v123; // x25
-  __int64 v124; // x10
-  __int64 v125; // x9
-  float *v126; // x8
-  float v127; // s14
-  float v128; // s12
-  float v129; // s8
-  float v130; // s10
-  float v131; // s9
-  float v132; // s11
-  float v133; // s15
-  float v134; // s1
-  float v135; // s0
-  float v136; // s3
-  float v137; // s1
+  UnityEngine_Transform_o *v122; // x25
+  __int64 v123; // x10
+  __int64 v124; // x9
+  float *v125; // x8
+  float v126; // s14
+  float v127; // s12
+  float v128; // s8
+  float v129; // s10
+  float v130; // s9
+  float v131; // s11
+  float v132; // s15
+  float v133; // s1
+  float v134; // s0
+  float v135; // s3
+  float v136; // s1
   float x; // s4
-  float v139; // s0
-  int v140; // w8
+  float v138; // s0
+  int v139; // w8
   int32_t pivot; // w0
-  UnityEngine_Vector2_o v142; // kr08_8
+  UnityEngine_Vector2_o v141; // kr08_8
   UnityEngine_Transform_o *transform; // x0
-  const MethodInfo *v144; // x4
-  float v145; // s10
-  float v146; // s12
-  float v147; // s1
-  float v148; // s0
-  float v149; // s8
-  float v150; // s9
-  UnityEngine_Transform_o *v151; // x19
-  float v152; // s8
-  int32_t v153; // w20
-  float v154; // s9
-  UnityEngine_Transform_o *v155; // x21
+  const MethodInfo *v143; // x4
+  float v144; // s10
+  float v145; // s12
+  float v146; // s1
+  float v147; // s0
+  float v148; // s8
+  float v149; // s9
+  UnityEngine_Transform_o *v150; // x19
+  float v151; // s8
+  int32_t v152; // w20
+  float v153; // s9
+  UnityEngine_Transform_o *v154; // x21
   Il2CppObject *Component_object; // x22
-  float v157; // s1
-  float v158; // [xsp+4h] [xbp-CCh]
-  float v159; // [xsp+8h] [xbp-C8h]
-  float v160; // [xsp+10h] [xbp-C0h]
-  float v161; // [xsp+14h] [xbp-BCh]
-  UnityEngine_Bounds_o v162; // [xsp+18h] [xbp-B8h] BYREF
+  float v156; // s1
+  float v157; // [xsp+4h] [xbp-CCh]
+  float v158; // [xsp+8h] [xbp-C8h]
+  float v159; // [xsp+10h] [xbp-C0h]
+  float v160; // [xsp+14h] [xbp-BCh]
+  UnityEngine_Bounds_o v161; // [xsp+18h] [xbp-B8h] BYREF
   UnityEngine_Vector3_o localScale; // 0:s0.4,4:s1.4,8:s2.4 OVERLAPPED
   UnityEngine_Vector3_o localPosition; // 0:s0.4,4:s1.4,8:s2.4
-  UnityEngine_Vector3_o v165; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o v164; // 0:s0.4,4:s1.4,8:s2.4
 
   v4 = this;
-  if ( (byte_4C47649 & 1) == 0 )
+  if ( (byte_4C5B440 & 1) == 0 )
   {
-    sub_1C37058(&UnityEngine_Bounds____TypeInfo);
-    sub_1C37058(&UnityEngine_Bounds___TypeInfo);
-    sub_1C37058(&Method_UnityEngine_Component_GetComponent_SpringPosition___);
-    sub_1C37058(&Method_System_Collections_Generic_List_Transform__get_Count__);
-    sub_1C37058(&Method_System_Collections_Generic_List_Transform__get_Item__);
-    this = (UITable_o *)sub_1C37058(&UnityEngine_Object_TypeInfo);
-    byte_4C47649 = 1;
+    sub_1C3E564(&UnityEngine_Bounds____TypeInfo);
+    sub_1C3E564(&UnityEngine_Bounds___TypeInfo);
+    sub_1C3E564(&Method_UnityEngine_Component_GetComponent_SpringPosition___);
+    sub_1C3E564(&Method_System_Collections_Generic_List_Transform__get_Count__);
+    sub_1C3E564(&Method_System_Collections_Generic_List_Transform__get_Item__);
+    this = (UITable_o *)sub_1C3E564(&UnityEngine_Object_TypeInfo);
+    byte_4C5B440 = 1;
   }
   columns = v4->fields.columns;
   if ( columns < 1 )
@@ -484,356 +484,356 @@ void UITable__RepositionVariableSize(
       goto LABEL_119;
     v6 = children->fields._size / columns + 1;
   }
-  *(_QWORD *)&v162.fields.m_Center.fields.x = v6;
-  *(_QWORD *)&v162.fields.m_Center.fields.z = columns;
-  v7 = sub_1C37108(UnityEngine_Bounds____TypeInfo, &v162);
-  v8 = sub_1C37100(UnityEngine_Bounds___TypeInfo, (unsigned int)columns);
-  v9 = sub_1C37100(UnityEngine_Bounds___TypeInfo, (unsigned int)v6);
+  *(_QWORD *)&v161.fields.m_Center.fields.x = v6;
+  *(_QWORD *)&v161.fields.m_Center.fields.z = columns;
+  v7 = sub_1C3E614(UnityEngine_Bounds____TypeInfo, &v161);
+  v8 = sub_1C3E60C(UnityEngine_Bounds___TypeInfo, (unsigned int)columns);
+  v9 = sub_1C3E60C(UnityEngine_Bounds___TypeInfo, (unsigned int)v6);
   size = children->fields._size;
-  v12 = v9;
+  v11 = v9;
   if ( size >= 1 )
   {
+    v12 = 0;
     v13 = 0;
     v14 = 0;
-    v15 = 0;
     while ( 1 )
     {
       Item = System_Collections_Generic_List_object___get_Item(
                (System_Collections_Generic_List_object__o *)children,
-               v15,
-               (const MethodInfo_37A2D54 *)Method_System_Collections_Generic_List_Transform__get_Item__);
-      this = (UITable_o *)NGUIMath__CalculateRelativeWidgetBounds_49299668(
-                            &v162,
+               v14,
+               (const MethodInfo_37B5190 *)Method_System_Collections_Generic_List_Transform__get_Item__);
+      this = (UITable_o *)NGUIMath__CalculateRelativeWidgetBounds_49372908(
+                            &v161,
                             (UnityEngine_Transform_o *)Item,
                             (UnityEngine_Transform_o *)Item,
                             !v4->fields.hideInactive,
                             1,
-                            v17);
+                            v16);
       if ( !Item )
         break;
-      v18.n64_u64[0] = *(unsigned __int64 *)&v162.fields.m_Center.fields.x;
-      z = v162.fields.m_Center.fields.z;
-      v20.n64_u64[0] = *(unsigned __int64 *)&v162.fields.m_Extents.fields.x;
-      v21 = v162.fields.m_Extents.fields.z;
+      v17.n64_u64[0] = *(unsigned __int64 *)&v161.fields.m_Center.fields.x;
+      z = v161.fields.m_Center.fields.z;
+      v19.n64_u64[0] = *(unsigned __int64 *)&v161.fields.m_Extents.fields.x;
+      v20 = v161.fields.m_Extents.fields.z;
       localScale = UnityEngine_Transform__get_localScale((UnityEngine_Transform_o *)Item, 0);
       if ( !v7 )
         break;
-      v22 = *(_QWORD *)(v7 + 16);
-      if ( v14 >= *(_DWORD *)v22 )
+      v21 = *(_QWORD *)(v7 + 16);
+      if ( v13 >= *(_DWORD *)v21 )
         goto LABEL_120;
-      v23 = *(_QWORD *)(v22 + 16);
-      if ( v13 >= (unsigned int)v23 )
+      v22 = *(_QWORD *)(v21 + 16);
+      if ( v12 >= (unsigned int)v22 )
         goto LABEL_120;
       y = localScale.fields.y;
-      v25.n64_u64[0] = vmul_f32(vsub_f32(v18, v20), *(float32x2_t *)&localScale.fields.x).n64_u64[0];
-      v26 = (float)(z - v21) * localScale.fields.z;
-      v27.n64_u64[0] = vmul_f32(vsub_f32(vadd_f32(v18, v20), v25), (float32x2_t)0x3F0000003F000000LL).n64_u64[0];
-      v28 = (float)((float)(z + v21) - v26) * 0.5;
-      v29.n64_u64[0] = vadd_f32(v25, v27).n64_u64[0];
-      v30 = v26 + v28;
-      v31.n64_u64[0] = vadd_f32(v27, v29).n64_u64[0];
-      v32 = v28 + v30;
-      v33.n64_u64[0] = vsub_f32(v29, v27).n64_u64[0];
-      v34 = v30 - v28;
-      v29.n64_f32[0] = (float)(localScale.fields.z * v32) - v34;
-      v35.n64_u64[0] = vmul_f32(
-                         vsub_f32(vmul_f32(*(float32x2_t *)&localScale.fields.x, v31), v33),
+      v24.n64_u64[0] = vmul_f32(vsub_f32(v17, v19), *(float32x2_t *)&localScale.fields.x).n64_u64[0];
+      v25 = (float)(z - v20) * localScale.fields.z;
+      v26.n64_u64[0] = vmul_f32(vsub_f32(vadd_f32(v17, v19), v24), (float32x2_t)0x3F0000003F000000LL).n64_u64[0];
+      v27 = (float)((float)(z + v20) - v25) * 0.5;
+      v28.n64_u64[0] = vadd_f32(v24, v26).n64_u64[0];
+      v29 = v25 + v27;
+      v30.n64_u64[0] = vadd_f32(v26, v28).n64_u64[0];
+      v31 = v27 + v29;
+      v32.n64_u64[0] = vsub_f32(v28, v26).n64_u64[0];
+      v33 = v29 - v27;
+      v28.n64_f32[0] = (float)(localScale.fields.z * v31) - v33;
+      v34.n64_u64[0] = vmul_f32(
+                         vsub_f32(vmul_f32(*(float32x2_t *)&localScale.fields.x, v30), v32),
                          (float32x2_t)0x3F0000003F000000LL).n64_u64[0];
-      v36 = v29.n64_f32[0] * 0.5;
-      v37 = v7 + 24 * ((int)v13 + v23 * (int)v14);
-      v38.n64_u64[0] = vadd_f32(v33, v35).n64_u64[0];
-      v39 = v34 + v36;
-      *(float32x2_t *)(v37 + 44) = v35;
-      *(float32x2_t *)(v37 + 32) = v38;
-      *(float *)(v37 + 40) = v39;
-      *(float *)(v37 + 52) = v36;
+      v35 = v28.n64_f32[0] * 0.5;
+      v36 = v7 + 24 * ((int)v12 + v22 * (int)v13);
+      v37.n64_u64[0] = vadd_f32(v32, v34).n64_u64[0];
+      v38 = v33 + v35;
+      *(float32x2_t *)(v36 + 44) = v34;
+      *(float32x2_t *)(v36 + 32) = v37;
+      *(float *)(v36 + 40) = v38;
+      *(float *)(v36 + 52) = v35;
       if ( !v8 )
         break;
-      if ( v13 >= *(_DWORD *)(v8 + 24) )
+      if ( v12 >= *(_DWORD *)(v8 + 24) )
 LABEL_120:
-        sub_1C372BC(this);
-      v40 = (float *)(v8 + 24LL * (int)v13);
-      v41 = v40[8];
-      v42 = v40[9];
-      v43 = v40[10];
-      v44 = v40[11];
-      v45 = v40[12];
-      v46 = v40[13];
-      v47 = vsub_f32(v38, v35).n64_f32[0];
-      v48 = v39 - v36;
-      v35.n64_u32[0] = vadd_f32(v35, v38).n64_u32[0];
-      v49 = v36 + v39;
-      v38.n64_f32[0] = v38.n64_f32[1] - v35.n64_f32[1];
-      v50 = v35.n64_f32[1] + v38.n64_f32[1];
+        sub_1C3E7C8(this, children);
+      v39 = (float *)(v8 + 24LL * (int)v12);
+      v40 = v39[8];
+      v41 = v39[9];
+      v42 = v39[10];
+      v43 = v39[11];
+      v44 = v39[12];
+      v45 = v39[13];
+      v46 = vsub_f32(v37, v34).n64_f32[0];
+      v47 = v38 - v35;
+      v34.n64_u32[0] = vadd_f32(v34, v37).n64_u32[0];
+      v48 = v35 + v38;
+      v37.n64_f32[0] = v37.n64_f32[1] - v34.n64_f32[1];
+      v49 = v34.n64_f32[1] + v37.n64_f32[1];
+      v50 = v40 - v43;
       v51 = v41 - v44;
-      v52 = v42 - v45;
-      if ( (float)(v41 - v44) >= v47 )
-        v51 = v47;
+      if ( (float)(v40 - v43) >= v46 )
+        v50 = v46;
+      v52 = v40 + v43;
+      if ( v51 >= v37.n64_f32[0] )
+        v51 = v37.n64_f32[1] - v34.n64_f32[1];
       v53 = v41 + v44;
-      if ( v52 >= v38.n64_f32[0] )
-        v52 = v38.n64_f32[1] - v35.n64_f32[1];
-      v54 = v42 + v45;
-      if ( (float)(v43 - v46) >= v48 )
-        v55 = v48;
+      if ( (float)(v42 - v45) >= v47 )
+        v54 = v47;
       else
-        v55 = v43 - v46;
-      v56 = v43 + v46;
-      if ( v53 <= v47 )
-        v53 = v47;
-      if ( v54 <= v38.n64_f32[0] )
-        v54 = v38.n64_f32[1] - v35.n64_f32[1];
-      v57 = v53 - v51;
-      if ( v56 <= v48 )
-        v56 = v48;
-      v58 = v57 * 0.5;
-      v59 = (float)(v54 - v52) * 0.5;
-      v60 = v51 + v58;
-      v61 = (float)(v56 - v55) * 0.5;
-      v62 = v52 + v59;
-      v63 = v60 - v58;
-      v64 = v58 + v60;
-      v65 = v55 + v61;
-      v66 = v62 - v59;
-      v67 = v59 + v62;
-      v68 = v65 - v61;
-      if ( v63 >= v35.n64_f32[0] )
-        v63 = v35.n64_f32[0];
-      v69 = v61 + v65;
-      if ( v66 >= v50 )
-        v70 = v35.n64_f32[1] + v38.n64_f32[1];
+        v54 = v42 - v45;
+      v55 = v42 + v45;
+      if ( v52 <= v46 )
+        v52 = v46;
+      if ( v53 <= v37.n64_f32[0] )
+        v53 = v37.n64_f32[1] - v34.n64_f32[1];
+      v56 = v52 - v50;
+      if ( v55 <= v47 )
+        v55 = v47;
+      v57 = v56 * 0.5;
+      v58 = (float)(v53 - v51) * 0.5;
+      v59 = v50 + v57;
+      v60 = (float)(v55 - v54) * 0.5;
+      v61 = v51 + v58;
+      v62 = v59 - v57;
+      v63 = v57 + v59;
+      v64 = v54 + v60;
+      v65 = v61 - v58;
+      v66 = v58 + v61;
+      v67 = v64 - v60;
+      if ( v62 >= v34.n64_f32[0] )
+        v62 = v34.n64_f32[0];
+      v68 = v60 + v64;
+      if ( v65 >= v49 )
+        v69 = v34.n64_f32[1] + v37.n64_f32[1];
       else
-        v70 = v66;
-      if ( v68 >= v49 )
-        v68 = v49;
-      if ( v64 <= v35.n64_f32[0] )
-        v64 = v35.n64_f32[0];
-      if ( v67 <= v50 )
-        v67 = v35.n64_f32[1] + v38.n64_f32[1];
-      if ( v69 <= v49 )
-        v69 = v49;
-      v71 = (float)(v64 - v63) * 0.5;
-      v72 = (float)(v67 - v70) * 0.5;
-      v73 = (float)(v69 - v68) * 0.5;
-      v40[12] = v72;
-      v40[13] = v73;
-      v40[8] = v63 + v71;
-      v40[9] = v70 + v72;
-      v40[10] = v68 + v73;
-      v40[11] = v71;
-      if ( !v12 )
+        v69 = v65;
+      if ( v67 >= v48 )
+        v67 = v48;
+      if ( v63 <= v34.n64_f32[0] )
+        v63 = v34.n64_f32[0];
+      if ( v66 <= v49 )
+        v66 = v34.n64_f32[1] + v37.n64_f32[1];
+      if ( v68 <= v48 )
+        v68 = v48;
+      v70 = (float)(v63 - v62) * 0.5;
+      v71 = (float)(v66 - v69) * 0.5;
+      v72 = (float)(v68 - v67) * 0.5;
+      v39[12] = v71;
+      v39[13] = v72;
+      v39[8] = v62 + v70;
+      v39[9] = v69 + v71;
+      v39[10] = v67 + v72;
+      v39[11] = v70;
+      if ( !v11 )
         break;
-      if ( v14 >= *(_DWORD *)(v12 + 24) )
+      if ( v13 >= *(_DWORD *)(v11 + 24) )
         goto LABEL_120;
-      v74 = (float *)(v12 + 24LL * (int)v14);
-      v75 = v74[8];
-      v76 = v74[9];
-      v77 = v74[10];
-      v78 = v74[11];
-      v79 = v74[12];
-      v80 = v74[13];
-      v81 = v13 + 1;
-      ++v15;
+      v73 = (float *)(v11 + 24LL * (int)v13);
+      v74 = v73[8];
+      v75 = v73[9];
+      v76 = v73[10];
+      v77 = v73[11];
+      v78 = v73[12];
+      v79 = v73[13];
+      v80 = v12 + 1;
+      ++v14;
+      v81 = v74 - v77;
       v82 = v75 - v78;
-      v83 = v76 - v79;
-      v84 = (float)(v75 - v78) < v47;
-      v85 = v77 - v80;
-      v86 = v75 + v78;
-      if ( v84 )
-        v87 = v82;
+      v83 = (float)(v74 - v77) < v46;
+      v84 = v76 - v79;
+      v85 = v74 + v77;
+      if ( v83 )
+        v86 = v81;
       else
-        v87 = v47;
-      v88 = v76 + v79;
-      if ( v83 >= v38.n64_f32[0] )
-        v89 = v38.n64_f32[1] - v35.n64_f32[1];
+        v86 = v46;
+      v87 = v75 + v78;
+      if ( v82 >= v37.n64_f32[0] )
+        v88 = v37.n64_f32[1] - v34.n64_f32[1];
       else
-        v89 = v83;
-      v90 = v77 + v80;
-      if ( v85 >= v48 )
-        v91 = v48;
+        v88 = v82;
+      v89 = v76 + v79;
+      if ( v84 >= v47 )
+        v90 = v47;
       else
-        v91 = v85;
-      if ( v86 > v47 )
-        v47 = v86;
-      if ( v88 > v38.n64_f32[0] )
-        v38.n64_f32[0] = v88;
-      v92 = v47 - v87;
-      if ( v90 > v48 )
-        v48 = v90;
-      v93 = v92 * 0.5;
-      v94 = (float)(v38.n64_f32[0] - v89) * 0.5;
-      v95 = (float)(v48 - v91) * 0.5;
-      v96 = (float)(v87 + v93) - v93;
-      v97 = v93 + (float)(v87 + v93);
-      v98 = (float)(v89 + v94) - v94;
-      v99 = v94 + (float)(v89 + v94);
-      v100 = (float)(v91 + v95) - v95;
-      if ( v96 >= v35.n64_f32[0] )
-        v96 = v35.n64_f32[0];
-      v101 = v95 + (float)(v91 + v95);
-      if ( v98 >= v50 )
-        v102 = v35.n64_f32[1] + v38.n64_f32[1];
+        v90 = v84;
+      if ( v85 > v46 )
+        v46 = v85;
+      if ( v87 > v37.n64_f32[0] )
+        v37.n64_f32[0] = v87;
+      v91 = v46 - v86;
+      if ( v89 > v47 )
+        v47 = v89;
+      v92 = v91 * 0.5;
+      v93 = (float)(v37.n64_f32[0] - v88) * 0.5;
+      v94 = (float)(v47 - v90) * 0.5;
+      v95 = (float)(v86 + v92) - v92;
+      v96 = v92 + (float)(v86 + v92);
+      v97 = (float)(v88 + v93) - v93;
+      v98 = v93 + (float)(v88 + v93);
+      v99 = (float)(v90 + v94) - v94;
+      if ( v95 >= v34.n64_f32[0] )
+        v95 = v34.n64_f32[0];
+      v100 = v94 + (float)(v90 + v94);
+      if ( v97 >= v49 )
+        v101 = v34.n64_f32[1] + v37.n64_f32[1];
+      else
+        v101 = v97;
+      if ( v99 >= v48 )
+        v99 = v48;
+      if ( v96 <= v34.n64_f32[0] )
+        v96 = v34.n64_f32[0];
+      if ( v98 <= v49 )
+        v102 = v34.n64_f32[1] + v37.n64_f32[1];
       else
         v102 = v98;
-      if ( v100 >= v49 )
-        v100 = v49;
-      if ( v97 <= v35.n64_f32[0] )
-        v97 = v35.n64_f32[0];
-      if ( v99 <= v50 )
-        v103 = v35.n64_f32[1] + v38.n64_f32[1];
+      if ( v100 <= v48 )
+        v100 = v48;
+      v103 = (float)(v96 - v95) * 0.5;
+      v104 = (float)(v102 - v101) * 0.5;
+      v105 = (float)(v100 - v99) * 0.5;
+      v73[12] = v104;
+      v73[13] = v105;
+      v73[8] = v95 + v103;
+      v73[9] = v101 + v104;
+      v73[10] = v99 + v105;
+      v73[11] = v103;
+      v106 = v80 < v4->fields.columns || v4->fields.columns < 1;
+      v107 = v80 >= v4->fields.columns && v4->fields.columns >= 1;
+      if ( v106 )
+        ++v12;
       else
-        v103 = v99;
-      if ( v101 <= v49 )
-        v101 = v49;
-      v104 = (float)(v97 - v96) * 0.5;
-      v105 = (float)(v103 - v102) * 0.5;
-      v106 = (float)(v101 - v100) * 0.5;
-      v74[12] = v105;
-      v74[13] = v106;
-      v74[8] = v96 + v104;
-      v74[9] = v102 + v105;
-      v74[10] = v100 + v106;
-      v74[11] = v104;
-      v107 = v81 < v4->fields.columns || v4->fields.columns < 1;
-      v108 = v81 >= v4->fields.columns && v4->fields.columns >= 1;
-      if ( v107 )
-        ++v13;
-      else
-        v13 = 0;
-      v14 += v108;
-      if ( size == v15 )
+        v12 = 0;
+      v13 += v107;
+      if ( size == v14 )
         goto LABEL_77;
     }
 LABEL_119:
-    sub_1C372B4(this);
+    sub_1C3E7C0(this, children);
   }
 LABEL_77:
-  PivotOffset = NGUIMath__GetPivotOffset(v4->fields.cellAlignment, v10);
-  v111 = children->fields._size;
-  if ( v111 >= 1 )
+  PivotOffset = NGUIMath__GetPivotOffset(v4->fields.cellAlignment, (const MethodInfo *)children);
+  v110 = children->fields._size;
+  if ( v110 >= 1 )
   {
-    v112 = fminf(PivotOffset.fields.x, 1.0);
-    v113 = fminf(PivotOffset.fields.y, 1.0);
+    v111 = fminf(PivotOffset.fields.x, 1.0);
+    v112 = fminf(PivotOffset.fields.y, 1.0);
     if ( PivotOffset.fields.x < 0.0 )
-      v114 = 0.0;
+      v113 = 0.0;
     else
-      v114 = v112;
+      v113 = v111;
+    v114 = 0;
     v115 = 0;
     v116 = 0;
-    v117 = 0;
-    v118 = 0.0;
+    v117 = 0.0;
     if ( PivotOffset.fields.y < 0.0 )
-      v119 = 0.0;
+      v118 = 0.0;
     else
-      v119 = v113;
-    v120 = 0.0;
-    v158 = v119;
-    v159 = v114;
+      v118 = v112;
+    v119 = 0.0;
+    v157 = v118;
+    v158 = v113;
     do
     {
       this = (UITable_o *)System_Collections_Generic_List_object___get_Item(
                             (System_Collections_Generic_List_object__o *)children,
-                            v117,
-                            (const MethodInfo_37A2D54 *)Method_System_Collections_Generic_List_Transform__get_Item__);
+                            v116,
+                            (const MethodInfo_37B5190 *)Method_System_Collections_Generic_List_Transform__get_Item__);
       if ( !v7 )
         goto LABEL_119;
-      v121 = *(_QWORD *)(v7 + 16);
-      if ( v116 >= *(_DWORD *)v121 )
+      v120 = *(_QWORD *)(v7 + 16);
+      if ( v115 >= *(_DWORD *)v120 )
         goto LABEL_120;
-      v122 = *(_QWORD *)(v121 + 16);
-      if ( v115 >= (unsigned int)v122 )
+      v121 = *(_QWORD *)(v120 + 16);
+      if ( v114 >= (unsigned int)v121 )
         goto LABEL_120;
       if ( !v8 )
         goto LABEL_119;
-      if ( v115 >= *(_DWORD *)(v8 + 24) )
+      if ( v114 >= *(_DWORD *)(v8 + 24) )
         goto LABEL_120;
-      if ( !v12 )
+      if ( !v11 )
         goto LABEL_119;
-      if ( v116 >= *(_DWORD *)(v12 + 24) )
+      if ( v115 >= *(_DWORD *)(v11 + 24) )
         goto LABEL_120;
-      v123 = (UnityEngine_Transform_o *)this;
-      v161 = v118;
+      v122 = (UnityEngine_Transform_o *)this;
+      v160 = v117;
       if ( !this )
         goto LABEL_119;
-      v124 = v8 + 24LL * (int)v115;
-      v125 = v12 + 24LL * (int)v116;
-      v126 = (float *)(v7 + 24 * ((int)v115 + v122 * (int)v116));
-      v127 = *(float *)(v124 + 44);
-      v128 = *(float *)(v125 + 36);
-      v129 = v126[8];
-      v130 = v126[9];
-      v131 = v126[11];
-      v132 = v126[12];
-      v133 = *(float *)(v125 + 48);
-      v160 = *(float *)(v124 + 32);
+      v123 = v8 + 24LL * (int)v114;
+      v124 = v11 + 24LL * (int)v115;
+      v125 = (float *)(v7 + 24 * ((int)v114 + v121 * (int)v115));
+      v126 = *(float *)(v123 + 44);
+      v127 = *(float *)(v124 + 36);
+      v128 = v125[8];
+      v129 = v125[9];
+      v130 = v125[11];
+      v131 = v125[12];
+      v132 = *(float *)(v124 + 48);
+      v159 = *(float *)(v123 + 32);
       localPosition = UnityEngine_Transform__get_localPosition((UnityEngine_Transform_o *)this, 0);
-      v134 = v128 + v133;
-      v135 = v128 - v133;
-      v136 = (float)(v130 + v132) - (float)(v130 - v132);
+      v133 = v127 + v132;
+      v134 = v127 - v132;
+      v135 = (float)(v129 + v131) - (float)(v129 - v131);
       if ( v4->fields.direction )
-        v137 = (float)((float)(v120 + v132) - v130)
-             - (float)((float)((float)(v158 * (float)(v135 + (float)(v136 - v134))) + 0.0) - v4->fields.padding.fields.y);
+        v136 = (float)((float)(v119 + v131) - v129)
+             - (float)((float)((float)(v157 * (float)(v134 + (float)(v135 - v133))) + 0.0) - v4->fields.padding.fields.y);
       else
-        v137 = (float)((float)((float)-v120 - v132) - v130)
-             + (float)((float)((float)(v135 + (float)(v136 - v134))
-                             + (float)(v158 * (float)(0.0 - (float)(v135 + (float)(v136 - v134)))))
+        v136 = (float)((float)((float)-v119 - v131) - v129)
+             + (float)((float)((float)(v134 + (float)(v135 - v133))
+                             + (float)(v157 * (float)(0.0 - (float)(v134 + (float)(v135 - v133)))))
                      - v4->fields.padding.fields.y);
       x = v4->fields.padding.fields.x;
-      v139 = (float)((float)(v161 + v131) - v129)
-           - (float)((float)((float)(v159
-                                   * (float)((float)(v160 - v127)
-                                           + (float)((float)((float)(v129 + v131) - (float)(v129 - v131))
-                                                   - (float)(v160 + v127))))
+      v138 = (float)((float)(v160 + v130) - v128)
+           - (float)((float)((float)(v158
+                                   * (float)((float)(v159 - v126)
+                                           + (float)((float)((float)(v128 + v130) - (float)(v128 - v130))
+                                                   - (float)(v159 + v126))))
                            + 0.0)
                    - x);
-      v118 = v161 + (float)((float)(v127 + v127) + (float)(x + x));
-      UnityEngine_Transform__set_localPosition(v123, localPosition, 0);
-      v140 = v4->fields.columns;
-      if ( (int)++v115 >= v140 && v140 >= 1 )
+      v117 = v160 + (float)((float)(v126 + v126) + (float)(x + x));
+      UnityEngine_Transform__set_localPosition(v122, localPosition, 0);
+      v139 = v4->fields.columns;
+      if ( (int)++v114 >= v139 && v139 >= 1 )
       {
-        v115 = 0;
-        ++v116;
-        v120 = v120 + (float)((float)(v133 + v133) + (float)(v4->fields.padding.fields.y + v4->fields.padding.fields.y));
-        v118 = 0.0;
+        v114 = 0;
+        ++v115;
+        v119 = v119 + (float)((float)(v132 + v132) + (float)(v4->fields.padding.fields.y + v4->fields.padding.fields.y));
+        v117 = 0.0;
       }
     }
-    while ( v111 != ++v117 );
+    while ( v110 != ++v116 );
   }
   pivot = v4->fields.pivot;
   if ( pivot )
   {
-    v142 = NGUIMath__GetPivotOffset(pivot, v109);
+    v141 = NGUIMath__GetPivotOffset(pivot, v108);
     transform = UnityEngine_Component__get_transform((UnityEngine_Component_o *)v4, 0);
-    NGUIMath__CalculateRelativeWidgetBounds_49299668(&v162, transform, transform, 0, 1, v144);
-    v146 = v162.fields.m_Extents.fields.x;
-    v145 = v162.fields.m_Extents.fields.y;
-    v147 = fminf(v142.fields.x, 1.0);
-    v148 = fminf(v142.fields.y, 1.0);
-    if ( v142.fields.x < 0.0 )
+    NGUIMath__CalculateRelativeWidgetBounds_49372908(&v161, transform, transform, 0, 1, v143);
+    v145 = v161.fields.m_Extents.fields.x;
+    v144 = v161.fields.m_Extents.fields.y;
+    v146 = fminf(v141.fields.x, 1.0);
+    v147 = fminf(v141.fields.y, 1.0);
+    if ( v141.fields.x < 0.0 )
+      v148 = 0.0;
+    else
+      v148 = v146;
+    if ( v141.fields.y < 0.0 )
       v149 = 0.0;
     else
       v149 = v147;
-    if ( v142.fields.y < 0.0 )
-      v150 = 0.0;
-    else
-      v150 = v148;
     this = (UITable_o *)UnityEngine_Component__get_transform((UnityEngine_Component_o *)v4, 0);
     if ( !this )
       goto LABEL_119;
-    v151 = (UnityEngine_Transform_o *)this;
+    v150 = (UnityEngine_Transform_o *)this;
     if ( UnityEngine_Transform__get_childCount((UnityEngine_Transform_o *)this, 0) >= 1 )
     {
-      v152 = (float)(v149 * (float)(v146 + v146)) + 0.0;
-      v153 = 0;
-      v154 = (float)(v145 * -2.0) + (float)(v150 * (float)(0.0 - (float)(v145 * -2.0)));
+      v151 = (float)(v148 * (float)(v145 + v145)) + 0.0;
+      v152 = 0;
+      v153 = (float)(v144 * -2.0) + (float)(v149 * (float)(0.0 - (float)(v144 * -2.0)));
       while ( 1 )
       {
-        this = (UITable_o *)UnityEngine_Transform__GetChild(v151, v153, 0);
+        this = (UITable_o *)UnityEngine_Transform__GetChild(v150, v152, 0);
         if ( !this )
           goto LABEL_119;
-        v155 = (UnityEngine_Transform_o *)this;
+        v154 = (UnityEngine_Transform_o *)this;
         Component_object = UnityEngine_Component__GetComponent_object_(
                              (UnityEngine_Component_o *)this,
-                             (const MethodInfo_30DE428 *)Method_UnityEngine_Component_GetComponent_SpringPosition___);
+                             (const MethodInfo_30F0240 *)Method_UnityEngine_Component_GetComponent_SpringPosition___);
         if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
           j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
         this = (UITable_o *)UnityEngine_Object__op_Inequality((UnityEngine_Object_o *)Component_object, 0, 0);
@@ -841,18 +841,18 @@ LABEL_77:
         {
           if ( !Component_object )
             goto LABEL_119;
-          v157 = *((float *)&Component_object[2].klass + 1) - v154;
-          *(float *)&Component_object[2].klass = *(float *)&Component_object[2].klass - v152;
-          *((float *)&Component_object[2].klass + 1) = v157;
+          v156 = *((float *)&Component_object[2].klass + 1) - v153;
+          *(float *)&Component_object[2].klass = *(float *)&Component_object[2].klass - v151;
+          *((float *)&Component_object[2].klass + 1) = v156;
         }
         else
         {
-          v165 = UnityEngine_Transform__get_localPosition(v155, 0);
-          v165.fields.x = v165.fields.x - v152;
-          v165.fields.y = v165.fields.y - v154;
-          UnityEngine_Transform__set_localPosition(v155, v165, 0);
+          v164 = UnityEngine_Transform__get_localPosition(v154, 0);
+          v164.fields.x = v164.fields.x - v151;
+          v164.fields.y = v164.fields.y - v153;
+          UnityEngine_Transform__set_localPosition(v154, v164, 0);
         }
-        if ( ++v153 >= UnityEngine_Transform__get_childCount(v151, 0) )
+        if ( ++v152 >= UnityEngine_Transform__get_childCount(v150, 0) )
           return;
       }
     }
@@ -864,22 +864,23 @@ void UITable__Sort(UITable_o *this, System_Collections_Generic_List_Transform__o
 {
   System_Comparison_T__o *v4; // x20
   __int64 v5; // x0
+  __int64 v6; // x1
 
-  if ( (byte_4C47646 & 1) == 0 )
+  if ( (byte_4C5B43D & 1) == 0 )
   {
-    sub_1C37058(&System_Comparison_Transform__TypeInfo);
-    sub_1C37058(&Method_System_Collections_Generic_List_Transform__Sort__);
-    sub_1C37058(&Method_UIGrid_SortByName__);
-    byte_4C47646 = 1;
+    sub_1C3E564(&System_Comparison_Transform__TypeInfo);
+    sub_1C3E564(&Method_System_Collections_Generic_List_Transform__Sort__);
+    sub_1C3E564(&Method_UIGrid_SortByName__);
+    byte_4C5B43D = 1;
   }
-  v4 = (System_Comparison_T__o *)sub_1C372A4(System_Comparison_Transform__TypeInfo);
+  v4 = (System_Comparison_T__o *)sub_1C3E7B0(System_Comparison_Transform__TypeInfo);
   System_Comparison_object____ctor(v4, 0, Method_UIGrid_SortByName__, 0);
   if ( !list )
-    sub_1C372B4(v5);
-  System_Collections_Generic_List_object___Sort_58346216(
+    sub_1C3E7C0(v5, v6);
+  System_Collections_Generic_List_object___Sort_58421028(
     (System_Collections_Generic_List_object__o *)list,
     v4,
-    (const MethodInfo_37A4AE8 *)Method_System_Collections_Generic_List_Transform__Sort__);
+    (const MethodInfo_37B6F24 *)Method_System_Collections_Generic_List_Transform__Sort__);
 }
 
 
@@ -920,15 +921,15 @@ void UITable_OnReposition___ctor(
   this->fields.method = method;
   this->fields.method_ptr = v4;
   this->fields.m_target = object;
-  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.m_target, (int32_t)object, method, a4);
+  sub_1C3E508((CGThumbnailListItem_o *)&this->fields.m_target, (int32_t)object, method, a4);
   v8 = *(unsigned __int8 *)(method + 82);
   this->fields.method_code = (intptr_t)this;
-  if ( (sub_1C37118(method) & 1) == 0 )
+  if ( (sub_1C3E624(method) & 1) == 0 )
   {
     if ( !object )
     {
-      v10 = sub_1C372D0(0, "Delegate to an instance method cannot have null 'this'.");
-      sub_1C37180(v10, 0);
+      v10 = sub_1C3E7DC(0, "Delegate to an instance method cannot have null 'this'.");
+      sub_1C3E68C(v10, 0);
     }
     goto LABEL_5;
   }
@@ -940,9 +941,9 @@ LABEL_5:
     this->fields.method_code = (intptr_t)m_target;
     goto LABEL_6;
   }
-  this->fields.invoke_impl = (intptr_t)sub_1A82384;
+  this->fields.invoke_impl = (intptr_t)sub_1A8972C;
 LABEL_6:
-  this->fields.extra_arg = (intptr_t)sub_1A82344;
+  this->fields.extra_arg = (intptr_t)sub_1A896EC;
 }
 
 
@@ -955,7 +956,7 @@ System_IAsyncResult_o *UITable_OnReposition__BeginInvoke(
   __int64 v5; // [xsp+8h] [xbp-8h] BYREF
 
   v5 = 0;
-  return (System_IAsyncResult_o *)sub_1C3700C(this, &v5, callback, object);
+  return (System_IAsyncResult_o *)sub_1C3E518(this, &v5, callback, object);
 }
 
 
@@ -964,7 +965,7 @@ void UITable_OnReposition__EndInvoke(
         System_IAsyncResult_o *result,
         const MethodInfo *method)
 {
-  sub_1C37010(result, 0, method);
+  sub_1C3E51C(result, 0, method);
 }
 
 

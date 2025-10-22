@@ -16,19 +16,20 @@ void FlipEffectUpdater__OnLateUpdate(FlipEffectUpdater_o *this, const MethodInfo
   UnityEngine_Object_o *ConnectTarget; // x19
   UnityEngine_Transform_o **p_mTrans; // x19
   UnityEngine_Object_o *mTrans; // x20
+  __int64 v6; // x1
   struct UnityEngine_Transform_o *transform; // x0
-  int32_t v7; // w2
-  const MethodInfo *v8; // x3
+  int32_t v8; // w2
+  const MethodInfo *v9; // x3
   UnityEngine_Transform_o *parent; // x0
-  UnityEngine_Transform_o *v10; // x20
-  UnityEngine_Transform_o *v11; // x21
+  UnityEngine_Transform_o *v11; // x20
   UnityEngine_Transform_o *v12; // x21
   UnityEngine_Transform_o *v13; // x21
+  UnityEngine_Transform_o *v14; // x21
 
-  if ( (byte_4C423B5 & 1) == 0 )
+  if ( (byte_4C56157 & 1) == 0 )
   {
-    sub_1C37058(&UnityEngine_Object_TypeInfo);
-    byte_4C423B5 = 1;
+    sub_1C3E564(&UnityEngine_Object_TypeInfo);
+    byte_4C56157 = 1;
   }
   ConnectTarget = (UnityEngine_Object_o *)this->fields.ConnectTarget;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -43,7 +44,7 @@ void FlipEffectUpdater__OnLateUpdate(FlipEffectUpdater_o *this, const MethodInfo
     {
       transform = UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0);
       this->fields.mTrans = transform;
-      sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.mTrans, (int32_t)transform, v7, v8);
+      sub_1C3E508((CGThumbnailListItem_o *)&this->fields.mTrans, (int32_t)transform, v8, v9);
     }
     parent = *p_mTrans;
     if ( !*p_mTrans )
@@ -51,40 +52,40 @@ void FlipEffectUpdater__OnLateUpdate(FlipEffectUpdater_o *this, const MethodInfo
     parent = UnityEngine_Transform__get_parent(parent, 0);
     if ( !*p_mTrans )
       goto LABEL_24;
-    v10 = parent;
+    v11 = parent;
     UnityEngine_Transform__set_parent(*p_mTrans, this->fields.ConnectTarget, 0);
-    v11 = this->fields.mTrans;
-    if ( !byte_4C3C921 )
+    v12 = this->fields.mTrans;
+    if ( !byte_4C506A1 )
     {
-      parent = (UnityEngine_Transform_o *)sub_1C37058(&UnityEngine_Vector3_TypeInfo);
-      byte_4C3C921 = 1;
-    }
-    if ( !v11 )
-      goto LABEL_24;
-    UnityEngine_Transform__set_localPosition(v11, UnityEngine_Vector3_TypeInfo->static_fields->zeroVector, 0);
-    v12 = *p_mTrans;
-    if ( !byte_4C3C921 )
-    {
-      parent = (UnityEngine_Transform_o *)sub_1C37058(&UnityEngine_Vector3_TypeInfo);
-      byte_4C3C921 = 1;
+      parent = (UnityEngine_Transform_o *)sub_1C3E564(&UnityEngine_Vector3_TypeInfo);
+      byte_4C506A1 = 1;
     }
     if ( !v12 )
       goto LABEL_24;
-    UnityEngine_Transform__set_localEulerAngles(v12, UnityEngine_Vector3_TypeInfo->static_fields->zeroVector, 0);
+    UnityEngine_Transform__set_localPosition(v12, UnityEngine_Vector3_TypeInfo->static_fields->zeroVector, 0);
     v13 = *p_mTrans;
-    if ( !byte_4C3C926 )
+    if ( !byte_4C506A1 )
     {
-      parent = (UnityEngine_Transform_o *)sub_1C37058(&UnityEngine_Vector3_TypeInfo);
-      byte_4C3C926 = 1;
+      parent = (UnityEngine_Transform_o *)sub_1C3E564(&UnityEngine_Vector3_TypeInfo);
+      byte_4C506A1 = 1;
     }
-    if ( !v13
-      || (UnityEngine_Transform__set_localScale(v13, UnityEngine_Vector3_TypeInfo->static_fields->oneVector, 0),
+    if ( !v13 )
+      goto LABEL_24;
+    UnityEngine_Transform__set_localEulerAngles(v13, UnityEngine_Vector3_TypeInfo->static_fields->zeroVector, 0);
+    v14 = *p_mTrans;
+    if ( !byte_4C506A6 )
+    {
+      parent = (UnityEngine_Transform_o *)sub_1C3E564(&UnityEngine_Vector3_TypeInfo);
+      byte_4C506A6 = 1;
+    }
+    if ( !v14
+      || (UnityEngine_Transform__set_localScale(v14, UnityEngine_Vector3_TypeInfo->static_fields->oneVector, 0),
           (parent = *p_mTrans) == 0) )
     {
 LABEL_24:
-      sub_1C372B4(parent);
+      sub_1C3E7C0(parent, v6);
     }
-    UnityEngine_Transform__set_parent(parent, v10, 0);
+    UnityEngine_Transform__set_parent(parent, v11, 0);
   }
 }
 
@@ -97,5 +98,5 @@ void FlipEffectUpdater__Start(FlipEffectUpdater_o *this, const MethodInfo *metho
 
   transform = UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0);
   this->fields.mTrans = transform;
-  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.mTrans, (int32_t)transform, v4, v5);
+  sub_1C3E508((CGThumbnailListItem_o *)&this->fields.mTrans, (int32_t)transform, v4, v5);
 }

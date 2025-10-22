@@ -21,19 +21,19 @@ void QuestBoardListViewMultiSecondBattleInformation__Init(
   const MethodInfo *v11; // x1
 
   v4 = this;
-  if ( (byte_4C3FCB8 & 1) == 0 )
+  if ( (byte_4C53A55 & 1) == 0 )
   {
-    sub_1C37058(&Method_System_Collections_Generic_List_UISprite__ToArray__);
-    this = (QuestBoardListViewMultiSecondBattleInformation_o *)sub_1C37058(&QuestBoardListViewMultiSecondBattleInformation_TypeInfo);
-    byte_4C3FCB8 = 1;
+    sub_1C3E564(&Method_System_Collections_Generic_List_UISprite__ToArray__);
+    this = (QuestBoardListViewMultiSecondBattleInformation_o *)sub_1C3E564(&QuestBoardListViewMultiSecondBattleInformation_TypeInfo);
+    byte_4C53A55 = 1;
   }
   if ( !objList )
     goto LABEL_12;
   v5 = System_Collections_Generic_List_object___ToArray(
          (System_Collections_Generic_List_object__o *)objList,
-         (const MethodInfo_37A4B7C *)Method_System_Collections_Generic_List_UISprite__ToArray__);
+         (const MethodInfo_37B6FB8 *)Method_System_Collections_Generic_List_UISprite__ToArray__);
   v4->fields.spList = (struct UISprite_array *)v5;
-  sub_1C36FFC((CGThumbnailListItem_o *)&v4->fields.spList, (int32_t)v5, v6, v7);
+  sub_1C3E508((CGThumbnailListItem_o *)&v4->fields.spList, (int32_t)v5, v6, v7);
   spList = v4->fields.spList;
   if ( !spList )
     goto LABEL_12;
@@ -44,7 +44,7 @@ void QuestBoardListViewMultiSecondBattleInformation__Init(
     while ( 1 )
     {
       if ( v10 >= max_length )
-        sub_1C372BC(this);
+        sub_1C3E7C8(this, objList);
       this = (QuestBoardListViewMultiSecondBattleInformation_o *)spList->m_Items[v10];
       if ( !this )
         break;
@@ -59,7 +59,7 @@ void QuestBoardListViewMultiSecondBattleInformation__Init(
         goto LABEL_11;
     }
 LABEL_12:
-    sub_1C372B4(this);
+    sub_1C3E7C0(this, objList);
   }
 LABEL_11:
   *(_WORD *)&v4->fields.forward = 0;
@@ -80,10 +80,10 @@ void QuestBoardListViewMultiSecondBattleInformation__Reset(
 
   v4 = this;
   this->fields.spList = 0;
-  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.spList, 0, v2, v3);
+  sub_1C3E508((CGThumbnailListItem_o *)&this->fields.spList, 0, v2, v3);
   v4->fields.oldSp = 0;
   v4 = (QuestBoardListViewMultiSecondBattleInformation_o *)((char *)v4 + 176);
-  sub_1C36FFC((CGThumbnailListItem_o *)v4, 0, v5, v6);
+  sub_1C3E508((CGThumbnailListItem_o *)v4, 0, v5, v6);
   LODWORD(v4->monitor) = 0;
   WORD2(v4->monitor) = 0;
 }
@@ -96,21 +96,22 @@ void QuestBoardListViewMultiSecondBattleInformation__SetNext(
   struct UISprite_o **p_oldSp; // x20
   UnityEngine_Object_o *oldSp; // x21
   UnityEngine_Component_o *gameObject; // x0
+  __int64 v6; // x1
   struct UISprite_array *spList; // x8
   __int64 currentIndex; // x9
-  int32_t v8; // w2
-  const MethodInfo *v9; // x3
-  struct UISprite_array *v10; // x8
-  __int64 v11; // x9
-  struct UISprite_o *v12; // x1
-  System_Collections_Generic_IEnumerable_TSource__o *v13; // x0
-  int v14; // w20
+  int32_t v9; // w2
+  const MethodInfo *v10; // x3
+  struct UISprite_array *v11; // x8
+  __int64 v12; // x9
+  struct UISprite_o *v13; // x1
+  System_Collections_Generic_IEnumerable_TSource__o *v14; // x0
+  int v15; // w20
 
-  if ( (byte_4C3FCB9 & 1) == 0 )
+  if ( (byte_4C53A56 & 1) == 0 )
   {
-    sub_1C37058(&Method_System_Linq_Enumerable_Count_UISprite___);
-    sub_1C37058(&UnityEngine_Object_TypeInfo);
-    byte_4C3FCB9 = 1;
+    sub_1C3E564(&Method_System_Linq_Enumerable_Count_UISprite___);
+    sub_1C3E564(&UnityEngine_Object_TypeInfo);
+    byte_4C53A56 = 1;
   }
   p_oldSp = &this->fields.oldSp;
   oldSp = (UnityEngine_Object_o *)this->fields.oldSp;
@@ -136,24 +137,24 @@ void QuestBoardListViewMultiSecondBattleInformation__SetNext(
   gameObject = (UnityEngine_Component_o *)spList->m_Items[currentIndex];
   if ( !gameObject
     || (gameObject = (UnityEngine_Component_o *)UnityEngine_Component__get_gameObject(gameObject, 0)) == 0
-    || (UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)gameObject, 1, 0), (v10 = this->fields.spList) == 0) )
+    || (UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)gameObject, 1, 0), (v11 = this->fields.spList) == 0) )
   {
 LABEL_18:
-    sub_1C372B4(gameObject);
+    sub_1C3E7C0(gameObject, v6);
   }
-  v11 = this->fields.currentIndex;
-  if ( (unsigned int)v11 >= LODWORD(v10->max_length) )
+  v12 = this->fields.currentIndex;
+  if ( (unsigned int)v12 >= LODWORD(v11->max_length) )
 LABEL_19:
-    sub_1C372BC(gameObject);
-  v12 = v10->m_Items[v11];
-  this->fields.oldSp = v12;
-  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.oldSp, (int32_t)v12, v8, v9);
-  v13 = (System_Collections_Generic_IEnumerable_TSource__o *)this->fields.spList;
-  v14 = this->fields.currentIndex + 1;
-  this->fields.currentIndex = v14;
-  if ( v14 >= System_Linq_Enumerable__Count_object_(
-                v13,
-                (const MethodInfo_3107FE0 *)Method_System_Linq_Enumerable_Count_UISprite___) )
+    sub_1C3E7C8(gameObject, v6);
+  v13 = v11->m_Items[v12];
+  this->fields.oldSp = v13;
+  sub_1C3E508((CGThumbnailListItem_o *)&this->fields.oldSp, (int32_t)v13, v9, v10);
+  v14 = (System_Collections_Generic_IEnumerable_TSource__o *)this->fields.spList;
+  v15 = this->fields.currentIndex + 1;
+  this->fields.currentIndex = v15;
+  if ( v15 >= System_Linq_Enumerable__Count_object_(
+                v14,
+                (const MethodInfo_3119ED4 *)Method_System_Linq_Enumerable_Count_UISprite___) )
     this->fields.currentIndex = 0;
 }
 
@@ -170,10 +171,10 @@ void QuestBoardListViewMultiSecondBattleInformation__Update(
   int oldForward; // w8
   int v9; // w9
 
-  if ( (byte_4C3FCB7 & 1) == 0 )
+  if ( (byte_4C53A54 & 1) == 0 )
   {
-    sub_1C37058(&QuestBoardListViewMultiSecondBattleInformation_TypeInfo);
-    byte_4C3FCB7 = 1;
+    sub_1C3E564(&QuestBoardListViewMultiSecondBattleInformation_TypeInfo);
+    byte_4C53A54 = 1;
   }
   v3 = (float)(UnityEngine_Time__get_unscaledTime(0)
              - QuestBoardListViewMultiSecondBattleInformation_TypeInfo->static_fields->initTime)
@@ -189,10 +190,10 @@ void QuestBoardListViewMultiSecondBattleInformation__Update(
   }
   this->fields.oldForward = this->fields.forward;
   v7 = fmodf(v3, 2.0);
-  if ( !byte_4C3C920 )
+  if ( !byte_4C506A0 )
   {
-    sub_1C37058(&System_Math_TypeInfo);
-    byte_4C3C920 = 1;
+    sub_1C3E564(&System_Math_TypeInfo);
+    byte_4C506A0 = 1;
   }
   if ( !System_Math_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(System_Math_TypeInfo);

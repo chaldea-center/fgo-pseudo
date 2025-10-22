@@ -16,27 +16,27 @@ void ChangeBattlePhaseOverwriteAnimation___ctor(
   int32_t v17; // w2
   const MethodInfo *v18; // x3
 
-  if ( (byte_4C4636D & 1) == 0 )
+  if ( (byte_4C5A164 & 1) == 0 )
   {
-    sub_1C37058(&Method_System_Collections_Generic_List_ChangeBattlePhaseOverwriteAnimation_AnimationOverwriteData___ctor__);
-    sub_1C37058(&System_Collections_Generic_List_ChangeBattlePhaseOverwriteAnimation_AnimationOverwriteData__TypeInfo);
-    byte_4C4636D = 1;
+    sub_1C3E564(&Method_System_Collections_Generic_List_ChangeBattlePhaseOverwriteAnimation_AnimationOverwriteData___ctor__);
+    sub_1C3E564(&System_Collections_Generic_List_ChangeBattlePhaseOverwriteAnimation_AnimationOverwriteData__TypeInfo);
+    byte_4C5A164 = 1;
   }
-  v9 = (System_Collections_Generic_List_object__o *)sub_1C372A4(System_Collections_Generic_List_ChangeBattlePhaseOverwriteAnimation_AnimationOverwriteData__TypeInfo);
+  v9 = (System_Collections_Generic_List_object__o *)sub_1C3E7B0(System_Collections_Generic_List_ChangeBattlePhaseOverwriteAnimation_AnimationOverwriteData__TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v9,
-    (const MethodInfo_37A27F0 *)Method_System_Collections_Generic_List_ChangeBattlePhaseOverwriteAnimation_AnimationOverwriteData___ctor__);
+    (const MethodInfo_37B4C2C *)Method_System_Collections_Generic_List_ChangeBattlePhaseOverwriteAnimation_AnimationOverwriteData___ctor__);
   this->fields.overwriteList = (struct System_Collections_Generic_List_ChangeBattlePhaseOverwriteAnimation_AnimationOverwriteData__o *)v9;
-  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.overwriteList, (int32_t)v9, v10, v11);
+  sub_1C3E508((CGThumbnailListItem_o *)&this->fields.overwriteList, (int32_t)v9, v10, v11);
   System_Object___ctor((Il2CppObject *)this, 0);
   this->fields.actor = battleActor;
-  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.actor, (int32_t)battleActor, v12, v13);
+  sub_1C3E508((CGThumbnailListItem_o *)&this->fields.actor, (int32_t)battleActor, v12, v13);
   ChangeBattlePhaseOverwriteAnimation__InitOverwriteInfo(this, overwriteArray, v14);
   if ( notify )
   {
     v16 = ChangeBattlePhaseOverwriteAnimation__FindOverwriteForPhase(this, notify, v15);
     this->fields.current = v16;
-    sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.current, (int32_t)v16, v17, v18);
+    sub_1C3E508((CGThumbnailListItem_o *)&this->fields.current, (int32_t)v16, v17, v18);
   }
 }
 
@@ -48,36 +48,37 @@ ChangeBattlePhaseOverwriteAnimation_AnimationOverwriteData_o *ChangeBattlePhaseO
 {
   __int64 v5; // x21
   __int64 v6; // x0
+  __int64 v7; // x1
   System_Collections_Generic_List_object__o *overwriteList; // x19
-  System_Predicate_object__o *v8; // x20
+  System_Predicate_object__o *v9; // x20
 
-  if ( (byte_4C4636F & 1) == 0 )
+  if ( (byte_4C5A166 & 1) == 0 )
   {
-    sub_1C37058(&Method_System_Collections_Generic_List_ChangeBattlePhaseOverwriteAnimation_AnimationOverwriteData__Find__);
-    sub_1C37058(&System_Predicate_ChangeBattlePhaseOverwriteAnimation_AnimationOverwriteData__TypeInfo);
-    sub_1C37058(&Method_ChangeBattlePhaseOverwriteAnimation___c__DisplayClass6_0__FindOverwriteForDetailPhase_b__0__);
-    sub_1C37058(&ChangeBattlePhaseOverwriteAnimation___c__DisplayClass6_0_TypeInfo);
-    byte_4C4636F = 1;
+    sub_1C3E564(&Method_System_Collections_Generic_List_ChangeBattlePhaseOverwriteAnimation_AnimationOverwriteData__Find__);
+    sub_1C3E564(&System_Predicate_ChangeBattlePhaseOverwriteAnimation_AnimationOverwriteData__TypeInfo);
+    sub_1C3E564(&Method_ChangeBattlePhaseOverwriteAnimation___c__DisplayClass6_0__FindOverwriteForDetailPhase_b__0__);
+    sub_1C3E564(&ChangeBattlePhaseOverwriteAnimation___c__DisplayClass6_0_TypeInfo);
+    byte_4C5A166 = 1;
   }
-  v5 = sub_1C372A4(ChangeBattlePhaseOverwriteAnimation___c__DisplayClass6_0_TypeInfo);
+  v5 = sub_1C3E7B0(ChangeBattlePhaseOverwriteAnimation___c__DisplayClass6_0_TypeInfo);
   System_Object___ctor((Il2CppObject *)v5, 0);
   if ( !v5
     || (*(_DWORD *)(v5 + 16) = phaseType,
         overwriteList = (System_Collections_Generic_List_object__o *)this->fields.overwriteList,
-        v8 = (System_Predicate_object__o *)sub_1C372A4(System_Predicate_ChangeBattlePhaseOverwriteAnimation_AnimationOverwriteData__TypeInfo),
+        v9 = (System_Predicate_object__o *)sub_1C3E7B0(System_Predicate_ChangeBattlePhaseOverwriteAnimation_AnimationOverwriteData__TypeInfo),
         System_Predicate_object____ctor(
-          v8,
+          v9,
           (Il2CppObject *)v5,
           Method_ChangeBattlePhaseOverwriteAnimation___c__DisplayClass6_0__FindOverwriteForDetailPhase_b__0__,
           0),
         !overwriteList) )
   {
-    sub_1C372B4(v6);
+    sub_1C3E7C0(v6, v7);
   }
   return (ChangeBattlePhaseOverwriteAnimation_AnimationOverwriteData_o *)System_Collections_Generic_List_object___Find(
                                                                            overwriteList,
-                                                                           (System_Predicate_T__o *)v8,
-                                                                           (const MethodInfo_37A368C *)Method_System_Collections_Generic_List_ChangeBattlePhaseOverwriteAnimation_AnimationOverwriteData__Find__);
+                                                                           (System_Predicate_T__o *)v9,
+                                                                           (const MethodInfo_37B5AC8 *)Method_System_Collections_Generic_List_ChangeBattlePhaseOverwriteAnimation_AnimationOverwriteData__Find__);
 }
 
 
@@ -92,7 +93,7 @@ ChangeBattlePhaseOverwriteAnimation_AnimationOverwriteData_o *ChangeBattlePhaseO
   const MethodInfo *v8; // x2
 
   if ( !notify )
-    sub_1C372B4(this);
+    sub_1C3E7C0(this, 0);
   result = ChangeBattlePhaseOverwriteAnimation__FindOverwriteForDetailPhase(
              this,
              notify->fields._DetailPhase_k__BackingField,
@@ -117,10 +118,10 @@ System_String_o *ChangeBattlePhaseOverwriteAnimation__GetCurrentNormalOverwriteN
   const MethodInfo *v5; // x2
   ChangeBattlePhaseOverwriteAnimation_AnimationOverwriteData_o *current; // x0
 
-  if ( (byte_4C46373 & 1) == 0 )
+  if ( (byte_4C5A16A & 1) == 0 )
   {
-    sub_1C37058(&StringLiteral_1/*""*/);
-    byte_4C46373 = 1;
+    sub_1C3E564(&StringLiteral_1/*""*/);
+    byte_4C5A16A = 1;
   }
   if ( System_String__IsNullOrEmpty(baseAnimName, 0) )
     return (System_String_o *)StringLiteral_1/*""*/;
@@ -152,55 +153,59 @@ void ChangeBattlePhaseOverwriteAnimation__InitOverwriteInfo(
   int32_t v17; // w2
   const MethodInfo *v18; // x3
   System_Linq_IOrderedEnumerable_TSource__o *v19; // x0
+  __int64 v20; // x1
   System_Linq_IOrderedEnumerable_TSource__c *klass; // x8
-  System_Linq_IOrderedEnumerable_TSource__o *v21; // x20
-  __int64 v22; // x9
+  System_Linq_IOrderedEnumerable_TSource__o *v22; // x20
+  __int64 v23; // x9
   int32_t *p_offset; // x10
-  __int64 v24; // x0
-  __int64 v25; // x20
-  __int64 v26; // x8
-  __int64 v27; // x9
-  int *v28; // x10
-  __int64 v29; // x0
-  __int64 v30; // x8
-  __int64 v31; // x9
-  int *v32; // x10
-  __int64 v33; // x0
-  __int64 v34; // x0
-  const MethodInfo *v35; // x2
-  __int64 v36; // x21
-  int32_t v37; // w23
-  const MethodInfo *v38; // x3
-  ChangeBattlePhaseOverwriteAnimation_AnimationOverwriteData_o *v39; // x22
-  const MethodInfo *v40; // x1
-  __int64 v41; // x0
-  int32_t v42; // w2
-  const MethodInfo *v43; // x3
+  __int64 v25; // x0
+  __int64 v26; // x1
+  __int64 v27; // x20
+  __int64 v28; // x8
+  __int64 v29; // x9
+  int *v30; // x10
+  __int64 v31; // x0
+  __int64 v32; // x8
+  __int64 v33; // x9
+  int *v34; // x10
+  __int64 v35; // x0
+  __int64 v36; // x0
+  __int64 v37; // x1
+  const MethodInfo *v38; // x2
+  __int64 v39; // x21
+  int32_t v40; // w23
+  const MethodInfo *v41; // x3
+  ChangeBattlePhaseOverwriteAnimation_AnimationOverwriteData_o *v42; // x22
+  const MethodInfo *v43; // x1
+  __int64 v44; // x0
+  __int64 v45; // x1
+  int32_t v46; // w2
+  const MethodInfo *v47; // x3
   System_Collections_Generic_List_object__o *overwriteList; // x0
   struct System_Object_array *items; // x8
-  _QWORD *v46; // x9
+  _QWORD *v50; // x9
   __int64 size; // x10
-  Il2CppClass **v48; // x8
-  __int64 v49; // x8
-  __int64 v50; // x9
-  int *v51; // x10
-  __int64 v52; // x0
+  Il2CppClass **v52; // x8
+  __int64 v53; // x8
+  __int64 v54; // x9
+  int *v55; // x10
+  __int64 v56; // x0
 
-  if ( (byte_4C4636E & 1) == 0 )
+  if ( (byte_4C5A165 & 1) == 0 )
   {
-    sub_1C37058(&ChangeBattlePhaseOverwriteAnimation_AnimationOverwriteData_TypeInfo);
-    sub_1C37058(&Method_System_Linq_Enumerable_OrderBy_ServantAnimationOverwriteEntity__int___);
-    sub_1C37058(&Method_System_Linq_Enumerable_ThenByDescending_ServantAnimationOverwriteEntity__int___);
-    sub_1C37058(&System_Func_ServantAnimationOverwriteEntity__int__TypeInfo);
-    sub_1C37058(&System_IDisposable_TypeInfo);
-    sub_1C37058(&System_Collections_Generic_IEnumerable_ServantAnimationOverwriteEntity__TypeInfo);
-    sub_1C37058(&System_Collections_Generic_IEnumerator_ServantAnimationOverwriteEntity__TypeInfo);
-    sub_1C37058(&System_Collections_IEnumerator_TypeInfo);
-    sub_1C37058(&Method_System_Collections_Generic_List_ChangeBattlePhaseOverwriteAnimation_AnimationOverwriteData__Add__);
-    sub_1C37058(&Method_ChangeBattlePhaseOverwriteAnimation___c__InitOverwriteInfo_b__5_0__);
-    sub_1C37058(&Method_ChangeBattlePhaseOverwriteAnimation___c__InitOverwriteInfo_b__5_1__);
-    sub_1C37058(&ChangeBattlePhaseOverwriteAnimation___c_TypeInfo);
-    byte_4C4636E = 1;
+    sub_1C3E564(&ChangeBattlePhaseOverwriteAnimation_AnimationOverwriteData_TypeInfo);
+    sub_1C3E564(&Method_System_Linq_Enumerable_OrderBy_ServantAnimationOverwriteEntity__int___);
+    sub_1C3E564(&Method_System_Linq_Enumerable_ThenByDescending_ServantAnimationOverwriteEntity__int___);
+    sub_1C3E564(&System_Func_ServantAnimationOverwriteEntity__int__TypeInfo);
+    sub_1C3E564(&System_IDisposable_TypeInfo);
+    sub_1C3E564(&System_Collections_Generic_IEnumerable_ServantAnimationOverwriteEntity__TypeInfo);
+    sub_1C3E564(&System_Collections_Generic_IEnumerator_ServantAnimationOverwriteEntity__TypeInfo);
+    sub_1C3E564(&System_Collections_IEnumerator_TypeInfo);
+    sub_1C3E564(&Method_System_Collections_Generic_List_ChangeBattlePhaseOverwriteAnimation_AnimationOverwriteData__Add__);
+    sub_1C3E564(&Method_ChangeBattlePhaseOverwriteAnimation___c__InitOverwriteInfo_b__5_0__);
+    sub_1C3E564(&Method_ChangeBattlePhaseOverwriteAnimation___c__InitOverwriteInfo_b__5_1__);
+    sub_1C3E564(&ChangeBattlePhaseOverwriteAnimation___c_TypeInfo);
+    byte_4C5A165 = 1;
   }
   v5 = ChangeBattlePhaseOverwriteAnimation___c_TypeInfo;
   if ( !ChangeBattlePhaseOverwriteAnimation___c_TypeInfo->_2.cctor_finished )
@@ -217,7 +222,7 @@ void ChangeBattlePhaseOverwriteAnimation__InitOverwriteInfo(
       v5 = ChangeBattlePhaseOverwriteAnimation___c_TypeInfo;
     }
     v7 = (Il2CppObject *)v5->static_fields->__9;
-    _9__5_0 = (System_Func_object__int__o *)sub_1C372A4(System_Func_ServantAnimationOverwriteEntity__int__TypeInfo);
+    _9__5_0 = (System_Func_object__int__o *)sub_1C3E7B0(System_Func_ServantAnimationOverwriteEntity__int__TypeInfo);
     System_Func_object__int____ctor(
       _9__5_0,
       v7,
@@ -225,12 +230,12 @@ void ChangeBattlePhaseOverwriteAnimation__InitOverwriteInfo(
       0);
     static_fields = ChangeBattlePhaseOverwriteAnimation___c_TypeInfo->static_fields;
     static_fields->__9__5_0 = (struct System_Func_ServantAnimationOverwriteEntity__int__o *)_9__5_0;
-    sub_1C36FFC((CGThumbnailListItem_o *)&static_fields->__9__5_0, (int32_t)_9__5_0, v9, v10);
+    sub_1C3E508((CGThumbnailListItem_o *)&static_fields->__9__5_0, (int32_t)_9__5_0, v9, v10);
   }
   v11 = System_Linq_Enumerable__OrderBy_object__int_(
           (System_Collections_Generic_IEnumerable_TSource__o *)overwriteEntArray,
           (System_Func_TSource__TKey__o *)_9__5_0,
-          (const MethodInfo_31173AC *)Method_System_Linq_Enumerable_OrderBy_ServantAnimationOverwriteEntity__int___);
+          (const MethodInfo_31292A0 *)Method_System_Linq_Enumerable_OrderBy_ServantAnimationOverwriteEntity__int___);
   v12 = ChangeBattlePhaseOverwriteAnimation___c_TypeInfo;
   v13 = v11;
   if ( !ChangeBattlePhaseOverwriteAnimation___c_TypeInfo->_2.cctor_finished )
@@ -247,7 +252,7 @@ void ChangeBattlePhaseOverwriteAnimation__InitOverwriteInfo(
       v12 = ChangeBattlePhaseOverwriteAnimation___c_TypeInfo;
     }
     v15 = (Il2CppObject *)v12->static_fields->__9;
-    _9__5_1 = (System_Func_object__int__o *)sub_1C372A4(System_Func_ServantAnimationOverwriteEntity__int__TypeInfo);
+    _9__5_1 = (System_Func_object__int__o *)sub_1C3E7B0(System_Func_ServantAnimationOverwriteEntity__int__TypeInfo);
     System_Func_object__int____ctor(
       _9__5_1,
       v15,
@@ -255,142 +260,142 @@ void ChangeBattlePhaseOverwriteAnimation__InitOverwriteInfo(
       0);
     v16 = ChangeBattlePhaseOverwriteAnimation___c_TypeInfo->static_fields;
     v16->__9__5_1 = (struct System_Func_ServantAnimationOverwriteEntity__int__o *)_9__5_1;
-    sub_1C36FFC((CGThumbnailListItem_o *)&v16->__9__5_1, (int32_t)_9__5_1, v17, v18);
+    sub_1C3E508((CGThumbnailListItem_o *)&v16->__9__5_1, (int32_t)_9__5_1, v17, v18);
   }
   v19 = System_Linq_Enumerable__ThenByDescending_object__int_(
           v13,
           (System_Func_TSource__TKey__o *)_9__5_1,
-          (const MethodInfo_3126B84 *)Method_System_Linq_Enumerable_ThenByDescending_ServantAnimationOverwriteEntity__int___);
+          (const MethodInfo_3138A78 *)Method_System_Linq_Enumerable_ThenByDescending_ServantAnimationOverwriteEntity__int___);
   if ( !v19 )
-    sub_1C372B4(0);
+    sub_1C3E7C0(0, v20);
   klass = v19->klass;
-  v21 = v19;
-  v22 = *(unsigned __int16 *)&v19->klass->_2.rank;
+  v22 = v19;
+  v23 = *(unsigned __int16 *)&v19->klass->_2.rank;
   if ( *(_WORD *)&v19->klass->_2.rank )
   {
     p_offset = &klass->_1.interfaceOffsets->offset;
     while ( *((System_Collections_Generic_IEnumerable_ServantAnimationOverwriteEntity__c **)p_offset - 1) != System_Collections_Generic_IEnumerable_ServantAnimationOverwriteEntity__TypeInfo )
     {
-      --v22;
+      --v23;
       p_offset += 4;
-      if ( !v22 )
+      if ( !v23 )
         goto LABEL_20;
     }
-    v24 = (__int64)&klass->vtable[*p_offset];
+    v25 = (__int64)&klass->vtable[*p_offset];
   }
   else
   {
 LABEL_20:
-    v24 = sub_1C87870(v19, System_Collections_Generic_IEnumerable_ServantAnimationOverwriteEntity__TypeInfo, 0);
+    v25 = sub_1C8ED7C(v19, System_Collections_Generic_IEnumerable_ServantAnimationOverwriteEntity__TypeInfo, 0);
   }
-  v25 = (*(__int64 (__fastcall **)(System_Linq_IOrderedEnumerable_TSource__o *, _QWORD))v24)(v21, *(_QWORD *)(v24 + 8));
-  if ( !v25 )
-    sub_1C372B4(0);
+  v27 = (*(__int64 (__fastcall **)(System_Linq_IOrderedEnumerable_TSource__o *, _QWORD))v25)(v22, *(_QWORD *)(v25 + 8));
+  if ( !v27 )
+    sub_1C3E7C0(0, v26);
   while ( 1 )
   {
-    v26 = *(_QWORD *)v25;
-    v27 = *(unsigned __int16 *)(*(_QWORD *)v25 + 302LL);
-    if ( *(_WORD *)(*(_QWORD *)v25 + 302LL) )
+    v28 = *(_QWORD *)v27;
+    v29 = *(unsigned __int16 *)(*(_QWORD *)v27 + 302LL);
+    if ( *(_WORD *)(*(_QWORD *)v27 + 302LL) )
     {
-      v28 = (int *)(*(_QWORD *)(v26 + 176) + 8LL);
-      while ( *((System_Collections_IEnumerator_c **)v28 - 1) != System_Collections_IEnumerator_TypeInfo )
+      v30 = (int *)(*(_QWORD *)(v28 + 176) + 8LL);
+      while ( *((System_Collections_IEnumerator_c **)v30 - 1) != System_Collections_IEnumerator_TypeInfo )
       {
-        --v27;
-        v28 += 4;
-        if ( !v27 )
+        --v29;
+        v30 += 4;
+        if ( !v29 )
           goto LABEL_27;
       }
-      v29 = v26 + 16LL * *v28 + 312;
+      v31 = v28 + 16LL * *v30 + 312;
     }
     else
     {
 LABEL_27:
-      v29 = sub_1C87870(v25, System_Collections_IEnumerator_TypeInfo, 0);
+      v31 = sub_1C8ED7C(v27, System_Collections_IEnumerator_TypeInfo, 0);
     }
-    if ( ((*(__int64 (__fastcall **)(__int64, _QWORD))v29)(v25, *(_QWORD *)(v29 + 8)) & 1) == 0 )
+    if ( ((*(__int64 (__fastcall **)(__int64, _QWORD))v31)(v27, *(_QWORD *)(v31 + 8)) & 1) == 0 )
       break;
-    v30 = *(_QWORD *)v25;
-    v31 = *(unsigned __int16 *)(*(_QWORD *)v25 + 302LL);
-    if ( *(_WORD *)(*(_QWORD *)v25 + 302LL) )
+    v32 = *(_QWORD *)v27;
+    v33 = *(unsigned __int16 *)(*(_QWORD *)v27 + 302LL);
+    if ( *(_WORD *)(*(_QWORD *)v27 + 302LL) )
     {
-      v32 = (int *)(*(_QWORD *)(v30 + 176) + 8LL);
-      while ( *((System_Collections_Generic_IEnumerator_ServantAnimationOverwriteEntity__c **)v32 - 1) != System_Collections_Generic_IEnumerator_ServantAnimationOverwriteEntity__TypeInfo )
+      v34 = (int *)(*(_QWORD *)(v32 + 176) + 8LL);
+      while ( *((System_Collections_Generic_IEnumerator_ServantAnimationOverwriteEntity__c **)v34 - 1) != System_Collections_Generic_IEnumerator_ServantAnimationOverwriteEntity__TypeInfo )
       {
-        --v31;
-        v32 += 4;
-        if ( !v31 )
+        --v33;
+        v34 += 4;
+        if ( !v33 )
           goto LABEL_34;
       }
-      v33 = v30 + 16LL * *v32 + 312;
+      v35 = v32 + 16LL * *v34 + 312;
     }
     else
     {
 LABEL_34:
-      v33 = sub_1C87870(v25, System_Collections_Generic_IEnumerator_ServantAnimationOverwriteEntity__TypeInfo, 0);
+      v35 = sub_1C8ED7C(v27, System_Collections_Generic_IEnumerator_ServantAnimationOverwriteEntity__TypeInfo, 0);
     }
-    v34 = (*(__int64 (__fastcall **)(__int64, _QWORD))v33)(v25, *(_QWORD *)(v33 + 8));
-    v36 = v34;
-    if ( !v34 )
-      sub_1C372B4(0);
-    v37 = *(_DWORD *)(v34 + 28);
-    v39 = ChangeBattlePhaseOverwriteAnimation__FindOverwriteForDetailPhase(this, v37, v35);
-    if ( !v39 )
+    v36 = (*(__int64 (__fastcall **)(__int64, _QWORD))v35)(v27, *(_QWORD *)(v35 + 8));
+    v39 = v36;
+    if ( !v36 )
+      sub_1C3E7C0(0, v37);
+    v40 = *(_DWORD *)(v36 + 28);
+    v42 = ChangeBattlePhaseOverwriteAnimation__FindOverwriteForDetailPhase(this, v40, v38);
+    if ( !v42 )
     {
-      v39 = (ChangeBattlePhaseOverwriteAnimation_AnimationOverwriteData_o *)sub_1C372A4(ChangeBattlePhaseOverwriteAnimation_AnimationOverwriteData_TypeInfo);
-      ChangeBattlePhaseOverwriteAnimation_AnimationOverwriteData___ctor(v39, v40);
-      if ( !v39 )
-        sub_1C372B4(v41);
-      v39->fields.phase = v37;
+      v42 = (ChangeBattlePhaseOverwriteAnimation_AnimationOverwriteData_o *)sub_1C3E7B0(ChangeBattlePhaseOverwriteAnimation_AnimationOverwriteData_TypeInfo);
+      ChangeBattlePhaseOverwriteAnimation_AnimationOverwriteData___ctor(v42, v43);
+      if ( !v42 )
+        sub_1C3E7C0(v44, v45);
+      v42->fields.phase = v40;
       overwriteList = (System_Collections_Generic_List_object__o *)this->fields.overwriteList;
       if ( !overwriteList )
-        sub_1C372B4(0);
+        sub_1C3E7C0(0, v45);
       items = overwriteList->fields._items;
-      v46 = Method_System_Collections_Generic_List_ChangeBattlePhaseOverwriteAnimation_AnimationOverwriteData__Add__;
+      v50 = Method_System_Collections_Generic_List_ChangeBattlePhaseOverwriteAnimation_AnimationOverwriteData__Add__;
       ++overwriteList->fields._version;
       if ( !items )
-        sub_1C372B4(overwriteList);
+        sub_1C3E7C0(overwriteList, v45);
       size = overwriteList->fields._size;
       if ( (unsigned int)size >= LODWORD(items->max_length) )
       {
         System_Collections_Generic_List_object___AddWithResize(
           overwriteList,
-          (Il2CppObject *)v39,
-          *(const MethodInfo_37A3024 **)(*(_QWORD *)(v46[4] + 192LL) + 112LL));
+          (Il2CppObject *)v42,
+          *(const MethodInfo_37B5460 **)(*(_QWORD *)(v50[4] + 192LL) + 112LL));
       }
       else
       {
-        v48 = &items->obj.klass + size;
+        v52 = &items->obj.klass + size;
         overwriteList->fields._size = size + 1;
-        v48[4] = (Il2CppClass *)v39;
-        sub_1C36FFC((CGThumbnailListItem_o *)(v48 + 4), (int32_t)v39, v42, v43);
+        v52[4] = (Il2CppClass *)v42;
+        sub_1C3E508((CGThumbnailListItem_o *)(v52 + 4), (int32_t)v42, v46, v47);
       }
     }
     ChangeBattlePhaseOverwriteAnimation_AnimationOverwriteData__Add(
-      v39,
-      *(System_String_o **)(v36 + 40),
-      *(System_String_o **)(v36 + 48),
-      v38);
+      v42,
+      *(System_String_o **)(v39 + 40),
+      *(System_String_o **)(v39 + 48),
+      v41);
   }
-  v49 = *(_QWORD *)v25;
-  v50 = *(unsigned __int16 *)(*(_QWORD *)v25 + 302LL);
-  if ( *(_WORD *)(*(_QWORD *)v25 + 302LL) )
+  v53 = *(_QWORD *)v27;
+  v54 = *(unsigned __int16 *)(*(_QWORD *)v27 + 302LL);
+  if ( *(_WORD *)(*(_QWORD *)v27 + 302LL) )
   {
-    v51 = (int *)(*(_QWORD *)(v49 + 176) + 8LL);
-    while ( *((System_IDisposable_c **)v51 - 1) != System_IDisposable_TypeInfo )
+    v55 = (int *)(*(_QWORD *)(v53 + 176) + 8LL);
+    while ( *((System_IDisposable_c **)v55 - 1) != System_IDisposable_TypeInfo )
     {
-      --v50;
-      v51 += 4;
-      if ( !v50 )
+      --v54;
+      v55 += 4;
+      if ( !v54 )
         goto LABEL_49;
     }
-    v52 = v49 + 16LL * *v51 + 312;
+    v56 = v53 + 16LL * *v55 + 312;
   }
   else
   {
 LABEL_49:
-    v52 = sub_1C87870(v25, System_IDisposable_TypeInfo, 0);
+    v56 = sub_1C8ED7C(v27, System_IDisposable_TypeInfo, 0);
   }
-  (*(void (__fastcall **)(__int64, _QWORD))v52)(v25, *(_QWORD *)(v52 + 8));
+  (*(void (__fastcall **)(__int64, _QWORD))v56)(v27, *(_QWORD *)(v56 + 8));
 }
 
 
@@ -406,10 +411,10 @@ bool ChangeBattlePhaseOverwriteAnimation__IsModifiedOverwritedAnim(
   UnityEngine_Object_o *fbxcomponent; // x21
   struct BattleFBXComponent_o *v10; // x8
 
-  if ( (byte_4C46371 & 1) == 0 )
+  if ( (byte_4C5A168 & 1) == 0 )
   {
-    this = (ChangeBattlePhaseOverwriteAnimation_o *)sub_1C37058(&UnityEngine_Object_TypeInfo);
-    byte_4C46371 = 1;
+    this = (ChangeBattlePhaseOverwriteAnimation_o *)sub_1C3E564(&UnityEngine_Object_TypeInfo);
+    byte_4C5A168 = 1;
   }
   if ( !bActor )
     goto LABEL_14;
@@ -426,9 +431,9 @@ bool ChangeBattlePhaseOverwriteAnimation__IsModifiedOverwritedAnim(
   {
     v10 = bActor->fields.fbxcomponent;
     if ( v10 && v6 )
-      return !System_String__Equals_63596960(v6, v10->fields.currentCommonAnimName, 0);
+      return !System_String__Equals_63671772(v6, v10->fields.currentCommonAnimName, 0);
 LABEL_14:
-    sub_1C372B4(this);
+    sub_1C3E7C0(this, bActor);
   }
   return 1;
 }
@@ -443,10 +448,10 @@ System_String_o *ChangeBattlePhaseOverwriteAnimation__Overwrite(
   ChangeBattlePhaseOverwriteAnimation_AnimationOverwriteData_o *current; // x0
   System_String_o *v8; // x21
 
-  if ( (byte_4C46372 & 1) == 0 )
+  if ( (byte_4C5A169 & 1) == 0 )
   {
-    sub_1C37058(&StringLiteral_1/*""*/);
-    byte_4C46372 = 1;
+    sub_1C3E564(&StringLiteral_1/*""*/);
+    byte_4C5A169 = 1;
   }
   current = this->fields.current;
   if ( current )
@@ -459,7 +464,7 @@ System_String_o *ChangeBattlePhaseOverwriteAnimation__Overwrite(
     if ( bActor )
       goto LABEL_5;
 LABEL_9:
-    sub_1C372B4(current);
+    sub_1C3E7C0(current, bActor);
   }
   v8 = (System_String_o *)StringLiteral_1/*""*/;
   if ( !bActor )
@@ -483,19 +488,20 @@ void ChangeBattlePhaseOverwriteAnimation__UpdateNotify(
   const MethodInfo *v8; // x3
   UnityEngine_Object_o *v9; // x19
   _BOOL8 v10; // x0
+  __int64 v11; // x1
   System_String_o *m_CachedPtr; // x20
   _BOOL8 IsNullOrEmpty; // x0
-  const MethodInfo *v13; // x3
+  const MethodInfo *v14; // x3
 
-  if ( (byte_4C46370 & 1) == 0 )
+  if ( (byte_4C5A167 & 1) == 0 )
   {
-    sub_1C37058(&UnityEngine_Object_TypeInfo);
-    byte_4C46370 = 1;
+    sub_1C3E564(&UnityEngine_Object_TypeInfo);
+    byte_4C5A167 = 1;
   }
   v5 = ChangeBattlePhaseOverwriteAnimation__FindOverwriteForPhase(this, notify, method);
   this->fields.current = v5;
   p_current = &this->fields.current;
-  sub_1C36FFC((CGThumbnailListItem_o *)p_current, (int32_t)v5, v7, v8);
+  sub_1C3E508((CGThumbnailListItem_o *)p_current, (int32_t)v5, v7, v8);
   v9 = (UnityEngine_Object_o *)*(p_current - 1);
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
@@ -503,7 +509,7 @@ void ChangeBattlePhaseOverwriteAnimation__UpdateNotify(
   if ( v10 )
   {
     if ( !v9 )
-      sub_1C372B4(v10);
+      sub_1C3E7C0(v10, v11);
     m_CachedPtr = (System_String_o *)v9[15].fields.m_CachedPtr;
     IsNullOrEmpty = System_String__IsNullOrEmpty(m_CachedPtr, 0);
     if ( !IsNullOrEmpty
@@ -511,9 +517,9 @@ void ChangeBattlePhaseOverwriteAnimation__UpdateNotify(
            (ChangeBattlePhaseOverwriteAnimation_o *)IsNullOrEmpty,
            (BattleActorControl_o *)v9,
            m_CachedPtr,
-           v13) )
+           v14) )
     {
-      BattleActorControl__playAnimation_47151328((BattleActorControl_o *)v9, m_CachedPtr, 0, 0);
+      BattleActorControl__playAnimation_47217028((BattleActorControl_o *)v9, m_CachedPtr, 0, 0);
     }
   }
 }
@@ -527,18 +533,18 @@ void ChangeBattlePhaseOverwriteAnimation_AnimationOverwriteData___ctor(
   int32_t v4; // w2
   const MethodInfo *v5; // x3
 
-  if ( (byte_4C46376 & 1) == 0 )
+  if ( (byte_4C5A16D & 1) == 0 )
   {
-    sub_1C37058(&Method_System_Collections_Generic_Dictionary_string__string___ctor__);
-    sub_1C37058(&System_Collections_Generic_Dictionary_string__string__TypeInfo);
-    byte_4C46376 = 1;
+    sub_1C3E564(&Method_System_Collections_Generic_Dictionary_string__string___ctor__);
+    sub_1C3E564(&System_Collections_Generic_Dictionary_string__string__TypeInfo);
+    byte_4C5A16D = 1;
   }
-  v3 = (System_Collections_Generic_Dictionary_object__object__o *)sub_1C372A4(System_Collections_Generic_Dictionary_string__string__TypeInfo);
+  v3 = (System_Collections_Generic_Dictionary_object__object__o *)sub_1C3E7B0(System_Collections_Generic_Dictionary_string__string__TypeInfo);
   System_Collections_Generic_Dictionary_object__object____ctor(
     v3,
-    (const MethodInfo_3462C80 *)Method_System_Collections_Generic_Dictionary_string__string___ctor__);
+    (const MethodInfo_3474E30 *)Method_System_Collections_Generic_Dictionary_string__string___ctor__);
   this->fields.dicOverwriteName = (struct System_Collections_Generic_Dictionary_string__string__o *)v3;
-  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.dicOverwriteName, (int32_t)v3, v4, v5);
+  sub_1C3E508((CGThumbnailListItem_o *)&this->fields.dicOverwriteName, (int32_t)v3, v4, v5);
   System_Object___ctor((Il2CppObject *)this, 0);
 }
 
@@ -551,11 +557,11 @@ void ChangeBattlePhaseOverwriteAnimation_AnimationOverwriteData__Add(
 {
   struct System_Collections_Generic_Dictionary_string__string__o *dicOverwriteName; // x0
 
-  if ( (byte_4C46374 & 1) == 0 )
+  if ( (byte_4C5A16B & 1) == 0 )
   {
-    sub_1C37058(&Method_System_Collections_Generic_Dictionary_string__string__ContainsKey__);
-    sub_1C37058(&Method_System_Collections_Generic_Dictionary_string__string__set_Item__);
-    byte_4C46374 = 1;
+    sub_1C3E564(&Method_System_Collections_Generic_Dictionary_string__string__ContainsKey__);
+    sub_1C3E564(&Method_System_Collections_Generic_Dictionary_string__string__set_Item__);
+    byte_4C5A16B = 1;
   }
   dicOverwriteName = this->fields.dicOverwriteName;
   if ( !dicOverwriteName )
@@ -563,19 +569,19 @@ void ChangeBattlePhaseOverwriteAnimation_AnimationOverwriteData__Add(
   if ( System_Collections_Generic_Dictionary_object__object___ContainsKey(
          (System_Collections_Generic_Dictionary_object__object__o *)dicOverwriteName,
          (Il2CppObject *)targetName,
-         (const MethodInfo_3463824 *)Method_System_Collections_Generic_Dictionary_string__string__ContainsKey__) )
+         (const MethodInfo_34759D4 *)Method_System_Collections_Generic_Dictionary_string__string__ContainsKey__) )
   {
     return;
   }
   dicOverwriteName = this->fields.dicOverwriteName;
   if ( !dicOverwriteName )
 LABEL_7:
-    sub_1C372B4(dicOverwriteName);
+    sub_1C3E7C0(dicOverwriteName, targetName);
   System_Collections_Generic_Dictionary_object__object___set_Item(
     (System_Collections_Generic_Dictionary_object__object__o *)dicOverwriteName,
     (Il2CppObject *)targetName,
     (Il2CppObject *)overwriteName,
-    (const MethodInfo_346361C *)Method_System_Collections_Generic_Dictionary_string__string__set_Item__);
+    (const MethodInfo_34757CC *)Method_System_Collections_Generic_Dictionary_string__string__set_Item__);
 }
 
 
@@ -586,12 +592,12 @@ System_String_o *ChangeBattlePhaseOverwriteAnimation_AnimationOverwriteData__Fin
 {
   struct System_Collections_Generic_Dictionary_string__string__o *dicOverwriteName; // x0
 
-  if ( (byte_4C46375 & 1) == 0 )
+  if ( (byte_4C5A16C & 1) == 0 )
   {
-    sub_1C37058(&Method_System_Collections_Generic_Dictionary_string__string__ContainsKey__);
-    sub_1C37058(&Method_System_Collections_Generic_Dictionary_string__string__get_Item__);
-    sub_1C37058(&StringLiteral_1/*""*/);
-    byte_4C46375 = 1;
+    sub_1C3E564(&Method_System_Collections_Generic_Dictionary_string__string__ContainsKey__);
+    sub_1C3E564(&Method_System_Collections_Generic_Dictionary_string__string__get_Item__);
+    sub_1C3E564(&StringLiteral_1/*""*/);
+    byte_4C5A16C = 1;
   }
   dicOverwriteName = this->fields.dicOverwriteName;
   if ( !dicOverwriteName )
@@ -599,16 +605,16 @@ System_String_o *ChangeBattlePhaseOverwriteAnimation_AnimationOverwriteData__Fin
   if ( System_Collections_Generic_Dictionary_object__object___ContainsKey(
          (System_Collections_Generic_Dictionary_object__object__o *)dicOverwriteName,
          (Il2CppObject *)targetName,
-         (const MethodInfo_3463824 *)Method_System_Collections_Generic_Dictionary_string__string__ContainsKey__) )
+         (const MethodInfo_34759D4 *)Method_System_Collections_Generic_Dictionary_string__string__ContainsKey__) )
   {
     dicOverwriteName = this->fields.dicOverwriteName;
     if ( dicOverwriteName )
       return (System_String_o *)System_Collections_Generic_Dictionary_object__object___get_Item(
                                   (System_Collections_Generic_Dictionary_object__object__o *)dicOverwriteName,
                                   (Il2CppObject *)targetName,
-                                  (const MethodInfo_34635B0 *)Method_System_Collections_Generic_Dictionary_string__string__get_Item__);
+                                  (const MethodInfo_3475760 *)Method_System_Collections_Generic_Dictionary_string__string__get_Item__);
 LABEL_8:
-    sub_1C372B4(dicOverwriteName);
+    sub_1C3E7C0(dicOverwriteName, targetName);
   }
   return (System_String_o *)StringLiteral_1/*""*/;
 }
@@ -620,15 +626,15 @@ void ChangeBattlePhaseOverwriteAnimation___c___cctor(const MethodInfo *method)
   int32_t v2; // w2
   const MethodInfo *v3; // x3
 
-  if ( (byte_4C46377 & 1) == 0 )
+  if ( (byte_4C5A16E & 1) == 0 )
   {
-    sub_1C37058(&ChangeBattlePhaseOverwriteAnimation___c_TypeInfo);
-    byte_4C46377 = 1;
+    sub_1C3E564(&ChangeBattlePhaseOverwriteAnimation___c_TypeInfo);
+    byte_4C5A16E = 1;
   }
-  v1 = (Il2CppObject *)sub_1C372A4(ChangeBattlePhaseOverwriteAnimation___c_TypeInfo);
+  v1 = (Il2CppObject *)sub_1C3E7B0(ChangeBattlePhaseOverwriteAnimation___c_TypeInfo);
   System_Object___ctor(v1, 0);
   ChangeBattlePhaseOverwriteAnimation___c_TypeInfo->static_fields->__9 = (struct ChangeBattlePhaseOverwriteAnimation___c_o *)v1;
-  sub_1C36FFC(
+  sub_1C3E508(
     (CGThumbnailListItem_o *)ChangeBattlePhaseOverwriteAnimation___c_TypeInfo->static_fields,
     (int32_t)v1,
     v2,
@@ -650,7 +656,7 @@ int32_t ChangeBattlePhaseOverwriteAnimation___c___InitOverwriteInfo_b__5_0(
         const MethodInfo *method)
 {
   if ( !x )
-    sub_1C372B4(this);
+    sub_1C3E7C0(this, 0);
   return x->fields.type;
 }
 
@@ -661,7 +667,7 @@ int32_t ChangeBattlePhaseOverwriteAnimation___c___InitOverwriteInfo_b__5_1(
         const MethodInfo *method)
 {
   if ( !x )
-    sub_1C372B4(this);
+    sub_1C3E7C0(this, 0);
   return x->fields.svtLimitCount;
 }
 
@@ -680,6 +686,6 @@ bool ChangeBattlePhaseOverwriteAnimation___c__DisplayClass6_0___FindOverwriteFor
         const MethodInfo *method)
 {
   if ( !x )
-    sub_1C372B4(this);
+    sub_1C3E7C0(this, 0);
   return x->fields.phase == this->fields.phaseType;
 }

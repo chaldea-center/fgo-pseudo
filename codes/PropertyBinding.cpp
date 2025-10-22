@@ -35,17 +35,17 @@ void PropertyBinding__OnValidate(PropertyBinding_o *this, const MethodInfo *meth
   if ( source )
   {
     source->fields.mField = 0;
-    sub_1C36FFC((CGThumbnailListItem_o *)&source->fields.mField, 0, v2, v3);
+    sub_1C3E508((CGThumbnailListItem_o *)&source->fields.mField, 0, v2, v3);
     source->fields.mProperty = 0;
-    sub_1C36FFC((CGThumbnailListItem_o *)&source->fields.mProperty, 0, v6, v7);
+    sub_1C3E508((CGThumbnailListItem_o *)&source->fields.mProperty, 0, v6, v7);
   }
   target = this->fields.target;
   if ( target )
   {
     target->fields.mField = 0;
-    sub_1C36FFC((CGThumbnailListItem_o *)&target->fields.mField, 0, v2, v3);
+    sub_1C3E508((CGThumbnailListItem_o *)&target->fields.mField, 0, v2, v3);
     target->fields.mProperty = 0;
-    sub_1C36FFC((CGThumbnailListItem_o *)&target->fields.mProperty, 0, v9, v10);
+    sub_1C3E508((CGThumbnailListItem_o *)&target->fields.mProperty, 0, v9, v10);
   }
 }
 
@@ -70,30 +70,26 @@ void PropertyBinding__UpdateTarget(PropertyBinding_o *this, const MethodInfo *me
   PropertyReference_o *source; // x0
   const MethodInfo *v4; // x1
   PropertyReference_o *target; // x0
-  const MethodInfo *v6; // x1
   int32_t direction; // w8
-  struct PropertyReference_o *v8; // x20
-  const MethodInfo *v9; // x2
-  Il2CppObject *v10; // x1
-  struct PropertyReference_o *v11; // x19
-  const MethodInfo *v12; // x1
-  System_Type_o *v13; // x20
+  struct PropertyReference_o *v7; // x20
+  const MethodInfo *v8; // x2
+  Il2CppObject *v9; // x1
+  struct PropertyReference_o *v10; // x19
+  System_Type_o *v11; // x20
   System_Type_o *PropertyType; // x21
-  const MethodInfo *v15; // x1
-  Il2CppObject *v16; // x0
-  int32_t v17; // w2
-  const MethodInfo *v18; // x3
+  Il2CppObject *v13; // x0
+  int32_t v14; // w2
+  const MethodInfo *v15; // x3
   Il2CppObject *mLastValue; // x8
   Il2CppObject **p_mLastValue; // x20
-  Il2CppObject *v21; // x21
-  const MethodInfo *v22; // x1
-  int32_t v23; // w2
-  const MethodInfo *v24; // x3
+  Il2CppObject *v18; // x21
+  int32_t v19; // w2
+  const MethodInfo *v20; // x3
 
-  if ( (byte_4C47726 & 1) == 0 )
+  if ( (byte_4C5B51D & 1) == 0 )
   {
-    sub_1C37058(&System_Type_TypeInfo);
-    byte_4C47726 = 1;
+    sub_1C3E564(&System_Type_TypeInfo);
+    byte_4C5B51D = 1;
   }
   source = this->fields.source;
   if ( source && this->fields.target && PropertyReference__get_isValid(source, method) )
@@ -110,69 +106,69 @@ void PropertyBinding__UpdateTarget(PropertyBinding_o *this, const MethodInfo *me
         target = this->fields.source;
         if ( target )
         {
-          v11 = this->fields.target;
-          target = (PropertyReference_o *)PropertyReference__Get(target, v6);
-          if ( v11 )
+          v10 = this->fields.target;
+          target = (PropertyReference_o *)PropertyReference__Get(target, v4);
+          if ( v10 )
           {
-            v10 = (Il2CppObject *)target;
-            target = v11;
+            v9 = (Il2CppObject *)target;
+            target = v10;
             goto LABEL_30;
           }
         }
 LABEL_32:
-        sub_1C372B4(target);
+        sub_1C3E7C0(target, v4);
       }
-      v8 = this->fields.source;
+      v7 = this->fields.source;
       if ( direction == 1 )
       {
         target = this->fields.target;
         if ( target )
         {
-          target = (PropertyReference_o *)PropertyReference__Get(target, v6);
-          if ( v8 )
+          target = (PropertyReference_o *)PropertyReference__Get(target, v4);
+          if ( v7 )
           {
-            v10 = (Il2CppObject *)target;
-            target = v8;
+            v9 = (Il2CppObject *)target;
+            target = v7;
 LABEL_30:
-            PropertyReference__Set_49366816(target, v10, v9);
+            PropertyReference__Set_49440056(target, v9, v8);
             return;
           }
         }
         goto LABEL_32;
       }
-      if ( !v8 )
+      if ( !v7 )
         goto LABEL_32;
-      target = (PropertyReference_o *)PropertyReference__GetPropertyType(this->fields.source, v6);
+      target = (PropertyReference_o *)PropertyReference__GetPropertyType(this->fields.source, v4);
       if ( !this->fields.target )
         goto LABEL_32;
-      v13 = (System_Type_o *)target;
-      PropertyType = PropertyReference__GetPropertyType(this->fields.target, v12);
+      v11 = (System_Type_o *)target;
+      PropertyType = PropertyReference__GetPropertyType(this->fields.target, v4);
       if ( !System_Type_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(System_Type_TypeInfo);
-      if ( System_Type__op_Equality(v13, PropertyType, 0) )
+      if ( System_Type__op_Equality(v11, PropertyType, 0) )
       {
         target = this->fields.source;
         if ( !target )
           goto LABEL_32;
-        v16 = PropertyReference__Get(target, v15);
+        v13 = PropertyReference__Get(target, v4);
         p_mLastValue = &this->fields.mLastValue;
         mLastValue = this->fields.mLastValue;
-        v21 = v16;
+        v18 = v13;
         if ( mLastValue
           && ((unsigned int)((_QWORD *(__fastcall *)(Il2CppObject *__return_ptr, Il2CppObject *, Il2CppObject *, const MethodInfo *))mLastValue->klass->vtable[0].methodPtr)(
                               mLastValue,
                               this->fields.mLastValue,
-                              v16,
+                              v13,
                               mLastValue->klass->vtable[0].method)
             & 1) != 0 )
         {
           target = this->fields.target;
           if ( !target )
             goto LABEL_32;
-          target = (PropertyReference_o *)PropertyReference__Get(target, v22);
+          target = (PropertyReference_o *)PropertyReference__Get(target, v4);
           if ( !*p_mLastValue )
             goto LABEL_32;
-          v21 = (Il2CppObject *)target;
+          v18 = (Il2CppObject *)target;
           if ( ((unsigned int)((_QWORD *(__fastcall *)(Il2CppObject *__return_ptr, Il2CppObject *, PropertyReference_o *, const MethodInfo *))(*p_mLastValue)->klass->vtable[0].methodPtr)(
                                 *p_mLastValue,
                                 *p_mLastValue,
@@ -180,21 +176,21 @@ LABEL_30:
                                 (*p_mLastValue)->klass->vtable[0].method)
               & 1) != 0 )
             return;
-          this->fields.mLastValue = v21;
-          sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.mLastValue, (int32_t)v21, v23, v24);
+          this->fields.mLastValue = v18;
+          sub_1C3E508((CGThumbnailListItem_o *)&this->fields.mLastValue, (int32_t)v18, v19, v20);
           target = this->fields.source;
           if ( !target )
             goto LABEL_32;
         }
         else
         {
-          this->fields.mLastValue = v21;
-          sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.mLastValue, (int32_t)v21, v17, v18);
+          this->fields.mLastValue = v18;
+          sub_1C3E508((CGThumbnailListItem_o *)&this->fields.mLastValue, (int32_t)v18, v14, v15);
           target = this->fields.target;
           if ( !target )
             goto LABEL_32;
         }
-        v10 = v21;
+        v9 = v18;
         goto LABEL_30;
       }
     }

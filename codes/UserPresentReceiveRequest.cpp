@@ -7,44 +7,45 @@ void UserPresentReceiveRequest__beginRequest(
 {
   MiniMessagePack_MiniMessagePacker_o *v9; // x23
   __int64 v10; // x0
-  System_Byte_array *v11; // x22
-  System_String_o *v12; // x0
-  const MethodInfo *v13; // x3
+  __int64 v11; // x1
+  System_Byte_array *v12; // x22
+  System_String_o *v13; // x0
   const MethodInfo *v14; // x3
   const MethodInfo *v15; // x3
-  const MethodInfo *v16; // x1
+  const MethodInfo *v16; // x3
+  const MethodInfo *v17; // x1
 
-  if ( (byte_4C44BFC & 1) == 0 )
+  if ( (byte_4C589C8 & 1) == 0 )
   {
-    sub_1C37058(&System_Convert_TypeInfo);
-    sub_1C37058(&MiniMessagePack_MiniMessagePacker_TypeInfo);
-    sub_1C37058(&StringLiteral_21026/*"itemSelectIdx"*/);
-    sub_1C37058(&StringLiteral_22765/*"presentIds"*/);
-    sub_1C37058(&StringLiteral_21027/*"itemSelectNum"*/);
-    byte_4C44BFC = 1;
+    sub_1C3E564(&System_Convert_TypeInfo);
+    sub_1C3E564(&MiniMessagePack_MiniMessagePacker_TypeInfo);
+    sub_1C3E564(&StringLiteral_21044/*"itemSelectIdx"*/);
+    sub_1C3E564(&StringLiteral_22784/*"presentIds"*/);
+    sub_1C3E564(&StringLiteral_21045/*"itemSelectNum"*/);
+    byte_4C589C8 = 1;
   }
-  v9 = (MiniMessagePack_MiniMessagePacker_o *)sub_1C372A4(MiniMessagePack_MiniMessagePacker_TypeInfo);
+  v9 = (MiniMessagePack_MiniMessagePacker_o *)sub_1C3E7B0(MiniMessagePack_MiniMessagePacker_TypeInfo);
   MiniMessagePack_MiniMessagePacker___ctor(v9, 0);
   if ( !v9 )
-    sub_1C372B4(v10);
-  v11 = MiniMessagePack_MiniMessagePacker__PackClass(v9, &presentIds->obj, 0);
+    sub_1C3E7C0(v10, v11);
+  v12 = MiniMessagePack_MiniMessagePacker__PackClass(v9, &presentIds->obj, 0);
   if ( !System_Convert_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(System_Convert_TypeInfo);
-  v12 = System_Convert__ToBase64String(v11, 0);
-  RequestBase__addField_44247300((RequestBase_o *)this, (System_String_o *)StringLiteral_22765/*"presentIds"*/, v12, v13);
-  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_21026/*"itemSelectIdx"*/, itemSelectIdx, v14);
-  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_21027/*"itemSelectNum"*/, itemSelectNum, v15);
-  RequestBase__beginRequest((RequestBase_o *)this, v16);
+  v13 = System_Convert__ToBase64String(v12, 0);
+  RequestBase__addField_44302832((RequestBase_o *)this, (System_String_o *)StringLiteral_22784/*"presentIds"*/, v13, v14);
+  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_21044/*"itemSelectIdx"*/, itemSelectIdx, v15);
+  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_21045/*"itemSelectNum"*/, itemSelectNum, v16);
+  RequestBase__beginRequest((RequestBase_o *)this, v17);
 }
 
 
 System_String_o *UserPresentReceiveRequest__getMockData(UserPresentReceiveRequest_o *this, const MethodInfo *method)
 {
-  if ( (byte_4C44BFB & 1) == 0 )
+  if ( (byte_4C589C7 & 1) == 0 )
   {
-    sub_1C37058(&NetworkManager_TypeInfo);
-    sub_1C37058(&StringLiteral_9144/*"MockUserPresentReceiveResponse"*/);
-    byte_4C44BFB = 1;
+    sub_1C3E564(&NetworkManager_TypeInfo);
+    sub_1C3E564(&StringLiteral_9144/*"MockUserPresentReceiveResponse"*/);
+    byte_4C589C7 = 1;
   }
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
@@ -56,16 +57,16 @@ System_String_o *UserPresentReceiveRequest__getURL(UserPresentReceiveRequest_o *
 {
   System_String_o *BaseUrl; // x0
 
-  if ( (byte_4C44BFA & 1) == 0 )
+  if ( (byte_4C589C6 & 1) == 0 )
   {
-    sub_1C37058(&NetworkManager_TypeInfo);
-    sub_1C37058(&StringLiteral_22762/*"present/receive"*/);
-    byte_4C44BFA = 1;
+    sub_1C3E564(&NetworkManager_TypeInfo);
+    sub_1C3E564(&StringLiteral_22781/*"present/receive"*/);
+    byte_4C589C6 = 1;
   }
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
   BaseUrl = NetworkManager__getBaseUrl(1, 0);
-  return System_String__Concat_63561656(BaseUrl, (System_String_o *)StringLiteral_22762/*"present/receive"*/, 0);
+  return System_String__Concat_63636468(BaseUrl, (System_String_o *)StringLiteral_22781/*"present/receive"*/, 0);
 }
 
 
@@ -82,12 +83,12 @@ void UserPresentReceiveRequest__requestCompleted(
   struct NetworkManager_ResultCallbackFunc_o *CallBack; // x8
   struct NetworkManager_ResultCallbackFunc_o *v11; // x8
 
-  if ( (byte_4C44BFD & 1) == 0 )
+  if ( (byte_4C589C9 & 1) == 0 )
   {
-    sub_1C37058(&JsonManager_TypeInfo);
-    sub_1C37058(&ResponseCommandKind_TypeInfo);
-    sub_1C37058(&StringLiteral_22215/*"ng"*/);
-    byte_4C44BFD = 1;
+    sub_1C3E564(&JsonManager_TypeInfo);
+    sub_1C3E564(&ResponseCommandKind_TypeInfo);
+    sub_1C3E564(&StringLiteral_22233/*"ng"*/);
+    byte_4C589C9 = 1;
   }
   if ( !ResponseCommandKind_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(ResponseCommandKind_TypeInfo);
@@ -112,7 +113,7 @@ void UserPresentReceiveRequest__requestCompleted(
     if ( v11 )
       ((void (__fastcall *)(intptr_t, __int64, intptr_t))v11->fields.invoke_impl)(
         v11->fields.method_code,
-        StringLiteral_22215/*"ng"*/,
+        StringLiteral_22233/*"ng"*/,
         v11->fields.method);
   }
 }

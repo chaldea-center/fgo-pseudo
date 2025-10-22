@@ -13,11 +13,12 @@ void CharaGraphListViewItemDrawPatternDefault__SetActive(
         const MethodInfo *method)
 {
   UnityEngine_GameObject_o *gameObject; // x0
+  __int64 v7; // x1
 
-  if ( (byte_4C422A0 & 1) == 0 )
+  if ( (byte_4C56042 & 1) == 0 )
   {
-    sub_1C37058(&UnityEngine_Object_TypeInfo);
-    byte_4C422A0 = 1;
+    sub_1C3E564(&UnityEngine_Object_TypeInfo);
+    byte_4C56042 = 1;
   }
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
@@ -25,7 +26,7 @@ void CharaGraphListViewItemDrawPatternDefault__SetActive(
   if ( ((unsigned __int8)gameObject & 1) != 0 )
   {
     if ( !obj || (gameObject = UnityEngine_Component__get_gameObject(obj, 0)) == 0 )
-      sub_1C372B4(gameObject);
+      sub_1C3E7C0(gameObject, v7);
     UnityEngine_GameObject__SetActive(gameObject, value, 0);
   }
 }
@@ -42,11 +43,11 @@ void CharaGraphListViewItemDrawPatternDefault__SetInput(
   UnityEngine_Object_o *baseButton; // x23
 
   v8 = this;
-  if ( (byte_4C4229F & 1) == 0 )
+  if ( (byte_4C56041 & 1) == 0 )
   {
-    sub_1C37058(&Method_UnityEngine_Component_GetComponent_Collider___);
-    this = (CharaGraphListViewItemDrawPatternDefault_o *)sub_1C37058(&UnityEngine_Object_TypeInfo);
-    byte_4C4229F = 1;
+    sub_1C3E564(&Method_UnityEngine_Component_GetComponent_Collider___);
+    this = (CharaGraphListViewItemDrawPatternDefault_o *)sub_1C3E564(&UnityEngine_Object_TypeInfo);
+    byte_4C56041 = 1;
   }
   if ( !itemDraw )
     goto LABEL_12;
@@ -60,7 +61,7 @@ void CharaGraphListViewItemDrawPatternDefault__SetInput(
     {
       this = (CharaGraphListViewItemDrawPatternDefault_o *)UnityEngine_Component__GetComponent_object_(
                                                              (UnityEngine_Component_o *)this,
-                                                             (const MethodInfo_30DE428 *)Method_UnityEngine_Component_GetComponent_Collider___);
+                                                             (const MethodInfo_30F0240 *)Method_UnityEngine_Component_GetComponent_Collider___);
       if ( this )
       {
         UnityEngine_Collider__set_enabled((UnityEngine_Collider_o *)this, isInput, 0);
@@ -77,7 +78,7 @@ void CharaGraphListViewItemDrawPatternDefault__SetInput(
       }
     }
 LABEL_12:
-    sub_1C372B4(this);
+    sub_1C3E7C0(this, itemDraw);
   }
 LABEL_11:
   ((void (__fastcall *)(CharaGraphListViewItemDrawPatternDefault_o *, CharaGraphListViewItemDraw_o *, CharaGraphListViewItemBase_o *, const MethodInfo *))v8->klass->vtable._6_SetupAccessories.methodPtr)(
@@ -111,17 +112,18 @@ void CharaGraphListViewItemDrawPatternDefault__SetupAccessories(
   CharaGraphListViewItemDrawPatternDefault_o *v7; // x0
   const MethodInfo *v8; // x3
   CharaGraphListViewItemDrawPatternDefault_o *selectObject; // x0
-  const MethodInfo *v10; // x3
-  CharaGraphListViewItemDrawPatternDefault_o *v11; // x0
-  const MethodInfo *v12; // x3
-  CharaGraphListViewItemDrawPatternDefault_o *v13; // x0
-  const MethodInfo *v14; // x3
-  CharaGraphListViewItemDrawPatternDefault_o *v15; // x0
-  const MethodInfo *v16; // x3
-  CharaGraphListViewItemDrawPatternDefault_o *v17; // x0
-  const MethodInfo *v18; // x3
-  CharaGraphListViewItemDrawPatternDefault_o *v19; // x0
-  const MethodInfo *v20; // x3
+  __int64 v10; // x1
+  const MethodInfo *v11; // x3
+  CharaGraphListViewItemDrawPatternDefault_o *v12; // x0
+  const MethodInfo *v13; // x3
+  CharaGraphListViewItemDrawPatternDefault_o *v14; // x0
+  const MethodInfo *v15; // x3
+  CharaGraphListViewItemDrawPatternDefault_o *v16; // x0
+  const MethodInfo *v17; // x3
+  CharaGraphListViewItemDrawPatternDefault_o *v18; // x0
+  const MethodInfo *v19; // x3
+  CharaGraphListViewItemDrawPatternDefault_o *v20; // x0
+  const MethodInfo *v21; // x3
 
   ((void (__fastcall *)(CharaGraphListViewItemDrawPatternDefault_o *, CharaGraphListViewItemDraw_o *, CharaGraphListViewItemBase_o *, const MethodInfo *))this->klass->vtable._8_SetupFaceIcon.methodPtr)(
     this,
@@ -152,27 +154,27 @@ void CharaGraphListViewItemDrawPatternDefault__SetupAccessories(
     selectObject,
     (UnityEngine_Component_o *)itemDraw->fields.lockSprite,
     item->fields._IsSwapLock_k__BackingField != item->fields._IsLock_k__BackingField,
-    v10);
+    v11);
   CharaGraphListViewItemDrawPatternDefault__SetActive(
-    v11,
+    v12,
     (UnityEngine_Component_o *)itemDraw->fields.choiceSprite,
     item->fields._IsSwapChoice_k__BackingField != item->fields._IsChoice_k__BackingField,
-    v12);
+    v13);
   CharaGraphListViewItemDrawPatternDefault__SetActive(
-    v13,
+    v14,
     (UnityEngine_Component_o *)itemDraw->fields.friendShipSprite,
     item->fields._IsFriendShipSvtEq_k__BackingField,
-    v14);
+    v15);
   CharaGraphListViewItemDrawPatternDefault__SetActive(
-    v15,
+    v16,
     (UnityEngine_Component_o *)itemDraw->fields.chocolateSprite,
     item->fields._IsChocolateSvtEquip_k__BackingField,
-    v16);
+    v17);
   CharaGraphListViewItemDrawPatternDefault__SetActive(
-    v17,
+    v18,
     (UnityEngine_Component_o *)itemDraw->fields.pushSprite,
     item->fields._IsPush_k__BackingField,
-    v18);
+    v19);
   selectObject = (CharaGraphListViewItemDrawPatternDefault_o *)itemDraw->fields.selectObject;
   if ( !selectObject
     || (UnityEngine_GameObject__SetActive(
@@ -182,10 +184,10 @@ void CharaGraphListViewItemDrawPatternDefault__SetupAccessories(
         (selectObject = (CharaGraphListViewItemDrawPatternDefault_o *)itemDraw->fields.servantFaceIcon) == 0) )
   {
 LABEL_6:
-    sub_1C372B4(selectObject);
+    sub_1C3E7C0(selectObject, v10);
   }
   ServantFaceIconComponent__ResetIconLabelScale((ServantFaceIconComponent_o *)selectObject, 0);
-  CharaGraphListViewItemDrawPatternDefault__SetupMaterialTd(v19, itemDraw, item, v20);
+  CharaGraphListViewItemDrawPatternDefault__SetupMaterialTd(v20, itemDraw, item, v21);
   ((void (__fastcall *)(CharaGraphListViewItemDrawPatternDefault_o *, CharaGraphListViewItemDraw_o *, CharaGraphListViewItemBase_o *, const MethodInfo *))this->klass->vtable._11_SetupWarningAndMask.methodPtr)(
     this,
     itemDraw,
@@ -206,12 +208,12 @@ void CharaGraphListViewItemDrawPatternDefault__SetupFaceIcon(
   __int64 v9; // x11
   __int64 v10; // x11
 
-  if ( (byte_4C422A1 & 1) == 0 )
+  if ( (byte_4C56043 & 1) == 0 )
   {
-    sub_1C37058(&CharaGraphCommandCodeListViewItem_TypeInfo);
-    sub_1C37058(&CharaGraphServantCollectionListViewItem_TypeInfo);
-    this = (CharaGraphListViewItemDrawPatternDefault_o *)sub_1C37058(&CharaGraphServantListViewItemBase_TypeInfo);
-    byte_4C422A1 = 1;
+    sub_1C3E564(&CharaGraphCommandCodeListViewItem_TypeInfo);
+    sub_1C3E564(&CharaGraphServantCollectionListViewItem_TypeInfo);
+    this = (CharaGraphListViewItemDrawPatternDefault_o *)sub_1C3E564(&CharaGraphServantListViewItemBase_TypeInfo);
+    byte_4C56043 = 1;
   }
   if ( item )
   {
@@ -226,7 +228,7 @@ void CharaGraphListViewItemDrawPatternDefault__SetupFaceIcon(
         this = (CharaGraphListViewItemDrawPatternDefault_o *)itemDraw->fields.servantFaceIcon;
         if ( this )
         {
-          ServantFaceIconComponent__Set_41005332(
+          ServantFaceIconComponent__Set_41053768(
             (ServantFaceIconComponent_o *)this,
             (UserServantEntity_o *)item[1].monitor,
             item->fields._IconInfo1_k__BackingField,
@@ -247,7 +249,7 @@ void CharaGraphListViewItemDrawPatternDefault__SetupFaceIcon(
           this = (CharaGraphListViewItemDrawPatternDefault_o *)itemDraw->fields.servantFaceIcon;
           if ( this )
           {
-            ServantFaceIconComponent__Set_41012776(
+            ServantFaceIconComponent__Set_41061212(
               (ServantFaceIconComponent_o *)this,
               (UserCommandCodeEntity_o *)item[1].klass,
               item->fields._IconInfo1_k__BackingField,
@@ -270,7 +272,7 @@ void CharaGraphListViewItemDrawPatternDefault__SetupFaceIcon(
           this = (CharaGraphListViewItemDrawPatternDefault_o *)itemDraw->fields.servantFaceIcon;
           if ( this )
           {
-            ServantFaceIconComponent__Set_41006944(
+            ServantFaceIconComponent__Set_41055380(
               (ServantFaceIconComponent_o *)this,
               (UserServantCollectionEntity_o *)item[1].klass,
               item->fields._IconInfo1_k__BackingField,
@@ -282,7 +284,7 @@ void CharaGraphListViewItemDrawPatternDefault__SetupFaceIcon(
         }
       }
     }
-    sub_1C372B4(this);
+    sub_1C3E7C0(this, itemDraw);
   }
 }
 
@@ -294,7 +296,7 @@ void CharaGraphListViewItemDrawPatternDefault__SetupFaceMask(
         const MethodInfo *method)
 {
   if ( !itemDraw || (this = (CharaGraphListViewItemDrawPatternDefault_o *)itemDraw->fields.servantFaceIcon) == 0 )
-    sub_1C372B4(this);
+    sub_1C3E7C0(this, itemDraw);
   ServantFaceIconComponent__SetGrandFaceMaskSpriteCommonAtlas(
     (ServantFaceIconComponent_o *)this,
     itemDraw->fields.maskSprite,
@@ -315,12 +317,12 @@ void CharaGraphListViewItemDrawPatternDefault__SetupMaterialTd(
   UISprite_o *v8; // x21
   UnityEngine_Vector3_o v9; // 0:s0.4,4:s1.4,8:s2.4
 
-  if ( (byte_4C422A5 & 1) == 0 )
+  if ( (byte_4C56047 & 1) == 0 )
   {
-    sub_1C37058(&AtlasManager_TypeInfo);
-    sub_1C37058(&UnityEngine_Object_TypeInfo);
-    this = (CharaGraphListViewItemDrawPatternDefault_o *)sub_1C37058(&StringLiteral_23112/*"ribbon_noblephantasmup_01"*/);
-    byte_4C422A5 = 1;
+    sub_1C3E564(&AtlasManager_TypeInfo);
+    sub_1C3E564(&UnityEngine_Object_TypeInfo);
+    this = (CharaGraphListViewItemDrawPatternDefault_o *)sub_1C3E564(&StringLiteral_23131/*"ribbon_noblephantasmup_01"*/);
+    byte_4C56047 = 1;
   }
   if ( !itemDraw )
     goto LABEL_15;
@@ -342,7 +344,7 @@ void CharaGraphListViewItemDrawPatternDefault__SetupMaterialTd(
       v8 = itemDraw->fields.materialTdSprite;
       if ( !AtlasManager_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo);
-      AtlasManager__SetEventSprite(v8, (System_String_o *)StringLiteral_23112/*"ribbon_noblephantasmup_01"*/, 0);
+      AtlasManager__SetEventSprite(v8, (System_String_o *)StringLiteral_23131/*"ribbon_noblephantasmup_01"*/, 0);
       if ( item->fields._IsNeedAdjustIconLabelScale_k__BackingField )
       {
         this = (CharaGraphListViewItemDrawPatternDefault_o *)itemDraw->fields.servantFaceIcon;
@@ -355,7 +357,7 @@ void CharaGraphListViewItemDrawPatternDefault__SetupMaterialTd(
           return;
         }
 LABEL_15:
-        sub_1C372B4(this);
+        sub_1C3E7C0(this, itemDraw);
       }
     }
   }
@@ -368,19 +370,20 @@ void CharaGraphListViewItemDrawPatternDefault__SetupPartyIcon(
         CharaGraphListViewItemBase_o *item,
         const MethodInfo *method)
 {
+  CharaGraphListViewItemDraw_o *v5; // x20
   UnityEngine_Object_o *partyIcon; // x21
   __int64 naturalAligment; // x10
-  bool v8; // w1
 
-  if ( (byte_4C422A2 & 1) == 0 )
+  v5 = itemDraw;
+  if ( (byte_4C56044 & 1) == 0 )
   {
-    sub_1C37058(&CharaGraphPartyServantListViewItem_TypeInfo);
-    this = (CharaGraphListViewItemDrawPatternDefault_o *)sub_1C37058(&UnityEngine_Object_TypeInfo);
-    byte_4C422A2 = 1;
+    sub_1C3E564(&CharaGraphPartyServantListViewItem_TypeInfo);
+    this = (CharaGraphListViewItemDrawPatternDefault_o *)sub_1C3E564(&UnityEngine_Object_TypeInfo);
+    byte_4C56044 = 1;
   }
-  if ( !itemDraw )
+  if ( !v5 )
     goto LABEL_17;
-  partyIcon = (UnityEngine_Object_o *)itemDraw->fields.partyIcon;
+  partyIcon = (UnityEngine_Object_o *)v5->fields.partyIcon;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   if ( !UnityEngine_Object__op_Equality(partyIcon, 0, 0) )
@@ -390,33 +393,33 @@ void CharaGraphListViewItemDrawPatternDefault__SetupPartyIcon(
           item->klass->_2.naturalAligment >= (unsigned int)naturalAligment)
       && (CharaGraphPartyServantListViewItem_c *)item->klass->_2.typeHierarchy[naturalAligment - 1] == CharaGraphPartyServantListViewItem_TypeInfo )
     {
-      this = (CharaGraphListViewItemDrawPatternDefault_o *)itemDraw->fields.partyIcon;
+      this = (CharaGraphListViewItemDrawPatternDefault_o *)v5->fields.partyIcon;
       if ( item->fields._IsUse_k__BackingField )
       {
-        v8 = 0;
+        itemDraw = 0;
         if ( this )
           goto LABEL_12;
       }
       else
       {
-        v8 = SLODWORD(item[1].fields.sortValue2B) >= 0;
+        itemDraw = (CharaGraphListViewItemDraw_o *)(SLODWORD(item[1].fields.sortValue2B) >= 0);
         if ( this )
           goto LABEL_12;
       }
     }
     else
     {
-      this = (CharaGraphListViewItemDrawPatternDefault_o *)itemDraw->fields.partyIcon;
+      this = (CharaGraphListViewItemDrawPatternDefault_o *)v5->fields.partyIcon;
       if ( this )
       {
-        v8 = 0;
+        LOBYTE(itemDraw) = 0;
 LABEL_12:
-        FlashingIconComponent__Set_40901040((FlashingIconComponent_o *)this, v8, 0);
+        FlashingIconComponent__Set_40947528((FlashingIconComponent_o *)this, (bool)itemDraw, 0);
         return;
       }
     }
 LABEL_17:
-    sub_1C372B4(this);
+    sub_1C3E7C0(this, itemDraw);
   }
 }
 
@@ -428,7 +431,7 @@ void CharaGraphListViewItemDrawPatternDefault__SetupStatusLabel(
         const MethodInfo *method)
 {
   if ( !itemDraw )
-    sub_1C372B4(this);
+    sub_1C3E7C0(this, 0);
   CharaGraphListViewItemDrawPatternDefault__SetActive(
     this,
     (UnityEngine_Component_o *)itemDraw->fields.statusLb,
@@ -448,13 +451,13 @@ void CharaGraphListViewItemDrawPatternDefault__SetupUseSprite(
   __int64 naturalAligment; // x11
   __int64 *v9; // x8
 
-  if ( (byte_4C422A3 & 1) == 0 )
+  if ( (byte_4C56045 & 1) == 0 )
   {
-    sub_1C37058(&CharaGraphCommandCodeListViewItem_TypeInfo);
-    sub_1C37058(&UnityEngine_Object_TypeInfo);
-    sub_1C37058(&StringLiteral_20189/*"icon_equip"*/);
-    this = (CharaGraphListViewItemDrawPatternDefault_o *)sub_1C37058(&StringLiteral_20190/*"icon_equip_cc"*/);
-    byte_4C422A3 = 1;
+    sub_1C3E564(&CharaGraphCommandCodeListViewItem_TypeInfo);
+    sub_1C3E564(&UnityEngine_Object_TypeInfo);
+    sub_1C3E564(&StringLiteral_20207/*"icon_equip"*/);
+    this = (CharaGraphListViewItemDrawPatternDefault_o *)sub_1C3E564(&StringLiteral_20208/*"icon_equip_cc"*/);
+    byte_4C56045 = 1;
   }
   if ( !itemDraw )
     goto LABEL_15;
@@ -474,11 +477,11 @@ void CharaGraphListViewItemDrawPatternDefault__SetupUseSprite(
     if ( item->fields._IsUse_k__BackingField )
     {
       naturalAligment = CharaGraphCommandCodeListViewItem_TypeInfo->_2.naturalAligment;
-      v9 = &StringLiteral_20189/*"icon_equip"*/;
+      v9 = &StringLiteral_20207/*"icon_equip"*/;
       if ( item->klass->_2.naturalAligment >= (unsigned int)naturalAligment
         && (CharaGraphCommandCodeListViewItem_c *)item->klass->_2.typeHierarchy[naturalAligment - 1] == CharaGraphCommandCodeListViewItem_TypeInfo )
       {
-        v9 = &StringLiteral_20190/*"icon_equip_cc"*/;
+        v9 = &StringLiteral_20208/*"icon_equip_cc"*/;
       }
       this = (CharaGraphListViewItemDrawPatternDefault_o *)itemDraw->fields.useSprite;
       if ( this )
@@ -487,7 +490,7 @@ void CharaGraphListViewItemDrawPatternDefault__SetupUseSprite(
         return;
       }
 LABEL_15:
-      sub_1C372B4(this);
+      sub_1C3E7C0(this, itemDraw);
     }
   }
 }
@@ -507,13 +510,13 @@ void CharaGraphListViewItemDrawPatternDefault__SetupWarningAndMask(
   System_String_o *v11; // x20
 
   v6 = this;
-  if ( (byte_4C422A4 & 1) == 0 )
+  if ( (byte_4C56046 & 1) == 0 )
   {
-    sub_1C37058(&LocalizationManager_TypeInfo);
-    sub_1C37058(&StringLiteral_11521/*"SELECT_CANNOT"*/);
-    sub_1C37058(&StringLiteral_11553/*"SELECT_SERVANT_EVENT_JOIN"*/);
-    this = (CharaGraphListViewItemDrawPatternDefault_o *)sub_1C37058(&StringLiteral_1/*""*/);
-    byte_4C422A4 = 1;
+    sub_1C3E564(&LocalizationManager_TypeInfo);
+    sub_1C3E564(&StringLiteral_11523/*"SELECT_CANNOT"*/);
+    sub_1C3E564(&StringLiteral_11555/*"SELECT_SERVANT_EVENT_JOIN"*/);
+    this = (CharaGraphListViewItemDrawPatternDefault_o *)sub_1C3E564(&StringLiteral_1/*""*/);
+    byte_4C56046 = 1;
   }
   if ( !itemDraw )
     goto LABEL_18;
@@ -544,9 +547,9 @@ void CharaGraphListViewItemDrawPatternDefault__SetupWarningAndMask(
   {
     warningLabel = itemDraw->fields.warningLabel;
     if ( item->fields._IsEventJoin_k__BackingField )
-      v10 = &StringLiteral_11553/*"SELECT_SERVANT_EVENT_JOIN"*/;
+      v10 = &StringLiteral_11555/*"SELECT_SERVANT_EVENT_JOIN"*/;
     else
-      v10 = &StringLiteral_11521/*"SELECT_CANNOT"*/;
+      v10 = &StringLiteral_11523/*"SELECT_CANNOT"*/;
     v11 = (System_String_o *)*v10;
     if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
@@ -557,6 +560,6 @@ void CharaGraphListViewItemDrawPatternDefault__SetupWarningAndMask(
       return;
     }
 LABEL_18:
-    sub_1C372B4(this);
+    sub_1C3E7C0(this, itemDraw);
   }
 }

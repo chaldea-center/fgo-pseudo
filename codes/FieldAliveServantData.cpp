@@ -7,28 +7,29 @@ void FieldAliveServantData___ctor(FieldAliveServantData_o *this, const MethodInf
   int32_t v7; // w2
   const MethodInfo *v8; // x3
 
-  if ( (byte_4C4590C & 1) == 0 )
+  if ( (byte_4C596E9 & 1) == 0 )
   {
-    sub_1C37058(&Method_System_Collections_Generic_List_BattleServantData___ctor__);
-    sub_1C37058(&System_Collections_Generic_List_BattleServantData__TypeInfo);
-    byte_4C4590C = 1;
+    sub_1C3E564(&Method_System_Collections_Generic_List_BattleServantData___ctor__);
+    sub_1C3E564(&System_Collections_Generic_List_BattleServantData__TypeInfo);
+    byte_4C596E9 = 1;
   }
-  v3 = (System_Collections_Generic_List_object__o *)sub_1C372A4(System_Collections_Generic_List_BattleServantData__TypeInfo);
+  v3 = (System_Collections_Generic_List_object__o *)sub_1C3E7B0(System_Collections_Generic_List_BattleServantData__TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v3,
-    (const MethodInfo_37A27F0 *)Method_System_Collections_Generic_List_BattleServantData___ctor__);
+    (const MethodInfo_37B4C2C *)Method_System_Collections_Generic_List_BattleServantData___ctor__);
   this->fields.playerIdList = (struct System_Collections_Generic_List_BattleServantData__o *)v3;
-  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields, (int32_t)v3, v4, v5);
-  v6 = (System_Collections_Generic_List_object__o *)sub_1C372A4(System_Collections_Generic_List_BattleServantData__TypeInfo);
+  sub_1C3E508((CGThumbnailListItem_o *)&this->fields, (int32_t)v3, v4, v5);
+  v6 = (System_Collections_Generic_List_object__o *)sub_1C3E7B0(System_Collections_Generic_List_BattleServantData__TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v6,
-    (const MethodInfo_37A27F0 *)Method_System_Collections_Generic_List_BattleServantData___ctor__);
+    (const MethodInfo_37B4C2C *)Method_System_Collections_Generic_List_BattleServantData___ctor__);
   this->fields.enemyIdList = (struct System_Collections_Generic_List_BattleServantData__o *)v6;
-  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.enemyIdList, (int32_t)v6, v7, v8);
+  sub_1C3E508((CGThumbnailListItem_o *)&this->fields.enemyIdList, (int32_t)v6, v7, v8);
   System_Object___ctor((Il2CppObject *)this, 0);
 }
 
 
+// local variable allocation has failed, the output may be wrong!
 void FieldAliveServantData__addSvtData(
         FieldAliveServantData_o *this,
         bool isEnemySide,
@@ -42,10 +43,10 @@ void FieldAliveServantData__addSvtData(
   __int64 size; // x10
   Il2CppClass **v12; // x8
 
-  if ( (byte_4C4590B & 1) == 0 )
+  if ( (byte_4C596E8 & 1) == 0 )
   {
-    sub_1C37058(&Method_System_Collections_Generic_List_BattleServantData__Add__);
-    byte_4C4590B = 1;
+    sub_1C3E564(&Method_System_Collections_Generic_List_BattleServantData__Add__);
+    byte_4C596E8 = 1;
   }
   v7 = 16;
   if ( isEnemySide )
@@ -57,7 +58,7 @@ void FieldAliveServantData__addSvtData(
         ++v8->fields._version,
         !items) )
   {
-    sub_1C372B4(v8);
+    sub_1C3E7C0(v8, isEnemySide);
   }
   size = v8->fields._size;
   if ( (unsigned int)size >= LODWORD(items->max_length) )
@@ -65,14 +66,14 @@ void FieldAliveServantData__addSvtData(
     System_Collections_Generic_List_object___AddWithResize(
       v8,
       (Il2CppObject *)svtData,
-      *(const MethodInfo_37A3024 **)(*(_QWORD *)(v10[4] + 192LL) + 112LL));
+      *(const MethodInfo_37B5460 **)(*(_QWORD *)(v10[4] + 192LL) + 112LL));
   }
   else
   {
     v12 = &items->obj.klass + size;
     v8->fields._size = size + 1;
     v12[4] = (Il2CppClass *)svtData;
-    sub_1C36FFC((CGThumbnailListItem_o *)(v12 + 4), (int32_t)svtData, (int32_t)svtData, method);
+    sub_1C3E508((CGThumbnailListItem_o *)(v12 + 4), (int32_t)svtData, (int32_t)svtData, method);
   }
 }
 

@@ -7,19 +7,19 @@ void EventRaceBoostEffect___cctor(const MethodInfo *method)
   int32_t v5; // w2
   const MethodInfo *v6; // x3
 
-  if ( (byte_4C3F9F0 & 1) == 0 )
+  if ( (byte_4C5378B & 1) == 0 )
   {
-    sub_1C37058(&EventRaceBoostEffect_TypeInfo);
-    sub_1C37058(&StringLiteral_22923/*"race_boost_effect_{0}"*/);
-    sub_1C37058(&StringLiteral_6239/*"EventRaceBoostEffect_{0}"*/);
-    byte_4C3F9F0 = 1;
+    sub_1C3E564(&EventRaceBoostEffect_TypeInfo);
+    sub_1C3E564(&StringLiteral_22942/*"race_boost_effect_{0}"*/);
+    sub_1C3E564(&StringLiteral_6239/*"EventRaceBoostEffect_{0}"*/);
+    byte_4C5378B = 1;
   }
-  EventRaceBoostEffect_TypeInfo->static_fields->SP_NAME = (struct System_String_o *)StringLiteral_22923/*"race_boost_effect_{0}"*/;
-  sub_1C36FFC((CGThumbnailListItem_o *)EventRaceBoostEffect_TypeInfo->static_fields, StringLiteral_22923/*"race_boost_effect_{0}"*/, v1, v2);
+  EventRaceBoostEffect_TypeInfo->static_fields->SP_NAME = (struct System_String_o *)StringLiteral_22942/*"race_boost_effect_{0}"*/;
+  sub_1C3E508((CGThumbnailListItem_o *)EventRaceBoostEffect_TypeInfo->static_fields, StringLiteral_22942/*"race_boost_effect_{0}"*/, v1, v2);
   v3 = StringLiteral_6239/*"EventRaceBoostEffect_{0}"*/;
   static_fields = EventRaceBoostEffect_TypeInfo->static_fields;
   static_fields->ANIM_NAME = (struct System_String_o *)StringLiteral_6239/*"EventRaceBoostEffect_{0}"*/;
-  sub_1C36FFC((CGThumbnailListItem_o *)&static_fields->ANIM_NAME, v3, v5, v6);
+  sub_1C3E508((CGThumbnailListItem_o *)&static_fields->ANIM_NAME, v3, v5, v6);
 }
 
 
@@ -44,9 +44,9 @@ int32_t EventRaceBoostEffect__GetSvtId(
   int32_t result; // [xsp+Ch] [xbp-4h] BYREF
 
   if ( !voiceStr || (this = (EventRaceBoostEffect_o *)System_String__Split(voiceStr, 0x5Fu, 0, 0), result = 0, !this) )
-    sub_1C372B4(this);
+    sub_1C3E7C0(this, voiceStr);
   if ( !LODWORD(this->fields.m_CancellationTokenSource) )
-    sub_1C372BC(this);
+    sub_1C3E7C8(this, voiceStr);
   if ( System_Int32__TryParse((System_String_o *)this->fields.effectSp, &result, 0) )
     return result;
   else
@@ -61,21 +61,21 @@ System_String_o *EventRaceBoostEffect__GetVoiceId(
 {
   int m_CancellationTokenSource; // w8
 
-  if ( (byte_4C3F9EE & 1) == 0 )
+  if ( (byte_4C53789 & 1) == 0 )
   {
-    this = (EventRaceBoostEffect_o *)sub_1C37058(&StringLiteral_16109/*"_"*/);
-    byte_4C3F9EE = 1;
+    this = (EventRaceBoostEffect_o *)sub_1C3E564(&StringLiteral_16119/*"_"*/);
+    byte_4C53789 = 1;
   }
   if ( !voiceStr || (this = (EventRaceBoostEffect_o *)System_String__Split(voiceStr, 0x5Fu, 0, 0)) == 0 )
-    sub_1C372B4(this);
+    sub_1C3E7C0(this, voiceStr);
   m_CancellationTokenSource = (int)this->fields.m_CancellationTokenSource;
   if ( m_CancellationTokenSource < 2 )
     return 0;
   if ( m_CancellationTokenSource == 2 )
-    sub_1C372BC(this);
-  return System_String__Concat_63599904(
+    sub_1C3E7C8(this, voiceStr);
+  return System_String__Concat_63674716(
            (System_String_o *)this->fields.boostItemSp,
-           (System_String_o *)StringLiteral_16109/*"_"*/,
+           (System_String_o *)StringLiteral_16119/*"_"*/,
            (System_String_o *)this->fields.boostCntLb,
            0);
 }
@@ -86,13 +86,14 @@ void EventRaceBoostEffect__OnDestroy(EventRaceBoostEffect_o *this, const MethodI
   Il2CppObject *Instance; // x0
   int32_t randvoiceSvt; // w8
   SoundManager_o *v5; // x19
-  System_String_o *VoiceAssetName_42795352; // x0
+  System_String_o *VoiceAssetName_42847476; // x0
+  __int64 v7; // x1
 
-  if ( (byte_4C3F9EF & 1) == 0 )
+  if ( (byte_4C5378A & 1) == 0 )
   {
-    sub_1C37058(&Method_SingletonMonoBehaviour_SoundManager__get_Instance__);
-    sub_1C37058(&SoundManager_TypeInfo);
-    byte_4C3F9EF = 1;
+    sub_1C3E564(&Method_SingletonMonoBehaviour_SoundManager__get_Instance__);
+    sub_1C3E564(&SoundManager_TypeInfo);
+    byte_4C5378A = 1;
   }
   this->fields.destroyedBeforeVoiceStop = 1;
   if ( !SoundManager_TypeInfo->_2.cctor_finished )
@@ -100,13 +101,13 @@ void EventRaceBoostEffect__OnDestroy(EventRaceBoostEffect_o *this, const MethodI
   SoundManager__stopVoiceAll(0.0, 0);
   if ( this->fields.randvoiceSvt >= 1 )
   {
-    Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39ED16C *)Method_SingletonMonoBehaviour_SoundManager__get_Instance__);
+    Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39FF5A8 *)Method_SingletonMonoBehaviour_SoundManager__get_Instance__);
     randvoiceSvt = this->fields.randvoiceSvt;
     v5 = (SoundManager_o *)Instance;
-    VoiceAssetName_42795352 = ServantVoiceEntity__getVoiceAssetName_42795352(randvoiceSvt, 0);
+    VoiceAssetName_42847476 = ServantVoiceEntity__getVoiceAssetName_42847476(randvoiceSvt, 0);
     if ( !v5 )
-      sub_1C372B4(VoiceAssetName_42795352);
-    SoundManager__ReleaseAudioAssetStorage(v5, VoiceAssetName_42795352, 0);
+      sub_1C3E7C0(VoiceAssetName_42847476, v7);
+    SoundManager__ReleaseAudioAssetStorage(v5, VoiceAssetName_42847476, 0);
   }
 }
 
@@ -123,58 +124,59 @@ void EventRaceBoostEffect__SetUpAndPlay(
 {
   __int64 v15; // x20
   QuestRacePointEntity_o *v16; // x0
-  int32_t v17; // w2
-  const MethodInfo *v18; // x3
-  QuestRacePointEntity_o **v19; // x27
-  int32_t v20; // w2
-  const MethodInfo *v21; // x3
-  int32_t v22; // w2
-  const MethodInfo *v23; // x3
-  const MethodInfo *v24; // x2
-  const MethodInfo *v25; // x3
+  __int64 v17; // x1
+  int32_t v18; // w2
+  const MethodInfo *v19; // x3
+  QuestRacePointEntity_o **v20; // x27
+  int32_t v21; // w2
+  const MethodInfo *v22; // x3
+  int32_t v23; // w2
+  const MethodInfo *v24; // x3
+  const MethodInfo *v25; // x2
+  const MethodInfo *v26; // x3
   System_String_o *RandVoice; // x21
   _BOOL8 IsNullOrEmpty; // x0
   EventRaceBoostEffect_o *SvtId; // x0
-  const MethodInfo *v29; // x2
+  const MethodInfo *v30; // x2
   struct System_String_o *VoiceId; // x0
-  int32_t v31; // w2
-  const MethodInfo *v32; // x3
-  const MethodInfo *v33; // x6
+  int32_t v32; // w2
+  const MethodInfo *v33; // x3
+  const MethodInfo *v34; // x6
   Il2CppObject *Instance; // x0
   int32_t randvoiceSvt; // w8
-  SoundManager_o *v36; // x19
-  System_String_o *VoiceAssetName_42795352; // x21
-  System_Action_o *v38; // x22
+  SoundManager_o *v37; // x19
+  System_String_o *VoiceAssetName_42847476; // x21
+  System_Action_o *v39; // x22
 
-  if ( (byte_4C3F9EA & 1) == 0 )
+  if ( (byte_4C53785 & 1) == 0 )
   {
-    sub_1C37058(&System_Action_TypeInfo);
-    sub_1C37058(&Method_SingletonMonoBehaviour_SoundManager__get_Instance__);
-    sub_1C37058(&Method_EventRaceBoostEffect___c__DisplayClass13_0__SetUpAndPlay_b__0__);
-    sub_1C37058(&EventRaceBoostEffect___c__DisplayClass13_0_TypeInfo);
-    byte_4C3F9EA = 1;
+    sub_1C3E564(&System_Action_TypeInfo);
+    sub_1C3E564(&Method_SingletonMonoBehaviour_SoundManager__get_Instance__);
+    sub_1C3E564(&Method_EventRaceBoostEffect___c__DisplayClass13_0__SetUpAndPlay_b__0__);
+    sub_1C3E564(&EventRaceBoostEffect___c__DisplayClass13_0_TypeInfo);
+    byte_4C53785 = 1;
   }
-  v15 = sub_1C372A4(EventRaceBoostEffect___c__DisplayClass13_0_TypeInfo);
+  v15 = sub_1C3E7B0(EventRaceBoostEffect___c__DisplayClass13_0_TypeInfo);
   System_Object___ctor((Il2CppObject *)v15, 0);
   if ( !v15 )
     goto LABEL_12;
   *(_QWORD *)(v15 + 16) = this;
-  sub_1C36FFC((CGThumbnailListItem_o *)(v15 + 16), (int32_t)this, v17, v18);
+  sub_1C3E508((CGThumbnailListItem_o *)(v15 + 16), (int32_t)this, v18, v19);
   *(_QWORD *)(v15 + 24) = boostEnt;
-  v19 = (QuestRacePointEntity_o **)(v15 + 24);
-  sub_1C36FFC((CGThumbnailListItem_o *)(v15 + 24), (int32_t)boostEnt, v20, v21);
+  v20 = (QuestRacePointEntity_o **)(v15 + 24);
+  sub_1C3E508((CGThumbnailListItem_o *)(v15 + 24), (int32_t)boostEnt, v21, v22);
   *(_QWORD *)(v15 + 48) = callback;
   *(_DWORD *)(v15 + 32) = boostGrade;
   *(_DWORD *)(v15 + 36) = boostPoint;
   *(_DWORD *)(v15 + 40) = itemImgId;
-  sub_1C36FFC((CGThumbnailListItem_o *)(v15 + 48), (int32_t)callback, v22, v23);
+  sub_1C3E508((CGThumbnailListItem_o *)(v15 + 48), (int32_t)callback, v23, v24);
   if ( !playVoice )
   {
 LABEL_9:
     this->fields.destroyedBeforeVoiceStop = 0;
     this->fields.randvoiceSvt = 0;
     this->fields.randvoiceId = 0;
-    sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.randvoiceId, 0, (int32_t)v24, v25);
+    sub_1C3E508((CGThumbnailListItem_o *)&this->fields.randvoiceId, 0, (int32_t)v25, v26);
     EventRaceBoostEffect__setupLocal(
       this,
       *(QuestRacePointEntity_o **)(v15 + 24),
@@ -182,11 +184,11 @@ LABEL_9:
       *(_DWORD *)(v15 + 36),
       *(_DWORD *)(v15 + 40),
       *(System_Action_o **)(v15 + 48),
-      v33);
+      v34);
     return;
   }
-  v16 = *v19;
-  if ( !*v19 )
+  v16 = *v20;
+  if ( !*v20 )
     goto LABEL_12;
   RandVoice = QuestRacePointEntity__GetRandVoice(v16, 0);
   IsNullOrEmpty = System_String__IsNullOrEmpty(RandVoice, 0);
@@ -195,27 +197,27 @@ LABEL_9:
   SvtId = (EventRaceBoostEffect_o *)EventRaceBoostEffect__GetSvtId(
                                       (EventRaceBoostEffect_o *)IsNullOrEmpty,
                                       RandVoice,
-                                      v24);
+                                      v25);
   this->fields.randvoiceSvt = (int)SvtId;
-  VoiceId = EventRaceBoostEffect__GetVoiceId(SvtId, RandVoice, v29);
+  VoiceId = EventRaceBoostEffect__GetVoiceId(SvtId, RandVoice, v30);
   this->fields.randvoiceId = VoiceId;
-  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.randvoiceId, (int32_t)VoiceId, v31, v32);
+  sub_1C3E508((CGThumbnailListItem_o *)&this->fields.randvoiceId, (int32_t)VoiceId, v32, v33);
   if ( this->fields.randvoiceSvt < 1 || System_String__IsNullOrEmpty(this->fields.randvoiceId, 0) )
     goto LABEL_9;
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39ED16C *)Method_SingletonMonoBehaviour_SoundManager__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39FF5A8 *)Method_SingletonMonoBehaviour_SoundManager__get_Instance__);
   randvoiceSvt = this->fields.randvoiceSvt;
-  v36 = (SoundManager_o *)Instance;
-  VoiceAssetName_42795352 = ServantVoiceEntity__getVoiceAssetName_42795352(randvoiceSvt, 0);
-  v38 = (System_Action_o *)sub_1C372A4(System_Action_TypeInfo);
+  v37 = (SoundManager_o *)Instance;
+  VoiceAssetName_42847476 = ServantVoiceEntity__getVoiceAssetName_42847476(randvoiceSvt, 0);
+  v39 = (System_Action_o *)sub_1C3E7B0(System_Action_TypeInfo);
   System_Action___ctor(
-    v38,
+    v39,
     (Il2CppObject *)v15,
     Method_EventRaceBoostEffect___c__DisplayClass13_0__SetUpAndPlay_b__0__,
     0);
-  if ( !v36 )
+  if ( !v37 )
 LABEL_12:
-    sub_1C372B4(v16);
-  SoundManager__LoadAudioAssetStorage(v36, VoiceAssetName_42795352, v38, 1, 0);
+    sub_1C3E7C0(v16, v17);
+  SoundManager__LoadAudioAssetStorage(v37, VoiceAssetName_42847476, v39, 1, 0);
 }
 
 
@@ -230,14 +232,14 @@ void EventRaceBoostEffect__afterSE(EventRaceBoostEffect_o *this, const MethodInf
   float DEFAULT_VOLUME; // s8
   System_Action_o *v10; // x22
 
-  if ( (byte_4C3F9EC & 1) == 0 )
+  if ( (byte_4C53787 & 1) == 0 )
   {
-    sub_1C37058(&System_Action_TypeInfo);
-    sub_1C37058(&Method_EventRaceBoostEffect_afterVoice__);
-    sub_1C37058(&SeManager_TypeInfo);
-    sub_1C37058(&SoundManager_TypeInfo);
-    sub_1C37058(&StringLiteral_4424/*"ChrVoice_"*/);
-    byte_4C3F9EC = 1;
+    sub_1C3E564(&System_Action_TypeInfo);
+    sub_1C3E564(&Method_EventRaceBoostEffect_afterVoice__);
+    sub_1C3E564(&SeManager_TypeInfo);
+    sub_1C3E564(&SoundManager_TypeInfo);
+    sub_1C3E564(&StringLiteral_4424/*"ChrVoice_"*/);
+    byte_4C53787 = 1;
   }
   if ( !this->fields.destroyedBeforeVoiceStop )
   {
@@ -250,7 +252,7 @@ void EventRaceBoostEffect__afterSE(EventRaceBoostEffect_o *this, const MethodInf
     else
     {
       v4 = System_Int32__ToString((int)this + 68, 0);
-      v5 = System_String__Concat_63561656((System_String_o *)StringLiteral_4424/*"ChrVoice_"*/, v4, 0);
+      v5 = System_String__Concat_63636468((System_String_o *)StringLiteral_4424/*"ChrVoice_"*/, v4, 0);
       randvoiceId = this->fields.randvoiceId;
       v7 = v5;
       v8 = SeManager_TypeInfo;
@@ -260,11 +262,11 @@ void EventRaceBoostEffect__afterSE(EventRaceBoostEffect_o *this, const MethodInf
         v8 = SeManager_TypeInfo;
       }
       DEFAULT_VOLUME = v8->static_fields->DEFAULT_VOLUME;
-      v10 = (System_Action_o *)sub_1C372A4(System_Action_TypeInfo);
+      v10 = (System_Action_o *)sub_1C3E7B0(System_Action_TypeInfo);
       System_Action___ctor(v10, (Il2CppObject *)this, Method_EventRaceBoostEffect_afterVoice__, 0);
       if ( !SoundManager_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(SoundManager_TypeInfo);
-      SoundManager__playVoice_41518412(v7, randvoiceId, DEFAULT_VOLUME, v10, 0, 0);
+      SoundManager__playVoice_41566940(v7, randvoiceId, DEFAULT_VOLUME, v10, 0, 0);
     }
   }
 }
@@ -274,17 +276,17 @@ void EventRaceBoostEffect__afterVoice(EventRaceBoostEffect_o *this, const Method
 {
   UnityEngine_Object_o *gameObject; // x19
 
-  if ( (byte_4C3F9ED & 1) == 0 )
+  if ( (byte_4C53788 & 1) == 0 )
   {
-    sub_1C37058(&UnityEngine_Object_TypeInfo);
-    byte_4C3F9ED = 1;
+    sub_1C3E564(&UnityEngine_Object_TypeInfo);
+    byte_4C53788 = 1;
   }
   if ( !this->fields.destroyedBeforeVoiceStop )
   {
     gameObject = (UnityEngine_Object_o *)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
     if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-    UnityEngine_Object__Destroy_71266752(gameObject, 0);
+    UnityEngine_Object__Destroy_71341564(gameObject, 0);
   }
 }
 
@@ -351,7 +353,7 @@ void EventRaceBoostEffect__setupLocal(
   System_String_o *ANIM_NAME; // x22
   Il2CppObject *v53; // x0
   System_String_o *v54; // x21
-  Il2CppObject *ComponentInChildren_object__51242636; // x23
+  Il2CppObject *ComponentInChildren_object__51315876; // x23
   Il2CppObject *v56; // x22
   UISprite_c *v57; // x8
   UIAtlas_o *v58; // x21
@@ -368,32 +370,32 @@ void EventRaceBoostEffect__setupLocal(
   int32_t v69; // [xsp+8h] [xbp-68h] BYREF
   int32_t BoostTypeColor; // [xsp+Ch] [xbp-64h] BYREF
 
-  if ( (byte_4C3F9EB & 1) == 0 )
+  if ( (byte_4C53786 & 1) == 0 )
   {
-    sub_1C37058(&System_Action_TypeInfo);
-    sub_1C37058(&AtlasManager_TypeInfo);
-    sub_1C37058(&Method_UnityEngine_Component_GetComponentInChildren_Animation___);
-    sub_1C37058(&Method_UnityEngine_Component_GetComponentInChildren_SimpleAnimation___);
-    sub_1C37058(&Method_EventRaceBoostEffect__setupLocal_b__14_0__);
-    sub_1C37058(&Method_EventRaceBoostEffect_setupLocal__);
-    sub_1C37058(&EventRaceBoostEffect_TypeInfo);
-    sub_1C37058(&int_TypeInfo);
-    sub_1C37058(&LocalizationManager_TypeInfo);
-    sub_1C37058(&UnityEngine_Object_TypeInfo);
-    sub_1C37058(&SimpleAnimation_State_TypeInfo);
-    sub_1C37058(&TerminalSceneComponent_TypeInfo);
-    sub_1C37058(&StringLiteral_5665/*"EVENT_RACE_BOOST_COUNT"*/);
-    sub_1C37058(&StringLiteral_22409/*"onEndAnim"*/);
-    byte_4C3F9EB = 1;
+    sub_1C3E564(&System_Action_TypeInfo);
+    sub_1C3E564(&AtlasManager_TypeInfo);
+    sub_1C3E564(&Method_UnityEngine_Component_GetComponentInChildren_Animation___);
+    sub_1C3E564(&Method_UnityEngine_Component_GetComponentInChildren_SimpleAnimation___);
+    sub_1C3E564(&Method_EventRaceBoostEffect__setupLocal_b__14_0__);
+    sub_1C3E564(&Method_EventRaceBoostEffect_setupLocal__);
+    sub_1C3E564(&EventRaceBoostEffect_TypeInfo);
+    sub_1C3E564(&int_TypeInfo);
+    sub_1C3E564(&LocalizationManager_TypeInfo);
+    sub_1C3E564(&UnityEngine_Object_TypeInfo);
+    sub_1C3E564(&SimpleAnimation_State_TypeInfo);
+    sub_1C3E564(&TerminalSceneComponent_TypeInfo);
+    sub_1C3E564(&StringLiteral_5665/*"EVENT_RACE_BOOST_COUNT"*/);
+    sub_1C3E564(&StringLiteral_22427/*"onEndAnim"*/);
+    byte_4C53786 = 1;
   }
   if ( this->fields.effectSp )
   {
     if ( !TerminalSceneComponent_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(TerminalSceneComponent_TypeInfo);
-    if ( !byte_4C3CF06 )
+    if ( !byte_4C50C86 )
     {
-      sub_1C37058(&TerminalSceneComponent_TypeInfo);
-      byte_4C3CF06 = 1;
+      sub_1C3E564(&TerminalSceneComponent_TypeInfo);
+      byte_4C50C86 = 1;
     }
     UIAtlasBySpriteName = (UIAtlas_o *)TerminalSceneComponent_TypeInfo;
     if ( !TerminalSceneComponent_TypeInfo->_2.cctor_finished )
@@ -409,7 +411,7 @@ void EventRaceBoostEffect__setupLocal(
       {
         v16 = *(System_Collections_Generic_List_UIAtlas__o **)(v15 + 304);
         this->fields.callBack = callback;
-        sub_1C36FFC(
+        sub_1C3E508(
           (CGThumbnailListItem_o *)&this->fields.callBack,
           (int32_t)callback,
           boostGrade,
@@ -446,7 +448,7 @@ void EventRaceBoostEffect__setupLocal(
                 {
                   if ( v30 >= LODWORD(v31->max_length) )
 LABEL_73:
-                    sub_1C372BC(UIAtlasBySpriteName);
+                    sub_1C3E7C8(UIAtlasBySpriteName, boostEnt);
                   UIAtlasBySpriteName = (UIAtlas_o *)*((_QWORD *)&v31->obj.klass + v28);
                   if ( UIAtlasBySpriteName )
                   {
@@ -515,30 +517,30 @@ LABEL_73:
             UIAtlasBySpriteName = (UIAtlas_o *)UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0);
             if ( UIAtlasBySpriteName )
             {
-              ComponentInChildren_object__51242636 = UnityEngine_Component__GetComponentInChildren_object__51242636(
+              ComponentInChildren_object__51315876 = UnityEngine_Component__GetComponentInChildren_object__51315876(
                                                        (UnityEngine_Component_o *)UIAtlasBySpriteName,
-                                                       (const MethodInfo_30DE68C *)Method_UnityEngine_Component_GetComponentInChildren_SimpleAnimation___);
+                                                       (const MethodInfo_30F04A4 *)Method_UnityEngine_Component_GetComponentInChildren_SimpleAnimation___);
               UIAtlasBySpriteName = (UIAtlas_o *)UnityEngine_Component__get_transform(
                                                    (UnityEngine_Component_o *)this,
                                                    0);
               if ( UIAtlasBySpriteName )
               {
-                v56 = UnityEngine_Component__GetComponentInChildren_object__51242636(
+                v56 = UnityEngine_Component__GetComponentInChildren_object__51315876(
                         (UnityEngine_Component_o *)UIAtlasBySpriteName,
-                        (const MethodInfo_30DE68C *)Method_UnityEngine_Component_GetComponentInChildren_Animation___);
+                        (const MethodInfo_30F04A4 *)Method_UnityEngine_Component_GetComponentInChildren_Animation___);
                 if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
                   j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
                 UIAtlasBySpriteName = (UIAtlas_o *)UnityEngine_Object__op_Inequality(
-                                                     (UnityEngine_Object_o *)ComponentInChildren_object__51242636,
+                                                     (UnityEngine_Object_o *)ComponentInChildren_object__51315876,
                                                      0,
                                                      0);
                 if ( ((unsigned __int8)UIAtlasBySpriteName & 1) != 0 )
                 {
-                  if ( ComponentInChildren_object__51242636 )
+                  if ( ComponentInChildren_object__51315876 )
                   {
-                    SimpleAnimation__Play_66507412((SimpleAnimation_o *)ComponentInChildren_object__51242636, v54, 0);
+                    SimpleAnimation__Play_66582224((SimpleAnimation_o *)ComponentInChildren_object__51315876, v54, 0);
                     UIAtlasBySpriteName = (UIAtlas_o *)SimpleAnimation__get_Item(
-                                                         (SimpleAnimation_o *)ComponentInChildren_object__51242636,
+                                                         (SimpleAnimation_o *)ComponentInChildren_object__51315876,
                                                          v54,
                                                          0);
                     if ( UIAtlasBySpriteName )
@@ -561,7 +563,7 @@ LABEL_73:
                       else
                       {
 LABEL_56:
-                        v61 = sub_1C87870(UIAtlasBySpriteName, SimpleAnimation_State_TypeInfo, 13);
+                        v61 = sub_1C8ED7C(UIAtlasBySpriteName, SimpleAnimation_State_TypeInfo, 13);
                       }
                       length = (*(float (__fastcall **)(UIAtlas_o *, _QWORD))v61)(v58, *(_QWORD *)(v61 + 8));
                       goto LABEL_65;
@@ -580,7 +582,7 @@ LABEL_56:
                     goto LABEL_66;
                   if ( v56 )
                   {
-                    UnityEngine_Animation__Play_71012036((UnityEngine_Animation_o *)v56, v54, 0);
+                    UnityEngine_Animation__Play_71086848((UnityEngine_Animation_o *)v56, v54, 0);
                     UIAtlasBySpriteName = (UIAtlas_o *)UnityEngine_Animation__get_Item(
                                                          (UnityEngine_Animation_o *)v56,
                                                          v54,
@@ -593,7 +595,7 @@ LABEL_56:
 LABEL_65:
                       UnityEngine_MonoBehaviour__Invoke(
                         (UnityEngine_MonoBehaviour_o *)this,
-                        (System_String_o *)StringLiteral_22409/*"onEndAnim"*/,
+                        (System_String_o *)StringLiteral_22427/*"onEndAnim"*/,
                         length,
                         0);
 LABEL_66:
@@ -606,15 +608,15 @@ LABEL_66:
                       {
                         v65 = Method_EventRaceBoostEffect_setupLocal__;
                         if ( (*((_BYTE *)Method_EventRaceBoostEffect_setupLocal__ + 83) & 2) != 0 )
-                          v65 = (_QWORD *)sub_1C37070(Method_EventRaceBoostEffect_setupLocal__);
-                        v66 = (System_Reflection_MethodBase_o *)sub_1C3703C(v65, v65[4]);
-                        v67 = (System_Action_o *)sub_1C372A4(System_Action_TypeInfo);
+                          v65 = (_QWORD *)sub_1C3E57C(Method_EventRaceBoostEffect_setupLocal__);
+                        v66 = (System_Reflection_MethodBase_o *)sub_1C3E548(v65, v65[4]);
+                        v67 = (System_Action_o *)sub_1C3E7B0(System_Action_TypeInfo);
                         System_Action___ctor(
                           v67,
                           (Il2CppObject *)this,
                           Method_EventRaceBoostEffect__setupLocal_b__14_0__,
                           0);
-                        OverwriteAssetSoundName__PlaySe_41420060(v66, Se, 1.0, v67, 0, 0);
+                        OverwriteAssetSoundName__PlaySe_41468588(v66, Se, 1.0, v67, 0, 0);
                       }
                       return;
                     }
@@ -627,7 +629,7 @@ LABEL_66:
       }
     }
 LABEL_72:
-    sub_1C372B4(UIAtlasBySpriteName);
+    sub_1C3E7C0(UIAtlasBySpriteName, boostEnt);
   }
 }
 
@@ -647,7 +649,7 @@ void EventRaceBoostEffect___c__DisplayClass13_0___SetUpAndPlay_b__0(
   const MethodInfo *v2; // x6
 
   if ( !this->fields.__4__this )
-    sub_1C372B4(this);
+    sub_1C3E7C0(this, method);
   EventRaceBoostEffect__setupLocal(
     this->fields.__4__this,
     this->fields.boostEnt,

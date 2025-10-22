@@ -23,8 +23,8 @@ void PresentBoxNotificationListViewItemDraw__SetItem(
         const MethodInfo *method)
 {
   UILabel_o *nameTextLabel; // x0
+  PresentBoxNotificationListViewItem_o *v6; // x19
   struct UserPresentBoxEntity_o *entity; // x8
-  int32_t giftType; // w1
   int32_t objectId; // w2
 
   if ( item && mode )
@@ -32,36 +32,36 @@ void PresentBoxNotificationListViewItemDraw__SetItem(
     nameTextLabel = this->fields.nameTextLabel;
     if ( !nameTextLabel )
       goto LABEL_13;
+    v6 = item;
     UILabel__set_text(nameTextLabel, item->fields.presentName, 0);
     nameTextLabel = this->fields.countTextLabel;
     if ( !nameTextLabel )
       goto LABEL_13;
-    UILabel__set_text(nameTextLabel, item->fields.presentCount, 0);
-    entity = item->fields.entity;
+    UILabel__set_text(nameTextLabel, v6->fields.presentCount, 0);
+    entity = v6->fields.entity;
     nameTextLabel = (UILabel_o *)this->fields.itemIcon;
     if ( entity )
     {
-      giftType = entity->fields.giftType;
+      item = (PresentBoxNotificationListViewItem_o *)(unsigned int)entity->fields.giftType;
       objectId = entity->fields.objectId;
       if ( !nameTextLabel )
         goto LABEL_13;
     }
     else
     {
-      giftType = 0;
+      item = 0;
       objectId = 0;
       if ( !nameTextLabel )
         goto LABEL_13;
     }
-    ItemIconComponent__SetGift_40921900((ItemIconComponent_o *)nameTextLabel, giftType, objectId, -1, 0, 0);
+    ItemIconComponent__SetGift_40968388((ItemIconComponent_o *)nameTextLabel, (int32_t)item, objectId, -1, 0, 0);
     nameTextLabel = this->fields.nameTextLabel;
     if ( !nameTextLabel
-      || (UILabel__set_text(nameTextLabel, item->fields.presentName, 0),
-          (nameTextLabel = this->fields.countTextLabel) == 0) )
+      || (UILabel__set_text(nameTextLabel, v6->fields.presentName, 0), (nameTextLabel = this->fields.countTextLabel) == 0) )
     {
 LABEL_13:
-      sub_1C372B4(nameTextLabel);
+      sub_1C3E7C0(nameTextLabel, item);
     }
-    UILabel__set_text(nameTextLabel, item->fields.presentCount, 0);
+    UILabel__set_text(nameTextLabel, v6->fields.presentCount, 0);
   }
 }

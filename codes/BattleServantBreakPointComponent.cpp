@@ -4,22 +4,23 @@ void BattleServantBreakPointComponent___ctor(BattleServantBreakPointComponent_o 
   int32_t v4; // w2
   const MethodInfo *v5; // x3
 
-  if ( (byte_4C465F6 & 1) == 0 )
+  if ( (byte_4C5A3ED & 1) == 0 )
   {
-    sub_1C37058(&Method_System_Collections_Generic_List_GameObject___ctor__);
-    sub_1C37058(&System_Collections_Generic_List_GameObject__TypeInfo);
-    byte_4C465F6 = 1;
+    sub_1C3E564(&Method_System_Collections_Generic_List_GameObject___ctor__);
+    sub_1C3E564(&System_Collections_Generic_List_GameObject__TypeInfo);
+    byte_4C5A3ED = 1;
   }
-  v3 = (System_Collections_Generic_List_object__o *)sub_1C372A4(System_Collections_Generic_List_GameObject__TypeInfo);
+  v3 = (System_Collections_Generic_List_object__o *)sub_1C3E7B0(System_Collections_Generic_List_GameObject__TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v3,
-    (const MethodInfo_37A27F0 *)Method_System_Collections_Generic_List_GameObject___ctor__);
+    (const MethodInfo_37B4C2C *)Method_System_Collections_Generic_List_GameObject___ctor__);
   this->fields.breakPointObjList = (struct System_Collections_Generic_List_GameObject__o *)v3;
-  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.breakPointObjList, (int32_t)v3, v4, v5);
+  sub_1C3E508((CGThumbnailListItem_o *)&this->fields.breakPointObjList, (int32_t)v3, v4, v5);
   UnityEngine_MonoBehaviour___ctor((UnityEngine_MonoBehaviour_o *)this, 0);
 }
 
 
+// local variable allocation has failed, the output may be wrong!
 void BattleServantBreakPointComponent__Initialize(
         BattleServantBreakPointComponent_o *this,
         int32_t breakPoint,
@@ -51,20 +52,20 @@ void BattleServantBreakPointComponent__Initialize(
   UnityEngine_Vector3_o v30; // 0:s0.4,4:s1.4,8:s2.4
   UnityEngine_Vector3_o v31; // 0:s0.4,4:s1.4,8:s2.4
 
-  if ( (byte_4C465F5 & 1) == 0 )
+  if ( (byte_4C5A3EC & 1) == 0 )
   {
-    sub_1C37058(&AtlasManager_TypeInfo);
-    sub_1C37058(&Method_System_Collections_Generic_List_GameObject__Add__);
-    sub_1C37058(&Method_System_Collections_Generic_List_GameObject__Clear__);
-    sub_1C37058(&Method_System_Collections_Generic_List_GameObject__get_Count__);
-    sub_1C37058(&Method_System_Collections_Generic_List_GameObject__get_Item__);
-    sub_1C37058(&Method_UnityEngine_Object_Instantiate_GameObject____78192880);
-    sub_1C37058(&UnityEngine_Object_TypeInfo);
-    sub_1C37058(&StringLiteral_17419/*"break_on_boss"*/);
-    sub_1C37058(&StringLiteral_17417/*"break_off_boss"*/);
-    sub_1C37058(&StringLiteral_17418/*"break_on"*/);
-    sub_1C37058(&StringLiteral_17416/*"break_off"*/);
-    byte_4C465F5 = 1;
+    sub_1C3E564(&AtlasManager_TypeInfo);
+    sub_1C3E564(&Method_System_Collections_Generic_List_GameObject__Add__);
+    sub_1C3E564(&Method_System_Collections_Generic_List_GameObject__Clear__);
+    sub_1C3E564(&Method_System_Collections_Generic_List_GameObject__get_Count__);
+    sub_1C3E564(&Method_System_Collections_Generic_List_GameObject__get_Item__);
+    sub_1C3E564(&Method_UnityEngine_Object_Instantiate_GameObject____78272896);
+    sub_1C3E564(&UnityEngine_Object_TypeInfo);
+    sub_1C3E564(&StringLiteral_17435/*"break_on_boss"*/);
+    sub_1C3E564(&StringLiteral_17433/*"break_off_boss"*/);
+    sub_1C3E564(&StringLiteral_17434/*"break_on"*/);
+    sub_1C3E564(&StringLiteral_17432/*"break_off"*/);
+    byte_4C5A3EC = 1;
   }
   breakPointObjList = (int *)this->fields.breakPointObjList;
   if ( !breakPointObjList )
@@ -77,10 +78,10 @@ void BattleServantBreakPointComponent__Initialize(
       Item = System_Collections_Generic_List_object___get_Item(
                (System_Collections_Generic_List_object__o *)breakPointObjList,
                v10,
-               (const MethodInfo_37A2D54 *)Method_System_Collections_Generic_List_GameObject__get_Item__);
+               (const MethodInfo_37B5190 *)Method_System_Collections_Generic_List_GameObject__get_Item__);
       if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-      UnityEngine_Object__Destroy_71266752((UnityEngine_Object_o *)Item, 0);
+      UnityEngine_Object__Destroy_71341564((UnityEngine_Object_o *)Item, 0);
       breakPointObjList = (int *)this->fields.breakPointObjList;
       if ( !breakPointObjList )
         goto LABEL_42;
@@ -109,9 +110,9 @@ void BattleServantBreakPointComponent__Initialize(
   v30.fields.z = v30.fields.x;
   UnityEngine_Transform__set_localScale((UnityEngine_Transform_o *)breakPointObjList, v30, 0);
   if ( isEnemy )
-    v14 = &StringLiteral_17417/*"break_off_boss"*/;
+    v14 = &StringLiteral_17433/*"break_off_boss"*/;
   else
-    v14 = &StringLiteral_17416/*"break_off"*/;
+    v14 = &StringLiteral_17432/*"break_off"*/;
   breakPointBackGroundSpr = this->fields.breakPointBackGroundSpr;
   v16 = (System_String_o *)*v14;
   if ( !AtlasManager_TypeInfo->_2.cctor_finished )
@@ -124,13 +125,13 @@ void BattleServantBreakPointComponent__Initialize(
                                      0)) == 0 )
   {
 LABEL_42:
-    sub_1C372B4(breakPointObjList);
+    sub_1C3E7C0(breakPointObjList, *(_QWORD *)&breakPoint);
   }
   UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)breakPointObjList, 1, 0);
   if ( isEnemy )
-    v17 = &StringLiteral_17419/*"break_on_boss"*/;
+    v17 = &StringLiteral_17435/*"break_on_boss"*/;
   else
-    v17 = &StringLiteral_17418/*"break_on"*/;
+    v17 = &StringLiteral_17434/*"break_on"*/;
   breakPointSpr = this->fields.breakPointSpr;
   v19 = (System_String_o *)*v17;
   if ( !AtlasManager_TypeInfo->_2.cctor_finished )
@@ -152,10 +153,10 @@ LABEL_42:
       transform = UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0);
       if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-      breakPointObjList = (int *)UnityEngine_Object__Instantiate_object__51855596(
+      breakPointObjList = (int *)UnityEngine_Object__Instantiate_object__51929056(
                                    baseObj,
                                    transform,
-                                   (const MethodInfo_31740EC *)Method_UnityEngine_Object_Instantiate_GameObject____78192880);
+                                   (const MethodInfo_3185FE0 *)Method_UnityEngine_Object_Instantiate_GameObject____78272896);
       if ( !breakPointObjList )
         break;
       v23 = (UnityEngine_GameObject_o *)breakPointObjList;
@@ -181,14 +182,14 @@ LABEL_42:
         System_Collections_Generic_List_object___AddWithResize(
           (System_Collections_Generic_List_object__o *)breakPointObjList,
           (Il2CppObject *)v23,
-          *(const MethodInfo_37A3024 **)(*(_QWORD *)(v27[4] + 192LL) + 112LL));
+          *(const MethodInfo_37B5460 **)(*(_QWORD *)(v27[4] + 192LL) + 112LL));
       }
       else
       {
         v29 = v26 + 8 * v28;
         breakPointObjList[6] = v28 + 1;
         *(_QWORD *)(v29 + 32) = v23;
-        sub_1C36FFC((CGThumbnailListItem_o *)(v29 + 32), (int32_t)v23, v24, v25);
+        sub_1C3E508((CGThumbnailListItem_o *)(v29 + 32), (int32_t)v23, v24, v25);
       }
       if ( maxbreakPoint == ++v20 )
         return;

@@ -1,13 +1,13 @@
 void EventTowerRewardEntity___ctor(EventTowerRewardEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_4C4314C & 1) == 0 )
+  if ( (byte_4C56EFC & 1) == 0 )
   {
-    sub_1C37058(&Method_DataEntityBase_string___ctor__);
-    byte_4C4314C = 1;
+    sub_1C3E564(&Method_DataEntityBase_string___ctor__);
+    byte_4C56EFC = 1;
   }
   DataEntityBase_object____ctor(
     (DataEntityBase_PKType__o *)this,
-    (const MethodInfo_339EC34 *)Method_DataEntityBase_string___ctor__);
+    (const MethodInfo_33B0AEC *)Method_DataEntityBase_string___ctor__);
 }
 
 
@@ -17,16 +17,16 @@ System_String_o *EventTowerRewardEntity__CreatePK(
         int32_t floor,
         const MethodInfo *method)
 {
-  if ( (byte_4C4314B & 1) == 0 )
+  if ( (byte_4C56EFB & 1) == 0 )
   {
-    sub_1C37058(&Method_DataEntityBase_CreateMultiplePK_int__int__int___);
-    byte_4C4314B = 1;
+    sub_1C3E564(&Method_DataEntityBase_CreateMultiplePK_int__int__int___);
+    byte_4C56EFB = 1;
   }
   return DataEntityBase__CreateMultiplePK_int__int__int_(
            eventId,
            towerId,
            floor,
-           (const MethodInfo_30E6270 *)Method_DataEntityBase_CreateMultiplePK_int__int__int___);
+           (const MethodInfo_30F8088 *)Method_DataEntityBase_CreateMultiplePK_int__int__int___);
 }
 
 

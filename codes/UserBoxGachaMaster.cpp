@@ -1,14 +1,14 @@
 void UserBoxGachaMaster___ctor(UserBoxGachaMaster_o *this, const MethodInfo *method)
 {
-  if ( (byte_4C43D08 & 1) == 0 )
+  if ( (byte_4C57AC0 & 1) == 0 )
   {
-    sub_1C37058(&Method_DataMasterBase_UserBoxGachaMaster__UserBoxGachaEntity__string___ctor__);
-    byte_4C43D08 = 1;
+    sub_1C3E564(&Method_DataMasterBase_UserBoxGachaMaster__UserBoxGachaEntity__string___ctor__);
+    byte_4C57AC0 = 1;
   }
   DataMasterBase_object__object__object____ctor(
     (DataMasterBase_TMaster__TEntity__PKType__o *)this,
     131,
-    (const MethodInfo_33A3834 *)Method_DataMasterBase_UserBoxGachaMaster__UserBoxGachaEntity__string___ctor__);
+    (const MethodInfo_33B56EC *)Method_DataMasterBase_UserBoxGachaMaster__UserBoxGachaEntity__string___ctor__);
 }
 
 
@@ -21,16 +21,16 @@ UserBoxGachaEntity_o *UserBoxGachaMaster__GetEntity(
 {
   Il2CppObject *PK; // x1
 
-  if ( (byte_4C43D06 & 1) == 0 )
+  if ( (byte_4C57ABE & 1) == 0 )
   {
-    sub_1C37058(&Method_DataMasterBase_UserBoxGachaMaster__UserBoxGachaEntity__string__GetEntity__);
-    byte_4C43D06 = 1;
+    sub_1C3E564(&Method_DataMasterBase_UserBoxGachaMaster__UserBoxGachaEntity__string__GetEntity__);
+    byte_4C57ABE = 1;
   }
   PK = (Il2CppObject *)UserBoxGachaEntity__CreatePK(userId, boxGachaId, *(const MethodInfo **)&boxGachaId);
   return (UserBoxGachaEntity_o *)DataMasterBase_object__object__object___GetEntity(
                                    (DataMasterBase_TMaster__TEntity__PKType__o *)this,
                                    PK,
-                                   (const MethodInfo_33A5B58 *)Method_DataMasterBase_UserBoxGachaMaster__UserBoxGachaEntity__string__GetEntity__);
+                                   (const MethodInfo_33B7A10 *)Method_DataMasterBase_UserBoxGachaMaster__UserBoxGachaEntity__string__GetEntity__);
 }
 
 
@@ -43,15 +43,15 @@ bool UserBoxGachaMaster__TryGetEntity(
 {
   Il2CppObject *PK; // x2
 
-  if ( (byte_4C43D07 & 1) == 0 )
+  if ( (byte_4C57ABF & 1) == 0 )
   {
-    sub_1C37058(&Method_DataMasterBase_UserBoxGachaMaster__UserBoxGachaEntity__string__TryGetEntity__);
-    byte_4C43D07 = 1;
+    sub_1C3E564(&Method_DataMasterBase_UserBoxGachaMaster__UserBoxGachaEntity__string__TryGetEntity__);
+    byte_4C57ABF = 1;
   }
   PK = (Il2CppObject *)UserBoxGachaEntity__CreatePK(userId, boxGachaId, (const MethodInfo *)userId);
   return DataMasterBase_object__object__object___TryGetEntity(
            (DataMasterBase_TMaster__TEntity__PKType__o *)this,
            (Il2CppObject **)entity,
            PK,
-           (const MethodInfo_33A5BA4 *)Method_DataMasterBase_UserBoxGachaMaster__UserBoxGachaEntity__string__TryGetEntity__);
+           (const MethodInfo_33B7A5C *)Method_DataMasterBase_UserBoxGachaMaster__UserBoxGachaEntity__string__TryGetEntity__);
 }

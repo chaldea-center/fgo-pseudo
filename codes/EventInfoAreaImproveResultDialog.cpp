@@ -1,9 +1,9 @@
 void EventInfoAreaImproveResultDialog___ctor(EventInfoAreaImproveResultDialog_o *this, const MethodInfo *method)
 {
-  if ( (byte_4C4333F & 1) == 0 )
+  if ( (byte_4C570F4 & 1) == 0 )
   {
-    sub_1C37058(&BaseDialog_TypeInfo);
-    byte_4C4333F = 1;
+    sub_1C3E564(&BaseDialog_TypeInfo);
+    byte_4C570F4 = 1;
   }
   if ( !BaseDialog_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(BaseDialog_TypeInfo);
@@ -21,17 +21,18 @@ void EventInfoAreaImproveResultDialog__CheckSerializeFieldSetting(
 
 void EventInfoAreaImproveResultDialog__Init(EventInfoAreaImproveResultDialog_o *this, const MethodInfo *method)
 {
+  __int64 v3; // x1
   UILabel_o *titleLabel; // x0
   UILabel_o *closeLabel; // x20
-  int32_t v5; // w2
-  const MethodInfo *v6; // x3
+  int32_t v6; // w2
+  const MethodInfo *v7; // x3
 
-  if ( (byte_4C4333A & 1) == 0 )
+  if ( (byte_4C570EF & 1) == 0 )
   {
-    sub_1C37058(&LocalizationManager_TypeInfo);
-    sub_1C37058(&StringLiteral_3685/*"COMMON_CONFIRM_CLOSE"*/);
-    sub_1C37058(&StringLiteral_1/*""*/);
-    byte_4C4333A = 1;
+    sub_1C3E564(&LocalizationManager_TypeInfo);
+    sub_1C3E564(&StringLiteral_3685/*"COMMON_CONFIRM_CLOSE"*/);
+    sub_1C3E564(&StringLiteral_1/*""*/);
+    byte_4C570EF = 1;
   }
   BaseDialog__Init((BaseDialog_o *)this, 0);
   titleLabel = this->fields.titleLabel;
@@ -45,10 +46,10 @@ void EventInfoAreaImproveResultDialog__Init(EventInfoAreaImproveResultDialog_o *
   titleLabel = (UILabel_o *)LocalizationManager__Get((System_String_o *)StringLiteral_3685/*"COMMON_CONFIRM_CLOSE"*/, 0);
   if ( !closeLabel )
 LABEL_8:
-    sub_1C372B4(titleLabel);
+    sub_1C3E7C0(titleLabel, v3);
   UILabel__set_text(closeLabel, (System_String_o *)titleLabel, 0);
   this->fields.closeAction = 0;
-  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.closeAction, 0, v5, v6);
+  sub_1C3E508((CGThumbnailListItem_o *)&this->fields.closeAction, 0, v6, v7);
 }
 
 
@@ -60,21 +61,21 @@ void EventInfoAreaImproveResultDialog__OnClickCloseButton(
   System_Reflection_MethodBase_o *v4; // x0
   System_Action_o *v5; // x20
 
-  if ( (byte_4C4333D & 1) == 0 )
+  if ( (byte_4C570F2 & 1) == 0 )
   {
-    sub_1C37058(&System_Action_TypeInfo);
-    sub_1C37058(&Method_EventInfoAreaImproveResultDialog_OnClickCloseButton__);
-    sub_1C37058(&Method_EventInfoAreaImproveResultDialog__OnClickCloseButton_b__12_0__);
-    byte_4C4333D = 1;
+    sub_1C3E564(&System_Action_TypeInfo);
+    sub_1C3E564(&Method_EventInfoAreaImproveResultDialog_OnClickCloseButton__);
+    sub_1C3E564(&Method_EventInfoAreaImproveResultDialog__OnClickCloseButton_b__12_0__);
+    byte_4C570F2 = 1;
   }
   if ( !this->fields.isClose )
   {
     v3 = Method_EventInfoAreaImproveResultDialog_OnClickCloseButton__;
     if ( (*((_BYTE *)Method_EventInfoAreaImproveResultDialog_OnClickCloseButton__ + 83) & 2) != 0 )
-      v3 = (_QWORD *)sub_1C37070(Method_EventInfoAreaImproveResultDialog_OnClickCloseButton__);
-    v4 = (System_Reflection_MethodBase_o *)sub_1C3703C(v3, v3[4]);
+      v3 = (_QWORD *)sub_1C3E57C(Method_EventInfoAreaImproveResultDialog_OnClickCloseButton__);
+    v4 = (System_Reflection_MethodBase_o *)sub_1C3E548(v3, v3[4]);
     OverwriteAssetSoundName__PlaySystemSe(v4, 0, 0, 0);
-    v5 = (System_Action_o *)sub_1C372A4(System_Action_TypeInfo);
+    v5 = (System_Action_o *)sub_1C3E7B0(System_Action_TypeInfo);
     System_Action___ctor(
       v5,
       (Il2CppObject *)this,
@@ -93,28 +94,29 @@ void EventInfoAreaImproveResultDialog__Open(
         const MethodInfo *method)
 {
   EventCooltimeRewardMaster_o *SelfUserGame; // x0
+  __int64 v8; // x1
   int32_t spotId; // w22
   int32_t eventId; // w24
   int32_t beforeLevel; // w21
-  int32_t v11; // w23
+  int32_t v12; // w23
   int32_t *p_beforeLevel; // t2
-  EventCooltimeRewardMaster_o *v13; // x25
+  EventCooltimeRewardMaster_o *v14; // x25
   EventCooltimeRewardEntity_o *Entity; // x21
-  EventCooltimeRewardEntity_o *v15; // x0
-  const MethodInfo *v16; // x2
-  EventCooltimeRewardEntity_o *v17; // x22
-  const MethodInfo *v18; // x3
-  System_Action_o *v19; // x21
-  int32_t v20; // w2
-  const MethodInfo *v21; // x3
+  EventCooltimeRewardEntity_o *v16; // x0
+  const MethodInfo *v17; // x2
+  EventCooltimeRewardEntity_o *v18; // x22
+  const MethodInfo *v19; // x3
+  System_Action_o *v20; // x21
+  int32_t v21; // w2
+  const MethodInfo *v22; // x3
 
-  if ( (byte_4C4333B & 1) == 0 )
+  if ( (byte_4C570F0 & 1) == 0 )
   {
-    sub_1C37058(&System_Action_TypeInfo);
-    sub_1C37058(&Method_DataManager_GetMaster_EventCooltimeRewardMaster___);
-    sub_1C37058(&DataManager_TypeInfo);
-    sub_1C37058(&Method_EventInfoAreaImproveResultDialog__Open_b__9_0__);
-    byte_4C4333B = 1;
+    sub_1C3E564(&System_Action_TypeInfo);
+    sub_1C3E564(&Method_DataManager_GetMaster_EventCooltimeRewardMaster___);
+    sub_1C3E564(&DataManager_TypeInfo);
+    sub_1C3E564(&Method_EventInfoAreaImproveResultDialog__Open_b__9_0__);
+    byte_4C570F0 = 1;
   }
   EventInfoAreaImproveResultDialog__Init(this, (const MethodInfo *)areaImproveResultInfo);
   SelfUserGame = (EventCooltimeRewardMaster_o *)UserGameMaster__getSelfUserGame(0);
@@ -124,25 +126,25 @@ void EventInfoAreaImproveResultDialog__Open(
   spotId = areaImproveResultInfo->fields.spotId;
   p_beforeLevel = &areaImproveResultInfo->fields.beforeLevel;
   beforeLevel = areaImproveResultInfo->fields.beforeLevel;
-  v11 = p_beforeLevel[1];
+  v12 = p_beforeLevel[1];
   if ( !DataManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-  SelfUserGame = (EventCooltimeRewardMaster_o *)DataManager__GetMaster_object_((const MethodInfo_30E7C04 *)Method_DataManager_GetMaster_EventCooltimeRewardMaster___);
+  SelfUserGame = (EventCooltimeRewardMaster_o *)DataManager__GetMaster_object_((const MethodInfo_30F9A1C *)Method_DataManager_GetMaster_EventCooltimeRewardMaster___);
   if ( !SelfUserGame )
 LABEL_12:
-    sub_1C372B4(SelfUserGame);
-  v13 = SelfUserGame;
+    sub_1C3E7C0(SelfUserGame, v8);
+  v14 = SelfUserGame;
   Entity = EventCooltimeRewardMaster__GetEntity(SelfUserGame, eventId, spotId, beforeLevel, 0);
-  v15 = EventCooltimeRewardMaster__GetEntity(v13, eventId, spotId, v11, 0);
-  if ( Entity && (v17 = v15) != 0 )
+  v16 = EventCooltimeRewardMaster__GetEntity(v14, eventId, spotId, v12, 0);
+  if ( Entity && (v18 = v16) != 0 )
   {
-    EventInfoAreaImproveResultDialog__SetupTitle(this, v15->fields.name, v16);
-    EventInfoAreaImproveResultDialog__SetupRewardInfo(this, Entity, v17, v18);
-    v19 = (System_Action_o *)sub_1C372A4(System_Action_TypeInfo);
-    System_Action___ctor(v19, (Il2CppObject *)this, Method_EventInfoAreaImproveResultDialog__Open_b__9_0__, 0);
-    BaseDialog__Open((BaseDialog_o *)this, v19, 0, 0, 0);
+    EventInfoAreaImproveResultDialog__SetupTitle(this, v16->fields.name, v17);
+    EventInfoAreaImproveResultDialog__SetupRewardInfo(this, Entity, v18, v19);
+    v20 = (System_Action_o *)sub_1C3E7B0(System_Action_TypeInfo);
+    System_Action___ctor(v20, (Il2CppObject *)this, Method_EventInfoAreaImproveResultDialog__Open_b__9_0__, 0);
+    BaseDialog__Open((BaseDialog_o *)this, v20, 0, 0, 0);
     this->fields.closeAction = closeAction;
-    sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.closeAction, (int32_t)closeAction, v20, v21);
+    sub_1C3E508((CGThumbnailListItem_o *)&this->fields.closeAction, (int32_t)closeAction, v21, v22);
   }
   else
   {
@@ -395,7 +397,7 @@ void EventInfoAreaImproveResultDialog__SetupRewardInfo(
         }
       }
 LABEL_33:
-      sub_1C372B4(this);
+      sub_1C3E7C0(this, beforeRewardEnt);
     }
   }
 }
@@ -409,12 +411,13 @@ void EventInfoAreaImproveResultDialog__SetupTitle(
   UILabel_o *titleLabel; // x20
   System_String_o *v6; // x0
   System_String_o *v7; // x0
+  __int64 v8; // x1
 
-  if ( (byte_4C4333C & 1) == 0 )
+  if ( (byte_4C570F1 & 1) == 0 )
   {
-    sub_1C37058(&LocalizationManager_TypeInfo);
-    sub_1C37058(&StringLiteral_5517/*"EVENT_AREA_IMPROVE_RESULT_DIALOG_TITLE"*/);
-    byte_4C4333C = 1;
+    sub_1C3E564(&LocalizationManager_TypeInfo);
+    sub_1C3E564(&StringLiteral_5517/*"EVENT_AREA_IMPROVE_RESULT_DIALOG_TITLE"*/);
+    byte_4C570F1 = 1;
   }
   titleLabel = this->fields.titleLabel;
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
@@ -422,7 +425,7 @@ void EventInfoAreaImproveResultDialog__SetupTitle(
   v6 = LocalizationManager__Get((System_String_o *)StringLiteral_5517/*"EVENT_AREA_IMPROVE_RESULT_DIALOG_TITLE"*/, 0);
   v7 = System_String__Format(v6, (Il2CppObject *)areaName, 0);
   if ( !titleLabel )
-    sub_1C372B4(v7);
+    sub_1C3E7C0(v7, v8);
   UILabel__set_text(titleLabel, v7, 0);
 }
 
@@ -454,20 +457,21 @@ UnityEngine_GameObject_o *EventInfoAreaImproveResultDialog__get_closeBtnObject(
         const MethodInfo *method)
 {
   UnityEngine_Object_o *closeButton; // x20
-  UnityEngine_Component_o *v5; // x0
+  __int64 v4; // x1
+  UnityEngine_Component_o *v6; // x0
 
-  if ( (byte_4C4333E & 1) == 0 )
+  if ( (byte_4C570F3 & 1) == 0 )
   {
-    sub_1C37058(&UnityEngine_Object_TypeInfo);
-    byte_4C4333E = 1;
+    sub_1C3E564(&UnityEngine_Object_TypeInfo);
+    byte_4C570F3 = 1;
   }
   closeButton = (UnityEngine_Object_o *)this->fields.closeButton;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   if ( UnityEngine_Object__op_Equality(closeButton, 0, 0) )
     return 0;
-  v5 = (UnityEngine_Component_o *)this->fields.closeButton;
-  if ( !v5 )
-    sub_1C372B4(0);
-  return UnityEngine_Component__get_gameObject(v5, 0);
+  v6 = (UnityEngine_Component_o *)this->fields.closeButton;
+  if ( !v6 )
+    sub_1C3E7C0(0, v4);
+  return UnityEngine_Component__get_gameObject(v6, 0);
 }

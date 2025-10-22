@@ -14,10 +14,10 @@ void CostSpriteListManager__ClearAllList(CostSpriteListManager_o *this, const Me
   int v7; // w12
 
   v2 = this;
-  if ( (byte_4C40446 & 1) == 0 )
+  if ( (byte_4C541E3 & 1) == 0 )
   {
-    this = (CostSpriteListManager_o *)sub_1C37058(&Method_System_Collections_Generic_List_int__Clear__);
-    byte_4C40446 = 1;
+    this = (CostSpriteListManager_o *)sub_1C3E564(&Method_System_Collections_Generic_List_int__Clear__);
+    byte_4C541E3 = 1;
   }
   bannerIdAllList = v2->fields.bannerIdAllList;
   if ( !bannerIdAllList )
@@ -29,7 +29,7 @@ void CostSpriteListManager__ClearAllList(CostSpriteListManager_o *this, const Me
     while ( 1 )
     {
       if ( max_length == v5 )
-        sub_1C372BC(this);
+        sub_1C3E7C8(this, method);
       v6 = bannerIdAllList->m_Items[v5];
       if ( !v6 )
         break;
@@ -41,11 +41,12 @@ void CostSpriteListManager__ClearAllList(CostSpriteListManager_o *this, const Me
         return;
     }
 LABEL_11:
-    sub_1C372B4(this);
+    sub_1C3E7C0(this, method);
   }
 }
 
 
+// local variable allocation has failed, the output may be wrong!
 void CostSpriteListManager__CreateList(CostSpriteListManager_o *this, int32_t type, const MethodInfo *method)
 {
   ListViewManager_o *v4; // x19
@@ -64,19 +65,19 @@ void CostSpriteListManager__CreateList(CostSpriteListManager_o *this, int32_t ty
   Il2CppClass **v17; // x0
 
   v4 = (ListViewManager_o *)this;
-  if ( (byte_4C40443 & 1) == 0 )
+  if ( (byte_4C541E0 & 1) == 0 )
   {
-    sub_1C37058(&CostSpriteViewItem_TypeInfo);
-    sub_1C37058(&Method_System_Collections_Generic_List_ListViewItem__Add__);
-    sub_1C37058(&Method_System_Collections_Generic_List_int__get_Count__);
-    this = (CostSpriteListManager_o *)sub_1C37058(&Method_System_Collections_Generic_List_int__get_Item__);
-    byte_4C40443 = 1;
+    sub_1C3E564(&CostSpriteViewItem_TypeInfo);
+    sub_1C3E564(&Method_System_Collections_Generic_List_ListViewItem__Add__);
+    sub_1C3E564(&Method_System_Collections_Generic_List_int__get_Count__);
+    this = (CostSpriteListManager_o *)sub_1C3E564(&Method_System_Collections_Generic_List_int__get_Item__);
+    byte_4C541E0 = 1;
   }
   klass = v4[1].klass;
   if ( !klass )
     goto LABEL_15;
   if ( LODWORD(klass->_1.namespaze) <= type )
-    sub_1C372BC(this);
+    sub_1C3E7C8(this, *(_QWORD *)&type);
   v6 = (System_Collections_Generic_List_int__o *)*((_QWORD *)&klass->_1.byval_arg.data + type);
   if ( !v6 )
     goto LABEL_15;
@@ -91,9 +92,9 @@ void CostSpriteListManager__CreateList(CostSpriteListManager_o *this, int32_t ty
       Item = System_Collections_Generic_List_int___get_Item(
                v6,
                v8,
-               (const MethodInfo_3785D10 *)Method_System_Collections_Generic_List_int__get_Item__);
-      v11 = sub_1C372A4(CostSpriteViewItem_TypeInfo);
-      ListViewItem___ctor_43804668((ListViewItem_o *)v11, v8, 0);
+               (const MethodInfo_379814C *)Method_System_Collections_Generic_List_int__get_Item__);
+      v11 = sub_1C3E7B0(CostSpriteViewItem_TypeInfo);
+      ListViewItem___ctor_43860152((ListViewItem_o *)v11, v8, 0);
       *(_DWORD *)(v11 + 120) = Item;
       if ( !itemList )
         break;
@@ -108,20 +109,20 @@ void CostSpriteListManager__CreateList(CostSpriteListManager_o *this, int32_t ty
         System_Collections_Generic_List_object___AddWithResize(
           itemList,
           (Il2CppObject *)v11,
-          *(const MethodInfo_37A3024 **)(*(_QWORD *)(v15[4] + 192LL) + 112LL));
+          *(const MethodInfo_37B5460 **)(*(_QWORD *)(v15[4] + 192LL) + 112LL));
       }
       else
       {
         v17 = &items->obj.klass + v16;
         itemList->fields._size = v16 + 1;
         v17[4] = (Il2CppClass *)v11;
-        sub_1C36FFC((CGThumbnailListItem_o *)(v17 + 4), v11, v12, v13);
+        sub_1C3E508((CGThumbnailListItem_o *)(v17 + 4), v11, v12, v13);
       }
       if ( size == ++v8 )
         goto LABEL_14;
     }
 LABEL_15:
-    sub_1C372B4(this);
+    sub_1C3E7C0(this, *(_QWORD *)&type);
   }
 LABEL_14:
   ListViewManager__SortItem(v4, -1, 1, -1, 0);
@@ -146,466 +147,477 @@ void CostSpriteListManager__Init(CostSpriteListManager_o *this, const MethodInfo
   unsigned int *v9; // x25
   System_Collections_Generic_List_int__o *v10; // x20
   __int64 v11; // x0
-  int32_t v12; // w2
-  const MethodInfo *v13; // x3
-  bool v14; // cf
-  __int64 v15; // x0
+  __int64 v12; // x1
+  int32_t v13; // w2
+  const MethodInfo *v14; // x3
+  bool v15; // cf
+  __int64 v16; // x0
 
-  if ( (byte_4C40442 & 1) == 0 )
+  if ( (byte_4C541DF & 1) == 0 )
   {
-    sub_1C37058(&System_Collections_Generic_List_int____TypeInfo);
-    sub_1C37058(&Method_System_Collections_Generic_List_int___ctor__);
-    sub_1C37058(&System_Collections_Generic_List_int__TypeInfo);
-    byte_4C40442 = 1;
+    sub_1C3E564(&System_Collections_Generic_List_int____TypeInfo);
+    sub_1C3E564(&Method_System_Collections_Generic_List_int___ctor__);
+    sub_1C3E564(&System_Collections_Generic_List_int__TypeInfo);
+    byte_4C541DF = 1;
   }
-  v3 = (struct System_Collections_Generic_List_int__array *)sub_1C37100(
+  v3 = (struct System_Collections_Generic_List_int__array *)sub_1C3E60C(
                                                               System_Collections_Generic_List_int____TypeInfo,
                                                               3);
   p_bannerIdAllList = &this->fields.bannerIdAllList;
   this->fields.bannerIdAllList = v3;
-  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.bannerIdAllList, (int32_t)v3, v5, v6);
+  sub_1C3E508((CGThumbnailListItem_o *)&this->fields.bannerIdAllList, (int32_t)v3, v5, v6);
   v7 = -3;
   v8 = 8;
   do
   {
     v9 = (unsigned int *)*p_bannerIdAllList;
-    v10 = (System_Collections_Generic_List_int__o *)sub_1C372A4(System_Collections_Generic_List_int__TypeInfo);
+    v10 = (System_Collections_Generic_List_int__o *)sub_1C3E7B0(System_Collections_Generic_List_int__TypeInfo);
     System_Collections_Generic_List_int____ctor(
       v10,
-      (const MethodInfo_37857AC *)Method_System_Collections_Generic_List_int___ctor__);
+      (const MethodInfo_3797BE8 *)Method_System_Collections_Generic_List_int___ctor__);
     if ( !v9 )
-      sub_1C372B4(v11);
+      sub_1C3E7C0(v11, v12);
     if ( v10 )
     {
-      v11 = sub_1C37194(v10, *(_QWORD *)(*(_QWORD *)v9 + 64LL));
+      v11 = sub_1C3E6A0(v10, *(_QWORD *)(*(_QWORD *)v9 + 64LL));
       if ( !v11 )
       {
-        v15 = sub_1C372D8();
-        sub_1C37180(v15, 0);
+        v16 = sub_1C3E7E4();
+        sub_1C3E68C(v16, 0);
       }
     }
     if ( v7 + 3 >= (unsigned __int64)v9[6] )
-      sub_1C372BC(v11);
+      sub_1C3E7C8(v11, v12);
     *(_QWORD *)&v9[v8] = v10;
-    sub_1C36FFC((CGThumbnailListItem_o *)&v9[v8], (int32_t)v10, v12, v13);
-    v14 = __CFADD__(v7++, 1);
+    sub_1C3E508((CGThumbnailListItem_o *)&v9[v8], (int32_t)v10, v13, v14);
+    v15 = __CFADD__(v7++, 1);
     v8 += 2;
   }
-  while ( !v14 );
+  while ( !v15 );
 }
 
 
 void CostSpriteListManager__Load(CostSpriteListManager_o *this, const MethodInfo *method)
 {
   Il2CppObject *Instance; // x0
-  DataManager_o *v4; // x23
+  __int64 v4; // x1
+  DataManager_o *v5; // x23
   Il2CppObject *MasterData_object; // x20
-  Il2CppObject *v6; // x21
-  Il2CppObject *v7; // x22
-  Il2CppObject *v8; // x26
-  UISprite_o *v9; // x24
+  Il2CppObject *v7; // x21
+  Il2CppObject *v8; // x22
+  Il2CppObject *v9; // x26
+  UISprite_o *v10; // x24
   System_Collections_Generic_IEnumerator_T__o *Enumerator; // x0
-  System_Collections_Generic_IEnumerator_T__o *v11; // x23
+  __int64 v12; // x1
+  System_Collections_Generic_IEnumerator_T__o *v13; // x23
   System_Collections_Generic_IEnumerator_T__c *klass; // x8
-  __int64 v13; // x9
+  __int64 v15; // x9
   int *p_offset; // x10
-  __int64 v15; // x0
-  const MethodInfo *v16; // x1
-  System_Collections_Generic_IEnumerator_T__c *v17; // x8
-  __int64 v18; // x9
-  int *v19; // x10
-  __int64 v20; // x0
-  __int64 v21; // x0
+  __int64 v17; // x0
+  const MethodInfo *v18; // x1
+  System_Collections_Generic_IEnumerator_T__c *v19; // x8
+  __int64 v20; // x9
+  int *v21; // x10
+  __int64 v22; // x0
+  __int64 v23; // x0
+  __int64 v24; // x1
   _DWORD *List; // x0
-  int v23; // w8
-  int v24; // w27
-  __int64 v25; // x8
-  int v26; // w8
-  int v27; // w23
-  __int64 v28; // x8
+  __int64 v26; // x1
+  int v27; // w8
+  int v28; // w27
+  __int64 v29; // x8
+  int v30; // w8
+  int v31; // w23
+  __int64 v32; // x8
   System_Collections_ObjectModel_Collection_T__o *monitor; // x0
-  int v30; // w27
-  System_Collections_Generic_IEnumerator_T__o *v31; // x26
-  System_Collections_Generic_IEnumerator_T__c *v32; // x8
-  __int64 v33; // x9
-  int32_t *v34; // x10
-  __int64 v35; // x0
-  System_Collections_Generic_IEnumerator_T__c *v36; // x8
-  __int64 v37; // x9
-  int32_t *v38; // x10
-  __int64 v39; // x0
-  QuestEntity_o *v40; // x0
-  QuestEntity_o *v41; // x28
-  const MethodInfo *v42; // x1
+  int v34; // w27
+  __int64 v35; // x1
+  System_Collections_Generic_IEnumerator_T__o *v36; // x26
+  System_Collections_Generic_IEnumerator_T__c *v37; // x8
+  __int64 v38; // x9
+  int32_t *v39; // x10
+  __int64 v40; // x0
+  System_Collections_Generic_IEnumerator_T__c *v41; // x8
+  __int64 v42; // x9
+  int32_t *v43; // x10
+  __int64 v44; // x0
+  QuestEntity_o *v45; // x0
+  __int64 v46; // x1
+  QuestEntity_o *v47; // x28
+  const MethodInfo *v48; // x1
   System_Collections_Generic_List_int__o *allBannerIdList; // x0
-  const MethodInfo *v44; // x1
-  System_Collections_Generic_List_int__o *v45; // x0
-  int32_t bannerId; // w1
+  __int64 v50; // x1
+  const MethodInfo *v51; // x1
+  System_Collections_Generic_List_int__o *v52; // x0
+  __int64 v53; // x1
+  __int64 bannerId; // x1
   struct System_Int32_array *items; // x8
-  _QWORD *v48; // x9
-  __int64 size; // x10
-  int32_t v50; // w29
-  System_String_o *ApSpriteFileName; // x29
-  const MethodInfo *v52; // x1
-  System_Collections_Generic_List_int__o *successBannerIdList; // x0
-  int32_t v54; // w1
-  struct System_Int32_array *v55; // x8
   _QWORD *v56; // x9
-  __int64 v57; // x10
-  System_Collections_Generic_IEnumerator_T__c *v58; // x8
-  __int64 v59; // x9
-  int32_t *v60; // x10
-  __int64 v61; // x0
-  System_Collections_Generic_IEnumerator_T__c *v62; // x8
-  __int64 v63; // x9
-  int *v64; // x10
-  __int64 v65; // x0
-  System_Collections_Generic_IEnumerator_T__o *v66; // [xsp+18h] [xbp-88h]
-  _DWORD *v67; // [xsp+20h] [xbp-80h]
-  Il2CppObject *v68; // [xsp+28h] [xbp-78h]
-  int v69; // [xsp+34h] [xbp-6Ch]
-  _DWORD *v70; // [xsp+38h] [xbp-68h]
+  __int64 size; // x10
+  int32_t v58; // w29
+  System_String_o *ApSpriteFileName; // x29
+  const MethodInfo *v60; // x1
+  System_Collections_Generic_List_int__o *successBannerIdList; // x0
+  __int64 v62; // x1
+  __int64 v63; // x1
+  struct System_Int32_array *v64; // x8
+  _QWORD *v65; // x9
+  __int64 v66; // x10
+  __int64 v67; // x1
+  System_Collections_Generic_IEnumerator_T__c *v68; // x8
+  __int64 v69; // x9
+  int32_t *v70; // x10
+  __int64 v71; // x0
+  System_Collections_Generic_IEnumerator_T__c *v72; // x8
+  __int64 v73; // x9
+  int *v74; // x10
+  __int64 v75; // x0
+  System_Collections_Generic_IEnumerator_T__o *v76; // [xsp+18h] [xbp-88h]
+  _DWORD *v77; // [xsp+20h] [xbp-80h]
+  Il2CppObject *v78; // [xsp+28h] [xbp-78h]
+  int v79; // [xsp+34h] [xbp-6Ch]
+  _DWORD *v80; // [xsp+38h] [xbp-68h]
 
-  if ( (byte_4C40444 & 1) == 0 )
+  if ( (byte_4C541E1 & 1) == 0 )
   {
-    sub_1C37058(&AtlasManager_TypeInfo);
-    sub_1C37058(&Method_System_Collections_ObjectModel_Collection_QuestEntity__GetEnumerator__);
-    sub_1C37058(&Method_System_Collections_ObjectModel_Collection_WarEntity__GetEnumerator__);
-    sub_1C37058(&Method_DataManager_GetMasterData_MapMaster___);
-    sub_1C37058(&Method_DataManager_GetMasterData_QuestMaster___);
-    sub_1C37058(&Method_DataManager_GetMasterData_SpotMaster___);
-    sub_1C37058(&Method_DataManager_GetMasterData_WarMaster___);
-    sub_1C37058(&Method_DataMasterBase_QuestMaster__QuestEntity__int__getEntityList__);
-    sub_1C37058(&Method_DataMasterBase_WarMaster__WarEntity__int__getEntityList__);
-    sub_1C37058(&System_IDisposable_TypeInfo);
-    sub_1C37058(&System_Collections_Generic_IEnumerator_WarEntity__TypeInfo);
-    sub_1C37058(&System_Collections_Generic_IEnumerator_QuestEntity__TypeInfo);
-    sub_1C37058(&System_Collections_IEnumerator_TypeInfo);
-    sub_1C37058(&Method_System_Collections_Generic_List_int__Add__);
-    sub_1C37058(&Method_System_Collections_Generic_List_int__Contains__);
-    sub_1C37058(&QuestBoardListViewItemDraw_TypeInfo);
-    sub_1C37058(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-    sub_1C37058(&UISprite_TypeInfo);
-    byte_4C40444 = 1;
+    sub_1C3E564(&AtlasManager_TypeInfo);
+    sub_1C3E564(&Method_System_Collections_ObjectModel_Collection_QuestEntity__GetEnumerator__);
+    sub_1C3E564(&Method_System_Collections_ObjectModel_Collection_WarEntity__GetEnumerator__);
+    sub_1C3E564(&Method_DataManager_GetMasterData_MapMaster___);
+    sub_1C3E564(&Method_DataManager_GetMasterData_QuestMaster___);
+    sub_1C3E564(&Method_DataManager_GetMasterData_SpotMaster___);
+    sub_1C3E564(&Method_DataManager_GetMasterData_WarMaster___);
+    sub_1C3E564(&Method_DataMasterBase_QuestMaster__QuestEntity__int__getEntityList__);
+    sub_1C3E564(&Method_DataMasterBase_WarMaster__WarEntity__int__getEntityList__);
+    sub_1C3E564(&System_IDisposable_TypeInfo);
+    sub_1C3E564(&System_Collections_Generic_IEnumerator_WarEntity__TypeInfo);
+    sub_1C3E564(&System_Collections_Generic_IEnumerator_QuestEntity__TypeInfo);
+    sub_1C3E564(&System_Collections_IEnumerator_TypeInfo);
+    sub_1C3E564(&Method_System_Collections_Generic_List_int__Add__);
+    sub_1C3E564(&Method_System_Collections_Generic_List_int__Contains__);
+    sub_1C3E564(&QuestBoardListViewItemDraw_TypeInfo);
+    sub_1C3E564(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    sub_1C3E564(&UISprite_TypeInfo);
+    byte_4C541E1 = 1;
   }
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39ED16C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39FF5A8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance )
     goto LABEL_111;
-  v4 = (DataManager_o *)Instance;
+  v5 = (DataManager_o *)Instance;
   MasterData_object = DataManager__GetMasterData_object_(
                         (DataManager_o *)Instance,
-                        (const MethodInfo_30E7C58 *)Method_DataManager_GetMasterData_WarMaster___);
-  v6 = DataManager__GetMasterData_object_(v4, (const MethodInfo_30E7C58 *)Method_DataManager_GetMasterData_MapMaster___);
-  v7 = DataManager__GetMasterData_object_(
-         v4,
-         (const MethodInfo_30E7C58 *)Method_DataManager_GetMasterData_SpotMaster___);
+                        (const MethodInfo_30F9A70 *)Method_DataManager_GetMasterData_WarMaster___);
+  v7 = DataManager__GetMasterData_object_(v5, (const MethodInfo_30F9A70 *)Method_DataManager_GetMasterData_MapMaster___);
   v8 = DataManager__GetMasterData_object_(
-         v4,
-         (const MethodInfo_30E7C58 *)Method_DataManager_GetMasterData_QuestMaster___);
-  v9 = (UISprite_o *)sub_1C372A4(UISprite_TypeInfo);
-  UISprite___ctor(v9, 0);
+         v5,
+         (const MethodInfo_30F9A70 *)Method_DataManager_GetMasterData_SpotMaster___);
+  v9 = DataManager__GetMasterData_object_(
+         v5,
+         (const MethodInfo_30F9A70 *)Method_DataManager_GetMasterData_QuestMaster___);
+  v10 = (UISprite_o *)sub_1C3E7B0(UISprite_TypeInfo);
+  UISprite___ctor(v10, 0);
   if ( !MasterData_object || (Instance = (Il2CppObject *)MasterData_object[2].monitor) == 0 )
 LABEL_111:
-    sub_1C372B4(Instance);
+    sub_1C3E7C0(Instance, v4);
   Enumerator = System_Collections_ObjectModel_Collection_object___GetEnumerator(
                  (System_Collections_ObjectModel_Collection_T__o *)Instance,
-                 (const MethodInfo_333AAE8 *)Method_System_Collections_ObjectModel_Collection_WarEntity__GetEnumerator__);
-  v66 = Enumerator;
+                 (const MethodInfo_334C9A0 *)Method_System_Collections_ObjectModel_Collection_WarEntity__GetEnumerator__);
+  v76 = Enumerator;
   if ( !Enumerator )
-    sub_1C372B4(0);
-  v11 = Enumerator;
-  v68 = v8;
+    sub_1C3E7C0(0, v12);
+  v13 = Enumerator;
+  v78 = v9;
   while ( 1 )
   {
 LABEL_8:
-    klass = v11->klass;
-    v13 = *(unsigned __int16 *)&v11->klass->_2.rank;
-    if ( *(_WORD *)&v11->klass->_2.rank )
+    klass = v13->klass;
+    v15 = *(unsigned __int16 *)&v13->klass->_2.rank;
+    if ( *(_WORD *)&v13->klass->_2.rank )
     {
       p_offset = &klass->_1.interfaceOffsets->offset;
       while ( *((System_Collections_IEnumerator_c **)p_offset - 1) != System_Collections_IEnumerator_TypeInfo )
       {
-        --v13;
+        --v15;
         p_offset += 4;
-        if ( !v13 )
+        if ( !v15 )
           goto LABEL_12;
       }
-      v15 = (__int64)&klass->vtable[*p_offset];
+      v17 = (__int64)&klass->vtable[*p_offset];
     }
     else
     {
 LABEL_12:
-      v15 = sub_1C87870(v11, System_Collections_IEnumerator_TypeInfo, 0);
+      v17 = sub_1C8ED7C(v13, System_Collections_IEnumerator_TypeInfo, 0);
     }
-    if ( ((*(__int64 (__fastcall **)(System_Collections_Generic_IEnumerator_T__o *, _QWORD))v15)(
-            v11,
-            *(_QWORD *)(v15 + 8))
+    if ( ((*(__int64 (__fastcall **)(System_Collections_Generic_IEnumerator_T__o *, _QWORD))v17)(
+            v13,
+            *(_QWORD *)(v17 + 8))
         & 1) == 0 )
       break;
-    v17 = v11->klass;
-    v18 = *(unsigned __int16 *)&v11->klass->_2.rank;
-    if ( *(_WORD *)&v11->klass->_2.rank )
+    v19 = v13->klass;
+    v20 = *(unsigned __int16 *)&v13->klass->_2.rank;
+    if ( *(_WORD *)&v13->klass->_2.rank )
     {
-      v19 = &v17->_1.interfaceOffsets->offset;
-      while ( *((System_Collections_Generic_IEnumerator_WarEntity__c **)v19 - 1) != System_Collections_Generic_IEnumerator_WarEntity__TypeInfo )
+      v21 = &v19->_1.interfaceOffsets->offset;
+      while ( *((System_Collections_Generic_IEnumerator_WarEntity__c **)v21 - 1) != System_Collections_Generic_IEnumerator_WarEntity__TypeInfo )
       {
-        --v18;
-        v19 += 4;
-        if ( !v18 )
+        --v20;
+        v21 += 4;
+        if ( !v20 )
           goto LABEL_19;
       }
-      v20 = (__int64)&v17->vtable[*v19];
+      v22 = (__int64)&v19->vtable[*v21];
     }
     else
     {
 LABEL_19:
-      v20 = sub_1C87870(v11, System_Collections_Generic_IEnumerator_WarEntity__TypeInfo, 0);
+      v22 = sub_1C8ED7C(v13, System_Collections_Generic_IEnumerator_WarEntity__TypeInfo, 0);
     }
-    v21 = (*(__int64 (__fastcall **)(System_Collections_Generic_IEnumerator_T__o *, _QWORD))v20)(
-            v11,
-            *(_QWORD *)(v20 + 8));
-    if ( !v21 )
-      sub_1C372B4(0);
-    if ( *(int *)(v21 + 96) >= 1 )
+    v23 = (*(__int64 (__fastcall **)(System_Collections_Generic_IEnumerator_T__o *, _QWORD))v22)(
+            v13,
+            *(_QWORD *)(v22 + 8));
+    if ( !v23 )
+      sub_1C3E7C0(0, v24);
+    if ( *(int *)(v23 + 96) >= 1 )
     {
-      if ( !v6 )
-        sub_1C372B4(0);
-      List = MapMaster__getList((MapMaster_o *)v6, *(_DWORD *)(v21 + 16), 0);
+      if ( !v7 )
+        sub_1C3E7C0(0, v24);
+      List = MapMaster__getList((MapMaster_o *)v7, *(_DWORD *)(v23 + 16), 0);
       if ( !List )
-        sub_1C372B4(0);
-      v23 = List[6];
-      v67 = List;
-      if ( v23 >= 1 )
+        sub_1C3E7C0(0, v26);
+      v27 = List[6];
+      v77 = List;
+      if ( v27 >= 1 )
       {
-        v24 = 0;
+        v28 = 0;
         while ( 1 )
         {
-          if ( v24 >= (unsigned int)v23 )
-            sub_1C372BC(List);
-          v25 = *(_QWORD *)&v67[2 * v24 + 8];
-          if ( !v25 )
-            sub_1C372B4(List);
-          if ( !v7 )
-            sub_1C372B4(0);
-          List = SpotMaster__getList((SpotMaster_o *)v7, *(_DWORD *)(v25 + 16), 0);
+          if ( v28 >= (unsigned int)v27 )
+            sub_1C3E7C8(List, v26);
+          v29 = *(_QWORD *)&v77[2 * v28 + 8];
+          if ( !v29 )
+            sub_1C3E7C0(List, v26);
+          if ( !v8 )
+            sub_1C3E7C0(0, v26);
+          List = SpotMaster__getList((SpotMaster_o *)v8, *(_DWORD *)(v29 + 16), 0);
           if ( !List )
-            sub_1C372B4(0);
-          v26 = List[6];
-          v70 = List;
-          if ( v26 < 1 )
+            sub_1C3E7C0(0, v26);
+          v30 = List[6];
+          v80 = List;
+          if ( v30 < 1 )
             goto LABEL_91;
-          v27 = 0;
-          v69 = v24;
+          v31 = 0;
+          v79 = v28;
           do
           {
-            if ( v27 >= (unsigned int)v26 )
-              sub_1C372BC(List);
-            v28 = *(_QWORD *)&v70[2 * v27 + 8];
-            if ( !v28 )
-              sub_1C372B4(List);
-            if ( !v8 )
-              sub_1C372B4(List);
-            monitor = (System_Collections_ObjectModel_Collection_T__o *)v8[2].monitor;
+            if ( v31 >= (unsigned int)v30 )
+              sub_1C3E7C8(List, v26);
+            v32 = *(_QWORD *)&v80[2 * v31 + 8];
+            if ( !v32 )
+              sub_1C3E7C0(List, v26);
+            if ( !v9 )
+              sub_1C3E7C0(List, v26);
+            monitor = (System_Collections_ObjectModel_Collection_T__o *)v9[2].monitor;
             if ( !monitor )
-              sub_1C372B4(0);
-            v30 = *(_DWORD *)(v28 + 16);
-            v31 = System_Collections_ObjectModel_Collection_object___GetEnumerator(
+              sub_1C3E7C0(0, v26);
+            v34 = *(_DWORD *)(v32 + 16);
+            v36 = System_Collections_ObjectModel_Collection_object___GetEnumerator(
                     monitor,
-                    (const MethodInfo_333AAE8 *)Method_System_Collections_ObjectModel_Collection_QuestEntity__GetEnumerator__);
-            if ( !v31 )
-              sub_1C372B4(0);
+                    (const MethodInfo_334C9A0 *)Method_System_Collections_ObjectModel_Collection_QuestEntity__GetEnumerator__);
+            if ( !v36 )
+              sub_1C3E7C0(0, v35);
             while ( 1 )
             {
-              v32 = v31->klass;
-              v33 = *(unsigned __int16 *)&v31->klass->_2.rank;
-              if ( *(_WORD *)&v31->klass->_2.rank )
+              v37 = v36->klass;
+              v38 = *(unsigned __int16 *)&v36->klass->_2.rank;
+              if ( *(_WORD *)&v36->klass->_2.rank )
               {
-                v34 = &v32->_1.interfaceOffsets->offset;
-                while ( *((System_Collections_IEnumerator_c **)v34 - 1) != System_Collections_IEnumerator_TypeInfo )
+                v39 = &v37->_1.interfaceOffsets->offset;
+                while ( *((System_Collections_IEnumerator_c **)v39 - 1) != System_Collections_IEnumerator_TypeInfo )
                 {
-                  --v33;
-                  v34 += 4;
-                  if ( !v33 )
+                  --v38;
+                  v39 += 4;
+                  if ( !v38 )
                     goto LABEL_42;
                 }
-                v35 = (__int64)&v32->vtable[*v34];
+                v40 = (__int64)&v37->vtable[*v39];
               }
               else
               {
 LABEL_42:
-                v35 = sub_1C87870(v31, System_Collections_IEnumerator_TypeInfo, 0);
+                v40 = sub_1C8ED7C(v36, System_Collections_IEnumerator_TypeInfo, 0);
               }
-              if ( ((*(__int64 (__fastcall **)(System_Collections_Generic_IEnumerator_T__o *, _QWORD))v35)(
-                      v31,
-                      *(_QWORD *)(v35 + 8))
+              if ( ((*(__int64 (__fastcall **)(System_Collections_Generic_IEnumerator_T__o *, _QWORD))v40)(
+                      v36,
+                      *(_QWORD *)(v40 + 8))
                   & 1) == 0 )
                 break;
-              v36 = v31->klass;
-              v37 = *(unsigned __int16 *)&v31->klass->_2.rank;
-              if ( *(_WORD *)&v31->klass->_2.rank )
+              v41 = v36->klass;
+              v42 = *(unsigned __int16 *)&v36->klass->_2.rank;
+              if ( *(_WORD *)&v36->klass->_2.rank )
               {
-                v38 = &v36->_1.interfaceOffsets->offset;
-                while ( *((System_Collections_Generic_IEnumerator_QuestEntity__c **)v38 - 1) != System_Collections_Generic_IEnumerator_QuestEntity__TypeInfo )
+                v43 = &v41->_1.interfaceOffsets->offset;
+                while ( *((System_Collections_Generic_IEnumerator_QuestEntity__c **)v43 - 1) != System_Collections_Generic_IEnumerator_QuestEntity__TypeInfo )
                 {
-                  --v37;
-                  v38 += 4;
-                  if ( !v37 )
+                  --v42;
+                  v43 += 4;
+                  if ( !v42 )
                     goto LABEL_49;
                 }
-                v39 = (__int64)&v36->vtable[*v38];
+                v44 = (__int64)&v41->vtable[*v43];
               }
               else
               {
 LABEL_49:
-                v39 = sub_1C87870(v31, System_Collections_Generic_IEnumerator_QuestEntity__TypeInfo, 0);
+                v44 = sub_1C8ED7C(v36, System_Collections_Generic_IEnumerator_QuestEntity__TypeInfo, 0);
               }
-              v40 = (QuestEntity_o *)(*(__int64 (__fastcall **)(System_Collections_Generic_IEnumerator_T__o *, _QWORD))v39)(
-                                       v31,
-                                       *(_QWORD *)(v39 + 8));
-              v41 = v40;
-              if ( !v40 )
-                sub_1C372B4(0);
-              if ( QuestEntity__getSpotId(v40, 0) == v30 )
+              v45 = (QuestEntity_o *)(*(__int64 (__fastcall **)(System_Collections_Generic_IEnumerator_T__o *, _QWORD))v44)(
+                                       v36,
+                                       *(_QWORD *)(v44 + 8));
+              v47 = v45;
+              if ( !v45 )
+                sub_1C3E7C0(0, v46);
+              if ( QuestEntity__getSpotId(v45, 0) == v34 )
               {
-                allBannerIdList = CostSpriteListManager__get_allBannerIdList(this, v42);
+                allBannerIdList = CostSpriteListManager__get_allBannerIdList(this, v48);
                 if ( !allBannerIdList )
-                  sub_1C372B4(0);
+                  sub_1C3E7C0(0, v50);
                 if ( !System_Collections_Generic_List_int___Contains(
                         allBannerIdList,
-                        v41->fields.bannerId,
-                        (const MethodInfo_3786378 *)Method_System_Collections_Generic_List_int__Contains__) )
+                        v47->fields.bannerId,
+                        (const MethodInfo_37987B4 *)Method_System_Collections_Generic_List_int__Contains__) )
                 {
-                  v45 = CostSpriteListManager__get_allBannerIdList(this, v44);
-                  if ( !v45 )
-                    sub_1C372B4(0);
-                  bannerId = v41->fields.bannerId;
-                  items = v45->fields._items;
-                  v48 = Method_System_Collections_Generic_List_int__Add__;
-                  ++v45->fields._version;
+                  v52 = CostSpriteListManager__get_allBannerIdList(this, v51);
+                  if ( !v52 )
+                    sub_1C3E7C0(0, v53);
+                  bannerId = (unsigned int)v47->fields.bannerId;
+                  items = v52->fields._items;
+                  v56 = Method_System_Collections_Generic_List_int__Add__;
+                  ++v52->fields._version;
                   if ( !items )
-                    sub_1C372B4(v45);
-                  size = v45->fields._size;
+                    sub_1C3E7C0(v52, bannerId);
+                  size = v52->fields._size;
                   if ( (unsigned int)size >= LODWORD(items->max_length) )
                   {
                     System_Collections_Generic_List_int___AddWithResize(
-                      v45,
+                      v52,
                       bannerId,
-                      *(const MethodInfo_3786000 **)(*(_QWORD *)(v48[4] + 192LL) + 112LL));
+                      *(const MethodInfo_379843C **)(*(_QWORD *)(v56[4] + 192LL) + 112LL));
                   }
                   else
                   {
-                    v45->fields._size = size + 1;
+                    v52->fields._size = size + 1;
                     items->m_Items[size] = bannerId;
                   }
-                  v50 = v41->fields.bannerId;
+                  v58 = v47->fields.bannerId;
                   if ( !QuestBoardListViewItemDraw_TypeInfo->_2.cctor_finished )
                     j_il2cpp_runtime_class_init_0(QuestBoardListViewItemDraw_TypeInfo);
-                  ApSpriteFileName = QuestBoardListViewItemDraw__GetApSpriteFileName(v50, 0);
+                  ApSpriteFileName = QuestBoardListViewItemDraw__GetApSpriteFileName(v58, 0);
                   if ( !AtlasManager_TypeInfo->_2.cctor_finished )
                     j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo);
-                  if ( AtlasManager__SetEventUI(v9, ApSpriteFileName, 0) )
+                  if ( AtlasManager__SetEventUI(v10, ApSpriteFileName, 0) )
                   {
-                    successBannerIdList = CostSpriteListManager__get_successBannerIdList(this, v52);
+                    successBannerIdList = CostSpriteListManager__get_successBannerIdList(this, v60);
                     if ( !successBannerIdList )
-                      sub_1C372B4(0);
-                    v54 = v41->fields.bannerId;
-                    v55 = successBannerIdList->fields._items;
-                    v56 = Method_System_Collections_Generic_List_int__Add__;
+                      sub_1C3E7C0(0, v62);
+                    v63 = (unsigned int)v47->fields.bannerId;
+                    v64 = successBannerIdList->fields._items;
+                    v65 = Method_System_Collections_Generic_List_int__Add__;
                     ++successBannerIdList->fields._version;
-                    if ( !v55 )
-                      sub_1C372B4(successBannerIdList);
-                    v57 = successBannerIdList->fields._size;
-                    if ( (unsigned int)v57 >= LODWORD(v55->max_length) )
+                    if ( !v64 )
+                      sub_1C3E7C0(successBannerIdList, v63);
+                    v66 = successBannerIdList->fields._size;
+                    if ( (unsigned int)v66 >= LODWORD(v64->max_length) )
                       goto LABEL_68;
 LABEL_72:
-                    successBannerIdList->fields._size = v57 + 1;
-                    v55->m_Items[v57] = v54;
+                    successBannerIdList->fields._size = v66 + 1;
+                    v64->m_Items[v66] = v63;
                   }
                   else
                   {
-                    successBannerIdList = CostSpriteListManager__get_failedBannerIdList(this, v52);
+                    successBannerIdList = CostSpriteListManager__get_failedBannerIdList(this, v60);
                     if ( !successBannerIdList )
-                      sub_1C372B4(0);
-                    v54 = v41->fields.bannerId;
-                    v55 = successBannerIdList->fields._items;
-                    v56 = Method_System_Collections_Generic_List_int__Add__;
+                      sub_1C3E7C0(0, v67);
+                    v63 = (unsigned int)v47->fields.bannerId;
+                    v64 = successBannerIdList->fields._items;
+                    v65 = Method_System_Collections_Generic_List_int__Add__;
                     ++successBannerIdList->fields._version;
-                    if ( !v55 )
-                      sub_1C372B4(successBannerIdList);
-                    v57 = successBannerIdList->fields._size;
-                    if ( (unsigned int)v57 < LODWORD(v55->max_length) )
+                    if ( !v64 )
+                      sub_1C3E7C0(successBannerIdList, v63);
+                    v66 = successBannerIdList->fields._size;
+                    if ( (unsigned int)v66 < LODWORD(v64->max_length) )
                       goto LABEL_72;
 LABEL_68:
                     System_Collections_Generic_List_int___AddWithResize(
                       successBannerIdList,
-                      v54,
-                      *(const MethodInfo_3786000 **)(*(_QWORD *)(v56[4] + 192LL) + 112LL));
+                      v63,
+                      *(const MethodInfo_379843C **)(*(_QWORD *)(v65[4] + 192LL) + 112LL));
                   }
                 }
               }
             }
-            v58 = v31->klass;
-            v59 = *(unsigned __int16 *)&v31->klass->_2.rank;
-            if ( *(_WORD *)&v31->klass->_2.rank )
+            v68 = v36->klass;
+            v69 = *(unsigned __int16 *)&v36->klass->_2.rank;
+            if ( *(_WORD *)&v36->klass->_2.rank )
             {
-              v60 = &v58->_1.interfaceOffsets->offset;
-              while ( *((System_IDisposable_c **)v60 - 1) != System_IDisposable_TypeInfo )
+              v70 = &v68->_1.interfaceOffsets->offset;
+              while ( *((System_IDisposable_c **)v70 - 1) != System_IDisposable_TypeInfo )
               {
-                --v59;
-                v60 += 4;
-                if ( !v59 )
+                --v69;
+                v70 += 4;
+                if ( !v69 )
                   goto LABEL_78;
               }
-              v61 = (__int64)&v58->vtable[*v60];
+              v71 = (__int64)&v68->vtable[*v70];
             }
             else
             {
 LABEL_78:
-              v61 = sub_1C87870(v31, System_IDisposable_TypeInfo, 0);
+              v71 = sub_1C8ED7C(v36, System_IDisposable_TypeInfo, 0);
             }
-            List = (_DWORD *)(*(__int64 (__fastcall **)(System_Collections_Generic_IEnumerator_T__o *, _QWORD))v61)(
-                               v31,
-                               *(_QWORD *)(v61 + 8));
-            v8 = v68;
-            v24 = v69;
-            ++v27;
-            v26 = v70[6];
+            List = (_DWORD *)(*(__int64 (__fastcall **)(System_Collections_Generic_IEnumerator_T__o *, _QWORD))v71)(
+                               v36,
+                               *(_QWORD *)(v71 + 8));
+            v9 = v78;
+            v28 = v79;
+            ++v31;
+            v30 = v80[6];
           }
-          while ( v27 < v26 );
+          while ( v31 < v30 );
 LABEL_91:
-          v11 = v66;
-          ++v24;
-          v23 = v67[6];
-          if ( v24 >= v23 )
+          v13 = v76;
+          ++v28;
+          v27 = v77[6];
+          if ( v28 >= v27 )
             goto LABEL_8;
         }
       }
     }
   }
-  if ( v11 )
+  if ( v13 )
   {
-    v62 = v11->klass;
-    v63 = *(unsigned __int16 *)&v11->klass->_2.rank;
-    if ( *(_WORD *)&v11->klass->_2.rank )
+    v72 = v13->klass;
+    v73 = *(unsigned __int16 *)&v13->klass->_2.rank;
+    if ( *(_WORD *)&v13->klass->_2.rank )
     {
-      v64 = &v62->_1.interfaceOffsets->offset;
-      while ( *((System_IDisposable_c **)v64 - 1) != System_IDisposable_TypeInfo )
+      v74 = &v72->_1.interfaceOffsets->offset;
+      while ( *((System_IDisposable_c **)v74 - 1) != System_IDisposable_TypeInfo )
       {
-        --v63;
-        v64 += 4;
-        if ( !v63 )
+        --v73;
+        v74 += 4;
+        if ( !v73 )
           goto LABEL_98;
       }
-      v65 = (__int64)&v62->vtable[*v64];
+      v75 = (__int64)&v72->vtable[*v74];
     }
     else
     {
 LABEL_98:
-      v65 = sub_1C87870(v11, System_IDisposable_TypeInfo, 0);
+      v75 = sub_1C8ED7C(v13, System_IDisposable_TypeInfo, 0);
     }
-    (*(void (__fastcall **)(System_Collections_Generic_IEnumerator_T__o *, _QWORD))v65)(v11, *(_QWORD *)(v65 + 8));
+    (*(void (__fastcall **)(System_Collections_Generic_IEnumerator_T__o *, _QWORD))v75)(v13, *(_QWORD *)(v75 + 8));
   }
-  CostSpriteListManager__SortAllList(this, v16);
+  CostSpriteListManager__SortAllList(this, v18);
 }
 
 
@@ -617,10 +629,10 @@ void CostSpriteListManager__SortAllList(CostSpriteListManager_o *this, const Met
   unsigned int v5; // w20
 
   v2 = this;
-  if ( (byte_4C40445 & 1) == 0 )
+  if ( (byte_4C541E2 & 1) == 0 )
   {
-    this = (CostSpriteListManager_o *)sub_1C37058(&Method_System_Collections_Generic_List_int__Sort__);
-    byte_4C40445 = 1;
+    this = (CostSpriteListManager_o *)sub_1C3E564(&Method_System_Collections_Generic_List_int__Sort__);
+    byte_4C541E2 = 1;
   }
   bannerIdAllList = v2->fields.bannerIdAllList;
   if ( !bannerIdAllList )
@@ -632,19 +644,19 @@ void CostSpriteListManager__SortAllList(CostSpriteListManager_o *this, const Met
     while ( 1 )
     {
       if ( v5 >= max_length )
-        sub_1C372BC(this);
+        sub_1C3E7C8(this, method);
       this = (CostSpriteListManager_o *)bannerIdAllList->m_Items[v5];
       if ( !this )
         break;
       System_Collections_Generic_List_int___Sort(
         (System_Collections_Generic_List_int__o *)this,
-        (const MethodInfo_3787944 *)Method_System_Collections_Generic_List_int__Sort__);
+        (const MethodInfo_3799D80 *)Method_System_Collections_Generic_List_int__Sort__);
       max_length = bannerIdAllList->max_length;
       if ( (int)++v5 >= max_length )
         return;
     }
 LABEL_11:
-    sub_1C372B4(this);
+    sub_1C3E7C0(this, method);
   }
 }
 
@@ -657,9 +669,9 @@ System_Collections_Generic_List_int__o *CostSpriteListManager__get_allBannerIdLi
 
   bannerIdAllList = this->fields.bannerIdAllList;
   if ( !bannerIdAllList )
-    sub_1C372B4(this);
+    sub_1C3E7C0(this, method);
   if ( !LODWORD(bannerIdAllList->max_length) )
-    sub_1C372BC(this);
+    sub_1C3E7C8(this, method);
   return bannerIdAllList->m_Items[0];
 }
 
@@ -672,9 +684,9 @@ System_Collections_Generic_List_int__o *CostSpriteListManager__get_failedBannerI
 
   bannerIdAllList = this->fields.bannerIdAllList;
   if ( !bannerIdAllList )
-    sub_1C372B4(this);
+    sub_1C3E7C0(this, method);
   if ( LODWORD(bannerIdAllList->max_length) <= 1 )
-    sub_1C372BC(this);
+    sub_1C3E7C8(this, method);
   return bannerIdAllList->m_Items[1];
 }
 
@@ -693,8 +705,8 @@ System_Collections_Generic_List_int__o *CostSpriteListManager__get_successBanner
 
   bannerIdAllList = this->fields.bannerIdAllList;
   if ( !bannerIdAllList )
-    sub_1C372B4(this);
+    sub_1C3E7C0(this, method);
   if ( LODWORD(bannerIdAllList->max_length) <= 2 )
-    sub_1C372BC(this);
+    sub_1C3E7C8(this, method);
   return bannerIdAllList->m_Items[2];
 }

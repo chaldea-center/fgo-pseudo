@@ -5,10 +5,10 @@ void BoxGachaUtility___cctor(const MethodInfo *method)
   struct BoxGachaUtility_StaticFields *v3; // x9
   int32x2_t *v4; // x8
 
-  if ( (byte_4C3D3DD & 1) == 0 )
+  if ( (byte_4C5115D & 1) == 0 )
   {
-    sub_1C37058(&BoxGachaUtility_TypeInfo);
-    byte_4C3D3DD = 1;
+    sub_1C3E564(&BoxGachaUtility_TypeInfo);
+    byte_4C5115D = 1;
   }
   static_fields = BoxGachaUtility_TypeInfo->static_fields;
   *(_QWORD *)&static_fields->NORMAL_ITEM_SIZE.fields.x = 0x3F3AE1483F400000LL;
@@ -32,19 +32,20 @@ void BoxGachaUtility__SetBoxGachaNumSprite(UISprite_o *sprite, int32_t num, cons
   __int64 v7; // x7
   Il2CppObject *v10; // x0
   System_String_o *v11; // x0
-  int32_t v12; // [xsp+Ch] [xbp-34h] BYREF
+  __int64 v12; // x1
+  int32_t v13; // [xsp+Ch] [xbp-34h] BYREF
 
-  if ( (byte_4C3D3DC & 1) == 0 )
+  if ( (byte_4C5115C & 1) == 0 )
   {
-    sub_1C37058(&int_TypeInfo);
-    sub_1C37058(&StringLiteral_20414/*"img_gachatxt_{0:D2}"*/);
-    byte_4C3D3DC = 1;
+    sub_1C3E564(&int_TypeInfo);
+    sub_1C3E564(&StringLiteral_20432/*"img_gachatxt_{0:D2}"*/);
+    byte_4C5115C = 1;
   }
-  v12 = num;
-  v10 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v12, method, v3, v4, v5, v6, v7);
-  v11 = System_String__Format((System_String_o *)StringLiteral_20414/*"img_gachatxt_{0:D2}"*/, v10, 0);
+  v13 = num;
+  v10 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v13, method, v3, v4, v5, v6, v7);
+  v11 = System_String__Format((System_String_o *)StringLiteral_20432/*"img_gachatxt_{0:D2}"*/, v10, 0);
   if ( !sprite )
-    sub_1C372B4(v11);
+    sub_1C3E7C0(v11, v12);
   UISprite__set_spriteName(sprite, v11, 0);
   ((void (__fastcall *)(UISprite_o *, const MethodInfo *))sprite->klass->vtable._33_MakePixelPerfect.methodPtr)(
     sprite,
@@ -74,10 +75,10 @@ void BoxGachaUtility__SetMultiGachaButtonDigitNum(
   const MethodInfo *v19; // x2
 
   v8 = gachaTime;
-  if ( (byte_4C3D3DB & 1) == 0 )
+  if ( (byte_4C5115B & 1) == 0 )
   {
-    *(_QWORD *)&gachaTime = sub_1C37058(&BoxGachaUtility_TypeInfo);
-    byte_4C3D3DB = 1;
+    *(_QWORD *)&gachaTime = sub_1C3E564(&BoxGachaUtility_TypeInfo);
+    byte_4C5115B = 1;
   }
   if ( v8 < 10 )
     goto LABEL_9;
@@ -144,7 +145,7 @@ void BoxGachaUtility__SetMultiGachaButtonDigitNum(
       }
     }
 LABEL_32:
-    sub_1C372B4(*(_QWORD *)&gachaTime);
+    sub_1C3E7C0(*(_QWORD *)&gachaTime, oneDigit);
   }
   if ( v9 )
     return;

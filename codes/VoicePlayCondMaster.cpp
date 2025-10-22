@@ -1,9 +1,9 @@
 void VoicePlayCondMaster___cctor(const MethodInfo *method)
 {
-  if ( (byte_4C440CD & 1) == 0 )
+  if ( (byte_4C57E95 & 1) == 0 )
   {
-    sub_1C37058(&VoicePlayCondMaster_TypeInfo);
-    byte_4C440CD = 1;
+    sub_1C3E564(&VoicePlayCondMaster_TypeInfo);
+    byte_4C57E95 = 1;
   }
   VoicePlayCondMaster_TypeInfo->static_fields->VOICE_PREFIX_NONE = -1;
 }
@@ -11,15 +11,15 @@ void VoicePlayCondMaster___cctor(const MethodInfo *method)
 
 void VoicePlayCondMaster___ctor(VoicePlayCondMaster_o *this, const MethodInfo *method)
 {
-  if ( (byte_4C440C8 & 1) == 0 )
+  if ( (byte_4C57E90 & 1) == 0 )
   {
-    sub_1C37058(&Method_DataMasterBase_VoicePlayCondMaster__VoicePlayCondEntity__string___ctor__);
-    byte_4C440C8 = 1;
+    sub_1C3E564(&Method_DataMasterBase_VoicePlayCondMaster__VoicePlayCondEntity__string___ctor__);
+    byte_4C57E90 = 1;
   }
   DataMasterBase_object__object__object____ctor(
     (DataMasterBase_TMaster__TEntity__PKType__o *)this,
     228,
-    (const MethodInfo_33A3834 *)Method_DataMasterBase_VoicePlayCondMaster__VoicePlayCondEntity__string___ctor__);
+    (const MethodInfo_33B56EC *)Method_DataMasterBase_VoicePlayCondMaster__VoicePlayCondEntity__string___ctor__);
 }
 
 
@@ -29,41 +29,41 @@ System_Collections_Generic_List_VoicePlayCondEntity__o *VoicePlayCondMaster__Get
         const MethodInfo *method)
 {
   System_Collections_Generic_List_object__o *v5; // x21
+  System_Collections_ObjectModel_Collection_T__o *v6; // x1
   System_Collections_ObjectModel_Collection_T__o *list; // x0
   int32_t Count; // w0
-  int32_t v8; // w22
-  int32_t v9; // w23
-  int32_t v10; // w2
-  const MethodInfo *v11; // x3
-  System_Collections_ObjectModel_Collection_T__o *v12; // x1
+  int32_t v9; // w22
+  int32_t v10; // w23
+  int32_t v11; // w2
+  const MethodInfo *v12; // x3
   struct System_Object_array *items; // x8
   _QWORD *v14; // x9
   __int64 size; // x10
   Il2CppClass **v16; // x0
 
-  if ( (byte_4C440CC & 1) == 0 )
+  if ( (byte_4C57E94 & 1) == 0 )
   {
-    sub_1C37058(&Method_System_Collections_ObjectModel_Collection_VoicePlayCondEntity__get_Count__);
-    sub_1C37058(&Method_System_Collections_ObjectModel_Collection_VoicePlayCondEntity__get_Item__);
-    sub_1C37058(&Method_System_Collections_Generic_List_VoicePlayCondEntity__Add__);
-    sub_1C37058(&Method_System_Collections_Generic_List_VoicePlayCondEntity___ctor__);
-    sub_1C37058(&System_Collections_Generic_List_VoicePlayCondEntity__TypeInfo);
-    byte_4C440CC = 1;
+    sub_1C3E564(&Method_System_Collections_ObjectModel_Collection_VoicePlayCondEntity__get_Count__);
+    sub_1C3E564(&Method_System_Collections_ObjectModel_Collection_VoicePlayCondEntity__get_Item__);
+    sub_1C3E564(&Method_System_Collections_Generic_List_VoicePlayCondEntity__Add__);
+    sub_1C3E564(&Method_System_Collections_Generic_List_VoicePlayCondEntity___ctor__);
+    sub_1C3E564(&System_Collections_Generic_List_VoicePlayCondEntity__TypeInfo);
+    byte_4C57E94 = 1;
   }
-  v5 = (System_Collections_Generic_List_object__o *)sub_1C372A4(System_Collections_Generic_List_VoicePlayCondEntity__TypeInfo);
+  v5 = (System_Collections_Generic_List_object__o *)sub_1C3E7B0(System_Collections_Generic_List_VoicePlayCondEntity__TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v5,
-    (const MethodInfo_37A27F0 *)Method_System_Collections_Generic_List_VoicePlayCondEntity___ctor__);
+    (const MethodInfo_37B4C2C *)Method_System_Collections_Generic_List_VoicePlayCondEntity___ctor__);
   list = (System_Collections_ObjectModel_Collection_T__o *)this->fields.list;
   if ( !list )
     goto LABEL_16;
   Count = System_Collections_ObjectModel_Collection_object___get_Count(
             list,
-            (const MethodInfo_333A510 *)Method_System_Collections_ObjectModel_Collection_VoicePlayCondEntity__get_Count__);
+            (const MethodInfo_334C3C8 *)Method_System_Collections_ObjectModel_Collection_VoicePlayCondEntity__get_Count__);
   if ( Count >= 1 )
   {
-    v8 = Count;
-    v9 = 0;
+    v9 = Count;
+    v10 = 0;
     while ( 1 )
     {
       list = (System_Collections_ObjectModel_Collection_T__o *)this->fields.list;
@@ -71,11 +71,11 @@ System_Collections_Generic_List_VoicePlayCondEntity__o *VoicePlayCondMaster__Get
         break;
       list = (System_Collections_ObjectModel_Collection_T__o *)System_Collections_ObjectModel_Collection_object___get_Item(
                                                                  list,
-                                                                 v9,
-                                                                 (const MethodInfo_333A5A0 *)Method_System_Collections_ObjectModel_Collection_VoicePlayCondEntity__get_Item__);
+                                                                 v10,
+                                                                 (const MethodInfo_334C458 *)Method_System_Collections_ObjectModel_Collection_VoicePlayCondEntity__get_Item__);
       if ( !list )
         break;
-      v12 = list;
+      v6 = list;
       if ( HIDWORD(list[2].monitor) == groupId )
       {
         if ( !v5 )
@@ -91,21 +91,21 @@ System_Collections_Generic_List_VoicePlayCondEntity__o *VoicePlayCondMaster__Get
           System_Collections_Generic_List_object___AddWithResize(
             v5,
             (Il2CppObject *)list,
-            *(const MethodInfo_37A3024 **)(*(_QWORD *)(v14[4] + 192LL) + 112LL));
+            *(const MethodInfo_37B5460 **)(*(_QWORD *)(v14[4] + 192LL) + 112LL));
         }
         else
         {
           v16 = &items->obj.klass + size;
           v5->fields._size = size + 1;
-          v16[4] = (Il2CppClass *)v12;
-          sub_1C36FFC((CGThumbnailListItem_o *)(v16 + 4), (int32_t)v12, v10, v11);
+          v16[4] = (Il2CppClass *)v6;
+          sub_1C3E508((CGThumbnailListItem_o *)(v16 + 4), (int32_t)v6, v11, v12);
         }
       }
-      if ( v8 == ++v9 )
+      if ( v9 == ++v10 )
         return (System_Collections_Generic_List_VoicePlayCondEntity__o *)v5;
     }
 LABEL_16:
-    sub_1C372B4(list);
+    sub_1C3E7C0(list, v6);
   }
   return (System_Collections_Generic_List_VoicePlayCondEntity__o *)v5;
 }
@@ -125,6 +125,7 @@ int32_t VoicePlayCondMaster__GetWeight(
 }
 
 
+// local variable allocation has failed, the output may be wrong!
 bool VoicePlayCondMaster__IsNotPrefix(
         VoicePlayCondMaster_o *this,
         int32_t svtId,
@@ -144,25 +145,25 @@ bool VoicePlayCondMaster__IsNotPrefix(
   VoicePlayCondMaster_c *v18; // x0
   CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o v20; // 0:x0.16
 
-  if ( (byte_4C440CB & 1) == 0 )
+  if ( (byte_4C57E93 & 1) == 0 )
   {
-    sub_1C37058(&Method_System_Collections_ObjectModel_Collection_VoicePlayCondEntity__get_Count__);
-    sub_1C37058(&Method_System_Collections_ObjectModel_Collection_VoicePlayCondEntity__get_Item__);
-    sub_1C37058(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
-    sub_1C37058(&CodeStage_AntiCheat_ObscuredTypes_ObscuredString_TypeInfo);
-    sub_1C37058(&VoicePlayCondMaster_TypeInfo);
-    byte_4C440CB = 1;
+    sub_1C3E564(&Method_System_Collections_ObjectModel_Collection_VoicePlayCondEntity__get_Count__);
+    sub_1C3E564(&Method_System_Collections_ObjectModel_Collection_VoicePlayCondEntity__get_Item__);
+    sub_1C3E564(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
+    sub_1C3E564(&CodeStage_AntiCheat_ObscuredTypes_ObscuredString_TypeInfo);
+    sub_1C3E564(&VoicePlayCondMaster_TypeInfo);
+    byte_4C57E93 = 1;
   }
   list = (System_Collections_ObjectModel_Collection_T__o *)this->fields.list;
   if ( !list )
 LABEL_16:
-    sub_1C372B4(list);
+    sub_1C3E7C0(list, *(_QWORD *)&svtId);
   v9 = 0;
   while ( 1 )
   {
     if ( v9 >= System_Collections_ObjectModel_Collection_object___get_Count(
                  list,
-                 (const MethodInfo_333A510 *)Method_System_Collections_ObjectModel_Collection_VoicePlayCondEntity__get_Count__) )
+                 (const MethodInfo_334C3C8 *)Method_System_Collections_ObjectModel_Collection_VoicePlayCondEntity__get_Count__) )
       return 1;
     list = (System_Collections_ObjectModel_Collection_T__o *)this->fields.list;
     if ( !list )
@@ -170,7 +171,7 @@ LABEL_16:
     Item = System_Collections_ObjectModel_Collection_object___get_Item(
              list,
              v9,
-             (const MethodInfo_333A5A0 *)Method_System_Collections_ObjectModel_Collection_VoicePlayCondEntity__get_Item__);
+             (const MethodInfo_334C458 *)Method_System_Collections_ObjectModel_Collection_VoicePlayCondEntity__get_Item__);
     if ( Item )
     {
       v11 = Item;
@@ -180,7 +181,7 @@ LABEL_16:
         j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
       *(_QWORD *)&v20.fields.currentCryptoKey = klass;
       *(_QWORD *)&v20.fields.fakeValue = monitor;
-      if ( CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_48930896(v20, 0) == svtId )
+      if ( CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_49004136(v20, 0) == svtId )
       {
         v14 = (CodeStage_AntiCheat_ObscuredTypes_ObscuredString_o *)v11[2].monitor;
         if ( !CodeStage_AntiCheat_ObscuredTypes_ObscuredString_TypeInfo->_2.cctor_finished )
@@ -206,6 +207,7 @@ LABEL_16:
 }
 
 
+// local variable allocation has failed, the output may be wrong!
 bool VoicePlayCondMaster__isVoiceCond(
         VoicePlayCondMaster_o *this,
         int32_t svtId,
@@ -226,14 +228,14 @@ bool VoicePlayCondMaster__isVoiceCond(
   CodeStage_AntiCheat_ObscuredTypes_ObscuredString_o *v18; // x0
   CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o v21; // 0:x0.16
 
-  if ( (byte_4C440CA & 1) == 0 )
+  if ( (byte_4C57E92 & 1) == 0 )
   {
-    sub_1C37058(&Method_System_Collections_ObjectModel_Collection_VoicePlayCondEntity__get_Count__);
-    sub_1C37058(&Method_System_Collections_ObjectModel_Collection_VoicePlayCondEntity__get_Item__);
-    sub_1C37058(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
-    sub_1C37058(&CodeStage_AntiCheat_ObscuredTypes_ObscuredString_TypeInfo);
-    sub_1C37058(&VoicePlayCondMaster_TypeInfo);
-    byte_4C440CA = 1;
+    sub_1C3E564(&Method_System_Collections_ObjectModel_Collection_VoicePlayCondEntity__get_Count__);
+    sub_1C3E564(&Method_System_Collections_ObjectModel_Collection_VoicePlayCondEntity__get_Item__);
+    sub_1C3E564(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
+    sub_1C3E564(&CodeStage_AntiCheat_ObscuredTypes_ObscuredString_TypeInfo);
+    sub_1C3E564(&VoicePlayCondMaster_TypeInfo);
+    byte_4C57E92 = 1;
   }
   list = (System_String_o **)VoicePlayCondMaster_TypeInfo;
   if ( !VoicePlayCondMaster_TypeInfo->_2.cctor_finished )
@@ -248,19 +250,19 @@ bool VoicePlayCondMaster__isVoiceCond(
   {
     v10 = System_Int32__Parse(list[4], 0);
     if ( *((_DWORD *)v9 + 6) <= 1u )
-      sub_1C372BC(v10);
+      sub_1C3E7C8(v10, *(_QWORD *)&svtId);
     voiceId = v9[5];
   }
   list = (System_String_o **)this->fields.list;
   if ( !list )
 LABEL_23:
-    sub_1C372B4(list);
+    sub_1C3E7C0(list, *(_QWORD *)&svtId);
   v11 = 0;
   while ( 1 )
   {
     Count = System_Collections_ObjectModel_Collection_object___get_Count(
               (System_Collections_ObjectModel_Collection_T__o *)list,
-              (const MethodInfo_333A510 *)Method_System_Collections_ObjectModel_Collection_VoicePlayCondEntity__get_Count__);
+              (const MethodInfo_334C3C8 *)Method_System_Collections_ObjectModel_Collection_VoicePlayCondEntity__get_Count__);
     if ( v11 >= Count )
       break;
     list = (System_String_o **)this->fields.list;
@@ -269,7 +271,7 @@ LABEL_23:
     Item = System_Collections_ObjectModel_Collection_object___get_Item(
              (System_Collections_ObjectModel_Collection_T__o *)list,
              v11,
-             (const MethodInfo_333A5A0 *)Method_System_Collections_ObjectModel_Collection_VoicePlayCondEntity__get_Item__);
+             (const MethodInfo_334C458 *)Method_System_Collections_ObjectModel_Collection_VoicePlayCondEntity__get_Item__);
     if ( Item )
     {
       v14 = Item;
@@ -279,7 +281,7 @@ LABEL_23:
         j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
       *(_QWORD *)&v21.fields.currentCryptoKey = klass;
       *(_QWORD *)&v21.fields.fakeValue = monitor;
-      if ( CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_48930896(v21, 0) == svtId )
+      if ( CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_49004136(v21, 0) == svtId )
       {
         v17 = (CodeStage_AntiCheat_ObscuredTypes_ObscuredString_o *)v14[2].monitor;
         if ( !CodeStage_AntiCheat_ObscuredTypes_ObscuredString_TypeInfo->_2.cctor_finished )
@@ -308,14 +310,13 @@ bool VoicePlayCondMaster__isVoicePlay(
         System_Collections_Generic_List_CondType_Kind__o *disableCondTypeList,
         int64_t userSvtId,
         int32_t genderType,
-        BattleServantData_o *battleServantData,
         BattleVoicePlayCondArgs_o *battleCondArgs,
         const MethodInfo *method)
 {
-  const MethodInfo *v10; // [xsp+10h] [xbp-20h]
-  VoicePlayCondEntity_o *condEntity; // [xsp+28h] [xbp-8h] BYREF
+  const MethodInfo *v9; // [xsp+0h] [xbp-20h]
+  VoicePlayCondEntity_o *condEntity; // [xsp+18h] [xbp-8h] BYREF
 
-  return VoicePlayCondMaster__isVoicePlay_43286548(
+  return VoicePlayCondMaster__isVoicePlay_43341548(
            this,
            svtId,
            voiceId,
@@ -323,14 +324,12 @@ bool VoicePlayCondMaster__isVoicePlay(
            disableCondTypeList,
            userSvtId,
            genderType,
-           0,
-           battleServantData,
            battleCondArgs,
-           v10);
+           v9);
 }
 
 
-bool VoicePlayCondMaster__isVoicePlay_43286548(
+bool VoicePlayCondMaster__isVoicePlay_43341548(
         VoicePlayCondMaster_o *this,
         int32_t svtId,
         System_String_o *voiceId,
@@ -338,91 +337,83 @@ bool VoicePlayCondMaster__isVoicePlay_43286548(
         System_Collections_Generic_List_CondType_Kind__o *disableCondTypeList,
         int64_t userSvtId,
         int32_t genderType,
-        BattleData_o *battleData,
-        BattleServantData_o *battleServantData,
         BattleVoicePlayCondArgs_o *battleCondArgs,
         const MethodInfo *method)
 {
-  System_String_o *v12; // x26
+  System_String_o *v10; // x26
+  const MethodInfo *v13; // x1
   void *lookup; // x0
   int32_t VOICE_PREFIX_NONE; // w27
-  const MethodInfo *v17; // x4
-  void *v18; // x19
-  __int64 v19; // x0
-  bool IsStartingMember; // w0
-  int condGroup; // w20
-  int32_t v22; // w29
+  const MethodInfo *v16; // x4
+  void *v17; // x19
+  __int64 v18; // x0
+  __int64 v19; // x1
+  bool IsOpen; // w0
+  int condGroup; // w21
+  int32_t v22; // w28
   bool v23; // w22
   const MethodInfo *v24; // x4
   VoicePlayCondMaster_c *v25; // x0
-  System_String_o *PK; // x19
+  System_String_o *PK; // x29
   _DWORD *v27; // x8
-  void *v28; // x28
+  void *v28; // x19
   __int64 v29; // x9
   int *v30; // x10
   __int64 v31; // x0
   _DWORD *v32; // x8
-  void *v33; // x28
+  void *v33; // x19
   __int64 v34; // x9
   System_Collections_Generic_IReadOnlyDictionary_string__VoicePlayCondEntity__c **v35; // x10
   __int64 v36; // x0
-  VoicePlayCondEntity_o *v37; // x28
+  VoicePlayCondEntity_o *v37; // x29
   int32_t v38; // w2
   const MethodInfo *v39; // x3
-  const MethodInfo *v40; // x1
-  int32_t condType; // w19
-  bool v42; // w8
-  int32_t v43; // w28
-  int32_t targetId; // w22
+  int32_t v40; // w19
+  bool v41; // w8
+  int32_t v42; // w29
+  bool v43; // w22
   int32_t CondValue; // w19
-  bool v46; // w0
-  const MethodInfo *v47; // x1
-  int32_t v48; // w19
-  int32_t v49; // w28
-  int32_t v50; // w22
-  int32_t v51; // w28
-  int32_t v52; // w22
-  int32_t v53; // w28
-  UnityEngine_Object_o *x; // [xsp+10h] [xbp-80h]
+  int32_t condType; // [xsp+4h] [xbp-8Ch]
+  BattleVoicePlayCondArgs_o *battleCondArgsa; // [xsp+8h] [xbp-88h]
+  int32_t targetId; // [xsp+18h] [xbp-78h]
 
-  v12 = voiceId;
-  if ( (byte_4C440C9 & 1) == 0 )
+  v10 = voiceId;
+  if ( (byte_4C57E91 & 1) == 0 )
   {
-    sub_1C37058(&CondType_TypeInfo);
-    sub_1C37058(&Method_DataMasterBase_VoicePlayCondMaster__VoicePlayCondEntity__string__get_lookup__);
-    sub_1C37058(&System_Collections_Generic_IReadOnlyDictionary_string__VoicePlayCondEntity__TypeInfo);
-    sub_1C37058(&Method_System_Collections_Generic_List_CondType_Kind__Contains__);
-    sub_1C37058(&UnityEngine_Object_TypeInfo);
-    sub_1C37058(&VoicePlayCondMaster_TypeInfo);
-    byte_4C440C9 = 1;
+    sub_1C3E564(&CondType_TypeInfo);
+    sub_1C3E564(&Method_DataMasterBase_VoicePlayCondMaster__VoicePlayCondEntity__string__get_lookup__);
+    sub_1C3E564(&System_Collections_Generic_IReadOnlyDictionary_string__VoicePlayCondEntity__TypeInfo);
+    sub_1C3E564(&Method_System_Collections_Generic_List_CondType_Kind__Contains__);
+    sub_1C3E564(&VoicePlayCondMaster_TypeInfo);
+    byte_4C57E91 = 1;
   }
   *condEntity = 0;
-  sub_1C36FFC((CGThumbnailListItem_o *)condEntity, 0, (int32_t)voiceId, (const MethodInfo *)condEntity);
+  sub_1C3E508((CGThumbnailListItem_o *)condEntity, 0, (int32_t)voiceId, (const MethodInfo *)condEntity);
   lookup = VoicePlayCondMaster_TypeInfo;
   if ( !VoicePlayCondMaster_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(VoicePlayCondMaster_TypeInfo);
     lookup = VoicePlayCondMaster_TypeInfo;
   }
-  if ( !v12 || (VOICE_PREFIX_NONE = **((_DWORD **)lookup + 23), (lookup = System_String__Split(v12, 0x5Fu, 0, 0)) == 0) )
-LABEL_67:
-    sub_1C372B4(lookup);
-  v18 = lookup;
+  if ( !v10 || (VOICE_PREFIX_NONE = **((_DWORD **)lookup + 23), (lookup = System_String__Split(v10, 0x5Fu, 0, 0)) == 0) )
+LABEL_50:
+    sub_1C3E7C0(lookup, v13);
+  v17 = lookup;
   if ( *((int *)lookup + 6) >= 2 )
   {
-    v19 = System_Int32__Parse(*((System_String_o **)lookup + 4), 0);
-    if ( *((_DWORD *)v18 + 6) <= 1u )
-      sub_1C372BC(v19);
-    v12 = (System_String_o *)*((_QWORD *)v18 + 5);
-    VOICE_PREFIX_NONE = v19;
+    v18 = System_Int32__Parse(*((System_String_o **)lookup + 4), 0);
+    if ( *((_DWORD *)v17 + 6) <= 1u )
+      sub_1C3E7C8(v18, v19);
+    v10 = (System_String_o *)*((_QWORD *)v17 + 5);
+    VOICE_PREFIX_NONE = v18;
   }
-  IsStartingMember = 1;
+  IsOpen = 1;
   condGroup = 1;
   v22 = 1;
   while ( 1 )
   {
-    v23 = IsStartingMember;
-    if ( VoicePlayCondMaster__IsNotPrefix(this, svtId, v12, v22, v17) )
+    v23 = IsOpen;
+    if ( VoicePlayCondMaster__IsNotPrefix(this, svtId, v10, v22, v16) )
     {
       v25 = VoicePlayCondMaster_TypeInfo;
       if ( !VoicePlayCondMaster_TypeInfo->_2.cctor_finished )
@@ -432,12 +423,12 @@ LABEL_67:
       }
       VOICE_PREFIX_NONE = v25->static_fields->VOICE_PREFIX_NONE;
     }
-    PK = VoicePlayCondEntity__CreatePK(svtId, VOICE_PREFIX_NONE, v12, v22, v24);
+    PK = VoicePlayCondEntity__CreatePK(svtId, VOICE_PREFIX_NONE, v10, v22, v24);
     lookup = DataMasterBase_object__object__object___get_lookup(
                (DataMasterBase_TMaster__TEntity__PKType__o *)this,
-               (const MethodInfo_33A394C *)Method_DataMasterBase_VoicePlayCondMaster__VoicePlayCondEntity__string__get_lookup__);
+               (const MethodInfo_33B5804 *)Method_DataMasterBase_VoicePlayCondMaster__VoicePlayCondEntity__string__get_lookup__);
     if ( !lookup )
-      goto LABEL_67;
+      goto LABEL_50;
     v27 = *(_DWORD **)lookup;
     v28 = lookup;
     v29 = *(unsigned __int16 *)(*(_QWORD *)lookup + 302LL);
@@ -456,15 +447,15 @@ LABEL_67:
     else
     {
 LABEL_20:
-      v31 = sub_1C87870(lookup, System_Collections_Generic_IReadOnlyDictionary_string__VoicePlayCondEntity__TypeInfo, 0);
+      v31 = sub_1C8ED7C(lookup, System_Collections_Generic_IReadOnlyDictionary_string__VoicePlayCondEntity__TypeInfo, 0);
     }
     if ( ((*(__int64 (__fastcall **)(void *, System_String_o *, _QWORD))v31)(v28, PK, *(_QWORD *)(v31 + 8)) & 1) == 0 )
       return v23;
     lookup = DataMasterBase_object__object__object___get_lookup(
                (DataMasterBase_TMaster__TEntity__PKType__o *)this,
-               (const MethodInfo_33A394C *)Method_DataMasterBase_VoicePlayCondMaster__VoicePlayCondEntity__string__get_lookup__);
+               (const MethodInfo_33B5804 *)Method_DataMasterBase_VoicePlayCondMaster__VoicePlayCondEntity__string__get_lookup__);
     if ( !lookup )
-      goto LABEL_67;
+      goto LABEL_50;
     v32 = *(_DWORD **)lookup;
     v33 = lookup;
     v34 = *(unsigned __int16 *)(*(_QWORD *)lookup + 302LL);
@@ -484,20 +475,20 @@ LABEL_20:
     else
     {
 LABEL_28:
-      v36 = sub_1C87870(lookup, System_Collections_Generic_IReadOnlyDictionary_string__VoicePlayCondEntity__TypeInfo, 2);
+      v36 = sub_1C8ED7C(lookup, System_Collections_Generic_IReadOnlyDictionary_string__VoicePlayCondEntity__TypeInfo, 2);
     }
     v37 = (VoicePlayCondEntity_o *)(*(__int64 (__fastcall **)(void *, System_String_o *, _QWORD))v36)(
                                      v33,
                                      PK,
                                      *(_QWORD *)(v36 + 8));
     *condEntity = v37;
-    sub_1C36FFC((CGThumbnailListItem_o *)condEntity, (int32_t)v37, v38, v39);
+    sub_1C3E508((CGThumbnailListItem_o *)condEntity, (int32_t)v37, v38, v39);
     if ( !v37 )
-      goto LABEL_67;
+      goto LABEL_50;
     ++v22;
     if ( condGroup == v37->fields.condGroup )
     {
-      IsStartingMember = 0;
+      IsOpen = 0;
       if ( v23 )
         goto LABEL_35;
     }
@@ -507,70 +498,44 @@ LABEL_28:
       if ( v23 )
         return v23;
 LABEL_35:
-      condType = v37->fields.condType;
+      v40 = v37->fields.condType;
       if ( !disableCondTypeList
-        || (v42 = System_Collections_Generic_List_Int32Enum___Contains(
+        || (v41 = System_Collections_Generic_List_Int32Enum___Contains(
                     (System_Collections_Generic_List_T__o *)disableCondTypeList,
-                    condType,
-                    (const MethodInfo_3788BA4 *)Method_System_Collections_Generic_List_CondType_Kind__Contains__),
-            IsStartingMember = 1,
-            !v42) )
+                    v40,
+                    (const MethodInfo_379AFE0 *)Method_System_Collections_Generic_List_CondType_Kind__Contains__),
+            IsOpen = 1,
+            !v41) )
       {
         if ( userSvtId < 0 )
-          goto LABEL_45;
+          goto LABEL_44;
         if ( !CondType_TypeInfo->_2.cctor_finished )
           j_il2cpp_runtime_class_init_0(CondType_TypeInfo);
-        if ( !CondType__IsLimitCountCondType(condType, 0) )
+        if ( !CondType__IsLimitCountCondType(v40, 0) )
         {
-LABEL_45:
-          if ( genderType >= 1 && condType == 81 )
+LABEL_44:
+          condType = v40;
+          targetId = v37->fields.targetId;
+          v43 = v40 == 81;
+          CondValue = VoicePlayCondEntity__getCondValue(v37, v13);
+          if ( !CondType_TypeInfo->_2.cctor_finished )
+            j_il2cpp_runtime_class_init_0(CondType_TypeInfo);
+          if ( genderType > 0 && v43 )
           {
-            targetId = v37->fields.targetId;
-            CondValue = VoicePlayCondEntity__getCondValue(v37, v40);
-            if ( !CondType_TypeInfo->_2.cctor_finished )
-              j_il2cpp_runtime_class_init_0(CondType_TypeInfo);
             CondType__IsOpen(81, targetId, CondValue, 0, 0, 0);
-            IsStartingMember = v37->fields.targetId == genderType;
+            IsOpen = v37->fields.targetId == genderType;
           }
           else
           {
-            if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-              j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-            v46 = UnityEngine_Object__op_Inequality(x, 0, 0);
-            if ( condType == 216 && v46 )
-            {
-              v48 = v37->fields.targetId;
-              v49 = VoicePlayCondEntity__getCondValue(v37, v47);
-              if ( !CondType_TypeInfo->_2.cctor_finished )
-                j_il2cpp_runtime_class_init_0(CondType_TypeInfo);
-              IsStartingMember = CondType__IsStartingMember(v48, v49, (BattleData_o *)x, 0);
-            }
-            else if ( (unsigned int)(condType - 225) <= 1 )
-            {
-              if ( !battleServantData && battleCondArgs )
-                battleServantData = battleCondArgs->fields._ServantData_k__BackingField;
-              v52 = v37->fields.targetId;
-              v53 = VoicePlayCondEntity__getCondValue(v37, v47);
-              if ( !CondType_TypeInfo->_2.cctor_finished )
-                j_il2cpp_runtime_class_init_0(CondType_TypeInfo);
-              IsStartingMember = CondType__IsOpenBattlePoint(condType, v52, v53, battleServantData, 0);
-            }
-            else
-            {
-              v50 = v37->fields.targetId;
-              v51 = VoicePlayCondEntity__getCondValue(v37, v47);
-              if ( !CondType_TypeInfo->_2.cctor_finished )
-                j_il2cpp_runtime_class_init_0(CondType_TypeInfo);
-              IsStartingMember = CondType__IsOpen(condType, v50, v51, 0, battleCondArgs, 0);
-            }
+            IsOpen = CondType__IsOpen(condType, targetId, CondValue, 0, battleCondArgsa, 0);
           }
         }
         else
         {
-          v43 = VoicePlayCondEntity__getCondValue(v37, v40);
+          v42 = VoicePlayCondEntity__getCondValue(v37, v13);
           if ( !CondType_TypeInfo->_2.cctor_finished )
             j_il2cpp_runtime_class_init_0(CondType_TypeInfo);
-          IsStartingMember = CondType__IsOpenForUsrSvt(condType, v43, userSvtId, 0);
+          IsOpen = CondType__IsOpenForUsrSvt(v40, v42, userSvtId, 0);
         }
       }
     }

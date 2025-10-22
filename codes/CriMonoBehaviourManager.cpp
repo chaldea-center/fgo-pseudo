@@ -3,22 +3,22 @@ void CriMonoBehaviourManager___cctor(const MethodInfo *method)
   System_Collections_Generic_List_object__o *v1; // x19
   struct CriMonoBehaviourManager_StaticFields *static_fields; // x0
 
-  if ( (byte_4C3C7EA & 1) == 0 )
+  if ( (byte_4C5056A & 1) == 0 )
   {
-    sub_1C37058(&CriMonoBehaviourManager_TypeInfo);
-    sub_1C37058(&Method_System_Collections_Generic_List_CriMonoBehaviour___ctor__);
-    sub_1C37058(&System_Collections_Generic_List_CriMonoBehaviour__TypeInfo);
-    byte_4C3C7EA = 1;
+    sub_1C3E564(&CriMonoBehaviourManager_TypeInfo);
+    sub_1C3E564(&Method_System_Collections_Generic_List_CriMonoBehaviour___ctor__);
+    sub_1C3E564(&System_Collections_Generic_List_CriMonoBehaviour__TypeInfo);
+    byte_4C5056A = 1;
   }
   CriMonoBehaviourManager_TypeInfo->static_fields->_instance = 0;
-  sub_1C36FFC(CriMonoBehaviourManager_TypeInfo->static_fields, 0);
-  v1 = (System_Collections_Generic_List_object__o *)sub_1C372A4(System_Collections_Generic_List_CriMonoBehaviour__TypeInfo);
+  sub_1C3E508(CriMonoBehaviourManager_TypeInfo->static_fields, 0);
+  v1 = (System_Collections_Generic_List_object__o *)sub_1C3E7B0(System_Collections_Generic_List_CriMonoBehaviour__TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v1,
-    (const MethodInfo_37A27F0 *)Method_System_Collections_Generic_List_CriMonoBehaviour___ctor__);
+    (const MethodInfo_37B4C2C *)Method_System_Collections_Generic_List_CriMonoBehaviour___ctor__);
   static_fields = CriMonoBehaviourManager_TypeInfo->static_fields;
   static_fields->criMonoBehaviourList = (struct System_Collections_Generic_List_CriMonoBehaviour__o *)v1;
-  sub_1C36FFC(&static_fields->criMonoBehaviourList, v1);
+  sub_1C3E508(&static_fields->criMonoBehaviourList, v1);
 }
 
 
@@ -34,11 +34,11 @@ void CriMonoBehaviourManager__Awake(CriMonoBehaviourManager_o *this, const Metho
   UnityEngine_Object_o *instance; // x20
   CriMonoBehaviourManager_c *v5; // x0
 
-  if ( (byte_4C3C7E7 & 1) == 0 )
+  if ( (byte_4C50567 & 1) == 0 )
   {
-    sub_1C37058(&CriMonoBehaviourManager_TypeInfo);
-    sub_1C37058(&UnityEngine_Object_TypeInfo);
-    byte_4C3C7E7 = 1;
+    sub_1C3E564(&CriMonoBehaviourManager_TypeInfo);
+    sub_1C3E564(&UnityEngine_Object_TypeInfo);
+    byte_4C50567 = 1;
   }
   v3 = CriMonoBehaviourManager_TypeInfo;
   if ( !CriMonoBehaviourManager_TypeInfo->_2.cctor_finished )
@@ -58,13 +58,13 @@ void CriMonoBehaviourManager__Awake(CriMonoBehaviourManager_o *this, const Metho
       v5 = CriMonoBehaviourManager_TypeInfo;
     }
     v5->static_fields->_instance = this;
-    sub_1C36FFC(CriMonoBehaviourManager_TypeInfo->static_fields, this);
+    sub_1C3E508(CriMonoBehaviourManager_TypeInfo->static_fields, this);
   }
   else
   {
     if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-    UnityEngine_Object__Destroy_71266752((UnityEngine_Object_o *)this, 0);
+    UnityEngine_Object__Destroy_71341564((UnityEngine_Object_o *)this, 0);
   }
 }
 
@@ -74,13 +74,14 @@ void CriMonoBehaviourManager__CreateInstance(const MethodInfo *method)
   CriMonoBehaviourManager_c *v1; // x0
   UnityEngine_Object_o *instance; // x19
   UnityEngine_GameObject_o *managerObject; // x0
+  __int64 v4; // x1
 
-  if ( (byte_4C3C7E3 & 1) == 0 )
+  if ( (byte_4C50563 & 1) == 0 )
   {
-    sub_1C37058(&CriMonoBehaviourManager_TypeInfo);
-    sub_1C37058(&Method_UnityEngine_GameObject_AddComponent_CriMonoBehaviourManager___);
-    sub_1C37058(&UnityEngine_Object_TypeInfo);
-    byte_4C3C7E3 = 1;
+    sub_1C3E564(&CriMonoBehaviourManager_TypeInfo);
+    sub_1C3E564(&Method_UnityEngine_GameObject_AddComponent_CriMonoBehaviourManager___);
+    sub_1C3E564(&UnityEngine_Object_TypeInfo);
+    byte_4C50563 = 1;
   }
   v1 = CriMonoBehaviourManager_TypeInfo;
   if ( !CriMonoBehaviourManager_TypeInfo->_2.cctor_finished )
@@ -95,10 +96,10 @@ void CriMonoBehaviourManager__CreateInstance(const MethodInfo *method)
   {
     managerObject = CriWare_Common__get_managerObject(0);
     if ( !managerObject )
-      sub_1C372B4(0);
+      sub_1C3E7C0(0, v4);
     UnityEngine_GameObject__AddComponent_object_(
       managerObject,
-      (const MethodInfo_313F0F0 *)Method_UnityEngine_GameObject_AddComponent_CriMonoBehaviourManager___);
+      (const MethodInfo_3150FE4 *)Method_UnityEngine_GameObject_AddComponent_CriMonoBehaviourManager___);
   }
 }
 
@@ -109,12 +110,12 @@ int32_t CriMonoBehaviourManager__GetIndex(CriMonoBehaviour_o *criMonoBehaviour, 
   void *inited; // x0
   System_Collections_Generic_List_object__o *criMonoBehaviourList; // x8
 
-  if ( (byte_4C3C7E4 & 1) == 0 )
+  if ( (byte_4C50564 & 1) == 0 )
   {
-    sub_1C37058(&CriMonoBehaviourManager_TypeInfo);
-    sub_1C37058(&Method_System_Collections_Generic_List_CriMonoBehaviour__get_Count__);
-    sub_1C37058(&Method_System_Collections_Generic_List_CriMonoBehaviour__get_Item__);
-    byte_4C3C7E4 = 1;
+    sub_1C3E564(&CriMonoBehaviourManager_TypeInfo);
+    sub_1C3E564(&Method_System_Collections_Generic_List_CriMonoBehaviour__get_Count__);
+    sub_1C3E564(&Method_System_Collections_Generic_List_CriMonoBehaviour__get_Item__);
+    byte_4C50564 = 1;
   }
   for ( i = 0; ; ++i )
   {
@@ -127,7 +128,7 @@ int32_t CriMonoBehaviourManager__GetIndex(CriMonoBehaviour_o *criMonoBehaviour, 
     criMonoBehaviourList = *(System_Collections_Generic_List_object__o **)(*((_QWORD *)inited + 23) + 8LL);
     if ( !criMonoBehaviourList )
 LABEL_16:
-      sub_1C372B4(inited);
+      sub_1C3E7C0(inited, method);
     if ( i >= criMonoBehaviourList->fields._size )
       break;
     if ( !*((_DWORD *)inited + 56) )
@@ -140,7 +141,7 @@ LABEL_16:
     inited = System_Collections_Generic_List_object___get_Item(
                criMonoBehaviourList,
                i,
-               (const MethodInfo_37A2D54 *)Method_System_Collections_Generic_List_CriMonoBehaviour__get_Item__);
+               (const MethodInfo_37B5190 *)Method_System_Collections_Generic_List_CriMonoBehaviour__get_Item__);
     if ( !inited || !criMonoBehaviour )
       goto LABEL_16;
     if ( System_Guid__op_Equality(*((System_Guid_o *)inited + 2), criMonoBehaviour->fields._guid_k__BackingField, 0) )
@@ -154,19 +155,22 @@ void CriMonoBehaviourManager__LateUpdate(CriMonoBehaviourManager_o *this, const 
 {
   CriMonoBehaviourManager_c *v2; // x0
   Il2CppObject *criMonoBehaviourList; // x19
+  __int64 v4; // x1
   int32_t i; // w20
-  CriMonoBehaviourManager_c *v5; // x0
-  System_Collections_Generic_List_object__o *v6; // x8
+  CriMonoBehaviourManager_c *v6; // x0
+  System_Collections_Generic_List_object__o *v7; // x8
   __int64 inited; // x0
+  __int64 v9; // x1
   Il2CppObject *Item; // x0
+  __int64 v11; // x1
   bool lockTaken; // [xsp+Ch] [xbp-24h] BYREF
 
-  if ( (byte_4C3C7E9 & 1) == 0 )
+  if ( (byte_4C50569 & 1) == 0 )
   {
-    sub_1C37058(&CriMonoBehaviourManager_TypeInfo);
-    sub_1C37058(&Method_System_Collections_Generic_List_CriMonoBehaviour__get_Count__);
-    sub_1C37058(&Method_System_Collections_Generic_List_CriMonoBehaviour__get_Item__);
-    byte_4C3C7E9 = 1;
+    sub_1C3E564(&CriMonoBehaviourManager_TypeInfo);
+    sub_1C3E564(&Method_System_Collections_Generic_List_CriMonoBehaviour__get_Count__);
+    sub_1C3E564(&Method_System_Collections_Generic_List_CriMonoBehaviour__get_Item__);
+    byte_4C50569 = 1;
   }
   v2 = CriMonoBehaviourManager_TypeInfo;
   if ( !CriMonoBehaviourManager_TypeInfo->_2.cctor_finished )
@@ -176,33 +180,33 @@ void CriMonoBehaviourManager__LateUpdate(CriMonoBehaviourManager_o *this, const 
   }
   criMonoBehaviourList = (Il2CppObject *)v2->static_fields->criMonoBehaviourList;
   lockTaken = 0;
-  System_Threading_Monitor__Enter_65491060(criMonoBehaviourList, &lockTaken, 0);
+  System_Threading_Monitor__Enter_65565872(criMonoBehaviourList, &lockTaken, 0);
   for ( i = 0; ; ++i )
   {
-    v5 = CriMonoBehaviourManager_TypeInfo;
+    v6 = CriMonoBehaviourManager_TypeInfo;
     if ( !CriMonoBehaviourManager_TypeInfo->_2.cctor_finished )
     {
       j_il2cpp_runtime_class_init_0(CriMonoBehaviourManager_TypeInfo);
-      v5 = CriMonoBehaviourManager_TypeInfo;
+      v6 = CriMonoBehaviourManager_TypeInfo;
     }
-    v6 = (System_Collections_Generic_List_object__o *)v5->static_fields->criMonoBehaviourList;
-    if ( !v6 )
-      sub_1C372B4(v5);
-    if ( i >= v6->fields._size )
+    v7 = (System_Collections_Generic_List_object__o *)v6->static_fields->criMonoBehaviourList;
+    if ( !v7 )
+      sub_1C3E7C0(v6, v4);
+    if ( i >= v7->fields._size )
       break;
-    if ( !v5->_2.cctor_finished )
+    if ( !v6->_2.cctor_finished )
     {
-      inited = j_il2cpp_runtime_class_init_0(v5);
-      v6 = (System_Collections_Generic_List_object__o *)CriMonoBehaviourManager_TypeInfo->static_fields->criMonoBehaviourList;
-      if ( !v6 )
-        sub_1C372B4(inited);
+      inited = j_il2cpp_runtime_class_init_0(v6);
+      v7 = (System_Collections_Generic_List_object__o *)CriMonoBehaviourManager_TypeInfo->static_fields->criMonoBehaviourList;
+      if ( !v7 )
+        sub_1C3E7C0(inited, v9);
     }
     Item = System_Collections_Generic_List_object___get_Item(
-             v6,
+             v7,
              i,
-             (const MethodInfo_37A2D54 *)Method_System_Collections_Generic_List_CriMonoBehaviour__get_Item__);
+             (const MethodInfo_37B5190 *)Method_System_Collections_Generic_List_CriMonoBehaviour__get_Item__);
     if ( !Item )
-      sub_1C372B4(0);
+      sub_1C3E7C0(0, v11);
     ((void (__fastcall *)(Il2CppObject *, const MethodInfo *))Item->klass->vtable[7].methodPtr)(
       Item,
       Item->klass->vtable[7].method);
@@ -220,22 +224,23 @@ bool CriMonoBehaviourManager__Register(
   CriMonoBehaviourManager_c *v4; // x0
   Il2CppObject *criMonoBehaviourList; // x19
   const MethodInfo *v6; // x1
-  bool v7; // w21
-  CriMonoBehaviourManager_c *v8; // x0
-  System_Collections_Generic_List_object__o *v9; // x0
+  __int64 v7; // x1
+  bool v8; // w21
+  CriMonoBehaviourManager_c *v9; // x0
+  System_Collections_Generic_List_object__o *v10; // x0
   struct System_Object_array *items; // x8
-  _QWORD *v11; // x9
+  _QWORD *v12; // x9
   __int64 size; // x10
-  Il2CppClass **v13; // x8
+  Il2CppClass **v14; // x8
   bool lockTaken; // [xsp+Ch] [xbp-24h] BYREF
 
-  if ( (byte_4C3C7E5 & 1) == 0 )
+  if ( (byte_4C50565 & 1) == 0 )
   {
-    sub_1C37058(&CriMonoBehaviourManager_TypeInfo);
-    sub_1C37058(&UnityEngine_Debug_TypeInfo);
-    sub_1C37058(&Method_System_Collections_Generic_List_CriMonoBehaviour__Add__);
-    sub_1C37058(&StringLiteral_15903/*"[CRIWARE] Internal: Duplicated CriMonoBehaviour GUID"*/);
-    byte_4C3C7E5 = 1;
+    sub_1C3E564(&CriMonoBehaviourManager_TypeInfo);
+    sub_1C3E564(&UnityEngine_Debug_TypeInfo);
+    sub_1C3E564(&Method_System_Collections_Generic_List_CriMonoBehaviour__Add__);
+    sub_1C3E564(&StringLiteral_15913/*"[CRIWARE] Internal: Duplicated CriMonoBehaviour GUID"*/);
+    byte_4C50565 = 1;
   }
   v4 = CriMonoBehaviourManager_TypeInfo;
   if ( !CriMonoBehaviourManager_TypeInfo->_2.cctor_finished )
@@ -245,52 +250,52 @@ bool CriMonoBehaviourManager__Register(
   }
   criMonoBehaviourList = (Il2CppObject *)v4->static_fields->criMonoBehaviourList;
   lockTaken = 0;
-  System_Threading_Monitor__Enter_65491060(criMonoBehaviourList, &lockTaken, 0);
+  System_Threading_Monitor__Enter_65565872(criMonoBehaviourList, &lockTaken, 0);
   if ( !CriMonoBehaviourManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(CriMonoBehaviourManager_TypeInfo);
   if ( CriMonoBehaviourManager__GetIndex(criMonoBehaviour, v6) < 0 )
   {
-    v8 = CriMonoBehaviourManager_TypeInfo;
+    v9 = CriMonoBehaviourManager_TypeInfo;
     if ( !CriMonoBehaviourManager_TypeInfo->_2.cctor_finished )
     {
       j_il2cpp_runtime_class_init_0(CriMonoBehaviourManager_TypeInfo);
-      v8 = CriMonoBehaviourManager_TypeInfo;
+      v9 = CriMonoBehaviourManager_TypeInfo;
     }
-    v9 = (System_Collections_Generic_List_object__o *)v8->static_fields->criMonoBehaviourList;
-    if ( !v9 )
-      sub_1C372B4(0);
-    items = v9->fields._items;
-    v11 = Method_System_Collections_Generic_List_CriMonoBehaviour__Add__;
-    ++v9->fields._version;
+    v10 = (System_Collections_Generic_List_object__o *)v9->static_fields->criMonoBehaviourList;
+    if ( !v10 )
+      sub_1C3E7C0(0, v7);
+    items = v10->fields._items;
+    v12 = Method_System_Collections_Generic_List_CriMonoBehaviour__Add__;
+    ++v10->fields._version;
     if ( !items )
-      sub_1C372B4(v9);
-    size = v9->fields._size;
+      sub_1C3E7C0(v10, v7);
+    size = v10->fields._size;
     if ( (unsigned int)size >= LODWORD(items->max_length) )
     {
       System_Collections_Generic_List_object___AddWithResize(
-        v9,
+        v10,
         (Il2CppObject *)criMonoBehaviour,
-        *(const MethodInfo_37A3024 **)(*(_QWORD *)(v11[4] + 192LL) + 112LL));
+        *(const MethodInfo_37B5460 **)(*(_QWORD *)(v12[4] + 192LL) + 112LL));
     }
     else
     {
-      v13 = &items->obj.klass + size;
-      v9->fields._size = size + 1;
-      v13[4] = (Il2CppClass *)criMonoBehaviour;
-      sub_1C36FFC(v13 + 4, criMonoBehaviour);
+      v14 = &items->obj.klass + size;
+      v10->fields._size = size + 1;
+      v14[4] = (Il2CppClass *)criMonoBehaviour;
+      sub_1C3E508(v14 + 4, criMonoBehaviour);
     }
-    v7 = 1;
+    v8 = 1;
   }
   else
   {
     if ( !UnityEngine_Debug_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(UnityEngine_Debug_TypeInfo);
-    UnityEngine_Debug__LogWarning((Il2CppObject *)StringLiteral_15903/*"[CRIWARE] Internal: Duplicated CriMonoBehaviour GUID"*/, 0);
-    v7 = 0;
+    UnityEngine_Debug__LogWarning((Il2CppObject *)StringLiteral_15913/*"[CRIWARE] Internal: Duplicated CriMonoBehaviour GUID"*/, 0);
+    v8 = 0;
   }
   if ( lockTaken )
     System_Threading_Monitor__Exit(criMonoBehaviourList, 0);
-  return v7;
+  return v8;
 }
 
 
@@ -299,17 +304,18 @@ bool CriMonoBehaviourManager__UnRegister(CriMonoBehaviour_o *criMonoBehaviour, c
   CriMonoBehaviourManager_c *v3; // x0
   Il2CppObject *criMonoBehaviourList; // x19
   const MethodInfo *v5; // x1
+  __int64 v6; // x1
   int32_t Index; // w20
-  CriMonoBehaviourManager_c *v7; // x0
-  System_Collections_Generic_List_object__o *v8; // x0
-  bool v9; // w21
+  CriMonoBehaviourManager_c *v8; // x0
+  System_Collections_Generic_List_object__o *v9; // x0
+  bool v10; // w21
   bool lockTaken; // [xsp+Ch] [xbp-24h] BYREF
 
-  if ( (byte_4C3C7E6 & 1) == 0 )
+  if ( (byte_4C50566 & 1) == 0 )
   {
-    sub_1C37058(&CriMonoBehaviourManager_TypeInfo);
-    sub_1C37058(&Method_System_Collections_Generic_List_CriMonoBehaviour__RemoveAt__);
-    byte_4C3C7E6 = 1;
+    sub_1C3E564(&CriMonoBehaviourManager_TypeInfo);
+    sub_1C3E564(&Method_System_Collections_Generic_List_CriMonoBehaviour__RemoveAt__);
+    byte_4C50566 = 1;
   }
   v3 = CriMonoBehaviourManager_TypeInfo;
   if ( !CriMonoBehaviourManager_TypeInfo->_2.cctor_finished )
@@ -319,34 +325,34 @@ bool CriMonoBehaviourManager__UnRegister(CriMonoBehaviour_o *criMonoBehaviour, c
   }
   criMonoBehaviourList = (Il2CppObject *)v3->static_fields->criMonoBehaviourList;
   lockTaken = 0;
-  System_Threading_Monitor__Enter_65491060(criMonoBehaviourList, &lockTaken, 0);
+  System_Threading_Monitor__Enter_65565872(criMonoBehaviourList, &lockTaken, 0);
   if ( !CriMonoBehaviourManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(CriMonoBehaviourManager_TypeInfo);
   Index = CriMonoBehaviourManager__GetIndex(criMonoBehaviour, v5);
   if ( Index < 0 )
   {
-    v9 = 0;
+    v10 = 0;
   }
   else
   {
-    v7 = CriMonoBehaviourManager_TypeInfo;
+    v8 = CriMonoBehaviourManager_TypeInfo;
     if ( !CriMonoBehaviourManager_TypeInfo->_2.cctor_finished )
     {
       j_il2cpp_runtime_class_init_0(CriMonoBehaviourManager_TypeInfo);
-      v7 = CriMonoBehaviourManager_TypeInfo;
+      v8 = CriMonoBehaviourManager_TypeInfo;
     }
-    v8 = (System_Collections_Generic_List_object__o *)v7->static_fields->criMonoBehaviourList;
-    if ( !v8 )
-      sub_1C372B4(0);
+    v9 = (System_Collections_Generic_List_object__o *)v8->static_fields->criMonoBehaviourList;
+    if ( !v9 )
+      sub_1C3E7C0(0, v6);
     System_Collections_Generic_List_object___RemoveAt(
-      v8,
+      v9,
       Index,
-      (const MethodInfo_37A47F8 *)Method_System_Collections_Generic_List_CriMonoBehaviour__RemoveAt__);
-    v9 = 1;
+      (const MethodInfo_37B6C34 *)Method_System_Collections_Generic_List_CriMonoBehaviour__RemoveAt__);
+    v10 = 1;
   }
   if ( lockTaken )
     System_Threading_Monitor__Exit(criMonoBehaviourList, 0);
-  return v9;
+  return v10;
 }
 
 
@@ -354,19 +360,22 @@ void CriMonoBehaviourManager__Update(CriMonoBehaviourManager_o *this, const Meth
 {
   CriMonoBehaviourManager_c *v2; // x0
   Il2CppObject *criMonoBehaviourList; // x19
+  __int64 v4; // x1
   int32_t i; // w20
-  CriMonoBehaviourManager_c *v5; // x0
-  System_Collections_Generic_List_object__o *v6; // x8
+  CriMonoBehaviourManager_c *v6; // x0
+  System_Collections_Generic_List_object__o *v7; // x8
   __int64 inited; // x0
+  __int64 v9; // x1
   Il2CppObject *Item; // x0
+  __int64 v11; // x1
   bool lockTaken; // [xsp+Ch] [xbp-24h] BYREF
 
-  if ( (byte_4C3C7E8 & 1) == 0 )
+  if ( (byte_4C50568 & 1) == 0 )
   {
-    sub_1C37058(&CriMonoBehaviourManager_TypeInfo);
-    sub_1C37058(&Method_System_Collections_Generic_List_CriMonoBehaviour__get_Count__);
-    sub_1C37058(&Method_System_Collections_Generic_List_CriMonoBehaviour__get_Item__);
-    byte_4C3C7E8 = 1;
+    sub_1C3E564(&CriMonoBehaviourManager_TypeInfo);
+    sub_1C3E564(&Method_System_Collections_Generic_List_CriMonoBehaviour__get_Count__);
+    sub_1C3E564(&Method_System_Collections_Generic_List_CriMonoBehaviour__get_Item__);
+    byte_4C50568 = 1;
   }
   v2 = CriMonoBehaviourManager_TypeInfo;
   if ( !CriMonoBehaviourManager_TypeInfo->_2.cctor_finished )
@@ -376,33 +385,33 @@ void CriMonoBehaviourManager__Update(CriMonoBehaviourManager_o *this, const Meth
   }
   criMonoBehaviourList = (Il2CppObject *)v2->static_fields->criMonoBehaviourList;
   lockTaken = 0;
-  System_Threading_Monitor__Enter_65491060(criMonoBehaviourList, &lockTaken, 0);
+  System_Threading_Monitor__Enter_65565872(criMonoBehaviourList, &lockTaken, 0);
   for ( i = 0; ; ++i )
   {
-    v5 = CriMonoBehaviourManager_TypeInfo;
+    v6 = CriMonoBehaviourManager_TypeInfo;
     if ( !CriMonoBehaviourManager_TypeInfo->_2.cctor_finished )
     {
       j_il2cpp_runtime_class_init_0(CriMonoBehaviourManager_TypeInfo);
-      v5 = CriMonoBehaviourManager_TypeInfo;
+      v6 = CriMonoBehaviourManager_TypeInfo;
     }
-    v6 = (System_Collections_Generic_List_object__o *)v5->static_fields->criMonoBehaviourList;
-    if ( !v6 )
-      sub_1C372B4(v5);
-    if ( i >= v6->fields._size )
+    v7 = (System_Collections_Generic_List_object__o *)v6->static_fields->criMonoBehaviourList;
+    if ( !v7 )
+      sub_1C3E7C0(v6, v4);
+    if ( i >= v7->fields._size )
       break;
-    if ( !v5->_2.cctor_finished )
+    if ( !v6->_2.cctor_finished )
     {
-      inited = j_il2cpp_runtime_class_init_0(v5);
-      v6 = (System_Collections_Generic_List_object__o *)CriMonoBehaviourManager_TypeInfo->static_fields->criMonoBehaviourList;
-      if ( !v6 )
-        sub_1C372B4(inited);
+      inited = j_il2cpp_runtime_class_init_0(v6);
+      v7 = (System_Collections_Generic_List_object__o *)CriMonoBehaviourManager_TypeInfo->static_fields->criMonoBehaviourList;
+      if ( !v7 )
+        sub_1C3E7C0(inited, v9);
     }
     Item = System_Collections_Generic_List_object___get_Item(
-             v6,
+             v7,
              i,
-             (const MethodInfo_37A2D54 *)Method_System_Collections_Generic_List_CriMonoBehaviour__get_Item__);
+             (const MethodInfo_37B5190 *)Method_System_Collections_Generic_List_CriMonoBehaviour__get_Item__);
     if ( !Item )
-      sub_1C372B4(0);
+      sub_1C3E7C0(0, v11);
     ((void (__fastcall *)(Il2CppObject *, const MethodInfo *))Item->klass->vtable[6].methodPtr)(
       Item,
       Item->klass->vtable[6].method);
@@ -416,10 +425,10 @@ CriMonoBehaviourManager_o *CriMonoBehaviourManager__get_instance(const MethodInf
 {
   CriMonoBehaviourManager_c *inited; // x0
 
-  if ( (byte_4C3C7E2 & 1) == 0 )
+  if ( (byte_4C50562 & 1) == 0 )
   {
-    sub_1C37058(&CriMonoBehaviourManager_TypeInfo);
-    byte_4C3C7E2 = 1;
+    sub_1C3E564(&CriMonoBehaviourManager_TypeInfo);
+    byte_4C50562 = 1;
   }
   inited = CriMonoBehaviourManager_TypeInfo;
   if ( !CriMonoBehaviourManager_TypeInfo->_2.cctor_finished )

@@ -7,19 +7,19 @@ void ScreenShot___ctor(ScreenShot_o *this, const MethodInfo *method)
   int32_t v7; // w2
   const MethodInfo *v8; // x3
 
-  if ( (byte_4C45097 & 1) == 0 )
+  if ( (byte_4C58E63 & 1) == 0 )
   {
-    sub_1C37058(&StringLiteral_12630/*"ScreenshotFolder"*/);
-    sub_1C37058(&StringLiteral_1/*""*/);
-    byte_4C45097 = 1;
+    sub_1C3E564(&StringLiteral_12638/*"ScreenshotFolder"*/);
+    sub_1C3E564(&StringLiteral_1/*""*/);
+    byte_4C58E63 = 1;
   }
-  v5 = StringLiteral_12630/*"ScreenshotFolder"*/;
-  this->fields.folder = (struct System_String_o *)StringLiteral_12630/*"ScreenshotFolder"*/;
-  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.folder, v5, v2, v3);
+  v5 = StringLiteral_12638/*"ScreenshotFolder"*/;
+  this->fields.folder = (struct System_String_o *)StringLiteral_12638/*"ScreenshotFolder"*/;
+  sub_1C3E508((CGThumbnailListItem_o *)&this->fields.folder, v5, v2, v3);
   this->fields.frameRate = 30;
   v6 = StringLiteral_1/*""*/;
   this->fields.realFolder = (struct System_String_o *)StringLiteral_1/*""*/;
-  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.realFolder, v6, v7, v8);
+  sub_1C3E508((CGThumbnailListItem_o *)&this->fields.realFolder, v6, v7, v8);
   this->fields.frameNumber = 1;
   UnityEngine_MonoBehaviour___ctor((UnityEngine_MonoBehaviour_o *)this, 0);
 }
@@ -37,7 +37,7 @@ void ScreenShot__Start(ScreenShot_o *this, const MethodInfo *method)
   sortValue0 = v2->fields.sortValue0;
   v2->fields.sortValue1 = sortValue0;
   v2 = (CGThumbnailListItem_o *)((char *)v2 + 48);
-  sub_1C36FFC(v2, sortValue0, v4, v5);
+  sub_1C3E508(v2, sortValue0, v4, v5);
   System_IO_Directory__CreateDirectory((System_String_o *)v2->klass, 0);
 }
 
@@ -55,18 +55,18 @@ void ScreenShot__Update(ScreenShot_o *this, const MethodInfo *method)
   System_String_o *v11; // x0
   int32_t frameNumber; // [xsp+Ch] [xbp-24h] BYREF
 
-  if ( (byte_4C45096 & 1) == 0 )
+  if ( (byte_4C58E62 & 1) == 0 )
   {
-    sub_1C37058(&int_TypeInfo);
-    sub_1C37058(&StringLiteral_25153/*"{0}/s{1:D04}.png"*/);
-    byte_4C45096 = 1;
+    sub_1C3E564(&int_TypeInfo);
+    sub_1C3E564(&StringLiteral_25173/*"{0}/s{1:D04}.png"*/);
+    byte_4C58E62 = 1;
   }
   if ( UnityEngine_Time__get_time(0) > this->fields.waitTime )
   {
     realFolder = (Il2CppObject *)this->fields.realFolder;
     frameNumber = this->fields.frameNumber;
     v10 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &frameNumber, v3, v4, v5, v6, v7, v8);
-    v11 = System_String__Format_63602948((System_String_o *)StringLiteral_25153/*"{0}/s{1:D04}.png"*/, realFolder, v10, 0);
+    v11 = System_String__Format_63677760((System_String_o *)StringLiteral_25173/*"{0}/s{1:D04}.png"*/, realFolder, v10, 0);
     ++this->fields.frameNumber;
     UnityEngine_ScreenCapture__CaptureScreenshot(v11, 0);
   }

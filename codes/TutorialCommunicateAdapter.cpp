@@ -8,7 +8,7 @@ void TutorialCommunicateAdapter___ctor(
 
   System_Object___ctor((Il2CppObject *)this, 0);
   this->fields.onGetRequest = onGetRequest;
-  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.onGetRequest, (int32_t)onGetRequest, v5, v6);
+  sub_1C3E508((CGThumbnailListItem_o *)&this->fields.onGetRequest, (int32_t)onGetRequest, v5, v6);
 }
 
 
@@ -19,13 +19,13 @@ void TutorialCommunicateAdapter__SendRequest(
 {
   const MethodInfo *v3; // x3
 
-  if ( (byte_4C429D4 & 1) == 0 )
+  if ( (byte_4C5677D & 1) == 0 )
   {
-    sub_1C37058(&Method_ActionExtensions_Call_TutorialCommunicateAdapter___);
-    byte_4C429D4 = 1;
+    sub_1C3E564(&Method_ActionExtensions_Call_TutorialCommunicateAdapter___);
+    byte_4C5677D = 1;
   }
   this->fields._EventTutorialEntity_k__BackingField = entity;
-  sub_1C36FFC(
+  sub_1C3E508(
     (CGThumbnailListItem_o *)&this->fields._EventTutorialEntity_k__BackingField,
     (int32_t)entity,
     (int32_t)method,
@@ -34,7 +34,7 @@ void TutorialCommunicateAdapter__SendRequest(
   ActionExtensions__Call_object_(
     (System_Action_T__o *)this->fields.onGetRequest,
     (Il2CppObject *)this,
-    (const MethodInfo_3034548 *)Method_ActionExtensions_Call_TutorialCommunicateAdapter___);
+    (const MethodInfo_3046360 *)Method_ActionExtensions_Call_TutorialCommunicateAdapter___);
 }
 
 
@@ -66,7 +66,7 @@ void TutorialCommunicateAdapter__set_EventTutorialEntity(
   const MethodInfo *v3; // x3
 
   this->fields._EventTutorialEntity_k__BackingField = value;
-  sub_1C36FFC(
+  sub_1C3E508(
     (CGThumbnailListItem_o *)&this->fields._EventTutorialEntity_k__BackingField,
     (int32_t)value,
     (int32_t)method,

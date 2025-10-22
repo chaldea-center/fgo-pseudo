@@ -1,13 +1,13 @@
 void AiBaseEntity___ctor(AiBaseEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_4C42B61 & 1) == 0 )
+  if ( (byte_4C5690A & 1) == 0 )
   {
-    sub_1C37058(&Method_DataEntityBase_string___ctor__);
-    byte_4C42B61 = 1;
+    sub_1C3E564(&Method_DataEntityBase_string___ctor__);
+    byte_4C5690A = 1;
   }
   DataEntityBase_object____ctor(
     (DataEntityBase_PKType__o *)this,
-    (const MethodInfo_339EC34 *)Method_DataEntityBase_string___ctor__);
+    (const MethodInfo_33B0AEC *)Method_DataEntityBase_string___ctor__);
 }
 
 
@@ -15,10 +15,10 @@ int32_t AiBaseEntity__ChangeNpCountPlayer(AiBaseEntity_o *this, const MethodInfo
 {
   const MethodInfo *v2; // x3
 
-  if ( (byte_4C42B5C & 1) == 0 )
+  if ( (byte_4C56905 & 1) == 0 )
   {
-    sub_1C37058(&StringLiteral_4365/*"ChangeNpCountPlayer"*/);
-    byte_4C42B5C = 1;
+    sub_1C3E564(&StringLiteral_4365/*"ChangeNpCountPlayer"*/);
+    byte_4C56905 = 1;
   }
   return AiBaseEntity__getScriptIntParam(this, (System_String_o *)StringLiteral_4365/*"ChangeNpCountPlayer"*/, 0, v2);
 }
@@ -26,15 +26,15 @@ int32_t AiBaseEntity__ChangeNpCountPlayer(AiBaseEntity_o *this, const MethodInfo
 
 System_String_o *AiBaseEntity__CreatePK(int32_t id, int32_t idx, const MethodInfo *method)
 {
-  if ( (byte_4C42B53 & 1) == 0 )
+  if ( (byte_4C568FC & 1) == 0 )
   {
-    sub_1C37058(&Method_DataEntityBase_CreateMultiplePK_int__int___);
-    byte_4C42B53 = 1;
+    sub_1C3E564(&Method_DataEntityBase_CreateMultiplePK_int__int___);
+    byte_4C568FC = 1;
   }
   return DataEntityBase__CreateMultiplePK_int__int_(
            id,
            idx,
-           (const MethodInfo_30E5DE0 *)Method_DataEntityBase_CreateMultiplePK_int__int___);
+           (const MethodInfo_30F7BF8 *)Method_DataEntityBase_CreateMultiplePK_int__int___);
 }
 
 
@@ -50,10 +50,10 @@ int32_t AiBaseEntity__GetActSelectIndex(AiBaseEntity_o *this, int32_t defIndex, 
 {
   const MethodInfo *v3; // x3
 
-  if ( (byte_4C42B5D & 1) == 0 )
+  if ( (byte_4C56906 & 1) == 0 )
   {
-    sub_1C37058(&StringLiteral_2117/*"ActSelectIndex"*/);
-    byte_4C42B5D = 1;
+    sub_1C3E564(&StringLiteral_2117/*"ActSelectIndex"*/);
+    byte_4C56906 = 1;
   }
   return AiBaseEntity__getScriptIntParam(this, (System_String_o *)StringLiteral_2117/*"ActSelectIndex"*/, defIndex, v3);
 }
@@ -65,12 +65,12 @@ bool AiBaseEntity__IsDeadToEnableUpHate(AiBaseEntity_o *this, bool def, const Me
   int32_t ScriptIntParam; // w0
   bool v7; // w8
 
-  if ( (byte_4C42B5E & 1) == 0 )
+  if ( (byte_4C56907 & 1) == 0 )
   {
-    sub_1C37058(&StringLiteral_20910/*"isDeadToEnableUpHate"*/);
-    byte_4C42B5E = 1;
+    sub_1C3E564(&StringLiteral_20928/*"isDeadToEnableUpHate"*/);
+    byte_4C56907 = 1;
   }
-  ScriptIntParam = AiBaseEntity__getScriptIntParam(this, (System_String_o *)StringLiteral_20910/*"isDeadToEnableUpHate"*/, -1, v3);
+  ScriptIntParam = AiBaseEntity__getScriptIntParam(this, (System_String_o *)StringLiteral_20928/*"isDeadToEnableUpHate"*/, -1, v3);
   v7 = ScriptIntParam == 1;
   if ( ScriptIntParam == -1 )
     return def;
@@ -82,10 +82,10 @@ bool AiBaseEntity__IsForcedActionSpeedAnyTime(AiBaseEntity_o *this, const Method
 {
   const MethodInfo *v2; // x3
 
-  if ( (byte_4C42B59 & 1) == 0 )
+  if ( (byte_4C56902 & 1) == 0 )
   {
-    sub_1C37058(&StringLiteral_6818/*"ForcedActionSpeedAnyTime"*/);
-    byte_4C42B59 = 1;
+    sub_1C3E564(&StringLiteral_6818/*"ForcedActionSpeedAnyTime"*/);
+    byte_4C56902 = 1;
   }
   return AiBaseEntity__getScriptIntParam(this, (System_String_o *)StringLiteral_6818/*"ForcedActionSpeedAnyTime"*/, -1, v2) == 1;
 }
@@ -95,10 +95,10 @@ bool AiBaseEntity__IsForcedStepInSpeedAnyTime(AiBaseEntity_o *this, const Method
 {
   const MethodInfo *v2; // x3
 
-  if ( (byte_4C42B5A & 1) == 0 )
+  if ( (byte_4C56903 & 1) == 0 )
   {
-    sub_1C37058(&StringLiteral_6821/*"ForcedStepInSpeedAnyTime"*/);
-    byte_4C42B5A = 1;
+    sub_1C3E564(&StringLiteral_6821/*"ForcedStepInSpeedAnyTime"*/);
+    byte_4C56903 = 1;
   }
   return AiBaseEntity__getScriptIntParam(this, (System_String_o *)StringLiteral_6821/*"ForcedStepInSpeedAnyTime"*/, -1, v2) > 0;
 }
@@ -108,12 +108,12 @@ bool AiBaseEntity__IsIncludeUnsubState(AiBaseEntity_o *this, const MethodInfo *m
 {
   const MethodInfo *v2; // x3
 
-  if ( (byte_4C42B58 & 1) == 0 )
+  if ( (byte_4C56901 & 1) == 0 )
   {
-    sub_1C37058(&StringLiteral_20748/*"includeUnsubState"*/);
-    byte_4C42B58 = 1;
+    sub_1C3E564(&StringLiteral_20766/*"includeUnsubState"*/);
+    byte_4C56901 = 1;
   }
-  return AiBaseEntity__getScriptIntParam(this, (System_String_o *)StringLiteral_20748/*"includeUnsubState"*/, -1, v2) != -1;
+  return AiBaseEntity__getScriptIntParam(this, (System_String_o *)StringLiteral_20766/*"includeUnsubState"*/, -1, v2) != -1;
 }
 
 
@@ -121,12 +121,12 @@ bool AiBaseEntity__IsResetNpCountPlayer(AiBaseEntity_o *this, const MethodInfo *
 {
   const MethodInfo *v2; // x3
 
-  if ( (byte_4C42B5B & 1) == 0 )
+  if ( (byte_4C56904 & 1) == 0 )
   {
-    sub_1C37058(&StringLiteral_11366/*"ResetNpCountPlayer"*/);
-    byte_4C42B5B = 1;
+    sub_1C3E564(&StringLiteral_11368/*"ResetNpCountPlayer"*/);
+    byte_4C56904 = 1;
   }
-  return AiBaseEntity__getScriptIntParam(this, (System_String_o *)StringLiteral_11366/*"ResetNpCountPlayer"*/, -1, v2) == 1;
+  return AiBaseEntity__getScriptIntParam(this, (System_String_o *)StringLiteral_11368/*"ResetNpCountPlayer"*/, -1, v2) == 1;
 }
 
 
@@ -138,12 +138,12 @@ bool AiBaseEntity__TryGetKeyBattleValue(AiBaseEntity_o *this, int32_t *key, cons
   *key = 0;
   vals = this->fields.vals;
   if ( !vals )
-    sub_1C372B4(this);
+    sub_1C3E7C0(this, key);
   max_length = vals->max_length;
   if ( max_length )
   {
     if ( !(_DWORD)max_length )
-      sub_1C372BC(this);
+      sub_1C3E7C8(this, key);
     *key = vals->m_Items[0];
   }
   return max_length != 0;
@@ -155,10 +155,10 @@ bool AiBaseEntity__TryGetMultiIndividuality(
         System_Int32_array_array **resValues,
         const MethodInfo *method)
 {
-  if ( (byte_4C42B5F & 1) == 0 )
+  if ( (byte_4C56908 & 1) == 0 )
   {
-    sub_1C37058(&StringLiteral_7625/*"Individuality"*/);
-    byte_4C42B5F = 1;
+    sub_1C3E564(&StringLiteral_7625/*"Individuality"*/);
+    byte_4C56908 = 1;
   }
   return EntityScriptUtil__TryGet2DimensionalIntArray(
            this->fields.script,
@@ -173,12 +173,12 @@ bool AiBaseEntity__TryGetOverwriteBaseAiId(AiBaseEntity_o *this, int32_t *baseAi
   const MethodInfo *v3; // x3
   int32_t ScriptIntParam; // w0
 
-  if ( (byte_4C42B60 & 1) == 0 )
+  if ( (byte_4C56909 & 1) == 0 )
   {
-    sub_1C37058(&StringLiteral_17038/*"baseAiId"*/);
-    byte_4C42B60 = 1;
+    sub_1C3E564(&StringLiteral_17054/*"baseAiId"*/);
+    byte_4C56909 = 1;
   }
-  ScriptIntParam = AiBaseEntity__getScriptIntParam(this, (System_String_o *)StringLiteral_17038/*"baseAiId"*/, -1, v3);
+  ScriptIntParam = AiBaseEntity__getScriptIntParam(this, (System_String_o *)StringLiteral_17054/*"baseAiId"*/, -1, v3);
   *baseAiId = ScriptIntParam;
   return ScriptIntParam >= 0;
 }
@@ -200,14 +200,14 @@ System_Int32_array *AiBaseEntity__getAvals(AiBaseEntity_o *this, const MethodInf
 {
   System_Int32_array *result; // x0
 
-  if ( (byte_4C42B55 & 1) == 0 )
+  if ( (byte_4C568FE & 1) == 0 )
   {
-    sub_1C37058(&int___TypeInfo);
-    byte_4C42B55 = 1;
+    sub_1C3E564(&int___TypeInfo);
+    byte_4C568FE = 1;
   }
   result = this->fields.avals;
   if ( !result )
-    return (System_Int32_array *)sub_1C37100(int___TypeInfo, 0);
+    return (System_Int32_array *)sub_1C3E60C(int___TypeInfo, 0);
   return result;
 }
 
@@ -224,6 +224,7 @@ int32_t AiBaseEntity__getChangeAiId(AiBaseEntity_o *this, const MethodInfo *meth
 }
 
 
+// local variable allocation has failed, the output may be wrong!
 int32_t AiBaseEntity__getIndexAval(AiBaseEntity_o *this, int32_t index, const MethodInfo *method)
 {
   struct System_Int32_array *avals; // x8
@@ -236,7 +237,7 @@ int32_t AiBaseEntity__getIndexAval(AiBaseEntity_o *this, int32_t index, const Me
   if ( max_length <= index )
     return 0;
   if ( max_length <= (unsigned int)index )
-    sub_1C372BC(this);
+    sub_1C3E7C8(this, *(_QWORD *)&index);
   return avals->m_Items[index];
 }
 
@@ -257,17 +258,17 @@ int32_t AiBaseEntity__getScriptIntParam(
   const MethodInfo *v13; // x2
 
   v4 = defVal;
-  if ( (byte_4C42B56 & 1) == 0 )
+  if ( (byte_4C568FF & 1) == 0 )
   {
-    sub_1C37058(&long_TypeInfo);
-    byte_4C42B56 = 1;
+    sub_1C3E564(&long_TypeInfo);
+    byte_4C568FF = 1;
   }
   ScriptObj = AiBaseEntity__getScriptObj(this, key, *(const MethodInfo **)&defVal);
   if ( !ScriptObj )
     return v4;
   if ( ScriptObj->klass->_1.element_class == long_TypeInfo->_1.element_class )
     return *(_DWORD *)j_il2cpp_object_unbox_0(ScriptObj, long_TypeInfo, v8, v9);
-  sub_1C37574(ScriptObj);
+  sub_1C3EA80(ScriptObj);
   return (unsigned int)AiBaseEntity__getScriptObj(v11, v12, v13);
 }
 
@@ -277,10 +278,10 @@ Il2CppObject *AiBaseEntity__getScriptObj(AiBaseEntity_o *this, System_String_o *
   Il2CppObject *result; // x0
   Il2CppObject *value; // [xsp+8h] [xbp-28h] BYREF
 
-  if ( (byte_4C42B57 & 1) == 0 )
+  if ( (byte_4C56900 & 1) == 0 )
   {
-    sub_1C37058(&Method_System_Collections_Generic_Dictionary_string__object__TryGetValue__);
-    byte_4C42B57 = 1;
+    sub_1C3E564(&Method_System_Collections_Generic_Dictionary_string__object__TryGetValue__);
+    byte_4C56900 = 1;
   }
   result = (Il2CppObject *)this->fields.script;
   if ( result )
@@ -290,7 +291,7 @@ Il2CppObject *AiBaseEntity__getScriptObj(AiBaseEntity_o *this, System_String_o *
            (System_Collections_Generic_Dictionary_object__object__o *)result,
            (Il2CppObject *)key,
            &value,
-           (const MethodInfo_3464E3C *)Method_System_Collections_Generic_Dictionary_string__object__TryGetValue__) )
+           (const MethodInfo_3476FEC *)Method_System_Collections_Generic_Dictionary_string__object__TryGetValue__) )
     {
       return value;
     }
@@ -323,14 +324,14 @@ System_Int64_array *AiBaseEntity__getVals(AiBaseEntity_o *this, const MethodInfo
 {
   System_Int64_array *result; // x0
 
-  if ( (byte_4C42B54 & 1) == 0 )
+  if ( (byte_4C568FD & 1) == 0 )
   {
-    sub_1C37058(&long___TypeInfo);
-    byte_4C42B54 = 1;
+    sub_1C3E564(&long___TypeInfo);
+    byte_4C568FD = 1;
   }
   result = this->fields.vals;
   if ( !result )
-    return (System_Int64_array *)sub_1C37100(long___TypeInfo, 0);
+    return (System_Int64_array *)sub_1C3E60C(long___TypeInfo, 0);
   return result;
 }
 

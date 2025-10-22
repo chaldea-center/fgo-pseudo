@@ -8,29 +8,30 @@ void CriFsBindRequest___ctor(
 {
   System_Guid_o v11; // kr00_16
   __int64 v12; // x0
-  const MethodInfo *v13; // x3
-  uint32_t v14; // w0
-  const MethodInfo *v15; // x2
-  __int64 v16; // x0
-  System_Exception_o *v17; // x19
-  System_String_o *v18; // x0
-  __int64 v19; // x0
+  __int64 v13; // x1
+  const MethodInfo *v14; // x3
+  uint32_t v15; // w0
+  const MethodInfo *v16; // x2
+  __int64 v17; // x0
+  System_Exception_o *v18; // x19
+  System_String_o *v19; // x0
+  __int64 v20; // x0
 
-  if ( (byte_4C3C508 & 1) == 0 )
+  if ( (byte_4C50288 & 1) == 0 )
   {
-    sub_1C37058(&CriDisposableObjectManager_TypeInfo);
-    byte_4C3C508 = 1;
+    sub_1C3E564(&CriDisposableObjectManager_TypeInfo);
+    byte_4C50288 = 1;
   }
   System_Object___ctor((Il2CppObject *)this, 0);
   v11 = System_Guid__NewGuid(0);
   this->fields._path_k__BackingField = path;
   this->fields.guid = v11;
-  v12 = sub_1C36FFC(&this->fields._path_k__BackingField, path);
+  v12 = sub_1C3E508(&this->fields._path_k__BackingField, path);
   if ( type == 2 )
   {
     if ( !targetBinder )
       goto LABEL_15;
-    v14 = CriFsBinder__BindFile(targetBinder, srcBinder, path, v13);
+    v15 = CriFsBinder__BindFile(targetBinder, srcBinder, path, v14);
   }
   else
   {
@@ -38,40 +39,40 @@ void CriFsBindRequest___ctor(
     {
       if ( type )
       {
-        v16 = sub_1C3706C(&System_Exception_TypeInfo);
-        v17 = (System_Exception_o *)sub_1C372A4(v16);
-        v18 = (System_String_o *)sub_1C3706C(&StringLiteral_7844/*"Invalid bind type."*/);
-        System_Exception___ctor_65309304(v17, v18, 0);
-        v19 = sub_1C3706C(&Method_CriFsBindRequest__ctor__);
-        sub_1C37180(v17, v19);
+        v17 = sub_1C3E578(&System_Exception_TypeInfo);
+        v18 = (System_Exception_o *)sub_1C3E7B0(v17);
+        v19 = (System_String_o *)sub_1C3E578(&StringLiteral_7844/*"Invalid bind type."*/);
+        System_Exception___ctor_65384116(v18, v19, 0);
+        v20 = sub_1C3E578(&Method_CriFsBindRequest__ctor__);
+        sub_1C3E68C(v18, v20);
       }
       if ( targetBinder )
       {
-        v14 = CriFsBinder__BindCpk(targetBinder, srcBinder, path, v13);
+        v15 = CriFsBinder__BindCpk(targetBinder, srcBinder, path, v14);
         goto LABEL_12;
       }
 LABEL_15:
-      sub_1C372B4(v12);
+      sub_1C3E7C0(v12, v13);
     }
     if ( !targetBinder )
       goto LABEL_15;
-    v14 = CriFsBinder__BindDirectory(targetBinder, srcBinder, path, v13);
+    v15 = CriFsBinder__BindDirectory(targetBinder, srcBinder, path, v14);
   }
 LABEL_12:
-  this->fields._bindId_k__BackingField = v14;
+  this->fields._bindId_k__BackingField = v15;
   if ( !CriDisposableObjectManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(CriDisposableObjectManager_TypeInfo);
-  CriDisposableObjectManager__Register((CriDisposable_o *)this, 2, v15);
+  CriDisposableObjectManager__Register((CriDisposable_o *)this, 2, v16);
 }
 
 
 // local variable allocation has failed, the output may be wrong!
 void CriFsBindRequest__Dispose(CriFsBindRequest_o *this, bool disposing, const MethodInfo *method)
 {
-  if ( (byte_4C3C50A & 1) == 0 )
+  if ( (byte_4C5028A & 1) == 0 )
   {
-    sub_1C37058(&CriDisposableObjectManager_TypeInfo);
-    byte_4C3C50A = 1;
+    sub_1C3E564(&CriDisposableObjectManager_TypeInfo);
+    byte_4C5028A = 1;
   }
   if ( !CriDisposableObjectManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(CriDisposableObjectManager_TypeInfo);
@@ -91,10 +92,10 @@ void CriFsBindRequest__Update(CriFsBindRequest_o *this, const MethodInfo *method
   __int64 v4; // x1
   struct CriFsRequest_DoneDelegate_o *doneDelegate_k__BackingField; // x8
 
-  if ( (byte_4C3C509 & 1) == 0 )
+  if ( (byte_4C50289 & 1) == 0 )
   {
-    sub_1C37058(&StringLiteral_6139/*"Error occurred."*/);
-    byte_4C3C509 = 1;
+    sub_1C3E564(&StringLiteral_6139/*"Error occurred."*/);
+    byte_4C50289 = 1;
   }
   if ( !this->fields._isDone_k__BackingField )
   {
@@ -105,7 +106,7 @@ void CriFsBindRequest__Update(CriFsBindRequest_o *this, const MethodInfo *method
       {
         v4 = StringLiteral_6139/*"Error occurred."*/;
         this->fields._error_k__BackingField = (struct System_String_o *)StringLiteral_6139/*"Error occurred."*/;
-        sub_1C36FFC(&this->fields._error_k__BackingField, v4);
+        sub_1C3E508(&this->fields._error_k__BackingField, v4);
       }
       doneDelegate_k__BackingField = this->fields._doneDelegate_k__BackingField;
       this->fields._isDone_k__BackingField = 1;
@@ -140,5 +141,5 @@ void CriFsBindRequest__set_bindId(CriFsBindRequest_o *this, uint32_t value, cons
 void CriFsBindRequest__set_path(CriFsBindRequest_o *this, System_String_o *value, const MethodInfo *method)
 {
   this->fields._path_k__BackingField = value;
-  sub_1C36FFC(&this->fields._path_k__BackingField, value);
+  sub_1C3E508(&this->fields._path_k__BackingField, value);
 }

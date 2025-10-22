@@ -1,13 +1,13 @@
 void ServantSkillReleaseEntity___ctor(ServantSkillReleaseEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_4C43A1C & 1) == 0 )
+  if ( (byte_4C577D3 & 1) == 0 )
   {
-    sub_1C37058(&Method_DataEntityBase_string___ctor__);
-    byte_4C43A1C = 1;
+    sub_1C3E564(&Method_DataEntityBase_string___ctor__);
+    byte_4C577D3 = 1;
   }
   DataEntityBase_object____ctor(
     (DataEntityBase_PKType__o *)this,
-    (const MethodInfo_339EC34 *)Method_DataEntityBase_string___ctor__);
+    (const MethodInfo_33B0AEC *)Method_DataEntityBase_string___ctor__);
 }
 
 
@@ -18,17 +18,17 @@ System_String_o *ServantSkillReleaseEntity__CreatePK(
         int32_t idx,
         const MethodInfo *method)
 {
-  if ( (byte_4C43A1A & 1) == 0 )
+  if ( (byte_4C577D1 & 1) == 0 )
   {
-    sub_1C37058(&Method_DataEntityBase_CreateMultiplePK_int__int__int__int___);
-    byte_4C43A1A = 1;
+    sub_1C3E564(&Method_DataEntityBase_CreateMultiplePK_int__int__int__int___);
+    byte_4C577D1 = 1;
   }
   return DataEntityBase__CreateMultiplePK_int__int__int__int_(
            svtId,
            num,
            priority,
            idx,
-           (const MethodInfo_30E6730 *)Method_DataEntityBase_CreateMultiplePK_int__int__int__int___);
+           (const MethodInfo_30F8548 *)Method_DataEntityBase_CreateMultiplePK_int__int__int__int___);
 }
 
 
@@ -56,78 +56,79 @@ System_String_o *ServantSkillReleaseEntity__getCreatePrimarykey(
 {
   __int64 v5; // x19
   System_String_o *v6; // x0
-  int32_t v7; // w2
-  const MethodInfo *v8; // x3
-  int32_t v9; // w2
-  const MethodInfo *v10; // x3
-  int32_t v11; // w1
-  int32_t v12; // w2
-  const MethodInfo *v13; // x3
-  int32_t v14; // w2
-  const MethodInfo *v15; // x3
-  int32_t v16; // w1
-  int32_t v17; // w2
-  const MethodInfo *v18; // x3
-  int32_t v19; // w2
-  const MethodInfo *v20; // x3
-  int32_t v21; // w1
-  int32_t v22; // w2
-  const MethodInfo *v23; // x3
-  int32_t v25; // [xsp+0h] [xbp-30h] BYREF
-  int32_t v26; // [xsp+4h] [xbp-2Ch] BYREF
-  int32_t v27; // [xsp+8h] [xbp-28h] BYREF
-  int32_t v28; // [xsp+Ch] [xbp-24h] BYREF
+  __int64 v7; // x1
+  int32_t v8; // w2
+  const MethodInfo *v9; // x3
+  int32_t v10; // w2
+  const MethodInfo *v11; // x3
+  int32_t v12; // w1
+  int32_t v13; // w2
+  const MethodInfo *v14; // x3
+  int32_t v15; // w2
+  const MethodInfo *v16; // x3
+  int32_t v17; // w1
+  int32_t v18; // w2
+  const MethodInfo *v19; // x3
+  int32_t v20; // w2
+  const MethodInfo *v21; // x3
+  int32_t v22; // w1
+  int32_t v23; // w2
+  const MethodInfo *v24; // x3
+  int32_t v26; // [xsp+0h] [xbp-30h] BYREF
+  int32_t v27; // [xsp+4h] [xbp-2Ch] BYREF
+  int32_t v28; // [xsp+8h] [xbp-28h] BYREF
+  int32_t v29; // [xsp+Ch] [xbp-24h] BYREF
 
-  v27 = num;
-  v28 = svtId;
-  v25 = idx;
-  v26 = priority;
-  if ( (byte_4C43A19 & 1) == 0 )
+  v28 = num;
+  v29 = svtId;
+  v26 = idx;
+  v27 = priority;
+  if ( (byte_4C577D0 & 1) == 0 )
   {
-    sub_1C37058(&string___TypeInfo);
-    sub_1C37058(&StringLiteral_1457/*":"*/);
-    byte_4C43A19 = 1;
+    sub_1C3E564(&string___TypeInfo);
+    sub_1C3E564(&StringLiteral_1456/*":"*/);
+    byte_4C577D0 = 1;
   }
-  v5 = sub_1C37100(string___TypeInfo, 7);
-  v6 = System_Int32__ToString((int32_t)&v28, 0);
+  v5 = sub_1C3E60C(string___TypeInfo, 7);
+  v6 = System_Int32__ToString((int32_t)&v29, 0);
   if ( !v5 )
-    sub_1C372B4(v6);
+    sub_1C3E7C0(v6, v7);
   if ( !*(_DWORD *)(v5 + 24) )
     goto LABEL_12;
   *(_QWORD *)(v5 + 32) = v6;
-  sub_1C36FFC((CGThumbnailListItem_o *)(v5 + 32), (int32_t)v6, v7, v8);
+  sub_1C3E508((CGThumbnailListItem_o *)(v5 + 32), (int32_t)v6, v8, v9);
   if ( *(_DWORD *)(v5 + 24) <= 1u )
     goto LABEL_12;
-  v11 = StringLiteral_1457/*":"*/;
-  *(_QWORD *)(v5 + 40) = StringLiteral_1457/*":"*/;
-  sub_1C36FFC((CGThumbnailListItem_o *)(v5 + 40), v11, v9, v10);
-  v6 = System_Int32__ToString((int32_t)&v27, 0);
+  v12 = StringLiteral_1456/*":"*/;
+  *(_QWORD *)(v5 + 40) = StringLiteral_1456/*":"*/;
+  sub_1C3E508((CGThumbnailListItem_o *)(v5 + 40), v12, v10, v11);
+  v6 = System_Int32__ToString((int32_t)&v28, 0);
   if ( *(_DWORD *)(v5 + 24) <= 2u )
     goto LABEL_12;
   *(_QWORD *)(v5 + 48) = v6;
-  sub_1C36FFC((CGThumbnailListItem_o *)(v5 + 48), (int32_t)v6, v12, v13);
+  sub_1C3E508((CGThumbnailListItem_o *)(v5 + 48), (int32_t)v6, v13, v14);
   if ( *(_DWORD *)(v5 + 24) <= 3u )
     goto LABEL_12;
-  v16 = StringLiteral_1457/*":"*/;
-  *(_QWORD *)(v5 + 56) = StringLiteral_1457/*":"*/;
-  sub_1C36FFC((CGThumbnailListItem_o *)(v5 + 56), v16, v14, v15);
-  v6 = System_Int32__ToString((int32_t)&v26, 0);
+  v17 = StringLiteral_1456/*":"*/;
+  *(_QWORD *)(v5 + 56) = StringLiteral_1456/*":"*/;
+  sub_1C3E508((CGThumbnailListItem_o *)(v5 + 56), v17, v15, v16);
+  v6 = System_Int32__ToString((int32_t)&v27, 0);
   if ( *(_DWORD *)(v5 + 24) <= 4u
     || (*(_QWORD *)(v5 + 64) = v6,
-        sub_1C36FFC((CGThumbnailListItem_o *)(v5 + 64), (int32_t)v6, v17, v18),
+        sub_1C3E508((CGThumbnailListItem_o *)(v5 + 64), (int32_t)v6, v18, v19),
         *(_DWORD *)(v5 + 24) <= 5u)
-    || (v21 = StringLiteral_1457/*":"*/,
-        *(_QWORD *)(v5 + 72) = StringLiteral_1457/*":"*/,
-        sub_1C36FFC((CGThumbnailListItem_o *)(v5 + 72), v21, v19, v20),
-        v6 = System_Int32__ToString((int32_t)&v25, 0),
+    || (v22 = StringLiteral_1456/*":"*/,
+        *(_QWORD *)(v5 + 72) = StringLiteral_1456/*":"*/,
+        sub_1C3E508((CGThumbnailListItem_o *)(v5 + 72), v22, v20, v21),
+        v6 = System_Int32__ToString((int32_t)&v26, 0),
         *(_DWORD *)(v5 + 24) <= 6u) )
   {
 LABEL_12:
-    sub_1C372BC(v6);
+    sub_1C3E7C8(v6, v7);
   }
   *(_QWORD *)(v5 + 80) = v6;
-  sub_1C36FFC((CGThumbnailListItem_o *)(v5 + 80), (int32_t)v6, v22, v23);
-  return System_String__Concat_63602172((System_String_array *)v5, 0);
+  sub_1C3E508((CGThumbnailListItem_o *)(v5 + 80), (int32_t)v6, v23, v24);
+  return System_String__Concat_63676984((System_String_array *)v5, 0);
 }
 
 
@@ -151,21 +152,21 @@ bool ServantSkillReleaseEntity__isUse(
   int32_t v21; // w20
   int64_t v22; // x19
 
-  if ( (byte_4C43A1B & 1) == 0 )
+  if ( (byte_4C577D2 & 1) == 0 )
   {
-    sub_1C37058(&CondType_TypeInfo);
-    sub_1C37058(&NetworkManager_TypeInfo);
-    byte_4C43A1B = 1;
+    sub_1C3E564(&CondType_TypeInfo);
+    sub_1C3E564(&NetworkManager_TypeInfo);
+    byte_4C577D2 = 1;
   }
   condType = this->fields.condType;
   if ( condType == 1 )
   {
     if ( !NetworkManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
-    if ( !byte_4C3CD62 )
+    if ( !byte_4C50AE2 )
     {
-      sub_1C37058(&NetworkManager_TypeInfo);
-      byte_4C3CD62 = 1;
+      sub_1C3E564(&NetworkManager_TypeInfo);
+      byte_4C50AE2 = 1;
     }
     v14 = NetworkManager_TypeInfo;
     if ( !NetworkManager_TypeInfo->_2.cctor_finished )

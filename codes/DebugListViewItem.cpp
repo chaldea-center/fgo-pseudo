@@ -7,20 +7,21 @@ void DebugListViewItem___ctor(
   int32_t v6; // w2
   const MethodInfo *v7; // x3
   __int64 v8; // x0
-  int32_t v9; // w2
-  const MethodInfo *v10; // x3
-  struct FsmEventData_o *v11; // x8
+  __int64 v9; // x1
+  int32_t v10; // w2
+  const MethodInfo *v11; // x3
+  struct FsmEventData_o *v12; // x8
   struct System_String_o *title; // x1
 
-  ListViewItem___ctor_43804668((ListViewItem_o *)this, index, 0);
+  ListViewItem___ctor_43860152((ListViewItem_o *)this, index, 0);
   this->fields.eventData = eventData;
-  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.eventData, (int32_t)eventData, v6, v7);
-  v11 = this->fields.eventData;
-  if ( !v11 )
-    sub_1C372B4(v8);
-  title = v11->fields.title;
+  sub_1C3E508((CGThumbnailListItem_o *)&this->fields.eventData, (int32_t)eventData, v6, v7);
+  v12 = this->fields.eventData;
+  if ( !v12 )
+    sub_1C3E7C0(v8, v9);
+  title = v12->fields.title;
   this->fields.titleText = title;
-  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.titleText, (int32_t)title, v9, v10);
+  sub_1C3E508((CGThumbnailListItem_o *)&this->fields.titleText, (int32_t)title, v10, v11);
 }
 
 
@@ -38,12 +39,12 @@ void DebugListViewItem__SetIndex(DebugListViewItem_o *this, int32_t value, const
 
 System_String_o *DebugListViewItem__ToString(DebugListViewItem_o *this, const MethodInfo *method)
 {
-  if ( (byte_4C4044D & 1) == 0 )
+  if ( (byte_4C541EA & 1) == 0 )
   {
-    sub_1C37058(&StringLiteral_19158/*"eventType "*/);
-    byte_4C4044D = 1;
+    sub_1C3E564(&StringLiteral_19176/*"eventType "*/);
+    byte_4C541EA = 1;
   }
-  return System_String__Concat_63561656((System_String_o *)StringLiteral_19158/*"eventType "*/, this->fields.titleText, 0);
+  return System_String__Concat_63636468((System_String_o *)StringLiteral_19176/*"eventType "*/, this->fields.titleText, 0);
 }
 
 
@@ -56,11 +57,11 @@ DebugListViewObject_o *DebugListViewItem__getDebugListViewObject(DebugListViewIt
   DebugListViewItem_o *v7; // x0
   const MethodInfo *v8; // x1
 
-  if ( (byte_4C4044C & 1) == 0 )
+  if ( (byte_4C541E9 & 1) == 0 )
   {
-    sub_1C37058(&DebugListViewObject_TypeInfo);
-    sub_1C37058(&UnityEngine_Object_TypeInfo);
-    byte_4C4044C = 1;
+    sub_1C3E564(&DebugListViewObject_TypeInfo);
+    sub_1C3E564(&UnityEngine_Object_TypeInfo);
+    byte_4C541E9 = 1;
   }
   viewObject = (UnityEngine_Object_o *)this->fields.viewObject;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -76,7 +77,7 @@ DebugListViewObject_o *DebugListViewItem__getDebugListViewObject(DebugListViewIt
       if ( result->klass->_2.naturalAligment < (unsigned int)naturalAligment
         || (DebugListViewObject_c *)result->klass->_2.typeHierarchy[naturalAligment - 1] != DebugListViewObject_TypeInfo )
       {
-        sub_1C37574(result);
+        sub_1C3EA80(result);
         return (DebugListViewObject_o *)DebugListViewItem__ToString(v7, v8);
       }
     }
@@ -91,7 +92,7 @@ System_String_o *DebugListViewItem__get_EventName(DebugListViewItem_o *this, con
 
   eventData = this->fields.eventData;
   if ( !eventData )
-    sub_1C372B4(this);
+    sub_1C3E7C0(this, method);
   return eventData->fields.eventData;
 }
 
@@ -107,5 +108,5 @@ void DebugListViewItem__set_TitleText(DebugListViewItem_o *this, System_String_o
   const MethodInfo *v3; // x3
 
   this->fields.titleText = value;
-  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.titleText, (int32_t)value, (int32_t)method, v3);
+  sub_1C3E508((CGThumbnailListItem_o *)&this->fields.titleText, (int32_t)value, (int32_t)method, v3);
 }

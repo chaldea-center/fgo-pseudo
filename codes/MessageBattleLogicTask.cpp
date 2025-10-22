@@ -13,34 +13,35 @@ BattleActionData_o *MessageBattleLogicTask__CreateInitActionData(
 {
   BattleActionData_o *v5; // x21
   __int64 v6; // x0
+  __int64 v7; // x1
   struct System_Int32_array *actorIdlist; // x8
-  int v8; // w8
+  int v9; // w8
   BattleActionData_o *result; // x0
 
-  if ( (byte_4C46265 & 1) == 0 )
+  if ( (byte_4C5A05A & 1) == 0 )
   {
-    sub_1C37058(&BattleActionData_TypeInfo);
-    byte_4C46265 = 1;
+    sub_1C3E564(&BattleActionData_TypeInfo);
+    byte_4C5A05A = 1;
   }
-  v5 = (BattleActionData_o *)sub_1C372A4(BattleActionData_TypeInfo);
+  v5 = (BattleActionData_o *)sub_1C3E7B0(BattleActionData_TypeInfo);
   BattleActionData___ctor(v5, 0);
   actorIdlist = this->fields.actorIdlist;
   if ( actorIdlist )
   {
     if ( !LODWORD(actorIdlist->max_length) )
-      sub_1C372BC(v6);
-    v8 = actorIdlist->m_Items[0];
+      sub_1C3E7C8(v6, v7);
+    v9 = actorIdlist->m_Items[0];
     if ( !v5 )
 LABEL_10:
-      sub_1C372B4(v6);
+      sub_1C3E7C0(v6, v7);
   }
   else
   {
-    v8 = -1;
+    v9 = -1;
     if ( !v5 )
       goto LABEL_10;
   }
-  v5->fields.actorId = v8;
+  v5->fields.actorId = v9;
   if ( !msgEnt )
     goto LABEL_10;
   result = v5;
@@ -58,7 +59,7 @@ void MessageBattleLogicTask__Init(
         const MethodInfo *method)
 {
   if ( !aiActEnt || (this->fields.isMsgGroup = aiActEnt->fields.type == 73, !aiEnt) )
-    sub_1C372B4(this);
+    sub_1C3E7C0(this, aiActEnt);
   this->fields.value = AiBaseEntity__getActionValue(aiEnt, 0);
 }
 
@@ -82,11 +83,11 @@ BattleActionData_o *MessageBattleLogicTask__MakeActionData(
   const MethodInfo *v15; // x2
 
   v4 = this;
-  if ( (byte_4C46264 & 1) == 0 )
+  if ( (byte_4C5A059 & 1) == 0 )
   {
-    sub_1C37058(&Method_DataManager_GetMaster_BattleMessageMaster___);
-    this = (MessageBattleLogicTask_o *)sub_1C37058(&DataManager_TypeInfo);
-    byte_4C46264 = 1;
+    sub_1C3E564(&Method_DataManager_GetMaster_BattleMessageMaster___);
+    this = (MessageBattleLogicTask_o *)sub_1C3E564(&DataManager_TypeInfo);
+    byte_4C5A059 = 1;
   }
   if ( v4->fields.isMsgGroup )
   {
@@ -106,10 +107,10 @@ BattleActionData_o *MessageBattleLogicTask__MakeActionData(
   }
   if ( !DataManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-  this = (MessageBattleLogicTask_o *)DataManager__GetMaster_object_((const MethodInfo_30E7C04 *)Method_DataManager_GetMaster_BattleMessageMaster___);
+  this = (MessageBattleLogicTask_o *)DataManager__GetMaster_object_((const MethodInfo_30F9A1C *)Method_DataManager_GetMaster_BattleMessageMaster___);
   if ( !this )
 LABEL_31:
-    sub_1C372B4(this);
+    sub_1C3E7C0(this, logic);
   Entities = BattleMessageMaster__GetEntities((BattleMessageMaster_o *)this, value, 0);
   this = (MessageBattleLogicTask_o *)BasicHelper__IsNullOrEmpty((System_Collections_ICollection_o *)Entities, 0);
   if ( ((unsigned __int8)this & 1) == 0 )
@@ -118,7 +119,7 @@ LABEL_31:
     {
       if ( !LODWORD(Entities->max_length) )
 LABEL_32:
-        sub_1C372BC(this);
+        sub_1C3E7C8(this, logic);
       this = (MessageBattleLogicTask_o *)MessageBattleLogicTask__CreateInitActionData(v4, Entities->m_Items[0], v8);
       if ( logic )
       {
@@ -164,7 +165,7 @@ LABEL_27:
           this = (MessageBattleLogicTask_o *)logic->fields.perf;
           if ( !this )
             goto LABEL_31;
-          BattlePerformance__addActionData_45067044((BattlePerformance_o *)this, InitActionData, 0);
+          BattlePerformance__addActionData_45122800((BattlePerformance_o *)this, InitActionData, 0);
           InitActionData = MessageBattleLogicTask__CreateInitActionData(v4, v13, v15);
 LABEL_26:
           this = (MessageBattleLogicTask_o *)BattleLogic__get_ParseBattleMsg(logic, 0);
@@ -176,7 +177,7 @@ LABEL_28:
         this = (MessageBattleLogicTask_o *)logic->fields.perf;
         if ( this )
         {
-          BattlePerformance__addActionData_45067044((BattlePerformance_o *)this, InitActionData, 0);
+          BattlePerformance__addActionData_45122800((BattlePerformance_o *)this, InitActionData, 0);
           return 0;
         }
       }

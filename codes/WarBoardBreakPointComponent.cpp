@@ -39,59 +39,59 @@ void WarBoardBreakPointComponent___cctor(const MethodInfo *method)
   int32_t v37; // w2
   const MethodInfo *v38; // x3
 
-  if ( (byte_4C4081D & 1) == 0 )
+  if ( (byte_4C545BA & 1) == 0 )
   {
-    sub_1C37058(&WarBoardBreakPointComponent_TypeInfo);
-    sub_1C37058(&StringLiteral_8953/*"MasterPoint_recharge_effect_1"*/);
-    sub_1C37058(&StringLiteral_17419/*"break_on_boss"*/);
-    sub_1C37058(&StringLiteral_21467/*"master_gauge_off_{0}"*/);
-    sub_1C37058(&StringLiteral_17417/*"break_off_boss"*/);
-    sub_1C37058(&StringLiteral_17418/*"break_on"*/);
-    sub_1C37058(&StringLiteral_17416/*"break_off"*/);
-    sub_1C37058(&StringLiteral_24727/*"wall_gauge_{0}"*/);
-    sub_1C37058(&StringLiteral_21468/*"master_gauge_{0}"*/);
-    sub_1C37058(&StringLiteral_3221/*"BreakPoint_effect_{0}"*/);
-    sub_1C37058(&StringLiteral_8952/*"MasterPoint_effect_{0}"*/);
-    byte_4C4081D = 1;
+    sub_1C3E564(&WarBoardBreakPointComponent_TypeInfo);
+    sub_1C3E564(&StringLiteral_8953/*"MasterPoint_recharge_effect_1"*/);
+    sub_1C3E564(&StringLiteral_17435/*"break_on_boss"*/);
+    sub_1C3E564(&StringLiteral_21485/*"master_gauge_off_{0}"*/);
+    sub_1C3E564(&StringLiteral_17433/*"break_off_boss"*/);
+    sub_1C3E564(&StringLiteral_17434/*"break_on"*/);
+    sub_1C3E564(&StringLiteral_17432/*"break_off"*/);
+    sub_1C3E564(&StringLiteral_24747/*"wall_gauge_{0}"*/);
+    sub_1C3E564(&StringLiteral_21486/*"master_gauge_{0}"*/);
+    sub_1C3E564(&StringLiteral_3221/*"BreakPoint_effect_{0}"*/);
+    sub_1C3E564(&StringLiteral_8952/*"MasterPoint_effect_{0}"*/);
+    byte_4C545BA = 1;
   }
-  WarBoardBreakPointComponent_TypeInfo->static_fields->BreakPointOnImageName = (struct System_String_o *)StringLiteral_17418/*"break_on"*/;
-  sub_1C36FFC((CGThumbnailListItem_o *)WarBoardBreakPointComponent_TypeInfo->static_fields, StringLiteral_17418/*"break_on"*/, v1, v2);
-  v3 = StringLiteral_17416/*"break_off"*/;
+  WarBoardBreakPointComponent_TypeInfo->static_fields->BreakPointOnImageName = (struct System_String_o *)StringLiteral_17434/*"break_on"*/;
+  sub_1C3E508((CGThumbnailListItem_o *)WarBoardBreakPointComponent_TypeInfo->static_fields, StringLiteral_17434/*"break_on"*/, v1, v2);
+  v3 = StringLiteral_17432/*"break_off"*/;
   static_fields = WarBoardBreakPointComponent_TypeInfo->static_fields;
-  static_fields->BreakPointOffImageName = (struct System_String_o *)StringLiteral_17416/*"break_off"*/;
-  sub_1C36FFC((CGThumbnailListItem_o *)&static_fields->BreakPointOffImageName, v3, v5, v6);
-  v7 = StringLiteral_17419/*"break_on_boss"*/;
+  static_fields->BreakPointOffImageName = (struct System_String_o *)StringLiteral_17432/*"break_off"*/;
+  sub_1C3E508((CGThumbnailListItem_o *)&static_fields->BreakPointOffImageName, v3, v5, v6);
+  v7 = StringLiteral_17435/*"break_on_boss"*/;
   v8 = WarBoardBreakPointComponent_TypeInfo->static_fields;
-  v8->EnemyBreakPointOnImageName = (struct System_String_o *)StringLiteral_17419/*"break_on_boss"*/;
-  sub_1C36FFC((CGThumbnailListItem_o *)&v8->EnemyBreakPointOnImageName, v7, v9, v10);
-  v11 = StringLiteral_17417/*"break_off_boss"*/;
+  v8->EnemyBreakPointOnImageName = (struct System_String_o *)StringLiteral_17435/*"break_on_boss"*/;
+  sub_1C3E508((CGThumbnailListItem_o *)&v8->EnemyBreakPointOnImageName, v7, v9, v10);
+  v11 = StringLiteral_17433/*"break_off_boss"*/;
   v12 = WarBoardBreakPointComponent_TypeInfo->static_fields;
-  v12->EnemyBreakPointOffImageName = (struct System_String_o *)StringLiteral_17417/*"break_off_boss"*/;
-  sub_1C36FFC((CGThumbnailListItem_o *)&v12->EnemyBreakPointOffImageName, v11, v13, v14);
+  v12->EnemyBreakPointOffImageName = (struct System_String_o *)StringLiteral_17433/*"break_off_boss"*/;
+  sub_1C3E508((CGThumbnailListItem_o *)&v12->EnemyBreakPointOffImageName, v11, v13, v14);
   v15 = StringLiteral_3221/*"BreakPoint_effect_{0}"*/;
   v16 = WarBoardBreakPointComponent_TypeInfo->static_fields;
   v16->BreakPointEffectName = (struct System_String_o *)StringLiteral_3221/*"BreakPoint_effect_{0}"*/;
-  sub_1C36FFC((CGThumbnailListItem_o *)&v16->BreakPointEffectName, v15, v17, v18);
-  v19 = StringLiteral_21468/*"master_gauge_{0}"*/;
+  sub_1C3E508((CGThumbnailListItem_o *)&v16->BreakPointEffectName, v15, v17, v18);
+  v19 = StringLiteral_21486/*"master_gauge_{0}"*/;
   v20 = WarBoardBreakPointComponent_TypeInfo->static_fields;
-  v20->MasterPointOnImageName = (struct System_String_o *)StringLiteral_21468/*"master_gauge_{0}"*/;
-  sub_1C36FFC((CGThumbnailListItem_o *)&v20->MasterPointOnImageName, v19, v21, v22);
-  v23 = StringLiteral_21467/*"master_gauge_off_{0}"*/;
+  v20->MasterPointOnImageName = (struct System_String_o *)StringLiteral_21486/*"master_gauge_{0}"*/;
+  sub_1C3E508((CGThumbnailListItem_o *)&v20->MasterPointOnImageName, v19, v21, v22);
+  v23 = StringLiteral_21485/*"master_gauge_off_{0}"*/;
   v24 = WarBoardBreakPointComponent_TypeInfo->static_fields;
-  v24->MasterPointOffImageName = (struct System_String_o *)StringLiteral_21467/*"master_gauge_off_{0}"*/;
-  sub_1C36FFC((CGThumbnailListItem_o *)&v24->MasterPointOffImageName, v23, v25, v26);
+  v24->MasterPointOffImageName = (struct System_String_o *)StringLiteral_21485/*"master_gauge_off_{0}"*/;
+  sub_1C3E508((CGThumbnailListItem_o *)&v24->MasterPointOffImageName, v23, v25, v26);
   v27 = StringLiteral_8952/*"MasterPoint_effect_{0}"*/;
   v28 = WarBoardBreakPointComponent_TypeInfo->static_fields;
   v28->MasterPointEffectName = (struct System_String_o *)StringLiteral_8952/*"MasterPoint_effect_{0}"*/;
-  sub_1C36FFC((CGThumbnailListItem_o *)&v28->MasterPointEffectName, v27, v29, v30);
+  sub_1C3E508((CGThumbnailListItem_o *)&v28->MasterPointEffectName, v27, v29, v30);
   v31 = StringLiteral_8953/*"MasterPoint_recharge_effect_1"*/;
   v32 = WarBoardBreakPointComponent_TypeInfo->static_fields;
   v32->MasterPointRechargeEffectName = (struct System_String_o *)StringLiteral_8953/*"MasterPoint_recharge_effect_1"*/;
-  sub_1C36FFC((CGThumbnailListItem_o *)&v32->MasterPointRechargeEffectName, v31, v33, v34);
+  sub_1C3E508((CGThumbnailListItem_o *)&v32->MasterPointRechargeEffectName, v31, v33, v34);
   v35 = WarBoardBreakPointComponent_TypeInfo->static_fields;
-  v36 = StringLiteral_24727/*"wall_gauge_{0}"*/;
-  v35->wallPointImageName = (struct System_String_o *)StringLiteral_24727/*"wall_gauge_{0}"*/;
-  sub_1C36FFC((CGThumbnailListItem_o *)&v35->wallPointImageName, v36, v37, v38);
+  v36 = StringLiteral_24747/*"wall_gauge_{0}"*/;
+  v35->wallPointImageName = (struct System_String_o *)StringLiteral_24747/*"wall_gauge_{0}"*/;
+  sub_1C3E508((CGThumbnailListItem_o *)&v35->wallPointImageName, v36, v37, v38);
 }
 
 
@@ -124,11 +124,11 @@ System_String_o *WarBoardBreakPointComponent__GetBreakEffectName(
   int v20; // [xsp+8h] [xbp-28h] BYREF
   int v21; // [xsp+Ch] [xbp-24h] BYREF
 
-  if ( (byte_4C40816 & 1) == 0 )
+  if ( (byte_4C545B3 & 1) == 0 )
   {
-    sub_1C37058(&int_TypeInfo);
-    sub_1C37058(&WarBoardBreakPointComponent_TypeInfo);
-    byte_4C40816 = 1;
+    sub_1C3E564(&int_TypeInfo);
+    sub_1C3E564(&WarBoardBreakPointComponent_TypeInfo);
+    byte_4C545B3 = 1;
   }
   if ( this->fields.isMaster || this->fields.isThirdForce )
   {
@@ -192,11 +192,11 @@ System_String_o *WarBoardBreakPointComponent__GetImageName(
   struct WarBoardBreakPointComponent_StaticFields *static_fields; // x8
   int32_t v23; // [xsp+Ch] [xbp-24h] BYREF
 
-  if ( (byte_4C40815 & 1) == 0 )
+  if ( (byte_4C545B2 & 1) == 0 )
   {
-    sub_1C37058(&int_TypeInfo);
-    sub_1C37058(&WarBoardBreakPointComponent_TypeInfo);
-    byte_4C40815 = 1;
+    sub_1C3E564(&int_TypeInfo);
+    sub_1C3E564(&WarBoardBreakPointComponent_TypeInfo);
+    byte_4C545B2 = 1;
   }
   if ( !isActiveSprite )
   {
@@ -283,20 +283,21 @@ void WarBoardBreakPointComponent__Initialize(
   bool v12; // w25
   bool v13; // w24
   UnityEngine_Object_o *activeObject; // x22
-  UIWidget_o *v15; // x0
-  const MethodInfo *v16; // x3
+  __int64 v15; // x1
+  UIWidget_o *v16; // x0
+  const MethodInfo *v17; // x3
   UnityEngine_Object_o *deactiveObject; // x22
-  const MethodInfo *v18; // x3
+  const MethodInfo *v19; // x3
   UnityEngine_Object_o *baseObject; // x22
-  const MethodInfo *v20; // x3
+  const MethodInfo *v21; // x3
 
   v11 = isMaster;
   v12 = isEnemyServant;
   v13 = isThirdForce;
-  if ( (byte_4C40817 & 1) == 0 )
+  if ( (byte_4C545B4 & 1) == 0 )
   {
-    sub_1C37058(&UnityEngine_Object_TypeInfo);
-    byte_4C40817 = 1;
+    sub_1C3E564(&UnityEngine_Object_TypeInfo);
+    byte_4C545B4 = 1;
   }
   this->fields.isMaster = v11;
   this->fields.isEnemyServant = v12;
@@ -307,41 +308,41 @@ void WarBoardBreakPointComponent__Initialize(
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   if ( UnityEngine_Object__op_Inequality(activeObject, 0, 0) )
   {
-    v15 = (UIWidget_o *)this->fields.activeObject;
-    if ( !v15 )
+    v16 = (UIWidget_o *)this->fields.activeObject;
+    if ( !v16 )
       goto LABEL_20;
-    UIWidget__set_depth(v15, depth + 1, 0);
-    WarBoardBreakPointComponent__SetChangeBreakPoint(this, this->fields.activeObject, 1, v16);
+    UIWidget__set_depth(v16, depth + 1, 0);
+    WarBoardBreakPointComponent__SetChangeBreakPoint(this, this->fields.activeObject, 1, v17);
   }
   deactiveObject = (UnityEngine_Object_o *)this->fields.deactiveObject;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   if ( UnityEngine_Object__op_Inequality(deactiveObject, 0, 0) )
   {
-    v15 = (UIWidget_o *)this->fields.deactiveObject;
-    if ( !v15 )
+    v16 = (UIWidget_o *)this->fields.deactiveObject;
+    if ( !v16 )
       goto LABEL_20;
-    UIWidget__set_depth(v15, depth + 1, 0);
-    WarBoardBreakPointComponent__SetChangeBreakPoint(this, this->fields.deactiveObject, 0, v18);
+    UIWidget__set_depth(v16, depth + 1, 0);
+    WarBoardBreakPointComponent__SetChangeBreakPoint(this, this->fields.deactiveObject, 0, v19);
   }
   baseObject = (UnityEngine_Object_o *)this->fields.baseObject;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   if ( UnityEngine_Object__op_Inequality(baseObject, 0, 0) )
   {
-    v15 = (UIWidget_o *)this->fields.baseObject;
-    if ( v15 )
+    v16 = (UIWidget_o *)this->fields.baseObject;
+    if ( v16 )
     {
-      UIWidget__set_depth(v15, depth, 0);
+      UIWidget__set_depth(v16, depth, 0);
       if ( !isThirdForce )
-        WarBoardBreakPointComponent__SetChangeBreakPoint(this, this->fields.baseObject, 0, v20);
+        WarBoardBreakPointComponent__SetChangeBreakPoint(this, this->fields.baseObject, 0, v21);
       goto LABEL_19;
     }
 LABEL_20:
-    sub_1C372B4(v15);
+    sub_1C3E7C0(v16, v15);
   }
 LABEL_19:
-  WarBoardBreakPointComponent__SetActive(this, this->fields.startState, 0, v20);
+  WarBoardBreakPointComponent__SetActive(this, this->fields.startState, 0, v21);
 }
 
 
@@ -354,62 +355,64 @@ void WarBoardBreakPointComponent__OnBreak(
   Il2CppObject *Instance; // x22
   const MethodInfo *v8; // x1
   char *BreakEffectName; // x0
+  __int64 v10; // x1
   Il2CppObject *CommonEffectAsset_object; // x22
   UnityEngine_Transform_o *transform; // x23
-  UnityEngine_GameObject_o *v12; // x23
-  int32_t v13; // w2
-  const MethodInfo *v14; // x3
-  WarBoardCommonEffectPerformance_o *v15; // x0
-  WarBoardCommonEffectPerformance_o *v16; // x22
+  UnityEngine_GameObject_o *v13; // x23
+  int32_t v14; // w2
+  const MethodInfo *v15; // x3
+  WarBoardCommonEffectPerformance_o *v16; // x0
+  WarBoardCommonEffectPerformance_o *v17; // x22
   System_Delegate_o **p_StartCallback; // x23
-  System_Delegate_o *v18; // x0
-  int32_t v19; // w2
-  const MethodInfo *v20; // x3
-  WarBoardTaskBase_TaskCallback_c *v21; // x8
-  WarBoardTaskBase_TaskCallback_c *v22; // x1
+  System_Delegate_o *v19; // x0
+  int32_t v20; // w2
+  const MethodInfo *v21; // x3
+  WarBoardTaskBase_TaskCallback_c *v22; // x8
+  WarBoardTaskBase_TaskCallback_c *v23; // x1
   System_Delegate_o *EndCallback; // x23
-  WarBoardTaskBase_TaskCallback_o *v24; // x24
-  System_Delegate_o *v25; // x0
-  int32_t v26; // w2
-  const MethodInfo *v27; // x3
-  WarBoardTaskBase_TaskCallback_c *v28; // x1
-  int32_t v29; // w2
-  const MethodInfo *v30; // x3
+  WarBoardTaskBase_TaskCallback_o *v25; // x24
+  System_Delegate_o *v26; // x0
+  int32_t v27; // w2
+  const MethodInfo *v28; // x3
+  WarBoardTaskBase_TaskCallback_c *v29; // x1
+  int32_t v30; // w2
+  const MethodInfo *v31; // x3
   struct WarBoardTaskBase_array *items; // x8
-  _QWORD *v32; // x9
+  _QWORD *v33; // x9
   __int64 size; // x10
-  Il2CppClass **v34; // x0
-  Il2CppObject *v35; // x19
-  char *v36; // x20
-  __int64 v37; // x0
-  int32_t v38; // w2
-  const MethodInfo *v39; // x3
-  __int64 v40; // x0
-  System_Nullable_Vector3__o v41; // 0:x3.16
-  System_Nullable_Vector3__o v42; // 0:x5.16
+  Il2CppClass **v35; // x0
+  Il2CppObject *v36; // x19
+  char *v37; // x20
+  __int64 v38; // x0
+  __int64 v39; // x1
+  int32_t v40; // w2
+  const MethodInfo *v41; // x3
+  __int64 v42; // x0
+  System_Nullable_Vector3__o v43; // 0:x3.16
+  System_Nullable_Vector3__o v44; // 0:x5.16
 
-  if ( (byte_4C40818 & 1) == 0 )
+  if ( (byte_4C545B5 & 1) == 0 )
   {
-    sub_1C37058(&Method_UnityEngine_GameObject_GetComponent_WarBoardBreakPointEffectComponent___);
-    sub_1C37058(&Method_System_Collections_Generic_List_WarBoardTaskBase__Add__);
-    sub_1C37058(&Method_UnityEngine_Object_Instantiate_GameObject____78192880);
-    sub_1C37058(&UnityEngine_Object_TypeInfo);
-    sub_1C37058(&Method_SingletonMonoBehaviour_WarBoardManager__get_Instance__);
-    sub_1C37058(&WarBoardTaskBase_TaskCallback_TypeInfo);
-    sub_1C37058(&Method_WarBoardBreakPointComponent__OnBreak_b__26_0__);
-    sub_1C37058(&WarBoardCommonEffectPerformance_TypeInfo);
-    sub_1C37058(&Method_WarBoardManager_GetCommonEffectAsset_GameObject___);
-    sub_1C37058(&WarBoardTaskBase___TypeInfo);
-    byte_4C40818 = 1;
+    sub_1C3E564(&Method_UnityEngine_GameObject_GetComponent_WarBoardBreakPointEffectComponent___);
+    sub_1C3E564(&Method_System_Collections_Generic_List_WarBoardTaskBase__Add__);
+    sub_1C3E564(&Method_UnityEngine_Object_Instantiate_GameObject____78272896);
+    sub_1C3E564(&UnityEngine_Object_TypeInfo);
+    sub_1C3E564(&Method_SingletonMonoBehaviour_WarBoardManager__get_Instance__);
+    sub_1C3E564(&WarBoardTaskBase_TaskCallback_TypeInfo);
+    sub_1C3E564(&Method_WarBoardBreakPointComponent__OnBreak_b__26_0__);
+    sub_1C3E564(&WarBoardCommonEffectPerformance_TypeInfo);
+    sub_1C3E564(&Method_WarBoardManager_GetCommonEffectAsset_GameObject___);
+    sub_1C3E564(&WarBoardTaskBase___TypeInfo);
+    byte_4C545B5 = 1;
   }
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39ED16C *)Method_SingletonMonoBehaviour_WarBoardManager__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39FF5A8 *)Method_SingletonMonoBehaviour_WarBoardManager__get_Instance__);
   BreakEffectName = (char *)WarBoardBreakPointComponent__GetBreakEffectName(this, v8);
   if ( !Instance )
     goto LABEL_37;
   CommonEffectAsset_object = WarBoardManager__GetCommonEffectAsset_object_(
                                (WarBoardManager_o *)Instance,
                                (System_String_o *)BreakEffectName,
-                               (const MethodInfo_31CCD3C *)Method_WarBoardManager_GetCommonEffectAsset_GameObject___);
+                               (const MethodInfo_31DEC90 *)Method_WarBoardManager_GetCommonEffectAsset_GameObject___);
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   if ( UnityEngine_Object__op_Inequality((UnityEngine_Object_o *)CommonEffectAsset_object, 0, 0) )
@@ -417,84 +420,84 @@ void WarBoardBreakPointComponent__OnBreak(
     transform = UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0);
     if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-    BreakEffectName = (char *)UnityEngine_Object__Instantiate_object__51855596(
+    BreakEffectName = (char *)UnityEngine_Object__Instantiate_object__51929056(
                                 CommonEffectAsset_object,
                                 transform,
-                                (const MethodInfo_31740EC *)Method_UnityEngine_Object_Instantiate_GameObject____78192880);
+                                (const MethodInfo_3185FE0 *)Method_UnityEngine_Object_Instantiate_GameObject____78272896);
     if ( !BreakEffectName )
       goto LABEL_37;
-    v12 = (UnityEngine_GameObject_o *)BreakEffectName;
+    v13 = (UnityEngine_GameObject_o *)BreakEffectName;
     BreakEffectName = (char *)UnityEngine_GameObject__GetComponent_object_(
                                 (UnityEngine_GameObject_o *)BreakEffectName,
-                                (const MethodInfo_313F1D8 *)Method_UnityEngine_GameObject_GetComponent_WarBoardBreakPointEffectComponent___);
+                                (const MethodInfo_31510CC *)Method_UnityEngine_GameObject_GetComponent_WarBoardBreakPointEffectComponent___);
     if ( !BreakEffectName )
       goto LABEL_37;
     *((_QWORD *)BreakEffectName + 4) = this;
-    sub_1C36FFC((CGThumbnailListItem_o *)(BreakEffectName + 32), (int32_t)this, v13, v14);
-    v15 = (WarBoardCommonEffectPerformance_o *)sub_1C372A4(WarBoardCommonEffectPerformance_TypeInfo);
-    *(_QWORD *)&v41.fields.hasValue = 0;
-    *(_QWORD *)&v41.fields.value.fields.y = 0;
-    *(_QWORD *)&v42.fields.hasValue = 0;
-    *(_QWORD *)&v42.fields.value.fields.y = 0;
-    v16 = v15;
-    WarBoardCommonEffectPerformance___ctor(v15, 0, v12, v41, v42, (System_Nullable_Vector3__o)0, 0, 0, 1, 0);
+    sub_1C3E508((CGThumbnailListItem_o *)(BreakEffectName + 32), (int32_t)this, v14, v15);
+    v16 = (WarBoardCommonEffectPerformance_o *)sub_1C3E7B0(WarBoardCommonEffectPerformance_TypeInfo);
+    *(_QWORD *)&v43.fields.hasValue = 0;
+    *(_QWORD *)&v43.fields.value.fields.y = 0;
+    *(_QWORD *)&v44.fields.hasValue = 0;
+    *(_QWORD *)&v44.fields.value.fields.y = 0;
+    v17 = v16;
+    WarBoardCommonEffectPerformance___ctor(v16, 0, v13, v43, v44, (System_Nullable_Vector3__o)0, 0, 0, 1, 0);
     if ( startCallback )
     {
-      if ( !v16 )
+      if ( !v17 )
         goto LABEL_37;
-      p_StartCallback = (System_Delegate_o **)&v16->fields.StartCallback;
-      v18 = System_Delegate__Combine(
-              (System_Delegate_o *)v16->fields.StartCallback,
+      p_StartCallback = (System_Delegate_o **)&v17->fields.StartCallback;
+      v19 = System_Delegate__Combine(
+              (System_Delegate_o *)v17->fields.StartCallback,
               (System_Delegate_o *)startCallback,
               0);
-      v21 = (WarBoardTaskBase_TaskCallback_c *)v18;
-      if ( v18 )
+      v22 = (WarBoardTaskBase_TaskCallback_c *)v19;
+      if ( v19 )
       {
-        v22 = WarBoardTaskBase_TaskCallback_TypeInfo;
-        if ( (WarBoardTaskBase_TaskCallback_c *)v18->klass != WarBoardTaskBase_TaskCallback_TypeInfo )
+        v23 = WarBoardTaskBase_TaskCallback_TypeInfo;
+        if ( (WarBoardTaskBase_TaskCallback_c *)v19->klass != WarBoardTaskBase_TaskCallback_TypeInfo )
           goto LABEL_25;
-        *p_StartCallback = v18;
-        if ( (WarBoardTaskBase_TaskCallback_c *)v18->klass != v22 )
+        *p_StartCallback = v19;
+        if ( (WarBoardTaskBase_TaskCallback_c *)v19->klass != v23 )
           goto LABEL_25;
       }
       else
       {
         *p_StartCallback = 0;
       }
-      sub_1C36FFC((CGThumbnailListItem_o *)&v16->fields.StartCallback, (int32_t)v18, v19, v20);
+      sub_1C3E508((CGThumbnailListItem_o *)&v17->fields.StartCallback, (int32_t)v19, v20, v21);
     }
-    else if ( !v16 )
+    else if ( !v17 )
     {
       goto LABEL_37;
     }
-    startCallback = (WarBoardTaskBase_TaskCallback_o *)&v16->fields.EndCallback;
-    EndCallback = (System_Delegate_o *)v16->fields.EndCallback;
-    v24 = (WarBoardTaskBase_TaskCallback_o *)sub_1C372A4(WarBoardTaskBase_TaskCallback_TypeInfo);
+    startCallback = (WarBoardTaskBase_TaskCallback_o *)&v17->fields.EndCallback;
+    EndCallback = (System_Delegate_o *)v17->fields.EndCallback;
+    v25 = (WarBoardTaskBase_TaskCallback_o *)sub_1C3E7B0(WarBoardTaskBase_TaskCallback_TypeInfo);
     WarBoardTaskBase_TaskCallback___ctor(
-      v24,
+      v25,
       (Il2CppObject *)this,
       Method_WarBoardBreakPointComponent__OnBreak_b__26_0__,
       0);
-    v25 = System_Delegate__Combine(EndCallback, (System_Delegate_o *)v24, 0);
-    v21 = (WarBoardTaskBase_TaskCallback_c *)v25;
-    if ( !v25 )
+    v26 = System_Delegate__Combine(EndCallback, (System_Delegate_o *)v25, 0);
+    v22 = (WarBoardTaskBase_TaskCallback_c *)v26;
+    if ( !v26 )
     {
 LABEL_26:
-      startCallback->klass = v21;
+      startCallback->klass = v22;
       goto LABEL_27;
     }
-    v28 = WarBoardTaskBase_TaskCallback_TypeInfo;
-    if ( (WarBoardTaskBase_TaskCallback_c *)v25->klass == WarBoardTaskBase_TaskCallback_TypeInfo )
+    v29 = WarBoardTaskBase_TaskCallback_TypeInfo;
+    if ( (WarBoardTaskBase_TaskCallback_c *)v26->klass == WarBoardTaskBase_TaskCallback_TypeInfo )
     {
-      startCallback->klass = (WarBoardTaskBase_TaskCallback_c *)v25;
-      if ( (WarBoardTaskBase_TaskCallback_c *)v25->klass == v28 )
+      startCallback->klass = (WarBoardTaskBase_TaskCallback_c *)v26;
+      if ( (WarBoardTaskBase_TaskCallback_c *)v26->klass == v29 )
       {
 LABEL_27:
-        sub_1C36FFC((CGThumbnailListItem_o *)startCallback, (int32_t)v21, v26, v27);
+        sub_1C3E508((CGThumbnailListItem_o *)startCallback, (int32_t)v22, v27, v28);
         if ( taskList )
         {
           items = taskList->fields._items;
-          v32 = Method_System_Collections_Generic_List_WarBoardTaskBase__Add__;
+          v33 = Method_System_Collections_Generic_List_WarBoardTaskBase__Add__;
           ++taskList->fields._version;
           if ( items )
           {
@@ -503,49 +506,49 @@ LABEL_27:
             {
               System_Collections_Generic_List_object___AddWithResize(
                 (System_Collections_Generic_List_object__o *)taskList,
-                (Il2CppObject *)v16,
-                *(const MethodInfo_37A3024 **)(*(_QWORD *)(v32[4] + 192LL) + 112LL));
+                (Il2CppObject *)v17,
+                *(const MethodInfo_37B5460 **)(*(_QWORD *)(v33[4] + 192LL) + 112LL));
             }
             else
             {
-              v34 = &items->obj.klass + size;
+              v35 = &items->obj.klass + size;
               taskList->fields._size = size + 1;
-              v34[4] = (Il2CppClass *)v16;
-              sub_1C36FFC((CGThumbnailListItem_o *)(v34 + 4), (int32_t)v16, v29, v30);
+              v35[4] = (Il2CppClass *)v17;
+              sub_1C3E508((CGThumbnailListItem_o *)(v35 + 4), (int32_t)v17, v30, v31);
             }
             return;
           }
         }
         else
         {
-          v35 = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39ED16C *)Method_SingletonMonoBehaviour_WarBoardManager__get_Instance__);
-          BreakEffectName = (char *)sub_1C37100(WarBoardTaskBase___TypeInfo, 1);
+          v36 = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39FF5A8 *)Method_SingletonMonoBehaviour_WarBoardManager__get_Instance__);
+          BreakEffectName = (char *)sub_1C3E60C(WarBoardTaskBase___TypeInfo, 1);
           if ( BreakEffectName )
           {
-            v36 = BreakEffectName;
-            v37 = sub_1C37194(v16, *(_QWORD *)(*(_QWORD *)BreakEffectName + 64LL));
-            if ( !v37 )
+            v37 = BreakEffectName;
+            v38 = sub_1C3E6A0(v17, *(_QWORD *)(*(_QWORD *)BreakEffectName + 64LL));
+            if ( !v38 )
             {
-              v40 = sub_1C372D8();
-              sub_1C37180(v40, 0);
+              v42 = sub_1C3E7E4();
+              sub_1C3E68C(v42, 0);
             }
-            if ( !*((_DWORD *)v36 + 6) )
-              sub_1C372BC(v37);
-            *((_QWORD *)v36 + 4) = v16;
-            sub_1C36FFC((CGThumbnailListItem_o *)(v36 + 32), (int32_t)v16, v38, v39);
-            if ( v35 )
+            if ( !*((_DWORD *)v37 + 6) )
+              sub_1C3E7C8(v38, v39);
+            *((_QWORD *)v37 + 4) = v17;
+            sub_1C3E508((CGThumbnailListItem_o *)(v37 + 32), (int32_t)v17, v40, v41);
+            if ( v36 )
             {
-              WarBoardManager__InsertTask((WarBoardManager_o *)v35, 0, (WarBoardTaskBase_array *)v36, 0);
+              WarBoardManager__InsertTask((WarBoardManager_o *)v36, 0, (WarBoardTaskBase_array *)v37, 0);
               return;
             }
           }
         }
 LABEL_37:
-        sub_1C372B4(BreakEffectName);
+        sub_1C3E7C0(BreakEffectName, v10);
       }
     }
 LABEL_25:
-    sub_1C37574(v21);
+    sub_1C3EA80(v22);
     goto LABEL_26;
   }
 }
@@ -558,13 +561,14 @@ void WarBoardBreakPointComponent__SetActive(
         const MethodInfo *method)
 {
   UnityEngine_Object_o *activeObject; // x21
+  __int64 v7; // x1
   UnityEngine_Component_o *gameObject; // x0
   UnityEngine_Object_o *deactiveObject; // x21
 
-  if ( (byte_4C4081A & 1) == 0 )
+  if ( (byte_4C545B7 & 1) == 0 )
   {
-    sub_1C37058(&UnityEngine_Object_TypeInfo);
-    byte_4C4081A = 1;
+    sub_1C3E564(&UnityEngine_Object_TypeInfo);
+    byte_4C545B7 = 1;
   }
   if ( this->fields._isActive_k__BackingField != active )
   {
@@ -599,7 +603,7 @@ LABEL_16:
       }
     }
 LABEL_18:
-    sub_1C372B4(gameObject);
+    sub_1C3E7C0(gameObject, v7);
   }
 }
 
@@ -610,25 +614,26 @@ void WarBoardBreakPointComponent__SetBreakPointFadeIn(
         const MethodInfo *method)
 {
   UnityEngine_Object_o *activeObject; // x20
-  UnityEngine_Component_o *v6; // x0
+  __int64 v6; // x1
+  UnityEngine_Component_o *v7; // x0
   UnityEngine_GameObject_o *gameObject; // x0
   UnityEngine_Object_o *deactiveObject; // x20
-  UnityEngine_GameObject_o *v9; // x0
+  UnityEngine_GameObject_o *v10; // x0
 
-  if ( (byte_4C4081C & 1) == 0 )
+  if ( (byte_4C545B9 & 1) == 0 )
   {
-    sub_1C37058(&UnityEngine_Object_TypeInfo);
-    byte_4C4081C = 1;
+    sub_1C3E564(&UnityEngine_Object_TypeInfo);
+    byte_4C545B9 = 1;
   }
   activeObject = (UnityEngine_Object_o *)this->fields.activeObject;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   if ( UnityEngine_Object__op_Inequality(activeObject, 0, 0) )
   {
-    v6 = (UnityEngine_Component_o *)this->fields.activeObject;
-    if ( !v6 )
+    v7 = (UnityEngine_Component_o *)this->fields.activeObject;
+    if ( !v7 )
       goto LABEL_14;
-    gameObject = UnityEngine_Component__get_gameObject(v6, 0);
+    gameObject = UnityEngine_Component__get_gameObject(v7, 0);
     TweenAlpha__Begin(gameObject, duration, 1.0, 0);
   }
   deactiveObject = (UnityEngine_Object_o *)this->fields.deactiveObject;
@@ -636,15 +641,15 @@ void WarBoardBreakPointComponent__SetBreakPointFadeIn(
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   if ( UnityEngine_Object__op_Inequality(deactiveObject, 0, 0) )
   {
-    v6 = (UnityEngine_Component_o *)this->fields.deactiveObject;
-    if ( v6 )
+    v7 = (UnityEngine_Component_o *)this->fields.deactiveObject;
+    if ( v7 )
     {
-      v9 = UnityEngine_Component__get_gameObject(v6, 0);
-      TweenAlpha__Begin(v9, duration, 1.0, 0);
+      v10 = UnityEngine_Component__get_gameObject(v7, 0);
+      TweenAlpha__Begin(v10, duration, 1.0, 0);
       return;
     }
 LABEL_14:
-    sub_1C372B4(v6);
+    sub_1C3E7C0(v7, v6);
   }
 }
 
@@ -655,25 +660,26 @@ void WarBoardBreakPointComponent__SetBreakPointFadeOut(
         const MethodInfo *method)
 {
   UnityEngine_Object_o *activeObject; // x20
-  UnityEngine_Component_o *v6; // x0
+  __int64 v6; // x1
+  UnityEngine_Component_o *v7; // x0
   UnityEngine_GameObject_o *gameObject; // x0
   UnityEngine_Object_o *deactiveObject; // x20
-  UnityEngine_GameObject_o *v9; // x0
+  UnityEngine_GameObject_o *v10; // x0
 
-  if ( (byte_4C4081B & 1) == 0 )
+  if ( (byte_4C545B8 & 1) == 0 )
   {
-    sub_1C37058(&UnityEngine_Object_TypeInfo);
-    byte_4C4081B = 1;
+    sub_1C3E564(&UnityEngine_Object_TypeInfo);
+    byte_4C545B8 = 1;
   }
   activeObject = (UnityEngine_Object_o *)this->fields.activeObject;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   if ( UnityEngine_Object__op_Inequality(activeObject, 0, 0) )
   {
-    v6 = (UnityEngine_Component_o *)this->fields.activeObject;
-    if ( !v6 )
+    v7 = (UnityEngine_Component_o *)this->fields.activeObject;
+    if ( !v7 )
       goto LABEL_14;
-    gameObject = UnityEngine_Component__get_gameObject(v6, 0);
+    gameObject = UnityEngine_Component__get_gameObject(v7, 0);
     TweenAlpha__Begin(gameObject, duration, 0.0, 0);
   }
   deactiveObject = (UnityEngine_Object_o *)this->fields.deactiveObject;
@@ -681,15 +687,15 @@ void WarBoardBreakPointComponent__SetBreakPointFadeOut(
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   if ( UnityEngine_Object__op_Inequality(deactiveObject, 0, 0) )
   {
-    v6 = (UnityEngine_Component_o *)this->fields.deactiveObject;
-    if ( v6 )
+    v7 = (UnityEngine_Component_o *)this->fields.deactiveObject;
+    if ( v7 )
     {
-      v9 = UnityEngine_Component__get_gameObject(v6, 0);
-      TweenAlpha__Begin(v9, duration, 0.0, 0);
+      v10 = UnityEngine_Component__get_gameObject(v7, 0);
+      TweenAlpha__Begin(v10, duration, 0.0, 0);
       return;
     }
 LABEL_14:
-    sub_1C372B4(v6);
+    sub_1C3E7C0(v7, v6);
   }
 }
 
@@ -712,7 +718,7 @@ void WarBoardBreakPointComponent__SetChangeBreakPoint(
                                                   (const MethodInfo *)isActive),
         !mAtlas) )
   {
-    sub_1C372B4(this);
+    sub_1C3E7C0(this, breakPoint);
   }
   Sprite = UIAtlas__GetSprite(mAtlas, (System_String_o *)this, 0);
   if ( Sprite )
@@ -726,61 +732,63 @@ void WarBoardBreakPointComponent__ShowMasterRechargeEffect(
         const MethodInfo *method)
 {
   Il2CppObject *Instance; // x0
-  WarBoardManager_o *v6; // x21
+  __int64 v6; // x1
+  WarBoardManager_o *v7; // x21
   Il2CppObject *CommonEffectAsset_object; // x21
   UnityEngine_Transform_o *transform; // x22
-  UnityEngine_GameObject_o *v9; // x22
-  int32_t v10; // w2
-  const MethodInfo *v11; // x3
-  WarBoardCommonEffectPerformance_o *v12; // x0
-  WarBoardCommonEffectPerformance_o *v13; // x21
+  UnityEngine_GameObject_o *v10; // x22
+  int32_t v11; // w2
+  const MethodInfo *v12; // x3
+  WarBoardCommonEffectPerformance_o *v13; // x0
+  WarBoardCommonEffectPerformance_o *v14; // x21
   System_Delegate_o **p_StartCallback; // x22
   System_Delegate_o *StartCallback; // x23
-  WarBoardTaskBase_TaskCallback_o *v16; // x24
-  System_Delegate_o *v17; // x0
-  int32_t v18; // w2
-  const MethodInfo *v19; // x3
-  WarBoardTaskBase_TaskCallback_c *v20; // x1
-  int32_t v21; // w2
-  const MethodInfo *v22; // x3
+  WarBoardTaskBase_TaskCallback_o *v17; // x24
+  System_Delegate_o *v18; // x0
+  int32_t v19; // w2
+  const MethodInfo *v20; // x3
+  WarBoardTaskBase_TaskCallback_c *v21; // x1
+  int32_t v22; // w2
+  const MethodInfo *v23; // x3
   struct WarBoardTaskBase_array *items; // x8
-  _QWORD *v24; // x9
+  _QWORD *v25; // x9
   __int64 size; // x10
-  Il2CppClass **v26; // x0
-  Il2CppObject *v27; // x19
-  Il2CppObject *v28; // x20
-  __int64 v29; // x0
-  int32_t v30; // w2
-  const MethodInfo *v31; // x3
-  __int64 v32; // x0
-  System_Nullable_Vector3__o v33; // 0:x3.16
-  System_Nullable_Vector3__o v34; // 0:x5.16
+  Il2CppClass **v27; // x0
+  Il2CppObject *v28; // x19
+  Il2CppObject *v29; // x20
+  __int64 v30; // x0
+  __int64 v31; // x1
+  int32_t v32; // w2
+  const MethodInfo *v33; // x3
+  __int64 v34; // x0
+  System_Nullable_Vector3__o v35; // 0:x3.16
+  System_Nullable_Vector3__o v36; // 0:x5.16
 
-  if ( (byte_4C40819 & 1) == 0 )
+  if ( (byte_4C545B6 & 1) == 0 )
   {
-    sub_1C37058(&Method_UnityEngine_GameObject_GetComponent_WarBoardBreakPointEffectComponent___);
-    sub_1C37058(&Method_System_Collections_Generic_List_WarBoardTaskBase__Add__);
-    sub_1C37058(&Method_UnityEngine_Object_Instantiate_GameObject____78192880);
-    sub_1C37058(&UnityEngine_Object_TypeInfo);
-    sub_1C37058(&Method_SingletonMonoBehaviour_WarBoardManager__get_Instance__);
-    sub_1C37058(&WarBoardTaskBase_TaskCallback_TypeInfo);
-    sub_1C37058(&Method_WarBoardBreakPointComponent__ShowMasterRechargeEffect_b__27_0__);
-    sub_1C37058(&WarBoardBreakPointComponent_TypeInfo);
-    sub_1C37058(&WarBoardCommonEffectPerformance_TypeInfo);
-    sub_1C37058(&Method_WarBoardManager_GetCommonEffectAsset_GameObject___);
-    sub_1C37058(&WarBoardTaskBase___TypeInfo);
-    byte_4C40819 = 1;
+    sub_1C3E564(&Method_UnityEngine_GameObject_GetComponent_WarBoardBreakPointEffectComponent___);
+    sub_1C3E564(&Method_System_Collections_Generic_List_WarBoardTaskBase__Add__);
+    sub_1C3E564(&Method_UnityEngine_Object_Instantiate_GameObject____78272896);
+    sub_1C3E564(&UnityEngine_Object_TypeInfo);
+    sub_1C3E564(&Method_SingletonMonoBehaviour_WarBoardManager__get_Instance__);
+    sub_1C3E564(&WarBoardTaskBase_TaskCallback_TypeInfo);
+    sub_1C3E564(&Method_WarBoardBreakPointComponent__ShowMasterRechargeEffect_b__27_0__);
+    sub_1C3E564(&WarBoardBreakPointComponent_TypeInfo);
+    sub_1C3E564(&WarBoardCommonEffectPerformance_TypeInfo);
+    sub_1C3E564(&Method_WarBoardManager_GetCommonEffectAsset_GameObject___);
+    sub_1C3E564(&WarBoardTaskBase___TypeInfo);
+    byte_4C545B6 = 1;
   }
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39ED16C *)Method_SingletonMonoBehaviour_WarBoardManager__get_Instance__);
-  v6 = (WarBoardManager_o *)Instance;
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39FF5A8 *)Method_SingletonMonoBehaviour_WarBoardManager__get_Instance__);
+  v7 = (WarBoardManager_o *)Instance;
   if ( !WarBoardBreakPointComponent_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(WarBoardBreakPointComponent_TypeInfo);
-  if ( !v6 )
+  if ( !v7 )
     goto LABEL_30;
   CommonEffectAsset_object = WarBoardManager__GetCommonEffectAsset_object_(
-                               v6,
+                               v7,
                                WarBoardBreakPointComponent_TypeInfo->static_fields->MasterPointRechargeEffectName,
-                               (const MethodInfo_31CCD3C *)Method_WarBoardManager_GetCommonEffectAsset_GameObject___);
+                               (const MethodInfo_31DEC90 *)Method_WarBoardManager_GetCommonEffectAsset_GameObject___);
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   if ( UnityEngine_Object__op_Inequality((UnityEngine_Object_o *)CommonEffectAsset_object, 0, 0) )
@@ -788,45 +796,45 @@ void WarBoardBreakPointComponent__ShowMasterRechargeEffect(
     transform = UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0);
     if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-    Instance = UnityEngine_Object__Instantiate_object__51855596(
+    Instance = UnityEngine_Object__Instantiate_object__51929056(
                  CommonEffectAsset_object,
                  transform,
-                 (const MethodInfo_31740EC *)Method_UnityEngine_Object_Instantiate_GameObject____78192880);
+                 (const MethodInfo_3185FE0 *)Method_UnityEngine_Object_Instantiate_GameObject____78272896);
     if ( Instance )
     {
-      v9 = (UnityEngine_GameObject_o *)Instance;
+      v10 = (UnityEngine_GameObject_o *)Instance;
       Instance = UnityEngine_GameObject__GetComponent_object_(
                    (UnityEngine_GameObject_o *)Instance,
-                   (const MethodInfo_313F1D8 *)Method_UnityEngine_GameObject_GetComponent_WarBoardBreakPointEffectComponent___);
+                   (const MethodInfo_31510CC *)Method_UnityEngine_GameObject_GetComponent_WarBoardBreakPointEffectComponent___);
       if ( Instance )
       {
         Instance[2].klass = (Il2CppClass *)this;
-        sub_1C36FFC((CGThumbnailListItem_o *)&Instance[2], (int32_t)this, v10, v11);
-        v12 = (WarBoardCommonEffectPerformance_o *)sub_1C372A4(WarBoardCommonEffectPerformance_TypeInfo);
-        *(_QWORD *)&v33.fields.hasValue = 0;
-        *(_QWORD *)&v33.fields.value.fields.y = 0;
-        *(_QWORD *)&v34.fields.hasValue = 0;
-        *(_QWORD *)&v34.fields.value.fields.y = 0;
-        v13 = v12;
-        WarBoardCommonEffectPerformance___ctor(v12, 0, v9, v33, v34, (System_Nullable_Vector3__o)0, 0, 0, 1, 0);
-        if ( v13 )
+        sub_1C3E508((CGThumbnailListItem_o *)&Instance[2], (int32_t)this, v11, v12);
+        v13 = (WarBoardCommonEffectPerformance_o *)sub_1C3E7B0(WarBoardCommonEffectPerformance_TypeInfo);
+        *(_QWORD *)&v35.fields.hasValue = 0;
+        *(_QWORD *)&v35.fields.value.fields.y = 0;
+        *(_QWORD *)&v36.fields.hasValue = 0;
+        *(_QWORD *)&v36.fields.value.fields.y = 0;
+        v14 = v13;
+        WarBoardCommonEffectPerformance___ctor(v13, 0, v10, v35, v36, (System_Nullable_Vector3__o)0, 0, 0, 1, 0);
+        if ( v14 )
         {
-          p_StartCallback = (System_Delegate_o **)&v13->fields.StartCallback;
-          StartCallback = (System_Delegate_o *)v13->fields.StartCallback;
-          v16 = (WarBoardTaskBase_TaskCallback_o *)sub_1C372A4(WarBoardTaskBase_TaskCallback_TypeInfo);
+          p_StartCallback = (System_Delegate_o **)&v14->fields.StartCallback;
+          StartCallback = (System_Delegate_o *)v14->fields.StartCallback;
+          v17 = (WarBoardTaskBase_TaskCallback_o *)sub_1C3E7B0(WarBoardTaskBase_TaskCallback_TypeInfo);
           WarBoardTaskBase_TaskCallback___ctor(
-            v16,
+            v17,
             (Il2CppObject *)this,
             Method_WarBoardBreakPointComponent__ShowMasterRechargeEffect_b__27_0__,
             0);
-          v17 = System_Delegate__Combine(StartCallback, (System_Delegate_o *)v16, 0);
-          if ( v17 )
+          v18 = System_Delegate__Combine(StartCallback, (System_Delegate_o *)v17, 0);
+          if ( v18 )
           {
-            v20 = WarBoardTaskBase_TaskCallback_TypeInfo;
-            if ( (WarBoardTaskBase_TaskCallback_c *)v17->klass != WarBoardTaskBase_TaskCallback_TypeInfo
-              || (*p_StartCallback = v17, (WarBoardTaskBase_TaskCallback_c *)v17->klass != v20) )
+            v21 = WarBoardTaskBase_TaskCallback_TypeInfo;
+            if ( (WarBoardTaskBase_TaskCallback_c *)v18->klass != WarBoardTaskBase_TaskCallback_TypeInfo
+              || (*p_StartCallback = v18, (WarBoardTaskBase_TaskCallback_c *)v18->klass != v21) )
             {
-              sub_1C37574(v17);
+              sub_1C3EA80(v18);
               return;
             }
           }
@@ -834,11 +842,11 @@ void WarBoardBreakPointComponent__ShowMasterRechargeEffect(
           {
             *p_StartCallback = 0;
           }
-          sub_1C36FFC((CGThumbnailListItem_o *)&v13->fields.StartCallback, (int32_t)v17, v18, v19);
+          sub_1C3E508((CGThumbnailListItem_o *)&v14->fields.StartCallback, (int32_t)v18, v19, v20);
           if ( taskList )
           {
             items = taskList->fields._items;
-            v24 = Method_System_Collections_Generic_List_WarBoardTaskBase__Add__;
+            v25 = Method_System_Collections_Generic_List_WarBoardTaskBase__Add__;
             ++taskList->fields._version;
             if ( items )
             {
@@ -847,39 +855,39 @@ void WarBoardBreakPointComponent__ShowMasterRechargeEffect(
               {
                 System_Collections_Generic_List_object___AddWithResize(
                   (System_Collections_Generic_List_object__o *)taskList,
-                  (Il2CppObject *)v13,
-                  *(const MethodInfo_37A3024 **)(*(_QWORD *)(v24[4] + 192LL) + 112LL));
+                  (Il2CppObject *)v14,
+                  *(const MethodInfo_37B5460 **)(*(_QWORD *)(v25[4] + 192LL) + 112LL));
               }
               else
               {
-                v26 = &items->obj.klass + size;
+                v27 = &items->obj.klass + size;
                 taskList->fields._size = size + 1;
-                v26[4] = (Il2CppClass *)v13;
-                sub_1C36FFC((CGThumbnailListItem_o *)(v26 + 4), (int32_t)v13, v21, v22);
+                v27[4] = (Il2CppClass *)v14;
+                sub_1C3E508((CGThumbnailListItem_o *)(v27 + 4), (int32_t)v14, v22, v23);
               }
               return;
             }
           }
           else
           {
-            v27 = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39ED16C *)Method_SingletonMonoBehaviour_WarBoardManager__get_Instance__);
-            Instance = (Il2CppObject *)sub_1C37100(WarBoardTaskBase___TypeInfo, 1);
+            v28 = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39FF5A8 *)Method_SingletonMonoBehaviour_WarBoardManager__get_Instance__);
+            Instance = (Il2CppObject *)sub_1C3E60C(WarBoardTaskBase___TypeInfo, 1);
             if ( Instance )
             {
-              v28 = Instance;
-              v29 = sub_1C37194(v13, Instance->klass->_1.element_class);
-              if ( !v29 )
+              v29 = Instance;
+              v30 = sub_1C3E6A0(v14, Instance->klass->_1.element_class);
+              if ( !v30 )
               {
-                v32 = sub_1C372D8();
-                sub_1C37180(v32, 0);
+                v34 = sub_1C3E7E4();
+                sub_1C3E68C(v34, 0);
               }
-              if ( !LODWORD(v28[1].monitor) )
-                sub_1C372BC(v29);
-              v28[2].klass = (Il2CppClass *)v13;
-              sub_1C36FFC((CGThumbnailListItem_o *)&v28[2], (int32_t)v13, v30, v31);
-              if ( v27 )
+              if ( !LODWORD(v29[1].monitor) )
+                sub_1C3E7C8(v30, v31);
+              v29[2].klass = (Il2CppClass *)v14;
+              sub_1C3E508((CGThumbnailListItem_o *)&v29[2], (int32_t)v14, v32, v33);
+              if ( v28 )
               {
-                WarBoardManager__InsertTask((WarBoardManager_o *)v27, 0, (WarBoardTaskBase_array *)v28, 0);
+                WarBoardManager__InsertTask((WarBoardManager_o *)v28, 0, (WarBoardTaskBase_array *)v29, 0);
                 return;
               }
             }
@@ -888,7 +896,7 @@ void WarBoardBreakPointComponent__ShowMasterRechargeEffect(
       }
     }
 LABEL_30:
-    sub_1C372B4(Instance);
+    sub_1C3E7C0(Instance, v6);
   }
 }
 

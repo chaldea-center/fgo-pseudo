@@ -7,30 +7,30 @@ void UIToggledComponents___ctor(UIToggledComponents_o *this, const MethodInfo *m
 void UIToggledComponents__Awake(UIToggledComponents_o *this, const MethodInfo *method)
 {
   UnityEngine_Object_o *target; // x21
-  int32_t v4; // w2
-  const MethodInfo *v5; // x3
+  Il2CppObject *v4; // x1
+  int32_t v5; // w2
+  const MethodInfo *v6; // x3
   char *activate; // x0
   struct System_Collections_Generic_List_MonoBehaviour__o *deactivate; // x8
   struct UnityEngine_MonoBehaviour_o **p_target; // x0
-  Il2CppObject *v9; // x1
   System_Collections_Generic_List_EventDelegate__o *v10; // x20
   EventDelegate_Callback_o *v11; // x21
   const MethodInfo *v12; // x3
   const MethodInfo *v13; // x2
   _QWORD *v14; // x9
   __int64 v15; // x8
-  const MethodInfo_37A3024 *v16; // x2
+  const MethodInfo_37B5460 *v16; // x2
 
-  if ( (byte_4C47653 & 1) == 0 )
+  if ( (byte_4C5B44A & 1) == 0 )
   {
-    sub_1C37058(&EventDelegate_Callback_TypeInfo);
-    sub_1C37058(&Method_UnityEngine_Component_GetComponent_UIToggle___);
-    sub_1C37058(&EventDelegate_TypeInfo);
-    sub_1C37058(&Method_System_Collections_Generic_List_MonoBehaviour__Add__);
-    sub_1C37058(&Method_System_Collections_Generic_List_MonoBehaviour__get_Count__);
-    sub_1C37058(&UnityEngine_Object_TypeInfo);
-    sub_1C37058(&Method_UIToggledComponents_Toggle__);
-    byte_4C47653 = 1;
+    sub_1C3E564(&EventDelegate_Callback_TypeInfo);
+    sub_1C3E564(&Method_UnityEngine_Component_GetComponent_UIToggle___);
+    sub_1C3E564(&EventDelegate_TypeInfo);
+    sub_1C3E564(&Method_System_Collections_Generic_List_MonoBehaviour__Add__);
+    sub_1C3E564(&Method_System_Collections_Generic_List_MonoBehaviour__get_Count__);
+    sub_1C3E564(&UnityEngine_Object_TypeInfo);
+    sub_1C3E564(&Method_UIToggledComponents_Toggle__);
+    byte_4C5B44A = 1;
   }
   target = (UnityEngine_Object_o *)this->fields.target;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -49,13 +49,13 @@ void UIToggledComponents__Awake(UIToggledComponents_o *this, const MethodInfo *m
     {
 LABEL_10:
       p_target = &this->fields.target;
-      LODWORD(v9) = 0;
+      LODWORD(v4) = 0;
       this->fields.target = 0;
 LABEL_11:
-      sub_1C36FFC((CGThumbnailListItem_o *)p_target, (int32_t)v9, v4, v5);
+      sub_1C3E508((CGThumbnailListItem_o *)p_target, (int32_t)v4, v5, v6);
       goto LABEL_12;
     }
-    v9 = (Il2CppObject *)this->fields.target;
+    v4 = (Il2CppObject *)this->fields.target;
     v14 = Method_System_Collections_Generic_List_MonoBehaviour__Add__;
     if ( this->fields.inverse )
     {
@@ -66,12 +66,12 @@ LABEL_11:
         if ( *((_DWORD *)activate + 6) )
         {
           deactivate->fields._size = 1;
-          *((_QWORD *)activate + 4) = v9;
+          *((_QWORD *)activate + 4) = v4;
           p_target = (struct UnityEngine_MonoBehaviour_o **)(activate + 32);
           goto LABEL_11;
         }
         activate = (char *)deactivate;
-        v16 = *(const MethodInfo_37A3024 **)(*(_QWORD *)(v14[4] + 192LL) + 112LL);
+        v16 = *(const MethodInfo_37B5460 **)(*(_QWORD *)(v14[4] + 192LL) + 112LL);
         goto LABEL_25;
       }
     }
@@ -84,30 +84,30 @@ LABEL_11:
         if ( *(_DWORD *)(v15 + 24) )
         {
           *((_DWORD *)activate + 6) = 1;
-          *(_QWORD *)(v15 + 32) = v9;
+          *(_QWORD *)(v15 + 32) = v4;
           p_target = (struct UnityEngine_MonoBehaviour_o **)(v15 + 32);
           goto LABEL_11;
         }
-        v16 = *(const MethodInfo_37A3024 **)(*(_QWORD *)(v14[4] + 192LL) + 112LL);
+        v16 = *(const MethodInfo_37B5460 **)(*(_QWORD *)(v14[4] + 192LL) + 112LL);
 LABEL_25:
         System_Collections_Generic_List_object___AddWithResize(
           (System_Collections_Generic_List_object__o *)activate,
-          v9,
+          v4,
           v16);
         goto LABEL_12;
       }
     }
 LABEL_26:
-    sub_1C372B4(activate);
+    sub_1C3E7C0(activate, v4);
   }
 LABEL_12:
   activate = (char *)UnityEngine_Component__GetComponent_object_(
                        (UnityEngine_Component_o *)this,
-                       (const MethodInfo_30DE428 *)Method_UnityEngine_Component_GetComponent_UIToggle___);
+                       (const MethodInfo_30F0240 *)Method_UnityEngine_Component_GetComponent_UIToggle___);
   if ( !activate )
     goto LABEL_26;
   v10 = (System_Collections_Generic_List_EventDelegate__o *)*((_QWORD *)activate + 8);
-  v11 = (EventDelegate_Callback_o *)sub_1C372A4(EventDelegate_Callback_TypeInfo);
+  v11 = (EventDelegate_Callback_o *)sub_1C3E7B0(EventDelegate_Callback_TypeInfo);
   EventDelegate_Callback___ctor(v11, (Il2CppObject *)this, Method_UIToggledComponents_Toggle__, v12);
   if ( !EventDelegate_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(EventDelegate_TypeInfo);
@@ -117,51 +117,52 @@ LABEL_12:
 
 void UIToggledComponents__Toggle(UIToggledComponents_o *this, const MethodInfo *method)
 {
+  __int64 v3; // x1
   System_Collections_Generic_List_object__o *activate; // x0
-  int32_t v4; // w20
-  UIToggle_c *v5; // x8
-  UnityEngine_Behaviour_o *v6; // x21
+  int32_t v5; // w20
+  UIToggle_c *v6; // x8
+  UnityEngine_Behaviour_o *v7; // x21
   struct UIToggle_o *current; // x8
-  __int64 v8; // x9
-  int32_t v9; // w20
-  UIToggle_c *v10; // x8
-  UnityEngine_Behaviour_o *v11; // x21
-  struct UIToggle_o *v12; // x8
-  __int64 v13; // x9
+  __int64 v9; // x9
+  int32_t v10; // w20
+  UIToggle_c *v11; // x8
+  UnityEngine_Behaviour_o *v12; // x21
+  struct UIToggle_o *v13; // x8
+  __int64 v14; // x9
 
-  if ( (byte_4C47654 & 1) == 0 )
+  if ( (byte_4C5B44B & 1) == 0 )
   {
-    sub_1C37058(&Method_System_Collections_Generic_List_MonoBehaviour__get_Count__);
-    sub_1C37058(&Method_System_Collections_Generic_List_MonoBehaviour__get_Item__);
-    sub_1C37058(&UIToggle_TypeInfo);
-    byte_4C47654 = 1;
+    sub_1C3E564(&Method_System_Collections_Generic_List_MonoBehaviour__get_Count__);
+    sub_1C3E564(&Method_System_Collections_Generic_List_MonoBehaviour__get_Item__);
+    sub_1C3E564(&UIToggle_TypeInfo);
+    byte_4C5B44B = 1;
   }
   if ( UnityEngine_Behaviour__get_enabled((UnityEngine_Behaviour_o *)this, 0) )
   {
     activate = (System_Collections_Generic_List_object__o *)this->fields.activate;
     if ( !activate )
       goto LABEL_27;
-    v4 = 0;
-    while ( v4 < activate->fields._size )
+    v5 = 0;
+    while ( v5 < activate->fields._size )
     {
       activate = (System_Collections_Generic_List_object__o *)System_Collections_Generic_List_object___get_Item(
                                                                 activate,
-                                                                v4,
-                                                                (const MethodInfo_37A2D54 *)Method_System_Collections_Generic_List_MonoBehaviour__get_Item__);
-      v5 = UIToggle_TypeInfo;
-      v6 = (UnityEngine_Behaviour_o *)activate;
+                                                                v5,
+                                                                (const MethodInfo_37B5190 *)Method_System_Collections_Generic_List_MonoBehaviour__get_Item__);
+      v6 = UIToggle_TypeInfo;
+      v7 = (UnityEngine_Behaviour_o *)activate;
       if ( !UIToggle_TypeInfo->_2.cctor_finished )
       {
         j_il2cpp_runtime_class_init_0(UIToggle_TypeInfo);
-        v5 = UIToggle_TypeInfo;
+        v6 = UIToggle_TypeInfo;
       }
-      current = v5->static_fields->current;
-      if ( current && v6 )
+      current = v6->static_fields->current;
+      if ( current && v7 )
       {
-        v8 = current->fields.mStarted ? 113LL : 56LL;
-        UnityEngine_Behaviour__set_enabled(v6, *((_BYTE *)&current->klass + v8), 0);
+        v9 = current->fields.mStarted ? 113LL : 56LL;
+        UnityEngine_Behaviour__set_enabled(v7, *((_BYTE *)&current->klass + v9), 0);
         activate = (System_Collections_Generic_List_object__o *)this->fields.activate;
-        ++v4;
+        ++v5;
         if ( activate )
           continue;
       }
@@ -170,28 +171,28 @@ void UIToggledComponents__Toggle(UIToggledComponents_o *this, const MethodInfo *
     activate = (System_Collections_Generic_List_object__o *)this->fields.deactivate;
     if ( !activate )
 LABEL_27:
-      sub_1C372B4(activate);
-    v9 = 0;
-    while ( v9 < activate->fields._size )
+      sub_1C3E7C0(activate, v3);
+    v10 = 0;
+    while ( v10 < activate->fields._size )
     {
       activate = (System_Collections_Generic_List_object__o *)System_Collections_Generic_List_object___get_Item(
                                                                 activate,
-                                                                v9,
-                                                                (const MethodInfo_37A2D54 *)Method_System_Collections_Generic_List_MonoBehaviour__get_Item__);
-      v10 = UIToggle_TypeInfo;
-      v11 = (UnityEngine_Behaviour_o *)activate;
+                                                                v10,
+                                                                (const MethodInfo_37B5190 *)Method_System_Collections_Generic_List_MonoBehaviour__get_Item__);
+      v11 = UIToggle_TypeInfo;
+      v12 = (UnityEngine_Behaviour_o *)activate;
       if ( !UIToggle_TypeInfo->_2.cctor_finished )
       {
         j_il2cpp_runtime_class_init_0(UIToggle_TypeInfo);
-        v10 = UIToggle_TypeInfo;
+        v11 = UIToggle_TypeInfo;
       }
-      v12 = v10->static_fields->current;
-      if ( v12 && v11 )
+      v13 = v11->static_fields->current;
+      if ( v13 && v12 )
       {
-        v13 = v12->fields.mStarted ? 113LL : 56LL;
-        UnityEngine_Behaviour__set_enabled(v11, *((_BYTE *)&v12->klass + v13) == 0, 0);
+        v14 = v13->fields.mStarted ? 113LL : 56LL;
+        UnityEngine_Behaviour__set_enabled(v12, *((_BYTE *)&v13->klass + v14) == 0, 0);
         activate = (System_Collections_Generic_List_object__o *)this->fields.deactivate;
-        ++v9;
+        ++v10;
         if ( activate )
           continue;
       }

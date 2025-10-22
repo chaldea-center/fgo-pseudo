@@ -6,10 +6,10 @@ void NpcStepInBattleLogicTask___ctor(
 {
   const MethodInfo *v4; // x4
 
-  if ( (byte_4C4625C & 1) == 0 )
+  if ( (byte_4C5A051 & 1) == 0 )
   {
-    sub_1C37058(&StringLiteral_9346/*"NPC_STEPIN"*/);
-    byte_4C4625C = 1;
+    sub_1C3E564(&StringLiteral_9346/*"NPC_STEPIN"*/);
+    byte_4C5A051 = 1;
   }
   PlayFieldMotionNpcBattleLogicTask___ctor(
     (PlayFieldMotionNpcBattleLogicTask_o *)this,

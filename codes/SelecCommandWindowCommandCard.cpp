@@ -1,58 +1,60 @@
 void SelecCommandWindowCommandCard___cctor(const MethodInfo *method)
 {
   __int64 v1; // x0
-  int32_t v2; // w2
-  const MethodInfo *v3; // x3
-  unsigned int v4; // w8
-  int32_t v10; // w2
-  const MethodInfo *v11; // x3
-  unsigned int v12; // w8
-  struct UnityEngine_Color_array *v13; // x1
+  __int64 v2; // x1
+  int32_t v3; // w2
+  const MethodInfo *v4; // x3
+  unsigned int v5; // w8
+  struct UnityEngine_Color_array *v6; // x1
+  int32_t v12; // w2
+  const MethodInfo *v13; // x3
+  unsigned int v14; // w8
   struct SelecCommandWindowCommandCard_StaticFields *static_fields; // x0
-  __int128 v15; // [xsp+0h] [xbp-30h]
+  __int128 v16; // [xsp+0h] [xbp-30h]
 
-  if ( (byte_4C468C4 & 1) == 0 )
+  if ( (byte_4C5A6BB & 1) == 0 )
   {
-    sub_1C37058(&UnityEngine_Color___TypeInfo);
-    sub_1C37058(&SelecCommandWindowCommandCard_TypeInfo);
-    byte_4C468C4 = 1;
+    sub_1C3E564(&UnityEngine_Color___TypeInfo);
+    sub_1C3E564(&SelecCommandWindowCommandCard_TypeInfo);
+    byte_4C5A6BB = 1;
   }
-  v1 = sub_1C37100(UnityEngine_Color___TypeInfo, 3);
+  v1 = sub_1C3E60C(UnityEngine_Color___TypeInfo, 3);
   if ( !v1 )
     goto LABEL_13;
-  v4 = *(_DWORD *)(v1 + 24);
-  if ( !v4 )
+  v5 = *(_DWORD *)(v1 + 24);
+  v6 = (struct UnityEngine_Color_array *)v1;
+  if ( !v5 )
     goto LABEL_12;
-  *(_OWORD *)(v1 + 32) = xmmword_C0F8A0;
-  if ( v4 == 1 )
+  *(_OWORD *)(v1 + 32) = xmmword_C12F10;
+  if ( v5 == 1 )
     goto LABEL_12;
   __asm { FMOV            V0.4S, #1.0 }
   *(_OWORD *)(v1 + 48) = _Q0;
-  if ( v4 <= 2 )
+  if ( v5 <= 2 )
 LABEL_12:
-    sub_1C372BC(v1);
+    sub_1C3E7C8(v1, v6);
   *(_OWORD *)(v1 + 64) = _Q0;
-  v15 = _Q0;
+  v16 = _Q0;
   SelecCommandWindowCommandCard_TypeInfo->static_fields->MessageColorsByCommandType = (struct UnityEngine_Color_array *)v1;
-  sub_1C36FFC((CGThumbnailListItem_o *)SelecCommandWindowCommandCard_TypeInfo->static_fields, v1, v2, v3);
-  v1 = sub_1C37100(UnityEngine_Color___TypeInfo, 3);
+  sub_1C3E508((CGThumbnailListItem_o *)SelecCommandWindowCommandCard_TypeInfo->static_fields, v1, v3, v4);
+  v1 = sub_1C3E60C(UnityEngine_Color___TypeInfo, 3);
   if ( !v1 )
 LABEL_13:
-    sub_1C372B4(v1);
-  v12 = *(_DWORD *)(v1 + 24);
-  v13 = (struct UnityEngine_Color_array *)v1;
-  if ( !v12 )
+    sub_1C3E7C0(v1, v2);
+  v14 = *(_DWORD *)(v1 + 24);
+  v6 = (struct UnityEngine_Color_array *)v1;
+  if ( !v14 )
     goto LABEL_12;
-  *(_OWORD *)(v1 + 32) = xmmword_C0FDF0;
-  if ( v12 == 1 )
+  *(_OWORD *)(v1 + 32) = xmmword_C13460;
+  if ( v14 == 1 )
     goto LABEL_12;
-  *(_OWORD *)(v1 + 48) = v15;
-  if ( v12 <= 2 )
+  *(_OWORD *)(v1 + 48) = v16;
+  if ( v14 <= 2 )
     goto LABEL_12;
-  *(_OWORD *)(v1 + 64) = v15;
+  *(_OWORD *)(v1 + 64) = v16;
   static_fields = SelecCommandWindowCommandCard_TypeInfo->static_fields;
-  static_fields->MessageBgColorsByCommandType = v13;
-  sub_1C36FFC((CGThumbnailListItem_o *)&static_fields->MessageBgColorsByCommandType, (int32_t)v13, v10, v11);
+  static_fields->MessageBgColorsByCommandType = v6;
+  sub_1C3E508((CGThumbnailListItem_o *)&static_fields->MessageBgColorsByCommandType, (int32_t)v6, v12, v13);
 }
 
 
@@ -110,20 +112,21 @@ void SelecCommandWindowCommandCard__Setup(
   const MethodInfo *v8; // x2
   BattleCommandData_o *v9; // x22
   BattleCommandComponent_o *v10; // x0
-  const MethodInfo *v11; // x2
+  __int64 v11; // x1
+  const MethodInfo *v12; // x2
 
-  if ( (byte_4C468C1 & 1) == 0 )
+  if ( (byte_4C5A6B8 & 1) == 0 )
   {
-    sub_1C37058(&BattleCommandData_TypeInfo);
-    sub_1C37058(&UnityEngine_Object_TypeInfo);
-    byte_4C468C1 = 1;
+    sub_1C3E564(&BattleCommandData_TypeInfo);
+    sub_1C3E564(&UnityEngine_Object_TypeInfo);
+    byte_4C5A6B8 = 1;
   }
   battleCommand = (UnityEngine_Object_o *)this->fields.battleCommand;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   if ( UnityEngine_Object__op_Inequality(battleCommand, 0, 0) )
   {
-    v9 = (BattleCommandData_o *)sub_1C372A4(BattleCommandData_TypeInfo);
+    v9 = (BattleCommandData_o *)sub_1C3E7B0(BattleCommandData_TypeInfo);
     BattleCommandData___ctor(v9, 0);
     if ( !param )
       goto LABEL_12;
@@ -140,12 +143,12 @@ void SelecCommandWindowCommandCard__Setup(
           (v10 = this->fields.battleCommand) == 0) )
     {
 LABEL_12:
-      sub_1C372B4(v10);
+      sub_1C3E7C0(v10, v11);
     }
     BattleCommandComponent__setData(v10, v9, svtData, 0, 0, 1, 1, 0);
   }
   SelecCommandWindowCommandCard__SetupMessageLabel(this, param, v8);
-  SelecCommandWindowCommandCard__SetupMessageBgSprite(this, param, v11);
+  SelecCommandWindowCommandCard__SetupMessageBgSprite(this, param, v12);
 }
 
 
@@ -156,30 +159,31 @@ void SelecCommandWindowCommandCard__SetupMessageBgSprite(
 {
   UnityEngine_Object_o *messageBgSprite; // x21
   UnityEngine_GameObject_o *IsNullOrEmpty; // x0
-  System_String_o *v7; // x0
-  char v8; // w21
-  BattleDataDefine_c *v9; // x0
+  __int64 v7; // x1
+  System_String_o *v8; // x0
+  char v9; // w21
+  BattleDataDefine_c *v10; // x0
   System_String_o *ASSET_BATTLE_COMMON; // x21
   AssetData_o *AssetStorage; // x0
-  Il2CppObject *Object_object__51154888; // x21
-  UIWidget_o *v13; // x20
-  SelecCommandWindowCommandCard_c *v14; // x0
+  Il2CppObject *Object_object__51228128; // x21
+  UIWidget_o *v14; // x20
+  SelecCommandWindowCommandCard_c *v15; // x0
   Il2CppObject *component; // [xsp+8h] [xbp-28h] BYREF
-  UnityEngine_Color_o v16; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
   UnityEngine_Color_o v17; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
+  UnityEngine_Color_o v18; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 
-  if ( (byte_4C468C3 & 1) == 0 )
+  if ( (byte_4C5A6BA & 1) == 0 )
   {
-    sub_1C37058(&Method_AssetData_GetObject_GameObject____78105168);
-    sub_1C37058(&AssetManager_TypeInfo);
-    sub_1C37058(&Method_BasicHelper_IndexValue_Color___);
-    sub_1C37058(&BattleDataDefine_TypeInfo);
-    sub_1C37058(&Method_UnityEngine_GameObject_TryGetComponent_UIAtlas___);
-    sub_1C37058(&UnityEngine_Object_TypeInfo);
-    sub_1C37058(&SelecCommandWindowCommandCard_TypeInfo);
-    sub_1C37058(&StringLiteral_3107/*"BattleAssetUIAtlas"*/);
-    sub_1C37058(&StringLiteral_24016/*"td_change_message_bg_01"*/);
-    byte_4C468C3 = 1;
+    sub_1C3E564(&Method_AssetData_GetObject_GameObject____78185152);
+    sub_1C3E564(&AssetManager_TypeInfo);
+    sub_1C3E564(&Method_BasicHelper_IndexValue_Color___);
+    sub_1C3E564(&BattleDataDefine_TypeInfo);
+    sub_1C3E564(&Method_UnityEngine_GameObject_TryGetComponent_UIAtlas___);
+    sub_1C3E564(&UnityEngine_Object_TypeInfo);
+    sub_1C3E564(&SelecCommandWindowCommandCard_TypeInfo);
+    sub_1C3E564(&StringLiteral_3107/*"BattleAssetUIAtlas"*/);
+    sub_1C3E564(&StringLiteral_24036/*"td_change_message_bg_01"*/);
+    byte_4C5A6BA = 1;
   }
   component = 0;
   messageBgSprite = (UnityEngine_Object_o *)this->fields.messageBgSprite;
@@ -190,48 +194,48 @@ void SelecCommandWindowCommandCard__SetupMessageBgSprite(
   {
     if ( !param )
       goto LABEL_29;
-    v7 = SelectTreasureDeviceInfo_TdChangeParam__get_MessageDefaultEmpty(param, 0);
-    IsNullOrEmpty = (UnityEngine_GameObject_o *)System_String__IsNullOrEmpty(v7, 0);
+    v8 = SelectTreasureDeviceInfo_TdChangeParam__get_MessageDefaultEmpty(param, 0);
+    IsNullOrEmpty = (UnityEngine_GameObject_o *)System_String__IsNullOrEmpty(v8, 0);
     if ( !this->fields.messageBgSprite )
       goto LABEL_29;
-    v8 = (char)IsNullOrEmpty;
+    v9 = (char)IsNullOrEmpty;
     IsNullOrEmpty = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this->fields.messageBgSprite, 0);
     if ( !IsNullOrEmpty )
       goto LABEL_29;
-    UnityEngine_GameObject__SetActive(IsNullOrEmpty, (v8 ^ 1) & 1, 0);
-    if ( (v8 & 1) == 0 )
+    UnityEngine_GameObject__SetActive(IsNullOrEmpty, (v9 ^ 1) & 1, 0);
+    if ( (v9 & 1) == 0 )
     {
-      v9 = BattleDataDefine_TypeInfo;
+      v10 = BattleDataDefine_TypeInfo;
       if ( !BattleDataDefine_TypeInfo->_2.cctor_finished )
       {
         j_il2cpp_runtime_class_init_0(BattleDataDefine_TypeInfo);
-        v9 = BattleDataDefine_TypeInfo;
+        v10 = BattleDataDefine_TypeInfo;
       }
-      ASSET_BATTLE_COMMON = v9->static_fields->ASSET_BATTLE_COMMON;
+      ASSET_BATTLE_COMMON = v10->static_fields->ASSET_BATTLE_COMMON;
       if ( !AssetManager_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(AssetManager_TypeInfo);
       AssetStorage = AssetManager__getAssetStorage(ASSET_BATTLE_COMMON, 0);
       if ( AssetStorage )
-        Object_object__51154888 = AssetData__GetObject_object__51154888(
+        Object_object__51228128 = AssetData__GetObject_object__51228128(
                                     AssetStorage,
                                     (System_String_o *)StringLiteral_3107/*"BattleAssetUIAtlas"*/,
-                                    (const MethodInfo_30C8FC8 *)Method_AssetData_GetObject_GameObject____78105168);
+                                    (const MethodInfo_30DADE0 *)Method_AssetData_GetObject_GameObject____78185152);
       else
-        Object_object__51154888 = 0;
+        Object_object__51228128 = 0;
       if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
       IsNullOrEmpty = (UnityEngine_GameObject_o *)UnityEngine_Object__op_Equality(
-                                                    (UnityEngine_Object_o *)Object_object__51154888,
+                                                    (UnityEngine_Object_o *)Object_object__51228128,
                                                     0,
                                                     0);
       if ( ((unsigned __int8)IsNullOrEmpty & 1) == 0 )
       {
-        if ( Object_object__51154888 )
+        if ( Object_object__51228128 )
         {
           if ( !UnityEngine_GameObject__TryGetComponent_object_(
-                  (UnityEngine_GameObject_o *)Object_object__51154888,
+                  (UnityEngine_GameObject_o *)Object_object__51228128,
                   &component,
-                  (const MethodInfo_3140468 *)Method_UnityEngine_GameObject_TryGetComponent_UIAtlas___) )
+                  (const MethodInfo_315235C *)Method_UnityEngine_GameObject_TryGetComponent_UIAtlas___) )
             return;
           IsNullOrEmpty = (UnityEngine_GameObject_o *)this->fields.messageBgSprite;
           if ( IsNullOrEmpty )
@@ -240,33 +244,33 @@ void SelecCommandWindowCommandCard__SetupMessageBgSprite(
             IsNullOrEmpty = (UnityEngine_GameObject_o *)this->fields.messageBgSprite;
             if ( IsNullOrEmpty )
             {
-              UISprite__set_spriteName((UISprite_o *)IsNullOrEmpty, (System_String_o *)StringLiteral_24016/*"td_change_message_bg_01"*/, 0);
-              v13 = (UIWidget_o *)this->fields.messageBgSprite;
-              v14 = SelecCommandWindowCommandCard_TypeInfo;
+              UISprite__set_spriteName((UISprite_o *)IsNullOrEmpty, (System_String_o *)StringLiteral_24036/*"td_change_message_bg_01"*/, 0);
+              v14 = (UIWidget_o *)this->fields.messageBgSprite;
+              v15 = SelecCommandWindowCommandCard_TypeInfo;
               if ( !SelecCommandWindowCommandCard_TypeInfo->_2.cctor_finished )
               {
                 j_il2cpp_runtime_class_init_0(SelecCommandWindowCommandCard_TypeInfo);
-                v14 = SelecCommandWindowCommandCard_TypeInfo;
+                v15 = SelecCommandWindowCommandCard_TypeInfo;
               }
-              v16.fields.r = 1.0;
-              v16.fields.g = 1.0;
-              v16.fields.b = 1.0;
-              v16.fields.a = 1.0;
-              v17 = BasicHelper__IndexValue_Color_(
-                      v14->static_fields->MessageBgColorsByCommandType,
+              v17.fields.r = 1.0;
+              v17.fields.g = 1.0;
+              v17.fields.b = 1.0;
+              v17.fields.a = 1.0;
+              v18 = BasicHelper__IndexValue_Color_(
+                      v15->static_fields->MessageBgColorsByCommandType,
                       param->fields.type - 1,
-                      v16,
-                      (const MethodInfo_30D6060 *)Method_BasicHelper_IndexValue_Color___);
-              if ( v13 )
+                      v17,
+                      (const MethodInfo_30E7E78 *)Method_BasicHelper_IndexValue_Color___);
+              if ( v14 )
               {
-                UIWidget__set_color(v13, v17, 0);
+                UIWidget__set_color(v14, v18, 0);
                 return;
               }
             }
           }
         }
 LABEL_29:
-        sub_1C372B4(IsNullOrEmpty);
+        sub_1C3E7C0(IsNullOrEmpty, v7);
       }
     }
   }
@@ -280,18 +284,19 @@ void SelecCommandWindowCommandCard__SetupMessageLabel(
 {
   UnityEngine_Object_o *messageLabel; // x21
   System_String_o *v6; // x0
-  UILabel_o *v7; // x21
-  UILabel_o *v8; // x20
-  SelecCommandWindowCommandCard_c *v9; // x0
-  UnityEngine_Color_o v10; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
+  __int64 v7; // x1
+  UILabel_o *v8; // x21
+  UILabel_o *v9; // x20
+  SelecCommandWindowCommandCard_c *v10; // x0
   UnityEngine_Color_o v11; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
+  UnityEngine_Color_o v12; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 
-  if ( (byte_4C468C2 & 1) == 0 )
+  if ( (byte_4C5A6B9 & 1) == 0 )
   {
-    sub_1C37058(&Method_BasicHelper_IndexValue_Color___);
-    sub_1C37058(&UnityEngine_Object_TypeInfo);
-    sub_1C37058(&SelecCommandWindowCommandCard_TypeInfo);
-    byte_4C468C2 = 1;
+    sub_1C3E564(&Method_BasicHelper_IndexValue_Color___);
+    sub_1C3E564(&UnityEngine_Object_TypeInfo);
+    sub_1C3E564(&SelecCommandWindowCommandCard_TypeInfo);
+    byte_4C5A6B9 = 1;
   }
   messageLabel = (UnityEngine_Object_o *)this->fields.messageLabel;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -301,30 +306,30 @@ void SelecCommandWindowCommandCard__SetupMessageLabel(
   {
     if ( !param )
       goto LABEL_12;
-    v7 = this->fields.messageLabel;
-    v6 = SelectTreasureDeviceInfo_TdChangeParam__get_MessageDefaultEmpty(param, 0);
-    if ( !v7 )
-      goto LABEL_12;
-    UILabel__set_text(v7, v6, 0);
     v8 = this->fields.messageLabel;
-    v9 = SelecCommandWindowCommandCard_TypeInfo;
+    v6 = SelectTreasureDeviceInfo_TdChangeParam__get_MessageDefaultEmpty(param, 0);
+    if ( !v8 )
+      goto LABEL_12;
+    UILabel__set_text(v8, v6, 0);
+    v9 = this->fields.messageLabel;
+    v10 = SelecCommandWindowCommandCard_TypeInfo;
     if ( !SelecCommandWindowCommandCard_TypeInfo->_2.cctor_finished )
     {
       j_il2cpp_runtime_class_init_0(SelecCommandWindowCommandCard_TypeInfo);
-      v9 = SelecCommandWindowCommandCard_TypeInfo;
+      v10 = SelecCommandWindowCommandCard_TypeInfo;
     }
-    v10.fields.r = 1.0;
-    v10.fields.g = 1.0;
-    v10.fields.b = 1.0;
-    v10.fields.a = 1.0;
-    v11 = BasicHelper__IndexValue_Color_(
-            v9->static_fields->MessageColorsByCommandType,
+    v11.fields.r = 1.0;
+    v11.fields.g = 1.0;
+    v11.fields.b = 1.0;
+    v11.fields.a = 1.0;
+    v12 = BasicHelper__IndexValue_Color_(
+            v10->static_fields->MessageColorsByCommandType,
             param->fields.type - 1,
-            v10,
-            (const MethodInfo_30D6060 *)Method_BasicHelper_IndexValue_Color___);
-    if ( !v8 )
+            v11,
+            (const MethodInfo_30E7E78 *)Method_BasicHelper_IndexValue_Color___);
+    if ( !v9 )
 LABEL_12:
-      sub_1C372B4(v6);
-    UILabel__set_effectColor(v8, v11, 0);
+      sub_1C3E7C0(v6, v7);
+    UILabel__set_effectColor(v9, v12, 0);
   }
 }

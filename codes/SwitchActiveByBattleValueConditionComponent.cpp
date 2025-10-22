@@ -15,7 +15,7 @@ bool SwitchActiveByBattleValueConditionComponent__IsSatisfyCond(
 
   value = 0;
   if ( !data )
-    sub_1C372B4(this);
+    sub_1C3E7C0(this, 0);
   if ( BattleData__TryGetBattleValue(data, this->fields.BattleValKeyId, &value, 0) )
     return BattleUtility__IsSatisfyValueCond(this->fields.CondType, this->fields.CondValArray, value, 0);
   else

@@ -9,46 +9,47 @@ void LookAtTarget___ctor(LookAtTarget_o *this, const MethodInfo *method)
 void LookAtTarget__LateUpdate(LookAtTarget_o *this, const MethodInfo *method)
 {
   UnityEngine_Object_o *target; // x20
+  __int64 v4; // x1
   UnityEngine_Transform_o *mTrans; // x0
   float x; // s8
   float y; // s9
   float z; // s10
-  float v8; // s11
-  float v9; // s12
-  float v10; // s13
-  float v11; // s11
-  float v12; // s9
-  UnityEngine_Transform_o *v13; // x20
-  float v14; // s9
-  float v15; // s10
+  float v9; // s11
+  float v10; // s12
+  float v11; // s13
+  float v12; // s11
+  float v13; // s9
+  UnityEngine_Transform_o *v14; // x20
+  float v15; // s9
+  float v16; // s10
   float w; // s11
   float speed; // s8
-  float v18; // s12
-  float v19; // s13
-  float v20; // s14
-  float v21; // s15
-  float v22; // s0
-  float v23; // s4 OVERLAPPED
-  float v24; // s1
-  bool v25; // nf
-  float v26; // s0
-  float v27; // s5
-  float v28; // s6
-  float v29; // s7
-  float v30; // [xsp+0h] [xbp-70h]
+  float v19; // s12
+  float v20; // s13
+  float v21; // s14
+  float v22; // s15
+  float v23; // s0
+  float v24; // s4 OVERLAPPED
+  float v25; // s1
+  bool v26; // nf
+  float v27; // s0
+  float v28; // s5
+  float v29; // s6
+  float v30; // s7
+  float v31; // [xsp+0h] [xbp-70h]
   float b; // [xsp+Ch] [xbp-64h]
   UnityEngine_Vector3_o position; // 0:s0.4,4:s1.4,8:s2.4
-  UnityEngine_Vector3_o v33; // 0:s0.4,4:s1.4,8:s2.4
   UnityEngine_Vector3_o v34; // 0:s0.4,4:s1.4,8:s2.4
-  UnityEngine_Quaternion_o v35; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
+  UnityEngine_Vector3_o v35; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Quaternion_o v36; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
   UnityEngine_Quaternion_o rotation; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
-  UnityEngine_Quaternion_o v37; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
   UnityEngine_Quaternion_o v38; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
+  UnityEngine_Quaternion_o v39; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 
-  if ( (byte_4C44760 & 1) == 0 )
+  if ( (byte_4C5852B & 1) == 0 )
   {
-    sub_1C37058(&UnityEngine_Object_TypeInfo);
-    byte_4C44760 = 1;
+    sub_1C3E564(&UnityEngine_Object_TypeInfo);
+    byte_4C5852B = 1;
   }
   target = (UnityEngine_Object_o *)this->fields.target;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -65,59 +66,59 @@ void LookAtTarget__LateUpdate(LookAtTarget_o *this, const MethodInfo *method)
     x = position.fields.x;
     y = position.fields.y;
     z = position.fields.z;
-    v33 = UnityEngine_Transform__get_position(mTrans, 0);
-    v8 = v33.fields.x;
-    v9 = v33.fields.y;
-    v10 = v33.fields.z;
-    if ( !byte_4C3C923 )
+    v34 = UnityEngine_Transform__get_position(mTrans, 0);
+    v9 = v34.fields.x;
+    v10 = v34.fields.y;
+    v11 = v34.fields.z;
+    if ( !byte_4C506A3 )
     {
-      sub_1C37058(&System_Math_TypeInfo);
-      byte_4C3C923 = 1;
+      sub_1C3E564(&System_Math_TypeInfo);
+      byte_4C506A3 = 1;
     }
-    v11 = x - v8;
-    v12 = y - v9;
+    v12 = x - v9;
+    v13 = y - v10;
     if ( !System_Math_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(System_Math_TypeInfo);
-    if ( sqrtf((float)((float)(z - v10) * (float)(z - v10)) + (float)((float)(v11 * v11) + (float)(v12 * v12))) > 0.001 )
+    if ( sqrtf((float)((float)(z - v11) * (float)(z - v11)) + (float)((float)(v12 * v12) + (float)(v13 * v13))) > 0.001 )
     {
-      v34.fields.x = v11;
-      v34.fields.y = v12;
-      v34.fields.z = z - v10;
-      v35 = UnityEngine_Quaternion__LookRotation_71205596(v34, 0);
-      v13 = this->fields.mTrans;
-      b = v35.fields.x;
-      if ( v13 )
+      v35.fields.x = v12;
+      v35.fields.y = v13;
+      v35.fields.z = z - v11;
+      v36 = UnityEngine_Quaternion__LookRotation_71280408(v35, 0);
+      v14 = this->fields.mTrans;
+      b = v36.fields.x;
+      if ( v14 )
       {
-        v14 = v35.fields.y;
-        v15 = v35.fields.z;
-        w = v35.fields.w;
-        rotation = UnityEngine_Transform__get_rotation(v13, 0);
+        v15 = v36.fields.y;
+        v16 = v36.fields.z;
+        w = v36.fields.w;
+        rotation = UnityEngine_Transform__get_rotation(v14, 0);
         speed = this->fields.speed;
-        v18 = rotation.fields.x;
-        v19 = rotation.fields.y;
-        v20 = rotation.fields.z;
-        v21 = rotation.fields.w;
-        v22 = speed * UnityEngine_Time__get_deltaTime(0);
-        v23 = b;
-        v24 = fminf(v22, 1.0);
-        v25 = v22 < 0.0;
-        v26 = 0.0;
-        if ( !v25 )
-          v26 = v24;
-        v30 = v26;
-        v37.fields.x = v18;
-        v37.fields.y = v19;
-        v37.fields.z = v20;
-        v37.fields.w = v21;
-        v27 = v14;
+        v19 = rotation.fields.x;
+        v20 = rotation.fields.y;
+        v21 = rotation.fields.z;
+        v22 = rotation.fields.w;
+        v23 = speed * UnityEngine_Time__get_deltaTime(0);
+        v24 = b;
+        v25 = fminf(v23, 1.0);
+        v26 = v23 < 0.0;
+        v27 = 0.0;
+        if ( !v26 )
+          v27 = v25;
+        v31 = v27;
+        v38.fields.x = v19;
+        v38.fields.y = v20;
+        v38.fields.z = v21;
+        v38.fields.w = v22;
         v28 = v15;
-        v29 = w;
-        v38 = UnityEngine_Quaternion__Slerp(v37, *(UnityEngine_Quaternion_o *)&v23, v30, 0);
-        UnityEngine_Transform__set_rotation(v13, v38, 0);
+        v29 = v16;
+        v30 = w;
+        v39 = UnityEngine_Quaternion__Slerp(v38, *(UnityEngine_Quaternion_o *)&v24, v31, 0);
+        UnityEngine_Transform__set_rotation(v14, v39, 0);
         return;
       }
 LABEL_18:
-      sub_1C372B4(mTrans);
+      sub_1C3E7C0(mTrans, v4);
     }
   }
 }
@@ -131,5 +132,5 @@ void LookAtTarget__Start(LookAtTarget_o *this, const MethodInfo *method)
 
   transform = UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0);
   this->fields.mTrans = transform;
-  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.mTrans, (int32_t)transform, v4, v5);
+  sub_1C3E508((CGThumbnailListItem_o *)&this->fields.mTrans, (int32_t)transform, v4, v5);
 }

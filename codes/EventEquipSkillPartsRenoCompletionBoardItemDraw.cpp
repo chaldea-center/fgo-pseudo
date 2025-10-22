@@ -24,10 +24,10 @@ void EventEquipSkillPartsRenoCompletionBoardItemDraw__UpdateUi(
   int32_t SkillId_k__BackingField; // w22
 
   v4 = this;
-  if ( (byte_4C3D263 & 1) == 0 )
+  if ( (byte_4C50FE3 & 1) == 0 )
   {
-    this = (EventEquipSkillPartsRenoCompletionBoardItemDraw_o *)sub_1C37058(&AtlasManager_TypeInfo);
-    byte_4C3D263 = 1;
+    this = (EventEquipSkillPartsRenoCompletionBoardItemDraw_o *)sub_1C3E564(&AtlasManager_TypeInfo);
+    byte_4C50FE3 = 1;
   }
   if ( !item )
     goto LABEL_9;
@@ -42,7 +42,7 @@ void EventEquipSkillPartsRenoCompletionBoardItemDraw__UpdateUi(
         (this = (EventEquipSkillPartsRenoCompletionBoardItemDraw_o *)v4->fields.nameLabel) == 0) )
   {
 LABEL_9:
-    sub_1C372B4(this);
+    sub_1C3E7C0(this, item);
   }
   UILabel__SetCondensedScale((UILabel_o *)this, 280, 0, 0);
   WrapControlText__textAdjust(v4->fields.detailLabel, item->fields._Detail_k__BackingField, 16, 0, 0);

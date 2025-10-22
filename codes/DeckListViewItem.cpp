@@ -7,9 +7,9 @@ void DeckListViewItem___ctor(
   int32_t v6; // w2
   const MethodInfo *v7; // x3
 
-  ListViewItem___ctor_43804668((ListViewItem_o *)this, index, 0);
+  ListViewItem___ctor_43860152((ListViewItem_o *)this, index, 0);
   this->fields.partyItem = partyItem;
-  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.partyItem, (int32_t)partyItem, v6, v7);
+  sub_1C3E508((CGThumbnailListItem_o *)&this->fields.partyItem, (int32_t)partyItem, v6, v7);
 }
 
 
@@ -19,6 +19,7 @@ void DeckListViewItem__Finalize(DeckListViewItem_o *this, const MethodInfo *meth
 }
 
 
+// local variable allocation has failed, the output may be wrong!
 PartyOrganizationListViewItem_o *DeckListViewItem__GetMember(
         DeckListViewItem_o *this,
         int32_t num,
@@ -28,7 +29,7 @@ PartyOrganizationListViewItem_o *DeckListViewItem__GetMember(
 
   partyItem = this->fields.partyItem;
   if ( !partyItem )
-    sub_1C372B4(0);
+    sub_1C3E7C0(0, *(_QWORD *)&num);
   return PartyListViewItem__GetMember(partyItem, num, 0);
 }
 
@@ -48,7 +49,7 @@ UserDeckEntity_o *DeckListViewItem__GetUserDeck(
 
   partyItem = this->fields.partyItem;
   if ( !partyItem )
-    sub_1C372B4(0);
+    sub_1C3E7C0(0, baseItem);
   return PartyListViewItem__GetUserDeck(partyItem, baseItem, 0);
 }
 
@@ -59,7 +60,7 @@ int64_t DeckListViewItem__get_DeckId(DeckListViewItem_o *this, const MethodInfo 
 
   partyItem = this->fields.partyItem;
   if ( !partyItem )
-    sub_1C372B4(this);
+    sub_1C3E7C0(this, method);
   return partyItem->fields.id;
 }
 
@@ -70,7 +71,7 @@ System_String_o *DeckListViewItem__get_DeckName(DeckListViewItem_o *this, const 
 
   partyItem = this->fields.partyItem;
   if ( !partyItem )
-    sub_1C372B4(this);
+    sub_1C3E7C0(this, method);
   return partyItem->fields.deckName;
 }
 
@@ -81,6 +82,6 @@ int32_t DeckListViewItem__get_DeckNum(DeckListViewItem_o *this, const MethodInfo
 
   partyItem = this->fields.partyItem;
   if ( !partyItem )
-    sub_1C372B4(0);
+    sub_1C3E7C0(0, method);
   return PartyListViewItem__get_DeckNum(partyItem, 0);
 }

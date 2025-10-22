@@ -34,12 +34,13 @@ bool ServantCollectionCharaGraphFilterLogic__IsMatchClassFilter(
   const MethodInfo *v8; // x1
   ListViewSort_o *sort; // x20
   CharaGraphServantCollectionListViewItem_o *ListViewItem; // x0
-  ListViewSort_o *v12; // x20
+  __int64 v12; // x1
+  ListViewSort_o *v13; // x20
 
-  if ( (byte_4C42263 & 1) == 0 )
+  if ( (byte_4C56005 & 1) == 0 )
   {
-    sub_1C37058(&FilterKindList_TypeInfo);
-    byte_4C42263 = 1;
+    sub_1C3E564(&FilterKindList_TypeInfo);
+    byte_4C56005 = 1;
   }
   v4 = FilterKindList_TypeInfo;
   if ( !FilterKindList_TypeInfo->_2.cctor_finished )
@@ -57,7 +58,7 @@ bool ServantCollectionCharaGraphFilterLogic__IsMatchClassFilter(
     if ( ListViewItem && sort )
       return ListViewSort__IsMatchClassGroupFilter(sort, ListViewItem->fields._ServantEntity_k__BackingField, 0);
 LABEL_16:
-    sub_1C372B4(ListViewItem);
+    sub_1C3E7C0(ListViewItem, v12);
   }
   v7 = FilterKindList_TypeInfo;
   if ( !FilterKindList_TypeInfo->_2.cctor_finished )
@@ -72,11 +73,11 @@ LABEL_16:
   {
     return 1;
   }
-  v12 = this->fields.sort;
+  v13 = this->fields.sort;
   ListViewItem = ServantCollectionCharaGraphFilterLogic__get_ListViewItem(this, v8);
-  if ( !ListViewItem || !v12 )
+  if ( !ListViewItem || !v13 )
     goto LABEL_16;
-  return ListViewSort__IsMatchClassFilter(v12, ListViewItem->fields._ServantEntity_k__BackingField, 0);
+  return ListViewSort__IsMatchClassFilter(v13, ListViewItem->fields._ServantEntity_k__BackingField, 0);
 }
 
 
@@ -93,10 +94,10 @@ CharaGraphServantCollectionListViewItem_o *ServantCollectionCharaGraphFilterLogi
   ServantCollectionCharaGraphFilterLogic_o *v10; // x0
   const MethodInfo *v11; // x1
 
-  if ( (byte_4C42262 & 1) == 0 )
+  if ( (byte_4C56004 & 1) == 0 )
   {
-    sub_1C37058(&CharaGraphServantCollectionListViewItem_TypeInfo);
-    byte_4C42262 = 1;
+    sub_1C3E564(&CharaGraphServantCollectionListViewItem_TypeInfo);
+    byte_4C56004 = 1;
   }
   p_listViewItem = (CGThumbnailListItem_o *)&this->fields.listViewItem;
   listViewItem = this->fields.listViewItem;
@@ -110,9 +111,9 @@ CharaGraphServantCollectionListViewItem_o *ServantCollectionCharaGraphFilterLogi
   {
     item = this->fields.item;
     p_listViewItem->klass = (CGThumbnailListItem_c *)listViewItem;
-    sub_1C36FFC(p_listViewItem, (int32_t)item, v2, v3);
+    sub_1C3E508(p_listViewItem, (int32_t)item, v2, v3);
     return listViewItem;
   }
-  sub_1C37574(this->fields.item);
+  sub_1C3EA80(this->fields.item);
   return (CharaGraphServantCollectionListViewItem_o *)ServantCollectionCharaGraphFilterLogic__IsMatchAllFilter(v10, v11);
 }

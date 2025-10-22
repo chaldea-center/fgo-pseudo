@@ -8,9 +8,9 @@ bool CombineAdjustTarget__isTerminalExposable(int32_t type, const MethodInfo *me
 {
   _BOOL4 v2; // w0
 
-  if ( (unsigned int)(type - 12) > 0x17 )
+  if ( (unsigned int)(type - 12) > 0x1A )
     LOBYTE(v2) = 0;
   else
-    return (0x897F0Fu >> (type - 12)) & 1;
+    return (0x4897F0Fu >> (type - 12)) & 1;
   return v2;
 }

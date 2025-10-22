@@ -10,32 +10,32 @@ void TypewriterEffect___ctor(TypewriterEffect_o *this, const MethodInfo *method)
   int32_t v10; // w2
   const MethodInfo *v11; // x3
 
-  if ( (byte_4C4753E & 1) == 0 )
+  if ( (byte_4C5B335 & 1) == 0 )
   {
-    sub_1C37058(&Method_BetterList_TypewriterEffect_FadeEntry___ctor__);
-    sub_1C37058(&BetterList_TypewriterEffect_FadeEntry__TypeInfo);
-    sub_1C37058(&Method_System_Collections_Generic_List_EventDelegate___ctor__);
-    sub_1C37058(&System_Collections_Generic_List_EventDelegate__TypeInfo);
-    sub_1C37058(&StringLiteral_1/*""*/);
-    byte_4C4753E = 1;
+    sub_1C3E564(&Method_BetterList_TypewriterEffect_FadeEntry___ctor__);
+    sub_1C3E564(&BetterList_TypewriterEffect_FadeEntry__TypeInfo);
+    sub_1C3E564(&Method_System_Collections_Generic_List_EventDelegate___ctor__);
+    sub_1C3E564(&System_Collections_Generic_List_EventDelegate__TypeInfo);
+    sub_1C3E564(&StringLiteral_1/*""*/);
+    byte_4C5B335 = 1;
   }
   this->fields.charsPerSecond = 20;
-  v3 = (System_Collections_Generic_List_object__o *)sub_1C372A4(System_Collections_Generic_List_EventDelegate__TypeInfo);
+  v3 = (System_Collections_Generic_List_object__o *)sub_1C3E7B0(System_Collections_Generic_List_EventDelegate__TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v3,
-    (const MethodInfo_37A27F0 *)Method_System_Collections_Generic_List_EventDelegate___ctor__);
+    (const MethodInfo_37B4C2C *)Method_System_Collections_Generic_List_EventDelegate___ctor__);
   this->fields.onFinished = (struct System_Collections_Generic_List_EventDelegate__o *)v3;
-  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.onFinished, (int32_t)v3, v4, v5);
+  sub_1C3E508((CGThumbnailListItem_o *)&this->fields.onFinished, (int32_t)v3, v4, v5);
   v6 = StringLiteral_1/*""*/;
   this->fields.mFullText = (struct System_String_o *)StringLiteral_1/*""*/;
-  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.mFullText, v6, v7, v8);
+  sub_1C3E508((CGThumbnailListItem_o *)&this->fields.mFullText, v6, v7, v8);
   this->fields.mReset = 1;
-  v9 = (BetterList_TypewriterEffect_FadeEntry__o *)sub_1C372A4(BetterList_TypewriterEffect_FadeEntry__TypeInfo);
+  v9 = (BetterList_TypewriterEffect_FadeEntry__o *)sub_1C3E7B0(BetterList_TypewriterEffect_FadeEntry__TypeInfo);
   BetterList_TypewriterEffect_FadeEntry____ctor(
     v9,
-    (const MethodInfo_331F738 *)Method_BetterList_TypewriterEffect_FadeEntry___ctor__);
+    (const MethodInfo_33315F0 *)Method_BetterList_TypewriterEffect_FadeEntry___ctor__);
   this->fields.mFade = v9;
-  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.mFade, (int32_t)v9, v10, v11);
+  sub_1C3E508((CGThumbnailListItem_o *)&this->fields.mFade, (int32_t)v9, v10, v11);
   UnityEngine_MonoBehaviour___ctor((UnityEngine_MonoBehaviour_o *)this, 0);
 }
 
@@ -53,13 +53,13 @@ void TypewriterEffect__Finish(TypewriterEffect_o *this, const MethodInfo *method
   const MethodInfo *v10; // x3
 
   v4 = this;
-  if ( (byte_4C4753C & 1) == 0 )
+  if ( (byte_4C5B333 & 1) == 0 )
   {
-    sub_1C37058(&Method_BetterList_TypewriterEffect_FadeEntry__Clear__);
-    sub_1C37058(&EventDelegate_TypeInfo);
-    sub_1C37058(&UnityEngine_Object_TypeInfo);
-    this = (TypewriterEffect_o *)sub_1C37058(&TypewriterEffect_TypeInfo);
-    byte_4C4753C = 1;
+    sub_1C3E564(&Method_BetterList_TypewriterEffect_FadeEntry__Clear__);
+    sub_1C3E564(&EventDelegate_TypeInfo);
+    sub_1C3E564(&UnityEngine_Object_TypeInfo);
+    this = (TypewriterEffect_o *)sub_1C3E564(&TypewriterEffect_TypeInfo);
+    byte_4C5B333 = 1;
   }
   if ( v4->fields.mActive )
   {
@@ -76,7 +76,7 @@ void TypewriterEffect__Finish(TypewriterEffect_o *this, const MethodInfo *method
         goto LABEL_19;
       BetterList_TypewriterEffect_FadeEntry___Clear(
         (BetterList_TypewriterEffect_FadeEntry__o *)this,
-        (const MethodInfo_331ECD4 *)Method_BetterList_TypewriterEffect_FadeEntry__Clear__);
+        (const MethodInfo_3330B8C *)Method_BetterList_TypewriterEffect_FadeEntry__Clear__);
       this = (TypewriterEffect_o *)v4->fields.mLabel;
       if ( !this )
         goto LABEL_19;
@@ -95,17 +95,17 @@ void TypewriterEffect__Finish(TypewriterEffect_o *this, const MethodInfo *method
       UIScrollView__UpdatePosition((UIScrollView_o *)this, 0);
 LABEL_15:
       TypewriterEffect_TypeInfo->static_fields->current = v4;
-      sub_1C36FFC((CGThumbnailListItem_o *)TypewriterEffect_TypeInfo->static_fields, (int32_t)v4, v2, v3);
+      sub_1C3E508((CGThumbnailListItem_o *)TypewriterEffect_TypeInfo->static_fields, (int32_t)v4, v2, v3);
       onFinished = v4->fields.onFinished;
       if ( !EventDelegate_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(EventDelegate_TypeInfo);
-      EventDelegate__Execute_49220500(onFinished, 0);
+      EventDelegate__Execute_49293740(onFinished, 0);
       TypewriterEffect_TypeInfo->static_fields->current = 0;
-      sub_1C36FFC((CGThumbnailListItem_o *)TypewriterEffect_TypeInfo->static_fields, 0, v9, v10);
+      sub_1C3E508((CGThumbnailListItem_o *)TypewriterEffect_TypeInfo->static_fields, 0, v9, v10);
       return;
     }
 LABEL_19:
-    sub_1C372B4(this);
+    sub_1C3E7C0(this, method);
   }
 }
 
@@ -189,21 +189,21 @@ void TypewriterEffect__Update(TypewriterEffect_o *this, const MethodInfo *method
   TypewriterEffect_FadeEntry_o length; // [xsp+50h] [xbp-90h] BYREF
 
   v4 = this;
-  if ( (byte_4C4753D & 1) == 0 )
+  if ( (byte_4C5B334 & 1) == 0 )
   {
-    sub_1C37058(&Method_BetterList_TypewriterEffect_FadeEntry__Add__);
-    sub_1C37058(&Method_BetterList_TypewriterEffect_FadeEntry__Clear__);
-    sub_1C37058(&Method_BetterList_TypewriterEffect_FadeEntry__RemoveAt__);
-    sub_1C37058(&Method_BetterList_TypewriterEffect_FadeEntry__get_Item__);
-    sub_1C37058(&Method_BetterList_TypewriterEffect_FadeEntry__set_Item__);
-    sub_1C37058(&Method_UnityEngine_Component_GetComponent_UILabel___);
-    sub_1C37058(&EventDelegate_TypeInfo);
-    sub_1C37058(&NGUIText_TypeInfo);
-    sub_1C37058(&UnityEngine_Object_TypeInfo);
-    sub_1C37058(&System_Text_StringBuilder_TypeInfo);
-    sub_1C37058(&TypewriterEffect_TypeInfo);
-    this = (TypewriterEffect_o *)sub_1C37058(&StringLiteral_15841/*"[00]"*/);
-    byte_4C4753D = 1;
+    sub_1C3E564(&Method_BetterList_TypewriterEffect_FadeEntry__Add__);
+    sub_1C3E564(&Method_BetterList_TypewriterEffect_FadeEntry__Clear__);
+    sub_1C3E564(&Method_BetterList_TypewriterEffect_FadeEntry__RemoveAt__);
+    sub_1C3E564(&Method_BetterList_TypewriterEffect_FadeEntry__get_Item__);
+    sub_1C3E564(&Method_BetterList_TypewriterEffect_FadeEntry__set_Item__);
+    sub_1C3E564(&Method_UnityEngine_Component_GetComponent_UILabel___);
+    sub_1C3E564(&EventDelegate_TypeInfo);
+    sub_1C3E564(&NGUIText_TypeInfo);
+    sub_1C3E564(&UnityEngine_Object_TypeInfo);
+    sub_1C3E564(&System_Text_StringBuilder_TypeInfo);
+    sub_1C3E564(&TypewriterEffect_TypeInfo);
+    this = (TypewriterEffect_o *)sub_1C3E564(&StringLiteral_15851/*"[00]"*/);
+    byte_4C5B334 = 1;
   }
   memset(&v58, 0, sizeof(v58));
   if ( !v4->fields.mActive )
@@ -214,21 +214,21 @@ void TypewriterEffect__Update(TypewriterEffect_o *this, const MethodInfo *method
     v4->fields.mReset = 0;
     Component_object = UnityEngine_Component__GetComponent_object_(
                          (UnityEngine_Component_o *)v4,
-                         (const MethodInfo_30DE428 *)Method_UnityEngine_Component_GetComponent_UILabel___);
+                         (const MethodInfo_30F0240 *)Method_UnityEngine_Component_GetComponent_UILabel___);
     v4->fields.mLabel = (struct UILabel_o *)Component_object;
-    sub_1C36FFC((CGThumbnailListItem_o *)&v4->fields.mLabel, (int32_t)Component_object, v6, v7);
+    sub_1C3E508((CGThumbnailListItem_o *)&v4->fields.mLabel, (int32_t)Component_object, v6, v7);
     this = (TypewriterEffect_o *)v4->fields.mLabel;
     if ( !this )
       goto LABEL_107;
     processedText = UILabel__get_processedText((UILabel_o *)this, 0);
     v4->fields.mFullText = processedText;
-    sub_1C36FFC((CGThumbnailListItem_o *)&v4->fields.mFullText, (int32_t)processedText, v9, v10);
+    sub_1C3E508((CGThumbnailListItem_o *)&v4->fields.mFullText, (int32_t)processedText, v9, v10);
     this = (TypewriterEffect_o *)v4->fields.mFade;
     if ( !this )
       goto LABEL_107;
     BetterList_TypewriterEffect_FadeEntry___Clear(
       (BetterList_TypewriterEffect_FadeEntry__o *)this,
-      (const MethodInfo_331ECD4 *)Method_BetterList_TypewriterEffect_FadeEntry__Clear__);
+      (const MethodInfo_3330B8C *)Method_BetterList_TypewriterEffect_FadeEntry__Clear__);
     if ( v4->fields.keepFullDimensions )
     {
       scrollView = (UnityEngine_Object_o *)v4->fields.scrollView;
@@ -329,7 +329,7 @@ LABEL_28:
         goto LABEL_107;
       mLabel = v4->fields.mLabel;
       keepFullDimensions = v4->fields.keepFullDimensions;
-      this = (TypewriterEffect_o *)System_String__Substring_63607580(
+      this = (TypewriterEffect_o *)System_String__Substring_63682392(
                                      (System_String_o *)this,
                                      0,
                                      v4->fields.mCurrentOffset,
@@ -341,7 +341,7 @@ LABEL_28:
         if ( !this )
           goto LABEL_107;
         v28 = System_String__Substring((System_String_o *)this, *p_mCurrentOffset, 0);
-        this = (TypewriterEffect_o *)System_String__Concat_63599904(v27, (System_String_o *)StringLiteral_15841/*"[00]"*/, v28, 0);
+        this = (TypewriterEffect_o *)System_String__Concat_63674716(v27, (System_String_o *)StringLiteral_15851/*"[00]"*/, v28, 0);
         v27 = (System_String_o *)this;
       }
       if ( !mLabel )
@@ -369,12 +369,12 @@ LABEL_28:
       this = (TypewriterEffect_o *)v4->fields.mFullText;
       if ( !this )
         goto LABEL_107;
-      v58.fields.text = System_String__Substring_63607580(
+      v58.fields.text = System_String__Substring_63682392(
                           (System_String_o *)this,
                           mCurrentOffset,
                           v4->fields.mCurrentOffset - mCurrentOffset,
                           0);
-      sub_1C36FFC((CGThumbnailListItem_o *)&v58.fields.text, (int32_t)v58.fields.text, v30, v31);
+      sub_1C3E508((CGThumbnailListItem_o *)&v58.fields.text, (int32_t)v58.fields.text, v30, v31);
       this = (TypewriterEffect_o *)v4->fields.mFade;
       if ( !this )
         goto LABEL_107;
@@ -382,7 +382,7 @@ LABEL_28:
       BetterList_TypewriterEffect_FadeEntry___Add(
         (BetterList_TypewriterEffect_FadeEntry__o *)this,
         &length,
-        (const MethodInfo_331ECEC *)Method_BetterList_TypewriterEffect_FadeEntry__Add__);
+        (const MethodInfo_3330BA4 *)Method_BetterList_TypewriterEffect_FadeEntry__Add__);
     }
     mFullText = v4->fields.mFullText;
     if ( !mFullText )
@@ -403,7 +403,7 @@ LABEL_28:
         &length,
         (BetterList_TypewriterEffect_FadeEntry__o *)this,
         v34,
-        (const MethodInfo_331EA3C *)Method_BetterList_TypewriterEffect_FadeEntry__get_Item__);
+        (const MethodInfo_33308F4 *)Method_BetterList_TypewriterEffect_FadeEntry__get_Item__);
       alpha = length.fields.alpha;
       v37 = *((_DWORD *)&length.fields.alpha + 1);
       v57 = *(_OWORD *)&length.fields.index;
@@ -420,7 +420,7 @@ LABEL_28:
           (BetterList_TypewriterEffect_FadeEntry__o *)this,
           v34,
           &length,
-          (const MethodInfo_331EA7C *)Method_BetterList_TypewriterEffect_FadeEntry__set_Item__);
+          (const MethodInfo_3330934 *)Method_BetterList_TypewriterEffect_FadeEntry__set_Item__);
         this = (TypewriterEffect_o *)v4->fields.mFade;
         ++v34;
         if ( !this )
@@ -433,7 +433,7 @@ LABEL_28:
         BetterList_TypewriterEffect_FadeEntry___RemoveAt(
           (BetterList_TypewriterEffect_FadeEntry__o *)this,
           v34,
-          (const MethodInfo_331F368 *)Method_BetterList_TypewriterEffect_FadeEntry__RemoveAt__);
+          (const MethodInfo_3331220 *)Method_BetterList_TypewriterEffect_FadeEntry__RemoveAt__);
         this = (TypewriterEffect_o *)v4->fields.mFade;
         if ( !this )
           goto LABEL_107;
@@ -441,7 +441,7 @@ LABEL_28:
     }
     if ( m_CancellationTokenSource )
     {
-      v40 = (System_Text_StringBuilder_o *)sub_1C372A4(System_Text_StringBuilder_TypeInfo);
+      v40 = (System_Text_StringBuilder_o *)sub_1C3E7B0(System_Text_StringBuilder_TypeInfo);
       System_Text_StringBuilder___ctor(v40, 0);
       this = (TypewriterEffect_o *)v4->fields.mFade;
       if ( !this )
@@ -453,7 +453,7 @@ LABEL_28:
                                        &length,
                                        (BetterList_TypewriterEffect_FadeEntry__o *)this,
                                        v41,
-                                       (const MethodInfo_331EA3C *)Method_BetterList_TypewriterEffect_FadeEntry__get_Item__);
+                                       (const MethodInfo_33308F4 *)Method_BetterList_TypewriterEffect_FadeEntry__get_Item__);
         text = length.fields.text;
         v43 = length.fields.alpha;
         if ( v41 )
@@ -466,22 +466,22 @@ LABEL_28:
           this = (TypewriterEffect_o *)v4->fields.mFullText;
           if ( !this )
             goto LABEL_107;
-          this = (TypewriterEffect_o *)System_String__Substring_63607580(
+          this = (TypewriterEffect_o *)System_String__Substring_63682392(
                                          (System_String_o *)this,
                                          0,
                                          length.fields.index,
                                          0);
           if ( !v40 )
             goto LABEL_107;
-          System_Text_StringBuilder__Append_63646720(v40, (System_String_o *)this, 0);
+          System_Text_StringBuilder__Append_63721532(v40, (System_String_o *)this, 0);
         }
-        System_Text_StringBuilder__Append_63649048(v40, 0x5Bu, 0);
+        System_Text_StringBuilder__Append_63723860(v40, 0x5Bu, 0);
         if ( !NGUIText_TypeInfo->_2.cctor_finished )
           j_il2cpp_runtime_class_init_0(NGUIText_TypeInfo);
         v44 = NGUIText__EncodeAlpha(v43, 0);
-        System_Text_StringBuilder__Append_63646720(v40, v44, 0);
-        System_Text_StringBuilder__Append_63649048(v40, 0x5Du, 0);
-        System_Text_StringBuilder__Append_63646720(v40, text, 0);
+        System_Text_StringBuilder__Append_63721532(v40, v44, 0);
+        System_Text_StringBuilder__Append_63723860(v40, 0x5Du, 0);
+        System_Text_StringBuilder__Append_63721532(v40, text, 0);
         this = (TypewriterEffect_o *)v4->fields.mFade;
         ++v41;
         if ( !this )
@@ -491,12 +491,12 @@ LABEL_28:
       {
         if ( v40 )
         {
-          System_Text_StringBuilder__Append_63646720(v40, (System_String_o *)StringLiteral_15841/*"[00]"*/, 0);
+          System_Text_StringBuilder__Append_63721532(v40, (System_String_o *)StringLiteral_15851/*"[00]"*/, 0);
           this = (TypewriterEffect_o *)v4->fields.mFullText;
           if ( this )
           {
             v45 = System_String__Substring((System_String_o *)this, *p_mCurrentOffset, 0);
-            System_Text_StringBuilder__Append_63646720(v40, v45, 0);
+            System_Text_StringBuilder__Append_63721532(v40, v45, 0);
             goto LABEL_101;
           }
         }
@@ -511,7 +511,7 @@ LABEL_101:
                                      v40->klass->vtable._3_ToString.method);
       if ( !v56 )
 LABEL_107:
-        sub_1C372B4(this);
+        sub_1C3E7C0(this, method);
       v54 = (System_String_o *)this;
       v55 = v56;
     }
@@ -522,7 +522,7 @@ LABEL_107:
         goto LABEL_107;
       v50 = v4->fields.mLabel;
       v51 = v4->fields.keepFullDimensions;
-      this = (TypewriterEffect_o *)System_String__Substring_63607580(
+      this = (TypewriterEffect_o *)System_String__Substring_63682392(
                                      (System_String_o *)this,
                                      0,
                                      v4->fields.mCurrentOffset,
@@ -534,7 +534,7 @@ LABEL_107:
         if ( !this )
           goto LABEL_107;
         v53 = System_String__Substring((System_String_o *)this, *p_mCurrentOffset, 0);
-        this = (TypewriterEffect_o *)System_String__Concat_63599904(v52, (System_String_o *)StringLiteral_15841/*"[00]"*/, v53, 0);
+        this = (TypewriterEffect_o *)System_String__Concat_63674716(v52, (System_String_o *)StringLiteral_15851/*"[00]"*/, v53, 0);
         if ( !v50 )
           goto LABEL_107;
         v54 = (System_String_o *)this;
@@ -558,13 +558,13 @@ LABEL_107:
     if ( *p_mCurrentOffset == v46->fields._stringLength )
     {
       TypewriterEffect_TypeInfo->static_fields->current = v4;
-      sub_1C36FFC((CGThumbnailListItem_o *)TypewriterEffect_TypeInfo->static_fields, (int32_t)v4, v2, v3);
+      sub_1C3E508((CGThumbnailListItem_o *)TypewriterEffect_TypeInfo->static_fields, (int32_t)v4, v2, v3);
       onFinished = v4->fields.onFinished;
       if ( !EventDelegate_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(EventDelegate_TypeInfo);
-      EventDelegate__Execute_49220500(onFinished, 0);
+      EventDelegate__Execute_49293740(onFinished, 0);
       TypewriterEffect_TypeInfo->static_fields->current = 0;
-      sub_1C36FFC((CGThumbnailListItem_o *)TypewriterEffect_TypeInfo->static_fields, 0, v48, v49);
+      sub_1C3E508((CGThumbnailListItem_o *)TypewriterEffect_TypeInfo->static_fields, 0, v48, v49);
       v4->fields.mActive = 0;
     }
   }

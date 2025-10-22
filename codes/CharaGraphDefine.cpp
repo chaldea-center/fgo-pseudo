@@ -34,7 +34,7 @@ UserGameEntity_o *CharaGraphDefine_CharaGraphItemBulkModifyArgs__get_UserGameEnt
   {
     userGameEntity = UserGameMaster__getSelfUserGame(0);
     p_userGameEntity->klass = (CGThumbnailListItem_c *)userGameEntity;
-    sub_1C36FFC(p_userGameEntity, (int32_t)userGameEntity, v4, v5);
+    sub_1C3E508(p_userGameEntity, (int32_t)userGameEntity, v4, v5);
   }
   return userGameEntity;
 }

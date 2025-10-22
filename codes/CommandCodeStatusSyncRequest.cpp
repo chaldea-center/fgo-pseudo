@@ -17,33 +17,33 @@ void CommandCodeStatusSyncRequest__beginRequest(
   System_String_o *v12; // x0
 
   v10 = (RequestBase_o *)this;
-  if ( (byte_4C44A82 & 1) == 0 )
+  if ( (byte_4C5884D & 1) == 0 )
   {
-    sub_1C37058(&JsonManager_TypeInfo);
-    sub_1C37058(&StringLiteral_17805/*"changeCommandCodeIds"*/);
-    sub_1C37058(&StringLiteral_23104/*"revokeCommandCodeIds"*/);
-    sub_1C37058(&StringLiteral_20931/*"isLock"*/);
-    this = (CommandCodeStatusSyncRequest_o *)sub_1C37058(&StringLiteral_20909/*"isChoice"*/);
-    byte_4C44A82 = 1;
+    sub_1C3E564(&JsonManager_TypeInfo);
+    sub_1C3E564(&StringLiteral_17822/*"changeCommandCodeIds"*/);
+    sub_1C3E564(&StringLiteral_23123/*"revokeCommandCodeIds"*/);
+    sub_1C3E564(&StringLiteral_20949/*"isLock"*/);
+    this = (CommandCodeStatusSyncRequest_o *)sub_1C3E564(&StringLiteral_20927/*"isChoice"*/);
+    byte_4C5884D = 1;
   }
   if ( changeCommandCodeIds && changeCommandCodeIds->max_length )
   {
     if ( !JsonManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(JsonManager_TypeInfo);
     v11 = JsonManager__toJson(&changeCommandCodeIds->obj, 0, 0, 0);
-    RequestBase__addField_44247300(v10, (System_String_o *)StringLiteral_17805/*"changeCommandCodeIds"*/, v11, 0);
+    RequestBase__addField_44302832(v10, (System_String_o *)StringLiteral_17822/*"changeCommandCodeIds"*/, v11, 0);
   }
   if ( revokeCommandCodeIds && revokeCommandCodeIds->max_length )
   {
     if ( !JsonManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(JsonManager_TypeInfo);
     v12 = JsonManager__toJson(&revokeCommandCodeIds->obj, 0, 0, 0);
-    RequestBase__addField_44247300(v10, (System_String_o *)StringLiteral_23104/*"revokeCommandCodeIds"*/, v12, 0);
+    RequestBase__addField_44302832(v10, (System_String_o *)StringLiteral_23123/*"revokeCommandCodeIds"*/, v12, 0);
   }
   if ( !v10 )
-    sub_1C372B4(this);
-  RequestBase__addField(v10, (System_String_o *)StringLiteral_20931/*"isLock"*/, isLock, 0);
-  RequestBase__addField(v10, (System_String_o *)StringLiteral_20909/*"isChoice"*/, isChoice, 0);
+    sub_1C3E7C0(this, changeCommandCodeIds);
+  RequestBase__addField(v10, (System_String_o *)StringLiteral_20949/*"isLock"*/, isLock, 0);
+  RequestBase__addField(v10, (System_String_o *)StringLiteral_20927/*"isChoice"*/, isChoice, 0);
   RequestBase__beginRequest(v10, 0);
 }
 
@@ -52,11 +52,11 @@ System_String_o *CommandCodeStatusSyncRequest__getMockData(
         CommandCodeStatusSyncRequest_o *this,
         const MethodInfo *method)
 {
-  if ( (byte_4C44A81 & 1) == 0 )
+  if ( (byte_4C5884C & 1) == 0 )
   {
-    sub_1C37058(&NetworkManager_TypeInfo);
-    sub_1C37058(&StringLiteral_1/*""*/);
-    byte_4C44A81 = 1;
+    sub_1C3E564(&NetworkManager_TypeInfo);
+    sub_1C3E564(&StringLiteral_1/*""*/);
+    byte_4C5884C = 1;
   }
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
@@ -68,16 +68,16 @@ System_String_o *CommandCodeStatusSyncRequest__getURL(CommandCodeStatusSyncReque
 {
   System_String_o *BaseUrl; // x0
 
-  if ( (byte_4C44A80 & 1) == 0 )
+  if ( (byte_4C5884B & 1) == 0 )
   {
-    sub_1C37058(&NetworkManager_TypeInfo);
-    sub_1C37058(&StringLiteral_18156/*"commandCode/statusSync"*/);
-    byte_4C44A80 = 1;
+    sub_1C3E564(&NetworkManager_TypeInfo);
+    sub_1C3E564(&StringLiteral_18173/*"commandCode/statusSync"*/);
+    byte_4C5884B = 1;
   }
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
   BaseUrl = NetworkManager__getBaseUrl(1, 0);
-  return System_String__Concat_63561656(BaseUrl, (System_String_o *)StringLiteral_18156/*"commandCode/statusSync"*/, 0);
+  return System_String__Concat_63636468(BaseUrl, (System_String_o *)StringLiteral_18173/*"commandCode/statusSync"*/, 0);
 }
 
 
@@ -89,19 +89,19 @@ void CommandCodeStatusSyncRequest__requestCompleted(
   ResponseData_o *v5; // x0
   __int64 *v6; // x8
 
-  if ( (byte_4C44A83 & 1) == 0 )
+  if ( (byte_4C5884E & 1) == 0 )
   {
-    sub_1C37058(&ResponseCommandKind_TypeInfo);
-    sub_1C37058(&StringLiteral_22382/*"ok"*/);
-    sub_1C37058(&StringLiteral_22215/*"ng"*/);
-    byte_4C44A83 = 1;
+    sub_1C3E564(&ResponseCommandKind_TypeInfo);
+    sub_1C3E564(&StringLiteral_22400/*"ok"*/);
+    sub_1C3E564(&StringLiteral_22233/*"ng"*/);
+    byte_4C5884E = 1;
   }
   if ( !ResponseCommandKind_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(ResponseCommandKind_TypeInfo);
   v5 = ResponseCommandKind__SearchData(72, responseList, 0);
-  if ( v5 && ResponseData__checkError_44242528(v5, 0) )
-    v6 = &StringLiteral_22382/*"ok"*/;
+  if ( v5 && ResponseData__checkError_44298060(v5, 0) )
+    v6 = &StringLiteral_22400/*"ok"*/;
   else
-    v6 = &StringLiteral_22215/*"ng"*/;
+    v6 = &StringLiteral_22233/*"ng"*/;
   RequestBase__completed((RequestBase_o *)this, (System_String_o *)*v6, 0);
 }

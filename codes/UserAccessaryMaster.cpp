@@ -1,14 +1,14 @@
 void UserAccessaryMaster___ctor(UserAccessaryMaster_o *this, const MethodInfo *method)
 {
-  if ( (byte_4C43CF8 & 1) == 0 )
+  if ( (byte_4C57AB0 & 1) == 0 )
   {
-    sub_1C37058(&Method_DataMasterBase_UserAccessaryMaster__UserAccessaryEntity__string___ctor__);
-    byte_4C43CF8 = 1;
+    sub_1C3E564(&Method_DataMasterBase_UserAccessaryMaster__UserAccessaryEntity__string___ctor__);
+    byte_4C57AB0 = 1;
   }
   DataMasterBase_object__object__object____ctor(
     (DataMasterBase_TMaster__TEntity__PKType__o *)this,
     44,
-    (const MethodInfo_33A3834 *)Method_DataMasterBase_UserAccessaryMaster__UserAccessaryEntity__string___ctor__);
+    (const MethodInfo_33B56EC *)Method_DataMasterBase_UserAccessaryMaster__UserAccessaryEntity__string___ctor__);
 }
 
 
@@ -21,16 +21,16 @@ UserAccessaryEntity_o *UserAccessaryMaster__GetEntity(
 {
   Il2CppObject *PK; // x1
 
-  if ( (byte_4C43CF6 & 1) == 0 )
+  if ( (byte_4C57AAE & 1) == 0 )
   {
-    sub_1C37058(&Method_DataMasterBase_UserAccessaryMaster__UserAccessaryEntity__string__GetEntity__);
-    byte_4C43CF6 = 1;
+    sub_1C3E564(&Method_DataMasterBase_UserAccessaryMaster__UserAccessaryEntity__string__GetEntity__);
+    byte_4C57AAE = 1;
   }
   PK = (Il2CppObject *)UserAccessaryEntity__CreatePK(userId, accessaryId, *(const MethodInfo **)&accessaryId);
   return (UserAccessaryEntity_o *)DataMasterBase_object__object__object___GetEntity(
                                     (DataMasterBase_TMaster__TEntity__PKType__o *)this,
                                     PK,
-                                    (const MethodInfo_33A5B58 *)Method_DataMasterBase_UserAccessaryMaster__UserAccessaryEntity__string__GetEntity__);
+                                    (const MethodInfo_33B7A10 *)Method_DataMasterBase_UserAccessaryMaster__UserAccessaryEntity__string__GetEntity__);
 }
 
 
@@ -43,15 +43,15 @@ bool UserAccessaryMaster__TryGetEntity(
 {
   Il2CppObject *PK; // x2
 
-  if ( (byte_4C43CF7 & 1) == 0 )
+  if ( (byte_4C57AAF & 1) == 0 )
   {
-    sub_1C37058(&Method_DataMasterBase_UserAccessaryMaster__UserAccessaryEntity__string__TryGetEntity__);
-    byte_4C43CF7 = 1;
+    sub_1C3E564(&Method_DataMasterBase_UserAccessaryMaster__UserAccessaryEntity__string__TryGetEntity__);
+    byte_4C57AAF = 1;
   }
   PK = (Il2CppObject *)UserAccessaryEntity__CreatePK(userId, accessaryId, (const MethodInfo *)userId);
   return DataMasterBase_object__object__object___TryGetEntity(
            (DataMasterBase_TMaster__TEntity__PKType__o *)this,
            (Il2CppObject **)entity,
            PK,
-           (const MethodInfo_33A5BA4 *)Method_DataMasterBase_UserAccessaryMaster__UserAccessaryEntity__string__TryGetEntity__);
+           (const MethodInfo_33B7A5C *)Method_DataMasterBase_UserAccessaryMaster__UserAccessaryEntity__string__TryGetEntity__);
 }

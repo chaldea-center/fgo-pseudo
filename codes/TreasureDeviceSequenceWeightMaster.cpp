@@ -1,14 +1,14 @@
 void TreasureDeviceSequenceWeightMaster___ctor(TreasureDeviceSequenceWeightMaster_o *this, const MethodInfo *method)
 {
-  if ( (byte_4C43CAF & 1) == 0 )
+  if ( (byte_4C57A67 & 1) == 0 )
   {
-    sub_1C37058(&Method_DataMasterBase_TreasureDeviceSequenceWeightMaster__TreasureDeviceSequenceWeightEntity__string___ctor__);
-    byte_4C43CAF = 1;
+    sub_1C3E564(&Method_DataMasterBase_TreasureDeviceSequenceWeightMaster__TreasureDeviceSequenceWeightEntity__string___ctor__);
+    byte_4C57A67 = 1;
   }
   DataMasterBase_object__object__object____ctor(
     (DataMasterBase_TMaster__TEntity__PKType__o *)this,
     460,
-    (const MethodInfo_33A3834 *)Method_DataMasterBase_TreasureDeviceSequenceWeightMaster__TreasureDeviceSequenceWeightEntity__string___ctor__);
+    (const MethodInfo_33B56EC *)Method_DataMasterBase_TreasureDeviceSequenceWeightMaster__TreasureDeviceSequenceWeightEntity__string___ctor__);
 }
 
 
@@ -22,10 +22,10 @@ TreasureDeviceSequenceWeightEntity_o *TreasureDeviceSequenceWeightMaster__GetEnt
 {
   Il2CppObject *PK; // x1
 
-  if ( (byte_4C43CB0 & 1) == 0 )
+  if ( (byte_4C57A68 & 1) == 0 )
   {
-    sub_1C37058(&Method_DataMasterBase_TreasureDeviceSequenceWeightMaster__TreasureDeviceSequenceWeightEntity__string__GetEntity__);
-    byte_4C43CB0 = 1;
+    sub_1C3E564(&Method_DataMasterBase_TreasureDeviceSequenceWeightMaster__TreasureDeviceSequenceWeightEntity__string__GetEntity__);
+    byte_4C57A68 = 1;
   }
   PK = (Il2CppObject *)TreasureDeviceSequenceWeightEntity__CreatePK(
                          treasureDeviceId,
@@ -35,7 +35,7 @@ TreasureDeviceSequenceWeightEntity_o *TreasureDeviceSequenceWeightMaster__GetEnt
   return (TreasureDeviceSequenceWeightEntity_o *)DataMasterBase_object__object__object___GetEntity(
                                                    (DataMasterBase_TMaster__TEntity__PKType__o *)this,
                                                    PK,
-                                                   (const MethodInfo_33A5B58 *)Method_DataMasterBase_TreasureDeviceSequenceWeightMaster__TreasureDeviceSequenceWeightEntity__string__GetEntity__);
+                                                   (const MethodInfo_33B7A10 *)Method_DataMasterBase_TreasureDeviceSequenceWeightMaster__TreasureDeviceSequenceWeightEntity__string__GetEntity__);
 }
 
 
@@ -50,116 +50,120 @@ TreasureDeviceSequenceWeightEntity_o *TreasureDeviceSequenceWeightMaster__GetEnt
 {
   __int64 v13; // x25
   TreasureDeviceSequenceWeightEntity_o *result; // x0
+  _BOOL8 v15; // x1
   System_Collections_Generic_IEnumerable_TSource__o *Entitys; // x23
-  System_Func_object__bool__o *v16; // x24
-  System_Collections_Generic_IEnumerable_TSource__o *v17; // x0
-  TreasureDeviceSequenceWeightMaster___c_c *v18; // x8
-  System_Collections_Generic_IEnumerable_TSource__o *v19; // x23
+  System_Func_object__bool__o *v17; // x24
+  System_Collections_Generic_IEnumerable_TSource__o *v18; // x0
+  TreasureDeviceSequenceWeightMaster___c_c *v19; // x8
+  System_Collections_Generic_IEnumerable_TSource__o *v20; // x23
   System_Func_object__int__o *_9__3_1; // x24
-  Il2CppObject *v21; // x25
+  Il2CppObject *v22; // x25
   struct TreasureDeviceSequenceWeightMaster___c_StaticFields *static_fields; // x0
-  int32_t v23; // w2
-  const MethodInfo *v24; // x3
-  System_Collections_Generic_IEnumerable_TSource__o *v25; // x0
-  System_Object_array *v26; // x23
+  int32_t v24; // w2
+  const MethodInfo *v25; // x3
+  System_Collections_Generic_IEnumerable_TSource__o *v26; // x0
+  System_Object_array *v27; // x23
   bool IsNullOrEmpty; // w8
   int max_length; // w8
-  int v29; // w9
+  int v30; // w9
+  int32_t v31; // w10
 
-  if ( (byte_4C43CAD & 1) == 0 )
+  if ( (byte_4C57A65 & 1) == 0 )
   {
-    sub_1C37058(&Method_DataMasterBase_TreasureDeviceSequenceWeightMaster__TreasureDeviceSequenceWeightEntity__string__getEntitys__);
-    sub_1C37058(&Method_System_Linq_Enumerable_OrderByDescending_TreasureDeviceSequenceWeightEntity__int___);
-    sub_1C37058(&Method_System_Linq_Enumerable_ToArray_TreasureDeviceSequenceWeightEntity___);
-    sub_1C37058(&Method_System_Linq_Enumerable_Where_TreasureDeviceSequenceWeightEntity___);
-    sub_1C37058(&System_Func_TreasureDeviceSequenceWeightEntity__bool__TypeInfo);
-    sub_1C37058(&System_Func_TreasureDeviceSequenceWeightEntity__int__TypeInfo);
-    sub_1C37058(&Method_TreasureDeviceSequenceWeightMaster___c__GetEntityByDescendingPriority_b__3_1__);
-    sub_1C37058(&Method_TreasureDeviceSequenceWeightMaster___c__DisplayClass3_0__GetEntityByDescendingPriority_b__0__);
-    sub_1C37058(&TreasureDeviceSequenceWeightMaster___c__DisplayClass3_0_TypeInfo);
-    sub_1C37058(&TreasureDeviceSequenceWeightMaster___c_TypeInfo);
-    byte_4C43CAD = 1;
+    sub_1C3E564(&Method_DataMasterBase_TreasureDeviceSequenceWeightMaster__TreasureDeviceSequenceWeightEntity__string__getEntitys__);
+    sub_1C3E564(&Method_System_Linq_Enumerable_OrderByDescending_TreasureDeviceSequenceWeightEntity__int___);
+    sub_1C3E564(&Method_System_Linq_Enumerable_ToArray_TreasureDeviceSequenceWeightEntity___);
+    sub_1C3E564(&Method_System_Linq_Enumerable_Where_TreasureDeviceSequenceWeightEntity___);
+    sub_1C3E564(&System_Func_TreasureDeviceSequenceWeightEntity__bool__TypeInfo);
+    sub_1C3E564(&System_Func_TreasureDeviceSequenceWeightEntity__int__TypeInfo);
+    sub_1C3E564(&Method_TreasureDeviceSequenceWeightMaster___c__GetEntityByDescendingPriority_b__3_1__);
+    sub_1C3E564(&Method_TreasureDeviceSequenceWeightMaster___c__DisplayClass3_0__GetEntityByDescendingPriority_b__0__);
+    sub_1C3E564(&TreasureDeviceSequenceWeightMaster___c__DisplayClass3_0_TypeInfo);
+    sub_1C3E564(&TreasureDeviceSequenceWeightMaster___c_TypeInfo);
+    byte_4C57A65 = 1;
   }
-  v13 = sub_1C372A4(TreasureDeviceSequenceWeightMaster___c__DisplayClass3_0_TypeInfo);
+  v13 = sub_1C3E7B0(TreasureDeviceSequenceWeightMaster___c__DisplayClass3_0_TypeInfo);
   System_Object___ctor((Il2CppObject *)v13, 0);
   if ( !v13 )
     goto LABEL_23;
   *(_DWORD *)(v13 + 16) = treasureDeviceId;
   Entitys = (System_Collections_Generic_IEnumerable_TSource__o *)DataMasterBase_object__object__object___getEntitys(
                                                                    (DataMasterBase_TMaster__TEntity__PKType__o *)this,
-                                                                   (const MethodInfo_33A4DDC *)Method_DataMasterBase_TreasureDeviceSequenceWeightMaster__TreasureDeviceSequenceWeightEntity__string__getEntitys__);
-  v16 = (System_Func_object__bool__o *)sub_1C372A4(System_Func_TreasureDeviceSequenceWeightEntity__bool__TypeInfo);
+                                                                   (const MethodInfo_33B6C94 *)Method_DataMasterBase_TreasureDeviceSequenceWeightMaster__TreasureDeviceSequenceWeightEntity__string__getEntitys__);
+  v17 = (System_Func_object__bool__o *)sub_1C3E7B0(System_Func_TreasureDeviceSequenceWeightEntity__bool__TypeInfo);
   System_Func_object__bool____ctor(
-    v16,
+    v17,
     (Il2CppObject *)v13,
     Method_TreasureDeviceSequenceWeightMaster___c__DisplayClass3_0__GetEntityByDescendingPriority_b__0__,
     0);
-  v17 = System_Linq_Enumerable__Where_object_(
+  v18 = System_Linq_Enumerable__Where_object_(
           Entitys,
-          (System_Func_TSource__bool__o *)v16,
-          (const MethodInfo_312E410 *)Method_System_Linq_Enumerable_Where_TreasureDeviceSequenceWeightEntity___);
-  v18 = TreasureDeviceSequenceWeightMaster___c_TypeInfo;
-  v19 = v17;
+          (System_Func_TSource__bool__o *)v17,
+          (const MethodInfo_3140304 *)Method_System_Linq_Enumerable_Where_TreasureDeviceSequenceWeightEntity___);
+  v19 = TreasureDeviceSequenceWeightMaster___c_TypeInfo;
+  v20 = v18;
   if ( !TreasureDeviceSequenceWeightMaster___c_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(TreasureDeviceSequenceWeightMaster___c_TypeInfo);
-    v18 = TreasureDeviceSequenceWeightMaster___c_TypeInfo;
+    v19 = TreasureDeviceSequenceWeightMaster___c_TypeInfo;
   }
-  _9__3_1 = (System_Func_object__int__o *)v18->static_fields->__9__3_1;
+  _9__3_1 = (System_Func_object__int__o *)v19->static_fields->__9__3_1;
   if ( !_9__3_1 )
   {
-    if ( !v18->_2.cctor_finished )
+    if ( !v19->_2.cctor_finished )
     {
-      j_il2cpp_runtime_class_init_0(v18);
-      v18 = TreasureDeviceSequenceWeightMaster___c_TypeInfo;
+      j_il2cpp_runtime_class_init_0(v19);
+      v19 = TreasureDeviceSequenceWeightMaster___c_TypeInfo;
     }
-    v21 = (Il2CppObject *)v18->static_fields->__9;
-    _9__3_1 = (System_Func_object__int__o *)sub_1C372A4(System_Func_TreasureDeviceSequenceWeightEntity__int__TypeInfo);
+    v22 = (Il2CppObject *)v19->static_fields->__9;
+    _9__3_1 = (System_Func_object__int__o *)sub_1C3E7B0(System_Func_TreasureDeviceSequenceWeightEntity__int__TypeInfo);
     System_Func_object__int____ctor(
       _9__3_1,
-      v21,
+      v22,
       Method_TreasureDeviceSequenceWeightMaster___c__GetEntityByDescendingPriority_b__3_1__,
       0);
     static_fields = TreasureDeviceSequenceWeightMaster___c_TypeInfo->static_fields;
     static_fields->__9__3_1 = (struct System_Func_TreasureDeviceSequenceWeightEntity__int__o *)_9__3_1;
-    sub_1C36FFC((CGThumbnailListItem_o *)&static_fields->__9__3_1, (int32_t)_9__3_1, v23, v24);
+    sub_1C3E508((CGThumbnailListItem_o *)&static_fields->__9__3_1, (int32_t)_9__3_1, v24, v25);
   }
-  v25 = (System_Collections_Generic_IEnumerable_TSource__o *)System_Linq_Enumerable__OrderByDescending_object__int_(
-                                                               v19,
+  v26 = (System_Collections_Generic_IEnumerable_TSource__o *)System_Linq_Enumerable__OrderByDescending_object__int_(
+                                                               v20,
                                                                (System_Func_TSource__TKey__o *)_9__3_1,
-                                                               (const MethodInfo_311792C *)Method_System_Linq_Enumerable_OrderByDescending_TreasureDeviceSequenceWeightEntity__int___);
-  v26 = System_Linq_Enumerable__ToArray_object_(
-          v25,
-          (const MethodInfo_31272F4 *)Method_System_Linq_Enumerable_ToArray_TreasureDeviceSequenceWeightEntity___);
-  IsNullOrEmpty = BasicHelper__IsNullOrEmpty((System_Collections_ICollection_o *)v26, 0);
+                                                               (const MethodInfo_3129820 *)Method_System_Linq_Enumerable_OrderByDescending_TreasureDeviceSequenceWeightEntity__int___);
+  v27 = System_Linq_Enumerable__ToArray_object_(
+          v26,
+          (const MethodInfo_31391E8 *)Method_System_Linq_Enumerable_ToArray_TreasureDeviceSequenceWeightEntity___);
+  IsNullOrEmpty = BasicHelper__IsNullOrEmpty((System_Collections_ICollection_o *)v27, 0);
   result = 0;
   if ( !IsNullOrEmpty )
   {
-    if ( !v26 )
+    if ( !v27 )
       goto LABEL_23;
-    max_length = v26->max_length;
+    max_length = v27->max_length;
     if ( max_length >= 1 )
     {
-      v29 = 0;
+      v30 = 0;
       while ( 1 )
       {
-        if ( max_length == v29 )
-          sub_1C372BC(result);
-        result = (TreasureDeviceSequenceWeightEntity_o *)v26->m_Items[v29];
+        if ( max_length == v30 )
+          sub_1C3E7C8(result, v15);
+        result = (TreasureDeviceSequenceWeightEntity_o *)v27->m_Items[v30];
         if ( !result )
           break;
-        if ( (result->fields.limitCount == limitCount || result->fields.limitCount == -1)
+        v31 = result->fields.limitCount;
+        v15 = v31 != -1;
+        if ( (v31 == limitCount || !v15)
           && (result->fields.npChargeStage == npChargeState || result->fields.npChargeStage == -1)
           && (result->fields.playerGenderType == genderType || result->fields.playerGenderType == -1)
           && (result->fields.patternId == patternId || result->fields.patternId == -1) )
         {
           return result;
         }
-        if ( max_length == ++v29 )
+        if ( max_length == ++v30 )
           return 0;
       }
 LABEL_23:
-      sub_1C372B4(result);
+      sub_1C3E7C0(result, v15);
     }
     return 0;
   }
@@ -205,97 +209,98 @@ int32_t TreasureDeviceSequenceWeightMaster__GetMaxPatternId(
 {
   __int64 v5; // x21
   _BOOL8 IsNullOrEmpty; // x0
+  __int64 v7; // x1
   System_Collections_Generic_IEnumerable_TSource__o *Entitys; // x19
-  System_Func_object__bool__o *v8; // x20
-  System_Collections_Generic_IEnumerable_TSource__o *v9; // x0
-  TreasureDeviceSequenceWeightMaster___c_c *v10; // x8
-  System_Collections_Generic_IEnumerable_TSource__o *v11; // x19
+  System_Func_object__bool__o *v9; // x20
+  System_Collections_Generic_IEnumerable_TSource__o *v10; // x0
+  TreasureDeviceSequenceWeightMaster___c_c *v11; // x8
+  System_Collections_Generic_IEnumerable_TSource__o *v12; // x19
   System_Func_object__int__o *_9__4_1; // x20
-  Il2CppObject *v13; // x21
+  Il2CppObject *v14; // x21
   struct TreasureDeviceSequenceWeightMaster___c_StaticFields *static_fields; // x0
-  int32_t v15; // w2
-  const MethodInfo *v16; // x3
-  System_Collections_Generic_IEnumerable_TSource__o *v17; // x0
-  System_Object_array *v18; // x19
-  Il2CppObject *v20; // x8
+  int32_t v16; // w2
+  const MethodInfo *v17; // x3
+  System_Collections_Generic_IEnumerable_TSource__o *v18; // x0
+  System_Object_array *v19; // x19
+  Il2CppObject *v21; // x8
 
-  if ( (byte_4C43CAE & 1) == 0 )
+  if ( (byte_4C57A66 & 1) == 0 )
   {
-    sub_1C37058(&Method_DataMasterBase_TreasureDeviceSequenceWeightMaster__TreasureDeviceSequenceWeightEntity__string__getEntitys__);
-    sub_1C37058(&Method_System_Linq_Enumerable_OrderByDescending_TreasureDeviceSequenceWeightEntity__int___);
-    sub_1C37058(&Method_System_Linq_Enumerable_ToArray_TreasureDeviceSequenceWeightEntity___);
-    sub_1C37058(&Method_System_Linq_Enumerable_Where_TreasureDeviceSequenceWeightEntity___);
-    sub_1C37058(&System_Func_TreasureDeviceSequenceWeightEntity__bool__TypeInfo);
-    sub_1C37058(&System_Func_TreasureDeviceSequenceWeightEntity__int__TypeInfo);
-    sub_1C37058(&Method_TreasureDeviceSequenceWeightMaster___c__GetMaxPatternId_b__4_1__);
-    sub_1C37058(&Method_TreasureDeviceSequenceWeightMaster___c__DisplayClass4_0__GetMaxPatternId_b__0__);
-    sub_1C37058(&TreasureDeviceSequenceWeightMaster___c__DisplayClass4_0_TypeInfo);
-    sub_1C37058(&TreasureDeviceSequenceWeightMaster___c_TypeInfo);
-    byte_4C43CAE = 1;
+    sub_1C3E564(&Method_DataMasterBase_TreasureDeviceSequenceWeightMaster__TreasureDeviceSequenceWeightEntity__string__getEntitys__);
+    sub_1C3E564(&Method_System_Linq_Enumerable_OrderByDescending_TreasureDeviceSequenceWeightEntity__int___);
+    sub_1C3E564(&Method_System_Linq_Enumerable_ToArray_TreasureDeviceSequenceWeightEntity___);
+    sub_1C3E564(&Method_System_Linq_Enumerable_Where_TreasureDeviceSequenceWeightEntity___);
+    sub_1C3E564(&System_Func_TreasureDeviceSequenceWeightEntity__bool__TypeInfo);
+    sub_1C3E564(&System_Func_TreasureDeviceSequenceWeightEntity__int__TypeInfo);
+    sub_1C3E564(&Method_TreasureDeviceSequenceWeightMaster___c__GetMaxPatternId_b__4_1__);
+    sub_1C3E564(&Method_TreasureDeviceSequenceWeightMaster___c__DisplayClass4_0__GetMaxPatternId_b__0__);
+    sub_1C3E564(&TreasureDeviceSequenceWeightMaster___c__DisplayClass4_0_TypeInfo);
+    sub_1C3E564(&TreasureDeviceSequenceWeightMaster___c_TypeInfo);
+    byte_4C57A66 = 1;
   }
-  v5 = sub_1C372A4(TreasureDeviceSequenceWeightMaster___c__DisplayClass4_0_TypeInfo);
+  v5 = sub_1C3E7B0(TreasureDeviceSequenceWeightMaster___c__DisplayClass4_0_TypeInfo);
   System_Object___ctor((Il2CppObject *)v5, 0);
   if ( !v5 )
     goto LABEL_16;
   *(_DWORD *)(v5 + 16) = treasureDeviceId;
   Entitys = (System_Collections_Generic_IEnumerable_TSource__o *)DataMasterBase_object__object__object___getEntitys(
                                                                    (DataMasterBase_TMaster__TEntity__PKType__o *)this,
-                                                                   (const MethodInfo_33A4DDC *)Method_DataMasterBase_TreasureDeviceSequenceWeightMaster__TreasureDeviceSequenceWeightEntity__string__getEntitys__);
-  v8 = (System_Func_object__bool__o *)sub_1C372A4(System_Func_TreasureDeviceSequenceWeightEntity__bool__TypeInfo);
+                                                                   (const MethodInfo_33B6C94 *)Method_DataMasterBase_TreasureDeviceSequenceWeightMaster__TreasureDeviceSequenceWeightEntity__string__getEntitys__);
+  v9 = (System_Func_object__bool__o *)sub_1C3E7B0(System_Func_TreasureDeviceSequenceWeightEntity__bool__TypeInfo);
   System_Func_object__bool____ctor(
-    v8,
+    v9,
     (Il2CppObject *)v5,
     Method_TreasureDeviceSequenceWeightMaster___c__DisplayClass4_0__GetMaxPatternId_b__0__,
     0);
-  v9 = System_Linq_Enumerable__Where_object_(
-         Entitys,
-         (System_Func_TSource__bool__o *)v8,
-         (const MethodInfo_312E410 *)Method_System_Linq_Enumerable_Where_TreasureDeviceSequenceWeightEntity___);
-  v10 = TreasureDeviceSequenceWeightMaster___c_TypeInfo;
-  v11 = v9;
+  v10 = System_Linq_Enumerable__Where_object_(
+          Entitys,
+          (System_Func_TSource__bool__o *)v9,
+          (const MethodInfo_3140304 *)Method_System_Linq_Enumerable_Where_TreasureDeviceSequenceWeightEntity___);
+  v11 = TreasureDeviceSequenceWeightMaster___c_TypeInfo;
+  v12 = v10;
   if ( !TreasureDeviceSequenceWeightMaster___c_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(TreasureDeviceSequenceWeightMaster___c_TypeInfo);
-    v10 = TreasureDeviceSequenceWeightMaster___c_TypeInfo;
+    v11 = TreasureDeviceSequenceWeightMaster___c_TypeInfo;
   }
-  _9__4_1 = (System_Func_object__int__o *)v10->static_fields->__9__4_1;
+  _9__4_1 = (System_Func_object__int__o *)v11->static_fields->__9__4_1;
   if ( !_9__4_1 )
   {
-    if ( !v10->_2.cctor_finished )
+    if ( !v11->_2.cctor_finished )
     {
-      j_il2cpp_runtime_class_init_0(v10);
-      v10 = TreasureDeviceSequenceWeightMaster___c_TypeInfo;
+      j_il2cpp_runtime_class_init_0(v11);
+      v11 = TreasureDeviceSequenceWeightMaster___c_TypeInfo;
     }
-    v13 = (Il2CppObject *)v10->static_fields->__9;
-    _9__4_1 = (System_Func_object__int__o *)sub_1C372A4(System_Func_TreasureDeviceSequenceWeightEntity__int__TypeInfo);
+    v14 = (Il2CppObject *)v11->static_fields->__9;
+    _9__4_1 = (System_Func_object__int__o *)sub_1C3E7B0(System_Func_TreasureDeviceSequenceWeightEntity__int__TypeInfo);
     System_Func_object__int____ctor(
       _9__4_1,
-      v13,
+      v14,
       Method_TreasureDeviceSequenceWeightMaster___c__GetMaxPatternId_b__4_1__,
       0);
     static_fields = TreasureDeviceSequenceWeightMaster___c_TypeInfo->static_fields;
     static_fields->__9__4_1 = (struct System_Func_TreasureDeviceSequenceWeightEntity__int__o *)_9__4_1;
-    sub_1C36FFC((CGThumbnailListItem_o *)&static_fields->__9__4_1, (int32_t)_9__4_1, v15, v16);
+    sub_1C3E508((CGThumbnailListItem_o *)&static_fields->__9__4_1, (int32_t)_9__4_1, v16, v17);
   }
-  v17 = (System_Collections_Generic_IEnumerable_TSource__o *)System_Linq_Enumerable__OrderByDescending_object__int_(
-                                                               v11,
+  v18 = (System_Collections_Generic_IEnumerable_TSource__o *)System_Linq_Enumerable__OrderByDescending_object__int_(
+                                                               v12,
                                                                (System_Func_TSource__TKey__o *)_9__4_1,
-                                                               (const MethodInfo_311792C *)Method_System_Linq_Enumerable_OrderByDescending_TreasureDeviceSequenceWeightEntity__int___);
-  v18 = System_Linq_Enumerable__ToArray_object_(
-          v17,
-          (const MethodInfo_31272F4 *)Method_System_Linq_Enumerable_ToArray_TreasureDeviceSequenceWeightEntity___);
-  IsNullOrEmpty = BasicHelper__IsNullOrEmpty((System_Collections_ICollection_o *)v18, 0);
+                                                               (const MethodInfo_3129820 *)Method_System_Linq_Enumerable_OrderByDescending_TreasureDeviceSequenceWeightEntity__int___);
+  v19 = System_Linq_Enumerable__ToArray_object_(
+          v18,
+          (const MethodInfo_31391E8 *)Method_System_Linq_Enumerable_ToArray_TreasureDeviceSequenceWeightEntity___);
+  IsNullOrEmpty = BasicHelper__IsNullOrEmpty((System_Collections_ICollection_o *)v19, 0);
   if ( IsNullOrEmpty )
     return -1;
-  if ( !v18 )
+  if ( !v19 )
     goto LABEL_16;
-  if ( !LODWORD(v18->max_length) )
-    sub_1C372BC(IsNullOrEmpty);
-  v20 = v18->m_Items[0];
-  if ( !v20 )
+  if ( !LODWORD(v19->max_length) )
+    sub_1C3E7C8(IsNullOrEmpty, v7);
+  v21 = v19->m_Items[0];
+  if ( !v21 )
 LABEL_16:
-    sub_1C372B4(IsNullOrEmpty);
-  return HIDWORD(v20[3].monitor);
+    sub_1C3E7C0(IsNullOrEmpty, v7);
+  return HIDWORD(v21[3].monitor);
 }
 
 
@@ -310,10 +315,10 @@ bool TreasureDeviceSequenceWeightMaster__TryGetEntity(
 {
   Il2CppObject *PK; // x2
 
-  if ( (byte_4C43CB1 & 1) == 0 )
+  if ( (byte_4C57A69 & 1) == 0 )
   {
-    sub_1C37058(&Method_DataMasterBase_TreasureDeviceSequenceWeightMaster__TreasureDeviceSequenceWeightEntity__string__TryGetEntity__);
-    byte_4C43CB1 = 1;
+    sub_1C3E564(&Method_DataMasterBase_TreasureDeviceSequenceWeightMaster__TreasureDeviceSequenceWeightEntity__string__TryGetEntity__);
+    byte_4C57A69 = 1;
   }
   PK = (Il2CppObject *)TreasureDeviceSequenceWeightEntity__CreatePK(
                          treasureDeviceId,
@@ -324,7 +329,7 @@ bool TreasureDeviceSequenceWeightMaster__TryGetEntity(
            (DataMasterBase_TMaster__TEntity__PKType__o *)this,
            (Il2CppObject **)entity,
            PK,
-           (const MethodInfo_33A5BA4 *)Method_DataMasterBase_TreasureDeviceSequenceWeightMaster__TreasureDeviceSequenceWeightEntity__string__TryGetEntity__);
+           (const MethodInfo_33B7A5C *)Method_DataMasterBase_TreasureDeviceSequenceWeightMaster__TreasureDeviceSequenceWeightEntity__string__TryGetEntity__);
 }
 
 
@@ -334,15 +339,15 @@ void TreasureDeviceSequenceWeightMaster___c___cctor(const MethodInfo *method)
   int32_t v2; // w2
   const MethodInfo *v3; // x3
 
-  if ( (byte_4C43CB2 & 1) == 0 )
+  if ( (byte_4C57A6A & 1) == 0 )
   {
-    sub_1C37058(&TreasureDeviceSequenceWeightMaster___c_TypeInfo);
-    byte_4C43CB2 = 1;
+    sub_1C3E564(&TreasureDeviceSequenceWeightMaster___c_TypeInfo);
+    byte_4C57A6A = 1;
   }
-  v1 = (Il2CppObject *)sub_1C372A4(TreasureDeviceSequenceWeightMaster___c_TypeInfo);
+  v1 = (Il2CppObject *)sub_1C3E7B0(TreasureDeviceSequenceWeightMaster___c_TypeInfo);
   System_Object___ctor(v1, 0);
   TreasureDeviceSequenceWeightMaster___c_TypeInfo->static_fields->__9 = (struct TreasureDeviceSequenceWeightMaster___c_o *)v1;
-  sub_1C36FFC(
+  sub_1C3E508(
     (CGThumbnailListItem_o *)TreasureDeviceSequenceWeightMaster___c_TypeInfo->static_fields,
     (int32_t)v1,
     v2,
@@ -364,7 +369,7 @@ int32_t TreasureDeviceSequenceWeightMaster___c___GetEntityByDescendingPriority_b
         const MethodInfo *method)
 {
   if ( !e )
-    sub_1C372B4(this);
+    sub_1C3E7C0(this, 0);
   return e->fields.priority;
 }
 
@@ -375,7 +380,7 @@ int32_t TreasureDeviceSequenceWeightMaster___c___GetMaxPatternId_b__4_1(
         const MethodInfo *method)
 {
   if ( !e )
-    sub_1C372B4(this);
+    sub_1C3E7C0(this, 0);
   return e->fields.patternId;
 }
 
@@ -394,7 +399,7 @@ bool TreasureDeviceSequenceWeightMaster___c__DisplayClass3_0___GetEntityByDescen
         const MethodInfo *method)
 {
   if ( !e )
-    sub_1C372B4(this);
+    sub_1C3E7C0(this, 0);
   return e->fields.treasureDeviceId == this->fields.treasureDeviceId;
 }
 
@@ -413,6 +418,6 @@ bool TreasureDeviceSequenceWeightMaster___c__DisplayClass4_0___GetMaxPatternId_b
         const MethodInfo *method)
 {
   if ( !e )
-    sub_1C372B4(this);
+    sub_1C3E7C0(this, 0);
   return e->fields.treasureDeviceId == this->fields.treasureDeviceId;
 }

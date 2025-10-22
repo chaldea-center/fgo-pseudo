@@ -5,14 +5,14 @@ void UserNameChangeRequest___ctor(UserNameChangeRequest_o *this, const MethodInf
   int32_t v5; // w1
   const MethodInfo *v6; // x1
 
-  if ( (byte_4C44BF6 & 1) == 0 )
+  if ( (byte_4C589C2 & 1) == 0 )
   {
-    sub_1C37058(&StringLiteral_9136/*"MockChangeUserNameResponse"*/);
-    byte_4C44BF6 = 1;
+    sub_1C3E564(&StringLiteral_9136/*"MockChangeUserNameResponse"*/);
+    byte_4C589C2 = 1;
   }
   v5 = StringLiteral_9136/*"MockChangeUserNameResponse"*/;
   this->fields.resMsg = (struct System_String_o *)StringLiteral_9136/*"MockChangeUserNameResponse"*/;
-  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.resMsg, v5, v2, v3);
+  sub_1C3E508((CGThumbnailListItem_o *)&this->fields.resMsg, v5, v2, v3);
   RequestBase___ctor((RequestBase_o *)this, v6);
 }
 
@@ -28,20 +28,20 @@ void UserNameChangeRequest__beginRequest(
   const MethodInfo *v10; // x3
   const MethodInfo *v11; // x1
 
-  if ( (byte_4C44BF4 & 1) == 0 )
+  if ( (byte_4C589C0 & 1) == 0 )
   {
-    sub_1C37058(&StringLiteral_22150/*"name"*/);
-    sub_1C37058(&StringLiteral_21539/*"message"*/);
-    sub_1C37058(&StringLiteral_19761/*"genderType"*/);
-    byte_4C44BF4 = 1;
+    sub_1C3E564(&StringLiteral_22168/*"name"*/);
+    sub_1C3E564(&StringLiteral_21557/*"message"*/);
+    sub_1C3E564(&StringLiteral_19779/*"genderType"*/);
+    byte_4C589C0 = 1;
   }
-  RequestBase__addField_44247300(
+  RequestBase__addField_44302832(
     (RequestBase_o *)this,
-    (System_String_o *)StringLiteral_22150/*"name"*/,
+    (System_String_o *)StringLiteral_22168/*"name"*/,
     name,
     (const MethodInfo *)message);
-  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_19761/*"genderType"*/, genderType, v9);
-  RequestBase__addField_44247300((RequestBase_o *)this, (System_String_o *)StringLiteral_21539/*"message"*/, message, v10);
+  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_19779/*"genderType"*/, genderType, v9);
+  RequestBase__addField_44302832((RequestBase_o *)this, (System_String_o *)StringLiteral_21557/*"message"*/, message, v10);
   RequestBase__beginRequest((RequestBase_o *)this, v11);
 }
 
@@ -50,10 +50,10 @@ System_String_o *UserNameChangeRequest__getMockData(UserNameChangeRequest_o *thi
 {
   System_String_o *resMsg; // x19
 
-  if ( (byte_4C44BF3 & 1) == 0 )
+  if ( (byte_4C589BF & 1) == 0 )
   {
-    sub_1C37058(&NetworkManager_TypeInfo);
-    byte_4C44BF3 = 1;
+    sub_1C3E564(&NetworkManager_TypeInfo);
+    byte_4C589BF = 1;
   }
   resMsg = this->fields.resMsg;
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
@@ -66,16 +66,16 @@ System_String_o *UserNameChangeRequest__getURL(UserNameChangeRequest_o *this, co
 {
   System_String_o *BaseUrl; // x0
 
-  if ( (byte_4C44BF2 & 1) == 0 )
+  if ( (byte_4C589BE & 1) == 0 )
   {
-    sub_1C37058(&NetworkManager_TypeInfo);
-    sub_1C37058(&StringLiteral_22791/*"profile/editName"*/);
-    byte_4C44BF2 = 1;
+    sub_1C3E564(&NetworkManager_TypeInfo);
+    sub_1C3E564(&StringLiteral_22810/*"profile/editName"*/);
+    byte_4C589BE = 1;
   }
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
   BaseUrl = NetworkManager__getBaseUrl(1, 0);
-  return System_String__Concat_63561656(BaseUrl, (System_String_o *)StringLiteral_22791/*"profile/editName"*/, 0);
+  return System_String__Concat_63636468(BaseUrl, (System_String_o *)StringLiteral_22810/*"profile/editName"*/, 0);
 }
 
 
@@ -89,12 +89,12 @@ void UserNameChangeRequest__requestCompleted(
   struct NetworkManager_ResultCallbackFunc_o *CallBack; // x8
   __int64 *v8; // x9
 
-  if ( (byte_4C44BF5 & 1) == 0 )
+  if ( (byte_4C589C1 & 1) == 0 )
   {
-    sub_1C37058(&ResponseCommandKind_TypeInfo);
-    sub_1C37058(&StringLiteral_22382/*"ok"*/);
-    sub_1C37058(&StringLiteral_22215/*"ng"*/);
-    byte_4C44BF5 = 1;
+    sub_1C3E564(&ResponseCommandKind_TypeInfo);
+    sub_1C3E564(&StringLiteral_22400/*"ok"*/);
+    sub_1C3E564(&StringLiteral_22233/*"ng"*/);
+    byte_4C589C1 = 1;
   }
   if ( !ResponseCommandKind_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(ResponseCommandKind_TypeInfo);
@@ -104,14 +104,14 @@ void UserNameChangeRequest__requestCompleted(
     CallBack = this->fields.CallBack;
     if ( !CallBack )
       return;
-    v8 = &StringLiteral_22382/*"ok"*/;
+    v8 = &StringLiteral_22400/*"ok"*/;
   }
   else
   {
     CallBack = this->fields.CallBack;
     if ( !CallBack )
       return;
-    v8 = &StringLiteral_22215/*"ng"*/;
+    v8 = &StringLiteral_22233/*"ng"*/;
   }
   ((void (__fastcall *)(intptr_t, __int64, intptr_t))CallBack->fields.invoke_impl)(
     CallBack->fields.method_code,

@@ -43,10 +43,11 @@ bool BattleServantConfWindowPassiveSkillListComponent__IsActive(
         const MethodInfo *method)
 {
   UnityEngine_GameObject_o *gameObject; // x0
+  __int64 v3; // x1
 
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
   if ( !gameObject )
-    sub_1C372B4(0);
+    sub_1C3E7C0(0, v3);
   return UnityEngine_GameObject__get_activeSelf(gameObject, 0);
 }
 
@@ -57,10 +58,11 @@ void BattleServantConfWindowPassiveSkillListComponent__SetActive(
         const MethodInfo *method)
 {
   UnityEngine_GameObject_o *gameObject; // x0
+  __int64 v5; // x1
 
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
   if ( !gameObject )
-    sub_1C372B4(0);
+    sub_1C3E7C0(0, v5);
   UnityEngine_GameObject__SetActive(gameObject, val, 0);
 }
 
@@ -87,7 +89,7 @@ void BattleServantConfWindowPassiveSkillListComponent__SetSkillTitle(
     || (UISprite__set_atlas(skillTitle, uiAtlas, 0), (skillTitle = this->fields.skillTitle) == 0)
     || (UISprite__set_spriteName(skillTitle, spriteName, 0), (skillTitle = this->fields.skillTitle) == 0) )
   {
-    sub_1C372B4(skillTitle);
+    sub_1C3E7C0(skillTitle, uiAtlas);
   }
   ((void (__fastcall *)(UISprite_o *, const MethodInfo *))skillTitle->klass->vtable._33_MakePixelPerfect.methodPtr)(
     skillTitle,

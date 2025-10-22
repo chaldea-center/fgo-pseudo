@@ -4,10 +4,11 @@ void FamilyBuffLinkageIdGenerator___ctor(
         const MethodInfo *method)
 {
   BattleBuffData_o *BuffData; // x0
+  __int64 v6; // x1
 
   System_Object___ctor((Il2CppObject *)this, 0);
   if ( !servantData || (BuffData = BattleServantData__get_BuffData(servantData, 0)) == 0 )
-    sub_1C372B4(BuffData);
+    sub_1C3E7C0(BuffData, v6);
   this->fields.current = BattleBuffData__GetFamilyLinkageIdMax(BuffData, 0);
 }
 

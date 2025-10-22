@@ -281,6 +281,9 @@ BattleItemListWindowComponent
 BattleLogData
 BattleLogic
 BattleLogicBaseAi
+BattleLogicBattleScript
+BattleLogicBattleScriptSystemTask
+BattleLogicBattleScriptTask
 BattleLogicBuff
 BattleLogicCameraTask
 BattleLogicClassRelation
@@ -385,9 +388,11 @@ BattleRouteSelectRequest
 BattleSaveData
 BattleScenarioRequest
 BattleScriptAction
+BattleScriptActionData
 BattleScriptEntity
 BattleScriptMaster
 BattleScriptRootComponent
+BattleScriptSystemActionData
 BattleSeManager
 BattleSealedCommandWindowComponent
 BattleSelectCommandComponent
@@ -2095,6 +2100,7 @@ LimitCntUpControl
 LimitCntUpItemComponent
 LimitCountIconComponent
 LimitCountSealDialogComponent
+LimitCountUtility
 LimitImageAnnounce
 LimitUpResultCheckComponent
 LimitUpResultInfoComponent
@@ -2405,6 +2411,7 @@ OrganizationTopListViewObject
 OtherUserGameEntity
 OtherUserGameMaster
 OtherUserNewManager
+OtherUserServantLimitCountManager
 OtherUserSortDialog
 OuterFrameController
 OutlineEffectMain

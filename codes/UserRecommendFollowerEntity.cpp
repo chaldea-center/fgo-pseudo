@@ -1,13 +1,13 @@
 void UserRecommendFollowerEntity___ctor(UserRecommendFollowerEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_4C43F07 & 1) == 0 )
+  if ( (byte_4C57CBF & 1) == 0 )
   {
-    sub_1C37058(&Method_DataEntityBase_long___ctor__);
-    byte_4C43F07 = 1;
+    sub_1C3E564(&Method_DataEntityBase_long___ctor__);
+    byte_4C57CBF = 1;
   }
   DataEntityBase_long____ctor(
     (DataEntityBase_long__o *)this,
-    (const MethodInfo_339EC04 *)Method_DataEntityBase_long___ctor__);
+    (const MethodInfo_33B0ABC *)Method_DataEntityBase_long___ctor__);
 }
 
 
@@ -19,10 +19,10 @@ int64_t UserRecommendFollowerEntity__CreatePrimaryKey(UserRecommendFollowerEntit
 
 bool UserRecommendFollowerEntity__IsEnableData(UserRecommendFollowerEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_4C43F05 & 1) == 0 )
+  if ( (byte_4C57CBD & 1) == 0 )
   {
-    sub_1C37058(&NetworkManager_TypeInfo);
-    byte_4C43F05 = 1;
+    sub_1C3E564(&NetworkManager_TypeInfo);
+    byte_4C57CBD = 1;
   }
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
@@ -38,17 +38,18 @@ bool UserRecommendFollowerEntity__IsEnableQuest(
 {
   struct FollowerInfo_array *followerInfo; // x8
   Il2CppObject *Master_object; // x0
-  struct FollowerInfo_array *v9; // x8
-  FollowerInfo_o *v10; // x8
+  __int64 v9; // x1
+  struct FollowerInfo_array *v10; // x8
+  FollowerInfo_o *v11; // x8
   struct UserRecommendSupportInfo_array *userRecommendSupportHash; // x8
-  UserRecommendSupportInfo_o *v12; // x8
+  UserRecommendSupportInfo_o *v13; // x8
   RecommendSupportQuestEntity_o *entity; // [xsp+8h] [xbp-28h] BYREF
 
-  if ( (byte_4C43F06 & 1) == 0 )
+  if ( (byte_4C57CBE & 1) == 0 )
   {
-    sub_1C37058(&Method_DataManager_GetMaster_RecommendSupportQuestMaster___);
-    sub_1C37058(&DataManager_TypeInfo);
-    byte_4C43F06 = 1;
+    sub_1C3E564(&Method_DataManager_GetMaster_RecommendSupportQuestMaster___);
+    sub_1C3E564(&DataManager_TypeInfo);
+    byte_4C57CBE = 1;
   }
   entity = 0;
   followerInfo = this->fields.followerInfo;
@@ -56,7 +57,7 @@ bool UserRecommendFollowerEntity__IsEnableQuest(
     return 0;
   if ( !DataManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-  Master_object = DataManager__GetMaster_object_((const MethodInfo_30E7C04 *)Method_DataManager_GetMaster_RecommendSupportQuestMaster___);
+  Master_object = DataManager__GetMaster_object_((const MethodInfo_30F9A1C *)Method_DataManager_GetMaster_RecommendSupportQuestMaster___);
   if ( !Master_object )
     goto LABEL_21;
   Master_object = (Il2CppObject *)RecommendSupportQuestMaster__TryGetEntity(
@@ -75,23 +76,23 @@ bool UserRecommendFollowerEntity__IsEnableQuest(
       questId = entity->fields.baseQuestId;
     }
   }
-  v9 = this->fields.followerInfo;
-  if ( !v9 )
+  v10 = this->fields.followerInfo;
+  if ( !v10 )
     goto LABEL_21;
-  if ( !LODWORD(v9->max_length) )
+  if ( !LODWORD(v10->max_length) )
     goto LABEL_22;
-  v10 = v9->m_Items[0];
-  if ( !v10 || (userRecommendSupportHash = v10->fields.userRecommendSupportHash) == 0 )
+  v11 = v10->m_Items[0];
+  if ( !v11 || (userRecommendSupportHash = v11->fields.userRecommendSupportHash) == 0 )
 LABEL_21:
-    sub_1C372B4(Master_object);
+    sub_1C3E7C0(Master_object, v9);
   if ( !LODWORD(userRecommendSupportHash->max_length) )
 LABEL_22:
-    sub_1C372BC(Master_object);
-  v12 = userRecommendSupportHash->m_Items[0];
-  if ( !v12 )
+    sub_1C3E7C8(Master_object, v9);
+  v13 = userRecommendSupportHash->m_Items[0];
+  if ( !v13 )
     goto LABEL_21;
-  if ( v12->fields.questId == questId )
-    return v12->fields.questPhase == questPhase;
+  if ( v13->fields.questId == questId )
+    return v13->fields.questPhase == questPhase;
   return 0;
 }
 
@@ -132,10 +133,10 @@ FollowerInfo_o *UserRecommendFollowerEntity__getFollowerInfo(
   while ( 1 )
   {
     if ( (unsigned int)v6 >= max_length )
-      sub_1C372BC(this);
+      sub_1C3E7C8(this, followerId);
     this = (UserRecommendFollowerEntity_o *)m_Items[v6];
     if ( !this )
-      sub_1C372B4(0);
+      sub_1C3E7C0(0, followerId);
     if ( this->fields.followerInfo == (struct FollowerInfo_array *)followerId
       && (followerType == -1 || HIDWORD(this->fields.expireAt) == followerType) )
     {

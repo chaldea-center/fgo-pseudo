@@ -13,27 +13,28 @@ void AnimatedWidget__LateUpdate(AnimatedWidget_o *this, const MethodInfo *method
   float width; // s9
   double v6; // d8
   __int64 v7; // x0
-  const MethodInfo *v8; // x2
-  double v9; // d0
+  __int64 v8; // x1
+  const MethodInfo *v9; // x2
   double v10; // d0
-  double v11; // d1
+  double v11; // d0
   double v12; // d1
-  int32_t v13; // w1
-  UIWidget_o *v14; // x20
+  double v13; // d1
+  int32_t v14; // w1
+  UIWidget_o *v15; // x20
   float height; // s9
-  double v16; // d8
-  const MethodInfo *v17; // x2
-  double v18; // d0
+  double v17; // d8
+  const MethodInfo *v18; // x2
   double v19; // d0
-  double v20; // d1
+  double v20; // d0
   double v21; // d1
-  int32_t v22; // w1
+  double v22; // d1
+  int32_t v23; // w1
   double iptr; // [xsp+18h] [xbp-28h] BYREF
 
-  if ( (byte_4C477AA & 1) == 0 )
+  if ( (byte_4C5B5A1 & 1) == 0 )
   {
-    sub_1C37058(&UnityEngine_Object_TypeInfo);
-    byte_4C477AA = 1;
+    sub_1C3E564(&UnityEngine_Object_TypeInfo);
+    byte_4C5B5A1 = 1;
   }
   mWidget = (UnityEngine_Object_o *)this->fields.mWidget;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -42,92 +43,92 @@ void AnimatedWidget__LateUpdate(AnimatedWidget_o *this, const MethodInfo *method
   {
     v4 = this->fields.mWidget;
     width = this->fields.width;
-    if ( !byte_4C3E100 )
+    if ( !byte_4C51E80 )
     {
-      sub_1C37058(&System_Math_TypeInfo);
-      byte_4C3E100 = 1;
+      sub_1C3E564(&System_Math_TypeInfo);
+      byte_4C51E80 = 1;
     }
     if ( !System_Math_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(System_Math_TypeInfo);
     v6 = width;
-    v9 = modf(width, &iptr);
+    v10 = modf(width, &iptr);
     if ( width >= 0.0 )
     {
-      if ( v9 != 0.5 )
+      if ( v10 != 0.5 )
       {
-        v10 = floor(v6 + 0.5);
+        v11 = floor(v6 + 0.5);
         goto LABEL_21;
       }
-      v10 = iptr;
-      v11 = 1.0;
+      v11 = iptr;
+      v12 = 1.0;
     }
     else
     {
-      if ( v9 != -0.5 )
+      if ( v10 != -0.5 )
       {
-        v10 = ceil(v6 + -0.5);
+        v11 = ceil(v6 + -0.5);
         goto LABEL_21;
       }
-      v10 = iptr;
-      v11 = -1.0;
+      v11 = iptr;
+      v12 = -1.0;
     }
-    v12 = v10 + v11;
-    if ( ((__int64)v10 & 1) != 0 )
-      v10 = v12;
+    v13 = v11 + v12;
+    if ( ((__int64)v11 & 1) != 0 )
+      v11 = v13;
 LABEL_21:
     if ( !v4 )
       goto LABEL_44;
-    if ( v10 == INFINITY )
-      v13 = 0x80000000;
+    if ( v11 == INFINITY )
+      v14 = 0x80000000;
     else
-      v13 = (int)v10;
-    UIWidget__set_width(v4, v13, v8);
-    v14 = this->fields.mWidget;
+      v14 = (int)v11;
+    UIWidget__set_width(v4, v14, v9);
+    v15 = this->fields.mWidget;
     height = this->fields.height;
-    if ( !byte_4C3E100 )
+    if ( !byte_4C51E80 )
     {
-      sub_1C37058(&System_Math_TypeInfo);
-      byte_4C3E100 = 1;
+      sub_1C3E564(&System_Math_TypeInfo);
+      byte_4C51E80 = 1;
     }
     if ( !System_Math_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(System_Math_TypeInfo);
-    v16 = height;
-    v18 = modf(height, &iptr);
+    v17 = height;
+    v19 = modf(height, &iptr);
     if ( height >= 0.0 )
     {
-      if ( v18 != 0.5 )
+      if ( v19 != 0.5 )
       {
-        v19 = floor(v16 + 0.5);
+        v20 = floor(v17 + 0.5);
         goto LABEL_39;
       }
-      v19 = iptr;
-      v20 = 1.0;
+      v20 = iptr;
+      v21 = 1.0;
     }
     else
     {
-      if ( v18 != -0.5 )
+      if ( v19 != -0.5 )
       {
-        v19 = ceil(v16 + -0.5);
+        v20 = ceil(v17 + -0.5);
         goto LABEL_39;
       }
-      v19 = iptr;
-      v20 = -1.0;
+      v20 = iptr;
+      v21 = -1.0;
     }
-    v21 = v19 + v20;
-    if ( ((__int64)v19 & 1) != 0 )
-      v19 = v21;
+    v22 = v20 + v21;
+    if ( ((__int64)v20 & 1) != 0 )
+      v20 = v22;
 LABEL_39:
-    if ( v14 )
+    if ( v15 )
     {
-      if ( v19 == INFINITY )
-        v22 = 0x80000000;
+      if ( v20 == INFINITY )
+        v23 = 0x80000000;
       else
-        v22 = (int)v19;
-      UIWidget__set_height(v14, v22, v17);
+        v23 = (int)v20;
+      UIWidget__set_height(v15, v23, v18);
       return;
     }
 LABEL_44:
-    sub_1C372B4(v7);
+    sub_1C3E7C0(v7, v8);
   }
 }
 
@@ -139,15 +140,15 @@ void AnimatedWidget__OnEnable(AnimatedWidget_o *this, const MethodInfo *method)
   const MethodInfo *v5; // x3
   const MethodInfo *v6; // x1
 
-  if ( (byte_4C477A9 & 1) == 0 )
+  if ( (byte_4C5B5A0 & 1) == 0 )
   {
-    sub_1C37058(&Method_UnityEngine_Component_GetComponent_UIWidget___);
-    byte_4C477A9 = 1;
+    sub_1C3E564(&Method_UnityEngine_Component_GetComponent_UIWidget___);
+    byte_4C5B5A0 = 1;
   }
   Component_object = UnityEngine_Component__GetComponent_object_(
                        (UnityEngine_Component_o *)this,
-                       (const MethodInfo_30DE428 *)Method_UnityEngine_Component_GetComponent_UIWidget___);
+                       (const MethodInfo_30F0240 *)Method_UnityEngine_Component_GetComponent_UIWidget___);
   this->fields.mWidget = (struct UIWidget_o *)Component_object;
-  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.mWidget, (int32_t)Component_object, v4, v5);
+  sub_1C3E508((CGThumbnailListItem_o *)&this->fields.mWidget, (int32_t)Component_object, v4, v5);
   AnimatedWidget__LateUpdate(this, v6);
 }

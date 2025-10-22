@@ -1,9 +1,9 @@
 void MapEffectComponent___ctor(MapEffectComponent_o *this, const MethodInfo *method)
 {
-  if ( (byte_4C3FAC7 & 1) == 0 )
+  if ( (byte_4C53862 & 1) == 0 )
   {
-    sub_1C37058(&CommonEffectComponent_TypeInfo);
-    byte_4C3FAC7 = 1;
+    sub_1C3E564(&CommonEffectComponent_TypeInfo);
+    byte_4C53862 = 1;
   }
   if ( !CommonEffectComponent_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(CommonEffectComponent_TypeInfo);
@@ -29,9 +29,9 @@ void MapEffectComponent__Setup(
   const MethodInfo *v9; // x3
 
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
-  GameObjectExtensions__SafeSetParent_36138184(gameObject, parent, 0);
+  GameObjectExtensions__SafeSetParent_36182084(gameObject, parent, 0);
   this->fields.mapCamera = mapCamera;
-  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.mapCamera, (int32_t)mapCamera, v8, v9);
+  sub_1C3E508((CGThumbnailListItem_o *)&this->fields.mapCamera, (int32_t)mapCamera, v8, v9);
 }
 
 
@@ -39,11 +39,11 @@ void MapEffectComponent__UpdateCameraFollow(MapEffectComponent_o *this, const Me
 {
   UnityEngine_Object_o *mapCamera; // x20
   UnityEngine_Camera_o *mCamera; // x0
-  struct MapCamera_o *v5; // x8
+  const MethodInfo *v5; // x1
+  struct MapCamera_o *v6; // x8
   struct MapZoom_o *mZoom; // x8
   float orthographicSize; // s8
   UnityEngine_GameObject_o *gameObject; // x0
-  const MethodInfo *v9; // x1
   struct MapCamera_o *v10; // x8
   float x; // s8
   float v12; // s9
@@ -51,10 +51,10 @@ void MapEffectComponent__UpdateCameraFollow(MapEffectComponent_o *this, const Me
   UnityEngine_Vector2_o v14; // 0:s0.4,4:s1.4
   UnityEngine_Vector3_o ScrlPosVec3; // 0:s0.4,4:s1.4,8:s2.4
 
-  if ( (byte_4C3FAC6 & 1) == 0 )
+  if ( (byte_4C53861 & 1) == 0 )
   {
-    sub_1C37058(&UnityEngine_Object_TypeInfo);
-    byte_4C3FAC6 = 1;
+    sub_1C3E564(&UnityEngine_Object_TypeInfo);
+    byte_4C53861 = 1;
   }
   if ( this->fields.isCameraFollow )
   {
@@ -64,25 +64,25 @@ void MapEffectComponent__UpdateCameraFollow(MapEffectComponent_o *this, const Me
     mCamera = (UnityEngine_Camera_o *)UnityEngine_Object__op_Equality(mapCamera, 0, 0);
     if ( ((unsigned __int8)mCamera & 1) == 0 )
     {
-      v5 = this->fields.mapCamera;
-      if ( !v5
-        || (mZoom = v5->fields.mZoom) == 0
+      v6 = this->fields.mapCamera;
+      if ( !v6
+        || (mZoom = v6->fields.mZoom) == 0
         || (mCamera = mZoom->fields.mCamera) == 0
         || (orthographicSize = UnityEngine_Camera__get_orthographicSize(mCamera, 0),
             gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0),
-            GameObjectExtensions__SetLocalScale_36134460(gameObject, orthographicSize, orthographicSize, 0),
+            GameObjectExtensions__SetLocalScale_36178360(gameObject, orthographicSize, orthographicSize, 0),
             (v10 = this->fields.mapCamera) == 0)
         || (mCamera = (UnityEngine_Camera_o *)v10->fields.mScrl) == 0 )
       {
-        sub_1C372B4(mCamera);
+        sub_1C3E7C0(mCamera, v5);
       }
-      ScrlPosVec3 = MapScroll__GetScrlPosVec3((MapScroll_o *)mCamera, v9);
+      ScrlPosVec3 = MapScroll__GetScrlPosVec3((MapScroll_o *)mCamera, v5);
       x = ScrlPosVec3.fields.x;
       v12 = ScrlPosVec3.fields.y + this->fields._OffestPositionY_k__BackingField;
       v13 = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
       v14.fields.x = x;
       v14.fields.y = v12;
-      GameObjectExtensions__SetLocalPosition_36132288(v13, v14, 0);
+      GameObjectExtensions__SetLocalPosition_36176188(v13, v14, 0);
     }
   }
 }

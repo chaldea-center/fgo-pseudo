@@ -1,27 +1,27 @@
 void WarBoardStageBossEntity___ctor(WarBoardStageBossEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_4C441B0 & 1) == 0 )
+  if ( (byte_4C57F78 & 1) == 0 )
   {
-    sub_1C37058(&Method_DataEntityBase_string___ctor__);
-    byte_4C441B0 = 1;
+    sub_1C3E564(&Method_DataEntityBase_string___ctor__);
+    byte_4C57F78 = 1;
   }
   DataEntityBase_object____ctor(
     (DataEntityBase_PKType__o *)this,
-    (const MethodInfo_339EC34 *)Method_DataEntityBase_string___ctor__);
+    (const MethodInfo_33B0AEC *)Method_DataEntityBase_string___ctor__);
 }
 
 
 System_String_o *WarBoardStageBossEntity__CreatePK(int32_t stageId, int32_t idx, const MethodInfo *method)
 {
-  if ( (byte_4C441AF & 1) == 0 )
+  if ( (byte_4C57F77 & 1) == 0 )
   {
-    sub_1C37058(&Method_DataEntityBase_CreateMultiplePK_int__int___);
-    byte_4C441AF = 1;
+    sub_1C3E564(&Method_DataEntityBase_CreateMultiplePK_int__int___);
+    byte_4C57F77 = 1;
   }
   return DataEntityBase__CreateMultiplePK_int__int_(
            stageId,
            idx,
-           (const MethodInfo_30E5DE0 *)Method_DataEntityBase_CreateMultiplePK_int__int___);
+           (const MethodInfo_30F7BF8 *)Method_DataEntityBase_CreateMultiplePK_int__int___);
 }
 
 
@@ -39,18 +39,19 @@ System_String_array *WarBoardStageBossEntity__GetTextEffectColors(
 {
   System_String_o *StringValue; // x19
   _BOOL8 IsNullOrEmpty; // x0
+  __int64 v5; // x1
 
-  if ( (byte_4C441AE & 1) == 0 )
+  if ( (byte_4C57F76 & 1) == 0 )
   {
-    sub_1C37058(&string___TypeInfo);
-    sub_1C37058(&StringLiteral_24050/*"text_effect_colors"*/);
-    byte_4C441AE = 1;
+    sub_1C3E564(&string___TypeInfo);
+    sub_1C3E564(&StringLiteral_24070/*"text_effect_colors"*/);
+    byte_4C57F76 = 1;
   }
-  StringValue = EntityScriptUtil__GetStringValue(this->fields.script, (System_String_o *)StringLiteral_24050/*"text_effect_colors"*/, 0, 0);
+  StringValue = EntityScriptUtil__GetStringValue(this->fields.script, (System_String_o *)StringLiteral_24070/*"text_effect_colors"*/, 0, 0);
   IsNullOrEmpty = System_String__IsNullOrEmpty(StringValue, 0);
   if ( IsNullOrEmpty )
-    return (System_String_array *)sub_1C37100(string___TypeInfo, 0);
+    return (System_String_array *)sub_1C3E60C(string___TypeInfo, 0);
   if ( !StringValue )
-    sub_1C372B4(IsNullOrEmpty);
+    sub_1C3E7C0(IsNullOrEmpty, v5);
   return System_String__Split(StringValue, 0x2Cu, 0, 0);
 }

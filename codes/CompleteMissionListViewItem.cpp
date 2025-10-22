@@ -7,28 +7,29 @@ void CompleteMissionListViewItem___ctor(
   int32_t v7; // w2
   const MethodInfo *v8; // x3
   EventMissionEntity_o *eventMissionEnt; // x0
-  int32_t v10; // w2
-  const MethodInfo *v11; // x3
+  __int64 v10; // x1
+  int32_t v11; // w2
+  const MethodInfo *v12; // x3
   int32_t id; // w8
-  int32_t v13; // w1
   int32_t v14; // w1
-  int32_t v15; // w2
-  const MethodInfo *v16; // x3
-  int32_t v17; // w1
-  int32_t v18; // w2
-  const MethodInfo *v19; // x3
+  int32_t v15; // w1
+  int32_t v16; // w2
+  const MethodInfo *v17; // x3
+  int32_t v18; // w1
+  int32_t v19; // w2
+  const MethodInfo *v20; // x3
   bool isNowMission; // w0
   CompleteMissionListViewItem_c *klass; // x8
-  struct EventMissionEntity_o *v22; // x8
+  struct EventMissionEntity_o *v23; // x8
 
-  if ( (byte_4C41AAC & 1) == 0 )
+  if ( (byte_4C5584E & 1) == 0 )
   {
-    sub_1C37058(&StringLiteral_1/*""*/);
-    byte_4C41AAC = 1;
+    sub_1C3E564(&StringLiteral_1/*""*/);
+    byte_4C5584E = 1;
   }
   MissionListViewItem___ctor((MissionListViewItem_o *)this, 0);
   this->fields.eventMissionEnt = missionData;
-  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.eventMissionEnt, (int32_t)missionData, v7, v8);
+  sub_1C3E508((CGThumbnailListItem_o *)&this->fields.eventMissionEnt, (int32_t)missionData, v7, v8);
   if ( !missionData )
     goto LABEL_7;
   this->fields.currentEventId = missionData->fields.missionTargetId;
@@ -36,18 +37,18 @@ void CompleteMissionListViewItem___ctor(
   this->fields.isNew = 0;
   this->fields.currentMissionId = id;
   this->fields.dispNo = missionData->fields.dispNo;
-  v13 = StringLiteral_1/*""*/;
+  v14 = StringLiteral_1/*""*/;
   this->fields.condMsg = (struct System_String_o *)StringLiteral_1/*""*/;
-  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.condMsg, v13, v10, v11);
+  sub_1C3E508((CGThumbnailListItem_o *)&this->fields.condMsg, v14, v11, v12);
   this->fields.progVal = 0.0;
   this->fields.targetNum = 0;
   this->fields.progNum = 0;
-  v14 = StringLiteral_1/*""*/;
+  v15 = StringLiteral_1/*""*/;
   this->fields.closedMessage = (struct System_String_o *)StringLiteral_1/*""*/;
-  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.closedMessage, v14, v15, v16);
-  v17 = StringLiteral_1/*""*/;
+  sub_1C3E508((CGThumbnailListItem_o *)&this->fields.closedMessage, v15, v16, v17);
+  v18 = StringLiteral_1/*""*/;
   this->fields.progTxt = (struct System_String_o *)StringLiteral_1/*""*/;
-  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.progTxt, v17, v18, v19);
+  sub_1C3E508((CGThumbnailListItem_o *)&this->fields.progTxt, v18, v19, v20);
   eventMissionEnt = this->fields.eventMissionEnt;
   *(_QWORD *)&this->fields.progStatus = 0x400000000LL;
   this->fields.bannerGroupId = missionData->fields.bannerGroup;
@@ -60,12 +61,12 @@ void CompleteMissionListViewItem___ctor(
           this,
           klass->vtable._6_CheckMissionCond.method),
         MissionListViewItem__SetRewardInfo((MissionListViewItem_o *)this, 0),
-        (v22 = this->fields.eventMissionEnt) == 0) )
+        (v23 = this->fields.eventMissionEnt) == 0) )
   {
 LABEL_7:
-    sub_1C372B4(eventMissionEnt);
+    sub_1C3E7C0(eventMissionEnt, v10);
   }
-  this->fields.sortValue2 = -v22->fields.id;
+  this->fields.sortValue2 = -v23->fields.id;
 }
 
 
@@ -78,21 +79,21 @@ void CompleteMissionListViewItem__CheckMissionCond(CompleteMissionListViewItem_o
   bool IsIgnoreStartCondition; // w22
   NotEndEventMissionFixEntity_o *entity; // [xsp+8h] [xbp-38h] BYREF
 
-  if ( (byte_4C41AAD & 1) == 0 )
+  if ( (byte_4C5584F & 1) == 0 )
   {
-    sub_1C37058(&Method_DataManager_GetMasterData_NotEndEventMissionFixMaster___);
-    sub_1C37058(&MissionInfoMaker_TypeInfo);
-    sub_1C37058(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-    byte_4C41AAD = 1;
+    sub_1C3E564(&Method_DataManager_GetMasterData_NotEndEventMissionFixMaster___);
+    sub_1C3E564(&MissionInfoMaker_TypeInfo);
+    sub_1C3E564(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    byte_4C5584F = 1;
   }
   entity = 0;
   eventMissionEnt = this->fields.eventMissionEnt;
   if ( !eventMissionEnt
     || (this->fields.isNowMission = EventMissionEntity__isNowMission(eventMissionEnt, 0),
-        (eventMissionEnt = (EventMissionEntity_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39ED16C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__)) == 0)
+        (eventMissionEnt = (EventMissionEntity_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39FF5A8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__)) == 0)
     || (eventMissionEnt = (EventMissionEntity_o *)DataManager__GetMasterData_object_(
                                                     (DataManager_o *)eventMissionEnt,
-                                                    (const MethodInfo_30E7C58 *)Method_DataManager_GetMasterData_NotEndEventMissionFixMaster___)) == 0
+                                                    (const MethodInfo_30F9A70 *)Method_DataManager_GetMasterData_NotEndEventMissionFixMaster___)) == 0
     || (!NotEndEventMissionFixMaster__TryGetEntity(
            (NotEndEventMissionFixMaster_o *)eventMissionEnt,
            &entity,
@@ -103,14 +104,14 @@ void CompleteMissionListViewItem__CheckMissionCond(CompleteMissionListViewItem_o
       : (isNowMission = 1, this->fields.isNowMission = 1),
         (eventMissionEnt = this->fields.eventMissionEnt) == 0) )
   {
-    sub_1C372B4(eventMissionEnt);
+    sub_1C3E7C0(eventMissionEnt, method);
   }
   currentEventId = this->fields.currentEventId;
   currentMissionId = this->fields.currentMissionId;
   IsIgnoreStartCondition = EventMissionEntity__IsIgnoreStartCondition(eventMissionEnt, 0);
   if ( !MissionInfoMaker_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(MissionInfoMaker_TypeInfo);
-  this->fields.progType = MissionInfoMaker__GetMissionProgressType_46962472(
+  this->fields.progType = MissionInfoMaker__GetMissionProgressType_47029276(
                             currentEventId,
                             currentMissionId,
                             isNowMission,
@@ -127,6 +128,7 @@ bool CompleteMissionListViewItem__SetSortValue(
         const MethodInfo *method)
 {
   _BOOL8 v5; // x0
+  __int64 v6; // x1
   __int64 progStatus; // x8
   struct EventMissionEntity_o *eventMissionEnt; // x8
 
@@ -135,7 +137,7 @@ bool CompleteMissionListViewItem__SetSortValue(
   {
     progStatus = this->fields.progStatus;
     if ( (unsigned int)progStatus <= 4 )
-      this->fields.sortValue0 = qword_C482E8[progStatus];
+      this->fields.sortValue0 = qword_C4B958[progStatus];
     if ( sort )
     {
       if ( sort->fields.sortKind != 1 )
@@ -148,7 +150,7 @@ bool CompleteMissionListViewItem__SetSortValue(
         return 1;
       }
     }
-    sub_1C372B4(v5);
+    sub_1C3E7C0(v5, v6);
   }
   return 0;
 }
@@ -161,7 +163,7 @@ bool CompleteMissionListViewItem__get_IsHideReward(CompleteMissionListViewItem_o
 
   eventMissionEnt = this->fields.eventMissionEnt;
   if ( !eventMissionEnt )
-    sub_1C372B4(0);
+    sub_1C3E7C0(0, method);
   v4 = this->fields.progStatus < 2u;
   return v4 & EventMissionEntity__IsHideReward(eventMissionEnt, 0);
 }

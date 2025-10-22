@@ -4,6 +4,7 @@ void BattleServantSnapShotOnBuffUpdate___ctor(
         const MethodInfo *method)
 {
   System_Int32_array *AuraIdList; // x0
+  __int64 v6; // x1
 
   System_Object___ctor((Il2CppObject *)this, 0);
   if ( !svtData
@@ -12,7 +13,7 @@ void BattleServantSnapShotOnBuffUpdate___ctor(
         this->fields._MaxHp_k__BackingField = BattleServantData__getMaxHp(svtData, 0),
         (AuraIdList = BattleServantData__getAuraIdList(svtData, 0)) == 0) )
   {
-    sub_1C372B4(AuraIdList);
+    sub_1C3E7C0(AuraIdList, v6);
   }
   this->fields._AuraSum_k__BackingField = AuraIdList->max_length;
 }

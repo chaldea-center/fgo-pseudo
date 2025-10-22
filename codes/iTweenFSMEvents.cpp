@@ -4,6 +4,7 @@ void iTweenFSMEvents___ctor(iTweenFSMEvents_o *this, const MethodInfo *method)
 }
 
 
+// local variable allocation has failed, the output may be wrong!
 void iTweenFSMEvents__iTweenOnComplete(iTweenFSMEvents_o *this, int32_t aniTweenID, const MethodInfo *method)
 {
   struct HutongGames_PlayMaker_Actions_iTweenFsmAction_o *itweenFSMAction; // x8
@@ -14,19 +15,20 @@ void iTweenFSMEvents__iTweenOnComplete(iTweenFSMEvents_o *this, int32_t aniTween
   {
     fsm = (struct HutongGames_PlayMaker_Actions_iTweenFsmAction_o *)itweenFSMAction->fields.fsm;
     if ( !fsm
-      || (HutongGames_PlayMaker_Fsm__Event_66374156(
+      || (HutongGames_PlayMaker_Fsm__Event_66448968(
             (HutongGames_PlayMaker_Fsm_o *)fsm,
             itweenFSMAction->fields.finishEvent,
             0),
           (fsm = this->fields.itweenFSMAction) == 0) )
     {
-      sub_1C372B4(fsm);
+      sub_1C3E7C0(fsm, *(_QWORD *)&aniTweenID);
     }
     HutongGames_PlayMaker_FsmStateAction__Finish((HutongGames_PlayMaker_FsmStateAction_o *)fsm, 0);
   }
 }
 
 
+// local variable allocation has failed, the output may be wrong!
 void iTweenFSMEvents__iTweenOnStart(iTweenFSMEvents_o *this, int32_t aniTweenID, const MethodInfo *method)
 {
   struct HutongGames_PlayMaker_Actions_iTweenFsmAction_o *itweenFSMAction; // x8
@@ -39,8 +41,8 @@ void iTweenFSMEvents__iTweenOnStart(iTweenFSMEvents_o *this, int32_t aniTweenID,
     {
       fsm = itweenFSMAction->fields.fsm;
       if ( !fsm )
-        sub_1C372B4(0);
-      HutongGames_PlayMaker_Fsm__Event_66374156(fsm, itweenFSMAction->fields.startEvent, 0);
+        sub_1C3E7C0(0, *(_QWORD *)&aniTweenID);
+      HutongGames_PlayMaker_Fsm__Event_66448968(fsm, itweenFSMAction->fields.startEvent, 0);
     }
   }
 }

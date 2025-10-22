@@ -4,10 +4,10 @@ void SpringPosition___ctor(SpringPosition_o *this, const MethodInfo *method)
   __int64 v4; // d0
   float z; // s1
 
-  if ( !byte_4C3C921 )
+  if ( !byte_4C506A1 )
   {
-    sub_1C37058(&UnityEngine_Vector3_TypeInfo);
-    byte_4C3C921 = 1;
+    sub_1C3E564(&UnityEngine_Vector3_TypeInfo);
+    byte_4C506A1 = 1;
   }
   static_fields = UnityEngine_Vector3_TypeInfo->static_fields;
   v4 = *(_QWORD *)&static_fields->zeroVector.fields.x;
@@ -37,18 +37,18 @@ SpringPosition_o *SpringPosition__Begin(
   y = pos.fields.y;
   x = pos.fields.x;
   v8 = go;
-  if ( (byte_4C477AE & 1) == 0 )
+  if ( (byte_4C5B5A5 & 1) == 0 )
   {
-    sub_1C37058(&Method_UnityEngine_GameObject_AddComponent_SpringPosition___);
-    sub_1C37058(&Method_UnityEngine_GameObject_GetComponent_SpringPosition___);
-    go = (UnityEngine_GameObject_o *)sub_1C37058(&UnityEngine_Object_TypeInfo);
-    byte_4C477AE = 1;
+    sub_1C3E564(&Method_UnityEngine_GameObject_AddComponent_SpringPosition___);
+    sub_1C3E564(&Method_UnityEngine_GameObject_GetComponent_SpringPosition___);
+    go = (UnityEngine_GameObject_o *)sub_1C3E564(&UnityEngine_Object_TypeInfo);
+    byte_4C5B5A5 = 1;
   }
   if ( !v8 )
     goto LABEL_12;
   Component_object = (char *)UnityEngine_GameObject__GetComponent_object_(
                                v8,
-                               (const MethodInfo_313F1D8 *)Method_UnityEngine_GameObject_GetComponent_SpringPosition___);
+                               (const MethodInfo_31510CC *)Method_UnityEngine_GameObject_GetComponent_SpringPosition___);
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   go = (UnityEngine_GameObject_o *)UnityEngine_Object__op_Equality((UnityEngine_Object_o *)Component_object, 0, 0);
@@ -56,18 +56,18 @@ SpringPosition_o *SpringPosition__Begin(
   {
     go = (UnityEngine_GameObject_o *)UnityEngine_GameObject__AddComponent_object_(
                                        v8,
-                                       (const MethodInfo_313F0F0 *)Method_UnityEngine_GameObject_AddComponent_SpringPosition___);
+                                       (const MethodInfo_3150FE4 *)Method_UnityEngine_GameObject_AddComponent_SpringPosition___);
     Component_object = (char *)go;
   }
   if ( !Component_object )
 LABEL_12:
-    sub_1C372B4(go);
+    sub_1C3E7C0(go, method);
   *((float *)Component_object + 8) = x;
   *((float *)Component_object + 9) = y;
   *((float *)Component_object + 10) = z;
   *((float *)Component_object + 11) = strength;
   *((_QWORD *)Component_object + 7) = 0;
-  sub_1C36FFC((CGThumbnailListItem_o *)(Component_object + 56), 0, v10, v11);
+  sub_1C3E508((CGThumbnailListItem_o *)(Component_object + 56), 0, v10, v11);
   if ( !UnityEngine_Behaviour__get_enabled((UnityEngine_Behaviour_o *)Component_object, 0) )
   {
     *((_DWORD *)Component_object + 22) = 0;
@@ -85,16 +85,17 @@ void SpringPosition__NotifyListeners(SpringPosition_o *this, const MethodInfo *m
   UnityEngine_Object_o *eventReceiver; // x20
   int32_t v7; // w2
   const MethodInfo *v8; // x3
-  UnityEngine_GameObject_o *v9; // x0
+  __int64 v9; // x1
+  UnityEngine_GameObject_o *v10; // x0
 
-  if ( (byte_4C477AD & 1) == 0 )
+  if ( (byte_4C5B5A4 & 1) == 0 )
   {
-    sub_1C37058(&UnityEngine_Object_TypeInfo);
-    sub_1C37058(&SpringPosition_TypeInfo);
-    byte_4C477AD = 1;
+    sub_1C3E564(&UnityEngine_Object_TypeInfo);
+    sub_1C3E564(&SpringPosition_TypeInfo);
+    byte_4C5B5A4 = 1;
   }
   SpringPosition_TypeInfo->static_fields->current = this;
-  sub_1C36FFC((CGThumbnailListItem_o *)SpringPosition_TypeInfo->static_fields, (int32_t)this, v2, v3);
+  sub_1C3E508((CGThumbnailListItem_o *)SpringPosition_TypeInfo->static_fields, (int32_t)this, v2, v3);
   onFinished = this->fields.onFinished;
   if ( onFinished )
     ((void (__fastcall *)(intptr_t, intptr_t))onFinished->fields.invoke_impl)(
@@ -106,13 +107,13 @@ void SpringPosition__NotifyListeners(SpringPosition_o *this, const MethodInfo *m
   if ( UnityEngine_Object__op_Inequality(eventReceiver, 0, 0)
     && !System_String__IsNullOrEmpty(this->fields.callWhenFinished, 0) )
   {
-    v9 = this->fields.eventReceiver;
-    if ( !v9 )
-      sub_1C372B4(0);
-    UnityEngine_GameObject__SendMessage_71247544(v9, this->fields.callWhenFinished, (Il2CppObject *)this, 1, 0);
+    v10 = this->fields.eventReceiver;
+    if ( !v10 )
+      sub_1C3E7C0(0, v9);
+    UnityEngine_GameObject__SendMessage_71322356(v10, this->fields.callWhenFinished, (Il2CppObject *)this, 1, 0);
   }
   SpringPosition_TypeInfo->static_fields->current = 0;
-  sub_1C36FFC((CGThumbnailListItem_o *)SpringPosition_TypeInfo->static_fields, 0, v7, v8);
+  sub_1C3E508((CGThumbnailListItem_o *)SpringPosition_TypeInfo->static_fields, 0, v7, v8);
 }
 
 
@@ -126,15 +127,15 @@ void SpringPosition__Start(SpringPosition_o *this, const MethodInfo *method)
   int32_t v8; // w2
   const MethodInfo *v9; // x3
 
-  if ( (byte_4C477AB & 1) == 0 )
+  if ( (byte_4C5B5A2 & 1) == 0 )
   {
-    sub_1C37058(&Method_NGUITools_FindInParents_UIScrollView___);
-    sub_1C37058(&NGUITools_TypeInfo);
-    byte_4C477AB = 1;
+    sub_1C3E564(&Method_NGUITools_FindInParents_UIScrollView___);
+    sub_1C3E564(&NGUITools_TypeInfo);
+    byte_4C5B5A2 = 1;
   }
   transform = UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0);
   this->fields.mTrans = transform;
-  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.mTrans, (int32_t)transform, v4, v5);
+  sub_1C3E508((CGThumbnailListItem_o *)&this->fields.mTrans, (int32_t)transform, v4, v5);
   if ( this->fields.updateScrollView )
   {
     gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
@@ -142,9 +143,9 @@ void SpringPosition__Start(SpringPosition_o *this, const MethodInfo *method)
       j_il2cpp_runtime_class_init_0(NGUITools_TypeInfo);
     v7 = NGUITools__FindInParents_object_(
            gameObject,
-           (const MethodInfo_3171F1C *)Method_NGUITools_FindInParents_UIScrollView___);
+           (const MethodInfo_3183E10 *)Method_NGUITools_FindInParents_UIScrollView___);
     this->fields.mSv = (struct UIScrollView_o *)v7;
-    sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.mSv, (int32_t)v7, v8, v9);
+    sub_1C3E508((CGThumbnailListItem_o *)&this->fields.mSv, (int32_t)v7, v8, v9);
   }
 }
 
@@ -152,46 +153,47 @@ void SpringPosition__Start(SpringPosition_o *this, const MethodInfo *method)
 void SpringPosition__Update(SpringPosition_o *this, const MethodInfo *method)
 {
   UnityEngine_Transform_o *mTrans; // x0
+  __int64 v4; // x1
   float deltaTime; // s0
-  float v5; // s8
+  float v6; // s8
   float mThreshold; // s0
   float z; // s9
   float y; // s10
   float x; // s11
-  UnityEngine_Transform_o *v10; // x20
-  float v11; // s8
-  float v12; // s9
-  float v13; // s10
-  float v14; // s11
-  const MethodInfo *v15; // x1
-  float v16; // s9
-  float v17; // s10
-  float v18; // s11
-  UnityEngine_Transform_o *v19; // x20
-  float v20; // s8
-  float v21; // s9
-  float v22; // s10
-  float v23; // s11
+  UnityEngine_Transform_o *v11; // x20
+  float v12; // s8
+  float v13; // s9
+  float v14; // s10
+  float v15; // s11
+  const MethodInfo *v16; // x1
+  float v17; // s9
+  float v18; // s10
+  float v19; // s11
+  UnityEngine_Transform_o *v20; // x20
+  float v21; // s8
+  float v22; // s9
+  float v23; // s10
+  float v24; // s11
   UnityEngine_Object_o *mSv; // x20
   UnityEngine_Vector3_o position; // 0:s0.4,4:s1.4,8:s2.4
-  UnityEngine_Vector3_o v26; // 0:s0.4,4:s1.4,8:s2.4
   UnityEngine_Vector3_o v27; // 0:s0.4,4:s1.4,8:s2.4
   UnityEngine_Vector3_o v28; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o v29; // 0:s0.4,4:s1.4,8:s2.4
   UnityEngine_Vector3_o localPosition; // 0:s0.4,4:s1.4,8:s2.4
-  UnityEngine_Vector3_o v30; // 0:s0.4,4:s1.4,8:s2.4
   UnityEngine_Vector3_o v31; // 0:s0.4,4:s1.4,8:s2.4
   UnityEngine_Vector3_o v32; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o v33; // 0:s0.4,4:s1.4,8:s2.4
 
-  if ( (byte_4C477AC & 1) == 0 )
+  if ( (byte_4C5B5A3 & 1) == 0 )
   {
-    sub_1C37058(&UnityEngine_Object_TypeInfo);
-    byte_4C477AC = 1;
+    sub_1C3E564(&UnityEngine_Object_TypeInfo);
+    byte_4C5B5A3 = 1;
   }
   if ( this->fields.ignoreTimeScale )
     deltaTime = RealTime__get_deltaTime(0);
   else
     deltaTime = UnityEngine_Time__get_deltaTime(0);
-  v5 = deltaTime;
+  v6 = deltaTime;
   mThreshold = this->fields.mThreshold;
   if ( this->fields.worldSpace )
   {
@@ -209,23 +211,23 @@ void SpringPosition__Update(SpringPosition_o *this, const MethodInfo *method)
                                               + (float)((float)(y - position.fields.y) * (float)(y - position.fields.y))))
                               * 0.001;
     }
-    v10 = this->fields.mTrans;
-    if ( v10 )
+    v11 = this->fields.mTrans;
+    if ( v11 )
     {
-      v26 = UnityEngine_Transform__get_position(this->fields.mTrans, 0);
-      v27 = NGUIMath__SpringLerp_49302004(v26, this->fields.target, this->fields.strength, v5, 0);
-      UnityEngine_Transform__set_position(v10, v27, 0);
+      v27 = UnityEngine_Transform__get_position(this->fields.mTrans, 0);
+      v28 = NGUIMath__SpringLerp_49375244(v27, this->fields.target, this->fields.strength, v6, 0);
+      UnityEngine_Transform__set_position(v11, v28, 0);
       mTrans = this->fields.mTrans;
       if ( mTrans )
       {
-        v12 = this->fields.target.fields.y;
-        v11 = this->fields.target.fields.z;
-        v13 = this->fields.target.fields.x;
-        v14 = this->fields.mThreshold;
-        v28 = UnityEngine_Transform__get_position(mTrans, 0);
-        if ( v14 < (float)((float)((float)(v11 - v28.fields.z) * (float)(v11 - v28.fields.z))
-                         + (float)((float)((float)(v13 - v28.fields.x) * (float)(v13 - v28.fields.x))
-                                 + (float)((float)(v12 - v28.fields.y) * (float)(v12 - v28.fields.y)))) )
+        v13 = this->fields.target.fields.y;
+        v12 = this->fields.target.fields.z;
+        v14 = this->fields.target.fields.x;
+        v15 = this->fields.mThreshold;
+        v29 = UnityEngine_Transform__get_position(mTrans, 0);
+        if ( v15 < (float)((float)((float)(v12 - v29.fields.z) * (float)(v12 - v29.fields.z))
+                         + (float)((float)((float)(v14 - v29.fields.x) * (float)(v14 - v29.fields.x))
+                                 + (float)((float)(v13 - v29.fields.y) * (float)(v13 - v29.fields.y)))) )
           goto LABEL_24;
         mTrans = this->fields.mTrans;
         if ( !mTrans )
@@ -235,49 +237,49 @@ void SpringPosition__Update(SpringPosition_o *this, const MethodInfo *method)
       }
     }
 LABEL_30:
-    sub_1C372B4(mTrans);
+    sub_1C3E7C0(mTrans, v4);
   }
   if ( mThreshold == 0.0 )
   {
     mTrans = this->fields.mTrans;
     if ( !mTrans )
       goto LABEL_30;
-    v17 = this->fields.target.fields.y;
-    v16 = this->fields.target.fields.z;
-    v18 = this->fields.target.fields.x;
+    v18 = this->fields.target.fields.y;
+    v17 = this->fields.target.fields.z;
+    v19 = this->fields.target.fields.x;
     localPosition = UnityEngine_Transform__get_localPosition(mTrans, 0);
-    this->fields.mThreshold = (float)((float)((float)(v16 - localPosition.fields.z)
-                                            * (float)(v16 - localPosition.fields.z))
-                                    + (float)((float)((float)(v18 - localPosition.fields.x)
-                                                    * (float)(v18 - localPosition.fields.x))
-                                            + (float)((float)(v17 - localPosition.fields.y)
-                                                    * (float)(v17 - localPosition.fields.y))))
+    this->fields.mThreshold = (float)((float)((float)(v17 - localPosition.fields.z)
+                                            * (float)(v17 - localPosition.fields.z))
+                                    + (float)((float)((float)(v19 - localPosition.fields.x)
+                                                    * (float)(v19 - localPosition.fields.x))
+                                            + (float)((float)(v18 - localPosition.fields.y)
+                                                    * (float)(v18 - localPosition.fields.y))))
                             * 0.00001;
   }
-  v19 = this->fields.mTrans;
-  if ( !v19 )
+  v20 = this->fields.mTrans;
+  if ( !v20 )
     goto LABEL_30;
-  v30 = UnityEngine_Transform__get_localPosition(this->fields.mTrans, 0);
-  v31 = NGUIMath__SpringLerp_49302004(v30, this->fields.target, this->fields.strength, v5, 0);
-  UnityEngine_Transform__set_localPosition(v19, v31, 0);
+  v31 = UnityEngine_Transform__get_localPosition(this->fields.mTrans, 0);
+  v32 = NGUIMath__SpringLerp_49375244(v31, this->fields.target, this->fields.strength, v6, 0);
+  UnityEngine_Transform__set_localPosition(v20, v32, 0);
   mTrans = this->fields.mTrans;
   if ( !mTrans )
     goto LABEL_30;
-  v21 = this->fields.target.fields.y;
-  v20 = this->fields.target.fields.z;
-  v22 = this->fields.target.fields.x;
-  v23 = this->fields.mThreshold;
-  v32 = UnityEngine_Transform__get_localPosition(mTrans, 0);
-  if ( v23 < (float)((float)((float)(v20 - v32.fields.z) * (float)(v20 - v32.fields.z))
-                   + (float)((float)((float)(v22 - v32.fields.x) * (float)(v22 - v32.fields.x))
-                           + (float)((float)(v21 - v32.fields.y) * (float)(v21 - v32.fields.y)))) )
+  v22 = this->fields.target.fields.y;
+  v21 = this->fields.target.fields.z;
+  v23 = this->fields.target.fields.x;
+  v24 = this->fields.mThreshold;
+  v33 = UnityEngine_Transform__get_localPosition(mTrans, 0);
+  if ( v24 < (float)((float)((float)(v21 - v33.fields.z) * (float)(v21 - v33.fields.z))
+                   + (float)((float)((float)(v23 - v33.fields.x) * (float)(v23 - v33.fields.x))
+                           + (float)((float)(v22 - v33.fields.y) * (float)(v22 - v33.fields.y)))) )
     goto LABEL_24;
   mTrans = this->fields.mTrans;
   if ( !mTrans )
     goto LABEL_30;
   UnityEngine_Transform__set_localPosition(mTrans, this->fields.target, 0);
 LABEL_23:
-  SpringPosition__NotifyListeners(this, v15);
+  SpringPosition__NotifyListeners(this, v16);
   UnityEngine_Behaviour__set_enabled((UnityEngine_Behaviour_o *)this, 0, 0);
 LABEL_24:
   mSv = (UnityEngine_Object_o *)this->fields.mSv;
@@ -314,15 +316,15 @@ void SpringPosition_OnFinished___ctor(
   this->fields.method = method;
   this->fields.method_ptr = v4;
   this->fields.m_target = object;
-  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.m_target, (int32_t)object, method, a4);
+  sub_1C3E508((CGThumbnailListItem_o *)&this->fields.m_target, (int32_t)object, method, a4);
   v8 = *(unsigned __int8 *)(method + 82);
   this->fields.method_code = (intptr_t)this;
-  if ( (sub_1C37118(method) & 1) == 0 )
+  if ( (sub_1C3E624(method) & 1) == 0 )
   {
     if ( !object )
     {
-      v10 = sub_1C372D0(0, "Delegate to an instance method cannot have null 'this'.");
-      sub_1C37180(v10, 0);
+      v10 = sub_1C3E7DC(0, "Delegate to an instance method cannot have null 'this'.");
+      sub_1C3E68C(v10, 0);
     }
     goto LABEL_5;
   }
@@ -334,9 +336,9 @@ LABEL_5:
     this->fields.method_code = (intptr_t)m_target;
     goto LABEL_6;
   }
-  this->fields.invoke_impl = (intptr_t)sub_1A83068;
+  this->fields.invoke_impl = (intptr_t)sub_1A8A410;
 LABEL_6:
-  this->fields.extra_arg = (intptr_t)sub_1A83028;
+  this->fields.extra_arg = (intptr_t)sub_1A8A3D0;
 }
 
 
@@ -349,7 +351,7 @@ System_IAsyncResult_o *SpringPosition_OnFinished__BeginInvoke(
   __int64 v5; // [xsp+8h] [xbp-8h] BYREF
 
   v5 = 0;
-  return (System_IAsyncResult_o *)sub_1C3700C(this, &v5, callback, object);
+  return (System_IAsyncResult_o *)sub_1C3E518(this, &v5, callback, object);
 }
 
 
@@ -358,7 +360,7 @@ void SpringPosition_OnFinished__EndInvoke(
         System_IAsyncResult_o *result,
         const MethodInfo *method)
 {
-  sub_1C37010(result, 0, method);
+  sub_1C3E51C(result, 0, method);
 }
 
 

@@ -1,12 +1,12 @@
 void EventPanelMapMaster___ctor(EventPanelMapMaster_o *this, const MethodInfo *method)
 {
-  if ( (byte_4C43014 & 1) == 0 )
+  if ( (byte_4C56DC3 & 1) == 0 )
   {
-    sub_1C37058(&Method_DataMasterBase_EventPanelMapMaster__EventPanelMapEntity__int___ctor__);
-    byte_4C43014 = 1;
+    sub_1C3E564(&Method_DataMasterBase_EventPanelMapMaster__EventPanelMapEntity__int___ctor__);
+    byte_4C56DC3 = 1;
   }
   DataMasterBase_object__object__int____ctor(
     (DataMasterBase_TMaster__TEntity__PKType__o *)this,
     347,
-    (const MethodInfo_339ED7C *)Method_DataMasterBase_EventPanelMapMaster__EventPanelMapEntity__int___ctor__);
+    (const MethodInfo_33B0C34 *)Method_DataMasterBase_EventPanelMapMaster__EventPanelMapEntity__int___ctor__);
 }

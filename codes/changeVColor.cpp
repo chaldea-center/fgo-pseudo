@@ -15,24 +15,25 @@ void changeVColor__UpdateVColor(changeVColor_o *this, const MethodInfo *method)
 {
   bool isPlaying; // w20
   UnityEngine_Color_array *Component_object; // x0
-  UnityEngine_Mesh_o *v5; // x20
+  __int64 v5; // x1
+  UnityEngine_Mesh_o *v6; // x20
   UnityEngine_Color_array *colors; // x21
   unsigned __int64 max_length_low; // x9
-  unsigned __int64 v8; // x8
+  unsigned __int64 v9; // x8
   __int64 max_length; // x10
 
-  if ( (byte_4C41D29 & 1) == 0 )
+  if ( (byte_4C55ACB & 1) == 0 )
   {
-    sub_1C37058(&UnityEngine_Application_TypeInfo);
-    sub_1C37058(&Method_UnityEngine_Component_GetComponent_MeshFilter___);
-    byte_4C41D29 = 1;
+    sub_1C3E564(&UnityEngine_Application_TypeInfo);
+    sub_1C3E564(&Method_UnityEngine_Component_GetComponent_MeshFilter___);
+    byte_4C55ACB = 1;
   }
   if ( !UnityEngine_Application_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Application_TypeInfo);
   isPlaying = UnityEngine_Application__get_isPlaying(0);
   Component_object = (UnityEngine_Color_array *)UnityEngine_Component__GetComponent_object_(
                                                   (UnityEngine_Component_o *)this,
-                                                  (const MethodInfo_30DE428 *)Method_UnityEngine_Component_GetComponent_MeshFilter___);
+                                                  (const MethodInfo_30F0240 *)Method_UnityEngine_Component_GetComponent_MeshFilter___);
   if ( !Component_object )
     goto LABEL_18;
   Component_object = (UnityEngine_Color_array *)(isPlaying
@@ -42,28 +43,28 @@ void changeVColor__UpdateVColor(changeVColor_o *this, const MethodInfo *method)
                                                : UnityEngine_MeshFilter__get_sharedMesh(
                                                    (UnityEngine_MeshFilter_o *)Component_object,
                                                    0));
-  v5 = (UnityEngine_Mesh_o *)Component_object;
+  v6 = (UnityEngine_Mesh_o *)Component_object;
   if ( !Component_object )
     goto LABEL_18;
   colors = UnityEngine_Mesh__get_colors((UnityEngine_Mesh_o *)Component_object, 0);
-  Component_object = UnityEngine_Mesh__get_colors(v5, 0);
+  Component_object = UnityEngine_Mesh__get_colors(v6, 0);
   if ( !Component_object )
     goto LABEL_18;
   if ( (int)Component_object->max_length < 1 )
     goto LABEL_16;
   if ( !colors )
 LABEL_18:
-    sub_1C372B4(Component_object);
+    sub_1C3E7C0(Component_object, v5);
   max_length_low = LODWORD(colors->max_length);
-  v8 = 0;
+  v9 = 0;
   max_length = (unsigned int)Component_object->max_length;
   do
   {
-    if ( v8 >= max_length_low )
-      sub_1C372BC(Component_object);
-    colors->m_Items[v8++] = this->fields.color;
+    if ( v9 >= max_length_low )
+      sub_1C3E7C8(Component_object, v5);
+    colors->m_Items[v9++] = this->fields.color;
   }
-  while ( max_length != v8 );
+  while ( max_length != v9 );
 LABEL_16:
-  UnityEngine_Mesh__set_colors(v5, colors, 0);
+  UnityEngine_Mesh__set_colors(v6, colors, 0);
 }

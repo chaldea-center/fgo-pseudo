@@ -9,5 +9,5 @@ void EventDailyPoint___ctor(EventDailyPoint_o *this, const MethodInfo *method)
   v2->fields.eventPointBehavior = 0;
   v2 = (EventDailyPoint_o *)((char *)v2 + 24);
   LODWORD(v2[-1].fields.eventPointBehavior) = 0;
-  sub_1C36FFC((CGThumbnailListItem_o *)v2, 0, v3, v4);
+  sub_1C3E508((CGThumbnailListItem_o *)v2, 0, v3, v4);
 }

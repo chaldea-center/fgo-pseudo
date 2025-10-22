@@ -13,27 +13,28 @@ void EventInfoAssistComponent__Awake(EventInfoAssistComponent_o *this, const Met
 float EventInfoAssistComponent__GetHeight(EventInfoAssistComponent_o *this, const MethodInfo *method)
 {
   UnityEngine_Object_o *skillDetailLabel; // x20
+  __int64 v4; // x1
   float result; // s0
-  struct UILabel_o *v5; // x0
-  float v6; // s1
+  struct UILabel_o *v6; // x0
+  float v7; // s1
 
-  if ( (byte_4C43348 & 1) == 0 )
+  if ( (byte_4C570FD & 1) == 0 )
   {
-    sub_1C37058(&UnityEngine_Object_TypeInfo);
-    byte_4C43348 = 1;
+    sub_1C3E564(&UnityEngine_Object_TypeInfo);
+    byte_4C570FD = 1;
   }
   skillDetailLabel = (UnityEngine_Object_o *)this->fields.skillDetailLabel;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   if ( UnityEngine_Object__op_Equality(skillDetailLabel, 0, 0) )
     return this->fields.minHeight;
-  v5 = this->fields.skillDetailLabel;
-  if ( !v5 )
-    sub_1C372B4(0);
-  ((void (__fastcall *)(struct UILabel_o *, const MethodInfo *))v5->klass->vtable._22_get_localSize.methodPtr)(
-    v5,
-    v5->klass->vtable._22_get_localSize.method);
-  result = v6 + this->fields.offsetHeight;
+  v6 = this->fields.skillDetailLabel;
+  if ( !v6 )
+    sub_1C3E7C0(0, v4);
+  ((void (__fastcall *)(struct UILabel_o *, const MethodInfo *))v6->klass->vtable._22_get_localSize.methodPtr)(
+    v6,
+    v6->klass->vtable._22_get_localSize.method);
+  result = v7 + this->fields.offsetHeight;
   if ( this->fields.minHeight > result )
     return this->fields.minHeight;
   return result;
@@ -51,57 +52,58 @@ void EventInfoAssistComponent__Setup(
   UISprite_o *v8; // x22
   int32_t skillId; // w23
   AssistMaster_o *Master_object; // x0
+  __int64 v11; // x1
   System_Collections_Generic_List_AssistEntity__o *EntityListFromAssistId; // x0
-  EventInfoAssistComponent___c_c *v12; // x8
-  System_Collections_Generic_List_T__o *v13; // x22
+  EventInfoAssistComponent___c_c *v13; // x8
+  System_Collections_Generic_List_T__o *v14; // x22
   System_Func_object__bool__o *_9__10_0; // x23
-  Il2CppObject *v15; // x24
+  Il2CppObject *v16; // x24
   struct EventInfoAssistComponent___c_StaticFields *static_fields; // x0
-  int32_t v17; // w2
-  const MethodInfo *v18; // x3
-  int32_t v19; // w26
+  int32_t v18; // w2
+  const MethodInfo *v19; // x3
+  int32_t v20; // w26
   UILabel_o *nameLabel; // x22
-  System_String_o *v21; // x23
-  int32_t v22; // w2
-  const MethodInfo *v23; // x3
+  System_String_o *v22; // x23
+  int32_t v23; // w2
+  const MethodInfo *v24; // x3
   struct System_String_o *name; // x25
-  AssistMaster_o *v25; // x24
-  __int64 v26; // x2
-  __int64 v27; // x3
-  __int64 v28; // x4
-  __int64 v29; // x5
-  __int64 v30; // x6
-  __int64 v31; // x7
-  int32_t v32; // w2
-  const MethodInfo *v33; // x3
-  AssistMaster_o *v34; // x25
+  AssistMaster_o *v26; // x24
+  __int64 v27; // x2
+  __int64 v28; // x3
+  __int64 v29; // x4
+  __int64 v30; // x5
+  __int64 v31; // x6
+  __int64 v32; // x7
+  int32_t v33; // w2
+  const MethodInfo *v34; // x3
+  AssistMaster_o *v35; // x25
   UILabel_o *skillDetailLabel; // x22
   System_String_o *Detail; // x0
   UnityEngine_GameObject_o *stateUpIcon; // x22
   bool IsStateUpIconDisp; // w0
   UILabel_o *statusLabel; // x22
   System_String_o *RenoDetailDialogText; // x0
-  bool v41; // w21
+  bool v42; // w21
   UILabel_o *releaseConditionMessageLabel; // x22
   System_String_o *ReleaseConditionMessage; // x0
-  __int64 v44; // x0
-  int32_t v45; // [xsp+Ch] [xbp-44h] BYREF
+  __int64 v45; // x0
+  int32_t v46; // [xsp+Ch] [xbp-44h] BYREF
 
-  if ( (byte_4C43347 & 1) == 0 )
+  if ( (byte_4C570FC & 1) == 0 )
   {
-    sub_1C37058(&AtlasManager_TypeInfo);
-    sub_1C37058(&Method_BasicHelper_Any_AssistEntity___);
-    sub_1C37058(&Method_DataManager_GetMaster_AssistMaster___);
-    sub_1C37058(&DataManager_TypeInfo);
-    sub_1C37058(&System_Func_AssistEntity__bool__TypeInfo);
-    sub_1C37058(&int_TypeInfo);
-    sub_1C37058(&LocalizationManager_TypeInfo);
-    sub_1C37058(&object___TypeInfo);
-    sub_1C37058(&UnityEngine_Object_TypeInfo);
-    sub_1C37058(&Method_EventInfoAssistComponent___c__Setup_b__10_0__);
-    sub_1C37058(&EventInfoAssistComponent___c_TypeInfo);
-    sub_1C37058(&StringLiteral_5616/*"EVENT_INFO_ASSIST_NAME"*/);
-    byte_4C43347 = 1;
+    sub_1C3E564(&AtlasManager_TypeInfo);
+    sub_1C3E564(&Method_BasicHelper_Any_AssistEntity___);
+    sub_1C3E564(&Method_DataManager_GetMaster_AssistMaster___);
+    sub_1C3E564(&DataManager_TypeInfo);
+    sub_1C3E564(&System_Func_AssistEntity__bool__TypeInfo);
+    sub_1C3E564(&int_TypeInfo);
+    sub_1C3E564(&LocalizationManager_TypeInfo);
+    sub_1C3E564(&object___TypeInfo);
+    sub_1C3E564(&UnityEngine_Object_TypeInfo);
+    sub_1C3E564(&Method_EventInfoAssistComponent___c__Setup_b__10_0__);
+    sub_1C3E564(&EventInfoAssistComponent___c_TypeInfo);
+    sub_1C3E564(&StringLiteral_5616/*"EVENT_INFO_ASSIST_NAME"*/);
+    byte_4C570FC = 1;
   }
   if ( entity )
   {
@@ -120,36 +122,36 @@ void EventInfoAssistComponent__Setup(
     }
     if ( !DataManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-    Master_object = (AssistMaster_o *)DataManager__GetMaster_object_((const MethodInfo_30E7C04 *)Method_DataManager_GetMaster_AssistMaster___);
+    Master_object = (AssistMaster_o *)DataManager__GetMaster_object_((const MethodInfo_30F9A1C *)Method_DataManager_GetMaster_AssistMaster___);
     if ( !Master_object )
       goto LABEL_36;
     EntityListFromAssistId = AssistMaster__GetEntityListFromAssistId(Master_object, entity->fields.id, 0);
-    v12 = EventInfoAssistComponent___c_TypeInfo;
-    v13 = (System_Collections_Generic_List_T__o *)EntityListFromAssistId;
+    v13 = EventInfoAssistComponent___c_TypeInfo;
+    v14 = (System_Collections_Generic_List_T__o *)EntityListFromAssistId;
     if ( !EventInfoAssistComponent___c_TypeInfo->_2.cctor_finished )
     {
       j_il2cpp_runtime_class_init_0(EventInfoAssistComponent___c_TypeInfo);
-      v12 = EventInfoAssistComponent___c_TypeInfo;
+      v13 = EventInfoAssistComponent___c_TypeInfo;
     }
-    _9__10_0 = (System_Func_object__bool__o *)v12->static_fields->__9__10_0;
+    _9__10_0 = (System_Func_object__bool__o *)v13->static_fields->__9__10_0;
     if ( !_9__10_0 )
     {
-      if ( !v12->_2.cctor_finished )
+      if ( !v13->_2.cctor_finished )
       {
-        j_il2cpp_runtime_class_init_0(v12);
-        v12 = EventInfoAssistComponent___c_TypeInfo;
+        j_il2cpp_runtime_class_init_0(v13);
+        v13 = EventInfoAssistComponent___c_TypeInfo;
       }
-      v15 = (Il2CppObject *)v12->static_fields->__9;
-      _9__10_0 = (System_Func_object__bool__o *)sub_1C372A4(System_Func_AssistEntity__bool__TypeInfo);
-      System_Func_object__bool____ctor(_9__10_0, v15, Method_EventInfoAssistComponent___c__Setup_b__10_0__, 0);
+      v16 = (Il2CppObject *)v13->static_fields->__9;
+      _9__10_0 = (System_Func_object__bool__o *)sub_1C3E7B0(System_Func_AssistEntity__bool__TypeInfo);
+      System_Func_object__bool____ctor(_9__10_0, v16, Method_EventInfoAssistComponent___c__Setup_b__10_0__, 0);
       static_fields = EventInfoAssistComponent___c_TypeInfo->static_fields;
       static_fields->__9__10_0 = (struct System_Func_AssistEntity__bool__o *)_9__10_0;
-      sub_1C36FFC((CGThumbnailListItem_o *)&static_fields->__9__10_0, (int32_t)_9__10_0, v17, v18);
+      sub_1C3E508((CGThumbnailListItem_o *)&static_fields->__9__10_0, (int32_t)_9__10_0, v18, v19);
     }
     if ( !BasicHelper__Any_object_(
-            v13,
+            v14,
             (System_Func_T__bool__o *)_9__10_0,
-            (const MethodInfo_30D0FF8 *)Method_BasicHelper_Any_AssistEntity___) )
+            (const MethodInfo_30E2E10 *)Method_BasicHelper_Any_AssistEntity___) )
     {
       UILabelHelper__SetTextSafely(this->fields.nameLabel, entity->fields.name, 0);
 LABEL_34:
@@ -162,51 +164,51 @@ LABEL_34:
       statusLabel = this->fields.statusLabel;
       RenoDetailDialogText = AssistEntity__GetRenoDetailDialogText(entity, 0);
       UILabelHelper__SetTextSafely(statusLabel, RenoDetailDialogText, 0);
-      v41 = !v7;
-      BasicHelper__SetActiveSafely((UnityEngine_Component_o *)this->fields.releaseConditionMessageLabel, v41, 0);
+      v42 = !v7;
+      BasicHelper__SetActiveSafely((UnityEngine_Component_o *)this->fields.releaseConditionMessageLabel, v42, 0);
       releaseConditionMessageLabel = this->fields.releaseConditionMessageLabel;
       ReleaseConditionMessage = AssistEntity__GetReleaseConditionMessage(entity, 0);
       UILabelHelper__SetTextSafely(releaseConditionMessageLabel, ReleaseConditionMessage, 0);
-      BasicHelper__SetActiveSafely((UnityEngine_Component_o *)this->fields.lockedSprite, v41, 0);
+      BasicHelper__SetActiveSafely((UnityEngine_Component_o *)this->fields.lockedSprite, v42, 0);
       return;
     }
-    v19 = v7 ? entity->fields.lv : 0;
+    v20 = v7 ? entity->fields.lv : 0;
     nameLabel = this->fields.nameLabel;
     if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-    v21 = LocalizationManager__Get((System_String_o *)StringLiteral_5616/*"EVENT_INFO_ASSIST_NAME"*/, 0);
-    Master_object = (AssistMaster_o *)sub_1C37100(object___TypeInfo, 2);
+    v22 = LocalizationManager__Get((System_String_o *)StringLiteral_5616/*"EVENT_INFO_ASSIST_NAME"*/, 0);
+    Master_object = (AssistMaster_o *)sub_1C3E60C(object___TypeInfo, 2);
     if ( !Master_object )
 LABEL_36:
-      sub_1C372B4(Master_object);
+      sub_1C3E7C0(Master_object, v11);
     name = entity->fields.name;
-    v25 = Master_object;
+    v26 = Master_object;
     if ( !name
-      || (Master_object = (AssistMaster_o *)sub_1C37194(entity->fields.name, Master_object->klass->_1.element_class)) != 0 )
+      || (Master_object = (AssistMaster_o *)sub_1C3E6A0(entity->fields.name, Master_object->klass->_1.element_class)) != 0 )
     {
-      if ( !LODWORD(v25->fields._MasterName_k__BackingField) )
+      if ( !LODWORD(v26->fields._MasterName_k__BackingField) )
         goto LABEL_37;
-      *(_QWORD *)&v25->fields.revision = name;
-      sub_1C36FFC((CGThumbnailListItem_o *)&v25->fields.revision, (int32_t)name, v22, v23);
-      v45 = v19;
-      Master_object = (AssistMaster_o *)j_il2cpp_value_box_0(int_TypeInfo, &v45, v26, v27, v28, v29, v30, v31);
-      v34 = Master_object;
+      *(_QWORD *)&v26->fields.revision = name;
+      sub_1C3E508((CGThumbnailListItem_o *)&v26->fields.revision, (int32_t)name, v23, v24);
+      v46 = v20;
+      Master_object = (AssistMaster_o *)j_il2cpp_value_box_0(int_TypeInfo, &v46, v27, v28, v29, v30, v31, v32);
+      v35 = Master_object;
       if ( !Master_object
-        || (Master_object = (AssistMaster_o *)sub_1C37194(Master_object, v25->klass->_1.element_class)) != 0 )
+        || (Master_object = (AssistMaster_o *)sub_1C3E6A0(Master_object, v26->klass->_1.element_class)) != 0 )
       {
-        if ( LODWORD(v25->fields._MasterName_k__BackingField) > 1 )
+        if ( LODWORD(v26->fields._MasterName_k__BackingField) > 1 )
         {
-          v25->fields.list = (struct System_Collections_ObjectModel_ObservableCollection_TEntity__o *)v34;
-          sub_1C36FFC((CGThumbnailListItem_o *)&v25->fields.list, (int32_t)v34, v32, v33);
-          UILabelHelper__SetTextSafely_44159028(nameLabel, v21, (System_Object_array *)v25, 0);
+          v26->fields.list = (struct System_Collections_ObjectModel_ObservableCollection_TEntity__o *)v35;
+          sub_1C3E508((CGThumbnailListItem_o *)&v26->fields.list, (int32_t)v35, v33, v34);
+          UILabelHelper__SetTextSafely_44214512(nameLabel, v22, (System_Object_array *)v26, 0);
           goto LABEL_34;
         }
 LABEL_37:
-        sub_1C372BC(Master_object);
+        sub_1C3E7C8(Master_object, v11);
       }
     }
-    v44 = sub_1C372D8(Master_object);
-    sub_1C37180(v44, 0);
+    v45 = sub_1C3E7E4(Master_object);
+    sub_1C3E68C(v45, 0);
   }
 }
 
@@ -217,15 +219,15 @@ void EventInfoAssistComponent___c___cctor(const MethodInfo *method)
   int32_t v2; // w2
   const MethodInfo *v3; // x3
 
-  if ( (byte_4C43349 & 1) == 0 )
+  if ( (byte_4C570FE & 1) == 0 )
   {
-    sub_1C37058(&EventInfoAssistComponent___c_TypeInfo);
-    byte_4C43349 = 1;
+    sub_1C3E564(&EventInfoAssistComponent___c_TypeInfo);
+    byte_4C570FE = 1;
   }
-  v1 = (Il2CppObject *)sub_1C372A4(EventInfoAssistComponent___c_TypeInfo);
+  v1 = (Il2CppObject *)sub_1C3E7B0(EventInfoAssistComponent___c_TypeInfo);
   System_Object___ctor(v1, 0);
   EventInfoAssistComponent___c_TypeInfo->static_fields->__9 = (struct EventInfoAssistComponent___c_o *)v1;
-  sub_1C36FFC((CGThumbnailListItem_o *)EventInfoAssistComponent___c_TypeInfo->static_fields, (int32_t)v1, v2, v3);
+  sub_1C3E508((CGThumbnailListItem_o *)EventInfoAssistComponent___c_TypeInfo->static_fields, (int32_t)v1, v2, v3);
 }
 
 
@@ -241,6 +243,6 @@ bool EventInfoAssistComponent___c___Setup_b__10_0(
         const MethodInfo *method)
 {
   if ( !v )
-    sub_1C372B4(this);
+    sub_1C3E7C0(this, 0);
   return AssistEntity__IsStateUpIconDisp(v, 0);
 }

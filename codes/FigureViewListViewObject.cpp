@@ -1,9 +1,9 @@
 void FigureViewListViewObject___ctor(FigureViewListViewObject_o *this, const MethodInfo *method)
 {
-  if ( (byte_4C40501 & 1) == 0 )
+  if ( (byte_4C5429E & 1) == 0 )
   {
-    sub_1C37058(&ListViewObject_TypeInfo);
-    byte_4C40501 = 1;
+    sub_1C3E564(&ListViewObject_TypeInfo);
+    byte_4C5429E = 1;
   }
   if ( !ListViewObject_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(ListViewObject_TypeInfo);
@@ -13,25 +13,26 @@ void FigureViewListViewObject___ctor(FigureViewListViewObject_o *this, const Met
 
 void FigureViewListViewObject__Awake(FigureViewListViewObject_o *this, const MethodInfo *method)
 {
+  __int64 v3; // x1
   UnityEngine_GameObject_o *dispObject; // x0
   Il2CppObject *Component_object; // x0
-  int32_t v5; // w2
-  const MethodInfo *v6; // x3
+  int32_t v6; // w2
+  const MethodInfo *v7; // x3
 
-  if ( (byte_4C404FB & 1) == 0 )
+  if ( (byte_4C54298 & 1) == 0 )
   {
-    sub_1C37058(&Method_UnityEngine_GameObject_GetComponent_FigureViewListViewItemDraw___);
-    byte_4C404FB = 1;
+    sub_1C3E564(&Method_UnityEngine_GameObject_GetComponent_FigureViewListViewItemDraw___);
+    byte_4C54298 = 1;
   }
   ListViewObject__Awake((ListViewObject_o *)this, 0);
   dispObject = this->fields.dispObject;
   if ( !dispObject )
-    sub_1C372B4(0);
+    sub_1C3E7C0(0, v3);
   Component_object = UnityEngine_GameObject__GetComponent_object_(
                        dispObject,
-                       (const MethodInfo_313F1D8 *)Method_UnityEngine_GameObject_GetComponent_FigureViewListViewItemDraw___);
+                       (const MethodInfo_31510CC *)Method_UnityEngine_GameObject_GetComponent_FigureViewListViewItemDraw___);
   this->fields.itemDraw = (struct FigureViewListViewItemDraw_o *)Component_object;
-  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.itemDraw, (int32_t)Component_object, v5, v6);
+  sub_1C3E508((CGThumbnailListItem_o *)&this->fields.itemDraw, (int32_t)Component_object, v6, v7);
 }
 
 
@@ -40,25 +41,26 @@ UnityEngine_GameObject_o *FigureViewListViewObject__CreateDragObject(
         const MethodInfo *method)
 {
   UnityEngine_GameObject_o *DragObject; // x0
-  UnityEngine_GameObject_o *v4; // x19
-  const MethodInfo *v5; // x2
+  __int64 v4; // x1
+  UnityEngine_GameObject_o *v5; // x19
+  const MethodInfo *v6; // x2
 
-  if ( (byte_4C404FE & 1) == 0 )
+  if ( (byte_4C5429B & 1) == 0 )
   {
-    sub_1C37058(&Method_UnityEngine_GameObject_GetComponent_FigureViewListViewObject___);
-    byte_4C404FE = 1;
+    sub_1C3E564(&Method_UnityEngine_GameObject_GetComponent_FigureViewListViewObject___);
+    byte_4C5429B = 1;
   }
   DragObject = ListViewObject__CreateDragObject((ListViewObject_o *)this, 0);
   if ( !DragObject
-    || (v4 = DragObject,
+    || (v5 = DragObject,
         (DragObject = (UnityEngine_GameObject_o *)UnityEngine_GameObject__GetComponent_object_(
                                                     DragObject,
-                                                    (const MethodInfo_313F1D8 *)Method_UnityEngine_GameObject_GetComponent_FigureViewListViewObject___)) == 0) )
+                                                    (const MethodInfo_31510CC *)Method_UnityEngine_GameObject_GetComponent_FigureViewListViewObject___)) == 0) )
   {
-    sub_1C372B4(DragObject);
+    sub_1C3E7C0(DragObject, v4);
   }
-  FigureViewListViewObject__Init_37393400((FigureViewListViewObject_o *)DragObject, 2, v5);
-  return v4;
+  FigureViewListViewObject__Init_37438112((FigureViewListViewObject_o *)DragObject, 2, v6);
+  return v5;
 }
 
 
@@ -78,7 +80,7 @@ void FigureViewListViewObject__EventMoveEnd(FigureViewListViewObject_o *this, co
   if ( callbackFunc )
   {
     p_callbackFunc->klass = 0;
-    sub_1C36FFC(p_callbackFunc, 0, v2, v3);
+    sub_1C3E508(p_callbackFunc, 0, v2, v3);
     ((void (__fastcall *)(intptr_t, intptr_t))v5->fields.invoke_impl)(v5->fields.method_code, v5->fields.method);
   }
 }
@@ -89,10 +91,10 @@ FigureViewListViewItem_o *FigureViewListViewObject__GetItem(FigureViewListViewOb
   struct ListViewItem_o *linkItem; // x8
   __int64 naturalAligment; // x11
 
-  if ( (byte_4C404FD & 1) == 0 )
+  if ( (byte_4C5429A & 1) == 0 )
   {
-    sub_1C37058(&FigureViewListViewItem_TypeInfo);
-    byte_4C404FD = 1;
+    sub_1C3E564(&FigureViewListViewItem_TypeInfo);
+    byte_4C5429A = 1;
   }
   linkItem = this->fields.linkItem;
   if ( !linkItem )
@@ -120,19 +122,20 @@ void FigureViewListViewObject__Init(
   int32_t dispMode; // w22
   int32_t state; // w24
   UnityEngine_Transform_o *transform; // x0
+  __int64 v15; // x1
   CGThumbnailListItem_o *p_callbackFunc; // x21
-  int32_t v16; // w2
-  const MethodInfo *v17; // x3
-  const MethodInfo *v18; // x1
-  int32_t v19; // w2
-  const MethodInfo *v20; // x3
-  int32_t v21; // w9
+  int32_t v17; // w2
+  const MethodInfo *v18; // x3
+  const MethodInfo *v19; // x1
+  int32_t v20; // w2
+  const MethodInfo *v21; // x3
+  int32_t v22; // w9
   CGThumbnailListItem_c *klass; // x19
 
-  if ( (byte_4C404FF & 1) == 0 )
+  if ( (byte_4C5429C & 1) == 0 )
   {
-    sub_1C37058(&FigureViewListViewItem_TypeInfo);
-    byte_4C404FF = 1;
+    sub_1C3E564(&FigureViewListViewItem_TypeInfo);
+    byte_4C5429C = 1;
   }
   linkItem = this->fields.linkItem;
   if ( linkItem
@@ -160,25 +163,25 @@ void FigureViewListViewObject__Init(
     || (UnityEngine_Transform__set_localPosition(transform, this->fields.basePosition, 0),
         (transform = UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0)) == 0) )
   {
-    sub_1C372B4(transform);
+    sub_1C3E7C0(transform, v15);
   }
   UnityEngine_Transform__set_localScale(transform, this->fields.baseScale, 0);
   this->fields.callbackFunc = callbackFunc;
   p_callbackFunc = (CGThumbnailListItem_o *)&this->fields.callbackFunc;
-  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.callbackFunc, (int32_t)callbackFunc, v16, v17);
+  sub_1C3E508((CGThumbnailListItem_o *)&this->fields.callbackFunc, (int32_t)callbackFunc, v17, v18);
   if ( (unsigned int)v11 <= 3 )
   {
-    v21 = dword_C0E070[v11];
-    this->fields.dispMode = *((_DWORD *)&xmmword_C0ED70 + v11);
-    this->fields.state = v21;
+    v22 = dword_C116E0[v11];
+    this->fields.dispMode = *((_DWORD *)&xmmword_C123E0 + v11);
+    this->fields.state = v22;
   }
   if ( !state || dispMode != this->fields.dispMode )
-    FigureViewListViewObject__SetupDisp(this, v18);
+    FigureViewListViewObject__SetupDisp(this, v19);
   klass = p_callbackFunc->klass;
   if ( p_callbackFunc->klass )
   {
     p_callbackFunc->klass = 0;
-    sub_1C36FFC(p_callbackFunc, 0, v19, v20);
+    sub_1C3E508(p_callbackFunc, 0, v20, v21);
     ((void (__fastcall *)(Il2CppClass *, _QWORD))klass->_1.namespaze)(
       klass->_1.element_class,
       *(_QWORD *)&klass->_1.byval_arg.bits);
@@ -187,7 +190,7 @@ void FigureViewListViewObject__Init(
 
 
 // local variable allocation has failed, the output may be wrong!
-void FigureViewListViewObject__Init_37393400(
+void FigureViewListViewObject__Init_37438112(
         FigureViewListViewObject_o *this,
         int32_t initMode,
         const MethodInfo *method)
@@ -196,17 +199,17 @@ void FigureViewListViewObject__Init_37393400(
   float v4; // s0
   int v5; // s1 OVERLAPPED
 
-  if ( !byte_4C3C921 )
+  if ( !byte_4C506A1 )
   {
-    sub_1C37058(&UnityEngine_Vector3_TypeInfo);
-    byte_4C3C921 = 1;
+    sub_1C3E564(&UnityEngine_Vector3_TypeInfo);
+    byte_4C506A1 = 1;
   }
   FigureViewListViewObject__Init(this, initMode, 0, v4, *(UnityEngine_Vector3_o *)&v5, v3);
 }
 
 
 // local variable allocation has failed, the output may be wrong!
-void FigureViewListViewObject__Init_37394508(
+void FigureViewListViewObject__Init_37439220(
         FigureViewListViewObject_o *this,
         int32_t initMode,
         System_Action_o *callbackFunc,
@@ -215,17 +218,17 @@ void FigureViewListViewObject__Init_37394508(
 {
   int v5; // s1 OVERLAPPED
 
-  if ( !byte_4C3C921 )
+  if ( !byte_4C506A1 )
   {
-    sub_1C37058(&UnityEngine_Vector3_TypeInfo);
-    byte_4C3C921 = 1;
+    sub_1C3E564(&UnityEngine_Vector3_TypeInfo);
+    byte_4C506A1 = 1;
   }
   FigureViewListViewObject__Init(this, initMode, callbackFunc, delay, *(UnityEngine_Vector3_o *)&v5, method);
 }
 
 
 // local variable allocation has failed, the output may be wrong!
-void FigureViewListViewObject__Init_37394592(
+void FigureViewListViewObject__Init_37439304(
         FigureViewListViewObject_o *this,
         int32_t initMode,
         System_Action_o *callbackFunc,
@@ -234,10 +237,10 @@ void FigureViewListViewObject__Init_37394592(
   float v4; // s0
   int v5; // s1 OVERLAPPED
 
-  if ( !byte_4C3C921 )
+  if ( !byte_4C506A1 )
   {
-    sub_1C37058(&UnityEngine_Vector3_TypeInfo);
-    byte_4C3C921 = 1;
+    sub_1C3E564(&UnityEngine_Vector3_TypeInfo);
+    byte_4C506A1 = 1;
   }
   FigureViewListViewObject__Init(this, initMode, callbackFunc, v4, *(UnityEngine_Vector3_o *)&v5, method);
 }
@@ -252,11 +255,11 @@ void FigureViewListViewObject__OnDestroy(FigureViewListViewObject_o *this, const
   int32_t v7; // w2
   const MethodInfo *v8; // x3
 
-  if ( (byte_4C404FC & 1) == 0 )
+  if ( (byte_4C54299 & 1) == 0 )
   {
-    sub_1C37058(&NGUITools_TypeInfo);
-    sub_1C37058(&UnityEngine_Object_TypeInfo);
-    byte_4C404FC = 1;
+    sub_1C3E564(&NGUITools_TypeInfo);
+    sub_1C3E564(&UnityEngine_Object_TypeInfo);
+    byte_4C54299 = 1;
   }
   dragObject = this->fields.dragObject;
   p_dragObject = (CGThumbnailListItem_o *)&this->fields.dragObject;
@@ -270,7 +273,7 @@ void FigureViewListViewObject__OnDestroy(FigureViewListViewObject_o *this, const
       j_il2cpp_runtime_class_init_0(NGUITools_TypeInfo);
     NGUITools__Destroy(klass, 0);
     p_dragObject->klass = 0;
-    sub_1C36FFC(p_dragObject, 0, v7, v8);
+    sub_1C3E508(p_dragObject, 0, v7, v8);
   }
 }
 
@@ -282,7 +285,7 @@ void FigureViewListViewObject__SetItem(
         const MethodInfo *method)
 {
   this->fields.state = 0;
-  ListViewObject__SetItem_43831492((ListViewObject_o *)this, item, seed, 0);
+  ListViewObject__SetItem_43886976((ListViewObject_o *)this, item, seed, 0);
 }
 
 
@@ -292,14 +295,15 @@ void FigureViewListViewObject__SetupDisp(FigureViewListViewObject_o *this, const
   __int64 naturalAligment; // x10
   bool v5; // w1
   UnityEngine_Object_o *itemDraw; // x21
-  const MethodInfo *v7; // x3
-  FigureViewListViewItemDraw_o *v8; // x0
+  __int64 v7; // x1
+  const MethodInfo *v8; // x3
+  FigureViewListViewItemDraw_o *v9; // x0
 
-  if ( (byte_4C40500 & 1) == 0 )
+  if ( (byte_4C5429D & 1) == 0 )
   {
-    sub_1C37058(&FigureViewListViewItem_TypeInfo);
-    sub_1C37058(&UnityEngine_Object_TypeInfo);
-    byte_4C40500 = 1;
+    sub_1C3E564(&FigureViewListViewItem_TypeInfo);
+    sub_1C3E564(&UnityEngine_Object_TypeInfo);
+    byte_4C5429D = 1;
   }
   linkItem = this->fields.linkItem;
   if ( !linkItem )
@@ -321,10 +325,10 @@ LABEL_8:
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   if ( UnityEngine_Object__op_Inequality(itemDraw, 0, 0) )
   {
-    v8 = this->fields.itemDraw;
-    if ( !v8 )
-      sub_1C372B4(0);
-    FigureViewListViewItemDraw__SetItem(v8, (FigureViewListViewItem_o *)linkItem, this->fields.dispMode, v7);
+    v9 = this->fields.itemDraw;
+    if ( !v9 )
+      sub_1C3E7C0(0, v7);
+    FigureViewListViewItemDraw__SetItem(v9, (FigureViewListViewItem_o *)linkItem, this->fields.dispMode, v8);
   }
 }
 
@@ -334,7 +338,7 @@ void FigureViewListViewObject__Start(FigureViewListViewObject_o *this, const Met
   const MethodInfo *v2; // x2
 
   if ( !this->fields.state )
-    FigureViewListViewObject__Init_37393400(this, 2, v2);
+    FigureViewListViewObject__Init_37438112(this, 2, v2);
 }
 
 
@@ -353,10 +357,10 @@ void FigureViewListViewObject__add_callbackFunc(
   System_Action_o *v12; // x1
   const MethodInfo *v13; // x2
 
-  if ( (byte_4C404F9 & 1) == 0 )
+  if ( (byte_4C54296 & 1) == 0 )
   {
-    sub_1C37058(&System_Action_TypeInfo);
-    byte_4C404F9 = 1;
+    sub_1C3E564(&System_Action_TypeInfo);
+    byte_4C54296 = 1;
   }
   callbackFunc = this->fields.callbackFunc;
   p_callbackFunc = &this->fields.callbackFunc;
@@ -369,13 +373,13 @@ void FigureViewListViewObject__add_callbackFunc(
       if ( (System_Action_c *)v8->klass != System_Action_TypeInfo )
         break;
     }
-    v9 = sub_1C712B0(p_callbackFunc, v8, v6);
+    v9 = sub_1C787BC(p_callbackFunc, v8, v6);
     v10 = v6 == (System_Delegate_o *)v9;
     v6 = (System_Delegate_o *)v9;
     if ( v10 )
       return;
   }
-  sub_1C37574(v8);
+  sub_1C3EA80(v8);
   FigureViewListViewObject__remove_callbackFunc(v11, v12, v13);
 }
 
@@ -394,10 +398,10 @@ void FigureViewListViewObject__remove_callbackFunc(
   FigureViewListViewObject_o *v11; // x0
   const MethodInfo *v12; // x1
 
-  if ( (byte_4C404FA & 1) == 0 )
+  if ( (byte_4C54297 & 1) == 0 )
   {
-    sub_1C37058(&System_Action_TypeInfo);
-    byte_4C404FA = 1;
+    sub_1C3E564(&System_Action_TypeInfo);
+    byte_4C54297 = 1;
   }
   callbackFunc = this->fields.callbackFunc;
   p_callbackFunc = &this->fields.callbackFunc;
@@ -410,12 +414,12 @@ void FigureViewListViewObject__remove_callbackFunc(
       if ( (System_Action_c *)v8->klass != System_Action_TypeInfo )
         break;
     }
-    v9 = sub_1C712B0(p_callbackFunc, v8, v6);
+    v9 = sub_1C787BC(p_callbackFunc, v8, v6);
     v10 = v6 == (System_Delegate_o *)v9;
     v6 = (System_Delegate_o *)v9;
     if ( v10 )
       return;
   }
-  sub_1C37574(v8);
+  sub_1C3EA80(v8);
   FigureViewListViewObject__Awake(v11, v12);
 }

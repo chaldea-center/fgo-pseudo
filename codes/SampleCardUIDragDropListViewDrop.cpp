@@ -21,13 +21,13 @@ void SampleCardUIDragDropListViewDrop__CardDragDumpEnd(
   const MethodInfo *v12; // x2
 
   v2 = this;
-  if ( (byte_4C4077F & 1) == 0 )
+  if ( (byte_4C5451C & 1) == 0 )
   {
-    sub_1C37058(&ListViewDropObject_TypeInfo);
-    sub_1C37058(&UnityEngine_Object_TypeInfo);
-    sub_1C37058(&SampleCardListViewDropObject_TypeInfo);
-    this = (SampleCardUIDragDropListViewDrop_o *)sub_1C37058(&SampleCardListViewObject_TypeInfo);
-    byte_4C4077F = 1;
+    sub_1C3E564(&ListViewDropObject_TypeInfo);
+    sub_1C3E564(&UnityEngine_Object_TypeInfo);
+    sub_1C3E564(&SampleCardListViewDropObject_TypeInfo);
+    this = (SampleCardUIDragDropListViewDrop_o *)sub_1C3E564(&SampleCardListViewObject_TypeInfo);
+    byte_4C5451C = 1;
   }
   mListViewObject = (SampleCardListViewDropObject_o *)v2->fields.mListViewObject;
   if ( !mListViewObject )
@@ -71,15 +71,15 @@ void SampleCardUIDragDropListViewDrop__CardDragDumpEnd(
   {
     if ( v10 )
     {
-      SampleCardListViewObject__Init_37643380((SampleCardListViewObject_o *)v10, 6, v11);
+      SampleCardListViewObject__Init_37688184((SampleCardListViewObject_o *)v10, 6, v11);
       goto LABEL_20;
     }
 LABEL_21:
-    sub_1C372B4(this);
+    sub_1C3E7C0(this, method);
   }
 LABEL_20:
   UIDragDropListViewItem__OnDragDropRelease((UIDragDropListViewItem_o *)v2, 0, 0);
-  SampleCardListViewDropObject__Init_37635012(mListViewObject, 0, v12);
+  SampleCardListViewDropObject__Init_37679816(mListViewObject, 0, v12);
   ((void (__fastcall *)(SampleCardListViewDropObject_o *, _QWORD, const MethodInfo *))mListViewObject->klass->vtable._5_SetItem.methodPtr)(
     mListViewObject,
     0,
@@ -92,31 +92,32 @@ void SampleCardUIDragDropListViewDrop__CardDragDumpStart(
         const MethodInfo *method)
 {
   UnityEngine_GameObject_o *dragObject; // x0
+  __int64 v4; // x1
   float x; // s9
   float y; // s10
   float z; // s11
   struct UnityEngine_Vector3_StaticFields *static_fields; // x8
-  UnityEngine_GameObject_o *v8; // x20
+  UnityEngine_GameObject_o *v9; // x20
   UnityEngine_GameObject_o *gameObject; // x0
-  int32_t v10; // w2
-  const MethodInfo *v11; // x3
-  int32_t v12; // w1
-  int32_t v13; // w2
-  const MethodInfo *v14; // x3
+  int32_t v11; // w2
+  const MethodInfo *v12; // x3
+  int32_t v13; // w1
+  int32_t v14; // w2
+  const MethodInfo *v15; // x3
   UnityEngine_Vector3_o localPosition; // 0:s0.4,4:s1.4,8:s2.4
-  UnityEngine_Vector3_o v16; // 0:s1.4,4:s2.4,8:s3.4
-  UnityEngine_Color_o v17; // 0:s1.4,4:s2.4,8:s3.4,12:s4.4
+  UnityEngine_Vector3_o v17; // 0:s1.4,4:s2.4,8:s3.4
+  UnityEngine_Color_o v18; // 0:s1.4,4:s2.4,8:s3.4,12:s4.4
 
-  if ( (byte_4C4077E & 1) == 0 )
+  if ( (byte_4C5451B & 1) == 0 )
   {
-    sub_1C37058(&StringLiteral_4326/*"CardDragDumpEnd"*/);
-    byte_4C4077E = 1;
+    sub_1C3E564(&StringLiteral_4326/*"CardDragDumpEnd"*/);
+    byte_4C5451B = 1;
   }
-  v17.fields.r = 0.0;
-  v17.fields.g = 0.0;
-  v17.fields.b = 0.0;
-  v17.fields.a = 0.0;
-  dragObject = (UnityEngine_GameObject_o *)TweenColor__Begin(this->fields.dragObject, 0.2, v17, 0);
+  v18.fields.r = 0.0;
+  v18.fields.g = 0.0;
+  v18.fields.b = 0.0;
+  v18.fields.a = 0.0;
+  dragObject = (UnityEngine_GameObject_o *)TweenColor__Begin(this->fields.dragObject, 0.2, v18, 0);
   if ( !dragObject )
     goto LABEL_10;
   LODWORD(dragObject[1].monitor) = 3;
@@ -130,27 +131,27 @@ void SampleCardUIDragDropListViewDrop__CardDragDumpStart(
   x = localPosition.fields.x;
   y = localPosition.fields.y;
   z = localPosition.fields.z;
-  if ( !byte_4C3ECEB )
+  if ( !byte_4C52A7D )
   {
-    sub_1C37058(&UnityEngine_Vector3_TypeInfo);
-    byte_4C3ECEB = 1;
+    sub_1C3E564(&UnityEngine_Vector3_TypeInfo);
+    byte_4C52A7D = 1;
   }
   static_fields = UnityEngine_Vector3_TypeInfo->static_fields;
-  v16.fields.x = x + (float)(static_fields->downVector.fields.x * 50.0);
-  v16.fields.y = y + (float)(static_fields->downVector.fields.y * 50.0);
-  v16.fields.z = z + (float)(static_fields->downVector.fields.z * 50.0);
-  dragObject = (UnityEngine_GameObject_o *)TweenPosition__Begin(this->fields.dragObject, 0.2, v16, 0);
+  v17.fields.x = x + (float)(static_fields->downVector.fields.x * 50.0);
+  v17.fields.y = y + (float)(static_fields->downVector.fields.y * 50.0);
+  v17.fields.z = z + (float)(static_fields->downVector.fields.z * 50.0);
+  dragObject = (UnityEngine_GameObject_o *)TweenPosition__Begin(this->fields.dragObject, 0.2, v17, 0);
   if ( !dragObject )
 LABEL_10:
-    sub_1C372B4(dragObject);
-  v8 = dragObject;
+    sub_1C3E7C0(dragObject, v4);
+  v9 = dragObject;
   LODWORD(dragObject[1].monitor) = 3;
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
-  v8[3].monitor = gameObject;
-  sub_1C36FFC((CGThumbnailListItem_o *)&v8[3].monitor, (int32_t)gameObject, v10, v11);
-  v12 = StringLiteral_4326/*"CardDragDumpEnd"*/;
-  v8[3].fields.m_CachedPtr = StringLiteral_4326/*"CardDragDumpEnd"*/;
-  sub_1C36FFC((CGThumbnailListItem_o *)&v8[3].fields, v12, v13, v14);
+  v9[3].monitor = gameObject;
+  sub_1C3E508((CGThumbnailListItem_o *)&v9[3].monitor, (int32_t)gameObject, v11, v12);
+  v13 = StringLiteral_4326/*"CardDragDumpEnd"*/;
+  v9[3].fields.m_CachedPtr = StringLiteral_4326/*"CardDragDumpEnd"*/;
+  sub_1C3E508((CGThumbnailListItem_o *)&v9[3].fields, v13, v14, v15);
 }
 
 
@@ -160,52 +161,53 @@ void SampleCardUIDragDropListViewDrop__CardDragReturnEnd(
 {
   struct ListViewObject_o *mListViewObject; // x20
   __int64 v4; // x0
-  const MethodInfo *v5; // x2
+  __int64 v5; // x1
+  const MethodInfo *v6; // x2
   unsigned int naturalAligment; // w10
-  __int64 v7; // x12
+  __int64 v8; // x12
   Il2CppClass **typeHierarchy; // x11
-  __int64 v9; // x12
   __int64 v10; // x12
-  unsigned int v11; // w10
-  Il2CppClass **v12; // x11
-  __int64 v13; // x8
-  SampleCardListViewDropObject_o *v14; // x0
+  __int64 v11; // x12
+  unsigned int v12; // w10
+  Il2CppClass **v13; // x11
+  __int64 v14; // x8
+  SampleCardListViewDropObject_o *v15; // x0
 
-  if ( (byte_4C4077D & 1) == 0 )
+  if ( (byte_4C5451A & 1) == 0 )
   {
-    sub_1C37058(&ListViewDropObject_TypeInfo);
-    sub_1C37058(&SampleCardListViewDropObject_TypeInfo);
-    byte_4C4077D = 1;
+    sub_1C3E564(&ListViewDropObject_TypeInfo);
+    sub_1C3E564(&SampleCardListViewDropObject_TypeInfo);
+    byte_4C5451A = 1;
   }
   mListViewObject = this->fields.mListViewObject;
   UIDragDropListViewItem__OnDragDropRelease((UIDragDropListViewItem_o *)this, 0, 0);
   if ( !mListViewObject
     || (naturalAligment = mListViewObject->klass->_2.naturalAligment,
-        v7 = ListViewDropObject_TypeInfo->_2.naturalAligment,
-        naturalAligment < (unsigned int)v7)
+        v8 = ListViewDropObject_TypeInfo->_2.naturalAligment,
+        naturalAligment < (unsigned int)v8)
     || (typeHierarchy = mListViewObject->klass->_2.typeHierarchy,
-        typeHierarchy[v7 - 1] != (Il2CppClass *)ListViewDropObject_TypeInfo)
-    || (v9 = SampleCardListViewDropObject_TypeInfo->_2.naturalAligment, naturalAligment < (unsigned int)v9)
-    || typeHierarchy[v9 - 1] != (Il2CppClass *)SampleCardListViewDropObject_TypeInfo )
+        typeHierarchy[v8 - 1] != (Il2CppClass *)ListViewDropObject_TypeInfo)
+    || (v10 = SampleCardListViewDropObject_TypeInfo->_2.naturalAligment, naturalAligment < (unsigned int)v10)
+    || typeHierarchy[v10 - 1] != (Il2CppClass *)SampleCardListViewDropObject_TypeInfo )
   {
-    sub_1C372B4(v4);
+    sub_1C3E7C0(v4, v5);
   }
-  v10 = ListViewDropObject_TypeInfo->_2.naturalAligment;
-  v11 = mListViewObject->klass->_2.naturalAligment;
-  if ( v11 >= (unsigned int)v10
-    && (v12 = mListViewObject->klass->_2.typeHierarchy, v12[v10 - 1] == (Il2CppClass *)ListViewDropObject_TypeInfo)
-    && (v13 = SampleCardListViewDropObject_TypeInfo->_2.naturalAligment, v11 >= (unsigned int)v13) )
+  v11 = ListViewDropObject_TypeInfo->_2.naturalAligment;
+  v12 = mListViewObject->klass->_2.naturalAligment;
+  if ( v12 >= (unsigned int)v11
+    && (v13 = mListViewObject->klass->_2.typeHierarchy, v13[v11 - 1] == (Il2CppClass *)ListViewDropObject_TypeInfo)
+    && (v14 = SampleCardListViewDropObject_TypeInfo->_2.naturalAligment, v12 >= (unsigned int)v14) )
   {
-    if ( v12[v13 - 1] == (Il2CppClass *)SampleCardListViewDropObject_TypeInfo )
-      v14 = (SampleCardListViewDropObject_o *)mListViewObject;
+    if ( v13[v14 - 1] == (Il2CppClass *)SampleCardListViewDropObject_TypeInfo )
+      v15 = (SampleCardListViewDropObject_o *)mListViewObject;
     else
-      v14 = 0;
+      v15 = 0;
   }
   else
   {
-    v14 = 0;
+    v15 = 0;
   }
-  SampleCardListViewDropObject__Init_37635012(v14, 6, v5);
+  SampleCardListViewDropObject__Init_37679816(v15, 6, v6);
 }
 
 
@@ -235,12 +237,12 @@ void SampleCardUIDragDropListViewDrop__CardDragReturnStart(
   UnityEngine_Vector3_o position; // 0:s0.4,4:s1.4,8:s2.4
   UnityEngine_Vector3_o v22; // 0:s0.4,4:s1.4,8:s2.4 OVERLAPPED
 
-  if ( (byte_4C4077C & 1) == 0 )
+  if ( (byte_4C54519 & 1) == 0 )
   {
-    sub_1C37058(&ListViewDropObject_TypeInfo);
-    sub_1C37058(&SampleCardListViewDropObject_TypeInfo);
-    sub_1C37058(&StringLiteral_4327/*"CardDragReturnEnd"*/);
-    byte_4C4077C = 1;
+    sub_1C3E564(&ListViewDropObject_TypeInfo);
+    sub_1C3E564(&SampleCardListViewDropObject_TypeInfo);
+    sub_1C3E564(&StringLiteral_4327/*"CardDragReturnEnd"*/);
+    byte_4C54519 = 1;
   }
   mListViewObject = this->fields.mListViewObject;
   if ( mListViewObject
@@ -288,16 +290,16 @@ void SampleCardUIDragDropListViewDrop__CardDragReturnStart(
                                                     0)) == 0) )
   {
 LABEL_18:
-    sub_1C372B4(dragObject);
+    sub_1C3E7C0(dragObject, method);
   }
   v14 = dragObject;
   LODWORD(dragObject[1].monitor) = 3;
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
   v14[3].monitor = gameObject;
-  sub_1C36FFC((CGThumbnailListItem_o *)&v14[3].monitor, (int32_t)gameObject, v16, v17);
+  sub_1C3E508((CGThumbnailListItem_o *)&v14[3].monitor, (int32_t)gameObject, v16, v17);
   v18 = StringLiteral_4327/*"CardDragReturnEnd"*/;
   v14[3].fields.m_CachedPtr = StringLiteral_4327/*"CardDragReturnEnd"*/;
-  sub_1C36FFC((CGThumbnailListItem_o *)&v14[3].fields, v18, v19, v20);
+  sub_1C3E508((CGThumbnailListItem_o *)&v14[3].fields, v18, v19, v20);
 }
 
 
@@ -307,74 +309,75 @@ void SampleCardUIDragDropListViewDrop__CardDragSwapEnd(
 {
   struct ListViewObject_o *mListViewObject; // x20
   SampleCardListViewDropObject_o *klass; // x0
-  const MethodInfo *v5; // x2
+  __int64 v5; // x1
+  const MethodInfo *v6; // x2
   unsigned int naturalAligment; // w10
-  __int64 v7; // x12
+  __int64 v8; // x12
   Il2CppClass **typeHierarchy; // x11
-  __int64 v9; // x12
   __int64 v10; // x12
-  unsigned int v11; // w10
-  Il2CppClass **v12; // x11
-  __int64 v13; // x8
-  SampleCardListViewDropObject_o *v14; // x0
-  const MethodInfo *v15; // x2
+  __int64 v11; // x12
+  unsigned int v12; // w10
+  Il2CppClass **v13; // x11
+  __int64 v14; // x8
+  SampleCardListViewDropObject_o *v15; // x0
+  const MethodInfo *v16; // x2
   CGThumbnailListItem_o *p_dropObject; // x19
   struct SampleCardListViewDropObject_o *dropObject; // t1
-  const MethodInfo *v18; // x2
-  int32_t v19; // w2
-  const MethodInfo *v20; // x3
+  const MethodInfo *v19; // x2
+  int32_t v20; // w2
+  const MethodInfo *v21; // x3
 
-  if ( (byte_4C40782 & 1) == 0 )
+  if ( (byte_4C5451F & 1) == 0 )
   {
-    sub_1C37058(&ListViewDropObject_TypeInfo);
-    sub_1C37058(&SampleCardListViewDropObject_TypeInfo);
-    byte_4C40782 = 1;
+    sub_1C3E564(&ListViewDropObject_TypeInfo);
+    sub_1C3E564(&SampleCardListViewDropObject_TypeInfo);
+    byte_4C5451F = 1;
   }
   mListViewObject = this->fields.mListViewObject;
   UIDragDropListViewItem__OnDragDropRelease((UIDragDropListViewItem_o *)this, 0, 0);
   if ( !mListViewObject )
     goto LABEL_18;
   naturalAligment = mListViewObject->klass->_2.naturalAligment;
-  v7 = ListViewDropObject_TypeInfo->_2.naturalAligment;
-  if ( naturalAligment < (unsigned int)v7 )
+  v8 = ListViewDropObject_TypeInfo->_2.naturalAligment;
+  if ( naturalAligment < (unsigned int)v8 )
     goto LABEL_18;
   typeHierarchy = mListViewObject->klass->_2.typeHierarchy;
-  if ( typeHierarchy[v7 - 1] != (Il2CppClass *)ListViewDropObject_TypeInfo )
+  if ( typeHierarchy[v8 - 1] != (Il2CppClass *)ListViewDropObject_TypeInfo )
     goto LABEL_18;
-  v9 = SampleCardListViewDropObject_TypeInfo->_2.naturalAligment;
-  if ( naturalAligment < (unsigned int)v9
-    || typeHierarchy[v9 - 1] != (Il2CppClass *)SampleCardListViewDropObject_TypeInfo )
+  v10 = SampleCardListViewDropObject_TypeInfo->_2.naturalAligment;
+  if ( naturalAligment < (unsigned int)v10
+    || typeHierarchy[v10 - 1] != (Il2CppClass *)SampleCardListViewDropObject_TypeInfo )
   {
     goto LABEL_18;
   }
-  v10 = ListViewDropObject_TypeInfo->_2.naturalAligment;
-  v11 = mListViewObject->klass->_2.naturalAligment;
-  if ( v11 >= (unsigned int)v10
-    && (v12 = mListViewObject->klass->_2.typeHierarchy, v12[v10 - 1] == (Il2CppClass *)ListViewDropObject_TypeInfo)
-    && (v13 = SampleCardListViewDropObject_TypeInfo->_2.naturalAligment, v11 >= (unsigned int)v13) )
+  v11 = ListViewDropObject_TypeInfo->_2.naturalAligment;
+  v12 = mListViewObject->klass->_2.naturalAligment;
+  if ( v12 >= (unsigned int)v11
+    && (v13 = mListViewObject->klass->_2.typeHierarchy, v13[v11 - 1] == (Il2CppClass *)ListViewDropObject_TypeInfo)
+    && (v14 = SampleCardListViewDropObject_TypeInfo->_2.naturalAligment, v12 >= (unsigned int)v14) )
   {
-    v14 = v12[v13 - 1] == (Il2CppClass *)SampleCardListViewDropObject_TypeInfo
+    v15 = v13[v14 - 1] == (Il2CppClass *)SampleCardListViewDropObject_TypeInfo
         ? (SampleCardListViewDropObject_o *)mListViewObject
         : 0LL;
   }
   else
   {
-    v14 = 0;
+    v15 = 0;
   }
-  SampleCardListViewDropObject__Init_37635012(v14, 6, v5);
+  SampleCardListViewDropObject__Init_37679816(v15, 6, v6);
   dropObject = this->fields.dropObject;
   p_dropObject = (CGThumbnailListItem_o *)&this->fields.dropObject;
   klass = dropObject;
   if ( !dropObject
-    || (SampleCardListViewDropObject__Init_37635012(klass, 8, v15),
+    || (SampleCardListViewDropObject__Init_37679816(klass, 8, v16),
         (klass = (SampleCardListViewDropObject_o *)p_dropObject->klass) == 0) )
   {
 LABEL_18:
-    sub_1C372B4(klass);
+    sub_1C3E7C0(klass, v5);
   }
-  SampleCardListViewDropObject__Init_37635012(klass, 6, v18);
+  SampleCardListViewDropObject__Init_37679816(klass, 6, v19);
   p_dropObject->klass = 0;
-  sub_1C36FFC(p_dropObject, 0, v19, v20);
+  sub_1C3E508(p_dropObject, 0, v20, v21);
 }
 
 
@@ -388,19 +391,18 @@ void SampleCardUIDragDropListViewDrop__CardDragSwapMove(
   __int64 v5; // x11
   Il2CppClass **typeHierarchy; // x9
   __int64 v7; // x11
-  const MethodInfo *v8; // x1
-  SampleCardUIDragDropListViewDrop_o *v9; // x21
+  SampleCardUIDragDropListViewDrop_o *v8; // x21
   SampleCardListViewItem_o *Item; // x0
+  const MethodInfo *v10; // x2
   const MethodInfo *v11; // x2
-  const MethodInfo *v12; // x2
 
   v2 = this;
-  if ( (byte_4C40781 & 1) == 0 )
+  if ( (byte_4C5451E & 1) == 0 )
   {
-    sub_1C37058(&ListViewDropObject_TypeInfo);
-    sub_1C37058(&SampleCardListViewDropObject_TypeInfo);
-    this = (SampleCardUIDragDropListViewDrop_o *)sub_1C37058(&StringLiteral_4328/*"CardDragSwapEnd"*/);
-    byte_4C40781 = 1;
+    sub_1C3E564(&ListViewDropObject_TypeInfo);
+    sub_1C3E564(&SampleCardListViewDropObject_TypeInfo);
+    this = (SampleCardUIDragDropListViewDrop_o *)sub_1C3E564(&StringLiteral_4328/*"CardDragSwapEnd"*/);
+    byte_4C5451E = 1;
   }
   mListViewObject = (SampleCardListViewDropObject_o *)v2->fields.mListViewObject;
   if ( !mListViewObject )
@@ -422,25 +424,25 @@ void SampleCardUIDragDropListViewDrop__CardDragSwapMove(
                                                  method);
   if ( !v2->fields.dropObject )
     goto LABEL_13;
-  v9 = this;
-  Item = SampleCardListViewDropObject__GetItem(v2->fields.dropObject, v8);
+  v8 = this;
+  Item = SampleCardListViewDropObject__GetItem(v2->fields.dropObject, method);
   ((void (__fastcall *)(SampleCardListViewDropObject_o *, SampleCardListViewItem_o *, const MethodInfo *))mListViewObject->klass->vtable._5_SetItem.methodPtr)(
     mListViewObject,
     Item,
     mListViewObject->klass->vtable._5_SetItem.method);
-  SampleCardListViewDropObject__Init_37635012(mListViewObject, 2, v11);
-  if ( !v9
-    || (BYTE4(v9->fields.dragObject) = 1, (this = (SampleCardUIDragDropListViewDrop_o *)v2->fields.dropObject) == 0)
+  SampleCardListViewDropObject__Init_37679816(mListViewObject, 2, v10);
+  if ( !v8
+    || (BYTE4(v8->fields.dragObject) = 1, (this = (SampleCardUIDragDropListViewDrop_o *)v2->fields.dropObject) == 0)
     || (((void (__fastcall *)(SampleCardUIDragDropListViewDrop_o *, SampleCardUIDragDropListViewDrop_o *, const MethodInfo *))this->klass->vtable._5_SetBaseTransform.methodPtr)(
           this,
-          v9,
+          v8,
           this->klass->vtable._5_SetBaseTransform.method),
         (this = (SampleCardUIDragDropListViewDrop_o *)v2->fields.dropObject) == 0) )
   {
 LABEL_13:
-    sub_1C372B4(this);
+    sub_1C3E7C0(this, method);
   }
-  SampleCardListViewDropObject__Init_37635012((SampleCardListViewDropObject_o *)this, 2, v12);
+  SampleCardListViewDropObject__Init_37679816((SampleCardListViewDropObject_o *)this, 2, v11);
   UnityEngine_MonoBehaviour__Invoke((UnityEngine_MonoBehaviour_o *)v2, (System_String_o *)StringLiteral_4328/*"CardDragSwapEnd"*/, 0.05, 0);
 }
 
@@ -453,56 +455,57 @@ void SampleCardUIDragDropListViewDrop__CardDragSwapStart(
 {
   const MethodInfo *v3; // x3
   struct SampleCardListViewDropObject_o **p_dropObject; // x21
+  __int64 v7; // x1
   struct ListViewObject_o *mListViewObject; // x8
   unsigned int naturalAligment; // w9
-  __int64 v9; // x12
+  __int64 v10; // x12
   Il2CppClass **typeHierarchy; // x10
-  __int64 v11; // x12
-  UnityEngine_Component_o *v12; // x20
+  __int64 v12; // x12
+  UnityEngine_Component_o *v13; // x20
   UnityEngine_GameObject_o *dragObject; // x0
-  UnityEngine_Component_o *v14; // x8
-  UnityEngine_Transform_o *v15; // x21
+  UnityEngine_Component_o *v15; // x8
+  UnityEngine_Transform_o *v16; // x21
   float y; // s4
   float z; // s5
-  float v18; // s3
+  float v19; // s3
   SampleCardListViewDropObject_o *dropObject; // x21
-  System_Action_o *v20; // x22
-  const MethodInfo *v21; // x3
-  float v22; // s4
-  float v23; // s5
+  System_Action_o *v21; // x22
+  const MethodInfo *v22; // x3
+  float v23; // s4
+  float v24; // s5
   UnityEngine_Vector3_o position; // 0:s0.4,4:s1.4,8:s2.4
-  UnityEngine_Vector3_o v25; // 0:s0.4,4:s1.4,8:s2.4 OVERLAPPED
-  UnityEngine_Vector3_o v26; // 0:s0.4,4:s1.4,8:s2.4
-  UnityEngine_Vector3_o v27; // 0:s1.4,4:s2.4,8:s3.4
+  UnityEngine_Vector3_o v26; // 0:s0.4,4:s1.4,8:s2.4 OVERLAPPED
+  UnityEngine_Vector3_o v27; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o v28; // 0:s1.4,4:s2.4,8:s3.4
 
-  if ( (byte_4C40780 & 1) == 0 )
+  if ( (byte_4C5451D & 1) == 0 )
   {
-    sub_1C37058(&System_Action_TypeInfo);
-    sub_1C37058(&ListViewDropObject_TypeInfo);
-    sub_1C37058(&SampleCardListViewDropObject_TypeInfo);
-    sub_1C37058(&Method_SampleCardUIDragDropListViewDrop_CardDragSwapMove__);
-    byte_4C40780 = 1;
+    sub_1C3E564(&System_Action_TypeInfo);
+    sub_1C3E564(&ListViewDropObject_TypeInfo);
+    sub_1C3E564(&SampleCardListViewDropObject_TypeInfo);
+    sub_1C3E564(&Method_SampleCardUIDragDropListViewDrop_CardDragSwapMove__);
+    byte_4C5451D = 1;
   }
   this->fields.dropObject = ddo;
   p_dropObject = &this->fields.dropObject;
-  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.dropObject, (int32_t)ddo, (int32_t)method, v3);
+  sub_1C3E508((CGThumbnailListItem_o *)&this->fields.dropObject, (int32_t)ddo, (int32_t)method, v3);
   mListViewObject = this->fields.mListViewObject;
   if ( mListViewObject
     && (naturalAligment = mListViewObject->klass->_2.naturalAligment,
-        v9 = ListViewDropObject_TypeInfo->_2.naturalAligment,
-        naturalAligment >= (unsigned int)v9)
+        v10 = ListViewDropObject_TypeInfo->_2.naturalAligment,
+        naturalAligment >= (unsigned int)v10)
     && (typeHierarchy = mListViewObject->klass->_2.typeHierarchy,
-        typeHierarchy[v9 - 1] == (Il2CppClass *)ListViewDropObject_TypeInfo)
-    && (v11 = SampleCardListViewDropObject_TypeInfo->_2.naturalAligment, naturalAligment >= (unsigned int)v11) )
+        typeHierarchy[v10 - 1] == (Il2CppClass *)ListViewDropObject_TypeInfo)
+    && (v12 = SampleCardListViewDropObject_TypeInfo->_2.naturalAligment, naturalAligment >= (unsigned int)v12) )
   {
-    if ( typeHierarchy[v11 - 1] == (Il2CppClass *)SampleCardListViewDropObject_TypeInfo )
-      v12 = (UnityEngine_Component_o *)this->fields.mListViewObject;
+    if ( typeHierarchy[v12 - 1] == (Il2CppClass *)SampleCardListViewDropObject_TypeInfo )
+      v13 = (UnityEngine_Component_o *)this->fields.mListViewObject;
     else
-      v12 = 0;
+      v13 = 0;
   }
   else
   {
-    v12 = 0;
+    v13 = 0;
   }
   dragObject = this->fields.dragObject;
   if ( !dragObject )
@@ -511,45 +514,45 @@ void SampleCardUIDragDropListViewDrop__CardDragSwapStart(
   if ( !dragObject )
     goto LABEL_21;
   dragObject = (UnityEngine_GameObject_o *)UnityEngine_Transform__get_parent((UnityEngine_Transform_o *)dragObject, 0);
-  v14 = (UnityEngine_Component_o *)*p_dropObject;
+  v15 = (UnityEngine_Component_o *)*p_dropObject;
   if ( !*p_dropObject )
     goto LABEL_21;
-  v15 = (UnityEngine_Transform_o *)dragObject;
-  dragObject = (UnityEngine_GameObject_o *)UnityEngine_Component__get_transform(v14, 0);
+  v16 = (UnityEngine_Transform_o *)dragObject;
+  dragObject = (UnityEngine_GameObject_o *)UnityEngine_Component__get_transform(v15, 0);
   if ( !dragObject )
     goto LABEL_21;
   position = UnityEngine_Transform__get_position((UnityEngine_Transform_o *)dragObject, 0);
-  if ( !v15 )
+  if ( !v16 )
     goto LABEL_21;
-  v25 = UnityEngine_Transform__InverseTransformPoint(v15, position, 0);
-  y = v25.fields.y;
-  z = v25.fields.z;
-  v25.fields.y = v25.fields.x;
-  v25.fields.z = y;
-  v18 = z;
+  v26 = UnityEngine_Transform__InverseTransformPoint(v16, position, 0);
+  y = v26.fields.y;
+  z = v26.fields.z;
+  v26.fields.y = v26.fields.x;
+  v26.fields.z = y;
+  v19 = z;
   dragObject = (UnityEngine_GameObject_o *)TweenPosition__Begin(
                                              this->fields.dragObject,
                                              0.2,
-                                             *(UnityEngine_Vector3_o *)&v25.fields.y,
+                                             *(UnityEngine_Vector3_o *)&v26.fields.y,
                                              0);
   if ( !dragObject
     || (LODWORD(dragObject[1].monitor) = 3,
         dropObject = this->fields.dropObject,
-        v20 = (System_Action_o *)sub_1C372A4(System_Action_TypeInfo),
-        System_Action___ctor(v20, (Il2CppObject *)this, Method_SampleCardUIDragDropListViewDrop_CardDragSwapMove__, 0),
-        !v12)
-    || (dragObject = (UnityEngine_GameObject_o *)UnityEngine_Component__get_transform(v12, 0)) == 0
-    || (v26 = UnityEngine_Transform__get_position((UnityEngine_Transform_o *)dragObject, 0), !dropObject) )
+        v21 = (System_Action_o *)sub_1C3E7B0(System_Action_TypeInfo),
+        System_Action___ctor(v21, (Il2CppObject *)this, Method_SampleCardUIDragDropListViewDrop_CardDragSwapMove__, 0),
+        !v13)
+    || (dragObject = (UnityEngine_GameObject_o *)UnityEngine_Component__get_transform(v13, 0)) == 0
+    || (v27 = UnityEngine_Transform__get_position((UnityEngine_Transform_o *)dragObject, 0), !dropObject) )
   {
 LABEL_21:
-    sub_1C372B4(dragObject);
+    sub_1C3E7C0(dragObject, v7);
   }
-  v22 = v26.fields.y;
-  v23 = v26.fields.z;
-  v27.fields.x = v26.fields.x;
-  v27.fields.y = v22;
-  v27.fields.z = v23;
-  SampleCardListViewDropObject__Init(dropObject, 7, v20, 0.0, v27, v21);
+  v23 = v27.fields.y;
+  v24 = v27.fields.z;
+  v28.fields.x = v27.fields.x;
+  v28.fields.y = v23;
+  v28.fields.z = v24;
+  SampleCardListViewDropObject__Init(dropObject, 7, v21, 0.0, v28, v22);
 }
 
 
@@ -567,29 +570,27 @@ void SampleCardUIDragDropListViewDrop__OnDragDropRelease(
   struct ListViewManager_o *manager; // x8
   __int64 v11; // x11
   SampleCardUIDragDropListViewDrop_o *v12; // x22
-  const MethodInfo *v13; // x1
   UnityEngine_Object_o *Component_object; // x23
   UnityEngine_GameObject_o *gameObject; // x24
-  ListViewDropInfo_o *v16; // x25
-  SampleCardListViewManager_o *v17; // x0
-  const MethodInfo *v18; // x2
+  ListViewDropInfo_o *v15; // x25
+  SampleCardListViewManager_o *v16; // x0
+  const MethodInfo *v17; // x2
   UnityEngine_Object_o *monitor; // x23
-  const MethodInfo *v20; // x1
   SampleCardListViewItem_o *Item; // x0
+  const MethodInfo *v20; // x2
+  const MethodInfo *v21; // x2
   const MethodInfo *v22; // x2
-  const MethodInfo *v23; // x2
-  const MethodInfo *v24; // x2
 
   v4 = this;
-  if ( (byte_4C4077B & 1) == 0 )
+  if ( (byte_4C54518 & 1) == 0 )
   {
-    sub_1C37058(&Method_UnityEngine_GameObject_GetComponent_SampleCardUIDragDropListViewSurface___);
-    sub_1C37058(&ListViewDropInfo_TypeInfo);
-    sub_1C37058(&ListViewDropObject_TypeInfo);
-    sub_1C37058(&UnityEngine_Object_TypeInfo);
-    sub_1C37058(&SampleCardListViewDropObject_TypeInfo);
-    this = (SampleCardUIDragDropListViewDrop_o *)sub_1C37058(&SampleCardListViewManager_TypeInfo);
-    byte_4C4077B = 1;
+    sub_1C3E564(&Method_UnityEngine_GameObject_GetComponent_SampleCardUIDragDropListViewSurface___);
+    sub_1C3E564(&ListViewDropInfo_TypeInfo);
+    sub_1C3E564(&ListViewDropObject_TypeInfo);
+    sub_1C3E564(&UnityEngine_Object_TypeInfo);
+    sub_1C3E564(&SampleCardListViewDropObject_TypeInfo);
+    this = (SampleCardUIDragDropListViewDrop_o *)sub_1C3E564(&SampleCardListViewManager_TypeInfo);
+    byte_4C54518 = 1;
   }
   mListViewObject = (SampleCardListViewDropObject_o *)v4->fields.mListViewObject;
   if ( !mListViewObject )
@@ -632,18 +633,18 @@ void SampleCardUIDragDropListViewDrop__OnDragDropRelease(
     goto LABEL_31;
   Component_object = (UnityEngine_Object_o *)UnityEngine_GameObject__GetComponent_object_(
                                                surface,
-                                               (const MethodInfo_313F1D8 *)Method_UnityEngine_GameObject_GetComponent_SampleCardUIDragDropListViewSurface___);
+                                               (const MethodInfo_31510CC *)Method_UnityEngine_GameObject_GetComponent_SampleCardUIDragDropListViewSurface___);
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   if ( !UnityEngine_Object__op_Inequality(Component_object, 0, 0)
     || (gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)v4, 0),
-        v16 = (ListViewDropInfo_o *)sub_1C372A4(ListViewDropInfo_TypeInfo),
-        ListViewDropInfo___ctor(v16, gameObject, surface, 0),
-        this = (SampleCardUIDragDropListViewDrop_o *)SampleCardListViewManager__IsDropDropSurface(v17, v16, v18),
+        v15 = (ListViewDropInfo_o *)sub_1C3E7B0(ListViewDropInfo_TypeInfo),
+        ListViewDropInfo___ctor(v15, gameObject, surface, 0),
+        this = (SampleCardUIDragDropListViewDrop_o *)SampleCardListViewManager__IsDropDropSurface(v16, v15, v17),
         ((unsigned __int8)this & 1) == 0) )
   {
 LABEL_28:
-    SampleCardUIDragDropListViewDrop__CardDragReturnStart(v4, v13);
+    SampleCardUIDragDropListViewDrop__CardDragReturnStart(v4, (const MethodInfo *)surface);
     return;
   }
   if ( !Component_object )
@@ -654,24 +655,24 @@ LABEL_28:
   this = (SampleCardUIDragDropListViewDrop_o *)UnityEngine_Object__op_Inequality(monitor, 0, 0);
   if ( ((unsigned __int8)this & 1) == 0 )
   {
-    SampleCardUIDragDropListViewDrop__CardDragDumpStart(v4, v20);
+    SampleCardUIDragDropListViewDrop__CardDragDumpStart(v4, (const MethodInfo *)surface);
     return;
   }
   if ( !monitor )
 LABEL_31:
-    sub_1C372B4(this);
-  Item = SampleCardListViewDropObject__GetItem((SampleCardListViewDropObject_o *)monitor, v20);
+    sub_1C3E7C0(this, surface);
+  Item = SampleCardListViewDropObject__GetItem((SampleCardListViewDropObject_o *)monitor, (const MethodInfo *)surface);
   if ( Item )
   {
     if ( Item != (SampleCardListViewItem_o *)v12 )
     {
-      SampleCardUIDragDropListViewDrop__CardDragSwapStart(v4, (SampleCardListViewDropObject_o *)monitor, v22);
+      SampleCardUIDragDropListViewDrop__CardDragSwapStart(v4, (SampleCardListViewDropObject_o *)monitor, v20);
       return;
     }
     goto LABEL_28;
   }
   UIDragDropListViewItem__OnDragDropRelease((UIDragDropListViewItem_o *)v4, surface, 0);
-  SampleCardListViewDropObject__Init_37635012(mListViewObject, 0, v23);
+  SampleCardListViewDropObject__Init_37679816(mListViewObject, 0, v21);
   ((void (__fastcall *)(SampleCardListViewDropObject_o *, _QWORD, const MethodInfo *))mListViewObject->klass->vtable._5_SetItem.methodPtr)(
     mListViewObject,
     0,
@@ -681,7 +682,7 @@ LABEL_31:
     monitor,
     v12,
     monitor->klass[1]._1.namespaze);
-  SampleCardListViewDropObject__Init_37635012((SampleCardListViewDropObject_o *)monitor, 6, v24);
+  SampleCardListViewDropObject__Init_37679816((SampleCardListViewDropObject_o *)monitor, 6, v22);
 }
 
 
@@ -690,33 +691,34 @@ void SampleCardUIDragDropListViewDrop__OnDragDropStart(
         const MethodInfo *method)
 {
   struct ListViewManager_o *manager; // x0
-  const MethodInfo *v4; // x2
+  __int64 v4; // x1
+  const MethodInfo *v5; // x2
   SampleCardListViewDropObject_o *mListViewObject; // x19
   unsigned int naturalAligment; // w8
-  __int64 v7; // x11
+  __int64 v8; // x11
   Il2CppClass **typeHierarchy; // x9
-  __int64 v9; // x11
+  __int64 v10; // x11
 
-  if ( (byte_4C4077A & 1) == 0 )
+  if ( (byte_4C54517 & 1) == 0 )
   {
-    sub_1C37058(&ListViewDropObject_TypeInfo);
-    sub_1C37058(&SampleCardListViewDropObject_TypeInfo);
-    byte_4C4077A = 1;
+    sub_1C3E564(&ListViewDropObject_TypeInfo);
+    sub_1C3E564(&SampleCardListViewDropObject_TypeInfo);
+    byte_4C54517 = 1;
   }
   UIDragDropListViewItem__OnDragDropStart((UIDragDropListViewItem_o *)this, 0);
   mListViewObject = (SampleCardListViewDropObject_o *)this->fields.mListViewObject;
   if ( !mListViewObject
     || (naturalAligment = mListViewObject->klass->_2.naturalAligment,
-        v7 = ListViewDropObject_TypeInfo->_2.naturalAligment,
-        naturalAligment < (unsigned int)v7)
+        v8 = ListViewDropObject_TypeInfo->_2.naturalAligment,
+        naturalAligment < (unsigned int)v8)
     || (typeHierarchy = mListViewObject->klass->_2.typeHierarchy,
-        typeHierarchy[v7 - 1] != (Il2CppClass *)ListViewDropObject_TypeInfo)
-    || (v9 = SampleCardListViewDropObject_TypeInfo->_2.naturalAligment, naturalAligment < (unsigned int)v9)
-    || typeHierarchy[v9 - 1] != (Il2CppClass *)SampleCardListViewDropObject_TypeInfo
-    || (SampleCardListViewDropObject__Init_37635012(mListViewObject, 0, v4),
+        typeHierarchy[v8 - 1] != (Il2CppClass *)ListViewDropObject_TypeInfo)
+    || (v10 = SampleCardListViewDropObject_TypeInfo->_2.naturalAligment, naturalAligment < (unsigned int)v10)
+    || typeHierarchy[v10 - 1] != (Il2CppClass *)SampleCardListViewDropObject_TypeInfo
+    || (SampleCardListViewDropObject__Init_37679816(mListViewObject, 0, v5),
         (manager = mListViewObject->fields.manager) == 0) )
   {
-    sub_1C372B4(manager);
+    sub_1C3E7C0(manager, v4);
   }
   ((void (__fastcall *)(struct ListViewManager_o *, const MethodInfo *))manager->klass->vtable._8_ItemDragStart.methodPtr)(
     manager,

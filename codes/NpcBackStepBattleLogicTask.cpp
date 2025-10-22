@@ -6,10 +6,10 @@ void NpcBackStepBattleLogicTask___ctor(
 {
   const MethodInfo *v4; // x4
 
-  if ( (byte_4C4625D & 1) == 0 )
+  if ( (byte_4C5A052 & 1) == 0 )
   {
-    sub_1C37058(&StringLiteral_9343/*"NPC_BACKSTEP"*/);
-    byte_4C4625D = 1;
+    sub_1C3E564(&StringLiteral_9343/*"NPC_BACKSTEP"*/);
+    byte_4C5A052 = 1;
   }
   PlayFieldMotionNpcBattleLogicTask___ctor(
     (PlayFieldMotionNpcBattleLogicTask_o *)this,
@@ -30,10 +30,10 @@ bool NpcBackStepBattleLogicTask__IsMakeAble(
   BattleActorControl_o *AiNpcActor; // x19
 
   v4 = (PlayFieldMotionNpcBattleLogicTask_o *)this;
-  if ( (byte_4C4625E & 1) == 0 )
+  if ( (byte_4C5A053 & 1) == 0 )
   {
-    this = (NpcBackStepBattleLogicTask_o *)sub_1C37058(&UnityEngine_Object_TypeInfo);
-    byte_4C4625E = 1;
+    this = (NpcBackStepBattleLogicTask_o *)sub_1C3E564(&UnityEngine_Object_TypeInfo);
+    byte_4C5A053 = 1;
   }
   if ( !logic )
     goto LABEL_11;
@@ -50,7 +50,7 @@ bool NpcBackStepBattleLogicTask__IsMakeAble(
     if ( AiNpcActor )
       return AiNpcActor->fields._IsStepInBattle_k__BackingField;
 LABEL_11:
-    sub_1C372B4(this);
+    sub_1C3E7C0(this, logic);
   }
   return 0;
 }

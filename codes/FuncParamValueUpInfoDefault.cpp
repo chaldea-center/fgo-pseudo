@@ -1,32 +1,33 @@
 void FuncParamValueUpInfoDefault___cctor(const MethodInfo *method)
 {
   __int64 v1; // x0
-  int32_t v2; // w2
-  const MethodInfo *v3; // x3
+  __int64 v2; // x1
+  int32_t v3; // w2
+  const MethodInfo *v4; // x3
 
-  if ( (byte_4C45F17 & 1) == 0 )
+  if ( (byte_4C59CF4 & 1) == 0 )
   {
-    sub_1C37058(&FuncParamValueUpInfoDefault_TypeInfo);
-    sub_1C37058(&DataVals_TYPE___TypeInfo);
-    byte_4C45F17 = 1;
+    sub_1C3E564(&FuncParamValueUpInfoDefault_TypeInfo);
+    sub_1C3E564(&DataVals_TYPE___TypeInfo);
+    byte_4C59CF4 = 1;
   }
-  v1 = sub_1C37100(DataVals_TYPE___TypeInfo, 1);
+  v1 = sub_1C3E60C(DataVals_TYPE___TypeInfo, 1);
   if ( !v1 )
-    sub_1C372B4(0);
+    sub_1C3E7C0(0, v2);
   if ( !*(_DWORD *)(v1 + 24) )
-    sub_1C372BC(v1);
+    sub_1C3E7C8(v1, v1);
   *(_DWORD *)(v1 + 32) = 3;
   FuncParamValueUpInfoDefault_TypeInfo->static_fields->defaultValueUpValsTypes = (struct DataVals_TYPE_array *)v1;
-  sub_1C36FFC((CGThumbnailListItem_o *)FuncParamValueUpInfoDefault_TypeInfo->static_fields, v1, v2, v3);
+  sub_1C3E508((CGThumbnailListItem_o *)FuncParamValueUpInfoDefault_TypeInfo->static_fields, v1, v3, v4);
 }
 
 
 void FuncParamValueUpInfoDefault___ctor(FuncParamValueUpInfoDefault_o *this, const MethodInfo *method)
 {
-  if ( (byte_4C45F16 & 1) == 0 )
+  if ( (byte_4C59CF3 & 1) == 0 )
   {
-    sub_1C37058(&FuncParamValueUpInfoBase_TypeInfo);
-    byte_4C45F16 = 1;
+    sub_1C3E564(&FuncParamValueUpInfoBase_TypeInfo);
+    byte_4C59CF3 = 1;
   }
   if ( !FuncParamValueUpInfoBase_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(FuncParamValueUpInfoBase_TypeInfo);
@@ -54,11 +55,11 @@ FuncParamValueUpInfoDefault_o *FuncParamValueUpInfoDefault__Create(
   int32_t v17; // w2
   const MethodInfo *v18; // x3
 
-  if ( (byte_4C45F12 & 1) == 0 )
+  if ( (byte_4C59CEF & 1) == 0 )
   {
-    sub_1C37058(&Method_BasicHelper_IndexValue_int____78110424);
-    sub_1C37058(&FuncParamValueUpInfoDefault_TypeInfo);
-    byte_4C45F12 = 1;
+    sub_1C3E564(&Method_BasicHelper_IndexValue_int____78190416);
+    sub_1C3E564(&FuncParamValueUpInfoDefault_TypeInfo);
+    byte_4C59CEF = 1;
   }
   if ( !dataVals )
     return 0;
@@ -75,7 +76,7 @@ FuncParamValueUpInfoDefault_o *FuncParamValueUpInfoDefault__Create(
                 funcEnt->fields.vals,
                 0,
                 0,
-                (const MethodInfo_30D6114 *)Method_BasicHelper_IndexValue_int____78110424);
+                (const MethodInfo_30E7F2C *)Method_BasicHelper_IndexValue_int____78190416);
         if ( !FuncParamValueUpInfoDefault_TypeInfo->_2.cctor_finished )
           j_il2cpp_runtime_class_init_0(FuncParamValueUpInfoDefault_TypeInfo);
         IsIgnoreValueUpBuffType = FuncParamValueUpInfoDefault__IsIgnoreValueUpBuffType(v10, v9);
@@ -89,16 +90,16 @@ FuncParamValueUpInfoDefault_o *FuncParamValueUpInfoDefault__Create(
       }
       if ( isParam || IsIgnoreValueUpBuffType )
         return 0;
-      v5 = sub_1C372A4(FuncParamValueUpInfoDefault_TypeInfo);
+      v5 = sub_1C3E7B0(FuncParamValueUpInfoDefault_TypeInfo);
       FuncParamValueUpInfoDefault___ctor((FuncParamValueUpInfoDefault_o *)v5, v13);
       if ( !v5 )
-        sub_1C372B4(v14);
+        sub_1C3E7C0(v14, v15);
       *(_DWORD *)(v5 + 16) = valueUp;
       if ( !FuncParamValueUpInfoDefault_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(FuncParamValueUpInfoDefault_TypeInfo);
       ValueUpTypeArray = FuncParamValueUpInfoDefault__ExtractValueUpTypeArray(dataVals, v15);
       *(_QWORD *)(v5 + 24) = ValueUpTypeArray;
-      sub_1C36FFC((CGThumbnailListItem_o *)(v5 + 24), (int32_t)ValueUpTypeArray, v17, v18);
+      sub_1C3E508((CGThumbnailListItem_o *)(v5 + 24), (int32_t)ValueUpTypeArray, v17, v18);
     }
   }
   return (FuncParamValueUpInfoDefault_o *)v5;
@@ -117,22 +118,21 @@ DataVals_TYPE_array *FuncParamValueUpInfoDefault__ExtractValueUpTypeArray(
   void *monitor; // x8
   unsigned __int64 v8; // x22
   System_String_o *v9; // x21
-  int32_t v10; // w1
   struct System_Object_array *items; // x8
-  _QWORD *v12; // x9
+  _QWORD *v11; // x9
   __int64 size; // x10
   int32_t result; // [xsp+Ch] [xbp-44h] BYREF
 
   v2 = dataVals;
-  if ( (byte_4C45F13 & 1) == 0 )
+  if ( (byte_4C59CF0 & 1) == 0 )
   {
-    sub_1C37058(&Method_System_Enum_TryParse_DataVals_TYPE___);
-    sub_1C37058(&System_Enum_TypeInfo);
-    sub_1C37058(&Method_System_Collections_Generic_List_DataVals_TYPE__Add__);
-    sub_1C37058(&Method_System_Collections_Generic_List_DataVals_TYPE__ToArray__);
-    sub_1C37058(&Method_System_Collections_Generic_List_DataVals_TYPE___ctor__);
-    dataVals = (DataVals_o *)sub_1C37058(&System_Collections_Generic_List_DataVals_TYPE__TypeInfo);
-    byte_4C45F13 = 1;
+    sub_1C3E564(&Method_System_Enum_TryParse_DataVals_TYPE___);
+    sub_1C3E564(&System_Enum_TypeInfo);
+    sub_1C3E564(&Method_System_Collections_Generic_List_DataVals_TYPE__Add__);
+    sub_1C3E564(&Method_System_Collections_Generic_List_DataVals_TYPE__ToArray__);
+    sub_1C3E564(&Method_System_Collections_Generic_List_DataVals_TYPE___ctor__);
+    dataVals = (DataVals_o *)sub_1C3E564(&System_Collections_Generic_List_DataVals_TYPE__TypeInfo);
+    byte_4C59CF0 = 1;
   }
   result = 0;
   if ( !v2 )
@@ -142,10 +142,10 @@ DataVals_TYPE_array *FuncParamValueUpInfoDefault__ExtractValueUpTypeArray(
   v5 = 0;
   if ( IsNullOrEmpty )
     return v5;
-  v6 = (System_Collections_Generic_List_T__o *)sub_1C372A4(System_Collections_Generic_List_DataVals_TYPE__TypeInfo);
+  v6 = (System_Collections_Generic_List_T__o *)sub_1C3E7B0(System_Collections_Generic_List_DataVals_TYPE__TypeInfo);
   System_Collections_Generic_List_Int32Enum____ctor(
     v6,
-    (const MethodInfo_3787FD8 *)Method_System_Collections_Generic_List_DataVals_TYPE___ctor__);
+    (const MethodInfo_379A414 *)Method_System_Collections_Generic_List_DataVals_TYPE___ctor__);
   if ( !ParamAsStringArray )
     goto LABEL_21;
   monitor = ParamAsStringArray[1].monitor;
@@ -155,21 +155,21 @@ DataVals_TYPE_array *FuncParamValueUpInfoDefault__ExtractValueUpTypeArray(
     do
     {
       if ( v8 >= (unsigned int)monitor )
-        sub_1C372BC(dataVals);
+        sub_1C3E7C8(dataVals, method);
       v9 = (System_String_o *)*((_QWORD *)&ParamAsStringArray[2].klass + v8);
       if ( !System_Enum_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(System_Enum_TypeInfo);
       dataVals = (DataVals_o *)System_Enum__TryParse_Int32Enum_(
                                  v9,
                                  &result,
-                                 (const MethodInfo_30EE79C *)Method_System_Enum_TryParse_DataVals_TYPE___);
+                                 (const MethodInfo_31005B4 *)Method_System_Enum_TryParse_DataVals_TYPE___);
       if ( ((unsigned __int8)dataVals & 1) != 0 )
       {
         if ( !v6 )
           goto LABEL_21;
-        v10 = result;
+        method = (const MethodInfo *)(unsigned int)result;
         items = v6->fields._items;
-        v12 = Method_System_Collections_Generic_List_DataVals_TYPE__Add__;
+        v11 = Method_System_Collections_Generic_List_DataVals_TYPE__Add__;
         ++v6->fields._version;
         if ( !items )
           goto LABEL_21;
@@ -178,13 +178,13 @@ DataVals_TYPE_array *FuncParamValueUpInfoDefault__ExtractValueUpTypeArray(
         {
           System_Collections_Generic_List_Int32Enum___AddWithResize(
             v6,
-            v10,
-            *(const MethodInfo_378882C **)(*(_QWORD *)(v12[4] + 192LL) + 112LL));
+            (int32_t)method,
+            *(const MethodInfo_379AC68 **)(*(_QWORD *)(v11[4] + 192LL) + 112LL));
         }
         else
         {
           v6->fields._size = size + 1;
-          *((_DWORD *)items->m_Items + size) = v10;
+          *((_DWORD *)items->m_Items + size) = (_DWORD)method;
         }
       }
       LODWORD(monitor) = ParamAsStringArray[1].monitor;
@@ -193,42 +193,43 @@ DataVals_TYPE_array *FuncParamValueUpInfoDefault__ExtractValueUpTypeArray(
   }
   if ( !v6 )
 LABEL_21:
-    sub_1C372B4(dataVals);
+    sub_1C3E7C0(dataVals, method);
   return (DataVals_TYPE_array *)System_Collections_Generic_List_Int32Enum___ToArray(
                                   v6,
-                                  (const MethodInfo_378A2E4 *)Method_System_Collections_Generic_List_DataVals_TYPE__ToArray__);
+                                  (const MethodInfo_379C720 *)Method_System_Collections_Generic_List_DataVals_TYPE__ToArray__);
 }
 
 
 bool FuncParamValueUpInfoDefault__IsIgnoreValueUpBuffType(int32_t buffId, const MethodInfo *method)
 {
   Il2CppObject *Master_object; // x0
+  __int64 v4; // x1
   int32_t klass_high; // w19
-  Il2CppObject *v6; // [xsp+0h] [xbp-30h] BYREF
+  Il2CppObject *v7; // [xsp+0h] [xbp-30h] BYREF
   Il2CppObject *entity; // [xsp+8h] [xbp-28h] BYREF
 
-  if ( (byte_4C45F15 & 1) == 0 )
+  if ( (byte_4C59CF2 & 1) == 0 )
   {
-    sub_1C37058(&BuffList_TypeInfo);
-    sub_1C37058(&Method_DataManager_GetMaster_BuffMaster___);
-    sub_1C37058(&Method_DataManager_GetMaster_BuffTypeDetailMaster___);
-    sub_1C37058(&DataManager_TypeInfo);
-    sub_1C37058(&Method_DataMasterBase_BuffTypeDetailMaster__BuffTypeDetailEntity__int__TryGetEntity__);
-    sub_1C37058(&Method_DataMasterBase_BuffMaster__BuffEntity__int__TryGetEntity__);
-    byte_4C45F15 = 1;
+    sub_1C3E564(&BuffList_TypeInfo);
+    sub_1C3E564(&Method_DataManager_GetMaster_BuffMaster___);
+    sub_1C3E564(&Method_DataManager_GetMaster_BuffTypeDetailMaster___);
+    sub_1C3E564(&DataManager_TypeInfo);
+    sub_1C3E564(&Method_DataMasterBase_BuffTypeDetailMaster__BuffTypeDetailEntity__int__TryGetEntity__);
+    sub_1C3E564(&Method_DataMasterBase_BuffMaster__BuffEntity__int__TryGetEntity__);
+    byte_4C59CF2 = 1;
   }
-  v6 = 0;
+  v7 = 0;
   entity = 0;
   if ( !DataManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-  Master_object = DataManager__GetMaster_object_((const MethodInfo_30E7C04 *)Method_DataManager_GetMaster_BuffMaster___);
+  Master_object = DataManager__GetMaster_object_((const MethodInfo_30F9A1C *)Method_DataManager_GetMaster_BuffMaster___);
   if ( !Master_object )
     goto LABEL_21;
   Master_object = (Il2CppObject *)DataMasterBase_object__object__int___TryGetEntity(
                                     (DataMasterBase_TMaster__TEntity__PKType__o *)Master_object,
                                     &entity,
                                     buffId,
-                                    (const MethodInfo_33A10EC *)Method_DataMasterBase_BuffMaster__BuffEntity__int__TryGetEntity__);
+                                    (const MethodInfo_33B2FA4 *)Method_DataMasterBase_BuffMaster__BuffEntity__int__TryGetEntity__);
   if ( ((unsigned __int8)Master_object & 1) != 0 )
   {
     if ( entity )
@@ -240,22 +241,22 @@ bool FuncParamValueUpInfoDefault__IsIgnoreValueUpBuffType(int32_t buffId, const 
         return 1;
       if ( !DataManager_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-      Master_object = DataManager__GetMaster_object_((const MethodInfo_30E7C04 *)Method_DataManager_GetMaster_BuffTypeDetailMaster___);
+      Master_object = DataManager__GetMaster_object_((const MethodInfo_30F9A1C *)Method_DataManager_GetMaster_BuffTypeDetailMaster___);
       if ( entity && Master_object )
       {
         Master_object = (Il2CppObject *)DataMasterBase_object__object__int___TryGetEntity(
                                           (DataMasterBase_TMaster__TEntity__PKType__o *)Master_object,
-                                          &v6,
+                                          &v7,
                                           HIDWORD(entity[1].klass),
-                                          (const MethodInfo_33A10EC *)Method_DataMasterBase_BuffTypeDetailMaster__BuffTypeDetailEntity__int__TryGetEntity__);
+                                          (const MethodInfo_33B2FA4 *)Method_DataMasterBase_BuffTypeDetailMaster__BuffTypeDetailEntity__int__TryGetEntity__);
         if ( ((unsigned __int8)Master_object & 1) == 0 )
           return 0;
-        if ( v6 )
-          return LOBYTE(v6[2].klass) != 0;
+        if ( v7 )
+          return LOBYTE(v7[2].klass) != 0;
       }
     }
 LABEL_21:
-    sub_1C372B4(Master_object);
+    sub_1C3E7C0(Master_object, v4);
   }
   return 1;
 }
@@ -264,32 +265,33 @@ LABEL_21:
 bool FuncParamValueUpInfoDefault__IsIgnoreValueUpFuncType(int32_t funcType, const MethodInfo *method)
 {
   Il2CppObject *Master_object; // x0
+  __int64 v4; // x1
   Il2CppObject *entity; // [xsp+8h] [xbp-28h] BYREF
 
-  if ( (byte_4C45F14 & 1) == 0 )
+  if ( (byte_4C59CF1 & 1) == 0 )
   {
-    sub_1C37058(&Method_DataManager_GetMaster_FuncTypeDetailMaster___);
-    sub_1C37058(&DataManager_TypeInfo);
-    sub_1C37058(&Method_DataMasterBase_FuncTypeDetailMaster__FuncTypeDetailEntity__int__TryGetEntity__);
-    byte_4C45F14 = 1;
+    sub_1C3E564(&Method_DataManager_GetMaster_FuncTypeDetailMaster___);
+    sub_1C3E564(&DataManager_TypeInfo);
+    sub_1C3E564(&Method_DataMasterBase_FuncTypeDetailMaster__FuncTypeDetailEntity__int__TryGetEntity__);
+    byte_4C59CF1 = 1;
   }
   entity = 0;
   if ( !DataManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-  Master_object = DataManager__GetMaster_object_((const MethodInfo_30E7C04 *)Method_DataManager_GetMaster_FuncTypeDetailMaster___);
+  Master_object = DataManager__GetMaster_object_((const MethodInfo_30F9A1C *)Method_DataManager_GetMaster_FuncTypeDetailMaster___);
   if ( !Master_object )
     goto LABEL_11;
   Master_object = (Il2CppObject *)DataMasterBase_object__object__int___TryGetEntity(
                                     (DataMasterBase_TMaster__TEntity__PKType__o *)Master_object,
                                     &entity,
                                     funcType,
-                                    (const MethodInfo_33A10EC *)Method_DataMasterBase_FuncTypeDetailMaster__FuncTypeDetailEntity__int__TryGetEntity__);
+                                    (const MethodInfo_33B2FA4 *)Method_DataMasterBase_FuncTypeDetailMaster__FuncTypeDetailEntity__int__TryGetEntity__);
   if ( ((unsigned __int8)Master_object & 1) != 0 )
   {
     if ( entity )
       return BYTE4(entity[1].klass) != 0;
 LABEL_11:
-    sub_1C372B4(Master_object);
+    sub_1C3E7C0(Master_object, v4);
   }
   return 0;
 }
@@ -302,10 +304,10 @@ DataVals_TYPE_array *FuncParamValueUpInfoDefault__get_ValueUpTypeArray(
   DataVals_TYPE_array *result; // x0
   FuncParamValueUpInfoDefault_c *v4; // x0
 
-  if ( (byte_4C45F11 & 1) == 0 )
+  if ( (byte_4C59CEE & 1) == 0 )
   {
-    sub_1C37058(&FuncParamValueUpInfoDefault_TypeInfo);
-    byte_4C45F11 = 1;
+    sub_1C3E564(&FuncParamValueUpInfoDefault_TypeInfo);
+    byte_4C59CEE = 1;
   }
   result = this->fields.overwriteValueUpTypeArray;
   if ( !result )

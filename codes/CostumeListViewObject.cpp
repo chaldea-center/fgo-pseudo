@@ -1,9 +1,9 @@
 void CostumeListViewObject___ctor(CostumeListViewObject_o *this, const MethodInfo *method)
 {
-  if ( (byte_4C47153 & 1) == 0 )
+  if ( (byte_4C5AF4A & 1) == 0 )
   {
-    sub_1C37058(&ListViewObject_TypeInfo);
-    byte_4C47153 = 1;
+    sub_1C3E564(&ListViewObject_TypeInfo);
+    byte_4C5AF4A = 1;
   }
   if ( !ListViewObject_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(ListViewObject_TypeInfo);
@@ -13,25 +13,26 @@ void CostumeListViewObject___ctor(CostumeListViewObject_o *this, const MethodInf
 
 void CostumeListViewObject__Awake(CostumeListViewObject_o *this, const MethodInfo *method)
 {
+  __int64 v3; // x1
   UnityEngine_GameObject_o *dispObject; // x0
   Il2CppObject *Component_object; // x0
-  int32_t v5; // w2
-  const MethodInfo *v6; // x3
+  int32_t v6; // w2
+  const MethodInfo *v7; // x3
 
-  if ( (byte_4C4714C & 1) == 0 )
+  if ( (byte_4C5AF43 & 1) == 0 )
   {
-    sub_1C37058(&Method_UnityEngine_GameObject_GetComponent_CostumeListViewItemDraw___);
-    byte_4C4714C = 1;
+    sub_1C3E564(&Method_UnityEngine_GameObject_GetComponent_CostumeListViewItemDraw___);
+    byte_4C5AF43 = 1;
   }
   ListViewObject__Awake((ListViewObject_o *)this, 0);
   dispObject = this->fields.dispObject;
   if ( !dispObject )
-    sub_1C372B4(0);
+    sub_1C3E7C0(0, v3);
   Component_object = UnityEngine_GameObject__GetComponent_object_(
                        dispObject,
-                       (const MethodInfo_313F1D8 *)Method_UnityEngine_GameObject_GetComponent_CostumeListViewItemDraw___);
+                       (const MethodInfo_31510CC *)Method_UnityEngine_GameObject_GetComponent_CostumeListViewItemDraw___);
   this->fields.itemDraw = (struct CostumeListViewItemDraw_o *)Component_object;
-  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.itemDraw, (int32_t)Component_object, v5, v6);
+  sub_1C3E508((CGThumbnailListItem_o *)&this->fields.itemDraw, (int32_t)Component_object, v6, v7);
 }
 
 
@@ -40,10 +41,10 @@ CostumeListViewItem_o *CostumeListViewObject__GetItem(CostumeListViewObject_o *t
   struct ListViewItem_o *linkItem; // x8
   __int64 naturalAligment; // x11
 
-  if ( (byte_4C4714D & 1) == 0 )
+  if ( (byte_4C5AF44 & 1) == 0 )
   {
-    sub_1C37058(&CostumeListViewItem_TypeInfo);
-    byte_4C4714D = 1;
+    sub_1C3E564(&CostumeListViewItem_TypeInfo);
+    byte_4C5AF44 = 1;
   }
   linkItem = this->fields.linkItem;
   if ( !linkItem )
@@ -71,19 +72,20 @@ void CostumeListViewObject__Init(
   int32_t dispMode; // w22
   int32_t state; // w24
   UnityEngine_Transform_o *transform; // x0
+  __int64 v15; // x1
   CGThumbnailListItem_o *p_callbackFunc; // x21
-  int32_t v16; // w2
-  const MethodInfo *v17; // x3
-  const MethodInfo *v18; // x1
-  int32_t v19; // w2
-  const MethodInfo *v20; // x3
-  int32_t v21; // w8
+  int32_t v17; // w2
+  const MethodInfo *v18; // x3
+  const MethodInfo *v19; // x1
+  int32_t v20; // w2
+  const MethodInfo *v21; // x3
+  int32_t v22; // w8
   CGThumbnailListItem_c *klass; // x19
 
-  if ( (byte_4C4714F & 1) == 0 )
+  if ( (byte_4C5AF46 & 1) == 0 )
   {
-    sub_1C37058(&CostumeListViewItem_TypeInfo);
-    byte_4C4714F = 1;
+    sub_1C3E564(&CostumeListViewItem_TypeInfo);
+    byte_4C5AF46 = 1;
   }
   linkItem = this->fields.linkItem;
   if ( linkItem
@@ -111,25 +113,25 @@ void CostumeListViewObject__Init(
     || (UnityEngine_Transform__set_localPosition(transform, this->fields.basePosition, 0),
         (transform = UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0)) == 0) )
   {
-    sub_1C372B4(transform);
+    sub_1C3E7C0(transform, v15);
   }
   UnityEngine_Transform__set_localScale(transform, this->fields.baseScale, 0);
   this->fields.callbackFunc = callbackFunc;
   p_callbackFunc = (CGThumbnailListItem_o *)&this->fields.callbackFunc;
-  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.callbackFunc, (int32_t)callbackFunc, v16, v17);
+  sub_1C3E508((CGThumbnailListItem_o *)&this->fields.callbackFunc, (int32_t)callbackFunc, v17, v18);
   if ( (unsigned int)v11 <= 3 )
   {
-    v21 = *((_DWORD *)&xmmword_C0ED70 + v11);
-    this->fields.state = dword_C0E780[v11];
-    this->fields.dispMode = v21;
+    v22 = *((_DWORD *)&xmmword_C123E0 + v11);
+    this->fields.state = dword_C11DF0[v11];
+    this->fields.dispMode = v22;
   }
   if ( !state || dispMode != this->fields.dispMode )
-    CostumeListViewObject__SetupDisp(this, v18);
+    CostumeListViewObject__SetupDisp(this, v19);
   klass = p_callbackFunc->klass;
   if ( p_callbackFunc->klass )
   {
     p_callbackFunc->klass = 0;
-    sub_1C36FFC(p_callbackFunc, 0, v19, v20);
+    sub_1C3E508(p_callbackFunc, 0, v20, v21);
     ((void (__fastcall *)(Il2CppClass *, _QWORD))klass->_1.namespaze)(
       klass->_1.element_class,
       *(_QWORD *)&klass->_1.byval_arg.bits);
@@ -144,23 +146,23 @@ void CostumeListViewObject__InitItem(CostumeListViewObject_o *this, const Method
 
 
 // local variable allocation has failed, the output may be wrong!
-void CostumeListViewObject__Init_48773720(CostumeListViewObject_o *this, int32_t initMode, const MethodInfo *method)
+void CostumeListViewObject__Init_48846960(CostumeListViewObject_o *this, int32_t initMode, const MethodInfo *method)
 {
   const MethodInfo *v3; // x3
   float v4; // s0
   int v5; // s1 OVERLAPPED
 
-  if ( !byte_4C3C921 )
+  if ( !byte_4C506A1 )
   {
-    sub_1C37058(&UnityEngine_Vector3_TypeInfo);
-    byte_4C3C921 = 1;
+    sub_1C3E564(&UnityEngine_Vector3_TypeInfo);
+    byte_4C506A1 = 1;
   }
   CostumeListViewObject__Init(this, initMode, 0, v4, *(UnityEngine_Vector3_o *)&v5, v3);
 }
 
 
 // local variable allocation has failed, the output may be wrong!
-void CostumeListViewObject__Init_48774316(
+void CostumeListViewObject__Init_48847556(
         CostumeListViewObject_o *this,
         int32_t initMode,
         System_Action_o *callbackFunc,
@@ -169,17 +171,17 @@ void CostumeListViewObject__Init_48774316(
   float v4; // s0
   int v5; // s1 OVERLAPPED
 
-  if ( !byte_4C3C921 )
+  if ( !byte_4C506A1 )
   {
-    sub_1C37058(&UnityEngine_Vector3_TypeInfo);
-    byte_4C3C921 = 1;
+    sub_1C3E564(&UnityEngine_Vector3_TypeInfo);
+    byte_4C506A1 = 1;
   }
   CostumeListViewObject__Init(this, initMode, callbackFunc, v4, *(UnityEngine_Vector3_o *)&v5, method);
 }
 
 
 // local variable allocation has failed, the output may be wrong!
-void CostumeListViewObject__Init_48776304(
+void CostumeListViewObject__Init_48849544(
         CostumeListViewObject_o *this,
         int32_t initMode,
         System_Action_o *callbackFunc,
@@ -188,10 +190,10 @@ void CostumeListViewObject__Init_48776304(
 {
   int v5; // s1 OVERLAPPED
 
-  if ( !byte_4C3C921 )
+  if ( !byte_4C506A1 )
   {
-    sub_1C37058(&UnityEngine_Vector3_TypeInfo);
-    byte_4C3C921 = 1;
+    sub_1C3E564(&UnityEngine_Vector3_TypeInfo);
+    byte_4C506A1 = 1;
   }
   CostumeListViewObject__Init(this, initMode, callbackFunc, delay, *(UnityEngine_Vector3_o *)&v5, method);
 }
@@ -206,12 +208,12 @@ void CostumeListViewObject__OnClickSelect(CostumeListViewObject_o *this, const M
   System_Reflection_MethodBase_o *v6; // x0
 
   v2 = this;
-  if ( (byte_4C47152 & 1) == 0 )
+  if ( (byte_4C5AF49 & 1) == 0 )
   {
-    sub_1C37058(&CostumeListViewItem_TypeInfo);
-    sub_1C37058(&Method_CostumeListViewObject_OnClickSelect__);
-    this = (CostumeListViewObject_o *)sub_1C37058(&StringLiteral_9868/*"OnClickSelectListView"*/);
-    byte_4C47152 = 1;
+    sub_1C3E564(&CostumeListViewItem_TypeInfo);
+    sub_1C3E564(&Method_CostumeListViewObject_OnClickSelect__);
+    this = (CostumeListViewObject_o *)sub_1C3E564(&StringLiteral_9868/*"OnClickSelectListView"*/);
+    byte_4C5AF49 = 1;
   }
   linkItem = v2->fields.linkItem;
   if ( linkItem )
@@ -224,8 +226,8 @@ void CostumeListViewObject__OnClickSelect(CostumeListViewObject_o *this, const M
       {
         v5 = Method_CostumeListViewObject_OnClickSelect__;
         if ( (*((_BYTE *)Method_CostumeListViewObject_OnClickSelect__ + 83) & 2) != 0 )
-          v5 = (_QWORD *)sub_1C37070(Method_CostumeListViewObject_OnClickSelect__);
-        v6 = (System_Reflection_MethodBase_o *)sub_1C3703C(v5, v5[4]);
+          v5 = (_QWORD *)sub_1C3E57C(Method_CostumeListViewObject_OnClickSelect__);
+        v6 = (System_Reflection_MethodBase_o *)sub_1C3E548(v5, v5[4]);
         OverwriteAssetSoundName__PlaySystemSe(v6, 2, 0, 0);
         return;
       }
@@ -240,7 +242,7 @@ void CostumeListViewObject__OnClickSelect(CostumeListViewObject_o *this, const M
         return;
       }
     }
-    sub_1C372B4(this);
+    sub_1C3E7C0(this, method);
   }
 }
 
@@ -254,11 +256,11 @@ void CostumeListViewObject__SetInput(CostumeListViewObject_o *this, bool isInput
   struct ListViewItem_o *v9; // x1
   CostumeListViewItemDraw_o *v10; // x0
 
-  if ( (byte_4C4714E & 1) == 0 )
+  if ( (byte_4C5AF45 & 1) == 0 )
   {
-    sub_1C37058(&CostumeListViewItem_TypeInfo);
-    sub_1C37058(&UnityEngine_Object_TypeInfo);
-    byte_4C4714E = 1;
+    sub_1C3E564(&CostumeListViewItem_TypeInfo);
+    sub_1C3E564(&UnityEngine_Object_TypeInfo);
+    byte_4C5AF45 = 1;
   }
   ListViewObject__SetInput((ListViewObject_o *)this, isInput, 0);
   itemDraw = (UnityEngine_Object_o *)this->fields.itemDraw;
@@ -282,7 +284,7 @@ void CostumeListViewObject__SetInput(CostumeListViewObject_o *this, bool isInput
     }
     v10 = this->fields.itemDraw;
     if ( !v10 )
-      sub_1C372B4(0);
+      sub_1C3E7C0(0, v9);
     CostumeListViewItemDraw__SetInput(v10, (CostumeListViewItem_o *)v9, v6);
   }
 }
@@ -294,12 +296,12 @@ void CostumeListViewObject__SetItem(
         ListViewItemSeed_o *seed,
         const MethodInfo *method)
 {
-  ListViewObject__SetItem_43831492((ListViewObject_o *)this, item, seed, 0);
+  ListViewObject__SetItem_43886976((ListViewObject_o *)this, item, seed, 0);
   this->fields.state = 0;
 }
 
 
-void CostumeListViewObject__SetItem_48775392(
+void CostumeListViewObject__SetItem_48848632(
         CostumeListViewObject_o *this,
         ListViewItem_o *item,
         const MethodInfo *method)
@@ -315,14 +317,15 @@ void CostumeListViewObject__SetupDisp(CostumeListViewObject_o *this, const Metho
   __int64 naturalAligment; // x10
   bool v5; // w1
   UnityEngine_Object_o *itemDraw; // x21
-  const MethodInfo *v7; // x3
-  CostumeListViewItemDraw_o *v8; // x0
+  __int64 v7; // x1
+  const MethodInfo *v8; // x3
+  CostumeListViewItemDraw_o *v9; // x0
 
-  if ( (byte_4C47150 & 1) == 0 )
+  if ( (byte_4C5AF47 & 1) == 0 )
   {
-    sub_1C37058(&CostumeListViewItem_TypeInfo);
-    sub_1C37058(&UnityEngine_Object_TypeInfo);
-    byte_4C47150 = 1;
+    sub_1C3E564(&CostumeListViewItem_TypeInfo);
+    sub_1C3E564(&UnityEngine_Object_TypeInfo);
+    byte_4C5AF47 = 1;
   }
   linkItem = this->fields.linkItem;
   if ( !linkItem )
@@ -344,10 +347,10 @@ LABEL_8:
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   if ( UnityEngine_Object__op_Inequality(itemDraw, 0, 0) )
   {
-    v8 = this->fields.itemDraw;
-    if ( !v8 )
-      sub_1C372B4(0);
-    CostumeListViewItemDraw__SetItem(v8, (CostumeListViewItem_o *)linkItem, this->fields.dispMode, v7);
+    v9 = this->fields.itemDraw;
+    if ( !v9 )
+      sub_1C3E7C0(0, v7);
+    CostumeListViewItemDraw__SetItem(v9, (CostumeListViewItem_o *)linkItem, this->fields.dispMode, v8);
   }
 }
 
@@ -363,11 +366,11 @@ System_String_o *CostumeListViewObject__ToString(CostumeListViewObject_o *this, 
   __int64 v10; // [xsp+20h] [xbp-40h] BYREF
   float v11; // [xsp+28h] [xbp-38h]
 
-  if ( (byte_4C47151 & 1) == 0 )
+  if ( (byte_4C5AF48 & 1) == 0 )
   {
-    sub_1C37058(&CostumeListViewItemDraw_DispMode_TypeInfo);
-    sub_1C37058(&StringLiteral_113/*" "*/);
-    byte_4C47151 = 1;
+    sub_1C3E564(&CostumeListViewItemDraw_DispMode_TypeInfo);
+    sub_1C3E564(&StringLiteral_113/*" "*/);
+    byte_4C5AF48 = 1;
   }
   v11 = 0.0;
   v10 = 0;
@@ -379,8 +382,8 @@ System_String_o *CostumeListViewObject__ToString(CostumeListViewObject_o *this, 
   v5 = v3;
   v10 = *(_QWORD *)&this->fields.basePosition.fields.x;
   v11 = z;
-  v6 = (System_String_o *)sub_1DF5F08(&v10, 0, 0, 0);
-  return System_String__Concat_63599904(v5, (System_String_o *)StringLiteral_113/*" "*/, v6, 0);
+  v6 = (System_String_o *)sub_1DFD43C(&v10, 0, 0, 0);
+  return System_String__Concat_63674716(v5, (System_String_o *)StringLiteral_113/*" "*/, v6, 0);
 }
 
 
@@ -399,10 +402,10 @@ void CostumeListViewObject__add_callbackFunc(
   System_Action_o *v12; // x1
   const MethodInfo *v13; // x2
 
-  if ( (byte_4C4714A & 1) == 0 )
+  if ( (byte_4C5AF41 & 1) == 0 )
   {
-    sub_1C37058(&System_Action_TypeInfo);
-    byte_4C4714A = 1;
+    sub_1C3E564(&System_Action_TypeInfo);
+    byte_4C5AF41 = 1;
   }
   callbackFunc = this->fields.callbackFunc;
   p_callbackFunc = &this->fields.callbackFunc;
@@ -415,13 +418,13 @@ void CostumeListViewObject__add_callbackFunc(
       if ( (System_Action_c *)v8->klass != System_Action_TypeInfo )
         break;
     }
-    v9 = sub_1C712B0(p_callbackFunc, v8, v6);
+    v9 = sub_1C787BC(p_callbackFunc, v8, v6);
     v10 = v6 == (System_Delegate_o *)v9;
     v6 = (System_Delegate_o *)v9;
     if ( v10 )
       return;
   }
-  sub_1C37574(v8);
+  sub_1C3EA80(v8);
   CostumeListViewObject__remove_callbackFunc(v11, v12, v13);
 }
 
@@ -440,10 +443,10 @@ void CostumeListViewObject__remove_callbackFunc(
   CostumeListViewObject_o *v11; // x0
   const MethodInfo *v12; // x1
 
-  if ( (byte_4C4714B & 1) == 0 )
+  if ( (byte_4C5AF42 & 1) == 0 )
   {
-    sub_1C37058(&System_Action_TypeInfo);
-    byte_4C4714B = 1;
+    sub_1C3E564(&System_Action_TypeInfo);
+    byte_4C5AF42 = 1;
   }
   callbackFunc = this->fields.callbackFunc;
   p_callbackFunc = &this->fields.callbackFunc;
@@ -456,12 +459,12 @@ void CostumeListViewObject__remove_callbackFunc(
       if ( (System_Action_c *)v8->klass != System_Action_TypeInfo )
         break;
     }
-    v9 = sub_1C712B0(p_callbackFunc, v8, v6);
+    v9 = sub_1C787BC(p_callbackFunc, v8, v6);
     v10 = v6 == (System_Delegate_o *)v9;
     v6 = (System_Delegate_o *)v9;
     if ( v10 )
       return;
   }
-  sub_1C37574(v8);
+  sub_1C3EA80(v8);
   CostumeListViewObject__Awake(v11, v12);
 }

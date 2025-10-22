@@ -8,28 +8,29 @@ WarBoardUserWallData_o *WarBoardUserWallData__FromJson(System_String_o *json, co
 {
   Il2CppObject *v3; // x19
   WarBoardUserWallData_o *result; // x0
-  __int64 v5; // x8
+  __int64 v5; // x1
+  __int64 v6; // x8
 
-  if ( (byte_4C40B81 & 1) == 0 )
+  if ( (byte_4C5491E & 1) == 0 )
   {
-    sub_1C37058(&Method_JsonManager_DeserializeArray_WarBoardUserWallData___);
-    sub_1C37058(&JsonManager_TypeInfo);
-    sub_1C37058(&StringLiteral_16016/*"[{0}]"*/);
-    byte_4C40B81 = 1;
+    sub_1C3E564(&Method_JsonManager_DeserializeArray_WarBoardUserWallData___);
+    sub_1C3E564(&JsonManager_TypeInfo);
+    sub_1C3E564(&StringLiteral_16026/*"[{0}]"*/);
+    byte_4C5491E = 1;
   }
-  v3 = (Il2CppObject *)System_String__Format((System_String_o *)StringLiteral_16016/*"[{0}]"*/, (Il2CppObject *)json, 0);
+  v3 = (Il2CppObject *)System_String__Format((System_String_o *)StringLiteral_16026/*"[{0}]"*/, (Il2CppObject *)json, 0);
   if ( !JsonManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(JsonManager_TypeInfo);
   result = (WarBoardUserWallData_o *)JsonManager__DeserializeArray_object_(
                                        v3,
-                                       (const MethodInfo_31570C4 *)Method_JsonManager_DeserializeArray_WarBoardUserWallData___);
+                                       (const MethodInfo_3168FB8 *)Method_JsonManager_DeserializeArray_WarBoardUserWallData___);
   if ( result )
   {
-    v5 = *(_QWORD *)&result->fields.squareIndex;
-    if ( v5 )
+    v6 = *(_QWORD *)&result->fields.squareIndex;
+    if ( v6 )
     {
-      if ( !(_DWORD)v5 )
-        sub_1C372BC(result);
+      if ( !(_DWORD)v6 )
+        sub_1C3E7C8(result, v5);
       return (WarBoardUserWallData_o *)result[1].klass;
     }
     else
@@ -49,7 +50,7 @@ void WarBoardUserWallData__SetSaveData(
   int breakPoint; // w8
 
   if ( !saveData )
-    sub_1C372B4(this);
+    sub_1C3E7C0(this, 0);
   breakPoint = saveData->fields.breakPoint;
   this->fields.defeatPoint = breakPoint;
   if ( breakPoint >= 1 )
@@ -59,10 +60,10 @@ void WarBoardUserWallData__SetSaveData(
 
 System_String_o *WarBoardUserWallData__ToJson(WarBoardUserWallData_o *this, const MethodInfo *method)
 {
-  if ( (byte_4C40B80 & 1) == 0 )
+  if ( (byte_4C5491D & 1) == 0 )
   {
-    sub_1C37058(&JsonManager_TypeInfo);
-    byte_4C40B80 = 1;
+    sub_1C3E564(&JsonManager_TypeInfo);
+    byte_4C5491D = 1;
   }
   if ( !JsonManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(JsonManager_TypeInfo);

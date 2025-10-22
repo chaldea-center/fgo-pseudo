@@ -7,14 +7,14 @@ void ServantEquipCombineRequest__beginRequest(
   const MethodInfo *v7; // x3
   const MethodInfo *v8; // x1
 
-  if ( (byte_4C44B90 & 1) == 0 )
+  if ( (byte_4C5895C & 1) == 0 )
   {
-    sub_1C37058(&StringLiteral_17049/*"baseUserSvtId"*/);
-    sub_1C37058(&StringLiteral_21485/*"materialUserSvtIds"*/);
-    byte_4C44B90 = 1;
+    sub_1C3E564(&StringLiteral_17065/*"baseUserSvtId"*/);
+    sub_1C3E564(&StringLiteral_21503/*"materialUserSvtIds"*/);
+    byte_4C5895C = 1;
   }
-  RequestBase__addField_44246844((RequestBase_o *)this, (System_String_o *)StringLiteral_17049/*"baseUserSvtId"*/, baseUsrSvtId, method);
-  RequestBase__addField_44247300((RequestBase_o *)this, (System_String_o *)StringLiteral_21485/*"materialUserSvtIds"*/, materialSvtIds, v7);
+  RequestBase__addField_44302376((RequestBase_o *)this, (System_String_o *)StringLiteral_17065/*"baseUserSvtId"*/, baseUsrSvtId, method);
+  RequestBase__addField_44302832((RequestBase_o *)this, (System_String_o *)StringLiteral_21503/*"materialUserSvtIds"*/, materialSvtIds, v7);
   RequestBase__beginRequest((RequestBase_o *)this, v8);
 }
 
@@ -23,16 +23,16 @@ System_String_o *ServantEquipCombineRequest__getURL(ServantEquipCombineRequest_o
 {
   System_String_o *BaseUrl; // x0
 
-  if ( (byte_4C44B8F & 1) == 0 )
+  if ( (byte_4C5895B & 1) == 0 )
   {
-    sub_1C37058(&NetworkManager_TypeInfo);
-    sub_1C37058(&StringLiteral_23866/*"svtEquip/combine"*/);
-    byte_4C44B8F = 1;
+    sub_1C3E564(&NetworkManager_TypeInfo);
+    sub_1C3E564(&StringLiteral_23886/*"svtEquip/combine"*/);
+    byte_4C5895B = 1;
   }
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
   BaseUrl = NetworkManager__getBaseUrl(1, 0);
-  return System_String__Concat_63561656(BaseUrl, (System_String_o *)StringLiteral_23866/*"svtEquip/combine"*/, 0);
+  return System_String__Concat_63636468(BaseUrl, (System_String_o *)StringLiteral_23886/*"svtEquip/combine"*/, 0);
 }
 
 
@@ -49,12 +49,12 @@ void ServantEquipCombineRequest__requestCompleted(
   struct NetworkManager_ResultCallbackFunc_o *CallBack; // x8
   struct NetworkManager_ResultCallbackFunc_o *v11; // x8
 
-  if ( (byte_4C44B91 & 1) == 0 )
+  if ( (byte_4C5895D & 1) == 0 )
   {
-    sub_1C37058(&JsonManager_TypeInfo);
-    sub_1C37058(&ResponseCommandKind_TypeInfo);
-    sub_1C37058(&StringLiteral_22215/*"ng"*/);
-    byte_4C44B91 = 1;
+    sub_1C3E564(&JsonManager_TypeInfo);
+    sub_1C3E564(&ResponseCommandKind_TypeInfo);
+    sub_1C3E564(&StringLiteral_22233/*"ng"*/);
+    byte_4C5895D = 1;
   }
   if ( !ResponseCommandKind_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(ResponseCommandKind_TypeInfo);
@@ -79,7 +79,7 @@ void ServantEquipCombineRequest__requestCompleted(
     if ( v11 )
       ((void (__fastcall *)(intptr_t, __int64, intptr_t))v11->fields.invoke_impl)(
         v11->fields.method_code,
-        StringLiteral_22215/*"ng"*/,
+        StringLiteral_22233/*"ng"*/,
         v11->fields.method);
   }
 }

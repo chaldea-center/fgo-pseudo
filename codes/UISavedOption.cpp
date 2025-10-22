@@ -16,28 +16,28 @@ void UISavedOption__Awake(UISavedOption_o *this, const MethodInfo *method)
   int32_t v10; // w2
   const MethodInfo *v11; // x3
 
-  if ( (byte_4C4761C & 1) == 0 )
+  if ( (byte_4C5B413 & 1) == 0 )
   {
-    sub_1C37058(&Method_UnityEngine_Component_GetComponent_UIPopupList___);
-    sub_1C37058(&Method_UnityEngine_Component_GetComponent_UIProgressBar___);
-    sub_1C37058(&Method_UnityEngine_Component_GetComponent_UIToggle___);
-    byte_4C4761C = 1;
+    sub_1C3E564(&Method_UnityEngine_Component_GetComponent_UIPopupList___);
+    sub_1C3E564(&Method_UnityEngine_Component_GetComponent_UIProgressBar___);
+    sub_1C3E564(&Method_UnityEngine_Component_GetComponent_UIToggle___);
+    byte_4C5B413 = 1;
   }
   Component_object = UnityEngine_Component__GetComponent_object_(
                        (UnityEngine_Component_o *)this,
-                       (const MethodInfo_30DE428 *)Method_UnityEngine_Component_GetComponent_UIPopupList___);
+                       (const MethodInfo_30F0240 *)Method_UnityEngine_Component_GetComponent_UIPopupList___);
   this->fields.mList = (struct UIPopupList_o *)Component_object;
-  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.mList, (int32_t)Component_object, v4, v5);
+  sub_1C3E508((CGThumbnailListItem_o *)&this->fields.mList, (int32_t)Component_object, v4, v5);
   v6 = UnityEngine_Component__GetComponent_object_(
          (UnityEngine_Component_o *)this,
-         (const MethodInfo_30DE428 *)Method_UnityEngine_Component_GetComponent_UIToggle___);
+         (const MethodInfo_30F0240 *)Method_UnityEngine_Component_GetComponent_UIToggle___);
   this->fields.mCheck = (struct UIToggle_o *)v6;
-  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.mCheck, (int32_t)v6, v7, v8);
+  sub_1C3E508((CGThumbnailListItem_o *)&this->fields.mCheck, (int32_t)v6, v7, v8);
   v9 = UnityEngine_Component__GetComponent_object_(
          (UnityEngine_Component_o *)this,
-         (const MethodInfo_30DE428 *)Method_UnityEngine_Component_GetComponent_UIProgressBar___);
+         (const MethodInfo_30F0240 *)Method_UnityEngine_Component_GetComponent_UIProgressBar___);
   this->fields.mSlider = (struct UIProgressBar_o *)v9;
-  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.mSlider, (int32_t)v9, v10, v11);
+  sub_1C3E508((CGThumbnailListItem_o *)&this->fields.mSlider, (int32_t)v9, v10, v11);
 }
 
 
@@ -45,18 +45,18 @@ void UISavedOption__OnDisable(UISavedOption_o *this, const MethodInfo *method)
 {
   UnityEngine_Object_o *mCheck; // x20
   System_Object_array *ComponentsInChildren_object; // x0
-  struct UIToggle_o *v5; // x8
+  const MethodInfo *v5; // x1
+  struct UIToggle_o *v6; // x8
   System_Collections_Generic_List_EventDelegate__o *onChange; // x20
-  EventDelegate_Callback_o *v7; // x0
-  const MethodInfo *v8; // x3
-  intptr_t *v9; // x8
+  EventDelegate_Callback_o *v8; // x0
+  const MethodInfo *v9; // x3
+  intptr_t *v10; // x8
   UnityEngine_Object_o *mList; // x20
-  struct UIPopupList_o *v11; // x8
+  struct UIPopupList_o *v12; // x8
   UnityEngine_Object_o *mSlider; // x20
-  struct UIProgressBar_o *v13; // x8
-  EventDelegate_Callback_o *v14; // x21
-  const MethodInfo *v15; // x2
-  const MethodInfo *v16; // x1
+  struct UIProgressBar_o *v14; // x8
+  EventDelegate_Callback_o *v15; // x21
+  const MethodInfo *v16; // x2
   int max_length; // w8
   int v18; // w9
   Il2CppObject *v19; // x20
@@ -64,16 +64,16 @@ void UISavedOption__OnDisable(UISavedOption_o *this, const MethodInfo *method)
   System_String_o *key; // x19
   System_String_o *name; // x1
 
-  if ( (byte_4C4761E & 1) == 0 )
+  if ( (byte_4C5B415 & 1) == 0 )
   {
-    sub_1C37058(&EventDelegate_Callback_TypeInfo);
-    sub_1C37058(&Method_UnityEngine_Component_GetComponentsInChildren_UIToggle___);
-    sub_1C37058(&EventDelegate_TypeInfo);
-    sub_1C37058(&UnityEngine_Object_TypeInfo);
-    sub_1C37058(&Method_UISavedOption_SaveProgress__);
-    sub_1C37058(&Method_UISavedOption_SaveSelection__);
-    sub_1C37058(&Method_UISavedOption_SaveState__);
-    byte_4C4761E = 1;
+    sub_1C3E564(&EventDelegate_Callback_TypeInfo);
+    sub_1C3E564(&Method_UnityEngine_Component_GetComponentsInChildren_UIToggle___);
+    sub_1C3E564(&EventDelegate_TypeInfo);
+    sub_1C3E564(&UnityEngine_Object_TypeInfo);
+    sub_1C3E564(&Method_UISavedOption_SaveProgress__);
+    sub_1C3E564(&Method_UISavedOption_SaveSelection__);
+    sub_1C3E564(&Method_UISavedOption_SaveState__);
+    byte_4C5B415 = 1;
   }
   mCheck = (UnityEngine_Object_o *)this->fields.mCheck;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -81,18 +81,18 @@ void UISavedOption__OnDisable(UISavedOption_o *this, const MethodInfo *method)
   ComponentsInChildren_object = (System_Object_array *)UnityEngine_Object__op_Inequality(mCheck, 0, 0);
   if ( ((unsigned __int8)ComponentsInChildren_object & 1) != 0 )
   {
-    v5 = this->fields.mCheck;
-    if ( v5 )
+    v6 = this->fields.mCheck;
+    if ( v6 )
     {
-      onChange = v5->fields.onChange;
-      v7 = (EventDelegate_Callback_o *)sub_1C372A4(EventDelegate_Callback_TypeInfo);
-      v9 = &Method_UISavedOption_SaveState__;
+      onChange = v6->fields.onChange;
+      v8 = (EventDelegate_Callback_o *)sub_1C3E7B0(EventDelegate_Callback_TypeInfo);
+      v10 = &Method_UISavedOption_SaveState__;
 LABEL_18:
-      v14 = v7;
-      EventDelegate_Callback___ctor(v7, (Il2CppObject *)this, *v9, v8);
+      v15 = v8;
+      EventDelegate_Callback___ctor(v8, (Il2CppObject *)this, *v10, v9);
       if ( !EventDelegate_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(EventDelegate_TypeInfo);
-      EventDelegate__Remove(onChange, v14, v15);
+      EventDelegate__Remove(onChange, v15, v16);
       return;
     }
     goto LABEL_32;
@@ -103,16 +103,16 @@ LABEL_18:
   ComponentsInChildren_object = (System_Object_array *)UnityEngine_Object__op_Inequality(mList, 0, 0);
   if ( ((unsigned __int8)ComponentsInChildren_object & 1) != 0 )
   {
-    v11 = this->fields.mList;
-    if ( v11 )
+    v12 = this->fields.mList;
+    if ( v12 )
     {
-      onChange = v11->fields.onChange;
-      v7 = (EventDelegate_Callback_o *)sub_1C372A4(EventDelegate_Callback_TypeInfo);
-      v9 = &Method_UISavedOption_SaveSelection__;
+      onChange = v12->fields.onChange;
+      v8 = (EventDelegate_Callback_o *)sub_1C3E7B0(EventDelegate_Callback_TypeInfo);
+      v10 = &Method_UISavedOption_SaveSelection__;
       goto LABEL_18;
     }
 LABEL_32:
-    sub_1C372B4(ComponentsInChildren_object);
+    sub_1C3E7C0(ComponentsInChildren_object, v5);
   }
   mSlider = (UnityEngine_Object_o *)this->fields.mSlider;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -120,12 +120,12 @@ LABEL_32:
   ComponentsInChildren_object = (System_Object_array *)UnityEngine_Object__op_Inequality(mSlider, 0, 0);
   if ( ((unsigned __int8)ComponentsInChildren_object & 1) != 0 )
   {
-    v13 = this->fields.mSlider;
-    if ( v13 )
+    v14 = this->fields.mSlider;
+    if ( v14 )
     {
-      onChange = v13->fields.onChange;
-      v7 = (EventDelegate_Callback_o *)sub_1C372A4(EventDelegate_Callback_TypeInfo);
-      v9 = &Method_UISavedOption_SaveProgress__;
+      onChange = v14->fields.onChange;
+      v8 = (EventDelegate_Callback_o *)sub_1C3E7B0(EventDelegate_Callback_TypeInfo);
+      v10 = &Method_UISavedOption_SaveProgress__;
       goto LABEL_18;
     }
     goto LABEL_32;
@@ -133,7 +133,7 @@ LABEL_32:
   ComponentsInChildren_object = UnityEngine_Component__GetComponentsInChildren_object_(
                                   (UnityEngine_Component_o *)this,
                                   1,
-                                  (const MethodInfo_30DF14C *)Method_UnityEngine_Component_GetComponentsInChildren_UIToggle___);
+                                  (const MethodInfo_30F0F64 *)Method_UnityEngine_Component_GetComponentsInChildren_UIToggle___);
   if ( !ComponentsInChildren_object )
     goto LABEL_32;
   max_length = ComponentsInChildren_object->max_length;
@@ -151,7 +151,7 @@ LABEL_32:
       if ( max_length == ++v18 )
         return;
     }
-    key = UISavedOption__get_key(this, v16);
+    key = UISavedOption__get_key(this, v5);
     name = UnityEngine_Object__get_name((UnityEngine_Object_o *)v19, 0);
     UnityEngine_PlayerPrefs__SetString(key, name, 0);
   }
@@ -162,26 +162,26 @@ void UISavedOption__OnEnable(UISavedOption_o *this, const MethodInfo *method)
 {
   UnityEngine_Object_o *mList; // x20
   System_String_o *key; // x0
-  struct UIPopupList_o *v5; // x8
-  System_Collections_Generic_List_EventDelegate__o *v6; // x20
-  EventDelegate_Callback_o *v7; // x21
-  const MethodInfo *v8; // x3
-  const MethodInfo *v9; // x2
-  const MethodInfo *v10; // x1
-  System_String_o *v11; // x0
-  System_String_o *v12; // x20
+  const MethodInfo *v5; // x1
+  struct UIPopupList_o *v6; // x8
+  System_Collections_Generic_List_EventDelegate__o *v7; // x20
+  EventDelegate_Callback_o *v8; // x21
+  const MethodInfo *v9; // x3
+  const MethodInfo *v10; // x2
+  const MethodInfo *v11; // x1
+  System_String_o *v12; // x0
+  System_String_o *v13; // x20
   UnityEngine_Object_o *mCheck; // x20
-  struct UIToggle_o *v14; // x8
+  struct UIToggle_o *v15; // x8
   System_Collections_Generic_List_EventDelegate__o *onChange; // x20
-  EventDelegate_Callback_o *v16; // x21
-  const MethodInfo *v17; // x3
-  const MethodInfo *v18; // x2
-  UIToggle_o *v19; // x20
-  const MethodInfo *v20; // x1
-  struct UIToggle_o *v21; // x8
-  const MethodInfo *v22; // x2
+  EventDelegate_Callback_o *v17; // x21
+  const MethodInfo *v18; // x3
+  const MethodInfo *v19; // x2
+  UIToggle_o *v20; // x20
+  const MethodInfo *v21; // x1
+  struct UIToggle_o *v22; // x8
+  const MethodInfo *v23; // x2
   UnityEngine_Object_o *mSlider; // x20
-  const MethodInfo *v24; // x1
   struct UIProgressBar_o *v25; // x8
   System_Collections_Generic_List_EventDelegate__o *v26; // x20
   EventDelegate_Callback_o *v27; // x21
@@ -194,7 +194,7 @@ void UISavedOption__OnEnable(UISavedOption_o *this, const MethodInfo *method)
   float value; // s0
   float Float; // s0
   System_String_o *v36; // x0
-  System_String_o *String_71225564; // x20
+  System_String_o *String_71300376; // x20
   System_String_c *klass; // x8
   System_String_o *v39; // x19
   int v40; // w22
@@ -205,16 +205,16 @@ void UISavedOption__OnEnable(UISavedOption_o *this, const MethodInfo *method)
   bool v45; // w0
   const MethodInfo *v46; // x2
 
-  if ( (byte_4C4761D & 1) == 0 )
+  if ( (byte_4C5B414 & 1) == 0 )
   {
-    sub_1C37058(&EventDelegate_Callback_TypeInfo);
-    sub_1C37058(&Method_UnityEngine_Component_GetComponentsInChildren_UIToggle___);
-    sub_1C37058(&EventDelegate_TypeInfo);
-    sub_1C37058(&UnityEngine_Object_TypeInfo);
-    sub_1C37058(&Method_UISavedOption_SaveProgress__);
-    sub_1C37058(&Method_UISavedOption_SaveSelection__);
-    sub_1C37058(&Method_UISavedOption_SaveState__);
-    byte_4C4761D = 1;
+    sub_1C3E564(&EventDelegate_Callback_TypeInfo);
+    sub_1C3E564(&Method_UnityEngine_Component_GetComponentsInChildren_UIToggle___);
+    sub_1C3E564(&EventDelegate_TypeInfo);
+    sub_1C3E564(&UnityEngine_Object_TypeInfo);
+    sub_1C3E564(&Method_UISavedOption_SaveProgress__);
+    sub_1C3E564(&Method_UISavedOption_SaveSelection__);
+    sub_1C3E564(&Method_UISavedOption_SaveState__);
+    byte_4C5B414 = 1;
   }
   mList = (UnityEngine_Object_o *)this->fields.mList;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -228,24 +228,24 @@ void UISavedOption__OnEnable(UISavedOption_o *this, const MethodInfo *method)
     key = (System_String_o *)UnityEngine_Object__op_Inequality(mCheck, 0, 0);
     if ( ((unsigned __int8)key & 1) != 0 )
     {
-      v14 = this->fields.mCheck;
-      if ( v14 )
+      v15 = this->fields.mCheck;
+      if ( v15 )
       {
-        onChange = v14->fields.onChange;
-        v16 = (EventDelegate_Callback_o *)sub_1C372A4(EventDelegate_Callback_TypeInfo);
-        EventDelegate_Callback___ctor(v16, (Il2CppObject *)this, Method_UISavedOption_SaveState__, v17);
+        onChange = v15->fields.onChange;
+        v17 = (EventDelegate_Callback_o *)sub_1C3E7B0(EventDelegate_Callback_TypeInfo);
+        EventDelegate_Callback___ctor(v17, (Il2CppObject *)this, Method_UISavedOption_SaveState__, v18);
         if ( !EventDelegate_TypeInfo->_2.cctor_finished )
           j_il2cpp_runtime_class_init_0(EventDelegate_TypeInfo);
-        EventDelegate__Add(onChange, v16, v18);
-        v19 = this->fields.mCheck;
-        key = UISavedOption__get_key(this, v20);
-        v21 = this->fields.mCheck;
-        if ( v21 )
+        EventDelegate__Add(onChange, v17, v19);
+        v20 = this->fields.mCheck;
+        key = UISavedOption__get_key(this, v21);
+        v22 = this->fields.mCheck;
+        if ( v22 )
         {
-          key = (System_String_o *)UnityEngine_PlayerPrefs__GetInt(key, v21->fields.startsActive, 0);
-          if ( v19 )
+          key = (System_String_o *)UnityEngine_PlayerPrefs__GetInt(key, v22->fields.startsActive, 0);
+          if ( v20 )
           {
-            UIToggle__set_value(v19, (_DWORD)key != 0, v22);
+            UIToggle__set_value(v20, (_DWORD)key != 0, v23);
             return;
           }
         }
@@ -263,7 +263,7 @@ void UISavedOption__OnEnable(UISavedOption_o *this, const MethodInfo *method)
         if ( v25 )
         {
           v26 = v25->fields.onChange;
-          v27 = (EventDelegate_Callback_o *)sub_1C372A4(EventDelegate_Callback_TypeInfo);
+          v27 = (EventDelegate_Callback_o *)sub_1C3E7B0(EventDelegate_Callback_TypeInfo);
           EventDelegate_Callback___ctor(v27, (Il2CppObject *)this, Method_UISavedOption_SaveProgress__, v28);
           if ( !EventDelegate_TypeInfo->_2.cctor_finished )
             j_il2cpp_runtime_class_init_0(EventDelegate_TypeInfo);
@@ -286,12 +286,12 @@ void UISavedOption__OnEnable(UISavedOption_o *this, const MethodInfo *method)
       }
       else
       {
-        v36 = UISavedOption__get_key(this, v24);
-        String_71225564 = UnityEngine_PlayerPrefs__GetString_71225564(v36, 0);
+        v36 = UISavedOption__get_key(this, v5);
+        String_71300376 = UnityEngine_PlayerPrefs__GetString_71300376(v36, 0);
         key = (System_String_o *)UnityEngine_Component__GetComponentsInChildren_object_(
                                    (UnityEngine_Component_o *)this,
                                    1,
-                                   (const MethodInfo_30DF14C *)Method_UnityEngine_Component_GetComponentsInChildren_UIToggle___);
+                                   (const MethodInfo_30F0F64 *)Method_UnityEngine_Component_GetComponentsInChildren_UIToggle___);
         if ( key )
         {
           klass = key[1].klass;
@@ -307,36 +307,36 @@ void UISavedOption__OnEnable(UISavedOption_o *this, const MethodInfo *method)
             if ( !v43 )
               break;
             name = UnityEngine_Object__get_name((UnityEngine_Object_o *)v42[4], 0);
-            v45 = System_String__op_Equality(name, String_71225564, 0);
+            v45 = System_String__op_Equality(name, String_71300376, 0);
             UIToggle__set_value(v43, v45, v46);
             if ( v40 == v41 )
               return;
             if ( (unsigned int)++v41 >= LODWORD(v39[1].klass) )
-              sub_1C372BC(key);
+              sub_1C3E7C8(key, v5);
           }
         }
       }
     }
 LABEL_38:
-    sub_1C372B4(key);
+    sub_1C3E7C0(key, v5);
   }
-  v5 = this->fields.mList;
-  if ( !v5 )
+  v6 = this->fields.mList;
+  if ( !v6 )
     goto LABEL_38;
-  v6 = v5->fields.onChange;
-  v7 = (EventDelegate_Callback_o *)sub_1C372A4(EventDelegate_Callback_TypeInfo);
-  EventDelegate_Callback___ctor(v7, (Il2CppObject *)this, Method_UISavedOption_SaveSelection__, v8);
+  v7 = v6->fields.onChange;
+  v8 = (EventDelegate_Callback_o *)sub_1C3E7B0(EventDelegate_Callback_TypeInfo);
+  EventDelegate_Callback___ctor(v8, (Il2CppObject *)this, Method_UISavedOption_SaveSelection__, v9);
   if ( !EventDelegate_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(EventDelegate_TypeInfo);
-  EventDelegate__Add(v6, v7, v9);
-  v11 = UISavedOption__get_key(this, v10);
-  v12 = UnityEngine_PlayerPrefs__GetString_71225564(v11, 0);
-  if ( !System_String__IsNullOrEmpty(v12, 0) )
+  EventDelegate__Add(v7, v8, v10);
+  v12 = UISavedOption__get_key(this, v11);
+  v13 = UnityEngine_PlayerPrefs__GetString_71300376(v12, 0);
+  if ( !System_String__IsNullOrEmpty(v13, 0) )
   {
     key = (System_String_o *)this->fields.mList;
     if ( key )
     {
-      UIPopupList__set_value((UIPopupList_o *)key, v12, 0);
+      UIPopupList__set_value((UIPopupList_o *)key, v13, 0);
       return;
     }
     goto LABEL_38;
@@ -347,37 +347,39 @@ LABEL_38:
 void UISavedOption__SaveProgress(UISavedOption_o *this, const MethodInfo *method)
 {
   System_String_o *key; // x0
-  System_String_o *v4; // x19
+  __int64 v4; // x1
+  System_String_o *v5; // x19
   float value; // s0
 
-  if ( (byte_4C47621 & 1) == 0 )
+  if ( (byte_4C5B418 & 1) == 0 )
   {
-    sub_1C37058(&UIProgressBar_TypeInfo);
-    byte_4C47621 = 1;
+    sub_1C3E564(&UIProgressBar_TypeInfo);
+    byte_4C5B418 = 1;
   }
   key = UISavedOption__get_key(this, method);
   if ( !UIProgressBar_TypeInfo->static_fields->current )
-    sub_1C372B4(key);
-  v4 = key;
+    sub_1C3E7C0(key, v4);
+  v5 = key;
   value = UIProgressBar__get_value(UIProgressBar_TypeInfo->static_fields->current, 0);
-  UnityEngine_PlayerPrefs__SetFloat(v4, value, 0);
+  UnityEngine_PlayerPrefs__SetFloat(v5, value, 0);
 }
 
 
 void UISavedOption__SaveSelection(UISavedOption_o *this, const MethodInfo *method)
 {
   System_String_o *key; // x0
+  __int64 v4; // x1
   struct UIPopupList_o *current; // x8
 
-  if ( (byte_4C4761F & 1) == 0 )
+  if ( (byte_4C5B416 & 1) == 0 )
   {
-    sub_1C37058(&UIPopupList_TypeInfo);
-    byte_4C4761F = 1;
+    sub_1C3E564(&UIPopupList_TypeInfo);
+    byte_4C5B416 = 1;
   }
   key = UISavedOption__get_key(this, method);
   current = UIPopupList_TypeInfo->static_fields->current;
   if ( !current )
-    sub_1C372B4(key);
+    sub_1C3E7C0(key, v4);
   UnityEngine_PlayerPrefs__SetString(key, current->fields.mSelectedItem, 0);
 }
 
@@ -385,31 +387,32 @@ void UISavedOption__SaveSelection(UISavedOption_o *this, const MethodInfo *metho
 void UISavedOption__SaveState(UISavedOption_o *this, const MethodInfo *method)
 {
   System_String_o *key; // x0
-  UIToggle_c *v4; // x8
-  System_String_o *v5; // x19
+  __int64 v4; // x1
+  UIToggle_c *v5; // x8
+  System_String_o *v6; // x19
   struct UIToggle_o *current; // x8
-  __int64 v7; // x9
+  __int64 v8; // x9
 
-  if ( (byte_4C47620 & 1) == 0 )
+  if ( (byte_4C5B417 & 1) == 0 )
   {
-    sub_1C37058(&UIToggle_TypeInfo);
-    byte_4C47620 = 1;
+    sub_1C3E564(&UIToggle_TypeInfo);
+    byte_4C5B417 = 1;
   }
   key = UISavedOption__get_key(this, method);
-  v4 = UIToggle_TypeInfo;
-  v5 = key;
+  v5 = UIToggle_TypeInfo;
+  v6 = key;
   if ( !UIToggle_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(UIToggle_TypeInfo);
-    v4 = UIToggle_TypeInfo;
+    v5 = UIToggle_TypeInfo;
   }
-  current = v4->static_fields->current;
+  current = v5->static_fields->current;
   if ( !current )
-    sub_1C372B4(key);
-  v7 = 56;
+    sub_1C3E7C0(key, v4);
+  v8 = 56;
   if ( current->fields.mStarted )
-    v7 = 113;
-  UnityEngine_PlayerPrefs__SetInt(v5, *((unsigned __int8 *)&current->klass + v7), 0);
+    v8 = 113;
+  UnityEngine_PlayerPrefs__SetInt(v6, *((unsigned __int8 *)&current->klass + v8), 0);
 }
 
 
@@ -417,13 +420,13 @@ System_String_o *UISavedOption__get_key(UISavedOption_o *this, const MethodInfo 
 {
   System_String_o *name; // x0
 
-  if ( (byte_4C4761B & 1) == 0 )
+  if ( (byte_4C5B412 & 1) == 0 )
   {
-    sub_1C37058(&StringLiteral_9268/*"NGUI State: "*/);
-    byte_4C4761B = 1;
+    sub_1C3E564(&StringLiteral_9268/*"NGUI State: "*/);
+    byte_4C5B412 = 1;
   }
   if ( !System_String__IsNullOrEmpty(this->fields.keyName, 0) )
     return this->fields.keyName;
   name = UnityEngine_Object__get_name((UnityEngine_Object_o *)this, 0);
-  return System_String__Concat_63561656((System_String_o *)StringLiteral_9268/*"NGUI State: "*/, name, 0);
+  return System_String__Concat_63636468((System_String_o *)StringLiteral_9268/*"NGUI State: "*/, name, 0);
 }

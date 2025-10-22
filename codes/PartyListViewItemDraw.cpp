@@ -4,14 +4,14 @@ void PartyListViewItemDraw___ctor(PartyListViewItemDraw_o *this, const MethodInf
   int32_t v4; // w2
   const MethodInfo *v5; // x3
 
-  if ( (byte_4C3E8FE & 1) == 0 )
+  if ( (byte_4C52684 & 1) == 0 )
   {
-    sub_1C37058(&PartyOrganizationListViewItemDraw___TypeInfo);
-    byte_4C3E8FE = 1;
+    sub_1C3E564(&PartyOrganizationListViewItemDraw___TypeInfo);
+    byte_4C52684 = 1;
   }
-  v3 = (struct PartyOrganizationListViewItemDraw_array *)sub_1C37100(PartyOrganizationListViewItemDraw___TypeInfo, 6);
+  v3 = (struct PartyOrganizationListViewItemDraw_array *)sub_1C3E60C(PartyOrganizationListViewItemDraw___TypeInfo, 6);
   this->fields.itemDrawList = v3;
-  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.itemDrawList, (int32_t)v3, v4, v5);
+  sub_1C3E508((CGThumbnailListItem_o *)&this->fields.itemDrawList, (int32_t)v3, v4, v5);
   UnityEngine_MonoBehaviour___ctor((UnityEngine_MonoBehaviour_o *)this, 0);
 }
 
@@ -20,33 +20,34 @@ void PartyListViewItemDraw__SetActiveGrandEffect(PartyListViewItemDraw_o *this, 
 {
   __int64 v5; // x21
   __int64 v6; // x0
+  __int64 v7; // x1
   System_Collections_Generic_IEnumerable_T__o *itemDrawList; // x19
-  System_Action_object__o *v8; // x20
+  System_Action_object__o *v9; // x20
 
-  if ( (byte_4C3E8FD & 1) == 0 )
+  if ( (byte_4C52683 & 1) == 0 )
   {
-    sub_1C37058(&System_Action_PartyOrganizationListViewItemDraw__TypeInfo);
-    sub_1C37058(&Method_BasicHelper_ForEach_PartyOrganizationListViewItemDraw___);
-    sub_1C37058(&Method_PartyListViewItemDraw___c__DisplayClass12_0__SetActiveGrandEffect_b__0__);
-    sub_1C37058(&PartyListViewItemDraw___c__DisplayClass12_0_TypeInfo);
-    byte_4C3E8FD = 1;
+    sub_1C3E564(&System_Action_PartyOrganizationListViewItemDraw__TypeInfo);
+    sub_1C3E564(&Method_BasicHelper_ForEach_PartyOrganizationListViewItemDraw___);
+    sub_1C3E564(&Method_PartyListViewItemDraw___c__DisplayClass12_0__SetActiveGrandEffect_b__0__);
+    sub_1C3E564(&PartyListViewItemDraw___c__DisplayClass12_0_TypeInfo);
+    byte_4C52683 = 1;
   }
-  v5 = sub_1C372A4(PartyListViewItemDraw___c__DisplayClass12_0_TypeInfo);
+  v5 = sub_1C3E7B0(PartyListViewItemDraw___c__DisplayClass12_0_TypeInfo);
   System_Object___ctor((Il2CppObject *)v5, 0);
   if ( !v5 )
-    sub_1C372B4(v6);
+    sub_1C3E7C0(v6, v7);
   *(_BYTE *)(v5 + 16) = flag;
   itemDrawList = (System_Collections_Generic_IEnumerable_T__o *)this->fields.itemDrawList;
-  v8 = (System_Action_object__o *)sub_1C372A4(System_Action_PartyOrganizationListViewItemDraw__TypeInfo);
+  v9 = (System_Action_object__o *)sub_1C3E7B0(System_Action_PartyOrganizationListViewItemDraw__TypeInfo);
   System_Action_object____ctor(
-    v8,
+    v9,
     (Il2CppObject *)v5,
     Method_PartyListViewItemDraw___c__DisplayClass12_0__SetActiveGrandEffect_b__0__,
     0);
   BasicHelper__ForEach_object_(
     itemDrawList,
-    (System_Action_T__o *)v8,
-    (const MethodInfo_30D3C18 *)Method_BasicHelper_ForEach_PartyOrganizationListViewItemDraw___);
+    (System_Action_T__o *)v9,
+    (const MethodInfo_30E5A30 *)Method_BasicHelper_ForEach_PartyOrganizationListViewItemDraw___);
 }
 
 
@@ -57,17 +58,18 @@ void PartyListViewItemDraw__SetInput(
         const MethodInfo *method)
 {
   UnityEngine_Object_o *baseButton; // x22
+  __int64 v8; // x1
   UnityEngine_Component_o *Component_object; // x0
   int32_t i; // w22
   struct PartyOrganizationListViewItemDraw_array *itemDrawList; // x8
-  PartyOrganizationListViewItemDraw_o *v11; // x23
+  PartyOrganizationListViewItemDraw_o *v12; // x23
 
-  if ( (byte_4C3E8FC & 1) == 0 )
+  if ( (byte_4C52682 & 1) == 0 )
   {
-    sub_1C37058(&BalanceConfig_TypeInfo);
-    sub_1C37058(&Method_UnityEngine_Component_GetComponent_Collider___);
-    sub_1C37058(&UnityEngine_Object_TypeInfo);
-    byte_4C3E8FC = 1;
+    sub_1C3E564(&BalanceConfig_TypeInfo);
+    sub_1C3E564(&Method_UnityEngine_Component_GetComponent_Collider___);
+    sub_1C3E564(&UnityEngine_Object_TypeInfo);
+    byte_4C52682 = 1;
   }
   baseButton = (UnityEngine_Object_o *)this->fields.baseButton;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -78,12 +80,12 @@ void PartyListViewItemDraw__SetInput(
     if ( !Component_object
       || (Component_object = (UnityEngine_Component_o *)UnityEngine_Component__GetComponent_object_(
                                                           Component_object,
-                                                          (const MethodInfo_30DE428 *)Method_UnityEngine_Component_GetComponent_Collider___)) == 0
+                                                          (const MethodInfo_30F0240 *)Method_UnityEngine_Component_GetComponent_Collider___)) == 0
       || (UnityEngine_Collider__set_enabled((UnityEngine_Collider_o *)Component_object, isInput, 0),
           (Component_object = (UnityEngine_Component_o *)this->fields.baseButton) == 0) )
     {
 LABEL_20:
-      sub_1C372B4(Component_object);
+      sub_1C3E7C0(Component_object, v8);
     }
     ((void (__fastcall *)(UnityEngine_Component_o *, _QWORD, __int64, Il2CppClass **))Component_object->klass[1]._1.nestedTypes)(
       Component_object,
@@ -107,12 +109,12 @@ LABEL_20:
       if ( !itemDrawList )
         goto LABEL_20;
       if ( (unsigned int)i >= LODWORD(itemDrawList->max_length) )
-        sub_1C372BC(Component_object);
-      v11 = itemDrawList->m_Items[i];
+        sub_1C3E7C8(Component_object, v8);
+      v12 = itemDrawList->m_Items[i];
       Component_object = (UnityEngine_Component_o *)PartyListViewItem__GetMember(item, i, 0);
-      if ( !v11 )
+      if ( !v12 )
         goto LABEL_20;
-      PartyOrganizationListViewItemDraw__SetInput(v11, (PartyOrganizationListViewItem_o *)Component_object, isInput, 0);
+      PartyOrganizationListViewItemDraw__SetInput(v12, (PartyOrganizationListViewItem_o *)Component_object, isInput, 0);
     }
   }
 }
@@ -126,31 +128,32 @@ void PartyListViewItemDraw__SetItem(
 {
   UISprite_o *baseSprite; // x22
   void *IsSupportOnly; // x0
-  System_String_o **v9; // x8
-  int32_t v10; // w2
-  const MethodInfo *v11; // x3
+  __int64 v9; // x1
+  System_String_o **v10; // x8
+  int32_t v11; // w2
+  const MethodInfo *v12; // x3
   int32_t i; // w21
   struct PartyOrganizationListViewItemDraw_array *itemDrawList; // x8
-  PartyOrganizationListViewItemDraw_o *v14; // x22
+  PartyOrganizationListViewItemDraw_o *v15; // x22
   int32_t j; // w22
-  struct PartyOrganizationListViewItemDraw_array *v16; // x8
-  PartyOrganizationListViewItemDraw_o *v17; // x23
-  int v18; // w20
+  struct PartyOrganizationListViewItemDraw_array *v17; // x8
+  PartyOrganizationListViewItemDraw_o *v18; // x23
+  int v19; // w20
   UISprite_o *startingMemberFriendshipUpSprite; // x20
   UILabel_o *startingMemberFriendshipUpLabel; // x20
   UILabel_o *startingMemberFriendshipUpLabelOver; // x19
 
-  if ( (byte_4C3E8FB & 1) == 0 )
+  if ( (byte_4C52681 & 1) == 0 )
   {
-    sub_1C37058(&AtlasManager_TypeInfo);
-    sub_1C37058(&BalanceConfig_TypeInfo);
-    sub_1C37058(&LocalizationManager_TypeInfo);
-    sub_1C37058(&Method_SingletonTemplate_PartyOrganizationUtility__get_Instance__);
-    sub_1C37058(&StringLiteral_19714/*"func_group_icon_1009_starting"*/);
-    sub_1C37058(&StringLiteral_12307/*"STARTING_MEMBER_FRIENDSHIP_UP_TITLE"*/);
-    sub_1C37058(&StringLiteral_19617/*"formation_support_bg"*/);
-    sub_1C37058(&StringLiteral_19614/*"formation_member_bg"*/);
-    byte_4C3E8FB = 1;
+    sub_1C3E564(&AtlasManager_TypeInfo);
+    sub_1C3E564(&BalanceConfig_TypeInfo);
+    sub_1C3E564(&LocalizationManager_TypeInfo);
+    sub_1C3E564(&Method_SingletonTemplate_PartyOrganizationUtility__get_Instance__);
+    sub_1C3E564(&StringLiteral_19732/*"func_group_icon_1009_starting"*/);
+    sub_1C3E564(&StringLiteral_12312/*"STARTING_MEMBER_FRIENDSHIP_UP_TITLE"*/);
+    sub_1C3E564(&StringLiteral_19635/*"formation_support_bg"*/);
+    sub_1C3E564(&StringLiteral_19632/*"formation_member_bg"*/);
+    byte_4C52681 = 1;
   }
   if ( item && mode )
   {
@@ -158,15 +161,15 @@ void PartyListViewItemDraw__SetItem(
     IsSupportOnly = (void *)PartyListViewItem__IsSupportOnly(item, 0);
     if ( !baseSprite )
       goto LABEL_49;
-    v9 = (System_String_o **)&StringLiteral_19617/*"formation_support_bg"*/;
+    v10 = (System_String_o **)&StringLiteral_19635/*"formation_support_bg"*/;
     if ( ((unsigned __int8)IsSupportOnly & 1) == 0 )
-      v9 = (System_String_o **)&StringLiteral_19614/*"formation_member_bg"*/;
-    UISprite__set_spriteName(baseSprite, *v9, 0);
-    IsSupportOnly = SingletonTemplate_object___get_Instance((const MethodInfo_39ED65C *)Method_SingletonTemplate_PartyOrganizationUtility__get_Instance__);
+      v10 = (System_String_o **)&StringLiteral_19632/*"formation_member_bg"*/;
+    UISprite__set_spriteName(baseSprite, *v10, 0);
+    IsSupportOnly = SingletonTemplate_object___get_Instance((const MethodInfo_39FFA98 *)Method_SingletonTemplate_PartyOrganizationUtility__get_Instance__);
     if ( !IsSupportOnly )
       goto LABEL_49;
     *((_QWORD *)IsSupportOnly + 12) = item;
-    sub_1C36FFC((CGThumbnailListItem_o *)((char *)IsSupportOnly + 96), (int32_t)item, v10, v11);
+    sub_1C3E508((CGThumbnailListItem_o *)((char *)IsSupportOnly + 96), (int32_t)item, v11, v12);
     if ( mode == 4 )
     {
       for ( i = 0; ; ++i )
@@ -184,12 +187,12 @@ void PartyListViewItemDraw__SetItem(
           goto LABEL_49;
         if ( (unsigned int)i >= LODWORD(itemDrawList->max_length) )
           goto LABEL_50;
-        v14 = itemDrawList->m_Items[i];
+        v15 = itemDrawList->m_Items[i];
         IsSupportOnly = PartyListViewItem__GetMember(item, i, 0);
-        if ( !v14 )
+        if ( !v15 )
           goto LABEL_49;
         PartyOrganizationListViewItemDraw__SetItem(
-          v14,
+          v15,
           (PartyOrganizationListViewItem_o *)IsSupportOnly,
           2 * (i != 1),
           1,
@@ -208,17 +211,17 @@ void PartyListViewItemDraw__SetItem(
         }
         if ( j >= *(_DWORD *)(*((_QWORD *)IsSupportOnly + 23) + 172LL) )
           break;
-        v16 = this->fields.itemDrawList;
-        if ( !v16 )
-          goto LABEL_49;
-        if ( (unsigned int)j >= LODWORD(v16->max_length) )
-LABEL_50:
-          sub_1C372BC(IsSupportOnly);
-        v17 = v16->m_Items[j];
-        IsSupportOnly = PartyListViewItem__GetMember(item, j, 0);
+        v17 = this->fields.itemDrawList;
         if ( !v17 )
           goto LABEL_49;
-        PartyOrganizationListViewItemDraw__SetItem(v17, (PartyOrganizationListViewItem_o *)IsSupportOnly, mode, 1, 0);
+        if ( (unsigned int)j >= LODWORD(v17->max_length) )
+LABEL_50:
+          sub_1C3E7C8(IsSupportOnly, v9);
+        v18 = v17->m_Items[j];
+        IsSupportOnly = PartyListViewItem__GetMember(item, j, 0);
+        if ( !v18 )
+          goto LABEL_49;
+        PartyOrganizationListViewItemDraw__SetItem(v18, (PartyOrganizationListViewItem_o *)IsSupportOnly, mode, 1, 0);
       }
     }
     IsSupportOnly = this->fields.warningBase;
@@ -233,13 +236,13 @@ LABEL_50:
     }
     if ( !this->fields.startingMemberFriendshipUpSprite )
       goto LABEL_49;
-    v18 = *(_DWORD *)(*((_QWORD *)IsSupportOnly + 23) + 1136LL);
+    v19 = *(_DWORD *)(*((_QWORD *)IsSupportOnly + 23) + 1136LL);
     IsSupportOnly = UnityEngine_Component__get_gameObject(
                       (UnityEngine_Component_o *)this->fields.startingMemberFriendshipUpSprite,
                       0);
     if ( !IsSupportOnly )
       goto LABEL_49;
-    if ( v18 >= 1 )
+    if ( v19 >= 1 )
     {
       UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)IsSupportOnly, 1, 0);
       IsSupportOnly = this->fields.startingMemberFriendshipUpLabel;
@@ -259,16 +262,16 @@ LABEL_50:
               startingMemberFriendshipUpSprite = this->fields.startingMemberFriendshipUpSprite;
               if ( !AtlasManager_TypeInfo->_2.cctor_finished )
                 j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo);
-              AtlasManager__SetEventUI(startingMemberFriendshipUpSprite, (System_String_o *)StringLiteral_19714/*"func_group_icon_1009_starting"*/, 0);
+              AtlasManager__SetEventUI(startingMemberFriendshipUpSprite, (System_String_o *)StringLiteral_19732/*"func_group_icon_1009_starting"*/, 0);
               startingMemberFriendshipUpLabel = this->fields.startingMemberFriendshipUpLabel;
               if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
                 j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-              IsSupportOnly = LocalizationManager__Get((System_String_o *)StringLiteral_12307/*"STARTING_MEMBER_FRIENDSHIP_UP_TITLE"*/, 0);
+              IsSupportOnly = LocalizationManager__Get((System_String_o *)StringLiteral_12312/*"STARTING_MEMBER_FRIENDSHIP_UP_TITLE"*/, 0);
               if ( startingMemberFriendshipUpLabel )
               {
                 UILabel__set_text(startingMemberFriendshipUpLabel, (System_String_o *)IsSupportOnly, 0);
                 startingMemberFriendshipUpLabelOver = this->fields.startingMemberFriendshipUpLabelOver;
-                IsSupportOnly = LocalizationManager__Get((System_String_o *)StringLiteral_12307/*"STARTING_MEMBER_FRIENDSHIP_UP_TITLE"*/, 0);
+                IsSupportOnly = LocalizationManager__Get((System_String_o *)StringLiteral_12312/*"STARTING_MEMBER_FRIENDSHIP_UP_TITLE"*/, 0);
                 if ( startingMemberFriendshipUpLabelOver )
                 {
                   UILabel__set_text(startingMemberFriendshipUpLabelOver, (System_String_o *)IsSupportOnly, 0);
@@ -280,7 +283,7 @@ LABEL_50:
         }
       }
 LABEL_49:
-      sub_1C372B4(IsSupportOnly);
+      sub_1C3E7C0(IsSupportOnly, v9);
     }
     UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)IsSupportOnly, 0, 0);
     IsSupportOnly = this->fields.startingMemberFriendshipUpLabel;
@@ -315,6 +318,6 @@ void PartyListViewItemDraw___c__DisplayClass12_0___SetActiveGrandEffect_b__0(
         const MethodInfo *method)
 {
   if ( !item )
-    sub_1C372B4(this);
+    sub_1C3E7C0(this, 0);
   PartyOrganizationListViewItemDraw__SetActiveGrandEffect(item, this->fields.flag, 0);
 }

@@ -42,11 +42,11 @@ void UIKeyBinding__OnBindingClick(UIKeyBinding_o *this, const MethodInfo *method
 {
   UnityEngine_GameObject_o *gameObject; // x19
 
-  if ( (byte_4C475C5 & 1) == 0 )
+  if ( (byte_4C5B3BC & 1) == 0 )
   {
-    sub_1C37058(&UICamera_TypeInfo);
-    sub_1C37058(&StringLiteral_9838/*"OnClick"*/);
-    byte_4C475C5 = 1;
+    sub_1C3E564(&UICamera_TypeInfo);
+    sub_1C3E564(&StringLiteral_9838/*"OnClick"*/);
+    byte_4C5B3BC = 1;
   }
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
   if ( !UICamera_TypeInfo->_2.cctor_finished )
@@ -67,12 +67,12 @@ void UIKeyBinding__OnBindingPress(UIKeyBinding_o *this, bool pressed, const Meth
   Il2CppObject *v12; // x20
   bool v13[4]; // [xsp+Ch] [xbp-34h] BYREF
 
-  if ( (byte_4C475C4 & 1) == 0 )
+  if ( (byte_4C5B3BB & 1) == 0 )
   {
-    sub_1C37058(&bool_TypeInfo);
-    sub_1C37058(&UICamera_TypeInfo);
-    sub_1C37058(&StringLiteral_9945/*"OnPress"*/);
-    byte_4C475C4 = 1;
+    sub_1C3E564(&bool_TypeInfo);
+    sub_1C3E564(&UICamera_TypeInfo);
+    sub_1C3E564(&StringLiteral_9945/*"OnPress"*/);
+    byte_4C5B3BB = 1;
   }
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
   v13[0] = pressed;
@@ -87,10 +87,10 @@ void UIKeyBinding__OnSubmit(UIKeyBinding_o *this, const MethodInfo *method)
 {
   UICamera_c *v3; // x0
 
-  if ( (byte_4C475C2 & 1) == 0 )
+  if ( (byte_4C5B3B9 & 1) == 0 )
   {
-    sub_1C37058(&UICamera_TypeInfo);
-    byte_4C475C2 = 1;
+    sub_1C3E564(&UICamera_TypeInfo);
+    byte_4C5B3B9 = 1;
   }
   v3 = UICamera_TypeInfo;
   if ( !UICamera_TypeInfo->_2.cctor_finished )
@@ -113,20 +113,21 @@ void UIKeyBinding__Start(UIKeyBinding_o *this, const MethodInfo *method)
 {
   UnityEngine_Object_o *Component_object; // x20
   _BOOL8 v4; // x0
+  __int64 v5; // x1
   System_Collections_Generic_List_EventDelegate__o *monitor; // x20
-  EventDelegate_Callback_o *v6; // x21
+  EventDelegate_Callback_o *v7; // x21
 
-  if ( (byte_4C475C1 & 1) == 0 )
+  if ( (byte_4C5B3B8 & 1) == 0 )
   {
-    sub_1C37058(&EventDelegate_Callback_TypeInfo);
-    sub_1C37058(&Method_UnityEngine_Component_GetComponent_UIInput___);
-    sub_1C37058(&EventDelegate_TypeInfo);
-    sub_1C37058(&UnityEngine_Object_TypeInfo);
-    byte_4C475C1 = 1;
+    sub_1C3E564(&EventDelegate_Callback_TypeInfo);
+    sub_1C3E564(&Method_UnityEngine_Component_GetComponent_UIInput___);
+    sub_1C3E564(&EventDelegate_TypeInfo);
+    sub_1C3E564(&UnityEngine_Object_TypeInfo);
+    byte_4C5B3B8 = 1;
   }
   Component_object = (UnityEngine_Object_o *)UnityEngine_Component__GetComponent_object_(
                                                (UnityEngine_Component_o *)this,
-                                               (const MethodInfo_30DE428 *)Method_UnityEngine_Component_GetComponent_UIInput___);
+                                               (const MethodInfo_30F0240 *)Method_UnityEngine_Component_GetComponent_UIInput___);
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   this->fields.mIsInput = UnityEngine_Object__op_Inequality(Component_object, 0, 0);
@@ -134,13 +135,13 @@ void UIKeyBinding__Start(UIKeyBinding_o *this, const MethodInfo *method)
   if ( v4 )
   {
     if ( !Component_object )
-      sub_1C372B4(v4);
+      sub_1C3E7C0(v4, v5);
     monitor = (System_Collections_Generic_List_EventDelegate__o *)Component_object[5].monitor;
-    v6 = (EventDelegate_Callback_o *)sub_1C372A4(EventDelegate_Callback_TypeInfo);
-    EventDelegate_Callback___ctor(v6, (Il2CppObject *)this, (intptr_t)this->klass->vtable._5_OnSubmit.method, 0);
+    v7 = (EventDelegate_Callback_o *)sub_1C3E7B0(EventDelegate_Callback_TypeInfo);
+    EventDelegate_Callback___ctor(v7, (Il2CppObject *)this, (intptr_t)this->klass->vtable._5_OnSubmit.method, 0);
     if ( !EventDelegate_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(EventDelegate_TypeInfo);
-    EventDelegate__Add(monitor, v6, 0);
+    EventDelegate__Add(monitor, v7, 0);
   }
 }
 
@@ -159,19 +160,20 @@ void UIKeyBinding__Update(UIKeyBinding_o *this, const MethodInfo *method)
   struct UICamera_StaticFields *v12; // x8
   struct UICamera_MouseOrTouch_o *currentTouch; // x22
   UnityEngine_GameObject_o *gameObject; // x0
-  int32_t v15; // w2
-  const MethodInfo *v16; // x3
-  int32_t v17; // w2
-  const MethodInfo *v18; // x3
-  UICamera_c *v19; // x0
+  __int64 v15; // x1
+  int32_t v16; // w2
+  const MethodInfo *v17; // x3
+  int32_t v18; // w2
+  const MethodInfo *v19; // x3
   UICamera_c *v20; // x0
-  UnityEngine_GameObject_o *v21; // x21
+  UICamera_c *v21; // x0
   UnityEngine_GameObject_o *v22; // x21
+  UnityEngine_GameObject_o *v23; // x21
 
-  if ( (byte_4C475C3 & 1) == 0 )
+  if ( (byte_4C5B3BA & 1) == 0 )
   {
-    sub_1C37058(&UICamera_TypeInfo);
-    byte_4C475C3 = 1;
+    sub_1C3E564(&UICamera_TypeInfo);
+    byte_4C5B3BA = 1;
   }
   v3 = UICamera_TypeInfo;
   if ( !UICamera_TypeInfo->_2.cctor_finished )
@@ -202,7 +204,7 @@ void UIKeyBinding__Update(UIKeyBinding_o *this, const MethodInfo *method)
       static_fields = v9->static_fields;
       controller = static_fields->controller;
       static_fields->currentTouch = controller;
-      sub_1C36FFC((CGThumbnailListItem_o *)&static_fields->currentTouch, (int32_t)controller, v5, v6);
+      sub_1C3E508((CGThumbnailListItem_o *)&static_fields->currentTouch, (int32_t)controller, v5, v6);
       v12 = UICamera_TypeInfo->static_fields;
       currentTouch = v12->currentTouch;
       v12->currentScheme = 0;
@@ -210,7 +212,7 @@ void UIKeyBinding__Update(UIKeyBinding_o *this, const MethodInfo *method)
       if ( !currentTouch )
         goto LABEL_44;
       currentTouch->fields.current = gameObject;
-      sub_1C36FFC((CGThumbnailListItem_o *)&currentTouch->fields.current, (int32_t)gameObject, v15, v16);
+      sub_1C3E508((CGThumbnailListItem_o *)&currentTouch->fields.current, (int32_t)gameObject, v16, v17);
       if ( KeyDown )
         ((void (__fastcall *)(UIKeyBinding_o *, __int64, const MethodInfo *))this->klass->vtable._8_OnBindingPress.methodPtr)(
           this,
@@ -226,18 +228,18 @@ void UIKeyBinding__Update(UIKeyBinding_o *this, const MethodInfo *method)
           this,
           this->klass->vtable._9_OnBindingClick.method);
       }
-      v19 = UICamera_TypeInfo;
+      v20 = UICamera_TypeInfo;
       if ( !UICamera_TypeInfo->_2.cctor_finished )
       {
         j_il2cpp_runtime_class_init_0(UICamera_TypeInfo);
-        v19 = UICamera_TypeInfo;
+        v20 = UICamera_TypeInfo;
       }
-      gameObject = (UnityEngine_GameObject_o *)v19->static_fields->currentTouch;
+      gameObject = (UnityEngine_GameObject_o *)v20->static_fields->currentTouch;
       if ( !gameObject )
 LABEL_44:
-        sub_1C372B4(gameObject);
+        sub_1C3E7C0(gameObject, v15);
       gameObject[2].fields.m_CachedPtr = 0;
-      sub_1C36FFC((CGThumbnailListItem_o *)&gameObject[2].fields, 0, v17, v18);
+      sub_1C3E508((CGThumbnailListItem_o *)&gameObject[2].fields, 0, v18, v19);
       action = this->fields.action;
     }
     if ( action == 1 )
@@ -256,28 +258,28 @@ LABEL_42:
     {
       if ( !this->fields.mIgnoreUp )
       {
-        v20 = UICamera_TypeInfo;
+        v21 = UICamera_TypeInfo;
         if ( !UICamera_TypeInfo->_2.cctor_finished )
         {
           j_il2cpp_runtime_class_init_0(UICamera_TypeInfo);
-          v20 = UICamera_TypeInfo;
+          v21 = UICamera_TypeInfo;
         }
-        if ( !v20->static_fields->inputHasFocus && this->fields.mPress )
+        if ( !v21->static_fields->inputHasFocus && this->fields.mPress )
         {
-          v21 = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
+          v22 = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
           if ( !UICamera_TypeInfo->_2.cctor_finished )
             j_il2cpp_runtime_class_init_0(UICamera_TypeInfo);
-          UICamera__set_selectedObject(v21, 0);
+          UICamera__set_selectedObject(v22, 0);
         }
       }
       this->fields.mIgnoreUp = 0;
     }
     else if ( this->fields.mPress )
     {
-      v22 = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
+      v23 = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
       if ( !UICamera_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(UICamera_TypeInfo);
-      UICamera__set_selectedObject(v22, 0);
+      UICamera__set_selectedObject(v23, 0);
     }
     goto LABEL_42;
   }

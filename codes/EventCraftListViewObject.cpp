@@ -1,9 +1,9 @@
 void EventCraftListViewObject___ctor(EventCraftListViewObject_o *this, const MethodInfo *method)
 {
-  if ( (byte_4C3D21A & 1) == 0 )
+  if ( (byte_4C50F9A & 1) == 0 )
   {
-    sub_1C37058(&ListViewObject_TypeInfo);
-    byte_4C3D21A = 1;
+    sub_1C3E564(&ListViewObject_TypeInfo);
+    byte_4C50F9A = 1;
   }
   if ( !ListViewObject_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(ListViewObject_TypeInfo);
@@ -13,23 +13,24 @@ void EventCraftListViewObject___ctor(EventCraftListViewObject_o *this, const Met
 
 void EventCraftListViewObject__Awake(EventCraftListViewObject_o *this, const MethodInfo *method)
 {
+  __int64 v3; // x1
   UnityEngine_GameObject_o *dispObject; // x0
   Il2CppObject *Component_object; // x0
 
-  if ( (byte_4C3D212 & 1) == 0 )
+  if ( (byte_4C50F92 & 1) == 0 )
   {
-    sub_1C37058(&Method_UnityEngine_GameObject_GetComponent_EventCraftListViewItemDraw___);
-    byte_4C3D212 = 1;
+    sub_1C3E564(&Method_UnityEngine_GameObject_GetComponent_EventCraftListViewItemDraw___);
+    byte_4C50F92 = 1;
   }
   ListViewObject__Awake((ListViewObject_o *)this, 0);
   dispObject = this->fields.dispObject;
   if ( !dispObject )
-    sub_1C372B4(0);
+    sub_1C3E7C0(0, v3);
   Component_object = UnityEngine_GameObject__GetComponent_object_(
                        dispObject,
-                       (const MethodInfo_313F1D8 *)Method_UnityEngine_GameObject_GetComponent_EventCraftListViewItemDraw___);
+                       (const MethodInfo_31510CC *)Method_UnityEngine_GameObject_GetComponent_EventCraftListViewItemDraw___);
   this->fields.itemDraw = (struct EventCraftListViewItemDraw_o *)Component_object;
-  sub_1C36FFC(&this->fields.itemDraw, Component_object);
+  sub_1C3E508(&this->fields.itemDraw, Component_object);
 }
 
 
@@ -38,22 +39,23 @@ UnityEngine_GameObject_o *EventCraftListViewObject__CreateDragObject(
         const MethodInfo *method)
 {
   UnityEngine_GameObject_o *DragObject; // x0
-  const MethodInfo *v4; // x3
+  __int64 v4; // x1
+  const MethodInfo *v5; // x3
 
-  if ( (byte_4C3D216 & 1) == 0 )
+  if ( (byte_4C50F96 & 1) == 0 )
   {
-    sub_1C37058(&Method_UnityEngine_GameObject_GetComponent_EventCraftListViewObject___);
-    byte_4C3D216 = 1;
+    sub_1C3E564(&Method_UnityEngine_GameObject_GetComponent_EventCraftListViewObject___);
+    byte_4C50F96 = 1;
   }
   DragObject = ListViewObject__CreateDragObject((ListViewObject_o *)this, 0);
   if ( !DragObject
     || (DragObject = (UnityEngine_GameObject_o *)UnityEngine_GameObject__GetComponent_object_(
                                                    DragObject,
-                                                   (const MethodInfo_313F1D8 *)Method_UnityEngine_GameObject_GetComponent_EventCraftListViewObject___)) == 0 )
+                                                   (const MethodInfo_31510CC *)Method_UnityEngine_GameObject_GetComponent_EventCraftListViewObject___)) == 0 )
   {
-    sub_1C372B4(DragObject);
+    sub_1C3E7C0(DragObject, v4);
   }
-  EventCraftListViewObject__Init((EventCraftListViewObject_o *)DragObject, 1, 0, v4);
+  EventCraftListViewObject__Init((EventCraftListViewObject_o *)DragObject, 1, 0, v5);
   return this->fields.dragObject;
 }
 
@@ -63,10 +65,10 @@ EventCraftListViewItem_o *EventCraftListViewObject__GetItem(EventCraftListViewOb
   struct ListViewItem_o *linkItem; // x8
   __int64 naturalAligment; // x11
 
-  if ( (byte_4C3D215 & 1) == 0 )
+  if ( (byte_4C50F95 & 1) == 0 )
   {
-    sub_1C37058(&EventCraftListViewItem_TypeInfo);
-    byte_4C3D215 = 1;
+    sub_1C3E564(&EventCraftListViewItem_TypeInfo);
+    byte_4C50F95 = 1;
   }
   linkItem = this->fields.linkItem;
   if ( !linkItem )
@@ -93,14 +95,15 @@ void EventCraftListViewObject__Init(
   struct ListViewItem_o *v11; // x21
   int32_t displayMode; // w26
   UnityEngine_Transform_o *transform; // x0
-  int32_t v14; // w0
-  const MethodInfo *v15; // x1
-  int32_t v16; // w8
+  __int64 v14; // x1
+  int32_t v15; // w0
+  const MethodInfo *v16; // x1
+  int32_t v17; // w8
 
-  if ( (byte_4C3D217 & 1) == 0 )
+  if ( (byte_4C50F97 & 1) == 0 )
   {
-    sub_1C37058(&EventCraftListViewItem_TypeInfo);
-    byte_4C3D217 = 1;
+    sub_1C3E564(&EventCraftListViewItem_TypeInfo);
+    byte_4C50F97 = 1;
   }
   linkItem = this->fields.linkItem;
   v8 = this->fields.state != 0;
@@ -131,33 +134,33 @@ void EventCraftListViewObject__Init(
     || (UnityEngine_Transform__set_localPosition(transform, this->fields.basePosition, 0),
         (transform = UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0)) == 0) )
   {
-    sub_1C372B4(transform);
+    sub_1C3E7C0(transform, v14);
   }
   UnityEngine_Transform__set_localScale(transform, this->fields.baseScale, 0);
-  v14 = EventCraftListViewItemDraw__GetDisplayMode(initMode, (EventCraftListViewItem_o *)v11, 0);
-  this->fields.displayMode = v14;
+  v15 = EventCraftListViewItemDraw__GetDisplayMode(initMode, (EventCraftListViewItem_o *)v11, 0);
+  this->fields.displayMode = v15;
   if ( (unsigned int)initMode > 2 )
-    v16 = 0;
+    v17 = 0;
   else
-    v16 = dword_C465D4[initMode];
-  this->fields.state = v16;
-  if ( !v9 || !v8 || displayMode != v14 )
-    EventCraftListViewObject__SetupDisplay(this, v15);
+    v17 = dword_C49C44[initMode];
+  this->fields.state = v17;
+  if ( !v9 || !v8 || displayMode != v15 )
+    EventCraftListViewObject__SetupDisplay(this, v16);
   ActionExtensions__Call(onMoveEnd, 0);
 }
 
 
 void EventCraftListViewObject__OnClickCraftStartButton(EventCraftListViewObject_o *this, const MethodInfo *method)
 {
-  if ( (byte_4C3D219 & 1) == 0 )
+  if ( (byte_4C50F99 & 1) == 0 )
   {
-    sub_1C37058(&Method_ActionExtensions_Call_EventCraftListViewObject___);
-    byte_4C3D219 = 1;
+    sub_1C3E564(&Method_ActionExtensions_Call_EventCraftListViewObject___);
+    byte_4C50F99 = 1;
   }
   ActionExtensions__Call_object_(
     (System_Action_T__o *)this->fields.startAction,
     (Il2CppObject *)this,
-    (const MethodInfo_3034548 *)Method_ActionExtensions_Call_EventCraftListViewObject___);
+    (const MethodInfo_3046360 *)Method_ActionExtensions_Call_EventCraftListViewObject___);
 }
 
 
@@ -167,7 +170,7 @@ void EventCraftListViewObject__OnClickReceiveButton(EventCraftListViewObject_o *
 
   receiveAction = this->fields.receiveAction;
   if ( !receiveAction )
-    sub_1C372B4(this);
+    sub_1C3E7C0(this, method);
   ((void (__fastcall *)(intptr_t, EventCraftListViewObject_o *, intptr_t))receiveAction->fields.invoke_impl)(
     receiveAction->fields.method_code,
     this,
@@ -181,7 +184,7 @@ void EventCraftListViewObject__OnClickReplenishmentButton(EventCraftListViewObje
 
   replenishmentAction = this->fields.replenishmentAction;
   if ( !replenishmentAction )
-    sub_1C372B4(this);
+    sub_1C3E7C0(this, method);
   ((void (__fastcall *)(intptr_t, EventCraftListViewObject_o *, intptr_t))replenishmentAction->fields.invoke_impl)(
     replenishmentAction->fields.method_code,
     this,
@@ -195,7 +198,7 @@ void EventCraftListViewObject__OnClickSupportToolButton(EventCraftListViewObject
 
   supportToolAction = this->fields.supportToolAction;
   if ( !supportToolAction )
-    sub_1C372B4(this);
+    sub_1C3E7C0(this, method);
   ((void (__fastcall *)(intptr_t, EventCraftListViewObject_o *, intptr_t))supportToolAction->fields.invoke_impl)(
     supportToolAction->fields.method_code,
     this,
@@ -209,7 +212,7 @@ void EventCraftListViewObject__OnClickWithdrawalButton(EventCraftListViewObject_
 
   withdrawalAction = this->fields.withdrawalAction;
   if ( !withdrawalAction )
-    sub_1C372B4(this);
+    sub_1C3E7C0(this, method);
   ((void (__fastcall *)(intptr_t, EventCraftListViewObject_o *, intptr_t))withdrawalAction->fields.invoke_impl)(
     withdrawalAction->fields.method_code,
     this,
@@ -224,11 +227,11 @@ void EventCraftListViewObject__OnDestroy(EventCraftListViewObject_o *this, const
   struct UnityEngine_GameObject_o *dragObject; // t1
   UnityEngine_Object_o *v6; // x20
 
-  if ( (byte_4C3D214 & 1) == 0 )
+  if ( (byte_4C50F94 & 1) == 0 )
   {
-    sub_1C37058(&NGUITools_TypeInfo);
-    sub_1C37058(&UnityEngine_Object_TypeInfo);
-    byte_4C3D214 = 1;
+    sub_1C3E564(&NGUITools_TypeInfo);
+    sub_1C3E564(&UnityEngine_Object_TypeInfo);
+    byte_4C50F94 = 1;
   }
   dragObject = this->fields.dragObject;
   p_dragObject = &this->fields.dragObject;
@@ -242,7 +245,7 @@ void EventCraftListViewObject__OnDestroy(EventCraftListViewObject_o *this, const
       j_il2cpp_runtime_class_init_0(NGUITools_TypeInfo);
     NGUITools__Destroy(v6, 0);
     *p_dragObject = 0;
-    sub_1C36FFC(p_dragObject, 0);
+    sub_1C3E508(p_dragObject, 0);
   }
 }
 
@@ -254,7 +257,7 @@ void EventCraftListViewObject__SetItem(
         const MethodInfo *method)
 {
   this->fields.state = 0;
-  ListViewObject__SetItem_43831492((ListViewObject_o *)this, item, seed, 0);
+  ListViewObject__SetItem_43886976((ListViewObject_o *)this, item, seed, 0);
 }
 
 
@@ -268,15 +271,15 @@ void EventCraftListViewObject__SetOnClickAction(
         const MethodInfo *method)
 {
   this->fields.startAction = start;
-  sub_1C36FFC(&this->fields.startAction, start);
+  sub_1C3E508(&this->fields.startAction, start);
   this->fields.receiveAction = receive;
-  sub_1C36FFC(&this->fields.receiveAction, receive);
+  sub_1C3E508(&this->fields.receiveAction, receive);
   this->fields.replenishmentAction = replenishment;
-  sub_1C36FFC(&this->fields.replenishmentAction, replenishment);
+  sub_1C3E508(&this->fields.replenishmentAction, replenishment);
   this->fields.withdrawalAction = withdrawal;
-  sub_1C36FFC(&this->fields.withdrawalAction, withdrawal);
+  sub_1C3E508(&this->fields.withdrawalAction, withdrawal);
   this->fields.supportToolAction = supportTool;
-  sub_1C36FFC(&this->fields.supportToolAction, supportTool);
+  sub_1C3E508(&this->fields.supportToolAction, supportTool);
 }
 
 
@@ -286,13 +289,14 @@ void EventCraftListViewObject__SetupDisplay(EventCraftListViewObject_o *this, co
   __int64 naturalAligment; // x10
   bool v5; // w1
   UnityEngine_Object_o *itemDraw; // x21
-  EventCraftListViewItemDraw_o *v7; // x0
+  __int64 v7; // x1
+  EventCraftListViewItemDraw_o *v8; // x0
 
-  if ( (byte_4C3D218 & 1) == 0 )
+  if ( (byte_4C50F98 & 1) == 0 )
   {
-    sub_1C37058(&EventCraftListViewItem_TypeInfo);
-    sub_1C37058(&UnityEngine_Object_TypeInfo);
-    byte_4C3D218 = 1;
+    sub_1C3E564(&EventCraftListViewItem_TypeInfo);
+    sub_1C3E564(&UnityEngine_Object_TypeInfo);
+    byte_4C50F98 = 1;
   }
   linkItem = this->fields.linkItem;
   if ( !linkItem )
@@ -314,14 +318,14 @@ LABEL_8:
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   if ( !UnityEngine_Object__op_Equality(itemDraw, 0, 0) )
   {
-    v7 = this->fields.itemDraw;
-    if ( !v7
-      || (EventCraftListViewItemDraw__SetItem(v7, (EventCraftListViewItem_o *)linkItem, this->fields.displayMode, 0),
-          (v7 = this->fields.itemDraw) == 0) )
+    v8 = this->fields.itemDraw;
+    if ( !v8
+      || (EventCraftListViewItemDraw__SetItem(v8, (EventCraftListViewItem_o *)linkItem, this->fields.displayMode, 0),
+          (v8 = this->fields.itemDraw) == 0) )
     {
-      sub_1C372B4(v7);
+      sub_1C3E7C0(v8, v7);
     }
-    EventCraftListViewItemDraw__UpdateItem(v7, (EventCraftListViewItem_o *)linkItem, this->fields.displayMode, 0);
+    EventCraftListViewItemDraw__UpdateItem(v8, (EventCraftListViewItem_o *)linkItem, this->fields.displayMode, 0);
   }
 }
 
@@ -332,14 +336,15 @@ void EventCraftListViewObject__Update(EventCraftListViewObject_o *this, const Me
   __int64 naturalAligment; // x11
   EventCraftListViewItem_c *v5; // x10
   EventCraftListViewItem_o *v6; // x20
+  __int64 v7; // x1
   float time; // s8
   EventCraftListViewItemDraw_o *itemDraw; // x0
 
-  if ( (byte_4C3D213 & 1) == 0 )
+  if ( (byte_4C50F93 & 1) == 0 )
   {
-    sub_1C37058(&EventCraftListViewItem_TypeInfo);
-    sub_1C37058(&System_Math_TypeInfo);
-    byte_4C3D213 = 1;
+    sub_1C3E564(&EventCraftListViewItem_TypeInfo);
+    sub_1C3E564(&System_Math_TypeInfo);
+    byte_4C50F93 = 1;
   }
   linkItem = this->fields.linkItem;
   if ( linkItem )
@@ -358,7 +363,7 @@ void EventCraftListViewObject__Update(EventCraftListViewObject_o *this, const Me
         itemDraw = this->fields.itemDraw;
         this->fields.updatedTime = floorf(time);
         if ( !itemDraw )
-          sub_1C372B4(0);
+          sub_1C3E7C0(0, v7);
         EventCraftListViewItemDraw__UpdateItem(itemDraw, v6, this->fields.displayMode, 0);
       }
     }
@@ -375,7 +380,7 @@ void EventCraftListViewObject__UpdateItem(
 
   itemDraw = this->fields.itemDraw;
   if ( !itemDraw )
-    sub_1C372B4(0);
+    sub_1C3E7C0(0, item);
   EventCraftListViewItemDraw__UpdateItem(itemDraw, item, this->fields.displayMode, 0);
 }
 

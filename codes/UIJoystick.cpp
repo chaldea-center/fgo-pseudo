@@ -4,10 +4,10 @@ void UIJoystick___ctor(UIJoystick_o *this, const MethodInfo *method)
   __int64 v4; // d1
   float z; // s2
 
-  if ( !byte_4C3C926 )
+  if ( !byte_4C506A6 )
   {
-    sub_1C37058(&UnityEngine_Vector3_TypeInfo);
-    byte_4C3C926 = 1;
+    sub_1C3E564(&UnityEngine_Vector3_TypeInfo);
+    byte_4C506A6 = 1;
   }
   static_fields = UnityEngine_Vector3_TypeInfo->static_fields;
   v4 = *(_QWORD *)&static_fields->oneVector.fields.x;
@@ -67,10 +67,10 @@ void UIJoystick__LateUpdate(UIJoystick_o *this, const MethodInfo *method)
     if ( this->fields.circularPadConstraint )
     {
       v7 = this->fields.range.fields.x;
-      if ( !byte_4C40E72 )
+      if ( !byte_4C54C0F )
       {
-        sub_1C37058(&System_Math_TypeInfo);
-        byte_4C40E72 = 1;
+        sub_1C3E564(&System_Math_TypeInfo);
+        byte_4C54C0F = 1;
       }
       v8 = (float)(z * z) + (float)((float)(x * x) + (float)(y * y));
       if ( v8 <= (float)(v7 * v7) )
@@ -114,7 +114,7 @@ void UIJoystick__LateUpdate(UIJoystick_o *this, const MethodInfo *method)
     target = (UnityEngine_Component_o *)this->fields.target;
     if ( !target || (target = (UnityEngine_Component_o *)UnityEngine_Component__get_transform(target, 0)) == 0 )
 LABEL_36:
-      sub_1C372B4(target);
+      sub_1C3E7C0(target, method);
     v30.fields.x = x;
     v30.fields.y = v10;
     v30.fields.z = z;
@@ -122,10 +122,10 @@ LABEL_36:
     v18 = this->fields.mStartLocalPos.fields.x;
     v19 = this->fields.mStartLocalPos.fields.y;
     v20 = this->fields.mStartLocalPos.fields.z;
-    if ( !byte_4C3C923 )
+    if ( !byte_4C506A3 )
     {
-      sub_1C37058(&System_Math_TypeInfo);
-      byte_4C3C923 = 1;
+      sub_1C3E564(&System_Math_TypeInfo);
+      byte_4C506A3 = 1;
     }
     v21 = x - v18;
     v22 = v10 - v19;
@@ -134,18 +134,18 @@ LABEL_36:
       j_il2cpp_runtime_class_init_0(System_Math_TypeInfo);
     if ( sqrtf((float)((float)(v21 * v21) + (float)(v22 * v22)) + (float)(v23 * v23)) <= this->fields.deadZone )
     {
-      if ( !byte_4C3C81A )
+      if ( !byte_4C5059A )
       {
-        sub_1C37058(&UnityEngine_Vector2_TypeInfo);
-        byte_4C3C81A = 1;
+        sub_1C3E564(&UnityEngine_Vector2_TypeInfo);
+        byte_4C5059A = 1;
       }
       zeroVector = UnityEngine_Vector2_TypeInfo->static_fields->zeroVector;
       this->fields.padAngle = 0.0;
       this->fields.padPosition = zeroVector;
-      if ( !byte_4C3C921 )
+      if ( !byte_4C506A1 )
       {
-        sub_1C37058(&UnityEngine_Vector3_TypeInfo);
-        byte_4C3C921 = 1;
+        sub_1C3E564(&UnityEngine_Vector3_TypeInfo);
+        byte_4C506A1 = 1;
       }
       static_fields = UnityEngine_Vector3_TypeInfo->static_fields;
       v24 = static_fields->zeroVector.fields.x;
@@ -172,52 +172,53 @@ LABEL_36:
 void UIJoystick__OnDrag(UIJoystick_o *this, UnityEngine_Vector2_o delta, const MethodInfo *method)
 {
   UnityEngine_GameObject_o *gameObject; // x20
+  __int64 v5; // x1
   void *target; // x0
   struct UICamera_StaticFields *static_fields; // x8
   struct UICamera_MouseOrTouch_o *currentTouch; // x9
-  __int64 v8; // x9
-  __int64 v9; // x8
+  __int64 v9; // x9
+  __int64 v10; // x8
   float z; // s9
   float x; // s8
   float y; // s15
   float m_Distance; // s10
-  float v14; // s14
-  __int64 v15; // kr00_8
-  float v16; // s12
-  struct UnityEngine_Mathf_StaticFields *v17; // x8
-  float v18; // s0
+  float v15; // s14
+  __int64 v16; // kr00_8
+  float v17; // s12
+  struct UnityEngine_Mathf_StaticFields *v18; // x8
   float v19; // s0
-  float v20; // s3
-  float v21; // s4
-  float v22; // s5
-  float v23; // s0 OVERLAPPED
-  float v24; // s1
-  float v25; // s2
-  float v26; // s0
-  float v27; // s1
-  float v28; // s2
-  UnityEngine_Ray_o v29; // [xsp+8h] [xbp-98h] BYREF
-  UnityEngine_Ray_o v30; // [xsp+20h] [xbp-80h] BYREF
-  UnityEngine_Vector3_o v31; // 0:s0.4,4:s1.4,8:s2.4
+  float v20; // s0
+  float v21; // s3
+  float v22; // s4
+  float v23; // s5
+  float v24; // s0 OVERLAPPED
+  float v25; // s1
+  float v26; // s2
+  float v27; // s0
+  float v28; // s1
+  float v29; // s2
+  UnityEngine_Ray_o v30; // [xsp+8h] [xbp-98h] BYREF
+  UnityEngine_Ray_o v31; // [xsp+20h] [xbp-80h] BYREF
+  UnityEngine_Vector3_o v32; // 0:s0.4,4:s1.4,8:s2.4
   UnityEngine_Vector3_o Point; // 0:s0.4,4:s1.4,8:s2.4
   UnityEngine_Vector3_o mLastPos; // 0:s0.4,4:s1.4,8:s2.4
-  UnityEngine_Vector3_o v34; // 0:s0.4,4:s1.4,8:s2.4
   UnityEngine_Vector3_o v35; // 0:s0.4,4:s1.4,8:s2.4
   UnityEngine_Vector3_o v36; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o v37; // 0:s0.4,4:s1.4,8:s2.4
 
-  if ( (byte_4C40DF4 & 1) == 0 )
+  if ( (byte_4C54B91 & 1) == 0 )
   {
-    sub_1C37058(&NGUITools_TypeInfo);
-    sub_1C37058(&UICamera_TypeInfo);
-    byte_4C40DF4 = 1;
+    sub_1C3E564(&NGUITools_TypeInfo);
+    sub_1C3E564(&UICamera_TypeInfo);
+    byte_4C54B91 = 1;
   }
-  memset(&v30, 0, sizeof(v30));
+  memset(&v31, 0, sizeof(v31));
   if ( UnityEngine_Behaviour__get_enabled((UnityEngine_Behaviour_o *)this, 0) )
   {
     gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
     if ( !NGUITools_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(NGUITools_TypeInfo);
-    if ( NGUITools__GetActive_49345096(gameObject, 0) )
+    if ( NGUITools__GetActive_49418336(gameObject, 0) )
     {
       target = UICamera_TypeInfo;
       if ( !UICamera_TypeInfo->_2.cctor_finished )
@@ -246,91 +247,91 @@ void UIJoystick__OnDrag(UIJoystick_o *this, UnityEngine_Vector2_o delta, const M
         j_il2cpp_runtime_class_init_0(target);
         target = UICamera_TypeInfo;
       }
-      v8 = *((_QWORD *)target + 23);
-      v9 = *(_QWORD *)(v8 + 160);
-      if ( !v9 )
+      v9 = *((_QWORD *)target + 23);
+      v10 = *(_QWORD *)(v9 + 160);
+      if ( !v10 )
         goto LABEL_32;
-      target = *(void **)(v8 + 136);
+      target = *(void **)(v9 + 136);
       if ( !target )
         goto LABEL_32;
-      v31.fields.x = *(float *)(v9 + 16);
-      v31.fields.y = *(float *)(v9 + 20);
-      v31.fields.z = 0.0;
-      UnityEngine_Camera__ScreenPointToRay_71073508(&v29, (UnityEngine_Camera_o *)target, v31, 0);
-      v30 = v29;
-      z = v29.fields.m_Origin.fields.z;
+      v32.fields.x = *(float *)(v10 + 16);
+      v32.fields.y = *(float *)(v10 + 20);
+      v32.fields.z = 0.0;
+      UnityEngine_Camera__ScreenPointToRay_71148320(&v30, (UnityEngine_Camera_o *)target, v32, 0);
+      v31 = v30;
+      z = v30.fields.m_Origin.fields.z;
       x = this->fields.mPlane.fields.m_Normal.fields.x;
       y = this->fields.mPlane.fields.m_Normal.fields.y;
-      v14 = this->fields.mPlane.fields.m_Normal.fields.z;
+      v15 = this->fields.mPlane.fields.m_Normal.fields.z;
       m_Distance = this->fields.mPlane.fields.m_Distance;
-      v15 = *(_QWORD *)&v29.fields.m_Origin.fields.x;
-      v16 = (float)(v29.fields.m_Direction.fields.z * v14)
-          + (float)((float)(v29.fields.m_Direction.fields.x * x) + (float)(v29.fields.m_Direction.fields.y * y));
-      if ( !byte_4C3C925 )
+      v16 = *(_QWORD *)&v30.fields.m_Origin.fields.x;
+      v17 = (float)(v30.fields.m_Direction.fields.z * v15)
+          + (float)((float)(v30.fields.m_Direction.fields.x * x) + (float)(v30.fields.m_Direction.fields.y * y));
+      if ( !byte_4C506A5 )
       {
-        sub_1C37058(&UnityEngine_Mathf_TypeInfo);
-        byte_4C3C925 = 1;
+        sub_1C3E564(&UnityEngine_Mathf_TypeInfo);
+        byte_4C506A5 = 1;
       }
-      v17 = UnityEngine_Mathf_TypeInfo->static_fields;
-      v18 = fmaxf(fabsf(v16), 0.0) * 0.000001;
-      if ( v18 <= (float)(v17->Epsilon * 8.0) )
-        v18 = v17->Epsilon * 8.0;
-      if ( vabds_f32(0.0, v16) >= v18 )
+      v18 = UnityEngine_Mathf_TypeInfo->static_fields;
+      v19 = fmaxf(fabsf(v17), 0.0) * 0.000001;
+      if ( v19 <= (float)(v18->Epsilon * 8.0) )
+        v19 = v18->Epsilon * 8.0;
+      if ( vabds_f32(0.0, v17) >= v19 )
       {
-        v19 = (float)((float)-(float)((float)(z * v14)
-                                    + (float)((float)(*(float *)&v15 * x) + (float)(*((float *)&v15 + 1) * y)))
+        v20 = (float)((float)-(float)((float)(z * v15)
+                                    + (float)((float)(*(float *)&v16 * x) + (float)(*((float *)&v16 + 1) * y)))
                     - m_Distance)
-            / v16;
-        if ( v19 > 0.0 )
+            / v17;
+        if ( v20 > 0.0 )
         {
-          Point = UnityEngine_Ray__GetPoint(&v30, v19, 0);
-          v20 = Point.fields.x;
-          v21 = Point.fields.y;
-          v22 = Point.fields.z;
+          Point = UnityEngine_Ray__GetPoint(&v31, v20, 0);
+          v21 = Point.fields.x;
+          v22 = Point.fields.y;
+          v23 = Point.fields.z;
           mLastPos = this->fields.mLastPos;
-          this->fields.mLastPos.fields.x = v20;
-          this->fields.mLastPos.fields.y = v21;
-          v23 = v20 - mLastPos.fields.x;
-          v24 = v21 - mLastPos.fields.y;
-          v25 = v22 - mLastPos.fields.z;
-          this->fields.mLastPos.fields.z = v22;
-          if ( v23 != 0.0 || v24 != 0.0 )
+          this->fields.mLastPos.fields.x = v21;
+          this->fields.mLastPos.fields.y = v22;
+          v24 = v21 - mLastPos.fields.x;
+          v25 = v22 - mLastPos.fields.y;
+          v26 = v23 - mLastPos.fields.z;
+          this->fields.mLastPos.fields.z = v23;
+          if ( v24 != 0.0 || v25 != 0.0 )
           {
             target = this->fields.target;
             if ( !target )
               goto LABEL_32;
-            v34 = UnityEngine_Transform__InverseTransformDirection(
+            v35 = UnityEngine_Transform__InverseTransformDirection(
                     (UnityEngine_Transform_o *)target,
-                    *(UnityEngine_Vector3_o *)&v23,
+                    *(UnityEngine_Vector3_o *)&v24,
                     0);
             target = this->fields.target;
             if ( !target )
               goto LABEL_32;
-            v35.fields.z = v34.fields.z * this->fields.scale.fields.z;
-            v35.fields.y = v34.fields.y * this->fields.scale.fields.y;
-            v35.fields.x = v34.fields.x * this->fields.scale.fields.x;
-            *(UnityEngine_Vector3_o *)&v23 = UnityEngine_Transform__TransformDirection(
+            v36.fields.z = v35.fields.z * this->fields.scale.fields.z;
+            v36.fields.y = v35.fields.y * this->fields.scale.fields.y;
+            v36.fields.x = v35.fields.x * this->fields.scale.fields.x;
+            *(UnityEngine_Vector3_o *)&v24 = UnityEngine_Transform__TransformDirection(
                                                (UnityEngine_Transform_o *)target,
-                                               v35,
+                                               v36,
                                                0);
           }
           target = this->fields.target;
-          v26 = v23 + this->fields.totalOffset.fields.x;
-          v27 = v24 + this->fields.totalOffset.fields.y;
-          v28 = v25 + this->fields.totalOffset.fields.z;
-          this->fields.totalOffset.fields.x = v26;
-          this->fields.totalOffset.fields.y = v27;
-          this->fields.totalOffset.fields.z = v28;
+          v27 = v24 + this->fields.totalOffset.fields.x;
+          v28 = v25 + this->fields.totalOffset.fields.y;
+          v29 = v26 + this->fields.totalOffset.fields.z;
+          this->fields.totalOffset.fields.x = v27;
+          this->fields.totalOffset.fields.y = v28;
+          this->fields.totalOffset.fields.z = v29;
           if ( target )
           {
-            v36.fields.z = v28 + this->fields.mStartPos.fields.z;
-            v36.fields.y = v27 + this->fields.mStartPos.fields.y;
-            v36.fields.x = v26 + this->fields.mStartPos.fields.x;
-            UnityEngine_Transform__set_position((UnityEngine_Transform_o *)target, v36, 0);
+            v37.fields.z = v29 + this->fields.mStartPos.fields.z;
+            v37.fields.y = v28 + this->fields.mStartPos.fields.y;
+            v37.fields.x = v27 + this->fields.mStartPos.fields.x;
+            UnityEngine_Transform__set_position((UnityEngine_Transform_o *)target, v37, 0);
             return;
           }
 LABEL_32:
-          sub_1C372B4(target);
+          sub_1C3E7C0(target, v5);
         }
       }
     }
@@ -342,40 +343,41 @@ void UIJoystick__OnPress(UIJoystick_o *this, bool pressed, const MethodInfo *met
 {
   UnityEngine_GameObject_o *gameObject; // x21
   UnityEngine_Transform_o *transform; // x0
+  __int64 v7; // x1
   struct UnityEngine_Vector3_StaticFields *static_fields; // x8
   float z; // s1
-  UICamera_c *v9; // x0
+  UICamera_c *v10; // x0
   float x; // s8
   float y; // s9
-  float v12; // s10
+  float v13; // s10
   float w; // s11
-  float v14; // s11
-  float v15; // s12
-  float v16; // s13
-  float v17; // s8
-  float v18; // s9
-  float v19; // s10
-  float v20; // s2
-  float v21; // s0
-  float v22; // s1
-  float v23; // s2
-  struct UnityEngine_Vector3_StaticFields *v24; // x8
-  UnityEngine_Vector3_o v25; // 0:s0.4,4:s1.4,8:s2.4
+  float v15; // s11
+  float v16; // s12
+  float v17; // s13
+  float v18; // s8
+  float v19; // s9
+  float v20; // s10
+  float v21; // s2
+  float v22; // s0
+  float v23; // s1
+  float v24; // s2
+  struct UnityEngine_Vector3_StaticFields *v25; // x8
+  UnityEngine_Vector3_o v26; // 0:s0.4,4:s1.4,8:s2.4
   UnityEngine_Quaternion_o rotation; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
-  UnityEngine_Quaternion_o v27; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
+  UnityEngine_Quaternion_o v28; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 
-  if ( (byte_4C40DF3 & 1) == 0 )
+  if ( (byte_4C54B90 & 1) == 0 )
   {
-    sub_1C37058(&NGUITools_TypeInfo);
-    sub_1C37058(&UICamera_TypeInfo);
-    byte_4C40DF3 = 1;
+    sub_1C3E564(&NGUITools_TypeInfo);
+    sub_1C3E564(&UICamera_TypeInfo);
+    byte_4C54B90 = 1;
   }
   if ( UnityEngine_Behaviour__get_enabled((UnityEngine_Behaviour_o *)this, 0) )
   {
     gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
     if ( !NGUITools_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(NGUITools_TypeInfo);
-    if ( NGUITools__GetActive_49345096(gameObject, 0) )
+    if ( NGUITools__GetActive_49418336(gameObject, 0) )
     {
       this->fields.mPressed = pressed;
       if ( pressed )
@@ -397,22 +399,22 @@ void UIJoystick__OnPress(UIJoystick_o *this, bool pressed, const MethodInfo *met
         {
           UnityEngine_Transform__set_position(transform, this->fields.mStartPos, 0);
           this->fields.mDragStarted = 0;
-          if ( !byte_4C3C921 )
+          if ( !byte_4C506A1 )
           {
-            sub_1C37058(&UnityEngine_Vector3_TypeInfo);
-            byte_4C3C921 = 1;
+            sub_1C3E564(&UnityEngine_Vector3_TypeInfo);
+            byte_4C506A1 = 1;
           }
           static_fields = UnityEngine_Vector3_TypeInfo->static_fields;
           z = static_fields->zeroVector.fields.z;
           *(_QWORD *)&this->fields.totalOffset.fields.x = *(_QWORD *)&static_fields->zeroVector.fields.x;
           this->fields.totalOffset.fields.z = z;
-          v9 = UICamera_TypeInfo;
+          v10 = UICamera_TypeInfo;
           if ( !UICamera_TypeInfo->_2.cctor_finished )
           {
             j_il2cpp_runtime_class_init_0(UICamera_TypeInfo);
-            v9 = UICamera_TypeInfo;
+            v10 = UICamera_TypeInfo;
           }
-          transform = (UnityEngine_Transform_o *)v9->static_fields->currentCamera;
+          transform = (UnityEngine_Transform_o *)v10->static_fields->currentCamera;
           if ( transform )
           {
             transform = UnityEngine_Component__get_transform((UnityEngine_Component_o *)transform, 0);
@@ -421,64 +423,64 @@ void UIJoystick__OnPress(UIJoystick_o *this, bool pressed, const MethodInfo *met
               rotation = UnityEngine_Transform__get_rotation(transform, 0);
               x = rotation.fields.x;
               y = rotation.fields.y;
-              v12 = rotation.fields.z;
+              v13 = rotation.fields.z;
               w = rotation.fields.w;
-              if ( !byte_4C3F7D9 )
+              if ( !byte_4C53574 )
               {
-                sub_1C37058(&UnityEngine_Vector3_TypeInfo);
-                byte_4C3F7D9 = 1;
+                sub_1C3E564(&UnityEngine_Vector3_TypeInfo);
+                byte_4C53574 = 1;
               }
-              v27.fields.x = x;
-              v27.fields.y = y;
-              v27.fields.z = v12;
-              v27.fields.w = w;
-              v25 = UnityEngine_Quaternion__op_Multiply_71206052(
-                      v27,
+              v28.fields.x = x;
+              v28.fields.y = y;
+              v28.fields.z = v13;
+              v28.fields.w = w;
+              v26 = UnityEngine_Quaternion__op_Multiply_71280864(
+                      v28,
                       UnityEngine_Vector3_TypeInfo->static_fields->backVector,
                       0);
-              v14 = this->fields.mLastPos.fields.x;
-              v15 = this->fields.mLastPos.fields.y;
-              v16 = this->fields.mLastPos.fields.z;
-              v17 = v25.fields.x;
-              v18 = v25.fields.y;
-              v19 = v25.fields.z;
-              if ( !byte_4C3C924 )
+              v15 = this->fields.mLastPos.fields.x;
+              v16 = this->fields.mLastPos.fields.y;
+              v17 = this->fields.mLastPos.fields.z;
+              v18 = v26.fields.x;
+              v19 = v26.fields.y;
+              v20 = v26.fields.z;
+              if ( !byte_4C506A4 )
               {
-                sub_1C37058(&System_Math_TypeInfo);
-                byte_4C3C924 = 1;
+                sub_1C3E564(&System_Math_TypeInfo);
+                byte_4C506A4 = 1;
               }
               if ( !System_Math_TypeInfo->_2.cctor_finished )
                 j_il2cpp_runtime_class_init_0(System_Math_TypeInfo);
-              v20 = sqrtf((float)(v19 * v19) + (float)((float)(v17 * v17) + (float)(v18 * v18)));
-              if ( v20 <= 0.00001 )
+              v21 = sqrtf((float)(v20 * v20) + (float)((float)(v18 * v18) + (float)(v19 * v19)));
+              if ( v21 <= 0.00001 )
               {
-                if ( !byte_4C3C921 )
+                if ( !byte_4C506A1 )
                 {
-                  sub_1C37058(&UnityEngine_Vector3_TypeInfo);
-                  byte_4C3C921 = 1;
+                  sub_1C3E564(&UnityEngine_Vector3_TypeInfo);
+                  byte_4C506A1 = 1;
                 }
-                v24 = UnityEngine_Vector3_TypeInfo->static_fields;
-                v21 = v24->zeroVector.fields.x;
-                v22 = v24->zeroVector.fields.y;
-                v23 = v24->zeroVector.fields.z;
+                v25 = UnityEngine_Vector3_TypeInfo->static_fields;
+                v22 = v25->zeroVector.fields.x;
+                v23 = v25->zeroVector.fields.y;
+                v24 = v25->zeroVector.fields.z;
               }
               else
               {
-                v21 = v17 / v20;
-                v22 = v18 / v20;
-                v23 = v19 / v20;
+                v22 = v18 / v21;
+                v23 = v19 / v21;
+                v24 = v20 / v21;
               }
-              this->fields.mPlane.fields.m_Normal.fields.x = v21;
-              this->fields.mPlane.fields.m_Normal.fields.y = v22;
-              this->fields.mPlane.fields.m_Normal.fields.z = v23;
-              this->fields.mPlane.fields.m_Distance = -(float)((float)(v16 * v23)
-                                                             + (float)((float)(v14 * v21) + (float)(v15 * v22)));
+              this->fields.mPlane.fields.m_Normal.fields.x = v22;
+              this->fields.mPlane.fields.m_Normal.fields.y = v23;
+              this->fields.mPlane.fields.m_Normal.fields.z = v24;
+              this->fields.mPlane.fields.m_Distance = -(float)((float)(v17 * v24)
+                                                             + (float)((float)(v15 * v22) + (float)(v16 * v23)));
               return;
             }
           }
         }
 LABEL_32:
-        sub_1C372B4(transform);
+        sub_1C3E7C0(transform, v7);
       }
     }
   }
@@ -493,7 +495,7 @@ void UIJoystick__Start(UIJoystick_o *this, const MethodInfo *method)
 
   transform = UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0);
   this->fields.target = transform;
-  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.target, (int32_t)transform, v4, v5);
+  sub_1C3E508((CGThumbnailListItem_o *)&this->fields.target, (int32_t)transform, v4, v5);
 }
 
 
@@ -533,7 +535,7 @@ void UIJoystick__Update(UIJoystick_o *this, const MethodInfo *method)
     v4 = this->fields.target;
     if ( !v4 )
 LABEL_9:
-      sub_1C372B4(target);
+      sub_1C3E7C0(target, method);
     v18 = UnityEngine_Transform__get_position(this->fields.target, 0);
     x = this->fields.mStartPos.fields.x;
     y = this->fields.mStartPos.fields.y;

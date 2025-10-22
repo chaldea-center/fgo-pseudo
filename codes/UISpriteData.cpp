@@ -4,14 +4,14 @@ void UISpriteData___ctor(UISpriteData_o *this, const MethodInfo *method)
   const MethodInfo *v3; // x3
   int32_t v5; // w1
 
-  if ( (byte_4C47892 & 1) == 0 )
+  if ( (byte_4C5B689 & 1) == 0 )
   {
-    sub_1C37058(&StringLiteral_13007/*"Sprite"*/);
-    byte_4C47892 = 1;
+    sub_1C3E564(&StringLiteral_13015/*"Sprite"*/);
+    byte_4C5B689 = 1;
   }
-  v5 = StringLiteral_13007/*"Sprite"*/;
-  this->fields.name = (struct System_String_o *)StringLiteral_13007/*"Sprite"*/;
-  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields, v5, v2, v3);
+  v5 = StringLiteral_13015/*"Sprite"*/;
+  this->fields.name = (struct System_String_o *)StringLiteral_13015/*"Sprite"*/;
+  sub_1C3E508((CGThumbnailListItem_o *)&this->fields, v5, v2, v3);
   System_Object___ctor((Il2CppObject *)this, 0);
 }
 
@@ -19,7 +19,7 @@ void UISpriteData___ctor(UISpriteData_o *this, const MethodInfo *method)
 void UISpriteData__CopyBorderFrom(UISpriteData_o *this, UISpriteData_o *sd, const MethodInfo *method)
 {
   if ( !sd )
-    sub_1C372B4(this);
+    sub_1C3E7C0(this, 0);
   *(_OWORD *)&this->fields.borderLeft = *(_OWORD *)&sd->fields.borderLeft;
 }
 
@@ -31,11 +31,11 @@ void UISpriteData__CopyFrom(UISpriteData_o *this, UISpriteData_o *sd, const Meth
   UISpriteData_Fields *p_fields; // x20
 
   if ( !sd )
-    sub_1C372B4(this);
+    sub_1C3E7C0(this, 0);
   name = sd->fields.name;
   this->fields.name = name;
   p_fields = &this->fields;
-  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields, (int32_t)name, (int32_t)method, v3);
+  sub_1C3E508((CGThumbnailListItem_o *)&this->fields, (int32_t)name, (int32_t)method, v3);
   *(_OWORD *)&p_fields->x = *(_OWORD *)&sd->fields.x;
   *(_OWORD *)&p_fields->borderLeft = *(_OWORD *)&sd->fields.borderLeft;
   *(_OWORD *)&p_fields->paddingLeft = *(_OWORD *)&sd->fields.paddingLeft;

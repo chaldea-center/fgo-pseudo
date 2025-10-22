@@ -1,9 +1,9 @@
 void FBXAnimclips___cctor(const MethodInfo *method)
 {
-  if ( (byte_4C423AF & 1) == 0 )
+  if ( (byte_4C56151 & 1) == 0 )
   {
-    sub_1C37058(&FBXAnimclips_TypeInfo);
-    byte_4C423AF = 1;
+    sub_1C3E564(&FBXAnimclips_TypeInfo);
+    byte_4C56151 = 1;
   }
   LODWORD(FBXAnimclips_TypeInfo->static_fields->animFps) = (struct FBXAnimclips_StaticFields)1106247680;
 }
@@ -29,54 +29,55 @@ void FBXAnimclips__inAttachAnimationEvents(
 void FBXAnimclips__loadAnimationEvents(FBXAnimclips_o *this, int32_t svtId, int32_t level, const MethodInfo *method)
 {
   Il2CppObject *Instance; // x0
-  System_String_o *v5; // x0
+  __int64 v5; // x1
   System_String_o *v6; // x0
   System_String_o *v7; // x0
   System_String_o *v8; // x0
-  Il2CppType *v9; // x20
-  System_String_o *v10; // x19
-  System_RuntimeTypeHandle_o v11; // x0
+  System_String_o *v9; // x0
+  Il2CppType *v10; // x20
+  System_String_o *v11; // x19
+  System_RuntimeTypeHandle_o v12; // x0
   System_Type_o *TypeFromHandle; // x0
-  int32_t v13; // [xsp+Ch] [xbp-34h] BYREF
+  int32_t v14; // [xsp+Ch] [xbp-34h] BYREF
 
-  v13 = svtId;
-  if ( (byte_4C423AE & 1) == 0 )
+  v14 = svtId;
+  if ( (byte_4C56150 & 1) == 0 )
   {
-    sub_1C37058(&Method_DataManager_GetMasterData_ServantMaster___);
-    sub_1C37058(&Method_UnityEngine_Resources_Load_GameObject___);
-    sub_1C37058(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-    sub_1C37058(&UnityEngine_TextAsset_var);
-    sub_1C37058(&UnityEngine_TextAsset_TypeInfo);
-    sub_1C37058(&System_Type_TypeInfo);
-    sub_1C37058(&StringLiteral_1101/*"/fbxevent"*/);
-    sub_1C37058(&StringLiteral_12754/*"Servants/"*/);
-    sub_1C37058(&StringLiteral_1095/*"/chr"*/);
-    byte_4C423AE = 1;
+    sub_1C3E564(&Method_DataManager_GetMasterData_ServantMaster___);
+    sub_1C3E564(&Method_UnityEngine_Resources_Load_GameObject___);
+    sub_1C3E564(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    sub_1C3E564(&UnityEngine_TextAsset_var);
+    sub_1C3E564(&UnityEngine_TextAsset_TypeInfo);
+    sub_1C3E564(&System_Type_TypeInfo);
+    sub_1C3E564(&StringLiteral_1101/*"/fbxevent"*/);
+    sub_1C3E564(&StringLiteral_12762/*"Servants/"*/);
+    sub_1C3E564(&StringLiteral_1095/*"/chr"*/);
+    byte_4C56150 = 1;
   }
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39ED16C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39FF5A8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance )
-    sub_1C372B4(0);
+    sub_1C3E7C0(0, v5);
   DataManager__GetMasterData_object_(
     (DataManager_o *)Instance,
-    (const MethodInfo_30E7C58 *)Method_DataManager_GetMasterData_ServantMaster___);
-  v5 = System_Int32__ToString((int32_t)&v13, 0);
-  v6 = System_String__Concat_63599904(
-         (System_String_o *)StringLiteral_12754/*"Servants/"*/,
-         v5,
+    (const MethodInfo_30F9A70 *)Method_DataManager_GetMasterData_ServantMaster___);
+  v6 = System_Int32__ToString((int32_t)&v14, 0);
+  v7 = System_String__Concat_63674716(
+         (System_String_o *)StringLiteral_12762/*"Servants/"*/,
+         v6,
          (System_String_o *)StringLiteral_1095/*"/chr"*/,
          0);
-  UnityEngine_Resources__Load_object_(v6, (const MethodInfo_3184210 *)Method_UnityEngine_Resources_Load_GameObject___);
-  v7 = System_Int32__ToString((int32_t)&v13, 0);
-  v8 = System_String__Concat_63599904(
-         (System_String_o *)StringLiteral_12754/*"Servants/"*/,
-         v7,
+  UnityEngine_Resources__Load_object_(v7, (const MethodInfo_3196164 *)Method_UnityEngine_Resources_Load_GameObject___);
+  v8 = System_Int32__ToString((int32_t)&v14, 0);
+  v9 = System_String__Concat_63674716(
+         (System_String_o *)StringLiteral_12762/*"Servants/"*/,
+         v8,
          (System_String_o *)StringLiteral_1101/*"/fbxevent"*/,
          0);
-  v9 = UnityEngine_TextAsset_var;
-  v10 = v8;
+  v10 = UnityEngine_TextAsset_var;
+  v11 = v9;
   if ( !System_Type_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(System_Type_TypeInfo);
-  v11.fields.value = (intptr_t)v9;
-  TypeFromHandle = System_Type__GetTypeFromHandle(v11, 0);
-  UnityEngine_Resources__Load_71227160(v10, TypeFromHandle, 0);
+  v12.fields.value = (intptr_t)v10;
+  TypeFromHandle = System_Type__GetTypeFromHandle(v12, 0);
+  UnityEngine_Resources__Load_71301972(v11, TypeFromHandle, 0);
 }

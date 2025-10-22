@@ -1,13 +1,13 @@
 void EventStatusQuestEntity___ctor(EventStatusQuestEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_4C4312D & 1) == 0 )
+  if ( (byte_4C56EDD & 1) == 0 )
   {
-    sub_1C37058(&Method_DataEntityBase_string___ctor__);
-    byte_4C4312D = 1;
+    sub_1C3E564(&Method_DataEntityBase_string___ctor__);
+    byte_4C56EDD = 1;
   }
   DataEntityBase_object____ctor(
     (DataEntityBase_PKType__o *)this,
-    (const MethodInfo_339EC34 *)Method_DataEntityBase_string___ctor__);
+    (const MethodInfo_33B0AEC *)Method_DataEntityBase_string___ctor__);
 }
 
 
@@ -18,17 +18,17 @@ System_String_o *EventStatusQuestEntity__CreatePK(
         int32_t questId,
         const MethodInfo *method)
 {
-  if ( (byte_4C4312B & 1) == 0 )
+  if ( (byte_4C56EDB & 1) == 0 )
   {
-    sub_1C37058(&Method_DataEntityBase_CreateMultiplePK_int__int__int__int___);
-    byte_4C4312B = 1;
+    sub_1C3E564(&Method_DataEntityBase_CreateMultiplePK_int__int__int__int___);
+    byte_4C56EDB = 1;
   }
   return DataEntityBase__CreateMultiplePK_int__int__int__int_(
            eventId,
            statusId,
            priority,
            questId,
-           (const MethodInfo_30E6730 *)Method_DataEntityBase_CreateMultiplePK_int__int__int__int___);
+           (const MethodInfo_30F8548 *)Method_DataEntityBase_CreateMultiplePK_int__int__int__int___);
 }
 
 
@@ -49,36 +49,37 @@ int32_t EventStatusQuestEntity__getPriority(EventStatusQuestEntity_o *this, cons
 {
   struct System_Collections_Generic_Dictionary_string__object__o *script; // x0
   int32_t questId; // w20
+  __int64 v5; // x1
   int32_t *p_priority; // x0
   int32_t result; // w0
   System_Collections_Generic_Dictionary_object__object__o *Item; // x0
-  __int64 v8; // x2
-  __int64 v9; // x3
-  EventStatusQuestEntity_o *v10; // x0
-  const MethodInfo *v11; // x1
+  __int64 v9; // x2
+  __int64 v10; // x3
+  EventStatusQuestEntity_o *v11; // x0
+  const MethodInfo *v12; // x1
 
-  if ( (byte_4C4312C & 1) == 0 )
+  if ( (byte_4C56EDC & 1) == 0 )
   {
-    sub_1C37058(&CondType_TypeInfo);
-    sub_1C37058(&Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__);
-    sub_1C37058(&Method_System_Collections_Generic_Dictionary_string__object__get_Item__);
-    sub_1C37058(&int_TypeInfo);
-    sub_1C37058(&StringLiteral_22298/*"notClearPriority"*/);
-    byte_4C4312C = 1;
+    sub_1C3E564(&CondType_TypeInfo);
+    sub_1C3E564(&Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__);
+    sub_1C3E564(&Method_System_Collections_Generic_Dictionary_string__object__get_Item__);
+    sub_1C3E564(&int_TypeInfo);
+    sub_1C3E564(&StringLiteral_22316/*"notClearPriority"*/);
+    byte_4C56EDC = 1;
   }
   script = this->fields.script;
   if ( !script
     || !System_Collections_Generic_Dictionary_object__object___ContainsKey(
           (System_Collections_Generic_Dictionary_object__object__o *)script,
-          (Il2CppObject *)StringLiteral_22298/*"notClearPriority"*/,
-          (const MethodInfo_3463824 *)Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__) )
+          (Il2CppObject *)StringLiteral_22316/*"notClearPriority"*/,
+          (const MethodInfo_34759D4 *)Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__) )
   {
     goto LABEL_8;
   }
   questId = this->fields.questId;
   if ( !CondType_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(CondType_TypeInfo);
-  if ( CondType__IsQuestClear_40324848(questId, -1, 0, 0) )
+  if ( CondType__IsQuestClear_40371188(questId, -1, 0, 0) )
   {
 LABEL_8:
     p_priority = &this->fields.priority;
@@ -88,17 +89,17 @@ LABEL_8:
   if ( !Item
     || (Item = (System_Collections_Generic_Dictionary_object__object__o *)System_Collections_Generic_Dictionary_object__object___get_Item(
                                                                             Item,
-                                                                            (Il2CppObject *)StringLiteral_22298/*"notClearPriority"*/,
-                                                                            (const MethodInfo_34635B0 *)Method_System_Collections_Generic_Dictionary_string__object__get_Item__)) == 0 )
+                                                                            (Il2CppObject *)StringLiteral_22316/*"notClearPriority"*/,
+                                                                            (const MethodInfo_3475760 *)Method_System_Collections_Generic_Dictionary_string__object__get_Item__)) == 0 )
   {
-    sub_1C372B4(Item);
+    sub_1C3E7C0(Item, v5);
   }
   if ( Item->klass->_1.element_class == int_TypeInfo->_1.element_class )
   {
-    p_priority = (int32_t *)j_il2cpp_object_unbox_0(Item, int_TypeInfo, v8, v9);
+    p_priority = (int32_t *)j_il2cpp_object_unbox_0(Item, int_TypeInfo, v9, v10);
     return *p_priority;
   }
-  sub_1C37574(Item);
-  EventStatusQuestEntity___ctor(v10, v11);
+  sub_1C3EA80(Item);
+  EventStatusQuestEntity___ctor(v11, v12);
   return result;
 }

@@ -16,17 +16,17 @@ TweenRenderVolume_o *TweenRenderVolume__Begin(
   const MethodInfo *v8; // x1
   TweenRenderVolume_o *v9; // x19
 
-  if ( (byte_4C44786 & 1) == 0 )
+  if ( (byte_4C58551 & 1) == 0 )
   {
-    sub_1C37058(&Method_UITweener_Begin_TweenRenderVolume___);
-    byte_4C44786 = 1;
+    sub_1C3E564(&Method_UITweener_Begin_TweenRenderVolume___);
+    byte_4C58551 = 1;
   }
   v7 = (TweenRenderVolume_o *)UITweener__Begin_object_(
                                 go,
                                 duration,
-                                (const MethodInfo_31A3570 *)Method_UITweener_Begin_TweenRenderVolume___);
+                                (const MethodInfo_31B54C4 *)Method_UITweener_Begin_TweenRenderVolume___);
   if ( !v7 )
-    sub_1C372B4(0);
+    sub_1C3E7C0(0, v8);
   v9 = v7;
   v7->fields.from = TweenRenderVolume__get_value(v7, v8);
   v9->fields.to = targetVolume;
@@ -40,17 +40,17 @@ void TweenRenderVolume__Cache(TweenRenderVolume_o *this, const MethodInfo *metho
   int32_t v4; // w2
   const MethodInfo *v5; // x3
 
-  if ( (byte_4C44783 & 1) == 0 )
+  if ( (byte_4C5854E & 1) == 0 )
   {
-    sub_1C37058(&Method_UnityEngine_Component_GetComponent_UITweenRenderer___);
-    byte_4C44783 = 1;
+    sub_1C3E564(&Method_UnityEngine_Component_GetComponent_UITweenRenderer___);
+    byte_4C5854E = 1;
   }
   this->fields.mCached = 1;
   Component_object = UnityEngine_Component__GetComponent_object_(
                        (UnityEngine_Component_o *)this,
-                       (const MethodInfo_30DE428 *)Method_UnityEngine_Component_GetComponent_UITweenRenderer___);
+                       (const MethodInfo_30F0240 *)Method_UnityEngine_Component_GetComponent_UITweenRenderer___);
   this->fields.mTweenRenderer = (struct UITweenRenderer_o *)Component_object;
-  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.mTweenRenderer, (int32_t)Component_object, v4, v5);
+  sub_1C3E508((CGThumbnailListItem_o *)&this->fields.mTweenRenderer, (int32_t)Component_object, v4, v5);
 }
 
 
@@ -79,13 +79,14 @@ void TweenRenderVolume__SetStartToCurrentValue(TweenRenderVolume_o *this, const 
 float TweenRenderVolume__get_value(TweenRenderVolume_o *this, const MethodInfo *method)
 {
   UnityEngine_Object_o *mTweenRenderer; // x20
-  struct UITweenRenderer_o *v4; // x0
+  __int64 v4; // x1
+  struct UITweenRenderer_o *v5; // x0
   float result; // s0
 
-  if ( (byte_4C44784 & 1) == 0 )
+  if ( (byte_4C5854F & 1) == 0 )
   {
-    sub_1C37058(&UnityEngine_Object_TypeInfo);
-    byte_4C44784 = 1;
+    sub_1C3E564(&UnityEngine_Object_TypeInfo);
+    byte_4C5854F = 1;
   }
   if ( !this->fields.mCached )
     TweenRenderVolume__Cache(this, method);
@@ -94,12 +95,12 @@ float TweenRenderVolume__get_value(TweenRenderVolume_o *this, const MethodInfo *
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   if ( !UnityEngine_Object__op_Inequality(mTweenRenderer, 0, 0) )
     return 0.0;
-  v4 = this->fields.mTweenRenderer;
-  if ( !v4 )
-    sub_1C372B4(0);
-  ((void (__fastcall *)(struct UITweenRenderer_o *, const MethodInfo *))v4->klass->vtable._42_GetTweenVolume.methodPtr)(
-    v4,
-    v4->klass->vtable._42_GetTweenVolume.method);
+  v5 = this->fields.mTweenRenderer;
+  if ( !v5 )
+    sub_1C3E7C0(0, v4);
+  ((void (__fastcall *)(struct UITweenRenderer_o *, const MethodInfo *))v5->klass->vtable._42_GetTweenVolume.methodPtr)(
+    v5,
+    v5->klass->vtable._42_GetTweenVolume.method);
   return result;
 }
 
@@ -116,13 +117,14 @@ void TweenRenderVolume__set_value(TweenRenderVolume_o *this, float value, const 
 {
   long double v3; // q8
   UnityEngine_Object_o *mTweenRenderer; // x20
-  struct UITweenRenderer_o *v6; // x0
+  __int64 v6; // x1
+  struct UITweenRenderer_o *v7; // x0
 
   v3 = *(long double *)&value;
-  if ( (byte_4C44785 & 1) == 0 )
+  if ( (byte_4C58550 & 1) == 0 )
   {
-    sub_1C37058(&UnityEngine_Object_TypeInfo);
-    byte_4C44785 = 1;
+    sub_1C3E564(&UnityEngine_Object_TypeInfo);
+    byte_4C58550 = 1;
   }
   if ( !this->fields.mCached )
     TweenRenderVolume__Cache(this, method);
@@ -131,12 +133,12 @@ void TweenRenderVolume__set_value(TweenRenderVolume_o *this, float value, const 
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   if ( UnityEngine_Object__op_Inequality(mTweenRenderer, 0, 0) )
   {
-    v6 = this->fields.mTweenRenderer;
-    if ( !v6 )
-      sub_1C372B4(0);
-    ((void (__fastcall *)(struct UITweenRenderer_o *, const MethodInfo *, long double))v6->klass->vtable._41_SetTweenVolume.methodPtr)(
-      v6,
-      v6->klass->vtable._41_SetTweenVolume.method,
+    v7 = this->fields.mTweenRenderer;
+    if ( !v7 )
+      sub_1C3E7C0(0, v6);
+    ((void (__fastcall *)(struct UITweenRenderer_o *, const MethodInfo *, long double))v7->klass->vtable._41_SetTweenVolume.methodPtr)(
+      v7,
+      v7->klass->vtable._41_SetTweenVolume.method,
       v3);
   }
 }

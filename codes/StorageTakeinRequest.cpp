@@ -5,28 +5,29 @@ void StorageTakeinRequest__beginRequest(
 {
   MiniMessagePack_MiniMessagePacker_o *v5; // x21
   __int64 v6; // x0
-  System_Byte_array *v7; // x20
-  System_String_o *v8; // x0
-  const MethodInfo *v9; // x3
-  const MethodInfo *v10; // x1
+  __int64 v7; // x1
+  System_Byte_array *v8; // x20
+  System_String_o *v9; // x0
+  const MethodInfo *v10; // x3
+  const MethodInfo *v11; // x1
 
-  if ( (byte_4C44BB5 & 1) == 0 )
+  if ( (byte_4C58981 & 1) == 0 )
   {
-    sub_1C37058(&System_Convert_TypeInfo);
-    sub_1C37058(&MiniMessagePack_MiniMessagePacker_TypeInfo);
-    sub_1C37058(&StringLiteral_24588/*"userSvtIds"*/);
-    byte_4C44BB5 = 1;
+    sub_1C3E564(&System_Convert_TypeInfo);
+    sub_1C3E564(&MiniMessagePack_MiniMessagePacker_TypeInfo);
+    sub_1C3E564(&StringLiteral_24608/*"userSvtIds"*/);
+    byte_4C58981 = 1;
   }
-  v5 = (MiniMessagePack_MiniMessagePacker_o *)sub_1C372A4(MiniMessagePack_MiniMessagePacker_TypeInfo);
+  v5 = (MiniMessagePack_MiniMessagePacker_o *)sub_1C3E7B0(MiniMessagePack_MiniMessagePacker_TypeInfo);
   MiniMessagePack_MiniMessagePacker___ctor(v5, 0);
   if ( !v5 )
-    sub_1C372B4(v6);
-  v7 = MiniMessagePack_MiniMessagePacker__PackClass(v5, &userSvtIds->obj, 0);
+    sub_1C3E7C0(v6, v7);
+  v8 = MiniMessagePack_MiniMessagePacker__PackClass(v5, &userSvtIds->obj, 0);
   if ( !System_Convert_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(System_Convert_TypeInfo);
-  v8 = System_Convert__ToBase64String(v7, 0);
-  RequestBase__addField_44247300((RequestBase_o *)this, (System_String_o *)StringLiteral_24588/*"userSvtIds"*/, v8, v9);
-  RequestBase__beginRequest((RequestBase_o *)this, v10);
+  v9 = System_Convert__ToBase64String(v8, 0);
+  RequestBase__addField_44302832((RequestBase_o *)this, (System_String_o *)StringLiteral_24608/*"userSvtIds"*/, v9, v10);
+  RequestBase__beginRequest((RequestBase_o *)this, v11);
 }
 
 
@@ -34,16 +35,16 @@ System_String_o *StorageTakeinRequest__getURL(StorageTakeinRequest_o *this, cons
 {
   System_String_o *BaseUrl; // x0
 
-  if ( (byte_4C44BB4 & 1) == 0 )
+  if ( (byte_4C58980 & 1) == 0 )
   {
-    sub_1C37058(&NetworkManager_TypeInfo);
-    sub_1C37058(&StringLiteral_23716/*"storage/takein"*/);
-    byte_4C44BB4 = 1;
+    sub_1C3E564(&NetworkManager_TypeInfo);
+    sub_1C3E564(&StringLiteral_23736/*"storage/takein"*/);
+    byte_4C58980 = 1;
   }
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
   BaseUrl = NetworkManager__getBaseUrl(1, 0);
-  return System_String__Concat_63561656(BaseUrl, (System_String_o *)StringLiteral_23716/*"storage/takein"*/, 0);
+  return System_String__Concat_63636468(BaseUrl, (System_String_o *)StringLiteral_23736/*"storage/takein"*/, 0);
 }
 
 
@@ -60,12 +61,12 @@ void StorageTakeinRequest__requestCompleted(
   struct NetworkManager_ResultCallbackFunc_o *CallBack; // x8
   struct NetworkManager_ResultCallbackFunc_o *v11; // x8
 
-  if ( (byte_4C44BB6 & 1) == 0 )
+  if ( (byte_4C58982 & 1) == 0 )
   {
-    sub_1C37058(&JsonManager_TypeInfo);
-    sub_1C37058(&ResponseCommandKind_TypeInfo);
-    sub_1C37058(&StringLiteral_22215/*"ng"*/);
-    byte_4C44BB6 = 1;
+    sub_1C3E564(&JsonManager_TypeInfo);
+    sub_1C3E564(&ResponseCommandKind_TypeInfo);
+    sub_1C3E564(&StringLiteral_22233/*"ng"*/);
+    byte_4C58982 = 1;
   }
   if ( !ResponseCommandKind_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(ResponseCommandKind_TypeInfo);
@@ -90,7 +91,7 @@ void StorageTakeinRequest__requestCompleted(
     if ( v11 )
       ((void (__fastcall *)(intptr_t, __int64, intptr_t))v11->fields.invoke_impl)(
         v11->fields.method_code,
-        StringLiteral_22215/*"ng"*/,
+        StringLiteral_22233/*"ng"*/,
         v11->fields.method);
   }
 }

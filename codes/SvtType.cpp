@@ -34,7 +34,7 @@ bool SvtType__IsEnemyCollectionDetail(int32_t type, const MethodInfo *method)
 }
 
 
-bool SvtType__IsEnemy_40454828(int32_t type, const MethodInfo *method)
+bool SvtType__IsEnemy_40501088(int32_t type, const MethodInfo *method)
 {
   return type == 4;
 }

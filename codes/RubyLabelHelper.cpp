@@ -16,70 +16,70 @@ void RubyLabelHelper___ctor(
   UnityEngine_Object_o **p_rubyPrefab; // x19
   UnityEngine_Object_o *v18; // x20
 
-  if ( (byte_4C3CFA4 & 1) == 0 )
+  if ( (byte_4C50D24 & 1) == 0 )
   {
-    sub_1C37058(&Method_System_Collections_Generic_List_int___ctor__);
-    sub_1C37058(&Method_System_Collections_Generic_List_bool___ctor__);
-    sub_1C37058(&Method_System_Collections_Generic_List_UILabel___ctor__);
-    sub_1C37058(&Method_System_Collections_Generic_List_string___ctor__);
-    sub_1C37058(&System_Collections_Generic_List_bool__TypeInfo);
-    sub_1C37058(&System_Collections_Generic_List_UILabel__TypeInfo);
-    sub_1C37058(&System_Collections_Generic_List_int__TypeInfo);
-    sub_1C37058(&System_Collections_Generic_List_string__TypeInfo);
-    sub_1C37058(&UnityEngine_Object_TypeInfo);
-    byte_4C3CFA4 = 1;
+    sub_1C3E564(&Method_System_Collections_Generic_List_int___ctor__);
+    sub_1C3E564(&Method_System_Collections_Generic_List_bool___ctor__);
+    sub_1C3E564(&Method_System_Collections_Generic_List_UILabel___ctor__);
+    sub_1C3E564(&Method_System_Collections_Generic_List_string___ctor__);
+    sub_1C3E564(&System_Collections_Generic_List_bool__TypeInfo);
+    sub_1C3E564(&System_Collections_Generic_List_UILabel__TypeInfo);
+    sub_1C3E564(&System_Collections_Generic_List_int__TypeInfo);
+    sub_1C3E564(&System_Collections_Generic_List_string__TypeInfo);
+    sub_1C3E564(&UnityEngine_Object_TypeInfo);
+    byte_4C50D24 = 1;
   }
-  v9 = (System_Collections_Generic_List_object__o *)sub_1C372A4(System_Collections_Generic_List_string__TypeInfo);
+  v9 = (System_Collections_Generic_List_object__o *)sub_1C3E7B0(System_Collections_Generic_List_string__TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v9,
-    (const MethodInfo_37A27F0 *)Method_System_Collections_Generic_List_string___ctor__);
+    (const MethodInfo_37B4C2C *)Method_System_Collections_Generic_List_string___ctor__);
   this->fields.mainTextList = (struct System_Collections_Generic_List_string__o *)v9;
-  sub_1C36FFC(&this->fields.mainTextList, v9);
-  v10 = (System_Collections_Generic_List_object__o *)sub_1C372A4(System_Collections_Generic_List_string__TypeInfo);
+  sub_1C3E508(&this->fields.mainTextList, v9);
+  v10 = (System_Collections_Generic_List_object__o *)sub_1C3E7B0(System_Collections_Generic_List_string__TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v10,
-    (const MethodInfo_37A27F0 *)Method_System_Collections_Generic_List_string___ctor__);
+    (const MethodInfo_37B4C2C *)Method_System_Collections_Generic_List_string___ctor__);
   this->fields.rubyTextList = (struct System_Collections_Generic_List_string__o *)v10;
-  sub_1C36FFC(&this->fields.rubyTextList, v10);
-  v11 = (System_Collections_Generic_List_int__o *)sub_1C372A4(System_Collections_Generic_List_int__TypeInfo);
+  sub_1C3E508(&this->fields.rubyTextList, v10);
+  v11 = (System_Collections_Generic_List_int__o *)sub_1C3E7B0(System_Collections_Generic_List_int__TypeInfo);
   System_Collections_Generic_List_int____ctor(
     v11,
-    (const MethodInfo_37857AC *)Method_System_Collections_Generic_List_int___ctor__);
+    (const MethodInfo_3797BE8 *)Method_System_Collections_Generic_List_int___ctor__);
   this->fields.textPositionYList = v11;
-  sub_1C36FFC(&this->fields.textPositionYList, v11);
-  v12 = (System_Collections_Generic_List_bool__o *)sub_1C372A4(System_Collections_Generic_List_bool__TypeInfo);
+  sub_1C3E508(&this->fields.textPositionYList, v11);
+  v12 = (System_Collections_Generic_List_bool__o *)sub_1C3E7B0(System_Collections_Generic_List_bool__TypeInfo);
   System_Collections_Generic_List_bool____ctor(
     v12,
-    (const MethodInfo_375C3E0 *)Method_System_Collections_Generic_List_bool___ctor__);
+    (const MethodInfo_376E81C *)Method_System_Collections_Generic_List_bool___ctor__);
   this->fields.rubyFlagList = v12;
-  sub_1C36FFC(&this->fields.rubyFlagList, v12);
-  v13 = (System_Collections_Generic_List_bool__o *)sub_1C372A4(System_Collections_Generic_List_bool__TypeInfo);
+  sub_1C3E508(&this->fields.rubyFlagList, v12);
+  v13 = (System_Collections_Generic_List_bool__o *)sub_1C3E7B0(System_Collections_Generic_List_bool__TypeInfo);
   System_Collections_Generic_List_bool____ctor(
     v13,
-    (const MethodInfo_375C3E0 *)Method_System_Collections_Generic_List_bool___ctor__);
+    (const MethodInfo_376E81C *)Method_System_Collections_Generic_List_bool___ctor__);
   this->fields.rubyLineList = v13;
-  sub_1C36FFC(&this->fields.rubyLineList, v13);
-  v14 = (System_Collections_Generic_List_object__o *)sub_1C372A4(System_Collections_Generic_List_UILabel__TypeInfo);
+  sub_1C3E508(&this->fields.rubyLineList, v13);
+  v14 = (System_Collections_Generic_List_object__o *)sub_1C3E7B0(System_Collections_Generic_List_UILabel__TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v14,
-    (const MethodInfo_37A27F0 *)Method_System_Collections_Generic_List_UILabel___ctor__);
+    (const MethodInfo_37B4C2C *)Method_System_Collections_Generic_List_UILabel___ctor__);
   this->fields.mainList = (struct System_Collections_Generic_List_UILabel__o *)v14;
-  sub_1C36FFC(&this->fields.mainList, v14);
-  v15 = (System_Collections_Generic_List_object__o *)sub_1C372A4(System_Collections_Generic_List_UILabel__TypeInfo);
+  sub_1C3E508(&this->fields.mainList, v14);
+  v15 = (System_Collections_Generic_List_object__o *)sub_1C3E7B0(System_Collections_Generic_List_UILabel__TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v15,
-    (const MethodInfo_37A27F0 *)Method_System_Collections_Generic_List_UILabel___ctor__);
+    (const MethodInfo_37B4C2C *)Method_System_Collections_Generic_List_UILabel___ctor__);
   this->fields.rubyList = (struct System_Collections_Generic_List_UILabel__o *)v15;
-  sub_1C36FFC(&this->fields.rubyList, v15);
+  sub_1C3E508(&this->fields.rubyList, v15);
   System_Object___ctor((Il2CppObject *)this, 0);
   this->fields.messageLabel = label;
-  sub_1C36FFC(&this->fields, label);
+  sub_1C3E508(&this->fields, label);
   this->fields.mainPrefab = inputMainPrefab;
   p_mainPrefab = &this->fields.mainPrefab;
-  sub_1C36FFC(&this->fields.mainPrefab, inputMainPrefab);
+  sub_1C3E508(&this->fields.mainPrefab, inputMainPrefab);
   this->fields.rubyPrefab = inputRubyPrefab;
   p_rubyPrefab = (UnityEngine_Object_o **)&this->fields.rubyPrefab;
-  sub_1C36FFC(p_rubyPrefab, inputRubyPrefab);
+  sub_1C3E508(p_rubyPrefab, inputRubyPrefab);
   v18 = (UnityEngine_Object_o *)*p_mainPrefab;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
@@ -96,71 +96,72 @@ System_String_o *RubyLabelHelper__GetFormalText(
   System_String_o *v5; // x22
   System_Collections_Generic_List_char__o *v6; // x21
   System_String_o *Chars; // x0
-  int32_t v8; // w23
-  char v9; // w19
-  char v10; // w29
-  char v11; // w26
-  System_String_o *v12; // x24
-  System_String_o *v13; // x0
+  __int64 v8; // x1
+  int32_t v9; // w23
+  char v10; // w19
+  char v11; // w29
+  char v12; // w26
+  System_String_o *v13; // x24
   System_String_o *v14; // x0
+  System_String_o *v15; // x0
   struct System_Char_array *items; // x8
-  _QWORD *v16; // x9
+  _QWORD *v17; // x9
   __int64 size; // x10
-  System_String_o *v18; // x1
-  System_String_o *v19; // x0
-  const MethodInfo *v20; // x2
+  System_String_o *v19; // x1
+  System_String_o *v20; // x0
+  const MethodInfo *v21; // x2
   struct UILabel_o *messageLabel; // x8
-  RubyLabelHelper_o *v23; // [xsp+0h] [xbp-70h]
-  _WORD v24[2]; // [xsp+Ch] [xbp-64h] BYREF
+  RubyLabelHelper_o *v24; // [xsp+0h] [xbp-70h]
+  _WORD v25[2]; // [xsp+Ch] [xbp-64h] BYREF
 
-  if ( (byte_4C3CFA9 & 1) == 0 )
+  if ( (byte_4C50D29 & 1) == 0 )
   {
-    sub_1C37058(&char_TypeInfo);
-    sub_1C37058(&Method_System_Collections_Generic_List_char__Add__);
-    sub_1C37058(&Method_System_Collections_Generic_List_char___ctor__);
-    sub_1C37058(&System_Collections_Generic_List_char__TypeInfo);
-    sub_1C37058(&StringLiteral_15816/*"[#"*/);
-    sub_1C37058(&StringLiteral_1457/*":"*/);
-    sub_1C37058(&StringLiteral_1/*""*/);
-    sub_1C37058(&StringLiteral_16058/*"]"*/);
-    byte_4C3CFA9 = 1;
+    sub_1C3E564(&char_TypeInfo);
+    sub_1C3E564(&Method_System_Collections_Generic_List_char__Add__);
+    sub_1C3E564(&Method_System_Collections_Generic_List_char___ctor__);
+    sub_1C3E564(&System_Collections_Generic_List_char__TypeInfo);
+    sub_1C3E564(&StringLiteral_15826/*"[#"*/);
+    sub_1C3E564(&StringLiteral_1456/*":"*/);
+    sub_1C3E564(&StringLiteral_1/*""*/);
+    sub_1C3E564(&StringLiteral_16068/*"]"*/);
+    byte_4C50D29 = 1;
   }
   v5 = (System_String_o *)StringLiteral_1/*""*/;
-  v24[0] = 0;
-  v6 = (System_Collections_Generic_List_char__o *)sub_1C372A4(System_Collections_Generic_List_char__TypeInfo);
+  v25[0] = 0;
+  v6 = (System_Collections_Generic_List_char__o *)sub_1C3E7B0(System_Collections_Generic_List_char__TypeInfo);
   System_Collections_Generic_List_char____ctor(
     v6,
-    (const MethodInfo_3761488 *)Method_System_Collections_Generic_List_char___ctor__);
+    (const MethodInfo_37738C4 *)Method_System_Collections_Generic_List_char___ctor__);
   if ( !labelText )
     goto LABEL_43;
-  v23 = this;
+  v24 = this;
   if ( labelText->fields._stringLength >= 1 )
   {
-    v8 = 0;
     v9 = 0;
     v10 = 0;
-    v11 = 1;
-    v12 = v5;
+    v11 = 0;
+    v12 = 1;
+    v13 = v5;
     while ( 1 )
     {
-      v24[0] = System_String__get_Chars(labelText, v8, 0);
+      v25[0] = System_String__get_Chars(labelText, v9, 0);
       if ( !char_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(char_TypeInfo);
-      v13 = System_Char__ToString((uint16_t)v24, 0);
-      v5 = System_String__Concat_63561656(v5, v13, 0);
-      if ( (v10 & 1) != 0 )
+      v14 = System_Char__ToString((uint16_t)v25, 0);
+      v5 = System_String__Concat_63636468(v5, v14, 0);
+      if ( (v11 & 1) != 0 )
       {
-        v24[0] = System_String__get_Chars(labelText, v8, 0);
+        v25[0] = System_String__get_Chars(labelText, v9, 0);
         if ( !char_TypeInfo->_2.cctor_finished )
           j_il2cpp_runtime_class_init_0(char_TypeInfo);
-        v14 = System_Char__ToString((uint16_t)v24, 0);
-        v12 = System_String__Concat_63561656(v12, v14, 0);
+        v15 = System_Char__ToString((uint16_t)v25, 0);
+        v13 = System_String__Concat_63636468(v13, v15, 0);
       }
-      Chars = (System_String_o *)System_String__get_Chars(labelText, v8, 0);
+      Chars = (System_String_o *)System_String__get_Chars(labelText, v9, 0);
       if ( !v6 )
         goto LABEL_43;
       items = v6->fields._items;
-      v16 = Method_System_Collections_Generic_List_char__Add__;
+      v17 = Method_System_Collections_Generic_List_char__Add__;
       ++v6->fields._version;
       if ( !items )
         goto LABEL_43;
@@ -170,227 +171,229 @@ System_String_o *RubyLabelHelper__GetFormalText(
         System_Collections_Generic_List_char___AddWithResize(
           v6,
           (uint16_t)Chars,
-          *(const MethodInfo_3761CDC **)(*(_QWORD *)(v16[4] + 192LL) + 112LL));
+          *(const MethodInfo_3774118 **)(*(_QWORD *)(v17[4] + 192LL) + 112LL));
       }
       else
       {
         v6->fields._size = size + 1;
         items->m_Items[size] = (unsigned __int16)Chars;
       }
-      if ( System_String__get_Chars(labelText, v8, 0) == 91 && System_String__get_Chars(labelText, v8 + 1, 0) == 35 )
+      if ( System_String__get_Chars(labelText, v9, 0) == 91 && System_String__get_Chars(labelText, v9 + 1, 0) == 35 )
       {
-        v11 = 0;
+        v12 = 0;
       }
       else
       {
-        if ( (v9 & 1) == 0 )
+        if ( (v10 & 1) == 0 )
         {
-          v9 = 0;
+          v10 = 0;
           goto LABEL_35;
         }
-        Chars = (System_String_o *)System_String__get_Chars(labelText, v8, 0);
-        v24[0] = (_WORD)Chars;
+        Chars = (System_String_o *)System_String__get_Chars(labelText, v9, 0);
+        v25[0] = (_WORD)Chars;
         switch ( (unsigned __int16)Chars )
         {
           case ']':
-            if ( (v10 & 1) != 0 )
+            if ( (v11 & 1) != 0 )
             {
-              Chars = System_String__Concat_63561656((System_String_o *)StringLiteral_1457/*":"*/, v12, 0);
+              Chars = System_String__Concat_63636468((System_String_o *)StringLiteral_1456/*":"*/, v13, 0);
               if ( !v5 )
                 goto LABEL_43;
-              v18 = Chars;
+              v19 = Chars;
             }
             else
             {
               if ( !v5 )
                 goto LABEL_43;
-              v18 = (System_String_o *)StringLiteral_16058/*"]"*/;
+              v19 = (System_String_o *)StringLiteral_16068/*"]"*/;
             }
-            v19 = System_String__Replace_63608204(v5, v18, (System_String_o *)StringLiteral_1/*""*/, 0);
-            v12 = (System_String_o *)StringLiteral_1/*""*/;
-            v5 = v19;
-            v9 = 0;
+            v20 = System_String__Replace_63683016(v5, v19, (System_String_o *)StringLiteral_1/*""*/, 0);
+            v13 = (System_String_o *)StringLiteral_1/*""*/;
+            v5 = v20;
             v10 = 0;
+            v11 = 0;
             goto LABEL_35;
           case ':':
-            v9 = 1;
             v10 = 1;
+            v11 = 1;
             goto LABEL_35;
           case '#':
             if ( !v5 )
               goto LABEL_43;
-            v5 = System_String__Replace_63608204(
+            v5 = System_String__Replace_63683016(
                    v5,
-                   (System_String_o *)StringLiteral_15816/*"[#"*/,
+                   (System_String_o *)StringLiteral_15826/*"[#"*/,
                    (System_String_o *)StringLiteral_1/*""*/,
                    0);
             break;
         }
       }
-      v9 = 1;
+      v10 = 1;
 LABEL_35:
-      if ( ++v8 >= labelText->fields._stringLength )
+      if ( ++v9 >= labelText->fields._stringLength )
         goto LABEL_38;
     }
   }
-  v11 = 1;
+  v12 = 1;
 LABEL_38:
-  Chars = (System_String_o *)WrapControlText__textAdjust(v23->fields.messageLabel, v5, 22, 0, 0);
-  if ( (v11 & 1) != 0 )
+  Chars = (System_String_o *)WrapControlText__textAdjust(v24->fields.messageLabel, v5, 22, 0, 0);
+  if ( (v12 & 1) != 0 )
   {
-    messageLabel = v23->fields.messageLabel;
+    messageLabel = v24->fields.messageLabel;
     if ( messageLabel )
       return messageLabel->fields.mText;
 LABEL_43:
-    sub_1C372B4(Chars);
+    sub_1C3E7C0(Chars, v8);
   }
-  return RubyLabelHelper__TextFormalAdjust(v23, (System_Collections_Generic_IReadOnlyList_char__o *)v6, v20);
+  return RubyLabelHelper__TextFormalAdjust(v24, (System_Collections_Generic_IReadOnlyList_char__o *)v6, v21);
 }
 
 
 void RubyLabelHelper__ReleasePrefabs(RubyLabelHelper_o *this, const MethodInfo *method)
 {
   struct System_Collections_Generic_List_UILabel__o *rubyList; // x0
+  __int64 v4; // x1
   UnityEngine_Object_o *gameObject; // x20
-  UnityEngine_Object_o *v5; // x20
+  __int64 v6; // x1
+  UnityEngine_Object_o *v7; // x20
   struct System_Collections_Generic_List_string__o *mainTextList; // x8
   int32_t size; // w2
-  int v8; // w9
+  int v10; // w9
   struct System_Collections_Generic_List_string__o *rubyTextList; // x8
-  int32_t v10; // w2
-  int v11; // w9
-  struct System_Collections_Generic_List_int__o *textPositionYList; // x8
+  int32_t v12; // w2
   int v13; // w9
-  struct System_Collections_Generic_List_bool__o *rubyFlagList; // x8
+  struct System_Collections_Generic_List_int__o *textPositionYList; // x8
   int v15; // w9
-  struct System_Collections_Generic_List_bool__o *rubyLineList; // x8
+  struct System_Collections_Generic_List_bool__o *rubyFlagList; // x8
   int v17; // w9
+  struct System_Collections_Generic_List_bool__o *rubyLineList; // x8
+  int v19; // w9
   struct System_Collections_Generic_List_UILabel__o *mainList; // x8
-  int32_t v19; // w2
-  int v20; // w9
-  struct System_Collections_Generic_List_UILabel__o *v21; // x8
-  int32_t v22; // w2
-  int v23; // w9
-  System_Collections_Generic_List_Enumerator_object__o v24; // [xsp+8h] [xbp-78h] BYREF
-  System_Collections_Generic_List_Enumerator_object__o v25; // [xsp+20h] [xbp-60h] BYREF
+  int32_t v21; // w2
+  int v22; // w9
+  struct System_Collections_Generic_List_UILabel__o *v23; // x8
+  int32_t v24; // w2
+  int v25; // w9
+  System_Collections_Generic_List_Enumerator_object__o v26; // [xsp+8h] [xbp-78h] BYREF
+  System_Collections_Generic_List_Enumerator_object__o v27; // [xsp+20h] [xbp-60h] BYREF
 
-  if ( (byte_4C3CFA5 & 1) == 0 )
+  if ( (byte_4C50D25 & 1) == 0 )
   {
-    sub_1C37058(&Method_System_Collections_Generic_List_Enumerator_UILabel__Dispose__);
-    sub_1C37058(&Method_System_Collections_Generic_List_Enumerator_UILabel__MoveNext__);
-    sub_1C37058(&Method_System_Collections_Generic_List_Enumerator_UILabel__get_Current__);
-    sub_1C37058(&Method_System_Collections_Generic_List_UILabel__Clear__);
-    sub_1C37058(&Method_System_Collections_Generic_List_bool__Clear__);
-    sub_1C37058(&Method_System_Collections_Generic_List_string__Clear__);
-    sub_1C37058(&Method_System_Collections_Generic_List_int__Clear__);
-    sub_1C37058(&Method_System_Collections_Generic_List_UILabel__GetEnumerator__);
-    sub_1C37058(&UnityEngine_Object_TypeInfo);
-    byte_4C3CFA5 = 1;
+    sub_1C3E564(&Method_System_Collections_Generic_List_Enumerator_UILabel__Dispose__);
+    sub_1C3E564(&Method_System_Collections_Generic_List_Enumerator_UILabel__MoveNext__);
+    sub_1C3E564(&Method_System_Collections_Generic_List_Enumerator_UILabel__get_Current__);
+    sub_1C3E564(&Method_System_Collections_Generic_List_UILabel__Clear__);
+    sub_1C3E564(&Method_System_Collections_Generic_List_bool__Clear__);
+    sub_1C3E564(&Method_System_Collections_Generic_List_string__Clear__);
+    sub_1C3E564(&Method_System_Collections_Generic_List_int__Clear__);
+    sub_1C3E564(&Method_System_Collections_Generic_List_UILabel__GetEnumerator__);
+    sub_1C3E564(&UnityEngine_Object_TypeInfo);
+    byte_4C50D25 = 1;
   }
-  memset(&v25, 0, sizeof(v25));
+  memset(&v27, 0, sizeof(v27));
   rubyList = this->fields.rubyList;
   if ( !rubyList )
     goto LABEL_35;
   System_Collections_Generic_List_object___GetEnumerator(
-    (System_Collections_Generic_List_Enumerator_T__o *)&v24,
+    (System_Collections_Generic_List_Enumerator_T__o *)&v26,
     (System_Collections_Generic_List_object__o *)rubyList,
-    (const MethodInfo_37A3B1C *)Method_System_Collections_Generic_List_UILabel__GetEnumerator__);
-  v25 = v24;
+    (const MethodInfo_37B5F58 *)Method_System_Collections_Generic_List_UILabel__GetEnumerator__);
+  v27 = v26;
   while ( System_Collections_Generic_List_Enumerator_object___MoveNext(
-            &v25,
-            (const MethodInfo_352D810 *)Method_System_Collections_Generic_List_Enumerator_UILabel__MoveNext__) )
+            &v27,
+            (const MethodInfo_353FC4C *)Method_System_Collections_Generic_List_Enumerator_UILabel__MoveNext__) )
   {
-    if ( !v25.fields._current )
-      sub_1C372B4(0);
+    if ( !v27.fields._current )
+      sub_1C3E7C0(0, v4);
     gameObject = (UnityEngine_Object_o *)UnityEngine_Component__get_gameObject(
-                                           (UnityEngine_Component_o *)v25.fields._current,
+                                           (UnityEngine_Component_o *)v27.fields._current,
                                            0);
     if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-    UnityEngine_Object__Destroy_71266752(gameObject, 0);
+    UnityEngine_Object__Destroy_71341564(gameObject, 0);
   }
   System_Collections_Generic_List_Enumerator_object___Dispose(
-    &v25,
-    (const MethodInfo_352D80C *)Method_System_Collections_Generic_List_Enumerator_UILabel__Dispose__);
+    &v27,
+    (const MethodInfo_353FC48 *)Method_System_Collections_Generic_List_Enumerator_UILabel__Dispose__);
   rubyList = this->fields.mainList;
   if ( !rubyList )
     goto LABEL_35;
   System_Collections_Generic_List_object___GetEnumerator(
-    (System_Collections_Generic_List_Enumerator_T__o *)&v24,
+    (System_Collections_Generic_List_Enumerator_T__o *)&v26,
     (System_Collections_Generic_List_object__o *)rubyList,
-    (const MethodInfo_37A3B1C *)Method_System_Collections_Generic_List_UILabel__GetEnumerator__);
-  v25 = v24;
+    (const MethodInfo_37B5F58 *)Method_System_Collections_Generic_List_UILabel__GetEnumerator__);
+  v27 = v26;
   while ( System_Collections_Generic_List_Enumerator_object___MoveNext(
-            &v25,
-            (const MethodInfo_352D810 *)Method_System_Collections_Generic_List_Enumerator_UILabel__MoveNext__) )
+            &v27,
+            (const MethodInfo_353FC4C *)Method_System_Collections_Generic_List_Enumerator_UILabel__MoveNext__) )
   {
-    if ( !v25.fields._current )
-      sub_1C372B4(0);
-    v5 = (UnityEngine_Object_o *)UnityEngine_Component__get_gameObject(
-                                   (UnityEngine_Component_o *)v25.fields._current,
+    if ( !v27.fields._current )
+      sub_1C3E7C0(0, v6);
+    v7 = (UnityEngine_Object_o *)UnityEngine_Component__get_gameObject(
+                                   (UnityEngine_Component_o *)v27.fields._current,
                                    0);
     if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-    UnityEngine_Object__Destroy_71266752(v5, 0);
+    UnityEngine_Object__Destroy_71341564(v7, 0);
   }
   System_Collections_Generic_List_Enumerator_object___Dispose(
-    &v25,
-    (const MethodInfo_352D80C *)Method_System_Collections_Generic_List_Enumerator_UILabel__Dispose__);
+    &v27,
+    (const MethodInfo_353FC48 *)Method_System_Collections_Generic_List_Enumerator_UILabel__Dispose__);
   mainTextList = this->fields.mainTextList;
   if ( !mainTextList )
     goto LABEL_35;
   size = mainTextList->fields._size;
-  v8 = mainTextList->fields._version + 1;
+  v10 = mainTextList->fields._version + 1;
   mainTextList->fields._size = 0;
-  mainTextList->fields._version = v8;
+  mainTextList->fields._version = v10;
   if ( size >= 1 )
     System_Array__Clear((System_Array_o *)mainTextList->fields._items, 0, size, 0);
   rubyTextList = this->fields.rubyTextList;
   if ( !rubyTextList )
     goto LABEL_35;
-  v10 = rubyTextList->fields._size;
-  v11 = rubyTextList->fields._version + 1;
+  v12 = rubyTextList->fields._size;
+  v13 = rubyTextList->fields._version + 1;
   rubyTextList->fields._size = 0;
-  rubyTextList->fields._version = v11;
-  if ( v10 >= 1 )
-    System_Array__Clear((System_Array_o *)rubyTextList->fields._items, 0, v10, 0);
+  rubyTextList->fields._version = v13;
+  if ( v12 >= 1 )
+    System_Array__Clear((System_Array_o *)rubyTextList->fields._items, 0, v12, 0);
   textPositionYList = this->fields.textPositionYList;
   if ( !textPositionYList )
     goto LABEL_35;
-  v13 = textPositionYList->fields._version + 1;
+  v15 = textPositionYList->fields._version + 1;
   textPositionYList->fields._size = 0;
-  textPositionYList->fields._version = v13;
+  textPositionYList->fields._version = v15;
   rubyFlagList = this->fields.rubyFlagList;
   if ( !rubyFlagList )
     goto LABEL_35;
-  v15 = rubyFlagList->fields._version + 1;
+  v17 = rubyFlagList->fields._version + 1;
   rubyFlagList->fields._size = 0;
-  rubyFlagList->fields._version = v15;
+  rubyFlagList->fields._version = v17;
   rubyLineList = this->fields.rubyLineList;
   if ( !rubyLineList )
     goto LABEL_35;
-  v17 = rubyLineList->fields._version + 1;
+  v19 = rubyLineList->fields._version + 1;
   rubyLineList->fields._size = 0;
-  rubyLineList->fields._version = v17;
+  rubyLineList->fields._version = v19;
   mainList = this->fields.mainList;
   if ( !mainList )
     goto LABEL_35;
-  v19 = mainList->fields._size;
-  v20 = mainList->fields._version + 1;
+  v21 = mainList->fields._size;
+  v22 = mainList->fields._version + 1;
   mainList->fields._size = 0;
-  mainList->fields._version = v20;
-  if ( v19 >= 1 )
-    System_Array__Clear((System_Array_o *)mainList->fields._items, 0, v19, 0);
-  v21 = this->fields.rubyList;
-  if ( !v21 )
+  mainList->fields._version = v22;
+  if ( v21 >= 1 )
+    System_Array__Clear((System_Array_o *)mainList->fields._items, 0, v21, 0);
+  v23 = this->fields.rubyList;
+  if ( !v23 )
 LABEL_35:
-    sub_1C372B4(rubyList);
-  v22 = v21->fields._size;
-  v23 = v21->fields._version + 1;
-  v21->fields._size = 0;
-  v21->fields._version = v23;
-  if ( v22 >= 1 )
-    System_Array__Clear((System_Array_o *)v21->fields._items, 0, v22, 0);
+    sub_1C3E7C0(rubyList, method);
+  v24 = v23->fields._size;
+  v25 = v23->fields._version + 1;
+  v23->fields._size = 0;
+  v23->fields._version = v25;
+  if ( v24 >= 1 )
+    System_Array__Clear((System_Array_o *)v23->fields._items, 0, v24, 0);
 }
 
 
@@ -431,18 +434,18 @@ void RubyLabelHelper__SetMainObject(RubyLabelHelper_o *this, const MethodInfo *m
   UnityEngine_Vector3_o v35; // 0:s0.4,4:s1.4,8:s2.4
   UnityEngine_Vector3_o localPosition; // 0:s0.4,4:s1.4,8:s2.4
 
-  if ( (byte_4C3CFA7 & 1) == 0 )
+  if ( (byte_4C50D27 & 1) == 0 )
   {
-    sub_1C37058(&Method_UnityEngine_Component_GetComponent_Transform___);
-    sub_1C37058(&Method_UnityEngine_GameObject_GetComponent_UILabel___);
-    sub_1C37058(&Method_System_Collections_Generic_List_UILabel__Add__);
-    sub_1C37058(&Method_System_Collections_Generic_List_string__get_Count__);
-    sub_1C37058(&Method_System_Collections_Generic_List_string__get_Item__);
-    sub_1C37058(&Method_System_Collections_Generic_List_bool__get_Item__);
-    sub_1C37058(&Method_System_Collections_Generic_List_int__get_Item__);
-    sub_1C37058(&Method_UnityEngine_Object_Instantiate_GameObject____78192880);
-    sub_1C37058(&UnityEngine_Object_TypeInfo);
-    byte_4C3CFA7 = 1;
+    sub_1C3E564(&Method_UnityEngine_Component_GetComponent_Transform___);
+    sub_1C3E564(&Method_UnityEngine_GameObject_GetComponent_UILabel___);
+    sub_1C3E564(&Method_System_Collections_Generic_List_UILabel__Add__);
+    sub_1C3E564(&Method_System_Collections_Generic_List_string__get_Count__);
+    sub_1C3E564(&Method_System_Collections_Generic_List_string__get_Item__);
+    sub_1C3E564(&Method_System_Collections_Generic_List_bool__get_Item__);
+    sub_1C3E564(&Method_System_Collections_Generic_List_int__get_Item__);
+    sub_1C3E564(&Method_UnityEngine_Object_Instantiate_GameObject____78272896);
+    sub_1C3E564(&UnityEngine_Object_TypeInfo);
+    byte_4C50D27 = 1;
   }
   messageLabel = (__int64)this->fields.messageLabel;
   if ( !messageLabel )
@@ -462,7 +465,7 @@ void RubyLabelHelper__SetMainObject(RubyLabelHelper_o *this, const MethodInfo *m
         !mainTextList) )
   {
 LABEL_35:
-    sub_1C372B4(messageLabel);
+    sub_1C3E7C0(messageLabel, method);
   }
   v10 = 0;
   v11 = 0;
@@ -481,25 +484,25 @@ LABEL_35:
       mainPrefab = (Il2CppObject *)this->fields.mainPrefab;
       Component_object = UnityEngine_Component__GetComponent_object_(
                            (UnityEngine_Component_o *)messageLabel,
-                           (const MethodInfo_30DE428 *)Method_UnityEngine_Component_GetComponent_Transform___);
+                           (const MethodInfo_30F0240 *)Method_UnityEngine_Component_GetComponent_Transform___);
       if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-      messageLabel = (__int64)UnityEngine_Object__Instantiate_object__51855596(
+      messageLabel = (__int64)UnityEngine_Object__Instantiate_object__51929056(
                                 mainPrefab,
                                 (UnityEngine_Transform_o *)Component_object,
-                                (const MethodInfo_31740EC *)Method_UnityEngine_Object_Instantiate_GameObject____78192880);
+                                (const MethodInfo_3185FE0 *)Method_UnityEngine_Object_Instantiate_GameObject____78272896);
       if ( messageLabel )
       {
         messageLabel = (__int64)UnityEngine_GameObject__GetComponent_object_(
                                   (UnityEngine_GameObject_o *)messageLabel,
-                                  (const MethodInfo_313F1D8 *)Method_UnityEngine_GameObject_GetComponent_UILabel___);
+                                  (const MethodInfo_31510CC *)Method_UnityEngine_GameObject_GetComponent_UILabel___);
         if ( this->fields.mainTextList )
         {
           v21 = (UILabel_o *)messageLabel;
           messageLabel = (__int64)System_Collections_Generic_List_object___get_Item(
                                     (System_Collections_Generic_List_object__o *)this->fields.mainTextList,
                                     v13,
-                                    (const MethodInfo_37A2D54 *)Method_System_Collections_Generic_List_string__get_Item__);
+                                    (const MethodInfo_37B5190 *)Method_System_Collections_Generic_List_string__get_Item__);
           if ( v21 )
           {
             UILabel__set_text(v21, (System_String_o *)messageLabel, 0);
@@ -514,7 +517,7 @@ LABEL_35:
                 Item = System_Collections_Generic_List_int___get_Item(
                          (System_Collections_Generic_List_int__o *)messageLabel,
                          v13,
-                         (const MethodInfo_3785D10 *)Method_System_Collections_Generic_List_int__get_Item__);
+                         (const MethodInfo_379814C *)Method_System_Collections_Generic_List_int__get_Item__);
                 messageLabel = (__int64)this->fields.rubyLineList;
                 v24 = v10 == Item;
                 v25 = v10 == Item;
@@ -526,7 +529,7 @@ LABEL_35:
                        | !System_Collections_Generic_List_bool___get_Item(
                             (System_Collections_Generic_List_bool__o *)messageLabel,
                             v13,
-                            (const MethodInfo_375C944 *)Method_System_Collections_Generic_List_bool__get_Item__)) )
+                            (const MethodInfo_376ED80 *)Method_System_Collections_Generic_List_bool__get_Item__)) )
                   {
                     v18 = v18 + v14;
                     v12 = 1;
@@ -539,7 +542,7 @@ LABEL_35:
                     messageLabel = System_Collections_Generic_List_int___get_Item(
                                      this->fields.textPositionYList,
                                      v13,
-                                     (const MethodInfo_3785D10 *)Method_System_Collections_Generic_List_int__get_Item__);
+                                     (const MethodInfo_379814C *)Method_System_Collections_Generic_List_int__get_Item__);
                     if ( v27 )
                     {
                       v35.fields.y = (float)-(v15 * messageLabel) - v18;
@@ -552,7 +555,7 @@ LABEL_35:
                         if ( System_Collections_Generic_List_bool___get_Item(
                                (System_Collections_Generic_List_bool__o *)messageLabel,
                                v13,
-                               (const MethodInfo_375C944 *)Method_System_Collections_Generic_List_bool__get_Item__) )
+                               (const MethodInfo_376ED80 *)Method_System_Collections_Generic_List_bool__get_Item__) )
                         {
                           messageLabel = (__int64)UnityEngine_Component__get_transform(
                                                     (UnityEngine_Component_o *)v21,
@@ -570,7 +573,7 @@ LABEL_35:
                           v10 = System_Collections_Generic_List_int___get_Item(
                                   (System_Collections_Generic_List_int__o *)messageLabel,
                                   v13,
-                                  (const MethodInfo_3785D10 *)Method_System_Collections_Generic_List_int__get_Item__);
+                                  (const MethodInfo_379814C *)Method_System_Collections_Generic_List_int__get_Item__);
                           LODWORD(v29) = *(_QWORD *)&UILabel__get_printedSize(v21, 0);
                           messageLabel = (__int64)this->fields.mainList;
                           if ( messageLabel )
@@ -587,14 +590,14 @@ LABEL_35:
                                 System_Collections_Generic_List_object___AddWithResize(
                                   (System_Collections_Generic_List_object__o *)messageLabel,
                                   (Il2CppObject *)v21,
-                                  *(const MethodInfo_37A3024 **)(*(_QWORD *)(v31[4] + 192LL) + 112LL));
+                                  *(const MethodInfo_37B5460 **)(*(_QWORD *)(v31[4] + 192LL) + 112LL));
                               }
                               else
                               {
                                 v34 = v30 + 8 * v32;
                                 *(_DWORD *)(messageLabel + 24) = v32 + 1;
                                 *(_QWORD *)(v34 + 32) = v21;
-                                messageLabel = sub_1C36FFC(v34 + 32, v21);
+                                messageLabel = sub_1C3E508(v34 + 32, v21);
                               }
                               mainTextList = this->fields.mainTextList;
                               v17 = v26 + v33;
@@ -619,6 +622,7 @@ LABEL_35:
 }
 
 
+// local variable allocation has failed, the output may be wrong!
 void RubyLabelHelper__SetRubyObject(
         RubyLabelHelper_o *this,
         int32_t idx,
@@ -657,18 +661,18 @@ void RubyLabelHelper__SetRubyObject(
 
   y = mainPosition.fields.y;
   x = mainPosition.fields.x;
-  if ( (byte_4C3CFA8 & 1) == 0 )
+  if ( (byte_4C50D28 & 1) == 0 )
   {
-    sub_1C37058(&Method_UnityEngine_Component_GetComponent_Transform___);
-    sub_1C37058(&Method_UnityEngine_GameObject_GetComponent_UILabel___);
-    sub_1C37058(&Method_System_Collections_Generic_List_UILabel__Add__);
-    sub_1C37058(&Method_System_Collections_Generic_List_string__get_Item__);
-    sub_1C37058(&Method_System_Collections_Generic_List_string__set_Item__);
-    sub_1C37058(&Method_UnityEngine_Object_Instantiate_GameObject____78192880);
-    sub_1C37058(&UnityEngine_Object_TypeInfo);
-    sub_1C37058(&StringLiteral_25440/*"・"*/);
-    sub_1C37058(&StringLiteral_1/*""*/);
-    byte_4C3CFA8 = 1;
+    sub_1C3E564(&Method_UnityEngine_Component_GetComponent_Transform___);
+    sub_1C3E564(&Method_UnityEngine_GameObject_GetComponent_UILabel___);
+    sub_1C3E564(&Method_System_Collections_Generic_List_UILabel__Add__);
+    sub_1C3E564(&Method_System_Collections_Generic_List_string__get_Item__);
+    sub_1C3E564(&Method_System_Collections_Generic_List_string__set_Item__);
+    sub_1C3E564(&Method_UnityEngine_Object_Instantiate_GameObject____78272896);
+    sub_1C3E564(&UnityEngine_Object_TypeInfo);
+    sub_1C3E564(&StringLiteral_25460/*"・"*/);
+    sub_1C3E564(&StringLiteral_1/*""*/);
+    byte_4C50D28 = 1;
   }
   messageLabel = (UnityEngine_Component_o *)this->fields.messageLabel;
   if ( !messageLabel )
@@ -676,18 +680,18 @@ void RubyLabelHelper__SetRubyObject(
   rubyPrefab = (Il2CppObject *)this->fields.rubyPrefab;
   Component_object = UnityEngine_Component__GetComponent_object_(
                        messageLabel,
-                       (const MethodInfo_30DE428 *)Method_UnityEngine_Component_GetComponent_Transform___);
+                       (const MethodInfo_30F0240 *)Method_UnityEngine_Component_GetComponent_Transform___);
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-  messageLabel = (UnityEngine_Component_o *)UnityEngine_Object__Instantiate_object__51855596(
+  messageLabel = (UnityEngine_Component_o *)UnityEngine_Object__Instantiate_object__51929056(
                                               rubyPrefab,
                                               (UnityEngine_Transform_o *)Component_object,
-                                              (const MethodInfo_31740EC *)Method_UnityEngine_Object_Instantiate_GameObject____78192880);
+                                              (const MethodInfo_3185FE0 *)Method_UnityEngine_Object_Instantiate_GameObject____78272896);
   if ( !messageLabel )
     goto LABEL_40;
   messageLabel = (UnityEngine_Component_o *)UnityEngine_GameObject__GetComponent_object_(
                                               (UnityEngine_GameObject_o *)messageLabel,
-                                              (const MethodInfo_313F1D8 *)Method_UnityEngine_GameObject_GetComponent_UILabel___);
+                                              (const MethodInfo_31510CC *)Method_UnityEngine_GameObject_GetComponent_UILabel___);
   if ( !mainLabel )
     goto LABEL_40;
   v15 = (UILabel_o *)messageLabel;
@@ -699,7 +703,7 @@ void RubyLabelHelper__SetRubyObject(
   Item = System_Collections_Generic_List_object___get_Item(
            (System_Collections_Generic_List_object__o *)messageLabel,
            idx,
-           (const MethodInfo_37A2D54 *)Method_System_Collections_Generic_List_string__get_Item__);
+           (const MethodInfo_37B5190 *)Method_System_Collections_Generic_List_string__get_Item__);
   messageLabel = (UnityEngine_Component_o *)System_String__op_Equality(
                                               (System_String_o *)Item,
                                               (System_String_o *)StringLiteral_1/*""*/,
@@ -718,16 +722,16 @@ void RubyLabelHelper__SetRubyObject(
           v22 = System_Collections_Generic_List_object___get_Item(
                   (System_Collections_Generic_List_object__o *)this->fields.rubyTextList,
                   idx,
-                  (const MethodInfo_37A2D54 *)Method_System_Collections_Generic_List_string__get_Item__);
-          v23 = (Il2CppObject *)System_String__Concat_63561656(
+                  (const MethodInfo_37B5190 *)Method_System_Collections_Generic_List_string__get_Item__);
+          v23 = (Il2CppObject *)System_String__Concat_63636468(
                                   (System_String_o *)v22,
-                                  (System_String_o *)StringLiteral_25440/*"・"*/,
+                                  (System_String_o *)StringLiteral_25460/*"・"*/,
                                   0);
           System_Collections_Generic_List_object___set_Item(
             (System_Collections_Generic_List_object__o *)rubyTextList,
             idx,
             v23,
-            (const MethodInfo_37A2DA8 *)Method_System_Collections_Generic_List_string__set_Item__);
+            (const MethodInfo_37B51E4 *)Method_System_Collections_Generic_List_string__set_Item__);
           mText = mainLabel->fields.mText;
           if ( mText )
             continue;
@@ -746,7 +750,7 @@ void RubyLabelHelper__SetRubyObject(
       }
     }
 LABEL_40:
-    sub_1C372B4(messageLabel);
+    sub_1C3E7C0(messageLabel, *(_QWORD *)&idx);
   }
   if ( !v15 )
     goto LABEL_40;
@@ -763,7 +767,7 @@ LABEL_29:
   v27 = System_Collections_Generic_List_object___get_Item(
           (System_Collections_Generic_List_object__o *)messageLabel,
           idx,
-          (const MethodInfo_37A2D54 *)Method_System_Collections_Generic_List_string__get_Item__);
+          (const MethodInfo_37B5190 *)Method_System_Collections_Generic_List_string__get_Item__);
   UILabel__set_text(v15, (System_String_o *)v27, 0);
   v28 = this->fields.messageLabel;
   if ( !v28 )
@@ -797,14 +801,14 @@ LABEL_29:
     System_Collections_Generic_List_object___AddWithResize(
       (System_Collections_Generic_List_object__o *)messageLabel,
       (Il2CppObject *)v15,
-      *(const MethodInfo_37A3024 **)(*(_QWORD *)(v33[4] + 192LL) + 112LL));
+      *(const MethodInfo_37B5460 **)(*(_QWORD *)(v33[4] + 192LL) + 112LL));
   }
   else
   {
     v35 = m_CachedPtr + 8 * klass_low;
     LODWORD(messageLabel[1].klass) = klass_low + 1;
     *(_QWORD *)(v35 + 32) = v15;
-    sub_1C36FFC(v35 + 32, v15);
+    sub_1C3E508(v35 + 32, v15);
   }
 }
 
@@ -815,6 +819,7 @@ void RubyLabelHelper__SetText(RubyLabelHelper_o *this, System_String_o *text, co
   System_String_o *FormalText; // x0
   const MethodInfo *v7; // x2
   const MethodInfo *v8; // x1
+  __int64 v9; // x1
   UnityEngine_Behaviour_o *messageLabel; // x0
 
   RubyLabelHelper__ReleasePrefabs(this, (const MethodInfo *)text);
@@ -825,7 +830,7 @@ void RubyLabelHelper__SetText(RubyLabelHelper_o *this, System_String_o *text, co
     RubyLabelHelper__SetMainObject(this, v8);
     messageLabel = (UnityEngine_Behaviour_o *)this->fields.messageLabel;
     if ( !messageLabel )
-      sub_1C372B4(0);
+      sub_1C3E7C0(0, v9);
     UnityEngine_Behaviour__set_enabled(messageLabel, 0, 0);
   }
 }
@@ -835,128 +840,129 @@ void RubyLabelHelper__SetTextObjectList(RubyLabelHelper_o *this, System_String_o
 {
   RubyLabelHelper_o *v4; // x19
   Il2CppObject *v5; // x22
+  __int64 v6; // x2
   int rubyPrefab; // w8
-  char v7; // w20
-  int32_t v8; // w21
-  System_String_o *v9; // x25
-  System_String_o *v10; // x23
+  char v8; // w20
+  int32_t v9; // w21
+  System_String_o *v10; // x25
+  System_String_o *v11; // x23
   bool continueRuby; // w26
-  int32_t v12; // w24
-  bool v13; // w28
+  int32_t v13; // w24
+  bool v14; // w28
   uint16_t Chars; // w0
-  struct UILabel_o *v15; // x8
-  _QWORD *v16; // x9
-  __int64 v17; // x10
-  UILabel_c **v18; // x8
-  System_String_o *v19; // x0
+  struct UILabel_o *v16; // x8
+  _QWORD *v17; // x9
+  __int64 v18; // x10
+  UILabel_c **v19; // x8
+  System_String_o *v20; // x0
   struct UILabel_o *messageLabel; // x8
-  _QWORD *v21; // x9
+  _QWORD *v22; // x9
   __int64 rubyPrefab_low; // x10
-  UILabel_c **v23; // x8
-  System_String_o *v24; // x1
-  System_String_o *v25; // x0
-  struct UILabel_o *v26; // x8
-  _QWORD *v27; // x9
-  __int64 v28; // x10
-  UILabel_c **v29; // x8
-  struct UILabel_o *v30; // x8
-  _QWORD *v31; // x9
-  __int64 v32; // x10
-  struct UILabel_o *v33; // x8
-  _QWORD *v34; // x9
-  __int64 v35; // x10
-  struct UILabel_o *v36; // x8
-  _QWORD *v37; // x9
-  __int64 v38; // x10
-  struct UILabel_o *v39; // x8
-  _QWORD *v40; // x9
-  __int64 v41; // x10
-  struct UILabel_o *v42; // x8
-  _QWORD *v43; // x9
-  __int64 v44; // x10
-  struct UILabel_o *v45; // x8
-  _QWORD *v46; // x9
-  __int64 v47; // x10
-  struct UILabel_o *v48; // x8
-  _QWORD *v49; // x9
-  __int64 v50; // x10
-  UILabel_c **v51; // x8
-  struct UILabel_o *v52; // x8
-  _QWORD *v53; // x9
-  __int64 v54; // x10
-  struct UILabel_o *v55; // x8
-  _QWORD *v56; // x9
-  __int64 v57; // x10
-  struct UILabel_o *v58; // x8
-  _QWORD *v59; // x9
-  __int64 v60; // x10
-  struct UILabel_o *v61; // x8
-  _QWORD *v62; // x9
-  __int64 v63; // x10
-  UILabel_c **v64; // x8
-  RubyLabelHelper_o *v65; // [xsp+0h] [xbp-70h]
-  _WORD v66[2]; // [xsp+Ch] [xbp-64h] BYREF
+  UILabel_c **v24; // x8
+  System_String_o *v25; // x1
+  System_String_o *v26; // x0
+  struct UILabel_o *v27; // x8
+  _QWORD *v28; // x9
+  __int64 v29; // x10
+  UILabel_c **v30; // x8
+  struct UILabel_o *v31; // x8
+  _QWORD *v32; // x9
+  __int64 v33; // x10
+  struct UILabel_o *v34; // x8
+  _QWORD *v35; // x9
+  __int64 v36; // x10
+  struct UILabel_o *v37; // x8
+  _QWORD *v38; // x9
+  __int64 v39; // x10
+  struct UILabel_o *v40; // x8
+  _QWORD *v41; // x9
+  __int64 v42; // x10
+  struct UILabel_o *v43; // x8
+  _QWORD *v44; // x9
+  __int64 v45; // x10
+  struct UILabel_o *v46; // x8
+  _QWORD *v47; // x9
+  __int64 v48; // x10
+  struct UILabel_o *v49; // x8
+  _QWORD *v50; // x9
+  __int64 v51; // x10
+  UILabel_c **v52; // x8
+  struct UILabel_o *v53; // x8
+  _QWORD *v54; // x9
+  __int64 v55; // x10
+  struct UILabel_o *v56; // x8
+  _QWORD *v57; // x9
+  __int64 v58; // x10
+  struct UILabel_o *v59; // x8
+  _QWORD *v60; // x9
+  __int64 v61; // x10
+  struct UILabel_o *v62; // x8
+  _QWORD *v63; // x9
+  __int64 v64; // x10
+  UILabel_c **v65; // x8
+  RubyLabelHelper_o *v66; // [xsp+0h] [xbp-70h]
+  _WORD v67[2]; // [xsp+Ch] [xbp-64h] BYREF
 
   v4 = this;
-  if ( (byte_4C3CFA6 & 1) == 0 )
+  if ( (byte_4C50D26 & 1) == 0 )
   {
-    sub_1C37058(&char_TypeInfo);
-    sub_1C37058(&Method_System_Collections_Generic_List_int__Add__);
-    sub_1C37058(&Method_System_Collections_Generic_List_bool__Add__);
-    sub_1C37058(&Method_System_Collections_Generic_List_string__Add__);
-    this = (RubyLabelHelper_o *)sub_1C37058(&StringLiteral_1/*""*/);
-    byte_4C3CFA6 = 1;
+    sub_1C3E564(&char_TypeInfo);
+    sub_1C3E564(&Method_System_Collections_Generic_List_int__Add__);
+    sub_1C3E564(&Method_System_Collections_Generic_List_bool__Add__);
+    sub_1C3E564(&Method_System_Collections_Generic_List_string__Add__);
+    this = (RubyLabelHelper_o *)sub_1C3E564(&StringLiteral_1/*""*/);
+    byte_4C50D26 = 1;
   }
-  v66[0] = 0;
+  v67[0] = 0;
   v5 = (Il2CppObject *)StringLiteral_1/*""*/;
   v4->fields.notRubyFlag = 1;
   v4->fields.continueRuby = 0;
   if ( !message || (this = (RubyLabelHelper_o *)System_String__Split(message, 0xAu, 0, 0)) == 0 )
 LABEL_116:
-    sub_1C372B4(this);
+    sub_1C3E7C0(this, message);
   rubyPrefab = (int)this->fields.rubyPrefab;
   if ( rubyPrefab >= 1 )
   {
-    v7 = 0;
     v8 = 0;
-    v9 = (System_String_o *)v5;
-    v65 = this;
+    v9 = 0;
+    v10 = (System_String_o *)v5;
+    v66 = this;
     while ( 1 )
     {
-      if ( v8 >= (unsigned int)rubyPrefab )
-        sub_1C372BC(this);
-      v10 = (System_String_o *)*((_QWORD *)&this->fields.mainPrefab + v8);
+      if ( v9 >= (unsigned int)rubyPrefab )
+        sub_1C3E7C8(this, message, v6);
+      v11 = (System_String_o *)*((_QWORD *)&this->fields.mainPrefab + v9);
       continueRuby = v4->fields.continueRuby;
-      if ( !v10 )
+      if ( !v11 )
         goto LABEL_116;
-      if ( v10->fields._stringLength >= 1 )
+      if ( v11->fields._stringLength >= 1 )
       {
-        v12 = 0;
-        v13 = v4->fields.continueRuby;
+        v13 = 0;
+        v14 = v4->fields.continueRuby;
         while ( 1 )
         {
-          Chars = System_String__get_Chars(v10, v12, 0);
-          v66[0] = Chars;
+          Chars = System_String__get_Chars(v11, v13, 0);
+          v67[0] = Chars;
           if ( Chars <= 0x5Au )
             break;
           if ( Chars == 91 )
           {
-            if ( System_String__get_Chars(v10, v12 + 1, 0) != 35 )
+            if ( System_String__get_Chars(v11, v13 + 1, 0) != 35 )
             {
               if ( !char_TypeInfo->_2.cctor_finished )
                 j_il2cpp_runtime_class_init_0(char_TypeInfo);
-              v25 = System_Char__ToString((uint16_t)v66, 0);
-              v9 = System_String__Concat_63561656(v9, v25, 0);
+              v26 = System_Char__ToString((uint16_t)v67, 0);
+              v10 = System_String__Concat_63636468(v10, v26, 0);
               goto LABEL_83;
             }
             v4->fields.continueRuby = 1;
-            if ( System_String__op_Inequality(v9, (System_String_o *)StringLiteral_1/*""*/, 0) )
+            if ( System_String__op_Inequality(v10, (System_String_o *)StringLiteral_1/*""*/, 0) )
             {
               this = (RubyLabelHelper_o *)v4->fields.mainTextList;
               if ( !this )
                 goto LABEL_116;
               messageLabel = this->fields.messageLabel;
-              v21 = Method_System_Collections_Generic_List_string__Add__;
+              v22 = Method_System_Collections_Generic_List_string__Add__;
               ++HIDWORD(this->fields.rubyPrefab);
               if ( !messageLabel )
                 goto LABEL_116;
@@ -965,374 +971,374 @@ LABEL_116:
               {
                 System_Collections_Generic_List_object___AddWithResize(
                   (System_Collections_Generic_List_object__o *)this,
-                  (Il2CppObject *)v9,
-                  *(const MethodInfo_37A3024 **)(*(_QWORD *)(v21[4] + 192LL) + 112LL));
+                  (Il2CppObject *)v10,
+                  *(const MethodInfo_37B5460 **)(*(_QWORD *)(v22[4] + 192LL) + 112LL));
               }
               else
               {
-                v23 = &messageLabel->klass + rubyPrefab_low;
+                v24 = &messageLabel->klass + rubyPrefab_low;
                 LODWORD(this->fields.rubyPrefab) = rubyPrefab_low + 1;
-                v23[4] = (UILabel_c *)v9;
-                sub_1C36FFC(v23 + 4, v9);
+                v24[4] = (UILabel_c *)v10;
+                sub_1C3E508(v24 + 4, v10);
               }
               this = (RubyLabelHelper_o *)v4->fields.rubyFlagList;
               if ( !this )
                 goto LABEL_116;
-              v39 = this->fields.messageLabel;
-              v40 = Method_System_Collections_Generic_List_bool__Add__;
+              v40 = this->fields.messageLabel;
+              v41 = Method_System_Collections_Generic_List_bool__Add__;
               ++HIDWORD(this->fields.rubyPrefab);
-              if ( !v39 )
+              if ( !v40 )
                 goto LABEL_116;
-              v41 = SLODWORD(this->fields.rubyPrefab);
-              if ( (unsigned int)v41 >= LODWORD(v39->fields.m_CancellationTokenSource) )
+              v42 = SLODWORD(this->fields.rubyPrefab);
+              if ( (unsigned int)v42 >= LODWORD(v40->fields.m_CancellationTokenSource) )
               {
                 System_Collections_Generic_List_bool___AddWithResize(
                   (System_Collections_Generic_List_bool__o *)this,
                   continueRuby,
-                  *(const MethodInfo_375CC44 **)(*(_QWORD *)(v40[4] + 192LL) + 112LL));
+                  *(const MethodInfo_376F080 **)(*(_QWORD *)(v41[4] + 192LL) + 112LL));
               }
               else
               {
-                LODWORD(this->fields.rubyPrefab) = v41 + 1;
-                *((_BYTE *)&v39->fields.leftAnchor + v41) = continueRuby;
+                LODWORD(this->fields.rubyPrefab) = v42 + 1;
+                *((_BYTE *)&v40->fields.leftAnchor + v42) = continueRuby;
               }
               this = (RubyLabelHelper_o *)v4->fields.rubyLineList;
               if ( !this )
                 goto LABEL_116;
-              v42 = this->fields.messageLabel;
-              v43 = Method_System_Collections_Generic_List_bool__Add__;
+              v43 = this->fields.messageLabel;
+              v44 = Method_System_Collections_Generic_List_bool__Add__;
               ++HIDWORD(this->fields.rubyPrefab);
-              if ( !v42 )
+              if ( !v43 )
                 goto LABEL_116;
-              v44 = SLODWORD(this->fields.rubyPrefab);
-              if ( (unsigned int)v44 >= LODWORD(v42->fields.m_CancellationTokenSource) )
+              v45 = SLODWORD(this->fields.rubyPrefab);
+              if ( (unsigned int)v45 >= LODWORD(v43->fields.m_CancellationTokenSource) )
               {
                 System_Collections_Generic_List_bool___AddWithResize(
                   (System_Collections_Generic_List_bool__o *)this,
                   1,
-                  *(const MethodInfo_375CC44 **)(*(_QWORD *)(v43[4] + 192LL) + 112LL));
+                  *(const MethodInfo_376F080 **)(*(_QWORD *)(v44[4] + 192LL) + 112LL));
               }
               else
               {
-                LODWORD(this->fields.rubyPrefab) = v44 + 1;
-                *((_BYTE *)&v42->fields.leftAnchor + v44) = 1;
+                LODWORD(this->fields.rubyPrefab) = v45 + 1;
+                *((_BYTE *)&v43->fields.leftAnchor + v45) = 1;
               }
               this = (RubyLabelHelper_o *)v4->fields.textPositionYList;
               if ( !this )
                 goto LABEL_116;
-              v45 = this->fields.messageLabel;
-              v46 = Method_System_Collections_Generic_List_int__Add__;
+              v46 = this->fields.messageLabel;
+              v47 = Method_System_Collections_Generic_List_int__Add__;
               ++HIDWORD(this->fields.rubyPrefab);
-              if ( !v45 )
+              if ( !v46 )
                 goto LABEL_116;
-              v47 = SLODWORD(this->fields.rubyPrefab);
-              if ( (unsigned int)v47 >= LODWORD(v45->fields.m_CancellationTokenSource) )
+              v48 = SLODWORD(this->fields.rubyPrefab);
+              if ( (unsigned int)v48 >= LODWORD(v46->fields.m_CancellationTokenSource) )
               {
                 System_Collections_Generic_List_int___AddWithResize(
                   (System_Collections_Generic_List_int__o *)this,
-                  v8,
-                  *(const MethodInfo_3786000 **)(*(_QWORD *)(v46[4] + 192LL) + 112LL));
+                  v9,
+                  *(const MethodInfo_379843C **)(*(_QWORD *)(v47[4] + 192LL) + 112LL));
               }
               else
               {
-                LODWORD(this->fields.rubyPrefab) = v47 + 1;
-                *((_DWORD *)&v45->fields.leftAnchor + v47) = v8;
+                LODWORD(this->fields.rubyPrefab) = v48 + 1;
+                *((_DWORD *)&v46->fields.leftAnchor + v48) = v9;
               }
-              v9 = (System_String_o *)StringLiteral_1/*""*/;
+              v10 = (System_String_o *)StringLiteral_1/*""*/;
             }
             v4->fields.notRubyFlag = 0;
             continueRuby = 1;
 LABEL_82:
-            v13 = 1;
+            v14 = 1;
             goto LABEL_83;
           }
           if ( Chars != 93 )
             goto LABEL_33;
-          if ( !v13 )
+          if ( !v14 )
             goto LABEL_24;
           this = (RubyLabelHelper_o *)v4->fields.mainTextList;
           if ( !this )
             goto LABEL_116;
-          v15 = this->fields.messageLabel;
-          v16 = Method_System_Collections_Generic_List_string__Add__;
+          v16 = this->fields.messageLabel;
+          v17 = Method_System_Collections_Generic_List_string__Add__;
           ++HIDWORD(this->fields.rubyPrefab);
-          if ( !v15 )
+          if ( !v16 )
             goto LABEL_116;
-          v17 = SLODWORD(this->fields.rubyPrefab);
-          if ( (unsigned int)v17 >= LODWORD(v15->fields.m_CancellationTokenSource) )
+          v18 = SLODWORD(this->fields.rubyPrefab);
+          if ( (unsigned int)v18 >= LODWORD(v16->fields.m_CancellationTokenSource) )
           {
             System_Collections_Generic_List_object___AddWithResize(
               (System_Collections_Generic_List_object__o *)this,
-              (Il2CppObject *)v9,
-              *(const MethodInfo_37A3024 **)(*(_QWORD *)(v16[4] + 192LL) + 112LL));
+              (Il2CppObject *)v10,
+              *(const MethodInfo_37B5460 **)(*(_QWORD *)(v17[4] + 192LL) + 112LL));
           }
           else
           {
-            v18 = &v15->klass + v17;
-            LODWORD(this->fields.rubyPrefab) = v17 + 1;
-            v18[4] = (UILabel_c *)v9;
-            sub_1C36FFC(v18 + 4, v9);
+            v19 = &v16->klass + v18;
+            LODWORD(this->fields.rubyPrefab) = v18 + 1;
+            v19[4] = (UILabel_c *)v10;
+            sub_1C3E508(v19 + 4, v10);
           }
           this = (RubyLabelHelper_o *)v4->fields.rubyTextList;
           if ( !this )
             goto LABEL_116;
-          v26 = this->fields.messageLabel;
-          v27 = Method_System_Collections_Generic_List_string__Add__;
+          v27 = this->fields.messageLabel;
+          v28 = Method_System_Collections_Generic_List_string__Add__;
           ++HIDWORD(this->fields.rubyPrefab);
-          if ( !v26 )
+          if ( !v27 )
             goto LABEL_116;
-          v28 = SLODWORD(this->fields.rubyPrefab);
-          if ( (unsigned int)v28 >= LODWORD(v26->fields.m_CancellationTokenSource) )
+          v29 = SLODWORD(this->fields.rubyPrefab);
+          if ( (unsigned int)v29 >= LODWORD(v27->fields.m_CancellationTokenSource) )
           {
             System_Collections_Generic_List_object___AddWithResize(
               (System_Collections_Generic_List_object__o *)this,
               v5,
-              *(const MethodInfo_37A3024 **)(*(_QWORD *)(v27[4] + 192LL) + 112LL));
+              *(const MethodInfo_37B5460 **)(*(_QWORD *)(v28[4] + 192LL) + 112LL));
           }
           else
           {
-            v29 = &v26->klass + v28;
-            LODWORD(this->fields.rubyPrefab) = v28 + 1;
-            v29[4] = (UILabel_c *)v5;
-            sub_1C36FFC(v29 + 4, v5);
+            v30 = &v27->klass + v29;
+            LODWORD(this->fields.rubyPrefab) = v29 + 1;
+            v30[4] = (UILabel_c *)v5;
+            sub_1C3E508(v30 + 4, v5);
           }
           this = (RubyLabelHelper_o *)v4->fields.rubyFlagList;
           if ( !this )
             goto LABEL_116;
-          v30 = this->fields.messageLabel;
-          v31 = Method_System_Collections_Generic_List_bool__Add__;
+          v31 = this->fields.messageLabel;
+          v32 = Method_System_Collections_Generic_List_bool__Add__;
           ++HIDWORD(this->fields.rubyPrefab);
-          if ( !v30 )
+          if ( !v31 )
             goto LABEL_116;
-          v32 = SLODWORD(this->fields.rubyPrefab);
-          if ( (unsigned int)v32 >= LODWORD(v30->fields.m_CancellationTokenSource) )
+          v33 = SLODWORD(this->fields.rubyPrefab);
+          if ( (unsigned int)v33 >= LODWORD(v31->fields.m_CancellationTokenSource) )
           {
             System_Collections_Generic_List_bool___AddWithResize(
               (System_Collections_Generic_List_bool__o *)this,
               continueRuby,
-              *(const MethodInfo_375CC44 **)(*(_QWORD *)(v31[4] + 192LL) + 112LL));
+              *(const MethodInfo_376F080 **)(*(_QWORD *)(v32[4] + 192LL) + 112LL));
           }
           else
           {
-            LODWORD(this->fields.rubyPrefab) = v32 + 1;
-            *((_BYTE *)&v30->fields.leftAnchor + v32) = continueRuby;
+            LODWORD(this->fields.rubyPrefab) = v33 + 1;
+            *((_BYTE *)&v31->fields.leftAnchor + v33) = continueRuby;
           }
           this = (RubyLabelHelper_o *)v4->fields.rubyLineList;
           if ( !this )
             goto LABEL_116;
-          v33 = this->fields.messageLabel;
-          v34 = Method_System_Collections_Generic_List_bool__Add__;
+          v34 = this->fields.messageLabel;
+          v35 = Method_System_Collections_Generic_List_bool__Add__;
           ++HIDWORD(this->fields.rubyPrefab);
-          if ( !v33 )
+          if ( !v34 )
             goto LABEL_116;
-          v35 = SLODWORD(this->fields.rubyPrefab);
-          if ( (unsigned int)v35 >= LODWORD(v33->fields.m_CancellationTokenSource) )
+          v36 = SLODWORD(this->fields.rubyPrefab);
+          if ( (unsigned int)v36 >= LODWORD(v34->fields.m_CancellationTokenSource) )
           {
             System_Collections_Generic_List_bool___AddWithResize(
               (System_Collections_Generic_List_bool__o *)this,
               1,
-              *(const MethodInfo_375CC44 **)(*(_QWORD *)(v34[4] + 192LL) + 112LL));
+              *(const MethodInfo_376F080 **)(*(_QWORD *)(v35[4] + 192LL) + 112LL));
           }
           else
           {
-            LODWORD(this->fields.rubyPrefab) = v35 + 1;
-            *((_BYTE *)&v33->fields.leftAnchor + v35) = 1;
+            LODWORD(this->fields.rubyPrefab) = v36 + 1;
+            *((_BYTE *)&v34->fields.leftAnchor + v36) = 1;
           }
           this = (RubyLabelHelper_o *)v4->fields.textPositionYList;
           if ( !this )
             goto LABEL_116;
-          v36 = this->fields.messageLabel;
-          v37 = Method_System_Collections_Generic_List_int__Add__;
+          v37 = this->fields.messageLabel;
+          v38 = Method_System_Collections_Generic_List_int__Add__;
           ++HIDWORD(this->fields.rubyPrefab);
-          if ( !v36 )
+          if ( !v37 )
             goto LABEL_116;
-          v38 = SLODWORD(this->fields.rubyPrefab);
-          if ( (unsigned int)v38 >= LODWORD(v36->fields.m_CancellationTokenSource) )
+          v39 = SLODWORD(this->fields.rubyPrefab);
+          if ( (unsigned int)v39 >= LODWORD(v37->fields.m_CancellationTokenSource) )
           {
             System_Collections_Generic_List_int___AddWithResize(
               (System_Collections_Generic_List_int__o *)this,
-              v8,
-              *(const MethodInfo_3786000 **)(*(_QWORD *)(v37[4] + 192LL) + 112LL));
+              v9,
+              *(const MethodInfo_379843C **)(*(_QWORD *)(v38[4] + 192LL) + 112LL));
           }
           else
           {
-            LODWORD(this->fields.rubyPrefab) = v38 + 1;
-            *((_DWORD *)&v36->fields.leftAnchor + v38) = v8;
+            LODWORD(this->fields.rubyPrefab) = v39 + 1;
+            *((_DWORD *)&v37->fields.leftAnchor + v39) = v9;
           }
           continueRuby = 0;
-          v13 = 0;
-          v7 = 0;
+          v14 = 0;
+          v8 = 0;
           v5 = (Il2CppObject *)StringLiteral_1/*""*/;
           v4->fields.continueRuby = 0;
-          v9 = (System_String_o *)v5;
+          v10 = (System_String_o *)v5;
 LABEL_83:
-          if ( ++v12 >= v10->fields._stringLength )
+          if ( ++v13 >= v11->fields._stringLength )
             goto LABEL_86;
         }
         if ( Chars == 35 )
         {
-          if ( !v13 )
+          if ( !v14 )
           {
 LABEL_24:
             if ( !char_TypeInfo->_2.cctor_finished )
               j_il2cpp_runtime_class_init_0(char_TypeInfo);
-            v19 = System_Char__ToString((uint16_t)v66, 0);
-            v9 = System_String__Concat_63561656(v9, v19, 0);
-            v13 = 0;
+            v20 = System_Char__ToString((uint16_t)v67, 0);
+            v10 = System_String__Concat_63636468(v10, v20, 0);
+            v14 = 0;
             goto LABEL_83;
           }
           goto LABEL_82;
         }
         if ( Chars == 58 )
         {
-          if ( !v13 )
+          if ( !v14 )
             goto LABEL_24;
-          v13 = 1;
+          v14 = 1;
         }
         else
         {
 LABEL_33:
           if ( !char_TypeInfo->_2.cctor_finished )
             j_il2cpp_runtime_class_init_0(char_TypeInfo);
-          v24 = System_Char__ToString((uint16_t)v66, 0);
-          if ( (v7 & 1) == 0 )
+          v25 = System_Char__ToString((uint16_t)v67, 0);
+          if ( (v8 & 1) == 0 )
           {
-            v9 = System_String__Concat_63561656(v9, v24, 0);
-            v7 = 0;
+            v10 = System_String__Concat_63636468(v10, v25, 0);
+            v8 = 0;
             goto LABEL_83;
           }
-          v5 = (Il2CppObject *)System_String__Concat_63561656((System_String_o *)v5, v24, 0);
+          v5 = (Il2CppObject *)System_String__Concat_63636468((System_String_o *)v5, v25, 0);
         }
-        v7 = 1;
+        v8 = 1;
         goto LABEL_83;
       }
-      v13 = v4->fields.continueRuby;
+      v14 = v4->fields.continueRuby;
 LABEL_86:
-      if ( System_String__op_Inequality(v9, (System_String_o *)StringLiteral_1/*""*/, 0) )
+      if ( System_String__op_Inequality(v10, (System_String_o *)StringLiteral_1/*""*/, 0) )
         break;
 LABEL_114:
-      this = v65;
-      ++v8;
-      rubyPrefab = (int)v65->fields.rubyPrefab;
-      if ( v8 >= rubyPrefab )
+      this = v66;
+      ++v9;
+      rubyPrefab = (int)v66->fields.rubyPrefab;
+      if ( v9 >= rubyPrefab )
         return;
     }
     this = (RubyLabelHelper_o *)v4->fields.mainTextList;
     if ( !this )
       goto LABEL_116;
-    v48 = this->fields.messageLabel;
-    v49 = Method_System_Collections_Generic_List_string__Add__;
+    v49 = this->fields.messageLabel;
+    v50 = Method_System_Collections_Generic_List_string__Add__;
     ++HIDWORD(this->fields.rubyPrefab);
-    if ( !v48 )
+    if ( !v49 )
       goto LABEL_116;
-    v50 = SLODWORD(this->fields.rubyPrefab);
-    if ( (unsigned int)v50 >= LODWORD(v48->fields.m_CancellationTokenSource) )
+    v51 = SLODWORD(this->fields.rubyPrefab);
+    if ( (unsigned int)v51 >= LODWORD(v49->fields.m_CancellationTokenSource) )
     {
       System_Collections_Generic_List_object___AddWithResize(
         (System_Collections_Generic_List_object__o *)this,
-        (Il2CppObject *)v9,
-        *(const MethodInfo_37A3024 **)(*(_QWORD *)(v49[4] + 192LL) + 112LL));
+        (Il2CppObject *)v10,
+        *(const MethodInfo_37B5460 **)(*(_QWORD *)(v50[4] + 192LL) + 112LL));
     }
     else
     {
-      v51 = &v48->klass + v50;
-      LODWORD(this->fields.rubyPrefab) = v50 + 1;
-      v51[4] = (UILabel_c *)v9;
-      sub_1C36FFC(v51 + 4, v9);
+      v52 = &v49->klass + v51;
+      LODWORD(this->fields.rubyPrefab) = v51 + 1;
+      v52[4] = (UILabel_c *)v10;
+      sub_1C3E508(v52 + 4, v10);
     }
     this = (RubyLabelHelper_o *)v4->fields.rubyFlagList;
     if ( !this )
       goto LABEL_116;
-    v52 = this->fields.messageLabel;
-    v53 = Method_System_Collections_Generic_List_bool__Add__;
+    v53 = this->fields.messageLabel;
+    v54 = Method_System_Collections_Generic_List_bool__Add__;
     ++HIDWORD(this->fields.rubyPrefab);
-    if ( !v52 )
+    if ( !v53 )
       goto LABEL_116;
-    v54 = SLODWORD(this->fields.rubyPrefab);
-    if ( (unsigned int)v54 >= LODWORD(v52->fields.m_CancellationTokenSource) )
+    v55 = SLODWORD(this->fields.rubyPrefab);
+    if ( (unsigned int)v55 >= LODWORD(v53->fields.m_CancellationTokenSource) )
     {
       System_Collections_Generic_List_bool___AddWithResize(
         (System_Collections_Generic_List_bool__o *)this,
         continueRuby,
-        *(const MethodInfo_375CC44 **)(*(_QWORD *)(v53[4] + 192LL) + 112LL));
+        *(const MethodInfo_376F080 **)(*(_QWORD *)(v54[4] + 192LL) + 112LL));
     }
     else
     {
-      LODWORD(this->fields.rubyPrefab) = v54 + 1;
-      *((_BYTE *)&v52->fields.leftAnchor + v54) = continueRuby;
+      LODWORD(this->fields.rubyPrefab) = v55 + 1;
+      *((_BYTE *)&v53->fields.leftAnchor + v55) = continueRuby;
     }
     this = (RubyLabelHelper_o *)v4->fields.rubyLineList;
     if ( !this )
       goto LABEL_116;
-    v55 = this->fields.messageLabel;
-    v56 = Method_System_Collections_Generic_List_bool__Add__;
+    v56 = this->fields.messageLabel;
+    v57 = Method_System_Collections_Generic_List_bool__Add__;
     ++HIDWORD(this->fields.rubyPrefab);
-    if ( !v55 )
+    if ( !v56 )
       goto LABEL_116;
-    v57 = SLODWORD(this->fields.rubyPrefab);
-    if ( (unsigned int)v57 >= LODWORD(v55->fields.m_CancellationTokenSource) )
+    v58 = SLODWORD(this->fields.rubyPrefab);
+    if ( (unsigned int)v58 >= LODWORD(v56->fields.m_CancellationTokenSource) )
     {
       System_Collections_Generic_List_bool___AddWithResize(
         (System_Collections_Generic_List_bool__o *)this,
-        v13,
-        *(const MethodInfo_375CC44 **)(*(_QWORD *)(v56[4] + 192LL) + 112LL));
+        v14,
+        *(const MethodInfo_376F080 **)(*(_QWORD *)(v57[4] + 192LL) + 112LL));
     }
     else
     {
-      LODWORD(this->fields.rubyPrefab) = v57 + 1;
-      *((_BYTE *)&v55->fields.leftAnchor + v57) = v13;
+      LODWORD(this->fields.rubyPrefab) = v58 + 1;
+      *((_BYTE *)&v56->fields.leftAnchor + v58) = v14;
     }
     this = (RubyLabelHelper_o *)v4->fields.textPositionYList;
     if ( !this )
       goto LABEL_116;
-    v58 = this->fields.messageLabel;
-    v59 = Method_System_Collections_Generic_List_int__Add__;
+    v59 = this->fields.messageLabel;
+    v60 = Method_System_Collections_Generic_List_int__Add__;
     ++HIDWORD(this->fields.rubyPrefab);
-    if ( !v58 )
+    if ( !v59 )
       goto LABEL_116;
-    v60 = SLODWORD(this->fields.rubyPrefab);
-    if ( (unsigned int)v60 >= LODWORD(v58->fields.m_CancellationTokenSource) )
+    v61 = SLODWORD(this->fields.rubyPrefab);
+    if ( (unsigned int)v61 >= LODWORD(v59->fields.m_CancellationTokenSource) )
     {
       System_Collections_Generic_List_int___AddWithResize(
         (System_Collections_Generic_List_int__o *)this,
-        v8,
-        *(const MethodInfo_3786000 **)(*(_QWORD *)(v59[4] + 192LL) + 112LL));
-      if ( !v13 )
+        v9,
+        *(const MethodInfo_379843C **)(*(_QWORD *)(v60[4] + 192LL) + 112LL));
+      if ( !v14 )
       {
 LABEL_113:
-        v9 = (System_String_o *)StringLiteral_1/*""*/;
+        v10 = (System_String_o *)StringLiteral_1/*""*/;
         goto LABEL_114;
       }
     }
     else
     {
-      LODWORD(this->fields.rubyPrefab) = v60 + 1;
-      *((_DWORD *)&v58->fields.leftAnchor + v60) = v8;
-      if ( !v13 )
+      LODWORD(this->fields.rubyPrefab) = v61 + 1;
+      *((_DWORD *)&v59->fields.leftAnchor + v61) = v9;
+      if ( !v14 )
         goto LABEL_113;
     }
     this = (RubyLabelHelper_o *)v4->fields.rubyTextList;
     if ( !this )
       goto LABEL_116;
-    v61 = this->fields.messageLabel;
-    v62 = Method_System_Collections_Generic_List_string__Add__;
+    v62 = this->fields.messageLabel;
+    v63 = Method_System_Collections_Generic_List_string__Add__;
     ++HIDWORD(this->fields.rubyPrefab);
-    if ( !v61 )
+    if ( !v62 )
       goto LABEL_116;
-    v63 = SLODWORD(this->fields.rubyPrefab);
-    if ( (unsigned int)v63 >= LODWORD(v61->fields.m_CancellationTokenSource) )
+    v64 = SLODWORD(this->fields.rubyPrefab);
+    if ( (unsigned int)v64 >= LODWORD(v62->fields.m_CancellationTokenSource) )
     {
       System_Collections_Generic_List_object___AddWithResize(
         (System_Collections_Generic_List_object__o *)this,
         v5,
-        *(const MethodInfo_37A3024 **)(*(_QWORD *)(v62[4] + 192LL) + 112LL));
+        *(const MethodInfo_37B5460 **)(*(_QWORD *)(v63[4] + 192LL) + 112LL));
     }
     else
     {
-      v64 = &v61->klass + v63;
-      LODWORD(this->fields.rubyPrefab) = v63 + 1;
-      v64[4] = (UILabel_c *)v5;
-      sub_1C36FFC(v64 + 4, v5);
+      v65 = &v62->klass + v64;
+      LODWORD(this->fields.rubyPrefab) = v64 + 1;
+      v65[4] = (UILabel_c *)v5;
+      sub_1C3E508(v65 + 4, v5);
     }
     goto LABEL_113;
   }
@@ -1405,18 +1411,18 @@ System_String_o *RubyLabelHelper__TextFormalAdjust(
   _WORD v63[2]; // [xsp+Ch] [xbp-64h] BYREF
 
   v4 = this;
-  if ( (byte_4C3CFAA & 1) == 0 )
+  if ( (byte_4C50D2A & 1) == 0 )
   {
-    sub_1C37058(&char_TypeInfo);
-    sub_1C37058(&System_Collections_Generic_IReadOnlyCollection_char__TypeInfo);
-    sub_1C37058(&System_Collections_Generic_IReadOnlyList_char__TypeInfo);
-    this = (RubyLabelHelper_o *)sub_1C37058(&StringLiteral_1/*""*/);
-    byte_4C3CFAA = 1;
+    sub_1C3E564(&char_TypeInfo);
+    sub_1C3E564(&System_Collections_Generic_IReadOnlyCollection_char__TypeInfo);
+    sub_1C3E564(&System_Collections_Generic_IReadOnlyList_char__TypeInfo);
+    this = (RubyLabelHelper_o *)sub_1C3E564(&StringLiteral_1/*""*/);
+    byte_4C50D2A = 1;
   }
   v63[0] = 0;
   if ( !localMainTextList )
 LABEL_101:
-    sub_1C372B4(this);
+    sub_1C3E7C0(this, localMainTextList);
   v5 = (System_String_o *)StringLiteral_1/*""*/;
   v6 = 0;
   for ( i = 0; ; ++i )
@@ -1438,7 +1444,7 @@ LABEL_101:
     else
     {
 LABEL_9:
-      v11 = sub_1C87870(localMainTextList, System_Collections_Generic_IReadOnlyCollection_char__TypeInfo, 0);
+      v11 = sub_1C8ED7C(localMainTextList, System_Collections_Generic_IReadOnlyCollection_char__TypeInfo, 0);
     }
     if ( (int)i >= (*(int (__fastcall **)(System_Collections_Generic_IReadOnlyList_char__o *, _QWORD))v11)(
                      localMainTextList,
@@ -1461,7 +1467,7 @@ LABEL_9:
     else
     {
 LABEL_16:
-      v15 = sub_1C87870(localMainTextList, System_Collections_Generic_IReadOnlyList_char__TypeInfo, 0);
+      v15 = sub_1C8ED7C(localMainTextList, System_Collections_Generic_IReadOnlyList_char__TypeInfo, 0);
     }
     this = (RubyLabelHelper_o *)(*(__int64 (__fastcall **)(System_Collections_Generic_IReadOnlyList_char__o *, _QWORD, _QWORD))v15)(
                                   localMainTextList,
@@ -1493,7 +1499,7 @@ LABEL_16:
     else
     {
 LABEL_24:
-      v23 = sub_1C87870(localMainTextList, System_Collections_Generic_IReadOnlyList_char__TypeInfo, 0);
+      v23 = sub_1C8ED7C(localMainTextList, System_Collections_Generic_IReadOnlyList_char__TypeInfo, 0);
     }
     this = (RubyLabelHelper_o *)(*(__int64 (__fastcall **)(System_Collections_Generic_IReadOnlyList_char__o *, _QWORD, _QWORD))v23)(
                                   localMainTextList,
@@ -1505,7 +1511,7 @@ LABEL_24:
       if ( !char_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(char_TypeInfo);
       v24 = System_Char__ToString((uint16_t)v63, 0);
-      this = (RubyLabelHelper_o *)System_String__Concat_63561656(v5, v24, 0);
+      this = (RubyLabelHelper_o *)System_String__Concat_63636468(v5, v24, 0);
       v25 = v4->fields.messageLabel;
       if ( !v25 )
         goto LABEL_101;
@@ -1537,7 +1543,7 @@ LABEL_24:
         else
         {
 LABEL_47:
-          v34 = sub_1C87870(localMainTextList, System_Collections_Generic_IReadOnlyList_char__TypeInfo, 0);
+          v34 = sub_1C8ED7C(localMainTextList, System_Collections_Generic_IReadOnlyList_char__TypeInfo, 0);
         }
         v63[0] = (*(__int64 (__fastcall **)(System_Collections_Generic_IReadOnlyList_char__o *, _QWORD, _QWORD))v34)(
                    localMainTextList,
@@ -1546,7 +1552,7 @@ LABEL_47:
         if ( !char_TypeInfo->_2.cctor_finished )
           j_il2cpp_runtime_class_init_0(char_TypeInfo);
         v42 = System_Char__ToString((uint16_t)v63, 0);
-        v5 = System_String__Concat_63561656(v5, v42, 0);
+        v5 = System_String__Concat_63636468(v5, v42, 0);
         continue;
       }
       v25 = v4->fields.messageLabel;
@@ -1575,7 +1581,7 @@ LABEL_47:
       else
       {
 LABEL_42:
-        v30 = sub_1C87870(localMainTextList, System_Collections_Generic_IReadOnlyCollection_char__TypeInfo, 0);
+        v30 = sub_1C8ED7C(localMainTextList, System_Collections_Generic_IReadOnlyCollection_char__TypeInfo, 0);
       }
       this = (RubyLabelHelper_o *)(*(__int64 (__fastcall **)(System_Collections_Generic_IReadOnlyList_char__o *, _QWORD))v30)(
                                     localMainTextList,
@@ -1608,7 +1614,7 @@ LABEL_42:
       else
       {
 LABEL_57:
-        v41 = sub_1C87870(localMainTextList, System_Collections_Generic_IReadOnlyList_char__TypeInfo, 0);
+        v41 = sub_1C8ED7C(localMainTextList, System_Collections_Generic_IReadOnlyList_char__TypeInfo, 0);
       }
       this = (RubyLabelHelper_o *)(*(__int64 (__fastcall **)(System_Collections_Generic_IReadOnlyList_char__o *, _QWORD, _QWORD))v41)(
                                     localMainTextList,
@@ -1635,7 +1641,7 @@ LABEL_66:
         if ( !char_TypeInfo->_2.cctor_finished )
           j_il2cpp_runtime_class_init_0(char_TypeInfo);
         v46 = System_Char__ToString((uint16_t)v63, 0);
-        this = (RubyLabelHelper_o *)System_String__Concat_63561656(v5, v46, 0);
+        this = (RubyLabelHelper_o *)System_String__Concat_63636468(v5, v46, 0);
         v47 = v4->fields.messageLabel;
         if ( !v47 )
           goto LABEL_101;
@@ -1665,7 +1671,7 @@ LABEL_66:
         else
         {
 LABEL_79:
-          v52 = sub_1C87870(localMainTextList, System_Collections_Generic_IReadOnlyList_char__TypeInfo, 0);
+          v52 = sub_1C8ED7C(localMainTextList, System_Collections_Generic_IReadOnlyList_char__TypeInfo, 0);
         }
         this = (RubyLabelHelper_o *)(*(__int64 (__fastcall **)(System_Collections_Generic_IReadOnlyList_char__o *, _QWORD, _QWORD))v52)(
                                       localMainTextList,
@@ -1683,7 +1689,7 @@ LABEL_79:
           if ( !char_TypeInfo->_2.cctor_finished )
             j_il2cpp_runtime_class_init_0(char_TypeInfo);
           v54 = System_Char__ToString((uint16_t)v63, 0);
-          this = (RubyLabelHelper_o *)System_String__Concat_63561656(v5, v54, 0);
+          this = (RubyLabelHelper_o *)System_String__Concat_63636468(v5, v54, 0);
           v55 = v4->fields.messageLabel;
           if ( !v55 )
             goto LABEL_101;
@@ -1713,7 +1719,7 @@ LABEL_79:
           else
           {
 LABEL_95:
-            v60 = sub_1C87870(localMainTextList, System_Collections_Generic_IReadOnlyList_char__TypeInfo, 0);
+            v60 = sub_1C8ED7C(localMainTextList, System_Collections_Generic_IReadOnlyList_char__TypeInfo, 0);
           }
           v63[0] = (*(__int64 (__fastcall **)(System_Collections_Generic_IReadOnlyList_char__o *, _QWORD, _QWORD))v60)(
                      localMainTextList,
@@ -1722,7 +1728,7 @@ LABEL_95:
           if ( !char_TypeInfo->_2.cctor_finished )
             j_il2cpp_runtime_class_init_0(char_TypeInfo);
           v61 = System_Char__ToString((uint16_t)v63, 0);
-          v5 = System_String__Concat_63561656(v5, v61, 0);
+          v5 = System_String__Concat_63636468(v5, v61, 0);
           ++i;
         }
       }
@@ -1742,7 +1748,7 @@ UnityEngine_Vector2_o RubyLabelHelper__get_Size(RubyLabelHelper_o *this, const M
 
   messageLabel = this->fields.messageLabel;
   if ( !messageLabel )
-    sub_1C372B4(0);
+    sub_1C3E7C0(0, method);
   printedSize = UILabel__get_printedSize(messageLabel, 0);
   v5 = printedSize.fields.x + this->fields.addSize.fields.x;
   v6 = printedSize.fields.y + this->fields.addSize.fields.y;

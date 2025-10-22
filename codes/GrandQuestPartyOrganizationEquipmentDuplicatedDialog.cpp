@@ -2,10 +2,10 @@ void GrandQuestPartyOrganizationEquipmentDuplicatedDialog___ctor(
         GrandQuestPartyOrganizationEquipmentDuplicatedDialog_o *this,
         const MethodInfo *method)
 {
-  if ( (byte_4C3E856 & 1) == 0 )
+  if ( (byte_4C525DC & 1) == 0 )
   {
-    sub_1C37058(&BaseDialog_TypeInfo);
-    byte_4C3E856 = 1;
+    sub_1C3E564(&BaseDialog_TypeInfo);
+    byte_4C525DC = 1;
   }
   if ( !BaseDialog_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(BaseDialog_TypeInfo);
@@ -27,13 +27,13 @@ void GrandQuestPartyOrganizationEquipmentDuplicatedDialog__Close(
 {
   System_Action_o *v3; // x20
 
-  if ( (byte_4C3E854 & 1) == 0 )
+  if ( (byte_4C525DA & 1) == 0 )
   {
-    sub_1C37058(&System_Action_TypeInfo);
-    sub_1C37058(&Method_GrandQuestPartyOrganizationEquipmentDuplicatedDialog__Close_b__13_0__);
-    byte_4C3E854 = 1;
+    sub_1C3E564(&System_Action_TypeInfo);
+    sub_1C3E564(&Method_GrandQuestPartyOrganizationEquipmentDuplicatedDialog__Close_b__13_0__);
+    byte_4C525DA = 1;
   }
-  v3 = (System_Action_o *)sub_1C372A4(System_Action_TypeInfo);
+  v3 = (System_Action_o *)sub_1C3E7B0(System_Action_TypeInfo);
   System_Action___ctor(
     v3,
     (Il2CppObject *)this,
@@ -49,10 +49,10 @@ void GrandQuestPartyOrganizationEquipmentDuplicatedDialog__Init(
 {
   UILabel_o *titleLabel; // x0
 
-  if ( (byte_4C3E852 & 1) == 0 )
+  if ( (byte_4C525D8 & 1) == 0 )
   {
-    sub_1C37058(&StringLiteral_1/*""*/);
-    byte_4C3E852 = 1;
+    sub_1C3E564(&StringLiteral_1/*""*/);
+    byte_4C525D8 = 1;
   }
   titleLabel = this->fields.titleLabel;
   if ( !titleLabel
@@ -61,7 +61,7 @@ void GrandQuestPartyOrganizationEquipmentDuplicatedDialog__Init(
     || (UILabel__set_text(titleLabel, (System_String_o *)StringLiteral_1/*""*/, 0),
         (titleLabel = (UILabel_o *)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0)) == 0) )
   {
-    sub_1C372B4(titleLabel);
+    sub_1C3E7C0(titleLabel, method);
   }
   UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)titleLabel, 0, 0);
   BaseDialog__Init((BaseDialog_o *)this, 0);
@@ -76,17 +76,17 @@ void GrandQuestPartyOrganizationEquipmentDuplicatedDialog__OnClickClose(
   System_Reflection_MethodBase_o *v4; // x0
   const MethodInfo *v5; // x1
 
-  if ( (byte_4C3E855 & 1) == 0 )
+  if ( (byte_4C525DB & 1) == 0 )
   {
-    sub_1C37058(&Method_GrandQuestPartyOrganizationEquipmentDuplicatedDialog_OnClickClose__);
-    byte_4C3E855 = 1;
+    sub_1C3E564(&Method_GrandQuestPartyOrganizationEquipmentDuplicatedDialog_OnClickClose__);
+    byte_4C525DB = 1;
   }
   if ( this->fields.baseState == 2 )
   {
     v3 = Method_GrandQuestPartyOrganizationEquipmentDuplicatedDialog_OnClickClose__;
     if ( (*((_BYTE *)Method_GrandQuestPartyOrganizationEquipmentDuplicatedDialog_OnClickClose__ + 83) & 2) != 0 )
-      v3 = (_QWORD *)sub_1C37070(Method_GrandQuestPartyOrganizationEquipmentDuplicatedDialog_OnClickClose__);
-    v4 = (System_Reflection_MethodBase_o *)sub_1C3703C(v3, v3[4]);
+      v3 = (_QWORD *)sub_1C3E57C(Method_GrandQuestPartyOrganizationEquipmentDuplicatedDialog_OnClickClose__);
+    v4 = (System_Reflection_MethodBase_o *)sub_1C3E548(v3, v3[4]);
     OverwriteAssetSoundName__PlaySystemSe(v4, 0, 0, 0);
     GrandQuestPartyOrganizationEquipmentDuplicatedDialog__Close(this, v5);
   }
@@ -102,32 +102,33 @@ void GrandQuestPartyOrganizationEquipmentDuplicatedDialog__Open(
         const MethodInfo *method)
 {
   UnityEngine_GameObject_o *gameObject; // x0
-  int32_t v12; // w2
-  const MethodInfo *v13; // x3
+  __int64 v12; // x1
+  int32_t v13; // w2
+  const MethodInfo *v14; // x3
   UILabel_o *titleLabel; // x22
-  System_String_o **v15; // x8
+  System_String_o **v16; // x8
   UILabel_o *descriptionLabel; // x22
-  System_String_o *v17; // x21
-  struct UILabel_o *v18; // x21
-  System_String_o *v19; // x0
+  System_String_o *v18; // x21
+  struct UILabel_o *v19; // x21
+  System_String_o *v20; // x0
   UILabel_o *closeLabel; // x20
 
-  if ( (byte_4C3E853 & 1) == 0 )
+  if ( (byte_4C525D9 & 1) == 0 )
   {
-    sub_1C37058(&LocalizationManager_TypeInfo);
-    sub_1C37058(&StringLiteral_7005/*"GRAND_QUEST_SERVANT_EQUIPMENT_DUPLICATION_DIALOG_TITLE"*/);
-    sub_1C37058(&StringLiteral_3685/*"COMMON_CONFIRM_CLOSE"*/);
-    sub_1C37058(&StringLiteral_7004/*"GRAND_QUEST_SERVANT_EQUIPMENT_DUPLICATION_DIALOG_SINGLE_SERVANT_DESCRIPTION"*/);
-    sub_1C37058(&StringLiteral_44/*"\n\n"*/);
-    sub_1C37058(&StringLiteral_7003/*"GRAND_QUEST_SERVANT_EQUIPMENT_DUPLICATION_DIALOG_DESCRIPTION"*/);
-    byte_4C3E853 = 1;
+    sub_1C3E564(&LocalizationManager_TypeInfo);
+    sub_1C3E564(&StringLiteral_7005/*"GRAND_QUEST_SERVANT_EQUIPMENT_DUPLICATION_DIALOG_TITLE"*/);
+    sub_1C3E564(&StringLiteral_3685/*"COMMON_CONFIRM_CLOSE"*/);
+    sub_1C3E564(&StringLiteral_7004/*"GRAND_QUEST_SERVANT_EQUIPMENT_DUPLICATION_DIALOG_SINGLE_SERVANT_DESCRIPTION"*/);
+    sub_1C3E564(&StringLiteral_44/*"\n\n"*/);
+    sub_1C3E564(&StringLiteral_7003/*"GRAND_QUEST_SERVANT_EQUIPMENT_DUPLICATION_DIALOG_DESCRIPTION"*/);
+    byte_4C525D9 = 1;
   }
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
   if ( !gameObject )
     goto LABEL_16;
   UnityEngine_GameObject__SetActive(gameObject, 1, 0);
   this->fields.closeFunc = func;
-  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.closeFunc, (int32_t)func, v12, v13);
+  sub_1C3E508((CGThumbnailListItem_o *)&this->fields.closeFunc, (int32_t)func, v13, v14);
   this->fields.isFromOnSelectPartyList = isFromOnSelectPartyList;
   titleLabel = this->fields.titleLabel;
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
@@ -136,26 +137,26 @@ void GrandQuestPartyOrganizationEquipmentDuplicatedDialog__Open(
   if ( !titleLabel )
     goto LABEL_16;
   UILabel__set_text(titleLabel, (System_String_o *)gameObject, 0);
-  v15 = (System_String_o **)(isSingleServantString ? &StringLiteral_7004/*"GRAND_QUEST_SERVANT_EQUIPMENT_DUPLICATION_DIALOG_SINGLE_SERVANT_DESCRIPTION"*/ : &StringLiteral_7003/*"GRAND_QUEST_SERVANT_EQUIPMENT_DUPLICATION_DIALOG_DESCRIPTION"*/);
+  v16 = (System_String_o **)(isSingleServantString ? &StringLiteral_7004/*"GRAND_QUEST_SERVANT_EQUIPMENT_DUPLICATION_DIALOG_SINGLE_SERVANT_DESCRIPTION"*/ : &StringLiteral_7003/*"GRAND_QUEST_SERVANT_EQUIPMENT_DUPLICATION_DIALOG_DESCRIPTION"*/);
   descriptionLabel = this->fields.descriptionLabel;
-  v17 = *v15;
+  v18 = *v16;
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-  gameObject = (UnityEngine_GameObject_o *)LocalizationManager__Get(v17, 0);
+  gameObject = (UnityEngine_GameObject_o *)LocalizationManager__Get(v18, 0);
   if ( !descriptionLabel
-    || (UILabel__set_text(descriptionLabel, (System_String_o *)gameObject, 0), (v18 = this->fields.descriptionLabel) == 0)
-    || (v19 = System_String__Concat_63599904(
-                v18->fields.mText,
+    || (UILabel__set_text(descriptionLabel, (System_String_o *)gameObject, 0), (v19 = this->fields.descriptionLabel) == 0)
+    || (v20 = System_String__Concat_63674716(
+                v19->fields.mText,
                 (System_String_o *)StringLiteral_44/*"\n\n"*/,
                 duplicationEquipmentList,
                 0),
-        UILabel__set_text(v18, v19, 0),
+        UILabel__set_text(v19, v20, 0),
         closeLabel = this->fields.closeLabel,
         gameObject = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)StringLiteral_3685/*"COMMON_CONFIRM_CLOSE"*/, 0),
         !closeLabel) )
   {
 LABEL_16:
-    sub_1C372B4(gameObject);
+    sub_1C3E7C0(gameObject, v12);
   }
   UILabel__set_text(closeLabel, (System_String_o *)gameObject, 0);
   BaseDialog__SetMaskTouchCloseEnabled((BaseDialog_o *)this, 1, 0);
@@ -195,10 +196,10 @@ void GrandQuestPartyOrganizationEquipmentDuplicatedDialog__add_closeFunc(
   GrandQuestPartyOrganizationEquipmentDuplicatedDialog_CloseDelegate_o *v12; // x1
   const MethodInfo *v13; // x2
 
-  if ( (byte_4C3E850 & 1) == 0 )
+  if ( (byte_4C525D6 & 1) == 0 )
   {
-    sub_1C37058(&GrandQuestPartyOrganizationEquipmentDuplicatedDialog_CloseDelegate_TypeInfo);
-    byte_4C3E850 = 1;
+    sub_1C3E564(&GrandQuestPartyOrganizationEquipmentDuplicatedDialog_CloseDelegate_TypeInfo);
+    byte_4C525D6 = 1;
   }
   closeFunc = this->fields.closeFunc;
   p_closeFunc = &this->fields.closeFunc;
@@ -211,13 +212,13 @@ void GrandQuestPartyOrganizationEquipmentDuplicatedDialog__add_closeFunc(
       if ( (GrandQuestPartyOrganizationEquipmentDuplicatedDialog_CloseDelegate_c *)v8->klass != GrandQuestPartyOrganizationEquipmentDuplicatedDialog_CloseDelegate_TypeInfo )
         break;
     }
-    v9 = sub_1C712B0(p_closeFunc, v8, v6);
+    v9 = sub_1C787BC(p_closeFunc, v8, v6);
     v10 = v6 == (System_Delegate_o *)v9;
     v6 = (System_Delegate_o *)v9;
     if ( v10 )
       return;
   }
-  v11 = (GrandQuestPartyOrganizationEquipmentDuplicatedDialog_o *)sub_1C37574(v8);
+  v11 = (GrandQuestPartyOrganizationEquipmentDuplicatedDialog_o *)sub_1C3EA80(v8);
   GrandQuestPartyOrganizationEquipmentDuplicatedDialog__remove_closeFunc(v11, v12, v13);
 }
 
@@ -236,10 +237,10 @@ void GrandQuestPartyOrganizationEquipmentDuplicatedDialog__remove_closeFunc(
   GrandQuestPartyOrganizationEquipmentDuplicatedDialog_o *v11; // x0
   const MethodInfo *v12; // x1
 
-  if ( (byte_4C3E851 & 1) == 0 )
+  if ( (byte_4C525D7 & 1) == 0 )
   {
-    sub_1C37058(&GrandQuestPartyOrganizationEquipmentDuplicatedDialog_CloseDelegate_TypeInfo);
-    byte_4C3E851 = 1;
+    sub_1C3E564(&GrandQuestPartyOrganizationEquipmentDuplicatedDialog_CloseDelegate_TypeInfo);
+    byte_4C525D7 = 1;
   }
   closeFunc = this->fields.closeFunc;
   p_closeFunc = &this->fields.closeFunc;
@@ -252,13 +253,13 @@ void GrandQuestPartyOrganizationEquipmentDuplicatedDialog__remove_closeFunc(
       if ( (GrandQuestPartyOrganizationEquipmentDuplicatedDialog_CloseDelegate_c *)v8->klass != GrandQuestPartyOrganizationEquipmentDuplicatedDialog_CloseDelegate_TypeInfo )
         break;
     }
-    v9 = sub_1C712B0(p_closeFunc, v8, v6);
+    v9 = sub_1C787BC(p_closeFunc, v8, v6);
     v10 = v6 == (System_Delegate_o *)v9;
     v6 = (System_Delegate_o *)v9;
     if ( v10 )
       return;
   }
-  v11 = (GrandQuestPartyOrganizationEquipmentDuplicatedDialog_o *)sub_1C37574(v8);
+  v11 = (GrandQuestPartyOrganizationEquipmentDuplicatedDialog_o *)sub_1C3EA80(v8);
   GrandQuestPartyOrganizationEquipmentDuplicatedDialog__Awake(v11, v12);
 }
 
@@ -278,15 +279,15 @@ void GrandQuestPartyOrganizationEquipmentDuplicatedDialog_CloseDelegate___ctor(
   this->fields.method = method;
   this->fields.method_ptr = v4;
   this->fields.m_target = object;
-  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.m_target, (int32_t)object, method, a4);
+  sub_1C3E508((CGThumbnailListItem_o *)&this->fields.m_target, (int32_t)object, method, a4);
   v8 = *(unsigned __int8 *)(method + 82);
   this->fields.method_code = (intptr_t)this;
-  if ( (sub_1C37118(method) & 1) == 0 )
+  if ( (sub_1C3E624(method) & 1) == 0 )
   {
     if ( !object )
     {
-      v10 = sub_1C372D0(0, "Delegate to an instance method cannot have null 'this'.");
-      sub_1C37180(v10, 0);
+      v10 = sub_1C3E7DC(0, "Delegate to an instance method cannot have null 'this'.");
+      sub_1C3E68C(v10, 0);
     }
     goto LABEL_5;
   }
@@ -298,9 +299,9 @@ LABEL_5:
     this->fields.method_code = (intptr_t)m_target;
     goto LABEL_6;
   }
-  this->fields.invoke_impl = (intptr_t)sub_1A75840;
+  this->fields.invoke_impl = (intptr_t)sub_1A7CBE8;
 LABEL_6:
-  this->fields.extra_arg = (intptr_t)sub_1A757F8;
+  this->fields.extra_arg = (intptr_t)sub_1A7CBA0;
 }
 
 
@@ -318,14 +319,14 @@ System_IAsyncResult_o *GrandQuestPartyOrganizationEquipmentDuplicatedDialog_Clos
   bool v13[4]; // [xsp+1Ch] [xbp-34h] BYREF
 
   v13[0] = isFromOnSelectPartyList;
-  if ( (byte_4C3E857 & 1) == 0 )
+  if ( (byte_4C525DD & 1) == 0 )
   {
-    sub_1C37058(&bool_TypeInfo);
-    byte_4C3E857 = 1;
+    sub_1C3E564(&bool_TypeInfo);
+    byte_4C525DD = 1;
   }
   v12[1] = 0;
   v12[0] = j_il2cpp_value_box_0(bool_TypeInfo, v13, callback, object, method, v5, v6, v7);
-  return (System_IAsyncResult_o *)sub_1C3700C(this, v12, callback, object);
+  return (System_IAsyncResult_o *)sub_1C3E518(this, v12, callback, object);
 }
 
 
@@ -334,7 +335,7 @@ void GrandQuestPartyOrganizationEquipmentDuplicatedDialog_CloseDelegate__EndInvo
         System_IAsyncResult_o *result,
         const MethodInfo *method)
 {
-  sub_1C37010(result, 0, method);
+  sub_1C3E51C(result, 0, method);
 }
 
 

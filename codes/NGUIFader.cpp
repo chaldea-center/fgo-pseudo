@@ -1,7 +1,7 @@
 void NGUIFader___ctor(NGUIFader_o *this, const MethodInfo *method)
 {
   this->fields.color.fields.a = 1.0;
-  *(_OWORD *)&this->fields.duration = xmmword_C0F410;
+  *(_OWORD *)&this->fields.duration = xmmword_C12A80;
   UnityEngine_MonoBehaviour___ctor((UnityEngine_MonoBehaviour_o *)this, 0);
 }
 
@@ -21,8 +21,9 @@ void NGUIFader__FadeStart(
   float b; // s10
   float g; // s11
   float r; // s12
+  __int64 v16; // x1
   struct UIWidget_o *fadeWidget; // x0
-  float v17; // s0
+  float v18; // s0
 
   this->fields.finishedCallback = callback;
   p_finishedCallback = &this->fields.finishedCallback;
@@ -30,7 +31,7 @@ void NGUIFader__FadeStart(
   b = col.fields.b;
   g = col.fields.g;
   r = col.fields.r;
-  sub_1C36FFC(
+  sub_1C3E508(
     (CGThumbnailListItem_o *)&this->fields.finishedCallback,
     (int32_t)callback,
     (int32_t)callback,
@@ -48,11 +49,11 @@ void NGUIFader__FadeStart(
     this->fields.duration = dur;
     this->fields.isFadeIn = isIn;
     if ( !fadeWidget )
-      sub_1C372B4(0);
-    v17 = fadeWidget->fields.mColor.fields.a;
+      sub_1C3E7C0(0, v16);
+    v18 = fadeWidget->fields.mColor.fields.a;
     if ( isIn )
     {
-      if ( v17 != 0.0 )
+      if ( v18 != 0.0 )
       {
         UIWidget__set_color(fadeWidget, this->fields.color, 0);
         this->fields.color.fields.a = 1.0;
@@ -63,7 +64,7 @@ LABEL_12:
         return;
       }
     }
-    else if ( v17 != 1.0 )
+    else if ( v18 != 1.0 )
     {
       goto LABEL_12;
     }
@@ -113,8 +114,9 @@ void NGUIFader__setColor(NGUIFader_o *this, UnityEngine_Color_o col, const Metho
   float b; // s9
   float g; // s10
   float r; // s11
+  __int64 v8; // x1
   UIWidget_o *fadeWidget; // x0
-  UnityEngine_Color_o v9; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
+  UnityEngine_Color_o v10; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 
   a = col.fields.a;
   b = col.fields.b;
@@ -124,12 +126,12 @@ void NGUIFader__setColor(NGUIFader_o *this, UnityEngine_Color_o col, const Metho
   NGUIFader__setup(this, method);
   fadeWidget = this->fields.fadeWidget;
   if ( !fadeWidget )
-    sub_1C372B4(0);
-  v9.fields.b = b;
-  v9.fields.a = a;
-  v9.fields.r = r;
-  v9.fields.g = g;
-  UIWidget__set_color(fadeWidget, v9, 0);
+    sub_1C3E7C0(0, v8);
+  v10.fields.b = b;
+  v10.fields.a = a;
+  v10.fields.r = r;
+  v10.fields.g = g;
+  UIWidget__set_color(fadeWidget, v10, 0);
 }
 
 
@@ -138,18 +140,19 @@ void NGUIFader__setup(NGUIFader_o *this, const MethodInfo *method)
   struct UIWidget_o **p_fadeWidget; // x20
   UnityEngine_Object_o *fadeWidget; // x21
   UnityEngine_GameObject_o *gameObject; // x0
+  __int64 v6; // x1
   Il2CppObject *Component_object; // x0
-  int32_t v7; // w2
-  const MethodInfo *v8; // x3
-  struct UIWidget_o *v9; // x8
-  __int64 v10; // d0
+  int32_t v8; // w2
+  const MethodInfo *v9; // x3
+  struct UIWidget_o *v10; // x8
+  __int64 v11; // d0
   float b; // s1
 
-  if ( (byte_4C44763 & 1) == 0 )
+  if ( (byte_4C5852E & 1) == 0 )
   {
-    sub_1C37058(&Method_UnityEngine_GameObject_GetComponent_UIWidget___);
-    sub_1C37058(&UnityEngine_Object_TypeInfo);
-    byte_4C44763 = 1;
+    sub_1C3E564(&Method_UnityEngine_GameObject_GetComponent_UIWidget___);
+    sub_1C3E564(&UnityEngine_Object_TypeInfo);
+    byte_4C5852E = 1;
   }
   p_fadeWidget = &this->fields.fadeWidget;
   fadeWidget = (UnityEngine_Object_o *)this->fields.fadeWidget;
@@ -161,17 +164,17 @@ void NGUIFader__setup(NGUIFader_o *this, const MethodInfo *method)
     if ( !gameObject
       || (Component_object = UnityEngine_GameObject__GetComponent_object_(
                                gameObject,
-                               (const MethodInfo_313F1D8 *)Method_UnityEngine_GameObject_GetComponent_UIWidget___),
+                               (const MethodInfo_31510CC *)Method_UnityEngine_GameObject_GetComponent_UIWidget___),
           *p_fadeWidget = (struct UIWidget_o *)Component_object,
-          sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.fadeWidget, (int32_t)Component_object, v7, v8),
-          (v9 = *p_fadeWidget) == 0) )
+          sub_1C3E508((CGThumbnailListItem_o *)&this->fields.fadeWidget, (int32_t)Component_object, v8, v9),
+          (v10 = *p_fadeWidget) == 0) )
     {
-      sub_1C372B4(gameObject);
+      sub_1C3E7C0(gameObject, v6);
     }
-    v10 = *(_QWORD *)&v9->fields.mColor.fields.r;
-    b = v9->fields.mColor.fields.b;
+    v11 = *(_QWORD *)&v10->fields.mColor.fields.r;
+    b = v10->fields.mColor.fields.b;
     this->fields.color.fields.a = 0.0;
-    *(_QWORD *)&this->fields.color.fields.r = v10;
+    *(_QWORD *)&this->fields.color.fields.r = v11;
     this->fields.color.fields.b = b;
     this->fields.isFadeIn = 1;
   }
@@ -210,7 +213,7 @@ void NGUIFader__updateColor(NGUIFader_o *this, float deltaTime, const MethodInfo
     }
     fadeWidget = this->fields.fadeWidget;
     if ( !fadeWidget )
-      sub_1C372B4(0);
+      sub_1C3E7C0(0, method);
     if ( this->fields.isFadeIn )
       v7 = 1.0 - v7;
     r = this->fields.color.fields.r;
@@ -244,15 +247,15 @@ void NGUIFader_OnFinished___ctor(
   this->fields.method = method;
   this->fields.method_ptr = v4;
   this->fields.m_target = object;
-  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.m_target, (int32_t)object, method, a4);
+  sub_1C3E508((CGThumbnailListItem_o *)&this->fields.m_target, (int32_t)object, method, a4);
   v8 = *(unsigned __int8 *)(method + 82);
   this->fields.method_code = (intptr_t)this;
-  if ( (sub_1C37118(method) & 1) == 0 )
+  if ( (sub_1C3E624(method) & 1) == 0 )
   {
     if ( !object )
     {
-      v10 = sub_1C372D0(0, "Delegate to an instance method cannot have null 'this'.");
-      sub_1C37180(v10, 0);
+      v10 = sub_1C3E7DC(0, "Delegate to an instance method cannot have null 'this'.");
+      sub_1C3E68C(v10, 0);
     }
     goto LABEL_5;
   }
@@ -264,9 +267,9 @@ LABEL_5:
     this->fields.method_code = (intptr_t)m_target;
     goto LABEL_6;
   }
-  this->fields.invoke_impl = (intptr_t)sub_1A7C930;
+  this->fields.invoke_impl = (intptr_t)sub_1A83CD8;
 LABEL_6:
-  this->fields.extra_arg = (intptr_t)sub_1A7C8F0;
+  this->fields.extra_arg = (intptr_t)sub_1A83C98;
 }
 
 
@@ -279,7 +282,7 @@ System_IAsyncResult_o *NGUIFader_OnFinished__BeginInvoke(
   __int64 v5; // [xsp+8h] [xbp-8h] BYREF
 
   v5 = 0;
-  return (System_IAsyncResult_o *)sub_1C3700C(this, &v5, callback, object);
+  return (System_IAsyncResult_o *)sub_1C3E518(this, &v5, callback, object);
 }
 
 
@@ -288,7 +291,7 @@ void NGUIFader_OnFinished__EndInvoke(
         System_IAsyncResult_o *result,
         const MethodInfo *method)
 {
-  sub_1C37010(result, 0, method);
+  sub_1C3E51C(result, 0, method);
 }
 
 

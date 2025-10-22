@@ -48,75 +48,75 @@ void ClassButtonControlComponent___cctor(const MethodInfo *method)
   int32_t v46; // w2
   const MethodInfo *v47; // x3
 
-  if ( (byte_4C4235F & 1) == 0 )
+  if ( (byte_4C56101 & 1) == 0 )
   {
-    sub_1C37058(&ClassButtonControlComponent_TypeInfo);
-    sub_1C37058(&int___TypeInfo);
-    sub_1C37058(&Field__PrivateImplementationDetails__10B4796EAC59C7D81C33711F219BA227247A4E338ADAD078159BA01E87590841);
-    sub_1C37058(&Field__PrivateImplementationDetails__18A642AD06501B3ADC1AC875D0D6E7DA04D9B26814FC4875D2936BA32EFED2E4);
-    sub_1C37058(&Field__PrivateImplementationDetails__2346B4293F72AC9E53CFAEB667D6E61CF0B87957FC559E4186BF3CE8ADAAD288);
-    sub_1C37058(&Field__PrivateImplementationDetails__3BE3D2195C9EDB60EB462B8E9091D8219F1329AF8AF99568111D31E8BFE97C08);
-    sub_1C37058(&Field__PrivateImplementationDetails__8D0959D34A719C2CDE8FB7258D0EA7954059C6042F95BDDD8F80F9F4C919BEC9);
-    sub_1C37058(&Field__PrivateImplementationDetails__921C803ABFA6AC88F44F7AB19198E5C137D1C7183E8E6912757A6263E8DEE0A5);
-    sub_1C37058(&Field__PrivateImplementationDetails__A7A559F58129985AC8C2B5A3F851C7B13B7939AF67587D4A9161F453CE8B339C);
-    sub_1C37058(&Field__PrivateImplementationDetails__DFC9DBE6DE77A476BBB7F1224ED564087A6ADE8ECA1F2503AFEA414DE21000F5);
-    byte_4C4235F = 1;
+    sub_1C3E564(&ClassButtonControlComponent_TypeInfo);
+    sub_1C3E564(&int___TypeInfo);
+    sub_1C3E564(&Field__PrivateImplementationDetails__10B4796EAC59C7D81C33711F219BA227247A4E338ADAD078159BA01E87590841);
+    sub_1C3E564(&Field__PrivateImplementationDetails__18A642AD06501B3ADC1AC875D0D6E7DA04D9B26814FC4875D2936BA32EFED2E4);
+    sub_1C3E564(&Field__PrivateImplementationDetails__2346B4293F72AC9E53CFAEB667D6E61CF0B87957FC559E4186BF3CE8ADAAD288);
+    sub_1C3E564(&Field__PrivateImplementationDetails__3BE3D2195C9EDB60EB462B8E9091D8219F1329AF8AF99568111D31E8BFE97C08);
+    sub_1C3E564(&Field__PrivateImplementationDetails__8D0959D34A719C2CDE8FB7258D0EA7954059C6042F95BDDD8F80F9F4C919BEC9);
+    sub_1C3E564(&Field__PrivateImplementationDetails__921C803ABFA6AC88F44F7AB19198E5C137D1C7183E8E6912757A6263E8DEE0A5);
+    sub_1C3E564(&Field__PrivateImplementationDetails__A7A559F58129985AC8C2B5A3F851C7B13B7939AF67587D4A9161F453CE8B339C);
+    sub_1C3E564(&Field__PrivateImplementationDetails__DFC9DBE6DE77A476BBB7F1224ED564087A6ADE8ECA1F2503AFEA414DE21000F5);
+    byte_4C56101 = 1;
   }
-  v1 = (System_Array_o *)sub_1C37100(int___TypeInfo, 10);
+  v1 = (System_Array_o *)sub_1C3E60C(int___TypeInfo, 10);
   v2.fields.value = Field__PrivateImplementationDetails__DFC9DBE6DE77A476BBB7F1224ED564087A6ADE8ECA1F2503AFEA414DE21000F5;
   v3 = (struct System_Int32_array *)v1;
-  System_Runtime_CompilerServices_RuntimeHelpers__InitializeArray_64262432(v1, v2, 0);
+  System_Runtime_CompilerServices_RuntimeHelpers__InitializeArray_64337244(v1, v2, 0);
   ClassButtonControlComponent_TypeInfo->static_fields->mstClassIdTableHaveMixIcon = v3;
-  sub_1C36FFC((CGThumbnailListItem_o *)ClassButtonControlComponent_TypeInfo->static_fields, (int32_t)v3, v4, v5);
-  v6 = (System_Array_o *)sub_1C37100(int___TypeInfo, 11);
+  sub_1C3E508((CGThumbnailListItem_o *)ClassButtonControlComponent_TypeInfo->static_fields, (int32_t)v3, v4, v5);
+  v6 = (System_Array_o *)sub_1C3E60C(int___TypeInfo, 11);
   v7.fields.value = Field__PrivateImplementationDetails__2346B4293F72AC9E53CFAEB667D6E61CF0B87957FC559E4186BF3CE8ADAAD288;
   v8 = v6;
-  System_Runtime_CompilerServices_RuntimeHelpers__InitializeArray_64262432(v6, v7, 0);
+  System_Runtime_CompilerServices_RuntimeHelpers__InitializeArray_64337244(v6, v7, 0);
   static_fields = ClassButtonControlComponent_TypeInfo->static_fields;
   static_fields->mstClassIdTableHaveMixRecommendIcon = (struct System_Int32_array *)v8;
-  sub_1C36FFC((CGThumbnailListItem_o *)&static_fields->mstClassIdTableHaveMixRecommendIcon, (int32_t)v8, v10, v11);
-  v12 = (System_Array_o *)sub_1C37100(int___TypeInfo, 9);
+  sub_1C3E508((CGThumbnailListItem_o *)&static_fields->mstClassIdTableHaveMixRecommendIcon, (int32_t)v8, v10, v11);
+  v12 = (System_Array_o *)sub_1C3E60C(int___TypeInfo, 9);
   v13.fields.value = Field__PrivateImplementationDetails__18A642AD06501B3ADC1AC875D0D6E7DA04D9B26814FC4875D2936BA32EFED2E4;
   v14 = v12;
-  System_Runtime_CompilerServices_RuntimeHelpers__InitializeArray_64262432(v12, v13, 0);
+  System_Runtime_CompilerServices_RuntimeHelpers__InitializeArray_64337244(v12, v13, 0);
   v15 = ClassButtonControlComponent_TypeInfo->static_fields;
   v15->mstClassIdTableNoMixIcon = (struct System_Int32_array *)v14;
-  sub_1C36FFC((CGThumbnailListItem_o *)&v15->mstClassIdTableNoMixIcon, (int32_t)v14, v16, v17);
-  v18 = (System_Array_o *)sub_1C37100(int___TypeInfo, 10);
+  sub_1C3E508((CGThumbnailListItem_o *)&v15->mstClassIdTableNoMixIcon, (int32_t)v14, v16, v17);
+  v18 = (System_Array_o *)sub_1C3E60C(int___TypeInfo, 10);
   v19.fields.value = Field__PrivateImplementationDetails__8D0959D34A719C2CDE8FB7258D0EA7954059C6042F95BDDD8F80F9F4C919BEC9;
   v20 = v18;
-  System_Runtime_CompilerServices_RuntimeHelpers__InitializeArray_64262432(v18, v19, 0);
+  System_Runtime_CompilerServices_RuntimeHelpers__InitializeArray_64337244(v18, v19, 0);
   v21 = ClassButtonControlComponent_TypeInfo->static_fields;
   v21->mstClassIdTableHaveRecommendIcon = (struct System_Int32_array *)v20;
-  sub_1C36FFC((CGThumbnailListItem_o *)&v21->mstClassIdTableHaveRecommendIcon, (int32_t)v20, v22, v23);
-  v24 = (System_Array_o *)sub_1C37100(int___TypeInfo, 10);
+  sub_1C3E508((CGThumbnailListItem_o *)&v21->mstClassIdTableHaveRecommendIcon, (int32_t)v20, v22, v23);
+  v24 = (System_Array_o *)sub_1C3E60C(int___TypeInfo, 10);
   v25.fields.value = Field__PrivateImplementationDetails__10B4796EAC59C7D81C33711F219BA227247A4E338ADAD078159BA01E87590841;
   v26 = v24;
-  System_Runtime_CompilerServices_RuntimeHelpers__InitializeArray_64262432(v24, v25, 0);
+  System_Runtime_CompilerServices_RuntimeHelpers__InitializeArray_64337244(v24, v25, 0);
   v27 = ClassButtonControlComponent_TypeInfo->static_fields;
   v27->supportGroupTypeTableHaveMixIcon = (struct System_Int32_array *)v26;
-  sub_1C36FFC((CGThumbnailListItem_o *)&v27->supportGroupTypeTableHaveMixIcon, (int32_t)v26, v28, v29);
-  v30 = (System_Array_o *)sub_1C37100(int___TypeInfo, 11);
+  sub_1C3E508((CGThumbnailListItem_o *)&v27->supportGroupTypeTableHaveMixIcon, (int32_t)v26, v28, v29);
+  v30 = (System_Array_o *)sub_1C3E60C(int___TypeInfo, 11);
   v31.fields.value = Field__PrivateImplementationDetails__A7A559F58129985AC8C2B5A3F851C7B13B7939AF67587D4A9161F453CE8B339C;
   v32 = v30;
-  System_Runtime_CompilerServices_RuntimeHelpers__InitializeArray_64262432(v30, v31, 0);
+  System_Runtime_CompilerServices_RuntimeHelpers__InitializeArray_64337244(v30, v31, 0);
   v33 = ClassButtonControlComponent_TypeInfo->static_fields;
   v33->supportGroupTypeTableHaveMixRecommendIcon = (struct System_Int32_array *)v32;
-  sub_1C36FFC((CGThumbnailListItem_o *)&v33->supportGroupTypeTableHaveMixRecommendIcon, (int32_t)v32, v34, v35);
-  v36 = (System_Array_o *)sub_1C37100(int___TypeInfo, 9);
+  sub_1C3E508((CGThumbnailListItem_o *)&v33->supportGroupTypeTableHaveMixRecommendIcon, (int32_t)v32, v34, v35);
+  v36 = (System_Array_o *)sub_1C3E60C(int___TypeInfo, 9);
   v37.fields.value = Field__PrivateImplementationDetails__921C803ABFA6AC88F44F7AB19198E5C137D1C7183E8E6912757A6263E8DEE0A5;
   v38 = v36;
-  System_Runtime_CompilerServices_RuntimeHelpers__InitializeArray_64262432(v36, v37, 0);
+  System_Runtime_CompilerServices_RuntimeHelpers__InitializeArray_64337244(v36, v37, 0);
   v39 = ClassButtonControlComponent_TypeInfo->static_fields;
   v39->supportGroupTypeTableNoMixIcon = (struct System_Int32_array *)v38;
-  sub_1C36FFC((CGThumbnailListItem_o *)&v39->supportGroupTypeTableNoMixIcon, (int32_t)v38, v40, v41);
-  v42 = (System_Array_o *)sub_1C37100(int___TypeInfo, 10);
+  sub_1C3E508((CGThumbnailListItem_o *)&v39->supportGroupTypeTableNoMixIcon, (int32_t)v38, v40, v41);
+  v42 = (System_Array_o *)sub_1C3E60C(int___TypeInfo, 10);
   v43.fields.value = Field__PrivateImplementationDetails__3BE3D2195C9EDB60EB462B8E9091D8219F1329AF8AF99568111D31E8BFE97C08;
   v44 = v42;
-  System_Runtime_CompilerServices_RuntimeHelpers__InitializeArray_64262432(v42, v43, 0);
+  System_Runtime_CompilerServices_RuntimeHelpers__InitializeArray_64337244(v42, v43, 0);
   v45 = ClassButtonControlComponent_TypeInfo->static_fields;
   v45->supportGroupTypeTableHaveRecommendIcon = (struct System_Int32_array *)v44;
-  sub_1C36FFC((CGThumbnailListItem_o *)&v45->supportGroupTypeTableHaveRecommendIcon, (int32_t)v44, v46, v47);
+  sub_1C3E508((CGThumbnailListItem_o *)&v45->supportGroupTypeTableHaveRecommendIcon, (int32_t)v44, v46, v47);
 }
 
 
@@ -135,8 +135,9 @@ bool ClassButtonControlComponent__HasDisableClassTabs(
   char v7; // w23
   int32_t v8; // w22
   ClassButtonComponent_o *IconCursorPos; // x0
+  __int64 v10; // x1
   struct ClassButtonComponent_array *classButton; // x8
-  int32_t v11; // w8
+  int32_t v12; // w8
 
   v7 = 0;
   v8 = 1;
@@ -152,23 +153,23 @@ bool ClassButtonControlComponent__HasDisableClassTabs(
     if ( !classButton )
       goto LABEL_12;
     if ( (unsigned int)IconCursorPos >= LODWORD(classButton->max_length) )
-      sub_1C372BC(IconCursorPos);
+      sub_1C3E7C8(IconCursorPos, v10);
     IconCursorPos = classButton->m_Items[(int)IconCursorPos];
     if ( !IconCursorPos )
 LABEL_12:
-      sub_1C372B4(IconCursorPos);
+      sub_1C3E7C0(IconCursorPos, v10);
     if ( (((__int64 (__fastcall *)(ClassButtonComponent_o *, const MethodInfo *))IconCursorPos->klass->vtable._4_get_isEnabled.methodPtr)(
             IconCursorPos,
             IconCursorPos->klass->vtable._4_get_isEnabled.method)
         & 1) != 0 )
     {
-      v11 = *enableCount;
+      v12 = *enableCount;
       if ( !*enableCount )
       {
         *firstType = v8;
-        v11 = *enableCount;
+        v12 = *enableCount;
       }
-      *enableCount = v11 + 1;
+      *enableCount = v12 + 1;
     }
     else
     {
@@ -200,35 +201,36 @@ void ClassButtonControlComponent__LoadRecommendEffect(
 {
   __int64 v5; // x21
   __int64 v6; // x0
-  int32_t v7; // w2
-  const MethodInfo *v8; // x3
-  AssetLoader_LoadEndDataHandler_o *v9; // x19
+  __int64 v7; // x1
+  int32_t v8; // w2
+  const MethodInfo *v9; // x3
+  AssetLoader_LoadEndDataHandler_o *v10; // x19
 
-  if ( (byte_4C4235C & 1) == 0 )
+  if ( (byte_4C560FE & 1) == 0 )
   {
-    sub_1C37058(&AssetManager_TypeInfo);
-    sub_1C37058(&AssetLoader_LoadEndDataHandler_TypeInfo);
-    sub_1C37058(&Method_ClassButtonControlComponent___c__DisplayClass29_0__LoadRecommendEffect_b__0__);
-    sub_1C37058(&ClassButtonControlComponent___c__DisplayClass29_0_TypeInfo);
-    sub_1C37058(&StringLiteral_10568/*"PartyOrganization/ef_class_blink"*/);
-    byte_4C4235C = 1;
+    sub_1C3E564(&AssetManager_TypeInfo);
+    sub_1C3E564(&AssetLoader_LoadEndDataHandler_TypeInfo);
+    sub_1C3E564(&Method_ClassButtonControlComponent___c__DisplayClass29_0__LoadRecommendEffect_b__0__);
+    sub_1C3E564(&ClassButtonControlComponent___c__DisplayClass29_0_TypeInfo);
+    sub_1C3E564(&StringLiteral_10570/*"PartyOrganization/ef_class_blink"*/);
+    byte_4C560FE = 1;
   }
-  v5 = sub_1C372A4(ClassButtonControlComponent___c__DisplayClass29_0_TypeInfo);
+  v5 = sub_1C3E7B0(ClassButtonControlComponent___c__DisplayClass29_0_TypeInfo);
   System_Object___ctor((Il2CppObject *)v5, 0);
   if ( !v5 )
-    sub_1C372B4(v6);
+    sub_1C3E7C0(v6, v7);
   *(_QWORD *)(v5 + 16) = this;
-  sub_1C36FFC((CGThumbnailListItem_o *)(v5 + 16), (int32_t)this, v7, v8);
+  sub_1C3E508((CGThumbnailListItem_o *)(v5 + 16), (int32_t)this, v8, v9);
   *(_DWORD *)(v5 + 24) = classButtonId;
-  v9 = (AssetLoader_LoadEndDataHandler_o *)sub_1C372A4(AssetLoader_LoadEndDataHandler_TypeInfo);
+  v10 = (AssetLoader_LoadEndDataHandler_o *)sub_1C3E7B0(AssetLoader_LoadEndDataHandler_TypeInfo);
   AssetLoader_LoadEndDataHandler___ctor(
-    v9,
+    v10,
     (Il2CppObject *)v5,
     Method_ClassButtonControlComponent___c__DisplayClass29_0__LoadRecommendEffect_b__0__,
     0);
   if ( !AssetManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(AssetManager_TypeInfo);
-  AssetManager__loadAssetStorage((System_String_o *)StringLiteral_10568/*"PartyOrganization/ef_class_blink"*/, v9, 1, 0);
+  AssetManager__loadAssetStorage((System_String_o *)StringLiteral_10570/*"PartyOrganization/ef_class_blink"*/, v10, 1, 0);
 }
 
 
@@ -237,8 +239,9 @@ void ClassButtonControlComponent__OnRotatetCursor(ClassButtonControlComponent_o 
   int32_t currentCursor; // w20
   const MethodInfo *v4; // x2
   ClassButtonComponent_o *IconCursorPos; // x0
+  __int64 v6; // x1
   struct ClassButtonComponent_array *classButton; // x8
-  const MethodInfo *v7; // x2
+  const MethodInfo *v8; // x2
 
   if ( this->fields.updateEnable )
   {
@@ -256,18 +259,18 @@ void ClassButtonControlComponent__OnRotatetCursor(ClassButtonControlComponent_o 
       if ( classButton )
       {
         if ( (unsigned int)IconCursorPos >= LODWORD(classButton->max_length) )
-          sub_1C372BC(IconCursorPos);
+          sub_1C3E7C8(IconCursorPos, v6);
         IconCursorPos = classButton->m_Items[(int)IconCursorPos];
         if ( IconCursorPos )
           continue;
       }
-      sub_1C372B4(IconCursorPos);
+      sub_1C3E7C0(IconCursorPos, v6);
     }
     while ( (((__int64 (__fastcall *)(ClassButtonComponent_o *, const MethodInfo *))IconCursorPos->klass->vtable._4_get_isEnabled.methodPtr)(
                IconCursorPos,
                IconCursorPos->klass->vtable._4_get_isEnabled.method)
            & 1) == 0 );
-    ClassButtonControlComponent__setCursor(this, currentCursor, v7);
+    ClassButtonControlComponent__setCursor(this, currentCursor, v8);
   }
 }
 
@@ -285,14 +288,15 @@ void ClassButtonControlComponent__OnSelectButton(
 void ClassButtonControlComponent__PlayRecommendEffect(ClassButtonControlComponent_o *this, const MethodInfo *method)
 {
   UnityEngine_Object_o *recommendIconEffect; // x20
+  __int64 v4; // x1
   UnityEngine_GameObject_o *Component_object; // x0
 
-  if ( (byte_4C4235D & 1) == 0 )
+  if ( (byte_4C560FF & 1) == 0 )
   {
-    sub_1C37058(&Method_UnityEngine_GameObject_GetComponent_Animation___);
-    sub_1C37058(&UnityEngine_Object_TypeInfo);
-    sub_1C37058(&StringLiteral_18816/*"ef_class_blink"*/);
-    byte_4C4235D = 1;
+    sub_1C3E564(&Method_UnityEngine_GameObject_GetComponent_Animation___);
+    sub_1C3E564(&UnityEngine_Object_TypeInfo);
+    sub_1C3E564(&StringLiteral_18834/*"ef_class_blink"*/);
+    byte_4C560FF = 1;
   }
   recommendIconEffect = (UnityEngine_Object_o *)this->fields.recommendIconEffect;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -303,13 +307,13 @@ void ClassButtonControlComponent__PlayRecommendEffect(ClassButtonControlComponen
     if ( !Component_object
       || (Component_object = (UnityEngine_GameObject_o *)UnityEngine_GameObject__GetComponent_object_(
                                                            Component_object,
-                                                           (const MethodInfo_313F1D8 *)Method_UnityEngine_GameObject_GetComponent_Animation___)) == 0 )
+                                                           (const MethodInfo_31510CC *)Method_UnityEngine_GameObject_GetComponent_Animation___)) == 0 )
     {
-      sub_1C372B4(Component_object);
+      sub_1C3E7C0(Component_object, v4);
     }
-    UnityEngine_Animation__Play_71012036(
+    UnityEngine_Animation__Play_71086848(
       (UnityEngine_Animation_o *)Component_object,
-      (System_String_o *)StringLiteral_18816/*"ef_class_blink"*/,
+      (System_String_o *)StringLiteral_18834/*"ef_class_blink"*/,
       0);
   }
 }
@@ -323,7 +327,7 @@ void ClassButtonControlComponent__SetCallbackFunc(
   const MethodInfo *v3; // x3
 
   this->fields.callbackFunc = func;
-  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.callbackFunc, (int32_t)func, (int32_t)method, v3);
+  sub_1C3E508((CGThumbnailListItem_o *)&this->fields.callbackFunc, (int32_t)func, (int32_t)method, v3);
 }
 
 
@@ -342,10 +346,10 @@ void ClassButtonControlComponent__add_callbackFunc(
   ClassButtonControlComponent_CallbackFunc_o *v12; // x1
   const MethodInfo *v13; // x2
 
-  if ( (byte_4C42359 & 1) == 0 )
+  if ( (byte_4C560FB & 1) == 0 )
   {
-    sub_1C37058(&ClassButtonControlComponent_CallbackFunc_TypeInfo);
-    byte_4C42359 = 1;
+    sub_1C3E564(&ClassButtonControlComponent_CallbackFunc_TypeInfo);
+    byte_4C560FB = 1;
   }
   callbackFunc = this->fields.callbackFunc;
   p_callbackFunc = &this->fields.callbackFunc;
@@ -358,13 +362,13 @@ void ClassButtonControlComponent__add_callbackFunc(
       if ( (ClassButtonControlComponent_CallbackFunc_c *)v8->klass != ClassButtonControlComponent_CallbackFunc_TypeInfo )
         break;
     }
-    v9 = sub_1C712B0(p_callbackFunc, v8, v6);
+    v9 = sub_1C787BC(p_callbackFunc, v8, v6);
     v10 = v6 == (System_Delegate_o *)v9;
     v6 = (System_Delegate_o *)v9;
     if ( v10 )
       return;
   }
-  sub_1C37574(v8);
+  sub_1C3EA80(v8);
   ClassButtonControlComponent__remove_callbackFunc(v11, v12, v13);
 }
 
@@ -385,15 +389,15 @@ int32_t ClassButtonControlComponent__getIconCursorPos(
 {
   int32_t v5; // w0
 
-  if ( (byte_4C4235E & 1) == 0 )
+  if ( (byte_4C56100 & 1) == 0 )
   {
-    sub_1C37058(&Method_System_Array_IndexOf_int___);
-    byte_4C4235E = 1;
+    sub_1C3E564(&Method_System_Array_IndexOf_int___);
+    byte_4C56100 = 1;
   }
   v5 = System_Array__IndexOf_int_(
          this->fields.currentSupportGroupTypeTable,
          classPos,
-         (const MethodInfo_31EECD8 *)Method_System_Array_IndexOf_int___);
+         (const MethodInfo_3200C2C *)Method_System_Array_IndexOf_int___);
   return v5 & ~(v5 >> 31);
 }
 
@@ -420,15 +424,16 @@ void ClassButtonControlComponent__init(
 {
   __int64 v9; // x22
   DataManager_o *Instance; // x0
-  int32_t v11; // w2
-  const MethodInfo *v12; // x3
+  __int64 v11; // x1
+  int32_t v12; // w2
+  const MethodInfo *v13; // x3
   struct ClassButtonComponent_array *classButton; // x8
-  bool v14; // w20
-  bool v15; // w0
-  int32_t v16; // w2
-  const MethodInfo *v17; // x3
-  ClassButtonControlComponent_c *v18; // x8
-  bool v19; // w19
+  bool v15; // w20
+  bool v16; // w0
+  int32_t v17; // w2
+  const MethodInfo *v18; // x3
+  ClassButtonControlComponent_c *v19; // x8
+  bool v20; // w19
   struct ClassButtonControlComponent_StaticFields *static_fields; // x8
   struct System_Int32_array *supportGroupTypeTableHaveRecommendIcon; // x1
   struct ClassButtonControlComponent_StaticFields *p_mstClassIdTableHaveRecommendIcon; // x8
@@ -438,22 +443,21 @@ void ClassButtonControlComponent__init(
   struct System_Int32_array *currentSupportGroupTypeTable; // x9
   struct System_Int32_array *mstClassIdTableHaveMixIcon; // x26
   Il2CppObject *MasterData_object; // x0
-  void **v29; // x24
-  int32_t v30; // w2
-  const MethodInfo *v31; // x3
-  int32_t v32; // w2
-  const MethodInfo *v33; // x3
-  struct ClassButtonComponent_array *v34; // x8
-  int32_t v35; // w25
+  void **v30; // x24
+  int32_t v31; // w2
+  const MethodInfo *v32; // x3
+  int32_t v33; // w2
+  const MethodInfo *v34; // x3
+  struct ClassButtonComponent_array *v35; // x8
+  int32_t v36; // w25
   int32_t max_length; // w9
-  Il2CppClass **v37; // x8
-  Il2CppClass *v38; // x27
-  struct System_Int32_array *v39; // x8
-  int32_t v40; // w9
-  int32_t v41; // w10
-  int32_t v42; // w22
-  UISprite_o *v43; // x28
-  int32_t v44; // w1
+  Il2CppClass **v38; // x8
+  Il2CppClass *v39; // x27
+  struct System_Int32_array *v40; // x8
+  int32_t v41; // w9
+  int32_t v42; // w10
+  int32_t v43; // w22
+  UISprite_o *v44; // x28
   char v45; // w29
   System_Collections_Generic_List_T__o *ExtraClassIdList; // x29
   System_Func_int__bool__o *klass; // x19
@@ -483,102 +487,102 @@ void ClassButtonControlComponent__init(
   RecommendSupportQuestEntity_o *entity; // [xsp+28h] [xbp-68h] BYREF
   UnityEngine_Vector3_o v74; // 0:s0.4,4:s1.4,8:s2.4
 
-  if ( (byte_4C4235B & 1) == 0 )
+  if ( (byte_4C560FD & 1) == 0 )
   {
-    sub_1C37058(&AtlasManager_TypeInfo);
-    sub_1C37058(&Method_BasicHelper_Any_int___);
-    sub_1C37058(&ClassButtonComponent_CallbackFunc_TypeInfo);
-    sub_1C37058(&Method_ClassButtonControlComponent_OnSelectButton__);
-    sub_1C37058(&ClassButtonControlComponent_TypeInfo);
-    sub_1C37058(&Method_UnityEngine_Component_GetComponent_UISprite___);
-    sub_1C37058(&Method_DataManager_GetMasterData_QuestPhaseMaster___);
-    sub_1C37058(&Method_DataManager_GetMasterData_RecommendSupportQuestMaster___);
-    sub_1C37058(&Method_DataManager_GetMasterData_ServantClassMaster___);
-    sub_1C37058(&Method_DataMasterBase_ServantClassMaster__ServantClassEntity__int__GetEntity__);
-    sub_1C37058(&System_Func_int__bool__TypeInfo);
-    sub_1C37058(&UnityEngine_Object_TypeInfo);
-    sub_1C37058(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-    sub_1C37058(&Method_ClassButtonControlComponent___c__DisplayClass28_0__init_b__0__);
-    sub_1C37058(&ClassButtonControlComponent___c__DisplayClass28_0_TypeInfo);
-    byte_4C4235B = 1;
+    sub_1C3E564(&AtlasManager_TypeInfo);
+    sub_1C3E564(&Method_BasicHelper_Any_int___);
+    sub_1C3E564(&ClassButtonComponent_CallbackFunc_TypeInfo);
+    sub_1C3E564(&Method_ClassButtonControlComponent_OnSelectButton__);
+    sub_1C3E564(&ClassButtonControlComponent_TypeInfo);
+    sub_1C3E564(&Method_UnityEngine_Component_GetComponent_UISprite___);
+    sub_1C3E564(&Method_DataManager_GetMasterData_QuestPhaseMaster___);
+    sub_1C3E564(&Method_DataManager_GetMasterData_RecommendSupportQuestMaster___);
+    sub_1C3E564(&Method_DataManager_GetMasterData_ServantClassMaster___);
+    sub_1C3E564(&Method_DataMasterBase_ServantClassMaster__ServantClassEntity__int__GetEntity__);
+    sub_1C3E564(&System_Func_int__bool__TypeInfo);
+    sub_1C3E564(&UnityEngine_Object_TypeInfo);
+    sub_1C3E564(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    sub_1C3E564(&Method_ClassButtonControlComponent___c__DisplayClass28_0__init_b__0__);
+    sub_1C3E564(&ClassButtonControlComponent___c__DisplayClass28_0_TypeInfo);
+    byte_4C560FD = 1;
   }
   entity = 0;
-  v9 = sub_1C372A4(ClassButtonControlComponent___c__DisplayClass28_0_TypeInfo);
+  v9 = sub_1C3E7B0(ClassButtonControlComponent___c__DisplayClass28_0_TypeInfo);
   System_Object___ctor((Il2CppObject *)v9, 0);
   if ( !v9 )
     goto LABEL_82;
   *(_QWORD *)(v9 + 16) = questRestrictionInfo;
   v72 = (QuestRestrictionInfo_o **)(v9 + 16);
-  sub_1C36FFC((CGThumbnailListItem_o *)(v9 + 16), (int32_t)questRestrictionInfo, v11, v12);
+  sub_1C3E508((CGThumbnailListItem_o *)(v9 + 16), (int32_t)questRestrictionInfo, v12, v13);
   classButton = this->fields.classButton;
-  v14 = !classButton || SLODWORD(classButton->max_length) < 10;
-  Instance = (DataManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39ED16C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  v15 = !classButton || SLODWORD(classButton->max_length) < 10;
+  Instance = (DataManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39FF5A8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance )
     goto LABEL_82;
   Instance = (DataManager_o *)DataManager__GetMasterData_object_(
                                 Instance,
-                                (const MethodInfo_30E7C58 *)Method_DataManager_GetMasterData_RecommendSupportQuestMaster___);
+                                (const MethodInfo_30F9A70 *)Method_DataManager_GetMasterData_RecommendSupportQuestMaster___);
   if ( !Instance )
     goto LABEL_82;
-  v15 = RecommendSupportQuestMaster__TryGetEntity(
+  v16 = RecommendSupportQuestMaster__TryGetEntity(
           (RecommendSupportQuestMaster_o *)Instance,
           &entity,
           questId,
           questPhase,
           0);
-  v18 = ClassButtonControlComponent_TypeInfo;
-  v19 = v15;
+  v19 = ClassButtonControlComponent_TypeInfo;
+  v20 = v16;
   if ( !ClassButtonControlComponent_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(ClassButtonControlComponent_TypeInfo);
-    v18 = ClassButtonControlComponent_TypeInfo;
+    v19 = ClassButtonControlComponent_TypeInfo;
   }
-  static_fields = v18->static_fields;
-  if ( v14 )
+  static_fields = v19->static_fields;
+  if ( v15 )
   {
-    if ( v19 )
+    if ( v20 )
     {
       supportGroupTypeTableHaveRecommendIcon = static_fields->supportGroupTypeTableHaveRecommendIcon;
       this->fields.currentSupportGroupTypeTable = supportGroupTypeTableHaveRecommendIcon;
-      sub_1C36FFC(
+      sub_1C3E508(
         (CGThumbnailListItem_o *)&this->fields.currentSupportGroupTypeTable,
         (int32_t)supportGroupTypeTableHaveRecommendIcon,
-        v16,
-        v17);
+        v17,
+        v18);
       p_mstClassIdTableHaveRecommendIcon = (struct ClassButtonControlComponent_StaticFields *)&ClassButtonControlComponent_TypeInfo->static_fields->mstClassIdTableHaveRecommendIcon;
     }
     else
     {
       supportGroupTypeTableNoMixIcon = static_fields->supportGroupTypeTableNoMixIcon;
       this->fields.currentSupportGroupTypeTable = supportGroupTypeTableNoMixIcon;
-      sub_1C36FFC(
+      sub_1C3E508(
         (CGThumbnailListItem_o *)&this->fields.currentSupportGroupTypeTable,
         (int32_t)supportGroupTypeTableNoMixIcon,
-        v16,
-        v17);
+        v17,
+        v18);
       p_mstClassIdTableHaveRecommendIcon = (struct ClassButtonControlComponent_StaticFields *)&ClassButtonControlComponent_TypeInfo->static_fields->mstClassIdTableNoMixIcon;
     }
   }
-  else if ( v19 )
+  else if ( v20 )
   {
     supportGroupTypeTableHaveMixRecommendIcon = static_fields->supportGroupTypeTableHaveMixRecommendIcon;
     this->fields.currentSupportGroupTypeTable = supportGroupTypeTableHaveMixRecommendIcon;
-    sub_1C36FFC(
+    sub_1C3E508(
       (CGThumbnailListItem_o *)&this->fields.currentSupportGroupTypeTable,
       (int32_t)supportGroupTypeTableHaveMixRecommendIcon,
-      v16,
-      v17);
+      v17,
+      v18);
     p_mstClassIdTableHaveRecommendIcon = (struct ClassButtonControlComponent_StaticFields *)&ClassButtonControlComponent_TypeInfo->static_fields->mstClassIdTableHaveMixRecommendIcon;
   }
   else
   {
     supportGroupTypeTableHaveMixIcon = static_fields->supportGroupTypeTableHaveMixIcon;
     this->fields.currentSupportGroupTypeTable = supportGroupTypeTableHaveMixIcon;
-    sub_1C36FFC(
+    sub_1C3E508(
       (CGThumbnailListItem_o *)&this->fields.currentSupportGroupTypeTable,
       (int32_t)supportGroupTypeTableHaveMixIcon,
-      v16,
-      v17);
+      v17,
+      v18);
     p_mstClassIdTableHaveRecommendIcon = ClassButtonControlComponent_TypeInfo->static_fields;
   }
   currentSupportGroupTypeTable = this->fields.currentSupportGroupTypeTable;
@@ -602,79 +606,79 @@ void ClassButtonControlComponent__init(
       }
     }
 LABEL_82:
-    sub_1C372B4(Instance);
+    sub_1C3E7C0(Instance, v11);
   }
 LABEL_23:
-  Instance = (DataManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39ED16C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = (DataManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39FF5A8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance )
     goto LABEL_82;
   MasterData_object = DataManager__GetMasterData_object_(
                         Instance,
-                        (const MethodInfo_30E7C58 *)Method_DataManager_GetMasterData_ServantClassMaster___);
+                        (const MethodInfo_30F9A70 *)Method_DataManager_GetMasterData_ServantClassMaster___);
   *(_QWORD *)(v9 + 24) = MasterData_object;
-  v29 = (void **)(v9 + 24);
-  sub_1C36FFC((CGThumbnailListItem_o *)(v9 + 24), (int32_t)MasterData_object, v30, v31);
+  v30 = (void **)(v9 + 24);
+  sub_1C3E508((CGThumbnailListItem_o *)(v9 + 24), (int32_t)MasterData_object, v31, v32);
   this->fields.callbackFunc = callback;
   this->fields.oldCursor = this->fields.currentCursor;
-  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.callbackFunc, (int32_t)callback, v32, v33);
-  v34 = this->fields.classButton;
+  sub_1C3E508((CGThumbnailListItem_o *)&this->fields.callbackFunc, (int32_t)callback, v33, v34);
+  v35 = this->fields.classButton;
   this->fields.updateEnable = 1;
-  if ( !v34 )
+  if ( !v35 )
     goto LABEL_82;
-  v35 = 0;
+  v36 = 0;
   v68 = (CGThumbnailListItem_o *)(v9 + 32);
   while ( 1 )
   {
-    max_length = v34->max_length;
-    if ( v35 >= max_length )
+    max_length = v35->max_length;
+    if ( v36 >= max_length )
       break;
-    if ( v35 >= (unsigned int)max_length )
+    if ( v36 >= (unsigned int)max_length )
       goto LABEL_84;
-    v37 = &v34->obj.klass + v35;
-    v38 = v37[4];
-    if ( !v38 )
+    v38 = &v35->obj.klass + v36;
+    v39 = v38[4];
+    if ( !v39 )
       goto LABEL_82;
-    Instance = (DataManager_o *)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)v37[4], 0);
+    Instance = (DataManager_o *)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)v38[4], 0);
     if ( !Instance )
       goto LABEL_82;
     UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)Instance, 0, 0);
-    v39 = this->fields.currentSupportGroupTypeTable;
-    if ( !v39 )
+    v40 = this->fields.currentSupportGroupTypeTable;
+    if ( !v40 )
       goto LABEL_82;
-    v40 = v39->max_length;
-    if ( v35 >= v40 )
+    v41 = v40->max_length;
+    if ( v36 >= v41 )
       goto LABEL_81;
     if ( !mstClassIdTableHaveMixIcon )
       goto LABEL_82;
-    v41 = mstClassIdTableHaveMixIcon->max_length;
-    if ( v35 >= v41 )
+    v42 = mstClassIdTableHaveMixIcon->max_length;
+    if ( v36 >= v42 )
       goto LABEL_81;
-    if ( v35 >= (unsigned int)v40 || v35 >= (unsigned int)v41 )
+    if ( v36 >= (unsigned int)v41 || v36 >= (unsigned int)v42 )
       goto LABEL_84;
-    Instance = (DataManager_o *)*v29;
-    if ( !*v29 )
+    Instance = (DataManager_o *)*v30;
+    if ( !*v30 )
       goto LABEL_82;
-    v42 = v39->m_Items[v35];
+    v43 = v40->m_Items[v36];
     Instance = (DataManager_o *)DataMasterBase_object__object__int___GetEntity(
                                   (DataMasterBase_TMaster__TEntity__PKType__o *)Instance,
-                                  mstClassIdTableHaveMixIcon->m_Items[v35],
-                                  (const MethodInfo_33A10A0 *)Method_DataMasterBase_ServantClassMaster__ServantClassEntity__int__GetEntity__);
-    v43 = (UISprite_o *)Instance;
+                                  mstClassIdTableHaveMixIcon->m_Items[v36],
+                                  (const MethodInfo_33B2F58 *)Method_DataMasterBase_ServantClassMaster__ServantClassEntity__int__GetEntity__);
+    v44 = (UISprite_o *)Instance;
     if ( !*v72 )
       goto LABEL_46;
     if ( !Instance )
       goto LABEL_82;
-    v44 = *(_DWORD *)&Instance->fields._DispLog;
-    if ( v44 )
+    v11 = *(unsigned int *)&Instance->fields._DispLog;
+    if ( (_DWORD)v11 )
     {
-      Instance = (DataManager_o *)QuestRestrictionInfo__IsClassRestriction(*v72, v44, 0);
+      Instance = (DataManager_o *)QuestRestrictionInfo__IsClassRestriction(*v72, v11, 0);
       v45 = (char)Instance;
       goto LABEL_47;
     }
-    if ( v42 == 8 )
+    if ( v43 == 8 )
     {
-      Instance = (DataManager_o *)*v29;
-      if ( !*v29 )
+      Instance = (DataManager_o *)*v30;
+      if ( !*v30 )
         goto LABEL_82;
       ExtraClassIdList = (System_Collections_Generic_List_T__o *)ServantClassMaster__getExtraClassIdList(
                                                                    (ServantClassMaster_o *)Instance,
@@ -682,19 +686,19 @@ LABEL_23:
       klass = (System_Func_int__bool__o *)v68->klass;
       if ( !v68->klass )
       {
-        klass = (System_Func_int__bool__o *)sub_1C372A4(System_Func_int__bool__TypeInfo);
+        klass = (System_Func_int__bool__o *)sub_1C3E7B0(System_Func_int__bool__TypeInfo);
         System_Func_int__bool____ctor(
           klass,
           object,
           Method_ClassButtonControlComponent___c__DisplayClass28_0__init_b__0__,
           0);
         object[2].klass = (Il2CppClass *)klass;
-        sub_1C36FFC(v68, (int32_t)klass, v48, v49);
+        sub_1C3E508(v68, (int32_t)klass, v48, v49);
       }
       Instance = (DataManager_o *)BasicHelper__Any_int_(
                                     ExtraClassIdList,
                                     (System_Func_T__bool__o *)klass,
-                                    (const MethodInfo_30D0CCC *)Method_BasicHelper_Any_int___);
+                                    (const MethodInfo_30E2AE4 *)Method_BasicHelper_Any_int___);
       v45 = (unsigned __int8)Instance ^ 1;
     }
     else
@@ -706,25 +710,25 @@ LABEL_47:
     classCursor = this->fields.classCursor;
     if ( !classCursor )
       goto LABEL_82;
-    if ( (unsigned int)v35 >= LODWORD(classCursor->max_length) )
+    if ( (unsigned int)v36 >= LODWORD(classCursor->max_length) )
       goto LABEL_84;
-    Instance = (DataManager_o *)classCursor->m_Items[v35];
+    Instance = (DataManager_o *)classCursor->m_Items[v36];
     if ( !Instance )
       goto LABEL_82;
     currentCursor = this->fields.currentCursor;
     Instance = (DataManager_o *)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)Instance, 0);
     if ( !Instance )
       goto LABEL_82;
-    UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)Instance, v42 == currentCursor, 0);
+    UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)Instance, v43 == currentCursor, 0);
     classCompatibilityIcon = this->fields.classCompatibilityIcon;
     if ( classCompatibilityIcon )
     {
       v54 = classCompatibilityIcon->max_length;
-      if ( v35 < v54 )
+      if ( v36 < v54 )
       {
-        if ( v35 >= (unsigned int)v54 )
+        if ( v36 >= (unsigned int)v54 )
           goto LABEL_84;
-        v55 = (UnityEngine_Object_o *)classCompatibilityIcon->m_Items[v35];
+        v55 = (UnityEngine_Object_o *)classCompatibilityIcon->m_Items[v36];
         if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
           j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
         Instance = (DataManager_o *)UnityEngine_Object__op_Inequality(v55, 0, 0);
@@ -736,12 +740,12 @@ LABEL_47:
           }
           else
           {
-            Instance = (DataManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39ED16C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+            Instance = (DataManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39FF5A8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
             if ( !Instance )
               goto LABEL_82;
             Instance = (DataManager_o *)DataManager__GetMasterData_object_(
                                           Instance,
-                                          (const MethodInfo_30E7C58 *)Method_DataManager_GetMasterData_QuestPhaseMaster___);
+                                          (const MethodInfo_30F9A70 *)Method_DataManager_GetMasterData_QuestPhaseMaster___);
             if ( !Instance )
               goto LABEL_82;
             Instance = (DataManager_o *)QuestPhaseMaster__GetEntity(
@@ -753,17 +757,17 @@ LABEL_47:
           v56 = this->fields.classCompatibilityIcon;
           if ( !v56 )
             goto LABEL_82;
-          if ( (unsigned int)v35 >= LODWORD(v56->max_length) )
+          if ( (unsigned int)v36 >= LODWORD(v56->max_length) )
 LABEL_84:
-            sub_1C372BC(Instance);
-          v57 = v56->m_Items[v35];
+            sub_1C3E7C8(Instance, v11);
+          v57 = v56->m_Items[v36];
           if ( Instance )
           {
-            if ( !v43 || !v57 )
+            if ( !v44 || !v57 )
               goto LABEL_82;
             ServantClassCompatibilityIconComponent__SetIcon(
               v57,
-              v43->fields.m_CachedPtr,
+              v44->fields.m_CachedPtr,
               (System_Int32_array *)Instance->fields.lookup,
               3,
               0);
@@ -775,10 +779,10 @@ LABEL_84:
         }
       }
     }
-    if ( !v43 )
+    if ( !v44 )
       goto LABEL_82;
 LABEL_71:
-    m_CachedPtr = v43->fields.m_CachedPtr;
+    m_CachedPtr = v44->fields.m_CachedPtr;
     Instance = (DataManager_o *)ClassButtonControlComponent_TypeInfo;
     if ( !ClassButtonControlComponent_TypeInfo->_2.cctor_finished )
     {
@@ -791,35 +795,35 @@ LABEL_71:
     if ( !*(_DWORD *)(v59 + 24) )
       goto LABEL_84;
     if ( m_CachedPtr == *(_DWORD *)(v59 + 32) )
-      ClassButtonControlComponent__LoadRecommendEffect(this, v35, v52);
-    Instance = (DataManager_o *)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)v38, 0);
+      ClassButtonControlComponent__LoadRecommendEffect(this, v36, v52);
+    Instance = (DataManager_o *)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)v39, 0);
     if ( !Instance )
       goto LABEL_82;
     UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)Instance, 1, 0);
     Component_object = UnityEngine_Component__GetComponent_object_(
-                         (UnityEngine_Component_o *)v38,
-                         (const MethodInfo_30DE428 *)Method_UnityEngine_Component_GetComponent_UISprite___);
-    rightAnchor_high = HIDWORD(v43->fields.rightAnchor);
+                         (UnityEngine_Component_o *)v39,
+                         (const MethodInfo_30F0240 *)Method_UnityEngine_Component_GetComponent_UISprite___);
+    rightAnchor_high = HIDWORD(v44->fields.rightAnchor);
     v62 = (UISprite_o *)Component_object;
     if ( !AtlasManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo);
     AtlasManager__SetClassIcon(v62, rightAnchor_high, 2, 0, 0, 0);
-    v63 = (ClassButtonComponent_CallbackFunc_o *)sub_1C372A4(ClassButtonComponent_CallbackFunc_TypeInfo);
+    v63 = (ClassButtonComponent_CallbackFunc_o *)sub_1C3E7B0(ClassButtonComponent_CallbackFunc_TypeInfo);
     ClassButtonComponent_CallbackFunc___ctor(
       v63,
       (Il2CppObject *)this,
       Method_ClassButtonControlComponent_OnSelectButton__,
       v64);
-    LODWORD(v38->_1.interopData) = v42;
-    v38->_1.klass = (Il2CppClass *)v63;
-    sub_1C36FFC((CGThumbnailListItem_o *)&v38->_1.klass, (int32_t)v63, v65, v66);
+    LODWORD(v39->_1.interopData) = v43;
+    v39->_1.klass = (Il2CppClass *)v63;
+    sub_1C3E508((CGThumbnailListItem_o *)&v39->_1.klass, (int32_t)v63, v65, v66);
     v67 = (v45 & 1) == 0;
-    BYTE4(v38->_1.interopData) = v67;
-    UICommonButton__SetButtonEnable((UICommonButton_o *)v38, v67, 1, 0);
+    BYTE4(v39->_1.interopData) = v67;
+    UICommonButton__SetButtonEnable((UICommonButton_o *)v39, v67, 1, 0);
 LABEL_81:
-    v34 = this->fields.classButton;
-    ++v35;
-    if ( !v34 )
+    v35 = this->fields.classButton;
+    ++v36;
+    if ( !v35 )
       goto LABEL_82;
   }
 }
@@ -840,10 +844,10 @@ void ClassButtonControlComponent__remove_callbackFunc(
   ClassButtonControlComponent_CallbackFunc_o *v12; // x1
   const MethodInfo *v13; // x2
 
-  if ( (byte_4C4235A & 1) == 0 )
+  if ( (byte_4C560FC & 1) == 0 )
   {
-    sub_1C37058(&ClassButtonControlComponent_CallbackFunc_TypeInfo);
-    byte_4C4235A = 1;
+    sub_1C3E564(&ClassButtonControlComponent_CallbackFunc_TypeInfo);
+    byte_4C560FC = 1;
   }
   callbackFunc = this->fields.callbackFunc;
   p_callbackFunc = &this->fields.callbackFunc;
@@ -856,13 +860,13 @@ void ClassButtonControlComponent__remove_callbackFunc(
       if ( (ClassButtonControlComponent_CallbackFunc_c *)v8->klass != ClassButtonControlComponent_CallbackFunc_TypeInfo )
         break;
     }
-    v9 = sub_1C712B0(p_callbackFunc, v8, v6);
+    v9 = sub_1C787BC(p_callbackFunc, v8, v6);
     v10 = v6 == (System_Delegate_o *)v9;
     v6 = (System_Delegate_o *)v9;
     if ( v10 )
       return;
   }
-  sub_1C37574(v8);
+  sub_1C3EA80(v8);
   ClassButtonControlComponent__SetCallbackFunc(v11, v12, v13);
 }
 
@@ -876,9 +880,10 @@ bool ClassButtonControlComponent__setCursor(
   int32_t IconCursorPos; // w22
   const MethodInfo *v8; // x2
   UISprite_o *gameObject; // x0
+  __int64 v10; // x1
   struct UISprite_array *classCursor; // x8
-  unsigned int v11; // w21
-  struct UISprite_array *v12; // x8
+  unsigned int v12; // w21
+  struct UISprite_array *v13; // x8
   struct ClassButtonControlComponent_CallbackFunc_o *callbackFunc; // x8
 
   currentCursor = this->fields.currentCursor;
@@ -893,20 +898,20 @@ bool ClassButtonControlComponent__setCursor(
     goto LABEL_14;
   if ( (unsigned int)IconCursorPos >= LODWORD(classCursor->max_length) )
     goto LABEL_15;
-  v11 = (unsigned int)gameObject;
+  v12 = (unsigned int)gameObject;
   gameObject = classCursor->m_Items[IconCursorPos];
   if ( !gameObject
     || (gameObject = (UISprite_o *)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)gameObject, 0)) == 0
     || (UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)gameObject, 1, 0),
-        (v12 = this->fields.classCursor) == 0) )
+        (v13 = this->fields.classCursor) == 0) )
   {
 LABEL_14:
-    sub_1C372B4(gameObject);
+    sub_1C3E7C0(gameObject, v10);
   }
-  if ( v11 >= LODWORD(v12->max_length) )
+  if ( v12 >= LODWORD(v13->max_length) )
 LABEL_15:
-    sub_1C372BC(gameObject);
-  gameObject = v12->m_Items[v11];
+    sub_1C3E7C8(gameObject, v10);
+  gameObject = v13->m_Items[v12];
   if ( !gameObject )
     goto LABEL_14;
   gameObject = (UISprite_o *)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)gameObject, 0);
@@ -947,15 +952,15 @@ void ClassButtonControlComponent_CallbackFunc___ctor(
   this->fields.method = method;
   this->fields.method_ptr = v4;
   this->fields.m_target = object;
-  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.m_target, (int32_t)object, method, a4);
+  sub_1C3E508((CGThumbnailListItem_o *)&this->fields.m_target, (int32_t)object, method, a4);
   v8 = *(unsigned __int8 *)(method + 82);
   this->fields.method_code = (intptr_t)this;
-  if ( (sub_1C37118(method) & 1) == 0 )
+  if ( (sub_1C3E624(method) & 1) == 0 )
   {
     if ( !object )
     {
-      v10 = sub_1C372D0(0, "Delegate to an instance method cannot have null 'this'.");
-      sub_1C37180(v10, 0);
+      v10 = sub_1C3E7DC(0, "Delegate to an instance method cannot have null 'this'.");
+      sub_1C3E68C(v10, 0);
     }
     goto LABEL_5;
   }
@@ -967,9 +972,9 @@ LABEL_5:
     this->fields.method_code = (intptr_t)m_target;
     goto LABEL_6;
   }
-  this->fields.invoke_impl = (intptr_t)sub_1A7B8B4;
+  this->fields.invoke_impl = (intptr_t)sub_1A82C5C;
 LABEL_6:
-  this->fields.extra_arg = (intptr_t)sub_1A7B86C;
+  this->fields.extra_arg = (intptr_t)sub_1A82C14;
 }
 
 
@@ -987,14 +992,14 @@ System_IAsyncResult_o *ClassButtonControlComponent_CallbackFunc__BeginInvoke(
   int32_t v13; // [xsp+1Ch] [xbp-34h] BYREF
 
   v13 = classPos;
-  if ( (byte_4C42360 & 1) == 0 )
+  if ( (byte_4C56102 & 1) == 0 )
   {
-    sub_1C37058(&int_TypeInfo);
-    byte_4C42360 = 1;
+    sub_1C3E564(&int_TypeInfo);
+    byte_4C56102 = 1;
   }
   v12[1] = 0;
   v12[0] = j_il2cpp_value_box_0(int_TypeInfo, &v13, callback, object, method, v5, v6, v7);
-  return (System_IAsyncResult_o *)sub_1C3700C(this, v12, callback, object);
+  return (System_IAsyncResult_o *)sub_1C3E518(this, v12, callback, object);
 }
 
 
@@ -1003,7 +1008,7 @@ void ClassButtonControlComponent_CallbackFunc__EndInvoke(
         System_IAsyncResult_o *result,
         const MethodInfo *method)
 {
-  sub_1C37010(result, 0, method);
+  sub_1C3E51C(result, 0, method);
 }
 
 
@@ -1027,6 +1032,7 @@ void ClassButtonControlComponent___c__DisplayClass28_0___ctor(
 }
 
 
+// local variable allocation has failed, the output may be wrong!
 bool ClassButtonControlComponent___c__DisplayClass28_0___init_b__0(
         ClassButtonControlComponent___c__DisplayClass28_0_o *this,
         int32_t id,
@@ -1035,10 +1041,10 @@ bool ClassButtonControlComponent___c__DisplayClass28_0___init_b__0(
   DataMasterBase_TMaster__TEntity__PKType__o *clsMaster; // x0
   QuestRestrictionInfo_o *questRestrictionInfo; // x20
 
-  if ( (byte_4C42361 & 1) == 0 )
+  if ( (byte_4C56103 & 1) == 0 )
   {
-    sub_1C37058(&Method_DataMasterBase_ServantClassMaster__ServantClassEntity__int__GetEntity__);
-    byte_4C42361 = 1;
+    sub_1C3E564(&Method_DataMasterBase_ServantClassMaster__ServantClassEntity__int__GetEntity__);
+    byte_4C56103 = 1;
   }
   clsMaster = (DataMasterBase_TMaster__TEntity__PKType__o *)this->fields.clsMaster;
   if ( !clsMaster
@@ -1046,10 +1052,10 @@ bool ClassButtonControlComponent___c__DisplayClass28_0___init_b__0(
         (clsMaster = (DataMasterBase_TMaster__TEntity__PKType__o *)DataMasterBase_object__object__int___GetEntity(
                                                                      clsMaster,
                                                                      id,
-                                                                     (const MethodInfo_33A10A0 *)Method_DataMasterBase_ServantClassMaster__ServantClassEntity__int__GetEntity__)) == 0)
+                                                                     (const MethodInfo_33B2F58 *)Method_DataMasterBase_ServantClassMaster__ServantClassEntity__int__GetEntity__)) == 0)
     || !questRestrictionInfo )
   {
-    sub_1C372B4(clsMaster);
+    sub_1C3E7C0(clsMaster, *(_QWORD *)&id);
   }
   return !QuestRestrictionInfo__IsClassRestriction(questRestrictionInfo, clsMaster->fields.revision, 0);
 }
@@ -1071,30 +1077,29 @@ void ClassButtonControlComponent___c__DisplayClass29_0___LoadRecommendEffect_b__
   ClassButtonControlComponent___c__DisplayClass29_0_o *v4; // x19
   struct ClassButtonControlComponent_o *_4__this; // x8
   UnityEngine_Object_o *recommendIconEffect; // x21
-  const MethodInfo *v7; // x1
-  Il2CppObject *Object_object__51154888; // x20
-  struct ClassButtonControlComponent_o *v9; // x21
-  int32_t v10; // w2
-  const MethodInfo *v11; // x3
+  Il2CppObject *Object_object__51228128; // x20
+  struct ClassButtonControlComponent_o *v8; // x21
+  int32_t v9; // w2
+  const MethodInfo *v10; // x3
+  struct ClassButtonControlComponent_o *v11; // x8
   struct ClassButtonControlComponent_o *v12; // x8
   struct ClassButtonControlComponent_o *v13; // x8
-  struct ClassButtonControlComponent_o *v14; // x8
   struct ClassButtonComponent_array *classButton; // x8
   __int64 classButtonId; // x9
-  ClassButtonControlComponent___c__DisplayClass29_0_o *v17; // x20
-  struct ClassButtonControlComponent_o *v18; // x8
-  ClassButtonControlComponent___c__DisplayClass29_0_o *v19; // x20
-  struct ClassButtonControlComponent_o *v20; // x8
-  ClassButtonControlComponent___c__DisplayClass29_0_o *v21; // x20
+  ClassButtonControlComponent___c__DisplayClass29_0_o *v16; // x20
+  struct ClassButtonControlComponent_o *v17; // x8
+  ClassButtonControlComponent___c__DisplayClass29_0_o *v18; // x20
+  struct ClassButtonControlComponent_o *v19; // x8
+  ClassButtonControlComponent___c__DisplayClass29_0_o *v20; // x20
 
   v4 = this;
-  if ( (byte_4C42362 & 1) == 0 )
+  if ( (byte_4C56104 & 1) == 0 )
   {
-    sub_1C37058(&Method_AssetData_GetObject_GameObject____78105168);
-    sub_1C37058(&Method_UnityEngine_Object_Instantiate_GameObject___);
-    sub_1C37058(&UnityEngine_Object_TypeInfo);
-    this = (ClassButtonControlComponent___c__DisplayClass29_0_o *)sub_1C37058(&StringLiteral_18816/*"ef_class_blink"*/);
-    byte_4C42362 = 1;
+    sub_1C3E564(&Method_AssetData_GetObject_GameObject____78185152);
+    sub_1C3E564(&Method_UnityEngine_Object_Instantiate_GameObject___);
+    sub_1C3E564(&UnityEngine_Object_TypeInfo);
+    this = (ClassButtonControlComponent___c__DisplayClass29_0_o *)sub_1C3E564(&StringLiteral_18834/*"ef_class_blink"*/);
+    byte_4C56104 = 1;
   }
   _4__this = v4->fields.__4__this;
   if ( !_4__this )
@@ -1110,104 +1115,104 @@ void ClassButtonControlComponent___c__DisplayClass29_0___LoadRecommendEffect_b__
   {
     if ( !prefabData )
       goto LABEL_36;
-    Object_object__51154888 = AssetData__GetObject_object__51154888(
+    Object_object__51228128 = AssetData__GetObject_object__51228128(
                                 prefabData,
-                                (System_String_o *)StringLiteral_18816/*"ef_class_blink"*/,
-                                (const MethodInfo_30C8FC8 *)Method_AssetData_GetObject_GameObject____78105168);
+                                (System_String_o *)StringLiteral_18834/*"ef_class_blink"*/,
+                                (const MethodInfo_30DADE0 *)Method_AssetData_GetObject_GameObject____78185152);
     if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-    if ( UnityEngine_Object__op_Inequality((UnityEngine_Object_o *)Object_object__51154888, 0, 0) )
+    if ( UnityEngine_Object__op_Inequality((UnityEngine_Object_o *)Object_object__51228128, 0, 0) )
     {
-      v9 = v4->fields.__4__this;
+      v8 = v4->fields.__4__this;
       if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
       this = (ClassButtonControlComponent___c__DisplayClass29_0_o *)UnityEngine_Object__Instantiate_object_(
-                                                                      Object_object__51154888,
-                                                                      (const MethodInfo_3173FC0 *)Method_UnityEngine_Object_Instantiate_GameObject___);
-      if ( v9 )
+                                                                      Object_object__51228128,
+                                                                      (const MethodInfo_3185EB4 *)Method_UnityEngine_Object_Instantiate_GameObject___);
+      if ( v8 )
       {
-        v9->fields.recommendIconEffect = (struct UnityEngine_GameObject_o *)this;
-        sub_1C36FFC((CGThumbnailListItem_o *)&v9->fields.recommendIconEffect, (int32_t)this, v10, v11);
-        v12 = v4->fields.__4__this;
-        if ( v12 )
+        v8->fields.recommendIconEffect = (struct UnityEngine_GameObject_o *)this;
+        sub_1C3E508((CGThumbnailListItem_o *)&v8->fields.recommendIconEffect, (int32_t)this, v9, v10);
+        v11 = v4->fields.__4__this;
+        if ( v11 )
         {
           this = (ClassButtonControlComponent___c__DisplayClass29_0_o *)UnityEngine_Object__op_Inequality(
-                                                                          (UnityEngine_Object_o *)v12->fields.recommendIconEffect,
+                                                                          (UnityEngine_Object_o *)v11->fields.recommendIconEffect,
                                                                           0,
                                                                           0);
           if ( ((unsigned __int8)this & 1) == 0 )
             goto LABEL_34;
-          v13 = v4->fields.__4__this;
-          if ( v13 )
+          v12 = v4->fields.__4__this;
+          if ( v12 )
           {
-            this = (ClassButtonControlComponent___c__DisplayClass29_0_o *)v13->fields.recommendIconEffect;
+            this = (ClassButtonControlComponent___c__DisplayClass29_0_o *)v12->fields.recommendIconEffect;
             if ( this )
             {
               this = (ClassButtonControlComponent___c__DisplayClass29_0_o *)UnityEngine_GameObject__get_transform(
                                                                               (UnityEngine_GameObject_o *)this,
                                                                               0);
-              v14 = v4->fields.__4__this;
-              if ( v14 )
+              v13 = v4->fields.__4__this;
+              if ( v13 )
               {
-                classButton = v14->fields.classButton;
+                classButton = v13->fields.classButton;
                 if ( classButton )
                 {
                   classButtonId = v4->fields.classButtonId;
                   if ( (unsigned int)classButtonId >= LODWORD(classButton->max_length) )
-                    sub_1C372BC(this);
-                  v17 = this;
+                    sub_1C3E7C8(this, prefabData);
+                  v16 = this;
                   this = (ClassButtonControlComponent___c__DisplayClass29_0_o *)classButton->m_Items[classButtonId];
                   if ( this )
                   {
                     this = (ClassButtonControlComponent___c__DisplayClass29_0_o *)UnityEngine_Component__get_transform(
                                                                                     (UnityEngine_Component_o *)this,
                                                                                     0);
-                    if ( v17 )
+                    if ( v16 )
                     {
                       UnityEngine_Transform__set_parent(
-                        (UnityEngine_Transform_o *)v17,
+                        (UnityEngine_Transform_o *)v16,
                         (UnityEngine_Transform_o *)this,
                         0);
-                      v18 = v4->fields.__4__this;
-                      if ( v18 )
+                      v17 = v4->fields.__4__this;
+                      if ( v17 )
                       {
-                        this = (ClassButtonControlComponent___c__DisplayClass29_0_o *)v18->fields.recommendIconEffect;
+                        this = (ClassButtonControlComponent___c__DisplayClass29_0_o *)v17->fields.recommendIconEffect;
                         if ( this )
                         {
                           this = (ClassButtonControlComponent___c__DisplayClass29_0_o *)UnityEngine_GameObject__get_transform(
                                                                                           (UnityEngine_GameObject_o *)this,
                                                                                           0);
-                          v19 = this;
-                          if ( !byte_4C3C921 )
+                          v18 = this;
+                          if ( !byte_4C506A1 )
                           {
-                            this = (ClassButtonControlComponent___c__DisplayClass29_0_o *)sub_1C37058(&UnityEngine_Vector3_TypeInfo);
-                            byte_4C3C921 = 1;
+                            this = (ClassButtonControlComponent___c__DisplayClass29_0_o *)sub_1C3E564(&UnityEngine_Vector3_TypeInfo);
+                            byte_4C506A1 = 1;
                           }
-                          if ( v19 )
+                          if ( v18 )
                           {
                             UnityEngine_Transform__set_localPosition(
-                              (UnityEngine_Transform_o *)v19,
+                              (UnityEngine_Transform_o *)v18,
                               UnityEngine_Vector3_TypeInfo->static_fields->zeroVector,
                               0);
-                            v20 = v4->fields.__4__this;
-                            if ( v20 )
+                            v19 = v4->fields.__4__this;
+                            if ( v19 )
                             {
-                              this = (ClassButtonControlComponent___c__DisplayClass29_0_o *)v20->fields.recommendIconEffect;
+                              this = (ClassButtonControlComponent___c__DisplayClass29_0_o *)v19->fields.recommendIconEffect;
                               if ( this )
                               {
                                 this = (ClassButtonControlComponent___c__DisplayClass29_0_o *)UnityEngine_GameObject__get_transform(
                                                                                                 (UnityEngine_GameObject_o *)this,
                                                                                                 0);
-                                v21 = this;
-                                if ( !byte_4C3C926 )
+                                v20 = this;
+                                if ( !byte_4C506A6 )
                                 {
-                                  this = (ClassButtonControlComponent___c__DisplayClass29_0_o *)sub_1C37058(&UnityEngine_Vector3_TypeInfo);
-                                  byte_4C3C926 = 1;
+                                  this = (ClassButtonControlComponent___c__DisplayClass29_0_o *)sub_1C3E564(&UnityEngine_Vector3_TypeInfo);
+                                  byte_4C506A6 = 1;
                                 }
-                                if ( v21 )
+                                if ( v20 )
                                 {
                                   UnityEngine_Transform__set_localScale(
-                                    (UnityEngine_Transform_o *)v21,
+                                    (UnityEngine_Transform_o *)v20,
                                     UnityEngine_Vector3_TypeInfo->static_fields->oneVector,
                                     0);
                                   goto LABEL_34;
@@ -1226,12 +1231,14 @@ void ClassButtonControlComponent___c__DisplayClass29_0___LoadRecommendEffect_b__
         }
       }
 LABEL_36:
-      sub_1C372B4(this);
+      sub_1C3E7C0(this, prefabData);
     }
   }
 LABEL_34:
   this = (ClassButtonControlComponent___c__DisplayClass29_0_o *)v4->fields.__4__this;
   if ( !this )
     goto LABEL_36;
-  ClassButtonControlComponent__PlayRecommendEffect((ClassButtonControlComponent_o *)this, v7);
+  ClassButtonControlComponent__PlayRecommendEffect(
+    (ClassButtonControlComponent_o *)this,
+    (const MethodInfo *)prefabData);
 }

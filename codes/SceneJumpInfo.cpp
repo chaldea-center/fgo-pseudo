@@ -4,25 +4,25 @@ void SceneJumpInfo___ctor(SceneJumpInfo_o *this, const MethodInfo *method)
 }
 
 
-void SceneJumpInfo___ctor_41479032(SceneJumpInfo_o *this, System_String_o *name, const MethodInfo *method)
+void SceneJumpInfo___ctor_41527560(SceneJumpInfo_o *this, System_String_o *name, const MethodInfo *method)
 {
   int32_t v5; // w2
   const MethodInfo *v6; // x3
 
   System_Object___ctor((Il2CppObject *)this, 0);
   this->fields.name = name;
-  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields, (int32_t)name, v5, v6);
+  sub_1C3E508((CGThumbnailListItem_o *)&this->fields, (int32_t)name, v5, v6);
 }
 
 
-void SceneJumpInfo___ctor_41479080(SceneJumpInfo_o *this, int32_t id, const MethodInfo *method)
+void SceneJumpInfo___ctor_41527608(SceneJumpInfo_o *this, int32_t id, const MethodInfo *method)
 {
   System_Object___ctor((Il2CppObject *)this, 0);
   this->fields.id = id;
 }
 
 
-void SceneJumpInfo___ctor_41479120(SceneJumpInfo_o *this, System_String_o *name, int32_t id, const MethodInfo *method)
+void SceneJumpInfo___ctor_41527648(SceneJumpInfo_o *this, System_String_o *name, int32_t id, const MethodInfo *method)
 {
   SceneJumpInfo_o *v6; // x21
   int32_t v7; // w2
@@ -32,12 +32,12 @@ void SceneJumpInfo___ctor_41479120(SceneJumpInfo_o *this, System_String_o *name,
   System_Object___ctor((Il2CppObject *)this, 0);
   v6->fields.name = name;
   v6 = (SceneJumpInfo_o *)((char *)v6 + 16);
-  sub_1C36FFC((CGThumbnailListItem_o *)v6, (int32_t)name, v7, v8);
+  sub_1C3E508((CGThumbnailListItem_o *)v6, (int32_t)name, v7, v8);
   LODWORD(v6->monitor) = id;
 }
 
 
-void SceneJumpInfo___ctor_41479180(
+void SceneJumpInfo___ctor_41527708(
         SceneJumpInfo_o *this,
         System_String_o *name,
         int32_t id,
@@ -52,13 +52,13 @@ void SceneJumpInfo___ctor_41479180(
   System_Object___ctor((Il2CppObject *)this, 0);
   v8->fields.name = name;
   v8 = (SceneJumpInfo_o *)((char *)v8 + 16);
-  sub_1C36FFC((CGThumbnailListItem_o *)v8, (int32_t)name, v9, v10);
+  sub_1C3E508((CGThumbnailListItem_o *)v8, (int32_t)name, v9, v10);
   LODWORD(v8->monitor) = id;
   HIDWORD(v8->monitor) = num;
 }
 
 
-void SceneJumpInfo___ctor_41479252(
+void SceneJumpInfo___ctor_41527780(
         SceneJumpInfo_o *this,
         System_String_o *name,
         int32_t id,
@@ -73,13 +73,13 @@ void SceneJumpInfo___ctor_41479252(
   System_Object___ctor((Il2CppObject *)this, 0);
   v8->fields.name = name;
   v8 = (SceneJumpInfo_o *)((char *)v8 + 16);
-  sub_1C36FFC((CGThumbnailListItem_o *)v8, (int32_t)name, v9, v10);
+  sub_1C3E508((CGThumbnailListItem_o *)v8, (int32_t)name, v9, v10);
   LODWORD(v8->monitor) = id;
   v8->fields.name = (struct System_String_o *)userId;
 }
 
 
-void SceneJumpInfo___ctor_41479328(
+void SceneJumpInfo___ctor_41527856(
         SceneJumpInfo_o *this,
         System_String_o *name,
         int64_t userId,
@@ -93,12 +93,12 @@ void SceneJumpInfo___ctor_41479328(
   System_Object___ctor((Il2CppObject *)this, 0);
   v6->fields.name = name;
   v6 = (SceneJumpInfo_o *)((char *)v6 + 16);
-  sub_1C36FFC((CGThumbnailListItem_o *)v6, (int32_t)name, v7, v8);
+  sub_1C3E508((CGThumbnailListItem_o *)v6, (int32_t)name, v7, v8);
   v6->fields.name = (struct System_String_o *)userId;
 }
 
 
-void SceneJumpInfo___ctor_41479388(
+void SceneJumpInfo___ctor_41527916(
         SceneJumpInfo_o *this,
         System_String_o *name,
         int64_t userId,
@@ -113,13 +113,13 @@ void SceneJumpInfo___ctor_41479388(
   System_Object___ctor((Il2CppObject *)this, 0);
   v8->fields.name = name;
   v8 = (SceneJumpInfo_o *)((char *)v8 + 16);
-  sub_1C36FFC((CGThumbnailListItem_o *)v8, (int32_t)name, v9, v10);
+  sub_1C3E508((CGThumbnailListItem_o *)v8, (int32_t)name, v9, v10);
   v8->fields.name = (struct System_String_o *)userId;
   *(_QWORD *)&v8->fields.id = userId2;
 }
 
 
-void SceneJumpInfo___ctor_41479460(
+void SceneJumpInfo___ctor_41527988(
         SceneJumpInfo_o *this,
         System_String_o *name,
         int64_t userId,
@@ -135,7 +135,7 @@ void SceneJumpInfo___ctor_41479460(
   System_Object___ctor((Il2CppObject *)this, 0);
   v10->fields.name = name;
   v10 = (SceneJumpInfo_o *)((char *)v10 + 16);
-  sub_1C36FFC((CGThumbnailListItem_o *)v10, (int32_t)name, v11, v12);
+  sub_1C3E508((CGThumbnailListItem_o *)v10, (int32_t)name, v11, v12);
   HIDWORD(v10->monitor) = num;
   v10->fields.name = (struct System_String_o *)userId;
   *(_QWORD *)&v10->fields.id = userId2;
@@ -152,19 +152,20 @@ bool SceneJumpInfo__ReturnScene(SceneJumpInfo_o *this, const MethodInfo *method)
 {
   struct System_String_o *returnSceneName; // x20
   Il2CppObject *Instance; // x0
+  __int64 v5; // x1
 
-  if ( (byte_4C4290F & 1) == 0 )
+  if ( (byte_4C566B8 & 1) == 0 )
   {
-    sub_1C37058(&Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__);
-    byte_4C4290F = 1;
+    sub_1C3E564(&Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__);
+    byte_4C566B8 = 1;
   }
   returnSceneName = this->fields.returnSceneName;
   if ( returnSceneName )
   {
-    Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39ED16C *)Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__);
+    Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39FF5A8 *)Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__);
     if ( !Instance )
-      sub_1C372B4(0);
-    AvalonSceneManager__transitionScene_41159224(
+      sub_1C3E7C0(0, v5);
+    AvalonSceneManager__transitionScene_41207660(
       (AvalonSceneManager_o *)Instance,
       this->fields.returnSceneName,
       1,
@@ -180,7 +181,7 @@ void SceneJumpInfo__SetBackSceneJumpInfo(SceneJumpInfo_o *this, SceneJumpInfo_o 
   const MethodInfo *v3; // x3
 
   this->fields.backSceneJumpInfo = back;
-  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.backSceneJumpInfo, (int32_t)back, (int32_t)method, v3);
+  sub_1C3E508((CGThumbnailListItem_o *)&this->fields.backSceneJumpInfo, (int32_t)back, (int32_t)method, v3);
 }
 
 
@@ -195,7 +196,7 @@ void SceneJumpInfo__SetName(SceneJumpInfo_o *this, System_String_o *name, const 
   const MethodInfo *v3; // x3
 
   this->fields.name = name;
-  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields, (int32_t)name, (int32_t)method, v3);
+  sub_1C3E508((CGThumbnailListItem_o *)&this->fields, (int32_t)name, (int32_t)method, v3);
 }
 
 
@@ -208,21 +209,22 @@ void SceneJumpInfo__SetNum(SceneJumpInfo_o *this, int32_t value, const MethodInf
 void SceneJumpInfo__SetReturnNowScene(SceneJumpInfo_o *this, const MethodInfo *method)
 {
   Il2CppObject *Instance; // x0
+  __int64 v4; // x1
   struct System_String_o *NowSceneName; // x0
-  int32_t v5; // w2
-  const MethodInfo *v6; // x3
+  int32_t v6; // w2
+  const MethodInfo *v7; // x3
 
-  if ( (byte_4C4290E & 1) == 0 )
+  if ( (byte_4C566B7 & 1) == 0 )
   {
-    sub_1C37058(&Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__);
-    byte_4C4290E = 1;
+    sub_1C3E564(&Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__);
+    byte_4C566B7 = 1;
   }
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39ED16C *)Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39FF5A8 *)Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__);
   if ( !Instance )
-    sub_1C372B4(0);
+    sub_1C3E7C0(0, v4);
   NowSceneName = AvalonSceneManager__getNowSceneName((AvalonSceneManager_o *)Instance, 0);
   this->fields.returnSceneName = NowSceneName;
-  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.returnSceneName, (int32_t)NowSceneName, v5, v6);
+  sub_1C3E508((CGThumbnailListItem_o *)&this->fields.returnSceneName, (int32_t)NowSceneName, v6, v7);
 }
 
 
@@ -232,16 +234,16 @@ void SceneJumpInfo__SetReturnScene(SceneJumpInfo_o *this, int32_t type, const Me
   int32_t v6; // w2
   const MethodInfo *v7; // x3
 
-  if ( (byte_4C4290D & 1) == 0 )
+  if ( (byte_4C566B6 & 1) == 0 )
   {
-    sub_1C37058(&SceneList_TypeInfo);
-    byte_4C4290D = 1;
+    sub_1C3E564(&SceneList_TypeInfo);
+    byte_4C566B6 = 1;
   }
   if ( !SceneList_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(SceneList_TypeInfo);
   SceneName = SceneList__getSceneName(type, 0);
   this->fields.returnSceneName = SceneName;
-  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.returnSceneName, (int32_t)SceneName, v6, v7);
+  sub_1C3E508((CGThumbnailListItem_o *)&this->fields.returnSceneName, (int32_t)SceneName, v6, v7);
 }
 
 

@@ -2,10 +2,10 @@ void HakkenshiListController___cctor(const MethodInfo *method)
 {
   struct HakkenshiListController_StaticFields *static_fields; // x8
 
-  if ( (byte_4C3D2F3 & 1) == 0 )
+  if ( (byte_4C51073 & 1) == 0 )
   {
-    sub_1C37058(&HakkenshiListController_TypeInfo);
-    byte_4C3D2F3 = 1;
+    sub_1C3E564(&HakkenshiListController_TypeInfo);
+    byte_4C51073 = 1;
   }
   static_fields = HakkenshiListController_TypeInfo->static_fields;
   static_fields->FULL_SCREEN_BASE_POSITION.fields.z = 0.0;
@@ -20,34 +20,34 @@ void HakkenshiListController___ctor(HakkenshiListController_o *this, const Metho
   System_Collections_Generic_List_int__o *v4; // x20
   System_Collections_Generic_List_object__o *v5; // x20
 
-  if ( (byte_4C3D2F2 & 1) == 0 )
+  if ( (byte_4C51072 & 1) == 0 )
   {
-    sub_1C37058(&Method_System_Collections_Generic_List_int___ctor__);
-    sub_1C37058(&Method_System_Collections_Generic_List_EventExpeditionPieceEntity___ctor__);
-    sub_1C37058(&Method_System_Collections_Generic_List_GameObject___ctor__);
-    sub_1C37058(&System_Collections_Generic_List_int__TypeInfo);
-    sub_1C37058(&System_Collections_Generic_List_EventExpeditionPieceEntity__TypeInfo);
-    sub_1C37058(&System_Collections_Generic_List_GameObject__TypeInfo);
-    byte_4C3D2F2 = 1;
+    sub_1C3E564(&Method_System_Collections_Generic_List_int___ctor__);
+    sub_1C3E564(&Method_System_Collections_Generic_List_EventExpeditionPieceEntity___ctor__);
+    sub_1C3E564(&Method_System_Collections_Generic_List_GameObject___ctor__);
+    sub_1C3E564(&System_Collections_Generic_List_int__TypeInfo);
+    sub_1C3E564(&System_Collections_Generic_List_EventExpeditionPieceEntity__TypeInfo);
+    sub_1C3E564(&System_Collections_Generic_List_GameObject__TypeInfo);
+    byte_4C51072 = 1;
   }
-  v3 = (System_Collections_Generic_List_object__o *)sub_1C372A4(System_Collections_Generic_List_EventExpeditionPieceEntity__TypeInfo);
+  v3 = (System_Collections_Generic_List_object__o *)sub_1C3E7B0(System_Collections_Generic_List_EventExpeditionPieceEntity__TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v3,
-    (const MethodInfo_37A27F0 *)Method_System_Collections_Generic_List_EventExpeditionPieceEntity___ctor__);
+    (const MethodInfo_37B4C2C *)Method_System_Collections_Generic_List_EventExpeditionPieceEntity___ctor__);
   this->fields.releaseHakkenshiList = (struct System_Collections_Generic_List_EventExpeditionPieceEntity__o *)v3;
-  sub_1C36FFC(&this->fields.releaseHakkenshiList, v3);
-  v4 = (System_Collections_Generic_List_int__o *)sub_1C372A4(System_Collections_Generic_List_int__TypeInfo);
+  sub_1C3E508(&this->fields.releaseHakkenshiList, v3);
+  v4 = (System_Collections_Generic_List_int__o *)sub_1C3E7B0(System_Collections_Generic_List_int__TypeInfo);
   System_Collections_Generic_List_int____ctor(
     v4,
-    (const MethodInfo_37857AC *)Method_System_Collections_Generic_List_int___ctor__);
+    (const MethodInfo_3797BE8 *)Method_System_Collections_Generic_List_int___ctor__);
   this->fields.runningHakkenshiList = v4;
-  sub_1C36FFC(&this->fields.runningHakkenshiList, v4);
-  v5 = (System_Collections_Generic_List_object__o *)sub_1C372A4(System_Collections_Generic_List_GameObject__TypeInfo);
+  sub_1C3E508(&this->fields.runningHakkenshiList, v4);
+  v5 = (System_Collections_Generic_List_object__o *)sub_1C3E7B0(System_Collections_Generic_List_GameObject__TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v5,
-    (const MethodInfo_37A27F0 *)Method_System_Collections_Generic_List_GameObject___ctor__);
+    (const MethodInfo_37B4C2C *)Method_System_Collections_Generic_List_GameObject___ctor__);
   this->fields.hakkenshiList = (struct System_Collections_Generic_List_GameObject__o *)v5;
-  sub_1C36FFC(&this->fields.hakkenshiList, v5);
+  sub_1C3E508(&this->fields.hakkenshiList, v5);
   UnityEngine_MonoBehaviour___ctor((UnityEngine_MonoBehaviour_o *)this, 0);
 }
 
@@ -62,58 +62,64 @@ void HakkenshiListController__CreateHakkenshiObject(HakkenshiListController_o *t
 {
   System_Collections_Generic_List_object__o *releaseHakkenshiList; // x0
   _BOOL8 v4; // x0
+  __int64 v5; // x1
   Il2CppObject *current; // x26
   ExpeditionAssetManager_o *assetData; // x0
   Il2CppObject *StayHakkenshiObj; // x21
-  Il2CppObject *v8; // x0
-  UnityEngine_GameObject_o *v9; // x21
+  Il2CppObject *v9; // x0
+  __int64 v10; // x1
+  UnityEngine_GameObject_o *v11; // x21
   Il2CppObject *Component_object; // x22
   UnityEngine_Transform_o *transform; // x0
-  UnityEngine_Transform_o *v12; // x0
-  UnityEngine_Transform_o *v13; // x0
-  UnityEngine_Transform_o *v14; // x22
+  __int64 v14; // x1
+  UnityEngine_Transform_o *v15; // x0
+  __int64 v16; // x1
+  __int64 v17; // x0
+  __int64 v18; // x1
+  UnityEngine_Transform_o *v19; // x22
+  __int64 v20; // x1
   struct System_Collections_Generic_List_GameObject__o *hakkenshiList; // x0
-  System_Collections_Generic_List_Enumerator_object__o v16; // [xsp+8h] [xbp-98h] BYREF
-  System_Collections_Generic_List_Enumerator_object__o v17; // [xsp+20h] [xbp-80h] BYREF
-  UnityEngine_Vector3_o v18; // 0:s0.4,4:s1.4,8:s2.4
+  System_Collections_Generic_List_Enumerator_object__o v22; // [xsp+8h] [xbp-98h] BYREF
+  System_Collections_Generic_List_Enumerator_object__o v23; // [xsp+20h] [xbp-80h] BYREF
+  UnityEngine_Vector3_o v24; // 0:s0.4,4:s1.4,8:s2.4
 
-  if ( (byte_4C3D2F1 & 1) == 0 )
+  if ( (byte_4C51071 & 1) == 0 )
   {
-    sub_1C37058(&Method_System_Collections_Generic_List_Enumerator_EventExpeditionPieceEntity__Dispose__);
-    sub_1C37058(&Method_System_Collections_Generic_List_Enumerator_EventExpeditionPieceEntity__MoveNext__);
-    sub_1C37058(&Method_System_Collections_Generic_List_Enumerator_EventExpeditionPieceEntity__get_Current__);
-    sub_1C37058(&Method_UnityEngine_GameObject_GetComponent_HakkenshiAnimationPlayer___);
-    sub_1C37058(&Method_System_Collections_Generic_List_EventExpeditionPieceEntity__GetEnumerator__);
-    sub_1C37058(&Method_System_Collections_Generic_List_GameObject__Insert__);
-    sub_1C37058(&Method_UnityEngine_Object_Instantiate_GameObject___);
-    sub_1C37058(&UnityEngine_Object_TypeInfo);
-    byte_4C3D2F1 = 1;
+    sub_1C3E564(&Method_System_Collections_Generic_List_Enumerator_EventExpeditionPieceEntity__Dispose__);
+    sub_1C3E564(&Method_System_Collections_Generic_List_Enumerator_EventExpeditionPieceEntity__MoveNext__);
+    sub_1C3E564(&Method_System_Collections_Generic_List_Enumerator_EventExpeditionPieceEntity__get_Current__);
+    sub_1C3E564(&Method_UnityEngine_GameObject_GetComponent_HakkenshiAnimationPlayer___);
+    sub_1C3E564(&Method_System_Collections_Generic_List_EventExpeditionPieceEntity__GetEnumerator__);
+    sub_1C3E564(&Method_System_Collections_Generic_List_GameObject__Insert__);
+    sub_1C3E564(&Method_UnityEngine_Object_Instantiate_GameObject___);
+    sub_1C3E564(&UnityEngine_Object_TypeInfo);
+    byte_4C51071 = 1;
   }
-  memset(&v17, 0, sizeof(v17));
+  memset(&v23, 0, sizeof(v23));
   releaseHakkenshiList = (System_Collections_Generic_List_object__o *)this->fields.releaseHakkenshiList;
   if ( !releaseHakkenshiList )
-    sub_1C372B4(0);
+    sub_1C3E7C0(0, method);
   System_Collections_Generic_List_object___GetEnumerator(
-    (System_Collections_Generic_List_Enumerator_T__o *)&v16,
+    (System_Collections_Generic_List_Enumerator_T__o *)&v22,
     releaseHakkenshiList,
-    (const MethodInfo_37A3B1C *)Method_System_Collections_Generic_List_EventExpeditionPieceEntity__GetEnumerator__);
-  v17 = v16;
+    (const MethodInfo_37B5F58 *)Method_System_Collections_Generic_List_EventExpeditionPieceEntity__GetEnumerator__);
+  v23 = v22;
   while ( 1 )
   {
     v4 = System_Collections_Generic_List_Enumerator_object___MoveNext(
-           &v17,
-           (const MethodInfo_352D810 *)Method_System_Collections_Generic_List_Enumerator_EventExpeditionPieceEntity__MoveNext__);
+           &v23,
+           (const MethodInfo_353FC4C *)Method_System_Collections_Generic_List_Enumerator_EventExpeditionPieceEntity__MoveNext__);
     if ( !v4 )
       break;
-    current = v17.fields._current;
-    if ( !v17.fields._current )
-      sub_1C372B4(v4);
+    current = v23.fields._current;
+    if ( !v23.fields._current )
+      sub_1C3E7C0(v4, v5);
     assetData = this->fields.assetData;
     if ( !assetData )
-      sub_1C372B4(0);
+      sub_1C3E7C0(0, v5);
     StayHakkenshiObj = (Il2CppObject *)ExpeditionAssetManager__GetStayHakkenshiObj(
                                          assetData,
-                                         HIDWORD(v17.fields._current[1].klass),
+                                         HIDWORD(v23.fields._current[1].klass),
                                          0);
     if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
@@ -121,52 +127,52 @@ void HakkenshiListController__CreateHakkenshiObject(HakkenshiListController_o *t
     {
       if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-      v8 = UnityEngine_Object__Instantiate_object_(
+      v9 = UnityEngine_Object__Instantiate_object_(
              StayHakkenshiObj,
-             (const MethodInfo_3173FC0 *)Method_UnityEngine_Object_Instantiate_GameObject___);
-      v9 = (UnityEngine_GameObject_o *)v8;
-      if ( !v8 )
-        sub_1C372B4(0);
-      UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)v8, 0, 0);
+             (const MethodInfo_3185EB4 *)Method_UnityEngine_Object_Instantiate_GameObject___);
+      v11 = (UnityEngine_GameObject_o *)v9;
+      if ( !v9 )
+        sub_1C3E7C0(0, v10);
+      UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)v9, 0, 0);
       Component_object = UnityEngine_GameObject__GetComponent_object_(
-                           v9,
-                           (const MethodInfo_313F1D8 *)Method_UnityEngine_GameObject_GetComponent_HakkenshiAnimationPlayer___);
-      transform = UnityEngine_GameObject__get_transform(v9, 0);
+                           v11,
+                           (const MethodInfo_31510CC *)Method_UnityEngine_GameObject_GetComponent_HakkenshiAnimationPlayer___);
+      transform = UnityEngine_GameObject__get_transform(v11, 0);
       if ( !transform )
-        sub_1C372B4(0);
+        sub_1C3E7C0(0, v14);
       UnityEngine_Transform__SetParent(transform, this->fields.hakkenshiContainer, 0);
-      v12 = UnityEngine_GameObject__get_transform(v9, 0);
+      v15 = UnityEngine_GameObject__get_transform(v11, 0);
       if ( !Component_object )
-        sub_1C372B4(v12);
-      if ( !v12 )
-        sub_1C372B4(0);
-      v18.fields.x = *(float *)&Component_object[2].monitor;
-      v18.fields.y = *((float *)&Component_object[2].monitor + 1);
-      v18.fields.z = 0.0;
-      UnityEngine_Transform__set_localPosition(v12, v18, 0);
-      v13 = UnityEngine_GameObject__get_transform(v9, 0);
-      v14 = v13;
-      if ( !byte_4C3C926 )
+        sub_1C3E7C0(v15, v16);
+      if ( !v15 )
+        sub_1C3E7C0(0, v16);
+      v24.fields.x = *(float *)&Component_object[2].monitor;
+      v24.fields.y = *((float *)&Component_object[2].monitor + 1);
+      v24.fields.z = 0.0;
+      UnityEngine_Transform__set_localPosition(v15, v24, 0);
+      v17 = (__int64)UnityEngine_GameObject__get_transform(v11, 0);
+      v19 = (UnityEngine_Transform_o *)v17;
+      if ( !byte_4C506A6 )
       {
-        v13 = (UnityEngine_Transform_o *)sub_1C37058(&UnityEngine_Vector3_TypeInfo);
-        byte_4C3C926 = 1;
+        v17 = sub_1C3E564(&UnityEngine_Vector3_TypeInfo);
+        byte_4C506A6 = 1;
       }
-      if ( !v14 )
-        sub_1C372B4(v13);
-      UnityEngine_Transform__set_localScale(v14, UnityEngine_Vector3_TypeInfo->static_fields->oneVector, 0);
+      if ( !v19 )
+        sub_1C3E7C0(v17, v18);
+      UnityEngine_Transform__set_localScale(v19, UnityEngine_Vector3_TypeInfo->static_fields->oneVector, 0);
       hakkenshiList = this->fields.hakkenshiList;
       if ( !hakkenshiList )
-        sub_1C372B4(0);
+        sub_1C3E7C0(0, v20);
       System_Collections_Generic_List_object___Insert(
         (System_Collections_Generic_List_object__o *)hakkenshiList,
         SHIDWORD(current[1].klass) / 10 - 1,
-        (Il2CppObject *)v9,
-        (const MethodInfo_37A3DD4 *)Method_System_Collections_Generic_List_GameObject__Insert__);
+        (Il2CppObject *)v11,
+        (const MethodInfo_37B6210 *)Method_System_Collections_Generic_List_GameObject__Insert__);
     }
   }
   System_Collections_Generic_List_Enumerator_object___Dispose(
-    &v17,
-    (const MethodInfo_352D80C *)Method_System_Collections_Generic_List_Enumerator_EventExpeditionPieceEntity__Dispose__);
+    &v23,
+    (const MethodInfo_353FC48 *)Method_System_Collections_Generic_List_Enumerator_EventExpeditionPieceEntity__Dispose__);
 }
 
 
@@ -188,38 +194,39 @@ void HakkenshiListController__CreateHakkenshiWindow(
   System_String_o *v16; // x22
   const MethodInfo *v17; // x1
   UnityEngine_Object_o *infoPanel; // x20
+  __int64 v19; // x1
   UnityEngine_Component_o *transform; // x0
   float z; // s8
   float ItemBaseWindowX; // s9
-  int v22; // w20
+  int v23; // w20
   UnityEngine_GameObject_o *gameObject; // x19
-  HakkenshiListController_c *v24; // x8
-  int32_t v25; // [xsp+1Ch] [xbp-44h] BYREF
+  HakkenshiListController_c *v25; // x8
+  int32_t v26; // [xsp+1Ch] [xbp-44h] BYREF
   UnityEngine_Vector3_o localPosition; // 0:s0.4,4:s1.4,8:s2.4
-  UnityEngine_Vector3_o v27; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o v28; // 0:s0.4,4:s1.4,8:s2.4
 
-  if ( (byte_4C3D2EE & 1) == 0 )
+  if ( (byte_4C5106E & 1) == 0 )
   {
-    sub_1C37058(&AtlasManager_TypeInfo);
-    sub_1C37058(&EventItemWindowMaker_TypeInfo);
-    sub_1C37058(&FSUtility_TypeInfo);
-    sub_1C37058(&HakkenshiListController_TypeInfo);
-    sub_1C37058(&int_TypeInfo);
-    sub_1C37058(&UnityEngine_Object_TypeInfo);
-    sub_1C37058(&StringLiteral_20129/*"icon_bg_{0}"*/);
-    byte_4C3D2EE = 1;
+    sub_1C3E564(&AtlasManager_TypeInfo);
+    sub_1C3E564(&EventItemWindowMaker_TypeInfo);
+    sub_1C3E564(&FSUtility_TypeInfo);
+    sub_1C3E564(&HakkenshiListController_TypeInfo);
+    sub_1C3E564(&int_TypeInfo);
+    sub_1C3E564(&UnityEngine_Object_TypeInfo);
+    sub_1C3E564(&StringLiteral_20147/*"icon_bg_{0}"*/);
+    byte_4C5106E = 1;
   }
   this->fields.assetData = assetData;
   this->fields.eventId = eventId;
-  sub_1C36FFC(&this->fields.assetData, assetData);
+  sub_1C3E508(&this->fields.assetData, assetData);
   v7 = this->fields.eventId;
   bgSprite = this->fields.bgSprite;
-  v25 = v7;
-  v15 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v25, v9, v10, v11, v12, v13, v14);
-  v16 = System_String__Format((System_String_o *)StringLiteral_20129/*"icon_bg_{0}"*/, v15, 0);
+  v26 = v7;
+  v15 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v26, v9, v10, v11, v12, v13, v14);
+  v16 = System_String__Format((System_String_o *)StringLiteral_20147/*"icon_bg_{0}"*/, v15, 0);
   if ( !AtlasManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo);
-  AtlasManager__SetEventUI_40606984(v7, bgSprite, v16, 0);
+  AtlasManager__SetEventUI_40653244(v7, bgSprite, v16, 0);
   HakkenshiListController__RefreshHakkenshiInfo(this, v17);
   infoPanel = (UnityEngine_Object_o *)this->fields.infoPanel;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -239,35 +246,36 @@ void HakkenshiListController__CreateHakkenshiWindow(
     ItemBaseWindowX = EventItemWindowMaker__GetItemBaseWindowX(0);
     transform = (UnityEngine_Component_o *)EventItemWindowMaker__GetItemBaseWindowHeight(0, 1, 0);
     if ( !this->fields.infoPanel
-      || (v22 = (int)transform,
+      || (v23 = (int)transform,
           (transform = (UnityEngine_Component_o *)UnityEngine_Component__get_transform(
                                                     (UnityEngine_Component_o *)this->fields.infoPanel,
                                                     0)) == 0) )
     {
 LABEL_22:
-      sub_1C372B4(transform);
+      sub_1C3E7C0(transform, v19);
     }
-    v27.fields.y = (float)v22;
-    v27.fields.x = ItemBaseWindowX;
-    v27.fields.z = z;
-    UnityEngine_Transform__set_localPosition((UnityEngine_Transform_o *)transform, v27, 0);
+    v28.fields.y = (float)v23;
+    v28.fields.x = ItemBaseWindowX;
+    v28.fields.z = z;
+    UnityEngine_Transform__set_localPosition((UnityEngine_Transform_o *)transform, v28, 0);
   }
   if ( !FSUtility_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(FSUtility_TypeInfo);
   if ( !FSUtility__IsUnderVista(0) )
   {
     gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
-    v24 = HakkenshiListController_TypeInfo;
+    v25 = HakkenshiListController_TypeInfo;
     if ( !HakkenshiListController_TypeInfo->_2.cctor_finished )
     {
       j_il2cpp_runtime_class_init_0(HakkenshiListController_TypeInfo);
-      v24 = HakkenshiListController_TypeInfo;
+      v25 = HakkenshiListController_TypeInfo;
     }
-    GameObjectExtensions__SetLocalPosition(gameObject, v24->static_fields->FULL_SCREEN_BASE_POSITION, 0);
+    GameObjectExtensions__SetLocalPosition(gameObject, v25->static_fields->FULL_SCREEN_BASE_POSITION, 0);
   }
 }
 
 
+// local variable allocation has failed, the output may be wrong!
 void HakkenshiListController__DisplayHakkenshiObj(
         HakkenshiListController_o *this,
         int32_t Idx,
@@ -276,11 +284,11 @@ void HakkenshiListController__DisplayHakkenshiObj(
 {
   System_Collections_Generic_List_object__o *hakkenshiList; // x0
 
-  if ( (byte_4C3D2F0 & 1) == 0 )
+  if ( (byte_4C51070 & 1) == 0 )
   {
-    sub_1C37058(&Method_System_Collections_Generic_List_GameObject__get_Count__);
-    sub_1C37058(&Method_System_Collections_Generic_List_GameObject__get_Item__);
-    byte_4C3D2F0 = 1;
+    sub_1C3E564(&Method_System_Collections_Generic_List_GameObject__get_Count__);
+    sub_1C3E564(&Method_System_Collections_Generic_List_GameObject__get_Item__);
+    byte_4C51070 = 1;
   }
   hakkenshiList = (System_Collections_Generic_List_object__o *)this->fields.hakkenshiList;
   if ( !hakkenshiList )
@@ -290,10 +298,10 @@ void HakkenshiListController__DisplayHakkenshiObj(
   hakkenshiList = (System_Collections_Generic_List_object__o *)System_Collections_Generic_List_object___get_Item(
                                                                  hakkenshiList,
                                                                  Idx / 10 - 1,
-                                                                 (const MethodInfo_37A2D54 *)Method_System_Collections_Generic_List_GameObject__get_Item__);
+                                                                 (const MethodInfo_37B5190 *)Method_System_Collections_Generic_List_GameObject__get_Item__);
   if ( !hakkenshiList )
 LABEL_7:
-    sub_1C372B4(hakkenshiList);
+    sub_1C3E7C0(hakkenshiList, *(_QWORD *)&Idx);
   UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)hakkenshiList, isDisp, 0);
 }
 
@@ -309,72 +317,74 @@ void HakkenshiListController__RefreshHakkenshiInfo(HakkenshiListController_o *th
   System_Collections_Generic_List_int__o **p_runningHakkenshiList; // x20
   struct System_Collections_Generic_List_EventExpeditionPieceEntity__o *ReleasePieceEntityList; // x0
   Il2CppObject *MasterData_object; // x21
-  const MethodInfo *pieceIdx; // x1
   struct ExpeditionInfo_array *expeditionInfos; // x21
   int max_length; // w8
-  unsigned int v15; // w22
-  ExpeditionInfo_o *v16; // x8
+  unsigned int v14; // w22
+  ExpeditionInfo_o *v15; // x8
   struct System_Int32_array *items; // x8
-  _QWORD *v18; // x9
-  __int64 v19; // x10
-  _BOOL8 v20; // x0
+  _QWORD *v17; // x9
+  __int64 v18; // x10
+  _BOOL8 v19; // x0
+  __int64 v20; // x1
   int32_t klass_high; // w21
   _BOOL8 v22; // x0
-  struct System_Collections_Generic_List_GameObject__o *v23; // x8
+  __int64 v23; // x1
+  struct System_Collections_Generic_List_GameObject__o *v24; // x8
   Il2CppObject *Item; // x0
-  System_Collections_Generic_List_Enumerator_object__o v25; // [xsp+8h] [xbp-B8h] BYREF
-  System_Collections_Generic_List_Enumerator_object__o v26; // [xsp+20h] [xbp-A0h] BYREF
-  System_Collections_Generic_List_Enumerator_object__o v27; // [xsp+40h] [xbp-80h] BYREF
+  __int64 v26; // x1
+  System_Collections_Generic_List_Enumerator_object__o v27; // [xsp+8h] [xbp-B8h] BYREF
+  System_Collections_Generic_List_Enumerator_object__o v28; // [xsp+20h] [xbp-A0h] BYREF
+  System_Collections_Generic_List_Enumerator_object__o v29; // [xsp+40h] [xbp-80h] BYREF
   UserEventExpeditionEntity_o *entity; // [xsp+58h] [xbp-68h] BYREF
 
-  if ( (byte_4C3D2EF & 1) == 0 )
+  if ( (byte_4C5106F & 1) == 0 )
   {
-    sub_1C37058(&Method_DataManager_GetMasterData_EventExpeditionPieceMaster___);
-    sub_1C37058(&Method_DataManager_GetMasterData_UserEventExpeditionMaster___);
-    sub_1C37058(&Method_System_Collections_Generic_List_Enumerator_GameObject__Dispose__);
-    sub_1C37058(&Method_System_Collections_Generic_List_Enumerator_EventExpeditionPieceEntity__Dispose__);
-    sub_1C37058(&Method_System_Collections_Generic_List_Enumerator_EventExpeditionPieceEntity__MoveNext__);
-    sub_1C37058(&Method_System_Collections_Generic_List_Enumerator_GameObject__MoveNext__);
-    sub_1C37058(&Method_System_Collections_Generic_List_Enumerator_EventExpeditionPieceEntity__get_Current__);
-    sub_1C37058(&Method_System_Collections_Generic_List_Enumerator_GameObject__get_Current__);
-    sub_1C37058(&Method_System_Collections_Generic_List_int__Add__);
-    sub_1C37058(&Method_System_Collections_Generic_List_GameObject__Clear__);
-    sub_1C37058(&Method_System_Collections_Generic_List_int__Contains__);
-    sub_1C37058(&Method_System_Collections_Generic_List_GameObject__GetEnumerator__);
-    sub_1C37058(&Method_System_Collections_Generic_List_EventExpeditionPieceEntity__GetEnumerator__);
-    sub_1C37058(&Method_System_Collections_Generic_List_int___ctor__);
-    sub_1C37058(&Method_System_Collections_Generic_List_GameObject__get_Count__);
-    sub_1C37058(&Method_System_Collections_Generic_List_EventExpeditionPieceEntity__get_Count__);
-    sub_1C37058(&Method_System_Collections_Generic_List_GameObject__get_Item__);
-    sub_1C37058(&System_Collections_Generic_List_int__TypeInfo);
-    sub_1C37058(&NetworkManager_TypeInfo);
-    sub_1C37058(&UnityEngine_Object_TypeInfo);
-    sub_1C37058(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-    byte_4C3D2EF = 1;
+    sub_1C3E564(&Method_DataManager_GetMasterData_EventExpeditionPieceMaster___);
+    sub_1C3E564(&Method_DataManager_GetMasterData_UserEventExpeditionMaster___);
+    sub_1C3E564(&Method_System_Collections_Generic_List_Enumerator_GameObject__Dispose__);
+    sub_1C3E564(&Method_System_Collections_Generic_List_Enumerator_EventExpeditionPieceEntity__Dispose__);
+    sub_1C3E564(&Method_System_Collections_Generic_List_Enumerator_EventExpeditionPieceEntity__MoveNext__);
+    sub_1C3E564(&Method_System_Collections_Generic_List_Enumerator_GameObject__MoveNext__);
+    sub_1C3E564(&Method_System_Collections_Generic_List_Enumerator_EventExpeditionPieceEntity__get_Current__);
+    sub_1C3E564(&Method_System_Collections_Generic_List_Enumerator_GameObject__get_Current__);
+    sub_1C3E564(&Method_System_Collections_Generic_List_int__Add__);
+    sub_1C3E564(&Method_System_Collections_Generic_List_GameObject__Clear__);
+    sub_1C3E564(&Method_System_Collections_Generic_List_int__Contains__);
+    sub_1C3E564(&Method_System_Collections_Generic_List_GameObject__GetEnumerator__);
+    sub_1C3E564(&Method_System_Collections_Generic_List_EventExpeditionPieceEntity__GetEnumerator__);
+    sub_1C3E564(&Method_System_Collections_Generic_List_int___ctor__);
+    sub_1C3E564(&Method_System_Collections_Generic_List_GameObject__get_Count__);
+    sub_1C3E564(&Method_System_Collections_Generic_List_EventExpeditionPieceEntity__get_Count__);
+    sub_1C3E564(&Method_System_Collections_Generic_List_GameObject__get_Item__);
+    sub_1C3E564(&System_Collections_Generic_List_int__TypeInfo);
+    sub_1C3E564(&NetworkManager_TypeInfo);
+    sub_1C3E564(&UnityEngine_Object_TypeInfo);
+    sub_1C3E564(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    byte_4C5106F = 1;
   }
   entity = 0;
-  memset(&v27, 0, sizeof(v27));
-  memset(&v26, 0, sizeof(v26));
+  memset(&v29, 0, sizeof(v29));
+  memset(&v28, 0, sizeof(v28));
   hakkenshiList = (System_Collections_Generic_List_object__o *)this->fields.hakkenshiList;
   if ( !hakkenshiList )
     goto LABEL_48;
   System_Collections_Generic_List_object___GetEnumerator(
-    (System_Collections_Generic_List_Enumerator_T__o *)&v25,
+    (System_Collections_Generic_List_Enumerator_T__o *)&v27,
     hakkenshiList,
-    (const MethodInfo_37A3B1C *)Method_System_Collections_Generic_List_GameObject__GetEnumerator__);
-  v27 = v25;
+    (const MethodInfo_37B5F58 *)Method_System_Collections_Generic_List_GameObject__GetEnumerator__);
+  v29 = v27;
   while ( System_Collections_Generic_List_Enumerator_object___MoveNext(
-            &v27,
-            (const MethodInfo_352D810 *)Method_System_Collections_Generic_List_Enumerator_GameObject__MoveNext__) )
+            &v29,
+            (const MethodInfo_353FC4C *)Method_System_Collections_Generic_List_Enumerator_GameObject__MoveNext__) )
   {
-    current = v27.fields._current;
+    current = v29.fields._current;
     if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-    UnityEngine_Object__Destroy_71266752((UnityEngine_Object_o *)current, 0);
+    UnityEngine_Object__Destroy_71341564((UnityEngine_Object_o *)current, 0);
   }
   System_Collections_Generic_List_Enumerator_object___Dispose(
-    &v27,
-    (const MethodInfo_352D80C *)Method_System_Collections_Generic_List_Enumerator_GameObject__Dispose__);
+    &v29,
+    (const MethodInfo_353FC48 *)Method_System_Collections_Generic_List_Enumerator_GameObject__Dispose__);
   v5 = this->fields.hakkenshiList;
   if ( !v5 )
     goto LABEL_48;
@@ -384,19 +394,19 @@ void HakkenshiListController__RefreshHakkenshiInfo(HakkenshiListController_o *th
   v5->fields._version = v7;
   if ( size >= 1 )
     System_Array__Clear((System_Array_o *)v5->fields._items, 0, size, 0);
-  v8 = (System_Collections_Generic_List_int__o *)sub_1C372A4(System_Collections_Generic_List_int__TypeInfo);
+  v8 = (System_Collections_Generic_List_int__o *)sub_1C3E7B0(System_Collections_Generic_List_int__TypeInfo);
   System_Collections_Generic_List_int____ctor(
     v8,
-    (const MethodInfo_37857AC *)Method_System_Collections_Generic_List_int___ctor__);
+    (const MethodInfo_3797BE8 *)Method_System_Collections_Generic_List_int___ctor__);
   this->fields.runningHakkenshiList = v8;
   p_runningHakkenshiList = &this->fields.runningHakkenshiList;
-  sub_1C36FFC(&this->fields.runningHakkenshiList, v8);
-  hakkenshiList = (System_Collections_Generic_List_object__o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39ED16C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  sub_1C3E508(&this->fields.runningHakkenshiList, v8);
+  hakkenshiList = (System_Collections_Generic_List_object__o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39FF5A8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !hakkenshiList )
     goto LABEL_48;
   hakkenshiList = (System_Collections_Generic_List_object__o *)DataManager__GetMasterData_object_(
                                                                  (DataManager_o *)hakkenshiList,
-                                                                 (const MethodInfo_30E7C58 *)Method_DataManager_GetMasterData_EventExpeditionPieceMaster___);
+                                                                 (const MethodInfo_30F9A70 *)Method_DataManager_GetMasterData_EventExpeditionPieceMaster___);
   if ( !hakkenshiList )
     goto LABEL_48;
   ReleasePieceEntityList = EventExpeditionPieceMaster__GetReleasePieceEntityList(
@@ -404,19 +414,19 @@ void HakkenshiListController__RefreshHakkenshiInfo(HakkenshiListController_o *th
                              this->fields.eventId,
                              0);
   this->fields.releaseHakkenshiList = ReleasePieceEntityList;
-  sub_1C36FFC(&this->fields.releaseHakkenshiList, ReleasePieceEntityList);
-  hakkenshiList = (System_Collections_Generic_List_object__o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39ED16C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  sub_1C3E508(&this->fields.releaseHakkenshiList, ReleasePieceEntityList);
+  hakkenshiList = (System_Collections_Generic_List_object__o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39FF5A8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !hakkenshiList )
     goto LABEL_48;
   MasterData_object = DataManager__GetMasterData_object_(
                         (DataManager_o *)hakkenshiList,
-                        (const MethodInfo_30E7C58 *)Method_DataManager_GetMasterData_UserEventExpeditionMaster___);
+                        (const MethodInfo_30F9A70 *)Method_DataManager_GetMasterData_UserEventExpeditionMaster___);
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
-  if ( !byte_4C3CD62 )
+  if ( !byte_4C50AE2 )
   {
-    sub_1C37058(&NetworkManager_TypeInfo);
-    byte_4C3CD62 = 1;
+    sub_1C3E564(&NetworkManager_TypeInfo);
+    byte_4C50AE2 = 1;
   }
   hakkenshiList = (System_Collections_Generic_List_object__o *)NetworkManager_TypeInfo;
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
@@ -443,92 +453,92 @@ void HakkenshiListController__RefreshHakkenshiInfo(HakkenshiListController_o *th
     max_length = expeditionInfos->max_length;
     if ( max_length >= 1 )
     {
-      v15 = 0;
+      v14 = 0;
       while ( 1 )
       {
-        if ( v15 >= max_length )
-          sub_1C372BC(hakkenshiList);
-        v16 = expeditionInfos->m_Items[v15];
-        if ( !v16 )
+        if ( v14 >= max_length )
+          sub_1C3E7C8(hakkenshiList, method);
+        v15 = expeditionInfos->m_Items[v14];
+        if ( !v15 )
           break;
         hakkenshiList = (System_Collections_Generic_List_object__o *)*p_runningHakkenshiList;
         if ( !*p_runningHakkenshiList )
           break;
-        pieceIdx = (const MethodInfo *)(unsigned int)v16->fields.pieceIdx;
+        method = (const MethodInfo *)(unsigned int)v15->fields.pieceIdx;
         items = (struct System_Int32_array *)hakkenshiList->fields._items;
-        v18 = Method_System_Collections_Generic_List_int__Add__;
+        v17 = Method_System_Collections_Generic_List_int__Add__;
         ++hakkenshiList->fields._version;
         if ( !items )
           break;
-        v19 = hakkenshiList->fields._size;
-        if ( (unsigned int)v19 >= LODWORD(items->max_length) )
+        v18 = hakkenshiList->fields._size;
+        if ( (unsigned int)v18 >= LODWORD(items->max_length) )
         {
           System_Collections_Generic_List_int___AddWithResize(
             (System_Collections_Generic_List_int__o *)hakkenshiList,
-            (int32_t)pieceIdx,
-            *(const MethodInfo_3786000 **)(*(_QWORD *)(v18[4] + 192LL) + 112LL));
+            (int32_t)method,
+            *(const MethodInfo_379843C **)(*(_QWORD *)(v17[4] + 192LL) + 112LL));
         }
         else
         {
-          hakkenshiList->fields._size = v19 + 1;
-          items->m_Items[v19] = (int)pieceIdx;
+          hakkenshiList->fields._size = v18 + 1;
+          items->m_Items[v18] = (int)method;
         }
         max_length = expeditionInfos->max_length;
-        if ( (int)++v15 >= max_length )
+        if ( (int)++v14 >= max_length )
           goto LABEL_35;
       }
 LABEL_48:
-      sub_1C372B4(hakkenshiList);
+      sub_1C3E7C0(hakkenshiList, method);
     }
   }
 LABEL_35:
-  HakkenshiListController__CreateHakkenshiObject(this, pieceIdx);
+  HakkenshiListController__CreateHakkenshiObject(this, method);
   hakkenshiList = (System_Collections_Generic_List_object__o *)this->fields.releaseHakkenshiList;
   if ( !hakkenshiList )
     goto LABEL_48;
   if ( hakkenshiList->fields._size >= 1 )
   {
     System_Collections_Generic_List_object___GetEnumerator(
-      (System_Collections_Generic_List_Enumerator_T__o *)&v25,
+      (System_Collections_Generic_List_Enumerator_T__o *)&v27,
       hakkenshiList,
-      (const MethodInfo_37A3B1C *)Method_System_Collections_Generic_List_EventExpeditionPieceEntity__GetEnumerator__);
-    v26 = v25;
+      (const MethodInfo_37B5F58 *)Method_System_Collections_Generic_List_EventExpeditionPieceEntity__GetEnumerator__);
+    v28 = v27;
     while ( 1 )
     {
-      v20 = System_Collections_Generic_List_Enumerator_object___MoveNext(
-              &v26,
-              (const MethodInfo_352D810 *)Method_System_Collections_Generic_List_Enumerator_EventExpeditionPieceEntity__MoveNext__);
-      if ( !v20 )
+      v19 = System_Collections_Generic_List_Enumerator_object___MoveNext(
+              &v28,
+              (const MethodInfo_353FC4C *)Method_System_Collections_Generic_List_Enumerator_EventExpeditionPieceEntity__MoveNext__);
+      if ( !v19 )
         break;
-      if ( !v26.fields._current )
-        sub_1C372B4(v20);
+      if ( !v28.fields._current )
+        sub_1C3E7C0(v19, v20);
       if ( !*p_runningHakkenshiList )
-        sub_1C372B4(0);
-      klass_high = HIDWORD(v26.fields._current[1].klass);
+        sub_1C3E7C0(0, v20);
+      klass_high = HIDWORD(v28.fields._current[1].klass);
       v22 = System_Collections_Generic_List_int___Contains(
               *p_runningHakkenshiList,
               klass_high,
-              (const MethodInfo_3786378 *)Method_System_Collections_Generic_List_int__Contains__);
+              (const MethodInfo_37987B4 *)Method_System_Collections_Generic_List_int__Contains__);
       if ( !v22 )
       {
-        v23 = this->fields.hakkenshiList;
-        if ( !v23 )
-          sub_1C372B4(v22);
-        if ( v23->fields._size >= klass_high / 10 )
+        v24 = this->fields.hakkenshiList;
+        if ( !v24 )
+          sub_1C3E7C0(v22, v23);
+        if ( v24->fields._size >= klass_high / 10 )
         {
           Item = System_Collections_Generic_List_object___get_Item(
                    (System_Collections_Generic_List_object__o *)this->fields.hakkenshiList,
                    klass_high / 10 - 1,
-                   (const MethodInfo_37A2D54 *)Method_System_Collections_Generic_List_GameObject__get_Item__);
+                   (const MethodInfo_37B5190 *)Method_System_Collections_Generic_List_GameObject__get_Item__);
           if ( !Item )
-            sub_1C372B4(0);
+            sub_1C3E7C0(0, v26);
           UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)Item, 1, 0);
         }
       }
     }
     System_Collections_Generic_List_Enumerator_object___Dispose(
-      &v26,
-      (const MethodInfo_352D80C *)Method_System_Collections_Generic_List_Enumerator_EventExpeditionPieceEntity__Dispose__);
+      &v28,
+      (const MethodInfo_353FC48 *)Method_System_Collections_Generic_List_Enumerator_EventExpeditionPieceEntity__Dispose__);
   }
 }
 
@@ -542,11 +552,11 @@ int32_t HakkenshiListController__get_HakkenshiBaseWindowHeight(
   int32_t ADD_HEIGHT; // w8
   HakkenshiListController_c *v5; // x0
 
-  if ( (byte_4C3D2ED & 1) == 0 )
+  if ( (byte_4C5106D & 1) == 0 )
   {
-    sub_1C37058(&FSUtility_TypeInfo);
-    sub_1C37058(&HakkenshiListController_TypeInfo);
-    byte_4C3D2ED = 1;
+    sub_1C3E564(&FSUtility_TypeInfo);
+    sub_1C3E564(&HakkenshiListController_TypeInfo);
+    byte_4C5106D = 1;
   }
   v2 = HakkenshiListController_TypeInfo;
   if ( !HakkenshiListController_TypeInfo->_2.cctor_finished )

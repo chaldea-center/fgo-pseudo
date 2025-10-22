@@ -2,15 +2,15 @@ void WaveBattleWaveInfoComponent___cctor(const MethodInfo *method)
 {
   struct WaveBattleWaveInfoComponent_StaticFields *static_fields; // x8
 
-  if ( (byte_4C3EDD8 & 1) == 0 )
+  if ( (byte_4C52B6A & 1) == 0 )
   {
-    sub_1C37058(&WaveBattleWaveInfoComponent_TypeInfo);
-    byte_4C3EDD8 = 1;
+    sub_1C3E564(&WaveBattleWaveInfoComponent_TypeInfo);
+    byte_4C52B6A = 1;
   }
   static_fields = WaveBattleWaveInfoComponent_TypeInfo->static_fields;
-  *(_OWORD *)&static_fields->BASE_HEIGHT_NORMAL = xmmword_C0FE50;
+  *(_OWORD *)&static_fields->BASE_HEIGHT_NORMAL = xmmword_C134C0;
   static_fields->BASE_HEIGHT_RESTART_WAVE_SPECIAL = 186.0;
-  *(_OWORD *)&static_fields->MAX_ENEMY_INFO = xmmword_C0EAB0;
+  *(_OWORD *)&static_fields->MAX_ENEMY_INFO = xmmword_C12120;
   *(_QWORD *)&static_fields->PARTY_LINE_SPRITE_WIDTH_SHORT_RESTART_WAVE = 0x1A400000110LL;
   static_fields->SEPARATE_ENEMY_LINE_SPRITE_WIDTH_SHORT_RESTART_WAVE = 254;
 }
@@ -39,16 +39,16 @@ int32_t WaveBattleWaveInfoComponent__CreateEnemyList(
   int32_t v8; // w2
   const MethodInfo *v9; // x3
   System_Collections_Generic_List_int__o *enemyInfoListParent; // x0
+  __int64 classId; // x1
   struct System_Collections_Generic_List_WaveBattleWaveEnemyInfoItem__o *enemyInfoList; // x8
   int32_t size; // w2
-  int v13; // w9
+  int v14; // w9
   il2cpp_array_size_t max_length; // x8
   struct System_Collections_Generic_List_int__o *enemyClassIdList; // x9
-  int v16; // w10
-  __int64 v17; // x25
-  int32_t v18; // w22
-  ViewWaveEnemyEntity_o *v19; // x23
-  int32_t classId; // w1
+  int v17; // w10
+  __int64 v18; // x25
+  int32_t v19; // w22
+  ViewWaveEnemyEntity_o *v20; // x23
   struct System_Int32_array *items; // x8
   _QWORD *v22; // x9
   __int64 v23; // x10
@@ -63,33 +63,33 @@ int32_t WaveBattleWaveInfoComponent__CreateEnemyList(
   __int64 v32; // x10
   __int64 v33; // x8
 
-  if ( (byte_4C3EDD1 & 1) == 0 )
+  if ( (byte_4C52B63 & 1) == 0 )
   {
-    sub_1C37058(&Method_UnityEngine_GameObject_GetComponent_WaveBattleWaveEnemyInfoItem___);
-    sub_1C37058(&Method_System_Collections_Generic_List_int__Add__);
-    sub_1C37058(&Method_System_Collections_Generic_List_WaveBattleWaveEnemyInfoItem__Add__);
-    sub_1C37058(&Method_System_Collections_Generic_List_WaveBattleWaveEnemyInfoItem__Clear__);
-    sub_1C37058(&Method_System_Collections_Generic_List_int__Clear__);
-    sub_1C37058(&Method_System_Collections_Generic_List_int__Contains__);
-    sub_1C37058(&Method_System_Collections_Generic_List_WaveBattleWaveEnemyInfoItem___ctor__);
-    sub_1C37058(&System_Collections_Generic_List_WaveBattleWaveEnemyInfoItem__TypeInfo);
-    sub_1C37058(&WaveBattleWaveInfoComponent_TypeInfo);
-    byte_4C3EDD1 = 1;
+    sub_1C3E564(&Method_UnityEngine_GameObject_GetComponent_WaveBattleWaveEnemyInfoItem___);
+    sub_1C3E564(&Method_System_Collections_Generic_List_int__Add__);
+    sub_1C3E564(&Method_System_Collections_Generic_List_WaveBattleWaveEnemyInfoItem__Add__);
+    sub_1C3E564(&Method_System_Collections_Generic_List_WaveBattleWaveEnemyInfoItem__Clear__);
+    sub_1C3E564(&Method_System_Collections_Generic_List_int__Clear__);
+    sub_1C3E564(&Method_System_Collections_Generic_List_int__Contains__);
+    sub_1C3E564(&Method_System_Collections_Generic_List_WaveBattleWaveEnemyInfoItem___ctor__);
+    sub_1C3E564(&System_Collections_Generic_List_WaveBattleWaveEnemyInfoItem__TypeInfo);
+    sub_1C3E564(&WaveBattleWaveInfoComponent_TypeInfo);
+    byte_4C52B63 = 1;
   }
-  v6 = (System_Collections_Generic_List_object__o *)sub_1C372A4(System_Collections_Generic_List_WaveBattleWaveEnemyInfoItem__TypeInfo);
+  v6 = (System_Collections_Generic_List_object__o *)sub_1C3E7B0(System_Collections_Generic_List_WaveBattleWaveEnemyInfoItem__TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v6,
-    (const MethodInfo_37A27F0 *)Method_System_Collections_Generic_List_WaveBattleWaveEnemyInfoItem___ctor__);
+    (const MethodInfo_37B4C2C *)Method_System_Collections_Generic_List_WaveBattleWaveEnemyInfoItem___ctor__);
   this->fields.enemyInfoList = (struct System_Collections_Generic_List_WaveBattleWaveEnemyInfoItem__o *)v6;
   p_enemyInfoList = &this->fields.enemyInfoList;
-  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.enemyInfoList, (int32_t)v6, v8, v9);
+  sub_1C3E508((CGThumbnailListItem_o *)&this->fields.enemyInfoList, (int32_t)v6, v8, v9);
   enemyInfoList = this->fields.enemyInfoList;
   if ( !enemyInfoList )
     goto LABEL_38;
   size = enemyInfoList->fields._size;
-  v13 = enemyInfoList->fields._version + 1;
+  v14 = enemyInfoList->fields._version + 1;
   enemyInfoList->fields._size = 0;
-  enemyInfoList->fields._version = v13;
+  enemyInfoList->fields._version = v14;
   if ( size >= 1 )
     System_Array__Clear((System_Array_o *)enemyInfoList->fields._items, 0, size, 0);
   if ( viewEnemyEntities )
@@ -100,34 +100,34 @@ int32_t WaveBattleWaveInfoComponent__CreateEnemyList(
       enemyClassIdList = this->fields.enemyClassIdList;
       if ( !enemyClassIdList )
         goto LABEL_38;
-      v16 = enemyClassIdList->fields._version + 1;
+      v17 = enemyClassIdList->fields._version + 1;
       enemyClassIdList->fields._size = 0;
-      enemyClassIdList->fields._version = v16;
+      enemyClassIdList->fields._version = v17;
       if ( (int)max_length >= 1 )
       {
-        v17 = 0;
         v18 = 0;
+        v19 = 0;
         while ( 1 )
         {
-          if ( (unsigned int)v17 >= (unsigned int)max_length )
-            sub_1C372BC(enemyInfoListParent);
-          v19 = viewEnemyEntities->m_Items[v17];
-          if ( !v19 )
+          if ( (unsigned int)v18 >= (unsigned int)max_length )
+            sub_1C3E7C8(enemyInfoListParent, classId);
+          v20 = viewEnemyEntities->m_Items[v18];
+          if ( !v20 )
             break;
-          if ( v19->fields.wave == this->fields.wave )
+          if ( v20->fields.wave == this->fields.wave )
           {
             enemyInfoListParent = this->fields.enemyClassIdList;
             if ( !enemyInfoListParent )
               break;
             if ( !System_Collections_Generic_List_int___Contains(
                     enemyInfoListParent,
-                    v19->fields.classId,
-                    (const MethodInfo_3786378 *)Method_System_Collections_Generic_List_int__Contains__) )
+                    v20->fields.classId,
+                    (const MethodInfo_37987B4 *)Method_System_Collections_Generic_List_int__Contains__) )
             {
               enemyInfoListParent = this->fields.enemyClassIdList;
               if ( !enemyInfoListParent )
                 break;
-              classId = v19->fields.classId;
+              classId = (unsigned int)v20->fields.classId;
               items = enemyInfoListParent->fields._items;
               v22 = Method_System_Collections_Generic_List_int__Add__;
               ++enemyInfoListParent->fields._version;
@@ -139,7 +139,7 @@ int32_t WaveBattleWaveInfoComponent__CreateEnemyList(
                 System_Collections_Generic_List_int___AddWithResize(
                   enemyInfoListParent,
                   classId,
-                  *(const MethodInfo_3786000 **)(*(_QWORD *)(v22[4] + 192LL) + 112LL));
+                  *(const MethodInfo_379843C **)(*(_QWORD *)(v22[4] + 192LL) + 112LL));
               }
               else
               {
@@ -162,7 +162,7 @@ int32_t WaveBattleWaveInfoComponent__CreateEnemyList(
               break;
             enemyInfoListParent = (System_Collections_Generic_List_int__o *)UnityEngine_GameObject__GetComponent_object_(
                                                                               (UnityEngine_GameObject_o *)enemyInfoListParent,
-                                                                              (const MethodInfo_313F1D8 *)Method_UnityEngine_GameObject_GetComponent_WaveBattleWaveEnemyInfoItem___);
+                                                                              (const MethodInfo_31510CC *)Method_UnityEngine_GameObject_GetComponent_WaveBattleWaveEnemyInfoItem___);
             if ( !enemyInfoListParent )
               break;
             enemyInfoGrid = this->fields.enemyInfoGrid;
@@ -187,14 +187,14 @@ int32_t WaveBattleWaveInfoComponent__CreateEnemyList(
               System_Collections_Generic_List_object___AddWithResize(
                 (System_Collections_Generic_List_object__o *)enemyInfoListParent,
                 v27,
-                *(const MethodInfo_37A3024 **)(*(_QWORD *)(v31[4] + 192LL) + 112LL));
+                *(const MethodInfo_37B5460 **)(*(_QWORD *)(v31[4] + 192LL) + 112LL));
             }
             else
             {
               v33 = (__int64)v30 + 8 * v32;
               enemyInfoListParent->fields._size = v32 + 1;
               *(_QWORD *)(v33 + 32) = v27;
-              sub_1C36FFC((CGThumbnailListItem_o *)(v33 + 32), (int32_t)v27, v28, v29);
+              sub_1C3E508((CGThumbnailListItem_o *)(v33 + 32), (int32_t)v27, v28, v29);
             }
             enemyInfoListParent = (System_Collections_Generic_List_int__o *)WaveBattleWaveInfoComponent_TypeInfo;
             if ( !WaveBattleWaveInfoComponent_TypeInfo->_2.cctor_finished )
@@ -202,15 +202,15 @@ int32_t WaveBattleWaveInfoComponent__CreateEnemyList(
               j_il2cpp_runtime_class_init_0(WaveBattleWaveInfoComponent_TypeInfo);
               enemyInfoListParent = (System_Collections_Generic_List_int__o *)WaveBattleWaveInfoComponent_TypeInfo;
             }
-            if ( ++v18 >= *(_DWORD *)(*(_QWORD *)&enemyInfoListParent[4].fields._size + 20LL) )
-              return v18;
+            if ( ++v19 >= *(_DWORD *)(*(_QWORD *)&enemyInfoListParent[4].fields._size + 20LL) )
+              return v19;
             max_length = viewEnemyEntities->max_length;
           }
-          if ( (int)++v17 >= (int)max_length )
-            return v18;
+          if ( (int)++v18 >= (int)max_length )
+            return v19;
         }
 LABEL_38:
-        sub_1C372B4(enemyInfoListParent);
+        sub_1C3E7C0(enemyInfoListParent, classId);
       }
     }
   }
@@ -224,11 +224,12 @@ void WaveBattleWaveInfoComponent__ExecutionCallBackAndTransitionScene(
 {
   struct WaveBattleWaveInfoComponent_CallbackFunc_o *callbackFunc; // x8
   Il2CppObject *Instance; // x0
+  __int64 v5; // x1
 
-  if ( (byte_4C3EDD6 & 1) == 0 )
+  if ( (byte_4C52B68 & 1) == 0 )
   {
-    sub_1C37058(&Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__);
-    byte_4C3EDD6 = 1;
+    sub_1C3E564(&Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__);
+    byte_4C52B68 = 1;
   }
   callbackFunc = this->fields.callbackFunc;
   if ( callbackFunc )
@@ -238,9 +239,9 @@ void WaveBattleWaveInfoComponent__ExecutionCallBackAndTransitionScene(
       (unsigned int)this->fields.wave,
       0,
       callbackFunc->fields.method);
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39ED16C *)Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39FF5A8 *)Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__);
   if ( !Instance )
-    sub_1C372B4(0);
+    sub_1C3E7C0(0, v5);
   AvalonSceneManager__pushScene(
     (AvalonSceneManager_o *)Instance,
     35,
@@ -270,15 +271,15 @@ void WaveBattleWaveInfoComponent__OnClickMask(WaveBattleWaveInfoComponent_o *thi
   _QWORD *v2; // x0
   System_Reflection_MethodBase_o *v3; // x0
 
-  if ( (byte_4C3EDD3 & 1) == 0 )
+  if ( (byte_4C52B65 & 1) == 0 )
   {
-    sub_1C37058(&Method_WaveBattleWaveInfoComponent_OnClickMask__);
-    byte_4C3EDD3 = 1;
+    sub_1C3E564(&Method_WaveBattleWaveInfoComponent_OnClickMask__);
+    byte_4C52B65 = 1;
   }
   v2 = Method_WaveBattleWaveInfoComponent_OnClickMask__;
   if ( (*((_BYTE *)Method_WaveBattleWaveInfoComponent_OnClickMask__ + 83) & 2) != 0 )
-    v2 = (_QWORD *)sub_1C37070(Method_WaveBattleWaveInfoComponent_OnClickMask__);
-  v3 = (System_Reflection_MethodBase_o *)sub_1C3703C(v2, v2[4]);
+    v2 = (_QWORD *)sub_1C3E57C(Method_WaveBattleWaveInfoComponent_OnClickMask__);
+  v3 = (System_Reflection_MethodBase_o *)sub_1C3E548(v2, v2[4]);
   OverwriteAssetSoundName__PlaySystemSe(v3, 2, 0, 0);
 }
 
@@ -349,128 +350,129 @@ void WaveBattleWaveInfoComponent__OpenRestartWaveConfirmDialog(
 {
   __int64 v13; // x19
   Il2CppObject *Instance; // x0
-  int32_t v15; // w2
-  const MethodInfo *v16; // x3
-  int *v17; // x20
-  int *v18; // x21
-  _QWORD *v19; // x0
-  System_Reflection_MethodBase_o *v20; // x0
-  int v21; // w22
-  int v22; // w23
-  System_String_o *v23; // x22
-  Il2CppObject *v24; // x0
-  System_String_o *v25; // x0
-  System_String_o *v26; // x22
-  Il2CppObject *v27; // x23
-  Il2CppObject *v28; // x0
-  int v29; // w23
-  int v30; // w24
-  System_String_o *v31; // x23
-  Il2CppObject *v32; // x0
-  System_String_o *v33; // x0
-  System_String_o *v34; // x23
-  int v35; // w22
-  int v36; // w28
-  Il2CppObject *v37; // x20
-  System_String_o *v38; // x21
-  System_String_o *v39; // x24
-  CommonConfirmDialog_ClickDelegate_o *v40; // x25
+  __int64 v15; // x1
+  int32_t v16; // w2
+  const MethodInfo *v17; // x3
+  int *v18; // x20
+  int *v19; // x21
+  _QWORD *v20; // x0
+  System_Reflection_MethodBase_o *v21; // x0
+  int v22; // w22
+  int v23; // w23
+  System_String_o *v24; // x22
+  Il2CppObject *v25; // x0
+  System_String_o *v26; // x0
+  System_String_o *v27; // x22
+  Il2CppObject *v28; // x23
+  Il2CppObject *v29; // x0
+  int v30; // w23
+  int v31; // w24
+  System_String_o *v32; // x23
+  Il2CppObject *v33; // x0
+  System_String_o *v34; // x0
+  System_String_o *v35; // x23
+  int v36; // w22
+  int v37; // w28
+  Il2CppObject *v38; // x20
+  System_String_o *v39; // x21
+  System_String_o *v40; // x24
+  CommonConfirmDialog_ClickDelegate_o *v41; // x25
   int32_t decideTxtSize; // w8
   System_String_o *message; // [xsp+18h] [xbp-68h]
 
-  if ( (byte_4C3EDD4 & 1) == 0 )
+  if ( (byte_4C52B66 & 1) == 0 )
   {
-    sub_1C37058(&CommonConfirmDialog_ClickDelegate_TypeInfo);
-    sub_1C37058(&LocalizationManager_TypeInfo);
-    sub_1C37058(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
-    sub_1C37058(&Method_WaveBattleWaveInfoComponent___c__DisplayClass59_0__OpenRestartWaveConfirmDialog_b__0__);
-    sub_1C37058(&WaveBattleWaveInfoComponent___c__DisplayClass59_0_TypeInfo);
-    sub_1C37058(&Method_WaveBattleWaveInfoComponent_OpenRestartWaveConfirmDialog__);
-    sub_1C37058(&StringLiteral_2777/*"BATTLE_INTERRUPTION_RESTART_WAVE_CONFIRM_DECIDE"*/);
-    sub_1C37058(&StringLiteral_2792/*"BATTLE_INTERRUPTION_WINDOW_WAVE_CONFIRM_MESSAGE"*/);
-    sub_1C37058(&StringLiteral_2790/*"BATTLE_INTERRUPTION_WINDOW_WAVE_CONFIRM_DECIDE"*/);
-    sub_1C37058(&StringLiteral_2779/*"BATTLE_INTERRUPTION_RESTART_WAVE_CONFIRM_TITLE"*/);
-    sub_1C37058(&StringLiteral_2776/*"BATTLE_INTERRUPTION_RESTART_WAVE_CONFIRM_CANCEL"*/);
-    sub_1C37058(&StringLiteral_2778/*"BATTLE_INTERRUPTION_RESTART_WAVE_CONFIRM_MESSAGE"*/);
-    sub_1C37058(&StringLiteral_1129/*"00"*/);
-    byte_4C3EDD4 = 1;
+    sub_1C3E564(&CommonConfirmDialog_ClickDelegate_TypeInfo);
+    sub_1C3E564(&LocalizationManager_TypeInfo);
+    sub_1C3E564(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+    sub_1C3E564(&Method_WaveBattleWaveInfoComponent___c__DisplayClass59_0__OpenRestartWaveConfirmDialog_b__0__);
+    sub_1C3E564(&WaveBattleWaveInfoComponent___c__DisplayClass59_0_TypeInfo);
+    sub_1C3E564(&Method_WaveBattleWaveInfoComponent_OpenRestartWaveConfirmDialog__);
+    sub_1C3E564(&StringLiteral_2777/*"BATTLE_INTERRUPTION_RESTART_WAVE_CONFIRM_DECIDE"*/);
+    sub_1C3E564(&StringLiteral_2792/*"BATTLE_INTERRUPTION_WINDOW_WAVE_CONFIRM_MESSAGE"*/);
+    sub_1C3E564(&StringLiteral_2790/*"BATTLE_INTERRUPTION_WINDOW_WAVE_CONFIRM_DECIDE"*/);
+    sub_1C3E564(&StringLiteral_2779/*"BATTLE_INTERRUPTION_RESTART_WAVE_CONFIRM_TITLE"*/);
+    sub_1C3E564(&StringLiteral_2776/*"BATTLE_INTERRUPTION_RESTART_WAVE_CONFIRM_CANCEL"*/);
+    sub_1C3E564(&StringLiteral_2778/*"BATTLE_INTERRUPTION_RESTART_WAVE_CONFIRM_MESSAGE"*/);
+    sub_1C3E564(&StringLiteral_1129/*"00"*/);
+    byte_4C52B66 = 1;
   }
-  v13 = sub_1C372A4(WaveBattleWaveInfoComponent___c__DisplayClass59_0_TypeInfo);
+  v13 = sub_1C3E7B0(WaveBattleWaveInfoComponent___c__DisplayClass59_0_TypeInfo);
   System_Object___ctor((Il2CppObject *)v13, 0);
   if ( !v13 )
     goto LABEL_24;
   *(_QWORD *)(v13 + 16) = this;
-  sub_1C36FFC((CGThumbnailListItem_o *)(v13 + 16), (int32_t)this, v15, v16);
+  sub_1C3E508((CGThumbnailListItem_o *)(v13 + 16), (int32_t)this, v16, v17);
   *(_DWORD *)(v13 + 36) = waveNum;
-  v17 = (int *)(v13 + 36);
+  v18 = (int *)(v13 + 36);
   *(_DWORD *)(v13 + 32) = warId;
   *(_DWORD *)(v13 + 24) = questId;
   *(_DWORD *)(v13 + 28) = questPhase;
   *(_DWORD *)(v13 + 40) = waveNumMax;
-  v18 = (int *)(v13 + 40);
-  v19 = Method_WaveBattleWaveInfoComponent_OpenRestartWaveConfirmDialog__;
+  v19 = (int *)(v13 + 40);
+  v20 = Method_WaveBattleWaveInfoComponent_OpenRestartWaveConfirmDialog__;
   if ( (*((_BYTE *)Method_WaveBattleWaveInfoComponent_OpenRestartWaveConfirmDialog__ + 83) & 2) != 0 )
-    v19 = (_QWORD *)sub_1C37070(Method_WaveBattleWaveInfoComponent_OpenRestartWaveConfirmDialog__);
-  v20 = (System_Reflection_MethodBase_o *)sub_1C3703C(v19, v19[4]);
-  OverwriteAssetSoundName__PlaySystemSe(v20, 0, 0, 0);
-  v21 = *v17;
+    v20 = (_QWORD *)sub_1C3E57C(Method_WaveBattleWaveInfoComponent_OpenRestartWaveConfirmDialog__);
+  v21 = (System_Reflection_MethodBase_o *)sub_1C3E548(v20, v20[4]);
+  OverwriteAssetSoundName__PlaySystemSe(v21, 0, 0, 0);
   v22 = *v18;
+  v23 = *v19;
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-  if ( v21 == v22 )
+  if ( v22 == v23 )
   {
-    v23 = LocalizationManager__Get((System_String_o *)StringLiteral_2778/*"BATTLE_INTERRUPTION_RESTART_WAVE_CONFIRM_MESSAGE"*/, 0);
-    v24 = (Il2CppObject *)System_Int32__ToString_65071764((int)v13 + 36, (System_String_o *)StringLiteral_1129/*"00"*/, 0);
-    v25 = System_String__Format(v23, v24, 0);
+    v24 = LocalizationManager__Get((System_String_o *)StringLiteral_2778/*"BATTLE_INTERRUPTION_RESTART_WAVE_CONFIRM_MESSAGE"*/, 0);
+    v25 = (Il2CppObject *)System_Int32__ToString_65146576((int)v13 + 36, (System_String_o *)StringLiteral_1129/*"00"*/, 0);
+    v26 = System_String__Format(v24, v25, 0);
   }
   else
   {
-    v26 = LocalizationManager__Get((System_String_o *)StringLiteral_2792/*"BATTLE_INTERRUPTION_WINDOW_WAVE_CONFIRM_MESSAGE"*/, 0);
-    v27 = (Il2CppObject *)System_Int32__ToString_65071764((int)v13 + 36, (System_String_o *)StringLiteral_1129/*"00"*/, 0);
-    v28 = (Il2CppObject *)System_Int32__ToString_65071764((int)v13 + 40, (System_String_o *)StringLiteral_1129/*"00"*/, 0);
-    v25 = System_String__Format_63602948(v26, v27, v28, 0);
+    v27 = LocalizationManager__Get((System_String_o *)StringLiteral_2792/*"BATTLE_INTERRUPTION_WINDOW_WAVE_CONFIRM_MESSAGE"*/, 0);
+    v28 = (Il2CppObject *)System_Int32__ToString_65146576((int)v13 + 36, (System_String_o *)StringLiteral_1129/*"00"*/, 0);
+    v29 = (Il2CppObject *)System_Int32__ToString_65146576((int)v13 + 40, (System_String_o *)StringLiteral_1129/*"00"*/, 0);
+    v26 = System_String__Format_63677760(v27, v28, v29, 0);
   }
-  message = v25;
-  v29 = *v17;
+  message = v26;
   v30 = *v18;
+  v31 = *v19;
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-  if ( v29 == v30 )
+  if ( v30 == v31 )
   {
-    v33 = LocalizationManager__Get((System_String_o *)StringLiteral_2777/*"BATTLE_INTERRUPTION_RESTART_WAVE_CONFIRM_DECIDE"*/, 0);
+    v34 = LocalizationManager__Get((System_String_o *)StringLiteral_2777/*"BATTLE_INTERRUPTION_RESTART_WAVE_CONFIRM_DECIDE"*/, 0);
   }
   else
   {
-    v31 = LocalizationManager__Get((System_String_o *)StringLiteral_2790/*"BATTLE_INTERRUPTION_WINDOW_WAVE_CONFIRM_DECIDE"*/, 0);
-    v32 = (Il2CppObject *)System_Int32__ToString_65071764((int)v13 + 36, (System_String_o *)StringLiteral_1129/*"00"*/, 0);
-    v33 = System_String__Format(v31, v32, 0);
+    v32 = LocalizationManager__Get((System_String_o *)StringLiteral_2790/*"BATTLE_INTERRUPTION_WINDOW_WAVE_CONFIRM_DECIDE"*/, 0);
+    v33 = (Il2CppObject *)System_Int32__ToString_65146576((int)v13 + 36, (System_String_o *)StringLiteral_1129/*"00"*/, 0);
+    v34 = System_String__Format(v32, v33, 0);
   }
-  v34 = v33;
-  v35 = *v17;
+  v35 = v34;
   v36 = *v18;
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39ED16C *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+  v37 = *v19;
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39FF5A8 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
   if ( !Instance )
     goto LABEL_24;
   CommonUI__SetConfirmDialogDecideButtonLabelMaxLineCount((CommonUI_o *)Instance, 0, 0);
-  v37 = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39ED16C *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+  v38 = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39FF5A8 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-  v38 = LocalizationManager__Get((System_String_o *)StringLiteral_2779/*"BATTLE_INTERRUPTION_RESTART_WAVE_CONFIRM_TITLE"*/, 0);
-  v39 = LocalizationManager__Get((System_String_o *)StringLiteral_2776/*"BATTLE_INTERRUPTION_RESTART_WAVE_CONFIRM_CANCEL"*/, 0);
-  v40 = (CommonConfirmDialog_ClickDelegate_o *)sub_1C372A4(CommonConfirmDialog_ClickDelegate_TypeInfo);
+  v39 = LocalizationManager__Get((System_String_o *)StringLiteral_2779/*"BATTLE_INTERRUPTION_RESTART_WAVE_CONFIRM_TITLE"*/, 0);
+  v40 = LocalizationManager__Get((System_String_o *)StringLiteral_2776/*"BATTLE_INTERRUPTION_RESTART_WAVE_CONFIRM_CANCEL"*/, 0);
+  v41 = (CommonConfirmDialog_ClickDelegate_o *)sub_1C3E7B0(CommonConfirmDialog_ClickDelegate_TypeInfo);
   CommonConfirmDialog_ClickDelegate___ctor(
-    v40,
+    v41,
     (Il2CppObject *)v13,
     Method_WaveBattleWaveInfoComponent___c__DisplayClass59_0__OpenRestartWaveConfirmDialog_b__0__,
     0);
-  if ( !v37 )
+  if ( !v38 )
 LABEL_24:
-    sub_1C372B4(Instance);
-  if ( v35 == v36 )
+    sub_1C3E7C0(Instance, v15);
+  if ( v36 == v37 )
     decideTxtSize = 30;
   else
     decideTxtSize = 22;
-  CommonUI__OpenConfirmDecideDialog((CommonUI_o *)v37, v38, message, v34, v39, v40, 26, 270, 13.0, decideTxtSize, 1, 0);
+  CommonUI__OpenConfirmDecideDialog((CommonUI_o *)v38, v39, message, v35, v40, v41, 26, 270, 13.0, decideTxtSize, 1, 0);
 }
 
 
@@ -483,7 +485,7 @@ void WaveBattleWaveInfoComponent__OverwriteCanNotSelectLabel(
 
   clearedLabel = this->fields.clearedLabel;
   if ( !clearedLabel || (UILabel__set_maxLineCount(clearedLabel, 0, 0), (clearedLabel = this->fields.clearedLabel) == 0) )
-    sub_1C372B4(clearedLabel);
+    sub_1C3E7C0(clearedLabel, overwriteLabel);
   UILabel__set_text(clearedLabel, overwriteLabel, 0);
 }
 
@@ -495,43 +497,44 @@ void WaveBattleWaveInfoComponent__OverwriteMoveToPartyButton(
 {
   __int64 v5; // x19
   UnityEngine_GameObject_o *MoveToPartyButton; // x0
-  int32_t v7; // w2
-  const MethodInfo *v8; // x3
-  int32_t v9; // w2
-  const MethodInfo *v10; // x3
+  __int64 v7; // x1
+  int32_t v8; // w2
+  const MethodInfo *v9; // x3
+  int32_t v10; // w2
+  const MethodInfo *v11; // x3
   UnityEngine_Object_o *Component_object; // x21
   System_Array_o **monitor; // x20
-  int32_t v13; // w2
-  int v14; // w8
-  EventDelegate_Callback_o *v15; // x21
-  EventDelegate_o *v16; // x19
-  int32_t v17; // w2
-  const MethodInfo *v18; // x3
-  System_Array_o *v19; // x8
-  _QWORD *v20; // x9
-  __int64 v21; // x10
-  __int64 v22; // x0
+  int32_t v14; // w2
+  int v15; // w8
+  EventDelegate_Callback_o *v16; // x21
+  EventDelegate_o *v17; // x19
+  int32_t v18; // w2
+  const MethodInfo *v19; // x3
+  System_Array_o *v20; // x8
+  _QWORD *v21; // x9
+  __int64 v22; // x10
+  __int64 v23; // x0
 
-  if ( (byte_4C3EDD7 & 1) == 0 )
+  if ( (byte_4C52B69 & 1) == 0 )
   {
-    sub_1C37058(&EventDelegate_Callback_TypeInfo);
-    sub_1C37058(&EventDelegate_TypeInfo);
-    sub_1C37058(&Method_UnityEngine_GameObject_GetComponent_UICommonButton___);
-    sub_1C37058(&Method_System_Collections_Generic_List_EventDelegate__Add__);
-    sub_1C37058(&Method_System_Collections_Generic_List_EventDelegate__Clear__);
-    sub_1C37058(&UnityEngine_Object_TypeInfo);
-    sub_1C37058(&Method_WaveBattleWaveInfoComponent___c__DisplayClass65_0__OverwriteMoveToPartyButton_b__0__);
-    sub_1C37058(&WaveBattleWaveInfoComponent___c__DisplayClass65_0_TypeInfo);
-    byte_4C3EDD7 = 1;
+    sub_1C3E564(&EventDelegate_Callback_TypeInfo);
+    sub_1C3E564(&EventDelegate_TypeInfo);
+    sub_1C3E564(&Method_UnityEngine_GameObject_GetComponent_UICommonButton___);
+    sub_1C3E564(&Method_System_Collections_Generic_List_EventDelegate__Add__);
+    sub_1C3E564(&Method_System_Collections_Generic_List_EventDelegate__Clear__);
+    sub_1C3E564(&UnityEngine_Object_TypeInfo);
+    sub_1C3E564(&Method_WaveBattleWaveInfoComponent___c__DisplayClass65_0__OverwriteMoveToPartyButton_b__0__);
+    sub_1C3E564(&WaveBattleWaveInfoComponent___c__DisplayClass65_0_TypeInfo);
+    byte_4C52B69 = 1;
   }
-  v5 = sub_1C372A4(WaveBattleWaveInfoComponent___c__DisplayClass65_0_TypeInfo);
+  v5 = sub_1C3E7B0(WaveBattleWaveInfoComponent___c__DisplayClass65_0_TypeInfo);
   System_Object___ctor((Il2CppObject *)v5, 0);
   if ( !v5 )
     goto LABEL_19;
   *(_QWORD *)(v5 + 16) = callback;
-  sub_1C36FFC((CGThumbnailListItem_o *)(v5 + 16), (int32_t)callback, v7, v8);
+  sub_1C3E508((CGThumbnailListItem_o *)(v5 + 16), (int32_t)callback, v8, v9);
   *(_QWORD *)(v5 + 24) = this;
-  sub_1C36FFC((CGThumbnailListItem_o *)(v5 + 24), (int32_t)this, v9, v10);
+  sub_1C3E508((CGThumbnailListItem_o *)(v5 + 24), (int32_t)this, v10, v11);
   if ( this->fields.isSwitchPartyBattle )
     return;
   MoveToPartyButton = this->fields.MoveToPartyButton;
@@ -539,7 +542,7 @@ void WaveBattleWaveInfoComponent__OverwriteMoveToPartyButton(
     goto LABEL_19;
   Component_object = (UnityEngine_Object_o *)UnityEngine_GameObject__GetComponent_object_(
                                                MoveToPartyButton,
-                                               (const MethodInfo_313F1D8 *)Method_UnityEngine_GameObject_GetComponent_UICommonButton___);
+                                               (const MethodInfo_31510CC *)Method_UnityEngine_GameObject_GetComponent_UICommonButton___);
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   MoveToPartyButton = (UnityEngine_GameObject_o *)UnityEngine_Object__op_Equality(Component_object, 0, 0);
@@ -550,44 +553,44 @@ void WaveBattleWaveInfoComponent__OverwriteMoveToPartyButton(
       monitor = (System_Array_o **)Component_object[4].monitor;
       if ( monitor )
       {
-        v13 = *((_DWORD *)monitor + 6);
-        v14 = *((_DWORD *)monitor + 7) + 1;
+        v14 = *((_DWORD *)monitor + 6);
+        v15 = *((_DWORD *)monitor + 7) + 1;
         *((_DWORD *)monitor + 6) = 0;
-        *((_DWORD *)monitor + 7) = v14;
-        if ( v13 >= 1 )
+        *((_DWORD *)monitor + 7) = v15;
+        if ( v14 >= 1 )
         {
-          System_Array__Clear(monitor[2], 0, v13, 0);
+          System_Array__Clear(monitor[2], 0, v14, 0);
           monitor = (System_Array_o **)Component_object[4].monitor;
         }
-        v15 = (EventDelegate_Callback_o *)sub_1C372A4(EventDelegate_Callback_TypeInfo);
+        v16 = (EventDelegate_Callback_o *)sub_1C3E7B0(EventDelegate_Callback_TypeInfo);
         EventDelegate_Callback___ctor(
-          v15,
+          v16,
           (Il2CppObject *)v5,
           Method_WaveBattleWaveInfoComponent___c__DisplayClass65_0__OverwriteMoveToPartyButton_b__0__,
           0);
-        v16 = (EventDelegate_o *)sub_1C372A4(EventDelegate_TypeInfo);
-        EventDelegate___ctor_49273948(v16, v15, 0);
+        v17 = (EventDelegate_o *)sub_1C3E7B0(EventDelegate_TypeInfo);
+        EventDelegate___ctor_49347188(v17, v16, 0);
         if ( monitor )
         {
-          v19 = monitor[2];
-          v20 = Method_System_Collections_Generic_List_EventDelegate__Add__;
+          v20 = monitor[2];
+          v21 = Method_System_Collections_Generic_List_EventDelegate__Add__;
           ++*((_DWORD *)monitor + 7);
-          if ( v19 )
+          if ( v20 )
           {
-            v21 = *((int *)monitor + 6);
-            if ( (unsigned int)v21 >= LODWORD(v19[1].monitor) )
+            v22 = *((int *)monitor + 6);
+            if ( (unsigned int)v22 >= LODWORD(v20[1].monitor) )
             {
               System_Collections_Generic_List_object___AddWithResize(
                 (System_Collections_Generic_List_object__o *)monitor,
-                (Il2CppObject *)v16,
-                *(const MethodInfo_37A3024 **)(*(_QWORD *)(v20[4] + 192LL) + 112LL));
+                (Il2CppObject *)v17,
+                *(const MethodInfo_37B5460 **)(*(_QWORD *)(v21[4] + 192LL) + 112LL));
             }
             else
             {
-              v22 = (__int64)v19 + 8 * v21;
-              *((_DWORD *)monitor + 6) = v21 + 1;
-              *(_QWORD *)(v22 + 32) = v16;
-              sub_1C36FFC((CGThumbnailListItem_o *)(v22 + 32), (int32_t)v16, v17, v18);
+              v23 = (__int64)v20 + 8 * v22;
+              *((_DWORD *)monitor + 6) = v22 + 1;
+              *(_QWORD *)(v23 + 32) = v17;
+              sub_1C3E508((CGThumbnailListItem_o *)(v23 + 32), (int32_t)v17, v18, v19);
             }
             return;
           }
@@ -595,7 +598,7 @@ void WaveBattleWaveInfoComponent__OverwriteMoveToPartyButton(
       }
     }
 LABEL_19:
-    sub_1C372B4(MoveToPartyButton);
+    sub_1C3E7C0(MoveToPartyButton, v7);
   }
 }
 
@@ -609,56 +612,56 @@ void WaveBattleWaveInfoComponent__SetEnemyInfo(
 {
   UILabel_o *waveNumLabel; // x22
   System_String_o *maskObj; // x0
+  __int64 v11; // x1
   UISprite_o *waveLineSprite; // x22
-  System_Collections_Generic_List_int__o *v12; // x22
-  int32_t v13; // w2
-  const MethodInfo *v14; // x3
-  int32_t v15; // w1
+  System_Collections_Generic_List_int__o *v13; // x22
+  int32_t v14; // w2
+  const MethodInfo *v15; // x3
   const MethodInfo *v16; // x3
 
-  if ( (byte_4C3EDCA & 1) == 0 )
+  if ( (byte_4C52B5C & 1) == 0 )
   {
-    sub_1C37058(&AtlasManager_TypeInfo);
-    sub_1C37058(&Method_System_Collections_Generic_List_int___ctor__);
-    sub_1C37058(&System_Collections_Generic_List_int__TypeInfo);
-    sub_1C37058(&LocalizationManager_TypeInfo);
-    sub_1C37058(&StringLiteral_21249/*"line_whiteAlpha"*/);
-    sub_1C37058(&StringLiteral_15506/*"WAVE_BATTLE_FIX_ENEMY_TITLE"*/);
-    byte_4C3EDCA = 1;
+    sub_1C3E564(&AtlasManager_TypeInfo);
+    sub_1C3E564(&Method_System_Collections_Generic_List_int___ctor__);
+    sub_1C3E564(&System_Collections_Generic_List_int__TypeInfo);
+    sub_1C3E564(&LocalizationManager_TypeInfo);
+    sub_1C3E564(&StringLiteral_21267/*"line_whiteAlpha"*/);
+    sub_1C3E564(&StringLiteral_15516/*"WAVE_BATTLE_FIX_ENEMY_TITLE"*/);
+    byte_4C52B5C = 1;
   }
   this->fields.wave = nowWave;
   waveNumLabel = this->fields.waveNumLabel;
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-  maskObj = LocalizationManager__Get((System_String_o *)StringLiteral_15506/*"WAVE_BATTLE_FIX_ENEMY_TITLE"*/, 0);
+  maskObj = LocalizationManager__Get((System_String_o *)StringLiteral_15516/*"WAVE_BATTLE_FIX_ENEMY_TITLE"*/, 0);
   if ( !waveNumLabel )
     goto LABEL_14;
   UILabel__set_text(waveNumLabel, maskObj, 0);
   waveLineSprite = this->fields.waveLineSprite;
   if ( !AtlasManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo);
-  AtlasManager__SetPartyOrganizationImage(waveLineSprite, (System_String_o *)StringLiteral_21249/*"line_whiteAlpha"*/, 0);
-  v12 = (System_Collections_Generic_List_int__o *)sub_1C372A4(System_Collections_Generic_List_int__TypeInfo);
+  AtlasManager__SetPartyOrganizationImage(waveLineSprite, (System_String_o *)StringLiteral_21267/*"line_whiteAlpha"*/, 0);
+  v13 = (System_Collections_Generic_List_int__o *)sub_1C3E7B0(System_Collections_Generic_List_int__TypeInfo);
   System_Collections_Generic_List_int____ctor(
-    v12,
-    (const MethodInfo_37857AC *)Method_System_Collections_Generic_List_int___ctor__);
-  this->fields.enemyClassIdList = v12;
-  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.enemyClassIdList, (int32_t)v12, v13, v14);
+    v13,
+    (const MethodInfo_3797BE8 *)Method_System_Collections_Generic_List_int___ctor__);
+  this->fields.enemyClassIdList = v13;
+  sub_1C3E508((CGThumbnailListItem_o *)&this->fields.enemyClassIdList, (int32_t)v13, v14, v15);
   if ( viewEnemyEntities && viewEnemyEntities->max_length )
   {
     if ( !questRestrictionInfo )
       goto LABEL_14;
-    WaveBattleWaveInfoComponent__CreateEnemyList(this, v15, viewEnemyEntities, v16);
+    WaveBattleWaveInfoComponent__CreateEnemyList(this, v11, viewEnemyEntities, v16);
   }
   maskObj = (System_String_o *)this->fields.maskObj;
   if ( !maskObj )
 LABEL_14:
-    sub_1C372B4(maskObj);
+    sub_1C3E7C0(maskObj, v11);
   UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)maskObj, 0, 0);
 }
 
 
-void WaveBattleWaveInfoComponent__SetEnemyInfo_34774600(
+void WaveBattleWaveInfoComponent__SetEnemyInfo_34813372(
         WaveBattleWaveInfoComponent_o *this,
         ViewWaveEnemyEntity_array *viewEnemyEntities,
         const MethodInfo *method)
@@ -671,11 +674,11 @@ void WaveBattleWaveInfoComponent__SetEnemyInfo_34774600(
   const MethodInfo *v9; // x2
 
   v4 = this;
-  if ( (byte_4C3EDD2 & 1) == 0 )
+  if ( (byte_4C52B64 & 1) == 0 )
   {
-    sub_1C37058(&Method_System_Collections_Generic_List_WaveBattleWaveEnemyInfoItem__get_Count__);
-    this = (WaveBattleWaveInfoComponent_o *)sub_1C37058(&Method_System_Collections_Generic_List_WaveBattleWaveEnemyInfoItem__get_Item__);
-    byte_4C3EDD2 = 1;
+    sub_1C3E564(&Method_System_Collections_Generic_List_WaveBattleWaveEnemyInfoItem__get_Count__);
+    this = (WaveBattleWaveInfoComponent_o *)sub_1C3E564(&Method_System_Collections_Generic_List_WaveBattleWaveEnemyInfoItem__get_Item__);
+    byte_4C52B64 = 1;
   }
   if ( viewEnemyEntities )
   {
@@ -689,11 +692,11 @@ void WaveBattleWaveInfoComponent__SetEnemyInfo_34774600(
         do
         {
           if ( (unsigned int)v6 >= (unsigned int)max_length )
-            sub_1C372BC(this);
+            sub_1C3E7C8(this, viewEnemyEntities);
           v8 = viewEnemyEntities->m_Items[v6];
           if ( !v8 )
 LABEL_16:
-            sub_1C372B4(this);
+            sub_1C3E7C0(this, viewEnemyEntities);
           if ( v8->fields.wave == v4->fields.wave )
           {
             this = (WaveBattleWaveInfoComponent_o *)v4->fields.enemyInfoList;
@@ -704,7 +707,7 @@ LABEL_16:
             this = (WaveBattleWaveInfoComponent_o *)System_Collections_Generic_List_object___get_Item(
                                                       (System_Collections_Generic_List_object__o *)this,
                                                       v7,
-                                                      (const MethodInfo_37A2D54 *)Method_System_Collections_Generic_List_WaveBattleWaveEnemyInfoItem__get_Item__);
+                                                      (const MethodInfo_37B5190 *)Method_System_Collections_Generic_List_WaveBattleWaveEnemyInfoItem__get_Item__);
             if ( !this )
               goto LABEL_16;
             WaveBattleWaveEnemyInfoItem__SetItem((WaveBattleWaveEnemyInfoItem_o *)this, v8, v9);
@@ -720,6 +723,7 @@ LABEL_16:
 }
 
 
+// local variable allocation has failed, the output may be wrong!
 void WaveBattleWaveInfoComponent__SetMaskObjActive(
         WaveBattleWaveInfoComponent_o *this,
         bool active,
@@ -729,11 +733,12 @@ void WaveBattleWaveInfoComponent__SetMaskObjActive(
 
   maskObj = this->fields.maskObj;
   if ( !maskObj )
-    sub_1C372B4(0);
+    sub_1C3E7C0(0, active);
   UnityEngine_GameObject__SetActive(maskObj, active, 0);
 }
 
 
+// local variable allocation has failed, the output may be wrong!
 void WaveBattleWaveInfoComponent__SetMoveToPartyButtonActive(
         WaveBattleWaveInfoComponent_o *this,
         bool active,
@@ -743,7 +748,7 @@ void WaveBattleWaveInfoComponent__SetMoveToPartyButtonActive(
 
   MoveToPartyButton = this->fields.MoveToPartyButton;
   if ( !MoveToPartyButton )
-    sub_1C372B4(0);
+    sub_1C3E7C0(0, active);
   UnityEngine_GameObject__SetActive(MoveToPartyButton, active, 0);
 }
 
@@ -777,19 +782,19 @@ void WaveBattleWaveInfoComponent__SetPartyInfo(
   __int64 v30; // x7
   Il2CppObject *v31; // x0
   System_String_o *servantTextMemberSprite; // x0
+  __int64 classId; // x1
   UISprite_o *waveLineSprite; // x23
-  UIWidget_o *v34; // x23
+  UIWidget_o *v35; // x23
   _BOOL4 isSelectWaveFlag; // w20
-  __int64 v36; // x9
-  System_Collections_Generic_List_int__o *v37; // x25
+  __int64 v37; // x9
+  System_Collections_Generic_List_int__o *v38; // x25
   struct System_Collections_Generic_List_int__o **p_enemyClassIdList; // x23
-  int32_t v39; // w2
-  const MethodInfo *v40; // x3
+  int32_t v40; // w2
+  const MethodInfo *v41; // x3
   il2cpp_array_size_t max_length; // x8
-  __int64 v42; // x20
-  int v43; // w25
-  ViewWaveEnemyEntity_o *v44; // x26
-  int32_t classId; // w1
+  __int64 v43; // x20
+  int v44; // w25
+  ViewWaveEnemyEntity_o *v45; // x26
   System_String_Fields fields; // x8
   _QWORD *v47; // x9
   __int64 klass_low; // x10
@@ -826,34 +831,34 @@ void WaveBattleWaveInfoComponent__SetPartyInfo(
   int32_t v81; // [xsp+28h] [xbp-68h] BYREF
   int32_t wave; // [xsp+2Ch] [xbp-64h] BYREF
 
-  if ( (byte_4C3EDCD & 1) == 0 )
+  if ( (byte_4C52B5F & 1) == 0 )
   {
-    sub_1C37058(&AtlasManager_TypeInfo);
-    sub_1C37058(&BalanceConfig_TypeInfo);
-    sub_1C37058(&WaveBattleWaveServantInfoItem_CallbackFunc_TypeInfo);
-    sub_1C37058(&Method_UnityEngine_GameObject_GetComponent_WaveBattleWaveServantInfoItem___);
-    sub_1C37058(&int_TypeInfo);
-    sub_1C37058(&Method_System_Collections_Generic_List_int__Add__);
-    sub_1C37058(&Method_System_Collections_Generic_List_WaveBattleWaveServantInfoItem__Add__);
-    sub_1C37058(&Method_System_Collections_Generic_List_int__Contains__);
-    sub_1C37058(&Method_System_Collections_Generic_List_int__ToArray__);
-    sub_1C37058(&Method_System_Collections_Generic_List_int___ctor__);
-    sub_1C37058(&Method_System_Collections_Generic_List_WaveBattleWaveServantInfoItem___ctor__);
-    sub_1C37058(&System_Collections_Generic_List_int__TypeInfo);
-    sub_1C37058(&System_Collections_Generic_List_WaveBattleWaveServantInfoItem__TypeInfo);
-    sub_1C37058(&LocalizationManager_TypeInfo);
-    sub_1C37058(&Method_WaveBattleWaveInfoComponent_OnSelectWavePartyList__);
-    sub_1C37058(&WaveBattleWaveInfoComponent_TypeInfo);
-    sub_1C37058(&StringLiteral_15481/*"WAVE_BATTLE_ALREADY_SORTIE"*/);
-    sub_1C37058(&StringLiteral_21249/*"line_whiteAlpha"*/);
-    sub_1C37058(&StringLiteral_15544/*"WAVE_BATTLE_WAVE_INFO"*/);
-    sub_1C37058(&StringLiteral_20611/*"img_txt_Member"*/);
-    sub_1C37058(&StringLiteral_20612/*"img_txt_Starting"*/);
-    byte_4C3EDCD = 1;
+    sub_1C3E564(&AtlasManager_TypeInfo);
+    sub_1C3E564(&BalanceConfig_TypeInfo);
+    sub_1C3E564(&WaveBattleWaveServantInfoItem_CallbackFunc_TypeInfo);
+    sub_1C3E564(&Method_UnityEngine_GameObject_GetComponent_WaveBattleWaveServantInfoItem___);
+    sub_1C3E564(&int_TypeInfo);
+    sub_1C3E564(&Method_System_Collections_Generic_List_int__Add__);
+    sub_1C3E564(&Method_System_Collections_Generic_List_WaveBattleWaveServantInfoItem__Add__);
+    sub_1C3E564(&Method_System_Collections_Generic_List_int__Contains__);
+    sub_1C3E564(&Method_System_Collections_Generic_List_int__ToArray__);
+    sub_1C3E564(&Method_System_Collections_Generic_List_int___ctor__);
+    sub_1C3E564(&Method_System_Collections_Generic_List_WaveBattleWaveServantInfoItem___ctor__);
+    sub_1C3E564(&System_Collections_Generic_List_int__TypeInfo);
+    sub_1C3E564(&System_Collections_Generic_List_WaveBattleWaveServantInfoItem__TypeInfo);
+    sub_1C3E564(&LocalizationManager_TypeInfo);
+    sub_1C3E564(&Method_WaveBattleWaveInfoComponent_OnSelectWavePartyList__);
+    sub_1C3E564(&WaveBattleWaveInfoComponent_TypeInfo);
+    sub_1C3E564(&StringLiteral_15491/*"WAVE_BATTLE_ALREADY_SORTIE"*/);
+    sub_1C3E564(&StringLiteral_21267/*"line_whiteAlpha"*/);
+    sub_1C3E564(&StringLiteral_15554/*"WAVE_BATTLE_WAVE_INFO"*/);
+    sub_1C3E564(&StringLiteral_20629/*"img_txt_Member"*/);
+    sub_1C3E564(&StringLiteral_20630/*"img_txt_Starting"*/);
+    byte_4C52B5F = 1;
   }
   this->fields.callbackFunc = callback;
   this->fields.wave = nowWave;
-  sub_1C36FFC(
+  sub_1C3E508(
     (CGThumbnailListItem_o *)&this->fields.callbackFunc,
     (int32_t)callback,
     (int32_t)viewEnemyEntities,
@@ -861,43 +866,43 @@ void WaveBattleWaveInfoComponent__SetPartyInfo(
   waveNumLabel = this->fields.waveNumLabel;
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-  v17 = LocalizationManager__Get((System_String_o *)StringLiteral_15544/*"WAVE_BATTLE_WAVE_INFO"*/, 0);
+  v17 = LocalizationManager__Get((System_String_o *)StringLiteral_15554/*"WAVE_BATTLE_WAVE_INFO"*/, 0);
   wave = this->fields.wave;
   v24 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &wave, v18, v19, v20, v21, v22, v23);
   v81 = maxWave;
   v31 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v81, v25, v26, v27, v28, v29, v30);
-  servantTextMemberSprite = System_String__Format_63602948(v17, v24, v31, 0);
+  servantTextMemberSprite = System_String__Format_63677760(v17, v24, v31, 0);
   if ( !waveNumLabel )
     goto LABEL_66;
   UILabel__set_text(waveNumLabel, servantTextMemberSprite, 0);
   waveLineSprite = this->fields.waveLineSprite;
   if ( !AtlasManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo);
-  AtlasManager__SetPartyOrganizationImage(waveLineSprite, (System_String_o *)StringLiteral_21249/*"line_whiteAlpha"*/, 0);
+  AtlasManager__SetPartyOrganizationImage(waveLineSprite, (System_String_o *)StringLiteral_21267/*"line_whiteAlpha"*/, 0);
   if ( this->fields.wave >= 10 )
   {
     servantTextMemberSprite = (System_String_o *)WaveBattleWaveInfoComponent_TypeInfo;
-    v34 = (UIWidget_o *)this->fields.waveLineSprite;
+    v35 = (UIWidget_o *)this->fields.waveLineSprite;
     isSelectWaveFlag = this->fields.isSelectWaveFlag;
     if ( !WaveBattleWaveInfoComponent_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(WaveBattleWaveInfoComponent_TypeInfo);
-    if ( !v34 )
+    if ( !v35 )
       goto LABEL_66;
-    v36 = 36;
+    v37 = 36;
     if ( !isSelectWaveFlag )
-      v36 = 32;
+      v37 = 32;
     UIWidget__set_width(
-      v34,
-      *(_DWORD *)((char *)&WaveBattleWaveInfoComponent_TypeInfo->static_fields->BASE_HEIGHT_NORMAL + v36),
+      v35,
+      *(_DWORD *)((char *)&WaveBattleWaveInfoComponent_TypeInfo->static_fields->BASE_HEIGHT_NORMAL + v37),
       0);
   }
-  v37 = (System_Collections_Generic_List_int__o *)sub_1C372A4(System_Collections_Generic_List_int__TypeInfo);
+  v38 = (System_Collections_Generic_List_int__o *)sub_1C3E7B0(System_Collections_Generic_List_int__TypeInfo);
   System_Collections_Generic_List_int____ctor(
-    v37,
-    (const MethodInfo_37857AC *)Method_System_Collections_Generic_List_int___ctor__);
-  this->fields.enemyClassIdList = v37;
+    v38,
+    (const MethodInfo_3797BE8 *)Method_System_Collections_Generic_List_int___ctor__);
+  this->fields.enemyClassIdList = v38;
   p_enemyClassIdList = &this->fields.enemyClassIdList;
-  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.enemyClassIdList, (int32_t)v37, v39, v40);
+  sub_1C3E508((CGThumbnailListItem_o *)&this->fields.enemyClassIdList, (int32_t)v38, v40, v41);
   if ( viewEnemyEntities )
   {
     max_length = viewEnemyEntities->max_length;
@@ -905,30 +910,30 @@ void WaveBattleWaveInfoComponent__SetPartyInfo(
     {
       if ( (int)max_length >= 1 )
       {
-        v42 = 0;
         v43 = 0;
+        v44 = 0;
         while ( 1 )
         {
-          if ( (unsigned int)v42 >= (unsigned int)max_length )
+          if ( (unsigned int)v43 >= (unsigned int)max_length )
 LABEL_67:
-            sub_1C372BC(servantTextMemberSprite);
-          v44 = viewEnemyEntities->m_Items[v42];
-          if ( !v44 )
+            sub_1C3E7C8(servantTextMemberSprite, classId);
+          v45 = viewEnemyEntities->m_Items[v43];
+          if ( !v45 )
             break;
-          if ( v44->fields.wave == 1 )
+          if ( v45->fields.wave == 1 )
           {
             servantTextMemberSprite = (System_String_o *)*p_enemyClassIdList;
             if ( !*p_enemyClassIdList )
               break;
             if ( !System_Collections_Generic_List_int___Contains(
                     (System_Collections_Generic_List_int__o *)servantTextMemberSprite,
-                    v44->fields.classId,
-                    (const MethodInfo_3786378 *)Method_System_Collections_Generic_List_int__Contains__) )
+                    v45->fields.classId,
+                    (const MethodInfo_37987B4 *)Method_System_Collections_Generic_List_int__Contains__) )
             {
               servantTextMemberSprite = (System_String_o *)*p_enemyClassIdList;
               if ( !*p_enemyClassIdList )
                 break;
-              classId = v44->fields.classId;
+              classId = (unsigned int)v45->fields.classId;
               fields = servantTextMemberSprite->fields;
               v47 = Method_System_Collections_Generic_List_int__Add__;
               ++HIDWORD(servantTextMemberSprite[1].klass);
@@ -940,7 +945,7 @@ LABEL_67:
                 System_Collections_Generic_List_int___AddWithResize(
                   (System_Collections_Generic_List_int__o *)servantTextMemberSprite,
                   classId,
-                  *(const MethodInfo_3786000 **)(*(_QWORD *)(v47[4] + 192LL) + 112LL));
+                  *(const MethodInfo_379843C **)(*(_QWORD *)(v47[4] + 192LL) + 112LL));
               }
               else
               {
@@ -954,15 +959,15 @@ LABEL_67:
               j_il2cpp_runtime_class_init_0(WaveBattleWaveInfoComponent_TypeInfo);
               servantTextMemberSprite = (System_String_o *)WaveBattleWaveInfoComponent_TypeInfo;
             }
-            if ( ++v43 >= *(_DWORD *)(*(_QWORD *)&servantTextMemberSprite[7].fields + 20LL) )
+            if ( ++v44 >= *(_DWORD *)(*(_QWORD *)&servantTextMemberSprite[7].fields + 20LL) )
               goto LABEL_34;
             max_length = viewEnemyEntities->max_length;
           }
-          if ( (int)++v42 >= (int)max_length )
+          if ( (int)++v43 >= (int)max_length )
             goto LABEL_34;
         }
 LABEL_66:
-        sub_1C372B4(servantTextMemberSprite);
+        sub_1C3E7C0(servantTextMemberSprite, classId);
       }
     }
   }
@@ -977,7 +982,7 @@ LABEL_34:
   servantTextStartingSprite = this->fields.servantTextStartingSprite;
   if ( !AtlasManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo);
-  AtlasManager__SetPartyOrganizationImage(servantTextStartingSprite, (System_String_o *)StringLiteral_20612/*"img_txt_Starting"*/, 0);
+  AtlasManager__SetPartyOrganizationImage(servantTextStartingSprite, (System_String_o *)StringLiteral_20630/*"img_txt_Starting"*/, 0);
   servantTextMemberSprite = (System_String_o *)this->fields.servantTextStartingSprite;
   if ( !servantTextMemberSprite )
     goto LABEL_66;
@@ -986,7 +991,7 @@ LABEL_34:
     servantTextMemberSprite->klass[1]._1.typeMetadataHandle);
   AtlasManager__SetPartyOrganizationImage(
     this->fields.servantTextMemberSprite,
-    (System_String_o *)StringLiteral_20611/*"img_txt_Member"*/,
+    (System_String_o *)StringLiteral_20629/*"img_txt_Member"*/,
     0);
   servantTextMemberSprite = (System_String_o *)this->fields.servantTextMemberSprite;
   if ( !servantTextMemberSprite )
@@ -994,13 +999,13 @@ LABEL_34:
   ((void (__fastcall *)(System_String_o *, void *))servantTextMemberSprite->klass[1]._1.generic_class)(
     servantTextMemberSprite,
     servantTextMemberSprite->klass[1]._1.typeMetadataHandle);
-  v52 = (System_Collections_Generic_List_object__o *)sub_1C372A4(System_Collections_Generic_List_WaveBattleWaveServantInfoItem__TypeInfo);
+  v52 = (System_Collections_Generic_List_object__o *)sub_1C3E7B0(System_Collections_Generic_List_WaveBattleWaveServantInfoItem__TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v52,
-    (const MethodInfo_37A27F0 *)Method_System_Collections_Generic_List_WaveBattleWaveServantInfoItem___ctor__);
+    (const MethodInfo_37B4C2C *)Method_System_Collections_Generic_List_WaveBattleWaveServantInfoItem___ctor__);
   this->fields.servantInfoList = (struct System_Collections_Generic_List_WaveBattleWaveServantInfoItem__o *)v52;
   p_servantInfoList = &this->fields.servantInfoList;
-  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.servantInfoList, (int32_t)v52, v54, v55);
+  sub_1C3E508((CGThumbnailListItem_o *)&this->fields.servantInfoList, (int32_t)v52, v54, v55);
   v56 = BalanceConfig_TypeInfo;
   v57 = this->fields.wave;
   if ( !BalanceConfig_TypeInfo->_2.cctor_finished )
@@ -1034,7 +1039,7 @@ LABEL_34:
       goto LABEL_66;
     servantTextMemberSprite = (System_String_o *)UnityEngine_GameObject__GetComponent_object_(
                                                    (UnityEngine_GameObject_o *)servantTextMemberSprite,
-                                                   (const MethodInfo_313F1D8 *)Method_UnityEngine_GameObject_GetComponent_WaveBattleWaveServantInfoItem___);
+                                                   (const MethodInfo_31510CC *)Method_UnityEngine_GameObject_GetComponent_WaveBattleWaveServantInfoItem___);
     if ( !deckEntity )
       goto LABEL_66;
     deckInfo = deckEntity->fields.deckInfo;
@@ -1052,8 +1057,8 @@ LABEL_34:
     v65 = (DeckServantData_o *)*((_QWORD *)&svts->m_Items[v59] + v58);
     v66 = System_Collections_Generic_List_int___ToArray(
             (System_Collections_Generic_List_int__o *)servantTextMemberSprite,
-            (const MethodInfo_3787AB8 *)Method_System_Collections_Generic_List_int__ToArray__);
-    v67 = (WaveBattleWaveServantInfoItem_CallbackFunc_o *)sub_1C372A4(WaveBattleWaveServantInfoItem_CallbackFunc_TypeInfo);
+            (const MethodInfo_3799EF4 *)Method_System_Collections_Generic_List_int__ToArray__);
+    v67 = (WaveBattleWaveServantInfoItem_CallbackFunc_o *)sub_1C3E7B0(WaveBattleWaveServantInfoItem_CallbackFunc_TypeInfo);
     WaveBattleWaveServantInfoItem_CallbackFunc___ctor(
       v67,
       (Il2CppObject *)this,
@@ -1090,21 +1095,21 @@ LABEL_34:
       System_Collections_Generic_List_object___AddWithResize(
         (System_Collections_Generic_List_object__o *)servantTextMemberSprite,
         (Il2CppObject *)v64,
-        *(const MethodInfo_37A3024 **)(*(_QWORD *)(v73[4] + 192LL) + 112LL));
+        *(const MethodInfo_37B5460 **)(*(_QWORD *)(v73[4] + 192LL) + 112LL));
     }
     else
     {
       v75 = *(_QWORD *)&v72 + 8 * v74;
       LODWORD(servantTextMemberSprite[1].klass) = v74 + 1;
       *(_QWORD *)(v75 + 32) = v64;
-      sub_1C36FFC((CGThumbnailListItem_o *)(v75 + 32), (int32_t)v64, v70, v71);
+      sub_1C3E508((CGThumbnailListItem_o *)(v75 + 32), (int32_t)v64, v70, v71);
     }
     v56 = BalanceConfig_TypeInfo;
     ++v58;
   }
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-  v76 = LocalizationManager__Get((System_String_o *)StringLiteral_15481/*"WAVE_BATTLE_ALREADY_SORTIE"*/, 0);
+  v76 = LocalizationManager__Get((System_String_o *)StringLiteral_15491/*"WAVE_BATTLE_ALREADY_SORTIE"*/, 0);
   WaveBattleWaveInfoComponent__SetRestartInfo(this, questRestrictionInfo, restartWave, restartWaveSelectMax, v76, v77);
 }
 
@@ -1119,44 +1124,45 @@ void WaveBattleWaveInfoComponent__SetRestartInfo(
 {
   __int64 v11; // x20
   UnityEngine_GameObject_o *maskObj; // x0
-  int32_t v13; // w2
-  const MethodInfo *v14; // x3
-  int32_t v15; // w2
-  const MethodInfo *v16; // x3
+  __int64 v13; // x1
+  int32_t v14; // w2
+  const MethodInfo *v15; // x3
+  int32_t v16; // w2
+  const MethodInfo *v17; // x3
   UnityEngine_Object_o *backGroundObj; // x22
   UILabel_o *clearedLabel; // x22
   UnityEngine_Object_o *MoveToPartyButton; // x21
   System_Collections_Generic_List_object__o *monitor; // x21
-  EventDelegate_Callback_o *v21; // x22
-  EventDelegate_o *v22; // x20
-  int32_t v23; // w2
-  const MethodInfo *v24; // x3
+  EventDelegate_Callback_o *v22; // x22
+  EventDelegate_o *v23; // x20
+  int32_t v24; // w2
+  const MethodInfo *v25; // x3
   struct System_Object_array *items; // x8
-  _QWORD *v26; // x9
+  _QWORD *v27; // x9
   __int64 size; // x10
-  Il2CppClass **v28; // x0
+  Il2CppClass **v29; // x0
 
-  if ( (byte_4C3EDCE & 1) == 0 )
+  if ( (byte_4C52B60 & 1) == 0 )
   {
-    sub_1C37058(&EventDelegate_Callback_TypeInfo);
-    sub_1C37058(&EventDelegate_TypeInfo);
-    sub_1C37058(&Method_UnityEngine_GameObject_GetComponent_UICommonButton___);
-    sub_1C37058(&Method_System_Collections_Generic_List_EventDelegate__Add__);
-    sub_1C37058(&LocalizationManager_TypeInfo);
-    sub_1C37058(&UnityEngine_Object_TypeInfo);
-    sub_1C37058(&Method_WaveBattleWaveInfoComponent___c__DisplayClass50_0__SetRestartInfo_b__0__);
-    sub_1C37058(&WaveBattleWaveInfoComponent___c__DisplayClass50_0_TypeInfo);
-    sub_1C37058(&StringLiteral_15532/*"WAVE_BATTLE_RESTART_WAVE_CAN_NOT_SELECT"*/);
-    byte_4C3EDCE = 1;
+    sub_1C3E564(&EventDelegate_Callback_TypeInfo);
+    sub_1C3E564(&EventDelegate_TypeInfo);
+    sub_1C3E564(&Method_UnityEngine_GameObject_GetComponent_UICommonButton___);
+    sub_1C3E564(&Method_System_Collections_Generic_List_EventDelegate__Add__);
+    sub_1C3E564(&LocalizationManager_TypeInfo);
+    sub_1C3E564(&UnityEngine_Object_TypeInfo);
+    sub_1C3E564(&Method_WaveBattleWaveInfoComponent___c__DisplayClass50_0__SetRestartInfo_b__0__);
+    sub_1C3E564(&WaveBattleWaveInfoComponent___c__DisplayClass50_0_TypeInfo);
+    sub_1C3E564(&StringLiteral_15542/*"WAVE_BATTLE_RESTART_WAVE_CAN_NOT_SELECT"*/);
+    byte_4C52B60 = 1;
   }
-  v11 = sub_1C372A4(WaveBattleWaveInfoComponent___c__DisplayClass50_0_TypeInfo);
+  v11 = sub_1C3E7B0(WaveBattleWaveInfoComponent___c__DisplayClass50_0_TypeInfo);
   System_Object___ctor((Il2CppObject *)v11, 0);
   if ( !v11 )
     goto LABEL_31;
   *(_QWORD *)(v11 + 16) = this;
-  sub_1C36FFC((CGThumbnailListItem_o *)(v11 + 16), (int32_t)this, v13, v14);
+  sub_1C3E508((CGThumbnailListItem_o *)(v11 + 16), (int32_t)this, v14, v15);
   *(_QWORD *)(v11 + 24) = questRestrictionInfo;
-  sub_1C36FFC((CGThumbnailListItem_o *)(v11 + 24), (int32_t)questRestrictionInfo, v15, v16);
+  sub_1C3E508((CGThumbnailListItem_o *)(v11 + 24), (int32_t)questRestrictionInfo, v16, v17);
   *(_DWORD *)(v11 + 32) = restartWaveSelectMax;
   maskObj = this->fields.maskObj;
   if ( !maskObj )
@@ -1185,7 +1191,7 @@ void WaveBattleWaveInfoComponent__SetRestartInfo(
       clearedLabel = this->fields.clearedLabel;
       if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-      maskObj = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)StringLiteral_15532/*"WAVE_BATTLE_RESTART_WAVE_CAN_NOT_SELECT"*/, 0);
+      maskObj = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)StringLiteral_15542/*"WAVE_BATTLE_RESTART_WAVE_CAN_NOT_SELECT"*/, 0);
       if ( clearedLabel )
       {
         UILabel__set_text(clearedLabel, (System_String_o *)maskObj, 0);
@@ -1205,22 +1211,22 @@ void WaveBattleWaveInfoComponent__SetRestartInfo(
               goto LABEL_31;
             maskObj = (UnityEngine_GameObject_o *)UnityEngine_GameObject__GetComponent_object_(
                                                     maskObj,
-                                                    (const MethodInfo_313F1D8 *)Method_UnityEngine_GameObject_GetComponent_UICommonButton___);
+                                                    (const MethodInfo_31510CC *)Method_UnityEngine_GameObject_GetComponent_UICommonButton___);
             if ( !maskObj )
               goto LABEL_31;
             monitor = (System_Collections_Generic_List_object__o *)maskObj[4].monitor;
-            v21 = (EventDelegate_Callback_o *)sub_1C372A4(EventDelegate_Callback_TypeInfo);
+            v22 = (EventDelegate_Callback_o *)sub_1C3E7B0(EventDelegate_Callback_TypeInfo);
             EventDelegate_Callback___ctor(
-              v21,
+              v22,
               (Il2CppObject *)v11,
               Method_WaveBattleWaveInfoComponent___c__DisplayClass50_0__SetRestartInfo_b__0__,
               0);
-            v22 = (EventDelegate_o *)sub_1C372A4(EventDelegate_TypeInfo);
-            EventDelegate___ctor_49273948(v22, v21, 0);
+            v23 = (EventDelegate_o *)sub_1C3E7B0(EventDelegate_TypeInfo);
+            EventDelegate___ctor_49347188(v23, v22, 0);
             if ( !monitor )
               goto LABEL_31;
             items = monitor->fields._items;
-            v26 = Method_System_Collections_Generic_List_EventDelegate__Add__;
+            v27 = Method_System_Collections_Generic_List_EventDelegate__Add__;
             ++monitor->fields._version;
             if ( !items )
               goto LABEL_31;
@@ -1229,15 +1235,15 @@ void WaveBattleWaveInfoComponent__SetRestartInfo(
             {
               System_Collections_Generic_List_object___AddWithResize(
                 monitor,
-                (Il2CppObject *)v22,
-                *(const MethodInfo_37A3024 **)(*(_QWORD *)(v26[4] + 192LL) + 112LL));
+                (Il2CppObject *)v23,
+                *(const MethodInfo_37B5460 **)(*(_QWORD *)(v27[4] + 192LL) + 112LL));
             }
             else
             {
-              v28 = &items->obj.klass + size;
+              v29 = &items->obj.klass + size;
               monitor->fields._size = size + 1;
-              v28[4] = (Il2CppClass *)v22;
-              sub_1C36FFC((CGThumbnailListItem_o *)(v28 + 4), (int32_t)v22, v23, v24);
+              v29[4] = (Il2CppClass *)v23;
+              sub_1C3E508((CGThumbnailListItem_o *)(v29 + 4), (int32_t)v23, v24, v25);
             }
           }
         }
@@ -1250,7 +1256,7 @@ void WaveBattleWaveInfoComponent__SetRestartInfo(
       }
     }
 LABEL_31:
-    sub_1C372B4(maskObj);
+    sub_1C3E7C0(maskObj, v13);
   }
 }
 
@@ -1299,15 +1305,15 @@ void WaveBattleWaveInfoComponent__SetSeparateEnemyInfo(
   __int64 v34; // x7
   Il2CppObject *v35; // x0
   void *enemyTextSprite; // x0
+  __int64 v37; // x1
   UISprite_o *waveLineSprite; // x25
-  int v38; // w26
-  UIWidget_o *v39; // x25
-  _BOOL4 v40; // w21
-  __int64 v41; // x9
-  System_Collections_Generic_List_int__o *v42; // x25
-  int32_t v43; // w2
-  const MethodInfo *v44; // x3
-  int32_t v45; // w1
+  int v39; // w26
+  UIWidget_o *v40; // x25
+  _BOOL4 v41; // w21
+  __int64 v42; // x9
+  System_Collections_Generic_List_int__o *v43; // x25
+  int32_t v44; // w2
+  const MethodInfo *v45; // x3
   const MethodInfo *v46; // x3
   _BOOL4 v47; // w21
   __int64 v48; // x9
@@ -1326,31 +1332,31 @@ void WaveBattleWaveInfoComponent__SetSeparateEnemyInfo(
   __int64 v64; // [xsp+10h] [xbp-70h] BYREF
   int32_t v65; // [xsp+1Ch] [xbp-64h] BYREF
 
-  if ( (byte_4C3EDCB & 1) == 0 )
+  if ( (byte_4C52B5D & 1) == 0 )
   {
-    sub_1C37058(&AtlasManager_TypeInfo);
-    sub_1C37058(&int_TypeInfo);
-    sub_1C37058(&Method_System_Collections_Generic_List_int___ctor__);
-    sub_1C37058(&Method_System_Collections_Generic_List_UserInterruptionQuestEntity_Wave__get_Count__);
-    sub_1C37058(&Method_System_Collections_Generic_List_BattleWaveInfoData__get_Count__);
-    sub_1C37058(&Method_System_Collections_Generic_List_BattleWaveInfoData__get_Item__);
-    sub_1C37058(&System_Collections_Generic_List_int__TypeInfo);
-    sub_1C37058(&LocalizationManager_TypeInfo);
-    sub_1C37058(&Method_System_Nullable_int__GetValueOrDefault__);
-    sub_1C37058(&Method_System_Nullable_int___ctor__);
-    sub_1C37058(&Method_System_Nullable_int__get_HasValue__);
-    sub_1C37058(&UnityEngine_Object_TypeInfo);
-    sub_1C37058(&Method_SingletonTemplate_PartyOrganizationUtility__get_Instance__);
-    sub_1C37058(&string_TypeInfo);
-    sub_1C37058(&WaveBattleWaveInfoComponent_TypeInfo);
-    sub_1C37058(&StringLiteral_20391/*"img_formation_bg_select"*/);
-    sub_1C37058(&StringLiteral_21249/*"line_whiteAlpha"*/);
-    sub_1C37058(&StringLiteral_15491/*"WAVE_BATTLE_CLEARED_WAVE"*/);
-    sub_1C37058(&StringLiteral_20296/*"img_StartParty_base"*/);
-    sub_1C37058(&StringLiteral_15545/*"WAVE_BATTLE_WAVE_INFO_SWITCH_PARTY"*/);
-    sub_1C37058(&StringLiteral_20610/*"img_txt_Enemy"*/);
-    sub_1C37058(&StringLiteral_15542/*"WAVE_BATTLE_START_PARTY"*/);
-    byte_4C3EDCB = 1;
+    sub_1C3E564(&AtlasManager_TypeInfo);
+    sub_1C3E564(&int_TypeInfo);
+    sub_1C3E564(&Method_System_Collections_Generic_List_int___ctor__);
+    sub_1C3E564(&Method_System_Collections_Generic_List_UserInterruptionQuestEntity_Wave__get_Count__);
+    sub_1C3E564(&Method_System_Collections_Generic_List_BattleWaveInfoData__get_Count__);
+    sub_1C3E564(&Method_System_Collections_Generic_List_BattleWaveInfoData__get_Item__);
+    sub_1C3E564(&System_Collections_Generic_List_int__TypeInfo);
+    sub_1C3E564(&LocalizationManager_TypeInfo);
+    sub_1C3E564(&Method_System_Nullable_int__GetValueOrDefault__);
+    sub_1C3E564(&Method_System_Nullable_int___ctor__);
+    sub_1C3E564(&Method_System_Nullable_int__get_HasValue__);
+    sub_1C3E564(&UnityEngine_Object_TypeInfo);
+    sub_1C3E564(&Method_SingletonTemplate_PartyOrganizationUtility__get_Instance__);
+    sub_1C3E564(&string_TypeInfo);
+    sub_1C3E564(&WaveBattleWaveInfoComponent_TypeInfo);
+    sub_1C3E564(&StringLiteral_20409/*"img_formation_bg_select"*/);
+    sub_1C3E564(&StringLiteral_21267/*"line_whiteAlpha"*/);
+    sub_1C3E564(&StringLiteral_15501/*"WAVE_BATTLE_CLEARED_WAVE"*/);
+    sub_1C3E564(&StringLiteral_20314/*"img_StartParty_base"*/);
+    sub_1C3E564(&StringLiteral_15555/*"WAVE_BATTLE_WAVE_INFO_SWITCH_PARTY"*/);
+    sub_1C3E564(&StringLiteral_20628/*"img_txt_Enemy"*/);
+    sub_1C3E564(&StringLiteral_15552/*"WAVE_BATTLE_START_PARTY"*/);
+    byte_4C52B5D = 1;
   }
   isSelectWaveFlag = this->fields.isSelectWaveFlag;
   this->fields.isSwitchPartyBattle = 1;
@@ -1358,7 +1364,7 @@ void WaveBattleWaveInfoComponent__SetSeparateEnemyInfo(
   if ( isSelectWaveFlag )
   {
     this->fields.callbackFunc = callback;
-    sub_1C36FFC(
+    sub_1C3E508(
       (CGThumbnailListItem_o *)&this->fields.callbackFunc,
       (int32_t)callback,
       (int32_t)questRestrictionInfo,
@@ -1372,7 +1378,7 @@ void WaveBattleWaveInfoComponent__SetSeparateEnemyInfo(
     v17 = this->fields.selectFrameSprite;
     if ( !AtlasManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo);
-    AtlasManager__SetPartyOrganizationImage(v17, (System_String_o *)StringLiteral_20391/*"img_formation_bg_select"*/, 0);
+    AtlasManager__SetPartyOrganizationImage(v17, (System_String_o *)StringLiteral_20409/*"img_formation_bg_select"*/, 0);
   }
   startPartyBaseSprite = (UnityEngine_Object_o *)this->fields.startPartyBaseSprite;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -1382,60 +1388,60 @@ void WaveBattleWaveInfoComponent__SetSeparateEnemyInfo(
     v19 = this->fields.startPartyBaseSprite;
     if ( !AtlasManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo);
-    AtlasManager__SetDownloadCommonSprite(v19, (System_String_o *)StringLiteral_20296/*"img_StartParty_base"*/, 0);
+    AtlasManager__SetDownloadCommonSprite(v19, (System_String_o *)StringLiteral_20314/*"img_StartParty_base"*/, 0);
   }
   waveNumLabel = this->fields.waveNumLabel;
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-  v21 = LocalizationManager__Get((System_String_o *)StringLiteral_15545/*"WAVE_BATTLE_WAVE_INFO_SWITCH_PARTY"*/, 0);
+  v21 = LocalizationManager__Get((System_String_o *)StringLiteral_15555/*"WAVE_BATTLE_WAVE_INFO_SWITCH_PARTY"*/, 0);
   LODWORD(v64) = this->fields.wave;
   v28 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v64, v22, v23, v24, v25, v26, v27);
   v65 = maxWave;
   v35 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v65, v29, v30, v31, v32, v33, v34);
-  enemyTextSprite = System_String__Format_63602948(v21, v28, v35, 0);
+  enemyTextSprite = System_String__Format_63677760(v21, v28, v35, 0);
   if ( !waveNumLabel )
     goto LABEL_71;
   UILabel__set_text(waveNumLabel, (System_String_o *)enemyTextSprite, 0);
   waveLineSprite = this->fields.waveLineSprite;
   if ( !AtlasManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo);
-  AtlasManager__SetPartyOrganizationImage(waveLineSprite, (System_String_o *)StringLiteral_21249/*"line_whiteAlpha"*/, 0);
-  AtlasManager__SetPartyOrganizationImage(this->fields.enemyTextSprite, (System_String_o *)StringLiteral_20610/*"img_txt_Enemy"*/, 0);
+  AtlasManager__SetPartyOrganizationImage(waveLineSprite, (System_String_o *)StringLiteral_21267/*"line_whiteAlpha"*/, 0);
+  AtlasManager__SetPartyOrganizationImage(this->fields.enemyTextSprite, (System_String_o *)StringLiteral_20628/*"img_txt_Enemy"*/, 0);
   enemyTextSprite = this->fields.enemyTextSprite;
   if ( !enemyTextSprite )
     goto LABEL_71;
   (*(void (__fastcall **)(void *, _QWORD))(*(_QWORD *)enemyTextSprite + 840LL))(
     enemyTextSprite,
     *(_QWORD *)(*(_QWORD *)enemyTextSprite + 848LL));
-  v38 = nowWave;
+  v39 = nowWave;
   if ( this->fields.wave >= 10 )
   {
     enemyTextSprite = WaveBattleWaveInfoComponent_TypeInfo;
-    v39 = (UIWidget_o *)this->fields.waveLineSprite;
-    v40 = this->fields.isSelectWaveFlag;
+    v40 = (UIWidget_o *)this->fields.waveLineSprite;
+    v41 = this->fields.isSelectWaveFlag;
     if ( !WaveBattleWaveInfoComponent_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(WaveBattleWaveInfoComponent_TypeInfo);
-    if ( !v39 )
-      goto LABEL_71;
-    v41 = 44;
     if ( !v40 )
-      v41 = 40;
+      goto LABEL_71;
+    v42 = 44;
+    if ( !v41 )
+      v42 = 40;
     UIWidget__set_width(
-      v39,
-      *(_DWORD *)((char *)&WaveBattleWaveInfoComponent_TypeInfo->static_fields->BASE_HEIGHT_NORMAL + v41),
+      v40,
+      *(_DWORD *)((char *)&WaveBattleWaveInfoComponent_TypeInfo->static_fields->BASE_HEIGHT_NORMAL + v42),
       0);
   }
-  v42 = (System_Collections_Generic_List_int__o *)sub_1C372A4(System_Collections_Generic_List_int__TypeInfo);
+  v43 = (System_Collections_Generic_List_int__o *)sub_1C3E7B0(System_Collections_Generic_List_int__TypeInfo);
   System_Collections_Generic_List_int____ctor(
-    v42,
-    (const MethodInfo_37857AC *)Method_System_Collections_Generic_List_int___ctor__);
-  this->fields.enemyClassIdList = v42;
-  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.enemyClassIdList, (int32_t)v42, v43, v44);
+    v43,
+    (const MethodInfo_3797BE8 *)Method_System_Collections_Generic_List_int___ctor__);
+  this->fields.enemyClassIdList = v43;
+  sub_1C3E508((CGThumbnailListItem_o *)&this->fields.enemyClassIdList, (int32_t)v43, v44, v45);
   if ( viewEnemyEntities && viewEnemyEntities->max_length )
   {
     if ( !questRestrictionInfo )
       goto LABEL_71;
-    WaveBattleWaveInfoComponent__CreateEnemyList(this, v45, viewEnemyEntities, v46);
+    WaveBattleWaveInfoComponent__CreateEnemyList(this, v37, viewEnemyEntities, v46);
   }
   v47 = this->fields.isSelectWaveFlag;
   if ( !WaveBattleWaveInfoComponent_TypeInfo->_2.cctor_finished )
@@ -1446,7 +1452,7 @@ void WaveBattleWaveInfoComponent__SetSeparateEnemyInfo(
   this->fields.height = *(float *)((char *)&WaveBattleWaveInfoComponent_TypeInfo->static_fields->BASE_HEIGHT_NORMAL + v48);
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-  v49 = LocalizationManager__Get((System_String_o *)StringLiteral_15491/*"WAVE_BATTLE_CLEARED_WAVE"*/, 0);
+  v49 = LocalizationManager__Get((System_String_o *)StringLiteral_15501/*"WAVE_BATTLE_CLEARED_WAVE"*/, 0);
   WaveBattleWaveInfoComponent__SetRestartInfo(this, questRestrictionInfo, restartWave, restartWaveSelectMax, v49, v50);
   startPartyObject = (UnityEngine_Object_o *)this->fields.startPartyObject;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -1462,33 +1468,33 @@ void WaveBattleWaveInfoComponent__SetSeparateEnemyInfo(
       if ( !enemyTextSprite )
         goto LABEL_71;
       if ( !UnityEngine_GameObject__get_activeSelf((UnityEngine_GameObject_o *)enemyTextSprite, 0)
-        && (v38 == restartWave || this->fields.isSelectWaveFlag) )
+        && (v39 == restartWave || this->fields.isSelectWaveFlag) )
       {
         if ( userInterruptionQuest
           && (waveInfoList = userInterruptionQuest->fields.waveInfoList) != 0
           && (size = waveInfoList->fields._size,
               v56 = (System_Nullable_int__o)&v64,
               v64 = 0,
-              System_Nullable_int____ctor(v56, size, (const MethodInfo_38C87A4 *)Method_System_Nullable_int___ctor__),
+              System_Nullable_int____ctor(v56, size, (const MethodInfo_38DABE0 *)Method_System_Nullable_int___ctor__),
               (_BYTE)v64)
-          && SHIDWORD(v64) >= v38 )
+          && SHIDWORD(v64) >= v39 )
         {
-          StartPartyNumber = UserInterruptionQuestEntity__GetStartPartyNumber(userInterruptionQuest, v38, 0);
+          StartPartyNumber = UserInterruptionQuestEntity__GetStartPartyNumber(userInterruptionQuest, v39, 0);
         }
         else
         {
-          enemyTextSprite = SingletonTemplate_object___get_Instance((const MethodInfo_39ED65C *)Method_SingletonTemplate_PartyOrganizationUtility__get_Instance__);
+          enemyTextSprite = SingletonTemplate_object___get_Instance((const MethodInfo_39FFA98 *)Method_SingletonTemplate_PartyOrganizationUtility__get_Instance__);
           if ( !enemyTextSprite )
             goto LABEL_71;
           enemyTextSprite = (void *)*((_QWORD *)enemyTextSprite + 19);
           if ( !enemyTextSprite )
             goto LABEL_71;
-          if ( *((_DWORD *)enemyTextSprite + 6) >= v38 )
+          if ( *((_DWORD *)enemyTextSprite + 6) >= v39 )
           {
             enemyTextSprite = System_Collections_Generic_List_object___get_Item(
                                 (System_Collections_Generic_List_object__o *)enemyTextSprite,
-                                v38 - 1,
-                                (const MethodInfo_37A2D54 *)Method_System_Collections_Generic_List_BattleWaveInfoData__get_Item__);
+                                v39 - 1,
+                                (const MethodInfo_37B5190 *)Method_System_Collections_Generic_List_BattleWaveInfoData__get_Item__);
             if ( !enemyTextSprite )
               goto LABEL_71;
             StartPartyNumber = *((_DWORD *)enemyTextSprite + 26);
@@ -1501,7 +1507,7 @@ void WaveBattleWaveInfoComponent__SetSeparateEnemyInfo(
         v58 = this->fields.startPartyLabel;
         if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
           j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-        v59 = LocalizationManager__Get((System_String_o *)StringLiteral_15542/*"WAVE_BATTLE_START_PARTY"*/, 0);
+        v59 = LocalizationManager__Get((System_String_o *)StringLiteral_15552/*"WAVE_BATTLE_START_PARTY"*/, 0);
         v60 = (Il2CppObject *)LocalizationManager__ConvertNumberToRomaNumber(StartPartyNumber, 0);
         enemyTextSprite = System_String__Format(v59, v60, 0);
         if ( v58 )
@@ -1532,7 +1538,7 @@ LABEL_69:
         }
       }
 LABEL_71:
-      sub_1C372B4(enemyTextSprite);
+      sub_1C3E7C0(enemyTextSprite, v37);
     }
   }
 }
@@ -1556,64 +1562,65 @@ void WaveBattleWaveInfoComponent__SetSeparatePartyInfo(
   System_String_o *v16; // x21
   Il2CppObject *v17; // x0
   System_String_o *servantTextMemberSprite; // x0
+  __int64 v19; // x1
   UISprite_o *waveLineSprite; // x21
-  System_Collections_Generic_List_int__o *v20; // x21
+  System_Collections_Generic_List_int__o *v21; // x21
   struct System_Collections_Generic_List_int__o **p_enemyClassIdList; // x24
-  int32_t v22; // w2
-  const MethodInfo *v23; // x3
-  _BOOL4 v24; // w21
-  __int64 v25; // x9
+  int32_t v23; // w2
+  const MethodInfo *v24; // x3
+  _BOOL4 v25; // w21
+  __int64 v26; // x9
   UISprite_o *servantTextStartingSprite; // x21
-  System_Collections_Generic_List_object__o *v27; // x21
+  System_Collections_Generic_List_object__o *v28; // x21
   struct System_Collections_Generic_List_WaveBattleWaveServantInfoItem__o **p_servantInfoList; // x25
-  int32_t v29; // w2
-  const MethodInfo *v30; // x3
-  BalanceConfig_c *v31; // x0
-  int32_t v32; // w21
-  int32_t v33; // w26
-  int v34; // w22
+  int32_t v30; // w2
+  const MethodInfo *v31; // x3
+  BalanceConfig_c *v32; // x0
+  int32_t v33; // w21
+  int32_t v34; // w26
+  int v35; // w22
   UnityEngine_GameObject_o *servantInfoPrefab; // x21
   UnityEngine_Transform_o *transform; // x0
   struct DeckServant_o *deckInfo; // x8
   struct DeckServantData_array *svts; // x8
-  WaveBattleWaveServantInfoItem_o *v39; // x27
-  DeckServantData_o *v40; // x28
-  System_Int32_array *v41; // x29
-  WaveBattleWaveServantInfoItem_CallbackFunc_o *v42; // x21
-  const MethodInfo *v43; // x3
+  WaveBattleWaveServantInfoItem_o *v40; // x27
+  DeckServantData_o *v41; // x28
+  System_Int32_array *v42; // x29
+  WaveBattleWaveServantInfoItem_CallbackFunc_o *v43; // x21
+  const MethodInfo *v44; // x3
   UIGrid_o *servantInfoGrid; // x21
-  int32_t v45; // w2
-  const MethodInfo *v46; // x3
+  int32_t v46; // w2
+  const MethodInfo *v47; // x3
   System_String_Fields fields; // x8
-  _QWORD *v48; // x9
+  _QWORD *v49; // x9
   __int64 klass_low; // x10
-  __int64 v50; // x8
+  __int64 v51; // x8
   UnityEngine_Object_o *MoveToPartyButton; // x21
   UILabel_o *clearedLabel; // x19
-  const MethodInfo *v53; // [xsp+0h] [xbp-80h]
+  const MethodInfo *v54; // [xsp+0h] [xbp-80h]
 
-  if ( (byte_4C3EDCC & 1) == 0 )
+  if ( (byte_4C52B5E & 1) == 0 )
   {
-    sub_1C37058(&AtlasManager_TypeInfo);
-    sub_1C37058(&BalanceConfig_TypeInfo);
-    sub_1C37058(&WaveBattleWaveServantInfoItem_CallbackFunc_TypeInfo);
-    sub_1C37058(&Method_UnityEngine_GameObject_GetComponent_WaveBattleWaveServantInfoItem___);
-    sub_1C37058(&Method_System_Collections_Generic_List_WaveBattleWaveServantInfoItem__Add__);
-    sub_1C37058(&Method_System_Collections_Generic_List_int__ToArray__);
-    sub_1C37058(&Method_System_Collections_Generic_List_int___ctor__);
-    sub_1C37058(&Method_System_Collections_Generic_List_WaveBattleWaveServantInfoItem___ctor__);
-    sub_1C37058(&System_Collections_Generic_List_int__TypeInfo);
-    sub_1C37058(&System_Collections_Generic_List_WaveBattleWaveServantInfoItem__TypeInfo);
-    sub_1C37058(&LocalizationManager_TypeInfo);
-    sub_1C37058(&UnityEngine_Object_TypeInfo);
-    sub_1C37058(&Method_WaveBattleWaveInfoComponent_OnSelectWavePartyList__);
-    sub_1C37058(&WaveBattleWaveInfoComponent_TypeInfo);
-    sub_1C37058(&StringLiteral_21249/*"line_whiteAlpha"*/);
-    sub_1C37058(&StringLiteral_20611/*"img_txt_Member"*/);
-    sub_1C37058(&StringLiteral_15482/*"WAVE_BATTLE_ALREADY_SORTIE_NOT_EDIT"*/);
-    sub_1C37058(&StringLiteral_20612/*"img_txt_Starting"*/);
-    sub_1C37058(&StringLiteral_15511/*"WAVE_BATTLE_PARTY_INFO"*/);
-    byte_4C3EDCC = 1;
+    sub_1C3E564(&AtlasManager_TypeInfo);
+    sub_1C3E564(&BalanceConfig_TypeInfo);
+    sub_1C3E564(&WaveBattleWaveServantInfoItem_CallbackFunc_TypeInfo);
+    sub_1C3E564(&Method_UnityEngine_GameObject_GetComponent_WaveBattleWaveServantInfoItem___);
+    sub_1C3E564(&Method_System_Collections_Generic_List_WaveBattleWaveServantInfoItem__Add__);
+    sub_1C3E564(&Method_System_Collections_Generic_List_int__ToArray__);
+    sub_1C3E564(&Method_System_Collections_Generic_List_int___ctor__);
+    sub_1C3E564(&Method_System_Collections_Generic_List_WaveBattleWaveServantInfoItem___ctor__);
+    sub_1C3E564(&System_Collections_Generic_List_int__TypeInfo);
+    sub_1C3E564(&System_Collections_Generic_List_WaveBattleWaveServantInfoItem__TypeInfo);
+    sub_1C3E564(&LocalizationManager_TypeInfo);
+    sub_1C3E564(&UnityEngine_Object_TypeInfo);
+    sub_1C3E564(&Method_WaveBattleWaveInfoComponent_OnSelectWavePartyList__);
+    sub_1C3E564(&WaveBattleWaveInfoComponent_TypeInfo);
+    sub_1C3E564(&StringLiteral_21267/*"line_whiteAlpha"*/);
+    sub_1C3E564(&StringLiteral_20629/*"img_txt_Member"*/);
+    sub_1C3E564(&StringLiteral_15492/*"WAVE_BATTLE_ALREADY_SORTIE_NOT_EDIT"*/);
+    sub_1C3E564(&StringLiteral_20630/*"img_txt_Starting"*/);
+    sub_1C3E564(&StringLiteral_15521/*"WAVE_BATTLE_PARTY_INFO"*/);
+    byte_4C52B5E = 1;
   }
   isSelectWaveFlag = this->fields.isSelectWaveFlag;
   this->fields.isSwitchPartyBattle = 1;
@@ -1621,7 +1628,7 @@ void WaveBattleWaveInfoComponent__SetSeparatePartyInfo(
   if ( !isSelectWaveFlag )
   {
     this->fields.callbackFunc = callback;
-    sub_1C36FFC(
+    sub_1C3E508(
       (CGThumbnailListItem_o *)&this->fields.callbackFunc,
       (int32_t)callback,
       (int32_t)questRestrictionInfo,
@@ -1630,7 +1637,7 @@ void WaveBattleWaveInfoComponent__SetSeparatePartyInfo(
   waveNumLabel = this->fields.waveNumLabel;
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-  v16 = LocalizationManager__Get((System_String_o *)StringLiteral_15511/*"WAVE_BATTLE_PARTY_INFO"*/, 0);
+  v16 = LocalizationManager__Get((System_String_o *)StringLiteral_15521/*"WAVE_BATTLE_PARTY_INFO"*/, 0);
   v17 = (Il2CppObject *)LocalizationManager__ConvertNumberToRomaNumber(this->fields.wave, 0);
   servantTextMemberSprite = System_String__Format(v16, v17, 0);
   if ( !waveNumLabel )
@@ -1639,25 +1646,25 @@ void WaveBattleWaveInfoComponent__SetSeparatePartyInfo(
   waveLineSprite = this->fields.waveLineSprite;
   if ( !AtlasManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo);
-  AtlasManager__SetPartyOrganizationImage(waveLineSprite, (System_String_o *)StringLiteral_21249/*"line_whiteAlpha"*/, 0);
-  v20 = (System_Collections_Generic_List_int__o *)sub_1C372A4(System_Collections_Generic_List_int__TypeInfo);
+  AtlasManager__SetPartyOrganizationImage(waveLineSprite, (System_String_o *)StringLiteral_21267/*"line_whiteAlpha"*/, 0);
+  v21 = (System_Collections_Generic_List_int__o *)sub_1C3E7B0(System_Collections_Generic_List_int__TypeInfo);
   System_Collections_Generic_List_int____ctor(
-    v20,
-    (const MethodInfo_37857AC *)Method_System_Collections_Generic_List_int___ctor__);
-  this->fields.enemyClassIdList = v20;
+    v21,
+    (const MethodInfo_3797BE8 *)Method_System_Collections_Generic_List_int___ctor__);
+  this->fields.enemyClassIdList = v21;
   p_enemyClassIdList = &this->fields.enemyClassIdList;
-  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.enemyClassIdList, (int32_t)v20, v22, v23);
-  v24 = this->fields.isSelectWaveFlag;
+  sub_1C3E508((CGThumbnailListItem_o *)&this->fields.enemyClassIdList, (int32_t)v21, v23, v24);
+  v25 = this->fields.isSelectWaveFlag;
   if ( !WaveBattleWaveInfoComponent_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(WaveBattleWaveInfoComponent_TypeInfo);
-  v25 = 16;
-  if ( !v24 )
-    v25 = 8;
+  v26 = 16;
+  if ( !v25 )
+    v26 = 8;
   servantTextStartingSprite = this->fields.servantTextStartingSprite;
-  this->fields.height = *(float *)((char *)&WaveBattleWaveInfoComponent_TypeInfo->static_fields->BASE_HEIGHT_NORMAL + v25);
+  this->fields.height = *(float *)((char *)&WaveBattleWaveInfoComponent_TypeInfo->static_fields->BASE_HEIGHT_NORMAL + v26);
   if ( !AtlasManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo);
-  AtlasManager__SetPartyOrganizationImage(servantTextStartingSprite, (System_String_o *)StringLiteral_20612/*"img_txt_Starting"*/, 0);
+  AtlasManager__SetPartyOrganizationImage(servantTextStartingSprite, (System_String_o *)StringLiteral_20630/*"img_txt_Starting"*/, 0);
   servantTextMemberSprite = (System_String_o *)this->fields.servantTextStartingSprite;
   if ( !servantTextMemberSprite )
     goto LABEL_54;
@@ -1666,7 +1673,7 @@ void WaveBattleWaveInfoComponent__SetSeparatePartyInfo(
     servantTextMemberSprite->klass[1]._1.typeMetadataHandle);
   AtlasManager__SetPartyOrganizationImage(
     this->fields.servantTextMemberSprite,
-    (System_String_o *)StringLiteral_20611/*"img_txt_Member"*/,
+    (System_String_o *)StringLiteral_20629/*"img_txt_Member"*/,
     0);
   servantTextMemberSprite = (System_String_o *)this->fields.servantTextMemberSprite;
   if ( !servantTextMemberSprite )
@@ -1674,30 +1681,30 @@ void WaveBattleWaveInfoComponent__SetSeparatePartyInfo(
   ((void (__fastcall *)(System_String_o *, void *))servantTextMemberSprite->klass[1]._1.generic_class)(
     servantTextMemberSprite,
     servantTextMemberSprite->klass[1]._1.typeMetadataHandle);
-  v27 = (System_Collections_Generic_List_object__o *)sub_1C372A4(System_Collections_Generic_List_WaveBattleWaveServantInfoItem__TypeInfo);
+  v28 = (System_Collections_Generic_List_object__o *)sub_1C3E7B0(System_Collections_Generic_List_WaveBattleWaveServantInfoItem__TypeInfo);
   System_Collections_Generic_List_object____ctor(
-    v27,
-    (const MethodInfo_37A27F0 *)Method_System_Collections_Generic_List_WaveBattleWaveServantInfoItem___ctor__);
-  this->fields.servantInfoList = (struct System_Collections_Generic_List_WaveBattleWaveServantInfoItem__o *)v27;
+    v28,
+    (const MethodInfo_37B4C2C *)Method_System_Collections_Generic_List_WaveBattleWaveServantInfoItem___ctor__);
+  this->fields.servantInfoList = (struct System_Collections_Generic_List_WaveBattleWaveServantInfoItem__o *)v28;
   p_servantInfoList = &this->fields.servantInfoList;
-  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.servantInfoList, (int32_t)v27, v29, v30);
-  v31 = BalanceConfig_TypeInfo;
-  v32 = this->fields.wave;
+  sub_1C3E508((CGThumbnailListItem_o *)&this->fields.servantInfoList, (int32_t)v28, v30, v31);
+  v32 = BalanceConfig_TypeInfo;
+  v33 = this->fields.wave;
   if ( !BalanceConfig_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(BalanceConfig_TypeInfo);
-    v31 = BalanceConfig_TypeInfo;
+    v32 = BalanceConfig_TypeInfo;
   }
-  v33 = 0;
-  v34 = v31->static_fields->DeckMainMemberMax * (v32 - 1);
+  v34 = 0;
+  v35 = v32->static_fields->DeckMainMemberMax * (v33 - 1);
   while ( 1 )
   {
-    if ( !v31->_2.cctor_finished )
+    if ( !v32->_2.cctor_finished )
     {
-      j_il2cpp_runtime_class_init_0(v31);
-      v31 = BalanceConfig_TypeInfo;
+      j_il2cpp_runtime_class_init_0(v32);
+      v32 = BalanceConfig_TypeInfo;
     }
-    if ( v33 >= v31->static_fields->DeckMainMemberMax )
+    if ( v34 >= v32->static_fields->DeckMainMemberMax )
       break;
     servantTextMemberSprite = (System_String_o *)this->fields.servantInfoListParent;
     if ( !servantTextMemberSprite )
@@ -1714,7 +1721,7 @@ void WaveBattleWaveInfoComponent__SetSeparatePartyInfo(
       goto LABEL_54;
     servantTextMemberSprite = (System_String_o *)UnityEngine_GameObject__GetComponent_object_(
                                                    (UnityEngine_GameObject_o *)servantTextMemberSprite,
-                                                   (const MethodInfo_313F1D8 *)Method_UnityEngine_GameObject_GetComponent_WaveBattleWaveServantInfoItem___);
+                                                   (const MethodInfo_31510CC *)Method_UnityEngine_GameObject_GetComponent_WaveBattleWaveServantInfoItem___);
     if ( !deckEntity )
       goto LABEL_54;
     deckInfo = deckEntity->fields.deckInfo;
@@ -1723,36 +1730,36 @@ void WaveBattleWaveInfoComponent__SetSeparatePartyInfo(
     svts = deckInfo->fields.svts;
     if ( !svts )
       goto LABEL_54;
-    if ( (unsigned int)(v34 + v33) >= LODWORD(svts->max_length) )
-      sub_1C372BC(servantTextMemberSprite);
-    v39 = (WaveBattleWaveServantInfoItem_o *)servantTextMemberSprite;
+    if ( (unsigned int)(v35 + v34) >= LODWORD(svts->max_length) )
+      sub_1C3E7C8(servantTextMemberSprite, v19);
+    v40 = (WaveBattleWaveServantInfoItem_o *)servantTextMemberSprite;
     servantTextMemberSprite = (System_String_o *)*p_enemyClassIdList;
     if ( !*p_enemyClassIdList )
       goto LABEL_54;
-    v40 = (DeckServantData_o *)*((_QWORD *)&svts->m_Items[v34] + v33);
-    v41 = System_Collections_Generic_List_int___ToArray(
+    v41 = (DeckServantData_o *)*((_QWORD *)&svts->m_Items[v35] + v34);
+    v42 = System_Collections_Generic_List_int___ToArray(
             (System_Collections_Generic_List_int__o *)servantTextMemberSprite,
-            (const MethodInfo_3787AB8 *)Method_System_Collections_Generic_List_int__ToArray__);
-    v42 = (WaveBattleWaveServantInfoItem_CallbackFunc_o *)sub_1C372A4(WaveBattleWaveServantInfoItem_CallbackFunc_TypeInfo);
+            (const MethodInfo_3799EF4 *)Method_System_Collections_Generic_List_int__ToArray__);
+    v43 = (WaveBattleWaveServantInfoItem_CallbackFunc_o *)sub_1C3E7B0(WaveBattleWaveServantInfoItem_CallbackFunc_TypeInfo);
     WaveBattleWaveServantInfoItem_CallbackFunc___ctor(
-      v42,
+      v43,
       (Il2CppObject *)this,
       Method_WaveBattleWaveInfoComponent_OnSelectWavePartyList__,
-      v43);
-    if ( !v39 )
+      v44);
+    if ( !v40 )
       goto LABEL_54;
     WaveBattleWaveServantInfoItem__SetItem(
-      v39,
-      v33,
       v40,
-      questRestrictionInfo,
+      v34,
       v41,
+      questRestrictionInfo,
       v42,
+      v43,
       restartWave > 0,
       this->fields.isSelectWaveFlag,
-      v53);
+      v54);
     servantInfoGrid = this->fields.servantInfoGrid;
-    servantTextMemberSprite = (System_String_o *)UnityEngine_Component__get_transform((UnityEngine_Component_o *)v39, 0);
+    servantTextMemberSprite = (System_String_o *)UnityEngine_Component__get_transform((UnityEngine_Component_o *)v40, 0);
     if ( !servantInfoGrid )
       goto LABEL_54;
     UIGrid__AddChild(servantInfoGrid, (UnityEngine_Transform_o *)servantTextMemberSprite, 0);
@@ -1760,7 +1767,7 @@ void WaveBattleWaveInfoComponent__SetSeparatePartyInfo(
     if ( !*p_servantInfoList )
       goto LABEL_54;
     fields = servantTextMemberSprite->fields;
-    v48 = Method_System_Collections_Generic_List_WaveBattleWaveServantInfoItem__Add__;
+    v49 = Method_System_Collections_Generic_List_WaveBattleWaveServantInfoItem__Add__;
     ++HIDWORD(servantTextMemberSprite[1].klass);
     if ( !*(_QWORD *)&fields )
       goto LABEL_54;
@@ -1769,18 +1776,18 @@ void WaveBattleWaveInfoComponent__SetSeparatePartyInfo(
     {
       System_Collections_Generic_List_object___AddWithResize(
         (System_Collections_Generic_List_object__o *)servantTextMemberSprite,
-        (Il2CppObject *)v39,
-        *(const MethodInfo_37A3024 **)(*(_QWORD *)(v48[4] + 192LL) + 112LL));
+        (Il2CppObject *)v40,
+        *(const MethodInfo_37B5460 **)(*(_QWORD *)(v49[4] + 192LL) + 112LL));
     }
     else
     {
-      v50 = *(_QWORD *)&fields + 8 * klass_low;
+      v51 = *(_QWORD *)&fields + 8 * klass_low;
       LODWORD(servantTextMemberSprite[1].klass) = klass_low + 1;
-      *(_QWORD *)(v50 + 32) = v39;
-      sub_1C36FFC((CGThumbnailListItem_o *)(v50 + 32), (int32_t)v39, v45, v46);
+      *(_QWORD *)(v51 + 32) = v40;
+      sub_1C3E508((CGThumbnailListItem_o *)(v51 + 32), (int32_t)v40, v46, v47);
     }
-    v31 = BalanceConfig_TypeInfo;
-    ++v33;
+    v32 = BalanceConfig_TypeInfo;
+    ++v34;
   }
   if ( restartWave >= 1 && userInterruptionQuest )
   {
@@ -1807,7 +1814,7 @@ void WaveBattleWaveInfoComponent__SetSeparatePartyInfo(
       clearedLabel = this->fields.clearedLabel;
       if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-      servantTextMemberSprite = LocalizationManager__Get((System_String_o *)StringLiteral_15482/*"WAVE_BATTLE_ALREADY_SORTIE_NOT_EDIT"*/, 0);
+      servantTextMemberSprite = LocalizationManager__Get((System_String_o *)StringLiteral_15492/*"WAVE_BATTLE_ALREADY_SORTIE_NOT_EDIT"*/, 0);
       if ( clearedLabel )
       {
         UILabel__set_text(clearedLabel, servantTextMemberSprite, 0);
@@ -1815,7 +1822,7 @@ void WaveBattleWaveInfoComponent__SetSeparatePartyInfo(
       }
     }
 LABEL_54:
-    sub_1C372B4(servantTextMemberSprite);
+    sub_1C3E7C0(servantTextMemberSprite, v19);
   }
   servantTextMemberSprite = (System_String_o *)this->fields.maskObj;
   if ( !servantTextMemberSprite )
@@ -1853,20 +1860,20 @@ void WaveBattleWaveInfoComponent__SetWaveInfo(
   __int64 v30; // x7
   Il2CppObject *v31; // x0
   System_String_o *servantTextMemberSprite; // x0
+  __int64 v33; // x1
   UISprite_o *waveLineSprite; // x24
-  UIWidget_o *v34; // x24
   UIWidget_o *v35; // x24
-  WaveBattleWaveInfoComponent_c *v36; // x0
+  UIWidget_o *v36; // x24
+  WaveBattleWaveInfoComponent_c *v37; // x0
   float BASE_HEIGHT_RESTART_WAVE_NORMAL; // s0
-  WaveBattleWaveInfoComponent_c *v38; // x0
-  int32_t v39; // w24
+  WaveBattleWaveInfoComponent_c *v39; // x0
+  int32_t v40; // w24
   float *p_BASE_HEIGHT_NORMAL; // x8
   UISprite_o *enemyTextSprite; // x24
-  System_Collections_Generic_List_int__o *v42; // x25
+  System_Collections_Generic_List_int__o *v43; // x25
   struct System_Collections_Generic_List_int__o **p_enemyClassIdList; // x24
-  int32_t v44; // w2
-  const MethodInfo *v45; // x3
-  int32_t v46; // w1
+  int32_t v45; // w2
+  const MethodInfo *v46; // x3
   const MethodInfo *v47; // x3
   UISprite_o *servantTextStartingSprite; // x23
   System_Collections_Generic_List_object__o *v49; // x23
@@ -1899,33 +1906,33 @@ void WaveBattleWaveInfoComponent__SetWaveInfo(
   int32_t v78; // [xsp+28h] [xbp-68h] BYREF
   int32_t wave; // [xsp+2Ch] [xbp-64h] BYREF
 
-  if ( (byte_4C3EDC9 & 1) == 0 )
+  if ( (byte_4C52B5B & 1) == 0 )
   {
-    sub_1C37058(&AtlasManager_TypeInfo);
-    sub_1C37058(&BalanceConfig_TypeInfo);
-    sub_1C37058(&WaveBattleWaveServantInfoItem_CallbackFunc_TypeInfo);
-    sub_1C37058(&Method_UnityEngine_GameObject_GetComponent_WaveBattleWaveServantInfoItem___);
-    sub_1C37058(&int_TypeInfo);
-    sub_1C37058(&Method_System_Collections_Generic_List_WaveBattleWaveServantInfoItem__Add__);
-    sub_1C37058(&Method_System_Collections_Generic_List_int__ToArray__);
-    sub_1C37058(&Method_System_Collections_Generic_List_int___ctor__);
-    sub_1C37058(&Method_System_Collections_Generic_List_WaveBattleWaveServantInfoItem___ctor__);
-    sub_1C37058(&System_Collections_Generic_List_int__TypeInfo);
-    sub_1C37058(&System_Collections_Generic_List_WaveBattleWaveServantInfoItem__TypeInfo);
-    sub_1C37058(&LocalizationManager_TypeInfo);
-    sub_1C37058(&Method_WaveBattleWaveInfoComponent_OnSelectWavePartyList__);
-    sub_1C37058(&WaveBattleWaveInfoComponent_TypeInfo);
-    sub_1C37058(&StringLiteral_21249/*"line_whiteAlpha"*/);
-    sub_1C37058(&StringLiteral_15544/*"WAVE_BATTLE_WAVE_INFO"*/);
-    sub_1C37058(&StringLiteral_20611/*"img_txt_Member"*/);
-    sub_1C37058(&StringLiteral_15491/*"WAVE_BATTLE_CLEARED_WAVE"*/);
-    sub_1C37058(&StringLiteral_20612/*"img_txt_Starting"*/);
-    sub_1C37058(&StringLiteral_20610/*"img_txt_Enemy"*/);
-    byte_4C3EDC9 = 1;
+    sub_1C3E564(&AtlasManager_TypeInfo);
+    sub_1C3E564(&BalanceConfig_TypeInfo);
+    sub_1C3E564(&WaveBattleWaveServantInfoItem_CallbackFunc_TypeInfo);
+    sub_1C3E564(&Method_UnityEngine_GameObject_GetComponent_WaveBattleWaveServantInfoItem___);
+    sub_1C3E564(&int_TypeInfo);
+    sub_1C3E564(&Method_System_Collections_Generic_List_WaveBattleWaveServantInfoItem__Add__);
+    sub_1C3E564(&Method_System_Collections_Generic_List_int__ToArray__);
+    sub_1C3E564(&Method_System_Collections_Generic_List_int___ctor__);
+    sub_1C3E564(&Method_System_Collections_Generic_List_WaveBattleWaveServantInfoItem___ctor__);
+    sub_1C3E564(&System_Collections_Generic_List_int__TypeInfo);
+    sub_1C3E564(&System_Collections_Generic_List_WaveBattleWaveServantInfoItem__TypeInfo);
+    sub_1C3E564(&LocalizationManager_TypeInfo);
+    sub_1C3E564(&Method_WaveBattleWaveInfoComponent_OnSelectWavePartyList__);
+    sub_1C3E564(&WaveBattleWaveInfoComponent_TypeInfo);
+    sub_1C3E564(&StringLiteral_21267/*"line_whiteAlpha"*/);
+    sub_1C3E564(&StringLiteral_15554/*"WAVE_BATTLE_WAVE_INFO"*/);
+    sub_1C3E564(&StringLiteral_20629/*"img_txt_Member"*/);
+    sub_1C3E564(&StringLiteral_15501/*"WAVE_BATTLE_CLEARED_WAVE"*/);
+    sub_1C3E564(&StringLiteral_20630/*"img_txt_Starting"*/);
+    sub_1C3E564(&StringLiteral_20628/*"img_txt_Enemy"*/);
+    byte_4C52B5B = 1;
   }
   this->fields.callbackFunc = callback;
   this->fields.wave = nowWave;
-  sub_1C36FFC(
+  sub_1C3E508(
     (CGThumbnailListItem_o *)&this->fields.callbackFunc,
     (int32_t)callback,
     (int32_t)viewEnemyEntities,
@@ -1933,94 +1940,94 @@ void WaveBattleWaveInfoComponent__SetWaveInfo(
   waveNumLabel = this->fields.waveNumLabel;
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-  v17 = LocalizationManager__Get((System_String_o *)StringLiteral_15544/*"WAVE_BATTLE_WAVE_INFO"*/, 0);
+  v17 = LocalizationManager__Get((System_String_o *)StringLiteral_15554/*"WAVE_BATTLE_WAVE_INFO"*/, 0);
   wave = this->fields.wave;
   v24 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &wave, v18, v19, v20, v21, v22, v23);
   v78 = maxWave;
   v31 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v78, v25, v26, v27, v28, v29, v30);
-  servantTextMemberSprite = System_String__Format_63602948(v17, v24, v31, 0);
+  servantTextMemberSprite = System_String__Format_63677760(v17, v24, v31, 0);
   if ( !waveNumLabel )
     goto LABEL_61;
   UILabel__set_text(waveNumLabel, servantTextMemberSprite, 0);
   waveLineSprite = this->fields.waveLineSprite;
   if ( !AtlasManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo);
-  AtlasManager__SetPartyOrganizationImage(waveLineSprite, (System_String_o *)StringLiteral_21249/*"line_whiteAlpha"*/, 0);
+  AtlasManager__SetPartyOrganizationImage(waveLineSprite, (System_String_o *)StringLiteral_21267/*"line_whiteAlpha"*/, 0);
   if ( this->fields.wave >= 10 )
   {
     servantTextMemberSprite = (System_String_o *)WaveBattleWaveInfoComponent_TypeInfo;
-    v34 = (UIWidget_o *)this->fields.waveLineSprite;
+    v35 = (UIWidget_o *)this->fields.waveLineSprite;
     if ( !WaveBattleWaveInfoComponent_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(WaveBattleWaveInfoComponent_TypeInfo);
-    if ( !v34 )
+    if ( !v35 )
       goto LABEL_61;
-    UIWidget__set_width(v34, WaveBattleWaveInfoComponent_TypeInfo->static_fields->LINE_SPRITE_WIDTH_SHORT, 0);
+    UIWidget__set_width(v35, WaveBattleWaveInfoComponent_TypeInfo->static_fields->LINE_SPRITE_WIDTH_SHORT, 0);
     if ( restartWave >= 1 && this->fields.isSelectWaveFlag )
     {
       servantTextMemberSprite = (System_String_o *)WaveBattleWaveInfoComponent_TypeInfo;
-      v35 = (UIWidget_o *)this->fields.waveLineSprite;
+      v36 = (UIWidget_o *)this->fields.waveLineSprite;
       if ( !WaveBattleWaveInfoComponent_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(WaveBattleWaveInfoComponent_TypeInfo);
-      if ( !v35 )
+      if ( !v36 )
         goto LABEL_61;
       UIWidget__set_width(
-        v35,
+        v36,
         WaveBattleWaveInfoComponent_TypeInfo->static_fields->LINE_SPRITE_WIDTH_SHORT_RESTART_WAVE,
         0);
     }
   }
   if ( this->fields.isSelectWaveFlag )
   {
-    v36 = WaveBattleWaveInfoComponent_TypeInfo;
+    v37 = WaveBattleWaveInfoComponent_TypeInfo;
     if ( !WaveBattleWaveInfoComponent_TypeInfo->_2.cctor_finished )
     {
       j_il2cpp_runtime_class_init_0(WaveBattleWaveInfoComponent_TypeInfo);
-      v36 = WaveBattleWaveInfoComponent_TypeInfo;
+      v37 = WaveBattleWaveInfoComponent_TypeInfo;
     }
-    BASE_HEIGHT_RESTART_WAVE_NORMAL = v36->static_fields->BASE_HEIGHT_RESTART_WAVE_NORMAL;
+    BASE_HEIGHT_RESTART_WAVE_NORMAL = v37->static_fields->BASE_HEIGHT_RESTART_WAVE_NORMAL;
   }
   else
   {
-    v38 = WaveBattleWaveInfoComponent_TypeInfo;
-    v39 = this->fields.wave;
+    v39 = WaveBattleWaveInfoComponent_TypeInfo;
+    v40 = this->fields.wave;
     if ( !WaveBattleWaveInfoComponent_TypeInfo->_2.cctor_finished )
     {
       j_il2cpp_runtime_class_init_0(WaveBattleWaveInfoComponent_TypeInfo);
-      v38 = WaveBattleWaveInfoComponent_TypeInfo;
+      v39 = WaveBattleWaveInfoComponent_TypeInfo;
     }
-    p_BASE_HEIGHT_NORMAL = &v38->static_fields->BASE_HEIGHT_NORMAL;
+    p_BASE_HEIGHT_NORMAL = &v39->static_fields->BASE_HEIGHT_NORMAL;
     BASE_HEIGHT_RESTART_WAVE_NORMAL = *p_BASE_HEIGHT_NORMAL;
-    if ( v39 < restartWave )
+    if ( v40 < restartWave )
       BASE_HEIGHT_RESTART_WAVE_NORMAL = BASE_HEIGHT_RESTART_WAVE_NORMAL + p_BASE_HEIGHT_NORMAL[1];
   }
   this->fields.height = BASE_HEIGHT_RESTART_WAVE_NORMAL;
   enemyTextSprite = this->fields.enemyTextSprite;
   if ( !AtlasManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo);
-  AtlasManager__SetPartyOrganizationImage(enemyTextSprite, (System_String_o *)StringLiteral_20610/*"img_txt_Enemy"*/, 0);
+  AtlasManager__SetPartyOrganizationImage(enemyTextSprite, (System_String_o *)StringLiteral_20628/*"img_txt_Enemy"*/, 0);
   servantTextMemberSprite = (System_String_o *)this->fields.enemyTextSprite;
   if ( !servantTextMemberSprite )
     goto LABEL_61;
   ((void (__fastcall *)(System_String_o *, void *))servantTextMemberSprite->klass[1]._1.generic_class)(
     servantTextMemberSprite,
     servantTextMemberSprite->klass[1]._1.typeMetadataHandle);
-  v42 = (System_Collections_Generic_List_int__o *)sub_1C372A4(System_Collections_Generic_List_int__TypeInfo);
+  v43 = (System_Collections_Generic_List_int__o *)sub_1C3E7B0(System_Collections_Generic_List_int__TypeInfo);
   System_Collections_Generic_List_int____ctor(
-    v42,
-    (const MethodInfo_37857AC *)Method_System_Collections_Generic_List_int___ctor__);
-  this->fields.enemyClassIdList = v42;
+    v43,
+    (const MethodInfo_3797BE8 *)Method_System_Collections_Generic_List_int___ctor__);
+  this->fields.enemyClassIdList = v43;
   p_enemyClassIdList = &this->fields.enemyClassIdList;
-  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.enemyClassIdList, (int32_t)v42, v44, v45);
+  sub_1C3E508((CGThumbnailListItem_o *)&this->fields.enemyClassIdList, (int32_t)v43, v45, v46);
   if ( viewEnemyEntities && viewEnemyEntities->max_length )
   {
     if ( !questRestrictionInfo )
       goto LABEL_61;
-    WaveBattleWaveInfoComponent__CreateEnemyList(this, v46, viewEnemyEntities, v47);
+    WaveBattleWaveInfoComponent__CreateEnemyList(this, v33, viewEnemyEntities, v47);
   }
   servantTextStartingSprite = this->fields.servantTextStartingSprite;
   if ( !AtlasManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo);
-  AtlasManager__SetPartyOrganizationImage(servantTextStartingSprite, (System_String_o *)StringLiteral_20612/*"img_txt_Starting"*/, 0);
+  AtlasManager__SetPartyOrganizationImage(servantTextStartingSprite, (System_String_o *)StringLiteral_20630/*"img_txt_Starting"*/, 0);
   servantTextMemberSprite = (System_String_o *)this->fields.servantTextStartingSprite;
   if ( !servantTextMemberSprite
     || (((void (__fastcall *)(System_String_o *, void *))servantTextMemberSprite->klass[1]._1.generic_class)(
@@ -2028,23 +2035,23 @@ void WaveBattleWaveInfoComponent__SetWaveInfo(
           servantTextMemberSprite->klass[1]._1.typeMetadataHandle),
         AtlasManager__SetPartyOrganizationImage(
           this->fields.servantTextMemberSprite,
-          (System_String_o *)StringLiteral_20611/*"img_txt_Member"*/,
+          (System_String_o *)StringLiteral_20629/*"img_txt_Member"*/,
           0),
         (servantTextMemberSprite = (System_String_o *)this->fields.servantTextMemberSprite) == 0) )
   {
 LABEL_61:
-    sub_1C372B4(servantTextMemberSprite);
+    sub_1C3E7C0(servantTextMemberSprite, v33);
   }
   ((void (__fastcall *)(System_String_o *, void *))servantTextMemberSprite->klass[1]._1.generic_class)(
     servantTextMemberSprite,
     servantTextMemberSprite->klass[1]._1.typeMetadataHandle);
-  v49 = (System_Collections_Generic_List_object__o *)sub_1C372A4(System_Collections_Generic_List_WaveBattleWaveServantInfoItem__TypeInfo);
+  v49 = (System_Collections_Generic_List_object__o *)sub_1C3E7B0(System_Collections_Generic_List_WaveBattleWaveServantInfoItem__TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v49,
-    (const MethodInfo_37A27F0 *)Method_System_Collections_Generic_List_WaveBattleWaveServantInfoItem___ctor__);
+    (const MethodInfo_37B4C2C *)Method_System_Collections_Generic_List_WaveBattleWaveServantInfoItem___ctor__);
   this->fields.servantInfoList = (struct System_Collections_Generic_List_WaveBattleWaveServantInfoItem__o *)v49;
   p_servantInfoList = &this->fields.servantInfoList;
-  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.servantInfoList, (int32_t)v49, v51, v52);
+  sub_1C3E508((CGThumbnailListItem_o *)&this->fields.servantInfoList, (int32_t)v49, v51, v52);
   v53 = BalanceConfig_TypeInfo;
   v54 = this->fields.wave;
   if ( !BalanceConfig_TypeInfo->_2.cctor_finished )
@@ -2078,7 +2085,7 @@ LABEL_61:
       goto LABEL_61;
     servantTextMemberSprite = (System_String_o *)UnityEngine_GameObject__GetComponent_object_(
                                                    (UnityEngine_GameObject_o *)servantTextMemberSprite,
-                                                   (const MethodInfo_313F1D8 *)Method_UnityEngine_GameObject_GetComponent_WaveBattleWaveServantInfoItem___);
+                                                   (const MethodInfo_31510CC *)Method_UnityEngine_GameObject_GetComponent_WaveBattleWaveServantInfoItem___);
     if ( !deckEntity )
       goto LABEL_61;
     deckInfo = deckEntity->fields.deckInfo;
@@ -2088,7 +2095,7 @@ LABEL_61:
     if ( !svts )
       goto LABEL_61;
     if ( (unsigned int)(v56 + v55) >= LODWORD(svts->max_length) )
-      sub_1C372BC(servantTextMemberSprite);
+      sub_1C3E7C8(servantTextMemberSprite, v33);
     v61 = (WaveBattleWaveServantInfoItem_o *)servantTextMemberSprite;
     servantTextMemberSprite = (System_String_o *)*p_enemyClassIdList;
     if ( !*p_enemyClassIdList )
@@ -2096,8 +2103,8 @@ LABEL_61:
     v62 = (DeckServantData_o *)*((_QWORD *)&svts->m_Items[v56] + v55);
     v63 = System_Collections_Generic_List_int___ToArray(
             (System_Collections_Generic_List_int__o *)servantTextMemberSprite,
-            (const MethodInfo_3787AB8 *)Method_System_Collections_Generic_List_int__ToArray__);
-    v64 = (WaveBattleWaveServantInfoItem_CallbackFunc_o *)sub_1C372A4(WaveBattleWaveServantInfoItem_CallbackFunc_TypeInfo);
+            (const MethodInfo_3799EF4 *)Method_System_Collections_Generic_List_int__ToArray__);
+    v64 = (WaveBattleWaveServantInfoItem_CallbackFunc_o *)sub_1C3E7B0(WaveBattleWaveServantInfoItem_CallbackFunc_TypeInfo);
     WaveBattleWaveServantInfoItem_CallbackFunc___ctor(
       v64,
       (Il2CppObject *)this,
@@ -2134,21 +2141,21 @@ LABEL_61:
       System_Collections_Generic_List_object___AddWithResize(
         (System_Collections_Generic_List_object__o *)servantTextMemberSprite,
         (Il2CppObject *)v61,
-        *(const MethodInfo_37A3024 **)(*(_QWORD *)(v70[4] + 192LL) + 112LL));
+        *(const MethodInfo_37B5460 **)(*(_QWORD *)(v70[4] + 192LL) + 112LL));
     }
     else
     {
       v72 = *(_QWORD *)&fields + 8 * klass_low;
       LODWORD(servantTextMemberSprite[1].klass) = klass_low + 1;
       *(_QWORD *)(v72 + 32) = v61;
-      sub_1C36FFC((CGThumbnailListItem_o *)(v72 + 32), (int32_t)v61, v67, v68);
+      sub_1C3E508((CGThumbnailListItem_o *)(v72 + 32), (int32_t)v61, v67, v68);
     }
     v53 = BalanceConfig_TypeInfo;
     ++v55;
   }
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-  v73 = LocalizationManager__Get((System_String_o *)StringLiteral_15491/*"WAVE_BATTLE_CLEARED_WAVE"*/, 0);
+  v73 = LocalizationManager__Get((System_String_o *)StringLiteral_15501/*"WAVE_BATTLE_CLEARED_WAVE"*/, 0);
   WaveBattleWaveInfoComponent__SetRestartInfo(this, questRestrictionInfo, restartWave, restartWaveSelectMax, v73, v74);
 }
 
@@ -2163,73 +2170,73 @@ void WaveBattleWaveInfoComponent__UpdateInterruptionData(
         const MethodInfo *method)
 {
   QuestPhaseMaster_o *Master_object; // x0
-  __int64 v14; // x25
+  const MethodInfo *v14; // x1
+  __int64 v15; // x25
   System_Int32_array *SelectableQuests; // x0
-  int32_t v16; // w2
-  const MethodInfo *v17; // x3
+  int32_t v17; // w2
+  const MethodInfo *v18; // x3
   BattleSetupInfo_o **p_battleSetupInfo; // x24
-  int32_t v19; // w2
-  const MethodInfo *v20; // x3
+  int32_t v20; // w2
+  const MethodInfo *v21; // x3
   struct BattleSetupInfo_o *battleSetupInfo; // x26
-  QuestGroupMaster_o *v22; // x25
-  const MethodInfo *v23; // x1
+  QuestGroupMaster_o *v23; // x25
   BattleSetupInfo_o *v24; // x8
   NetworkManager_ResultCallbackFunc_o *v25; // x23
   QuestPhaseEntity_o *entity; // [xsp+8h] [xbp-58h] BYREF
 
-  if ( (byte_4C3EDD5 & 1) == 0 )
+  if ( (byte_4C52B67 & 1) == 0 )
   {
-    sub_1C37058(&BattleSetupInfo_TypeInfo);
-    sub_1C37058(&Method_DataManager_GetMaster_QuestGroupMaster___);
-    sub_1C37058(&Method_DataManager_GetMaster_QuestPhaseMaster___);
-    sub_1C37058(&DataManager_TypeInfo);
-    sub_1C37058(&Method_NetworkManager_getRequest_BattleInterruptionRequest___);
-    sub_1C37058(&NetworkManager_TypeInfo);
-    sub_1C37058(&NetworkManager_ResultCallbackFunc_TypeInfo);
-    sub_1C37058(&Method_WaveBattleWaveInfoComponent_EndRequestBattleInterruption__);
-    byte_4C3EDD5 = 1;
+    sub_1C3E564(&BattleSetupInfo_TypeInfo);
+    sub_1C3E564(&Method_DataManager_GetMaster_QuestGroupMaster___);
+    sub_1C3E564(&Method_DataManager_GetMaster_QuestPhaseMaster___);
+    sub_1C3E564(&DataManager_TypeInfo);
+    sub_1C3E564(&Method_NetworkManager_getRequest_BattleInterruptionRequest___);
+    sub_1C3E564(&NetworkManager_TypeInfo);
+    sub_1C3E564(&NetworkManager_ResultCallbackFunc_TypeInfo);
+    sub_1C3E564(&Method_WaveBattleWaveInfoComponent_EndRequestBattleInterruption__);
+    byte_4C52B67 = 1;
   }
   entity = 0;
   if ( !DataManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-  Master_object = (QuestPhaseMaster_o *)DataManager__GetMaster_object_((const MethodInfo_30E7C04 *)Method_DataManager_GetMaster_QuestPhaseMaster___);
+  Master_object = (QuestPhaseMaster_o *)DataManager__GetMaster_object_((const MethodInfo_30F9A1C *)Method_DataManager_GetMaster_QuestPhaseMaster___);
   if ( !Master_object )
     goto LABEL_22;
   QuestPhaseMaster__TryGetEntity(Master_object, &entity, questId, questPhase, 0);
-  v14 = sub_1C372A4(BattleSetupInfo_TypeInfo);
-  BattleSetupInfo___ctor((BattleSetupInfo_o *)v14, 0);
-  if ( !v14 )
+  v15 = sub_1C3E7B0(BattleSetupInfo_TypeInfo);
+  BattleSetupInfo___ctor((BattleSetupInfo_o *)v15, 0);
+  if ( !v15 )
     goto LABEL_22;
-  *(_DWORD *)(v14 + 16) = warId;
-  *(_DWORD *)(v14 + 20) = questId;
+  *(_DWORD *)(v15 + 16) = warId;
+  *(_DWORD *)(v15 + 20) = questId;
   Master_object = (QuestPhaseMaster_o *)entity;
   if ( !entity )
     goto LABEL_22;
   SelectableQuests = QuestPhaseEntity__GetSelectableQuests(entity, 0);
-  *(_QWORD *)(v14 + 112) = SelectableQuests;
-  sub_1C36FFC((CGThumbnailListItem_o *)(v14 + 112), (int32_t)SelectableQuests, v16, v17);
+  *(_QWORD *)(v15 + 112) = SelectableQuests;
+  sub_1C3E508((CGThumbnailListItem_o *)(v15 + 112), (int32_t)SelectableQuests, v17, v18);
   Master_object = (QuestPhaseMaster_o *)entity;
   if ( !entity )
     goto LABEL_22;
-  *(_DWORD *)(v14 + 120) = QuestPhaseEntity__GetSelectedQuestId(entity, questId, 0, 0);
-  *(_DWORD *)(v14 + 124) = 0;
-  *(_DWORD *)(v14 + 24) = questPhase;
-  *(_WORD *)(v14 + 72) = 0;
-  *(_QWORD *)(v14 + 40) = 0;
-  *(_QWORD *)(v14 + 48) = 0;
-  *(_DWORD *)(v14 + 56) = 0;
-  this->fields.battleSetupInfo = (struct BattleSetupInfo_o *)v14;
+  *(_DWORD *)(v15 + 120) = QuestPhaseEntity__GetSelectedQuestId(entity, questId, 0, 0);
+  *(_DWORD *)(v15 + 124) = 0;
+  *(_DWORD *)(v15 + 24) = questPhase;
+  *(_WORD *)(v15 + 72) = 0;
+  *(_QWORD *)(v15 + 40) = 0;
+  *(_QWORD *)(v15 + 48) = 0;
+  *(_DWORD *)(v15 + 56) = 0;
+  this->fields.battleSetupInfo = (struct BattleSetupInfo_o *)v15;
   p_battleSetupInfo = &this->fields.battleSetupInfo;
-  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.battleSetupInfo, v14, v19, v20);
+  sub_1C3E508((CGThumbnailListItem_o *)&this->fields.battleSetupInfo, v15, v20, v21);
   battleSetupInfo = this->fields.battleSetupInfo;
-  Master_object = (QuestPhaseMaster_o *)DataManager__GetMaster_object_((const MethodInfo_30E7C04 *)Method_DataManager_GetMaster_QuestGroupMaster___);
+  Master_object = (QuestPhaseMaster_o *)DataManager__GetMaster_object_((const MethodInfo_30F9A1C *)Method_DataManager_GetMaster_QuestGroupMaster___);
   if ( !this->fields.battleSetupInfo )
     goto LABEL_22;
-  v22 = (QuestGroupMaster_o *)Master_object;
+  v23 = (QuestGroupMaster_o *)Master_object;
   Master_object = (QuestPhaseMaster_o *)BattleSetupInfo__TargetQuestId(*p_battleSetupInfo, 0);
-  if ( !v22 )
+  if ( !v23 )
     goto LABEL_22;
-  Master_object = (QuestPhaseMaster_o *)QuestGroupMaster__GetEventId(v22, (int32_t)Master_object, 0);
+  Master_object = (QuestPhaseMaster_o *)QuestGroupMaster__GetEventId(v23, (int32_t)Master_object, 0);
   if ( !battleSetupInfo )
     goto LABEL_22;
   battleSetupInfo->fields.eventId = (int)Master_object;
@@ -2249,10 +2256,10 @@ void WaveBattleWaveInfoComponent__UpdateInterruptionData(
   v24->fields.restartWave = waveNum;
   if ( waveNum == waveNumMax )
   {
-    WaveBattleWaveInfoComponent__ExecutionCallBackAndTransitionScene(this, v23);
+    WaveBattleWaveInfoComponent__ExecutionCallBackAndTransitionScene(this, v14);
     return;
   }
-  v25 = (NetworkManager_ResultCallbackFunc_o *)sub_1C372A4(NetworkManager_ResultCallbackFunc_TypeInfo);
+  v25 = (NetworkManager_ResultCallbackFunc_o *)sub_1C3E7B0(NetworkManager_ResultCallbackFunc_TypeInfo);
   NetworkManager_ResultCallbackFunc___ctor(
     v25,
     (Il2CppObject *)this,
@@ -2262,51 +2269,53 @@ void WaveBattleWaveInfoComponent__UpdateInterruptionData(
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
   Master_object = (QuestPhaseMaster_o *)NetworkManager__getRequest_object_(
                                           v25,
-                                          (const MethodInfo_3172CF0 *)Method_NetworkManager_getRequest_BattleInterruptionRequest___);
+                                          (const MethodInfo_3184BE4 *)Method_NetworkManager_getRequest_BattleInterruptionRequest___);
   if ( !Master_object )
 LABEL_22:
-    sub_1C372B4(Master_object);
+    sub_1C3E7C0(Master_object, v14);
   BattleInterruptionRequest__beginRequest((BattleInterruptionRequest_o *)Master_object, questId, questPhase, waveNum, 0);
 }
 
 
+// local variable allocation has failed, the output may be wrong!
 void WaveBattleWaveInfoComponent__UpdatePartyState(
         WaveBattleWaveInfoComponent_o *this,
         bool isAlreadySortie,
         const MethodInfo *method)
 {
+  bool v3; // w19
   UnityEngine_GameObject_o *maskObj; // x0
   UILabel_o *clearedLabel; // x21
-  System_String_o *Empty; // x1
   UnityEngine_Object_o *MoveToPartyButton; // x21
 
-  if ( (byte_4C3EDD0 & 1) == 0 )
+  v3 = isAlreadySortie;
+  if ( (byte_4C52B62 & 1) == 0 )
   {
-    sub_1C37058(&LocalizationManager_TypeInfo);
-    sub_1C37058(&UnityEngine_Object_TypeInfo);
-    sub_1C37058(&string_TypeInfo);
-    sub_1C37058(&StringLiteral_15482/*"WAVE_BATTLE_ALREADY_SORTIE_NOT_EDIT"*/);
-    byte_4C3EDD0 = 1;
+    sub_1C3E564(&LocalizationManager_TypeInfo);
+    sub_1C3E564(&UnityEngine_Object_TypeInfo);
+    sub_1C3E564(&string_TypeInfo);
+    sub_1C3E564(&StringLiteral_15492/*"WAVE_BATTLE_ALREADY_SORTIE_NOT_EDIT"*/);
+    byte_4C52B62 = 1;
   }
   maskObj = this->fields.maskObj;
   if ( !maskObj )
     goto LABEL_16;
-  UnityEngine_GameObject__SetActive(maskObj, isAlreadySortie, 0);
+  UnityEngine_GameObject__SetActive(maskObj, v3, 0);
   clearedLabel = this->fields.clearedLabel;
-  if ( isAlreadySortie )
+  if ( v3 )
   {
     if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-    maskObj = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)StringLiteral_15482/*"WAVE_BATTLE_ALREADY_SORTIE_NOT_EDIT"*/, 0);
-    Empty = (System_String_o *)maskObj;
+    maskObj = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)StringLiteral_15492/*"WAVE_BATTLE_ALREADY_SORTIE_NOT_EDIT"*/, 0);
+    *(_QWORD *)&isAlreadySortie = maskObj;
   }
   else
   {
-    Empty = string_TypeInfo->static_fields->Empty;
+    *(_QWORD *)&isAlreadySortie = string_TypeInfo->static_fields->Empty;
   }
   if ( !clearedLabel )
     goto LABEL_16;
-  UILabel__set_text(clearedLabel, Empty, 0);
+  UILabel__set_text(clearedLabel, (System_String_o *)isAlreadySortie, 0);
   MoveToPartyButton = (UnityEngine_Object_o *)this->fields.MoveToPartyButton;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
@@ -2315,11 +2324,11 @@ void WaveBattleWaveInfoComponent__UpdatePartyState(
     maskObj = this->fields.MoveToPartyButton;
     if ( maskObj )
     {
-      UnityEngine_GameObject__SetActive(maskObj, !isAlreadySortie, 0);
+      UnityEngine_GameObject__SetActive(maskObj, !v3, 0);
       return;
     }
 LABEL_16:
-    sub_1C372B4(maskObj);
+    sub_1C3E7C0(maskObj, isAlreadySortie);
   }
 }
 
@@ -2346,14 +2355,14 @@ void WaveBattleWaveInfoComponent__UpdateWaveServantInfo(
   const MethodInfo *v21; // x3
   const MethodInfo *v22; // [xsp+0h] [xbp-70h]
 
-  if ( (byte_4C3EDCF & 1) == 0 )
+  if ( (byte_4C52B61 & 1) == 0 )
   {
-    sub_1C37058(&BalanceConfig_TypeInfo);
-    sub_1C37058(&WaveBattleWaveServantInfoItem_CallbackFunc_TypeInfo);
-    sub_1C37058(&Method_System_Collections_Generic_List_int__ToArray__);
-    sub_1C37058(&Method_System_Collections_Generic_List_WaveBattleWaveServantInfoItem__get_Item__);
-    sub_1C37058(&Method_WaveBattleWaveInfoComponent_OnSelectWavePartyList__);
-    byte_4C3EDCF = 1;
+    sub_1C3E564(&BalanceConfig_TypeInfo);
+    sub_1C3E564(&WaveBattleWaveServantInfoItem_CallbackFunc_TypeInfo);
+    sub_1C3E564(&Method_System_Collections_Generic_List_int__ToArray__);
+    sub_1C3E564(&Method_System_Collections_Generic_List_WaveBattleWaveServantInfoItem__get_Item__);
+    sub_1C3E564(&Method_WaveBattleWaveInfoComponent_OnSelectWavePartyList__);
+    byte_4C52B61 = 1;
   }
   v9 = BalanceConfig_TypeInfo;
   wave = this->fields.wave;
@@ -2380,7 +2389,7 @@ void WaveBattleWaveInfoComponent__UpdateWaveServantInfo(
     servantInfoList = (System_Collections_Generic_List_object__o *)System_Collections_Generic_List_object___get_Item(
                                                                      servantInfoList,
                                                                      v11,
-                                                                     (const MethodInfo_37A2D54 *)Method_System_Collections_Generic_List_WaveBattleWaveServantInfoItem__get_Item__);
+                                                                     (const MethodInfo_37B5190 *)Method_System_Collections_Generic_List_WaveBattleWaveServantInfoItem__get_Item__);
     if ( !deckEntity )
       goto LABEL_18;
     deckInfo = deckEntity->fields.deckInfo;
@@ -2390,15 +2399,15 @@ void WaveBattleWaveInfoComponent__UpdateWaveServantInfo(
     if ( !svts )
       goto LABEL_18;
     if ( (unsigned int)(v13 + v11) >= LODWORD(svts->max_length) )
-      sub_1C372BC(servantInfoList);
+      sub_1C3E7C8(servantInfoList, deckEntity);
     v17 = (WaveBattleWaveServantInfoItem_o *)servantInfoList;
     servantInfoList = (System_Collections_Generic_List_object__o *)this->fields.enemyClassIdList;
     if ( !servantInfoList
       || (v18 = (DeckServantData_o *)*((_QWORD *)&svts->m_Items[v13] + v11),
           v19 = System_Collections_Generic_List_int___ToArray(
                   (System_Collections_Generic_List_int__o *)servantInfoList,
-                  (const MethodInfo_3787AB8 *)Method_System_Collections_Generic_List_int__ToArray__),
-          v20 = (WaveBattleWaveServantInfoItem_CallbackFunc_o *)sub_1C372A4(WaveBattleWaveServantInfoItem_CallbackFunc_TypeInfo),
+                  (const MethodInfo_3799EF4 *)Method_System_Collections_Generic_List_int__ToArray__),
+          v20 = (WaveBattleWaveServantInfoItem_CallbackFunc_o *)sub_1C3E7B0(WaveBattleWaveServantInfoItem_CallbackFunc_TypeInfo),
           WaveBattleWaveServantInfoItem_CallbackFunc___ctor(
             v20,
             (Il2CppObject *)this,
@@ -2407,7 +2416,7 @@ void WaveBattleWaveInfoComponent__UpdateWaveServantInfo(
           !v17) )
     {
 LABEL_18:
-      sub_1C372B4(servantInfoList);
+      sub_1C3E7C0(servantInfoList, deckEntity);
     }
     WaveBattleWaveServantInfoItem__SetItem(v17, v11, v18, questRestrictionInfo, v19, v20, v12, 0, v22);
     v9 = BalanceConfig_TypeInfo;
@@ -2431,10 +2440,10 @@ void WaveBattleWaveInfoComponent__add_callbackFunc(
   WaveBattleWaveInfoComponent_CallbackFunc_o *v12; // x1
   const MethodInfo *v13; // x2
 
-  if ( (byte_4C3EDC7 & 1) == 0 )
+  if ( (byte_4C52B59 & 1) == 0 )
   {
-    sub_1C37058(&WaveBattleWaveInfoComponent_CallbackFunc_TypeInfo);
-    byte_4C3EDC7 = 1;
+    sub_1C3E564(&WaveBattleWaveInfoComponent_CallbackFunc_TypeInfo);
+    byte_4C52B59 = 1;
   }
   callbackFunc = this->fields.callbackFunc;
   p_callbackFunc = &this->fields.callbackFunc;
@@ -2447,13 +2456,13 @@ void WaveBattleWaveInfoComponent__add_callbackFunc(
       if ( (WaveBattleWaveInfoComponent_CallbackFunc_c *)v8->klass != WaveBattleWaveInfoComponent_CallbackFunc_TypeInfo )
         break;
     }
-    v9 = sub_1C712B0(p_callbackFunc, v8, v6);
+    v9 = sub_1C787BC(p_callbackFunc, v8, v6);
     v10 = v6 == (System_Delegate_o *)v9;
     v6 = (System_Delegate_o *)v9;
     if ( v10 )
       return;
   }
-  v11 = (WaveBattleWaveInfoComponent_o *)sub_1C37574(v8);
+  v11 = (WaveBattleWaveInfoComponent_o *)sub_1C3EA80(v8);
   WaveBattleWaveInfoComponent__remove_callbackFunc(v11, v12, v13);
 }
 
@@ -2472,10 +2481,10 @@ void WaveBattleWaveInfoComponent__remove_callbackFunc(
   WaveBattleWaveInfoComponent_o *v11; // x0
   const MethodInfo *v12; // x1
 
-  if ( (byte_4C3EDC8 & 1) == 0 )
+  if ( (byte_4C52B5A & 1) == 0 )
   {
-    sub_1C37058(&WaveBattleWaveInfoComponent_CallbackFunc_TypeInfo);
-    byte_4C3EDC8 = 1;
+    sub_1C3E564(&WaveBattleWaveInfoComponent_CallbackFunc_TypeInfo);
+    byte_4C52B5A = 1;
   }
   callbackFunc = this->fields.callbackFunc;
   p_callbackFunc = &this->fields.callbackFunc;
@@ -2488,13 +2497,13 @@ void WaveBattleWaveInfoComponent__remove_callbackFunc(
       if ( (WaveBattleWaveInfoComponent_CallbackFunc_c *)v8->klass != WaveBattleWaveInfoComponent_CallbackFunc_TypeInfo )
         break;
     }
-    v9 = sub_1C712B0(p_callbackFunc, v8, v6);
+    v9 = sub_1C787BC(p_callbackFunc, v8, v6);
     v10 = v6 == (System_Delegate_o *)v9;
     v6 = (System_Delegate_o *)v9;
     if ( v10 )
       return;
   }
-  v11 = (WaveBattleWaveInfoComponent_o *)sub_1C37574(v8);
+  v11 = (WaveBattleWaveInfoComponent_o *)sub_1C3EA80(v8);
   WaveBattleWaveInfoComponent__Awake(v11, v12);
 }
 
@@ -2514,15 +2523,15 @@ void WaveBattleWaveInfoComponent_CallbackFunc___ctor(
   this->fields.method = method;
   this->fields.method_ptr = v4;
   this->fields.m_target = object;
-  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.m_target, (int32_t)object, method, a4);
+  sub_1C3E508((CGThumbnailListItem_o *)&this->fields.m_target, (int32_t)object, method, a4);
   v8 = *(unsigned __int8 *)(method + 82);
   this->fields.method_code = (intptr_t)this;
-  if ( (sub_1C37118(method) & 1) == 0 )
+  if ( (sub_1C3E624(method) & 1) == 0 )
   {
     if ( !object )
     {
-      v10 = sub_1C372D0(0, "Delegate to an instance method cannot have null 'this'.");
-      sub_1C37180(v10, 0);
+      v10 = sub_1C3E7DC(0, "Delegate to an instance method cannot have null 'this'.");
+      sub_1C3E68C(v10, 0);
     }
     goto LABEL_5;
   }
@@ -2534,9 +2543,9 @@ LABEL_5:
     this->fields.method_code = (intptr_t)m_target;
     goto LABEL_6;
   }
-  this->fields.invoke_impl = (intptr_t)sub_1A768B8;
+  this->fields.invoke_impl = (intptr_t)sub_1A7DC60;
 LABEL_6:
-  this->fields.extra_arg = (intptr_t)sub_1A76858;
+  this->fields.extra_arg = (intptr_t)sub_1A7DC00;
 }
 
 
@@ -2572,11 +2581,11 @@ System_IAsyncResult_o *WaveBattleWaveInfoComponent_CallbackFunc__BeginInvoke(
   v27 = wave;
   v28 = result;
   v26 = idx;
-  if ( (byte_4C3EDD9 & 1) == 0 )
+  if ( (byte_4C52B6B & 1) == 0 )
   {
-    sub_1C37058(&int_TypeInfo);
-    sub_1C37058(&WaveBattlePartyOrganizationMenu_ResultKind_TypeInfo);
-    byte_4C3EDD9 = 1;
+    sub_1C3E564(&int_TypeInfo);
+    sub_1C3E564(&WaveBattlePartyOrganizationMenu_ResultKind_TypeInfo);
+    byte_4C52B6B = 1;
   }
   v25 = 0u;
   v24[0] = j_il2cpp_value_box_0(
@@ -2590,7 +2599,7 @@ System_IAsyncResult_o *WaveBattleWaveInfoComponent_CallbackFunc__BeginInvoke(
              v7);
   v24[1] = j_il2cpp_value_box_0(int_TypeInfo, &v27, v11, v12, v13, v14, v15, v16);
   *(_QWORD *)&v25 = j_il2cpp_value_box_0(int_TypeInfo, &v26, v17, v18, v19, v20, v21, v22);
-  return (System_IAsyncResult_o *)sub_1C3700C(this, v24, callback, object);
+  return (System_IAsyncResult_o *)sub_1C3E518(this, v24, callback, object);
 }
 
 
@@ -2599,7 +2608,7 @@ void WaveBattleWaveInfoComponent_CallbackFunc__EndInvoke(
         System_IAsyncResult_o *result,
         const MethodInfo *method)
 {
-  sub_1C37010(result, 0, method);
+  sub_1C3E51C(result, 0, method);
 }
 
 
@@ -2641,17 +2650,17 @@ void WaveBattleWaveInfoComponent___c__DisplayClass50_0___SetRestartInfo_b__0(
   struct WaveBattleWaveInfoComponent_o *v9; // x8
 
   v2 = this;
-  if ( (byte_4C3EDDA & 1) == 0 )
+  if ( (byte_4C52B6C & 1) == 0 )
   {
-    this = (WaveBattleWaveInfoComponent___c__DisplayClass50_0_o *)sub_1C37058(&Method_SingletonTemplate_QuestTree__get_Instance__);
-    byte_4C3EDDA = 1;
+    this = (WaveBattleWaveInfoComponent___c__DisplayClass50_0_o *)sub_1C3E564(&Method_SingletonTemplate_QuestTree__get_Instance__);
+    byte_4C52B6C = 1;
   }
   questRestrictionInfo = v2->fields.questRestrictionInfo;
   if ( !questRestrictionInfo
     || (_4__this = v2->fields.__4__this,
         questId = questRestrictionInfo->fields.questId,
         questPhase = questRestrictionInfo->fields.questPhase,
-        this = (WaveBattleWaveInfoComponent___c__DisplayClass50_0_o *)SingletonTemplate_object___get_Instance((const MethodInfo_39ED65C *)Method_SingletonTemplate_QuestTree__get_Instance__),
+        this = (WaveBattleWaveInfoComponent___c__DisplayClass50_0_o *)SingletonTemplate_object___get_Instance((const MethodInfo_39FFA98 *)Method_SingletonTemplate_QuestTree__get_Instance__),
         (v7 = v2->fields.questRestrictionInfo) == 0)
     || !this
     || (this = (WaveBattleWaveInfoComponent___c__DisplayClass50_0_o *)QuestTree__GetWarID_ByQuestID(
@@ -2661,7 +2670,7 @@ void WaveBattleWaveInfoComponent___c__DisplayClass50_0___SetRestartInfo_b__0(
         (v9 = v2->fields.__4__this) == 0)
     || !_4__this )
   {
-    sub_1C372B4(this);
+    sub_1C3E7C0(this, method);
   }
   WaveBattleWaveInfoComponent__OnClickWave(
     _4__this,
@@ -2689,37 +2698,38 @@ void WaveBattleWaveInfoComponent___c__DisplayClass59_0___OpenRestartWaveConfirmD
 {
   __int64 v5; // x21
   __int64 v6; // x0
-  int32_t v7; // w2
-  const MethodInfo *v8; // x3
+  __int64 v7; // x1
+  int32_t v8; // w2
+  const MethodInfo *v9; // x3
   Il2CppObject *Instance; // x19
-  System_Action_o *v10; // x20
+  System_Action_o *v11; // x20
 
-  if ( (byte_4C3EDDB & 1) == 0 )
+  if ( (byte_4C52B6D & 1) == 0 )
   {
-    sub_1C37058(&System_Action_TypeInfo);
-    sub_1C37058(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
-    sub_1C37058(&Method_WaveBattleWaveInfoComponent___c__DisplayClass59_1__OpenRestartWaveConfirmDialog_b__1__);
-    sub_1C37058(&WaveBattleWaveInfoComponent___c__DisplayClass59_1_TypeInfo);
-    byte_4C3EDDB = 1;
+    sub_1C3E564(&System_Action_TypeInfo);
+    sub_1C3E564(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+    sub_1C3E564(&Method_WaveBattleWaveInfoComponent___c__DisplayClass59_1__OpenRestartWaveConfirmDialog_b__1__);
+    sub_1C3E564(&WaveBattleWaveInfoComponent___c__DisplayClass59_1_TypeInfo);
+    byte_4C52B6D = 1;
   }
-  v5 = sub_1C372A4(WaveBattleWaveInfoComponent___c__DisplayClass59_1_TypeInfo);
+  v5 = sub_1C3E7B0(WaveBattleWaveInfoComponent___c__DisplayClass59_1_TypeInfo);
   System_Object___ctor((Il2CppObject *)v5, 0);
   if ( !v5
     || (*(_QWORD *)(v5 + 24) = this,
-        sub_1C36FFC((CGThumbnailListItem_o *)(v5 + 24), (int32_t)this, v7, v8),
+        sub_1C3E508((CGThumbnailListItem_o *)(v5 + 24), (int32_t)this, v8, v9),
         *(_BYTE *)(v5 + 16) = isDecide,
-        Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39ED16C *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__),
-        v10 = (System_Action_o *)sub_1C372A4(System_Action_TypeInfo),
+        Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39FF5A8 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__),
+        v11 = (System_Action_o *)sub_1C3E7B0(System_Action_TypeInfo),
         System_Action___ctor(
-          v10,
+          v11,
           (Il2CppObject *)v5,
           Method_WaveBattleWaveInfoComponent___c__DisplayClass59_1__OpenRestartWaveConfirmDialog_b__1__,
           0),
         !Instance) )
   {
-    sub_1C372B4(v6);
+    sub_1C3E7C0(v6, v7);
   }
-  CommonUI__CloseConfirmDialog_31208544((CommonUI_o *)Instance, v10, 0);
+  CommonUI__CloseConfirmDialog_31238516((CommonUI_o *)Instance, v11, 0);
 }
 
 
@@ -2736,15 +2746,16 @@ void WaveBattleWaveInfoComponent___c__DisplayClass59_1___OpenRestartWaveConfirmD
         const MethodInfo *method)
 {
   Il2CppObject *Instance; // x0
-  const MethodInfo *v4; // x6
+  __int64 v4; // x1
+  const MethodInfo *v5; // x6
   struct WaveBattleWaveInfoComponent___c__DisplayClass59_0_o *CS___8__locals1; // x8
 
-  if ( (byte_4C3EDDC & 1) == 0 )
+  if ( (byte_4C52B6E & 1) == 0 )
   {
-    sub_1C37058(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
-    byte_4C3EDDC = 1;
+    sub_1C3E564(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+    byte_4C52B6E = 1;
   }
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39ED16C *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39FF5A8 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
   if ( !Instance )
     goto LABEL_9;
   CommonUI__ResetConfirmDialogDecideButtonLabelMaxLineCount((CommonUI_o *)Instance, 0);
@@ -2763,12 +2774,12 @@ void WaveBattleWaveInfoComponent___c__DisplayClass59_1___OpenRestartWaveConfirmD
           CS___8__locals1->fields.warId,
           CS___8__locals1->fields.waveNum,
           CS___8__locals1->fields.waveNumMax,
-          v4);
+          v5);
         return;
       }
     }
 LABEL_9:
-    sub_1C372B4(Instance);
+    sub_1C3E7C0(Instance, v4);
   }
 }
 
@@ -2789,16 +2800,16 @@ void WaveBattleWaveInfoComponent___c__DisplayClass65_0___OverwriteMoveToPartyBut
   struct WaveBattleWaveInfoComponent_o *_4__this; // x8
 
   v2 = this;
-  if ( (byte_4C3EDDD & 1) == 0 )
+  if ( (byte_4C52B6F & 1) == 0 )
   {
-    this = (WaveBattleWaveInfoComponent___c__DisplayClass65_0_o *)sub_1C37058(&Method_ActionExtensions_Call_int___);
-    byte_4C3EDDD = 1;
+    this = (WaveBattleWaveInfoComponent___c__DisplayClass65_0_o *)sub_1C3E564(&Method_ActionExtensions_Call_int___);
+    byte_4C52B6F = 1;
   }
   _4__this = v2->fields.__4__this;
   if ( !_4__this )
-    sub_1C372B4(this);
+    sub_1C3E7C0(this, method);
   ActionExtensions__Call_int_(
     (System_Action_T__o *)v2->fields.callback,
     _4__this->fields.wave,
-    (const MethodInfo_30344A8 *)Method_ActionExtensions_Call_int___);
+    (const MethodInfo_30462C0 *)Method_ActionExtensions_Call_int___);
 }

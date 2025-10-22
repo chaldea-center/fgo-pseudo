@@ -3,76 +3,77 @@ void Submarine2DUILocationInfo___ctor(Submarine2DUILocationInfo_o *this, const M
 {
   System_Collections_Generic_List_Rect__o *v3; // x20
   __int64 v4; // x0
-  int v5; // s0 OVERLAPPED
-  int v6; // s1
-  int v7; // s2
-  int v8; // s3
+  __int64 v5; // x1
+  int v6; // s0 OVERLAPPED
+  int v7; // s1
+  int v8; // s2
+  int v9; // s3
   struct UnityEngine_Rect_array *items; // x9
-  _QWORD *v10; // x8
+  _QWORD *v11; // x8
   __int64 size; // x10
-  Il2CppObject *v12; // x9
-  int v13; // s0 OVERLAPPED
-  int v14; // s1
-  int v15; // s2
-  int v16; // s3
-  struct UnityEngine_Rect_array *v17; // x8
-  _QWORD *v18; // x9
-  __int64 v19; // x10
-  Il2CppObject *v20; // x8
-  int v21; // s0 OVERLAPPED
-  int v22; // s1
-  int v23; // s2
-  int v24; // s3
-  struct UnityEngine_Rect_array *v25; // x8
-  _QWORD *v26; // x9
-  __int64 v27; // x10
-  Il2CppObject *v28; // x8
-  int v29; // s0 OVERLAPPED
-  int v30; // s1
-  int v31; // s2
-  int v32; // s3
-  struct UnityEngine_Rect_array *v33; // x8
-  _QWORD *v34; // x9
-  __int64 v35; // x10
-  Il2CppObject *v36; // x8
-  int v37; // s0 OVERLAPPED
-  int v38; // s1
-  int v39; // s2
-  int v40; // s3
-  struct UnityEngine_Rect_array *v41; // x8
-  _QWORD *v42; // x9
-  __int64 v43; // x10
-  Il2CppObject *v44; // x8
-  int32_t v45; // w2
-  const MethodInfo *v46; // x3
-  int v47; // s0 OVERLAPPED
-  int v48; // s1
-  int v49; // s2
-  int v50; // s3
-  struct UnityEngine_Rect_array *v51; // x8
-  _QWORD *v52; // x9
-  __int64 v53; // x10
-  Il2CppObject *v54; // x8
+  Il2CppObject *v13; // x9
+  int v14; // s0 OVERLAPPED
+  int v15; // s1
+  int v16; // s2
+  int v17; // s3
+  struct UnityEngine_Rect_array *v18; // x8
+  _QWORD *v19; // x9
+  __int64 v20; // x10
+  Il2CppObject *v21; // x8
+  int v22; // s0 OVERLAPPED
+  int v23; // s1
+  int v24; // s2
+  int v25; // s3
+  struct UnityEngine_Rect_array *v26; // x8
+  _QWORD *v27; // x9
+  __int64 v28; // x10
+  Il2CppObject *v29; // x8
+  int v30; // s0 OVERLAPPED
+  int v31; // s1
+  int v32; // s2
+  int v33; // s3
+  struct UnityEngine_Rect_array *v34; // x8
+  _QWORD *v35; // x9
+  __int64 v36; // x10
+  Il2CppObject *v37; // x8
+  int v38; // s0 OVERLAPPED
+  int v39; // s1
+  int v40; // s2
+  int v41; // s3
+  struct UnityEngine_Rect_array *v42; // x8
+  _QWORD *v43; // x9
+  __int64 v44; // x10
+  Il2CppObject *v45; // x8
+  int32_t v46; // w2
+  const MethodInfo *v47; // x3
+  int v48; // s0 OVERLAPPED
+  int v49; // s1
+  int v50; // s2
+  int v51; // s3
+  struct UnityEngine_Rect_array *v52; // x8
+  _QWORD *v53; // x9
+  __int64 v54; // x10
+  Il2CppObject *v55; // x8
 
-  if ( (byte_4C3F8E1 & 1) == 0 )
+  if ( (byte_4C5367C & 1) == 0 )
   {
-    sub_1C37058(&Method_System_Collections_Generic_List_Rect__Add__);
-    sub_1C37058(&Method_System_Collections_Generic_List_Rect___ctor__);
-    sub_1C37058(&System_Collections_Generic_List_Rect__TypeInfo);
-    byte_4C3F8E1 = 1;
+    sub_1C3E564(&Method_System_Collections_Generic_List_Rect__Add__);
+    sub_1C3E564(&Method_System_Collections_Generic_List_Rect___ctor__);
+    sub_1C3E564(&System_Collections_Generic_List_Rect__TypeInfo);
+    byte_4C5367C = 1;
   }
   Base2DUILocationInfo___ctor((Base2DUILocationInfo_o *)this, 0);
-  v3 = (System_Collections_Generic_List_Rect__o *)sub_1C372A4(System_Collections_Generic_List_Rect__TypeInfo);
+  v3 = (System_Collections_Generic_List_Rect__o *)sub_1C3E7B0(System_Collections_Generic_List_Rect__TypeInfo);
   System_Collections_Generic_List_Rect____ctor(
     v3,
-    (const MethodInfo_37B8938 *)Method_System_Collections_Generic_List_Rect___ctor__);
+    (const MethodInfo_37CAD74 *)Method_System_Collections_Generic_List_Rect___ctor__);
   v4 = ((__int64 (__fastcall *)(Submarine2DUILocationInfo_o *, const MethodInfo *))this->klass->vtable._8_GetScanDialogRect.methodPtr)(
          this,
          this->klass->vtable._8_GetScanDialogRect.method);
   if ( !v3 )
     goto LABEL_29;
   items = v3->fields._items;
-  v10 = Method_System_Collections_Generic_List_Rect__Add__;
+  v11 = Method_System_Collections_Generic_List_Rect__Add__;
   ++v3->fields._version;
   if ( !items )
     goto LABEL_29;
@@ -81,146 +82,146 @@ void Submarine2DUILocationInfo___ctor(Submarine2DUILocationInfo_o *this, const M
   {
     System_Collections_Generic_List_Rect___AddWithResize(
       v3,
-      *(UnityEngine_Rect_o *)&v5,
-      *(const MethodInfo_37B91C4 **)(*(_QWORD *)(v10[4] + 192LL) + 112LL));
+      *(UnityEngine_Rect_o *)&v6,
+      *(const MethodInfo_37CB600 **)(*(_QWORD *)(v11[4] + 192LL) + 112LL));
   }
   else
   {
-    v12 = &items->obj + size;
+    v13 = &items->obj + size;
     v3->fields._size = size + 1;
-    LODWORD(v12[2].klass) = v5;
-    HIDWORD(v12[2].klass) = v6;
-    LODWORD(v12[2].monitor) = v7;
-    HIDWORD(v12[2].monitor) = v8;
+    LODWORD(v13[2].klass) = v6;
+    HIDWORD(v13[2].klass) = v7;
+    LODWORD(v13[2].monitor) = v8;
+    HIDWORD(v13[2].monitor) = v9;
   }
   v4 = ((__int64 (__fastcall *)(Submarine2DUILocationInfo_o *, const MethodInfo *))this->klass->vtable._9_GetStorageRect.methodPtr)(
          this,
          this->klass->vtable._9_GetStorageRect.method);
-  v17 = v3->fields._items;
-  v18 = Method_System_Collections_Generic_List_Rect__Add__;
+  v18 = v3->fields._items;
+  v19 = Method_System_Collections_Generic_List_Rect__Add__;
   ++v3->fields._version;
-  if ( !v17 )
+  if ( !v18 )
     goto LABEL_29;
-  v19 = v3->fields._size;
-  if ( (unsigned int)v19 >= LODWORD(v17->max_length) )
+  v20 = v3->fields._size;
+  if ( (unsigned int)v20 >= LODWORD(v18->max_length) )
   {
     System_Collections_Generic_List_Rect___AddWithResize(
       v3,
-      *(UnityEngine_Rect_o *)&v13,
-      *(const MethodInfo_37B91C4 **)(*(_QWORD *)(v18[4] + 192LL) + 112LL));
+      *(UnityEngine_Rect_o *)&v14,
+      *(const MethodInfo_37CB600 **)(*(_QWORD *)(v19[4] + 192LL) + 112LL));
   }
   else
   {
-    v20 = &v17->obj + v19;
-    v3->fields._size = v19 + 1;
-    LODWORD(v20[2].klass) = v13;
-    HIDWORD(v20[2].klass) = v14;
-    LODWORD(v20[2].monitor) = v15;
-    HIDWORD(v20[2].monitor) = v16;
+    v21 = &v18->obj + v20;
+    v3->fields._size = v20 + 1;
+    LODWORD(v21[2].klass) = v14;
+    HIDWORD(v21[2].klass) = v15;
+    LODWORD(v21[2].monitor) = v16;
+    HIDWORD(v21[2].monitor) = v17;
   }
   v4 = ((__int64 (__fastcall *)(Submarine2DUILocationInfo_o *, const MethodInfo *))this->klass->vtable._4_GetTitleInfoRect.methodPtr)(
          this,
          this->klass->vtable._4_GetTitleInfoRect.method);
-  v25 = v3->fields._items;
-  v26 = Method_System_Collections_Generic_List_Rect__Add__;
+  v26 = v3->fields._items;
+  v27 = Method_System_Collections_Generic_List_Rect__Add__;
   ++v3->fields._version;
-  if ( !v25 )
+  if ( !v26 )
     goto LABEL_29;
-  v27 = v3->fields._size;
-  if ( (unsigned int)v27 >= LODWORD(v25->max_length) )
+  v28 = v3->fields._size;
+  if ( (unsigned int)v28 >= LODWORD(v26->max_length) )
   {
     System_Collections_Generic_List_Rect___AddWithResize(
       v3,
-      *(UnityEngine_Rect_o *)&v21,
-      *(const MethodInfo_37B91C4 **)(*(_QWORD *)(v26[4] + 192LL) + 112LL));
+      *(UnityEngine_Rect_o *)&v22,
+      *(const MethodInfo_37CB600 **)(*(_QWORD *)(v27[4] + 192LL) + 112LL));
   }
   else
   {
-    v28 = &v25->obj + v27;
-    v3->fields._size = v27 + 1;
-    LODWORD(v28[2].klass) = v21;
-    HIDWORD(v28[2].klass) = v22;
-    LODWORD(v28[2].monitor) = v23;
-    HIDWORD(v28[2].monitor) = v24;
+    v29 = &v26->obj + v28;
+    v3->fields._size = v28 + 1;
+    LODWORD(v29[2].klass) = v22;
+    HIDWORD(v29[2].klass) = v23;
+    LODWORD(v29[2].monitor) = v24;
+    HIDWORD(v29[2].monitor) = v25;
   }
   v4 = ((__int64 (__fastcall *)(Submarine2DUILocationInfo_o *, const MethodInfo *))this->klass->vtable._6_GetMapChangeButtonRect.methodPtr)(
          this,
          this->klass->vtable._6_GetMapChangeButtonRect.method);
-  v33 = v3->fields._items;
-  v34 = Method_System_Collections_Generic_List_Rect__Add__;
+  v34 = v3->fields._items;
+  v35 = Method_System_Collections_Generic_List_Rect__Add__;
   ++v3->fields._version;
-  if ( !v33 )
+  if ( !v34 )
     goto LABEL_29;
-  v35 = v3->fields._size;
-  if ( (unsigned int)v35 >= LODWORD(v33->max_length) )
+  v36 = v3->fields._size;
+  if ( (unsigned int)v36 >= LODWORD(v34->max_length) )
   {
     System_Collections_Generic_List_Rect___AddWithResize(
       v3,
-      *(UnityEngine_Rect_o *)&v29,
-      *(const MethodInfo_37B91C4 **)(*(_QWORD *)(v34[4] + 192LL) + 112LL));
+      *(UnityEngine_Rect_o *)&v30,
+      *(const MethodInfo_37CB600 **)(*(_QWORD *)(v35[4] + 192LL) + 112LL));
   }
   else
   {
-    v36 = &v33->obj + v35;
-    v3->fields._size = v35 + 1;
-    LODWORD(v36[2].klass) = v29;
-    HIDWORD(v36[2].klass) = v30;
-    LODWORD(v36[2].monitor) = v31;
-    HIDWORD(v36[2].monitor) = v32;
+    v37 = &v34->obj + v36;
+    v3->fields._size = v36 + 1;
+    LODWORD(v37[2].klass) = v30;
+    HIDWORD(v37[2].klass) = v31;
+    LODWORD(v37[2].monitor) = v32;
+    HIDWORD(v37[2].monitor) = v33;
   }
   v4 = ((__int64 (__fastcall *)(Submarine2DUILocationInfo_o *, const MethodInfo *))this->klass->vtable._5_GetMenuButtonRect.methodPtr)(
          this,
          this->klass->vtable._5_GetMenuButtonRect.method);
-  v41 = v3->fields._items;
-  v42 = Method_System_Collections_Generic_List_Rect__Add__;
+  v42 = v3->fields._items;
+  v43 = Method_System_Collections_Generic_List_Rect__Add__;
   ++v3->fields._version;
-  if ( !v41 )
+  if ( !v42 )
     goto LABEL_29;
-  v43 = v3->fields._size;
-  if ( (unsigned int)v43 >= LODWORD(v41->max_length) )
+  v44 = v3->fields._size;
+  if ( (unsigned int)v44 >= LODWORD(v42->max_length) )
   {
     System_Collections_Generic_List_Rect___AddWithResize(
       v3,
-      *(UnityEngine_Rect_o *)&v37,
-      *(const MethodInfo_37B91C4 **)(*(_QWORD *)(v42[4] + 192LL) + 112LL));
+      *(UnityEngine_Rect_o *)&v38,
+      *(const MethodInfo_37CB600 **)(*(_QWORD *)(v43[4] + 192LL) + 112LL));
   }
   else
   {
-    v44 = &v41->obj + v43;
-    v3->fields._size = v43 + 1;
-    LODWORD(v44[2].klass) = v37;
-    HIDWORD(v44[2].klass) = v38;
-    LODWORD(v44[2].monitor) = v39;
-    HIDWORD(v44[2].monitor) = v40;
+    v45 = &v42->obj + v44;
+    v3->fields._size = v44 + 1;
+    LODWORD(v45[2].klass) = v38;
+    HIDWORD(v45[2].klass) = v39;
+    LODWORD(v45[2].monitor) = v40;
+    HIDWORD(v45[2].monitor) = v41;
   }
   v4 = ((__int64 (__fastcall *)(Submarine2DUILocationInfo_o *, const MethodInfo *))this->klass->vtable._7_GetMasterIconSurroundsRect.methodPtr)(
          this,
          this->klass->vtable._7_GetMasterIconSurroundsRect.method);
-  v51 = v3->fields._items;
-  v52 = Method_System_Collections_Generic_List_Rect__Add__;
+  v52 = v3->fields._items;
+  v53 = Method_System_Collections_Generic_List_Rect__Add__;
   ++v3->fields._version;
-  if ( !v51 )
+  if ( !v52 )
 LABEL_29:
-    sub_1C372B4(v4);
-  v53 = v3->fields._size;
-  if ( (unsigned int)v53 >= LODWORD(v51->max_length) )
+    sub_1C3E7C0(v4, v5);
+  v54 = v3->fields._size;
+  if ( (unsigned int)v54 >= LODWORD(v52->max_length) )
   {
     System_Collections_Generic_List_Rect___AddWithResize(
       v3,
-      *(UnityEngine_Rect_o *)&v47,
-      *(const MethodInfo_37B91C4 **)(*(_QWORD *)(v52[4] + 192LL) + 112LL));
+      *(UnityEngine_Rect_o *)&v48,
+      *(const MethodInfo_37CB600 **)(*(_QWORD *)(v53[4] + 192LL) + 112LL));
   }
   else
   {
-    v54 = &v51->obj + v53;
-    v3->fields._size = v53 + 1;
-    LODWORD(v54[2].klass) = v47;
-    HIDWORD(v54[2].klass) = v48;
-    LODWORD(v54[2].monitor) = v49;
-    HIDWORD(v54[2].monitor) = v50;
+    v55 = &v52->obj + v54;
+    v3->fields._size = v54 + 1;
+    LODWORD(v55[2].klass) = v48;
+    HIDWORD(v55[2].klass) = v49;
+    LODWORD(v55[2].monitor) = v50;
+    HIDWORD(v55[2].monitor) = v51;
   }
   this->fields._rects_k__BackingField = v3;
-  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields, (int32_t)v3, v45, v46);
+  sub_1C3E508((CGThumbnailListItem_o *)&this->fields, (int32_t)v3, v46, v47);
 }
 
 

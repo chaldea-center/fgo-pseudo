@@ -17,12 +17,12 @@ System_String_o *NGuiPlayMakerProxy__GetFsmEventEnumValue(System_Enum_o *value, 
   System_Enum_c *klass; // x8
 
   v2 = (Il2CppObject *)value;
-  if ( (byte_4C40DF2 & 1) == 0 )
+  if ( (byte_4C54B8F & 1) == 0 )
   {
-    sub_1C37058(&PlayMakerUtils_FsmEvent___TypeInfo);
-    sub_1C37058(&PlayMakerUtils_FsmEvent_var);
-    value = (System_Enum_o *)sub_1C37058(&System_Type_TypeInfo);
-    byte_4C40DF2 = 1;
+    sub_1C3E564(&PlayMakerUtils_FsmEvent___TypeInfo);
+    sub_1C3E564(&PlayMakerUtils_FsmEvent_var);
+    value = (System_Enum_o *)sub_1C3E564(&System_Type_TypeInfo);
+    byte_4C54B8F = 1;
   }
   if ( !v2 )
     goto LABEL_14;
@@ -46,19 +46,19 @@ System_String_o *NGuiPlayMakerProxy__GetFsmEventEnumValue(System_Enum_o *value, 
          value,
          0,
          v6->klass->vtable._14_GetCustomAttributes.method);
-  value = (System_Enum_o *)sub_1C37194(v8, PlayMakerUtils_FsmEvent___TypeInfo);
+  value = (System_Enum_o *)sub_1C3E6A0(v8, PlayMakerUtils_FsmEvent___TypeInfo);
   if ( !value )
     goto LABEL_14;
   monitor = value[1].monitor;
   if ( monitor )
   {
     if ( !(_DWORD)monitor )
-      sub_1C372BC(value);
+      sub_1C3E7C8(value, method);
     klass = value[2].klass;
     if ( klass )
       return (System_String_o *)klass->_1.name;
 LABEL_14:
-    sub_1C372B4(value);
+    sub_1C3E7C0(value, method);
   }
   return 0;
 }

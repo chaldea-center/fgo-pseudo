@@ -9,32 +9,33 @@ void UIViewport__LateUpdate(UIViewport_o *this, const MethodInfo *method)
 {
   UnityEngine_Object_o *topLeft; // x20
   UnityEngine_Object_o *bottomRight; // x20
+  __int64 v5; // x1
   UnityEngine_Transform_o *mCam; // x0
   UnityEngine_Camera_o *sourceCamera; // x20
-  UnityEngine_Camera_o *v7; // x20
+  UnityEngine_Camera_o *v8; // x20
   float x; // s8
   float y; // s9
-  float v10; // s10
-  float v11; // s13
+  float v11; // s10
+  float v12; // s13
   int32_t width; // w20
   int32_t height; // w21
-  int32_t v14; // w22
+  int32_t v15; // w22
   float fullSize; // s14
-  float v16; // s12
-  float v17; // s10
-  float v18; // s8
+  float v17; // s12
+  float v18; // s10
   float v19; // s8
+  float v20; // s8
   UnityEngine_Vector3_o position; // 0:s0.4,4:s1.4,8:s2.4
-  UnityEngine_Vector3_o v21; // 0:s0.4,4:s1.4,8:s2.4
   UnityEngine_Vector3_o v22; // 0:s0.4,4:s1.4,8:s2.4
   UnityEngine_Vector3_o v23; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o v24; // 0:s0.4,4:s1.4,8:s2.4
   UnityEngine_Rect_o rect; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
-  UnityEngine_Rect_o v25; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
+  UnityEngine_Rect_o v26; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 
-  if ( (byte_4C478B6 & 1) == 0 )
+  if ( (byte_4C5B6AD & 1) == 0 )
   {
-    sub_1C37058(&UnityEngine_Object_TypeInfo);
-    byte_4C478B6 = 1;
+    sub_1C3E564(&UnityEngine_Object_TypeInfo);
+    byte_4C5B6AD = 1;
   }
   topLeft = (UnityEngine_Object_o *)this->fields.topLeft;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -53,55 +54,55 @@ void UIViewport__LateUpdate(UIViewport_o *this, const MethodInfo *method)
       position = UnityEngine_Transform__get_position(mCam, 0);
       if ( !sourceCamera )
         goto LABEL_25;
-      v21 = UnityEngine_Camera__WorldToScreenPoint_71073020(sourceCamera, position, 0);
+      v22 = UnityEngine_Camera__WorldToScreenPoint_71147832(sourceCamera, position, 0);
       mCam = this->fields.bottomRight;
       if ( !mCam )
         goto LABEL_25;
-      v7 = this->fields.sourceCamera;
-      x = v21.fields.x;
-      y = v21.fields.y;
-      v22 = UnityEngine_Transform__get_position(mCam, 0);
-      if ( !v7 )
+      v8 = this->fields.sourceCamera;
+      x = v22.fields.x;
+      y = v22.fields.y;
+      v23 = UnityEngine_Transform__get_position(mCam, 0);
+      if ( !v8 )
         goto LABEL_25;
-      v23 = UnityEngine_Camera__WorldToScreenPoint_71073020(v7, v22, 0);
-      v10 = v23.fields.x;
-      v11 = v23.fields.y;
+      v24 = UnityEngine_Camera__WorldToScreenPoint_71147832(v8, v23, 0);
+      v11 = v24.fields.x;
+      v12 = v24.fields.y;
       width = UnityEngine_Screen__get_width(0);
       height = UnityEngine_Screen__get_height(0);
-      v14 = UnityEngine_Screen__get_width(0);
+      v15 = UnityEngine_Screen__get_width(0);
       mCam = (UnityEngine_Transform_o *)UnityEngine_Screen__get_height(0);
       if ( !this->fields.mCam )
         goto LABEL_25;
       fullSize = this->fields.fullSize;
-      v16 = x / (float)width;
-      v17 = (float)(v10 - x) / (float)v14;
-      v18 = (float)(y - v11) / (float)(int)mCam;
+      v17 = x / (float)width;
+      v18 = (float)(v11 - x) / (float)v15;
+      v19 = (float)(y - v12) / (float)(int)mCam;
       rect = UnityEngine_Camera__get_rect(this->fields.mCam, 0);
-      if ( v16 != rect.fields.m_XMin
-        || v18 != rect.fields.m_Height
-        || (float)(v11 / (float)height) != rect.fields.m_YMin
-        || v17 != rect.fields.m_Width )
+      if ( v17 != rect.fields.m_XMin
+        || v19 != rect.fields.m_Height
+        || (float)(v12 / (float)height) != rect.fields.m_YMin
+        || v18 != rect.fields.m_Width )
       {
         mCam = (UnityEngine_Transform_o *)this->fields.mCam;
         if ( !mCam )
           goto LABEL_25;
-        v25.fields.m_XMin = v16;
-        v25.fields.m_YMin = v11 / (float)height;
-        v25.fields.m_Width = v17;
-        v25.fields.m_Height = v18;
-        UnityEngine_Camera__set_rect((UnityEngine_Camera_o *)mCam, v25, 0);
+        v26.fields.m_XMin = v17;
+        v26.fields.m_YMin = v12 / (float)height;
+        v26.fields.m_Width = v18;
+        v26.fields.m_Height = v19;
+        UnityEngine_Camera__set_rect((UnityEngine_Camera_o *)mCam, v26, 0);
       }
       mCam = (UnityEngine_Transform_o *)this->fields.mCam;
       if ( !mCam )
 LABEL_25:
-        sub_1C372B4(mCam);
-      v19 = fullSize * v18;
-      if ( UnityEngine_Camera__get_orthographicSize((UnityEngine_Camera_o *)mCam, 0) != v19 )
+        sub_1C3E7C0(mCam, v5);
+      v20 = fullSize * v19;
+      if ( UnityEngine_Camera__get_orthographicSize((UnityEngine_Camera_o *)mCam, 0) != v20 )
       {
         mCam = (UnityEngine_Transform_o *)this->fields.mCam;
         if ( mCam )
         {
-          UnityEngine_Camera__set_orthographicSize((UnityEngine_Camera_o *)mCam, v19, 0);
+          UnityEngine_Camera__set_orthographicSize((UnityEngine_Camera_o *)mCam, v20, 0);
           return;
         }
         goto LABEL_25;
@@ -123,17 +124,17 @@ void UIViewport__Start(UIViewport_o *this, const MethodInfo *method)
   int32_t v10; // w2
   const MethodInfo *v11; // x3
 
-  if ( (byte_4C478B5 & 1) == 0 )
+  if ( (byte_4C5B6AC & 1) == 0 )
   {
-    sub_1C37058(&Method_UnityEngine_Component_GetComponent_Camera___);
-    sub_1C37058(&UnityEngine_Object_TypeInfo);
-    byte_4C478B5 = 1;
+    sub_1C3E564(&Method_UnityEngine_Component_GetComponent_Camera___);
+    sub_1C3E564(&UnityEngine_Object_TypeInfo);
+    byte_4C5B6AC = 1;
   }
   Component_object = UnityEngine_Component__GetComponent_object_(
                        (UnityEngine_Component_o *)this,
-                       (const MethodInfo_30DE428 *)Method_UnityEngine_Component_GetComponent_Camera___);
+                       (const MethodInfo_30F0240 *)Method_UnityEngine_Component_GetComponent_Camera___);
   this->fields.mCam = (struct UnityEngine_Camera_o *)Component_object;
-  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.mCam, (int32_t)Component_object, v4, v5);
+  sub_1C3E508((CGThumbnailListItem_o *)&this->fields.mCam, (int32_t)Component_object, v4, v5);
   sourceCamera = this->fields.sourceCamera;
   p_sourceCamera = (CGThumbnailListItem_o *)&this->fields.sourceCamera;
   v7 = (UnityEngine_Object_o *)sourceCamera;
@@ -143,6 +144,6 @@ void UIViewport__Start(UIViewport_o *this, const MethodInfo *method)
   {
     main = UnityEngine_Camera__get_main(0);
     p_sourceCamera->klass = (CGThumbnailListItem_c *)main;
-    sub_1C36FFC(p_sourceCamera, (int32_t)main, v10, v11);
+    sub_1C3E508(p_sourceCamera, (int32_t)main, v10, v11);
   }
 }

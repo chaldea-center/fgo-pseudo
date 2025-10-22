@@ -5,39 +5,41 @@ void SelectedUserSvtCoin___ctor(
         const MethodInfo *method)
 {
   __int64 v7; // x0
-  int32_t v8; // w2
-  const MethodInfo *v9; // x3
+  __int64 v8; // x1
+  int32_t v9; // w2
+  const MethodInfo *v10; // x3
   struct ListViewItem_o *linkItem; // x22
   __int64 naturalAligment; // x9
   SelectedUserSvtCoin_Fields *p_fields; // x20
-  __int64 v13; // x0
+  __int64 v14; // x0
+  __int64 v15; // x1
 
-  if ( (byte_4C46C48 & 1) == 0 )
+  if ( (byte_4C5AA3F & 1) == 0 )
   {
-    sub_1C37058(&CoinRoomCoinIconItem_TypeInfo);
-    byte_4C46C48 = 1;
+    sub_1C3E564(&CoinRoomCoinIconItem_TypeInfo);
+    byte_4C5AA3F = 1;
   }
   System_Object___ctor((Il2CppObject *)this, 0);
   if ( !iconObject )
 LABEL_9:
-    sub_1C372B4(v7);
+    sub_1C3E7C0(v7, v8);
   linkItem = iconObject->fields.linkItem;
   if ( !linkItem )
   {
     this->fields.iconObject = iconObject;
-    sub_1C36FFC((CGThumbnailListItem_o *)&this->fields, (int32_t)iconObject, v8, v9);
-    sub_1C372B4(v13);
+    sub_1C3E508((CGThumbnailListItem_o *)&this->fields, (int32_t)iconObject, v9, v10);
+    sub_1C3E7C0(v14, v15);
   }
   naturalAligment = CoinRoomCoinIconItem_TypeInfo->_2.naturalAligment;
   if ( linkItem->klass->_2.naturalAligment < (unsigned int)naturalAligment
     || (CoinRoomCoinIconItem_c *)linkItem->klass->_2.typeHierarchy[naturalAligment - 1] != CoinRoomCoinIconItem_TypeInfo )
   {
-    sub_1C37574(iconObject->fields.linkItem);
+    sub_1C3EA80(iconObject->fields.linkItem);
     goto LABEL_9;
   }
   this->fields.iconObject = iconObject;
   p_fields = &this->fields;
-  sub_1C36FFC((CGThumbnailListItem_o *)p_fields, (int32_t)iconObject, v8, v9);
+  sub_1C3E508((CGThumbnailListItem_o *)p_fields, (int32_t)iconObject, v9, v10);
   p_fields->_itemId_k__BackingField = HIDWORD(linkItem[1].klass);
   p_fields->_num_k__BackingField = num;
 }

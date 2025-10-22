@@ -13,11 +13,11 @@ SimpleAnimation_o *SubmarineSilhouetteComponent__get_AnimationComponent(
   int32_t v5; // w2
   const MethodInfo *v6; // x3
 
-  if ( (byte_4C3F8FB & 1) == 0 )
+  if ( (byte_4C53696 & 1) == 0 )
   {
-    sub_1C37058(&Method_UnityEngine_Component_GetComponent_SimpleAnimation___);
-    sub_1C37058(&UnityEngine_Object_TypeInfo);
-    byte_4C3F8FB = 1;
+    sub_1C3E564(&Method_UnityEngine_Component_GetComponent_SimpleAnimation___);
+    sub_1C3E564(&UnityEngine_Object_TypeInfo);
+    byte_4C53696 = 1;
   }
   mAnimation = (UnityEngine_Object_o *)this->fields.mAnimation;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -26,9 +26,9 @@ SimpleAnimation_o *SubmarineSilhouetteComponent__get_AnimationComponent(
   {
     Component_object = UnityEngine_Component__GetComponent_object_(
                          (UnityEngine_Component_o *)this,
-                         (const MethodInfo_30DE428 *)Method_UnityEngine_Component_GetComponent_SimpleAnimation___);
+                         (const MethodInfo_30F0240 *)Method_UnityEngine_Component_GetComponent_SimpleAnimation___);
     this->fields.mAnimation = (struct SimpleAnimation_o *)Component_object;
-    sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.mAnimation, (int32_t)Component_object, v5, v6);
+    sub_1C3E508((CGThumbnailListItem_o *)&this->fields.mAnimation, (int32_t)Component_object, v5, v6);
   }
   return this->fields.mAnimation;
 }

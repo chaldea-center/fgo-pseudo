@@ -16,7 +16,7 @@ void FollowObjectPositionComponent__SetObj(
   this->fields.TargetObj = obj;
   p_TargetObj = &this->fields.TargetObj;
   v5 = IsInversion;
-  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.TargetObj, (int32_t)obj, IsInversion, method);
+  sub_1C3E508((CGThumbnailListItem_o *)&this->fields.TargetObj, (int32_t)obj, IsInversion, method);
   *((_BYTE *)p_TargetObj + 8) = v5;
 }
 
@@ -26,16 +26,17 @@ void FollowObjectPositionComponent__Update(FollowObjectPositionComponent_o *this
   UnityEngine_Object_o *TargetObj; // x19
   _BOOL4 IsInversion; // w21
   UnityEngine_Transform_o *transform; // x0
-  UnityEngine_Transform_o *v6; // x19
+  __int64 v6; // x1
+  UnityEngine_Transform_o *v7; // x19
   float x; // s8
-  float v8; // s0
+  float v9; // s0
   UnityEngine_Vector3_o localPosition; // 0:s0.4,4:s1.4,8:s2.4
-  UnityEngine_Vector3_o v10; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o v11; // 0:s0.4,4:s1.4,8:s2.4
 
-  if ( (byte_4C423B6 & 1) == 0 )
+  if ( (byte_4C56158 & 1) == 0 )
   {
-    sub_1C37058(&UnityEngine_Object_TypeInfo);
-    byte_4C423B6 = 1;
+    sub_1C3E564(&UnityEngine_Object_TypeInfo);
+    byte_4C56158 = 1;
   }
   TargetObj = (UnityEngine_Object_o *)this->fields.TargetObj;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -46,7 +47,7 @@ void FollowObjectPositionComponent__Update(FollowObjectPositionComponent_o *this
     transform = UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0);
     if ( this->fields.TargetObj )
     {
-      v6 = transform;
+      v7 = transform;
       transform = UnityEngine_GameObject__get_transform(this->fields.TargetObj, 0);
       if ( transform )
       {
@@ -60,26 +61,26 @@ void FollowObjectPositionComponent__Update(FollowObjectPositionComponent_o *this
             transform = UnityEngine_GameObject__get_transform((UnityEngine_GameObject_o *)transform, 0);
             if ( transform )
             {
-              v10 = UnityEngine_Transform__get_localPosition(transform, 0);
-              if ( v6 )
+              v11 = UnityEngine_Transform__get_localPosition(transform, 0);
+              if ( v7 )
               {
-                localPosition.fields.y = -v10.fields.y;
+                localPosition.fields.y = -v11.fields.y;
                 x = -x;
                 localPosition.fields.z = 0.0;
 LABEL_14:
-                v8 = x;
-                UnityEngine_Transform__set_localPosition(v6, localPosition, 0);
+                v9 = x;
+                UnityEngine_Transform__set_localPosition(v7, localPosition, 0);
                 return;
               }
             }
           }
         }
-        else if ( v6 )
+        else if ( v7 )
         {
           goto LABEL_14;
         }
       }
     }
-    sub_1C372B4(transform);
+    sub_1C3E7C0(transform, v6);
   }
 }

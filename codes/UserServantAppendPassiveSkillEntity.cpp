@@ -1,27 +1,27 @@
 void UserServantAppendPassiveSkillEntity___ctor(UserServantAppendPassiveSkillEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_4C43F16 & 1) == 0 )
+  if ( (byte_4C57CCE & 1) == 0 )
   {
-    sub_1C37058(&Method_DataEntityBase_string___ctor__);
-    byte_4C43F16 = 1;
+    sub_1C3E564(&Method_DataEntityBase_string___ctor__);
+    byte_4C57CCE = 1;
   }
   DataEntityBase_object____ctor(
     (DataEntityBase_PKType__o *)this,
-    (const MethodInfo_339EC34 *)Method_DataEntityBase_string___ctor__);
+    (const MethodInfo_33B0AEC *)Method_DataEntityBase_string___ctor__);
 }
 
 
 System_String_o *UserServantAppendPassiveSkillEntity__CreatePK(int64_t userId, int32_t svtId, const MethodInfo *method)
 {
-  if ( (byte_4C43F15 & 1) == 0 )
+  if ( (byte_4C57CCD & 1) == 0 )
   {
-    sub_1C37058(&Method_DataEntityBase_CreateMultiplePK_long__int___);
-    byte_4C43F15 = 1;
+    sub_1C3E564(&Method_DataEntityBase_CreateMultiplePK_long__int___);
+    byte_4C57CCD = 1;
   }
   return DataEntityBase__CreateMultiplePK_long__int_(
            userId,
            svtId,
-           (const MethodInfo_30E5EE8 *)Method_DataEntityBase_CreateMultiplePK_long__int___);
+           (const MethodInfo_30F7D00 *)Method_DataEntityBase_CreateMultiplePK_long__int___);
 }
 
 
@@ -50,10 +50,10 @@ int32_t UserServantAppendPassiveSkillEntity__GetRemainingExchangeNum(
   BalanceConfig_c *v3; // x0
   int32_t exchangeNum; // w19
 
-  if ( (byte_4C43F14 & 1) == 0 )
+  if ( (byte_4C57CCC & 1) == 0 )
   {
-    sub_1C37058(&BalanceConfig_TypeInfo);
-    byte_4C43F14 = 1;
+    sub_1C3E564(&BalanceConfig_TypeInfo);
+    byte_4C57CCC = 1;
   }
   v3 = BalanceConfig_TypeInfo;
   exchangeNum = this->fields.exchangeNum;

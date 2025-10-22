@@ -9,23 +9,23 @@ void ServantStatusFlavorTextListViewItemDrawText2___cctor(const MethodInfo *meth
   int32_t v7; // w2
   const MethodInfo *v8; // x3
 
-  if ( (byte_4C3F318 & 1) == 0 )
+  if ( (byte_4C530AA & 1) == 0 )
   {
-    sub_1C37058(&ServantStatusFlavorTextListViewItemDrawText2_TypeInfo);
-    sub_1C37058(&StringLiteral_20420/*"img_index_03"*/);
-    sub_1C37058(&StringLiteral_20419/*"img_index_02"*/);
-    byte_4C3F318 = 1;
+    sub_1C3E564(&ServantStatusFlavorTextListViewItemDrawText2_TypeInfo);
+    sub_1C3E564(&StringLiteral_20438/*"img_index_03"*/);
+    sub_1C3E564(&StringLiteral_20437/*"img_index_02"*/);
+    byte_4C530AA = 1;
   }
   static_fields = ServantStatusFlavorTextListViewItemDrawText2_TypeInfo->static_fields;
   *(_QWORD *)&static_fields->LABEL_HEIGHT_MAX = 0xA800000BB8LL;
   static_fields->TITLE_NAME_LEFT_POS = -88;
-  v4 = StringLiteral_20419/*"img_index_02"*/;
-  static_fields->TITLE_BASE_SPRITE_NAME = (struct System_String_o *)StringLiteral_20419/*"img_index_02"*/;
-  sub_1C36FFC((CGThumbnailListItem_o *)&static_fields->TITLE_BASE_SPRITE_NAME, v4, v1, v2);
-  v5 = StringLiteral_20420/*"img_index_03"*/;
+  v4 = StringLiteral_20437/*"img_index_02"*/;
+  static_fields->TITLE_BASE_SPRITE_NAME = (struct System_String_o *)StringLiteral_20437/*"img_index_02"*/;
+  sub_1C3E508((CGThumbnailListItem_o *)&static_fields->TITLE_BASE_SPRITE_NAME, v4, v1, v2);
+  v5 = StringLiteral_20438/*"img_index_03"*/;
   v6 = ServantStatusFlavorTextListViewItemDrawText2_TypeInfo->static_fields;
-  v6->TITLE_BASE_LONG_SPRITE_NAME = (struct System_String_o *)StringLiteral_20420/*"img_index_03"*/;
-  sub_1C36FFC((CGThumbnailListItem_o *)&v6->TITLE_BASE_LONG_SPRITE_NAME, v5, v7, v8);
+  v6->TITLE_BASE_LONG_SPRITE_NAME = (struct System_String_o *)StringLiteral_20438/*"img_index_03"*/;
+  sub_1C3E508((CGThumbnailListItem_o *)&v6->TITLE_BASE_LONG_SPRITE_NAME, v5, v7, v8);
 }
 
 
@@ -62,8 +62,8 @@ void ServantStatusFlavorTextListViewItemDrawText2__HideNew(
 
   newIcon = this->fields.newIcon;
   if ( !newIcon )
-    sub_1C372B4(0);
-  ShiningIconComponent__Set_41022000(newIcon, 0, 0);
+    sub_1C3E7C0(0, method);
+  ShiningIconComponent__Set_41070436(newIcon, 0, 0);
 }
 
 
@@ -72,22 +72,23 @@ void ServantStatusFlavorTextListViewItemDrawText2__SetCondTitle(
         System_String_o *title,
         const MethodInfo *method)
 {
+  __int64 v5; // x1
   UILabel_o *titleName; // x0
   UISprite_o *titleBase; // x19
-  UISprite_o *v7; // x21
-  float v8; // s0
-  UIWidget_o *v9; // x20
+  UISprite_o *v8; // x21
+  float v9; // s0
+  UIWidget_o *v10; // x20
   UnityEngine_GameObject_o *gameObject; // x0
   float TITLE_NAME_LEFT_POS; // s0
-  float v12; // s8
   float v13; // s8
-  UILabel_o *v14; // x19
+  float v14; // s8
+  UILabel_o *v15; // x19
 
-  if ( (byte_4C3F317 & 1) == 0 )
+  if ( (byte_4C530A9 & 1) == 0 )
   {
-    sub_1C37058(&ServantStatusFlavorTextListViewItemDrawText2_TypeInfo);
-    sub_1C37058(&StringLiteral_1/*""*/);
-    byte_4C3F317 = 1;
+    sub_1C3E564(&ServantStatusFlavorTextListViewItemDrawText2_TypeInfo);
+    sub_1C3E564(&StringLiteral_1/*""*/);
+    byte_4C530A9 = 1;
   }
   if ( System_String__IsNullOrEmpty(title, 0) )
   {
@@ -109,16 +110,16 @@ void ServantStatusFlavorTextListViewItemDrawText2__SetCondTitle(
       }
     }
 LABEL_34:
-    sub_1C372B4(titleName);
+    sub_1C3E7C0(titleName, v5);
   }
   titleName = (UILabel_o *)ServantStatusFlavorTextListViewItemDrawText2_TypeInfo;
-  v7 = this->fields.titleBase;
+  v8 = this->fields.titleBase;
   if ( !ServantStatusFlavorTextListViewItemDrawText2_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(ServantStatusFlavorTextListViewItemDrawText2_TypeInfo);
-  if ( !v7 )
+  if ( !v8 )
     goto LABEL_34;
   UISprite__set_spriteName(
-    v7,
+    v8,
     ServantStatusFlavorTextListViewItemDrawText2_TypeInfo->static_fields->TITLE_BASE_LONG_SPRITE_NAME,
     0);
   titleName = this->fields.titleName;
@@ -148,21 +149,21 @@ LABEL_34:
   titleName = this->fields.titleName;
   if ( !titleName )
     goto LABEL_34;
-  if ( v8 >= (float)ServantStatusFlavorTextListViewItemDrawText2_TypeInfo->static_fields->TITLE_NAME_CONDENSED_WIDTH )
+  if ( v9 >= (float)ServantStatusFlavorTextListViewItemDrawText2_TypeInfo->static_fields->TITLE_NAME_CONDENSED_WIDTH )
   {
     titleName = (UILabel_o *)UnityEngine_Component__get_transform((UnityEngine_Component_o *)titleName, 0);
     if ( !titleName )
       goto LABEL_34;
-    LODWORD(v12) = (unsigned int)UnityEngine_Transform__get_localScale((UnityEngine_Transform_o *)titleName, 0);
+    LODWORD(v13) = (unsigned int)UnityEngine_Transform__get_localScale((UnityEngine_Transform_o *)titleName, 0);
     if ( !ServantStatusFlavorTextListViewItemDrawText2_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(ServantStatusFlavorTextListViewItemDrawText2_TypeInfo);
     titleName = this->fields.titleName;
     if ( !titleName )
       goto LABEL_34;
-    v13 = (float)(1.0 - v12)
+    v14 = (float)(1.0 - v13)
         * (float)ServantStatusFlavorTextListViewItemDrawText2_TypeInfo->static_fields->TITLE_NAME_LEFT_POS;
     gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)titleName, 0);
-    TITLE_NAME_LEFT_POS = v13
+    TITLE_NAME_LEFT_POS = v14
                         + (float)ServantStatusFlavorTextListViewItemDrawText2_TypeInfo->static_fields->TITLE_NAME_LEFT_POS;
   }
   else
@@ -173,13 +174,13 @@ LABEL_34:
       goto LABEL_34;
     UILabel__set_alignment(titleName, 1, 0);
     titleName = (UILabel_o *)ServantStatusFlavorTextListViewItemDrawText2_TypeInfo;
-    v9 = (UIWidget_o *)this->fields.titleName;
+    v10 = (UIWidget_o *)this->fields.titleName;
     if ( !ServantStatusFlavorTextListViewItemDrawText2_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(ServantStatusFlavorTextListViewItemDrawText2_TypeInfo);
-    if ( !v9 )
+    if ( !v10 )
       goto LABEL_34;
     UIWidget__set_width(
-      v9,
+      v10,
       ServantStatusFlavorTextListViewItemDrawText2_TypeInfo->static_fields->TITLE_NAME_CONDENSED_WIDTH,
       0);
     titleName = this->fields.titleName;
@@ -190,13 +191,13 @@ LABEL_34:
   }
   GameObjectExtensions__SetLocalPositionX(gameObject, TITLE_NAME_LEFT_POS, 0);
   titleName = (UILabel_o *)ServantStatusFlavorTextListViewItemDrawText2_TypeInfo;
-  v14 = this->fields.titleName;
+  v15 = this->fields.titleName;
   if ( !ServantStatusFlavorTextListViewItemDrawText2_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(ServantStatusFlavorTextListViewItemDrawText2_TypeInfo);
-  if ( !v14 )
+  if ( !v15 )
     goto LABEL_34;
   UILabel__SetCondensedScale(
-    v14,
+    v15,
     ServantStatusFlavorTextListViewItemDrawText2_TypeInfo->static_fields->TITLE_NAME_CONDENSED_WIDTH,
     0,
     0);
@@ -216,50 +217,51 @@ void ServantStatusFlavorTextListViewItemDrawText2__SetItem(
 {
   UnityEngine_Object_o *titleNumSprite; // x24
   System_String_o *transform; // x0
-  bool v17; // w1
-  UISprite_o *v18; // x23
-  System_String_o *v19; // x0
+  __int64 v17; // x1
+  bool v18; // w1
+  UISprite_o *v19; // x23
+  System_String_o *v20; // x0
   UIWidget_o *messageLabel; // x23
   int32_t mHeight; // w28
-  ServantStatusFlavorTextListViewItemDrawText2_c *v22; // x0
-  UILabel_o *v23; // x24
+  ServantStatusFlavorTextListViewItemDrawText2_c *v23; // x0
+  UILabel_o *v24; // x24
   UnityEngine_GameObject_o *mainPrefab; // x25
   UnityEngine_GameObject_o *rubyPrefab; // x26
-  RubyLabelHelper_o *v26; // x23
+  RubyLabelHelper_o *v27; // x23
   UnityEngine_Vector2_o Size; // kr00_8
   int32_t y; // w22
   UnityEngine_Object_o *baseCollider; // x23
-  int v30; // w24
-  float v31; // s1
+  int v31; // w24
+  float v32; // s1
   UnityEngine_Object_o *baseSprite; // x22
-  int v33; // w22
+  int v34; // w22
   float x; // s8
-  float v35; // s10
+  float v36; // s10
   float z; // s9
-  float v37; // s11
-  float v38; // s0 OVERLAPPED
-  float v39; // s3
-  float v40; // s1
-  float v41; // s2
-  float v42; // s8
-  float v43; // s10
-  float v44; // s9
+  float v38; // s11
+  float v39; // s0 OVERLAPPED
+  float v40; // s3
+  float v41; // s1
+  float v42; // s2
+  float v43; // s8
+  float v44; // s10
+  float v45; // s9
   UnityEngine_Object_o *newIcon; // x21
-  int32_t v46; // [xsp+2Ch] [xbp-54h] BYREF
-  UnityEngine_Vector3_o v47; // 0:s0.4,4:s1.4,8:s2.4
+  int32_t v47; // [xsp+2Ch] [xbp-54h] BYREF
+  UnityEngine_Vector3_o v48; // 0:s0.4,4:s1.4,8:s2.4
   UnityEngine_Vector3_o localPosition; // 0:s0.4,4:s1.4,8:s2.4
-  UnityEngine_Vector3_o v49; // 0:s0.4,4:s1.4,8:s2.4
   UnityEngine_Vector3_o v50; // 0:s0.4,4:s1.4,8:s2.4
   UnityEngine_Vector3_o v51; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o v52; // 0:s0.4,4:s1.4,8:s2.4
 
-  v46 = profileNum;
-  if ( (byte_4C3F316 & 1) == 0 )
+  v47 = profileNum;
+  if ( (byte_4C530A8 & 1) == 0 )
   {
-    sub_1C37058(&UnityEngine_Object_TypeInfo);
-    sub_1C37058(&RubyLabelHelper_TypeInfo);
-    sub_1C37058(&ServantStatusFlavorTextListViewItemDrawText2_TypeInfo);
-    sub_1C37058(&StringLiteral_20700/*"img_txt_profile"*/);
-    byte_4C3F316 = 1;
+    sub_1C3E564(&UnityEngine_Object_TypeInfo);
+    sub_1C3E564(&RubyLabelHelper_TypeInfo);
+    sub_1C3E564(&ServantStatusFlavorTextListViewItemDrawText2_TypeInfo);
+    sub_1C3E564(&StringLiteral_20718/*"img_txt_profile"*/);
+    byte_4C530A8 = 1;
   }
   this->fields.dispMode = mode;
   if ( item && mode && this->fields.isFirst )
@@ -273,12 +275,12 @@ void ServantStatusFlavorTextListViewItemDrawText2__SetItem(
     {
       if ( profileNum >= 1 && this->fields.profileNumMax >= profileNum )
       {
-        v18 = this->fields.titleNumSprite;
-        v19 = System_Int32__ToString((int32_t)&v46, 0);
-        transform = System_String__Concat_63561656((System_String_o *)StringLiteral_20700/*"img_txt_profile"*/, v19, 0);
-        if ( !v18 )
+        v19 = this->fields.titleNumSprite;
+        v20 = System_Int32__ToString((int32_t)&v47, 0);
+        transform = System_String__Concat_63636468((System_String_o *)StringLiteral_20718/*"img_txt_profile"*/, v20, 0);
+        if ( !v19 )
           goto LABEL_57;
-        UISprite__set_spriteName(v18, transform, 0);
+        UISprite__set_spriteName(v19, transform, 0);
         transform = (System_String_o *)this->fields.titleNumSprite;
         if ( !transform )
           goto LABEL_57;
@@ -288,37 +290,37 @@ void ServantStatusFlavorTextListViewItemDrawText2__SetItem(
         transform = (System_String_o *)this->fields.titleNumSprite;
         if ( !transform )
           goto LABEL_57;
-        v17 = 1;
+        v18 = 1;
       }
       else
       {
         transform = (System_String_o *)this->fields.titleNumSprite;
         if ( !transform )
           goto LABEL_57;
-        v17 = 0;
+        v18 = 0;
       }
-      UnityEngine_Behaviour__set_enabled((UnityEngine_Behaviour_o *)transform, v17, 0);
+      UnityEngine_Behaviour__set_enabled((UnityEngine_Behaviour_o *)transform, v18, 0);
     }
     messageLabel = (UIWidget_o *)this->fields.messageLabel;
     if ( !messageLabel )
       goto LABEL_57;
     mHeight = messageLabel->fields.mHeight;
-    v22 = ServantStatusFlavorTextListViewItemDrawText2_TypeInfo;
+    v23 = ServantStatusFlavorTextListViewItemDrawText2_TypeInfo;
     if ( !ServantStatusFlavorTextListViewItemDrawText2_TypeInfo->_2.cctor_finished )
     {
       j_il2cpp_runtime_class_init_0(ServantStatusFlavorTextListViewItemDrawText2_TypeInfo);
-      v22 = ServantStatusFlavorTextListViewItemDrawText2_TypeInfo;
+      v23 = ServantStatusFlavorTextListViewItemDrawText2_TypeInfo;
     }
-    UIWidget__set_height(messageLabel, v22->static_fields->LABEL_HEIGHT_MAX, 0);
-    v23 = this->fields.messageLabel;
+    UIWidget__set_height(messageLabel, v23->static_fields->LABEL_HEIGHT_MAX, 0);
+    v24 = this->fields.messageLabel;
     rubyPrefab = this->fields.rubyPrefab;
     mainPrefab = this->fields.mainPrefab;
-    v26 = (RubyLabelHelper_o *)sub_1C372A4(RubyLabelHelper_TypeInfo);
-    RubyLabelHelper___ctor(v26, v23, mainPrefab, rubyPrefab, 0);
-    if ( !v26 )
+    v27 = (RubyLabelHelper_o *)sub_1C3E7B0(RubyLabelHelper_TypeInfo);
+    RubyLabelHelper___ctor(v27, v24, mainPrefab, rubyPrefab, 0);
+    if ( !v27 )
       goto LABEL_57;
-    RubyLabelHelper__SetText(v26, text, 0);
-    Size = RubyLabelHelper__get_Size(v26, 0);
+    RubyLabelHelper__SetText(v27, text, 0);
+    Size = RubyLabelHelper__get_Size(v27, 0);
     transform = (System_String_o *)this->fields.messageLabel;
     if ( !transform )
       goto LABEL_57;
@@ -330,18 +332,18 @@ void ServantStatusFlavorTextListViewItemDrawText2__SetItem(
     baseCollider = (UnityEngine_Object_o *)this->fields.baseCollider;
     if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-    v30 = y - mHeight;
+    v31 = y - mHeight;
     if ( UnityEngine_Object__op_Inequality(baseCollider, 0, 0) )
     {
       transform = (System_String_o *)this->fields.baseCollider;
       if ( !transform )
         goto LABEL_57;
-      v47 = UnityEngine_BoxCollider__get_size((UnityEngine_BoxCollider_o *)transform, 0);
+      v48 = UnityEngine_BoxCollider__get_size((UnityEngine_BoxCollider_o *)transform, 0);
       transform = (System_String_o *)this->fields.baseCollider;
       if ( !transform )
         goto LABEL_57;
-      v31 = v47.fields.y + (float)v30;
-      UnityEngine_BoxCollider__set_size((UnityEngine_BoxCollider_o *)transform, v47, 0);
+      v32 = v48.fields.y + (float)v31;
+      UnityEngine_BoxCollider__set_size((UnityEngine_BoxCollider_o *)transform, v48, 0);
     }
     baseSprite = (UnityEngine_Object_o *)this->fields.baseSprite;
     if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -351,7 +353,7 @@ void ServantStatusFlavorTextListViewItemDrawText2__SetItem(
       transform = (System_String_o *)this->fields.baseSprite;
       if ( !transform )
         goto LABEL_57;
-      UIWidget__set_height((UIWidget_o *)transform, HIDWORD(transform[7].klass) + v30, 0);
+      UIWidget__set_height((UIWidget_o *)transform, HIDWORD(transform[7].klass) + v31, 0);
     }
     transform = (System_String_o *)this->fields.messageLabel;
     if ( !transform )
@@ -361,47 +363,47 @@ void ServantStatusFlavorTextListViewItemDrawText2__SetItem(
       goto LABEL_57;
     localPosition = UnityEngine_Transform__get_localPosition((UnityEngine_Transform_o *)transform, 0);
     transform = (System_String_o *)this->fields.messageLabel;
-    v33 = v30 >= 0 ? v30 : v30 + 1;
+    v34 = v31 >= 0 ? v31 : v31 + 1;
     if ( !transform )
       goto LABEL_57;
     x = localPosition.fields.x;
-    v35 = localPosition.fields.y;
+    v36 = localPosition.fields.y;
     z = localPosition.fields.z;
     transform = (System_String_o *)UnityEngine_Component__get_transform((UnityEngine_Component_o *)transform, 0);
     if ( !transform )
       goto LABEL_57;
-    v37 = (float)(v33 >> 1);
-    v49.fields.y = v35 + v37;
-    v49.fields.x = x;
-    v49.fields.z = z;
-    UnityEngine_Transform__set_localPosition((UnityEngine_Transform_o *)transform, v49, 0);
+    v38 = (float)(v34 >> 1);
+    v50.fields.y = v36 + v38;
+    v50.fields.x = x;
+    v50.fields.z = z;
+    UnityEngine_Transform__set_localPosition((UnityEngine_Transform_o *)transform, v50, 0);
     transform = (System_String_o *)this->fields.titleBase;
-    v38 = 0.5;
+    v39 = 0.5;
     if ( isOpen )
-      v38 = 1.0;
+      v39 = 1.0;
     if ( !transform )
       goto LABEL_57;
-    v39 = 1.0;
-    v40 = v38;
-    v41 = v38;
-    UIWidget__set_color((UIWidget_o *)transform, *(UnityEngine_Color_o *)&v38, 0);
+    v40 = 1.0;
+    v41 = v39;
+    v42 = v39;
+    UIWidget__set_color((UIWidget_o *)transform, *(UnityEngine_Color_o *)&v39, 0);
     transform = (System_String_o *)this->fields.titleBase;
     if ( !transform
       || (transform = (System_String_o *)UnityEngine_Component__get_transform((UnityEngine_Component_o *)transform, 0)) == 0
-      || (v50 = UnityEngine_Transform__get_localPosition((UnityEngine_Transform_o *)transform, 0),
+      || (v51 = UnityEngine_Transform__get_localPosition((UnityEngine_Transform_o *)transform, 0),
           (transform = (System_String_o *)this->fields.titleBase) == 0)
-      || (v42 = v50.fields.x,
-          v43 = v50.fields.y,
-          v44 = v50.fields.z,
+      || (v43 = v51.fields.x,
+          v44 = v51.fields.y,
+          v45 = v51.fields.z,
           (transform = (System_String_o *)UnityEngine_Component__get_transform((UnityEngine_Component_o *)transform, 0)) == 0) )
     {
 LABEL_57:
-      sub_1C372B4(transform);
+      sub_1C3E7C0(transform, v17);
     }
-    v51.fields.y = v43 + v37;
-    v51.fields.x = v42;
-    v51.fields.z = v44;
-    UnityEngine_Transform__set_localPosition((UnityEngine_Transform_o *)transform, v51, 0);
+    v52.fields.y = v44 + v38;
+    v52.fields.x = v43;
+    v52.fields.z = v45;
+    UnityEngine_Transform__set_localPosition((UnityEngine_Transform_o *)transform, v52, 0);
     newIcon = (UnityEngine_Object_o *)this->fields.newIcon;
     if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
@@ -410,7 +412,7 @@ LABEL_57:
       transform = (System_String_o *)this->fields.newIcon;
       if ( transform )
       {
-        ShiningIconComponent__Set_41022000((ShiningIconComponent_o *)transform, isNew, 0);
+        ShiningIconComponent__Set_41070436((ShiningIconComponent_o *)transform, isNew, 0);
         return;
       }
       goto LABEL_57;
@@ -427,7 +429,7 @@ int32_t ServantStatusFlavorTextListViewItemDrawText2__get_MessageLabelFontSize(
 
   messageLabel = this->fields.messageLabel;
   if ( !messageLabel )
-    sub_1C372B4(this);
+    sub_1C3E7C0(this, method);
   return messageLabel->fields.mFontSize;
 }
 
@@ -440,7 +442,7 @@ float ServantStatusFlavorTextListViewItemDrawText2__get_MessageLabelHeight(
 
   messageLabel = this->fields.messageLabel;
   if ( !messageLabel )
-    sub_1C372B4(this);
+    sub_1C3E7C0(this, method);
   return (float)messageLabel->fields.mHeight;
 }
 
@@ -455,7 +457,7 @@ UnityEngine_Vector3_o ServantStatusFlavorTextListViewItemDrawText2__get_MessageL
   if ( !messageLabel
     || (messageLabel = (UnityEngine_Component_o *)UnityEngine_Component__get_transform(messageLabel, 0)) == 0 )
   {
-    sub_1C372B4(messageLabel);
+    sub_1C3E7C0(messageLabel, method);
   }
   return UnityEngine_Transform__get_localPosition((UnityEngine_Transform_o *)messageLabel, 0);
 }

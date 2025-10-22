@@ -11,510 +11,511 @@ void UIMeshSprite__Initialize(UIMeshSprite_o *this, const MethodInfo *method)
   System_Array_o *v4; // x21
   System_RuntimeFieldHandle_o v5; // x1
   __int64 v6; // x0
-  int32_t v7; // w2
-  const MethodInfo *v8; // x3
-  System_Array_o *v9; // x21
-  System_RuntimeFieldHandle_o v10; // x1
-  int32_t v11; // w2
-  const MethodInfo *v12; // x3
-  System_Array_o *v13; // x0
-  System_RuntimeFieldHandle_o v14; // x1
-  System_Array_o *v15; // x21
-  int32_t v16; // w2
-  const MethodInfo *v17; // x3
-  System_Array_o *v18; // x0
-  System_RuntimeFieldHandle_o v19; // x1
-  System_Array_o *v20; // x21
-  int32_t v21; // w2
-  const MethodInfo *v22; // x3
-  int32_t v23; // w2
-  const MethodInfo *v24; // x3
-  __int64 v25; // x20
-  System_Array_o *v26; // x21
-  System_RuntimeFieldHandle_o v27; // x1
-  int32_t v28; // w2
-  const MethodInfo *v29; // x3
-  System_Array_o *v30; // x21
-  System_RuntimeFieldHandle_o v31; // x1
-  int32_t v32; // w2
-  const MethodInfo *v33; // x3
-  System_Array_o *v34; // x0
-  System_RuntimeFieldHandle_o v35; // x1
-  System_Array_o *v36; // x21
-  int32_t v37; // w2
-  const MethodInfo *v38; // x3
-  System_Array_o *v39; // x0
-  System_RuntimeFieldHandle_o v40; // x1
-  System_Array_o *v41; // x21
-  int32_t v42; // w2
-  const MethodInfo *v43; // x3
+  __int64 v7; // x1
+  int32_t v8; // w2
+  const MethodInfo *v9; // x3
+  System_Array_o *v10; // x21
+  System_RuntimeFieldHandle_o v11; // x1
+  int32_t v12; // w2
+  const MethodInfo *v13; // x3
+  System_Array_o *v14; // x0
+  System_RuntimeFieldHandle_o v15; // x1
+  System_Array_o *v16; // x21
+  int32_t v17; // w2
+  const MethodInfo *v18; // x3
+  System_Array_o *v19; // x0
+  System_RuntimeFieldHandle_o v20; // x1
+  System_Array_o *v21; // x21
+  int32_t v22; // w2
+  const MethodInfo *v23; // x3
+  int32_t v24; // w2
+  const MethodInfo *v25; // x3
+  __int64 v26; // x20
+  System_Array_o *v27; // x21
+  System_RuntimeFieldHandle_o v28; // x1
+  int32_t v29; // w2
+  const MethodInfo *v30; // x3
+  System_Array_o *v31; // x21
+  System_RuntimeFieldHandle_o v32; // x1
+  int32_t v33; // w2
+  const MethodInfo *v34; // x3
+  System_Array_o *v35; // x0
+  System_RuntimeFieldHandle_o v36; // x1
+  System_Array_o *v37; // x21
+  int32_t v38; // w2
+  const MethodInfo *v39; // x3
+  System_Array_o *v40; // x0
+  System_RuntimeFieldHandle_o v41; // x1
+  System_Array_o *v42; // x21
+  int32_t v43; // w2
+  const MethodInfo *v44; // x3
   struct UIMeshSprite_StaticFields *static_fields; // x0
-  int32_t v45; // w2
-  const MethodInfo *v46; // x3
-  __int64 v47; // x20
-  System_Array_o *v48; // x21
-  System_RuntimeFieldHandle_o v49; // x1
-  int32_t v50; // w2
-  const MethodInfo *v51; // x3
-  System_Array_o *v52; // x21
-  System_RuntimeFieldHandle_o v53; // x1
-  int32_t v54; // w2
-  const MethodInfo *v55; // x3
-  System_Array_o *v56; // x21
-  System_RuntimeFieldHandle_o v57; // x1
-  int32_t v58; // w2
-  const MethodInfo *v59; // x3
-  System_Array_o *v60; // x21
-  System_RuntimeFieldHandle_o v61; // x1
-  int32_t v62; // w2
-  const MethodInfo *v63; // x3
-  struct UIMeshSprite_StaticFields *v64; // x0
-  int32_t v65; // w2
-  const MethodInfo *v66; // x3
-  __int64 v67; // x20
-  System_Array_o *v68; // x21
-  System_RuntimeFieldHandle_o v69; // x1
-  int32_t v70; // w2
-  const MethodInfo *v71; // x3
-  System_Array_o *v72; // x21
-  System_RuntimeFieldHandle_o v73; // x1
-  int32_t v74; // w2
-  const MethodInfo *v75; // x3
-  System_Array_o *v76; // x0
-  System_RuntimeFieldHandle_o v77; // x1
-  System_Array_o *v78; // x21
-  int32_t v79; // w2
-  const MethodInfo *v80; // x3
-  System_Array_o *v81; // x0
-  System_RuntimeFieldHandle_o v82; // x1
-  System_Array_o *v83; // x21
-  int32_t v84; // w2
-  const MethodInfo *v85; // x3
-  struct UIMeshSprite_StaticFields *v86; // x0
-  int32_t v87; // w2
-  const MethodInfo *v88; // x3
-  struct UIMeshSprite_StaticFields *v89; // x8
+  int32_t v46; // w2
+  const MethodInfo *v47; // x3
+  __int64 v48; // x20
+  System_Array_o *v49; // x21
+  System_RuntimeFieldHandle_o v50; // x1
+  int32_t v51; // w2
+  const MethodInfo *v52; // x3
+  System_Array_o *v53; // x21
+  System_RuntimeFieldHandle_o v54; // x1
+  int32_t v55; // w2
+  const MethodInfo *v56; // x3
+  System_Array_o *v57; // x21
+  System_RuntimeFieldHandle_o v58; // x1
+  int32_t v59; // w2
+  const MethodInfo *v60; // x3
+  System_Array_o *v61; // x21
+  System_RuntimeFieldHandle_o v62; // x1
+  int32_t v63; // w2
+  const MethodInfo *v64; // x3
+  struct UIMeshSprite_StaticFields *v65; // x0
+  int32_t v66; // w2
+  const MethodInfo *v67; // x3
+  __int64 v68; // x20
+  System_Array_o *v69; // x21
+  System_RuntimeFieldHandle_o v70; // x1
+  int32_t v71; // w2
+  const MethodInfo *v72; // x3
+  System_Array_o *v73; // x21
+  System_RuntimeFieldHandle_o v74; // x1
+  int32_t v75; // w2
+  const MethodInfo *v76; // x3
+  System_Array_o *v77; // x0
+  System_RuntimeFieldHandle_o v78; // x1
+  System_Array_o *v79; // x21
+  int32_t v80; // w2
+  const MethodInfo *v81; // x3
+  System_Array_o *v82; // x0
+  System_RuntimeFieldHandle_o v83; // x1
+  System_Array_o *v84; // x21
+  int32_t v85; // w2
+  const MethodInfo *v86; // x3
+  struct UIMeshSprite_StaticFields *v87; // x0
+  int32_t v88; // w2
+  const MethodInfo *v89; // x3
+  struct UIMeshSprite_StaticFields *v90; // x8
   struct System_Int32_array_array *meshPolygons; // x9
   unsigned int max_length; // w10
-  unsigned int v92; // w11
-  int32x2_t *v93; // x12
-  unsigned __int64 v94; // x13
-  int32x2_t *v95; // x12
-  __int64 v96; // x14
-  int32x2_t *v97; // x15
-  unsigned __int64 v98; // x15
-  unsigned __int64 v99; // x14
-  __int64 v100; // x13
+  unsigned int v93; // w11
+  int32x2_t *v94; // x12
+  unsigned __int64 v95; // x13
+  int32x2_t *v96; // x12
+  __int64 v97; // x14
+  int32x2_t *v98; // x15
+  unsigned __int64 v99; // x15
+  unsigned __int64 v100; // x14
+  __int64 v101; // x13
   struct System_Int32_array_array *uvIndex; // x12
-  int32x2_t *v102; // x14
-  unsigned __int64 v103; // x15
-  unsigned __int64 v104; // x13
-  unsigned __int64 v105; // x12
-  int32x2_t *v106; // x14
-  __int64 v107; // x15
-  __int64 v108; // x0
-  struct UIMeshSprite_StaticFields *v109; // x8
-  int32_t v110; // w2
-  const MethodInfo *v111; // x3
-  __int64 v112; // x0
-  struct UIMeshSprite_StaticFields *v113; // x8
-  int32_t v114; // w2
-  const MethodInfo *v115; // x3
-  unsigned int v116; // w22
-  struct UIMeshSprite_StaticFields *v117; // x9
+  int32x2_t *v103; // x14
+  unsigned __int64 v104; // x15
+  unsigned __int64 v105; // x13
+  unsigned __int64 v106; // x12
+  int32x2_t *v107; // x14
+  __int64 v108; // x15
+  __int64 v109; // x0
+  struct UIMeshSprite_StaticFields *v110; // x8
+  int32_t v111; // w2
+  const MethodInfo *v112; // x3
+  __int64 v113; // x0
+  struct UIMeshSprite_StaticFields *v114; // x8
+  int32_t v115; // w2
+  const MethodInfo *v116; // x3
+  unsigned int v117; // w22
+  struct UIMeshSprite_StaticFields *v118; // x9
   struct System_Double_array_array *meshVertices; // x8
   struct System_Double_array_array *uvPos; // x9
-  System_Double_array *v120; // x21
-  System_Double_array *v121; // x29
-  __int64 v122; // x20
-  unsigned int v123; // w8
-  unsigned __int64 v124; // x9
-  unsigned __int64 v125; // x10
-  float *v126; // x11
-  unsigned int v127; // w14
-  float v128; // s0
-  float v129; // s1
-  float v130; // s2
-  int32_t v131; // w2
-  const MethodInfo *v132; // x3
-  int32x2_t v133; // d2
-  unsigned __int64 v134; // d4
-  __int64 v135; // x21
-  __int64 v136; // x12
-  unsigned __int64 v137; // x10
-  unsigned __int64 v138; // x8
-  unsigned __int64 v139; // x11
+  System_Double_array *v121; // x21
+  System_Double_array *v122; // x29
+  __int64 v123; // x20
+  unsigned int v124; // w8
+  unsigned __int64 v125; // x9
+  unsigned __int64 v126; // x10
+  float *v127; // x11
+  unsigned int v128; // w14
+  float v129; // s0
+  float v130; // s1
+  float v131; // s2
+  int32_t v132; // w2
+  const MethodInfo *v133; // x3
+  int32x2_t v134; // d2
+  unsigned __int64 v135; // d4
+  __int64 v136; // x21
+  __int64 v137; // x12
+  unsigned __int64 v138; // x10
+  unsigned __int64 v139; // x8
+  unsigned __int64 v140; // x11
   unsigned __int64 max_length_low; // x13
-  float64x2_t v141; // q0
-  bool v142; // zf
-  __int64 v143; // x9
-  unsigned __int64 v144; // x8
-  float32x2_t v145; // d0
-  __int64 v146; // x10
-  float *v147; // x11
-  float v148; // s1
-  float v149; // s3
+  float64x2_t v142; // q0
+  bool v143; // zf
+  __int64 v144; // x9
+  unsigned __int64 v145; // x8
+  float32x2_t v146; // d0
+  __int64 v147; // x10
+  float *v148; // x11
+  float v149; // s1
   float v150; // s3
-  unsigned __int64 v151; // x9
-  float32x2_t v152; // d1
-  float *v153; // x10
-  float v154; // s4
+  float v151; // s3
+  unsigned __int64 v152; // x9
+  float32x2_t v153; // d1
+  float *v154; // x10
+  float v155; // s4
   struct UnityEngine_Vector3_array_array *sprMeshVert; // x8
-  Il2CppClass **v156; // x0
-  int32_t v157; // w2
-  const MethodInfo *v158; // x3
+  Il2CppClass **v157; // x0
+  int32_t v158; // w2
+  const MethodInfo *v159; // x3
   struct UnityEngine_Vector2_array_array *sprMeshUv; // x8
-  Il2CppClass **v160; // x0
+  Il2CppClass **v161; // x0
 
-  if ( (byte_4C44890 & 1) == 0 )
+  if ( (byte_4C5865B & 1) == 0 )
   {
-    sub_1C37058(&double_____TypeInfo);
-    sub_1C37058(&double___TypeInfo);
-    sub_1C37058(&int_____TypeInfo);
-    sub_1C37058(&int___TypeInfo);
-    sub_1C37058(&Field__PrivateImplementationDetails__2EE364B28C2DF2751CBCB67FD5C712FDCCB16455384FE2153A7A1B9A39BF4E08);
-    sub_1C37058(&Field__PrivateImplementationDetails__39B0CE9F8BB751D3CDA95DFF4CCBD2F76AA8BE076E08F92CD3A2CE32D7FD5D9E);
-    sub_1C37058(&Field__PrivateImplementationDetails__760678574AC754570788C16023649BA2DD5F4E1DEFC8EECDAFDEFD9E455FB18D);
-    sub_1C37058(&Field__PrivateImplementationDetails__7697393717A78F974D3D99FBC523001D071C386C42DCBA44DF71CAE4C67AA21C);
-    sub_1C37058(&Field__PrivateImplementationDetails__8B30583BA1D630C1FD8BC2C781FC5CFD0D44EE537275F60F4BCC1CB95F36790E);
-    sub_1C37058(&Field__PrivateImplementationDetails__A7D34401E4A32665A44B3A0EDC41B741B897D63BD99AA951B9A422E659B956E4);
-    sub_1C37058(&Field__PrivateImplementationDetails__BAED642339816AFFB3FE8719792D0E4CE82F12DB72B7373D244EAA65445800FE);
-    sub_1C37058(&Field__PrivateImplementationDetails__BFB6381577CD3F50A9C3EA1AA2779200B89E7FDCEDE42A7A76BBF94A108B4D48);
-    sub_1C37058(&Field__PrivateImplementationDetails__DE20FBDC7AE005F294CB7F36726D94483663568309C8140669555C980F7950EB);
-    sub_1C37058(&Field__PrivateImplementationDetails__FA106D01A783872947C63534621698735FDDB45CF0224FF39E81FA1D5CFE503F);
-    sub_1C37058(&UIMeshSprite_TypeInfo);
-    sub_1C37058(&UnityEngine_Vector2_____TypeInfo);
-    sub_1C37058(&UnityEngine_Vector2___TypeInfo);
-    sub_1C37058(&UnityEngine_Vector3_____TypeInfo);
-    sub_1C37058(&UnityEngine_Vector3___TypeInfo);
-    byte_4C44890 = 1;
+    sub_1C3E564(&double_____TypeInfo);
+    sub_1C3E564(&double___TypeInfo);
+    sub_1C3E564(&int_____TypeInfo);
+    sub_1C3E564(&int___TypeInfo);
+    sub_1C3E564(&Field__PrivateImplementationDetails__2EE364B28C2DF2751CBCB67FD5C712FDCCB16455384FE2153A7A1B9A39BF4E08);
+    sub_1C3E564(&Field__PrivateImplementationDetails__39B0CE9F8BB751D3CDA95DFF4CCBD2F76AA8BE076E08F92CD3A2CE32D7FD5D9E);
+    sub_1C3E564(&Field__PrivateImplementationDetails__760678574AC754570788C16023649BA2DD5F4E1DEFC8EECDAFDEFD9E455FB18D);
+    sub_1C3E564(&Field__PrivateImplementationDetails__7697393717A78F974D3D99FBC523001D071C386C42DCBA44DF71CAE4C67AA21C);
+    sub_1C3E564(&Field__PrivateImplementationDetails__8B30583BA1D630C1FD8BC2C781FC5CFD0D44EE537275F60F4BCC1CB95F36790E);
+    sub_1C3E564(&Field__PrivateImplementationDetails__A7D34401E4A32665A44B3A0EDC41B741B897D63BD99AA951B9A422E659B956E4);
+    sub_1C3E564(&Field__PrivateImplementationDetails__BAED642339816AFFB3FE8719792D0E4CE82F12DB72B7373D244EAA65445800FE);
+    sub_1C3E564(&Field__PrivateImplementationDetails__BFB6381577CD3F50A9C3EA1AA2779200B89E7FDCEDE42A7A76BBF94A108B4D48);
+    sub_1C3E564(&Field__PrivateImplementationDetails__DE20FBDC7AE005F294CB7F36726D94483663568309C8140669555C980F7950EB);
+    sub_1C3E564(&Field__PrivateImplementationDetails__FA106D01A783872947C63534621698735FDDB45CF0224FF39E81FA1D5CFE503F);
+    sub_1C3E564(&UIMeshSprite_TypeInfo);
+    sub_1C3E564(&UnityEngine_Vector2_____TypeInfo);
+    sub_1C3E564(&UnityEngine_Vector2___TypeInfo);
+    sub_1C3E564(&UnityEngine_Vector3_____TypeInfo);
+    sub_1C3E564(&UnityEngine_Vector3___TypeInfo);
+    byte_4C5865B = 1;
   }
   if ( !UIMeshSprite_TypeInfo->static_fields->sprMeshVert )
   {
-    v3 = sub_1C37100(double_____TypeInfo, 4);
-    v4 = (System_Array_o *)sub_1C37100(double___TypeInfo, 12);
+    v3 = sub_1C3E60C(double_____TypeInfo, 4);
+    v4 = (System_Array_o *)sub_1C3E60C(double___TypeInfo, 12);
     v5.fields.value = Field__PrivateImplementationDetails__DE20FBDC7AE005F294CB7F36726D94483663568309C8140669555C980F7950EB;
-    System_Runtime_CompilerServices_RuntimeHelpers__InitializeArray_64262432(v4, v5, 0);
+    System_Runtime_CompilerServices_RuntimeHelpers__InitializeArray_64337244(v4, v5, 0);
     if ( v3 )
     {
       if ( !*(_DWORD *)(v3 + 24) )
         goto LABEL_93;
       *(_QWORD *)(v3 + 32) = v4;
-      sub_1C36FFC((CGThumbnailListItem_o *)(v3 + 32), (int32_t)v4, v7, v8);
-      v9 = (System_Array_o *)sub_1C37100(double___TypeInfo, 18);
-      v10.fields.value = Field__PrivateImplementationDetails__760678574AC754570788C16023649BA2DD5F4E1DEFC8EECDAFDEFD9E455FB18D;
-      System_Runtime_CompilerServices_RuntimeHelpers__InitializeArray_64262432(v9, v10, 0);
+      sub_1C3E508((CGThumbnailListItem_o *)(v3 + 32), (int32_t)v4, v8, v9);
+      v10 = (System_Array_o *)sub_1C3E60C(double___TypeInfo, 18);
+      v11.fields.value = Field__PrivateImplementationDetails__760678574AC754570788C16023649BA2DD5F4E1DEFC8EECDAFDEFD9E455FB18D;
+      System_Runtime_CompilerServices_RuntimeHelpers__InitializeArray_64337244(v10, v11, 0);
       if ( *(_DWORD *)(v3 + 24) <= 1u )
         goto LABEL_93;
-      *(_QWORD *)(v3 + 40) = v9;
-      sub_1C36FFC((CGThumbnailListItem_o *)(v3 + 40), (int32_t)v9, v11, v12);
-      v13 = (System_Array_o *)sub_1C37100(double___TypeInfo, 12);
-      v14.fields.value = Field__PrivateImplementationDetails__DE20FBDC7AE005F294CB7F36726D94483663568309C8140669555C980F7950EB;
-      v15 = v13;
-      System_Runtime_CompilerServices_RuntimeHelpers__InitializeArray_64262432(v13, v14, 0);
+      *(_QWORD *)(v3 + 40) = v10;
+      sub_1C3E508((CGThumbnailListItem_o *)(v3 + 40), (int32_t)v10, v12, v13);
+      v14 = (System_Array_o *)sub_1C3E60C(double___TypeInfo, 12);
+      v15.fields.value = Field__PrivateImplementationDetails__DE20FBDC7AE005F294CB7F36726D94483663568309C8140669555C980F7950EB;
+      v16 = v14;
+      System_Runtime_CompilerServices_RuntimeHelpers__InitializeArray_64337244(v14, v15, 0);
       if ( *(_DWORD *)(v3 + 24) <= 2u )
         goto LABEL_93;
-      *(_QWORD *)(v3 + 48) = v15;
-      sub_1C36FFC((CGThumbnailListItem_o *)(v3 + 48), (int32_t)v15, v16, v17);
-      v18 = (System_Array_o *)sub_1C37100(double___TypeInfo, 12);
-      v19.fields.value = Field__PrivateImplementationDetails__DE20FBDC7AE005F294CB7F36726D94483663568309C8140669555C980F7950EB;
-      v20 = v18;
-      System_Runtime_CompilerServices_RuntimeHelpers__InitializeArray_64262432(v18, v19, 0);
+      *(_QWORD *)(v3 + 48) = v16;
+      sub_1C3E508((CGThumbnailListItem_o *)(v3 + 48), (int32_t)v16, v17, v18);
+      v19 = (System_Array_o *)sub_1C3E60C(double___TypeInfo, 12);
+      v20.fields.value = Field__PrivateImplementationDetails__DE20FBDC7AE005F294CB7F36726D94483663568309C8140669555C980F7950EB;
+      v21 = v19;
+      System_Runtime_CompilerServices_RuntimeHelpers__InitializeArray_64337244(v19, v20, 0);
       if ( *(_DWORD *)(v3 + 24) <= 3u )
         goto LABEL_93;
-      *(_QWORD *)(v3 + 56) = v20;
-      sub_1C36FFC((CGThumbnailListItem_o *)(v3 + 56), (int32_t)v20, v21, v22);
+      *(_QWORD *)(v3 + 56) = v21;
+      sub_1C3E508((CGThumbnailListItem_o *)(v3 + 56), (int32_t)v21, v22, v23);
       UIMeshSprite_TypeInfo->static_fields->meshVertices = (struct System_Double_array_array *)v3;
-      sub_1C36FFC((CGThumbnailListItem_o *)UIMeshSprite_TypeInfo->static_fields, v3, v23, v24);
-      v25 = sub_1C37100(int_____TypeInfo, 4);
-      v26 = (System_Array_o *)sub_1C37100(int___TypeInfo, 4);
-      v27.fields.value = Field__PrivateImplementationDetails__7697393717A78F974D3D99FBC523001D071C386C42DCBA44DF71CAE4C67AA21C;
-      System_Runtime_CompilerServices_RuntimeHelpers__InitializeArray_64262432(v26, v27, 0);
-      if ( v25 )
+      sub_1C3E508((CGThumbnailListItem_o *)UIMeshSprite_TypeInfo->static_fields, v3, v24, v25);
+      v26 = sub_1C3E60C(int_____TypeInfo, 4);
+      v27 = (System_Array_o *)sub_1C3E60C(int___TypeInfo, 4);
+      v28.fields.value = Field__PrivateImplementationDetails__7697393717A78F974D3D99FBC523001D071C386C42DCBA44DF71CAE4C67AA21C;
+      System_Runtime_CompilerServices_RuntimeHelpers__InitializeArray_64337244(v27, v28, 0);
+      if ( v26 )
       {
-        if ( !*(_DWORD *)(v25 + 24) )
+        if ( !*(_DWORD *)(v26 + 24) )
           goto LABEL_93;
-        *(_QWORD *)(v25 + 32) = v26;
-        sub_1C36FFC((CGThumbnailListItem_o *)(v25 + 32), (int32_t)v26, v28, v29);
-        v30 = (System_Array_o *)sub_1C37100(int___TypeInfo, 8);
-        v31.fields.value = Field__PrivateImplementationDetails__FA106D01A783872947C63534621698735FDDB45CF0224FF39E81FA1D5CFE503F;
-        System_Runtime_CompilerServices_RuntimeHelpers__InitializeArray_64262432(v30, v31, 0);
-        if ( *(_DWORD *)(v25 + 24) <= 1u )
+        *(_QWORD *)(v26 + 32) = v27;
+        sub_1C3E508((CGThumbnailListItem_o *)(v26 + 32), (int32_t)v27, v29, v30);
+        v31 = (System_Array_o *)sub_1C3E60C(int___TypeInfo, 8);
+        v32.fields.value = Field__PrivateImplementationDetails__FA106D01A783872947C63534621698735FDDB45CF0224FF39E81FA1D5CFE503F;
+        System_Runtime_CompilerServices_RuntimeHelpers__InitializeArray_64337244(v31, v32, 0);
+        if ( *(_DWORD *)(v26 + 24) <= 1u )
           goto LABEL_93;
-        *(_QWORD *)(v25 + 40) = v30;
-        sub_1C36FFC((CGThumbnailListItem_o *)(v25 + 40), (int32_t)v30, v32, v33);
-        v34 = (System_Array_o *)sub_1C37100(int___TypeInfo, 4);
-        v35.fields.value = Field__PrivateImplementationDetails__7697393717A78F974D3D99FBC523001D071C386C42DCBA44DF71CAE4C67AA21C;
-        v36 = v34;
-        System_Runtime_CompilerServices_RuntimeHelpers__InitializeArray_64262432(v34, v35, 0);
-        if ( *(_DWORD *)(v25 + 24) <= 2u )
+        *(_QWORD *)(v26 + 40) = v31;
+        sub_1C3E508((CGThumbnailListItem_o *)(v26 + 40), (int32_t)v31, v33, v34);
+        v35 = (System_Array_o *)sub_1C3E60C(int___TypeInfo, 4);
+        v36.fields.value = Field__PrivateImplementationDetails__7697393717A78F974D3D99FBC523001D071C386C42DCBA44DF71CAE4C67AA21C;
+        v37 = v35;
+        System_Runtime_CompilerServices_RuntimeHelpers__InitializeArray_64337244(v35, v36, 0);
+        if ( *(_DWORD *)(v26 + 24) <= 2u )
           goto LABEL_93;
-        *(_QWORD *)(v25 + 48) = v36;
-        sub_1C36FFC((CGThumbnailListItem_o *)(v25 + 48), (int32_t)v36, v37, v38);
-        v39 = (System_Array_o *)sub_1C37100(int___TypeInfo, 4);
-        v40.fields.value = Field__PrivateImplementationDetails__7697393717A78F974D3D99FBC523001D071C386C42DCBA44DF71CAE4C67AA21C;
-        v41 = v39;
-        System_Runtime_CompilerServices_RuntimeHelpers__InitializeArray_64262432(v39, v40, 0);
-        if ( *(_DWORD *)(v25 + 24) <= 3u )
+        *(_QWORD *)(v26 + 48) = v37;
+        sub_1C3E508((CGThumbnailListItem_o *)(v26 + 48), (int32_t)v37, v38, v39);
+        v40 = (System_Array_o *)sub_1C3E60C(int___TypeInfo, 4);
+        v41.fields.value = Field__PrivateImplementationDetails__7697393717A78F974D3D99FBC523001D071C386C42DCBA44DF71CAE4C67AA21C;
+        v42 = v40;
+        System_Runtime_CompilerServices_RuntimeHelpers__InitializeArray_64337244(v40, v41, 0);
+        if ( *(_DWORD *)(v26 + 24) <= 3u )
           goto LABEL_93;
-        *(_QWORD *)(v25 + 56) = v41;
-        sub_1C36FFC((CGThumbnailListItem_o *)(v25 + 56), (int32_t)v41, v42, v43);
+        *(_QWORD *)(v26 + 56) = v42;
+        sub_1C3E508((CGThumbnailListItem_o *)(v26 + 56), (int32_t)v42, v43, v44);
         static_fields = UIMeshSprite_TypeInfo->static_fields;
-        static_fields->meshPolygons = (struct System_Int32_array_array *)v25;
-        sub_1C36FFC((CGThumbnailListItem_o *)&static_fields->meshPolygons, v25, v45, v46);
-        v47 = sub_1C37100(double_____TypeInfo, 4);
-        v48 = (System_Array_o *)sub_1C37100(double___TypeInfo, 8);
-        v49.fields.value = Field__PrivateImplementationDetails__A7D34401E4A32665A44B3A0EDC41B741B897D63BD99AA951B9A422E659B956E4;
-        System_Runtime_CompilerServices_RuntimeHelpers__InitializeArray_64262432(v48, v49, 0);
-        if ( v47 )
+        static_fields->meshPolygons = (struct System_Int32_array_array *)v26;
+        sub_1C3E508((CGThumbnailListItem_o *)&static_fields->meshPolygons, v26, v46, v47);
+        v48 = sub_1C3E60C(double_____TypeInfo, 4);
+        v49 = (System_Array_o *)sub_1C3E60C(double___TypeInfo, 8);
+        v50.fields.value = Field__PrivateImplementationDetails__A7D34401E4A32665A44B3A0EDC41B741B897D63BD99AA951B9A422E659B956E4;
+        System_Runtime_CompilerServices_RuntimeHelpers__InitializeArray_64337244(v49, v50, 0);
+        if ( v48 )
         {
-          if ( !*(_DWORD *)(v47 + 24) )
+          if ( !*(_DWORD *)(v48 + 24) )
             goto LABEL_93;
-          *(_QWORD *)(v47 + 32) = v48;
-          sub_1C36FFC((CGThumbnailListItem_o *)(v47 + 32), (int32_t)v48, v50, v51);
-          v52 = (System_Array_o *)sub_1C37100(double___TypeInfo, 12);
-          v53.fields.value = Field__PrivateImplementationDetails__2EE364B28C2DF2751CBCB67FD5C712FDCCB16455384FE2153A7A1B9A39BF4E08;
-          System_Runtime_CompilerServices_RuntimeHelpers__InitializeArray_64262432(v52, v53, 0);
-          if ( *(_DWORD *)(v47 + 24) <= 1u )
+          *(_QWORD *)(v48 + 32) = v49;
+          sub_1C3E508((CGThumbnailListItem_o *)(v48 + 32), (int32_t)v49, v51, v52);
+          v53 = (System_Array_o *)sub_1C3E60C(double___TypeInfo, 12);
+          v54.fields.value = Field__PrivateImplementationDetails__2EE364B28C2DF2751CBCB67FD5C712FDCCB16455384FE2153A7A1B9A39BF4E08;
+          System_Runtime_CompilerServices_RuntimeHelpers__InitializeArray_64337244(v53, v54, 0);
+          if ( *(_DWORD *)(v48 + 24) <= 1u )
             goto LABEL_93;
-          *(_QWORD *)(v47 + 40) = v52;
-          sub_1C36FFC((CGThumbnailListItem_o *)(v47 + 40), (int32_t)v52, v54, v55);
-          v56 = (System_Array_o *)sub_1C37100(double___TypeInfo, 8);
-          v57.fields.value = Field__PrivateImplementationDetails__BFB6381577CD3F50A9C3EA1AA2779200B89E7FDCEDE42A7A76BBF94A108B4D48;
-          System_Runtime_CompilerServices_RuntimeHelpers__InitializeArray_64262432(v56, v57, 0);
-          if ( *(_DWORD *)(v47 + 24) <= 2u )
+          *(_QWORD *)(v48 + 40) = v53;
+          sub_1C3E508((CGThumbnailListItem_o *)(v48 + 40), (int32_t)v53, v55, v56);
+          v57 = (System_Array_o *)sub_1C3E60C(double___TypeInfo, 8);
+          v58.fields.value = Field__PrivateImplementationDetails__BFB6381577CD3F50A9C3EA1AA2779200B89E7FDCEDE42A7A76BBF94A108B4D48;
+          System_Runtime_CompilerServices_RuntimeHelpers__InitializeArray_64337244(v57, v58, 0);
+          if ( *(_DWORD *)(v48 + 24) <= 2u )
             goto LABEL_93;
-          *(_QWORD *)(v47 + 48) = v56;
-          sub_1C36FFC((CGThumbnailListItem_o *)(v47 + 48), (int32_t)v56, v58, v59);
-          v60 = (System_Array_o *)sub_1C37100(double___TypeInfo, 8);
-          v61.fields.value = Field__PrivateImplementationDetails__39B0CE9F8BB751D3CDA95DFF4CCBD2F76AA8BE076E08F92CD3A2CE32D7FD5D9E;
-          System_Runtime_CompilerServices_RuntimeHelpers__InitializeArray_64262432(v60, v61, 0);
-          if ( *(_DWORD *)(v47 + 24) <= 3u )
+          *(_QWORD *)(v48 + 48) = v57;
+          sub_1C3E508((CGThumbnailListItem_o *)(v48 + 48), (int32_t)v57, v59, v60);
+          v61 = (System_Array_o *)sub_1C3E60C(double___TypeInfo, 8);
+          v62.fields.value = Field__PrivateImplementationDetails__39B0CE9F8BB751D3CDA95DFF4CCBD2F76AA8BE076E08F92CD3A2CE32D7FD5D9E;
+          System_Runtime_CompilerServices_RuntimeHelpers__InitializeArray_64337244(v61, v62, 0);
+          if ( *(_DWORD *)(v48 + 24) <= 3u )
             goto LABEL_93;
-          *(_QWORD *)(v47 + 56) = v60;
-          sub_1C36FFC((CGThumbnailListItem_o *)(v47 + 56), (int32_t)v60, v62, v63);
-          v64 = UIMeshSprite_TypeInfo->static_fields;
-          v64->uvPos = (struct System_Double_array_array *)v47;
-          sub_1C36FFC((CGThumbnailListItem_o *)&v64->uvPos, v47, v65, v66);
-          v67 = sub_1C37100(int_____TypeInfo, 4);
-          v68 = (System_Array_o *)sub_1C37100(int___TypeInfo, 4);
-          v69.fields.value = Field__PrivateImplementationDetails__BAED642339816AFFB3FE8719792D0E4CE82F12DB72B7373D244EAA65445800FE;
-          System_Runtime_CompilerServices_RuntimeHelpers__InitializeArray_64262432(v68, v69, 0);
-          if ( v67 )
+          *(_QWORD *)(v48 + 56) = v61;
+          sub_1C3E508((CGThumbnailListItem_o *)(v48 + 56), (int32_t)v61, v63, v64);
+          v65 = UIMeshSprite_TypeInfo->static_fields;
+          v65->uvPos = (struct System_Double_array_array *)v48;
+          sub_1C3E508((CGThumbnailListItem_o *)&v65->uvPos, v48, v66, v67);
+          v68 = sub_1C3E60C(int_____TypeInfo, 4);
+          v69 = (System_Array_o *)sub_1C3E60C(int___TypeInfo, 4);
+          v70.fields.value = Field__PrivateImplementationDetails__BAED642339816AFFB3FE8719792D0E4CE82F12DB72B7373D244EAA65445800FE;
+          System_Runtime_CompilerServices_RuntimeHelpers__InitializeArray_64337244(v69, v70, 0);
+          if ( v68 )
           {
-            if ( !*(_DWORD *)(v67 + 24) )
+            if ( !*(_DWORD *)(v68 + 24) )
               goto LABEL_93;
-            *(_QWORD *)(v67 + 32) = v68;
-            sub_1C36FFC((CGThumbnailListItem_o *)(v67 + 32), (int32_t)v68, v70, v71);
-            v72 = (System_Array_o *)sub_1C37100(int___TypeInfo, 8);
-            v73.fields.value = Field__PrivateImplementationDetails__8B30583BA1D630C1FD8BC2C781FC5CFD0D44EE537275F60F4BCC1CB95F36790E;
-            System_Runtime_CompilerServices_RuntimeHelpers__InitializeArray_64262432(v72, v73, 0);
-            if ( *(_DWORD *)(v67 + 24) <= 1u )
+            *(_QWORD *)(v68 + 32) = v69;
+            sub_1C3E508((CGThumbnailListItem_o *)(v68 + 32), (int32_t)v69, v71, v72);
+            v73 = (System_Array_o *)sub_1C3E60C(int___TypeInfo, 8);
+            v74.fields.value = Field__PrivateImplementationDetails__8B30583BA1D630C1FD8BC2C781FC5CFD0D44EE537275F60F4BCC1CB95F36790E;
+            System_Runtime_CompilerServices_RuntimeHelpers__InitializeArray_64337244(v73, v74, 0);
+            if ( *(_DWORD *)(v68 + 24) <= 1u )
               goto LABEL_93;
-            *(_QWORD *)(v67 + 40) = v72;
-            sub_1C36FFC((CGThumbnailListItem_o *)(v67 + 40), (int32_t)v72, v74, v75);
-            v76 = (System_Array_o *)sub_1C37100(int___TypeInfo, 4);
-            v77.fields.value = Field__PrivateImplementationDetails__BAED642339816AFFB3FE8719792D0E4CE82F12DB72B7373D244EAA65445800FE;
-            v78 = v76;
-            System_Runtime_CompilerServices_RuntimeHelpers__InitializeArray_64262432(v76, v77, 0);
-            if ( *(_DWORD *)(v67 + 24) <= 2u )
+            *(_QWORD *)(v68 + 40) = v73;
+            sub_1C3E508((CGThumbnailListItem_o *)(v68 + 40), (int32_t)v73, v75, v76);
+            v77 = (System_Array_o *)sub_1C3E60C(int___TypeInfo, 4);
+            v78.fields.value = Field__PrivateImplementationDetails__BAED642339816AFFB3FE8719792D0E4CE82F12DB72B7373D244EAA65445800FE;
+            v79 = v77;
+            System_Runtime_CompilerServices_RuntimeHelpers__InitializeArray_64337244(v77, v78, 0);
+            if ( *(_DWORD *)(v68 + 24) <= 2u )
               goto LABEL_93;
-            *(_QWORD *)(v67 + 48) = v78;
-            sub_1C36FFC((CGThumbnailListItem_o *)(v67 + 48), (int32_t)v78, v79, v80);
-            v81 = (System_Array_o *)sub_1C37100(int___TypeInfo, 4);
-            v82.fields.value = Field__PrivateImplementationDetails__BAED642339816AFFB3FE8719792D0E4CE82F12DB72B7373D244EAA65445800FE;
-            v83 = v81;
-            System_Runtime_CompilerServices_RuntimeHelpers__InitializeArray_64262432(v81, v82, 0);
-            if ( *(_DWORD *)(v67 + 24) <= 3u )
+            *(_QWORD *)(v68 + 48) = v79;
+            sub_1C3E508((CGThumbnailListItem_o *)(v68 + 48), (int32_t)v79, v80, v81);
+            v82 = (System_Array_o *)sub_1C3E60C(int___TypeInfo, 4);
+            v83.fields.value = Field__PrivateImplementationDetails__BAED642339816AFFB3FE8719792D0E4CE82F12DB72B7373D244EAA65445800FE;
+            v84 = v82;
+            System_Runtime_CompilerServices_RuntimeHelpers__InitializeArray_64337244(v82, v83, 0);
+            if ( *(_DWORD *)(v68 + 24) <= 3u )
               goto LABEL_93;
-            *(_QWORD *)(v67 + 56) = v83;
-            sub_1C36FFC((CGThumbnailListItem_o *)(v67 + 56), (int32_t)v83, v84, v85);
-            v86 = UIMeshSprite_TypeInfo->static_fields;
-            v86->uvIndex = (struct System_Int32_array_array *)v67;
-            sub_1C36FFC((CGThumbnailListItem_o *)&v86->uvIndex, v67, v87, v88);
-            v89 = UIMeshSprite_TypeInfo->static_fields;
-            meshPolygons = v89->meshPolygons;
+            *(_QWORD *)(v68 + 56) = v84;
+            sub_1C3E508((CGThumbnailListItem_o *)(v68 + 56), (int32_t)v84, v85, v86);
+            v87 = UIMeshSprite_TypeInfo->static_fields;
+            v87->uvIndex = (struct System_Int32_array_array *)v68;
+            sub_1C3E508((CGThumbnailListItem_o *)&v87->uvIndex, v68, v88, v89);
+            v90 = UIMeshSprite_TypeInfo->static_fields;
+            meshPolygons = v90->meshPolygons;
             if ( meshPolygons )
             {
               max_length = meshPolygons->max_length;
-              v92 = 0;
+              v93 = 0;
               while ( 1 )
               {
-                if ( v92 >= max_length )
+                if ( v93 >= max_length )
                   goto LABEL_93;
-                v93 = (int32x2_t *)meshPolygons->m_Items[v92];
-                if ( !v93 )
+                v94 = (int32x2_t *)meshPolygons->m_Items[v93];
+                if ( !v94 )
                   break;
-                v94 = v93[3].n64_u64[0];
-                if ( (int)v94 >= 1 )
+                v95 = v94[3].n64_u64[0];
+                if ( (int)v95 >= 1 )
                 {
-                  v95 = v93 + 4;
-                  v96 = (unsigned int)v94;
-                  v97 = v95;
+                  v96 = v94 + 4;
+                  v97 = (unsigned int)v95;
+                  v98 = v96;
                   do
                   {
-                    if ( (v97->n64_u32[0] & 0x80000000) != 0 )
-                      v97->n64_u32[0] = ~v97->n64_u32[0];
-                    --v96;
-                    v97 = (int32x2_t *)((char *)v97 + 4);
+                    if ( (v98->n64_u32[0] & 0x80000000) != 0 )
+                      v98->n64_u32[0] = ~v98->n64_u32[0];
+                    --v97;
+                    v98 = (int32x2_t *)((char *)v98 + 4);
                   }
-                  while ( v96 );
-                  if ( (int)v94 >= 2 )
+                  while ( v97 );
+                  if ( (int)v95 >= 2 )
                   {
-                    v98 = (unsigned int)v94;
-                    v99 = 0;
-                    v100 = 2LL * ((unsigned int)v94 >> 1);
+                    v99 = (unsigned int)v95;
+                    v100 = 0;
+                    v101 = 2LL * ((unsigned int)v95 >> 1);
                     do
                     {
-                      if ( v99 >= v98 || v99 + 1 >= v98 )
+                      if ( v100 >= v99 || v100 + 1 >= v99 )
                         goto LABEL_93;
-                      v99 += 2LL;
-                      v95->n64_u64[0] = vrev64_s32((int32x2_t)v95->n64_u64[0]).n64_u64[0];
-                      ++v95;
+                      v100 += 2LL;
+                      v96->n64_u64[0] = vrev64_s32((int32x2_t)v96->n64_u64[0]).n64_u64[0];
+                      ++v96;
                     }
-                    while ( v100 != v99 );
+                    while ( v101 != v100 );
                   }
                 }
-                uvIndex = v89->uvIndex;
+                uvIndex = v90->uvIndex;
                 if ( !uvIndex )
                   break;
-                if ( v92 >= LODWORD(uvIndex->max_length) )
+                if ( v93 >= LODWORD(uvIndex->max_length) )
                   goto LABEL_93;
-                v102 = (int32x2_t *)uvIndex->m_Items[v92];
-                if ( !v102 )
+                v103 = (int32x2_t *)uvIndex->m_Items[v93];
+                if ( !v103 )
                   break;
-                v103 = v102[3].n64_u64[0];
-                if ( (int)v103 >= 2 )
+                v104 = v103[3].n64_u64[0];
+                if ( (int)v104 >= 2 )
                 {
-                  v104 = (unsigned int)v102[3].n64_u64[0];
-                  v105 = 0;
-                  v106 = v102 + 4;
-                  v107 = 2LL * ((unsigned int)v103 >> 1);
+                  v105 = (unsigned int)v103[3].n64_u64[0];
+                  v106 = 0;
+                  v107 = v103 + 4;
+                  v108 = 2LL * ((unsigned int)v104 >> 1);
                   do
                   {
-                    if ( v105 >= v104 || v105 + 1 >= v104 )
+                    if ( v106 >= v105 || v106 + 1 >= v105 )
                       goto LABEL_93;
-                    v105 += 2LL;
-                    v106->n64_u64[0] = vrev64_s32((int32x2_t)v106->n64_u64[0]).n64_u64[0];
-                    ++v106;
+                    v106 += 2LL;
+                    v107->n64_u64[0] = vrev64_s32((int32x2_t)v107->n64_u64[0]).n64_u64[0];
+                    ++v107;
                   }
-                  while ( v107 != v105 );
+                  while ( v108 != v106 );
                 }
-                if ( ++v92 == 4 )
+                if ( ++v93 == 4 )
                 {
-                  v108 = sub_1C37100(UnityEngine_Vector3_____TypeInfo, 4);
-                  v109 = UIMeshSprite_TypeInfo->static_fields;
-                  v109->sprMeshVert = (struct UnityEngine_Vector3_array_array *)v108;
-                  sub_1C36FFC((CGThumbnailListItem_o *)&v109->sprMeshVert, v108, v110, v111);
-                  v112 = sub_1C37100(UnityEngine_Vector2_____TypeInfo, 4);
-                  v113 = UIMeshSprite_TypeInfo->static_fields;
-                  v113->sprMeshUv = (struct UnityEngine_Vector2_array_array *)v112;
-                  sub_1C36FFC((CGThumbnailListItem_o *)&v113->sprMeshUv, v112, v114, v115);
-                  v116 = 0;
+                  v109 = sub_1C3E60C(UnityEngine_Vector3_____TypeInfo, 4);
+                  v110 = UIMeshSprite_TypeInfo->static_fields;
+                  v110->sprMeshVert = (struct UnityEngine_Vector3_array_array *)v109;
+                  sub_1C3E508((CGThumbnailListItem_o *)&v110->sprMeshVert, v109, v111, v112);
+                  v113 = sub_1C3E60C(UnityEngine_Vector2_____TypeInfo, 4);
+                  v114 = UIMeshSprite_TypeInfo->static_fields;
+                  v114->sprMeshUv = (struct UnityEngine_Vector2_array_array *)v113;
+                  sub_1C3E508((CGThumbnailListItem_o *)&v114->sprMeshUv, v113, v115, v116);
+                  v117 = 0;
                   while ( 1 )
                   {
-                    v117 = UIMeshSprite_TypeInfo->static_fields;
-                    meshVertices = v117->meshVertices;
-                    if ( !v117->meshVertices )
+                    v118 = UIMeshSprite_TypeInfo->static_fields;
+                    meshVertices = v118->meshVertices;
+                    if ( !v118->meshVertices )
                       goto LABEL_94;
-                    if ( v116 >= LODWORD(meshVertices->max_length) )
+                    if ( v117 >= LODWORD(meshVertices->max_length) )
                       goto LABEL_93;
-                    uvPos = v117->uvPos;
+                    uvPos = v118->uvPos;
                     if ( !uvPos )
                       goto LABEL_94;
-                    if ( v116 >= LODWORD(uvPos->max_length) )
+                    if ( v117 >= LODWORD(uvPos->max_length) )
                       goto LABEL_93;
-                    v120 = meshVertices->m_Items[v116];
-                    if ( !v120 )
+                    v121 = meshVertices->m_Items[v117];
+                    if ( !v121 )
                       goto LABEL_94;
-                    v121 = uvPos->m_Items[v116];
-                    v6 = sub_1C37100(UnityEngine_Vector3___TypeInfo, (unsigned int)(SLODWORD(v120->max_length) / 3));
+                    v122 = uvPos->m_Items[v117];
+                    v6 = sub_1C3E60C(UnityEngine_Vector3___TypeInfo, (unsigned int)(SLODWORD(v121->max_length) / 3));
                     if ( !v6 )
                       goto LABEL_94;
-                    v122 = v6;
+                    v123 = v6;
                     if ( (int)*(_QWORD *)(v6 + 24) >= 1 )
                       break;
 LABEL_61:
-                    if ( !v121 )
+                    if ( !v122 )
                       goto LABEL_94;
-                    v6 = sub_1C37100(UnityEngine_Vector2___TypeInfo, (unsigned int)(SLODWORD(v121->max_length) / 2));
+                    v6 = sub_1C3E60C(UnityEngine_Vector2___TypeInfo, (unsigned int)(SLODWORD(v122->max_length) / 2));
                     if ( !v6 )
                       goto LABEL_94;
-                    v135 = v6;
+                    v136 = v6;
                     if ( (int)*(_QWORD *)(v6 + 24) >= 1 )
                     {
-                      v136 = 0;
                       v137 = 0;
-                      v138 = (unsigned int)*(_QWORD *)(v6 + 24);
-                      v139 = -1;
+                      v138 = 0;
+                      v139 = (unsigned int)*(_QWORD *)(v6 + 24);
+                      v140 = -1;
                       do
                       {
-                        max_length_low = LODWORD(v121->max_length);
-                        if ( v139 + 1 >= max_length_low )
+                        max_length_low = LODWORD(v122->max_length);
+                        if ( v140 + 1 >= max_length_low )
                           goto LABEL_93;
-                        v139 += 2LL;
-                        if ( v139 >= max_length_low || v137 >= v138 )
+                        v140 += 2LL;
+                        if ( v140 >= max_length_low || v138 >= v139 )
                           goto LABEL_93;
-                        v141 = *(float64x2_t *)((char *)v121->m_Items + (v136 >> 29));
-                        v136 += 0x200000000LL;
-                        v142 = v138 == v137 + 1;
-                        *(float32x2_t *)(v6 + 32 + 8 * v137++) = vcvt_f32_f64(v141);
+                        v142 = *(float64x2_t *)((char *)v122->m_Items + (v137 >> 29));
+                        v137 += 0x200000000LL;
+                        v143 = v139 == v138 + 1;
+                        *(float32x2_t *)(v6 + 32 + 8 * v138++) = vcvt_f32_f64(v142);
                       }
-                      while ( !v142 );
+                      while ( !v143 );
                     }
-                    v143 = *(_QWORD *)(v122 + 24);
-                    if ( (int)v143 >= 1 )
+                    v144 = *(_QWORD *)(v123 + 24);
+                    if ( (int)v144 >= 1 )
                     {
-                      v144 = (unsigned int)*(_QWORD *)(v122 + 24);
-                      v145.n64_u32[0] = 1148846080;
-                      v146 = 0;
-                      v147 = (float *)(v122 + 36);
-                      v133.n64_u32[0] = 0;
-                      v148 = 1000.0;
-                      v149 = 0.0;
+                      v145 = (unsigned int)*(_QWORD *)(v123 + 24);
+                      v146.n64_u32[0] = 1148846080;
+                      v147 = 0;
+                      v148 = (float *)(v123 + 36);
+                      v134.n64_u32[0] = 0;
+                      v149 = 1000.0;
+                      v150 = 0.0;
                       do
                       {
-                        if ( v144 == v146 )
+                        if ( v145 == v147 )
                           goto LABEL_93;
-                        *(float *)&v134 = *(v147 - 1);
-                        if ( *(float *)&v134 >= v145.n64_f32[0] )
+                        *(float *)&v135 = *(v148 - 1);
+                        if ( *(float *)&v135 >= v146.n64_f32[0] )
                         {
-                          if ( *(float *)&v134 > v133.n64_f32[0] )
-                            v133.n64_u64[0] = v134;
+                          if ( *(float *)&v135 > v134.n64_f32[0] )
+                            v134.n64_u64[0] = v135;
                         }
                         else
                         {
-                          v145.n64_f32[0] = *(v147 - 1);
+                          v146.n64_f32[0] = *(v148 - 1);
                         }
-                        if ( *v147 >= v148 )
+                        if ( *v148 >= v149 )
                         {
-                          if ( *v147 > v149 )
-                            v149 = *v147;
+                          if ( *v148 > v150 )
+                            v150 = *v148;
                         }
                         else
                         {
-                          v148 = *v147;
+                          v149 = *v148;
                         }
-                        ++v146;
-                        v147 += 3;
+                        ++v147;
+                        v148 += 3;
                       }
-                      while ( v146 < (int)v143 );
-                      v133.n64_f32[0] = v133.n64_f32[0] - v145.n64_f32[0];
-                      v150 = v149 - v148;
-                      if ( v133.n64_f32[0] < v150 )
-                        v133.n64_f32[0] = v150;
-                      v151 = 0;
-                      v145.n64_f32[1] = v148;
-                      v152.n64_u64[0] = vdup_lane_s32(v133, 0).n64_u64[0];
-                      v153 = (float *)(v122 + 40);
-                      while ( v151 < v144 )
+                      while ( v147 < (int)v144 );
+                      v134.n64_f32[0] = v134.n64_f32[0] - v146.n64_f32[0];
+                      v151 = v150 - v149;
+                      if ( v134.n64_f32[0] < v151 )
+                        v134.n64_f32[0] = v151;
+                      v152 = 0;
+                      v146.n64_f32[1] = v149;
+                      v153.n64_u64[0] = vdup_lane_s32(v134, 0).n64_u64[0];
+                      v154 = (float *)(v123 + 40);
+                      while ( v152 < v145 )
                       {
-                        ++v151;
-                        v154 = (float)(*v153 + 0.0) / v133.n64_f32[0];
-                        *((float32x2_t *)v153 - 1) = vdiv_f32(vsub_f32(*(float32x2_t *)(v153 - 2), v145), v152);
-                        *v153 = v154;
-                        v153 += 3;
-                        if ( v144 == v151 )
+                        ++v152;
+                        v155 = (float)(*v154 + 0.0) / v134.n64_f32[0];
+                        *((float32x2_t *)v154 - 1) = vdiv_f32(vsub_f32(*(float32x2_t *)(v154 - 2), v146), v153);
+                        *v154 = v155;
+                        v154 += 3;
+                        if ( v145 == v152 )
                           goto LABEL_87;
                       }
                       goto LABEL_93;
@@ -523,45 +524,45 @@ LABEL_87:
                     sprMeshVert = UIMeshSprite_TypeInfo->static_fields->sprMeshVert;
                     if ( !sprMeshVert )
                       goto LABEL_94;
-                    if ( v116 >= LODWORD(sprMeshVert->max_length) )
+                    if ( v117 >= LODWORD(sprMeshVert->max_length) )
                       goto LABEL_93;
-                    v156 = &sprMeshVert->obj.klass + (int)v116;
-                    v156[4] = (Il2CppClass *)v122;
-                    sub_1C36FFC((CGThumbnailListItem_o *)(v156 + 4), v122, v131, v132);
+                    v157 = &sprMeshVert->obj.klass + (int)v117;
+                    v157[4] = (Il2CppClass *)v123;
+                    sub_1C3E508((CGThumbnailListItem_o *)(v157 + 4), v123, v132, v133);
                     sprMeshUv = UIMeshSprite_TypeInfo->static_fields->sprMeshUv;
                     if ( !sprMeshUv )
                       goto LABEL_94;
-                    if ( v116 >= LODWORD(sprMeshUv->max_length) )
+                    if ( v117 >= LODWORD(sprMeshUv->max_length) )
                       goto LABEL_93;
-                    v160 = &sprMeshUv->obj.klass + (int)v116;
-                    v160[4] = (Il2CppClass *)v135;
-                    sub_1C36FFC((CGThumbnailListItem_o *)(v160 + 4), v135, v157, v158);
-                    if ( ++v116 == 4 )
+                    v161 = &sprMeshUv->obj.klass + (int)v117;
+                    v161[4] = (Il2CppClass *)v136;
+                    sub_1C3E508((CGThumbnailListItem_o *)(v161 + 4), v136, v158, v159);
+                    if ( ++v117 == 4 )
                       goto LABEL_92;
                   }
-                  v123 = 0;
                   v124 = 0;
-                  v125 = (unsigned int)*(_QWORD *)(v6 + 24);
-                  v126 = (float *)(v6 + 40);
+                  v125 = 0;
+                  v126 = (unsigned int)*(_QWORD *)(v6 + 24);
+                  v127 = (float *)(v6 + 40);
                   while ( 1 )
                   {
-                    v127 = v120->max_length;
-                    if ( v123 >= v127 || v123 + 1 >= v127 || v123 + 2 >= v127 || v124 >= v125 )
+                    v128 = v121->max_length;
+                    if ( v124 >= v128 || v124 + 1 >= v128 || v124 + 2 >= v128 || v125 >= v126 )
                       break;
-                    ++v124;
-                    v128 = v120->m_Items[v123 + 2];
-                    v129 = v120->m_Items[v123 + 1];
-                    v130 = v120->m_Items[v123];
-                    v123 += 3;
-                    *(v126 - 2) = v130;
-                    *(v126 - 1) = v129;
-                    *v126 = v128;
-                    v126 += 3;
-                    if ( v125 == v124 )
+                    ++v125;
+                    v129 = v121->m_Items[v124 + 2];
+                    v130 = v121->m_Items[v124 + 1];
+                    v131 = v121->m_Items[v124];
+                    v124 += 3;
+                    *(v127 - 2) = v131;
+                    *(v127 - 1) = v130;
+                    *v127 = v129;
+                    v127 += 3;
+                    if ( v126 == v125 )
                       goto LABEL_61;
                   }
 LABEL_93:
-                  sub_1C372BC(v6);
+                  sub_1C3E7C8(v6, v7);
                 }
               }
             }
@@ -570,7 +571,7 @@ LABEL_93:
       }
     }
 LABEL_94:
-    sub_1C372B4(v6);
+    sub_1C3E7C0(v6, v7);
   }
 LABEL_92:
   this->fields.isEndInitialize = 1;
@@ -587,45 +588,46 @@ void UIMeshSprite__OnFill(
 {
   UnityEngine_Object_o *v9; // x23
   UIAtlas_o *mAtlas; // x0
+  __int64 v11; // x1
   struct UISpriteData_o *mSprite; // x8
   struct UISpriteData_o *Sprite; // x0
-  int32_t v13; // w2
-  const MethodInfo *v14; // x3
+  int32_t v14; // w2
+  const MethodInfo *v15; // x3
   int width; // w11
   int height; // w12
   int32_t borderTop; // w13
   int x; // w9
   int y; // w10
   int32_t borderLeft; // w15
-  float v21; // s8
-  float v22; // s9
-  float v23; // s12
-  float v24; // s13
-  float v25; // s14
-  float v26; // s15
-  float v27; // s10
-  float v28; // s11
-  int32_t v29; // w24
-  int32_t v30; // w0
+  float v22; // s8
+  float v23; // s9
+  float v24; // s12
+  float v25; // s13
+  float v26; // s14
+  float v27; // s15
+  float v28; // s10
+  float v29; // s11
+  int32_t v30; // w24
+  int32_t v31; // w0
   float m_XMin; // s8
   float m_YMin; // s9
   float m_Width; // s10
   float m_Height; // s11
-  int32_t v35; // w24
-  int32_t v36; // w0
-  const MethodInfo *v37; // x4
-  int v38; // s4 OVERLAPPED
+  int32_t v36; // w24
+  int32_t v37; // w0
+  const MethodInfo *v38; // x4
+  int v39; // s4 OVERLAPPED
   unsigned int size; // w23
   struct UIWidget_OnPostFillCallback_o *onPostFill; // x8
-  UnityEngine_Rect_o v44; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
   UnityEngine_Rect_o v45; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
   UnityEngine_Rect_o v46; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
   UnityEngine_Rect_o v47; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
+  UnityEngine_Rect_o v48; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 
-  if ( (byte_4C44892 & 1) == 0 )
+  if ( (byte_4C5865D & 1) == 0 )
   {
-    sub_1C37058(&UnityEngine_Object_TypeInfo);
-    byte_4C44892 = 1;
+    sub_1C3E564(&UnityEngine_Object_TypeInfo);
+    byte_4C5865D = 1;
   }
   v9 = (UnityEngine_Object_o *)((__int64 (__fastcall *)(UIMeshSprite_o *, const MethodInfo *, BetterList_Vector2__o *, BetterList_Color32__o *, const MethodInfo *))this->klass->vtable._26_get_mainTexture.methodPtr)(
                                  this,
@@ -646,7 +648,7 @@ void UIMeshSprite__OnFill(
         goto LABEL_14;
       Sprite = UIAtlas__GetSprite(mAtlas, this->fields.mSpriteName, 0);
       this->fields.mSprite = Sprite;
-      sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.mSprite, (int32_t)Sprite, v13, v14);
+      sub_1C3E508((CGThumbnailListItem_o *)&this->fields.mSprite, (int32_t)Sprite, v14, v15);
       mSprite = this->fields.mSprite;
       if ( !mSprite )
         return;
@@ -659,44 +661,44 @@ void UIMeshSprite__OnFill(
       x = mSprite->fields.x;
       y = mSprite->fields.y;
       borderLeft = mSprite->fields.borderLeft;
-      v21 = (float)height;
-      v22 = (float)width;
-      v23 = (float)(borderTop + y);
-      v24 = (float)(borderLeft + x);
-      v25 = (float)(height - borderTop - mSprite->fields.borderBottom);
-      v26 = (float)(width - borderLeft - mSprite->fields.borderRight);
-      v27 = (float)y;
-      v28 = (float)x;
-      v29 = ((__int64 (__fastcall *)(UnityEngine_Object_o *, void *))v9->klass[1]._1.image)(v9, v9->klass[1]._1.gc_desc);
-      v30 = ((__int64 (__fastcall *)(UnityEngine_Object_o *, _QWORD))v9->klass[1]._1.byval_arg.data)(
+      v22 = (float)height;
+      v23 = (float)width;
+      v24 = (float)(borderTop + y);
+      v25 = (float)(borderLeft + x);
+      v26 = (float)(height - borderTop - mSprite->fields.borderBottom);
+      v27 = (float)(width - borderLeft - mSprite->fields.borderRight);
+      v28 = (float)y;
+      v29 = (float)x;
+      v30 = ((__int64 (__fastcall *)(UnityEngine_Object_o *, void *))v9->klass[1]._1.image)(v9, v9->klass[1]._1.gc_desc);
+      v31 = ((__int64 (__fastcall *)(UnityEngine_Object_o *, _QWORD))v9->klass[1]._1.byval_arg.data)(
               v9,
               *(_QWORD *)&v9->klass[1]._1.byval_arg.bits);
-      v44.fields.m_XMin = v28;
-      v44.fields.m_YMin = v27;
-      v44.fields.m_Width = v22;
-      v44.fields.m_Height = v21;
-      v45 = NGUIMath__ConvertToTexCoords(v44, v29, v30, 0);
-      m_XMin = v45.fields.m_XMin;
-      m_YMin = v45.fields.m_YMin;
-      m_Width = v45.fields.m_Width;
-      m_Height = v45.fields.m_Height;
-      v35 = ((__int64 (__fastcall *)(UnityEngine_Object_o *, void *))v9->klass[1]._1.image)(v9, v9->klass[1]._1.gc_desc);
-      v36 = ((__int64 (__fastcall *)(UnityEngine_Object_o *, _QWORD))v9->klass[1]._1.byval_arg.data)(
+      v45.fields.m_XMin = v29;
+      v45.fields.m_YMin = v28;
+      v45.fields.m_Width = v23;
+      v45.fields.m_Height = v22;
+      v46 = NGUIMath__ConvertToTexCoords(v45, v30, v31, 0);
+      m_XMin = v46.fields.m_XMin;
+      m_YMin = v46.fields.m_YMin;
+      m_Width = v46.fields.m_Width;
+      m_Height = v46.fields.m_Height;
+      v36 = ((__int64 (__fastcall *)(UnityEngine_Object_o *, void *))v9->klass[1]._1.image)(v9, v9->klass[1]._1.gc_desc);
+      v37 = ((__int64 (__fastcall *)(UnityEngine_Object_o *, _QWORD))v9->klass[1]._1.byval_arg.data)(
               v9,
               *(_QWORD *)&v9->klass[1]._1.byval_arg.bits);
-      v46.fields.m_XMin = v24;
-      v46.fields.m_YMin = v23;
-      v46.fields.m_Width = v26;
-      v46.fields.m_Height = v25;
-      NGUIMath__ConvertToTexCoords(v46, v35, v36, 0);
+      v47.fields.m_XMin = v25;
+      v47.fields.m_YMin = v24;
+      v47.fields.m_Width = v27;
+      v47.fields.m_Height = v26;
+      NGUIMath__ConvertToTexCoords(v47, v36, v37, 0);
       if ( verts )
       {
         size = verts->fields.size;
-        v47.fields.m_XMin = m_XMin;
-        v47.fields.m_YMin = m_YMin;
-        v47.fields.m_Width = m_Width;
-        v47.fields.m_Height = m_Height;
-        UIMeshSprite__RotFill(this, verts, uvs, cols, v47, *(UnityEngine_Rect_o *)&v38, v37);
+        v48.fields.m_XMin = m_XMin;
+        v48.fields.m_YMin = m_YMin;
+        v48.fields.m_Width = m_Width;
+        v48.fields.m_Height = m_Height;
+        UIMeshSprite__RotFill(this, verts, uvs, cols, v48, *(UnityEngine_Rect_o *)&v39, v38);
         onPostFill = this->fields.onPostFill;
         if ( onPostFill )
           ((void (__fastcall *)(intptr_t, UIMeshSprite_o *, _QWORD, BetterList_Vector3__o *, BetterList_Vector2__o *, BetterList_Color32__o *, intptr_t))onPostFill->fields.invoke_impl)(
@@ -711,7 +713,7 @@ void UIMeshSprite__OnFill(
       }
     }
 LABEL_14:
-    sub_1C372B4(mAtlas);
+    sub_1C3E7C0(mAtlas, v11);
   }
 }
 
@@ -780,13 +782,13 @@ void UIMeshSprite__RotFill(
   m_Width = outer.fields.m_Width;
   m_YMin = outer.fields.m_YMin;
   m_XMin = outer.fields.m_XMin;
-  if ( (byte_4C44893 & 1) == 0 )
+  if ( (byte_4C5865E & 1) == 0 )
   {
-    sub_1C37058(&Method_BetterList_Vector3__Add__);
-    sub_1C37058(&Method_BetterList_Color32__Add__);
-    sub_1C37058(&Method_BetterList_Vector2__Add__);
-    sub_1C37058(&UIMeshSprite_TypeInfo);
-    byte_4C44893 = 1;
+    sub_1C3E564(&Method_BetterList_Vector3__Add__);
+    sub_1C3E564(&Method_BetterList_Color32__Add__);
+    sub_1C3E564(&Method_BetterList_Vector2__Add__);
+    sub_1C3E564(&UIMeshSprite_TypeInfo);
+    byte_4C5865E = 1;
   }
   klass = this->klass;
   this->fields.mOuterUV.fields.m_XMin = m_XMin;
@@ -842,11 +844,11 @@ void UIMeshSprite__RotFill(
     goto LABEL_30;
   if ( (unsigned int)meshType >= LODWORD(sprMeshUv->max_length) )
 LABEL_28:
-    ((void (__fastcall __noreturn *)(_QWORD))sub_1C372BC)(drawingColor);
+    sub_1C3E7C8(drawingColor, v29);
   v37 = meshPolygons->m_Items[meshType];
   if ( !v37 )
 LABEL_30:
-    ((void (__fastcall __noreturn *)(_QWORD))sub_1C372B4)(drawingColor);
+    sub_1C3E7C0(drawingColor, v29);
   max_length = v37->max_length;
   if ( (int)max_length >= 1 )
   {
@@ -882,16 +884,16 @@ LABEL_30:
       v53 = *(float *)(v51 + 36);
       v59.fields.x = v57 + (float)(v44 * *(float *)(v50 + 32));
       v59.fields.z = 0.0;
-      BetterList_Vector3___Add(verts, v59, (const MethodInfo_331BD14 *)Method_BetterList_Vector3__Add__);
+      BetterList_Vector3___Add(verts, v59, (const MethodInfo_332DBCC *)Method_BetterList_Vector3__Add__);
       if ( !uvs )
         break;
       v58.fields.y = y + (float)(v45 * v53);
       v58.fields.x = x + (float)(v46 * v52);
-      BetterList_Vector2___Add(uvs, v58, (const MethodInfo_331B288 *)Method_BetterList_Vector2__Add__);
+      BetterList_Vector2___Add(uvs, v58, (const MethodInfo_332D140 *)Method_BetterList_Vector2__Add__);
       if ( !cols )
         break;
       v54 = (UnityEngine_Color32_o)rgba;
-      BetterList_Color32___Add(cols, v54, (const MethodInfo_3318D3C *)Method_BetterList_Color32__Add__);
+      BetterList_Color32___Add(cols, v54, (const MethodInfo_332ABF4 *)Method_BetterList_Color32__Add__);
       if ( (_DWORD)max_length == v47 )
         return;
       v43 = v47;
@@ -916,10 +918,10 @@ UnityEngine_Color32_o UIMeshSprite__get_drawingColor(UIMeshSprite_o *this, const
   UnityEngine_Color_o v12; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
   long double v13; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4 OVERLAPPED
 
-  if ( (byte_4C44891 & 1) == 0 )
+  if ( (byte_4C5865C & 1) == 0 )
   {
-    sub_1C37058(&NGUITools_TypeInfo);
-    byte_4C44891 = 1;
+    sub_1C3E564(&NGUITools_TypeInfo);
+    byte_4C5865C = 1;
   }
   *(float *)&v4 = this->fields.mColor.fields.g;
   *(float *)&v3 = this->fields.mColor.fields.b;
@@ -951,7 +953,7 @@ UnityEngine_Color32_o UIMeshSprite__get_drawingColor(UIMeshSprite_o *this, const
     *(float *)&v9 = powf(*(float *)&v3, 2.2);
     v3 = v9;
   }
-  return (UnityEngine_Color32_o)(unsigned int)sub_2526688(0, v5, v4, v3, v2);
+  return (UnityEngine_Color32_o)(unsigned int)sub_2531AB4(0, v5, v4, v3, v2);
 }
 
 

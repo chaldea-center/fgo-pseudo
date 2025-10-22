@@ -4,23 +4,24 @@ void WarBoardBossBattleData___ctor(WarBoardBossBattleData_o *this, const MethodI
 }
 
 
-void WarBoardBossBattleData___ctor_37920764(
+void WarBoardBossBattleData___ctor_37965568(
         WarBoardBossBattleData_o *this,
         WarBoardBossBattleData_SaveData_o *bossBattleData,
         const MethodInfo *method)
 {
   __int64 v5; // x0
-  int32_t v6; // w2
-  const MethodInfo *v7; // x3
+  __int64 v6; // x1
+  int32_t v7; // w2
+  const MethodInfo *v8; // x3
   struct System_Collections_Generic_Dictionary_string__object__o *script; // x1
 
   System_Object___ctor((Il2CppObject *)this, 0);
   if ( !bossBattleData )
-    sub_1C372B4(v5);
+    sub_1C3E7C0(v5, v6);
   *(_QWORD *)&this->fields.bossIdx = *(_QWORD *)&bossBattleData->fields.bossIdx;
   script = bossBattleData->fields.script;
   this->fields.script = script;
-  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.script, (int32_t)script, v6, v7);
+  sub_1C3E508((CGThumbnailListItem_o *)&this->fields.script, (int32_t)script, v7, v8);
 }
 
 
@@ -35,25 +36,26 @@ void WarBoardBossBattleData_SaveData___ctor(WarBoardBossBattleData_SaveData_o *t
   v2->fields.script = 0;
   v2 = (WarBoardBossBattleData_SaveData_o *)((char *)v2 + 24);
   v2[-1].fields.script = 0;
-  sub_1C36FFC((CGThumbnailListItem_o *)v2, 0, v3, v4);
+  sub_1C3E508((CGThumbnailListItem_o *)v2, 0, v3, v4);
 }
 
 
-void WarBoardBossBattleData_SaveData___ctor_37920868(
+void WarBoardBossBattleData_SaveData___ctor_37965672(
         WarBoardBossBattleData_SaveData_o *this,
         WarBoardBossBattleData_o *bossBattleData,
         const MethodInfo *method)
 {
   __int64 v5; // x0
-  int32_t v6; // w2
-  const MethodInfo *v7; // x3
+  __int64 v6; // x1
+  int32_t v7; // w2
+  const MethodInfo *v8; // x3
   struct System_Collections_Generic_Dictionary_string__object__o *script; // x1
 
   System_Object___ctor((Il2CppObject *)this, 0);
   if ( !bossBattleData )
-    sub_1C372B4(v5);
+    sub_1C3E7C0(v5, v6);
   *(_QWORD *)&this->fields.bossIdx = *(_QWORD *)&bossBattleData->fields.bossIdx;
   script = bossBattleData->fields.script;
   this->fields.script = script;
-  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.script, (int32_t)script, v6, v7);
+  sub_1C3E508((CGThumbnailListItem_o *)&this->fields.script, (int32_t)script, v7, v8);
 }

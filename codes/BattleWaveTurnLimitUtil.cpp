@@ -5,11 +5,11 @@ void BattleWaveTurnLimitUtil___ctor(BattleWaveTurnLimitUtil_o *this, StageEntity
   const MethodInfo *v6; // x3
 
   if ( !stageEnt )
-    sub_1C372B4(this);
+    sub_1C3E7C0(this, 0);
   script = stageEnt->fields.script;
   System_Object___ctor((Il2CppObject *)this, 0);
   this->fields.EntityScript = script;
-  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields, (int32_t)script, v5, v6);
+  sub_1C3E508((CGThumbnailListItem_o *)&this->fields, (int32_t)script, v5, v6);
 }
 
 

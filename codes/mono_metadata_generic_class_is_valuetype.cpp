@@ -1,4 +1,4 @@
 __int64 mono_metadata_generic_class_is_valuetype()
 {
-  return sub_1C67CA0() & 1;
+  return sub_1C6F1AC() & 1;
 }

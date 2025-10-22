@@ -7,22 +7,23 @@ void SwitchEnableComponent___ctor(SwitchEnableComponent_o *this, const MethodInf
 void SwitchEnableComponent__SetEnable(SwitchEnableComponent_o *this, bool value, const MethodInfo *method)
 {
   UnityEngine_Object_o *targetComponent; // x21
-  UnityEngine_Behaviour_o *v6; // x0
+  __int64 v6; // x1
+  UnityEngine_Behaviour_o *v7; // x0
 
-  if ( (byte_4C40EC7 & 1) == 0 )
+  if ( (byte_4C54C68 & 1) == 0 )
   {
-    sub_1C37058(&UnityEngine_Object_TypeInfo);
-    byte_4C40EC7 = 1;
+    sub_1C3E564(&UnityEngine_Object_TypeInfo);
+    byte_4C54C68 = 1;
   }
   targetComponent = (UnityEngine_Object_o *)this->fields.targetComponent;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   if ( !UnityEngine_Object__op_Equality(targetComponent, 0, 0) )
   {
-    v6 = (UnityEngine_Behaviour_o *)this->fields.targetComponent;
-    if ( !v6 )
-      sub_1C372B4(0);
-    UnityEngine_Behaviour__set_enabled(v6, value, 0);
+    v7 = (UnityEngine_Behaviour_o *)this->fields.targetComponent;
+    if ( !v7 )
+      sub_1C3E7C0(0, v6);
+    UnityEngine_Behaviour__set_enabled(v7, value, 0);
   }
 }
 
@@ -30,25 +31,26 @@ void SwitchEnableComponent__SetEnable(SwitchEnableComponent_o *this, bool value,
 void SwitchEnableComponent__Switch(SwitchEnableComponent_o *this, const MethodInfo *method)
 {
   UnityEngine_Object_o *targetComponent; // x20
-  UnityEngine_Behaviour_o *v4; // x0
-  char v5; // w8
-  const MethodInfo *v6; // x2
+  __int64 v4; // x1
+  UnityEngine_Behaviour_o *v5; // x0
+  char v6; // w8
+  const MethodInfo *v7; // x2
 
-  if ( (byte_4C40EC6 & 1) == 0 )
+  if ( (byte_4C54C67 & 1) == 0 )
   {
-    sub_1C37058(&UnityEngine_Object_TypeInfo);
-    byte_4C40EC6 = 1;
+    sub_1C3E564(&UnityEngine_Object_TypeInfo);
+    byte_4C54C67 = 1;
   }
   targetComponent = (UnityEngine_Object_o *)this->fields.targetComponent;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   if ( !UnityEngine_Object__op_Equality(targetComponent, 0, 0) )
   {
-    v4 = (UnityEngine_Behaviour_o *)this->fields.targetComponent;
-    if ( !v4 )
-      sub_1C372B4(0);
-    v5 = ~UnityEngine_Behaviour__get_enabled(v4, 0);
-    SwitchEnableComponent__SetEnable(this, v5 & 1, v6);
+    v5 = (UnityEngine_Behaviour_o *)this->fields.targetComponent;
+    if ( !v5 )
+      sub_1C3E7C0(0, v4);
+    v6 = ~UnityEngine_Behaviour__get_enabled(v5, 0);
+    SwitchEnableComponent__SetEnable(this, v6 & 1, v7);
   }
 }
 

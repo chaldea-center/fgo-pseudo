@@ -9,19 +9,19 @@ void UIDragDropListViewBackMask__DragEnd(UIDragDropListViewBackMask_o *this, con
   UnityEngine_GameObject_o *maskObject; // x0
   Il2CppObject *Component_object; // x19
 
-  if ( (byte_4C447D3 & 1) == 0 )
+  if ( (byte_4C5859E & 1) == 0 )
   {
-    sub_1C37058(&Method_UnityEngine_GameObject_GetComponent_Collider___);
-    sub_1C37058(&Method_UnityEngine_GameObject_GetComponent_UITouchPress___);
-    sub_1C37058(&UnityEngine_Object_TypeInfo);
-    byte_4C447D3 = 1;
+    sub_1C3E564(&Method_UnityEngine_GameObject_GetComponent_Collider___);
+    sub_1C3E564(&Method_UnityEngine_GameObject_GetComponent_UITouchPress___);
+    sub_1C3E564(&UnityEngine_Object_TypeInfo);
+    byte_4C5859E = 1;
   }
   maskObject = this->fields.maskObject;
   if ( !maskObject )
     goto LABEL_12;
   maskObject = (UnityEngine_GameObject_o *)UnityEngine_GameObject__GetComponent_object_(
                                              maskObject,
-                                             (const MethodInfo_313F1D8 *)Method_UnityEngine_GameObject_GetComponent_Collider___);
+                                             (const MethodInfo_31510CC *)Method_UnityEngine_GameObject_GetComponent_Collider___);
   if ( !maskObject )
     goto LABEL_12;
   UnityEngine_Collider__set_enabled((UnityEngine_Collider_o *)maskObject, 0, 0);
@@ -30,7 +30,7 @@ void UIDragDropListViewBackMask__DragEnd(UIDragDropListViewBackMask_o *this, con
     goto LABEL_12;
   Component_object = UnityEngine_GameObject__GetComponent_object_(
                        maskObject,
-                       (const MethodInfo_313F1D8 *)Method_UnityEngine_GameObject_GetComponent_UITouchPress___);
+                       (const MethodInfo_31510CC *)Method_UnityEngine_GameObject_GetComponent_UITouchPress___);
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   maskObject = (UnityEngine_GameObject_o *)UnityEngine_Object__op_Inequality(
@@ -45,7 +45,7 @@ void UIDragDropListViewBackMask__DragEnd(UIDragDropListViewBackMask_o *this, con
       return;
     }
 LABEL_12:
-    sub_1C372B4(maskObject);
+    sub_1C3E7C0(maskObject, method);
   }
 }
 
@@ -65,22 +65,22 @@ void UIDragDropListViewBackMask__DragEndMultiTouch(
   bool oldMultiTouchEnabled; // w0
   CTouch_c *v14; // x0
 
-  if ( (byte_4C447D6 & 1) == 0 )
+  if ( (byte_4C585A1 & 1) == 0 )
   {
-    sub_1C37058(&CTouch_TypeInfo);
-    sub_1C37058(&EventDelegate_TypeInfo);
-    sub_1C37058(&Method_UnityEngine_GameObject_GetComponent_Collider___);
-    sub_1C37058(&Method_UnityEngine_GameObject_GetComponent_UIMultiTouch___);
-    sub_1C37058(&Method_System_Collections_Generic_List_EventDelegate__Remove__);
-    sub_1C37058(&UnityEngine_Object_TypeInfo);
-    byte_4C447D6 = 1;
+    sub_1C3E564(&CTouch_TypeInfo);
+    sub_1C3E564(&EventDelegate_TypeInfo);
+    sub_1C3E564(&Method_UnityEngine_GameObject_GetComponent_Collider___);
+    sub_1C3E564(&Method_UnityEngine_GameObject_GetComponent_UIMultiTouch___);
+    sub_1C3E564(&Method_System_Collections_Generic_List_EventDelegate__Remove__);
+    sub_1C3E564(&UnityEngine_Object_TypeInfo);
+    byte_4C585A1 = 1;
   }
   maskObject = this->fields.maskObject;
   if ( !maskObject )
     goto LABEL_22;
   Component_object = (UnityEngine_Object_o *)UnityEngine_GameObject__GetComponent_object_(
                                                maskObject,
-                                               (const MethodInfo_313F1D8 *)Method_UnityEngine_GameObject_GetComponent_UIMultiTouch___);
+                                               (const MethodInfo_31510CC *)Method_UnityEngine_GameObject_GetComponent_UIMultiTouch___);
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   maskObject = (UnityEngine_GameObject_o *)UnityEngine_Object__op_Inequality(Component_object, 0, 0);
@@ -90,29 +90,29 @@ void UIDragDropListViewBackMask__DragEndMultiTouch(
     {
       UnityEngine_Behaviour__set_enabled((UnityEngine_Behaviour_o *)Component_object, 0, 0);
       m_CachedPtr = (System_Collections_Generic_List_object__o *)Component_object[1].fields.m_CachedPtr;
-      v10 = (EventDelegate_o *)sub_1C372A4(EventDelegate_TypeInfo);
-      EventDelegate___ctor_49273948(v10, click, 0);
+      v10 = (EventDelegate_o *)sub_1C3E7B0(EventDelegate_TypeInfo);
+      EventDelegate___ctor_49347188(v10, click, 0);
       if ( m_CachedPtr )
       {
         System_Collections_Generic_List_object___Remove(
           m_CachedPtr,
           (Il2CppObject *)v10,
-          (const MethodInfo_37A454C *)Method_System_Collections_Generic_List_EventDelegate__Remove__);
+          (const MethodInfo_37B6988 *)Method_System_Collections_Generic_List_EventDelegate__Remove__);
         monitor = (System_Collections_Generic_List_object__o *)Component_object[1].monitor;
-        v12 = (EventDelegate_o *)sub_1C372A4(EventDelegate_TypeInfo);
-        EventDelegate___ctor_49273948(v12, drag, 0);
+        v12 = (EventDelegate_o *)sub_1C3E7B0(EventDelegate_TypeInfo);
+        EventDelegate___ctor_49347188(v12, drag, 0);
         if ( monitor )
         {
           System_Collections_Generic_List_object___Remove(
             monitor,
             (Il2CppObject *)v12,
-            (const MethodInfo_37A454C *)Method_System_Collections_Generic_List_EventDelegate__Remove__);
+            (const MethodInfo_37B6988 *)Method_System_Collections_Generic_List_EventDelegate__Remove__);
           goto LABEL_11;
         }
       }
     }
 LABEL_22:
-    sub_1C372B4(maskObject);
+    sub_1C3E7C0(maskObject, click);
   }
 LABEL_11:
   maskObject = this->fields.maskObject;
@@ -120,7 +120,7 @@ LABEL_11:
     goto LABEL_22;
   maskObject = (UnityEngine_GameObject_o *)UnityEngine_GameObject__GetComponent_object_(
                                              maskObject,
-                                             (const MethodInfo_313F1D8 *)Method_UnityEngine_GameObject_GetComponent_Collider___);
+                                             (const MethodInfo_31510CC *)Method_UnityEngine_GameObject_GetComponent_Collider___);
   if ( !maskObject )
     goto LABEL_22;
   UnityEngine_Collider__set_enabled((UnityEngine_Collider_o *)maskObject, 0, 0);
@@ -131,10 +131,10 @@ LABEL_11:
     UnityEngine_Input__set_multiTouchEnabled(oldMultiTouchEnabled, 0);
     if ( !CTouch_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(CTouch_TypeInfo);
-    if ( !byte_4C44844 )
+    if ( !byte_4C5860F )
     {
-      sub_1C37058(&CTouch_TypeInfo);
-      byte_4C44844 = 1;
+      sub_1C3E564(&CTouch_TypeInfo);
+      byte_4C5860F = 1;
     }
     v14 = CTouch_TypeInfo;
     if ( !CTouch_TypeInfo->_2.cctor_finished )
@@ -147,7 +147,7 @@ LABEL_11:
 }
 
 
-void UIDragDropListViewBackMask__DragEnd_43939444(
+void UIDragDropListViewBackMask__DragEnd_43994928(
         UIDragDropListViewBackMask_o *this,
         EventDelegate_Callback_o *call,
         const MethodInfo *method)
@@ -157,21 +157,21 @@ void UIDragDropListViewBackMask__DragEnd_43939444(
   System_Collections_Generic_List_object__o *monitor; // x21
   EventDelegate_o *v8; // x22
 
-  if ( (byte_4C447D4 & 1) == 0 )
+  if ( (byte_4C5859F & 1) == 0 )
   {
-    sub_1C37058(&EventDelegate_TypeInfo);
-    sub_1C37058(&Method_UnityEngine_GameObject_GetComponent_Collider___);
-    sub_1C37058(&Method_UnityEngine_GameObject_GetComponent_UITouchPress___);
-    sub_1C37058(&Method_System_Collections_Generic_List_EventDelegate__Remove__);
-    sub_1C37058(&UnityEngine_Object_TypeInfo);
-    byte_4C447D4 = 1;
+    sub_1C3E564(&EventDelegate_TypeInfo);
+    sub_1C3E564(&Method_UnityEngine_GameObject_GetComponent_Collider___);
+    sub_1C3E564(&Method_UnityEngine_GameObject_GetComponent_UITouchPress___);
+    sub_1C3E564(&Method_System_Collections_Generic_List_EventDelegate__Remove__);
+    sub_1C3E564(&UnityEngine_Object_TypeInfo);
+    byte_4C5859F = 1;
   }
   maskObject = this->fields.maskObject;
   if ( !maskObject )
     goto LABEL_13;
   Component_object = (UnityEngine_Object_o *)UnityEngine_GameObject__GetComponent_object_(
                                                maskObject,
-                                               (const MethodInfo_313F1D8 *)Method_UnityEngine_GameObject_GetComponent_UITouchPress___);
+                                               (const MethodInfo_31510CC *)Method_UnityEngine_GameObject_GetComponent_UITouchPress___);
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   maskObject = (UnityEngine_GameObject_o *)UnityEngine_Object__op_Inequality(Component_object, 0, 0);
@@ -181,19 +181,19 @@ void UIDragDropListViewBackMask__DragEnd_43939444(
     {
       UnityEngine_Behaviour__set_enabled((UnityEngine_Behaviour_o *)Component_object, 0, 0);
       monitor = (System_Collections_Generic_List_object__o *)Component_object[1].monitor;
-      v8 = (EventDelegate_o *)sub_1C372A4(EventDelegate_TypeInfo);
-      EventDelegate___ctor_49273948(v8, call, 0);
+      v8 = (EventDelegate_o *)sub_1C3E7B0(EventDelegate_TypeInfo);
+      EventDelegate___ctor_49347188(v8, call, 0);
       if ( monitor )
       {
         System_Collections_Generic_List_object___Remove(
           monitor,
           (Il2CppObject *)v8,
-          (const MethodInfo_37A454C *)Method_System_Collections_Generic_List_EventDelegate__Remove__);
+          (const MethodInfo_37B6988 *)Method_System_Collections_Generic_List_EventDelegate__Remove__);
         goto LABEL_10;
       }
     }
 LABEL_13:
-    sub_1C372B4(maskObject);
+    sub_1C3E7C0(maskObject, call);
   }
 LABEL_10:
   maskObject = this->fields.maskObject;
@@ -201,7 +201,7 @@ LABEL_10:
     goto LABEL_13;
   maskObject = (UnityEngine_GameObject_o *)UnityEngine_GameObject__GetComponent_object_(
                                              maskObject,
-                                             (const MethodInfo_313F1D8 *)Method_UnityEngine_GameObject_GetComponent_Collider___);
+                                             (const MethodInfo_31510CC *)Method_UnityEngine_GameObject_GetComponent_Collider___);
   if ( !maskObject )
     goto LABEL_13;
   UnityEngine_Collider__set_enabled((UnityEngine_Collider_o *)maskObject, 0, 0);
@@ -213,19 +213,19 @@ void UIDragDropListViewBackMask__DragStart(UIDragDropListViewBackMask_o *this, c
   UnityEngine_GameObject_o *maskObject; // x0
   Il2CppObject *Component_object; // x19
 
-  if ( (byte_4C447D1 & 1) == 0 )
+  if ( (byte_4C5859C & 1) == 0 )
   {
-    sub_1C37058(&Method_UnityEngine_GameObject_GetComponent_Collider___);
-    sub_1C37058(&Method_UnityEngine_GameObject_GetComponent_UITouchPress___);
-    sub_1C37058(&UnityEngine_Object_TypeInfo);
-    byte_4C447D1 = 1;
+    sub_1C3E564(&Method_UnityEngine_GameObject_GetComponent_Collider___);
+    sub_1C3E564(&Method_UnityEngine_GameObject_GetComponent_UITouchPress___);
+    sub_1C3E564(&UnityEngine_Object_TypeInfo);
+    byte_4C5859C = 1;
   }
   maskObject = this->fields.maskObject;
   if ( !maskObject )
     goto LABEL_12;
   maskObject = (UnityEngine_GameObject_o *)UnityEngine_GameObject__GetComponent_object_(
                                              maskObject,
-                                             (const MethodInfo_313F1D8 *)Method_UnityEngine_GameObject_GetComponent_Collider___);
+                                             (const MethodInfo_31510CC *)Method_UnityEngine_GameObject_GetComponent_Collider___);
   if ( !maskObject )
     goto LABEL_12;
   UnityEngine_Collider__set_enabled((UnityEngine_Collider_o *)maskObject, 1, 0);
@@ -234,7 +234,7 @@ void UIDragDropListViewBackMask__DragStart(UIDragDropListViewBackMask_o *this, c
     goto LABEL_12;
   Component_object = UnityEngine_GameObject__GetComponent_object_(
                        maskObject,
-                       (const MethodInfo_313F1D8 *)Method_UnityEngine_GameObject_GetComponent_UITouchPress___);
+                       (const MethodInfo_31510CC *)Method_UnityEngine_GameObject_GetComponent_UITouchPress___);
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   maskObject = (UnityEngine_GameObject_o *)UnityEngine_Object__op_Inequality(
@@ -249,7 +249,7 @@ void UIDragDropListViewBackMask__DragStart(UIDragDropListViewBackMask_o *this, c
       return;
     }
 LABEL_12:
-    sub_1C372B4(maskObject);
+    sub_1C3E7C0(maskObject, method);
   }
 }
 
@@ -260,52 +260,53 @@ void UIDragDropListViewBackMask__DragStartMultiTouch(
         EventDelegate_Callback_o *drag,
         const MethodInfo *method)
 {
-  CTouch_c *v7; // x0
+  __int64 v7; // x1
+  CTouch_c *v8; // x0
   UnityEngine_GameObject_o *maskObject; // x0
   UnityEngine_Object_o *Component_object; // x21
   System_Collections_Generic_List_object__o *m_CachedPtr; // x22
-  EventDelegate_o *v11; // x23
-  int32_t v12; // w2
-  const MethodInfo *v13; // x3
+  EventDelegate_o *v12; // x23
+  int32_t v13; // w2
+  const MethodInfo *v14; // x3
   struct System_Object_array *items; // x8
-  _QWORD *v15; // x9
+  _QWORD *v16; // x9
   __int64 size; // x10
-  Il2CppClass **v17; // x0
+  Il2CppClass **v18; // x0
   System_Collections_Generic_List_object__o *monitor; // x20
-  EventDelegate_o *v19; // x22
-  int32_t v20; // w2
-  const MethodInfo *v21; // x3
-  struct System_Object_array *v22; // x8
-  _QWORD *v23; // x9
-  __int64 v24; // x10
-  Il2CppClass **v25; // x0
+  EventDelegate_o *v20; // x22
+  int32_t v21; // w2
+  const MethodInfo *v22; // x3
+  struct System_Object_array *v23; // x8
+  _QWORD *v24; // x9
+  __int64 v25; // x10
+  Il2CppClass **v26; // x0
 
-  if ( (byte_4C447D5 & 1) == 0 )
+  if ( (byte_4C585A0 & 1) == 0 )
   {
-    sub_1C37058(&CTouch_TypeInfo);
-    sub_1C37058(&EventDelegate_TypeInfo);
-    sub_1C37058(&Method_UnityEngine_GameObject_GetComponent_Collider___);
-    sub_1C37058(&Method_UnityEngine_GameObject_GetComponent_UIMultiTouch___);
-    sub_1C37058(&Method_System_Collections_Generic_List_EventDelegate__Add__);
-    sub_1C37058(&UnityEngine_Object_TypeInfo);
-    byte_4C447D5 = 1;
+    sub_1C3E564(&CTouch_TypeInfo);
+    sub_1C3E564(&EventDelegate_TypeInfo);
+    sub_1C3E564(&Method_UnityEngine_GameObject_GetComponent_Collider___);
+    sub_1C3E564(&Method_UnityEngine_GameObject_GetComponent_UIMultiTouch___);
+    sub_1C3E564(&Method_System_Collections_Generic_List_EventDelegate__Add__);
+    sub_1C3E564(&UnityEngine_Object_TypeInfo);
+    byte_4C585A0 = 1;
   }
   if ( UnityEngine_Input__get_touchSupported(0) )
   {
     if ( !CTouch_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(CTouch_TypeInfo);
-    if ( !byte_4C44844 )
+    if ( !byte_4C5860F )
     {
-      sub_1C37058(&CTouch_TypeInfo);
-      byte_4C44844 = 1;
+      sub_1C3E564(&CTouch_TypeInfo);
+      byte_4C5860F = 1;
     }
-    v7 = CTouch_TypeInfo;
+    v8 = CTouch_TypeInfo;
     if ( !CTouch_TypeInfo->_2.cctor_finished )
     {
       j_il2cpp_runtime_class_init_0(CTouch_TypeInfo);
-      v7 = CTouch_TypeInfo;
+      v8 = CTouch_TypeInfo;
     }
-    v7->static_fields->mIsClassEnabled = 0;
+    v8->static_fields->mIsClassEnabled = 0;
     this->fields.oldMultiTouchEnabled = UnityEngine_Input__get_multiTouchEnabled(0);
     this->fields.isMultiTouch = 1;
     UnityEngine_Input__set_multiTouchEnabled(1, 0);
@@ -315,7 +316,7 @@ void UIDragDropListViewBackMask__DragStartMultiTouch(
     goto LABEL_30;
   maskObject = (UnityEngine_GameObject_o *)UnityEngine_GameObject__GetComponent_object_(
                                              maskObject,
-                                             (const MethodInfo_313F1D8 *)Method_UnityEngine_GameObject_GetComponent_Collider___);
+                                             (const MethodInfo_31510CC *)Method_UnityEngine_GameObject_GetComponent_Collider___);
   if ( !maskObject )
     goto LABEL_30;
   UnityEngine_Collider__set_enabled((UnityEngine_Collider_o *)maskObject, 1, 0);
@@ -324,7 +325,7 @@ void UIDragDropListViewBackMask__DragStartMultiTouch(
     goto LABEL_30;
   Component_object = (UnityEngine_Object_o *)UnityEngine_GameObject__GetComponent_object_(
                                                maskObject,
-                                               (const MethodInfo_313F1D8 *)Method_UnityEngine_GameObject_GetComponent_UIMultiTouch___);
+                                               (const MethodInfo_31510CC *)Method_UnityEngine_GameObject_GetComponent_UIMultiTouch___);
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   maskObject = (UnityEngine_GameObject_o *)UnityEngine_Object__op_Inequality(Component_object, 0, 0);
@@ -333,12 +334,12 @@ void UIDragDropListViewBackMask__DragStartMultiTouch(
     if ( Component_object )
     {
       m_CachedPtr = (System_Collections_Generic_List_object__o *)Component_object[1].fields.m_CachedPtr;
-      v11 = (EventDelegate_o *)sub_1C372A4(EventDelegate_TypeInfo);
-      EventDelegate___ctor_49273948(v11, click, 0);
+      v12 = (EventDelegate_o *)sub_1C3E7B0(EventDelegate_TypeInfo);
+      EventDelegate___ctor_49347188(v12, click, 0);
       if ( m_CachedPtr )
       {
         items = m_CachedPtr->fields._items;
-        v15 = Method_System_Collections_Generic_List_EventDelegate__Add__;
+        v16 = Method_System_Collections_Generic_List_EventDelegate__Add__;
         ++m_CachedPtr->fields._version;
         if ( items )
         {
@@ -347,40 +348,40 @@ void UIDragDropListViewBackMask__DragStartMultiTouch(
           {
             System_Collections_Generic_List_object___AddWithResize(
               m_CachedPtr,
-              (Il2CppObject *)v11,
-              *(const MethodInfo_37A3024 **)(*(_QWORD *)(v15[4] + 192LL) + 112LL));
+              (Il2CppObject *)v12,
+              *(const MethodInfo_37B5460 **)(*(_QWORD *)(v16[4] + 192LL) + 112LL));
           }
           else
           {
-            v17 = &items->obj.klass + size;
+            v18 = &items->obj.klass + size;
             m_CachedPtr->fields._size = size + 1;
-            v17[4] = (Il2CppClass *)v11;
-            sub_1C36FFC((CGThumbnailListItem_o *)(v17 + 4), (int32_t)v11, v12, v13);
+            v18[4] = (Il2CppClass *)v12;
+            sub_1C3E508((CGThumbnailListItem_o *)(v18 + 4), (int32_t)v12, v13, v14);
           }
           monitor = (System_Collections_Generic_List_object__o *)Component_object[1].monitor;
-          v19 = (EventDelegate_o *)sub_1C372A4(EventDelegate_TypeInfo);
-          EventDelegate___ctor_49273948(v19, drag, 0);
+          v20 = (EventDelegate_o *)sub_1C3E7B0(EventDelegate_TypeInfo);
+          EventDelegate___ctor_49347188(v20, drag, 0);
           if ( monitor )
           {
-            v22 = monitor->fields._items;
-            v23 = Method_System_Collections_Generic_List_EventDelegate__Add__;
+            v23 = monitor->fields._items;
+            v24 = Method_System_Collections_Generic_List_EventDelegate__Add__;
             ++monitor->fields._version;
-            if ( v22 )
+            if ( v23 )
             {
-              v24 = monitor->fields._size;
-              if ( (unsigned int)v24 >= LODWORD(v22->max_length) )
+              v25 = monitor->fields._size;
+              if ( (unsigned int)v25 >= LODWORD(v23->max_length) )
               {
                 System_Collections_Generic_List_object___AddWithResize(
                   monitor,
-                  (Il2CppObject *)v19,
-                  *(const MethodInfo_37A3024 **)(*(_QWORD *)(v23[4] + 192LL) + 112LL));
+                  (Il2CppObject *)v20,
+                  *(const MethodInfo_37B5460 **)(*(_QWORD *)(v24[4] + 192LL) + 112LL));
               }
               else
               {
-                v25 = &v22->obj.klass + v24;
-                monitor->fields._size = v24 + 1;
-                v25[4] = (Il2CppClass *)v19;
-                sub_1C36FFC((CGThumbnailListItem_o *)(v25 + 4), (int32_t)v19, v20, v21);
+                v26 = &v23->obj.klass + v25;
+                monitor->fields._size = v25 + 1;
+                v26[4] = (Il2CppClass *)v20;
+                sub_1C3E508((CGThumbnailListItem_o *)(v26 + 4), (int32_t)v20, v21, v22);
               }
               UnityEngine_Behaviour__set_enabled((UnityEngine_Behaviour_o *)Component_object, 1, 0);
               return;
@@ -390,12 +391,12 @@ void UIDragDropListViewBackMask__DragStartMultiTouch(
       }
     }
 LABEL_30:
-    sub_1C372B4(maskObject);
+    sub_1C3E7C0(maskObject, v7);
   }
 }
 
 
-void UIDragDropListViewBackMask__DragStart_43938808(
+void UIDragDropListViewBackMask__DragStart_43994292(
         UIDragDropListViewBackMask_o *this,
         EventDelegate_Callback_o *call,
         const MethodInfo *method)
@@ -411,21 +412,21 @@ void UIDragDropListViewBackMask__DragStart_43938808(
   __int64 size; // x10
   Il2CppClass **v14; // x0
 
-  if ( (byte_4C447D2 & 1) == 0 )
+  if ( (byte_4C5859D & 1) == 0 )
   {
-    sub_1C37058(&EventDelegate_TypeInfo);
-    sub_1C37058(&Method_UnityEngine_GameObject_GetComponent_Collider___);
-    sub_1C37058(&Method_UnityEngine_GameObject_GetComponent_UITouchPress___);
-    sub_1C37058(&Method_System_Collections_Generic_List_EventDelegate__Add__);
-    sub_1C37058(&UnityEngine_Object_TypeInfo);
-    byte_4C447D2 = 1;
+    sub_1C3E564(&EventDelegate_TypeInfo);
+    sub_1C3E564(&Method_UnityEngine_GameObject_GetComponent_Collider___);
+    sub_1C3E564(&Method_UnityEngine_GameObject_GetComponent_UITouchPress___);
+    sub_1C3E564(&Method_System_Collections_Generic_List_EventDelegate__Add__);
+    sub_1C3E564(&UnityEngine_Object_TypeInfo);
+    byte_4C5859D = 1;
   }
   maskObject = this->fields.maskObject;
   if ( !maskObject )
     goto LABEL_17;
   maskObject = (UnityEngine_GameObject_o *)UnityEngine_GameObject__GetComponent_object_(
                                              maskObject,
-                                             (const MethodInfo_313F1D8 *)Method_UnityEngine_GameObject_GetComponent_Collider___);
+                                             (const MethodInfo_31510CC *)Method_UnityEngine_GameObject_GetComponent_Collider___);
   if ( !maskObject )
     goto LABEL_17;
   UnityEngine_Collider__set_enabled((UnityEngine_Collider_o *)maskObject, 1, 0);
@@ -434,7 +435,7 @@ void UIDragDropListViewBackMask__DragStart_43938808(
     goto LABEL_17;
   Component_object = (UnityEngine_Object_o *)UnityEngine_GameObject__GetComponent_object_(
                                                maskObject,
-                                               (const MethodInfo_313F1D8 *)Method_UnityEngine_GameObject_GetComponent_UITouchPress___);
+                                               (const MethodInfo_31510CC *)Method_UnityEngine_GameObject_GetComponent_UITouchPress___);
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   maskObject = (UnityEngine_GameObject_o *)UnityEngine_Object__op_Inequality(Component_object, 0, 0);
@@ -443,8 +444,8 @@ void UIDragDropListViewBackMask__DragStart_43938808(
     if ( Component_object )
     {
       monitor = (System_Collections_Generic_List_object__o *)Component_object[1].monitor;
-      v8 = (EventDelegate_o *)sub_1C372A4(EventDelegate_TypeInfo);
-      EventDelegate___ctor_49273948(v8, call, 0);
+      v8 = (EventDelegate_o *)sub_1C3E7B0(EventDelegate_TypeInfo);
+      EventDelegate___ctor_49347188(v8, call, 0);
       if ( monitor )
       {
         items = monitor->fields._items;
@@ -458,14 +459,14 @@ void UIDragDropListViewBackMask__DragStart_43938808(
             System_Collections_Generic_List_object___AddWithResize(
               monitor,
               (Il2CppObject *)v8,
-              *(const MethodInfo_37A3024 **)(*(_QWORD *)(v12[4] + 192LL) + 112LL));
+              *(const MethodInfo_37B5460 **)(*(_QWORD *)(v12[4] + 192LL) + 112LL));
           }
           else
           {
             v14 = &items->obj.klass + size;
             monitor->fields._size = size + 1;
             v14[4] = (Il2CppClass *)v8;
-            sub_1C36FFC((CGThumbnailListItem_o *)(v14 + 4), (int32_t)v8, v9, v10);
+            sub_1C3E508((CGThumbnailListItem_o *)(v14 + 4), (int32_t)v8, v9, v10);
           }
           UnityEngine_Behaviour__set_enabled((UnityEngine_Behaviour_o *)Component_object, 1, 0);
           return;
@@ -473,11 +474,12 @@ void UIDragDropListViewBackMask__DragStart_43938808(
       }
     }
 LABEL_17:
-    sub_1C372B4(maskObject);
+    sub_1C3E7C0(maskObject, call);
   }
 }
 
 
+// local variable allocation has failed, the output may be wrong!
 void UIDragDropListViewBackMask__SetEnabledCollider(
         UIDragDropListViewBackMask_o *this,
         bool value,
@@ -485,18 +487,18 @@ void UIDragDropListViewBackMask__SetEnabledCollider(
 {
   UnityEngine_GameObject_o *maskObject; // x0
 
-  if ( (byte_4C447D7 & 1) == 0 )
+  if ( (byte_4C585A2 & 1) == 0 )
   {
-    sub_1C37058(&Method_UnityEngine_GameObject_GetComponent_Collider___);
-    byte_4C447D7 = 1;
+    sub_1C3E564(&Method_UnityEngine_GameObject_GetComponent_Collider___);
+    byte_4C585A2 = 1;
   }
   maskObject = this->fields.maskObject;
   if ( !maskObject
     || (maskObject = (UnityEngine_GameObject_o *)UnityEngine_GameObject__GetComponent_object_(
                                                    maskObject,
-                                                   (const MethodInfo_313F1D8 *)Method_UnityEngine_GameObject_GetComponent_Collider___)) == 0 )
+                                                   (const MethodInfo_31510CC *)Method_UnityEngine_GameObject_GetComponent_Collider___)) == 0 )
   {
-    sub_1C372B4(maskObject);
+    sub_1C3E7C0(maskObject, value);
   }
   UnityEngine_Collider__set_enabled((UnityEngine_Collider_o *)maskObject, value, 0);
 }

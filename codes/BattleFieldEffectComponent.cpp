@@ -10,7 +10,7 @@ int32_t BattleFieldEffectComponent__getAmbientColors(BattleFieldEffectComponent_
 
   ambientlist = this->fields.ambientlist;
   if ( !ambientlist )
-    sub_1C372B4(this);
+    sub_1C3E7C0(this, method);
   return ambientlist->max_length;
 }
 
@@ -30,15 +30,15 @@ System_String_array *BattleFieldEffectComponent__getFieldEffects(
   BattleFieldEffectComponent_c **v10; // x0
 
   v2 = this;
-  if ( (byte_4C45A76 & 1) == 0 )
+  if ( (byte_4C59853 & 1) == 0 )
   {
-    this = (BattleFieldEffectComponent_o *)sub_1C37058(&string___TypeInfo);
-    byte_4C45A76 = 1;
+    this = (BattleFieldEffectComponent_o *)sub_1C3E564(&string___TypeInfo);
+    byte_4C59853 = 1;
   }
   fieldeffect = v2->fields.fieldeffect;
   if ( !fieldeffect )
     goto LABEL_13;
-  this = (BattleFieldEffectComponent_o *)sub_1C37100(string___TypeInfo, LODWORD(fieldeffect->max_length));
+  this = (BattleFieldEffectComponent_o *)sub_1C3E60C(string___TypeInfo, LODWORD(fieldeffect->max_length));
   if ( !this )
     goto LABEL_13;
   v4 = this;
@@ -58,21 +58,22 @@ System_String_array *BattleFieldEffectComponent__getFieldEffects(
       this = (BattleFieldEffectComponent_o *)UnityEngine_Object__get_name((UnityEngine_Object_o *)this, 0);
       if ( v5 >= LODWORD(v4->fields.m_CancellationTokenSource) )
 LABEL_14:
-        sub_1C372BC(this);
+        sub_1C3E7C8(this, method);
       v9 = this;
       v10 = &v4->klass + (int)v5;
       v10[4] = (BattleFieldEffectComponent_c *)v9;
-      sub_1C36FFC((CGThumbnailListItem_o *)(v10 + 4), (int32_t)v9, v7, v8);
+      sub_1C3E508((CGThumbnailListItem_o *)(v10 + 4), (int32_t)v9, v7, v8);
       if ( (signed int)++v5 >= SLODWORD(v4->fields.m_CancellationTokenSource) )
         return (System_String_array *)v4;
     }
 LABEL_13:
-    sub_1C372B4(this);
+    sub_1C3E7C0(this, method);
   }
   return (System_String_array *)v4;
 }
 
 
+// local variable allocation has failed, the output may be wrong!
 void BattleFieldEffectComponent__setAmbientColor(
         BattleFieldEffectComponent_o *this,
         int32_t index,
@@ -82,9 +83,9 @@ void BattleFieldEffectComponent__setAmbientColor(
 
   ambientlist = this->fields.ambientlist;
   if ( !ambientlist )
-    sub_1C372B4(this);
+    sub_1C3E7C0(this, *(_QWORD *)&index);
   if ( LODWORD(ambientlist->max_length) <= index )
-    sub_1C372BC(this);
+    sub_1C3E7C8(this, *(_QWORD *)&index);
   UnityEngine_RenderSettings__set_ambientLight(ambientlist->m_Items[index], 0);
 }
 
@@ -96,17 +97,18 @@ void BattleFieldEffectComponent__setFieldEffect(
 {
   UnityEngine_Object_o *viewobject; // x22
   _BOOL8 v6; // x0
-  UnityEngine_Object_o *v7; // x22
+  __int64 v7; // x1
+  UnityEngine_Object_o *v8; // x22
   struct UnityEngine_GameObject_array *fieldeffect; // x8
   int32_t max_length; // w9
   struct UnityEngine_GameObject_o *Object; // x0
-  int32_t v11; // w2
-  const MethodInfo *v12; // x3
+  int32_t v12; // w2
+  const MethodInfo *v13; // x3
 
-  if ( (byte_4C45A77 & 1) == 0 )
+  if ( (byte_4C59854 & 1) == 0 )
   {
-    sub_1C37058(&UnityEngine_Object_TypeInfo);
-    byte_4C45A77 = 1;
+    sub_1C3E564(&UnityEngine_Object_TypeInfo);
+    byte_4C59854 = 1;
   }
   viewobject = (UnityEngine_Object_o *)this->fields.viewobject;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -114,21 +116,21 @@ void BattleFieldEffectComponent__setFieldEffect(
   v6 = UnityEngine_Object__op_Inequality(viewobject, 0, 0);
   if ( v6 )
   {
-    v7 = (UnityEngine_Object_o *)this->fields.viewobject;
+    v8 = (UnityEngine_Object_o *)this->fields.viewobject;
     if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-    UnityEngine_Object__Destroy_71266752(v7, 0);
+    UnityEngine_Object__Destroy_71341564(v8, 0);
   }
   if ( (index & 0x80000000) == 0 )
   {
     fieldeffect = this->fields.fieldeffect;
     if ( !fieldeffect )
-      sub_1C372B4(v6);
+      sub_1C3E7C0(v6, v7);
     max_length = fieldeffect->max_length;
     if ( max_length > index )
     {
       if ( max_length <= (unsigned int)index )
-        sub_1C372BC(v6);
+        sub_1C3E7C8(v6, v7);
       Object = BaseMonoBehaviour__createObject(
                  (BaseMonoBehaviour_o *)this,
                  fieldeffect->m_Items[index],
@@ -136,7 +138,7 @@ void BattleFieldEffectComponent__setFieldEffect(
                  0,
                  0);
       this->fields.viewobject = Object;
-      sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.viewobject, (int32_t)Object, v11, v12);
+      sub_1C3E508((CGThumbnailListItem_o *)&this->fields.viewobject, (int32_t)Object, v12, v13);
     }
   }
 }

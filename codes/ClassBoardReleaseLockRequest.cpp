@@ -9,14 +9,14 @@ void ClassBoardReleaseLockRequest__beginRequest(
         ClassBoardReleaseRequestData_o data,
         const MethodInfo *method)
 {
-  if ( (byte_4C44A5C & 1) == 0 )
+  if ( (byte_4C58827 & 1) == 0 )
   {
-    sub_1C37058(&StringLiteral_17986/*"classBoardBaseId"*/);
-    sub_1C37058(&StringLiteral_23622/*"squareId"*/);
-    byte_4C44A5C = 1;
+    sub_1C3E564(&StringLiteral_18003/*"classBoardBaseId"*/);
+    sub_1C3E564(&StringLiteral_23642/*"squareId"*/);
+    byte_4C58827 = 1;
   }
-  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_17986/*"classBoardBaseId"*/, data.fields.ClassBoardId, 0);
-  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_23622/*"squareId"*/, data.fields.SquareId, 0);
+  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_18003/*"classBoardBaseId"*/, data.fields.ClassBoardId, 0);
+  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_23642/*"squareId"*/, data.fields.SquareId, 0);
   RequestBase__beginRequest((RequestBase_o *)this, 0);
 }
 
@@ -25,16 +25,16 @@ System_String_o *ClassBoardReleaseLockRequest__getURL(ClassBoardReleaseLockReque
 {
   System_String_o *BaseUrl; // x0
 
-  if ( (byte_4C44A5B & 1) == 0 )
+  if ( (byte_4C58826 & 1) == 0 )
   {
-    sub_1C37058(&NetworkManager_TypeInfo);
-    sub_1C37058(&StringLiteral_17984/*"classBoard/releaseLock"*/);
-    byte_4C44A5B = 1;
+    sub_1C3E564(&NetworkManager_TypeInfo);
+    sub_1C3E564(&StringLiteral_18001/*"classBoard/releaseLock"*/);
+    byte_4C58826 = 1;
   }
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
   BaseUrl = NetworkManager__getBaseUrl(1, 0);
-  return System_String__Concat_63561656(BaseUrl, (System_String_o *)StringLiteral_17984/*"classBoard/releaseLock"*/, 0);
+  return System_String__Concat_63636468(BaseUrl, (System_String_o *)StringLiteral_18001/*"classBoard/releaseLock"*/, 0);
 }
 
 
@@ -48,17 +48,17 @@ void ClassBoardReleaseLockRequest__requestCompleted(
   Il2CppObject *success; // x20
   System_String_o *v8; // x1
 
-  if ( (byte_4C44A5D & 1) == 0 )
+  if ( (byte_4C58828 & 1) == 0 )
   {
-    sub_1C37058(&JsonManager_TypeInfo);
-    sub_1C37058(&ResponseCommandKind_TypeInfo);
-    sub_1C37058(&StringLiteral_22215/*"ng"*/);
-    byte_4C44A5D = 1;
+    sub_1C3E564(&JsonManager_TypeInfo);
+    sub_1C3E564(&ResponseCommandKind_TypeInfo);
+    sub_1C3E564(&StringLiteral_22233/*"ng"*/);
+    byte_4C58828 = 1;
   }
   if ( !ResponseCommandKind_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(ResponseCommandKind_TypeInfo);
   v5 = ResponseCommandKind__SearchData(123, responseList, 0);
-  if ( v5 && (v6 = v5, ResponseData__checkError_44242528(v5, 0)) && (success = (Il2CppObject *)v6->fields.success) != 0 )
+  if ( v5 && (v6 = v5, ResponseData__checkError_44298060(v5, 0)) && (success = (Il2CppObject *)v6->fields.success) != 0 )
   {
     if ( !JsonManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(JsonManager_TypeInfo);
@@ -66,7 +66,7 @@ void ClassBoardReleaseLockRequest__requestCompleted(
   }
   else
   {
-    v8 = (System_String_o *)StringLiteral_22215/*"ng"*/;
+    v8 = (System_String_o *)StringLiteral_22233/*"ng"*/;
   }
   RequestBase__completed((RequestBase_o *)this, v8, 0);
 }

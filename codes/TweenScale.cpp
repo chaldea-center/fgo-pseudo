@@ -6,10 +6,10 @@ void TweenScale___ctor(TweenScale_o *this, const MethodInfo *method)
   struct UnityEngine_Vector3_StaticFields *v6; // x8
   float v7; // s1
 
-  if ( !byte_4C3C926 )
+  if ( !byte_4C506A6 )
   {
-    sub_1C37058(&UnityEngine_Vector3_TypeInfo);
-    byte_4C3C926 = 1;
+    sub_1C3E564(&UnityEngine_Vector3_TypeInfo);
+    byte_4C506A6 = 1;
   }
   v3 = UnityEngine_Vector3_TypeInfo;
   static_fields = UnityEngine_Vector3_TypeInfo->static_fields;
@@ -41,17 +41,17 @@ TweenScale_o *TweenScale__Begin(
   z = scale.fields.z;
   y = scale.fields.y;
   x = scale.fields.x;
-  if ( (byte_4C477C7 & 1) == 0 )
+  if ( (byte_4C5B5BE & 1) == 0 )
   {
-    sub_1C37058(&Method_UITweener_Begin_TweenScale___);
-    byte_4C477C7 = 1;
+    sub_1C3E564(&Method_UITweener_Begin_TweenScale___);
+    byte_4C5B5BE = 1;
   }
   v9 = (TweenScale_o *)UITweener__Begin_object_(
                          go,
                          duration,
-                         (const MethodInfo_31A3570 *)Method_UITweener_Begin_TweenScale___);
+                         (const MethodInfo_31B54C4 *)Method_UITweener_Begin_TweenScale___);
   if ( !v9 )
-    sub_1C372B4(0);
+    sub_1C3E7C0(0, v10);
   v11 = v9;
   v9->fields.from = TweenScale__get_value(v9, v10);
   v11->fields.to.fields.x = x;
@@ -76,21 +76,22 @@ void TweenScale__OnUpdate(TweenScale_o *this, float factor, bool isFinished, con
   int v9; // s1
   UITable_o **p_mTable; // x20
   UnityEngine_Object_o *mTable; // x21
+  __int64 v12; // x1
   UnityEngine_GameObject_o *gameObject; // x21
-  Il2CppObject *v13; // x0
-  int32_t v14; // w2
-  const MethodInfo *v15; // x3
-  UnityEngine_Object_o *v16; // x21
-  float v17; // [xsp+0h] [xbp-40h]
+  Il2CppObject *v14; // x0
+  int32_t v15; // w2
+  const MethodInfo *v16; // x3
+  UnityEngine_Object_o *v17; // x21
+  float v18; // [xsp+0h] [xbp-40h]
 
-  if ( (byte_4C477C6 & 1) == 0 )
+  if ( (byte_4C5B5BD & 1) == 0 )
   {
-    v17 = factor;
-    sub_1C37058(&Method_NGUITools_FindInParents_UITable___);
-    sub_1C37058(&NGUITools_TypeInfo);
-    sub_1C37058(&UnityEngine_Object_TypeInfo);
-    factor = v17;
-    byte_4C477C6 = 1;
+    v18 = factor;
+    sub_1C3E564(&Method_NGUITools_FindInParents_UITable___);
+    sub_1C3E564(&NGUITools_TypeInfo);
+    sub_1C3E564(&UnityEngine_Object_TypeInfo);
+    factor = v18;
+    byte_4C5B5BD = 1;
   }
   v5 = (float)(1.0 - factor) * this->fields.from.fields.z;
   v6 = this->fields.to.fields.z * factor;
@@ -111,15 +112,15 @@ void TweenScale__OnUpdate(TweenScale_o *this, float factor, bool isFinished, con
     gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
     if ( !NGUITools_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(NGUITools_TypeInfo);
-    v13 = NGUITools__FindInParents_object_(
+    v14 = NGUITools__FindInParents_object_(
             gameObject,
-            (const MethodInfo_3171F1C *)Method_NGUITools_FindInParents_UITable___);
-    *p_mTable = (UITable_o *)v13;
-    sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.mTable, (int32_t)v13, v14, v15);
-    v16 = (UnityEngine_Object_o *)*p_mTable;
+            (const MethodInfo_3183E10 *)Method_NGUITools_FindInParents_UITable___);
+    *p_mTable = (UITable_o *)v14;
+    sub_1C3E508((CGThumbnailListItem_o *)&this->fields.mTable, (int32_t)v14, v15, v16);
+    v17 = (UnityEngine_Object_o *)*p_mTable;
     if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-    if ( UnityEngine_Object__op_Equality(v16, 0, 0) )
+    if ( UnityEngine_Object__op_Equality(v17, 0, 0) )
     {
       this->fields.updateTable = 0;
     }
@@ -127,7 +128,7 @@ void TweenScale__OnUpdate(TweenScale_o *this, float factor, bool isFinished, con
     {
 LABEL_14:
       if ( !*p_mTable )
-        sub_1C372B4(0);
+        sub_1C3E7C0(0, v12);
       UITable__set_repositionNow(*p_mTable, 1, 0);
     }
   }
@@ -165,10 +166,10 @@ UnityEngine_Transform_o *TweenScale__get_cachedTransform(TweenScale_o *this, con
   int32_t v5; // w2
   const MethodInfo *v6; // x3
 
-  if ( (byte_4C477C5 & 1) == 0 )
+  if ( (byte_4C5B5BC & 1) == 0 )
   {
-    sub_1C37058(&UnityEngine_Object_TypeInfo);
-    byte_4C477C5 = 1;
+    sub_1C3E564(&UnityEngine_Object_TypeInfo);
+    byte_4C5B5BC = 1;
   }
   mTrans = (UnityEngine_Object_o *)this->fields.mTrans;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -177,7 +178,7 @@ UnityEngine_Transform_o *TweenScale__get_cachedTransform(TweenScale_o *this, con
   {
     transform = UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0);
     this->fields.mTrans = transform;
-    sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.mTrans, (int32_t)transform, v5, v6);
+    sub_1C3E508((CGThumbnailListItem_o *)&this->fields.mTrans, (int32_t)transform, v5, v6);
   }
   return this->fields.mTrans;
 }
@@ -186,10 +187,11 @@ UnityEngine_Transform_o *TweenScale__get_cachedTransform(TweenScale_o *this, con
 UnityEngine_Vector3_o TweenScale__get_value(TweenScale_o *this, const MethodInfo *method)
 {
   UnityEngine_Transform_o *cachedTransform; // x0
+  __int64 v3; // x1
 
   cachedTransform = TweenScale__get_cachedTransform(this, method);
   if ( !cachedTransform )
-    sub_1C372B4(0);
+    sub_1C3E7C0(0, v3);
   return UnityEngine_Transform__get_localScale(cachedTransform, 0);
 }
 
@@ -200,16 +202,17 @@ void TweenScale__set_value(TweenScale_o *this, UnityEngine_Vector3_o value, cons
   float y; // s9
   float x; // s10
   UnityEngine_Transform_o *cachedTransform; // x0
-  UnityEngine_Vector3_o v7; // 0:s0.4,4:s1.4,8:s2.4
+  __int64 v7; // x1
+  UnityEngine_Vector3_o v8; // 0:s0.4,4:s1.4,8:s2.4
 
   z = value.fields.z;
   y = value.fields.y;
   x = value.fields.x;
   cachedTransform = TweenScale__get_cachedTransform(this, method);
   if ( !cachedTransform )
-    sub_1C372B4(0);
-  v7.fields.y = y;
-  v7.fields.z = z;
-  v7.fields.x = x;
-  UnityEngine_Transform__set_localScale(cachedTransform, v7, 0);
+    sub_1C3E7C0(0, v7);
+  v8.fields.y = y;
+  v8.fields.z = z;
+  v8.fields.x = x;
+  UnityEngine_Transform__set_localScale(cachedTransform, v8, 0);
 }

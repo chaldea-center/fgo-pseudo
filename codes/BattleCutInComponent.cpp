@@ -4,15 +4,15 @@ void BattleCutInComponent___ctor(BattleCutInComponent_o *this, const MethodInfo 
   int32_t v4; // w2
   const MethodInfo *v5; // x3
 
-  if ( (byte_4C458F4 & 1) == 0 )
+  if ( (byte_4C596D1 & 1) == 0 )
   {
-    sub_1C37058(&System_Collections_Hashtable_TypeInfo);
-    byte_4C458F4 = 1;
+    sub_1C3E564(&System_Collections_Hashtable_TypeInfo);
+    byte_4C596D1 = 1;
   }
-  v3 = (System_Collections_Hashtable_o *)sub_1C372A4(System_Collections_Hashtable_TypeInfo);
-  System_Collections_Hashtable___ctor_64925884(v3, 0);
+  v3 = (System_Collections_Hashtable_o *)sub_1C3E7B0(System_Collections_Hashtable_TypeInfo);
+  System_Collections_Hashtable___ctor_65000696(v3, 0);
   this->fields.table = v3;
-  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields.table, (int32_t)v3, v4, v5);
+  sub_1C3E508((CGThumbnailListItem_o *)&this->fields.table, (int32_t)v3, v4, v5);
   BaseMonoBehaviour___ctor((BaseMonoBehaviour_o *)this, 0);
 }
 
@@ -21,15 +21,15 @@ void BattleCutInComponent__onEndComp(BattleCutInComponent_o *this, const MethodI
 {
   UnityEngine_Object_o *gameObject; // x19
 
-  if ( (byte_4C458F3 & 1) == 0 )
+  if ( (byte_4C596D0 & 1) == 0 )
   {
-    sub_1C37058(&UnityEngine_Object_TypeInfo);
-    byte_4C458F3 = 1;
+    sub_1C3E564(&UnityEngine_Object_TypeInfo);
+    byte_4C596D0 = 1;
   }
   gameObject = (UnityEngine_Object_o *)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-  UnityEngine_Object__Destroy_71266752(gameObject, 0);
+  UnityEngine_Object__Destroy_71341564(gameObject, 0);
 }
 
 
@@ -66,17 +66,17 @@ void BattleCutInComponent__onStartComp(BattleCutInComponent_o *this, const Metho
   float totaltime; // [xsp+18h] [xbp-28h] BYREF
   int v32; // [xsp+1Ch] [xbp-24h] BYREF
 
-  if ( (byte_4C458F2 & 1) == 0 )
+  if ( (byte_4C596CF & 1) == 0 )
   {
-    sub_1C37058(&float_TypeInfo);
-    sub_1C37058(&UnityEngine_Vector3_TypeInfo);
-    sub_1C37058(&StringLiteral_22410/*"onEndComp"*/);
-    sub_1C37058(&StringLiteral_24071/*"time"*/);
-    sub_1C37058(&StringLiteral_18554/*"delay"*/);
-    sub_1C37058(&StringLiteral_22740/*"position"*/);
-    sub_1C37058(&StringLiteral_22430/*"oncomplete"*/);
-    sub_1C37058(&iTween_TypeInfo);
-    byte_4C458F2 = 1;
+    sub_1C3E564(&float_TypeInfo);
+    sub_1C3E564(&UnityEngine_Vector3_TypeInfo);
+    sub_1C3E564(&StringLiteral_22428/*"onEndComp"*/);
+    sub_1C3E564(&StringLiteral_24091/*"time"*/);
+    sub_1C3E564(&StringLiteral_18572/*"delay"*/);
+    sub_1C3E564(&StringLiteral_22759/*"position"*/);
+    sub_1C3E564(&StringLiteral_22448/*"oncomplete"*/);
+    sub_1C3E564(&iTween_TypeInfo);
+    byte_4C596CF = 1;
   }
   table = (__int64)this->fields.table;
   if ( !table )
@@ -89,7 +89,7 @@ void BattleCutInComponent__onStartComp(BattleCutInComponent_o *this, const Metho
     goto LABEL_11;
   ((void (__fastcall *)(struct System_Collections_Hashtable_o *, __int64, __int64, const MethodInfo *))v4->klass->vtable._22_Add.methodPtr)(
     v4,
-    StringLiteral_18554/*"delay"*/,
+    StringLiteral_18572/*"delay"*/,
     table,
     v4->klass->vtable._22_Add.method);
   v12 = this->fields.table;
@@ -100,14 +100,14 @@ void BattleCutInComponent__onStartComp(BattleCutInComponent_o *this, const Metho
   if ( !v12
     || (((void (__fastcall *)(struct System_Collections_Hashtable_o *, __int64, __int64, const MethodInfo *))v12->klass->vtable._22_Add.methodPtr)(
           v12,
-          StringLiteral_22740/*"position"*/,
+          StringLiteral_22759/*"position"*/,
           table,
           v12->klass->vtable._22_Add.method),
         (table = (__int64)this->fields.table) == 0)
     || ((*(void (__fastcall **)(__int64, __int64, __int64, _QWORD))(*(_QWORD *)table + 664LL))(
           table,
-          StringLiteral_22430/*"oncomplete"*/,
-          StringLiteral_22410/*"onEndComp"*/,
+          StringLiteral_22448/*"oncomplete"*/,
+          StringLiteral_22428/*"onEndComp"*/,
           *(_QWORD *)(*(_QWORD *)table + 672LL)),
         v19 = this->fields.table,
         totaltime = this->fields.totaltime,
@@ -115,11 +115,11 @@ void BattleCutInComponent__onStartComp(BattleCutInComponent_o *this, const Metho
         !v19) )
   {
 LABEL_11:
-    sub_1C372B4(table);
+    sub_1C3E7C0(table, method);
   }
   ((void (__fastcall *)(struct System_Collections_Hashtable_o *, __int64, __int64, const MethodInfo *))v19->klass->vtable._22_Add.methodPtr)(
     v19,
-    StringLiteral_24071/*"time"*/,
+    StringLiteral_24091/*"time"*/,
     table,
     v19->klass->vtable._22_Add.method);
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
@@ -127,10 +127,11 @@ LABEL_11:
   v28 = gameObject;
   if ( !iTween_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(iTween_TypeInfo);
-  iTween__MoveTo_63199220(v28, v27, 0);
+  iTween__MoveTo_63274032(v28, v27, 0);
 }
 
 
+// local variable allocation has failed, the output may be wrong!
 void BattleCutInComponent__setData(
         BattleCutInComponent_o *this,
         int32_t Id,
@@ -157,10 +158,10 @@ void BattleCutInComponent__setData(
   v13 = startt.fields.z;
   v14 = startt.fields.y;
   v15 = startt.fields.x;
-  if ( (byte_4C458F0 & 1) == 0 )
+  if ( (byte_4C596CD & 1) == 0 )
   {
-    sub_1C37058(&UnityEngine_Object_TypeInfo);
-    byte_4C458F0 = 1;
+    sub_1C3E564(&UnityEngine_Object_TypeInfo);
+    byte_4C596CD = 1;
   }
   this->fields.startTr.fields.x = v15;
   this->fields.startTr.fields.y = v14;
@@ -194,7 +195,7 @@ void BattleCutInComponent__setData(
       return;
     }
 LABEL_13:
-    sub_1C372B4(sprite);
+    sub_1C3E7C0(sprite, *(_QWORD *)&Id);
   }
 }
 
@@ -224,16 +225,16 @@ void BattleCutInComponent__startAction(BattleCutInComponent_o *this, const Metho
   __int64 v23; // [xsp+10h] [xbp-30h] BYREF
   float z; // [xsp+18h] [xbp-28h]
 
-  if ( (byte_4C458F1 & 1) == 0 )
+  if ( (byte_4C596CE & 1) == 0 )
   {
-    sub_1C37058(&float_TypeInfo);
-    sub_1C37058(&UnityEngine_Vector3_TypeInfo);
-    sub_1C37058(&StringLiteral_22425/*"onStartComp"*/);
-    sub_1C37058(&StringLiteral_24071/*"time"*/);
-    sub_1C37058(&StringLiteral_22740/*"position"*/);
-    sub_1C37058(&StringLiteral_22430/*"oncomplete"*/);
-    sub_1C37058(&iTween_TypeInfo);
-    byte_4C458F1 = 1;
+    sub_1C3E564(&float_TypeInfo);
+    sub_1C3E564(&UnityEngine_Vector3_TypeInfo);
+    sub_1C3E564(&StringLiteral_22443/*"onStartComp"*/);
+    sub_1C3E564(&StringLiteral_24091/*"time"*/);
+    sub_1C3E564(&StringLiteral_22759/*"position"*/);
+    sub_1C3E564(&StringLiteral_22448/*"oncomplete"*/);
+    sub_1C3E564(&iTween_TypeInfo);
+    byte_4C596CE = 1;
   }
   table = (__int64)this->fields.table;
   if ( !table )
@@ -247,14 +248,14 @@ void BattleCutInComponent__startAction(BattleCutInComponent_o *this, const Metho
   if ( !v5
     || (((void (__fastcall *)(struct System_Collections_Hashtable_o *, __int64, __int64, const MethodInfo *))v5->klass->vtable._22_Add.methodPtr)(
           v5,
-          StringLiteral_22740/*"position"*/,
+          StringLiteral_22759/*"position"*/,
           table,
           v5->klass->vtable._22_Add.method),
         (table = (__int64)this->fields.table) == 0)
     || ((*(void (__fastcall **)(__int64, __int64, __int64, _QWORD))(*(_QWORD *)table + 664LL))(
           table,
-          StringLiteral_22430/*"oncomplete"*/,
-          StringLiteral_22425/*"onStartComp"*/,
+          StringLiteral_22448/*"oncomplete"*/,
+          StringLiteral_22443/*"onStartComp"*/,
           *(_QWORD *)(*(_QWORD *)table + 672LL)),
         v12 = this->fields.table,
         totaltime = this->fields.totaltime,
@@ -262,11 +263,11 @@ void BattleCutInComponent__startAction(BattleCutInComponent_o *this, const Metho
         !v12) )
   {
 LABEL_10:
-    sub_1C372B4(table);
+    sub_1C3E7C0(table, method);
   }
   ((void (__fastcall *)(struct System_Collections_Hashtable_o *, __int64, __int64, const MethodInfo *))v12->klass->vtable._22_Add.methodPtr)(
     v12,
-    StringLiteral_24071/*"time"*/,
+    StringLiteral_24091/*"time"*/,
     table,
     v12->klass->vtable._22_Add.method);
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
@@ -274,5 +275,5 @@ LABEL_10:
   v21 = gameObject;
   if ( !iTween_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(iTween_TypeInfo);
-  iTween__MoveTo_63199220(v21, v20, 0);
+  iTween__MoveTo_63274032(v21, v20, 0);
 }

@@ -11,11 +11,11 @@ void DebugSelectDialog__Init(DebugSelectDialog_o *this, const MethodInfo *method
   const MethodInfo *v4; // x1
   UILabel_o *v5; // x0
 
-  if ( (byte_4C424D4 & 1) == 0 )
+  if ( (byte_4C5627D & 1) == 0 )
   {
-    sub_1C37058(&UnityEngine_Object_TypeInfo);
-    sub_1C37058(&StringLiteral_1/*""*/);
-    byte_4C424D4 = 1;
+    sub_1C3E564(&UnityEngine_Object_TypeInfo);
+    sub_1C3E564(&StringLiteral_1/*""*/);
+    byte_4C5627D = 1;
   }
   cancelLabel = (UnityEngine_Object_o *)this->fields.cancelLabel;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -24,7 +24,7 @@ void DebugSelectDialog__Init(DebugSelectDialog_o *this, const MethodInfo *method
   {
     v5 = this->fields.cancelLabel;
     if ( !v5 )
-      sub_1C372B4(0);
+      sub_1C3E7C0(0, v4);
     UILabel__set_text(v5, (System_String_o *)StringLiteral_1/*""*/, 0);
   }
   DummyErrorSelectDialog__Init((DummyErrorSelectDialog_o *)this, v4);

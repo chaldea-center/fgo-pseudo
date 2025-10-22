@@ -10,11 +10,12 @@ void LimitCountIconComponent__Clear(LimitCountIconComponent_o *this, const Metho
 
   limitCountBase = this->fields.limitCountBase;
   if ( !limitCountBase )
-    sub_1C372B4(0);
+    sub_1C3E7C0(0, method);
   UnityEngine_GameObject__SetActive(limitCountBase, 0, 0);
 }
 
 
+// local variable allocation has failed, the output may be wrong!
 void LimitCountIconComponent__Set(
         LimitCountIconComponent_o *this,
         int32_t limitCount,
@@ -29,11 +30,11 @@ void LimitCountIconComponent__Set(
   System_String_o **v11; // x8
 
   v6 = this;
-  if ( (byte_4C42403 & 1) == 0 )
+  if ( (byte_4C561A5 & 1) == 0 )
   {
-    sub_1C37058(&StringLiteral_20208/*"icon_limit_on"*/);
-    this = (LimitCountIconComponent_o *)sub_1C37058(&StringLiteral_20207/*"icon_limit_off"*/);
-    byte_4C42403 = 1;
+    sub_1C3E564(&StringLiteral_20226/*"icon_limit_on"*/);
+    this = (LimitCountIconComponent_o *)sub_1C3E564(&StringLiteral_20225/*"icon_limit_off"*/);
+    byte_4C561A5 = 1;
   }
   if ( limitMax <= 0 )
   {
@@ -61,26 +62,26 @@ void LimitCountIconComponent__Set(
         if ( !v10 )
           break;
         if ( (unsigned int)v9 >= LODWORD(v10->max_length) )
-          sub_1C372BC(this);
+          sub_1C3E7C8(this, *(_QWORD *)&limitCount);
         this = (LimitCountIconComponent_o *)v10->m_Items[v9];
         if ( !this )
           break;
         if ( v9 >= limitCount )
-          v11 = (System_String_o **)&StringLiteral_20207/*"icon_limit_off"*/;
+          v11 = (System_String_o **)&StringLiteral_20225/*"icon_limit_off"*/;
         else
-          v11 = (System_String_o **)&StringLiteral_20208/*"icon_limit_on"*/;
+          v11 = (System_String_o **)&StringLiteral_20226/*"icon_limit_on"*/;
         UISprite__set_spriteName((UISprite_o *)this, *v11, 0);
         if ( max_length == ++v9 )
           return;
       }
 LABEL_18:
-      sub_1C372B4(this);
+      sub_1C3E7C0(this, *(_QWORD *)&limitCount);
     }
   }
 }
 
 
-void LimitCountIconComponent__Set_40959192(
+void LimitCountIconComponent__Set_41005680(
         LimitCountIconComponent_o *this,
         LimitCountIconComponent_o *limitCountIcon,
         const MethodInfo *method)
@@ -124,7 +125,7 @@ void LimitCountIconComponent__Set_40959192(
         break;
       if ( v8 >= LODWORD(v10->max_length) )
 LABEL_16:
-        sub_1C372BC(this);
+        sub_1C3E7C8(this, limitCountIcon);
       v11 = v10->m_Items[v8];
       if ( !v11 )
         break;
@@ -136,6 +137,6 @@ LABEL_16:
         return;
     }
 LABEL_15:
-    sub_1C372B4(this);
+    sub_1C3E7C0(this, limitCountIcon);
   }
 }

@@ -13,7 +13,7 @@ void BattleObserver__Add(BattleObserver_o *this, BattleSubject_o *subject, const
   {
     BattleSubject__Add(subject, this, method);
     this->fields.battleSubject = subject;
-    sub_1C36FFC((CGThumbnailListItem_o *)&this->fields, (int32_t)subject, v5, v6);
+    sub_1C3E508((CGThumbnailListItem_o *)&this->fields, (int32_t)subject, v5, v6);
   }
 }
 

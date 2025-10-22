@@ -12,33 +12,33 @@ void ServantCombineRequest__beginRequest(
   const MethodInfo *v13; // x3
   const MethodInfo *v14; // x1
 
-  if ( (byte_4C44B8A & 1) == 0 )
+  if ( (byte_4C58956 & 1) == 0 )
   {
-    sub_1C37058(&StringLiteral_17049/*"baseUserSvtId"*/);
-    sub_1C37058(&StringLiteral_19790/*"getExp"*/);
-    sub_1C37058(&StringLiteral_24486/*"useQp"*/);
-    sub_1C37058(&StringLiteral_21485/*"materialUserSvtIds"*/);
-    byte_4C44B8A = 1;
+    sub_1C3E564(&StringLiteral_17065/*"baseUserSvtId"*/);
+    sub_1C3E564(&StringLiteral_19808/*"getExp"*/);
+    sub_1C3E564(&StringLiteral_24506/*"useQp"*/);
+    sub_1C3E564(&StringLiteral_21503/*"materialUserSvtIds"*/);
+    byte_4C58956 = 1;
   }
-  RequestBase__addField_44246844(
+  RequestBase__addField_44302376(
     (RequestBase_o *)this,
-    (System_String_o *)StringLiteral_17049/*"baseUserSvtId"*/,
+    (System_String_o *)StringLiteral_17065/*"baseUserSvtId"*/,
     baseUsrSvtId,
     *(const MethodInfo **)&useQp);
-  RequestBase__addField_44247300((RequestBase_o *)this, (System_String_o *)StringLiteral_21485/*"materialUserSvtIds"*/, materialSvtIds, v11);
-  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_24486/*"useQp"*/, useQp, v12);
-  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_19790/*"getExp"*/, getExp, v13);
+  RequestBase__addField_44302832((RequestBase_o *)this, (System_String_o *)StringLiteral_21503/*"materialUserSvtIds"*/, materialSvtIds, v11);
+  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_24506/*"useQp"*/, useQp, v12);
+  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_19808/*"getExp"*/, getExp, v13);
   RequestBase__beginRequest((RequestBase_o *)this, v14);
 }
 
 
 System_String_o *ServantCombineRequest__getMockData(ServantCombineRequest_o *this, const MethodInfo *method)
 {
-  if ( (byte_4C44B89 & 1) == 0 )
+  if ( (byte_4C58955 & 1) == 0 )
   {
-    sub_1C37058(&NetworkManager_TypeInfo);
-    sub_1C37058(&StringLiteral_9139/*"MockSvtCombineResponse"*/);
-    byte_4C44B89 = 1;
+    sub_1C3E564(&NetworkManager_TypeInfo);
+    sub_1C3E564(&StringLiteral_9139/*"MockSvtCombineResponse"*/);
+    byte_4C58955 = 1;
   }
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
@@ -50,16 +50,16 @@ System_String_o *ServantCombineRequest__getURL(ServantCombineRequest_o *this, co
 {
   System_String_o *BaseUrl; // x0
 
-  if ( (byte_4C44B88 & 1) == 0 )
+  if ( (byte_4C58954 & 1) == 0 )
   {
-    sub_1C37058(&NetworkManager_TypeInfo);
-    sub_1C37058(&StringLiteral_17741/*"card/combine"*/);
-    byte_4C44B88 = 1;
+    sub_1C3E564(&NetworkManager_TypeInfo);
+    sub_1C3E564(&StringLiteral_17758/*"card/combine"*/);
+    byte_4C58954 = 1;
   }
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
   BaseUrl = NetworkManager__getBaseUrl(1, 0);
-  return System_String__Concat_63561656(BaseUrl, (System_String_o *)StringLiteral_17741/*"card/combine"*/, 0);
+  return System_String__Concat_63636468(BaseUrl, (System_String_o *)StringLiteral_17758/*"card/combine"*/, 0);
 }
 
 
@@ -76,12 +76,12 @@ void ServantCombineRequest__requestCompleted(
   struct NetworkManager_ResultCallbackFunc_o *CallBack; // x8
   struct NetworkManager_ResultCallbackFunc_o *v11; // x8
 
-  if ( (byte_4C44B8B & 1) == 0 )
+  if ( (byte_4C58957 & 1) == 0 )
   {
-    sub_1C37058(&JsonManager_TypeInfo);
-    sub_1C37058(&ResponseCommandKind_TypeInfo);
-    sub_1C37058(&StringLiteral_22215/*"ng"*/);
-    byte_4C44B8B = 1;
+    sub_1C3E564(&JsonManager_TypeInfo);
+    sub_1C3E564(&ResponseCommandKind_TypeInfo);
+    sub_1C3E564(&StringLiteral_22233/*"ng"*/);
+    byte_4C58957 = 1;
   }
   if ( !ResponseCommandKind_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(ResponseCommandKind_TypeInfo);
@@ -105,7 +105,7 @@ void ServantCombineRequest__requestCompleted(
     if ( v11 )
       ((void (__fastcall *)(intptr_t, __int64, intptr_t))v11->fields.invoke_impl)(
         v11->fields.method_code,
-        StringLiteral_22215/*"ng"*/,
+        StringLiteral_22233/*"ng"*/,
         v11->fields.method);
   }
 }

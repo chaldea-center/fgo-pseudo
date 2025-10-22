@@ -1,13 +1,13 @@
 void EventEquipSkillPartsEntity___ctor(EventEquipSkillPartsEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_4C42F2C & 1) == 0 )
+  if ( (byte_4C56CDB & 1) == 0 )
   {
-    sub_1C37058(&Method_DataEntityBase_int___ctor__);
-    byte_4C42F2C = 1;
+    sub_1C3E564(&Method_DataEntityBase_int___ctor__);
+    byte_4C56CDB = 1;
   }
   DataEntityBase_int____ctor(
     (DataEntityBase_int__o *)this,
-    (const MethodInfo_339EBBC *)Method_DataEntityBase_int___ctor__);
+    (const MethodInfo_33B0A74 *)Method_DataEntityBase_int___ctor__);
 }
 
 
@@ -21,12 +21,12 @@ System_String_o *EventEquipSkillPartsEntity__GetReleaseConditionMessage(
         EventEquipSkillPartsEntity_o *this,
         const MethodInfo *method)
 {
-  if ( (byte_4C42F2A & 1) == 0 )
+  if ( (byte_4C56CD9 & 1) == 0 )
   {
-    sub_1C37058(&StringLiteral_11292/*"ReleaseConditionMessage"*/);
-    byte_4C42F2A = 1;
+    sub_1C3E564(&StringLiteral_11294/*"ReleaseConditionMessage"*/);
+    byte_4C56CD9 = 1;
   }
-  return EntityScriptUtil__GetStringValue(this->fields.script, (System_String_o *)StringLiteral_11292/*"ReleaseConditionMessage"*/, 0, 0);
+  return EntityScriptUtil__GetStringValue(this->fields.script, (System_String_o *)StringLiteral_11294/*"ReleaseConditionMessage"*/, 0, 0);
 }
 
 
@@ -36,16 +36,16 @@ System_String_o *EventEquipSkillPartsEntity__GetRenoDetailDialogText(
 {
   System_String_o **v3; // x9
 
-  if ( (byte_4C42F29 & 1) == 0 )
+  if ( (byte_4C56CD8 & 1) == 0 )
   {
-    sub_1C37058(&StringLiteral_11332/*"RenoDetailDialogText"*/);
-    sub_1C37058(&StringLiteral_15149/*"UnreleasedRenoDetailDialogText"*/);
-    byte_4C42F29 = 1;
+    sub_1C3E564(&StringLiteral_11334/*"RenoDetailDialogText"*/);
+    sub_1C3E564(&StringLiteral_15159/*"UnreleasedRenoDetailDialogText"*/);
+    byte_4C56CD8 = 1;
   }
   if ( EventEquipSkillPartsEntity__IsOpen(this, method) )
-    v3 = (System_String_o **)&StringLiteral_11332/*"RenoDetailDialogText"*/;
+    v3 = (System_String_o **)&StringLiteral_11334/*"RenoDetailDialogText"*/;
   else
-    v3 = (System_String_o **)&StringLiteral_15149/*"UnreleasedRenoDetailDialogText"*/;
+    v3 = (System_String_o **)&StringLiteral_15159/*"UnreleasedRenoDetailDialogText"*/;
   return EntityScriptUtil__GetStringValue(this->fields.script, *v3, 0, 0);
 }
 
@@ -54,30 +54,31 @@ System_String_o *EventEquipSkillPartsEntity__GetRenoPartsName(
         EventEquipSkillPartsEntity_o *this,
         const MethodInfo *method)
 {
-  if ( (byte_4C42F28 & 1) == 0 )
+  if ( (byte_4C56CD7 & 1) == 0 )
   {
-    sub_1C37058(&StringLiteral_11334/*"RenoPartsName"*/);
-    byte_4C42F28 = 1;
+    sub_1C3E564(&StringLiteral_11336/*"RenoPartsName"*/);
+    byte_4C56CD7 = 1;
   }
-  return EntityScriptUtil__GetStringValue(this->fields.script, (System_String_o *)StringLiteral_11334/*"RenoPartsName"*/, 0, 0);
+  return EntityScriptUtil__GetStringValue(this->fields.script, (System_String_o *)StringLiteral_11336/*"RenoPartsName"*/, 0, 0);
 }
 
 
 int32_t EventEquipSkillPartsEntity__GetSkillChargeTurn(EventEquipSkillPartsEntity_o *this, const MethodInfo *method)
 {
   Il2CppObject *Master_object; // x0
+  __int64 v4; // x1
   SkillLvEntity_o *entity; // [xsp+8h] [xbp-28h] BYREF
 
-  if ( (byte_4C42F2B & 1) == 0 )
+  if ( (byte_4C56CDA & 1) == 0 )
   {
-    sub_1C37058(&Method_DataManager_GetMaster_SkillLvMaster___);
-    sub_1C37058(&DataManager_TypeInfo);
-    byte_4C42F2B = 1;
+    sub_1C3E564(&Method_DataManager_GetMaster_SkillLvMaster___);
+    sub_1C3E564(&DataManager_TypeInfo);
+    byte_4C56CDA = 1;
   }
   entity = 0;
   if ( !DataManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-  Master_object = DataManager__GetMaster_object_((const MethodInfo_30E7C04 *)Method_DataManager_GetMaster_SkillLvMaster___);
+  Master_object = DataManager__GetMaster_object_((const MethodInfo_30F9A1C *)Method_DataManager_GetMaster_SkillLvMaster___);
   if ( !Master_object )
     goto LABEL_11;
   Master_object = (Il2CppObject *)SkillLvMaster__TryGetEntity(
@@ -91,7 +92,7 @@ int32_t EventEquipSkillPartsEntity__GetSkillChargeTurn(EventEquipSkillPartsEntit
     if ( entity )
       return entity->fields.chargeTurn;
 LABEL_11:
-    sub_1C372B4(Master_object);
+    sub_1C3E7C0(Master_object, v4);
   }
   return 0;
 }
@@ -103,19 +104,20 @@ System_String_o *EventEquipSkillPartsEntity__GetSkillDetail(
         const MethodInfo *method)
 {
   SkillLvMaster_o *Master_object; // x0
+  __int64 v6; // x1
   SkillLvEntity_o *entity; // [xsp+8h] [xbp-28h] BYREF
 
-  if ( (byte_4C42F27 & 1) == 0 )
+  if ( (byte_4C56CD6 & 1) == 0 )
   {
-    sub_1C37058(&Method_DataManager_GetMaster_SkillLvMaster___);
-    sub_1C37058(&DataManager_TypeInfo);
-    sub_1C37058(&string_TypeInfo);
-    byte_4C42F27 = 1;
+    sub_1C3E564(&Method_DataManager_GetMaster_SkillLvMaster___);
+    sub_1C3E564(&DataManager_TypeInfo);
+    sub_1C3E564(&string_TypeInfo);
+    byte_4C56CD6 = 1;
   }
   entity = 0;
   if ( !DataManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-  Master_object = (SkillLvMaster_o *)DataManager__GetMaster_object_((const MethodInfo_30E7C04 *)Method_DataManager_GetMaster_SkillLvMaster___);
+  Master_object = (SkillLvMaster_o *)DataManager__GetMaster_object_((const MethodInfo_30F9A1C *)Method_DataManager_GetMaster_SkillLvMaster___);
   if ( !Master_object )
     goto LABEL_10;
   if ( SkillLvMaster__TryGetEntity(Master_object, &entity, this->fields.skillId, this->fields.skillLv, 0) )
@@ -124,7 +126,7 @@ System_String_o *EventEquipSkillPartsEntity__GetSkillDetail(
     if ( entity )
       return SkillLvEntity__getDetail(entity, isShort, 0, 0);
 LABEL_10:
-    sub_1C372B4(Master_object);
+    sub_1C3E7C0(Master_object, v6);
   }
   return string_TypeInfo->static_fields->Empty;
 }
@@ -133,33 +135,34 @@ LABEL_10:
 System_String_o *EventEquipSkillPartsEntity__GetSkillName(EventEquipSkillPartsEntity_o *this, const MethodInfo *method)
 {
   Il2CppObject *Master_object; // x0
+  __int64 v4; // x1
   Il2CppObject *entity; // [xsp+8h] [xbp-28h] BYREF
 
-  if ( (byte_4C42F26 & 1) == 0 )
+  if ( (byte_4C56CD5 & 1) == 0 )
   {
-    sub_1C37058(&Method_DataManager_GetMaster_SkillMaster___);
-    sub_1C37058(&DataManager_TypeInfo);
-    sub_1C37058(&Method_DataMasterBase_SkillMaster__SkillEntity__int__TryGetEntity__);
-    sub_1C37058(&string_TypeInfo);
-    byte_4C42F26 = 1;
+    sub_1C3E564(&Method_DataManager_GetMaster_SkillMaster___);
+    sub_1C3E564(&DataManager_TypeInfo);
+    sub_1C3E564(&Method_DataMasterBase_SkillMaster__SkillEntity__int__TryGetEntity__);
+    sub_1C3E564(&string_TypeInfo);
+    byte_4C56CD5 = 1;
   }
   entity = 0;
   if ( !DataManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-  Master_object = DataManager__GetMaster_object_((const MethodInfo_30E7C04 *)Method_DataManager_GetMaster_SkillMaster___);
+  Master_object = DataManager__GetMaster_object_((const MethodInfo_30F9A1C *)Method_DataManager_GetMaster_SkillMaster___);
   if ( !Master_object )
     goto LABEL_11;
   if ( DataMasterBase_object__object__int___TryGetEntity(
          (DataMasterBase_TMaster__TEntity__PKType__o *)Master_object,
          &entity,
          this->fields.skillId,
-         (const MethodInfo_33A10EC *)Method_DataMasterBase_SkillMaster__SkillEntity__int__TryGetEntity__) )
+         (const MethodInfo_33B2FA4 *)Method_DataMasterBase_SkillMaster__SkillEntity__int__TryGetEntity__) )
   {
     Master_object = entity;
     if ( entity )
       return SkillEntity__getName((SkillEntity_o *)entity, 0);
 LABEL_11:
-    sub_1C372B4(Master_object);
+    sub_1C3E7C0(Master_object, v4);
   }
   return string_TypeInfo->static_fields->Empty;
 }
@@ -168,18 +171,19 @@ LABEL_11:
 bool EventEquipSkillPartsEntity__IsOpen(EventEquipSkillPartsEntity_o *this, const MethodInfo *method)
 {
   Il2CppObject *Master_object; // x0
-  const MethodInfo *v4; // x4
+  __int64 v4; // x1
+  const MethodInfo *v5; // x4
 
-  if ( (byte_4C42F25 & 1) == 0 )
+  if ( (byte_4C56CD4 & 1) == 0 )
   {
-    sub_1C37058(&Method_DataManager_GetMaster_CommonReleaseMaster___);
-    sub_1C37058(&DataManager_TypeInfo);
-    byte_4C42F25 = 1;
+    sub_1C3E564(&Method_DataManager_GetMaster_CommonReleaseMaster___);
+    sub_1C3E564(&DataManager_TypeInfo);
+    byte_4C56CD4 = 1;
   }
   if ( !DataManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-  Master_object = DataManager__GetMaster_object_((const MethodInfo_30E7C04 *)Method_DataManager_GetMaster_CommonReleaseMaster___);
+  Master_object = DataManager__GetMaster_object_((const MethodInfo_30F9A1C *)Method_DataManager_GetMaster_CommonReleaseMaster___);
   if ( !Master_object )
-    sub_1C372B4(0);
-  return CommonReleaseMaster__IsOpen((CommonReleaseMaster_o *)Master_object, this->fields.commonReleaseId, 0, 0, v4);
+    sub_1C3E7C0(0, v4);
+  return CommonReleaseMaster__IsOpen((CommonReleaseMaster_o *)Master_object, this->fields.commonReleaseId, 0, 0, v5);
 }

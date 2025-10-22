@@ -7,25 +7,25 @@ void RemovedBuffInfo___ctor(RemovedBuffInfo_o *this, const MethodInfo *method)
   int32_t v7; // w2
   const MethodInfo *v8; // x3
 
-  if ( (byte_4C45EFA & 1) == 0 )
+  if ( (byte_4C59CD7 & 1) == 0 )
   {
-    sub_1C37058(&Method_System_Collections_Generic_List_BattleBuffData_BuffData___ctor__);
-    sub_1C37058(&System_Collections_Generic_List_BattleBuffData_BuffData__TypeInfo);
-    byte_4C45EFA = 1;
+    sub_1C3E564(&Method_System_Collections_Generic_List_BattleBuffData_BuffData___ctor__);
+    sub_1C3E564(&System_Collections_Generic_List_BattleBuffData_BuffData__TypeInfo);
+    byte_4C59CD7 = 1;
   }
   System_Object___ctor((Il2CppObject *)this, 0);
-  v3 = (System_Collections_Generic_List_object__o *)sub_1C372A4(System_Collections_Generic_List_BattleBuffData_BuffData__TypeInfo);
+  v3 = (System_Collections_Generic_List_object__o *)sub_1C3E7B0(System_Collections_Generic_List_BattleBuffData_BuffData__TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v3,
-    (const MethodInfo_37A27F0 *)Method_System_Collections_Generic_List_BattleBuffData_BuffData___ctor__);
+    (const MethodInfo_37B4C2C *)Method_System_Collections_Generic_List_BattleBuffData_BuffData___ctor__);
   this->fields._RemovedAllBuffList_k__BackingField = (struct System_Collections_Generic_List_BattleBuffData_BuffData__o *)v3;
-  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields, (int32_t)v3, v4, v5);
-  v6 = (System_Collections_Generic_List_object__o *)sub_1C372A4(System_Collections_Generic_List_BattleBuffData_BuffData__TypeInfo);
+  sub_1C3E508((CGThumbnailListItem_o *)&this->fields, (int32_t)v3, v4, v5);
+  v6 = (System_Collections_Generic_List_object__o *)sub_1C3E7B0(System_Collections_Generic_List_BattleBuffData_BuffData__TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v6,
-    (const MethodInfo_37A27F0 *)Method_System_Collections_Generic_List_BattleBuffData_BuffData___ctor__);
+    (const MethodInfo_37B4C2C *)Method_System_Collections_Generic_List_BattleBuffData_BuffData___ctor__);
   this->fields._RemovedLinkedBuffList_k__BackingField = (struct System_Collections_Generic_List_BattleBuffData_BuffData__o *)v6;
-  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields._RemovedLinkedBuffList_k__BackingField, (int32_t)v6, v7, v8);
+  sub_1C3E508((CGThumbnailListItem_o *)&this->fields._RemovedLinkedBuffList_k__BackingField, (int32_t)v6, v7, v8);
 }
 
 
@@ -37,10 +37,10 @@ void RemovedBuffInfo__AddBuffs(
 {
   System_Collections_Generic_List_object__o *RemovedAllBuffList_k__BackingField; // x0
 
-  if ( (byte_4C45EFB & 1) == 0 )
+  if ( (byte_4C59CD8 & 1) == 0 )
   {
-    sub_1C37058(&Method_System_Collections_Generic_List_BattleBuffData_BuffData__AddRange__);
-    byte_4C45EFB = 1;
+    sub_1C3E564(&Method_System_Collections_Generic_List_BattleBuffData_BuffData__AddRange__);
+    byte_4C59CD8 = 1;
   }
   RemovedAllBuffList_k__BackingField = (System_Collections_Generic_List_object__o *)this->fields._RemovedAllBuffList_k__BackingField;
   if ( !RemovedAllBuffList_k__BackingField )
@@ -48,7 +48,7 @@ void RemovedBuffInfo__AddBuffs(
   System_Collections_Generic_List_object___AddRange(
     RemovedAllBuffList_k__BackingField,
     (System_Collections_Generic_IEnumerable_T__o *)buffDataEnumerable,
-    (const MethodInfo_37A3230 *)Method_System_Collections_Generic_List_BattleBuffData_BuffData__AddRange__);
+    (const MethodInfo_37B566C *)Method_System_Collections_Generic_List_BattleBuffData_BuffData__AddRange__);
   if ( asLinkedBuff )
   {
     RemovedAllBuffList_k__BackingField = (System_Collections_Generic_List_object__o *)this->fields._RemovedLinkedBuffList_k__BackingField;
@@ -57,11 +57,11 @@ void RemovedBuffInfo__AddBuffs(
       System_Collections_Generic_List_object___AddRange(
         RemovedAllBuffList_k__BackingField,
         (System_Collections_Generic_IEnumerable_T__o *)buffDataEnumerable,
-        (const MethodInfo_37A3230 *)Method_System_Collections_Generic_List_BattleBuffData_BuffData__AddRange__);
+        (const MethodInfo_37B566C *)Method_System_Collections_Generic_List_BattleBuffData_BuffData__AddRange__);
       return;
     }
 LABEL_8:
-    sub_1C372B4(RemovedAllBuffList_k__BackingField);
+    sub_1C3E7C0(RemovedAllBuffList_k__BackingField, buffDataEnumerable);
   }
 }
 
@@ -73,13 +73,13 @@ bool RemovedBuffInfo__get_ExistRemoveBuff(RemovedBuffInfo_o *this, const MethodI
   System_Nullable_int__o v5; // x0
   struct System_Collections_Generic_List_BattleBuffData_BuffData__o *v7; // [xsp+8h] [xbp-18h] BYREF
 
-  if ( (byte_4C45EF9 & 1) == 0 )
+  if ( (byte_4C59CD6 & 1) == 0 )
   {
-    sub_1C37058(&Method_System_Collections_Generic_List_BattleBuffData_BuffData__get_Count__);
-    sub_1C37058(&Method_System_Nullable_int__GetValueOrDefault__);
-    sub_1C37058(&Method_System_Nullable_int___ctor__);
-    sub_1C37058(&Method_System_Nullable_int__get_HasValue__);
-    byte_4C45EF9 = 1;
+    sub_1C3E564(&Method_System_Collections_Generic_List_BattleBuffData_BuffData__get_Count__);
+    sub_1C3E564(&Method_System_Nullable_int__GetValueOrDefault__);
+    sub_1C3E564(&Method_System_Nullable_int___ctor__);
+    sub_1C3E564(&Method_System_Nullable_int__get_HasValue__);
+    byte_4C59CD6 = 1;
   }
   RemovedAllBuffList_k__BackingField = this->fields._RemovedAllBuffList_k__BackingField;
   if ( RemovedAllBuffList_k__BackingField )
@@ -87,7 +87,7 @@ bool RemovedBuffInfo__get_ExistRemoveBuff(RemovedBuffInfo_o *this, const MethodI
     size = RemovedAllBuffList_k__BackingField->fields._size;
     v5 = (System_Nullable_int__o)&v7;
     v7 = 0;
-    System_Nullable_int____ctor(v5, size, (const MethodInfo_38C87A4 *)Method_System_Nullable_int___ctor__);
+    System_Nullable_int____ctor(v5, size, (const MethodInfo_38DABE0 *)Method_System_Nullable_int___ctor__);
     RemovedAllBuffList_k__BackingField = v7;
   }
   return (unsigned __int8)RemovedAllBuffList_k__BackingField != 0 && SHIDWORD(RemovedAllBuffList_k__BackingField) > 0;
@@ -118,7 +118,7 @@ void RemovedBuffInfo__set_RemovedAllBuffList(
   const MethodInfo *v3; // x3
 
   this->fields._RemovedAllBuffList_k__BackingField = value;
-  sub_1C36FFC((CGThumbnailListItem_o *)&this->fields, (int32_t)value, (int32_t)method, v3);
+  sub_1C3E508((CGThumbnailListItem_o *)&this->fields, (int32_t)value, (int32_t)method, v3);
 }
 
 
@@ -130,7 +130,7 @@ void RemovedBuffInfo__set_RemovedLinkedBuffList(
   const MethodInfo *v3; // x3
 
   this->fields._RemovedLinkedBuffList_k__BackingField = value;
-  sub_1C36FFC(
+  sub_1C3E508(
     (CGThumbnailListItem_o *)&this->fields._RemovedLinkedBuffList_k__BackingField,
     (int32_t)value,
     (int32_t)method,

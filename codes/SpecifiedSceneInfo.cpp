@@ -9,7 +9,7 @@ void SpecifiedSceneInfo___ctor(SpecifiedSceneInfo_o *this, const MethodInfo *met
   v2->fields.nextSceneParam = 0;
   v2 = (SpecifiedSceneInfo_o *)((char *)v2 + 24);
   v2[-1].fields.nextSceneParam = 0;
-  sub_1C36FFC((CGThumbnailListItem_o *)v2, 0, v3, v4);
+  sub_1C3E508((CGThumbnailListItem_o *)v2, 0, v3, v4);
 }
 
 
@@ -22,5 +22,5 @@ void SpecifiedSceneInfo__InitParameter(SpecifiedSceneInfo_o *this, const MethodI
   this->fields.nextSceneParam = 0;
   p_nextSceneParam = &this->fields.nextSceneParam;
   *(p_nextSceneParam - 1) = 0;
-  sub_1C36FFC((CGThumbnailListItem_o *)p_nextSceneParam, 0, v2, v3);
+  sub_1C3E508((CGThumbnailListItem_o *)p_nextSceneParam, 0, v2, v3);
 }

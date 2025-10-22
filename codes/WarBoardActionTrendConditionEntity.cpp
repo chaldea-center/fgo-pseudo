@@ -5,50 +5,51 @@ void WarBoardActionTrendConditionEntity___ctor(WarBoardActionTrendConditionEntit
   int32_t v5; // w2
   const MethodInfo *v6; // x3
 
-  if ( (byte_4C440F3 & 1) == 0 )
+  if ( (byte_4C57EBB & 1) == 0 )
   {
-    sub_1C37058(&Method_DataEntityBase_int___ctor__);
-    sub_1C37058(&int___TypeInfo);
-    byte_4C440F3 = 1;
+    sub_1C3E564(&Method_DataEntityBase_int___ctor__);
+    sub_1C3E564(&int___TypeInfo);
+    byte_4C57EBB = 1;
   }
   DataEntityBase_int____ctor(
     (DataEntityBase_int__o *)this,
-    (const MethodInfo_339EBBC *)Method_DataEntityBase_int___ctor__);
+    (const MethodInfo_33B0A74 *)Method_DataEntityBase_int___ctor__);
   this->fields.id = 0;
-  v3 = (struct System_Int32_array *)sub_1C37100(int___TypeInfo, 0);
+  v3 = (struct System_Int32_array *)sub_1C3E60C(int___TypeInfo, 0);
   this->fields.conditionTypes = v3;
   p_conditionTypes = &this->fields.conditionTypes;
-  sub_1C36FFC((CGThumbnailListItem_o *)p_conditionTypes, (int32_t)v3, v5, v6);
+  sub_1C3E508((CGThumbnailListItem_o *)p_conditionTypes, (int32_t)v3, v5, v6);
   *((_DWORD *)p_conditionTypes + 2) = 0;
 }
 
 
-void WarBoardActionTrendConditionEntity___ctor_43298416(
+void WarBoardActionTrendConditionEntity___ctor_43353132(
         WarBoardActionTrendConditionEntity_o *this,
         WarBoardActionTrendConditionEntity_o *cSrc,
         const MethodInfo *method)
 {
   __int64 v5; // x0
-  int32_t v6; // w2
-  const MethodInfo *v7; // x3
+  __int64 v6; // x1
+  int32_t v7; // w2
+  const MethodInfo *v8; // x3
   struct System_Int32_array *conditionTypes; // x1
   struct System_Int32_array **p_conditionTypes; // x20
 
-  if ( (byte_4C440F4 & 1) == 0 )
+  if ( (byte_4C57EBC & 1) == 0 )
   {
-    sub_1C37058(&Method_DataEntityBase_int___ctor__);
-    byte_4C440F4 = 1;
+    sub_1C3E564(&Method_DataEntityBase_int___ctor__);
+    byte_4C57EBC = 1;
   }
   DataEntityBase_int____ctor(
     (DataEntityBase_int__o *)this,
-    (const MethodInfo_339EBBC *)Method_DataEntityBase_int___ctor__);
+    (const MethodInfo_33B0A74 *)Method_DataEntityBase_int___ctor__);
   if ( !cSrc )
-    sub_1C372B4(v5);
+    sub_1C3E7C0(v5, v6);
   this->fields.id = cSrc->fields.id;
   conditionTypes = cSrc->fields.conditionTypes;
   this->fields.conditionTypes = conditionTypes;
   p_conditionTypes = &this->fields.conditionTypes;
-  sub_1C36FFC((CGThumbnailListItem_o *)p_conditionTypes, (int32_t)conditionTypes, v6, v7);
+  sub_1C3E508((CGThumbnailListItem_o *)p_conditionTypes, (int32_t)conditionTypes, v7, v8);
   *((_DWORD *)p_conditionTypes + 2) = cSrc->fields.value;
 }
 
@@ -88,46 +89,47 @@ System_Int32_array_array *WarBoardActionTrendConditionEntity__GetSortedMultiIndi
   System_Object_array *v4; // x19
   System_Comparison_T__o *v5; // x20
   __int64 v6; // x0
-  System_Int32_array_array *v7; // x19
-  __int64 v8; // x8
-  unsigned __int64 v9; // x20
+  __int64 v7; // x1
+  System_Int32_array_array *v8; // x19
+  __int64 v9; // x8
+  unsigned __int64 v10; // x20
   System_Int32_array_array *resValues; // [xsp+8h] [xbp-28h] BYREF
 
-  if ( (byte_4C440F6 & 1) == 0 )
+  if ( (byte_4C57EBE & 1) == 0 )
   {
-    sub_1C37058(&Method_System_Array_Sort_int_____);
-    sub_1C37058(&Method_System_Array_Sort_int___);
-    sub_1C37058(&System_Comparison_int____TypeInfo);
-    sub_1C37058(&Method_WarBoardActionTrendConditionEntity__GetSortedMultiIndividuality_g__DoubleIntSort_13_0__);
-    byte_4C440F6 = 1;
+    sub_1C3E564(&Method_System_Array_Sort_int_____);
+    sub_1C3E564(&Method_System_Array_Sort_int___);
+    sub_1C3E564(&System_Comparison_int____TypeInfo);
+    sub_1C3E564(&Method_WarBoardActionTrendConditionEntity__GetSortedMultiIndividuality_g__DoubleIntSort_13_0__);
+    byte_4C57EBE = 1;
   }
   resValues = 0;
   if ( WarBoardActionTrendConditionEntity__TryGetMultiIndividuality(this, &resValues, v2) )
   {
     v4 = (System_Object_array *)resValues;
-    v5 = (System_Comparison_T__o *)sub_1C372A4(System_Comparison_int____TypeInfo);
+    v5 = (System_Comparison_T__o *)sub_1C3E7B0(System_Comparison_int____TypeInfo);
     System_Comparison_object____ctor(
       v5,
       0,
       Method_WarBoardActionTrendConditionEntity__GetSortedMultiIndividuality_g__DoubleIntSort_13_0__,
       0);
-    System_Array__Sort_object__51069808(v4, v5, (const MethodInfo_30B4370 *)Method_System_Array_Sort_int_____);
-    v7 = resValues;
+    System_Array__Sort_object__51143048(v4, v5, (const MethodInfo_30C6188 *)Method_System_Array_Sort_int_____);
+    v8 = resValues;
     if ( !resValues )
-      sub_1C372B4(v6);
-    v8 = *(__int64 *)((char *)&off_18 + (_QWORD)resValues);
-    if ( (int)v8 >= 1 )
+      sub_1C3E7C0(v6, v7);
+    v9 = *(__int64 *)((char *)&off_18 + (_QWORD)resValues);
+    if ( (int)v9 >= 1 )
     {
-      v9 = 0;
+      v10 = 0;
       do
       {
-        if ( v9 >= (unsigned int)v8 )
-          sub_1C372BC(v6);
-        System_Array__Sort_int_(v7->m_Items[v9], (const MethodInfo_30B408C *)Method_System_Array_Sort_int___);
-        LODWORD(v8) = *(_DWORD *)((char *)&off_18 + (_QWORD)v7);
-        ++v9;
+        if ( v10 >= (unsigned int)v9 )
+          sub_1C3E7C8(v6, v7);
+        System_Array__Sort_int_(v8->m_Items[v10], (const MethodInfo_30C5EA4 *)Method_System_Array_Sort_int___);
+        LODWORD(v9) = *(_DWORD *)((char *)&off_18 + (_QWORD)v8);
+        ++v10;
       }
-      while ( (__int64)v9 < (int)v8 );
+      while ( (__int64)v10 < (int)v9 );
     }
   }
   return resValues;
@@ -138,10 +140,10 @@ bool WarBoardActionTrendConditionEntity__IsIgnoreIndivUnreleasable(
         WarBoardActionTrendConditionEntity_o *this,
         const MethodInfo *method)
 {
-  if ( (byte_4C440F9 & 1) == 0 )
+  if ( (byte_4C57EC1 & 1) == 0 )
   {
-    sub_1C37058(&StringLiteral_7551/*"IgnoreIndivUnreleaseable"*/);
-    byte_4C440F9 = 1;
+    sub_1C3E564(&StringLiteral_7551/*"IgnoreIndivUnreleaseable"*/);
+    byte_4C57EC1 = 1;
   }
   return EntityScriptUtil__GetIntValue(this->fields.script, (System_String_o *)StringLiteral_7551/*"IgnoreIndivUnreleaseable"*/, 0, 0) != 0;
 }
@@ -151,10 +153,10 @@ bool WarBoardActionTrendConditionEntity__IsIncludeIgnoreIndividuality(
         WarBoardActionTrendConditionEntity_o *this,
         const MethodInfo *method)
 {
-  if ( (byte_4C440F8 & 1) == 0 )
+  if ( (byte_4C57EC0 & 1) == 0 )
   {
-    sub_1C37058(&StringLiteral_7583/*"IncludeIgnoreIndividuality"*/);
-    byte_4C440F8 = 1;
+    sub_1C3E564(&StringLiteral_7583/*"IncludeIgnoreIndividuality"*/);
+    byte_4C57EC0 = 1;
   }
   return EntityScriptUtil__GetIntValue(this->fields.script, (System_String_o *)StringLiteral_7583/*"IncludeIgnoreIndividuality"*/, 0, 0) != 0;
 }
@@ -164,10 +166,10 @@ bool WarBoardActionTrendConditionEntity__IsIncludePassiveIndividuality(
         WarBoardActionTrendConditionEntity_o *this,
         const MethodInfo *method)
 {
-  if ( (byte_4C440F7 & 1) == 0 )
+  if ( (byte_4C57EBF & 1) == 0 )
   {
-    sub_1C37058(&StringLiteral_7584/*"IncludePassiveIndividuality"*/);
-    byte_4C440F7 = 1;
+    sub_1C3E564(&StringLiteral_7584/*"IncludePassiveIndividuality"*/);
+    byte_4C57EBF = 1;
   }
   return EntityScriptUtil__GetIntValue(this->fields.script, (System_String_o *)StringLiteral_7584/*"IncludePassiveIndividuality"*/, 0, 0) != 0;
 }
@@ -199,10 +201,10 @@ bool WarBoardActionTrendConditionEntity__TryGetMultiIndividuality(
         System_Int32_array_array **resValues,
         const MethodInfo *method)
 {
-  if ( (byte_4C440F5 & 1) == 0 )
+  if ( (byte_4C57EBD & 1) == 0 )
   {
-    sub_1C37058(&StringLiteral_7625/*"Individuality"*/);
-    byte_4C440F5 = 1;
+    sub_1C3E564(&StringLiteral_7625/*"Individuality"*/);
+    byte_4C57EBD = 1;
   }
   return EntityScriptUtil__TryGet2DimensionalIntArray(
            this->fields.script,
@@ -223,7 +225,7 @@ int32_t WarBoardActionTrendConditionEntity___GetSortedMultiIndividuality_g__Doub
   int v6; // w10
 
   if ( !a || !b )
-    sub_1C372B4(a);
+    sub_1C3E7C0(a, b);
   max_length = a->max_length;
   v4 = max_length - LODWORD(b->max_length);
   if ( !v4 )
@@ -238,7 +240,7 @@ int32_t WarBoardActionTrendConditionEntity___GetSortedMultiIndividuality_g__Doub
       while ( 1 )
       {
         if ( max_length == v5 )
-          sub_1C372BC(a);
+          sub_1C3E7C8(a, b);
         v6 = v5;
         v4 = a->m_Items[v5] - b->m_Items[v5];
         if ( v4 )
